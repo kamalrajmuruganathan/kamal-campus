@@ -1,0 +1,119 @@
+{
+  "id": "1spe-math-suites-numeriques-qcm",
+  "chapitre": "1spe-math-suites-numeriques",
+  "titre": "QCM — Suites numériques",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "modes-de-generation",
+      "enonce": "La suite définie par $u_0 = 4$ et $u_{n+1} = u_n + 3$ est définie :",
+      "choix": [
+        "de façon explicite",
+        "par une relation de récurrence",
+        "par un algorithme",
+        "par un motif géométrique"
+      ],
+      "reponse": 1,
+      "explication": "Chaque terme se déduit du **précédent** : c'est une relation de récurrence. Une forme explicite donnerait $u_n$ directement en fonction de $n$, ici $u_n = 4 + 3n$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "arithmetique",
+      "enonce": "Quelle est la raison de la suite arithmétique $7\\,;\\ 11\\,;\\ 15\\,;\\ 19\\,;\\ \\ldots$ ?",
+      "choix": ["$4$", "$7$", "$\\dfrac{11}{7}$", "$-4$"],
+      "reponse": 0,
+      "explication": "La raison est la **différence constante** entre deux termes consécutifs : $11 - 7 = 4$. Le choix $\\frac{11}{7}$ correspondrait au quotient, qui sert pour les suites géométriques — et qui n'est d'ailleurs pas constant ici."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "arithmetique",
+      "enonce": "Pour la suite arithmétique de premier terme $u_0 = 5$ et de raison $r = 3$, que vaut $u_{20}$ ?",
+      "choix": ["$60$", "$65$", "$68$", "$63$"],
+      "reponse": 1,
+      "explication": "$u_n = u_0 + nr = 5 + 20 \\times 3 = 65$. Le choix $68$ vient d'un décalage d'indice ($5 + 21 \\times 3$) : avec un premier terme d'indice $0$, on multiplie par $n$, pas par $n+1$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "geometrique",
+      "enonce": "Une suite géométrique a pour premier terme $u_0 = 3$ et pour raison $q = 2$. Que vaut $u_5$ ?",
+      "choix": ["$30$", "$96$", "$48$", "$32$"],
+      "reponse": 1,
+      "explication": "$u_n = u_0 \\times q^n = 3 \\times 2^5 = 3 \\times 32 = 96$. Le choix $32$ oublie de multiplier par $u_0$, le choix $30$ confond avec une progression arithmétique."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "nature",
+      "enonce": "La suite $2\\,;\\ 6\\,;\\ 18\\,;\\ 54\\,;\\ \\ldots$ est :",
+      "choix": [
+        "arithmétique de raison $4$",
+        "géométrique de raison $3$",
+        "arithmétique de raison $3$",
+        "ni arithmétique ni géométrique"
+      ],
+      "reponse": 1,
+      "explication": "Les différences ($4$, $12$, $36$) ne sont pas constantes, mais les quotients le sont : $6/2 = 18/6 = 54/18 = 3$. La suite est donc géométrique de raison $3$. Réflexe : tester **différence** puis **quotient**."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "taux-evolution",
+      "enonce": "Un capital baisse de $20\\,\\%$ chaque année. Quelle est la raison de la suite géométrique associée ?",
+      "choix": ["$-0{,}2$", "$0{,}8$", "$-20$", "$1{,}2$"],
+      "reponse": 1,
+      "explication": "Une baisse de $t\\,\\%$ correspond à $q = 1 - \\dfrac{t}{100} = 1 - 0{,}2 = 0{,}8$. Multiplier par $0{,}8$, c'est bien retirer $20\\,\\%$. Une raison négative ferait alterner le signe du capital, ce qui n'a aucun sens ici."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "somme-entiers",
+      "enonce": "Combien vaut $1 + 2 + 3 + \\cdots + 50$ ?",
+      "choix": ["$1\\,275$", "$2\\,550$", "$1\\,250$", "$2\\,500$"],
+      "reponse": 0,
+      "explication": "$\\dfrac{n(n+1)}{2} = \\dfrac{50 \\times 51}{2} = \\dfrac{2550}{2} = 1275$. Le choix $2\\,550$ est le résultat avant la division par $2$ — l'erreur la plus fréquente."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "somme-geometrique",
+      "enonce": "Combien vaut $1 + 2 + 2^2 + \\cdots + 2^{10}$ ?",
+      "choix": ["$1\\,023$", "$2\\,047$", "$1\\,024$", "$2\\,046$"],
+      "reponse": 1,
+      "explication": "$\\dfrac{1 - q^{n+1}}{1 - q} = \\dfrac{1 - 2^{11}}{1 - 2} = \\dfrac{1 - 2048}{-1} = 2047$. Le piège est le **nombre de termes** : de $2^0$ à $2^{10}$ il y en a $11$, d'où l'exposant $11$. Le choix $1\\,023$ correspond à $2^{10} - 1$, c'est-à-dire une somme s'arrêtant à $2^9$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "variation",
+      "enonce": "Une suite géométrique a $u_0 = 100 > 0$ et une raison $q = -2$. Que peut-on dire de son sens de variation ?",
+      "choix": [
+        "Elle est croissante",
+        "Elle est décroissante",
+        "Elle n'est ni croissante ni décroissante",
+        "Elle est constante"
+      ],
+      "reponse": 2,
+      "explication": "Avec $q < 0$ les termes **alternent de signe** : $100$, $-200$, $400$, $-800$… La suite n'est donc pas monotone. Les règles de variation ($q>1$ croissante, etc.) ne valent que pour $q > 0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "indice-depart",
+      "enonce": "Une suite arithmétique de raison $r = 4$ a pour premier terme $u_1 = 10$. Que vaut $u_7$ ?",
+      "choix": ["$38$", "$34$", "$42$", "$28$"],
+      "reponse": 1,
+      "explication": "Le premier terme est d'indice $1$, donc $u_n = u_1 + (n-1)r = 10 + 6 \\times 4 = 34$. Le choix $38$ applique $u_1 + 7r$ en oubliant le décalage. Vérifie toujours l'indice du premier terme avant d'appliquer une formule."
+    }
+  ]
+}

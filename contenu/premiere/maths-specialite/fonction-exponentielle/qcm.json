@@ -1,0 +1,139 @@
+{
+  "id": "1spe-math-fonction-exponentielle-qcm",
+  "chapitre": "1spe-math-fonction-exponentielle",
+  "titre": "QCM — Fonction exponentielle",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quelle propriété caractérise la fonction exponentielle ?",
+      "choix": [
+        "$f' = -f$ et $f(0) = 1$",
+        "$f' = f$ et $f(0) = 1$",
+        "$f' = f$ et $f(1) = 0$",
+        "$f' = f^2$ et $f(0) = 1$"
+      ],
+      "reponse": 1,
+      "explication": "L'exponentielle est l'**unique** fonction dérivable sur $\\mathbb{R}$ égale à sa propre dérivée et valant $1$ en $0$. C'est de cette définition que découlent toutes les autres propriétés."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "signe",
+      "enonce": "Combien l'équation $\\mathrm{e}^x = -5$ admet-elle de solutions dans $\\mathbb{R}$ ?",
+      "choix": ["Une seule", "Deux", "Aucune", "Une infinité"],
+      "reponse": 2,
+      "explication": "$\\mathrm{e}^x > 0$ pour **tout** réel $x$ : l'exponentielle ne prend jamais de valeur négative ni nulle. L'équation n'a donc aucune solution. Même conclusion pour $\\mathrm{e}^x = 0$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier $\\mathrm{e}^7 \\times \\mathrm{e}^{-4}$.",
+      "choix": [
+        "$\\mathrm{e}^{3}$",
+        "$\\mathrm{e}^{-28}$",
+        "$\\mathrm{e}^{11}$",
+        "$\\mathrm{e}^{7} - \\mathrm{e}^{4}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathrm{e}^a \\times \\mathrm{e}^b = \\mathrm{e}^{a+b}$, donc $\\mathrm{e}^{7 + (-4)} = \\mathrm{e}^3$. L'exponentielle transforme les **sommes d'exposants en produits**, exactement comme les puissances — on additionne les exposants, on ne les multiplie pas."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "Quelle égalité est **fausse** ?",
+      "choix": [
+        "$\\mathrm{e}^{a+b} = \\mathrm{e}^a \\times \\mathrm{e}^b$",
+        "$\\mathrm{e}^{a+b} = \\mathrm{e}^a + \\mathrm{e}^b$",
+        "$\\mathrm{e}^{-a} = \\dfrac{1}{\\mathrm{e}^a}$",
+        "$\\mathrm{e}^0 = 1$"
+      ],
+      "reponse": 1,
+      "explication": "C'est l'erreur classique. L'exponentielle d'une somme est le **produit** des exponentielles, jamais leur somme. Vérification numérique : $\\mathrm{e}^{1+1} = \\mathrm{e}^2 \\approx 7{,}39$, alors que $\\mathrm{e} + \\mathrm{e} \\approx 5{,}44$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "derivee",
+      "enonce": "Quelle est la dérivée de $f(x) = \\mathrm{e}^{5x+2}$ ?",
+      "choix": [
+        "$\\mathrm{e}^{5x+2}$",
+        "$5\\,\\mathrm{e}^{5x+2}$",
+        "$(5x+2)\\,\\mathrm{e}^{5x+2}$",
+        "$5\\,\\mathrm{e}^{5}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\left(\\mathrm{e}^{ax+b}\\right)' = a\\,\\mathrm{e}^{ax+b}$. Ici $a = 5$, d'où $5\\,\\mathrm{e}^{5x+2}$. Oublier le facteur $a$ est l'erreur la plus fréquente sur ce chapitre."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "equation",
+      "enonce": "Résoudre $\\mathrm{e}^{3x-1} = \\mathrm{e}^{x+5}$.",
+      "choix": ["$x = 3$", "$x = 2$", "$x = 6$", "$x = -3$"],
+      "reponse": 0,
+      "explication": "L'exponentielle étant strictement croissante, $\\mathrm{e}^a = \\mathrm{e}^b \\iff a = b$. Donc $3x - 1 = x + 5$, soit $2x = 6$ et $x = 3$."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "variations",
+      "enonce": "Quel est le sens de variation de $g(x) = \\mathrm{e}^{-x}$ sur $\\mathbb{R}$ ?",
+      "choix": [
+        "Croissante",
+        "Décroissante",
+        "Croissante puis décroissante",
+        "Constante"
+      ],
+      "reponse": 1,
+      "explication": "$g'(x) = -\\mathrm{e}^{-x}$. Comme $\\mathrm{e}^{-x} > 0$, la dérivée est strictement **négative** : $g$ est décroissante sur $\\mathbb{R}$. Attention à ne pas transposer mécaniquement la croissance de $\\mathrm{e}^x$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "signe",
+      "enonce": "Sur $\\mathbb{R}$, quel est le signe de $f(x) = (x - 3)\\,\\mathrm{e}^{2x}$ ?",
+      "choix": [
+        "Toujours positif",
+        "Négatif sur $]-\\infty\\,;3[$, positif sur $]3\\,;+\\infty[$",
+        "Toujours négatif",
+        "Positif sur $]-\\infty\\,;3[$, négatif sur $]3\\,;+\\infty[$"
+      ],
+      "reponse": 1,
+      "explication": "$\\mathrm{e}^{2x} > 0$ toujours : ce facteur **n'influence pas le signe** et peut être écarté. Le signe de $f$ est donc celui de $x - 3$ : négatif avant $3$, positif après. C'est l'usage pratique le plus courant de la stricte positivité."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "lien-suites",
+      "enonce": "La suite définie par $v_n = \\mathrm{e}^{2n}$ est géométrique. Quelle est sa raison ?",
+      "choix": ["$2$", "$\\mathrm{e}^2$", "$\\mathrm{e}$", "$2\\mathrm{e}$"],
+      "reponse": 1,
+      "explication": "$\\dfrac{v_{n+1}}{v_n} = \\dfrac{\\mathrm{e}^{2(n+1)}}{\\mathrm{e}^{2n}} = \\mathrm{e}^{2n+2-2n} = \\mathrm{e}^2$. La raison est $\\mathrm{e}^2 \\approx 7{,}39$, pas $2$ : l'exposant n'est pas la raison."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "tangente",
+      "enonce": "Quelle est l'équation de la tangente à la courbe de $\\exp$ au point d'abscisse $0$ ?",
+      "choix": [
+        "$y = x$",
+        "$y = x + 1$",
+        "$y = \\mathrm{e}x$",
+        "$y = 1$"
+      ],
+      "reponse": 1,
+      "explication": "$y = f'(0)(x - 0) + f(0)$ avec $f(0) = 1$ et $f'(0) = \\exp(0) = 1$, d'où $y = x + 1$. Cette tangente est un repère visuel utile : la courbe de l'exponentielle est toujours **au-dessus** de cette droite."
+    }
+  ]
+}
