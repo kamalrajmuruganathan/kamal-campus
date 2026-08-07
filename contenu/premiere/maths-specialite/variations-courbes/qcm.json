@@ -1,0 +1,134 @@
+{
+  "id": "1spe-math-variations-courbes-qcm",
+  "chapitre": "1spe-math-variations-courbes",
+  "titre": "QCM — Variations et courbes représentatives",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "signe-derivee",
+      "enonce": "Si $f'(x) > 0$ pour tout $x$ d'un intervalle $I$, alors sur $I$ la fonction $f$ est :",
+      "choix": ["décroissante", "croissante", "constante", "positive"],
+      "reponse": 1,
+      "explication": "Une dérivée strictement positive sur un intervalle signifie que $f$ y est strictement croissante. Attention à ne pas confondre le signe de $f'$ (qui donne les **variations**) et le signe de $f$ (qui donne la position par rapport à l'axe des abscisses)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "parite",
+      "enonce": "Quelle fonction est **paire** ?",
+      "choix": ["$f(x) = x^3$", "$f(x) = x^2 + 1$", "$f(x) = x + 1$", "$f(x) = \\dfrac{1}{x}$"],
+      "reponse": 1,
+      "explication": "$f(-x) = (-x)^2 + 1 = x^2 + 1 = f(x)$ : la fonction est paire, sa courbe est symétrique par rapport à l'axe des ordonnées. $x^3$ et $\\frac{1}{x}$ sont impaires, $x+1$ n'est ni l'une ni l'autre."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "extremum",
+      "enonce": "$f$ est dérivable sur $\\mathbb{R}$ et $f'(2) = 0$. Que peut-on affirmer ?",
+      "choix": [
+        "$f$ admet forcément un extrémum en $2$",
+        "La tangente en $2$ est horizontale, mais il n'y a pas forcément d'extrémum",
+        "$f$ est constante",
+        "$f(2) = 0$"
+      ],
+      "reponse": 1,
+      "explication": "$f'(2) = 0$ signifie seulement que la tangente est horizontale. La réciproque du théorème est **fausse** : $f(x) = x^3$ vérifie $f'(0) = 0$ sans avoir d'extrémum. Il faut que $f'$ **change de signe**."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "etude-variations",
+      "enonce": "Pour $f(x) = x^2 - 6x + 5$, sur quel intervalle $f$ est-elle décroissante ?",
+      "choix": [
+        "$]-\\infty\\,;3]$",
+        "$[3\\,;+\\infty[$",
+        "$]-\\infty\\,;6]$",
+        "$[1\\,;5]$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 2x - 6$, qui est négative pour $x < 3$. Donc $f$ décroît sur $]-\\infty\\,;3]$ puis croît. Le choix $[1\\,;5]$ correspond à l'intervalle où $f$ est **négative** — une confusion classique entre signe de $f$ et signe de $f'$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "constante",
+      "enonce": "Sur un intervalle $I$, une fonction dérivable vérifie $f'(x) = 0$ pour tout $x$. Alors :",
+      "choix": [
+        "$f$ est nulle sur $I$",
+        "$f$ est constante sur $I$",
+        "$f$ est croissante sur $I$",
+        "$f$ n'existe pas"
+      ],
+      "reponse": 1,
+      "explication": "Une dérivée nulle sur un intervalle caractérise les fonctions **constantes**. Constante ne veut pas dire nulle : $f(x) = 7$ a bien une dérivée nulle partout."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "Si $f$ est impaire et définie en $0$, que vaut nécessairement $f(0)$ ?",
+      "choix": ["$1$", "$0$", "$-1$", "On ne peut pas savoir"],
+      "reponse": 1,
+      "explication": "L'imparité donne $f(-0) = -f(0)$, soit $f(0) = -f(0)$, donc $2f(0) = 0$ et $f(0) = 0$. La courbe d'une fonction impaire définie en $0$ passe toujours par l'origine."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "intervalle",
+      "enonce": "La fonction inverse $f(x) = \\dfrac{1}{x}$ a une dérivée négative sur $\\mathbb{R}^*$. Peut-on dire qu'elle est décroissante sur $\\mathbb{R}^*$ ?",
+      "choix": [
+        "Oui, puisque $f' < 0$ partout",
+        "Non, $\\mathbb{R}^*$ n'est pas un intervalle : elle décroît sur chacun des deux intervalles séparément",
+        "Non, sa dérivée est positive",
+        "Oui, mais seulement pour $x > 0$"
+      ],
+      "reponse": 1,
+      "explication": "Le théorème exige un **intervalle**. $\\mathbb{R}^*$ est une réunion de deux intervalles. Contre-exemple : $f(-1) = -1$ et $f(1) = 1$, donc $f(-1) < f(1)$ alors que $-1 < 1$ — pas de décroissance globale."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "etude-variations",
+      "enonce": "Pour $f(x) = x^3 - 3x$, on a $f'(x) = 3(x-1)(x+1)$. Combien $f$ admet-elle d'extrémums locaux ?",
+      "choix": ["Aucun", "Un seul", "Deux", "Trois"],
+      "reponse": 2,
+      "explication": "$f'$ s'annule en $-1$ et $1$, **et change de signe** aux deux : positive avant $-1$, négative entre, positive après. Il y a donc un maximum local en $-1$ et un minimum local en $1$, soit deux extrémums."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "parite",
+      "enonce": "Une fonction $f$ est définie sur $[0\\,;+\\infty[$ et vérifie $f(-x) = f(x)$ partout où c'est possible. Est-elle paire ?",
+      "choix": [
+        "Oui",
+        "Non, son ensemble de définition n'est pas symétrique par rapport à $0$",
+        "Oui, si $f(0) = 0$",
+        "Elle est impaire"
+      ],
+      "reponse": 1,
+      "explication": "La parité exige d'abord que l'ensemble de définition soit **symétrique par rapport à $0$** : si $x$ y appartient, $-x$ aussi. Sur $[0\\,;+\\infty[$ ce n'est pas le cas, la question de la parité ne se pose donc même pas."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "second-degre-derivation",
+      "enonce": "Pour $f(x) = -2x^2 + 8x - 3$, en quelle abscisse se situe l'extrémum, et de quelle nature est-il ?",
+      "choix": [
+        "$x = 2$, maximum",
+        "$x = 2$, minimum",
+        "$x = -2$, maximum",
+        "$x = 4$, maximum"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = -4x + 8$ s'annule en $x = 2$. Comme $a = -2 < 0$, la parabole est tournée vers le bas : c'est un **maximum**. On retrouve bien $-\\dfrac{b}{2a} = -\\dfrac{8}{-4} = 2$, ce qui confirme le résultat par la forme canonique."
+    }
+  ]
+}

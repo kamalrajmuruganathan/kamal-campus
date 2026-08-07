@@ -1,0 +1,124 @@
+{
+  "id": "1spe-math-produit-scalaire-qcm",
+  "chapitre": "1spe-math-produit-scalaire",
+  "titre": "QCM — Calcul vectoriel et produit scalaire",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "nature",
+      "enonce": "Le produit scalaire de deux vecteurs est :",
+      "choix": ["un vecteur", "un nombre réel", "un angle", "une longueur toujours positive"],
+      "reponse": 1,
+      "explication": "C'est un **nombre réel** — d'où le nom *scalaire*. Il peut être positif, négatif ou nul, ce qui exclut aussi la dernière réponse."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "coordonnees",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$. Que vaut $\\vec{u} \\cdot \\vec{v}$ ?",
+      "choix": ["$11$", "$6$", "$16$", "$5$"],
+      "reponse": 0,
+      "explication": "$\\vec{u} \\cdot \\vec{v} = xx' + yy' = 2 \\times 3 + 5 \\times 1 = 6 + 5 = 11$. Le choix $6$ ne garde que le produit des abscisses."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "orthogonalite",
+      "enonce": "Lesquels de ces vecteurs sont orthogonaux ?",
+      "choix": [
+        "$\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ et $\\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$ et $\\begin{pmatrix} 2 \\\\ 6 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$ et $\\begin{pmatrix} 2 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 0 \\\\ 3 \\end{pmatrix}$ et $\\begin{pmatrix} 0 \\\\ 5 \\end{pmatrix}$"
+      ],
+      "reponse": 1,
+      "explication": "$3 \\times 2 + (-1) \\times 6 = 6 - 6 = 0$ : ces vecteurs sont orthogonaux. Le choix A donne $4$, le choix C donne $4$ (vecteurs colinéaires), le choix D donne $15$ (vecteurs colinéaires également)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "norme",
+      "enonce": "Que vaut la norme du vecteur $\\vec{u}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ ?",
+      "choix": ["$7$", "$5$", "$25$", "$12$"],
+      "reponse": 1,
+      "explication": "$\\|\\vec{u}\\| = \\sqrt{3^2 + 4^2} = \\sqrt{9+16} = \\sqrt{25} = 5$. Le choix $25$ correspond à $\\|\\vec{u}\\|^2$, c'est-à-dire au carré scalaire $\\vec{u} \\cdot \\vec{u}$ — utile, mais ce n'est pas la norme."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "developpement",
+      "enonce": "Quelle est la bonne écriture de $\\|\\vec{u} + \\vec{v}\\|^2$ ?",
+      "choix": [
+        "$\\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2$",
+        "$\\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$",
+        "$\\|\\vec{u}\\|^2 + \\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$",
+        "$\\left(\\|\\vec{u}\\| + \\|\\vec{v}\\|\\right)^2$"
+      ],
+      "reponse": 1,
+      "explication": "C'est l'analogue vectoriel de $(a+b)^2 = a^2 + 2ab + b^2$, le double produit devenant $2\\,\\vec{u}\\cdot\\vec{v}$. Le choix A ne serait vrai que si les vecteurs étaient orthogonaux — c'est alors le théorème de Pythagore."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "signe-angle",
+      "enonce": "Si $\\vec{u} \\cdot \\vec{v} < 0$ avec $\\vec{u}$ et $\\vec{v}$ non nuls, l'angle entre les deux vecteurs est :",
+      "choix": ["aigu", "droit", "obtus", "nul"],
+      "reponse": 2,
+      "explication": "$\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\|\\|\\vec{v}\\|\\cos\\theta$. Les normes étant positives, le signe du produit scalaire est celui de $\\cos\\theta$. Un cosinus négatif correspond à un angle **obtus**, entre $\\frac{\\pi}{2}$ et $\\pi$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle, $b = 5$, $c = 8$ et $\\widehat{\\mathrm{A}} = 60°$. Que vaut $a^2$ ?",
+      "choix": ["$89$", "$49$", "$129$", "$29$"],
+      "reponse": 1,
+      "explication": "Al-Kashi : $a^2 = b^2 + c^2 - 2bc\\cos\\widehat{\\mathrm{A}} = 25 + 64 - 2 \\times 5 \\times 8 \\times 0{,}5 = 89 - 40 = 49$. Donc $a = 7$. Le choix $89$ oublie le terme correctif, le choix $129$ met un $+$ au lieu d'un $-$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "orthogonalite",
+      "enonce": "$\\vec{u}$ et $\\vec{v}$ sont deux vecteurs **non nuls** avec $\\vec{u} \\cdot \\vec{v} = 0$. Que peut-on conclure ?",
+      "choix": [
+        "L'un des deux vecteurs est nul",
+        "Ils sont colinéaires",
+        "Ils sont orthogonaux",
+        "Ils sont égaux"
+      ],
+      "reponse": 2,
+      "explication": "Contrairement au produit de deux nombres réels, un produit scalaire nul n'impose pas qu'un facteur soit nul. Pour deux vecteurs non nuls, il signifie exactement que $\\cos\\theta = 0$, donc que l'angle est droit."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "lieu-geometrique",
+      "enonce": "Quel est l'ensemble des points $\\mathrm{M}$ du plan tels que $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$ ?",
+      "choix": [
+        "La médiatrice de $[\\mathrm{AB}]$",
+        "Le cercle de diamètre $[\\mathrm{AB}]$",
+        "La droite $(\\mathrm{AB})$",
+        "Le cercle de centre $\\mathrm{A}$ passant par $\\mathrm{B}$"
+      ],
+      "reponse": 1,
+      "explication": "C'est le **cercle de diamètre $[\\mathrm{AB}]$** : la condition traduit que l'angle $\\widehat{\\mathrm{AMB}}$ est droit, c'est-à-dire la propriété du triangle inscrit dans un demi-cercle. La médiatrice, elle, correspondrait à $\\mathrm{MA} = \\mathrm{MB}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "angle",
+      "enonce": "$\\|\\vec{u}\\| = 4$, $\\|\\vec{v}\\| = 3$ et $\\vec{u} \\cdot \\vec{v} = 6$. Que vaut $\\cos\\theta$ ?",
+      "choix": ["$\\dfrac{1}{2}$", "$2$", "$\\dfrac{1}{4}$", "$\\dfrac{6}{7}$"],
+      "reponse": 0,
+      "explication": "$\\cos\\theta = \\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|} = \\dfrac{6}{4 \\times 3} = \\dfrac{6}{12} = \\dfrac{1}{2}$, soit $\\theta = 60°$. Le choix $2$ est impossible : un cosinus reste toujours entre $-1$ et $1$, c'est un bon contrôle de vraisemblance."
+    }
+  ]
+}
