@@ -1,0 +1,134 @@
+{
+  "id": "1spe-pc-energie-electrique-qcm",
+  "chapitre": "1spe-pc-energie-electrique",
+  "titre": "QCM — Aspects énergétiques des phénomènes électriques",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "puissance",
+      "enonce": "Quelle est la puissance d'un appareil sous $230$ V parcouru par un courant de $2$ A ?",
+      "choix": ["$460$ W", "$115$ W", "$232$ W", "$460$ J"],
+      "reponse": 0,
+      "explication": "$P = U \\times I = 230 \\times 2 = 460$ W. Le dernier choix a la bonne valeur mais la mauvaise unité : le joule mesure une **énergie**, pas une puissance."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "unites",
+      "enonce": "Le kilowattheure (kWh) est une unité de :",
+      "choix": ["puissance", "énergie", "tension", "intensité"],
+      "reponse": 1,
+      "explication": "Malgré le « watt » dans son nom, le kWh est une **énergie** : c'est une puissance multipliée par une durée. $1$ kWh $= 3{,}6 \\times 10^6$ J."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "energie",
+      "enonce": "Un appareil de $100$ W fonctionne pendant $2$ heures. Quelle énergie consomme-t-il en joules ?",
+      "choix": [
+        "$200$ J",
+        "$7{,}2 \\times 10^{5}$ J",
+        "$720$ J",
+        "$50$ J"
+      ],
+      "reponse": 1,
+      "explication": "$2$ h $= 7200$ s, donc $E = 100 \\times 7200 = 7{,}2 \\times 10^5$ J. **La conversion en secondes est obligatoire** pour obtenir des joules — le choix $200$ J oublie de convertir."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "effet-joule",
+      "enonce": "Quelle est la puissance dissipée par effet Joule dans une résistance ?",
+      "choix": [
+        "$P = RI$",
+        "$P = RI^2$",
+        "$P = R^2I$",
+        "$P = \\dfrac{R}{I}$"
+      ],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{J} = RI^2$, ou de façon équivalente $\\dfrac{U^2}{R}$. Le carré sur l'intensité est essentiel : il explique pourquoi les pertes en ligne explosent quand le courant augmente."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "rendement",
+      "enonce": "Un moteur reçoit $800$ J et fournit $600$ J de travail utile. Quel est son rendement ?",
+      "choix": ["$0{,}75$", "$1{,}33$", "$200$", "$0{,}25$"],
+      "reponse": 0,
+      "explication": "$\\eta = \\dfrac{600}{800} = 0{,}75$, soit $75\\,\\%$. Le choix $1{,}33$ inverse la fraction — et un rendement supérieur à $1$ est physiquement impossible, ce qui suffit à l'écarter."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "generateur",
+      "enonce": "Dans le modèle du générateur réel $U = E - rI$, que représente $r$ ?",
+      "choix": [
+        "La résistance du circuit extérieur",
+        "La résistance interne du générateur",
+        "Le rendement",
+        "La force électromotrice"
+      ],
+      "reponse": 1,
+      "explication": "$r$ est la **résistance interne** : le terme $rI$ correspond à la tension perdue à l'intérieur du générateur, dissipée par effet Joule. Un générateur idéal ($r = 0$) délivrerait toujours $E$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "effet-joule",
+      "enonce": "Si l'on double l'intensité traversant une résistance, la puissance dissipée est :",
+      "choix": [
+        "doublée",
+        "quadruplée",
+        "inchangée",
+        "divisée par deux"
+      ],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{J} = RI^2$ : doubler $I$ multiplie la puissance par $2^2 = 4$. C'est précisément pour cela que l'électricité est transportée à très **haute tension** — à puissance égale, l'intensité est faible et les pertes minimes."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "generateur",
+      "enonce": "Un générateur a $E = 12$ V et $r = 0{,}5\\ \\Omega$. Quelle est la tension à ses bornes quand il débite $2$ A ?",
+      "choix": ["$12$ V", "$11$ V", "$13$ V", "$1$ V"],
+      "reponse": 1,
+      "explication": "$U = E - rI = 12 - 0{,}5 \\times 2 = 12 - 1 = 11$ V. La tension aux bornes est toujours **inférieure** à la fem dès que le générateur débite du courant."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "conservation",
+      "enonce": "Un dispositif reçoit $1000$ J et en restitue $700$ J utiles. Où sont passés les $300$ J restants ?",
+      "choix": [
+        "Ils ont disparu",
+        "Ils ont été dissipés, principalement en chaleur",
+        "Ils ont été créés",
+        "Le calcul est faux"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie ne disparaît jamais : $E_{\\text{fournie}} = E_{\\text{utile}} + E_{\\text{dissipée}}$. Les $300$ J sont partis en chaleur, par effet Joule et frottements. C'est le principe de conservation de l'énergie."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "rendement",
+      "enonce": "Un élève calcule un rendement de $1{,}2$. Que faut-il en conclure ?",
+      "choix": [
+        "Le dispositif est très performant",
+        "Il y a une erreur : un rendement ne peut pas dépasser $1$",
+        "Le rendement est de $120\\,\\%$, c'est possible",
+        "Il faut convertir en pourcentage"
+      ],
+      "reponse": 1,
+      "explication": "Un rendement supérieur à $1$ signifierait qu'on récupère plus d'énergie qu'on n'en fournit, ce qui viole la conservation de l'énergie. C'est **toujours** le signe d'une erreur de calcul ou d'identification de l'énergie utile."
+    }
+  ]
+}
