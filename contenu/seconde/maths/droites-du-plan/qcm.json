@@ -1,0 +1,124 @@
+{
+  "id": "2nde-math-droites-du-plan-qcm",
+  "chapitre": "2nde-math-droites-du-plan",
+  "titre": "QCM — Droites du plan",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "equation-reduite",
+      "enonce": "Quel est le coefficient directeur de la droite d'équation $y = -3x + 7$ ?",
+      "choix": ["$7$", "$-3$", "$3$", "$-7$"],
+      "reponse": 1,
+      "explication": "Dans $y = mx + p$, le coefficient directeur est $m = -3$ et l'ordonnée à l'origine $p = 7$. Un coefficient négatif signifie que la droite descend."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "verticale",
+      "enonce": "Quelle est l'équation d'une droite verticale passant par le point d'abscisse $5$ ?",
+      "choix": ["$y = 5$", "$x = 5$", "$y = 5x$", "$y = x + 5$"],
+      "reponse": 1,
+      "explication": "Une droite verticale est l'ensemble des points de même abscisse : $x = 5$. Elle n'admet **pas** d'équation réduite $y = mx+p$. Le choix $y = 5$ décrit une droite horizontale."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "coefficient-directeur",
+      "enonce": "Quel est le coefficient directeur de la droite passant par $\\mathrm{A}(2\\,;3)$ et $\\mathrm{B}(6\\,;11)$ ?",
+      "choix": ["$2$", "$\\dfrac{1}{2}$", "$8$", "$4$"],
+      "reponse": 0,
+      "explication": "$m = \\dfrac{11-3}{6-2} = \\dfrac{8}{4} = 2$. L'ordonnée est au **numérateur** : inverser donnerait $\\frac12$, l'erreur la plus courante."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "parallelisme",
+      "enonce": "Les droites $y = 4x - 1$ et $y = 4x + 9$ sont :",
+      "choix": [
+        "sécantes",
+        "strictement parallèles",
+        "confondues",
+        "perpendiculaires"
+      ],
+      "reponse": 1,
+      "explication": "Même coefficient directeur ($m = 4$) mais ordonnées à l'origine différentes : elles sont **strictement parallèles**. Si $p$ était aussi identique, elles seraient confondues."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "vecteur-directeur",
+      "enonce": "Quel vecteur est directeur de la droite $3x - 2y + 5 = 0$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 5 \\\\ 0 \\end{pmatrix}$"
+      ],
+      "reponse": 1,
+      "explication": "Pour $ax+by+c=0$, un vecteur directeur est $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$, ici $\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$. Le choix A donne les coefficients $(a\\,;b)$, qui formeront un vecteur **normal** — notion vue en Première."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "equation-par-deux-points",
+      "enonce": "Une droite a pour coefficient directeur $m = 2$ et passe par $\\mathrm{A}(1\\,;5)$. Quelle est son équation réduite ?",
+      "choix": ["$y = 2x + 5$", "$y = 2x + 3$", "$y = 2x - 3$", "$y = 5x + 2$"],
+      "reponse": 1,
+      "explication": "On remplace dans $y = 2x + p$ : $5 = 2 \\times 1 + p$, donc $p = 3$ et $y = 2x + 3$. Le choix A prend l'ordonnée du point pour $p$ — c'est une confusion fréquente, $p$ est l'ordonnée en $x = 0$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "intersection",
+      "enonce": "Quel est le point d'intersection de $y = 3x - 2$ et $y = -x + 6$ ?",
+      "choix": ["$(2\\,;4)$", "$(4\\,;2)$", "$(1\\,;1)$", "$(2\\,;-4)$"],
+      "reponse": 0,
+      "explication": "On égalise : $3x - 2 = -x + 6$, soit $4x = 8$ et $x = 2$. Puis $y = 3 \\times 2 - 2 = 4$. Vérification dans la seconde équation : $-2 + 6 = 4$ ✓."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "systeme",
+      "enonce": "Un système de deux équations de droites n'a **aucune** solution. Que peut-on en déduire ?",
+      "choix": [
+        "Les droites sont sécantes",
+        "Les droites sont strictement parallèles",
+        "Les droites sont confondues",
+        "L'une des équations est fausse"
+      ],
+      "reponse": 1,
+      "explication": "Aucune solution signifie aucun point commun : les droites sont **strictement parallèles**. Une infinité de solutions correspondrait à des droites confondues, une solution unique à des droites sécantes."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "parallelisme-cartesienne",
+      "enonce": "Les droites $2x + 3y - 1 = 0$ et $4x + 6y + 5 = 0$ sont-elles parallèles ?",
+      "choix": [
+        "Oui, car $2 \\times 6 - 4 \\times 3 = 0$",
+        "Non, car les constantes diffèrent",
+        "Non, car $2 \\neq 4$",
+        "Elles sont confondues"
+      ],
+      "reponse": 0,
+      "explication": "Le critère est $ab' - a'b = 0$ : ici $2 \\times 6 - 4 \\times 3 = 12 - 12 = 0$, donc les droites sont parallèles. Comparer seulement $a$ et $a'$ (choix C) ne suffit jamais."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "systeme",
+      "enonce": "Quelle est la solution du système $\\begin{cases} x + y = 10 \\\\ x - y = 4 \\end{cases}$ ?",
+      "choix": ["$(7\\,;3)$", "$(3\\,;7)$", "$(6\\,;4)$", "$(4\\,;6)$"],
+      "reponse": 0,
+      "explication": "En additionnant les deux équations : $2x = 14$, donc $x = 7$, puis $y = 3$. Vérification : $7 + 3 = 10$ ✓ et $7 - 3 = 4$ ✓. La combinaison linéaire est ici plus rapide que la substitution."
+    }
+  ]
+}
