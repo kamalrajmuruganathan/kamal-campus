@@ -1,0 +1,129 @@
+{
+  "id": "1spe-math-second-degre-qcm",
+  "chapitre": "1spe-math-second-degre",
+  "titre": "QCM — Second degré",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Parmi ces fonctions, laquelle n'est **pas** une fonction polynôme du second degré ?",
+      "choix": [
+        "$f(x) = 3x^2 - 7$",
+        "$f(x) = -x^2 + x - 1$",
+        "$f(x) = 0x^2 + 4x - 5$",
+        "$f(x) = (x-1)(x+2)$"
+      ],
+      "reponse": 2,
+      "explication": "Le coefficient $a$ doit être non nul. Ici $a = 0$, la fonction se réduit à $4x - 5$, qui est affine. La dernière est bien du second degré : en développant, $(x-1)(x+2) = x^2 + x - 2$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "forme-factorisee",
+      "enonce": "Quelles sont les racines de $f(x) = 5(x - 3)(x + 7)$ ?",
+      "choix": ["$5$ et $-3$", "$3$ et $-7$", "$-3$ et $7$", "$15$ et $-35$"],
+      "reponse": 1,
+      "explication": "Un produit est nul si et seulement si l'un de ses facteurs l'est. $x - 3 = 0$ donne $x = 3$, et $x + 7 = 0$ donne $x = -7$. Le facteur $5$ n'intervient pas : il ne s'annule jamais."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "somme-produit",
+      "enonce": "Pour $f(x) = 2x^2 - 10x + 8$, que valent la somme $S$ et le produit $P$ des racines ?",
+      "choix": [
+        "$S = -5$ et $P = 4$",
+        "$S = 5$ et $P = 4$",
+        "$S = 10$ et $P = 8$",
+        "$S = 5$ et $P = 8$"
+      ],
+      "reponse": 1,
+      "explication": "$S = -\\dfrac{b}{a} = -\\dfrac{-10}{2} = 5$ et $P = \\dfrac{c}{a} = \\dfrac{8}{2} = 4$. Attention au double signe dans $S$ : $b$ vaut $-10$, donc $-b/a$ est positif. Vérification : les racines sont $1$ et $4$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "racine-evidente",
+      "enonce": "$f(x) = x^2 - 6x + 5$. En remarquant une racine évidente, quelle est l'autre racine ?",
+      "choix": ["$5$", "$6$", "$-5$", "$-1$"],
+      "reponse": 0,
+      "explication": "$f(1) = 1 - 6 + 5 = 0$, donc $1$ est racine évidente. Le produit des racines vaut $P = \\dfrac{c}{a} = 5$, donc la seconde racine est $\\dfrac{5}{1} = 5$. On évite ainsi tout calcul de discriminant."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "somme-produit-reciproque",
+      "enonce": "Deux nombres ont pour somme $9$ et pour produit $20$. De quelle équation sont-ils les racines ?",
+      "choix": [
+        "$x^2 + 9x + 20 = 0$",
+        "$x^2 - 9x + 20 = 0$",
+        "$x^2 - 9x - 20 = 0$",
+        "$x^2 + 20x - 9 = 0$"
+      ],
+      "reponse": 1,
+      "explication": "Deux nombres de somme $s$ et de produit $p$ sont racines de $x^2 - sx + p$. Ici $s = 9$ et $p = 20$, d'où $x^2 - 9x + 20$. Ce sont $4$ et $5$. Retiens le signe **moins** devant la somme."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "discriminant",
+      "enonce": "Quel est le discriminant de $f(x) = 3x^2 - 2x - 1$ ?",
+      "choix": ["$-8$", "$4$", "$16$", "$-16$"],
+      "reponse": 2,
+      "explication": "$\\Delta = b^2 - 4ac = (-2)^2 - 4 \\times 3 \\times (-1) = 4 + 12 = 16$. Le piège est le double signe : $-4ac$ avec $c$ négatif donne un terme **positif**. $\\Delta > 0$ : deux racines distinctes."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "identite-remarquable",
+      "enonce": "Combien la fonction $f(x) = x^2 + 10x + 25$ admet-elle de racines réelles ?",
+      "choix": ["Aucune", "Une seule", "Deux", "Une infinité"],
+      "reponse": 1,
+      "explication": "On reconnaît l'identité remarquable : $x^2 + 10x + 25 = (x+5)^2$. La fonction s'annule uniquement en $-5$ : c'est une racine **double**. On le retrouve avec $\\Delta = 100 - 100 = 0$, mais l'identité remarquable était plus rapide."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "signe",
+      "enonce": "$f(x) = -2x^2 + 4x + 6$ a pour racines $-1$ et $3$. Sur quel intervalle a-t-on $f(x) > 0$ ?",
+      "choix": [
+        "$]-\\infty\\,;-1[ \\ \\cup \\ ]3\\,;+\\infty[$",
+        "$]-1\\,;3[$",
+        "$\\mathbb{R}$ tout entier",
+        "Sur aucun intervalle"
+      ],
+      "reponse": 1,
+      "explication": "Le trinôme est du signe de $a$ à l'**extérieur** des racines. Ici $a = -2 < 0$, donc $f$ est négative à l'extérieur et **positive entre** les racines, soit sur $]-1\\,;3[$. Le piège est d'oublier que $a$ est négatif."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "forme-canonique",
+      "enonce": "Quelles sont les coordonnées du sommet de la parabole d'équation $y = x^2 - 4x + 1$ ?",
+      "choix": ["$(2\\,;-3)$", "$(-2\\,;13)$", "$(2\\,;1)$", "$(4\\,;1)$"],
+      "reponse": 0,
+      "explication": "$\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-4}{2} = 2$, puis $\\beta = f(2) = 4 - 8 + 1 = -3$. Le sommet est $(2\\,;-3)$. Comme $a > 0$, c'est un **minimum**."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "factorisation",
+      "enonce": "Quelle est la forme factorisée de $f(x) = 2x^2 - 3x - 2$ ?",
+      "choix": [
+        "$(2x+1)(x-2)$",
+        "$2(x+1)(x-2)$",
+        "$(x+1)(2x-2)$",
+        "$2(x-1)(x+2)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\Delta = 9 + 16 = 25$, $\\sqrt{\\Delta} = 5$, donc $x_1 = \\dfrac{3-5}{4} = -\\dfrac{1}{2}$ et $x_2 = \\dfrac{3+5}{4} = 2$. La forme factorisée est $2\\left(x + \\dfrac{1}{2}\\right)(x-2)$, et en distribuant le $2$ dans la première parenthèse : $(2x+1)(x-2)$. N'oublie jamais le coefficient $a$."
+    }
+  ]
+}
