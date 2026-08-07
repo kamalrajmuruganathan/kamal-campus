@@ -1,0 +1,134 @@
+{
+  "id": "2nde-math-algorithmique-qcm",
+  "chapitre": "2nde-math-algorithmique",
+  "titre": "QCM — Algorithmique et programmation",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Le langage est Python.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "range",
+      "enonce": "Quelles valeurs prend `i` dans `for i in range(4):` ?",
+      "choix": [
+        "$1, 2, 3, 4$",
+        "$0, 1, 2, 3$",
+        "$0, 1, 2, 3, 4$",
+        "$4$ seulement"
+      ],
+      "reponse": 1,
+      "explication": "`range(4)` produit **quatre** valeurs en commençant à $0$ et **sans atteindre** $4$ : $0, 1, 2, 3$. C'est l'erreur la plus fréquente de tout le chapitre."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "affectation",
+      "enonce": "Après `x = 5` puis `x = x + 2`, que vaut `x` ?",
+      "choix": ["$5$", "$7$", "$2$", "L'instruction est impossible"],
+      "reponse": 1,
+      "explication": "Le signe `=` est une **affectation**, pas une équation : on lit l'ancienne valeur de `x` ($5$), on ajoute $2$, et on range $7$ dans `x`. En mathématiques, $x = x+2$ n'aurait pas de solution."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "comparaison",
+      "enonce": "Comment teste-t-on l'égalité de `a` et `b` en Python ?",
+      "choix": ["`a = b`", "`a == b`", "`a := b`", "`a eq b`"],
+      "reponse": 1,
+      "explication": "Le test d'égalité s'écrit avec **deux** signes `==`. Un seul `=` réaliserait une affectation, ce qui provoque une erreur de syntaxe dans un `if`."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "boucle-for",
+      "enonce": "Que vaut `S` après ce programme ?\n```python\nS = 0\nfor i in range(1, 5):\n    S = S + i\n```",
+      "choix": ["$10$", "$15$", "$6$", "$4$"],
+      "reponse": 0,
+      "explication": "`range(1, 5)` donne $1, 2, 3, 4$, dont la somme vaut $10$. Le choix $15$ correspondrait à `range(1, 6)` — la borne supérieure est toujours **exclue**."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "while",
+      "enonce": "Quand utilise-t-on une boucle `while` plutôt qu'une boucle `for` ?",
+      "choix": [
+        "Quand on connaît le nombre de répétitions",
+        "Quand on ne connaît pas le nombre de répétitions mais qu'on a une condition d'arrêt",
+        "Quand le programme est long",
+        "Elles sont interchangeables"
+      ],
+      "reponse": 1,
+      "explication": "`for` sert aux boucles **bornées** (nombre de tours connu à l'avance), `while` aux boucles **non bornées**, pilotées par une condition. Un balayage pour approcher une solution relève typiquement du `while`."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "fonction",
+      "enonce": "Que fait l'instruction `return` dans une fonction ?",
+      "choix": [
+        "Elle affiche le résultat à l'écran",
+        "Elle renvoie une valeur et termine la fonction",
+        "Elle relance la fonction",
+        "Elle crée une variable"
+      ],
+      "reponse": 1,
+      "explication": "`return` **renvoie** une valeur réutilisable dans un calcul et met fin à la fonction. C'est `print` qui affiche à l'écran — confondre les deux est une erreur classique."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "range",
+      "enonce": "Quelles valeurs produit `range(2, 11, 3)` ?",
+      "choix": [
+        "$2, 5, 8$",
+        "$2, 5, 8, 11$",
+        "$2, 3, 4, \\ldots, 10$",
+        "$3, 6, 9$"
+      ],
+      "reponse": 0,
+      "explication": "On part de $2$, on avance de $3$ en $3$, **sans atteindre** $11$ : $2$, $5$, $8$ — le suivant serait $11$, exclu. Le troisième argument est le **pas**."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "trace",
+      "enonce": "Que vaut `n` à la fin ?\n```python\nn = 1\nwhile n < 20:\n    n = n * 3\n```",
+      "choix": ["$9$", "$27$", "$20$", "La boucle est infinie"],
+      "reponse": 1,
+      "explication": "Les valeurs successives sont $1, 3, 9, 27$. À $27$, la condition $n < 20$ devient fausse et la boucle s'arrête — mais `n` vaut déjà $27$. La dernière affectation a bien lieu avant le test."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "syntaxe",
+      "enonce": "Pourquoi l'indentation est-elle importante en Python ?",
+      "choix": [
+        "Elle rend seulement le code plus lisible",
+        "Elle délimite les blocs d'instructions et fait partie de la syntaxe",
+        "Elle est optionnelle",
+        "Elle sert à commenter"
+      ],
+      "reponse": 1,
+      "explication": "Contrairement à d'autres langages qui utilisent des accolades, Python **structure le code par l'indentation**. Une mauvaise indentation change le sens du programme ou provoque une erreur."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "hasard",
+      "enonce": "Quelles valeurs peut renvoyer `randint(1, 6)` ?",
+      "choix": [
+        "$1$ à $5$",
+        "$1$ à $6$, bornes incluses",
+        "$0$ à $6$",
+        "$0$ à $5$"
+      ],
+      "reponse": 1,
+      "explication": "`randint` **inclut les deux bornes**, contrairement à `range` qui exclut la supérieure. Cette différence de convention entre deux fonctions voisines est un piège récurrent."
+    }
+  ]
+}
