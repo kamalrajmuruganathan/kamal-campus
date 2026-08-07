@@ -1,0 +1,129 @@
+{
+  "id": "1spe-math-probabilites-conditionnelles-qcm",
+  "chapitre": "1spe-math-probabilites-conditionnelles",
+  "titre": "QCM — Probabilités conditionnelles et indépendance",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Comment se calcule $P_\\mathrm{A}(\\mathrm{B})$ ?",
+      "choix": [
+        "$\\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{B})}$",
+        "$\\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})}$",
+        "$P(\\mathrm{A}) \\times P(\\mathrm{B})$",
+        "$P(\\mathrm{A}) + P(\\mathrm{B})$"
+      ],
+      "reponse": 1,
+      "explication": "On divise par la probabilité de l'événement **qui conditionne**, celui écrit en indice. Diviser par $P(\\mathrm{B})$ donnerait $P_\\mathrm{B}(\\mathrm{A})$, qui est une autre quantité."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "arbre",
+      "enonce": "Sur un arbre pondéré, comment calcule-t-on la probabilité d'un chemin ?",
+      "choix": [
+        "En additionnant les probabilités des branches",
+        "En multipliant les probabilités des branches",
+        "En prenant la plus grande probabilité",
+        "En divisant les probabilités des branches"
+      ],
+      "reponse": 1,
+      "explication": "On **multiplie** le long d'un chemin, et on **additionne** entre les chemins qui réalisent le même événement. Cette phrase résume toute la technique de l'arbre."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "calcul-conditionnelle",
+      "enonce": "$P(\\mathrm{A}) = 0{,}4$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}1$. Que vaut $P_\\mathrm{A}(\\mathrm{B})$ ?",
+      "choix": ["$0{,}04$", "$0{,}25$", "$0{,}5$", "$0{,}3$"],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{0{,}1}{0{,}4} = 0{,}25$. Le choix $0{,}04$ correspond au produit $0{,}4 \\times 0{,}1$ — c'est l'erreur de multiplier au lieu de diviser."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "independance",
+      "enonce": "$P(\\mathrm{A}) = 0{,}5$, $P(\\mathrm{B}) = 0{,}3$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}15$. Ces événements sont-ils indépendants ?",
+      "choix": [
+        "Oui, car $0{,}5 \\times 0{,}3 = 0{,}15$",
+        "Non, car $0{,}5 + 0{,}3 \\neq 0{,}15$",
+        "Non, car ils sont incompatibles",
+        "On ne peut pas savoir"
+      ],
+      "reponse": 0,
+      "explication": "Le critère est $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P(\\mathrm{B})$. Ici $0{,}5 \\times 0{,}3 = 0{,}15$, ce qui correspond exactement : les événements sont indépendants."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "$P(\\mathrm{A}) = 0{,}6$, $P_\\mathrm{A}(\\mathrm{B}) = 0{,}2$ et $P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}5$. Que vaut $P(\\mathrm{B})$ ?",
+      "choix": ["$0{,}7$", "$0{,}32$", "$0{,}12$", "$0{,}35$"],
+      "reponse": 1,
+      "explication": "Formule des probabilités totales : $P(\\mathrm{B}) = 0{,}6 \\times 0{,}2 + 0{,}4 \\times 0{,}5 = 0{,}12 + 0{,}20 = 0{,}32$. Le choix $0{,}12$ ne retient qu'un seul des deux chemins menant à $\\mathrm{B}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "independance-incompatibilite",
+      "enonce": "Deux événements de probabilités non nulles sont **incompatibles**. Que peut-on en déduire ?",
+      "choix": [
+        "Ils sont indépendants",
+        "Ils sont dépendants",
+        "On ne peut rien conclure",
+        "Leur intersection a une probabilité de $1$"
+      ],
+      "reponse": 1,
+      "explication": "Incompatibles signifie $P(\\mathrm{A} \\cap \\mathrm{B}) = 0$, alors que $P(\\mathrm{A}) \\times P(\\mathrm{B}) > 0$. Le critère d'indépendance n'est donc pas vérifié : ils sont **dépendants**. Savoir que l'un s'est réalisé garantit que l'autre ne s'est pas produit — c'est une information maximale."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "arbre",
+      "enonce": "Une usine : la machine 1 fait $70\\,\\%$ des pièces avec $3\\,\\%$ de défauts, la machine 2 fait le reste avec $8\\,\\%$ de défauts. Quelle est la probabilité qu'une pièce prise au hasard soit défectueuse ?",
+      "choix": ["$0{,}11$", "$0{,}045$", "$0{,}024$", "$0{,}055$"],
+      "reponse": 1,
+      "explication": "$P(\\mathrm{D}) = 0{,}7 \\times 0{,}03 + 0{,}3 \\times 0{,}08 = 0{,}021 + 0{,}024 = 0{,}045$, soit $4{,}5\\,\\%$. Le choix $0{,}11$ additionne les taux de défauts sans les pondérer par les parts de production."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "bernoulli",
+      "enonce": "On répète $3$ fois une épreuve de succès de probabilité $0{,}5$. Quelle est la probabilité d'obtenir **exactement deux** succès ?",
+      "choix": ["$0{,}25$", "$0{,}125$", "$0{,}375$", "$0{,}5$"],
+      "reponse": 2,
+      "explication": "Chaque chemin à deux succès et un échec a pour probabilité $0{,}5^3 = 0{,}125$. Il y a **trois** chemins possibles (SSÉ, SÉS, ÉSS), d'où $3 \\times 0{,}125 = 0{,}375$. Le choix $0{,}125$ oublie de compter les chemins."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "inversion-conditionnement",
+      "enonce": "Un test détecte $99\\,\\%$ des malades. Peut-on en déduire que $99\\,\\%$ des personnes testées positives sont malades ?",
+      "choix": [
+        "Oui, c'est la même chose",
+        "Non, ce sont deux probabilités conditionnelles différentes",
+        "Oui, si la maladie est rare",
+        "Non, car le test est forcément faux"
+      ],
+      "reponse": 1,
+      "explication": "L'énoncé donne $P_{\\text{malade}}(\\text{positif}) = 0{,}99$, mais la question porte sur $P_{\\text{positif}}(\\text{malade})$. Ces deux quantités sont différentes et dépendent aussi de la **prévalence** de la maladie. C'est l'erreur de raisonnement la plus coûteuse du chapitre."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "arbre",
+      "enonce": "Sur un arbre, deux branches partent d'un même nœud. L'une porte la probabilité $0{,}35$. Que porte l'autre ?",
+      "choix": ["$0{,}35$", "$0{,}65$", "$1{,}35$", "On ne peut pas savoir"],
+      "reponse": 1,
+      "explication": "La somme des probabilités des branches issues d'un même nœud vaut toujours $1$. L'autre branche porte donc $1 - 0{,}35 = 0{,}65$. C'est un contrôle rapide et systématique de la cohérence d'un arbre."
+    }
+  ]
+}

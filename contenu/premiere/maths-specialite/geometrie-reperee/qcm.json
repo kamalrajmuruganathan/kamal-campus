@@ -1,0 +1,139 @@
+{
+  "id": "1spe-math-geometrie-reperee-qcm",
+  "chapitre": "1spe-math-geometrie-reperee",
+  "titre": "QCM — Géométrie repérée",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Le repère est orthonormé.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vecteur-normal",
+      "enonce": "Quel vecteur est normal à la droite d'équation $4x - 3y + 1 = 0$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -3 \\\\ 4 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour $ax + by + c = 0$, le vecteur normal a pour coordonnées $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$, ici $\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$. Le choix C, $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$, est un vecteur **directeur**."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "equation-cercle",
+      "enonce": "Quelle est l'équation du cercle de centre $\\Omega(1\\,;5)$ et de rayon $3$ ?",
+      "choix": [
+        "$(x+1)^2 + (y+5)^2 = 3$",
+        "$(x-1)^2 + (y-5)^2 = 9$",
+        "$(x-1)^2 + (y-5)^2 = 3$",
+        "$(x+1)^2 + (y+5)^2 = 9$"
+      ],
+      "reponse": 1,
+      "explication": "On **soustrait** les coordonnées du centre et on met le rayon **au carré** : $(x-1)^2 + (y-5)^2 = 3^2 = 9$. Les deux erreurs les plus fréquentes sont réunies dans les autres choix."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "lecture-cercle",
+      "enonce": "Quel est le centre du cercle d'équation $(x+4)^2 + (y-2)^2 = 16$ ?",
+      "choix": ["$(4\\,;-2)$", "$(-4\\,;2)$", "$(4\\,;2)$", "$(-4\\,;-2)$"],
+      "reponse": 1,
+      "explication": "L'équation type est $(x-x_0)^2 + (y-y_0)^2 = R^2$. Ici $x + 4 = x - (-4)$, donc $x_0 = -4$, et $y - 2$ donne $y_0 = 2$. Le centre est $(-4\\,;2)$, le rayon vaut $\\sqrt{16} = 4$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "vecteur-directeur",
+      "enonce": "Quel vecteur est directeur de la droite $2x + 5y - 3 = 0$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -5 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3 \\\\ 0 \\end{pmatrix}$"
+      ],
+      "reponse": 1,
+      "explication": "Le normal est $\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$ ; un directeur lui est orthogonal, donc $\\begin{pmatrix} -5 \\\\ 2 \\end{pmatrix}$. Vérification : $2 \\times (-5) + 5 \\times 2 = 0$. Le choix C donne $10 + 10 = 20 \\neq 0$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "equation-droite",
+      "enonce": "Quelle est l'équation de la droite passant par $\\mathrm{A}(2\\,;1)$ et de vecteur normal $\\vec{n}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ ?",
+      "choix": [
+        "$3x + 4y - 10 = 0$",
+        "$3x + 4y + 10 = 0$",
+        "$4x + 3y - 11 = 0$",
+        "$3x - 4y + 2 = 0$"
+      ],
+      "reponse": 0,
+      "explication": "$a(x-x_\\mathrm{A}) + b(y-y_\\mathrm{A}) = 0$ donne $3(x-2) + 4(y-1) = 0$, soit $3x - 6 + 4y - 4 = 0$, donc $3x + 4y - 10 = 0$. Contrôle : $\\mathrm{A}$ doit vérifier l'équation, et $6 + 4 - 10 = 0$ ✓."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "distance",
+      "enonce": "Quelle est la distance entre $\\mathrm{A}(1\\,;2)$ et $\\mathrm{B}(4\\,;6)$ ?",
+      "choix": ["$5$", "$7$", "$25$", "$\\sqrt{7}$"],
+      "reponse": 0,
+      "explication": "$\\mathrm{AB} = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$. Le choix $25$ est le carré de la distance — utile intermédiaire, mais pas la réponse."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "forme-developpee",
+      "enonce": "Quel est le rayon du cercle d'équation $x^2 + y^2 - 4x + 6y - 3 = 0$ ?",
+      "choix": ["$3$", "$4$", "$16$", "$\\sqrt{3}$"],
+      "reponse": 1,
+      "explication": "$x^2 - 4x = (x-2)^2 - 4$ et $y^2 + 6y = (y+3)^2 - 9$. L'équation devient $(x-2)^2 + (y+3)^2 - 4 - 9 - 3 = 0$, soit $(x-2)^2 + (y+3)^2 = 16$. Le rayon est $\\sqrt{16} = 4$, le centre $(2\\,;-3)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "forme-developpee",
+      "enonce": "Après regroupement, une équation devient $(x-1)^2 + (y+2)^2 = -4$. Quel est cet ensemble de points ?",
+      "choix": [
+        "Un cercle de rayon $2$",
+        "Un cercle de rayon $-2$",
+        "L'ensemble vide",
+        "Un point unique"
+      ],
+      "reponse": 2,
+      "explication": "Une somme de deux carrés est toujours **positive ou nulle** : elle ne peut jamais valoir $-4$. L'ensemble est donc vide. Si le second membre valait $0$, l'ensemble serait réduit au seul point $(1\\,;-2)$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "perpendicularite",
+      "enonce": "Les droites $d_1 : 2x - 3y + 1 = 0$ et $d_2 : 3x + 2y - 5 = 0$ sont-elles perpendiculaires ?",
+      "choix": [
+        "Oui, car leurs vecteurs normaux sont orthogonaux",
+        "Non, elles sont parallèles",
+        "Non, elles sont sécantes sans être perpendiculaires",
+        "On ne peut pas conclure"
+      ],
+      "reponse": 0,
+      "explication": "Les normaux sont $\\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}$ et $\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$. Leur produit scalaire vaut $2 \\times 3 + (-3) \\times 2 = 6 - 6 = 0$ : ils sont orthogonaux, donc les droites sont perpendiculaires."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "cercle-diametre",
+      "enonce": "Quelle est l'équation du cercle de diamètre $[\\mathrm{AB}]$ avec $\\mathrm{A}(0\\,;0)$ et $\\mathrm{B}(6\\,;8)$ ?",
+      "choix": [
+        "$(x-3)^2 + (y-4)^2 = 25$",
+        "$(x-6)^2 + (y-8)^2 = 100$",
+        "$(x-3)^2 + (y-4)^2 = 100$",
+        "$(x-3)^2 + (y-4)^2 = 5$"
+      ],
+      "reponse": 0,
+      "explication": "Le centre est le **milieu** de $[\\mathrm{AB}]$, soit $(3\\,;4)$. Le rayon est la **moitié** du diamètre : $\\mathrm{AB} = \\sqrt{36+64} = 10$, donc $R = 5$ et $R^2 = 25$. L'erreur classique est de prendre $\\mathrm{AB}$ entier comme rayon."
+    }
+  ]
+}
