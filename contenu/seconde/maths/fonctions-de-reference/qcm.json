@@ -1,0 +1,139 @@
+{
+  "id": "2nde-math-fonctions-de-reference-qcm",
+  "chapitre": "2nde-math-fonctions-de-reference",
+  "titre": "QCM — Fonctions de référence",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "affine",
+      "enonce": "Quelle est la nature de la courbe représentative d'une fonction affine ?",
+      "choix": ["Une parabole", "Une droite", "Une hyperbole", "Un cercle"],
+      "reponse": 1,
+      "explication": "Toute fonction $f(x) = ax + b$ est représentée par une **droite**, de coefficient directeur $a$ et d'ordonnée à l'origine $b$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "carre",
+      "enonce": "Quel est le signe de $x^2$ pour $x$ réel ?",
+      "choix": [
+        "Toujours strictement positif",
+        "Toujours positif ou nul",
+        "Du signe de $x$",
+        "Toujours négatif"
+      ],
+      "reponse": 1,
+      "explication": "Un carré est toujours **positif ou nul** — il s'annule en $x = 0$. Dire « strictement positif » serait faux à cause de cette valeur."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "carre-variations",
+      "enonce": "Sur quel intervalle la fonction carré est-elle décroissante ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$]-\\infty\\,;0]$",
+        "$[0\\,;+\\infty[$",
+        "Elle n'est jamais décroissante"
+      ],
+      "reponse": 1,
+      "explication": "La parabole descend jusqu'à son sommet en $0$, puis remonte : la fonction carré décroît sur $]-\\infty\\,;0]$ et croît sur $[0\\,;+\\infty[$. Elle n'est donc pas monotone sur $\\mathbb{R}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "inverse",
+      "enonce": "Quel est l'ensemble de définition de la fonction inverse ?",
+      "choix": ["$\\mathbb{R}$", "$\\mathbb{R}^*$", "$[0\\,;+\\infty[$", "$]0\\,;+\\infty[$"],
+      "reponse": 1,
+      "explication": "$\\dfrac{1}{x}$ n'a pas de sens en $0$ : l'ensemble de définition est $\\mathbb{R}^* = \\mathbb{R} \\setminus \\{0\\}$, soit $]-\\infty\\,;0[\\ \\cup\\ ]0\\,;+\\infty[$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "racine",
+      "enonce": "Comparer $\\sqrt{11}$ et $\\sqrt{8}$.",
+      "choix": [
+        "$\\sqrt{11} < \\sqrt{8}$",
+        "$\\sqrt{11} > \\sqrt{8}$",
+        "Ils sont égaux",
+        "On ne peut pas comparer"
+      ],
+      "reponse": 1,
+      "explication": "La fonction racine est **croissante** sur $[0\\,;+\\infty[$ : elle conserve l'ordre. Comme $8 < 11$, on a $\\sqrt{8} < \\sqrt{11}$. C'est le raisonnement type attendu."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "Laquelle de ces fonctions de référence est **impaire** ?",
+      "choix": ["$x^2$", "$\\sqrt{x}$", "$\\dfrac{1}{x}$", "$x^2 + 1$"],
+      "reponse": 2,
+      "explication": "$\\dfrac{1}{-x} = -\\dfrac{1}{x}$ : la fonction inverse est impaire, sa courbe est symétrique par rapport à l'origine. $x^2$ est paire, et $\\sqrt{x}$ n'est ni l'une ni l'autre (son domaine n'est pas symétrique)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "carre-comparaison",
+      "enonce": "On sait que $-6 < -2$. Que peut-on dire de $(-6)^2$ et $(-2)^2$ ?",
+      "choix": [
+        "$(-6)^2 < (-2)^2$",
+        "$(-6)^2 > (-2)^2$",
+        "Ils sont égaux",
+        "On ne peut pas conclure"
+      ],
+      "reponse": 1,
+      "explication": "Sur les négatifs, la fonction carré est **décroissante** : elle inverse l'ordre. Donc $(-6)^2 > (-2)^2$, soit $36 > 4$ ✓. Appliquer mécaniquement « on élève au carré, l'ordre est conservé » est ici une faute."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "inverse-variations",
+      "enonce": "Peut-on dire que la fonction inverse est décroissante sur $\\mathbb{R}^*$ ?",
+      "choix": [
+        "Oui",
+        "Non, elle est décroissante sur chacun des deux intervalles, mais pas sur leur réunion",
+        "Non, elle est croissante",
+        "Non, elle est constante"
+      ],
+      "reponse": 1,
+      "explication": "Contre-exemple : $-1 < 1$ mais $f(-1) = -1 < f(1) = 1$ — l'ordre est conservé, pas inversé. La monotonie ne s'énonce que sur un **intervalle**, or $\\mathbb{R}^*$ n'en est pas un."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "cube",
+      "enonce": "Sur quel ensemble la fonction cube $x \\mapsto x^3$ est-elle croissante ?",
+      "choix": [
+        "$[0\\,;+\\infty[$ seulement",
+        "$\\mathbb{R}$ tout entier",
+        "$]-\\infty\\,;0]$ seulement",
+        "Elle n'est jamais croissante"
+      ],
+      "reponse": 1,
+      "explication": "Contrairement au carré, le cube est croissant sur $\\mathbb{R}$ **tout entier**. Il conserve donc toujours l'ordre : si $a < b$ alors $a^3 < b^3$, y compris avec des nombres négatifs."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "comparaison",
+      "enonce": "Pour $x$ compris strictement entre $0$ et $1$, quel est le bon classement ?",
+      "choix": [
+        "$x^2 < x < \\sqrt{x}$",
+        "$\\sqrt{x} < x < x^2$",
+        "$x < x^2 < \\sqrt{x}$",
+        "Ils sont toujours égaux"
+      ],
+      "reponse": 0,
+      "explication": "Testons avec $x = 0{,}25$ : $x^2 = 0{,}0625$, $x = 0{,}25$, $\\sqrt{x} = 0{,}5$. Donc $x^2 < x < \\sqrt{x}$. Au-delà de $1$, l'ordre s'inverse complètement — vérifier sur un exemple numérique est le réflexe le plus sûr."
+    }
+  ]
+}

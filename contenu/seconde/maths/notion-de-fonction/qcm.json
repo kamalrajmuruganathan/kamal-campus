@@ -1,0 +1,134 @@
+{
+  "id": "2nde-math-notion-de-fonction-qcm",
+  "chapitre": "2nde-math-notion-de-fonction",
+  "titre": "QCM — Notion de fonction",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "image",
+      "enonce": "Pour $f(x) = 3x - 5$, quelle est l'image de $4$ ?",
+      "choix": ["$7$", "$3$", "$-5$", "$12$"],
+      "reponse": 0,
+      "explication": "On remplace $x$ par $4$ : $f(4) = 3 \\times 4 - 5 = 12 - 5 = 7$. Le choix $12$ s'arrête avant de soustraire $5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Combien d'images un nombre peut-il avoir par une fonction ?",
+      "choix": ["Aucune", "Une seule", "Deux au maximum", "Autant qu'on veut"],
+      "reponse": 1,
+      "explication": "C'est le cœur de la définition : à chaque antécédent correspond **une unique** image. En revanche, une image peut avoir plusieurs antécédents — l'asymétrie est essentielle."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "antecedents",
+      "enonce": "Pour $f(x) = x^2$, combien $9$ a-t-il d'antécédents ?",
+      "choix": ["Aucun", "Un seul : $3$", "Deux : $3$ et $-3$", "Une infinité"],
+      "reponse": 2,
+      "explication": "On résout $x^2 = 9$, soit $x^2 - 9 = 0$ et $(x-3)(x+3) = 0$ : les antécédents sont $3$ et $-3$. Oublier la solution négative est l'erreur la plus fréquente sur ce point."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "ensemble-definition",
+      "enonce": "Quel est l'ensemble de définition de $f(x) = \\dfrac{1}{x - 3}$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$\\mathbb{R} \\setminus \\{3\\}$",
+        "$[3\\,;+\\infty[$",
+        "$\\mathbb{R} \\setminus \\{0\\}$"
+      ],
+      "reponse": 1,
+      "explication": "Le dénominateur ne doit pas être nul : $x - 3 \\neq 0$, donc $x \\neq 3$. On note $\\mathbb{R} \\setminus \\{3\\}$, ou $]-\\infty\\,;3[\\ \\cup\\ ]3\\,;+\\infty[$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "ensemble-definition",
+      "enonce": "Quel est l'ensemble de définition de $g(x) = \\sqrt{x - 7}$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$[7\\,;+\\infty[$",
+        "$]7\\,;+\\infty[$",
+        "$]-\\infty\\,;7]$"
+      ],
+      "reponse": 1,
+      "explication": "Il faut $x - 7 \\geqslant 0$, soit $x \\geqslant 7$. Le crochet est **fermé** en $7$ car $\\sqrt{0} = 0$ existe bien — contrairement au cas d'un dénominateur, où la valeur serait exclue."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "lecture-graphique",
+      "enonce": "Sur une courbe, comment lit-on les antécédents de $5$ ?",
+      "choix": [
+        "On part de $5$ sur l'axe des abscisses et on monte",
+        "On trace l'horizontale $y = 5$ et on lit les abscisses des intersections",
+        "On calcule $f(5)$",
+        "On trace la verticale $x = 5$"
+      ],
+      "reponse": 1,
+      "explication": "Les antécédents se lisent **de l'axe des ordonnées vers celui des abscisses** : on trace $y = 5$, et chaque point d'intersection avec la courbe donne un antécédent. Le choix A décrit la lecture d'une **image**."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "test-verticale",
+      "enonce": "Un cercle tracé dans un repère peut-il être la courbe représentative d'une fonction ?",
+      "choix": [
+        "Oui, toujours",
+        "Non, car certaines verticales le coupent en deux points",
+        "Oui, si son rayon est assez petit",
+        "Oui, si son centre est l'origine"
+      ],
+      "reponse": 1,
+      "explication": "Le **test de la verticale** l'interdit : une droite verticale coupe le cercle en deux points, ce qui donnerait deux images à un même antécédent. Or une fonction n'en admet qu'une."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "variations",
+      "enonce": "Si $f$ est décroissante sur $[0\\,;10]$ et que $2 < 7$, que peut-on affirmer ?",
+      "choix": [
+        "$f(2) < f(7)$",
+        "$f(2) > f(7)$",
+        "$f(2) = f(7)$",
+        "On ne peut rien dire"
+      ],
+      "reponse": 1,
+      "explication": "Une fonction décroissante **inverse l'ordre** : la plus petite abscisse a la plus grande image. Donc $f(2) > f(7)$. C'est exactement la définition de la décroissance."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "extremum",
+      "enonce": "Une fonction admet un maximum de $8$ atteint en $x = 3$. Que vaut $f(3)$ ?",
+      "choix": ["$3$", "$8$", "$11$", "On ne peut pas savoir"],
+      "reponse": 1,
+      "explication": "Le **maximum est la valeur de la fonction**, ici $8$ ; $3$ est l'abscisse où il est atteint. Donc $f(3) = 8$. Intervertir ces deux nombres est une confusion très fréquente."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Sur un graphique, comment lit-on l'ensemble des solutions de $f(x) > 2$ ?",
+      "choix": [
+        "Les abscisses des points où la courbe est au-dessus de la droite $y = 2$",
+        "Les ordonnées des points où la courbe est au-dessus de $y = 2$",
+        "Les abscisses où la courbe est en dessous de $y = 2$",
+        "L'intersection avec l'axe des abscisses"
+      ],
+      "reponse": 0,
+      "explication": "$f(x) > 2$ signifie que l'**ordonnée** dépasse $2$, donc que la courbe est **au-dessus** de l'horizontale. Mais la réponse attendue est l'ensemble des **abscisses** correspondantes — c'est le double piège de cette lecture."
+    }
+  ]
+}
