@@ -1,0 +1,144 @@
+{
+  "id": "1spe-pc-energie-mecanique-qcm",
+  "chapitre": "1spe-pc-energie-mecanique",
+  "titre": "QCM — Aspects énergétiques des phénomènes mécaniques",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. On prendra $g = 9{,}8$ N·kg⁻¹.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "energie-cinetique",
+      "enonce": "Quelle est l'expression de l'énergie cinétique ?",
+      "choix": [
+        "$E_c = mv$",
+        "$E_c = \\dfrac{1}{2}mv^2$",
+        "$E_c = mgz$",
+        "$E_c = \\dfrac{1}{2}mv$"
+      ],
+      "reponse": 1,
+      "explication": "$E_c = \\dfrac{1}{2}mv^2$. Les deux pièges sont réunis dans les autres choix : oublier le facteur $\\frac12$ ou oublier le carré. $mgz$ est l'énergie **potentielle** de pesanteur."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "travail",
+      "enonce": "Quelle est l'unité du travail d'une force ?",
+      "choix": ["le newton", "le joule", "le watt", "le pascal"],
+      "reponse": 1,
+      "explication": "Le travail est une **énergie**, donc il s'exprime en **joules**. Le newton mesure une force, le watt une puissance."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "energie-cinetique",
+      "enonce": "Une voiture de $1000$ kg roule à $20$ m·s⁻¹. Quelle est son énergie cinétique ?",
+      "choix": [
+        "$2{,}0 \\times 10^{5}$ J",
+        "$2{,}0 \\times 10^{4}$ J",
+        "$1{,}0 \\times 10^{4}$ J",
+        "$4{,}0 \\times 10^{5}$ J"
+      ],
+      "reponse": 0,
+      "explication": "$E_c = \\dfrac12 \\times 1000 \\times 20^2 = \\dfrac12 \\times 1000 \\times 400 = 2{,}0 \\times 10^5$ J. Le choix $4{,}0 \\times 10^5$ oublie le facteur $\\frac12$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "travail-nul",
+      "enonce": "Un objet est déplacé horizontalement. Quel est le travail de son poids ?",
+      "choix": [
+        "Positif",
+        "Négatif",
+        "Nul",
+        "Égal à $mgd$"
+      ],
+      "reponse": 2,
+      "explication": "Le poids est **vertical** et le déplacement **horizontal** : l'angle vaut $90°$, donc $\\cos 90° = 0$ et le travail est **nul**. Une force perpendiculaire au déplacement ne travaille jamais."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "energie-potentielle",
+      "enonce": "Un objet de $2$ kg est à $5$ m de hauteur. Quelle est son énergie potentielle de pesanteur ?",
+      "choix": ["$98$ J", "$10$ J", "$49$ J", "$980$ J"],
+      "reponse": 0,
+      "explication": "$E_{pp} = mgz = 2 \\times 9{,}8 \\times 5 = 98$ J. Le choix $10$ J oublie de multiplier par $g$, ce qui reviendrait à confondre masse et poids."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "conservation",
+      "enonce": "En l'absence de frottements, que peut-on dire de l'énergie mécanique ?",
+      "choix": [
+        "Elle augmente",
+        "Elle diminue",
+        "Elle se conserve",
+        "Elle devient nulle"
+      ],
+      "reponse": 2,
+      "explication": "Sans frottements, $E_m = E_c + E_{pp}$ reste **constante** : l'énergie se convertit d'une forme à l'autre. Avec frottements, elle diminue, la différence étant dissipée en chaleur."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "energie-cinetique",
+      "enonce": "Si une voiture double sa vitesse, son énergie cinétique est :",
+      "choix": [
+        "doublée",
+        "quadruplée",
+        "inchangée",
+        "multipliée par $8$"
+      ],
+      "reponse": 1,
+      "explication": "$E_c$ varie en $v^2$ : doubler la vitesse la multiplie par $2^2 = 4$. C'est l'argument physique de la sécurité routière — la distance de freinage est multipliée par quatre, pas par deux."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "chute-libre",
+      "enonce": "Deux billes de masses différentes tombent de la même hauteur sans frottements. Laquelle arrive le plus vite ?",
+      "choix": [
+        "La plus lourde",
+        "La plus légère",
+        "Elles arrivent à la même vitesse",
+        "Cela dépend de leur forme"
+      ],
+      "reponse": 2,
+      "explication": "La conservation donne $mgh = \\dfrac12 mv^2$, d'où $v = \\sqrt{2gh}$ : **la masse se simplifie**. Sans frottements, toutes les billes arrivent à la même vitesse — c'est l'expérience de Galilée."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "travail-poids",
+      "enonce": "Un randonneur monte un dénivelé de $100$ m, une fois par un sentier direct, une fois par un chemin en lacets. Que peut-on dire du travail de son poids ?",
+      "choix": [
+        "Il est plus grand par le chemin le plus long",
+        "Il est identique dans les deux cas",
+        "Il est nul en lacets",
+        "Il dépend de sa vitesse"
+      ],
+      "reponse": 1,
+      "explication": "$W(\\vec P) = mg(z_\\mathrm{A} - z_\\mathrm{B})$ ne dépend **que de la différence d'altitude**, pas du chemin suivi. Le poids est une force dite conservative — le trajet en lacets est plus long mais physiquement équivalent."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "theoreme",
+      "enonce": "Que dit le théorème de l'énergie cinétique ?",
+      "choix": [
+        "$E_c$ est toujours constante",
+        "La variation de $E_c$ est égale à la somme des travaux des forces",
+        "$E_c = E_{pp}$",
+        "$E_c$ ne dépend que de la masse"
+      ],
+      "reponse": 1,
+      "explication": "$\\Delta E_c = \\sum W(\\vec F)$. Son intérêt : il relie directement les **forces** à la **vitesse**, sans passer par l'accélération ni le temps. C'est l'outil à privilégier quand l'énoncé ne parle ni de durée ni d'accélération."
+    }
+  ]
+}
