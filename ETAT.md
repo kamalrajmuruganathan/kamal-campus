@@ -58,9 +58,38 @@ est donc stable et n'expirera pas.
 ⚠️ **La Terminale reste volontairement hors périmètre** : son programme de maths change à la
 rentrée 2027-2028. Tout contenu produit maintenant expirerait.
 
+## Outils de calcul
+
+Cinq modules déterministes dans `app/lib/`, **sans aucune dépendance externe** et
+**sans IA** — un résultat faux ferait perdre des points à un élève.
+
+| Module | Couvre | Tests écrits |
+|---|---|---|
+| `second-degre.js` | discriminant, racines exactes, factorisation, signe, sommet | 17 |
+| `suites.js` | arithmétiques/géométriques, nature, taux → raison, sommes | 25 |
+| `statistiques.js` | moyenne pondérée, médiane, quartiles, dispersion, fréquences | 22 |
+| `derivation.js` | dérivée polynomiale, tangente, tableau de variations | 19 |
+| `chimie.js` | masse molaire, quantité de matière, concentrations, dilution | 26 |
+| | | **109** |
+
+Conventions communes à tous :
+
+- **résultats exacts en fractions réduites** quand c'est possible (`-1/2`, pas `-0.5`) ;
+- chaque fonction renvoie un tableau **`etapes`** : l'outil montre le raisonnement,
+  sinon ce n'est qu'une calculatrice ;
+- les cas invalides sont **refusés en enseignant** (« si a = 0, la fonction est affine ») ;
+- quand un résultat exact ne peut être garanti — dérivée d'un quotient quelconque,
+  racines d'un polynôme de degré ≥ 3 — l'outil **renvoie la règle ou refuse**
+  plutôt que d'inventer.
+
+⚠️ **Les 109 tests sont écrits mais n'ont jamais été exécutés** : Node.js n'est pas
+installé sur la machine. La logique de chaque module a été vérifiée par un **portage
+Perl indépendant**, et les valeurs recoupent les réponses des QCM correspondants.
+
 ## Ce qui reste à faire
 
 1. **Relecture par un professeur** de chaque matière — c'est le goulot d'étranglement
-2. Outils de calcul : seul le second degré en a un (`app/lib/second-degre.js`)
+2. Outils pour les chapitres restants (probabilités et arbres, produit scalaire,
+   trigonométrie, énergie)
 3. Coquille Expo de l'application
-4. Node.js et licence Xcode à installer (voir `PASSATION.md`)
+4. Node.js et licence Xcode à installer (voir `PASSATION.md`), puis `cd app && npm test`
