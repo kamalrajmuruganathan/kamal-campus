@@ -92,9 +92,26 @@ Conventions communes à tous :
 installé sur la machine. La logique de chaque module a été vérifiée par un **portage
 Perl indépendant**, et les valeurs recoupent les réponses des QCM correspondants.
 
+## Application
+
+Coquille **Expo / React Native** complète dans `app/` — voir `app/README.md`.
+
+5 écrans (Accueil, Chapitres, Chapitre, QCM, Outils), thème clair/sombre,
+rendu Markdown + LaTeX hors ligne via KaTeX embarqué.
+
+```bash
+cd app && npm install && npm start
+```
+
+⚠️ **Jamais exécutée** : Node.js est absent de la machine de développement.
+`npm install` n'a pas tourné, l'application n'a jamais été affichée. Les points
+à contrôler au premier lancement sont listés dans `app/README.md`.
+
 ## Ce qui reste à faire
 
-1. **Relecture par un professeur** de chaque matière — c'est le goulot d'étranglement
-2. ✅ Outils de calcul — terminés (9 modules)
-3. Coquille Expo de l'application
-4. Node.js et licence Xcode à installer (voir `PASSATION.md`), puis `cd app && npm test`
+1. **Relecture par un professeur** de chaque matière — le seul verrou réel
+2. ✅ Contenu — 30 chapitres, 300 questions
+3. ✅ Outils de calcul — 9 modules, 234 tests
+4. ✅ Application Expo — écrite, à lancer
+5. Installer Node.js et accepter la licence Xcode (voir `PASSATION.md`),
+   puis `cd app && npm install && npm test && npm start`
