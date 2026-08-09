@@ -69,8 +69,14 @@ Cinq modules déterministes dans `app/lib/`, **sans aucune dépendance externe**
 | `suites.js` | arithmétiques/géométriques, nature, taux → raison, sommes | 25 |
 | `statistiques.js` | moyenne pondérée, médiane, quartiles, dispersion, fréquences | 22 |
 | `derivation.js` | dérivée polynomiale, tangente, tableau de variations | 19 |
+| `probabilites.js` | équiprobabilité, conditionnelles, arbres, Bernoulli, variables aléatoires | 30 |
+| `geometrie.js` | vecteurs, produit scalaire, Al-Kashi, droites, cercles | 31 |
+| `trigonometrie.js` | conversions, valeurs exactes, angles associés, équations | 27 |
 | `chimie.js` | masse molaire, quantité de matière, concentrations, dilution | 26 |
-| | | **109** |
+| `physique.js` | mécanique, énergies, électricité, ondes, optique | 37 |
+| **9 modules** | **4 520 lignes** | **234** |
+
+Ces modules couvrent **l'ensemble des chapitres calculatoires** du périmètre v1.
 
 Conventions communes à tous :
 
@@ -82,14 +88,13 @@ Conventions communes à tous :
   racines d'un polynôme de degré ≥ 3 — l'outil **renvoie la règle ou refuse**
   plutôt que d'inventer.
 
-⚠️ **Les 109 tests sont écrits mais n'ont jamais été exécutés** : Node.js n'est pas
+⚠️ **Les 234 tests sont écrits mais n'ont jamais été exécutés** : Node.js n'est pas
 installé sur la machine. La logique de chaque module a été vérifiée par un **portage
 Perl indépendant**, et les valeurs recoupent les réponses des QCM correspondants.
 
 ## Ce qui reste à faire
 
 1. **Relecture par un professeur** de chaque matière — c'est le goulot d'étranglement
-2. Outils pour les chapitres restants (probabilités et arbres, produit scalaire,
-   trigonométrie, énergie)
+2. ✅ Outils de calcul — terminés (9 modules)
 3. Coquille Expo de l'application
 4. Node.js et licence Xcode à installer (voir `PASSATION.md`), puis `cd app && npm test`
