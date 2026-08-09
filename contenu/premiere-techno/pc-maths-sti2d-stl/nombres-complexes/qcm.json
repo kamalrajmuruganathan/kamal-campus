@@ -1,0 +1,139 @@
+{
+  "id": "1sti2d-nombres-complexes-qcm",
+  "chapitre": "1sti2d-nombres-complexes",
+  "titre": "QCM — Nombres complexes",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que vaut $\\mathrm{i}^2$ ?",
+      "choix": ["$1$", "$-1$", "$\\mathrm{i}$", "$0$"],
+      "reponse": 1,
+      "explication": "C'est la définition même de $\\mathrm{i}$ : le nombre dont le carré vaut $-1$. C'est ce qui permet de résoudre $x^2 = -1$, impossible dans $\\mathbb{R}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "partie-imaginaire",
+      "enonce": "Quelle est la partie imaginaire de $z = 3 + 5\\mathrm{i}$ ?",
+      "choix": ["$5\\mathrm{i}$", "$5$", "$3$", "$8$"],
+      "reponse": 1,
+      "explication": "La partie imaginaire est le **réel** $b$ dans l'écriture $a + \\mathrm{i}b$, soit $5$. Répondre $5\\mathrm{i}$ est l'erreur la plus fréquente du chapitre : $\\mathrm{Im}(z)$ est toujours un nombre réel."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "conjugue",
+      "enonce": "Quel est le conjugué de $z = -2 + 7\\mathrm{i}$ ?",
+      "choix": [
+        "$2 - 7\\mathrm{i}$",
+        "$-2 - 7\\mathrm{i}$",
+        "$2 + 7\\mathrm{i}$",
+        "$-2 + 7\\mathrm{i}$"
+      ],
+      "reponse": 1,
+      "explication": "Le conjugué change le signe de la **seule** partie imaginaire : $\\bar z = -2 - 7\\mathrm{i}$. La partie réelle est inchangée. Géométriquement, c'est le symétrique par rapport à l'axe des abscisses."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "module",
+      "enonce": "Quel est le module de $z = 3 + 4\\mathrm{i}$ ?",
+      "choix": ["$7$", "$5$", "$25$", "$\\sqrt{7}$"],
+      "reponse": 1,
+      "explication": "$|z| = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$. Le choix $7$ additionne les parties, le choix $25$ oublie la racine. Le module est une **distance** à l'origine, donc toujours positif."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "produit",
+      "enonce": "Que vaut $(2 + 3\\mathrm{i})(1 - \\mathrm{i})$ ?",
+      "choix": [
+        "$5 + \\mathrm{i}$",
+        "$2 - 3\\mathrm{i}$",
+        "$-1 + \\mathrm{i}$",
+        "$2 + 3\\mathrm{i}$"
+      ],
+      "reponse": 0,
+      "explication": "On développe : $2 - 2\\mathrm{i} + 3\\mathrm{i} - 3\\mathrm{i}^2$. Comme $\\mathrm{i}^2 = -1$, le terme $-3\\mathrm{i}^2$ devient $+3$. D'où $2 + 3 + \\mathrm{i} = 5 + \\mathrm{i}$. Oublier cette substitution est l'erreur type."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "conjugue",
+      "enonce": "Que vaut $z \\times \\bar{z}$ pour $z = a + \\mathrm{i}b$ ?",
+      "choix": [
+        "$a^2 - b^2$",
+        "$a^2 + b^2$, un réel positif",
+        "$2a$",
+        "$\\mathrm{i}(a^2+b^2)$"
+      ],
+      "reponse": 1,
+      "explication": "$(a+\\mathrm{i}b)(a-\\mathrm{i}b) = a^2 - \\mathrm{i}^2b^2 = a^2 + b^2$. C'est un **réel positif**, égal à $|z|^2$ — et c'est exactement cette propriété qui permet de diviser deux complexes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "quotient",
+      "enonce": "Pour calculer $\\dfrac{1}{2+\\mathrm{i}}$, par quoi multiplie-t-on numérateur et dénominateur ?",
+      "choix": [
+        "Par $2 + \\mathrm{i}$",
+        "Par $2 - \\mathrm{i}$",
+        "Par $\\mathrm{i}$",
+        "Par $\\dfrac{1}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "On multiplie par le **conjugué du dénominateur**, $2 - \\mathrm{i}$, ce qui rend le dénominateur réel : $(2+\\mathrm{i})(2-\\mathrm{i}) = 5$. On obtient $\\dfrac{2-\\mathrm{i}}{5} = \\dfrac{2}{5} - \\dfrac{1}{5}\\mathrm{i}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "forme-trigonometrique",
+      "enonce": "Quel est le module de $z = 1 + \\mathrm{i}$, et un argument possible ?",
+      "choix": [
+        "$r = \\sqrt{2}$ et $\\theta = \\dfrac{\\pi}{4}$",
+        "$r = 2$ et $\\theta = \\dfrac{\\pi}{4}$",
+        "$r = \\sqrt{2}$ et $\\theta = \\dfrac{\\pi}{2}$",
+        "$r = 1$ et $\\theta = \\dfrac{\\pi}{3}$"
+      ],
+      "reponse": 0,
+      "explication": "$r = \\sqrt{1+1} = \\sqrt{2}$, puis $\\cos\\theta = \\sin\\theta = \\dfrac{1}{\\sqrt2} = \\dfrac{\\sqrt2}{2}$, ce qui donne $\\theta = \\dfrac{\\pi}{4}$. Le point image est sur la première bissectrice, ce qui confirme."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "forme-trigonometrique",
+      "enonce": "Pour déterminer un argument, pourquoi le cosinus seul ne suffit-il pas ?",
+      "choix": [
+        "Le cosinus n'est pas défini partout",
+        "Deux angles opposés ont le même cosinus : le sinus tranche entre eux",
+        "Il faut d'abord le module",
+        "Le cosinus donne toujours deux modules"
+      ],
+      "reponse": 1,
+      "explication": "$\\cos\\theta = \\cos(-\\theta)$ : le cosinus laisse deux candidats symétriques par rapport à l'axe des abscisses. Le **sinus** indique lequel des deux, en donnant le signe de la partie imaginaire. Il faut donc les deux équations."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "representation",
+      "enonce": "Dans le plan complexe, où se situent les nombres imaginaires purs ?",
+      "choix": [
+        "Sur l'axe des abscisses",
+        "Sur l'axe des ordonnées",
+        "Sur la première bissectrice",
+        "À l'origine uniquement"
+      ],
+      "reponse": 1,
+      "explication": "Un imaginaire pur s'écrit $z = \\mathrm{i}b$, donc sa partie réelle est nulle : son image a pour coordonnées $(0\\,;b)$, sur l'axe des **ordonnées**. L'axe des abscisses porte les nombres réels."
+    }
+  ]
+}

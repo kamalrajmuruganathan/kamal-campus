@@ -1,0 +1,124 @@
+{
+  "id": "1sti2d-trigonometrie-qcm",
+  "chapitre": "1sti2d-trigonometrie",
+  "titre": "QCM — Trigonométrie et fonctions sinusoïdales",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Les angles sont en radians.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "radian",
+      "enonce": "À combien de radians correspond un angle de $180°$ ?",
+      "choix": ["$\\dfrac{\\pi}{2}$", "$\\pi$", "$2\\pi$", "$360$"],
+      "reponse": 1,
+      "explication": "$\\pi$ radians valent $180°$ : c'est la relation de référence dont découlent toutes les conversions, via $\\text{rad} = \\text{deg} \\times \\dfrac{\\pi}{180}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "amplitude",
+      "enonce": "Dans $f(t) = 12\\cos(50t + 0{,}3)$, que vaut l'amplitude ?",
+      "choix": ["$50$", "$12$", "$0{,}3$", "$24$"],
+      "reponse": 1,
+      "explication": "L'amplitude est le coefficient devant le cosinus, soit $12$ : le signal varie entre $-12$ et $12$. Le $50$ est la pulsation, le $0{,}3$ la phase à l'origine."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "valeurs-remarquables",
+      "enonce": "Que vaut $\\cos\\left(\\dfrac{\\pi}{3}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{2}}{2}$",
+        "$1$"
+      ],
+      "reponse": 1,
+      "explication": "$\\cos\\left(\\frac{\\pi}{3}\\right) = \\dfrac{1}{2}$ et $\\sin\\left(\\frac{\\pi}{3}\\right) = \\dfrac{\\sqrt3}{2}$. L'erreur fréquente est d'intervertir avec $\\frac{\\pi}{6}$, où c'est exactement l'inverse."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "periode",
+      "enonce": "Un signal a pour pulsation $\\omega = 100\\pi$ rad·s⁻¹. Quelle est sa période ?",
+      "choix": ["$0{,}02$ s", "$50$ s", "$100\\pi$ s", "$0{,}5$ s"],
+      "reponse": 0,
+      "explication": "$T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{100\\pi} = 0{,}02$ s. C'est la tension du réseau électrique français : $f = \\dfrac{1}{0{,}02} = 50$ Hz ✓."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "pulsation-frequence",
+      "enonce": "Quelle relation lie la pulsation $\\omega$ et la fréquence $f$ ?",
+      "choix": [
+        "$\\omega = f$",
+        "$\\omega = 2\\pi f$",
+        "$\\omega = \\dfrac{f}{2\\pi}$",
+        "$\\omega = \\pi f$"
+      ],
+      "reponse": 1,
+      "explication": "$\\omega = 2\\pi f$. Un facteur $2\\pi$ sépare les deux grandeurs, et les confondre fausse tout calcul de période. Les unités le rappellent : rad·s⁻¹ pour $\\omega$, Hz pour $f$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "Que vaut $\\cos(-x)$ ?",
+      "choix": ["$-\\cos x$", "$\\cos x$", "$\\sin x$", "$-\\sin x$"],
+      "reponse": 1,
+      "explication": "Le cosinus est une fonction **paire** : $\\cos(-x) = \\cos x$. Le sinus, lui, est **impair** : $\\sin(-x) = -\\sin x$. Sur le cercle, $-x$ est le symétrique de $x$ par rapport à l'axe des abscisses — l'abscisse est conservée."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "relation-fondamentale",
+      "enonce": "Si $\\cos x = 0{,}6$ et $\\sin x > 0$, que vaut $\\sin x$ ?",
+      "choix": ["$0{,}4$", "$0{,}8$", "$-0{,}8$", "$0{,}36$"],
+      "reponse": 1,
+      "explication": "$\\sin^2 x = 1 - 0{,}6^2 = 1 - 0{,}36 = 0{,}64$, donc $\\sin x = \\pm 0{,}8$. La condition $\\sin x > 0$ tranche : $0{,}8$. Le choix $0{,}36$ oublie de prendre la racine."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "equation",
+      "enonce": "Combien l'équation $\\cos x = 1{,}5$ admet-elle de solutions réelles ?",
+      "choix": ["Une", "Deux", "Aucune", "Une infinité"],
+      "reponse": 2,
+      "explication": "Le point image est sur le cercle de rayon $1$ : son abscisse reste comprise entre $-1$ et $1$. Aucun réel n'a un cosinus égal à $1{,}5$. Vérifier l'encadrement **avant** de chercher à résoudre est un réflexe utile."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "angles-associes",
+      "enonce": "Que vaut $\\cos\\left(\\dfrac{2\\pi}{3}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{1}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$-\\dfrac{\\sqrt{3}}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\dfrac{2\\pi}{3} = \\pi - \\dfrac{\\pi}{3}$, et $\\cos(\\pi - x) = -\\cos x$. D'où $-\\cos\\left(\\frac{\\pi}{3}\\right) = -\\dfrac{1}{2}$. Contrôle : le point est dans le deuxième quadrant, où l'abscisse est bien négative."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "phase",
+      "enonce": "Quel est l'effet de la phase $\\varphi$ dans $f(t) = A\\cos(\\omega t + \\varphi)$ ?",
+      "choix": [
+        "Elle modifie l'amplitude",
+        "Elle décale la courbe horizontalement",
+        "Elle change la période",
+        "Elle n'a aucun effet"
+      ],
+      "reponse": 1,
+      "explication": "La phase à l'origine **décale la courbe horizontalement**, sans toucher ni à l'amplitude (fixée par $A$) ni à la période (fixée par $\\omega$). C'est elle qui traduit le déphasage entre deux signaux, notion centrale en électricité."
+    }
+  ]
+}
