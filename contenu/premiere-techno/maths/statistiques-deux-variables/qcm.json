@@ -1,0 +1,149 @@
+{
+  "id": "1techno-math-statistiques-deux-variables-qcm",
+  "chapitre": "1techno-math-statistiques-deux-variables",
+  "titre": "QCM — Statistiques à deux variables",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "nuage",
+      "enonce": "Dans un nuage de points, que représente chaque point ?",
+      "choix": [
+        "Une moyenne",
+        "Un individu et ses deux mesures",
+        "Un effectif",
+        "Une droite"
+      ],
+      "reponse": 1,
+      "explication": "Chaque individu fournit un couple $(x_i\\,;y_i)$ — par exemple une intensité et la tension correspondante — qui devient un point du repère."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "point-moyen",
+      "enonce": "Quelles sont les coordonnées du point moyen d'un nuage ?",
+      "choix": [
+        "$(0\\,;0)$",
+        "$(\\bar{x}\\,;\\bar{y})$",
+        "$(x_1\\,;y_1)$",
+        "Les médianes des deux séries"
+      ],
+      "reponse": 1,
+      "explication": "Le point moyen a pour coordonnées les **moyennes** de chaque variable. Toute droite d'ajustement passe par lui — c'est le contrôle le plus rapide d'un tracé."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "point-moyen",
+      "enonce": "Pour les couples $(1\\,;3)$, $(2\\,;5)$, $(3\\,;8)$, $(4\\,;10)$, quel est le point moyen ?",
+      "choix": [
+        "$(2{,}5\\,;6{,}5)$",
+        "$(10\\,;26)$",
+        "$(2\\,;5)$",
+        "$(2{,}5\\,;5)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\bar x = \\dfrac{1+2+3+4}{4} = 2{,}5$ et $\\bar y = \\dfrac{3+5+8+10}{4} = \\dfrac{26}{4} = 6{,}5$. Le choix B donne les sommes sans diviser par l'effectif."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "moindres-carres",
+      "enonce": "Que minimise la méthode des moindres carrés ?",
+      "choix": [
+        "La somme des écarts verticaux",
+        "La somme des carrés des écarts verticaux",
+        "Le plus grand écart",
+        "La distance au point moyen"
+      ],
+      "reponse": 1,
+      "explication": "On minimise la somme des **carrés** des écarts. Élever au carré rend tous les écarts positifs — sinon ceux du dessus et du dessous se compenseraient — et pénalise davantage les points très éloignés."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "interpolation",
+      "enonce": "On dispose de mesures pour des intensités de $0{,}5$ A à $2{,}0$ A. Estimer la tension pour $1{,}2$ A, c'est :",
+      "choix": ["extrapoler", "interpoler", "ajuster", "corréler"],
+      "reponse": 1,
+      "explication": "$1{,}2$ A est **à l'intérieur** de l'intervalle mesuré : c'est une **interpolation**, relativement fiable. Estimer pour $5$ A serait une extrapolation, bien plus risquée."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "interpretation-pente",
+      "enonce": "On ajuste des mesures $(I\\,;U)$ par la droite $U = 47I$. Que représente $47$ ?",
+      "choix": [
+        "Une intensité en ampères",
+        "Une résistance en ohms",
+        "Une tension en volts",
+        "Un nombre sans unité"
+      ],
+      "reponse": 1,
+      "explication": "La loi d'Ohm s'écrit $U = RI$ : le coefficient directeur est la **résistance**, en ohms. Interpréter la pente **avec son unité** fait partie de la réponse attendue."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "correlation-causalite",
+      "enonce": "Les ventes de glaces et le nombre de noyades augmentent ensemble chaque été. Que peut-on conclure ?",
+      "choix": [
+        "Les glaces provoquent les noyades",
+        "Il existe une cause commune : la chaleur",
+        "Les noyades font vendre des glaces",
+        "Les données sont erronées"
+      ],
+      "reponse": 1,
+      "explication": "C'est l'exemple canonique de la **variable cachée** : la chaleur augmente à la fois la consommation de glaces et la fréquentation des lieux de baignade. Une corrélation admet trois explications — causalité, cause commune, ou hasard."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "point-moyen",
+      "enonce": "Un élève trace une droite d'ajustement qui ne passe pas par le point moyen. Que peut-on en dire ?",
+      "choix": [
+        "C'est possible selon la méthode",
+        "Il y a une erreur : toute droite d'ajustement passe par le point moyen",
+        "Le point moyen est mal calculé",
+        "Cela dépend du nombre de points"
+      ],
+      "reponse": 1,
+      "explication": "La droite des moindres carrés passe **toujours** par $\\mathrm{G}(\\bar x\\,;\\bar y)$. Vérifier ce passage est le contrôle le plus rapide d'un tracé ou d'un résultat de calculatrice."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "extrapolation",
+      "enonce": "Pourquoi faut-il être prudent en extrapolant loin des données mesurées ?",
+      "choix": [
+        "Le calcul devient imprécis",
+        "Rien ne garantit que la relation observée se prolonge",
+        "C'est mathématiquement interdit",
+        "La calculatrice ne le permet pas"
+      ],
+      "reponse": 1,
+      "explication": "L'ajustement décrit uniquement le **domaine mesuré**. Au-delà, la relation peut changer : un conducteur chauffe et sa résistance évolue, un rendement plafonne. Une extrapolation doit toujours s'accompagner d'une réserve explicite."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "ajustement",
+      "enonce": "Un nuage de points a clairement une allure courbe. Que faire ?",
+      "choix": [
+        "Tracer quand même la droite des moindres carrés",
+        "Signaler qu'un ajustement affine n'est pas adapté",
+        "Retirer les points qui s'écartent",
+        "Échanger les axes"
+      ],
+      "reponse": 1,
+      "explication": "L'ajustement **affine** suppose une tendance rectiligne. Le forcer sur un nuage courbe donnerait des estimations fausses, surtout aux extrémités. Retirer des points serait une falsification."
+    }
+  ]
+}

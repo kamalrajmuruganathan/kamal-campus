@@ -1,0 +1,129 @@
+{
+  "id": "1techno-math-derivation-qcm",
+  "chapitre": "1techno-math-derivation",
+  "titre": "QCM — Dérivation",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "interpretation",
+      "enonce": "Que représente géométriquement le nombre dérivé $f'(a)$ ?",
+      "choix": [
+        "L'ordonnée du point d'abscisse $a$",
+        "Le coefficient directeur de la tangente en $a$",
+        "L'aire sous la courbe",
+        "La distance à l'axe des abscisses"
+      ],
+      "reponse": 1,
+      "explication": "$f'(a)$ est la limite des coefficients directeurs des sécantes : c'est la **pente de la tangente** au point d'abscisse $a$. L'ordonnée du point, elle, vaut $f(a)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "derivees-usuelles",
+      "enonce": "Quelle est la dérivée de $f(x) = x^2$ ?",
+      "choix": ["$x$", "$2x$", "$x^3$", "$2$"],
+      "reponse": 1,
+      "explication": "$(x^2)' = 2x$. Plus généralement, $(x^n)' = n\\,x^{n-1}$ : l'exposant descend en facteur et diminue de $1$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "derivee-polynome",
+      "enonce": "Quelle est la dérivée de $f(x) = 4x^2 - 7x + 3$ ?",
+      "choix": ["$8x - 7$", "$8x - 7 + 3$", "$4x - 7$", "$8x + 3$"],
+      "reponse": 0,
+      "explication": "On dérive terme à terme : $(4x^2)' = 8x$, $(-7x)' = -7$, et la dérivée de la constante $3$ est **nulle**. D'où $f'(x) = 8x - 7$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "tangente",
+      "enonce": "$f$ est dérivable avec $f(2) = 5$ et $f'(2) = 3$. Quelle est l'équation de la tangente en $2$ ?",
+      "choix": [
+        "$y = 5(x - 2) + 3$",
+        "$y = 3(x - 2) + 5$",
+        "$y = 3x + 5$",
+        "$y = 2x + 3$"
+      ],
+      "reponse": 1,
+      "explication": "La formule est $y = f'(a)(x - a) + f(a)$, soit $y = 3(x-2) + 5 = 3x - 1$. Le choix A intervertit $f(a)$ et $f'(a)$ — l'erreur la plus fréquente sur ce point."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "signe-derivee",
+      "enonce": "Sur un intervalle, $f'(x) > 0$. Que peut-on dire de $f$ ?",
+      "choix": [
+        "Elle est positive",
+        "Elle est croissante",
+        "Elle est décroissante",
+        "Elle est constante"
+      ],
+      "reponse": 1,
+      "explication": "Une dérivée strictement positive sur un intervalle signifie que $f$ y est **croissante**. Attention à ne pas confondre le signe de $f'$ (les variations) et le signe de $f$ (la position par rapport à l'axe)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "tangente-horizontale",
+      "enonce": "En un extrémum situé à l'intérieur d'un intervalle, la tangente est :",
+      "choix": ["verticale", "horizontale", "oblique", "inexistante"],
+      "reponse": 1,
+      "explication": "En un extrémum, $f'(a) = 0$ : la pente est nulle, donc la tangente est **horizontale**. C'est ce qui permet de repérer les extrémums en résolvant $f'(x) = 0$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "variations",
+      "enonce": "Pour $f(x) = x^2 - 8x + 3$, sur quel intervalle $f$ est-elle décroissante ?",
+      "choix": [
+        "$]-\\infty\\,;4]$",
+        "$[4\\,;+\\infty[$",
+        "$]-\\infty\\,;8]$",
+        "$[0\\,;3]$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 2x - 8$, négative pour $x < 4$. La fonction décroît donc sur $]-\\infty\\,;4]$ puis croît. On retrouve bien l'abscisse du sommet, $-\\dfrac{b}{2a} = 4$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "extremum",
+      "enonce": "$f$ est dérivable et $f'(0) = 0$. Peut-on conclure que $f$ admet un extrémum en $0$ ?",
+      "choix": [
+        "Oui, toujours",
+        "Non, il faut que $f'$ change de signe",
+        "Oui, si $f(0) = 0$",
+        "Non, c'est impossible"
+      ],
+      "reponse": 1,
+      "explication": "La réciproque est **fausse**. Contre-exemple : $f(x) = x^3$ vérifie $f'(0) = 0$, mais la fonction est croissante sur $\\mathbb{R}$ — la tangente est horizontale et la courbe la traverse, sans extrémum."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "produit",
+      "enonce": "Quelle est la dérivée de $f(x) = (2x+1)(x-3)$ ?",
+      "choix": ["$2$", "$4x - 5$", "$2x - 3$", "$4x + 1$"],
+      "reponse": 1,
+      "explication": "Avec $u = 2x+1$, $u' = 2$, $v = x-3$, $v' = 1$ : $f' = u'v + uv' = 2(x-3) + (2x+1) = 4x - 5$. Le choix $2$ applique la formule fausse $(uv)' = u'v'$. On peut vérifier en développant d'abord : $2x^2 - 5x - 3$, dont la dérivée est bien $4x - 5$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "nombre-derive",
+      "enonce": "Pour $f(x) = x^2$, l'expression $\\dfrac{f(4+h) - f(4)}{h}$ se simplifie en :",
+      "choix": ["$8 + h$", "$16 + h$", "$8h + h^2$", "$4 + h$"],
+      "reponse": 0,
+      "explication": "$(4+h)^2 - 16 = 8h + h^2 = h(8+h)$. En divisant par $h$ (non nul) : $8 + h$. Quand $h$ tend vers $0$, on obtient $f'(4) = 8$. Le choix $8h + h^2$ est l'étape précédente, sans la division."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "1techno-math-fonctions-variable-reelle-qcm",
+  "chapitre": "1techno-math-fonctions-variable-reelle",
+  "titre": "QCM — Fonctions de la variable réelle",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "taux-variation",
+      "enonce": "Quel est le taux de variation de $f$ entre $a$ et $b$ ?",
+      "choix": [
+        "$\\dfrac{b - a}{f(b) - f(a)}$",
+        "$\\dfrac{f(b) - f(a)}{b - a}$",
+        "$f(b) - f(a)$",
+        "$\\dfrac{f(a)}{f(b)}$"
+      ],
+      "reponse": 1,
+      "explication": "L'écart des **images** est au numérateur, l'écart des **antécédents** au dénominateur. C'est aussi le coefficient directeur de la droite passant par les deux points de la courbe."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "parabole",
+      "enonce": "La parabole d'équation $y = 3x^2 - 5x + 1$ est tournée :",
+      "choix": ["vers le haut", "vers le bas", "vers la droite", "on ne peut pas savoir"],
+      "reponse": 0,
+      "explication": "$a = 3 > 0$ : la parabole est tournée **vers le haut**, et son sommet est un **minimum**. Le signe de $a$ suffit à conclure."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "taux-variation",
+      "enonce": "Pour $f(x) = x^2$, quel est le taux de variation entre $2$ et $5$ ?",
+      "choix": ["$7$", "$21$", "$3$", "$9$"],
+      "reponse": 0,
+      "explication": "$\\tau = \\dfrac{25 - 4}{5 - 2} = \\dfrac{21}{3} = 7$. Le choix $21$ s'arrête à l'écart des images sans diviser par l'écart des antécédents."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "sommet",
+      "enonce": "Quelle est l'abscisse du sommet de la parabole $y = 2x^2 - 12x + 5$ ?",
+      "choix": ["$3$", "$-3$", "$6$", "$12$"],
+      "reponse": 0,
+      "explication": "$\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-12}{4} = 3$. Attention au double signe : $b$ vaut $-12$, donc $-b$ vaut $+12$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "variations",
+      "enonce": "Sur un intervalle, le taux de variation d'une fonction est toujours négatif. Que peut-on dire ?",
+      "choix": [
+        "La fonction est négative",
+        "La fonction est décroissante sur cet intervalle",
+        "La fonction est croissante",
+        "On ne peut rien conclure"
+      ],
+      "reponse": 1,
+      "explication": "Un taux de variation négatif signifie que la fonction **descend** : elle est décroissante. À ne pas confondre avec le signe de $f$ elle-même, qui indique la position par rapport à l'axe des abscisses."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "symetrie",
+      "enonce": "Une parabole a pour axe de symétrie la droite $x = 4$. Si $f(1) = 7$, que vaut $f(7)$ ?",
+      "choix": ["$7$", "$1$", "$4$", "On ne peut pas savoir"],
+      "reponse": 0,
+      "explication": "$1$ et $7$ sont symétriques par rapport à $4$ (à distance $3$ de part et d'autre) : ils ont donc la **même image**, soit $7$. Cette symétrie permet de retrouver le sommet à mi-chemin entre deux points de même ordonnée."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "sommet",
+      "enonce": "Pour $f(x) = -x^2 + 6x - 5$, quelles sont les coordonnées du sommet et sa nature ?",
+      "choix": [
+        "$(3\\,;4)$, maximum",
+        "$(3\\,;4)$, minimum",
+        "$(-3\\,;-32)$, maximum",
+        "$(6\\,;-5)$, maximum"
+      ],
+      "reponse": 0,
+      "explication": "$\\alpha = -\\dfrac{6}{-2} = 3$, puis $f(3) = -9 + 18 - 5 = 4$. Comme $a = -1 < 0$, la parabole est tournée vers le bas : c'est un **maximum**."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "intervalle",
+      "enonce": "La fonction inverse a un taux de variation négatif partout où elle est définie. Est-elle décroissante sur $\\mathbb{R}^*$ ?",
+      "choix": [
+        "Oui",
+        "Non, elle l'est sur chacun des deux intervalles, mais pas sur leur réunion",
+        "Non, elle est croissante",
+        "Non, elle est constante"
+      ],
+      "reponse": 1,
+      "explication": "Le théorème exige un **intervalle**, or $\\mathbb{R}^*$ est une réunion de deux intervalles. Contre-exemple : $f(-1) = -1$ et $f(1) = 1$, donc l'image augmente quand $x$ augmente."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "racines",
+      "enonce": "Une parabole tournée vers le haut a son sommet au-dessus de l'axe des abscisses. Combien a-t-elle de racines ?",
+      "choix": ["Deux", "Une", "Aucune", "Une infinité"],
+      "reponse": 2,
+      "explication": "Si le point le plus **bas** de la courbe est déjà au-dessus de l'axe, la parabole ne le croise jamais : il n'y a **aucune racine**. C'est un contrôle graphique rapide, sans aucun calcul."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Sur un graphique, comment lit-on les solutions de $f(x) > 3$ ?",
+      "choix": [
+        "Les ordonnées des points au-dessus de $y = 3$",
+        "Les abscisses des points où la courbe est au-dessus de la droite $y = 3$",
+        "Les abscisses où la courbe coupe l'axe",
+        "Les points d'intersection avec $x = 3$"
+      ],
+      "reponse": 1,
+      "explication": "$f(x) > 3$ signifie que l'**ordonnée** dépasse $3$, donc que la courbe est au-dessus de l'horizontale. Mais la réponse attendue est l'ensemble des **abscisses** correspondantes : c'est le double piège de cette lecture."
+    }
+  ]
+}

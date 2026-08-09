@@ -1,0 +1,124 @@
+{
+  "id": "1techno-math-suites-numeriques-qcm",
+  "chapitre": "1techno-math-suites-numeriques",
+  "titre": "QCM — Suites numériques",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "nature",
+      "enonce": "Un loyer augmente de $20$ € chaque année. Quelle est la nature de la suite des loyers ?",
+      "choix": ["géométrique", "arithmétique", "constante", "ni l'une ni l'autre"],
+      "reponse": 1,
+      "explication": "On **ajoute** toujours la même quantité fixe ($20$ €) : la suite est **arithmétique** de raison $20$. Si l'augmentation était de $20\\,\\%$, elle serait géométrique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "nature",
+      "enonce": "Un capital augmente de $4\\,\\%$ par an. Quelle est la nature de la suite des capitaux ?",
+      "choix": ["arithmétique", "géométrique", "constante", "décroissante"],
+      "reponse": 1,
+      "explication": "Un **pourcentage** signifie une multiplication par le même coefficient chaque année : la suite est **géométrique** de raison $1{,}04$. Le mot-clé pour distinguer les deux modèles est là : quantité fixe → arithmétique, pourcentage → géométrique."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "arithmetique",
+      "enonce": "Une suite arithmétique a $u_0 = 12$ et $r = 5$. Que vaut $u_{10}$ ?",
+      "choix": ["$62$", "$60$", "$67$", "$50$"],
+      "reponse": 0,
+      "explication": "$u_n = u_0 + nr = 12 + 10 \\times 5 = 62$. Le choix $67$ vient d'un décalage d'indice ($11 \\times 5$) : avec un premier terme d'indice $0$, on multiplie par $n$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "geometrique",
+      "enonce": "Une suite géométrique a $u_0 = 200$ et $q = 1{,}5$. Que vaut $u_3$ ?",
+      "choix": ["$675$", "$900$", "$300$", "$450$"],
+      "reponse": 0,
+      "explication": "$u_n = u_0 \\times q^n = 200 \\times 1{,}5^3 = 200 \\times 3{,}375 = 675$. On peut vérifier pas à pas : $200 \\to 300 \\to 450 \\to 675$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "pourcentage",
+      "enonce": "Une population diminue de $15\\,\\%$ par an. Quelle est la raison de la suite géométrique associée ?",
+      "choix": ["$-0{,}15$", "$0{,}85$", "$-15$", "$1{,}15$"],
+      "reponse": 1,
+      "explication": "$q = 1 - \\dfrac{15}{100} = 0{,}85$. Multiplier par $0{,}85$, c'est bien retirer $15\\,\\%$. Une raison négative ferait alterner le signe de la population, ce qui n'a aucun sens."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "reconnaissance",
+      "enonce": "Une suite vaut $80$, $72$, $64{,}8$, $58{,}32$. Quelle est sa nature ?",
+      "choix": [
+        "arithmétique de raison $-8$",
+        "géométrique de raison $0{,}9$",
+        "arithmétique de raison $-7{,}2$",
+        "ni l'une ni l'autre"
+      ],
+      "reponse": 1,
+      "explication": "Les **différences** ($-8$, $-7{,}2$, $-6{,}48$) ne sont pas constantes, mais les **quotients** le sont : $72/80 = 64{,}8/72 = 0{,}9$. C'est une baisse répétée de $10\\,\\%$. Réflexe : tester différences **puis** quotients."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "indice-depart",
+      "enonce": "Une suite arithmétique de raison $r = 6$ a pour premier terme $u_1 = 20$. Que vaut $u_8$ ?",
+      "choix": ["$68$", "$62$", "$48$", "$56$"],
+      "reponse": 1,
+      "explication": "Le premier terme est d'indice $1$, donc $u_n = u_1 + (n-1)r = 20 + 7 \\times 6 = 62$. Le choix $68$ applique $u_1 + 8r$ en oubliant le décalage. Vérifie toujours l'indice de départ."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "graphique",
+      "enonce": "Comment représente-t-on graphiquement une suite ?",
+      "choix": [
+        "Par une courbe continue",
+        "Par un nuage de points de coordonnées $(n\\,;u_n)$",
+        "Par un diagramme circulaire",
+        "Par une droite"
+      ],
+      "reponse": 1,
+      "explication": "Une suite n'est définie que pour des **entiers** : sa représentation est un **nuage de points isolés**, jamais une courbe continue. Relier les points serait une faute, même si l'alignement est visible dans le cas arithmétique."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "capital",
+      "enonce": "Un capital de $3\\,000$ € est placé à $2\\,\\%$ par an. Quelle expression donne le capital au bout de $n$ années ?",
+      "choix": [
+        "$3000 + 2n$",
+        "$3000 \\times 1{,}02^n$",
+        "$3000 \\times 0{,}02^n$",
+        "$3000 + 0{,}02n$"
+      ],
+      "reponse": 1,
+      "explication": "Un taux annuel constant donne une suite **géométrique** : $u_n = u_0 \\times q^n$ avec $q = 1{,}02$. Le choix A décrirait un ajout fixe de $2$ € par an, le choix C ferait fondre le capital à $2\\,\\%$ de sa valeur chaque année."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "variation",
+      "enonce": "Une suite géométrique a $u_0 = 500 > 0$ et $q = 0{,}95$. Que peut-on dire de son sens de variation ?",
+      "choix": [
+        "Elle est croissante",
+        "Elle est décroissante et tend vers $0$",
+        "Elle est constante",
+        "Elle alterne de signe"
+      ],
+      "reponse": 1,
+      "explication": "Avec $0 < q < 1$ et un premier terme positif, chaque terme vaut $95\\,\\%$ du précédent : la suite **décroît** en se rapprochant de $0$ sans jamais l'atteindre. L'alternance de signe ne surviendrait que si $q$ était négatif."
+    }
+  ]
+}
