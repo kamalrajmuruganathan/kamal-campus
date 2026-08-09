@@ -1,0 +1,134 @@
+{
+  "id": "1es-math-phenomenes-aleatoires-qcm",
+  "chapitre": "1es-math-phenomenes-aleatoires",
+  "titre": "QCM — Phénomènes aléatoires",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "arbre",
+      "enonce": "Sur un arbre pondéré, comment calcule-t-on la probabilité d'un chemin ?",
+      "choix": [
+        "En additionnant les probabilités des branches",
+        "En multipliant les probabilités des branches",
+        "En prenant la plus petite",
+        "En divisant"
+      ],
+      "reponse": 1,
+      "explication": "On **multiplie** le long d'un chemin, et on **additionne** entre les chemins qui réalisent le même événement. Cette phrase résume toute la technique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "arbre",
+      "enonce": "Deux branches partent d'un même nœud. L'une porte $0{,}35$. Que porte l'autre ?",
+      "choix": ["$0{,}35$", "$0{,}65$", "$1{,}35$", "On ne peut pas savoir"],
+      "reponse": 1,
+      "explication": "La somme des branches issues d'un même nœud vaut toujours $1$, donc $1 - 0{,}35 = 0{,}65$. C'est un contrôle de cohérence à faire systématiquement."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "tableau-croise",
+      "enonce": "Un tableau croisé indique $95$ tests positifs parmi $100$ malades, et $185$ positifs au total. Que vaut $P_{\\text{malade}}(\\text{positif})$ ?",
+      "choix": [
+        "$\\dfrac{95}{185}$",
+        "$\\dfrac{95}{100}$",
+        "$\\dfrac{185}{1000}$",
+        "$\\dfrac{100}{185}$"
+      ],
+      "reponse": 1,
+      "explication": "L'événement qui conditionne est « être malade » : la base est donc l'effectif des **malades**, soit $100$. On obtient $\\dfrac{95}{100} = 95\\,\\%$. Le choix A répond à la question inverse, $P_{\\text{positif}}(\\text{malade})$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "tableau-croise",
+      "enonce": "Avec les mêmes données ($95$ malades positifs sur $185$ positifs au total), que vaut $P_{\\text{positif}}(\\text{malade})$ ?",
+      "choix": [
+        "$95\\,\\%$",
+        "environ $51\\,\\%$",
+        "$18{,}5\\,\\%$",
+        "$100\\,\\%$"
+      ],
+      "reponse": 1,
+      "explication": "Ici la base est l'ensemble des **positifs** : $\\dfrac{95}{185} \\approx 51\\,\\%$. Un test qui détecte $95\\,\\%$ des malades ne signifie donc être malade qu'une fois sur deux quand il est positif — c'est le **paradoxe du dépistage**."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "conditionnelle",
+      "enonce": "$P(\\mathrm{A}) = 0{,}4$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}1$. Que vaut $P_\\mathrm{A}(\\mathrm{B})$ ?",
+      "choix": ["$0{,}04$", "$0{,}25$", "$0{,}5$", "$4$"],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{0{,}1}{0{,}4} = 0{,}25$. On divise par la probabilité de l'événement **qui conditionne**, celui écrit en indice."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "independance",
+      "enonce": "$P(\\mathrm{A}) = 0{,}5$, $P(\\mathrm{B}) = 0{,}3$, $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}15$. Ces événements sont-ils indépendants ?",
+      "choix": [
+        "Oui, car $0{,}5 \\times 0{,}3 = 0{,}15$",
+        "Non, car $0{,}5 \\neq 0{,}3$",
+        "Non, ils sont incompatibles",
+        "On ne peut pas conclure"
+      ],
+      "reponse": 0,
+      "explication": "Le critère est $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P(\\mathrm{B})$. Ici l'égalité est vérifiée : savoir que $\\mathrm{A}$ s'est produit ne change rien à la probabilité de $\\mathrm{B}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "probabilites-totales",
+      "enonce": "Une usine : machine A produit $70\\,\\%$ des pièces avec $3\\,\\%$ de défauts, machine B les $30\\,\\%$ restants avec $8\\,\\%$ de défauts. Quelle est la probabilité qu'une pièce soit défectueuse ?",
+      "choix": ["$0{,}11$", "$0{,}045$", "$0{,}024$", "$0{,}055$"],
+      "reponse": 1,
+      "explication": "On additionne les deux chemins menant à « défectueuse » : $0{,}7 \\times 0{,}03 + 0{,}3 \\times 0{,}08 = 0{,}021 + 0{,}024 = 0{,}045$. Le choix $0{,}11$ additionne les taux sans les pondérer par les parts de production."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "bernoulli",
+      "enonce": "On répète $3$ fois une épreuve de succès $p = 0{,}2$. Quelle est la probabilité d'obtenir exactement un succès ?",
+      "choix": ["$0{,}128$", "$0{,}384$", "$0{,}2$", "$0{,}6$"],
+      "reponse": 1,
+      "explication": "Trois chemins conviennent (SÉÉ, ÉSÉ, ÉÉS), chacun de probabilité $0{,}2 \\times 0{,}8^2 = 0{,}128$. Total : $3 \\times 0{,}128 = 0{,}384$. Le choix $0{,}128$ oublie de **compter les chemins**."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "independance",
+      "enonce": "Deux événements de probabilités non nulles sont incompatibles. Sont-ils indépendants ?",
+      "choix": [
+        "Oui, toujours",
+        "Non, ils sont nécessairement dépendants",
+        "Cela dépend des valeurs",
+        "La question n'a pas de sens"
+      ],
+      "reponse": 1,
+      "explication": "Incompatibles signifie $P(\\mathrm{A} \\cap \\mathrm{B}) = 0$, alors que $P(\\mathrm{A}) \\times P(\\mathrm{B}) > 0$ : le critère d'indépendance n'est pas vérifié. Savoir que l'un s'est produit garantit que l'autre non — c'est une information maximale, donc l'opposé de l'indépendance."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "inversion-conditionnement",
+      "enonce": "Un article affirme : « $80\\,\\%$ des accidentés portaient une ceinture, donc la ceinture est dangereuse ». Où est l'erreur ?",
+      "choix": [
+        "Le chiffre est faux",
+        "On confond $P_{\\text{accidenté}}(\\text{ceinture})$ avec $P_{\\text{ceinture}}(\\text{accidenté})$",
+        "Il manque un calcul de moyenne",
+        "Il n'y a pas d'erreur"
+      ],
+      "reponse": 1,
+      "explication": "Si presque tout le monde porte la ceinture, il est normal que la plupart des accidentés en portent une. La question utile est **l'inverse** : quel est le risque de blessure grave **sachant** qu'on porte la ceinture ? Inverser un conditionnement est une manipulation courante de l'information."
+    }
+  ]
+}

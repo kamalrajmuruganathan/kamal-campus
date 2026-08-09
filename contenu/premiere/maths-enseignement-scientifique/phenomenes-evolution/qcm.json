@@ -1,0 +1,134 @@
+{
+  "id": "1es-math-phenomenes-evolution-qcm",
+  "chapitre": "1es-math-phenomenes-evolution",
+  "titre": "QCM — Phénomènes d'évolution",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "modele-affine",
+      "enonce": "Une grandeur augmente de $50$ € chaque mois. Quel modèle la décrit ?",
+      "choix": ["exponentiel", "affine", "du second degré", "aucun"],
+      "reponse": 1,
+      "explication": "L'**accroissement est constant en valeur** ($+50$ € à chaque période) : c'est le modèle **affine**. Si elle augmentait de $50\\,\\%$ chaque mois, ce serait exponentiel."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population augmente de $3\\,\\%$ par an. Quel modèle la décrit ?",
+      "choix": ["affine", "exponentiel", "du second degré", "constant"],
+      "reponse": 1,
+      "explication": "Un **pourcentage constant** signifie une multiplication par le même coefficient ($1{,}03$) à chaque période : c'est le modèle **exponentiel**, $f(n) = f(0) \\times 1{,}03^n$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "reconnaitre-modele",
+      "enonce": "Une série vaut $100$, $110$, $121$, $133{,}1$. Quel modèle la décrit ?",
+      "choix": [
+        "affine, accroissement $+10$",
+        "exponentiel, raison $1{,}1$",
+        "du second degré",
+        "aucun modèle simple"
+      ],
+      "reponse": 1,
+      "explication": "Les **différences** ($10$, $11$, $12{,}1$) ne sont pas constantes, mais les **quotients** le sont : $110/100 = 121/110 = 1{,}1$. C'est donc exponentiel de raison $1{,}1$, soit $+10\\,\\%$ par période. Réflexe : tester différences **puis** quotients."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "demi-vie",
+      "enonce": "Un échantillon radioactif contient $800$ noyaux. Combien en reste-t-il après **deux** demi-vies ?",
+      "choix": ["$0$", "$200$", "$400$", "$100$"],
+      "reponse": 1,
+      "explication": "Chaque demi-vie divise par deux **ce qui reste** : $800 \\to 400 \\to 200$. Deux demi-vies ne font pas disparaître le tout — c'est l'erreur classique. On atteint $\\left(\\frac12\\right)^2 = \\frac14$ du départ."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "r0",
+      "enonce": "Une épidémie a un taux de reproduction $R_0 = 0{,}8$. Que se passe-t-il ?",
+      "choix": [
+        "L'épidémie croît lentement",
+        "L'épidémie s'éteint progressivement",
+        "L'épidémie se stabilise",
+        "L'épidémie explose"
+      ],
+      "reponse": 1,
+      "explication": "$R_0 < 1$ signifie que chaque malade contamine en moyenne **moins d'une** personne : la chaîne de transmission se tarit et l'épidémie s'éteint. Le seuil critique est $R_0 = 1$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "second-degre",
+      "enonce": "Un bénéfice est modélisé par $B(x) = -2x^2 + 40x - 50$. Que peut-on dire ?",
+      "choix": [
+        "Il croît indéfiniment",
+        "Il admet un maximum, car $a < 0$",
+        "Il admet un minimum",
+        "Il est constant"
+      ],
+      "reponse": 1,
+      "explication": "$a = -2 < 0$ : la parabole est tournée vers le bas, donc la fonction admet un **maximum**. Il est atteint en $x = -\\dfrac{b}{2a} = -\\dfrac{40}{-4} = 10$. C'est précisément ce qu'un modèle affine ne saurait décrire."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "taux-marginal",
+      "enonce": "Un contribuable passe dans la tranche d'imposition à $30\\,\\%$. Paie-t-il $30\\,\\%$ de tout son revenu ?",
+      "choix": [
+        "Oui, sur la totalité du revenu",
+        "Non, seule la part au-dessus du seuil est imposée à $30\\,\\%$",
+        "Oui, mais avec une réduction",
+        "Non, il paie moins de $30\\,\\%$ sur la dernière tranche"
+      ],
+      "reponse": 1,
+      "explication": "Le barème est une fonction affine **par morceaux** : le taux de $30\\,\\%$ est le **taux marginal**, appliqué uniquement à la fraction de revenu dépassant le seuil. Le **taux moyen** (impôt total ÷ revenu total) reste toujours inférieur. Cette confusion est très répandue."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "malthus",
+      "enonce": "Une population croît exponentiellement, les ressources linéairement. Que se passe-t-il à long terme ?",
+      "choix": [
+        "Les ressources restent toujours supérieures",
+        "La population finit toujours par dépasser les ressources",
+        "Les deux se stabilisent",
+        "Cela dépend des valeurs initiales"
+      ],
+      "reponse": 1,
+      "explication": "Une croissance exponentielle finit **toujours** par dépasser une croissance affine, quelle que soit l'avance initiale : c'est le raisonnement de Malthus. Historiquement, sa prédiction ne s'est pas réalisée — bonne illustration du **domaine de validité** d'un modèle."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "point-equilibre",
+      "enonce": "L'offre est modélisée par $O(p) = 2p - 10$ et la demande par $D(p) = -3p + 40$. Quel est le prix d'équilibre ?",
+      "choix": ["$p = 10$", "$p = 6$", "$p = 30$", "$p = 5$"],
+      "reponse": 0,
+      "explication": "Le point d'équilibre vérifie $O(p) = D(p)$ : $2p - 10 = -3p + 40$, soit $5p = 50$ et $p = 10$. À ce prix, offre et demande valent toutes deux $10$ — le marché s'équilibre."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "validite-modele",
+      "enonce": "Un modèle exponentiel décrit bien une population sur $10$ ans. Peut-on l'utiliser pour prévoir dans $500$ ans ?",
+      "choix": [
+        "Oui, le modèle est validé",
+        "Non, aucun modèle n'est valable indéfiniment hors de son domaine",
+        "Oui, si on ajuste le coefficient",
+        "Oui, avec une marge d'erreur"
+      ],
+      "reponse": 1,
+      "explication": "Un modèle décrit ce qui a été **observé**. Une exponentielle prolongée sur $500$ ans donnerait des effectifs absurdes, largement supérieurs à toute capacité physique. Signaler le **domaine de validité** fait partie de la réponse attendue."
+    }
+  ]
+}

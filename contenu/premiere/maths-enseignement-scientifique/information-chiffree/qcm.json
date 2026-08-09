@@ -1,0 +1,124 @@
+{
+  "id": "1es-math-information-chiffree-qcm",
+  "chapitre": "1es-math-information-chiffree",
+  "titre": "QCM — Analyse de l'information chiffrée",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Quel est le coefficient multiplicateur associé à une hausse de $25\\,\\%$ ?",
+      "choix": ["$0{,}25$", "$1{,}25$", "$25$", "$0{,}75$"],
+      "reponse": 1,
+      "explication": "$\\mathrm{CM} = 1 + \\dfrac{25}{100} = 1{,}25$. Multiplier par $1{,}25$ revient bien à ajouter un quart. Le choix $0{,}75$ correspondrait à une **baisse** de $25\\,\\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Quel est le coefficient multiplicateur associé à une baisse de $30\\,\\%$ ?",
+      "choix": ["$-0{,}30$", "$0{,}70$", "$1{,}30$", "$-1{,}30$"],
+      "reponse": 1,
+      "explication": "$\\mathrm{CM} = 1 - 0{,}30 = 0{,}70$. Un coefficient est **toujours positif** : une baisse donne un coefficient compris entre $0$ et $1$, jamais un nombre négatif."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "taux-evolution",
+      "enonce": "Un prix passe de $80$ € à $92$ €. Quel est le taux d'évolution ?",
+      "choix": ["$+12\\,\\%$", "$+15\\,\\%$", "$+13{,}0\\,\\%$", "$+8\\,\\%$"],
+      "reponse": 1,
+      "explication": "$t = \\dfrac{92 - 80}{80} = \\dfrac{12}{80} = 0{,}15$, soit $+15\\,\\%$. Le choix $+12\\,\\%$ confond l'écart absolu ($12$ €) avec le taux ; le choix $+13\\,\\%$ divise par la valeur finale au lieu de l'initiale."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "evolutions-successives",
+      "enonce": "Un article augmente de $50\\,\\%$ puis baisse de $50\\,\\%$. Quel est le bilan ?",
+      "choix": [
+        "Le prix est revenu à sa valeur initiale",
+        "Le prix a baissé de $25\\,\\%$",
+        "Le prix a augmenté de $25\\,\\%$",
+        "Le prix a baissé de $50\\,\\%$"
+      ],
+      "reponse": 1,
+      "explication": "On **multiplie** les coefficients : $1{,}5 \\times 0{,}5 = 0{,}75$, soit $-25\\,\\%$. La hausse s'applique au prix initial, la baisse au prix déjà augmenté : les deux pourcentages ne portent pas sur la même base, on ne peut donc pas les additionner."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "evolutions-successives",
+      "enonce": "Une population augmente de $10\\,\\%$ puis de $20\\,\\%$. Quel est le taux global ?",
+      "choix": ["$+30\\,\\%$", "$+32\\,\\%$", "$+2\\,\\%$", "$+15\\,\\%$"],
+      "reponse": 1,
+      "explication": "$1{,}10 \\times 1{,}20 = 1{,}32$, soit $+32\\,\\%$. Les $2$ points supplémentaires par rapport à l'addition naïve viennent du fait que la seconde hausse s'applique à une population déjà augmentée."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "points-pourcentage",
+      "enonce": "Un taux de chômage passe de $8\\,\\%$ à $10\\,\\%$. Laquelle de ces affirmations est **fausse** ?",
+      "choix": [
+        "Il a augmenté de $2$ points de pourcentage",
+        "Il a augmenté de $25\\,\\%$",
+        "Il a augmenté de $2\\,\\%$",
+        "Il a été multiplié par $1{,}25$"
+      ],
+      "reponse": 2,
+      "explication": "L'écart est de **2 points de pourcentage**, ce qui correspond à une hausse **relative** de $\\dfrac{10-8}{8} = 25\\,\\%$. Dire « augmenté de $2\\,\\%$ » confond les deux notions — c'est une manipulation classique de l'information chiffrée."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "evolution-reciproque",
+      "enonce": "Un prix a baissé de $20\\,\\%$. De quel pourcentage doit-il augmenter pour revenir à sa valeur initiale ?",
+      "choix": ["$20\\,\\%$", "$25\\,\\%$", "$22\\,\\%$", "$80\\,\\%$"],
+      "reponse": 1,
+      "explication": "Le coefficient réciproque est $\\dfrac{1}{0{,}8} = 1{,}25$, soit $+25\\,\\%$. La hausse doit être plus forte que la baisse, car elle s'applique à une base plus petite. Vérification : $100 \\to 80 \\to 80 \\times 1{,}25 = 100$ ✓."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "evolution-moyenne",
+      "enonce": "Une grandeur augmente de $44\\,\\%$ en $2$ ans. Quel est le taux annuel moyen ?",
+      "choix": ["$+22\\,\\%$", "$+20\\,\\%$", "$+21\\,\\%$", "$+44\\,\\%$"],
+      "reponse": 1,
+      "explication": "On cherche $\\mathrm{CM}$ tel que $\\mathrm{CM}^2 = 1{,}44$, donc $\\mathrm{CM} = \\sqrt{1{,}44} = 1{,}20$, soit $+20\\,\\%$. Diviser $44$ par $2$ donnerait $22\\,\\%$ — faux, car les évolutions se **composent** au lieu de s'additionner."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "esprit-critique",
+      "enonce": "Un graphique montre une courbe qui semble s'envoler, mais l'axe des ordonnées commence à $95$ au lieu de $0$. Que faut-il en penser ?",
+      "choix": [
+        "Le graphique est correct, la hausse est spectaculaire",
+        "L'axe tronqué exagère visuellement une variation qui peut être faible",
+        "Le graphique est forcément faux",
+        "Cela ne change rien à la lecture"
+      ],
+      "reponse": 1,
+      "explication": "Tronquer l'axe des ordonnées est légal et parfois utile, mais **amplifie visuellement** les écarts. Une variation de $95$ à $100$ paraîtra énorme alors qu'elle vaut à peine $5\\,\\%$. Vérifier l'origine de l'axe est le premier réflexe critique devant un graphique."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "base-pourcentage",
+      "enonce": "Dans un lycée, $60\\,\\%$ des élèves de Seconde et $40\\,\\%$ des élèves de Première font du sport. Peut-on dire que $50\\,\\%$ des élèves des deux niveaux en font ?",
+      "choix": [
+        "Oui, c'est la moyenne des deux pourcentages",
+        "Non, il faut connaître les effectifs de chaque niveau",
+        "Oui, si les deux niveaux existent",
+        "Non, il faut additionner : $100\\,\\%$"
+      ],
+      "reponse": 1,
+      "explication": "On ne peut pas faire la moyenne de deux pourcentages calculés sur des **bases différentes**. S'il y a $300$ élèves en Seconde et $100$ en Première : $\\dfrac{180 + 40}{400} = 55\\,\\%$, et non $50\\,\\%$. Il faut toujours repasser par les effectifs."
+    }
+  ]
+}

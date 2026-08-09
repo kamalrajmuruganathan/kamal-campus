@@ -1,0 +1,144 @@
+{
+  "id": "1es-math-statistiques-bivariees-qcm",
+  "chapitre": "1es-math-statistiques-bivariees",
+  "titre": "QCM — Statistiques à deux caractères",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "nuage-points",
+      "enonce": "Dans un nuage de points, que représente chaque point ?",
+      "choix": [
+        "Une moyenne",
+        "Un individu, avec ses deux caractères en coordonnées",
+        "Un effectif",
+        "Un pourcentage"
+      ],
+      "reponse": 1,
+      "explication": "Chaque individu de la population donne un point de coordonnées $(x_i\\,;y_i)$, où $x$ et $y$ sont les deux caractères observés sur cet individu."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "point-moyen",
+      "enonce": "Quelles sont les coordonnées du point moyen d'un nuage ?",
+      "choix": [
+        "$(\\bar{x}\\,;\\bar{y})$",
+        "$(0\\,;0)$",
+        "$(x_1\\,;y_1)$",
+        "La médiane des points"
+      ],
+      "reponse": 0,
+      "explication": "Le point moyen $\\mathrm{G}$ a pour coordonnées les **moyennes** de chaque caractère. Toute droite d'ajustement doit passer par ce point — c'est un contrôle rapide de la validité d'un tracé."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "tableau-croise",
+      "enonce": "Dans un tableau croisé, la case « Seconde et sport » contient $180$ élèves ; il y a $300$ Secondes et $400$ élèves au total. Que vaut « $60\\,\\%$ » dans ce contexte ?",
+      "choix": [
+        "La part de sportifs parmi les Secondes",
+        "La part de Secondes parmi les sportifs",
+        "La part de l'ensemble des élèves concernés",
+        "Une erreur de calcul"
+      ],
+      "reponse": 0,
+      "explication": "$\\dfrac{180}{300} = 60\\,\\%$ : la base est le **total de la ligne** (les Secondes). Rapporté au total général on obtiendrait $45\\,\\%$, et rapporté aux sportifs une autre valeur encore. La même case donne trois pourcentages différents."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "interpolation",
+      "enonce": "On dispose de données de $2010$ à $2020$. Estimer une valeur pour $2015$ s'appelle :",
+      "choix": ["extrapoler", "interpoler", "ajuster", "corréler"],
+      "reponse": 1,
+      "explication": "$2015$ est **à l'intérieur** de l'intervalle observé : c'est une **interpolation**, relativement fiable. Estimer pour $2030$ serait une extrapolation, beaucoup plus risquée."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "extrapolation",
+      "enonce": "Pourquoi l'extrapolation demande-t-elle de la prudence ?",
+      "choix": [
+        "Parce que le calcul est plus difficile",
+        "Parce que rien ne garantit que la tendance observée se prolonge",
+        "Parce qu'elle est interdite",
+        "Parce qu'il faut plus de points"
+      ],
+      "reponse": 1,
+      "explication": "L'ajustement ne décrit que la zone **observée**. Au-delà, la tendance peut changer : une croissance linéaire finit toujours par buter sur une limite physique. Extrapoler loin des données doit toujours s'accompagner d'une réserve explicite."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "droite-mayer",
+      "enonce": "Comment construit-on la droite de Mayer ?",
+      "choix": [
+        "En reliant le premier et le dernier point du nuage",
+        "En séparant le nuage en deux groupes et en reliant leurs points moyens",
+        "En traçant au jugé",
+        "En calculant les moindres carrés"
+      ],
+      "reponse": 1,
+      "explication": "On ordonne les points selon $x$, on coupe en deux groupes de même effectif, on calcule le point moyen de chacun, et on les relie. Cette droite passe automatiquement par le point moyen du nuage entier."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "correlation-causalite",
+      "enonce": "On observe que les ventes de glaces et le nombre de noyades augmentent ensemble chaque été. Que peut-on conclure ?",
+      "choix": [
+        "Manger des glaces provoque des noyades",
+        "Il existe une cause commune : la chaleur",
+        "Les noyades font vendre des glaces",
+        "Les données sont fausses"
+      ],
+      "reponse": 1,
+      "explication": "C'est l'exemple canonique de la **variable cachée** : la chaleur augmente à la fois la consommation de glaces et la fréquentation des lieux de baignade. Une corrélation admet trois explications — causalité, cause commune, ou hasard — et le nuage seul ne permet jamais de trancher."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "tableau-croise",
+      "enonce": "Un tableau croisé indique $180$ sportifs sur $300$ Secondes, et $40$ sur $100$ Premières. Quelle est la proportion de sportifs sur l'ensemble ?",
+      "choix": ["$50\\,\\%$", "$55\\,\\%$", "$60\\,\\%$", "$45\\,\\%$"],
+      "reponse": 1,
+      "explication": "Il faut repasser par les **effectifs** : $\\dfrac{180 + 40}{300 + 100} = \\dfrac{220}{400} = 55\\,\\%$. Faire la moyenne des deux pourcentages ($60\\,\\%$ et $40\\,\\%$) donnerait $50\\,\\%$ — faux, car les bases sont différentes."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "ajustement",
+      "enonce": "Un nuage de points a clairement une allure courbe. Que faire ?",
+      "choix": [
+        "Tracer quand même une droite d'ajustement",
+        "Signaler qu'un ajustement affine n'est pas adapté",
+        "Supprimer les points qui gênent",
+        "Inverser les axes"
+      ],
+      "reponse": 1,
+      "explication": "Un ajustement **affine** suppose une tendance rectiligne. Forcer une droite sur un nuage courbe donnerait des estimations fausses, surtout aux extrémités. Supprimer des points serait une falsification pure et simple."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "point-moyen",
+      "enonce": "Un élève trace une droite d'ajustement qui ne passe pas par le point moyen du nuage. Que peut-on en dire ?",
+      "choix": [
+        "C'est normal, la droite est libre",
+        "Il y a une erreur : toute droite d'ajustement passe par le point moyen",
+        "Cela dépend de la méthode utilisée",
+        "Le point moyen est mal placé"
+      ],
+      "reponse": 1,
+      "explication": "Le point moyen $\\mathrm{G}(\\bar x\\,;\\bar y)$ est le centre de gravité du nuage, et toutes les méthodes d'ajustement au programme y font passer la droite. Vérifier ce passage est le contrôle le plus rapide d'un tracé."
+    }
+  ]
+}
