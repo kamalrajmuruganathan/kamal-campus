@@ -23,10 +23,23 @@ const SORTIE = join(RACINE_APP, 'src', 'contenu-index.js');
 
 // ─────────────────────────── libellés d'affichage ───────────────────────────
 
-const LIBELLES_NIVEAU = {
-  seconde: 'Seconde',
-  premiere: 'Première',
-};
+// Source de vérité unique des niveaux : l'ordre de ce tableau EST la progression
+// pédagogique affichée. Le tri alphabétique placerait « seconde » après
+// « premiere » — d'où la table d'ordre plutôt qu'un localeCompare.
+// Ajouter un niveau = ajouter une ligne ici, à sa place dans la scolarité.
+const NIVEAUX = [
+  ['sixieme', 'Sixième'],
+  ['cinquieme', 'Cinquième'],
+  ['quatrieme', 'Quatrième'],
+  ['troisieme', 'Troisième'],
+  ['seconde', 'Seconde'],
+  ['premiere', 'Première'],
+  ['premiere-techno', 'Première technologique'],
+  ['terminale', 'Terminale'],
+];
+
+const LIBELLES_NIVEAU = Object.fromEntries(NIVEAUX);
+const ORDRE_NIVEAU = new Map(NIVEAUX.map(([clef], i) => [clef, i]));
 
 // Ces clefs sont les NOMS DE RÉPERTOIRE sous contenu/<niveau>/, et non le champ
 // `parcours` de l'en-tête YAML : en Seconde, les deux matières partagent le même
@@ -36,6 +49,7 @@ const LIBELLES_PARCOURS = {
   'physique-chimie': 'Physique-chimie',
   'maths-specialite': 'Spécialité mathématiques',
   'maths-enseignement-scientifique': 'Maths — enseignement scientifique',
+  'pc-maths-sti2d-stl': 'Physique-chimie et maths — STI2D/STL',
   'tronc-commun': 'Tronc commun',
 };
 
@@ -129,9 +143,23 @@ for (const niveau of dossiers(CONTENU)) {
   }
 }
 
-chapitres.sort((a, b) => a.niveau.localeCompare(b.niveau)
+// Un niveau inconnu de NIVEAUX est rejeté en fin de liste plutôt que masqué,
+// et signalé plus bas : mieux vaut un affichage bancal qu'un chapitre invisible.
+const rang = (niveau) => ORDRE_NIVEAU.get(niveau) ?? Number.MAX_SAFE_INTEGER;
+
+chapitres.sort((a, b) => rang(a.niveau) - rang(b.niveau)
   || a.parcours.localeCompare(b.parcours)
   || a.dossier.localeCompare(b.dossier));
+
+const niveauxInconnus = [...new Set(chapitres.map((c) => c.niveau))]
+  .filter((n) => !ORDRE_NIVEAU.has(n));
+for (const n of niveauxInconnus) {
+  console.warn(`  ⚠️  niveau « ${n} » absent de NIVEAUX : libellé brut et tri en fin de liste.`);
+}
+
+for (const p of [...new Set(chapitres.map((c) => c.parcours))].filter((p) => !(p in LIBELLES_PARCOURS))) {
+  console.warn(`  ⚠️  parcours « ${p} » absent de LIBELLES_PARCOURS : le nom de répertoire s'affichera tel quel.`);
+}
 
 // ────────────────────────────── génération ──────────────────────────────────
 
