@@ -1,0 +1,124 @@
+{
+  "id": "5e-math-proportionnalite-qcm",
+  "chapitre": "5e-math-proportionnalite",
+  "titre": "QCM — Proportionnalité",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "reconnaissance",
+      "enonce": "Laquelle de ces situations est proportionnelle ?",
+      "choix": [
+        "L'âge d'une personne et sa taille",
+        "Le nombre de kilos de pommes et le prix payé",
+        "L'âge d'un arbre et son nombre de branches",
+        "La température et l'heure de la journée"
+      ],
+      "reponse": 1,
+      "explication": "Deux fois plus de pommes coûtent deux fois plus cher : c'est proportionnel. Une personne de $20$ ans ne mesure pas le double d'une personne de $10$ ans — l'âge et la taille ne le sont pas."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "coefficient",
+      "enonce": "$3$ kg de tomates coûtent $9$ €. Quel est le coefficient de proportionnalité ?",
+      "choix": ["$3$", "$9$", "$27$", "$6$"],
+      "reponse": 0,
+      "explication": "On divise le prix par la masse : $9 \\div 3 = 3$. Chaque kilo coûte $3$ €, donc $\\text{prix} = 3 \\times \\text{masse}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "retour-unite",
+      "enonce": "Une recette pour $4$ personnes demande $600$ g de pâtes. Combien pour $6$ personnes ?",
+      "choix": ["$800$ g", "$900$ g", "$1000$ g", "$1200$ g"],
+      "reponse": 1,
+      "explication": "Retour à l'unité : $600 \\div 4 = 150$ g par personne, puis $150 \\times 6 = 900$ g. On peut aussi voir $6 = 4 + 2$, soit $600 + 300 = 900$ g."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "linearite",
+      "enonce": "Une recette pour $4$ personnes demande $600$ g de pâtes. Pour $8$ personnes, quelle est la méthode la plus rapide ?",
+      "choix": [
+        "Le retour à l'unité",
+        "Doubler, car $8 = 2 \\times 4$",
+        "Le produit en croix",
+        "Diviser par 8"
+      ],
+      "reponse": 1,
+      "explication": "$8$ est le **double** de $4$ : il suffit de doubler la quantité, soit $1200$ g. C'est la propriété de linéarité pour la multiplication — le programme demande justement de choisir la procédure la plus **adaptée**."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "pourcentage",
+      "enonce": "Combien vaut $10\\,\\%$ de $250$ ?",
+      "choix": ["$2{,}5$", "$25$", "$10$", "$2500$"],
+      "reponse": 1,
+      "explication": "Prendre $10\\,\\%$, c'est **diviser par 10** : $250 \\div 10 = 25$. C'est le calcul le plus utile à automatiser, car tous les autres pourcentages s'en déduisent."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "tableau",
+      "enonce": "Ce tableau est-il proportionnel ? Masse : $2$ ; $5$ — Prix : $6$ ; $15$",
+      "choix": [
+        "Oui, le coefficient est $3$",
+        "Non",
+        "Oui, le coefficient est $2$",
+        "On ne peut pas savoir"
+      ],
+      "reponse": 0,
+      "explication": "On vérifie les quotients : $6 \\div 2 = 3$ et $15 \\div 5 = 3$. Ils sont **égaux**, donc la situation est proportionnelle de coefficient $3$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "produit-en-croix",
+      "enonce": "$3$ stylos coûtent $4{,}50$ €. Combien coûtent $7$ stylos ?",
+      "choix": ["$9{,}00$ €", "$10{,}50$ €", "$13{,}50$ €", "$31{,}50$ €"],
+      "reponse": 1,
+      "explication": "Un stylo coûte $4{,}50 \\div 3 = 1{,}50$ €, donc $7$ stylos coûtent $7 \\times 1{,}50 = 10{,}50$ €. Par produit en croix : $x = \\dfrac{7 \\times 4{,}50}{3} = 10{,}50$ €."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "echelle",
+      "enonce": "Sur un plan à l'échelle $\\dfrac{1}{200}$, une longueur de $3$ cm représente en réalité :",
+      "choix": ["$3$ m", "$6$ m", "$600$ m", "$200$ m"],
+      "reponse": 1,
+      "explication": "$1$ cm sur le plan vaut $200$ cm en réalité, donc $3$ cm valent $600$ cm $= 6$ m. **La conversion en mètres est indispensable** : répondre $600$ sans convertir est l'erreur type."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "reconnaissance",
+      "enonce": "Un abonnement coûte $10$ € par mois plus $5$ € de frais d'inscription. Le prix total est-il proportionnel au nombre de mois ?",
+      "choix": [
+        "Oui, le coefficient est $10$",
+        "Non, à cause des frais fixes",
+        "Oui, le coefficient est $15$",
+        "Cela dépend du nombre de mois"
+      ],
+      "reponse": 1,
+      "explication": "Pour $1$ mois : $15$ €. Pour $2$ mois : $25$ €, et non $30$ €. Les quotients ($15$ puis $12{,}5$) ne sont pas égaux. **Des frais fixes cassent toujours la proportionnalité.**"
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "pourcentage",
+      "enonce": "Combien vaut $30\\,\\%$ de $80$ ?",
+      "choix": ["$24$", "$30$", "$2{,}4$", "$240$"],
+      "reponse": 0,
+      "explication": "$10\\,\\%$ de $80$ vaut $8$, donc $30\\,\\%$ en vaut trois fois plus : $24$. Passer par $10\\,\\%$ est souvent plus rapide et plus sûr que de multiplier par $0{,}30$."
+    }
+  ]
+}

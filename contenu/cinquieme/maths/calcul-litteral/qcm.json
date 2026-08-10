@@ -1,0 +1,114 @@
+{
+  "id": "5e-math-calcul-litteral-qcm",
+  "chapitre": "5e-math-calcul-litteral",
+  "titre": "QCM — Calcul littéral",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "ecriture",
+      "enonce": "Comment écrit-on $5 \\times a$ plus simplement ?",
+      "choix": ["$5a$", "$a5$", "$5+a$", "$a^5$"],
+      "reponse": 0,
+      "explication": "On supprime le signe × devant une lettre et on écrit le **nombre en premier** : $5a$. Cette convention ne vaut jamais entre deux nombres — $3 \\times 4$ ne s'écrit pas $34$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "reduction",
+      "enonce": "Combien vaut $4x + 7x$ ?",
+      "choix": ["$11x$", "$11x^2$", "$28x$", "$11$"],
+      "reponse": 0,
+      "explication": "Les deux termes sont de **même nature** : $4$ fois $x$ plus $7$ fois $x$ font $11$ fois $x$. On additionne les nombres, la lettre ne change pas."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "reduction",
+      "enonce": "Que vaut $3a + 5b$ après réduction ?",
+      "choix": ["$8ab$", "$8a+b$", "Cela ne se réduit pas", "$15ab$"],
+      "reponse": 2,
+      "explication": "$a$ et $b$ sont de **natures différentes** : on ne peut pas les regrouper. Trois pommes et cinq bananes restent trois pommes et cinq bananes."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "developpement",
+      "enonce": "Quel est le développement de $3(x + 4)$ ?",
+      "choix": ["$3x + 4$", "$3x + 12$", "$x + 12$", "$3x + 7$"],
+      "reponse": 1,
+      "explication": "Le $3$ multiplie **les deux termes** de la parenthèse : $3 \\times x + 3 \\times 4 = 3x + 12$. Le choix A oublie de multiplier le second terme — l'erreur la plus fréquente."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "factorisation",
+      "enonce": "Quelle est la forme factorisée de $6x + 15$ ?",
+      "choix": ["$3(2x + 5)$", "$6(x + 15)$", "$3(2x + 15)$", "$21x$"],
+      "reponse": 0,
+      "explication": "Le facteur commun est $3$ : $6x = 3 \\times 2x$ et $15 = 3 \\times 5$, donc $6x + 15 = 3(2x+5)$. Contrôle : en redéveloppant, on doit retrouver l'expression de départ."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "test-egalite",
+      "enonce": "L'égalité $2x + 5 = 11$ est-elle vraie pour $x = 3$ ?",
+      "choix": ["Oui", "Non", "Cela dépend", "L'égalité est impossible"],
+      "reponse": 0,
+      "explication": "On remplace : $2 \\times 3 + 5 = 6 + 5 = 11$. Le membre de gauche vaut bien $11$, comme celui de droite : l'égalité est vraie pour cette valeur."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "developpement-signe",
+      "enonce": "Quel est le développement de $-2(x + 3)$ ?",
+      "choix": ["$-2x + 6$", "$-2x - 6$", "$2x - 6$", "$-2x + 3$"],
+      "reponse": 1,
+      "explication": "Le $-2$ multiplie les deux termes : $-2 \\times x = -2x$ et $-2 \\times 3 = -6$. Le résultat est $-2x - 6$. Se tromper sur le signe du second terme est le piège classique."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "developpement-signe",
+      "enonce": "Quel est le développement de $-4(x - 5)$ ?",
+      "choix": ["$-4x - 20$", "$-4x + 20$", "$4x - 20$", "$-4x - 5$"],
+      "reponse": 1,
+      "explication": "$-4 \\times x = -4x$, puis $(-4) \\times (-5) = +20$ : deux signes moins donnent un plus. Le résultat est $-4x + 20$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "Pour démontrer que la somme de deux nombres pairs est paire, quel début est correct ?",
+      "choix": [
+        "Tester avec $4 + 6$, $8 + 10$ et $12 + 14$",
+        "Poser deux nombres pairs $2k$ et $2k'$, puis calculer leur somme",
+        "Poser $2k$ et $2k$",
+        "Affirmer que c'est évident"
+      ],
+      "reponse": 1,
+      "explication": "Il faut deux lettres **différentes** : $2k + 2k' = 2(k+k')$, un multiple de $2$. Le choix C imposerait deux nombres égaux, le choix A ne démontre rien — des exemples n'ont jamais valeur de preuve."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "contre-exemple",
+      "enonce": "Pour montrer que l'affirmation « tout nombre impair est premier » est fausse, que suffit-il ?",
+      "choix": [
+        "Tester tous les nombres impairs",
+        "Donner un seul contre-exemple, comme $9$",
+        "Faire une démonstration générale",
+        "C'est impossible à montrer"
+      ],
+      "reponse": 1,
+      "explication": "$9$ est impair mais vaut $3 \\times 3$ : un **seul contre-exemple** suffit à réfuter une affirmation universelle. La dissymétrie est essentielle : prouver qu'une propriété est vraie demande une démonstration générale."
+    }
+  ]
+}
