@@ -1,0 +1,124 @@
+{
+  "id": "5e-math-triangles-angles-qcm",
+  "chapitre": "5e-math-triangles-angles",
+  "titre": "QCM — Angles et triangles",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "somme-angles",
+      "enonce": "Combien vaut la somme des angles d'un triangle ?",
+      "choix": ["$90°$", "$180°$", "$360°$", "Cela dépend du triangle"],
+      "reponse": 1,
+      "explication": "La somme vaut **toujours** $180°$, pour n'importe quel triangle. Le $360°$ correspond aux quadrilatères — c'est la confusion la plus fréquente."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "equilateral",
+      "enonce": "Combien mesure chaque angle d'un triangle équilatéral ?",
+      "choix": ["$45°$", "$60°$", "$90°$", "$120°$"],
+      "reponse": 1,
+      "explication": "Les trois angles sont égaux et leur somme vaut $180°$, donc chacun vaut $180 \\div 3 = 60°$. Aucune mesure n'est nécessaire : c'est une déduction."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "calcul-angle",
+      "enonce": "Un triangle a deux angles de $50°$ et $70°$. Combien vaut le troisième ?",
+      "choix": ["$60°$", "$120°$", "$180°$", "$40°$"],
+      "reponse": 0,
+      "explication": "$180 - 50 - 70 = 60°$. On soustrait les deux angles connus de $180°$ — jamais l'inverse."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "complementaires",
+      "enonce": "Deux angles complémentaires ont pour somme :",
+      "choix": ["$90°$", "$180°$", "$360°$", "$45°$"],
+      "reponse": 0,
+      "explication": "**C**omplémentaires comme **c**oin droit : $90°$. **S**upplémentaires comme ligne **s**traight : $180°$. Ce moyen mnémotechnique évite la confusion la plus courante du chapitre."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "isocele",
+      "enonce": "Dans un triangle isocèle en $\\mathrm{A}$, que peut-on dire des angles $\\widehat{\\mathrm{B}}$ et $\\widehat{\\mathrm{C}}$ ?",
+      "choix": [
+        "Ils sont droits",
+        "Ils sont égaux",
+        "Leur somme vaut $90°$",
+        "On ne peut rien dire"
+      ],
+      "reponse": 1,
+      "explication": "Dans un triangle isocèle, les deux **angles à la base** sont égaux. La base est le côté opposé au sommet principal — ici $[\\mathrm{BC}]$, donc les angles $\\widehat{\\mathrm{B}}$ et $\\widehat{\\mathrm{C}}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "angles-opposes",
+      "enonce": "Deux angles opposés par le sommet sont :",
+      "choix": ["supplémentaires", "égaux", "complémentaires", "toujours droits"],
+      "reponse": 1,
+      "explication": "Deux droites sécantes forment quatre angles ; ceux qui se font face sont **égaux**. C'est une propriété qui se démontre à partir des angles plats."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "inegalite-triangulaire",
+      "enonce": "Peut-on construire un triangle de côtés $3$ cm, $4$ cm et $9$ cm ?",
+      "choix": [
+        "Oui",
+        "Non, car $3 + 4 < 9$",
+        "Non, car $9 - 4 > 3$",
+        "Oui, mais il sera plat"
+      ],
+      "reponse": 1,
+      "explication": "Le plus grand côté doit être **plus court** que la somme des deux autres. Ici $3 + 4 = 7 < 9$ : les deux petits côtés sont trop courts pour se rejoindre, le triangle est impossible."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "triangle-rectangle",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $35°$. Combien mesure l'autre ?",
+      "choix": ["$35°$", "$55°$", "$65°$", "$145°$"],
+      "reponse": 1,
+      "explication": "L'angle droit occupe $90°$, il reste $180 - 90 = 90°$ pour les deux angles aigus : ils sont **complémentaires**. Donc $90 - 35 = 55°$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "deux-angles-droits",
+      "enonce": "Un triangle peut-il avoir deux angles droits ?",
+      "choix": [
+        "Oui, c'est un triangle birectangle",
+        "Non, la somme dépasserait déjà $180°$ avec le troisième angle",
+        "Oui, si le troisième est nul",
+        "Cela dépend du triangle"
+      ],
+      "reponse": 1,
+      "explication": "Deux angles droits font déjà $180°$ : il ne resterait $0°$ pour le troisième, ce qui n'est pas un triangle. Un triangle a donc **au plus un** angle droit ou obtus."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "paralleles",
+      "enonce": "Deux droites parallèles sont coupées par une sécante. Que peut-on dire des angles alternes-internes ?",
+      "choix": [
+        "Ils sont supplémentaires",
+        "Ils sont égaux",
+        "Ils sont complémentaires",
+        "On ne peut rien dire sans mesurer"
+      ],
+      "reponse": 1,
+      "explication": "Avec des droites **parallèles**, les angles alternes-internes sont **égaux**. La réciproque est tout aussi utile : si deux angles alternes-internes sont égaux, alors les droites sont parallèles — c'est ainsi qu'on démontre un parallélisme."
+    }
+  ]
+}
