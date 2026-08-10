@@ -251,7 +251,7 @@ export function concentrationMassique(masse_g, volume, unite = 'L') {
     unite: 'g·L⁻¹',
     volumeLitres: v.litres,
     etapes: [
-      { titre: 'Conversion', detail: `${v.origine} = ${v.litres} L` },
+      { titre: 'Conversion', detail: `${v.origine} = ${v.litres} L`, remarque: '⚠️ Les concentrations s’expriment PAR LITRE : la conversion est obligatoire.' },
       { titre: 'Formule', detail: 'cₘ = m / V' },
       { titre: 'Calcul', detail: `cₘ = ${masse_g} / ${v.litres} = ${arrondi(cm)} g·L⁻¹` },
     ],

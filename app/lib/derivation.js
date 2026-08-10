@@ -170,7 +170,8 @@ export function variations(coef) {
     };
   }
 
-  const zeros = rac.valeurs;
+  // −0 est mathématiquement 0, mais s'afficherait « -0 » dans les bornes du tableau
+  const zeros = rac.valeurs.map((z) => (Object.is(z, -0) ? 0 : z));
   const etapes = [
     { titre: 'Dérivée', detail: `f′(x) = ${ecrire(d)}` },
   ];

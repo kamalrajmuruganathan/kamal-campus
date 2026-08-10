@@ -105,7 +105,8 @@ test('exemple de l’usine — recoupe le QCM', () => {
 
 test('l’arbre fournit aussi le conditionnement inverse', () => {
   const r = arbrePondere(0.7, 0.03, 0.08);
-  assert.ok(Math.abs(r.pA_sachantB - 0.021 / 0.045) < 1e-9);
+  // arrondi() arrondit à 6 décimales dans tout le module : la tolérance suit
+  assert.ok(Math.abs(r.pA_sachantB - 0.021 / 0.045) < 1e-6);
   assert.ok(r.etapes.some((e) => /ne pas confondre/i.test(e.remarque ?? '')));
 });
 

@@ -150,7 +150,7 @@ export function suiteArithmetique(up, r, n, p = 0) {
     rang: n,
     nombreDeTermes: nbTermes,
     somme: nb(somme),
-    variation: r > 0 ? 'croissante' : r < 0 ? 'décroissante' : 'constante',
+    variation: r > 0 ? 'croissante' : r < 0 ? 'decroissante' : 'constante',
     variationTexte:
       r > 0 ? `r = ${r} > 0 : la suite est croissante.`
         : r < 0 ? `r = ${r} < 0 : la suite est décroissante.`
