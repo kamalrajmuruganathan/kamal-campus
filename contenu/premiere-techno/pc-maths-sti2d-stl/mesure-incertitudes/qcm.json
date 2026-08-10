@@ -1,134 +1,154 @@
 {
-  "id": "1sti2d-mesure-incertitudes-qcm",
-  "chapitre": "1sti2d-mesure-incertitudes",
-  "titre": "QCM — Mesure et incertitudes",
-  "voie": "technologique",
-  "niveau": "premiere",
-  "parcours": "pc-maths-sti2d-stl",
-  "matiere": "physique-chimie",
-  "statut": "brouillon",
-  "relu_par": null,
-  "consigne": "Une seule réponse correcte par question.",
-  "questions": [
-    {
-      "id": 1,
-      "difficulte": "facile",
-      "notion": "grandeur-valeur-unite",
-      "enonce": "Dans l'écriture $L = 2{,}45$ m, que désigne « m » ?",
-      "choix": ["la grandeur", "la valeur", "l'unité", "l'incertitude"],
-      "reponse": 2,
-      "explication": "La **grandeur** est la longueur, la **valeur** est $2{,}45$, l'**unité** est le mètre. Ces trois notions sont distinctes, et le programme demande explicitement de les différencier."
-    },
-    {
-      "id": 2,
-      "difficulte": "facile",
-      "notion": "unites-si",
-      "enonce": "Quelle est l'unité SI de base de la masse ?",
-      "choix": ["le gramme", "le kilogramme", "le newton", "la tonne"],
-      "reponse": 1,
-      "explication": "C'est le **kilogramme** — la seule unité de base du SI dont le nom comporte déjà un préfixe. Le newton mesure une force, pas une masse."
-    },
-    {
-      "id": 3,
-      "difficulte": "moyen",
-      "notion": "types-erreurs",
-      "enonce": "Un ampèremètre indique $0{,}2$ A alors qu'aucun courant ne circule. De quel type d'erreur s'agit-il ?",
-      "choix": ["aléatoire", "systématique", "de lecture", "il n'y a pas d'erreur"],
-      "reponse": 1,
-      "explication": "Le zéro est décalé : toutes les mesures seront faussées **du même montant et dans le même sens**. C'est une erreur **systématique**, qui se corrige par étalonnage."
-    },
-    {
-      "id": 4,
-      "difficulte": "moyen",
-      "notion": "types-erreurs",
-      "enonce": "Répéter une mesure et faire la moyenne permet de réduire :",
-      "choix": [
-        "les erreurs systématiques",
-        "les erreurs aléatoires",
-        "les deux également",
-        "aucune des deux"
-      ],
-      "reponse": 1,
-      "explication": "Les fluctuations **aléatoires** se compensent en moyenne. Une erreur **systématique**, elle, se reproduit identiquement à chaque mesure : la moyenne reste décalée. Seul l'étalonnage la corrige."
-    },
-    {
-      "id": 5,
-      "difficulte": "moyen",
-      "notion": "ecriture-resultat",
-      "enonce": "Que signifie $L = 2{,}45 \\pm 0{,}02$ m ?",
-      "choix": [
-        "La longueur vaut exactement $2{,}45$ m",
-        "La longueur est très probablement entre $2{,}43$ m et $2{,}47$ m",
-        "La longueur vaut $2{,}47$ m",
-        "L'erreur est de $2\\,\\%$"
-      ],
-      "reponse": 1,
-      "explication": "L'incertitude délimite un intervalle : $2{,}45 - 0{,}02 = 2{,}43$ et $2{,}45 + 0{,}02 = 2{,}47$. La vraie valeur s'y trouve très probablement."
-    },
-    {
-      "id": 6,
-      "difficulte": "moyen",
-      "notion": "prefixes",
-      "enonce": "À combien de mètres correspond $250$ µm ?",
-      "choix": [
-        "$2{,}50 \\times 10^{-4}$ m",
-        "$2{,}50 \\times 10^{-2}$ m",
-        "$250 \\times 10^{-3}$ m",
-        "$2{,}50 \\times 10^{5}$ m"
-      ],
-      "reponse": 0,
-      "explication": "Le préfixe micro vaut $10^{-6}$, donc $250 \\times 10^{-6} = 2{,}50 \\times 10^{-4}$ m. Le choix B utiliserait le préfixe centi, le choix C le préfixe milli."
-    },
-    {
-      "id": 7,
-      "difficulte": "difficile",
-      "notion": "incertitude-relative",
-      "enonce": "Deux mesures ont la même incertitude de $1$ cm : l'une sur $2$ m, l'autre sur $5$ cm. Laquelle est la plus précise ?",
-      "choix": [
-        "Elles sont aussi précises",
-        "Celle sur $2$ m",
-        "Celle sur $5$ cm",
-        "On ne peut pas comparer"
-      ],
-      "reponse": 1,
-      "explication": "C'est l'**incertitude relative** qui compte : $\\dfrac{1}{200} = 0{,}5\\,\\%$ contre $\\dfrac{1}{5} = 20\\,\\%$. La mesure sur $2$ m est quarante fois plus précise, malgré une incertitude absolue identique."
-    },
-    {
-      "id": 8,
-      "difficulte": "difficile",
-      "notion": "chiffres-significatifs",
-      "enonce": "On mesure $2{,}4$ cm et $1{,}3$ cm. La calculatrice affiche une aire de $3{,}12$ cm². Que doit-on écrire ?",
-      "choix": ["$3{,}12$ cm²", "$3{,}1$ cm²", "$3$ cm²", "$3{,}120$ cm²"],
-      "reponse": 1,
-      "explication": "Chaque mesure a **deux chiffres significatifs** : le résultat d'un produit ne peut pas en avoir davantage. On écrit $3{,}1$ cm². Un calcul ne crée jamais de précision qui n'était pas dans la mesure."
-    },
-    {
-      "id": 9,
-      "difficulte": "difficile",
-      "notion": "compatibilite",
-      "enonce": "Deux groupes mesurent $g = 9{,}78 \\pm 0{,}05$ et $g = 9{,}81 \\pm 0{,}03$ m·s⁻². Que peut-on conclure ?",
-      "choix": [
-        "Un des deux groupes s'est trompé",
-        "Les résultats sont compatibles : les intervalles se recouvrent",
-        "Les résultats sont incompatibles",
-        "Il faut refaire les mesures"
-      ],
-      "reponse": 1,
-      "explication": "Les intervalles $[9{,}73\\,;9{,}83]$ et $[9{,}78\\,;9{,}84]$ se **recouvrent** : les deux résultats sont compatibles. Des valeurs différentes ne signifient pas qu'une mesure est fausse — c'est tout l'intérêt d'annoncer une incertitude."
-    },
-    {
-      "id": 10,
-      "difficulte": "difficile",
-      "notion": "ecriture-resultat",
-      "enonce": "Un élève écrit $m = 12{,}4567 \\pm 0{,}2$ g. Quel est le problème ?",
-      "choix": [
-        "L'incertitude est trop grande",
-        "La valeur affiche plus de décimales que l'incertitude ne le permet",
-        "Il manque l'unité",
-        "Il n'y a pas de problème"
-      ],
-      "reponse": 1,
-      "explication": "L'incertitude porte sur le premier chiffre après la virgule : écrire $12{,}4567$ suggère une précision au dix-millième, ce qui contredit $\\pm 0{,}2$. Il faut arrondir la valeur au même rang : $m = 12{,}5 \\pm 0{,}2$ g."
-    }
-  ]
+ "id": "1sti2d-mesure-incertitudes-qcm",
+ "chapitre": "1sti2d-mesure-incertitudes",
+ "titre": "QCM — Mesure et incertitudes",
+ "voie": "technologique",
+ "niveau": "premiere",
+ "parcours": "pc-maths-sti2d-stl",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "grandeur-valeur-unite",
+   "enonce": "Dans l'écriture $L = 2{,}45$ m, que désigne « m » ?",
+   "choix": [
+    "la grandeur",
+    "la valeur",
+    "l'unité",
+    "l'incertitude"
+   ],
+   "reponse": 2,
+   "explication": "La **grandeur** est la longueur, la **valeur** est $2{,}45$, l'**unité** est le mètre. Ces trois notions sont distinctes, et le programme demande explicitement de les différencier."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "unites-si",
+   "enonce": "Combien le Système international compte-t-il d'unités de **base** ?",
+   "choix": [
+    "$5$",
+    "$6$",
+    "$7$",
+    "$9$"
+   ],
+   "reponse": 2,
+   "explication": "Elles sont **sept** : mètre, kilogramme, seconde, ampère, kelvin, mole et candela. Les deux qu'on oublie le plus souvent sont la **mole** et la **candela**, parce qu'on les manipule moins en TP — mais le programme demande de citer les sept."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "types-erreurs",
+   "enonce": "Un ampèremètre indique $0{,}2$ A alors qu'aucun courant ne circule. De quel type d'erreur s'agit-il ?",
+   "choix": [
+    "aléatoire",
+    "systématique",
+    "de lecture",
+    "il n'y a pas d'erreur"
+   ],
+   "reponse": 1,
+   "explication": "Le zéro est décalé : toutes les mesures seront faussées **du même montant et dans le même sens**. C'est une erreur **systématique**, qui se corrige par étalonnage."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "types-erreurs",
+   "enonce": "Répéter une mesure et faire la moyenne permet de réduire :",
+   "choix": [
+    "les erreurs systématiques",
+    "les erreurs aléatoires",
+    "les deux également",
+    "aucune des deux"
+   ],
+   "reponse": 1,
+   "explication": "Les fluctuations **aléatoires** se compensent en moyenne. Une erreur **systématique**, elle, se reproduit identiquement à chaque mesure : la moyenne reste décalée. Seul l'étalonnage la corrige."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "ecriture-resultat",
+   "enonce": "Que signifie $L = 2{,}45 \\pm 0{,}02$ m ?",
+   "choix": [
+    "La longueur vaut exactement $2{,}45$ m",
+    "La longueur est très probablement entre $2{,}43$ m et $2{,}47$ m",
+    "La longueur vaut $2{,}47$ m",
+    "L'erreur est de $2\\,\\%$"
+   ],
+   "reponse": 1,
+   "explication": "L'incertitude délimite un intervalle : $2{,}45 - 0{,}02 = 2{,}43$ et $2{,}45 + 0{,}02 = 2{,}47$. La vraie valeur s'y trouve très probablement."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "incertitude-type-a",
+   "enonce": "On répète $9$ fois une mesure de longueur. L'écart-type de la série vaut $s = 0{,}6$ mm. Quelle est l'incertitude-type $u$ ?",
+   "choix": [
+    "$0{,}2$ mm",
+    "$0{,}6$ mm",
+    "$1{,}8$ mm",
+    "$0{,}067$ mm"
+   ],
+   "reponse": 0,
+   "explication": "Évaluation de **type A** : $u = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}6}{\\sqrt{9}} = \\dfrac{0{,}6}{3} = 0{,}2$ mm. Le piège est d'oublier le $\\sqrt{n}$ et de répondre $0{,}6$ mm, ou de diviser par $n$ au lieu de $\\sqrt{n}$."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "justesse-fidelite",
+   "enonce": "Dix mesures d'une même masse donnent des valeurs très resserrées, mais toutes supérieures d'environ $2$ g à la valeur de référence. Que peut-on dire ?",
+   "choix": [
+    "la mesure est juste mais peu fidèle",
+    "la mesure est fidèle mais peu juste",
+    "la mesure est à la fois juste et fidèle",
+    "on ne peut rien conclure sans répéter davantage"
+   ],
+   "reponse": 1,
+   "explication": "Des valeurs **resserrées** signalent une bonne **fidélité** (peu d'erreur aléatoire). Un décalage constant par rapport à la référence signale une mauvaise **justesse**, due à une erreur **systématique**. C'est le cas le plus traître : la régularité des mesures inspire confiance alors qu'elles sont toutes fausses ensemble — et répéter davantage n'y changera rien, seul un étalonnage le corrige."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "chiffres-significatifs",
+   "enonce": "On mesure $2{,}4$ cm et $1{,}3$ cm. La calculatrice affiche une aire de $3{,}12$ cm². Que doit-on écrire ?",
+   "choix": [
+    "$3{,}12$ cm²",
+    "$3{,}1$ cm²",
+    "$3$ cm²",
+    "$3{,}120$ cm²"
+   ],
+   "reponse": 1,
+   "explication": "Chaque mesure a **deux chiffres significatifs** : le résultat d'un produit ne peut pas en avoir davantage. On écrit $3{,}1$ cm². Un calcul ne crée jamais de précision qui n'était pas dans la mesure."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "valeur-reference",
+   "enonce": "On mesure $g = 9{,}70$ m·s⁻² avec une incertitude-type $u = 0{,}08$ m·s⁻². La valeur de référence est $9{,}81$ m·s⁻². Que conclure ?",
+   "choix": [
+    "l'écart vaut environ $1{,}4\\,u$ : le résultat est compatible avec la référence",
+    "la mesure est fausse, puisqu'elle diffère de la référence",
+    "l'écart vaut environ $0{,}11\\,u$ : le résultat est compatible",
+    "on ne peut pas conclure sans connaître le nombre de mesures"
+   ],
+   "reponse": 0,
+   "explication": "On évalue l'écart **en nombre d'incertitudes-types** : $\\dfrac{|9{,}70 - 9{,}81|}{0{,}08} = \\dfrac{0{,}11}{0{,}08} \\approx 1{,}4$. Un écart de l'ordre de une à deux incertitudes-types est **raisonnable** : le résultat est compatible avec la référence. Le piège est de conclure « faux » dès qu'il y a une différence — une mesure diffère toujours un peu — ou de confondre l'écart brut ($0{,}11$) avec l'écart rapporté à $u$."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "ecriture-resultat",
+   "enonce": "Un élève écrit $m = 12{,}4567 \\pm 0{,}2$ g. Quel est le problème ?",
+   "choix": [
+    "L'incertitude est trop grande",
+    "La valeur affiche plus de décimales que l'incertitude ne le permet",
+    "Il manque l'unité",
+    "Il n'y a pas de problème"
+   ],
+   "reponse": 1,
+   "explication": "L'incertitude porte sur le premier chiffre après la virgule : écrire $12{,}4567$ suggère une précision au dix-millième, ce qui contredit $\\pm 0{,}2$. Il faut arrondir la valeur au même rang : $m = 12{,}5 \\pm 0{,}2$ g."
+  }
+ ]
 }
