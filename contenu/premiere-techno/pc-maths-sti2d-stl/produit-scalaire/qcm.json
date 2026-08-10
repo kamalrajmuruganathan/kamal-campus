@@ -1,0 +1,129 @@
+{
+  "id": "1sti2d-produit-scalaire-qcm",
+  "chapitre": "1sti2d-produit-scalaire",
+  "titre": "QCM — Produit scalaire",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Le repère est orthonormé.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "nature",
+      "enonce": "Le produit scalaire de deux vecteurs est :",
+      "choix": ["un vecteur", "un nombre réel", "un angle", "une longueur positive"],
+      "reponse": 1,
+      "explication": "C'est un **nombre réel** — d'où le nom *scalaire*. Il peut être positif, négatif ou nul, ce qui exclut aussi la dernière proposition."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "coordonnees",
+      "enonce": "Pour $\\vec{u}\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 4 \\\\ 5 \\end{pmatrix}$, que vaut $\\vec{u} \\cdot \\vec{v}$ ?",
+      "choix": ["$22$", "$12$", "$10$", "$7$"],
+      "reponse": 0,
+      "explication": "$\\vec u \\cdot \\vec v = xx' + yy' = 3 \\times 4 + 2 \\times 5 = 12 + 10 = 22$. Le choix $12$ ne garde que le produit des abscisses."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "orthogonalite",
+      "enonce": "Quels vecteurs sont orthogonaux ?",
+      "choix": [
+        "$\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ et $\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 4 \\\\ -2 \\end{pmatrix}$ et $\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$ et $\\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix}$ et $\\begin{pmatrix} 0 \\\\ 5 \\end{pmatrix}$"
+      ],
+      "reponse": 1,
+      "explication": "$4 \\times 1 + (-2) \\times 2 = 4 - 4 = 0$ : ces vecteurs sont orthogonaux. Le choix A donne $12$, le choix C donne $6$ (vecteurs colinéaires), le choix D donne $10$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "signe-angle",
+      "enonce": "Si $\\vec{u} \\cdot \\vec{v} < 0$ avec deux vecteurs non nuls, l'angle entre eux est :",
+      "choix": ["aigu", "droit", "obtus", "nul"],
+      "reponse": 2,
+      "explication": "Les normes étant positives, le signe du produit scalaire est celui de $\\cos\\theta$. Un cosinus négatif correspond à un angle **obtus**, entre $90°$ et $180°$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "travail",
+      "enonce": "Une force est perpendiculaire au déplacement. Que vaut son travail ?",
+      "choix": ["Maximal", "Nul", "Négatif", "Égal à $F \\times d$"],
+      "reponse": 1,
+      "explication": "$W = F \\times d \\times \\cos 90° = 0$. C'est l'une des deux illustrations que le programme cite explicitement : seule la composante de la force **dans la direction du déplacement** travaille."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "developpement",
+      "enonce": "Quelle est la bonne écriture de $\\|\\vec{u} + \\vec{v}\\|^2$ ?",
+      "choix": [
+        "$\\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2$",
+        "$\\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$",
+        "$\\left(\\|\\vec{u}\\| + \\|\\vec{v}\\|\\right)^2$",
+        "$\\|\\vec{u}\\|^2 + \\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$"
+      ],
+      "reponse": 1,
+      "explication": "C'est l'analogue vectoriel de $(a+b)^2 = a^2 + 2ab + b^2$, la bilinéarité jouant le rôle de la distributivité. Le choix A ne serait vrai que pour des vecteurs orthogonaux — c'est alors le théorème de Pythagore."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle, $b = 6$, $c = 10$ et $\\widehat{\\mathrm{A}} = 60°$. Que vaut $a^2$ ?",
+      "choix": ["$136$", "$76$", "$196$", "$16$"],
+      "reponse": 1,
+      "explication": "$a^2 = 36 + 100 - 2 \\times 6 \\times 10 \\times 0{,}5 = 136 - 60 = 76$. Le choix $136$ oublie le terme correctif, le choix $196$ met un $+$ au lieu d'un $-$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "al-kashi",
+      "enonce": "Que devient le théorème d'Al-Kashi quand $\\widehat{\\mathrm{A}} = 90°$ ?",
+      "choix": [
+        "Il n'est plus applicable",
+        "Il redonne le théorème de Pythagore",
+        "Le résultat est nul",
+        "Il faut changer d'angle"
+      ],
+      "reponse": 1,
+      "explication": "$\\cos 90° = 0$ annule le terme correctif : il reste $a^2 = b^2 + c^2$. Le programme présente d'ailleurs Al-Kashi comme une **généralisation** du théorème de Pythagore."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "orthogonalite",
+      "enonce": "$\\vec{u}$ et $\\vec{v}$ sont **non nuls** et $\\vec{u} \\cdot \\vec{v} = 0$. Que peut-on conclure ?",
+      "choix": [
+        "L'un des deux vecteurs est nul",
+        "Ils sont orthogonaux",
+        "Ils sont colinéaires",
+        "Ils sont égaux"
+      ],
+      "reponse": 1,
+      "explication": "Contrairement au produit de deux nombres, un produit scalaire nul n'impose pas qu'un facteur le soit. Pour deux vecteurs non nuls, il signifie exactement que $\\cos\\theta = 0$, donc que l'angle est droit."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "bilinearite",
+      "enonce": "Pourquoi le travail de la force résultante est-il la somme des travaux des forces ?",
+      "choix": [
+        "C'est une convention",
+        "C'est une conséquence de la bilinéarité du produit scalaire",
+        "Parce que les forces sont perpendiculaires",
+        "Ce n'est vrai que pour deux forces"
+      ],
+      "reponse": 1,
+      "explication": "$\\left(\\vec{F_1} + \\vec{F_2}\\right) \\cdot \\overrightarrow{\\mathrm{AB}} = \\vec{F_1} \\cdot \\overrightarrow{\\mathrm{AB}} + \\vec{F_2} \\cdot \\overrightarrow{\\mathrm{AB}}$ : c'est exactement la **bilinéarité**. Le programme cite cette illustration telle quelle, et elle vaut pour un nombre quelconque de forces."
+    }
+  ]
+}

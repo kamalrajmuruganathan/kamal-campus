@@ -1,0 +1,124 @@
+{
+  "id": "1sti2d-ondes-information-qcm",
+  "chapitre": "1sti2d-ondes-information",
+  "titre": "QCM — Ondes et information",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. On prendra $v_{son} = 340$ m·s⁻¹.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que transporte une onde ?",
+      "choix": [
+        "De la matière",
+        "De l'énergie, sans déplacement de matière",
+        "Rien",
+        "De la matière et de l'énergie"
+      ],
+      "reponse": 1,
+      "explication": "Une onde propage une perturbation et l'énergie associée, mais le milieu reprend sa place : un bouchon sur l'eau monte et descend **sur place**, la vague ne l'emporte pas."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "familles",
+      "enonce": "Laquelle de ces ondes peut se propager dans le vide ?",
+      "choix": ["le son", "les ultrasons", "la lumière", "les ondes sismiques"],
+      "reponse": 2,
+      "explication": "Seules les ondes **électromagnétiques** — dont la lumière — se propagent sans milieu matériel. Le son, les ultrasons et les ondes sismiques sont **mécaniques** : ils ont besoin de matière."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "longitudinal-transversal",
+      "enonce": "Le son est une onde :",
+      "choix": ["transversale", "longitudinale", "électromagnétique", "stationnaire"],
+      "reponse": 1,
+      "explication": "Le son se propage par **compressions et dilatations de l'air**, parallèlement à la direction de propagation : c'est une onde **longitudinale**. Une corde qu'on secoue donne une onde transversale."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "relation-fondamentale",
+      "enonce": "Un son a une fréquence de $170$ Hz. Quelle est sa longueur d'onde dans l'air ?",
+      "choix": ["$2$ m", "$0{,}5$ m", "$57\\,800$ m", "$170$ m"],
+      "reponse": 0,
+      "explication": "$\\lambda = \\dfrac{v}{f} = \\dfrac{340}{170} = 2$ m. Le choix $0{,}5$ inverse la fraction ; le choix $57\\,800$ multiplie au lieu de diviser."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "longueur-onde",
+      "enonce": "Que représente physiquement la longueur d'onde $\\lambda$ ?",
+      "choix": [
+        "La durée d'une oscillation",
+        "La distance parcourue par l'onde pendant une période",
+        "L'amplitude de l'onde",
+        "La vitesse de propagation"
+      ],
+      "reponse": 1,
+      "explication": "$\\lambda = v \\times T$ : c'est une **distance**, la période **spatiale** de l'onde. La période $T$, elle, est une durée — confondre les deux est l'erreur la plus fréquente."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "periode-frequence",
+      "enonce": "Une onde a une période de $4{,}0$ ms. Quelle est sa fréquence ?",
+      "choix": ["$250$ Hz", "$4$ Hz", "$0{,}25$ Hz", "$4000$ Hz"],
+      "reponse": 0,
+      "explication": "$f = \\dfrac{1}{T} = \\dfrac{1}{4{,}0 \\times 10^{-3}} = 250$ Hz. La conversion des millisecondes en secondes est indispensable : l'oublier donnerait $0{,}25$ Hz, un infrason."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "changement-milieu",
+      "enonce": "Une onde sonore passe de l'air à l'eau, où elle se propage plus vite. Que devient sa fréquence ?",
+      "choix": [
+        "Elle augmente",
+        "Elle diminue",
+        "Elle reste inchangée",
+        "Elle devient nulle"
+      ],
+      "reponse": 2,
+      "explication": "La fréquence est **imposée par la source** et ne change jamais au passage d'un milieu à l'autre. Ce sont la célérité $v$ et donc la longueur d'onde $\\lambda = v/f$ qui changent."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "echo",
+      "enonce": "Un capteur à ultrasons émet une salve et reçoit l'écho $12$ ms plus tard. À quelle distance est l'obstacle ?",
+      "choix": ["$4{,}08$ m", "$2{,}04$ m", "$8{,}16$ m", "$0{,}12$ m"],
+      "reponse": 1,
+      "explication": "L'onde fait l'**aller-retour** : $d = \\dfrac{v \\times \\Delta t}{2} = \\dfrac{340 \\times 0{,}012}{2} = \\dfrac{4{,}08}{2} = 2{,}04$ m. Oublier le facteur $2$ donne $4{,}08$ m — l'erreur type de cet exercice."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "spectre",
+      "enonce": "Parmi ces ondes électromagnétiques, laquelle a la plus courte longueur d'onde ?",
+      "choix": ["les ondes radio", "l'infrarouge", "la lumière visible", "les rayons X"],
+      "reponse": 3,
+      "explication": "Toutes ont la même célérité dans le vide, donc $\\lambda = \\dfrac{c}{f}$ : plus la **fréquence** est élevée, plus la longueur d'onde est **courte**. Les rayons X ont la plus haute fréquence de cette liste, donc la plus courte longueur d'onde — et la plus grande énergie."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "guide-onde",
+      "enonce": "À quoi sert une fibre optique en tant que guide d'onde ?",
+      "choix": [
+        "À accélérer la lumière",
+        "À confiner la lumière et limiter les pertes sur de grandes distances",
+        "À transformer la lumière en son",
+        "À augmenter la fréquence du signal"
+      ],
+      "reponse": 1,
+      "explication": "Un **guide d'onde** confine l'onde par réflexions successives, ce qui réduit fortement l'**atténuation**. Rien n'accélère la lumière — elle va même moins vite dans la fibre que dans le vide."
+    }
+  ]
+}

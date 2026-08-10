@@ -1,6 +1,6 @@
 # Kamal Campus — État du contenu
 
-> Mis à jour le 2026-08-09. **Périmètre v1 complet.**
+> Mis à jour le 2026-08-10. **Périmètre v1 complet.**
 
 ## Couverture
 
@@ -11,12 +11,14 @@
 | Seconde **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
 | Première **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
 | Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
-| **Total** | **34** | **340** | |
+| Première techno — maths | 5 | 50 | BO du 2 avril 2026 |
+| Première STI2D/STL — PC et maths | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
+| **Total** | **45** | **450** | |
 
 Chaque chapitre comporte une `fiche.md` et un `qcm.json` de 10 questions (2 faciles,
 5 moyennes, 3 difficiles), avec correction expliquée nommant le piège.
 
-## Contrôles automatiques — au vert sur les 34
+## Contrôles automatiques — au vert sur les 45
 
 ```bash
 for q in contenu/*/*/*/qcm.json; do
@@ -30,7 +32,7 @@ done
 
 ## ⚠️ Aucune fiche n'a été relue
 
-**Les 34 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
+**Les 45 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
 La règle du gabarit interdit le passage en `publie` tant qu'un professeur de la matière n'a
 pas relu. Elle n'est pas négociable : une formule fausse fait perdre des points à un élève.
 
@@ -47,6 +49,8 @@ officiel.
 | `seconde/physique-chimie/modelisation-microscopique` | notation des configurations électroniques : sous-couches (1s² 2s²…) ou couches (K)(L) ? |
 | `seconde/maths/fonctions-de-reference` | la fonction cube est-elle au programme de seconde dans le nouveau texte ? |
 | `premiere/maths-enseignement-scientifique/phenomenes-evolution` | la fonction exponentielle est-elle introduite formellement dans ce parcours, ou seulement via les suites géométriques ? |
+| `premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes` | extraction PDF très lacunaire : un seul marqueur lisible dans le texte officiel |
+| `premiere-techno/pc-maths-sti2d-stl/ondes-information` | la section « transport de l'information » est la moins adossée au texte |
 
 ## Une différence importante entre les deux matières
 
@@ -112,7 +116,7 @@ cd app && npm install && npm start
 ## Ce qui reste à faire
 
 1. **Relecture par un professeur** de chaque matière — le seul verrou réel
-2. ✅ Contenu — 34 chapitres, 340 questions
+2. ✅ Contenu — 45 chapitres, 450 questions
 3. ✅ Outils de calcul — 9 modules, 234 tests
 4. ✅ Application Expo — écrite, à lancer
 5. Installer Node.js et accepter la licence Xcode (voir `PASSATION.md`),

@@ -1,0 +1,129 @@
+{
+  "id": "1sti2d-energie-qcm",
+  "chapitre": "1sti2d-energie",
+  "titre": "QCM — Énergie : conversions, chaînes et rendement",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "energie-puissance",
+      "enonce": "Quelle relation lie l'énergie, la puissance et la durée ?",
+      "choix": [
+        "$E = \\dfrac{P}{\\Delta t}$",
+        "$E = P \\times \\Delta t$",
+        "$P = E \\times \\Delta t$",
+        "$E = P + \\Delta t$"
+      ],
+      "reponse": 1,
+      "explication": "$E = P \\times \\Delta t$ : une puissance est une énergie **par unité de temps**. Les unités le confirment : W × s = J."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "unites",
+      "enonce": "Le kilowattheure est une unité :",
+      "choix": ["de puissance", "d'énergie", "de tension", "d'intensité"],
+      "reponse": 1,
+      "explication": "Malgré le « watt » dans son nom, le kWh est une **énergie** : c'est une puissance multipliée par une durée. $1$ kWh $= 3{,}6 \\times 10^6$ J."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "calcul-energie",
+      "enonce": "Un appareil de $2$ kW fonctionne pendant $3$ heures. Quelle énergie consomme-t-il en joules ?",
+      "choix": [
+        "$6$ J",
+        "$2{,}16 \\times 10^{7}$ J",
+        "$6\\,000$ J",
+        "$21\\,600$ J"
+      ],
+      "reponse": 1,
+      "explication": "$3$ h $= 10\\,800$ s et $2$ kW $= 2000$ W, donc $E = 2000 \\times 10800 = 2{,}16 \\times 10^7$ J. **Les deux conversions sont nécessaires** — c'est aussi $6$ kWh."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "conversion",
+      "enonce": "Un panneau photovoltaïque réalise une conversion :",
+      "choix": [
+        "électromécanique",
+        "photoélectrique",
+        "électrochimique",
+        "thermodynamique"
+      ],
+      "reponse": 1,
+      "explication": "Il convertit l'énergie **rayonnante** du Soleil en énergie **électrique** : c'est une conversion photoélectrique. Un moteur réalise une conversion électromécanique, une batterie une conversion électrochimique."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "rendement",
+      "enonce": "Un moteur reçoit $2\\,000$ J et fournit $1\\,700$ J de travail utile. Quel est son rendement ?",
+      "choix": ["$0{,}85$", "$1{,}18$", "$300$", "$0{,}15$"],
+      "reponse": 0,
+      "explication": "$\\eta = \\dfrac{1700}{2000} = 0{,}85$, soit $85\\,\\%$. Les $300$ J manquants sont dissipés en chaleur. Le choix $1{,}18$ inverse la fraction — et un rendement supérieur à $1$ est impossible."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "effet-joule",
+      "enonce": "Quelle est la puissance dissipée par effet Joule dans une résistance ?",
+      "choix": ["$P = RI$", "$P = RI^2$", "$P = R^2I$", "$P = \\dfrac{I}{R}$"],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{J} = RI^2$, ou de façon équivalente $\\dfrac{U^2}{R}$. Le carré sur l'intensité explique pourquoi les pertes en ligne explosent quand le courant augmente."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "chaine-rendement",
+      "enonce": "Une chaîne comporte deux convertisseurs de rendements $0{,}9$ et $0{,}8$. Quel est le rendement global ?",
+      "choix": ["$1{,}7$", "$0{,}85$", "$0{,}72$", "$0{,}1$"],
+      "reponse": 2,
+      "explication": "On **multiplie** les rendements : $0{,}9 \\times 0{,}8 = 0{,}72$, soit $72\\,\\%$. Les additionner ou en faire la moyenne serait faux — chaque étage ne récupère qu'une fraction de ce que le précédent lui transmet."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "effet-joule",
+      "enonce": "Pourquoi transporte-t-on l'électricité à très haute tension sur les lignes ?",
+      "choix": [
+        "Pour aller plus vite",
+        "Pour réduire l'intensité et donc les pertes par effet Joule",
+        "Pour augmenter la puissance transportée",
+        "Pour diminuer la résistance des câbles"
+      ],
+      "reponse": 1,
+      "explication": "À puissance transportée égale, $P = UI$ : une tension élevée signifie une **intensité faible**. Comme les pertes valent $RI^2$, diviser l'intensité par $10$ divise les pertes par $100$. La résistance du câble, elle, ne change pas."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "conservation",
+      "enonce": "Un dispositif reçoit $5\\,000$ J et en restitue $3\\,500$ J utiles. Que sont devenus les $1\\,500$ J restants ?",
+      "choix": [
+        "Ils ont disparu",
+        "Ils ont été dissipés, principalement sous forme thermique",
+        "Ils ont été stockés définitivement",
+        "Le calcul est erroné"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie se conserve : $E_{\\text{fournie}} = E_{\\text{utile}} + E_{\\text{dissipée}}$. Les $1\\,500$ J sont partis en chaleur, par effet Joule et frottements. Une chaîne énergétique doit toujours faire apparaître cette branche."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "stockage",
+      "enonce": "Un volant d'inertie récupérant l'énergie de freinage d'un véhicule la stocke sous forme :",
+      "choix": ["chimique", "cinétique", "thermique", "électrique"],
+      "reponse": 1,
+      "explication": "Le volant tourne : il stocke de l'énergie **cinétique**, qu'il pourra restituer lors de l'accélération suivante. Sans ce dispositif, cette énergie serait dissipée en chaleur dans les plaquettes — donc perdue."
+    }
+  ]
+}
