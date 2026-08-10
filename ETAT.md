@@ -1,11 +1,12 @@
 # Kamal Campus — État du contenu
 
-> Mis à jour le 2026-08-10. **Périmètre v1 complet.**
+> Mis à jour le 2026-08-10. **Périmètre v1 complet**, extension collège amorcée.
 
 ## Couverture
 
 | Bloc | Chapitres | Questions | Programme de référence |
 |---|---|---|---|
+| Collège **cinquième** maths | 5 | 50 | BO du 2 avril 2026 *(cycle 4)* |
 | Première spécialité **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
 | Première **maths — ens. scientifique** | 4 | 40 | BO du 2 avril 2026 *(nouveau)* |
 | Seconde **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
@@ -13,7 +14,10 @@
 | Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
 | Première techno — maths | 5 | 50 | BO du 2 avril 2026 |
 | Première STI2D/STL — PC et maths | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
-| **Total** | **45** | **450** | |
+| **Total** | **50** | **500** | |
+
+La 5e ne couvre pour l'instant que 5 des 16 chapitres de son programme : c'est un début
+d'extension au collège, pas un niveau complet. Voir « Extension au collège » plus bas.
 
 Chaque chapitre comporte une `fiche.md` et un `qcm.json` de 10 questions (2 faciles,
 5 moyennes, 3 difficiles), avec correction expliquée nommant le piège.
@@ -32,13 +36,18 @@ done
 
 ## ⚠️ Aucune fiche n'a été relue
 
-**Les 45 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
+**Les 50 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
 La règle du gabarit interdit le passage en `publie` tant qu'un professeur de la matière n'a
 pas relu. Elle n'est pas négociable : une formule fausse fait perdre des points à un élève.
 
 Chaque fiche porte en fin de fichier un **bloc de notes de production** (commentaire HTML,
 invisible dans l'application) listant précisément ce qui doit être confronté au programme
 officiel.
+
+➡️ **Le dossier de relecture est dans [`docs/relecture.md`](docs/relecture.md)** : il reprend
+les sept fiches ci-dessous en y ajoutant, pour chacune, ce que dit le programme officiel
+réextrait. Quatre de leurs questions ouvertes y sont tranchées, et deux écarts au programme
+apparaissent.
 
 ### Les fiches à relire en priorité
 
@@ -94,9 +103,14 @@ Conventions communes à tous :
   racines d'un polynôme de degré ≥ 3 — l'outil **renvoie la règle ou refuse**
   plutôt que d'inventer.
 
-⚠️ **Les 234 tests sont écrits mais n'ont jamais été exécutés** : Node.js n'est pas
-installé sur la machine. La logique de chaque module a été vérifiée par un **portage
-Perl indépendant**, et les valeurs recoupent les réponses des QCM correspondants.
+✅ **Les 234 tests ont été exécutés le 2026-08-10 : tous au vert.**
+
+Première exécution depuis la création de la bibliothèque — Node.js manquait jusque-là.
+Résultat brut avant correction : **230/234**, ce qui valide la vérification par portage
+Perl. Les quatre échecs ont été corrigés : trois défauts de code (valeur `'décroissante'`
+accentuée dans un module et pas dans l'autre, `zeros: [-0]` affichable tel quel, remarque
+d'unité manquante sur `concentrationMassique`) et un test trop strict (tolérance `1e-9`
+sur une valeur arrondie à 6 décimales).
 
 ## Application
 
@@ -109,15 +123,54 @@ rendu Markdown + LaTeX hors ligne via KaTeX embarqué.
 cd app && npm install && npm start
 ```
 
-⚠️ **Jamais exécutée** : Node.js est absent de la machine de développement.
-`npm install` n'a pas tourné, l'application n'a jamais été affichée. Les points
-à contrôler au premier lancement sont listés dans `app/README.md`.
+✅ **Elle compile** — vérifié le 2026-08-10 : 842 modules, bundle iOS de 4,48 Mo.
+`npm install` puis `npx expo export` passent sans erreur.
+
+⚠️ **Personne ne l'a encore regardée sur un téléphone.** Compiler n'est pas afficher :
+le rendu KaTeX, le thème sombre et la navigation restent à contrôler. Les points à
+vérifier au premier lancement sont listés dans `app/README.md`.
+
+Deux prérequis machine découverts au premier démarrage :
+
+- `fsevents` doit être installé (`npm install --include=optional`), sinon Metro se rabat
+  sur un watcher qui ouvre un descripteur par répertoire et meurt en `EMFILE` ;
+- `npm test` exige `node --test lib/*.test.js` — `node --test lib/` échoue sur Node 24,
+  qui interprète le répertoire comme un module.
+
+## Extension au collège — le chiffrage
+
+Carte établie à partir des sommaires officiels réextraits (cycle 3 de 2025, cycle 4 du
+BO 2026) :
+
+| Niveau | Chapitres au programme | Écrits | Restants |
+|---|---|---|---|
+| Sixième *(cycle 3)* | 11 | 0 | 11 |
+| Cinquième | 16 | 5 | **10** |
+| Quatrième | 15 | 0 | 15 |
+| Troisième | 14 | 0 | 14 |
+| **Total collège** | **56** | **5** | **50** |
+
+Détail de la 5e — 5 chapitres écrits couvrent 6 entrées du programme (`triangles-angles`
+en couvre deux). **Restent** : Opérations · Puissances · Repérage sur une droite et dans
+le plan · Représentation de l'espace · Transformations · Parallélogrammes · Statistiques ·
+Probabilités · Fonctions · Pensée informatique.
+
+**Coût** : à la demi-journée par chapitre mesurée sur le pilote, relecture comprise,
+50 chapitres = **environ 25 jours de travail effectif**, soit 5 semaines à temps plein.
+S'y ajoutent 500 questions de QCM.
+
+⚠️ Le collège relève du **cycle 4**, dont le programme de maths est lui aussi celui du
+BO du 2 avril 2026 : même avantage de fraicheur qu'au lycée, et même échéance.
 
 ## Ce qui reste à faire
 
-1. **Relecture par un professeur** de chaque matière — le seul verrou réel
-2. ✅ Contenu — 45 chapitres, 450 questions
-3. ✅ Outils de calcul — 9 modules, 234 tests
-4. ✅ Application Expo — écrite, à lancer
-5. Installer Node.js et accepter la licence Xcode (voir `PASSATION.md`),
-   puis `cd app && npm install && npm test && npm start`
+1. **Relecture par un professeur** de chaque matière — le seul verrou réel.
+   Dossier prêt : [`docs/relecture.md`](docs/relecture.md)
+2. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue
+3. **Décider du périmètre collège** — 50 chapitres restants, ~25 jours (chiffrage ci-dessus)
+4. ✅ Contenu v1 — 50 chapitres, 500 questions
+5. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**
+6. ✅ Application Expo — écrite **et compilée**
+7. ✅ Node.js installé (v24.19.0). La licence Xcode n'est **pas** nécessaire :
+   ni Node, ni npm, ni Expo n'en dépendent — c'était une fausse piste.
+8. ✅ Programmes officiels réextraits proprement (`app/scripts/extraire-pdf.mjs`)
