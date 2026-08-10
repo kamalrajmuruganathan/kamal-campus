@@ -156,7 +156,7 @@ Notes de production en commentaire HTML en fin de fichier.
 ### `qcm.json`
 
 10 questions · 4 choix chacune · une seule bonne réponse · `reponse` en index 0-based.
-Répartition **2 faciles / 5 moyennes / 3 difficiles**.
+Répartition **2 faciles / 4 moyennes / 4 difficiles** (voir `docs/gabarit-chapitre.md`).
 Champ `notion` aligné sur une section de la fiche (servira au diagnostic des lacunes).
 `explication` obligatoire : elle explique le raisonnement **et nomme le piège**.
 Distracteurs = erreurs plausibles (signe oublié, facteur `a` omis), jamais des absurdités.

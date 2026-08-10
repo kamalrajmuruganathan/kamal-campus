@@ -43,7 +43,7 @@ Ils réduisent le travail du relecteur ; ils ne le remplacent pas.
 
 ## Les sept fiches prioritaires
 
-### 1. `premiere/maths-specialite/variables-aleatoires`
+### 1. `premiere/maths-specialite/variables-aleatoires` — ✅ corrigée
 
 Source désormais complète (section « Variables aléatoires réelles »).
 
@@ -54,8 +54,16 @@ Source désormais complète (section « Variables aléatoires réelles »).
 | L'échantillonnage relève-t-il de cette section ? | ⚠️ **Manque** — oui : la sous-section « Expérimentations » en fait partie (simulation d'échantillons, moyenne d'un échantillon de taille n). **La fiche ne la traite pas.** |
 | Y a-t-il une démonstration exigible ? | ❔ Non listée dans la section. À confirmer. |
 
-À décider par le relecteur : retirer V(aX+b) ou le marquer « hors programme, pour aller plus
-loin » ; et créer ou non la partie échantillonnage.
+**Corrigé** : $V(aX+b)$ et $\sigma(aX+b)$ sont reléguées dans un encadré « pour aller plus
+loin » signalé hors programme et retirées du récapitulatif ; une section « Estimer une
+espérance par échantillonnage » est ajoutée, avec le critère
+$\lvert m - \mu \rvert \leqslant 2\sigma/\sqrt{n}$ ; la notation $P(X \leqslant a)$, exigée
+et manquante au tableau des notations, est ajoutée. QCM : la question sur $V(3X+7)$ est
+remplacée par une question d'échantillonnage.
+
+**Reste ouvert** : aucune démonstration exigible n'est listée dans la section — König-Huygens
+demeure la candidate naturelle, mais rien ne l'impose. Et l'approfondissement possible
+« étude de $x \mapsto E((X-x)^2)$ » figure au programme sans être traité : à décider.
 
 ### 2. `premiere/physique-chimie/mouvement-interactions`
 
@@ -133,12 +141,88 @@ retiennent 380–780) ; les ordres de grandeur de célérité dans l'eau et l'ac
 
 ---
 
+---
+
+## Dépistage systématique des 50 fiches — 2026-08-10
+
+Chaque section de chaque fiche a été confrontée au texte de son programme : une section
+dont **aucun** mot-clé n'apparaît dans le programme est signalée. Sur 26 signaux, la
+plupart étaient des titres stylistiques (« Propriété décisive », « Les trois règles »).
+**Quatre étaient de vrais écarts**, tous corrigés.
+
+### `seconde/maths/arithmetique` — le plus grave, ✅ corrigé
+
+Quatre sections signalées sur sept. Vérification faite, le programme de seconde 2026 se
+limite à : notations ℕ et ℤ · définitions de multiple, diviseur, pair, impair · fractions
+sous forme irréductible · **deux démonstrations exigibles** · deux algorithmes.
+
+Or la fiche traitait, sur ses trois premières sections : critères de divisibilité,
+division euclidienne, nombres premiers, test de primalité, décomposition en facteurs
+premiers. Comptage sur le texte officiel : « euclidienne » **0** occurrence, « nombre
+premier » **0**, « PGCD » **0**. Ces notions relèvent du cycle 4.
+
+À l'inverse, **les deux démonstrations exigibles étaient absentes** — la somme de deux
+multiples de $a$ est multiple de $a$, et le carré d'un impair est impair — ainsi que les
+notations ℕ/ℤ, la mise sous forme irréductible et les deux algorithmes.
+
+Fiche restructurée autour du programme, cycle 4 relégué en section « rappels » signalée
+hors programme. QCM : **7 questions sur 10 réécrites** (6 portaient sur du hors-programme).
+
+### `premiere/physique-chimie/ondes-signaux` — ✅ corrigé
+
+La section « Lunette astronomique » et son grossissement ne sont pas au programme de
+première : « lunette » **0** occurrence, « grossissement » **0**, « oculaire » **0**.
+Le thème demande à la place les **relations algébriques** de la lentille mince
+convergente — relation de conjugaison, grandissement, image réelle/virtuelle,
+droite/renversée — qui étaient absentes.
+
+Section remplacée ; la lunette est conservée en note de fin, signalée comme relevant de la
+terminale. QCM : 2 questions sur la lunette remplacées par conjugaison et grandissement.
+
+### `premiere/physique-chimie/transformations-matiere` — ✅ corrigé
+
+La section « Acides et bases » (couples, pH) n'est pas au programme de première : le mot
+« acide » n'apparaît qu'une fois dans tout le texte, dans « **acide carboxylique** », un
+groupe caractéristique de chimie organique. Ni pH, ni couple acide/base.
+
+Section conservée mais signalée hors programme, car elle éclaire les titrages. QCM :
+3 questions (pH ×2, couple acide/base) remplacées par avancement, spectrophotométrie et
+énergie molaire.
+
+⚠️ **Écart restant, non corrigé** : le programme de première consacre une partie entière à
+la **chimie organique** — formules brutes et semi-développées, squelettes carbonés, groupes
+caractéristiques (alcool, aldéhyde, cétone, acide carboxylique), nomenclature,
+identification par **spectroscopie infrarouge**. Aucune fiche ne la traite. C'est un
+chapitre manquant, pas une correction : à créer.
+
+### `premiere/maths-specialite/variables-aleatoires` — ✅ corrigé
+
+Les deux écarts identifiés plus haut sont traités : la variance d'une transformation
+affine est reléguée hors programme (seule la **linéarité de l'espérance** est au texte), et
+une section sur l'**échantillonnage** est ajoutée, avec le critère $\lvert m - \mu \rvert
+\leqslant 2\sigma/\sqrt{n}$ que le programme demande de calculer sur simulations. La
+notation $P(X \leqslant a)$, exigée et manquante, est ajoutée. QCM : la question sur
+$V(3X+7)$ est remplacée par une question d'échantillonnage.
+
+### Signaux écartés après vérification
+
+`kilowattheure`, `corrélation n'est pas causalité`, `techniques de séparation`,
+`dérivées composées`, `perpendicularité`, `distances`, `conversion`, `opérations`,
+`signes contraires`, `ajustement des nombres stœchiométriques` — soit des synonymes du
+vocabulaire officiel, soit des titres de rédaction sans enjeu de conformité.
+
+---
+
 ## Un écart entre le gabarit et la pratique
 
-Le gabarit impose une répartition de **2 questions faciles / 5 moyennes / 3 difficiles**.
-Dans les faits, **47 QCM sur 50 sont en 2 / 4 / 4**. Ce n'est donc pas 47 erreurs, mais un
-gabarit désaligné de la production. À trancher : corriger le gabarit, ou les 47 fichiers.
-Rien n'a été modifié à ce titre.
+Le gabarit imposait **2 faciles / 5 moyennes / 3 difficiles**, alors que **47 QCM sur 50
+étaient en 2 / 4 / 4**. Ce n'était pas 47 erreurs mais un gabarit désaligné de la
+production. **Le gabarit a été aligné sur la pratique** (`docs/gabarit-chapitre.md` et
+`PASSATION.md`), reclasser 47 fichiers demandant un jugement question par question.
+
+Restent trois chapitres en 2 / 5 / 3 — `second-degre`, `suites-numeriques` et
+`fonction-exponentielle`, les premiers écrits. Ils sont désormais les exceptions. Le
+gabarit parlant d'une répartition « visée », ils n'ont pas été touchés.
 
 ## Les 43 autres fiches
 

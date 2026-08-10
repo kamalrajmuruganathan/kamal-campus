@@ -1,139 +1,154 @@
 {
-  "id": "2nde-math-arithmetique-qcm",
-  "chapitre": "2nde-math-arithmetique",
-  "titre": "QCM — Arithmétique",
-  "voie": "generale",
-  "niveau": "seconde",
-  "parcours": "tronc-commun",
-  "matiere": "mathematiques",
-  "statut": "brouillon",
-  "relu_par": null,
-  "consigne": "Une seule réponse correcte par question.",
-  "questions": [
-    {
-      "id": 1,
-      "difficulte": "facile",
-      "notion": "premiers",
-      "enonce": "Lequel de ces nombres est premier ?",
-      "choix": ["$1$", "$9$", "$17$", "$21$"],
-      "reponse": 2,
-      "explication": "$17$ n'a que deux diviseurs, $1$ et $17$. $1$ n'est **pas** premier (un seul diviseur), $9 = 3 \\times 3$ et $21 = 3 \\times 7$."
-    },
-    {
-      "id": 2,
-      "difficulte": "facile",
-      "notion": "divisibilite",
-      "enonce": "Le nombre $4\\,521$ est-il divisible par $3$ ?",
-      "choix": [
-        "Oui, car $4+5+2+1 = 12$ est divisible par $3$",
-        "Non, car il ne finit pas par $3$",
-        "Non, car il est impair",
-        "On ne peut pas savoir"
-      ],
-      "reponse": 0,
-      "explication": "Le critère de divisibilité par $3$ porte sur la **somme des chiffres** : $4+5+2+1 = 12$, divisible par $3$. Le dernier chiffre n'intervient que pour les critères de $2$, $5$ et $10$."
-    },
-    {
-      "id": 3,
-      "difficulte": "moyen",
-      "notion": "division-euclidienne",
-      "enonce": "Quels sont le quotient et le reste de la division euclidienne de $53$ par $7$ ?",
-      "choix": [
-        "$q = 7$ et $r = 4$",
-        "$q = 4$ et $r = 7$",
-        "$q = 7$ et $r = 5$",
-        "$q = 8$ et $r = -3$"
-      ],
-      "reponse": 0,
-      "explication": "$53 = 7 \\times 7 + 4$, avec $0 \\leqslant 4 < 7$ ✓. Le choix D viole la condition sur le reste, qui doit être positif et strictement inférieur au diviseur."
-    },
-    {
-      "id": 4,
-      "difficulte": "moyen",
-      "notion": "premiers",
-      "enonce": "Combien y a-t-il de nombres premiers pairs ?",
-      "choix": ["Aucun", "Un seul", "Deux", "Une infinité"],
-      "reponse": 1,
-      "explication": "Seul $2$ est à la fois pair et premier. Tout autre nombre pair est divisible par $2$ en plus de $1$ et de lui-même, donc il a au moins trois diviseurs."
-    },
-    {
-      "id": 5,
-      "difficulte": "moyen",
-      "notion": "ecriture-algebrique",
-      "enonce": "Comment traduire algébriquement « $n$ est un nombre impair » ?",
-      "choix": [
-        "$n = 2k$",
-        "$n = 2k + 1$ avec $k$ entier",
-        "$n = k + 1$",
-        "$n = 3k + 1$"
-      ],
-      "reponse": 1,
-      "explication": "Un impair est un pair augmenté de $1$ : $n = 2k+1$ avec $k$ entier. Cette écriture est le point de départ de presque toutes les démonstrations du chapitre."
-    },
-    {
-      "id": 6,
-      "difficulte": "moyen",
-      "notion": "decomposition",
-      "enonce": "Quelle est la décomposition en facteurs premiers de $60$ ?",
-      "choix": [
-        "$2 \\times 30$",
-        "$2^2 \\times 3 \\times 5$",
-        "$4 \\times 15$",
-        "$6 \\times 10$"
-      ],
-      "reponse": 1,
-      "explication": "$60 = 4 \\times 15 = 2^2 \\times 3 \\times 5$. Les autres choix sont des factorisations valides, mais leurs facteurs ne sont **pas tous premiers** : la décomposition n'est pas terminée."
-    },
-    {
-      "id": 7,
-      "difficulte": "difficile",
-      "notion": "test-primalite",
-      "enonce": "Pour tester si $101$ est premier, jusqu'à quel diviseur faut-il aller ?",
-      "choix": ["$101$", "$50$", "$11$", "$10$"],
-      "reponse": 3,
-      "explication": "Il suffit de tester les diviseurs premiers jusqu'à $\\sqrt{101} \\approx 10{,}05$, donc jusqu'à $10$ : on essaie $2$, $3$, $5$, $7$. Aucun ne divise $101$, qui est donc premier. Tester jusqu'à $101$ serait cent fois plus long pour rien."
-    },
-    {
-      "id": 8,
-      "difficulte": "difficile",
-      "notion": "demonstration",
-      "enonce": "Pour montrer que la propriété « tout nombre impair est premier » est fausse, que suffit-il de faire ?",
-      "choix": [
-        "Tester tous les nombres impairs",
-        "Donner un seul contre-exemple, comme $9$",
-        "Faire une démonstration générale",
-        "C'est impossible à montrer"
-      ],
-      "reponse": 1,
-      "explication": "Un **contre-exemple** suffit à réfuter une propriété universelle : $9$ est impair mais vaut $3 \\times 3$. En revanche, pour **prouver** qu'une propriété est vraie, les exemples ne suffisent jamais."
-    },
-    {
-      "id": 9,
-      "difficulte": "difficile",
-      "notion": "demonstration",
-      "enonce": "Dans la démonstration « soient $a = 2k+1$ et $b = 2k+1$ deux nombres impairs », où est l'erreur ?",
-      "choix": [
-        "L'écriture $2k+1$ est fausse",
-        "Utiliser la même lettre $k$ impose $a = b$",
-        "Il faut écrire $2k-1$",
-        "Il n'y a pas d'erreur"
-      ],
-      "reponse": 1,
-      "explication": "Avec la même variable $k$, les deux nombres sont **forcément égaux** : la démonstration ne porterait plus que sur un cas particulier. Il faut deux lettres distinctes, par exemple $a = 2k+1$ et $b = 2k'+1$."
-    },
-    {
-      "id": 10,
-      "difficulte": "difficile",
-      "notion": "demonstration",
-      "enonce": "On veut montrer que le produit de deux entiers consécutifs est pair. Quel début de raisonnement est correct ?",
-      "choix": [
-        "Tester avec $3 \\times 4$, $5 \\times 6$ et $7 \\times 8$",
-        "Poser $n$ et $n+1$, et remarquer que l'un des deux est nécessairement pair",
-        "Poser $n = 2k$ uniquement",
-        "Affirmer que c'est évident"
-      ],
-      "reponse": 1,
-      "explication": "Parmi deux entiers consécutifs, l'un est pair et l'autre impair : le produit contient donc un facteur $2$. Les exemples du choix A illustrent mais ne démontrent pas ; le choix C ne traite qu'un cas sur deux."
-    }
-  ]
+ "id": "2nde-math-arithmetique-qcm",
+ "chapitre": "2nde-math-arithmetique",
+ "titre": "QCM — Arithmétique",
+ "voie": "generale",
+ "niveau": "seconde",
+ "parcours": "tronc-commun",
+ "matiere": "mathematiques",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "multiple-diviseur",
+   "enonce": "« $91$ est un multiple de $7$ ». Quelle affirmation dit exactement la même chose ?",
+   "choix": [
+    "$7$ est un multiple de $91$",
+    "$7$ est un diviseur de $91$",
+    "$91$ est un diviseur de $7$",
+    "$91$ et $7$ sont premiers entre eux"
+   ],
+   "reponse": 1,
+   "explication": "« $a$ est un multiple de $b$ » et « $b$ est un diviseur de $a$ » décrivent **la même situation**, vue des deux côtés. Ici $91 = 13 \\times 7$. Le piège est d'inverser les rôles : $7$ n'est pas un multiple de $91$."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "ensembles-n-z",
+   "enonce": "À quel(s) ensemble(s) le nombre $-4$ appartient-il ?",
+   "choix": [
+    "à $\\mathbb{N}$ seulement",
+    "à $\\mathbb{Z}$ seulement",
+    "à $\\mathbb{N}$ et à $\\mathbb{Z}$",
+    "à aucun des deux"
+   ],
+   "reponse": 1,
+   "explication": "$\\mathbb{N}$ ne contient que les entiers **naturels**, à partir de $0$ : les négatifs en sont exclus. $\\mathbb{Z}$ contient les entiers **relatifs**, donc $-4$. On a toujours $\\mathbb{N} \\subset \\mathbb{Z}$, jamais l'inverse."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "fraction-irreductible",
+   "enonce": "Quelle est la forme irréductible de $\\dfrac{84}{126}$ ?",
+   "choix": [
+    "$\\dfrac{42}{63}$",
+    "$\\dfrac{14}{21}$",
+    "$\\dfrac{2}{3}$",
+    "$\\dfrac{4}{6}$"
+   ],
+   "reponse": 2,
+   "explication": "On simplifie tant qu'il reste un diviseur commun : $\\dfrac{84}{126} = \\dfrac{42}{63} = \\dfrac{14}{21} = \\dfrac{2}{3}$. Les deux premières réponses sont des étapes intermédiaires — c'est l'erreur classique : **s'arrêter trop tôt**. Une fraction n'est irréductible que lorsque plus aucun diviseur commun n'existe."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "multiple-diviseur",
+   "enonce": "Pour prouver qu'un entier $a$ est un multiple de $5$, que faut-il établir ?",
+   "choix": [
+    "qu'il existe un entier $k$ tel que $a = 5k$",
+    "que $a$ se termine par $0$ ou $5$",
+    "qu'il existe un nombre $k$ tel que $a = 5k$",
+    "que $a$ est plus grand que $5$"
+   ],
+   "reponse": 0,
+   "explication": "La définition officielle exige l'existence d'un $k$ **entier** tel que $a = 5k$. La réponse C omet ce mot : sans lui, n'importe quel nombre conviendrait, puisque $k = a/5$ existe toujours. C'est précisément le mot « entier » qui fait la démonstration, et l'oublier coûte le point."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "ecriture-algebrique",
+   "enonce": "Comment traduire algébriquement « $n$ est un nombre impair » ?",
+   "choix": [
+    "$n = 2k$",
+    "$n = 2k + 1$ avec $k$ entier",
+    "$n = k + 1$",
+    "$n = 3k + 1$"
+   ],
+   "reponse": 1,
+   "explication": "Un impair est un pair augmenté de $1$ : $n = 2k+1$ avec $k$ entier. Cette écriture est le point de départ de presque toutes les démonstrations du chapitre."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "algorithme",
+   "enonce": "Quel est le plus grand multiple de $7$ inférieur ou égal à $50$ ?",
+   "choix": [
+    "$42$",
+    "$49$",
+    "$56$",
+    "$7$"
+   ],
+   "reponse": 1,
+   "explication": "On avance de $7$ en $7$ : $42$, $49$, puis $56$ qui dépasse $50$. La réponse est donc $49$. Le piège est de répondre $56$, qui est bien un multiple de $7$ mais **supérieur** à $50$, ou de s'arrêter à $42$ par excès de prudence."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "demonstration-exigible",
+   "enonce": "Dans la démonstration « le carré d'un nombre impair est impair », on pose $n = 2k+1$ et on développe $n^2$. Quelle écriture permet de conclure ?",
+   "choix": [
+    "$n^2 = 4k^2 + 1$",
+    "$n^2 = 4k^2 + 4k + 1$",
+    "$n^2 = 2(2k^2 + 2k) + 1$",
+    "$n^2 = 2(2k^2 + 2k + 1)$"
+   ],
+   "reponse": 2,
+   "explication": "Il faut faire apparaître la forme $2 \\times (\\text{entier}) + 1$ : $n^2 = 4k^2+4k+1 = 2(2k^2+2k)+1$. La réponse B est un calcul juste mais **inachevé** : elle ne conclut pas. La réponse A oublie le double produit $4k$. La réponse D est fausse et conclurait à un nombre pair."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "demonstration",
+   "enonce": "Pour montrer que la propriété « tout nombre impair est un multiple de $3$ » est fausse, que suffit-il de faire ?",
+   "choix": [
+    "Tester tous les nombres impairs",
+    "Donner un seul contre-exemple, comme $5$",
+    "Faire une démonstration générale",
+    "C'est impossible à montrer"
+   ],
+   "reponse": 1,
+   "explication": "Un **contre-exemple** suffit à réfuter une propriété universelle : $5$ est impair et n'est pas un multiple de $3$. En revanche, pour **prouver** qu'une propriété est vraie, les exemples ne suffisent jamais, aussi nombreux soient-ils."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "demonstration",
+   "enonce": "Dans la démonstration « soient $a = 2k+1$ et $b = 2k+1$ deux nombres impairs », où est l'erreur ?",
+   "choix": [
+    "L'écriture $2k+1$ est fausse",
+    "Utiliser la même lettre $k$ impose $a = b$",
+    "Il faut écrire $2k-1$",
+    "Il n'y a pas d'erreur"
+   ],
+   "reponse": 1,
+   "explication": "Avec la même variable $k$, les deux nombres sont **forcément égaux** : la démonstration ne porterait plus que sur un cas particulier. Il faut deux lettres distinctes, par exemple $a = 2k+1$ et $b = 2k'+1$."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "demonstration",
+   "enonce": "On veut montrer que le produit de deux entiers consécutifs est pair. Quel début de raisonnement est correct ?",
+   "choix": [
+    "Tester avec $3 \\times 4$, $5 \\times 6$ et $7 \\times 8$",
+    "Poser $n$ et $n+1$, et remarquer que l'un des deux est nécessairement pair",
+    "Poser $n = 2k$ uniquement",
+    "Affirmer que c'est évident"
+   ],
+   "reponse": 1,
+   "explication": "Parmi deux entiers consécutifs, l'un est pair et l'autre impair : le produit contient donc un facteur $2$. Les exemples du choix A illustrent mais ne démontrent pas ; le choix C ne traite qu'un cas sur deux."
+  }
+ ]
 }

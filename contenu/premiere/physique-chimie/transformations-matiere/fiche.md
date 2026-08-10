@@ -102,7 +102,14 @@ $$\boxed{c_\mathrm{A} V_\mathrm{A} = c_\mathrm{B} V_{\mathrm{B},\text{éq}}}$$
 
 ---
 
-## 4. Acides et bases
+## 4. Acides et bases — hors programme de première
+
+> ⚠️ **Cette section ne relève pas du programme de première.** Le mot « acide » n'y
+> apparaît que dans « acide carboxylique », un groupe caractéristique de chimie organique ;
+> ni le pH ni les couples acide/base n'y figurent. Ces notions relèvent de la **terminale**.
+>
+> Elle est conservée parce qu'elle éclaire les titrages de la section 3, mais elle ne fera
+> pas l'objet d'une question directe cette année.
 
 ### Couple acide/base
 

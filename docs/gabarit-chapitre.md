@@ -113,7 +113,10 @@ la source exacte, ce qui reste à vérifier, et les points à soumettre au relec
 ### Règles
 
 - **10 questions** par chapitre, **4 choix** chacune, **une seule** bonne réponse.
-- Répartition visée : **2 faciles / 5 moyennes / 3 difficiles**.
+- Répartition visée : **2 faciles / 4 moyennes / 4 difficiles**.
+  *(Le document initial indiquait 2 / 5 / 3. Constat du 2026-08-10 : 47 des 50 QCM
+  produits sont en 2 / 4 / 4. Le gabarit est aligné sur la pratique plutôt que
+  l'inverse, reclasser 47 fichiers demandant un jugement question par question.)*
 - Le champ `notion` doit correspondre à une section de la fiche — c'est ce qui permettra
   plus tard de dire à l'élève *quelle partie du cours* revoir.
 - L'`explication` ne répète pas la réponse : elle explique le raisonnement **et nomme le piège**.

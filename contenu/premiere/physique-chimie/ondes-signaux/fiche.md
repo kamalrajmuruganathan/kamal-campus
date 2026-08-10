@@ -87,26 +87,61 @@ dilatations de l'air.
 
 ---
 
-## 4. Lunette astronomique
+## 4. Lentille mince convergente
 
-Une lunette est formée de deux lentilles convergentes :
+C'est le cœur du thème en première : passer de la description qualitative vue en seconde
+aux **relations algébriques** qui donnent la position et la taille de l'image.
 
-- L'**objectif**, de grande distance focale $f'_1$
-- L'**oculaire**, de courte distance focale $f'_2$
+### Les deux relations
 
-### Configuration afocale
+Elles sont **fournies** le jour de l'épreuve — ce qu'on attend, c'est de savoir les
+exploiter. Toutes les longueurs sont des **grandeurs algébriques** : elles ont un signe.
 
-Le **foyer image de l'objectif** coïncide avec le **foyer objet de l'oculaire**. L'image finale
-se forme alors à l'infini, ce qui permet une observation sans fatigue.
+$$\boxed{\frac{1}{\overline{OA'}} - \frac{1}{\overline{OA}} = \frac{1}{\overline{OF'}}}
+\qquad\qquad
+\boxed{\gamma = \frac{\overline{A'B'}}{\overline{AB}} = \frac{\overline{OA'}}{\overline{OA}}}$$
 
-$$\text{distance entre les lentilles} = f'_1 + f'_2$$
+| Symbole | Ce qu'il désigne |
+|---|---|
+| $\overline{OA}$ | position de l'**objet** (négative : l'objet est avant la lentille) |
+| $\overline{OA'}$ | position de l'**image** |
+| $\overline{OF'} = f'$ | **distance focale** de la lentille |
+| $\gamma$ | **grandissement**, sans unité |
 
-### Grossissement
+### Lire le résultat
 
-$$\boxed{G = \frac{f'_1}{f'_2}}$$
+Le signe des grandeurs obtenues dit **tout** de la nature de l'image :
 
-> **Pour grossir davantage** : un objectif de **grande** distance focale et un oculaire de
-> **courte** distance focale. C'est pourquoi les lunettes astronomiques sont longues.
+| Signe | Image |
+|---|---|
+| $\overline{OA'} > 0$ | **réelle** — on peut la recueillir sur un écran |
+| $\overline{OA'} < 0$ | **virtuelle** — visible à l'œil, pas sur un écran |
+| $\gamma > 0$ | **droite** — même sens que l'objet |
+| $\gamma < 0$ | **renversée** |
+| $\lvert \gamma \rvert > 1$ | agrandie |
+| $\lvert \gamma \rvert < 1$ | réduite |
+
+> **Exemple.** Objet à $30$ cm devant une lentille de distance focale $10$ cm, donc
+> $\overline{OA} = -30$ cm et $f' = 10$ cm.
+> $\dfrac{1}{\overline{OA'}} = \dfrac{1}{10} + \dfrac{1}{-30} = \dfrac{3-1}{30} = \dfrac{2}{30}$,
+> d'où $\overline{OA'} = 15$ cm.
+> Puis $\gamma = \dfrac{15}{-30} = -0{,}5$.
+>
+> L'image est donc **réelle** (positif), **renversée** ($\gamma < 0$) et **deux fois plus
+> petite** que l'objet.
+
+> ⚠️ **Le piège des signes.** $\overline{OA}$ est **négatif** pour un objet réel placé avant
+> la lentille. L'oublier inverse tout le résultat. Et attention au signe **moins** dans la
+> relation de conjugaison : ce n'est pas une somme.
+
+> **Estimer une distance focale** : en visant un objet très éloigné, les rayons arrivent
+> quasi parallèles et l'image se forme dans le plan focal. La distance lentille-écran donne
+> alors directement $f'$.
+
+> **Pour aller plus loin — hors programme de première.** Deux lentilles convergentes
+> associées forment une **lunette astronomique** : un objectif de grande distance focale,
+> un oculaire de courte distance focale, et un grossissement $G = f'_1/f'_2$. Cette étude
+> relève de la terminale.
 
 ---
 
