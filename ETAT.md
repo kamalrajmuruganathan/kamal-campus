@@ -10,11 +10,11 @@
 | Première spécialité **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
 | Première **maths — ens. scientifique** | 4 | 40 | BO du 2 avril 2026 *(nouveau)* |
 | Seconde **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
-| Première **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
+| Première **physique-chimie** | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
 | Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
 | Première techno — maths | 5 | 50 | BO du 2 avril 2026 |
 | Première STI2D/STL — PC et maths | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
-| **Total** | **50** | **500** | |
+| **Total** | **51** | **510** | |
 
 La 5e ne couvre pour l'instant que 5 des 16 chapitres de son programme : c'est un début
 d'extension au collège, pas un niveau complet. Voir « Extension au collège » plus bas.
@@ -36,7 +36,7 @@ done
 
 ## ⚠️ Aucune fiche n'a été relue
 
-**Les 50 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
+**Les 51 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
 La règle du gabarit interdit le passage en `publie` tant qu'un professeur de la matière n'a
 pas relu. Elle n'est pas négociable : une formule fausse fait perdre des points à un élève.
 
@@ -168,7 +168,7 @@ BO du 2 avril 2026 : même avantage de fraicheur qu'au lycée, et même échéan
    Dossier prêt : [`docs/relecture.md`](docs/relecture.md)
 2. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue
 3. **Décider du périmètre collège** — 50 chapitres restants, ~25 jours (chiffrage ci-dessus)
-4. ✅ Contenu v1 — 50 chapitres, 500 questions
+4. ✅ Contenu v1 — 51 chapitres, 510 questions
 5. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**
 6. ✅ Application Expo — écrite **et compilée**
 7. ✅ Node.js installé (v24.19.0). La licence Xcode n'est **pas** nécessaire :
