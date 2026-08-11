@@ -1,0 +1,129 @@
+{
+ "id": "5e-math-probabilites-qcm",
+ "chapitre": "5e-math-probabilites",
+ "titre": "QCM — Probabilités",
+ "voie": "college",
+ "niveau": "cinquieme",
+ "parcours": "maths",
+ "matiere": "mathematiques",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "echelle",
+   "enonce": "Quelle est la probabilité d'un événement **certain** ?",
+   "choix": ["$0$", "$0{,}5$", "$1$", "$100$"],
+   "reponse": 2,
+   "explication": "Un événement certain se produit à coup sûr : sa probabilité vaut **$1$**, soit $100\\ \\%$. Attention à l'écriture : la probabilité est $1$, pas $100$ — c'est le pourcentage qui vaut $100\\ \\%$. Un événement impossible a une probabilité de $0$."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "equiprobabilite",
+   "enonce": "On lance un dé équilibré à six faces. Quelle est la probabilité d'obtenir un $6$ ?",
+   "choix": ["$\\dfrac{1}{6}$", "$\\dfrac{1}{2}$", "$6$", "$\\dfrac{6}{1}$"],
+   "reponse": 0,
+   "explication": "Il y a une seule issue favorable (la face $6$) sur six issues possibles : $P = \\dfrac{1}{6} \\approx 0{,}17$, soit environ $17\\ \\%$. Une probabilité est toujours comprise entre $0$ et $1$ : les réponses C et D, supérieures à $1$, sont impossibles."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "urne",
+   "enonce": "Une urne contient $5$ boules rouges, $3$ vertes et $2$ bleues. Quelle est la probabilité de tirer une boule verte ?",
+   "choix": ["$\\dfrac{3}{5}$", "$\\dfrac{3}{10}$", "$\\dfrac{1}{3}$", "$\\dfrac{3}{7}$"],
+   "reponse": 1,
+   "explication": "Il faut d'abord compter **toutes** les boules : $5 + 3 + 2 = 10$. Les issues favorables sont les $3$ boules vertes, donc $P = \\dfrac{3}{10} = 0{,}3$, soit $30\\ \\%$. L'erreur la plus fréquente est de répondre $\\dfrac{3}{5}$ ou $\\dfrac{3}{7}$ en oubliant une couleur dans le total."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "evenement",
+   "enonce": "On lance un dé à six faces. Quelle est la probabilité d'obtenir un nombre pair ?",
+   "choix": ["$\\dfrac{1}{6}$", "$\\dfrac{1}{3}$", "$\\dfrac{1}{2}$", "$\\dfrac{2}{6}$"],
+   "reponse": 2,
+   "explication": "« Obtenir un nombre pair » est un **événement** qui regroupe trois issues : $2$, $4$ et $6$. Donc $P = \\dfrac{3}{6} = \\dfrac{1}{2}$. Le piège est de traiter l'événement comme une issue unique et de répondre $\\dfrac{1}{6}$ : il faut compter **toutes** les issues qui le réalisent."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "vocabulaire",
+   "enonce": "Dans une expérience aléatoire, quelle est la différence entre une issue et un événement ?",
+   "choix": [
+    "aucune, ce sont deux mots pour la même chose",
+    "une issue est un résultat possible ; un événement peut regrouper plusieurs issues",
+    "un événement est un résultat possible ; une issue en regroupe plusieurs",
+    "une issue concerne les dés, un événement les pièces"
+   ],
+   "reponse": 1,
+   "explication": "Une **issue** est un résultat unique : obtenir $4$. Un **événement** peut en rassembler plusieurs : « obtenir un nombre pair » regroupe les issues $2$, $4$ et $6$. Un événement peut aussi ne contenir qu'une seule issue — mais l'inverse n'est jamais vrai."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "somme-probabilites",
+   "enonce": "Une urne contient des boules rouges, vertes et bleues. On sait que $P(\\text{rouge}) = 0{,}5$ et $P(\\text{verte}) = 0{,}3$. Que vaut $P(\\text{bleue})$ ?",
+   "choix": ["$0{,}2$", "$0{,}8$", "$0{,}5$", "on ne peut pas savoir"],
+   "reponse": 0,
+   "explication": "La somme des probabilités de toutes les issues vaut **$1$**. Donc $P(\\text{bleue}) = 1 - 0{,}5 - 0{,}3 = 0{,}2$. C'est le contrôle le plus utile du chapitre : il permet aussi de retrouver une probabilité manquante sans connaître les effectifs."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "erreur-du-joueur",
+   "enonce": "On lance une pièce équilibrée et on obtient cinq fois « pile » d'affilée. Quelle est la probabilité d'obtenir « face » au lancer suivant ?",
+   "choix": [
+    "plus de $\\dfrac{1}{2}$, car « face » est en retard",
+    "$\\dfrac{1}{2}$, comme à chaque lancer",
+    "moins de $\\dfrac{1}{2}$, car « pile » semble favorisé",
+    "$\\dfrac{1}{6}$"
+   ],
+   "reponse": 1,
+   "explication": "La pièce **n'a pas de mémoire** : chaque lancer est indépendant des précédents, et la probabilité reste $\\dfrac{1}{2}$. Croire qu'un résultat est « dû » après une série est une erreur de raisonnement si répandue qu'elle porte un nom : l'**erreur du joueur**."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "frequence-probabilite",
+   "enonce": "On lance un dé $60$ fois et le $6$ sort $13$ fois, soit une fréquence de $0{,}22$. Or sa probabilité est $\\dfrac{1}{6} \\approx 0{,}17$. Comment l'expliquer ?",
+   "choix": [
+    "le dé est forcément truqué",
+    "c'est normal : la fréquence observée s'écarte de la probabilité, surtout sur peu de lancers",
+    "la probabilité du $6$ est en réalité $0{,}22$",
+    "il y a une erreur de comptage"
+   ],
+   "reponse": 1,
+   "explication": "La **probabilité** se calcule avant, par le raisonnement ; la **fréquence** se constate après, en comptant. Elles ne sont pas égales : un écart est attendu, d'autant plus que le nombre de lancers est faible. Plus on répète, plus la fréquence se rapproche de la probabilité — sur $60$ lancers, $0{,}22$ n'a rien d'anormal."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "equiprobabilite",
+   "enonce": "Dans quel cas la formule $P = \\dfrac{\\text{issues favorables}}{\\text{issues au total}}$ **ne s'applique-t-elle pas** ?",
+   "choix": [
+    "quand il y a plus de six issues",
+    "quand le dé est truqué, car les issues n'ont pas la même chance",
+    "quand on utilise des fractions",
+    "elle s'applique toujours"
+   ],
+   "reponse": 1,
+   "explication": "Cette formule suppose l'**équiprobabilité** : toutes les issues doivent avoir la même chance de se produire. Avec un dé truqué, une roue déséquilibrée ou des boules de tailles différentes, ce n'est plus le cas et la formule donnerait un résultat faux. Vérifier l'équiprobabilité fait partie du raisonnement."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "echelle",
+   "enonce": "Un élève calcule la probabilité d'un événement et trouve $1{,}4$. Que faut-il en conclure ?",
+   "choix": [
+    "l'événement est très probable",
+    "il y a une erreur : une probabilité ne dépasse jamais $1$",
+    "l'événement est certain",
+    "il faut convertir en pourcentage : $1{,}4\\ \\%$"
+   ],
+   "reponse": 1,
+   "explication": "Une probabilité est **toujours comprise entre $0$ et $1$**. Trouver $1{,}4$ signale une erreur — souvent un total d'issues sous-estimé, ou des issues comptées deux fois. C'est un signal d'alerte gratuit : un simple coup d'œil au résultat suffit à repérer la faute avant de rendre la copie."
+  }
+ ]
+}

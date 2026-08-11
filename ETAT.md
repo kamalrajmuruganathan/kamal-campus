@@ -6,7 +6,7 @@
 
 | Bloc | Chapitres | Questions | Programme de référence |
 |---|---|---|---|
-| Collège **cinquième** maths | 5 | 50 | BO du 2 avril 2026 *(cycle 4)* |
+| Collège **cinquième** maths | 8 | 80 | BO du 2 avril 2026 *(cycle 4)* |
 | Première spécialité **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
 | Première **maths — ens. scientifique** | 4 | 40 | BO du 2 avril 2026 *(nouveau)* |
 | Seconde **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
@@ -14,9 +14,9 @@
 | Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
 | Première techno — maths | 5 | 50 | BO du 2 avril 2026 |
 | Première STI2D/STL — PC et maths | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
-| **Total** | **51** | **510** | |
+| **Total** | **54** | **540** | |
 
-La 5e ne couvre pour l'instant que 5 des 16 chapitres de son programme : c'est un début
+La 5e couvre 8 des 16 chapitres de son programme : c'est un début
 d'extension au collège, pas un niveau complet. Voir « Extension au collège » plus bas.
 
 Chaque chapitre comporte une `fiche.md` et un `qcm.json` de 10 questions (2 faciles,
@@ -36,7 +36,7 @@ done
 
 ## ⚠️ Aucune fiche n'a été relue
 
-**Les 51 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
+**Les 54 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
 La règle du gabarit interdit le passage en `publie` tant qu'un professeur de la matière n'a
 pas relu. Elle n'est pas négociable : une formule fausse fait perdre des points à un élève.
 
@@ -145,18 +145,17 @@ BO 2026) :
 | Niveau | Chapitres au programme | Écrits | Restants |
 |---|---|---|---|
 | Sixième *(cycle 3)* | 11 | 0 | 11 |
-| Cinquième | 16 | 5 | **10** |
+| Cinquième | 16 | 8 | **7** |
 | Quatrième | 15 | 0 | 15 |
 | Troisième | 14 | 0 | 14 |
-| **Total collège** | **56** | **5** | **50** |
+| **Total collège** | **56** | **8** | **47** |
 
-Détail de la 5e — 5 chapitres écrits couvrent 6 entrées du programme (`triangles-angles`
+Détail de la 5e — 8 chapitres écrits couvrent 9 entrées du programme (`triangles-angles`
 en couvre deux). **Restent** : Opérations · Puissances · Repérage sur une droite et dans
-le plan · Représentation de l'espace · Transformations · Parallélogrammes · Statistiques ·
-Probabilités · Fonctions · Pensée informatique.
+le plan · Représentation de l'espace · Transformations · Fonctions · Pensée informatique.
 
 **Coût** : à la demi-journée par chapitre mesurée sur le pilote, relecture comprise,
-50 chapitres = **environ 25 jours de travail effectif**, soit 5 semaines à temps plein.
+47 chapitres = **environ 23 jours de travail effectif**, soit un peu moins de 5 semaines.
 S'y ajoutent 500 questions de QCM.
 
 ⚠️ Le collège relève du **cycle 4**, dont le programme de maths est lui aussi celui du
@@ -168,7 +167,7 @@ BO du 2 avril 2026 : même avantage de fraicheur qu'au lycée, et même échéan
    Dossier prêt : [`docs/relecture.md`](docs/relecture.md)
 2. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue
 3. **Décider du périmètre collège** — 50 chapitres restants, ~25 jours (chiffrage ci-dessus)
-4. ✅ Contenu v1 — 51 chapitres, 510 questions
+4. ✅ Contenu v1 — 54 chapitres, 540 questions
 5. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**
 6. ✅ Application Expo — écrite **et compilée**
 7. ✅ Node.js installé (v24.19.0). La licence Xcode n'est **pas** nécessaire :

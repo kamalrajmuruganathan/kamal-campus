@@ -1,0 +1,124 @@
+{
+ "id": "5e-math-statistiques-qcm",
+ "chapitre": "5e-math-statistiques",
+ "titre": "QCM — Statistiques",
+ "voie": "college",
+ "niveau": "cinquieme",
+ "parcours": "maths",
+ "matiere": "mathematiques",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "vocabulaire",
+   "enonce": "Dans une classe, $7$ élèves ont obtenu la note $12$. Que représente le nombre $7$ ?",
+   "choix": ["la fréquence de la note $12$", "l'effectif de la note $12$", "la moyenne de la classe", "l'effectif total"],
+   "reponse": 1,
+   "explication": "L'**effectif** d'une valeur est le nombre de fois qu'elle apparaît : ici $7$ élèves ont eu $12$. La **fréquence** serait la part que cela représente, par exemple $\\dfrac{7}{20}$. L'effectif total serait le nombre d'élèves de la classe."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "frequences",
+   "enonce": "Sur $20$ élèves, $5$ pratiquent la natation. Quelle est la fréquence, en pourcentage ?",
+   "choix": ["$5\\ \\%$", "$20\\ \\%$", "$25\\ \\%$", "$40\\ \\%$"],
+   "reponse": 2,
+   "explication": "La fréquence vaut $\\dfrac{5}{20} = 0{,}25$, soit $25\\ \\%$. On divise l'effectif par l'effectif total, puis on multiplie par $100$. Répondre $5\\ \\%$ revient à recopier l'effectif sans le rapporter au total."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "moyenne",
+   "enonce": "Un tableau donne : note $8$ (effectif $4$), note $10$ (effectif $5$), note $12$ (effectif $7$), note $15$ (effectif $4$). Quelle est la moyenne ?",
+   "choix": ["$11{,}25$", "$11{,}3$", "$45$", "$56{,}5$"],
+   "reponse": 1,
+   "explication": "On multiplie chaque note par son effectif : $\\dfrac{8 \\times 4 + 10 \\times 5 + 12 \\times 7 + 15 \\times 4}{20} = \\dfrac{226}{20} = 11{,}3$. Le piège est la réponse A : additionner les quatre notes distinctes et diviser par $4$ donnerait $11{,}25$, ce qui reviendrait à ignorer que $12$ revient $7$ fois. **On divise toujours par l'effectif total.**"
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "controle",
+   "enonce": "Dans un tableau de fréquences, que doit valoir la somme de toutes les fréquences ?",
+   "choix": ["$100$", "$1$", "$360$", "l'effectif total"],
+   "reponse": 1,
+   "explication": "La somme des fréquences vaut toujours **$1$**, soit $100\\ \\%$ si on les exprime en pourcentages. C'est logique : mises bout à bout, toutes les parts reconstituent le tout. C'est le contrôle le plus rapide pour repérer une erreur de calcul."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "diagramme-circulaire",
+   "enonce": "Dans un diagramme circulaire, une valeur a pour fréquence $0{,}35$. Quel angle lui correspond ?",
+   "choix": ["$35°$", "$126°$", "$100°$", "$63°$"],
+   "reponse": 1,
+   "explication": "Le disque entier vaut $360°$ et les angles sont proportionnels aux effectifs : $0{,}35 \\times 360 = 126°$. L'erreur classique est de raisonner sur $100$ au lieu de $360$, et de répondre $35°$."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "choix-representation",
+   "enonce": "On veut montrer comment les élèves d'un collège se répartissent entre quatre options. Quelle représentation est la plus adaptée ?",
+   "choix": [
+    "un graphique cartésien",
+    "un diagramme circulaire",
+    "un tableau de nombres seul",
+    "une liste des élèves"
+   ],
+   "reponse": 1,
+   "explication": "Le **diagramme circulaire** est fait pour montrer une **répartition** : chaque secteur représente la part d'une option dans le total. Le graphique cartésien conviendrait pour une **évolution** dans le temps, et un diagramme en barres pour **comparer** des catégories entre elles. Choisir la représentation adaptée à ce qu'on veut mettre en avant est un objectif à part entière."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "comparaison",
+   "enonce": "Dans la classe A, $7$ élèves sur $20$ font du sport. Dans la classe B, $9$ sur $30$. Quelle classe est la plus sportive, en proportion ?",
+   "choix": [
+    "la classe B, car $9 > 7$",
+    "la classe A, car $35\\ \\% > 30\\ \\%$",
+    "les deux sont équivalentes",
+    "on ne peut pas comparer, les effectifs diffèrent"
+   ],
+   "reponse": 1,
+   "explication": "C'est précisément parce que les effectifs diffèrent qu'il faut comparer les **fréquences**, pas les effectifs : $\\dfrac{7}{20} = 35\\ \\%$ contre $\\dfrac{9}{30} = 30\\ \\%$. La classe A est en meilleure proportion **bien que son effectif soit plus petit**. C'est exactement à cela que sert la fréquence."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "interpretation-moyenne",
+   "enonce": "Deux classes ont la même moyenne de $10$. Que peut-on en conclure ?",
+   "choix": [
+    "les élèves ont des notes semblables dans les deux classes",
+    "rien de plus : la moyenne ne dit pas comment les notes sont réparties",
+    "les deux classes ont le même effectif",
+    "toutes les notes valent $10$"
+   ],
+   "reponse": 1,
+   "explication": "Une classe où tous les élèves sont entre $9$ et $11$ et une classe où la moitié a $0$ et l'autre $20$ ont **la même moyenne de $10$**, et pourtant rien à voir. La moyenne **résume** la série, elle ne la **décrit** pas : elle ne dit rien de la dispersion."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "lecture-graphique",
+   "enonce": "Sur un graphique, l'axe vertical commence à $80$ au lieu de $0$. Quelle est la conséquence ?",
+   "choix": [
+    "aucune, le graphique reste exact",
+    "les écarts paraissent bien plus grands qu'ils ne sont",
+    "les valeurs affichées sont fausses",
+    "les écarts paraissent plus petits qu'ils ne sont"
+   ],
+   "reponse": 1,
+   "explication": "Les valeurs restent exactes, mais la **perception** est faussée : en tronquant le bas de l'axe, une hausse de $2\\ \\%$ peut occuper toute la hauteur du graphique et ressembler à une explosion. C'est un procédé courant dans les médias. Le réflexe est de toujours vérifier **d'où part l'axe** avant de commenter."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "effectifs-manquants",
+   "enonce": "Une série compte $25$ données réparties en trois valeurs, d'effectifs $8$, $10$ et $x$. Quelle est la fréquence de la troisième valeur ?",
+   "choix": ["$0{,}07$", "$0{,}28$", "$7\\ \\%$", "$0{,}18$"],
+   "reponse": 1,
+   "explication": "La somme des effectifs vaut l'effectif total : $8 + 10 + x = 25$, donc $x = 7$. La fréquence est alors $\\dfrac{7}{25} = 0{,}28$, soit $28\\ \\%$. Le piège est de confondre l'**effectif** $7$ avec la **fréquence** : répondre $0{,}07$ ou $7\\ \\%$, c'est recopier l'effectif sans le diviser par le total."
+  }
+ ]
+}
