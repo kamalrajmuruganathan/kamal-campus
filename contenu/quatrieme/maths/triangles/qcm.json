@@ -1,0 +1,139 @@
+{
+  "id": "4e-math-triangles-qcm",
+  "chapitre": "4e-math-triangles",
+  "titre": "QCM — Triangles",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "pythagore",
+      "enonce": "Le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$. Quel côté est l'hypoténuse ?",
+      "choix": [
+        "$[\\mathrm{AB}]$",
+        "$[\\mathrm{AC}]$",
+        "$[\\mathrm{BC}]$",
+        "On ne peut pas le savoir sans les longueurs"
+      ],
+      "reponse": 2,
+      "explication": "L'hypoténuse est le côté **opposé à l'angle droit** : l'angle droit est en $\\mathrm{A}$, donc l'hypoténuse est le côté qui ne touche pas $\\mathrm{A}$, c'est-à-dire $[\\mathrm{BC}]$. Le piège est de choisir un côté contenant la lettre de l'angle droit : $[\\mathrm{AB}]$ et $[\\mathrm{AC}]$ sont justement les deux côtés de l'angle droit."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "droites-remarquables",
+      "enonce": "Dans un triangle, quelle droite joint un sommet au milieu du côté opposé ?",
+      "choix": [
+        "la médiatrice",
+        "la hauteur",
+        "la bissectrice",
+        "la médiane"
+      ],
+      "reponse": 3,
+      "explication": "C'est la **médiane**. La confusion classique est avec la médiatrice : elle aussi parle d'un milieu, mais elle est **perpendiculaire au côté** et ne passe pas forcément par un sommet. La hauteur part d'un sommet mais perpendiculairement, la bissectrice coupe un angle en deux."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 3$ cm et $\\mathrm{AC} = 4$ cm. Combien vaut $\\mathrm{BC}$ ?",
+      "choix": ["$5$ cm", "$7$ cm", "$25$ cm", "$12$ cm"],
+      "reponse": 0,
+      "explication": "$\\mathrm{BC}^2 = 3^2 + 4^2 = 9 + 16 = 25$, donc $\\mathrm{BC} = \\sqrt{25} = 5$ cm. Le choix $7$ additionne les longueurs au lieu des carrés ; le choix $25$ oublie la **racine carrée** finale, c'est l'oubli le plus fréquent ; $12$ multiplie les côtés."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{BC} = 13$ cm et $\\mathrm{AB} = 5$ cm. Combien vaut $\\mathrm{AC}$ ?",
+      "choix": ["$18$ cm", "$12$ cm", "$\\sqrt{194}$ cm", "$8$ cm"],
+      "reponse": 1,
+      "explication": "L'inconnue est un **côté de l'angle droit**, donc on soustrait : $\\mathrm{AC}^2 = 13^2 - 5^2 = 169 - 25 = 144$, d'où $\\mathrm{AC} = 12$ cm. Le choix $\\sqrt{194}$ vient d'une addition ($169 + 25$) au lieu d'une soustraction — et il est absurde, car un côté de l'angle droit ne peut pas dépasser l'hypoténuse. Les choix $18$ et $8$ ajoutent ou soustraient les longueurs sans passer par les carrés."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "reciproque",
+      "enonce": "Un triangle $\\mathrm{RST}$ a $\\mathrm{RS} = 6$ cm, $\\mathrm{ST} = 8$ cm et $\\mathrm{RT} = 10$ cm. Que peux-tu conclure ?",
+      "choix": [
+        "Il est rectangle en $\\mathrm{R}$",
+        "Il est rectangle en $\\mathrm{S}$",
+        "Il est rectangle en $\\mathrm{T}$",
+        "On ne peut rien conclure sans mesurer les angles"
+      ],
+      "reponse": 1,
+      "explication": "Le plus grand côté est $[\\mathrm{RT}]$ : d'un côté $\\mathrm{RT}^2 = 100$, de l'autre $\\mathrm{RS}^2 + \\mathrm{ST}^2 = 36 + 64 = 100$. Les deux sont égaux, donc d'après la **réciproque** le triangle est rectangle. Le piège est de placer l'angle droit n'importe où : il est au sommet **opposé au plus grand côté**, donc en $\\mathrm{S}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "contraposee",
+      "enonce": "Un triangle a pour côtés $4$ cm, $5$ cm et $6$ cm. Est-il rectangle ?",
+      "choix": [
+        "Oui, car $4 + 5 > 6$",
+        "Oui, l'angle droit est opposé au côté de $6$ cm",
+        "Non, car $6^2 \\neq 4^2 + 5^2$",
+        "Impossible à savoir sans tracer la figure"
+      ],
+      "reponse": 2,
+      "explication": "On teste le plus grand côté : $6^2 = 36$ d'un côté, $4^2 + 5^2 = 16 + 25 = 41$ de l'autre. Les deux diffèrent, donc la **contraposée** permet de conclure que le triangle n'est pas rectangle. Le choix A confond avec l'inégalité triangulaire, qui dit seulement que le triangle **existe**, pas qu'il a un angle droit."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "logique",
+      "enonce": "Tu connais les trois longueurs d'un triangle et tu veux **démontrer** qu'il possède un angle droit. Qu'utilises-tu ?",
+      "choix": [
+        "le théorème de Pythagore",
+        "la réciproque du théorème de Pythagore",
+        "la contraposée du théorème de Pythagore",
+        "la somme des angles d'un triangle"
+      ],
+      "reponse": 1,
+      "explication": "Le **théorème** part de l'angle droit pour donner une longueur : ici tu ne sais pas encore que l'angle est droit, tu ne peux donc pas l'invoquer — ce serait supposer ce que tu dois prouver. C'est la **réciproque** qui part des longueurs et conclut à l'angle droit. La contraposée sert au cas inverse : prouver qu'un angle n'est **pas** droit."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "cercle-circonscrit",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ et $\\mathrm{BC} = 10$ cm. Où se trouve le centre de son cercle circonscrit, et combien vaut le rayon ?",
+      "choix": [
+        "au milieu de $[\\mathrm{BC}]$, rayon $5$ cm",
+        "au point $\\mathrm{A}$, rayon $10$ cm",
+        "au milieu de $[\\mathrm{AB}]$, rayon $5$ cm",
+        "au milieu de $[\\mathrm{BC}]$, rayon $10$ cm"
+      ],
+      "reponse": 0,
+      "explication": "Dans un triangle rectangle, l'hypoténuse est un **diamètre** du cercle circonscrit : le centre est donc le milieu de $[\\mathrm{BC}]$ et le rayon vaut la **moitié** de l'hypoténuse, $10 \\div 2 = 5$ cm. Le piège du dernier choix est de confondre diamètre et rayon ; celui du deuxième est de placer le centre sur le sommet de l'angle droit."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 2$ cm et $\\mathrm{AC} = 3$ cm. Quelle est la valeur **exacte** de $\\mathrm{BC}$ ?",
+      "choix": ["$5$ cm", "$\\sqrt{13}$ cm", "$13$ cm", "$\\sqrt{5}$ cm"],
+      "reponse": 1,
+      "explication": "$\\mathrm{BC}^2 = 2^2 + 3^2 = 4 + 9 = 13$, donc $\\mathrm{BC} = \\sqrt{13}$ cm (environ $3{,}6$ cm). $13$ n'étant pas un carré parfait, la valeur exacte **garde le symbole racine**. Le choix $13$ oublie la racine, le choix $5$ additionne les longueurs, et $\\sqrt{5}$ vient d'une soustraction $9 - 4$ alors qu'on cherche l'hypoténuse."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "droite-des-milieux",
+      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$ et $\\mathrm{J}$ le milieu de $[\\mathrm{AC}]$. Si $\\mathrm{BC} = 9$ cm, combien vaut $\\mathrm{IJ}$ ?",
+      "choix": [
+        "$9$ cm",
+        "$18$ cm",
+        "$4{,}5$ cm",
+        "On ne peut pas le savoir sans connaitre $\\mathrm{AB}$"
+      ],
+      "reponse": 2,
+      "explication": "Le segment qui joint les milieux de deux côtés mesure la **moitié** du troisième côté : $\\mathrm{IJ} = 9 \\div 2 = 4{,}5$ cm. Le choix $18$ double au lieu de diviser. Et le dernier choix est le vrai piège : les autres longueurs du triangle n'interviennent pas, seul $\\mathrm{BC}$ compte."
+    }
+  ]
+}

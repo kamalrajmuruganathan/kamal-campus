@@ -1,0 +1,129 @@
+{
+  "id": "4e-math-fonctions-qcm",
+  "chapitre": "4e-math-fonctions",
+  "titre": "QCM — Fonctions : programmes de calcul et dépendance",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "programme-de-calcul",
+      "enonce": "Programme : « Choisis un nombre. Multiplie-le par $4$. Soustrais $3$. » Que renvoie ce programme pour le nombre $5$ ?",
+      "choix": ["$17$", "$8$", "$23$", "$20$"],
+      "reponse": 0,
+      "explication": "On exécute les étapes **dans l'ordre écrit** : $5 \\times 4 = 20$, puis $20 - 3 = 17$. Le $8$ vient de l'ordre inversé ($5 - 3 = 2$ puis $2 \\times 4 = 8$) : chaque étape travaille sur le résultat de la précédente, jamais sur le nombre de départ. Le $23$ vient d'un signe changé ($+3$ au lieu de $-3$), le $20$ d'un programme arrêté avant la dernière étape."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "dependance",
+      "enonce": "Une piscine facture $5$ € d'abonnement, puis $2$ € par séance. Le prix dépend du nombre de séances. Quelle est la **variable** ?",
+      "choix": [
+        "Le prix payé",
+        "L'abonnement de $5$ €",
+        "Le tarif de $2$ € par séance",
+        "Le nombre de séances"
+      ],
+      "reponse": 3,
+      "explication": "La variable est la grandeur qu'on **choisit** : le nombre de séances. Le prix, lui, est la grandeur qui en **dépend** — c'est le piège de cette question, on confond souvent la grandeur qu'on choisit et celle qu'on cherche. Les $5$ € et les $2$ € par séance ne sont pas des variables : ce sont des nombres **fixes** du tarif."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "notation-fonctionnelle",
+      "enonce": "Le prix, en euros, de $n$ séances de piscine est donné par $P(n) = 5 + 2n$. Combien vaut $P(4)$ ?",
+      "choix": ["$28$", "$13$", "$7$", "$20$"],
+      "reponse": 1,
+      "explication": "$P(4)$ signifie « la valeur obtenue **pour** $n = 4$ » : $5 + 2 \\times 4 = 5 + 8 = 13$. Le $28$ vient des priorités opératoires oubliées ($(5+2) \\times 4$) : la multiplication passe avant l'addition. Le $20$ vient du piège majeur de la notation : $P(4)$ n'est **pas** $P \\times 4$, les parenthèses indiquent la valeur donnée à la variable. Le $7$ oublie simplement de multiplier par $n$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "programme-de-calcul-variable",
+      "enonce": "Programme : « Choisis un nombre. Ajoute $3$. Multiplie par $4$. » Quelle expression obtient-on en appliquant ce programme au nombre $x$ ?",
+      "choix": ["$4x + 3$", "$3x + 4$", "$4x + 12$", "$x + 12$"],
+      "reponse": 2,
+      "explication": "Après la deuxième étape on a $x + 3$ ; on multiplie **ce résultat entier** par $4$, donc $4 \\times (x + 3) = 4x + 12$. L'oubli des parenthèses donne $4x + 3$ : c'est l'erreur la plus fréquente du chapitre. Contrôle avec $x = 2$ : le programme donne $2 + 3 = 5$ puis $5 \\times 4 = 20$, et $4 \\times 2 + 12 = 20$ ✓, alors que $4 \\times 2 + 3 = 11$ ✗."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "remonter-programme",
+      "enonce": "Programme : « Choisis un nombre. Multiplie par $6$. Soustrais $5$. » Il renvoie $43$. Quel était le nombre de départ ?",
+      "choix": ["$8$", "$253$", "$288$", "$6{,}33$"],
+      "reponse": 0,
+      "explication": "On remonte de la dernière étape vers la première, en inversant chaque opération : $43 + 5 = 48$, puis $48 \\div 6 = 8$. Vérification à l'endroit : $8 \\times 6 - 5 = 43$ ✓. Le $253$ vient du programme appliqué **au résultat** au lieu d'être remonté. Le $288$ garde la multiplication au lieu de la remplacer par une division. Le $6{,}33$ n'inverse pas la soustraction ($43 - 5$ au lieu de $43 + 5$) : les **deux** choses s'inversent, l'ordre des étapes et chaque opération."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "graphique",
+      "enonce": "On représente graphiquement l'aire $A(c) = c \\times c$ d'un carré de côté $c$, pour $c$ allant de $0$ à $4$ cm. Que peut-on affirmer ?",
+      "choix": [
+        "Les points sont alignés sur une droite passant par l'origine, puisque $A(0) = 0$.",
+        "Les points sont alignés, mais la droite ne passe pas par l'origine.",
+        "On obtient un nuage de points qu'on ne relie pas, car un côté ne peut pas être décimal.",
+        "Les points ne sont pas alignés : on obtient une courbe qui monte de plus en plus vite."
+      ],
+      "reponse": 3,
+      "explication": "Le tableau donne $0$, $1$, $4$, $9$, $16$ : les écarts augmentent ($+1$, $+3$, $+5$, $+7$), donc les points ne sont pas alignés. Le piège est de conclure « la courbe part de l'origine, donc c'est une droite » : passer par l'origine ne suffit pas, il faut **aussi** que les points soient alignés. Et ici on **relie** les points, car un côté de $2{,}5$ cm existe parfaitement — contrairement à un nombre de séances ou d'objets."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "notation-fonctionnelle",
+      "enonce": "Le coût d'un forfait est $C(t) = 8 + 0{,}15\\,t$, où $t$ est la durée d'appel en minutes et $C$ le coût en euros. Que signifie l'égalité $C(20) = 11$ ?",
+      "choix": [
+        "$11$ minutes d'appel coûtent $20$ €.",
+        "Le coût est égal à $20$ fois $11$ €.",
+        "$20$ minutes d'appel coûtent $11$ €.",
+        "Chaque minute d'appel coûte $11$ €."
+      ],
+      "reponse": 2,
+      "explication": "Le nombre écrit **entre parenthèses** est toujours la valeur de la variable, ici la durée : $20$ minutes. Le nombre écrit **après le signe $=$** est la grandeur obtenue, ici le coût : $11$ €. Vérification : $8 + 0{,}15 \\times 20 = 8 + 3 = 11$ ✓. Le piège est d'intervertir les deux rôles — c'est exactement l'erreur qui fait écrire un point $(11\\,;20)$ au lieu de $(20\\,;11)$ sur un graphique."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "pieges-de-calcul",
+      "enonce": "Programme 1 : « multiplie par $2$, puis ajoute $6$ ». Programme 2 : « ajoute $3$, puis multiplie par $2$ ». Que peut-on affirmer ?",
+      "choix": [
+        "Ils sont différents, puisque les étapes ne sont pas dans le même ordre.",
+        "Ils donnent toujours le même résultat : les deux expressions réduites valent $2x + 6$.",
+        "Ils ne donnent le même résultat que pour $x = 0$.",
+        "Ils ne donnent le même résultat que pour les nombres positifs."
+      ],
+      "reponse": 1,
+      "explication": "Programme 1 : $2x + 6$. Programme 2 : $2 \\times (x + 3) = 2x + 6$. Les deux expressions réduites sont identiques, donc les programmes coïncident **pour tous les nombres**. Le piège fonctionne dans les deux sens : un ordre différent ne prouve pas que les programmes diffèrent, et un seul essai ne prouve jamais qu'ils sont égaux. Seule la comparaison des **expressions littérales réduites** tranche."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "remonter-programme",
+      "enonce": "Programme : « Choisis un nombre. Soustrais $2$. Multiplie par $5$. Ajoute $3$. » Il renvoie $18$. Quel était le nombre de départ ?",
+      "choix": ["$83$", "$1$", "$5{,}6$", "$5$"],
+      "reponse": 3,
+      "explication": "On défait les trois étapes en partant de la fin : $18 - 3 = 15$, puis $15 \\div 5 = 3$, puis $3 + 2 = 5$. Vérification à l'endroit : $5 - 2 = 3$, $3 \\times 5 = 15$, $15 + 3 = 18$ ✓. Le $83$ applique le programme à $18$ au lieu de le remonter. Le $1$ oublie d'inverser la dernière opération remontée (il soustrait $2$ au lieu de l'ajouter). Le $5{,}6$ saute l'étape « ajoute $3$ » et divise directement $18$ par $5$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "formule-litterale",
+      "enonce": "Un traiteur facture $60$ € de frais fixes, puis $12$ € par personne. Quelle formule donne le prix $P$ pour $p$ personnes, et quel est le prix pour $15$ personnes ?",
+      "choix": [
+        "$P(p) = 72p$, soit $1\\,080$ € pour $15$ personnes.",
+        "$P(p) = 60p + 12$, soit $912$ € pour $15$ personnes.",
+        "$P(p) = 60 + 12p$, soit $240$ € pour $15$ personnes.",
+        "$P(p) = 12p$, soit $180$ € pour $15$ personnes."
+      ],
+      "reponse": 2,
+      "explication": "Ce qui est **fixe** ($60$ €) s'ajoute une seule fois ; ce qui **varie** ($12$ € par personne) se multiplie par le nombre de personnes : $P(p) = 60 + 12p$, et $P(15) = 60 + 180 = 240$ €. Le $72p$ additionne les deux nombres du tarif avant de multiplier — les $60$ € seraient alors payés $15$ fois. Le $60p + 12$ échange les rôles du fixe et du variable. Le $12p$ oublie purement et simplement les frais fixes : contrôle-le toujours avec $p = 0$, où le prix doit valoir $60$ €."
+    }
+  ]
+}

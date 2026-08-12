@@ -1,0 +1,139 @@
+{
+  "id": "4e-math-reperage-qcm",
+  "chapitre": "4e-math-reperage",
+  "titre": "QCM — Repérage sur une droite et dans le plan",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "memo-minimum",
+      "enonce": "Dans les coordonnées $(-5\\,;2)$ d'un point du plan, que représente le $-5$ ?",
+      "choix": [
+        "l'abscisse",
+        "l'ordonnée",
+        "la distance du point à l'origine",
+        "l'unité de l'axe vertical"
+      ],
+      "reponse": 0,
+      "explication": "Le premier nombre du couple est **toujours** l'abscisse, celle qu'on lit sur l'axe horizontal. Le piège est de se fier au signe : un nombre négatif n'est pas « forcément une ordonnée », c'est sa **place dans le couple** qui décide, jamais sa valeur."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "droite-graduee-relatifs",
+      "enonce": "Sur une droite graduée d'unité $1$, où se trouve le point d'abscisse $-4$ ?",
+      "choix": [
+        "$4$ graduations à droite de l'origine",
+        "entre $-1$ et $0$",
+        "on ne peut pas le placer : une abscisse est toujours positive",
+        "$4$ graduations à gauche de l'origine"
+      ],
+      "reponse": 3,
+      "explication": "Une abscisse négative se lit **à gauche** de l'origine, et le nombre $4$ donne le nombre de graduations à compter. Le piège classique vient de la 6e, où l'on ne travaillait que sur une demi-droite graduée : en 4e la droite se prolonge des deux côtés de $0$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "droite-graduee-relatifs",
+      "enonce": "Sur une droite graduée, $5$ intervalles égaux séparent $-3$ de $-2$. Quelle est l'abscisse du point situé $2$ graduations **à droite** de $-3$ ?",
+      "choix": ["$-3{,}4$", "$-3{,}2$", "$-2{,}8$", "$-2{,}6$"],
+      "reponse": 3,
+      "explication": "Une graduation vaut $1 \\div 5 = 0{,}2$, donc deux graduations valent $0{,}4$ : $-3 + 0{,}4 = -2{,}6$. Le piège est le sens : à **droite** de $-3$, on se rapproche de zéro, donc le nombre **augmente**. $-3{,}4$ correspond à un déplacement vers la gauche, $-2{,}8$ à une seule graduation."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "droite-graduee-relatifs",
+      "enonce": "Une droite graduée d'unité $1$ a chaque unité partagée en $4$ parts égales. Quelle est l'abscisse du point situé $3$ graduations **à gauche** de $-1$ ?",
+      "choix": [
+        "$-\\dfrac{3}{4}$",
+        "$-\\dfrac{4}{4}$",
+        "$-\\dfrac{7}{4}$",
+        "$-\\dfrac{1}{4}$"
+      ],
+      "reponse": 2,
+      "explication": "Une graduation vaut $\\dfrac{1}{4}$, donc $-1 - \\dfrac{3}{4} = -\\dfrac{7}{4}$. Le piège est d'oublier le point de départ $-1$ et de ne compter que les $3$ graduations, ce qui donne $-\\dfrac{3}{4}$. Contrôle : $-\\dfrac{7}{4} = -1{,}75$, bien situé entre $-2$ et $-1$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "coordonnees-plan",
+      "enonce": "Lequel de ces points est situé **en bas à droite** de l'origine, c'est-à-dire à droite de l'axe vertical et en dessous de l'axe horizontal ?",
+      "choix": [
+        "$A(-3\\,;5)$",
+        "$B(-3\\,;-5)$",
+        "$D(3\\,;-5)$",
+        "$C(3\\,;5)$"
+      ],
+      "reponse": 2,
+      "explication": "« À droite » impose $x > 0$ et « en dessous » impose $y < 0$ : il faut donc une abscisse positive **et** une ordonnée négative. Le piège est d'inverser les rôles et de choisir $B(-3\\,;-5)$, qui est en bas mais **à gauche**."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "cas-particuliers",
+      "enonce": "Un point du plan est situé sur l'axe des ordonnées (l'axe vertical). Que peut-on affirmer ?",
+      "choix": [
+        "son abscisse est nulle",
+        "son ordonnée est nulle",
+        "ses deux coordonnées sont nulles",
+        "son abscisse est négative"
+      ],
+      "reponse": 0,
+      "explication": "Être sur l'axe vertical signifie qu'on ne s'est **pas déplacé horizontalement** depuis l'origine : $x = 0$. Le piège est de croire que « l'axe des ordonnées » annule l'ordonnée — c'est l'inverse : c'est la coordonnée de l'**autre** axe qui vaut $0$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "cas-particuliers",
+      "enonce": "Dans un repère orthogonal, l'axe horizontal est gradué de $1$ en $1$ et l'axe vertical de $5$ en $5$. Un point est situé $2$ graduations à droite et $3$ graduations en dessous de l'origine. Quelles sont ses coordonnées ?",
+      "choix": [
+        "$(2\\,;-3)$",
+        "$(10\\,;-3)$",
+        "$(2\\,;-15)$",
+        "$(-15\\,;2)$"
+      ],
+      "reponse": 2,
+      "explication": "Chaque axe se lit avec **sa propre** unité : $2 \\times 1 = 2$ horizontalement, $3 \\times 5 = 15$ verticalement, en dessous donc $-15$. Le piège est de compter les traits en supposant qu'une graduation vaut $1$ partout : « orthogonal » veut dire perpendiculaire, pas « même unité sur les deux axes »."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "ce-qui-change-en-4e",
+      "enonce": "Dans le programme de 4e, le repérage sur une droite et dans le plan ne figure que dans la rubrique « Automatismes ». Qu'est-ce que cela signifie concrètement ?",
+      "choix": [
+        "ce n'est plus au programme de 4e, on peut l'ignorer",
+        "c'est un savoir-faire déjà construit en 5e, qui doit maintenant être immédiat et fiable pour servir dans d'autres chapitres",
+        "c'est une notion entièrement nouvelle qu'on découvre en 4e",
+        "cela ne concerne plus que la droite graduée, et plus du tout le plan"
+      ],
+      "reponse": 1,
+      "explication": "Un automatisme est un savoir-faire qu'on attend **sans hésitation**, pas une notion qu'on découvre. Le piège est d'en conclure que le chapitre est facultatif : il est au contraire réutilisé en permanence, notamment pour représenter une grandeur en fonction d'une autre."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "graphique-fonction",
+      "enonce": "Un taxi facture $3$ € de prise en charge, puis $2$ € par kilomètre. On place dans un repère la distance en abscisse et le prix en ordonnée. Quel point correspond à un trajet de $4$ km ?",
+      "choix": ["$(4\\,;11)$", "$(4\\,;8)$", "$(11\\,;4)$", "$(4\\,;14)$"],
+      "reponse": 0,
+      "explication": "Le prix vaut $3 + 2 \\times 4 = 11$ €, et la distance est en abscisse : le point est $(4\\,;11)$. Deux pièges se cumulent ici : oublier la prise en charge (on obtient $8$) et inverser le couple (on écrit $(11\\,;4)$, ce qui reviendrait à parcourir $11$ km pour $4$ €)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "droite-graduee-relatifs",
+      "enonce": "Sur une droite graduée, deux traits portent les nombres $-10$ et $-5$ ; ils sont séparés par $5$ intervalles égaux. Quelle est l'abscisse du point situé $3$ graduations **à droite** de $-10$ ?",
+      "choix": ["$-13$", "$5$", "$-15$", "$-7$"],
+      "reponse": 3,
+      "explication": "Il faut d'abord chercher ce que vaut une graduation : l'écart entre $-10$ et $-5$ est de $5$ unités pour $5$ intervalles, donc **une graduation vaut $1$**. D'où $-10 + 3 = -7$. Le piège est de supposer qu'une graduation vaut $5$ parce que les nombres écrits vont de $5$ en $5$ : on obtiendrait alors $5$, qui n'est même plus entre $-10$ et $-5$."
+    }
+  ]
+}

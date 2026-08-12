@@ -1,0 +1,154 @@
+{
+  "id": "4e-math-representation-espace-qcm",
+  "chapitre": "4e-math-representation-espace",
+  "titre": "QCM — Représentation de l'espace",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "pyramide-definition",
+      "enonce": "Les faces latérales d'une pyramide sont toujours :",
+      "choix": [
+        "des rectangles",
+        "des trapèzes",
+        "des triangles",
+        "des carrés"
+      ],
+      "reponse": 2,
+      "explication": "Chaque face latérale relie un côté de la base au sommet $S$ : c'est donc un **triangle**. Le piège est de recopier le prisme droit, dont les faces latérales sont des rectangles. Prisme : deux bases et des rectangles. Pyramide : une base et des triangles."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "volume-pyramide",
+      "enonce": "Quelle est la formule du volume d'une pyramide de base d'aire $\\mathcal{A}$ et de hauteur $h$ ?",
+      "choix": [
+        "$V = \\mathcal{A} \\times h$",
+        "$V = \\dfrac{\\mathcal{A} \\times h}{3}$",
+        "$V = \\dfrac{\\mathcal{A} \\times h}{2}$",
+        "$V = 3 \\times \\mathcal{A} \\times h$"
+      ],
+      "reponse": 1,
+      "explication": "Un solide **pointu** vaut le **tiers** du solide droit de même base et de même hauteur. $\\mathcal{A} \\times h$ est la formule du prisme : l'oublier du tiers donne un résultat trois fois trop grand. Le $\\div\\,2$ vient de l'aire du triangle, pas du volume."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "volume-pyramide",
+      "enonce": "Une pyramide a une base carrée de $6$ cm de côté et une hauteur de $10$ cm. Quel est son volume ?",
+      "choix": [
+        "$360 \\text{ cm}^3$",
+        "$180 \\text{ cm}^3$",
+        "$120 \\text{ cm}^2$",
+        "$120 \\text{ cm}^3$"
+      ],
+      "reponse": 3,
+      "explication": "$\\mathcal{A}_{\\text{base}} = 6 \\times 6 = 36 \\text{ cm}^2$, puis $V = \\dfrac{36 \\times 10}{3} = 120 \\text{ cm}^3$. $360$ oublie le tiers, $180$ divise par $2$ au lieu de $3$. Et un volume ne s'exprime jamais en cm² : surveille l'**unité cube**."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "cone-revolution",
+      "enonce": "On fait tourner un triangle rectangle dont les côtés de l'angle droit mesurent $5$ cm et $12$ cm autour du côté de $12$ cm. Quel est le volume du cône obtenu ? (On prend $\\pi \\approx 3{,}14$.)",
+      "choix": [
+        "$942 \\text{ cm}^3$",
+        "$125{,}6 \\text{ cm}^3$",
+        "$314 \\text{ cm}^3$",
+        "$753{,}6 \\text{ cm}^3$"
+      ],
+      "reponse": 2,
+      "explication": "Le côté **autour duquel on tourne** devient la hauteur : $h = 12$ cm, et l'autre côté devient le rayon : $r = 5$ cm. $\\mathcal{A}_{\\text{base}} = 3{,}14 \\times 25 = 78{,}5 \\text{ cm}^2$, donc $V = \\dfrac{78{,}5 \\times 12}{3} = 314 \\text{ cm}^3$. $753{,}6$ échange rayon et hauteur, $942$ oublie le tiers, $125{,}6$ utilise le périmètre $2\\pi r$ au lieu de l'aire $\\pi r^2$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "perspective-cavaliere",
+      "enonce": "Une pyramide posée sur sa base carrée est dessinée en perspective cavalière. Sur le dessin, sa base apparait comme :",
+      "choix": [
+        "un trapèze",
+        "un carré",
+        "un losange",
+        "un parallélogramme"
+      ],
+      "reponse": 3,
+      "explication": "Les fuyantes restent **parallèles** entre elles mais sont **raccourcies** : les quatre côtés du carré donnent deux paires de côtés parallèles de longueurs différentes, donc un **parallélogramme**. Dessiner un vrai carré est l'erreur classique — la perspective conserve le parallélisme, pas les longueurs fuyantes."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "patrons",
+      "enonce": "De quoi est constitué le patron d'une pyramide régulière à base carrée ?",
+      "choix": [
+        "$1$ carré et $4$ triangles isocèles",
+        "$1$ carré et $4$ rectangles",
+        "$2$ carrés et $4$ triangles",
+        "$1$ carré et $3$ triangles"
+      ],
+      "reponse": 0,
+      "explication": "Une pyramide n'a qu'**une** base : un seul carré, plus autant de triangles que la base a de côtés, soit $4$. Les rectangles appartiennent au patron du prisme ; les deux carrés au patron du pavé. Comme la pyramide est régulière, les quatre triangles sont **isocèles et superposables**."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "regle-du-tiers",
+      "enonce": "Un cylindre de révolution a pour volume $942 \\text{ cm}^3$. Un cône a exactement le même disque de base et la même hauteur. Quel est le volume de ce cône ?",
+      "choix": [
+        "$2826 \\text{ cm}^3$",
+        "$314 \\text{ cm}^3$",
+        "$471 \\text{ cm}^3$",
+        "$942 \\text{ cm}^3$"
+      ],
+      "reponse": 1,
+      "explication": "Même base et même hauteur : le cône vaut le **tiers** du cylindre, soit $942 \\div 3 = 314 \\text{ cm}^3$. Aucun calcul de $\\pi r^2$ n'est nécessaire. $2826$ multiplie par $3$ au lieu de diviser, $471$ divise par $2$ : le facteur est bien $3$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "denombrement",
+      "enonce": "Combien de faces, d'arêtes et de sommets possède une pyramide à base hexagonale ?",
+      "choix": [
+        "$8$ faces, $18$ arêtes, $12$ sommets",
+        "$7$ faces, $12$ arêtes, $7$ sommets",
+        "$7$ faces, $12$ arêtes, $6$ sommets",
+        "$6$ faces, $12$ arêtes, $7$ sommets"
+      ],
+      "reponse": 1,
+      "explication": "Base à $n = 6$ côtés : $n+1 = 7$ faces (l'hexagone $+$ $6$ triangles), $2n = 12$ arêtes ($6$ de base $+$ $6$ latérales), $n+1 = 7$ sommets (les $6$ de la base **$+$ le sommet $S$**). Le premier choix est celui du **prisme** hexagonal ($n+2$, $3n$, $2n$) ; le troisième oublie de compter $S$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "hauteur-piege",
+      "enonce": "Une pyramide régulière a une base carrée de $6$ cm de côté, et la hauteur de chacune de ses faces latérales mesure $5$ cm. Quel est son volume ?",
+      "choix": [
+        "$48 \\text{ cm}^3$",
+        "$60 \\text{ cm}^3$",
+        "$144 \\text{ cm}^3$",
+        "$180 \\text{ cm}^3$"
+      ],
+      "reponse": 0,
+      "explication": "Les $5$ cm sont la hauteur d'une **face**, pas celle de la pyramide : c'est le piège. Son pied est au milieu d'un côté, à $3$ cm du centre de la base. Pythagore donne la vraie hauteur : $h^2 = 5^2 - 3^2 = 16$, donc $h = 4$ cm, et $V = \\dfrac{36 \\times 4}{3} = 48 \\text{ cm}^3$. Utiliser $5$ donnerait $60$ ; oublier le tiers donnerait $144$ (avec $h=4$) ou $180$ (avec $h=5$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "unites-capacite",
+      "enonce": "Un entonnoir en forme de cône a un rayon de $10$ cm et une hauteur de $30$ cm. Quelle quantité de liquide contient-il, en litres ? (On prend $\\pi \\approx 3{,}14$.)",
+      "choix": [
+        "$31{,}4 \\text{ L}$",
+        "$9{,}42 \\text{ L}$",
+        "$0{,}314 \\text{ L}$",
+        "$3{,}14 \\text{ L}$"
+      ],
+      "reponse": 3,
+      "explication": "$V = \\dfrac{3{,}14 \\times 10^2 \\times 30}{3} = \\dfrac{9420}{3} = 3140 \\text{ cm}^3$. Or $1 \\text{ cm}^3 = 1 \\text{ mL}$, donc $3140 \\text{ cm}^3 = 3140 \\text{ mL} = 3{,}14 \\text{ L}$ : on divise par **$1000$**, pas par $100$ ni par $10\\,000$. $9{,}42$ L correspond à l'oubli du tiers."
+    }
+  ]
+}

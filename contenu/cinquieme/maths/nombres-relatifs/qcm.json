@@ -58,11 +58,11 @@
     {
       "id": 6,
       "difficulte": "moyen",
-      "notion": "addition-signes-contraires",
-      "enonce": "Combien vaut $(+3) + (-8)$ ?",
-      "choix": ["$+5$", "$-5$", "$+11$", "$-11$"],
-      "reponse": 1,
-      "explication": "$8 - 3 = 5$, et le signe est celui de $-8$ dont la valeur absolue est la plus grande : le résultat est $-5$. Image : j'ai $3$ €, je dépense $8$ € — je dois $5$ €."
+      "notion": "soustraction",
+      "enonce": "Combien vaut $(-4) - (-9)$ ?",
+      "choix": ["$-13$", "$-5$", "$+5$", "$+13$"],
+      "reponse": 2,
+      "explication": "Soustraire, c'est ajouter l'opposé : $(-4) - (-9) = (-4) + (+9)$. Signes contraires, on soustrait les valeurs absolues ($9 - 4 = 5$) et on garde le signe du $+9$, donc $+5$. Le piège : ne change le signe que du **deuxième** nombre — le $-4$ reste négatif, sinon on trouve $+13$."
     },
     {
       "id": 7,
@@ -81,11 +81,11 @@
     {
       "id": 8,
       "difficulte": "difficile",
-      "notion": "addition-multiple",
-      "enonce": "Combien vaut $(+5) + (-3) + (+2) + (-8)$ ?",
-      "choix": ["$-4$", "$+4$", "$-18$", "$+18$"],
-      "reponse": 0,
-      "explication": "On regroupe : positifs $5 + 2 = 7$, négatifs $-3 - 8 = -11$. Puis $(+7) + (-11) = -4$. Regrouper par signe est plus rapide et plus sûr que d'avancer de proche en proche."
+      "notion": "enchainement",
+      "enonce": "Combien vaut $(-7) - (+2) + (-3) - (-6)$ ?",
+      "choix": ["$-18$", "$-12$", "$+6$", "$-6$"],
+      "reponse": 3,
+      "explication": "On simplifie d'abord l'écriture : $-7 - 2 - 3 + 6$ (attention, $- (-6)$ devient $+6$). On regroupe ensuite : négatifs $-7 - 2 - 3 = -12$, positifs $+6$. Total : $(-12) + (+6) = -6$. Le $-18$ vient de l'oubli du changement de signe devant $(-6)$, le $-12$ de l'oubli pur et simple du dernier terme."
     },
     {
       "id": 9,
@@ -105,10 +105,10 @@
       "id": 10,
       "difficulte": "difficile",
       "notion": "situation-concrete",
-      "enonce": "La température était de $-6$ °C, puis elle augmente de $10$ °C. Quelle est la nouvelle température ?",
-      "choix": ["$-16$ °C", "$+4$ °C", "$-4$ °C", "$+16$ °C"],
-      "reponse": 1,
-      "explication": "$(-6) + (+10)$ : signes contraires, on soustrait ($10 - 6 = 4$) et on garde le signe du $+10$, plus « fort ». La température devient $+4$ °C — elle est passée au-dessus de zéro."
+      "enonce": "À $6$ h il fait $-6$ °C. À midi, la température a augmenté de $9$ °C ; le soir, elle a baissé de $4{,}5$ °C. Quelle température fait-il le soir ?",
+      "choix": ["$-10{,}5$ °C", "$+1{,}5$ °C", "$-1{,}5$ °C", "$+7{,}5$ °C"],
+      "reponse": 2,
+      "explication": "Une hausse s'ajoute, une baisse se soustrait : $-6 + 9 - 4{,}5$. D'abord $-6 + 9 = +3$, puis $3 - 4{,}5 = -1{,}5$. Il fait donc $-1{,}5$ °C — on repasse sous zéro. Le piège est de traiter la baisse comme une addition ($+7{,}5$) ou d'oublier que $3 - 4{,}5$ est négatif ($+1{,}5$)."
     }
   ]
 }

@@ -1,0 +1,139 @@
+{
+  "id": "4e-math-parallelogrammes-translations-qcm",
+  "chapitre": "4e-math-parallelogrammes-translations",
+  "titre": "QCM — Parallélogrammes et translations",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "effet-translation",
+      "enonce": "Qu'est-ce qui suffit à définir entièrement une translation ?",
+      "choix": [
+        "Un axe de symétrie",
+        "Un point et son image",
+        "Un centre et un angle",
+        "Deux points quelconques du plan"
+      ],
+      "reponse": 1,
+      "explication": "Donner un point $A$ et son image $B$ fixe d'un coup la **direction**, le **sens** et la **longueur** du glissement. Le piège est le dernier choix : deux points ne suffisent pas si on ne dit pas lequel est l'image de l'autre — la translation qui envoie $A$ sur $B$ n'est pas celle qui envoie $B$ sur $A$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "conservations",
+      "enonce": "Par une translation, l'image d'une droite $(d)$ est :",
+      "choix": [
+        "une droite parallèle à $(d)$",
+        "une droite perpendiculaire à $(d)$",
+        "toujours la droite $(d)$ elle-même",
+        "une demi-droite"
+      ],
+      "reponse": 0,
+      "explication": "La translation conserve l'alignement : l'image d'une droite est une droite, et le glissement étant le même partout, elle est **parallèle** à la droite de départ. Attention au troisième choix : l'image est confondue avec $(d)$ uniquement si le glissement se fait dans la direction de $(d)$ — c'est un cas particulier, pas la règle."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "lien-parallelogramme",
+      "enonce": "$A$, $B$, $C$ sont trois points non alignés et la translation qui envoie $A$ sur $B$ envoie $C$ sur $D$. Quel quadrilatère est un parallélogramme ?",
+      "choix": ["$ABCD$", "$ABDC$", "$ACBD$", "$ADBC$"],
+      "reponse": 1,
+      "explication": "Le glissement mène $A$ vers $B$ et $C$ vers $D$ : les côtés $[AB]$ et $[CD]$ sont donc **opposés**, ce qui impose l'ordre $A \\to B \\to D \\to C$. Écrire $ABCD$ est l'erreur la plus fréquente du chapitre : ce quadrilatère-là est **croisé**."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "propriete-caracteristique",
+      "enonce": "Pourquoi le lien entre parallélogramme et translation est-il une propriété **caractéristique** ?",
+      "choix": [
+        "Parce qu'elle n'est vraie que pour les carrés",
+        "Parce qu'elle fonctionne dans les deux sens",
+        "Parce qu'elle se démontre à l'aide des aires",
+        "Parce qu'elle décrit le demi-tour"
+      ],
+      "reponse": 1,
+      "explication": "« Caractéristique » signifie **si et seulement si** : la translation donne le parallélogramme, et le parallélogramme donne la translation. C'est ce double sens qui permet de **démontrer** au lieu de simplement constater. Une propriété ordinaire, elle, ne se lit que dans un sens."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "conservations",
+      "enonce": "Une translation transforme un angle de $37°$ en un angle de :",
+      "choix": ["$143°$", "$53°$", "$37°$", "$74°$"],
+      "reponse": 2,
+      "explication": "La translation **conserve les mesures d'angles** : la figure glisse, elle ne se déforme pas. Les distracteurs sont les réflexes de calcul habituels — le supplémentaire ($180 - 37$), le complémentaire ($90 - 37$) et le double — alors qu'ici il n'y a aucun calcul à faire."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "methodes",
+      "enonce": "Sur quadrillage, la translation qui envoie $A$ sur $B$ correspond au déplacement « $4$ carreaux à droite et $1$ carreau vers le bas ». Quel déplacement subit un point $M$ quelconque ?",
+      "choix": [
+        "$4$ à droite et $1$ vers le bas",
+        "$1$ à droite et $4$ vers le bas",
+        "$4$ à gauche et $1$ vers le haut",
+        "Cela dépend de la position de $M$"
+      ],
+      "reponse": 0,
+      "explication": "C'est l'effet même d'une translation : **tous** les points subissent le même glissement. Le dernier choix est le piège, par confusion avec le demi-tour, où le déplacement dépend de la position du point par rapport au centre. Le troisième choix décrit le glissement inverse, celui qui ramène $B$ sur $A$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "$ABDC$ est un quadrilatère dont les diagonales $[AD]$ et $[BC]$ se coupent en leur milieu. Que peut-on en déduire ?",
+      "choix": [
+        "La translation qui envoie $A$ sur $B$ envoie $C$ sur $D$",
+        "La translation qui envoie $A$ sur $B$ envoie $D$ sur $C$",
+        "La translation qui envoie $A$ sur $D$ envoie $B$ sur $C$",
+        "Rien, tant qu'on ne connaît pas les longueurs des côtés"
+      ],
+      "reponse": 0,
+      "explication": "Deux étapes. **Or** des diagonales qui se coupent en leur milieu donnent un parallélogramme (5e) : $ABDC$ en est un. **Or** dans un parallélogramme $ABDC$, la translation $A \\to B$ envoie $C$ sur $D$. Le dernier choix est le piège du chapitre : mesurer n'est pas démontrer, et ici aucune longueur n'est nécessaire."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "lien-parallelogramme",
+      "enonce": "$ABDC$ est un parallélogramme. La translation qui envoie $A$ sur $C$ envoie $B$ sur :",
+      "choix": ["$A$", "$C$", "$D$", "un point qu'on ne peut pas déterminer"],
+      "reponse": 2,
+      "explication": "Un quadrilatère se lit dans les deux sens : $ABDC$ et $ACDB$ désignent la **même** figure. Dans $ACDB$, les côtés $[AC]$ et $[BD]$ sont opposés, donc la translation $A \\to C$ envoie $B$ sur $D$. Un même parallélogramme fournit ainsi **deux** translations, pas une seule."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "cas-particuliers",
+      "enonce": "La translation qui envoie $A$ sur $B$ envoie $C$ sur $D$, mais cette fois $A$, $B$ et $C$ sont **alignés**. Que se passe-t-il ?",
+      "choix": [
+        "La translation n'existe plus",
+        "Le point $D$ ne peut pas être construit",
+        "$ABDC$ devient un rectangle",
+        "$D$ existe, mais $ABDC$ est un parallélogramme aplati"
+      ],
+      "reponse": 3,
+      "explication": "La translation est définie pour **tous** les points du plan : elle existe toujours et $D$ se construit toujours. C'est le quadrilatère qui dégénère — les quatre points sont alignés, la figure n'a plus d'intérieur. D'où la précision « non alignés » dans l'énoncé de la propriété caractéristique."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "translation-ou-demi-tour",
+      "enonce": "Les points $M$, $N$, $P$ ont pour images $M'$, $N'$, $P'$. Quelle observation prouve qu'il s'agit d'une translation, et non d'un demi-tour ?",
+      "choix": [
+        "Les longueurs sont conservées",
+        "Les segments $[MM']$, $[NN']$ et $[PP']$ ont le même milieu",
+        "Les segments $[MM']$, $[NN']$ et $[PP']$ sont parallèles, de même longueur et de même sens",
+        "L'image d'une droite lui est parallèle"
+      ],
+      "reponse": 2,
+      "explication": "Les choix 1 et 4 ne prouvent rien : la conservation des longueurs et le parallélisme de l'image d'une droite sont vrais pour le demi-tour **aussi**. Le choix 2 est au contraire la signature du demi-tour, dont le centre est le milieu commun. Seuls des segments $[MM']$ tous parallèles, de même longueur et de même sens traduisent le glissement identique en tout point."
+    }
+  ]
+}
