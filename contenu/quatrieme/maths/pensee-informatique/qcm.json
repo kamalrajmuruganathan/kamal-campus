@@ -1,0 +1,139 @@
+{
+  "id": "4e-math-pensee-informatique-qcm",
+  "chapitre": "4e-math-pensee-informatique",
+  "titre": "QCM — La pensée informatique",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "condition",
+      "enonce": "Parmi ces quatre lignes, laquelle est une **condition** ?",
+      "choix": [
+        "`afficher n`",
+        "`n > 10`",
+        "`mettre 5 dans n`",
+        "`répéter 3 fois`"
+      ],
+      "reponse": 1,
+      "explication": "Une condition est une **question** dont la réponse est vraie ou fausse : `n > 10` est vrai ou faux selon la valeur de `n`. Les trois autres lignes sont des **instructions**, c'est-à-dire des ordres : on les exécute, on ne peut pas dire si elles sont « vraies ». Le piège est de confondre ce qui se teste et ce qui s'exécute."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "instruction-conditionnelle",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 7 dans n\nsi n > 5 alors\n    afficher « grand »\nfin si\nafficher « fini »\n```",
+      "choix": [
+        "« grand » puis « fini »",
+        "« grand » seulement",
+        "« fini » seulement",
+        "Rien du tout"
+      ],
+      "reponse": 0,
+      "explication": "$7 > 5$ est vrai, donc le bloc décalé s'exécute et affiche « grand ». Ensuite, `afficher « fini »` est écrit **après `fin si`** : il ne dépend d'aucun test et s'exécute **dans tous les cas**. Le piège classique est de croire que tout ce qui suit un `si` en dépend — seul le décalage vers la droite le dit."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "operateurs-comparaison",
+      "enonce": "« Le bus est complet quand il transporte **au moins** 50 passagers. » Si `p` désigne le nombre de passagers, quelle condition traduit « le bus est complet » ?",
+      "choix": [
+        "`p > 50`",
+        "`p = 50`",
+        "`p ≤ 50`",
+        "`p ≥ 50`"
+      ],
+      "reponse": 3,
+      "explication": "« Au moins 50 », c'est 50 **ou plus** : le cas d'égalité fait partie de la condition, donc $\\geqslant$. Avec `p > 50`, un bus transportant exactement 50 passagers ne serait pas déclaré complet. Le piège est là : le mot « au moins » décide de l'égalité, pas du sens de l'inégalité."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "instruction-conditionnelle",
+      "enonce": "L'utilisateur saisit $-4$. Qu'affiche ce programme ?\n\n```\ndemander un nombre et le mettre dans n\nsi n < 0 alors\n    afficher 0 − n\nsinon\n    afficher n\nfin si\n```",
+      "choix": [
+        "$-4$",
+        "$4$",
+        "$0$",
+        "Rien : la condition est fausse"
+      ],
+      "reponse": 1,
+      "explication": "$-4 < 0$ est **vrai**, donc c'est la branche `alors` qui s'exécute : elle affiche $0 - (-4) = 4$. Deux pièges ici : lire la branche `sinon` au lieu de la branche `alors`, et oublier que soustraire un nombre négatif revient à l'ajouter."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "manipuler-variable",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 5 dans a\nmettre 8 dans b\nmettre a + b dans a\nafficher a\n```",
+      "choix": ["$5$", "$8$", "$13$", "$21$"],
+      "reponse": 2,
+      "explication": "La machine **calcule d'abord** `a + b` avec les valeurs du moment ($5 + 8 = 13$), **puis range** le résultat dans `a` : l'ancienne valeur $5$ est écrasée. Le piège est de lire cette ligne comme l'égalité $a = a + b$ des maths (impossible) : c'est un ordre, pas une équation."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "compteur",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 0 dans s\nrépéter 4 fois\n    mettre s + 3 dans s\nfin répéter\nafficher s\n```",
+      "choix": ["$3$", "$7$", "$4$", "$12$"],
+      "reponse": 3,
+      "explication": "À chaque tour, `s` augmente de $3$ : $3$, puis $6$, puis $9$, puis $12$. La valeur $3$ correspondrait à un seul tour, et $7$ vient d'un $4 + 3$ qui confond le **nombre de tours** avec la **valeur** de la variable. Un compteur doit toujours être suivi tour par tour."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "instruction-conditionnelle",
+      "enonce": "L'utilisateur saisit $12$. Qu'affiche ce programme ?\n\n```\ndemander un nombre et le mettre dans n\nsi n > 10 alors\n    afficher « A »\nfin si\nsi n > 5 alors\n    afficher « B »\nfin si\n```",
+      "choix": [
+        "« A » seulement",
+        "« B » seulement",
+        "« A » puis « B »",
+        "Rien : les deux conditions ne peuvent pas être vraies ensemble"
+      ],
+      "reponse": 2,
+      "explication": "Ce sont **deux instructions conditionnelles indépendantes**, pas un `si … sinon`. $12 > 10$ est vrai et $12 > 5$ aussi : les deux blocs s'exécutent. Le piège est de raisonner comme avec un `sinon`, où une seule branche est possible ; sans `sinon`, chaque test est évalué pour lui-même."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "suivi-variable",
+      "enonce": "L'utilisateur saisit $15$. Qu'affiche ce programme ?\n\n```\nmettre 0 dans p\ndemander un nombre et le mettre dans n\nsi n ≥ 18 alors\n    mettre 2 dans p\nfin si\nmettre p + 1 dans p\nafficher p\n```",
+      "choix": ["$0$", "$1$", "$2$", "$3$"],
+      "reponse": 1,
+      "explication": "$15 \\geqslant 18$ est faux : le bloc décalé est **sauté**, donc `p` reste à $0$. Mais `mettre p + 1 dans p` est écrit après `fin si` : il s'exécute quand même, et `p` vaut $1$. Le piège est de croire qu'une condition fausse arrête le programme — elle ne fait que sauter son bloc. (Avec une saisie de $20$, on obtiendrait $3$.)"
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "modifier-programme",
+      "enonce": "L'entrée d'un musée est gratuite **jusqu'à 12 ans inclus**. Un élève a écrit :\n\n```\nsi age < 12 alors\n    afficher « gratuit »\nsinon\n    afficher « payant »\nfin si\n```\n\nQuelle modification **minimale** rend le programme conforme ?",
+      "choix": [
+        "Remplacer `<` par `≤`",
+        "Remplacer `<` par `>`",
+        "Échanger les deux affichages",
+        "Supprimer le `sinon`"
+      ],
+      "reponse": 0,
+      "explication": "Le programme ne se trompe que sur **un seul cas** : l'enfant de $12$ ans exactement, déclaré payant alors qu'il est gratuit. Un seul cas faux, et il est pile sur la frontière : c'est la signature d'un opérateur trop strict. « Jusqu'à … inclus » inclut l'égalité, donc $\\leqslant$. Échanger les affichages inverserait tout le reste, et supprimer le `sinon` ferait disparaître le message « payant »."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "ecrire-programme",
+      "enonce": "Objectif : afficher **le plus grand** des deux nombres `a` et `b`. Quel programme atteint cet objectif dans **tous** les cas ?",
+      "choix": [
+        "```\nsi a > b alors\n    afficher a\nfin si\n```",
+        "```\nsi a > b alors\n    afficher a\nsinon\n    afficher b\nfin si\n```",
+        "```\nsi a > b alors\n    afficher b\nsinon\n    afficher a\nfin si\n```",
+        "```\nafficher a\nafficher b\n```"
+      ],
+      "reponse": 1,
+      "explication": "Il faut une sortie **dans les deux cas** : sans `sinon`, le premier programme n'affiche rien quand $a \\leqslant b$. Le troisième affiche systématiquement le plus **petit** : la condition et les actions sont inversées. Le dernier n'effectue aucun test. Contrôle du cas limite : si $a = b$, le bon programme part dans `sinon` et affiche `b`, qui est bien le maximum."
+    }
+  ]
+}

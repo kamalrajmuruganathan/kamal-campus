@@ -1,0 +1,134 @@
+{
+  "id": "4e-math-calcul-litteral-qcm",
+  "chapitre": "4e-math-calcul-litteral",
+  "titre": "QCM — Calcul littéral et algébrique",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "automatismes",
+      "enonce": "Combien vaut $3x + 2x$ ?",
+      "choix": ["$5x$", "$6x^2$", "$5x^2$", "$6x$"],
+      "reponse": 0,
+      "explication": "On **additionne** deux quantités de même nature : $3$ fois $x$ plus $2$ fois $x$ font $5$ fois $x$. Le piège est la confusion avec la multiplication : $3x \\times 2x$, lui, vaut $6x^2$, car on multiplie les nombres entre eux **et** les lettres entre elles."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "equation-premier-degre",
+      "enonce": "Le nombre $4$ est-il solution de l'équation $5x + 3 = 23$ ?",
+      "choix": [
+        "Oui, car $5 \\times 4 + 3 = 23$",
+        "Non, car $5 \\times 4 + 3 = 20$",
+        "Non, car $5 \\times (4 + 3) = 35$",
+        "Oui, car $4 + 3 = 7$"
+      ],
+      "reponse": 0,
+      "explication": "Tester un nombre, c'est le remplacer dans l'expression et **respecter les priorités** : la multiplication d'abord, $5 \\times 4 = 20$, puis l'addition, $20 + 3 = 23$. On retrouve bien le membre de droite. Le choix avec $35$ vient d'une parenthèse ajoutée qui n'existe pas dans l'énoncé."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "distributivite",
+      "enonce": "Développe $-3(x - 5)$.",
+      "choix": ["$-3x - 15$", "$-3x + 15$", "$-3x - 5$", "$3x + 15$"],
+      "reponse": 1,
+      "explication": "Le facteur $-3$ multiplie **les deux termes** : $-3 \\times x = -3x$, puis $-3 \\times (-5) = +15$, car deux nombres négatifs donnent un produit positif. Le piège classique est de recopier le signe $-$ de la parenthèse et d'écrire $-15$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "factorisation",
+      "enonce": "Factorise $12x + 18$ en utilisant le **plus grand** facteur commun.",
+      "choix": [
+        "$3(4x + 6)$",
+        "$6(2x + 18)$",
+        "$6(2x + 3)$",
+        "$6(6x + 12)$"
+      ],
+      "reponse": 2,
+      "explication": "Le plus grand nombre qui divise à la fois $12$ et $18$ est $6$ : $12x = 6 \\times 2x$ et $18 = 6 \\times 3$. Attention, $3(4x + 6)$ est **égal** à $12x + 18$ mais la factorisation n'est pas terminée. Contrôle imparable : redéveloppe ta réponse, tu dois retrouver l'expression de départ."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "equation-premier-degre",
+      "enonce": "Résous $4x + 7 = 1$.",
+      "choix": ["$x = 2$", "$x = -1{,}5$", "$x = -2$", "$x = 1{,}5$"],
+      "reponse": 1,
+      "explication": "On enlève $7$ aux deux membres : $4x = 1 - 7 = -6$, puis on divise par $4$ : $x = \\dfrac{-6}{4} = -1{,}5$. Le choix $x = 2$ vient d'un signe oublié ($1 + 7$ au lieu de $1 - 7$). Une solution négative et non entière est parfaitement normale : ne recommence pas un calcul juste."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "formules",
+      "enonce": "Un rectangle a pour largeur $4$ et pour longueur $x + 3$. Quel est son périmètre ?",
+      "choix": ["$4x + 12$", "$x + 7$", "$2x + 7$", "$2x + 14$"],
+      "reponse": 3,
+      "explication": "Le périmètre est $2 \\times (x+3) + 2 \\times 4 = 2x + 6 + 8 = 2x + 14$. Le choix $4x + 12$ est l'**aire**, pas le périmètre : c'est la confusion la plus fréquente. Teste avec $x = 1$ : le rectangle est un carré de côté $4$, périmètre $16$, et $2 \\times 1 + 14 = 16$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "equation-deux-membres",
+      "enonce": "Résous $7x - 4 = 2x + 11$.",
+      "choix": [
+        "$x = \\dfrac{15}{9}$",
+        "$x = 2{,}2$",
+        "$x = \\dfrac{7}{5}$",
+        "$x = 3$"
+      ],
+      "reponse": 3,
+      "explication": "On enlève $2x$ aux deux membres : $5x - 4 = 11$, on ajoute $4$ : $5x = 15$, on divise par $5$ : $x = 3$. Le choix $\\frac{15}{9}$ vient d'une addition des deux termes en $x$ ($7x + 2x$) au lieu d'une soustraction : quand un terme change de membre, il **change de signe**. Vérification : $7 \\times 3 - 4 = 17$ et $2 \\times 3 + 11 = 17$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "On veut démontrer que la somme de trois entiers consécutifs est toujours un multiple de $3$. Quelle ligne **conclut** la démonstration ?",
+      "choix": [
+        "$4 + 5 + 6 = 15$, et $15$ est un multiple de $3$",
+        "$n + (n+1) + (n+2) = 3n + 3$",
+        "$n + (n+1) + (n+2) = 3(n+1)$",
+        "$n + n + n = 3n$"
+      ],
+      "reponse": 2,
+      "explication": "C'est la **factorisation** qui fait apparaître le multiple de $3$ : $3(n+1)$ est trois fois un entier. La ligne $3n + 3$ est exacte mais ne conclut rien tant qu'elle n'est pas factorisée. Le calcul $4+5+6$ n'est qu'un exemple : un exemple ne démontre jamais une propriété générale. Et $n + n + n$ décrit trois fois le **même** nombre, pas trois consécutifs."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "conjecture-tableur",
+      "enonce": "Au tableur, on calcule $3x + 5$ et $5x - 7$ pour $x = 4$, $5$, $6$, $7$. Les deux colonnes affichent la même valeur $23$ pour $x = 6$. Que peut-on en conclure ?",
+      "choix": [
+        "Que l'équation $3x + 5 = 5x - 7$ est démontrée sans autre calcul",
+        "Qu'on tient une conjecture, à confirmer par le calcul algébrique",
+        "Que l'équation admet plusieurs solutions entières",
+        "Que le tableur a fait une erreur d'arrondi"
+      ],
+      "reponse": 1,
+      "explication": "Un tableau ne teste que **quelques valeurs choisies** : il met sur la piste, mais il ne dit rien des valeurs non testées, et la solution d'une autre équation pourrait tomber **entre deux lignes** (donc être seulement approchée). Seule la résolution $3x + 5 = 5x - 7 \\Rightarrow 12 = 2x \\Rightarrow x = 6$ donne le résultat exact et complet. Confondre « je l'ai vu sur un tableau » et « je l'ai démontré » est le piège central de cette section."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "mise-en-equation",
+      "enonce": "« Je pense à un nombre. Si je le multiplie par $3$ puis j'ajoute $5$, j'obtiens le même résultat qu'en le multipliant par $5$ puis en retirant $7$. » Quelle équation traduit ce problème ?",
+      "choix": [
+        "$3x + 5 = 5x - 7$",
+        "$3x + 5 = 5x + 7$",
+        "$3(x + 5) = 5(x - 7)$",
+        "$3x + 5 = 5(x - 7)$"
+      ],
+      "reponse": 0,
+      "explication": "On multiplie **d'abord**, on ajoute ou on retire **ensuite** : $3x + 5$ d'un côté, $5x - 7$ de l'autre. Ajouter des parenthèses inverserait l'ordre des opérations et changerait complètement le problème. « Retirer $7$ » donne bien $-7$, pas $+7$. La résolution donne ensuite $12 = 2x$, soit $x = 6$ : on vérifie que $3 \\times 6 + 5 = 23$ et $5 \\times 6 - 7 = 23$."
+    }
+  ]
+}

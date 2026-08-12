@@ -1,0 +1,154 @@
+{
+  "id": "4e-math-nombres-rationnels-qcm",
+  "chapitre": "4e-math-nombres-rationnels",
+  "titre": "QCM — Nombres rationnels",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Qu'est-ce qu'un nombre rationnel ?",
+      "choix": [
+        "Un nombre décimal, c'est-à-dire un nombre à virgule",
+        "Le quotient de deux nombres entiers **positifs**",
+        "Le quotient de deux nombres entiers **relatifs**, le dénominateur n'étant pas nul",
+        "N'importe quel quotient de deux nombres, même à virgule"
+      ],
+      "reponse": 2,
+      "explication": "Le mot qui compte est **relatifs** : le numérateur comme le dénominateur ont le droit d'être négatifs, donc $-\\dfrac{5}{2}$ est bien rationnel. Le piège du choix « entiers positifs » est d'oublier cette extension, qui est justement l'apport de la 4e. Et attention au sens : tout décimal est rationnel, mais l'inverse est faux — $\\dfrac{1}{3}$ n'est pas décimal."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "inverse",
+      "enonce": "Quel est l'inverse de $\\dfrac{3}{5}$ ?",
+      "choix": [
+        "$\\dfrac{5}{3}$",
+        "$-\\dfrac{3}{5}$",
+        "$-\\dfrac{5}{3}$",
+        "$\\dfrac{3}{5}$"
+      ],
+      "reponse": 0,
+      "explication": "L'inverse se **teste par le produit** : $\\dfrac{3}{5} \\times \\dfrac{5}{3} = \\dfrac{15}{15} = 1$ ✓. Le piège est la confusion opposé/inverse : $-\\dfrac{3}{5}$ est l'**opposé** (il donne une somme nulle), pas l'inverse. Pour l'inverse on retourne la fraction, on ne touche pas au signe."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "oppose",
+      "enonce": "Quel est l'opposé de $-\\dfrac{7}{4}$ ?",
+      "choix": [
+        "$-\\dfrac{4}{7}$",
+        "$\\dfrac{4}{7}$",
+        "$-\\dfrac{7}{4}$",
+        "$\\dfrac{7}{4}$"
+      ],
+      "reponse": 3,
+      "explication": "Prendre l'opposé, c'est **changer le signe**, rien d'autre : $-\\dfrac{7}{4} + \\dfrac{7}{4} = 0$ ✓. Les choix $-\\dfrac{4}{7}$ et $\\dfrac{4}{7}$ retournent la fraction : c'est le réflexe de l'**inverse**, appliqué au mauvais endroit. Retiens le test : opposé → somme nulle, inverse → produit égal à 1."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "produit",
+      "enonce": "Combien vaut $-\\dfrac{2}{3} \\times \\dfrac{5}{7}$ ?",
+      "choix": [
+        "$\\dfrac{10}{21}$",
+        "$-\\dfrac{10}{21}$",
+        "$-\\dfrac{14}{15}$",
+        "$\\dfrac{1}{21}$"
+      ],
+      "reponse": 1,
+      "explication": "On multiplie les numérateurs entre eux et les dénominateurs entre eux : $\\dfrac{2 \\times 5}{3 \\times 7} = \\dfrac{10}{21}$, et un seul facteur est négatif donc le résultat est négatif. Deux pièges ici : le choix $\\dfrac{10}{21}$ **perd le signe moins**, et le choix $-\\dfrac{14}{15}$ multiplie **en croix** ($2 \\times 7$ et $3 \\times 5$) — la croix sert aux égalités de fractions, jamais au produit. Le choix $\\dfrac{1}{21}$ correspond à une addition."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "division",
+      "enonce": "Combien vaut $\\dfrac{3}{4} \\div \\dfrac{2}{5}$ ?",
+      "choix": [
+        "$\\dfrac{3}{10}$",
+        "$\\dfrac{8}{15}$",
+        "$\\dfrac{15}{8}$",
+        "$\\dfrac{10}{3}$"
+      ],
+      "reponse": 2,
+      "explication": "Diviser, c'est multiplier par l'inverse de la **deuxième** fraction : $\\dfrac{3}{4} \\times \\dfrac{5}{2} = \\dfrac{15}{8}$. Chaque distracteur est une façon de se tromper de fraction à retourner : $\\dfrac{3}{10}$ ne retourne rien, $\\dfrac{8}{15}$ retourne la **première**, $\\dfrac{10}{3}$ retourne **les deux**. Contrôle rapide : on divise par un nombre plus petit que 1, donc le résultat doit **augmenter** — seul $\\dfrac{15}{8}$ dépasse $\\dfrac{3}{4}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "fraction-d-une-fraction",
+      "enonce": "Combien vaut $\\dfrac{2}{3}$ de $\\dfrac{3}{4}$ ?",
+      "choix": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{17}{12}$",
+        "$\\dfrac{8}{9}$",
+        "$\\dfrac{5}{7}$"
+      ],
+      "reponse": 0,
+      "explication": "Le mot « **de** » se traduit par une multiplication : $\\dfrac{2}{3} \\times \\dfrac{3}{4} = \\dfrac{6}{12} = \\dfrac{1}{2}$. Le piège est de choisir la mauvaise opération : $\\dfrac{17}{12}$ vient d'une addition, $\\dfrac{8}{9}$ d'une division, $\\dfrac{5}{7}$ d'une addition des numérateurs et des dénominateurs. Vérification de bon sens : prendre une part d'une part donne un résultat **plus petit** que $\\dfrac{3}{4}$, ce qui élimine déjà deux choix."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "simplification",
+      "enonce": "Quelle est la forme la plus simplifiée de $\\dfrac{-45}{60}$ ?",
+      "choix": [
+        "$-\\dfrac{9}{12}$",
+        "$\\dfrac{3}{4}$",
+        "$-\\dfrac{15}{20}$",
+        "$-\\dfrac{3}{4}$"
+      ],
+      "reponse": 3,
+      "explication": "On divise haut et bas par $15$ : $\\dfrac{-45 \\div 15}{60 \\div 15} = -\\dfrac{3}{4}$. Deux pièges se cumulent : $-\\dfrac{9}{12}$ et $-\\dfrac{15}{20}$ sont **égaux** à la bonne réponse mais la simplification n'a pas été menée jusqu'au bout ; $\\dfrac{3}{4}$ est bien simplifié mais a **perdu le signe moins**. Simplifier ne change jamais le signe."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "priorites",
+      "enonce": "Combien vaut $\\dfrac{2}{3} + \\dfrac{1}{2} \\times \\dfrac{4}{5}$ ?",
+      "choix": [
+        "$\\dfrac{14}{15}$",
+        "$\\dfrac{16}{15}$",
+        "$\\dfrac{7}{6}$",
+        "$\\dfrac{8}{15}$"
+      ],
+      "reponse": 1,
+      "explication": "La **multiplication passe avant l'addition** : $\\dfrac{1}{2} \\times \\dfrac{4}{5} = \\dfrac{4}{10} = \\dfrac{2}{5}$, puis $\\dfrac{2}{3} + \\dfrac{2}{5} = \\dfrac{10}{15} + \\dfrac{6}{15} = \\dfrac{16}{15}$. Le distracteur $\\dfrac{14}{15}$ est exactement le résultat obtenu en calculant **de gauche à droite** ($\\dfrac{2}{3} + \\dfrac{1}{2} = \\dfrac{7}{6}$, puis $\\times \\dfrac{4}{5}$) : c'est le piège des priorités, et il donne un résultat très proche du bon."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "expressions-plusieurs-operations",
+      "enonce": "Combien vaut $-\\dfrac{1}{2} - \\dfrac{3}{4} \\div \\dfrac{3}{8}$ ?",
+      "choix": [
+        "$-\\dfrac{5}{2}$",
+        "$-\\dfrac{10}{3}$",
+        "$\\dfrac{3}{2}$",
+        "$-\\dfrac{25}{32}$"
+      ],
+      "reponse": 0,
+      "explication": "La division d'abord : $\\dfrac{3}{4} \\div \\dfrac{3}{8} = \\dfrac{3}{4} \\times \\dfrac{8}{3} = \\dfrac{24}{12} = 2$. Puis $-\\dfrac{1}{2} - 2 = -\\dfrac{1}{2} - \\dfrac{4}{2} = -\\dfrac{5}{2}$. Trois pièges différents dans les distracteurs : $-\\dfrac{10}{3}$ fait la soustraction **avant** la division, $\\dfrac{3}{2}$ transforme le « moins 2 » en « plus 2 » (signe perdu), $-\\dfrac{25}{32}$ **multiplie** au lieu de diviser."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "problemes",
+      "enonce": "Un ruban de $\\dfrac{15}{4}$ m est coupé en morceaux de $\\dfrac{5}{8}$ m. Combien obtient-on de morceaux ?",
+      "choix": [
+        "$\\dfrac{75}{32}$",
+        "$\\dfrac{1}{6}$",
+        "$6$",
+        "$\\dfrac{32}{75}$"
+      ],
+      "reponse": 2,
+      "explication": "« Combien de morceaux de $\\dfrac{5}{8}$ tiennent dans $\\dfrac{15}{4}$ ? » est une **division** : $\\dfrac{15}{4} \\div \\dfrac{5}{8} = \\dfrac{15}{4} \\times \\dfrac{8}{5} = \\dfrac{120}{20} = 6$. Le piège est de multiplier parce que l'énoncé ne contient pas le mot « diviser » — ça donne $\\dfrac{75}{32}$. Contrôle de vraisemblance décisif : un nombre de morceaux est forcément un **nombre entier assez grand** ($3{,}75$ m découpés en bouts d'environ $0{,}6$ m), ce qui élimine d'emblée les trois fractions."
+    }
+  ]
+}

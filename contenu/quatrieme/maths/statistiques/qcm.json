@@ -1,0 +1,119 @@
+{
+  "id": "4e-math-statistiques-qcm",
+  "chapitre": "4e-math-statistiques",
+  "titre": "QCM — Statistiques : moyenne pondérée, médiane, étendue",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "mediane",
+      "enonce": "Quelle est la médiane de la série rangée $3$ ; $7$ ; $8$ ; $12$ ; $20$ ?",
+      "choix": ["$10$", "$8$", "$7$", "$11{,}5$"],
+      "reponse": 1,
+      "explication": "Il y a $5$ valeurs : la médiane est celle de rang $\\dfrac{5+1}{2} = 3$, donc $8$ — deux valeurs avant, deux après. Le piège est de calculer au lieu de repérer : $10$ est la **moyenne** ($\\dfrac{50}{5}$) et $11{,}5$ la demi-somme des deux **extrêmes**, qui n'est pas la médiane."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "etendue",
+      "enonce": "Quelle est l'étendue de la série $8$ ; $8$ ; $9$ ; $11$ ; $12$ ; $14$ ; $15$ ?",
+      "choix": ["$15$", "$23$", "$11$", "$7$"],
+      "reponse": 3,
+      "explication": "L'étendue est la différence entre la plus grande et la plus petite valeur : $15 - 8 = 7$. Le piège classique est de donner la valeur maximale ($15$) ou d'**additionner** les extrêmes ($23$) au lieu de les soustraire. $11$ est la médiane, pas l'étendue."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "automatismes",
+      "enonce": "Dans un tableau d'effectifs, l'effectif total vaut $30$ et les effectifs connus sont $6$, $9$ et $4$. Quel est l'effectif manquant ?",
+      "choix": ["$11$", "$19$", "$9$", "$49$"],
+      "reponse": 0,
+      "explication": "La somme des effectifs doit égaler l'effectif total : $6+9+4 = 19$, donc il manque $30 - 19 = 11$. Le piège est de s'arrêter à la somme des effectifs connus ($19$) ou d'**additionner** $30$ et $19$ au lieu de soustraire ($49$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "moyenne-ponderee",
+      "enonce": "Quelle est la moyenne de la série donnée par ce tableau ? Valeurs : $5$, $6$, $8$, $10$ — effectifs respectifs : $2$, $3$, $4$, $1$.",
+      "choix": ["$7{,}25$", "$2{,}9$", "$7$", "$29$"],
+      "reponse": 2,
+      "explication": "On multiplie chaque valeur par son effectif : $\\dfrac{5\\times2 + 6\\times3 + 8\\times4 + 10\\times1}{10} = \\dfrac{70}{10} = 7$. Le piège est de diviser par le nombre de **colonnes** ($\\dfrac{29}{4} = 7{,}25$) ou d'oublier de multiplier par les effectifs ($\\dfrac{29}{10} = 2{,}9$). Contrôle : la moyenne doit être entre $5$ et $10$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "mediane",
+      "enonce": "Quelle est la médiane de la série $10$ ; $4$ ; $16$ ; $9$ ; $15$ ; $6$ ?",
+      "choix": ["$12{,}5$", "$10$", "$9{,}5$", "$19$"],
+      "reponse": 2,
+      "explication": "Il faut **ranger d'abord** : $4$ ; $6$ ; $9$ ; $10$ ; $15$ ; $16$. L'effectif est pair, donc on prend la demi-somme des deux valeurs centrales : $\\dfrac{9+10}{2} = 9{,}5$. Le piège n°1 est de prendre le milieu de la liste **non rangée** ($\\dfrac{16+9}{2} = 12{,}5$) ; le piège n°2 est d'oublier de diviser par $2$ ($19$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "etendue",
+      "enonce": "Nombre de frères et sœurs des élèves d'une classe. Valeurs : $0$, $1$, $2$, $4$ — effectifs respectifs : $3$, $8$, $6$, $1$. Quelle est l'étendue de cette série ?",
+      "choix": ["$7$", "$8$", "$18$", "$4$"],
+      "reponse": 3,
+      "explication": "L'étendue se calcule sur les **valeurs**, pas sur les effectifs : $4 - 0 = 4$ frères et sœurs. Le piège est de travailler sur la ligne des effectifs ($8-1 = 7$), ou de confondre avec l'effectif maximal ($8$) ou l'effectif total ($18$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "moyenne-ponderee",
+      "enonce": "Un diagramme en barres donne les hauteurs $2$, $5$ et $3$ pour les valeurs $1$, $2$ et $3$. Quelle est la moyenne de la série ?",
+      "choix": ["$7$", "$2$", "$2{,}1$", "$10$"],
+      "reponse": 2,
+      "explication": "La hauteur d'une barre est l'**effectif** de la valeur écrite dessous, et l'effectif total ($2+5+3 = 10$) n'est pas écrit : il faut l'additionner soi-même. Moyenne $= \\dfrac{1\\times2 + 2\\times5 + 3\\times3}{10} = \\dfrac{21}{10} = 2{,}1$. Le piège est de diviser par le nombre de barres ($\\dfrac{21}{3} = 7$) ou de faire la moyenne des seules valeurs $1$, $2$, $3$ (soit $2$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "valeur-extreme",
+      "enonce": "À la série $8$ ; $9$ ; $10$ ; $11$ ; $12$ (moyenne $10$, médiane $10$) on ajoute la valeur $20$. Que se passe-t-il ?",
+      "choix": [
+        "La médiane augmente plus que la moyenne",
+        "Ni la moyenne ni la médiane ne changent",
+        "La moyenne ne change pas, seule la médiane change",
+        "La moyenne augmente d'environ $1{,}7$ alors que la médiane n'augmente que de $0{,}5$"
+      ],
+      "reponse": 3,
+      "explication": "Nouvelle moyenne : $\\dfrac{70}{6} \\approx 11{,}7$, soit $+1{,}7$. Nouvelle médiane : l'effectif devient pair, donc $\\dfrac{10+11}{2} = 10{,}5$, soit $+0{,}5$. Le piège est de croire que les deux indicateurs réagissent pareil : la moyenne fait entrer le $20$ dans une **somme** et en subit tout le poids, la médiane ne regarde qu'une **position**."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "comparaison-series",
+      "enonce": "Classe A : $9$ ; $10$ ; $10$ ; $10$ ; $11$. Classe B : $2$ ; $6$ ; $10$ ; $14$ ; $18$. Quel indicateur permet de distinguer ces deux séries ?",
+      "choix": [
+        "La moyenne",
+        "La médiane",
+        "L'étendue",
+        "Aucun : les deux séries sont équivalentes"
+      ],
+      "reponse": 2,
+      "explication": "Les deux séries ont la même moyenne ($10$) **et** la même médiane ($10$) : ces deux indicateurs ne les séparent pas. Seule l'étendue le fait : $2$ pour A contre $16$ pour B. Le piège est de conclure « même moyenne, donc même chose » : la moyenne décrit le niveau, l'étendue décrit la **dispersion**."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "tableur",
+      "enonce": "Quelle formule de tableur donne l'étendue des données saisies en $A1{:}A20$ ?",
+      "choix": [
+        "$=$MAX(A1:A20)$-$MIN(A1:A20)",
+        "$=$ETENDUE(A1:A20)",
+        "$=$MEDIANE(A1:A20)",
+        "$=$MOYENNE(A1:A20)$-$MIN(A1:A20)"
+      ],
+      "reponse": 0,
+      "explication": "Le tableur n'a **pas** de fonction « ETENDUE » : on la fabrique en soustrayant le minimum au maximum. Le piège est d'inventer une fonction par analogie avec MOYENNE et MEDIANE, qui existent bien, elles. La dernière proposition mesure l'écart entre la moyenne et le minimum, ce qui n'est pas l'étendue."
+    }
+  ]
+}

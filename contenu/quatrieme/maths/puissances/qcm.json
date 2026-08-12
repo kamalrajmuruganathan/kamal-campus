@@ -1,0 +1,114 @@
+{
+  "id": "4e-math-puissances-qcm",
+  "chapitre": "4e-math-puissances",
+  "titre": "QCM — Puissances d'exposant positif",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Combien vaut $2^5$ ?",
+      "choix": ["$32$", "$10$", "$25$", "$16$"],
+      "reponse": 0,
+      "explication": "L'exposant compte les **facteurs**, il n'en est pas un : $2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$. Le choix $10$ vient du piège classique $2 \\times 5$ ; le choix $25$ inverse base et exposant ($5^2$) ; le choix $16$ ne compte que quatre facteurs."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "puissances-de-10",
+      "enonce": "Combien vaut $10^6$ ?",
+      "choix": ["$100\\,000$", "$60$", "$1\\,000\\,000$", "$10\\,000\\,000$"],
+      "reponse": 2,
+      "explication": "Pour une puissance de 10, l'exposant donne directement le **nombre de zéros** : $10^6$ s'écrit $1$ suivi de six zéros. Le piège est de compter les chiffres au lieu des zéros — $1\\,000\\,000$ a sept chiffres mais six zéros."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "produit-meme-base",
+      "enonce": "Écris $3^2 \\times 3^5$ sous la forme d'une seule puissance.",
+      "choix": ["$3^{10}$", "$9^7$", "$3^7$", "$6^7$"],
+      "reponse": 2,
+      "explication": "Même base : on **garde la base** et on **additionne** les exposants, $2 + 5 = 7$. En clair, on empile $2$ facteurs $3$ puis $5$ facteurs $3$, soit $7$ en tout. Le choix $3^{10}$ multiplie les exposants ; $9^7$ et $6^7$ touchent à la base, qui ne doit pas bouger."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "produit-meme-exposant",
+      "enonce": "Combien vaut $2^3 \\times 5^3$ ?",
+      "choix": ["$10^3$", "$10^6$", "$7^3$", "$10^9$"],
+      "reponse": 0,
+      "explication": "Même **exposant** : on garde l'exposant et on **multiplie les bases**, $(2 \\times 5)^3 = 10^3 = 1\\,000$. Le piège est d'appliquer la règle de la même base : ici ce sont les exposants qui sont communs, donc on additionne les bases ($7^3$) ou les exposants ($10^6$) à tort."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "base-negative",
+      "enonce": "Combien vaut $(-2)^4$ ?",
+      "choix": ["$-16$", "$16$", "$-8$", "$8$"],
+      "reponse": 1,
+      "explication": "Les parenthèses indiquent que c'est le nombre $-2$ **tout entier** qui est élevé à la puissance $4$. Quatre facteurs négatifs se regroupent en deux paires, chaque paire donnant un produit positif : le résultat est positif. Exposant **pair** → positif. Le choix $-16$ est la valeur de $-2^4$, sans parenthèses — ce n'est pas la même écriture."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "puissances-de-10",
+      "enonce": "Laquelle de ces écritures est égale à $45\\,000$ ?",
+      "choix": [
+        "$4{,}5 \\times 10^3$",
+        "$45 \\times 10^4$",
+        "$4{,}5 \\times 10^5$",
+        "$4{,}5 \\times 10^4$"
+      ],
+      "reponse": 3,
+      "explication": "Multiplier par $10^4$ décale la virgule de **quatre** rangs vers la droite : $4{,}5 \\times 10^4 = 45\\,000$. Le piège est de compter les zéros de $45\\,000$ (il y en a trois) au lieu des rangs de décalage depuis $4{,}5$. Contrôle rapide : $45 \\times 10^4 = 450\\,000$, dix fois trop grand."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "cas-particuliers",
+      "enonce": "Combien vaut $-3^2$ ?",
+      "choix": ["$9$", "$-9$", "$-6$", "$6$"],
+      "reponse": 1,
+      "explication": "Sans parenthèses, la puissance porte **seulement sur le $3$** : on calcule $3^2 = 9$, puis on applique le signe moins qui reste devant. Le piège est de lire $(-3)^2$, qui vaut $9$ : c'est une écriture différente. Les choix $\\pm 6$ viennent de $3 \\times 2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "produit-meme-base",
+      "enonce": "Combien vaut $2^3 + 2^4$ ?",
+      "choix": ["$2^7$", "$2^{12}$", "$24$", "$4^7$"],
+      "reponse": 2,
+      "explication": "Ici il y a un **plus**, pas un produit : aucune règle sur les puissances ne s'applique. On calcule chaque puissance puis on additionne, $8 + 16 = 24$. Le piège est d'additionner les exposants par réflexe, ce qui donnerait $2^7 = 128$ — soit plus de cinq fois trop."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "produit-meme-exposant",
+      "enonce": "Peut-on simplifier $2^3 \\times 5^4$ à l'aide d'une des deux règles du cours ?",
+      "choix": [
+        "Oui : $10^7$",
+        "Oui : $10^{12}$",
+        "Oui : $7^{12}$",
+        "Non : ni la base ni l'exposant ne sont communs"
+      ],
+      "reponse": 3,
+      "explication": "Avant d'appliquer une règle, il faut vérifier **ce qui est commun**. Ici les bases diffèrent ($2$ et $5$) et les exposants aussi ($3$ et $4$) : aucune des deux règles ne s'applique, il faut calculer $8 \\times 625 = 5\\,000$. Le piège est de bricoler les deux règles en même temps."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "problemes",
+      "enonce": "Une population de $500$ bactéries double toutes les heures. Combien y en a-t-il au bout de $10$ heures ?",
+      "choix": ["$5\\,000$", "$512\\,000$", "$10\\,000$", "$1\\,024$"],
+      "reponse": 1,
+      "explication": "Doubler $10$ fois, c'est multiplier $10$ fois par $2$, donc par $2^{10} = 1\\,024$ : $500 \\times 1\\,024 = 512\\,000$. Le piège est de transformer « doubler $10$ fois » en « multiplier par $10$ » ($5\\,000$) ou par $20$ ($10\\,000$) : une répétition de produits donne une **puissance**, pas un produit unique. Le choix $1\\,024$ oublie l'effectif de départ."
+    }
+  ]
+}
