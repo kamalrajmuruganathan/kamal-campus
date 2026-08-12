@@ -1,0 +1,119 @@
+{
+  "id": "5e-math-pensee-informatique-qcm",
+  "chapitre": "5e-math-pensee-informatique",
+  "titre": "QCM — La pensée informatique",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "sequence",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nchoisir 7\najouter 3\nmultiplier par 2\nafficher le résultat\n```",
+      "choix": ["$10$", "$17$", "$20$", "$14$"],
+      "reponse": 2,
+      "explication": "On exécute **de haut en bas** : $7 + 3 = 10$, puis $10 \\times 2 = 20$. Le piège est $17$ : c'est ce qu'on obtient en multipliant d'abord ($7 \\times 2 = 14$) puis en ajoutant $3$, donc en inversant l'ordre des instructions. Et $10$, c'est s'arrêter avant la dernière ligne."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "entrees-sorties",
+      "enonce": "Dans ce programme, quelle est l'**entrée** ?\n\n```\ndemander « Quel est ton âge ? » et mettre la réponse dans age\nafficher age + 10\n```",
+      "choix": [
+        "Le nombre affiché à la fin",
+        "L'âge saisi par l'utilisateur",
+        "Le nombre $10$ écrit dans le programme",
+        "L'instruction « afficher »"
+      ],
+      "reponse": 1,
+      "explication": "L'entrée est ce que le programme **reçoit** de l'extérieur : ici, la valeur saisie au clavier. Le nombre affiché est la **sortie** — c'est la confusion la plus fréquente. Le $10$, lui, est écrit dans le programme : il ne vient de personne."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "expression-informatique",
+      "enonce": "La moyenne de deux notes est $m = \\dfrac{a+b}{2}$. Quelle expression informatique la traduit correctement ?",
+      "choix": ["`a + b / 2`", "`(a + b) / 2`", "`a / 2 + b`", "`2 / (a + b)`"],
+      "reponse": 1,
+      "explication": "La barre de fraction regroupe **tout le numérateur**. Quand on écrit la formule à plat, ce regroupement disparaît : il faut le remettre avec des **parenthèses**. Sans elles, `a + b / 2` calcule $a + \\dfrac{b}{2}$, car la division est prioritaire sur l'addition."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "prevoir-valeur",
+      "enonce": "L'utilisateur saisit $6$, rangé dans la variable `nombre`. Qu'affiche l'instruction `afficher nombre × nombre − nombre` ?",
+      "choix": ["$0$", "$12$", "$36$", "$30$"],
+      "reponse": 3,
+      "explication": "On remplace chaque `nombre` par $6$ : $6 \\times 6 - 6 = 36 - 6 = 30$. Le piège est $0$ : il vient de calculer $6 \\times (6-6)$, c'est-à-dire d'inventer une parenthèse qui n'est pas écrite. La multiplication est prioritaire, elle se fait en premier."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "boucle",
+      "enonce": "Combien d'instructions sont **exécutées** en tout par ce programme ?\n\n```\nrépéter 4 fois\n    avancer de 50\n    tourner de 90°\nfin répéter\n```",
+      "choix": ["$2$", "$4$", "$6$", "$8$"],
+      "reponse": 3,
+      "explication": "La boucle contient $2$ instructions et fait $4$ tours : $4 \\times 2 = 8$ instructions exécutées. Le piège est de compter les instructions **écrites** ($2$) au lieu des instructions **exécutées** — c'est justement l'intérêt de la boucle : écrire peu, exécuter beaucoup."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "sequence",
+      "enonce": "Ces deux programmes utilisent les mêmes instructions dans un ordre différent.\n\n```\nProgramme A          Programme B\nchoisir 3            choisir 3\najouter 2            multiplier par 5\nmultiplier par 5     ajouter 2\nafficher             afficher\n```\n\nQuelle affirmation est vraie ?",
+      "choix": [
+        "Les deux affichent le même résultat, car ce sont les mêmes instructions",
+        "A affiche $25$ et B affiche $17$",
+        "A affiche $17$ et B affiche $25$",
+        "A affiche $25$ et B affiche $25$"
+      ],
+      "reponse": 1,
+      "explication": "A calcule $(3+2) \\times 5 = 25$ ; B calcule $3 \\times 5 + 2 = 17$. Une séquence est une liste **ordonnée** : mêmes instructions, ordre différent, résultat différent. Croire le contraire est l'erreur de raisonnement la plus coûteuse en programmation."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "modifier-parametres",
+      "enonce": "Ce programme trace un carré.\n\n```\nrépéter 4 fois\n    avancer de 50\n    tourner de 90°\nfin répéter\n```\n\nQuels paramètres faut-il modifier pour tracer un **triangle équilatéral** ?",
+      "choix": [
+        "Répéter $3$ fois et tourner de $60°$",
+        "Répéter $4$ fois et tourner de $120°$",
+        "Répéter $3$ fois et tourner de $120°$",
+        "Répéter $3$ fois et tourner de $90°$"
+      ],
+      "reponse": 2,
+      "explication": "Trois côtés, donc $3$ tours de boucle. Pour l'angle, attention au piège : ce n'est pas l'angle du triangle ($60°$) mais l'angle du **virage**. En parcourant la figure entière, le robot fait un tour complet de $360°$, réparti en $3$ virages identiques : $360 \\div 3 = 120°$. Vérification sur le carré : $360 \\div 4 = 90°$ ✓"
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "variable",
+      "enonce": "L'utilisateur saisit $7$, rangé dans la variable `a`. Qu'affiche ce programme ?\n\n```\nafficher a + 1\nafficher a + 2\n```",
+      "choix": ["$8$ puis $9$", "$8$ puis $10$", "$7$ puis $8$", "$9$ puis $10$"],
+      "reponse": 0,
+      "explication": "`afficher` produit une **sortie**, il ne range rien dans la variable : `a` vaut toujours $7$ à la deuxième ligne. On obtient donc $7+1 = 8$ puis $7+2 = 9$. Le piège est $8$ puis $10$ : il suppose que la première ligne a remplacé $7$ par $8$. En 5e, une variable se **lit**, elle ne se modifie pas."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "boucle",
+      "enonce": "Combien de mots ce programme affiche-t-il en tout ?\n\n```\nrépéter 3 fois\n    afficher « bravo »\n    afficher « super »\nfin répéter\nafficher « fin »\n```",
+      "choix": ["$4$", "$6$", "$7$", "$9$"],
+      "reponse": 2,
+      "explication": "Deux affichages répétés $3$ fois font $6$ mots, puis `afficher « fin »` s'exécute **une seule fois** : $6 + 1 = 7$. Le piège est $9$ : il vient de croire que la dernière ligne est dans la boucle. C'est le **décalage vers la droite** qui dit ce qui est répété, et `fin répéter` ferme le bloc avant elle."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "expression-informatique",
+      "enonce": "Sans exécuter le programme, prévois la valeur de l'expression informatique `4 + 3 * 2`.",
+      "choix": ["$10$", "$11$", "$14$", "$24$"],
+      "reponse": 0,
+      "explication": "La machine applique **les mêmes priorités qu'en mathématiques** : la multiplication d'abord, $3 \\times 2 = 6$, puis $4 + 6 = 10$. Le piège est $14$ : c'est le résultat d'un calcul mené de gauche à droite, comme sur une calculatrice basique. Pour obtenir $14$, il faudrait écrire `(4 + 3) * 2`."
+    }
+  ]
+}

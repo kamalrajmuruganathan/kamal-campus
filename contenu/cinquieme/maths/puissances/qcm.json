@@ -1,0 +1,114 @@
+{
+  "id": "5e-math-puissances-qcm",
+  "chapitre": "5e-math-puissances",
+  "titre": "QCM — Puissances : carré et cube",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "notation",
+      "enonce": "Que vaut $5^3$ ?",
+      "choix": [
+        "$5 \\times 3 = 15$",
+        "$5 + 5 + 5 = 15$",
+        "$5 \\times 5 \\times 5 = 125$",
+        "$3 \\times 3 \\times 3 \\times 3 \\times 3 = 243$"
+      ],
+      "reponse": 2,
+      "explication": "L'exposant **compte les facteurs**, il n'en est pas un : $5^3$ signifie « trois facteurs $5$ ». Le piège le plus fréquent est de multiplier la base par l'exposant ($5 \\times 3$). Le dernier choix inverse base et exposant."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "carres-a-connaitre",
+      "enonce": "Combien vaut $9^2$ ?",
+      "choix": ["$18$", "$729$", "$99$", "$81$"],
+      "reponse": 3,
+      "explication": "$9^2 = 9 \\times 9 = 81$, un carré à connaître par cœur. $18$ vient de $9 \\times 2$ (exposant pris pour un facteur) et $729$ est en réalité $9^3$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "priorites",
+      "enonce": "Combien vaut $5 + 3^2$ ?",
+      "choix": ["$64$", "$14$", "$11$", "$16$"],
+      "reponse": 1,
+      "explication": "La puissance se calcule **avant** l'addition : $3^2 = 9$, puis $5 + 9 = 14$. $64$ correspond à $(5+3)^2$ : l'addition a été faite d'abord, ce que rien n'autorise ici puisqu'il n'y a pas de parenthèses. $11$ vient de $5 + 3 \\times 2$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "priorites",
+      "enonce": "Combien vaut $2 \\times 4^2$ ?",
+      "choix": ["$16$", "$128$", "$32$", "$64$"],
+      "reponse": 2,
+      "explication": "Le carré ne porte que sur le $4$ : $4^2 = 16$, puis $2 \\times 16 = 32$. Le piège est d'écrire $(2 \\times 4)^2 = 8^2 = 64$ : la multiplication ne se fait qu'**après** la puissance."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "ecrire-en-puissance",
+      "enonce": "Parmi ces égalités, laquelle est vraie ?",
+      "choix": ["$64 = 4^3$", "$64 = 3^4$", "$64 = 4^4$", "$64 = 6^4$"],
+      "reponse": 0,
+      "explication": "$4^3 = 4 \\times 4 \\times 4 = 64$. Le piège est d'intervertir base et exposant : $3^4 = 81$, ce n'est pas la même chose. Remarque : $64$ s'écrit aussi $8^2$, un nombre peut avoir plusieurs écritures en puissance."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "cube",
+      "enonce": "Un cube a une arête de $10$ cm. Quel est son volume ?",
+      "choix": [
+        "$30\\ \\text{cm}^3$",
+        "$100\\ \\text{cm}^3$",
+        "$1\\,000\\ \\text{cm}^2$",
+        "$1\\,000\\ \\text{cm}^3$"
+      ],
+      "reponse": 3,
+      "explication": "Le volume d'un cube d'arête $a$ vaut $a^3$, donc $10^3 = 1\\,000$. Deux pièges ici : calculer $10^2 = 100$ (le carré au lieu du cube), et répondre en cm$^2$ — un volume s'exprime toujours en unité **cube**."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "expression-litterale",
+      "enonce": "Que vaut l'expression $3x^2$ pour $x = 4$ ?",
+      "choix": ["$144$", "$48$", "$24$", "$576$"],
+      "reponse": 1,
+      "explication": "On remplace, puis on respecte les priorités : $3 \\times 4^2 = 3 \\times 16 = 48$. Le carré porte sur $x$ **seulement**, pas sur $3x$ : $144$ correspond à $(3 \\times 4)^2$. $24$ vient de $3 \\times 4 \\times 2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "priorites",
+      "enonce": "Combien vaut $3 + 2 \\times 5^2$ ?",
+      "choix": ["$53$", "$125$", "$103$", "$169$"],
+      "reponse": 0,
+      "explication": "Dans l'ordre : $5^2 = 25$, puis $2 \\times 25 = 50$, puis $3 + 50 = 53$. $125$ vient de $(3+2) \\times 5^2$ et $103$ de $3 + (2 \\times 5)^2$ : dans les deux cas une opération a été faite avant la puissance."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "pieges",
+      "enonce": "Combien vaut $3^2 + 4^2$ ?",
+      "choix": ["$49$", "$14$", "$25$", "$12$"],
+      "reponse": 2,
+      "explication": "$9 + 16 = 25$. Le piège classique est de répondre $49$, c'est-à-dire $(3+4)^2$ : une puissance **ne se distribue pas** sur une somme, $3^2 + 4^2$ et $(3+4)^2$ n'ont pas la même valeur. $14$ vient de $3 \\times 2 + 4 \\times 2$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "carre",
+      "enonce": "Un carré a une aire de $81\\ \\text{cm}^2$. Quelle est la longueur de son côté ?",
+      "choix": ["$81\\ \\text{cm}$", "$40,5\\ \\text{cm}$", "$8,1\\ \\text{cm}$", "$9\\ \\text{cm}$"],
+      "reponse": 3,
+      "explication": "L'aire d'un carré de côté $c$ vaut $c^2$. Il faut donc trouver le nombre dont le carré fait $81$ : c'est $9$, car $9 \\times 9 = 81$. Le piège est de **diviser par $2$** ($40,5$) au lieu de chercher le nombre qui, multiplié par lui-même, donne l'aire."
+    }
+  ]
+}

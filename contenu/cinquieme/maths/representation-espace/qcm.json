@@ -1,0 +1,109 @@
+{
+  "id": "5e-math-representation-espace-qcm",
+  "chapitre": "5e-math-representation-espace",
+  "titre": "QCM — Représentation de l'espace",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "solides-usuels",
+      "enonce": "Combien de faces possède un prisme droit dont la base est un triangle ?",
+      "choix": ["$3$ faces", "$4$ faces", "$5$ faces", "$6$ faces"],
+      "reponse": 2,
+      "explication": "Un prisme droit a **deux bases** (ici deux triangles) **plus** une face latérale par côté de la base : $2 + 3 = 5$. Le piège est de ne compter que les $3$ rectangles latéraux, ou de répondre $6$ par réflexe « comme un pavé »."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "volumes",
+      "enonce": "Quel est le volume d'un cube d'arête $4$ cm ?",
+      "choix": ["$16$ cm³", "$12$ cm³", "$96$ cm³", "$64$ cm³"],
+      "reponse": 3,
+      "explication": "$V = a \\times a \\times a = 4 \\times 4 \\times 4 = 64$ cm³. Le piège classique est de confondre volume et aire : $16$ cm² est l'aire d'**une face**, $96$ cm² l'aire des **six** faces. Un volume s'exprime en cm³."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "perspective-cavaliere",
+      "enonce": "Dans une représentation en perspective cavalière, que fait-on des arêtes fuyantes (celles qui partent vers l'arrière) ?",
+      "choix": [
+        "Elles sont parallèles entre elles et toutes réduites dans la même proportion",
+        "Elles gardent toutes leur longueur réelle",
+        "Elles convergent vers un point de fuite unique",
+        "Elles sont tracées perpendiculairement à la face avant"
+      ],
+      "reponse": 0,
+      "explication": "La perspective cavalière **conserve le parallélisme** : les fuyantes ne se rejoignent jamais. Le piège est de la confondre avec la perspective des peintres, qui elle utilise un point de fuite. Les fuyantes sont en revanche raccourcies (coefficient $0{,}5$ ou $0{,}7$ le plus souvent), donc elles ne gardent pas leur longueur réelle."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "vues-et-empilements",
+      "enonce": "Un empilement plein de cubes forme un pavé de $4$ cubes de long, $3$ de large et $2$ de haut. Combien de carrés voit-on sur la vue de dessus ?",
+      "choix": ["$24$ carrés", "$12$ carrés", "$8$ carrés", "$6$ carrés"],
+      "reponse": 1,
+      "explication": "La vue de dessus ne montre que la **couche du haut** vue à plat : $4 \\times 3 = 12$ carrés. Le piège est de donner le nombre **total** de cubes ($4 \\times 3 \\times 2 = 24$) : la hauteur n'apparait pas sur une vue de dessus. $8$ serait la vue de face, $6$ la vue de côté."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "patrons",
+      "enonce": "Sur le patron d'un cylindre de révolution de rayon $5$ cm et de hauteur $12$ cm, quelle est la largeur du rectangle (le côté qui s'enroule autour des disques) ? On prend $\\pi \\approx 3{,}14$.",
+      "choix": ["$15{,}7$ cm", "$78{,}5$ cm", "$12$ cm", "$31{,}4$ cm"],
+      "reponse": 3,
+      "explication": "Le côté qui s'enroule fait le **tour** du disque de base : c'est son **périmètre**, $2\\pi r = 2 \\times 3{,}14 \\times 5 = 31{,}4$ cm. Le piège est d'oublier le facteur $2$ (on obtient $15{,}7$) ou de calculer l'**aire** du disque $\\pi r^2 = 78{,}5$ — mais une aire ne peut pas être la longueur d'un côté."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "unites-volume-capacite",
+      "enonce": "À combien de cm³ correspondent $2{,}5$ dm³ ?",
+      "choix": ["$25$ cm³", "$250$ cm³", "$2500$ cm³", "$25\\,000$ cm³"],
+      "reponse": 2,
+      "explication": "Entre deux unités de volume qui se suivent, le facteur est **$1000$**, pas $10$ : $2{,}5 \\times 1000 = 2500$ cm³. Le piège est d'appliquer le $\\times 10$ des longueurs. Retiens le pourquoi : un cube de $1$ dm de côté contient $10 \\times 10 \\times 10 = 1000$ cubes de $1$ cm de côté."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "volumes",
+      "enonce": "Un prisme droit a pour base un triangle rectangle dont les côtés de l'angle droit mesurent $3$ cm et $4$ cm. Sa hauteur est de $10$ cm. Quel est son volume ?",
+      "choix": ["$120$ cm³", "$60$ cm³", "$30$ cm³", "$12$ cm³"],
+      "reponse": 1,
+      "explication": "$V = \\mathcal{A}_{\\text{base}} \\times h$. L'aire du triangle vaut $\\dfrac{3 \\times 4}{2} = 6$ cm², donc $V = 6 \\times 10 = 60$ cm³. Le piège n°1 est d'**oublier le $\\div 2$** de l'aire du triangle : on trouve $120$ cm³, soit le double. $30$ cm³ vient d'un $\\div 2$ appliqué **une fois de trop**, à la fin. $12$ cm³ vient d'un calcul arrêté à $3 \\times 4$, sans multiplier par la hauteur."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "volumes",
+      "enonce": "Quel est le volume d'un cylindre de révolution de rayon $5$ cm et de hauteur $12$ cm ? On prend $\\pi \\approx 3{,}14$.",
+      "choix": ["$376{,}8$ cm³", "$3768$ cm³", "$942$ cm³", "$78{,}5$ cm³"],
+      "reponse": 2,
+      "explication": "$V = \\pi r^2 \\times h = 3{,}14 \\times 25 \\times 12 = 942$ cm³. Deux pièges : utiliser le **diamètre** $10$ au lieu du rayon donne $3768$ cm³ (quatre fois trop) ; utiliser le **périmètre** $2\\pi r$ au lieu de l'aire $\\pi r^2$ donne $376{,}8$ cm³. Et $78{,}5$ cm² n'est que l'aire de la base, on a oublié de multiplier par la hauteur."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "aire-du-disque",
+      "enonce": "Quelle est l'aire d'un disque de **diamètre** $6$ cm ? On prend $\\pi \\approx 3{,}14$.",
+      "choix": ["$28{,}26$ cm²", "$113{,}04$ cm²", "$18{,}84$ cm²", "$9{,}42$ cm²"],
+      "reponse": 0,
+      "explication": "L'énoncé donne le **diamètre** : le rayon vaut donc $6 \\div 2 = 3$ cm, et $\\mathcal{A} = \\pi r^2 = 3{,}14 \\times 9 = 28{,}26$ cm². Le piège est de prendre $6$ pour le rayon, ce qui donne $113{,}04$ cm², soit **quatre fois trop**. $18{,}84$ cm serait le périmètre $2\\pi r$, pas une aire."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "unites-volume-capacite",
+      "enonce": "Un aquarium a la forme d'un pavé droit de $60$ cm $\\times$ $30$ cm $\\times$ $40$ cm. Quelle est sa contenance ?",
+      "choix": ["$7{,}2$ L", "$72$ L", "$720$ L", "$72\\,000$ L"],
+      "reponse": 1,
+      "explication": "$V = 60 \\times 30 \\times 40 = 72\\,000$ cm³. On passe aux dm³ en divisant par **$1000$** : $72$ dm³. Et $1$ dm³ $= 1$ L, donc $72$ L. Le piège est de diviser par $10$ ou par $100$ : ici le facteur entre cm³ et dm³ est bien $1000$."
+    }
+  ]
+}

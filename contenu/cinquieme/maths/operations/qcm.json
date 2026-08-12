@@ -1,0 +1,129 @@
+{
+  "id": "5e-math-operations-qcm",
+  "chapitre": "5e-math-operations",
+  "titre": "QCM — Opérations",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "priorites-operatoires",
+      "enonce": "Combien vaut $3 + 4 \\times 5$ ?",
+      "choix": ["$35$", "$23$", "$60$", "$12$"],
+      "reponse": 1,
+      "explication": "La multiplication passe **avant** l'addition : on calcule d'abord $4 \\times 5 = 20$, puis $3 + 20 = 23$. Le piège est de lire de gauche à droite comme une phrase ($3+4=7$ puis $7 \\times 5 = 35$) : les priorités ne se lisent pas dans l'ordre d'écriture."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "nommer-un-calcul",
+      "enonce": "Dans le calcul $7 \\times 4$, comment appelle-t-on les nombres $7$ et $4$ ?",
+      "choix": [
+        "les facteurs",
+        "les termes",
+        "le dividende et le diviseur",
+        "les restes"
+      ],
+      "reponse": 0,
+      "explication": "$7 \\times 4$ est un **produit**, et les nombres d'un produit sont ses **facteurs**. Le piège classique : « termes » est réservé aux sommes et aux différences. Même paire de nombres, mais le mot dépend de l'opération."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "division-euclidienne",
+      "enonce": "Dans la division euclidienne de $47$ par $6$, quel est le **reste** ?",
+      "choix": ["$7$", "$8$", "$6$", "$5$"],
+      "reponse": 3,
+      "explication": "$47 = 6 \\times 7 + 5$, donc le reste vaut $5$ et le quotient $7$. Le piège est de donner le **quotient** à la place du reste. Contrôle imparable : le reste est toujours **strictement inférieur au diviseur**, donc ici forcément plus petit que $6$ — ce qui élimine $7$, $8$ et $6$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "criteres-de-divisibilite",
+      "enonce": "Lequel de ces nombres est divisible par $9$ ?",
+      "choix": ["$4\\,251$", "$6\\,831$", "$5\\,550$", "$1\\,234$"],
+      "reponse": 1,
+      "explication": "On additionne les chiffres : $6+8+3+1 = 18$, multiple de $9$. Le piège est ailleurs : $4\\,251$ donne $12$ et $5\\,550$ donne $15$, tous deux multiples de **$3$ mais pas de $9$**. Être divisible par $3$ n'entraine pas être divisible par $9$ — l'implication ne marche que dans l'autre sens."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "priorites-operatoires",
+      "enonce": "Combien vaut $20 - 8 - 5$ ?",
+      "choix": ["$7$", "$17$", "$13$", "$23$"],
+      "reponse": 0,
+      "explication": "Deux soustractions ont la **même priorité** : on calcule de **gauche à droite**, soit $(20-8)-5 = 12-5 = 7$. Le piège est de commencer par $8-5=3$ pour trouver $17$ : cela reviendrait à écrire $20-(8-5)$, ce qui n'est pas le calcul demandé."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "distributivite",
+      "enonce": "Quelle décomposition permet de calculer $12 \\times 101$ de tête ?",
+      "choix": [
+        "$12 \\times 100 + 1$",
+        "$12 \\times 100 \\times 1$",
+        "$12 \\times 100 + 12 \\times 1$",
+        "$12 \\times 50 + 12 \\times 50$"
+      ],
+      "reponse": 2,
+      "explication": "On écrit $101 = 100 + 1$ puis on distribue **sur les deux termes** : $12 \\times 100 + 12 \\times 1 = 1\\,200 + 12 = 1\\,212$. Le piège est de n'oublier de multiplier que le second terme ($1\\,200 + 1$). Le dernier choix décompose $101$ en $50+50$, ce qui fait $100$ et non $101$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "division-par-un-decimal",
+      "enonce": "Combien vaut $12 \\div 0{,}25$ ?",
+      "choix": ["$3$", "$4{,}8$", "$0{,}48$", "$48$"],
+      "reponse": 3,
+      "explication": "On multiplie **les deux nombres** par $100$ pour rendre le diviseur entier : $12 \\div 0{,}25 = 1\\,200 \\div 25 = 48$. Le piège est de croire qu'une division rend toujours plus petit : diviser par un nombre **inférieur à $1$ augmente** le résultat. Le choix $3$ correspond à $12 \\times 0{,}25$ : on a multiplié au lieu de diviser."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "multiples-diviseurs",
+      "enonce": "On sait que $21 = 3 \\times 7$. Quelle affirmation est exacte ?",
+      "choix": [
+        "$21$ est un diviseur de $3$",
+        "$3$ est un multiple de $21$",
+        "$21$ est un multiple de $3$",
+        "$7$ est un multiple de $21$"
+      ],
+      "reponse": 2,
+      "explication": "$21$ s'obtient en multipliant $3$ par un entier : $21$ est donc un **multiple** de $3$, et $3$ est un **diviseur** de $21$. Le piège est d'inverser les deux mots. Repère de secours : entre entiers positifs, le multiple est le **plus grand** des deux nombres."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "programme-de-calcul",
+      "enonce": "« Choisis un nombre, ajoute $3$, puis multiplie par $5$. » Quelle expression traduit ce programme pour un nombre $n$ ?",
+      "choix": [
+        "$n + 3 \\times 5$",
+        "$(n + 3) \\times 5$",
+        "$n \\times 5 + 3$",
+        "$n + 3 + 5$"
+      ],
+      "reponse": 1,
+      "explication": "L'addition doit être faite **en premier**, or elle n'est pas prioritaire : il faut donc des **parenthèses**. Le piège est d'écrire les opérations dans l'ordre de la phrase : $n + 3 \\times 5$ vaut $n + 15$, car la multiplication passerait devant. Le choix $n \\times 5 + 3$ traduit le programme inverse (multiplier d'abord, ajouter ensuite)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "vraisemblance",
+      "enonce": "Sans poser le calcul, quel est l'ordre de grandeur de $4{,}2 \\times 19{,}8$ ?",
+      "choix": [
+        "environ $8$",
+        "environ $24$",
+        "environ $80$",
+        "environ $800$"
+      ],
+      "reponse": 2,
+      "explication": "On arrondit à des nombres ronds : $4 \\times 20 = 80$ (la valeur exacte est $83{,}16$). Le piège du choix « environ $24$ » est d'**additionner** au lieu de multiplier. Les choix $8$ et $800$ correspondent à une virgule mal placée : c'est exactement le type d'erreur que l'ordre de grandeur sert à détecter."
+    }
+  ]
+}

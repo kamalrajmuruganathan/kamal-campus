@@ -1,0 +1,154 @@
+{
+  "id": "5e-math-reperage-qcm",
+  "chapitre": "5e-math-reperage",
+  "titre": "QCM — Repérage sur une droite et dans le plan",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "droite-graduee",
+      "enonce": "Sur une droite graduée, quelle est l'abscisse du point origine ?",
+      "choix": [
+        "$1$",
+        "$0$",
+        "$-1$",
+        "Elle dépend de l'unité choisie"
+      ],
+      "reponse": 1,
+      "explication": "L'origine est **par définition** le point qui porte le nombre $0$. Le point d'abscisse $1$ est un autre point : c'est lui qui fixe l'unité. Changer d'unité déplace le $1$, jamais le $0$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "coordonnees",
+      "enonce": "Le point $A$ a pour coordonnées $(4\\,;3)$. Quelle est son abscisse ?",
+      "choix": [
+        "$4$",
+        "$3$",
+        "$7$",
+        "$(4\\,;3)$"
+      ],
+      "reponse": 0,
+      "explication": "Dans un couple $(x\\,;y)$, c'est **le premier nombre** qui est l'abscisse — la position horizontale. Le $3$ est l'ordonnée. Le piège classique est de lire le couple dans l'autre sens."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "lire-abscisse",
+      "enonce": "Sur une droite graduée, le segment allant de $0$ à $1$ est partagé en $4$ parts égales. Quelle est l'abscisse du $3^\\text{e}$ trait après $0$ ?",
+      "choix": [
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{4}{3}$",
+        "$3$"
+      ],
+      "reponse": 1,
+      "explication": "Une graduation vaut $\\dfrac{1}{4}$ d'unité, et on en compte $3$ : $3 \\times \\dfrac{1}{4} = \\dfrac{3}{4}$. Le dénominateur, c'est **le nombre de parts dans une unité** ; le numérateur, **le nombre de graduations comptées**. Le choix $\\frac43$ inverse les deux, et $3$ oublie qu'on compte des quarts, pas des unités."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "lire-abscisse",
+      "enonce": "Sur une droite graduée d'unité $1$, un point $M$ est situé exactement au milieu de $-3$ et $-2$. Quelle est son abscisse ?",
+      "choix": [
+        "$2,5$",
+        "$-3,5$",
+        "$-2,05$",
+        "$-2,5$"
+      ],
+      "reponse": 3,
+      "explication": "Le milieu de $-3$ et $-2$ est $-2{,}5$ : il est **entre** les deux, donc son abscisse aussi. Le piège est de partir de $-3$ et d'ajouter $0{,}5$ en allant vers la gauche, ce qui donnerait $-3{,}5$ : à gauche, les nombres **diminuent**, on s'éloigne de l'intervalle demandé."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "cas-particuliers",
+      "enonce": "Lequel de ces points se trouve sur l'axe des ordonnées (l'axe vertical) ?",
+      "choix": [
+        "$B(-4\\,;0)$",
+        "$C(4\\,;4)$",
+        "$A(0\\,;-4)$",
+        "$D(2\\,;0)$"
+      ],
+      "reponse": 2,
+      "explication": "Être sur l'axe **vertical**, c'est n'avoir fait aucun déplacement horizontal : l'**abscisse** vaut $0$. Les points $B$ et $D$, dont l'ordonnée est nulle, sont sur l'axe horizontal. C'est la confusion la plus fréquente : c'est la coordonnée nulle qui indique l'axe, mais pas celui qu'on croit."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère du plan, que peut-on dire des points $E(3\\,;2)$ et $F(2\\,;3)$ ?",
+      "choix": [
+        "Ils sont confondus",
+        "Ce sont deux points distincts",
+        "Ils ont la même abscisse",
+        "Ils sont tous les deux sur un axe"
+      ],
+      "reponse": 1,
+      "explication": "Les coordonnées forment un **couple ordonné** : $E$ est plus à droite, $F$ est plus haut. Croire que $(3\\,;2)$ et $(2\\,;3)$ désignent le même point revient à penser que l'ordre ne compte pas — or c'est justement lui qui distingue horizontale et verticale."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "lire-abscisse",
+      "enonce": "Sur une droite graduée, l'intervalle entre $2$ et $3$ est partagé en $5$ parts égales. Quelle est l'abscisse du $2^\\text{e}$ trait après $2$ ?",
+      "choix": [
+        "$2,4$",
+        "$2,2$",
+        "$2,5$",
+        "$2,02$"
+      ],
+      "reponse": 0,
+      "explication": "Une graduation vaut $1 \\div 5 = 0{,}2$, donc deux graduations valent $0{,}4$ : l'abscisse est $2{,}4$. Le piège est de compter les graduations comme des dixièmes ($2{,}2$) sans vérifier ce que vaut réellement une part. Calcule toujours la valeur d'une graduation avant de compter."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "placer-un-point",
+      "enonce": "Pour placer le point $B(-2\\,;5)$ dans un repère, que fais-tu en partant de l'origine ?",
+      "choix": [
+        "$2$ vers la gauche, puis $5$ vers le haut",
+        "$2$ vers le bas, puis $5$ vers la droite",
+        "$5$ vers la gauche, puis $2$ vers le haut",
+        "$2$ vers la droite, puis $5$ vers le haut"
+      ],
+      "reponse": 0,
+      "explication": "L'abscisse $-2$ est **horizontale et négative** : on va à gauche. L'ordonnée $5$ est **verticale et positive** : on monte. Les deux autres erreurs typiques sont ici : inverser les deux nombres, ou ignorer le signe $-$ et partir vers la droite."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "cas-particuliers",
+      "enonce": "Dans un repère orthogonal, une graduation vaut $1$ sur l'axe horizontal et $10$ sur l'axe vertical. Un point $P$ est situé $3$ graduations à droite et $2$ graduations au-dessus de l'origine. Quelles sont ses coordonnées ?",
+      "choix": [
+        "$(3\\,;2)$",
+        "$(30\\,;2)$",
+        "$(2\\,;3)$",
+        "$(3\\,;20)$"
+      ],
+      "reponse": 3,
+      "explication": "Chaque axe a sa propre unité : $3 \\times 1 = 3$ en abscisse, $2 \\times 10 = 20$ en ordonnée. Le piège est de compter les **traits** au lieu de lire les **nombres écrits sur l'axe** : « orthogonal » signifie seulement que les axes sont perpendiculaires, pas qu'ils ont la même graduation."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "distances",
+      "enonce": "Sur une droite graduée, $A$ a pour abscisse $-3$ et $B$ a pour abscisse $4$. Quelle est la distance $AB$, en unités ?",
+      "choix": [
+        "$1$",
+        "$-7$",
+        "$7$",
+        "$12$"
+      ],
+      "reponse": 2,
+      "explication": "On compte : $3$ unités de $-3$ à $0$, puis $4$ unités de $0$ à $4$, soit $7$. Le piège est d'additionner les abscisses ($-3 + 4 = 1$) : une distance n'est pas une somme, c'est un **écart**. Et une distance est toujours **positive**, ce qui élimine d'emblée $-7$."
+    }
+  ]
+}

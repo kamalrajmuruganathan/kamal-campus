@@ -1,0 +1,154 @@
+{
+  "id": "5e-math-transformations-qcm",
+  "chapitre": "5e-math-transformations",
+  "titre": "QCM — Transformations : symétrie axiale et demi-tour",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "demi-tour-definition",
+      "enonce": "Par le demi-tour de centre $O$, le point $M$ a pour image le point $M'$. Que peut-on affirmer ?",
+      "choix": [
+        "$M$ est le milieu de $[OM']$",
+        "$M'$ est le milieu de $[OM]$",
+        "$O$ est le milieu de $[MM']$",
+        "$O$ est le symétrique de $M$ par rapport à $M'$"
+      ],
+      "reponse": 2,
+      "explication": "C'est la définition même du demi-tour : le **centre** est le milieu du segment qui joint un point à son image. Le piège des autres choix est d'intervertir les rôles : c'est $O$ qui est au milieu, pas $M$ ni $M'$. Retiens l'ordre $M$, puis $O$, puis $M'$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "symetrie-axiale",
+      "enonce": "Par une symétrie axiale d'axe $(d)$, quelle est l'image d'un point situé **sur** l'axe $(d)$ ?",
+      "choix": [
+        "Un point situé de l'autre côté de $(d)$",
+        "Ce point lui-même",
+        "Le milieu de l'axe",
+        "Ce point n'a pas d'image"
+      ],
+      "reponse": 1,
+      "explication": "Pense au pliage : un point posé sur la ligne de pli ne se déplace pas, il tombe sur lui-même. Le piège est de vouloir absolument « faire traverser » le point : la symétrie déplace ce qui est de part et d'autre de l'axe, pas ce qui est dessus."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "proprietes-demi-tour",
+      "enonce": "Le segment $[AB]$ mesure $7$ cm. Quelle est la longueur de son image $[A'B']$ par un demi-tour de centre $O$ ?",
+      "choix": [
+        "$3{,}5$ cm",
+        "$14$ cm",
+        "On ne peut pas savoir sans connaître la position de $O$",
+        "$7$ cm"
+      ],
+      "reponse": 3,
+      "explication": "Le demi-tour **conserve les longueurs** : aucune mesure n'est à refaire. Deux pièges ici. Le mot « demi » ne signifie pas qu'on divise par deux : il désigne un demi-tour de $180°$. Et la position du centre ne change rien à la longueur — elle change seulement l'endroit où atterrit la figure."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "proprietes-demi-tour",
+      "enonce": "Par le demi-tour de centre $O$, quelle est l'image de la droite $(AB)$, lorsque $O$ n'appartient pas à $(AB)$ ?",
+      "choix": [
+        "Une droite parallèle à $(AB)$",
+        "Une droite perpendiculaire à $(AB)$",
+        "Une droite qui passe forcément par $O$",
+        "Une droite sécante à $(AB)$"
+      ],
+      "reponse": 0,
+      "explication": "C'est la propriété qui caractérise le demi-tour : l'image d'une droite est une droite **parallèle** à celle de départ. Le piège du choix « perpendiculaire » vient d'une confusion avec la symétrie axiale, où l'on trace des perpendiculaires **à l'axe** pour construire — mais construire avec une perpendiculaire ne veut pas dire que la figure image est perpendiculaire."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "construction",
+      "enonce": "Sur un quadrillage, pour aller de $M$ jusqu'au centre $O$, on se déplace de $3$ carreaux vers la droite et $2$ carreaux vers le haut. Quel déplacement mène de $O$ à l'image $M'$ ?",
+      "choix": [
+        "$3$ carreaux vers la gauche et $2$ carreaux vers le bas",
+        "$3$ carreaux vers la droite et $2$ carreaux vers le bas",
+        "$2$ carreaux vers la droite et $3$ carreaux vers le haut",
+        "$3$ carreaux vers la droite et $2$ carreaux vers le haut"
+      ],
+      "reponse": 3,
+      "explication": "Comme $O$ est le milieu de $[MM']$, on **continue le même déplacement** au-delà du centre : on refait exactement $3$ à droite et $2$ en haut. Le piège classique est d'inverser le déplacement (choix A) — mais inverser te ramène pile sur $M$, ton point de départ, donc c'est forcément faux."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "points-invariants",
+      "enonce": "Combien de points ne bougent pas lors d'un demi-tour de centre $O$ ?",
+      "choix": [
+        "Un seul : le centre $O$",
+        "Aucun",
+        "Tous les points d'une droite passant par $O$",
+        "Tous les points du plan"
+      ],
+      "reponse": 0,
+      "explication": "Seul le centre est sa propre image. Le piège est de transposer ce que tu sais de la symétrie axiale, où **tous** les points de l'axe restent fixes (choix C). Attention à la nuance : une droite passant par $O$ revient bien sur elle-même **dans son ensemble**, mais ses points, eux, se déplacent le long d'elle."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "comparaison",
+      "enonce": "Quelle affirmation est vraie pour le demi-tour, mais **fausse** pour la symétrie axiale ?",
+      "choix": [
+        "Les longueurs sont conservées",
+        "Les mesures d'angles sont conservées",
+        "L'image d'une droite est toujours une droite parallèle à cette droite",
+        "L'image d'une figure a la même aire que la figure de départ"
+      ],
+      "reponse": 2,
+      "explication": "Les deux transformations conservent longueurs, angles et aires : ces trois affirmations ne permettent donc pas de les distinguer. Le vrai critère de séparation est le **parallélisme systématique**, propre au demi-tour. Par symétrie axiale, une droite « de travers » par rapport à l'axe a pour image une droite qui la **coupe**."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "construction",
+      "enonce": "Le cercle $\\mathcal{C}$ a pour centre $A$ et pour rayon $4$ cm. Quelle est son image par le demi-tour de centre $O$ (avec $O \\neq A$) ?",
+      "choix": [
+        "Le cercle de centre $A$ et de rayon $4$ cm",
+        "Le cercle de centre $A'$, image de $A$, et de rayon $4$ cm",
+        "Le cercle de centre $O$ et de rayon $4$ cm",
+        "Le cercle de centre $A'$, image de $A$, et de rayon $8$ cm"
+      ],
+      "reponse": 1,
+      "explication": "Il suffit de construire l'image du **centre** : le rayon, qui est une longueur, est conservé. Deux pièges. Le centre du cercle image n'est pas $O$ : $O$ est le centre du demi-tour, pas celui du cercle. Et rien ne double : un demi-tour ne modifie aucune dimension."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "proprietes-demi-tour",
+      "enonce": "On applique deux fois de suite le demi-tour de centre $O$ au point $M$. Sur quel point arrive-t-on ?",
+      "choix": [
+        "Sur $O$",
+        "Sur un point deux fois plus éloigné de $O$ que $M$",
+        "Sur $M$ lui-même",
+        "Sur $M'$, l'image de $M$"
+      ],
+      "reponse": 2,
+      "explication": "Deux demi-tours font un tour complet : on revient au point de départ. Autre façon de le voir : le demi-tour envoie $M$ sur $M'$, et comme $O$ est le milieu de $[MM']$, il envoie aussi $M'$ sur $M$. Le piège du choix B est de croire que les longueurs s'accumulent — or $OM' = OM$ à chaque fois, la distance au centre ne grandit jamais."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "comparaison",
+      "enonce": "Un triangle $T'$ a les mêmes longueurs de côtés qu'un triangle $T$. On observe que $T'$ n'est pas retourné (il se lit dans le même sens que $T$) et que ses côtés sont parallèles deux à deux à ceux de $T$. Parmi les deux transformations étudiées cette année, laquelle peut envoyer $T$ sur $T'$ ?",
+      "choix": [
+        "La symétrie axiale",
+        "Les deux conviennent",
+        "Ni l'une ni l'autre : les longueurs auraient forcément changé",
+        "Le demi-tour"
+      ],
+      "reponse": 3,
+      "explication": "Deux indices pointent vers le demi-tour : les côtés parallèles deux à deux, et surtout le sens de lecture **conservé**. Une symétrie axiale agit comme un miroir, elle **retourne** la figure — c'est le piège du choix A, car elle conserve bien les longueurs, mais pas le sens. Et le choix C oublie que les deux transformations conservent les longueurs."
+    }
+  ]
+}

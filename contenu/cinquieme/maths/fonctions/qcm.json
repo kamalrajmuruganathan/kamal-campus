@@ -1,0 +1,139 @@
+{
+  "id": "5e-math-fonctions-qcm",
+  "chapitre": "5e-math-fonctions",
+  "titre": "QCM — Fonctions : dépendance entre deux grandeurs",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "en-fonction-de",
+      "enonce": "« Le périmètre d'un carré varie **en fonction de** son côté. » Quelle est la grandeur que l'on choisit ?",
+      "choix": [
+        "Le périmètre",
+        "Le côté",
+        "Les deux en même temps",
+        "Ni l'une ni l'autre : elles varient au hasard"
+      ],
+      "reponse": 1,
+      "explication": "La grandeur nommée **après** « en fonction de » est toujours celle qu'on choisit ; l'autre s'en déduit. Le piège est de retenir le premier mot de la phrase (« périmètre ») : ici c'est justement le résultat, pas le point de départ."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "tableau-de-valeurs",
+      "enonce": "Un tableau donne le prix $P$ payé à la piscine en fonction du nombre $n$ de séances : $n = 0 \\rightarrow P = 5$ € ; $n = 1 \\rightarrow P = 7$ € ; $n = 2 \\rightarrow P = 9$ € ; $n = 3 \\rightarrow P = 11$ €. Combien coûtent $3$ séances ?",
+      "choix": ["$9$ €", "$13$ €", "$11$ €", "$15$ €"],
+      "reponse": 2,
+      "explication": "On lit la **colonne entière** : sous $n = 3$ se trouve $11$ €. Le piège classique est le **décalage d'une colonne** — comme le tableau commence à $n = 0$, la troisième colonne correspond à $n = 2$, pas à $n = 3$. Et $15$ € viendrait de $5 \\times 3$, qui oublie que les $5$ € ne se paient qu'une fois."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "formule-vers-tableau",
+      "enonce": "Un taxi facture $4$ € au départ, puis $3$ € par kilomètre : $P = 4 + 3 \\times d$. Combien coûte une course de $6$ km ?",
+      "choix": ["$22$ €", "$42$ €", "$13$ €", "$18$ €"],
+      "reponse": 0,
+      "explication": "On remplace $d$ par $6$ : $3 \\times 6 = 18$, **puis** $4 + 18 = 22$ €. Le piège est celui des **priorités opératoires** : calculer $4 + 3 = 7$ puis $7 \\times 6 = 42$ revient à faire payer le forfait de départ à chaque kilomètre."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "produire-une-formule",
+      "enonce": "Une salle de sport coûte $20$ € d'inscription à l'année, plus $3$ € par séance. Quelle formule donne le prix $P$ payé pour $n$ séances ?",
+      "choix": [
+        "$P = 20 \\times n$",
+        "$P = 23 \\times n$",
+        "$P = 3 + 20 \\times n$",
+        "$P = 20 + 3 \\times n$"
+      ],
+      "reponse": 3,
+      "explication": "Il faut séparer ce qui est **fixe** ($20$ €, payés une seule fois) de ce qui **varie** ($3$ € multipliés par le nombre de séances). Le piège est d'**inverser les deux rôles** ($3 + 20 \\times n$) ou de tout additionner d'un coup ($23 \\times n$), ce qui referait payer l'inscription à chaque séance. Contrôle : pour $n = 0$, la bonne formule donne bien $20$ €."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "reperage",
+      "enonce": "Dans le tableau du carré, la colonne « côté $= 3$ cm / périmètre $= 12$ cm » se place dans le repère au point de coordonnées :",
+      "choix": ["$(12\\,;3)$", "$(3\\,;12)$", "$(3\\,;3)$", "$(12\\,;12)$"],
+      "reponse": 1,
+      "explication": "L'**abscisse** (axe horizontal) porte la grandeur de départ, ici le côté ; l'**ordonnée** porte la grandeur qui dépend, ici le périmètre. On avance **puis** on monte. Le piège est d'écrire les deux nombres dans l'ordre où on les lit dans l'énoncé : $(12\\,;3)$ est un point totalement différent."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "proportionnalite-graphique",
+      "enonce": "Sur un graphique, à quoi reconnaît-on une situation de proportionnalité ?",
+      "choix": [
+        "Les points sont alignés **et** la droite passe par l'origine",
+        "Les points sont alignés, cela suffit",
+        "La courbe monte toujours",
+        "La courbe passe par l'origine, cela suffit"
+      ],
+      "reponse": 0,
+      "explication": "Il faut les **deux** conditions à la fois. L'alignement seul ne suffit pas (un tarif avec forfait donne des points alignés sans proportionnalité), et passer par l'origine seul ne suffit pas non plus (l'aire d'un carré part de l'origine mais ses points ne sont pas alignés). « Monter toujours » ne dit rien sur la proportionnalité."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "proportionnalite-graphique",
+      "enonce": "Le prix à la piscine est $P = 5 + 2 \\times n$. Sur le graphique, les points sont parfaitement alignés. Le prix est-il proportionnel au nombre de séances ?",
+      "choix": [
+        "Oui, puisque les points sont alignés",
+        "Oui, car le prix augmente régulièrement",
+        "Non, car la droite ne passe pas par l'origine",
+        "Non, car les points ne sont pas alignés"
+      ],
+      "reponse": 2,
+      "explication": "C'est **l'erreur reine du chapitre** : alignement $\\neq$ proportionnalité. Pour $n = 0$ le prix vaut $5$ € et non $0$ €, donc la droite coupe l'axe vertical au-dessus de l'origine. Le contrôle par les quotients le confirme : $\\dfrac{7}{1} = 7$ mais $\\dfrac{9}{2} = 4{,}5$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "tableau-de-valeurs",
+      "enonce": "Un tableau donne la distance $d$ parcourue en fonction de la durée $t$ : $t = 2$ h $\\rightarrow d = 10$ km ; $t = 3$ h $\\rightarrow d = 15$ km ; $t = 5$ h $\\rightarrow d = 25$ km. Est-ce une situation de proportionnalité ?",
+      "choix": [
+        "Non, car les durées ne se suivent pas régulièrement",
+        "Non, car il manque la colonne $t = 0$",
+        "On ne peut pas conclure avec seulement trois colonnes",
+        "Oui, tous les quotients valent $5$"
+      ],
+      "reponse": 3,
+      "explication": "On teste les quotients : $\\dfrac{10}{2} = 5$, $\\dfrac{15}{3} = 5$, $\\dfrac{25}{5} = 5$. Ils sont tous égaux, donc c'est proportionnel, de coefficient $5$ (soit $5$ km par heure). Le piège est de croire qu'il faut des durées régulièrement espacées, ou une colonne $t = 0$ : ni l'une ni l'autre n'est nécessaire, le critère porte sur les **quotients**."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Un graphique donne la température en fonction de l'heure. On y lit : $16$ °C à $10$ h, $24$ °C à $14$ h, $18$ °C à $18$ h. Que peut-on affirmer ?",
+      "choix": [
+        "La température augmente jusqu'à $14$ h, puis diminue",
+        "La température augmente tout au long de la journée",
+        "La température est proportionnelle à l'heure",
+        "À $12$ h, il fait exactement $20$ °C"
+      ],
+      "reponse": 0,
+      "explication": "On suit la courbe : elle monte de $16$ à $24$ °C, atteint son maximum à $14$ h, puis redescend à $18$ °C. Deux pièges : croire à la proportionnalité (elle est exclue, car $\\dfrac{16}{10} = 1{,}6$ alors que $\\dfrac{24}{14} \\approx 1{,}7$), et **inventer une valeur intermédiaire** en faisant la moyenne — à $12$ h on doit *lire* le graphique, pas calculer."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "pieges-de-lecture",
+      "enonce": "On représente le prix payé en fonction du nombre de cahiers achetés, à $2$ € le cahier. Pourquoi laisse-t-on un nuage de points sans relier les points ?",
+      "choix": [
+        "Parce que la situation n'est pas proportionnelle",
+        "Parce qu'on ne relie jamais les points d'un graphique",
+        "Parce qu'un nombre de cahiers comme $2{,}5$ n'a pas de sens",
+        "Parce que les points ne sont pas alignés"
+      ],
+      "reponse": 2,
+      "explication": "On relie seulement quand les valeurs **intermédiaires existent** : une température à $10$ h $30$ a un sens, $2{,}5$ cahiers non. Le piège est de confondre « alignés » et « reliés » : ici les points **sont** alignés et la situation **est** proportionnelle ($P = 2 \\times n$) — ce qui élimine les deux réponses commençant par « parce que la situation n'est pas… »."
+    }
+  ]
+}
