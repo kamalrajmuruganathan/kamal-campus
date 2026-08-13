@@ -1,0 +1,154 @@
+{
+  "id": "6e-math-configurations-planes-qcm",
+  "chapitre": "6e-math-configurations-planes",
+  "titre": "QCM — Géométrie : configurations planes",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Que représente l'écriture $AB$, sans crochets ?",
+      "choix": [
+        "Le segment d'extrémités $A$ et $B$",
+        "La longueur du segment $[AB]$, c'est-à-dire un nombre",
+        "La droite qui passe par $A$ et $B$",
+        "La demi-droite d'origine $A$"
+      ],
+      "reponse": 1,
+      "explication": "Piège classique des crochets : $[AB]$ est un objet qu'on dessine (le segment), tandis que $AB$ (sans crochets) est une **mesure**, un nombre en cm. La droite se note $(AB)$ et la demi-droite $[AB)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "cercle-disque",
+      "enonce": "Qu'est-ce qu'un **disque** de centre $O$ et de rayon $r$ ?",
+      "choix": [
+        "Les points $M$ tels que $OM = r$ (le contour seulement)",
+        "Uniquement le contour du cercle",
+        "Les points $M$ tels que $OM \\leq r$ (le contour et l'intérieur)",
+        "Les points $M$ tels que $OM > r$"
+      ],
+      "reponse": 2,
+      "explication": "Le piège est de confondre cercle et disque. Le **cercle** est seulement le contour ($OM = r$) ; le **disque** ajoute l'intérieur, donc tous les points à distance **inférieure ou égale** à $r$ ($OM \\leq r$)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "milieu",
+      "enonce": "Le segment $[AB]$ mesure $10$ cm et $I$ est son milieu. Combien vaut $IA$ ?",
+      "choix": [
+        "$5$ cm",
+        "$10$ cm",
+        "$2$ cm",
+        "$20$ cm"
+      ],
+      "reponse": 0,
+      "explication": "Le milieu partage le segment en deux morceaux égaux, donc $IA = IB = \\dfrac{AB}{2} = \\dfrac{10}{2} = 5$ cm. Le piège $20$ cm vient d'une multiplication par $2$ au lieu d'une division."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "angles",
+      "enonce": "Un angle mesure $110^\\circ$. Quel est son angle supplémentaire ?",
+      "choix": [
+        "$250^\\circ$",
+        "$70^\\circ$",
+        "$80^\\circ$",
+        "$110^\\circ$"
+      ],
+      "reponse": 1,
+      "explication": "Deux angles supplémentaires ont pour somme $180^\\circ$. On calcule $180 - 110 = 70^\\circ$. Le piège $250^\\circ$ vient de $360 - 110$ : c'est le complément à l'angle plein, pas à l'angle plat."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "mediatrice",
+      "enonce": "Un point $M$ vérifie $MA = MB$. Que peut-on en déduire ?",
+      "choix": [
+        "$M$ est le milieu de $[AB]$",
+        "$M$ est le centre du cercle circonscrit",
+        "$M$ est forcément sur la droite $(AB)$",
+        "$M$ est sur la médiatrice de $[AB]$"
+      ],
+      "reponse": 3,
+      "explication": "Propriété caractéristique : les points à égale distance de $A$ et $B$ sont **exactement** ceux de la médiatrice de $[AB]$. Le piège est de répondre « milieu » : le milieu vérifie bien $MA = MB$, mais il n'est qu'**un** point de la médiatrice, pas le seul."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "triangle-particulier",
+      "enonce": "Combien mesure chaque angle d'un triangle équilatéral ?",
+      "choix": [
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$90^\\circ$"
+      ],
+      "reponse": 2,
+      "explication": "Un triangle équilatéral a trois angles égaux dont la somme vaut $180^\\circ$, donc chacun mesure $180 \\div 3 = 60^\\circ$. Le piège $90^\\circ$ confond avec l'angle droit, mais trois angles droits feraient $270^\\circ$, impossible."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "somme-angles-triangle",
+      "enonce": "Dans un triangle $ABC$, $\\widehat{A} = 70^\\circ$ et $\\widehat{B} = 60^\\circ$. Combien vaut $\\widehat{C}$ ?",
+      "choix": [
+        "$50^\\circ$",
+        "$130^\\circ$",
+        "$60^\\circ$",
+        "$230^\\circ$"
+      ],
+      "reponse": 0,
+      "explication": "La somme des angles d'un triangle vaut $180^\\circ$, donc $\\widehat{C} = 180 - 70 - 60 = 50^\\circ$. Le piège $130^\\circ$ est la somme $70 + 60$ : on a oublié de la retrancher à $180$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "triangle-construction",
+      "enonce": "Avec quelles longueurs de côtés est-il **impossible** de construire un triangle ?",
+      "choix": [
+        "$3$ cm, $4$ cm, $5$ cm",
+        "$2$ cm, $2$ cm, $6$ cm",
+        "$5$ cm, $5$ cm, $5$ cm",
+        "$4$ cm, $6$ cm, $3$ cm"
+      ],
+      "reponse": 1,
+      "explication": "Trois longueurs ne donnent un triangle que si le plus grand côté est plus petit que la somme des deux autres. Ici $2 + 2 = 4 < 6$ : les deux petits côtés sont trop courts pour se rejoindre, les arcs de compas ne se croisent pas."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "symetrie-axiale",
+      "enonce": "Le symétrique du point $M$ par rapport à la droite $(d)$ est le point $M'$ tel que :",
+      "choix": [
+        "$(d)$ est la médiatrice du segment $[MM']$",
+        "$(d)$ passe par $M$ et par $M'$",
+        "$M'$ est confondu avec $M$",
+        "$(d)$ est parallèle au segment $[MM']$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition, l'axe $(d)$ est la médiatrice de $[MM']$ : $M$ et $M'$ sont à égale distance de l'axe, et $[MM']$ le coupe perpendiculairement. Le choix « $M' = M$ » n'est vrai que dans le cas particulier où $M$ est déjà **sur** l'axe."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "cercle-circonscrit",
+      "enonce": "Le centre du cercle circonscrit à un triangle est le point de concours :",
+      "choix": [
+        "des trois bissectrices des angles",
+        "des trois milieux des côtés",
+        "du côté le plus long",
+        "des trois médiatrices des côtés"
+      ],
+      "reponse": 3,
+      "explication": "Les trois médiatrices d'un triangle se croisent en un même point, à égale distance des trois sommets : c'est le centre du cercle circonscrit. Le piège est de répondre « bissectrices » : on confond alors médiatrice (d'un segment) et bissectrice (d'un angle)."
+    }
+  ]
+}

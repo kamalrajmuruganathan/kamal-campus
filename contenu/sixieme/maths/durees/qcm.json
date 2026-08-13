@@ -1,0 +1,104 @@
+{
+  "id": "6e-math-durees-qcm",
+  "chapitre": "6e-math-durees",
+  "titre": "QCM — Durées et repérage dans le temps",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "unites-relations",
+      "enonce": "Combien de minutes y a-t-il dans 1 heure ?",
+      "choix": ["$100$ min", "$60$ min", "$24$ min", "$360$ min"],
+      "reponse": 1,
+      "explication": "Le temps se compte par paquets de **60**, pas de 100 : $1$ h $= 60$ min. Le piège est de répondre $100$ comme avec les euros et les centimes."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "fractions-heure",
+      "enonce": "Trois quarts d'heure, c'est combien de minutes ?",
+      "choix": ["$30$ min", "$40$ min", "$45$ min", "$75$ min"],
+      "reponse": 2,
+      "explication": "Un quart d'heure vaut $15$ min (le quart de $60$), donc trois quarts valent $3 \\times 15 = 45$ min. Répondre $75$ revient à confondre « trois quarts » avec « une heure trois quarts »."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "conversion",
+      "enonce": "Combien de secondes y a-t-il dans 3 minutes ?",
+      "choix": ["$30$ s", "$300$ s", "$3600$ s", "$180$ s"],
+      "reponse": 3,
+      "explication": "Pour aller vers une plus petite unité on **multiplie** par $60$ : $3 \\times 60 = 180$ s. Le distracteur $300$ vient de $3 \\times 100$ : le facteur est $60$, pas $100$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "calcul-duree",
+      "enonce": "Un cours commence à $9$ h $15$ et se termine à $10$ h $05$. Combien de temps dure-t-il ?",
+      "choix": ["$50$ min", "$1$ h $10$ min", "$1$ h $50$ min", "$40$ min"],
+      "reponse": 0,
+      "explication": "De $9$ h $15$ à $10$ h $15$ il s'écoule $1$ h, mais on s'arrête $10$ min avant, à $10$ h $05$ : $1$ h $- 10$ min $= 50$ min. Le piège ($1$ h $10$ min) vient de faire $15 - 05$ à l'envers colonne par colonne."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "piege-decimal",
+      "enonce": "À combien de minutes correspond $1,5$ heure ?",
+      "choix": ["$1$ h $50$ min", "$90$ min", "$150$ min", "$1$ h $5$ min"],
+      "reponse": 1,
+      "explication": "$1,5$ h signifie « une heure et **demie** », soit $1$ h $+ 30$ min $= 90$ min. L'erreur numéro 1 du chapitre est de lire $1,5$ comme « $1$ h $50$ » en traitant l'heure comme un nombre décimal."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "conversion",
+      "enonce": "Comment s'écrit $90$ minutes en heures et minutes ?",
+      "choix": ["$9$ h", "$1$ h $90$ min", "$0$ h $30$ min", "$1$ h $30$ min"],
+      "reponse": 3,
+      "explication": "On cherche combien de fois $60$ tient dans $90$ : une fois, reste $30$. Donc $90$ min $= 1$ h $30$ min. Écrire « $1$ h $90$ min » est faux car une écriture correcte ne dépasse jamais $59$ minutes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "calcul-horaire",
+      "enonce": "Un film commence à $20$ h $40$ et dure $1$ h $50$ min. À quelle heure se termine-t-il ?",
+      "choix": ["$22$ h $30$", "$21$ h $30$", "$21$ h $90$", "$22$ h $20$"],
+      "reponse": 0,
+      "explication": "On ajoute : $20$ h $+ 1$ h $= 21$ h, puis $40 + 50 = 90$ min. Comme $90 = 60 + 30$, on reporte $1$ h : $21$ h $+ 1$ h $= 22$ h, reste $30$ min, soit $22$ h $30$. Oublier la retenue de $60$ donne l'écriture fausse « $21$ h $90$ »."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "calcul-duree",
+      "enonce": "Combien de temps s'écoule entre $8$ h $50$ et $11$ h $20$ ?",
+      "choix": ["$3$ h $30$ min", "$2$ h $30$ min", "$2$ h $70$ min", "$3$ h $70$ min"],
+      "reponse": 1,
+      "explication": "De $8$ h $50$ à $11$ h $50$ il s'écoule $3$ h, mais l'arrivée est $30$ min plus tôt (à $11$ h $20$) : $3$ h $- 30$ min $= 2$ h $30$ min. Faire $11 - 8 = 3$ h puis $50 - 20 = 30$ dans le mauvais sens donne le piège $3$ h $30$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "piege-retenue",
+      "enonce": "Un calcul aboutit à $2$ h $90$ min. Quelle est l'écriture correcte de cette durée ?",
+      "choix": ["$2$ h $90$ min, c'est déjà correct", "$3$ h $30$ min", "$2$ h $9$ min", "$3$ h $90$ min"],
+      "reponse": 1,
+      "explication": "Une durée s'écrit toujours avec moins de $60$ minutes. Comme $90 = 60 + 30$, on transforme $60$ min en $1$ h : $2$ h $+ 1$ h $= 3$ h, reste $30$ min, soit $3$ h $30$ min. C'est la retenue de $60$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "calendrier",
+      "enonce": "Combien de jours compte une année bissextile ?",
+      "choix": ["$365$ jours", "$364$ jours", "$366$ jours", "$360$ jours"],
+      "reponse": 2,
+      "explication": "Une année ordinaire a $365$ jours ; une année bissextile (tous les $4$ ans) a **un jour de plus**, le $29$ février, soit $366$ jours. Le piège est de donner $365$, la valeur de l'année ordinaire."
+    }
+  ]
+}

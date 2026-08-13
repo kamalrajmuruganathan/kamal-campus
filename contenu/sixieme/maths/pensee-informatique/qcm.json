@@ -1,0 +1,154 @@
+{
+  "id": "6e-math-pensee-informatique-qcm",
+  "chapitre": "6e-math-pensee-informatique",
+  "titre": "QCM — Initiation à la pensée informatique",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Une séquence d'instructions, c'est :",
+      "choix": [
+        "un seul ordre donné à la machine",
+        "plusieurs instructions écrites l'une après l'autre, dans un ordre",
+        "un dessin produit par la machine",
+        "le nombre choisi au départ"
+      ],
+      "reponse": 1,
+      "explication": "Une instruction est un ordre unique ; une séquence en réunit plusieurs, rangées dans un ordre précis et lues de haut en bas. Le piège est de confondre l'instruction seule (choix 1) avec la séquence, qui en contient plusieurs."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "entrees-sorties",
+      "enonce": "Un programme demande de choisir un nombre, puis affiche le double de ce nombre. La sortie du programme, c'est :",
+      "choix": [
+        "le nombre choisi au départ",
+        "le mot « double »",
+        "le nombre affiché à la fin",
+        "la machine elle-même"
+      ],
+      "reponse": 2,
+      "explication": "La sortie est ce que le programme PRODUIT à la fin : ici le nombre affiché. Le nombre choisi au départ (choix 1) est l'entrée, c'est-à-dire ce que le programme reçoit. Ne pas inverser entrée et sortie."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "sequence",
+      "enonce": "On exécute : choisir 5, ajouter 3, multiplier par 2, afficher. Qu'affiche le programme ?",
+      "choix": [
+        "13",
+        "10",
+        "20",
+        "16"
+      ],
+      "reponse": 3,
+      "explication": "On déroule pas à pas : 5, puis 5 + 3 = 8, puis 8 × 2 = 16. Le piège (choix 0 : 13) vient de calculer 5 + 3 × 2 comme une expression avec priorités : un programme de calcul se déroule étape par étape, chaque instruction part du résultat de la précédente."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "entrees-sorties",
+      "enonce": "Un robot avance quand on appuie sur une touche. Qu'est-ce qui est une ENTRÉE pour ce programme ?",
+      "choix": [
+        "le déplacement du robot",
+        "le bruit du moteur",
+        "la trace laissée au sol",
+        "l'appui sur la touche"
+      ],
+      "reponse": 3,
+      "explication": "L'entrée est ce que le programme reçoit : ici l'appui sur la touche. Le déplacement, le bruit et la trace sont des sorties, c'est-à-dire ce que le programme produit. Confondre les deux est l'erreur classique."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "repetition",
+      "enonce": "On écrit : répéter 3 fois ( avancer de 10, tourner à droite ). Combien d'instructions sont exécutées en tout ?",
+      "choix": [
+        "3",
+        "5",
+        "6",
+        "2"
+      ],
+      "reponse": 2,
+      "explication": "La séquence répétée contient 2 instructions, refaites 3 fois : 3 × 2 = 6. Le piège (choix 3 : 2) consiste à compter les instructions écrites dans le bloc au lieu des instructions réellement exécutées à chaque tour."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "chemin",
+      "enonce": "Un robot part d'une case et exécute : avancer de 2 cases, tourner à droite, avancer de 1 case. Combien de cases a-t-il parcourues en tout ?",
+      "choix": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "reponse": 0,
+      "explication": "On additionne les déplacements : 2 cases puis 1 case, soit 3 cases. Le « tourner à droite » change la direction mais ne fait avancer d'aucune case : il ne compte pas dans la distance parcourue."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "sequence",
+      "enonce": "Deux programmes partent de : choisir 4. Le premier fait ensuite « ajouter 1 » puis « multiplier par 3 » ; le second « multiplier par 3 » puis « ajouter 1 ». Qu'affichent-ils ?",
+      "choix": [
+        "les deux affichent 15",
+        "13 pour le premier, 15 pour le second",
+        "les deux affichent 13",
+        "15 pour le premier, 13 pour le second"
+      ],
+      "reponse": 3,
+      "explication": "Premier : 4 + 1 = 5, puis 5 × 3 = 15. Second : 4 × 3 = 12, puis 12 + 1 = 13. Mêmes instructions, ordre différent, résultat différent : c'est tout le sens de la séquence. Croire que l'ordre ne change rien est le piège visé."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "repetition",
+      "enonce": "Quelle écriture abrégée remplace exactement : avancer de 20, tourner à gauche, avancer de 20, tourner à gauche, avancer de 20, tourner à gauche ?",
+      "choix": [
+        "répéter 2 fois ( avancer de 20, tourner à gauche )",
+        "répéter 6 fois ( avancer de 20, tourner à gauche )",
+        "répéter 3 fois ( avancer de 20, tourner à gauche )",
+        "répéter 3 fois ( avancer de 20 )"
+      ],
+      "reponse": 2,
+      "explication": "Le motif « avancer de 20, tourner à gauche » revient 3 fois à l'identique : on répète 3 fois ce bloc de 2 instructions. Le choix « répéter 6 fois » compte les instructions écrites (6) au lieu du nombre de tours (3)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "execution",
+      "enonce": "On exécute : choisir 7, retirer 2, multiplier par 4, retirer 3, afficher. Qu'affiche le programme ?",
+      "choix": [
+        "17",
+        "20",
+        "23",
+        "18"
+      ],
+      "reponse": 0,
+      "explication": "On déroule chaque étape : 7, puis 7 − 2 = 5, puis 5 × 4 = 20, puis 20 − 3 = 17. Il faut suivre les instructions une par une dans l'ordre, sans en oublier une : sauter le dernier « retirer 3 » donnerait 20 (choix 1)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "chemin",
+      "enonce": "Un robot doit tracer un carré. Quel programme convient ?",
+      "choix": [
+        "répéter 3 fois ( avancer de 50, tourner de 90° )",
+        "répéter 4 fois ( avancer de 50, tourner de 90° )",
+        "répéter 4 fois ( avancer de 50 )",
+        "avancer de 50, tourner de 90°, avancer de 50"
+      ],
+      "reponse": 1,
+      "explication": "Un carré a 4 côtés et 4 coins : il faut donc 4 fois « avancer puis tourner de 90° ». Le choix 0 (3 fois) ne ferme pas la figure ; le choix 2 oublie les virages et trace une seule ligne droite."
+    }
+  ]
+}

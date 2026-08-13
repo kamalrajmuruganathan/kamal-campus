@@ -1,0 +1,144 @@
+{
+  "id": "6e-math-gestion-donnees-qcm",
+  "chapitre": "6e-math-gestion-donnees",
+  "titre": "QCM — Organisation et gestion de données",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "donnee",
+      "enonce": "En statistique, qu'est-ce qu'une « donnée » ?",
+      "choix": [
+        "Une information recueillie : une mesure, un comptage ou une réponse",
+        "Un dessin qui compare des catégories",
+        "Le total de toutes les mesures",
+        "Une case vide d'un tableau"
+      ],
+      "reponse": 0,
+      "explication": "Une donnée est l'information brute qu'on récolte (une réponse, une mesure). Le dessin qui compare, c'est le diagramme ; le total, c'est un calcul fait ensuite. Il ne faut pas confondre la donnée avec ce qu'on en fait après."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "tableau-double-entree",
+      "enonce": "Dans un tableau à double entrée, une case croise la ligne « Football » et la colonne « Garçons », et contient $8$. Que signifie ce $8$ ?",
+      "choix": [
+        "$8$ filles préfèrent le football",
+        "Il y a $8$ sports en tout",
+        "$8$ garçons préfèrent le football",
+        "$8$ garçons préfèrent la natation"
+      ],
+      "reponse": 2,
+      "explication": "Une case se lit en croisant **la ligne ET la colonne** : ligne Football, colonne Garçons. Le piège classique est de garder la bonne ligne mais de se tromper de colonne (répondre « filles ») : il faut suivre les deux en même temps."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "diagramme-barres",
+      "enonce": "À quoi sert avant tout un diagramme en barres ?",
+      "choix": [
+        "À montrer une évolution dans le temps",
+        "À montrer la part de chaque catégorie dans le total",
+        "À filtrer des données selon un critère",
+        "À comparer des catégories entre elles"
+      ],
+      "reponse": 3,
+      "explication": "La hauteur des barres se compare d'un coup d'œil : c'est fait pour **comparer** des catégories. L'évolution dans le temps, c'est la courbe ; la part dans le total, c'est le diagramme circulaire. Choisir le bon dessin, c'est déjà répondre à la bonne question."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "diagramme-circulaire",
+      "enonce": "Sur un diagramme circulaire, la part « Football » occupe presque la moitié du disque. Que peux-tu affirmer ?",
+      "choix": [
+        "Exactement $12$ élèves font du football",
+        "Presque la moitié des élèves ont choisi le football",
+        "Le football a duré la moitié de l'année",
+        "On ne peut rien dire sans tracer une courbe"
+      ],
+      "reponse": 1,
+      "explication": "Le diagramme circulaire montre une **proportion**, pas un nombre : une grosse part = une grosse part du total. On ne peut pas donner un nombre exact d'élèves tant qu'on ne connaît pas le total — d'où le piège du choix « $12$ élèves »."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "courbe",
+      "enonce": "Sur une courbe de température heure par heure, la courbe descend entre 15 h et 18 h. Que se passe-t-il ?",
+      "choix": [
+        "La température diminue",
+        "La température augmente",
+        "La température ne change pas",
+        "Il manque des informations pour répondre"
+      ],
+      "reponse": 0,
+      "explication": "Une courbe qui **descend** signifie que la valeur mesurée **baisse** : ici la température diminue. Elle monte quand ça augmente, elle est plate quand rien ne bouge. Le piège est d'inverser montée et descente."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "filtrer",
+      "enonce": "Filtrer un tableau selon le critère « âge supérieur à $11$ ans », c'est…",
+      "choix": [
+        "supprimer définitivement les autres lignes du tableau",
+        "ne garder que les lignes où l'âge dépasse $11$ ans",
+        "ranger les élèves du plus jeune au plus âgé",
+        "calculer l'âge moyen des élèves"
+      ],
+      "reponse": 1,
+      "explication": "Filtrer, c'est **sélectionner** les lignes qui respectent une condition, sans modifier ni supprimer les données. Le piège est de confondre filtrer avec **ranger** (trier) ou avec **effacer** : le filtre cache une partie des données, il ne les détruit pas."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "calcul-donnees",
+      "enonce": "Un tableau donne : Football $12$, Natation $8$, Basket $6$, Danse $4$ (total $30$ élèves). Combien d'élèves préfèrent un sport **autre** que le football ?",
+      "choix": ["$12$", "$30$", "$22$", "$18$"],
+      "reponse": 3,
+      "explication": "Deux méthodes : $8 + 6 + 4 = 18$, ou bien $30 - 12 = 18$. Le piège est de répondre $12$ (le football lui-même) ou $30$ (le total, sans rien enlever). Il faut bien retirer la catégorie exclue."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "diagramme-circulaire",
+      "enonce": "Un diagramme circulaire indique que $50\\,\\%$ des $40$ élèves interrogés viennent à l'école à pied. Combien d'élèves cela représente-t-il ?",
+      "choix": ["$50$", "$4$", "$20$", "$40$"],
+      "reponse": 2,
+      "explication": "$50\\,\\%$, c'est la **moitié** : $40 \\div 2 = 20$ élèves. Le piège est de recopier le pourcentage ($50$) comme si c'était un nombre d'élèves — or un pourcentage est une proportion, il faut l'appliquer au total."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "choix-representation",
+      "enonce": "Tu veux montrer comment la population d'une ville a évolué chaque année de 2000 à 2025. Quelle représentation est la plus adaptée ?",
+      "choix": [
+        "un diagramme circulaire",
+        "un tableau à double entrée",
+        "une courbe",
+        "un diagramme en barres"
+      ],
+      "reponse": 2,
+      "explication": "Une **évolution dans le temps** se montre avec une **courbe** : on voit d'un coup les hausses et les baisses. Le diagramme circulaire montre des proportions à un instant ; les barres comparent des catégories mais rendent l'évolution moins lisible."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "enquete",
+      "enonce": "Dans quel ordre mène-t-on une enquête statistique ?",
+      "choix": [
+        "Planifier, puis recueillir et consigner les données, puis présenter et interpréter",
+        "Interpréter d'abord, puis recueillir, puis planifier",
+        "Présenter, puis planifier, puis recueillir",
+        "Recueillir, puis interpréter, puis planifier"
+      ],
+      "reponse": 0,
+      "explication": "On décide **d'abord** la question et qui on interroge (planifier), on récolte et on note les données, et on **interprète en dernier**, une fois les données présentées. Le piège est de vouloir conclure avant même d'avoir des données."
+    }
+  ]
+}

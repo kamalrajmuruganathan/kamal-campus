@@ -1,0 +1,119 @@
+{
+  "id": "6e-math-initiation-algebre-qcm",
+  "chapitre": "6e-math-initiation-algebre",
+  "titre": "QCM — Initiation à la pensée algébrique",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "pensee-algebrique",
+      "enonce": "En 6e, qu'est-ce que la « pensée algébrique » ?",
+      "choix": [
+        "Apprendre à calculer plus vite de tête",
+        "Raisonner sur les relations entre des quantités, sans toujours connaître leurs valeurs exactes",
+        "Résoudre des équations avec des lettres comme $x$",
+        "Réviser les tables de multiplication"
+      ],
+      "reponse": 1,
+      "explication": "La pensée algébrique, c'est s'intéresser aux **relations** entre les quantités plutôt qu'à leurs valeurs exactes. Le piège, c'est le choix avec $x$ : le calcul littéral n'arrive qu'au **cycle 4**, pas en 6e."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "quantite-inconnue",
+      "enonce": "En 6e, comment représente-t-on un nombre inconnu ?",
+      "choix": [
+        "Avec des mots, des dessins ou un schéma en barres",
+        "Obligatoirement avec la lettre $x$",
+        "Avec une équation du premier degré",
+        "Avec une calculatrice"
+      ],
+      "reponse": 0,
+      "explication": "En 6e, une quantité inconnue s'exprime par des **mots, des dessins ou des schémas**. Les lettres « officielles » ($x$, $y$) sont réservées au cycle 4 : les proposer ici est hors programme."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "regularite",
+      "enonce": "Un motif d'allumettes donne : étape 1 → $4$, étape 2 → $7$, étape 3 → $10$. Combien à l'étape 4 ?",
+      "choix": ["$11$", "$12$", "$13$", "$14$"],
+      "reponse": 2,
+      "explication": "La régularité est « **on ajoute $3$** » à chaque étape : $10 + 3 = 13$. Le piège $12$ vient de faire $3 \\times 4$ (structure « triple du numéro ») **en oubliant le $+1$**."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "structure",
+      "enonce": "Dans un motif, le nombre de carrés est égal au double du numéro de l'étape, plus 1. Combien de carrés à l'étape 5 ?",
+      "choix": ["$6$", "$10$", "$25$", "$11$"],
+      "reponse": 3,
+      "explication": "Structure : « le double du numéro, plus 1 » donne $2 \\times 5 + 1 = 11$. Le piège $10$ oublie le $+1$ ; $6$ additionne $5+1$ ; $25$ prend $5 \\times 5$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "schema-en-barres",
+      "enonce": "Une barre représente $48$ et elle est partagée en $4$ parts égales. Combien vaut une part ?",
+      "choix": ["$4$", "$12$", "$44$", "$192$"],
+      "reponse": 1,
+      "explication": "Une part vaut $48 \\div 4 = 12$. Le piège $192$ **multiplie** au lieu de partager ; $44$ fait $48 - 4$. Dans un schéma en barres, on cherche la valeur d'**une seule part**."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "nombre-inconnu",
+      "enonce": "Je pense à un nombre, je lui ajoute $6$, j'obtiens $15$. Le schéma est $\\boxed{\\ ?\\ } + 6 = 15$. Quel est le nombre ?",
+      "choix": ["$21$", "$6$", "$3$", "$9$"],
+      "reponse": 3,
+      "explication": "Pour retrouver le nombre, on **annule** le $+6$ : $15 - 6 = 9$. Le piège $21$ ajoute $6$ au lieu de l'enlever ($15 + 6$), en confondant le sens de l'opération à défaire."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "motif-evolutif",
+      "enonce": "Un motif donne : étape 1 → $5$, étape 2 → $8$, étape 3 → $11$. Combien à l'étape 10 ?",
+      "choix": ["$30$", "$14$", "$32$", "$35$"],
+      "reponse": 2,
+      "explication": "Régularité « $+3$ », donc structure « le triple du numéro, plus 2 » : $3 \\times 10 + 2 = 32$. Le piège $30$ fait $3 \\times 10$ **sans le $+2$** ; $14$ n'avance que d'une étape ($11 + 3$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "schema-en-barres",
+      "enonce": "Léa a $3$ fois plus de billes que Tom. Ensemble ils en ont $48$. Avec un schéma (Tom = 1 part, Léa = 3 parts), combien de billes a Tom ?",
+      "choix": ["$36$", "$16$", "$12$", "$48$"],
+      "reponse": 2,
+      "explication": "En tout $1 + 3 = 4$ parts égales pour $48$ : une part vaut $48 \\div 4 = 12$, c'est Tom. Le piège $16$ divise par $3$ (en oubliant la part de Tom) ; $36$ est le total de Léa, pas de Tom."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "regularite",
+      "enonce": "Observe la suite $2, 6, 18, 54, \\dots$ Quelle est la régularité et le terme suivant ?",
+      "choix": [
+        "On ajoute $4$, terme suivant $58$",
+        "On multiplie par $3$, terme suivant $162$",
+        "On ajoute $12$, terme suivant $66$",
+        "On multiplie par $2$, terme suivant $108$"
+      ],
+      "reponse": 1,
+      "explication": "La régularité est **multiplicative** : $2 \\times 3 = 6$, $6 \\times 3 = 18$, $18 \\times 3 = 54$, puis $54 \\times 3 = 162$. Le piège « on ajoute $4$ » marche pour le premier écart ($6-2=4$) mais **pas pour les suivants** ($18-6=12$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "nombre-inconnu",
+      "enonce": "Je pense à un nombre, je le multiplie par $2$ puis j'ajoute $3$ : j'obtiens $17$. Quel est le nombre ?",
+      "choix": ["$7$", "$10$", "$14$", "$40$"],
+      "reponse": 0,
+      "explication": "On remonte dans l'**ordre inverse** : d'abord enlever $3$ ($17 - 3 = 14$), puis diviser par $2$ ($14 \\div 2 = 7$). Le piège $14$ s'arrête après le $-3$ sans diviser ; $40$ fait $(17+3) \\times 2$, dans le mauvais sens."
+    }
+  ]
+}
