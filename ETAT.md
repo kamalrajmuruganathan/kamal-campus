@@ -6,8 +6,8 @@
 > physique-chimie du collège au lycée. **160 chapitres, 1600 questions, 160 jeux
 > d'exercices.** Chaque chapitre a ses quatre briques quand elles s'appliquent :
 > Cours, Exercices, QCM, Outils. Sources : programmes officiels
-> (education.gouv.fr / eduscol) pour la physique-chimie et les options ; xm1math
-> (miroir) pour la spécialité maths de Terminale — à confronter aux PDF officiels.
+> (education.gouv.fr / eduscol) pour toutes les matières, y compris la spécialité
+> maths de Terminale (BO du 2 avril 2026, publication officielle vérifiée).
 > Reste hors périmètre : la voie technologique (maths et PC des séries STMG,
 > STI2D/STL au-delà de l'existant, etc.).
 
@@ -26,15 +26,15 @@
 | Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
 | Première **physique-chimie** | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
 | Première STI2D/STL — PC et maths | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
-| **Terminale spécialité maths** | 15 | 150 | Programme rentrée 2027 *(voir note source)* |
-| **Total** | **115** | **1150** | |
+| **Terminale spécialité maths** | 15 | 150 | BO du 2 avril 2026 *(officiel, rentrée 2027)* |
+| **Terminale PC · options maths · collège PC** | 45 | 450 | sources officielles education.gouv.fr |
+| **Total** | **160** | **1600** | |
 
-> ⚠️ **Terminale spé maths — source de moindre garantie.** Le proxy du sandbox
-> bloquant le téléchargement du PDF, le programme a été reconstitué via WebFetch
-> depuis le miroir xm1math.net (fichier
-> `docs/programme-terminale-specialite-maths-2027.txt`, avertissement en tête).
-> À confronter au PDF officiel avant publication — niveau de confiance
-> explicitement plus bas que le reste, écrit dans chaque fiche.
+> ✅ **Terminale spé maths — re-sourcée sur l'officiel.** La publication du
+> programme a été vérifiée sur education.gouv.fr (arrêté MENE2602919A, BO du
+> 2 avril 2026, applicable rentrée 2027-2028). Le détail des rubriques provient
+> d'un miroir fidèle du même PDF officiel (le proxy refuse l'URL de l'annexe
+> officielle) ; à confronter à l'annexe pour les détails fins, comme tout le reste.
 
 **Le collège de mathématiques est complet** : les quatre niveaux couvrent chacun
 l'intégralité des entrées de leur programme (cycle 3 pour la 6e, cycle 4 pour
@@ -157,9 +157,9 @@ est donc stable et n'expirera pas.
 publié), à la demande de l'utilisateur qui veut couvrir tout le programme. Le
 choix initial du projet (« rien pour la Terminale avant 2027 ») visait l'ancien
 programme, qui expirait ; bâtir directement sur le nouveau ne présente pas ce
-risque. Réserve : la source de ce programme est une extraction WebFetch (voir
-l'encart en haut), de moindre garantie que les PDF officiels du collège et de la
-première.
+risque. Sa source a été re-vérifiée sur education.gouv.fr (BO du 2 avril 2026,
+arrêté MENE2602919A) : programme officiel, publication confirmée, applicable à la
+rentrée 2027-2028.
 
 ## Outils de calcul
 

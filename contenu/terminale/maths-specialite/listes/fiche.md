@@ -5,7 +5,7 @@ voie: generale
 niveau: terminale
 parcours: maths-specialite
 matiere: mathematiques
-programme: "Programme de spécialité — Terminale générale, applicable à la rentrée 2027"
+programme: "BO du 2 avril 2026 — spécialité mathématiques, applicable en terminale à la rentrée 2027-2028"
 duree_lecture_min: 9
 prerequis:
   - Boucle for et fonction range (Seconde)
