@@ -1,0 +1,93 @@
+{
+  "id": "2nde-pc-ondes-signaux-exos",
+  "chapitre": "2nde-pc-ondes-signaux",
+  "titre": "Exercices — Ondes et signaux",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "lumiere",
+      "enonce": "La lumière du Soleil met $8$ min $20$ s pour atteindre la Terre. Sachant que $c = 3{,}00 \\times 10^{8}$ m·s⁻¹, calcule la distance Terre-Soleil.",
+      "corrige": [
+        "On convertit la durée en secondes : $\\Delta t = 8 \\times 60 + 20 = 500$ s.",
+        "On applique la relation $d = c \\times \\Delta t$.",
+        "$d = 3{,}00 \\times 10^{8} \\times 500 = 1{,}50 \\times 10^{11}$ m.",
+        "Contrôle des unités : m·s⁻¹ $\\times$ s donne bien des mètres."
+      ],
+      "reponse": "$d = 1{,}50 \\times 10^{11}$ m (soit environ $150$ millions de km)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "loi-ohm",
+      "enonce": "Aux bornes d'une résistance, on mesure une tension $U = 6{,}0$ V alors qu'elle est traversée par une intensité $I = 0{,}25$ A. Détermine la valeur de sa résistance $R$.",
+      "corrige": [
+        "La loi d'Ohm s'écrit $U = R \\times I$.",
+        "On isole $R$ : $R = \\dfrac{U}{I}$.",
+        "$R = \\dfrac{6{,}0}{0{,}25} = 24$ Ω.",
+        "Contrôle des unités : des volts divisés par des ampères donnent des ohms."
+      ],
+      "reponse": "$R = 24$ Ω."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "frequence",
+      "enonce": "Pour se repérer, une chauve-souris émet un son de fréquence $f = 40$ kHz. Calcule sa période $T$, puis indique si ce son est audible par l'oreille humaine (domaine audible : $20$ Hz à $20\\,000$ Hz).",
+      "corrige": [
+        "On convertit la fréquence en hertz : $f = 40$ kHz $= 40\\,000$ Hz.",
+        "La période se calcule par $T = \\dfrac{1}{f} = \\dfrac{1}{40\\,000} = 2{,}5 \\times 10^{-5}$ s (soit $25$ µs).",
+        "On compare la fréquence au domaine audible : $40\\,000$ Hz $> 20\\,000$ Hz.",
+        "La fréquence dépasse la limite supérieure : c'est un ultrason, donc inaudible pour l'oreille humaine."
+      ],
+      "reponse": "$T = 2{,}5 \\times 10^{-5}$ s ; le son n'est pas audible (ultrason)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "refraction",
+      "enonce": "Un rayon lumineux passe de l'air (indice $n_1 = 1{,}00$) vers un bloc de verre. L'angle d'incidence vaut $i_1 = 45°$ et l'angle de réfraction mesuré vaut $i_2 = 28°$. On donne $\\sin 45° = 0{,}707$ et $\\sin 28° = 0{,}469$. Détermine l'indice de réfraction $n_2$ du verre.",
+      "corrige": [
+        "On écrit la loi de Snell-Descartes : $n_1 \\sin i_1 = n_2 \\sin i_2$ (angles mesurés par rapport à la normale).",
+        "On isole $n_2$ : $n_2 = \\dfrac{n_1 \\sin i_1}{\\sin i_2}$.",
+        "$n_2 = \\dfrac{1{,}00 \\times 0{,}707}{0{,}469} = 1{,}51$.",
+        "Vérification de cohérence : l'indice est sans unité et $n_2 \\geqslant 1$, ce qui est bien le cas."
+      ],
+      "reponse": "$n_2 \\approx 1{,}51$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "circuits",
+      "enonce": "On monte en série un générateur de tension $U = 12$ V et deux résistances $R_1 = 30$ Ω et $R_2 = 90$ Ω. Détermine l'intensité $I$ du courant dans le circuit, puis les tensions $U_1$ et $U_2$ aux bornes de chaque résistance.",
+      "corrige": [
+        "En série, l'intensité est identique partout et les tensions s'additionnent : $U = U_1 + U_2$.",
+        "Avec la loi d'Ohm, $U_1 = R_1 I$ et $U_2 = R_2 I$, donc $U = (R_1 + R_2)\\,I$.",
+        "On isole $I$ : $I = \\dfrac{U}{R_1 + R_2} = \\dfrac{12}{30 + 90} = \\dfrac{12}{120} = 0{,}10$ A.",
+        "On calcule chaque tension : $U_1 = R_1 I = 30 \\times 0{,}10 = 3{,}0$ V et $U_2 = R_2 I = 90 \\times 0{,}10 = 9{,}0$ V.",
+        "Vérification : $U_1 + U_2 = 3{,}0 + 9{,}0 = 12$ V, ce qui redonne bien la tension du générateur."
+      ],
+      "reponse": "$I = 0{,}10$ A, $U_1 = 3{,}0$ V et $U_2 = 9{,}0$ V."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "annee-lumiere",
+      "enonce": "L'année-lumière (a.l.) est la distance parcourue par la lumière en un an. On prend une année de $365{,}25$ jours et $c = 3{,}00 \\times 10^{8}$ m·s⁻¹. Calcule la valeur d'une année-lumière en mètres, puis en déduis la distance, en mètres, d'une étoile située à $4{,}0$ a.l.",
+      "corrige": [
+        "On convertit une année en secondes : $\\Delta t = 365{,}25 \\times 24 \\times 3600 = 3{,}16 \\times 10^{7}$ s.",
+        "Une année-lumière est une distance : $1\\ \\text{a.l.} = c \\times \\Delta t = 3{,}00 \\times 10^{8} \\times 3{,}16 \\times 10^{7} \\approx 9{,}47 \\times 10^{15}$ m.",
+        "Attention : l'année-lumière est bien une distance (en mètres), et non une durée.",
+        "Pour l'étoile à $4{,}0$ a.l. : $d = 4{,}0 \\times 9{,}47 \\times 10^{15} \\approx 3{,}8 \\times 10^{16}$ m."
+      ],
+      "reponse": "$1\\ \\text{a.l.} \\approx 9{,}47 \\times 10^{15}$ m, donc l'étoile est à $d \\approx 3{,}8 \\times 10^{16}$ m."
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "1spe-pc-ondes-signaux-exos",
+  "chapitre": "1spe-pc-ondes-signaux",
+  "titre": "Exercices — Ondes et signaux",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "retard",
+      "enonce": "Lors d'un orage, un observateur voit l'éclair, puis entend le tonnerre $3{,}0$ s plus tard. La célérité du son dans l'air vaut $v = 340$ m·s⁻¹. À quelle distance l'éclair s'est-il produit ? (On néglige la durée de propagation de la lumière, quasi instantanée.)",
+      "corrige": [
+        "Le retard entre l'émission et la perception du son est $\\tau = \\dfrac{d}{v}$, où $d$ est la distance cherchée. On isole $d$ : $d = v \\times \\tau$.",
+        "Application numérique : $d = 340 \\times 3{,}0 = 1020$ m.",
+        "Soit environ $1{,}0 \\times 10^{3}$ m, c'est-à-dire $1{,}0$ km."
+      ],
+      "reponse": "$d = v\\tau = 1020$ m $\\approx 1{,}0 \\times 10^{3}$ m (soit $1{,}0$ km)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "relation-fondamentale",
+      "enonce": "Une sonde d'échographie émet des ultrasons de fréquence $f = 2{,}0$ MHz dans les tissus, où la célérité vaut $v = 1{,}5 \\times 10^{3}$ m·s⁻¹. Calculer la longueur d'onde $\\lambda$ de ces ultrasons.",
+      "corrige": [
+        "On utilise la relation fondamentale $\\lambda = \\dfrac{v}{f}$.",
+        "Il faut d'abord convertir la fréquence en hertz : $f = 2{,}0$ MHz $= 2{,}0 \\times 10^{6}$ Hz.",
+        "$\\lambda = \\dfrac{1{,}5 \\times 10^{3}}{2{,}0 \\times 10^{6}} = 0{,}75 \\times 10^{-3}$ m.",
+        "En écriture scientifique : $\\lambda = 7{,}5 \\times 10^{-4}$ m, soit $0{,}75$ mm."
+      ],
+      "reponse": "$\\lambda = \\dfrac{v}{f} = 7{,}5 \\times 10^{-4}$ m (soit $0{,}75$ mm)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "changement-milieu",
+      "enonce": "Un son de fréquence $f = 500$ Hz se propage d'abord dans l'air ($v_{\\text{air}} = 340$ m·s⁻¹), puis pénètre dans l'eau, où la célérité vaut $v_{\\text{eau}} = 1500$ m·s⁻¹. 1) Calculer la longueur d'onde dans chacun des deux milieux. 2) Indiquer quelle grandeur reste inchangée au passage air → eau.",
+      "corrige": [
+        "Dans l'air : $\\lambda_{\\text{air}} = \\dfrac{v_{\\text{air}}}{f} = \\dfrac{340}{500} = 0{,}68$ m.",
+        "Dans l'eau : $\\lambda_{\\text{eau}} = \\dfrac{v_{\\text{eau}}}{f} = \\dfrac{1500}{500} = 3{,}0$ m.",
+        "La fréquence est imposée par la source : elle ne change pas ($f = 500$ Hz dans les deux milieux). C'est la célérité qui change, donc la longueur d'onde change aussi."
+      ],
+      "reponse": "$\\lambda_{\\text{air}} = 0{,}68$ m, $\\lambda_{\\text{eau}} = 3{,}0$ m ; la fréquence reste inchangée ($500$ Hz)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "relation-conjugaison",
+      "enonce": "Un objet réel est placé à $20$ cm devant une lentille mince convergente de distance focale $f' = 15$ cm. 1) Déterminer la position $\\overline{OA'}$ de l'image. 2) Cette image est-elle réelle ou virtuelle ?",
+      "corrige": [
+        "L'objet réel est placé avant la lentille : $\\overline{OA} = -20$ cm. La distance focale est $\\overline{OF'} = f' = 15$ cm.",
+        "Relation de conjugaison : $\\dfrac{1}{\\overline{OA'}} - \\dfrac{1}{\\overline{OA}} = \\dfrac{1}{\\overline{OF'}}$, donc $\\dfrac{1}{\\overline{OA'}} = \\dfrac{1}{\\overline{OF'}} + \\dfrac{1}{\\overline{OA}} = \\dfrac{1}{15} + \\dfrac{1}{-20}$.",
+        "Au même dénominateur $60$ : $\\dfrac{1}{\\overline{OA'}} = \\dfrac{4}{60} - \\dfrac{3}{60} = \\dfrac{1}{60}$, d'où $\\overline{OA'} = 60$ cm.",
+        "$\\overline{OA'} > 0$ : l'image se forme après la lentille, elle est donc réelle (on peut la recueillir sur un écran)."
+      ],
+      "reponse": "$\\overline{OA'} = +60$ cm : l'image est réelle."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "grandissement",
+      "enonce": "Un objet lumineux $AB$ de hauteur $2{,}0$ cm est placé à $30$ cm devant une lentille convergente de distance focale $f' = 20$ cm. 1) Déterminer la position $\\overline{OA'}$ de l'image. 2) Calculer le grandissement $\\gamma$. 3) En déduire la hauteur $\\overline{A'B'}$ de l'image. 4) Préciser la nature de l'image (réelle/virtuelle, droite/renversée, agrandie/réduite).",
+      "corrige": [
+        "Objet réel : $\\overline{OA} = -30$ cm, et $f' = 20$ cm. Relation de conjugaison : $\\dfrac{1}{\\overline{OA'}} = \\dfrac{1}{20} + \\dfrac{1}{-30} = \\dfrac{3}{60} - \\dfrac{2}{60} = \\dfrac{1}{60}$, donc $\\overline{OA'} = 60$ cm.",
+        "Grandissement : $\\gamma = \\dfrac{\\overline{OA'}}{\\overline{OA}} = \\dfrac{60}{-30} = -2$.",
+        "Hauteur de l'image : $\\overline{A'B'} = \\gamma \\times \\overline{AB} = -2 \\times 2{,}0 = -4{,}0$ cm. La valeur absolue donne la taille ($4{,}0$ cm), le signe $-$ indique que l'image est renversée.",
+        "Lecture des signes : $\\overline{OA'} > 0$ → image réelle ; $\\gamma < 0$ → renversée ; $|\\gamma| = 2 > 1$ → agrandie deux fois."
+      ],
+      "reponse": "$\\overline{OA'} = 60$ cm, $\\gamma = -2$, $\\overline{A'B'} = -4{,}0$ cm : image réelle, renversée et deux fois plus grande que l'objet."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "retard",
+      "enonce": "Un navire équipé d'un sonar émet une brève salve d'ultrasons verticalement vers le fond marin. L'écho est détecté $\\Delta t = 0{,}20$ s après l'émission. La célérité du son dans l'eau vaut $v = 1500$ m·s⁻¹. 1) Quelle distance les ultrasons parcourent-ils pendant $\\Delta t$ ? 2) En déduire la profondeur $h$ du fond sous le navire.",
+      "corrige": [
+        "Pendant la durée $\\Delta t$, le son effectue l'aller (du navire vers le fond) ET le retour (du fond vers le navire) : la distance totale parcourue est $D = v \\times \\Delta t$.",
+        "$D = 1500 \\times 0{,}20 = 300$ m.",
+        "La profondeur $h$ ne correspond qu'à un seul trajet (aller simple), c'est donc la moitié : $h = \\dfrac{D}{2} = \\dfrac{300}{2} = 150$ m.",
+        "Le piège serait d'oublier le facteur $2$ et d'annoncer $300$ m : l'écho correspond à un aller-retour."
+      ],
+      "reponse": "$D = v\\,\\Delta t = 300$ m, donc la profondeur est $h = \\dfrac{D}{2} = 150$ m."
+    }
+  ]
+}

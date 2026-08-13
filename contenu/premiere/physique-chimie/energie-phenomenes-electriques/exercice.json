@@ -1,0 +1,89 @@
+{
+  "id": "1spe-pc-energie-electrique-exos",
+  "chapitre": "1spe-pc-energie-electrique",
+  "titre": "Exercices — Aspects énergétiques des phénomènes électriques",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "puissance",
+      "enonce": "Un sèche-cheveux porte l'indication $1500$ W et fonctionne sous une tension de $230$ V. Quelle est l'intensité du courant qui le traverse ?",
+      "corrige": [
+        "La puissance électrique vérifie $P = U \\times I$. On cherche $I$, on isole donc cette grandeur : $I = \\dfrac{P}{U}$.",
+        "On applique avec $P = 1500$ W et $U = 230$ V : $I = \\dfrac{1500}{230}$.",
+        "$I \\approx 6{,}5$ A."
+      ],
+      "reponse": "$I = \\dfrac{P}{U} \\approx 6{,}5$ A."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "energie",
+      "enonce": "Une ampoule de puissance $60$ W reste allumée pendant $30$ minutes. Quelle énergie électrique consomme-t-elle, en joules ?",
+      "corrige": [
+        "L'énergie se calcule par $E = P \\times \\Delta t$, mais $\\Delta t$ doit être exprimée en secondes pour obtenir des joules.",
+        "Conversion de la durée : $30$ min $= 30 \\times 60 = 1800$ s.",
+        "On applique : $E = 60 \\times 1800 = 108\\,000$ J.",
+        "Soit $E = 1{,}08 \\times 10^{5}$ J."
+      ],
+      "reponse": "$E = 1{,}08 \\times 10^{5}$ J (soit $108\\,000$ J)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "effet-joule",
+      "enonce": "Une résistance $R = 20\\ \\Omega$ est parcourue par un courant d'intensité $I = 3$ A. Déterminer la tension à ses bornes, puis la puissance qu'elle dissipe par effet Joule.",
+      "corrige": [
+        "Première étape — la tension. La loi d'Ohm donne $U = R \\times I = 20 \\times 3 = 60$ V.",
+        "Deuxième étape — la puissance dissipée. L'effet Joule donne $P_\\mathrm{J} = R \\times I^2 = 20 \\times 3^2 = 20 \\times 9 = 180$ W.",
+        "Vérification par l'autre expression : $P_\\mathrm{J} = \\dfrac{U^2}{R} = \\dfrac{60^2}{20} = \\dfrac{3600}{20} = 180$ W. Les deux méthodes concordent."
+      ],
+      "reponse": "$U = 60$ V et $P_\\mathrm{J} = 180$ W."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "energie",
+      "enonce": "Un radiateur électrique de puissance $2000$ W fonctionne $3$ heures par jour pendant $30$ jours. Calculer l'énergie consommée en kilowattheures, puis le coût si le kWh est facturé $0{,}20$ €.",
+      "corrige": [
+        "Première étape — l'énergie en kWh. On garde la puissance en kilowatts et la durée en heures : $P = 2000$ W $= 2$ kW, et la durée totale vaut $3 \\times 30 = 90$ h.",
+        "$E = P \\times \\Delta t = 2 \\times 90 = 180$ kWh.",
+        "Deuxième étape — le coût. Chaque kWh coûte $0{,}20$ € : coût $= 180 \\times 0{,}20 = 36$ €."
+      ],
+      "reponse": "$E = 180$ kWh, pour un coût de $36$ €."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "generateur",
+      "enonce": "Une pile de force électromotrice $E = 4{,}5$ V et de résistance interne $r = 1{,}2\\ \\Omega$ débite un courant d'intensité $I = 0{,}5$ A. Déterminer la tension $U$ à ses bornes, puis la puissance dissipée par effet Joule à l'intérieur de la pile.",
+      "corrige": [
+        "Première étape — la tension aux bornes. Le modèle du générateur réel donne $U = E - r\\,I = 4{,}5 - 1{,}2 \\times 0{,}5$.",
+        "$1{,}2 \\times 0{,}5 = 0{,}6$, donc $U = 4{,}5 - 0{,}6 = 3{,}9$ V. La tension aux bornes est bien inférieure à la fem, car la pile débite du courant.",
+        "Deuxième étape — la puissance dissipée en interne. La résistance interne $r$ dissipe par effet Joule $P_\\mathrm{J} = r\\,I^2 = 1{,}2 \\times 0{,}5^2 = 1{,}2 \\times 0{,}25$.",
+        "$P_\\mathrm{J} = 0{,}3$ W."
+      ],
+      "reponse": "$U = 3{,}9$ V et $P_\\mathrm{J} = 0{,}3$ W dissipés à l'intérieur de la pile."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "rendement",
+      "enonce": "Un moteur électrique fonctionne sous une tension $U = 12$ V en étant traversé par un courant $I = 5$ A. Il fournit une puissance mécanique utile de $48$ W. Calculer la puissance électrique reçue, le rendement du moteur, puis l'énergie dissipée pendant $2$ minutes de fonctionnement.",
+      "corrige": [
+        "Première étape — la puissance reçue. La puissance électrique absorbée est $P_{\\text{reçue}} = U \\times I = 12 \\times 5 = 60$ W.",
+        "Deuxième étape — le rendement. $\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{reçue}}} = \\dfrac{48}{60} = 0{,}8$, soit $80\\,\\%$. La valeur est bien inférieure à $1$ : cohérent.",
+        "Troisième étape — la puissance dissipée. Par conservation de l'énergie, $P_{\\text{dissipée}} = P_{\\text{reçue}} - P_{\\text{utile}} = 60 - 48 = 12$ W.",
+        "Quatrième étape — l'énergie dissipée. On convertit la durée : $2$ min $= 120$ s, puis $E_{\\text{dissipée}} = P_{\\text{dissipée}} \\times \\Delta t = 12 \\times 120 = 1440$ J."
+      ],
+      "reponse": "$P_{\\text{reçue}} = 60$ W, $\\eta = 0{,}8$ ($80\\,\\%$), et $E_{\\text{dissipée}} = 1440$ J en $2$ min."
+    }
+  ]
+}

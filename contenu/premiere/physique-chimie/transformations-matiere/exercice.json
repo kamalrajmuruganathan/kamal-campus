@@ -1,0 +1,92 @@
+{
+  "id": "1spe-pc-transformations-matiere-exos",
+  "chapitre": "1spe-pc-transformations-matiere",
+  "titre": "Exercices — Constitution et transformations de la matière",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "concentration",
+      "enonce": "On dissout $n = 0{,}20$ mol de glucose dans de l'eau, puis on complète jusqu'à obtenir $V = 250$ mL de solution. Calculer la concentration en quantité de matière $c$ de la solution. Attention à l'unité de volume.",
+      "corrige": [
+        "La concentration en quantité de matière est $c = \\dfrac{n}{V}$, où $V$ doit être exprimé en litres (L) pour obtenir une concentration en mol·L⁻¹.",
+        "On convertit le volume : $V = 250$ mL $= 250 \\times 10^{-3}$ L $= 0{,}250$ L.",
+        "On applique la formule : $c = \\dfrac{0{,}20}{0{,}250} = 0{,}80$ mol·L⁻¹.",
+        "Oublier de convertir les mL en L aurait donné un résultat $1000$ fois trop petit."
+      ],
+      "reponse": "$c = 0{,}80$ mol·L⁻¹."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "avancement",
+      "enonce": "Le fer et le soufre réagissent selon $\\mathrm{Fe} + \\mathrm{S} \\rightarrow \\mathrm{FeS}$. On introduit initialement $n_\\mathrm{Fe} = 0{,}40$ mol et $n_\\mathrm{S} = 0{,}40$ mol. Exprimer les quantités de matière à l'avancement $x$, puis déterminer l'avancement maximal $x_{\\max}$.",
+      "corrige": [
+        "Tous les nombres stœchiométriques valent $1$. À l'avancement $x$ : les réactifs diminuent, $n_\\mathrm{Fe} = 0{,}40 - x$ et $n_\\mathrm{S} = 0{,}40 - x$ ; le produit augmente, $n_\\mathrm{FeS} = x$.",
+        "L'avancement maximal est atteint lorsqu'un réactif s'annule : $0{,}40 - x = 0$ donne $x = 0{,}40$ pour le fer comme pour le soufre.",
+        "Les deux réactifs s'épuisent simultanément : le mélange est stœchiométrique et $x_{\\max} = 0{,}40$ mol."
+      ],
+      "reponse": "$n_\\mathrm{Fe} = n_\\mathrm{S} = 0{,}40 - x$, $n_\\mathrm{FeS} = x$, et $x_{\\max} = 0{,}40$ mol (mélange stœchiométrique)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "reactif-limitant",
+      "enonce": "L'aluminium réagit avec le dichlore selon $2\\,\\mathrm{Al} + 3\\,\\mathrm{Cl_2} \\rightarrow 2\\,\\mathrm{AlCl_3}$. On part de $n_\\mathrm{Al} = 0{,}60$ mol et $n_{\\mathrm{Cl_2}} = 0{,}60$ mol. Déterminer le réactif limitant, l'avancement maximal, puis la quantité de $\\mathrm{AlCl_3}$ formée.",
+      "corrige": [
+        "On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{Al}$, $\\dfrac{0{,}60}{2} = 0{,}30$ ; pour $\\mathrm{Cl_2}$, $\\dfrac{0{,}60}{3} = 0{,}20$.",
+        "Le plus petit rapport est $0{,}20$, obtenu pour $\\mathrm{Cl_2}$ : c'est le réactif limitant, bien que sa quantité en moles soit égale à celle de l'aluminium.",
+        "L'avancement maximal annule le limitant : $n_{\\mathrm{Cl_2}} - 3x = 0$ donne $x_{\\max} = \\dfrac{0{,}60}{3} = 0{,}20$ mol.",
+        "$\\mathrm{AlCl_3}$ est un produit de nombre stœchiométrique $2$ : $n_{\\mathrm{AlCl_3}} = 2\\,x_{\\max} = 2 \\times 0{,}20 = 0{,}40$ mol."
+      ],
+      "reponse": "$\\mathrm{Cl_2}$ est limitant, $x_{\\max} = 0{,}20$ mol et $n_{\\mathrm{AlCl_3}} = 0{,}40$ mol."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "beer-lambert",
+      "enonce": "Pour doser une espèce colorée par spectrophotométrie, on prépare une solution étalon de concentration $c_0 = 2{,}0 \\times 10^{-3}$ mol·L⁻¹ dont l'absorbance mesurée est $A_0 = 0{,}40$. Une solution de concentration inconnue, mesurée dans la même cuve, donne $A = 0{,}30$. Déterminer sa concentration $c$.",
+      "corrige": [
+        "D'après la loi de Beer-Lambert $A = \\varepsilon \\times \\ell \\times c$, l'absorbance est proportionnelle à la concentration : le rapport $\\dfrac{A}{c}$ est constant tant que $\\varepsilon$ et $\\ell$ ne changent pas.",
+        "On détermine le coefficient de proportionnalité avec l'étalon : $\\dfrac{A_0}{c_0} = \\dfrac{0{,}40}{2{,}0 \\times 10^{-3}} = 200$ L·mol⁻¹.",
+        "On en déduit la concentration inconnue : $c = \\dfrac{A}{200} = \\dfrac{0{,}30}{200} = 1{,}5 \\times 10^{-3}$ mol·L⁻¹.",
+        "Vérification par proportionnalité directe : $c = \\dfrac{A}{A_0} \\times c_0 = \\dfrac{0{,}30}{0{,}40} \\times 2{,}0 \\times 10^{-3} = 1{,}5 \\times 10^{-3}$ mol·L⁻¹."
+      ],
+      "reponse": "$c = 1{,}5 \\times 10^{-3}$ mol·L⁻¹."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "titrage",
+      "enonce": "On titre un volume $V_\\mathrm{A} = 20{,}0$ mL d'une solution d'une espèce $\\mathrm{A}$ de concentration inconnue par une solution titrante de $\\mathrm{B}$ de concentration $c_\\mathrm{B} = 0{,}050$ mol·L⁻¹. La réaction $\\mathrm{A} + \\mathrm{B} \\rightarrow$ produits se fait mole à mole. L'équivalence est repérée pour $V_\\mathrm{B} = 16{,}0$ mL versés.\n1) Déterminer la concentration $c_\\mathrm{A}$.\n2) En déduire la quantité de matière de $\\mathrm{A}$ contenue dans un flacon de $500$ mL de cette solution.",
+      "corrige": [
+        "Les nombres stœchiométriques valent tous les deux $1$ : à l'équivalence, la relation $c_\\mathrm{A} V_\\mathrm{A} = c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}$ s'applique.",
+        "On isole l'inconnue : $c_\\mathrm{A} = \\dfrac{c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}}{V_\\mathrm{A}} = \\dfrac{0{,}050 \\times 16{,}0}{20{,}0} = 0{,}040$ mol·L⁻¹. Les deux volumes étant en mL, leur rapport ne dépend pas de l'unité, aucune conversion n'est nécessaire ici.",
+        "Pour la quantité de matière dans $500$ mL, on utilise $n = c_\\mathrm{A} \\times V$, avec $V$ en litres : $V = 500$ mL $= 0{,}500$ L.",
+        "$n = 0{,}040 \\times 0{,}500 = 0{,}020$ mol."
+      ],
+      "reponse": "$c_\\mathrm{A} = 0{,}040$ mol·L⁻¹ et $n = 0{,}020$ mol dans $500$ mL."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "reactif-limitant",
+      "enonce": "On fait brûler $m = 2{,}4$ g de magnésium dans $n_{\\mathrm{O_2}} = 0{,}060$ mol de dioxygène selon $2\\,\\mathrm{Mg} + \\mathrm{O_2} \\rightarrow 2\\,\\mathrm{MgO}$. Données : $M(\\mathrm{Mg}) = 24$ g·mol⁻¹, $M(\\mathrm{MgO}) = 40$ g·mol⁻¹.\n1) Calculer la quantité de matière de magnésium.\n2) Identifier le réactif limitant.\n3) En déduire la masse de $\\mathrm{MgO}$ formée.",
+      "corrige": [
+        "Quantité de matière de magnésium : $n_\\mathrm{Mg} = \\dfrac{m}{M(\\mathrm{Mg})} = \\dfrac{2{,}4}{24} = 0{,}10$ mol.",
+        "On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{Mg}$, $\\dfrac{0{,}10}{2} = 0{,}050$ ; pour $\\mathrm{O_2}$, $\\dfrac{0{,}060}{1} = 0{,}060$. Le minimum est $0{,}050$, donc $\\mathrm{Mg}$ est le réactif limitant.",
+        "L'avancement maximal annule le limitant : $n_\\mathrm{Mg} - 2x = 0$ donne $x_{\\max} = \\dfrac{0{,}10}{2} = 0{,}050$ mol.",
+        "$\\mathrm{MgO}$ a pour nombre stœchiométrique $2$ : $n_{\\mathrm{MgO}} = 2\\,x_{\\max} = 0{,}10$ mol.",
+        "On revient à une masse : $m_{\\mathrm{MgO}} = n_{\\mathrm{MgO}} \\times M(\\mathrm{MgO}) = 0{,}10 \\times 40 = 4{,}0$ g."
+      ],
+      "reponse": "$n_\\mathrm{Mg} = 0{,}10$ mol, $\\mathrm{Mg}$ est limitant, et $m_{\\mathrm{MgO}} = 4{,}0$ g."
+    }
+  ]
+}

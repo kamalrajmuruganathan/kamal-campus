@@ -1,0 +1,86 @@
+{
+  "id": "2nde-pc-modelisation-microscopique-exos",
+  "chapitre": "2nde-pc-modelisation-microscopique",
+  "titre": "Exercices — Modélisation microscopique de la matière",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "notation-atome",
+      "enonce": "L'atome de calcium s'écrit $^{40}_{20}\\mathrm{Ca}$. Donner son nombre de protons, de neutrons et d'électrons.",
+      "corrige": [
+        "Le numéro atomique est $Z = 20$ : c'est le nombre de **protons**.",
+        "Le nombre de masse est $A = 40$ : c'est le nombre de **nucléons**. Les neutrons se comptent par $A - Z = 40 - 20 = 20$.",
+        "Un atome est **électriquement neutre** : il possède autant d'électrons que de protons, soit $20$ électrons."
+      ],
+      "reponse": "$20$ protons, $20$ neutrons et $20$ électrons."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "configuration",
+      "enonce": "Écrire la configuration électronique de l'atome de fluor ($Z = 9$).",
+      "corrige": [
+        "On remplit les sous-couches dans l'ordre $1\\mathrm{s} \\rightarrow 2\\mathrm{s} \\rightarrow 2\\mathrm{p}$, en respectant les capacités ($\\mathrm{s}$ : $2$ électrons au maximum, $\\mathrm{p}$ : $6$ au maximum).",
+        "On place $2$ électrons dans $1\\mathrm{s}$, puis $2$ dans $2\\mathrm{s}$ : il en reste $9 - 4 = 5$ à placer dans $2\\mathrm{p}$.",
+        "Contrôle : la somme des exposants doit valoir $Z$, soit $2 + 2 + 5 = 9$ ✓."
+      ],
+      "reponse": "$1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^5$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "electrons-de-valence",
+      "enonce": "Le chlore a pour numéro atomique $Z = 17$. Établir sa configuration électronique, en déduire son nombre d'électrons de valence, puis nommer la famille à laquelle il appartient.",
+      "corrige": [
+        "On remplit dans l'ordre : $1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^6\\,3\\mathrm{s}^2\\,3\\mathrm{p}^5$. Contrôle : $2+2+6+2+5 = 17 = Z$ ✓.",
+        "Les électrons de valence sont ceux de la **dernière couche occupée**, ici la couche $3$ : $3\\mathrm{s}^2\\,3\\mathrm{p}^5$, soit $2 + 5 = 7$ électrons de valence.",
+        "Un atome à $7$ électrons de valence se trouve dans la **colonne 17** du tableau périodique : c'est la famille des **halogènes**."
+      ],
+      "reponse": "$1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^6\\,3\\mathrm{s}^2\\,3\\mathrm{p}^5$ ; $7$ électrons de valence ; famille des halogènes."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "ions",
+      "enonce": "Le magnésium a pour numéro atomique $Z = 12$. À l'aide de sa configuration électronique, prévoir l'ion qu'il forme selon la règle du duet et de l'octet.",
+      "corrige": [
+        "Configuration : $1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^6\\,3\\mathrm{s}^2$ (contrôle : $2+2+6+2 = 12 = Z$ ✓). La dernière couche occupée est la couche $3$, avec $2$ électrons de valence.",
+        "Avec seulement $2$ électrons de valence, il est plus économique d'en **perdre** $2$ que d'en gagner $6$ : l'atome retrouve alors la configuration du néon ($1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^6$, un octet sur la couche $2$).",
+        "Perdre $2$ électrons (chargés négativement) laisse un excédent de $2$ charges positives : le magnésium forme donc le cation $\\mathrm{Mg}^{2+}$."
+      ],
+      "reponse": "L'ion $\\mathrm{Mg}^{2+}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "structure-lacunaire",
+      "enonce": "On modélise un atome par une sphère de rayon $10^{-10}$ m, et son noyau par une sphère de rayon $10^{-15}$ m. Pour se représenter ces tailles, on agrandit l'atome jusqu'à lui donner un rayon de $1$ m. Quel serait alors le rayon du noyau ? Que peut-on conclure sur la matière ?",
+      "corrige": [
+        "On cherche le facteur d'agrandissement qui fait passer le rayon de l'atome de $10^{-10}$ m à $1$ m : ce facteur vaut $\\dfrac{1}{10^{-10}} = 10^{10}$.",
+        "On applique le **même** facteur au noyau : rayon $= 10^{-15} \\times 10^{10} = 10^{-15+10} = 10^{-5}$ m, soit $0{,}01$ mm — un grain à peine visible au centre d'une sphère de $1$ m de rayon.",
+        "Le noyau est donc environ $100\\,000$ fois plus petit que l'atome tout en concentrant l'essentiel de la masse : la matière a une **structure lacunaire**, elle est essentiellement constituée de vide."
+      ],
+      "reponse": "Le noyau aurait un rayon d'environ $10^{-5}$ m ($0{,}01$ mm) : la matière est essentiellement du vide (structure lacunaire)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "molecules",
+      "enonce": "Dans la molécule d'ammoniac $\\mathrm{NH_3}$, l'azote ($5$ électrons de valence) est lié à trois atomes d'hydrogène. Déterminer le nombre de liaisons covalentes formées par l'azote, puis le nombre de doublets non liants qu'il porte.",
+      "corrige": [
+        "Une liaison covalente est la mise en commun de deux électrons, un apporté par chaque atome. L'azote a $5$ électrons de valence ; il lui manque $3$ électrons pour atteindre l'octet ($8$), il forme donc **$3$ liaisons covalentes**, une avec chacun des trois hydrogènes.",
+        "Sur ses $5$ électrons de valence, $3$ sont engagés dans les liaisons. Il en reste $5 - 3 = 2$, non engagés.",
+        "Les électrons de valence non engagés s'associent par deux en **doublets non liants** : ces $2$ électrons forment donc $1$ doublet non liant."
+      ],
+      "reponse": "L'azote forme $3$ liaisons covalentes et porte $1$ doublet non liant."
+    }
+  ]
+}

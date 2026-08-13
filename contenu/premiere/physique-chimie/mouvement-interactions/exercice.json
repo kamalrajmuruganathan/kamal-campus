@@ -1,0 +1,88 @@
+{
+  "id": "1spe-pc-mouvement-interactions-exos",
+  "chapitre": "1spe-pc-mouvement-interactions",
+  "titre": "Exercices — Mouvement et interactions",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "vecteur-vitesse",
+      "enonce": "Sur une chronophotographie, la durée entre deux positions successives est $\\tau = 25$ ms. On mesure la distance entre les points $\\mathrm{M}_0$ et $\\mathrm{M}_2$ : $\\mathrm{M}_0\\mathrm{M}_2 = 6{,}0$ cm. Calculer la valeur du vecteur vitesse $\\vec{v_1}$ au point $\\mathrm{M}_1$.",
+      "corrige": [
+        "Le vecteur vitesse au point $\\mathrm{M}_1$ s'obtient par $\\vec{v_1} \\approx \\dfrac{\\overrightarrow{\\mathrm{M}_0\\mathrm{M}_2}}{2\\tau}$ ; sa valeur est donc $v_1 \\approx \\dfrac{\\mathrm{M}_0\\mathrm{M}_2}{2\\tau}$.",
+        "On convertit dans les unités du système international : $\\mathrm{M}_0\\mathrm{M}_2 = 6{,}0$ cm $= 0{,}060$ m et $\\tau = 25$ ms $= 0{,}025$ s.",
+        "$v_1 \\approx \\dfrac{0{,}060}{2 \\times 0{,}025} = \\dfrac{0{,}060}{0{,}050} = 1{,}2$ m/s."
+      ],
+      "reponse": "$v_1 \\approx 1{,}2$ m/s."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "inertie",
+      "enonce": "Un palet glisse en ligne droite à vitesse constante sur une table à coussin d'air (frottements négligeables). Dans le référentiel terrestre supposé galiléen, que vaut la somme des forces exercées sur le palet ? Justifier.",
+      "corrige": [
+        "Le mouvement est rectiligne uniforme : le vecteur vitesse garde la même direction et la même valeur, il est donc constant. Sa variation est nulle : $\\Delta\\vec{v} = \\vec{0}$.",
+        "D'après le principe fondamental, $\\sum \\vec{F}$ et $\\Delta\\vec{v}$ ont même direction et même sens. Si $\\Delta\\vec{v} = \\vec{0}$, alors $\\sum \\vec{F} = \\vec{0}$ : les forces se compensent."
+      ],
+      "reponse": "$\\sum \\vec{F} = \\vec{0}$ : les forces exercées sur le palet se compensent."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "principe",
+      "enonce": "Dans un repère lié au sol, on relève sur deux positions voisines les vecteurs vitesse d'un mobile : $\\vec{v_1}$ de coordonnées $(4{,}0\\,;\\,1{,}0)$ m/s et $\\vec{v_2}$ de coordonnées $(4{,}0\\,;\\,3{,}0)$ m/s. Déterminer le vecteur $\\Delta\\vec{v}$, puis en déduire la direction et le sens de la somme des forces.",
+      "corrige": [
+        "Par définition, $\\Delta\\vec{v} = \\vec{v_2} - \\vec{v_1}$ : on soustrait les coordonnées.",
+        "$\\Delta\\vec{v}$ a pour coordonnées $(4{,}0 - 4{,}0\\,;\\,3{,}0 - 1{,}0) = (0\\,;\\,2{,}0)$ m/s : il est dirigé selon l'axe vertical, vers le haut.",
+        "D'après le principe fondamental, $\\sum \\vec{F}$ a même direction et même sens que $\\Delta\\vec{v}$ : la somme des forces est donc verticale et orientée vers le haut."
+      ],
+      "reponse": "$\\Delta\\vec{v} = (0\\,;\\,2{,}0)$ m/s ; $\\sum \\vec{F}$ est verticale, dirigée vers le haut."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "bilan-forces",
+      "enonce": "Une caisse est tirée horizontalement sur un sol et se déplace en ligne droite en allant de plus en plus vite. Faire le bilan des forces qui s'exercent sur elle, puis indiquer la direction et le sens de la somme des forces.",
+      "corrige": [
+        "Système : la caisse. Référentiel : terrestre, supposé galiléen. Bilan des forces : le poids $\\vec{P}$ (vertical, vers le bas), la réaction du sol $\\vec{R}$ (verticale, vers le haut), la force de traction $\\vec{T}$ (horizontale, vers l'avant) et les frottements $\\vec{f}$ (horizontaux, vers l'arrière).",
+        "Le mouvement est horizontal : dans la direction verticale, le poids et la réaction du sol se compensent (la vitesse n'a pas de composante verticale). La somme des forces est donc horizontale.",
+        "Le mouvement est rectiligne et la valeur de la vitesse augmente : le vecteur vitesse s'allonge dans le sens du déplacement, donc $\\Delta\\vec{v}$ est dirigé vers l'avant. Comme $\\sum \\vec{F}$ a même direction et même sens que $\\Delta\\vec{v}$, la somme des forces est horizontale, orientée vers l'avant."
+      ],
+      "reponse": "$\\sum \\vec{F}$ est horizontale et dirigée vers l'avant (sens du mouvement) ; les forces verticales se compensent."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "circulaire",
+      "enonce": "Une bille attachée à un fil décrit un cercle horizontal à une vitesse de valeur constante sur une table lisse : c'est un mouvement circulaire uniforme. 1) La valeur de la vitesse est constante : peut-on en conclure que $\\Delta\\vec{v} = \\vec{0}$ ? 2) Indiquer la direction et le sens de $\\Delta\\vec{v}$ entre deux positions voisines. 3) En déduire la direction de la somme des forces et le nom qu'on lui donne. 4) Quelle force réelle joue ce rôle ici ?",
+      "corrige": [
+        "1) Non. Le vecteur vitesse est tangent à la trajectoire : même si sa valeur reste constante, sa direction change en permanence le long du cercle. Puisque le vecteur vitesse change, $\\Delta\\vec{v} \\neq \\vec{0}$.",
+        "2) En construisant $\\Delta\\vec{v} = \\vec{v_{i+1}} - \\vec{v_i}$ entre deux positions voisines, on obtient un vecteur dirigé vers l'intérieur du cercle, c'est-à-dire vers le centre.",
+        "3) D'après le principe fondamental, $\\sum \\vec{F}$ a même direction et même sens que $\\Delta\\vec{v}$ : la somme des forces est donc dirigée vers le centre. On l'appelle force centripète.",
+        "4) Ici, c'est la tension du fil, dirigée de la bille vers le centre, qui joue ce rôle centripète."
+      ],
+      "reponse": "$\\Delta\\vec{v} \\neq \\vec{0}$ (la direction change) ; $\\Delta\\vec{v}$ et $\\sum \\vec{F}$ pointent vers le centre (force centripète) ; c'est la tension du fil qui l'assure."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "chute-libre",
+      "enonce": "Une balle de tennis est lancée verticalement vers le haut ; on néglige les frottements de l'air. En suivant la méthode d'analyse d'un mouvement : 1) préciser le système et le référentiel ; 2) faire le bilan des forces ; 3) dire si la balle est en chute libre ; 4) donner la direction et le sens de $\\sum \\vec{F}$, puis de $\\Delta\\vec{v}$ ; 5) un élève affirme qu'une « force du mouvement » pousse la balle vers le haut pendant la montée : que lui répondre, et pourquoi la balle ralentit-elle en montant ?",
+      "corrige": [
+        "1) Système : la balle. Référentiel : terrestre, supposé galiléen.",
+        "2) Les frottements étant négligés, une seule force s'exerce : le poids $\\vec{P}$, vertical et dirigé vers le bas.",
+        "3) La balle n'est soumise qu'à son poids : elle est donc en chute libre, y compris pendant la phase de montée.",
+        "4) $\\sum \\vec{F} = \\vec{P}$ est verticale, dirigée vers le bas. D'après le principe fondamental, $\\Delta\\vec{v}$ a même direction et même sens : $\\Delta\\vec{v}$ est vertical, vers le bas.",
+        "5) La « force du mouvement » n'existe pas : aucune force ne pousse la balle vers le haut. Pendant la montée, le vecteur vitesse est dirigé vers le haut alors que $\\Delta\\vec{v}$ est dirigé vers le bas : à chaque instant le vecteur vitesse diminue, la balle ralentit. C'est justement parce que $\\sum \\vec{F}$ est opposée à la vitesse (et non dans son sens) qu'elle freine la balle."
+      ],
+      "reponse": "Système = balle, référentiel terrestre galiléen ; seule force = le poids ; chute libre ; $\\sum \\vec{F}$ et $\\Delta\\vec{v}$ verticaux vers le bas ; pas de « force du mouvement » : la balle ralentit car $\\Delta\\vec{v}$ est opposé à sa vitesse."
+    }
+  ]
+}

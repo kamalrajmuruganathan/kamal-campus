@@ -1,0 +1,91 @@
+{
+  "id": "2nde-pc-mouvement-interactions-exos",
+  "chapitre": "2nde-pc-mouvement-interactions",
+  "titre": "Exercices — Mouvement et interactions",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "vitesse-moyenne",
+      "enonce": "Un coureur parcourt $300$ m en $40$ s à allure régulière. Calcule sa vitesse moyenne en m·s⁻¹, puis convertis-la en km·h⁻¹.",
+      "corrige": [
+        "On applique la formule de la vitesse moyenne : $v = \\dfrac{d}{\\Delta t}$, avec $d$ en mètres et $\\Delta t$ en secondes pour obtenir un résultat en m·s⁻¹.",
+        "$v = \\dfrac{300}{40} = 7{,}5$ m·s⁻¹.",
+        "Pour passer des m·s⁻¹ aux km·h⁻¹, on **multiplie** par $3{,}6$ : $7{,}5 \\times 3{,}6 = 27$ km·h⁻¹."
+      ],
+      "reponse": "$v = 7{,}5$ m·s⁻¹, soit $27$ km·h⁻¹."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Un sac a une masse $m = 8{,}0$ kg. On prend $g = 9{,}8$ N·kg⁻¹ sur Terre. Calcule son poids $P$, en précisant l'unité, et donne sa masse.",
+      "corrige": [
+        "Le poids est une force : on utilise $P = m \\times g$, avec $m$ en kg et $g$ en N·kg⁻¹, ce qui donne $P$ en newtons (N).",
+        "$P = 8{,}0 \\times 9{,}8 = 78{,}4$ N.",
+        "La masse, elle, ne se calcule pas ici : elle vaut $m = 8{,}0$ kg. Masse (kg) et poids (N) sont deux grandeurs différentes qu'il ne faut pas confondre."
+      ],
+      "reponse": "$P = 78{,}4$ N ; la masse reste $m = 8{,}0$ kg."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "gravitation",
+      "enonce": "Un satellite de masse $m_\\mathrm{B} = 500$ kg est en orbite à une distance $d = 7{,}0 \\times 10^{6}$ m du centre de la Terre, de masse $m_\\mathrm{A} = 6{,}0 \\times 10^{24}$ kg. Calcule la valeur de la force d'interaction gravitationnelle entre la Terre et le satellite. On donne $G = 6{,}67 \\times 10^{-11}$ N·m²·kg⁻².",
+      "corrige": [
+        "On utilise $F = G\\,\\dfrac{m_\\mathrm{A} \\times m_\\mathrm{B}}{d^2}$. Toutes les grandeurs sont déjà en unités du Système international (kg et m), on peut calculer directement.",
+        "Numérateur : $G \\times m_\\mathrm{A} \\times m_\\mathrm{B} = 6{,}67 \\times 10^{-11} \\times 6{,}0 \\times 10^{24} \\times 500 = 2{,}0 \\times 10^{17}$.",
+        "Dénominateur : $d^2 = (7{,}0 \\times 10^{6})^2 = 4{,}9 \\times 10^{13}$ m². Attention à bien élever la distance au carré.",
+        "$F = \\dfrac{2{,}0 \\times 10^{17}}{4{,}9 \\times 10^{13}} \\approx 4{,}1 \\times 10^{3}$ N."
+      ],
+      "reponse": "$F \\approx 4{,}1 \\times 10^{3}$ N (soit environ $4100$ N)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "referentiel",
+      "enonce": "Léa est assise sur le cheval d'un manège qui tourne à allure constante. Décris son mouvement (nature de la trajectoire et évolution de la vitesse) : a) dans le référentiel du sol ; b) dans le référentiel du manège. Explique pourquoi ces deux réponses ne sont pas contradictoires.",
+      "corrige": [
+        "Première étape obligatoire : nommer le référentiel, car un mouvement n'existe que par rapport à un référentiel.",
+        "a) Dans le référentiel du sol, Léa décrit un cercle à valeur de vitesse constante : son mouvement est **circulaire uniforme**.",
+        "b) Dans le référentiel du manège, Léa ne bouge pas par rapport au cheval et à la structure : elle est **immobile**.",
+        "Les deux descriptions sont toutes deux correctes : elles portent sur des référentiels différents. C'est justement pourquoi préciser le référentiel est indispensable."
+      ],
+      "reponse": "a) circulaire uniforme (référentiel du sol) ; b) immobile (référentiel du manège). Pas de contradiction : le référentiel diffère."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "vitesse-moyenne",
+      "enonce": "Dans le référentiel terrestre, une automobiliste parcourt une première portion de $12$ km en $10$ min, puis une seconde de $8$ km en $5$ min. Calcule sa vitesse moyenne sur l'ensemble du trajet, en m·s⁻¹ puis en km·h⁻¹. (Piège : on ne fait pas la moyenne des deux vitesses.)",
+      "corrige": [
+        "On travaille dans le référentiel terrestre, comme indiqué. La vitesse moyenne sur tout le trajet est $v = \\dfrac{d_\\text{total}}{\\Delta t_\\text{total}}$ : il faut la distance totale et la durée totale, pas la moyenne des deux vitesses.",
+        "Distance totale : $d = 12 + 8 = 20$ km $= 20\\,000$ m.",
+        "Durée totale : $\\Delta t = 10 + 5 = 15$ min $= 15 \\times 60 = 900$ s.",
+        "$v = \\dfrac{20\\,000}{900} \\approx 22{,}2$ m·s⁻¹.",
+        "Conversion : $22{,}2 \\times 3{,}6 \\approx 80$ km·h⁻¹ (on retrouve directement $20$ km parcourus en $0{,}25$ h, soit $80$ km·h⁻¹)."
+      ],
+      "reponse": "$v \\approx 22{,}2$ m·s⁻¹, soit environ $80$ km·h⁻¹."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "vecteur-vitesse",
+      "enonce": "Dans le référentiel géocentrique, la Lune décrit autour de la Terre une trajectoire quasi circulaire, parcourue à valeur de vitesse constante. 1) Ce mouvement peut-il être qualifié de « sans changement » ? Justifie à l'aide du vecteur vitesse. 2) À l'aide du principe d'inertie, que peut-on en déduire sur les forces exercées sur la Lune ?",
+      "corrige": [
+        "Le référentiel est donné : le référentiel géocentrique. On raisonne dans ce cadre.",
+        "1) « Uniforme » ne concerne que la **valeur** de la vitesse. Le vecteur vitesse reste tangent à la trajectoire : comme la trajectoire est un cercle, sa direction tourne en permanence. Le vecteur vitesse change donc constamment : le mouvement n'est pas « sans changement ».",
+        "2) Le principe d'inertie dit que, dans un référentiel galiléen, des forces qui se compensent correspondent à un corps immobile ou en mouvement rectiligne uniforme. Ici le mouvement est circulaire, donc pas rectiligne uniforme.",
+        "On en déduit que les forces exercées sur la Lune **ne se compensent pas** : c'est l'attraction gravitationnelle de la Terre qui modifie sans cesse la direction du vecteur vitesse."
+      ],
+      "reponse": "1) Non : la valeur est constante, mais le vecteur vitesse change de direction en permanence. 2) Les forces ne se compensent pas (attraction gravitationnelle de la Terre)."
+    }
+  ]
+}
