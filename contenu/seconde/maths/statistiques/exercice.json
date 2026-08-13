@@ -1,0 +1,90 @@
+{
+  "id": "2nde-math-statistiques-exos",
+  "chapitre": "2nde-math-statistiques",
+  "titre": "Exercices — Statistiques",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "moyenne",
+      "enonce": "Dans une classe, les notes à un contrôle sont données par le tableau d'effectifs suivant : la note $8$ obtenue par $2$ élèves, $11$ par $5$ élèves, $13$ par $8$ élèves, $15$ par $3$ élèves et $18$ par $2$ élèves. Calculer la moyenne de la classe.",
+      "corrige": [
+        "On calcule d'abord l'effectif total : $N = 2 + 5 + 8 + 3 + 2 = 20$.",
+        "On applique la moyenne pondérée par les effectifs : $\\bar{x} = \\dfrac{\\sum n_i x_i}{N}$.",
+        "Numérateur : $2\\times 8 + 5\\times 11 + 8\\times 13 + 3\\times 15 + 2\\times 18 = 16 + 55 + 104 + 45 + 36 = 256$.",
+        "Donc $\\bar{x} = \\dfrac{256}{20} = 12{,}8$."
+      ],
+      "reponse": "$\\bar{x} = 12{,}8$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "mediane",
+      "enonce": "Déterminer la médiane de la série $14\\,;\\ 9\\,;\\ 22\\,;\\ 7\\,;\\ 16\\,;\\ 11\\,;\\ 19\\,;\\ 5$.",
+      "corrige": [
+        "Étape indispensable : on ordonne la série dans l'ordre croissant : $5\\,;\\ 7\\,;\\ 9\\,;\\ 11\\,;\\ 14\\,;\\ 16\\,;\\ 19\\,;\\ 22$.",
+        "L'effectif est $N = 8$, un nombre pair : la médiane est la moyenne des deux valeurs centrales, celles de rangs $4$ et $5$.",
+        "Ces deux valeurs sont $11$ et $14$, donc $\\mathrm{Me} = \\dfrac{11 + 14}{2} = 12{,}5$."
+      ],
+      "reponse": "$\\mathrm{Me} = 12{,}5$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "quartiles",
+      "enonce": "On relève la durée (en minutes) de $11$ trajets domicile–lycée : $12\\,;\\ 3\\,;\\ 18\\,;\\ 8\\,;\\ 24\\,;\\ 6\\,;\\ 15\\,;\\ 5\\,;\\ 10\\,;\\ 20\\,;\\ 8$. Déterminer $\\mathrm{Q}_1$, $\\mathrm{Q}_3$, puis l'écart interquartile.",
+      "corrige": [
+        "On ordonne d'abord la série : $3\\,;\\ 5\\,;\\ 6\\,;\\ 8\\,;\\ 8\\,;\\ 10\\,;\\ 12\\,;\\ 15\\,;\\ 18\\,;\\ 20\\,;\\ 24$, avec $N = 11$.",
+        "Pour $\\mathrm{Q}_1$ : on calcule $\\dfrac{N}{4} = \\dfrac{11}{4} = 2{,}75$. Ce n'est pas un entier, on arrondit au rang supérieur, soit le rang $3$. La valeur de rang $3$ est $6$, donc $\\mathrm{Q}_1 = 6$.",
+        "Pour $\\mathrm{Q}_3$ : on calcule $\\dfrac{3N}{4} = \\dfrac{33}{4} = 8{,}25$. On arrondit au rang supérieur, soit le rang $9$. La valeur de rang $9$ est $18$, donc $\\mathrm{Q}_3 = 18$.",
+        "L'écart interquartile vaut $\\mathrm{Q}_3 - \\mathrm{Q}_1 = 18 - 6 = 12$ minutes."
+      ],
+      "reponse": "$\\mathrm{Q}_1 = 6$, $\\mathrm{Q}_3 = 18$, écart interquartile $= 12$ minutes."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "mediane",
+      "enonce": "Soit la série $9\\,;\\ 4\\,;\\ 13\\,;\\ 7\\,;\\ 7$. Calculer sa moyenne et sa médiane, puis comparer les deux résultats.",
+      "corrige": [
+        "Moyenne : $\\bar{x} = \\dfrac{9 + 4 + 13 + 7 + 7}{5} = \\dfrac{40}{5} = 8$.",
+        "Médiane : on ordonne la série : $4\\,;\\ 7\\,;\\ 7\\,;\\ 9\\,;\\ 13$. L'effectif $N = 5$ est impair, la médiane est la valeur de rang $\\dfrac{N+1}{2} = 3$, soit $\\mathrm{Me} = 7$.",
+        "Comparaison : $\\bar{x} = 8 > \\mathrm{Me} = 7$. La valeur élevée $13$ tire la moyenne vers le haut, alors que la médiane, qui ne dépend que du rang central, en est peu affectée."
+      ],
+      "reponse": "$\\bar{x} = 8$ et $\\mathrm{Me} = 7$ : la moyenne est supérieure à la médiane."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "choix-indicateur",
+      "enonce": "Une petite entreprise compte $7$ personnes. Leurs salaires mensuels nets (en euros) sont : $1500\\,;\\ 1600\\,;\\ 1700\\,;\\ 1800\\,;\\ 1900\\,;\\ 2100\\,;\\ 9000$ (le dernier étant celui du gérant). Calculer la moyenne et la médiane des salaires, puis indiquer, en le justifiant, quel indicateur décrit le mieux le salaire d'un employé.",
+      "corrige": [
+        "Moyenne : la somme des salaires est $1500 + 1600 + 1700 + 1800 + 1900 + 2100 + 9000 = 19\\,600$, donc $\\bar{x} = \\dfrac{19\\,600}{7} = 2800$ €.",
+        "Médiane : la série est déjà ordonnée et $N = 7$ est impair. La médiane est la valeur de rang $\\dfrac{N+1}{2} = 4$, soit $\\mathrm{Me} = 1800$ €.",
+        "On observe que la moyenne $2800$ € est supérieure à $6$ des $7$ salaires : elle est fortement tirée vers le haut par le salaire du gérant ($9000$ €), une valeur extrême.",
+        "La médiane $1800$ €, insensible à cette valeur extrême, est donc plus représentative du salaire d'un employé."
+      ],
+      "reponse": "Moyenne $2800$ €, médiane $1800$ € ; la médiane est plus représentative car la moyenne est faussée par le salaire extrême du gérant."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "moyenne",
+      "enonce": "Léa a obtenu $13$, $9$, $16$ et $10$ à ses quatre premiers devoirs, tous notés sur $20$. Un cinquième devoir reste à passer. Quelle note doit-elle obtenir à ce devoir pour que sa moyenne sur les cinq devoirs soit exactement $12$ ? Cet objectif est-il atteignable ?",
+      "corrige": [
+        "Pour que la moyenne de $5$ notes vaille $12$, la somme des $5$ notes doit valoir $5 \\times 12 = 60$.",
+        "La somme des quatre premières notes est $13 + 9 + 16 + 10 = 48$.",
+        "La note manquante doit donc valoir $x = 60 - 48 = 12$.",
+        "Comme $12 \\leq 20$, cette note est possible sur un devoir noté sur $20$ : l'objectif est atteignable."
+      ],
+      "reponse": "Léa doit obtenir $12$ au cinquième devoir ; l'objectif est atteignable."
+    }
+  ]
+}

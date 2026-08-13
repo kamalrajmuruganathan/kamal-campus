@@ -1,0 +1,89 @@
+{
+  "id": "2nde-math-droites-du-plan-exos",
+  "chapitre": "2nde-math-droites-du-plan",
+  "titre": "Exercices — Droites du plan",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Calculer le coefficient directeur de la droite passant par les points $\\mathrm{A}(-1\\,;4)$ et $\\mathrm{B}(3\\,;-4)$.",
+      "corrige": [
+        "Les deux points ont des abscisses différentes ($-1 \\neq 3$) : le coefficient directeur existe et vaut $m = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}}$.",
+        "On remplace : $m = \\dfrac{-4 - 4}{3 - (-1)} = \\dfrac{-8}{4}$.",
+        "Donc $m = -2$. Le coefficient est négatif : la droite descend."
+      ],
+      "reponse": "$m = -2$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "vecteur-directeur",
+      "enonce": "Donner un vecteur directeur de la droite d'équation cartésienne $-x + 4y - 8 = 0$.",
+      "corrige": [
+        "L'équation est de la forme $ax + by + c = 0$ avec $a = -1$, $b = 4$ et $c = -8$.",
+        "Pour une équation cartésienne, un vecteur directeur est $\\vec{u}\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$.",
+        "On remplace : $\\vec{u}\\begin{pmatrix} -4 \\\\ -1 \\end{pmatrix}$. Tout vecteur non nul colinéaire à celui-ci convient aussi."
+      ],
+      "reponse": "$\\vec{u}\\begin{pmatrix} -4 \\\\ -1 \\end{pmatrix}$ (ou tout vecteur colinéaire)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "equation-par-deux-points",
+      "enonce": "Déterminer l'équation réduite de la droite passant par $\\mathrm{A}(2\\,;1)$ et $\\mathrm{B}(5\\,;7)$.",
+      "corrige": [
+        "On cherche l'équation sous la forme $y = mx + p$. On calcule d'abord le coefficient directeur : $m = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}} = \\dfrac{7 - 1}{5 - 2} = \\dfrac{6}{3} = 2$.",
+        "L'équation est donc $y = 2x + p$. On trouve $p$ en remplaçant par les coordonnées de $\\mathrm{A}$ : $1 = 2 \\times 2 + p$, soit $1 = 4 + p$, donc $p = -3$.",
+        "On vérifie avec $\\mathrm{B}$ : $2 \\times 5 - 3 = 10 - 3 = 7$ ✓."
+      ],
+      "reponse": "$y = 2x - 3$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "intersection",
+      "enonce": "Déterminer les coordonnées du point d'intersection de la droite $d : y = 4x - 3$ et de la droite verticale $d' : x = 2$.",
+      "corrige": [
+        "La droite $d'$ impose que tous ses points ont pour abscisse $x = 2$ : le point d'intersection a donc pour abscisse $x = 2$.",
+        "On reporte $x = 2$ dans l'équation de $d$ : $y = 4 \\times 2 - 3 = 8 - 3 = 5$.",
+        "Le point d'intersection a pour coordonnées $(2\\,;5)$."
+      ],
+      "reponse": "Le point d'intersection est $(2\\,;5)$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "parallelisme",
+      "enonce": "On considère les droites $d : 3x - 2y + 1 = 0$ et $d_m : 6x + my - 4 = 0$, où $m$ est un réel. Déterminer la valeur de $m$ pour laquelle $d$ et $d_m$ sont parallèles, puis préciser si elles sont strictement parallèles ou confondues.",
+      "corrige": [
+        "Pour $d$ : $a = 3$, $b = -2$. Pour $d_m$ : $a' = 6$, $b' = m$. Deux droites en forme cartésienne sont parallèles si et seulement si $ab' - a'b = 0$.",
+        "On calcule : $ab' - a'b = 3 \\times m - 6 \\times (-2) = 3m + 12$. On résout $3m + 12 = 0 \\iff m = -4$.",
+        "Pour $m = -4$, l'équation de $d_m$ est $6x - 4y - 4 = 0$. En divisant tout par $2$ : $3x - 2y - 2 = 0$.",
+        "On compare à $d : 3x - 2y + 1 = 0$ : mêmes coefficients de $x$ et $y$ mais constantes différentes ($-2 \\neq 1$). Les droites sont donc strictement parallèles."
+      ],
+      "reponse": "Pour $m = -4$ ; les droites sont alors strictement parallèles."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "systeme",
+      "enonce": "Dans un cinéma, une famille paie $2$ places adulte et $3$ places enfant pour $31$ €, une autre paie $3$ places adulte et $2$ places enfant pour $34$ €. On note $a$ le prix d'une place adulte et $e$ celui d'une place enfant. Écrire un système traduisant la situation, le résoudre, et interpréter géométriquement.",
+      "corrige": [
+        "La situation se traduit par le système $\\begin{cases} 2a + 3e = 31 \\\\ 3a + 2e = 34 \\end{cases}$.",
+        "On élimine $a$ par combinaison linéaire : on multiplie la première équation par $3$ et la seconde par $2$, ce qui donne $\\begin{cases} 6a + 9e = 93 \\\\ 6a + 4e = 68 \\end{cases}$.",
+        "En soustrayant la seconde de la première : $5e = 25$, donc $e = 5$.",
+        "On reporte dans $2a + 3e = 31$ : $2a + 15 = 31$, soit $2a = 16$ et $a = 8$. Vérification dans la seconde équation : $3 \\times 8 + 2 \\times 5 = 24 + 10 = 34$ ✓.",
+        "Géométriquement, chaque équation est celle d'une droite ; le système ayant une solution unique, les deux droites sont sécantes et se coupent au point $(8\\,;5)$."
+      ],
+      "reponse": "Une place adulte coûte $8$ € et une place enfant $5$ € ; les droites associées sont sécantes en $(8\\,;5)$."
+    }
+  ]
+}

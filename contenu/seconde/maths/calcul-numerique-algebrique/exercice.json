@@ -1,0 +1,91 @@
+{
+  "id": "2nde-math-calcul-numerique-algebrique-exos",
+  "chapitre": "2nde-math-calcul-numerique-algebrique",
+  "titre": "Exercices — Calcul numérique et algébrique",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire $\\dfrac{3^7 \\times 3^{-2}}{3^3}$ sous la forme d'une seule puissance de $3$, puis donner sa valeur.",
+      "corrige": [
+        "Au numérateur, on **additionne** les exposants d'un produit de puissances de même base : $3^7 \\times 3^{-2} = 3^{7 + (-2)} = 3^5$.",
+        "On divise par $3^3$ en **soustrayant** les exposants : $\\dfrac{3^5}{3^3} = 3^{5 - 3} = 3^2$.",
+        "Enfin $3^2 = 9$."
+      ],
+      "reponse": "$\\dfrac{3^7 \\times 3^{-2}}{3^3} = 3^2 = 9$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "racines",
+      "enonce": "Simplifier $\\sqrt{75}$, c'est-à-dire l'écrire sous la forme $a\\sqrt{b}$ avec $b$ le plus petit possible.",
+      "corrige": [
+        "On cherche le plus grand carré parfait qui divise $75$ : $75 = 25 \\times 3$, et $25 = 5^2$.",
+        "On utilise $\\sqrt{ab} = \\sqrt{a}\\,\\sqrt{b}$ : $\\sqrt{75} = \\sqrt{25 \\times 3} = \\sqrt{25}\\,\\sqrt{3}$.",
+        "Comme $\\sqrt{25} = 5$, on obtient $5\\sqrt{3}$.",
+        "Vérification : $5\\sqrt{3} \\approx 8{,}66$ et $\\sqrt{75} \\approx 8{,}66$."
+      ],
+      "reponse": "$\\sqrt{75} = 5\\sqrt{3}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "identites-remarquables",
+      "enonce": "Développer puis réduire l'expression $B = (x + 3)^2 - (x - 2)(x + 2)$.",
+      "corrige": [
+        "On développe $(x+3)^2$ avec $(a+b)^2 = a^2 + 2ab + b^2$ : $(x+3)^2 = x^2 + 2 \\times x \\times 3 + 3^2 = x^2 + 6x + 9$.",
+        "On développe $(x-2)(x+2)$ avec $(a-b)(a+b) = a^2 - b^2$ : $(x-2)(x+2) = x^2 - 4$.",
+        "On soustrait, en faisant attention au signe devant la parenthèse : $B = (x^2 + 6x + 9) - (x^2 - 4) = x^2 + 6x + 9 - x^2 + 4$.",
+        "Les termes en $x^2$ se compensent : $B = 6x + 13$."
+      ],
+      "reponse": "$B = 6x + 13$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "fractions",
+      "enonce": "Calculer $A = \\dfrac{2}{3} + \\dfrac{3}{4} \\times \\dfrac{2}{9}$ et donner le résultat sous forme de fraction irréductible.",
+      "corrige": [
+        "La multiplication est prioritaire sur l'addition : on calcule d'abord $\\dfrac{3}{4} \\times \\dfrac{2}{9}$.",
+        "$\\dfrac{3}{4} \\times \\dfrac{2}{9} = \\dfrac{3 \\times 2}{4 \\times 9} = \\dfrac{6}{36} = \\dfrac{1}{6}$.",
+        "Il reste $A = \\dfrac{2}{3} + \\dfrac{1}{6}$. On met au même dénominateur $6$ : $\\dfrac{2}{3} = \\dfrac{4}{6}$.",
+        "$A = \\dfrac{4}{6} + \\dfrac{1}{6} = \\dfrac{5}{6}$, déjà irréductible."
+      ],
+      "reponse": "$A = \\dfrac{5}{6}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "produit-nul",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $(x + 2)^2 = 9$ en se ramenant à une factorisation et à la règle du produit nul.",
+      "corrige": [
+        "On ramène tout dans un même membre pour obtenir une équation dont le second membre est nul : $(x+2)^2 - 9 = 0$.",
+        "On reconnaît une différence de deux carrés, $9 = 3^2$, et on applique $a^2 - b^2 = (a-b)(a+b)$ avec $a = x+2$ et $b = 3$ : $(x+2)^2 - 3^2 = \\big[(x+2) - 3\\big]\\big[(x+2) + 3\\big] = (x - 1)(x + 5)$.",
+        "L'équation devient $(x - 1)(x + 5) = 0$. D'après la règle du produit nul : $x - 1 = 0$ ou $x + 5 = 0$.",
+        "On obtient $x = 1$ ou $x = -5$. Vérification : $(1+2)^2 = 9$ et $(-5+2)^2 = (-3)^2 = 9$."
+      ],
+      "reponse": "$S = \\{-5\\,;\\,1\\}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "intervalles",
+      "enonce": "On considère l'ensemble des réels $x$ vérifiant $\\lvert x - 3 \\rvert \\leqslant 5$. Interpréter cette condition comme une distance, puis écrire l'ensemble des solutions sous forme d'intervalle.",
+      "corrige": [
+        "Par définition, $\\lvert x - 3 \\rvert$ est la **distance** entre $x$ et $3$ sur la droite des réels.",
+        "La condition $\\lvert x - 3 \\rvert \\leqslant 5$ signifie donc : $x$ est à une distance d'au plus $5$ de $3$. Les nombres concernés sont ceux compris entre $3 - 5$ et $3 + 5$.",
+        "On traduit par un encadrement : $-5 \\leqslant x - 3 \\leqslant 5$, soit en ajoutant $3$ partout $-2 \\leqslant x \\leqslant 8$.",
+        "L'inégalité étant large, les bornes $-2$ et $8$ sont incluses : les crochets sont fermés."
+      ],
+      "reponse": "$x \\in [-2\\,;\\,8]$."
+    }
+  ]
+}

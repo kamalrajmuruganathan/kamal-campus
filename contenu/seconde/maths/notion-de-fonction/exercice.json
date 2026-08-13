@@ -1,0 +1,91 @@
+{
+  "id": "2nde-math-notion-de-fonction-exos",
+  "chapitre": "2nde-math-notion-de-fonction",
+  "titre": "Exercices — Notion de fonction",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $f$ la fonction définie par $f(x) = x^2 - 2x$. Calcule l'image de $-2$ et l'image de $3$ par $f$.",
+      "corrige": [
+        "L'image d'un nombre s'obtient en remplaçant $x$ par ce nombre dans l'expression de $f(x)$.",
+        "Image de $-2$ : $f(-2) = (-2)^2 - 2\\times(-2) = 4 - (-4) = 4 + 4 = 8$.",
+        "Image de $3$ : $f(3) = 3^2 - 2\\times 3 = 9 - 6 = 3$.",
+        "Attention au signe : $-2\\times(-2)$ vaut $+4$, on ajoute donc $4$ et on ne le soustrait pas."
+      ],
+      "reponse": "L'image de $-2$ est $8$ ; l'image de $3$ est $3$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "ensemble-definition",
+      "enonce": "Détermine l'ensemble de définition de la fonction $g$ définie par $g(x) = \\dfrac{6}{2x - 8}$.",
+      "corrige": [
+        "Le seul interdit ici est la division par zéro : le dénominateur doit être non nul.",
+        "On cherche la valeur interdite en résolvant $2x - 8 = 0$, soit $2x = 8$, donc $x = 4$.",
+        "Toutes les autres valeurs sont autorisées : on retire $4$ à l'ensemble des réels."
+      ],
+      "reponse": "$D_g = \\mathbb{R} \\setminus \\{4\\}$, c'est-à-dire $]-\\infty\\,;4[\\ \\cup\\ ]4\\,;+\\infty[$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $f$ définie sur $\\mathbb{R}$ par $f(x) = x^2 - 1$. Détermine tous les antécédents de $15$ par $f$, puis explique pourquoi $-5$ n'a aucun antécédent.",
+      "corrige": [
+        "Chercher les antécédents de $15$, c'est résoudre l'équation $f(x) = 15$, soit $x^2 - 1 = 15$.",
+        "On isole $x^2$ : $x^2 = 15 + 1 = 16$.",
+        "Un nombre dont le carré vaut $16$ est $4$ ou $-4$ : il y a donc deux antécédents, $-4$ et $4$.",
+        "Pour $-5$ : il faudrait $x^2 - 1 = -5$, soit $x^2 = -4$. Or un carré est toujours positif ou nul : aucune valeur de $x$ ne convient, donc $-5$ n'a aucun antécédent."
+      ],
+      "reponse": "Les antécédents de $15$ sont $-4$ et $4$ ; $-5$ n'a aucun antécédent car un carré ne peut pas être négatif."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "lecture-graphique",
+      "enonce": "Une fonction $f$ est donnée par le tableau de valeurs suivant.\n\n| $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |\n|---|---|---|---|---|---|---|\n| $f(x)$ | $5$ | $0$ | $-3$ | $-4$ | $-3$ | $0$ |\n\n1. Quelle est l'image de $1$ par $f$ ? 2. Quels sont les antécédents de $0$ ?",
+      "corrige": [
+        "1. L'image de $1$ se lit dans la colonne où $x = 1$ : on descend jusqu'à la ligne $f(x)$ et on lit $-4$. Donc $f(1) = -4$.",
+        "2. Chercher les antécédents de $0$, c'est repérer toutes les colonnes où la ligne $f(x)$ affiche $0$.",
+        "La valeur $0$ apparaît deux fois : pour $x = -1$ et pour $x = 3$.",
+        "Un même nombre ($0$) peut donc avoir plusieurs antécédents : ici $-1$ et $3$."
+      ],
+      "reponse": "$f(1) = -4$ ; les antécédents de $0$ sont $-1$ et $3$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "variations",
+      "enonce": "Une fonction $f$ est définie sur $[-3\\,;5]$. Elle est décroissante sur $[-3\\,;1]$ puis croissante sur $[1\\,;5]$. On sait que $f(-3) = 4$, $f(1) = -2$ et $f(5) = 7$.\n\n1. Donne le minimum de $f$ sur $[-3\\,;5]$ et la valeur de $x$ où il est atteint. 2. Donne le maximum de $f$ sur $[-3\\,;5]$. 3. Compare $f(-1)$ et $f(0)$ en justifiant.",
+      "corrige": [
+        "1. $f$ décroît jusqu'à $x = 1$ puis croît : la plus petite valeur est atteinte au « creux », en $x = 1$. Le minimum vaut donc $f(1) = -2$, atteint en $x = 1$.",
+        "2. Le maximum est atteint à l'une des deux bornes. On compare les valeurs aux extrémités : $f(-3) = 4$ et $f(5) = 7$. La plus grande est $7$ : le maximum vaut $7$, atteint en $x = 5$.",
+        "3. Les nombres $-1$ et $0$ appartiennent tous les deux à $[-3\\,;1]$, où $f$ est décroissante. Une fonction décroissante inverse l'ordre : comme $-1 < 0$, on a $f(-1) > f(0)$.",
+        "On ne confond pas le minimum (la valeur $-2$) avec l'abscisse où il est atteint ($x = 1$)."
+      ],
+      "reponse": "Minimum $-2$ atteint en $x = 1$ ; maximum $7$ (en $x = 5$) ; $f(-1) > f(0)$ car $f$ est décroissante sur $[-3\\,;1]$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "tableau-signes",
+      "enonce": "On lance une balle. Sa hauteur au-dessus du sol, en mètres, au temps $t$ (en secondes) est donnée par une fonction $h$. La balle part du sol : $h(0) = 0$. Elle monte jusqu'à une hauteur maximale de $20$ m atteinte à $t = 2$, puis redescend et retouche le sol à $t = 4$ ($h(4) = 0$). Après cela, on n'étudie plus le mouvement.\n\n1. Quel est l'ensemble de définition de $h$ ? 2. Quelle est la hauteur maximale et à quel instant est-elle atteinte ? 3. Dresse le tableau de signes de $h$ sur son ensemble de définition et précise quand la balle est en l'air ($h(t) > 0$).",
+      "corrige": [
+        "1. On étudie le mouvement du départ ($t = 0$) jusqu'au retour au sol ($t = 4$) : l'ensemble de définition est $D = [0\\,;4]$.",
+        "2. La hauteur maximale est la plus grande valeur de $h(t)$ : c'est le maximum, égal à $20$ m, atteint en $t = 2$. La valeur $20$ est la hauteur ; $2$ est l'instant où elle est atteinte.",
+        "3. La balle est au sol quand $h(t) = 0$, c'est-à-dire en $t = 0$ et $t = 4$. Entre ces deux instants elle est au-dessus du sol, donc $h(t) > 0$ sur $]0\\,;4[$.",
+        "Tableau de signes de $h$ sur $[0\\,;4]$ : $h(0) = 0$, puis $h(t) > 0$ pour tout $t$ de $]0\\,;4[$, puis $h(4) = 0$. La balle est donc en l'air pendant tout l'intervalle $]0\\,;4[$."
+      ],
+      "reponse": "$D = [0\\,;4]$ ; hauteur maximale $20$ m en $t = 2$ ; $h(t) > 0$ sur $]0\\,;4[$ (nulle en $t = 0$ et $t = 4$)."
+    }
+  ]
+}

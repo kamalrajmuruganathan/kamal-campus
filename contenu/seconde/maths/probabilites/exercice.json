@@ -1,0 +1,91 @@
+{
+  "id": "2nde-math-probabilites-exos",
+  "chapitre": "2nde-math-probabilites",
+  "titre": "Exercices — Probabilités",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "equiprobabilite",
+      "enonce": "On tire une carte au hasard dans un jeu bien mélangé de $32$ cartes, qui compte $4$ rois. Quelle est la probabilité d'obtenir un roi ?",
+      "corrige": [
+        "Le jeu est **bien mélangé** : les $32$ tirages sont équiprobables, on peut donc utiliser la formule favorables sur possibles.",
+        "Issues favorables : les $4$ rois. Issues possibles : les $32$ cartes.",
+        "$P(\\text{roi}) = \\dfrac{4}{32} = \\dfrac{1}{8}$."
+      ],
+      "reponse": "$P(\\text{roi}) = \\dfrac{1}{8}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "loi-probabilite",
+      "enonce": "Une roue de loterie est partagée en trois secteurs de tailles différentes : rouge, bleu et vert. Elle n'est donc **pas** équilibrée. On sait que $P(\\text{rouge}) = 0{,}4$ et $P(\\text{bleu}) = 0{,}35$. Quelle est la probabilité que la roue s'arrête sur le vert ?",
+      "corrige": [
+        "La somme des probabilités de toutes les issues d'une loi de probabilité vaut $1$.",
+        "Il n'y a que trois issues, donc $P(\\text{rouge}) + P(\\text{bleu}) + P(\\text{vert}) = 1$.",
+        "$P(\\text{vert}) = 1 - 0{,}4 - 0{,}35 = 0{,}25$.",
+        "Remarque : les secteurs n'ayant pas la même taille, on ne pouvait **pas** utiliser favorables sur possibles ; c'est la somme égale à $1$ qui permet de conclure."
+      ],
+      "reponse": "$P(\\text{vert}) = 0{,}25$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "union",
+      "enonce": "Dans une classe, on interroge chaque élève sur les langues qu'il étudie. On choisit un élève au hasard et on note $\\mathrm{A}$ : « il étudie l'anglais » et $\\mathrm{E}$ : « il étudie l'espagnol ». On sait que $P(\\mathrm{A}) = 0{,}7$, $P(\\mathrm{E}) = 0{,}4$ et $P(\\mathrm{A} \\cap \\mathrm{E}) = 0{,}25$. Calculer la probabilité qu'il étudie au moins une de ces deux langues, puis celle qu'il n'en étudie aucune.",
+      "corrige": [
+        "« Au moins une des deux langues », c'est l'événement $\\mathrm{A} \\cup \\mathrm{E}$. On applique la formule d'inclusion-exclusion.",
+        "$P(\\mathrm{A} \\cup \\mathrm{E}) = P(\\mathrm{A}) + P(\\mathrm{E}) - P(\\mathrm{A} \\cap \\mathrm{E}) = 0{,}7 + 0{,}4 - 0{,}25 = 0{,}85$.",
+        "« N'étudier aucune langue » est l'événement contraire de $\\mathrm{A} \\cup \\mathrm{E}$.",
+        "$P\\left(\\overline{\\mathrm{A} \\cup \\mathrm{E}}\\right) = 1 - 0{,}85 = 0{,}15$."
+      ],
+      "reponse": "$P(\\mathrm{A} \\cup \\mathrm{E}) = 0{,}85$ et « aucune langue » $= 0{,}15$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "denombrement",
+      "enonce": "On lance deux dés équilibrés et discernables. Quelle est la probabilité d'obtenir **au moins un** $6$ ?",
+      "corrige": [
+        "Il y a $6 \\times 6 = 36$ issues équiprobables. « Au moins un $6$ » se calcule plus vite par le contraire : « aucun $6$ ».",
+        "Pour n'avoir aucun $6$, chaque dé doit donner une valeur parmi $1, 2, 3, 4, 5$, soit $5$ possibilités : $5 \\times 5 = 25$ issues sans $6$.",
+        "$P(\\text{aucun } 6) = \\dfrac{25}{36}$.",
+        "Donc $P(\\text{au moins un } 6) = 1 - \\dfrac{25}{36} = \\dfrac{11}{36}$."
+      ],
+      "reponse": "$P(\\text{au moins un } 6) = \\dfrac{11}{36}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "incompatibles",
+      "enonce": "On tire une carte au hasard dans un jeu bien mélangé de $32$ cartes ($4$ couleurs — cœur, carreau, trèfle, pique — et $8$ hauteurs par couleur, dont un roi). On note $\\mathrm{A}$ : « la carte est un roi », $\\mathrm{B}$ : « la carte est une dame » et $\\mathrm{C}$ : « la carte est un cœur ».\\n\\n1. Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils incompatibles ? Calculer $P(\\mathrm{A} \\cup \\mathrm{B})$.\\n2. Les événements $\\mathrm{A}$ et $\\mathrm{C}$ sont-ils incompatibles ? Calculer $P(\\mathrm{A} \\cup \\mathrm{C})$.",
+      "corrige": [
+        "Une même carte ne peut pas être à la fois un roi et une dame : $\\mathrm{A} \\cap \\mathrm{B} = \\varnothing$, donc $\\mathrm{A}$ et $\\mathrm{B}$ sont **incompatibles**.",
+        "Il y a $4$ rois et $4$ dames, donc $P(\\mathrm{A}) = \\dfrac{4}{32} = \\dfrac{1}{8}$ et $P(\\mathrm{B}) = \\dfrac{4}{32} = \\dfrac{1}{8}$. Comme ils sont incompatibles, l'addition suffit : $P(\\mathrm{A} \\cup \\mathrm{B}) = \\dfrac{1}{8} + \\dfrac{1}{8} = \\dfrac{1}{4}$.",
+        "Le roi de cœur est à la fois un roi et un cœur : $\\mathrm{A} \\cap \\mathrm{C} = \\{\\text{roi de cœur}\\} \\neq \\varnothing$, donc $\\mathrm{A}$ et $\\mathrm{C}$ ne sont **pas** incompatibles.",
+        "Ici $P(\\mathrm{C}) = \\dfrac{8}{32}$ (les $8$ cœurs) et $P(\\mathrm{A} \\cap \\mathrm{C}) = \\dfrac{1}{32}$. Il faut retrancher l'intersection : $P(\\mathrm{A} \\cup \\mathrm{C}) = \\dfrac{4}{32} + \\dfrac{8}{32} - \\dfrac{1}{32} = \\dfrac{11}{32}$."
+      ],
+      "reponse": "$\\mathrm{A}$ et $\\mathrm{B}$ incompatibles, $P(\\mathrm{A} \\cup \\mathrm{B}) = \\dfrac{1}{4}$ ; $\\mathrm{A}$ et $\\mathrm{C}$ non incompatibles, $P(\\mathrm{A} \\cup \\mathrm{C}) = \\dfrac{11}{32}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "equiprobabilite",
+      "enonce": "Une urne contient $4$ boules rouges et $6$ boules noires, indiscernables au toucher. On souhaite ajouter des boules rouges (identiques aux autres) pour que la probabilité de tirer une rouge devienne égale à $\\dfrac{1}{2}$. Combien faut-il en ajouter ?",
+      "corrige": [
+        "On note $x$ le nombre de boules rouges ajoutées. Il y a alors $4 + x$ rouges et $10 + x$ boules en tout.",
+        "Les boules étant indiscernables, les tirages sont équiprobables : $P(\\text{rouge}) = \\dfrac{4 + x}{10 + x}$.",
+        "On résout $\\dfrac{4 + x}{10 + x} = \\dfrac{1}{2}$, soit $2(4 + x) = 10 + x$, c'est-à-dire $8 + 2x = 10 + x$, donc $x = 2$.",
+        "Vérification : avec $2$ rouges ajoutées, on a $6$ rouges sur $12$ boules, et $\\dfrac{6}{12} = \\dfrac{1}{2}$. ✓"
+      ],
+      "reponse": "Il faut ajouter $2$ boules rouges."
+    }
+  ]
+}

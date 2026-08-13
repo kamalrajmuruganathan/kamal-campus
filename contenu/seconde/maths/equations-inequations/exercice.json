@@ -1,0 +1,92 @@
+{
+  "id": "2nde-math-equations-inequations-exos",
+  "chapitre": "2nde-math-equations-inequations",
+  "titre": "Exercices — Équations et inéquations",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "premier-degre",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $7x - 4 = 3x + 8$.",
+      "corrige": [
+        "On rassemble les termes en $x$ à gauche et les nombres à droite en effectuant la même opération des deux côtés. On soustrait $3x$ : $7x - 3x - 4 = 8$, soit $4x - 4 = 8$.",
+        "On ajoute $4$ des deux côtés : $4x = 12$.",
+        "On divise par $4$ (nombre positif, aucune précaution de signe) : $x = \\dfrac{12}{4} = 3$.",
+        "Vérification : $7 \\times 3 - 4 = 17$ et $3 \\times 3 + 8 = 17$. Les deux membres sont bien égaux."
+      ],
+      "reponse": "$S = \\{3\\}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "inequation-signe",
+      "enonce": "Résoudre l'inéquation $-4x + 5 \\geqslant 17$ et donner l'ensemble des solutions sous forme d'intervalle.",
+      "corrige": [
+        "On isole le terme en $x$ en soustrayant $5$ des deux côtés (opération qui ne change pas le sens) : $-4x \\geqslant 12$.",
+        "On divise par $-4$. Comme on divise par un nombre **négatif**, le sens de l'inégalité **s'inverse** : $x \\leqslant \\dfrac{12}{-4}$, soit $x \\leqslant -3$.",
+        "On écrit l'ensemble des solutions sous forme d'intervalle : la borne $-3$ est incluse (inégalité large)."
+      ],
+      "reponse": "$S = \\left]-\\infty\\,;-3\\right]$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "produit-nul",
+      "enonce": "Résoudre l'équation $(x-1)(x+2) = (x-1)(2x+5)$.",
+      "corrige": [
+        "On ne divise surtout pas par $(x-1)$ : cette quantité peut être nulle. On ramène tout dans le membre de gauche pour obtenir $\\ldots = 0$ : $(x-1)(x+2) - (x-1)(2x+5) = 0$.",
+        "Le facteur $(x-1)$ est commun aux deux termes : on le met en facteur. $(x-1)\\big[(x+2) - (2x+5)\\big] = 0$.",
+        "On réduit le crochet : $(x+2) - (2x+5) = x + 2 - 2x - 5 = -x - 3$. L'équation devient $(x-1)(-x-3) = 0$.",
+        "Règle du produit nul : $x - 1 = 0$ ou $-x - 3 = 0$, soit $x = 1$ ou $x = -3$."
+      ],
+      "reponse": "$S = \\{-3\\,;\\,1\\}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Résoudre l'équation $\\dfrac{2x - 6}{x + 1} = 0$.",
+      "corrige": [
+        "On commence par la valeur interdite : le dénominateur doit être non nul. $x + 1 = 0$ donne $x = -1$ ; la valeur $x = -1$ est donc **interdite**.",
+        "Un quotient est nul quand son numérateur est nul (le dénominateur ne l'étant pas). On résout $2x - 6 = 0$.",
+        "$2x = 6$, donc $x = 3$.",
+        "La valeur $3$ est différente de la valeur interdite $-1$ : elle est donc acceptable."
+      ],
+      "reponse": "$S = \\{3\\}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "tableau-signes",
+      "enonce": "Résoudre l'inéquation $\\dfrac{x - 1}{x + 2} \\leqslant 0$ et donner l'ensemble des solutions sous forme d'intervalle.",
+      "corrige": [
+        "Valeur interdite : le dénominateur s'annule en $x = -2$, valeur à exclure (double barre dans le tableau, crochet ouvert dans le résultat).",
+        "Signe de chaque facteur affine : $x - 1$ s'annule en $1$ et est du signe de son coefficient $a = 1 > 0$ après $1$ (donc négatif avant, positif après). $x + 2$ s'annule en $-2$ et est positif après $-2$.",
+        "On dresse le tableau de signes du quotient sur $\\mathbb{R}$ : sur $\\left]-\\infty\\,;-2\\right[$ les deux facteurs sont négatifs, le quotient est positif ; sur $\\left]-2\\,;1\\right[$ le numérateur est négatif et le dénominateur positif, le quotient est négatif ; sur $\\left]1\\,;+\\infty\\right[$ le quotient est positif.",
+        "On cherche où le quotient est négatif ou nul. Il est négatif sur $\\left]-2\\,;1\\right[$ et nul en $x = 1$ (numérateur nul, valeur acceptable). En $-2$ le quotient n'est pas défini : borne exclue."
+      ],
+      "reponse": "$S = \\left]-2\\,;1\\right]$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "methode",
+      "enonce": "Un club de sport propose deux formules pour $n$ séances. Formule A : $5$ € par séance. Formule B : un abonnement de $30$ € puis $2$ € par séance. À partir de combien de séances la formule B revient-elle strictement moins chère que la formule A ?",
+      "corrige": [
+        "On exprime chaque coût en fonction du nombre de séances $n$ (entier positif) : formule A coûte $5n$ euros, formule B coûte $30 + 2n$ euros.",
+        "« B strictement moins chère que A » se traduit par l'inéquation $30 + 2n < 5n$.",
+        "On ramène les termes en $n$ d'un même côté en soustrayant $2n$ (le sens ne change pas) : $30 < 3n$.",
+        "On divise par $3$, nombre **positif** : le sens est conservé, $10 < n$, soit $n > 10$.",
+        "Comme $n$ est un nombre entier de séances, la première valeur qui convient est $n = 11$."
+      ],
+      "reponse": "La formule B devient strictement plus avantageuse à partir de $11$ séances ($n > 10$)."
+    }
+  ]
+}

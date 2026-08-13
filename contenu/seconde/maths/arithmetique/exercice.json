@@ -1,0 +1,96 @@
+{
+  "id": "2nde-math-arithmetique-exos",
+  "chapitre": "2nde-math-arithmetique",
+  "titre": "Exercices — Arithmétique",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "multiple-diviseur",
+      "enonce": "Montrer que $138$ est un multiple de $6$. On précisera la valeur de l'entier $k$ tel que $138 = 6k$.",
+      "corrige": [
+        "Par définition, $138$ est un multiple de $6$ s'il existe un entier $k$ tel que $138 = 6k$.",
+        "On effectue $138 = 6 \\times 23$.",
+        "Le nombre $k = 23$ est bien un entier : la définition est vérifiée.",
+        "On peut aussi le dire dans l'autre sens : $6$ est un diviseur de $138$."
+      ],
+      "reponse": "$138 = 6 \\times 23$ avec $23$ entier, donc $138$ est un multiple de $6$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "fraction-irreductible",
+      "enonce": "Mettre la fraction $\\dfrac{60}{144}$ sous forme irréductible.",
+      "corrige": [
+        "Numérateur et dénominateur sont pairs : $\\dfrac{60}{144} = \\dfrac{30}{72}$.",
+        "Ils sont encore pairs : $\\dfrac{30}{72} = \\dfrac{15}{36}$.",
+        "Ils sont tous deux divisibles par $3$ : $\\dfrac{15}{36} = \\dfrac{5}{12}$.",
+        "$5$ et $12$ n'ont plus aucun diviseur commun autre que $1$ : la fraction est irréductible."
+      ],
+      "reponse": "$\\dfrac{60}{144} = \\dfrac{5}{12}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "ecriture-algebrique",
+      "enonce": "Montrer que la somme d'un nombre pair et d'un nombre impair est toujours impaire.",
+      "corrige": [
+        "On pose l'écriture algébrique de chaque nombre : un pair $a = 2k$ et un impair $b = 2k'+1$, avec $k$ et $k'$ entiers.",
+        "On calcule leur somme : $a + b = 2k + 2k' + 1$.",
+        "On factorise par $2$ ce qui peut l'être : $a + b = 2(k + k') + 1$.",
+        "Comme $k + k'$ est un entier, $a+b$ est de la forme $2 \\times (\\text{entier}) + 1$ : la somme est donc impaire."
+      ],
+      "reponse": "$a + b = 2(k+k')+1$ : la somme d'un pair et d'un impair est impaire."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "contre-exemple",
+      "enonce": "Un élève affirme : « Tout nombre pair est un multiple de $4$. » Cette affirmation est-elle vraie ? Justifier.",
+      "corrige": [
+        "L'affirmation est universelle (« tout nombre pair ») : pour la réfuter, un seul contre-exemple suffit.",
+        "Le nombre $6$ est pair, car $6 = 2 \\times 3$.",
+        "Or $6$ n'est pas un multiple de $4$ : il n'existe aucun entier $k$ tel que $6 = 4k$ (on aurait $k = 1{,}5$, qui n'est pas entier).",
+        "Le nombre $6$ contredit donc l'affirmation, qui est fausse."
+      ],
+      "reponse": "Affirmation fausse : $6$ est pair mais n'est pas un multiple de $4$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "demonstration",
+      "enonce": "On considère deux multiples de $6$. 1) Démontrer que leur somme est toujours un multiple de $6$. 2) Cette somme est-elle toujours un multiple de $12$ ? Justifier.",
+      "corrige": [
+        "1) On pose deux multiples de $6$ avec deux lettres distinctes : $m = 6k$ et $n = 6k'$, avec $k$ et $k'$ entiers.",
+        "On calcule : $m + n = 6k + 6k' = 6(k + k')$.",
+        "Comme $k + k'$ est un entier, $m+n$ est un multiple de $6$.",
+        "2) Un seul contre-exemple suffit pour répondre « non ». Prenons $m = 6$ et $n = 12$, deux multiples de $6$.",
+        "Leur somme vaut $m + n = 18$. Or $18$ n'est pas un multiple de $12$ (car $18 = 12 \\times 1{,}5$, et $1{,}5$ n'est pas entier).",
+        "Donc la somme de deux multiples de $6$ n'est pas toujours un multiple de $12$."
+      ],
+      "reponse": "1) $m+n = 6(k+k')$ : c'est un multiple de $6$. 2) Non : $6 + 12 = 18$ n'est pas multiple de $12$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "demonstration-exigible",
+      "enonce": "Soit $n$ un entier. 1) Montrer que si $n$ est pair, alors $n^2$ est un multiple de $4$. 2) Montrer que si $n$ est impair, alors $n^2$ est de la forme $4k+1$ (et n'est donc jamais un multiple de $4$).",
+      "corrige": [
+        "1) Si $n$ est pair, on l'écrit $n = 2k$ avec $k$ entier.",
+        "Alors $n^2 = (2k)^2 = 4k^2 = 4 \\times k^2$. Comme $k^2$ est un entier, $n^2$ est un multiple de $4$.",
+        "2) Si $n$ est impair, on l'écrit $n = 2k+1$ avec $k$ entier.",
+        "On développe sans oublier le double produit : $n^2 = (2k+1)^2 = 4k^2 + 4k + 1$.",
+        "On factorise par $4$ les deux premiers termes : $n^2 = 4(k^2 + k) + 1$.",
+        "$k^2 + k$ est un entier, donc $n^2$ s'écrit $4 \\times (\\text{entier}) + 1$ : c'est un nombre de la forme $4k'+1$, qui laisse un reste $1$ et n'est donc pas un multiple de $4$."
+      ],
+      "reponse": "1) $n^2 = 4k^2$, multiple de $4$. 2) $n^2 = 4(k^2+k)+1$, de la forme $4k'+1$ : jamais multiple de $4$."
+    }
+  ]
+}

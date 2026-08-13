@@ -1,0 +1,89 @@
+{
+  "id": "2nde-math-fonctions-de-reference-exos",
+  "chapitre": "2nde-math-fonctions-de-reference",
+  "titre": "Exercices — Fonctions de référence",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "affine",
+      "enonce": "Une droite passe par les points $A(1\\,;-3)$ et $B(5\\,;9)$. Calculer son coefficient directeur, puis en déduire les variations de la fonction affine associée.",
+      "corrige": [
+        "Le coefficient directeur d'une droite passant par $A$ et $B$ se calcule par $a = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}}$.",
+        "On remplace : $a = \\dfrac{9 - (-3)}{5 - 1} = \\dfrac{12}{4} = 3$.",
+        "Le coefficient directeur vaut $a = 3 > 0$ : la fonction affine est donc croissante sur $\\mathbb{R}$."
+      ],
+      "reponse": "$a = 3$, et la fonction est croissante sur $\\mathbb{R}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "racine",
+      "enonce": "Sans calculatrice, comparer $\\sqrt{7}$ et $3$.",
+      "corrige": [
+        "On écrit $3$ comme une racine carrée : $3 = \\sqrt{9}$.",
+        "La fonction racine carrée est croissante sur $[0\\,;+\\infty[$ : elle conserve l'ordre des nombres.",
+        "Comme $7 < 9$, on obtient $\\sqrt{7} < \\sqrt{9}$, c'est-à-dire $\\sqrt{7} < 3$."
+      ],
+      "reponse": "$\\sqrt{7} < 3$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "inverse",
+      "enonce": "Sans calculatrice, comparer $\\dfrac{1}{-3}$ et $\\dfrac{1}{-8}$.",
+      "corrige": [
+        "Les deux nombres sont les images de $-3$ et $-8$ par la fonction inverse ; or $-3$ et $-8$ sont tous les deux dans l'intervalle $]-\\infty\\,;0[$.",
+        "Sur cet intervalle, la fonction inverse est décroissante : elle inverse l'ordre des nombres.",
+        "Comme $-8 < -3$, on obtient donc $\\dfrac{1}{-8} > \\dfrac{1}{-3}$.",
+        "Vérification : $\\dfrac{1}{-8} = -0{,}125$ et $\\dfrac{1}{-3} \\approx -0{,}333$, et en effet $-0{,}125 > -0{,}333$."
+      ],
+      "reponse": "$\\dfrac{1}{-8} > \\dfrac{1}{-3}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "cube",
+      "enonce": "Sans calculatrice, comparer $(-3)^3$ et $(-2)^3$. Expliquer ensuite pourquoi le résultat serait différent avec la fonction carré.",
+      "corrige": [
+        "La fonction cube est croissante sur $\\mathbb{R}$ tout entier : elle conserve toujours l'ordre, même pour des nombres négatifs.",
+        "Comme $-3 < -2$, on a donc $(-3)^3 < (-2)^3$, soit $-27 < -8$.",
+        "Avec la fonction carré, c'est l'inverse : sur les négatifs, elle est décroissante et inverse l'ordre. On aurait $(-3)^2 > (-2)^2$, soit $9 > 4$."
+      ],
+      "reponse": "$(-3)^3 < (-2)^3$ (soit $-27 < -8$) ; avec le carré, l'ordre s'inverserait."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "comparaison",
+      "enonce": "On veut comparer $x$, $x^2$ et $\\sqrt{x}$. (a) Pour $x = 0{,}16$, calculer les trois nombres et les ranger dans l'ordre croissant. (b) Que devient ce classement pour un réel $x > 1$ ? Justifier à l'aide de la fiche.",
+      "corrige": [
+        "(a) Pour $x = 0{,}16$ : $x^2 = 0{,}16^2 = 0{,}0256$, $x = 0{,}16$ et $\\sqrt{x} = \\sqrt{0{,}16} = 0{,}4$.",
+        "On les range : $0{,}0256 < 0{,}16 < 0{,}4$, c'est-à-dire $x^2 < x < \\sqrt{x}$. C'est cohérent avec la fiche : sur $[0\\,;1]$, on a $\\sqrt{x} \\geqslant x \\geqslant x^2$.",
+        "(b) Pour $x > 1$, la fiche indique que l'ordre s'inverse : sur $[1\\,;+\\infty[$, $x^2 \\geqslant x \\geqslant \\sqrt{x}$.",
+        "Le classement devient donc $\\sqrt{x} < x < x^2$."
+      ],
+      "reponse": "(a) $x^2 < x < \\sqrt{x}$ ; (b) pour $x > 1$ : $\\sqrt{x} < x < x^2$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "carre-comparaison",
+      "enonce": "Julie affirme : « pour tous réels $a$ et $b$, si $a < b$ alors $a^2 < b^2$ ». (a) Donner un contre-exemple montrant que cette affirmation est fausse. (b) À quelle condition sur les signes de $a$ et $b$ l'affirmation devient-elle vraie ? Justifier.",
+      "corrige": [
+        "(a) Prenons $a = -5$ et $b = 2$ : on a bien $-5 < 2$. Pourtant $a^2 = 25$ et $b^2 = 4$, donc $a^2 > b^2$. L'affirmation est bien fausse.",
+        "La raison : la fonction carré n'est pas croissante sur $\\mathbb{R}$. Elle décroît sur les négatifs et croît seulement sur les positifs, on ne peut donc pas conserver l'ordre en général.",
+        "(b) Si $0 \\leqslant a < b$ (les deux nombres sont positifs ou nuls), on se place sur $[0\\,;+\\infty[$ où la fonction carré est croissante : l'ordre est conservé.",
+        "Dans ce cas, $a < b$ entraîne bien $a^2 < b^2$. L'affirmation n'est donc vraie que lorsque $a$ et $b$ sont tous deux positifs ou nuls."
+      ],
+      "reponse": "(a) Contre-exemple : $-5 < 2$ mais $25 > 4$. (b) Vrai uniquement si $0 \\leqslant a < b$."
+    }
+  ]
+}

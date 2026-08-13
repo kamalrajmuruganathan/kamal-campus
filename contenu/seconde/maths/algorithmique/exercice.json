@@ -1,0 +1,97 @@
+{
+  "id": "2nde-math-algorithmique-exos",
+  "chapitre": "2nde-math-algorithmique",
+  "titre": "Exercices — Algorithmique et programmation",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "tronc-commun",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "affectation",
+      "enonce": "On exécute le programme suivant. Que valent `a` et `b` à la fin ?\n```python\na = 3\nb = 5\na = b\nb = a\n```",
+      "corrige": [
+        "Rappel : `=` est une **affectation**, pas une égalité. Chaque ligne range une valeur dans une variable, dans l'ordre.",
+        "Après `a = 3` puis `b = 5` : `a` vaut $3$ et `b` vaut $5$.",
+        "`a = b` range dans `a` la valeur actuelle de `b`, c'est-à-dire $5$ : maintenant `a` vaut $5$ (l'ancienne valeur $3$ est perdue).",
+        "`b = a` range dans `b` la valeur actuelle de `a`, c'est-à-dire $5$ : `b` vaut toujours $5$.",
+        "Les deux variables valent donc $5$ : on n'a **pas** échangé les valeurs, on a écrasé $3$."
+      ],
+      "reponse": "`a` vaut $5$ et `b` vaut $5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "range",
+      "enonce": "Qu'affiche ce programme, ligne par ligne ?\n```python\nfor i in range(3, 7):\n    print(2 * i)\n```",
+      "corrige": [
+        "On repère d'abord les valeurs prises par `i`. `range(3, 7)` part de $3$ et s'arrête **avant** $7$ : `i` prend les valeurs $3, 4, 5, 6$.",
+        "À chaque tour, le programme affiche $2 \\times i$.",
+        "Pour $i = 3$ : $6$ ; pour $i = 4$ : $8$ ; pour $i = 5$ : $10$ ; pour $i = 6$ : $12$.",
+        "La boucle fait donc $4$ tours et affiche $4$ lignes."
+      ],
+      "reponse": "Le programme affiche, sur quatre lignes : $6$, puis $8$, puis $10$, puis $12$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "while",
+      "enonce": "Que valent `S` et `n` à la fin de ce programme ?\n```python\nS = 0\nn = 1\nwhile S < 10:\n    S = S + n\n    n = n + 1\n```",
+      "corrige": [
+        "On suit l'exécution tour par tour : à chaque tour, on **teste d'abord** la condition `S < 10`, puis, si elle est vraie, on exécute les deux affectations.",
+        "Départ : `S` = $0$, `n` = $1$.",
+        "Tour 1 : $0 < 10$ vrai, donc `S` = $0 + 1 = 1$ puis `n` = $2$.",
+        "Tour 2 : $1 < 10$ vrai, donc `S` = $1 + 2 = 3$ puis `n` = $3$.",
+        "Tour 3 : $3 < 10$ vrai, donc `S` = $3 + 3 = 6$ puis `n` = $4$.",
+        "Tour 4 : $6 < 10$ vrai, donc `S` = $6 + 4 = 10$ puis `n` = $5$.",
+        "Tour suivant : $10 < 10$ est **faux**, la boucle s'arrête. Les dernières valeurs rangées sont conservées."
+      ],
+      "reponse": "À la fin, `S` vaut $10$ et `n` vaut $5$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "conditionnelle",
+      "enonce": "Voici un programme qui utilise la valeur d'une variable `x`. Qu'affiche-t-il pour $x = -3$, pour $x = 0$, puis pour $x = 7$ ?\n```python\nif x > 0 and x < 10:\n    print(\"A\")\nelif x <= 0:\n    print(\"B\")\nelse:\n    print(\"C\")\n```",
+      "corrige": [
+        "On rappelle qu'on teste les conditions **dans l'ordre** : dès qu'une est vraie, on affiche et on saute le reste.",
+        "Pour $x = -3$ : `x > 0 and x < 10` demande que les deux soient vraies ; or $-3 > 0$ est faux, donc la première condition est fausse. On passe au `elif` : $-3 \\le 0$ est vrai, donc on affiche `B`.",
+        "Pour $x = 0$ : $0 > 0$ est faux, donc la première condition est fausse. Le `elif` : $0 \\le 0$ est vrai, donc on affiche `B`.",
+        "Pour $x = 7$ : $7 > 0$ est vrai **et** $7 < 10$ est vrai, donc la première condition est vraie : on affiche `A` (le `else` n'est jamais atteint ici)."
+      ],
+      "reponse": "$x = -3 \\to$ `B` ; $x = 0 \\to$ `B` ; $x = 7 \\to$ `A`."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "balayage",
+      "enonce": "On cherche une valeur approchée de la solution positive de $x^2 = 3$ par **balayage**, en avançant de $0{,}1$ en $0{,}1$. Compléter la boucle `while` ci-dessous, puis donner la valeur affichée et l'encadrement de $\\sqrt{3}$ qu'elle fournit.\n```python\nx = 0\nwhile ... :\n    x = x + 0.1\nprint(x)\n```",
+      "corrige": [
+        "Tant que $x^2$ est encore trop petit, on continue d'avancer : la condition d'arrêt est « $x^2$ atteint $3$ ». On écrit donc la condition de poursuite `x**2 < 3` (attention : le séparateur décimal est le **point**, on écrit `0.1`).",
+        "La boucle avance `x` par pas de $0{,}1$ et s'arrête au premier `x` dont le carré atteint ou dépasse $3$.",
+        "En traçant : $x = 1{,}7$ donne $x^2 = 2{,}89 < 3$ (on continue) ; $x = 1{,}8$ donne $x^2 = 3{,}24 \\ge 3$ (on s'arrête).",
+        "La boucle s'arrête donc à $x = 1{,}8$, valeur affichée. Juste avant, $x$ valait $1{,}7$.",
+        "On en déduit l'encadrement $1{,}7 < \\sqrt{3} < 1{,}8$ : $1{,}8$ est une valeur approchée par excès au dixième."
+      ],
+      "reponse": "Condition : `while x**2 < 3:`. Le programme affiche $1{,}8$, d'où $1{,}7 < \\sqrt{3} < 1{,}8$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "fonction",
+      "enonce": "Écrire une fonction `somme(n)` qui **renvoie** la somme des entiers de $1$ à $n$, c'est-à-dire $1 + 2 + \\ldots + n$, à l'aide d'une boucle `for`. Que renvoie alors `somme(100)` ?",
+      "corrige": [
+        "On définit la fonction avec `def` et son paramètre `n`. À l'intérieur, il faut une variable d'accumulation, **initialisée à $0$ avant la boucle** : `S = 0`.",
+        "Pour additionner tous les entiers de $1$ à $n$, on parcourt `range(1, n + 1)` : la borne supérieure étant exclue, il faut écrire `n + 1` pour atteindre $n$.",
+        "À chaque tour on ajoute `i` à `S` (`S = S + i`), puis on **renvoie** le résultat avec `return` (et non `print`, car on veut une valeur réutilisable). Le programme est :\n```python\ndef somme(n):\n    S = 0\n    for i in range(1, n + 1):\n        S = S + i\n    return S\n```",
+        "Pour `somme(100)`, on additionne tous les entiers de $1$ à $100$. Cette somme vaut $\\dfrac{100 \\times 101}{2} = 5050$ (résultat vu dans la fiche)."
+      ],
+      "reponse": "La fonction renvoie la somme $1 + 2 + \\ldots + n$ ; `somme(100)` renvoie $5050$."
+    }
+  ]
+}
