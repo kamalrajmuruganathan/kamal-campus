@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-logique-ensembles-qcm",
+  "chapitre": "tale-techno-math-logique-ensembles",
+  "titre": "QCM — Vocabulaire ensembliste et logique",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "appartenance-inclusion",
+      "enonce": "Soit $E = \\{2\\,;4\\,;6\\,;8\\}$. Laquelle de ces écritures est correcte ?",
+      "choix": [
+        "$4 \\in E$",
+        "$4 \\subset E$",
+        "$\\{4\\} \\in E$",
+        "$E \\in 4$"
+      ],
+      "reponse": 0,
+      "explication": "$4$ est un **élément** de $E$, donc on écrit $4 \\in E$. Le symbole $\\subset$ relie deux **ensembles** : on aurait pu écrire $\\{4\\} \\subset E$, mais pas $4 \\subset E$. Confondre $\\in$ et $\\subset$ est le piège n°1 du chapitre."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "reunion-intersection-complementaire",
+      "enonce": "$A \\cap B$ est l'ensemble des éléments qui sont…",
+      "choix": [
+        "dans $A$ ou dans $B$",
+        "dans $A$ et dans $B$",
+        "dans $A$ mais pas dans $B$",
+        "ni dans $A$ ni dans $B$"
+      ],
+      "reponse": 1,
+      "explication": "$\\cap$ est l'**intersection** : les éléments communs, ceux qui vérifient les deux conditions à la fois (« et »). Le « ou » correspond à la réunion $A \\cup B$. Moyen mnémotechnique : $\\cap$ ressemble à un n, comme i**n**tersection."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "reunion-intersection-complementaire",
+      "enonce": "$A = \\{1\\,;2\\,;3\\,;4\\}$ et $B = \\{3\\,;4\\,;5\\,;6\\}$. Que vaut $A \\cup B$ ?",
+      "choix": [
+        "$\\{3\\,;4\\}$",
+        "$\\{1\\,;2\\,;3\\,;4\\,;5\\,;6\\}$",
+        "$\\{1\\,;2\\,;3\\,;4\\,;3\\,;4\\,;5\\,;6\\}$",
+        "$\\{1\\,;2\\,;5\\,;6\\}$"
+      ],
+      "reponse": 1,
+      "explication": "La réunion rassemble **tous** les éléments de $A$ ou de $B$, chacun compté **une seule fois** : $\\{1\\,;2\\,;3\\,;4\\,;5\\,;6\\}$. Le choix $\\{3\\,;4\\}$ est l'intersection $A \\cap B$ — la confusion $\\cup$/$\\cap$ est le piège classique."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "couple-produit-cartesien",
+      "enonce": "Un restaurant propose 3 plats et 4 desserts. Combien de menus « un plat + un dessert » peut-on composer ?",
+      "choix": [
+        "$7$",
+        "$12$",
+        "$3$",
+        "$24$"
+      ],
+      "reponse": 1,
+      "explication": "Un menu est un **couple** (plat ; dessert), élément du produit cartésien Plats $\\times$ Desserts, qui compte $3 \\times 4 = 12$ couples. Le piège est d'**additionner** ($3 + 4 = 7$) au lieu de multiplier : chaque plat se combine avec chacun des 4 desserts."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "connecteurs-et-ou",
+      "enonce": "Pour $x = 8$, que dire des propositions $P$ : « $x$ est pair **et** $x > 10$ » et $Q$ : « $x$ est pair **ou** $x > 10$ » ?",
+      "choix": [
+        "$P$ et $Q$ sont vraies",
+        "$P$ est fausse, $Q$ est vraie",
+        "$P$ est vraie, $Q$ est fausse",
+        "$P$ et $Q$ sont fausses"
+      ],
+      "reponse": 1,
+      "explication": "« $x$ pair » est vraie et « $x > 10$ » est fausse. Le « et » exige les **deux** conditions : $P$ est fausse. Le « ou » se contente d'**au moins une** : $Q$ est vraie. Le piège est de croire que le « ou » exige lui aussi les deux, ou qu'une condition fausse suffit à tout rendre faux."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "statut-egalite",
+      "enonce": "Parmi ces égalités, laquelle est une **identité** (vraie pour tout réel $x$) ?",
+      "choix": [
+        "$3x + 2 = 8$",
+        "$(x+2)^2 = x^2 + 4x + 4$",
+        "$x^2 = 16$",
+        "$x = x + 1$"
+      ],
+      "reponse": 1,
+      "explication": "$(x+2)^2 = x^2 + 4x + 4$ est un développement, vrai pour **toutes** les valeurs de $x$ : c'est une identité. $3x + 2 = 8$ et $x^2 = 16$ sont des **équations**, vraies seulement pour certaines valeurs. $x = x + 1$ n'est vraie pour aucun réel (mais serait une affectation valide en Python). Le piège : croire que toute égalité « se résout »."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "contre-exemple",
+      "enonce": "Un élève affirme : « pour tout réel $x$, $x^2 \\geq x$ ». Que faut-il pour prouver que c'est faux ?",
+      "choix": [
+        "Vérifier l'inégalité pour dix valeurs de $x$",
+        "Un seul contre-exemple, par exemple $x = 0{,}5$",
+        "Montrer que c'est faux pour toutes les valeurs de $x$",
+        "C'est impossible : l'affirmation est vraie"
+      ],
+      "reponse": 1,
+      "explication": "Pour réfuter un « pour tout », **un seul** contre-exemple suffit : $x = 0{,}5$ donne $x^2 = 0{,}25 < 0{,}5$. Il est inutile (et faux d'exiger) que l'inégalité échoue partout : elle est d'ailleurs vraie pour $x = 2$ ou $x = -1$. Le piège symétrique : dix vérifications ne prouveraient pas non plus que l'affirmation est vraie."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "proposition-reciproque",
+      "enonce": "Quelle est la réciproque de « si un entier se termine par 0, alors il est divisible par 5 » ?",
+      "choix": [
+        "Si un entier ne se termine pas par 0, alors il n'est pas divisible par 5",
+        "Si un entier est divisible par 5, alors il se termine par 0",
+        "Si un entier n'est pas divisible par 5, alors il ne se termine pas par 0",
+        "Un entier se termine par 0 si et seulement s'il est divisible par 5"
+      ],
+      "reponse": 1,
+      "explication": "La réciproque de « si $P$ alors $Q$ » s'obtient en **échangeant** hypothèse et conclusion : « si $Q$ alors $P$ ». Ici elle est d'ailleurs **fausse** (15 est divisible par 5 sans finir par 0). Le choix A ajoute des négations au lieu d'échanger — ce n'est pas la réciproque."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "condition-necessaire-suffisante",
+      "enonce": "On admet : « si $x = 3$, alors $x^2 = 9$ ». Quelle affirmation est correcte ?",
+      "choix": [
+        "$x^2 = 9$ est une condition suffisante pour avoir $x = 3$",
+        "$x = 3$ est une condition nécessaire pour avoir $x^2 = 9$",
+        "$x = 3$ est une condition suffisante pour avoir $x^2 = 9$",
+        "$x^2 = 9$ équivaut à $x = 3$"
+      ],
+      "reponse": 2,
+      "explication": "Dans « si $P$ alors $Q$ », l'hypothèse $P$ est **suffisante** pour $Q$ : il suffit que $x = 3$ pour que $x^2 = 9$. En revanche $x = 3$ n'est pas nécessaire, et $x^2 = 9$ n'est pas suffisante : $x = -3$ donne aussi $x^2 = 9$. C'est ce contre-exemple qui interdit l'équivalence du choix D."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "reunion-intersection-complementaire",
+      "enonce": "Dans une classe de 30 élèves, $A$ est l'ensemble des 18 élèves qui font l'option ciné. Combien d'éléments contient $\\bar{A}$, et que vaut $A \\cap \\bar{A}$ ?",
+      "choix": [
+        "$\\bar{A}$ a 12 éléments et $A \\cap \\bar{A} = \\varnothing$",
+        "$\\bar{A}$ a 18 éléments et $A \\cap \\bar{A} = \\varnothing$",
+        "$\\bar{A}$ a 12 éléments et $A \\cap \\bar{A} = A$",
+        "$\\bar{A}$ a 30 éléments et $A \\cup \\bar{A} = \\varnothing$"
+      ],
+      "reponse": 0,
+      "explication": "Le complémentaire regroupe les élèves de la classe qui ne font **pas** l'option : $30 - 18 = 12$ éléments. Un élève ne peut pas à la fois faire et ne pas faire l'option, donc $A \\cap \\bar{A} = \\varnothing$ (et $A \\cup \\bar{A} = E$, toute la classe). Le piège : oublier de soustraire, ou croire qu'un ensemble et son complémentaire peuvent se chevaucher."
+    }
+  ]
+}

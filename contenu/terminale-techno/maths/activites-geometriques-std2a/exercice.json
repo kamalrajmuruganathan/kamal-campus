@@ -1,0 +1,89 @@
+{
+  "id": "tale-techno-math-activites-geometriques-std2a-exos",
+  "chapitre": "tale-techno-math-activites-geometriques-std2a",
+  "titre": "Exercices — Activités géométriques (STD2A) : coniques et perspective centrale",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "sections-planes",
+      "enonce": "Un cône de révolution (à deux nappes) a pour demi-angle au sommet $\\alpha = 30°$. On le coupe par quatre plans, aucun ne passant par le sommet. Donner la nature de chaque section. (a) Un plan perpendiculaire à l'axe, situé à $6$ cm du sommet (le long de l'axe) : préciser aussi le rayon de la section, arrondi au millimètre. (b) Un plan faisant un angle de $50°$ avec l'axe. (c) Un plan faisant un angle de $30°$ avec l'axe. (d) Un plan faisant un angle de $10°$ avec l'axe.",
+      "corrige": [
+        "(a) Le plan est perpendiculaire à l'axe ($\\beta = 90°$) : la section est un **cercle**. Vu de profil, le cône devient un triangle rectangle : à la distance $d = 6$ cm du sommet, le rayon vaut $r = d \\times \\tan \\alpha = 6 \\tan 30° = 2\\sqrt{3} \\approx 3{,}5$ cm.",
+        "(b) On compare l'angle plan–axe au demi-angle au sommet : $\\alpha = 30° < \\beta = 50° < 90°$. Le plan est incliné mais coupe toutes les génératrices d'une même nappe : la section est une **ellipse** (courbe fermée).",
+        "(c) Ici $\\beta = \\alpha = 30°$ : le plan est parallèle à une génératrice et une seule. C'est le cas frontière : la section est une **parabole** (courbe ouverte, une branche).",
+        "(d) Ici $\\beta = 10° < \\alpha = 30°$ : le plan est plus « redressé » que les génératrices, il coupe les **deux nappes**. La section est une **hyperbole** à deux branches, une sur chaque nappe."
+      ],
+      "reponse": "(a) cercle de rayon $2\\sqrt{3} \\approx 3{,}5$ cm ; (b) ellipse ; (c) parabole ; (d) hyperbole."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "tangente",
+      "enonce": "Sur une épure, un cercle de centre $O$ et de rayon $6$ cm représente la section d'une pièce cylindrique. Un point $A$ du plan vérifie $OA = 10$ cm. Une droite passant par $A$ est tangente au cercle en un point $T$. (a) Rappeler la propriété de la tangente au cercle en $T$. (b) En déduire la nature du triangle $OTA$. (c) Calculer la longueur $AT$.",
+      "corrige": [
+        "(a) La tangente au cercle en $T$ est la droite qui touche le cercle en $T$ sans le traverser : elle est **perpendiculaire en $T$ au rayon $[OT]$**.",
+        "(b) La droite $(AT)$ est tangente en $T$, donc $(AT) \\perp (OT)$ : le triangle $OTA$ est **rectangle en $T$**.",
+        "(c) On applique le théorème de Pythagore dans $OTA$ rectangle en $T$ : $OA^2 = OT^2 + AT^2$, donc $AT^2 = OA^2 - OT^2 = 10^2 - 6^2 = 100 - 36 = 64$, d'où $AT = \\sqrt{64} = 8$ cm. La tangente transforme le problème de cercle en triangle rectangle — c'est tout son intérêt en géométrie de tracé."
+      ],
+      "reponse": "(a) tangente $\\perp$ rayon $[OT]$ ; (b) triangle rectangle en $T$ ; (c) $AT = 8$ cm."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "perspective-centrale",
+      "enonce": "Tu dessines en perspective centrale une voie ferrée rectiligne vue de face : les deux rails sont horizontaux, parallèles entre eux et perpendiculaires au plan du tableau ; les traverses sont horizontales et parallèles au tableau, régulièrement espacées dans la réalité. (a) Que deviennent les images des deux rails sur le dessin ? Justifier par une propriété du cours et préciser où se situe leur point de concours. (b) Que deviennent les images des traverses ? Justifier. (c) Les images des traverses sont-elles régulièrement espacées sur le dessin ? Expliquer.",
+      "corrige": [
+        "(a) Les rails sont des droites parallèles entre elles et **non parallèles au tableau** (ils s'enfoncent dans la profondeur). D'après la règle des points de fuite, leurs images sont des droites **concourantes en un point de fuite**. Comme ils sont horizontaux et perpendiculaires au tableau, ce point est le **point de fuite principal**, situé sur la **ligne d'horizon**, face à l'œil : sur le dessin, les deux rails « se rejoignent » à l'horizon.",
+        "(b) Les traverses sont des droites **frontales** (parallèles au tableau). Or une frontale garde sa direction : chaque traverse a pour image un segment **horizontal**, et toutes les images restent **parallèles entre elles**. Elles ne fuient vers aucun point.",
+        "(c) Non. La perspective centrale conserve l'alignement, mais **pas les longueurs ni les rapports** : l'égalité des espacements réels n'est pas conservée. Plus une traverse est éloignée de l'observateur, plus son image est proche de la ligne d'horizon et resserrée contre la précédente : les images sont de plus en plus rapprochées en montant vers l'horizon. Dessiner des espacements réguliers est précisément l'erreur qui « écrase » la profondeur."
+      ],
+      "reponse": "(a) deux droites concourantes au point de fuite principal, sur la ligne d'horizon ; (b) des segments horizontaux parallèles entre eux (frontales) ; (c) non : espacements de plus en plus resserrés vers l'horizon, car la perspective ne conserve ni longueurs ni rapports."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Pour le design d'un miroir, tu dois tracer une ellipse de grand axe $12$ cm et de petit axe $7$ cm. (a) Donner les dimensions du rectangle encadrant de cette ellipse et expliquer son rôle dans le tracé. (b) En combien de points l'ellipse touche-t-elle ce rectangle ? Préciser lesquels, et ce que sont les côtés du rectangle pour l'ellipse. (c) Ton premier tracé à main levée donne une courbe légèrement « en œuf », plus pointue à droite qu'à gauche. Expliquer pourquoi ce tracé est géométriquement faux.",
+      "corrige": [
+        "(a) Le rectangle encadrant a pour dimensions le grand axe par le petit axe : $12 \\text{ cm} \\times 7 \\text{ cm}$. On le trace en premier, avec ses deux médianes (les futurs axes de l'ellipse, sécants au centre) : c'est le gabarit qui contrôle l'encombrement et la symétrie de la courbe.",
+        "(b) L'ellipse touche le rectangle en exactement **4 points : ses 4 sommets**, situés aux milieux des côtés du rectangle (extrémités du grand axe et du petit axe). En chacun de ces sommets, le côté du rectangle **touche l'ellipse sans la traverser** : les 4 côtés du rectangle sont les **tangentes** à l'ellipse en ses sommets — tangentes parallèles aux axes.",
+        "(c) Une ellipse possède **deux axes de symétrie** : le grand axe et le petit axe. Ses deux moitiés gauche et droite sont donc superposables : elle ne peut pas être plus pointue d'un côté que de l'autre. La forme « d'œuf » n'a qu'un seul axe de symétrie, ce n'est pas une ellipse : le tracé doit être repris en s'appuyant sur les 4 sommets et les 4 tangentes du rectangle encadrant."
+      ],
+      "reponse": "(a) rectangle de $12 \\times 7$ cm, gabarit du tracé ; (b) 4 points de contact, les 4 sommets ; les côtés sont les tangentes en ces sommets ; (c) l'ellipse a deux axes de symétrie, l'« œuf » n'en a qu'un : le tracé est à reprendre."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "sections-planes",
+      "enonce": "Une applique murale en forme de cône diffuse la lumière vers le haut et vers le bas : le faisceau lumineux forme un cône de révolution à deux nappes, de sommet $S$ situé à quelques centimètres du mur, d'axe horizontal **parallèle au mur**, et de demi-angle au sommet $\\alpha = 35°$. Le mur est un plan vertical parallèle à l'axe du cône. (a) Donner l'angle $\\beta$ entre le mur et l'axe du cône, puis la nature de la courbe lumineuse dessinée sur le mur. Justifier. (b) Décrire précisément la figure obtenue sur le mur (nombre de branches, position, éléments de symétrie, asymptotes). (c) On incline maintenant l'applique de sorte que le mur devienne parallèle à une génératrice du cône (et une seule). Quelle courbe apparaît sur le mur ? (d) Expliquer pourquoi, quelle que soit l'inclinaison, on ne verra jamais une courbe fermée (ellipse ou cercle) entière sur le mur avec cette applique proche du mur.",
+      "corrige": [
+        "(a) Le mur est parallèle à l'axe : l'angle entre le plan du mur et l'axe vaut $\\beta = 0°$. Comme $\\beta = 0° < \\alpha = 35°$, le plan est plus redressé que les génératrices et coupe les **deux nappes** du cône : la courbe est une **hyperbole**.",
+        "(b) On voit **deux branches** : une tache lumineuse au-dessus de l'applique, une au-dessous, séparées par une zone sombre à hauteur de l'applique. La figure admet un **centre de symétrie** (le point du mur le plus proche du sommet $S$) et un axe de symétrie vertical ; chaque branche a un **sommet** (le point de la branche le plus proche de ce centre). Les branches se rapprochent indéfiniment de deux droites sécantes, les **asymptotes** — les directions des bords du faisceau — sans jamais les atteindre : loin de l'applique, les bords de la tache paraissent presque rectilignes.",
+        "(c) Si le mur devient parallèle à **une seule** génératrice, on est dans le cas frontière $\\beta = \\alpha$ : la courbe est une **parabole**. Une seule nappe éclaire alors le mur en une courbe ouverte en U ; l'autre nappe n'y découpe plus de courbe.",
+        "(d) Pour obtenir un cercle ou une ellipse, il faudrait un plan coupant **toutes** les génératrices d'une même nappe ($\\alpha < \\beta \\le 90°$), donc un mur fortement incliné par rapport à l'axe — face au faisceau, comme l'est un plafond pour un spot vertical. Un mur vertical restant parallèle (ou presque) à l'axe horizontal du cône donne $\\beta < \\alpha$ : on reste dans le cas hyperbole. C'est pour cela que toutes les appliques murales de ce type dessinent des « ailes » hyperboliques, jamais un ovale fermé."
+      ],
+      "reponse": "(a) $\\beta = 0° < \\alpha$ : hyperbole ; (b) deux branches symétriques haut/bas, un centre, deux sommets, deux asymptotes jamais touchées ; (c) une parabole ; (d) il faudrait $\\beta > \\alpha$, impossible avec un mur quasi parallèle à l'axe : le cas fermé (ellipse/cercle) est hors d'atteinte."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "perspective-centrale",
+      "enonce": "Tu dessines en perspective centrale (frontale) la façade latérale d'un bâtiment : dans la réalité, c'est un rectangle vertical $ABCD$ dont les côtés $[AB]$ et $[DC]$ sont verticaux et les côtés $[AD]$ et $[BC]$ horizontaux, perpendiculaires au tableau. Sur ton dessin, la façade est représentée par un quadrilatère $abcd$. (a) Que peut-on dire des images $[ab]$ et $[dc]$ des deux côtés verticaux ? Justifier. (b) Où se coupent les droites $(ad)$ et $(bc)$ ? Justifier. (c) Le cahier des charges impose une porte située exactement au milieu de la façade. Explique, étape par étape, la construction géométrique qui permet de placer l'axe vertical de cette porte sur le dessin, et justifie pourquoi elle est correcte. (d) Pourquoi serait-il faux de placer cet axe au milieu, mesuré à la règle, du dessin de la façade ?",
+      "corrige": [
+        "(a) Les côtés $[AB]$ et $[DC]$ sont verticaux, donc **parallèles au tableau** (qui est un plan vertical) : ce sont des frontales. Une frontale garde sa direction et deux frontales parallèles restent parallèles : $[ab]$ et $[dc]$ sont donc deux segments **verticaux et parallèles** sur le dessin.",
+        "(b) Les droites $(AD)$ et $(BC)$ sont horizontales, parallèles entre elles et **perpendiculaires au tableau** : leurs images $(ad)$ et $(bc)$ sont concourantes au **point de fuite principal** $F$, situé sur la **ligne d'horizon**, face à l'œil. Sur le dessin, les deux bords horizontaux de la façade « fuient » vers $F$.",
+        "(c) Construction : 1) tracer les deux diagonales $[ac]$ et $[bd]$ du quadrilatère $abcd$ ; 2) noter $i$ leur point d'intersection ; 3) tracer la **verticale** passant par $i$ : c'est l'axe de la porte. Justification : dans la réalité, les diagonales du rectangle $ABCD$ se coupent au centre $I$ de la façade. La perspective conserve l'**alignement** et les **intersections** : l'image de $I$ est donc l'intersection des images des diagonales, c'est-à-dire $i$. L'axe vertical de la porte passe par le centre de la façade ; c'est une droite verticale, donc frontale, dont l'image est la verticale passant par $i$.",
+        "(d) Parce que la perspective centrale **ne conserve ni les longueurs ni les milieux** : la moitié de la façade la plus éloignée de l'observateur occupe moins de place sur le dessin que la moitié proche. Le milieu mesuré à la règle sur $[ad]$ n'est donc pas l'image du milieu réel : la porte serait décalée vers le côté éloigné. Seule la construction par les diagonales, qui ne repose que sur des propriétés conservées (alignement, intersection), donne la position exacte."
+      ],
+      "reponse": "(a) $[ab]$ et $[dc]$ verticaux et parallèles (frontales) ; (b) au point de fuite principal $F$, sur la ligne d'horizon ; (c) intersection $i$ des diagonales de $abcd$, puis verticale par $i$ — correcte car la perspective conserve alignements et intersections ; (d) les milieux ne sont pas conservés : le milieu « à la règle » est faux."
+    }
+  ]
+}

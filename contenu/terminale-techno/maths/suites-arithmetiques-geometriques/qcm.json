@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-suites-arithmetiques-geometriques-qcm",
+  "chapitre": "tale-techno-math-suites-arithmetiques-geometriques",
+  "titre": "QCM — Suites arithmétiques et géométriques",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "moyennes",
+      "enonce": "Quelle est la moyenne arithmétique de $8$ et $14$ ?",
+      "choix": [
+        "$11$",
+        "$22$",
+        "$\\sqrt{112} \\approx 10{,}6$",
+        "$3$"
+      ],
+      "reponse": 0,
+      "explication": "La moyenne arithmétique de $a$ et $b$ est $\\dfrac{a+b}{2} = \\dfrac{8+14}{2} = 11$. Le piège classique est d'oublier de diviser par $2$ (ce qui donne $22$) ou de confondre avec la moyenne géométrique $\\sqrt{ab} = \\sqrt{112} \\approx 10{,}6$, qui est une autre notion."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "terme-de-rang-n",
+      "enonce": "$(u_n)$ est arithmétique avec $u_0 = 5$ et $r = 3$. Quelle est l'expression du terme de rang $n$ ?",
+      "choix": [
+        "$u_n = 5 + 3n$",
+        "$u_n = 5 \\times 3^n$",
+        "$u_n = 3 + 5n$",
+        "$u_n = 8n$"
+      ],
+      "reponse": 0,
+      "explication": "Pour une suite arithmétique, $u_n = u_0 + n\\,r = 5 + 3n$ : on part de $u_0$ et on ajoute $n$ fois la raison. Le piège : $5 \\times 3^n$ serait le terme général d'une suite **géométrique** de raison $3$, et $3 + 5n$ échange le rôle de $u_0$ et de $r$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "moyennes",
+      "enonce": "Quelle est la moyenne géométrique de $4$ et $25$ ?",
+      "choix": [
+        "$14{,}5$",
+        "$10$",
+        "$50$",
+        "$100$"
+      ],
+      "reponse": 1,
+      "explication": "La moyenne géométrique de deux nombres positifs est $\\sqrt{ab} = \\sqrt{4 \\times 25} = \\sqrt{100} = 10$. Le piège : $14{,}5$ est la moyenne **arithmétique** $\\frac{4+25}{2}$, $100$ est le produit sans la racine, et $50$ la moitié du produit."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "trois-termes-consecutifs",
+      "enonce": "Soit $a$, $b$, $c$ trois nombres strictement positifs. Ils sont, dans cet ordre, des termes consécutifs d'une suite géométrique lorsque…",
+      "choix": [
+        "$2b = a + c$",
+        "$b^2 = a \\times c$",
+        "$b = \\dfrac{a \\times c}{2}$",
+        "$b^2 = a + c$"
+      ],
+      "reponse": 1,
+      "explication": "Termes consécutifs d'une suite géométrique signifie $\\frac{b}{a} = \\frac{c}{b}$, c'est-à-dire $b^2 = ac$ : le terme du milieu est la moyenne géométrique des deux autres. Le piège : $2b = a + c$ est la condition pour une suite **arithmétique** — ne mélange pas les deux, et $b^2 = a + c$ mélange produit et somme."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "terme-de-rang-n",
+      "enonce": "$(u_n)$ est géométrique à termes positifs, avec $u_2 = 6$ et $u_5 = 48$. Quelle est sa raison $q$ ?",
+      "choix": [
+        "$q = 14$",
+        "$q = 8$",
+        "$q = 2$",
+        "$q = 42$"
+      ],
+      "reponse": 2,
+      "explication": "De $u_2$ à $u_5$, on multiplie $5 - 2 = 3$ fois par $q$ : $u_5 = u_2 \\times q^3$, donc $q^3 = \\frac{48}{6} = 8$ et $q = 2$. Le piège : $8$ est $q^3$ (il reste à prendre la racine cubique), et $14 = \\frac{48-6}{3}$ traite la suite comme si elle était arithmétique."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "somme-arithmetique",
+      "enonce": "Que vaut la somme $1 + 2 + 3 + \\cdots + 50$ ?",
+      "choix": [
+        "$2\\,550$",
+        "$1\\,275$",
+        "$1\\,225$",
+        "$51$"
+      ],
+      "reponse": 1,
+      "explication": "C'est la somme des entiers de $1$ à $n$ avec $n = 50$ : $\\frac{n(n+1)}{2} = \\frac{50 \\times 51}{2} = 1\\,275$. Le piège : $2\\,550$ est le résultat sans la division par $2$, et $1\\,225 = \\frac{49 \\times 50}{2}$ correspond à la somme arrêtée à $49$ — une erreur de nombre de termes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "somme-arithmetique",
+      "enonce": "$(u_n)$ est arithmétique avec $u_0 = 100$ et $r = 20$. Que vaut la somme des $10$ premiers termes $u_0 + u_1 + \\cdots + u_9$ ?",
+      "choix": [
+        "$1\\,900$",
+        "$2\\,000$",
+        "$3\\,800$",
+        "$280$"
+      ],
+      "reponse": 0,
+      "explication": "Le dernier des $10$ premiers termes est $u_9 = 100 + 9 \\times 20 = 280$ (et non $u_{10}$). Donc $S = 10 \\times \\frac{100 + 280}{2} = 10 \\times 190 = 1\\,900$. Le piège : $2\\,000$ vient de prendre $u_{10} = 300$ comme dernier terme (erreur de nombre de termes), $3\\,800$ d'oublier la division par $2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "somme-geometrique",
+      "enonce": "$(u_n)$ est géométrique avec $u_0 = 3$ et $q = 2$. Que vaut la somme des $8$ premiers termes ?",
+      "choix": [
+        "$768$",
+        "$255$",
+        "$765$",
+        "$381$"
+      ],
+      "reponse": 2,
+      "explication": "$S = u_0 \\times \\frac{1 - q^8}{1 - q} = 3 \\times \\frac{1 - 256}{1 - 2} = 3 \\times 255 = 765$ : l'exposant est le nombre de termes, ici $8$. Le piège : $255$ oublie le facteur $u_0 = 3$, $381 = 3 \\times 127$ n'additionne que $7$ termes, et $768 = 3 \\times 2^8$ est un **terme** ($u_8$), pas une somme."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "situation-de-somme",
+      "enonce": "Un salarié touche $1\\,800$ € le premier mois, et son salaire augmente de $2\\,\\%$ chaque mois. Que représente le nombre $1800 \\times \\dfrac{1 - 1{,}02^{12}}{1 - 1{,}02}$ ?",
+      "choix": [
+        "Son salaire du $12^{\\text{e}}$ mois",
+        "Le total perçu pendant les $12$ premiers mois",
+        "Son salaire du $13^{\\text{e}}$ mois",
+        "L'augmentation totale de son salaire en un an"
+      ],
+      "reponse": 1,
+      "explication": "On reconnaît la formule de la **somme** des $n$ premiers termes d'une suite géométrique, avec $u_0 = 1800$, $q = 1{,}02$ et $n = 12$ : c'est le cumul des $12$ salaires mensuels. Le piège : le salaire du $12^{\\text{e}}$ mois est **un terme**, $1800 \\times 1{,}02^{11}$ — reconnaître une situation de somme, c'est distinguer « le salaire d'un mois » de « le total sur l'année »."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "trois-termes-consecutifs",
+      "enonce": "Pour quelle valeur de $x > 0$ les nombres $4$ ; $x$ ; $25$ sont-ils, dans cet ordre, des termes consécutifs d'une suite géométrique à termes positifs ?",
+      "choix": [
+        "$x = 14{,}5$",
+        "$x = 100$",
+        "$x = 10$",
+        "$x = 12{,}5$"
+      ],
+      "reponse": 2,
+      "explication": "Il faut $x^2 = 4 \\times 25 = 100$, donc $x = 10$ (on garde la racine positive) : le terme du milieu est la moyenne **géométrique** de ses voisins. La raison est $q = \\frac{10}{4} = 2{,}5$, et on vérifie $10 \\times 2{,}5 = 25$. Le piège : $14{,}5$ est la moyenne arithmétique $\\frac{4+25}{2}$ (elle répondrait à la même question pour une suite **arithmétique**), et $100$ oublie la racine carrée."
+    }
+  ]
+}

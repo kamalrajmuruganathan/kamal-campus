@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-fonction-inverse-qcm",
+  "chapitre": "tale-techno-math-fonction-inverse",
+  "titre": "QCM — Fonction inverse",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quel est l'ensemble de définition de la fonction inverse $x \\mapsto \\dfrac{1}{x}$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$\\left]-\\infty\\,;0\\right[ \\cup \\left]0\\,;+\\infty\\right[$",
+        "$\\left]0\\,;+\\infty\\right[$",
+        "$\\left[0\\,;+\\infty\\right[$"
+      ],
+      "reponse": 1,
+      "explication": "On ne peut pas diviser par $0$ : le nombre $0$ est la seule valeur interdite, et tous les autres réels (positifs comme négatifs) ont un inverse. L'ensemble de définition est donc $\\mathbb{R}$ privé de $0$, soit deux intervalles. Le piège : $\\left]0\\,;+\\infty\\right[$ oublie toute la branche des négatifs, et $\\mathbb{R}$ oublie la valeur interdite."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "derivee",
+      "enonce": "Quelle est la dérivée de la fonction inverse $f(x) = \\dfrac{1}{x}$ ?",
+      "choix": [
+        "$f'(x) = \\dfrac{1}{x^2}$",
+        "$f'(x) = -\\dfrac{1}{x}$",
+        "$f'(x) = -\\dfrac{1}{x^2}$",
+        "$f'(x) = -x^2$"
+      ],
+      "reponse": 2,
+      "explication": "C'est une dérivée usuelle vue en Première : $\\left(\\frac{1}{x}\\right)' = -\\frac{1}{x^2}$. Le piège n°1 du chapitre est d'oublier le signe moins et de répondre $\\frac{1}{x^2}$ : ce moins oublié rendrait la fonction croissante et inverserait tout le tableau de variations."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "comportement-bornes",
+      "enonce": "Quand $x$ devient très grand (par exemple $x = 10\\,000$ puis $x = 1\\,000\\,000$), que fait $\\dfrac{1}{x}$ ?",
+      "choix": [
+        "Il devient très grand aussi",
+        "Il se rapproche de $1$",
+        "Il se rapproche de $0$ en restant positif",
+        "Il devient très négatif"
+      ],
+      "reponse": 2,
+      "explication": "$\\frac{1}{10\\,000} = 0{,}0001$ puis $\\frac{1}{1\\,000\\,000} = 0{,}000001$ : l'inverse d'un grand nombre est un petit nombre, aussi proche de $0$ que l'on veut mais toujours positif. C'est ce comportement qui fait de la droite $y = 0$ une asymptote horizontale. Le piège : confondre avec le comportement près de $0$, où $\\frac{1}{x}$ devient au contraire très grand."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "comportement-bornes",
+      "enonce": "Quelles sont les asymptotes de la courbe représentative de la fonction inverse ?",
+      "choix": [
+        "Les droites $y = 0$ et $x = 0$ (les deux axes du repère)",
+        "La droite $y = x$",
+        "Seulement la droite $y = 0$",
+        "Les droites $y = 1$ et $x = 1$"
+      ],
+      "reponse": 0,
+      "explication": "Au loin, la courbe s'écrase sur l'axe des abscisses ($y = 0$, asymptote horizontale) ; près de la valeur interdite, elle longe l'axe des ordonnées ($x = 0$, asymptote verticale). Il y a bien DEUX asymptotes — le piège est d'oublier la verticale, qui traduit l'interdiction de la division par $0$. La courbe ne touche jamais ces droites."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "sens-de-variation",
+      "enonce": "Quelle phrase décrit correctement les variations de la fonction inverse ?",
+      "choix": [
+        "Elle est décroissante sur $\\left]-\\infty\\,;0\\right[ \\cup \\left]0\\,;+\\infty\\right[$",
+        "Elle est décroissante sur $\\left]-\\infty\\,;0\\right[$ et décroissante sur $\\left]0\\,;+\\infty\\right[$",
+        "Elle est croissante sur $\\left]0\\,;+\\infty\\right[$",
+        "Elle est décroissante sur $\\left]-\\infty\\,;0\\right[$ et croissante sur $\\left]0\\,;+\\infty\\right[$"
+      ],
+      "reponse": 1,
+      "explication": "$f'(x) = -\\frac{1}{x^2} < 0$ partout, donc la fonction est décroissante sur chacun des deux intervalles, énoncés séparément. Le piège est la réunion : dire « décroissante sur $\\left]-\\infty\\,;0\\right[ \\cup \\left]0\\,;+\\infty\\right[$ » est faux, car $-1 < 1$ alors que $f(-1) = -1 < f(1) = 1$ — en traversant $0$, la fonction remonte."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "courbe-hyperbole",
+      "enonce": "La courbe représentative de la fonction inverse…",
+      "choix": [
+        "est une parabole tournée vers le haut",
+        "est une hyperbole à deux branches, symétrique par rapport à l'origine",
+        "est une hyperbole à deux branches, symétrique par rapport à l'axe des ordonnées",
+        "est une droite passant par les points $(1\\,;1)$ et $(-1\\,;-1)$"
+      ],
+      "reponse": 1,
+      "explication": "La courbe est une hyperbole : une branche dans le quadrant $x > 0$, $y > 0$, l'autre dans le quadrant $x < 0$, $y < 0$. Le point $(x\\,;\\frac{1}{x})$ et le point $(-x\\,;-\\frac{1}{x})$ se correspondent : la symétrie est par rapport à l'origine $O$, pas par rapport à l'axe des ordonnées (ça, c'est la parabole $y = x^2$). Le piège : confondre les symétries des deux courbes de référence."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Soit $f(x) = 3x + 2 + \\dfrac{5}{x}$ pour $x \\neq 0$. Quelle est sa dérivée ?",
+      "choix": [
+        "$f'(x) = 3 + \\dfrac{5}{x^2}$",
+        "$f'(x) = 3 - \\dfrac{5}{x}$",
+        "$f'(x) = 3 - \\dfrac{5}{x^2}$",
+        "$f'(x) = 3x - \\dfrac{5}{x^2}$"
+      ],
+      "reponse": 2,
+      "explication": "On dérive terme à terme : $(3x)' = 3$, $(2)' = 0$ et $\\left(\\frac{5}{x}\\right)' = -\\frac{5}{x^2}$, d'où $f'(x) = 3 - \\frac{5}{x^2}$. Le piège : oublier le signe moins de la dérivée de $\\frac{5}{x}$ (choix avec $+\\frac{5}{x^2}$), oublier de passer au carré au dénominateur, ou garder le $x$ dans le terme dérivé de $3x$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Soit $f(x) = x + \\dfrac{9}{x}$ sur $\\left]0\\,;+\\infty\\right[$. On admet que $f'(x) = \\dfrac{x^2 - 9}{x^2}$. Quel est le minimum de $f$ sur cet intervalle ?",
+      "choix": [
+        "$3$, atteint en $x = 3$",
+        "$6$, atteint en $x = 3$",
+        "$9$, atteint en $x = 3$",
+        "$0$, atteint en $x = 9$"
+      ],
+      "reponse": 1,
+      "explication": "$f'(x)$ a le signe de $x^2 - 9$ : négatif sur $\\left]0\\,;3\\right[$, positif au-delà, donc $f$ décroît puis croît et atteint son minimum en $x = 3$. La VALEUR du minimum est l'image : $f(3) = 3 + \\frac{9}{3} = 3 + 3 = 6$. Le piège : répondre $3$, qui est l'abscisse où le minimum est atteint, pas la valeur du minimum — ne confonds pas « en $x = 3$ » et « égal à $6$ »."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Soit $f(x) = 2x + 1 + \\dfrac{3}{x}$ sur $\\left]0\\,;+\\infty\\right[$. Quand $x$ devient très grand, la courbe de $f$ se rapproche…",
+      "choix": [
+        "de la droite d'équation $y = 2x + 1$",
+        "de l'axe des abscisses",
+        "de la courbe d'équation $y = \\dfrac{3}{x}$",
+        "de la droite d'équation $x = 0$"
+      ],
+      "reponse": 0,
+      "explication": "Pour $x$ très grand, le terme $\\frac{3}{x}$ devient négligeable : $f(100) = 201{,}03$, tout proche de $2 \\times 100 + 1 = 201$. La courbe suit donc la droite $y = 2x + 1$. Le piège : l'axe des abscisses est l'asymptote de la fonction inverse SEULE ; ici le terme $2x + 1$ emporte la courbe vers le haut. La droite $x = 0$ concerne l'autre borne, près de $0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "sens-de-variation",
+      "enonce": "Soit $f(x) = 2x - \\dfrac{8}{x}$ sur $\\left]0\\,;+\\infty\\right[$. Combien $f$ admet-elle d'extremums sur cet intervalle ?",
+      "choix": [
+        "Un minimum en $x = 2$",
+        "Un maximum en $x = 2$",
+        "Aucun : $f'(x) = 2 + \\dfrac{8}{x^2} > 0$, donc $f$ est strictement croissante",
+        "Deux : un en $x = -2$ et un en $x = 2$"
+      ],
+      "reponse": 2,
+      "explication": "Attention au signe de $c$ : ici $c = -8$, donc $\\left(-\\frac{8}{x}\\right)' = +\\frac{8}{x^2}$ et $f'(x) = 2 + \\frac{8}{x^2}$, somme de deux termes strictement positifs. La dérivée ne s'annule jamais : $f$ est strictement croissante, sans extremum. Le piège : appliquer machinalement le schéma « minimum en $\\sqrt{c/a}$ » sans regarder le signe de $c$ — il ne vaut que pour $a$ et $c$ de même signe."
+    }
+  ]
+}

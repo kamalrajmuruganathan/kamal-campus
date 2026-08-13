@@ -36,6 +36,7 @@ const NIVEAUX = [
   ['premiere', 'Première'],
   ['premiere-techno', 'Première technologique'],
   ['terminale', 'Terminale'],
+  ['terminale-techno', 'Terminale technologique'],
 ];
 
 const LIBELLES_NIVEAU = Object.fromEntries(NIVEAUX);

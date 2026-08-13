@@ -1,0 +1,90 @@
+{
+  "id": "tale-techno-math-fonctions-exponentielles-exos",
+  "chapitre": "tale-techno-math-fonctions-exponentielles",
+  "titre": "Exercices — Fonctions exponentielles x ↦ aˣ",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier chaque expression en utilisant les propriétés des exposants ($x$ désigne un réel quelconque). (a) $3^x \\times 3^4$. (b) $\\dfrac{7^{x+2}}{7^x}$. (c) $\\left(2^x\\right)^5$. (d) $36^{1/2}$.",
+      "corrige": [
+        "(a) Produit de puissances de même base : on **additionne** les exposants. $3^x \\times 3^4 = 3^{x+4}$.",
+        "(b) Quotient de puissances de même base : on **soustrait** les exposants. $\\dfrac{7^{x+2}}{7^x} = 7^{(x+2)-x} = 7^2 = 49$. Le résultat ne dépend pas de $x$ : d'un rang au suivant de deux unités, une exponentielle de base $7$ est toujours multipliée par $49$.",
+        "(c) Puissance de puissance : on **multiplie** les exposants. $\\left(2^x\\right)^5 = 2^{5x}$.",
+        "(d) L'exposant $\\dfrac{1}{2}$ est la racine carrée : $36^{1/2} = \\sqrt{36} = 6$. Vérification : $6^2 = 36$. ✓"
+      ],
+      "reponse": "(a) $3^{x+4}$ ; (b) $49$ ; (c) $2^{5x}$ ; (d) $6$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "sens-de-variation",
+      "enonce": "On considère les fonctions $f(x) = 1{,}06^x$, $g(x) = 0{,}92^x$, $h(x) = 500 \\times 0{,}92^x$ et $j(x) = -2 \\times 3^x$. (a) Donner le sens de variation de chacune, en justifiant. (b) Calculer $f(0)$, $g(0)$ et $h(0)$. (c) Parmi $f$, $g$ et $h$, laquelle peut modéliser la valeur d'un matériel qui perd $8\\,\\%$ par an, acheté $500$ € ?",
+      "corrige": [
+        "(a) $f$ : base $1{,}06 > 1$, donc $f$ est strictement **croissante**. $g$ : base $0{,}92$ avec $0 < 0{,}92 < 1$, donc $g$ est strictement **décroissante**. $h = 500 \\times g$ : le facteur $k = 500 > 0$ ne change pas le sens, $h$ est strictement **décroissante**. $j$ : la base $3 > 1$ donne une fonction croissante, mais $k = -2 < 0$ **inverse** le sens : $j$ est strictement **décroissante**.",
+        "(b) Comme $a^0 = 1$ pour toute base $a > 0$ : $f(0) = 1{,}06^0 = 1$ ; $g(0) = 0{,}92^0 = 1$ ; $h(0) = 500 \\times 0{,}92^0 = 500 \\times 1 = 500$. Le facteur $k$ est la valeur de départ.",
+        "(c) Perdre $8\\,\\%$ par an correspond au coefficient $a = 1 - \\dfrac{8}{100} = 0{,}92$, et la valeur initiale $500$ € impose $k = 500$ : c'est $h(x) = 500 \\times 0{,}92^x$. La fonction $g$ a la bonne base mais démarre à $1$ €, et $f$ est croissante — impossible pour une dépréciation."
+      ],
+      "reponse": "(a) $f$ croissante ; $g$, $h$ et $j$ décroissantes ; (b) $f(0) = g(0) = 1$, $h(0) = 500$ ; (c) $h$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "modelisation",
+      "enonce": "Un capital de $3\\,000$ € est placé sur un compte rémunéré à $2{,}5\\,\\%$ par an (intérêts composés). On note $C(x)$ le capital, en euros, au bout de $x$ années. (a) Justifier que $C(x) = 3000 \\times 1{,}025^x$ et donner le sens de variation de $C$. (b) Calculer le capital au bout de $8$ ans (arrondir au centime). (c) L'avantage d'une fonction sur une suite : calculer le capital au bout de $6$ mois (arrondir au centime).",
+      "corrige": [
+        "(a) Chaque année, le capital augmente de $2{,}5\\,\\%$ : il est multiplié par $a = 1 + \\dfrac{2{,}5}{100} = 1{,}025$. En partant de $3\\,000$ €, on obtient $C(x) = 3000 \\times 1{,}025^x$. Comme $k = 3000 > 0$ et $a = 1{,}025 > 1$, la fonction $C$ est strictement croissante : le capital ne fait qu'augmenter.",
+        "(b) $C(8) = 3000 \\times 1{,}025^8 \\approx 3000 \\times 1{,}2184 \\approx 3\\,655{,}21$ €. Ordre de grandeur cohérent : environ $+22\\,\\%$ en $8$ ans, un peu plus que $8 \\times 2{,}5 = 20\\,\\%$ car les intérêts se composent.",
+        "(c) $6$ mois $= 0{,}5$ année : la fonction exponentielle accepte cet exposant non entier, contrairement à la suite $u_n = 3000 \\times 1{,}025^n$. $C(0{,}5) = 3000 \\times 1{,}025^{0{,}5} = 3000 \\times \\sqrt{1{,}025} \\approx 3000 \\times 1{,}01242 \\approx 3\\,037{,}27$ €. Remarque : la hausse sur $6$ mois est d'environ $1{,}24\\,\\%$, et non $2{,}5/2 = 1{,}25\\,\\%$ — appliqué deux fois, ce coefficient redonne bien $1{,}025$."
+      ],
+      "reponse": "(a) $C(x) = 3000 \\times 1{,}025^x$, strictement croissante ; (b) $C(8) \\approx 3\\,655{,}21$ € ; (c) $C(0{,}5) \\approx 3\\,037{,}27$ €."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "modelisation",
+      "enonce": "Une entreprise achète une machine $18\\,000$ €. Elle se déprécie de $12\\,\\%$ par an. On note $V(x)$ sa valeur, en euros, au bout de $x$ années. (a) Exprimer $V(x)$ et donner le sens de variation de $V$. (b) Calculer la valeur de la machine au bout de $5$ ans (arrondir à l'euro). (c) Quel est le pourcentage total de perte de valeur au bout de $5$ ans ? Comparer avec $5 \\times 12\\,\\%$ et expliquer la différence. (d) La valeur de la machine peut-elle atteindre $0$ € dans ce modèle ?",
+      "corrige": [
+        "(a) Une baisse de $12\\,\\%$ par an correspond au coefficient $a = 1 - \\dfrac{12}{100} = 0{,}88$ (et surtout pas $-0{,}12$). D'où $V(x) = 18000 \\times 0{,}88^x$. Comme $k = 18000 > 0$ et $0 < 0{,}88 < 1$, $V$ est strictement décroissante.",
+        "(b) $V(5) = 18000 \\times 0{,}88^5 \\approx 18000 \\times 0{,}52773 \\approx 9\\,499$ €.",
+        "(c) Le coefficient global sur $5$ ans est $0{,}88^5 \\approx 0{,}5277$ : la machine a perdu environ $1 - 0{,}5277 = 0{,}4723$, soit $47{,}2\\,\\%$ de sa valeur. C'est moins que $5 \\times 12 = 60\\,\\%$ : chaque baisse de $12\\,\\%$ s'applique à une valeur **déjà diminuée**, donc les pertes en euros sont de plus en plus petites. Les taux successifs ne s'additionnent pas, les coefficients se multiplient.",
+        "(d) Non : une exponentielle est strictement positive pour tout $x$. $0{,}88^x$ se rapproche de $0$ quand $x$ grandit, mais ne l'atteint jamais — dans ce modèle, la valeur devient très faible sans jamais être nulle."
+      ],
+      "reponse": "(a) $V(x) = 18000 \\times 0{,}88^x$, strictement décroissante ; (b) $V(5) \\approx 9\\,499$ € ; (c) perte totale $\\approx 47{,}2\\,\\%$, inférieure à $60\\,\\%$ car les baisses se composent ; (d) non, $V(x) > 0$ pour tout $x$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "taux-moyen",
+      "enonce": "Le chiffre d'affaires d'une entreprise est passé de $40\\,000$ € en 2024 à $53\\,240$ € en 2027, soit trois évolutions annuelles successives. (a) Calculer le coefficient multiplicateur global entre 2024 et 2027, puis le taux d'évolution global. (b) Calculer le coefficient annuel moyen, puis le taux d'évolution annuel moyen. (c) Un stagiaire affirme : « le chiffre d'affaires a augmenté de $33{,}1\\,\\%$ en $3$ ans, donc d'environ $11{,}03\\,\\%$ par an en moyenne ». Montrer par un calcul que ce raisonnement est faux. (d) Si l'entreprise maintient son taux annuel moyen, quel chiffre d'affaires peut-elle prévoir pour 2029 (arrondir à l'euro) ?",
+      "corrige": [
+        "(a) Coefficient global : $C = \\dfrac{53240}{40000} = 1{,}331$. Taux global : $1{,}331 - 1 = 0{,}331$, soit $+33{,}1\\,\\%$ en $3$ ans.",
+        "(b) Le coefficient annuel moyen est le nombre qui, appliqué $3$ fois, redonne $1{,}331$ : $c_m = 1{,}331^{1/3} = 1{,}1$ (en effet $1{,}1^3 = 1{,}331$). Taux annuel moyen : $1{,}1 - 1 = 0{,}1$, soit $+10\\,\\%$ par an.",
+        "(c) Si le taux annuel était $11{,}03\\,\\%$, le coefficient global vaudrait $1{,}1103^3 \\approx 1{,}369$, soit $+36{,}9\\,\\%$ en $3$ ans — et non $+33{,}1\\,\\%$. Diviser le taux global par $3$ surestime la croissance, car les hausses se **composent** : c'est l'exposant $\\frac{1}{3}$, pas la division par $3$, qui donne le taux moyen.",
+        "(d) De 2027 à 2029, il y a $2$ années : $53240 \\times 1{,}1^2 = 53240 \\times 1{,}21 = 64\\,420{,}40$, soit environ $64\\,420$ €. (On peut aussi écrire $40000 \\times 1{,}1^5$, qui donne le même résultat grâce à $a^{3} \\times a^{2} = a^{5}$.)"
+      ],
+      "reponse": "(a) $C = 1{,}331$, soit $+33{,}1\\,\\%$ ; (b) $c_m = 1{,}1$, soit $+10\\,\\%$ par an ; (c) $1{,}1103^3 \\approx 1{,}369 \\neq 1{,}331$ : la division par $3$ est fausse ; (d) environ $64\\,420$ €."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "proprietes-algebriques",
+      "enonce": "Dans un laboratoire, une culture contient $500$ bactéries à l'instant $x = 0$ (en heures), et la population **double chaque heure**. On la modélise par $N(x) = 500 \\times 2^x$. (a) Vérifier que ce modèle est cohérent : calculer $N(0)$, $N(1)$, $N(2)$. (b) À l'aide d'une propriété algébrique, montrer que pour tout $x \\geqslant 0$, $N(x+1) = 2 \\times N(x)$. Quel lien avec les suites géométriques ? (c) Calculer le nombre de bactéries au bout de $3$ h $30$ (arrondir à l'unité). (d) De combien de pourcents la population augmente-t-elle chaque **demi-heure** ? Comparer avec $100/2 = 50\\,\\%$ et conclure.",
+      "corrige": [
+        "(a) $N(0) = 500 \\times 2^0 = 500$ (population initiale ✓), $N(1) = 500 \\times 2 = 1000$, $N(2) = 500 \\times 4 = 2000$ : la population double bien à chaque heure entière.",
+        "(b) Avec la propriété $a^{x+y} = a^x \\times a^y$ : $N(x+1) = 500 \\times 2^{x+1} = 500 \\times 2^x \\times 2^1 = 2 \\times N(x)$. Aux instants entiers, la suite $N(0), N(1), N(2), \\ldots$ est donc géométrique de raison $2$ : la fonction exponentielle prolonge cette suite à tous les instants.",
+        "(c) $3$ h $30 = 3{,}5$ h. $N(3{,}5) = 500 \\times 2^{3{,}5} = 500 \\times 2^3 \\times 2^{0{,}5} = 500 \\times 8 \\times \\sqrt{2} \\approx 4000 \\times 1{,}41421 \\approx 5\\,657$ bactéries. (On a utilisé $2^{3{,}5} = 2^{3 + 0{,}5} = 2^3 \\times 2^{1/2}$.)",
+        "(d) Le coefficient par demi-heure est le nombre qui, appliqué $2$ fois, donne un doublement : $c = 2^{1/2} = \\sqrt{2} \\approx 1{,}414$, soit environ $+41{,}4\\,\\%$ par demi-heure. Ce n'est pas $+50\\,\\%$ : deux hausses de $50\\,\\%$ donneraient $1{,}5^2 = 2{,}25$, c'est-à-dire plus qu'un doublement. C'est exactement le calcul du taux moyen équivalent, avec l'exposant $\\frac{1}{n}$ pour $n = 2$."
+      ],
+      "reponse": "(a) $500$, $1\\,000$, $2\\,000$ ; (b) $N(x+1) = 2N(x)$ par $2^{x+1} = 2 \\times 2^x$ : suite géométrique de raison $2$ aux instants entiers ; (c) $N(3{,}5) \\approx 5\\,657$ bactéries ; (d) $\\sqrt{2} - 1 \\approx +41{,}4\\,\\%$ par demi-heure, et non $+50\\,\\%$."
+    }
+  ]
+}

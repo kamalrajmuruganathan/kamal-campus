@@ -1,0 +1,92 @@
+{
+  "id": "tale-techno-math-statistiques-deux-variables-exos",
+  "chapitre": "tale-techno-math-statistiques-deux-variables",
+  "titre": "Exercices — Séries statistiques à deux variables : changement de variable",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "changement-log",
+      "enonce": "Le nombre de visiteurs mensuels $y$ d'un site, $x$ mois après son ouverture, est donné par : $x = 0$ : $500$ ; $x = 1$ : $800$ ; $x = 2$ : $1\\,250$ ; $x = 3$ : $2\\,000$ ; $x = 4$ : $3\\,200$. On pose $z = \\log(y)$. (a) Compléter le tableau des valeurs de $z$, arrondies au centième. (b) Expliquer pourquoi le nuage $(x\\,;z)$ peut être ajusté par une droite alors que le nuage $(x\\,;y)$ ne le peut pas. (c) La calculatrice donne l'ajustement $z = 0{,}20x + 2{,}70$. En déduire un modèle de la forme $y = k \\times q^x$ (arrondir $k$ à l'unité et $q$ au centième).",
+      "corrige": [
+        "(a) $z = \\log(y)$ pour chaque valeur : $\\log(500) \\approx 2{,}70$ ; $\\log(800) \\approx 2{,}90$ ; $\\log(1\\,250) \\approx 3{,}10$ ; $\\log(2\\,000) \\approx 3{,}30$ ; $\\log(3\\,200) \\approx 3{,}51$. On transforme bien les ordonnées $y$, les abscisses $x$ ne changent pas.",
+        "(b) Pour le nuage $(x\\,;y)$, les accroissements successifs de $y$ sont $300$, $450$, $750$, $1\\,200$ : ils ne sont pas constants, la croissance accélère, le nuage est courbe — une droite serait un mauvais modèle. Pour le nuage $(x\\,;z)$, les accroissements sont $0{,}20$ ; $0{,}20$ ; $0{,}20$ ; $0{,}21$ : quasi constants, les points sont sensiblement alignés, l'ajustement affine est légitime.",
+        "(c) $\\log(y) = 0{,}20x + 2{,}70$ donne $y = 10^{\\,0{,}20x + 2{,}70} = 10^{2{,}70} \\times \\left(10^{0{,}20}\\right)^x$. Or $10^{2{,}70} \\approx 501$ et $10^{0{,}20} \\approx 1{,}58$, d'où le modèle $y \\approx 501 \\times 1{,}58^x$ : le nombre de visiteurs est multiplié par environ $1{,}58$ chaque mois, soit $+58\\,\\%$ par mois."
+      ],
+      "reponse": "(a) $z$ : $2{,}70$ ; $2{,}90$ ; $3{,}10$ ; $3{,}30$ ; $3{,}51$. (b) Accroissements de $z$ quasi constants ($\\approx 0{,}20$), ceux de $y$ non. (c) $y \\approx 501 \\times 1{,}58^x$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "changement-carre",
+      "enonce": "On mesure la vitesse $y$ (en m/s) atteinte par un objet après une chute de hauteur $x$ (en m) : $x = 1$ : $y = 4{,}4$ ; $x = 2$ : $y = 6{,}3$ ; $x = 3$ : $y = 7{,}7$ ; $x = 4$ : $y = 8{,}9$ ; $x = 5$ : $y = 9{,}9$. On pose $z = y^2$. (a) Compléter le tableau des valeurs de $z$. (b) La calculatrice donne l'ajustement $z = 19{,}7x + 0{,}1$, que l'on simplifie en $z \\approx 19{,}7x$. Exprimer $y$ en fonction de $x$. (c) Estimer la vitesse atteinte après une chute de $2{,}5$ m. S'agit-il d'une interpolation ou d'une extrapolation ?",
+      "corrige": [
+        "(a) $z = y^2$ : $4{,}4^2 = 19{,}36$ ; $6{,}3^2 = 39{,}69$ ; $7{,}7^2 = 59{,}29$ ; $8{,}9^2 = 79{,}21$ ; $9{,}9^2 = 98{,}01$. Les valeurs de $z$ augmentent d'environ $19{,}7$ par mètre : le nuage $(x\\,;z)$ est sensiblement rectiligne, ce qui justifie l'ajustement affine.",
+        "(b) De $z = y^2 \\approx 19{,}7x$ et $y > 0$ (une vitesse est positive), on tire $y = \\sqrt{19{,}7x}$. Attention au piège : le retour à $y$ est une racine carrée, pas une division par $2$.",
+        "(c) Pour $x = 2{,}5$ : $y = \\sqrt{19{,}7 \\times 2{,}5} = \\sqrt{49{,}25} \\approx 7{,}0$ m/s. Comme $2{,}5$ est à l'intérieur de la plage observée $[1\\,;5]$, c'est une interpolation : l'estimation est raisonnablement fiable."
+      ],
+      "reponse": "(a) $z$ : $19{,}36$ ; $39{,}69$ ; $59{,}29$ ; $79{,}21$ ; $98{,}01$. (b) $y = \\sqrt{19{,}7x}$. (c) $y \\approx 7{,}0$ m/s ; interpolation."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "changement-log",
+      "enonce": "Le chiffre d'affaires $y$ (en milliers d'euros) d'une entreprise, $x$ années après sa création : $x = 0$ : $120$ ; $x = 1$ : $150$ ; $x = 2$ : $190$ ; $x = 3$ : $240$ ; $x = 4$ : $300$ ; $x = 5$ : $380$. On pose $z = \\log(y)$. (a) Compléter le tableau des $z_i$ arrondis au centième et vérifier que le nuage $(x\\,;z)$ est rectiligne. (b) Déterminer l'ajustement affine de $z$ en $x$ (moindres carrés, à la calculatrice). (c) En déduire le taux de croissance annuel moyen du chiffre d'affaires selon ce modèle. (d) Estimer le chiffre d'affaires pour $x = 8$. Quelle réserve faut-il formuler ?",
+      "corrige": [
+        "(a) $z = \\log(y)$ : $\\log(120) \\approx 2{,}08$ ; $\\log(150) \\approx 2{,}18$ ; $\\log(190) \\approx 2{,}28$ ; $\\log(240) \\approx 2{,}38$ ; $\\log(300) \\approx 2{,}48$ ; $\\log(380) \\approx 2{,}58$. Les $z_i$ augmentent exactement de $0{,}10$ par an : les points $(x\\,;z)$ sont alignés.",
+        "(b) La calculatrice (moindres carrés sur le nuage transformé $(x\\,;z)$, pas sur $(x\\,;y)$ !) donne $z = 0{,}10x + 2{,}08$.",
+        "(c) Quand $x$ augmente de $1$, $z$ augmente de $0{,}10$, donc $y$ est multiplié par $10^{0{,}10} \\approx 1{,}26$. Le taux de croissance annuel est d'environ $+26\\,\\%$. Piège : ce n'est pas $+10\\,\\%$ — la pente est l'accroissement du logarithme, pas le taux d'évolution de $y$.",
+        "(d) Pour $x = 8$ : $z = 0{,}10 \\times 8 + 2{,}08 = 2{,}88$, donc $y = 10^{2{,}88} \\approx 759$, soit environ $760$ milliers d'euros. C'est une extrapolation ($8$ est hors de la plage $[0\\,;5]$) : elle suppose que la croissance de $+26\\,\\%$ par an se maintient, ce que rien ne garantit (concurrence, saturation du marché). L'estimation vaut « si la tendance se poursuit »."
+      ],
+      "reponse": "(a) $z$ : $2{,}08$ ; $2{,}18$ ; $2{,}28$ ; $2{,}38$ ; $2{,}48$ ; $2{,}58$. (b) $z = 0{,}10x + 2{,}08$. (c) $\\approx +26\\,\\%$ par an. (d) $y \\approx 760$ milliers d'euros, sous réserve que la tendance se poursuive (extrapolation)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "changement-inverse",
+      "enonce": "Un bassin doit être vidé. On note $y$ (en heures) la durée du pompage lorsqu'on utilise $x$ pompes identiques : $x = 1$ : $y = 12$ ; $x = 2$ : $y = 6$ ; $x = 3$ : $y = 4$ ; $x = 4$ : $y = 3$ ; $x = 6$ : $y = 2$. On pose $z = \\dfrac{1}{y}$. (a) Expliquer pourquoi un ajustement affine du nuage $(x\\,;y)$ est inadapté. (b) Compléter le tableau des $z_i$ arrondis au millième et constater l'alignement. (c) La calculatrice donne $z = 0{,}083x$ (et $b \\approx 0$). Exprimer $y$ en fonction de $x$, puis estimer la durée avec $5$ pompes. (d) Interpréter la valeur $\\dfrac{1}{0{,}083} \\approx 12$ dans le contexte.",
+      "corrige": [
+        "(a) Quand $x$ double (de $1$ à $2$, de $2$ à $4$, de $3$ à $6$), $y$ est divisé par $2$ : $y$ est inversement proportionnel à $x$, le nuage $(x\\,;y)$ a l'allure d'une branche d'hyperbole, pas d'une droite. De plus, une droite d'ajustement décroissante finirait par donner des durées négatives, ce qui n'a pas de sens.",
+        "(b) $z = \\dfrac{1}{y}$ : $\\dfrac{1}{12} \\approx 0{,}083$ ; $\\dfrac{1}{6} \\approx 0{,}167$ ; $\\dfrac{1}{4} = 0{,}250$ ; $\\dfrac{1}{3} \\approx 0{,}333$ ; $\\dfrac{1}{2} = 0{,}500$. Chaque pompe supplémentaire ajoute environ $0{,}083$ à $z$ : les points $(x\\,;z)$ sont alignés sur une droite passant par l'origine.",
+        "(c) De $\\dfrac{1}{y} = 0{,}083x$ on tire $y = \\dfrac{1}{0{,}083x} \\approx \\dfrac{12}{x}$. Pour $x = 5$ pompes : $y \\approx \\dfrac{12}{5} = 2{,}4$ h, soit environ $2$ h $24$ min. C'est une interpolation ($5$ est dans la plage $[1\\,;6]$).",
+        "(d) $\\dfrac{1}{0{,}083} \\approx 12$ est la durée (en heures) du pompage avec une seule pompe : c'est le « volume de travail » total. Et $z = \\dfrac{1}{y}$ s'interprète comme la fraction du bassin vidée par heure — elle est proportionnelle au nombre de pompes, ce qui est logique."
+      ],
+      "reponse": "(a) $y$ inversement proportionnel à $x$ : nuage en hyperbole. (b) $z$ : $0{,}083$ ; $0{,}167$ ; $0{,}250$ ; $0{,}333$ ; $0{,}500$. (c) $y \\approx \\dfrac{12}{x}$ ; avec $5$ pompes, $y \\approx 2{,}4$ h. (d) $12$ h = durée avec une seule pompe."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "interpolation-extrapolation",
+      "enonce": "En laboratoire, on compte le nombre $y$ de bactéries d'une culture, $x$ heures après le début de l'expérience : $x = 0$ : $40$ ; $x = 1$ : $100$ ; $x = 2$ : $250$ ; $x = 3$ : $630$ ; $x = 4$ : $1\\,580$. (a) Calculer les quotients $\\dfrac{y_{i+1}}{y_i}$ et justifier le choix du changement de variable $z = \\log(y)$. (b) Compléter le tableau des $z_i$ arrondis au centième et donner l'ajustement affine obtenu à la calculatrice. (c) En déduire le modèle $y = k \\times q^x$ ($k$ arrondi à l'unité, $q$ au centième). (d) Selon ce modèle, au bout de combien d'heures la culture dépassera-t-elle $100\\,000$ bactéries ? (e) Ce résultat est-il fiable ? Argumenter.",
+      "corrige": [
+        "(a) $\\dfrac{100}{40} = 2{,}5$ ; $\\dfrac{250}{100} = 2{,}5$ ; $\\dfrac{630}{250} = 2{,}52$ ; $\\dfrac{1\\,580}{630} \\approx 2{,}51$ : les quotients sont quasi constants, la population est multipliée par environ $2{,}5$ chaque heure. C'est la signature d'un modèle exponentiel $y = k \\times q^x$, et $\\log(k \\times q^x) = \\log(k) + x\\log(q)$ est affine en $x$ : le changement $z = \\log(y)$ rendra le nuage rectiligne.",
+        "(b) $z = \\log(y)$ : $\\log(40) \\approx 1{,}60$ ; $\\log(100) = 2{,}00$ ; $\\log(250) \\approx 2{,}40$ ; $\\log(630) \\approx 2{,}80$ ; $\\log(1\\,580) \\approx 3{,}20$. Les $z_i$ augmentent de $0{,}40$ par heure : points alignés. La calculatrice donne $z = 0{,}40x + 1{,}60$.",
+        "(c) $y = 10^{\\,0{,}40x + 1{,}60} = 10^{1{,}60} \\times \\left(10^{0{,}40}\\right)^x$ avec $10^{1{,}60} \\approx 40$ et $10^{0{,}40} \\approx 2{,}51$, d'où $y \\approx 40 \\times 2{,}51^x$.",
+        "(d) $y > 100\\,000 = 10^5$ équivaut à $z = \\log(y) > 5$, soit $0{,}40x + 1{,}60 > 5$, donc $x > \\dfrac{3{,}4}{0{,}40} = 8{,}5$. La culture dépasserait $100\\,000$ bactéries au bout de $8{,}5$ heures. On a résolu une inéquation grâce au logarithme décimal — sans lui, impossible d'isoler $x$ en exposant.",
+        "(e) C'est une extrapolation lointaine : les mesures s'arrêtent à $x = 4$, et on prédit à $x = 8{,}5$, plus du double. Or une croissance exponentielle ne se maintient jamais indéfiniment : les nutriments s'épuisent, la croissance ralentit puis sature. Le modèle donne un ordre de grandeur plausible à court terme, mais la valeur $8{,}5$ h est à annoncer avec une réserve explicite."
+      ],
+      "reponse": "(a) Quotients $\\approx 2{,}5$ constants → modèle exponentiel → $z = \\log(y)$. (b) $z$ : $1{,}60$ ; $2{,}00$ ; $2{,}40$ ; $2{,}80$ ; $3{,}20$ ; ajustement $z = 0{,}40x + 1{,}60$. (c) $y \\approx 40 \\times 2{,}51^x$. (d) Au bout de $8{,}5$ h. (e) Extrapolation lointaine : fiabilité limitée, la croissance finit par saturer."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "changement-carre",
+      "enonce": "Sur route sèche, on mesure la distance de freinage $y$ (en m) d'une voiture selon sa vitesse $x$ (en km/h) : $x = 30$ : $y = 4{,}5$ ; $x = 50$ : $y = 12{,}5$ ; $x = 70$ : $y = 24{,}5$ ; $x = 90$ : $y = 40{,}5$ ; $x = 110$ : $y = 60{,}5$. (a) Montrer que le nuage $(x\\,;y)$ n'est pas rectiligne. (b) On effectue cette fois un changement de variable sur l'ABSCISSE : on pose $X = x^2$. Compléter le tableau des $X_i$ et vérifier que le nuage $(X\\,;y)$ est rectiligne. (c) La calculatrice donne l'ajustement $y = 0{,}005X$. Exprimer $y$ en fonction de $x$ et estimer la distance de freinage à $100$ km/h. (d) Que devient la distance de freinage quand la vitesse double ? Justifier avec le modèle. (e) Estimer la distance à $130$ km/h et commenter la fiabilité.",
+      "corrige": [
+        "(a) Les abscisses augmentent régulièrement de $20$ km/h, mais les accroissements de $y$ valent $8$ ; $12$ ; $16$ ; $20$ : ils ne sont pas constants, ils augmentent. Le nuage $(x\\,;y)$ est donc courbe (il monte de plus en plus vite) : une droite le représenterait mal, surtout aux vitesses élevées.",
+        "(b) $X = x^2$ : $30^2 = 900$ ; $50^2 = 2\\,500$ ; $70^2 = 4\\,900$ ; $90^2 = 8\\,100$ ; $110^2 = 12\\,100$. On vérifie : $\\dfrac{4{,}5}{900} = \\dfrac{12{,}5}{2\\,500} = \\dfrac{24{,}5}{4\\,900} = 0{,}005$ pour tous les points — le nuage $(X\\,;y)$ est exactement aligné sur une droite passant par l'origine. Le changement de variable peut porter sur l'abscisse comme sur l'ordonnée : le principe est le même.",
+        "(c) En remplaçant $X$ par $x^2$ : $y = 0{,}005\\,x^2 = \\dfrac{x^2}{200}$. Pour $x = 100$ km/h : $y = \\dfrac{100^2}{200} = \\dfrac{10\\,000}{200} = 50$ m. C'est une interpolation ($100$ est dans la plage $[30\\,;110]$).",
+        "(d) Si la vitesse double, $x$ devient $2x$ et $y$ devient $\\dfrac{(2x)^2}{200} = \\dfrac{4x^2}{200} = 4y$ : la distance de freinage est multipliée par $4$, et non par $2$. C'est tout l'intérêt du modèle quadratique — et un argument fort de sécurité routière.",
+        "(e) Pour $x = 130$ : $y = \\dfrac{130^2}{200} = \\dfrac{16\\,900}{200} = 84{,}5$ m. C'est une extrapolation ($130 > 110$) : elle reste modérée (proche de la plage mesurée) et le modèle physique sous-jacent (énergie cinétique proportionnelle au carré de la vitesse) la rend plausible, mais elle doit être annoncée comme une estimation hors des données observées."
+      ],
+      "reponse": "(a) Accroissements de $y$ : $8$, $12$, $16$, $20$ — non constants, nuage courbe. (b) $X$ : $900$ ; $2\\,500$ ; $4\\,900$ ; $8\\,100$ ; $12\\,100$ ; nuage $(X\\,;y)$ aligné. (c) $y = \\dfrac{x^2}{200}$ ; $50$ m à $100$ km/h. (d) Distance multipliée par $4$. (e) $84{,}5$ m à $130$ km/h, extrapolation à signaler."
+    }
+  ]
+}

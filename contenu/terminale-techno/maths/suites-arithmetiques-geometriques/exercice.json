@@ -1,0 +1,89 @@
+{
+  "id": "tale-techno-math-suites-arithmetiques-geometriques-exos",
+  "chapitre": "tale-techno-math-suites-arithmetiques-geometriques",
+  "titre": "Exercices — Suites arithmétiques et géométriques",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "moyennes",
+      "enonce": "(a) Calculer la moyenne arithmétique puis la moyenne géométrique de $9$ et $16$. (b) Déterminer le nombre $x$ tel que $9$ ; $x$ ; $16$ soient, dans cet ordre, trois termes consécutifs d'une suite arithmétique. Préciser la raison. (c) Même question pour une suite géométrique à termes positifs.",
+      "corrige": [
+        "(a) Moyenne arithmétique : $m = \\dfrac{9 + 16}{2} = \\dfrac{25}{2} = 12{,}5$. Moyenne géométrique (les deux nombres sont positifs) : $g = \\sqrt{9 \\times 16} = \\sqrt{144} = 12$.",
+        "(b) $9$ ; $x$ ; $16$ sont des termes consécutifs d'une suite arithmétique lorsque le terme du milieu est la moyenne arithmétique de ses voisins : $x = \\dfrac{9+16}{2} = 12{,}5$. La raison est $r = 12{,}5 - 9 = 3{,}5$, et on vérifie $16 - 12{,}5 = 3{,}5$ : le même pas des deux côtés.",
+        "(c) Pour une suite géométrique à termes positifs, le terme du milieu est la moyenne géométrique : $x = \\sqrt{9 \\times 16} = 12$. La raison est $q = \\dfrac{12}{9} = \\dfrac{4}{3}$, et on vérifie $12 \\times \\dfrac{4}{3} = 16$. Remarque : les deux valeurs de $x$ sont différentes ($12{,}5$ et $12$) — les deux moyennes ne coïncident pas."
+      ],
+      "reponse": "(a) $12{,}5$ et $12$ ; (b) $x = 12{,}5$, raison $r = 3{,}5$ ; (c) $x = 12$, raison $q = \\dfrac{4}{3}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "terme-de-rang-n",
+      "enonce": "$(u_n)$ est une suite arithmétique telle que $u_3 = 26$ et $u_8 = 51$. (a) Déterminer la raison $r$. (b) Calculer $u_0$ et exprimer $u_n$ en fonction de $n$. (c) Calculer $u_{20}$.",
+      "corrige": [
+        "(a) De $u_3$ à $u_8$, on ajoute $8 - 3 = 5$ fois la raison : $u_8 = u_3 + 5r$, donc $51 = 26 + 5r$, d'où $r = \\dfrac{51 - 26}{5} = 5$. Attention à compter $5$ pas, et non $6$.",
+        "(b) On redescend de $u_3$ à $u_0$ en retirant $3$ fois la raison : $u_0 = u_3 - 3r = 26 - 15 = 11$. Le terme général est donc $u_n = u_0 + n\\,r = 11 + 5n$.",
+        "(c) $u_{20} = 11 + 5 \\times 20 = 11 + 100 = 111$. Vérification rapide avec la formule depuis le rang $8$ : $u_{20} = u_8 + (20-8) \\times 5 = 51 + 60 = 111$. ✓"
+      ],
+      "reponse": "(a) $r = 5$ ; (b) $u_0 = 11$ et $u_n = 11 + 5n$ ; (c) $u_{20} = 111$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "trois-termes-consecutifs",
+      "enonce": "Pour chacune des listes suivantes, prouver que les trois nombres sont — ou ne sont pas — des termes consécutifs d'une suite arithmétique, puis d'une suite géométrique. Préciser la raison quand elle existe. (a) $12$ ; $18$ ; $27$. (b) $6$ ; $15$ ; $24$. (c) $8$ ; $12$ ; $20$.",
+      "corrige": [
+        "(a) Arithmétique ? $18 - 12 = 6$ et $27 - 18 = 9$ : différences inégales, donc non. Géométrique ? On teste $b^2 = ac$ : $18^2 = 324$ et $12 \\times 27 = 324$. Égalité : $12$ ; $18$ ; $27$ sont des termes consécutifs d'une suite géométrique de raison $q = \\dfrac{18}{12} = 1{,}5$.",
+        "(b) Arithmétique ? On teste $2b = a + c$ : $2 \\times 15 = 30$ et $6 + 24 = 30$. Égalité : ce sont des termes consécutifs d'une suite arithmétique de raison $r = 15 - 6 = 9$. Géométrique ? $15^2 = 225$ mais $6 \\times 24 = 144$ : non.",
+        "(c) Arithmétique ? $12 - 8 = 4$ et $20 - 12 = 8$ : non. Géométrique ? $12^2 = 144$ mais $8 \\times 20 = 160$ : non. Les nombres $8$ ; $12$ ; $20$ ne sont termes consécutifs d'aucun des deux modèles.",
+        "Bilan de méthode : on calcule **séparément** les deux membres de la condition ($2b$ contre $a+c$, ou $b^2$ contre $ac$) et on conclut par l'égalité ou la différence — c'est la rédaction attendue au bac."
+      ],
+      "reponse": "(a) géométrique de raison $q = 1{,}5$ (pas arithmétique) ; (b) arithmétique de raison $r = 9$ (pas géométrique) ; (c) ni l'un ni l'autre."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "somme-arithmetique",
+      "enonce": "Un amphithéâtre compte $15$ rangées. La première rangée comporte $20$ places, et chaque rangée suivante comporte $4$ places de plus que la précédente. (a) Justifier que le nombre de places de la rangée $n$ est le terme d'une suite arithmétique dont on précisera le premier terme et la raison. (b) Combien de places compte la dernière rangée ? (c) Quelle est la capacité totale de l'amphithéâtre ?",
+      "corrige": [
+        "(a) On note $u_n$ le nombre de places de la rangée $n$ (pour $n$ allant de $1$ à $15$). Chaque rangée a $4$ places de plus que la précédente : $u_{n+1} = u_n + 4$. C'est une suite arithmétique de premier terme $u_1 = 20$ et de raison $r = 4$.",
+        "(b) De la rangée $1$ à la rangée $15$, on ajoute $15 - 1 = 14$ fois la raison : $u_{15} = u_1 + 14 \\times 4 = 20 + 56 = 76$ places.",
+        "(c) La capacité totale est la **somme** des $15$ termes : $S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 15 \\times \\dfrac{20 + 76}{2} = 15 \\times 48 = 720$ places. Ordre de grandeur cohérent : $15$ rangées d'environ $48$ places en moyenne."
+      ],
+      "reponse": "(a) suite arithmétique, $u_1 = 20$, $r = 4$ ; (b) $76$ places ; (c) $720$ places au total."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "situation-de-somme",
+      "enonce": "Une entreprise produit $8\\,000$ pièces en 2027. Sa production augmente de $6\\,\\%$ chaque année. On note $u_n$ la production de l'année $2027 + n$, donc $u_0 = 8000$. (a) Justifier la nature de la suite $(u_n)$ et préciser sa raison. (b) Calculer la production prévue en 2032 (arrondir à la pièce). (c) Calculer la production totale cumulée de 2027 à 2032 incluses (arrondir à la pièce). (d) Expliquer pourquoi les questions (b) et (c) ne se traitent pas avec la même formule.",
+      "corrige": [
+        "(a) Chaque année, la production est multipliée par $1 + \\dfrac{6}{100} = 1{,}06$ : $u_{n+1} = 1{,}06\\,u_n$. La suite $(u_n)$ est géométrique de premier terme $u_0 = 8000$ et de raison $q = 1{,}06$ (termes strictement positifs).",
+        "(b) 2032 correspond à $n = 2032 - 2027 = 5$. Production : $u_5 = 8000 \\times 1{,}06^5 \\approx 8000 \\times 1{,}3382 \\approx 10\\,706$ pièces.",
+        "(c) De 2027 à 2032 incluses, il y a $6$ années, donc $6$ termes ($u_0$ à $u_5$) — c'est le point à ne pas rater. Total : $S = u_0 \\times \\dfrac{1 - q^6}{1 - q} = 8000 \\times \\dfrac{1 - 1{,}06^6}{1 - 1{,}06} = 8000 \\times \\dfrac{1{,}06^6 - 1}{0{,}06} \\approx 8000 \\times 6{,}9753 \\approx 55\\,803$ pièces.",
+        "(d) La question (b) porte sur la production d'**une seule** année : c'est un **terme** de la suite, donné par le terme général $u_0 \\times q^n$. La question (c) porte sur le **cumul** de plusieurs années (« totale », « de 2027 à 2032 ») : c'est une **somme** de termes, donnée par la formule de somme. Reconnaître une situation de somme, c'est repérer ces mots : total, cumulé, en tout."
+      ],
+      "reponse": "(a) géométrique, $u_0 = 8000$, $q = 1{,}06$ ; (b) $u_5 \\approx 10\\,706$ pièces ; (c) $S \\approx 55\\,803$ pièces ; (d) (b) est un terme, (c) est une somme de $6$ termes."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "situation-de-somme",
+      "enonce": "Pour un même poste, deux contrats sont proposés. Contrat A : salaire annuel de $20\\,000$ € la première année, puis augmentation de $800$ € chaque année. Contrat B : salaire annuel de $20\\,000$ € la première année, puis augmentation de $3\\,\\%$ chaque année. On note $a_n$ et $b_n$ les salaires de l'année de rang $n$ (première année : $n = 0$). (a) Donner la nature de chaque suite et exprimer $a_n$ et $b_n$ en fonction de $n$. (b) Comparer les salaires de la $6^{\\text{e}}$ année (arrondir à l'euro). (c) Comparer le total perçu sur les $6$ premières années (arrondir à l'euro). (d) Que conseiller à un salarié qui compte rester $6$ ans ?",
+      "corrige": [
+        "(a) Contrat A : on ajoute $800$ € chaque année, suite **arithmétique** de premier terme $20\\,000$ et de raison $r = 800$ : $a_n = 20000 + 800n$. Contrat B : le salaire est multiplié par $1{,}03$ chaque année, suite **géométrique** de premier terme $20\\,000$ et de raison $q = 1{,}03$ : $b_n = 20000 \\times 1{,}03^n$.",
+        "(b) La $6^{\\text{e}}$ année correspond au rang $n = 5$ (la première est $n = 0$). Contrat A : $a_5 = 20000 + 800 \\times 5 = 24\\,000$ €. Contrat B : $b_5 = 20000 \\times 1{,}03^5 \\approx 20000 \\times 1{,}1593 \\approx 23\\,185$ €. La $6^{\\text{e}}$ année, le contrat A rapporte environ $815$ € de plus.",
+        "(c) « Total perçu sur les 6 premières années » : c'est une **somme** de $6$ termes ($n = 0$ à $5$). Contrat A (somme arithmétique) : $S_A = 6 \\times \\dfrac{a_0 + a_5}{2} = 6 \\times \\dfrac{20000 + 24000}{2} = 6 \\times 22000 = 132\\,000$ €. Contrat B (somme géométrique) : $S_B = 20000 \\times \\dfrac{1 - 1{,}03^6}{1 - 1{,}03} = 20000 \\times \\dfrac{1{,}03^6 - 1}{0{,}03} \\approx 20000 \\times 6{,}4684 \\approx 129\\,368$ €.",
+        "(d) Sur $6$ ans, le contrat A est plus avantageux : environ $132\\,000 - 129\\,368 = 2\\,632$ € de plus au total. Une hausse de $3\\,\\%$ de $20\\,000$ € ne vaut que $600$ € la première année, contre $800$ € pour le contrat A : la croissance géométrique met du temps à rattraper. À très long terme, en revanche, elle finit toujours par dépasser la croissance arithmétique (ici, le salaire B ne dépasse le salaire A qu'au-delà de la $20^{\\text{e}}$ année)."
+      ],
+      "reponse": "(a) $a_n = 20000 + 800n$ (arithmétique) ; $b_n = 20000 \\times 1{,}03^n$ (géométrique) ; (b) $a_5 = 24\\,000$ € contre $b_5 \\approx 23\\,185$ € ; (c) $S_A = 132\\,000$ € contre $S_B \\approx 129\\,368$ € ; (d) contrat A sur $6$ ans."
+    }
+  ]
+}

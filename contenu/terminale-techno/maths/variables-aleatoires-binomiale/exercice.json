@@ -1,0 +1,88 @@
+{
+  "id": "tale-techno-math-variables-aleatoires-binomiale-exos",
+  "chapitre": "tale-techno-math-variables-aleatoires-binomiale",
+  "titre": "Exercices — Variables aléatoires et loi binomiale",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "À une kermesse, une partie de roue coûte $2$ €. La roue rapporte $0$ € avec la probabilité $0{,}7$, $5$ € avec la probabilité $0{,}2$ et $10$ € avec la probabilité $0{,}1$. On note $X$ le gain algébrique d'un joueur (somme reçue moins la mise). (a) Donner la loi de probabilité de $X$ dans un tableau et vérifier qu'il s'agit bien d'une loi de probabilité. (b) Calculer $E(X)$. (c) Interpréter le résultat : ce jeu est-il favorable au joueur, défavorable, ou équitable ?",
+      "corrige": [
+        "(a) Le joueur paie $2$ € puis reçoit $0$, $5$ ou $10$ € : le gain algébrique vaut $0 - 2 = -2$, $5 - 2 = 3$ ou $10 - 2 = 8$. Loi de $X$ : $P(X = -2) = 0{,}7$ ; $P(X = 3) = 0{,}2$ ; $P(X = 8) = 0{,}1$. Contrôle : $0{,}7 + 0{,}2 + 0{,}1 = 1$, c'est bien une loi de probabilité.",
+        "(b) $E(X) = (-2) \\times 0{,}7 + 3 \\times 0{,}2 + 8 \\times 0{,}1 = -1{,}4 + 0{,}6 + 0{,}8 = 0$. Attention à bien pondérer chaque valeur par sa probabilité : la moyenne simple des trois valeurs n'aurait aucun sens ici.",
+        "(c) $E(X) = 0$ : le jeu est équitable. Sur un grand nombre de parties, le joueur ne gagne ni ne perd d'argent en moyenne. Cela ne dit rien d'une partie donnée : à chaque partie, il perd $2$ €, gagne $3$ € ou gagne $8$ €, jamais $0$ €."
+      ],
+      "reponse": "(a) $P(X=-2) = 0{,}7$ ; $P(X=3) = 0{,}2$ ; $P(X=8) = 0{,}1$ ; (b) $E(X) = 0$ ; (c) jeu équitable."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "triangle-de-pascal",
+      "enonce": "(a) Construire le triangle de Pascal jusqu'à la ligne $n = 6$ en rappelant la règle de construction. (b) En déduire les valeurs de $\\dbinom{6}{2}$ et $\\dbinom{6}{4}$. Que remarque-t-on ? (c) Sans écrire la ligne $7$, calculer $\\dbinom{7}{3}$ à l'aide de la règle de construction.",
+      "corrige": [
+        "(a) Règle : chaque ligne commence et finit par $1$, et chaque autre nombre est la somme des deux nombres situés au-dessus de lui. Lignes $0$ à $6$ : $1$ ; $1\\ 1$ ; $1\\ 2\\ 1$ ; $1\\ 3\\ 3\\ 1$ ; $1\\ 4\\ 6\\ 4\\ 1$ ; $1\\ 5\\ 10\\ 10\\ 5\\ 1$ ; $1\\ 6\\ 15\\ 20\\ 15\\ 6\\ 1$.",
+        "(b) Sur la ligne $6$, en numérotant les colonnes à partir de $0$ : $\\dbinom{6}{2} = 15$ (troisième nombre) et $\\dbinom{6}{4} = 15$ (cinquième nombre). On remarque que $\\dbinom{6}{2} = \\dbinom{6}{4}$ : c'est la symétrie du triangle, $\\dbinom{n}{k} = \\dbinom{n}{n-k}$ — chaque ligne se lit pareil dans les deux sens.",
+        "(c) $\\dbinom{7}{3} = \\dbinom{6}{2} + \\dbinom{6}{3} = 15 + 20 = 35$ : chaque nombre de la ligne $7$ est la somme des deux nombres de la ligne $6$ situés au-dessus de lui."
+      ],
+      "reponse": "(b) $\\dbinom{6}{2} = \\dbinom{6}{4} = 15$ (symétrie du triangle) ; (c) $\\dbinom{7}{3} = 15 + 20 = 35$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "Dans la production d'une usine, $4\\,\\%$ des pièces présentent un défaut. On prélève $10$ pièces au hasard ; la production est suffisamment importante pour assimiler ce prélèvement à $10$ tirages indépendants. On note $X$ le nombre de pièces défectueuses du prélèvement. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Interpréter l'événement $\\{X = 0\\}$ par une phrase, puis calculer sa probabilité arrondie au millième. (c) Calculer $P(X = 1)$, arrondie au millième.",
+      "corrige": [
+        "(a) Prélever une pièce est une épreuve de Bernoulli : succès « la pièce est défectueuse » de probabilité $p = 0{,}04$, échec sinon. Cette épreuve est répétée $n = 10$ fois de façon identique et indépendante (production assez grande), et $X$ compte le nombre de succès. Donc $X \\sim B(10\\,;\\ 0{,}04)$.",
+        "(b) $\\{X = 0\\}$ : « aucune des $10$ pièces prélevées n'est défectueuse ». Un seul chemin (que des échecs) : $P(X = 0) = (1 - 0{,}04)^{10} = 0{,}96^{10} \\approx 0{,}665$. Le coefficient $\\dbinom{10}{0} = 1$ ne change rien ici.",
+        "(c) $P(X = 1) = \\dbinom{10}{1} \\times 0{,}04^1 \\times 0{,}96^{9}$ avec $\\dbinom{10}{1} = 10$ (un seul succès, dix positions possibles). $P(X = 1) = 10 \\times 0{,}04 \\times 0{,}96^9 \\approx 10 \\times 0{,}04 \\times 0{,}6925 \\approx 0{,}277$. Vérification de cohérence : les exposants $1$ et $9$ somment bien à $n = 10$."
+      ],
+      "reponse": "(a) $X \\sim B(10\\,;\\ 0{,}04)$ ; (b) $P(X = 0) = 0{,}96^{10} \\approx 0{,}665$ ; (c) $P(X = 1) \\approx 0{,}277$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "calculer-p-x-k",
+      "enonce": "Une basketteuse réussit chacun de ses lancers francs avec la probabilité $0{,}6$, ses lancers étant supposés indépendants. Lors d'un entraînement, elle tente une série de $5$ lancers. On note $X$ le nombre de lancers réussis. (a) Justifier que $X \\sim B(5\\,;\\ 0{,}6)$. (b) Lire $\\dbinom{5}{3}$ dans le triangle de Pascal en précisant la ligne et la colonne utilisées. (c) Calculer $P(X = 3)$ (valeur exacte). (d) Calculer $E(X)$ et interpréter le résultat.",
+      "corrige": [
+        "(a) Chaque lancer est une épreuve de Bernoulli (succès « lancer réussi », $p = 0{,}6$), répétée $n = 5$ fois de façon indépendante, et $X$ compte les succès : $X \\sim B(5\\,;\\ 0{,}6)$.",
+        "(b) Ligne $5$ du triangle : $1$, $5$, $10$, $10$, $5$, $1$. En numérotant les colonnes à partir de $0$, la colonne $3$ donne $\\dbinom{5}{3} = 10$ (le quatrième nombre de la ligne, pas le troisième).",
+        "(c) $P(X = 3) = \\dbinom{5}{3} \\times 0{,}6^3 \\times 0{,}4^2 = 10 \\times 0{,}216 \\times 0{,}16 = 0{,}3456$. Sans le coefficient $10$, on n'aurait que la probabilité d'un seul ordre de réussites/échecs parmi les dix possibles.",
+        "(d) $E(X) = np = 5 \\times 0{,}6 = 3$ : sur un grand nombre de séries de $5$ lancers, la basketteuse réussit en moyenne $3$ lancers par série. C'est une moyenne, pas une certitude : à une série donnée, elle peut réussir de $0$ à $5$ lancers."
+      ],
+      "reponse": "(b) $\\dbinom{5}{3} = 10$ ; (c) $P(X = 3) = 0{,}3456$ ; (d) $E(X) = 3$ lancers réussis en moyenne par série."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "esperance",
+      "enonce": "Une association organise un jeu pour financer un projet. Le joueur paie $t$ euros la partie ($t > 0$), puis fait tourner une roue qui rapporte $10$ € avec la probabilité $0{,}1$, $2$ € avec la probabilité $0{,}3$ et rien sinon. On note $X$ le gain algébrique du joueur. (a) Pour $t = 2$, donner la loi de $X$ et calculer $E(X)$. (b) Interpréter ce résultat du point de vue de l'association, puis estimer sa recette moyenne pour $500$ parties jouées. (c) Déterminer la valeur de $t$ rendant le jeu équitable.",
+      "corrige": [
+        "(a) Pour $t = 2$, le gain algébrique vaut $10 - 2 = 8$ (probabilité $0{,}1$), $2 - 2 = 0$ (probabilité $0{,}3$) ou $0 - 2 = -2$ (probabilité $1 - 0{,}1 - 0{,}3 = 0{,}6$). $E(X) = 8 \\times 0{,}1 + 0 \\times 0{,}3 + (-2) \\times 0{,}6 = 0{,}8 + 0 - 1{,}2 = -0{,}4$.",
+        "(b) Le joueur perd en moyenne $0{,}40$ € par partie, donc l'association gagne en moyenne $0{,}40$ € par partie. Pour $500$ parties, la recette moyenne est d'environ $500 \\times 0{,}40 = 200$ €. C'est une estimation en moyenne : la recette réelle fluctue autour de cette valeur.",
+        "(c) Pour un prix $t$ quelconque, les valeurs de $X$ sont $10 - t$, $2 - t$ et $-t$, d'où $E(X) = (10 - t) \\times 0{,}1 + (2 - t) \\times 0{,}3 + (-t) \\times 0{,}6 = 1 + 0{,}6 - t = 1{,}6 - t$. Le jeu est équitable quand $E(X) = 0$, soit $t = 1{,}60$ €. Cohérence : pour $t = 2 > 1{,}60$, on retrouve bien une espérance négative pour le joueur."
+      ],
+      "reponse": "(a) $E(X) = -0{,}4$ ; (b) recette moyenne $\\approx 200$ € pour $500$ parties ; (c) $t = 1{,}60$ €."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "calculer-p-x-k",
+      "enonce": "Un QCM comporte $6$ questions ; chaque question offre $4$ réponses dont une seule est correcte. Un élève n'a pas appris son cours et répond entièrement au hasard, question après question. On note $X$ le nombre de bonnes réponses. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Calculer la probabilité que l'élève obtienne un sans-faute, en valeur exacte puis arrondie au dix-millième. (c) Calculer $P(X = 2)$, arrondie au millième (on donne $\\dbinom{6}{2} = 15$). (d) Calculer $E(X)$. Le QCM est réussi à partir de $3$ bonnes réponses : commenter la stratégie « répondre au hasard ».",
+      "corrige": [
+        "(a) Chaque question est une épreuve de Bernoulli : succès « la réponse est correcte », de probabilité $p = \\dfrac{1}{4} = 0{,}25$ (une bonne réponse sur quatre, choisie au hasard). L'épreuve est répétée $n = 6$ fois de façon indépendante (les réponses aux différentes questions ne s'influencent pas), et $X$ compte les succès : $X \\sim B(6\\,;\\ 0{,}25)$.",
+        "(b) Le sans-faute est $\\{X = 6\\}$ : un seul chemin, que des succès. $P(X = 6) = 0{,}25^6 = \\left(\\dfrac{1}{4}\\right)^6 = \\dfrac{1}{4096} \\approx 0{,}0002$. Autant dire quasiment impossible.",
+        "(c) $P(X = 2) = \\dbinom{6}{2} \\times 0{,}25^2 \\times 0{,}75^4 = 15 \\times 0{,}0625 \\times 0{,}31640625 \\approx 0{,}297$. Les exposants $2$ et $4$ somment bien à $6$, et le coefficient $15$ compte les $15$ façons de placer les $2$ bonnes réponses parmi les $6$ questions.",
+        "(d) $E(X) = np = 6 \\times 0{,}25 = 1{,}5$ : en répondant au hasard, un élève obtient en moyenne $1{,}5$ bonne réponse sur $6$. La moyenne est nettement sous le seuil de réussite de $3$ bonnes réponses : répondre au hasard est une mauvaise stratégie — apprendre son cours reste la seule option raisonnable."
+      ],
+      "reponse": "(a) $X \\sim B(6\\,;\\ 0{,}25)$ ; (b) $P(X = 6) = \\dfrac{1}{4096} \\approx 0{,}0002$ ; (c) $P(X = 2) \\approx 0{,}297$ ; (d) $E(X) = 1{,}5 < 3$ : le hasard ne suffit pas."
+      }
+  ]
+}

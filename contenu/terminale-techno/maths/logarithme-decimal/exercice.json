@@ -1,0 +1,89 @@
+{
+  "id": "tale-techno-math-logarithme-decimal-exos",
+  "chapitre": "tale-techno-math-logarithme-decimal",
+  "titre": "Exercices — Fonction logarithme décimal",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "transformations",
+      "enonce": "Calculer sans calculatrice. (a) $\\log(10\\,000)$, $\\log(0{,}001)$ et $\\log(10^7)$. (b) En utilisant $\\log 2 \\approx 0{,}301$, donner une valeur approchée de $\\log 20$, $\\log 8$ et $\\log 5$.",
+      "corrige": [
+        "(a) Le log compte les puissances de $10$ : $10\\,000 = 10^4$ donc $\\log(10\\,000) = 4$ ; $0{,}001 = 10^{-3}$ donc $\\log(0{,}001) = -3$ ; et directement $\\log(10^7) = 7$.",
+        "(b) $\\log 20 = \\log(2 \\times 10) = \\log 2 + \\log 10 \\approx 0{,}301 + 1 = 1{,}301$.",
+        "$\\log 8 = \\log(2^3) = 3\\log 2 \\approx 3 \\times 0{,}301 = 0{,}903$.",
+        "$\\log 5 = \\log\\dfrac{10}{2} = \\log 10 - \\log 2 \\approx 1 - 0{,}301 = 0{,}699$. L'astuce : quand tu ne connais pas le log d'un nombre, décompose-le en produit, quotient ou puissance de nombres dont tu connais le log."
+      ],
+      "reponse": "(a) $4$ ; $-3$ ; $7$. (b) $\\log 20 \\approx 1{,}301$ ; $\\log 8 \\approx 0{,}903$ ; $\\log 5 \\approx 0{,}699$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "resolution-equations",
+      "enonce": "Résoudre chaque équation (valeur exacte puis arrondi au centième). (a) $10^x = 450$. (b) $2^x = 30$. (c) $5^x = -2$.",
+      "corrige": [
+        "(a) Par définition du logarithme décimal, la solution de $10^x = 450$ est $x = \\log 450 \\approx 2{,}65$. Contrôle de cohérence : $100 < 450 < 1000$, donc $2 < x < 3$. ✓",
+        "(b) Les deux membres sont strictement positifs : on prend le log. $\\log(2^x) = \\log 30$, soit $x\\log 2 = \\log 30$ (l'exposant descend), d'où $x = \\dfrac{\\log 30}{\\log 2} \\approx \\dfrac{1{,}477}{0{,}301} \\approx 4{,}91$. Contrôle : $2^4 = 16 < 30 < 32 = 2^5$, donc $4 < x < 5$. ✓",
+        "(c) Une exponentielle est strictement positive : $5^x > 0$ pour tout $x$, donc $5^x = -2$ n'a **aucune solution**. Surtout ne pas écrire $\\log(-2)$, qui n'existe pas."
+      ],
+      "reponse": "(a) $x = \\log 450 \\approx 2{,}65$ ; (b) $x = \\dfrac{\\log 30}{\\log 2} \\approx 4{,}91$ ; (c) aucune solution."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "resolution-equations",
+      "enonce": "Un capital de $8\\,000$ € est placé à $2{,}5\\,\\%$ par an (intérêts composés). On note $C(x) = 8000 \\times 1{,}025^x$ le capital au bout de $x$ années. (a) Traduire « le capital a doublé » par une équation d'inconnue $x$, puis la résoudre. (b) Au bout de combien d'années entières le capital a-t-il effectivement doublé ? Justifier par un encadrement. (c) Même question pour un triplement du capital.",
+      "corrige": [
+        "(a) Le capital a doublé lorsque $C(x) = 16\\,000$, c'est-à-dire $8000 \\times 1{,}025^x = 16000$, soit $1{,}025^x = 2$. On prend le log : $x \\log 1{,}025 = \\log 2$, d'où $x = \\dfrac{\\log 2}{\\log 1{,}025} \\approx \\dfrac{0{,}30103}{0{,}01072} \\approx 28{,}1$.",
+        "(b) $x \\approx 28{,}1$ n'est pas entier : on encadre. $1{,}025^{28} \\approx 1{,}996 < 2$ (pas encore doublé au bout de $28$ ans) et $1{,}025^{29} \\approx 2{,}046 > 2$. Le capital a donc doublé au bout de $29$ années entières : on arrondit à l'année **supérieure**, pas au plus proche.",
+        "(c) Triplement : $1{,}025^x = 3$, donc $x = \\dfrac{\\log 3}{\\log 1{,}025} \\approx \\dfrac{0{,}47712}{0{,}01072} \\approx 44{,}5$. Encadrement : $1{,}025^{44} \\approx 2{,}96 < 3 < 1{,}025^{45} \\approx 3{,}04$ : le capital a triplé au bout de $45$ années entières. Remarque : tripler ne prend pas $1{,}5$ fois le temps de doubler — les durées suivent les logs ($\\log 3 \\neq 1{,}5\\log 2$), pas la proportionnalité."
+      ],
+      "reponse": "(a) $1{,}025^x = 2$, soit $x = \\dfrac{\\log 2}{\\log 1{,}025} \\approx 28{,}1$ ; (b) au bout de $29$ ans ; (c) $x \\approx 44{,}5$, soit au bout de $45$ ans."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "contextes",
+      "enonce": "En chimie, le pH d'une solution est $\\text{pH} = -\\log c$, où $c = [\\mathrm{H_3O^+}]$ est la concentration en ions oxonium (en mol/L). (a) Calculer le pH d'une solution de concentration $c = 5 \\times 10^{-3}$ mol/L (arrondir au dixième), en utilisant $\\log 5 \\approx 0{,}699$. (b) Une eau de pluie a un pH de $4{,}2$. Calculer sa concentration en ions oxonium (arrondir à $10^{-6}$ près). (c) Montrer que si la concentration est multipliée par $10$, le pH diminue exactement de $1$.",
+      "corrige": [
+        "(a) $\\text{pH} = -\\log(5 \\times 10^{-3}) = -(\\log 5 + \\log 10^{-3}) = -(\\log 5 - 3) = 3 - \\log 5 \\approx 3 - 0{,}699 = 2{,}301$, soit un pH d'environ $2{,}3$ (solution très acide).",
+        "(b) $\\text{pH} = 4{,}2$ signifie $-\\log c = 4{,}2$, donc $\\log c = -4{,}2$ : par définition du log, $c = 10^{-4{,}2}$. À la calculatrice : $c \\approx 6{,}3 \\times 10^{-5}$ mol/L (en effet $10^{-4{,}2} = 10^{0{,}8} \\times 10^{-5}$ et $10^{0{,}8} \\approx 6{,}31$).",
+        "(c) Pour une concentration $10c$ : $-\\log(10c) = -(\\log 10 + \\log c) = -1 - \\log c = \\text{pH} - 1$. La propriété $\\log(ab) = \\log a + \\log b$ transforme la multiplication par $10$ en diminution de $1$ unité de pH : c'est pour cela que l'échelle de pH est dite logarithmique."
+      ],
+      "reponse": "(a) $\\text{pH} = 3 - \\log 5 \\approx 2{,}3$ ; (b) $c = 10^{-4{,}2} \\approx 6{,}3 \\times 10^{-5}$ mol/L ; (c) $-\\log(10c) = \\text{pH} - 1$ par $\\log(10c) = 1 + \\log c$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "contextes",
+      "enonce": "Le niveau sonore, en décibels, d'un son d'intensité $I$ (en W/m²) est $L = 10\\log\\dfrac{I}{I_0}$, avec $I_0 = 10^{-12}$ W/m². (a) Calculer le niveau sonore d'une conversation d'intensité $I = 10^{-5}$ W/m². (b) Montrer que si l'intensité double, le niveau sonore augmente d'environ $3$ dB, quelle que soit l'intensité de départ. (c) Un concert atteint $85$ dB. Calculer l'intensité sonore correspondante. (d) Combien de fois l'intensité d'un son de $100$ dB est-elle plus grande que celle d'un son de $60$ dB ?",
+      "corrige": [
+        "(a) $\\dfrac{I}{I_0} = \\dfrac{10^{-5}}{10^{-12}} = 10^{7}$, donc $L = 10\\log(10^{7}) = 10 \\times 7 = 70$ dB.",
+        "(b) Pour une intensité $2I$ : $L' = 10\\log\\dfrac{2I}{I_0} = 10\\left(\\log 2 + \\log\\dfrac{I}{I_0}\\right) = 10\\log 2 + L \\approx L + 3{,}0$. Le terme $10\\log 2 \\approx 3{,}01$ ne dépend pas de $I$ : doubler l'intensité ajoute toujours environ $3$ dB — c'est la propriété $\\log(ab) = \\log a + \\log b$.",
+        "(c) $85 = 10\\log\\dfrac{I}{I_0}$ donne $\\log\\dfrac{I}{I_0} = 8{,}5$, donc par définition du log $\\dfrac{I}{I_0} = 10^{8{,}5}$, puis $I = 10^{-12} \\times 10^{8{,}5} = 10^{-3{,}5} \\approx 3{,}2 \\times 10^{-4}$ W/m².",
+        "(d) L'écart est de $100 - 60 = 40$ dB, soit $10\\log\\dfrac{I_{100}}{I_{60}} = 40$, donc $\\log\\dfrac{I_{100}}{I_{60}} = 4$ et $\\dfrac{I_{100}}{I_{60}} = 10^4$ : l'intensité est $10\\,000$ fois plus grande. Le piège : les décibels s'ajoutent quand les intensités se multiplient — $40$ dB d'écart, ce n'est pas « $40$ fois plus fort »."
+      ],
+      "reponse": "(a) $70$ dB ; (b) $L' = L + 10\\log 2 \\approx L + 3$ dB ; (c) $I = 10^{-3{,}5} \\approx 3{,}2 \\times 10^{-4}$ W/m² ; (d) $10^4 = 10\\,000$ fois."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "resolution-equations",
+      "enonce": "Trois situations, une même équation. (a) Un véhicule perd $18\\,\\%$ de sa valeur chaque année. Au bout de combien d'années entières sa valeur passe-t-elle sous la moitié du prix d'achat ? (b) Quel taux annuel constant $t$ (en %) permet à un capital de doubler en exactement $10$ ans ? (Arrondir au dixième ; on pourra utiliser l'exposant $1/n$ du chapitre sur les exponentielles.) (c) Une culture contient $500$ bactéries et leur nombre double chaque heure : $N(x) = 500 \\times 2^x$. Au bout de combien de temps dépasse-t-elle le million de bactéries ? (On utilisera $\\log 2 \\approx 0{,}30103$.)",
+      "corrige": [
+        "(a) La valeur est multipliée par $0{,}82$ chaque année : elle vaut la moitié quand $0{,}82^x = 0{,}5$, soit $x = \\dfrac{\\log 0{,}5}{\\log 0{,}82} \\approx \\dfrac{-0{,}301}{-0{,}0862} \\approx 3{,}49$. Les deux logs sont négatifs (nombres entre $0$ et $1$), le quotient est bien positif. Encadrement : $0{,}82^3 \\approx 0{,}551 > 0{,}5$ et $0{,}82^4 \\approx 0{,}452 < 0{,}5$ : la valeur passe sous la moitié au bout de $4$ années entières.",
+        "(b) Avec un coefficient annuel $a$, le capital est multiplié par $a^{10}$ en $10$ ans : on veut $a^{10} = 2$, donc $a = 2^{1/10} \\approx 1{,}0718$ (exposant $1/n$ du chapitre exponentielles). D'où $t = (a - 1) \\times 100 \\approx 7{,}2\\,\\%$ par an. Vérification par le log : $\\log a = \\dfrac{\\log 2}{10} \\approx 0{,}0301$, et $10^{0{,}0301} \\approx 1{,}072$. ✓ Ce n'est pas $100/10 = 10\\,\\%$ : la composition des intérêts fait le travail plus vite.",
+        "(c) On cherche $x$ tel que $500 \\times 2^x > 10^6$, soit $2^x > 2000$. On résout l'équation associée $2^x = 2000$ : $x = \\dfrac{\\log 2000}{\\log 2} = \\dfrac{\\log 2 + \\log 1000}{\\log 2} = \\dfrac{0{,}30103 + 3}{0{,}30103} \\approx 10{,}97$ (transformation : $2000 = 2 \\times 10^3$).",
+        "Comme $x \\mapsto 2^x$ est strictement croissante, la population dépasse le million après $x \\approx 10{,}97$ h, soit au bout d'environ $11$ heures (à l'heure entière : $N(10) = 512\\,000 < 10^6$ et $N(11) = 1\\,024\\,000 > 10^6$)."
+      ],
+      "reponse": "(a) au bout de $4$ ans ($x \\approx 3{,}49$) ; (b) $a = 2^{1/10} \\approx 1{,}0718$, soit $t \\approx 7{,}2\\,\\%$ par an ; (c) $x = \\dfrac{\\log 2000}{\\log 2} \\approx 10{,}97$, soit environ $11$ h."
+    }
+  ]
+}

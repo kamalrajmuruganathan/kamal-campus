@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-activites-geometriques-std2a-qcm",
+  "chapitre": "tale-techno-math-activites-geometriques-std2a",
+  "titre": "QCM — Activités géométriques (STD2A) : coniques et perspective centrale",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "sections-planes",
+      "enonce": "On coupe un cône de révolution par un plan perpendiculaire à son axe, ne passant pas par le sommet. Quelle est la section obtenue ?",
+      "choix": [
+        "Un cercle",
+        "Une ellipse allongée",
+        "Une parabole",
+        "Un point"
+      ],
+      "reponse": 0,
+      "explication": "Un plan perpendiculaire à l'axe ($\\beta = 90°$) coupe le cône selon un cercle — c'est la lampe torche qui vise le mur bien en face. Le piège : l'ellipse n'apparaît que si le plan est **incliné** ($\\alpha < \\beta < 90°$), et le point n'est obtenu que si le plan passe par le sommet."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "perspective-centrale",
+      "enonce": "En perspective centrale, des droites horizontales parallèles entre elles et non parallèles au tableau ont pour images…",
+      "choix": [
+        "des droites concourantes en un point de fuite situé sur la ligne d'horizon",
+        "des droites parallèles entre elles",
+        "des droites verticales",
+        "des courbes qui se rapprochent sans se couper"
+      ],
+      "reponse": 0,
+      "explication": "C'est la règle 3 : un faisceau de parallèles non frontales a des images concourantes en un point de fuite, et pour des droites **horizontales** ce point est sur la ligne d'horizon. Le piège : seules les droites **parallèles au tableau** (frontales) gardent des images parallèles — et les images restent des droites, jamais des courbes."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "sections-planes",
+      "enonce": "Le plan de coupe est parallèle à une génératrice du cône (et à une seule), sans passer par le sommet. Quelle est la section ?",
+      "choix": [
+        "Une hyperbole",
+        "Une parabole",
+        "Une ellipse très allongée",
+        "Une génératrice du cône"
+      ],
+      "reponse": 1,
+      "explication": "Plan parallèle à une génératrice et une seule, c'est exactement le cas frontière $\\beta = \\alpha$ : la section est une parabole, courbe ouverte à une seule branche. Le piège : l'hyperbole exige que le plan coupe les **deux nappes** ($\\beta < \\alpha$), et la génératrice seule n'apparaît que si le plan passe **par le sommet** en restant tangent au cône."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "sections-planes",
+      "enonce": "Un cône a un demi-angle au sommet $\\alpha = 30°$. On le coupe par un plan ne passant pas par le sommet et faisant un angle $\\beta = 45°$ avec l'axe. Quelle est la section ?",
+      "choix": [
+        "Une hyperbole",
+        "Un cercle",
+        "Une parabole",
+        "Une ellipse"
+      ],
+      "reponse": 3,
+      "explication": "On compare : $\\alpha = 30° < \\beta = 45° < 90°$, donc le plan est incliné mais coupe toutes les génératrices d'une même nappe : c'est une ellipse. Le piège : l'hyperbole correspondrait à $\\beta < \\alpha$ (plan plus redressé que la génératrice), le cercle exigerait $\\beta = 90°$ et la parabole exactement $\\beta = \\alpha = 30°$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "tangente",
+      "enonce": "$M$ est un point d'un cercle de centre $O$. La tangente au cercle en $M$ est…",
+      "choix": [
+        "la droite passant par $M$ et parallèle au rayon $[OM]$",
+        "la droite perpendiculaire en $M$ au rayon $[OM]$",
+        "n'importe quelle droite passant par $M$ et ne passant pas par $O$",
+        "la droite $(OM)$"
+      ],
+      "reponse": 1,
+      "explication": "La tangente au cercle en $M$ est la perpendiculaire en $M$ au rayon $[OM]$ : elle touche le cercle en $M$ sans le traverser. Le piège : toute autre droite passant par $M$ recoupe le cercle en un second point (elle est sécante), et la droite $(OM)$ traverse carrément le cercle de part en part."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "perspective-centrale",
+      "enonce": "Sur un dessin en perspective centrale, que représente la ligne d'horizon ?",
+      "choix": [
+        "La droite du tableau située à la hauteur de l'œil, qui porte les points de fuite des droites horizontales",
+        "La droite qui joint les points les plus éloignés de la scène",
+        "Le bord inférieur du tableau",
+        "L'image de la seule droite horizontale de la scène"
+      ],
+      "reponse": 0,
+      "explication": "La ligne d'horizon est la droite horizontale du tableau à hauteur de l'œil : c'est sur elle que se trouvent les points de fuite de **toutes** les familles de droites horizontales non frontales. Le piège : elle dépend de la position de l'œil (elle monte si l'observateur monte), pas des objets de la scène ni du cadre du dessin."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "tangente",
+      "enonce": "Une droite $d$, parallèle à l'axe de symétrie d'une parabole, coupe cette parabole en un seul point. Que peut-on en conclure ?",
+      "choix": [
+        "$d$ est tangente à la parabole, car elle n'a qu'un point commun avec elle",
+        "$d$ est une asymptote de la parabole",
+        "$d$ est sécante à la parabole : elle la traverse, ce n'est pas une tangente",
+        "C'est impossible : une droite coupe toujours une parabole en deux points"
+      ],
+      "reponse": 2,
+      "explication": "La droite entre dans le « U » de la parabole et n'en ressort pas : elle a un seul point commun mais elle **traverse** la courbe, c'est une sécante. Le piège est la fausse définition « tangente = un seul point d'intersection » : le vrai critère est *toucher sans traverser*. Et une parabole n'a pas d'asymptote — c'est l'hyperbole qui en a."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "sections-planes",
+      "enonce": "On coupe un cône de révolution à deux nappes par un plan parallèle à l'axe, ne contenant pas l'axe. Quelle est la section ?",
+      "choix": [
+        "Une parabole",
+        "Une hyperbole, dont les deux branches sont une sur chaque nappe",
+        "Deux droites sécantes",
+        "Une ellipse, une sur chaque nappe"
+      ],
+      "reponse": 1,
+      "explication": "Un plan parallèle à l'axe fait un angle $\\beta = 0° < \\alpha$ avec lui : il est plus « redressé » que les génératrices et coupe les deux nappes. La section est une hyperbole à deux branches — c'est la tache de lumière d'une applique murale, au-dessus et au-dessous. Le piège : les deux droites sécantes exigeraient un plan passant **par le sommet**, et une ellipse est une courbe **fermée** sur une seule nappe."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "perspective-centrale",
+      "enonce": "$I$ est le milieu d'un segment $[AB]$ horizontal qui s'enfonce dans la profondeur de la scène. Sur le dessin en perspective centrale, l'image $i$ de $I$…",
+      "choix": [
+        "est le milieu du segment image $[ab]$, car la perspective conserve les alignements",
+        "n'est en général pas le milieu de $[ab]$ : la perspective ne conserve pas les milieux",
+        "est toujours plus proche de $a$ que de $b$",
+        "est sur la ligne d'horizon"
+      ],
+      "reponse": 1,
+      "explication": "La perspective centrale conserve l'alignement ($i$ est bien sur la droite $(ab)$) mais ni les longueurs ni les rapports : la moitié la plus éloignée de l'observateur paraît plus courte, donc $i$ n'est pas au milieu de $[ab]$. Le piège : « conserve l'alignement » ne veut pas dire « conserve les proportions » — pour placer un milieu, on passe par l'intersection des diagonales d'un rectangle, pas par la règle graduée. Et le côté de $[ab]$ dont $i$ se rapproche dépend de l'orientation du dessin."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "perspective-et-coniques",
+      "enonce": "Une assiette circulaire est posée sur une table, vue de biais. En perspective centrale, son image sur le tableau est presque toujours…",
+      "choix": [
+        "un cercle plus petit",
+        "un ovale en forme d'œuf, plus pointu du côté éloigné",
+        "une ellipse, avec ses deux axes de symétrie",
+        "une parabole"
+      ],
+      "reponse": 2,
+      "explication": "Les rayons visuels qui s'appuient sur le cercle forment un cône de sommet l'œil, et le tableau le coupe : l'image est une conique, presque toujours une ellipse — courbe fermée à deux axes de symétrie. Le piège est l'« œuf » : l'ellipse n'est pas plus pointue du côté éloigné, c'est l'erreur de tracé classique en dessin d'objet. Un cercle n'est obtenu que dans des positions très particulières, et une parabole est une courbe ouverte."
+    }
+  ]
+}

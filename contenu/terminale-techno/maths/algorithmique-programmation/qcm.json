@@ -1,0 +1,104 @@
+{
+  "id": "tale-techno-math-algorithmique-programmation-qcm",
+  "chapitre": "tale-techno-math-algorithmique-programmation",
+  "titre": "QCM — Algorithmique et programmation",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Lis chaque programme ligne par ligne avant de répondre.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "variables-affectation",
+      "enonce": "On exécute `a = 3` puis `a = a + 2`. Que vaut `a` à la fin ?",
+      "choix": ["$5$", "$3$", "$2$", "Rien : `a = a + 2` est impossible"],
+      "reponse": 0,
+      "explication": "L'affectation se lit de droite à gauche : on calcule `a + 2` avec l'ancienne valeur ($3 + 2 = 5$), puis on range $5$ dans `a`. Le piège est de lire `a = a + 2` comme une équation mathématique (qui n'aurait pas de solution) : en Python, `=` signifie « reçoit », pas « égale »."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "generation-listes",
+      "enonce": "On pose `L = [10, 20, 30]`. Que vaut `L[1]` ?",
+      "choix": ["$10$", "$20$", "$30$", "Une erreur"],
+      "reponse": 1,
+      "explication": "Les indices commencent à $0$ : `L[0]` vaut $10$, donc `L[1]` est le **deuxième** élément, $20$. Le piège classique est de compter à partir de $1$ et de répondre $10$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "variables-affectation",
+      "enonce": "On exécute :\n```python\na = 4\nb = a + 1\na = 2 * b\n```\nQue vaut `a` à la fin ?",
+      "choix": ["$10$", "$8$", "$5$", "$9$"],
+      "reponse": 0,
+      "explication": "Ligne 2 : `b` reçoit $4 + 1 = 5$. Ligne 3 : `a` reçoit $2 \\times 5 = 10$ — l'ancien $4$ est écrasé. Le piège : répondre $8$ revient à calculer `2 * a` au lieu de `2 * b`, et $5$ est la valeur de `b`, pas de `a`."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "fonctions",
+      "enonce": "On définit :\n```python\ndef f(x):\n    return 3 * x + 1\n```\nQue renvoie l'appel `f(2)` ?",
+      "choix": ["$7$", "$6$", "$9$", "Rien, car la fonction ne contient pas de `print`"],
+      "reponse": 0,
+      "explication": "L'appel remplace `x` par $2$ : la fonction renvoie $3 \\times 2 + 1 = 7$. Le piège du dernier choix : c'est `return` qui renvoie le résultat, pas `print` — `print` ne sert qu'à afficher. $6$ oublie le $+1$ et $9$ calcule $3 \\times (2+1)$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "generation-listes",
+      "enonce": "On exécute :\n```python\nL = []\nfor n in range(4):\n    L.append(2 * n)\n```\nQue vaut `L` à la fin ?",
+      "choix": ["$[0, 2, 4, 6]$", "$[2, 4, 6, 8]$", "$[0, 2, 4, 6, 8]$", "$[0, 1, 2, 3]$"],
+      "reponse": 0,
+      "explication": "`range(4)` produit $0, 1, 2, 3$ (la borne $4$ est **exclue**), et on ajoute à chaque tour le double : $0, 2, 4, 6$. Les pièges : $[2,4,6,8]$ suppose que `range` commence à $1$, et $[0,2,4,6,8]$ suppose qu'il va jusqu'à $4$ inclus."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "parcours-listes",
+      "enonce": "On exécute :\n```python\ntotal = 0\nfor x in [4, 7, 9]:\n    total = total + x\n```\nQue vaut `total` à la fin ?",
+      "choix": ["$20$", "$9$", "$3$", "$0$"],
+      "reponse": 0,
+      "explication": "`total` est un **accumulateur** : il vaut $0$, puis $4$, puis $11$, puis $20$ — la somme des éléments. Les pièges : $9$ est la dernière valeur prise par `x` (confusion entre la variable de boucle et l'accumulateur), $3$ est le nombre d'éléments (confusion avec un compteur)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "selection-donnees",
+      "enonce": "On exécute :\n```python\nnotes = [8, 12, 10, 15, 9]\ngardees = []\nfor x in notes:\n    if x > 10:\n        gardees.append(x)\n```\nQue vaut `gardees` à la fin ?",
+      "choix": ["$[12, 15]$", "$[12, 10, 15]$", "$[8, 10, 9]$", "$[15]$"],
+      "reponse": 0,
+      "explication": "La condition est `x > 10` **strictement** : $12$ et $15$ passent, mais le $10$, pile sur le seuil, est rejeté. Le piège principal est $[12, 10, 15]$, qui correspond à la condition `x >= 10` — toujours vérifier si le seuil est strict ou large. $[8, 10, 9]$ sélectionne le contraire."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "fonctions",
+      "enonce": "On définit :\n```python\ndef somme(L):\n    total = 0\n    for x in L:\n        total = total + x\n        return total\n```\nQue renvoie l'appel `somme([5, 7, 9])` ?",
+      "choix": ["$5$", "$21$", "$9$", "Une erreur"],
+      "reponse": 0,
+      "explication": "Le `return` est indenté **dans** la boucle : il s'exécute dès le premier tour, quand `total` vaut $0 + 5 = 5$, et la fonction s'arrête là. Pour renvoyer $21$ (la somme complète), le `return` devrait être aligné avec le `for`, après la boucle. C'est le piège d'indentation le plus courant en lecture de code."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "generation-listes",
+      "enonce": "On veut construire la liste des termes $u_0$ à $u_{12}$ **inclus** d'une suite, avec une boucle `for n in range(...)` et un `append`. Que faut-il écrire dans le `range` ?",
+      "choix": ["`range(13)`", "`range(12)`", "`range(0, 12)`", "`range(11)`"],
+      "reponse": 0,
+      "explication": "De $u_0$ à $u_{12}$ inclus, il y a $13$ termes, et `range(13)` produit justement les $13$ entiers $0, 1, \\ldots, 12$. Le piège : `range(12)` (comme `range(0, 12)`, qui lui est identique) s'arrête à $n = 11$ car la borne de droite est exclue — on perdrait $u_{12}$. Compte les **termes**, pas la borne écrite."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "selection-donnees",
+      "enonce": "On exécute :\n```python\nc = 0\nfor x in [12, 5, 10, 18, 10]:\n    if x >= 10:\n        c = c + 1\n```\nQue vaut `c` à la fin ?",
+      "choix": ["$4$", "$3$", "$2$", "$5$"],
+      "reponse": 0,
+      "explication": "La condition `x >= 10` est **large** : elle retient $12$, $10$, $18$ et le second $10$, soit $4$ valeurs — une liste garde ses doublons, chaque occurrence compte. Les pièges : $3$ oublie qu'un des deux $10$ compte (ou lit la condition comme stricte, ce qui donnerait $2$), et $5$ compte tous les éléments sans appliquer le filtre."
+    }
+  ]
+}

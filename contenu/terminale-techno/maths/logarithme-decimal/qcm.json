@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-logarithme-decimal-qcm",
+  "chapitre": "tale-techno-math-logarithme-decimal",
+  "titre": "QCM — Fonction logarithme décimal",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que vaut $\\log(1000)$ ?",
+      "choix": [
+        "$3$",
+        "$100$",
+        "$10$",
+        "$1000$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(1000)$ répond à la question « 10 puissance combien donne 1000 ? » : comme $10^3 = 1000$, $\\log(1000) = 3$. Le piège : confondre le log avec une division par 10 ($1000/10 = 100$) — le log compte les puissances de 10, il ne divise pas."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que vaut $\\log(1)$ ?",
+      "choix": [
+        "$1$",
+        "$0$",
+        "$10$",
+        "Il n'existe pas"
+      ],
+      "reponse": 1,
+      "explication": "$\\log(1)$ est la solution de $10^x = 1$ : c'est $x = 0$, car $10^0 = 1$. Le piège : répondre $1$ en confondant avec $\\log 10 = 1$ — ou croire que $\\log 1$ n'existe pas, alors que $1 > 0$ ; c'est $\\log 0$ qui n'existe pas."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "On donne $\\log 2 \\approx 0{,}301$. Que vaut $\\log(200)$ ?",
+      "choix": [
+        "$\\approx 2{,}301$",
+        "$\\approx 0{,}602$",
+        "$\\approx 30{,}1$",
+        "$\\approx 60{,}2$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log 200 = \\log(2 \\times 100) = \\log 2 + \\log 100 = \\log 2 + 2 \\approx 2{,}301$ : le produit dans le log devient une somme. Le piège : multiplier $\\log 2$ par 100 ($30{,}1$) — le log transforme la multiplication par 100 en addition de 2, pas en multiplication."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "sens-de-variation",
+      "enonce": "Sans calculatrice, que peut-on affirmer sur $\\log(0{,}2)$ ?",
+      "choix": [
+        "$\\log(0{,}2) > 0$ car $0{,}2 > 0$",
+        "$\\log(0{,}2) = -5$",
+        "$\\log(0{,}2)$ n'existe pas",
+        "$\\log(0{,}2) < 0$ car $0 < 0{,}2 < 1$"
+      ],
+      "reponse": 3,
+      "explication": "Le log est strictement croissant et $\\log 1 = 0$ : tout nombre entre 0 et 1 a un log strictement négatif, donc $\\log(0{,}2) < 0$ (précisément $\\approx -0{,}7$). Les pièges : confondre « $b > 0$, donc le log existe » avec « le log est positif » — le seuil du signe est $1$, pas $0$ ; et $\\log(0{,}2)$ n'est pas $-5$, c'est $\\log(1/5) = -\\log 5$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "resolution-equations",
+      "enonce": "La solution de l'équation $2^x = 50$ est…",
+      "choix": [
+        "$x = \\dfrac{\\log 50}{\\log 2}$",
+        "$x = \\log\\dfrac{50}{2}$",
+        "$x = \\dfrac{50}{2}$",
+        "$x = \\log 50 - \\log 2$"
+      ],
+      "reponse": 0,
+      "explication": "On prend le log des deux membres : $x\\log 2 = \\log 50$, d'où $x = \\dfrac{\\log 50}{\\log 2} \\approx 5{,}64$. Le piège : écrire $\\log\\dfrac{50}{2} = \\log 25$ (qui vaut $\\log 50 - \\log 2 \\approx 1{,}4$) — le quotient DES logs n'est pas le log DU quotient."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "Pour tout entier $n$, $\\log(3^n)$ est égal à…",
+      "choix": [
+        "$(\\log 3)^n$",
+        "$n \\log 3$",
+        "$3\\log n$",
+        "$\\log 3 \\times \\log n$"
+      ],
+      "reponse": 1,
+      "explication": "C'est la propriété $\\log(a^n) = n\\log a$ : l'exposant descend en facteur devant le log. Le piège : $(\\log 3)^n$ élève le log à la puissance $n$ au lieu de le multiplier par $n$ — teste avec $n = 2$ : $\\log 9 \\approx 0{,}954 = 2\\log 3$, alors que $(\\log 3)^2 \\approx 0{,}228$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "resolution-equations",
+      "enonce": "Un capital est placé à $5\\,\\%$ par an (intérêts composés). Au bout de combien de temps a-t-il doublé ?",
+      "choix": [
+        "$x = \\dfrac{\\log 2}{\\log 1{,}05} \\approx 14{,}2$ ans",
+        "$x = \\dfrac{100}{5} = 20$ ans",
+        "$x = \\log\\dfrac{2}{1{,}05} \\approx 0{,}28$ an",
+        "$x = \\dfrac{2}{0{,}05} = 40$ ans"
+      ],
+      "reponse": 0,
+      "explication": "Le capital est multiplié par $1{,}05^x$ ; il double quand $1{,}05^x = 2$, soit $x = \\dfrac{\\log 2}{\\log 1{,}05} \\approx \\dfrac{0{,}301}{0{,}0212} \\approx 14{,}2$ ans. Le piège : le calcul « de tête » $100/5 = 20$ ans ignore la composition des intérêts (en 20 ans, le capital est multiplié par $1{,}05^{20} \\approx 2{,}65$, bien plus que doublé)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "transformations",
+      "enonce": "On donne $\\log 2 \\approx 0{,}301$. Que vaut $\\log(50)$ ?",
+      "choix": [
+        "$\\approx 1{,}301$",
+        "$\\approx 1{,}699$",
+        "$\\approx 0{,}699$",
+        "$\\approx 2{,}301$"
+      ],
+      "reponse": 1,
+      "explication": "$50 = \\dfrac{100}{2}$, donc $\\log 50 = \\log 100 - \\log 2 = 2 - \\log 2 \\approx 1{,}699$. Les pièges : $1{,}301 = 1 + \\log 2$ est $\\log 20$, $0{,}699$ est $\\log 5$, $2{,}301$ est $\\log 200$ — choisis la bonne décomposition de 50 en produit ou quotient de nombres dont tu connais le log."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "contextes",
+      "enonce": "En chimie, $\\text{pH} = -\\log[\\mathrm{H_3O^+}]$. Si la concentration $[\\mathrm{H_3O^+}]$ est multipliée par $10$, le pH…",
+      "choix": [
+        "est divisé par $10$",
+        "augmente de $1$",
+        "diminue de $1$",
+        "diminue de $10$"
+      ],
+      "reponse": 2,
+      "explication": "$-\\log(10c) = -(\\log 10 + \\log c) = -1 - \\log c = \\text{pH} - 1$ : multiplier la concentration par 10 fait perdre exactement 1 unité de pH. Le piège : raisonner multiplicativement (« divisé par 10 ») — le log transforme la multiplication par 10 en addition de 1, et le signe moins la change en soustraction."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "proprietes-algebriques",
+      "enonce": "Laquelle de ces égalités est vraie pour TOUS les réels $a > 0$ et $b > 0$ ?",
+      "choix": [
+        "$\\log(a+b) = \\log a + \\log b$",
+        "$\\log(ab) = \\log a \\times \\log b$",
+        "$\\log(ab) = \\log a + \\log b$",
+        "$\\log\\dfrac{a}{b} = \\dfrac{\\log a}{\\log b}$"
+      ],
+      "reponse": 2,
+      "explication": "La seule vraie est $\\log(ab) = \\log a + \\log b$ : le log transforme les produits en sommes. Le piège n°1 du chapitre est le premier choix, $\\log(a+b) = \\log a + \\log b$ : teste $a = b = 10$, $\\log 20 \\approx 1{,}3$ alors que $\\log 10 + \\log 10 = 2$. De même le log d'un quotient est une DIFFÉRENCE de logs, pas un quotient."
+    }
+  ]
+}

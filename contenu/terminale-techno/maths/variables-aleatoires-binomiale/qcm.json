@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-variables-aleatoires-binomiale-qcm",
+  "chapitre": "tale-techno-math-variables-aleatoires-binomiale",
+  "titre": "QCM — Variables aléatoires et loi binomiale",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "esperance",
+      "enonce": "Une variable aléatoire $X$ prend les valeurs $0$, $1$ et $2$ avec les probabilités $0{,}5$, $0{,}3$ et $0{,}2$. Que vaut $E(X)$ ?",
+      "choix": [
+        "$0{,}7$",
+        "$1$",
+        "$3$",
+        "$0{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = 0 \\times 0{,}5 + 1 \\times 0{,}3 + 2 \\times 0{,}2 = 0 + 0{,}3 + 0{,}4 = 0{,}7$. Le piège : $1$ est la moyenne simple des valeurs $\\frac{0+1+2}{3}$ — l'espérance pondère chaque valeur par sa probabilité. $3$ additionne les valeurs, et $0{,}5$ est la probabilité la plus grande, pas une moyenne."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "triangle-de-pascal",
+      "enonce": "En lisant le triangle de Pascal (ligne $4$ : $1$, $4$, $6$, $4$, $1$), que vaut $\\dbinom{4}{2}$ ?",
+      "choix": [
+        "$6$",
+        "$4$",
+        "$8$",
+        "$12$"
+      ],
+      "reponse": 0,
+      "explication": "Lignes et colonnes du triangle sont numérotées à partir de $0$ : $\\dbinom{4}{2}$ est le troisième nombre de la ligne $4$, soit $6$. Le piège : répondre $4$, c'est lire le deuxième nombre (colonne $1$) en comptant les colonnes à partir de $1$. $8$ vient du produit $4 \\times 2$ — un coefficient binomial ne se calcule pas ainsi."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "triangle-de-pascal",
+      "enonce": "La ligne $5$ du triangle de Pascal est $1$, $5$, $10$, $10$, $5$, $1$. Comment obtenir $\\dbinom{6}{2}$ ?",
+      "choix": [
+        "$\\dbinom{6}{2} = 5 + 10 = 15$",
+        "$\\dbinom{6}{2} = 5 \\times 10 = 50$",
+        "$\\dbinom{6}{2} = 10 + 10 = 20$",
+        "$\\dbinom{6}{2} = 10$"
+      ],
+      "reponse": 0,
+      "explication": "Règle de construction du triangle : chaque nombre est la somme des deux nombres situés au-dessus de lui, $\\dbinom{6}{2} = \\dbinom{5}{1} + \\dbinom{5}{2} = 5 + 10 = 15$. Le piège : multiplier au lieu d'additionner ($50$), ou prendre les deux mauvais voisins — $10 + 10 = 20$ donne $\\dbinom{6}{3}$, un cran trop à droite."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "loi-binomiale",
+      "enonce": "Dans laquelle de ces situations la variable $X$ suit-elle une loi binomiale ?",
+      "choix": [
+        "On lance $10$ fois un dé équilibré ; $X$ compte le nombre de $6$ obtenus.",
+        "On tire $3$ cartes sans remise dans un jeu de $32$ ; $X$ compte le nombre d'as.",
+        "On lance un dé jusqu'à obtenir un $6$ ; $X$ compte le nombre de lancers effectués.",
+        "On lance $10$ fois un dé ; $X$ est la somme des résultats obtenus."
+      ],
+      "reponse": 0,
+      "explication": "Il faut les trois conditions : même épreuve de Bernoulli, $n$ répétitions indépendantes, $X$ compte les succès — c'est le cas des $10$ lancers avec succès « obtenir $6$ », $X \\sim B(10\\,;\\ 1/6)$. Les pièges : sans remise, les tirages ne sont pas indépendants ; « jusqu'à obtenir un $6$ », le nombre d'épreuves n'est pas fixé ; une somme de résultats ne compte pas des succès."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "loi-binomiale",
+      "enonce": "$X$ suit la loi $B(8\\,;\\ 0{,}3)$ et compte le nombre de clients satisfaits parmi $8$ clients interrogés. Que signifie l'événement $\\{X = 3\\}$ ?",
+      "choix": [
+        "Exactement $3$ des $8$ clients sont satisfaits.",
+        "Au moins $3$ des $8$ clients sont satisfaits.",
+        "Le troisième client interrogé est satisfait.",
+        "Au plus $3$ des $8$ clients sont satisfaits."
+      ],
+      "reponse": 0,
+      "explication": "$\\{X = 3\\}$ signifie que $X$ prend la valeur $3$ : exactement $3$ succès sur les $8$ épreuves, ni plus ni moins. Le piège : confondre avec « au moins $3$ » ou « au plus $3$ » (qui regroupent plusieurs valeurs de $X$), ou croire que $3$ désigne le rang d'une épreuve — $X$ compte les succès, il ne repère pas leur position."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "esperance",
+      "enonce": "$X$ désigne le gain algébrique d'un joueur à un jeu de hasard, et $E(X) = -0{,}5$ (en euros). Quelle est la bonne interprétation ?",
+      "choix": [
+        "Sur un grand nombre de parties, le joueur perd en moyenne $0{,}50$ € par partie.",
+        "Le joueur perd exactement $0{,}50$ € à chaque partie.",
+        "Le jeu est équitable.",
+        "Le joueur a une probabilité $0{,}5$ de perdre à chaque partie."
+      ],
+      "reponse": 0,
+      "explication": "L'espérance s'interprète comme une moyenne sur un grand nombre de répétitions : ici une perte moyenne de $0{,}50$ € par partie — le jeu est défavorable au joueur. Le piège : $E(X)$ ne dit rien d'une partie donnée (le joueur ne perd jamais exactement $0{,}50$ €), un jeu équitable exigerait $E(X) = 0$, et $-0{,}5$ est une valeur moyenne en euros, pas une probabilité."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "calculer-p-x-k",
+      "enonce": "$X$ suit la loi $B(5\\,;\\ 0{,}2)$. On donne $\\dbinom{5}{2} = 10$. Que vaut $P(X = 2)$ ?",
+      "choix": [
+        "$0{,}2048$",
+        "$0{,}02048$",
+        "$0{,}32$",
+        "$0{,}4$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X = 2) = \\dbinom{5}{2} \\times 0{,}2^2 \\times 0{,}8^3 = 10 \\times 0{,}04 \\times 0{,}512 = 0{,}2048$. Le piège : $0{,}02048$ oublie le coefficient binomial ($0{,}2^2 \\times 0{,}8^3$ n'est la probabilité que d'un seul chemin sur les $10$), $0{,}32$ prend l'exposant $1$ pour $0{,}8$ au lieu de $n - k = 3$, et $0{,}4$ s'arrête à $10 \\times 0{,}04$ en oubliant les échecs."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "esperance-binomiale",
+      "enonce": "$X$ suit la loi $B(20\\,;\\ 0{,}15)$. Que vaut $E(X)$ ?",
+      "choix": [
+        "$3$",
+        "$0{,}15$",
+        "$17$",
+        "$2{,}55$"
+      ],
+      "reponse": 0,
+      "explication": "Pour une loi binomiale, $E(X) = np = 20 \\times 0{,}15 = 3$ : en moyenne $3$ succès sur les $20$ épreuves. Le piège : $0{,}15$ est $p$ tout seul, $17$ est $n(1-p)$ — le nombre moyen d'échecs, pas de succès — et $2{,}55$ vaut $np(1-p)$, un produit qui mélange la formule avec autre chose que l'espérance."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "triangle-de-pascal",
+      "enonce": "La ligne $7$ du triangle de Pascal est $1$, $7$, $21$, $35$, $35$, $21$, $7$, $1$. Que vaut $\\dbinom{7}{5}$ ?",
+      "choix": [
+        "$21$",
+        "$35$",
+        "$7$",
+        "$42$"
+      ],
+      "reponse": 0,
+      "explication": "Par symétrie du triangle, $\\dbinom{7}{5} = \\dbinom{7}{7-5} = \\dbinom{7}{2} = 21$ ; on peut aussi compter jusqu'à la colonne $5$ en partant de $0$ : $1, 7, 21, 35, 35, \\mathbf{21}$. Le piège : $35$ vient d'un décalage d'une colonne (numérotation commencée à $1$), $7$ confond avec $\\dbinom{7}{1}$, et $42$ additionne $21 + 21$ sans raison."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "calculer-p-x-k",
+      "enonce": "On lance $4$ fois une pièce équilibrée ; $X$ compte le nombre de « pile ». Que vaut $P(X = 2)$ ?",
+      "choix": [
+        "$0{,}375$",
+        "$0{,}5$",
+        "$0{,}25$",
+        "$0{,}0625$"
+      ],
+      "reponse": 0,
+      "explication": "$X \\sim B(4\\,;\\ 0{,}5)$ et $P(X = 2) = \\dbinom{4}{2} \\times 0{,}5^2 \\times 0{,}5^2 = 6 \\times 0{,}0625 = 0{,}375$. Le piège : répondre $0{,}5$ « parce que la pièce est équilibrée » — la valeur la plus probable n'a pas une probabilité de $0{,}5$ ; $0{,}0625$ oublie le coefficient $\\dbinom{4}{2} = 6$ (un seul chemin au lieu de six), et $0{,}25$ est $p^2$ sans les échecs ni le coefficient."
+    }
+  ]
+}

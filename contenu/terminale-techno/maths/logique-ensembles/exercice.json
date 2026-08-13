@@ -1,0 +1,88 @@
+{
+  "id": "tale-techno-math-logique-ensembles-exos",
+  "chapitre": "tale-techno-math-logique-ensembles",
+  "titre": "Exercices — Vocabulaire ensembliste et logique",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "reunion-intersection-complementaire",
+      "enonce": "On considère l'ensemble $E = \\{1\\,;2\\,;3\\,;4\\,;5\\,;6\\,;7\\,;8\\}$ (les faces d'un dé à 8 faces), $A = \\{2\\,;4\\,;6\\,;8\\}$ (les numéros pairs) et $B = \\{1\\,;2\\,;3\\,;4\\}$ (les numéros inférieurs ou égaux à 4). Déterminer $A \\cap B$, $A \\cup B$ et $\\bar{A}$ (le complémentaire de $A$ dans $E$).",
+      "corrige": [
+        "$A \\cap B$ contient les éléments qui sont dans $A$ **et** dans $B$, c'est-à-dire les numéros à la fois pairs et inférieurs ou égaux à 4 : $A \\cap B = \\{2\\,;4\\}$.",
+        "$A \\cup B$ contient les éléments qui sont dans $A$ **ou** dans $B$, chacun écrit une seule fois : $A \\cup B = \\{1\\,;2\\,;3\\,;4\\,;6\\,;8\\}$. Attention, $2$ et $4$ appartiennent aux deux ensembles mais ne sont comptés qu'une fois.",
+        "$\\bar{A}$ contient les éléments de $E$ qui ne sont **pas** dans $A$, c'est-à-dire les numéros impairs : $\\bar{A} = \\{1\\,;3\\,;5\\,;7\\}$."
+      ],
+      "reponse": "$A \\cap B = \\{2\\,;4\\}$ ; $A \\cup B = \\{1\\,;2\\,;3\\,;4\\,;6\\,;8\\}$ ; $\\bar{A} = \\{1\\,;3\\,;5\\,;7\\}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "appartenance-inclusion",
+      "enonce": "Soit $E = \\{0\\,;1\\,;2\\,;3\\,;4\\,;5\\}$. Pour chacune des écritures suivantes, dire si elle est correcte ou incorrecte, et corriger celles qui sont incorrectes : (a) $3 \\in E$ ; (b) $\\{1\\,;2\\} \\in E$ ; (c) $7 \\in E$ ; (d) $\\{0\\,;5\\} \\subset E$.",
+      "corrige": [
+        "(a) Correcte : $3$ est un élément de $E$, le symbole $\\in$ relie bien un élément à un ensemble.",
+        "(b) Incorrecte : $\\{1\\,;2\\}$ est un **ensemble**, pas un élément de $E$. Entre deux ensembles, on utilise l'inclusion : la bonne écriture est $\\{1\\,;2\\} \\subset E$, vraie car $1$ et $2$ appartiennent tous les deux à $E$.",
+        "(c) Incorrecte : $7$ ne figure pas dans la liste des éléments de $E$. La bonne écriture est $7 \\notin E$.",
+        "(d) Correcte : $\\{0\\,;5\\}$ est un ensemble dont tous les éléments ($0$ et $5$) appartiennent à $E$, donc il est inclus dans $E$."
+      ],
+      "reponse": "(a) correcte ; (b) incorrecte, écrire $\\{1\\,;2\\} \\subset E$ ; (c) incorrecte, écrire $7 \\notin E$ ; (d) correcte."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "couple-produit-cartesien",
+      "enonce": "Pour créer un badge d'accès, un lycée attribue à chaque élève un code formé d'une lettre choisie dans $L = \\{\\mathrm{A}\\,;\\mathrm{B}\\,;\\mathrm{C}\\}$ suivie d'un chiffre choisi dans $C = \\{1\\,;2\\,;3\\,;4\\}$. (a) Écrire trois éléments différents du produit cartésien $L \\times C$. (b) Combien de codes différents le lycée peut-il créer ? (c) Les codes $(\\mathrm{A}\\,;2)$ et $(2\\,;\\mathrm{A})$ désignent-ils le même badge ?",
+      "corrige": [
+        "(a) Un élément de $L \\times C$ est un **couple** (lettre ; chiffre), par exemple $(\\mathrm{A}\\,;1)$, $(\\mathrm{B}\\,;3)$ et $(\\mathrm{C}\\,;4)$.",
+        "(b) Chaque lettre ($3$ possibilités) se combine avec chaque chiffre ($4$ possibilités). Le produit cartésien $L \\times C$ compte donc $3 \\times 4 = 12$ couples : le lycée peut créer $12$ codes. On peut le vérifier avec un tableau à double entrée de 3 lignes et 4 colonnes.",
+        "(c) Non. Dans un couple, **l'ordre compte** : $(\\mathrm{A}\\,;2)$ commence par une lettre, conformément au format demandé, tandis que $(2\\,;\\mathrm{A})$ commence par un chiffre. Ce n'est d'ailleurs même pas un élément de $L \\times C$ : $(2\\,;\\mathrm{A})$ appartient à $C \\times L$."
+      ],
+      "reponse": "(a) Par exemple $(\\mathrm{A}\\,;1)$, $(\\mathrm{B}\\,;3)$, $(\\mathrm{C}\\,;4)$ ; (b) $3 \\times 4 = 12$ codes ; (c) non, l'ordre compte dans un couple."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "connecteurs-et-ou",
+      "enonce": "Une agence de location retient les annonces d'appartements qui vérifient : « le loyer est inférieur ou égal à $700$ € **et** la surface est supérieure ou égale à $30$ m$^2$ ». Quatre annonces sont proposées : A ($650$ €, $35$ m$^2$), B ($680$ €, $25$ m$^2$), C ($750$ €, $40$ m$^2$), D ($720$ €, $28$ m$^2$). (a) Quelles annonces sont retenues ? (b) Mêmes questions si l'agence remplace « et » par « ou ». (c) Une annonce écartée par le critère « ou » pouvait-elle être retenue par le critère « et » ?",
+      "corrige": [
+        "(a) Avec « et », il faut vérifier les **deux** conditions. A : $650 \\leq 700$ vrai et $35 \\geq 30$ vrai, retenue. B : loyer correct mais $25 < 30$, écartée. C : $750 > 700$, écartée. D : $720 > 700$ et $28 < 30$, écartée. Seule l'annonce A est retenue.",
+        "(b) Avec « ou », il suffit qu'**au moins une** condition soit vraie. A : les deux vraies, retenue (le « ou » mathématique est inclusif). B : loyer correct, retenue. C : surface correcte, retenue. D : aucune des deux conditions n'est vraie ($720 > 700$ et $28 < 30$), écartée. Annonces retenues : A, B et C.",
+        "(c) Non, c'est impossible. Une annonce qui vérifie « loyer $\\leq 700$ **et** surface $\\geq 30$ » vérifie en particulier au moins une des deux conditions, donc elle vérifie aussi le « ou ». En langage d'ensembles : $A \\cap B \\subset A \\cup B$ — le critère « et » est plus exigeant que le critère « ou »."
+      ],
+      "reponse": "(a) Seule A ; (b) A, B et C ; (c) non : tout ce qui vérifie le « et » vérifie aussi le « ou » ($A \\cap B \\subset A \\cup B$)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "contre-exemple",
+      "enonce": "Trois affirmations portent sur les réels ou les entiers. (a) « Pour tout réel $x$, $(x+1)^2 = x^2 + 2x + 1$. » (b) « Pour tout réel $x$, $\\sqrt{x^2} = x$. » (c) « Pour tout entier naturel $n$, $2n \\geq n + 1$. » Pour chacune, dire si elle est vraie ou fausse. Si elle est fausse, donner un contre-exemple ; si elle est vraie, la démontrer.",
+      "corrige": [
+        "(a) Vraie. On développe pour un $x$ **quelconque** : $(x+1)^2 = (x+1)(x+1) = x^2 + x + x + 1 = x^2 + 2x + 1$. C'est une identité — un raisonnement général, pas une liste d'exemples.",
+        "(b) Fausse. Contre-exemple : $x = -2$. Alors $x^2 = 4$ et $\\sqrt{4} = 2$, donc $\\sqrt{x^2} = 2 \\neq -2 = x$. Un seul contre-exemple suffit à conclure. (L'affirmation ne devient vraie que si on la restreint aux $x \\geq 0$.)",
+        "(c) Fausse. Contre-exemple : $n = 0$. Alors $2n = 0$ et $n + 1 = 1$, donc $2n < n + 1$. Le piège : l'inégalité est vraie pour tous les entiers $n \\geq 1$, et tester $n = 1, 2, 3\\ldots$ pouvait faire croire qu'elle était toujours vraie. C'est bien pour cela que des exemples ne démontrent jamais un « pour tout » : il fallait penser au cas $n = 0$."
+      ],
+      "reponse": "(a) vraie (développement valable pour tout $x$) ; (b) fausse, contre-exemple $x = -2$ ; (c) fausse, contre-exemple $n = 0$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "condition-necessaire-suffisante",
+      "enonce": "On considère la proposition $P_1$ : « si un quadrilatère est un carré, alors ses diagonales ont la même longueur ». (a) Énoncer la réciproque de $P_1$. (b) La proposition $P_1$ est admise vraie ; sa réciproque est-elle vraie ? Justifier à l'aide d'un contre-exemple. (c) Recopier et compléter avec « nécessaire » ou « suffisante » : « être un carré est une condition … pour avoir des diagonales de même longueur » ; « avoir des diagonales de même longueur est une condition … pour être un carré ».",
+      "corrige": [
+        "(a) La réciproque s'obtient en échangeant l'hypothèse et la conclusion : « si un quadrilatère a des diagonales de même longueur, alors c'est un carré ».",
+        "(b) La réciproque est **fausse**. Contre-exemple : un rectangle de longueur $6$ et de largeur $3$ n'est pas un carré, et pourtant ses deux diagonales ont la même longueur. Avoir des diagonales égales ne suffit donc pas à être un carré.",
+        "(c) Dans $P_1$ (vraie), l'hypothèse « être un carré » est une condition **suffisante** : il suffit d'être un carré pour avoir des diagonales égales. La conclusion « diagonales de même longueur » est une condition **nécessaire** : tout carré l'exige forcément. Mais comme la réciproque est fausse, elle n'est pas suffisante — c'est exactement ce que montre le rectangle du (b).",
+        "Bilan de méthode : proposition vraie + réciproque fausse = pas d'équivalence. On ne peut pas remplacer « carré » par « diagonales égales » dans un raisonnement."
+      ],
+      "reponse": "(a) « Si un quadrilatère a des diagonales de même longueur, alors c'est un carré » ; (b) fausse, contre-exemple : un rectangle non carré ; (c) « être un carré » est suffisante, « avoir des diagonales de même longueur » est nécessaire."
+    }
+  ]
+}

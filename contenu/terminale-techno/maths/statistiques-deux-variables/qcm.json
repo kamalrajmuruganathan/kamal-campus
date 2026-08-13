@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-statistiques-deux-variables-qcm",
+  "chapitre": "tale-techno-math-statistiques-deux-variables",
+  "titre": "QCM — Séries statistiques à deux variables : changement de variable",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "principe-changement",
+      "enonce": "À quoi sert un changement de variable dans l'étude d'une série statistique à deux variables ?",
+      "choix": [
+        "À ramener un nuage de points courbe à un nuage rectiligne, pour pouvoir faire un ajustement affine",
+        "À supprimer les points aberrants du nuage",
+        "À calculer plus vite les coordonnées du point moyen",
+        "À remplacer la méthode des moindres carrés par une méthode plus précise"
+      ],
+      "reponse": 0,
+      "explication": "Quand le nuage $(x\\,;y)$ est courbe, une droite serait un mauvais modèle. On transforme une variable (par exemple $z = \\log(y)$) pour que le nuage $(x\\,;z)$ soit rectiligne : l'ajustement redevient affine, avec les mêmes outils qu'en Première. Le piège : croire qu'on change de méthode d'ajustement — non, ce sont toujours les moindres carrés, appliqués au nuage transformé."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "changement-log",
+      "enonce": "On pose $z = \\log(y)$. Pour le point du nuage tel que $y = 1\\,000$, la valeur de $z$ est :",
+      "choix": [
+        "$3$",
+        "$1\\,000$",
+        "$10$",
+        "$100$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition du logarithme décimal, $\\log(1\\,000) = \\log(10^3) = 3$. Le piège est de confondre $\\log(b)$ avec $b$ lui-même ou avec $\\dfrac{b}{100}$ : $\\log$ compte l'exposant de $10$, il transforme $1\\,000$ en $3$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "changement-log",
+      "enonce": "On pose $z = \\log(y)$. Pour $y = 250$, la valeur de $z$ arrondie au centième est :",
+      "choix": [
+        "$2{,}40$",
+        "$2{,}50$",
+        "$5{,}52$",
+        "$0{,}40$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(250) \\approx 2{,}398$, soit $2{,}40$ : c'est cohérent car $250$ est entre $10^2 = 100$ et $10^3 = 1\\,000$, donc $z$ est entre $2$ et $3$. Les pièges : $2{,}50$ vient de lire « 250 » au lieu de calculer le log ; $5{,}52$ est le logarithme népérien $\\ln(250)$, hors programme ici — en terminale technologique, on travaille avec le logarithme décimal."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "changement-log",
+      "enonce": "On a posé $z = \\log(y)$ et obtenu l'ajustement $z = 0{,}2x + 1$. Le modèle pour $y$ est :",
+      "choix": [
+        "$y = 10 \\times \\left(10^{0{,}2}\\right)^x$",
+        "$y = 0{,}2x + 1$",
+        "$y = 10 \\times 0{,}2^x$",
+        "$y = \\log(0{,}2x + 1)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(y) = 0{,}2x + 1$ signifie $y = 10^{\\,0{,}2x+1} = 10^1 \\times \\left(10^{0{,}2}\\right)^x$ : un modèle exponentiel de coefficient $10^{0{,}2} \\approx 1{,}58$. Le piège principal est d'oublier le retour à $y$ (réponse $y = 0{,}2x+1$ : c'est $z$, pas $y$) ou d'écrire $0{,}2^x$ en confondant la pente avec la base de l'exponentielle."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "changement-inverse",
+      "enonce": "On a posé $z = \\dfrac{1}{y}$ et obtenu l'ajustement $z = 0{,}5x$. Le modèle pour $y$ est :",
+      "choix": [
+        "$y = \\dfrac{2}{x}$",
+        "$y = 0{,}5x$",
+        "$y = 2x$",
+        "$y = \\dfrac{x}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "De $\\dfrac{1}{y} = 0{,}5x$ on tire $y = \\dfrac{1}{0{,}5x} = \\dfrac{2}{x}$. Le piège : inverser seulement le coefficient ($2x$) ou oublier d'inverser ($0{,}5x$). L'inverse de $0{,}5x$ est $\\dfrac{1}{0{,}5x}$, tout le membre passe au dénominateur."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "nuages-courbes",
+      "enonce": "Pour des $x_i$ régulièrement espacés, les valeurs de $y$ sont $50$ ; $100$ ; $200$ ; $400$ ; $800$. Quel changement de variable donné par un énoncé rendrait ce nuage rectiligne ?",
+      "choix": [
+        "$z = \\log(y)$, car les quotients $\\dfrac{y_{i+1}}{y_i}$ sont constants",
+        "Aucun : le nuage est déjà rectiligne, car $y$ augmente à chaque étape",
+        "$z = y^2$, car les valeurs de $y$ sont de plus en plus grandes",
+        "$z = \\dfrac{1}{y}$, car $y$ ne s'annule jamais"
+      ],
+      "reponse": 0,
+      "explication": "$y$ est multiplié par $2$ à chaque pas : les quotients sont constants, c'est la signature d'un modèle exponentiel $y = k \\times q^x$, que $z = \\log(y)$ transforme en modèle affine. Le piège : « $y$ augmente régulièrement » ne veut pas dire « nuage rectiligne » — ici les différences ($50$, $100$, $200$, $400$) ne sont pas constantes, le nuage est courbe."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "changement-log",
+      "enonce": "Avec $z = \\log(y)$, l'ajustement obtenu est $z = 0{,}05x + 2$ ($x$ en années). Quelle est l'évolution annuelle de $y$ selon ce modèle ?",
+      "choix": [
+        "$y$ est multiplié par $10^{0{,}05} \\approx 1{,}12$, soit environ $+12\\,\\%$ par an",
+        "$y$ augmente d'environ $+5\\,\\%$ par an",
+        "$y$ augmente de $0{,}05$ unité par an",
+        "$y$ est multiplié par $10^2 = 100$ chaque année"
+      ],
+      "reponse": 0,
+      "explication": "Quand $x$ augmente de $1$, $z = \\log(y)$ augmente de $0{,}05$, donc $y$ est multiplié par $10^{0{,}05} \\approx 1{,}122$ : environ $+12\\,\\%$ par an. Le piège classique est de lire la pente comme un taux ($+5\\,\\%$) : la pente est l'accroissement du LOGARITHME, pas de $y$. Quant à $10^2$, c'est $10^b$, la valeur initiale du modèle, pas le coefficient annuel."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "interpolation-extrapolation",
+      "enonce": "Avec $z = \\log(y)$ et l'ajustement $z = 0{,}25x + 1{,}5$, pour quelle valeur de $x$ le modèle prévoit-il que $y$ atteint $10\\,000$ ?",
+      "choix": [
+        "$x = 10$",
+        "$x = 34$",
+        "$x = 4$",
+        "$x = 39\\,994$"
+      ],
+      "reponse": 0,
+      "explication": "$y = 10\\,000 = 10^4$ équivaut à $z = \\log(10\\,000) = 4$. On résout $0{,}25x + 1{,}5 = 4$, soit $0{,}25x = 2{,}5$ et $x = 10$. Les pièges : oublier de passer au logarithme et résoudre $0{,}25x + 1{,}5 = 10\\,000$ (ce qui donne $x \\approx 39\\,994$), ou confondre $\\log(10\\,000) = 4$ avec la valeur cherchée de $x$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "changement-carre",
+      "enonce": "On a posé $z = y^2$ (avec $y > 0$) et obtenu l'ajustement $z = 9x$. Le modèle pour $y$ est :",
+      "choix": [
+        "$y = 3\\sqrt{x}$",
+        "$y = 9x^2$",
+        "$y = 3x$",
+        "$y = \\dfrac{9x}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "De $y^2 = 9x$ on tire $y = \\sqrt{9x} = 3\\sqrt{x}$ (racine possible car $y > 0$). Les pièges : élever au carré au lieu de prendre la racine ($9x^2$), oublier que la racine porte aussi sur $x$ ($3x$), ou « diviser par 2 » comme si le carré était un double."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "interpolation-extrapolation",
+      "enonce": "Un ajustement (après changement de variable) a été construit sur des données allant de $x = 2$ à $x = 10$. Parmi ces usages, lequel est une INTERPOLATION ?",
+      "choix": [
+        "Estimer $y$ pour $x = 6$",
+        "Estimer $y$ pour $x = 20$",
+        "Estimer $y$ pour $x = 0$",
+        "Recalculer $y$ pour $x = 10$, valeur déjà mesurée"
+      ],
+      "reponse": 0,
+      "explication": "Interpoler, c'est estimer À L'INTÉRIEUR de la plage observée $[2\\,;10]$ : c'est le cas de $x = 6$. Les valeurs $x = 20$ et $x = 0$ sont HORS de la plage : ce sont des extrapolations, à manier avec prudence — y compris vers la gauche, un piège fréquent ($x = 0$ est avant les données). Recalculer une valeur mesurée n'est pas une estimation."
+    }
+  ]
+}

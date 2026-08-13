@@ -1,0 +1,154 @@
+{
+  "id": "tale-techno-math-probabilites-conditionnelles-qcm",
+  "chapitre": "tale-techno-math-probabilites-conditionnelles",
+  "titre": "QCM — Probabilités conditionnelles",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "On donne $P(A) = 0{,}5$ et $P(A \\cap B) = 0{,}2$. Que vaut $P_A(B)$ ?",
+      "choix": [
+        "$0{,}4$",
+        "$0{,}1$",
+        "$0{,}7$",
+        "$2{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition, $P_A(B) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0{,}2}{0{,}5} = 0{,}4$. Le piège : $0{,}1$ vient de multiplier au lieu de diviser, $0{,}7$ d'additionner, et $2{,}5$ de diviser dans le mauvais sens ($0{,}5/0{,}2$) — une probabilité ne peut jamais dépasser $1$, ce qui doit t'alerter."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "arbre-pondere",
+      "enonce": "Sur un arbre pondéré, on lit $P_A(B) = 0{,}3$ sur la branche qui va de $A$ vers $B$. Que porte la branche qui va de $A$ vers $\\bar{B}$ ?",
+      "choix": [
+        "$0{,}7$",
+        "$0{,}3$",
+        "On ne peut pas savoir sans connaître $P(A)$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "Les branches issues d'un même nœud somment à $1$ : $P_A(\\bar{B}) = 1 - P_A(B) = 1 - 0{,}3 = 0{,}7$. Le piège : croire qu'il faut $P(A)$ — la règle des branches se lit nœud par nœud, sans autre information. C'est aussi le contrôle à faire sur chaque arbre que tu construis."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "lien-produit",
+      "enonce": "On donne $P(A) = 0{,}6$ et $P_A(B) = 0{,}25$. Que vaut $P(A \\cap B)$ ?",
+      "choix": [
+        "$0{,}15$",
+        "$0{,}25$",
+        "$0{,}85$",
+        "$\\approx 0{,}42$"
+      ],
+      "reponse": 0,
+      "explication": "Formule du produit : $P(A \\cap B) = P(A) \\times P_A(B) = 0{,}6 \\times 0{,}25 = 0{,}15$. Le piège n°1 du chapitre : répondre $0{,}25$, c'est confondre $P_A(B)$ (proportion parmi les $A$) avec $P(A \\cap B)$ (proportion sur l'univers entier). $0{,}85$ additionne, et $0{,}42$ divise ($0{,}25/0{,}6$) au lieu de multiplier."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "arbre-pondere",
+      "enonce": "Sur un arbre pondéré, quel nombre porte la branche de deuxième niveau qui va du nœud $A$ vers $B$ ?",
+      "choix": [
+        "$P_A(B)$",
+        "$P(B)$",
+        "$P(A \\cap B)$",
+        "$P_B(A)$"
+      ],
+      "reponse": 0,
+      "explication": "Une branche de deuxième niveau porte toujours une probabilité conditionnelle : partie de $A$, elle porte $P_A(B)$, la probabilité de $B$ sachant $A$. Le piège : y mettre $P(B)$ (qui ignore la condition) ou $P(A \\cap B)$ — l'intersection est la probabilité du chemin entier (produit des branches), pas d'une branche."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "Une machine $M_1$ produit $60\\,\\%$ des pièces d'un atelier, une machine $M_2$ les $40\\,\\%$ restants. $2\\,\\%$ des pièces de $M_1$ et $5\\,\\%$ des pièces de $M_2$ sont défectueuses. Quelle est la probabilité qu'une pièce prise au hasard soit défectueuse ?",
+      "choix": [
+        "$0{,}032$",
+        "$0{,}07$",
+        "$0{,}035$",
+        "$0{,}001$"
+      ],
+      "reponse": 0,
+      "explication": "Probabilités totales avec la partition $\\{M_1, M_2\\}$ : $P(D) = 0{,}6 \\times 0{,}02 + 0{,}4 \\times 0{,}05 = 0{,}012 + 0{,}02 = 0{,}032$. Le piège : $0{,}07$ additionne les taux sans les pondérer, $0{,}035$ est la moyenne simple des taux (il faut la moyenne pondérée par les parts de production), et $0{,}001$ multiplie les deux taux entre eux."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "traduire-enonce",
+      "enonce": "« Parmi les clients abonnés ($A$), $80\\,\\%$ utilisent l'appli mobile ($M$). » Comment traduire cette phrase ?",
+      "choix": [
+        "$P_A(M) = 0{,}8$",
+        "$P(A \\cap M) = 0{,}8$",
+        "$P_M(A) = 0{,}8$",
+        "$P(M) = 0{,}8$"
+      ],
+      "reponse": 0,
+      "explication": "« Parmi les abonnés » restreint l'univers à $A$ : c'est la conditionnelle $P_A(M) = 0{,}8$. Le piège : $P(A \\cap M)$ serait « $80\\,\\%$ des clients sont abonnés ET utilisent l'appli » (sur tous les clients), et $P_M(A)$ inverse la condition (« parmi les utilisateurs de l'appli, $80\\,\\%$ sont abonnés ») — ce n'est pas ce que dit la phrase."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "inverser-la-condition",
+      "enonce": "Dans l'atelier de la question 5 ($P(M_2 \\cap D) = 0{,}02$ et $P(D) = 0{,}032$), une pièce prélevée est défectueuse. Quelle est la probabilité qu'elle vienne de $M_2$ ?",
+      "choix": [
+        "$0{,}625$",
+        "$0{,}05$",
+        "$0{,}4$",
+        "$0{,}02$"
+      ],
+      "reponse": 0,
+      "explication": "On renverse la condition avec la définition : $P_D(M_2) = \\dfrac{P(M_2 \\cap D)}{P(D)} = \\dfrac{0{,}02}{0{,}032} = 0{,}625$. Le piège : $0{,}05$ est $P_{M_2}(D)$, la conditionnelle dans l'autre sens — $P_D(M_2) \\neq P_{M_2}(D)$. $0{,}4$ est $P(M_2)$ sans tenir compte de l'information « défectueuse », et $0{,}02$ est l'intersection, pas la conditionnelle."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "probabilites-totales",
+      "enonce": "Dans une enseigne, $30\\,\\%$ des clients ont un pass premium ($P$). $90\\,\\%$ des clients premium sont satisfaits ($S$), contre $60\\,\\%$ des autres clients. Quelle est la probabilité qu'un client pris au hasard soit satisfait ?",
+      "choix": [
+        "$0{,}69$",
+        "$0{,}75$",
+        "$0{,}27$",
+        "$0{,}54$"
+      ],
+      "reponse": 0,
+      "explication": "Probabilités totales avec la partition $\\{P, \\bar{P}\\}$ : $P(S) = 0{,}3 \\times 0{,}9 + 0{,}7 \\times 0{,}6 = 0{,}27 + 0{,}42 = 0{,}69$. Le piège : $0{,}75$ est la moyenne simple de $0{,}9$ et $0{,}6$ (il faut pondérer par $0{,}3$ et $0{,}7$), $0{,}27$ oublie le chemin $\\bar{P} \\cap S$ — un chemin par élément de la partition — et $0{,}54$ multiplie $0{,}9 \\times 0{,}6$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "inverser-la-condition",
+      "enonce": "Une maladie touche $1\\,\\%$ d'une population. Un test est positif pour $95\\,\\%$ des malades : $P_M(T) = 0{,}95$. On a calculé $P(M \\cap T) = 0{,}0095$ et $P(T) = 0{,}0491$. Quelle est la probabilité qu'une personne testée positive soit malade ?",
+      "choix": [
+        "$\\approx 0{,}19$",
+        "$0{,}95$",
+        "$0{,}0095$",
+        "$\\approx 0{,}05$"
+      ],
+      "reponse": 0,
+      "explication": "$P_T(M) = \\dfrac{P(M \\cap T)}{P(T)} = \\dfrac{0{,}0095}{0{,}0491} \\approx 0{,}19$ : moins d'un positif sur cinq est malade, car la maladie est rare et les faux positifs pèsent lourd. Le piège majeur : répondre $0{,}95$, c'est confondre $P_T(M)$ avec $P_M(T)$ — la fiabilité du test chez les malades ne dit pas ce que vaut un résultat positif. $0{,}0095$ est l'intersection, pas la conditionnelle."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "lien-produit",
+      "enonce": "$A$ et $B$ sont deux événements avec $P(A) \\neq 0$ et $P(B) \\neq 0$. Laquelle de ces égalités est toujours vraie ?",
+      "choix": [
+        "$P(A \\cap B) = P(A) \\times P_A(B)$",
+        "$P(A \\cap B) = P(A) \\times P(B)$",
+        "$P_A(B) = P_B(A)$",
+        "$P_A(B) = P(A \\cap B)$"
+      ],
+      "reponse": 0,
+      "explication": "La formule du produit $P(A \\cap B) = P(A) \\times P_A(B)$ découle directement de la définition de $P_A(B)$ : elle est toujours vraie. Le piège : $P(A) \\times P(B)$ ne vaut l'intersection que dans des cas particuliers (événements indépendants), et les deux dernières égalités sont les deux confusions types du chapitre — $P_A(B)$, $P_B(A)$ et $P(A \\cap B)$ sont en général trois nombres différents."
+    }
+  ]
+}

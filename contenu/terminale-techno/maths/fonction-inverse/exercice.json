@@ -1,0 +1,89 @@
+{
+  "id": "tale-techno-math-fonction-inverse-exos",
+  "chapitre": "tale-techno-math-fonction-inverse",
+  "titre": "Exercices — Fonction inverse",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $f(x) = \\dfrac{4}{x}$, définie pour $x \\neq 0$. (a) Calculer $f'(x)$. (b) Calculer $f(2)$ et $f'(2)$. (c) En déduire l'équation réduite de la tangente à la courbe de $f$ au point d'abscisse $2$.",
+      "corrige": [
+        "(a) La dérivée de $\\dfrac{c}{x}$ est $-\\dfrac{c}{x^2}$, donc $f'(x) = -\\dfrac{4}{x^2}$. Ne pas oublier le signe moins : c'est lui qui traduit la décroissance de chaque branche.",
+        "(b) $f(2) = \\dfrac{4}{2} = 2$ et $f'(2) = -\\dfrac{4}{2^2} = -\\dfrac{4}{4} = -1$. Le point de contact est $(2\\,;2)$ et la pente de la tangente vaut $-1$.",
+        "(c) Formule de Première : $y = f'(a)(x - a) + f(a)$ avec $a = 2$, soit $y = -1 \\times (x - 2) + 2 = -x + 2 + 2$. La tangente a pour équation $y = -x + 4$. Vérification : en $x = 2$, on retrouve bien $y = 2$. ✓"
+      ],
+      "reponse": "(a) $f'(x) = -\\dfrac{4}{x^2}$ ; (b) $f(2) = 2$ et $f'(2) = -1$ ; (c) $y = -x + 4$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "comportement-bornes",
+      "enonce": "On considère la fonction inverse $f(x) = \\dfrac{1}{x}$. (a) Calculer $f(100)$, $f(10\\,000)$, $f(0{,}01)$ et $f(-0{,}001)$. (b) Décrire en une phrase le comportement de $f$ quand $x$ devient très grand, puis quand $x$ se rapproche de $0$. (c) Donner les équations des deux asymptotes de la courbe. (d) Sans calculatrice, comparer $\\dfrac{1}{2026}$ et $\\dfrac{1}{2027}$ en justifiant.",
+      "corrige": [
+        "(a) $f(100) = 0{,}01$ ; $f(10\\,000) = 0{,}0001$ ; $f(0{,}01) = \\dfrac{1}{0{,}01} = 100$ ; $f(-0{,}001) = \\dfrac{1}{-0{,}001} = -1\\,000$.",
+        "(b) Quand $x$ devient très grand, $\\dfrac{1}{x}$ se rapproche de $0$ autant que l'on veut (en restant positif). Quand $x$ se rapproche de $0$, $\\dfrac{1}{x}$ devient aussi grand que l'on veut si $x > 0$, et aussi négatif que l'on veut si $x < 0$ : les valeurs « explosent » de part et d'autre de la valeur interdite.",
+        "(c) La courbe se rapproche de l'axe des abscisses au loin et longe l'axe des ordonnées près de $0$ : les asymptotes sont les droites d'équations $y = 0$ (horizontale) et $x = 0$ (verticale). La courbe ne les touche jamais.",
+        "(d) $0 < 2026 < 2027$ et la fonction inverse est décroissante sur $\\left]0\\,;+\\infty\\right[$ : elle renverse l'ordre. Donc $\\dfrac{1}{2026} > \\dfrac{1}{2027}$."
+      ],
+      "reponse": "(a) $0{,}01$ ; $0{,}0001$ ; $100$ ; $-1\\,000$ ; (b) proche de $0$ au loin, valeurs très grandes (en valeur absolue) près de $0$ ; (c) $y = 0$ et $x = 0$ ; (d) $\\dfrac{1}{2026} > \\dfrac{1}{2027}$ par décroissance sur $\\left]0\\,;+\\infty\\right[$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Soit $f(x) = x + \\dfrac{16}{x}$ définie sur $\\left]0\\,;+\\infty\\right[$. (a) Calculer $f'(x)$ et montrer que $f'(x) = \\dfrac{(x-4)(x+4)}{x^2}$. (b) Étudier le signe de $f'(x)$ sur $\\left]0\\,;+\\infty\\right[$ et dresser le tableau de variations de $f$. (c) En déduire le minimum de $f$ sur $\\left]0\\,;+\\infty\\right[$.",
+      "corrige": [
+        "(a) $f'(x) = 1 - \\dfrac{16}{x^2}$. En mettant au même dénominateur : $f'(x) = \\dfrac{x^2 - 16}{x^2}$, et comme $x^2 - 16 = (x-4)(x+4)$ (identité remarquable), on a bien $f'(x) = \\dfrac{(x-4)(x+4)}{x^2}$.",
+        "(b) Sur $\\left]0\\,;+\\infty\\right[$ : $x^2 > 0$ et $x + 4 > 0$, donc $f'(x)$ a le signe de $x - 4$. Ainsi $f'(x) < 0$ pour $0 < x < 4$ et $f'(x) > 0$ pour $x > 4$ : $f$ est décroissante sur $\\left]0\\,;4\\right]$ puis croissante sur $\\left[4\\,;+\\infty\\right[$.",
+        "(c) Le tableau montre un minimum atteint en $x = 4$, de valeur $f(4) = 4 + \\dfrac{16}{4} = 4 + 4 = 8$. Le minimum de $f$ sur $\\left]0\\,;+\\infty\\right[$ est donc $8$. Vérification d'ordre de grandeur : $f(2) = 2 + 8 = 10 > 8$ et $f(8) = 8 + 2 = 10 > 8$. ✓"
+      ],
+      "reponse": "(a) $f'(x) = 1 - \\dfrac{16}{x^2} = \\dfrac{(x-4)(x+4)}{x^2}$ ; (b) $f$ décroissante sur $\\left]0\\,;4\\right]$, croissante sur $\\left[4\\,;+\\infty\\right[$ ; (c) minimum $8$, atteint en $x = 4$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "comportement-bornes",
+      "enonce": "Soit $g(x) = 5 - \\dfrac{3}{x}$ définie sur $\\left]0\\,;+\\infty\\right[$. (a) Calculer $g'(x)$ et en déduire le sens de variation de $g$. (b) Calculer $g(0{,}01)$ et $g(1\\,000)$, puis décrire le comportement de $g$ aux bornes de $\\left]0\\,;+\\infty\\right[$. Quelles droites la courbe de $g$ longe-t-elle ? (c) Déterminer l'équation réduite de la tangente à la courbe au point d'abscisse $1$.",
+      "corrige": [
+        "(a) $g(x) = 5 - 3 \\times \\dfrac{1}{x}$, donc $g'(x) = -3 \\times \\left(-\\dfrac{1}{x^2}\\right) = \\dfrac{3}{x^2}$. Pour tout $x > 0$, $g'(x) > 0$ : $g$ est strictement croissante sur $\\left]0\\,;+\\infty\\right[$. Attention au double signe moins : ici la combinaison est croissante, contrairement à la fonction inverse seule.",
+        "(b) $g(0{,}01) = 5 - \\dfrac{3}{0{,}01} = 5 - 300 = -295$ et $g(1\\,000) = 5 - 0{,}003 = 4{,}997$. Près de $0$, le terme $\\dfrac{3}{x}$ explose et $g(x)$ devient aussi négatif que l'on veut : la courbe longe la droite verticale $x = 0$. Quand $x$ devient très grand, $\\dfrac{3}{x}$ devient négligeable et $g(x)$ se rapproche de $5$ : la courbe longe la droite horizontale $y = 5$ (sans jamais l'atteindre, car $\\dfrac{3}{x}$ ne vaut jamais $0$).",
+        "(c) $g(1) = 5 - 3 = 2$ et $g'(1) = \\dfrac{3}{1} = 3$. Tangente : $y = g'(1)(x - 1) + g(1) = 3(x - 1) + 2 = 3x - 1$."
+      ],
+      "reponse": "(a) $g'(x) = \\dfrac{3}{x^2} > 0$, $g$ croissante sur $\\left]0\\,;+\\infty\\right[$ ; (b) $g(0{,}01) = -295$, $g(1\\,000) = 4{,}997$ ; la courbe longe $x = 0$ près de $0$ et $y = 5$ au loin ; (c) $y = 3x - 1$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "sens-de-variation",
+      "enonce": "Soit $f(x) = x + \\dfrac{4}{x}$, définie pour $x \\neq 0$. (a) Montrer que $f'(x) = \\dfrac{(x-2)(x+2)}{x^2}$. (b) Étudier le signe de $f'(x)$ sur $\\left]-\\infty\\,;0\\right[$ puis sur $\\left]0\\,;+\\infty\\right[$, et dresser le tableau de variations complet de $f$. (c) Vérifier que $f(-x) = -f(x)$ pour tout $x \\neq 0$. Qu'en déduit-on pour la courbe ? (d) $f$ admet un maximum local égal à $-4$ et un minimum local égal à $4$. Le maximum est plus petit que le minimum : expliquer pourquoi ce n'est pas contradictoire.",
+      "corrige": [
+        "(a) $f'(x) = 1 - \\dfrac{4}{x^2} = \\dfrac{x^2 - 4}{x^2} = \\dfrac{(x-2)(x+2)}{x^2}$, par mise au même dénominateur puis identité remarquable $x^2 - 4 = (x-2)(x+2)$.",
+        "(b) $x^2 > 0$, donc $f'(x)$ a le signe de $(x-2)(x+2)$ : positif à l'extérieur des racines $-2$ et $2$, négatif entre elles. Sur $\\left]-\\infty\\,;0\\right[$ : $f$ est croissante sur $\\left]-\\infty\\,;-2\\right]$ puis décroissante sur $\\left[-2\\,;0\\right[$, avec $f(-2) = -2 + \\dfrac{4}{-2} = -4$. Sur $\\left]0\\,;+\\infty\\right[$ : $f$ est décroissante sur $\\left]0\\,;2\\right]$ puis croissante sur $\\left[2\\,;+\\infty\\right[$, avec $f(2) = 2 + 2 = 4$. Le tableau comporte une double barre en $x = 0$ (valeur interdite).",
+        "(c) $f(-x) = -x + \\dfrac{4}{-x} = -x - \\dfrac{4}{x} = -\\left(x + \\dfrac{4}{x}\\right) = -f(x)$. Les points $(x\\,;f(x))$ et $(-x\\,;-f(x))$ se correspondent : la courbe est symétrique par rapport à l'origine du repère, comme l'hyperbole de la fonction inverse.",
+        "(d) Le maximum LOCAL $-4$ est atteint en $x = -2$, sur la branche des $x < 0$ ; le minimum LOCAL $4$ est atteint en $x = 2$, sur la branche des $x > 0$. Ce sont des extremums chacun sur son intervalle, pas sur l'ensemble de définition tout entier : les deux branches sont séparées par la valeur interdite $0$, et la fonction « saute » de valeurs très négatives à des valeurs très grandes en la traversant. Aucune contradiction — mais c'est exactement pour cela qu'on n'énonce jamais de variation sur la réunion des deux intervalles."
+      ],
+      "reponse": "(a) $f'(x) = \\dfrac{(x-2)(x+2)}{x^2}$ ; (b) croissante sur $\\left]-\\infty\\,;-2\\right]$, décroissante sur $\\left[-2\\,;0\\right[$ et sur $\\left]0\\,;2\\right]$, croissante sur $\\left[2\\,;+\\infty\\right[$ ; $f(-2) = -4$, $f(2) = 4$ ; (c) courbe symétrique par rapport à l'origine ; (d) extremums locaux sur deux branches séparées par la valeur interdite."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Une entreprise fabrique chaque jour $x$ objets ($0 < x \\leqslant 100$). Le coût total de production est $C(x) = 0{,}1x^2 + 5x + 90$ (en euros). Le coût moyen par objet est $M(x) = \\dfrac{C(x)}{x}$. (a) Montrer que $M(x) = 0{,}1x + 5 + \\dfrac{90}{x}$. (b) Calculer $M'(x)$ et étudier son signe sur $\\left]0\\,;100\\right]$. (c) Pour quelle production quotidienne le coût moyen est-il minimal ? Que vaut-il alors ? (d) Calculer $M(10)$ et $M(100)$, et expliquer concrètement pourquoi produire trop peu ou trop coûte cher à l'objet.",
+      "corrige": [
+        "(a) $M(x) = \\dfrac{0{,}1x^2 + 5x + 90}{x} = \\dfrac{0{,}1x^2}{x} + \\dfrac{5x}{x} + \\dfrac{90}{x} = 0{,}1x + 5 + \\dfrac{90}{x}$ : c'est bien une fonction de la forme $ax + b + \\dfrac{c}{x}$ avec $a = 0{,}1$, $b = 5$, $c = 90$.",
+        "(b) $M'(x) = 0{,}1 - \\dfrac{90}{x^2} = \\dfrac{0{,}1x^2 - 90}{x^2}$. Comme $x^2 > 0$, $M'(x)$ a le signe de $0{,}1x^2 - 90$, qui s'annule pour $x^2 = \\dfrac{90}{0{,}1} = 900$, soit $x = 30$ (on garde la racine positive). Donc $M'(x) < 0$ sur $\\left]0\\,;30\\right[$ et $M'(x) > 0$ sur $\\left]30\\,;100\\right]$.",
+        "(c) $M$ est décroissante sur $\\left]0\\,;30\\right]$ puis croissante sur $\\left[30\\,;100\\right]$ : le coût moyen est minimal pour une production de $30$ objets par jour, et vaut $M(30) = 0{,}1 \\times 30 + 5 + \\dfrac{90}{30} = 3 + 5 + 3 = 11$ euros par objet.",
+        "(d) $M(10) = 1 + 5 + 9 = 15$ € et $M(100) = 10 + 5 + 0{,}9 = 15{,}90$ €. Si l'on produit trop peu, les frais fixes ($90$ €, le terme $\\dfrac{90}{x}$) se répartissent sur très peu d'objets et plombent le coût unitaire. Si l'on produit trop, c'est le terme $0{,}1x$ (surcoûts croissants : heures supplémentaires, usure…) qui domine. Le minimum en $x = 30$ réalise le meilleur équilibre entre les deux effets — c'est l'intérêt économique typique des fonctions $ax + b + \\dfrac{c}{x}$."
+      ],
+      "reponse": "(a) $M(x) = 0{,}1x + 5 + \\dfrac{90}{x}$ ; (b) $M'(x) = \\dfrac{0{,}1x^2 - 90}{x^2}$, négatif avant $30$, positif après ; (c) coût moyen minimal de $11$ € par objet pour $30$ objets par jour ; (d) $M(10) = 15$ €, $M(100) = 15{,}90$ € : frais fixes mal amortis d'un côté, surcoûts croissants de l'autre."
+    }
+  ]
+}
