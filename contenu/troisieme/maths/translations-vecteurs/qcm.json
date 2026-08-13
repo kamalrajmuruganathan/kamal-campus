@@ -1,0 +1,144 @@
+{
+  "id": "3e-math-translations-vecteurs-qcm",
+  "chapitre": "3e-math-translations-vecteurs",
+  "titre": "QCM — Translations et vecteurs",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vecteur",
+      "enonce": "Un vecteur est entièrement décrit par trois données. Lesquelles ?",
+      "choix": [
+        "Sa direction, son sens et sa longueur",
+        "Son origine, son extrémité et sa longueur",
+        "Sa direction, sa longueur et son milieu",
+        "Son origine, sa direction et son sens"
+      ],
+      "reponse": 0,
+      "explication": "Un vecteur code un **déplacement** : direction, sens, longueur. Le piège, c'est de croire que l'origine en fait partie — c'est faux, et c'est justement ce qui distingue $\\overrightarrow{AB}$ du segment $[AB]$ : le même vecteur peut être dessiné n'importe où dans le plan."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "somme-chasles",
+      "enonce": "Combien vaut $\\overrightarrow{EF} + \\overrightarrow{FG}$ ?",
+      "choix": [
+        "$\\overrightarrow{GE}$",
+        "$\\overrightarrow{EG}$",
+        "$\\overrightarrow{FG}$",
+        "On ne peut pas simplifier cette somme"
+      ],
+      "reponse": 1,
+      "explication": "C'est la relation de Chasles : l'extrémité du premier vecteur ($F$) est l'origine du second, donc $F$ **disparaît** et il reste $\\overrightarrow{EG}$. Le piège est d'inverser les lettres restantes et d'écrire $\\overrightarrow{GE}$ : on part de $E$, on arrive en $G$, pas l'inverse."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "egalite-vecteurs",
+      "enonce": "On sait que $\\overrightarrow{AB} = \\overrightarrow{CD}$, les points $A$, $B$ et $C$ n'étant pas alignés. Quel quadrilatère est un parallélogramme ?",
+      "choix": ["$ABCD$", "$ACBD$", "$ABDC$", "$ADBC$"],
+      "reponse": 2,
+      "explication": "C'est $ABDC$ : on parcourt le contour $A \\to B \\to D \\to C \\to A$. Le piège classique est d'écrire $ABCD$, qui donne un quadrilatère **croisé**. Contrôle rapide : $[AB]$ et $[CD]$ portent les deux flèches, ce sont donc des **côtés opposés**, et les diagonales sont $[AD]$ et $[BC]$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "vecteur-nul-oppose",
+      "enonce": "$M$ et $N$ sont deux points distincts. Quelle affirmation est vraie ?",
+      "choix": [
+        "$\\overrightarrow{MN} = \\overrightarrow{NM}$",
+        "$\\overrightarrow{MN} = \\vec{0}$",
+        "$\\overrightarrow{MN} + \\overrightarrow{NM} = \\overrightarrow{MN}$",
+        "$\\overrightarrow{MN} + \\overrightarrow{NM} = \\vec{0}$"
+      ],
+      "reponse": 3,
+      "explication": "Chasles donne $\\overrightarrow{MN} + \\overrightarrow{NM} = \\overrightarrow{MM} = \\vec{0}$ : l'aller-retour ne déplace rien. Le piège est de traiter le vecteur comme un segment : $[MN]$ et $[NM]$ sont bien le même segment, mais $\\overrightarrow{MN}$ et $\\overrightarrow{NM}$ sont **opposés**, donc différents."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "definition-translation",
+      "enonce": "$M'$ est l'image de $M$ par la translation qui transforme $A$ en $B$ (avec $A$, $B$, $M$ non alignés). Quel quadrilatère est un parallélogramme ?",
+      "choix": ["$ABMM'$", "$AMBM'$", "$ABM'M$", "$AM'BM$"],
+      "reponse": 2,
+      "explication": "C'est la définition ponctuelle de la translation : $ABM'M$, contour $A \\to B \\to M' \\to M$. Le déplacement mène $A$ vers $B$ **et** $M$ vers $M'$ : $[AB]$ et $[MM']$ sont donc des côtés **opposés**. Écrire $ABMM'$ place $[AB]$ et $[MM']$ côte à côte et donne une figure croisée."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "cas-particuliers",
+      "enonce": "On sait seulement que les longueurs $AB$ et $CD$ sont égales. Peut-on en déduire que $\\overrightarrow{AB} = \\overrightarrow{CD}$ ?",
+      "choix": [
+        "Oui : deux segments de même longueur donnent deux vecteurs égaux",
+        "Oui, à condition que les quatre points soient distincts",
+        "Non : deux vecteurs ne sont égaux que s'ils ont la même origine",
+        "Non : il faut en plus la même direction et le même sens"
+      ],
+      "reponse": 3,
+      "explication": "L'égalité de deux vecteurs exige **trois** conditions, pas une seule : même direction, même sens, même longueur. Deux segments de même longueur peuvent être de travers l'un par rapport à l'autre. Attention aussi au choix C : l'origine n'a rien à voir, un vecteur n'a justement pas de place fixe."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "egalite-vecteurs",
+      "enonce": "$ABDC$ est un parallélogramme. En plus de $\\overrightarrow{AB} = \\overrightarrow{CD}$, quelle égalité est vraie ?",
+      "choix": [
+        "$\\overrightarrow{AC} = \\overrightarrow{BD}$",
+        "$\\overrightarrow{AC} = \\overrightarrow{DB}$",
+        "$\\overrightarrow{AD} = \\overrightarrow{BC}$",
+        "$\\overrightarrow{AB} = \\overrightarrow{DC}$"
+      ],
+      "reponse": 0,
+      "explication": "Un parallélogramme fournit **deux** égalités de vecteurs, une par paire de côtés opposés : ici $[AC]$ et $[BD]$, d'où $\\overrightarrow{AC} = \\overrightarrow{BD}$. Le choix C prend $[AD]$ et $[BC]$, qui sont les **diagonales**. Les choix B et D inversent les lettres et donnent donc les vecteurs opposés."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "somme-chasles",
+      "enonce": "Combien vaut $\\overrightarrow{AB} + \\overrightarrow{BC} + \\overrightarrow{CA}$ ?",
+      "choix": [
+        "$\\overrightarrow{AC}$",
+        "$\\overrightarrow{CA}$",
+        "$\\vec{0}$",
+        "$\\overrightarrow{AB}$"
+      ],
+      "reponse": 2,
+      "explication": "On applique Chasles deux fois : $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$, puis $\\overrightarrow{AC} + \\overrightarrow{CA} = \\overrightarrow{AA} = \\vec{0}$. Le piège est de s'arrêter au premier calcul et de répondre $\\overrightarrow{AC}$ en oubliant le troisième vecteur. Retiens le principe : un parcours qui **revient à son point de départ** vaut le vecteur nul."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "somme-chasles",
+      "enonce": "$ABCD$ est un parallélogramme. Combien vaut $\\overrightarrow{AB} + \\overrightarrow{AD}$ ?",
+      "choix": [
+        "$\\overrightarrow{BD}$",
+        "$\\overrightarrow{AC}$",
+        "$\\overrightarrow{DB}$",
+        "Rien : les deux vecteurs n'ont pas de point commun"
+      ],
+      "reponse": 1,
+      "explication": "Les deux vecteurs partent du **même point**, donc Chasles ne s'applique pas tel quel : il faut d'abord remplacer $\\overrightarrow{AD}$ par un vecteur qui lui est égal. Comme $ABCD$ est un parallélogramme, $\\overrightarrow{AD} = \\overrightarrow{BC}$, d'où $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$. Le piège est de répondre $\\overrightarrow{BD}$ : c'est l'autre diagonale, elle ne mesure pas la somme."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "somme-chasles",
+      "enonce": "Que peut-on dire de $\\overrightarrow{AB} + \\overrightarrow{CD}$, lorsque $B$ et $C$ sont deux points distincts ?",
+      "choix": [
+        "Ça vaut $\\overrightarrow{AD}$",
+        "Ça vaut $\\overrightarrow{AC}$",
+        "Cette somme n'existe pas",
+        "Chasles ne s'applique pas directement : il faut d'abord remplacer $\\overrightarrow{CD}$ par un vecteur qui lui est égal et qui part de $B$"
+      ],
+      "reponse": 3,
+      "explication": "La somme de deux vecteurs existe **toujours** — ce qui manque ici, c'est le point commun exigé par Chasles : l'extrémité du premier doit être l'origine du second. Le piège est de faire disparaître $B$ et $C$ au hasard et d'écrire $\\overrightarrow{AD}$, ce qui n'est vrai que dans le cas particulier $B = C$."
+    }
+  ]
+}

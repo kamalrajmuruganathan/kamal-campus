@@ -1,0 +1,139 @@
+{
+  "id": "3e-math-reperage-qcm",
+  "chapitre": "3e-math-reperage",
+  "titre": "QCM — Repérage sur une droite et dans le plan",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definitions",
+      "enonce": "Dans un repère orthogonal, dans quel ordre écrit-on les coordonnées d'un point ?",
+      "choix": [
+        "$(\\text{abscisse}\\,;\\text{ordonnée})$",
+        "$(\\text{ordonnée}\\,;\\text{abscisse})$",
+        "L'ordre n'a pas d'importance",
+        "La plus grande des deux d'abord"
+      ],
+      "reponse": 0,
+      "explication": "L'abscisse (lue sur l'axe horizontal) se note **toujours en premier**. Le piège est que $(-2\\,;5)$ et $(5\\,;-2)$ contiennent les mêmes nombres : ce sont pourtant deux points opposés dans le repère, l'un en haut à gauche, l'autre en bas à droite."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "proprietes",
+      "enonce": "Un point $B$ est situé **sur l'axe des ordonnées**. Que peut-on affirmer ?",
+      "choix": [
+        "Son ordonnée est nulle",
+        "Son abscisse est nulle",
+        "Ses deux coordonnées sont nulles",
+        "Son abscisse est égale à son ordonnée"
+      ],
+      "reponse": 1,
+      "explication": "Être sur l'axe **vertical**, c'est n'avoir fait aucun déplacement horizontal depuis l'origine : $x = 0$, donc $B(0\\,;y)$. Le piège est d'associer « axe des ordonnées » à « ordonnée nulle » : c'est exactement l'inverse, c'est l'ordonnée qui est libre. Seule l'origine a ses deux coordonnées nulles."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "methode-droite-graduee",
+      "enonce": "Sur une droite graduée, l'intervalle entre $-2$ et $-1$ est partagé en $5$ parts égales. Quelle est l'abscisse du point situé $3$ graduations **à gauche** de $-1$ ?",
+      "choix": ["$-0{,}4$", "$-4$", "$-1{,}3$", "$-1{,}6$"],
+      "reponse": 3,
+      "explication": "Une graduation vaut $\\dfrac{1}{5} = 0{,}2$, et $3$ graduations valent $0{,}6$. À **gauche**, on retranche : $-1 - 0{,}6 = -1{,}6$. Les pièges : $-0{,}4$ vient d'un déplacement vers la droite (mauvais côté), $-4$ suppose qu'une graduation vaut $1$. Contrôle : $-1{,}6$ doit tomber entre $-2$ et $-1$, c'est bien le cas."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "methode-plan",
+      "enonce": "Où se trouvent les points $M(-3\\,;5)$ et $N(5\\,;-3)$ ?",
+      "choix": [
+        "$M$ et $N$ sont confondus",
+        "$M$ en haut à droite, $N$ en bas à gauche",
+        "$M$ en haut à gauche, $N$ en bas à droite",
+        "$M$ en bas à gauche, $N$ en haut à droite"
+      ],
+      "reponse": 2,
+      "explication": "Pour $M$ : $x = -3 < 0$ donc à gauche, $y = 5 > 0$ donc en haut. Pour $N$ : $x = 5 > 0$ donc à droite, $y = -3 < 0$ donc en bas. Le piège classique est de croire que deux couples formés des mêmes nombres donnent le même point : l'ordre change tout."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "lecture-graphique",
+      "enonce": "La représentation graphique d'une fonction $f$ passe par le point $A(3\\,;-2)$. Qu'en déduis-tu ?",
+      "choix": [
+        "$f(-2) = 3$",
+        "$3$ est l'image de $-2$ par $f$",
+        "$f(3) = -2$",
+        "$-2$ n'a aucun antécédent par $f$"
+      ],
+      "reponse": 2,
+      "explication": "Un point de la courbe s'écrit $\\big(x\\,;f(x)\\big)$ : l'abscisse est le nombre de départ, l'ordonnée est son image. Ici $f(3) = -2$. Le piège est d'inverser image et antécédent : l'image se lit sur l'axe **vertical**, l'antécédent sur l'axe **horizontal**. Au contraire, $A$ prouve justement que $-2$ possède l'antécédent $3$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "vecteurs-perimetre",
+      "enonce": "En classe de 3e, comment le programme demande-t-il de définir la translation ?",
+      "choix": [
+        "Par les coordonnées d'un vecteur dans un repère orthogonal",
+        "Par une définition ponctuelle utilisant un parallélogramme",
+        "Par une équation de droite",
+        "Par le théorème de Thalès"
+      ],
+      "reponse": 1,
+      "explication": "En 3e, translation et vecteurs se définissent **par des figures** : définition ponctuelle avec parallélogramme, vecteurs égaux, somme par enchainement de deux translations, relation de Chasles. Le piège est d'anticiper le lycée : les **coordonnées** d'un vecteur et les calculs associés n'arrivent qu'en Seconde. Cette année, le repère sert aux fonctions, pas aux vecteurs."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "fonction-affine-graphique",
+      "enonce": "La droite représentant une fonction affine $g$ passe par les points $(0\\,;-4)$ et $(2\\,;2)$. Quelle est l'expression de $g$ ?",
+      "choix": [
+        "$g(x) = -4x + 3$",
+        "$g(x) = 3x + 4$",
+        "$g(x) = 3x - 4$",
+        "$g(x) = -3x - 4$"
+      ],
+      "reponse": 2,
+      "explication": "L'ordonnée du point d'abscisse $0$ donne directement $b = -4$. Le coefficient directeur se calcule avec les deux points : $a = \\dfrac{2 - (-4)}{2 - 0} = \\dfrac{6}{2} = 3$. D'où $g(x) = 3x - 4$. Les pièges : échanger les rôles de $a$ et $b$, ou oublier que la variation des ordonnées vaut $2-(-4) = 6$ et non $2-4 = -2$ (signe du relatif)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "fonction-affine-graphique",
+      "enonce": "Sur un graphique, l'axe horizontal est gradué de $1$ en $1$ et l'axe vertical de $5$ en $5$ (mêmes carreaux). La droite de $h$ passe par $(0\\,;10)$ et $(2\\,;0)$. Quel est son coefficient directeur ?",
+      "choix": ["$-1$", "$5$", "$-\\dfrac{1}{5}$", "$-5$"],
+      "reponse": 3,
+      "explication": "On lit les **nombres écrits sur les axes**, pas les carreaux : $a = \\dfrac{0 - 10}{2 - 0} = \\dfrac{-10}{2} = -5$. Le piège est exactement le choix $-1$ : en comptant « deux carreaux vers le bas pour deux carreaux à droite », on oublie qu'un carreau vertical vaut $5$ et non $1$. Un repère orthogonal n'est pas orthonormé : chaque axe a sa propre unité."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Sur la représentation graphique de la fonction carré, combien de points ont pour ordonnée $9$ ?",
+      "choix": ["Deux", "Un seul", "Aucun", "Trois"],
+      "reponse": 0,
+      "explication": "Il faut chercher les antécédents de $9$ : $3^2 = 9$ et $(-3)^2 = 9$, donc les points $(-3\\,;9)$ et $(3\\,;9)$. Le piège est de transposer la règle des images : un nombre a **une seule image**, mais il peut avoir **plusieurs antécédents** — ici deux, à cause de la symétrie de la courbe. Un nombre négatif, lui, n'en aurait aucun."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "La droite de $f(x) = 2x - 3$ coupe la droite horizontale $y = 1$ au point $(2\\,;1)$. Quelles sont les solutions de l'inéquation $2x - 3 \\geqslant 1$ ?",
+      "choix": [
+        "$x \\leqslant 2$",
+        "$x \\geqslant 2$",
+        "$x \\geqslant 1$",
+        "$x \\leqslant -2$"
+      ],
+      "reponse": 1,
+      "explication": "Le coefficient $2$ est positif, donc la droite monte : elle passe **au-dessus** de $y = 1$ à droite du point d'intersection, d'où $x \\geqslant 2$. Deux pièges : lire la réponse sur l'axe vertical et répondre $x \\geqslant 1$ (résoudre, c'est chercher des $x$, donc lire sur l'axe **horizontal**), ou inverser le sens de l'inégalité en oubliant que la fonction est croissante."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "id": "3e-math-triangles-qcm",
+  "chapitre": "3e-math-triangles",
+  "titre": "QCM — Triangles",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, à quoi est égal le cosinus d'un angle aigu ?",
+      "choix": [
+        "$\\dfrac{\\text{opposé}}{\\text{hypoténuse}}$",
+        "$\\dfrac{\\text{adjacent}}{\\text{hypoténuse}}$",
+        "$\\dfrac{\\text{opposé}}{\\text{adjacent}}$",
+        "$\\dfrac{\\text{hypoténuse}}{\\text{adjacent}}$"
+      ],
+      "reponse": 1,
+      "explication": "SOH-CAH-TOA : **CAH** = **C**osinus, **A**djacent sur **H**ypoténuse. Le piège classique est de confondre avec le sinus ($\\frac{\\text{opp}}{\\text{hyp}}$) ou la tangente ($\\frac{\\text{opp}}{\\text{adj}}$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "trigonometrie",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$. Par rapport à l'angle $\\widehat{\\mathrm{B}}$, quel est le côté opposé ?",
+      "choix": [
+        "$[\\mathrm{AB}]$",
+        "$[\\mathrm{BC}]$",
+        "$[\\mathrm{AC}]$",
+        "$[\\mathrm{AB}]$ et $[\\mathrm{AC}]$"
+      ],
+      "reponse": 2,
+      "explication": "Le côté opposé à un angle est le seul qu'il ne **touche** pas. $\\mathrm{B}$ touche $[\\mathrm{AB}]$ et $[\\mathrm{BC}]$ ; reste $[\\mathrm{AC}]$. Piège : $[\\mathrm{BC}]$ est l'**hypoténuse** (opposée à l'angle droit), pas l'opposé de $\\widehat{\\mathrm{B}}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "choisir-rapport",
+      "enonce": "Dans un triangle rectangle, tu connais un angle aigu et l'hypoténuse, et tu cherches le côté adjacent à cet angle. Quel rapport utilises-tu ?",
+      "choix": [
+        "le cosinus",
+        "le sinus",
+        "la tangente",
+        "la réciproque de Thalès"
+      ],
+      "reponse": 0,
+      "explication": "Les deux côtés en jeu sont l'**adjacent** et l'**hypoténuse** → cosinus (CAH). Ne pars pas de la formule mais des deux côtés : la tangente ne fait pas intervenir l'hypoténuse, et le sinus utilise l'opposé, pas l'adjacent."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "calculer-longueur",
+      "enonce": "$\\mathrm{ABC}$ rectangle en $\\mathrm{A}$, $\\widehat{\\mathrm{B}} = 60°$ et $\\mathrm{BC} = 8$ cm. Combien vaut $\\mathrm{AB}$ ? (On rappelle $\\cos 60° = 0{,}5$.)",
+      "choix": [
+        "$16$ cm",
+        "$8$ cm",
+        "$6{,}9$ cm",
+        "$4$ cm"
+      ],
+      "reponse": 3,
+      "explication": "Adjacent $\\mathrm{AB}$ + hypoténuse $\\mathrm{BC}$ → cosinus. $\\cos 60° = \\frac{\\mathrm{AB}}{8}$ donc $\\mathrm{AB} = 8 \\times 0{,}5 = 4$ cm. Piège : **diviser** ($8 \\div 0{,}5 = 16$) alors que l'inconnue est au numérateur — il faut multiplier. Le $6{,}9$ vient d'avoir pris le sinus."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M}\\in[\\mathrm{AB}]$, $\\mathrm{N}\\in[\\mathrm{AC}]$ et $(\\mathrm{MN})\\parallel(\\mathrm{BC})$. On donne $\\mathrm{AM}=4$, $\\mathrm{AB}=6$ et $\\mathrm{BC}=9$. Combien vaut $\\mathrm{MN}$ ?",
+      "choix": [
+        "$6$",
+        "$13{,}5$",
+        "$7$",
+        "$5$"
+      ],
+      "reponse": 0,
+      "explication": "Thalès : $\\frac{\\mathrm{AM}}{\\mathrm{AB}} = \\frac{\\mathrm{MN}}{\\mathrm{BC}}$, soit $\\frac{4}{6} = \\frac{\\mathrm{MN}}{9}$, d'où $\\mathrm{MN} = \\frac{4 \\times 9}{6} = 6$. Piège : **inverser** le rapport ($\\frac{6}{4}\\times 9 = 13{,}5$) en écrivant $\\frac{\\mathrm{AB}}{\\mathrm{AM}}$ au lieu de $\\frac{\\mathrm{AM}}{\\mathrm{AB}}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "reciproque-thales",
+      "enonce": "Pour prouver avec la réciproque de Thalès que $(\\mathrm{MN})\\parallel(\\mathrm{BC})$, l'égalité $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}}=\\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$ ne suffit pas. Quelle condition faut-il en plus ?",
+      "choix": [
+        "que le triangle soit rectangle",
+        "que $\\mathrm{MN}=\\mathrm{BC}$",
+        "que les points soient rangés dans le même ordre sur les deux droites",
+        "que l'angle $\\widehat{\\mathrm{A}}$ soit connu"
+      ],
+      "reponse": 2,
+      "explication": "La réciproque exige l'égalité des rapports **et** le même ordre des points ($\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$). Sans la condition d'ordre, on conclurait à tort. Le rapport $\\frac{\\mathrm{MN}}{\\mathrm{BC}}$, lui, est **interdit** dans la réciproque."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "calculer-angle",
+      "enonce": "$\\mathrm{ABC}$ rectangle en $\\mathrm{A}$, $\\mathrm{AB}=6$ cm et $\\mathrm{BC}=12$ cm. Quelle est la mesure de $\\widehat{\\mathrm{B}}$ ? (On rappelle $\\cos 60°=0{,}5$.)",
+      "choix": [
+        "$30°$",
+        "$60°$",
+        "$45°$",
+        "$0{,}5°$"
+      ],
+      "reponse": 1,
+      "explication": "Adjacent $\\mathrm{AB}$ + hypoténuse $\\mathrm{BC}$ → cosinus. $\\cos\\widehat{\\mathrm{B}} = \\frac{6}{12} = 0{,}5$, puis on **remonte à l'angle** avec la fonction inverse : $\\widehat{\\mathrm{B}} = \\cos^{-1}(0{,}5) = 60°$. Piège : rendre $0{,}5$ (le cosinus) sans appliquer $\\cos^{-1}$ ; le $30°$ est l'angle complémentaire $\\widehat{\\mathrm{C}}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "calculer-longueur",
+      "enonce": "$\\mathrm{ABC}$ rectangle en $\\mathrm{A}$, $\\widehat{\\mathrm{B}}=30°$ et le côté opposé $\\mathrm{AC}=3$ cm. Combien vaut l'hypoténuse $\\mathrm{BC}$ ? (On rappelle $\\sin 30°=0{,}5$.)",
+      "choix": [
+        "$1{,}5$ cm",
+        "$3$ cm",
+        "$0{,}17$ cm",
+        "$6$ cm"
+      ],
+      "reponse": 3,
+      "explication": "Opposé $\\mathrm{AC}$ + hypoténuse $\\mathrm{BC}$ → sinus. $\\sin 30° = \\frac{3}{\\mathrm{BC}}$ donc $\\mathrm{BC} = 3 \\div 0{,}5 = 6$ cm. Piège : **multiplier** ($3\\times 0{,}5 = 1{,}5$) alors que l'inconnue est au dénominateur. Contrôle : l'hypoténuse est le plus long côté, donc $\\mathrm{BC} > 3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "pieges",
+      "enonce": "Pour un angle aigu, une élève trouve $\\cos\\widehat{\\mathrm{B}} = 1{,}4$. Que peut-on en conclure ?",
+      "choix": [
+        "l'angle mesure plus de $90°$",
+        "c'est possible dans un grand triangle",
+        "elle a forcément fait une erreur",
+        "il faut seulement utiliser $\\cos^{-1}$"
+      ],
+      "reponse": 2,
+      "explication": "Le cosinus (comme le sinus) d'un angle aigu est **toujours entre $0$ et $1$**, car le côté est plus court que l'hypoténuse. $1{,}4 > 1$ signale une fraction **inversée** ($\\frac{\\text{hyp}}{\\text{adj}}$ au lieu de $\\frac{\\text{adj}}{\\text{hyp}}$). Seule la **tangente** peut dépasser $1$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "logique",
+      "enonce": "Un exercice te dit que $(\\mathrm{MN})\\parallel(\\mathrm{BC})$ et te demande de calculer $\\mathrm{AN}$. Quel énoncé appliques-tu ?",
+      "choix": [
+        "la réciproque de Thalès",
+        "le théorème de Thalès",
+        "la contraposée de Thalès",
+        "le théorème de Pythagore"
+      ],
+      "reponse": 1,
+      "explication": "Le parallélisme t'est **donné** et tu cherches une **longueur** → théorème de Thalès. La réciproque fait l'inverse : elle part des longueurs pour **prouver** le parallélisme. Confondre les deux est l'erreur n°1 du chapitre."
+    }
+  ]
+}

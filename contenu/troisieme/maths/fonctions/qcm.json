@@ -1,0 +1,139 @@
+{
+  "id": "3e-math-fonctions-qcm",
+  "chapitre": "3e-math-fonctions",
+  "titre": "QCM — Fonctions : image, antécédent, fonctions linéaires et affines",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "image",
+      "enonce": "Soit $f$ la fonction définie par $f(x) = 2x + 3$. Quelle est l'image de $4$ par $f$ ?",
+      "choix": ["$14$", "$5$", "$11$", "$7$"],
+      "reponse": 2,
+      "explication": "L'image de $4$, c'est $f(4)$ : on **remplace** $x$ par $4$, soit $2 \\times 4 + 3 = 11$. Le $14$ vient de $2 \\times (4+3)$ (parenthèse inventée), le $7$ de $4+3$ : dans les deux cas la multiplication par $2$ est mal placée."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "On sait que $f(4) = 11$. Quelle phrase est correcte ?",
+      "choix": [
+        "$11$ est l'image de $4$",
+        "$4$ est l'image de $11$",
+        "$11$ est un antécédent de $4$",
+        "$4$ est le coefficient de $f$"
+      ],
+      "reponse": 0,
+      "explication": "Dans $f(4) = 11$, le nombre de départ est $4$ et le nombre obtenu est $11$ : donc $11$ est l'**image** de $4$, et $4$ est un **antécédent** de $11$. Les choix B et C inversent image et antécédent — c'est la confusion la plus fréquente."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "antecedent",
+      "enonce": "Soit $f(x) = 2x + 3$. Quel est l'antécédent de $7$ par $f$ ?",
+      "choix": ["$17$", "$11$", "$5$", "$2$"],
+      "reponse": 3,
+      "explication": "Chercher un antécédent, ce n'est pas remplacer : on **résout l'équation** $f(x) = 7$, soit $2x + 3 = 7$, donc $2x = 4$ et $x = 2$. Le choix $17$ est $f(7)$ : c'est l'image de $7$, pas son antécédent — le piège du calcul direct."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "fonction-lineaire",
+      "enonce": "Quelle est l'expression d'une fonction linéaire de coefficient $-2$ ?",
+      "choix": [
+        "$f(x) = x - 2$",
+        "$f(x) = -2x$",
+        "$f(x) = 2x$",
+        "$f(x) = -2x - 2$"
+      ],
+      "reponse": 1,
+      "explication": "Une fonction linéaire s'écrit $f(x) = ax$, sans terme constant. Avec $a = -2$ : $f(x) = -2x$. Le choix $x - 2$ **ajoute** $-2$ au lieu de multiplier, et $-2x - 2$ est affine (un $b$ en trop), donc plus linéaire."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "fonction-lineaire",
+      "enonce": "Comment reconnaît-on la courbe représentative d'une fonction linéaire ?",
+      "choix": [
+        "une droite passant par l'origine",
+        "une parabole",
+        "une droite qui ne passe pas par l'origine",
+        "un nuage de points quelconque"
+      ],
+      "reponse": 0,
+      "explication": "Une fonction linéaire modélise une proportionnalité : sa courbe est une **droite passant par l'origine**. Une droite qui ne passe pas par l'origine correspond à une fonction affine avec $b \\neq 0$ — c'est justement ce qui distingue affine et linéaire."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "fonction-affine",
+      "enonce": "Pour la fonction affine $f(x) = 2x + 3$, quelle est l'ordonnée à l'origine ?",
+      "choix": ["$2$", "$5$", "$0$", "$3$"],
+      "reponse": 3,
+      "explication": "Dans $f(x) = ax + b$, l'ordonnée à l'origine est $b$, c'est-à-dire $f(0) = 3$. Le choix $2$ est le **coefficient directeur** $a$ : confondre $a$ et $b$ est le piège classique de la fonction affine."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Sur la courbe de $f$, pour lire l'**image** de $2$, de quel axe part-on ?",
+      "choix": [
+        "de l'axe des ordonnées (vertical)",
+        "de l'axe des abscisses (horizontal)",
+        "de l'origine du repère",
+        "du point le plus haut de la courbe"
+      ],
+      "reponse": 1,
+      "explication": "Pour une **image**, on connaît le nombre de départ $x = 2$ : on part de l'axe des **abscisses** à $2$, on monte à la courbe, on lit l'ordonnée. Partir de l'axe des ordonnées, ce serait chercher un **antécédent** — c'est l'inversion des deux lectures qu'il faut éviter."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "fonction-carre",
+      "enonce": "Combien le nombre $9$ a-t-il d'antécédents par la fonction carré $f(x) = x^2$ ?",
+      "choix": [
+        "$1$ (seulement $3$)",
+        "$2$ : $3$ et $-3$",
+        "$0$",
+        "une infinité"
+      ],
+      "reponse": 1,
+      "explication": "On résout $x^2 = 9$ : $3^2 = 9$ **et** $(-3)^2 = 9$, donc **deux** antécédents. Oublier $-3$ (le carré d'un négatif est positif) fait perdre la moitié de la réponse : l'image est unique, l'antécédent non."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "fonction-carre",
+      "enonce": "Quel est l'antécédent de $-4$ par la fonction carré $f(x) = x^2$ ?",
+      "choix": [
+        "$-2$",
+        "$2$ et $-2$",
+        "$16$",
+        "il n'en existe aucun"
+      ],
+      "reponse": 3,
+      "explication": "Il faudrait résoudre $x^2 = -4$, or un carré n'est **jamais négatif** : aucun nombre ne convient. Le choix $16$ est l'image de $-4$ ($(-4)^2 = 16$), pas son antécédent : encore l'inversion image / antécédent."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "fonction-affine",
+      "enonce": "Une droite passe par les points $(0\\,;1)$ et $(2\\,;5)$. Quelle fonction affine représente-t-elle ?",
+      "choix": [
+        "$f(x) = 2x + 1$",
+        "$f(x) = x + 1$",
+        "$f(x) = 2x$",
+        "$f(x) = 3x + 1$"
+      ],
+      "reponse": 0,
+      "explication": "Le point $(0\\,;1)$ donne l'ordonnée à l'origine : $b = 1$. Le coefficient directeur est $a = \\dfrac{5 - 1}{2 - 0} = 2$. Donc $f(x) = 2x + 1$. Oublier $b$ donne $2x$ (choix C), et confondre la variation avec l'écart des abscisses donne un mauvais $a$."
+    }
+  ]
+}

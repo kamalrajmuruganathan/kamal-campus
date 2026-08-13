@@ -1,0 +1,104 @@
+{
+  "id": "3e-math-proportionnalite-qcm",
+  "chapitre": "3e-math-proportionnalite",
+  "titre": "QCM — Proportionnalité : ratios, échelles et taux d'évolution",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "partage-ratio",
+      "enonce": "On partage $200$ € selon le ratio $2 : 3$. Combien vaut la plus grande part ?",
+      "choix": ["$80$ €", "$133,33$ €", "$120$ €", "$100$ €"],
+      "reponse": 2,
+      "explication": "On additionne les termes du ratio : $2 + 3 = 5$ parts, donc une part vaut $200 \\div 5 = 40$ €. La plus grande part en compte $3$ : $3 \\times 40 = 120$ €. Piège : le ratio compare les parts entre elles, on ne divise pas par un seul terme ($200 \\div 2$) et on ne coupe pas en deux ($100$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "pourcentage-quantite",
+      "enonce": "Combien vaut $30\\,\\%$ de $250$ ?",
+      "choix": ["$75$", "$83,33$", "$220$", "$7500$"],
+      "reponse": 0,
+      "explication": "Prendre $t\\,\\%$ d'une quantité, c'est multiplier : $\\dfrac{30}{100} \\times 250 = 75$. Piège : un pourcentage se multiplie ($\\times 0,30$), il ne se soustrait pas ($250 - 30 = 220$) et ne se divise pas."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "echelles",
+      "enonce": "Sur une carte à l'échelle $\\dfrac{1}{250\\,000}$, deux villes sont distantes de $8$ cm. Quelle est la distance réelle ?",
+      "choix": ["$2$ km", "$20$ km", "$200$ km", "$2000$ km"],
+      "reponse": 1,
+      "explication": "$1$ cm sur la carte représente $250\\,000$ cm réels, soit $2,5$ km. Donc $8 \\times 2,5 = 20$ km. Piège : la conversion. $1$ km $= 100\\,000$ cm (pas $1000$) ; se tromper de facteur $100$ transforme $20$ km en $2000$ km."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "appliquer-evolution",
+      "enonce": "Un article coûte $60$ €. Son prix augmente de $15\\,\\%$. Quel est le nouveau prix ?",
+      "choix": ["$51$ €", "$75$ €", "$60,90$ €", "$69$ €"],
+      "reponse": 3,
+      "explication": "Une augmentation de $15\\,\\%$ correspond au coefficient $1 + \\dfrac{15}{100} = 1,15$ : $60 \\times 1,15 = 69$ €. Piège : ne pas ajouter $15$ € ($75$ €, le taux n'est pas des euros) ni multiplier par $0,85$ ($51$ €, ce serait une baisse)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "traduire-evolution",
+      "enonce": "Un prix passe de $50$ € à $62$ €. Quel est le taux d'évolution ?",
+      "choix": ["$+12\\,\\%$", "$+19,4\\,\\%$", "$+24\\,\\%$", "$+124\\,\\%$"],
+      "reponse": 2,
+      "explication": "$t = \\dfrac{V_a - V_d}{V_d} \\times 100 = \\dfrac{62 - 50}{50} \\times 100 = 24$. On divise par la valeur de DÉPART ($50$), pas l'arrivée ($\\frac{12}{62} \\approx 19,4\\,\\%$ est faux). Et le coefficient $1,24$ se lit $+24\\,\\%$, jamais $+124\\,\\%$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Une évolution correspond au coefficient multiplicateur $0,85$. De quelle évolution s'agit-il ?",
+      "choix": ["$-85\\,\\%$", "$+85\\,\\%$", "$-0,15\\,\\%$", "$-15\\,\\%$"],
+      "reponse": 3,
+      "explication": "Le taux vaut $(\\mathrm{CM} - 1) \\times 100 = (0,85 - 1) \\times 100 = -15$. Le coefficient $0,85$ est ce qui RESTE ; le taux est ce qui CHANGE, soit $0,85 - 1 = -0,15$. Piège : $0,85$ ne se lit pas $-85\\,\\%$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "traduire-evolution",
+      "enonce": "De $40$ € à $46$ €, la hausse est de $+15\\,\\%$. Quel est le taux d'évolution de $46$ € à $40$ € ?",
+      "choix": ["$-15\\,\\%$", "$-13\\,\\%$", "$+15\\,\\%$", "$-6\\,\\%$"],
+      "reponse": 1,
+      "explication": "Le taux se calcule sur la nouvelle base de départ ($46$) : $\\dfrac{40 - 46}{46} \\times 100 = \\dfrac{-6}{46} \\times 100 \\approx -13\\,\\%$. Piège : une hausse de $15\\,\\%$ ne s'annule pas par une baisse de $15\\,\\%$ ; les deux taux n'ont pas la même base ($40$ contre $46$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "evolutions-successives",
+      "enonce": "Un prix augmente de $30\\,\\%$, puis baisse de $30\\,\\%$. Quelle est l'évolution globale ?",
+      "choix": ["$-9\\,\\%$", "$0\\,\\%$ (inchangé)", "$+9\\,\\%$", "$-30\\,\\%$"],
+      "reponse": 0,
+      "explication": "On MULTIPLIE les coefficients : $1,30 \\times 0,70 = 0,91$, soit $-9\\,\\%$. Piège : additionner $+30\\,\\%$ et $-30\\,\\%$ pour conclure « inchangé » est faux, car la baisse porte sur un prix déjà augmenté — les deux taux n'ont pas la même base."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "retour-valeur-initiale",
+      "enonce": "Un prix baisse de $20\\,\\%$. De combien doit-il ensuite augmenter pour retrouver sa valeur initiale ?",
+      "choix": ["$+20\\,\\%$", "$+25\\,\\%$", "$+80\\,\\%$", "$+16\\,\\%$"],
+      "reponse": 1,
+      "explication": "Il faut un coefficient global égal à $1$ : $0,80 \\times \\mathrm{CM} = 1$, donc $\\mathrm{CM} = \\dfrac{1}{0,80} = 1,25$, soit $+25\\,\\%$. Piège : une baisse de $20\\,\\%$ ne se compense pas par $+20\\,\\%$ ($100 \\to 80 \\to 96$) ; il faut $+25\\,\\%$ ($80 \\to 100$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "graphique-thales",
+      "enonce": "Sur une droite passant par l'origine, on lit le point $M(4\\,;\\,10)$. Quelle est l'ordonnée du point de cette droite d'abscisse $6$ ?",
+      "choix": ["$12$", "$16$", "$15$", "$13$"],
+      "reponse": 2,
+      "explication": "Une droite passant par l'origine traduit une proportionnalité de coefficient $\\dfrac{10}{4} = 2,5$. L'ordonnée cherchée vaut $2,5 \\times 6 = 15$ (Thalès : $\\dfrac{4}{6} = \\dfrac{10}{y}$ donne $y = 15$). Piège : sur une telle droite on MULTIPLIE, on n'ajoute pas — passer de l'abscisse $4$ à $6$ n'ajoute pas $2$ à l'ordonnée."
+    }
+  ]
+}
