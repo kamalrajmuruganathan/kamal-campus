@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-math-loi-binomiale-qcm",
+  "chapitre": "tale-spe-math-loi-binomiale",
+  "titre": "QCM — Succession d'épreuves, schéma de Bernoulli et loi binomiale",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "bernoulli",
+      "enonce": "Qu'est-ce qui caractérise une épreuve de Bernoulli ?",
+      "choix": [
+        "Elle a exactement deux issues : un succès et un échec",
+        "Elle a toujours trois issues possibles",
+        "Elle consiste à répéter $n$ fois la même expérience",
+        "Toutes ses issues ont la même probabilité"
+      ],
+      "reponse": 0,
+      "explication": "Une épreuve de Bernoulli n'a que **deux** issues : succès (probabilité $p$) et échec (probabilité $1-p$). Répéter l'épreuve $n$ fois, ce n'est pas l'épreuve elle-même mais le **schéma** de Bernoulli : ne confonds pas les deux."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "schema-bernoulli",
+      "enonce": "Dans un schéma de Bernoulli de paramètre $p$, la probabilité de succès à chaque épreuve :",
+      "choix": [
+        "change à chaque nouvelle épreuve",
+        "reste toujours égale à $p$",
+        "vaut $1-p$",
+        "dépend du numéro de l'épreuve"
+      ],
+      "reponse": 1,
+      "explication": "Un schéma de Bernoulli répète des épreuves **identiques et indépendantes** : la probabilité de succès est **la même**, $p$, à chaque fois. Si $p$ changeait (comme dans un tirage sans remise), ce ne serait plus un schéma de Bernoulli."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "succession-independante",
+      "enonce": "Une urne contient 3 boules rouges et 2 vertes. On tire une boule, on la **remet**, puis on en tire une seconde. Quelle est la probabilité de tirer Rouge puis Verte ?",
+      "choix": [
+        "$\\dfrac{6}{20}$",
+        "$\\dfrac{1}{5}$",
+        "$\\dfrac{6}{25}$",
+        "$\\dfrac{5}{25}$"
+      ],
+      "reponse": 2,
+      "explication": "Avec remise, les deux tirages sont **indépendants** : on **multiplie** les probabilités, $\\dfrac{3}{5}\\times\\dfrac{2}{5}=\\dfrac{6}{25}$. Le choix $\\dfrac{6}{20}$ vient d'un tirage **sans** remise ($\\dfrac{3}{5}\\times\\dfrac{2}{4}$) : lis bien l'énoncé."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "loi-binomiale",
+      "enonce": "Une pièce équilibrée est lancée 4 fois. Soit $X$ le nombre de Piles, $X\\sim B(4\\,;\\,0{,}5)$. Combien vaut $P(X=2)$ ?",
+      "choix": [
+        "$\\dfrac{3}{8}$",
+        "$\\dfrac{1}{16}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X=2)=\\binom{4}{2}\\left(\\tfrac12\\right)^2\\left(\\tfrac12\\right)^2=6\\times\\tfrac{1}{16}=\\tfrac{3}{8}$. Le choix $\\tfrac{1}{16}$ **oublie le coefficient** $\\binom{4}{2}=6$ : c'est la probabilité d'**un seul** chemin, pas des six."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "coefficient-binomial",
+      "enonce": "Dans un schéma de 5 épreuves de Bernoulli, combien de chemins de l'arbre donnent **exactement 2 succès** ?",
+      "choix": [
+        "$25$",
+        "$32$",
+        "$20$",
+        "$10$"
+      ],
+      "reponse": 3,
+      "explication": "C'est le nombre de façons de placer 2 succès parmi 5 épreuves, sans ordre : $\\binom{5}{2}=\\dfrac{5\\times4}{2}=10$. Le $20$ est l'arrangement $A_5^2$ (avec ordre), le $32=2^5$ compte **toutes** les issues, le $25=5^2$ n'a pas de sens ici."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "loi-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(n\\,;\\,p)$. Quelle est l'expression correcte de $P(X=k)$ ?",
+      "choix": [
+        "$\\binom{n}{k}\\,p^{\\,n-k}(1-p)^{k}$",
+        "$\\binom{n}{k}\\,p^{\\,k}(1-p)^{\\,n-k}$",
+        "$p^{\\,k}(1-p)^{\\,n-k}$",
+        "$\\binom{n}{k}\\,p^{\\,k}(1-p)^{\\,k}$"
+      ],
+      "reponse": 1,
+      "explication": "L'exposant de $p$ est le **nombre de succès** $k$, celui de $1-p$ le nombre d'échecs $n-k$, et $\\binom{n}{k}$ compte les chemins. Le choix 1 **intervertit** les exposants, le choix 3 **oublie** le coefficient, le choix 4 se trompe sur le nombre d'échecs."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "cumul",
+      "enonce": "Un QCM a 10 questions ; un candidat répond au hasard ($X\\sim B(10\\,;\\,0{,}5)$ compte ses bonnes réponses). Quelle expression donne la probabilité qu'il ait **au moins 8** bonnes réponses ?",
+      "choix": [
+        "$P(X=8)$",
+        "$P(X=8)+P(X=9)+P(X=10)$",
+        "$P(X\\leqslant 8)$",
+        "$P(X=8)+P(X=9)$"
+      ],
+      "reponse": 1,
+      "explication": "« Au moins 8 » signifie $X=8$, $9$ **ou** $10$ : on somme ces trois probabilités. Le piège n°1 est de répondre $P(X=8)$ (« exactement 8 ») : « exactement » ≠ « au moins ». Le choix 4 oublie $X=10$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "complementaire",
+      "enonce": "On lance 5 fois un dé équilibré. Quelle est la probabilité d'obtenir **au moins un** 6 ?",
+      "choix": [
+        "$1-\\left(\\dfrac{5}{6}\\right)^{5}$",
+        "$\\left(\\dfrac{1}{6}\\right)^{5}$",
+        "$5\\times\\dfrac{1}{6}$",
+        "$1-\\left(\\dfrac{1}{6}\\right)^{5}$"
+      ],
+      "reponse": 0,
+      "explication": "« Au moins un » passe par le **complémentaire** : $P(X\\geqslant 1)=1-P(X=0)=1-\\left(\\tfrac{5}{6}\\right)^5$. Le choix 2 est « que des 6 », le choix 3 est l'espérance $np$, le choix 4 soustrait la mauvaise probabilité (il faut $P(X=0)=(1-p)^n$, pas $p^n$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "intervalle",
+      "enonce": "$X$ suit une loi binomiale. Quelle expression donne $P(2\\leqslant X\\leqslant 5)$ à partir des probabilités cumulées ?",
+      "choix": [
+        "$P(X\\leqslant 5)-P(X\\leqslant 2)$",
+        "$P(X=5)-P(X=2)$",
+        "$P(X\\leqslant 5)-P(X\\leqslant 1)$",
+        "$P(X\\leqslant 4)-P(X\\leqslant 1)$"
+      ],
+      "reponse": 2,
+      "explication": "$P(k\\leqslant X\\leqslant k')=P(X\\leqslant k')-P(X\\leqslant k-1)$. Ici $k=2$, donc on retire $P(X\\leqslant 1)$, pas $P(X\\leqslant 2)$ : sinon on **perd le terme** $P(X=2)$, qui doit rester dans le compte."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "seuil",
+      "enonce": "$X\\sim B(50\\,;\\,0{,}1)$. On cherche le plus petit entier $s$ tel que $P(X\\leqslant s)\\geqslant 0{,}95$. Quelle démarche est correcte ?",
+      "choix": [
+        "Calculer $P(X\\leqslant s)$ pour $s=0,1,2,\\dots$ et s'arrêter au premier qui dépasse $0{,}95$",
+        "Calculer $P(X=s)$ pour chaque $s$ et garder le plus grand",
+        "Prendre directement $s=np=5$",
+        "Résoudre l'équation $P(X=s)=0{,}95$"
+      ],
+      "reponse": 0,
+      "explication": "Un problème de seuil se lit sur la probabilité **cumulée** $P(X\\leqslant s)$, qui croît avec $s$ : on l'évalue (calculatrice ou algorithme) jusqu'à franchir $0{,}95$. Ici on trouve $s=9$. L'espérance $np=5$ ne donne pas le seuil, et $P(X=s)=0{,}95$ n'a pas de solution entière pertinente."
+    }
+  ]
+}

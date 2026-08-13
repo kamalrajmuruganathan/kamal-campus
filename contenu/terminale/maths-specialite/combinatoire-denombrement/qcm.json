@@ -1,0 +1,104 @@
+{
+  "id": "tale-spe-math-combinatoire-denombrement-qcm",
+  "chapitre": "tale-spe-math-combinatoire-denombrement",
+  "titre": "QCM — Combinatoire et dénombrement",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "factorielle",
+      "enonce": "Combien vaut $4!$ ?",
+      "choix": ["$12$", "$16$", "$24$", "$10$"],
+      "reponse": 2,
+      "explication": "$4! = 1 \\times 2 \\times 3 \\times 4 = 24$. Piège classique : $16 = 4^2$ (une puissance, pas une factorielle) et $10 = 1+2+3+4$ (une somme). La factorielle est un **produit**."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "principe-multiplicatif",
+      "enonce": "Un menu se compose d'une entrée parmi 3 **et** d'un plat parmi 4. Combien de menus différents ?",
+      "choix": ["$7$", "$12$", "$34$", "$81$"],
+      "reponse": 1,
+      "explication": "Choix en deux étapes successives (« et ») : on **multiplie**, $3 \\times 4 = 12$. Le piège est d'additionner ($3+4=7$) : on additionne seulement quand il faut choisir **soit** l'un **soit** l'autre (cas disjoints)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "combinaison",
+      "enonce": "De combien de façons peut-on choisir 2 délégués parmi 6 élèves (l'ordre n'a pas d'importance) ?",
+      "choix": ["$15$", "$30$", "$36$", "$12$"],
+      "reponse": 0,
+      "explication": "L'ordre ne compte pas : c'est une combinaison, $\\binom{6}{2} = \\dfrac{6 \\times 5}{2} = 15$. Le piège $30$ est $A_6^2 = 6\\times5$ : il **compte l'ordre** et surcompte chaque paire deux fois. Le $36 = 6^2$ (p-liste avec répétition) n'a pas lieu d'être ici."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "arrangement",
+      "enonce": "Un podium (1er, 2e, 3e) est attribué à 3 coureurs parmi 5. Combien de podiums possibles ?",
+      "choix": ["$10$", "$60$", "$125$", "$15$"],
+      "reponse": 1,
+      "explication": "L'ordre compte (1er ≠ 2e), sans répétition : arrangement $A_5^3 = 5\\times4\\times3 = 60$. Le piège $10 = \\binom{5}{3}$ oublie l'ordre ; $125 = 5^3$ autoriserait à tort un même coureur sur deux marches."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "p-liste",
+      "enonce": "Combien de codes de 3 chiffres (de 0 à 9) peut-on former, répétitions autorisées ?",
+      "choix": ["$30$", "$720$", "$999$", "$1000$"],
+      "reponse": 3,
+      "explication": "Ordre et répétition : p-liste, $10^3 = 1000$. Chaque position a 10 possibilités indépendantes. Le piège $720 = A_{10}^3$ interdirait à tort la répétition (000, 121… seraient exclus)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "symetrie",
+      "enonce": "En utilisant la symétrie des coefficients binomiaux, combien vaut $\\binom{10}{8}$ ?",
+      "choix": ["$45$", "$80$", "$90$", "$20$"],
+      "reponse": 0,
+      "explication": "Symétrie : $\\binom{10}{8} = \\binom{10}{2} = \\dfrac{10 \\times 9}{2} = 45$. Choisir les 8 qu'on garde revient à choisir les 2 qu'on écarte. Le piège $90 = A_{10}^2 = 10\\times9$ compte l'ordre ; il faut diviser par $2! = 2$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "pascal",
+      "enonce": "En utilisant la relation de Pascal $\\binom{6}{3} = \\binom{5}{2} + \\binom{5}{3}$, combien vaut $\\binom{6}{3}$ ?",
+      "choix": ["$18$", "$20$", "$15$", "$40$"],
+      "reponse": 1,
+      "explication": "$\\binom{5}{2} = 10$ et $\\binom{5}{3} = \\binom{5}{2} = 10$, donc $\\binom{6}{3} = 10 + 10 = 20$. Le piège $15 = \\binom{6}{2}$ : c'est le voisin dans le triangle, pas la valeur cherchée."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "permutation",
+      "enonce": "De combien de façons peut-on ranger 5 livres différents côte à côte sur une étagère ?",
+      "choix": ["$25$", "$3125$", "$10$", "$120$"],
+      "reponse": 3,
+      "explication": "On range **tous** les objets dans un ordre, sans répétition : permutation, $5! = 120$. Le piège $3125 = 5^5$ autoriserait de répéter un même livre à plusieurs places ; $25 = 5^2$ n'a aucun sens ici."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "combinaison",
+      "enonce": "On forme un comité de 3 personnes parmi 10 (sans rôle attribué). Combien de comités possibles ?",
+      "choix": ["$720$", "$1000$", "$120$", "$30$"],
+      "reponse": 2,
+      "explication": "Aucun ordre entre les membres : combinaison $\\binom{10}{3} = \\dfrac{10 \\times 9 \\times 8}{3!} = \\dfrac{720}{6} = 120$. Le piège $720 = A_{10}^3$ oublie de **diviser par $3! = 6$** : il compte les $3! = 6$ ordres du même comité comme distincts."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "principe-additif",
+      "enonce": "Dans une classe, 18 élèves font de l'anglais, 12 de l'espagnol, et 5 font les deux. Combien font au moins une de ces langues ?",
+      "choix": ["$30$", "$35$", "$23$", "$25$"],
+      "reponse": 3,
+      "explication": "Les deux groupes se chevauchent : $\\mathrm{Card}(A \\cup B) = 18 + 12 - 5 = 25$. Le piège $30 = 18 + 12$ additionne sans retirer l'intersection, et compte donc **deux fois** les 5 bilingues."
+    }
+  ]
+}

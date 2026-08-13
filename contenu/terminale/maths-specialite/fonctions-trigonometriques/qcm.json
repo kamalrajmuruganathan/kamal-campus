@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-math-fonctions-trigonometriques-qcm",
+  "chapitre": "tale-spe-math-fonctions-trigonometriques",
+  "titre": "QCM — Fonctions sinus et cosinus",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Sur le cercle trigonométrique, si $M$ est le point associé au réel $x$, à quoi correspond $\\cos(x)$ ?",
+      "choix": [
+        "à l'ordonnée de $M$",
+        "à l'abscisse de $M$",
+        "au rayon du cercle",
+        "à la longueur de l'arc"
+      ],
+      "reponse": 1,
+      "explication": "Par définition, $\\cos(x)$ est l'**abscisse** (coordonnée horizontale) de $M$ et $\\sin(x)$ son **ordonnée**. Le piège est d'intervertir les deux : retiens que le cosinus se lit sur l'axe horizontal."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "parite",
+      "enonce": "Pour tout réel $x$, à quoi est égal $\\cos(-x)$ ?",
+      "choix": [
+        "$-\\cos(x)$",
+        "$\\sin(x)$",
+        "$\\cos(x)$",
+        "$-\\sin(x)$"
+      ],
+      "reponse": 2,
+      "explication": "La fonction cosinus est **paire** : $\\cos(-x)=\\cos(x)$. Le piège classique est de la croire impaire comme le sinus. C'est l'inverse : $\\cos$ paire, $\\sin$ impaire."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "periodicite",
+      "enonce": "Combien vaut $\\cos\\left(\\dfrac{7\\pi}{3}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "On utilise la période $2\\pi$ : $\\dfrac{7\\pi}{3}=\\dfrac{\\pi}{3}+2\\pi$, donc $\\cos\\left(\\dfrac{7\\pi}{3}\\right)=\\cos\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac{1}{2}$. Le piège est de confondre avec $\\sin\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac{\\sqrt3}{2}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "derivees",
+      "enonce": "Quelle est la dérivée de la fonction $\\cos$ ?",
+      "choix": [
+        "$\\sin$",
+        "$-\\sin$",
+        "$\\cos$",
+        "$-\\cos$"
+      ],
+      "reponse": 1,
+      "explication": "$\\cos'(x)=-\\sin(x)$ : dériver le cosinus fait apparaître un **signe moins**. L'erreur la plus fréquente est d'écrire $+\\sin(x)$ en oubliant ce signe."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $f(x)=\\sin(3x)$ ?",
+      "choix": [
+        "$\\cos(3x)$",
+        "$-3\\cos(3x)$",
+        "$3\\sin(3x)$",
+        "$3\\cos(3x)$"
+      ],
+      "reponse": 3,
+      "explication": "C'est une composée : $\\big(\\sin(ax+b)\\big)'=a\\cos(ax+b)$. Ici $a=3$, donc $f'(x)=3\\cos(3x)$. Le piège est de dériver comme un $\\sin$ « nu » et d'oublier le facteur $3$ venant de la dérivée de l'intérieur."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "limites-en-0",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(x)}{x}$ (avec $x$ en radians) ?",
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$1$",
+        "cette limite n'existe pas"
+      ],
+      "reponse": 2,
+      "explication": "$\\displaystyle\\lim_{x\\to 0}\\dfrac{\\sin(x)}{x}=1$ : près de $0$, $\\sin(x)\\approx x$. C'est cette limite qui donne $\\sin'(0)=1$. Piège : elle n'est vraie qu'en **radians**, pas en degrés."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "equation-cos",
+      "enonce": "Quelles sont les solutions de $\\cos(x)=\\dfrac{1}{2}$ sur $[-\\pi\\,;\\,\\pi]$ ?",
+      "choix": [
+        "$x=\\dfrac{\\pi}{3}$ uniquement",
+        "$x=\\dfrac{\\pi}{3}$ et $x=-\\dfrac{\\pi}{3}$",
+        "$x=\\dfrac{\\pi}{3}$ et $x=\\dfrac{2\\pi}{3}$",
+        "$x=\\dfrac{\\pi}{6}$ et $x=-\\dfrac{\\pi}{6}$"
+      ],
+      "reponse": 1,
+      "explication": "On a $\\cos\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac12$, et par **parité** $\\cos\\left(-\\dfrac{\\pi}{3}\\right)=\\dfrac12$ aussi. Il y a donc **deux** solutions, $\\pm\\dfrac{\\pi}{3}$. Le piège est de n'en garder qu'une."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "inequation-cos",
+      "enonce": "Quel est l'ensemble des solutions de $\\cos(x)\\leqslant \\dfrac{1}{2}$ sur $[-\\pi\\,;\\,\\pi]$ ?",
+      "choix": [
+        "$\\left[-\\dfrac{\\pi}{3}\\,;\\,\\dfrac{\\pi}{3}\\right]$",
+        "$\\left[-\\pi\\,;\\,-\\dfrac{\\pi}{3}\\right]\\cup\\left[\\dfrac{\\pi}{3}\\,;\\,\\pi\\right]$",
+        "$\\left[\\dfrac{\\pi}{3}\\,;\\,\\pi\\right]$",
+        "$[-\\pi\\,;\\,\\pi]$ tout entier"
+      ],
+      "reponse": 1,
+      "explication": "Les bornes viennent de $\\cos(x)=\\dfrac12$, soit $\\pm\\dfrac{\\pi}{3}$. Comme $\\cos$ est **petit** quand le point est éloigné de $0$ (vers $\\pm\\pi$), les solutions sont aux **deux bords**. Le piège est de prendre l'intervalle central $\\left[-\\dfrac{\\pi}{3}\\,;\\,\\dfrac{\\pi}{3}\\right]$, où au contraire $\\cos(x)\\geqslant\\dfrac12$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $g(x)=\\cos(2x-1)$ ?",
+      "choix": [
+        "$-2\\sin(2x-1)$",
+        "$2\\sin(2x-1)$",
+        "$-\\sin(2x-1)$",
+        "$-2\\sin(2x)$"
+      ],
+      "reponse": 0,
+      "explication": "Composée : $\\big(\\cos(ax+b)\\big)'=-a\\sin(ax+b)$. Ici $a=2$, donc $g'(x)=-2\\sin(2x-1)$. Deux pièges cumulés : oublier le **signe moins** de $\\cos'$ et oublier le **facteur $2$** de l'intérieur."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "etude-de-fonction",
+      "enonce": "Soit $f(x)=\\sin(x)+\\cos(x)$. Quelle est sa dérivée $f'(x)$ ?",
+      "choix": [
+        "$-\\cos(x)-\\sin(x)$",
+        "$\\cos(x)-\\sin(x)$",
+        "$\\cos(x)+\\sin(x)$",
+        "$\\sin(x)-\\cos(x)$"
+      ],
+      "reponse": 1,
+      "explication": "On dérive terme à terme : $\\sin'=\\cos$ et $\\cos'=-\\sin$, donc $f'(x)=\\cos(x)-\\sin(x)$. Le piège est de dériver $\\cos$ en $+\\sin$ (choix $\\cos+\\sin$) en oubliant le signe moins."
+    }
+  ]
+}

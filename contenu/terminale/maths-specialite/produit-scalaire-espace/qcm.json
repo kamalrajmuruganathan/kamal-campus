@@ -1,0 +1,104 @@
+{
+  "id": "tale-spe-math-produit-scalaire-espace-qcm",
+  "chapitre": "tale-spe-math-produit-scalaire-espace",
+  "titre": "QCM — Produit scalaire, orthogonalité et géométrie repérée dans l'espace",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "produit-scalaire-coordonnees",
+      "enonce": "Dans une base orthonormée, $\\vec{u}\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix}3\\\\0\\\\2\\end{pmatrix}$. Combien vaut $\\vec{u}\\cdot\\vec{v}$ ?",
+      "choix": ["$1$", "$5$", "$-1$", "$6$"],
+      "reponse": 0,
+      "explication": "En base orthonormée, $\\vec{u}\\cdot\\vec{v}=xx'+yy'+zz'=1\\times3+2\\times0+(-1)\\times2=3+0-2=1$. Le piège : oublier le signe du dernier terme et écrire $3+0+2=5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "norme",
+      "enonce": "Quelle est la norme du vecteur $\\vec{u}\\begin{pmatrix}2\\\\-1\\\\2\\end{pmatrix}$ ?",
+      "choix": ["$9$", "$5$", "$3$", "$\\sqrt5$"],
+      "reponse": 2,
+      "explication": "$\\|\\vec{u}\\|=\\sqrt{x^2+y^2+z^2}=\\sqrt{4+1+4}=\\sqrt9=3$. Le piège classique est d'oublier la racine carrée et de répondre $9$, qui est en fait $\\|\\vec{u}\\|^2$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "orthogonalite",
+      "enonce": "Lequel de ces vecteurs est orthogonal à $\\vec{u}\\begin{pmatrix}1\\\\2\\\\1\\end{pmatrix}$ ?",
+      "choix": ["$\\vec{a}(1,2,1)$", "$\\vec{b}(2,-1,0)$", "$\\vec{c}(1,1,1)$", "$\\vec{d}(2,1,0)$"],
+      "reponse": 1,
+      "explication": "Deux vecteurs sont orthogonaux quand leur produit scalaire est nul. Pour $\\vec{b}$ : $1\\times2+2\\times(-1)+1\\times0=2-2+0=0$. Les autres donnent $6$, $4$ et $4$. Il faut tester le produit scalaire, pas se fier à l'allure des coordonnées."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "developpement",
+      "enonce": "On sait que $\\|\\vec{u}\\|=3$, $\\|\\vec{v}\\|=4$ et $\\vec{u}\\cdot\\vec{v}=5$. Combien vaut $\\|\\vec{u}+\\vec{v}\\|^2$ ?",
+      "choix": ["$25$", "$49$", "$\\sqrt{35}$", "$35$"],
+      "reponse": 3,
+      "explication": "$\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2=9+2\\times5+16=35$. Répondre $25$ revient à oublier le double produit $2\\,\\vec{u}\\cdot\\vec{v}$ ; $\\sqrt{35}$ est la norme, pas son carré."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "vecteur-normal",
+      "enonce": "Un plan est dirigé par $\\vec{u}\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix}0\\\\1\\\\-1\\end{pmatrix}$. Lequel de ces vecteurs lui est normal ?",
+      "choix": ["$(1,1,1)$", "$(1,0,1)$", "$(-1,1,1)$", "$(1,-1,1)$"],
+      "reponse": 2,
+      "explication": "Un vecteur normal doit être orthogonal aux deux vecteurs directeurs. Pour $(-1,1,1)$ : $\\vec{n}\\cdot\\vec{u}=-1+0+1=0$ et $\\vec{n}\\cdot\\vec{v}=0+1-1=0$. Le piège : vérifier l'orthogonalité avec un seul vecteur directeur ne suffit pas, il en faut deux non colinéaires."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "equation-cartesienne",
+      "enonce": "Quelle est une équation cartésienne du plan passant par $A(1,2,-1)$ et de vecteur normal $\\vec{n}\\begin{pmatrix}3\\\\-1\\\\2\\end{pmatrix}$ ?",
+      "choix": ["$3x-y+2z-1=0$", "$3x-y+2z+1=0$", "$3x+2y-z=0$", "$x-2y+3z+1=0$"],
+      "reponse": 1,
+      "explication": "On écrit $\\vec{AM}\\cdot\\vec{n}=0$ : $3(x-1)-(y-2)+2(z+1)=0$, soit $3x-y+2z+(-3+2+2)=0$, d'où $3x-y+2z+1=0$. Contrôle avec $A$ : $3-2-2+1=0$ ✓. L'erreur de signe sur $d$ donne $-1$ à la place de $+1$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "polarisation",
+      "enonce": "On donne $\\|\\vec{u}\\|=2$, $\\|\\vec{v}\\|=3$ et $\\|\\vec{u}+\\vec{v}\\|=4$. Combien vaut $\\vec{u}\\cdot\\vec{v}$ ?",
+      "choix": ["$3$", "$-\\dfrac32$", "$\\dfrac32$", "$\\dfrac34$"],
+      "reponse": 2,
+      "explication": "Formule de polarisation : $\\vec{u}\\cdot\\vec{v}=\\tfrac12(\\|\\vec{u}+\\vec{v}\\|^2-\\|\\vec{u}\\|^2-\\|\\vec{v}\\|^2)=\\tfrac12(16-4-9)=\\tfrac32$. Oublier le facteur $\\tfrac12$ donne $3$ ; utiliser $\\tfrac14$ au lieu de $\\tfrac12$ donne $\\tfrac34$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "projete-orthogonal",
+      "enonce": "Quel est le projeté orthogonal du point $M(1,1,1)$ sur le plan $\\mathcal{P}:x+y+z-6=0$ ?",
+      "choix": ["$(6,6,6)$", "$(3,3,3)$", "$(0,0,0)$", "$(2,2,2)$"],
+      "reponse": 3,
+      "explication": "La droite passant par $M$ et dirigée par le normal $\\vec{n}(1,1,1)$ est $(1+t,1+t,1+t)$. On l'injecte dans le plan : $3(1+t)-6=0\\Rightarrow t=1$, d'où $H(2,2,2)$. Le piège : croire que le projeté est un multiple simple des coordonnées de $M$ sans passer par l'équation du plan."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "representation-parametrique",
+      "enonce": "La droite $d$ a pour représentation $\\begin{cases}x=4-t\\\\ y=1\\\\ z=2+t\\end{cases}$. Quel est un vecteur directeur de $d$ ?",
+      "choix": ["$(4,1,2)$", "$(-1,0,1)$", "$(1,0,1)$", "$(-1,1,1)$"],
+      "reponse": 1,
+      "explication": "Le vecteur directeur se lit dans les coefficients du paramètre $t$ : $x=4-1\\cdot t$, $y=1+0\\cdot t$, $z=2+1\\cdot t$, soit $(-1,0,1)$. Le piège : lire $(4,1,2)$, qui est le point de la droite (les constantes), pas sa direction."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "systeme-configuration",
+      "enonce": "Où la droite $\\begin{cases}x=t\\\\ y=1+t\\\\ z=2-t\\end{cases}$ coupe-t-elle le plan $x+y+z-3=0$ ?",
+      "choix": ["Pas d'intersection (droite parallèle au plan)", "au point $(1,2,1)$", "au point $(0,1,2)$", "une infinité de points (droite incluse dans le plan)"],
+      "reponse": 2,
+      "explication": "On injecte la paramétrique dans l'équation du plan : $t+(1+t)+(2-t)-3=0$, ce qui se simplifie en $t=0$. Une unique valeur de $t$ : la droite est sécante au plan au point $(0,1,2)$. Il faut toujours substituer, puis conclure par la position relative obtenue."
+    }
+  ]
+}

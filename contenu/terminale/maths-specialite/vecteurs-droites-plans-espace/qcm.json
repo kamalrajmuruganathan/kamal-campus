@@ -1,0 +1,144 @@
+{
+  "id": "tale-spe-math-vecteurs-droites-plans-espace-qcm",
+  "chapitre": "tale-spe-math-vecteurs-droites-plans-espace",
+  "titre": "QCM — Vecteurs, droites et plans de l'espace",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, exprime la grande diagonale $\\overrightarrow{AG}$ en fonction de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "choix": [
+        "$\\overrightarrow{AB} + \\overrightarrow{AD}$",
+        "$\\overrightarrow{AB} + \\overrightarrow{AE}$",
+        "$\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE}$",
+        "$\\overrightarrow{AB} - \\overrightarrow{AD} + \\overrightarrow{AE}$"
+      ],
+      "reponse": 2,
+      "explication": "Avec Chasles : $\\overrightarrow{AG} = \\overrightarrow{AC} + \\overrightarrow{CG}$, où $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD}$ (diagonale de la face du bas) et $\\overrightarrow{CG} = \\overrightarrow{AE}$ (la montée). Le choix $\\overrightarrow{AB}+\\overrightarrow{AD}$ n'est que $\\overrightarrow{AC}$ : il oublie de monter d'un étage."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "base",
+      "enonce": "Combien de vecteurs non coplanaires faut-il pour former une base de l'espace ?",
+      "choix": ["$2$", "$3$", "$4$", "une infinité"],
+      "reponse": 1,
+      "explication": "Dans le plan, $2$ vecteurs non colinéaires suffisent ; dans l'espace il faut $3$ vecteurs **non coplanaires**, soit une direction de plus. Le piège est de garder le réflexe du plan et de répondre $2$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "colinearite",
+      "enonce": "Les vecteurs $\\overrightarrow{u}\\,(2\\,;-1\\,;3)$ et $\\overrightarrow{v}\\,(-4\\,;2\\,;-6)$ sont-ils colinéaires ?",
+      "choix": [
+        "Non, car leurs coordonnées sont de signes opposés",
+        "Oui, car $\\overrightarrow{v} = 2\\,\\overrightarrow{u}$",
+        "Non, aucun réel ne convient",
+        "Oui, car $\\overrightarrow{v} = -2\\,\\overrightarrow{u}$"
+      ],
+      "reponse": 3,
+      "explication": "On cherche un réel $k$ tel que chaque coordonnée de $\\overrightarrow{v}$ vaille $k$ fois celle de $\\overrightarrow{u}$ : $-4 = k\\times 2$, $2 = k\\times(-1)$, $-6 = k\\times 3$ donnent tous $k = -2$. Un coefficient négatif ne pose aucun problème : colinéaire ne veut pas dire égal. Avec $k = 2$ on obtiendrait $(4\\,;-2\\,;6)$, faux."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "droite-directeur",
+      "enonce": "Une droite passe par $A$ et a pour vecteur directeur $\\overrightarrow{u}\\neq\\overrightarrow{0}$. Quelle égalité caractérise l'appartenance d'un point $M$ à cette droite ?",
+      "choix": [
+        "$\\overrightarrow{AM} = t\\,\\overrightarrow{u}$ avec $t\\in\\mathbb{R}$",
+        "$\\overrightarrow{AM} = \\overrightarrow{u}$",
+        "$\\overrightarrow{AM} = s\\,\\overrightarrow{u} + t\\,\\overrightarrow{v}$",
+        "$\\overrightarrow{AM} = \\overrightarrow{0}$"
+      ],
+      "reponse": 0,
+      "explication": "Quand le paramètre $t$ décrit $\\mathbb{R}$, le point $M$ parcourt toute la droite. $\\overrightarrow{AM}=\\overrightarrow{u}$ ne donne qu'un seul point ; la forme à **deux** paramètres $s\\overrightarrow{u}+t\\overrightarrow{v}$ caractérise un **plan**, pas une droite."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "plan-caracterisation",
+      "enonce": "Pour qu'un point $A$ et deux vecteurs $\\overrightarrow{u}$, $\\overrightarrow{v}$ définissent un plan, ces deux vecteurs doivent être :",
+      "choix": [
+        "colinéaires",
+        "non colinéaires",
+        "de même norme",
+        "orthogonaux"
+      ],
+      "reponse": 1,
+      "explication": "Deux vecteurs colinéaires ne portent qu'**une seule** direction : ils dirigent une droite, pas un plan. Il faut deux directions distinctes, donc des vecteurs **non colinéaires**. L'orthogonalité n'est pas exigée (et relève du chapitre suivant)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "positions-relatives",
+      "enonce": "Dans le cube $ABCDEFGH$, quelle est la position relative des droites $(AB)$ et $(CG)$ ?",
+      "choix": ["parallèles", "sécantes", "non coplanaires", "confondues"],
+      "reponse": 2,
+      "explication": "$(AB)$ est une arête horizontale du bas, $(CG)$ est un montant vertical : leurs directions diffèrent, donc elles ne sont pas parallèles, et elles n'ont aucun point commun. Il n'existe aucun plan les contenant toutes deux : c'est le cas **non coplanaire**, qui n'existe pas dans le plan."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "decomposition",
+      "enonce": "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ du cube, quelles sont les coordonnées du vecteur $\\overrightarrow{DF}$ ?",
+      "choix": [
+        "$(1\\,;1\\,;1)$",
+        "$(-1\\,;1\\,;1)$",
+        "$(1\\,;-1\\,;-1)$",
+        "$(1\\,;-1\\,;1)$"
+      ],
+      "reponse": 3,
+      "explication": "$\\overrightarrow{DF} = \\overrightarrow{DA} + \\overrightarrow{AB} + \\overrightarrow{BF} = -\\overrightarrow{AD} + \\overrightarrow{AB} + \\overrightarrow{AE}$. Autrement dit $F(1\\,;0\\,;1)$ moins $D(0\\,;1\\,;0)$ donne $(1\\,;-1\\,;1)$. Le piège classique est d'oublier le signe $-$ sur la composante selon $\\overrightarrow{AD}$ (on descend de $D$ vers $A$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "coplanarite",
+      "enonce": "Dans le cube $ABCDEFGH$, pourquoi les points $A$, $B$, $G$, $H$ sont-ils coplanaires ?",
+      "choix": [
+        "Parce que $\\overrightarrow{AG} = \\overrightarrow{AB} + \\overrightarrow{AH}$",
+        "Parce qu'ils sont tous sur une même arête",
+        "Parce que $\\overrightarrow{AG}$ et $\\overrightarrow{AB}$ sont colinéaires",
+        "Parce que ce sont quatre sommets du cube"
+      ],
+      "reponse": 0,
+      "explication": "$\\overrightarrow{AG}$ s'écrit comme combinaison linéaire de $\\overrightarrow{AB}$ et $\\overrightarrow{AH}$ : $G$ appartient donc au plan $(A\\,;\\overrightarrow{AB},\\overrightarrow{AH})$ qui contient déjà $A$, $B$ et $H$. Quatre sommets du cube ne sont pas toujours coplanaires ($A,B,C,E$ ne le sont pas), et $\\overrightarrow{AG}$ n'est pas colinéaire à $\\overrightarrow{AB}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "positions-relatives",
+      "enonce": "Dans le cube $ABCDEFGH$, quelle est l'intersection des plans $(ABCD)$ et $(ABFE)$ ?",
+      "choix": [
+        "le point $A$ seulement",
+        "la droite $(AB)$",
+        "elle est vide, les plans sont parallèles",
+        "le plan $(ABCD)$ tout entier"
+      ],
+      "reponse": 1,
+      "explication": "Deux plans sécants se coupent toujours selon une **droite**, jamais selon un point isolé. Ici $A$ et $B$ appartiennent aux deux faces, donc l'intersection est la droite $(AB)$. Les croire parallèles est faux : ils partagent justement l'arête $AB$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "base",
+      "enonce": "Dans le cube, les vecteurs $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{BD}$ forment-ils une base de l'espace ?",
+      "choix": [
+        "Oui, ce sont trois vecteurs distincts",
+        "Oui, car deux d'entre eux sont non colinéaires",
+        "Non, car ils ne sont pas orthogonaux",
+        "Non, car ils sont coplanaires"
+      ],
+      "reponse": 3,
+      "explication": "$\\overrightarrow{BD} = \\overrightarrow{AD} - \\overrightarrow{AB}$ est combinaison linéaire de $\\overrightarrow{AB}$ et $\\overrightarrow{AD}$ : les trois vecteurs sont donc coplanaires (tous dans le plan $ABCD$). Une base exige trois vecteurs **non coplanaires** ; l'orthogonalité, elle, n'a rien à voir (une base peut être quelconque)."
+    }
+  ]
+}

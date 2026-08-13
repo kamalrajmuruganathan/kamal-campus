@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-math-sommes-variables-concentration-qcm",
+  "chapitre": "tale-spe-math-sommes-variables-concentration",
+  "titre": "QCM — Sommes de variables aléatoires, concentration et loi des grands nombres",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "linearite-esperance",
+      "enonce": "On sait que $E(X) = 2$ et $E(Y) = 5$. Combien vaut $E(X + Y)$ ?",
+      "choix": [
+        "$10$",
+        "$7$",
+        "On ne peut pas conclure sans savoir si $X$ et $Y$ sont indépendantes",
+        "$3$"
+      ],
+      "reponse": 1,
+      "explication": "La linéarité de l'espérance $E(X+Y)=E(X)+E(Y)$ est vraie **sans aucune condition** : $2+5=7$. Le piège est de croire qu'il faut l'indépendance (c'est le cas pour la variance, pas pour l'espérance). Le choix $10$ multiplie au lieu d'additionner."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "variance-multiple",
+      "enonce": "On sait que $V(X) = 4$. Combien vaut $V(2X)$ ?",
+      "choix": [
+        "$8$",
+        "$4$",
+        "$16$",
+        "$2$"
+      ],
+      "reponse": 2,
+      "explication": "La formule est $V(aX)=a^2\\,V(X)$ : le coefficient passe **au carré**. Donc $V(2X)=2^2\\times 4=16$. Le distracteur $8$ vient de l'erreur classique $2\\times 4$, en oubliant le carré."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "variance-somme",
+      "enonce": "$X$ et $Y$ sont **indépendantes**, avec $V(X)=3$ et $V(Y)=5$. Combien vaut $V(X+Y)$ ?",
+      "choix": [
+        "$8$",
+        "$15$",
+        "$\\sqrt{34}$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $X$ et $Y$ sont indépendantes, les variances s'ajoutent : $V(X+Y)=V(X)+V(Y)=3+5=8$. Le choix $15$ multiplie les variances (faux), et $\\sqrt{34}$ confond variance et écart type."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "linearite-esperance",
+      "enonce": "On sait que $E(X)=2$ et $E(Y)=5$. Combien vaut $E(3X - Y)$ ?",
+      "choix": [
+        "$1$",
+        "$11$",
+        "$6$",
+        "$-1$"
+      ],
+      "reponse": 0,
+      "explication": "Par linéarité, $E(3X-Y)=3E(X)-E(Y)=3\\times 2-5=1$. Le distracteur $11$ oublie de soustraire ($6+5$), et $6$ oublie complètement le terme $-Y$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "binomiale",
+      "enonce": "Soit $X$ une variable qui suit la loi binomiale $\\mathcal{B}(50\\,;\\,0{,}2)$. Combien vaut sa variance $V(X)$ ?",
+      "choix": [
+        "$10$",
+        "$40$",
+        "$8$",
+        "$2{,}83$"
+      ],
+      "reponse": 2,
+      "explication": "Pour la binomiale, $V(X)=np(1-p)=50\\times 0{,}2\\times 0{,}8=8$. Le distracteur $10$ donne l'**espérance** $np$, et $2{,}83\\approx\\sqrt{8}$ est l'**écart type**, pas la variance."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "loi-grands-nombres",
+      "enonce": "Pour la moyenne $M_n$ d'un échantillon d'une loi d'espérance $\\mu$, que se passe-t-il quand $n$ augmente ?",
+      "choix": [
+        "Son espérance $E(M_n)$ tend vers $0$",
+        "Sa variance tend vers $0$ et $M_n$ se concentre autour de $\\mu$",
+        "Son espérance $E(M_n)$ augmente avec $n$",
+        "Sa variance reste égale à celle de la loi"
+      ],
+      "reponse": 1,
+      "explication": "$E(M_n)=\\mu$ **reste constant** ; c'est $V(M_n)=\\dfrac{V}{n}$ qui tend vers $0$. C'est la loi des grands nombres : la moyenne se concentre autour de $\\mu$. Le piège est de croire que l'espérance bouge — c'est la variance qui diminue."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "moyenne-echantillon",
+      "enonce": "Un échantillon de taille $n=100$ provient d'une loi de variance $V=9$. Combien vaut la variance de la moyenne $M_n$ ?",
+      "choix": [
+        "$9$",
+        "$0{,}0009$",
+        "$0{,}09$",
+        "$0{,}9$"
+      ],
+      "reponse": 2,
+      "explication": "$V(M_n)=\\dfrac{V}{n}=\\dfrac{9}{100}=0{,}09$. Le distracteur $0{,}0009$ divise par $n^2$ au lieu de $n$ : c'est l'erreur classique. On divise la variance par $n$, pas par $n^2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "moyenne-echantillon",
+      "enonce": "Une loi a pour écart type $\\sigma=6$. Pour un échantillon de taille $n=9$, combien vaut l'écart type de la moyenne $\\sigma(M_n)$ ?",
+      "choix": [
+        "$6$",
+        "$18$",
+        "$0{,}67$",
+        "$2$"
+      ],
+      "reponse": 3,
+      "explication": "$\\sigma(M_n)=\\dfrac{\\sigma}{\\sqrt{n}}=\\dfrac{6}{\\sqrt{9}}=\\dfrac{6}{3}=2$. Le piège est de diviser par $n$ ($6/9\\approx 0{,}67$) au lieu de $\\sqrt{n}$ : c'est l'écart type, donc on divise par $\\sqrt{n}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "bienayme-tchebychev",
+      "enonce": "Une variable $X$ a pour espérance $\\mu=20$ et variance $V(X)=4$. D'après l'inégalité de Bienaymé-Tchebychev, par combien est majorée $P(|X-20|\\geqslant 5)$ ?",
+      "choix": [
+        "$0{,}16$",
+        "$0{,}8$",
+        "$1{,}25$",
+        "$0{,}04$"
+      ],
+      "reponse": 0,
+      "explication": "L'inégalité donne $P(|X-\\mu|\\geqslant\\delta)\\leqslant\\dfrac{V(X)}{\\delta^2}=\\dfrac{4}{5^2}=\\dfrac{4}{25}=0{,}16$. Le distracteur $0{,}8=\\dfrac{4}{5}$ oublie d'élever $\\delta$ au carré au dénominateur."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "concentration",
+      "enonce": "Une loi a une variance $V=2$. On veut une moyenne $M_n$ telle que $P(|M_n-\\mu|\\geqslant 0{,}1)\\leqslant 0{,}05$. Quelle taille d'échantillon $n$ garantit ce risque via l'inégalité de concentration ?",
+      "choix": [
+        "$400$",
+        "$40000$",
+        "$40$",
+        "$4000$"
+      ],
+      "reponse": 3,
+      "explication": "On impose $\\dfrac{V}{n\\delta^2}\\leqslant\\alpha$, soit $n\\geqslant\\dfrac{V}{\\alpha\\,\\delta^2}=\\dfrac{2}{0{,}05\\times 0{,}1^2}=\\dfrac{2}{0{,}0005}=4000$. Le piège fréquent est d'oublier le carré sur $\\delta$, ce qui donne $400$."
+    }
+  ]
+}

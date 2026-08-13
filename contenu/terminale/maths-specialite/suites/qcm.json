@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-math-suites-qcm",
+  "chapitre": "tale-spe-math-suites",
+  "titre": "QCM — Suites : limites et récurrence",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "limite-infinie",
+      "enonce": "D'après la définition, que signifie $\\lim\\limits_{n \\to +\\infty} u_n = +\\infty$ ?",
+      "choix": [
+        "$u_n$ est strictement croissante",
+        "Il existe un rang $n$ tel que $u_n > 1000$",
+        "Tout intervalle $[A\\,;+\\infty[$ contient toutes les valeurs $u_n$ à partir d'un certain rang",
+        "$u_n$ est toujours positive"
+      ],
+      "reponse": 2,
+      "explication": "La définition est valable pour **tout** seuil $A$, et exige que les $u_n$ y restent **à partir d'un certain rang**. « Croissante » n'est ni nécessaire ni suffisant, et un seul rang qui dépasse $1000$ ne prouve rien."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "suite-geometrique",
+      "enonce": "Quelle est la limite de la suite définie par $u_n = 0{,}8^{\\,n}$ ?",
+      "choix": [
+        "$0$",
+        "$0{,}8$",
+        "$+\\infty$",
+        "Elle n'a pas de limite"
+      ],
+      "reponse": 0,
+      "explication": "Pour une suite géométrique $q^n$ avec $|q| < 1$, la limite est $0$. Ici $q = 0{,}8$ donc $0{,}8^{\\,n} \\to 0$ : chaque terme est plus petit que le précédent. Le piège est de confondre la raison $q$ avec la limite."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "convergence",
+      "enonce": "Une suite qui tend vers $+\\infty$ est dite :",
+      "choix": [
+        "convergente",
+        "divergente",
+        "bornée",
+        "majorée"
+      ],
+      "reponse": 1,
+      "explication": "« Converger » veut dire avoir une limite **finie**. Tendre vers $+\\infty$, c'est **diverger** (vers $+\\infty$). Le piège classique est de croire qu'« avoir une limite » = « converger » : c'est faux quand la limite est infinie."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "gendarmes",
+      "enonce": "Quelle est la limite de $v_n = \\dfrac{\\sin n}{n}$ ?",
+      "choix": [
+        "$1$",
+        "$+\\infty$",
+        "Elle n'existe pas car $\\sin n$ oscille",
+        "$0$"
+      ],
+      "reponse": 3,
+      "explication": "On encadre : $-\\dfrac1n \\leq \\dfrac{\\sin n}{n} \\leq \\dfrac1n$. Les deux bornes tendent vers $0$, donc par le théorème des gendarmes $v_n \\to 0$. L'oscillation de $\\sin n$ ne bloque rien : elle est « écrasée » par le $\\frac1n$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "operations-limites",
+      "enonce": "Quelle est la limite de $u_n = n^2 - n$ ?",
+      "choix": [
+        "$0$",
+        "$-\\infty$",
+        "$+\\infty$",
+        "$1$"
+      ],
+      "reponse": 2,
+      "explication": "C'est une forme indéterminée $\\infty - \\infty$ : on ne peut pas répondre $0$. On factorise $u_n = n(n-1)$, produit de deux facteurs qui tendent vers $+\\infty$, donc $u_n \\to +\\infty$. Le piège est d'écrire « $\\infty - \\infty = 0$ »."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "convergence-monotone",
+      "enonce": "Une suite $(u_n)$ est croissante et majorée par $5$. Que peut-on affirmer ?",
+      "choix": [
+        "Elle converge, et sa limite vaut exactement $5$",
+        "Elle converge vers une limite $\\ell \\leq 5$",
+        "Elle tend vers $+\\infty$",
+        "Elle n'a pas nécessairement de limite"
+      ],
+      "reponse": 1,
+      "explication": "Le théorème de la convergence monotone garantit qu'elle **converge**, mais donne l'existence de la limite, pas sa valeur : $5$ est un majorant, pas forcément la limite. Elle ne peut pas tendre vers $+\\infty$ puisqu'elle est majorée."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "recurrence",
+      "enonce": "Dans une démonstration par récurrence, à quoi sert l'étape d'initialisation ?",
+      "choix": [
+        "À supposer la propriété vraie au rang $k$",
+        "À conclure que la propriété est vraie pour tout $n$",
+        "Elle est facultative dès que l'hérédité est prouvée",
+        "À vérifier que la propriété est vraie au premier rang $n_0$"
+      ],
+      "reponse": 3,
+      "explication": "L'initialisation vérifie $P(n_0)$ : c'est le premier domino qui tombe. Sans elle, l'hérédité seule ne prouve rien (on peut « hériter » une propriété fausse). L'oublier est l'erreur qui coûte le plus de points en récurrence."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "recurrence",
+      "enonce": "Que suppose-t-on exactement dans l'étape d'hérédité ?",
+      "choix": [
+        "Que $P(n)$ est vraie pour tout entier $n$, puis on vérifie",
+        "Que $P(k+1)$ est vraie, pour en déduire $P(k)$",
+        "Que $P(k)$ est vraie pour un $k$ fixé, pour en déduire $P(k+1)$",
+        "Rien : on calcule directement $P(k+1)$"
+      ],
+      "reponse": 2,
+      "explication": "On suppose $P(k)$ (l'hypothèse de récurrence) et on en déduit $P(k+1)$. Supposer $P(n)$ « pour tout $n$ » revient à supposer ce qu'on veut démontrer : c'est le raisonnement circulaire, l'autre grande erreur de la récurrence."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "suite-geometrique",
+      "enonce": "Quelle est la limite de la suite de terme général $(-2)^n$ ?",
+      "choix": [
+        "$+\\infty$",
+        "$0$",
+        "$-\\infty$",
+        "Elle n'a pas de limite"
+      ],
+      "reponse": 3,
+      "explication": "Ici $q = -2$, donc $q \\leq -1$ : les termes $1, -2, 4, -8, 16, \\dots$ grandissent **en changeant de signe**. La suite n'a donc pas de limite. On ne conclut $q^n \\to 0$ que si $|q| < 1$, et $q^n \\to +\\infty$ que si $q > 1$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "limite-infinie",
+      "enonce": "On sait que $u_n \\geq n - 3$ pour tout entier $n$. Que peut-on conclure ?",
+      "choix": [
+        "$u_n \\to +\\infty$",
+        "$u_n \\to -\\infty$",
+        "$u_n$ converge",
+        "On ne peut rien conclure"
+      ],
+      "reponse": 0,
+      "explication": "La suite minorante $n - 3$ tend vers $+\\infty$. D'après le théorème de comparaison, si $u_n \\geq v_n$ et $v_n \\to +\\infty$, alors $u_n \\to +\\infty$. Une minoration par une suite qui explose suffit : pas besoin de connaître $u_n$ exactement."
+    }
+  ]
+}

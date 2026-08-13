@@ -1,0 +1,139 @@
+{
+  "id": "tale-spe-math-fonction-logarithme-qcm",
+  "chapitre": "tale-spe-math-fonction-logarithme",
+  "titre": "QCM — Fonction logarithme népérien",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quel est l'ensemble de définition de la fonction $\\ln$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$]0\\,;+\\infty[$",
+        "$[0\\,;+\\infty[$",
+        "$\\mathbb{R}\\setminus\\{0\\}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\ln$ est la réciproque de $\\exp$, qui prend ses valeurs dans $]0\\,;+\\infty[$ : on ne peut donc calculer $\\ln x$ que pour $x>0$, **strictement**. Le piège est d'inclure $0$ : or $\\ln 0$ n'existe pas."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Combien vaut $\\ln 1$ ?",
+      "choix": ["$1$", "$e$", "$0$", "$-1$"],
+      "reponse": 2,
+      "explication": "Par définition $\\ln 1 = y \\iff e^{y}=1$, or $e^{0}=1$, donc $\\ln 1 = 0$. Le piège classique est de confondre avec $\\ln e = 1$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "En utilisant les propriétés du logarithme, $\\ln 12$ est égal à :",
+      "choix": [
+        "$\\ln 3 + \\ln 4$",
+        "$\\ln 3 \\times \\ln 4$",
+        "$\\ln 8 + \\ln 4$",
+        "$3\\ln 4$"
+      ],
+      "reponse": 0,
+      "explication": "$\\ln(a\\times b)=\\ln a+\\ln b$, donc $\\ln 12=\\ln(3\\times 4)=\\ln 3+\\ln 4$. Le piège du choix 2 : le logarithme d'un produit est une **somme**, pas un produit de logarithmes."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "L'expression $\\ln(a^{5})$ (avec $a>0$) est égale à :",
+      "choix": [
+        "$5+\\ln a$",
+        "$(\\ln a)^{5}$",
+        "$5\\ln a$",
+        "$\\ln 5 \\times \\ln a$"
+      ],
+      "reponse": 2,
+      "explication": "$\\ln(a^{n})=n\\ln a$ : l'exposant « descend » comme coefficient devant le $\\ln$. Le piège du choix 2 est de mettre le $\\ln$ à la puissance $5$ au lieu de le multiplier par $5$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "derivee",
+      "enonce": "Quelle est la dérivée de la fonction $f(x)=\\ln x$ sur $]0\\,;+\\infty[$ ?",
+      "choix": [
+        "$\\dfrac{1}{x}$",
+        "$\\ln x$",
+        "$x\\ln x$",
+        "$-\\dfrac{1}{x^{2}}$"
+      ],
+      "reponse": 0,
+      "explication": "$(\\ln x)'=\\dfrac{1}{x}$, résultat à connaître par cœur. Comme $x>0$, cette dérivée est positive, ce qui prouve que $\\ln$ est strictement croissante. Le choix 3 confond avec une primitive."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "limites",
+      "enonce": "Que vaut $\\lim\\limits_{x\\to 0^{+}}\\ln x$ ?",
+      "choix": ["$0$", "$1$", "$+\\infty$", "$-\\infty$"],
+      "reponse": 3,
+      "explication": "Quand $x$ tend vers $0$ par valeurs positives, $\\ln x$ tend vers $-\\infty$ : l'axe des ordonnées est asymptote verticale. Le piège est de croire que $\\ln$ « s'arrête » à $0$ ; en réalité elle plonge vers $-\\infty$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "equations",
+      "enonce": "Quelle est la solution de l'équation $\\ln(2x-6)=\\ln(x-1)$ ?",
+      "choix": [
+        "$x=5$",
+        "$x=7$",
+        "Aucune solution",
+        "$x=-5$"
+      ],
+      "reponse": 0,
+      "explication": "Existence : $2x-6>0$ et $x-1>0$, soit $x>3$. On identifie : $2x-6=x-1\\Rightarrow x=5$. Comme $5>3$, la solution convient. Le piège : oublier de vérifier la condition d'existence à la fin."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "inequations",
+      "enonce": "Quel est l'ensemble des solutions de l'inéquation $\\ln x \\leqslant 1$ ?",
+      "choix": [
+        "$]-\\infty\\,;e]$",
+        "$[e\\,;+\\infty[$",
+        "$]0\\,;e]$",
+        "$]0\\,;1]$"
+      ],
+      "reponse": 2,
+      "explication": "$\\ln$ étant strictement croissante, elle conserve le sens : $\\ln x\\leqslant 1=\\ln e \\iff x\\leqslant e$. Mais il faut aussi $x>0$ (existence), d'où $]0\\,;e]$. Le piège du choix 1 : oublier la condition $x>0$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "equations",
+      "enonce": "Quelle est la solution de l'équation $e^{3x}=7$ ?",
+      "choix": [
+        "$x=\\dfrac{7}{3}$",
+        "$x=3\\ln 7$",
+        "$x=\\ln 7 - 3$",
+        "$x=\\dfrac{\\ln 7}{3}$"
+      ],
+      "reponse": 3,
+      "explication": "On applique $\\ln$ (réciproque de $\\exp$) : $\\ln(e^{3x})=3x=\\ln 7$, donc $x=\\dfrac{\\ln 7}{3}$. Le piège du choix 2 : multiplier par $3$ au lieu de diviser, en oubliant que le $3$ était devant l'inconnue dans l'exposant."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "croissances-comparees",
+      "enonce": "Que vaut $\\lim\\limits_{x\\to +\\infty}\\dfrac{\\ln x}{x}$ ?",
+      "choix": ["$+\\infty$", "$1$", "$0$", "$-\\infty$"],
+      "reponse": 2,
+      "explication": "Par croissance comparée, la puissance de $x$ l'emporte sur le logarithme : $\\dfrac{\\ln x}{x}\\to 0$ en $+\\infty$. Le piège est de conclure « $\\dfrac{+\\infty}{+\\infty}$ donc $1$ » : c'est une forme indéterminée que la règle des croissances comparées tranche en faveur du dénominateur."
+    }
+  ]
+}

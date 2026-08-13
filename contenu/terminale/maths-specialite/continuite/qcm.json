@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-math-continuite-qcm",
+  "chapitre": "tale-spe-math-continuite",
+  "titre": "QCM — Continuité et théorème des valeurs intermédiaires",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Soit $f$ définie sur un intervalle $I$ et $a \\in I$. Par quelle condition définit-on « $f$ continue en $a$ » ?",
+      "choix": [
+        "$f(a) = 0$",
+        "$f$ est croissante autour de $a$",
+        "$\\displaystyle\\lim_{x \\to a} f(x) = f(a)$",
+        "$f'(a)$ existe"
+      ],
+      "reponse": 2,
+      "explication": "La continuité en $a$ se définit **par les limites** : la limite de $f$ en $a$ doit exister ET valoir $f(a)$. Le choix $f'(a)$ existe décrit la dérivabilité, une propriété **plus forte** : c'est la confusion classique à éviter."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "derivable-continue",
+      "enonce": "Si $f$ est dérivable sur un intervalle $I$, que peut-on affirmer avec certitude ?",
+      "choix": [
+        "$f$ est continue sur $I$",
+        "$f$ est strictement monotone sur $I$",
+        "$f$ est constante sur $I$",
+        "$f$ admet un maximum sur $I$"
+      ],
+      "reponse": 0,
+      "explication": "Toute fonction dérivable est continue : « dérivable » implique « continue ». Attention, la réciproque est fausse. Dérivable ne dit rien sur la monotonie ni sur l'existence d'un extremum."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "valeur-absolue",
+      "enonce": "En $x = 0$, la fonction $f(x) = |x|$ est :",
+      "choix": [
+        "dérivable mais pas continue",
+        "ni continue ni dérivable",
+        "continue et dérivable",
+        "continue mais pas dérivable"
+      ],
+      "reponse": 3,
+      "explication": "$|x|$ est le contre-exemple à connaître : elle est **continue** en $0$ ($\\lim_{x\\to 0}|x| = 0 = f(0)$) mais **non dérivable** à cause du point anguleux (pente $-1$ à gauche, $+1$ à droite). Elle prouve que continue n'implique PAS dérivable."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "tvi",
+      "enonce": "$f$ est continue sur $[1\\,;4]$, avec $f(1) = -2$ et $f(4) = 5$. Que garantit le théorème des valeurs intermédiaires pour l'équation $f(x) = 0$ ?",
+      "choix": [
+        "exactement une solution",
+        "au moins une solution dans $[1\\,;4]$",
+        "aucune solution",
+        "exactement deux solutions"
+      ],
+      "reponse": 1,
+      "explication": "$0$ est compris entre $-2$ et $5$ : le TVI garantit **au moins une** solution. Conclure « exactement une » est le piège : sans hypothèse de stricte monotonie, on ne connaît pas le nombre exact de solutions."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "bijection",
+      "enonce": "Quelle hypothèse faut-il ajouter au théorème des valeurs intermédiaires pour garantir l'**unicité** de la solution de $f(x) = k$ ?",
+      "choix": [
+        "la dérivabilité de $f$",
+        "la positivité de $f$",
+        "la stricte monotonie de $f$",
+        "la parité de $f$"
+      ],
+      "reponse": 2,
+      "explication": "C'est le corollaire (théorème de la bijection) : continuité + **stricte monotonie** donnent existence ET unicité. La dérivabilité n'est pas requise en soi ; elle ne sert qu'à établir la monotonie via le signe de $f'$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "suite-convergente",
+      "enonce": "La suite $(u_n)$ converge vers $3$ et $f(x) = x^2 + 1$ est continue en $3$. Vers quoi converge $f(u_n)$ ?",
+      "choix": [
+        "$10$",
+        "$3$",
+        "$1$",
+        "on ne peut pas conclure"
+      ],
+      "reponse": 0,
+      "explication": "Image d'une suite convergente par une fonction continue : $f(u_n) \\to f(3) = 3^2 + 1 = 10$. Le piège est de renvoyer la limite $3$ de la suite au lieu de son image $f(3)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "methode-fxk",
+      "enonce": "$f$ est continue et strictement décroissante sur $[0\\,;2]$, avec $f(0) = 5$ et $f(2) = -1$. Combien l'équation $f(x) = 2$ admet-elle de solutions dans $[0\\,;2]$ ?",
+      "choix": [
+        "aucune, car $f$ décroît",
+        "une unique solution",
+        "au moins deux solutions",
+        "une solution seulement si $f$ est positive"
+      ],
+      "reponse": 1,
+      "explication": "$2$ est compris entre $-1$ et $5$, et $f$ est continue **et strictement monotone** : le théorème de la bijection donne une **unique** solution. La décroissance n'empêche rien — c'est justement une stricte monotonie, ce qui assure l'unicité."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "encadrement",
+      "enonce": "$f$ est continue et strictement croissante, avec $f(0{,}6) \\approx -0{,}18$ et $f(0{,}7) \\approx 0{,}04$. On note $\\alpha$ la solution de $f(x) = 0$. Que peut-on affirmer ?",
+      "choix": [
+        "$\\alpha = 0{,}65$",
+        "$\\alpha < 0{,}6$",
+        "$0{,}6 < \\alpha < 0{,}7$",
+        "$\\alpha > 0{,}7$"
+      ],
+      "reponse": 2,
+      "explication": "$f$ change de signe entre $0{,}6$ et $0{,}7$ : par le TVI, la solution est dans cet intervalle, d'où l'encadrement $0{,}6 < \\alpha < 0{,}7$. Répondre $\\alpha = 0{,}65$ est le piège : on obtient un **encadrement**, pas une valeur exacte."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "dichotomie",
+      "enonce": "Dans la méthode de dichotomie appliquée à la recherche d'une solution, que devient la longueur de l'intervalle d'encadrement à chaque étape ?",
+      "choix": [
+        "elle reste constante",
+        "elle est divisée par $10$",
+        "elle double",
+        "elle est divisée par $2$"
+      ],
+      "reponse": 3,
+      "explication": "La dichotomie coupe l'intervalle en son milieu et garde la moitié qui contient la solution : la longueur est **divisée par 2** à chaque tour, d'où une convergence rapide. La division par $10$ correspondrait à un balayage au dixième, pas à la dichotomie."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "suite-recurrente",
+      "enonce": "Une suite définie par $u_{n+1} = f(u_n)$, avec $f$ continue, **converge** vers un réel $\\ell$. Quelle égalité $\\ell$ vérifie-t-il nécessairement ?",
+      "choix": [
+        "$\\ell = 0$",
+        "$f(\\ell) = \\ell$",
+        "$f'(\\ell) = 1$",
+        "$f(\\ell) = 0$"
+      ],
+      "reponse": 1,
+      "explication": "Comme $f$ est continue, en passant à la limite dans $u_{n+1} = f(u_n)$ on obtient $\\ell = f(\\ell)$. Le piège : cette égalité n'est valable **qu'une fois** la convergence prouvée — l'énoncé la garantit ici. Confondre avec $f(\\ell) = 0$ est une erreur fréquente."
+    }
+  ]
+}

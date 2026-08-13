@@ -1,0 +1,134 @@
+{
+  "id": "tale-spe-math-listes-qcm",
+  "chapitre": "tale-spe-math-listes",
+  "titre": "QCM — Algorithmique : listes",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "liste",
+      "enonce": "Combien d'éléments contient la liste Python `[4, 4, 7]` ?",
+      "choix": ["$2$", "$3$", "$1$", "$4$"],
+      "reponse": 1,
+      "explication": "`len([4, 4, 7])` vaut $3$. Contrairement à un **ensemble** où $\\{4, 4, 7\\} = \\{4, 7\\}$, une liste **garde les doublons** : le $4$ répété compte deux fois."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "indices",
+      "enonce": "On pose `L = [10, 20, 30, 40]`. Que vaut `L[0]` ?",
+      "choix": ["$10$", "$20$", "$30$", "$40$"],
+      "reponse": 0,
+      "explication": "Les indices commencent à **0** : `L[0]` est le **premier** élément, donc $10$. Le piège classique est de croire que `L[0]` serait le « zéroième » ou que le premier serait `L[1]`."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "indices",
+      "enonce": "On pose `L = [5, 6, 7, 8]`. Que vaut `L[2]` ?",
+      "choix": ["$6$", "$7$", "$5$", "$8$"],
+      "reponse": 1,
+      "explication": "L'indice $2$ désigne le **troisième** élément, car on compte $0, 1, 2$. On obtient donc $7$. Répondre $6$ revient à décaler d'un cran en oubliant que l'indice $0$ existe."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "range",
+      "enonce": "Quels entiers `range(5)` produit-il ?",
+      "choix": [
+        "$1, 2, 3, 4, 5$",
+        "$0, 1, 2, 3, 4, 5$",
+        "$0, 1, 2, 3, 4$",
+        "$0, 1, 2, 3$"
+      ],
+      "reponse": 2,
+      "explication": "`range(5)` produit **cinq** valeurs à partir de $0$, mais la borne de droite est **exclue** : on s'arrête à $4$, pas à $5$. C'est l'erreur numéro un sur `range`."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "comprehension",
+      "enonce": "Que vaut la liste `[x**2 for x in range(4)]` ?",
+      "choix": [
+        "`[0, 1, 4, 9]`",
+        "`[1, 4, 9, 16]`",
+        "`[0, 1, 4, 9, 16]`",
+        "`[1, 2, 3, 4]`"
+      ],
+      "reponse": 0,
+      "explication": "`range(4)` donne $0, 1, 2, 3$ (pas $4$). On élève au carré : $0, 1, 4, 9$. Le choix `[1, 4, 9, 16]` vient de croire que `x` part de $1$ et va jusqu'à $4$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "comprehension",
+      "enonce": "Que vaut la liste `[x for x in range(6) if x % 2 == 0]` ?",
+      "choix": [
+        "`[1, 3, 5]`",
+        "`[2, 4]`",
+        "`[0, 2, 4, 6]`",
+        "`[0, 2, 4]`"
+      ],
+      "reponse": 3,
+      "explication": "Le filtre `if x % 2 == 0` garde les nombres **pairs** de `range(6)`, c'est-à-dire de $0$ à $5$. On obtient $0, 2, 4$. Deux pièges : oublier que **$0$ est pair**, et croire que $6$ est inclus alors que `range(6)` s'arrête à $5$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "indices",
+      "enonce": "On pose `L = [10, 20, 30]`. Que renvoie `L[3]` ?",
+      "choix": [
+        "$30$",
+        "$0$",
+        "une erreur (`IndexError`)",
+        "$20$"
+      ],
+      "reponse": 2,
+      "explication": "La liste a $3$ éléments, d'indices $0, 1, 2$. Le dernier indice valide est `len(L) - 1 = 2`. L'indice $3$ n'existe pas : Python lève une `IndexError`. Croire que `L[3]` vaut $30$ confond longueur et dernier indice."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "manipulation",
+      "enonce": "On pose `L = [15, 15]` puis on exécute `L.remove(15)`. Que contient `L` ensuite ?",
+      "choix": [
+        "`[]`",
+        "`[15]`",
+        "`[15, 15]`",
+        "une erreur"
+      ],
+      "reponse": 1,
+      "explication": "`remove(v)` supprime **seulement la première occurrence** de la valeur, pas toutes. Il reste donc `[15]`. Croire que `remove` vide la liste de tous les $15$ est le piège classique de cette méthode."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "manipulation-ajouts",
+      "enonce": "Après exécution, que contient `L` ?\n```python\nL = []\nfor i in range(1, 4):\n    L.append(i)\n```",
+      "choix": [
+        "`[1, 2, 3, 4]`",
+        "`[0, 1, 2, 3]`",
+        "`[1, 2, 3]`",
+        "`[0, 1, 2]`"
+      ],
+      "reponse": 2,
+      "explication": "`range(1, 4)` produit $1, 2, 3$ (départ à $1$ inclus, arrivée à $4$ exclue). Chaque `append` ajoute la valeur à la fin, d'où `[1, 2, 3]`. Le choix `[1, 2, 3, 4]` inclut à tort la borne de droite."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "combinatoire",
+      "enonce": "On pose `issues = [(a, b) for a in [0, 1] for b in [0, 1]]`. Que vaut `len(issues)` ?",
+      "choix": ["$2$", "$3$", "$4$", "$8$"],
+      "reponse": 2,
+      "explication": "La double compréhension énumère tous les couples $(a, b)$ : c'est le produit cartésien $\\{0,1\\} \\times \\{0,1\\}$, soit $2 \\times 2 = 4$ couples. La longueur de la liste **est** le cardinal de l'ensemble dénombré — le lien direct avec la combinatoire."
+    }
+  ]
+}

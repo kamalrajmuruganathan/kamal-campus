@@ -1,0 +1,144 @@
+{
+  "id": "tale-spe-math-logique-ensembles-qcm",
+  "chapitre": "tale-spe-math-logique-ensembles",
+  "titre": "QCM — Vocabulaire ensembliste et logique",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "appartenance-inclusion",
+      "enonce": "Quelle écriture est correcte pour dire que le nombre $3$ est un élément de l'ensemble $A = \\{1, 3, 5\\}$ ?",
+      "choix": ["$3 \\subset A$", "$3 \\in A$", "$A \\in 3$", "$3 \\notin A$"],
+      "reponse": 1,
+      "explication": "Le symbole $\\in$ relie un **élément** à un **ensemble** : $3 \\in A$. Le piège est $\\subset$, qui relie deux **ensembles** entre eux, pas un nombre à un ensemble."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "ensemble-vide",
+      "enonce": "Que vaut l'ensemble $\\{\\, x \\in \\mathbb{R} \\mid x^2 = -4 \\,\\}$ ?",
+      "choix": ["$\\{-2\\}$", "$\\{2, -2\\}$", "$\\varnothing$", "$\\{0\\}$"],
+      "reponse": 2,
+      "explication": "Aucun réel n'a un carré négatif : la condition n'est jamais satisfaite, l'ensemble est **vide**, noté $\\varnothing$. Attention à ne pas répondre $\\{0\\}$ : $\\{0\\}$ contient un élément, ce n'est pas l'ensemble vide."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "negation",
+      "enonce": "Quelle est la négation de « $\\forall x \\in \\mathbb{R},\\ x^2 \\geqslant 1$ » ?",
+      "choix": [
+        "$\\forall x \\in \\mathbb{R},\\ x^2 < 1$",
+        "$\\exists x \\in \\mathbb{R},\\ x^2 \\geqslant 1$",
+        "$\\forall x \\in \\mathbb{R},\\ x^2 \\leqslant 1$",
+        "$\\exists x \\in \\mathbb{R},\\ x^2 < 1$"
+      ],
+      "reponse": 3,
+      "explication": "Nier un « pour tout » donne un « il existe », et on nie l'intérieur : $x^2 \\geqslant 1$ devient $x^2 < 1$. Le piège classique est de garder le $\\forall$ : nier un énoncé universel, c'est exhiber **un seul** contre-exemple."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "connecteurs",
+      "enonce": "Pour un réel $x$, la proposition « $x \\geqslant 0$ **ou** $x \\leqslant 0$ » est :",
+      "choix": [
+        "toujours vraie",
+        "toujours fausse",
+        "vraie seulement si $x \\neq 0$",
+        "fausse seulement si $x = 0$"
+      ],
+      "reponse": 0,
+      "explication": "Le « ou » mathématique est **inclusif**. Tout réel vérifie au moins une des deux conditions, et en $x = 0$ il les vérifie **toutes les deux** : la disjonction reste vraie. C'est le piège du « ou » exclusif du langage courant."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "implication",
+      "enonce": "Quelle est la **contraposée** de « $n$ pair $\\Rightarrow n^2$ pair » ?",
+      "choix": [
+        "$n^2$ pair $\\Rightarrow n$ pair",
+        "$n$ impair $\\Rightarrow n^2$ pair",
+        "$n^2$ impair $\\Rightarrow n$ impair",
+        "$n^2$ pair $\\Rightarrow n$ impair"
+      ],
+      "reponse": 2,
+      "explication": "La contraposée de $P \\Rightarrow Q$ est $\\text{non } Q \\Rightarrow \\text{non } P$ : on nie **et** on échange. Le choix A est la **réciproque** (à ne pas confondre) ; seule la contraposée est équivalente à l'implication de départ."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "quantificateurs",
+      "enonce": "Parmi ces énoncés, lequel est **vrai** ?",
+      "choix": [
+        "$\\exists x \\in \\mathbb{R},\\ x^2 = 2$",
+        "$\\forall x \\in \\mathbb{R},\\ x^2 = 2$",
+        "$\\forall x \\in \\mathbb{R},\\ x^2 < 0$",
+        "$\\exists x \\in \\mathbb{R},\\ x^2 = -1$"
+      ],
+      "reponse": 0,
+      "explication": "$\\exists x,\\ x^2 = 2$ est vraie : $x = \\sqrt{2}$ convient. L'énoncé « $\\forall x,\\ x^2 = 2$ » est faux (il échoue en $x = 0$) : un « pour tout » tombe dès **un seul** contre-exemple. Les deux derniers énoncés demandent un carré négatif, impossible dans $\\mathbb{R}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "negation",
+      "enonce": "Quelle est la négation de l'implication « $P \\Rightarrow Q$ » ?",
+      "choix": [
+        "$Q \\Rightarrow P$",
+        "$P \\Rightarrow \\text{non } Q$",
+        "$\\text{non } P \\Rightarrow \\text{non } Q$",
+        "$P \\text{ et } \\text{non } Q$"
+      ],
+      "reponse": 3,
+      "explication": "Une implication n'est fausse que dans un cas : $P$ vraie **et** $Q$ fausse. Sa négation est donc « $P$ et $\\text{non } Q$ », pas une autre implication. Le choix B ($P \\Rightarrow \\text{non } Q$) est l'erreur la plus fréquente."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "raisonnements",
+      "enonce": "Pour prouver « $\\sqrt{2} \\notin \\mathbb{Q}$ », on suppose $\\sqrt{2} = \\dfrac{p}{q}$ irréductible et on aboutit à « $p$ et $q$ tous deux pairs ». De quel raisonnement s'agit-il, et que conclut-on ?",
+      "choix": [
+        "Par contraposée ; donc $\\sqrt{2} \\in \\mathbb{Q}$",
+        "Par l'absurde ; la contradiction avec « irréductible » prouve $\\sqrt{2} \\notin \\mathbb{Q}$",
+        "Par disjonction de cas ; on n'a rien prouvé",
+        "Par récurrence ; il faut initialiser"
+      ],
+      "reponse": 1,
+      "explication": "On a **supposé le contraire** de ce qu'on veut ($\\sqrt{2}$ rationnel) et obtenu une contradiction ($p, q$ pairs alors qu'on les voulait irréductibles) : c'est le raisonnement **par l'absurde**. La supposition étant intenable, $\\sqrt{2}$ est irrationnel."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "quantificateurs",
+      "enonce": "Les énoncés « $\\forall x \\in \\mathbb{R},\\ \\exists y \\in \\mathbb{R},\\ y > x$ » et « $\\exists y \\in \\mathbb{R},\\ \\forall x \\in \\mathbb{R},\\ y > x$ » sont :",
+      "choix": [
+        "tous les deux vrais",
+        "tous les deux faux",
+        "le premier vrai, le second faux",
+        "le premier faux, le second vrai"
+      ],
+      "reponse": 2,
+      "explication": "Dans le premier, $y$ peut dépendre de $x$ (prendre $y = x + 1$) : vrai. Dans le second, un même $y$ devrait dépasser **tous** les réels : impossible, faux. **L'ordre des quantificateurs change la valeur de vérité** — c'est le piège."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "raisonnements",
+      "enonce": "Pour montrer que « $n(n+1)$ est pair pour tout entier $n$ », on traite séparément « $n$ pair » puis « $n$ impair ». Ce raisonnement est valide parce que :",
+      "choix": [
+        "un exemple dans chaque cas suffit à conclure",
+        "il suffit d'un contre-exemple pour prouver l'énoncé",
+        "$n$ pair et $n$ impair est équivalent à $n$ premier",
+        "les deux cas couvrent tous les entiers, et la propriété est vraie dans chacun"
+      ],
+      "reponse": 3,
+      "explication": "C'est une **disjonction de cas** : elle est valide seulement si les cas **recouvrent toute** la situation (ici tout $\\mathbb{N}$) et si l'on conclut dans **chacun**. Exhiber un exemple, ou un contre-exemple, ne prouve jamais un énoncé universel."
+    }
+  ]
+}

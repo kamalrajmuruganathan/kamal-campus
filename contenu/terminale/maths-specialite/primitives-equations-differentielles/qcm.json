@@ -1,0 +1,129 @@
+{
+  "id": "tale-spe-math-primitives-equations-differentielles-qcm",
+  "chapitre": "tale-spe-math-primitives-equations-differentielles",
+  "titre": "QCM — Primitives et équations différentielles",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Une fonction $F$ est une primitive de $f$ sur un intervalle $I$ lorsque, sur $I$ :",
+      "choix": ["$F'=f$", "$f'=F$", "$F=f'$", "$F\\times f=1$"],
+      "reponse": 0,
+      "explication": "Une primitive se **dérive** en la fonction de départ : $F'=f$. Le piège classique est de confondre le sens de l'opération et d'écrire $f'=F$ : c'est la dérivation, pas la recherche de primitive."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "primitives-reference",
+      "enonce": "Sur $\\mathbb{R}$, une primitive de la fonction $x\\mapsto \\cos x$ est :",
+      "choix": ["$-\\cos x$", "$-\\sin x$", "$\\sin x$", "$\\cos x$"],
+      "reponse": 2,
+      "explication": "On cherche $F$ tel que $F'=\\cos x$. Or $(\\sin x)'=\\cos x$, donc la primitive est $\\sin x$. Le piège du signe : $-\\cos x$ est la primitive de $\\sin x$, pas de $\\cos x$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "deux-primitives-constante",
+      "enonce": "Deux primitives d'une même fonction continue sur un intervalle :",
+      "choix": [
+        "sont nécessairement égales",
+        "diffèrent d'une fonction affine",
+        "diffèrent d'une constante",
+        "ont des dérivées différentes"
+      ],
+      "reponse": 2,
+      "explication": "C'est la propriété clé : elles diffèrent d'une **constante** ($F$ et $F+C$). En les dérivant, la constante disparaît, ce qui explique qu'elles donnent la même fonction. Croire qu'il n'y en a qu'une (choix 1) fait oublier le $+C$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "primitives-reference",
+      "enonce": "Sur $]0;+\\infty[$, une primitive de $x\\mapsto \\dfrac{1}{\\sqrt{x}}$ est :",
+      "choix": [
+        "$\\dfrac{1}{2\\sqrt{x}}$",
+        "$-\\dfrac{1}{2x\\sqrt{x}}$",
+        "$\\dfrac{\\sqrt{x}}{2}$",
+        "$2\\sqrt{x}$"
+      ],
+      "reponse": 3,
+      "explication": "$(2\\sqrt{x})'=2\\times\\dfrac{1}{2\\sqrt{x}}=\\dfrac{1}{\\sqrt{x}}$. Le distracteur $\\dfrac{1}{2\\sqrt{x}}$ est la **dérivée** de $\\sqrt{x}$ : c'est la confusion primitive/dérivée. En cas de doute, dérive ta réponse."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "formes-composees",
+      "enonce": "Sur $\\mathbb{R}$, une primitive de $x\\mapsto 2x\\,e^{x^2}$ est :",
+      "choix": ["$2e^{x^2}$", "$e^{x^2}$", "$x^2 e^{x^2}$", "$e^{2x}$"],
+      "reponse": 1,
+      "explication": "C'est la forme $u'e^{u}$ avec $u=x^2$ et $u'=2x$ : sa primitive est $e^{u}=e^{x^2}$. Contrôle : $(e^{x^2})'=2x\\,e^{x^2}$. Le facteur $2x$ est bien le $u'$ nécessaire, il ne se reporte pas devant."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Les solutions de l'équation différentielle $y'=3y$ sont les fonctions :",
+      "choix": [
+        "$x\\mapsto 3e^{x}+C$",
+        "$x\\mapsto e^{3x}$ uniquement",
+        "$x\\mapsto Ce^{3x}$ avec $C\\in\\mathbb{R}$",
+        "$x\\mapsto Cx^{3}$"
+      ],
+      "reponse": 2,
+      "explication": "Les solutions de $y'=ay$ sont les $Ce^{ax}$, ici $Ce^{3x}$. Le piège : oublier la constante $C$ et ne garder que $e^{3x}$ (choix 2) fait perdre toutes les autres solutions."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "primitives-reference",
+      "enonce": "Sur $]0;+\\infty[$, une primitive de $x\\mapsto \\dfrac{1}{x^{2}}$ est :",
+      "choix": ["$-\\dfrac{1}{x}$", "$\\dfrac{1}{x}$", "$-\\dfrac{2}{x^{3}}$", "$\\ln x$"],
+      "reponse": 0,
+      "explication": "$\\dfrac{1}{x^{2}}=x^{-2}$ : avec $n=-2$, la primitive est $\\dfrac{x^{-1}}{-1}=-\\dfrac{1}{x}$. Le distracteur $-\\dfrac{2}{x^{3}}$ est la **dérivée**, et $\\ln x$ est la primitive de $\\dfrac{1}{x}$ (cas $n=-1$), pas de $\\dfrac{1}{x^2}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Quelle est la solution particulière constante de $y'=2y+6$ ?",
+      "choix": ["$y=6$", "$y=3$", "$y=2$", "$y=-3$"],
+      "reponse": 3,
+      "explication": "Une solution constante a $y'=0$, donc $0=2y+6$, soit $y=-3$ (c'est $-\\dfrac{b}{a}$). Le piège du signe : oublier le moins donne $y=3$. On vérifie : $y'=0$ et $2\\times(-3)+6=0$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "condition-initiale",
+      "enonce": "La solution de $y'=-y$ vérifiant $y(0)=5$ est :",
+      "choix": [
+        "$x\\mapsto 5e^{x}$",
+        "$x\\mapsto -5e^{-x}$",
+        "$x\\mapsto 5e^{-x}$",
+        "$x\\mapsto e^{-x}+5$"
+      ],
+      "reponse": 2,
+      "explication": "$y'=-y$ correspond à $a=-1$ : les solutions sont $Ce^{-x}$. La condition $y(0)=C=5$ donne $y(x)=5e^{-x}$. Piège : le signe de $a$ ($e^{-x}$ et non $e^{x}$), et la constante multiplie l'exponentielle, elle ne s'ajoute pas (choix 4)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "equation-y-prime-ay-plus-f",
+      "enonce": "On sait que $g$ est une solution particulière de $y'=2y+f$. Toutes les solutions s'écrivent :",
+      "choix": [
+        "$x\\mapsto g(x)+Ce^{2x}$",
+        "$x\\mapsto g(x)+C$",
+        "$x\\mapsto C\\,g(x)$",
+        "$x\\mapsto g(x)\\times e^{2x}$"
+      ],
+      "reponse": 0,
+      "explication": "Si $y$ et $g$ sont solutions, leur différence vérifie $(y-g)'=2(y-g)$ : c'est une solution de $y'=2y$, donc de la forme $Ce^{2x}$. D'où $y=g+Ce^{2x}$. Ajouter une simple constante (choix 2) ne marche que pour $y'=f$, pas pour $y'=ay+f$."
+    }
+  ]
+}

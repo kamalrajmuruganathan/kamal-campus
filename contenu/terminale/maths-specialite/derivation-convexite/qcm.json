@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-math-derivation-convexite-qcm",
+  "chapitre": "tale-spe-math-derivation-convexite",
+  "titre": "QCM — Compléments sur la dérivation : composée et convexité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "composee",
+      "enonce": "Quelle est la formule de dérivation d'une composée $v \\circ u$ ?",
+      "choix": [
+        "$(v' \\circ u')$",
+        "$v' \\times u'$",
+        "$(v' \\circ u) \\times u'$",
+        "$(v' \\circ u) + u'$"
+      ],
+      "reponse": 2,
+      "explication": "On dérive l'extérieur en gardant l'intérieur intact, $v' \\circ u$, PUIS on multiplie par la dérivée de l'intérieur $u'$. Le facteur $\\times u'$ est celui qu'on oublie le plus souvent : sans lui, le résultat est faux."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "derivee-seconde",
+      "enonce": "Pour $f(x) = x^3 - 2x^2 + 5$, que vaut la dérivée seconde $f''(x)$ ?",
+      "choix": [
+        "$3x^2 - 4x$",
+        "$6x$",
+        "$6x - 4x$",
+        "$6x - 4$"
+      ],
+      "reponse": 3,
+      "explication": "La dérivée seconde s'obtient en dérivant DEUX fois : $f'(x) = 3x^2 - 4x$, puis $f''(x) = 6x - 4$. Le piège $3x^2-4x$ est $f'$ : on s'est arrêté à la première dérivation."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "composee",
+      "enonce": "Quelle est la dérivée de $f(x) = (3x + 1)^5$ ?",
+      "choix": [
+        "$5(3x+1)^4$",
+        "$15(3x+1)^4$",
+        "$15(3x+1)^5$",
+        "$5(3x+1)^6$"
+      ],
+      "reponse": 1,
+      "explication": "Forme $u^n$ : la dérivée est $n\\,u'\\,u^{n-1} = 5 \\times 3 \\times (3x+1)^4 = 15(3x+1)^4$. Le distracteur $5(3x+1)^4$ oublie de multiplier par $u' = 3$ — l'erreur classique de la composée."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "formules-usuelles",
+      "enonce": "Quelle est la dérivée de $f(x) = \\sqrt{x^2 + 1}$ ?",
+      "choix": [
+        "$\\dfrac{1}{2\\sqrt{x^2+1}}$",
+        "$\\dfrac{2x}{\\sqrt{x^2+1}}$",
+        "$\\dfrac{x}{\\sqrt{x^2+1}}$",
+        "$2x\\sqrt{x^2+1}$"
+      ],
+      "reponse": 2,
+      "explication": "Forme $\\sqrt{u}$ : dérivée $\\dfrac{u'}{2\\sqrt{u}}$ avec $u' = 2x$, soit $\\dfrac{2x}{2\\sqrt{x^2+1}} = \\dfrac{x}{\\sqrt{x^2+1}}$. Le premier choix oublie le $u' = 2x$ au numérateur."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "convexite",
+      "enonce": "On sait que $f''(x) > 0$ pour tout $x$ d'un intervalle $I$. Que peut-on affirmer ?",
+      "choix": [
+        "$f$ est convexe sur $I$",
+        "$f$ est croissante sur $I$",
+        "$f$ est concave sur $I$",
+        "$f$ admet un maximum sur $I$"
+      ],
+      "reponse": 0,
+      "explication": "Le signe de $f''$ donne la CONVEXITÉ : $f'' > 0 \\iff f$ convexe (courbe en creux $\\cup$). Attention, $f''$ ne dit rien sur les variations : c'est le signe de $f'$, pas de $f''$, qui indique si $f$ croît ou décroît."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "concavite",
+      "enonce": "La fonction $f(x) = \\sqrt{x}$ est-elle convexe ou concave sur $]0\\,;+\\infty[$ ?",
+      "choix": [
+        "convexe",
+        "concave",
+        "affine",
+        "convexe puis concave"
+      ],
+      "reponse": 1,
+      "explication": "On calcule $f'(x) = \\dfrac{1}{2\\sqrt{x}}$ puis $f''(x) = -\\dfrac{1}{4}x^{-3/2} < 0$. Une dérivée seconde négative signifie concave : la courbe forme une bosse $\\cap$, sous ses sécantes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "point-inflexion",
+      "enonce": "La courbe de $f(x) = x^4$ (avec $f''(x) = 12x^2$) admet-elle un point d'inflexion en $0$ ?",
+      "choix": [
+        "Oui, car $f''(0) = 0$",
+        "Oui, car la courbe est convexe",
+        "Non, car $f'(0) = 0$",
+        "Non, car $f''$ ne change pas de signe en $0$"
+      ],
+      "reponse": 3,
+      "explication": "Un point d'inflexion exige que $f''$ s'annule EN CHANGEANT DE SIGNE. Ici $f''(x) = 12x^2 \\geqslant 0$ partout : $f$ reste convexe. Le piège est de conclure dès que $f''(0) = 0$, ce qui ne suffit pas."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "inegalite-tangente",
+      "enonce": "La fonction exponentielle est convexe. En utilisant sa tangente en $0$ (d'équation $y = 1 + x$), quelle inégalité obtient-on pour tout réel $x$ ?",
+      "choix": [
+        "$\\mathrm{e}^x \\leqslant 1 + x$",
+        "$\\mathrm{e}^x \\geqslant x$",
+        "$\\mathrm{e}^x \\geqslant 1 + x$",
+        "$\\mathrm{e}^x \\leqslant x - 1$"
+      ],
+      "reponse": 2,
+      "explication": "Une fonction convexe est AU-DESSUS de ses tangentes, donc $\\mathrm{e}^x \\geqslant 1 + x$. Le sens $\\leqslant$ correspondrait à une fonction concave : inverser le sens de l'inégalité est l'erreur la plus fréquente."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "piege-variations-convexite",
+      "enonce": "On sait seulement que $f$ est croissante sur un intervalle $I$. Que peut-on en déduire sur sa convexité ?",
+      "choix": [
+        "$f$ est convexe sur $I$",
+        "$f$ est concave sur $I$",
+        "$f'' > 0$ sur $I$",
+        "On ne peut rien conclure sur la convexité"
+      ],
+      "reponse": 3,
+      "explication": "Les variations dépendent du signe de $f'$, la convexité du signe de $f''$ : ce sont deux informations indépendantes. Une fonction croissante peut être convexe (comme $\\mathrm{e}^x$) ou concave (comme $\\sqrt{x}$). Croître ne dit rien de la courbure."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "composee",
+      "enonce": "Quelle est la dérivée de $f(x) = \\mathrm{e}^{-x^2}$ ?",
+      "choix": [
+        "$-2x\\,\\mathrm{e}^{-x^2}$",
+        "$\\mathrm{e}^{-x^2}$",
+        "$-2x\\,\\mathrm{e}^{-2x}$",
+        "$2x\\,\\mathrm{e}^{-x^2}$"
+      ],
+      "reponse": 0,
+      "explication": "Forme $\\mathrm{e}^{u}$ : dérivée $u'\\,\\mathrm{e}^{u}$ avec $u = -x^2$ et $u' = -2x$, soit $-2x\\,\\mathrm{e}^{-x^2}$. Le choix $\\mathrm{e}^{-x^2}$ oublie le facteur $u'$ ; le dernier choix perd le signe moins de $u'$."
+    }
+  ]
+}
