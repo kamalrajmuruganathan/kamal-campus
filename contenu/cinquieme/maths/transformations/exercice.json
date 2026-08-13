@@ -1,0 +1,94 @@
+{
+  "id": "5e-math-transformations-exos",
+  "chapitre": "5e-math-transformations",
+  "titre": "Exercices — Transformations : symétrie axiale et demi-tour",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "symetrie-axiale",
+      "enonce": "Sur un quadrillage muni d'un repère, on place le point $M(2\\,;\\,3)$. L'axe $(d)$ est l'axe des abscisses (la droite horizontale qui passe par l'origine). Construis le symétrique $M'$ de $M$ par rapport à $(d)$ et donne ses coordonnées.",
+      "corrige": [
+        "L'axe $(d)$ est horizontal. Pour une symétrie axiale, on compte les carreaux qui séparent le point de l'axe, puis on reporte le même nombre de l'autre côté, sur la même colonne.",
+        "Le point $M(2\\,;\\,3)$ est situé $3$ carreaux **au-dessus** de l'axe des abscisses.",
+        "Son symétrique $M'$ est donc $3$ carreaux **en dessous** de l'axe, sur la même verticale : on reste sur la colonne d'abscisse $2$.",
+        "On lit $M'(2\\,;\\,-3)$. Vérification : $(d)$ coupe bien $[MM']$ en son milieu $(2\\,;\\,0)$ et perpendiculairement."
+      ],
+      "reponse": "$M'(2\\,;\\,-3)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "demi-tour-definition",
+      "enonce": "Dans un repère, on considère le point $M(3\\,;\\,-2)$ et le centre $O(0\\,;\\,0)$ (l'origine). Construis l'image $M'$ de $M$ par le demi-tour de centre $O$ et donne ses coordonnées.",
+      "corrige": [
+        "Par le demi-tour de centre $O$, l'image $M'$ est le point tel que $O$ soit le **milieu** de $[MM']$. Sur quadrillage, on continue au-delà de $O$ le même déplacement que celui qui va de $M$ à $O$.",
+        "De $M(3\\,;\\,-2)$ jusqu'à $O$ : on se déplace de $3$ carreaux vers la gauche et de $2$ carreaux vers le haut.",
+        "On continue le même déplacement à partir de $O$ : encore $3$ carreaux vers la gauche et $2$ carreaux vers le haut. On arrive en $(-3\\,;\\,2)$.",
+        "Vérification : le milieu de $[MM']$ a pour coordonnées $\\left(\\dfrac{3+(-3)}{2}\\,;\\,\\dfrac{-2+2}{2}\\right) = (0\\,;\\,0) = O$."
+      ],
+      "reponse": "$M'(-3\\,;\\,2)$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "construction",
+      "enonce": "Dans un repère, on donne le segment $[AB]$ avec $A(3\\,;\\,2)$ et $B(4\\,;\\,4)$, et le centre $O(1\\,;\\,1)$. Construis l'image $[A'B']$ de $[AB]$ par le demi-tour de centre $O$, donne les coordonnées de $A'$ et $B'$, puis indique, sans mesurer, la longueur $A'B'$ sachant que $AB = 5$ cm et la position de $(A'B')$ par rapport à $(AB)$.",
+      "corrige": [
+        "L'image d'un segment par un demi-tour s'obtient en construisant les images des deux extrémités, puis en les reliant. Pour chaque point, $O$ doit être le milieu du segment qui joint le point à son image : on continue au-delà de $O$ le déplacement du point vers $O$.",
+        "De $A(3\\,;\\,2)$ à $O(1\\,;\\,1)$ : $2$ carreaux à gauche et $1$ vers le bas. On continue : encore $2$ à gauche et $1$ vers le bas depuis $O$, ce qui donne $A'(-1\\,;\\,0)$.",
+        "De $B(4\\,;\\,4)$ à $O(1\\,;\\,1)$ : $3$ carreaux à gauche et $3$ vers le bas. On continue de même depuis $O$ : $B'(-2\\,;\\,-2)$.",
+        "Le demi-tour **conserve les longueurs**, donc $A'B' = AB = 5$ cm, sans aucune mesure.",
+        "De plus, l'image d'une droite par un demi-tour lui est **parallèle** : donc $(A'B')$ est parallèle à $(AB)$."
+      ],
+      "reponse": "$A'(-1\\,;\\,0)$ et $B'(-2\\,;\\,-2)$ ; $A'B' = 5$ cm et $(A'B') \\parallel (AB)$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "symetrie-axiale",
+      "enonce": "Dans un repère, l'axe $(d)$ est la diagonale du quadrillage qui passe par l'origine et par les points $(1\\,;\\,1)$, $(2\\,;\\,2)$, $(3\\,;\\,3)$. On place le point $A(3\\,;\\,1)$. Construis son symétrique $A'$ par rapport à $(d)$ (c'est le cas « en diagonale ») et donne ses coordonnées.",
+      "corrige": [
+        "L'axe est en diagonale. On se déplace depuis $A$ **perpendiculairement** à l'axe, c'est-à-dire selon l'autre diagonale (un pas vers le haut et un pas vers la gauche à chaque fois), jusqu'à atteindre l'axe.",
+        "De $A(3\\,;\\,1)$, un pas en diagonale ($1$ à gauche, $1$ en haut) mène au point $(2\\,;\\,2)$, qui est **sur** l'axe $(d)$ : $A$ est donc à $1$ carreau diagonal de l'axe.",
+        "On reporte le même déplacement de l'autre côté du point $(2\\,;\\,2)$ : encore $1$ à gauche et $1$ en haut, ce qui donne $A'(1\\,;\\,3)$.",
+        "Vérification : le milieu de $[AA']$ est $\\left(\\dfrac{3+1}{2}\\,;\\,\\dfrac{1+3}{2}\\right) = (2\\,;\\,2)$, qui appartient à $(d)$, et $[AA']$ est bien perpendiculaire à $(d)$. L'axe est donc la médiatrice de $[AA']$."
+      ],
+      "reponse": "$A'(1\\,;\\,3)$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "parallelogramme",
+      "enonce": "$ABCD$ est un parallélogramme. Ses diagonales $[AC]$ et $[BD]$ se coupent en un point $I$. On rappelle que, dans un parallélogramme, les diagonales se coupent en leur milieu. Démontre que le demi-tour de centre $I$ transforme le parallélogramme $ABCD$ en lui-même.",
+      "corrige": [
+        "Par définition du demi-tour de centre $I$, l'image d'un point $M$ est le point $M'$ tel que $I$ soit le milieu de $[MM']$.",
+        "Comme les diagonales du parallélogramme se coupent en leur milieu, $I$ est le milieu de $[AC]$. Donc l'image de $A$ par le demi-tour de centre $I$ est $C$, et l'image de $C$ est $A$.",
+        "De même, $I$ est le milieu de $[BD]$ : l'image de $B$ est $D$, et l'image de $D$ est $B$.",
+        "Le demi-tour échange donc les sommets deux à deux ($A \\leftrightarrow C$ et $B \\leftrightarrow D$) : l'ensemble des quatre sommets est envoyé sur lui-même, et les côtés sur les côtés.",
+        "Conclusion : le demi-tour de centre $I$ transforme $ABCD$ en $ABCD$. Le point $I$ est un centre de symétrie du parallélogramme."
+      ],
+      "reponse": "Le demi-tour de centre $I$ échange $A$ avec $C$ et $B$ avec $D$ : il transforme $ABCD$ en lui-même, donc $I$ est centre de symétrie de la figure."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "proprietes-demi-tour",
+      "enonce": "Un triangle $ABC$ est rectangle en $A$, avec $AB = 6$ cm, $AC = 8$ cm et $BC = 10$ cm. On note $A'B'C'$ son image par le demi-tour de centre $O$ (un point quelconque du plan). Sans faire de figure, réponds en justifiant chaque fois par une propriété du demi-tour : (a) quelle est la nature du triangle $A'B'C'$ ? (b) quelles sont les longueurs $A'B'$, $A'C'$ et $B'C'$ ? (c) quelle est l'aire du triangle $A'B'C'$ ? (d) quelle est la position de la droite $(A'B')$ par rapport à $(AB)$ ?",
+      "corrige": [
+        "(a) Le demi-tour **conserve les mesures d'angles**. L'angle droit en $A$ a pour image un angle droit en $A'$ : le triangle $A'B'C'$ est donc lui aussi rectangle, en $A'$.",
+        "(b) Le demi-tour **conserve les longueurs**. Donc $A'B' = AB = 6$ cm, $A'C' = AC = 8$ cm et $B'C' = BC = 10$ cm.",
+        "(c) Le demi-tour **conserve les aires**. L'aire de $ABC$, triangle rectangle en $A$, vaut $\\dfrac{AB \\times AC}{2} = \\dfrac{6 \\times 8}{2} = 24$ cm². L'aire de $A'B'C'$ est donc aussi $24$ cm².",
+        "(d) L'image d'une droite par un demi-tour lui est **parallèle**. Donc $(A'B')$ est parallèle à $(AB)$."
+      ],
+      "reponse": "(a) rectangle en $A'$ ; (b) $A'B' = 6$ cm, $A'C' = 8$ cm, $B'C' = 10$ cm ; (c) aire $= 24$ cm² ; (d) $(A'B') \\parallel (AB)$."
+    }
+  ]
+}

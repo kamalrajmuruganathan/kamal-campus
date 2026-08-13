@@ -1,0 +1,92 @@
+{
+  "id": "5e-math-parallelogrammes-exos",
+  "chapitre": "5e-math-parallelogrammes",
+  "titre": "Exercices — Parallélogrammes",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "proprietes",
+      "enonce": "$ABCD$ est un parallélogramme tel que $AB = 6$ cm, $BC = 4{,}5$ cm et $\\widehat{A} = 70°$. Sans rien mesurer, donner les longueurs $CD$ et $AD$, puis les mesures des angles $\\widehat{C}$ et $\\widehat{B}$.",
+      "corrige": [
+        "Dans un parallélogramme, les côtés opposés ont deux à deux la même longueur (propriété). Or $[AB]$ et $[CD]$ sont opposés, ainsi que $[BC]$ et $[AD]$.",
+        "Donc $CD = AB = 6$ cm et $AD = BC = 4{,}5$ cm.",
+        "Les angles opposés d'un parallélogramme sont égaux : $\\widehat{C} = \\widehat{A} = 70°$.",
+        "Les angles consécutifs sont supplémentaires : $\\widehat{A} + \\widehat{B} = 180°$, donc $\\widehat{B} = 180° - 70° = 110°$."
+      ],
+      "reponse": "$CD = 6$ cm, $AD = 4{,}5$ cm, $\\widehat{C} = 70°$ et $\\widehat{B} = 110°$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "aire",
+      "enonce": "Un parallélogramme a une base de $12$ cm et une hauteur (relative à cette base) de $4{,}5$ cm. Son côté oblique mesure $5$ cm. Calculer son aire.",
+      "corrige": [
+        "L'aire d'un parallélogramme vaut base $\\times$ hauteur, où la hauteur est la distance perpendiculaire entre la base et le côté opposé.",
+        "Le côté oblique ($5$ cm) n'intervient pas dans le calcul : il ne sert qu'à piéger. On n'utilise que la base et la hauteur.",
+        "$\\mathcal{A} = 12 \\times 4{,}5 = 54$ cm²."
+      ],
+      "reponse": "$\\mathcal{A} = 54$ cm²."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "diagonales",
+      "enonce": "Les diagonales d'un quadrilatère $EFGH$ se coupent en leur milieu. On constate de plus qu'elles ont la même longueur, mais qu'elles ne sont pas perpendiculaires. Quelle est la nature précise de $EFGH$ ? Justifier.",
+      "corrige": [
+        "Les diagonales se coupent en leur milieu : c'est la propriété caractéristique du parallélogramme, donc $EFGH$ est déjà un parallélogramme.",
+        "On examine la condition en plus. Des diagonales qui se coupent en leur milieu ET ont la même longueur caractérisent un rectangle.",
+        "Les diagonales ne sont pas perpendiculaires : ce n'est donc ni un losange, ni un carré (qui exigeraient la perpendicularité).",
+        "La seule condition ajoutée est l'égalité des longueurs : $EFGH$ est un rectangle."
+      ],
+      "reponse": "$EFGH$ est un rectangle."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "caracteristique",
+      "enonce": "On étudie un quadrilatère $ABCD$ (sommets dans cet ordre). Pour chacune des deux affirmations, dire si elle permet de conclure que $ABCD$ est un parallélogramme. (a) « $AB = CD$ », où $[AB]$ et $[CD]$ sont opposés. (b) « $AB = CD$ et $BC = AD$ ».",
+      "corrige": [
+        "(a) On ne connaît qu'une seule paire de côtés opposés de même longueur. Ce n'est pas une propriété caractéristique : un trapèze isocèle a deux côtés opposés égaux sans être un parallélogramme.",
+        "Donc l'affirmation (a) ne permet pas de conclure.",
+        "(b) Cette fois, les deux paires de côtés opposés sont de même longueur. C'est une propriété caractéristique : si les côtés opposés d'un quadrilatère ont deux à deux la même longueur, alors c'est un parallélogramme.",
+        "Donc l'affirmation (b) permet de conclure que $ABCD$ est un parallélogramme."
+      ],
+      "reponse": "(a) non : une seule paire de côtés égaux ne suffit pas. (b) oui : c'est une propriété caractéristique."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "demonstration",
+      "enonce": "$ABCD$ est un quadrilatère (sommets dans cet ordre) tel que $(AB) \\parallel (CD)$ et $AB = CD$. Rédiger une démonstration complète, en trois temps (« je sais que… », « or… », « donc… »), établissant que $ABCD$ est un parallélogramme.",
+      "corrige": [
+        "Je sais que : dans le quadrilatère $ABCD$, les côtés $[AB]$ et $[CD]$ sont opposés ; ils sont parallèles ($(AB) \\parallel (CD)$) et de même longueur ($AB = CD$).",
+        "Or : si un quadrilatère a deux côtés opposés à la fois parallèles ET de même longueur, alors c'est un parallélogramme (propriété caractéristique).",
+        "Donc : $ABCD$ est un parallélogramme.",
+        "C'est le « or » — l'énoncé de la propriété — qui transforme le constat en démonstration. Ici une seule paire de côtés suffit, à condition de vérifier les deux conditions : parallèles ET de même longueur."
+      ],
+      "reponse": "$ABCD$ est un parallélogramme, d'après la propriété caractéristique « deux côtés opposés parallèles et de même longueur »."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "aire",
+      "enonce": "Un jardin a la forme d'un L : c'est un grand rectangle de $8$ m sur $5$ m auquel on a retiré, dans un coin, un rectangle de $3$ m sur $2$ m. 1) Calculer l'aire du jardin en m². 2) Convertir cette aire en cm².",
+      "corrige": [
+        "Méthode : on encadre par le grand rectangle et on retranche le morceau manquant.",
+        "Aire du grand rectangle : $8 \\times 5 = 40$ m².",
+        "Aire du rectangle retiré : $3 \\times 2 = 6$ m².",
+        "Aire du jardin : $40 - 6 = 34$ m².",
+        "Conversion : $1$ m² $= 10\\,000$ cm² (on multiplie par $100$ à chaque rang, pas par $10$), donc $34$ m² $= 34 \\times 10\\,000 = 340\\,000$ cm²."
+      ],
+      "reponse": "Aire $= 34$ m² $= 340\\,000$ cm²."
+    }
+  ]
+}

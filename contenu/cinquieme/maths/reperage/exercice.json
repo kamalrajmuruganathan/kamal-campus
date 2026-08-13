@@ -1,0 +1,87 @@
+{
+  "id": "5e-math-reperage-exos",
+  "chapitre": "5e-math-reperage",
+  "titre": "Exercices — Repérage sur une droite et dans le plan",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "lire-abscisse",
+      "enonce": "Sur une droite graduée, l'intervalle entre $5$ et $6$ est partagé en $10$ parts égales. Un point $P$ est situé $7$ graduations après $5$, vers la droite. Quelle est l'abscisse de $P$ ?",
+      "corrige": [
+        "L'intervalle entre deux entiers consécutifs, ici $5$ et $6$, mesure $1$ unité. Il est partagé en $10$ parts égales : une graduation vaut donc $1 \\div 10 = 0{,}1$.",
+        "On part de $5$ et on avance de $7$ graduations : $7 \\times 0{,}1 = 0{,}7$.",
+        "L'abscisse de $P$ est donc $5 + 0{,}7 = 5{,}7$."
+      ],
+      "reponse": "$P(5{,}7)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthogonal d'unité $1$ sur chaque axe, le point $M$ est situé $3$ graduations à droite de l'origine et $4$ graduations en dessous. Donne les coordonnées de $M$.",
+      "corrige": [
+        "L'abscisse se lit horizontalement : $3$ graduations à droite de l'origine, donc $x = 3$. On va vers la droite, l'abscisse est positive.",
+        "L'ordonnée se lit verticalement : $4$ graduations en dessous de l'origine, donc $y = -4$. On descend, l'ordonnée est négative : on n'oublie pas le signe $-$.",
+        "On écrit le couple dans l'ordre, l'abscisse d'abord : $M(3\\,;-4)$."
+      ],
+      "reponse": "$M(3\\,;-4)$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "lire-abscisse",
+      "enonce": "Sur une droite graduée, chaque unité est partagée en $3$ parts égales. Un point $Q$ est situé au $5^\\text{e}$ trait après l'origine $0$. Donne l'abscisse de $Q$ sous forme de fraction, puis dis entre quels deux entiers consécutifs elle se trouve.",
+      "corrige": [
+        "L'unité est partagée en $3$ parts égales : une graduation vaut $\\dfrac{1}{3}$. Le dénominateur est le nombre de parts dans une unité.",
+        "Le point est au $5^\\text{e}$ trait après $0$, soit $5$ graduations : son abscisse est $5 \\times \\dfrac{1}{3} = \\dfrac{5}{3}$.",
+        "Pour la situer : $\\dfrac{5}{3} = \\dfrac{3}{3} + \\dfrac{2}{3} = 1 + \\dfrac{2}{3}$. L'abscisse est donc comprise entre $1$ et $2$."
+      ],
+      "reponse": "$Q\\left(\\dfrac{5}{3}\\right)$, comprise entre $1$ et $2$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "distances",
+      "enonce": "Sur une droite graduée d'unité $1$, le point $C$ a pour abscisse $-6$ et le point $D$ a pour abscisse $-1$. Quelle est la distance $CD$, en unités ?",
+      "corrige": [
+        "La distance entre deux points est l'écart entre leurs abscisses. C'est une longueur : elle est toujours positive, on la compte et on n'additionne pas les signes.",
+        "De $-6$ à $-1$, on compte les unités : $-6 \\to -5 \\to -4 \\to -3 \\to -2 \\to -1$, soit $5$ unités.",
+        "On peut aussi calculer l'écart directement : $-1 - (-6) = -1 + 6 = 5$."
+      ],
+      "reponse": "$CD = 5$ unités."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "Un graphique utilise un repère orthogonal : sur l'axe horizontal, une graduation représente $1$ jour ; sur l'axe vertical, une graduation représente $5$ euros. Le point $A$ est placé $4$ graduations à droite et $3$ graduations au-dessus de l'origine. Le point $B$ est placé $6$ graduations à droite, mais exactement sur l'axe horizontal. Donne les coordonnées de $A$ et de $B$.",
+      "corrige": [
+        "Sur chaque axe, on lit les nombres représentés, pas les traits : l'axe horizontal avance de $1$ en $1$, l'axe vertical de $5$ en $5$. « Orthogonal » veut seulement dire que les axes sont perpendiculaires, pas qu'ils ont la même unité.",
+        "Pour $A$ : abscisse $= 4 \\times 1 = 4$ et ordonnée $= 3 \\times 5 = 15$. Donc $A(4\\,;15)$.",
+        "Pour $B$ : abscisse $= 6 \\times 1 = 6$ ; $B$ est sur l'axe horizontal, donc son ordonnée est nulle : $y = 0$. Donc $B(6\\,;0)$."
+      ],
+      "reponse": "$A(4\\,;15)$ et $B(6\\,;0)$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthogonal, on place les points $A(1\\,;1)$, $B(5\\,;1)$ et $C(5\\,;3)$. Ces trois points sont trois sommets d'un rectangle $ABCD$. Quelles sont les coordonnées du quatrième sommet $D$ ?",
+      "corrige": [
+        "On lit les coordonnées : $A$ et $B$ ont la même ordonnée ($1$), donc le côté $[AB]$ est horizontal. $B$ et $C$ ont la même abscisse ($5$), donc le côté $[BC]$ est vertical.",
+        "Dans le rectangle $ABCD$, les côtés se suivent : $[DC]$ doit être parallèle à $[AB]$ (horizontal) et $[AD]$ parallèle à $[BC]$ (vertical).",
+        "Pour que $[AD]$ soit vertical, $D$ a la même abscisse que $A$ : $x = 1$. Pour que $[DC]$ soit horizontal, $D$ a la même ordonnée que $C$ : $y = 3$.",
+        "Le quatrième sommet est donc $D(1\\,;3)$."
+      ],
+      "reponse": "$D(1\\,;3)$."
+    }
+  ]
+}

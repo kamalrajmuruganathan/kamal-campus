@@ -1,0 +1,94 @@
+{
+  "id": "5e-math-representation-espace-exos",
+  "chapitre": "5e-math-representation-espace",
+  "titre": "Exercices — Représentation de l'espace",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "volumes",
+      "enonce": "Un prisme droit a pour base un triangle rectangle dont les côtés de l'angle droit mesurent $6$ cm et $8$ cm. Sa hauteur est de $5$ cm. Calcule son volume.",
+      "corrige": [
+        "Pour tous les solides du chapitre, $V = \\mathcal{A}_{\\text{base}} \\times h$. Ici la base est un triangle : il faut d'abord son aire.",
+        "L'aire d'un triangle rectangle est $\\dfrac{\\text{côté} \\times \\text{côté}}{2}$, avec les deux côtés de l'angle droit : $\\mathcal{A}_{\\text{base}} = \\dfrac{6 \\times 8}{2} = \\dfrac{48}{2} = 24 \\text{ cm}^2$.",
+        "On multiplie par la hauteur du prisme : $V = 24 \\times 5 = 120 \\text{ cm}^3$.",
+        "Attention à l'unité : un volume s'exprime en cm³, pas en cm²."
+      ],
+      "reponse": "$V = 120 \\text{ cm}^3$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "patrons",
+      "enonce": "On veut construire le patron d'un cylindre de révolution de rayon $4$ cm et de hauteur $10$ cm. On prend $\\pi \\approx 3{,}14$. Indique les pièces du patron et calcule la largeur du rectangle (le côté qui s'enroule autour des disques).",
+      "corrige": [
+        "Le patron d'un cylindre est fait de $2$ disques identiques (les bases) et de $1$ rectangle (la surface latérale déroulée).",
+        "La hauteur du rectangle est celle du cylindre : $10$ cm.",
+        "Sa largeur fait le tour d'un disque : c'est le périmètre de la base, $2\\pi r$. On calcule $2 \\times 3{,}14 \\times 4 = 25{,}12 \\text{ cm}$.",
+        "Le patron est donc : deux disques de rayon $4$ cm et un rectangle de $10$ cm de haut sur $25{,}12$ cm de large."
+      ],
+      "reponse": "$2$ disques de rayon $4$ cm et un rectangle de $10 \\text{ cm} \\times 25{,}12 \\text{ cm}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "volumes",
+      "enonce": "Un réservoir a la forme d'un cylindre de révolution de rayon $10$ cm et de hauteur $20$ cm. On prend $\\pi \\approx 3{,}14$. Calcule son volume en cm³, puis donne sa contenance en litres.",
+      "corrige": [
+        "On applique $V = \\pi r^2 \\times h$. L'aire de la base vaut $\\mathcal{A}_{\\text{base}} = \\pi r^2 = 3{,}14 \\times 10^2 = 3{,}14 \\times 100 = 314 \\text{ cm}^2$.",
+        "Volume : $V = 314 \\times 20 = 6280 \\text{ cm}^3$.",
+        "Pour la contenance, on utilise le pont $1 \\text{ mL} = 1 \\text{ cm}^3$, donc $6280 \\text{ cm}^3 = 6280 \\text{ mL}$.",
+        "On passe des mL aux L en divisant par $1000$ : $6280 \\div 1000 = 6{,}28 \\text{ L}$."
+      ],
+      "reponse": "$V = 6280 \\text{ cm}^3$, soit une contenance de $6{,}28 \\text{ L}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "patrons",
+      "enonce": "On a tracé le patron d'un cylindre de révolution. Le rectangle latéral mesure $18{,}84$ cm de large et $7$ cm de haut. On prend $\\pi \\approx 3{,}14$. Retrouve la hauteur et le rayon du cylindre.",
+      "corrige": [
+        "Sur un patron de cylindre, la hauteur du rectangle est la hauteur du cylindre. Donc la hauteur du cylindre est $7$ cm.",
+        "La largeur du rectangle est le périmètre de la base : $2\\pi r = 18{,}84$.",
+        "On remplace $\\pi$ par $3{,}14$ : $2 \\times 3{,}14 \\times r = 6{,}28 \\times r = 18{,}84$.",
+        "On divise pour trouver le rayon : $r = 18{,}84 \\div 6{,}28 = 3 \\text{ cm}$."
+      ],
+      "reponse": "Le cylindre a une hauteur de $7$ cm et un rayon de $3$ cm."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "volumes",
+      "enonce": "Une canette a la forme d'un cylindre de révolution de rayon $4$ cm et de hauteur $15$ cm. On prend $\\pi \\approx 3{,}14$. a) Calcule son volume, puis sa contenance en mL. b) On veut remplir entièrement une bouteille de $1$ litre. Combien de canettes pleines faut-il au minimum ?",
+      "corrige": [
+        "a) On calcule d'abord l'aire de la base : $\\mathcal{A}_{\\text{base}} = \\pi r^2 = 3{,}14 \\times 4^2 = 3{,}14 \\times 16 = 50{,}24 \\text{ cm}^2$.",
+        "Volume : $V = 50{,}24 \\times 15 = 753{,}6 \\text{ cm}^3$. Comme $1 \\text{ cm}^3 = 1 \\text{ mL}$, la contenance est $753{,}6 \\text{ mL}$.",
+        "b) La bouteille de $1$ litre contient $1 \\text{ L} = 1000 \\text{ mL}$.",
+        "Une seule canette ($753{,}6$ mL) ne suffit pas car $753{,}6 < 1000$. Avec deux canettes on a $2 \\times 753{,}6 = 1507{,}2 \\text{ mL} > 1000 \\text{ mL}$ : c'est assez.",
+        "Il faut donc au minimum $2$ canettes pleines."
+      ],
+      "reponse": "a) $V = 753{,}6 \\text{ cm}^3 = 753{,}6 \\text{ mL}$. b) $2$ canettes."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "volumes",
+      "enonce": "Une tente a la forme d'un prisme droit posé sur une de ses faces rectangulaires. Ses deux bases sont des triangles rectangles de côtés $5$ cm, $12$ cm et $13$ cm (à l'échelle réduite d'une maquette), et la longueur de la tente est de $20$ cm. a) Où sont les bases de ce prisme ? b) Calcule le volume de la maquette. c) Décris les pièces de son patron.",
+      "corrige": [
+        "a) Les bases d'un prisme sont ses deux polygones identiques et parallèles, où qu'ils soient. Ici la tente est posée sur une face rectangulaire, donc les deux triangles sont sur les côtés : les bases sont ces deux triangles, pas la face du dessous.",
+        "b) On applique $V = \\mathcal{A}_{\\text{base}} \\times h$, où $h$ est la longueur qui sépare les deux triangles, soit $20$ cm.",
+        "Aire d'un triangle : on prend les deux côtés de l'angle droit, $5$ cm et $12$ cm : $\\mathcal{A}_{\\text{base}} = \\dfrac{5 \\times 12}{2} = \\dfrac{60}{2} = 30 \\text{ cm}^2$. Le côté $13$ cm est l'hypoténuse, il ne sert pas à l'aire.",
+        "Volume : $V = 30 \\times 20 = 600 \\text{ cm}^3$.",
+        "c) Le patron d'un prisme droit est fait des deux bases et d'une bande de rectangles, un par côté de la base : ici $2$ triangles $(5\\,;12\\,;13)$ et $3$ rectangles de hauteur $20$ cm et de largeurs respectives $5$ cm, $12$ cm et $13$ cm."
+      ],
+      "reponse": "a) Les deux triangles (sur les côtés). b) $V = 600 \\text{ cm}^3$. c) $2$ triangles $(5;12;13)$ + $3$ rectangles de hauteur $20$ cm et de largeurs $5$, $12$ et $13$ cm."
+    }
+  ]
+}

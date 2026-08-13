@@ -1,0 +1,88 @@
+{
+  "id": "5e-math-puissances-exos",
+  "chapitre": "5e-math-puissances",
+  "titre": "Exercices — Puissances : carré et cube",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "notation",
+      "enonce": "Écris le produit $6 \\times 6 \\times 6$ sous la forme d'une puissance, puis donne sa valeur.",
+      "corrige": [
+        "Le même nombre $6$ est multiplié plusieurs fois par lui-même : la base est $6$.",
+        "On compte les facteurs : il y a **trois** fois le nombre $6$, donc l'exposant est $3$. On écrit $6 \\times 6 \\times 6 = 6^3$.",
+        "On calcule de gauche à droite : $6 \\times 6 = 36$, puis $36 \\times 6 = 216$."
+      ],
+      "reponse": "$6 \\times 6 \\times 6 = 6^3 = 216$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Un carré a un côté de $7$ cm. Calcule son aire.",
+      "corrige": [
+        "L'aire d'un carré de côté $c$ est $c^2 = c \\times c$.",
+        "Ici $c = 7$, donc l'aire vaut $7^2 = 7 \\times 7 = 49$.",
+        "L'aire s'exprime en centimètres carrés (cm$^2$)."
+      ],
+      "reponse": "L'aire du carré est $7^2 = 49$ cm$^2$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "priorites",
+      "enonce": "Calcule $4^2 + 2^3$.",
+      "corrige": [
+        "Les puissances se calculent **avant** l'addition. On calcule d'abord chaque puissance.",
+        "$4^2 = 4 \\times 4 = 16$ et $2^3 = 2 \\times 2 \\times 2 = 8$.",
+        "On additionne ensuite les deux résultats : $16 + 8 = 24$. (Attention : ce n'est pas $(4+2)^3$.)"
+      ],
+      "reponse": "$4^2 + 2^3 = 16 + 8 = 24$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "ecrire-en-puissance",
+      "enonce": "Écris le nombre $64$ de deux façons différentes : une fois sous la forme d'un carré, une fois sous la forme d'un cube.",
+      "corrige": [
+        "Sous forme de carré : on cherche un nombre qui, multiplié par lui-même, donne $64$. Dans le tableau des carrés, $8^2 = 8 \\times 8 = 64$.",
+        "Sous forme de cube : on cherche un nombre écrit trois fois en facteur qui donne $64$. On teste $4$ : $4 \\times 4 \\times 4 = 16 \\times 4 = 64$, donc $64 = 4^3$.",
+        "Les deux écritures sont justes : un même nombre peut s'écrire de plusieurs manières en puissance."
+      ],
+      "reponse": "$64 = 8^2$ et $64 = 4^3$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "expression-litterale",
+      "enonce": "On considère l'expression $A = 2a^2 + b^3$. Calcule la valeur de $A$ pour $a = 3$ et $b = 2$.",
+      "corrige": [
+        "On remplace chaque lettre par sa valeur : $A = 2 \\times 3^2 + 2^3$.",
+        "On calcule les puissances d'abord. Le carré porte sur $a$ seulement : $3^2 = 9$. Et $2^3 = 2 \\times 2 \\times 2 = 8$.",
+        "On effectue ensuite la multiplication : $2 \\times 9 = 18$.",
+        "On termine par l'addition : $18 + 8 = 26$."
+      ],
+      "reponse": "$A = 26$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "cube",
+      "enonce": "Un carré a une aire de $36$ cm$^2$.\\n\\n**a)** Détermine la longueur de son côté.\\n\\n**b)** On construit un cube dont l'arête est égale à ce côté. Calcule le volume de ce cube.",
+      "corrige": [
+        "**a)** L'aire d'un carré de côté $c$ vaut $c^2$. On cherche donc le nombre dont le carré fait $36$. Comme $6 \\times 6 = 36$, le côté mesure $6$ cm.",
+        "**b)** Le volume d'un cube d'arête $a$ vaut $a^3$. Ici l'arête est $a = 6$ cm.",
+        "On calcule $6^3 = 6 \\times 6 \\times 6 = 36 \\times 6 = 216$.",
+        "Le volume s'exprime en centimètres cubes (cm$^3$)."
+      ],
+      "reponse": "**a)** Le côté mesure $6$ cm. **b)** Le volume du cube est $6^3 = 216$ cm$^3$."
+    }
+  ]
+}

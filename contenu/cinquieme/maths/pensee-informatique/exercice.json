@@ -1,0 +1,87 @@
+{
+  "id": "5e-math-pensee-informatique-exos",
+  "chapitre": "5e-math-pensee-informatique",
+  "titre": "Exercices — La pensée informatique",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "prevoir-valeur",
+      "enonce": "Sans exécuter le programme, prévois ce qu'il affiche.\n\n```\nchoisir 20\nsoustraire 4\ndiviser par 2\nafficher le résultat\n```",
+      "corrige": [
+        "On lit les instructions **de haut en bas**, une par une, en gardant à jour le résultat courant.",
+        "`choisir 20` : le résultat vaut $20$. `soustraire 4` : $20 - 4 = 16$.",
+        "`diviser par 2` : $16 \\div 2 = 8$. La dernière ligne affiche ce résultat."
+      ],
+      "reponse": "Le programme affiche $8$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "expression-informatique",
+      "enonce": "La moyenne de trois notes est $m = \\dfrac{a + b + c}{3}$. Écris l'expression informatique qui la calcule.",
+      "corrige": [
+        "Dans la formule, la barre de fraction **regroupe tout le numérateur** $a + b + c$.",
+        "Écrite à plat, ce regroupement disparaît : on le remet avec des **parenthèses**.",
+        "On remplace chaque note par le nom de sa variable : `(a + b + c) / 3`. Sans les parenthèses, `a + b + c / 3` calculerait $a + b + \\dfrac{c}{3}$, car la division passe avant l'addition."
+      ],
+      "reponse": "`(a + b + c) / 3`."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "boucle",
+      "enonce": "Ce programme est écrit **à plat**. Réécris-le avec une boucle, puis indique combien d'instructions sont exécutées en tout.\n\n```\navancer de 30\ntourner de 72°\navancer de 30\ntourner de 72°\navancer de 30\ntourner de 72°\navancer de 30\ntourner de 72°\navancer de 30\ntourner de 72°\n```",
+      "corrige": [
+        "La séquence qui se répète à l'identique est : `avancer de 30`, puis `tourner de 72°`. Elle revient **$5$ fois**.",
+        "On la place à l'intérieur d'une boucle, décalée vers la droite :\n\n```\nrépéter 5 fois\n    avancer de 30\n    tourner de 72°\nfin répéter\n```",
+        "La boucle contient $2$ instructions et fait $5$ tours : $5 \\times 2 = 10$ instructions exécutées — autant que dans le programme à plat, c'est normal."
+      ],
+      "reponse": "Une boucle `répéter 5 fois` contenant les deux instructions ; $5 \\times 2 = 10$ instructions exécutées."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "variable",
+      "enonce": "L'utilisateur saisit $5$, rangé dans la variable `cote`. Qu'affiche ce programme, ligne par ligne ?\n\n```\nafficher cote * 4\nafficher cote * cote\n```",
+      "corrige": [
+        "Première ligne : on **lit** `cote`, qui vaut $5$, et on calcule $5 \\times 4 = 20$.",
+        "`afficher` produit une sortie mais ne range rien : à la deuxième ligne, `cote` vaut **toujours** $5$.",
+        "Deuxième ligne : $5 \\times 5 = 25$. (On a affiché le périmètre, puis l'aire d'un carré de côté $5$.)"
+      ],
+      "reponse": "$20$ puis $25$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "modifier-parametres",
+      "enonce": "Ce programme trace un carré de côté $50$.\n\n```\nrépéter 4 fois\n    avancer de 50\n    tourner de 90°\nfin répéter\n```\n\nÉcris le programme qui trace un **hexagone régulier** (six côtés) de côté $40$, et justifie l'angle du virage.",
+      "corrige": [
+        "Un hexagone a **six côtés** : la boucle doit faire $6$ tours, donc `répéter 6 fois`.",
+        "En parcourant toute la figure, le robot fait un tour complet de $360°$, réparti en $6$ virages identiques : l'angle du virage vaut $360 \\div 6 = 60°$ (et non l'angle intérieur de l'hexagone).",
+        "On change aussi la longueur du côté, qui passe à $40$. Le programme devient :\n\n```\nrépéter 6 fois\n    avancer de 40\n    tourner de 60°\nfin répéter\n```"
+      ],
+      "reponse": "`répéter 6 fois` / `avancer de 40` / `tourner de 60°` / `fin répéter`, car $360 \\div 6 = 60°$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "expression-informatique",
+      "enonce": "Un menuisier vend des planches à $8$ € l'unité, avec des frais de livraison fixes de $5$ €. On note `n` le nombre de planches commandées.\n\n1. Écris l'expression informatique qui donne le prix total.\n2. Complète le programme pour qu'il affiche ce prix.\n\n```\ndemander le nombre de planches et le mettre dans n\nafficher …\n```",
+      "corrige": [
+        "Le prix des planches est $8 \\times n$, auquel s'ajoutent $5$ € de livraison : le total est $8 \\times n + 5$.",
+        "Aucune parenthèse n'est nécessaire : la multiplication est **prioritaire**, donc `8 * n + 5` calcule bien $(8 \\times n) + 5$. Écrire `8 * (n + 5)` serait une erreur, cela ajouterait $5$ à chaque planche.",
+        "On remplace les points de suspension par cette expression :\n\n```\ndemander le nombre de planches et le mettre dans n\nafficher 8 * n + 5\n```",
+        "Vérification pour $n = 3$ : $8 \\times 3 + 5 = 24 + 5 = 29$ €."
+      ],
+      "reponse": "`afficher 8 * n + 5` ; le prix total vaut $8 \\times n + 5$."
+    }
+  ]
+}

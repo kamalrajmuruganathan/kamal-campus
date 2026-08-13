@@ -1,0 +1,89 @@
+{
+  "id": "5e-math-fonctions-exos",
+  "chapitre": "5e-math-fonctions",
+  "titre": "Exercices — Fonctions : dépendance entre deux grandeurs",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "formule-vers-tableau",
+      "enonce": "Une bougie mesure $20$ cm. En brûlant, elle perd $2$ cm par heure. Sa hauteur $H$, en centimètres, varie en fonction du nombre $h$ d'heures écoulées :\n$$H = 20 - 2 \\times h$$\nRecopie et complète le tableau de valeurs pour $h = 0$, $1$, $2$, $3$ et $4$.\n\n| Heures $h$ | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| Hauteur $H$ (cm) | ? | ? | ? | ? | ? |",
+      "corrige": [
+        "Pour chaque valeur de $h$, on **remplace** la lettre $h$ par le nombre, puis on calcule.",
+        "$h = 0$ : $H = 20 - 2 \\times 0 = 20 - 0 = 20$.",
+        "$h = 1$ : $H = 20 - 2 \\times 1 = 20 - 2 = 18$. $h = 2$ : $H = 20 - 4 = 16$.",
+        "$h = 3$ : $H = 20 - 6 = 14$. $h = 4$ : $H = 20 - 8 = 12$."
+      ],
+      "reponse": "Hauteurs successives : $20$, $18$, $16$, $14$ et $12$ cm."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "produire-une-formule",
+      "enonce": "Un plombier facture $30$ € de déplacement, puis $25$ € pour chaque heure de travail. Écris une formule qui donne le prix $P$, en euros, à payer en fonction du nombre $h$ d'heures de travail.",
+      "corrige": [
+        "On repère ce qui est **fixe** et ce qui **varie**. Le déplacement, $30$ €, se paie une seule fois : il est fixe. Les $25$ € se paient pour chaque heure : ils varient avec $h$.",
+        "Le travail coûte $25 \\times h$ euros, auxquels on ajoute les $30$ € fixes du déplacement.",
+        "**Test.** Pour $h = 2$ heures, la formule donne $30 + 25 \\times 2 = 30 + 50 = 80$ €, ce qui correspond bien à $30$ € de déplacement plus deux heures à $25$ €. ✓"
+      ],
+      "reponse": "$P = 30 + 25 \\times h$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "reperage",
+      "enonce": "Une plante mesure $2$ cm le jour de sa plantation, puis grandit régulièrement. Le tableau donne sa hauteur $H$, en centimètres, en fonction du nombre $d$ de jours écoulés.\n\n| Jour $d$ | 0 | 1 | 2 | 3 |\n|---|---|---|---|---|\n| Hauteur $H$ (cm) | 2 | 5 | 8 | 11 |\n\nOn veut placer ces valeurs dans un repère, avec le nombre de jours sur l'axe horizontal et la hauteur sur l'axe vertical. Donne les coordonnées des quatre points à placer.",
+      "corrige": [
+        "L'axe **horizontal** porte la grandeur de départ (le jour $d$) : c'est l'**abscisse**. L'axe **vertical** porte la grandeur qui dépend (la hauteur $H$) : c'est l'**ordonnée**. On écrit toujours l'abscisse en premier.",
+        "Chaque colonne du tableau donne un point de coordonnées (jour ; hauteur) : $(0\\,;2)$, $(1\\,;5)$, $(2\\,;8)$ et $(3\\,;11)$.",
+        "Attention à l'ordre : le point du 3e jour est $(3\\,;11)$ et non $(11\\,;3)$, qui serait un point tout à fait différent."
+      ],
+      "reponse": "$(0\\,;2)$, $(1\\,;5)$, $(2\\,;8)$ et $(3\\,;11)$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "lecture-graphique",
+      "enonce": "Un graphique donne le niveau d'eau $N$ d'un réservoir, en litres, en fonction de l'heure. Les valeurs lues sont rassemblées dans le tableau suivant.\n\n| Heure | 8 h | 12 h | 16 h |\n|---|---|---|---|\n| Niveau $N$ (L) | 80 | 160 | 100 |\n\n**1.** Décris en une phrase comment le niveau évolue au cours de la journée.\n**2.** À quelle heure le niveau est-il maximal, et combien vaut-il alors ?\n**3.** Quel est le niveau à $16$ h ?",
+      "corrige": [
+        "**1.** On suit les valeurs dans l'ordre des heures : de $8$ h à $12$ h le niveau passe de $80$ L à $160$ L, il **augmente** ; de $12$ h à $16$ h il passe de $160$ L à $100$ L, il **diminue**.",
+        "**2.** La plus grande valeur du tableau est $160$ L, atteinte à $12$ h : le niveau est **maximal** à $12$ h et vaut alors $160$ L.",
+        "**3.** On lit la colonne $16$ h : le niveau vaut $100$ L. On rédige en phrase, avec l'unité : « à $16$ h, le réservoir contient $100$ L »."
+      ],
+      "reponse": "Le niveau augmente jusqu'à $12$ h (maximum $160$ L) puis diminue ; à $16$ h il vaut $100$ L."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "proportionnalite-graphique",
+      "enonce": "Pour un anniversaire, une salle de jeux facture $15$ € de location, puis $4$ € par enfant présent. On note $P$ le prix, en euros, et $n$ le nombre d'enfants.\n**1.** Écris une formule donnant $P$ en fonction de $n$.\n**2.** Recopie et complète le tableau pour $n = 0$, $1$, $2$, $3$ et $4$.\n**3.** Le prix est-il proportionnel au nombre d'enfants ? Justifie.",
+      "corrige": [
+        "**1.** Les $15$ € de location sont **fixes**, les $4$ € se paient pour chaque enfant (partie qui **varie**) : $P = 15 + 4 \\times n$.",
+        "**2.** On remplace $n$ : $n = 0 \\to 15$ ; $n = 1 \\to 15 + 4 = 19$ ; $n = 2 \\to 15 + 8 = 23$ ; $n = 3 \\to 15 + 12 = 27$ ; $n = 4 \\to 15 + 16 = 31$.",
+        "**3.** On teste les quotients : $\\dfrac{19}{1} = 19$ mais $\\dfrac{23}{2} = 11{,}5$. Ils ne sont pas égaux.",
+        "De plus, pour $n = 0$ le prix vaut $15$ € et non $0$ € : dans un repère, la droite ne passerait **pas** par l'origine. Ce n'est donc **pas** une situation de proportionnalité, même si les points sont alignés."
+      ],
+      "reponse": "$P = 15 + 4 \\times n$ ; ce n'est **pas** proportionnel (quotients différents, et $15$ € déjà payés pour $0$ enfant)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "pieges-de-lecture",
+      "enonce": "On s'intéresse à l'aire $A$ d'un carré, en cm², en fonction de la longueur $c$ de son côté, en cm.\n**1.** Écris la formule donnant $A$ en fonction de $c$.\n**2.** Recopie et complète le tableau pour $c = 1$, $2$, $3$, $4$ et $5$.\n**3.** Léa affirme : « L'aire augmente quand le côté augmente, donc l'aire est proportionnelle au côté. » A-t-elle raison ? Justifie de deux façons.",
+      "corrige": [
+        "**1.** L'aire d'un carré est côté $\\times$ côté : $A = c \\times c$.",
+        "**2.** On remplace $c$ : $c = 1 \\to 1$ ; $c = 2 \\to 4$ ; $c = 3 \\to 9$ ; $c = 4 \\to 16$ ; $c = 5 \\to 25$.",
+        "**3.** *Première raison — les quotients.* $\\dfrac{1}{1} = 1$, $\\dfrac{4}{2} = 2$, $\\dfrac{9}{3} = 3$ : les quotients ne sont pas tous égaux, donc ce n'est pas proportionnel.",
+        "*Deuxième raison — les points.* Les valeurs $1$, $4$, $9$, $16$, $25$ montent de plus en plus vite ($+3$, puis $+5$, puis $+7$, puis $+9$) : les points ne sont pas alignés. Léa a donc tort : deux grandeurs peuvent augmenter ensemble sans être proportionnelles."
+      ],
+      "reponse": "$A = c \\times c$ ; Léa a tort : les quotients sont inégaux et les points ne sont pas alignés."
+    }
+  ]
+}

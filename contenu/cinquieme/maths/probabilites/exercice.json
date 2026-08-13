@@ -1,0 +1,86 @@
+{
+  "id": "5e-math-probabilites-exos",
+  "chapitre": "5e-math-probabilites",
+  "titre": "Exercices — Probabilités",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "ecritures",
+      "enonce": "La probabilité de gagner à un petit jeu est $\\dfrac{1}{5}$. Écris cette probabilité sous forme décimale, puis sous forme de pourcentage.",
+      "corrige": [
+        "Pour passer de la fraction à l'écriture décimale, on effectue la division : $1 \\div 5 = 0{,}2$.",
+        "Pour obtenir le pourcentage, on multiplie la forme décimale par $100$ : $0{,}2 \\times 100 = 20$, soit $20\\ \\%$.",
+        "Les trois écritures désignent la même probabilité : $\\dfrac{1}{5} = 0{,}2 = 20\\ \\%$."
+      ],
+      "reponse": "$\\dfrac{1}{5} = 0{,}2 = 20\\ \\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "equiprobabilite",
+      "enonce": "Une roue de loterie est partagée en $8$ secteurs **identiques**. $3$ secteurs sont rouges. On fait tourner la roue. Quelle est la probabilité que la flèche s'arrête sur un secteur rouge ?",
+      "corrige": [
+        "Les $8$ secteurs sont identiques : il y a équiprobabilité, on peut donc utiliser la formule $P = \\dfrac{\\text{nombre d'issues favorables}}{\\text{nombre total d'issues}}$.",
+        "Les issues favorables sont les $3$ secteurs rouges ; le nombre total d'issues est $8$.",
+        "Donc $P(\\text{rouge}) = \\dfrac{3}{8} = 0{,}375$, soit environ $37{,}5\\ \\%$."
+      ],
+      "reponse": "$P(\\text{rouge}) = \\dfrac{3}{8}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "evenement",
+      "enonce": "On dispose de $12$ cartes numérotées de $1$ à $12$. On en tire une au hasard. Quelle est la probabilité d'obtenir un multiple de $3$ ?",
+      "corrige": [
+        "L'événement « obtenir un multiple de $3$ » regroupe plusieurs issues. Cherchons-les entre $1$ et $12$ : $3$, $6$, $9$ et $12$. Il y a donc $4$ issues favorables.",
+        "Les cartes sont identiques, il y a équiprobabilité, et le nombre total d'issues est $12$.",
+        "Donc $P = \\dfrac{4}{12}$. On simplifie la fraction en divisant en haut et en bas par $4$ : $\\dfrac{4}{12} = \\dfrac{1}{3}$."
+      ],
+      "reponse": "$P = \\dfrac{4}{12} = \\dfrac{1}{3}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "frequence-probabilite",
+      "enonce": "On lance une pièce équilibrée $50$ fois. On obtient « pile » $28$ fois. Calcule la fréquence de « pile », puis compare-la à la probabilité d'obtenir « pile ».",
+      "corrige": [
+        "La fréquence se **constate** après l'expérience : c'est l'effectif divisé par le nombre de lancers, soit $\\dfrac{28}{50} = 0{,}56$.",
+        "La probabilité, elle, se **calcule** avant : la pièce est équilibrée, donc $P(\\text{pile}) = \\dfrac{1}{2} = 0{,}5$.",
+        "La fréquence observée ($0{,}56$) s'écarte un peu de la probabilité ($0{,}5$) : c'est normal sur seulement $50$ lancers. Plus on répéterait l'expérience, plus la fréquence se rapprocherait de $0{,}5$."
+      ],
+      "reponse": "Fréquence $= 0{,}56$ ; probabilité $= 0{,}5$. L'écart est normal."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "somme-probabilites",
+      "enonce": "Un sac contient des boules rouges, vertes et bleues, toutes de même taille. On sait que le sac contient $4$ boules rouges et que la probabilité de tirer une rouge est $0{,}2$. Il y a aussi $6$ boules vertes, le reste étant bleu.\n\n1. Combien y a-t-il de boules en tout ?\n2. Combien y a-t-il de boules bleues, et quelle est la probabilité d'en tirer une ?\n3. Vérifie que la somme des probabilités des trois couleurs vaut $1$.",
+      "corrige": [
+        "1. Les boules sont identiques : il y a équiprobabilité, donc $P(\\text{rouge}) = \\dfrac{4}{\\text{total}} = 0{,}2$. On cherche le total tel que $\\dfrac{4}{\\text{total}} = 0{,}2$ : comme $\\dfrac{4}{20} = 0{,}2$, le sac contient $20$ boules.",
+        "2. Les bleues sont ce qui reste après les rouges et les vertes : $20 - 4 - 6 = 10$ boules bleues. Donc $P(\\text{bleue}) = \\dfrac{10}{20} = 0{,}5$.",
+        "3. Calculons chaque probabilité : $P(\\text{rouge}) = 0{,}2$, $P(\\text{verte}) = \\dfrac{6}{20} = 0{,}3$, $P(\\text{bleue}) = 0{,}5$. Leur somme : $0{,}2 + 0{,}3 + 0{,}5 = 1$ ✓. Le contrôle est vérifié."
+      ],
+      "reponse": "$20$ boules au total ; $10$ bleues, $P(\\text{bleue}) = 0{,}5$ ; la somme des probabilités vaut $1$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "equiprobabilite",
+      "enonce": "Une roue de foire est partagée en secteurs de **tailles différentes**. Le forain annonce : $P(\\text{lot A}) = 0{,}1$, $P(\\text{lot B}) = 0{,}25$ et $P(\\text{lot C}) = 0{,}15$. Sinon, on ne gagne rien.\n\n1. Peut-on ici calculer les probabilités avec la formule $\\dfrac{\\text{issues favorables}}{\\text{issues au total}}$ ? Explique.\n2. Quelle est la probabilité de ne rien gagner ?",
+      "corrige": [
+        "1. Non. La formule $\\dfrac{\\text{issues favorables}}{\\text{issues au total}}$ suppose l'**équiprobabilité**, c'est-à-dire que toutes les issues aient la même chance. Ici les secteurs ont des tailles différentes : ils n'ont pas la même chance, la formule ne s'applique donc pas. On travaille directement avec les probabilités données.",
+        "2. « Ne rien gagner » est le seul cas restant. Comme la somme des probabilités de toutes les issues vaut $1$, on obtient : $P(\\text{rien}) = 1 - \\big(0{,}1 + 0{,}25 + 0{,}15\\big)$.",
+        "On calcule d'abord la parenthèse : $0{,}1 + 0{,}25 + 0{,}15 = 0{,}5$. Donc $P(\\text{rien}) = 1 - 0{,}5 = 0{,}5$. On perd donc une fois sur deux en moyenne."
+      ],
+      "reponse": "1. Non, les secteurs ne sont pas équiprobables. 2. $P(\\text{ne rien gagner}) = 0{,}5$."
+    }
+  ]
+}

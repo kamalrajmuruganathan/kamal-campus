@@ -1,0 +1,89 @@
+{
+  "id": "5e-math-operations-exos",
+  "chapitre": "5e-math-operations",
+  "titre": "Exercices — Opérations",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "priorites-operatoires",
+      "enonce": "Calcule en respectant les priorités : $A = 5 + 3 \\times (8 - 2)$ et $B = 20 - 12 \\div 4$.",
+      "corrige": [
+        "Pour $A$, je commence par les parenthèses : $8 - 2 = 6$, donc $A = 5 + 3 \\times 6$.",
+        "La multiplication passe avant l'addition : $3 \\times 6 = 18$, donc $A = 5 + 18 = 23$.",
+        "Pour $B$, il n'y a pas de parenthèses : la division passe avant la soustraction. $12 \\div 4 = 3$, donc $B = 20 - 3 = 17$."
+      ],
+      "reponse": "$A = 23$ et $B = 17$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "division-euclidienne",
+      "enonce": "Effectue la division euclidienne de $250$ par $7$. Donne le quotient, le reste, et écris l'égalité de la forme $a = b \\times q + r$.",
+      "corrige": [
+        "Je cherche le plus grand multiple de $7$ qui ne dépasse pas $250$. Comme $7 \\times 35 = 245$ et $7 \\times 36 = 252 > 250$, le quotient est $35$.",
+        "Le reste est $250 - 245 = 5$. Je vérifie qu'il est bien plus petit que le diviseur : $5 < 7$ ✓.",
+        "J'écris l'égalité : $250 = 7 \\times 35 + 5$."
+      ],
+      "reponse": "Quotient $35$, reste $5$, soit $250 = 7 \\times 35 + 5$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "distributivite",
+      "enonce": "En utilisant la distributivité (décompose $102$ et $99$), calcule de tête $A = 8 \\times 102$ puis $B = 15 \\times 99$.",
+      "corrige": [
+        "Pour $A$, j'écris $102 = 100 + 2$, puis je distribue le $8$ sur les deux termes : $A = 8 \\times 100 + 8 \\times 2$.",
+        "$A = 800 + 16 = 816$.",
+        "Pour $B$, j'écris $99 = 100 - 1$, puis je distribue le $15$ : $B = 15 \\times 100 - 15 \\times 1$.",
+        "$B = 1\\,500 - 15 = 1\\,485$."
+      ],
+      "reponse": "$A = 816$ et $B = 1\\,485$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "criteres-de-divisibilite",
+      "enonce": "Le nombre $2\\,736$ est-il divisible par $2$ ? par $5$ ? par $3$ ? par $9$ ? Justifie chaque réponse.",
+      "corrige": [
+        "Divisibilité par $2$ et par $5$ : je regarde le chiffre des unités, qui est $6$. Comme $6$ est pair, $2\\,736$ est divisible par $2$. Comme $6$ n'est ni $0$ ni $5$, il n'est pas divisible par $5$.",
+        "Pour $3$ et $9$, je calcule la somme des chiffres : $2 + 7 + 3 + 6 = 18$.",
+        "$18$ est un multiple de $3$ : donc $2\\,736$ est divisible par $3$. $18$ est aussi un multiple de $9$ : donc $2\\,736$ est divisible par $9$."
+      ],
+      "reponse": "Divisible par $2$, par $3$ et par $9$ ; pas par $5$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "division-euclidienne",
+      "enonce": "Un libraire doit ranger $500$ livres dans des cartons contenant chacun $12$ livres. Combien de cartons peut-il remplir complètement ? Combien de livres reste-t-il ? Combien de cartons lui faut-il en tout pour ranger tous les livres ?",
+      "corrige": [
+        "Ranger $500$ livres par paquets de $12$, c'est chercher « combien de fois $12$ tient dans $500$ » : c'est une division euclidienne de $500$ par $12$.",
+        "$12 \\times 41 = 492$ et $12 \\times 42 = 504 > 500$, donc le quotient est $41$ et le reste $500 - 492 = 8$ (bien inférieur à $12$).",
+        "L'égalité $500 = 12 \\times 41 + 8$ se lit : $41$ cartons sont remplis complètement, et il reste $8$ livres.",
+        "Ces $8$ livres restants doivent aussi être rangés : il faut donc un $42^{\\text{e}}$ carton (partiellement rempli). En tout, $42$ cartons."
+      ],
+      "reponse": "$41$ cartons pleins, il reste $8$ livres, et il faut $42$ cartons en tout."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "criteres-de-divisibilite",
+      "enonce": "On s'intéresse au nombre à trois chiffres $\\overline{72a}$, où $a$ est le chiffre des unités (par exemple $721$, $725$…). Pour quels chiffres $a$ ce nombre est-il divisible par $3$ ? Parmi ceux-là, lesquels le rendent aussi divisible par $9$ ?",
+      "corrige": [
+        "La somme des chiffres de $\\overline{72a}$ est $7 + 2 + a = 9 + a$, où $a$ est un chiffre de $0$ à $9$.",
+        "Divisible par $3$ ⟺ $9 + a$ est un multiple de $3$. Comme $9$ est déjà un multiple de $3$, il faut que $a$ soit lui aussi un multiple de $3$ : $a \\in \\{0\\,;\\,3\\,;\\,6\\,;\\,9\\}$.",
+        "Divisible par $9$ ⟺ $9 + a$ est un multiple de $9$. Comme $9$ est déjà un multiple de $9$, il faut que $a$ soit un multiple de $9$ : seuls $a = 0$ (somme $9$) et $a = 9$ (somme $18$) conviennent.",
+        "On retrouve bien le sens unique du cours : les nombres divisibles par $9$ ($720$ et $729$) sont aussi divisibles par $3$, mais $723$ et $726$ sont divisibles par $3$ sans l'être par $9$."
+      ],
+      "reponse": "Divisible par $3$ pour $a \\in \\{0\\,;\\,3\\,;\\,6\\,;\\,9\\}$ ; divisible par $9$ pour $a = 0$ ou $a = 9$."
+    }
+  ]
+}
