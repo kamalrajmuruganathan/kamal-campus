@@ -1,0 +1,91 @@
+{
+  "id": "1es-math-statistiques-bivariees-exos",
+  "chapitre": "1es-math-statistiques-bivariees",
+  "titre": "Exercices — Statistiques à deux caractères",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "point-moyen",
+      "enonce": "On relève sur $5$ élèves leur taille $x$ (en cm) et leur pointure $y$ :\n\n| Taille $x$ | 158 | 162 | 170 | 176 | 184 |\n|---|---|---|---|---|---|\n| Pointure $y$ | 37 | 39 | 40 | 42 | 42 |\n\nDéterminer les coordonnées du point moyen $\\mathrm{G}$ du nuage.",
+      "corrige": [
+        "Le point moyen a pour coordonnées $\\mathrm{G}(\\bar{x}\\,;\\bar{y})$, où $\\bar{x}$ et $\\bar{y}$ sont les moyennes de chaque caractère.",
+        "$\\bar{x} = \\dfrac{158 + 162 + 170 + 176 + 184}{5} = \\dfrac{850}{5} = 170$.",
+        "$\\bar{y} = \\dfrac{37 + 39 + 40 + 42 + 42}{5} = \\dfrac{200}{5} = 40$.",
+        "On lit d'abord l'abscisse (taille moyenne), puis l'ordonnée (pointure moyenne) — sans les intervertir."
+      ],
+      "reponse": "$\\mathrm{G}(170\\,;40)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "tableau-croise",
+      "enonce": "Un sondage classe $250$ élèves selon le sexe et le goût pour les mathématiques :\n\n|  | Aime | N'aime pas | **Total** |\n|---|---|---|---|\n| Filles | 60 | 40 | **100** |\n| Garçons | 90 | 60 | **150** |\n| **Total** | **150** | **100** | **250** |\n\nPour la case « filles qui aiment » ($60$ élèves), calculer les trois pourcentages : sur le total général, sur le total de la ligne, sur le total de la colonne. Préciser à chaque fois la lecture.",
+      "corrige": [
+        "Base = total général ($250$) : $\\dfrac{60}{250} = 24\\,\\%$ des élèves sont des filles **et** aiment les maths.",
+        "Base = total de la ligne ($100$ filles) : $\\dfrac{60}{100} = 60\\,\\%$ **des filles** aiment les maths.",
+        "Base = total de la colonne ($150$ élèves qui aiment) : $\\dfrac{60}{150} = 40\\,\\%$ **des élèves qui aiment** sont des filles.",
+        "La même case donne trois nombres de sens différent : toute réponse doit rappeler sa base."
+      ],
+      "reponse": "$24\\,\\%$ (total), $60\\,\\%$ (parmi les filles), $40\\,\\%$ (parmi ceux qui aiment)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "droite-mayer",
+      "enonce": "Pour $6$ élèves, on relève le temps de révision $x$ (en heures) et la note $y$ (sur $20$), rangés par $x$ croissant :\n\n| $x$ | 1 | 2 | 3 | 4 | 5 | 6 |\n|---|---|---|---|---|---|---|\n| $y$ | 6 | 8 | 10 | 11 | 15 | 16 |\n\nDéterminer une équation de la droite de Mayer, puis vérifier qu'elle passe par le point moyen $\\mathrm{G}$ du nuage.",
+      "corrige": [
+        "On coupe le nuage en deux groupes de $3$ points. Groupe 1 (les $3$ premiers) : $\\mathrm{G}_1\\!\\left(\\dfrac{1+2+3}{3}\\,;\\dfrac{6+8+10}{3}\\right) = \\mathrm{G}_1(2\\,;8)$.",
+        "Groupe 2 (les $3$ derniers) : $\\mathrm{G}_2\\!\\left(\\dfrac{4+5+6}{3}\\,;\\dfrac{11+15+16}{3}\\right) = \\mathrm{G}_2(5\\,;14)$.",
+        "Coefficient directeur : $a = \\dfrac{14 - 8}{5 - 2} = \\dfrac{6}{3} = 2$. Ordonnée à l'origine avec $\\mathrm{G}_1$ : $8 = 2\\times 2 + b$, donc $b = 4$. La droite de Mayer est $y = 2x + 4$.",
+        "Point moyen du nuage : $\\bar{x} = \\dfrac{21}{6} = 3{,}5$ et $\\bar{y} = \\dfrac{66}{6} = 11$, soit $\\mathrm{G}(3{,}5\\,;11)$. Or $2\\times 3{,}5 + 4 = 11$ : la droite passe bien par $\\mathrm{G}$."
+      ],
+      "reponse": "$y = 2x + 4$, et elle passe par $\\mathrm{G}(3{,}5\\,;11)$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "interpolation",
+      "enonce": "Une station météo a relevé la température moyenne annuelle de $2000$ à $2020$. La droite d'ajustement obtenue est $y = 0{,}04x + 13$, où $x$ est le nombre d'années écoulées depuis $2000$ et $y$ la température en °C. Estimer la température en $2012$, puis en $2120$, et dire dans chaque cas s'il s'agit d'une interpolation ou d'une extrapolation.",
+      "corrige": [
+        "Année $2012$ : $x = 12$ (à l'intérieur de $[0\\,;20]$, données observées). $y = 0{,}04\\times 12 + 13 = 0{,}48 + 13 = 13{,}48$. C'est une **interpolation**, jugée raisonnable.",
+        "Année $2120$ : $x = 120$ (bien au-delà de $20$). $y = 0{,}04\\times 120 + 13 = 4{,}8 + 13 = 17{,}8$. C'est une **extrapolation**.",
+        "L'ajustement ne décrit que la période observée ($2000$–$2020$). Rien ne garantit que la tendance linéaire se prolonge sur un siècle : la valeur $17{,}8$ °C est à annoncer avec une réserve explicite."
+      ],
+      "reponse": "$\\approx 13{,}48$ °C en $2012$ (interpolation, fiable) ; $\\approx 17{,}8$ °C en $2120$ (extrapolation, à prendre avec prudence)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "ajustement",
+      "enonce": "On étudie le lien entre la surface $x$ (en m²) d'un logement et son loyer $y$ (en €) sur $5$ logements :\n\n| $x$ | 20 | 30 | 40 | 50 | 60 |\n|---|---|---|---|---|---|\n| $y$ | 280 | 400 | 440 | 560 | 620 |\n\n1) Déterminer le point moyen $\\mathrm{G}$.\n2) Au jugé, on trace la droite passant par les points $(20\\,;300)$ et $(60\\,;620)$ ; déterminer son équation et vérifier qu'elle passe par $\\mathrm{G}$.\n3) Estimer le loyer d'un logement de $45$ m², puis de $200$ m². Commenter.",
+      "corrige": [
+        "1) $\\bar{x} = \\dfrac{20+30+40+50+60}{5} = 40$ ; $\\bar{y} = \\dfrac{280+400+440+560+620}{5} = \\dfrac{2300}{5} = 460$. Donc $\\mathrm{G}(40\\,;460)$.",
+        "2) Coefficient directeur : $a = \\dfrac{620 - 300}{60 - 20} = \\dfrac{320}{40} = 8$. Avec le point $(20\\,;300)$ : $300 = 8\\times 20 + b$, donc $b = 140$. La droite est $y = 8x + 140$. Vérification : $8\\times 40 + 140 = 460 = \\bar{y}$ : elle passe bien par $\\mathrm{G}$.",
+        "3) Pour $45$ m² : $y = 8\\times 45 + 140 = 500$ €. C'est une **interpolation** ($45$ est entre $20$ et $60$), estimation raisonnable.",
+        "Pour $200$ m² : $y = 8\\times 200 + 140 = 1740$ €. C'est une **extrapolation** très au-delà des données : le loyer d'un logement de $200$ m² ne suit pas forcément la même tendance, l'estimation est peu fiable."
+      ],
+      "reponse": "$\\mathrm{G}(40\\,;460)$ ; droite $y = 8x + 140$ ; $\\approx 500$ € pour $45$ m² (fiable), $1740$ € pour $200$ m² (extrapolation risquée)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "correlation-causalite",
+      "enonce": "Dans une ville, on constate que plus un quartier compte de librairies, plus le revenu moyen de ses habitants est élevé : les deux caractères augmentent ensemble. Un journaliste titre : « Ouvrir des librairies enrichit les habitants ».\n1) Peut-on parler de corrélation entre les deux caractères ?\n2) La conclusion du journaliste est-elle justifiée ? Citer les trois explications possibles d'une corrélation et proposer, ici, l'explication la plus vraisemblable.",
+      "corrige": [
+        "1) Les deux caractères varient dans le même sens (l'un augmente quand l'autre augmente) : il y a bien une **corrélation** positive entre le nombre de librairies et le revenu moyen.",
+        "2) Non : une corrélation ne prouve jamais une cause. Le nuage seul ne permet pas de trancher entre les **trois explications** : un lien de cause à effet, une **cause commune** (variable cachée), ou une simple coïncidence (le hasard).",
+        "Ici, l'explication la plus vraisemblable est une **cause commune** : un quartier aisé attire davantage de commerces comme les librairies, et ses habitants y sont déjà à revenu élevé. C'est la richesse du quartier qui explique les deux observations, et non les librairies qui enrichissent les gens.",
+        "Conclusion : le titre confond corrélation et causalité — c'est l'erreur de fond du chapitre."
+      ],
+      "reponse": "Oui, il y a corrélation, mais la conclusion est fausse : les trois explications sont causalité, cause commune ou hasard ; ici une cause commune (la richesse du quartier) est la plus plausible."
+    }
+  ]
+}

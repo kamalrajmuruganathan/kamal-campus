@@ -1,0 +1,92 @@
+{
+  "id": "1es-math-phenomenes-aleatoires-exos",
+  "chapitre": "1es-math-phenomenes-aleatoires",
+  "titre": "Exercices — Phénomènes aléatoires",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Calculer la probabilité de $\\mathrm{B}$ sachant $\\mathrm{A}$, notée $P_\\mathrm{A}(\\mathrm{B})$.",
+      "corrige": [
+        "La probabilité conditionnelle se calcule avec $P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})}$ : on divise par la probabilité de l'événement écrit en indice, celui qui conditionne.",
+        "On remplace : $P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{0{,}2}{0{,}5}$.",
+        "$\\dfrac{0{,}2}{0{,}5} = 0{,}4$."
+      ],
+      "reponse": "$P_\\mathrm{A}(\\mathrm{B}) = 0{,}4$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "tableau-croise",
+      "enonce": "Dans un lycée, on a interrogé $180$ élèves selon leur régime (demi-pensionnaire ou externe) et la pratique d'un sport en club.\n\n|  | Sport | Pas de sport | **Total** |\n|---|---|---|---|\n| Demi-pensionnaires | 72 | 48 | **120** |\n| Externes | 24 | 36 | **60** |\n| **Total** | **96** | **84** | **180** |\n\nCalculer la probabilité qu'un élève pratique un sport en club **sachant** qu'il est demi-pensionnaire.",
+      "corrige": [
+        "L'événement qui conditionne est « être demi-pensionnaire » : on se restreint donc à la ligne des demi-pensionnaires, dont l'effectif total est $120$.",
+        "Parmi ces $120$ demi-pensionnaires, $72$ pratiquent un sport en club.",
+        "$P_{\\text{demi-pensionnaire}}(\\text{sport}) = \\dfrac{72}{120} = 0{,}6$."
+      ],
+      "reponse": "$\\dfrac{72}{120} = 0{,}6$, soit $60\\,\\%$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "arbre",
+      "enonce": "Une urne contient $5$ boules rouges et $3$ boules noires. On tire successivement et **sans remise** deux boules. À l'aide d'un arbre pondéré, calculer la probabilité d'obtenir deux boules rouges.",
+      "corrige": [
+        "Au premier tirage, il y a $5$ rouges parmi $8$ boules : la première branche « rouge » porte $\\dfrac{5}{8}$.",
+        "Comme le tirage est sans remise, une rouge a été retirée : il reste $4$ rouges parmi $7$ boules. La branche « rouge » du second tirage porte donc $P_{\\text{rouge}}(\\text{rouge}) = \\dfrac{4}{7}$.",
+        "La probabilité du chemin « rouge puis rouge » est le produit des deux branches : $\\dfrac{5}{8} \\times \\dfrac{4}{7} = \\dfrac{20}{56}$.",
+        "On simplifie : $\\dfrac{20}{56} = \\dfrac{5}{14}$."
+      ],
+      "reponse": "$\\dfrac{5}{14} \\approx 0{,}36$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "independance",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}6$, $P(\\mathrm{B}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils indépendants ? Justifier, puis calculer $P_\\mathrm{A}(\\mathrm{B})$ pour confirmer.",
+      "corrige": [
+        "Le critère d'indépendance est $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P(\\mathrm{B})$. On calcule le produit : $P(\\mathrm{A}) \\times P(\\mathrm{B}) = 0{,}6 \\times 0{,}5 = 0{,}3$.",
+        "Or $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2 \\neq 0{,}3$ : l'égalité n'est pas vérifiée, donc $\\mathrm{A}$ et $\\mathrm{B}$ ne sont **pas** indépendants.",
+        "Vérification par la conditionnelle : $P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})} = \\dfrac{0{,}2}{0{,}6} = \\dfrac{1}{3} \\approx 0{,}33$.",
+        "Comme $P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{1}{3} \\neq P(\\mathrm{B}) = 0{,}5$, savoir que $\\mathrm{A}$ s'est produit change la probabilité de $\\mathrm{B}$ : cela confirme la dépendance."
+      ],
+      "reponse": "Non, ils ne sont pas indépendants ($0{,}2 \\neq 0{,}3$) ; $P_\\mathrm{A}(\\mathrm{B}) = \\dfrac{1}{3}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "Dans une boîte mail, $60\\,\\%$ des messages proviennent de contacts connus, le reste d'expéditeurs inconnus. Parmi les messages de contacts connus, $2\\,\\%$ sont des spams ; parmi ceux d'inconnus, $30\\,\\%$ sont des spams. 1) Calculer la probabilité qu'un message reçu soit un spam. 2) Un message est un spam : quelle est la probabilité qu'il provienne d'un inconnu ?",
+      "corrige": [
+        "On note $\\mathrm{C}$ « expéditeur connu », $\\mathrm{I}$ « expéditeur inconnu » et $\\mathrm{S}$ « spam ». L'énoncé donne $P(\\mathrm{C}) = 0{,}6$, $P(\\mathrm{I}) = 0{,}4$, $P_\\mathrm{C}(\\mathrm{S}) = 0{,}02$ et $P_\\mathrm{I}(\\mathrm{S}) = 0{,}30$.",
+        "1) Deux chemins de l'arbre mènent à un spam. Par la formule des probabilités totales : $P(\\mathrm{S}) = P(\\mathrm{C}) \\times P_\\mathrm{C}(\\mathrm{S}) + P(\\mathrm{I}) \\times P_\\mathrm{I}(\\mathrm{S})$.",
+        "$P(\\mathrm{S}) = 0{,}6 \\times 0{,}02 + 0{,}4 \\times 0{,}30 = 0{,}012 + 0{,}12 = 0{,}132$.",
+        "2) On cherche $P_\\mathrm{S}(\\mathrm{I}) = \\dfrac{P(\\mathrm{I} \\cap \\mathrm{S})}{P(\\mathrm{S})}$. Le chemin « inconnu puis spam » donne $P(\\mathrm{I} \\cap \\mathrm{S}) = 0{,}4 \\times 0{,}30 = 0{,}12$.",
+        "$P_\\mathrm{S}(\\mathrm{I}) = \\dfrac{0{,}12}{0{,}132} \\approx 0{,}909$, soit environ $91\\,\\%$.",
+        "Attention à ne pas confondre les deux sens : $P_\\mathrm{I}(\\mathrm{S}) = 30\\,\\%$ (part de spams chez les inconnus) alors que $P_\\mathrm{S}(\\mathrm{I}) \\approx 91\\,\\%$ (part d'inconnus parmi les spams)."
+      ],
+      "reponse": "$P(\\mathrm{S}) = 0{,}132$ ; $P_\\mathrm{S}(\\mathrm{I}) = \\dfrac{0{,}12}{0{,}132} \\approx 0{,}91$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "Une épreuve de Bernoulli a une probabilité de succès $p = 0{,}2$. On la répète $4$ fois de façon identique et indépendante. Calculer la probabilité d'obtenir **au moins un** succès.",
+      "corrige": [
+        "« Au moins un succès » a pour événement contraire « aucun succès », c'est-à-dire quatre échecs de suite. On calcule d'abord la probabilité de ce contraire, plus simple.",
+        "Un seul chemin de l'arbre donne quatre échecs : ÉÉÉÉ. Comme les répétitions sont identiques et indépendantes, on multiplie : $P(\\text{aucun succès}) = (1 - 0{,}2)^4 = 0{,}8^4$.",
+        "$0{,}8^4 = 0{,}8 \\times 0{,}8 \\times 0{,}8 \\times 0{,}8 = 0{,}4096$.",
+        "On passe au complément : $P(\\text{au moins un succès}) = 1 - 0{,}4096 = 0{,}5904$."
+      ],
+      "reponse": "$1 - 0{,}8^4 = 0{,}5904$."
+    }
+  ]
+}

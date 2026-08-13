@@ -1,0 +1,89 @@
+{
+  "id": "1es-math-information-chiffree-exos",
+  "chapitre": "1es-math-information-chiffree",
+  "titre": "Exercices — Analyse de l'information chiffrée",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "proportion-pourcentage",
+      "enonce": "Dans une classe de $30$ élèves, $18$ sont des filles. Quelle est la proportion de filles, exprimée en pourcentage ?",
+      "corrige": [
+        "Une proportion est un quotient partie / total : $p = \\dfrac{\\text{effectif de la partie}}{\\text{effectif total}}$.",
+        "Ici la partie est le nombre de filles ($18$) et le total est l'effectif de la classe ($30$) : $p = \\dfrac{18}{30} = 0{,}6$.",
+        "Pour l'exprimer en pourcentage, on multiplie par $100$ : $0{,}6 \\times 100 = 60$."
+      ],
+      "reponse": "La proportion de filles est de $60\\,\\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Un salaire de $1800$ € augmente de $4\\,\\%$. Calculer le nouveau salaire en utilisant le coefficient multiplicateur.",
+      "corrige": [
+        "Le coefficient multiplicateur d'une hausse de $t\\,\\%$ est $\\mathrm{CM} = 1 + \\dfrac{t}{100}$.",
+        "Pour une hausse de $4\\,\\%$ : $\\mathrm{CM} = 1 + \\dfrac{4}{100} = 1{,}04$.",
+        "On multiplie la valeur initiale par ce coefficient : $1800 \\times 1{,}04 = 1872$."
+      ],
+      "reponse": "Le nouveau salaire est de $1872$ €."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "evolutions-successives",
+      "enonce": "Un prix augmente de $10\\,\\%$, puis, le mois suivant, baisse de $5\\,\\%$. Quel est le taux d'évolution global sur les deux mois ?",
+      "corrige": [
+        "On ne peut pas additionner les taux : on multiplie les coefficients multiplicateurs.",
+        "Hausse de $10\\,\\%$ : $\\mathrm{CM}_1 = 1{,}10$. Baisse de $5\\,\\%$ : $\\mathrm{CM}_2 = 0{,}95$.",
+        "Coefficient global : $\\mathrm{CM} = 1{,}10 \\times 0{,}95 = 1{,}045$.",
+        "Ce coefficient s'écrit $1 + \\dfrac{t}{100}$ avec $t = 4{,}5$ : l'évolution globale est de $+4{,}5\\,\\%$ (et non $+5\\,\\%$ comme le donnerait l'addition $+10-5$)."
+      ],
+      "reponse": "Le prix a augmenté de $4{,}5\\,\\%$ au total."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "points-pourcentage",
+      "enonce": "Le taux de participation à une élection passe de $12\\,\\%$ à $15\\,\\%$. Exprimer cette variation de deux façons : en points de pourcentage, puis en évolution relative.",
+      "corrige": [
+        "L'écart en points de pourcentage est la simple différence des deux taux : $15 - 12 = 3$ points de pourcentage.",
+        "L'évolution relative est un taux d'évolution : $t = \\dfrac{V_f - V_i}{V_i} = \\dfrac{15 - 12}{12} = \\dfrac{3}{12} = 0{,}25$.",
+        "En pourcentage : $0{,}25 \\times 100 = 25\\,\\%$. Les deux affirmations décrivent la même variation, il ne faut pas les confondre."
+      ],
+      "reponse": "$+3$ points de pourcentage, ce qui correspond à une hausse relative de $25\\,\\%$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "evolution-moyenne",
+      "enonce": "La population d'une ville a augmenté de $33{,}1\\,\\%$ en $3$ ans. En supposant le même taux chaque année, déterminer le taux annuel moyen. On donne $1{,}1^3 = 1{,}331$.",
+      "corrige": [
+        "Le coefficient multiplicateur global correspondant à $+33{,}1\\,\\%$ est $\\mathrm{CM} = 1 + \\dfrac{33{,}1}{100} = 1{,}331$.",
+        "Si le taux annuel est constant de coefficient $c$, alors sur $3$ ans on multiplie trois fois : $c^3 = 1{,}331$, donc $c = 1{,}331^{1/3} = \\sqrt[3]{1{,}331}$.",
+        "Comme $1{,}1^3 = 1{,}331$, on obtient $c = 1{,}1$.",
+        "Ce coefficient $1{,}1$ correspond à $1 + \\dfrac{t}{100}$ avec $t = 10$ : le taux annuel moyen est $+10\\,\\%$ (diviser $33{,}1$ par $3$ donnerait environ $11\\,\\%$, ce qui est faux)."
+      ],
+      "reponse": "Le taux annuel moyen est de $+10\\,\\%$ par an."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "esprit-critique",
+      "enonce": "Un article de presse affirme : « Le prix du carburant a baissé de $40\\,\\%$ en janvier, puis a augmenté de $40\\,\\%$ en février : il est donc revenu à son niveau initial. » Montrer que cette conclusion est fausse et calculer l'évolution réelle sur les deux mois.",
+      "corrige": [
+        "L'auteur additionne implicitement les taux ($-40 + 40 = 0$), ce qui est interdit : les deux pourcentages ne portent pas sur la même base. La baisse s'applique au prix de départ, la hausse au prix déjà baissé.",
+        "On multiplie les coefficients. Baisse de $40\\,\\%$ : $\\mathrm{CM}_1 = 0{,}60$. Hausse de $40\\,\\%$ : $\\mathrm{CM}_2 = 1{,}40$.",
+        "Coefficient global : $\\mathrm{CM} = 0{,}60 \\times 1{,}40 = 0{,}84$.",
+        "Ce coefficient $0{,}84$ s'écrit $1 + \\dfrac{t}{100}$ avec $t = -16$ : le prix a en réalité baissé de $16\\,\\%$. Vérification sur un prix de $100$ : $100 \\to 60 \\to 60 \\times 1{,}40 = 84$, soit bien $-16\\,\\%$."
+      ],
+      "reponse": "La conclusion est fausse : le prix a baissé de $16\\,\\%$ sur les deux mois, il n'est pas revenu à son niveau initial."
+    }
+  ]
+}

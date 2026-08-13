@@ -1,0 +1,95 @@
+{
+  "id": "1techno-math-probabilites-variables-aleatoires-exos",
+  "chapitre": "1techno-math-probabilites-variables-aleatoires",
+  "titre": "Exercices — Probabilités et variables aléatoires",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "loi-probabilite",
+      "enonce": "Une variable aléatoire $X$ prend les valeurs $1$, $2$, $3$ et $4$. On sait que $P(X=1)=0{,}3$, $P(X=2)=0{,}25$ et $P(X=3)=0{,}15$. Déterminer $P(X=4)$.",
+      "corrige": [
+        "La somme des probabilités d'une loi de probabilité vaut toujours $1$ : $\\sum p_i = 1$.",
+        "On additionne d'abord les probabilités connues : $0{,}3 + 0{,}25 + 0{,}15 = 0{,}7$.",
+        "La probabilité manquante complète cette somme à $1$ : $P(X=4) = 1 - 0{,}7 = 0{,}3$."
+      ],
+      "reponse": "$P(X=4) = 0{,}3$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "La loi de probabilité de $X$ est donnée par le tableau suivant. Calculer l'espérance $E(X)$.\n\n| $x_i$ | $-1$ | $0$ | $2$ | $5$ |\n|---|---|---|---|---|\n| $P(X=x_i)$ | $0{,}2$ | $0{,}3$ | $0{,}4$ | $0{,}1$ |",
+      "corrige": [
+        "On vérifie d'abord que $\\sum p_i = 0{,}2 + 0{,}3 + 0{,}4 + 0{,}1 = 1$ : la loi est correcte.",
+        "L'espérance est la moyenne des valeurs pondérée par les probabilités : $E(X) = \\sum x_i p_i$.",
+        "$E(X) = (-1)\\times 0{,}2 + 0\\times 0{,}3 + 2\\times 0{,}4 + 5\\times 0{,}1$.",
+        "$E(X) = -0{,}2 + 0 + 0{,}8 + 0{,}5 = 1{,}1$."
+      ],
+      "reponse": "$E(X) = 1{,}1$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "repetition",
+      "enonce": "On répète $3$ fois, de façon identique et indépendante, une épreuve de Bernoulli dont le succès a pour probabilité $p = 0{,}2$. Quelle est la probabilité d'obtenir exactement $2$ succès ?",
+      "corrige": [
+        "On dresse l'arbre des $3$ répétitions et on repère les chemins qui contiennent exactement $2$ succès (S) et $1$ échec (É).",
+        "Trois chemins conviennent : SSÉ, SÉS et ÉSS.",
+        "Chacun a la même probabilité, produit des branches parcourues : $0{,}2 \\times 0{,}2 \\times 0{,}8 = 0{,}032$.",
+        "On multiplie par le nombre de chemins : $P = 3 \\times 0{,}032 = 0{,}096$."
+      ],
+      "reponse": "$P = 0{,}096$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "gain-algebrique",
+      "enonce": "À une loterie, un billet coûte $2$ €. Il rapporte le gros lot de $20$ € avec la probabilité $0{,}05$, un petit lot de $5$ € avec la probabilité $0{,}2$, et rien dans les autres cas. On note $X$ le gain algébrique d'un joueur. Établir la loi de $X$, calculer $E(X)$ et dire si le jeu est équitable.",
+      "corrige": [
+        "Le gain algébrique tient compte de la mise de $2$ € : on la retranche à chaque rapport.",
+        "Gros lot : $X = 20 - 2 = 18$ avec probabilité $0{,}05$. Petit lot : $X = 5 - 2 = 3$ avec probabilité $0{,}2$. Rien : $X = -2$ avec probabilité $1 - 0{,}05 - 0{,}2 = 0{,}75$.",
+        "On calcule l'espérance : $E(X) = 18 \\times 0{,}05 + 3 \\times 0{,}2 + (-2) \\times 0{,}75$.",
+        "$E(X) = 0{,}9 + 0{,}6 - 1{,}5 = 0$.",
+        "Comme $E(X) = 0$, le jeu est équitable : à long terme, le joueur ne gagne ni ne perd en moyenne."
+      ],
+      "reponse": "$E(X) = 0$ : le jeu est équitable."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "esperance",
+      "enonce": "Un jeu consiste à miser $m$ euros. On gagne alors $15$ € avec la probabilité $0{,}2$, et rien avec la probabilité $0{,}8$. On note $X$ le gain algébrique. Pour quelle valeur de la mise $m$ le jeu est-il équitable ?",
+      "corrige": [
+        "Le gain algébrique retranche la mise $m$ dans chaque cas : $X = 15 - m$ avec probabilité $0{,}2$, et $X = -m$ avec probabilité $0{,}8$.",
+        "On exprime l'espérance en fonction de $m$ : $E(X) = 0{,}2\\,(15 - m) + 0{,}8\\,(-m)$.",
+        "On développe : $E(X) = 3 - 0{,}2m - 0{,}8m = 3 - m$.",
+        "Le jeu est équitable lorsque $E(X) = 0$, c'est-à-dire $3 - m = 0$, donc $m = 3$."
+      ],
+      "reponse": "Le jeu est équitable pour une mise $m = 3$ €."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "loi-probabilite",
+      "enonce": "Une machine produit des pièces dont $10\\,\\%$ sont défectueuses. On prélève $2$ pièces au hasard, de façon indépendante. On note $X$ le nombre de pièces défectueuses parmi les $2$ prélevées.\n\n1. Donner la loi de probabilité de $X$.\n2. Vérifier que la somme des probabilités vaut $1$, puis calculer $E(X)$ et interpréter le résultat.",
+      "corrige": [
+        "On répète $2$ fois une épreuve de Bernoulli : « défectueuse » (probabilité $0{,}1$) ou « conforme » (probabilité $0{,}9$). $X$ peut valoir $0$, $1$ ou $2$.",
+        "$X = 0$ : un seul chemin (les deux conformes), $P(X=0) = 0{,}9 \\times 0{,}9 = 0{,}81$.",
+        "$X = 1$ : deux chemins (défectueuse puis conforme, ou l'inverse), $P(X=1) = 2 \\times 0{,}1 \\times 0{,}9 = 0{,}18$.",
+        "$X = 2$ : un seul chemin (les deux défectueuses), $P(X=2) = 0{,}1 \\times 0{,}1 = 0{,}01$.",
+        "Vérification : $0{,}81 + 0{,}18 + 0{,}01 = 1$, la loi est correcte.",
+        "Espérance : $E(X) = 0 \\times 0{,}81 + 1 \\times 0{,}18 + 2 \\times 0{,}01 = 0{,}18 + 0{,}02 = 0{,}2$.",
+        "Interprétation : sur un grand nombre de prélèvements de $2$ pièces, on compte en moyenne $0{,}2$ pièce défectueuse par prélèvement."
+      ],
+      "reponse": "$P(X=0)=0{,}81$, $P(X=1)=0{,}18$, $P(X=2)=0{,}01$ ; $E(X) = 0{,}2$."
+    }
+  ]
+}

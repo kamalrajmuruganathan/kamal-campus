@@ -1,0 +1,91 @@
+{
+  "id": "1es-math-phenomenes-evolution-exos",
+  "chapitre": "1es-math-phenomenes-evolution",
+  "titre": "Exercices — Phénomènes d'évolution, modélisation par des fonctions",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "modele-affine",
+      "enonce": "Le niveau moyen des océans s'élève de $3{,}3$ mm par an. En prenant l'année $2000$ comme référence ($t = 0$, élévation nulle), on modélise l'élévation par une fonction affine $f(t)$, où $t$ est le nombre d'années écoulées depuis $2000$. Donner l'expression de $f(t)$, puis calculer l'élévation prévue par ce modèle en $2050$.",
+      "corrige": [
+        "L'élévation augmente de la **même quantité** chaque année ($+3{,}3$ mm) : l'accroissement est constant, donc le modèle est **affine**, $f(t) = at + b$.",
+        "Le taux d'accroissement est $a = 3{,}3$ (mm par an) et la valeur initiale est $b = 0$ (élévation nulle en $2000$). Donc $f(t) = 3{,}3\\,t$.",
+        "En $2050$, on a $t = 2050 - 2000 = 50$ ans.",
+        "$f(50) = 3{,}3 \\times 50 = 165$ mm."
+      ],
+      "reponse": "$f(t) = 3{,}3\\,t$ ; l'élévation prévue en $2050$ est de $165$ mm, soit $16{,}5$ cm."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "modele-exponentiel",
+      "enonce": "Une somme de $2\\,000$ € est placée à un taux de $5\\,\\%$ par an, les intérêts étant chaque année réinvestis. On modélise le capital par $f(n) = f(0) \\times q^{\\,n}$, où $n$ est le nombre d'années. Déterminer $f(0)$ et la raison $q$, écrire $f(n)$, puis calculer le capital au bout de $2$ ans.",
+      "corrige": [
+        "Le capital est multiplié par le **même coefficient** chaque année (un pourcentage constant de $+5\\,\\%$) : le modèle est **exponentiel**.",
+        "Augmenter de $5\\,\\%$ revient à multiplier par $q = 1 + \\dfrac{5}{100} = 1{,}05$. La valeur initiale est $f(0) = 2\\,000$.",
+        "Donc $f(n) = 2\\,000 \\times 1{,}05^{\\,n}$.",
+        "Au bout de $2$ ans : $f(2) = 2\\,000 \\times 1{,}05^{2} = 2\\,000 \\times 1{,}1025 = 2\\,205$ €."
+      ],
+      "reponse": "$f(n) = 2\\,000 \\times 1{,}05^{\\,n}$ ; le capital vaut $2\\,205$ € au bout de $2$ ans."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "reconnaitre-modele",
+      "enonce": "Une grandeur prend, à intervalles de temps réguliers, les valeurs $4$ ; $6$ ; $9$ ; $13{,}5$. Déterminer si son évolution est affine ou exponentielle, puis donner le modèle $f(n)$ correspondant.",
+      "corrige": [
+        "**Test des différences** : $6 - 4 = 2$ ; $9 - 6 = 3$ ; $13{,}5 - 9 = 4{,}5$. Les différences ne sont pas constantes : l'évolution n'est **pas affine**.",
+        "**Test des quotients** : $\\dfrac{6}{4} = 1{,}5$ ; $\\dfrac{9}{6} = 1{,}5$ ; $\\dfrac{13{,}5}{9} = 1{,}5$. Les quotients sont constants : l'évolution est **exponentielle**, de raison $q = 1{,}5$.",
+        "La valeur initiale est $f(0) = 4$, donc $f(n) = 4 \\times 1{,}5^{\\,n}$ (ce qui correspond à $+50\\,\\%$ à chaque période)."
+      ],
+      "reponse": "Évolution exponentielle de raison $1{,}5$ : $f(n) = 4 \\times 1{,}5^{\\,n}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "taux-marginal",
+      "enonce": "Un barème d'impôt simplifié applique $0\\,\\%$ sur la part de revenu jusqu'à $10\\,000$ €, puis $30\\,\\%$ sur la part dépassant $10\\,000$ €. Un contribuable déclare un revenu de $16\\,000$ €. Calculer l'impôt qu'il paie, puis son taux moyen d'imposition, et comparer ce taux moyen au taux marginal.",
+      "corrige": [
+        "Le barème est une fonction affine **par morceaux** : seule la part de revenu **au-dessus** du seuil est imposée à $30\\,\\%$. Cette part vaut $16\\,000 - 10\\,000 = 6\\,000$ €.",
+        "Impôt payé : $30\\,\\% \\times 6\\,000 = 0{,}30 \\times 6\\,000 = 1\\,800$ €.",
+        "Taux moyen $= \\dfrac{\\text{impôt total}}{\\text{revenu total}} = \\dfrac{1\\,800}{16\\,000} = 0{,}1125 = 11{,}25\\,\\%$.",
+        "Le taux marginal est $30\\,\\%$ (taux de la dernière tranche). Le taux moyen ($11{,}25\\,\\%$) lui est bien **inférieur** : le contribuable ne paie pas $30\\,\\%$ de tout son revenu."
+      ],
+      "reponse": "Impôt $= 1\\,800$ € ; taux moyen $= 11{,}25\\,\\%$, inférieur au taux marginal de $30\\,\\%$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "demi-vie",
+      "enonce": "La demi-vie du carbone 14 vaut environ $5\\,730$ ans. Un ossement retrouvé sur un site archéologique contient encore $12{,}5\\,\\%$ du carbone 14 qu'il possédait à la mort de l'animal. Estimer l'âge de l'ossement, en explicitant le raisonnement.",
+      "corrige": [
+        "Après $n$ demi-vies, la fraction restante est $\\left(\\dfrac{1}{2}\\right)^{n}$. On cherche $n$ tel que cette fraction vaille $12{,}5\\,\\%$.",
+        "$12{,}5\\,\\% = \\dfrac{12{,}5}{100} = \\dfrac{1}{8}$.",
+        "Or $\\dfrac{1}{8} = \\left(\\dfrac{1}{2}\\right)^{3}$ : il s'est donc écoulé $n = 3$ demi-vies (à chaque demi-vie on divise par $2$ : $100\\,\\% \\to 50\\,\\% \\to 25\\,\\% \\to 12{,}5\\,\\%$).",
+        "Âge estimé $= 3 \\times 5\\,730 = 17\\,190$ ans."
+      ],
+      "reponse": "L'ossement a environ $17\\,190$ ans (soit $3$ demi-vies)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "second-degre",
+      "enonce": "On lance une balle verticalement. Sa hauteur (en mètres) à l'instant $t$ (en secondes) est modélisée par $h(t) = -5t^2 + 20t$. Déterminer l'instant où la balle atteint sa hauteur maximale, puis cette hauteur. Justifier qu'il s'agit bien d'un maximum.",
+      "corrige": [
+        "$h$ est une fonction du second degré avec $a = -5$, $b = 20$, $c = 0$. Comme $a = -5 < 0$, la parabole est tournée vers le bas : le sommet est un **maximum**.",
+        "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{20}{2 \\times (-5)} = -\\dfrac{20}{-10} = 2$. La hauteur est donc maximale à $t = 2$ s.",
+        "Hauteur atteinte : $h(2) = -5 \\times 2^2 + 20 \\times 2 = -5 \\times 4 + 40 = -20 + 40 = 20$ m.",
+        "C'est bien un maximum (et non un minimum) car $a < 0$ : c'est justement ce qu'un modèle affine, toujours monotone, ne pourrait pas représenter."
+      ],
+      "reponse": "La balle atteint sa hauteur maximale de $20$ m à l'instant $t = 2$ s."
+    }
+  ]
+}

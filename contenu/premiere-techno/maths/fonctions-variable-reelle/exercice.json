@@ -1,0 +1,92 @@
+{
+  "id": "1techno-math-fonctions-variable-reelle-exos",
+  "chapitre": "1techno-math-fonctions-variable-reelle",
+  "titre": "Exercices — Fonctions de la variable réelle",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "taux-variation",
+      "enonce": "Soit $f(x) = x^2 - 3x$. Calculer le taux de variation de $f$ entre $a = 1$ et $b = 4$.",
+      "corrige": [
+        "On calcule d'abord les deux images : $f(1) = 1^2 - 3\\times 1 = 1 - 3 = -2$ et $f(4) = 4^2 - 3\\times 4 = 16 - 12 = 4$.",
+        "On applique la formule du taux de variation : $\\tau = \\dfrac{f(b) - f(a)}{b - a} = \\dfrac{f(4) - f(1)}{4 - 1}$.",
+        "$\\tau = \\dfrac{4 - (-2)}{4 - 1} = \\dfrac{6}{3} = 2$.",
+        "Entre $1$ et $4$, la fonction augmente en moyenne de $2$ par unité de $x$."
+      ],
+      "reponse": "$\\tau = 2$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "sommet",
+      "enonce": "Soit $f(x) = 2x^2 - 8x + 3$. Déterminer l'allure de la parabole, l'abscisse $\\alpha$ de son sommet, puis les coordonnées du sommet.",
+      "corrige": [
+        "On repère $a = 2$, $b = -8$, $c = 3$. Comme $a = 2 > 0$, la parabole est tournée vers le haut : son sommet est un minimum.",
+        "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-8}{2\\times 2} = \\dfrac{8}{4} = 2$.",
+        "On calcule l'ordonnée du sommet : $f(2) = 2\\times 2^2 - 8\\times 2 + 3 = 8 - 16 + 3 = -5$.",
+        "Le sommet est donc le point $\\mathrm{S}(2\\,;-5)$."
+      ],
+      "reponse": "Parabole tournée vers le haut, sommet $\\mathrm{S}(2\\,;-5)$ (un minimum)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "variations",
+      "enonce": "Soit $f(x) = -x^2 + 6x - 1$. Déterminer les variations de $f$ sur $\\mathbb{R}$ et dresser son tableau de variations.",
+      "corrige": [
+        "On identifie $a = -1$, $b = 6$. Comme $a = -1 < 0$, la parabole est tournée vers le bas : le sommet est un maximum.",
+        "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{6}{2\\times(-1)} = -\\dfrac{6}{-2} = 3$, et $f(3) = -3^2 + 6\\times 3 - 1 = -9 + 18 - 1 = 8$.",
+        "Comme la parabole est tournée vers le bas, $f$ est croissante sur $]-\\infty\\,;3]$ puis décroissante sur $[3\\,;+\\infty[$.",
+        "Tableau de variations : $f$ monte jusqu'à la valeur maximale $8$ atteinte en $x = 3$, puis redescend."
+      ],
+      "reponse": "$f$ croissante sur $]-\\infty\\,;3]$, décroissante sur $[3\\,;+\\infty[$, maximum $f(3) = 8$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "racines",
+      "enonce": "Soit $f(x) = x^2 - 5x + 4$. Vérifier que $1$ et $4$ sont les racines de $f$, puis en déduire l'abscisse du sommet de la parabole.",
+      "corrige": [
+        "On calcule $f(1) = 1^2 - 5\\times 1 + 4 = 1 - 5 + 4 = 0$ : donc $1$ est une racine.",
+        "On calcule $f(4) = 4^2 - 5\\times 4 + 4 = 16 - 20 + 4 = 0$ : donc $4$ est aussi une racine. La parabole coupe l'axe des abscisses en $x = 1$ et $x = 4$.",
+        "Les deux racines ont la même image ($0$) : par symétrie, le sommet est à mi-chemin entre elles, donc $\\alpha = \\dfrac{1 + 4}{2} = \\dfrac{5}{2} = 2{,}5$.",
+        "On peut contrôler avec la formule : $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-5}{2\\times 1} = \\dfrac{5}{2} = 2{,}5$, ce qui confirme le résultat."
+      ],
+      "reponse": "$1$ et $4$ sont bien racines ; l'abscisse du sommet est $\\alpha = 2{,}5$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Une balle est lancée vers le haut. Sa hauteur, en mètres, $t$ secondes après le lancer, est donnée par $h(t) = -5t^2 + 20t$ (pour $t \\geq 0$). Déterminer à quel instant la balle atteint sa hauteur maximale, cette hauteur, puis l'instant où elle retombe au sol.",
+      "corrige": [
+        "$h$ est un polynôme du second degré avec $a = -5 < 0$ : la parabole est tournée vers le bas, elle admet donc un maximum au sommet.",
+        "L'instant de hauteur maximale est $t = -\\dfrac{b}{2a} = -\\dfrac{20}{2\\times(-5)} = -\\dfrac{20}{-10} = 2$ secondes.",
+        "La hauteur maximale vaut $h(2) = -5\\times 2^2 + 20\\times 2 = -20 + 40 = 20$ mètres.",
+        "La balle est au sol quand $h(t) = 0$ : on factorise $-5t^2 + 20t = -5t(t - 4) = 0$, d'où $t = 0$ (le lancer) ou $t = 4$. Elle retombe donc au bout de $4$ secondes."
+      ],
+      "reponse": "Hauteur maximale de $20$ m atteinte à $t = 2$ s ; retour au sol à $t = 4$ s."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "variations",
+      "enonce": "On veut démontrer, à l'aide du taux de variation, que la fonction $f(x) = x^2$ est croissante sur $[0\\,;+\\infty[$. Soient $a$ et $b$ deux réels tels que $0 \\leq a < b$. Calculer le taux de variation de $f$ entre $a$ et $b$, en déduire son signe, puis conclure.",
+      "corrige": [
+        "Le taux de variation entre $a$ et $b$ est $\\tau = \\dfrac{f(b) - f(a)}{b - a} = \\dfrac{b^2 - a^2}{b - a}$.",
+        "On factorise le numérateur avec l'identité $b^2 - a^2 = (b - a)(b + a)$, ce qui donne $\\tau = \\dfrac{(b - a)(b + a)}{b - a} = b + a$ (on peut simplifier car $b \\neq a$).",
+        "Comme $a \\geq 0$ et $b > 0$, la somme $a + b$ est strictement positive : le taux de variation est donc toujours positif sur $[0\\,;+\\infty[$.",
+        "D'après le théorème reliant le signe du taux de variation au sens de variation, $f$ est croissante sur l'intervalle $[0\\,;+\\infty[$."
+      ],
+      "reponse": "$\\tau = a + b > 0$, donc $f$ est croissante sur $[0\\,;+\\infty[$."
+    }
+  ]
+}

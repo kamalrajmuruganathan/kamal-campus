@@ -1,0 +1,88 @@
+{
+  "id": "1techno-math-statistiques-deux-variables-exos",
+  "chapitre": "1techno-math-statistiques-deux-variables",
+  "titre": "Exercices — Statistiques à deux variables",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "point-moyen",
+      "enonce": "On mesure la tension $U$ (en volts) aux bornes d'un conducteur pour cinq intensités $I$ (en ampères). On obtient les couples $(1\\,;4)$, $(2\\,;9)$, $(3\\,;13)$, $(4\\,;18)$, $(5\\,;21)$. Déterminer les coordonnées du point moyen $\\mathrm{G}$ de ce nuage.",
+      "corrige": [
+        "Le point moyen a pour coordonnées $\\mathrm{G}(\\bar x\\,;\\bar y)$, où $\\bar x$ et $\\bar y$ sont les moyennes de chaque variable.",
+        "$\\bar x = \\dfrac{1+2+3+4+5}{5} = \\dfrac{15}{5} = 3$.",
+        "$\\bar y = \\dfrac{4+9+13+18+21}{5} = \\dfrac{65}{5} = 13$.",
+        "Donc le point moyen est $\\mathrm{G}(3\\,;13)$."
+      ],
+      "reponse": "$\\mathrm{G}(3\\,;13)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "interpolation",
+      "enonce": "Le nuage de points d'une série $(x\\,;y)$ est ajusté par la droite d'équation $y = 1{,}6x + 0{,}5$. Les valeurs de $x$ mesurées vont de $2$ à $12$. Estimer $y$ pour $x = 7$, puis préciser s'il s'agit d'une interpolation ou d'une extrapolation.",
+      "corrige": [
+        "On remplace $x$ par $7$ dans l'équation de la droite d'ajustement : $y = 1{,}6 \\times 7 + 0{,}5$.",
+        "$y = 11{,}2 + 0{,}5 = 11{,}7$.",
+        "La valeur $7$ est comprise entre $2$ et $12$, donc à l'intérieur des données mesurées : il s'agit d'une interpolation, estimation relativement fiable."
+      ],
+      "reponse": "$y = 11{,}7$ ; il s'agit d'une interpolation."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "point-moyen",
+      "enonce": "Un nuage de points est formé des couples $(0\\,;1)$, $(2\\,;4)$, $(4\\,;6)$, $(6\\,;9)$. Un élève affirme que la droite d'équation $y = 1{,}2x + 0{,}8$ est la droite d'ajustement de ce nuage. En utilisant le point moyen, dire si c'est possible.",
+      "corrige": [
+        "Toute droite d'ajustement passe par le point moyen $\\mathrm{G}(\\bar x\\,;\\bar y)$ : on calcule d'abord ses coordonnées.",
+        "$\\bar x = \\dfrac{0+2+4+6}{4} = \\dfrac{12}{4} = 3$ et $\\bar y = \\dfrac{1+4+6+9}{4} = \\dfrac{20}{4} = 5$, donc $\\mathrm{G}(3\\,;5)$.",
+        "On teste si la droite passe par $\\mathrm{G}$ : pour $x = 3$, $y = 1{,}2 \\times 3 + 0{,}8 = 3{,}6 + 0{,}8 = 4{,}4$.",
+        "Comme $4{,}4 \\neq 5$, la droite ne passe pas par le point moyen : elle ne peut donc pas être la droite d'ajustement de ce nuage."
+      ],
+      "reponse": "Non : la droite ne passe pas par $\\mathrm{G}(3\\,;5)$, ce n'est pas un ajustement valide."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "extrapolation",
+      "enonce": "Une droite d'ajustement d'équation $y = 2{,}5x + 3$ a été obtenue à partir de mesures pour lesquelles $x$ varie de $4$ à $20$. a) Estimer $y$ pour $x = 10$. b) Estimer $y$ pour $x = 30$ et expliquer pourquoi cette estimation est moins fiable.",
+      "corrige": [
+        "a) Pour $x = 10$ : $y = 2{,}5 \\times 10 + 3 = 25 + 3 = 28$. Comme $10$ est compris entre $4$ et $20$, c'est une interpolation.",
+        "b) Pour $x = 30$ : $y = 2{,}5 \\times 30 + 3 = 75 + 3 = 78$.",
+        "La valeur $30$ est au-delà de la dernière donnée mesurée ($20$) : il s'agit d'une extrapolation. Rien ne garantit que la relation observée se prolonge au-delà des données, l'estimation est donc moins fiable."
+      ],
+      "reponse": "a) $y = 28$ (interpolation). b) $y = 78$, mais par extrapolation : fiabilité non garantie."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "ajustement",
+      "enonce": "En physique-chimie, on mesure la tension $U$ (en volts) aux bornes d'un conducteur ohmique pour différentes intensités $I$ (en ampères) : $(0{,}10\\,;2{,}9)$, $(0{,}20\\,;5{,}8)$, $(0{,}30\\,;9{,}1)$, $(0{,}40\\,;12{,}0)$, $(0{,}50\\,;15{,}0)$. À la calculatrice, la droite d'ajustement par les moindres carrés est $U = 30{,}2\\,I - 0{,}02$. a) Que représente le coefficient $30{,}2$, et dans quelle unité ? b) Estimer la tension pour $I = 0{,}35$ A. c) Peut-on utiliser cette droite pour $I = 5$ A ? Justifier.",
+      "corrige": [
+        "a) La loi d'Ohm s'écrit $U = R\\,I$ : le coefficient directeur de la droite est la résistance $R$ du conducteur, exprimée en ohms. Ici $R \\approx 30{,}2\\ \\Omega$.",
+        "b) On remplace $I$ par $0{,}35$ : $U = 30{,}2 \\times 0{,}35 - 0{,}02 = 10{,}57 - 0{,}02 = 10{,}55$. Comme $0{,}35$ est compris entre $0{,}10$ et $0{,}50$, c'est une interpolation : $U \\approx 10{,}55$ V.",
+        "c) L'intensité $I = 5$ A est très au-delà de la dernière valeur mesurée ($0{,}50$ A) : ce serait une extrapolation. Or le conducteur chauffe et sa résistance change ; rien ne garantit que la relation reste valable si loin des mesures. On ne peut donc pas l'utiliser sans réserve."
+      ],
+      "reponse": "a) La résistance, en ohms ($\\approx 30{,}2\\ \\Omega$). b) $U \\approx 10{,}55$ V. c) Non : ce serait une extrapolation trop loin des mesures."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "correlation-causalite",
+      "enonce": "Dans une étude, on constate que, d'un quartier à l'autre d'une ville, plus le nombre de médecins est élevé, plus le nombre annuel de décès est élevé : les deux variables sont fortement corrélées. Un journaliste en conclut que les médecins augmentent la mortalité. a) Rappeler les trois explications possibles d'une corrélation. b) Proposer une cause commune qui expliquerait cette situation. c) Que répondre au journaliste ?",
+      "corrige": [
+        "a) Une corrélation entre deux variables admet trois explications possibles : un lien de cause à effet, une cause commune (une variable cachée qui agit sur les deux), ou une simple coïncidence.",
+        "b) Ici, la cause commune est la population du quartier : un quartier très peuplé compte à la fois davantage de médecins et davantage de décès. C'est la taille de la population qui influence les deux variables à la fois.",
+        "c) Une corrélation ne permet jamais à elle seule de conclure à une causalité. Le raisonnement du journaliste est donc infondé : ce n'est pas le nombre de médecins qui cause les décès, mais une variable cachée (la population) qui agit sur les deux."
+      ],
+      "reponse": "La corrélation s'explique par une cause commune (la population) : corrélation n'est pas causalité, la conclusion du journaliste est fausse."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "1techno-math-suites-numeriques-exos",
+  "chapitre": "1techno-math-suites-numeriques",
+  "titre": "Exercices — Suites numériques",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "arithmetique",
+      "enonce": "Une suite arithmétique $(u_n)$ a pour premier terme $u_0 = 7$ et pour raison $r = 4$. Calculer $u_1$, $u_2$, puis $u_{12}$.",
+      "corrige": [
+        "La relation de récurrence est $u_{n+1} = u_n + r$ : on ajoute $4$ pour passer d'un terme au suivant.",
+        "$u_1 = u_0 + 4 = 7 + 4 = 11$, puis $u_2 = u_1 + 4 = 11 + 4 = 15$.",
+        "Pour $u_{12}$, on évite les douze étapes en utilisant le terme général $u_n = u_0 + n\\,r$.",
+        "$u_{12} = 7 + 12 \\times 4 = 7 + 48 = 55$."
+      ],
+      "reponse": "$u_1 = 11$, $u_2 = 15$ et $u_{12} = 55$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "geometrique",
+      "enonce": "Une suite géométrique $(v_n)$ a pour premier terme $v_0 = 5$ et pour raison $q = 2$. Calculer $v_1$, $v_2$, puis $v_6$.",
+      "corrige": [
+        "La relation de récurrence est $v_{n+1} = q \\times v_n$ : on multiplie par $2$ pour passer d'un terme au suivant.",
+        "$v_1 = 5 \\times 2 = 10$, puis $v_2 = 10 \\times 2 = 20$.",
+        "Pour $v_6$, on utilise le terme général $v_n = v_0 \\times q^{\\,n}$.",
+        "$v_6 = 5 \\times 2^{6} = 5 \\times 64 = 320$."
+      ],
+      "reponse": "$v_1 = 10$, $v_2 = 20$ et $v_6 = 320$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "reconnaissance",
+      "enonce": "On observe les premiers termes d'une suite : $250$, $200$, $160$, $128$. Déterminer sa nature, sa raison, puis calculer le terme suivant.",
+      "corrige": [
+        "On teste d'abord les différences : $200 - 250 = -50$, puis $160 - 200 = -40$. Elles ne sont pas constantes : la suite n'est pas arithmétique.",
+        "On teste alors les quotients : $\\dfrac{200}{250} = 0{,}8$, $\\dfrac{160}{200} = 0{,}8$, $\\dfrac{128}{160} = 0{,}8$. Ils sont constants.",
+        "La suite est donc géométrique de raison $q = 0{,}8$ (ce qui correspond à une baisse répétée de $20\\,\\%$).",
+        "Le terme suivant s'obtient en multipliant par $0{,}8$ : $128 \\times 0{,}8 = 102{,}4$."
+      ],
+      "reponse": "Suite géométrique de raison $q = 0{,}8$ ; le terme suivant vaut $102{,}4$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "indice-depart",
+      "enonce": "Une suite arithmétique de raison $r = -3$ a pour premier terme $u_1 = 40$ (le premier terme est d'indice $1$). Déterminer le terme général $u_n$, puis calculer $u_{10}$.",
+      "corrige": [
+        "Le premier terme est d'indice $1$ : on utilise la formule $u_n = u_p + (n - p)\\,r$ avec $p = 1$.",
+        "$u_n = u_1 + (n - 1)\\,r = 40 + (n - 1)\\times(-3)$.",
+        "En développant : $u_n = 40 - 3(n-1) = 40 - 3n + 3 = 43 - 3n$.",
+        "Pour $n = 10$ : $u_{10} = 43 - 3\\times 10 = 43 - 30 = 13$."
+      ],
+      "reponse": "$u_n = 43 - 3n$ et $u_{10} = 13$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "capital",
+      "enonce": "Un capital de $8\\,000$ € est placé sur un compte rémunéré à $3\\,\\%$ par an. On note $C_n$ le capital au bout de $n$ années. Justifier que $(C_n)$ est géométrique, donner l'expression de $C_n$, puis calculer le capital au bout de $5$ ans (arrondi à l'euro).",
+      "corrige": [
+        "Chaque année, le capital est multiplié par le même coefficient car il augmente d'un pourcentage constant : la suite $(C_n)$ est géométrique.",
+        "La raison est $q = 1 + \\dfrac{t}{100} = 1 + \\dfrac{3}{100} = 1{,}03$, et le premier terme est $C_0 = 8000$.",
+        "Le terme général est $C_n = C_0 \\times q^{\\,n} = 8000 \\times 1{,}03^{\\,n}$.",
+        "Au bout de $5$ ans : $C_5 = 8000 \\times 1{,}03^{5} \\approx 8000 \\times 1{,}159274 \\approx 9274$ €."
+      ],
+      "reponse": "$(C_n)$ est géométrique de raison $1{,}03$, $C_n = 8000 \\times 1{,}03^{\\,n}$ et $C_5 \\approx 9274$ €."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Deux salles de sport proposent un abonnement. Chez A, on paie $200$ € la première année, puis $30$ € de plus chaque année. Chez B, on paie $150$ € la première année, puis le tarif augmente de $10\\,\\%$ chaque année. On note $a_n$ et $b_n$ les tarifs de la $n$-ième année ($n \\geq 1$, année $1$ = premier terme). Préciser la nature de chaque suite, puis comparer $a_4$ et $b_4$.",
+      "corrige": [
+        "Chez A, on ajoute chaque année la quantité fixe $30$ € : $(a_n)$ est arithmétique de raison $r = 30$, avec $a_1 = 200$.",
+        "Chez B, on multiplie chaque année par le même coefficient (hausse de $10\\,\\%$) : $(b_n)$ est géométrique de raison $q = 1{,}10$, avec $b_1 = 150$.",
+        "Comme le premier terme est d'indice $1$ : $a_n = a_1 + (n-1)\\,r$, donc $a_4 = 200 + 3\\times 30 = 290$ €.",
+        "De même $b_n = b_1 \\times q^{\\,n-1}$, donc $b_4 = 150 \\times 1{,}10^{3} = 150 \\times 1{,}331 = 199{,}65$ €.",
+        "On compare : $199{,}65 < 290$, donc la quatrième année l'abonnement B est moins cher que l'abonnement A."
+      ],
+      "reponse": "$(a_n)$ arithmétique ($r = 30$), $(b_n)$ géométrique ($q = 1{,}10$) ; $a_4 = 290$ € et $b_4 = 199{,}65$ € : B est le moins cher la 4e année."
+    }
+  ]
+}
