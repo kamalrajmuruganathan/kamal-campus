@@ -1,0 +1,93 @@
+{
+  "id": "tale-spe-math-logique-ensembles-exos",
+  "chapitre": "tale-spe-math-logique-ensembles",
+  "titre": "Exercices — Vocabulaire ensembliste et logique",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "negation",
+      "enonce": "Écrire la négation de chacune des propositions suivantes :\n\n(a) $P : \\forall x \\in \\mathbb{R},\\ x^2 + 1 > 0$ ;\n\n(b) $Q : \\exists n \\in \\mathbb{N},\\ 2n = 7$ ;\n\n(c) $R : \\forall x \\in \\mathbb{R},\\ (x > 0 \\text{ et } x < 1)$.",
+      "corrige": [
+        "Règle : nier un « pour tout » donne un « il existe », nier un « il existe » donne un « pour tout », puis on nie l'intérieur.",
+        "(a) La négation de $x^2 + 1 > 0$ est $x^2 + 1 \\leqslant 0$ (le contraire de $>$ est $\\leqslant$). Donc $\\text{non}\\,P : \\exists x \\in \\mathbb{R},\\ x^2 + 1 \\leqslant 0$.",
+        "(b) On échange $\\exists$ en $\\forall$ et on nie $2n = 7$ en $2n \\neq 7$. Donc $\\text{non}\\,Q : \\forall n \\in \\mathbb{N},\\ 2n \\neq 7$.",
+        "(c) L'intérieur est une conjonction ; par la loi de De Morgan, $\\text{non}\\,(A \\text{ et } B) = (\\text{non } A) \\text{ ou } (\\text{non } B)$. La négation de « $x > 0$ et $x < 1$ » est « $x \\leqslant 0$ ou $x \\geqslant 1$ ». Donc $\\text{non}\\,R : \\exists x \\in \\mathbb{R},\\ (x \\leqslant 0 \\text{ ou } x \\geqslant 1)$."
+      ],
+      "reponse": "(a) $\\exists x \\in \\mathbb{R},\\ x^2 + 1 \\leqslant 0$ ; (b) $\\forall n \\in \\mathbb{N},\\ 2n \\neq 7$ ; (c) $\\exists x \\in \\mathbb{R},\\ (x \\leqslant 0 \\text{ ou } x \\geqslant 1)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "implication",
+      "enonce": "On considère l'implication vraie, valable pour tout réel $x$ : « si $x = 3$, alors $x^2 = 9$ ». Écrire sa réciproque et sa contraposée, et préciser pour chacune si elle est vraie ou fausse.",
+      "corrige": [
+        "On pose $P : x = 3$ et $Q : x^2 = 9$. L'énoncé est $P \\Rightarrow Q$.",
+        "Réciproque $Q \\Rightarrow P$ : « si $x^2 = 9$, alors $x = 3$ ». Elle est fausse : $x = -3$ vérifie $x^2 = 9$ mais pas $x = 3$. C'est un contre-exemple.",
+        "Contraposée $\\text{non } Q \\Rightarrow \\text{non } P$ : « si $x^2 \\neq 9$, alors $x \\neq 3$ ». La contraposée est équivalente à l'implication de départ, qui est vraie ; elle est donc vraie elle aussi.",
+        "Conclusion : réciproque et contraposée sont deux énoncés distincts ; seule la contraposée a la même valeur de vérité que l'implication initiale."
+      ],
+      "reponse": "Réciproque « $x^2 = 9 \\Rightarrow x = 3$ » : fausse (contre-exemple $x = -3$). Contraposée « $x^2 \\neq 9 \\Rightarrow x \\neq 3$ » : vraie."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "raisonnements",
+      "enonce": "Démontrer, par disjonction de cas, que pour tout entier $n \\in \\mathbb{Z}$, le nombre $3n^2 + n$ est pair.",
+      "corrige": [
+        "Tout entier est soit pair, soit impair : ces deux cas couvrent tout $\\mathbb{Z}$.",
+        "Cas 1 — $n$ pair : on écrit $n = 2k$. Alors $3n^2 + n = 3(2k)^2 + 2k = 12k^2 + 2k = 2(6k^2 + k)$, qui est pair.",
+        "Cas 2 — $n$ impair : on écrit $n = 2k + 1$. Alors $n^2 = 4k^2 + 4k + 1$, donc $3n^2 + n = (12k^2 + 12k + 3) + (2k + 1) = 12k^2 + 14k + 4 = 2(6k^2 + 7k + 2)$, qui est pair.",
+        "Les deux cas recouvrent tous les entiers et la propriété est vraie dans chacun : $3n^2 + n$ est pair pour tout $n \\in \\mathbb{Z}$."
+      ],
+      "reponse": "$3n^2 + n$ est pair pour tout $n \\in \\mathbb{Z}$ : il s'écrit $2(6k^2+k)$ si $n=2k$, et $2(6k^2+7k+2)$ si $n=2k+1$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "raisonnements",
+      "enonce": "Soit $n$ un entier. Démontrer, en raisonnant par contraposée, la proposition : « si $n^2 + 1$ est pair, alors $n$ est impair ».",
+      "corrige": [
+        "On pose $P : n^2 + 1$ est pair et $Q : n$ est impair. On veut $P \\Rightarrow Q$.",
+        "La contraposée $\\text{non } Q \\Rightarrow \\text{non } P$ s'énonce : « si $n$ est pair, alors $n^2 + 1$ est impair ». Elle est équivalente à l'implication de départ, et plus simple à prouver directement.",
+        "Supposons $n$ pair : $n = 2k$. Alors $n^2 + 1 = 4k^2 + 1 = 2(2k^2) + 1$, qui est impair.",
+        "La contraposée est donc vraie ; étant équivalente à l'énoncé de départ, celui-ci est démontré."
+      ],
+      "reponse": "Vrai. Par contraposée : si $n = 2k$ est pair, $n^2 + 1 = 2(2k^2) + 1$ est impair ; l'implication de départ est donc établie."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "raisonnements",
+      "enonce": "Démontrer par l'absurde qu'il n'existe pas de plus petit réel strictement positif, c'est-à-dire qu'il n'existe aucun réel $a > 0$ tel que $a \\leqslant x$ pour tout réel $x > 0$.",
+      "corrige": [
+        "Raisonnement par l'absurde : on suppose la négation de ce que l'on veut montrer, puis on cherche une contradiction.",
+        "Supposons qu'il existe un plus petit réel strictement positif, noté $a$ : on a $a > 0$ et $a \\leqslant x$ pour tout réel $x > 0$.",
+        "Posons $b = \\dfrac{a}{2}$. Comme $a > 0$, on a $b > 0$ : $b$ est bien un réel strictement positif.",
+        "Or $b = \\dfrac{a}{2} < a$ (puisque $a > 0$). On a donc exhibé un réel strictement positif strictement plus petit que $a$, ce qui contredit le fait que $a$ soit le plus petit.",
+        "La supposition mène à une contradiction : elle est absurde. Il n'existe donc pas de plus petit réel strictement positif."
+      ],
+      "reponse": "Un tel plus petit réel $a > 0$ ne peut exister : $\\dfrac{a}{2}$ serait strictement positif et strictement plus petit que $a$, d'où la contradiction."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "raisonnements",
+      "enonce": "On veut établir la propriété $\\mathcal{P}(n) : 2^n > n$ pour tout entier $n \\in \\mathbb{N}$.\n\n1. Vérifier $\\mathcal{P}(n)$ pour $n = 0,\\ 1,\\ 2,\\ 3$.\n\n2. Ces quatre vérifications suffisent-elles à prouver que $\\mathcal{P}(n)$ est vraie pour tout $n \\in \\mathbb{N}$ ? Justifier.\n\n3. Quel mode de raisonnement permet de démontrer une propriété dépendant d'un entier $n$ « de proche en proche », et dans quel chapitre est-il développé ?",
+      "corrige": [
+        "1. $2^0 = 1 > 0$ ; $2^1 = 2 > 1$ ; $2^2 = 4 > 2$ ; $2^3 = 8 > 3$. La propriété est vraie pour $n = 0, 1, 2, 3$.",
+        "2. Non. Vérifier un énoncé « pour tout $n$ » sur un nombre fini de valeurs ne le démontre pas : un « $\\forall n$ » n'est jamais prouvé par des exemples (c'est l'un des pièges du cours). Il resterait une infinité d'entiers non testés.",
+        "3. Le raisonnement adapté est le raisonnement par récurrence : initialisation, hérédité $\\mathcal{P}(n) \\Rightarrow \\mathcal{P}(n+1)$, puis conclusion. Il n'est pas développé dans ce chapitre : il est prérequis et traité en détail dans le chapitre « Suites », auquel il faut se reporter.",
+        "Ici, $\\mathcal{P}(0)$ jouerait le rôle de l'initialisation ; la démonstration complète de l'hérédité relève du chapitre « Suites »."
+      ],
+      "reponse": "1. Vraie pour $n = 0,1,2,3$. 2. Non : un nombre fini d'exemples ne prouve jamais un « pour tout ». 3. Le raisonnement par récurrence, développé dans le chapitre « Suites »."
+    }
+  ]
+}

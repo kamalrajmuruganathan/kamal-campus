@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-math-primitives-equations-differentielles-exos",
+  "chapitre": "tale-spe-math-primitives-equations-differentielles",
+  "titre": "Exercices — Primitives et équations différentielles",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer toutes les primitives sur $\\mathbb{R}$ de la fonction $f(x) = 4x^3 - 6x + 1$.",
+      "corrige": [
+        "On traite chaque terme avec la formule $x^n \\mapsto \\dfrac{x^{n+1}}{n+1}$. Pour $4x^3$ : une primitive est $4\\times\\dfrac{x^4}{4} = x^4$.",
+        "Pour $-6x$ : une primitive est $-6\\times\\dfrac{x^2}{2} = -3x^2$. Pour la constante $1$ : une primitive est $x$.",
+        "On rassemble et on n'oublie pas la constante $+C$ : les primitives sont $F(x) = x^4 - 3x^2 + x + C$, avec $C\\in\\mathbb{R}$.",
+        "Contrôle en dérivant : $F'(x) = 4x^3 - 6x + 1 = f(x)$ ✓."
+      ],
+      "reponse": "$F(x) = x^4 - 3x^2 + x + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $y' = 5y$.",
+      "corrige": [
+        "L'équation est de la forme $y' = ay$ avec $a = 5$.",
+        "D'après le cours, ses solutions sont les fonctions $y(x) = Ce^{ax} = Ce^{5x}$, avec $C\\in\\mathbb{R}$.",
+        "Contrôle : $y'(x) = 5Ce^{5x} = 5\\,y(x)$ ✓. On garde bien la constante $C$, sinon on perd toutes les autres solutions."
+      ],
+      "reponse": "$y(x) = Ce^{5x}$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = 3x^2 - 2$ sur $\\mathbb{R}$ qui vérifie $F(1) = 4$.",
+      "corrige": [
+        "On cherche d'abord toutes les primitives. Terme à terme : une primitive de $3x^2$ est $x^3$, une primitive de $-2$ est $-2x$.",
+        "Donc $F(x) = x^3 - 2x + C$, avec $C\\in\\mathbb{R}$.",
+        "On utilise la condition initiale pour fixer $C$ : $F(1) = 1^3 - 2\\times 1 + C = -1 + C$. On impose $-1 + C = 4$, d'où $C = 5$.",
+        "Ainsi $F(x) = x^3 - 2x + 5$. Vérification : $F'(x) = 3x^2 - 2 = f(x)$ et $F(1) = 1 - 2 + 5 = 4$ ✓."
+      ],
+      "reponse": "$F(x) = x^3 - 2x + 5$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = \\dfrac{x}{\\sqrt{x^2+1}}$.",
+      "corrige": [
+        "On reconnaît une forme du type $\\dfrac{u'}{\\sqrt{u}}$ avec $u = x^2 + 1$ (qui vérifie $u > 0$) et $u' = 2x$.",
+        "Mais au numérateur on a $x$, pas $2x$ : il manque le facteur $2$. On écrit $f(x) = \\dfrac{1}{2}\\times\\dfrac{2x}{\\sqrt{x^2+1}} = \\dfrac{1}{2}\\times\\dfrac{u'}{\\sqrt{u}}$.",
+        "Or une primitive de $\\dfrac{u'}{\\sqrt{u}}$ est $2\\sqrt{u}$. Donc une primitive de $f$ est $\\dfrac{1}{2}\\times 2\\sqrt{u} = \\sqrt{x^2+1}$.",
+        "Contrôle : $\\left(\\sqrt{x^2+1}\\right)' = \\dfrac{2x}{2\\sqrt{x^2+1}} = \\dfrac{x}{\\sqrt{x^2+1}} = f(x)$ ✓."
+      ],
+      "reponse": "$F(x) = \\sqrt{x^2+1}$ (à une constante près)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "La température (en °C) d'un objet qui refroidit est modélisée par une fonction $\\theta$ du temps $t\\geq 0$ (en minutes) vérifiant $\\theta'(t) = -0{,}2\\,\\theta(t) + 4$ et $\\theta(0) = 100$. Déterminer $\\theta(t)$, puis donner la température vers laquelle l'objet tend.",
+      "corrige": [
+        "L'équation est de la forme $y' = ay + b$ avec $a = -0{,}2$ et $b = 4$ ($a\\neq 0$).",
+        "Solution particulière constante : on cherche $\\theta$ constante, donc $\\theta' = 0$, soit $0 = -0{,}2\\,\\theta + 4$, d'où $\\theta = -\\dfrac{b}{a} = -\\dfrac{4}{-0{,}2} = 20$.",
+        "Toutes les solutions s'écrivent $\\theta(t) = Ce^{-0{,}2t} + 20$, avec $C\\in\\mathbb{R}$.",
+        "On applique la condition initiale : $\\theta(0) = C + 20 = 100$, donc $C = 80$. Ainsi $\\theta(t) = 80\\,e^{-0{,}2t} + 20$.",
+        "Comme $-0{,}2 < 0$, le terme $80e^{-0{,}2t}$ tend vers $0$ quand $t\\to+\\infty$ : la température tend vers $20$ °C (la température ambiante)."
+      ],
+      "reponse": "$\\theta(t) = 80\\,e^{-0{,}2t} + 20$ ; la température tend vers $20$ °C."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay-plus-f",
+      "enonce": "On considère l'équation différentielle $y' = y + x$. 1) Vérifier que la fonction $g(x) = -x - 1$ en est une solution. 2) En déduire toutes les solutions. 3) Déterminer la solution vérifiant $y(0) = 2$.",
+      "corrige": [
+        "1) On dérive $g$ : $g'(x) = -1$. On calcule le membre de droite pour $g$ : $g(x) + x = (-x - 1) + x = -1$. Les deux membres sont égaux ($-1 = -1$), donc $g$ est bien une solution.",
+        "2) L'équation est de la forme $y' = ay + f$ avec $a = 1$. Connaissant une solution particulière $g$, toutes les solutions s'écrivent $y(x) = g(x) + Ce^{ax} = -x - 1 + Ce^{x}$, avec $C\\in\\mathbb{R}$.",
+        "3) On applique la condition initiale : $y(0) = -0 - 1 + Ce^{0} = -1 + C$. On impose $-1 + C = 2$, d'où $C = 3$.",
+        "La solution cherchée est $y(x) = -x - 1 + 3e^{x}$. Contrôle : $y'(x) = -1 + 3e^{x}$ et $y(x) + x = -x - 1 + 3e^x + x = -1 + 3e^x$ : c'est bien égal, et $y(0) = -1 + 3 = 2$ ✓."
+      ],
+      "reponse": "Toutes les solutions : $y(x) = -x - 1 + Ce^{x}$ ; celle vérifiant $y(0)=2$ : $y(x) = -x - 1 + 3e^{x}$."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "tale-spe-math-loi-binomiale-exos",
+  "chapitre": "tale-spe-math-loi-binomiale",
+  "titre": "Exercices — Succession d'épreuves, schéma de Bernoulli et loi binomiale",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "loi-binomiale",
+      "enonce": "Un basketteur réussit chacun de ses lancers francs avec la probabilité $0{,}4$, indépendamment les uns des autres. Il tente $5$ lancers. On note $X$ le nombre de lancers réussis, de sorte que $X \\sim B(5\\,;\\,0{,}4)$. Calculer $P(X = 2)$.",
+      "corrige": [
+        "On applique la formule $P(X = k) = \\dbinom{n}{k}\\,p^k\\,(1-p)^{n-k}$ avec $n = 5$, $p = 0{,}4$ et $k = 2$.",
+        "Le coefficient binomial vaut $\\dbinom{5}{2} = \\dfrac{5 \\times 4}{2} = 10$ : c'est le nombre de façons de placer les $2$ réussites parmi les $5$ lancers.",
+        "On calcule les puissances : $p^2 = 0{,}4^2 = 0{,}16$ et $(1-p)^{3} = 0{,}6^3 = 0{,}216$.",
+        "Donc $P(X = 2) = 10 \\times 0{,}16 \\times 0{,}216 = 0{,}3456$."
+      ],
+      "reponse": "$P(X = 2) = 0{,}3456$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "schema-bernoulli",
+      "enonce": "On lance $5$ fois une pièce truquée qui tombe sur Pile avec la probabilité $0{,}3$ (succès = Pile), les lancers étant indépendants. Quelle est la probabilité d'obtenir, dans cet ordre précis, la séquence Pile, Face, Pile, Face, Face ?",
+      "corrige": [
+        "On s'intéresse à un seul chemin de l'arbre. Comme les lancers sont indépendants, la probabilité du chemin est le produit des probabilités des branches.",
+        "La séquence demandée comporte $2$ Piles (probabilité $0{,}3$ chacun) et $3$ Faces (probabilité $1 - 0{,}3 = 0{,}7$ chacun).",
+        "La probabilité vaut donc $0{,}3 \\times 0{,}7 \\times 0{,}3 \\times 0{,}7 \\times 0{,}7 = 0{,}3^2 \\times 0{,}7^3$.",
+        "On calcule : $0{,}3^2 = 0{,}09$ et $0{,}7^3 = 0{,}343$, d'où $0{,}09 \\times 0{,}343 = 0{,}03087$. (Ici on ne met pas de coefficient $\\dbinom{5}{2}$ : on veut un ordre précis, pas tous les ordres.)"
+      ],
+      "reponse": "$0{,}3^2 \\times 0{,}7^3 = 0{,}03087$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "Sur une chaîne de production, chaque pièce est défectueuse avec la probabilité $0{,}05$, indépendamment des autres. On prélève un lot de $20$ pièces. Quelle est la probabilité qu'il y ait $\\textbf{au moins une}$ pièce défectueuse ? (On donnera la valeur exacte puis une valeur approchée au millième.)",
+      "corrige": [
+        "Soit $X$ le nombre de pièces défectueuses parmi les $20$. Les prélèvements sont indépendants, à deux issues, de même probabilité $p = 0{,}05$ : $X \\sim B(20\\,;\\,0{,}05)$.",
+        "« Au moins une » est l'événement contraire de « aucune », donc $P(X \\geqslant 1) = 1 - P(X = 0)$.",
+        "Or $P(X = 0) = (1 - p)^{n} = 0{,}95^{20}$ (aucun succès : $\\dbinom{20}{0} = 1$).",
+        "Donc $P(X \\geqslant 1) = 1 - 0{,}95^{20} \\approx 1 - 0{,}358 = 0{,}642$."
+      ],
+      "reponse": "$P(X \\geqslant 1) = 1 - 0{,}95^{20} \\approx 0{,}642$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "cumul",
+      "enonce": "Soit $X \\sim B(4\\,;\\,0{,}2)$. Calculer $P(X \\leqslant 1)$ comme une somme, puis en déduire $P(X \\geqslant 2)$.",
+      "corrige": [
+        "$P(X \\leqslant 1) = P(X = 0) + P(X = 1)$ : c'est la somme des deux premiers termes.",
+        "$P(X = 0) = (1 - 0{,}2)^4 = 0{,}8^4 = 0{,}4096$.",
+        "$P(X = 1) = \\dbinom{4}{1}\\,(0{,}2)^1\\,(0{,}8)^3 = 4 \\times 0{,}2 \\times 0{,}512 = 0{,}4096$.",
+        "Donc $P(X \\leqslant 1) = 0{,}4096 + 0{,}4096 = 0{,}8192$.",
+        "Enfin, par passage au complémentaire : $P(X \\geqslant 2) = 1 - P(X \\leqslant 1) = 1 - 0{,}8192 = 0{,}1808$."
+      ],
+      "reponse": "$P(X \\leqslant 1) = 0{,}8192$ et $P(X \\geqslant 2) = 0{,}1808$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Une archère atteint le centre de la cible à chaque tir avec la probabilité $0{,}25$, indépendamment d'un tir à l'autre. Elle effectue $8$ tirs. **1.** Justifier que le nombre $X$ de tirs au centre suit une loi binomiale dont on précisera les paramètres. **2.** Calculer le nombre moyen de tirs au centre. **3.** Calculer $P(X = 2)$ (valeur approchée au millième). **4.** Calculer la probabilité qu'elle atteigne le centre au moins une fois.",
+      "corrige": [
+        "**1.** Chaque tir est une épreuve de Bernoulli à deux issues (centre / pas centre), de succès « atteindre le centre » de probabilité $p = 0{,}25$. Les $8$ tirs sont identiques et indépendants : c'est un schéma de Bernoulli. Donc $X \\sim B(8\\,;\\,0{,}25)$.",
+        "**2.** Le nombre moyen de succès est l'espérance $E(X) = np = 8 \\times 0{,}25 = 2$ : elle vise le centre $2$ fois en moyenne.",
+        "**3.** $P(X = 2) = \\dbinom{8}{2}\\,(0{,}25)^2\\,(0{,}75)^6$. On a $\\dbinom{8}{2} = \\dfrac{8 \\times 7}{2} = 28$, $(0{,}25)^2 = 0{,}0625$ et $(0{,}75)^6 \\approx 0{,}17798$.",
+        "Donc $P(X = 2) = 28 \\times 0{,}0625 \\times 0{,}17798 \\approx 0{,}311$.",
+        "**4.** « Au moins une fois » : $P(X \\geqslant 1) = 1 - P(X = 0) = 1 - (0{,}75)^8 \\approx 1 - 0{,}100 = 0{,}900$."
+      ],
+      "reponse": "$X \\sim B(8\\,;\\,0{,}25)$ ; $E(X) = 2$ ; $P(X = 2) \\approx 0{,}311$ ; $P(X \\geqslant 1) \\approx 0{,}900$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "seuil",
+      "enonce": "On lance $n$ fois une pièce équilibrée (succès = Pile, $p = 0{,}5$), les lancers étant indépendants. On veut être « presque sûr » d'obtenir au moins un Pile : déterminer le plus petit entier $n$ tel que la probabilité d'obtenir au moins un Pile soit supérieure ou égale à $0{,}99$.",
+      "corrige": [
+        "Soit $X$ le nombre de Piles, $X \\sim B(n\\,;\\,0{,}5)$. On a $P(X \\geqslant 1) = 1 - P(X = 0) = 1 - (0{,}5)^n$.",
+        "La condition « $P(X \\geqslant 1) \\geqslant 0{,}99$ » s'écrit $1 - (0{,}5)^n \\geqslant 0{,}99$, soit $(0{,}5)^n \\leqslant 0{,}01$.",
+        "Comme $(0{,}5)^n = \\dfrac{1}{2^n}$, la condition devient $2^n \\geqslant 100$.",
+        "On teste les puissances de $2$ : $2^6 = 64 < 100$ mais $2^7 = 128 \\geqslant 100$. Le plus petit entier convenable est donc $n = 7$.",
+        "Vérification : pour $n = 7$, $P(X \\geqslant 1) = 1 - \\dfrac{1}{128} \\approx 0{,}992 \\geqslant 0{,}99$, alors que pour $n = 6$, $1 - \\dfrac{1}{64} \\approx 0{,}984 < 0{,}99$."
+      ],
+      "reponse": "$n = 7$ lancers."
+    }
+  ]
+}

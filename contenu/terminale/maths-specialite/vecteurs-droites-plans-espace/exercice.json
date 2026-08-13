@@ -1,0 +1,93 @@
+{
+  "id": "tale-spe-math-vecteurs-droites-plans-espace-exos",
+  "chapitre": "tale-spe-math-vecteurs-droites-plans-espace",
+  "titre": "Exercices — Vecteurs, droites et plans de l'espace",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, exprime le vecteur $\\overrightarrow{BH}$ comme combinaison linéaire de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "corrige": [
+        "On décompose le trajet de $B$ à $H$ avec la relation de Chasles : $\\overrightarrow{BH} = \\overrightarrow{BA} + \\overrightarrow{AH}$.",
+        "$\\overrightarrow{BA} = -\\overrightarrow{AB}$, et $\\overrightarrow{AH} = \\overrightarrow{AD} + \\overrightarrow{AE}$ car $H$ est le sommet situé au-dessus de $D$ (donc $\\overrightarrow{DH} = \\overrightarrow{AE}$).",
+        "On regroupe : $\\overrightarrow{BH} = -\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE}$."
+      ],
+      "reponse": "$\\overrightarrow{BH} = -\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "colinearite",
+      "enonce": "On donne $\\overrightarrow{u}\\,(1\\,;2\\,;-1)$ et $\\overrightarrow{v}\\,(3\\,;6\\,;-2)$ dans une base de l'espace. Ces deux vecteurs sont-ils colinéaires ?",
+      "corrige": [
+        "Deux vecteurs sont colinéaires s'il existe un même réel $k$ tel que chaque coordonnée de $\\overrightarrow{v}$ vaille $k$ fois celle de $\\overrightarrow{u}$.",
+        "Sur la première coordonnée : $3 = k \\times 1$ donne $k = 3$. Sur la deuxième : $6 = k \\times 2$ donne aussi $k = 3$.",
+        "Sur la troisième coordonnée, il faudrait $-2 = k \\times (-1)$, soit $k = 2$. Or on avait trouvé $k = 3$ : impossible d'avoir le même $k$ partout.",
+        "Les trois coordonnées ne sont pas proportionnelles dans un même rapport : les vecteurs ne sont pas colinéaires. (Attention : il faut vérifier les trois coordonnées, pas seulement deux.)"
+      ],
+      "reponse": "Non, $\\overrightarrow{u}$ et $\\overrightarrow{v}$ ne sont pas colinéaires."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ du cube, détermine les coordonnées de $\\overrightarrow{HB}$, puis celles de $\\overrightarrow{HB} + \\overrightarrow{AG}$. Que peux-tu en déduire sur la direction du vecteur obtenu ?",
+      "corrige": [
+        "On lit les coordonnées des sommets : $H(0\\,;1\\,;1)$ et $B(1\\,;0\\,;0)$. Donc $\\overrightarrow{HB}$ a pour coordonnées $(1-0\\,;\\,0-1\\,;\\,0-1) = (1\\,;-1\\,;-1)$.",
+        "$\\overrightarrow{AG}$ est la grande diagonale du cube : ses coordonnées sont $(1\\,;1\\,;1)$.",
+        "On additionne coordonnée par coordonnée : $\\overrightarrow{HB} + \\overrightarrow{AG} = (1+1\\,;\\,-1+1\\,;\\,-1+1) = (2\\,;0\\,;0)$.",
+        "Ces coordonnées valent $2$ fois celles de $\\overrightarrow{AB}\\,(1\\,;0\\,;0)$ : le vecteur obtenu est $2\\,\\overrightarrow{AB}$, colinéaire à $\\overrightarrow{AB}$. Il a donc la direction de l'arête $(AB)$."
+      ],
+      "reponse": "$\\overrightarrow{HB}\\,(1\\,;-1\\,;-1)$ et $\\overrightarrow{HB}+\\overrightarrow{AG} = (2\\,;0\\,;0) = 2\\,\\overrightarrow{AB}$, colinéaire à $\\overrightarrow{AB}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "coplanarite",
+      "enonce": "Dans le cube $ABCDEFGH$, montre que les points $D$, $C$, $F$ et $E$ sont coplanaires.",
+      "corrige": [
+        "Quatre points sont coplanaires si l'un des vecteurs $\\overrightarrow{DC}$, $\\overrightarrow{DE}$, $\\overrightarrow{DF}$ est combinaison linéaire des deux autres, ces deux-là étant non colinéaires.",
+        "Avec les coordonnées $D(0\\,;1\\,;0)$, $C(1\\,;1\\,;0)$, $E(0\\,;0\\,;1)$, $F(1\\,;0\\,;1)$ : $\\overrightarrow{DC} = (1\\,;0\\,;0)$, $\\overrightarrow{DE} = (0\\,;-1\\,;1)$ et $\\overrightarrow{DF} = (1\\,;-1\\,;1)$.",
+        "$\\overrightarrow{DC}$ et $\\overrightarrow{DE}$ ne sont pas colinéaires (aucun n'est un multiple de l'autre) : ils dirigent bien un plan.",
+        "On vérifie que $\\overrightarrow{DF} = \\overrightarrow{DC} + \\overrightarrow{DE}$ : $(1\\,;0\\,;0) + (0\\,;-1\\,;1) = (1\\,;-1\\,;1)$, ce qui est exactement $\\overrightarrow{DF}$.",
+        "Ainsi $F$ appartient au plan $(D\\,;\\overrightarrow{DC},\\overrightarrow{DE})$, qui contient déjà $D$, $C$ et $E$ : les quatre points sont coplanaires."
+      ],
+      "reponse": "Oui : $\\overrightarrow{DF} = \\overrightarrow{DC} + \\overrightarrow{DE}$, donc $D$, $C$, $F$, $E$ sont coplanaires (ils forment une section rectangulaire du cube)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "base",
+      "enonce": "Dans le cube $ABCDEFGH$, on considère les vecteurs $\\overrightarrow{AB}$, $\\overrightarrow{AF}$ et $\\overrightarrow{AH}$. Démontre qu'ils forment une base de l'espace.",
+      "corrige": [
+        "Trois vecteurs forment une base si et seulement s'ils sont non coplanaires, c'est-à-dire si aucun n'est combinaison linéaire des deux autres.",
+        "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ : $\\overrightarrow{AB} = (1\\,;0\\,;0)$, $\\overrightarrow{AF} = (1\\,;0\\,;1)$ et $\\overrightarrow{AH} = (0\\,;1\\,;1)$.",
+        "$\\overrightarrow{AB}$ et $\\overrightarrow{AF}$ ne sont pas colinéaires. Supposons par l'absurde que $\\overrightarrow{AH}$ soit une combinaison linéaire de ces deux vecteurs : $\\overrightarrow{AH} = s\\,\\overrightarrow{AB} + t\\,\\overrightarrow{AF}$.",
+        "En coordonnées : $s\\,(1\\,;0\\,;0) + t\\,(1\\,;0\\,;1) = (s+t\\,;\\,0\\,;\\,t)$. La deuxième coordonnée de cette combinaison vaut toujours $0$, alors que celle de $\\overrightarrow{AH}$ vaut $1$ : contradiction.",
+        "Aucun des trois vecteurs n'est donc combinaison linéaire des deux autres : ils sont non coplanaires, donc $(\\overrightarrow{AB},\\overrightarrow{AF},\\overrightarrow{AH})$ est une base de l'espace."
+      ],
+      "reponse": "$(\\overrightarrow{AB},\\overrightarrow{AF},\\overrightarrow{AH})$ est une base : les trois vecteurs sont non coplanaires."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "positions-relatives",
+      "enonce": "Dans le cube $ABCDEFGH$, on note $I$ le milieu de $[EF]$ et $J$ le milieu de $[GH]$. 1) Détermine les coordonnées de $\\overrightarrow{IJ}$ dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$. 2) Précise la position de la droite $(IJ)$ par rapport à la droite $(AD)$, puis par rapport au plan $(ABCD)$.",
+      "corrige": [
+        "Coordonnées des milieux : $E(0\\,;0\\,;1)$ et $F(1\\,;0\\,;1)$ donnent $I\\left(\\tfrac{1}{2}\\,;0\\,;1\\right)$ ; $G(1\\,;1\\,;1)$ et $H(0\\,;1\\,;1)$ donnent $J\\left(\\tfrac{1}{2}\\,;1\\,;1\\right)$.",
+        "$\\overrightarrow{IJ} = \\left(\\tfrac{1}{2}-\\tfrac{1}{2}\\,;\\,1-0\\,;\\,1-1\\right) = (0\\,;1\\,;0)$.",
+        "Ces coordonnées sont exactement celles de $\\overrightarrow{AD}\\,(0\\,;1\\,;0)$ : $\\overrightarrow{IJ} = \\overrightarrow{AD}$. Les deux vecteurs sont colinéaires, donc $(IJ)$ et $(AD)$ ont la même direction : elles sont parallèles. Comme $I\\left(\\tfrac{1}{2}\\,;0\\,;1\\right)$ n'est pas sur $(AD)$ (dont les points sont de la forme $(0\\,;t\\,;0)$), elles sont strictement parallèles.",
+        "Le plan $(ABCD)$ est dirigé par $(\\overrightarrow{AB},\\overrightarrow{AD})$. Le vecteur directeur $\\overrightarrow{IJ} = \\overrightarrow{AD}$ appartient à cette direction, et $I$ (de troisième coordonnée $1$) n'appartient pas au plan $(ABCD)$ (dont les points ont une troisième coordonnée nulle). La droite $(IJ)$ est donc strictement parallèle au plan $(ABCD)$."
+      ],
+      "reponse": "$\\overrightarrow{IJ} = (0\\,;1\\,;0) = \\overrightarrow{AD}$ ; $(IJ)$ est strictement parallèle à la droite $(AD)$ et strictement parallèle au plan $(ABCD)$."
+    }
+  ]
+}

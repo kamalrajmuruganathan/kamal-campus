@@ -1,0 +1,94 @@
+{
+  "id": "tale-spe-math-suites-exos",
+  "chapitre": "tale-spe-math-suites",
+  "titre": "Exercices — Suites : limites et récurrence",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "suite-geometrique",
+      "enonce": "Déterminer la limite de chacune des suites géométriques suivantes : a) $u_n = 1{,}4^{\\,n}$ ; b) $v_n = \\left(\\dfrac{3}{4}\\right)^{\\!n}$ ; c) $w_n = (-3)^{\\,n}$.",
+      "corrige": [
+        "On applique la règle sur $(q^n)$ : tout dépend de la valeur de la raison $q$.",
+        "a) $q = 1{,}4 > 1$, donc $q^n \\to +\\infty$ : $u_n \\to +\\infty$.",
+        "b) $q = \\dfrac{3}{4}$ vérifie $-1 < q < 1$ (c'est-à-dire $|q| < 1$), donc $q^n \\to 0$ : $v_n \\to 0$.",
+        "c) $q = -3 \\leq -1$ : les termes $1, -3, 9, -27, \\dots$ grandissent en changeant de signe, donc $(w_n)$ n'a pas de limite."
+      ],
+      "reponse": "a) $u_n \\to +\\infty$ ; b) $v_n \\to 0$ ; c) $(w_n)$ n'a pas de limite."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "operations-limites",
+      "enonce": "Montrer que la suite définie pour $n \\geq 1$ par $u_n = 4 - \\dfrac{5}{n}$ converge, et donner sa limite.",
+      "corrige": [
+        "On isole le morceau qui dépend de $n$ : quand $n \\to +\\infty$, on a $\\dfrac{1}{n} \\to 0$, donc $\\dfrac{5}{n} = 5 \\times \\dfrac{1}{n} \\to 0$.",
+        "Par la limite d'une différence : $u_n = 4 - \\dfrac{5}{n} \\to 4 - 0 = 4$.",
+        "La limite $4$ est un réel (finie), donc la suite $(u_n)$ est convergente, et elle converge vers $4$."
+      ],
+      "reponse": "$(u_n)$ converge vers $4$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "gendarmes",
+      "enonce": "Soit la suite définie pour $n \\geq 1$ par $v_n = 3 + \\dfrac{(-1)^n}{n}$. Déterminer sa limite en encadrant $v_n$.",
+      "corrige": [
+        "Pour tout entier $n$, on a $-1 \\leq (-1)^n \\leq 1$. En divisant par $n > 0$ (ce qui conserve le sens des inégalités) : $-\\dfrac{1}{n} \\leq \\dfrac{(-1)^n}{n} \\leq \\dfrac{1}{n}$.",
+        "On ajoute $3$ à chaque membre : $3 - \\dfrac{1}{n} \\leq v_n \\leq 3 + \\dfrac{1}{n}$.",
+        "Les deux bornes $3 - \\dfrac{1}{n}$ et $3 + \\dfrac{1}{n}$ tendent vers $3$ quand $n \\to +\\infty$ (car $\\dfrac{1}{n} \\to 0$).",
+        "D'après le théorème des gendarmes, $v_n$ est encadrée par deux suites de même limite $3$, donc $v_n \\to 3$."
+      ],
+      "reponse": "$v_n \\to 3$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "operations-limites",
+      "enonce": "Déterminer la limite de la suite définie pour $n \\geq 1$ par $u_n = \\dfrac{2n + 1}{n + 3}$.",
+      "corrige": [
+        "En l'état, le numérateur $2n + 1 \\to +\\infty$ et le dénominateur $n + 3 \\to +\\infty$ : c'est une forme indéterminée $\\dfrac{\\infty}{\\infty}$, on ne peut pas conclure directement.",
+        "On factorise le numérateur et le dénominateur par $n$ (le terme dominant) : $u_n = \\dfrac{n\\left(2 + \\frac{1}{n}\\right)}{n\\left(1 + \\frac{3}{n}\\right)}$.",
+        "On simplifie par $n$ (non nul) : $u_n = \\dfrac{2 + \\frac{1}{n}}{1 + \\frac{3}{n}}$.",
+        "Quand $n \\to +\\infty$ : $\\dfrac{1}{n} \\to 0$ et $\\dfrac{3}{n} \\to 0$, donc le numérateur tend vers $2$ et le dénominateur vers $1$. Ainsi $u_n \\to \\dfrac{2}{1} = 2$. La factorisation a levé l'indétermination."
+      ],
+      "reponse": "$u_n \\to 2$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "recurrence",
+      "enonce": "Soit la suite $(u_n)$ définie par $u_0 = 2$ et, pour tout entier $n \\geq 0$, $u_{n+1} = 2u_n - 1$. Démontrer par récurrence que, pour tout entier $n \\geq 0$, $u_n = 2^n + 1$. En déduire la limite de $(u_n)$.",
+      "corrige": [
+        "On note $P(n)$ la propriété : « $u_n = 2^n + 1$ ». On raisonne par récurrence sur $n \\geq 0$.",
+        "Initialisation. Pour $n = 0$ : d'une part $u_0 = 2$, d'autre part $2^0 + 1 = 1 + 1 = 2$. Les deux coïncident, donc $P(0)$ est vraie.",
+        "Hérédité. Supposons $P(k)$ vraie pour un entier $k \\geq 0$ fixé quelconque, c'est-à-dire $u_k = 2^k + 1$ (hypothèse de récurrence). Montrons $P(k+1)$, soit $u_{k+1} = 2^{k+1} + 1$.",
+        "On part de la relation de récurrence et on remplace $u_k$ par l'hypothèse : $u_{k+1} = 2u_k - 1 = 2\\left(2^k + 1\\right) - 1 = 2^{k+1} + 2 - 1 = 2^{k+1} + 1$.",
+        "C'est bien la formule au rang $k+1$, donc $P(k) \\Rightarrow P(k+1)$ : la propriété est héréditaire.",
+        "Conclusion. $P(0)$ est vraie et $P$ est héréditaire, donc par récurrence $u_n = 2^n + 1$ pour tout entier $n \\geq 0$.",
+        "Limite : comme $2 > 1$, on a $2^n \\to +\\infty$, donc $u_n = 2^n + 1 \\to +\\infty$."
+      ],
+      "reponse": "Pour tout $n \\geq 0$, $u_n = 2^n + 1$, et $u_n \\to +\\infty$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "suite-geometrique",
+      "enonce": "On lâche une balle d'une hauteur de $2$ m. À chaque rebond, elle remonte à $80\\%$ de la hauteur atteinte au rebond précédent. On note $h_n$ la hauteur (en mètres) du $n$-ième rebond, avec $h_0 = 2$. a) Exprimer $h_n$ en fonction de $n$. b) Déterminer $\\lim\\limits_{n \\to +\\infty} h_n$ et interpréter le résultat.",
+      "corrige": [
+        "a) À chaque rebond, la hauteur est multipliée par $0{,}8$ : $h_{n+1} = 0{,}8 \\times h_n$. La suite $(h_n)$ est donc géométrique de premier terme $h_0 = 2$ et de raison $q = 0{,}8$.",
+        "On en déduit le terme général : $h_n = h_0 \\times q^n = 2 \\times 0{,}8^{\\,n}$.",
+        "b) La raison $q = 0{,}8$ vérifie $|q| < 1$, donc $0{,}8^{\\,n} \\to 0$. Par produit par la constante $2$ : $h_n = 2 \\times 0{,}8^{\\,n} \\to 2 \\times 0 = 0$.",
+        "Interprétation : au fil des rebonds, la hauteur devient aussi petite que l'on veut ; la balle finit par ne pratiquement plus rebondir. C'est un phénomène d'amortissement, typique du cas $|q| < 1$."
+      ],
+      "reponse": "a) $h_n = 2 \\times 0{,}8^{\\,n}$ ; b) $h_n \\to 0$ (la balle s'arrête peu à peu de rebondir)."
+    }
+  ]
+}

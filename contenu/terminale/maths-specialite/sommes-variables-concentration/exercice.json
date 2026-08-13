@@ -1,0 +1,91 @@
+{
+  "id": "tale-spe-math-sommes-variables-concentration-exos",
+  "chapitre": "tale-spe-math-sommes-variables-concentration",
+  "titre": "Exercices — Sommes de variables aléatoires, concentration et loi des grands nombres",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "linearite-esperance",
+      "enonce": "Deux variables aléatoires $X$ et $Y$ vérifient $E(X) = 6$ et $E(Y) = 2{,}5$. Calculer $E(4X - 2Y)$.",
+      "corrige": [
+        "La linéarité de l'espérance s'applique **sans aucune condition** (pas besoin d'indépendance) : $E(aX + bY) = a\\,E(X) + b\\,E(Y)$.",
+        "Ici $a = 4$ et $b = -2$, donc $E(4X - 2Y) = 4\\,E(X) - 2\\,E(Y)$.",
+        "On remplace : $E(4X - 2Y) = 4 \\times 6 - 2 \\times 2{,}5 = 24 - 5 = 19$."
+      ],
+      "reponse": "$E(4X - 2Y) = 19$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "binomiale",
+      "enonce": "Soit $X$ une variable aléatoire qui suit la loi binomiale $\\mathcal{B}(20\\,;\\,0{,}1)$. Calculer son espérance $E(X)$, sa variance $V(X)$ et son écart type $\\sigma(X)$ (valeur approchée au centième).",
+      "corrige": [
+        "Pour la loi binomiale $\\mathcal{B}(n\\,;\\,p)$ avec $n = 20$ et $p = 0{,}1$ : $E(X) = np$.",
+        "$E(X) = 20 \\times 0{,}1 = 2$.",
+        "Variance : $V(X) = np(1-p) = 20 \\times 0{,}1 \\times 0{,}9 = 1{,}8$.",
+        "Écart type : $\\sigma(X) = \\sqrt{V(X)} = \\sqrt{1{,}8} \\approx 1{,}34$."
+      ],
+      "reponse": "$E(X) = 2$, $\\;V(X) = 1{,}8$, $\\;\\sigma(X) \\approx 1{,}34$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "variance-somme",
+      "enonce": "$X$ et $Y$ sont deux variables aléatoires **indépendantes** telles que $V(X) = 5$ et $V(Y) = 3$. Calculer $V(3X - Y)$.",
+      "corrige": [
+        "Comme $X$ et $Y$ sont indépendantes, $3X$ et $-Y$ le sont aussi : la variance d'une somme est alors la somme des variances, $V(3X - Y) = V(3X) + V(-Y)$.",
+        "Pour un multiple, le facteur passe au carré : $V(3X) = 3^2\\,V(X) = 9 \\times 5 = 45$.",
+        "De même $V(-Y) = (-1)^2\\,V(Y) = V(Y) = 3$ (soustraire ne change pas la variance).",
+        "Donc $V(3X - Y) = 45 + 3 = 48$."
+      ],
+      "reponse": "$V(3X - Y) = 48$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "bienayme-tchebychev",
+      "enonce": "Une variable aléatoire $X$ a pour espérance $\\mu = 50$ et pour variance $V(X) = 9$. À l'aide de l'inégalité de Bienaymé-Tchebychev, majorer $P(|X - 50| \\geqslant 6)$, puis en déduire une proportion minimale de valeurs situées dans l'intervalle $]44\\,;\\,56[$.",
+      "corrige": [
+        "L'inégalité de Bienaymé-Tchebychev donne, pour $\\delta > 0$ : $P(|X - \\mu| \\geqslant \\delta) \\leqslant \\dfrac{V(X)}{\\delta^2}$.",
+        "Avec $\\mu = 50$, $V(X) = 9$ et $\\delta = 6$ : $P(|X - 50| \\geqslant 6) \\leqslant \\dfrac{9}{6^2} = \\dfrac{9}{36} = 0{,}25$.",
+        "L'événement contraire $|X - 50| < 6$ signifie $44 < X < 56$, c'est-à-dire $X \\in\\, ]44\\,;\\,56[$. Sa probabilité vaut $1 - P(|X - 50| \\geqslant 6)$.",
+        "Donc $P(44 < X < 56) \\geqslant 1 - 0{,}25 = 0{,}75$ : au moins $75\\,\\%$ des valeurs sont dans $]44\\,;\\,56[$."
+      ],
+      "reponse": "$P(|X - 50| \\geqslant 6) \\leqslant 0{,}25$, donc au moins $75\\,\\%$ des valeurs sont dans $]44\\,;\\,56[$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "binomiale",
+      "enonce": "On veut retrouver l'espérance et la variance de la loi binomiale. Soit $X$ une variable qui suit $\\mathcal{B}(n\\,;\\,p)$. On admet que $X = X_1 + X_2 + \\dots + X_n$, où les $X_i$ sont des variables de Bernoulli de paramètre $p$ **indépendantes** ($X_i = 1$ en cas de succès, $0$ sinon). 1) Calculer $E(X_i)$ et $V(X_i)$. 2) En déduire $E(X)$. 3) En déduire $V(X)$.",
+      "corrige": [
+        "1) Loi de $X_i$ : $X_i = 1$ avec probabilité $p$, $X_i = 0$ avec probabilité $1 - p$. Donc $E(X_i) = 0 \\times (1-p) + 1 \\times p = p$.",
+        "Pour la variance : $V(X_i) = E(X_i^2) - E(X_i)^2$. Comme $X_i^2 = X_i$ (les valeurs sont $0$ et $1$), $E(X_i^2) = p$, d'où $V(X_i) = p - p^2 = p(1-p)$.",
+        "2) Par linéarité de l'espérance (sans condition) : $E(X) = E(X_1) + \\dots + E(X_n) = \\underbrace{p + \\dots + p}_{n \\text{ fois}} = np$.",
+        "3) Les $X_i$ étant **indépendantes**, les variances s'ajoutent : $V(X) = V(X_1) + \\dots + V(X_n) = n \\times p(1-p) = np(1-p)$."
+      ],
+      "reponse": "$E(X_i) = p$, $\\;V(X_i) = p(1-p)$, puis $E(X) = np$ et $V(X) = np(1-p)$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "concentration",
+      "enonce": "Une machine produit des pièces dont la masse a pour variance $V = 4$ (en $\\text{g}^2$) et pour espérance inconnue $\\mu$. Pour estimer $\\mu$, on prélève un échantillon de $n$ pièces et on calcule la masse moyenne $M_n$. On souhaite garantir $P(|M_n - \\mu| \\geqslant 0{,}5) \\leqslant 0{,}02$. Déterminer la plus petite taille d'échantillon $n$ qui assure ce risque.",
+      "corrige": [
+        "L'inégalité de concentration appliquée à la moyenne $M_n$ d'un échantillon donne : $P(|M_n - \\mu| \\geqslant \\delta) \\leqslant \\dfrac{V}{n\\,\\delta^2}$, avec ici $V = 4$ et $\\delta = 0{,}5$.",
+        "Il suffit d'imposer que le majorant soit inférieur ou égal au risque voulu : $\\dfrac{V}{n\\,\\delta^2} \\leqslant 0{,}02$.",
+        "On isole $n$ : $n \\geqslant \\dfrac{V}{0{,}02 \\times \\delta^2} = \\dfrac{4}{0{,}02 \\times 0{,}5^2} = \\dfrac{4}{0{,}02 \\times 0{,}25} = \\dfrac{4}{0{,}005} = 800$.",
+        "La condition $n \\geqslant 800$ étant déjà entière, la plus petite taille d'échantillon convenable est $n = 800$."
+      ],
+      "reponse": "Il faut $n \\geqslant 800$ : un échantillon de $800$ pièces garantit le risque demandé."
+    }
+  ]
+}

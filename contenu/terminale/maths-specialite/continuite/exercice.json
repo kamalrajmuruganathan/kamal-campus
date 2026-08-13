@@ -1,0 +1,96 @@
+{
+  "id": "tale-spe-math-continuite-exos",
+  "chapitre": "tale-spe-math-continuite",
+  "titre": "Exercices — Continuité et théorème des valeurs intermédiaires",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "Justifier que la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = \\dfrac{3x - 1}{x^2 + 2}$ est continue sur $\\mathbb{R}$.",
+      "corrige": [
+        "Le numérateur $x \\mapsto 3x - 1$ et le dénominateur $x \\mapsto x^2 + 2$ sont des polynômes : ils sont continus sur $\\mathbb{R}$.",
+        "Pour tout réel $x$, $x^2 + 2 \\geq 2 > 0$ : le dénominateur ne s'annule jamais.",
+        "Or un quotient de deux fonctions continues est continu en tout point où le dénominateur ne s'annule pas.",
+        "Donc $f$ est continue sur $\\mathbb{R}$. La continuité se justifie ici, elle ne se calcule pas à la main."
+      ],
+      "reponse": "$f$ est continue sur $\\mathbb{R}$ (quotient de fonctions continues dont le dénominateur ne s'annule jamais)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "suite-convergente",
+      "enonce": "Soit $(u_n)$ une suite qui converge vers $2$. On pose $v_n = \\sqrt{u_n + 7}$. Déterminer la limite de la suite $(v_n)$.",
+      "corrige": [
+        "On remarque que $v_n = f(u_n)$ avec $f(x) = \\sqrt{x + 7}$.",
+        "La fonction $f$ est continue sur $[-7\\,;+\\infty[$, donc en particulier en $2$ (car $2 + 7 = 9 > 0$).",
+        "D'après le théorème sur l'image d'une suite convergente : si $u_n \\to \\ell$ et si $f$ est continue en $\\ell$, alors $f(u_n) \\to f(\\ell)$.",
+        "Ici $\\ell = 2$, donc $v_n \\to f(2) = \\sqrt{2 + 7} = \\sqrt{9} = 3$."
+      ],
+      "reponse": "$\\displaystyle\\lim_{n \\to +\\infty} v_n = 3$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "bijection",
+      "enonce": "On considère la fonction $f$ définie sur $[0\\,;2]$ par $f(x) = x^3 + 3x - 4$. Montrer que l'équation $f(x) = 6$ admet une unique solution dans $[0\\,;2]$.",
+      "corrige": [
+        "$f$ est un polynôme : elle est continue (et dérivable) sur $[0\\,;2]$.",
+        "$f'(x) = 3x^2 + 3$. Pour tout $x$, $3x^2 \\geq 0$ donc $f'(x) \\geq 3 > 0$ : $f$ est strictement croissante sur $[0\\,;2]$.",
+        "On calcule les valeurs aux bornes : $f(0) = -4$ et $f(2) = 2^3 + 3\\times 2 - 4 = 8 + 6 - 4 = 10$.",
+        "Or $6$ est compris entre $-4$ et $10$. Comme $f$ est continue et strictement monotone, le théorème de la bijection donne une unique solution.",
+        "Donc l'équation $f(x) = 6$ admet une unique solution dans $[0\\,;2]$."
+      ],
+      "reponse": "L'équation admet une unique solution dans $[0\\,;2]$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "dichotomie",
+      "enonce": "Soit $f(x) = x^3 + 2x - 2$. On admet que l'équation $f(x) = 0$ possède une unique solution $\\alpha$, et l'on constate que $f(0) = -2 < 0$ et $f(1) = 1 > 0$. À l'aide de deux étapes de dichotomie sur $[0\\,;1]$, donner un encadrement de $\\alpha$ d'amplitude $0{,}25$.",
+      "corrige": [
+        "Étape 1 : milieu $m = \\dfrac{0 + 1}{2} = 0{,}5$. On calcule $f(0{,}5) = 0{,}5^3 + 2\\times 0{,}5 - 2 = 0{,}125 + 1 - 2 = -0{,}875 < 0$.",
+        "Comme $f(0{,}5) < 0$ et $f(1) > 0$ sont de signes contraires, la solution est dans $[0{,}5\\,;1]$.",
+        "Étape 2 : milieu $m = \\dfrac{0{,}5 + 1}{2} = 0{,}75$. On calcule $f(0{,}75) = 0{,}75^3 + 2\\times 0{,}75 - 2 = 0{,}421875 + 1{,}5 - 2 = -0{,}078125 < 0$.",
+        "Comme $f(0{,}75) < 0$ et $f(1) > 0$, la solution est dans $[0{,}75\\,;1]$, dont l'amplitude vaut $1 - 0{,}75 = 0{,}25$."
+      ],
+      "reponse": "$0{,}75 < \\alpha < 1$ (encadrement d'amplitude $0{,}25$)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f(x) = x^3 - 3x$ définie sur $[-2\\,;2]$. En étudiant les variations de $f$, déterminer le nombre de solutions de l'équation $f(x) = 1$ dans $[-2\\,;2]$.",
+      "corrige": [
+        "$f$ est un polynôme, donc continue et dérivable sur $[-2\\,;2]$. $f'(x) = 3x^2 - 3 = 3(x-1)(x+1)$, qui s'annule en $-1$ et $1$.",
+        "Signe de $f'$ : positif sur $[-2\\,;-1]$, négatif sur $[-1\\,;1]$, positif sur $[1\\,;2]$. Valeurs : $f(-2) = -2$, $f(-1) = 2$, $f(1) = -2$, $f(2) = 2$.",
+        "Sur $[-2\\,;-1]$, $f$ est continue et strictement croissante de $-2$ à $2$ ; $1$ est compris entre ces valeurs : une unique solution (bijection).",
+        "Sur $[-1\\,;1]$, $f$ est continue et strictement décroissante de $2$ à $-2$ ; $1$ est compris entre ces valeurs : une unique solution.",
+        "Sur $[1\\,;2]$, $f$ est continue et strictement croissante de $-2$ à $2$ ; $1$ est compris entre ces valeurs : une unique solution.",
+        "En additionnant les solutions des trois morceaux, l'équation $f(x) = 1$ admet $3$ solutions dans $[-2\\,;2]$."
+      ],
+      "reponse": "L'équation admet $3$ solutions dans $[-2\\,;2]$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "suite-recurrente",
+      "enonce": "On considère la suite définie par $u_0 = 0$ et $u_{n+1} = \\sqrt{u_n + 6}$. On admet que $(u_n)$ est croissante et majorée par $3$, donc convergente vers une limite $\\ell \\geq 0$. En utilisant la continuité de $f(x) = \\sqrt{x + 6}$, déterminer $\\ell$.",
+      "corrige": [
+        "On a $u_{n+1} = f(u_n)$ avec $f(x) = \\sqrt{x + 6}$, fonction continue sur $[-6\\,;+\\infty[$, donc continue en $\\ell$.",
+        "La suite converge vers $\\ell$ (admis). Par l'image d'une suite convergente, $f(u_n) \\to f(\\ell)$ ; or $f(u_n) = u_{n+1} \\to \\ell$. Par unicité de la limite, $\\ell = f(\\ell)$, soit $\\sqrt{\\ell + 6} = \\ell$.",
+        "Comme $\\ell \\geq 0$, on élève au carré : $\\ell + 6 = \\ell^2$, c'est-à-dire $\\ell^2 - \\ell - 6 = 0$.",
+        "$\\Delta = (-1)^2 - 4\\times 1 \\times (-6) = 25$, $\\sqrt{\\Delta} = 5$ : $\\ell = \\dfrac{1 - 5}{2} = -2$ ou $\\ell = \\dfrac{1 + 5}{2} = 3$.",
+        "Comme $\\ell \\geq 0$, on retient $\\ell = 3$."
+      ],
+      "reponse": "$\\ell = 3$."
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "tale-spe-math-combinatoire-denombrement-exos",
+  "chapitre": "tale-spe-math-combinatoire-denombrement",
+  "titre": "Exercices — Combinatoire et dénombrement",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "principe-multiplicatif",
+      "enonce": "Pour s'habiller, Léa choisit un haut parmi $4$, un bas parmi $3$ et une paire de chaussures parmi $2$. Combien de tenues différentes peut-elle composer ?",
+      "corrige": [
+        "La tenue se forme en trois étapes successives (un haut **et** un bas **et** des chaussures), et le nombre de possibilités à chaque étape ne dépend pas des choix précédents : on applique le principe multiplicatif.",
+        "Étape 1 : $4$ hauts. Étape 2 : $3$ bas. Étape 3 : $2$ paires de chaussures.",
+        "On multiplie : $4 \\times 3 \\times 2 = 24$."
+      ],
+      "reponse": "$24$ tenues différentes."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "combinaison",
+      "enonce": "Une plateforme propose $8$ films. On veut en sélectionner $3$ pour une soirée, sans se soucier de l'ordre de visionnage. Combien de sélections possibles ?",
+      "corrige": [
+        "On choisit un sous-ensemble de $3$ films parmi $8$ et l'ordre n'a pas d'importance : c'est une combinaison $\\binom{8}{3}$.",
+        "$\\binom{8}{3} = \\dfrac{8 \\times 7 \\times 6}{3!}$ (on ne garde que les $3$ premiers facteurs de $8!$, divisés par $3! = 6$).",
+        "$\\dfrac{8 \\times 7 \\times 6}{6} = \\dfrac{336}{6} = 56$."
+      ],
+      "reponse": "$\\binom{8}{3} = 56$ sélections."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "combinaison",
+      "enonce": "Dans un club de $10$ membres, on constitue un bureau de $4$ personnes, puis on désigne parmi ces $4$ un président. Combien de bureaux avec président sont possibles ?",
+      "corrige": [
+        "Le problème se fait en deux étapes successives, donc on multipliera les résultats (principe multiplicatif).",
+        "Étape 1 — choisir les $4$ membres du bureau parmi $10$ : l'ordre entre eux n'importe pas, c'est une combinaison $\\binom{10}{4} = \\dfrac{10 \\times 9 \\times 8 \\times 7}{4!} = \\dfrac{5040}{24} = 210$.",
+        "Étape 2 — désigner le président parmi les $4$ membres retenus : $4$ possibilités.",
+        "On multiplie : $210 \\times 4 = 840$."
+      ],
+      "reponse": "$840$ bureaux avec président."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "p-liste",
+      "enonce": "On forme des codes de $4$ chiffres (chaque chiffre de $0$ à $9$). Combien de ces codes contiennent au moins une répétition d'un chiffre ?",
+      "corrige": [
+        "On passe par le complémentaire : (codes avec au moins une répétition) = (tous les codes) − (codes sans aucune répétition).",
+        "Tous les codes : chaque position a $10$ choix indépendants avec répétition autorisée, c'est une $4$-liste, soit $10^4 = 10\\,000$.",
+        "Codes sans répétition : les $4$ chiffres sont distincts et l'ordre compte, c'est un arrangement $A_{10}^4 = 10 \\times 9 \\times 8 \\times 7 = 5040$.",
+        "On soustrait : $10\\,000 - 5040 = 4960$."
+      ],
+      "reponse": "$4960$ codes contiennent au moins une répétition."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "combinaison",
+      "enonce": "On cherche un entier $n \\geqslant 2$ tel que le nombre de façons de choisir $2$ éléments parmi $n$ (sans ordre) soit égal à $45$. Autrement dit, résoudre $\\binom{n}{2} = 45$. Déterminer $n$.",
+      "corrige": [
+        "On traduit avec la formule de la combinaison : $\\binom{n}{2} = \\dfrac{n(n-1)}{2}$.",
+        "L'équation devient $\\dfrac{n(n-1)}{2} = 45$, soit $n(n-1) = 90$.",
+        "On cherche donc deux entiers consécutifs dont le produit vaut $90$ : comme $9 \\times 10 = 90$, on prend $n-1 = 9$ et $n = 10$.",
+        "Vérification : $\\binom{10}{2} = \\dfrac{10 \\times 9}{2} = 45$."
+      ],
+      "reponse": "$n = 10$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "combinaison",
+      "enonce": "On place $7$ points dans un plan, disposés de sorte que jamais trois d'entre eux ne soient alignés. 1) Combien de droites passent par deux de ces points ? 2) Combien de triangles peut-on former en prenant trois de ces points comme sommets ?",
+      "corrige": [
+        "Une droite est déterminée par le choix de $2$ points parmi $7$ ; l'ordre des deux points ne change pas la droite, c'est donc une combinaison $\\binom{7}{2}$.",
+        "$\\binom{7}{2} = \\dfrac{7 \\times 6}{2} = 21$ droites. (L'hypothèse « jamais trois alignés » garantit que deux paires distinctes donnent bien deux droites distinctes.)",
+        "Un triangle est déterminé par le choix de $3$ points parmi $7$, sans ordre : combinaison $\\binom{7}{3}$.",
+        "$\\binom{7}{3} = \\dfrac{7 \\times 6 \\times 5}{3!} = \\dfrac{210}{6} = 35$ triangles. (Comme aucun trio n'est aligné, chaque choix de $3$ points forme bien un vrai triangle.)"
+      ],
+      "reponse": "$21$ droites et $35$ triangles."
+    }
+  ]
+}

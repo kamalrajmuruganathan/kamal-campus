@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-math-derivation-convexite-exos",
+  "chapitre": "tale-spe-math-derivation-convexite",
+  "titre": "Exercices — Compléments sur la dérivation : composée et convexité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "composee",
+      "enonce": "Dériver $f(x) = (x^2 + 3x)^4$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "C'est une forme $u^n$ avec $u(x) = x^2 + 3x$ et $n = 4$. La dérivée est $n\\,u'\\,u^{n-1}$.",
+        "On calcule d'abord $u'(x) = 2x + 3$.",
+        "On applique la formule : $f'(x) = 4 \\times (2x+3) \\times (x^2+3x)^{3}$.",
+        "Soit $f'(x) = 4(2x+3)(x^2+3x)^3$. Le facteur $u' = 2x+3$ est celui à ne pas oublier."
+      ],
+      "reponse": "$f'(x) = 4(2x+3)(x^2+3x)^3$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "formules-usuelles",
+      "enonce": "Dériver $f(x) = \\dfrac{1}{x^2 + 1}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "C'est une forme $\\dfrac{1}{u}$ avec $u(x) = x^2 + 1$, qui ne s'annule jamais. Sa dérivée est $-\\dfrac{u'}{u^2}$.",
+        "On calcule $u'(x) = 2x$.",
+        "On applique la formule : $f'(x) = -\\dfrac{2x}{(x^2+1)^2}$.",
+        "On garde bien le signe moins et le $u' = 2x$ au numérateur."
+      ],
+      "reponse": "$f'(x) = -\\dfrac{2x}{(x^2+1)^2}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "convexite",
+      "enonce": "Soit $f(x) = x^3 - 3x^2 + 2$. Étudier la convexité de $f$ sur $\\mathbb{R}$ et préciser son éventuel point d'inflexion.",
+      "corrige": [
+        "On dérive une première fois : $f'(x) = 3x^2 - 6x$.",
+        "On dérive une seconde fois : $f''(x) = 6x - 6 = 6(x-1)$.",
+        "Signe de $f''$ : $f''(x) < 0$ pour $x < 1$ et $f''(x) > 0$ pour $x > 1$. Donc $f$ est concave sur $]-\\infty\\,;1]$ et convexe sur $[1\\,;+\\infty[$.",
+        "En $x = 1$, $f''$ s'annule en changeant de signe : c'est un point d'inflexion. Comme $f(1) = 1 - 3 + 2 = 0$, ce point est $(1\\,;0)$."
+      ],
+      "reponse": "$f$ est concave sur $]-\\infty\\,;1]$, convexe sur $[1\\,;+\\infty[$ ; point d'inflexion en $(1\\,;0)$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "point-inflexion",
+      "enonce": "Soit $f(x) = x^4 - 6x^2$. Déterminer les points d'inflexion de sa courbe.",
+      "corrige": [
+        "On calcule les deux dérivées : $f'(x) = 4x^3 - 12x$, puis $f''(x) = 12x^2 - 12$.",
+        "On factorise : $f''(x) = 12(x^2 - 1) = 12(x-1)(x+1)$.",
+        "$f''$ s'annule en $x = -1$ et $x = 1$. Signe : $f''(x) > 0$ pour $x < -1$, $f''(x) < 0$ pour $-1 < x < 1$, $f''(x) > 0$ pour $x > 1$.",
+        "En $x = -1$ et en $x = 1$, $f''$ change de signe : ce sont deux points d'inflexion. On calcule $f(-1) = 1 - 6 = -5$ et $f(1) = 1 - 6 = -5$.",
+        "Les points d'inflexion sont donc $(-1\\,;-5)$ et $(1\\,;-5)$."
+      ],
+      "reponse": "Deux points d'inflexion : $(-1\\,;-5)$ et $(1\\,;-5)$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "inegalite-tangente",
+      "enonce": "On veut démontrer que $\\mathrm{e}^{x} \\geqslant \\mathrm{e}\\,x$ pour tout réel $x$. On pose $f(x) = \\mathrm{e}^{x}$. a) Justifier que $f$ est convexe sur $\\mathbb{R}$. b) Déterminer l'équation de la tangente à la courbe de $f$ au point d'abscisse $1$. c) Conclure.",
+      "corrige": [
+        "a) On a $f'(x) = \\mathrm{e}^{x}$ puis $f''(x) = \\mathrm{e}^{x}$. Comme $\\mathrm{e}^{x} > 0$ pour tout $x$, on a $f'' > 0$ : $f$ est convexe sur $\\mathbb{R}$.",
+        "b) La tangente au point d'abscisse $1$ a pour équation $y = f'(1)(x-1) + f(1)$. Avec $f(1) = \\mathrm{e}$ et $f'(1) = \\mathrm{e}$ : $y = \\mathrm{e}(x-1) + \\mathrm{e} = \\mathrm{e}\\,x$.",
+        "c) Une fonction convexe est située au-dessus de toutes ses tangentes. Donc pour tout réel $x$, $\\mathrm{e}^{x} \\geqslant \\mathrm{e}\\,x$, avec égalité en $x = 1$."
+      ],
+      "reponse": "$f$ est convexe car $f'' = \\mathrm{e}^x > 0$ ; la tangente en $1$ est $y = \\mathrm{e}\\,x$ ; comme la courbe convexe est au-dessus de sa tangente, $\\mathrm{e}^{x} \\geqslant \\mathrm{e}\\,x$ pour tout réel $x$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "convexite",
+      "enonce": "Soit $m$ un réel et $f_m(x) = x^3 + m x^2$. Pour quelles valeurs de $m$ la fonction $f_m$ est-elle convexe sur l'intervalle $[0\\,;+\\infty[$ ?",
+      "corrige": [
+        "On calcule les dérivées : $f_m'(x) = 3x^2 + 2mx$, puis $f_m''(x) = 6x + 2m$.",
+        "$f_m$ est convexe sur $[0\\,;+\\infty[$ si et seulement si $f_m''(x) \\geqslant 0$ pour tout $x \\geqslant 0$, c'est-à-dire $6x + 2m \\geqslant 0$ sur $[0\\,;+\\infty[$.",
+        "La fonction $x \\mapsto 6x + 2m$ est croissante : sur $[0\\,;+\\infty[$ elle atteint sa plus petite valeur en $x = 0$, où elle vaut $2m$.",
+        "La condition « $6x + 2m \\geqslant 0$ pour tout $x \\geqslant 0$ » équivaut donc à $2m \\geqslant 0$, soit $m \\geqslant 0$."
+      ],
+      "reponse": "$f_m$ est convexe sur $[0\\,;+\\infty[$ si et seulement si $m \\geqslant 0$."
+    }
+  ]
+}

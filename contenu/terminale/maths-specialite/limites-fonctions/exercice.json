@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-math-limites-fonctions-exos",
+  "chapitre": "tale-spe-math-limites-fonctions",
+  "titre": "Exercices — Limites de fonctions",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "fonctions-reference",
+      "enonce": "Déterminer, en utilisant les limites usuelles du cours : $\\displaystyle\\lim_{x \\to -\\infty} x^5$, $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x^2}$ et $\\displaystyle\\lim_{x \\to -\\infty} e^x$.",
+      "corrige": [
+        "Ce sont trois limites de fonctions de référence, à lire directement dans le tableau du cours.",
+        "$\\displaystyle\\lim_{x \\to -\\infty} x^5 = -\\infty$ : la puissance a un exposant impair ($n = 5$), donc en $-\\infty$ la limite est $-\\infty$.",
+        "$\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x^2} = 0$ : l'inverse d'une puissance qui tend vers $+\\infty$ tend vers $0$.",
+        "$\\displaystyle\\lim_{x \\to -\\infty} e^x = 0$ : en $-\\infty$, l'exponentielle s'écrase sur l'axe des abscisses."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to -\\infty} x^5 = -\\infty$, $\\;\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x^2} = 0$, $\\;\\displaystyle\\lim_{x \\to -\\infty} e^x = 0$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "asymptote",
+      "enonce": "La courbe d'une fonction $f$ vérifie $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 3$, $\\displaystyle\\lim_{x \\to -\\infty} f(x) = 3$, ainsi que $\\displaystyle\\lim_{x \\to 2} f(x) = +\\infty$. Préciser les asymptotes parallèles aux axes de cette courbe.",
+      "corrige": [
+        "Une limite finie $\\ell$ quand $x \\to \\pm\\infty$ se traduit par une asymptote horizontale $y = \\ell$.",
+        "Ici $\\displaystyle\\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to -\\infty} f(x) = 3$ : la droite $y = 3$ est asymptote horizontale des deux côtés.",
+        "Une limite infinie en un point $a$ se traduit par une asymptote verticale $x = a$.",
+        "Ici $\\displaystyle\\lim_{x \\to 2} f(x) = +\\infty$ : la droite $x = 2$ est asymptote verticale."
+      ],
+      "reponse": "Asymptote horizontale $y = 3$ (en $+\\infty$ et en $-\\infty$) et asymptote verticale $x = 2$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x \\to -\\infty} \\big(2x^3 + 5x^2 - 1\\big)$.",
+      "corrige": [
+        "Quand $x \\to -\\infty$, $2x^3 \\to -\\infty$ et $5x^2 \\to +\\infty$ : on est face à une forme indéterminée $\\infty - \\infty$.",
+        "On factorise par le terme de plus haut degré $x^3$ : $2x^3 + 5x^2 - 1 = x^3\\Big(2 + \\dfrac{5}{x} - \\dfrac{1}{x^3}\\Big)$.",
+        "Quand $x \\to -\\infty$ : $\\dfrac{5}{x} \\to 0$ et $\\dfrac{1}{x^3} \\to 0$, donc la parenthèse tend vers $2$.",
+        "$x^3 \\to -\\infty$ et la parenthèse tend vers $2 > 0$, donc par produit la limite est $-\\infty$."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to -\\infty} \\big(2x^3 + 5x^2 - 1\\big) = -\\infty$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x \\to 1} \\dfrac{x^2 - 3x + 2}{x - 1}$.",
+      "corrige": [
+        "En $x = 1$ : le numérateur vaut $1 - 3 + 2 = 0$ et le dénominateur $1 - 1 = 0$. C'est une forme indéterminée $\\dfrac{0}{0}$.",
+        "On factorise le numérateur, dont $1$ et $2$ sont les racines : $x^2 - 3x + 2 = (x - 1)(x - 2)$.",
+        "Pour $x \\neq 1$, on simplifie par $(x - 1)$ : $\\dfrac{(x - 1)(x - 2)}{x - 1} = x - 2$.",
+        "Il reste $\\displaystyle\\lim_{x \\to 1} (x - 2) = 1 - 2 = -1$."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to 1} \\dfrac{x^2 - 3x + 2}{x - 1} = -1$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "comparaison",
+      "enonce": "En encadrant $\\sin x$, démontrer que $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\sin x}{x} = 0$.",
+      "corrige": [
+        "Pour tout réel $x$, on a l'encadrement $-1 \\leq \\sin x \\leq 1$.",
+        "Pour $x > 0$, on divise cet encadrement par $x > 0$ (ce qui ne change pas le sens des inégalités) : $-\\dfrac{1}{x} \\leq \\dfrac{\\sin x}{x} \\leq \\dfrac{1}{x}$.",
+        "Quand $x \\to +\\infty$, $-\\dfrac{1}{x} \\to 0$ et $\\dfrac{1}{x} \\to 0$ : les deux bornes ont la même limite finie $0$.",
+        "D'après le théorème des gendarmes, $\\dfrac{\\sin x}{x}$ est coincé entre deux quantités de limite $0$, donc $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\sin x}{x} = 0$."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\sin x}{x} = 0$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x \\to +\\infty} \\big(e^x - x^2\\big)$.",
+      "corrige": [
+        "Quand $x \\to +\\infty$, $e^x \\to +\\infty$ et $x^2 \\to +\\infty$ : on est face à une forme indéterminée $\\infty - \\infty$.",
+        "On factorise par le terme dominant $e^x$ : $e^x - x^2 = e^x\\Big(1 - \\dfrac{x^2}{e^x}\\Big)$.",
+        "Par croissance comparée, $\\dfrac{e^x}{x^2} \\to +\\infty$, donc son inverse $\\dfrac{x^2}{e^x} \\to 0$ : la parenthèse tend vers $1$.",
+        "$e^x \\to +\\infty$ et la parenthèse tend vers $1 > 0$, donc par produit la limite est $+\\infty$."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to +\\infty} \\big(e^x - x^2\\big) = +\\infty$."
+    }
+  ]
+}

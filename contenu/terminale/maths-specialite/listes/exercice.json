@@ -1,0 +1,97 @@
+{
+  "id": "tale-spe-math-listes-exos",
+  "chapitre": "tale-spe-math-listes",
+  "titre": "Exercices — Algorithmique : listes",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "comprehension",
+      "enonce": "Écris **en compréhension** la liste des cubes $x^3$ pour $x$ allant de $0$ à $4$ (inclus), puis donne la liste obtenue.",
+      "corrige": [
+        "Schéma d'une liste en compréhension : `[f(x) for x in ...]`. Ici $f(x) = x^3$, ce qui s'écrit `x**3`.",
+        "$x$ doit parcourir $0, 1, 2, 3, 4$, soit `range(5)` (la borne de droite $5$ est **exclue**).",
+        "On écrit donc : `[x**3 for x in range(5)]`.",
+        "Déroulé du calcul : $0^3 = 0$, $1^3 = 1$, $2^3 = 8$, $3^3 = 27$, $4^3 = 64$.",
+        "La liste vaut `[0, 1, 8, 27, 64]`."
+      ],
+      "reponse": "`[x**3 for x in range(5)]`, qui vaut `[0, 1, 8, 27, 64]`."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "indices",
+      "enonce": "On pose `L = [7, 3, 9, 4, 8]`. Donne les valeurs de `L[0]`, `L[2]`, `L[-1]` et `len(L)`.",
+      "corrige": [
+        "On repère d'abord les indices, qui **commencent à $0$** : `7` est à l'indice $0$, `3` à l'indice $1$, `9` à l'indice $2$, `4` à l'indice $3$, `8` à l'indice $4$.",
+        "`L[0]` est le **premier** élément : `L[0] = 7`.",
+        "`L[2]` est l'élément d'indice $2$, c'est-à-dire le **troisième** : `L[2] = 9`.",
+        "`L[-1]` est le **dernier** élément : `L[-1] = 8`.",
+        "`len(L)` est le **nombre d'éléments** : la liste en compte cinq, donc `len(L) = 5` (attention, le dernier indice valide est $4 = $ `len(L) - 1`)."
+      ],
+      "reponse": "`L[0] = 7`, `L[2] = 9`, `L[-1] = 8`, `len(L) = 5`."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "manipulation",
+      "enonce": "On part de `L = [10, 20, 30]` et on exécute, **dans l'ordre**, les trois lignes suivantes :\n```python\nL.append(40)\nL.insert(1, 99)\ndel L[0]\n```\nDonne le contenu de `L` après **chaque** ligne.",
+      "corrige": [
+        "État de départ : `L = [10, 20, 30]`.",
+        "`L.append(40)` **ajoute `40` à la fin** de la liste : `L = [10, 20, 30, 40]`.",
+        "`L.insert(1, 99)` **insère `99` à l'indice $1$** ; tout ce qui suit est décalé d'un cran vers la droite : `L = [10, 99, 20, 30, 40]`.",
+        "`del L[0]` **supprime l'élément d'indice $0$**, c'est-à-dire le `10` : `L = [99, 20, 30, 40]`."
+      ],
+      "reponse": "Après les trois lignes : `L = [99, 20, 30, 40]`."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "manipulation-ajouts",
+      "enonce": "Écris, **par ajouts successifs** (liste vide, puis boucle `for` avec `append`), le code qui construit la liste des multiples de $3$ compris entre $3$ et $18$ inclus. Donne aussi la liste finale.",
+      "corrige": [
+        "Les multiples de $3$ voulus sont $3, 6, 9, 12, 15, 18$. Pour les produire avec un pas de $3$, on utilise `range(3, 19, 3)` : départ $3$ **inclus**, arrivée $19$ **exclue** (donc $18$ est le dernier atteint), pas de $3$.",
+        "On part d'une liste vide et on remplit avec `append` :\n```python\nL = []\nfor i in range(3, 19, 3):\n    L.append(i)\n```",
+        "Déroulé de la boucle : `i` prend les valeurs $3, 6, 9, 12, 15, 18$ ; à chaque tour `append(i)` ajoute la valeur à la fin.",
+        "À la fin, `L = [3, 6, 9, 12, 15, 18]`."
+      ],
+      "reponse": "Le code ci-dessus construit `L = [3, 6, 9, 12, 15, 18]`."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "combinatoire",
+      "enonce": "On lance deux fois de suite un dé à quatre faces numérotées de $1$ à $4$.\n\n**a.** Écris en compréhension la liste `issues` de tous les couples $(a, b)$ possibles.\n**b.** Combien y a-t-il d'issues ? Vérifie que `len(issues)` donne bien le cardinal attendu par la combinatoire.\n**c.** Écris, par compréhension **avec filtre**, la liste des couples dont la somme vaut $5$, et donne cette liste.",
+      "corrige": [
+        "**a.** On énumère tous les couples $(a, b)$ avec $a$ et $b$ dans $\\{1, 2, 3, 4\\}$, soit `range(1, 5)` : `issues = [(a, b) for a in range(1, 5) for b in range(1, 5)]`.",
+        "**b.** Il y a $4$ choix pour $a$ et, pour chacun, $4$ choix pour $b$ : c'est le produit cartésien $\\{1,2,3,4\\} \\times \\{1,2,3,4\\}$, de cardinal $4 \\times 4 = 16$. La longueur de la liste **est** ce cardinal : `len(issues) = 16`.",
+        "**c.** On ajoute le filtre `if a + b == 5` : `[(a, b) for a in range(1, 5) for b in range(1, 5) if a + b == 5]`.",
+        "Déroulé : les couples de somme $5$ sont $(1,4)$, $(2,3)$, $(3,2)$, $(4,1)$. La liste vaut `[(1, 4), (2, 3), (3, 2), (4, 1)]`, soit $4$ couples."
+      ],
+      "reponse": "**a.** `[(a, b) for a in range(1, 5) for b in range(1, 5)]` ; **b.** `len(issues) = 16 = 4 \\times 4` ; **c.** `[(1, 4), (2, 3), (3, 2), (4, 1)]`."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "parcours",
+      "enonce": "On cherche le plus grand élément d'une liste **non vide** `L` en la parcourant par les indices :\n```python\nmaxi = L[0]\nfor i in range(1, len(L)):\n    if L[i] > maxi:\n        maxi = L[i]\n```\n**a.** Pourquoi initialise-t-on `maxi` avec `L[0]`, et pourquoi la boucle commence-t-elle à l'indice $1$ ?\n**b.** Déroule l'exécution sur `L = [3, 9, 2, 9, 5]` : donne la valeur de `maxi` à chaque tour.\n**c.** Que vaut `maxi` à la fin ?",
+      "corrige": [
+        "**a.** `L[0]` est le premier élément : c'est un candidat de départ sûr puisque `L` est non vide. La boucle commence à l'indice $1$ car comparer `L[0]` à lui-même est inutile ; on parcourt donc `range(1, len(L))`, soit les indices $1$ jusqu'à `len(L) - 1` (le dernier indice valide).",
+        "**b.** Initialisation : `maxi = L[0] = 3`.",
+        "Tour `i = 1` : `L[1] = 9`, et $9 > 3$ est **vrai**, donc `maxi` devient $9$.",
+        "Tour `i = 2` : `L[2] = 2`, et $2 > 9$ est **faux**, `maxi` reste $9$.",
+        "Tour `i = 3` : `L[3] = 9`, et $9 > 9$ est **faux** (strictement supérieur), `maxi` reste $9$.",
+        "Tour `i = 4` : `L[4] = 5`, et $5 > 9$ est **faux**, `maxi` reste $9$.",
+        "**c.** La boucle est terminée (indice $4 = $ `len(L) - 1` atteint) : `maxi = 9`."
+      ],
+      "reponse": "`maxi` prend les valeurs $3, 9, 9, 9, 9$ ; à la fin `maxi = 9`."
+    }
+  ]
+}
