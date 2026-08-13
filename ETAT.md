@@ -1,7 +1,8 @@
 # Kamal Campus — État du contenu
 
-> Mis à jour le 2026-08-13. **Tout le collège de mathématiques est couvert (6e→3e)**,
-> en plus du périmètre v1 lycée. 100 chapitres, 1000 questions.
+> Mis à jour le 2026-08-13. **Toutes les mathématiques du collège à la Terminale
+> spécialité sont couvertes** (6e → Terminale), en plus du périmètre v1 lycée.
+> 115 chapitres, 1150 questions.
 
 ## Couverture
 
@@ -18,7 +19,15 @@
 | Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
 | Première **physique-chimie** | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
 | Première STI2D/STL — PC et maths | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
-| **Total** | **100** | **1000** | |
+| **Terminale spécialité maths** | 15 | 150 | Programme rentrée 2027 *(voir note source)* |
+| **Total** | **115** | **1150** | |
+
+> ⚠️ **Terminale spé maths — source de moindre garantie.** Le proxy du sandbox
+> bloquant le téléchargement du PDF, le programme a été reconstitué via WebFetch
+> depuis le miroir xm1math.net (fichier
+> `docs/programme-terminale-specialite-maths-2027.txt`, avertissement en tête).
+> À confronter au PDF officiel avant publication — niveau de confiance
+> explicitement plus bas que le reste, écrit dans chaque fiche.
 
 **Le collège de mathématiques est complet** : les quatre niveaux couvrent chacun
 l'intégralité des entrées de leur programme (cycle 3 pour la 6e, cycle 4 pour
@@ -64,7 +73,7 @@ principaux, tous consignés dans les notes de production des fiches concernées 
   l'addition ; la soustraction, les parenthèses et l'enchaînement, pourtant
   exigés (l. 413-417), ont été ajoutés.
 
-## Contrôles automatiques — au vert sur les 100 chapitres
+## Contrôles automatiques — au vert sur les 115 chapitres
 
 Ces contrôles sont désormais outillés dans un script versionné, à relancer après
 tout ajout :
@@ -77,12 +86,12 @@ Il vérifie, pour chaque chapitre : en-tête YAML complet, refus de `publie` san
 relecture, JSON valide, 10 questions, 4 choix, index de réponse dans les bornes,
 explications non vides, ids 1→10, absence de choix en double, cohérence
 fiche/QCM, et unicité des identifiants sur tout le corpus. Dernier passage :
-**100 chapitres, 1000 questions, tout au vert.** Il ne dit rien de l'exactitude
+**115 chapitres, 1150 questions, tout au vert.** Il ne dit rien de l'exactitude
 mathématique — seule la relecture humaine le peut.
 
 ## ⚠️ Aucune fiche n'a été relue
 
-**Les 100 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
+**Les 115 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
 La règle du gabarit interdit le passage en `publie` tant qu'un professeur de la matière n'a
 pas relu. Elle n'est pas négociable : une formule fausse fait perdre des points à un élève.
 
@@ -116,8 +125,13 @@ existants deviennent périmés en septembre.
 La **physique-chimie n'a pas été réformée** : le programme de 2019 reste en vigueur. Ce contenu
 est donc stable et n'expirera pas.
 
-⚠️ **La Terminale reste volontairement hors périmètre** : son programme de maths change à la
-rentrée 2027-2028. Tout contenu produit maintenant expirerait.
+⚠️ **La Terminale de maths a été ouverte sur le programme rentrée 2027** (déjà
+publié), à la demande de l'utilisateur qui veut couvrir tout le programme. Le
+choix initial du projet (« rien pour la Terminale avant 2027 ») visait l'ancien
+programme, qui expirait ; bâtir directement sur le nouveau ne présente pas ce
+risque. Réserve : la source de ce programme est une extraction WebFetch (voir
+l'encart en haut), de moindre garantie que les PDF officiels du collège et de la
+première.
 
 ## Outils de calcul
 
@@ -201,16 +215,22 @@ d'entrées brutes du sommaire officiel. Chaque entrée du programme est couverte
 
 ## Ce qui n'est PAS encore couvert
 
-- **Terminale** — maths (spécialité, complémentaires, expertes) et physique-chimie.
-  Le nouveau programme de maths de Terminale s'applique à la **rentrée 2027** ; il
-  est déjà publié (mirror xm1math : `term_gen_spe.pdf`, `term_maths_compl.pdf`,
-  `term_techno.pdf`). ⚠️ Ces PDF ne sont **pas encore dans `docs/`** : ils doivent
-  être réextraits proprement avec `app/scripts/extraire-pdf.mjs` avant toute
-  production, comme pour tout le reste — produire depuis une source résumée
-  trahirait la règle « seule source = le texte officiel exact ».
-- **Physique-chimie du collège** (cycle 4 : 5e/4e/3e, et sciences en 6e) — le
-  programme officiel n'est pas non plus dans `docs/`.
+- **Terminale — maths complémentaires et maths expertes.** Le programme de maths
+  complémentaires est sur le miroir xm1math (`term_maths_compl.pdf`) et donc
+  récupérable via WebFetch comme la spécialité. « Maths expertes » n'y figure pas
+  et demandera une autre source.
+- **Terminale — maths technologiques** (`term_techno.pdf` sur le miroir,
+  récupérable via WebFetch).
+- **Toute la physique-chimie hors lycée v1** : Terminale PC, et **physique-chimie
+  du collège** (cycle 4 : 5e/4e/3e, et sciences physiques en 6e). ⚠️ Aucun de ces
+  programmes n'est dans `docs/`, et le miroir xm1math est **maths uniquement** :
+  il faudra une source officielle pour la PC (le PDF déposé dans `docs/`, ou une
+  URL que WebFetch puisse atteindre) avant de pouvoir produire quoi que ce soit.
 - **Voie technologique au-delà de STI2D/STL** (STMG, ST2S, STD2A, STHR, S2TMD).
+
+**En résumé : toutes les mathématiques du collège à la Terminale spécialité sont
+couvertes.** Restent des options de Terminale (compl./expertes/techno) et
+l'ensemble de la physique-chimie au-delà du périmètre v1 lycée.
 
 ## Ce qui reste à faire
 
@@ -221,7 +241,7 @@ d'entrées brutes du sommaire officiel. Chaque entrée du programme est couverte
 2. **Trancher la date de BO du cycle 4** (voir plus haut) et harmoniser les fiches.
 3. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue.
 4. **Réextraire les programmes de Terminale** dans `docs/`, puis produire.
-5. ✅ Contenu — **100 chapitres, 1000 questions** (lycée v1 + collège complet).
+5. ✅ Contenu — **115 chapitres, 1150 questions** (lycée v1 + collège complet).
 6. ✅ Collège de mathématiques complet — 6e à 3e, 54 chapitres.
 7. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**.
 8. ✅ Application Expo — écrite **et compilée**.
