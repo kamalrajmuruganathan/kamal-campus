@@ -14,10 +14,15 @@ Un chapitre = un répertoire, trois fichiers.
 
 ```
 contenu/<niveau>/<parcours>/<chapitre>/
-├── fiche.md      le cours
-├── qcm.json      les questions
-└── outil.json    (optionnel) déclaration de l'outil de calcul associé
+├── fiche.md        le COURS
+├── exercice.json   les EXERCICES (énoncés + corrigés rédigés)
+├── qcm.json        le QCM
+└── outil.json      (optionnel) OUTIL de calcul associé
 ```
+
+Ce sont les quatre briques d'un chapitre dans l'application : **Cours, Exercices,
+QCM, Outils**. La fiche et le QCM sont obligatoires ; les exercices sont attendus
+partout ; l'outil n'existe que pour les chapitres calculatoires.
 
 Règles de nommage : **minuscules, tirets, sans accents**. Ni espaces ni majuscules —
 Gradle et CocoaPods échouent dessus.
@@ -136,6 +141,48 @@ jq -r '.questions[] | select((.choix|length) != 4) | .id' qcm.json
 
 ---
 
+## 3 bis. `exercice.json` — les exercices
+
+Structure, calquée sur `qcm.json` :
+
+```json
+{
+  "id": "<id-de-la-fiche>-exos",
+  "chapitre": "<id-de-la-fiche>",
+  "titre": "Exercices — <titre>",
+  "voie": "...", "niveau": "...", "parcours": "...", "matiere": "...",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",     // application | intermediaire | approfondissement
+      "notion": "forme-canonique",     // renvoie à une section de la fiche
+      "enonce": "…",                    // Markdown + LaTeX ($...$)
+      "corrige": ["étape 1", "étape 2", "…"],  // tableau d'étapes rédigées
+      "reponse": "…"                    // la réponse finale, isolée
+    }
+  ]
+}
+```
+
+### Règles
+
+- **6 exercices** par chapitre : **2 application** (technique directe), **2 intermédiaires**,
+  **2 approfondissement** (problème, paramètre, modélisation).
+- Le **corrigé est un tableau d'étapes** : il montre le raisonnement, pas seulement la réponse.
+  C'est ce qui distingue l'exercice corrigé d'un simple corrigé de manuel.
+- `enonce`, `corrige` (non vide) et `reponse` sont **obligatoires**. LaTeX autorisé partout
+  (échapper les `\` en JSON : `\\`).
+- Comme la fiche, `statut: brouillon` / `relu_par: null` tant qu'un professeur n'a pas relu.
+- Dans l'application, le corrigé reste **caché** jusqu'à ce que l'élève le demande.
+
+Contrôle : `outils/verifier-contenu.sh` valide la structure (JSON, énoncés et corrigés
+non vides, lien `chapitre` = id de la fiche).
+
+---
+
 ## 4. Outil de calcul — quand et comment
 
 Un chapitre n'a **pas forcément** d'outil. On en ajoute un seulement quand il y a un calcul
@@ -161,6 +208,26 @@ Constatées sur `app/lib/second-degre.js`, à reprendre :
 - Refuser proprement les cas invalides, avec un message qui **enseigne**
   (« si a = 0, la fonction est affine »).
 - **Tests obligatoires** couvrant tous les cas de figure avant intégration.
+
+### Lier un chapitre à un outil — `outil.json`
+
+Un chapitre calculatoire déclare le ou les outils que l'application doit lui
+proposer :
+
+```json
+{
+  "chapitre": "<id-de-la-fiche>",
+  "outils": ["second-degre"]
+}
+```
+
+Les identifiants doivent exister dans l'écran Outils de l'application
+(`app/src/ecrans/Outils.js`). Ceux disponibles aujourd'hui :
+`second-degre`, `suite-arith`, `suite-geom`, `stats`, `derivee`,
+`masse-molaire`, `dilution`, `energie-cinetique`, `loi-ohm`. Ajouter un outil de
+calcul pour une notion non couverte demande d'abord un module testé dans
+`app/lib/` puis son entrée dans `Outils.js` — c'est seulement après qu'un chapitre
+peut le référencer.
 
 ---
 

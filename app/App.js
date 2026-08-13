@@ -15,6 +15,7 @@ import { theme } from './src/theme';
 import Accueil from './src/ecrans/Accueil';
 import Chapitres from './src/ecrans/Chapitres';
 import Chapitre from './src/ecrans/Chapitre';
+import Exercices from './src/ecrans/Exercices';
 import Qcm from './src/ecrans/Qcm';
 import Outils from './src/ecrans/Outils';
 
@@ -57,6 +58,11 @@ export default function App() {
             name="Chapitre"
             component={Chapitre}
             options={({ route }) => ({ title: route.params?.titre ?? 'Chapitre' })}
+          />
+          <Pile.Screen
+            name="Exercices"
+            component={Exercices}
+            options={{ title: 'Exercices' }}
           />
           <Pile.Screen
             name="Qcm"

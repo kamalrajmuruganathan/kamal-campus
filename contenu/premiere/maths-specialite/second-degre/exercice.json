@@ -1,0 +1,89 @@
+{
+  "id": "1spe-math-second-degre-exos",
+  "chapitre": "1spe-math-second-degre",
+  "titre": "Exercices — Second degré",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "forme-canonique",
+      "enonce": "Mettre $f(x) = x^2 - 6x + 5$ sous forme canonique.",
+      "corrige": [
+        "On repère $a = 1$, $b = -6$, $c = 5$. La forme canonique est $a(x-\\alpha)^2 + \\beta$ avec $\\alpha = -\\dfrac{b}{2a}$ et $\\beta = f(\\alpha)$.",
+        "$\\alpha = -\\dfrac{-6}{2\\times 1} = 3$.",
+        "$\\beta = f(3) = 3^2 - 6\\times 3 + 5 = 9 - 18 + 5 = -4$.",
+        "Donc $f(x) = (x-3)^2 - 4$."
+      ],
+      "reponse": "$f(x) = (x-3)^2 - 4$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "racines",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $x^2 - 5x + 6 = 0$ en cherchant d'abord une factorisation par somme et produit.",
+      "corrige": [
+        "On cherche deux nombres dont la somme vaut $5$ et le produit vaut $6$.",
+        "$2$ et $3$ conviennent : $2+3 = 5$ et $2\\times 3 = 6$.",
+        "Donc $x^2 - 5x + 6 = (x-2)(x-3)$, et l'équation devient $(x-2)(x-3)=0$.",
+        "Un produit est nul si l'un des facteurs est nul : $x = 2$ ou $x = 3$."
+      ],
+      "reponse": "$S = \\{2\\,;\\,3\\}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "discriminant",
+      "enonce": "Résoudre $2x^2 + 3x - 2 = 0$ à l'aide du discriminant.",
+      "corrige": [
+        "$a = 2$, $b = 3$, $c = -2$. On calcule $\\Delta = b^2 - 4ac$.",
+        "$\\Delta = 3^2 - 4\\times 2 \\times (-2) = 9 + 16 = 25 > 0$ : deux racines réelles distinctes.",
+        "$\\sqrt{\\Delta} = 5$, donc $x_1 = \\dfrac{-b - \\sqrt{\\Delta}}{2a} = \\dfrac{-3-5}{4} = -2$ et $x_2 = \\dfrac{-3+5}{4} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$S = \\left\\{-2\\,;\\,\\dfrac{1}{2}\\right\\}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $g(x) = -x^2 + 4x - 3$ selon les valeurs de $x$.",
+      "corrige": [
+        "Racines : $\\Delta = 4^2 - 4\\times(-1)\\times(-3) = 16 - 12 = 4$, $\\sqrt{\\Delta}=2$. $x_1 = \\dfrac{-4-2}{-2} = 3$ et $x_2 = \\dfrac{-4+2}{-2} = 1$.",
+        "Ici $a = -1 < 0$ : la parabole est tournée vers le bas, donc $g(x)$ est du signe de $a$ (négatif) à l'extérieur des racines, et positif entre les racines.",
+        "Sur $]-\\infty\\,;\\,1[$ : $g(x) < 0$ ; sur $]1\\,;\\,3[$ : $g(x) > 0$ ; sur $]3\\,;\\,+\\infty[$ : $g(x) < 0$. En $x=1$ et $x=3$, $g(x)=0$."
+      ],
+      "reponse": "$g(x) > 0$ sur $]1\\,;\\,3[$, négatif à l'extérieur, nul en $1$ et $3$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "parametre",
+      "enonce": "Pour quelles valeurs du réel $m$ l'équation $x^2 - 2x + m = 0$ admet-elle deux racines réelles distinctes ?",
+      "corrige": [
+        "L'équation admet deux racines réelles distinctes si et seulement si $\\Delta > 0$.",
+        "$\\Delta = (-2)^2 - 4\\times 1 \\times m = 4 - 4m$.",
+        "$\\Delta > 0 \\iff 4 - 4m > 0 \\iff m < 1$."
+      ],
+      "reponse": "Pour tout $m < 1$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "probleme",
+      "enonce": "Un rectangle a un périmètre de $20$ cm. On note $x$ la longueur d'un côté. Exprimer l'aire en fonction de $x$, puis déterminer $x$ pour que l'aire soit maximale.",
+      "corrige": [
+        "Le demi-périmètre vaut $10$, donc les deux côtés sont $x$ et $10 - x$ (avec $0 < x < 10$).",
+        "L'aire est $A(x) = x(10 - x) = -x^2 + 10x$.",
+        "$A$ est un polynôme du second degré avec $a = -1 < 0$ : il admet un maximum au sommet, en $x = -\\dfrac{b}{2a} = -\\dfrac{10}{-2} = 5$.",
+        "En $x = 5$, l'autre côté vaut aussi $5$ : le rectangle d'aire maximale est un carré, d'aire $A(5) = 25$ cm²."
+      ],
+      "reponse": "$A(x) = -x^2 + 10x$, maximale en $x = 5$ (carré), soit $25$ cm²."
+    }
+  ]
+}

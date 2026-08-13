@@ -125,11 +125,23 @@ const OUTILS = [
   },
 ];
 
-export default function Outils() {
+export default function Outils({ route }) {
   const t = theme(useColorScheme() === 'dark');
-  const [actif, setActif] = useState(null);
+
+  // Outils demandés par un chapitre (via outil.json), s'il y en a.
+  const demandes = route?.params?.outils ?? null;
+  const titreChap = route?.params?.titre ?? null;
+  const pertinents = demandes ? OUTILS.filter((o) => demandes.includes(o.id)) : null;
+
+  // Un chapitre qui pointe vers un seul outil l'ouvre directement.
+  const [actif, setActif] = useState(
+    pertinents && pertinents.length === 1 ? pertinents[0] : null,
+  );
+  // Quand on arrive depuis un chapitre, on montre d'abord la liste restreinte.
+  const [toutMontrer, setToutMontrer] = useState(!pertinents || pertinents.length === 0);
 
   if (!actif) {
+    const liste = toutMontrer ? OUTILS : pertinents;
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
         <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
@@ -141,12 +153,20 @@ export default function Outils() {
               lineHeight: 19,
             }}
           >
-            Ces outils calculent de façon exacte et montrent le détail des étapes. Ils servent à
-            vérifier ton travail, pas à le remplacer.
+            {titreChap && !toutMontrer
+              ? `Outils utiles pour « ${titreChap} ». Ils calculent de façon exacte et montrent le détail des étapes.`
+              : 'Ces outils calculent de façon exacte et montrent le détail des étapes. Ils servent à vérifier ton travail, pas à le remplacer.'}
           </Text>
-          {OUTILS.map((o) => (
+          {(liste ?? []).map((o) => (
             <Carte key={o.id} t={t} titre={o.titre} sousTitre={o.resume} onPress={() => setActif(o)} />
           ))}
+          {!toutMontrer && (
+            <Pressable onPress={() => setToutMontrer(true)} accessibilityRole="button">
+              <Text style={{ color: t.couleur.accent, fontSize: t.police.petite, marginTop: t.espace.m }}>
+                Voir tous les outils
+              </Text>
+            </Pressable>
+          )}
         </ScrollView>
       </SafeAreaView>
     );

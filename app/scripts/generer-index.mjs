@@ -12,7 +12,7 @@
  *     npm run preparer
  */
 
-import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -107,6 +107,8 @@ for (const niveau of dossiers(CONTENU)) {
       const dossier = join(CONTENU, niveau, parcours, chapitre);
       const fiche = join(dossier, 'fiche.md');
       const qcm = join(dossier, 'qcm.json');
+      const exercice = join(dossier, 'exercice.json');
+      const outil = join(dossier, 'outil.json');
 
       let meta;
       try {
@@ -123,6 +125,28 @@ for (const niveau of dossiers(CONTENU)) {
         console.warn(`  ⚠️  qcm.json illisible ou absent : ${niveau}/${parcours}/${chapitre}`);
       }
 
+      // exercice.json et outil.json sont OPTIONNELS : un chapitre peut n'avoir
+      // ni exercices ni outil de calcul associé.
+      let nbExercices = 0;
+      let aExercice = false;
+      if (existsSync(exercice)) {
+        try {
+          nbExercices = JSON.parse(readFileSync(exercice, 'utf8')).exercices.length;
+          aExercice = true;
+        } catch {
+          console.warn(`  ⚠️  exercice.json illisible : ${niveau}/${parcours}/${chapitre}`);
+        }
+      }
+
+      let outils = [];
+      if (existsSync(outil)) {
+        try {
+          outils = JSON.parse(readFileSync(outil, 'utf8')).outils ?? [];
+        } catch {
+          console.warn(`  ⚠️  outil.json illisible : ${niveau}/${parcours}/${chapitre}`);
+        }
+      }
+
       chapitres.push({
         id: meta.id ?? `${niveau}-${parcours}-${chapitre}`,
         dossier: chapitre,
@@ -136,8 +160,14 @@ for (const niveau of dossiers(CONTENU)) {
         statut: meta.statut ?? 'brouillon',
         reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
         nbQuestions,
+        nbExercices,
+        aExercice,
+        outils,
         cheminFiche: './' + relative(join(RACINE_APP, 'src'), fiche).split('\\').join('/'),
         cheminQcm: './' + relative(join(RACINE_APP, 'src'), qcm).split('\\').join('/'),
+        cheminExercice: aExercice
+          ? './' + relative(join(RACINE_APP, 'src'), exercice).split('\\').join('/')
+          : null,
       });
     }
   }
@@ -165,7 +195,9 @@ for (const p of [...new Set(chapitres.map((c) => c.parcours))].filter((p) => !(p
 
 const imports = chapitres.map((c, i) => {
   // Les .md sont chargés en texte brut par le transformer Metro (voir metro.config.cjs)
-  return `import fiche${i} from '${c.cheminFiche}';\nimport qcm${i} from '${c.cheminQcm}';`;
+  let ligne = `import fiche${i} from '${c.cheminFiche}';\nimport qcm${i} from '${c.cheminQcm}';`;
+  if (c.cheminExercice) ligne += `\nimport exercice${i} from '${c.cheminExercice}';`;
+  return ligne;
 }).join('\n');
 
 const entrees = chapitres.map((c, i) => `  {
@@ -181,8 +213,11 @@ const entrees = chapitres.map((c, i) => `  {
     statut: ${JSON.stringify(c.statut)},
     reluPar: ${JSON.stringify(c.reluPar)},
     nbQuestions: ${c.nbQuestions},
+    nbExercices: ${c.nbExercices},
+    outils: ${JSON.stringify(c.outils)},
     fiche: fiche${i},
     qcm: qcm${i},
+    exercice: ${c.cheminExercice ? `exercice${i}` : 'null'},
   },`).join('\n');
 
 const sortie = `/**

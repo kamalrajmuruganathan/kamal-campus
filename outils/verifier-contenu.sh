@@ -18,6 +18,10 @@ erreurs=0
 chapitres=0
 questions=0
 
+# Identifiants d'outils reconnus par l'écran Outils de l'application
+# (app/src/ecrans/Outils.js). Un outil.json ne peut pointer que vers ceux-ci.
+OUTILS_CONNUS='["second-degre","suite-arith","suite-geom","stats","derivee","masse-molaire","dilution","energie-cinetique","loi-ohm"]'
+
 signaler() { printf '  ✗ %s\n' "$1"; erreurs=$((erreurs + 1)); }
 
 command -v jq >/dev/null || { echo "jq est requis"; exit 2; }
@@ -78,6 +82,39 @@ for fiche in "$RACINE"/*/*/*/fiche.md; do
   relu_qcm=$(jq -r '.relu_par' "$qcm")
   if [ "$statut_qcm" = "publie" ] && [ "$relu_qcm" = "null" ]; then
     signaler "$dossier/qcm.json : statut « publie » alors que relu_par est null — interdit"
+  fi
+
+  # ---- exercice.json (optionnel) ----
+  exos="$dossier/exercice.json"
+  if [ -f "$exos" ]; then
+    if ! jq empty "$exos" 2>/dev/null; then
+      signaler "$dossier/exercice.json : JSON invalide"
+    else
+      ne=$(jq '.exercices | length' "$exos")
+      [ "$ne" -ge 1 ] || signaler "$dossier/exercice.json : aucun exercice"
+      sans_enonce=$(jq '[.exercices[] | select(.enonce == null or .enonce == "")] | length' "$exos")
+      [ "$sans_enonce" -eq 0 ] || signaler "$dossier/exercice.json : $sans_enonce énoncé(s) vide(s)"
+      sans_corrige=$(jq '[.exercices[] | select((.corrige == null) or ((.corrige | type) == "array" and (.corrige | length) == 0) or (.corrige == ""))] | length' "$exos")
+      [ "$sans_corrige" -eq 0 ] || signaler "$dossier/exercice.json : $sans_corrige corrigé(s) vide(s)"
+      lien_ex=$(jq -r '.chapitre // empty' "$exos")
+      if [ -n "$lien_ex" ] && [ "$lien_ex" != "$id_fiche" ]; then
+        signaler "$dossier/exercice.json : champ chapitre « $lien_ex » ≠ id de la fiche « $id_fiche »"
+      fi
+    fi
+  fi
+
+  # ---- outil.json (optionnel) ----
+  outilf="$dossier/outil.json"
+  if [ -f "$outilf" ]; then
+    if ! jq empty "$outilf" 2>/dev/null; then
+      signaler "$dossier/outil.json : JSON invalide"
+    else
+      no=$(jq '.outils | length' "$outilf" 2>/dev/null || echo 0)
+      [ "$no" -ge 1 ] || signaler "$dossier/outil.json : liste d'outils vide"
+      # les ids doivent exister dans l'écran Outils de l'application
+      inconnus=$(jq -r --argjson ok "$OUTILS_CONNUS" '[.outils[] | select(. as $o | ($ok | index($o)) | not)] | join(", ")' "$outilf")
+      [ -z "$inconnus" ] || signaler "$dossier/outil.json : outil(s) inconnu(s) de l'app : $inconnus"
+    fi
   fi
 done
 

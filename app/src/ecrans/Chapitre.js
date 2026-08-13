@@ -1,8 +1,10 @@
 /**
- * Un chapitre : la fiche de cours, puis l'accès au QCM.
+ * Un chapitre : la fiche de cours, puis l'accès aux trois autres briques —
+ * Exercices, QCM et Outils de calcul. La fiche EST le cours ; les trois boutons
+ * mènent aux autres modes. Le bouton Outils n'apparaît que si le chapitre
+ * déclare un outil (outil.json), et il ouvre l'écran Outils sur ce ou ces outils.
  */
 
-import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
@@ -45,6 +47,26 @@ export default function Chapitre({ route, navigation }) {
         <VisionneuseFiche markdown={chapitre.fiche} />
 
         <View style={{ paddingHorizontal: t.espace.l }}>
+          {chapitre.nbExercices > 0 && (
+            <Pressable
+              onPress={() => navigation.navigate('Exercices', { id: chapitre.id, titre: chapitre.titre })}
+              accessibilityRole="button"
+              style={({ pressed }) => [
+                st.bouton,
+                {
+                  backgroundColor: accent,
+                  borderRadius: t.rayon.m,
+                  paddingVertical: t.espace.m,
+                  opacity: pressed ? 0.8 : 1,
+                },
+              ]}
+            >
+              <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '650' }}>
+                Exercices · {chapitre.nbExercices}
+              </Text>
+            </Pressable>
+          )}
+
           <Pressable
             onPress={() => navigation.navigate('Qcm', { id: chapitre.id, titre: chapitre.titre })}
             accessibilityRole="button"
@@ -54,14 +76,38 @@ export default function Chapitre({ route, navigation }) {
                 backgroundColor: accent,
                 borderRadius: t.rayon.m,
                 paddingVertical: t.espace.m,
+                marginTop: t.espace.m,
                 opacity: pressed ? 0.8 : 1,
               },
             ]}
           >
             <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '650' }}>
-              Passer au QCM · {chapitre.nbQuestions} questions
+              QCM · {chapitre.nbQuestions} questions
             </Text>
           </Pressable>
+
+          {chapitre.outils?.length > 0 && (
+            <Pressable
+              onPress={() => navigation.navigate('Outils', { outils: chapitre.outils, titre: chapitre.titre })}
+              accessibilityRole="button"
+              style={({ pressed }) => [
+                st.bouton,
+                {
+                  backgroundColor: 'transparent',
+                  borderWidth: StyleSheet.hairlineWidth,
+                  borderColor: accent,
+                  borderRadius: t.rayon.m,
+                  paddingVertical: t.espace.m,
+                  marginTop: t.espace.m,
+                  opacity: pressed ? 0.7 : 1,
+                },
+              ]}
+            >
+              <Text style={{ color: accent, fontSize: t.police.moyenne, fontWeight: '650' }}>
+                Outils de calcul
+              </Text>
+            </Pressable>
+          )}
 
           <Text
             style={{
