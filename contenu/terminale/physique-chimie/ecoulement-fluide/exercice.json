@@ -1,0 +1,91 @@
+{
+  "id": "tale-spe-pc-ecoulement-fluide-exos",
+  "chapitre": "tale-spe-pc-ecoulement-fluide",
+  "titre": "Exercices — Écoulement d'un fluide",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Toutes les grandeurs doivent être converties en unités SI avant le calcul.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "poussee-archimede",
+      "enonce": "Un cube d'arête $a = 15$ cm est entièrement immergé dans l'eau ($\\rho_{\\text{eau}} = 1{,}0 \\times 10^{3}$ kg·m⁻³, $g = 9{,}81$ N·kg⁻¹). Calculer la valeur de la poussée d'Archimède qu'il subit.",
+      "corrige": [
+        "On calcule d'abord le volume immergé, égal au volume du cube. On convertit l'arête en mètres : $a = 15$ cm $= 0{,}15$ m, puis $V = a^3 = (0{,}15)^3 = 3{,}375 \\times 10^{-3}$ m³.",
+        "On applique l'expression de la poussée d'Archimède : $F_A = \\rho_{\\text{eau}} \\, V \\, g$.",
+        "Application numérique : $F_A = 1{,}0 \\times 10^{3} \\times 3{,}375 \\times 10^{-3} \\times 9{,}81 \\approx 33$ N.",
+        "La poussée ne dépend que du fluide et du volume immergé, jamais de la nature du cube."
+      ],
+      "reponse": "$F_A = \\rho_{\\text{eau}} V g \\approx 33$ N (dirigée vers le haut)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "debit-volumique",
+      "enonce": "De l'eau s'écoule dans un tuyau de section $S = 2{,}0$ cm² à la vitesse moyenne $v = 1{,}5$ m·s⁻¹. 1) Calculer le débit volumique $D_v$ en m³·s⁻¹. 2) L'exprimer en L·s⁻¹.",
+      "corrige": [
+        "On convertit la section en m² : $S = 2{,}0$ cm² $= 2{,}0 \\times 10^{-4}$ m² (car $1$ cm² $= 10^{-4}$ m²).",
+        "On applique $D_v = S \\times v = 2{,}0 \\times 10^{-4} \\times 1{,}5 = 3{,}0 \\times 10^{-4}$ m³·s⁻¹.",
+        "Conversion en litres : $1$ m³ $= 10^{3}$ L, donc $D_v = 3{,}0 \\times 10^{-4} \\times 10^{3} = 0{,}30$ L·s⁻¹."
+      ],
+      "reponse": "$D_v = S v = 3{,}0 \\times 10^{-4}$ m³·s⁻¹, soit $0{,}30$ L·s⁻¹."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "conservation-debit",
+      "enonce": "Une conduite horizontale de section $S_1 = 15$ cm² transporte de l'eau à la vitesse $v_1 = 1{,}2$ m·s⁻¹. Elle se rétrécit ensuite à une section $S_2 = 5{,}0$ cm². 1) Calculer le débit volumique $D_v$. 2) En déduire la vitesse $v_2$ dans la partie étroite.",
+      "corrige": [
+        "Débit dans la partie large. On convertit $S_1 = 15$ cm² $= 15 \\times 10^{-4}$ m² $= 1{,}5 \\times 10^{-3}$ m², puis $D_v = S_1 v_1 = 1{,}5 \\times 10^{-3} \\times 1{,}2 = 1{,}8 \\times 10^{-3}$ m³·s⁻¹.",
+        "Conservation du débit (fluide incompressible, régime permanent) : $S_1 v_1 = S_2 v_2$, donc $v_2 = v_1 \\dfrac{S_1}{S_2}$.",
+        "Le rapport de sections est sans dimension, on peut garder les cm² : $v_2 = 1{,}2 \\times \\dfrac{15}{5{,}0} = 1{,}2 \\times 3{,}0 = 3{,}6$ m·s⁻¹.",
+        "La section est divisée par 3, la vitesse est bien multipliée par 3 : le fluide accélère au rétrécissement."
+      ],
+      "reponse": "$D_v = 1{,}8 \\times 10^{-3}$ m³·s⁻¹ ; $v_2 = 3{,}6$ m·s⁻¹."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "flotter-couler",
+      "enonce": "Un bloc de bois cubique d'arête $a = 20$ cm et de masse volumique $\\rho_{\\text{bois}} = 700$ kg·m⁻³ flotte à la surface de l'eau ($\\rho_{\\text{eau}} = 1{,}0 \\times 10^{3}$ kg·m⁻³). 1) Justifier qu'il flotte. 2) À l'équilibre, calculer le volume immergé, puis le pourcentage du volume total qui est sous l'eau.",
+      "corrige": [
+        "Comme $\\rho_{\\text{bois}} = 700 < \\rho_{\\text{eau}} = 1000$ kg·m⁻³, le bloc flotte : partiellement immergé, il trouve un équilibre où la poussée compense le poids.",
+        "Volume total : $V = a^3 = (0{,}20)^3 = 8{,}0 \\times 10^{-3}$ m³. Masse du bloc : $m = \\rho_{\\text{bois}} V = 700 \\times 8{,}0 \\times 10^{-3} = 5{,}6$ kg, d'où le poids $P = m g = 5{,}6 \\times 9{,}81 \\approx 54{,}9$ N.",
+        "À l'équilibre, poussée = poids : $\\rho_{\\text{eau}} V_{\\text{im}} g = P$, donc $V_{\\text{im}} = \\dfrac{P}{\\rho_{\\text{eau}} g} = \\dfrac{54{,}9}{1000 \\times 9{,}81} = 5{,}6 \\times 10^{-3}$ m³.",
+        "Pourcentage immergé : $\\dfrac{V_{\\text{im}}}{V} = \\dfrac{5{,}6 \\times 10^{-3}}{8{,}0 \\times 10^{-3}} = 0{,}70$, soit $70\\,\\%$. On retrouve directement $\\rho_{\\text{bois}}/\\rho_{\\text{eau}} = 0{,}70$."
+      ],
+      "reponse": "Le bloc flotte car $\\rho_{\\text{bois}} < \\rho_{\\text{eau}}$ ; $V_{\\text{im}} = 5{,}6 \\times 10^{-3}$ m³, soit $70\\,\\%$ du volume immergé."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "Un grand réservoir ouvert est percé d'un petit trou de section $s = 1{,}0$ cm² situé à une profondeur $h = 3{,}0$ m sous la surface libre. La surface descend très lentement. On donne $g = 9{,}81$ N·kg⁻¹. 1) En appliquant la relation de Bernoulli, établir puis calculer la vitesse $v$ du jet à la sortie. 2) En déduire le débit volumique $D_v$ à travers le trou.",
+      "corrige": [
+        "On applique Bernoulli entre la surface libre (point 1) et le trou (point 2), sur une même ligne de courant. Aux deux points la pression est $P_{\\text{atm}}$, et à la surface $v_1 \\approx 0$. Il reste $\\rho g z_1 = \\tfrac{1}{2}\\rho v_2^2 + \\rho g z_2$.",
+        "En posant $h = z_1 - z_2$ la différence d'altitude, on simplifie par $\\rho$ : $g h = \\tfrac{1}{2} v_2^2$, d'où $v = \\sqrt{2 g h}$ (théorème de Torricelli).",
+        "Application numérique : $v = \\sqrt{2 \\times 9{,}81 \\times 3{,}0} = \\sqrt{58{,}9} \\approx 7{,}7$ m·s⁻¹.",
+        "Débit : on convertit $s = 1{,}0$ cm² $= 1{,}0 \\times 10^{-4}$ m², puis $D_v = s \\times v = 1{,}0 \\times 10^{-4} \\times 7{,}7 = 7{,}7 \\times 10^{-4}$ m³·s⁻¹."
+      ],
+      "reponse": "$v = \\sqrt{2gh} \\approx 7{,}7$ m·s⁻¹ ; $D_v = s v \\approx 7{,}7 \\times 10^{-4}$ m³·s⁻¹."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "effet-venturi",
+      "enonce": "De l'eau ($\\rho = 1{,}0 \\times 10^{3}$ kg·m⁻³) circule dans une conduite horizontale. Dans la partie large, la section vaut $S_1 = 10$ cm² et la vitesse $v_1 = 2{,}0$ m·s⁻¹ ; un rétrécissement ramène la section à $S_2 = 2{,}5$ cm². 1) Calculer la vitesse $v_2$ dans le rétrécissement. 2) En déduire la différence de pression $P_1 - P_2$ entre les deux zones. 3) Où la pression est-elle la plus faible ?",
+      "corrige": [
+        "Conservation du débit : $v_2 = v_1 \\dfrac{S_1}{S_2} = 2{,}0 \\times \\dfrac{10}{2{,}5} = 2{,}0 \\times 4{,}0 = 8{,}0$ m·s⁻¹.",
+        "La conduite étant horizontale, $z_1 = z_2$ : le terme de pesanteur disparaît. Bernoulli donne l'effet Venturi $P_1 - P_2 = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2)$.",
+        "On élève chaque vitesse au carré avant de soustraire : $P_1 - P_2 = \\tfrac{1}{2} \\times 1000 \\times (8{,}0^2 - 2{,}0^2) = 500 \\times (64 - 4) = 500 \\times 60 = 3{,}0 \\times 10^{4}$ Pa.",
+        "Comme $P_1 - P_2 > 0$, on a $P_2 < P_1$ : la pression est la plus faible dans le rétrécissement, là où la vitesse est la plus grande."
+      ],
+      "reponse": "$v_2 = 8{,}0$ m·s⁻¹ ; $P_1 - P_2 = 3{,}0 \\times 10^{4}$ Pa ; la pression est minimale dans la partie étroite ($P_2 < P_1$)."
+    }
+  ]
+}

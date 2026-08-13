@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-pc-decrire-mouvement-exos",
+  "chapitre": "tale-spe-pc-decrire-mouvement",
+  "titre": "Exercices — Décrire un mouvement",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "vecteur-vitesse",
+      "enonce": "Dans un repère $(\\mathrm{O}, \\vec{\\imath}, \\vec{\\jmath})$, un mobile a pour équations horaires $x(t) = 3t$ et $y(t) = 4t$ (positions en mètres, $t$ en secondes). 1) Déterminer les coordonnées du vecteur vitesse $\\vec{v}$. 2) Calculer sa norme $v$. 3) Que peut-on dire de ce mouvement ?",
+      "corrige": [
+        "Le vecteur vitesse s'obtient en dérivant chaque coordonnée de la position par rapport au temps : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 3$ m·s⁻¹ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = 4$ m·s⁻¹.",
+        "Ces deux coordonnées sont **constantes** : $\\vec{v} = 3\\,\\vec{\\imath} + 4\\,\\vec{\\jmath}$ ne dépend pas du temps.",
+        "Norme : $v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5{,}0$ m·s⁻¹.",
+        "Le vecteur vitesse étant constant en norme ET en direction, l'accélération est nulle : c'est un mouvement **rectiligne uniforme**."
+      ],
+      "reponse": "$\\vec{v} = 3\\,\\vec{\\imath} + 4\\,\\vec{\\jmath}$ (m·s⁻¹), $v = 5{,}0$ m·s⁻¹ ; mouvement rectiligne uniforme ($\\vec{a} = \\vec{0}$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "frenet",
+      "enonce": "Une bille décrit un cercle de rayon $R = 2{,}0$ m à vitesse constante $v = 4{,}0$ m·s⁻¹. 1) Justifier que son accélération n'est pas nulle. 2) Calculer la norme de son accélération et préciser sa direction et son sens.",
+      "corrige": [
+        "La valeur de la vitesse est constante, mais sa **direction** change en permanence puisque la trajectoire est un cercle. Le vecteur $\\vec{v}$ varie, donc $\\vec{a} \\neq \\vec{0}$.",
+        "Le mouvement est circulaire uniforme : la composante tangentielle $a_t = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t}$ est nulle, il ne reste que la composante normale $a_n = \\dfrac{v^2}{R}$.",
+        "Application numérique : $a = a_n = \\dfrac{v^2}{R} = \\dfrac{(4{,}0)^2}{2{,}0} = \\dfrac{16}{2{,}0} = 8{,}0$ m·s⁻².",
+        "Cette accélération est portée par le vecteur normal $\\vec{u_n}$ : elle est dirigée vers le **centre** du cercle (centripète)."
+      ],
+      "reponse": "$a = \\dfrac{v^2}{R} = 8{,}0$ m·s⁻², dirigée vers le centre du cercle (accélération centripète)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "methode",
+      "enonce": "Un mobile a pour équations horaires $x(t) = t^2 - 4t$ et $y(t) = 3t$ (unités SI). 1) Déterminer les vecteurs vitesse $\\vec{v}(t)$ et accélération $\\vec{a}(t)$. 2) À quel instant la coordonnée $v_x$ de la vitesse s'annule-t-elle ? 3) L'accélération dépend-elle du temps ?",
+      "corrige": [
+        "Vitesse (dérivée première de chaque coordonnée) : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 2t - 4$ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = 3$. Donc $\\vec{v}(t) = (2t - 4)\\,\\vec{\\imath} + 3\\,\\vec{\\jmath}$ (m·s⁻¹).",
+        "Accélération (dérivée de la vitesse) : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 2$ et $a_y = \\dfrac{\\mathrm{d}v_y}{\\mathrm{d}t} = 0$. Donc $\\vec{a} = 2\\,\\vec{\\imath}$ (m·s⁻²).",
+        "$v_x = 0 \\iff 2t - 4 = 0 \\iff t = 2{,}0$ s.",
+        "Les coordonnées de $\\vec{a}$ sont des constantes : l'accélération **ne dépend pas du temps**, elle est uniforme et vaut $2{,}0$ m·s⁻² selon $\\vec{\\imath}$."
+      ],
+      "reponse": "$\\vec{v}(t) = (2t-4)\\,\\vec{\\imath} + 3\\,\\vec{\\jmath}$, $\\vec{a} = 2\\,\\vec{\\imath}$ (constante) ; $v_x$ s'annule à $t = 2{,}0$ s."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Un point situé sur le bord d'un disque tourne à vitesse constante. Le rayon de sa trajectoire est $R = 0{,}30$ m et il effectue un tour complet en une période $T = 0{,}50$ s. 1) Calculer la valeur $v$ de sa vitesse. 2) En déduire la norme de son accélération. On donne $\\pi \\approx 3{,}14$.",
+      "corrige": [
+        "En un tour, le point parcourt le périmètre du cercle $2\\pi R$ pendant la durée $T$. Sa vitesse (constante) vaut donc $v = \\dfrac{2\\pi R}{T}$.",
+        "Application numérique : $v = \\dfrac{2 \\times 3{,}14 \\times 0{,}30}{0{,}50} = \\dfrac{1{,}88}{0{,}50} = 3{,}8$ m·s⁻¹.",
+        "Le mouvement est circulaire uniforme : $a = \\dfrac{v^2}{R} = \\dfrac{(3{,}8)^2}{0{,}30} = \\dfrac{14{,}2}{0{,}30}$.",
+        "Soit $a \\approx 47$ m·s⁻², dirigée vers le centre du disque (accélération centripète)."
+      ],
+      "reponse": "$v = \\dfrac{2\\pi R}{T} = 3{,}8$ m·s⁻¹ ; $a = \\dfrac{v^2}{R} \\approx 47$ m·s⁻² (centripète)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Un chariot part du repos et se déplace en ligne droite selon l'axe $(\\mathrm{O}, \\vec{\\imath})$. Son équation horaire est $x(t) = 1{,}5\\,t^2$ (position en mètres, $t$ en secondes) ; on a $y(t) = 0$. 1) Déterminer $\\vec{v}(t)$ et $\\vec{a}(t)$. 2) Caractériser le mouvement. 3) Calculer la vitesse et la distance parcourue à $t = 4{,}0$ s.",
+      "corrige": [
+        "Vitesse : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 3{,}0\\,t$ et $v_y = 0$, soit $\\vec{v}(t) = 3{,}0\\,t\\,\\vec{\\imath}$ (m·s⁻¹). Accélération : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 3{,}0$ et $a_y = 0$, soit $\\vec{a} = 3{,}0\\,\\vec{\\imath}$ (m·s⁻²).",
+        "La trajectoire est une droite (l'axe $\\vec{\\imath}$) et l'accélération est **constante, colinéaire à $\\vec{v}$** et de même sens : le mouvement est **rectiligne uniformément accéléré**. La valeur de la vitesse augmente régulièrement.",
+        "À $t = 4{,}0$ s : $v_x = 3{,}0 \\times 4{,}0 = 12$ m·s⁻¹, soit $v = 12$ m·s⁻¹.",
+        "Distance parcourue depuis le départ (en $x=0$ à $t=0$) : $x(4{,}0) = 1{,}5 \\times (4{,}0)^2 = 1{,}5 \\times 16 = 24$ m."
+      ],
+      "reponse": "$\\vec{v}(t) = 3{,}0\\,t\\,\\vec{\\imath}$, $\\vec{a} = 3{,}0\\,\\vec{\\imath}$ (m·s⁻²) : mouvement rectiligne uniformément accéléré ; à $t = 4{,}0$ s, $v = 12$ m·s⁻¹ et $x = 24$ m."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "frenet",
+      "enonce": "Une voiture aborde un virage circulaire de rayon $R = 20$ m. À un instant donné, sa vitesse vaut $v = 10$ m·s⁻¹ et le conducteur accélère : la valeur de la vitesse augmente au taux $\\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 2{,}0$ m·s⁻². 1) Calculer les composantes tangentielle $a_t$ et normale $a_n$ de l'accélération dans le repère de Frenet. 2) En déduire la norme de $\\vec{a}$. Le mouvement est-il circulaire uniforme ?",
+      "corrige": [
+        "Composante tangentielle : elle traduit la variation de la **valeur** de la vitesse, $a_t = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 2{,}0$ m·s⁻² (portée par $\\vec{u_t}$).",
+        "Composante normale : elle traduit le changement de direction, $a_n = \\dfrac{v^2}{R} = \\dfrac{10^2}{20} = \\dfrac{100}{20} = 5{,}0$ m·s⁻² (portée par $\\vec{u_n}$, vers le centre).",
+        "Ces deux composantes sont perpendiculaires : $a = \\sqrt{a_t^2 + a_n^2} = \\sqrt{(2{,}0)^2 + (5{,}0)^2} = \\sqrt{4{,}0 + 25} = \\sqrt{29} \\approx 5{,}4$ m·s⁻².",
+        "La composante tangentielle est non nulle (la valeur de la vitesse change), donc le mouvement n'est **pas** circulaire uniforme : il est circulaire **accéléré**."
+      ],
+      "reponse": "$a_t = 2{,}0$ m·s⁻², $a_n = \\dfrac{v^2}{R} = 5{,}0$ m·s⁻², $a = \\sqrt{a_t^2 + a_n^2} \\approx 5{,}4$ m·s⁻² ; le mouvement n'est pas uniforme (car $a_t \\neq 0$)."
+    }
+  ]
+}

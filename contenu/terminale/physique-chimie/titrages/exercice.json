@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-pc-titrages-exos",
+  "chapitre": "tale-spe-pc-titrages",
+  "titre": "Exercices — Titrages",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Surveille les unités : dans $C_A V_A = C_B V_{\\text{éq}}$ les deux volumes doivent être dans la même unité, mais dans $n = C\\times V$ le volume doit être en litres.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "relation-equivalence",
+      "enonce": "On titre un volume $V_A = 20{,}0$ mL d'une solution d'acide chlorhydrique par une solution de soude (hydroxyde de sodium) de concentration $C_B = 0{,}10$ mol·L⁻¹. La réaction support est $\\mathrm{H_3O^+} + \\mathrm{OH^-} \\rightarrow 2\\,\\mathrm{H_2O}$. L'équivalence est repérée pour un volume versé $V_{\\text{éq}} = 16{,}0$ mL. Déterminer la concentration $C_A$ de l'acide chlorhydrique.",
+      "corrige": [
+        "La réaction est de type 1:1 : à l'équivalence, $n_{\\text{titré}} = n_{\\text{titrant versé}}$, soit $C_A \\times V_A = C_B \\times V_{\\text{éq}}$.",
+        "On isole la grandeur cherchée : $C_A = \\dfrac{C_B \\times V_{\\text{éq}}}{V_A}$.",
+        "Les deux volumes apparaissent en rapport $\\dfrac{V_{\\text{éq}}}{V_A}$ : ils peuvent rester en mL (le facteur mL→L se simplifie). $C_A = \\dfrac{0{,}10 \\times 16{,}0}{20{,}0} = 8{,}0 \\times 10^{-2}$ mol·L⁻¹.",
+        "L'ordre de grandeur est cohérent : $V_{\\text{éq}} < V_A$ donne bien $C_A < C_B$."
+      ],
+      "reponse": "$C_A = \\dfrac{C_B V_{\\text{éq}}}{V_A} = 8{,}0 \\times 10^{-2}$ mol·L⁻¹."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "relation-equivalence",
+      "enonce": "On titre $V_A = 10{,}0$ mL d'une solution de soude (hydroxyde de sodium) par une solution d'acide chlorhydrique de concentration $C_B = 0{,}050$ mol·L⁻¹. L'équivalence est atteinte pour $V_{\\text{éq}} = 18{,}0$ mL. 1) Calculer la quantité de matière $n(\\mathrm{OH^-})$ d'ions hydroxyde initialement présents. 2) En déduire la concentration $C_A$ de la solution de soude.",
+      "corrige": [
+        "À l'équivalence (réaction 1:1) : $n(\\mathrm{OH^-}) = n(\\mathrm{H_3O^+}\\text{ versé}) = C_B \\times V_{\\text{éq}}$. Ici le calcul porte sur une quantité de matière : le volume doit être converti en litres. $V_{\\text{éq}} = 18{,}0$ mL $= 18{,}0 \\times 10^{-3}$ L.",
+        "$n(\\mathrm{OH^-}) = 0{,}050 \\times 18{,}0 \\times 10^{-3} = 9{,}0 \\times 10^{-4}$ mol.",
+        "La concentration cherchée : $C_A = \\dfrac{n(\\mathrm{OH^-})}{V_A}$, avec $V_A = 10{,}0$ mL $= 10{,}0 \\times 10^{-3}$ L.",
+        "$C_A = \\dfrac{9{,}0 \\times 10^{-4}}{10{,}0 \\times 10^{-3}} = 9{,}0 \\times 10^{-2}$ mol·L⁻¹."
+      ],
+      "reponse": "$n(\\mathrm{OH^-}) = C_B V_{\\text{éq}} = 9{,}0 \\times 10^{-4}$ mol ; $C_A = 9{,}0 \\times 10^{-2}$ mol·L⁻¹."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "composition-systeme",
+      "enonce": "Un bécher contient $n_A = 2{,}0 \\times 10^{-3}$ mol d'ions $\\mathrm{H_3O^+}$. On les titre par une solution de soude de concentration $C_B = 0{,}10$ mol·L⁻¹ ($\\mathrm{H_3O^+} + \\mathrm{OH^-} \\rightarrow 2\\,\\mathrm{H_2O}$). 1) Déterminer le volume $V_{\\text{éq}}$ à l'équivalence. 2) Décrire la composition du système après avoir versé $V = 15{,}0$ mL de soude (espèces en excès, caractère acide ou basique).",
+      "corrige": [
+        "À l'équivalence, tout l'acide est consommé : $n_B(\\text{versé}) = n_A$, soit $C_B \\times V_{\\text{éq}} = n_A$, d'où $V_{\\text{éq}} = \\dfrac{n_A}{C_B} = \\dfrac{2{,}0 \\times 10^{-3}}{0{,}10} = 2{,}0 \\times 10^{-2}$ L $= 20{,}0$ mL.",
+        "Après $V = 15{,}0$ mL, la quantité de base versée est $n_B = C_B \\times V = 0{,}10 \\times 15{,}0 \\times 10^{-3} = 1{,}5 \\times 10^{-3}$ mol.",
+        "Comme $n_B < n_A$ (on est avant l'équivalence, $V < V_{\\text{éq}}$), $\\mathrm{OH^-}$ est le réactif limitant : il ne reste plus de $\\mathrm{OH^-}$, mais il reste de l'ion $\\mathrm{H_3O^+}$.",
+        "Quantité de $\\mathrm{H_3O^+}$ restante : $n_A - n_B = 2{,}0 \\times 10^{-3} - 1{,}5 \\times 10^{-3} = 5{,}0 \\times 10^{-4}$ mol. Le milieu reste acide."
+      ],
+      "reponse": "$V_{\\text{éq}} = 20{,}0$ mL. Après $15{,}0$ mL : il reste $5{,}0 \\times 10^{-4}$ mol de $\\mathrm{H_3O^+}$ (milieu acide), pas de $\\mathrm{OH^-}$ en excès."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "titre-massique",
+      "enonce": "On cherche la masse d'hydroxyde de sodium contenue dans un flacon de $500$ mL de solution. On prélève $V_A = 20{,}0$ mL de cette solution que l'on titre par de l'acide chlorhydrique à $C_B = 0{,}10$ mol·L⁻¹ ; l'équivalence est atteinte pour $V_{\\text{éq}} = 25{,}0$ mL. On donne $M(\\mathrm{NaOH}) = 40{,}0$ g·mol⁻¹. 1) Déterminer la concentration $C_A$ de la solution. 2) En déduire le titre massique $t$ puis la masse de soude dans les $500$ mL.",
+      "corrige": [
+        "À l'équivalence (1:1) : $C_A V_A = C_B V_{\\text{éq}}$, donc $C_A = \\dfrac{C_B V_{\\text{éq}}}{V_A} = \\dfrac{0{,}10 \\times 25{,}0}{20{,}0} = 0{,}125$ mol·L⁻¹ (volumes en mL, rapport sans conversion).",
+        "Le titre massique relie concentration molaire et masse molaire : $t = C_A \\times M = 0{,}125 \\times 40{,}0 = 5{,}0$ g·L⁻¹.",
+        "La masse contenue dans un volume $V = 500$ mL $= 0{,}500$ L vaut $m = t \\times V = 5{,}0 \\times 0{,}500 = 2{,}5$ g.",
+        "Vérification par les quantités de matière : $n = C_A \\times V = 0{,}125 \\times 0{,}500 = 6{,}25 \\times 10^{-2}$ mol, et $m = n \\times M = 6{,}25 \\times 10^{-2} \\times 40{,}0 = 2{,}5$ g. Cohérent."
+      ],
+      "reponse": "$C_A = 0{,}125$ mol·L⁻¹ ; $t = C_A M = 5{,}0$ g·L⁻¹ ; masse dans $500$ mL : $m = 2{,}5$ g."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "titre-massique-densite",
+      "enonce": "On veut vérifier l'étiquette d'un acide chlorhydrique commercial de densité $d = 1{,}15$, annoncé à $30\\%$ en masse. Comme il est trop concentré pour être titré directement, on le dilue $100$ fois. On titre ensuite $V_A = 10{,}0$ mL de la solution diluée par de la soude à $C_B = 0{,}100$ mol·L⁻¹ : l'équivalence est atteinte pour $V_{\\text{éq}} = 9{,}5$ mL. On donne $M(\\mathrm{HCl}) = 36{,}5$ g·mol⁻¹ et $\\rho_{\\text{eau}} = 1000$ g·L⁻¹. 1) Concentration de la solution diluée. 2) Concentration de la solution commerciale. 3) Retrouver le pourcentage massique et conclure sur l'étiquette.",
+      "corrige": [
+        "Solution diluée (titrage 1:1) : $C_{\\text{fille}} = \\dfrac{C_B V_{\\text{éq}}}{V_A} = \\dfrac{0{,}100 \\times 9{,}5}{10{,}0} = 9{,}5 \\times 10^{-2}$ mol·L⁻¹.",
+        "La dilution divise la concentration par le facteur $F = 100$ ; pour remonter à la solution mère on multiplie : $C_{\\text{mère}} = F \\times C_{\\text{fille}} = 100 \\times 9{,}5 \\times 10^{-2} = 9{,}5$ mol·L⁻¹.",
+        "Titre massique de la solution commerciale : $t = C_{\\text{mère}} \\times M = 9{,}5 \\times 36{,}5 \\approx 3{,}5 \\times 10^{2}$ g·L⁻¹. La masse d'un litre de solution est $\\rho = d \\times \\rho_{\\text{eau}} = 1{,}15 \\times 1000 = 1150$ g·L⁻¹.",
+        "Pourcentage massique : $P = \\dfrac{t}{\\rho} = \\dfrac{3{,}47 \\times 10^{2}}{1150} \\approx 0{,}30$, soit $30\\%$. L'étiquette est confirmée."
+      ],
+      "reponse": "$C_{\\text{fille}} = 9{,}5 \\times 10^{-2}$ mol·L⁻¹ ; $C_{\\text{mère}} = 9{,}5$ mol·L⁻¹ ; $P \\approx 30\\%$ : l'étiquette est cohérente."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "stoechiometrie",
+      "enonce": "On titre les ions fer(II) d'un comprimé dissous dans $V_A = 20{,}0$ mL de solution par du permanganate de potassium à $C_B = 0{,}020$ mol·L⁻¹, selon $\\mathrm{MnO_4^-} + 5\\,\\mathrm{Fe^{2+}} + 8\\,\\mathrm{H^+} \\rightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$. L'équivalence, repérée par la persistance de la teinte violette, est atteinte pour $V_{\\text{éq}} = 16{,}0$ mL. On donne $M(\\mathrm{Fe}) = 55{,}8$ g·mol⁻¹. 1) Quantité de permanganate versée à l'équivalence. 2) Quantité d'ions $\\mathrm{Fe^{2+}}$ titrés. 3) Masse de fer contenue dans le comprimé.",
+      "corrige": [
+        "Quantité de titrant à l'équivalence (volume en litres) : $n(\\mathrm{MnO_4^-}) = C_B \\times V_{\\text{éq}} = 0{,}020 \\times 16{,}0 \\times 10^{-3} = 3{,}2 \\times 10^{-4}$ mol.",
+        "La réaction n'est pas 1:1 : ici $a = 5$ pour $\\mathrm{Fe^{2+}}$ et $b = 1$ pour $\\mathrm{MnO_4^-}$. L'équivalence s'écrit $\\dfrac{n(\\mathrm{Fe^{2+}})}{5} = \\dfrac{n(\\mathrm{MnO_4^-})}{1}$, donc $n(\\mathrm{Fe^{2+}}) = 5 \\times n(\\mathrm{MnO_4^-})$.",
+        "$n(\\mathrm{Fe^{2+}}) = 5 \\times 3{,}2 \\times 10^{-4} = 1{,}6 \\times 10^{-3}$ mol. (Oublier le facteur 5 sous-estimerait la masse d'un facteur 5.)",
+        "Masse de fer : $m = n(\\mathrm{Fe^{2+}}) \\times M(\\mathrm{Fe}) = 1{,}6 \\times 10^{-3} \\times 55{,}8 = 8{,}9 \\times 10^{-2}$ g, soit environ $89$ mg de fer dans le comprimé."
+      ],
+      "reponse": "$n(\\mathrm{MnO_4^-}) = 3{,}2 \\times 10^{-4}$ mol ; $n(\\mathrm{Fe^{2+}}) = 5\\,n(\\mathrm{MnO_4^-}) = 1{,}6 \\times 10^{-3}$ mol ; $m = 8{,}9 \\times 10^{-2}$ g $\\approx 89$ mg de fer."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-pc-methodes-physiques-analyse-exos",
+  "chapitre": "tale-spe-pc-methodes-physiques-analyse",
+  "titre": "Exercices — Méthodes physiques d'analyse",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Surveille les unités et les puissances de 10.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "absorbance-et-loi-de-beer-lambert",
+      "enonce": "Une espèce colorée a, à sa longueur d'onde d'absorption maximale, un coefficient d'absorption molaire $\\varepsilon = 3{,}5 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. On mesure l'absorbance d'une solution de concentration $c = 1{,}5 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ dans une cuve d'épaisseur $\\ell = 1{,}0\\ \\mathrm{cm}$. Calculer l'absorbance $A$ de cette solution.",
+      "corrige": [
+        "On applique directement la loi de Beer-Lambert : $A = \\varepsilon \\cdot \\ell \\cdot c$. Les unités de $\\varepsilon$ ($\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$), $\\ell$ ($\\mathrm{cm}$) et $c$ ($\\mathrm{mol\\cdot L^{-1}}$) sont cohérentes : leur produit est un nombre pur.",
+        "Application numérique : $A = 3{,}5 \\times 10^{3} \\times 1{,}0 \\times 1{,}5 \\times 10^{-4}$.",
+        "On regroupe les puissances de $10$ : $10^{3} \\times 10^{-4} = 10^{-1}$, et $3{,}5 \\times 1{,}5 = 5{,}25$, d'où $A = 5{,}25 \\times 10^{-1} = 0{,}53$ (à deux chiffres significatifs).",
+        "L'absorbance est un nombre **sans unité** : on n'écrit surtout pas de $\\mathrm{mol\\cdot L^{-1}}$ derrière."
+      ],
+      "reponse": "$A = \\varepsilon\\ell c = 0{,}53$ (sans unité)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "spectroscopies-uv-visible-et-infrarouge",
+      "enonce": "Sur le spectre IR d'un composé, une bande d'absorption **forte et fine** apparaît au nombre d'onde $\\sigma = 1720\\ \\mathrm{cm^{-1}}$. 1) Calculer la longueur d'onde $\\lambda$ correspondante, en micromètres. 2) À l'aide de la table des groupes caractéristiques, à quel type de liaison cette bande peut-elle être attribuée ?",
+      "corrige": [
+        "1) Le nombre d'onde et la longueur d'onde sont liés par $\\sigma = \\dfrac{1}{\\lambda}$, donc $\\lambda = \\dfrac{1}{\\sigma}$.",
+        "$\\lambda = \\dfrac{1}{1720\\ \\mathrm{cm^{-1}}} = 5{,}81 \\times 10^{-4}\\ \\mathrm{cm}$.",
+        "Conversion en micromètres : $5{,}81 \\times 10^{-4}\\ \\mathrm{cm} = 5{,}81 \\times 10^{-6}\\ \\mathrm{m} = 5{,}8\\ \\mathrm{\\mu m}$ (car $1\\ \\mathrm{cm} = 10^{-2}\\ \\mathrm{m}$ et $1\\ \\mathrm{\\mu m} = 10^{-6}\\ \\mathrm{m}$).",
+        "2) Une bande forte et fine vers $1650\\text{-}1750\\ \\mathrm{cm^{-1}}$ correspond à une liaison $\\mathrm{C\\!=\\!O}$ (groupe carbonyle)."
+      ],
+      "reponse": "$\\lambda = 1/\\sigma = 5{,}8\\ \\mathrm{\\mu m}$ ; la bande est attribuée à la liaison $\\mathrm{C\\!=\\!O}$ (carbonyle)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "absorbance-et-loi-de-beer-lambert",
+      "enonce": "Pour doser une espèce colorée, on trace une courbe d'étalonnage $A = f(c)$, droite passant par l'origine. Elle passe par le point de coordonnées $c = 2{,}0 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ et $A = 0{,}80$. 1) Déterminer le coefficient directeur $k$ de la droite. 2) Une solution inconnue de la même espèce, mesurée dans la même cuve, donne $A_x = 0{,}50$. En déduire sa concentration $c_x$.",
+      "corrige": [
+        "1) La droite passe par l'origine, donc $A = k\\,c$ avec $k = \\dfrac{A}{c}$. Avec le point donné : $k = \\dfrac{0{,}80}{2{,}0 \\times 10^{-4}} = 4{,}0 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}}$.",
+        "2) Pour l'inconnue, on **divise** l'absorbance par la pente : $c_x = \\dfrac{A_x}{k}$.",
+        "$c_x = \\dfrac{0{,}50}{4{,}0 \\times 10^{3}} = 1{,}25 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}} \\approx 1{,}3 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "Vérification de cohérence : $A_x = 0{,}50 < 0{,}80$, donc $c_x < 2{,}0\\times10^{-4}$ : le résultat est bien plus petit, la proportionnalité est respectée."
+      ],
+      "reponse": "$k = 4{,}0 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}}$ ; $c_x = A_x/k = 1{,}3 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
+      "enonce": "On dispose d'une solution de chlorure de potassium $(\\mathrm{K^+ + Cl^-})$ de concentration $c = 1{,}0 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. Données : $\\lambda_{\\mathrm{K^+}} = 7{,}4 \\times 10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. Calculer la conductivité $\\sigma$ de la solution avec la loi de Kohlrausch.",
+      "corrige": [
+        "Étape clé : convertir la concentration dans l'unité de la loi de Kohlrausch. $c = 1{,}0 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}} = 1{,}0 \\times 10^{-2} \\times 10^{3} = 10\\ \\mathrm{mol\\cdot m^{-3}}$.",
+        "La dissolution donne $[\\mathrm{K^+}] = [\\mathrm{Cl^-}] = c = 10\\ \\mathrm{mol\\cdot m^{-3}}$ (un ion de chaque par unité formulaire).",
+        "Loi de Kohlrausch : $\\sigma = \\lambda_{\\mathrm{K^+}}[\\mathrm{K^+}] + \\lambda_{\\mathrm{Cl^-}}[\\mathrm{Cl^-}] = (7{,}4 + 7{,}6) \\times 10^{-3} \\times 10$.",
+        "$\\sigma = 15{,}0 \\times 10^{-3} \\times 10 = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$. Contrôle d'unité : $\\mathrm{S\\cdot m^{2}\\cdot mol^{-1}} \\times \\mathrm{mol\\cdot m^{-3}} = \\mathrm{S\\cdot m^{-1}}$."
+      ],
+      "reponse": "$\\sigma = (\\lambda_{\\mathrm{K^+}}+\\lambda_{\\mathrm{Cl^-}})\\,c = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$ (après conversion $c = 10\\ \\mathrm{mol\\cdot m^{-3}}$)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
+      "enonce": "On veut déterminer la concentration d'une solution de chlorure de sodium $(\\mathrm{Na^+ + Cl^-})$. Une cellule conductimétrique de constante $k_{\\text{cell}} = 1{,}0\\ \\mathrm{m}$ (telle que $G = k_{\\text{cell}}\\,\\sigma$) plongée dans la solution mesure une conductance $G = 0{,}20\\ \\mathrm{S}$. Données : $\\lambda_{\\mathrm{Na^+}} = 5{,}0 \\times 10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. 1) Calculer la conductivité $\\sigma$. 2) En déduire la concentration $c$, en $\\mathrm{mol\\cdot m^{-3}}$ puis en $\\mathrm{mol\\cdot L^{-1}}$.",
+      "corrige": [
+        "1) De $G = k_{\\text{cell}}\\,\\sigma$ on tire $\\sigma = \\dfrac{G}{k_{\\text{cell}}} = \\dfrac{0{,}20}{1{,}0} = 0{,}20\\ \\mathrm{S\\cdot m^{-1}}$.",
+        "2) Kohlrausch pour $\\mathrm{NaCl}$, avec $[\\mathrm{Na^+}] = [\\mathrm{Cl^-}] = c$ : $\\sigma = (\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}})\\,c$, donc $c = \\dfrac{\\sigma}{\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}}}$.",
+        "$\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}} = (5{,}0 + 7{,}6) \\times 10^{-3} = 12{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. Ainsi $c = \\dfrac{0{,}20}{12{,}6 \\times 10^{-3}} = 15{,}9\\ \\mathrm{mol\\cdot m^{-3}}$.",
+        "Conversion finale vers l'unité usuelle : $c = 15{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 15{,}9 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}} = 1{,}6 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ (on divise par $10^{3}$ pour repasser en $\\mathrm{mol\\cdot L^{-1}}$)."
+      ],
+      "reponse": "$\\sigma = G/k_{\\text{cell}} = 0{,}20\\ \\mathrm{S\\cdot m^{-1}}$ ; $c = 15{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 1{,}6 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "absorbance-et-loi-de-beer-lambert",
+      "enonce": "On cherche la concentration $c_0$ d'une solution mère colorée. On en prélève $V_1 = 5{,}0\\ \\mathrm{mL}$ que l'on complète avec de l'eau distillée jusqu'à $V_2 = 100\\ \\mathrm{mL}$ pour obtenir une solution fille. L'absorbance de la solution fille, mesurée dans une cuve de $1{,}0\\ \\mathrm{cm}$, vaut $A = 0{,}60$. La courbe d'étalonnage de l'espèce, tracée dans la même cuve, a pour équation $A = 4{,}0 \\times 10^{3}\\,c$ ($c$ en $\\mathrm{mol\\cdot L^{-1}}$). 1) Déterminer la concentration $c_1$ de la solution fille. 2) En déduire la concentration $c_0$ de la solution mère.",
+      "corrige": [
+        "1) On dose la solution fille avec la droite d'étalonnage : $c_1 = \\dfrac{A}{k} = \\dfrac{0{,}60}{4{,}0 \\times 10^{3}} = 1{,}5 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "2) La dilution conserve la quantité de matière prélevée : $c_0 \\times V_1 = c_1 \\times V_2$, donc $c_0 = c_1 \\times \\dfrac{V_2}{V_1}$.",
+        "Le facteur de dilution est $\\dfrac{V_2}{V_1} = \\dfrac{100}{5{,}0} = 20$ (les deux volumes sont en $\\mathrm{mL}$, le rapport est sans unité : pas besoin de convertir ici).",
+        "$c_0 = 1{,}5 \\times 10^{-4} \\times 20 = 3{,}0 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. La solution mère est bien **plus concentrée** que la fille (facteur $20$), ce qui est cohérent avec une dilution."
+      ],
+      "reponse": "$c_1 = A/k = 1{,}5 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_0 = c_1 \\times V_2/V_1 = 3{,}0 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    }
+  ]
+}

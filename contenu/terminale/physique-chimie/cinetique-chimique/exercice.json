@@ -1,0 +1,90 @@
+{
+  "id": "tale-spe-pc-cinetique-chimique-exos",
+  "chapitre": "tale-spe-pc-cinetique-chimique",
+  "titre": "Exercices — Cinétique chimique : évolution temporelle",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "vitesse-disparition-apparition",
+      "enonce": "On suit la disparition d'un réactif $R$ en traçant $[R] = f(t)$. La tangente à la courbe à la date $t = 0$ part du point $[R]_0 = 0{,}20$ mol·L⁻¹ et coupe l'axe des temps à $t = 100$ s. 1) Déterminer la vitesse volumique de disparition initiale $v_{\\text{disp}}(0)$. 2) Expliquer, sans calcul, pourquoi cette vitesse diminue au cours du temps.",
+      "corrige": [
+        "La vitesse de disparition à un instant donné est l'**opposé du coefficient directeur de la tangente** à la courbe $[R] = f(t)$ à cette date : $v_{\\text{disp}} = -\\dfrac{\\mathrm{d}[R]}{\\mathrm{d}t}$.",
+        "Coefficient directeur de la tangente à $t = 0$ : $\\dfrac{0 - 0{,}20}{100 - 0} = -2{,}0 \\times 10^{-3}$ mol·L⁻¹·s⁻¹.",
+        "La vitesse est l'opposé de cette pente : $v_{\\text{disp}}(0) = 2{,}0 \\times 10^{-3}$ mol·L⁻¹·s⁻¹. Le piège serait d'annoncer la valeur $0{,}20$ (un point de la courbe) au lieu d'une **pente**.",
+        "2) La concentration en réactif est un **facteur cinétique** : au fur et à mesure que $R$ est consommé, $[R]$ diminue, les chocs efficaces se raréfient, donc la vitesse baisse. Elle est maximale au début et tend vers zéro en fin de réaction."
+      ],
+      "reponse": "$v_{\\text{disp}}(0) = 2{,}0 \\times 10^{-3}$ mol·L⁻¹·s⁻¹ ; la vitesse diminue car $[R]$, facteur cinétique, décroît au cours du temps."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "loi-ordre-1",
+      "enonce": "Un réactif $R$ suit une loi de vitesse d'ordre 1, de constante de vitesse $k = 0{,}030$ s⁻¹. 1) Calculer son temps de demi-réaction $t_{1/2}$. 2) Au bout de combien de temps la concentration a-t-elle été divisée par quatre ?",
+      "corrige": [
+        "Pour une loi d'ordre 1, le temps de demi-réaction vaut $t_{1/2} = \\dfrac{\\ln 2}{k}$ et ne dépend que de $k$.",
+        "Application numérique : $t_{1/2} = \\dfrac{0{,}693}{0{,}030} \\approx 23$ s. (Vérifie l'unité : $\\ln 2$ est sans dimension, $k$ est en s⁻¹, donc $t_{1/2}$ est bien en s.)",
+        "2) Diviser $[R]_0$ par quatre, c'est enchaîner **deux** divisions par deux : il faut deux temps de demi-réaction successifs. Comme $t_{1/2}$ est constant pour l'ordre 1, la durée cherchée est $2 \\times t_{1/2} = 2 \\times 23 = 46$ s."
+      ],
+      "reponse": "$t_{1/2} = \\dfrac{\\ln 2}{k} \\approx 23$ s ; la concentration est divisée par quatre au bout de $2\\,t_{1/2} \\approx 46$ s."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "temps-demi-reaction",
+      "enonce": "Le suivi d'une transformation donne les mesures suivantes pour le réactif $R$ :\n\n| $t$ (s) | 0 | 25 | 50 | 75 |\n|---|---|---|---|---|\n| $[R]$ (mol·L⁻¹) | 0,60 | 0,30 | 0,15 | 0,075 |\n\n1) Déterminer plusieurs temps de demi-réaction successifs. 2) Que peut-on en conclure sur l'ordre de la réaction ? 3) En déduire la constante de vitesse $k$.",
+      "corrige": [
+        "Un temps de demi-réaction est la durée nécessaire pour que $[R]$ soit divisée par deux. De $[R]_0 = 0{,}60$ à $0{,}30$ mol·L⁻¹ : $t_{1/2} = 25 - 0 = 25$ s.",
+        "De $0{,}30$ à $0{,}15$ mol·L⁻¹ : durée $= 50 - 25 = 25$ s. De $0{,}15$ à $0{,}075$ mol·L⁻¹ : durée $= 75 - 50 = 25$ s. Les demi-vies successives sont **toutes égales** à $25$ s.",
+        "2) Des temps de demi-réaction successifs constants, indépendants de la concentration, sont la **signature d'une loi d'ordre 1**.",
+        "3) Pour l'ordre 1, $t_{1/2} = \\dfrac{\\ln 2}{k}$, donc $k = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{25} \\approx 2{,}8 \\times 10^{-2}$ s⁻¹."
+      ],
+      "reponse": "$t_{1/2} = 25$ s constant → réaction d'ordre 1, avec $k = \\dfrac{\\ln 2}{t_{1/2}} \\approx 2{,}8 \\times 10^{-2}$ s⁻¹."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "loi-ordre-1",
+      "enonce": "Un réactif $R$ suit une loi d'ordre 1 de constante $k = 0{,}010$ s⁻¹. Sa concentration initiale est $[R]_0 = 0{,}50$ mol·L⁻¹. 1) Écrire l'expression de $[R](t)$. 2) Calculer $[R]$ à la date $t = 60$ s. 3) Calculer le temps de demi-réaction $t_{1/2}$.",
+      "corrige": [
+        "1) La solution de l'équation différentielle $\\dfrac{\\mathrm{d}[R]}{\\mathrm{d}t} = -k[R]$ est une décroissance exponentielle : $[R](t) = [R]_0\\, e^{-kt} = 0{,}50\\, e^{-0{,}010\\,t}$ (avec $[R]$ en mol·L⁻¹ et $t$ en s).",
+        "2) À $t = 60$ s : $kt = 0{,}010 \\times 60 = 0{,}60$, donc $[R](60) = 0{,}50 \\times e^{-0{,}60} = 0{,}50 \\times 0{,}549 \\approx 0{,}27$ mol·L⁻¹.",
+        "3) Temps de demi-réaction : $t_{1/2} = \\dfrac{\\ln 2}{k} = \\dfrac{0{,}693}{0{,}010} \\approx 69$ s. (On vérifie la cohérence : à $t = 60$ s, un peu avant $t_{1/2}$, il reste un peu plus de la moitié de $0{,}50$, ce qui colle avec $0{,}27$ mol·L⁻¹.)"
+      ],
+      "reponse": "$[R](t) = 0{,}50\\, e^{-0{,}010\\,t}$ ; $[R](60) \\approx 0{,}27$ mol·L⁻¹ ; $t_{1/2} = \\dfrac{\\ln 2}{k} \\approx 69$ s."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "loi-ordre-1",
+      "enonce": "On veut tester si la disparition de $R$ suit une loi d'ordre 1. Les mesures sont :\n\n| $t$ (s) | 0 | 50 | 100 | 150 |\n|---|---|---|---|---|\n| $[R]$ (mol·L⁻¹) | 0,100 | 0,061 | 0,037 | 0,022 |\n\n1) Compléter par les valeurs de $\\ln[R]$ et montrer que le tracé de $\\ln[R] = f(t)$ est une droite. 2) En déduire la constante de vitesse $k$. 3) Calculer $t_{1/2}$. 4) Prévoir $[R]$ à la date $t = 200$ s.",
+      "corrige": [
+        "1) On calcule $\\ln[R]$ pour chaque mesure : $\\ln(0{,}100) = -2{,}30$ ; $\\ln(0{,}061) = -2{,}80$ ; $\\ln(0{,}037) = -3{,}30$ ; $\\ln(0{,}022) = -3{,}82$. Entre deux mesures espacées de $50$ s, $\\ln[R]$ baisse à chaque fois d'environ $0{,}50$ : les points sont **alignés**, donc $\\ln[R] = f(t)$ est une droite. La réaction est bien d'**ordre 1**.",
+        "2) Pour l'ordre 1, $\\ln[R] = \\ln[R]_0 - k\\,t$ : la pente de la droite vaut $-k$. Pente $= \\dfrac{-2{,}80 - (-2{,}30)}{50 - 0} = \\dfrac{-0{,}50}{50} = -1{,}0 \\times 10^{-2}$ s⁻¹, donc $k = 1{,}0 \\times 10^{-2}$ s⁻¹ (la constante de vitesse est toujours positive).",
+        "3) Temps de demi-réaction : $t_{1/2} = \\dfrac{\\ln 2}{k} = \\dfrac{0{,}693}{1{,}0 \\times 10^{-2}} \\approx 69$ s.",
+        "4) On utilise $[R](t) = [R]_0\\, e^{-kt}$ avec $t = 200$ s : $kt = 1{,}0 \\times 10^{-2} \\times 200 = 2{,}0$, donc $[R](200) = 0{,}100 \\times e^{-2{,}0} = 0{,}100 \\times 0{,}135 \\approx 1{,}4 \\times 10^{-2}$ mol·L⁻¹."
+      ],
+      "reponse": "$\\ln[R] = f(t)$ est une droite (ordre 1) de pente $-k = -1{,}0 \\times 10^{-2}$ s⁻¹, d'où $k = 1{,}0 \\times 10^{-2}$ s⁻¹, $t_{1/2} \\approx 69$ s et $[R](200) \\approx 1{,}4 \\times 10^{-2}$ mol·L⁻¹."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "catalyse-catalyseur",
+      "enonce": "La décomposition de l'eau oxygénée, $2\\,\\text{H}_2\\text{O}_2 \\rightarrow 2\\,\\text{H}_2\\text{O} + \\text{O}_2$, est lente. En présence d'ions $\\text{Fe}^{3+}$, elle devient rapide et la disparition de $\\text{H}_2\\text{O}_2$ suit une loi d'ordre 1. On mesure alors un temps de demi-réaction $t_{1/2} = 60$ s, à partir de $[\\text{H}_2\\text{O}_2]_0 = 0{,}40$ mol·L⁻¹. 1) Quel est le rôle des ions $\\text{Fe}^{3+}$ ? De quel type de catalyse s'agit-il ? 2) Déterminer la constante de vitesse $k$. 3) Au bout de combien de temps la concentration vaut-elle $0{,}050$ mol·L⁻¹ ? 4) Sans les ions $\\text{Fe}^{3+}$, la concentration finale en $\\text{O}_2$ formé serait-elle différente ?",
+      "corrige": [
+        "1) Les ions $\\text{Fe}^{3+}$ **accélèrent** la transformation sans figurer dans l'équation de bilan : ils sont consommés puis régénérés, donc jouent le rôle de **catalyseur**. Réactifs et catalyseur sont tous en solution aqueuse (même phase) : c'est une catalyse **homogène**.",
+        "2) La réaction est d'ordre 1, donc $t_{1/2} = \\dfrac{\\ln 2}{k}$, d'où $k = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{60} \\approx 1{,}2 \\times 10^{-2}$ s⁻¹.",
+        "3) Passer de $0{,}40$ à $0{,}050$ mol·L⁻¹, c'est diviser la concentration par $8 = 2^3$, soit **trois** divisions par deux successives : $0{,}40 \\to 0{,}20 \\to 0{,}10 \\to 0{,}050$ mol·L⁻¹. La durée est donc $3 \\times t_{1/2} = 3 \\times 60 = 180$ s.",
+        "4) Non. Un catalyseur change la **vitesse**, pas l'**état final** : il fait arriver plus vite au même point. Sans $\\text{Fe}^{3+}$, la réaction serait beaucoup plus lente (durée bien plus longue), mais la même quantité de $\\text{H}_2\\text{O}_2$ se décomposerait au total, donnant **la même quantité finale de $\\text{O}_2$**."
+      ],
+      "reponse": "$\\text{Fe}^{3+}$ = catalyseur (catalyse homogène) ; $k = \\dfrac{\\ln 2}{t_{1/2}} \\approx 1{,}2 \\times 10^{-2}$ s⁻¹ ; $[\\text{H}_2\\text{O}_2] = 0{,}050$ mol·L⁻¹ au bout de $3\\,t_{1/2} = 180$ s ; sans catalyseur, la quantité finale de $\\text{O}_2$ est inchangée (seule la durée change)."
+    }
+  ]
+}

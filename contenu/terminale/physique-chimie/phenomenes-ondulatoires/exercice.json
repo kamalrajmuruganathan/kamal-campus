@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-pc-phenomenes-ondulatoires-exos",
+  "chapitre": "tale-spe-pc-phenomenes-ondulatoires",
+  "titre": "Exercices — Phénomènes ondulatoires : diffraction, interférences, Doppler",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Dans une rue passante, un sonomètre mesure une intensité sonore $I = 2{,}0 \\times 10^{-5}\\ \\text{W·m}^{-2}$. On donne l'intensité de référence $I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$. Calculer le niveau d'intensité sonore $L$ en décibels. (On prendra $\\log 2 \\approx 0{,}30$.)",
+      "corrige": [
+        "On applique la définition du niveau sonore : $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$.",
+        "On calcule le rapport, sans unité : $\\dfrac{I}{I_0} = \\dfrac{2{,}0 \\times 10^{-5}}{1{,}0 \\times 10^{-12}} = 2{,}0 \\times 10^{7}$.",
+        "On utilise $\\log(2{,}0 \\times 10^{7}) = \\log 2 + \\log 10^{7} = 0{,}30 + 7 = 7{,}3$.",
+        "D'où $L = 10 \\times 7{,}3 = 73$ dB."
+      ],
+      "reponse": "$L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right) \\approx 73$ dB."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "diffraction",
+      "enonce": "Un faisceau laser de longueur d'onde $\\lambda = 633$ nm traverse une fente fine de largeur $a = 80\\ \\mu\\text{m}$. Calculer le demi-angle de diffraction $\\theta = \\dfrac{\\lambda}{a}$, en radians.",
+      "corrige": [
+        "On convertit d'abord les deux longueurs dans la **même unité**, le mètre : $\\lambda = 633\\ \\text{nm} = 6{,}33 \\times 10^{-7}$ m et $a = 80\\ \\mu\\text{m} = 80 \\times 10^{-6}\\ \\text{m} = 8{,}0 \\times 10^{-5}$ m.",
+        "On applique $\\theta = \\dfrac{\\lambda}{a} = \\dfrac{6{,}33 \\times 10^{-7}}{8{,}0 \\times 10^{-5}}$.",
+        "On calcule : $\\theta = 0{,}79 \\times 10^{-2} = 7{,}9 \\times 10^{-3}$ rad.",
+        "L'angle est bien petit (quelques millièmes de radian) et sans unité de longueur : le résultat est cohérent."
+      ],
+      "reponse": "$\\theta = \\dfrac{\\lambda}{a} \\approx 7{,}9 \\times 10^{-3}$ rad."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "interferences",
+      "enonce": "Deux sources ponctuelles $S_1$ et $S_2$, synchrones et de même fréquence, émettent dans l'eau des ondes de longueur d'onde $\\lambda = 1{,}5$ cm. En un point M, on mesure $d_1 = S_1M = 6{,}0$ cm et $d_2 = S_2M = 15{,}0$ cm. 1) Calculer la différence de marche $\\delta$ en M. 2) En déduire la nature de l'interférence (constructive ou destructive).",
+      "corrige": [
+        "La différence de marche est $\\delta = d_2 - d_1 = 15{,}0 - 6{,}0 = 9{,}0$ cm.",
+        "On compare $\\delta$ à $\\lambda$ : $\\dfrac{\\delta}{\\lambda} = \\dfrac{9{,}0}{1{,}5} = 6{,}0$.",
+        "Le rapport est un **entier** ($k = 6$), donc $\\delta = 6\\lambda = k\\lambda$ : la condition d'interférence **constructive** est vérifiée.",
+        "En M, les deux ondes arrivent en phase, leurs amplitudes s'ajoutent : l'amplitude y est maximale."
+      ],
+      "reponse": "$\\delta = 9{,}0$ cm $= 6\\lambda$ : interférence **constructive** (amplitude maximale en M)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "effet-doppler",
+      "enonce": "Un diapason électronique fixé sur un chariot émet un son de fréquence $f_E = 440$ Hz. Le chariot se dirige vers un microphone fixe à la vitesse $v = 30\\ \\text{m·s}^{-1}$. La célérité du son dans l'air vaut $c = 340\\ \\text{m·s}^{-1}$. 1) La fréquence perçue sera-t-elle plus grande ou plus petite que $f_E$ ? 2) Calculer la fréquence perçue $f_R$, puis le décalage Doppler $\\Delta f = f_R - f_E$.",
+      "corrige": [
+        "La source se **rapproche** du microphone : les fronts d'onde se resserrent devant elle, donc la fréquence perçue est **plus grande** que la fréquence émise (son plus aigu).",
+        "On utilise la formule du rapprochement : $f_R = f_E\\,\\dfrac{c}{c - v} = 440 \\times \\dfrac{340}{340 - 30} = 440 \\times \\dfrac{340}{310}$.",
+        "On calcule : $\\dfrac{340}{310} = 1{,}097$, donc $f_R = 440 \\times 1{,}097 \\approx 483$ Hz.",
+        "Le décalage Doppler vaut $\\Delta f = f_R - f_E = 483 - 440 = +43$ Hz (positif, ce qui confirme le rapprochement)."
+      ],
+      "reponse": "$f_R = f_E\\,\\dfrac{c}{c-v} \\approx 483$ Hz, soit $\\Delta f \\approx +43$ Hz (son plus aigu)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Dans un atelier, une machine seule produit un niveau sonore $L_1 = 70$ dB en un point donné. On met en marche $5$ machines identiques et indépendantes. Les intensités sonores s'additionnent. 1) Quelle est l'intensité totale $I_5$ en fonction de l'intensité $I_1$ d'une machine ? 2) Calculer le niveau sonore total $L_5$. (On prendra $\\log 5 \\approx 0{,}70$.)",
+      "corrige": [
+        "Les $5$ machines étant identiques et leurs intensités s'additionnant, l'intensité totale est $I_5 = 5\\,I_1$.",
+        "Le niveau total est $L_5 = 10\\log\\!\\left(\\dfrac{I_5}{I_0}\\right) = 10\\log\\!\\left(\\dfrac{5\\,I_1}{I_0}\\right)$.",
+        "On sépare le logarithme : $L_5 = 10\\log 5 + 10\\log\\!\\left(\\dfrac{I_1}{I_0}\\right) = 10\\log 5 + L_1$.",
+        "Application numérique : $L_5 = 10 \\times 0{,}70 + 70 = 7{,}0 + 70 = 77$ dB. Passer de $1$ à $5$ machines n'ajoute que $7$ dB, pas $\\times 5$ le niveau."
+      ],
+      "reponse": "$I_5 = 5\\,I_1$ et $L_5 = L_1 + 10\\log 5 \\approx 77$ dB."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "diffraction",
+      "enonce": "On veut mesurer la largeur $a$ d'une fente. On l'éclaire avec un laser de longueur d'onde $\\lambda = 633$ nm et on place un écran à la distance $D = 2{,}5$ m. La tache centrale de diffraction a une largeur totale mesurée $\\ell = 3{,}2$ cm. On rappelle que $\\ell = \\dfrac{2\\lambda D}{a}$. Déterminer la largeur $a$ de la fente, en millimètres.",
+      "corrige": [
+        "On part de $\\ell = \\dfrac{2\\lambda D}{a}$ et on isole $a$ : $a = \\dfrac{2\\lambda D}{\\ell}$.",
+        "On convertit tout en unités SI (mètres) : $\\lambda = 6{,}33 \\times 10^{-7}$ m, $D = 2{,}5$ m, $\\ell = 3{,}2\\ \\text{cm} = 3{,}2 \\times 10^{-2}$ m.",
+        "On calcule le numérateur : $2\\lambda D = 2 \\times 6{,}33 \\times 10^{-7} \\times 2{,}5 = 3{,}17 \\times 10^{-6}\\ \\text{m}^{2}$.",
+        "D'où $a = \\dfrac{3{,}17 \\times 10^{-6}}{3{,}2 \\times 10^{-2}} = 9{,}9 \\times 10^{-5}$ m, soit $a \\approx 0{,}10$ mm."
+      ],
+      "reponse": "$a = \\dfrac{2\\lambda D}{\\ell} \\approx 9{,}9 \\times 10^{-5}$ m $\\approx 0{,}10$ mm."
+    }
+  ]
+}

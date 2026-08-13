@@ -1,0 +1,86 @@
+{
+  "id": "tale-spe-pc-lunette-photons-exos",
+  "chapitre": "tale-spe-pc-lunette-photons",
+  "titre": "Exercices — Lunette astronomique et modèle du photon",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Constantes : $h = 6{,}63\\times10^{-34}$ J·s, $c = 3{,}00\\times10^{8}$ m·s⁻¹, $1$ eV $= 1{,}60\\times10^{-19}$ J, $m_e = 9{,}11\\times10^{-31}$ kg.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "grossissement",
+      "enonce": "Une lunette astronomique est constituée d'un objectif de distance focale $f'_1 = 800$ mm et d'un oculaire de distance focale $f'_2 = 20$ mm. Calculer son grossissement $G$.",
+      "corrige": [
+        "Le grossissement d'une lunette afocale est $G = \\dfrac{f'_1}{f'_2}$, où $f'_1$ est la focale de l'objectif et $f'_2$ celle de l'oculaire.",
+        "Les deux focales sont déjà dans la même unité (mm), on peut diviser directement : $G = \\dfrac{800}{20} = 40$.",
+        "$G$ est un nombre **sans unité** : l'astre est vu $40$ fois plus grand (en angle) qu'à l'œil nu."
+      ],
+      "reponse": "$G = \\dfrac{f'_1}{f'_2} = \\dfrac{800}{20} = 40$ (sans unité)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "energie-photon",
+      "enonce": "Un photon de lumière orange a une longueur d'onde $\\lambda = 600$ nm. 1) Calculer son énergie $E$ en joules. 2) Exprimer cette énergie en électron-volts.",
+      "corrige": [
+        "On utilise $E = \\dfrac{hc}{\\lambda}$. Il faut d'abord convertir $\\lambda$ en mètres : $\\lambda = 600$ nm $= 600\\times10^{-9}$ m $= 6{,}00\\times10^{-7}$ m.",
+        "$E = \\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{6{,}00\\times10^{-7}} = \\dfrac{1{,}99\\times10^{-25}}{6{,}00\\times10^{-7}} = 3{,}3\\times10^{-19}$ J.",
+        "Conversion en eV : on **divise** par $1{,}60\\times10^{-19}$. $E = \\dfrac{3{,}3\\times10^{-19}}{1{,}60\\times10^{-19}} = 2{,}1$ eV."
+      ],
+      "reponse": "$E = \\dfrac{hc}{\\lambda} = 3{,}3\\times10^{-19}$ J $= 2{,}1$ eV."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "lunette-afocale",
+      "enonce": "Une lunette afocale a un objectif de distance focale $f'_1 = 90$ cm et un oculaire de distance focale $f'_2 = 3{,}0$ cm. 1) Calculer le grossissement $G$. 2) Déterminer la distance $\\overline{O_1O_2}$ entre les centres des deux lentilles. 3) Une étoile est vue à l'œil nu sous un angle $\\alpha = 5{,}0\\times10^{-4}$ rad. Sous quel angle $\\alpha'$ est-elle vue à travers la lunette ?",
+      "corrige": [
+        "1) Grossissement : $G = \\dfrac{f'_1}{f'_2} = \\dfrac{90}{3{,}0} = 30$. Les deux focales sont dans la même unité (cm), la division est directe.",
+        "2) Dans une lunette afocale, le foyer image de l'objectif est confondu avec le foyer objet de l'oculaire ($F'_1 = F_2$). La distance entre les centres vaut donc $\\overline{O_1O_2} = f'_1 + f'_2 = 90 + 3{,}0 = 93$ cm.",
+        "3) Par définition, $G = \\dfrac{\\alpha'}{\\alpha}$, donc $\\alpha' = G\\times\\alpha = 30\\times5{,}0\\times10^{-4} = 1{,}5\\times10^{-2}$ rad. L'angle apparent est bien $30$ fois plus grand."
+      ],
+      "reponse": "$G = 30$ ; $\\overline{O_1O_2} = f'_1 + f'_2 = 93$ cm ; $\\alpha' = G\\alpha = 1{,}5\\times10^{-2}$ rad."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "seuil-photoelectrique",
+      "enonce": "Le travail d'extraction du sodium vaut $W = 2{,}3$ eV. 1) Calculer la longueur d'onde seuil $\\lambda_0$ de l'effet photoélectrique pour ce métal. 2) Une lumière rouge de longueur d'onde $\\lambda = 633$ nm peut-elle arracher des électrons au sodium ? Justifier.",
+      "corrige": [
+        "1) La condition de seuil est $h\\nu_0 = W$, soit $\\lambda_0 = \\dfrac{hc}{W}$. On convertit d'abord $W$ en joules : $W = 2{,}3\\times1{,}60\\times10^{-19} = 3{,}7\\times10^{-19}$ J.",
+        "$\\lambda_0 = \\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{3{,}7\\times10^{-19}} = \\dfrac{1{,}99\\times10^{-25}}{3{,}7\\times10^{-19}} = 5{,}4\\times10^{-7}$ m, soit $\\lambda_0 = 540$ nm.",
+        "2) L'émission a lieu si $\\lambda \\leq \\lambda_0$. Or $\\lambda = 633$ nm $> 540$ nm : la lumière rouge a une longueur d'onde **trop grande** (fréquence trop faible), donc chaque photon a une énergie inférieure à $W$. Aucun électron n'est arraché."
+      ],
+      "reponse": "$\\lambda_0 = \\dfrac{hc}{W} = 5{,}4\\times10^{-7}$ m $= 540$ nm. Comme $633$ nm $> 540$ nm, la lumière rouge n'arrache aucun électron."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "bilan-energie",
+      "enonce": "Un métal a un travail d'extraction $W = 1{,}8$ eV. On l'éclaire avec une lumière de longueur d'onde $\\lambda = 400$ nm. 1) Calculer l'énergie $E$ d'un photon de cette lumière, en eV. 2) Montrer que l'effet photoélectrique se produit et calculer l'énergie cinétique maximale $E_c$ des électrons émis, en eV puis en joules. 3) En déduire la vitesse maximale $v$ de ces électrons.",
+      "corrige": [
+        "1) Énergie du photon : $E = \\dfrac{hc}{\\lambda} = \\dfrac{1{,}99\\times10^{-25}}{4{,}00\\times10^{-7}} = 4{,}97\\times10^{-19}$ J. En eV : $E = \\dfrac{4{,}97\\times10^{-19}}{1{,}60\\times10^{-19}} = 3{,}1$ eV.",
+        "2) Comme $E = 3{,}1$ eV $> W = 1{,}8$ eV, le photon apporte assez d'énergie : l'effet photoélectrique a lieu. Le bilan d'énergie donne $E_c = E - W = 3{,}1 - 1{,}8 = 1{,}3$ eV. En joules : $E_c = 1{,}3\\times1{,}60\\times10^{-19} = 2{,}1\\times10^{-19}$ J.",
+        "3) L'énergie cinétique vaut $E_c = \\tfrac{1}{2}m_e v^2$, donc $v = \\sqrt{\\dfrac{2E_c}{m_e}}$ (avec $E_c$ en joules). $v = \\sqrt{\\dfrac{2\\times2{,}1\\times10^{-19}}{9{,}11\\times10^{-31}}} = \\sqrt{4{,}6\\times10^{11}} = 6{,}8\\times10^{5}$ m·s⁻¹."
+      ],
+      "reponse": "$E = 3{,}1$ eV ; comme $E > W$, l'effet a lieu et $E_c = E - W = 1{,}3$ eV $= 2{,}1\\times10^{-19}$ J ; $v = \\sqrt{2E_c/m_e} = 6{,}8\\times10^{5}$ m·s⁻¹."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "transition-atomique",
+      "enonce": "Un atome passe d'un niveau d'énergie $E_2 = -3{,}4$ eV à un niveau $E_1 = -5{,}4$ eV en émettant un photon. 1) Calculer l'énergie du photon émis, en eV. 2) En déduire sa longueur d'onde $\\lambda$ ; à quel domaine appartient-elle ? 3) Ce photon éclaire ensuite un métal de travail d'extraction $W = 1{,}9$ eV. L'effet photoélectrique se produit-il ? Si oui, calculer l'énergie cinétique des électrons émis.",
+      "corrige": [
+        "1) L'atome descend d'un niveau haut vers un niveau bas : il émet un photon d'énergie égale à l'écart des niveaux. $\\Delta E = E_2 - E_1 = -3{,}4 - (-5{,}4) = 2{,}0$ eV.",
+        "2) $\\Delta E = \\dfrac{hc}{\\lambda}$, donc $\\lambda = \\dfrac{hc}{\\Delta E}$. En convertissant $\\Delta E = 2{,}0\\times1{,}60\\times10^{-19} = 3{,}2\\times10^{-19}$ J : $\\lambda = \\dfrac{1{,}99\\times10^{-25}}{3{,}2\\times10^{-19}} = 6{,}2\\times10^{-7}$ m $= 620$ nm. C'est une lumière **visible** (orange-rouge).",
+        "3) L'énergie du photon est $E = 2{,}0$ eV, supérieure à $W = 1{,}9$ eV : l'effet photoélectrique **se produit**. Bilan : $E_c = E - W = 2{,}0 - 1{,}9 = 0{,}1$ eV, soit $E_c = 0{,}1\\times1{,}60\\times10^{-19} = 1{,}6\\times10^{-20}$ J."
+      ],
+      "reponse": "Photon émis : $\\Delta E = 2{,}0$ eV, $\\lambda = hc/\\Delta E = 620$ nm (visible). Sur le métal ($W = 1{,}9$ eV) : $E > W$, donc émission avec $E_c = 0{,}1$ eV $= 1{,}6\\times10^{-20}$ J."
+    }
+  ]
+}

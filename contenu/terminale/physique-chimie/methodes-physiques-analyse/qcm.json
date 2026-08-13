@@ -1,0 +1,154 @@
+{
+ "id": "tale-spe-pc-methodes-physiques-analyse-qcm",
+ "chapitre": "tale-spe-pc-methodes-physiques-analyse",
+ "titre": "QCM — Méthodes physiques d'analyse",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "absorbance-et-loi-de-beer-lambert",
+   "enonce": "Quelle est l'unité de l'absorbance $A$ d'une solution ?",
+   "choix": [
+    "$\\mathrm{mol\\cdot L^{-1}}$",
+    "Elle n'a pas d'unité : c'est un nombre pur",
+    "$\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$",
+    "$\\mathrm{cm}$"
+   ],
+   "reponse": 1,
+   "explication": "L'absorbance est un **nombre sans unité**. Le piège est de lui coller l'unité d'une autre grandeur de la loi $A = \\varepsilon\\ell c$ : $\\mathrm{mol\\cdot L^{-1}}$ est celle de $c$, $\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$ celle de $\\varepsilon$, $\\mathrm{cm}$ celle de $\\ell$."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "spectroscopies-uv-visible-et-infrarouge",
+   "enonce": "Quelle méthode permet d'identifier les groupes caractéristiques d'une molécule ?",
+   "choix": [
+    "La conductimétrie",
+    "La spectroscopie infrarouge (IR)",
+    "La spectroscopie UV-visible",
+    "La loi de Beer-Lambert"
+   ],
+   "reponse": 1,
+   "explication": "L'**IR** fait vibrer les liaisons et repère les **groupes caractéristiques** : elle **identifie**. L'UV-visible et Beer-Lambert servent à **doser** (concentration), la conductimétrie mesure une conductivité."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "absorbance-et-loi-de-beer-lambert",
+   "enonce": "Une espèce a un coefficient $\\varepsilon = 2{,}0\\times10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. Dans une cuve de $\\ell = 1{,}0\\ \\mathrm{cm}$, une solution à $c = 2{,}0\\times10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ a pour absorbance :",
+   "choix": [
+    "$0{,}40$",
+    "$0{,}20$",
+    "$4{,}0$",
+    "$40$"
+   ],
+   "reponse": 0,
+   "explication": "$A = \\varepsilon\\ell c = 2{,}0\\times10^{3} \\times 1{,}0 \\times 2{,}0\\times10^{-4} = 0{,}40$. Attention aux puissances de $10$ : $10^{3}\\times10^{-4} = 10^{-1}$, et $2{,}0\\times2{,}0 = 4{,}0$, d'où $4{,}0\\times10^{-1} = 0{,}40$."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "conductance-conductivite-et-loi-de-kohlrausch",
+   "enonce": "Une concentration vaut $c = 0{,}020\\ \\mathrm{mol\\cdot L^{-1}}$. Que vaut-elle en $\\mathrm{mol\\cdot m^{-3}}$, unité de la loi de Kohlrausch ?",
+   "choix": [
+    "$2{,}0\\times10^{-5}\\ \\mathrm{mol\\cdot m^{-3}}$",
+    "$0{,}020\\ \\mathrm{mol\\cdot m^{-3}}$",
+    "$20\\ \\mathrm{mol\\cdot m^{-3}}$",
+    "$2{,}0\\ \\mathrm{mol\\cdot m^{-3}}$"
+   ],
+   "reponse": 2,
+   "explication": "$1\\ \\mathrm{mol\\cdot L^{-1}} = 10^{3}\\ \\mathrm{mol\\cdot m^{-3}}$, donc on **multiplie par $1000$** : $0{,}020\\times10^{3} = 20\\ \\mathrm{mol\\cdot m^{-3}}$. Diviser par $1000$ (donnant $2{,}0\\times10^{-5}$) est l'erreur classique de sens de conversion."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "absorbance-et-loi-de-beer-lambert",
+   "enonce": "Une courbe d'étalonnage a pour équation $A = 5{,}0\\times10^{3}\\,c$ ($c$ en $\\mathrm{mol\\cdot L^{-1}}$). Une solution inconnue donne $A_x = 0{,}60$. Sa concentration vaut :",
+   "choix": [
+    "$3{,}0\\times10^{3}\\ \\mathrm{mol\\cdot L^{-1}}$",
+    "$1{,}2\\times10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$",
+    "$8{,}3\\times10^{3}\\ \\mathrm{mol\\cdot L^{-1}}$",
+    "$0{,}60\\ \\mathrm{mol\\cdot L^{-1}}$"
+   ],
+   "reponse": 1,
+   "explication": "On **divise** l'absorbance par la pente : $c_x = \\dfrac{A_x}{k} = \\dfrac{0{,}60}{5{,}0\\times10^{3}} = 1{,}2\\times10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Multiplier $0{,}60\\times5{,}0\\times10^{3} = 3{,}0\\times10^{3}$ est le piège n°1 de l'étalonnage."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "spectroscopies-uv-visible-et-infrarouge",
+   "enonce": "Sur un spectre IR, une bande d'absorption se situe à un nombre d'onde $\\sigma = 2000\\ \\mathrm{cm^{-1}}$. À quelle longueur d'onde $\\lambda$ cela correspond-il ?",
+   "choix": [
+    "$5{,}0\\ \\mathrm{\\mu m}$",
+    "$2000\\ \\mathrm{nm}$",
+    "$0{,}50\\ \\mathrm{cm}$",
+    "$5{,}0\\ \\mathrm{cm}$"
+   ],
+   "reponse": 0,
+   "explication": "$\\lambda = \\dfrac{1}{\\sigma} = \\dfrac{1}{2000\\ \\mathrm{cm^{-1}}} = 5{,}0\\times10^{-4}\\ \\mathrm{cm} = 5{,}0\\ \\mathrm{\\mu m}$ (car $10^{-4}\\ \\mathrm{cm} = 10^{-6}\\ \\mathrm{m} = 1\\ \\mathrm{\\mu m}$). Le nombre d'onde n'est pas une longueur d'onde : c'est son inverse."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "conductance-conductivite-et-loi-de-kohlrausch",
+   "enonce": "Solution de chlorure de sodium à $c = 5{,}0\\times10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$, avec $\\lambda_{\\mathrm{Na^+}} = 5{,}0\\times10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6\\times10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. La conductivité $\\sigma$ vaut :",
+   "choix": [
+    "$6{,}3\\times10^{-5}\\ \\mathrm{S\\cdot m^{-1}}$",
+    "$6{,}3\\times10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$",
+    "$0{,}63\\ \\mathrm{S\\cdot m^{-1}}$",
+    "$1{,}26\\times10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$"
+   ],
+   "reponse": 1,
+   "explication": "D'abord la conversion : $[\\mathrm{Na^+}] = [\\mathrm{Cl^-}] = c = 5{,}0\\ \\mathrm{mol\\cdot m^{-3}}$. Puis $\\sigma = (\\lambda_{\\mathrm{Na^+}}+\\lambda_{\\mathrm{Cl^-}})\\,c = (5{,}0+7{,}6)\\times10^{-3}\\times5{,}0 = 6{,}3\\times10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$. Garder $c$ en $\\mathrm{mol\\cdot L^{-1}}$ donne $6{,}3\\times10^{-5}$ : faux d'un facteur $1000$."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "spectroscopies-uv-visible-et-infrarouge",
+   "enonce": "Un spectre IR présente une bande **forte et fine** vers $1710\\ \\mathrm{cm^{-1}}$ ET une bande **très large** entre $2500$ et $3200\\ \\mathrm{cm^{-1}}$. De quelle fonction s'agit-il ?",
+   "choix": [
+    "Un alcool",
+    "Un acide carboxylique",
+    "Une cétone",
+    "Une amine"
+   ],
+   "reponse": 1,
+   "explication": "La bande $\\approx 1710\\ \\mathrm{cm^{-1}}$ signale un $\\mathrm{C\\!=\\!O}$ (carbonyle) et la bande **très large** $2500\\text{-}3200\\ \\mathrm{cm^{-1}}$ un $\\mathrm{O\\!-\\!H}$ d'**acide carboxylique**. Le $\\mathrm{C\\!=\\!O}$ **seul** (sans $\\mathrm{O\\!-\\!H}$) orienterait vers une cétone ou un aldéhyde."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "conductance-conductivite-et-loi-de-kohlrausch",
+   "enonce": "On plonge la même solution successivement dans deux cellules conductimétriques de géométries différentes. Que peut-on affirmer ?",
+   "choix": [
+    "La conductance $G$ est identique dans les deux cas",
+    "La conductivité $\\sigma$ est identique, mais pas forcément la conductance $G$",
+    "La conductivité $\\sigma$ change car la cellule change",
+    "Ni $G$ ni $\\sigma$ ne changent"
+   ],
+   "reponse": 1,
+   "explication": "La **conductivité** $\\sigma$ (en $\\mathrm{S\\cdot m^{-1}}$) ne dépend que de la **solution** : elle est identique. La **conductance** $G$ (en $\\mathrm{S}$), reliée par $G = k_{\\text{cell}}\\,\\sigma$, dépend de la **géométrie** de la cellule et change donc a priori."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "spectroscopies-uv-visible-et-infrarouge",
+   "enonce": "Une solution apparaît **jaune** à l'œil. Dans quelle zone se situe son maximum d'absorption $\\lambda_{\\max}$ ?",
+   "choix": [
+    "Vers $450\\ \\mathrm{nm}$ (bleu)",
+    "Vers $580\\ \\mathrm{nm}$ (jaune)",
+    "Vers $700\\ \\mathrm{nm}$ (rouge)",
+    "Elle n'absorbe aucune longueur d'onde"
+   ],
+   "reponse": 0,
+   "explication": "Une solution colorée apparaît de la couleur **complémentaire** de celle qu'elle absorbe. Le complémentaire du **jaune** est le **bleu** : elle absorbe donc vers $\\lambda_{\\max}\\approx450\\ \\mathrm{nm}$. Croire qu'une solution jaune absorbe le jaune ($580\\ \\mathrm{nm}$) est l'erreur type."
+  }
+ ]
+}

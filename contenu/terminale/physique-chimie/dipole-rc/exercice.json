@@ -1,0 +1,93 @@
+{
+  "id": "tale-spe-pc-dipole-rc-exos",
+  "chapitre": "tale-spe-pc-dipole-rc",
+  "titre": "Exercices — Dynamique d'un système électrique : le dipôle RC",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "condensateur",
+      "enonce": "Un condensateur de capacité $C = 10\\ \\mu\\text{F}$ est chargé sous une tension constante $u = 12$ V. Calculer la charge $q$ stockée sur son armature, en coulombs puis en microcoulombs.",
+      "corrige": [
+        "La charge est proportionnelle à la tension : $q = C \\times u$.",
+        "On convertit d'abord la capacité en farads : $C = 10\\ \\mu\\text{F} = 10 \\times 10^{-6}\\ \\text{F} = 1{,}0 \\times 10^{-5}\\ \\text{F}$.",
+        "Application numérique : $q = 1{,}0 \\times 10^{-5} \\times 12 = 1{,}2 \\times 10^{-4}$ C.",
+        "Soit, en microcoulombs, $q = 1{,}2 \\times 10^{-4}\\ \\text{C} = 120\\ \\mu\\text{C}$. Oublier de convertir les $\\mu$F donnerait un résultat un million de fois trop grand."
+      ],
+      "reponse": "$q = C\\,u = 1{,}2 \\times 10^{-4}$ C, soit $120\\ \\mu$C."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "temps-caracteristique",
+      "enonce": "Un circuit RC série est constitué d'un résistor $R = 20\\ \\text{k}\\Omega$ et d'un condensateur $C = 0{,}50\\ \\mu\\text{F}$. Calculer la constante de temps $\\tau$ du circuit, en secondes puis en millisecondes.",
+      "corrige": [
+        "La constante de temps d'un dipôle RC vaut $\\tau = R \\times C$.",
+        "On convertit les deux grandeurs en unités SI : $R = 20\\ \\text{k}\\Omega = 2{,}0 \\times 10^{4}\\ \\Omega$ et $C = 0{,}50\\ \\mu\\text{F} = 0{,}50 \\times 10^{-6}\\ \\text{F} = 5{,}0 \\times 10^{-7}\\ \\text{F}$.",
+        "Application numérique : $\\tau = 2{,}0 \\times 10^{4} \\times 5{,}0 \\times 10^{-7} = 1{,}0 \\times 10^{-2}$ s.",
+        "Soit $\\tau = 1{,}0 \\times 10^{-2}\\ \\text{s} = 10$ ms."
+      ],
+      "reponse": "$\\tau = RC = 1{,}0 \\times 10^{-2}$ s, soit $10$ ms."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "circuit-rc",
+      "enonce": "Un condensateur initialement déchargé se charge dans un circuit RC série de f.é.m. $E = 5{,}0$ V, avec $R = 1{,}0\\ \\text{k}\\Omega$ et $C = 2{,}0\\ \\mu\\text{F}$. La tension aux bornes du condensateur suit $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$. 1) Calculer $\\tau$. 2) En déduire la tension $u_C$ à $t = \\tau$, puis à $t = 5\\tau$. (On prend $e^{-1} \\approx 0{,}37$ et $e^{-5} \\approx 0{,}0067$.)",
+      "corrige": [
+        "Constante de temps : $\\tau = RC = 1{,}0 \\times 10^{3} \\times 2{,}0 \\times 10^{-6} = 2{,}0 \\times 10^{-3}$ s $= 2{,}0$ ms.",
+        "À $t = \\tau$ : $u_C(\\tau) = E(1 - e^{-1}) = 5{,}0 \\times (1 - 0{,}37) = 5{,}0 \\times 0{,}63 = 3{,}2$ V, soit environ $63\\,\\%$ de $E$.",
+        "À $t = 5\\tau$ : $u_C(5\\tau) = E(1 - e^{-5}) = 5{,}0 \\times (1 - 0{,}0067) = 5{,}0 \\times 0{,}993 \\approx 5{,}0$ V, soit plus de $99\\,\\%$ de $E$.",
+        "On considère donc le régime permanent (condensateur chargé sous $E$) atteint au bout de $5\\tau = 10$ ms."
+      ],
+      "reponse": "$\\tau = 2{,}0$ ms ; $u_C(\\tau) \\approx 3{,}2$ V ($63\\,\\%$ de $E$) et $u_C(5\\tau) \\approx 5{,}0$ V (régime permanent)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "circuit-rc",
+      "enonce": "Un condensateur $C = 4{,}7\\ \\mu\\text{F}$, préalablement chargé sous $E = 9{,}0$ V, est fermé à $t = 0$ sur un résistor seul $R = 3{,}3\\ \\text{k}\\Omega$. Sa tension suit alors $u_C(t) = E\\,e^{-t/\\tau}$. 1) Calculer $\\tau$. 2) Donner la tension $u_C$ à $t = \\tau$. 3) Estimer la durée au bout de laquelle le condensateur est pratiquement déchargé. (On prend $e^{-1} \\approx 0{,}37$.)",
+      "corrige": [
+        "Constante de temps : $\\tau = RC = 3{,}3 \\times 10^{3} \\times 4{,}7 \\times 10^{-6} = 1{,}55 \\times 10^{-2}$ s $\\approx 16$ ms.",
+        "À $t = \\tau$, en décharge : $u_C(\\tau) = E\\,e^{-1} = 9{,}0 \\times 0{,}37 = 3{,}3$ V, soit $37\\,\\%$ de $E$ (la tension a chuté, elle ne monte pas).",
+        "On considère la décharge terminée au bout de $5\\tau$ (moins de $1\\,\\%$ de $E$).",
+        "Numériquement : $5\\tau = 5 \\times 1{,}55 \\times 10^{-2} \\approx 7{,}8 \\times 10^{-2}$ s, soit environ $78$ ms."
+      ],
+      "reponse": "$\\tau \\approx 16$ ms ; $u_C(\\tau) = 3{,}3$ V ($37\\,\\%$ de $E$) ; condensateur pratiquement déchargé au bout de $5\\tau \\approx 78$ ms."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "circuit-rc",
+      "enonce": "On étudie la charge d'un condensateur de capacité $C$ à travers un résistor $R$, alimentés par un générateur de f.é.m. $E$ (convention récepteur, $u_C(0) = 0$). 1) Établir l'équation différentielle vérifiée par $u_C$ à partir de la loi des mailles. 2) Vérifier que $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$, avec $\\tau = RC$, est bien solution et satisfait la condition initiale. 3) En déduire l'expression de l'intensité $i(t)$ dans le circuit.",
+      "corrige": [
+        "Loi des mailles : $E = u_R + u_C$. Avec $u_R = R\\,i$ et $i = C\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t}$, on a $u_R = RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t}$, d'où l'équation différentielle $RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$.",
+        "On dérive la solution proposée : $\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} = E \\times \\dfrac{1}{\\tau}\\,e^{-t/\\tau} = \\dfrac{E}{RC}\\,e^{-t/\\tau}$ (car $\\tau = RC$).",
+        "On reporte dans l'équation : $RC \\times \\dfrac{E}{RC}\\,e^{-t/\\tau} + E\\left(1 - e^{-t/\\tau}\\right) = E\\,e^{-t/\\tau} + E - E\\,e^{-t/\\tau} = E$. L'égalité est vérifiée pour tout $t$.",
+        "Condition initiale : $u_C(0) = E(1 - e^{0}) = E(1 - 1) = 0$, conforme au condensateur déchargé au départ. La fonction est donc bien LA solution.",
+        "Courant : $i(t) = C\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} = C \\times \\dfrac{E}{RC}\\,e^{-t/\\tau} = \\dfrac{E}{R}\\,e^{-t/\\tau}$. Il part de $i_0 = \\dfrac{E}{R}$ (maximal) et décroît vers $0$."
+      ],
+      "reponse": "Équation : $RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$ ; la fonction $u_C(t) = E(1 - e^{-t/\\tau})$ la vérifie avec $u_C(0)=0$ ; et $i(t) = \\dfrac{E}{R}\\,e^{-t/\\tau}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "temps-caracteristique",
+      "enonce": "Dans un capteur capacitif, un condensateur de capacité inconnue $C$ se décharge à travers un résistor $R = 6{,}0\\ \\text{k}\\Omega$. Sur l'enregistrement, la tension part de $E = 8{,}0$ V et l'on mesure qu'elle atteint $0{,}37\\,E$ au bout de $12$ ms. 1) Que vaut la constante de temps $\\tau$ ? Justifier. 2) En déduire la capacité $C$. 3) Le diélectrique du capteur absorbe de l'humidité, ce qui fait augmenter $C$. Comment évolue $\\tau$ ?",
+      "corrige": [
+        "En décharge, $u_C(t) = E\\,e^{-t/\\tau}$ : à $t = \\tau$, $u_C = E\\,e^{-1} = 0{,}37\\,E$. L'instant où la tension vaut $37\\,\\%$ de $E$ est donc, par définition, $t = \\tau$. Ici $\\tau = 12$ ms $= 1{,}2 \\times 10^{-2}$ s.",
+        "Comme $\\tau = RC$, on isole la capacité : $C = \\dfrac{\\tau}{R}$.",
+        "Application numérique : $C = \\dfrac{1{,}2 \\times 10^{-2}}{6{,}0 \\times 10^{3}} = 2{,}0 \\times 10^{-6}$ F $= 2{,}0\\ \\mu$F.",
+        "Si $C$ augmente à $R$ fixé, alors $\\tau = RC$ augmente aussi : la décharge devient plus lente. C'est cette variation de $\\tau$ que le capteur mesure et convertit en taux d'humidité."
+      ],
+      "reponse": "$\\tau = 12$ ms (instant où $u_C = 0{,}37\\,E$) ; $C = \\dfrac{\\tau}{R} = 2{,}0\\ \\mu$F ; si $C$ augmente, $\\tau$ augmente (décharge plus lente)."
+    }
+  ]
+}

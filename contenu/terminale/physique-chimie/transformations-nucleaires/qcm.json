@@ -1,0 +1,154 @@
+{
+ "id": "tale-spe-pc-transformations-nucleaires-qcm",
+ "chapitre": "tale-spe-pc-transformations-nucleaires",
+ "titre": "QCM — Transformations nucléaires et radioactivité",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "diagramme-nz",
+   "enonce": "Dans le diagramme $(N, Z)$, un noyau situé **en dehors** de la vallée de stabilité est :",
+   "choix": [
+    "stable",
+    "instable, donc radioactif",
+    "toujours un isotope de l'hydrogène",
+    "dépourvu de neutrons"
+   ],
+   "reponse": 1,
+   "explication": "La vallée de stabilité rassemble les noyaux **stables**. Un noyau qui en sort a un mauvais rapport neutrons/protons : il est **instable** et se désintègre spontanément (radioactif). Sa position par rapport à la vallée indique le type de radioactivité (α, β⁻ ou β⁺)."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "radioactivite-alpha",
+   "enonce": "Quelle particule est émise lors d'une radioactivité α ?",
+   "choix": [
+    "un électron $^{\\;\\;0}_{-1}\\text{e}$",
+    "un noyau d'hélium $^{4}_{2}\\text{He}$",
+    "un photon",
+    "un neutron $^{1}_{0}\\text{n}$"
+   ],
+   "reponse": 1,
+   "explication": "La particule α est un **noyau d'hélium** $^{4}_{2}\\text{He}$ (2 protons, 2 neutrons). L'électron correspond au β⁻, le photon au rayonnement γ. Le noyau père perd donc 4 nucléons et 2 charges."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "conservation",
+   "enonce": "L'uranium 238 est radioactif α : $^{238}_{92}\\text{U} \\to \\; ^{A}_{Z}\\text{Y} + \\; ^{4}_{2}\\text{He}$. Quel est le noyau fils ?",
+   "choix": [
+    "$^{234}_{90}\\text{Th}$",
+    "$^{234}_{92}\\text{U}$",
+    "$^{242}_{94}\\text{Pu}$",
+    "$^{236}_{90}\\text{Th}$"
+   ],
+   "reponse": 0,
+   "explication": "Conservation du nombre de masse : $238 = A + 4 \\Rightarrow A = 234$. Conservation de la charge : $92 = Z + 2 \\Rightarrow Z = 90$ (le thorium). Le piège est d'ajouter au lieu de soustraire, ou d'oublier de changer $Z$."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "radioactivite-beta",
+   "enonce": "Lors d'une désintégration β⁻, comment évoluent le nombre de masse $A$ et le numéro atomique $Z$ du noyau ?",
+   "choix": [
+    "$A$ inchangé, $Z$ augmente de 1",
+    "$A$ inchangé, $Z$ diminue de 1",
+    "$A$ diminue de 4, $Z$ diminue de 2",
+    "$A$ augmente de 1, $Z$ inchangé"
+   ],
+   "reponse": 0,
+   "explication": "En β⁻, un **neutron se transforme en proton** : le nombre de nucléons $A$ ne change pas, mais on gagne un proton, donc $Z$ **augmente** de 1. Le cas $Z$ qui diminue correspond au β⁺, et $A-4,\\ Z-2$ à l'α."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "demi-vie",
+   "enonce": "Au bout de **trois** demi-vies, quelle fraction des noyaux initiaux reste-t-il ?",
+   "choix": [
+    "$\\dfrac{1}{8}$",
+    "$\\dfrac{1}{6}$",
+    "$\\dfrac{1}{3}$",
+    "$0$"
+   ],
+   "reponse": 0,
+   "explication": "Après chaque demi-vie il reste la moitié : $N_0 \\to \\frac{N_0}{2} \\to \\frac{N_0}{4} \\to \\frac{N_0}{8}$. Après $n$ demi-vies il reste $N_0/2^{\\,n}$, ici $1/2^3 = 1/8$. Le piège $1/6$ vient de faire $2\\times 3$ : la décroissance est géométrique, pas linéaire."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "activite",
+   "enonce": "Dans quelle unité s'exprime l'activité $A$ d'un échantillon radioactif ?",
+   "choix": [
+    "le becquerel (Bq)",
+    "le gray (Gy)",
+    "le sievert (Sv)",
+    "la mole (mol)"
+   ],
+   "reponse": 0,
+   "explication": "L'activité est un **nombre de désintégrations par seconde** : $1\\ \\text{Bq} = 1\\ \\text{s}^{-1}$. Le gray et le sievert mesurent des **doses** de rayonnement reçues, pas une activité ; la mole est une quantité de matière."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "demi-vie-lambda",
+   "enonce": "L'iode 131 a une demi-vie $t_{1/2} = 8{,}0$ jours. Quelle est sa constante radioactive $\\lambda$ (en $\\text{s}^{-1}$) ?",
+   "choix": [
+    "$1{,}0 \\times 10^{-6}\\ \\text{s}^{-1}$",
+    "$8{,}7 \\times 10^{-2}\\ \\text{s}^{-1}$",
+    "$1{,}0 \\times 10^{6}\\ \\text{s}^{-1}$",
+    "$6{,}9 \\times 10^{5}\\ \\text{s}^{-1}$"
+   ],
+   "reponse": 0,
+   "explication": "Il faut d'abord convertir : $t_{1/2} = 8{,}0 \\times 24 \\times 3600 = 6{,}9 \\times 10^{5}$ s. Puis $\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}69}{6{,}9\\times 10^{5}} = 1{,}0 \\times 10^{-6}\\ \\text{s}^{-1}$. Le piège $8{,}7\\times 10^{-2}$ vient d'utiliser $8{,}0$ jours **sans convertir en secondes**."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "activite",
+   "enonce": "Un échantillon d'iode 131 ($\\lambda = 1{,}0 \\times 10^{-6}\\ \\text{s}^{-1}$) contient $N = 1{,}0 \\times 10^{12}$ noyaux. Quelle est son activité ?",
+   "choix": [
+    "$1{,}0 \\times 10^{6}\\ \\text{Bq}$",
+    "$1{,}0 \\times 10^{12}\\ \\text{Bq}$",
+    "$1{,}0 \\times 10^{18}\\ \\text{Bq}$",
+    "$1{,}0 \\times 10^{-6}\\ \\text{Bq}$"
+   ],
+   "reponse": 0,
+   "explication": "$A = \\lambda N = 1{,}0\\times 10^{-6} \\times 1{,}0\\times 10^{12} = 1{,}0\\times 10^{6}$ Bq. Le piège $10^{18}$ vient de **diviser** $N$ par $\\lambda$ ; le piège $10^{12}$ de confondre le nombre de noyaux avec l'activité."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "radioactivite-beta",
+   "enonce": "Le fluor 18 est radioactif β⁺ : $^{18}_{9}\\text{F} \\to \\; ^{A}_{Z}\\text{Y} + \\; ^{0}_{+1}\\text{e}$. Quel est le noyau fils ?",
+   "choix": [
+    "$^{18}_{8}\\text{O}$",
+    "$^{18}_{10}\\text{Ne}$",
+    "$^{17}_{8}\\text{O}$",
+    "$^{18}_{9}\\text{F}$"
+   ],
+   "reponse": 0,
+   "explication": "Conservation de la charge : $9 = Z + 1 \\Rightarrow Z = 8$ (l'oxygène). Conservation de $A$ : $18 = A + 0 \\Rightarrow A = 18$. En β⁺, $Z$ **diminue** ($p \\to n$) : le choix $^{18}_{10}\\text{Ne}$ applique par erreur la règle du β⁻."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "demi-vie-lambda",
+   "enonce": "L'iode 131 a une demi-vie de $8$ jours, l'uranium 238 une demi-vie de $4{,}5$ milliards d'années. Lequel a la constante radioactive $\\lambda$ la plus grande ?",
+   "choix": [
+    "l'iode 131",
+    "l'uranium 238",
+    "ils ont la même $\\lambda$",
+    "on ne peut pas comparer sans connaître $N_0$"
+   ],
+   "reponse": 0,
+   "explication": "$\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$ : $\\lambda$ et $t_{1/2}$ sont **inversement** proportionnels. La plus petite demi-vie (l'iode) donne le plus grand $\\lambda$, donc la désintégration la plus rapide. $\\lambda$ ne dépend pas de $N_0$ : c'est une caractéristique du nucléide."
+  }
+ ]
+}

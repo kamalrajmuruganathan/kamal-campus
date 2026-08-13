@@ -1,0 +1,154 @@
+{
+ "id": "tale-spe-pc-gaz-parfait-qcm",
+ "chapitre": "tale-spe-pc-gaz-parfait",
+ "titre": "QCM — Modèle du gaz parfait",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "modele-gaz-parfait",
+   "enonce": "Dans le modèle du gaz parfait, quelle hypothèse est retenue ?",
+   "choix": [
+    "Les particules ont un volume propre important",
+    "Les particules sont ponctuelles et sans interaction à distance",
+    "Les particules s'attirent fortement entre elles",
+    "Les chocs entre particules font perdre de l'énergie"
+   ],
+   "reponse": 1,
+   "explication": "Le gaz parfait suppose des particules **ponctuelles** (volume propre négligeable), **sans interaction** à distance et dont les chocs sont **élastiques** (l'énergie cinétique est conservée). Les autres propositions décrivent justement ce qui fait échouer le modèle pour un gaz réel."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "grandeurs-macroscopiques",
+   "enonce": "Dans l'équation d'état $PV = nRT$, dans quelle unité la température $T$ doit-elle être exprimée ?",
+   "choix": [
+    "en degré Celsius (°C)",
+    "en kelvin (K)",
+    "en pascal (Pa)",
+    "en joule (J)"
+   ],
+   "reponse": 1,
+   "explication": "$PV = nRT$ exige la **température thermodynamique** en **kelvins**. Utiliser des °C fausse tout : à $0$ °C on écrirait $T = 0$, d'où $PV = 0$, ce qui est absurde. On convertit toujours par $T = \\theta + 273{,}15$."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "conversions",
+   "enonce": "À quelle température thermodynamique correspond $\\theta = 25$ °C ?",
+   "choix": [
+    "$25$ K",
+    "$248$ K",
+    "$298$ K",
+    "$25{,}15$ K"
+   ],
+   "reponse": 2,
+   "explication": "La conversion est une **addition** : $T = \\theta + 273{,}15 = 25 + 273{,}15 \\approx 298$ K. Le piège est de croire que $0$ °C vaut $0$ K, ou de soustraire $273$ au lieu de l'ajouter (ce qui donnerait $248$ K)."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "conversions",
+   "enonce": "Un volume $V = 2{,}0$ L doit être introduit dans $PV = nRT$ avec $R = 8{,}314$. Quelle valeur faut-il utiliser ?",
+   "choix": [
+    "$2{,}0$ m³",
+    "$2{,}0 \\times 10^{3}$ m³",
+    "$2{,}0 \\times 10^{-3}$ m³",
+    "$2{,}0 \\times 10^{-6}$ m³"
+   ],
+   "reponse": 2,
+   "explication": "Avec $R = 8{,}314$, le volume doit être en **m³** : $1$ L $= 10^{-3}$ m³, donc $2{,}0$ L $= 2{,}0 \\times 10^{-3}$ m³. La valeur $\\times 10^{-6}$ correspondrait à des millilitres, pas à des litres."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "equation-etat",
+   "enonce": "Quel volume occupe $n = 2{,}0$ mol de gaz parfait à $T = 300$ K sous $P = 1{,}0 \\times 10^{5}$ Pa ? (On prend $R = 8{,}314$ J·K⁻¹·mol⁻¹.)",
+   "choix": [
+    "$2{,}5 \\times 10^{-2}$ m³",
+    "$5{,}0 \\times 10^{-2}$ m³",
+    "$5{,}0 \\times 10^{-5}$ m³",
+    "$5{,}0 \\times 10^{2}$ m³"
+   ],
+   "reponse": 1,
+   "explication": "On isole $V = \\dfrac{nRT}{P} = \\dfrac{2{,}0 \\times 8{,}314 \\times 300}{1{,}0 \\times 10^{5}} \\approx 5{,}0 \\times 10^{-2}$ m³. Le choix $2{,}5 \\times 10^{-2}$ oublie le facteur $n = 2{,}0$ ; le choix $5{,}0 \\times 10^{2}$ multiplie par $P$ au lieu de diviser."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "interpretation-microscopique",
+   "enonce": "Que traduit, à l'échelle microscopique, la température thermodynamique d'un gaz ?",
+   "choix": [
+    "La quantité de chaleur contenue dans le gaz",
+    "Le nombre de particules du gaz",
+    "L'agitation thermique (vitesse moyenne des particules)",
+    "La masse volumique du gaz"
+   ],
+   "reponse": 2,
+   "explication": "La température thermodynamique est l'image de l'**agitation thermique** : plus $T$ est grande, plus la vitesse moyenne — donc l'énergie cinétique moyenne — des particules est élevée. La température **n'est pas** une quantité de chaleur ni une énergie stockée : c'est une mesure de l'agitation moyenne."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "equation-etat",
+   "enonce": "Une quantité fixée de gaz parfait est comprimée **à température constante** : son volume est divisé par $3$. Que devient sa pression ?",
+   "choix": [
+    "Elle est divisée par $3$",
+    "Elle reste inchangée",
+    "Elle est multipliée par $3$",
+    "Elle est multipliée par $9$"
+   ],
+   "reponse": 2,
+   "explication": "À $n$ et $T$ constants, $\\dfrac{P_1 V_1}{T_1} = \\dfrac{P_2 V_2}{T_2}$ donne $P_1 V_1 = P_2 V_2$ (loi de Boyle-Mariotte). Si $V$ est divisé par $3$, $P$ est **multipliée par $3$**. Diviser $V$ ne divise pas $P$ : pression et volume varient en sens inverse."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "conversions",
+   "enonce": "Quelle quantité de matière contient un récipient de $V = 5{,}0$ L sous $P = 2{,}0$ bar à $\\theta = 27$ °C ? (On prend $R = 8{,}314$ J·K⁻¹·mol⁻¹.)",
+   "choix": [
+    "$0{,}40$ mol",
+    "$0{,}44$ mol",
+    "$4{,}5$ mol",
+    "$4{,}0 \\times 10^{-3}$ mol"
+   ],
+   "reponse": 0,
+   "explication": "Il faut tout convertir avant : $V = 5{,}0 \\times 10^{-3}$ m³, $P = 2{,}0 \\times 10^{5}$ Pa, $T = 27 + 273 = 300$ K. Alors $n = \\dfrac{PV}{RT} = \\dfrac{2{,}0 \\times 10^{5} \\times 5{,}0 \\times 10^{-3}}{8{,}314 \\times 300} \\approx 0{,}40$ mol. Garder $\\theta = 27$ (au lieu de $300$ K) donne $4{,}5$ mol ; oublier de convertir bar et litres donne $4{,}0 \\times 10^{-3}$ mol."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "limites",
+   "enonce": "Dans quelles conditions le modèle du gaz parfait cesse-t-il d'être valable ?",
+   "choix": [
+    "À très haute pression et à très basse température",
+    "À très basse pression et à très haute température",
+    "Uniquement dans les conditions ordinaires de la salle",
+    "Le modèle est toujours exact, quelles que soient les conditions"
+   ],
+   "reponse": 0,
+   "explication": "À **haute pression**, le volume propre des particules n'est plus négligeable ; à **basse température** (proche de la liquéfaction), les interactions attractives redeviennent importantes. Les deux hypothèses du modèle tombent alors. À l'inverse, dans les conditions usuelles ($\\sim 10^{5}$ Pa, température ambiante), $PV = nRT$ décrit très bien l'air."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "interpretation-microscopique",
+   "enonce": "À l'échelle microscopique, pourquoi comprimer un gaz (à température constante) augmente-t-il sa pression ?",
+   "choix": [
+    "Parce que les particules vont plus vite",
+    "Parce que les particules deviennent plus grosses",
+    "Parce qu'il y a plus de chocs sur les parois par unité de surface",
+    "Parce que la masse de chaque particule augmente"
+   ],
+   "reponse": 2,
+   "explication": "La pression est le résultat macroscopique des **chocs** des particules sur les parois. En réduisant le volume à quantité de matière fixée, on augmente le nombre de particules par unité de volume, donc le **nombre de chocs par unité de surface** : la pression monte. La vitesse moyenne, elle, ne dépend que de la température, ici constante."
+  }
+ ]
+}

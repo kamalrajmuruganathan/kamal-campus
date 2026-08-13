@@ -1,0 +1,154 @@
+{
+ "id": "tale-spe-pc-dipole-rc-qcm",
+ "chapitre": "tale-spe-pc-dipole-rc",
+ "titre": "QCM — Dynamique d'un système électrique : le dipôle RC",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "condensateur",
+   "enonce": "La charge $q$ portée par une armature d'un condensateur de capacité $C$ soumis à une tension $u$ vaut :",
+   "choix": [
+    "$q = C \\times u$",
+    "$q = \\dfrac{u}{C}$",
+    "$q = \\dfrac{C}{u}$",
+    "$q = C + u$"
+   ],
+   "reponse": 0,
+   "explication": "La charge est **proportionnelle** à la tension : $q = C\\,u$. Le piège des formes en fraction vient d'un mélange avec la loi d'Ohm ; ici $C$ est un simple coefficient de proportionnalité."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "condensateur",
+   "enonce": "Dans quelle unité du Système international s'exprime la capacité $C$ d'un condensateur ?",
+   "choix": [
+    "le coulomb (C)",
+    "le volt (V)",
+    "le farad (F)",
+    "l'ohm ($\\Omega$)"
+   ],
+   "reponse": 2,
+   "explication": "La capacité se mesure en **farads** (F). Le piège : le symbole $C$ de la capacité ne doit pas être confondu avec l'unité coulomb (C) de la charge $q$."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "condensateur",
+   "enonce": "Un condensateur de capacité $C = 2{,}0\\ \\mu\\text{F}$ est chargé sous une tension $u = 10$ V. Quelle charge stocke-t-il ?",
+   "choix": [
+    "$2{,}0 \\times 10^{-5}$ C",
+    "$20$ C",
+    "$5{,}0 \\times 10^{-6}$ C",
+    "$2{,}0 \\times 10^{-7}$ C"
+   ],
+   "reponse": 0,
+   "explication": "$q = C\\,u = 2{,}0\\times 10^{-6} \\times 10 = 2{,}0\\times 10^{-5}$ C. Oublier de convertir les $\\mu$F en F donne $20$ C, soit un million de fois trop grand : c'est le piège n°1 du chapitre."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "condensateur",
+   "enonce": "Un condensateur est entièrement chargé et sa tension $u$ reste constante. Quelle est l'intensité $i$ qui le traverse ?",
+   "choix": [
+    "$i = 0$",
+    "$i = \\dfrac{E}{R}$, maximale",
+    "$i = C\\,u$",
+    "$i$ est constante et non nulle"
+   ],
+   "reponse": 0,
+   "explication": "Comme $i = C\\,\\dfrac{\\mathrm{d}u}{\\mathrm{d}t}$ et que $u$ est constante, $\\dfrac{\\mathrm{d}u}{\\mathrm{d}t} = 0$ donc $i = 0$. Un condensateur chargé se comporte comme un **interrupteur ouvert** : le courant dépend de la *vitesse de variation* de $u$, pas de $u$ elle-même."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "circuit-rc",
+   "enonce": "Pour la charge d'un condensateur dans un circuit RC série alimenté par une f.é.m. $E$, quelle équation différentielle vérifie $u_C$ ?",
+   "choix": [
+    "$RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$",
+    "$RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = 0$",
+    "$\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + RC\\,u_C = E$",
+    "$RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} = E$"
+   ],
+   "reponse": 0,
+   "explication": "La loi des mailles $E = u_R + u_C$ avec $u_R = RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t}$ donne $RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$. Le second membre **nul** ($=0$) correspond à la décharge, pas à la charge : c'est la confusion classique."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "temps-caracteristique",
+   "enonce": "Un circuit RC comporte $R = 5{,}0\\ \\text{k}\\Omega$ et $C = 4{,}0\\ \\mu\\text{F}$. Que vaut la constante de temps $\\tau$ ?",
+   "choix": [
+    "$2{,}0 \\times 10^{-2}$ s",
+    "$2{,}0 \\times 10^{4}$ s",
+    "$2{,}0 \\times 10^{-8}$ s",
+    "$1{,}25 \\times 10^{9}$ s"
+   ],
+   "reponse": 0,
+   "explication": "$\\tau = RC = 5{,}0\\times 10^{3} \\times 4{,}0\\times 10^{-6} = 2{,}0\\times 10^{-2}$ s $= 20$ ms. Oublier les conversions k$\\Omega\\to\\Omega$ et $\\mu$F$\\to$F conduit à $2{,}0\\times 10^{4}$ s ; il faut convertir *avant* de multiplier."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "temps-caracteristique",
+   "enonce": "Lors de la charge d'un condensateur sous $E = 12$ V, quelle est la tension $u_C$ à l'instant $t = \\tau$ ? (On prend $e^{-1} \\approx 0{,}37$.)",
+   "choix": [
+    "$7{,}6$ V",
+    "$4{,}4$ V",
+    "$12$ V",
+    "$6{,}0$ V"
+   ],
+   "reponse": 0,
+   "explication": "En **charge**, $u_C(\\tau) = E(1 - e^{-1}) = 12 \\times (1 - 0{,}37) = 12 \\times 0{,}63 = 7{,}6$ V (63 % de $E$). La valeur $4{,}4$ V correspond à $37\\,\\%$, c'est-à-dire à la *décharge* : il faut vérifier le sens de la courbe."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "circuit-rc",
+   "enonce": "Un condensateur chargé sous $E = 10$ V se décharge dans un résistor. Quelle est la tension $u_C$ à $t = \\tau$ ? (On prend $e^{-1} \\approx 0{,}37$.)",
+   "choix": [
+    "$3{,}7$ V",
+    "$6{,}3$ V",
+    "$10$ V",
+    "$5{,}0$ V"
+   ],
+   "reponse": 0,
+   "explication": "En **décharge**, $u_C(t) = E\\,e^{-t/\\tau}$, donc $u_C(\\tau) = 10 \\times 0{,}37 = 3{,}7$ V (37 % de $E$). La valeur $6{,}3$ V ($63\\,\\%$) est celle de la charge : à $t = \\tau$ la décharge *descend* à $37\\,\\%$."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "circuit-rc",
+   "enonce": "À l'instant $t = 0$ où débute la charge, le condensateur est vide. Avec $E = 6{,}0$ V et $R = 3{,}0\\ \\text{k}\\Omega$, quelle est l'intensité initiale $i_0$ dans le circuit ?",
+   "choix": [
+    "$2{,}0$ mA",
+    "$0$ A",
+    "$2{,}0$ A",
+    "$0{,}50$ mA"
+   ],
+   "reponse": 0,
+   "explication": "À $t = 0$ le condensateur vide se comporte comme un **fil** ($u_C = 0$), donc $i_0 = \\dfrac{E}{R} = \\dfrac{6{,}0}{3{,}0\\times 10^{3}} = 2{,}0\\times 10^{-3}$ A $= 2{,}0$ mA. Croire que le condensateur bloque le courant donnerait $0$ A (faux : c'est vrai seulement quand il est chargé) ; oublier les k$\\Omega$ donnerait $2{,}0$ A."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "temps-caracteristique",
+   "enonce": "Sur la courbe expérimentale de charge $u_C(t)$, on trace la tangente à l'origine. À quel instant coupe-t-elle l'asymptote horizontale $u_C = E$ ?",
+   "choix": [
+    "à $t = \\tau$",
+    "à $t = 5\\tau$",
+    "à $t = 3\\tau$",
+    "elle ne la coupe jamais"
+   ],
+   "reponse": 0,
+   "explication": "Propriété géométrique de l'exponentielle : la **tangente à l'origine** coupe l'asymptote finale exactement à $t = \\tau$. C'est la méthode graphique la plus précise pour mesurer $\\tau$. Le régime permanent, lui, n'est atteint qu'au bout d'environ $5\\tau$ : il ne faut pas confondre les deux repères."
+  }
+ ]
+}

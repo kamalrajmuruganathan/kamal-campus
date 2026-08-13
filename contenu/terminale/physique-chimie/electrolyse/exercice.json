@@ -1,0 +1,92 @@
+{
+  "id": "tale-spe-pc-electrolyse-exos",
+  "chapitre": "tale-spe-pc-electrolyse",
+  "titre": "Exercices — Électrolyse : forcer le sens d'évolution",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Surveille les unités : $\\Delta t$ en secondes, $I$ en ampères. On donne la constante de Faraday $F = 96500$ C·mol⁻¹.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "charge-q-i-dt",
+      "enonce": "Un électrolyseur est parcouru par un courant constant d'intensité $I = 1{,}5$ A pendant une durée $\\Delta t = 20$ min. Calculer la charge électrique $Q$ qui a traversé la cellule.",
+      "corrige": [
+        "La charge transportée par un courant constant est $Q = I \\times \\Delta t$, avec $Q$ en coulombs (C), $I$ en ampères (A) et $\\Delta t$ en secondes (s).",
+        "Il faut d'abord convertir la durée en secondes : $\\Delta t = 20$ min $= 20 \\times 60 = 1200$ s. C'est l'étape à ne surtout pas oublier.",
+        "Application numérique : $Q = 1{,}5 \\times 1200 = 1800$ C."
+      ],
+      "reponse": "$Q = I\\,\\Delta t = 1{,}5 \\times 1200 = 1800$ C."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "constante-de-faraday",
+      "enonce": "Dans un électrolyseur, un courant constant d'intensité $I = 0{,}50$ A circule pendant $\\Delta t = 1{,}0$ h. Déterminer la quantité d'électrons $n(\\text{e}^-)$ qui a été échangée aux électrodes. On donne $F = 96500$ C·mol⁻¹.",
+      "corrige": [
+        "On calcule d'abord la charge : $Q = I \\times \\Delta t$. La durée doit être en secondes : $\\Delta t = 1{,}0$ h $= 3600$ s.",
+        "$Q = 0{,}50 \\times 3600 = 1800$ C.",
+        "La quantité d'électrons se déduit de la constante de Faraday : $n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{1800}{96500}$.",
+        "$n(\\text{e}^-) = 1{,}9 \\times 10^{-2}$ mol. (Diviser par $F$, et non par le nombre d'Avogadro $\\mathcal{N}_A$.)"
+      ],
+      "reponse": "$n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{1800}{96500} = 1{,}9 \\times 10^{-2}$ mol."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "On réalise un dépôt de cuivre à la cathode d'un électrolyseur selon la demi-équation $\\text{Cu}^{2+} + 2\\,\\text{e}^- \\rightarrow \\text{Cu}$. Le courant vaut $I = 0{,}80$ A et dure $\\Delta t = 25$ min. Calculer la masse de cuivre déposée. On donne $M(\\text{Cu}) = 63{,}5$ g·mol⁻¹ et $F = 96500$ C·mol⁻¹.",
+      "corrige": [
+        "Charge : $\\Delta t = 25$ min $= 1500$ s, donc $Q = I\\,\\Delta t = 0{,}80 \\times 1500 = 1200$ C.",
+        "Quantité d'électrons : $n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{1200}{96500} = 1{,}24 \\times 10^{-2}$ mol.",
+        "Stœchiométrie : la demi-équation demande $2$ électrons pour former $1$ atome de cuivre, donc $n(\\text{Cu}) = \\dfrac{n(\\text{e}^-)}{2} = 6{,}2 \\times 10^{-3}$ mol.",
+        "Masse déposée : $m = n(\\text{Cu}) \\times M(\\text{Cu}) = 6{,}2 \\times 10^{-3} \\times 63{,}5 \\approx 0{,}39$ g."
+      ],
+      "reponse": "$n(\\text{Cu}) = \\dfrac{n(\\text{e}^-)}{2} = 6{,}2 \\times 10^{-3}$ mol, soit $m \\approx 0{,}39$ g de cuivre."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "Lors de l'électrolyse de l'eau, il se dégage du dihydrogène à la cathode selon $2\\,\\text{H}_2\\text{O} + 2\\,\\text{e}^- \\rightarrow \\text{H}_2 + 2\\,\\text{HO}^-$. Le courant vaut $I = 2{,}0$ A pendant $\\Delta t = 30$ min. Calculer le volume de dihydrogène formé, mesuré dans les conditions où le volume molaire vaut $V_m = 24$ L·mol⁻¹. On donne $F = 96500$ C·mol⁻¹.",
+      "corrige": [
+        "Charge : $\\Delta t = 30$ min $= 1800$ s, donc $Q = I\\,\\Delta t = 2{,}0 \\times 1800 = 3600$ C.",
+        "Quantité d'électrons : $n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{3600}{96500} = 3{,}7 \\times 10^{-2}$ mol.",
+        "Stœchiométrie : il faut $2$ électrons par molécule de $\\text{H}_2$, donc $n(\\text{H}_2) = \\dfrac{n(\\text{e}^-)}{2} = 1{,}9 \\times 10^{-2}$ mol.",
+        "Volume de gaz : $V(\\text{H}_2) = n(\\text{H}_2) \\times V_m = 1{,}9 \\times 10^{-2} \\times 24 \\approx 0{,}45$ L."
+      ],
+      "reponse": "$n(\\text{H}_2) = \\dfrac{n(\\text{e}^-)}{2} = 1{,}9 \\times 10^{-2}$ mol, soit $V(\\text{H}_2) \\approx 0{,}45$ L."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "La production industrielle d'aluminium se fait par électrolyse selon $\\text{Al}^{3+} + 3\\,\\text{e}^- \\rightarrow \\text{Al}$. On souhaite obtenir $m = 5{,}4$ g d'aluminium avec un courant d'intensité constante $I = 10$ A. Déterminer la durée $\\Delta t$ nécessaire. On donne $M(\\text{Al}) = 27$ g·mol⁻¹ et $F = 96500$ C·mol⁻¹.",
+      "corrige": [
+        "Quantité d'aluminium visée : $n(\\text{Al}) = \\dfrac{m}{M} = \\dfrac{5{,}4}{27} = 0{,}20$ mol.",
+        "Stœchiométrie : la demi-équation demande $3$ électrons par atome, donc $n(\\text{e}^-) = 3 \\times n(\\text{Al}) = 3 \\times 0{,}20 = 0{,}60$ mol. (Ne pas supposer un rapport $1{:}1$.)",
+        "Charge nécessaire : $Q = n(\\text{e}^-) \\times F = 0{,}60 \\times 96500 = 5{,}79 \\times 10^{4}$ C.",
+        "Durée : de $Q = I\\,\\Delta t$ on tire $\\Delta t = \\dfrac{Q}{I} = \\dfrac{57900}{10} = 5790$ s, soit environ $97$ min (près de $1$ h $36$ min)."
+      ],
+      "reponse": "$n(\\text{e}^-) = 3\\,n(\\text{Al}) = 0{,}60$ mol, $Q = 5{,}79 \\times 10^{4}$ C, d'où $\\Delta t = \\dfrac{Q}{I} = 5790$ s $\\approx 97$ min."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "On électrolyse de l'eau avec un courant $I = 1{,}93$ A pendant $\\Delta t = 50$ min. À la cathode : $2\\,\\text{H}_2\\text{O} + 2\\,\\text{e}^- \\rightarrow \\text{H}_2 + 2\\,\\text{HO}^-$ ; à l'anode : $2\\,\\text{H}_2\\text{O} \\rightarrow \\text{O}_2 + 4\\,\\text{H}^+ + 4\\,\\text{e}^-$. 1) Calculer le volume de dihydrogène et le volume de dioxygène formés. 2) Vérifier le rapport entre ces deux volumes. On donne $V_m = 24$ L·mol⁻¹ et $F = 96500$ C·mol⁻¹.",
+      "corrige": [
+        "La même quantité d'électrons traverse les deux électrodes (même courant, même durée). Charge : $\\Delta t = 50$ min $= 3000$ s, donc $Q = I\\,\\Delta t = 1{,}93 \\times 3000 = 5790$ C.",
+        "Quantité d'électrons : $n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{5790}{96500} = 6{,}0 \\times 10^{-2}$ mol.",
+        "À la cathode, $2$ électrons par $\\text{H}_2$ : $n(\\text{H}_2) = \\dfrac{n(\\text{e}^-)}{2} = 3{,}0 \\times 10^{-2}$ mol, soit $V(\\text{H}_2) = n(\\text{H}_2)\\,V_m = 3{,}0 \\times 10^{-2} \\times 24 = 0{,}72$ L.",
+        "À l'anode, $4$ électrons par $\\text{O}_2$ : $n(\\text{O}_2) = \\dfrac{n(\\text{e}^-)}{4} = 1{,}5 \\times 10^{-2}$ mol, soit $V(\\text{O}_2) = 1{,}5 \\times 10^{-2} \\times 24 = 0{,}36$ L.",
+        "Rapport : $\\dfrac{V(\\text{H}_2)}{V(\\text{O}_2)} = \\dfrac{0{,}72}{0{,}36} = 2$. On obtient bien deux fois plus de dihydrogène que de dioxygène — cohérent avec la formule de l'eau $\\text{H}_2\\text{O}$."
+      ],
+      "reponse": "$n(\\text{e}^-) = 6{,}0 \\times 10^{-2}$ mol ; $V(\\text{H}_2) = 0{,}72$ L et $V(\\text{O}_2) = 0{,}36$ L, dans le rapport $2:1$."
+    }
+  ]
+}

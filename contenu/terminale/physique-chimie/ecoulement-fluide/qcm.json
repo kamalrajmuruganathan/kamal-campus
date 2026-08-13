@@ -1,0 +1,154 @@
+{
+ "id": "tale-spe-pc-ecoulement-fluide-qcm",
+ "chapitre": "tale-spe-pc-ecoulement-fluide",
+ "titre": "QCM — Écoulement d'un fluide",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "poussee-archimede",
+   "enonce": "Un corps est plongé dans un fluide au repos. La poussée d'Archimède est dirigée :",
+   "choix": [
+    "vers le bas, dans le sens de $\\vec{g}$",
+    "vers le haut, à l'opposé de $\\vec{g}$",
+    "horizontalement",
+    "dans le sens du mouvement du corps"
+   ],
+   "reponse": 1,
+   "explication": "La poussée est **verticale, vers le haut**, opposée à $\\vec{g}$ : c'est ce que traduit le signe moins dans $\\vec{F}_A = -\\rho_{\\text{fluide}} V \\vec{g}$. La confondre avec le poids (vers le bas) est l'erreur classique."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "debit-volumique",
+   "enonce": "Quelle est l'unité SI du débit volumique $D_v$ ?",
+   "choix": [
+    "m·s⁻¹",
+    "L·min⁻¹",
+    "m³·s⁻¹",
+    "m³"
+   ],
+   "reponse": 2,
+   "explication": "$D_v = \\dfrac{V}{\\Delta t}$ : un volume (m³) divisé par une durée (s) donne des **m³·s⁻¹**. Le L·min⁻¹ est une unité usuelle mais **pas SI** : il faut convertir avant tout calcul. Le m·s⁻¹ est une vitesse, pas un débit."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "poussee-archimede",
+   "enonce": "Un objet de volume $V = 2{,}0$ L est entièrement immergé dans l'eau ($\\rho = 1{,}0 \\times 10^{3}$ kg·m⁻³, $g = 9{,}81$ N·kg⁻¹). Quelle est la valeur de la poussée d'Archimède ?",
+   "choix": [
+    "$20$ N",
+    "$2{,}0 \\times 10^{4}$ N",
+    "$2{,}0$ N",
+    "$9{,}8$ N"
+   ],
+   "reponse": 0,
+   "explication": "Il faut convertir $2{,}0$ L $= 2{,}0 \\times 10^{-3}$ m³ **avant** le calcul : $F_A = \\rho V g = 1000 \\times 2{,}0 \\times 10^{-3} \\times 9{,}81 \\approx 20$ N. Oublier la conversion L → m³ donne $2{,}0 \\times 10^{4}$ N, mille fois trop grand : c'est le piège."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "conservation-debit",
+   "enonce": "Dans une conduite, l'eau circule à $v_1 = 2{,}0$ m·s⁻¹ là où la section vaut $S_1 = 12$ cm². Plus loin, la conduite se rétrécit à $S_2 = 3{,}0$ cm². Quelle est la vitesse $v_2$ ?",
+   "choix": [
+    "$0{,}50$ m·s⁻¹",
+    "$2{,}0$ m·s⁻¹",
+    "$8{,}0$ m·s⁻¹",
+    "$6{,}0$ m·s⁻¹"
+   ],
+   "reponse": 2,
+   "explication": "Conservation du débit : $v_2 = v_1 \\dfrac{S_1}{S_2} = 2{,}0 \\times \\dfrac{12}{3{,}0} = 8{,}0$ m·s⁻¹. La section est divisée par 4, donc la vitesse est multipliée par 4. Inverser le rapport ($S_2/S_1$) donne $0{,}50$ m·s⁻¹ : le fluide **accélère** quand ça rétrécit, il ne ralentit pas. Le rapport de sections étant sans dimension, garder les cm² est correct."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "debit-volumique",
+   "enonce": "Un robinet remplit un récipient de $6{,}0$ L en $30$ s. Quel est le débit volumique en unités SI ?",
+   "choix": [
+    "$0{,}20$ m³·s⁻¹",
+    "$2{,}0 \\times 10^{-4}$ m³·s⁻¹",
+    "$6{,}0 \\times 10^{-3}$ m³·s⁻¹",
+    "$5{,}0 \\times 10^{3}$ m³·s⁻¹"
+   ],
+   "reponse": 1,
+   "explication": "On convertit d'abord $6{,}0$ L $= 6{,}0 \\times 10^{-3}$ m³, puis $D_v = \\dfrac{V}{\\Delta t} = \\dfrac{6{,}0 \\times 10^{-3}}{30} = 2{,}0 \\times 10^{-4}$ m³·s⁻¹. Oublier la conversion des litres donne $0{,}20$ m³·s⁻¹, mille fois trop."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "bernoulli",
+   "enonce": "Dans la relation de Bernoulli $\\tfrac{1}{2}\\rho v^2 + \\rho g z + P = \\text{cte}$, à quelle grandeur physique le terme $\\tfrac{1}{2}\\rho v^2$ est-il homogène ?",
+   "choix": [
+    "à une énergie (J)",
+    "à une force (N)",
+    "à une pression (Pa)",
+    "à une vitesse (m·s⁻¹)"
+   ],
+   "reponse": 2,
+   "explication": "Les **trois** termes de Bernoulli sont homogènes à une **pression** (Pa) : c'est un bilan d'énergie **par unité de volume**. Mélanger un terme en Pa avec une vitesse en m·s⁻¹ rend l'équation non homogène — le calcul est alors forcément faux."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "flotter-couler",
+   "enonce": "On lâche un bloc de masse volumique $\\rho_{\\text{corps}} = 800$ kg·m⁻³ dans l'eau ($\\rho_{\\text{eau}} = 1000$ kg·m⁻³). Que se passe-t-il ?",
+   "choix": [
+    "il coule jusqu'au fond",
+    "il flotte, partiellement immergé",
+    "il reste en équilibre indifférent, entièrement immergé",
+    "cela dépend de sa masse"
+   ],
+   "reponse": 1,
+   "explication": "Comme $\\rho_{\\text{corps}} < \\rho_{\\text{eau}}$, le bloc **flotte** : à l'équilibre seule une fraction $\\rho_{\\text{corps}}/\\rho_{\\text{eau}} = 0{,}80$ du volume est immergée. La flottaison ne dépend **pas** de la masse mais de la comparaison des masses volumiques."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "effet-venturi",
+   "enonce": "Dans un rétrécissement d'une conduite **horizontale**, par rapport à la partie large, le fluide qui passe dans la partie étroite est :",
+   "choix": [
+    "plus rapide et à plus haute pression",
+    "plus rapide et à plus basse pression",
+    "plus lent et à plus haute pression",
+    "plus lent et à plus basse pression"
+   ],
+   "reponse": 1,
+   "explication": "Effet Venturi : section $\\searrow$ → vitesse $\\nearrow$ (conservation du débit) → pression $\\searrow$ (Bernoulli horizontal). Le fluide est **moins pressé là où il va le plus vite** : croire l'inverse (« étroit = pression forte ») est le piège n°1 du chapitre."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "bernoulli",
+   "enonce": "Un grand réservoir ouvert se vide par un petit trou situé à une profondeur $h = 5{,}0$ m sous la surface libre ($g = 9{,}81$ N·kg⁻¹). Quelle est la vitesse du jet à la sortie ?",
+   "choix": [
+    "$9{,}9$ m·s⁻¹",
+    "$7{,}0$ m·s⁻¹",
+    "$98$ m·s⁻¹",
+    "$49$ m·s⁻¹"
+   ],
+   "reponse": 0,
+   "explication": "Théorème de Torricelli (Bernoulli entre la surface, où $v \\approx 0$, et le trou, tous deux à $P_{\\text{atm}}$) : $v = \\sqrt{2gh} = \\sqrt{2 \\times 9{,}81 \\times 5{,}0} = \\sqrt{98{,}1} \\approx 9{,}9$ m·s⁻¹. Oublier la racine carrée donne $98$ m·s⁻¹ ; oublier le facteur 2 donne $7{,}0$ m·s⁻¹."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "effet-venturi",
+   "enonce": "De l'eau ($\\rho = 1000$ kg·m⁻³) passe de $v_1 = 2{,}0$ m·s⁻¹ à $v_2 = 6{,}0$ m·s⁻¹ dans un rétrécissement horizontal. Quelle est la chute de pression $P_1 - P_2$ ?",
+   "choix": [
+    "$1{,}6 \\times 10^{4}$ Pa",
+    "$4{,}0 \\times 10^{3}$ Pa",
+    "$8{,}0 \\times 10^{3}$ Pa",
+    "$2{,}0 \\times 10^{4}$ Pa"
+   ],
+   "reponse": 0,
+   "explication": "$P_1 - P_2 = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = 500 \\times (6{,}0^2 - 2{,}0^2) = 500 \\times (36 - 4) = 500 \\times 32 = 1{,}6 \\times 10^{4}$ Pa. Il faut élever chaque vitesse au carré **avant** de soustraire : calculer $500 \\times (6-2)^2 = 8{,}0 \\times 10^{3}$ est le piège classique."
+  }
+ ]
+}

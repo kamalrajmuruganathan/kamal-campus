@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-pc-decrire-mouvement-qcm",
+  "chapitre": "tale-spe-pc-decrire-mouvement",
+  "titre": "QCM — Décrire un mouvement",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vecteur-vitesse",
+      "enonce": "Le vecteur vitesse d'un point mobile est la dérivée par rapport au temps :",
+      "choix": [
+        "du vecteur position $\\vec{\\mathrm{OM}}$",
+        "du vecteur accélération $\\vec{a}$",
+        "de la trajectoire",
+        "de la distance à l'origine"
+      ],
+      "reponse": 0,
+      "explication": "Par définition $\\vec{v} = \\dfrac{\\mathrm{d}\\vec{\\mathrm{OM}}}{\\mathrm{d}t}$ : on dérive la **position**. C'est l'accélération, elle, qui est la dérivée de la vitesse. Confondre les deux, c'est se tromper d'un cran dans la chaîne position → vitesse → accélération."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Dans le Système international, un vecteur accélération s'exprime en :",
+      "choix": [
+        "m·s⁻¹",
+        "m·s⁻²",
+        "m",
+        "m²·s⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "L'accélération est une dérivée seconde de la position : chaque dérivation par le temps ajoute un « par seconde ». Position en m, vitesse en m·s⁻¹, accélération en **m·s⁻²**. Une accélération trouvée en m·s⁻¹ trahit une dérivation oubliée."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "methode",
+      "enonce": "Un mobile a pour équations horaires $x(t) = 4t^2$ et $y(t) = 0$ (unités SI). Quelle est la coordonnée $v_x$ de sa vitesse à l'instant $t = 3{,}0$ s ?",
+      "choix": [
+        "$12$ m·s⁻¹",
+        "$24$ m·s⁻¹",
+        "$36$ m·s⁻¹",
+        "$72$ m·s⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "On dérive d'abord : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 8t$, puis on remplace : $v_x = 8 \\times 3{,}0 = 24$ m·s⁻¹. Le piège $36$ vient de ne PAS dériver et de calculer $4 \\times 3^2$ ; le piège $12$ d'une dérivée fausse ($4t$ au lieu de $8t$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "vecteur-vitesse",
+      "enonce": "En tout point d'une trajectoire, le vecteur vitesse est :",
+      "choix": [
+        "perpendiculaire à la trajectoire",
+        "dirigé vers le centre de la trajectoire",
+        "tangent à la trajectoire, dans le sens du mouvement",
+        "colinéaire au vecteur accélération"
+      ],
+      "reponse": 2,
+      "explication": "Le vecteur vitesse est **toujours tangent** à la trajectoire et orienté dans le sens du déplacement. C'est ce qui permet de le tracer « le long » du chemin sur un enregistrement. Le vecteur perpendiculaire (normal) est un autre objet, celui du repère de Frenet."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Dans un mouvement rectiligne uniforme, le vecteur accélération est :",
+      "choix": [
+        "nul",
+        "constant, non nul, colinéaire à $\\vec{v}$",
+        "centripète",
+        "de norme $\\dfrac{v^2}{R}$"
+      ],
+      "reponse": 0,
+      "explication": "« Uniforme » (vitesse constante en valeur) ET « rectiligne » (direction constante) : le vecteur $\\vec{v}$ est constant en norme et en direction, donc $\\vec{a} = \\vec{0}$. L'accélération constante non nulle correspondrait à un mouvement uniformément **accéléré**, pas uniforme."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "vecteur-acceleration",
+      "enonce": "Un mouvement peut-il être accéléré alors que la valeur de sa vitesse reste constante ?",
+      "choix": [
+        "Non, jamais : si $v$ est constante, $\\vec{a} = \\vec{0}$",
+        "Oui, s'il change de direction (cas du mouvement circulaire)",
+        "Oui, mais seulement en ligne droite",
+        "Non, car l'accélération est la dérivée de la valeur de la vitesse"
+      ],
+      "reponse": 1,
+      "explication": "L'accélération traduit toute variation du **vecteur** vitesse, en norme OU en direction. Une trajectoire courbe fait tourner $\\vec{v}$ : sa direction change, donc $\\vec{a} \\neq \\vec{0}$ même à valeur de vitesse constante. C'est exactement le mouvement circulaire uniforme."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "frenet",
+      "enonce": "Un point décrit un cercle de rayon $R = 25$ m à la vitesse constante $v = 10$ m·s⁻¹. Quelle est la norme de son accélération normale $a_n$ ?",
+      "choix": [
+        "$0{,}40$ m·s⁻²",
+        "$4{,}0$ m·s⁻²",
+        "$100$ m·s⁻²",
+        "$0{,}25$ m·s⁻²"
+      ],
+      "reponse": 1,
+      "explication": "$a_n = \\dfrac{v^2}{R} = \\dfrac{10^2}{25} = \\dfrac{100}{25} = 4{,}0$ m·s⁻². Le piège $0{,}40$ oublie le **carré** ($v/R$) ; le piège $100$ oublie de diviser par $R$ ; le piège $0{,}25$ inverse la fraction ($R/v^2$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Dans un mouvement circulaire uniforme, le vecteur accélération est dirigé :",
+      "choix": [
+        "vers l'extérieur du cercle (centrifuge)",
+        "tangentiellement, dans le sens du mouvement",
+        "vers le centre du cercle (centripète)",
+        "il est nul"
+      ],
+      "reponse": 2,
+      "explication": "La composante tangentielle est nulle ($v$ constante) ; il ne reste que la composante normale $\\vec{a} = \\dfrac{v^2}{R}\\vec{u_n}$, et $\\vec{u_n}$ pointe vers le **centre**. L'accélération est donc **centripète**. La diriger vers l'extérieur est l'erreur classique : la « force centrifuge » ressentie n'est pas l'accélération du mobile."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "methode",
+      "enonce": "Un mobile a pour équations horaires $x(t) = 3t$ et $y(t) = 5t - t^2$ (unités SI). Quel est son vecteur accélération ?",
+      "choix": [
+        "$\\vec{a} = \\vec{0}$",
+        "$\\vec{a} = 3\\,\\vec{\\imath} + 5\\,\\vec{\\jmath}$",
+        "$\\vec{a} = -2t\\,\\vec{\\jmath}$",
+        "$\\vec{a} = -2\\,\\vec{\\jmath}$"
+      ],
+      "reponse": 3,
+      "explication": "On dérive deux fois. Vitesse : $v_x = 3$, $v_y = 5 - 2t$. Accélération : $a_x = 0$, $a_y = -2$, soit $\\vec{a} = -2\\,\\vec{\\jmath}$ (m·s⁻²), constante. Le choix $3\\vec{\\imath}+5\\vec{\\jmath}$ confond avec la vitesse initiale ; le choix $-2t\\,\\vec{\\jmath}$ n'a dérivé qu'une seule fois."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "vecteur-vitesse",
+      "enonce": "Sur un enregistrement où les positions sont relevées à intervalle de temps $\\tau$ régulier, comment estime-t-on au mieux la vitesse instantanée au point $M_i$ ?",
+      "choix": [
+        "$v_i \\approx \\dfrac{M_i M_{i+1}}{\\tau}$",
+        "$v_i \\approx \\dfrac{M_{i-1} M_{i+1}}{2\\tau}$",
+        "$v_i \\approx \\dfrac{M_{i-1} M_{i+1}}{\\tau}$",
+        "$v_i \\approx \\dfrac{M_{i-1} M_i}{\\tau}$"
+      ],
+      "reponse": 1,
+      "explication": "On **encadre** le point : on prend la distance entre le point d'avant $M_{i-1}$ et celui d'après $M_{i+1}$, parcourue en une durée $2\\tau$. D'où $v_i \\approx \\dfrac{M_{i-1}M_{i+1}}{2\\tau}$. Utiliser $M_i M_{i+1}/\\tau$ donne une vitesse décalée (moyenne entre deux points, pas au point $M_i$) ; oublier le $2$ au dénominateur double le résultat."
+    }
+  ]
+}

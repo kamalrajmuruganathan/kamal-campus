@@ -1,0 +1,87 @@
+{
+  "id": "tale-spe-pc-acide-base-ph-exos",
+  "chapitre": "tale-spe-pc-acide-base-ph",
+  "titre": "Exercices — Transformations acide-base et pH",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "ph-definition",
+      "enonce": "Une solution d'acide chlorhydrique a une concentration en ions oxonium $[\\mathrm{H_3O^+}] = 2{,}0 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$. Déterminer son pH. (On donne $\\log 2 \\approx 0{,}30$.)",
+      "corrige": [
+        "On applique la définition du pH avec $[\\mathrm{H_3O^+}]$ exprimée en $\\mathrm{mol \\cdot L^{-1}}$ : $\\mathrm{pH} = -\\log\\left(\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}\\right) = -\\log[\\mathrm{H_3O^+}]$.",
+        "$\\mathrm{pH} = -\\log(2{,}0 \\times 10^{-3}) = -(\\log 2 + \\log 10^{-3}) = -(0{,}30 - 3)$.",
+        "$\\mathrm{pH} = 3 - 0{,}30 = 2{,}70$, soit $\\mathrm{pH} = 2{,}7$. Comme $\\mathrm{pH} < 7$, la solution est bien acide."
+      ],
+      "reponse": "$\\mathrm{pH} = -\\log(2{,}0\\times10^{-3}) = 2{,}7$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "ph-inverse",
+      "enonce": "Une eau de pluie a un pH mesuré de $3{,}7$. Déterminer la concentration en ions oxonium $[\\mathrm{H_3O^+}]$ de cette eau. (On donne $10^{0{,}3} \\approx 2{,}0$.)",
+      "corrige": [
+        "On utilise la relation inverse : $[\\mathrm{H_3O^+}] = c^\\circ \\times 10^{-\\mathrm{pH}} = 10^{-\\mathrm{pH}}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "$[\\mathrm{H_3O^+}] = 10^{-3{,}7}\\ \\mathrm{mol \\cdot L^{-1}}$. On écrit $-3{,}7 = 0{,}3 - 4$, donc $10^{-3{,}7} = 10^{0{,}3} \\times 10^{-4} = 2{,}0 \\times 10^{-4}$.",
+        "$[\\mathrm{H_3O^+}] = 2{,}0 \\times 10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$ (résultat en notation scientifique, 2 chiffres significatifs)."
+      ],
+      "reponse": "$[\\mathrm{H_3O^+}] = 10^{-3{,}7} = 2{,}0 \\times 10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "reaction-acide-base",
+      "enonce": "On mélange de l'acide éthanoïque $\\mathrm{CH_3COOH}$ et de l'ammoniac $\\mathrm{NH_3}$ en solution. Les couples mis en jeu sont $\\mathrm{CH_3COOH / CH_3COO^-}$ et $\\mathrm{NH_4^+ / NH_3}$. 1) Écrire les deux demi-équations acido-basiques. 2) En déduire l'équation de la réaction acide-base. 3) Identifier l'espèce qui joue le rôle d'acide et celle qui joue le rôle de base.",
+      "corrige": [
+        "Demi-équations des deux couples : $\\mathrm{CH_3COOH = CH_3COO^- + H^+}$ et $\\mathrm{NH_4^+ = NH_3 + H^+}$.",
+        "L'acide éthanoïque **cède** son proton, l'ammoniac le **capte**. On écrit la première demi-équation dans le sens de la perte de $\\mathrm{H^+}$ et la seconde dans le sens du gain, puis on additionne pour que $\\mathrm{H^+}$ s'élimine : $\\mathrm{CH_3COOH + NH_3 \\longrightarrow CH_3COO^- + NH_4^+}$.",
+        "Rôles : $\\mathrm{CH_3COOH}$ est l'**acide** (il cède $\\mathrm{H^+}$), $\\mathrm{NH_3}$ est la **base** (elle capte $\\mathrm{H^+}$). Le transfert se fait de l'acide vers la base."
+      ],
+      "reponse": "$\\mathrm{CH_3COOH + NH_3 \\longrightarrow CH_3COO^- + NH_4^+}$ ; acide : $\\mathrm{CH_3COOH}$, base : $\\mathrm{NH_3}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "espece-amphotere",
+      "enonce": "L'ion hydrogénocarbonate $\\mathrm{HCO_3^-}$ intervient dans les couples $\\mathrm{CO_2,H_2O / HCO_3^-}$ et $\\mathrm{HCO_3^- / CO_3^{2-}}$. 1) Montrer que $\\mathrm{HCO_3^-}$ est une espèce amphotère. 2) Écrire l'équation de la réaction où $\\mathrm{HCO_3^-}$ joue le rôle d'acide avec l'eau, et celle où il joue le rôle de base avec l'eau.",
+      "corrige": [
+        "$\\mathrm{HCO_3^-}$ est la **base** du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$ (il peut capter un $\\mathrm{H^+}$ pour redonner $\\mathrm{CO_2,H_2O}$) et l'**acide** du couple $\\mathrm{HCO_3^- / CO_3^{2-}}$ (il peut céder un $\\mathrm{H^+}$ pour donner $\\mathrm{CO_3^{2-}}$). Étant l'acide d'un couple ET la base d'un autre, il est **amphotère**.",
+        "En acide, avec l'eau comme base (couple $\\mathrm{H_3O^+/H_2O}$) : $\\mathrm{HCO_3^- + H_2O \\longrightarrow CO_3^{2-} + H_3O^+}$.",
+        "En base, avec l'eau comme acide (couple $\\mathrm{H_2O/OH^-}$) : $\\mathrm{HCO_3^- + H_2O \\longrightarrow CO_2,H_2O + OH^-}$."
+      ],
+      "reponse": "$\\mathrm{HCO_3^-}$ est acide dans $\\mathrm{HCO_3^-/CO_3^{2-}}$ et base dans $\\mathrm{CO_2,H_2O/HCO_3^-}$, donc amphotère ; réactions : $\\mathrm{HCO_3^- + H_2O \\to CO_3^{2-} + H_3O^+}$ et $\\mathrm{HCO_3^- + H_2O \\to CO_2,H_2O + OH^-}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "ph-echelle",
+      "enonce": "Une solution acide a un pH initial de $2{,}0$. On la dilue en versant $1{,}0\\ \\mathrm{mL}$ de cette solution dans une fiole que l'on complète à $100\\ \\mathrm{mL}$ avec de l'eau distillée. On admet que $[\\mathrm{H_3O^+}]$ est divisée par le même facteur que la dilution. 1) Déterminer le facteur de dilution. 2) Calculer $[\\mathrm{H_3O^+}]$ avant et après dilution. 3) En déduire le pH final et l'écart de pH.",
+      "corrige": [
+        "Facteur de dilution : $F = \\dfrac{V_{\\text{finale}}}{V_{\\text{prélevé}}} = \\dfrac{100\\ \\mathrm{mL}}{1{,}0\\ \\mathrm{mL}} = 100$ (bien convertir : les deux volumes sont dans la même unité, le rapport est sans dimension).",
+        "Avant dilution : $[\\mathrm{H_3O^+}]_i = 10^{-2{,}0} = 1{,}0\\times10^{-2}\\ \\mathrm{mol \\cdot L^{-1}}$. Après dilution, la concentration est divisée par $100$ : $[\\mathrm{H_3O^+}]_f = \\dfrac{1{,}0\\times10^{-2}}{100} = 1{,}0\\times10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "pH final : $\\mathrm{pH}_f = -\\log(1{,}0\\times10^{-4}) = 4{,}0$. L'écart est $\\Delta\\mathrm{pH} = 4{,}0 - 2{,}0 = 2{,}0$ : diluer $100 = 10^{2}$ fois fait monter le pH de $2$ unités. Une dilution rend une solution acide **moins** acide."
+      ],
+      "reponse": "$F = 100$ ; $[\\mathrm{H_3O^+}]$ passe de $1{,}0\\times10^{-2}$ à $1{,}0\\times10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$ ; $\\mathrm{pH}_f = 4{,}0$, soit $\\Delta\\mathrm{pH} = +2{,}0$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "ph-inverse",
+      "enonce": "Sous l'effet du $\\mathrm{CO_2}$ atmosphérique, le pH moyen des océans de surface est passé de $8{,}2$ (ère préindustrielle) à $8{,}1$ aujourd'hui. 1) Calculer $[\\mathrm{H_3O^+}]$ pour chacun de ces deux pH. 2) En déduire de quel pourcentage la concentration en ions oxonium a augmenté. (On donne $10^{-0{,}2}\\approx0{,}63$ et $10^{-0{,}1}\\approx0{,}79$.)",
+      "corrige": [
+        "pH préindustriel : $[\\mathrm{H_3O^+}]_1 = 10^{-8{,}2} = 10^{-0{,}2}\\times10^{-8} = 0{,}63\\times10^{-8} = 6{,}3\\times10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "pH actuel : $[\\mathrm{H_3O^+}]_2 = 10^{-8{,}1} = 10^{-0{,}1}\\times10^{-8} = 0{,}79\\times10^{-8} = 7{,}9\\times10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$.",
+        "Rapport des concentrations : $\\dfrac{[\\mathrm{H_3O^+}]_2}{[\\mathrm{H_3O^+}]_1} = \\dfrac{7{,}9\\times10^{-9}}{6{,}3\\times10^{-9}} = 1{,}26 = 10^{0{,}1}$. La concentration a donc augmenté d'environ $26\\ \\%$.",
+        "Interprétation : une baisse de seulement $0{,}1$ unité de pH correspond à $+26\\ \\%$ d'ions oxonium, car l'échelle de pH est **logarithmique** — d'où la gravité de l'acidification des océans."
+      ],
+      "reponse": "$[\\mathrm{H_3O^+}]_1 = 6{,}3\\times10^{-9}$ et $[\\mathrm{H_3O^+}]_2 = 7{,}9\\times10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$ ; hausse d'environ $26\\ \\%$ ($10^{0{,}1}$)."
+    }
+  ]
+}

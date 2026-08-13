@@ -1,0 +1,89 @@
+{
+  "id": "tale-spe-pc-transformations-nucleaires-exos",
+  "chapitre": "tale-spe-pc-transformations-nucleaires",
+  "titre": "Exercices — Transformations nucléaires et radioactivité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "conservation",
+      "enonce": "Le radium 226 $^{226}_{88}\\text{Ra}$ est radioactif α. 1) Écrire l'équation de la désintégration. 2) Identifier le noyau fils. On donne les numéros atomiques : radon $Z = 86$, francium $Z = 87$, actinium $Z = 89$.",
+      "corrige": [
+        "La radioactivité α émet un noyau d'hélium $^{4}_{2}\\text{He}$. L'équation s'écrit $^{226}_{88}\\text{Ra} \\longrightarrow \\; ^{A}_{Z}\\text{Y} + \\; ^{4}_{2}\\text{He}$.",
+        "Conservation du nombre de masse : $226 = A + 4$, donc $A = 222$. Conservation du nombre de charge : $88 = Z + 2$, donc $Z = 86$.",
+        "Le noyau de $Z = 86$ est le radon. Le noyau fils est donc $^{222}_{86}\\text{Rn}$."
+      ],
+      "reponse": "$^{226}_{88}\\text{Ra} \\longrightarrow \\; ^{222}_{86}\\text{Rn} + \\; ^{4}_{2}\\text{He}$ : le noyau fils est le radon $^{222}_{86}\\text{Rn}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "activite",
+      "enonce": "Un échantillon radioactif contient $N = 2{,}0 \\times 10^{15}$ noyaux, de constante radioactive $\\lambda = 3{,}5 \\times 10^{-9}\\ \\text{s}^{-1}$. Calculer son activité $A$ et l'exprimer en becquerels.",
+      "corrige": [
+        "L'activité est le produit de la constante radioactive par le nombre de noyaux présents : $A = \\lambda\\, N$.",
+        "Application numérique : $A = 3{,}5 \\times 10^{-9} \\times 2{,}0 \\times 10^{15} = 7{,}0 \\times 10^{6}\\ \\text{Bq}$.",
+        "L'activité vaut $7{,}0 \\times 10^{6}$ Bq, soit $7{,}0$ MBq. On rappelle que $1\\ \\text{Bq}$ correspond à une désintégration par seconde."
+      ],
+      "reponse": "$A = \\lambda N = 7{,}0 \\times 10^{6}\\ \\text{Bq}$ (soit $7{,}0$ MBq)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "demi-vie-lambda",
+      "enonce": "Le cobalt 60, utilisé en radiothérapie, a une demi-vie $t_{1/2} = 5{,}27$ ans. 1) Convertir cette demi-vie en secondes (on prend $1\\ \\text{an} = 3{,}156 \\times 10^{7}\\ \\text{s}$). 2) En déduire la constante radioactive $\\lambda$ du cobalt 60, en $\\text{s}^{-1}$.",
+      "corrige": [
+        "Conversion en secondes : $t_{1/2} = 5{,}27 \\times 3{,}156 \\times 10^{7} = 1{,}66 \\times 10^{8}\\ \\text{s}$.",
+        "La constante radioactive se déduit de la demi-vie par $\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$.",
+        "Application numérique : $\\lambda = \\dfrac{0{,}693}{1{,}66 \\times 10^{8}} = 4{,}2 \\times 10^{-9}\\ \\text{s}^{-1}$.",
+        "Le piège serait de garder la demi-vie en années : $\\lambda$ ne serait alors pas en $\\text{s}^{-1}$. On convertit toujours en secondes avant de calculer $\\lambda$ en $\\text{s}^{-1}$."
+      ],
+      "reponse": "$t_{1/2} = 1{,}66 \\times 10^{8}\\ \\text{s}$, donc $\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = 4{,}2 \\times 10^{-9}\\ \\text{s}^{-1}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "demi-vie",
+      "enonce": "Le carbone 14 $^{14}_{6}\\text{C}$ est radioactif β⁻, de demi-vie $t_{1/2} = 5730$ ans. 1) Écrire l'équation de la désintégration (l'azote a pour numéro atomique $Z = 7$). 2) Un échantillon contient initialement $N_0 = 8{,}0 \\times 10^{11}$ noyaux de carbone 14. Combien en reste-t-il après $3$ demi-vies ? 3) À quelle durée cela correspond-il ?",
+      "corrige": [
+        "En β⁻, un neutron se transforme en proton : $A$ est inchangé et $Z$ augmente de $1$. Le carbone ($Z=6$) donne l'azote ($Z=7$) : $^{14}_{6}\\text{C} \\longrightarrow \\; ^{14}_{7}\\text{N} + \\; ^{\\;\\;0}_{-1}\\text{e}$.",
+        "Après $n$ demi-vies, il reste $N = \\dfrac{N_0}{2^{\\,n}}$. Pour $n = 3$ : $N = \\dfrac{8{,}0 \\times 10^{11}}{2^{3}} = \\dfrac{8{,}0 \\times 10^{11}}{8} = 1{,}0 \\times 10^{11}$ noyaux.",
+        "La durée écoulée est $3 \\times t_{1/2} = 3 \\times 5730 = 17190$ ans, soit environ $1{,}7 \\times 10^{4}$ ans. Attention : la décroissance est géométrique ($/2^{n}$), pas linéaire ($/2n$)."
+      ],
+      "reponse": "$^{14}_{6}\\text{C} \\to \\; ^{14}_{7}\\text{N} + \\; ^{\\;\\;0}_{-1}\\text{e}$ ; il reste $N = 1{,}0 \\times 10^{11}$ noyaux après $3\\, t_{1/2} = 1{,}7 \\times 10^{4}$ ans."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "demi-vie",
+      "enonce": "Dans une grotte, on prélève des fragments de charbon dont l'activité en carbone 14 vaut le quart de celle d'un charbon actuel de même masse. La demi-vie du carbone 14 est $t_{1/2} = 5730$ ans. 1) Combien de demi-vies se sont écoulées ? 2) En déduire l'âge du charbon. 3) Retrouver ce résultat à l'aide de la loi $A(t) = A_0\\, e^{-\\lambda t}$, en calculant d'abord $\\lambda$ en $\\text{an}^{-1}$.",
+      "corrige": [
+        "L'activité décroît avec la même loi que le nombre de noyaux : $\\dfrac{A}{A_0} = \\dfrac{1}{2^{\\,n}}$ après $n$ demi-vies. Ici $\\dfrac{A}{A_0} = \\dfrac{1}{4} = \\dfrac{1}{2^{2}}$, donc $n = 2$ demi-vies.",
+        "L'âge est $t = 2 \\times t_{1/2} = 2 \\times 5730 = 11460$ ans, soit environ $1{,}1 \\times 10^{4}$ ans.",
+        "Vérification par la loi : $\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{5730} = 1{,}21 \\times 10^{-4}\\ \\text{an}^{-1}$. De $A = A_0\\, e^{-\\lambda t}$ avec $\\dfrac{A}{A_0} = \\dfrac14$ on tire $t = \\dfrac{\\ln 4}{\\lambda} = \\dfrac{1{,}386}{1{,}21 \\times 10^{-4}} = 1{,}15 \\times 10^{4}$ ans.",
+        "Les deux méthodes concordent (l'écart n'est dû qu'aux arrondis) : la datation par comptage de demi-vies est un cas particulier de la loi exponentielle."
+      ],
+      "reponse": "$n = 2$ demi-vies, soit un âge $t = 2\\, t_{1/2} \\approx 1{,}1 \\times 10^{4}$ ans (confirmé par $t = \\ln 4 / \\lambda \\approx 11460$ ans)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "activite",
+      "enonce": "L'iode 131, employé en médecine nucléaire, a une demi-vie $t_{1/2} = 8{,}0$ jours. Un échantillon contient initialement $N_0 = 6{,}0 \\times 10^{14}$ noyaux ($1\\ \\text{jour} = 86400\\ \\text{s}$). 1) Calculer la constante radioactive $\\lambda$ en $\\text{s}^{-1}$. 2) En déduire l'activité initiale $A_0$ de l'échantillon. 3) Quelle est l'activité de l'échantillon au bout de $24$ jours ?",
+      "corrige": [
+        "Conversion : $t_{1/2} = 8{,}0 \\times 86400 = 6{,}9 \\times 10^{5}\\ \\text{s}$. Puis $\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{6{,}9 \\times 10^{5}} = 1{,}0 \\times 10^{-6}\\ \\text{s}^{-1}$.",
+        "Activité initiale : $A_0 = \\lambda\\, N_0 = 1{,}0 \\times 10^{-6} \\times 6{,}0 \\times 10^{14} = 6{,}0 \\times 10^{8}\\ \\text{Bq}$.",
+        "La durée $24$ jours correspond à $\\dfrac{24}{8{,}0} = 3$ demi-vies. L'activité suit la même décroissance que $N$ : $A = \\dfrac{A_0}{2^{3}} = \\dfrac{6{,}0 \\times 10^{8}}{8} = 7{,}5 \\times 10^{7}\\ \\text{Bq}$.",
+        "On aurait aussi pu écrire $A = A_0\\, e^{-\\lambda t}$ avec $t = 24 \\times 86400\\ \\text{s}$, ce qui redonne $7{,}5 \\times 10^{7}$ Bq."
+      ],
+      "reponse": "$\\lambda = 1{,}0 \\times 10^{-6}\\ \\text{s}^{-1}$, $A_0 = \\lambda N_0 = 6{,}0 \\times 10^{8}\\ \\text{Bq}$, et après $24$ jours ($3\\, t_{1/2}$) : $A = 7{,}5 \\times 10^{7}\\ \\text{Bq}$."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-pc-cinetique-chimique-qcm",
+  "chapitre": "tale-spe-pc-cinetique-chimique",
+  "titre": "QCM — Cinétique chimique : évolution temporelle",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "transformations-lentes-rapides",
+      "enonce": "Quelle transformation peut faire l'objet d'un suivi cinétique dans le temps ?",
+      "choix": [
+        "Une transformation rapide, quasi instantanée",
+        "Une transformation lente, dont l'évolution s'étale sur une durée observable",
+        "N'importe quelle transformation, rapide ou lente",
+        "Aucune : une vitesse ne se mesure pas"
+      ],
+      "reponse": 1,
+      "explication": "Seules les transformations **lentes** laissent le temps d'enregistrer l'évolution d'une concentration. Une transformation rapide paraît instantanée : on ne peut pas suivre son déroulement."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "facteurs-cinetiques",
+      "enonce": "Pourquoi conserve-t-on les aliments au réfrigérateur ?",
+      "choix": [
+        "Le froid empêche définitivement toute réaction",
+        "Le froid abaisse la température, ce qui ralentit les réactions de dégradation",
+        "Le froid augmente la concentration des réactifs",
+        "Le froid joue le rôle de catalyseur"
+      ],
+      "reponse": 1,
+      "explication": "La **température** est un facteur cinétique : l'abaisser **ralentit** (sans stopper) les transformations. Le froid ne bloque pas définitivement, il diminue la fréquence et l'énergie des chocs."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "vitesse-disparition-apparition",
+      "enonce": "Pourquoi écrit-on la vitesse de disparition d'un réactif avec un signe « − » : $v_{\\text{disp}}(R) = -\\dfrac{\\mathrm{d}[R]}{\\mathrm{d}t}$ ?",
+      "choix": [
+        "Parce qu'une vitesse est toujours négative",
+        "Parce que $[R]$ diminue : sa dérivée est négative, le « − » rend la vitesse positive",
+        "Par convention arbitraire, sans signification",
+        "Parce que le réactif est consommé plus vite que le produit n'apparaît"
+      ],
+      "reponse": 1,
+      "explication": "$[R]$ **décroît**, donc $\\dfrac{\\mathrm{d}[R]}{\\mathrm{d}t} < 0$. Le signe « − » compense pour donner une vitesse **positive**. Une vitesse négative n'a pas de sens physique."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "vitesse-disparition-apparition",
+      "enonce": "Quelle est l'unité d'une vitesse volumique de disparition ?",
+      "choix": [
+        "$\\text{mol·s}^{-1}$",
+        "$\\text{mol·L}^{-1}$",
+        "$\\text{mol·L}^{-1}\\text{·s}^{-1}$",
+        "$\\text{L·mol}^{-1}\\text{·s}^{-1}$"
+      ],
+      "reponse": 2,
+      "explication": "C'est une **concentration** (mol·L⁻¹) divisée par un **temps** (s), donc $\\text{mol·L}^{-1}\\text{·s}^{-1}$. Oublier le « L⁻¹ » (mol·s⁻¹) confond avec un débit de matière ; oublier le « s⁻¹ » donne une simple concentration."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "vitesse-disparition-apparition",
+      "enonce": "Sur la courbe $[R] = f(t)$, la tangente à la date $t = 0$ part de $[R] = 0{,}10$ mol·L⁻¹ et couperait l'axe des temps à $t = 40$ s. Quelle est la vitesse de disparition initiale ?",
+      "choix": [
+        "$4{,}0 \\times 10^{-3}$ mol·L⁻¹·s⁻¹",
+        "$2{,}5 \\times 10^{-3}$ mol·L⁻¹·s⁻¹",
+        "$0{,}10$ mol·L⁻¹·s⁻¹",
+        "$4{,}0$ mol·L⁻¹·s⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "La pente de la tangente vaut $\\dfrac{0 - 0{,}10}{40 - 0} = -2{,}5 \\times 10^{-3}$ mol·L⁻¹·s⁻¹. La vitesse est son opposé : $v = 2{,}5 \\times 10^{-3}$ mol·L⁻¹·s⁻¹. Le piège : lire la valeur $0{,}10$ (un point) au lieu de la **pente**."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "catalyse-catalyseur",
+      "enonce": "Un catalyseur est ajouté à un système chimique. Quelle affirmation est correcte ?",
+      "choix": [
+        "Il augmente l'avancement final et le rendement",
+        "Il accélère la transformation sans modifier l'état final",
+        "Il apparaît dans l'équation de bilan comme un réactif",
+        "Il est entièrement consommé pendant la réaction"
+      ],
+      "reponse": 1,
+      "explication": "Un catalyseur change la **vitesse**, pas la **destination** : même état final, même rendement. Il est régénéré (non consommé au bilan) et **n'apparaît pas** dans l'équation."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "loi-ordre-1",
+      "enonce": "Une réaction suit une loi d'ordre 1. On refait l'expérience en **doublant** la concentration initiale $[R]_0$. Que devient le temps de demi-réaction $t_{1/2}$ ?",
+      "choix": [
+        "Il double",
+        "Il est divisé par deux",
+        "Il reste inchangé",
+        "Il est multiplié par $\\ln 2$"
+      ],
+      "reponse": 2,
+      "explication": "Pour l'ordre 1, $t_{1/2} = \\dfrac{\\ln 2}{k}$ : il ne dépend **que de $k$**, pas de $[R]_0$. Cette indépendance est justement le test caractéristique de l'ordre 1."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "loi-ordre-1",
+      "enonce": "Un réactif d'ordre 1 a une constante de vitesse $k = 0{,}023$ s⁻¹. Quel est son temps de demi-réaction ?",
+      "choix": [
+        "$0{,}016$ s",
+        "$30$ s",
+        "$43$ s",
+        "$23$ s"
+      ],
+      "reponse": 1,
+      "explication": "$t_{1/2} = \\dfrac{\\ln 2}{k} = \\dfrac{0{,}693}{0{,}023} \\approx 30$ s. Le distracteur $0{,}016$ multiplie ($0{,}693 \\times 0{,}023$) au lieu de diviser ; $43$ s oublie le $\\ln 2$ ($1/k$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "loi-ordre-1",
+      "enonce": "À partir de mesures $[R] = f(t)$, on trace $\\ln[R]$ en fonction du temps et on obtient une **droite** de pente $-0{,}050$ s⁻¹. Que peut-on conclure ?",
+      "choix": [
+        "L'ordre est 1 et $k = 0{,}050$ s⁻¹",
+        "L'ordre est 1 et $k = -0{,}050$ s⁻¹",
+        "L'ordre n'est pas 1, car $\\ln[R]$ devrait être constant",
+        "L'ordre est 1 et $t_{1/2} = 0{,}050$ s"
+      ],
+      "reponse": 0,
+      "explication": "Pour l'ordre 1, $\\ln[R] = \\ln[R]_0 - k t$ : une droite de pente $-k$. Ici $-k = -0{,}050$, donc $k = 0{,}050$ s⁻¹ (positive). La constante de vitesse est toujours **positive** ; c'est la pente qui est négative."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "temps-demi-reaction",
+      "enonce": "On mesure sur une courbe la durée pour passer de $[R]_0$ à $[R]_0/2$, puis de $[R]_0/2$ à $[R]_0/4$, puis de $[R]_0/4$ à $[R]_0/8$ : on trouve à chaque fois $12$ s. Que peut-on en déduire ?",
+      "choix": [
+        "La vitesse est constante au cours du temps",
+        "La réaction suit une loi d'ordre 1, avec $t_{1/2} = 12$ s",
+        "La réaction est terminée au bout de $12$ s",
+        "La concentration initiale valait $12$ mol·L⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "Des demi-vies **successives et égales** signent l'ordre 1 : $t_{1/2} = 12$ s est constant, indépendant de la concentration. La concentration est divisée par deux à chaque intervalle de $12$ s, comme pour une décroissance radioactive."
+    }
+  ]
+}

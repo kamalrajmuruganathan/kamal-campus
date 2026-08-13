@@ -1,0 +1,94 @@
+{
+  "id": "tale-spe-pc-premier-principe-thermique-exos",
+  "chapitre": "tale-spe-pc-premier-principe-thermique",
+  "titre": "Exercices — Premier principe et transferts thermiques",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Surveille les unités (J, W, K) et les signes.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "capacite-thermique",
+      "enonce": "On chauffe une casserole contenant $m = 0{,}30$ kg d'eau, de la température initiale $\\theta_i = 18\\ \\text{°C}$ jusqu'à $\\theta_f = 100\\ \\text{°C}$. L'eau est incompressible et n'échange pas de travail : $\\Delta U = Q = m\\,c\\,\\Delta T$, avec $c = 4{,}18 \\times 10^{3}$ J·kg⁻¹·K⁻¹. Calculer l'énergie thermique $Q$ à apporter à l'eau.",
+      "corrige": [
+        "On calcule d'abord l'écart de température : $\\Delta T = \\theta_f - \\theta_i = 100 - 18 = 82\\ \\text{°C}$. Un **écart** de température se transpose tel quel en kelvins : $\\Delta T = 82$ K (on n'ajoute pas $273{,}15$ à un écart).",
+        "L'eau étant incompressible et sans travail échangé, le premier principe se réduit à $\\Delta U = Q = m\\,c\\,\\Delta T$.",
+        "Application numérique : $Q = 0{,}30 \\times 4{,}18\\times10^{3} \\times 82 = 1{,}03\\times10^{5}$ J.",
+        "Soit $Q \\approx 1{,}0 \\times 10^{5}$ J, c'est-à-dire environ $103$ kJ à fournir à l'eau."
+      ],
+      "reponse": "$Q = m\\,c\\,\\Delta T = 0{,}30 \\times 4{,}18\\times10^{3} \\times 82 \\approx 1{,}0 \\times 10^{5}$ J (soit $\\approx 103$ kJ)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "flux-thermique",
+      "enonce": "Un radiateur électrique fournit une énergie thermique $Q = 9{,}0 \\times 10^{5}$ J en une durée $\\Delta t = 30$ min. Calculer le flux thermique $\\varphi$ délivré par ce radiateur, en watts.",
+      "corrige": [
+        "Le flux thermique est défini par $\\varphi = \\dfrac{Q}{\\Delta t}$ ; il s'exprime en watts, donc la durée doit être en **secondes**.",
+        "Conversion : $\\Delta t = 30\\ \\text{min} = 30 \\times 60 = 1800$ s.",
+        "Application numérique : $\\varphi = \\dfrac{9{,}0\\times10^{5}}{1800} = 5{,}0 \\times 10^{2}$ W.",
+        "Le radiateur délivre donc un flux de $500$ W. Oublier de convertir les minutes en secondes donnerait un résultat $60$ fois trop grand."
+      ],
+      "reponse": "$\\varphi = \\dfrac{Q}{\\Delta t} = \\dfrac{9{,}0\\times10^{5}}{1800} = 5{,}0 \\times 10^{2}$ W (soit $500$ W)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "resistance-thermique",
+      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}025$ K·W⁻¹ sépare l'intérieur d'une maison ($19\\ \\text{°C}$) de l'extérieur ($-1\\ \\text{°C}$). 1) Calculer le flux thermique $\\varphi$ qui traverse le mur ($\\varphi = \\dfrac{\\Delta T}{R_{th}}$). 2) En déduire l'énergie thermique $Q$ perdue à travers ce mur en une heure.",
+      "corrige": [
+        "1) L'écart de température entre les deux faces est $\\Delta T = 19 - (-1) = 20\\ \\text{°C} = 20$ K.",
+        "Flux thermique : $\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{20}{0{,}025} = 8{,}0 \\times 10^{2}$ W. Le mur laisse fuir $800$ W.",
+        "2) L'énergie est le flux multiplié par la durée : $Q = \\varphi \\times \\Delta t$, avec $\\Delta t = 1$ h $= 3600$ s.",
+        "$Q = 800 \\times 3600 = 2{,}88\\times10^{6}$ J $\\approx 2{,}9 \\times 10^{6}$ J. Le flux (W) est une puissance ; il faut le multiplier par une durée pour obtenir une énergie (J)."
+      ],
+      "reponse": "$\\varphi = \\dfrac{20}{0{,}025} = 8{,}0\\times10^{2}$ W ; $Q = \\varphi\\,\\Delta t = 800 \\times 3600 \\approx 2{,}9\\times10^{6}$ J en une heure."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "premier-principe",
+      "enonce": "Au cours d'une transformation, un système reçoit de l'extérieur un transfert thermique $Q = +1{,}5 \\times 10^{3}$ J et fournit à l'extérieur un travail de $400$ J. 1) Donner la valeur algébrique du travail $W$ reçu par le système. 2) En déduire la variation d'énergie interne $\\Delta U$ à l'aide du premier principe.",
+      "corrige": [
+        "1) On se place du point de vue du système. Le système **fournit** (cède) un travail de $400$ J : il en perd, donc la valeur algébrique du travail reçu est **négative** : $W = -400$ J.",
+        "Le transfert thermique, lui, est **reçu** : $Q = +1{,}5\\times10^{3}$ J $= +1500$ J.",
+        "2) Premier principe : $\\Delta U = Q + W = 1500 + (-400) = 1100$ J.",
+        "$\\Delta U = +1{,}1\\times10^{3}$ J : l'énergie interne augmente. Le piège est de sommer $1500 + 400$ en oubliant que le travail fourni compte **négativement**."
+      ],
+      "reponse": "$W = -400$ J, donc $\\Delta U = Q + W = 1500 - 400 = +1{,}1\\times10^{3}$ J."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "capacite-thermique",
+      "enonce": "Un chauffe-eau doit porter $m = 50$ kg d'eau de $15\\ \\text{°C}$ à $55\\ \\text{°C}$ ($c = 4{,}18 \\times 10^{3}$ J·kg⁻¹·K⁻¹). 1) Calculer l'énergie thermique $Q$ nécessaire. 2) Le chauffe-eau développe une puissance (flux) constante $P = 2{,}0$ kW, entièrement transmise à l'eau. Calculer la durée $\\Delta t$ du chauffage. Donner le résultat en minutes.",
+      "corrige": [
+        "1) L'écart de température vaut $\\Delta T = 55 - 15 = 40\\ \\text{°C} = 40$ K. Pour l'eau incompressible sans travail : $Q = m\\,c\\,\\Delta T = 50 \\times 4{,}18\\times10^{3} \\times 40 = 8{,}36\\times10^{6}$ J.",
+        "Soit $Q \\approx 8{,}4 \\times 10^{6}$ J (environ $8{,}4$ MJ).",
+        "2) La puissance relie l'énergie et la durée : $P = \\dfrac{Q}{\\Delta t}$, donc $\\Delta t = \\dfrac{Q}{P}$. Il faut $P$ en watts : $P = 2{,}0$ kW $= 2{,}0\\times10^{3}$ W.",
+        "$\\Delta t = \\dfrac{8{,}36\\times10^{6}}{2{,}0\\times10^{3}} = 4{,}18\\times10^{3}$ s.",
+        "Conversion en minutes : $\\Delta t = \\dfrac{4180}{60} \\approx 70$ min. Le chauffage dure un peu plus d'une heure."
+      ],
+      "reponse": "$Q = m\\,c\\,\\Delta T \\approx 8{,}4\\times10^{6}$ J ; $\\Delta t = \\dfrac{Q}{P} = \\dfrac{8{,}36\\times10^{6}}{2{,}0\\times10^{3}} \\approx 4{,}2\\times10^{3}$ s, soit environ $70$ min."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "sens-spontane",
+      "enonce": "Dans un calorimètre (parois isolantes, aucun échange avec l'extérieur), on mélange $m_1 = 0{,}20$ kg d'eau chaude à $\\theta_1 = 80\\ \\text{°C}$ avec $m_2 = 0{,}30$ kg d'eau froide à $\\theta_2 = 20\\ \\text{°C}$. La capacité thermique massique $c$ de l'eau est la même dans les deux cas. 1) Prévoir le sens du transfert thermique. 2) En écrivant que l'énergie totale se conserve, déterminer la température finale $\\theta_f$ à l'équilibre.",
+      "corrige": [
+        "1) Le transfert se fait spontanément du **chaud vers le froid** : l'eau à $80\\ \\text{°C}$ cède de l'énergie ($Q_1 < 0$) à l'eau à $20\\ \\text{°C}$ qui en reçoit ($Q_2 > 0$), jusqu'à une température commune $\\theta_f$.",
+        "L'ensemble étant isolé, aucune énergie ne sort : la somme des transferts est nulle, $Q_1 + Q_2 = 0$, soit $m_1\\,c\\,(\\theta_f - \\theta_1) + m_2\\,c\\,(\\theta_f - \\theta_2) = 0$.",
+        "$c$ se simplifie (même liquide) : $m_1(\\theta_f - \\theta_1) + m_2(\\theta_f - \\theta_2) = 0$. On isole $\\theta_f$ : $\\theta_f = \\dfrac{m_1\\,\\theta_1 + m_2\\,\\theta_2}{m_1 + m_2}$.",
+        "Application numérique : $\\theta_f = \\dfrac{0{,}20 \\times 80 + 0{,}30 \\times 20}{0{,}20 + 0{,}30} = \\dfrac{16 + 6}{0{,}50} = \\dfrac{22}{0{,}50} = 44\\ \\text{°C}$.",
+        "Vérification du signe : $\\theta_f = 44\\ \\text{°C}$ est bien **entre** $20$ et $80\\ \\text{°C}$, et plus proche de $20\\ \\text{°C}$ car il y a davantage d'eau froide. Cohérent."
+      ],
+      "reponse": "Transfert du chaud vers le froid ; $\\theta_f = \\dfrac{m_1\\theta_1 + m_2\\theta_2}{m_1 + m_2} = \\dfrac{16 + 6}{0{,}50} = 44\\ \\text{°C}$."
+    }
+  ]
+}

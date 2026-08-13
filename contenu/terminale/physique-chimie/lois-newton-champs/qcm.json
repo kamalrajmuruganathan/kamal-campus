@@ -1,0 +1,154 @@
+{
+  "id": "tale-spe-pc-lois-newton-champs-qcm",
+  "chapitre": "tale-spe-pc-lois-newton-champs",
+  "titre": "QCM — Deuxième loi de Newton et mouvements dans un champ",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "deuxieme-loi-de-newton",
+      "enonce": "Quelle est l'expression correcte de la deuxième loi de Newton dans un référentiel galiléen ?",
+      "choix": [
+        "$\\sum \\vec{F}_{\\text{ext}} = m\\,\\vec{v}$",
+        "$\\sum \\vec{F}_{\\text{ext}} = m\\,\\vec{a}$",
+        "$\\sum \\vec{F}_{\\text{ext}} = \\vec{a}\\,/\\,m$",
+        "$\\sum \\vec{F}_{\\text{ext}} = \\vec{0}$"
+      ],
+      "reponse": 1,
+      "explication": "La somme des forces extérieures est égale au produit de la **masse** par l'**accélération** : $\\sum \\vec{F}_{\\text{ext}} = m\\vec{a}$. Le premier choix confond accélération et vitesse, le dernier est la condition d'équilibre (cas particulier $\\vec{a}=\\vec{0}$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "referentiel-galileen",
+      "enonce": "Pour étudier le mouvement d'un satellite autour de la Terre, quel référentiel est adapté ?",
+      "choix": [
+        "Le référentiel terrestre",
+        "Le référentiel géocentrique",
+        "Le référentiel héliocentrique",
+        "Le référentiel du satellite lui-même"
+      ],
+      "reponse": 1,
+      "explication": "Le référentiel **géocentrique** (centré sur la Terre, axes vers les étoiles) est galiléen à l'échelle d'une orbite : c'est celui des satellites de la Terre. Le terrestre convient aux chutes, l'héliocentrique aux planètes."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "chute-champ-pesanteur",
+      "enonce": "Une bille de masse $m$ est lâchée en chute libre (frottements négligés). Que vaut son accélération ?",
+      "choix": [
+        "$\\vec{a} = m\\vec{g}$",
+        "$\\vec{a} = \\vec{g}$, indépendante de $m$",
+        "$\\vec{a} = \\vec{g}/m$",
+        "$\\vec{a} = \\vec{0}$"
+      ],
+      "reponse": 1,
+      "explication": "La seule force est le poids $\\vec{P}=m\\vec{g}$. La deuxième loi donne $m\\vec{g}=m\\vec{a}$, la masse se **simplifie** : $\\vec{a}=\\vec{g}$. C'est pourquoi tous les corps tombent de la même façon dans le vide, quelle que soit leur masse."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "champ-condensateur",
+      "enonce": "Un condensateur plan a ses plaques séparées de $d = 2{,}0$ cm sous une tension $U = 200$ V. Quelle est la valeur du champ électrique entre les plaques ?",
+      "choix": [
+        "$100$ V·m⁻¹",
+        "$1{,}0 \\times 10^{4}$ V·m⁻¹",
+        "$400$ V·m⁻¹",
+        "$4{,}0 \\times 10^{2}$ V·m⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "$E = \\dfrac{U}{d}$ avec $d$ **en mètres** : $d = 2{,}0$ cm $= 0{,}020$ m, donc $E = \\dfrac{200}{0{,}020} = 1{,}0\\times10^{4}$ V·m⁻¹. Le piège classique : garder $d$ en cm donne $100$ V·m⁻¹, cent fois trop petit."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "chute-champ-pesanteur",
+      "enonce": "Pour un projectile lancé avec une vitesse initiale faisant un angle avec l'horizontale (frottements négligés), comment évolue la composante horizontale $v_x$ de la vitesse ?",
+      "choix": [
+        "Elle augmente au cours du temps",
+        "Elle reste constante",
+        "Elle diminue puis s'annule",
+        "Elle est toujours nulle"
+      ],
+      "reponse": 1,
+      "explication": "Aucune force n'agit horizontalement (le poids est vertical), donc $a_x = 0$ et $v_x = v_0\\cos\\alpha$ reste **constante** : le mouvement est uniforme selon $x$. Seule $v_y$ varie, à cause de la pesanteur."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "mouvement-plan",
+      "enonce": "Pourquoi affirme-t-on que le mouvement d'un projectile dans un champ de pesanteur uniforme est plan ?",
+      "choix": [
+        "Parce que la trajectoire est une droite",
+        "Parce qu'aucune force n'a de composante hors du plan défini par $\\vec{v}_0$ et $\\vec{g}$",
+        "Parce que la vitesse initiale est nulle",
+        "Parce que l'accélération est nulle"
+      ],
+      "reponse": 1,
+      "explication": "La seule force (le poids) est dans le plan contenant $\\vec{v}_0$ et $\\vec{g}$. Rien ne pousse le système hors de ce plan : la coordonnée perpendiculaire reste nulle. Le mouvement se traite donc à **deux dimensions**."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "particule-chargee",
+      "enonce": "Un électron ($q = -e$) est placé dans un champ électrique uniforme $\\vec{E}$. Dans quel sens la force électrique le dévie-t-elle ?",
+      "choix": [
+        "Dans le même sens que $\\vec{E}$",
+        "Dans le sens opposé à $\\vec{E}$",
+        "Perpendiculairement à $\\vec{E}$",
+        "La force est nulle"
+      ],
+      "reponse": 1,
+      "explication": "$\\vec{F} = q\\vec{E}$ avec $q = -e < 0$ : le facteur négatif **inverse** le sens. La force est donc opposée à $\\vec{E}$, et l'électron est dévié vers la plaque positive. Recopier le sens de $\\vec{E}$ sans regarder le signe de la charge est l'erreur type."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "particule-chargee",
+      "enonce": "Pour une particule chargée qui traverse un condensateur, pourquoi néglige-t-on le poids ?",
+      "choix": [
+        "Parce que la particule n'a pas de masse",
+        "Parce que la force électrique est immense devant le poids à cette échelle",
+        "Parce que le poids est horizontal",
+        "Parce que la particule est immobile"
+      ],
+      "reponse": 1,
+      "explication": "L'accélération électrique $a = \\dfrac{|q|E}{m}$ atteint $10^{15}$ m·s⁻² pour un électron, contre $g \\approx 10$ m·s⁻² pour le poids : le poids est plus de $10^{13}$ fois plus faible, donc négligeable. Attention : c'est le contraire pour un projectile macroscopique."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "lois-de-kepler",
+      "enonce": "Deux satellites de masses différentes décrivent la même orbite circulaire de rayon $r$ autour de la Terre. Que peut-on dire de leurs vitesses ?",
+      "choix": [
+        "Le plus lourd va plus vite",
+        "Le plus léger va plus vite",
+        "Ils ont la même vitesse $v = \\sqrt{GM/r}$",
+        "On ne peut pas conclure sans connaître les masses"
+      ],
+      "reponse": 2,
+      "explication": "$v = \\sqrt{\\dfrac{GM}{r}}$ ne dépend que de la masse $M$ de la **Terre** et du rayon $r$ de l'orbite, pas de la masse du satellite (elle se simplifie dans $\\dfrac{GMm}{r^2} = m\\dfrac{v^2}{r}$). Même orbite ⇒ même vitesse."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "satellite-geostationnaire",
+      "enonce": "Quelle période de révolution doit avoir un satellite géostationnaire ?",
+      "choix": [
+        "Exactement $24$ h",
+        "Le jour sidéral, soit environ $23$ h $56$ min",
+        "$1$ h $30$ min comme la Station spatiale",
+        "$365$ jours"
+      ],
+      "reponse": 1,
+      "explication": "Pour paraître fixe au-dessus d'un point de l'équateur, le satellite doit tourner à la même vitesse angulaire que la Terre sur elle-même : sa période est le **jour sidéral** ($\\approx 23$ h $56$ min $\\approx 86\\,164$ s), pas le jour solaire de 24 h. Utiliser 24 h fausse le calcul de l'altitude ($\\approx 36\\,000$ km)."
+    }
+  ]
+}
