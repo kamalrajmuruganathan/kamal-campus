@@ -21,6 +21,8 @@ import { masseMolaire, dilution } from '../../lib/chimie';
 import { energieCinetique, loiOhm } from '../../lib/physique';
 import { distance, milieu, produitScalaire, droiteParDeuxPoints } from '../../lib/geometrie';
 import { cosSin, degresVersRadians, resoudre } from '../../lib/trigonometrie';
+import { pgcdEuclide, bezout, resoudreCongruence, decompositionFacteurs } from '../../lib/arithmetique';
+import { additionner, multiplier, diviser, moduleArgument, secondDegreComplexe } from '../../lib/nombres-complexes';
 
 /**
  * Déclaration des outils. Chaque entrée décrit ses champs et la fonction à
@@ -187,6 +189,84 @@ const OUTILS = [
       { clef: 'a', libelle: 'valeur a', defaut: '0.5' },
     ],
     executer: (v) => resoudre(String(v.type).trim().toLowerCase(), v.a),
+  },
+  {
+    id: 'pgcd-euclide',
+    titre: 'PGCD et Bézout',
+    resume: 'Algorithme d’Euclide détaillé, puis identité de Bézout',
+    champs: [
+      { clef: 'a', libelle: 'a', defaut: '252' },
+      { clef: 'b', libelle: 'b', defaut: '105' },
+    ],
+    executer: (v) => {
+      const g = pgcdEuclide(v.a, v.b);
+      if (!g.valide) return g;
+      const bz = bezout(v.a, v.b);
+      return {
+        valide: true,
+        etapes: [...g.etapes, ...(bz.valide ? [bz.etapes.at(-1)] : [])],
+      };
+    },
+  },
+  {
+    id: 'congruences',
+    titre: 'Congruence ax ≡ b [n]',
+    resume: 'Existence et ensemble des solutions, via Bézout',
+    champs: [
+      { clef: 'a', libelle: 'a', defaut: '5' },
+      { clef: 'b', libelle: 'b', defaut: '3' },
+      { clef: 'n', libelle: 'module n', defaut: '7' },
+    ],
+    executer: (v) => resoudreCongruence(v.a, v.b, v.n),
+  },
+  {
+    id: 'decomposition-premiers',
+    titre: 'Facteurs premiers',
+    resume: 'Décomposition d’un entier, divisions successives',
+    champs: [{ clef: 'n', libelle: 'entier n ≥ 2', defaut: '360' }],
+    executer: (v) => decompositionFacteurs(v.n),
+  },
+  {
+    id: 'complexe-forme',
+    titre: 'Complexe : module et argument',
+    resume: 'Formes trigonométrique et exponentielle, valeurs exactes',
+    champs: [
+      { clef: 're', libelle: 'partie réelle', defaut: '1' },
+      { clef: 'im', libelle: 'partie imaginaire', defaut: '1' },
+    ],
+    executer: (v) => moduleArgument({ re: v.re, im: v.im }),
+  },
+  {
+    id: 'complexe-operations',
+    titre: 'Opérations dans ℂ',
+    resume: 'Somme, produit ou quotient de deux complexes, avec étapes',
+    champs: [
+      { clef: 're1', libelle: 'Re(z₁)', defaut: '2' },
+      { clef: 'im1', libelle: 'Im(z₁)', defaut: '3' },
+      { clef: 'op', libelle: 'opération : + ou * ou /', defaut: '*', texte: true },
+      { clef: 're2', libelle: 'Re(z₂)', defaut: '1' },
+      { clef: 'im2', libelle: 'Im(z₂)', defaut: '-2' },
+    ],
+    executer: (v) => {
+      const z1 = { re: v.re1, im: v.im1 };
+      const z2 = { re: v.re2, im: v.im2 };
+      const op = String(v.op).trim();
+      if (op === '+') return additionner(z1, z2);
+      if (op === '*' || op === '×' || op === 'x') return multiplier(z1, z2);
+      if (op === '/' || op === '÷') return diviser(z1, z2);
+      return { valide: false, erreur: 'Opération inconnue : utilise + , * ou / (la soustraction est une somme avec −z₂).' };
+    },
+  },
+  {
+    id: 'second-degre-complexe',
+    titre: 'Second degré dans ℂ',
+    resume: 'az² + bz + c = 0, racines complexes conjuguées si Δ < 0',
+    champs: [
+      { clef: 'a', libelle: 'a', defaut: '1' },
+      { clef: 'b', libelle: 'b', defaut: '1' },
+      { clef: 'c', libelle: 'c', defaut: '1' },
+    ],
+    executer: (v) => secondDegreComplexe(v.a, v.b, v.c),
   },
 ];
 
