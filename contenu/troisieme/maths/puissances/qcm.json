@@ -1,0 +1,154 @@
+{
+  "id": "3e-math-puissances-qcm",
+  "chapitre": "3e-math-puissances",
+  "titre": "QCM — Puissances : exposants négatifs et notation scientifique",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "exposant-negatif",
+      "enonce": "Combien vaut $10^{-3}$ ?",
+      "choix": [
+        "$-1\\,000$",
+        "$-0{,}001$",
+        "$0{,}001$",
+        "$0{,}0001$"
+      ],
+      "reponse": 2,
+      "explication": "$10^{-3} = \\dfrac{1}{10^3} = \\dfrac{1}{1\\,000} = 0{,}001$. Le piège : un exposant négatif ne rend **jamais** le résultat négatif, il donne l'**inverse**. Le résultat est positif, simplement petit. Le $1$ se place au $3^\\text{e}$ rang après la virgule, d'où $0{,}001$ et non $0{,}0001$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "notation-scientifique",
+      "enonce": "Quelle est la notation scientifique de $32\\,000$ ?",
+      "choix": [
+        "$32 \\times 10^{3}$",
+        "$3{,}2 \\times 10^{4}$",
+        "$0{,}32 \\times 10^{5}$",
+        "$3{,}2 \\times 10^{3}$"
+      ],
+      "reponse": 1,
+      "explication": "La mantisse doit vérifier $1 \\leqslant a < 10$ : **un seul chiffre non nul avant la virgule**. Les écritures $32 \\times 10^{3}$ et $0{,}32 \\times 10^{5}$ donnent bien $32\\,000$, mais ne respectent pas cette condition — c'est le piège classique, une valeur juste dans une forme fausse. La virgule recule de $4$ rangs, donc l'exposant est $4$, pas $3$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "exposant-zero",
+      "enonce": "Combien vaut $7^{0}$ ?",
+      "choix": [
+        "$0$",
+        "$7$",
+        "$\\dfrac{1}{7}$",
+        "$1$"
+      ],
+      "reponse": 3,
+      "explication": "On ne peut pas raisonner en comptant les facteurs : il faut passer par la règle du quotient. $\\dfrac{7^3}{7^3} = 1$ d'un côté, et $7^{3-3} = 7^{0}$ de l'autre : donc $7^{0} = 1$. Le piège est de répondre $0$ en confondant l'**exposant** (qui vaut zéro) avec le **résultat**."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "division-puissances",
+      "enonce": "Écris $\\dfrac{2^{9}}{2^{4}}$ sous la forme d'une seule puissance.",
+      "choix": [
+        "$2^{5}$",
+        "$2^{13}$",
+        "$2^{36}$",
+        "$2^{-5}$"
+      ],
+      "reponse": 0,
+      "explication": "Même base : on **soustrait** les exposants, $9 - 4 = 5$. Les distracteurs correspondent aux trois réflexes fautifs : additionner ($2^{13}$, la règle du produit appliquée à un quotient), multiplier ($2^{36}$), ou soustraire à l'envers $4-9$ ($2^{-5}$). Contrôle rapide : $2^9$ est plus grand que $2^4$, donc l'exposant du résultat doit être **positif**."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "produit-puissances",
+      "enonce": "Combien vaut $10^{-4} \\times 10^{7}$ ?",
+      "choix": [
+        "$10^{-28}$",
+        "$10^{11}$",
+        "$10^{3}$",
+        "$10^{-3}$"
+      ],
+      "reponse": 2,
+      "explication": "Même base, produit : on **additionne** les exposants, $-4 + 7 = 3$. Le choix $10^{-28}$ multiplie les exposants au lieu de les additionner ; $10^{11}$ additionne les valeurs absolues en ignorant le signe ; $10^{-3}$ garde le signe du plus grand en valeur absolue. Il faut vraiment poser $-4+7$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "notation-scientifique",
+      "enonce": "Quelle est la notation scientifique de $0{,}00058$ ?",
+      "choix": [
+        "$58 \\times 10^{-5}$",
+        "$5{,}8 \\times 10^{-4}$",
+        "$5{,}8 \\times 10^{-3}$",
+        "$5{,}8 \\times 10^{4}$"
+      ],
+      "reponse": 1,
+      "explication": "La virgule se déplace de **4 rangs** vers la droite pour arriver après le $5$ : $0{,}00058 \\to 5{,}8$, donc $10^{-4}$. Le piège n°1 est de **compter les zéros** ($3$ zéros) au lieu des rangs de virgule ($4$) : cela donne le faux $10^{-3}$. Le nombre est plus petit que $1$, donc l'exposant est forcément négatif — ce qui élimine $10^{4}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "Donne la notation scientifique de $(3 \\times 10^{5}) \\times (4 \\times 10^{-8})$.",
+      "choix": [
+        "$12 \\times 10^{-3}$",
+        "$1{,}2 \\times 10^{-3}$",
+        "$7 \\times 10^{-3}$",
+        "$1{,}2 \\times 10^{-2}$"
+      ],
+      "reponse": 3,
+      "explication": "On calcule séparément : $3 \\times 4 = 12$ et $10^{5} \\times 10^{-8} = 10^{-3}$, soit $12 \\times 10^{-3}$. Mais $12$ n'est pas entre $1$ et $10$ : il faut **renormaliser**, $12 = 1{,}2 \\times 10^{1}$, d'où $1{,}2 \\times 10^{-2}$. S'arrêter à $12 \\times 10^{-3}$ est l'erreur de fin d'exercice la plus fréquente ; $1{,}2 \\times 10^{-3}$ oublie de compenser le rang déplacé ; $7 \\times 10^{-3}$ **additionne** les mantisses au lieu de les multiplier."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "ordre-de-grandeur",
+      "enonce": "Parmi ces quatre nombres, lequel est le plus **grand** ?",
+      "choix": [
+        "$9{,}5 \\times 10^{-6}$",
+        "$8 \\times 10^{-5}$",
+        "$1{,}2 \\times 10^{-5}$",
+        "$7{,}4 \\times 10^{-7}$"
+      ],
+      "reponse": 1,
+      "explication": "On compare **d'abord les exposants**, la mantisse ne départage qu'à exposants égaux. Ici $-5 > -6 > -7$ : les deux candidats sont ceux en $10^{-5}$, et $8 > 1{,}2$. Le piège est de choisir $9{,}5 \\times 10^{-6}$ parce que $9{,}5$ est la plus grosse mantisse : $9{,}5 \\times 10^{-6} = 0{,}0000095$ alors que $8 \\times 10^{-5} = 0{,}00008$, soit près de dix fois plus."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "division-puissances",
+      "enonce": "Combien vaut $\\dfrac{10^{-3}}{10^{-7}}$ ?",
+      "choix": [
+        "$10^{4}$",
+        "$10^{-4}$",
+        "$10^{-10}$",
+        "$10^{10}$"
+      ],
+      "reponse": 0,
+      "explication": "On soustrait les exposants **avec leurs signes** : $-3 - (-7) = -3 + 7 = 4$. Soustraire un nombre négatif revient à ajouter. Le choix $10^{-10}$ vient de $-3 + (-7)$ (règle du produit appliquée à un quotient), $10^{-4}$ de la soustraction faite **à l'envers**, $-7 - (-3)$, et $10^{10}$ de l'addition des exposants sans leurs signes. Contrôle de bon sens : diviser par $10^{-7}$, c'est diviser par un tout petit nombre, donc le résultat doit **augmenter**."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "Un virus mesure environ $2 \\times 10^{-7}$ m. Combien faut-il en aligner pour atteindre $1$ mm ?",
+      "choix": [
+        "$5 \\times 10^{4}$",
+        "$2 \\times 10^{-4}$",
+        "$5 \\times 10^{3}$",
+        "$5 \\times 10^{-3}$"
+      ],
+      "reponse": 2,
+      "explication": "Il faut d'abord **convertir** : $1$ mm $= 10^{-3}$ m. On divise ensuite : $\\dfrac{10^{-3}}{2 \\times 10^{-7}} = 0{,}5 \\times 10^{-3-(-7)} = 0{,}5 \\times 10^{4} = 5 \\times 10^{3}$, soit $5\\,000$ virus. Deux pièges cumulés : oublier la conversion mm $\\to$ m, et laisser $0{,}5 \\times 10^{4}$ (mantisse non renormalisée) — corriger $0{,}5$ en $5$ fait baisser l'exposant de $4$ à $3$. Un **nombre** de virus ne peut pas être négatif ni inférieur à 1, ce qui élimine les exposants négatifs."
+    }
+  ]
+}

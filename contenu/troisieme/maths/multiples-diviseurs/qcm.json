@@ -1,0 +1,134 @@
+{
+  "id": "3e-math-multiples-diviseurs-qcm",
+  "chapitre": "3e-math-multiples-diviseurs",
+  "titre": "QCM — Multiples et diviseurs",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "On sait que $63 = 7 \\times 9$. Que peut-on affirmer ?",
+      "choix": [
+        "$63$ est un diviseur de $7$",
+        "$7$ est un diviseur de $63$",
+        "$7$ est un multiple de $63$",
+        "$9$ est un multiple de $63$"
+      ],
+      "reponse": 1,
+      "explication": "L'égalité $63 = 7 \\times 9$ dit que $63$ est le **multiple** ; $7$ et $9$ sont ses **diviseurs**. Le piège est d'inverser les deux mots : entre entiers positifs, le multiple est toujours le **plus grand** des deux. $7$ ne peut donc pas être un multiple de $63$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "factorisation",
+      "enonce": "Quelle est la décomposition de $60$ en produit de facteurs premiers ?",
+      "choix": [
+        "$2 \\times 3 \\times 5$",
+        "$2^2 \\times 3 \\times 5$",
+        "$2^2 \\times 15$",
+        "$6 \\times 10$"
+      ],
+      "reponse": 1,
+      "explication": "$60 \\div 2 = 30$, $30 \\div 2 = 15$, $15 = 3 \\times 5$ : il y a **deux** facteurs $2$. Le choix A n'en met qu'un et vaut $30$ — le réflexe qui l'attrape est de **remultiplier** pour vérifier. Les choix C et D ne sont pas terminés : $15$, $6$ et $10$ se cassent encore, on ne s'arrête qu'à des facteurs premiers."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "criteres-divisibilite",
+      "enonce": "Le nombre $2\\,025$ est divisible :",
+      "choix": [
+        "par $2$ et par $9$",
+        "par $3$ mais pas par $9$",
+        "par $9$ et par $5$",
+        "par $2$ et par $5$"
+      ],
+      "reponse": 2,
+      "explication": "$2\\,025$ se termine par $5$ : il est divisible par $5$, mais il est **impair**, donc pas par $2$. Sa somme des chiffres vaut $2+0+2+5 = 9$, multiple de $9$ : il est donc divisible par $9$ (et par $3$). Le piège du choix B est de s'arrêter au critère de $3$ sans tester celui de $9$ : ici la somme des chiffres tombe pile sur $9$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "simplification",
+      "enonce": "Simplifie $\\dfrac{63}{14}$.",
+      "choix": [
+        "$\\dfrac{9}{2}$",
+        "$\\dfrac{7}{2}$",
+        "$\\dfrac{9}{7}$",
+        "La fraction est déjà irréductible"
+      ],
+      "reponse": 0,
+      "explication": "Les deux nombres sont dans la table de $7$ : $\\dfrac{63}{14} = \\dfrac{7 \\times 9}{7 \\times 2} = \\dfrac{9}{2}$. Le piège des choix B et C est de **garder le facteur qu'on vient de barrer** au lieu de garder l'autre. Et une fraction simplifiée a parfaitement le droit d'être supérieure à $1$ : $\\dfrac{9}{2}$ n'a rien d'anormal."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "denominateur-commun",
+      "enonce": "Quel est le plus petit dénominateur commun à $\\dfrac{1}{12}$ et $\\dfrac{1}{18}$ ?",
+      "choix": ["$216$", "$30$", "$72$", "$36$"],
+      "reponse": 3,
+      "explication": "$12 = 2^2 \\times 3$ et $18 = 2 \\times 3^2$ : il faut assez de $2$ pour $12$ et assez de $3$ pour $18$, soit $2^2 \\times 3^2 = 36$. Le choix A est le **produit** $12 \\times 18$ : il marche toujours, mais il oblige à simplifier ensuite. Le choix B **additionne** les dénominateurs, ce qui ne donne pas un multiple commun ($30$ n'est même pas divisible par $12$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "nombres-premiers",
+      "enonce": "Lequel de ces nombres n'est **pas** un nombre premier ?",
+      "choix": ["$53$", "$71$", "$83$", "$91$"],
+      "reponse": 3,
+      "explication": "$91 = 7 \\times 13$. Le piège est de tester seulement $2$, $3$ et $5$ : $91$ est impair, sa somme des chiffres vaut $10$ (pas multiple de $3$) et il ne finit ni par $0$ ni par $5$. Beaucoup s'arrêtent là et le déclarent premier — il faut **continuer avec $7$**, puis $11$, puis $13$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "fraction-irreductible",
+      "enonce": "Rends irréductible la fraction $\\dfrac{84}{126}$.",
+      "choix": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{42}{63}$",
+        "$\\dfrac{12}{18}$",
+        "$\\dfrac{4}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "$84 = 2^2 \\times 3 \\times 7$ et $126 = 2 \\times 3^2 \\times 7$ : les facteurs communs sont $2 \\times 3 \\times 7 = 42$, d'où $\\dfrac{84}{126} = \\dfrac{2}{3}$. Les trois autres choix sont **égaux** à la bonne réponse mais correspondent à une simplification **arrêtée trop tôt** (division par $2$, par $7$, par $21$). Le contrôle à faire : reste-t-il un facteur commun ? Si oui, ce n'est pas fini."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "factorisation",
+      "enonce": "Un nombre se décompose en $2^2 \\times 3 \\times 7$. Lequel de ces nombres n'est **pas** un de ses diviseurs ?",
+      "choix": ["$14$", "$21$", "$8$", "$6$"],
+      "reponse": 2,
+      "explication": "Les diviseurs se lisent dans la décomposition : $14 = 2 \\times 7$ ✓, $21 = 3 \\times 7$ ✓, $6 = 2 \\times 3$ ✓. Mais $8 = 2^3$ réclame **trois** facteurs $2$, alors que la décomposition n'en contient que **deux**. Le piège : voir que le nombre est pair et en conclure qu'il est divisible par $8$ — c'est l'exposant du $2$ qui décide."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "denominateur-commun",
+      "enonce": "Compare $\\dfrac{5}{12}$ et $\\dfrac{7}{18}$.",
+      "choix": [
+        "$\\dfrac{5}{12} < \\dfrac{7}{18}$",
+        "$\\dfrac{5}{12} = \\dfrac{7}{18}$",
+        "$\\dfrac{5}{12} > \\dfrac{7}{18}$",
+        "On ne peut pas les comparer"
+      ],
+      "reponse": 2,
+      "explication": "Dénominateur commun $36$ : $\\dfrac{5}{12} = \\dfrac{15}{36}$ et $\\dfrac{7}{18} = \\dfrac{14}{36}$, donc $\\dfrac{5}{12}$ est la plus grande. Le piège est de comparer les nombres écrits : $7 > 5$ **et** $18 > 12$, ce qui pousse à choisir $\\dfrac{7}{18}$. Un numérateur et un dénominateur plus grands ne font pas une fraction plus grande — seul le passage au même dénominateur tranche."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "problemes-multiples",
+      "enonce": "Deux roues dentées engrenées ont l'une $12$ dents, l'autre $18$ dents. Après combien de dents défilées retrouvent-elles leur position de départ ?",
+      "choix": ["$6$ dents", "$36$ dents", "$216$ dents", "$30$ dents"],
+      "reponse": 1,
+      "explication": "Il faut un nombre de dents qui soit un multiple **des deux** nombres, et le plus petit : $36$, soit $3$ tours de la petite roue et $2$ tours de la grande. Le choix A donne le plus grand diviseur commun, pas un multiple — c'est la confusion classique. Le choix C, le produit $12 \\times 18 = 216$, est bien une position de départ — mais la sixième, pas la première."
+    }
+  ]
+}

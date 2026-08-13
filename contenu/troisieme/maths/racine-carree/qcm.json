@@ -1,0 +1,154 @@
+{
+  "id": "3e-math-racine-carree-qcm",
+  "chapitre": "3e-math-racine-carree",
+  "titre": "QCM — Racine carrée : résoudre x² = a",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "equation-x2-a",
+      "enonce": "Quelles sont les solutions de l'équation $x^2 = 36$ ?",
+      "choix": [
+        "$x = 6$",
+        "$x = 6$ ou $x = -6$",
+        "$x = 18$",
+        "$x = 1296$"
+      ],
+      "reponse": 1,
+      "explication": "Deux nombres ont pour carré $36$ : $6^2 = 36$ et $(-6)^2 = 36$. Le piège le plus coûteux du chapitre est de s'arrêter à $6$ et d'**oublier la solution négative** — la moitié des points part avec elle. Les deux autres choix confondent le carré avec une division par $2$ ($18$) ou refont un carré ($36^2 = 1296$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "cas-a-negatif",
+      "enonce": "Combien l'équation $x^2 = -25$ a-t-elle de solutions ?",
+      "choix": [
+        "Deux : $5$ et $-5$",
+        "Une : $-5$",
+        "Une : $5$",
+        "Aucune"
+      ],
+      "reponse": 3,
+      "explication": "Un carré n'est **jamais négatif** : un nombre positif multiplié par lui-même est positif, et un nombre négatif aussi. Aucun nombre ne peut donc donner $-25$. Le piège est de « sortir » le signe moins et de répondre $-5$ : or $(-5)^2 = +25$, pas $-25$. La réponse attendue est une phrase justifiée, pas une case vide."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "nombre-vs-equation",
+      "enonce": "Quelle affirmation est **correcte** ?",
+      "choix": [
+        "$\\sqrt{49} = 7$, et l'équation $x^2 = 49$ a deux solutions",
+        "$\\sqrt{49} = \\pm 7$, et l'équation $x^2 = 49$ a deux solutions",
+        "$\\sqrt{49} = 7$, et l'équation $x^2 = 49$ a une seule solution",
+        "$\\sqrt{49} = -7$ est aussi acceptable"
+      ],
+      "reponse": 0,
+      "explication": "Il faut séparer deux objets. $\\sqrt{49}$ est **un nombre**, toujours positif : il vaut $7$, et uniquement $7$. L'équation $x^2 = 49$ est **une question**, et elle admet deux réponses, $7$ et $-7$. L'erreur symétrique, très fréquente, est d'écrire $\\sqrt{49} = \\pm 7$ : le « $\\pm$ » appartient à la résolution de l'équation, jamais au symbole radical."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "cas-a-nul",
+      "enonce": "Que peut-on dire de l'équation $x^2 = 0$ ?",
+      "choix": [
+        "Elle a une seule solution : $x = 0$",
+        "Elle a deux solutions : $x = 0$ et $x = -0$",
+        "Elle n'a aucune solution",
+        "Elle a une seule solution : $x = 1$"
+      ],
+      "reponse": 0,
+      "explication": "Le seul nombre dont le carré vaut $0$ est $0$ lui-même. C'est le cas frontière entre « deux solutions » et « aucune » : ici les deux solutions se **confondent**. Le piège est d'appliquer mécaniquement la règle des deux solutions opposées et d'écrire « $0$ et $-0$ » — mais $-0$ et $0$ sont le même nombre, cela ne fait qu'une solution."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "se-ramener-forme-x2",
+      "enonce": "Quelles sont les solutions de l'équation $3x^2 = 75$ ?",
+      "choix": [
+        "$x = 25$",
+        "$x = 5$ ou $x = -5$",
+        "$x = 5$",
+        "$x = \\sqrt{75}$ ou $x = -\\sqrt{75}$"
+      ],
+      "reponse": 1,
+      "explication": "Il faut **isoler $x^2$ avant** de prendre la racine : $x^2 = 75 \\div 3 = 25$, donc $x = 5$ ou $x = -5$. Le piège principal est de passer directement au radical en oubliant le facteur $3$, ce qui donne le faux $\\sqrt{75}$. Le choix $x = 25$, lui, s'arrête à la valeur de $x^2$ sans répondre à la question."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "resolution-graphique",
+      "enonce": "On a tracé la courbe de la fonction carré, puis la droite horizontale d'équation $y = 9$. Combien de points d'intersection obtient-on ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "Une infinité"
+      ],
+      "reponse": 2,
+      "explication": "La courbe de la fonction carré (la parabole) est **symétrique par rapport à l'axe des ordonnées** : une droite horizontale située au-dessus de l'origine la coupe donc en deux points, ici d'abscisses $3$ et $-3$. C'est la traduction graphique des deux solutions opposées. Attention : on lit les **abscisses** des points, pas leur ordonnée — les deux ont la même ordonnée $9$, qui n'est pas la solution cherchée."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "valeur-exacte",
+      "enonce": "Quelles sont les solutions **exactes** de l'équation $x^2 = 7$ ?",
+      "choix": [
+        "$x = 3{,}5$ ou $x = -3{,}5$",
+        "$x = 49$ ou $x = -49$",
+        "$x \\approx 2{,}65$",
+        "$x = \\sqrt{7}$ ou $x = -\\sqrt{7}$"
+      ],
+      "reponse": 3,
+      "explication": "$7$ n'est pas un carré parfait : la valeur exacte s'écrit donc avec le radical, et il faut les **deux** solutions opposées. Trois pièges cohabitent ici : diviser par $2$ ($3{,}5$), élever au carré au lieu de prendre la racine ($49$), et donner la valeur de la calculatrice, qui est **approchée** — elle s'écrit avec $\\approx$, ne vaut que si l'énoncé la demande, et oublie au passage la solution négative."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "problemes",
+      "enonce": "Un carré a pour aire $50\\ \\text{cm}^2$. Quelle est la mesure exacte de son côté ?",
+      "choix": [
+        "$\\sqrt{50}\\ \\text{cm}$ et $-\\sqrt{50}\\ \\text{cm}$",
+        "$\\sqrt{50}\\ \\text{cm}$",
+        "$25\\ \\text{cm}$",
+        "$2500\\ \\text{cm}$"
+      ],
+      "reponse": 1,
+      "explication": "En notant $c$ le côté, $c^2 = 50$, donc $c = \\sqrt{50}$ ou $c = -\\sqrt{50}$. Mais une **longueur est positive** : on écarte la solution négative, et on le dit dans la rédaction. Le piège est double et symétrique — soit on oublie de chercher les deux solutions, soit on garde la négative comme réponse à un problème de géométrie. Diviser l'aire par $2$ ($25$) est une troisième confusion classique."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "problemes",
+      "enonce": "Le triangle $ABC$ est rectangle en $A$, avec $AB = 5$ et $AC = 12$. Combien mesure $BC$ ?",
+      "choix": [
+        "$17$",
+        "$\\sqrt{119}$",
+        "$13$",
+        "$13$ ou $-13$"
+      ],
+      "reponse": 2,
+      "explication": "L'égalité de Pythagore donne $BC^2 = 5^2 + 12^2 = 25 + 144 = 169$, d'où $BC = 13$ (car $13^2 = 169$). Deux pièges : soustraire au lieu d'additionner les carrés, ce qui donne $\\sqrt{119}$ — l'hypoténuse est pourtant le plus **grand** côté ; et additionner les côtés eux-mêmes ($5 + 12 = 17$). Enfin, $-13$ est bien solution de l'équation $x^2 = 169$, mais pas de ce problème : une longueur est positive."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "equation-x2-a",
+      "enonce": "Pour résoudre $x^2 - 11 = 0$ par factorisation, quelle forme factorisée faut-il écrire ?",
+      "choix": [
+        "$(x - 11)(x + 11)$",
+        "$(x - \\sqrt{11})(x + \\sqrt{11})$",
+        "$(x - \\sqrt{11})^2$",
+        "$x(x - 11)$"
+      ],
+      "reponse": 1,
+      "explication": "On reconnait une différence de deux carrés en écrivant $11 = (\\sqrt{11})^2$ : $x^2 - 11 = x^2 - (\\sqrt{11})^2 = (x - \\sqrt{11})(x + \\sqrt{11})$. Le produit nul donne alors $x = \\sqrt{11}$ ou $x = -\\sqrt{11}$, et prouve qu'il n'y a **pas d'autre** solution. Le piège est d'appliquer $a^2 - b^2$ en prenant $b = 11$ au lieu de $b = \\sqrt{11}$ : $(x-11)(x+11)$ vaut $x^2 - 121$, pas $x^2 - 11$."
+    }
+  ]
+}

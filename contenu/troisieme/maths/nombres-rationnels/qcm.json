@@ -1,0 +1,154 @@
+{
+  "id": "3e-math-nombres-rationnels-qcm",
+  "chapitre": "3e-math-nombres-rationnels",
+  "titre": "QCM — Nombres rationnels",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "irreductible-definition",
+      "enonce": "Une fraction est **irréductible** lorsque…",
+      "choix": [
+        "son numérateur est plus petit que son dénominateur",
+        "son dénominateur est un nombre premier",
+        "sa valeur est inférieure à $1$",
+        "son numérateur et son dénominateur n'ont aucun diviseur commun autre que $1$"
+      ],
+      "reponse": 3,
+      "explication": "Être irréductible ne dit rien sur la **taille** du nombre : $\\dfrac{7}{3}$ est irréductible et pourtant supérieure à $1$. Le seul critère est qu'il ne reste plus rien à simplifier, donc aucun diviseur commun sauf $1$. Le piège est de confondre une propriété de l'**écriture** avec une propriété de la **valeur**."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "rendre-irreductible",
+      "enonce": "Quelle est la forme irréductible de $\\dfrac{6}{8}$ ?",
+      "choix": [
+        "$\\dfrac{3}{8}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{12}{16}$",
+        "$\\dfrac{6}{8}$"
+      ],
+      "reponse": 1,
+      "explication": "On divise **haut et bas** par $2$ : $\\dfrac{6 \\div 2}{8 \\div 2} = \\dfrac{3}{4}$. Le piège classique est $\\dfrac{3}{8}$ : on n'a divisé que le numérateur, ce qui change la valeur du nombre. Et $\\dfrac{12}{16}$ va dans le mauvais sens : on a multiplié au lieu de diviser."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "rendre-irreductible",
+      "enonce": "Quelle est la forme irréductible de $\\dfrac{60}{84}$ ?",
+      "choix": [
+        "$\\dfrac{30}{42}$",
+        "$\\dfrac{15}{21}$",
+        "$\\dfrac{5}{7}$",
+        "$\\dfrac{5}{6}$"
+      ],
+      "reponse": 2,
+      "explication": "$60 = 2 \\times 2 \\times 3 \\times 5$ et $84 = 2 \\times 2 \\times 3 \\times 7$ : le facteur commun est $12$, donc $\\dfrac{60}{84} = \\dfrac{5}{7}$. Le piège est de **s'arrêter trop tôt** : $\\dfrac{30}{42}$ (divisé par $2$) et $\\dfrac{15}{21}$ (divisé par $4$) valent bien le même nombre, mais se simplifient encore."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "verifier-irreductibilite",
+      "enonce": "Laquelle de ces fractions est **déjà** irréductible ?",
+      "choix": [
+        "$\\dfrac{14}{21}$",
+        "$\\dfrac{9}{24}$",
+        "$\\dfrac{26}{39}$",
+        "$\\dfrac{15}{28}$"
+      ],
+      "reponse": 3,
+      "explication": "$15 = 3 \\times 5$ et $28 = 2 \\times 2 \\times 7$ : aucun facteur commun. Les autres se simplifient — $\\dfrac{14}{21}$ par $7$, $\\dfrac{9}{24}$ par $3$, $\\dfrac{26}{39}$ par $13$. Le piège est de ne tester que $2$, $3$ et $5$ : $13$ divise $26$ et $39$, et on le rate si on ne décompose pas."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "operations",
+      "enonce": "Combien vaut $\\dfrac{5}{12} + \\dfrac{7}{18}$, sous forme irréductible ?",
+      "choix": [
+        "$\\dfrac{12}{30}$",
+        "$\\dfrac{12}{36}$",
+        "$\\dfrac{29}{36}$",
+        "$\\dfrac{174}{216}$"
+      ],
+      "reponse": 2,
+      "explication": "Dénominateur commun $36$ : $\\dfrac{15}{36} + \\dfrac{14}{36} = \\dfrac{29}{36}$, et $29$ ne divise pas $36$, c'est fini. Deux pièges ici : additionner les dénominateurs ($\\dfrac{12}{30}$), et changer de dénominateur **sans** convertir les numérateurs ($\\dfrac{12}{36}$). Enfin $\\dfrac{174}{216}$ est le bon nombre obtenu avec $12 \\times 18 = 216$, mais non réduit."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "comparaison",
+      "enonce": "Laquelle est la plus grande : $\\dfrac{7}{12}$ ou $\\dfrac{5}{8}$ ?",
+      "choix": [
+        "$\\dfrac{5}{8}$",
+        "$\\dfrac{7}{12}$",
+        "Elles sont égales",
+        "On ne peut pas les comparer"
+      ],
+      "reponse": 0,
+      "explication": "Au dénominateur commun $24$ : $\\dfrac{7}{12} = \\dfrac{14}{24}$ et $\\dfrac{5}{8} = \\dfrac{15}{24}$, donc $\\dfrac{5}{8}$ l'emporte. Le piège est de comparer les numérateurs bruts — $7 > 5$ — ce qui donne exactement la **réponse inverse** : des numérateurs ne se comparent que si les dénominateurs sont les mêmes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "operations",
+      "enonce": "Combien vaut $\\dfrac{14}{15} \\times \\dfrac{25}{21}$, sous forme irréductible ?",
+      "choix": [
+        "$\\dfrac{350}{36}$",
+        "$\\dfrac{10}{9}$",
+        "$\\dfrac{70}{63}$",
+        "$\\dfrac{9}{10}$"
+      ],
+      "reponse": 1,
+      "explication": "Simplifie **avant** de multiplier : $14$ et $21$ par $7$, $25$ et $15$ par $5$, il reste $\\dfrac{2 \\times 5}{3 \\times 3} = \\dfrac{10}{9}$. Le piège de $\\dfrac{350}{36}$ est d'avoir **additionné** les dénominateurs, réflexe importé de l'addition. $\\dfrac{70}{63}$ est le bon nombre, simplifié par $5$ seulement : il reste un facteur $7$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "operations",
+      "enonce": "Combien vaut $\\dfrac{9}{10} \\div \\dfrac{6}{5}$, sous forme irréductible ?",
+      "choix": [
+        "$\\dfrac{27}{25}$",
+        "$\\dfrac{4}{3}$",
+        "$\\dfrac{45}{60}$",
+        "$\\dfrac{3}{4}$"
+      ],
+      "reponse": 3,
+      "explication": "Diviser, c'est multiplier par l'inverse de la **deuxième** fraction : $\\dfrac{9}{10} \\times \\dfrac{5}{6} = \\dfrac{45}{60} = \\dfrac{3}{4}$. $\\dfrac{45}{60}$ est donc le bon nombre, mais non réduit — l'énoncé demande la forme irréductible. $\\dfrac{27}{25}$ vient d'une multiplication au lieu d'une division, et $\\dfrac{4}{3}$ d'avoir retourné la mauvaise fraction."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "probleme",
+      "enonce": "Un réservoir est plein aux $\\dfrac{3}{4}$. On utilise les $\\dfrac{2}{3}$ **de ce qu'il contient**. Quelle fraction du réservoir reste-t-il ?",
+      "choix": [
+        "$\\dfrac{1}{12}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{3}$"
+      ],
+      "reponse": 2,
+      "explication": "« Les $\\dfrac{2}{3}$ **de** » se traduit par $\\times$ : on utilise $\\dfrac{2}{3} \\times \\dfrac{3}{4} = \\dfrac{1}{2}$ du réservoir, donc il reste $\\dfrac{3}{4} - \\dfrac{1}{2} = \\dfrac{1}{4}$. Le piège est $\\dfrac{1}{12}$ : soustraire $\\dfrac{3}{4} - \\dfrac{2}{3}$ directement, alors que les $\\dfrac{2}{3}$ portent sur le **contenu**, pas sur le réservoir. $\\dfrac{1}{3}$ est la part restante du contenu, pas du réservoir."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "ensembles-de-nombres",
+      "enonce": "Quelle affirmation est **vraie** ?",
+      "choix": [
+        "Tout nombre décimal est un nombre rationnel",
+        "Tout nombre rationnel est un nombre décimal",
+        "Un nombre rationnel s'écrit d'une seule façon sous forme de fraction",
+        "Un entier relatif n'est pas un nombre rationnel"
+      ],
+      "reponse": 0,
+      "explication": "Un décimal s'écrit toujours comme quotient de deux entiers : $0{,}75 = \\dfrac{75}{100}$, donc $\\mathbb{D} \\subset \\mathbb{Q}$. La réciproque est fausse — $\\dfrac{1}{3} = 0{,}333\\dots$ est rationnel mais pas décimal. Le piège est de croire que l'inclusion marche dans les deux sens. Et un rationnel a une **infinité** d'écritures fractionnaires : une seule est irréductible."
+    }
+  ]
+}
