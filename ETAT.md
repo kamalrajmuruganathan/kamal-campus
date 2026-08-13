@@ -38,6 +38,27 @@ dans le bloc de notes de production de chaque fiche.
 Chaque chapitre comporte une `fiche.md` et un `qcm.json` de 10 questions (2 faciles,
 4 moyennes, 4 difficiles), avec correction expliquée nommant le piège.
 
+### Les quatre briques : Cours, Exercices, QCM, Outils
+
+Un chapitre offre désormais quatre modes dans l'application, et non plus deux :
+
+- **Cours** — la `fiche.md`.
+- **Exercices** — un `exercice.json` de **6 exercices** (2 application / 2
+  intermédiaire / 2 approfondissement), chacun avec un **corrigé rédigé en
+  étapes** et sa réponse isolée. Dans l'appli, le corrigé reste caché jusqu'à ce
+  que l'élève le demande. **Les 115 chapitres en ont un** (690 exercices).
+- **QCM** — le `qcm.json`.
+- **Outils** — un `outil.json` (optionnel) qui relie le chapitre aux modules de
+  calcul déterministes de `app/lib/`. **18 chapitres calculatoires** sont reliés
+  (second degré, suites, statistiques, dérivée, masse molaire, dilution, énergie
+  cinétique, loi d'Ohm).
+
+Le format est documenté dans `docs/gabarit-chapitre.md` (§3 bis et §4) et validé
+par `outils/verifier-contenu.sh`. L'écran `Exercices.js`, la rangée d'accès dans
+`Chapitre.js` et le branchement de l'écran `Outils.js` sur un chapitre ont été
+ajoutés ; l'export Expo iOS passe (1088 modules). Les exercices sont, comme les
+fiches, en `statut: brouillon` — relecture professeur obligatoire.
+
 ### Point de vigilance sur les dates de BO — à trancher
 
 Trois dates circulent pour le **même** cycle 4 : les fiches portent « BO du 5 mars

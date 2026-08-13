@@ -1,0 +1,92 @@
+{
+  "id": "1sti2d-nombres-complexes-exos",
+  "chapitre": "1sti2d-nombres-complexes",
+  "titre": "Exercices — Nombres complexes",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "forme-algebrique",
+      "enonce": "Soit $z = -4 + 7\\mathrm{i}$. Donner sa partie réelle, sa partie imaginaire et son conjugué $\\bar z$.",
+      "corrige": [
+        "On identifie l'écriture $z = a + \\mathrm{i}b$ : ici $a = -4$ et $b = 7$.",
+        "La partie réelle est $\\mathrm{Re}(z) = a = -4$.",
+        "La partie imaginaire est le **réel** $\\mathrm{Im}(z) = b = 7$ (et non $7\\mathrm{i}$).",
+        "Le conjugué change le signe de la seule partie imaginaire : $\\bar z = a - \\mathrm{i}b = -4 - 7\\mathrm{i}$."
+      ],
+      "reponse": "$\\mathrm{Re}(z) = -4$, $\\mathrm{Im}(z) = 7$, $\\bar z = -4 - 7\\mathrm{i}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "module",
+      "enonce": "Calculer le module de $z = -5 + 12\\mathrm{i}$.",
+      "corrige": [
+        "On applique la formule $|z| = \\sqrt{a^2 + b^2}$ avec $a = -5$ et $b = 12$.",
+        "$a^2 + b^2 = (-5)^2 + 12^2 = 25 + 144 = 169$.",
+        "$|z| = \\sqrt{169} = 13$. Le module est une distance, donc bien un réel positif."
+      ],
+      "reponse": "$|z| = 13$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "On pose $z_1 = 3 - 2\\mathrm{i}$ et $z_2 = -1 + 4\\mathrm{i}$. Calculer $z_1 + z_2$ puis $z_1 \\times z_2$, et donner chaque résultat sous forme algébrique.",
+      "corrige": [
+        "**Somme** : on additionne parties réelles entre elles et parties imaginaires entre elles. $z_1 + z_2 = (3 + (-1)) + (-2 + 4)\\mathrm{i} = 2 + 2\\mathrm{i}$.",
+        "**Produit** : on développe comme en algèbre. $z_1 z_2 = (3 - 2\\mathrm{i})(-1 + 4\\mathrm{i}) = -3 + 12\\mathrm{i} + 2\\mathrm{i} - 8\\mathrm{i}^2$.",
+        "On remplace $\\mathrm{i}^2$ par $-1$ : le terme $-8\\mathrm{i}^2$ devient $+8$.",
+        "$z_1 z_2 = (-3 + 8) + (12 + 2)\\mathrm{i} = 5 + 14\\mathrm{i}$."
+      ],
+      "reponse": "$z_1 + z_2 = 2 + 2\\mathrm{i}$ et $z_1 \\times z_2 = 5 + 14\\mathrm{i}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Écrire $z = \\dfrac{3 + \\mathrm{i}}{1 - 2\\mathrm{i}}$ sous forme algébrique.",
+      "corrige": [
+        "On multiplie numérateur et dénominateur par le **conjugué du dénominateur**, soit $1 + 2\\mathrm{i}$.",
+        "Numérateur : $(3 + \\mathrm{i})(1 + 2\\mathrm{i}) = 3 + 6\\mathrm{i} + \\mathrm{i} + 2\\mathrm{i}^2 = 3 - 2 + 7\\mathrm{i} = 1 + 7\\mathrm{i}$.",
+        "Dénominateur : $(1 - 2\\mathrm{i})(1 + 2\\mathrm{i}) = 1^2 + 2^2 = 5$ (c'est $z'\\bar{z'} = a^2 + b^2$, un réel).",
+        "Donc $z = \\dfrac{1 + 7\\mathrm{i}}{5} = \\dfrac{1}{5} + \\dfrac{7}{5}\\mathrm{i}$."
+      ],
+      "reponse": "$z = \\dfrac{1}{5} + \\dfrac{7}{5}\\mathrm{i}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "module",
+      "enonce": "On pose $z = 1 + \\mathrm{i}$ et $z' = 2 + \\mathrm{i}$. Calculer $|z|$, $|z'|$, puis le produit $zz'$ et son module. Vérifier sur cet exemple la propriété $|zz'| = |z| \\times |z'|$.",
+      "corrige": [
+        "$|z| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$ et $|z'| = \\sqrt{2^2 + 1^2} = \\sqrt{5}$.",
+        "Produit : $zz' = (1 + \\mathrm{i})(2 + \\mathrm{i}) = 2 + \\mathrm{i} + 2\\mathrm{i} + \\mathrm{i}^2 = 2 - 1 + 3\\mathrm{i} = 1 + 3\\mathrm{i}$.",
+        "Module du produit : $|zz'| = \\sqrt{1^2 + 3^2} = \\sqrt{10}$.",
+        "Or $|z| \\times |z'| = \\sqrt{2} \\times \\sqrt{5} = \\sqrt{10}$. Les deux valeurs coïncident : la propriété est bien vérifiée."
+      ],
+      "reponse": "$|z| = \\sqrt{2}$, $|z'| = \\sqrt{5}$, $zz' = 1 + 3\\mathrm{i}$ et $|zz'| = \\sqrt{10} = |z|\\times|z'|$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "operations",
+      "enonce": "Soit $x$ un réel et $z = (x + 2\\mathrm{i})(1 + \\mathrm{i})$. Déterminer la valeur de $x$ pour laquelle $z$ est un imaginaire pur.",
+      "corrige": [
+        "On développe le produit : $z = x + x\\mathrm{i} + 2\\mathrm{i} + 2\\mathrm{i}^2$.",
+        "On remplace $\\mathrm{i}^2$ par $-1$ : $2\\mathrm{i}^2 = -2$, donc $z = (x - 2) + (x + 2)\\mathrm{i}$.",
+        "La forme algébrique est ainsi $\\mathrm{Re}(z) = x - 2$ et $\\mathrm{Im}(z) = x + 2$.",
+        "$z$ est imaginaire pur lorsque sa partie réelle est nulle : $x - 2 = 0$, soit $x = 2$.",
+        "Pour $x = 2$, on a $\\mathrm{Im}(z) = 2 + 2 = 4 \\neq 0$ : $z = 4\\mathrm{i}$ est bien un imaginaire pur."
+      ],
+      "reponse": "$z$ est imaginaire pur pour $x = 2$ (on obtient alors $z = 4\\mathrm{i}$)."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "1sti2d-energie-exos",
+  "chapitre": "1sti2d-energie",
+  "titre": "Exercices — Énergie : conversions, chaînes et rendement",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "energie-puissance-duree",
+      "enonce": "Un ordinateur portable a une puissance de $50\\ \\mathrm{W}$. Il fonctionne pendant $2\\ \\mathrm{h}$. Calculer l'énergie qu'il consomme, exprimée en joules.",
+      "corrige": [
+        "On utilise $E = P \\times \\Delta t$, mais attention : pour obtenir des joules, la durée doit être en **secondes**.",
+        "Conversion de la durée : $\\Delta t = 2\\ \\mathrm{h} = 2 \\times 3600 = 7\\,200\\ \\mathrm{s}$.",
+        "Application : $E = P \\times \\Delta t = 50 \\times 7\\,200 = 360\\,000\\ \\mathrm{J}$.",
+        "On écrit le résultat en notation scientifique : $E = 3{,}6 \\times 10^{5}\\ \\mathrm{J}$."
+      ],
+      "reponse": "$E = 3{,}6 \\times 10^{5}\\ \\mathrm{J}$ (soit $360\\,000\\ \\mathrm{J}$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "energie-kwh",
+      "enonce": "Un chauffe-eau électrique de puissance $1\\,500\\ \\mathrm{W}$ fonctionne $4\\ \\mathrm{h}$ par jour. Calculer l'énergie consommée en une journée, en kilowattheures, puis son coût si le kWh est facturé $0{,}20$ €.",
+      "corrige": [
+        "Le kilowattheure est une énergie : $E = P \\times \\Delta t$ avec $P$ en kW et $\\Delta t$ en h donne directement des kWh.",
+        "Conversion de la puissance : $P = 1\\,500\\ \\mathrm{W} = 1{,}5\\ \\mathrm{kW}$.",
+        "Énergie : $E = 1{,}5\\ \\mathrm{kW} \\times 4\\ \\mathrm{h} = 6\\ \\mathrm{kWh}$.",
+        "Coût : $6 \\times 0{,}20 = 1{,}20$ € (le produit de $6$ kWh par le prix unitaire de $0{,}20$ € par kWh)."
+      ],
+      "reponse": "$E = 6\\ \\mathrm{kWh}$ par jour, pour un coût de $1{,}20$ €."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "rendement",
+      "enonce": "Un moteur électrique est alimenté sous une tension $U = 230\\ \\mathrm{V}$ et parcouru par une intensité $I = 5\\ \\mathrm{A}$. Il fournit une puissance mécanique utile de $1\\,000\\ \\mathrm{W}$. Calculer son rendement.",
+      "corrige": [
+        "Première étape : la puissance électrique fournie au moteur vaut $P_{\\text{fournie}} = U \\times I$.",
+        "$P_{\\text{fournie}} = 230 \\times 5 = 1\\,150\\ \\mathrm{W}$.",
+        "Deuxième étape : le rendement est $\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{fournie}}} = \\dfrac{1\\,000}{1\\,150} \\approx 0{,}87$.",
+        "On vérifie la cohérence : $\\eta < 1$, et $0{,}87 = 87\\,\\%$ est bien dans la plage typique d'un moteur électrique (85 à 95 %). Les $150\\ \\mathrm{W}$ restants sont dissipés, surtout par effet Joule."
+      ],
+      "reponse": "$\\eta \\approx 0{,}87$, soit environ $87\\,\\%$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "rendement-photovoltaique",
+      "enonce": "Un panneau photovoltaïque de surface $2\\ \\mathrm{m^2}$ reçoit un éclairement solaire de $1\\,000\\ \\mathrm{W/m^2}$. Son rendement est de $18\\,\\%$. Calculer la puissance électrique produite, puis l'énergie électrique produite en $5\\ \\mathrm{h}$ (en kWh).",
+      "corrige": [
+        "Première étape : la puissance solaire reçue est $P_{\\text{reçue}} = 1\\,000 \\times 2 = 2\\,000\\ \\mathrm{W}$.",
+        "Deuxième étape : la puissance électrique utile est $P_{\\text{utile}} = \\eta \\times P_{\\text{reçue}} = 0{,}18 \\times 2\\,000 = 360\\ \\mathrm{W}$.",
+        "Énergie sur $5\\ \\mathrm{h}$ : en gardant $P$ en $\\mathrm{kW}$ et $\\Delta t$ en $\\mathrm{h}$, $E = 0{,}360\\ \\mathrm{kW} \\times 5\\ \\mathrm{h} = 1{,}8\\ \\mathrm{kWh}$."
+      ],
+      "reponse": "$P_{\\text{utile}} = 360\\ \\mathrm{W}$ et $E = 1{,}8\\ \\mathrm{kWh}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "effet-joule",
+      "enonce": "On transporte une puissance électrique $P = 100\\ \\mathrm{kW}$ dans un câble de résistance $R = 5\\ \\Omega$. Calculer l'intensité dans le câble et les pertes par effet Joule, d'abord sous une tension $U_1 = 1\\,000\\ \\mathrm{V}$, puis sous $U_2 = 10\\,000\\ \\mathrm{V}$. Conclure sur l'intérêt de la haute tension.",
+      "corrige": [
+        "À puissance transportée donnée, l'intensité se déduit de $P = U \\times I$, soit $I = \\dfrac{P}{U}$, avec $P = 100\\,000\\ \\mathrm{W}$.",
+        "Sous $U_1 = 1\\,000\\ \\mathrm{V}$ : $I_1 = \\dfrac{100\\,000}{1\\,000} = 100\\ \\mathrm{A}$, d'où les pertes $P_{\\mathrm{J},1} = R\\,I_1^{2} = 5 \\times 100^{2} = 50\\,000\\ \\mathrm{W} = 50\\ \\mathrm{kW}$.",
+        "Sous $U_2 = 10\\,000\\ \\mathrm{V}$ : $I_2 = \\dfrac{100\\,000}{10\\,000} = 10\\ \\mathrm{A}$, d'où $P_{\\mathrm{J},2} = 5 \\times 10^{2} = 500\\ \\mathrm{W} = 0{,}5\\ \\mathrm{kW}$.",
+        "Conclusion : multiplier la tension par $10$ divise l'intensité par $10$, donc les pertes (en $I^2$) par $100$. À $1\\,000\\ \\mathrm{V}$ on perdait la moitié de la puissance, à $10\\,000\\ \\mathrm{V}$ seulement $0{,}5\\,\\%$. C'est pourquoi l'électricité est transportée à très haute tension."
+      ],
+      "reponse": "$P_{\\mathrm{J},1} = 50\\ \\mathrm{kW}$ contre $P_{\\mathrm{J},2} = 0{,}5\\ \\mathrm{kW}$ : la haute tension divise les pertes par $100$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "chaine-rendement",
+      "enonce": "Une trottinette électrique forme une chaîne énergétique : la batterie fournit $600\\ \\mathrm{Wh}$ d'énergie électrique ; le moteur, de rendement $\\eta_1 = 0{,}85$, la convertit en énergie mécanique ; la transmission, de rendement $\\eta_2 = 0{,}90$, la porte à la roue. Calculer le rendement global, l'énergie utile arrivant à la roue, puis l'énergie dissipée sur l'ensemble de la chaîne.",
+      "corrige": [
+        "Les rendements d'une chaîne se **multiplient** (ils ne s'additionnent pas) : $\\eta_{\\text{global}} = \\eta_1 \\times \\eta_2 = 0{,}85 \\times 0{,}90 = 0{,}765$.",
+        "Énergie utile à la roue : $E_{\\text{utile}} = \\eta_{\\text{global}} \\times E_{\\text{fournie}} = 0{,}765 \\times 600 = 459\\ \\mathrm{Wh}$.",
+        "Par conservation de l'énergie, $E_{\\text{fournie}} = E_{\\text{utile}} + E_{\\text{dissipée}}$, donc $E_{\\text{dissipée}} = 600 - 459 = 141\\ \\mathrm{Wh}$.",
+        "Vérification : $\\eta_{\\text{global}} = 0{,}765 < 1$, cohérent, et les $141\\ \\mathrm{Wh}$ perdus le sont surtout sous forme thermique (effet Joule, frottements)."
+      ],
+      "reponse": "$\\eta_{\\text{global}} = 0{,}765$ ($76{,}5\\,\\%$), $E_{\\text{utile}} = 459\\ \\mathrm{Wh}$, $E_{\\text{dissipée}} = 141\\ \\mathrm{Wh}$."
+    }
+  ]
+}

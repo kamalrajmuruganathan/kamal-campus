@@ -1,0 +1,88 @@
+{
+  "id": "1sti2d-ondes-information-exos",
+  "chapitre": "1sti2d-ondes-information",
+  "titre": "Exercices — Ondes et information",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. On prendra $v_{son} = 340$ m·s⁻¹ dans l'air, $1\\,500$ m·s⁻¹ dans l'eau, et $c = 3{,}00 \\times 10^8$ m·s⁻¹ pour la lumière.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "relation-fondamentale",
+      "enonce": "Une onde sonore se propage dans l'air avec une période $T = 2{,}5$ ms. Calculer sa fréquence $f$, puis sa longueur d'onde $\\lambda$.",
+      "corrige": [
+        "On convertit la période en secondes : $T = 2{,}5$ ms $= 2{,}5 \\times 10^{-3}$ s.",
+        "La fréquence est l'inverse de la période : $f = \\dfrac{1}{T} = \\dfrac{1}{2{,}5 \\times 10^{-3}} = 400$ Hz.",
+        "La longueur d'onde est la distance parcourue pendant une période : $\\lambda = \\dfrac{v}{f} = \\dfrac{340}{400} = 0{,}85$ m."
+      ],
+      "reponse": "$f = 400$ Hz et $\\lambda = 0{,}85$ m."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "spectre",
+      "enonce": "Classer les ondes électromagnétiques suivantes par **fréquence croissante** : rayons X, ondes radio, lumière visible, infrarouge. Justifier avec une phrase.",
+      "corrige": [
+        "Toutes ces ondes se propagent à la même célérité $c$ dans le vide ; elles ne diffèrent que par leur fréquence.",
+        "En parcourant le spectre des basses vers les hautes fréquences, on rencontre : ondes radio, puis infrarouge, puis visible, puis rayons X.",
+        "D'où le classement par fréquence croissante : ondes radio $<$ infrarouge $<$ lumière visible $<$ rayons X."
+      ],
+      "reponse": "Ondes radio $<$ infrarouge $<$ lumière visible $<$ rayons X."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "echo",
+      "enonce": "Un sonar immergé émet une salve d'ultrasons vers le fond marin et reçoit son écho $\\Delta t = 0{,}04$ s plus tard. La célérité du son dans l'eau vaut $1\\,500$ m·s⁻¹. À quelle profondeur se trouve le fond ?",
+      "corrige": [
+        "Le signal effectue un **aller-retour** : il descend jusqu'au fond puis remonte. La distance parcourue vaut donc $2d$.",
+        "On utilise la relation de la mesure par réflexion : $d = \\dfrac{v \\times \\Delta t}{2}$, avec ici $v = 1\\,500$ m·s⁻¹ (célérité dans l'eau).",
+        "$d = \\dfrac{1\\,500 \\times 0{,}04}{2} = \\dfrac{60}{2} = 30$ m."
+      ],
+      "reponse": "Le fond est à $30$ m de profondeur."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "changement-milieu",
+      "enonce": "Un son de fréquence $f = 1\\,000$ Hz émis dans l'air ($v = 340$ m·s⁻¹) pénètre dans l'eau, où il se propage à $1\\,500$ m·s⁻¹. Déterminer sa fréquence puis sa longueur d'onde dans chacun des deux milieux.",
+      "corrige": [
+        "La fréquence est **imposée par la source** : elle ne change pas au passage d'un milieu à l'autre. Donc $f = 1\\,000$ Hz dans l'air comme dans l'eau.",
+        "Dans l'air : $\\lambda_{air} = \\dfrac{v_{air}}{f} = \\dfrac{340}{1\\,000} = 0{,}34$ m.",
+        "Dans l'eau : $\\lambda_{eau} = \\dfrac{v_{eau}}{f} = \\dfrac{1\\,500}{1\\,000} = 1{,}5$ m. La célérité ayant augmenté, la longueur d'onde augmente aussi."
+      ],
+      "reponse": "$f = 1\\,000$ Hz dans les deux milieux ; $\\lambda_{air} = 0{,}34$ m et $\\lambda_{eau} = 1{,}5$ m."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "intensite-acoustique",
+      "enonce": "Une sirène rayonne une puissance sonore $P = 100$ W dans toutes les directions. On considère qu'un son devient dangereux pour l'oreille au-delà d'une intensité $I = 1$ W·m⁻². À partir de quelle distance $d$ peut-on considérer que l'on est en sécurité ? (On rappelle qu'à la distance $d$, l'onde se répartit sur une sphère de surface $S = 4\\pi d^2$.)",
+      "corrige": [
+        "À la distance $d$, l'intensité reçue vaut $I = \\dfrac{P}{S} = \\dfrac{P}{4\\pi d^2}$.",
+        "On cherche la distance pour laquelle $I$ descend à la valeur limite $1$ W·m⁻². On isole $d^2$ : $d^2 = \\dfrac{P}{4\\pi I}$.",
+        "$d^2 = \\dfrac{100}{4\\pi \\times 1} = \\dfrac{100}{12{,}57} \\approx 7{,}96$ m².",
+        "$d = \\sqrt{7{,}96} \\approx 2{,}8$ m. Comme $I$ décroît en $1/d^2$, au-delà de cette distance l'intensité est inférieure au seuil : on est en sécurité."
+      ],
+      "reponse": "Au-delà d'environ $d \\approx 2{,}8$ m."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "sources-lumineuses",
+      "enonce": "Un laser de puissance $P = 1$ mW envoie tout son faisceau sur une surface $S = 1$ mm². \\n(a) Calculer l'intensité $I$ reçue sur cette surface. \\n(b) Une ampoule de $P' = 60$ W rayonne dans toutes les directions ; calculer l'intensité qu'elle produit à $d = 2$ m. \\n(c) Comparer les deux résultats et expliquer pourquoi le laser, bien que $60\\,000$ fois moins puissant, est dangereux pour l'œil.",
+      "corrige": [
+        "(a) On convertit : $P = 1$ mW $= 1 \\times 10^{-3}$ W et $S = 1$ mm² $= 1 \\times 10^{-6}$ m². L'intensité vaut $I = \\dfrac{P}{S} = \\dfrac{10^{-3}}{10^{-6}} = 1\\,000$ W·m⁻².",
+        "(b) L'ampoule rayonne dans toutes les directions : $I' = \\dfrac{P'}{4\\pi d^2} = \\dfrac{60}{4\\pi \\times 2^2} = \\dfrac{60}{50{,}3} \\approx 1{,}2$ W·m⁻².",
+        "(c) On compare : $\\dfrac{I}{I'} = \\dfrac{1\\,000}{1{,}2} \\approx 800$. Le laser produit une intensité environ $800$ fois plus grande que l'ampoule.",
+        "C'est la **directivité** du laser : toute sa puissance arrive concentrée sur une surface minuscule, donc dans $I = P/S$ le dénominateur $S$ est très petit et $I$ devient énorme. L'œil focalise encore ce faisceau sur la rétine, d'où une lésion irréversible — on ne regarde jamais dans l'axe d'un laser, même de faible puissance."
+      ],
+      "reponse": "(a) $I = 1\\,000$ W·m⁻² ; (b) $I' \\approx 1{,}2$ W·m⁻² ; (c) le laser produit une intensité environ $800$ fois plus grande à cause de sa directivité (surface $S$ minuscule)."
+    }
+  ]
+}

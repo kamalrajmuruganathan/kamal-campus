@@ -1,0 +1,92 @@
+{
+  "id": "1sti2d-mesure-incertitudes-exos",
+  "chapitre": "1sti2d-mesure-incertitudes",
+  "titre": "Exercices — Mesure et incertitudes",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "incertitude-type-a",
+      "enonce": "On répète $16$ fois la mesure d'un diamètre. L'écart-type de la série vaut $s = 0{,}8\\ \\mathrm{mm}$. Calcule l'incertitude-type $u$ obtenue par évaluation de type A.",
+      "corrige": [
+        "L'évaluation de type A, quand on a répété la mesure, donne $u(X) = \\dfrac{s}{\\sqrt{n}}$, avec ici $n = 16$ mesures et $s = 0{,}8\\ \\mathrm{mm}$.",
+        "On calcule d'abord $\\sqrt{n} = \\sqrt{16} = 4$.",
+        "Donc $u = \\dfrac{0{,}8}{4} = 0{,}2\\ \\mathrm{mm}$.",
+        "Attention à ne pas oublier le $\\sqrt{n}$ : diviser par $n = 16$ donnerait $0{,}05\\ \\mathrm{mm}$, ce qui est faux."
+      ],
+      "reponse": "$u = 0{,}2\\ \\mathrm{mm}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "ecriture-resultat",
+      "enonce": "Une balance et un calcul donnent la valeur $m = 24{,}837\\ \\mathrm{g}$, avec une incertitude-type estimée à $u = 0{,}3\\ \\mathrm{g}$. Écris correctement le résultat de la mesure.",
+      "corrige": [
+        "Un résultat s'écrit $m = m_{\\text{mesurée}} \\pm u(m)$, avec l'unité.",
+        "L'incertitude s'écrit avec un seul chiffre significatif : $u = 0{,}3\\ \\mathrm{g}$ convient déjà, elle porte sur le dixième de gramme.",
+        "La valeur doit être arrondie au même rang que l'incertitude, c'est-à-dire au dixième : $24{,}837$ arrondi au dixième donne $24{,}8$. Garder $24{,}837$ n'aurait pas de sens, puisque l'incertitude porte déjà sur le dixième.",
+        "On assemble valeur, incertitude et unité."
+      ],
+      "reponse": "$m = 24{,}8 \\pm 0{,}3\\ \\mathrm{g}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "serie-mesures",
+      "enonce": "Quatre mesures indépendantes d'une longueur donnent : $20{,}1$ ; $20{,}3$ ; $20{,}2$ ; $20{,}2$ (en cm). L'écart-type de la série est $s = 0{,}08\\ \\mathrm{cm}$. Détermine la meilleure estimation de la longueur, son incertitude-type de type A, puis écris le résultat.",
+      "corrige": [
+        "La meilleure estimation de la valeur est la moyenne : $\\bar{x} = \\dfrac{20{,}1 + 20{,}3 + 20{,}2 + 20{,}2}{4} = \\dfrac{80{,}8}{4} = 20{,}2\\ \\mathrm{cm}$.",
+        "L'incertitude-type de type A vaut $u = \\dfrac{s}{\\sqrt{n}}$ avec $n = 4$ : $u = \\dfrac{0{,}08}{\\sqrt{4}} = \\dfrac{0{,}08}{2} = 0{,}04\\ \\mathrm{cm}$.",
+        "On arrondit la valeur au même rang que $u$ (le centième) : $\\bar{x} = 20{,}20\\ \\mathrm{cm}$.",
+        "On écrit alors le résultat sous la forme $L = \\bar{x} \\pm u$."
+      ],
+      "reponse": "$L = 20{,}20 \\pm 0{,}04\\ \\mathrm{cm}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "valeur-reference",
+      "enonce": "On mesure une résistance : $R = 101{,}2\\ \\Omega$, avec une incertitude-type $u = 0{,}5\\ \\Omega$. La valeur de référence est $R_{\\text{réf}} = 100{,}0\\ \\Omega$. Le résultat est-il compatible avec la référence ?",
+      "corrige": [
+        "On calcule d'abord l'écart entre la mesure et la référence : $\\left| 101{,}2 - 100{,}0 \\right| = 1{,}2\\ \\Omega$.",
+        "On évalue cet écart en nombre d'incertitudes-types : $\\dfrac{\\left| R - R_{\\text{réf}} \\right|}{u} = \\dfrac{1{,}2}{0{,}5} = 2{,}4$.",
+        "L'écart vaut $2{,}4\\,u$, ce qui est supérieur à $2\\,u$.",
+        "L'écart est donc trop grand pour être attribué au seul hasard des mesures : le résultat n'est pas compatible avec la référence (erreur systématique probable, ou incertitude sous-estimée)."
+      ],
+      "reponse": "Écart de $2{,}4\\,u > 2\\,u$ : le résultat n'est pas compatible avec la valeur de référence."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "justesse-fidelite",
+      "enonce": "On mesure une même résistance de référence $50{,}0\\ \\Omega$ par deux méthodes, dix mesures chacune. Méthode A : $\\bar{x}_A = 50{,}3\\ \\Omega$, $s_A = 0{,}1\\ \\Omega$. Méthode B : $\\bar{x}_B = 50{,}0\\ \\Omega$, $s_B = 0{,}8\\ \\Omega$. Compare les deux méthodes en termes de justesse et de fidélité.",
+      "corrige": [
+        "La fidélité décrit le resserrement des mesures entre elles : elle se lit sur l'écart-type $s$. Comme $s_A = 0{,}1\\ \\Omega < s_B = 0{,}8\\ \\Omega$, la méthode A est plus fidèle.",
+        "La justesse décrit la proximité de la moyenne avec la valeur de référence $50{,}0\\ \\Omega$. La moyenne de B ($50{,}0$) tombe sur la référence, celle de A ($50{,}3$) en est décalée de $0{,}3\\ \\Omega$ : la méthode B est plus juste.",
+        "Le décalage constant de A signale une erreur systématique (qui dégrade la justesse) ; la forte dispersion de B signale une erreur aléatoire (qui dégrade la fidélité).",
+        "Attention au piège : les mesures de A sont très resserrées, ce qui inspire confiance, mais fidèle ne veut pas dire juste — elles sont toutes décalées ensemble."
+      ],
+      "reponse": "La méthode A est la plus fidèle (plus petit écart-type) ; la méthode B est la plus juste (moyenne sur la référence)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "incertitude-type-a",
+      "enonce": "Avec $n = 5$ mesures répétées, on obtient une incertitude-type de type A égale à $u = 0{,}3\\ \\mathrm{mm}$. En supposant que l'écart-type $s$ de la série ne change pas, combien de mesures faudrait-il pour ramener l'incertitude à $0{,}15\\ \\mathrm{mm}$ ? Et à $0{,}10\\ \\mathrm{mm}$ ?",
+      "corrige": [
+        "L'incertitude de type A est $u = \\dfrac{s}{\\sqrt{n}}$. À $s$ constant, $u$ est proportionnelle à $\\dfrac{1}{\\sqrt{n}}$ : diviser $u$ par un facteur $k$ impose de multiplier $\\sqrt{n}$ par $k$, donc $n$ par $k^2$.",
+        "Passer de $0{,}3$ à $0{,}15\\ \\mathrm{mm}$, c'est diviser $u$ par $2$ ($k = 2$). Il faut donc multiplier $n$ par $2^2 = 4$ : $n = 4 \\times 5 = 20$ mesures.",
+        "Passer de $0{,}3$ à $0{,}10\\ \\mathrm{mm}$, c'est diviser $u$ par $3$ ($k = 3$). Il faut multiplier $n$ par $3^2 = 9$ : $n = 9 \\times 5 = 45$ mesures.",
+        "On retrouve pourquoi on gagne peu au-delà d'une dizaine de mesures : réduire l'incertitude coûte de plus en plus cher en nombre de répétitions."
+      ],
+      "reponse": "$20$ mesures pour atteindre $0{,}15\\ \\mathrm{mm}$, et $45$ mesures pour $0{,}10\\ \\mathrm{mm}$."
+    }
+  ]
+}

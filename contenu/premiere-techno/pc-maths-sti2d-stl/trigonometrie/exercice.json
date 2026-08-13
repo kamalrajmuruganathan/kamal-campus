@@ -1,0 +1,92 @@
+{
+  "id": "1sti2d-trigonometrie-exos",
+  "chapitre": "1sti2d-trigonometrie",
+  "titre": "Exercices — Trigonométrie et fonctions sinusoïdales",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "radian",
+      "enonce": "Convertir $135°$ en radians, puis convertir $\\dfrac{5\\pi}{6}$ rad en degrés.",
+      "corrige": [
+        "Pour passer des degrés aux radians, on multiplie par $\\dfrac{\\pi}{180}$ : $135 \\times \\dfrac{\\pi}{180} = \\dfrac{135\\pi}{180}$.",
+        "On simplifie la fraction en divisant par $45$ : $\\dfrac{135}{180} = \\dfrac{3}{4}$, donc $135° = \\dfrac{3\\pi}{4}$ rad.",
+        "Pour passer des radians aux degrés, on multiplie par $\\dfrac{180}{\\pi}$ : $\\dfrac{5\\pi}{6} \\times \\dfrac{180}{\\pi} = \\dfrac{5 \\times 180}{6}$.",
+        "Le $\\pi$ se simplifie, et $\\dfrac{5 \\times 180}{6} = 5 \\times 30 = 150$, donc $\\dfrac{5\\pi}{6}$ rad $= 150°$."
+      ],
+      "reponse": "$135° = \\dfrac{3\\pi}{4}$ rad et $\\dfrac{5\\pi}{6}$ rad $= 150°$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "fonction-sinusoidale",
+      "enonce": "Un signal est modélisé par $f(t) = 24\\cos(120\\pi\\, t)$, avec $t$ en secondes. Donner son amplitude, sa période $T$ et sa fréquence $f$.",
+      "corrige": [
+        "L'amplitude est le coefficient placé devant le cosinus : $A = 24$. Le signal varie entre $-24$ et $24$.",
+        "La pulsation est le facteur de $t$ à l'intérieur du cosinus : $\\omega = 120\\pi$ rad·s⁻¹.",
+        "La période se calcule par $T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{120\\pi} = \\dfrac{1}{60}$ s.",
+        "La fréquence est l'inverse de la période : $f = \\dfrac{1}{T} = 60$ Hz."
+      ],
+      "reponse": "Amplitude $A = 24$, période $T = \\dfrac{1}{60}$ s, fréquence $f = 60$ Hz."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\sin x = \\dfrac{3}{5}$ et que $x$ appartient à $\\left[0\\,;\\dfrac{\\pi}{2}\\right]$. Déterminer la valeur exacte de $\\cos x$.",
+      "corrige": [
+        "On part de la relation fondamentale $\\cos^2 x + \\sin^2 x = 1$, d'où $\\cos^2 x = 1 - \\sin^2 x$.",
+        "$\\cos^2 x = 1 - \\left(\\dfrac{3}{5}\\right)^2 = 1 - \\dfrac{9}{25} = \\dfrac{16}{25}$.",
+        "Donc $\\cos x = \\dfrac{4}{5}$ ou $\\cos x = -\\dfrac{4}{5}$.",
+        "Sur $\\left[0\\,;\\dfrac{\\pi}{2}\\right]$, le point image est dans le premier quadrant : son abscisse est positive. On garde donc $\\cos x = \\dfrac{4}{5}$."
+      ],
+      "reponse": "$\\cos x = \\dfrac{4}{5}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "angles-associes",
+      "enonce": "Sans calculatrice, déterminer les valeurs exactes de $\\cos\\left(\\dfrac{7\\pi}{6}\\right)$ et $\\sin\\left(\\dfrac{7\\pi}{6}\\right)$.",
+      "corrige": [
+        "On écrit $\\dfrac{7\\pi}{6}$ à partir d'un angle remarquable : $\\dfrac{7\\pi}{6} = \\pi + \\dfrac{\\pi}{6}$.",
+        "On utilise les angles associés : $\\cos(\\pi + x) = -\\cos x$ et $\\sin(\\pi + x) = -\\sin x$.",
+        "Avec $x = \\dfrac{\\pi}{6}$ : $\\cos\\left(\\dfrac{\\pi}{6}\\right) = \\dfrac{\\sqrt3}{2}$ et $\\sin\\left(\\dfrac{\\pi}{6}\\right) = \\dfrac{1}{2}$.",
+        "Donc $\\cos\\left(\\dfrac{7\\pi}{6}\\right) = -\\dfrac{\\sqrt3}{2}$ et $\\sin\\left(\\dfrac{7\\pi}{6}\\right) = -\\dfrac{1}{2}$. Contrôle : $\\dfrac{7\\pi}{6}$ est dans le troisième quadrant, où abscisse et ordonnée sont toutes deux négatives."
+      ],
+      "reponse": "$\\cos\\left(\\dfrac{7\\pi}{6}\\right) = -\\dfrac{\\sqrt3}{2}$ et $\\sin\\left(\\dfrac{7\\pi}{6}\\right) = -\\dfrac{1}{2}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "equation",
+      "enonce": "Résoudre l'équation $\\cos x = -\\dfrac{\\sqrt2}{2}$, d'abord sur l'intervalle $[0\\,;2\\pi[$, puis dans $\\mathbb{R}$.",
+      "corrige": [
+        "On repère l'angle de référence : $\\cos\\left(\\dfrac{\\pi}{4}\\right) = \\dfrac{\\sqrt2}{2}$. On cherche donc les points du cercle dont l'abscisse vaut $-\\dfrac{\\sqrt2}{2}$.",
+        "Une abscisse négative place les points dans les deuxième et troisième quadrants (à gauche de l'axe des ordonnées).",
+        "Par symétrie avec $\\dfrac{\\pi}{4}$ : le premier point est en $\\pi - \\dfrac{\\pi}{4} = \\dfrac{3\\pi}{4}$, le second en $\\pi + \\dfrac{\\pi}{4} = \\dfrac{5\\pi}{4}$. Sur $[0\\,;2\\pi[$, les solutions sont $\\dfrac{3\\pi}{4}$ et $\\dfrac{5\\pi}{4}$.",
+        "Sur $\\mathbb{R}$, on ajoute tous les tours complets $+\\,2k\\pi$ ($k \\in \\mathbb{Z}$) : $x = \\dfrac{3\\pi}{4} + 2k\\pi$ ou $x = \\dfrac{5\\pi}{4} + 2k\\pi$."
+      ],
+      "reponse": "Sur $[0\\,;2\\pi[$ : $x = \\dfrac{3\\pi}{4}$ ou $x = \\dfrac{5\\pi}{4}$. Sur $\\mathbb{R}$ : $x = \\dfrac{3\\pi}{4} + 2k\\pi$ ou $x = \\dfrac{5\\pi}{4} + 2k\\pi$, $k \\in \\mathbb{Z}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "fonction-sinusoidale",
+      "enonce": "Un diapason émet le « la » de référence, un son de fréquence $f = 440$ Hz. On modélise la surpression par $g(t) = 3\\cos(\\omega t)$, l'amplitude $3$ étant en pascals. 1) Calculer la pulsation $\\omega$. 2) Écrire $g(t)$. 3) Déterminer la période $T$, puis la valeur de $g(0)$ et son interprétation.",
+      "corrige": [
+        "1) La pulsation se déduit de la fréquence par $\\omega = 2\\pi f$ : $\\omega = 2\\pi \\times 440 = 880\\pi$ rad·s⁻¹.",
+        "2) En reportant dans le modèle : $g(t) = 3\\cos(880\\pi\\, t)$.",
+        "3) La période vaut $T = \\dfrac{1}{f} = \\dfrac{1}{440}$ s $\\approx 2{,}3 \\times 10^{-3}$ s (on peut aussi l'obtenir par $T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{880\\pi} = \\dfrac{1}{440}$).",
+        "Enfin $g(0) = 3\\cos(0) = 3 \\times 1 = 3$ Pa : à l'instant initial le signal est à son amplitude maximale, car aucune phase ne le décale ($\\varphi = 0$)."
+      ],
+      "reponse": "$\\omega = 880\\pi$ rad·s⁻¹, $g(t) = 3\\cos(880\\pi\\, t)$, $T = \\dfrac{1}{440}$ s et $g(0) = 3$ Pa (maximum)."
+    }
+  ]
+}
