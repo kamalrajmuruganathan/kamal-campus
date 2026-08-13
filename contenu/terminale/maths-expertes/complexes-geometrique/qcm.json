@@ -1,0 +1,139 @@
+{
+  "id": "tale-exp-math-complexes-geometrique-qcm",
+  "chapitre": "tale-exp-math-complexes-geometrique",
+  "titre": "QCM — Nombres complexes, point de vue géométrique",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-expertes",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "affixe",
+      "enonce": "Quelles sont les coordonnées de l'image du complexe $z=-2+5i$ ?",
+      "choix": [
+        "$(5\\,;-2)$",
+        "$(-2\\,;5)$",
+        "$(2\\,;-5)$",
+        "$(-2\\,;-5)$"
+      ],
+      "reponse": 1,
+      "explication": "L'image de $z=a+ib$ a pour coordonnées $(a\\,;b)$ : ici $a=-2$ et $b=5$, donc $(-2\\,;5)$. Le piège du choix 1 est d'inverser abscisse et ordonnée : la partie réelle donne l'abscisse, la partie imaginaire l'ordonnée."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "module",
+      "enonce": "Combien vaut le module $|3-4i|$ ?",
+      "choix": ["$7$", "$1$", "$5$", "$\\sqrt7$"],
+      "reponse": 2,
+      "explication": "$|z|=\\sqrt{a^2+b^2}=\\sqrt{3^2+(-4)^2}=\\sqrt{9+16}=\\sqrt{25}=5$. Le piège du choix 1 est d'additionner $3+4$ : le module n'est pas la somme des parties, c'est la racine de la somme des carrés."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "module",
+      "enonce": "Sachant que $|1+i|=\\sqrt2$, combien vaut $\\left|(1+i)^{6}\\right|$ ?",
+      "choix": ["$8$", "$6\\sqrt2$", "$64$", "$2^{6}$"],
+      "reponse": 0,
+      "explication": "$|z^n|=|z|^n$, donc $\\left|(1+i)^{6}\\right|=(\\sqrt2)^{6}=2^{3}=8$. Le piège du choix 2 est de multiplier le module par l'exposant ($6\\times\\sqrt2$) au lieu de l'élever à la puissance."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "argument",
+      "enonce": "Un argument du complexe $z=1+i$ est :",
+      "choix": [
+        "$\\dfrac{\\pi}{2}$",
+        "$\\dfrac{\\pi}{3}$",
+        "$\\dfrac{\\pi}{4}$",
+        "$-\\dfrac{\\pi}{4}$"
+      ],
+      "reponse": 2,
+      "explication": "Avec $r=\\sqrt2$, on a $\\cos\\theta=\\dfrac{1}{\\sqrt2}$ et $\\sin\\theta=\\dfrac{1}{\\sqrt2}$, ce qui donne $\\theta=\\dfrac{\\pi}4$. Le piège du choix 4 : la partie imaginaire est positive, donc le sinus est positif et l'argument aussi ; $-\\frac{\\pi}4$ conviendrait à $1-i$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "ensemble-u",
+      "enonce": "Pour un complexe $z$ de module $1$ (donc $z\\in\\mathbb{U}$), à quoi est égal $\\dfrac1z$ ?",
+      "choix": ["$-z$", "$\\bar z$", "$z$", "$-\\bar z$"],
+      "reponse": 1,
+      "explication": "Si $|z|=1$ alors $z\\bar z=|z|^2=1$, donc $\\dfrac1z=\\bar z$. Le piège du choix 3 : $\\frac1z=z$ n'est vrai que pour $z=\\pm1$, pas pour tout élément de $\\mathbb U$ (par exemple $\\frac1i=-i=\\bar i\\neq i$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "forme-exponentielle",
+      "enonce": "Sous forme exponentielle, le complexe $z=2e^{i\\pi/3}\\times 3e^{i\\pi/6}$ est égal à :",
+      "choix": [
+        "$5e^{i\\pi/2}$",
+        "$6e^{i\\pi/18}$",
+        "$6e^{i\\pi/2}$",
+        "$6e^{i2\\pi/9}$"
+      ],
+      "reponse": 2,
+      "explication": "On multiplie les modules et on additionne les arguments : $2\\times3=6$ et $\\dfrac\\pi3+\\dfrac\\pi6=\\dfrac\\pi2$, d'où $6e^{i\\pi/2}$. Le piège du choix 1 additionne les modules ; le choix 2 multiplie les arguments."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "forme-exponentielle",
+      "enonce": "Quelle est la forme exponentielle de $z=-1+i\\sqrt3$ ?",
+      "choix": [
+        "$2e^{i\\pi/3}$",
+        "$2e^{i2\\pi/3}$",
+        "$4e^{i2\\pi/3}$",
+        "$2e^{-i2\\pi/3}$"
+      ],
+      "reponse": 1,
+      "explication": "Module : $|z|=\\sqrt{(-1)^2+(\\sqrt3)^2}=\\sqrt4=2$. Puis $\\cos\\theta=-\\dfrac12$ et $\\sin\\theta=\\dfrac{\\sqrt3}2>0$, donc $\\theta=\\dfrac{2\\pi}3$. Le piège du choix 4 : partie imaginaire positive impose un sinus positif, donc un argument positif, pas $-\\frac{2\\pi}3$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "interpretation-geometrique",
+      "enonce": "Dans le plan complexe, l'ensemble des points $M$ d'affixe $z$ vérifiant $|z-2i|=3$ est :",
+      "choix": [
+        "la droite d'équation $y=3$",
+        "le cercle de centre $A(0\\,;2)$ et de rayon $3$",
+        "le cercle de centre $O$ et de rayon $3$",
+        "le cercle de centre $A(0\\,;-2)$ et de rayon $3$"
+      ],
+      "reponse": 1,
+      "explication": "$|z-2i|=AM$ où $A$ a pour affixe $2i$, soit $A(0\\,;2)$. L'égalité $AM=3$ décrit le cercle de centre $A$ et de rayon $3$. Le piège du choix 4 : l'affixe du centre est $+2i$, pas $-2i$ ; on lit directement le complexe soustrait."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "moivre-euler",
+      "enonce": "En développant $(\\cos\\theta+i\\sin\\theta)^2$ et en utilisant la formule de Moivre, on obtient pour $\\cos(2\\theta)$ :",
+      "choix": [
+        "$2\\cos\\theta\\sin\\theta$",
+        "$\\cos^2\\theta+\\sin^2\\theta$",
+        "$2\\cos\\theta$",
+        "$\\cos^2\\theta-\\sin^2\\theta$"
+      ],
+      "reponse": 3,
+      "explication": "Moivre donne $(\\cos\\theta+i\\sin\\theta)^2=\\cos(2\\theta)+i\\sin(2\\theta)$. En développant : $\\cos^2\\theta-\\sin^2\\theta+2i\\sin\\theta\\cos\\theta$. On identifie les parties réelles : $\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta$. Le piège du choix 1 est de prendre la partie imaginaire, qui donne $\\sin(2\\theta)$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "interpretation-geometrique",
+      "enonce": "Soit $A$, $B$, $C$ d'affixes $z_A$, $z_B$, $z_C$. Si $\\dfrac{z_C-z_A}{z_B-z_A}=i$, quelle est la nature du triangle $ABC$ ?",
+      "choix": [
+        "rectangle isocèle en $A$",
+        "équilatéral",
+        "rectangle en $B$",
+        "isocèle non rectangle en $A$"
+      ],
+      "reponse": 0,
+      "explication": "Le module du quotient vaut $\\dfrac{AC}{AB}=|i|=1$ donc $AC=AB$ (isocèle en $A$), et son argument vaut l'angle $\\big(\\overrightarrow{AB},\\overrightarrow{AC}\\big)=\\arg(i)=\\dfrac\\pi2$ (rectangle en $A$). Le piège est d'oublier de lire à la fois le module (longueurs) et l'argument (angle)."
+    }
+  ]
+}

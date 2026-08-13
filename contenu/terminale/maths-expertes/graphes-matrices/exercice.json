@@ -1,0 +1,95 @@
+{
+  "id": "tale-exp-math-graphes-matrices-exos",
+  "chapitre": "tale-exp-math-graphes-matrices",
+  "titre": "Exercices — Graphes et matrices",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-expertes",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "matrices",
+      "enonce": "On pose $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 3 \\end{pmatrix}$ et $B = \\begin{pmatrix} 4 & 1 \\\\ 5 & 0 \\end{pmatrix}$. Calculer le produit $A\\times B$.",
+      "corrige": [
+        "Le produit $AB$ existe car $A$ a $2$ colonnes et $B$ a $2$ lignes. Chaque coefficient est « ligne de $A$ fois colonne de $B$ ».",
+        "Ligne $1$ : $(AB)_{11} = 1\\times 4 + 2\\times 5 = 14$ et $(AB)_{12} = 1\\times 1 + 2\\times 0 = 1$.",
+        "Ligne $2$ : $(AB)_{21} = 0\\times 4 + 3\\times 5 = 15$ et $(AB)_{22} = 0\\times 1 + 3\\times 0 = 0$.",
+        "On assemble les quatre coefficients dans la matrice résultat."
+      ],
+      "reponse": "$A\\times B = \\begin{pmatrix} 14 & 1 \\\\ 15 & 0 \\end{pmatrix}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "graphes",
+      "enonce": "On considère le graphe de sommets $A, B, C, D$ et d'arêtes $AB$, $AC$, $BC$, $CD$. Donner l'ordre du graphe, le degré de chaque sommet, puis vérifier le théorème des degrés. Ce graphe est-il connexe ?",
+      "corrige": [
+        "Ordre = nombre de sommets = $4$.",
+        "Degrés (nombre d'arêtes en chaque sommet) : $\\deg(A)=2$ ($AB,AC$), $\\deg(B)=2$ ($AB,BC$), $\\deg(C)=3$ ($AC,BC,CD$), $\\deg(D)=1$ ($CD$).",
+        "Somme des degrés : $2+2+3+1 = 8$. Nombre d'arêtes : $4$. On a bien $8 = 2\\times 4$ : le théorème des degrés est vérifié.",
+        "Connexité : de tout sommet on atteint tous les autres, par exemple $D-C-A-B$ ; le graphe est donc connexe."
+      ],
+      "reponse": "Ordre $4$ ; $\\deg(A)=2,\\deg(B)=2,\\deg(C)=3,\\deg(D)=1$ ; somme $=8=2\\times4$ ; graphe connexe."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "adjacence",
+      "enonce": "Un graphe a pour sommets $1,2,3,4$ et pour arêtes $1\\!-\\!2$, $1\\!-\\!3$, $2\\!-\\!3$, $3\\!-\\!4$. Écrire sa matrice d'adjacence $M$, calculer $M^{2}$, puis déterminer le nombre de chemins de longueur $2$ du sommet $1$ au sommet $4$.",
+      "corrige": [
+        "On numérote les sommets $1,2,3,4$. La matrice d'adjacence est $M = \\begin{pmatrix} 0&1&1&0 \\\\ 1&0&1&0 \\\\ 1&1&0&1 \\\\ 0&0&1&0 \\end{pmatrix}$ (elle est symétrique, le graphe étant non orienté).",
+        "On calcule $M^{2} = M\\times M = \\begin{pmatrix} 2&1&1&1 \\\\ 1&2&1&1 \\\\ 1&1&3&0 \\\\ 1&1&0&1 \\end{pmatrix}$.",
+        "Le nombre de chemins de longueur $2$ de $1$ vers $4$ est le coefficient ligne $1$, colonne $4$ de $M^{2}$, soit $\\big(M^{2}\\big)_{14} = 1$.",
+        "On le retrouve à la main : le seul chemin à $2$ arêtes de $1$ à $4$ est $1-3-4$."
+      ],
+      "reponse": "$\\big(M^{2}\\big)_{14} = 1$ : un seul chemin de longueur $2$ de $1$ à $4$ ($1-3-4$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "matrices",
+      "enonce": "Soit $A = \\begin{pmatrix} 2 & 3 \\\\ 1 & 2 \\end{pmatrix}$. Montrer que $A$ est inversible et calculer $A^{-1}$. En déduire la solution du système $\\begin{cases} 2x + 3y = 7 \\\\ x + 2y = 4 \\end{cases}$.",
+      "corrige": [
+        "On calcule $ad-bc = 2\\times 2 - 3\\times 1 = 1$. Comme $1\\neq 0$, $A$ est inversible.",
+        "Formule de l'inverse $2\\times2$ : $A^{-1} = \\dfrac{1}{1}\\begin{pmatrix} 2 & -3 \\\\ -1 & 2\\end{pmatrix} = \\begin{pmatrix} 2 & -3 \\\\ -1 & 2\\end{pmatrix}$.",
+        "Le système s'écrit $A\\begin{pmatrix} x \\\\ y\\end{pmatrix} = \\begin{pmatrix} 7 \\\\ 4\\end{pmatrix}$, donc $\\begin{pmatrix} x \\\\ y\\end{pmatrix} = A^{-1}\\begin{pmatrix} 7 \\\\ 4\\end{pmatrix}$.",
+        "On calcule : $x = 2\\times 7 - 3\\times 4 = 2$ et $y = -1\\times 7 + 2\\times 4 = 1$.",
+        "Vérification : $2\\times2+3\\times1 = 7$ et $2+2\\times1 = 4$."
+      ],
+      "reponse": "$A^{-1} = \\begin{pmatrix} 2 & -3 \\\\ -1 & 2\\end{pmatrix}$ ; le système a pour solution $(x\\,;y) = (2\\,;1)$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "markov",
+      "enonce": "Un abonné d'une salle de sport vient une semaine donnée (état $V$) ou non (état $N$). S'il vient une semaine, il revient la suivante avec probabilité $0{,}9$. S'il ne vient pas, il vient la semaine suivante avec probabilité $0{,}3$. La première semaine il vient. Écrire la matrice de transition $P$ (états $V$ puis $N$), calculer la distribution après une semaine, puis déterminer la distribution invariante.",
+      "corrige": [
+        "Depuis $V$ : reste $V$ avec $0{,}9$, passe en $N$ avec $0{,}1$. Depuis $N$ : passe en $V$ avec $0{,}3$, reste $N$ avec $0{,}7$. D'où $P = \\begin{pmatrix} 0{,}9 & 0{,}1 \\\\ 0{,}3 & 0{,}7\\end{pmatrix}$ (chaque ligne somme à $1$).",
+        "État initial : il vient, donc $\\pi_0 = (\\,1\\ \\ 0\\,)$. Après une semaine : $\\pi_1 = \\pi_0 P = (\\,0{,}9\\ \\ 0{,}1\\,)$.",
+        "Distribution invariante $\\pi = (\\,x\\ \\ y\\,)$ : on résout $\\pi P = \\pi$ avec $x+y=1$. La première équation donne $x = 0{,}9x + 0{,}3y$, soit $0{,}1x = 0{,}3y$, donc $x = 3y$.",
+        "Avec $x+y=1$ : $3y+y=1$, d'où $y = \\dfrac{1}{4}$ et $x = \\dfrac{3}{4}$.",
+        "Vérification : $(\\tfrac34\\ \\ \\tfrac14)P = (\\,0{,}75\\times0{,}9 + 0{,}25\\times0{,}3\\ \\ ;\\ 0{,}75\\times0{,}1 + 0{,}25\\times0{,}7\\,) = (\\tfrac34\\ \\ \\tfrac14)$."
+      ],
+      "reponse": "$P = \\begin{pmatrix} 0{,}9 & 0{,}1 \\\\ 0{,}3 & 0{,}7\\end{pmatrix}$ ; $\\pi_1 = (\\,0{,}9\\ \\ 0{,}1\\,)$ ; distribution invariante $\\left(\\dfrac34\\ \\ \\dfrac14\\right)$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "suite",
+      "enonce": "Une suite de matrices colonnes vérifie $U_{n+1} = A\\,U_n + C$ avec $A = \\begin{pmatrix} 0{,}6 & 0{,}1 \\\\ 0{,}2 & 0{,}7\\end{pmatrix}$, $C = \\begin{pmatrix} 4 \\\\ 3\\end{pmatrix}$ et $U_0 = \\begin{pmatrix} 0 \\\\ 0\\end{pmatrix}$. Calculer $U_1$ et $U_2$, puis déterminer l'état stable $U$ (celui qui vérifie $U = A\\,U + C$).",
+      "corrige": [
+        "$U_1 = A\\,U_0 + C = A\\begin{pmatrix} 0 \\\\ 0\\end{pmatrix} + C = C = \\begin{pmatrix} 4 \\\\ 3\\end{pmatrix}$.",
+        "$U_2 = A\\,U_1 + C$ : première ligne $0{,}6\\times4 + 0{,}1\\times3 + 4 = 6{,}7$ ; deuxième ligne $0{,}2\\times4 + 0{,}7\\times3 + 3 = 5{,}9$. Donc $U_2 = \\begin{pmatrix} 6{,}7 \\\\ 5{,}9\\end{pmatrix}$.",
+        "État stable : $U = A\\,U + C \\iff (I-A)\\,U = C$. Ici $I-A = \\begin{pmatrix} 0{,}4 & -0{,}1 \\\\ -0{,}2 & 0{,}3\\end{pmatrix}$.",
+        "Déterminant : $0{,}4\\times0{,}3 - (-0{,}1)\\times(-0{,}2) = 0{,}12 - 0{,}02 = 0{,}10 \\neq 0$, donc $I-A$ est inversible : $(I-A)^{-1} = \\dfrac{1}{0{,}1}\\begin{pmatrix} 0{,}3 & 0{,}1 \\\\ 0{,}2 & 0{,}4\\end{pmatrix} = \\begin{pmatrix} 3 & 1 \\\\ 2 & 4\\end{pmatrix}$.",
+        "$U = (I-A)^{-1}C = \\begin{pmatrix} 3 & 1 \\\\ 2 & 4\\end{pmatrix}\\begin{pmatrix} 4 \\\\ 3\\end{pmatrix} = \\begin{pmatrix} 12+3 \\\\ 8+12\\end{pmatrix} = \\begin{pmatrix} 15 \\\\ 20\\end{pmatrix}$."
+      ],
+      "reponse": "$U_1 = \\begin{pmatrix} 4 \\\\ 3\\end{pmatrix}$, $U_2 = \\begin{pmatrix} 6{,}7 \\\\ 5{,}9\\end{pmatrix}$, état stable $U = \\begin{pmatrix} 15 \\\\ 20\\end{pmatrix}$."
+    }
+  ]
+}

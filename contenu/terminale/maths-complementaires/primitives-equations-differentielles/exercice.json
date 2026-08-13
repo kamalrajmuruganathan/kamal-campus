@@ -1,0 +1,92 @@
+{
+  "id": "tale-compl-math-primitives-equations-differentielles-exos",
+  "chapitre": "tale-compl-math-primitives-equations-differentielles",
+  "titre": "Exercices — Primitives et équations différentielles",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "linearite",
+      "enonce": "Déterminer toutes les primitives sur $\\mathbb{R}$ de la fonction $f(x) = 4x^3 - 6x + 1$.",
+      "corrige": [
+        "On primitive terme à terme avec la formule $x^n \\mapsto \\dfrac{x^{n+1}}{n+1}$. Pour $4x^3$ : une primitive est $4\\times\\dfrac{x^4}{4} = x^4$.",
+        "Pour $-6x$ : une primitive est $-6\\times\\dfrac{x^2}{2} = -3x^2$. Pour la constante $1$ : une primitive est $x$.",
+        "On rassemble et on n'oublie pas la constante $+C$ : les primitives sont $F(x) = x^4 - 3x^2 + x + C$, avec $C\\in\\mathbb{R}$.",
+        "Contrôle en dérivant : $F'(x) = 4x^3 - 6x + 1 = f(x)$ ✓."
+      ],
+      "reponse": "$F(x) = x^4 - 3x^2 + x + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $y' = 5y$.",
+      "corrige": [
+        "L'équation est de la forme $y' = ay$ avec $a = 5$.",
+        "D'après le cours, ses solutions sont les fonctions $y(x) = Ce^{ax} = Ce^{5x}$, avec $C\\in\\mathbb{R}$.",
+        "Contrôle : $y'(x) = 5Ce^{5x} = 5\\,y(x)$ ✓. On garde bien la constante $C$, sinon on perd toutes les autres solutions."
+      ],
+      "reponse": "$y(x) = Ce^{5x}$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = 3x^2 - 2$ sur $\\mathbb{R}$ qui vérifie $F(1) = 4$.",
+      "corrige": [
+        "On cherche d'abord toutes les primitives. Terme à terme : une primitive de $3x^2$ est $x^3$, une primitive de $-2$ est $-2x$.",
+        "Donc $F(x) = x^3 - 2x + C$, avec $C\\in\\mathbb{R}$.",
+        "On utilise la condition initiale pour fixer $C$ : $F(1) = 1^3 - 2\\times 1 + C = -1 + C$. On impose $-1 + C = 4$, d'où $C = 5$.",
+        "Ainsi $F(x) = x^3 - 2x + 5$. Vérification : $F'(x) = 3x^2 - 2 = f(x)$ et $F(1) = 1 - 2 + 5 = 4$ ✓."
+      ],
+      "reponse": "$F(x) = x^3 - 2x + 5$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $y' = -3y + 12$, puis déterminer la solution vérifiant $y(0) = 10$.",
+      "corrige": [
+        "L'équation est de la forme $y' = ay + b$ avec $a = -3$ et $b = 12$ ($a\\neq 0$).",
+        "Solution particulière constante : on cherche $y$ constante, donc $y' = 0$, soit $0 = -3y + 12$, d'où $y = -\\dfrac{b}{a} = -\\dfrac{12}{-3} = 4$.",
+        "Toutes les solutions s'écrivent $y(x) = Ce^{-3x} + 4$, avec $C\\in\\mathbb{R}$.",
+        "Condition initiale : $y(0) = C + 4 = 10$, donc $C = 6$. La solution cherchée est $y(x) = 6e^{-3x} + 4$. Contrôle : $y'(x) = -18e^{-3x}$ et $-3y+12 = -18e^{-3x}-12+12 = -18e^{-3x}$ ✓."
+      ],
+      "reponse": "Solutions générales : $y(x) = Ce^{-3x} + 4$ ; celle vérifiant $y(0)=10$ : $y(x) = 6e^{-3x} + 4$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "La température (en °C) d'un objet qui refroidit est modélisée par une fonction $\\theta$ du temps $t\\geq 0$ (en minutes) vérifiant $\\theta'(t) = -0{,}2\\,\\theta(t) + 4$ et $\\theta(0) = 100$. Déterminer $\\theta(t)$, puis la température vers laquelle l'objet tend.",
+      "corrige": [
+        "L'équation est de la forme $y' = ay + b$ avec $a = -0{,}2$ et $b = 4$ ($a\\neq 0$).",
+        "Solution particulière constante : $\\theta' = 0$ donne $0 = -0{,}2\\,\\theta + 4$, d'où $\\theta = -\\dfrac{b}{a} = -\\dfrac{4}{-0{,}2} = 20$.",
+        "Toutes les solutions s'écrivent $\\theta(t) = Ce^{-0{,}2t} + 20$, avec $C\\in\\mathbb{R}$.",
+        "Condition initiale : $\\theta(0) = C + 20 = 100$, donc $C = 80$. Ainsi $\\theta(t) = 80\\,e^{-0{,}2t} + 20$.",
+        "Comme $-0{,}2 < 0$, le terme $80e^{-0{,}2t}$ tend vers $0$ quand $t\\to+\\infty$ : la température tend vers $20$ °C, la température de la pièce."
+      ],
+      "reponse": "$\\theta(t) = 80\\,e^{-0{,}2t} + 20$ ; la température tend vers $20$ °C."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Un réservoir contient une population de bactéries dont le nombre (en milliers) $N(t)$, avec $t$ en heures, vérifie $N'(t) = 0{,}5\\,N(t) - 2$ et $N(0) = 6$. 1) Déterminer $N(t)$. 2) La population augmente-t-elle ou décroît-elle ? Justifier.",
+      "corrige": [
+        "1) L'équation est de la forme $y' = ay + b$ avec $a = 0{,}5$ et $b = -2$ ($a\\neq 0$). Solution constante : $0 = 0{,}5\\,N - 2$, soit $N = -\\dfrac{b}{a} = -\\dfrac{-2}{0{,}5} = 4$.",
+        "Toutes les solutions : $N(t) = Ce^{0{,}5t} + 4$. Condition initiale : $N(0) = C + 4 = 6$, donc $C = 2$. Ainsi $N(t) = 2e^{0{,}5t} + 4$.",
+        "2) Comme $a = 0{,}5 > 0$ et $C = 2 > 0$, le terme $2e^{0{,}5t}$ croît vers $+\\infty$ : la population **augmente** sans limite.",
+        "Contrôle : $N'(t) = 2\\times 0{,}5\\,e^{0{,}5t} = e^{0{,}5t}$ et $0{,}5\\,N - 2 = 0{,}5(2e^{0{,}5t}+4) - 2 = e^{0{,}5t} + 2 - 2 = e^{0{,}5t}$ ✓."
+      ],
+      "reponse": "$N(t) = 2e^{0{,}5t} + 4$ ; la population augmente (car $a>0$ et $C>0$, croissance exponentielle)."
+    }
+  ]
+}

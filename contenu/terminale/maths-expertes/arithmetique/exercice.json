@@ -1,0 +1,95 @@
+{
+  "id": "tale-exp-math-arithmetique-exos",
+  "chapitre": "tale-exp-math-arithmetique",
+  "titre": "Exercices — Arithmétique : divisibilité et congruences",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-expertes",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "division-euclidienne",
+      "enonce": "Déterminer le quotient $q$ et le reste $r$ de la division euclidienne de $-47$ par $6$.",
+      "corrige": [
+        "La division euclidienne impose un reste vérifiant $0 \\leqslant r < 6$ : le reste ne peut donc pas être négatif.",
+        "On cherche le plus grand multiple de $6$ inférieur ou égal à $-47$. Comme $6\\times(-8) = -48 \\leqslant -47$ et $6\\times(-7) = -42 > -47$, le quotient est $q = -8$.",
+        "On en déduit le reste : $r = -47 - 6\\times(-8) = -47 + 48 = 1$.",
+        "Vérification : $-47 = 6\\times(-8) + 1$ et $0 \\leqslant 1 < 6$. ✓"
+      ],
+      "reponse": "$q = -8$ et $r = 1$, soit $-47 = 6\\times(-8) + 1$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "pgcd-euclide",
+      "enonce": "À l'aide de l'algorithme d'Euclide, déterminer $\\mathrm{pgcd}(408, 120)$.",
+      "corrige": [
+        "On divise le plus grand par le plus petit : $408 = 120\\times 3 + 48$.",
+        "On recommence avec $120$ et le reste $48$ : $120 = 48\\times 2 + 24$.",
+        "On recommence avec $48$ et le reste $24$ : $48 = 24\\times 2 + 0$.",
+        "Le reste est nul : le dernier reste non nul est $24$, donc $\\mathrm{pgcd}(408,120) = 24$.",
+        "Vérification : $408 = 24\\times 17$ et $120 = 24\\times 5$, avec $\\mathrm{pgcd}(17,5)=1$. ✓"
+      ],
+      "reponse": "$\\mathrm{pgcd}(408, 120) = 24$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "congruences",
+      "enonce": "Déterminer le reste de la division de $2^{100}$ par $7$.",
+      "corrige": [
+        "On cherche les premières puissances de $2$ modulo $7$ : $2^1 \\equiv 2$, $2^2 \\equiv 4$, $2^3 = 8 \\equiv 1\\ [7]$.",
+        "Comme $2^3 \\equiv 1\\ [7]$, les puissances de $2$ se répètent avec une période de $3$. On décompose l'exposant : $100 = 3\\times 33 + 1$.",
+        "Par compatibilité des congruences avec la puissance : $2^{100} = (2^{3})^{33}\\times 2^{1} \\equiv 1^{33}\\times 2 \\equiv 2\\ [7]$.",
+        "Le reste cherché est donc $2$ (et $0 \\leqslant 2 < 7$)."
+      ],
+      "reponse": "Le reste de $2^{100}$ par $7$ est $2$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "bezout",
+      "enonce": "Montrer que $17$ et $5$ sont premiers entre eux, puis déterminer un couple d'entiers $(u, v)$ tel que $17u + 5v = 1$.",
+      "corrige": [
+        "Algorithme d'Euclide : $17 = 5\\times 3 + 2$, puis $5 = 2\\times 2 + 1$, puis $2 = 1\\times 2 + 0$. Le dernier reste non nul est $1$, donc $\\mathrm{pgcd}(17,5) = 1$ : les deux entiers sont premiers entre eux.",
+        "On « remonte » l'algorithme à partir de la ligne donnant le reste $1$ : $1 = 5 - 2\\times 2$.",
+        "On remplace $2$ par son expression $2 = 17 - 5\\times 3$ : $1 = 5 - 2\\times(17 - 5\\times 3) = 5 - 2\\times 17 + 6\\times 5 = 7\\times 5 - 2\\times 17$.",
+        "On identifie : $17\\times(-2) + 5\\times 7 = 1$, donc $u = -2$ et $v = 7$ conviennent.",
+        "Vérification : $17\\times(-2) + 5\\times 7 = -34 + 35 = 1$. ✓"
+      ],
+      "reponse": "$\\mathrm{pgcd}(17,5)=1$, et par exemple $(u, v) = (-2, 7)$ vérifie $17u + 5v = 1$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "diophantiennes",
+      "enonce": "Résoudre dans $\\mathbb{Z}^2$ l'équation $7x + 5y = 3$.",
+      "corrige": [
+        "Existence des solutions : $\\mathrm{pgcd}(7,5) = 1$, et $1 \\mid 3$, donc l'équation admet des solutions entières.",
+        "On cherche d'abord une relation de Bézout pour $7$ et $5$. Euclide : $7 = 5\\times 1 + 2$, $5 = 2\\times 2 + 1$. En remontant : $1 = 5 - 2\\times 2 = 5 - 2\\times(7-5) = 3\\times 5 - 2\\times 7$, soit $7\\times(-2) + 5\\times 3 = 1$.",
+        "On multiplie par $3$ pour obtenir une solution particulière de l'équation : $7\\times(-6) + 5\\times 9 = 3$, donc $(x_0, y_0) = (-6, 9)$.",
+        "Solution générale : comme $\\mathrm{pgcd}(7,5)=1$, on ajoute $5k$ à $x$ et on retranche $7k$ à $y$ : $x = -6 + 5k$, $y = 9 - 7k$, pour $k \\in \\mathbb{Z}$.",
+        "Vérification : $7(-6+5k) + 5(9-7k) = -42 + 35k + 45 - 35k = 3$ pour tout $k$. ✓"
+      ],
+      "reponse": "$S = \\{(-6 + 5k,\\ 9 - 7k) \\mid k \\in \\mathbb{Z}\\}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "fermat",
+      "enonce": "Démontrer que pour tout entier $n$, le nombre $n^{5} - n$ est divisible par $5$.",
+      "corrige": [
+        "Le nombre $5$ est premier. On utilise le petit théorème de Fermat sous sa forme valable pour tout entier $a$ : $a^{p} \\equiv a\\ [p]$ lorsque $p$ est premier.",
+        "Avec $p = 5$, on obtient pour tout entier $n$ : $n^{5} \\equiv n\\ [5]$.",
+        "Par définition de la congruence, cela signifie $5 \\mid (n^{5} - n)$ : $n^5 - n$ est divisible par $5$.",
+        "Vérification sur un exemple : pour $n = 2$, $n^5 - n = 32 - 2 = 30 = 5\\times 6$. ✓"
+      ],
+      "reponse": "Pour tout entier $n$, $n^{5} \\equiv n\\ [5]$, donc $5 \\mid (n^{5} - n)$."
+    }
+  ]
+}

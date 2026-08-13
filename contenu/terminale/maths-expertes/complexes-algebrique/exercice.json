@@ -1,0 +1,95 @@
+{
+  "id": "tale-exp-math-complexes-algebrique-exos",
+  "chapitre": "tale-exp-math-complexes-algebrique",
+  "titre": "Exercices — Nombres complexes (point de vue algébrique)",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-expertes",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Écrire sous forme algébrique les complexes $A = (2+i)(3-i)$ et $B = (1+2i)^{2}$.",
+      "corrige": [
+        "Pour $A$, on développe : $A = 2\\times 3 + 2\\times(-i) + i\\times 3 + i\\times(-i) = 6 - 2i + 3i - i^{2}$.",
+        "On remplace $i^{2}$ par $-1$ : $-i^{2} = +1$, donc $A = 6 + i + 1 = 7 + i$.",
+        "Pour $B$, on utilise l'identité $(a+b)^2 = a^2 + 2ab + b^2$ : $B = 1^{2} + 2\\times 1\\times 2i + (2i)^{2} = 1 + 4i + 4i^{2}$.",
+        "Or $(2i)^{2} = 4i^{2} = -4$, donc $B = 1 + 4i - 4 = -3 + 4i$."
+      ],
+      "reponse": "$A = 7 + i$ et $B = -3 + 4i$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "inverse-quotient",
+      "enonce": "Écrire sous forme algébrique le complexe $Z = \\dfrac{4+2i}{1-i}$.",
+      "corrige": [
+        "On multiplie numérateur et dénominateur par le conjugué du dénominateur, $\\overline{1-i} = 1+i$.",
+        "Dénominateur : $(1-i)(1+i) = 1^{2} + 1^{2} = 2$ (c'est $a^{2}+b^{2}$, un réel).",
+        "Numérateur : $(4+2i)(1+i) = 4 + 4i + 2i + 2i^{2} = 4 + 6i - 2 = 2 + 6i$.",
+        "Donc $Z = \\dfrac{2+6i}{2} = 1 + 3i$."
+      ],
+      "reponse": "$Z = 1 + 3i$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "second-degre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z^{2} + 2z + 5 = 0$.",
+      "corrige": [
+        "Les coefficients sont réels : $a=1$, $b=2$, $c=5$. On calcule le discriminant $\\Delta = b^{2} - 4ac = 2^{2} - 4\\times 1\\times 5 = 4 - 20 = -16$.",
+        "$\\Delta < 0$ : l'équation a deux solutions complexes conjuguées. Comme $-\\Delta = 16$, on a $\\sqrt{-\\Delta} = 4$.",
+        "Les solutions sont $z = \\dfrac{-b \\pm i\\sqrt{-\\Delta}}{2a} = \\dfrac{-2 \\pm 4i}{2}$.",
+        "On simplifie : $z = -1 \\pm 2i$."
+      ],
+      "reponse": "$S = \\{-1+2i\\,;\\,-1-2i\\}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "equations-z-zbarre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z + 2\\overline{z} = 9 - i$.",
+      "corrige": [
+        "On pose $z = x + iy$ avec $x, y$ réels, d'où $\\overline{z} = x - iy$.",
+        "On remplace : $(x+iy) + 2(x-iy) = 9 - i$, soit $(x + 2x) + i(y - 2y) = 9 - i$, c'est-à-dire $3x - iy = 9 - i$.",
+        "Deux complexes sont égaux ssi ils ont même partie réelle et même partie imaginaire : $3x = 9$ et $-y = -1$.",
+        "On résout : $x = 3$ et $y = 1$, donc $z = 3 + i$."
+      ],
+      "reponse": "$z = 3 + i$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "equations-z-zbarre",
+      "enonce": "Déterminer l'ensemble des complexes $z = x + iy$ ($x, y$ réels) tels que $z^{2}$ soit un imaginaire pur.",
+      "corrige": [
+        "On calcule $z^{2} = (x+iy)^{2} = x^{2} + 2ixy + (iy)^{2} = (x^{2} - y^{2}) + 2xy\\,i$.",
+        "Ainsi $\\operatorname{Re}(z^{2}) = x^{2} - y^{2}$ et $\\operatorname{Im}(z^{2}) = 2xy$.",
+        "$z^{2}$ est imaginaire pur $\\iff \\operatorname{Re}(z^{2}) = 0 \\iff x^{2} - y^{2} = 0$.",
+        "On factorise : $x^{2} - y^{2} = (x-y)(x+y) = 0$, donc $y = x$ ou $y = -x$.",
+        "L'ensemble cherché est l'ensemble des $z = x + iy$ vérifiant $y = x$ ou $y = -x$ (les deux droites d'équations $y=x$ et $y=-x$ dans le plan)."
+      ],
+      "reponse": "Les complexes $z = x + iy$ tels que $y = x$ ou $y = -x$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "operations",
+      "enonce": "Déterminer tous les complexes $z = x + iy$ ($x, y$ réels) tels que $z^{2} = 3 + 4i$.",
+      "corrige": [
+        "On développe $z^{2} = (x+iy)^{2} = (x^{2} - y^{2}) + 2xy\\,i$ et on identifie avec $3 + 4i$.",
+        "Partie réelle : $x^{2} - y^{2} = 3$. Partie imaginaire : $2xy = 4$, soit $xy = 2$.",
+        "De $xy = 2$ on tire $y = \\dfrac{2}{x}$ (avec $x \\neq 0$). On reporte : $x^{2} - \\dfrac{4}{x^{2}} = 3$.",
+        "On multiplie par $x^{2}$ : $x^{4} - 3x^{2} - 4 = 0$. En posant $X = x^{2} \\geqslant 0$ : $X^{2} - 3X - 4 = 0$, de racines $X = 4$ ou $X = -1$.",
+        "Comme $X = x^{2} \\geqslant 0$, seul $X = 4$ convient : $x = 2$ ou $x = -2$. Alors $y = \\dfrac{2}{x}$ donne $y = 1$ (si $x=2$) ou $y = -1$ (si $x=-2$).",
+        "Vérification : $(2+i)^{2} = 4 + 4i + i^{2} = 3 + 4i$ ✔. Les deux solutions sont opposées."
+      ],
+      "reponse": "$z = 2 + i$ ou $z = -2 - i$."
+    }
+  ]
+}

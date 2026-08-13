@@ -1,0 +1,95 @@
+{
+  "id": "tale-compl-math-exponentielle-logarithme-exos",
+  "chapitre": "tale-compl-math-exponentielle-logarithme",
+  "titre": "Exercices — Fonctions logarithme et exponentielle",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Exprimer $\\ln 45$ en fonction de $\\ln 3$ et de $\\ln 5$.",
+      "corrige": [
+        "On décompose $45$ en produit de puissances de $3$ et de $5$ : $45 = 9\\times 5 = 3^{2}\\times 5$.",
+        "Logarithme d'un produit : $\\ln(3^{2}\\times 5) = \\ln(3^{2}) + \\ln 5$.",
+        "Logarithme d'une puissance : $\\ln(3^{2}) = 2\\ln 3$.",
+        "En rassemblant : $\\ln 45 = 2\\ln 3 + \\ln 5$."
+      ],
+      "reponse": "$\\ln 45 = 2\\ln 3 + \\ln 5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "rappels-exponentielle",
+      "enonce": "Calculer la dérivée de la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = (2x-1)\\,e^{x}$.",
+      "corrige": [
+        "$f$ est un produit $u\\times v$ avec $u(x) = 2x-1$ et $v(x) = e^{x}$.",
+        "On calcule les dérivées : $u'(x) = 2$ et $v'(x) = e^{x}$.",
+        "Formule du produit : $f'(x) = u'v + uv' = 2e^{x} + (2x-1)e^{x}$.",
+        "On factorise par $e^{x}$ : $f'(x) = \\big(2 + 2x - 1\\big)e^{x} = (2x+1)e^{x}$."
+      ],
+      "reponse": "$f'(x) = (2x+1)e^{x}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $2\\ln x = \\ln(3x+4)$.",
+      "corrige": [
+        "Condition d'existence : il faut $x>0$ (et alors $3x+4>0$ est automatiquement vrai). On travaille sur $]0\\,;+\\infty[$.",
+        "On transforme le membre de gauche avec la propriété de la puissance : $2\\ln x = \\ln(x^{2})$. L'équation devient $\\ln(x^{2}) = \\ln(3x+4)$.",
+        "Comme $\\ln a = \\ln b \\iff a=b$, on identifie : $x^{2} = 3x+4$, soit $x^{2}-3x-4 = 0$.",
+        "Discriminant : $\\Delta = (-3)^{2} - 4\\times 1\\times(-4) = 25$, $\\sqrt{\\Delta}=5$. Racines : $x = \\dfrac{3-5}{2} = -1$ ou $x = \\dfrac{3+5}{2} = 4$.",
+        "On confronte à la condition $x>0$ : $-1$ est à rejeter, $4$ convient."
+      ],
+      "reponse": "$S = \\{4\\}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "inequations",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $e^{2x-1} \\geqslant 1$.",
+      "corrige": [
+        "L'exponentielle est définie sur $\\mathbb{R}$ : aucune condition d'existence à poser.",
+        "On écrit $1 = e^{0}$, l'inéquation devient $e^{2x-1} \\geqslant e^{0}$.",
+        "La fonction $\\exp$ est strictement croissante : elle conserve le sens de l'inégalité, donc $2x-1 \\geqslant 0$.",
+        "On résout : $2x \\geqslant 1$, soit $x \\geqslant \\dfrac{1}{2}$."
+      ],
+      "reponse": "$S = \\left[\\dfrac{1}{2}\\,;+\\infty\\right[$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "croissances-comparees",
+      "enonce": "Soit $f$ la fonction définie sur $]0\\,;+\\infty[$ par $f(x) = \\dfrac{\\ln x}{x}$. Déterminer $\\lim\\limits_{x\\to 0^{+}} f(x)$ et $\\lim\\limits_{x\\to +\\infty} f(x)$, puis étudier les variations de $f$.",
+      "corrige": [
+        "En $0^{+}$ : $\\ln x \\to -\\infty$ et $\\dfrac{1}{x} \\to +\\infty$, donc $f(x) = \\dfrac{1}{x}\\times \\ln x \\to -\\infty$ (produit de deux termes de même « sens » vers l'infini négatif).",
+        "En $+\\infty$ : par croissance comparée, $\\dfrac{\\ln x}{x} \\to 0$. La droite $y=0$ est asymptote horizontale.",
+        "$f$ est un quotient $\\dfrac{u}{v}$ avec $u=\\ln x$ ($u'=\\dfrac{1}{x}$) et $v=x$ ($v'=1$) : $f'(x) = \\dfrac{u'v - uv'}{v^{2}} = \\dfrac{\\frac{1}{x}\\cdot x - \\ln x \\cdot 1}{x^{2}} = \\dfrac{1 - \\ln x}{x^{2}}$.",
+        "Sur $]0\\,;+\\infty[$, $x^{2}>0$, donc $f'(x)$ est du signe de $1-\\ln x$. Or $1-\\ln x > 0 \\iff \\ln x < 1 \\iff x < e$.",
+        "Ainsi $f$ est croissante sur $]0\\,;e[$ et décroissante sur $]e\\,;+\\infty[$ : elle admet un maximum en $x=e$, valant $f(e) = \\dfrac{\\ln e}{e} = \\dfrac{1}{e}$."
+      ],
+      "reponse": "$\\lim\\limits_{0^{+}} f = -\\infty$, $\\lim\\limits_{+\\infty} f = 0$ ; $f$ croît sur $]0\\,;e[$, décroît sur $]e\\,;+\\infty[$, maximum $f(e)=\\dfrac{1}{e}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "applications",
+      "enonce": "Une population de bactéries compte $500$ individus à l'instant $t=0$ (en heures) et son effectif est modélisé par $N(t) = 500\\,e^{0{,}2t}$. Déterminer, à l'heure près, le temps au bout duquel la population dépasse $3000$ individus. On donne $\\ln 6 \\approx 1{,}79$.",
+      "corrige": [
+        "On cherche le plus petit $t$ tel que $500\\,e^{0{,}2t} > 3000$.",
+        "On divise par $500$ : $e^{0{,}2t} > \\dfrac{3000}{500} = 6$.",
+        "Les deux membres sont strictement positifs : on applique $\\ln$, strictement croissante (sens conservé) : $\\ln(e^{0{,}2t}) > \\ln 6$, soit $0{,}2t > \\ln 6$.",
+        "Comme $0{,}2>0$, on divise sans changer le sens : $t > \\dfrac{\\ln 6}{0{,}2} \\approx \\dfrac{1{,}79}{0{,}2} \\approx 8{,}95$.",
+        "Le seuil est franchi entre la $8^{\\text{e}}$ et la $9^{\\text{e}}$ heure ; à l'heure près, il faut donc $t = 9$ heures pour que la population dépasse $3000$."
+      ],
+      "reponse": "Au bout d'environ $9$ heures (car $t > \\dfrac{\\ln 6}{0{,}2} \\approx 8{,}95$)."
+    }
+  ]
+}

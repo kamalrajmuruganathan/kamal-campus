@@ -1,0 +1,154 @@
+{
+  "id": "tale-compl-math-lois-densite-temps-attente-qcm",
+  "chapitre": "tale-compl-math-lois-densite-temps-attente",
+  "titre": "QCM — Lois à densité : temps d'attente",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "$X$ suit une loi à densité de densité $f$ sur un intervalle $I$. Que vaut $P(c \\leqslant X \\leqslant d)$ pour $[c\\,;d]\\subset I$ ?",
+      "choix": [
+        "$f(d) - f(c)$",
+        "$\\displaystyle\\int_c^d f(x)\\,dx$",
+        "$f(c) \\times f(d)$",
+        "$\\dfrac{f(c)+f(d)}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "Pour une loi à densité, une probabilité est une **aire** sous la courbe de la densité : $P(c\\leqslant X\\leqslant d)=\\int_c^d f(x)\\,dx$. On n'évalue pas $f$ aux bornes (piège A) : $f$ est une densité, pas une primitive."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "loi-exponentielle",
+      "enonce": "Quelle est la densité de la loi exponentielle de paramètre $\\lambda > 0$, pour $t \\geqslant 0$ ?",
+      "choix": [
+        "$f(t) = e^{\\lambda t}$",
+        "$f(t) = \\lambda\\, e^{\\lambda t}$",
+        "$f(t) = \\lambda\\, e^{-\\lambda t}$",
+        "$f(t) = \\dfrac{1}{\\lambda}\\, e^{-\\lambda t}$"
+      ],
+      "reponse": 2,
+      "explication": "La densité exponentielle est $f(t)=\\lambda e^{-\\lambda t}$ : le facteur $\\lambda$ et surtout le **signe moins** à l'exposant. Avec $e^{+\\lambda t}$ (piège B) la fonction exploserait et l'aire ne pourrait pas valoir $1$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[0\\,;20]$. Que vaut $P(5 \\leqslant X \\leqslant 10)$ ?",
+      "choix": [
+        "$0{,}25$",
+        "$0{,}5$",
+        "$0{,}05$",
+        "$5$"
+      ],
+      "reponse": 0,
+      "explication": "Pour la loi uniforme, $P(c\\leqslant X\\leqslant d)=\\dfrac{d-c}{b-a}=\\dfrac{10-5}{20-0}=\\dfrac{5}{20}=0{,}25$. Le piège $0{,}5$ vient d'oublier de soustraire les bornes ($10/20$) ; $5$ oublie de diviser par la longueur totale."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "loi-uniforme",
+      "enonce": "Quelle est l'espérance de la loi uniforme sur $[a\\,;b]$ ?",
+      "choix": [
+        "$\\dfrac{1}{b-a}$",
+        "$\\dfrac{a+b}{2}$",
+        "$b-a$",
+        "$\\dfrac{b-a}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "L'espérance de la loi uniforme est le **milieu** de l'intervalle : $E(X)=\\dfrac{a+b}{2}$. Le piège A ($\\frac{1}{b-a}$) est la **densité**, pas l'espérance : c'est la confusion classique du chapitre."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit une loi exponentielle de paramètre $\\lambda = 0{,}5$. Que vaut $P(X > 2)$ ?",
+      "choix": [
+        "$1 - e^{-1}$",
+        "$e^{-1}$",
+        "$e^{-2}$",
+        "$e^{1}$"
+      ],
+      "reponse": 1,
+      "explication": "Pour l'exponentielle, $P(X>t)=e^{-\\lambda t}=e^{-0{,}5\\times 2}=e^{-1}$. Le piège A ($1-e^{-1}$) est $P(X\\leqslant 2)$, l'événement contraire ; $e^{-2}$ oublie de multiplier $\\lambda$ par $t$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "loi-a-densite",
+      "enonce": "$X$ suit une loi à densité. Que vaut $P(X = 3)$ ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "$f(3)$",
+        "Impossible à déterminer sans connaître $f$"
+      ],
+      "reponse": 0,
+      "explication": "Pour toute loi à densité, la probabilité d'une valeur **isolée** est nulle : $P(X=3)=\\int_3^3 f = 0$. C'est pourquoi $\\leqslant$ et $<$ donnent la même probabilité. Confondre avec $f(3)$ (piège C) mélange densité et probabilité."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "esperance-exponentielle",
+      "enonce": "La durée de vie (en heures) d'un composant suit une loi exponentielle d'espérance $200$ h. Quel est le paramètre $\\lambda$ ?",
+      "choix": [
+        "$200$",
+        "$0{,}005$",
+        "$0{,}5$",
+        "$100$"
+      ],
+      "reponse": 1,
+      "explication": "Comme $E(X)=\\dfrac{1}{\\lambda}$, on a $\\lambda=\\dfrac{1}{E(X)}=\\dfrac{1}{200}=0{,}005$. Le piège $200$ confond le paramètre avec l'espérance elle-même ; $100$ divise à tort l'espérance par $2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "absence-de-memoire",
+      "enonce": "$X$ suit une loi exponentielle. Que vaut $P_{X>3}(X > 5)$, c'est-à-dire la probabilité que $X>5$ sachant que $X>3$ ?",
+      "choix": [
+        "$P(X > 5)$",
+        "$P(X > 8)$",
+        "$P(X > 2)$",
+        "$P(X > 3)$"
+      ],
+      "reponse": 2,
+      "explication": "Par absence de mémoire, $P_{X>s}(X>s+t)=P(X>t)$. Ici $s=3$ et $s+t=5$, donc $t=2$ : $P_{X>3}(X>5)=P(X>2)$. Le piège A oublie de retrancher le temps déjà écoulé ; B additionne les durées au lieu de conditionner."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit une loi exponentielle de paramètre $\\lambda$. Comment s'écrit $P(2 \\leqslant X \\leqslant 5)$ ?",
+      "choix": [
+        "$e^{-2\\lambda} - e^{-5\\lambda}$",
+        "$e^{-5\\lambda} - e^{-2\\lambda}$",
+        "$e^{-2\\lambda} + e^{-5\\lambda}$",
+        "$e^{-3\\lambda}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\int_2^5 \\lambda e^{-\\lambda t}\\,dt = \\big[-e^{-\\lambda t}\\big]_2^5 = e^{-2\\lambda}-e^{-5\\lambda}$, un nombre **positif** car $e^{-2\\lambda}>e^{-5\\lambda}$. Le piège B inverse l'ordre et donne un résultat négatif, impossible pour une probabilité."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "modelisation-temps-attente",
+      "enonce": "Le temps d'attente $X$ (en min) à un guichet suit une loi exponentielle de moyenne $4$ min. Quelle est la probabilité d'attendre **au plus** $4$ min ?",
+      "choix": [
+        "$e^{-1}$",
+        "$1 - e^{-1}$",
+        "$1 - e^{-4}$",
+        "$e^{-16}$"
+      ],
+      "reponse": 1,
+      "explication": "Moyenne $4$ donne $\\lambda=\\frac14=0{,}25$. « Au plus $4$ min » est $P(X\\leqslant 4)=1-e^{-\\lambda t}=1-e^{-0{,}25\\times 4}=1-e^{-1}$. Le piège A ($e^{-1}$) donne $P(X>4)$, l'événement contraire ; $1-e^{-4}$ prend $\\lambda=1$ au lieu de $0{,}25$."
+    }
+  ]
+}

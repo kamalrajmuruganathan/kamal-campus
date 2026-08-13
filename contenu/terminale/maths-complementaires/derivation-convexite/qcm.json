@@ -1,0 +1,154 @@
+{
+  "id": "tale-compl-math-derivation-convexite-qcm",
+  "chapitre": "tale-compl-math-derivation-convexite",
+  "titre": "QCM — Dérivation, variations et convexité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "derivee-variations",
+      "enonce": "Sur un intervalle $I$, on sait que $f'(x) < 0$. Que peut-on affirmer sur $f$ ?",
+      "choix": [
+        "$f$ est croissante sur $I$",
+        "$f$ est décroissante sur $I$",
+        "$f$ est convexe sur $I$",
+        "$f$ est constante sur $I$"
+      ],
+      "reponse": 1,
+      "explication": "Le signe de la dérivée donne les variations : $f' < 0$ signifie que $f$ décroît. Le piège « convexe » confond le signe de $f'$ (variations) avec celui de $f''$ (convexité) : ce sont deux informations distinctes."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "fonctions-reference",
+      "enonce": "Quelle est la dérivée de $f(x) = \\dfrac{1}{x}$ sur $]0\\,;+\\infty[$ ?",
+      "choix": [
+        "$\\dfrac{1}{x^2}$",
+        "$-\\dfrac{1}{x^2}$",
+        "$-\\dfrac{1}{x}$",
+        "$\\ln x$"
+      ],
+      "reponse": 1,
+      "explication": "La dérivée de $\\frac{1}{x}$ est $-\\frac{1}{x^2}$. Le distracteur $\\frac{1}{x^2}$ oublie le signe moins — l'erreur la plus fréquente, qui inverse ensuite tout le tableau de signes."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "extremums",
+      "enonce": "Pour $f(x) = x^2 - 4x + 1$, en quel point $f$ admet-elle un extremum, et de quelle nature ?",
+      "choix": [
+        "un maximum en $x = 2$",
+        "un minimum en $x = 2$",
+        "un minimum en $x = -2$",
+        "aucun extremum"
+      ],
+      "reponse": 1,
+      "explication": "$f'(x) = 2x - 4 = 2(x-2)$ s'annule en $x = 2$ en passant de $-$ à $+$ : c'est un minimum. Le passage $-$ puis $+$ (la courbe descend puis monte) donne un minimum, pas un maximum."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "extremums",
+      "enonce": "Pour $f(x) = x^3$, on a $f'(x) = 3x^2$ qui s'annule en $0$. La fonction admet-elle un extremum en $0$ ?",
+      "choix": [
+        "Oui, un minimum",
+        "Oui, un maximum",
+        "Non, car $f'$ ne change pas de signe en $0$",
+        "Non, car $f'(0) \\neq 0$"
+      ],
+      "reponse": 2,
+      "explication": "Un extremum exige que $f'$ s'annule EN CHANGEANT DE SIGNE. Ici $f'(x) = 3x^2 \\geqslant 0$ des deux côtés : pas de changement, donc pas d'extremum. Le piège est de conclure dès que $f'(0) = 0$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "convexite",
+      "enonce": "On sait que $f''(x) > 0$ pour tout $x$ d'un intervalle $I$. Que peut-on affirmer ?",
+      "choix": [
+        "$f$ est convexe sur $I$",
+        "$f$ est croissante sur $I$",
+        "$f$ est concave sur $I$",
+        "$f$ admet un maximum sur $I$"
+      ],
+      "reponse": 0,
+      "explication": "Le signe de $f''$ donne la CONVEXITÉ : $f'' > 0 \\iff f$ convexe (courbe en creux $\\cup$). Attention, $f''$ ne dit rien sur les variations : c'est le signe de $f'$, pas de $f''$, qui indique si $f$ croît."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "convexite",
+      "enonce": "La fonction $f(x) = \\sqrt{x}$ est-elle convexe ou concave sur $]0\\,;+\\infty[$ ?",
+      "choix": [
+        "convexe",
+        "concave",
+        "affine",
+        "convexe puis concave"
+      ],
+      "reponse": 1,
+      "explication": "On calcule $f'(x) = \\dfrac{1}{2\\sqrt{x}}$ puis $f''(x) = -\\dfrac{1}{4}x^{-3/2} < 0$. Une dérivée seconde négative signifie concave : la courbe forme une bosse $\\cap$, sous ses cordes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "point-inflexion",
+      "enonce": "La courbe de $f(x) = x^4$ (avec $f''(x) = 12x^2$) admet-elle un point d'inflexion en $0$ ?",
+      "choix": [
+        "Oui, car $f''(0) = 0$",
+        "Oui, car la courbe est convexe",
+        "Non, car $f'(0) = 0$",
+        "Non, car $f''$ ne change pas de signe en $0$"
+      ],
+      "reponse": 3,
+      "explication": "Un point d'inflexion exige que $f''$ s'annule EN CHANGEANT DE SIGNE. Ici $f''(x) = 12x^2 \\geqslant 0$ partout : $f$ reste convexe. Le piège est de conclure dès que $f''(0) = 0$, ce qui ne suffit pas."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "inegalite-tangente",
+      "enonce": "La fonction exponentielle est convexe. En utilisant sa tangente en $0$ (d'équation $y = 1 + x$), quelle inégalité obtient-on pour tout réel $x$ ?",
+      "choix": [
+        "$\\mathrm{e}^x \\leqslant 1 + x$",
+        "$\\mathrm{e}^x \\geqslant x$",
+        "$\\mathrm{e}^x \\geqslant 1 + x$",
+        "$\\mathrm{e}^x \\leqslant x - 1$"
+      ],
+      "reponse": 2,
+      "explication": "Une fonction convexe est AU-DESSUS de ses tangentes, donc $\\mathrm{e}^x \\geqslant 1 + x$. Le sens $\\leqslant$ correspondrait à une fonction concave : inverser le sens de l'inégalité est l'erreur la plus fréquente."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "piege-variations-convexite",
+      "enonce": "On sait seulement que $f$ est croissante sur un intervalle $I$. Que peut-on en déduire sur sa convexité ?",
+      "choix": [
+        "$f$ est convexe sur $I$",
+        "$f$ est concave sur $I$",
+        "$f'' > 0$ sur $I$",
+        "On ne peut rien conclure sur la convexité"
+      ],
+      "reponse": 3,
+      "explication": "Les variations dépendent du signe de $f'$, la convexité du signe de $f''$ : ce sont deux informations indépendantes. Une fonction croissante peut être convexe (comme $\\mathrm{e}^x$) ou concave (comme $\\sqrt{x}$). Croître ne dit rien de la courbure."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "derivee-variations",
+      "enonce": "Soit $f(x) = \\dfrac{x}{\\mathrm{e}^{x}}$. Sachant que $f'(x) = \\dfrac{1-x}{\\mathrm{e}^{x}}$, sur quel intervalle $f$ est-elle croissante ?",
+      "choix": [
+        "sur $\\mathbb{R}$ tout entier",
+        "sur $]-\\infty\\,;1]$",
+        "sur $[1\\,;+\\infty[$",
+        "$f$ n'est jamais croissante"
+      ],
+      "reponse": 1,
+      "explication": "Comme $\\mathrm{e}^{x} > 0$, le signe de $f'$ est celui de $1 - x$ : positif pour $x < 1$. Donc $f$ croît sur $]-\\infty\\,;1]$. Le piège est d'oublier que le dénominateur $\\mathrm{e}^x$ est toujours positif et n'inverse pas le signe."
+    }
+  ]
+}

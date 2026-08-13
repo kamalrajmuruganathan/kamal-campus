@@ -1,0 +1,154 @@
+{
+  "id": "tale-compl-math-calcul-integral-qcm",
+  "chapitre": "tale-compl-math-calcul-integral",
+  "titre": "QCM — Calcul intégral (calculs d'aires)",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Pour une fonction $f$ continue et **positive** sur $[a\\,;b]$, que représente $\\displaystyle\\int_a^b f(x)\\,dx$ ?",
+      "choix": [
+        "La pente de la tangente à la courbe en $a$",
+        "La longueur de la courbe de $f$ entre $a$ et $b$",
+        "L'aire, en unités d'aire, du domaine entre la courbe, l'axe des abscisses et les droites $x=a$ et $x=b$",
+        "La valeur maximale de $f$ sur $[a\\,;b]$"
+      ],
+      "reponse": 2,
+      "explication": "L'intégrale est **définie** comme une aire, pas comme une pente : confondre avec la dérivée (la pente) est le contresens classique. Il s'agit de l'aire sous la courbe, entre les deux bornes verticales."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "calcul-primitive",
+      "enonce": "$F$ est une primitive de $f$ sur $[a\\,;b]$. Que vaut $\\displaystyle\\int_a^b f(x)\\,dx$ ?",
+      "choix": [
+        "$F(b) - F(a)$",
+        "$F(a) - F(b)$",
+        "$F(b) + F(a)$",
+        "$F'(b) - F'(a)$"
+      ],
+      "reponse": 0,
+      "explication": "On évalue la primitive à la borne du haut moins la borne du bas : $F(b)-F(a)$. Le piège $F(a)-F(b)$ donne l'**opposé** du bon résultat ; c'est l'erreur de signe la plus fréquente."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "primitive-s-annule-en-a",
+      "enonce": "Soit $f$ continue et positive sur $[a\\,;b]$. La fonction $F_a$ définie par $F_a(x)=\\displaystyle\\int_a^x f(t)\\,dt$ est :",
+      "choix": [
+        "la dérivée de $f$",
+        "toujours égale à $f$ elle-même",
+        "la primitive de $f$ qui vaut $1$ en $a$",
+        "la primitive de $f$ qui s'annule en $a$"
+      ],
+      "reponse": 3,
+      "explication": "$F_a$ est une **primitive** de $f$ (pas sa dérivée), et $F_a(a)=\\int_a^a f = 0$ : elle s'annule en $a$. C'est cette condition qui la rend unique parmi toutes les primitives de $f$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "calcul-primitive",
+      "enonce": "Combien vaut $\\displaystyle\\int_0^2 x\\,dx$ ?",
+      "choix": [
+        "$4$",
+        "$2$",
+        "$1$",
+        "$8$"
+      ],
+      "reponse": 1,
+      "explication": "Une primitive de $x$ est $\\dfrac{x^2}{2}$, donc $\\left[\\dfrac{x^2}{2}\\right]_0^2 = 2-0 = 2$. Le piège $4$ vient de prendre $x^2$ (au lieu de $\\frac{x^2}{2}$) comme primitive : on oublie de diviser par $2$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "linearite",
+      "enonce": "On donne $\\displaystyle\\int_0^1 f = 2$ et $\\displaystyle\\int_0^1 g = 5$. Que vaut $\\displaystyle\\int_0^1 \\big(3f(x)+g(x)\\big)\\,dx$ ?",
+      "choix": [
+        "$7$",
+        "$21$",
+        "$30$",
+        "$11$"
+      ],
+      "reponse": 3,
+      "explication": "Par linéarité, $\\int(3f+g)=3\\int f+\\int g = 3\\times 2 + 5 = 11$. Le piège $7$ oublie le facteur $3$ ($2+5$) ; $21$ multiplie toute la somme par $3$ ($3\\times(2+5)$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "valeur-moyenne",
+      "enonce": "Quelle est la valeur moyenne de la fonction $f(x)=x^2$ sur $[0\\,;3]$ ?",
+      "choix": [
+        "$9$",
+        "$3$",
+        "$27$",
+        "$\\dfrac{9}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "On a $\\int_0^3 x^2\\,dx=\\left[\\frac{x^3}{3}\\right]_0^3=9$, puis $\\mu=\\frac{1}{3-0}\\times 9 = 3$. Le piège $9$ oublie le facteur $\\frac{1}{b-a}=\\frac13$ et confond intégrale et valeur moyenne."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "bornes-echangees",
+      "enonce": "On sait que $\\displaystyle\\int_1^5 f(x)\\,dx = 7$. Combien vaut $\\displaystyle\\int_5^1 f(x)\\,dx$ ?",
+      "choix": [
+        "$7$",
+        "$0$",
+        "$-7$",
+        "$\\dfrac{1}{7}$"
+      ],
+      "reponse": 2,
+      "explication": "Échanger les bornes **change le signe** : $\\int_5^1 f = -\\int_1^5 f = -7$. Garder $7$ (choix A) est l'oubli classique du changement de signe quand on inverse le sens de parcours."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "aire-fonction-negative",
+      "enonce": "$f$ est continue et **négative** sur $[a\\,;b]$, et $\\displaystyle\\int_a^b f(x)\\,dx = -6$. Quelle est l'aire, en unités d'aire, du domaine entre la courbe et l'axe des abscisses ?",
+      "choix": [
+        "$-6$",
+        "$6$",
+        "$0$",
+        "$36$"
+      ],
+      "reponse": 1,
+      "explication": "Une **aire est toujours positive**. Quand $f\\leqslant 0$, l'intégrale compte l'aire en négatif, donc l'aire vaut $-\\int_a^b f = -(-6)=6$. Répondre $-6$ (choix A) confond l'intégrale et l'aire."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "positivite",
+      "enonce": "Sur $[0\\,;1]$, on a $x^2 \\leqslant x$. Que peut-on en déduire pour les intégrales ?",
+      "choix": [
+        "$\\displaystyle\\int_0^1 x^2\\,dx \\leqslant \\int_0^1 x\\,dx$",
+        "$\\displaystyle\\int_0^1 x^2\\,dx \\geqslant \\int_0^1 x\\,dx$",
+        "$\\displaystyle\\int_0^1 x^2\\,dx = \\int_0^1 x\\,dx$",
+        "On ne peut rien dire des intégrales à partir des fonctions"
+      ],
+      "reponse": 0,
+      "explication": "Par la positivité appliquée à $x - x^2 \\geqslant 0$ (comparaison), $\\int_0^1 x^2 \\leqslant \\int_0^1 x$, soit $\\frac13 \\leqslant \\frac12$. L'ordre des fonctions se conserve sur l'intégrale quand $a\\leqslant b$ ; le piège B inverse l'inégalité."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "aire-entre-courbes",
+      "enonce": "Sur $[a\\,;b]$, la courbe de $f$ est **au-dessus** de celle de $g$. L'aire comprise entre les deux courbes vaut :",
+      "choix": [
+        "$\\displaystyle\\int_a^b \\big(f(x)-g(x)\\big)\\,dx$",
+        "$\\displaystyle\\int_a^b \\big(g(x)-f(x)\\big)\\,dx$",
+        "$\\displaystyle\\int_a^b f(x)\\,dx \\times \\int_a^b g(x)\\,dx$",
+        "$\\displaystyle\\int_a^b \\big(f(x)+g(x)\\big)\\,dx$"
+      ],
+      "reponse": 0,
+      "explication": "On intègre « la courbe du haut moins celle du bas » : $\\int_a^b (f-g)$, positif car $f\\geqslant g$. Le piège B inverse $f$ et $g$ et donne une aire négative ; additionner (choix D) n'a pas de sens ici."
+    }
+  ]
+}

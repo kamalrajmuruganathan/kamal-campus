@@ -48,6 +48,8 @@ const LIBELLES_PARCOURS = {
   maths: 'Mathématiques',
   'physique-chimie': 'Physique-chimie',
   'maths-specialite': 'Spécialité mathématiques',
+  'maths-complementaires': 'Maths complémentaires',
+  'maths-expertes': 'Maths expertes',
   'maths-enseignement-scientifique': 'Maths — enseignement scientifique',
   'pc-maths-sti2d-stl': 'Physique-chimie et maths — STI2D/STL',
   'tronc-commun': 'Tronc commun',

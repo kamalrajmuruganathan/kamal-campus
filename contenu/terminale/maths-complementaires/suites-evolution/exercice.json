@@ -1,0 +1,88 @@
+{
+  "id": "tale-compl-math-suites-evolution-exos",
+  "chapitre": "tale-compl-math-suites-evolution",
+  "titre": "Exercices — Suites et modèles d'évolution",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "limites",
+      "enonce": "Déterminer la limite de chacune des suites géométriques suivantes : a) $u_n = 1{,}2^{\\,n}$ ; b) $v_n = \\left(\\dfrac{2}{3}\\right)^{\\!n}$ ; c) $w_n = (-1{,}5)^{\\,n}$.",
+      "corrige": [
+        "On applique la règle sur $(q^{\\,n})$ : tout dépend de la valeur de la raison $q$.",
+        "a) $q = 1{,}2 > 1$, donc $q^{\\,n} \\to +\\infty$ : $u_n \\to +\\infty$.",
+        "b) $q = \\dfrac{2}{3}$ vérifie $|q| < 1$, donc $q^{\\,n} \\to 0$ : $v_n \\to 0$.",
+        "c) $q = -1{,}5 \\leq -1$ : les termes $1, -1{,}5, 2{,}25, -3{,}375, \\dots$ grandissent en changeant de signe, donc $(w_n)$ n'a pas de limite."
+      ],
+      "reponse": "a) $u_n \\to +\\infty$ ; b) $v_n \\to 0$ ; c) $(w_n)$ n'a pas de limite."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "suites-recurrentes",
+      "enonce": "Soit $(u_n)$ définie par $u_0 = 1$ et, pour tout $n \\geq 0$, $u_{n+1} = 3u_n + 2$. a) Calculer $u_1$, $u_2$ et $u_3$. b) La suite semble-t-elle croissante ou décroissante ?",
+      "corrige": [
+        "a) On calcule de proche en proche : $u_1 = 3\\times 1 + 2 = 5$.",
+        "Puis $u_2 = 3\\times 5 + 2 = 17$, et $u_3 = 3\\times 17 + 2 = 53$.",
+        "b) Les termes $1, 5, 17, 53$ augmentent : la suite semble croissante. On peut le justifier par $u_{n+1} - u_n = (3u_n + 2) - u_n = 2u_n + 2 > 0$ tant que $u_n > 0$ (ce qui est le cas ici)."
+      ],
+      "reponse": "a) $u_1 = 5$, $u_2 = 17$, $u_3 = 53$. b) La suite est croissante."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Soit $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = 0{,}5\\,u_n + 4$. a) Déterminer le point fixe $\\ell$. b) Montrer que $v_n = u_n - \\ell$ est géométrique et donner son terme général. c) En déduire $u_n$ puis la limite de $(u_n)$.",
+      "corrige": [
+        "a) Le point fixe vérifie $\\ell = 0{,}5\\,\\ell + 4$, soit $\\ell(1 - 0{,}5) = 4$, donc $\\ell = \\dfrac{4}{0{,}5} = 8$.",
+        "b) On pose $v_n = u_n - 8$. Alors $v_{n+1} = u_{n+1} - 8 = (0{,}5\\,u_n + 4) - 8 = 0{,}5\\,u_n - 4 = 0{,}5(u_n - 8) = 0{,}5\\,v_n$. Donc $(v_n)$ est géométrique de raison $0{,}5$, avec $v_0 = u_0 - 8 = 1 - 8 = -7$. Ainsi $v_n = -7 \\times 0{,}5^{\\,n}$.",
+        "c) On revient à $u_n = v_n + 8 = -7 \\times 0{,}5^{\\,n} + 8$. Comme $|0{,}5| < 1$, on a $0{,}5^{\\,n} \\to 0$, donc $u_n \\to 8$."
+      ],
+      "reponse": "a) $\\ell = 8$ ; b) $v_n = -7 \\times 0{,}5^{\\,n}$ ; c) $u_n = -7 \\times 0{,}5^{\\,n} + 8$ et $u_n \\to 8$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer la limite de chacune des suites suivantes (pour $n \\geq 1$) : a) $u_n = 3 - \\dfrac{4}{n}$ ; b) $v_n = 2 + 5 \\times 0{,}6^{\\,n}$ ; c) $w_n = 4 \\times 1{,}5^{\\,n}$.",
+      "corrige": [
+        "a) Quand $n \\to +\\infty$, $\\dfrac{4}{n} \\to 0$, donc $u_n = 3 - \\dfrac{4}{n} \\to 3 - 0 = 3$. La suite converge vers $3$.",
+        "b) La raison $0{,}6$ vérifie $|q| < 1$, donc $0{,}6^{\\,n} \\to 0$ ; alors $5 \\times 0{,}6^{\\,n} \\to 0$ et $v_n = 2 + 5 \\times 0{,}6^{\\,n} \\to 2$.",
+        "c) La raison $1{,}5 > 1$, donc $1{,}5^{\\,n} \\to +\\infty$ ; par produit par la constante positive $4$, $w_n \\to +\\infty$."
+      ],
+      "reponse": "a) $u_n \\to 3$ ; b) $v_n \\to 2$ ; c) $w_n \\to +\\infty$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Un patient reçoit une première dose de $40$ mg d'un médicament. Chaque heure, l'organisme élimine $25\\%$ de la quantité présente, puis on réinjecte $15$ mg. On note $u_n$ la quantité (en mg) présente juste après la $n$-ième réinjection, avec $u_0 = 40$. a) Justifier que $u_{n+1} = 0{,}75\\,u_n + 15$. b) Déterminer le terme général $u_n$. c) Déterminer $\\lim\\limits_{n \\to +\\infty} u_n$ et interpréter.",
+      "corrige": [
+        "a) Éliminer $25\\%$ revient à conserver $75\\%$, soit multiplier par $0{,}75$ ; on ajoute ensuite les $15$ mg réinjectés. D'où $u_{n+1} = 0{,}75\\,u_n + 15$.",
+        "b) Point fixe : $\\ell = 0{,}75\\,\\ell + 15 \\iff \\ell(1 - 0{,}75) = 15 \\iff \\ell = \\dfrac{15}{0{,}25} = 60$. On pose $v_n = u_n - 60$ : c'est une suite géométrique de raison $0{,}75$, avec $v_0 = 40 - 60 = -20$, donc $v_n = -20 \\times 0{,}75^{\\,n}$.",
+        "On revient à $u_n = v_n + 60 = -20 \\times 0{,}75^{\\,n} + 60$.",
+        "c) Comme $|0{,}75| < 1$, on a $0{,}75^{\\,n} \\to 0$, donc $u_n \\to 60$. Interprétation : au fil des injections, la quantité de médicament se stabilise autour de $60$ mg (le « plateau » thérapeutique)."
+      ],
+      "reponse": "a) conservation de $75\\%$ + $15$ mg ; b) $u_n = -20 \\times 0{,}75^{\\,n} + 60$ ; c) $u_n \\to 60$ mg (stabilisation)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Un magazine compte $12\\,000$ abonnés. Chaque année, il perd $10\\%$ de ses abonnés mais en gagne $800$ nouveaux. On note $u_n$ le nombre d'abonnés l'année $n$, avec $u_0 = 12\\,000$. a) Exprimer $u_{n+1}$ en fonction de $u_n$. b) Déterminer le terme général $u_n$. c) La suite est-elle croissante ou décroissante ? Vers quelle valeur tend-elle ?",
+      "corrige": [
+        "a) Perdre $10\\%$ revient à conserver $90\\%$ (facteur $0{,}9$), puis on ajoute $800$ : $u_{n+1} = 0{,}9\\,u_n + 800$.",
+        "b) Point fixe : $\\ell = 0{,}9\\,\\ell + 800 \\iff \\ell(1 - 0{,}9) = 800 \\iff \\ell = \\dfrac{800}{0{,}1} = 8000$. On pose $v_n = u_n - 8000$, géométrique de raison $0{,}9$ avec $v_0 = 12\\,000 - 8000 = 4000$. Donc $v_n = 4000 \\times 0{,}9^{\\,n}$ et $u_n = 4000 \\times 0{,}9^{\\,n} + 8000$.",
+        "c) Comme $0 < 0{,}9 < 1$ et $v_0 = 4000 > 0$, la suite $v_n = 4000 \\times 0{,}9^{\\,n}$ est décroissante et positive ; donc $(u_n)$ est décroissante. Enfin $0{,}9^{\\,n} \\to 0$, donc $u_n \\to 8000$ : le nombre d'abonnés décroît et se stabilise autour de $8000$."
+      ],
+      "reponse": "a) $u_{n+1} = 0{,}9\\,u_n + 800$ ; b) $u_n = 4000 \\times 0{,}9^{\\,n} + 8000$ ; c) suite décroissante, $u_n \\to 8000$ abonnés."
+    }
+  ]
+}

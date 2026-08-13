@@ -1,8 +1,15 @@
 # Kamal Campus — État du contenu
 
-> Mis à jour le 2026-08-13. **Toutes les mathématiques du collège à la Terminale
-> spécialité sont couvertes** (6e → Terminale), en plus du périmètre v1 lycée.
-> 115 chapitres, 1150 questions.
+> Mis à jour le 2026-08-13. **Tout le programme de mathématiques ET de
+> physique-chimie, du collège à la Terminale (voie générale), est couvert** —
+> y compris les options de Terminale (maths complémentaires et expertes) et la
+> physique-chimie du collège au lycée. **160 chapitres, 1600 questions, 160 jeux
+> d'exercices.** Chaque chapitre a ses quatre briques quand elles s'appliquent :
+> Cours, Exercices, QCM, Outils. Sources : programmes officiels
+> (education.gouv.fr / eduscol) pour la physique-chimie et les options ; xm1math
+> (miroir) pour la spécialité maths de Terminale — à confronter aux PDF officiels.
+> Reste hors périmètre : la voie technologique (maths et PC des séries STMG,
+> STI2D/STL au-delà de l'existant, etc.).
 
 ## Couverture
 

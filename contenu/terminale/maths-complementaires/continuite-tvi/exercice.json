@@ -1,0 +1,96 @@
+{
+  "id": "tale-compl-math-continuite-tvi-exos",
+  "chapitre": "tale-compl-math-continuite-tvi",
+  "titre": "Exercices — Continuité et théorème des valeurs intermédiaires",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "Justifier que la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = \\dfrac{2x + 3}{x^2 + 1}$ est continue sur $\\mathbb{R}$.",
+      "corrige": [
+        "Le numérateur $x \\mapsto 2x + 3$ et le dénominateur $x \\mapsto x^2 + 1$ sont des polynômes : ils sont continus sur $\\mathbb{R}$.",
+        "Pour tout réel $x$, $x^2 + 1 \\geq 1 > 0$ : le dénominateur ne s'annule jamais.",
+        "Or un quotient de deux fonctions continues est continu en tout point où le dénominateur ne s'annule pas.",
+        "Donc $f$ est continue sur $\\mathbb{R}$. La continuité se justifie par une phrase, elle ne se calcule pas."
+      ],
+      "reponse": "$f$ est continue sur $\\mathbb{R}$ (quotient de fonctions continues dont le dénominateur ne s'annule jamais)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "tvi",
+      "enonce": "Soit $f(x) = x^3 + x - 5$, continue sur $[1\\,;2]$. Calculer $f(1)$ et $f(2)$, puis montrer que l'équation $f(x) = 0$ admet au moins une solution dans $[1\\,;2]$.",
+      "corrige": [
+        "$f(1) = 1^3 + 1 - 5 = 1 + 1 - 5 = -3$.",
+        "$f(2) = 2^3 + 2 - 5 = 8 + 2 - 5 = 5$.",
+        "$f$ est un polynôme, donc continue sur $[1\\,;2]$. De plus $0$ est compris entre $f(1) = -3$ et $f(2) = 5$ (les deux valeurs sont de signes contraires).",
+        "D'après le théorème des valeurs intermédiaires, il existe au moins un réel $c \\in [1\\,;2]$ tel que $f(c) = 0$."
+      ],
+      "reponse": "L'équation $f(x) = 0$ admet au moins une solution dans $[1\\,;2]$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "cas-strictement-monotone",
+      "enonce": "On considère la fonction $f$ définie sur $[0\\,;2]$ par $f(x) = x^3 + 3x - 4$. Montrer que l'équation $f(x) = 6$ admet une unique solution dans $[0\\,;2]$.",
+      "corrige": [
+        "$f$ est un polynôme : elle est continue (et dérivable) sur $[0\\,;2]$.",
+        "$f'(x) = 3x^2 + 3$. Pour tout $x$, $3x^2 \\geq 0$ donc $f'(x) \\geq 3 > 0$ : $f$ est strictement croissante sur $[0\\,;2]$.",
+        "Valeurs aux bornes : $f(0) = -4$ et $f(2) = 2^3 + 3\\times 2 - 4 = 8 + 6 - 4 = 10$.",
+        "Or $6$ est compris entre $-4$ et $10$. Comme $f$ est continue et strictement monotone, le cas strictement monotone du TVI donne une unique solution.",
+        "Donc l'équation $f(x) = 6$ admet une unique solution dans $[0\\,;2]$."
+      ],
+      "reponse": "L'équation admet une unique solution dans $[0\\,;2]$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "encadrement",
+      "enonce": "Soit $f(x) = x^3 + 2x - 2$. On admet que l'équation $f(x) = 0$ possède une unique solution $\\alpha$, et l'on constate que $f(0) = -2 < 0$ et $f(1) = 1 > 0$. À l'aide de deux étapes de dichotomie sur $[0\\,;1]$, donner un encadrement de $\\alpha$ d'amplitude $0{,}25$.",
+      "corrige": [
+        "Étape 1 : milieu $m = \\dfrac{0 + 1}{2} = 0{,}5$. On calcule $f(0{,}5) = 0{,}5^3 + 2\\times 0{,}5 - 2 = 0{,}125 + 1 - 2 = -0{,}875 < 0$.",
+        "Comme $f(0{,}5) < 0$ et $f(1) > 0$ sont de signes contraires, la solution est dans $[0{,}5\\,;1]$.",
+        "Étape 2 : milieu $m = \\dfrac{0{,}5 + 1}{2} = 0{,}75$. On calcule $f(0{,}75) = 0{,}75^3 + 2\\times 0{,}75 - 2 = 0{,}421875 + 1{,}5 - 2 = -0{,}078125 < 0$.",
+        "Comme $f(0{,}75) < 0$ et $f(1) > 0$, la solution est dans $[0{,}75\\,;1]$, dont l'amplitude vaut $1 - 0{,}75 = 0{,}25$."
+      ],
+      "reponse": "$0{,}75 < \\alpha < 1$ (encadrement d'amplitude $0{,}25$)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "decoupage",
+      "enonce": "Soit $f(x) = x^3 - 3x$ définie sur $[-2\\,;2]$. En étudiant les variations de $f$, déterminer le nombre de solutions de l'équation $f(x) = 1$ dans $[-2\\,;2]$.",
+      "corrige": [
+        "$f$ est un polynôme, donc continue et dérivable sur $[-2\\,;2]$. $f'(x) = 3x^2 - 3 = 3(x-1)(x+1)$, qui s'annule en $-1$ et $1$.",
+        "Signe de $f'$ : positif sur $[-2\\,;-1]$, négatif sur $[-1\\,;1]$, positif sur $[1\\,;2]$. Valeurs : $f(-2) = -2$, $f(-1) = 2$, $f(1) = -2$, $f(2) = 2$.",
+        "Sur $[-2\\,;-1]$, $f$ est continue et strictement croissante de $-2$ à $2$ ; $1$ est compris entre ces valeurs : une unique solution.",
+        "Sur $[-1\\,;1]$, $f$ est continue et strictement décroissante de $2$ à $-2$ ; $1$ est compris entre ces valeurs : une unique solution.",
+        "Sur $[1\\,;2]$, $f$ est continue et strictement croissante de $-2$ à $2$ ; $1$ est compris entre ces valeurs : une unique solution.",
+        "En additionnant les solutions des trois morceaux, l'équation $f(x) = 1$ admet $3$ solutions dans $[-2\\,;2]$."
+      ],
+      "reponse": "L'équation admet $3$ solutions dans $[-2\\,;2]$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f$ définie sur $\\mathbb{R}$ par $f(x) = x^3 + 3x^2 - 1$. Montrer que l'équation $f(x) = 0$ admet exactement une solution sur l'intervalle $[0\\,;+\\infty[$, puis en donner un encadrement d'amplitude $0{,}1$ par balayage.",
+      "corrige": [
+        "$f$ est un polynôme, donc continue et dérivable sur $[0\\,;+\\infty[$. $f'(x) = 3x^2 + 6x = 3x(x + 2)$.",
+        "Pour $x \\geq 0$, on a $3x \\geq 0$ et $x + 2 > 0$, donc $f'(x) \\geq 0$, et $f'(x) > 0$ pour $x > 0$ : $f$ est strictement croissante sur $[0\\,;+\\infty[$.",
+        "Valeurs / limites aux bornes : $f(0) = -1 < 0$ et $\\displaystyle\\lim_{x \\to +\\infty} f(x) = +\\infty$. Comme $0$ est compris entre $-1$ et $+\\infty$, et $f$ continue strictement croissante : le cas strictement monotone donne une unique solution $\\alpha \\in [0\\,;+\\infty[$.",
+        "Balayage au pas $0{,}1$ : $f(0{,}5) = 0{,}125 + 0{,}75 - 1 = -0{,}125 < 0$ et $f(0{,}6) = 0{,}216 + 1{,}08 - 1 = 0{,}296 > 0$.",
+        "$f$ change de signe entre $0{,}5$ et $0{,}6$ : donc $0{,}5 < \\alpha < 0{,}6$."
+      ],
+      "reponse": "L'équation admet une unique solution $\\alpha$ sur $[0\\,;+\\infty[$, avec $0{,}5 < \\alpha < 0{,}6$."
+    }
+  ]
+}

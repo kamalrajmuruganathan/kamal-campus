@@ -1,0 +1,90 @@
+{
+  "id": "tale-compl-math-lois-densite-temps-attente-exos",
+  "chapitre": "tale-compl-math-lois-densite-temps-attente",
+  "titre": "Exercices — Lois à densité : temps d'attente",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "loi-uniforme",
+      "enonce": "Une variable aléatoire $X$ suit la loi uniforme sur $[0\\,;30]$. **1.** Calculer $P(10 \\leqslant X \\leqslant 25)$. **2.** Donner l'espérance $E(X)$.",
+      "corrige": [
+        "1. Pour la loi uniforme sur $[a\\,;b]$, $P(c\\leqslant X\\leqslant d)=\\dfrac{d-c}{b-a}$. Ici $a=0$, $b=30$, $c=10$, $d=25$.",
+        "$P(10\\leqslant X\\leqslant 25)=\\dfrac{25-10}{30-0}=\\dfrac{15}{30}=\\dfrac12=0{,}5.$",
+        "2. L'espérance de la loi uniforme est le milieu de l'intervalle : $E(X)=\\dfrac{a+b}{2}=\\dfrac{0+30}{2}=15.$"
+      ],
+      "reponse": "$P(10\\leqslant X\\leqslant 25)=0{,}5$ et $E(X)=15.$"
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "loi-exponentielle",
+      "enonce": "Une variable aléatoire $X$ suit la loi exponentielle de paramètre $\\lambda=0{,}2$. **1.** Calculer $P(X>5)$. **2.** Calculer $P(X\\leqslant 10)$. On donnera les valeurs exactes puis une valeur approchée au millième.",
+      "corrige": [
+        "1. Pour la loi exponentielle, $P(X>t)=e^{-\\lambda t}$. Avec $\\lambda=0{,}2$ et $t=5$ : $P(X>5)=e^{-0{,}2\\times 5}=e^{-1}\\approx 0{,}368.$",
+        "2. On utilise $P(X\\leqslant t)=1-e^{-\\lambda t}$. Avec $t=10$ : $P(X\\leqslant 10)=1-e^{-0{,}2\\times 10}=1-e^{-2}.$",
+        "Valeur approchée : $1-e^{-2}\\approx 1-0{,}135=0{,}865.$"
+      ],
+      "reponse": "$P(X>5)=e^{-1}\\approx 0{,}368$ et $P(X\\leqslant 10)=1-e^{-2}\\approx 0{,}865.$"
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "modelisation-temps-attente",
+      "enonce": "Le temps d'attente $X$ (en minutes) avant d'être servi à un guichet suit une loi exponentielle de moyenne $5$ minutes. **1.** Déterminer le paramètre $\\lambda$. **2.** Calculer la probabilité d'attendre plus de $10$ minutes. **3.** Calculer $P(3\\leqslant X\\leqslant 8)$. (Valeurs approchées au millième.)",
+      "corrige": [
+        "1. La moyenne d'une loi exponentielle est $E(X)=\\dfrac{1}{\\lambda}$. Comme $E(X)=5$, on a $\\lambda=\\dfrac{1}{5}=0{,}2.$",
+        "2. $P(X>10)=e^{-\\lambda t}=e^{-0{,}2\\times 10}=e^{-2}\\approx 0{,}135.$",
+        "3. $P(3\\leqslant X\\leqslant 8)=\\displaystyle\\int_3^8 \\lambda e^{-\\lambda t}\\,dt=\\big[-e^{-\\lambda t}\\big]_3^8=e^{-0{,}2\\times 3}-e^{-0{,}2\\times 8}=e^{-0{,}6}-e^{-1{,}6}.$",
+        "Valeur approchée : $e^{-0{,}6}-e^{-1{,}6}\\approx 0{,}549-0{,}202=0{,}347.$"
+      ],
+      "reponse": "$\\lambda=0{,}2$ ; $P(X>10)=e^{-2}\\approx 0{,}135$ ; $P(3\\leqslant X\\leqslant 8)=e^{-0{,}6}-e^{-1{,}6}\\approx 0{,}347.$"
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "loi-a-densite",
+      "enonce": "Soit la fonction $f$ définie sur $[0\\,;1]$ par $f(x)=3x^2$. **1.** Vérifier que $f$ est une densité de probabilité sur $[0\\,;1]$. Une variable $X$ admet $f$ pour densité. **2.** Calculer $P(X\\leqslant 0{,}5)$. **3.** Calculer l'espérance $E(X)$.",
+      "corrige": [
+        "1. $f$ est continue et positive sur $[0\\,;1]$ (car $3x^2\\geqslant 0$). Il reste à vérifier que l'aire totale vaut $1$ : $\\displaystyle\\int_0^1 3x^2\\,dx=\\big[x^3\\big]_0^1=1-0=1.$ Donc $f$ est bien une densité.",
+        "2. $P(X\\leqslant 0{,}5)=\\displaystyle\\int_0^{0{,}5} 3x^2\\,dx=\\big[x^3\\big]_0^{0{,}5}=0{,}5^3-0=0{,}125.$",
+        "3. $E(X)=\\displaystyle\\int_0^1 x\\,f(x)\\,dx=\\int_0^1 x\\cdot 3x^2\\,dx=\\int_0^1 3x^3\\,dx=\\left[\\dfrac{3x^4}{4}\\right]_0^1=\\dfrac34.$"
+      ],
+      "reponse": "$f$ est une densité (aire $=1$) ; $P(X\\leqslant 0{,}5)=0{,}125$ ; $E(X)=\\dfrac34.$"
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "absence-de-memoire",
+      "enonce": "La durée de vie $X$ (en heures) d'un composant électronique suit une loi exponentielle de moyenne $500$ h. **1.** Démontrer que, pour tous $s,t\\geqslant 0$, $P_{X>s}(X>s+t)=P(X>t)$. **2.** Le composant fonctionne depuis déjà $300$ h. Quelle est la probabilité qu'il fonctionne encore au moins $200$ h ? Commenter.",
+      "corrige": [
+        "Moyenne $500$ h donne $\\lambda=\\dfrac{1}{500}=0{,}002.$",
+        "1. Comme $\\{X>s+t\\}\\subset\\{X>s\\}$, la probabilité conditionnelle vaut $P_{X>s}(X>s+t)=\\dfrac{P\\big((X>s+t)\\cap(X>s)\\big)}{P(X>s)}=\\dfrac{P(X>s+t)}{P(X>s)}.$",
+        "En remplaçant par $P(X>u)=e^{-\\lambda u}$ : $\\dfrac{e^{-\\lambda(s+t)}}{e^{-\\lambda s}}=e^{-\\lambda(s+t)+\\lambda s}=e^{-\\lambda t}=P(X>t).$ La propriété est démontrée.",
+        "2. On cherche $P_{X>300}(X>500)$, soit $s=300$ et $t=200$. Par la propriété, cela vaut $P(X>200)=e^{-0{,}002\\times 200}=e^{-0{,}4}\\approx 0{,}670.$",
+        "Commentaire : ce résultat ne dépend **pas** des $300$ h déjà écoulées. Le composant « ne vieillit pas » : sa probabilité de tenir $200$ h de plus est la même que celle d'un composant neuf de tenir $200$ h."
+      ],
+      "reponse": "$P_{X>s}(X>s+t)=P(X>t)$ ; la probabilité cherchée est $P(X>200)=e^{-0{,}4}\\approx 0{,}670$, indépendante du temps déjà écoulé."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "loi-exponentielle",
+      "enonce": "Le temps $X$ (en minutes) entre deux appels reçus par un standard suit une loi exponentielle de paramètre $\\lambda$ inconnu. On observe que la probabilité d'attendre plus de $10$ minutes est $0{,}3$, soit $P(X>10)=0{,}3$. **1.** Déterminer $\\lambda$ (valeur approchée au millième). **2.** En déduire le temps moyen entre deux appels. **3.** Calculer $P(X>20)$ sans utiliser la valeur approchée de $\\lambda$.",
+      "corrige": [
+        "1. $P(X>10)=e^{-10\\lambda}=0{,}3$. On passe au logarithme : $-10\\lambda=\\ln(0{,}3)$, d'où $\\lambda=-\\dfrac{\\ln(0{,}3)}{10}.$",
+        "Comme $\\ln(0{,}3)\\approx -1{,}204$, on obtient $\\lambda\\approx\\dfrac{1{,}204}{10}\\approx 0{,}120.$",
+        "2. Le temps moyen est $E(X)=\\dfrac{1}{\\lambda}=\\dfrac{-10}{\\ln(0{,}3)}\\approx\\dfrac{1}{0{,}120}\\approx 8{,}31$ minutes.",
+        "3. On écrit $P(X>20)=e^{-20\\lambda}=\\big(e^{-10\\lambda}\\big)^2=(0{,}3)^2=0{,}09.$ (On a utilisé $e^{-20\\lambda}=(e^{-10\\lambda})^2$, sans passer par la valeur approchée.)"
+      ],
+      "reponse": "$\\lambda=-\\dfrac{\\ln(0{,}3)}{10}\\approx 0{,}120$ ; temps moyen $\\approx 8{,}31$ min ; $P(X>20)=(0{,}3)^2=0{,}09.$"
+    }
+  ]
+}

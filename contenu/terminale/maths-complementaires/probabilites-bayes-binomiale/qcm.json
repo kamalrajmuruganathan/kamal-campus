@@ -1,0 +1,154 @@
+{
+  "id": "tale-compl-math-probabilites-bayes-binomiale-qcm",
+  "chapitre": "tale-compl-math-probabilites-bayes-binomiale",
+  "titre": "QCM — Probabilités : conditionnelles, Bayes et loi binomiale",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "conditionnelle",
+      "enonce": "Comment se définit la probabilité conditionnelle $P_A(B)$ de $B$ sachant $A$ (avec $P(A)\\neq 0$) ?",
+      "choix": [
+        "$P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$",
+        "$P_A(B)=\\dfrac{P(A\\cap B)}{P(B)}$",
+        "$P_A(B)=P(A)\\times P(B)$",
+        "$P_A(B)=\\dfrac{P(A)}{P(A\\cap B)}$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition, on divise l'intersection par la probabilité de l'événement qui **conditionne**, ici $A$ : $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}$. Le choix 2 divise par $P(B)$ (ce serait $P_B(A)$) : ne confonds pas l'événement sachant lequel on se place avec celui dont on cherche la probabilité."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "bernoulli",
+      "enonce": "Qu'est-ce qui caractérise une épreuve de Bernoulli ?",
+      "choix": [
+        "Elle a exactement deux issues : un succès et un échec",
+        "Elle a toujours trois issues possibles",
+        "Elle consiste à répéter $n$ fois la même expérience",
+        "Toutes ses issues sont équiprobables"
+      ],
+      "reponse": 0,
+      "explication": "Une épreuve de Bernoulli n'a que **deux** issues : succès (probabilité $p$) et échec (probabilité $1-p$). Répéter l'épreuve $n$ fois, c'est le **schéma** de Bernoulli, pas l'épreuve : ne confonds pas les deux."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "conditionnelle",
+      "enonce": "Dans une classe, $60\\,\\%$ des élèves font de l'anglais ($A$) et $24\\,\\%$ font anglais **et** espagnol ($A\\cap B$). Quelle est la probabilité qu'un angliciste fasse aussi espagnol ?",
+      "choix": [
+        "$0{,}24$",
+        "$0{,}4$",
+        "$0{,}6$",
+        "$0{,}144$"
+      ],
+      "reponse": 1,
+      "explication": "On cherche $P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}=\\dfrac{0{,}24}{0{,}60}=0{,}4$. Le choix $0{,}24$ est $P(A\\cap B)$ (pas conditionnel) ; le choix $0{,}144=0{,}6\\times0{,}24$ multiplie au lieu de diviser."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "La machine $A$ fabrique $70\\,\\%$ des pièces avec $2\\,\\%$ de défauts, la machine $B$ les $30\\,\\%$ restants avec $5\\,\\%$ de défauts. Quelle est la probabilité $P(D)$ qu'une pièce prise au hasard soit défectueuse ?",
+      "choix": [
+        "$0{,}07$",
+        "$0{,}035$",
+        "$0{,}029$",
+        "$0{,}0035$"
+      ],
+      "reponse": 2,
+      "explication": "Formule des probabilités totales sur la partition $A/B$ : $P(D)=0{,}70\\times0{,}02+0{,}30\\times0{,}05=0{,}014+0{,}015=0{,}029$. Le choix $0{,}035$ additionne les taux de défaut sans les pondérer par $P(A)$ et $P(B)$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "loi-binomiale",
+      "enonce": "Une pièce équilibrée est lancée $4$ fois. Soit $X$ le nombre de Piles, $X\\sim B(4\\,;\\,0{,}5)$. Combien vaut $P(X=2)$ ?",
+      "choix": [
+        "$\\dfrac{3}{8}$",
+        "$\\dfrac{1}{16}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X=2)=\\binom{4}{2}\\left(\\tfrac12\\right)^2\\left(\\tfrac12\\right)^2=6\\times\\tfrac{1}{16}=\\tfrac{3}{8}$. Le choix $\\tfrac{1}{16}$ **oublie le coefficient** $\\binom{4}{2}=6$ : c'est la probabilité d'un seul chemin, pas des six."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "esperance",
+      "enonce": "Sur une chaîne, chaque pièce est défectueuse avec la probabilité $0{,}02$. On en contrôle $200$ et on note $X$ le nombre de défectueuses, $X\\sim B(200\\,;\\,0{,}02)$. Quel est le nombre moyen de pièces défectueuses attendu ?",
+      "choix": [
+        "$0{,}02$",
+        "$4$",
+        "$40$",
+        "$100$"
+      ],
+      "reponse": 1,
+      "explication": "L'espérance d'une loi binomiale est $E(X)=np=200\\times0{,}02=4$. Le choix $40$ oublie une puissance de $10$ ($200\\times0{,}2$) ; le $100$ prendrait $p=0{,}5$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "bayes",
+      "enonce": "Un test est positif ($T$) dans $95\\,\\%$ des cas chez un malade : $P_M(T)=0{,}95$. Une personne est testée positive. Quelle expression donne la probabilité qu'elle soit **réellement malade** ?",
+      "choix": [
+        "$P_M(T)=0{,}95$",
+        "$P_T(M)=\\dfrac{P(M)\\,P_M(T)}{P(T)}$",
+        "$P(M\\cap T)=P(M)\\,P_M(T)$",
+        "$P_T(M)=\\dfrac{P(T)\\,P_M(T)}{P(M)}$"
+      ],
+      "reponse": 1,
+      "explication": "On cherche « malade **sachant** positif », soit $P_T(M)$, obtenu par la formule de Bayes $P_T(M)=\\dfrac{P(M)P_M(T)}{P(T)}$. Le choix 1 est l'inverse $P_M(T)$ (positif sachant malade) : confondre les deux conditionnements est l'erreur reine du chapitre."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "bayes",
+      "enonce": "Reprends les deux machines : $P(A)=0{,}70$, $P_A(D)=0{,}02$, $P(B)=0{,}30$, $P_B(D)=0{,}05$, et $P(D)=0{,}029$. Une pièce est défectueuse : quelle est la probabilité qu'elle vienne de la machine $B$ ?",
+      "choix": [
+        "$0{,}05$",
+        "$0{,}015$",
+        "$\\dfrac{0{,}015}{0{,}029}\\approx 0{,}52$",
+        "$\\dfrac{0{,}014}{0{,}029}\\approx 0{,}48$"
+      ],
+      "reponse": 2,
+      "explication": "Bayes : $P_D(B)=\\dfrac{P(B)P_B(D)}{P(D)}=\\dfrac{0{,}30\\times0{,}05}{0{,}029}=\\dfrac{0{,}015}{0{,}029}\\approx0{,}52$. Le choix $0{,}05$ est $P_B(D)$ (conditionnement inverse) ; le $0{,}015$ est $P(B\\cap D)$ non divisé par $P(D)$ ; le dernier donne $P_D(A)$, la machine $A$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "complementaire",
+      "enonce": "On lance $5$ fois un dé équilibré. Quelle est la probabilité d'obtenir **au moins un** $6$ ?",
+      "choix": [
+        "$1-\\left(\\dfrac{5}{6}\\right)^{5}$",
+        "$\\left(\\dfrac{1}{6}\\right)^{5}$",
+        "$5\\times\\dfrac{1}{6}$",
+        "$1-\\left(\\dfrac{1}{6}\\right)^{5}$"
+      ],
+      "reponse": 0,
+      "explication": "« Au moins un » passe par le complémentaire : $P(X\\geqslant1)=1-P(X=0)=1-\\left(\\tfrac{5}{6}\\right)^5$. Le choix 2 est « que des $6$ », le choix 3 est l'espérance $np$, le choix 4 soustrait la mauvaise probabilité (il faut $P(X=0)=(1-p)^n$, pas $p^n$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "intervalle",
+      "enonce": "$X$ suit une loi binomiale. Quelle expression donne $P(2\\leqslant X\\leqslant 5)$ à partir des probabilités cumulées ?",
+      "choix": [
+        "$P(X\\leqslant 5)-P(X\\leqslant 2)$",
+        "$P(X=5)-P(X=2)$",
+        "$P(X\\leqslant 5)-P(X\\leqslant 1)$",
+        "$P(X\\leqslant 4)-P(X\\leqslant 1)$"
+      ],
+      "reponse": 2,
+      "explication": "$P(k\\leqslant X\\leqslant k')=P(X\\leqslant k')-P(X\\leqslant k-1)$. Ici $k=2$, donc on retire $P(X\\leqslant 1)$, pas $P(X\\leqslant 2)$ : sinon on **perd le terme** $P(X=2)$, qui doit rester dans le compte."
+    }
+  ]
+}

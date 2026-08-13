@@ -1,0 +1,92 @@
+{
+  "id": "tale-compl-math-derivation-convexite-exos",
+  "chapitre": "tale-compl-math-derivation-convexite",
+  "titre": "Exercices — Dérivation, variations et convexité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "derivee-variations",
+      "enonce": "Soit $f(x) = x^2 - 6x + 5$ sur $\\mathbb{R}$. Calculer $f'(x)$, étudier son signe et dresser le tableau de variations de $f$.",
+      "corrige": [
+        "On dérive : $f'(x) = 2x - 6 = 2(x-3)$.",
+        "Signe de $f'$ : $f'(x) < 0$ pour $x < 3$ et $f'(x) > 0$ pour $x > 3$.",
+        "Donc $f$ est décroissante sur $]-\\infty\\,;3]$ puis croissante sur $[3\\,;+\\infty[$.",
+        "En $x = 3$, $f'$ passe de $-$ à $+$ : minimum, de valeur $f(3) = 9 - 18 + 5 = -4$."
+      ],
+      "reponse": "$f'(x) = 2(x-3)$ ; $f$ décroît sur $]-\\infty\\,;3]$, croît sur $[3\\,;+\\infty[$ ; minimum $f(3) = -4$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "convexite",
+      "enonce": "Soit $f(x) = x^3 - 3x^2 + 2$. Déterminer $f''(x)$ et en déduire les intervalles où $f$ est convexe et ceux où elle est concave.",
+      "corrige": [
+        "On dérive une première fois : $f'(x) = 3x^2 - 6x$.",
+        "On dérive une seconde fois : $f''(x) = 6x - 6 = 6(x-1)$.",
+        "Signe de $f''$ : $f''(x) < 0$ pour $x < 1$ (concave) et $f''(x) > 0$ pour $x > 1$ (convexe).",
+        "Donc $f$ est concave sur $]-\\infty\\,;1]$ et convexe sur $[1\\,;+\\infty[$."
+      ],
+      "reponse": "$f''(x) = 6(x-1)$ ; $f$ est concave sur $]-\\infty\\,;1]$ et convexe sur $[1\\,;+\\infty[$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "point-inflexion",
+      "enonce": "Soit $f(x) = x^4 - 6x^2 + 1$. Déterminer les points d'inflexion de sa courbe.",
+      "corrige": [
+        "On calcule les deux dérivées : $f'(x) = 4x^3 - 12x$, puis $f''(x) = 12x^2 - 12$.",
+        "On factorise : $f''(x) = 12(x^2 - 1) = 12(x-1)(x+1)$.",
+        "$f''$ s'annule en $x = -1$ et $x = 1$. Signe : $f''(x) > 0$ pour $x < -1$, $f''(x) < 0$ pour $-1 < x < 1$, $f''(x) > 0$ pour $x > 1$.",
+        "En $x = -1$ et $x = 1$, $f''$ change de signe : deux points d'inflexion. On calcule $f(-1) = 1 - 6 + 1 = -4$ et $f(1) = 1 - 6 + 1 = -4$.",
+        "Les points d'inflexion sont $(-1\\,;-4)$ et $(1\\,;-4)$."
+      ],
+      "reponse": "Deux points d'inflexion : $(-1\\,;-4)$ et $(1\\,;-4)$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "derivee-variations",
+      "enonce": "Soit $f(x) = (x - 2)\\,\\mathrm{e}^{x}$ sur $\\mathbb{R}$. Calculer $f'(x)$, puis étudier les variations de $f$ et préciser son extremum.",
+      "corrige": [
+        "C'est un produit $u v$ avec $u = x - 2$ et $v = \\mathrm{e}^{x}$, donc $u' = 1$ et $v' = \\mathrm{e}^{x}$.",
+        "On applique $(uv)' = u'v + uv'$ : $f'(x) = 1\\cdot \\mathrm{e}^{x} + (x-2)\\,\\mathrm{e}^{x} = (x - 1)\\,\\mathrm{e}^{x}$.",
+        "Comme $\\mathrm{e}^{x} > 0$, le signe de $f'$ est celui de $x - 1$ : négatif pour $x < 1$, positif pour $x > 1$.",
+        "Donc $f$ décroît sur $]-\\infty\\,;1]$ puis croît sur $[1\\,;+\\infty[$. En $x = 1$, $f'$ passe de $-$ à $+$ : minimum, de valeur $f(1) = (1-2)\\,\\mathrm{e}^{1} = -\\mathrm{e}$."
+      ],
+      "reponse": "$f'(x) = (x-1)\\,\\mathrm{e}^{x}$ ; $f$ décroît sur $]-\\infty\\,;1]$, croît sur $[1\\,;+\\infty[$ ; minimum $f(1) = -\\mathrm{e}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "inegalite-tangente",
+      "enonce": "On veut démontrer que $\\mathrm{e}^{x} \\geqslant \\mathrm{e}\\,x$ pour tout réel $x$. On pose $f(x) = \\mathrm{e}^{x}$. a) Justifier que $f$ est convexe sur $\\mathbb{R}$. b) Déterminer l'équation de la tangente à la courbe de $f$ au point d'abscisse $1$. c) Conclure.",
+      "corrige": [
+        "a) On a $f'(x) = \\mathrm{e}^{x}$ puis $f''(x) = \\mathrm{e}^{x}$. Comme $\\mathrm{e}^{x} > 0$ pour tout $x$, on a $f'' > 0$ : $f$ est convexe sur $\\mathbb{R}$.",
+        "b) La tangente au point d'abscisse $1$ a pour équation $y = f'(1)(x-1) + f(1)$. Avec $f(1) = \\mathrm{e}$ et $f'(1) = \\mathrm{e}$ : $y = \\mathrm{e}(x-1) + \\mathrm{e} = \\mathrm{e}\\,x$.",
+        "c) Une fonction convexe est située au-dessus de toutes ses tangentes. Donc pour tout réel $x$, $\\mathrm{e}^{x} \\geqslant \\mathrm{e}\\,x$, avec égalité en $x = 1$."
+      ],
+      "reponse": "$f$ est convexe car $f'' = \\mathrm{e}^x > 0$ ; la tangente en $1$ est $y = \\mathrm{e}\\,x$ ; comme la courbe convexe est au-dessus de sa tangente, $\\mathrm{e}^{x} \\geqslant \\mathrm{e}\\,x$ pour tout réel $x$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "convexite",
+      "enonce": "Soit $m$ un réel et $f_m(x) = x^3 + m x^2$. Pour quelles valeurs de $m$ la fonction $f_m$ est-elle convexe sur l'intervalle $[0\\,;+\\infty[$ ?",
+      "corrige": [
+        "On calcule les dérivées : $f_m'(x) = 3x^2 + 2mx$, puis $f_m''(x) = 6x + 2m$.",
+        "$f_m$ est convexe sur $[0\\,;+\\infty[$ si et seulement si $f_m''(x) \\geqslant 0$ pour tout $x \\geqslant 0$, c'est-à-dire $6x + 2m \\geqslant 0$ sur $[0\\,;+\\infty[$.",
+        "La fonction $x \\mapsto 6x + 2m$ est croissante : sur $[0\\,;+\\infty[$ elle atteint sa plus petite valeur en $x = 0$, où elle vaut $2m$.",
+        "La condition « $6x + 2m \\geqslant 0$ pour tout $x \\geqslant 0$ » équivaut donc à $2m \\geqslant 0$, soit $m \\geqslant 0$."
+      ],
+      "reponse": "$f_m$ est convexe sur $[0\\,;+\\infty[$ si et seulement si $m \\geqslant 0$."
+    }
+  ]
+}

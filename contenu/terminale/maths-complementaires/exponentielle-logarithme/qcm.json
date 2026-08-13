@@ -1,0 +1,139 @@
+{
+  "id": "tale-compl-math-exponentielle-logarithme-qcm",
+  "chapitre": "tale-compl-math-exponentielle-logarithme",
+  "titre": "QCM — Fonctions logarithme et exponentielle",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quel est l'ensemble de définition de la fonction $\\ln$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$[0\\,;+\\infty[$",
+        "$]0\\,;+\\infty[$",
+        "$\\mathbb{R}\\setminus\\{0\\}$"
+      ],
+      "reponse": 2,
+      "explication": "$\\ln$ est la réciproque de $\\exp$, qui prend ses valeurs dans $]0\\,;+\\infty[$ : on ne peut calculer $\\ln x$ que pour $x>0$, strictement. Le piège est d'inclure $0$, or $\\ln 0$ n'existe pas."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "rappels-exponentielle",
+      "enonce": "Pour tous réels $a$ et $b$, $e^{a}\\times e^{b}$ est égal à :",
+      "choix": ["$e^{ab}$", "$e^{a+b}$", "$e^{a}+e^{b}$", "$2e^{a+b}$"],
+      "reponse": 1,
+      "explication": "Dans un produit d'exponentielles, les exposants s'ajoutent : $e^{a}\\times e^{b}=e^{a+b}$. Le piège du choix 1 est de multiplier les exposants au lieu de les additionner."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "En utilisant les propriétés du logarithme, $\\ln 20$ est égal à :",
+      "choix": [
+        "$2\\ln 2 + \\ln 5$",
+        "$\\ln 2 \\times \\ln 10$",
+        "$\\ln 4 + \\ln 16$",
+        "$4\\ln 5$"
+      ],
+      "reponse": 0,
+      "explication": "$20 = 2^{2}\\times 5$, donc $\\ln 20 = \\ln(2^{2}) + \\ln 5 = 2\\ln 2 + \\ln 5$. Le piège du choix 2 : le logarithme d'un produit est une somme, jamais un produit de logarithmes."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "L'expression $\\ln(a^{4})$ (avec $a>0$) est égale à :",
+      "choix": [
+        "$4 + \\ln a$",
+        "$(\\ln a)^{4}$",
+        "$4\\ln a$",
+        "$\\ln 4 \\times \\ln a$"
+      ],
+      "reponse": 2,
+      "explication": "$\\ln(a^{n}) = n\\ln a$ : l'exposant descend comme coefficient devant le $\\ln$. Le piège du choix 2 est de mettre le $\\ln$ à la puissance $4$ au lieu de le multiplier par $4$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "rappels-exponentielle",
+      "enonce": "Quelle est la dérivée de la fonction $f(x) = e^{-3x}$ ?",
+      "choix": [
+        "$e^{-3x}$",
+        "$-3e^{-3x}$",
+        "$-3x\\,e^{-3x}$",
+        "$-\\dfrac{1}{3}e^{-3x}$"
+      ],
+      "reponse": 1,
+      "explication": "$f$ est de la forme $e^{u}$ avec $u=-3x$, donc $f'=u'e^{u}=-3e^{-3x}$. Le piège du choix 1 est d'oublier le facteur $u'=-3$ apporté par la dérivée de la composée."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "limites",
+      "enonce": "Que vaut $\\lim\\limits_{x\\to -\\infty} e^{x}$ ?",
+      "choix": ["$-\\infty$", "$0$", "$1$", "$+\\infty$"],
+      "reponse": 1,
+      "explication": "En $-\\infty$, $e^{x}$ tend vers $0$ par valeurs positives : la droite $y=0$ est asymptote horizontale. Le piège du choix 1 est de croire que $e^{x}$ devient négatif, or l'exponentielle est toujours strictement positive."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "equations",
+      "enonce": "Quelle est la solution de l'équation $\\ln(3x-4) = \\ln(x+2)$ ?",
+      "choix": [
+        "$x=3$",
+        "$x=-3$",
+        "Aucune solution",
+        "$x=\\dfrac{1}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "Existence : $3x-4>0$ et $x+2>0$, soit $x>\\dfrac{4}{3}$. On identifie : $3x-4=x+2\\Rightarrow x=3$. Comme $3>\\dfrac{4}{3}$, la solution convient. Le piège : oublier de vérifier la condition d'existence."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "equations",
+      "enonce": "Quelle est la solution de l'équation $e^{2x} = 7$ ?",
+      "choix": [
+        "$x = \\dfrac{7}{2}$",
+        "$x = 2\\ln 7$",
+        "$x = \\dfrac{\\ln 7}{2}$",
+        "$x = \\ln 7 - 2$"
+      ],
+      "reponse": 2,
+      "explication": "On applique $\\ln$ (réciproque de $\\exp$) : $\\ln(e^{2x}) = 2x = \\ln 7$, donc $x = \\dfrac{\\ln 7}{2}$. Le piège du choix 2 : multiplier par $2$ au lieu de diviser, en oubliant que le $2$ multipliait l'inconnue dans l'exposant."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "inequations",
+      "enonce": "Quel est l'ensemble des solutions de l'inéquation $\\ln x \\leqslant 2$ ?",
+      "choix": [
+        "$]-\\infty\\,;e^{2}]$",
+        "$[e^{2}\\,;+\\infty[$",
+        "$]0\\,;e^{2}]$",
+        "$]0\\,;2]$"
+      ],
+      "reponse": 2,
+      "explication": "$\\ln$ est strictement croissante, elle conserve le sens : $\\ln x \\leqslant 2 = \\ln(e^{2}) \\iff x \\leqslant e^{2}$. Il faut aussi $x>0$ (existence), d'où $]0\\,;e^{2}]$. Le piège du choix 1 : oublier la condition $x>0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "croissances-comparees",
+      "enonce": "Que vaut $\\lim\\limits_{x\\to +\\infty} \\dfrac{e^{x}}{x^{2}}$ ?",
+      "choix": ["$0$", "$1$", "$+\\infty$", "$-\\infty$"],
+      "reponse": 2,
+      "explication": "Par croissance comparée, l'exponentielle l'emporte sur toute puissance de $x$ : $\\dfrac{e^{x}}{x^{2}} \\to +\\infty$. Le piège est de conclure « $\\dfrac{+\\infty}{+\\infty}$ donc $1$ » : c'est une forme indéterminée que la règle des croissances comparées tranche en faveur de l'exponentielle."
+    }
+  ]
+}

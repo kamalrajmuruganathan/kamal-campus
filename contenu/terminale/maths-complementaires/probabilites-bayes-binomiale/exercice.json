@@ -1,0 +1,95 @@
+{
+  "id": "tale-compl-math-probabilites-bayes-binomiale-exos",
+  "chapitre": "tale-compl-math-probabilites-bayes-binomiale",
+  "titre": "Exercices — Probabilités : conditionnelles, Bayes et loi binomiale",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "Dans un immeuble de $200$ habitants, $80$ possèdent un chien (événement $A$) et, parmi tous les habitants, $30$ possèdent à la fois un chien et un chat (événement $A \\cap B$). On choisit un habitant au hasard. Calculer la probabilité qu'il possède un chat **sachant** qu'il possède un chien.",
+      "corrige": [
+        "On cherche la probabilité conditionnelle $P_A(B) = \\dfrac{P(A \\cap B)}{P(A)}$.",
+        "On calcule les deux probabilités à partir des effectifs : $P(A) = \\dfrac{80}{200} = 0{,}4$ et $P(A \\cap B) = \\dfrac{30}{200} = 0{,}15$.",
+        "Donc $P_A(B) = \\dfrac{0{,}15}{0{,}4} = 0{,}375$.",
+        "On pouvait aussi raisonner directement sur les effectifs : parmi les $80$ propriétaires de chien, $30$ ont un chat, soit $\\dfrac{30}{80} = 0{,}375$."
+      ],
+      "reponse": "$P_A(B) = \\dfrac{30}{80} = 0{,}375$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "loi-binomiale",
+      "enonce": "Un basketteur réussit chacun de ses lancers francs avec la probabilité $0{,}4$, indépendamment les uns des autres. Il tente $5$ lancers. On note $X$ le nombre de lancers réussis, de sorte que $X \\sim B(5\\,;\\,0{,}4)$. Calculer $P(X = 2)$.",
+      "corrige": [
+        "On applique la formule $P(X = k) = \\dbinom{n}{k}\\,p^k\\,(1-p)^{n-k}$ avec $n = 5$, $p = 0{,}4$ et $k = 2$.",
+        "Le coefficient binomial vaut $\\dbinom{5}{2} = \\dfrac{5 \\times 4}{2} = 10$ : c'est le nombre de façons de placer les $2$ réussites parmi les $5$ lancers.",
+        "On calcule les puissances : $p^2 = 0{,}4^2 = 0{,}16$ et $(1-p)^3 = 0{,}6^3 = 0{,}216$.",
+        "Donc $P(X = 2) = 10 \\times 0{,}16 \\times 0{,}216 = 0{,}3456$."
+      ],
+      "reponse": "$P(X = 2) = 0{,}3456$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "Une usine possède deux machines. La machine $A$ fabrique $70\\,\\%$ des pièces, dont $2\\,\\%$ sont défectueuses ; la machine $B$ fabrique les $30\\,\\%$ restants, dont $5\\,\\%$ sont défectueuses. On prélève une pièce au hasard et on note $D$ l'événement « la pièce est défectueuse ». **1.** Calculer la probabilité $P(D)$. **2.** Une pièce prélevée est défectueuse : quelle est la probabilité qu'elle provienne de la machine $A$ ?",
+      "corrige": [
+        "On traduit l'énoncé par un arbre : $P(A) = 0{,}70$, $P_A(D) = 0{,}02$, $P(B) = 0{,}30$, $P_B(D) = 0{,}05$. Les événements $A$ et $B$ forment une partition (une pièce vient d'une machine ou de l'autre).",
+        "**1.** Formule des probabilités totales : $P(D) = P(A)P_A(D) + P(B)P_B(D) = 0{,}70 \\times 0{,}02 + 0{,}30 \\times 0{,}05$.",
+        "On calcule chaque chemin : $0{,}70 \\times 0{,}02 = 0{,}014$ et $0{,}30 \\times 0{,}05 = 0{,}015$, donc $P(D) = 0{,}014 + 0{,}015 = 0{,}029$.",
+        "**2.** On cherche $P_D(A)$ : c'est le conditionnement inverse, on applique la formule de Bayes $P_D(A) = \\dfrac{P(A \\cap D)}{P(D)} = \\dfrac{0{,}014}{0{,}029}$.",
+        "Donc $P_D(A) = \\dfrac{0{,}014}{0{,}029} \\approx 0{,}483$."
+      ],
+      "reponse": "$P(D) = 0{,}029$ ; $P_D(A) = \\dfrac{0{,}014}{0{,}029} \\approx 0{,}483$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "Sur une chaîne de production, chaque pièce est défectueuse avec la probabilité $0{,}05$, indépendamment des autres. On prélève un lot de $20$ pièces et on note $X$ le nombre de pièces défectueuses. **1.** Justifier que $X \\sim B(20\\,;\\,0{,}05)$. **2.** Calculer la probabilité qu'il y ait **au moins une** pièce défectueuse (valeur exacte puis approchée au millième).",
+      "corrige": [
+        "**1.** Chaque prélèvement est une épreuve de Bernoulli à deux issues (défectueuse / correcte), de succès « défectueuse » de probabilité $p = 0{,}05$. Les $20$ prélèvements sont identiques et indépendants : c'est un schéma de Bernoulli, donc $X \\sim B(20\\,;\\,0{,}05)$.",
+        "**2.** « Au moins une » est l'événement contraire de « aucune » : $P(X \\geqslant 1) = 1 - P(X = 0)$.",
+        "Or $P(X = 0) = (1 - p)^n = 0{,}95^{20}$ (aucun succès : $\\dbinom{20}{0} = 1$).",
+        "Donc $P(X \\geqslant 1) = 1 - 0{,}95^{20} \\approx 1 - 0{,}358 = 0{,}642$."
+      ],
+      "reponse": "$P(X \\geqslant 1) = 1 - 0{,}95^{20} \\approx 0{,}642$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "bayes",
+      "enonce": "Une maladie touche $2\\,\\%$ d'une population. Un test de dépistage est positif ($T$) dans $95\\,\\%$ des cas lorsque la personne est malade ($M$), et positif à tort dans $1\\,\\%$ des cas lorsqu'elle est saine ($\\overline{M}$). Une personne choisie au hasard est testée positive. **1.** Représenter la situation par un arbre et calculer $P(T)$. **2.** Calculer la probabilité qu'elle soit réellement malade, $P_T(M)$, arrondie au centième. **3.** Commenter.",
+      "corrige": [
+        "**1.** L'arbre a pour premier niveau $M$ / $\\overline{M}$ avec $P(M) = 0{,}02$ et $P(\\overline{M}) = 0{,}98$, puis $T$ / $\\overline{T}$ avec $P_M(T) = 0{,}95$ et $P_{\\overline{M}}(T) = 0{,}01$.",
+        "Par les probabilités totales : $P(T) = P(M)P_M(T) + P(\\overline{M})P_{\\overline{M}}(T) = 0{,}02 \\times 0{,}95 + 0{,}98 \\times 0{,}01$.",
+        "On calcule : $0{,}02 \\times 0{,}95 = 0{,}019$ et $0{,}98 \\times 0{,}01 = 0{,}0098$, donc $P(T) = 0{,}019 + 0{,}0098 = 0{,}0288$.",
+        "**2.** Formule de Bayes : $P_T(M) = \\dfrac{P(M)P_M(T)}{P(T)} = \\dfrac{0{,}019}{0{,}0288} \\approx 0{,}66$.",
+        "**3.** Malgré un test fiable à $95\\,\\%$, une personne positive n'a qu'environ $66\\,\\%$ de risque d'être malade : la maladie étant rare, les nombreux faux positifs issus des personnes saines pèsent lourd. Il ne faut pas confondre $P_M(T) = 0{,}95$ et $P_T(M) \\approx 0{,}66$."
+      ],
+      "reponse": "$P(T) = 0{,}0288$ ; $P_T(M) = \\dfrac{0{,}019}{0{,}0288} \\approx 0{,}66$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Un questionnaire comporte $4$ questions indépendantes de type « vrai / faux ». Un élève répond entièrement au hasard : à chaque question il a une chance sur deux d'avoir juste. On note $X$ le nombre de bonnes réponses. **1.** Justifier que $X \\sim B(4\\,;\\,0{,}5)$ et donner le nombre moyen de bonnes réponses. **2.** Calculer $P(X = 4)$. **3.** L'élève réussit le questionnaire s'il obtient **au moins $3$** bonnes réponses. Calculer cette probabilité.",
+      "corrige": [
+        "**1.** Chaque question est une épreuve de Bernoulli à deux issues (juste / faux), de succès « bonne réponse » de probabilité $p = 0{,}5$. Les $4$ questions sont indépendantes et identiques : $X \\sim B(4\\,;\\,0{,}5)$. Le nombre moyen de bonnes réponses est l'espérance $E(X) = np = 4 \\times 0{,}5 = 2$.",
+        "**2.** $P(X = 4) = \\dbinom{4}{4}(0{,}5)^4(0{,}5)^0 = 1 \\times \\dfrac{1}{16} = \\dfrac{1}{16} = 0{,}0625$ (n'obtenir que des bonnes réponses).",
+        "**3.** « Au moins $3$ » signifie $X = 3$ ou $X = 4$ : $P(X \\geqslant 3) = P(X = 3) + P(X = 4)$.",
+        "$P(X = 3) = \\dbinom{4}{3}(0{,}5)^3(0{,}5)^1 = 4 \\times \\dfrac{1}{16} = \\dfrac{4}{16}$, et $P(X = 4) = \\dfrac{1}{16}$.",
+        "Donc $P(X \\geqslant 3) = \\dfrac{4}{16} + \\dfrac{1}{16} = \\dfrac{5}{16} = 0{,}3125$."
+      ],
+      "reponse": "$X \\sim B(4\\,;\\,0{,}5)$, $E(X) = 2$ ; $P(X = 4) = \\dfrac{1}{16}$ ; $P(X \\geqslant 3) = \\dfrac{5}{16} = 0{,}3125$."
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "tale-exp-math-graphes-matrices-qcm",
+  "chapitre": "tale-exp-math-graphes-matrices",
+  "titre": "QCM — Graphes et matrices",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-expertes",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "graphes",
+      "enonce": "Un graphe possède $5$ sommets et $6$ arêtes. Quel est son ordre ?",
+      "choix": ["$6$", "$5$", "$11$", "$30$"],
+      "reponse": 1,
+      "explication": "L'ordre d'un graphe est son **nombre de sommets**, ici $5$. Le piège du choix 1 est de compter les arêtes ; celui du choix 3, de les additionner."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "graphes",
+      "enonce": "Quelle est la longueur de la chaîne $A - B - C - D$ ?",
+      "choix": ["$4$", "$3$", "$2$", "$6$"],
+      "reponse": 1,
+      "explication": "La longueur d'une chaîne est son **nombre d'arêtes** : $A\\!-\\!B$, $B\\!-\\!C$, $C\\!-\\!D$, soit $3$. Le piège du choix 1 est de compter les sommets ($4$) au lieu des arêtes."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "graphes",
+      "enonce": "Dans un graphe comportant $7$ arêtes, que vaut la somme des degrés de tous les sommets ?",
+      "choix": ["$7$", "$14$", "$49$", "$3{,}5$"],
+      "reponse": 1,
+      "explication": "Théorème des degrés : $\\sum \\deg(S) = 2\\times(\\text{nb d'arêtes}) = 2\\times 7 = 14$. Le piège du choix 1 est d'oublier le facteur $2$ (chaque arête compte pour deux extrémités)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "matrices",
+      "enonce": "Pour deux matrices carrées $A$ et $B$ de même taille, quelle affirmation est vraie **en général** ?",
+      "choix": [
+        "$AB = BA$",
+        "$AB \\neq BA$ (le produit n'est pas commutatif)",
+        "$A + B \\neq B + A$",
+        "$AB = 0$ implique $A = 0$ ou $B = 0$"
+      ],
+      "reponse": 1,
+      "explication": "Le produit matriciel **n'est pas commutatif** : en général $AB\\neq BA$. Le choix 2 (l'addition) est faux : la somme, elle, est commutative. Le choix 3 est faux : un produit peut être nul sans qu'un facteur le soit."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "matrices",
+      "enonce": "Quelle est l'inverse de $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 1 & -1 \\\\ -1 & 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
+        "$\\begin{pmatrix} \\tfrac12 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 2 \\end{pmatrix}$"
+      ],
+      "reponse": 0,
+      "explication": "$ad-bc = 2\\times1 - 1\\times1 = 1 \\neq 0$, donc $A^{-1} = \\dfrac{1}{1}\\begin{pmatrix} 1 & -1 \\\\ -1 & 2\\end{pmatrix}$. Le piège du choix 3 est d'inverser chaque coefficient ; celui du choix 4, d'oublier les signes $-$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "adjacence",
+      "enonce": "$M$ est la matrice d'adjacence d'un graphe. Que représente le coefficient situé ligne $i$, colonne $j$ de $M^{3}$ ?",
+      "choix": [
+        "le nombre d'arêtes entre $i$ et $j$",
+        "le degré du sommet $i$",
+        "le nombre de chemins de longueur $3$ de $i$ vers $j$",
+        "la distance entre $i$ et $j$"
+      ],
+      "reponse": 2,
+      "explication": "$(M^{k})_{ij}$ compte les **chemins de longueur exactement $k$** de $i$ vers $j$ ; ici $k=3$. Le choix 1 correspond à $M$ elle-même ($M^{1}$) : c'est le piège de confondre la puissance $k$ avec la longueur $1$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "adjacence",
+      "enonce": "Dans le graphe complet à $3$ sommets (un triangle, chaque paire reliée), combien y a-t-il de chemins de longueur $2$ reliant un sommet à lui-même ?",
+      "choix": ["$0$", "$1$", "$2$", "$3$"],
+      "reponse": 2,
+      "explication": "La matrice d'adjacence est $M=\\begin{pmatrix} 0&1&1\\\\1&0&1\\\\1&1&0\\end{pmatrix}$ et $M^{2}$ a des $2$ sur la diagonale : d'un sommet on repart et revient par l'un des **deux** autres. Le piège ($0$) vient de croire qu'un chemin ne peut pas revenir à son point de départ."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "markov",
+      "enonce": "Pour la matrice de transition $P = \\begin{pmatrix} 0{,}8 & 0{,}2 \\\\ 0{,}5 & 0{,}5 \\end{pmatrix}$, quelle est la distribution invariante $\\pi = (\\,x\\ \\ y\\,)$ ?",
+      "choix": [
+        "$\\left(\\tfrac12\\ \\ \\tfrac12\\right)$",
+        "$\\left(\\tfrac{5}{7}\\ \\ \\tfrac{2}{7}\\right)$",
+        "$\\left(\\tfrac{2}{7}\\ \\ \\tfrac{5}{7}\\right)$",
+        "$\\left(0{,}8\\ \\ 0{,}2\\right)$"
+      ],
+      "reponse": 1,
+      "explication": "On résout $x = 0{,}8x + 0{,}5y$ avec $x+y=1$ : $0{,}2x = 0{,}5(1-x)$, d'où $0{,}7x = 0{,}5$, $x=\\tfrac{5}{7}$, $y=\\tfrac{2}{7}$. Le piège du choix 4 est de prendre la première ligne de $P$ pour la distribution invariante."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "markov",
+      "enonce": "Quelle propriété caractérise **toujours** une matrice de transition $P$ d'une chaîne de Markov ?",
+      "choix": [
+        "la somme des coefficients de chaque colonne vaut $1$",
+        "la somme de tous les coefficients vaut $1$",
+        "la somme des coefficients de chaque ligne vaut $1$",
+        "les coefficients diagonaux valent $1$"
+      ],
+      "reponse": 2,
+      "explication": "Chaque **ligne** décrit les probabilités de quitter un état vers tous les états : elle somme à $1$. Le piège du choix 1 (colonnes) vient d'une convention transposée — ici la distribution est une ligne et l'évolution s'écrit $\\pi_{n+1}=\\pi_n P$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "markov",
+      "enonce": "Avec $\\pi_0 = (\\,1\\ \\ 0\\,)$ et $P = \\begin{pmatrix} 0{,}7 & 0{,}3 \\\\ 0{,}4 & 0{,}6 \\end{pmatrix}$, que vaut la distribution $\\pi_2$ après deux étapes ?",
+      "choix": [
+        "$(\\,0{,}7\\ \\ 0{,}3\\,)$",
+        "$(\\,0{,}61\\ \\ 0{,}39\\,)$",
+        "$(\\,0{,}49\\ \\ 0{,}51\\,)$",
+        "$(\\,0{,}55\\ \\ 0{,}45\\,)$"
+      ],
+      "reponse": 1,
+      "explication": "$\\pi_1 = \\pi_0 P = (0{,}7\\ \\ 0{,}3)$, puis $\\pi_2 = \\pi_1 P = (0{,}7\\times0{,}7 + 0{,}3\\times0{,}4\\ \\ ;\\ 0{,}7\\times0{,}3 + 0{,}3\\times0{,}6) = (0{,}61\\ \\ 0{,}39)$. Le piège du choix 1 est de s'arrêter à $\\pi_1$ (une seule étape au lieu de deux)."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "id": "tale-compl-math-suites-evolution-qcm",
+  "chapitre": "tale-compl-math-suites-evolution",
+  "titre": "QCM — Suites et modèles d'évolution",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "suites-recurrentes",
+      "enonce": "Soit $(u_n)$ définie par $u_0 = 3$ et $u_{n+1} = 2u_n - 1$. Que vaut $u_2$ ?",
+      "choix": [
+        "$5$",
+        "$9$",
+        "$11$",
+        "$17$"
+      ],
+      "reponse": 1,
+      "explication": "On calcule de proche en proche : $u_1 = 2\\times 3 - 1 = 5$, puis $u_2 = 2\\times 5 - 1 = 9$. Le piège est de s'arrêter à $u_1 = 5$, ou de calculer un rang de trop ($u_3 = 17$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "suites-geometriques",
+      "enonce": "$(u_n)$ est géométrique de premier terme $u_0 = 5$ et de raison $q = 2$. Quel est son terme général ?",
+      "choix": [
+        "$u_n = 2 \\times 5^{\\,n}$",
+        "$u_n = 5 + 2^{\\,n}$",
+        "$u_n = 5 \\times 2^{\\,n}$",
+        "$u_n = 5 \\times 2n$"
+      ],
+      "reponse": 2,
+      "explication": "Le terme général d'une suite géométrique est $u_n = u_0 \\times q^{\\,n} = 5 \\times 2^{\\,n}$. Le piège est d'intervertir $u_0$ et $q$, ou d'écrire $2n$ au lieu de $2^{\\,n}$ (ça, ce serait arithmétique)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "limites",
+      "enonce": "Quelle est la limite de la suite $u_n = 0{,}8^{\\,n}$ ?",
+      "choix": [
+        "$0$",
+        "$0{,}8$",
+        "$+\\infty$",
+        "Elle n'a pas de limite"
+      ],
+      "reponse": 0,
+      "explication": "Pour $q^{\\,n}$ avec $|q| < 1$, la limite est $0$. Ici $q = 0{,}8$, donc $0{,}8^{\\,n} \\to 0$ : c'est le cas d'amortissement. Le piège est de confondre la raison $q$ avec la limite."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "limites",
+      "enonce": "Quelle est la limite de la suite de terme général $(-2)^{\\,n}$ ?",
+      "choix": [
+        "$+\\infty$",
+        "$0$",
+        "$-\\infty$",
+        "Elle n'a pas de limite"
+      ],
+      "reponse": 3,
+      "explication": "Ici $q = -2 \\leq -1$ : les termes $1, -2, 4, -8, 16, \\dots$ grandissent en changeant de signe, donc la suite n'a pas de limite. On ne conclut $q^{\\,n} \\to 0$ que si $|q| < 1$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "arithmetico-geometrique",
+      "enonce": "On considère $u_{n+1} = 0{,}5\\,u_n + 3$. Quel est le point fixe $\\ell$ (la valeur qui vérifie $\\ell = 0{,}5\\,\\ell + 3$) ?",
+      "choix": [
+        "$3$",
+        "$1{,}5$",
+        "$6$",
+        "$0{,}5$"
+      ],
+      "reponse": 2,
+      "explication": "On résout $\\ell = 0{,}5\\,\\ell + 3$, soit $\\ell(1 - 0{,}5) = 3$, donc $\\ell = \\dfrac{3}{0{,}5} = 6$. Le piège est de prendre directement $b = 3$ comme point fixe, en oubliant de diviser par $1 - a$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "modelisation",
+      "enonce": "Une quantité diminue de $20\\%$ à chaque étape. Par quel coefficient multiplicateur passe-t-on d'un terme au suivant ?",
+      "choix": [
+        "$0{,}2$",
+        "$0{,}8$",
+        "$1{,}2$",
+        "$-0{,}2$"
+      ],
+      "reponse": 1,
+      "explication": "Le coefficient multiplicateur est $1 + \\dfrac{t}{100}$ avec $t = -20$, donc $1 - 0{,}2 = 0{,}8$. Une baisse de $20\\%$ conserve $80\\%$ de la quantité : on multiplie par $0{,}8$, pas par $0{,}2$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Soit $u_0 = 10$ et $u_{n+1} = 0{,}5\\,u_n + 3$ (point fixe $\\ell = 6$). Quel est le terme général $u_n$ ?",
+      "choix": [
+        "$u_n = 10 \\times 0{,}5^{\\,n}$",
+        "$u_n = 4 \\times 0{,}5^{\\,n} + 6$",
+        "$u_n = 6 \\times 0{,}5^{\\,n} + 4$",
+        "$u_n = 4 \\times 0{,}5^{\\,n}$"
+      ],
+      "reponse": 1,
+      "explication": "On pose $v_n = u_n - 6$, géométrique de raison $0{,}5$ avec $v_0 = 10 - 6 = 4$, donc $v_n = 4 \\times 0{,}5^{\\,n}$. En revenant à $u_n = v_n + 6$, on obtient $u_n = 4 \\times 0{,}5^{\\,n} + 6$. Le piège est d'oublier le $+\\,6$ (revenir de $v_n$ à $u_n$) ou d'intervertir $u_0 - \\ell$ et $\\ell$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "modelisation",
+      "enonce": "Un lac contient $200$ poissons. Chaque année la population perd $20\\%$ puis on réintroduit $50$ poissons : $u_{n+1} = 0{,}8\\,u_n + 50$. Vers quelle valeur la population se stabilise-t-elle ?",
+      "choix": [
+        "$200$",
+        "$250$",
+        "$+\\infty$",
+        "$62{,}5$"
+      ],
+      "reponse": 1,
+      "explication": "Le point fixe vaut $\\ell = \\dfrac{50}{1 - 0{,}8} = \\dfrac{50}{0{,}2} = 250$. Comme $|0{,}8| < 1$, on a $0{,}8^{\\,n} \\to 0$ et $u_n \\to 250$. Le piège $62{,}5$ vient d'une division par $0{,}8$ au lieu de $1 - 0{,}8$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Pour $u_{n+1} = 3\\,u_n - 4$, on pose $v_n = u_n - \\ell$ où $\\ell$ est le point fixe. Quelle est la nature de $(v_n)$ ?",
+      "choix": [
+        "Arithmétique de raison $3$",
+        "Géométrique de raison $-4$",
+        "Géométrique de raison $3$",
+        "Constante"
+      ],
+      "reponse": 2,
+      "explication": "Par construction, $v_{n+1} = a(u_n - \\ell) = a\\,v_n$ : $(v_n)$ est géométrique de raison $a = 3$ (le facteur devant $u_n$). Le terme constant $b = -4$ n'intervient pas dans la raison ; c'est justement le rôle du point fixe de le faire disparaître."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "limites",
+      "enonce": "Un capital augmente de $5\\%$ par an. En notant $C_n$ le capital l'année $n$, que peut-on dire de $(C_n)$ ?",
+      "choix": [
+        "Elle converge vers une valeur finie",
+        "Elle tend vers $+\\infty$",
+        "Elle tend vers $0$",
+        "Elle n'a pas de limite"
+      ],
+      "reponse": 1,
+      "explication": "Une hausse de $5\\%$ donne $C_{n+1} = 1{,}05\\,C_n$ : suite géométrique de raison $q = 1{,}05 > 1$, donc $C_n \\to +\\infty$. Une croissance à taux constant positif explose (aucune limite finie), même si elle paraît lente au début."
+    }
+  ]
+}
