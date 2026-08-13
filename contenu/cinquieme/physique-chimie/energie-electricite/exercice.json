@@ -1,0 +1,87 @@
+{
+  "id": "5e-pc-energie-electricite-exos",
+  "chapitre": "5e-pc-energie-electricite",
+  "titre": "Exercices — Énergie et électricité",
+  "voie": "college",
+  "niveau": "cinquieme",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "energie-joule",
+      "enonce": "Sur l'emballage d'une barre de céréales, on lit qu'elle apporte une énergie de $5\\ \\text{kJ}$. 1) Rappelle l'unité de base de l'énergie et son symbole. 2) Convertis cette énergie en joules.",
+      "corrige": [
+        "L'énergie se mesure en **joules**, de symbole $\\text{J}$. Le kilojoule ($\\text{kJ}$) en est un multiple.",
+        "Le préfixe **kilo** signifie $\\times 1\\,000$. Donc $5\\ \\text{kJ} = 5 \\times 1\\,000\\ \\text{J}$.",
+        "On obtient $5\\ \\text{kJ} = 5\\,000\\ \\text{J}$."
+      ],
+      "reponse": "$5\\ \\text{kJ} = 5\\,000\\ \\text{J}$ (l'unité de base est le joule, symbole $\\text{J}$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "circuit-ouvert-ferme",
+      "enonce": "On dispose d'une pile, d'une lampe, de fils et d'un interrupteur, montés en une seule boucle. 1) Que se passe-t-il pour la lampe quand l'interrupteur est fermé ? 2) Et quand il est ouvert ? 3) Explique en une phrase le rôle de l'interrupteur.",
+      "corrige": [
+        "Interrupteur **fermé** : la boucle est complète, le courant circule, donc la lampe **brille**.",
+        "Interrupteur **ouvert** : la boucle est coupée, le courant ne peut plus circuler, donc la lampe reste **éteinte**.",
+        "L'interrupteur permet d'**ouvrir ou de fermer** le circuit à volonté, donc de commander le passage du courant sans débrancher les fils."
+      ],
+      "reponse": "Fermé → la lampe brille (circuit fermé, courant qui circule) ; ouvert → la lampe est éteinte (circuit coupé). L'interrupteur commande le passage du courant."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "serie-derivation",
+      "enonce": "Deux guirlandes A et B contiennent chacune plusieurs ampoules. Dans la guirlande A, quand une seule ampoule grille, **toute** la guirlande s'éteint. Dans la guirlande B, quand une ampoule grille, **toutes les autres restent allumées**. 1) Quel est le montage de A ? Celui de B ? 2) Justifie à partir du nombre de boucles.",
+      "corrige": [
+        "Dans la guirlande **A**, une ampoule grillée éteint tout : il n'y a donc qu'une **seule boucle**, c'est un montage en **série**. Couper un point coupe toute la boucle.",
+        "Dans la guirlande **B**, les autres restent allumées : chaque ampoule est sur sa **propre branche**, c'est un montage en **dérivation**. La branche d'une ampoule grillée est coupée, mais les autres branches forment encore des boucles complètes.",
+        "Conclusion : A est en série (une boucle unique), B est en dérivation (plusieurs branches indépendantes)."
+      ],
+      "reponse": "A est montée en **série** (une seule boucle : une ampoule grillée coupe tout) ; B est montée en **dérivation** (branches séparées : les autres restent allumées)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "tension-volt",
+      "enonce": "Un élève veut mesurer la tension aux bornes d'une lampe ET l'intensité qui la traverse. Il possède un voltmètre et un ampèremètre. 1) Quel appareil pour la tension ? Comment le brancher ? 2) Quel appareil pour l'intensité ? Comment le brancher ? 3) Donne l'unité mesurée par chacun.",
+      "corrige": [
+        "Pour la **tension**, on utilise le **voltmètre**. On le branche **en dérivation**, c'est-à-dire directement aux **bornes** de la lampe (en parallèle).",
+        "Pour l'**intensité**, on utilise l'**ampèremètre**. On le branche **en série**, dans la boucle, pour que le courant de la lampe le **traverse**.",
+        "Le voltmètre mesure une tension en **volts** ($\\text{V}$) ; l'ampèremètre mesure une intensité en **ampères** ($\\text{A}$)."
+      ],
+      "reponse": "Tension → **voltmètre en dérivation** aux bornes de la lampe, en volts (V). Intensité → **ampèremètre en série** dans la boucle, en ampères (A)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "tension-volt",
+      "enonce": "Une pile de $4{,}5\\ \\text{V}$ alimente deux lampes identiques $\\text{L}_1$ et $\\text{L}_2$ branchées **en série**. En série, la tension du générateur se **répartit** entre les dipôles (les tensions aux bornes des lampes s'**ajoutent** pour redonner celle de la pile). 1) Écris la relation entre la tension de la pile et les tensions $U_1$ et $U_2$ des deux lampes. 2) Les lampes étant identiques, calcule $U_1$ et $U_2$.",
+      "corrige": [
+        "En série, les tensions des dipôles **s'ajoutent** et redonnent la tension du générateur : $U_{\\text{pile}} = U_1 + U_2$, soit $4{,}5 = U_1 + U_2$.",
+        "Les deux lampes sont **identiques**, donc elles reçoivent la **même** tension : $U_1 = U_2$.",
+        "On partage donc la tension de la pile en deux parts égales : $U_1 = U_2 = \\dfrac{4{,}5}{2} = 2{,}25\\ \\text{V}$.",
+        "Vérification : $2{,}25 + 2{,}25 = 4{,}5\\ \\text{V}$, on retrouve bien la tension de la pile."
+      ],
+      "reponse": "$U_{\\text{pile}} = U_1 + U_2 = 4{,}5\\ \\text{V}$, et comme les lampes sont identiques, $U_1 = U_2 = 2{,}25\\ \\text{V}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "securite",
+      "enonce": "Un enfant plante un fil métallique reliant directement les deux bornes ($+$ et $-$) d'une pile, sans aucun récepteur dans le circuit. Au bout de quelques secondes, le fil devient brûlant. 1) Comment appelle-t-on cette situation ? 2) Explique pourquoi le fil chauffe autant. 3) Quel composant, dans une installation domestique, sert justement à couper le courant dans ce cas ?",
+      "corrige": [
+        "Relier directement les deux bornes d'un générateur par un fil sans récepteur s'appelle un **court-circuit**.",
+        "Sans récepteur pour recevoir l'énergie, l'intensité du courant devient **très grande** dans le fil. Toute cette énergie est transférée au fil, qui **s'échauffe** fortement : c'est ce qui le rend brûlant, avec un risque de brûlure et d'incendie.",
+        "Dans une maison, le **fusible** (ou le **disjoncteur**) détecte cette intensité trop élevée et **coupe automatiquement** le courant pour protéger l'installation."
+      ],
+      "reponse": "C'est un **court-circuit** : l'intensité devient très grande et le fil chauffe fortement (risque d'incendie). Le **fusible** ou le **disjoncteur** coupe alors automatiquement le courant."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "3e-pc-conversions-energie-signaux-exos",
+  "chapitre": "3e-pc-conversions-energie-signaux",
+  "titre": "Exercices — Conversions d'énergie et signaux pour mesurer",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "energie-puissance-duree",
+      "enonce": "Un sèche-cheveux de puissance $P = 1200$ W fonctionne pendant $t = 90$ s. Calculer l'énergie électrique $E$ qu'il a consommée, en joules.",
+      "corrige": [
+        "On utilise la relation $E = P \\times t$. Les unités sont déjà celles du système international : $P$ en watts (W) et $t$ en secondes (s), donc $E$ sera en joules (J).",
+        "Application numérique : $E = 1200 \\times 90 = 108\\,000$ J.",
+        "En écriture scientifique : $E = 1{,}08 \\times 10^{5}$ J."
+      ],
+      "reponse": "$E = P \\times t = 108\\,000$ J $= 1{,}08 \\times 10^{5}$ J."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "telemetrie",
+      "enonce": "Face à une falaise, une personne pousse un cri bref. Elle entend l'écho revenir $\\Delta t = 2{,}0$ s plus tard. La vitesse du son dans l'air vaut $v = 340$ m·s⁻¹. À quelle distance se trouve la falaise ?",
+      "corrige": [
+        "Pendant la durée $\\Delta t$, le son fait l'aller jusqu'à la falaise ET le retour : il parcourt donc une distance totale $D = v \\times \\Delta t$.",
+        "$D = 340 \\times 2{,}0 = 680$ m.",
+        "La falaise n'est qu'à un seul trajet (aller simple), soit la moitié : $d = \\dfrac{D}{2} = \\dfrac{680}{2} = 340$ m."
+      ],
+      "reponse": "$d = \\dfrac{v \\times \\Delta t}{2} = 340$ m."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "kilowattheure",
+      "enonce": "Un chauffe-eau de puissance $P = 2{,}5$ kW fonctionne $t = 4{,}0$ h par jour. 1) Calculer l'énergie consommée en une journée, en kWh. 2) Convertir cette énergie en joules (on donne $1$ kWh $= 3{,}6 \\times 10^{6}$ J).",
+      "corrige": [
+        "1) Avec des kilowatts et des heures, on applique directement $E = P \\times t = 2{,}5 \\times 4{,}0 = 10$ kWh.",
+        "2) Conversion en joules : $E = 10 \\times 3{,}6 \\times 10^{6} = 3{,}6 \\times 10^{7}$ J.",
+        "On garde bien un système d'unités à la fois : kW × h → kWh, puis on convertit. On ne mélange jamais des kW avec des secondes."
+      ],
+      "reponse": "$E = 10$ kWh $= 3{,}6 \\times 10^{7}$ J."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "rendement",
+      "enonce": "Une cellule photovoltaïque reçoit $E_{\\text{reçue}} = 1000$ J d'énergie lumineuse et fournit $E_{\\text{utile}} = 150$ J d'énergie électrique. 1) Calculer le rendement $\\eta$ de la cellule (en % ). 2) En déduire l'énergie perdue.",
+      "corrige": [
+        "1) Le rendement est le rapport de l'énergie utile sur l'énergie reçue : $\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{reçue}}} = \\dfrac{150}{1000} = 0{,}15$.",
+        "En pourcentage : $\\eta = 0{,}15 \\times 100 = 15\\,\\%$.",
+        "2) L'énergie se conserve : $E_{\\text{perdue}} = E_{\\text{reçue}} - E_{\\text{utile}} = 1000 - 150 = 850$ J, dissipée surtout sous forme de chaleur."
+      ],
+      "reponse": "$\\eta = 0{,}15 = 15\\,\\%$ ; $E_{\\text{perdue}} = 850$ J."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "chaine-energie",
+      "enonce": "Une éolienne reçoit du vent une puissance mécanique $P = 20$ kW. Son rendement est $\\eta = 0{,}40$. 1) Décrire sa chaîne d'énergie. 2) Calculer l'énergie électrique utile produite en $t = 1{,}0$ h, en kWh puis en joules. 3) Calculer l'énergie perdue pendant cette heure, en kWh.",
+      "corrige": [
+        "1) Chaîne d'énergie : vent (source, énergie mécanique) → alternateur (convertisseur) → énergie électrique (utilisation). Une partie fuit en chaleur à cause des frottements.",
+        "2) Énergie reçue en 1 h : $E_{\\text{reçue}} = P \\times t = 20 \\times 1{,}0 = 20$ kWh. Énergie utile : $E_{\\text{utile}} = \\eta \\times E_{\\text{reçue}} = 0{,}40 \\times 20 = 8{,}0$ kWh. En joules : $8{,}0 \\times 3{,}6 \\times 10^{6} = 2{,}88 \\times 10^{7}$ J.",
+        "3) Par conservation : $E_{\\text{perdue}} = E_{\\text{reçue}} - E_{\\text{utile}} = 20 - 8{,}0 = 12$ kWh."
+      ],
+      "reponse": "Chaîne : vent → alternateur → électricité. $E_{\\text{utile}} = 8{,}0$ kWh $= 2{,}88 \\times 10^{7}$ J ; $E_{\\text{perdue}} = 12$ kWh."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "annee-lumiere",
+      "enonce": "L'étoile Proxima du Centaure est à $d = 4{,}3$ années-lumière de la Terre. On donne la vitesse de la lumière $c = 3{,}0 \\times 10^{8}$ m·s⁻¹ et $1$ année-lumière $= 9{,}5 \\times 10^{15}$ m. 1) Exprimer $d$ en mètres. 2) Combien de temps la lumière de Proxima met-elle à nous parvenir ? 3) Aujourd'hui, on observe cette étoile : voit-on son état actuel ? Expliquer.",
+      "corrige": [
+        "1) L'année-lumière est une distance : $d = 4{,}3 \\times 9{,}5 \\times 10^{15} = 4{,}1 \\times 10^{16}$ m.",
+        "2) La lumière parcourt une année-lumière en un an, par définition. Donc pour $4{,}3$ années-lumière, elle met $4{,}3$ ans. (Vérification : $t = \\dfrac{d}{c} = \\dfrac{4{,}1 \\times 10^{16}}{3{,}0 \\times 10^{8}} \\approx 1{,}4 \\times 10^{8}$ s, ce qui fait bien environ $4{,}3$ ans.)",
+        "3) Non : la lumière reçue aujourd'hui est partie il y a $4{,}3$ ans. On voit donc Proxima **telle qu'elle était il y a 4,3 ans**, pas telle qu'elle est maintenant. Voir loin, c'est voir dans le passé."
+      ],
+      "reponse": "$d = 4{,}1 \\times 10^{16}$ m ; la lumière met $4{,}3$ ans ; on voit l'étoile telle qu'elle était il y a $4{,}3$ ans."
+    }
+  ]
+}

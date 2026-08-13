@@ -1,0 +1,154 @@
+{
+  "id": "3e-pc-conversions-energie-signaux-qcm",
+  "chapitre": "3e-pc-conversions-energie-signaux",
+  "titre": "QCM — Conversions d'énergie et signaux pour mesurer",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "convertisseurs",
+      "enonce": "Un alternateur est un convertisseur d'énergie. Quelle transformation réalise-t-il ?",
+      "choix": [
+        "Énergie électrique → énergie mécanique",
+        "Énergie mécanique → énergie électrique",
+        "Énergie lumineuse → énergie électrique",
+        "Énergie chimique → énergie thermique"
+      ],
+      "reponse": 1,
+      "explication": "L'alternateur transforme un **mouvement** (énergie mécanique) en **électricité**. Le choix « lumineuse → électrique » décrit la cellule photovoltaïque, pas l'alternateur."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "ressources-renouvelables",
+      "enonce": "Parmi ces ressources d'énergie, laquelle n'est **pas** renouvelable ?",
+      "choix": [
+        "Le vent",
+        "Le Soleil",
+        "Le pétrole",
+        "L'eau des barrages"
+      ],
+      "reponse": 2,
+      "explication": "Le pétrole met des millions d'années à se former : son stock **s'épuise**, il n'est donc pas renouvelable. Le vent, le Soleil et l'eau se reconstituent à l'échelle humaine."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "energie-puissance-duree",
+      "enonce": "Un radiateur de puissance $P = 2000$ W fonctionne pendant $t = 30$ s. Quelle énergie a-t-il transférée ?",
+      "choix": [
+        "$60\\,000$ J",
+        "$66{,}7$ J",
+        "$2030$ J",
+        "$60$ J"
+      ],
+      "reponse": 0,
+      "explication": "$E = P \\times t = 2000 \\times 30 = 60\\,000$ J $= 6{,}0 \\times 10^{4}$ J. Ici P est en W et t en s : le résultat est bien en joules. Le choix $66{,}7$ divise au lieu de multiplier."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "kilowattheure",
+      "enonce": "Un four de puissance $P = 2{,}0$ kW fonctionne pendant $t = 3{,}0$ h. Quelle énergie consomme-t-il, en kWh ?",
+      "choix": [
+        "$0{,}67$ kWh",
+        "$5{,}0$ kWh",
+        "$6{,}0$ kWh",
+        "$21\\,600$ kWh"
+      ],
+      "reponse": 2,
+      "explication": "Avec des kW et des heures : $E = P \\times t = 2{,}0 \\times 3{,}0 = 6{,}0$ kWh. Le choix $21\\,600$ vient d'avoir converti les heures en secondes tout en gardant les kW — on mélange alors deux systèmes d'unités."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "conservation-bilan",
+      "enonce": "Une lampe reçoit $200$ J d'énergie électrique et fournit $30$ J d'énergie lumineuse utile. Quelle énergie est perdue (dissipée en chaleur) ?",
+      "choix": [
+        "$230$ J",
+        "$170$ J",
+        "$30$ J",
+        "$6000$ J"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie se conserve : $E_{\\text{reçue}} = E_{\\text{utile}} + E_{\\text{perdue}}$, donc $E_{\\text{perdue}} = 200 - 30 = 170$ J. Le choix $230$ **ajoute** au lieu de soustraire."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "rendement",
+      "enonce": "Un moteur reçoit $500$ J et fournit $400$ J d'énergie mécanique utile. Quel est son rendement ?",
+      "choix": [
+        "$0{,}80$ soit $80\\,\\%$",
+        "$1{,}25$ soit $125\\,\\%$",
+        "$0{,}20$ soit $20\\,\\%$",
+        "$100$ J"
+      ],
+      "reponse": 0,
+      "explication": "$\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{reçue}}} = \\dfrac{400}{500} = 0{,}80 = 80\\,\\%$. Le choix $125\\,\\%$ inverse la fraction : un rendement supérieur à $100\\,\\%$ est impossible."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "telemetrie",
+      "enonce": "Un sonar émet un ultrason vers le fond de la mer ($v = 1500$ m·s⁻¹). L'écho revient $\\Delta t = 0{,}40$ s après l'émission. Quelle est la profondeur du fond ?",
+      "choix": [
+        "$600$ m",
+        "$300$ m",
+        "$1200$ m",
+        "$3750$ m"
+      ],
+      "reponse": 1,
+      "explication": "L'onde fait un **aller-retour** pendant $\\Delta t$ : elle parcourt $v \\times \\Delta t = 1500 \\times 0{,}40 = 600$ m au total. La profondeur n'est qu'un seul trajet : $d = \\dfrac{600}{2} = 300$ m. Le choix $600$ m oublie le facteur $\\div 2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "telemetrie",
+      "enonce": "Un radar ($v = 3{,}0 \\times 10^{8}$ m·s⁻¹) détecte l'écho d'un avion $\\Delta t = 1{,}0 \\times 10^{-3}$ s après l'émission. À quelle distance se trouve l'avion ?",
+      "choix": [
+        "$3{,}0 \\times 10^{5}$ m",
+        "$1{,}5 \\times 10^{5}$ m",
+        "$3{,}0 \\times 10^{11}$ m",
+        "$1{,}5 \\times 10^{2}$ m"
+      ],
+      "reponse": 1,
+      "explication": "Distance totale (aller-retour) : $v \\times \\Delta t = 3{,}0 \\times 10^{8} \\times 1{,}0 \\times 10^{-3} = 3{,}0 \\times 10^{5}$ m. L'avion est à la moitié : $d = \\dfrac{3{,}0 \\times 10^{5}}{2} = 1{,}5 \\times 10^{5}$ m (soit $150$ km). Le choix $3{,}0 \\times 10^{5}$ oublie le $\\div 2$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "annee-lumiere",
+      "enonce": "L'année-lumière (a.l.) est une unité qui sert à mesurer :",
+      "choix": [
+        "une durée",
+        "une distance",
+        "une vitesse",
+        "une puissance"
+      ],
+      "reponse": 1,
+      "explication": "Malgré le mot « année » dans son nom, l'année-lumière est la **distance** parcourue par la lumière en un an ($\\approx 9{,}5 \\times 10^{15}$ m). C'est une longueur, pas une durée : c'est le piège classique."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "energie-puissance-duree",
+      "enonce": "Une ampoule de $P = 60$ W reste allumée pendant $t = 2{,}0$ h. Quelle énergie, en joules, a-t-elle consommée ?",
+      "choix": [
+        "$120$ J",
+        "$4{,}32 \\times 10^{5}$ J",
+        "$1800$ J",
+        "$30$ J"
+      ],
+      "reponse": 1,
+      "explication": "Pour obtenir des joules, la durée doit être en **secondes** : $t = 2{,}0$ h $= 2{,}0 \\times 3600 = 7200$ s. Alors $E = 60 \\times 7200 = 4{,}32 \\times 10^{5}$ J. Le choix $120$ J multiplie $60 \\times 2$ sans convertir les heures : c'est l'erreur d'unité la plus fréquente."
+    }
+  ]
+}

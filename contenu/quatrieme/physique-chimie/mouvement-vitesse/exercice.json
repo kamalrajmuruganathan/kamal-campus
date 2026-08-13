@@ -1,0 +1,90 @@
+{
+  "id": "4e-pc-mouvement-vitesse-exos",
+  "chapitre": "4e-pc-mouvement-vitesse",
+  "titre": "Exercices — Mouvement : la relation v = d/t",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "la-vitesse",
+      "enonce": "Un rollerskateur parcourt une distance $d = 150$ m en une durée $t = 25$ s, à allure régulière. Calculer sa vitesse moyenne en m/s.",
+      "corrige": [
+        "On applique la relation $v = \\dfrac{d}{t}$, avec la distance en mètres et la durée en secondes pour obtenir une vitesse en m/s.",
+        "Les unités sont déjà cohérentes : $d = 150$ m et $t = 25$ s.",
+        "$v = \\dfrac{150}{25} = 6$ m/s."
+      ],
+      "reponse": "$v = \\dfrac{d}{t} = \\dfrac{150}{25} = 6$ m/s."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "unites",
+      "enonce": "1) Une voiture roule à $108$ km/h. Convertir cette vitesse en m/s. 2) Un nageur avance à $12$ m/s. Convertir cette vitesse en km/h.",
+      "corrige": [
+        "Pour passer des km/h aux m/s, on divise par $3{,}6$ : $v = \\dfrac{108}{3{,}6} = 30$ m/s.",
+        "Pour passer des m/s aux km/h, on multiplie par $3{,}6$ : $v = 12 \\times 3{,}6 = 43{,}2$ km/h.",
+        "Vérification du sens : une vitesse en m/s est plus petite que la même vitesse en km/h. $30 < 108$ et $43{,}2 > 12$ : les deux conversions vont dans le bon sens."
+      ],
+      "reponse": "1) $108$ km/h $= 30$ m/s. 2) $12$ m/s $= 43{,}2$ km/h."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "unites",
+      "enonce": "Un cycliste roule à la vitesse constante $v = 18$ km/h pendant $t = 20$ min. Quelle distance parcourt-il ? (On donnera le résultat en km.)",
+      "corrige": [
+        "On cherche une distance : $d = v \\times t$. Attention, $v$ est en km/h, donc $t$ doit être en heures.",
+        "Conversion de la durée : $t = 20$ min $= \\dfrac{20}{60}$ h $= \\dfrac{1}{3}$ h $\\approx 0{,}33$ h.",
+        "$d = v \\times t = 18 \\times \\dfrac{1}{3} = 6$ km.",
+        "Autre méthode possible : convertir d'abord $v = \\dfrac{18}{3{,}6} = 5$ m/s et $t = 20$ min $= 1200$ s, puis $d = 5 \\times 1200 = 6000$ m $= 6$ km. On retrouve bien le même résultat."
+      ],
+      "reponse": "$d = v \\times t = 6$ km."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "evolution-vitesse",
+      "enonce": "Pour chacune des situations suivantes, préciser la nature de la trajectoire (rectiligne, circulaire ou curviligne) ET l'évolution de la vitesse (uniforme, accéléré ou ralenti). 1) Une bille lâchée qui tombe verticalement. 2) Une nacelle de manège qui tourne à régime constant. 3) Un métro qui freine en entrant en station le long d'un quai rectiligne.",
+      "corrige": [
+        "1) La bille tombe le long d'une droite verticale : trajectoire **rectiligne**. En chute, elle va de plus en plus vite : mouvement **accéléré**. Bilan : rectiligne accéléré.",
+        "2) La nacelle décrit un cercle : trajectoire **circulaire**. « Régime constant » signifie que la valeur de la vitesse ne change pas : mouvement **uniforme**. Bilan : circulaire uniforme (mais la direction change en permanence).",
+        "3) Le métro suit un quai droit : trajectoire **rectiligne**. Il freine, donc sa vitesse diminue : mouvement **ralenti**. Bilan : rectiligne ralenti."
+      ],
+      "reponse": "1) rectiligne accéléré ; 2) circulaire uniforme ; 3) rectiligne ralenti."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "la-vitesse",
+      "enonce": "Sur un trajet, une automobiliste parcourt d'abord $60$ km d'autoroute à $120$ km/h, puis $60$ km de route de campagne à $40$ km/h. 1) Calculer la durée de chaque portion. 2) En déduire la vitesse moyenne sur l'ensemble du trajet. On pourra comparer au résultat faux qu'on obtiendrait en faisant la moyenne des deux vitesses.",
+      "corrige": [
+        "Durée de la première portion : $t_1 = \\dfrac{d_1}{v_1} = \\dfrac{60}{120} = 0{,}5$ h.",
+        "Durée de la seconde portion : $t_2 = \\dfrac{d_2}{v_2} = \\dfrac{60}{40} = 1{,}5$ h.",
+        "Distance totale : $d = 60 + 60 = 120$ km. Durée totale : $t = t_1 + t_2 = 0{,}5 + 1{,}5 = 2{,}0$ h.",
+        "Vitesse moyenne : $v = \\dfrac{d}{t} = \\dfrac{120}{2{,}0} = 60$ km/h.",
+        "Le piège : la moyenne des deux vitesses donnerait $\\dfrac{120 + 40}{2} = 80$ km/h, ce qui est **faux**. La vitesse moyenne se calcule à partir de la distance totale et de la durée totale, jamais en moyennant les vitesses (on passe plus de temps à la vitesse la plus lente)."
+      ],
+      "reponse": "$t_1 = 0{,}5$ h, $t_2 = 1{,}5$ h ; vitesse moyenne $v = \\dfrac{120}{2{,}0} = 60$ km/h (et non $80$ km/h)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "circulaire-uniforme",
+      "enonce": "Un satellite décrit autour de la Terre une orbite circulaire dont la longueur (circonférence) vaut $d = 36000$ km. Il en fait un tour complet en une durée $t = 2{,}0$ h, à allure régulière. 1) Calculer sa vitesse en km/h. 2) Convertir cette vitesse en m/s. 3) Ce mouvement est-il uniforme ? La vitesse du satellite est-elle pour autant « constante » en tout point ?",
+      "corrige": [
+        "Vitesse en km/h : $v = \\dfrac{d}{t} = \\dfrac{36000}{2{,}0} = 18000$ km/h.",
+        "Conversion en m/s : on divise par $3{,}6$ : $v = \\dfrac{18000}{3{,}6} = 5000$ m/s.",
+        "Le mouvement est **circulaire uniforme** : la trajectoire est un cercle et la **valeur** de la vitesse ($18000$ km/h) reste la même tout au long de l'orbite.",
+        "En revanche, la **direction** du déplacement change sans arrêt puisque le satellite tourne. « Uniforme » ne veut donc pas dire que rien ne change : seule la valeur de la vitesse est constante."
+      ],
+      "reponse": "1) $v = 18000$ km/h. 2) $v = 5000$ m/s. 3) Oui, mouvement circulaire uniforme : la valeur de la vitesse est constante, mais sa direction change en permanence."
+    }
+  ]
+}

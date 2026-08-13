@@ -1,0 +1,90 @@
+{
+  "id": "4e-pc-puissance-energie-exos",
+  "chapitre": "4e-pc-puissance-energie",
+  "titre": "Exercices — Puissance et énergie",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "puissance-formule",
+      "enonce": "Une lampe transfère une énergie $E = 900$ J en une durée $t = 15$ s. Calculer sa puissance $P$.",
+      "corrige": [
+        "On utilise la relation entre puissance, énergie et durée : $P = \\dfrac{E}{t}$.",
+        "Les unités sont déjà correctes : l'énergie est en joules (J) et la durée en secondes (s).",
+        "Application numérique : $P = \\dfrac{900}{15} = 60$ W."
+      ],
+      "reponse": "$P = \\dfrac{E}{t} = 60$ W."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "puissance-electrique",
+      "enonce": "Un sèche-cheveux est soumis à une tension $U = 230$ V et parcouru par une intensité $I = 2{,}0$ A. Calculer sa puissance électrique $P$.",
+      "corrige": [
+        "Pour un appareil électrique, la puissance vaut $P = U \\times I$.",
+        "La tension est en volts (V) et l'intensité en ampères (A) : les unités sont correctes, le résultat sera en watts (W).",
+        "Application numérique : $P = 230 \\times 2{,}0 = 460$ W."
+      ],
+      "reponse": "$P = U \\times I = 460$ W."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "conversion-duree",
+      "enonce": "Un four à micro-ondes transfère une énergie $E = 90\\,000$ J à un plat en $1{,}5$ minute. Calculer sa puissance $P$. (Attention aux unités.)",
+      "corrige": [
+        "La relation est $P = \\dfrac{E}{t}$, mais la durée doit être exprimée en secondes.",
+        "Conversion : $t = 1{,}5$ min $= 1{,}5 \\times 60 = 90$ s.",
+        "Application numérique : $P = \\dfrac{90\\,000}{90} = 1000$ W.",
+        "Le piège serait de diviser par $1{,}5$ : on obtiendrait $60\\,000$ W, une puissance absurde pour un micro-ondes."
+      ],
+      "reponse": "$t = 90$ s, donc $P = \\dfrac{90\\,000}{90} = 1000$ W (soit $1$ kW)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "generateur",
+      "enonce": "Un générateur alimente en série une lampe et un moteur. La lampe reçoit une tension $U_1 = 6{,}0$ V et est parcourue par $I_1 = 0{,}30$ A. Le moteur reçoit $U_2 = 6{,}0$ V pour $I_2 = 0{,}50$ A. 1) Calculer la puissance de chaque dipôle. 2) En déduire la puissance fournie par le générateur.",
+      "corrige": [
+        "Puissance de la lampe : $P_1 = U_1 \\times I_1 = 6{,}0 \\times 0{,}30 = 1{,}8$ W.",
+        "Puissance du moteur : $P_2 = U_2 \\times I_2 = 6{,}0 \\times 0{,}50 = 3{,}0$ W.",
+        "La puissance du générateur est la somme des puissances des dipôles : $P_{\\text{gén}} = P_1 + P_2 = 1{,}8 + 3{,}0 = 4{,}8$ W."
+      ],
+      "reponse": "$P_1 = 1{,}8$ W, $P_2 = 3{,}0$ W, et $P_{\\text{gén}} = 4{,}8$ W."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "energie-formule",
+      "enonce": "Un radiateur électrique de puissance $P = 2000$ W fonctionne pendant $2{,}0$ heures. 1) Calculer l'énergie transférée $E$ en joules. 2) Exprimer cette énergie en kilowattheures (kWh), sachant que $1$ kWh $= 3{,}6 \\times 10^{6}$ J.",
+      "corrige": [
+        "On utilise $E = P \\times t$, avec la durée en secondes : $t = 2{,}0$ h $= 2{,}0 \\times 3600 = 7200$ s.",
+        "Énergie en joules : $E = 2000 \\times 7200 = 14\\,400\\,000$ J, soit $E = 1{,}44 \\times 10^{7}$ J.",
+        "Conversion en kilowattheures : $E = \\dfrac{1{,}44 \\times 10^{7}}{3{,}6 \\times 10^{6}} = 4{,}0$ kWh.",
+        "Vérification directe : avec $P = 2$ kW pendant $2$ h, on a bien $E = 2 \\times 2 = 4$ kWh."
+      ],
+      "reponse": "$E = 1{,}44 \\times 10^{7}$ J $= 4{,}0$ kWh."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "puissance-electrique",
+      "enonce": "Une prise du secteur ($U = 230$ V) est protégée par un disjoncteur qui coupe le courant si l'intensité dépasse $16$ A. On y branche un four de puissance $P_1 = 2300$ W. 1) Calculer l'intensité $I_1$ traversant le four. 2) Peut-on brancher en plus sur la même prise une plaque de $P_2 = 1150$ W sans faire disjoncter ?",
+      "corrige": [
+        "De $P = U \\times I$ on tire l'intensité : $I = \\dfrac{P}{U}$.",
+        "Pour le four : $I_1 = \\dfrac{P_1}{U} = \\dfrac{2300}{230} = 10$ A.",
+        "Pour la plaque : $I_2 = \\dfrac{P_2}{U} = \\dfrac{1150}{230} = 5{,}0$ A.",
+        "Les deux appareils sur la même prise sont parcourus par une intensité totale $I = I_1 + I_2 = 10 + 5{,}0 = 15$ A.",
+        "Comme $15$ A $< 16$ A, le disjoncteur ne coupe pas : on peut brancher les deux, mais la marge est faible."
+      ],
+      "reponse": "$I_1 = 10$ A ; l'intensité totale serait $15$ A $< 16$ A, donc oui, on peut brancher les deux appareils sans faire disjoncter."
+    }
+  ]
+}

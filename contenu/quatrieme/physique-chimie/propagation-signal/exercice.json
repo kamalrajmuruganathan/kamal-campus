@@ -1,0 +1,87 @@
+{
+  "id": "4e-pc-propagation-signal-exos",
+  "chapitre": "4e-pc-propagation-signal",
+  "titre": "Exercices — Propagation d'un signal",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "vitesse-propagation",
+      "enonce": "Un signal sonore parcourt une distance $d = 850$ m en une durée $t = 2{,}5$ s. Calcule sa vitesse de propagation $v$ dans l'air.",
+      "corrige": [
+        "La grandeur cherchée est la vitesse : on utilise $v = \\dfrac{d}{t}$.",
+        "Les valeurs sont déjà en mètres et en secondes, aucune conversion n'est nécessaire.",
+        "Calcul : $v = \\dfrac{850}{2{,}5} = 340$ m/s. On retrouve bien la vitesse du son dans l'air."
+      ],
+      "reponse": "$v = \\dfrac{d}{t} = 340$ m/s."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "vitesse-propagation",
+      "enonce": "Le son se propage dans l'air à $v = 340$ m/s. Quelle distance $d$ parcourt-il pendant une durée $t = 5{,}0$ s ?",
+      "corrige": [
+        "On cherche une distance : on part de $v = \\dfrac{d}{t}$ et on isole $d$, ce qui donne $d = v \\times t$.",
+        "Les unités sont bonnes (m/s et s), on calcule directement.",
+        "Calcul : $d = 340 \\times 5{,}0 = 1700$ m, soit $1{,}7$ km."
+      ],
+      "reponse": "$d = v \\times t = 1700$ m (soit $1{,}7$ km)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "ondes-sonores",
+      "enonce": "Pendant un orage, tu vois l'éclair puis tu entends le tonnerre $t = 4{,}0$ s plus tard. La vitesse du son dans l'air vaut $v = 340$ m/s. On considère que la lumière de l'éclair arrive instantanément. 1) À quelle distance $d$ l'orage s'est-il produit ? 2) Exprime cette distance en kilomètres.",
+      "corrige": [
+        "La lumière arrivant quasi instantanément, le retard de $4{,}0$ s correspond au temps mis par le SON pour parcourir la distance $d$.",
+        "On cherche une distance : $d = v \\times t = 340 \\times 4{,}0 = 1360$ m.",
+        "Conversion en kilomètres : $1360$ m $= 1{,}36$ km (car $1$ km $= 1000$ m)."
+      ],
+      "reponse": "$d = v \\times t = 1360$ m, soit environ $1{,}4$ km."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "vitesse-propagation",
+      "enonce": "Un plongeur émet un cri (en fait un son) qui se propage dans l'eau à $v = 1500$ m/s pendant une durée $t = 3{,}0$ min. 1) Convertis la durée en secondes. 2) Calcule la distance $d$ parcourue par le son dans l'eau.",
+      "corrige": [
+        "Conversion de la durée : $t = 3{,}0$ min $= 3{,}0 \\times 60 = 180$ s. Il faut toujours travailler en secondes avant de calculer.",
+        "On cherche une distance : $d = v \\times t$.",
+        "Calcul : $d = 1500 \\times 180 = 270\\,000$ m, soit $270$ km. Attention : oublier la conversion (utiliser $t = 3$) donnerait $4500$ m, un résultat faux."
+      ],
+      "reponse": "$t = 180$ s et $d = v \\times t = 270\\,000$ m (soit $270$ km)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "ondes-sonores",
+      "enonce": "Un navire équipé d'un sonar envoie une salve d'ultrasons vers le fond marin. L'écho revient au navire une durée $t = 0{,}40$ s après l'émission. La vitesse du son dans l'eau vaut $v = 1500$ m/s. 1) Quelle distance totale $D$ le son a-t-il parcourue pendant $t$ ? 2) En déduire la profondeur $h$ du fond sous le navire.",
+      "corrige": [
+        "Pendant la durée $t$, le son fait l'ALLER (du navire vers le fond) puis le RETOUR (du fond vers le navire) : la distance totale est $D = v \\times t$.",
+        "Calcul : $D = 1500 \\times 0{,}40 = 600$ m.",
+        "La profondeur $h$ ne correspond qu'à un seul trajet (l'aller), c'est donc la moitié : $h = \\dfrac{D}{2} = \\dfrac{600}{2} = 300$ m.",
+        "Le piège serait d'oublier le facteur $2$ et d'annoncer $600$ m : l'écho correspond à un aller-retour."
+      ],
+      "reponse": "$D = v \\times t = 600$ m, donc la profondeur est $h = \\dfrac{D}{2} = 300$ m."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "ondes-lumineuses",
+      "enonce": "La lumière du Soleil parcourt une distance $d = 1{,}5 \\times 10^{11}$ m pour atteindre la Terre. Elle se propage dans le vide à la vitesse $c = 3 \\times 10^{8}$ m/s. 1) Calcule la durée $t$ mise par la lumière pour arriver jusqu'à nous. 2) Exprime ce résultat en minutes.",
+      "corrige": [
+        "On cherche une durée : on part de $v = \\dfrac{d}{t}$ et on isole $t$, ce qui donne $t = \\dfrac{d}{v}$.",
+        "Calcul avec les puissances de dix : $t = \\dfrac{1{,}5 \\times 10^{11}}{3 \\times 10^{8}} = 0{,}5 \\times 10^{3} = 500$ s.",
+        "Conversion en minutes : $t = \\dfrac{500}{60} \\approx 8{,}3$ min. La lumière du Soleil met donc un peu plus de $8$ minutes à nous parvenir."
+      ],
+      "reponse": "$t = \\dfrac{d}{v} = 500$ s, soit environ $8{,}3$ min."
+    }
+  ]
+}
