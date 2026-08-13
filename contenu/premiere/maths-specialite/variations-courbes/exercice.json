@@ -1,0 +1,98 @@
+{
+  "id": "1spe-math-variations-courbes-exos",
+  "chapitre": "1spe-math-variations-courbes",
+  "titre": "Exercices — Variations et courbes représentatives des fonctions",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "etude-variations",
+      "enonce": "Soit $f(x) = x^2 - 4x + 1$ définie sur $\\mathbb{R}$. Étudier le signe de $f'$, puis dresser le tableau de variations de $f$ (avec la valeur à l'extrémum).",
+      "corrige": [
+        "On dérive : $f'(x) = 2x - 4$.",
+        "Signe de $f'$ : $f'(x) = 0 \\iff 2x - 4 = 0 \\iff x = 2$. Comme le coefficient de $x$ est positif, $f'(x) < 0$ pour $x < 2$ et $f'(x) > 0$ pour $x > 2$.",
+        "On en déduit les variations : $f$ est décroissante sur $]-\\infty\\,;2]$ puis croissante sur $[2\\,;+\\infty[$.",
+        "Valeur à l'extrémum : $f(2) = 2^2 - 4\\times 2 + 1 = 4 - 8 + 1 = -3$. La fonction admet un minimum égal à $-3$ en $x = 2$.",
+        "Tableau : $f'$ est $-$ sur $]-\\infty\\,;2[$, s'annule en $2$, puis $+$ sur $]2\\,;+\\infty[$ ; $f$ décroît de $+\\infty$ jusqu'à $-3$, puis croît jusqu'à $+\\infty$."
+      ],
+      "reponse": "$f$ décroissante sur $]-\\infty\\,;2]$, croissante sur $[2\\,;+\\infty[$ ; minimum $f(2) = -3$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "second-degre-derivation",
+      "enonce": "Par la dérivation, déterminer l'abscisse et la nature de l'extrémum de $f(x) = 3x^2 + 12x + 1$, puis calculer sa valeur.",
+      "corrige": [
+        "On dérive : $f'(x) = 6x + 12$.",
+        "$f'(x) = 0 \\iff 6x + 12 = 0 \\iff x = -2$. C'est l'unique abscisse où la tangente est horizontale.",
+        "Ici $a = 3 > 0$ : la fonction est d'abord décroissante puis croissante, donc l'extrémum est un **minimum** en $x = -2$.",
+        "Valeur : $f(-2) = 3\\times(-2)^2 + 12\\times(-2) + 1 = 12 - 24 + 1 = -11$.",
+        "Contrôle par la formule du sommet : $-\\dfrac{b}{2a} = -\\dfrac{12}{2\\times 3} = -2$, ce qui confirme l'abscisse."
+      ],
+      "reponse": "Minimum en $x = -2$, de valeur $f(-2) = -11$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "etude-variations",
+      "enonce": "Soit $f(x) = x^3 - 12x$ sur $\\mathbb{R}$. Calculer $f'(x)$ et le factoriser, dresser le tableau de variations, puis préciser les extrémums locaux et leurs valeurs.",
+      "corrige": [
+        "Dérivée : $f'(x) = 3x^2 - 12 = 3(x^2 - 4) = 3(x-2)(x+2)$.",
+        "Signe : ce trinôme a pour racines $-2$ et $2$ ; comme $a = 3 > 0$, il est positif à l'extérieur des racines et négatif entre elles.",
+        "Variations : $f$ est croissante sur $]-\\infty\\,;-2]$, décroissante sur $[-2\\,;2]$, puis croissante sur $[2\\,;+\\infty[$.",
+        "Extrémums : $f'$ change de signe en $-2$ (de $+$ à $-$) et en $2$ (de $-$ à $+$), il y a donc bien deux extrémums.",
+        "Valeurs : $f(-2) = (-2)^3 - 12\\times(-2) = -8 + 24 = 16$ (maximum local) et $f(2) = 8 - 24 = -16$ (minimum local)."
+      ],
+      "reponse": "Maximum local $f(-2) = 16$, minimum local $f(2) = -16$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "extremum",
+      "enonce": "Une fonction $f$ est dérivable sur $\\mathbb{R}$ et sa dérivée est $f'(x) = (x-1)(x-3)$. Sans calculer $f$, déterminer les variations de $f$ et la nature de ses extrémums.",
+      "corrige": [
+        "On étudie le signe de $f'(x) = (x-1)(x-3)$ : c'est un trinôme de racines $1$ et $3$, à coefficient dominant positif.",
+        "Il est donc positif à l'extérieur des racines et négatif entre elles : $f'(x) > 0$ sur $]-\\infty\\,;1[$, $f'(x) < 0$ sur $]1\\,;3[$, $f'(x) > 0$ sur $]3\\,;+\\infty[$.",
+        "Variations : $f$ est croissante sur $]-\\infty\\,;1]$, décroissante sur $[1\\,;3]$, puis croissante sur $[3\\,;+\\infty[$.",
+        "En $x = 1$, $f'$ passe de $+$ à $-$ : $f$ y admet un **maximum local**. En $x = 3$, $f'$ passe de $-$ à $+$ : $f$ y admet un **minimum local**.",
+        "Le critère utilisé est bien le **changement de signe** de $f'$, et non la seule annulation."
+      ],
+      "reponse": "Maximum local en $x = 1$, minimum local en $x = 3$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "parametre",
+      "enonce": "Soit $m$ un réel et $f(x) = x^3 + mx$ définie sur $\\mathbb{R}$. Pour quelles valeurs de $m$ la fonction $f$ admet-elle des extrémums locaux ?",
+      "corrige": [
+        "On dérive : $f'(x) = 3x^2 + m$.",
+        "Un extrémum ne peut exister que là où $f'$ **change de signe**. Il faut donc que $f'(x) = 0$ ait des solutions autour desquelles le signe change, c'est-à-dire $3x^2 + m = 0 \\iff x^2 = -\\dfrac{m}{3}$.",
+        "Si $m > 0$ : $3x^2 + m > 0$ pour tout $x$, $f'$ ne s'annule jamais et garde un signe constant : $f$ est strictement croissante, aucun extrémum.",
+        "Si $m = 0$ : $f'(x) = 3x^2 \\geqslant 0$, qui s'annule en $0$ sans changer de signe (cas de $x^3$) : toujours aucun extrémum.",
+        "Si $m < 0$ : $x^2 = -\\dfrac{m}{3} > 0$ donne deux racines $x = \\pm\\sqrt{-\\dfrac{m}{3}}$, et $f'$ (trinôme à $a > 0$) change de signe à chacune : $f$ admet alors un maximum puis un minimum local."
+      ],
+      "reponse": "$f$ admet des extrémums locaux si et seulement si $m < 0$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "probleme",
+      "enonce": "On découpe un carré de côté $x$ à chaque coin d'une feuille carrée de $12$ cm de côté, puis on relève les bords pour former une boîte ouverte. Le volume est $V(x) = x(12 - 2x)^2$ pour $0 < x < 6$. Déterminer la valeur de $x$ qui rend le volume maximal et calculer ce volume.",
+      "corrige": [
+        "On développe pour dériver : $V(x) = x(144 - 48x + 4x^2) = 4x^3 - 48x^2 + 144x$.",
+        "Dérivée : $V'(x) = 12x^2 - 96x + 144 = 12(x^2 - 8x + 12) = 12(x-2)(x-6)$.",
+        "Signe sur $]0\\,;6[$ : les racines sont $2$ et $6$ ; sur cet intervalle, $V'(x) > 0$ pour $0 < x < 2$ et $V'(x) < 0$ pour $2 < x < 6$ (le facteur $x-6$ y est négatif).",
+        "Variations : $V$ croît sur $]0\\,;2]$ puis décroît sur $[2\\,;6[$. Comme $V'$ change de signe de $+$ à $-$ en $2$, $V$ y admet un **maximum**.",
+        "Volume maximal : $V(2) = 2\\times(12 - 4)^2 = 2\\times 8^2 = 2\\times 64 = 128$ cm³."
+      ],
+      "reponse": "Volume maximal pour $x = 2$ cm, égal à $V(2) = 128$ cm³."
+    }
+  ]
+}

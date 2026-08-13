@@ -1,0 +1,93 @@
+{
+  "id": "1spe-math-produit-scalaire-exos",
+  "chapitre": "1spe-math-produit-scalaire",
+  "titre": "Exercices — Calcul vectoriel et produit scalaire",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthonormé, on donne les points $\\mathrm{A}(1\\,;\\,2)$, $\\mathrm{B}(4\\,;\\,3)$ et $\\mathrm{C}(2\\,;\\,5)$. Calculer le produit scalaire $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$.",
+      "corrige": [
+        "On calcule d'abord les coordonnées des deux vecteurs, en faisant « extrémité moins origine ».",
+        "$\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4-1 \\\\ 3-2 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 2-1 \\\\ 5-2 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$.",
+        "Le repère étant orthonormé, on applique $\\vec{u} \\cdot \\vec{v} = xx' + yy'$.",
+        "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 3 \\times 1 + 1 \\times 3 = 3 + 3 = 6$."
+      ],
+      "reponse": "$\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 6$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "angle",
+      "enonce": "Deux vecteurs $\\vec{u}$ et $\\vec{v}$ vérifient $\\|\\vec{u}\\| = 5$, $\\|\\vec{v}\\| = 4$ et forment un angle $\\theta = 120°$. Calculer $\\vec{u} \\cdot \\vec{v}$.",
+      "corrige": [
+        "Ici on connaît les normes et l'angle : on utilise la définition $\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\times \\|\\vec{v}\\| \\times \\cos\\theta$.",
+        "On a $\\cos(120°) = -\\dfrac{1}{2}$.",
+        "$\\vec{u} \\cdot \\vec{v} = 5 \\times 4 \\times \\left(-\\dfrac{1}{2}\\right) = 20 \\times \\left(-\\dfrac{1}{2}\\right) = -10$.",
+        "Le résultat est négatif, ce qui est cohérent : l'angle est obtus."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = -10$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "orthogonalite",
+      "enonce": "En base orthonormée, on considère $\\vec{u}\\begin{pmatrix} 3 \\\\ m \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 2 \\\\ -4 \\end{pmatrix}$, où $m$ est un réel. Déterminer la valeur de $m$ pour laquelle $\\vec{u}$ et $\\vec{v}$ sont orthogonaux.",
+      "corrige": [
+        "Deux vecteurs sont orthogonaux si et seulement si leur produit scalaire est nul : $\\vec{u} \\cdot \\vec{v} = 0$.",
+        "On exprime le produit scalaire en coordonnées : $\\vec{u} \\cdot \\vec{v} = 3 \\times 2 + m \\times (-4) = 6 - 4m$.",
+        "On résout $6 - 4m = 0$, soit $4m = 6$, donc $m = \\dfrac{6}{4} = \\dfrac{3}{2}$.",
+        "Vérification : pour $m = \\dfrac{3}{2}$, $\\vec{u} \\cdot \\vec{v} = 6 - 4 \\times \\dfrac{3}{2} = 6 - 6 = 0$."
+      ],
+      "reponse": "$m = \\dfrac{3}{2}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Deux vecteurs $\\vec{u}$ et $\\vec{v}$ vérifient $\\|\\vec{u}\\| = 4$, $\\|\\vec{v}\\| = 3$ et font entre eux un angle de $60°$. Calculer $\\|\\vec{u} + \\vec{v}\\|$.",
+      "corrige": [
+        "Première étape : calculer $\\vec{u} \\cdot \\vec{v}$ à partir des normes et de l'angle. $\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\|\\,\\|\\vec{v}\\|\\cos(60°) = 4 \\times 3 \\times \\dfrac{1}{2} = 6$.",
+        "Seconde étape : on développe $\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$.",
+        "$\\|\\vec{u} + \\vec{v}\\|^2 = 4^2 + 2 \\times 6 + 3^2 = 16 + 12 + 9 = 37$.",
+        "La norme est positive, donc $\\|\\vec{u} + \\vec{v}\\| = \\sqrt{37}$."
+      ],
+      "reponse": "$\\|\\vec{u} + \\vec{v}\\| = \\sqrt{37} \\approx 6{,}08$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "al-kashi",
+      "enonce": "Démonstration guidée du théorème d'Al-Kashi. Dans un triangle $\\mathrm{ABC}$, on note $a = \\mathrm{BC}$, $b = \\mathrm{AC}$ et $c = \\mathrm{AB}$. En partant de l'égalité $\\overrightarrow{\\mathrm{BC}} = \\overrightarrow{\\mathrm{AC}} - \\overrightarrow{\\mathrm{AB}}$, démontrer que $a^2 = b^2 + c^2 - 2bc\\,\\cos\\widehat{\\mathrm{A}}$.",
+      "corrige": [
+        "On part de $\\overrightarrow{\\mathrm{BC}} = \\overrightarrow{\\mathrm{AC}} - \\overrightarrow{\\mathrm{AB}}$ (relation de Chasles) et on élève au carré scalaire : $a^2 = \\|\\overrightarrow{\\mathrm{BC}}\\|^2 = \\|\\overrightarrow{\\mathrm{AC}} - \\overrightarrow{\\mathrm{AB}}\\|^2$.",
+        "On développe comme en algèbre, grâce à la bilinéarité : $\\|\\overrightarrow{\\mathrm{AC}} - \\overrightarrow{\\mathrm{AB}}\\|^2 = \\|\\overrightarrow{\\mathrm{AC}}\\|^2 - 2\\,\\overrightarrow{\\mathrm{AC}} \\cdot \\overrightarrow{\\mathrm{AB}} + \\|\\overrightarrow{\\mathrm{AB}}\\|^2$.",
+        "Or $\\|\\overrightarrow{\\mathrm{AC}}\\| = b$ et $\\|\\overrightarrow{\\mathrm{AB}}\\| = c$, donc les deux carrés valent $b^2$ et $c^2$.",
+        "Le double produit se calcule avec l'angle en $\\mathrm{A}$ : $\\overrightarrow{\\mathrm{AC}} \\cdot \\overrightarrow{\\mathrm{AB}} = \\|\\overrightarrow{\\mathrm{AC}}\\|\\,\\|\\overrightarrow{\\mathrm{AB}}\\|\\cos\\widehat{\\mathrm{A}} = bc\\,\\cos\\widehat{\\mathrm{A}}$.",
+        "En rassemblant : $a^2 = b^2 + c^2 - 2bc\\,\\cos\\widehat{\\mathrm{A}}$, ce qu'il fallait démontrer."
+      ],
+      "reponse": "$a^2 = b^2 + c^2 - 2bc\\,\\cos\\widehat{\\mathrm{A}}$, obtenu en élevant $\\overrightarrow{\\mathrm{BC}} = \\overrightarrow{\\mathrm{AC}} - \\overrightarrow{\\mathrm{AB}}$ au carré scalaire."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "lieu-geometrique",
+      "enonce": "Dans un repère orthonormé, on donne $\\mathrm{A}(1\\,;\\,2)$ et $\\mathrm{B}(5\\,;\\,4)$. Le point $\\mathrm{C}(1\\,;\\,4)$ appartient-il au cercle de diamètre $[\\mathrm{AB}]$ ? Justifier par un calcul de produit scalaire.",
+      "corrige": [
+        "Un point $\\mathrm{M}$ appartient au cercle de diamètre $[\\mathrm{AB}]$ si et seulement si $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$. On teste donc ce produit pour $\\mathrm{M} = \\mathrm{C}$.",
+        "$\\overrightarrow{\\mathrm{CA}}\\begin{pmatrix} 1-1 \\\\ 2-4 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ -2 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{CB}}\\begin{pmatrix} 5-1 \\\\ 4-4 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 0 \\end{pmatrix}$.",
+        "$\\overrightarrow{\\mathrm{CA}} \\cdot \\overrightarrow{\\mathrm{CB}} = 0 \\times 4 + (-2) \\times 0 = 0$.",
+        "Le produit scalaire est nul : l'angle $\\widehat{\\mathrm{ACB}}$ est droit, donc $\\mathrm{C}$ appartient bien au cercle de diamètre $[\\mathrm{AB}]$."
+      ],
+      "reponse": "Oui : $\\overrightarrow{\\mathrm{CA}} \\cdot \\overrightarrow{\\mathrm{CB}} = 0$, donc $\\mathrm{C}$ est sur le cercle de diamètre $[\\mathrm{AB}]$."
+    }
+  ]
+}

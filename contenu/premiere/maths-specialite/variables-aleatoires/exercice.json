@@ -1,0 +1,93 @@
+{
+  "id": "1spe-math-variables-aleatoires-exos",
+  "chapitre": "1spe-math-variables-aleatoires",
+  "titre": "Exercices — Variables aléatoires",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "loi",
+      "enonce": "La variable aléatoire $X$ prend les valeurs $1$, $2$, $3$ et $4$. Sa loi de probabilité est donnée par le tableau ci-dessous, où une probabilité est inconnue.\n\n| $x_i$ | $1$ | $2$ | $3$ | $4$ |\n|---|---|---|---|---|\n| $P(X = x_i)$ | $0{,}5$ | $0{,}2$ | $p$ | $0{,}1$ |\n\n1. Déterminer la valeur de $p$.\n2. Calculer $P(X \\leqslant 2)$.",
+      "corrige": [
+        "La somme des probabilités d'une loi vaut toujours $1$ : $0{,}5 + 0{,}2 + p + 0{,}1 = 1$.",
+        "On regroupe les termes connus : $0{,}8 + p = 1$, donc $p = 1 - 0{,}8 = 0{,}2$.",
+        "L'événement $\\{X \\leqslant 2\\}$ regroupe les issues où $X$ vaut $1$ ou $2$ : $P(X \\leqslant 2) = P(X = 1) + P(X = 2)$.",
+        "$P(X \\leqslant 2) = 0{,}5 + 0{,}2 = 0{,}7$."
+      ],
+      "reponse": "$p = 0{,}2$ et $P(X \\leqslant 2) = 0{,}7$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "La variable aléatoire $X$ a pour loi de probabilité :\n\n| $x_i$ | $-2$ | $0$ | $3$ | $5$ |\n|---|---|---|---|---|\n| $P(X = x_i)$ | $0{,}1$ | $0{,}4$ | $0{,}3$ | $0{,}2$ |\n\nCalculer l'espérance $E(X)$.",
+      "corrige": [
+        "L'espérance est la moyenne des valeurs pondérée par leurs probabilités : $E(X) = \\sum x_i\\,p_i$.",
+        "$E(X) = (-2) \\times 0{,}1 + 0 \\times 0{,}4 + 3 \\times 0{,}3 + 5 \\times 0{,}2$.",
+        "On calcule chaque terme : $-0{,}2 + 0 + 0{,}9 + 1{,}0$.",
+        "En additionnant : $E(X) = 1{,}7$."
+      ],
+      "reponse": "$E(X) = 1{,}7$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "La variable aléatoire $X$ a pour loi de probabilité :\n\n| $x_i$ | $2$ | $4$ | $6$ |\n|---|---|---|---|\n| $P(X = x_i)$ | $0{,}25$ | $0{,}5$ | $0{,}25$ |\n\nCalculer la variance $V(X)$ à l'aide de la formule de König-Huygens, puis l'écart-type $\\sigma(X)$.",
+      "corrige": [
+        "On calcule d'abord l'espérance : $E(X) = 2 \\times 0{,}25 + 4 \\times 0{,}5 + 6 \\times 0{,}25 = 0{,}5 + 2 + 1{,}5 = 4$.",
+        "On calcule ensuite la moyenne des carrés : $E(X^2) = 2^2 \\times 0{,}25 + 4^2 \\times 0{,}5 + 6^2 \\times 0{,}25 = 1 + 8 + 9 = 18$.",
+        "Formule de König-Huygens (moyenne des carrés moins carré de la moyenne) : $V(X) = E(X^2) - \\left(E(X)\\right)^2 = 18 - 4^2 = 18 - 16 = 2$.",
+        "L'écart-type est la racine de la variance : $\\sigma(X) = \\sqrt{V(X)} = \\sqrt{2} \\approx 1{,}41$."
+      ],
+      "reponse": "$V(X) = 2$ et $\\sigma(X) = \\sqrt{2} \\approx 1{,}41$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "loi",
+      "enonce": "Une roue de loterie est partagée en $10$ secteurs identiques : $4$ portent le nombre $1$, $4$ portent le nombre $3$ et $2$ portent le nombre $10$. On fait tourner la roue et on note $X$ le nombre obtenu. Établir la loi de probabilité de $X$, puis calculer $E(X)$.",
+      "corrige": [
+        "Les secteurs étant identiques, chaque secteur a la même probabilité. La probabilité d'une valeur est donc le nombre de secteurs favorables divisé par $10$.",
+        "$P(X = 1) = \\dfrac{4}{10} = 0{,}4$, $P(X = 3) = \\dfrac{4}{10} = 0{,}4$ et $P(X = 10) = \\dfrac{2}{10} = 0{,}2$.",
+        "Contrôle : $0{,}4 + 0{,}4 + 0{,}2 = 1$, la loi est cohérente.",
+        "Espérance : $E(X) = 1 \\times 0{,}4 + 3 \\times 0{,}4 + 10 \\times 0{,}2 = 0{,}4 + 1{,}2 + 2{,}0 = 3{,}6$."
+      ],
+      "reponse": "$P(X=1) = 0{,}4$, $P(X=3) = 0{,}4$, $P(X=10) = 0{,}2$, et $E(X) = 3{,}6$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "jeu-equitable",
+      "enonce": "Pour participer à un jeu, un joueur paie une mise de $m$ euros. Il tire alors au hasard une carte : avec probabilité $0{,}2$ il reçoit $10$ €, avec probabilité $0{,}3$ il reçoit $5$ €, et sinon il ne reçoit rien. On note $X$ le gain algébrique du joueur (ce qu'il reçoit, diminué de sa mise). Déterminer la valeur de $m$ pour laquelle le jeu est équitable.",
+      "corrige": [
+        "On note $G$ la somme reçue par le joueur : $G$ vaut $10$ avec probabilité $0{,}2$, $5$ avec probabilité $0{,}3$, et $0$ avec probabilité $1 - 0{,}2 - 0{,}3 = 0{,}5$.",
+        "Espérance de la somme reçue : $E(G) = 10 \\times 0{,}2 + 5 \\times 0{,}3 + 0 \\times 0{,}5 = 2 + 1{,}5 = 3{,}5$.",
+        "Le gain algébrique est $X = G - m$. Par linéarité de l'espérance, $E(X) = E(G) - m = 3{,}5 - m$.",
+        "Un jeu est équitable lorsque $E(X) = 0$ : $3{,}5 - m = 0$, donc $m = 3{,}5$."
+      ],
+      "reponse": "Le jeu est équitable pour une mise $m = 3{,}5$ €."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "linearite-esperance",
+      "enonce": "Le nombre de pannes mensuelles $X$ d'une machine suit la loi de probabilité :\n\n| $x_i$ | $0$ | $1$ | $2$ | $3$ |\n|---|---|---|---|---|\n| $P(X = x_i)$ | $0{,}4$ | $0{,}3$ | $0{,}2$ | $0{,}1$ |\n\n1. Calculer $E(X)$, puis $V(X)$ et $\\sigma(X)$.\n2. Chaque mois, le coût d'entretien (en euros) est $Y = 3X + 2$ : un forfait de $2$ € auquel s'ajoutent $3$ € par panne. Calculer le coût moyen mensuel $E(Y)$.",
+      "corrige": [
+        "Espérance : $E(X) = 0 \\times 0{,}4 + 1 \\times 0{,}3 + 2 \\times 0{,}2 + 3 \\times 0{,}1 = 0 + 0{,}3 + 0{,}4 + 0{,}3 = 1$.",
+        "Moyenne des carrés : $E(X^2) = 0^2 \\times 0{,}4 + 1^2 \\times 0{,}3 + 2^2 \\times 0{,}2 + 3^2 \\times 0{,}1 = 0 + 0{,}3 + 0{,}8 + 0{,}9 = 2$.",
+        "König-Huygens : $V(X) = E(X^2) - \\left(E(X)\\right)^2 = 2 - 1^2 = 1$, donc $\\sigma(X) = \\sqrt{1} = 1$.",
+        "Pour le coût, on utilise la linéarité de l'espérance $E(aX + b) = a\\,E(X) + b$ avec $a = 3$ et $b = 2$.",
+        "$E(Y) = 3 \\times E(X) + 2 = 3 \\times 1 + 2 = 5$."
+      ],
+      "reponse": "$E(X) = 1$, $V(X) = 1$, $\\sigma(X) = 1$ ; le coût moyen mensuel est $E(Y) = 5$ €."
+    }
+  ]
+}

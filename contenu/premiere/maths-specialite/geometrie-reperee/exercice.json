@@ -1,0 +1,92 @@
+{
+  "id": "1spe-math-geometrie-reperee-exos",
+  "chapitre": "1spe-math-geometrie-reperee",
+  "titre": "Exercices — Géométrie repérée",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "equation-droite",
+      "enonce": "Le plan est muni d'un repère orthonormé. Déterminer une équation de la droite $d$ passant par $\\mathrm{A}(3\\,;-2)$ et admettant $\\vec{n}\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$ pour vecteur normal.",
+      "corrige": [
+        "Une droite passant par $\\mathrm{A}(x_\\mathrm{A}\\,;y_\\mathrm{A})$ de vecteur normal $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$ a pour équation $a(x-x_\\mathrm{A}) + b(y-y_\\mathrm{A}) = 0$.",
+        "Ici : $2(x-3) + 5\\big(y-(-2)\\big) = 0$, c'est-à-dire $2(x-3) + 5(y+2) = 0$.",
+        "On développe : $2x - 6 + 5y + 10 = 0$, soit $2x + 5y + 4 = 0$.",
+        "Contrôle : les coordonnées de $\\mathrm{A}$ doivent vérifier l'équation. $2\\times 3 + 5\\times(-2) + 4 = 6 - 10 + 4 = 0$ ✓."
+      ],
+      "reponse": "$2x + 5y + 4 = 0$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "equation-cercle",
+      "enonce": "Écrire une équation du cercle de centre $\\Omega(-1\\,;3)$ et de rayon $4$.",
+      "corrige": [
+        "Le cercle de centre $(x_0\\,;y_0)$ et de rayon $R$ a pour équation $(x-x_0)^2 + (y-y_0)^2 = R^2$.",
+        "On soustrait les coordonnées du centre : $x_0 = -1$ donne $\\big(x-(-1)\\big)^2 = (x+1)^2$, et $y_0 = 3$ donne $(y-3)^2$.",
+        "On élève le rayon au carré : $R^2 = 4^2 = 16$.",
+        "L'équation est donc $(x+1)^2 + (y-3)^2 = 16$."
+      ],
+      "reponse": "$(x+1)^2 + (y-3)^2 = 16$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "forme-developpee",
+      "enonce": "Montrer que l'ensemble des points $\\mathrm{M}(x\\,;y)$ vérifiant $x^2 + y^2 + 2x - 8y + 8 = 0$ est un cercle, puis préciser son centre et son rayon.",
+      "corrige": [
+        "On regroupe les termes en $x$ et en $y$ sous forme de carrés parfaits : $x^2 + 2x = (x+1)^2 - 1$ et $y^2 - 8y = (y-4)^2 - 16$.",
+        "L'équation devient $(x+1)^2 - 1 + (y-4)^2 - 16 + 8 = 0$, soit $(x+1)^2 + (y-4)^2 - 9 = 0$.",
+        "On isole le second membre : $(x+1)^2 + (y-4)^2 = 9$. Ce second membre vaut $9 > 0$ : c'est bien l'équation d'un cercle.",
+        "Par identification avec $(x-x_0)^2 + (y-y_0)^2 = R^2$, le centre est $(-1\\,;4)$ et le rayon $R = \\sqrt{9} = 3$."
+      ],
+      "reponse": "C'est le cercle de centre $(-1\\,;4)$ et de rayon $3$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "perpendicularite",
+      "enonce": "On donne la droite $d_1 : 5x - 2y + 1 = 0$. Déterminer une équation de la droite $d_2$ perpendiculaire à $d_1$ et passant par $\\mathrm{B}(1\\,;3)$.",
+      "corrige": [
+        "$d_1$ a pour vecteur normal $\\vec{n_1}\\begin{pmatrix} 5 \\\\ -2 \\end{pmatrix}$ (ce sont les coefficients de son équation).",
+        "Deux droites sont perpendiculaires si et seulement si leurs vecteurs normaux sont orthogonaux. On cherche donc un vecteur normal $\\vec{n_2}$ de $d_2$ orthogonal à $\\vec{n_1}$.",
+        "Le vecteur $\\vec{n_2}\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$ convient : $\\vec{n_1}\\cdot\\vec{n_2} = 5\\times 2 + (-2)\\times 5 = 10 - 10 = 0$.",
+        "$d_2$ passe par $\\mathrm{B}(1\\,;3)$ avec ce vecteur normal : $2(x-1) + 5(y-3) = 0$, soit $2x - 2 + 5y - 15 = 0$, donc $2x + 5y - 17 = 0$."
+      ],
+      "reponse": "$2x + 5y - 17 = 0$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "cercle-diametre",
+      "enonce": "Soit $\\mathrm{A}(2\\,;1)$ et $\\mathrm{B}(8\\,;3)$. Le cercle $\\mathscr{C}$ de diamètre $[\\mathrm{AB}]$ est l'ensemble des points $\\mathrm{M}$ tels que $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$. 1) Déterminer le centre et le rayon de $\\mathscr{C}$. 2) En déduire une équation de $\\mathscr{C}$. 3) Vérifier que $\\mathrm{A}$ appartient bien à $\\mathscr{C}$.",
+      "corrige": [
+        "1) Le centre de $\\mathscr{C}$ est le milieu de $[\\mathrm{AB}]$ : $\\left(\\dfrac{2+8}{2}\\,;\\dfrac{1+3}{2}\\right) = (5\\,;2)$.",
+        "Le rayon est la moitié du diamètre. Or $\\mathrm{AB} = \\sqrt{(8-2)^2 + (3-1)^2} = \\sqrt{36 + 4} = \\sqrt{40} = 2\\sqrt{10}$, donc $R = \\dfrac{\\mathrm{AB}}{2} = \\sqrt{10}$ et $R^2 = 10$.",
+        "2) Avec le centre $(5\\,;2)$ et $R^2 = 10$ : $\\mathscr{C}$ a pour équation $(x-5)^2 + (y-2)^2 = 10$.",
+        "3) Pour $\\mathrm{A}(2\\,;1)$ : $(2-5)^2 + (1-2)^2 = (-3)^2 + (-1)^2 = 9 + 1 = 10$. L'égalité est vérifiée, donc $\\mathrm{A} \\in \\mathscr{C}$ ✓."
+      ],
+      "reponse": "Centre $(5\\,;2)$, rayon $\\sqrt{10}$ ; équation $(x-5)^2 + (y-2)^2 = 10$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "reperage-configuration",
+      "enonce": "$\\mathrm{OABC}$ est un carré de côté $a$ (avec $a > 0$), dont les sommets sont nommés dans cet ordre. On munit le plan du repère orthonormé $(\\mathrm{O}\\,;\\vec{i},\\vec{j})$ tel que $\\mathrm{A}(a\\,;0)$ et $\\mathrm{C}(0\\,;a)$. 1) Donner les coordonnées de $\\mathrm{B}$. 2) Démontrer, par le calcul, que les diagonales $[\\mathrm{OB}]$ et $[\\mathrm{AC}]$ sont perpendiculaires.",
+      "corrige": [
+        "1) Dans le carré $\\mathrm{OABC}$, $\\mathrm{B}$ est le sommet opposé à $\\mathrm{O}$ : on passe de $\\mathrm{A}$ à $\\mathrm{B}$ par le vecteur $\\overrightarrow{\\mathrm{OC}}\\begin{pmatrix} 0 \\\\ a \\end{pmatrix}$. Donc $\\mathrm{B}(a\\,;a)$.",
+        "2) On calcule les coordonnées des vecteurs directeurs des diagonales : $\\overrightarrow{\\mathrm{OB}}\\begin{pmatrix} a \\\\ a \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 0-a \\\\ a-0 \\end{pmatrix} = \\begin{pmatrix} -a \\\\ a \\end{pmatrix}$.",
+        "Le repère étant orthonormé, on peut utiliser l'expression du produit scalaire en coordonnées : $\\overrightarrow{\\mathrm{OB}} \\cdot \\overrightarrow{\\mathrm{AC}} = a\\times(-a) + a\\times a = -a^2 + a^2 = 0$.",
+        "Ces deux vecteurs sont non nuls (car $a > 0$) et de produit scalaire nul : ils sont orthogonaux. Les diagonales $[\\mathrm{OB}]$ et $[\\mathrm{AC}]$ sont donc perpendiculaires."
+      ],
+      "reponse": "$\\mathrm{B}(a\\,;a)$ ; $\\overrightarrow{\\mathrm{OB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 0$, donc $(\\mathrm{OB}) \\perp (\\mathrm{AC})$."
+    }
+  ]
+}

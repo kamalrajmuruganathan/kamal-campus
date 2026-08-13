@@ -1,0 +1,91 @@
+{
+  "id": "1spe-math-probabilites-conditionnelles-exos",
+  "chapitre": "1spe-math-probabilites-conditionnelles",
+  "titre": "Exercices — Probabilités conditionnelles et indépendance",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Dans une classe de $30$ élèves, $18$ étudient l'espagnol (événement $\\mathrm{E}$), les autres l'allemand. Parmi les élèves d'espagnol, $12$ sont des filles (événement $\\mathrm{F}$). On choisit un élève au hasard. Sachant qu'il étudie l'espagnol, quelle est la probabilité que ce soit une fille ?",
+      "corrige": [
+        "On applique $P_\\mathrm{E}(\\mathrm{F}) = \\dfrac{P(\\mathrm{E} \\cap \\mathrm{F})}{P(\\mathrm{E})}$ : on se restreint à l'univers des élèves qui font espagnol.",
+        "Ces élèves sont au nombre de $18$, et parmi eux $12$ sont des filles.",
+        "Donc $P_\\mathrm{E}(\\mathrm{F}) = \\dfrac{12}{18} = \\dfrac{2}{3}$."
+      ],
+      "reponse": "$P_\\mathrm{E}(\\mathrm{F}) = \\dfrac{2}{3} \\approx 0{,}67$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "probabilites-composees",
+      "enonce": "On donne $P(\\mathrm{A}) = 0{,}3$ et $P_\\mathrm{A}(\\mathrm{B}) = 0{,}4$. Calculer $P(\\mathrm{A} \\cap \\mathrm{B})$.",
+      "corrige": [
+        "On utilise la formule des probabilités composées : $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P_\\mathrm{A}(\\mathrm{B})$. C'est le calcul le long d'un chemin d'arbre.",
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}3 \\times 0{,}4 = 0{,}12$.",
+        "On multiplie bien (chemin) au lieu d'additionner : la probabilité d'une intersection est un produit ici, car on connaît la probabilité conditionnelle."
+      ],
+      "reponse": "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}12$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "arbre",
+      "enonce": "Un jardinier sème des graines : $40\\,\\%$ sont de variété A, les autres de variété B. Une graine de variété A germe avec une probabilité de $0{,}9$ ; une graine de variété B germe avec une probabilité de $0{,}7$. On note $\\mathrm{G}$ l'événement « la graine germe ». Après avoir construit l'arbre pondéré, calculer la probabilité qu'une graine prise au hasard germe.",
+      "corrige": [
+        "L'arbre a deux premières branches : $\\mathrm{A}$ de probabilité $0{,}4$ et $\\mathrm{B}$ de probabilité $0{,}6$ (les branches d'un même nœud somment à $1$).",
+        "De $\\mathrm{A}$ partent $P_\\mathrm{A}(\\mathrm{G}) = 0{,}9$ et $P_\\mathrm{A}(\\overline{\\mathrm{G}}) = 0{,}1$ ; de $\\mathrm{B}$ partent $P_\\mathrm{B}(\\mathrm{G}) = 0{,}7$ et $P_\\mathrm{B}(\\overline{\\mathrm{G}}) = 0{,}3$.",
+        "Deux chemins mènent à $\\mathrm{G}$. Chemin par A : $P(\\mathrm{A} \\cap \\mathrm{G}) = 0{,}4 \\times 0{,}9 = 0{,}36$. Chemin par B : $P(\\mathrm{B} \\cap \\mathrm{G}) = 0{,}6 \\times 0{,}7 = 0{,}42$.",
+        "Formule des probabilités totales : $P(\\mathrm{G}) = 0{,}36 + 0{,}42 = 0{,}78$."
+      ],
+      "reponse": "$P(\\mathrm{G}) = 0{,}78$, soit $78\\,\\%$ des graines qui germent."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "succession-epreuves-independantes",
+      "enonce": "On lance deux fois de suite une pièce truquée pour laquelle la probabilité d'obtenir pile est $0{,}6$. Les deux lancers sont indépendants. Calculer la probabilité d'obtenir : a) deux piles ; b) exactement un pile.",
+      "corrige": [
+        "Les lancers étant indépendants, la probabilité d'un couple de résultats est le produit des probabilités. On note $\\mathrm{P}$ pile ($0{,}6$) et $\\mathrm{F}$ face ($0{,}4$).",
+        "a) Deux piles correspond au seul chemin PP : $P = 0{,}6 \\times 0{,}6 = 0{,}36$.",
+        "b) « Exactement un pile » est réalisé par deux chemins : PF et FP.",
+        "Chacun a pour probabilité $0{,}6 \\times 0{,}4 = 0{,}24$. On additionne les deux chemins : $P = 0{,}24 + 0{,}24 = 0{,}48$."
+      ],
+      "reponse": "a) $0{,}36$ ; b) $0{,}48$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "Une maladie touche $2\\,\\%$ d'une population. Un test de dépistage est positif chez $95\\,\\%$ des personnes malades, et positif chez $10\\,\\%$ des personnes non malades (faux positifs). On note $\\mathrm{M}$ « être malade » et $\\mathrm{T}$ « le test est positif ». a) Calculer $P(\\mathrm{T})$. b) Une personne a un test positif : calculer la probabilité qu'elle soit réellement malade, $P_\\mathrm{T}(\\mathrm{M})$.",
+      "corrige": [
+        "On lit l'énoncé : $P(\\mathrm{M}) = 0{,}02$, $P(\\overline{\\mathrm{M}}) = 0{,}98$, $P_\\mathrm{M}(\\mathrm{T}) = 0{,}95$ et $P_{\\overline{\\mathrm{M}}}(\\mathrm{T}) = 0{,}10$.",
+        "a) Probabilités totales : $P(\\mathrm{T}) = P(\\mathrm{M})P_\\mathrm{M}(\\mathrm{T}) + P(\\overline{\\mathrm{M}})P_{\\overline{\\mathrm{M}}}(\\mathrm{T}) = 0{,}02 \\times 0{,}95 + 0{,}98 \\times 0{,}10$.",
+        "$P(\\mathrm{T}) = 0{,}019 + 0{,}098 = 0{,}117$.",
+        "b) Par définition $P_\\mathrm{T}(\\mathrm{M}) = \\dfrac{P(\\mathrm{M} \\cap \\mathrm{T})}{P(\\mathrm{T})} = \\dfrac{0{,}019}{0{,}117}$.",
+        "$P_\\mathrm{T}(\\mathrm{M}) \\approx 0{,}162$. Attention : $P_\\mathrm{T}(\\mathrm{M}) \\approx 16\\,\\%$ est très différent de $P_\\mathrm{M}(\\mathrm{T}) = 95\\,\\%$ ; confondre les deux serait l'erreur type du chapitre."
+      ],
+      "reponse": "a) $P(\\mathrm{T}) = 0{,}117$ ; b) $P_\\mathrm{T}(\\mathrm{M}) = \\dfrac{0{,}019}{0{,}117} \\approx 0{,}162$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "Un basketteur réussit chaque lancer franc avec une probabilité de $0{,}8$, et ses tirs sont indépendants. Il effectue $4$ lancers francs de suite. Quelle est la probabilité qu'il réussisse exactement $3$ paniers ?",
+      "corrige": [
+        "Chaque lancer est une épreuve de Bernoulli : succès $\\mathrm{S}$ (réussite) de probabilité $p = 0{,}8$, échec $\\overline{\\mathrm{S}}$ de probabilité $1 - p = 0{,}2$. On répète $n = 4$ fois, de façon indépendante et identique.",
+        "Un chemin réalisant exactement $3$ succès comporte $3$ succès et $1$ échec ; sa probabilité est $0{,}8^3 \\times 0{,}2 = 0{,}512 \\times 0{,}2 = 0{,}1024$.",
+        "On compte les chemins : l'unique échec peut occuper la $1^{\\text{re}}$, $2^{\\text{e}}$, $3^{\\text{e}}$ ou $4^{\\text{e}}$ position, soit $4$ chemins possibles.",
+        "On additionne ces chemins de même probabilité : $P = 4 \\times 0{,}1024 = 0{,}4096$. Ne pas oublier le facteur $4$, qui vient du nombre de chemins."
+      ],
+      "reponse": "$P = 4 \\times 0{,}8^3 \\times 0{,}2 = 0{,}4096$."
+    }
+  ]
+}

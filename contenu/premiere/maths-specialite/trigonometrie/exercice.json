@@ -1,0 +1,91 @@
+{
+  "id": "1spe-math-trigonometrie-exos",
+  "chapitre": "1spe-math-trigonometrie",
+  "titre": "Exercices — Trigonométrie",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "radian",
+      "enonce": "Convertir $120°$ en radians, puis convertir $\\dfrac{5\\pi}{6}$ radians en degrés.",
+      "corrige": [
+        "Pour passer des degrés aux radians, on multiplie par $\\dfrac{\\pi}{180}$ : $120 \\times \\dfrac{\\pi}{180} = \\dfrac{120\\pi}{180}$.",
+        "On simplifie la fraction $\\dfrac{120}{180}$ par $60$ : $\\dfrac{120}{180} = \\dfrac{2}{3}$, donc $120° = \\dfrac{2\\pi}{3}$ radians.",
+        "Pour passer des radians aux degrés, on fait l'opération inverse en multipliant par $\\dfrac{180}{\\pi}$ : $\\dfrac{5\\pi}{6} \\times \\dfrac{180}{\\pi} = \\dfrac{5 \\times 180}{6}$.",
+        "$\\dfrac{5 \\times 180}{6} = 5 \\times 30 = 150$, donc $\\dfrac{5\\pi}{6}$ radians $= 150°$."
+      ],
+      "reponse": "$120° = \\dfrac{2\\pi}{3}$ radians et $\\dfrac{5\\pi}{6}$ radians $= 150°$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "valeurs-remarquables",
+      "enonce": "Donner les valeurs exactes de $\\cos\\left(\\dfrac{\\pi}{6}\\right)$, $\\sin\\left(\\dfrac{\\pi}{6}\\right)$ et $\\cos\\left(\\dfrac{\\pi}{3}\\right)$.",
+      "corrige": [
+        "On lit ces valeurs dans le tableau des valeurs remarquables (section 4 de la fiche).",
+        "Pour $x = \\dfrac{\\pi}{6}$ : $\\cos\\left(\\dfrac{\\pi}{6}\\right) = \\dfrac{\\sqrt{3}}{2}$ et $\\sin\\left(\\dfrac{\\pi}{6}\\right) = \\dfrac{1}{2}$.",
+        "Pour $x = \\dfrac{\\pi}{3}$ : $\\cos\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$. Attention à ne pas confondre avec $\\dfrac{\\pi}{6}$, où cosinus et sinus sont échangés."
+      ],
+      "reponse": "$\\cos\\left(\\dfrac{\\pi}{6}\\right) = \\dfrac{\\sqrt{3}}{2}$, $\\sin\\left(\\dfrac{\\pi}{6}\\right) = \\dfrac{1}{2}$ et $\\cos\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\sin x = -\\dfrac{3}{5}$ et que $\\cos x < 0$. Déterminer la valeur exacte de $\\cos x$.",
+      "corrige": [
+        "On utilise la relation fondamentale $\\cos^2 x + \\sin^2 x = 1$, donc $\\cos^2 x = 1 - \\sin^2 x$.",
+        "$\\sin^2 x = \\left(-\\dfrac{3}{5}\\right)^2 = \\dfrac{9}{25}$, donc $\\cos^2 x = 1 - \\dfrac{9}{25} = \\dfrac{25}{25} - \\dfrac{9}{25} = \\dfrac{16}{25}$.",
+        "On en déduit $\\cos x = \\pm\\sqrt{\\dfrac{16}{25}} = \\pm\\dfrac{4}{5}$.",
+        "La condition $\\cos x < 0$ impose de garder la valeur négative : $\\cos x = -\\dfrac{4}{5}$."
+      ],
+      "reponse": "$\\cos x = -\\dfrac{4}{5}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "angles-associes",
+      "enonce": "Calculer les valeurs exactes de $\\cos\\left(\\dfrac{5\\pi}{6}\\right)$ et de $\\sin\\left(\\dfrac{7\\pi}{6}\\right)$ à l'aide des angles associés.",
+      "corrige": [
+        "On écrit $\\dfrac{5\\pi}{6} = \\pi - \\dfrac{\\pi}{6}$. La relation $\\cos(\\pi - x) = -\\cos x$ donne $\\cos\\left(\\dfrac{5\\pi}{6}\\right) = -\\cos\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$.",
+        "On écrit $\\dfrac{7\\pi}{6} = \\pi + \\dfrac{\\pi}{6}$. La relation $\\sin(\\pi + x) = -\\sin x$ donne $\\sin\\left(\\dfrac{7\\pi}{6}\\right) = -\\sin\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{1}{2}$.",
+        "Contrôle sur le cercle : $\\dfrac{5\\pi}{6}$ est dans le deuxième quadrant (abscisse négative, cosinus $<0$) et $\\dfrac{7\\pi}{6}$ dans le troisième (ordonnée négative, sinus $<0$). Les signes sont cohérents."
+      ],
+      "reponse": "$\\cos\\left(\\dfrac{5\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$ et $\\sin\\left(\\dfrac{7\\pi}{6}\\right) = -\\dfrac{1}{2}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "angles-associes",
+      "enonce": "On veut démontrer la relation $\\cos\\left(\\dfrac{\\pi}{2} - x\\right) = \\sin x$. On note $\\mathrm{M}$ le point du cercle trigonométrique associé au réel $x$, et $\\mathrm{M'}$ le point associé au réel $\\dfrac{\\pi}{2} - x$. On admet que $\\mathrm{M'}$ est le symétrique de $\\mathrm{M}$ par rapport à la première bissectrice (la droite d'équation $y = x$). Rédiger la démonstration.",
+      "corrige": [
+        "Par définition de l'enroulement, le point $\\mathrm{M}$ associé à $x$ a pour coordonnées $\\mathrm{M}(\\cos x\\,;\\,\\sin x)$.",
+        "La symétrie par rapport à la première bissectrice $y = x$ échange l'abscisse et l'ordonnée d'un point. Le symétrique de $\\mathrm{M}(\\cos x\\,;\\,\\sin x)$ est donc le point de coordonnées $(\\sin x\\,;\\,\\cos x)$.",
+        "Or ce symétrique est $\\mathrm{M'}$, qui est associé à $\\dfrac{\\pi}{2} - x$ : par définition, ses coordonnées sont aussi $\\mathrm{M'}\\left(\\cos\\left(\\dfrac{\\pi}{2} - x\\right)\\,;\\,\\sin\\left(\\dfrac{\\pi}{2} - x\\right)\\right)$.",
+        "En identifiant les deux écritures des coordonnées de $\\mathrm{M'}$, on obtient $\\cos\\left(\\dfrac{\\pi}{2} - x\\right) = \\sin x$ (abscisses) et, au passage, $\\sin\\left(\\dfrac{\\pi}{2} - x\\right) = \\cos x$ (ordonnées)."
+      ],
+      "reponse": "En identifiant les coordonnées de $\\mathrm{M'}$, on a $\\cos\\left(\\dfrac{\\pi}{2} - x\\right) = \\sin x$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "angles-associes",
+      "enonce": "Montrer que, pour tout réel $x$, l'expression $A(x) = \\cos(\\pi - x) + \\cos(\\pi + x) + 2\\cos(-x)$ est constante, et donner sa valeur.",
+      "corrige": [
+        "On remplace chaque terme par sa valeur donnée par les angles associés (section 5 de la fiche). $\\cos(\\pi - x) = -\\cos x$.",
+        "$\\cos(\\pi + x) = -\\cos x$.",
+        "$\\cos(-x) = \\cos x$, car la fonction cosinus est paire ; donc $2\\cos(-x) = 2\\cos x$.",
+        "On additionne : $A(x) = -\\cos x - \\cos x + 2\\cos x = (-1 - 1 + 2)\\cos x = 0 \\times \\cos x = 0$.",
+        "Le terme en $\\cos x$ disparaît : $A(x)$ vaut $0$ quelle que soit la valeur de $x$, l'expression est donc bien constante."
+      ],
+      "reponse": "$A(x) = 0$ pour tout réel $x$ : l'expression est constante, égale à $0$."
+    }
+  ]
+}

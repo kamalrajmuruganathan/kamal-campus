@@ -1,0 +1,93 @@
+{
+  "id": "1spe-math-derivation-exos",
+  "chapitre": "1spe-math-derivation",
+  "titre": "Exercices — Dérivation",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Déterminer la fonction dérivée de $f(x) = x^3 - 4x^2 + 5x - 1$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "On dérive terme à terme en utilisant $ (x^n)' = n\\,x^{n-1}$, $ (kx)' = k$ et $ (k)' = 0$.",
+        "Dérivée de $x^3$ : $3x^2$. Dérivée de $-4x^2$ : $-4 \\times 2x = -8x$.",
+        "Dérivée de $5x$ : $5$. Dérivée de la constante $-1$ : $0$.",
+        "On additionne les dérivées : $f'(x) = 3x^2 - 8x + 5$."
+      ],
+      "reponse": "$f'(x) = 3x^2 - 8x + 5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "nombre-derive",
+      "enonce": "Soit $f(x) = x^2$. En utilisant la définition du nombre dérivé (limite du taux de variation), calculer $f'(4)$.",
+      "corrige": [
+        "On écrit le taux de variation en $a = 4$ : $\\dfrac{f(4+h) - f(4)}{h} = \\dfrac{(4+h)^2 - 16}{h}$.",
+        "On développe le numérateur : $(4+h)^2 - 16 = 16 + 8h + h^2 - 16 = 8h + h^2 = h(8 + h)$.",
+        "On simplifie par $h$ (non nul) : $\\dfrac{h(8+h)}{h} = 8 + h$.",
+        "Quand $h \\to 0$, $8 + h$ tend vers $8$. Donc $f'(4) = 8$."
+      ],
+      "reponse": "$f'(4) = 8$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Soit $f(x) = x^2 - 3x + 1$. Déterminer l'équation de la tangente à la courbe de $f$ au point d'abscisse $a = 2$.",
+      "corrige": [
+        "On calcule d'abord la dérivée : $f'(x) = 2x - 3$.",
+        "On évalue la pente en $a = 2$ : $f'(2) = 2 \\times 2 - 3 = 1$.",
+        "On calcule l'ordonnée du point de contact : $f(2) = 2^2 - 3 \\times 2 + 1 = 4 - 6 + 1 = -1$.",
+        "On applique la formule $y = f'(a)(x - a) + f(a)$ : $y = 1 \\times (x - 2) + (-1) = x - 3$."
+      ],
+      "reponse": "$y = x - 3$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Dériver $f(x) = (x^2 - 1)(3x + 2)$ sur $\\mathbb{R}$ à l'aide de la formule de dérivation d'un produit.",
+      "corrige": [
+        "On pose $u = x^2 - 1$ et $v = 3x + 2$, donc $u' = 2x$ et $v' = 3$.",
+        "La formule du produit est $(uv)' = u'v + uv'$.",
+        "$f'(x) = 2x(3x + 2) + (x^2 - 1)\\times 3 = (6x^2 + 4x) + (3x^2 - 3)$.",
+        "On réduit : $f'(x) = 9x^2 + 4x - 3$."
+      ],
+      "reponse": "$f'(x) = 9x^2 + 4x - 3$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "approximation-affine",
+      "enonce": "L'aire d'un disque de rayon $r$ est $A(r) = \\pi r^2$. Un disque a un rayon de $5$ cm. À l'aide de l'approximation affine, estimer l'augmentation d'aire lorsque le rayon passe de $5$ cm à $5{,}1$ cm. (On prendra $\\pi \\approx 3{,}14$.)",
+      "corrige": [
+        "L'approximation affine s'écrit $A(a + h) \\approx A(a) + A'(a)\\,h$, donc l'augmentation d'aire est $A(a+h) - A(a) \\approx A'(a)\\,h$.",
+        "On dérive $A(r) = \\pi r^2$ : $A'(r) = 2\\pi r$ (le facteur $\\pi$ est une constante).",
+        "Ici $a = 5$ et $h = 5{,}1 - 5 = 0{,}1$. On calcule $A'(5) = 2\\pi \\times 5 = 10\\pi$.",
+        "L'augmentation est donc $\\approx 10\\pi \\times 0{,}1 = \\pi \\approx 3{,}14$ cm²."
+      ],
+      "reponse": "L'aire augmente d'environ $\\pi \\approx 3{,}14$ cm²."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "nombre-derive",
+      "enonce": "Soit $f(x) = \\dfrac{1}{x}$ définie sur $\\mathbb{R}^*$ et $a \\neq 0$. En revenant à la définition du nombre dérivé, démontrer que $f'(a) = -\\dfrac{1}{a^2}$.",
+      "corrige": [
+        "On forme le taux de variation en $a$ : $\\dfrac{f(a+h) - f(a)}{h} = \\dfrac{\\frac{1}{a+h} - \\frac{1}{a}}{h}$ (pour $h$ tel que $a+h \\neq 0$).",
+        "On réduit le numérateur au même dénominateur : $\\dfrac{1}{a+h} - \\dfrac{1}{a} = \\dfrac{a - (a+h)}{a(a+h)} = \\dfrac{-h}{a(a+h)}$.",
+        "On divise par $h$ (non nul) : $\\dfrac{1}{h} \\times \\dfrac{-h}{a(a+h)} = \\dfrac{-1}{a(a+h)}$.",
+        "Quand $h \\to 0$, $a + h$ tend vers $a$, donc l'expression tend vers $\\dfrac{-1}{a \\times a} = -\\dfrac{1}{a^2}$.",
+        "On a donc bien $f'(a) = -\\dfrac{1}{a^2}$."
+      ],
+      "reponse": "$f'(a) = -\\dfrac{1}{a^2}$, ce qui confirme la dérivée usuelle de la fonction inverse."
+    }
+  ]
+}
