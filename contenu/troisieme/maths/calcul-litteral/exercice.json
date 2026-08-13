@@ -1,0 +1,91 @@
+{
+  "id": "3e-math-calcul-litteral-exos",
+  "chapitre": "3e-math-calcul-litteral",
+  "titre": "Exercices — Calcul littéral et algébrique",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "double-distributivite",
+      "enonce": "Développe et réduis les deux expressions suivantes : $A = (2x+3)(x-4)$ et $B = (3x-1)(2x+5)$.",
+      "corrige": [
+        "Pour $A$, chaque terme de la première parenthèse multiplie chaque terme de la seconde : **quatre** produits. $A = 2x \\times x + 2x \\times (-4) + 3 \\times x + 3 \\times (-4)$.",
+        "$A = 2x^2 - 8x + 3x - 12$. On réduit les termes en $x$ : $-8x + 3x = -5x$. Donc $A = 2x^2 - 5x - 12$.",
+        "Pour $B$, de même : $B = 3x \\times 2x + 3x \\times 5 + (-1) \\times 2x + (-1) \\times 5 = 6x^2 + 15x - 2x - 5$.",
+        "On réduit : $15x - 2x = 13x$. Donc $B = 6x^2 + 13x - 5$."
+      ],
+      "reponse": "$A = 2x^2 - 5x - 12$ et $B = 6x^2 + 13x - 5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "identites-remarquables",
+      "enonce": "Développe en utilisant une identité remarquable : $C = (x+5)^2$, $D = (3x-2)^2$, $E = (x-6)(x+6)$.",
+      "corrige": [
+        "$C$ est un carré d'une somme : $(a+b)^2 = a^2 + 2ab + b^2$ avec $a = x$ et $b = 5$. Le double produit vaut $2 \\times x \\times 5 = 10x$. Donc $C = x^2 + 10x + 25$.",
+        "$D$ est un carré d'une différence : $(a-b)^2 = a^2 - 2ab + b^2$ avec $a = 3x$ et $b = 2$. Attention, $a^2 = (3x)^2 = 9x^2$ et non $3x^2$. Le double produit vaut $2 \\times 3x \\times 2 = 12x$, soustrait, et $b^2 = +4$. Donc $D = 9x^2 - 12x + 4$.",
+        "$E$ est une différence de deux carrés : $(a-b)(a+b) = a^2 - b^2$ avec $a = x$ et $b = 6$. Le double produit disparaît. Donc $E = x^2 - 36$."
+      ],
+      "reponse": "$C = x^2 + 10x + 25$, $D = 9x^2 - 12x + 4$, $E = x^2 - 36$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "sens-de-lecture",
+      "enonce": "Factorise chaque expression en reconnaissant une identité remarquable : $F = x^2 + 12x + 36$, $G = x^2 - 8x + 16$, $H = 49x^2 - 16$.",
+      "corrige": [
+        "$F$ a **trois** termes : deux carrés ($x^2$ et $36 = 6^2$) et un terme du milieu positif. Je teste le double produit : $2 \\times x \\times 6 = 12x$, c'est bien le terme central. C'est donc $(a+b)^2$ avec $a = x$, $b = 6$ : $F = (x+6)^2$.",
+        "$G$ a aussi trois termes, avec $x^2$ et $16 = 4^2$, mais le terme du milieu est **négatif**. Le double produit $2 \\times x \\times 4 = 8x$ correspond, avec le signe $-$ : c'est $(a-b)^2$. Donc $G = (x-4)^2$.",
+        "$H$ a **deux** termes et c'est une **différence** : identité $a^2 - b^2 = (a-b)(a+b)$. J'écris chaque terme comme un carré : $49x^2 = (7x)^2$ et $16 = 4^2$. Donc $H = (7x-4)(7x+4)$.",
+        "Contrôle : je redéveloppe $(x+6)^2 = x^2 + 12x + 36$ ✓, ce qui confirme $F$ ; même réflexe pour $G$ et $H$."
+      ],
+      "reponse": "$F = (x+6)^2$, $G = (x-4)^2$, $H = (7x-4)(7x+4)$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "facteur-commun",
+      "enonce": "Factorise en mettant en évidence le facteur commun apparent : $K = (x+3)(2x-1) + (x+3)(x+5)$, puis $L = (3x+2)(x-4) - (3x+2)(x-9)$.",
+      "corrige": [
+        "Dans $K$, le facteur $(x+3)$ est présent dans les deux termes : on le met en facteur. $K = (x+3)\\big[(2x-1) + (x+5)\\big]$.",
+        "On réduit le crochet : $(2x-1) + (x+5) = 3x + 4$. Donc $K = (x+3)(3x+4)$.",
+        "Dans $L$, le facteur commun est $(3x+2)$, mais attention au signe $-$ devant la seconde parenthèse, qui change **les deux** signes : $L = (3x+2)\\big[(x-4) - (x-9)\\big]$.",
+        "On réduit le crochet : $(x-4) - (x-9) = x - 4 - x + 9 = 5$. Donc $L = (3x+2) \\times 5 = 5(3x+2)$."
+      ],
+      "reponse": "$K = (x+3)(3x+4)$ et $L = 5(3x+2)$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "produit-nul",
+      "enonce": "Résous les deux équations dans $\\mathbb{R}$ : $(2x+1)(x-4) = 0$, puis $16x^2 - 9 = 0$.",
+      "corrige": [
+        "La première équation est déjà un **produit** égal à $0$ : un produit est nul si et seulement si l'un de ses facteurs est nul. Donc $2x + 1 = 0$ **ou** $x - 4 = 0$.",
+        "$2x + 1 = 0$ donne $x = -\\dfrac{1}{2}$ ; $x - 4 = 0$ donne $x = 4$. La première équation a deux solutions : $-\\dfrac{1}{2}$ et $4$.",
+        "La seconde, $16x^2 - 9 = 0$, n'est pas un produit : à gauche, c'est une **somme** (différence). Il faut d'abord factoriser. C'est une différence de deux carrés : $16x^2 = (4x)^2$ et $9 = 3^2$, donc $16x^2 - 9 = (4x-3)(4x+3)$.",
+        "L'équation devient $(4x-3)(4x+3) = 0$, donc $4x - 3 = 0$ **ou** $4x + 3 = 0$, c'est-à-dire $x = \\dfrac{3}{4}$ **ou** $x = -\\dfrac{3}{4}$."
+      ],
+      "reponse": "Première équation : $x = -\\dfrac{1}{2}$ ou $x = 4$. Seconde équation : $x = \\dfrac{3}{4}$ ou $x = -\\dfrac{3}{4}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Sur son brouillon, Léa a écrit $(a+b)^2 = a^2 + b^2$. 1) Montre avec $a = 3$ et $b = 4$ que cette égalité est fausse. 2) Développe correctement $(a+b)^2$ et indique le terme que Léa a oublié. 3) En utilisant le bon développement, démontre que pour tout nombre $x$, $(x+3)^2 - (x-3)^2 = 12x$.",
+      "corrige": [
+        "1) Pour $a = 3$ et $b = 4$ : d'un côté $(a+b)^2 = (3+4)^2 = 7^2 = 49$ ; de l'autre $a^2 + b^2 = 3^2 + 4^2 = 9 + 16 = 25$. Comme $49 \\neq 25$, l'égalité de Léa est fausse.",
+        "2) La bonne identité est $(a+b)^2 = a^2 + 2ab + b^2$. Léa a oublié le **double produit** $2ab$. Ici $2ab = 2 \\times 3 \\times 4 = 24$, et l'on retrouve bien $25 + 24 = 49$ ✓.",
+        "3) On développe chaque carré : $(x+3)^2 = x^2 + 2 \\times x \\times 3 + 9 = x^2 + 6x + 9$, et $(x-3)^2 = x^2 - 6x + 9$.",
+        "On soustrait, en changeant tous les signes de la seconde parenthèse : $(x^2 + 6x + 9) - (x^2 - 6x + 9) = x^2 + 6x + 9 - x^2 + 6x - 9 = 12x$. L'égalité est donc vraie pour tout $x$."
+      ],
+      "reponse": "1) $(3+4)^2 = 49 \\neq 25 = 3^2 + 4^2$. 2) Terme oublié : le double produit $2ab$, donc $(a+b)^2 = a^2 + 2ab + b^2$. 3) $(x+3)^2 - (x-3)^2 = 12x$ pour tout $x$."
+    }
+  ]
+}

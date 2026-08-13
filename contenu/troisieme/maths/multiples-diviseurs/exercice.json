@@ -1,0 +1,91 @@
+{
+  "id": "3e-math-multiples-diviseurs-exos",
+  "chapitre": "3e-math-multiples-diviseurs",
+  "titre": "Exercices — Multiples et diviseurs",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "factorisation",
+      "enonce": "Décompose $180$ en produit de facteurs premiers.",
+      "corrige": [
+        "$180$ est pair : on divise par $2$. $180 \\div 2 = 90$, puis $90 \\div 2 = 45$.",
+        "$45$ est impair ; sa somme des chiffres vaut $4+5 = 9$, multiple de $3$ : on divise par $3$. $45 \\div 3 = 15$, puis $15 \\div 3 = 5$.",
+        "$5$ est premier : $5 \\div 5 = 1$. On s'arrête quand le quotient vaut $1$.",
+        "On regroupe les facteurs identiques en puissances : $180 = 2^2 \\times 3^2 \\times 5$. Contrôle en remontant : $4 \\times 9 \\times 5 = 180$ ✓."
+      ],
+      "reponse": "$180 = 2^2 \\times 3^2 \\times 5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "simplification",
+      "enonce": "Simplifie la fraction $\\dfrac{45}{20}$.",
+      "corrige": [
+        "$45$ et $20$ sont tous les deux dans la table de $5$ : $45 = 5 \\times 9$ et $20 = 5 \\times 4$.",
+        "On barre le facteur commun $5$ et on garde l'autre facteur : $\\dfrac{45}{20} = \\dfrac{5 \\times 9}{5 \\times 4} = \\dfrac{9}{4}$.",
+        "Vérification qu'on a fini : $9 = 3^2$ et $4 = 2^2$ n'ont aucun facteur premier commun, la fraction est irréductible. Elle est supérieure à $1$, ce qui est normal, il n'y a rien à corriger."
+      ],
+      "reponse": "$\\dfrac{45}{20} = \\dfrac{9}{4}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "fraction-irreductible",
+      "enonce": "Rends la fraction $\\dfrac{90}{126}$ irréductible.",
+      "corrige": [
+        "Aucune table ne saute aux yeux : on décompose le haut et le bas. $90 = 2 \\times 3^2 \\times 5$ et $126 = 2 \\times 3^2 \\times 7$.",
+        "Facteurs communs : un $2$ et deux $3$, soit $2 \\times 3^2 = 18$.",
+        "On barre ces facteurs communs : $\\dfrac{90}{126} = \\dfrac{2 \\times 3^2 \\times 5}{2 \\times 3^2 \\times 7} = \\dfrac{5}{7}$.",
+        "Contrôle : $5$ et $7$ sont premiers et différents, il ne reste plus aucun facteur commun : la fraction est bien irréductible."
+      ],
+      "reponse": "$\\dfrac{90}{126} = \\dfrac{5}{7}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "denominateur-commun",
+      "enonce": "Calcule $\\dfrac{7}{12} - \\dfrac{1}{8}$ et donne le résultat sous forme irréductible.",
+      "corrige": [
+        "On cherche un dénominateur commun en décomposant : $12 = 2^2 \\times 3$ et $8 = 2^3$.",
+        "Il faut assez de $2$ pour $8$ (trois) et assez de $3$ pour $12$ (un) : $2^3 \\times 3 = 24$.",
+        "On met les deux fractions sur $24$ : $\\dfrac{7}{12} = \\dfrac{14}{24}$ (on multiplie par $2$) et $\\dfrac{1}{8} = \\dfrac{3}{24}$ (on multiplie par $3$).",
+        "On soustrait les numérateurs : $\\dfrac{14}{24} - \\dfrac{3}{24} = \\dfrac{11}{24}$. $11$ est premier et ne divise pas $24$ : le résultat est déjà irréductible."
+      ],
+      "reponse": "$\\dfrac{7}{12} - \\dfrac{1}{8} = \\dfrac{11}{24}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "problemes-multiples",
+      "enonce": "Deux bus partent en même temps du terminus à $8$ h $00$. Le bus A revient au terminus toutes les $24$ minutes, le bus B toutes les $36$ minutes. À quelle heure repartiront-ils ensemble du terminus pour la première fois ?",
+      "corrige": [
+        "Ils repartent ensemble quand le temps écoulé est à la fois un multiple de $24$ et un multiple de $36$ : on cherche le plus petit multiple commun aux deux.",
+        "On décompose : $24 = 2^3 \\times 3$ et $36 = 2^2 \\times 3^2$.",
+        "Il faut assez de $2$ pour $24$ (trois) et assez de $3$ pour $36$ (deux) : $2^3 \\times 3^2 = 8 \\times 9 = 72$ minutes. (Le produit $24 \\times 36 = 864$ marcherait aussi, mais il est bien plus grand.)",
+        "$72$ minutes font $1$ h $12$ min. À partir de $8$ h $00$, ils repartent donc ensemble à $9$ h $12$."
+      ],
+      "reponse": "Après $72$ minutes, c'est-à-dire à $9$ h $12$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "factorisation",
+      "enonce": "Rends la fraction $\\dfrac{2\\,940}{3\\,150}$ irréductible en décomposant son numérateur et son dénominateur en facteurs premiers.",
+      "corrige": [
+        "Décomposition de $2\\,940$ : $2\\,940 \\div 2 = 1\\,470$, $\\div 2 = 735$, $\\div 3 = 245$, $\\div 5 = 49$, $\\div 7 = 7$, $\\div 7 = 1$. Donc $2\\,940 = 2^2 \\times 3 \\times 5 \\times 7^2$.",
+        "Décomposition de $3\\,150$ : $3\\,150 \\div 2 = 1\\,575$, $\\div 3 = 525$, $\\div 3 = 175$, $\\div 5 = 35$, $\\div 5 = 7$, $\\div 7 = 1$. Donc $3\\,150 = 2 \\times 3^2 \\times 5^2 \\times 7$.",
+        "On prend les facteurs communs (le plus petit exposant de chacun) : un $2$, un $3$, un $5$ et un $7$, soit $2 \\times 3 \\times 5 \\times 7 = 210$.",
+        "On barre ces facteurs : $\\dfrac{2\\,940}{3\\,150} = \\dfrac{210 \\times 14}{210 \\times 15} = \\dfrac{14}{15}$. Contrôle : $14 = 2 \\times 7$ et $15 = 3 \\times 5$ n'ont aucun facteur commun : c'est irréductible."
+      ],
+      "reponse": "$\\dfrac{2\\,940}{3\\,150} = \\dfrac{14}{15}$."
+    }
+  ]
+}

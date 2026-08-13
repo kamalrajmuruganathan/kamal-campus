@@ -1,0 +1,95 @@
+{
+  "id": "3e-math-pensee-informatique-exos",
+  "chapitre": "3e-math-pensee-informatique",
+  "titre": "Exercices — La pensée informatique",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "boucle-conditionnelle",
+      "enonce": "L'utilisateur saisit $5$. Déroule ce programme dans un tableau de suivi, avec une colonne pour le test, puis donne ce qu'il affiche.\n\n```\ndemander un nombre et le mettre dans n\nmettre 0 dans somme\ntant que n > 0 faire\n    mettre somme + n dans somme\n    mettre n − 1 dans n\nfin tant que\nafficher somme\n```",
+      "corrige": [
+        "Avant la boucle : `n` vaut $5$ et `somme` vaut $0$. Le test se lit **avant** chaque tour.",
+        "Tour 1 : $5 > 0$ est **vrai** → `somme` $= 0 + 5 = 5$, puis `n` $= 5 - 1 = 4$.",
+        "Tour 2 : $4 > 0$ vrai → `somme` $= 5 + 4 = 9$, `n` $= 3$. Tour 3 : $3 > 0$ vrai → `somme` $= 9 + 3 = 12$, `n` $= 2$.",
+        "Tour 4 : $2 > 0$ vrai → `somme` $= 12 + 2 = 14$, `n` $= 1$. Tour 5 : $1 > 0$ vrai → `somme` $= 14 + 1 = 15$, `n` $= 0$.",
+        "Test suivant : $0 > 0$ est **faux** → on sort de la boucle. `somme` vaut $15$ : le programme a calculé $5 + 4 + 3 + 2 + 1$."
+      ],
+      "reponse": "Il affiche $15$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "conditions-composees",
+      "enonce": "Écris la condition informatique qui est vraie **exactement** lorsqu'un entier `n` a deux chiffres, c'est-à-dire lorsqu'il est compris entre $10$ et $99$, bornes comprises.",
+      "corrige": [
+        "La machine ne compare que **deux nombres à la fois** : un encadrement se coupe donc toujours en deux conditions simples.",
+        "« au moins $10$ » s'écrit `n ≥ 10` ; « au plus $99$ » s'écrit `n ≤ 99`.",
+        "Les deux doivent être vraies **en même temps**, on les relie donc par `et`.",
+        "Avec `ou` on se tromperait : `n ≥ 10 ou n ≤ 99` serait vraie pour **tous** les nombres (par exemple $500$ vérifie déjà `≥ 10`, et un seul « vrai » suffit)."
+      ],
+      "reponse": "`n ≥ 10 et n ≤ 99`."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "terminaison",
+      "enonce": "Ce programme devrait afficher la somme $1 + 2 + \\dots + 10$, mais il ne s'arrête jamais. Explique pourquoi, corrige-le, puis donne ce qu'il affiche une fois corrigé.\n\n```\nmettre 0 dans somme\nmettre 1 dans i\ntant que i ≤ 10 faire\n    mettre somme + i dans somme\nfin tant que\nafficher somme\n```",
+      "corrige": [
+        "La variable testée est `i`. Or le bloc ne la modifie jamais : `i` reste égale à $1$, donc `i ≤ 10` est vraie à **chaque** test et la boucle tourne à l'infini.",
+        "C'est la 2ᵉ des trois questions de la terminaison : *le bloc modifie-t-il ce qui est testé ?* Ici, non. Il faut faire progresser `i` en ajoutant `mettre i + 1 dans i` **dans** le bloc.",
+        "Programme corrigé :\n\n```\nmettre 0 dans somme\nmettre 1 dans i\ntant que i ≤ 10 faire\n    mettre somme + i dans somme\n    mettre i + 1 dans i\nfin tant que\nafficher somme\n```",
+        "En déroulant, `somme` prend les valeurs $1, 3, 6, 10, 15, 21, 28, 36, 45, 55$ pendant que `i` passe de $1$ à $11$. Au test $11 ≤ 10$ (faux), on sort : il affiche $55$."
+      ],
+      "reponse": "Il manque `mettre i + 1 dans i` dans le bloc ; une fois corrigé, le programme affiche $55$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "variables",
+      "enonce": "`a` vaut $7$ et `b` vaut $2$. En utilisant une variable temporaire `t`, écris les trois lignes qui échangent les valeurs de `a` et `b`, puis déroule-les pour vérifier qu'à la fin `a` vaut $2$ et `b` vaut $7$.",
+      "corrige": [
+        "On ne peut pas écrire `mettre b dans a` puis `mettre a dans b` : la première ligne écrase le $7$, qui serait alors perdu. On met d'abord `a` à l'abri dans `t`.",
+        "Les trois lignes :\n\n```\nmettre a dans t\nmettre b dans a\nmettre t dans b\n```",
+        "Déroulé : `mettre a dans t` → `t` vaut $7$ (`a`$=7$, `b`$=2$). `mettre b dans a` → `a` vaut $2$ (`t`$=7$, `b`$=2$). `mettre t dans b` → `b` vaut $7$.",
+        "À la fin, `a` vaut $2$ et `b` vaut $7$ : l'échange réussit parce que `t` a conservé l'ancien $7$ que la deuxième ligne avait écrasé."
+      ],
+      "reponse": "`mettre a dans t`, puis `mettre b dans a`, puis `mettre t dans b` ; à la fin `a` vaut $2$ et `b` vaut $7$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "ecrire-programme",
+      "enonce": "Un livret d'épargne contient $50$ €. Chaque mois, on y ajoute $15$ €. Écris un programme qui affiche le nombre de mois nécessaires pour que le solde **atteigne ou dépasse** $200$ €. On utilisera une boucle `tant que`, et on précisera ce que le programme affiche.",
+      "corrige": [
+        "Entrée : aucune saisie, les valeurs sont fixées ; sortie : le nombre de mois. Le nombre de tours n'est **pas** connu d'avance → boucle `tant que`.",
+        "Condition d'arrêt : on veut s'arrêter quand le solde atteint $200$, donc on continue **tant que** `solde < 200`. On initialise `solde` à $50$ et un compteur `mois` à $0$.",
+        "Programme :\n\n```\nmettre 50 dans solde\nmettre 0 dans mois\ntant que solde < 200 faire\n    mettre solde + 15 dans solde\n    mettre mois + 1 dans mois\nfin tant que\nafficher mois\n```",
+        "Terminaison : `solde` augmente de $15$ à chaque tour, donc il finit par dépasser $200$ et la condition devient fausse — la boucle s'arrête.",
+        "Déroulé : après $9$ tours, `solde` $= 50 + 9 \\times 15 = 185$ et $185 < 200$ est vrai, on fait un tour de plus ; après $10$ tours, `solde` $= 200$ et `mois` $= 10$. Cas limite : au test $200 < 200$ (faux) on sort, et le `<` a bien fait compter ce dernier mois où le solde atteint exactement $200$."
+      ],
+      "reponse": "$10$ mois (voir le programme dans le corrigé)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "structurer-programme",
+      "enonce": "Un caissier saisit le prix des articles un par un ; il tape $0$ pour indiquer qu'il a terminé. Écris un programme **structuré** (préparation, traitement, conclusion) qui affiche le nombre d'articles dont le prix dépasse $50$ €. Le $0$ final ne doit pas être compté comme un article. Vérifie-le sur les saisies $80$, $30$, $60$, $0$.",
+      "corrige": [
+        "Le nombre d'articles n'est pas connu d'avance : c'est le $0$ qui arrête la saisie → boucle `tant que`, et non `répéter n fois`.",
+        "**Préparation** : on lit un premier prix et on initialise le compteur `chers` à $0$. **Traitement** : tant que `prix ≠ 0`, on teste `prix > 50` (un `si` **imbriqué** dans la boucle) et, si oui, on ajoute $1$ au compteur, puis on **redemande** un prix. **Conclusion** : après la boucle, on affiche le compteur.",
+        "Programme :\n\n```\ndemander un prix et le mettre dans prix\nmettre 0 dans chers\ntant que prix ≠ 0 faire\n    si prix > 50 alors\n        mettre chers + 1 dans chers\n    fin si\n    demander un prix et le mettre dans prix\nfin tant que\nafficher chers\n```",
+        "Deux points de structure : le premier `demander` est **avant** la boucle (sinon la condition testerait une variable non initialisée), et le second est **à la fin du bloc**, ce qui fait avancer la boucle vers son arrêt. Le test `prix ≠ 0` est ici sûr car `prix` prend exactement la valeur tapée : il ne peut pas « enjamber » le $0$.",
+        "Vérification sur $80, 30, 60, 0$ : $80 > 50$ → `chers` $= 1$ ; $30 > 50$ faux ; $60 > 50$ → `chers` $= 2$ ; puis $0 ≠ 0$ est faux, on sort sans compter le $0$. Il affiche $2$."
+      ],
+      "reponse": "Voir le programme structuré dans le corrigé ; sur $80, 30, 60, 0$ il affiche $2$."
+    }
+  ]
+}

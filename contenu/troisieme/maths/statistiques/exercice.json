@@ -1,0 +1,90 @@
+{
+  "id": "3e-math-statistiques-exos",
+  "chapitre": "3e-math-statistiques",
+  "titre": "Exercices — Statistiques : effectifs cumulés, quartiles et boite à moustaches",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "effectifs-cumules",
+      "enonce": "On a demandé à $30$ élèves leur nombre de frères et sœurs. Les valeurs $0$ ; $1$ ; $2$ ; $3$ ; $4$ ont pour effectifs respectifs $6$ ; $11$ ; $8$ ; $3$ ; $2$. Construis la ligne des effectifs cumulés croissants, puis vérifie les deux contrôles du cours.",
+      "corrige": [
+        "L'effectif cumulé croissant s'obtient en additionnant les effectifs depuis la gauche : chaque case vaut « cumul précédent $+$ effectif ».",
+        "$6$ ; puis $6+11 = 17$ ; puis $17+8 = 25$ ; puis $25+3 = 28$ ; puis $28+2 = 30$.",
+        "Premier contrôle : la ligne $6$ ; $17$ ; $25$ ; $28$ ; $30$ est bien croissante. Second contrôle : la dernière case $30$ égale l'effectif total, car $6+11+8+3+2 = 30$. Les deux contrôles passent, la ligne est correcte."
+      ],
+      "reponse": "Effectifs cumulés croissants : $6$ ; $17$ ; $25$ ; $28$ ; $30$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "mediane-tableau",
+      "enonce": "La durée du trajet domicile-collège (en minutes) de $21$ élèves est donnée par le tableau : les durées $10$ ; $15$ ; $20$ ; $25$ ; $30$ ont pour effectifs $3$ ; $5$ ; $7$ ; $4$ ; $2$. Détermine la médiane de cette série.",
+      "corrige": [
+        "Effectif total : $3+5+7+4+2 = 21$, qui est impair. Ligne des cumuls croissants : $3$ ; $8$ ; $15$ ; $19$ ; $21$.",
+        "Comme $n$ est impair, le rang de la médiane est $\\dfrac{n+1}{2} = \\dfrac{21+1}{2} = 11$.",
+        "On lit la première valeur dont le cumul atteint $11$ : parmi $3$ ; $8$ ; $15$…, le premier cumul $\\geqslant 11$ est $15$, qui est celui de la durée $20$."
+      ],
+      "reponse": "Médiane $= 20$ minutes."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "quartiles",
+      "enonce": "Lors de $18$ matchs, une équipe a marqué un certain nombre de buts. Les valeurs $0$ ; $1$ ; $2$ ; $3$ ; $4$ ; $5$ ont pour effectifs $2$ ; $3$ ; $5$ ; $4$ ; $3$ ; $1$. Détermine le premier quartile $Q_1$ et le troisième quartile $Q_3$.",
+      "corrige": [
+        "Effectif total : $2+3+5+4+3+1 = 18$. Ligne des cumuls croissants : $2$ ; $5$ ; $10$ ; $14$ ; $17$ ; $18$.",
+        "$Q_1$ : on calcule $\\dfrac{n}{4} = \\dfrac{18}{4} = 4{,}5$. Ce n'est pas entier, on arrondit au-dessus, le rang cherché est $5$. Premier cumul $\\geqslant 5$ : $5$, celui de la valeur $1$. Donc $Q_1 = 1$.",
+        "$Q_3$ : on calcule $\\dfrac{3n}{4} = \\dfrac{3\\times 18}{4} = 13{,}5$. Non entier, on arrondit au-dessus, le rang est $14$. Premier cumul $\\geqslant 14$ : $14$, celui de la valeur $3$. Donc $Q_3 = 3$."
+      ],
+      "reponse": "$Q_1 = 1$ but et $Q_3 = 3$ buts."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "mediane-tableau",
+      "enonce": "Le nombre de livres lus pendant les vacances par $20$ élèves est donné par le tableau : les valeurs $1$ ; $2$ ; $3$ ; $4$ ; $5$ ont pour effectifs $4$ ; $6$ ; $5$ ; $3$ ; $2$. Détermine la médiane, et explique pourquoi elle n'est pas une valeur de la série.",
+      "corrige": [
+        "Effectif total : $4+6+5+3+2 = 20$, qui est pair. Ligne des cumuls croissants : $4$ ; $10$ ; $15$ ; $18$ ; $20$.",
+        "Comme $n$ est pair, il faut les deux rangs centraux : $\\dfrac{n}{2} = 10$ et $\\dfrac{n}{2}+1 = 11$.",
+        "Rang $10$ : premier cumul $\\geqslant 10$ est $10$, valeur $2$. Rang $11$ : premier cumul $\\geqslant 11$ est $15$, valeur $3$.",
+        "La médiane est la demi-somme des deux valeurs centrales : $\\dfrac{2+3}{2} = 2{,}5$. Personne n'a lu $2{,}5$ livre : la médiane marque ici une frontière entre les deux moitiés, ce n'est pas toujours une valeur de la série."
+      ],
+      "reponse": "Médiane $= 2{,}5$ livres (une frontière, pas une valeur observée)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "boite-a-moustaches",
+      "enonce": "La température de midi a été relevée pendant $32$ jours. Les valeurs $18$ ; $19$ ; $20$ ; $21$ ; $22$ ; $23$ ; $24$ (en °C) ont pour effectifs $2$ ; $3$ ; $5$ ; $8$ ; $7$ ; $4$ ; $3$. Détermine les cinq valeurs de position, calcule l'écart interquartile, puis décris la boite à moustaches que tu tracerais.",
+      "corrige": [
+        "Effectif total : $2+3+5+8+7+4+3 = 32$. Cumuls croissants : $2$ ; $5$ ; $10$ ; $18$ ; $25$ ; $29$ ; $32$. Le minimum est $18$ et le maximum $24$.",
+        "Médiane ($n = 32$ pair) : rangs $16$ et $17$. Le premier cumul $\\geqslant 16$ est $18$, valeur $21$ ; pour le rang $17$ c'est encore $21$. Médiane $= 21$.",
+        "$Q_1$ : $\\dfrac{32}{4} = 8$, qui est entier, on le garde comme rang. Premier cumul $\\geqslant 8$ : $10$, valeur $20$. Donc $Q_1 = 20$.",
+        "$Q_3$ : $\\dfrac{3\\times 32}{4} = 24$, entier, on le garde. Premier cumul $\\geqslant 24$ : $25$, valeur $22$. Donc $Q_3 = 22$.",
+        "Écart interquartile (la largeur de la boite) : $Q_3 - Q_1 = 22 - 20 = 2$. La boite se trace de $20$ à $22$ sur un axe gradué régulier, avec le trait de la médiane à $21$, et deux moustaches allant jusqu'au minimum $18$ et au maximum $24$."
+      ],
+      "reponse": "min $18$ ; $Q_1 = 20$ ; médiane $21$ ; $Q_3 = 22$ ; max $24$ ; écart interquartile $= 2$ °C."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "interpretation",
+      "enonce": "Deux magasins relèvent le temps d'attente en caisse (en minutes). Les cinq valeurs de position sont, pour A : min $1$ ; $Q_1 = 4$ ; médiane $5$ ; $Q_3 = 6$ ; max $12$, et pour B : min $1$ ; $Q_1 = 2$ ; médiane $5$ ; $Q_3 = 9$ ; max $12$. Les deux boites sont tracées sur le même axe. Dans quel magasin les temps d'attente sont-ils les plus réguliers ? Justifie.",
+      "corrige": [
+        "Étendues : A donne $12 - 1 = 11$ et B donne $12 - 1 = 11$ ; médianes : $5$ pour les deux. Ces deux indicateurs sont identiques, ils ne permettent pas de départager les magasins.",
+        "Écart interquartile (largeur de la boite) : pour A, $Q_3 - Q_1 = 6 - 4 = 2$ ; pour B, $9 - 2 = 7$.",
+        "La moitié centrale des clients attend entre $4$ et $6$ min chez A (boite resserrée), mais entre $2$ et $9$ min chez B (boite éclatée). L'attente est donc beaucoup plus homogène chez A.",
+        "Attention : conclure « même médiane, donc même service » serait une faute d'interprétation. La médiane donne seulement le niveau général ; c'est la largeur de la boite qui renseigne sur la régularité."
+      ],
+      "reponse": "Le magasin A : même médiane ($5$ min) et même étendue ($11$ min) que B, mais un écart interquartile de $2$ min contre $7$ min, donc des temps d'attente plus réguliers."
+    }
+  ]
+}

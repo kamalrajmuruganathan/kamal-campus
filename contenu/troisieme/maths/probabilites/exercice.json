@@ -1,0 +1,93 @@
+{
+  "id": "3e-math-probabilites-exos",
+  "chapitre": "3e-math-probabilites",
+  "titre": "Exercices — Probabilités",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "relation-addition",
+      "enonce": "On donne $P(A) = 0{,}5$, $P(B) = 0{,}4$ et $P(A \\cap B) = 0{,}2$. Calcule $P(A \\cup B)$.",
+      "corrige": [
+        "On part de la relation d'addition, écrite pour trouver la réunion : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
+        "On remplace les trois valeurs connues : $P(A \\cup B) = 0{,}5 + 0{,}4 - 0{,}2$.",
+        "On calcule : $0{,}5 + 0{,}4 = 0{,}9$, puis $0{,}9 - 0{,}2 = 0{,}7$.",
+        "Contrôle : $0{,}7 \\geqslant 0{,}5$ et $0{,}7 \\geqslant 0{,}4$ (la réunion contient chaque évènement) et $0{,}7 \\leqslant 1$. La réponse est vraisemblable."
+      ],
+      "reponse": "$P(A \\cup B) = 0{,}7$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "methode-relation",
+      "enonce": "On donne $P(A) = 0{,}7$, $P(B) = 0{,}6$ et $P(A \\cup B) = 0{,}9$. Calcule $P(A \\cap B)$.",
+      "corrige": [
+        "On repart de la forme où tout est additionné : $P(A \\cup B) + P(A \\cap B) = P(A) + P(B)$.",
+        "On isole l'intersection en faisant passer $P(A \\cup B)$ de l'autre côté : $P(A \\cap B) = P(A) + P(B) - P(A \\cup B)$.",
+        "On remplace : $P(A \\cap B) = 0{,}7 + 0{,}6 - 0{,}9 = 1{,}3 - 0{,}9 = 0{,}4$.",
+        "Contrôle : $0{,}4 \\leqslant 0{,}7$ et $0{,}4 \\leqslant 0{,}6$ (l'intersection est contenue dans chaque évènement). C'est cohérent."
+      ],
+      "reponse": "$P(A \\cap B) = 0{,}4$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "methode-relation",
+      "enonce": "Dans une classe de $28$ élèves, $15$ jouent au football en club, $13$ font de la natation, et $6$ pratiquent les deux. On tire un élève au hasard. Quelle est la probabilité qu'il pratique **au moins une** des deux activités ? Et la probabilité qu'il n'en pratique **aucune** ?",
+      "corrige": [
+        "On nomme $F$ : « l'élève joue au football » et $N$ : « l'élève fait de la natation ». Alors $P(F) = \\dfrac{15}{28}$, $P(N) = \\dfrac{13}{28}$ et $P(F \\cap N) = \\dfrac{6}{28}$.",
+        "« Au moins une des deux » correspond à la réunion : $P(F \\cup N) = P(F) + P(N) - P(F \\cap N) = \\dfrac{15}{28} + \\dfrac{13}{28} - \\dfrac{6}{28} = \\dfrac{22}{28} = \\dfrac{11}{14}$.",
+        "« N'en pratiquer aucune » est l'évènement contraire de « au moins une » : $P(\\overline{F \\cup N}) = 1 - P(F \\cup N) = 1 - \\dfrac{11}{14} = \\dfrac{3}{14}$.",
+        "Contrôle par les effectifs : $15 + 13 - 6 = 22$ élèves concernés, donc $28 - 22 = 6$ élèves ne font ni l'un ni l'autre, soit $\\dfrac{6}{28} = \\dfrac{3}{14}$ ✓."
+      ],
+      "reponse": "$P(\\text{au moins une}) = \\dfrac{11}{14}$ et $P(\\text{aucune}) = \\dfrac{3}{14}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "relation-addition",
+      "enonce": "On lance un dé équilibré à six faces. On considère $A$ : « obtenir un multiple de $3$ » et $B$ : « obtenir un nombre strictement supérieur à $4$ ». En passant par la relation d'addition, calcule $P(A \\cup B)$, puis vérifie ton résultat en énumérant les issues.",
+      "corrige": [
+        "On liste les issues : $A = \\{3 \\,;\\, 6\\}$ donc $P(A) = \\dfrac{2}{6}$, et $B = \\{5 \\,;\\, 6\\}$ donc $P(B) = \\dfrac{2}{6}$.",
+        "L'intersection est l'issue commune : $A \\cap B = \\{6\\}$, donc $P(A \\cap B) = \\dfrac{1}{6}$.",
+        "On applique la relation : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\dfrac{2}{6} + \\dfrac{2}{6} - \\dfrac{1}{6} = \\dfrac{3}{6} = \\dfrac{1}{2}$.",
+        "Vérification par énumération : $A \\cup B = \\{3 \\,;\\, 5 \\,;\\, 6\\}$, soit $3$ issues favorables sur $6$, donc $\\dfrac{3}{6} = \\dfrac{1}{2}$ ✓. On ne pouvait pas additionner directement $\\dfrac{2}{6} + \\dfrac{2}{6}$ car le $6$ est commun aux deux."
+      ],
+      "reponse": "$P(A \\cup B) = \\dfrac{1}{2}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "controle-vraisemblance",
+      "enonce": "On sait seulement que $P(A) = 0{,}5$ et $P(B) = 0{,}3$, mais on ne connaît pas $P(A \\cap B)$. Entre quelles valeurs la probabilité $P(A \\cup B)$ peut-elle varier ? Précise le cas correspondant à chaque borne.",
+      "corrige": [
+        "D'après la relation, $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0{,}8 - P(A \\cap B)$ : la réunion est d'autant plus grande que l'intersection est petite.",
+        "L'intersection est contenue dans chaque évènement, donc $P(A \\cap B) \\leqslant P(A)$ et $P(A \\cap B) \\leqslant P(B)$ : ici $P(A \\cap B) \\leqslant 0{,}3$. Et une probabilité est toujours $\\geqslant 0$, donc $0 \\leqslant P(A \\cap B) \\leqslant 0{,}3$.",
+        "Valeur maximale de la réunion : quand $P(A \\cap B) = 0$ (aucune issue commune, $A \\cap B = \\varnothing$), $P(A \\cup B) = 0{,}8 - 0 = 0{,}8$.",
+        "Valeur minimale de la réunion : quand $P(A \\cap B) = 0{,}3$ (c'est-à-dire $B$ entièrement contenu dans $A$), $P(A \\cup B) = 0{,}8 - 0{,}3 = 0{,}5$.",
+        "Contrôle : dans les deux cas $P(A \\cup B) \\geqslant P(A) = 0{,}5$ et $\\leqslant 1$, ce qui est cohérent."
+      ],
+      "reponse": "$0{,}5 \\leqslant P(A \\cup B) \\leqslant 0{,}8$ ($0{,}8$ si $A \\cap B = \\varnothing$, $0{,}5$ si $B \\subset A$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "erreur-dalembert",
+      "enonce": "On lance deux fois de suite une pièce équilibrée. On note $A$ : « obtenir pile au premier lancer » et $B$ : « obtenir pile au second lancer ». En utilisant la relation d'addition, calcule $P(A \\cup B)$, la probabilité d'obtenir **au moins un pile**. Un camarade affirme trouver $\\dfrac{2}{3}$ : explique son erreur.",
+      "corrige": [
+        "Chaque lancer donne pile avec la probabilité $\\dfrac{1}{2}$ : $P(A) = \\dfrac{1}{2}$ et $P(B) = \\dfrac{1}{2}$.",
+        "L'intersection $A \\cap B$ est « pile aux deux lancers » : en listant les couples $\\Omega = \\{(P\\,;P) \\,;\\, (P\\,;F) \\,;\\, (F\\,;P) \\,;\\, (F\\,;F)\\}$, une seule issue convient, donc $P(A \\cap B) = \\dfrac{1}{4}$ (obtenue **en comptant**, pas en multipliant).",
+        "On applique la relation : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\dfrac{1}{2} + \\dfrac{1}{2} - \\dfrac{1}{4} = \\dfrac{4}{4} - \\dfrac{1}{4} = \\dfrac{3}{4}$.",
+        "L'erreur du camarade ($\\dfrac{2}{3}$) est celle de D'Alembert : il ne compte que trois cas (« $P$ », « $F$ puis $P$ », « $F$ puis $F$ ») en croyant qu'ils ont la même chance. Or le cas « $P$ » regroupe à lui seul deux issues $(P\\,;P)$ et $(P\\,;F)$ : les trois cas ne sont pas équiprobables, donc on ne peut pas écrire $\\dfrac{2}{3}$."
+      ],
+      "reponse": "$P(A \\cup B) = \\dfrac{3}{4}$ (et non $\\dfrac{2}{3}$ : les trois cas de D'Alembert ne sont pas équiprobables)."
+    }
+  ]
+}

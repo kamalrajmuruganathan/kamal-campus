@@ -1,0 +1,91 @@
+{
+  "id": "3e-math-fonctions-exos",
+  "chapitre": "3e-math-fonctions",
+  "titre": "Exercices — Fonctions : image, antécédent, fonctions linéaires et affines",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $f$ la fonction définie par $f(x) = 3x - 5$. Calculer les images de $2$, de $0$ et de $-1$ par $f$, c'est-à-dire $f(2)$, $f(0)$ et $f(-1)$.",
+      "corrige": [
+        "Chercher une image, c'est **remplacer** $x$ par le nombre donné dans l'expression de $f$.",
+        "Image de $2$ : $f(2) = 3 \\times 2 - 5 = 6 - 5 = 1$.",
+        "Image de $0$ : $f(0) = 3 \\times 0 - 5 = 0 - 5 = -5$.",
+        "Image de $-1$ : $f(-1) = 3 \\times (-1) - 5 = -3 - 5 = -8$. Attention, $f(-1)$ n'est pas $f \\times (-1)$ : les parenthèses indiquent la valeur donnée à $x$."
+      ],
+      "reponse": "$f(2) = 1$, $f(0) = -5$ et $f(-1) = -8$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "antecedent",
+      "enonce": "Soit $f$ la fonction définie par $f(x) = 4x + 1$. Déterminer l'antécédent de $9$ par $f$.",
+      "corrige": [
+        "Chercher un antécédent de $9$, ce n'est pas remplacer : il faut **résoudre l'équation** $f(x) = 9$.",
+        "On écrit donc $4x + 1 = 9$.",
+        "On enlève $1$ des deux côtés : $4x = 8$.",
+        "On divise par $4$ : $x = 2$. On vérifie : $f(2) = 4 \\times 2 + 1 = 9$. ✓"
+      ],
+      "reponse": "L'antécédent de $9$ est $2$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "image-antecedent",
+      "enonce": "Soit $f$ la fonction définie par $f(x) = -2x + 7$. \n1. Calculer l'**image** de $3$ par $f$. \n2. Déterminer l'**antécédent** de $3$ par $f$. \n3. Expliquer pourquoi les deux réponses sont différentes bien qu'on parte du même nombre $3$.",
+      "corrige": [
+        "**1. Image de $3$.** On connaît le nombre de départ $x = 3$, on **calcule** $f(3)$ : $f(3) = -2 \\times 3 + 7 = -6 + 7 = 1$. L'image de $3$ est donc $1$.",
+        "**2. Antécédent de $3$.** Ici $3$ est le nombre d'**arrivée** : on **résout** l'équation $f(x) = 3$, soit $-2x + 7 = 3$.",
+        "On enlève $7$ : $-2x = -4$. On divise par $-2$ : $x = 2$. L'antécédent de $3$ est donc $2$.",
+        "**3.** Les deux calculs vont dans des sens **opposés** : pour l'image on remplace $x$ par $3$ (on calcule), pour l'antécédent on cherche quel $x$ donne $3$ (on résout une équation). C'est pourquoi « image de $3$ » ($=1$) et « antécédent de $3$ » ($=2$) ne donnent pas le même nombre."
+      ],
+      "reponse": "L'image de $3$ est $1$ ; l'antécédent de $3$ est $2$. Ce sont deux calculs opposés : on calcule une image, on résout une équation pour un antécédent."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "fonction-lineaire",
+      "enonce": "On sait que $f$ est une fonction **linéaire** et que $f(3) = 12$. \n1. Déterminer le coefficient $a$ de $f$, puis donner l'expression de $f(x)$. \n2. Calculer l'image de $7$ par $f$. \n3. Déterminer l'antécédent de $20$ par $f$.",
+      "corrige": [
+        "**1.** Une fonction linéaire s'écrit $f(x) = ax$. Comme $f(3) = 12$, on a $a \\times 3 = 12$, donc $a = \\dfrac{12}{3} = 4$. Ainsi $f(x) = 4x$. (Le coefficient $4$ est aussi le coefficient de proportionnalité : $12$ est proportionnel à $3$.)",
+        "**2. Image de $7$.** On remplace $x$ par $7$ : $f(7) = 4 \\times 7 = 28$.",
+        "**3. Antécédent de $20$.** On résout $f(x) = 20$, soit $4x = 20$, d'où $x = \\dfrac{20}{4} = 5$."
+      ],
+      "reponse": "$a = 4$ et $f(x) = 4x$ ; l'image de $7$ est $28$ ; l'antécédent de $20$ est $5$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "fonction-affine",
+      "enonce": "Un club de sport demande $20$ € d'inscription, puis $5$ € par séance. On note $x$ le nombre de séances et $f(x)$ le prix total payé, en euros. \n1. Exprimer $f(x)$ en fonction de $x$. \n2. Combien paie un adhérent qui fait $8$ séances ? \n3. Un adhérent a payé $65$ € en tout : combien de séances a-t-il faites ? \n4. La fonction $f$ est-elle linéaire ou affine ? Le prix est-il proportionnel au nombre de séances ?",
+      "corrige": [
+        "**1.** Pour $x$ séances, on paie $5x$ euros de séances, plus les $20$ € d'inscription : $f(x) = 5x + 20$.",
+        "**2.** On cherche l'**image** de $8$ : $f(8) = 5 \\times 8 + 20 = 40 + 20 = 60$. L'adhérent paie $60$ €.",
+        "**3.** On cherche l'**antécédent** de $65$ : on résout $5x + 20 = 65$, donc $5x = 45$ et $x = 9$. Il a fait $9$ séances.",
+        "**4.** $f(x) = 5x + 20$ est de la forme $ax + b$ avec $a = 5$ et $b = 20 \\neq 0$ : $f$ est **affine**, mais **pas linéaire**. Comme $b \\neq 0$, le prix n'est **pas proportionnel** au nombre de séances (à cause des $20$ € fixes payés même pour peu de séances)."
+      ],
+      "reponse": "$f(x) = 5x + 20$ ; $8$ séances coûtent $60$ € ; $65$ € correspondent à $9$ séances ; $f$ est affine (pas linéaire), le prix n'est pas proportionnel."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "fonction-affine",
+      "enonce": "Pour développer des photos, un magasin propose deux offres. \n- **Offre A** : $0{,}60$ € par photo, sans frais fixe. \n- **Offre B** : $6$ € de frais fixe, puis $0{,}20$ € par photo. \nOn note $x$ le nombre de photos. \n1. Exprimer le prix $A(x)$ et le prix $B(x)$ en fonction de $x$. Préciser pour chacune si la fonction est linéaire ou affine. \n2. Pour combien de photos les deux offres coûtent-elles le même prix ? Quel est alors ce prix ? \n3. En déduire quelle offre est la plus avantageuse pour $10$ photos.",
+      "corrige": [
+        "**1.** Offre A : $A(x) = 0{,}60x$ — de la forme $ax$, c'est une fonction **linéaire** (le prix est proportionnel au nombre de photos). Offre B : $B(x) = 0{,}20x + 6$ — de la forme $ax + b$ avec $b = 6 \\neq 0$, c'est une fonction **affine** (non linéaire).",
+        "**2.** Les deux offres coûtent le même prix quand $A(x) = B(x)$, soit $0{,}60x = 0{,}20x + 6$.",
+        "On regroupe les termes en $x$ : $0{,}60x - 0{,}20x = 6$, donc $0{,}40x = 6$, d'où $x = \\dfrac{6}{0{,}40} = 15$. Le prix commun est alors $A(15) = 0{,}60 \\times 15 = 9$ € (on vérifie : $B(15) = 0{,}20 \\times 15 + 6 = 3 + 6 = 9$ €). ✓",
+        "**3.** Pour $10$ photos : $A(10) = 0{,}60 \\times 10 = 6$ € et $B(10) = 0{,}20 \\times 10 + 6 = 2 + 6 = 8$ €. Comme $6 < 8$, l'**offre A** est la plus avantageuse pour $10$ photos (elle l'est tant que le nombre de photos reste inférieur à $15$)."
+      ],
+      "reponse": "$A(x) = 0{,}60x$ (linéaire) et $B(x) = 0{,}20x + 6$ (affine) ; les deux offres coûtent $9$ € pour $15$ photos ; pour $10$ photos l'offre A ($6$ €) est plus avantageuse que l'offre B ($8$ €)."
+    }
+  ]
+}

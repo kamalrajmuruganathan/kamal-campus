@@ -1,0 +1,86 @@
+{
+  "id": "3e-math-racine-carree-exos",
+  "chapitre": "3e-math-racine-carree",
+  "titre": "Exercices — Racine carrée : résoudre x² = a",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "equation-x2-a",
+      "enonce": "Résous l'équation $x^2 = 81$.",
+      "corrige": [
+        "On cherche tous les nombres dont le carré vaut $81$. Comme $81 > 0$, l'équation a deux solutions opposées : $x = \\sqrt{81}$ ou $x = -\\sqrt{81}$.",
+        "Or $9^2 = 81$, donc $\\sqrt{81} = 9$.",
+        "Les solutions sont donc $9$ et $-9$. On vérifie : $9^2 = 81$ ✓ et $(-9)^2 = 81$ ✓. ⚠️ Ne garder que $9$ reviendrait à oublier la moitié des solutions."
+      ],
+      "reponse": "$x = 9$ ou $x = -9$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "valeur-exacte",
+      "enonce": "Résous l'équation $x^2 = 13$ et donne les valeurs exactes des solutions.",
+      "corrige": [
+        "$13 > 0$ : l'équation a deux solutions opposées, $x = \\sqrt{13}$ ou $x = -\\sqrt{13}$.",
+        "$13$ n'est pas un carré parfait : il est compris entre $3^2 = 9$ et $4^2 = 16$. On ne peut donc pas remplacer $\\sqrt{13}$ par un entier.",
+        "La valeur exacte s'écrit avec le radical : on laisse $\\sqrt{13}$ et $-\\sqrt{13}$. Une écriture décimale serait seulement approchée, et n'est pas demandée ici."
+      ],
+      "reponse": "$x = \\sqrt{13}$ ou $x = -\\sqrt{13}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "se-ramener-forme-x2",
+      "enonce": "Résous l'équation $5x^2 = 45$.",
+      "corrige": [
+        "L'équation n'est pas encore de la forme $x^2 = a$ : il faut d'abord isoler $x^2$. On divise les deux membres par $5$.",
+        "$\\dfrac{5x^2}{5} = \\dfrac{45}{5}$, soit $x^2 = 9$.",
+        "$9 > 0$ : deux solutions opposées, $x = \\sqrt{9} = 3$ ou $x = -3$. ⚠️ On divise par $5$ d'abord : la réponse n'est pas $\\sqrt{45}$."
+      ],
+      "reponse": "$x = 3$ ou $x = -3$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "cas-particuliers",
+      "enonce": "Pour chacune de ces équations, indique le nombre de solutions puis donne-les : (a) $x^2 = 144$ ; (b) $x^2 = 0$ ; (c) $x^2 = -9$.",
+      "corrige": [
+        "(a) $144 > 0$ : deux solutions opposées. Comme $12^2 = 144$, ce sont $12$ et $-12$.",
+        "(b) $x^2 = 0$ : le seul nombre dont le carré est nul est $0$. Une seule solution, $x = 0$ — on n'écrit pas « $0$ et $-0$ », c'est le même nombre.",
+        "(c) $x^2 = -9$ : un carré n'est jamais négatif, donc aucun nombre ne convient. Aucune solution ; on l'écrit par une phrase, pas par une case vide."
+      ],
+      "reponse": "(a) deux solutions : $12$ et $-12$ ; (b) une seule solution : $0$ ; (c) aucune solution."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "problemes",
+      "enonce": "Un carré a une aire de $169\\ \\text{cm}^2$. Quelle est la longueur exacte de son côté ?",
+      "corrige": [
+        "On note $c$ la longueur du côté, en cm. L'aire d'un carré est $c^2$, donc l'énoncé se traduit par $c^2 = 169$.",
+        "$169 > 0$ : l'équation $c^2 = 169$ a deux solutions, $c = \\sqrt{169} = 13$ ou $c = -13$, car $13^2 = 169$.",
+        "Une longueur ne peut pas être négative : on écarte $-13$ et on garde $c = 13$. On l'écrit dans la rédaction (« $-13$ n'est pas une longueur »), pour montrer qu'on n'a pas oublié la seconde solution mais qu'on l'a écartée."
+      ],
+      "reponse": "Le côté mesure $13$ cm."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "pourquoi-deux-solutions",
+      "enonce": "On veut résoudre $x^2 = 10$ en passant par une factorisation. 1) Écris $10$ sous la forme d'un carré. 2) Factorise $x^2 - 10$ comme une différence de deux carrés. 3) Conclus sur les solutions.",
+      "corrige": [
+        "1) $10 = (\\sqrt{10})^2$, puisque $\\sqrt{10}$ est le nombre positif dont le carré vaut $10$.",
+        "2) L'équation $x^2 = 10$ s'écrit $x^2 - 10 = 0$, c'est-à-dire $x^2 - (\\sqrt{10})^2 = 0$. On reconnait $a^2 - b^2 = (a - b)(a + b)$ avec $a = x$ et $b = \\sqrt{10}$ : $(x - \\sqrt{10})(x + \\sqrt{10}) = 0$.",
+        "3) Un produit est nul si et seulement si l'un de ses facteurs est nul : $x - \\sqrt{10} = 0$ ou $x + \\sqrt{10} = 0$, donc $x = \\sqrt{10}$ ou $x = -\\sqrt{10}$. La factorisation prouve qu'il y a exactement ces deux solutions, et aucune autre."
+      ],
+      "reponse": "$x = \\sqrt{10}$ ou $x = -\\sqrt{10}$."
+    }
+  ]
+}

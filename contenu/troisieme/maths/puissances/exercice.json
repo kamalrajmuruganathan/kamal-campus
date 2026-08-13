@@ -1,0 +1,89 @@
+{
+  "id": "3e-math-puissances-exos",
+  "chapitre": "3e-math-puissances",
+  "titre": "Exercices — Puissances : exposants négatifs et notation scientifique",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "exposant-negatif",
+      "enonce": "Écris $3^{-2}$ puis $10^{-4}$ sous forme d'une fraction, puis donne leur écriture décimale.",
+      "corrige": [
+        "Un exposant négatif signifie **inverse** : pour $a \\neq 0$, $a^{-n} = \\dfrac{1}{a^{\\,n}}$.",
+        "$3^{-2} = \\dfrac{1}{3^{2}} = \\dfrac{1}{9}$. C'est un nombre **positif** : l'exposant est négatif, pas le résultat.",
+        "$10^{-4} = \\dfrac{1}{10^{4}} = \\dfrac{1}{10\\,000}$. Le $1$ se place au $4^\\text{e}$ rang après la virgule : $0{,}0001$."
+      ],
+      "reponse": "$3^{-2} = \\dfrac{1}{9}$ ; $10^{-4} = \\dfrac{1}{10\\,000} = 0{,}0001$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "division-puissances",
+      "enonce": "Écris $\\dfrac{7^{3}}{7^{5}}$ sous la forme d'une seule puissance de $7$, puis donne sa valeur sous forme de fraction.",
+      "corrige": [
+        "Même base : on **soustrait** les exposants, $\\dfrac{a^m}{a^n} = a^{\\,m-n}$.",
+        "$\\dfrac{7^{3}}{7^{5}} = 7^{\\,3-5} = 7^{-2}$. On divise par plus grand, donc l'exposant devient négatif : c'est normal.",
+        "On repasse à l'inverse : $7^{-2} = \\dfrac{1}{7^{2}} = \\dfrac{1}{49}$."
+      ],
+      "reponse": "$\\dfrac{7^{3}}{7^{5}} = 7^{-2} = \\dfrac{1}{49}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "notation-scientifique",
+      "enonce": "Donne la notation scientifique de $58\\,000$, puis celle de $0{,}0032$.",
+      "corrige": [
+        "La notation scientifique s'écrit $a \\times 10^{\\,n}$ avec $1 \\leqslant a < 10$ : un seul chiffre non nul avant la virgule.",
+        "Pour $58\\,000$ : on place la virgule après le $5$, soit $a = 5{,}8$. La virgule a reculé de **4 rangs** et le nombre est grand, donc $n = 4$ : $58\\,000 = 5{,}8 \\times 10^{4}$.",
+        "Pour $0{,}0032$ : on place la virgule après le $3$, soit $a = 3{,}2$. La virgule a avancé de **3 rangs** (on compte les rangs, pas les zéros) et le nombre est petit, donc $n = -3$ : $0{,}0032 = 3{,}2 \\times 10^{-3}$.",
+        "Vérification : $5{,}8 \\times 10^{4} = 58\\,000$ et $3{,}2 \\times 10^{-3} = 0{,}0032$."
+      ],
+      "reponse": "$58\\,000 = 5{,}8 \\times 10^{4}$ ; $0{,}0032 = 3{,}2 \\times 10^{-3}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "reduction-puissances",
+      "enonce": "Réduis $\\dfrac{3^{7} \\times 3^{-2}}{3^{6}}$ à une seule puissance de $3$, puis donne sa valeur.",
+      "corrige": [
+        "On traite d'abord le **produit du numérateur** : même base, on additionne les exposants, $3^{7} \\times 3^{-2} = 3^{\\,7+(-2)} = 3^{5}$.",
+        "L'expression devient $\\dfrac{3^{5}}{3^{6}}$ : même base, on soustrait, $3^{\\,5-6} = 3^{-1}$.",
+        "L'exposant final est négatif : on repasse à l'inverse, $3^{-1} = \\dfrac{1}{3}$."
+      ],
+      "reponse": "$\\dfrac{3^{7} \\times 3^{-2}}{3^{6}} = 3^{-1} = \\dfrac{1}{3}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "La lumière se déplace à $3 \\times 10^{8}$ m/s. La distance entre la Terre et le Soleil est d'environ $1{,}5 \\times 10^{11}$ m. Combien de temps met la lumière du Soleil pour nous parvenir ? Donne le résultat en notation scientifique, puis en secondes.",
+      "corrige": [
+        "Le temps est la distance divisée par la vitesse : $t = \\dfrac{d}{v} = \\dfrac{1{,}5 \\times 10^{11}}{3 \\times 10^{8}}$.",
+        "On sépare les mantisses et les puissances de 10 : $t = \\dfrac{1{,}5}{3} \\times 10^{\\,11-8} = 0{,}5 \\times 10^{3}$.",
+        "Il faut **renormaliser** : $0{,}5$ n'est pas entre $1$ et $10$. On écrit $0{,}5 = 5 \\times 10^{-1}$, donc $t = 5 \\times 10^{-1} \\times 10^{3} = 5 \\times 10^{2}$ s.",
+        "Écriture décimale : $5 \\times 10^{2} = 500$ s, soit un peu plus de $8$ minutes. L'ordre de grandeur est plausible."
+      ],
+      "reponse": "$t = 5 \\times 10^{2}$ s $= 500$ s (environ $8$ min $20$ s)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "Un ordinateur effectue $4 \\times 10^{9}$ opérations par seconde. Combien d'opérations réalise-t-il en $6 \\times 10^{3}$ secondes ? Donne le résultat en notation scientifique.",
+      "corrige": [
+        "Le nombre d'opérations est le produit : $N = (4 \\times 10^{9}) \\times (6 \\times 10^{3})$.",
+        "On sépare mantisses et puissances de 10 : $N = (4 \\times 6) \\times (10^{9} \\times 10^{3}) = 24 \\times 10^{\\,9+3} = 24 \\times 10^{12}$. On **multiplie** les mantisses, on n'additionne pas.",
+        "Il faut **renormaliser** : $24$ n'est pas entre $1$ et $10$. On écrit $24 = 2{,}4 \\times 10^{1}$, donc $N = 2{,}4 \\times 10^{1} \\times 10^{12} = 2{,}4 \\times 10^{13}$.",
+        "Vérification de l'ordre de grandeur : $2{,}4 \\times 10^{13}$, soit $24$ mille milliards d'opérations — cohérent pour près de deux heures de calcul."
+      ],
+      "reponse": "$N = 2{,}4 \\times 10^{13}$ opérations."
+    }
+  ]
+}

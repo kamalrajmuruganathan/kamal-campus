@@ -1,0 +1,93 @@
+{
+  "id": "3e-math-triangles-exos",
+  "chapitre": "3e-math-triangles",
+  "titre": "Exercices — Triangles",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "theoreme-thales",
+      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{M}$ est un point de $[\\mathrm{AB}]$ et $\\mathrm{N}$ un point de $[\\mathrm{AC}]$ tels que $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 4$ cm, $\\mathrm{AB} = 10$ cm et $\\mathrm{AC} = 15$ cm. Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "On est dans la configuration des triangles emboités : deux droites sécantes en $\\mathrm{A}$ coupées par les parallèles $(\\mathrm{MN})$ et $(\\mathrm{BC})$. Le théorème de Thalès s'applique (le parallélisme est donné).",
+        "On écrit la chaine des rapports depuis le sommet $\\mathrm{A}$, avec les lettres : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{\\mathrm{MN}}{\\mathrm{BC}}$.",
+        "On garde les deux rapports qui contiennent l'inconnue $\\mathrm{AN}$ et trois longueurs connues : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$, soit $\\dfrac{4}{10} = \\dfrac{\\mathrm{AN}}{15}$.",
+        "Produit en croix : $\\mathrm{AN} = \\dfrac{4 \\times 15}{10} = \\dfrac{60}{10} = 6$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 6$ cm."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "calculer-longueur",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$. On sait que $\\widehat{\\mathrm{B}} = 40°$ et que l'hypoténuse $\\mathrm{BC} = 9$ cm. Calculer la longueur $\\mathrm{AC}$, arrondie au dixième de cm.",
+      "corrige": [
+        "On repère l'angle droit en $\\mathrm{A}$, puis l'angle de travail $\\widehat{\\mathrm{B}}$. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est le côté opposé (il lui fait face) et $[\\mathrm{BC}]$ l'hypoténuse.",
+        "Les deux côtés en jeu sont l'opposé et l'hypoténuse : c'est le sinus (SOH). $\\sin \\widehat{\\mathrm{B}} = \\dfrac{\\text{opposé}}{\\text{hypoténuse}} = \\dfrac{\\mathrm{AC}}{\\mathrm{BC}}$.",
+        "On remplace : $\\sin 40° = \\dfrac{\\mathrm{AC}}{9}$. L'inconnue est au numérateur, donc on multiplie : $\\mathrm{AC} = 9 \\times \\sin 40°$.",
+        "À la calculatrice en mode DEG : $\\mathrm{AC} = 9 \\times \\sin 40° \\approx 5{,}8$ cm."
+      ],
+      "reponse": "$\\mathrm{AC} \\approx 5{,}8$ cm."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "theoreme-thales",
+      "enonce": "Les droites $(\\mathrm{BE})$ et $(\\mathrm{CD})$ se coupent en $\\mathrm{O}$, avec $\\mathrm{B}$, $\\mathrm{O}$, $\\mathrm{E}$ alignés et $\\mathrm{C}$, $\\mathrm{O}$, $\\mathrm{D}$ alignés, les points étant de part et d'autre de $\\mathrm{O}$. On sait que $(\\mathrm{BC}) \\parallel (\\mathrm{DE})$, $\\mathrm{OB} = 3$ cm, $\\mathrm{OE} = 4{,}5$ cm et $\\mathrm{OC} = 6$ cm. Calculer $\\mathrm{OD}$.",
+      "corrige": [
+        "C'est la configuration dite du papillon : deux sécantes en $\\mathrm{O}$, les points de part et d'autre, et les deux parallèles $(\\mathrm{BC})$ et $(\\mathrm{DE})$. Le théorème de Thalès s'applique.",
+        "Depuis le sommet commun $\\mathrm{O}$ : $\\dfrac{\\mathrm{OB}}{\\mathrm{OE}} = \\dfrac{\\mathrm{OC}}{\\mathrm{OD}} = \\dfrac{\\mathrm{BC}}{\\mathrm{DE}}$.",
+        "On garde les deux rapports qui contiennent l'inconnue $\\mathrm{OD}$ : $\\dfrac{\\mathrm{OB}}{\\mathrm{OE}} = \\dfrac{\\mathrm{OC}}{\\mathrm{OD}}$, soit $\\dfrac{3}{4{,}5} = \\dfrac{6}{\\mathrm{OD}}$.",
+        "Produit en croix : $\\mathrm{OD} = \\dfrac{6 \\times 4{,}5}{3} = \\dfrac{27}{3} = 9$ cm."
+      ],
+      "reponse": "$\\mathrm{OD} = 9$ cm."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "calculer-angle",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 7$ cm et $\\mathrm{AC} = 4$ cm. Calculer la mesure de l'angle $\\widehat{\\mathrm{B}}$, arrondie au degré.",
+      "corrige": [
+        "On connait deux longueurs et on cherche un angle : il faudra une fonction inverse. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est l'opposé et $[\\mathrm{AB}]$ l'adjacent.",
+        "L'énoncé ne parle pas de l'hypoténuse $[\\mathrm{BC}]$ : les deux côtés en jeu sont l'opposé et l'adjacent, c'est donc la tangente (TOA). $\\tan \\widehat{\\mathrm{B}} = \\dfrac{\\text{opposé}}{\\text{adjacent}} = \\dfrac{\\mathrm{AC}}{\\mathrm{AB}} = \\dfrac{4}{7}$.",
+        "On remonte à l'angle avec la fonction inverse (SHIFT tan sur la calculatrice) : $\\widehat{\\mathrm{B}} = \\tan^{-1}\\!\\left(\\dfrac{4}{7}\\right)$.",
+        "À la calculatrice en mode DEG : $\\widehat{\\mathrm{B}} \\approx 30°$."
+      ],
+      "reponse": "$\\widehat{\\mathrm{B}} \\approx 30°$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "reciproque-thales",
+      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{M}$ est un point de $[\\mathrm{AB}]$ et $\\mathrm{N}$ un point de $[\\mathrm{AC}]$. On donne $\\mathrm{AM} = 4$ cm, $\\mathrm{AB} = 6$ cm, $\\mathrm{AN} = 6$ cm et $\\mathrm{AC} = 9$ cm. 1. Démontrer que $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. 2. En déduire $\\mathrm{MN}$, sachant que $\\mathrm{BC} = 7{,}5$ cm.",
+      "corrige": [
+        "Question 1. On ne sait pas encore que les droites sont parallèles : on ne peut donc pas partir d'une égalité de rapports. On calcule chaque rapport séparément, puis on compare (méthode de la réciproque de Thalès).",
+        "D'un côté $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{4}{6} = \\dfrac{2}{3}$ ; de l'autre $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{6}{9} = \\dfrac{2}{3}$.",
+        "Les deux rapports sont égaux, et les points sont dans le même ordre sur les deux droites ($\\mathrm{A}$, $\\mathrm{M}$, $\\mathrm{B}$ et $\\mathrm{A}$, $\\mathrm{N}$, $\\mathrm{C}$). D'après la réciproque de Thalès, $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$.",
+        "Question 2. Le parallélisme est maintenant établi : on a le droit d'utiliser le rapport $\\dfrac{\\mathrm{MN}}{\\mathrm{BC}}$ (qui était interdit à la question 1). Théorème de Thalès : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{MN}}{\\mathrm{BC}}$, soit $\\dfrac{2}{3} = \\dfrac{\\mathrm{MN}}{7{,}5}$.",
+        "Produit en croix : $\\mathrm{MN} = \\dfrac{2 \\times 7{,}5}{3} = \\dfrac{15}{3} = 5$ cm."
+      ],
+      "reponse": "$(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, et $\\mathrm{MN} = 5$ cm."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "trigonometrie",
+      "enonce": "Une rampe d'accès est modélisée par le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$ : $[\\mathrm{AB}]$ est le sol horizontal, $[\\mathrm{AC}]$ la hauteur verticale et $[\\mathrm{BC}]$ la rampe elle-même. On mesure $\\mathrm{AC} = 2$ m et $\\mathrm{AB} = 8$ m. 1. Calculer l'angle $\\widehat{\\mathrm{B}}$ que la rampe fait avec le sol, arrondi au degré. 2. Calculer la longueur $\\mathrm{BC}$ de la rampe, arrondie au dixième de mètre.",
+      "corrige": [
+        "Question 1. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est l'opposé et $[\\mathrm{AB}]$ l'adjacent ; l'hypoténuse $[\\mathrm{BC}]$ n'est pas donnée.",
+        "On connait deux longueurs et on cherche l'angle : opposé et adjacent, donc tangente, puis fonction inverse. $\\tan \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AC}}{\\mathrm{AB}} = \\dfrac{2}{8} = 0{,}25$, donc $\\widehat{\\mathrm{B}} = \\tan^{-1}(0{,}25) \\approx 14°$.",
+        "Question 2. On cherche maintenant l'hypoténuse $\\mathrm{BC}$. Avec l'adjacent $\\mathrm{AB}$ (connu) et l'hypoténuse : c'est le cosinus. $\\cos \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AB}}{\\mathrm{BC}}$, donc l'inconnue est au dénominateur : $\\mathrm{BC} = \\dfrac{\\mathrm{AB}}{\\cos \\widehat{\\mathrm{B}}} = \\dfrac{8}{\\cos \\widehat{\\mathrm{B}}}$.",
+        "En gardant la valeur non arrondie de $\\widehat{\\mathrm{B}}$ en mémoire (pour ne pas arrondir trop tôt) : $\\mathrm{BC} \\approx 8{,}2$ m. Contrôle : l'hypoténuse est bien le plus long des trois côtés ($8{,}2 > 8$)."
+      ],
+      "reponse": "$\\widehat{\\mathrm{B}} \\approx 14°$ et $\\mathrm{BC} \\approx 8{,}2$ m."
+    }
+  ]
+}

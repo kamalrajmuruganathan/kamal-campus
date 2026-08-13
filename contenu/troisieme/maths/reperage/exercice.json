@@ -1,0 +1,91 @@
+{
+  "id": "3e-math-reperage-exos",
+  "chapitre": "3e-math-reperage",
+  "titre": "Exercices — Repérage sur une droite et dans le plan",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "methode-droite-graduee",
+      "enonce": "Sur une droite graduée d'origine $O$, l'unité de longueur est partagée en $4$ parts égales. Quelle est l'abscisse du point $A$ situé $5$ graduations **à gauche** de $O$ ?",
+      "corrige": [
+        "L'unité est coupée en $4$, donc une graduation vaut $\\dfrac{1}{4} = 0{,}25$.",
+        "$5$ graduations représentent donc $5 \\times \\dfrac{1}{4} = \\dfrac{5}{4} = 1{,}25$ d'écart avec $O$.",
+        "Le point est **à gauche** de $O$ : on retranche, l'abscisse est négative. Donc $A\\left(-\\dfrac{5}{4}\\right)$.",
+        "Contrôle : $-\\dfrac{5}{4} = -1{,}25$ tombe bien entre $-2$ et $-1$."
+      ],
+      "reponse": "$A\\left(-\\dfrac{5}{4}\\right)$, c'est-à-dire $-1{,}25$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "methode-plan",
+      "enonce": "Dans un repère orthogonal, un point $M$ est situé à $3$ unités **à gauche** de l'axe des ordonnées et à $2$ unités **au-dessus** de l'axe des abscisses. Quelles sont les coordonnées de $M$ ?",
+      "corrige": [
+        "L'abscisse se lit horizontalement : $M$ est à gauche de l'axe vertical, donc $x < 0$, ici $x = -3$.",
+        "L'ordonnée se lit verticalement : $M$ est au-dessus de l'axe horizontal, donc $y > 0$, ici $y = 2$.",
+        "On écrit les coordonnées dans l'ordre imposé : abscisse d'abord, puis ordonnée."
+      ],
+      "reponse": "$M(-3\\,;2)$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "lecture-graphique",
+      "enonce": "La représentation graphique d'une fonction $f$ passe par les points $A(-2\\,;5)$, $B(1\\,;-3)$ et $C(4\\,;5)$. (a) Quelle est l'image de $-2$ par $f$ ? (b) Donne tous les antécédents de $5$ que l'on peut lire sur ces trois points. (c) Le nombre $5$ a-t-il un seul antécédent ?",
+      "corrige": [
+        "Un point de la courbe s'écrit $\\big(x\\,;f(x)\\big)$ : l'abscisse est le nombre de départ, l'ordonnée est son image.",
+        "(a) Pour $A(-2\\,;5)$, on a $f(-2) = 5$ : l'image de $-2$ est $5$.",
+        "(b) Un antécédent de $5$ est une abscisse dont l'ordonnée vaut $5$. Les points $A(-2\\,;5)$ et $C(4\\,;5)$ conviennent : $-2$ et $4$ sont deux antécédents de $5$.",
+        "(c) Non : un nombre a une seule image, mais il peut avoir plusieurs antécédents. Ici $5$ en a au moins deux."
+      ],
+      "reponse": "(a) $f(-2)=5$. (b) $-2$ et $4$. (c) Non, $5$ possède au moins deux antécédents."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "fonction-affine-graphique",
+      "enonce": "La droite représentant une fonction affine $f$ passe par les points $(1\\,;-2)$ et $(4\\,;7)$. Détermine son coefficient directeur $a$, puis l'ordonnée à l'origine $b$, et écris l'expression de $f$.",
+      "corrige": [
+        "Le coefficient directeur se calcule avec les deux points : $a = \\dfrac{\\text{variation des ordonnées}}{\\text{variation des abscisses}} = \\dfrac{7 - (-2)}{4 - 1} = \\dfrac{9}{3} = 3$.",
+        "On sait donc que $f(x) = 3x + b$. On utilise le point $(1\\,;-2)$ : $f(1) = -2$, soit $3 \\times 1 + b = -2$.",
+        "D'où $3 + b = -2$, donc $b = -5$.",
+        "Vérification avec l'autre point : $f(4) = 3\\times 4 - 5 = 12 - 5 = 7$. ✓"
+      ],
+      "reponse": "$a = 3$, $b = -5$, donc $f(x) = 3x - 5$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "lecture-graphique",
+      "enonce": "On considère la fonction affine $f(x) = -2x + 5$. Sa droite coupe la droite horizontale $y = 1$ au point $(2\\,;1)$. En raisonnant graphiquement, résous l'inéquation $-2x + 5 \\geqslant 1$.",
+      "corrige": [
+        "Résoudre l'inéquation, c'est chercher les $x$ pour lesquels la droite de $f$ est **au-dessus** (ou au niveau) de la droite $y = 1$. La réponse se lit donc sur l'axe des abscisses.",
+        "Le coefficient directeur de $f$ est $-2 < 0$ : la droite **descend**. Elle est donc au-dessus de $y = 1$ à **gauche** du point d'intersection.",
+        "Le point d'intersection a pour abscisse $2$. La droite de $f$ est au-dessus de $y = 1$ pour $x \\leqslant 2$.",
+        "Contrôle par le calcul : $-2x + 5 \\geqslant 1 \\iff -2x \\geqslant -4 \\iff x \\leqslant 2$ (on divise par $-2 < 0$, l'inégalité change de sens). ✓"
+      ],
+      "reponse": "Les solutions sont les $x \\leqslant 2$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "fonction-carre",
+      "enonce": "On considère la fonction carré $f : x \\mapsto x^2$. (a) Calcule les images de $-5$, $-3$, $0$, $3$ et $5$. (b) On veut placer ces points dans un repère où l'axe horizontal va de $-5$ à $5$, gradué de $1$ en $1$. Explique pourquoi graduer l'axe vertical de $1$ en $1$ est un mauvais choix, et propose une graduation adaptée. (c) Combien d'antécédents le nombre $4$ possède-t-il par $f$ ? Lesquels ?",
+      "corrige": [
+        "(a) $f(-5) = (-5)^2 = 25$, $f(-3) = 9$, $f(0) = 0$, $f(3) = 9$, $f(5) = 25$.",
+        "(b) Les ordonnées vont de $0$ à $25$, alors que les abscisses ne vont que de $-5$ à $5$. En graduant l'axe vertical de $1$ en $1$, il faudrait $25$ carreaux de hauteur : le graphique déborde de la feuille. On choisit une unité plus grande sur l'axe vertical, par exemple de $5$ en $5$. C'est permis car un repère orthogonal n'impose pas la même unité sur les deux axes.",
+        "(c) Chercher les antécédents de $4$, c'est chercher les nombres dont le carré vaut $4$ : $2^2 = 4$ et $(-2)^2 = 4$. Le nombre $4$ a donc deux antécédents.",
+        "Ces antécédents correspondent aux deux points $(-2\\,;4)$ et $(2\\,;4)$ de la courbe."
+      ],
+      "reponse": "(a) $25\\,;9\\,;0\\,;9\\,;25$. (b) Les ordonnées montent jusqu'à $25$ : graduer de $1$ en $1$ ferait déborder la feuille, on gradue l'axe vertical de $5$ en $5$. (c) Deux antécédents : $-2$ et $2$."
+    }
+  ]
+}

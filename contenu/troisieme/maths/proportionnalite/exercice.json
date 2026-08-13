@@ -1,0 +1,91 @@
+{
+  "id": "3e-math-proportionnalite-exos",
+  "chapitre": "3e-math-proportionnalite",
+  "titre": "Exercices — Proportionnalité : ratios, échelles et taux d'évolution",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "traduire-evolution",
+      "enonce": "Le prix d'un abonnement passe de $25$ € à $27$ €. Calcule le taux d'évolution de ce prix.",
+      "corrige": [
+        "On repère la valeur de départ $V_d = 25$ et la valeur d'arrivée $V_a = 27$.",
+        "On applique la formule $t = \\dfrac{V_a - V_d}{V_d} \\times 100$, en divisant bien par la valeur de DÉPART.",
+        "$t = \\dfrac{27 - 25}{25} \\times 100 = \\dfrac{2}{25} \\times 100 = 0{,}08 \\times 100 = 8$.",
+        "Le résultat est positif : c'est une hausse. Vérification : $25 \\times 1{,}08 = 27$ ✓"
+      ],
+      "reponse": "Le taux d'évolution est $+8\\,\\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "echelles",
+      "enonce": "Sur une carte routière à l'échelle $\\dfrac{1}{100\\,000}$, deux villes sont distantes de $6{,}5$ cm. Quelle est la distance réelle entre ces deux villes ?",
+      "corrige": [
+        "L'échelle $\\dfrac{1}{100\\,000}$ se lit : $1$ cm sur la carte représente $100\\,000$ cm en vrai.",
+        "Distance réelle en centimètres : $6{,}5 \\times 100\\,000 = 650\\,000$ cm.",
+        "On convertit en kilomètres, sachant que $1$ km $= 100\\,000$ cm : $650\\,000 \\div 100\\,000 = 6{,}5$ km."
+      ],
+      "reponse": "La distance réelle est $6{,}5$ km."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "traduire-evolution",
+      "enonce": "La population d'un village passe de $3\\,200$ à $2\\,944$ habitants. Retrouve le taux d'évolution en passant par le coefficient multiplicateur.",
+      "corrige": [
+        "On calcule d'abord le coefficient multiplicateur $\\mathrm{CM} = \\dfrac{V_a}{V_d} = \\dfrac{2\\,944}{3\\,200}$.",
+        "$\\dfrac{2\\,944}{3\\,200} = 0{,}92$.",
+        "On traduit ce coefficient en taux : $t = (\\mathrm{CM} - 1) \\times 100 = (0{,}92 - 1) \\times 100 = -8$.",
+        "Le taux est négatif : c'est une baisse. Vérification : $3\\,200 \\times 0{,}92 = 2\\,944$ ✓"
+      ],
+      "reponse": "Le taux d'évolution est $-8\\,\\%$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "echelles",
+      "enonce": "Deux villes sont réellement distantes de $54$ km. Sur une carte à l'échelle $\\dfrac{1}{300\\,000}$, quelle distance, en centimètres, les sépare ?",
+      "corrige": [
+        "On convertit d'abord la distance réelle en centimètres : $54$ km $= 54 \\times 100\\,000 = 5\\,400\\,000$ cm.",
+        "L'échelle $\\dfrac{1}{300\\,000}$ signifie que la distance sur la carte est $300\\,000$ fois plus petite que la distance réelle.",
+        "Distance sur la carte : $5\\,400\\,000 \\div 300\\,000 = 18$ cm.",
+        "Contrôle : $18 \\times 300\\,000 = 5\\,400\\,000$ cm $= 54$ km ✓"
+      ],
+      "reponse": "Les deux villes sont séparées de $18$ cm sur la carte."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "evolutions-successives",
+      "enonce": "Le prix d'un article augmente de $20\\,\\%$, puis, le mois suivant, baisse de $15\\,\\%$. Quel est le taux d'évolution global du prix sur les deux mois ?",
+      "corrige": [
+        "À une hausse de $20\\,\\%$ correspond le coefficient $1 + \\dfrac{20}{100} = 1{,}20$ ; à une baisse de $15\\,\\%$ correspond le coefficient $1 - \\dfrac{15}{100} = 0{,}85$.",
+        "Pour deux évolutions successives, on MULTIPLIE les coefficients (on n'additionne jamais les taux) : $1{,}20 \\times 0{,}85 = 1{,}02$.",
+        "On traduit ce coefficient global en taux : $t = (1{,}02 - 1) \\times 100 = 2$.",
+        "Contrôle sur un prix de $100$ € : $100 \\to 120 \\to 102$, soit bien $+2\\,\\%$ au total (et non $+5\\,\\%$)."
+      ],
+      "reponse": "Le taux d'évolution global est $+2\\,\\%$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "echelles",
+      "enonce": "Sur une carte, deux villes réellement distantes de $12$ km sont représentées à $4{,}8$ cm l'une de l'autre. \\n1. Détermine l'échelle de cette carte. \\n2. Sur la même carte, deux autres villes sont à $7$ cm. Quelle est leur distance réelle ?",
+      "corrige": [
+        "1. L'échelle est le quotient $\\dfrac{\\text{distance sur la carte}}{\\text{distance réelle}}$, les deux dans la même unité. On convertit : $12$ km $= 1\\,200\\,000$ cm.",
+        "Échelle $= \\dfrac{4{,}8}{1\\,200\\,000} = \\dfrac{1}{250\\,000}$ (car $1\\,200\\,000 \\div 4{,}8 = 250\\,000$).",
+        "2. Avec cette échelle, $1$ cm sur la carte représente $250\\,000$ cm réels. Pour $7$ cm : $7 \\times 250\\,000 = 1\\,750\\,000$ cm.",
+        "On convertit : $1\\,750\\,000 \\div 100\\,000 = 17{,}5$ km."
+      ],
+      "reponse": "1. L'échelle est $\\dfrac{1}{250\\,000}$. 2. La distance réelle est $17{,}5$ km."
+    }
+  ]
+}

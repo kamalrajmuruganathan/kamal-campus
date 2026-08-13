@@ -1,0 +1,93 @@
+{
+  "id": "3e-math-representation-espace-exos",
+  "chapitre": "3e-math-representation-espace",
+  "titre": "Exercices — Représentation de l'espace",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "volume-boule",
+      "enonce": "Calcule le volume d'une boule de rayon $R = 9$ cm. On prend $\\pi \\approx 3{,}14$ et on donne le résultat en cm³.",
+      "corrige": [
+        "On applique la formule $V = \\dfrac{4}{3} \\times \\pi \\times R^3$. Méthode sûre : on calcule d'abord $R^3$, puis on multiplie par $\\pi$, puis par $4$, et enfin on divise par $3$.",
+        "$R^3 = 9 \\times 9 \\times 9 = 729$.",
+        "$729 \\times 3{,}14 = 2289{,}06$.",
+        "$2289{,}06 \\times 4 = 9156{,}24$, puis $9156{,}24 \\div 3 = 3052{,}08$.",
+        "Le volume est bien en cm³ car il vient d'une longueur au cube."
+      ],
+      "reponse": "$V = 3052{,}08 \\text{ cm}^3$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "diametre-grand-cercle",
+      "enonce": "Une balle est modélisée par une sphère de centre $O$ et de rayon $R = 7$ cm. a) Quelle est la longueur de son diamètre ? b) Quel est le rayon d'un grand cercle de cette sphère ?",
+      "corrige": [
+        "a) Un diamètre joint deux points de la sphère en passant par le centre : sa longueur vaut $d = 2R$.",
+        "$d = 2 \\times 7 = 14$ cm.",
+        "b) Un grand cercle est l'intersection de la sphère avec un plan passant par le centre $O$ : il a le même rayon que la sphère, soit $R = 7$ cm."
+      ],
+      "reponse": "a) $d = 14$ cm. b) Le grand cercle a pour rayon $7$ cm."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "section-boule",
+      "enonce": "Une boule de centre $O$ et de rayon $R = 13$ cm est coupée par un plan situé à la distance $d = 5$ cm du centre. a) Quelle est la nature de la section ? Calcule son rayon $r$. b) Calcule l'aire de cette section ($\\pi \\approx 3{,}14$).",
+      "corrige": [
+        "a) La section d'une boule par un plan est toujours un disque. Comme le plan ne passe pas par le centre, son rayon $r$ se calcule par Pythagore dans le triangle rectangle formé par $R$, $d$ et $r$ : $r = \\sqrt{R^2 - d^2}$.",
+        "$r = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12$ cm.",
+        "b) L'aire d'un disque est $\\mathcal{A} = \\pi r^2 = 3{,}14 \\times 12^2$.",
+        "$\\mathcal{A} = 3{,}14 \\times 144 = 452{,}16 \\text{ cm}^2$."
+      ],
+      "reponse": "a) Un disque de rayon $r = 12$ cm. b) Son aire vaut $452{,}16 \\text{ cm}^2$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "section-cylindre",
+      "enonce": "On considère un cylindre de révolution de rayon $5$ cm et de hauteur $12$ cm. a) On le coupe par un plan perpendiculaire à son axe : donne la nature et les dimensions de la section, puis son aire ($\\pi \\approx 3{,}14$). b) On le coupe par un plan qui passe par son axe : donne la nature et les dimensions de la section, puis son aire.",
+      "corrige": [
+        "a) Perpendiculairement à l'axe, la section est un disque identique aux bases, de rayon $r = 5$ cm.",
+        "Son aire est $\\mathcal{A} = \\pi r^2 = 3{,}14 \\times 5^2 = 3{,}14 \\times 25 = 78{,}5 \\text{ cm}^2$.",
+        "b) Parallèlement à l'axe (ici le plan passe par l'axe), la section est un rectangle. Sa largeur est le diamètre $2r = 10$ cm et sa hauteur est celle du cylindre, soit $12$ cm.",
+        "Son aire est $\\mathcal{A} = 10 \\times 12 = 120 \\text{ cm}^2$."
+      ],
+      "reponse": "a) Disque de rayon $5$ cm, d'aire $78{,}5 \\text{ cm}^2$. b) Rectangle $10 \\times 12$ (cm), d'aire $120 \\text{ cm}^2$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "pyramide-inscrite-cube",
+      "enonce": "On part d'un cube d'arête $12$ cm. On y inscrit une pyramide dont la base est la face du bas et dont le sommet $S$ est le sommet du cube situé juste au-dessus d'un coin de cette base. a) Calcule le volume de la pyramide. b) Compare-le au volume du cube. c) Décris le patron de cette pyramide en vraie grandeur.",
+      "corrige": [
+        "a) Le sommet est au-dessus d'un coin, donc la hauteur de la pyramide est l'arête verticale : $h = 12$ cm. La base est un carré d'aire $12 \\times 12 = 144 \\text{ cm}^2$.",
+        "$V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3} = \\dfrac{144 \\times 12}{3} = \\dfrac{1728}{3} = 576 \\text{ cm}^3$.",
+        "b) Le cube entier vaut $12^3 = 1728 \\text{ cm}^3$. La pyramide en occupe donc exactement le tiers, et l'on peut remplir le cube avec trois pyramides identiques.",
+        "c) Le patron comporte : le carré de base $12 \\times 12$ ; deux triangles rectangles dont les côtés de l'angle droit mesurent $12$ cm et $12$ cm ; deux triangles rectangles dont les côtés de l'angle droit mesurent $12$ cm et $12\\sqrt{2} \\approx 16{,}97$ cm. Cette pyramide n'est pas régulière : ses quatre faces latérales ne sont pas identiques."
+      ],
+      "reponse": "a) $V = 576 \\text{ cm}^3$. b) C'est le tiers du cube ($1728 \\text{ cm}^3$). c) Un carré $12 \\times 12$, deux triangles rectangles $(12\\,;\\,12)$ et deux triangles rectangles $(12\\,;\\,12\\sqrt{2} \\approx 16{,}97)$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "volume-boule",
+      "enonce": "On enferme une boule de rayon $R$ dans le plus petit cylindre qui la contient. a) Justifie que ce cylindre a pour rayon $R$ et pour hauteur $2R$, et exprime son volume en fonction de $R$. b) Montre alors que le volume de la boule est égal aux deux tiers de celui du cylindre.",
+      "corrige": [
+        "a) Pour contenir la boule au plus juste, le cylindre doit avoir le même rayon qu'elle, soit $R$. Sa hauteur doit valoir le diamètre de la boule, soit $2R$.",
+        "Le volume d'un cylindre est $\\mathcal{A}_{\\text{base}} \\times h = (\\pi R^2) \\times 2R = 2\\pi R^3$.",
+        "b) Le volume de la boule est $V_{\\text{boule}} = \\dfrac{4}{3}\\pi R^3$. On forme le quotient $\\dfrac{V_{\\text{boule}}}{V_{\\text{cylindre}}} = \\dfrac{\\frac{4}{3}\\pi R^3}{2\\pi R^3}$.",
+        "On simplifie $\\pi R^3$ au numérateur et au dénominateur : $\\dfrac{\\frac{4}{3}}{2} = \\dfrac{4}{3} \\times \\dfrac{1}{2} = \\dfrac{4}{6} = \\dfrac{2}{3}$.",
+        "La boule occupe donc les deux tiers du cylindre qui la contient : c'est le résultat d'Archimède."
+      ],
+      "reponse": "a) $V_{\\text{cylindre}} = 2\\pi R^3$. b) $\\dfrac{V_{\\text{boule}}}{V_{\\text{cylindre}}} = \\dfrac{2}{3}$."
+    }
+  ]
+}

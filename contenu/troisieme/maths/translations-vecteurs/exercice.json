@@ -1,0 +1,96 @@
+{
+  "id": "3e-math-translations-vecteurs-exos",
+  "chapitre": "3e-math-translations-vecteurs",
+  "titre": "Exercices — Translations et vecteurs",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "somme-chasles",
+      "enonce": "Simplifie chaque somme à l'aide de la relation de Chasles.\n\na) $\\overrightarrow{RS} + \\overrightarrow{ST}$\n\nb) $\\overrightarrow{MN} + \\overrightarrow{NP} + \\overrightarrow{PQ}$\n\nc) $\\overrightarrow{KL} + \\overrightarrow{LK}$",
+      "corrige": [
+        "Rappel de la relation de Chasles : quand l'extrémité du premier vecteur est l'origine du second, ce point commun disparaît.",
+        "a) L'extrémité de $\\overrightarrow{RS}$ est $S$, qui est aussi l'origine de $\\overrightarrow{ST}$ : $S$ disparaît, donc $\\overrightarrow{RS} + \\overrightarrow{ST} = \\overrightarrow{RT}$.",
+        "b) On applique Chasles deux fois : $\\overrightarrow{MN} + \\overrightarrow{NP} = \\overrightarrow{MP}$ ($N$ disparaît), puis $\\overrightarrow{MP} + \\overrightarrow{PQ} = \\overrightarrow{MQ}$ ($P$ disparaît).",
+        "c) $\\overrightarrow{KL} + \\overrightarrow{LK} = \\overrightarrow{KK} = \\vec{0}$ : on part de $K$ et on y revient, l'aller-retour vaut le vecteur nul."
+      ],
+      "reponse": "a) $\\overrightarrow{RT}$  ·  b) $\\overrightarrow{MQ}$  ·  c) $\\vec{0}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "egalite-vecteurs",
+      "enonce": "$MNPQ$ est un parallélogramme, ses sommets étant nommés dans cet ordre.\n\na) Écris les deux égalités de vecteurs qui traduisent ses côtés opposés.\n\nb) Que vaut $\\overrightarrow{MM}$ ?\n\nc) Quel est le vecteur opposé de $\\overrightarrow{MN}$ ?",
+      "corrige": [
+        "Dans le parallélogramme $MNPQ$, on parcourt le contour $M \\to N \\to P \\to Q \\to M$. Les côtés opposés sont donc $[MN]$ et $[PQ]$ d'une part, $[NP]$ et $[QM]$ d'autre part.",
+        "a) Deux côtés opposés d'un parallélogramme donnent une égalité de vecteurs (même direction, même sens, même longueur) : $\\overrightarrow{MN} = \\overrightarrow{QP}$ et $\\overrightarrow{NP} = \\overrightarrow{MQ}$.",
+        "On fait bien attention au sens : $\\overrightarrow{MN} = \\overrightarrow{QP}$ (et non $\\overrightarrow{PQ}$), car les deux flèches doivent aller dans le même sens.",
+        "b) $\\overrightarrow{MM} = \\vec{0}$ : l'origine et l'extrémité sont confondues, c'est le vecteur nul.",
+        "c) L'opposé de $\\overrightarrow{MN}$ a la même direction et la même longueur mais le sens contraire : c'est $\\overrightarrow{NM}$."
+      ],
+      "reponse": "a) $\\overrightarrow{MN} = \\overrightarrow{QP}$ et $\\overrightarrow{NP} = \\overrightarrow{MQ}$  ·  b) $\\overrightarrow{MM} = \\vec{0}$  ·  c) $\\overrightarrow{NM}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "egalite-vecteurs",
+      "enonce": "Léa sait que $\\overrightarrow{AB} = \\overrightarrow{CD}$, les points $A$, $B$ et $C$ n'étant pas alignés. Elle écrit aussitôt : « donc $ABCD$ est un parallélogramme ». A-t-elle raison ? Sinon, corrige son affirmation et justifie.",
+      "corrige": [
+        "La propriété exacte du cours est : $\\overrightarrow{AB} = \\overrightarrow{CD} \\iff ABDC$ est un parallélogramme, en parcourant le contour $A \\to B \\to D \\to C \\to A$.",
+        "Léa a écrit $ABCD$ au lieu de $ABDC$ : c'est le piège le plus fréquent du chapitre. Le quadrilatère $ABCD$ obtenu en reliant les points dans cet ordre est en réalité **croisé**, ce n'est pas un parallélogramme.",
+        "Le réflexe de contrôle : $\\overrightarrow{AB}$ et $\\overrightarrow{CD}$ sont les deux flèches, donc $[AB]$ et $[CD]$ doivent être des côtés **opposés**. Dans $ABDC$, les diagonales sont $[AD]$ et $[BC]$ — si on tombe sur $[AC]$ et $[BD]$, c'est qu'on s'est trompé de figure.",
+        "Léa a donc tort sur l'ordre des lettres. La bonne conclusion est : $ABDC$ est un parallélogramme."
+      ],
+      "reponse": "Non : le parallélogramme est $ABDC$ (et non $ABCD$, qui serait croisé)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "somme-chasles",
+      "enonce": "Simplifie le plus possible la somme $\\overrightarrow{AC} + \\overrightarrow{DB} + \\overrightarrow{CD}$.",
+      "corrige": [
+        "Telle qu'elle est écrite, on ne peut pas appliquer Chasles directement : l'extrémité de $\\overrightarrow{AC}$ est $C$, mais le vecteur suivant est $\\overrightarrow{DB}$, qui part de $D$. Pas de point commun tout de suite.",
+        "Une somme de vecteurs ne dépend pas de l'ordre : on peut réorganiser pour faire apparaître les points communs. On place $\\overrightarrow{CD}$ juste après $\\overrightarrow{AC}$ : $\\overrightarrow{AC} + \\overrightarrow{CD} + \\overrightarrow{DB}$.",
+        "$\\overrightarrow{AC} + \\overrightarrow{CD} = \\overrightarrow{AD}$ (le point $C$ disparaît).",
+        "Puis $\\overrightarrow{AD} + \\overrightarrow{DB} = \\overrightarrow{AB}$ (le point $D$ disparaît)."
+      ],
+      "reponse": "$\\overrightarrow{AC} + \\overrightarrow{DB} + \\overrightarrow{CD} = \\overrightarrow{AB}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "lien-parallelogramme",
+      "enonce": "$ABCD$ est un quadrilatère. On note $I$ le milieu de la diagonale $[AC]$, et on suppose que $I$ est aussi le milieu de la diagonale $[BD]$.\n\n1) Justifie que $\\overrightarrow{AI} = \\overrightarrow{IC}$ et $\\overrightarrow{DI} = \\overrightarrow{IB}$.\n\n2) À l'aide de la relation de Chasles, démontre que $\\overrightarrow{AB} = \\overrightarrow{DC}$.\n\n3) Conclus : quelle est la nature de $ABCD$ ?",
+      "corrige": [
+        "1) $I$ est le milieu de $[AC]$ : le déplacement de $A$ à $I$ est le même que de $I$ à $C$, donc $\\overrightarrow{AI} = \\overrightarrow{IC}$. De même, $I$ milieu de $[BD]$ donne $\\overrightarrow{DI} = \\overrightarrow{IB}$.",
+        "2) On décompose $\\overrightarrow{AB}$ en passant par $I$ (Chasles) : $\\overrightarrow{AB} = \\overrightarrow{AI} + \\overrightarrow{IB}$.",
+        "On décompose de même $\\overrightarrow{DC}$ en passant par $I$ : $\\overrightarrow{DC} = \\overrightarrow{DI} + \\overrightarrow{IC}$.",
+        "Or $\\overrightarrow{AI} = \\overrightarrow{IC}$ et $\\overrightarrow{IB} = \\overrightarrow{DI}$ d'après la question 1. En remplaçant : $\\overrightarrow{DC} = \\overrightarrow{DI} + \\overrightarrow{IC} = \\overrightarrow{IB} + \\overrightarrow{AI} = \\overrightarrow{AI} + \\overrightarrow{IB} = \\overrightarrow{AB}$.",
+        "3) On a $\\overrightarrow{AB} = \\overrightarrow{DC}$. La propriété du cours donne alors : $\\overrightarrow{AB} = \\overrightarrow{DC} \\iff ABCD$ est un parallélogramme. Attention à l'ordre : ici le second vecteur est $\\overrightarrow{DC}$ (et non $\\overrightarrow{CD}$), donc c'est bien $ABCD$ qui est un parallélogramme.",
+        "On retrouve ainsi une propriété connue de 5e : un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme."
+      ],
+      "reponse": "$\\overrightarrow{AB} = \\overrightarrow{DC}$, donc $ABCD$ est un parallélogramme."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "somme-chasles",
+      "enonce": "$A$, $B$, $C$ et $D$ sont quatre points quelconques du plan. Démontre l'égalité $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$.",
+      "corrige": [
+        "On part du membre de gauche et on introduit un point intermédiaire dans chaque vecteur, grâce à la relation de Chasles.",
+        "Dans $\\overrightarrow{AB}$, on passe par $D$ : $\\overrightarrow{AB} = \\overrightarrow{AD} + \\overrightarrow{DB}$.",
+        "Dans $\\overrightarrow{CD}$, on passe par $B$ : $\\overrightarrow{CD} = \\overrightarrow{CB} + \\overrightarrow{BD}$.",
+        "On additionne : $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{DB} + \\overrightarrow{CB} + \\overrightarrow{BD}$.",
+        "Or $\\overrightarrow{DB} + \\overrightarrow{BD} = \\overrightarrow{DD} = \\vec{0}$ (un aller-retour). Il reste $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$, ce qu'il fallait démontrer."
+      ],
+      "reponse": "En décomposant par Chasles, les vecteurs $\\overrightarrow{DB}$ et $\\overrightarrow{BD}$ s'annulent : $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$."
+    }
+  ]
+}
