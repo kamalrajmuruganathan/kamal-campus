@@ -1,0 +1,94 @@
+{
+  "id": "6e-math-pensee-informatique-exos",
+  "chapitre": "6e-math-pensee-informatique",
+  "titre": "Exercices — Initiation à la pensée informatique",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "sequence",
+      "enonce": "On exécute le programme de calcul suivant, une ligne à la fois :\n\n```\nchoisir 6\najouter 4\nmultiplier par 3\nafficher\n```\n\nQu'affiche le programme ?",
+      "corrige": [
+        "On déroule la séquence de haut en bas, sans tout calculer d'un coup : chaque instruction part du résultat de la précédente.",
+        "On part de l'entrée : $6$.",
+        "$6 \\xrightarrow{+4} 10$, puis $10 \\xrightarrow{\\times 3} 30$.",
+        "L'instruction $\\texttt{afficher}$ montre le dernier résultat obtenu, c'est-à-dire $30$."
+      ],
+      "reponse": "Le programme affiche $30$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "chemin",
+      "enonce": "Un robot part d'une case sur un quadrillage. On veut qu'il aille tout droit sur $4$ cases, puis qu'il tourne à gauche et fasse encore $2$ cases. Écris la séquence d'instructions à donner au robot (avec $\\texttt{avancer}$, $\\texttt{tourner à gauche}$, $\\texttt{tourner à droite}$).",
+      "corrige": [
+        "On décrit le trajet en petites étapes, chacune assez simple pour être une seule instruction.",
+        "« Aller tout droit sur $4$ cases » : $\\texttt{avancer de 4 cases}$.",
+        "« Tourner à gauche » : $\\texttt{tourner à gauche}$.",
+        "« Faire encore $2$ cases » : $\\texttt{avancer de 2 cases}$.",
+        "On range ces instructions dans l'ordre, l'une sous l'autre."
+      ],
+      "reponse": "```\navancer de 4 cases\ntourner à gauche\navancer de 2 cases\n```"
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "sequence",
+      "enonce": "Deux programmes partent tous les deux de $\\texttt{choisir 10}$.\n\n```\nProgramme A            Programme B\nchoisir 10             choisir 10\najouter 5              multiplier par 2\nmultiplier par 2       ajouter 5\nafficher               afficher\n```\n\nQu'affiche chaque programme ? Que remarques-tu ?",
+      "corrige": [
+        "On déroule le Programme A pas à pas : $10 \\xrightarrow{+5} 15 \\xrightarrow{\\times 2} 30$. A affiche $30$.",
+        "On déroule le Programme B pas à pas : $10 \\xrightarrow{\\times 2} 20 \\xrightarrow{+5} 25$. B affiche $25$.",
+        "Les deux programmes utilisent les mêmes instructions ($\\texttt{ajouter 5}$ et $\\texttt{multiplier par 2}$), mais rangées dans un ordre différent.",
+        "Ils n'affichent pas la même chose : changer l'ordre des instructions change le résultat."
+      ],
+      "reponse": "A affiche $30$, B affiche $25$ : mêmes instructions, ordre différent, résultat différent."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "repetition",
+      "enonce": "Un robot exécute :\n\n```\nrépéter 4 fois\n    avancer de 30\n    tourner de 90°\nfin répéter\n```\n\n1) Combien d'instructions sont réellement exécutées en tout ? 2) Quelle figure le robot trace-t-il ?",
+      "corrige": [
+        "Seules les instructions décalées vers la droite sont dans la répétition : ici $\\texttt{avancer de 30}$ et $\\texttt{tourner de 90°}$, soit $2$ instructions par tour.",
+        "Le bloc est refait $4$ fois : nombre d'instructions exécutées $= 4 \\times 2 = 8$.",
+        "À chaque tour, le robot trace un segment de $30$ puis tourne d'un quart de tour ($90°$). Il fait donc $4$ côtés égaux séparés par $4$ angles droits.",
+        "Quatre côtés de même longueur et quatre angles droits : c'est un carré de côté $30$."
+      ],
+      "reponse": "$8$ instructions sont exécutées ; le robot trace un carré de côté $30$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "chemin",
+      "enonce": "On veut qu'un robot trace un rectangle de longueur $60$ et de largeur $40$, en tournant à chaque coin de $90°$. Écris d'abord la séquence complète des déplacements, puis récris-la plus court en utilisant une répétition.",
+      "corrige": [
+        "Un rectangle a $4$ côtés : deux longueurs de $60$ et deux largeurs de $40$, avec un angle droit ($90°$) à chaque coin. On alterne donc longueur, virage, largeur, virage.",
+        "Séquence complète :\n```\navancer de 60\ntourner de 90°\navancer de 40\ntourner de 90°\navancer de 60\ntourner de 90°\navancer de 40\ntourner de 90°\n```",
+        "On remarque qu'un même motif de $4$ instructions ($\\texttt{avancer de 60}$, $\\texttt{tourner de 90°}$, $\\texttt{avancer de 40}$, $\\texttt{tourner de 90°}$) revient exactement $2$ fois à l'identique.",
+        "On l'écrit plus court avec une répétition de $2$ fois ce bloc.",
+        "Vérification : $2$ tours $\\times 4$ instructions $= 8$ instructions, comme dans la séquence complète."
+      ],
+      "reponse": "```\nrépéter 2 fois\n    avancer de 60\n    tourner de 90°\n    avancer de 40\n    tourner de 90°\nfin répéter\n```"
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "entrees-sorties",
+      "enonce": "Un programme demande de choisir un nombre, puis exécute :\n\n```\nchoisir un nombre\najouter 3\nmultiplier par 2\nafficher\n```\n\nLa sortie affichée est $20$. Quelle était l'entrée, c'est-à-dire le nombre choisi au départ ?",
+      "corrige": [
+        "L'entrée est le nombre choisi au départ, la sortie est le nombre affiché à la fin ($20$). Pour retrouver l'entrée, on remonte la séquence à l'envers, en annulant chaque instruction.",
+        "La dernière instruction avant l'affichage est $\\texttt{multiplier par 2}$. Pour l'annuler, on divise la sortie par $2$ : $20 \\div 2 = 10$.",
+        "L'instruction précédente est $\\texttt{ajouter 3}$. Pour l'annuler, on retire $3$ : $10 - 3 = 7$.",
+        "Vérification en déroulant dans le bon sens : $7 \\xrightarrow{+3} 10 \\xrightarrow{\\times 2} 20$. On retrouve bien la sortie $20$."
+      ],
+      "reponse": "L'entrée était $7$."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "6e-math-longueurs-aires-volumes-exos",
+  "chapitre": "6e-math-longueurs-aires-volumes",
+  "titre": "Exercices — Longueurs, aires et volumes",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "perimetre-carre",
+      "enonce": "Calcule le périmètre d'un carré dont le côté mesure $9\\ \\text{cm}$.",
+      "corrige": [
+        "Le périmètre d'un carré se calcule avec la formule $P = c \\times 4$, où $c$ est la longueur d'un côté.",
+        "Ici $c = 9\\ \\text{cm}$, donc $P = 9 \\times 4 = 36$.",
+        "Un périmètre est une longueur : on l'écrit en cm."
+      ],
+      "reponse": "$P = 36\\ \\text{cm}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "conversion-longueur",
+      "enonce": "Convertis $3{,}5\\ \\text{m}$ en décimètres, en centimètres, puis en millimètres.",
+      "corrige": [
+        "Pour les longueurs, chaque unité vaut $10$ fois la suivante : on place les chiffres dans le tableau des unités, un chiffre par colonne.",
+        "Du mètre au décimètre, on avance d'une colonne (×10) : $3{,}5\\ \\text{m} = 35\\ \\text{dm}$.",
+        "Du décimètre au centimètre, encore ×10 : $35\\ \\text{dm} = 350\\ \\text{cm}$.",
+        "Du centimètre au millimètre, encore ×10 : $350\\ \\text{cm} = 3500\\ \\text{mm}$."
+      ],
+      "reponse": "$3{,}5\\ \\text{m} = 35\\ \\text{dm} = 350\\ \\text{cm} = 3500\\ \\text{mm}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "aire-rectangle",
+      "enonce": "Un rectangle a une longueur de $2\\ \\text{m}$ et une largeur de $50\\ \\text{cm}$. Calcule son aire en $\\text{m}^2$.",
+      "corrige": [
+        "Avant de calculer, les deux dimensions doivent être dans la même unité. On convertit la largeur en mètres : $50\\ \\text{cm} = 0{,}5\\ \\text{m}$ (car $1\\ \\text{m} = 100\\ \\text{cm}$).",
+        "L'aire d'un rectangle se calcule avec $A = L \\times l$.",
+        "Ici $L = 2\\ \\text{m}$ et $l = 0{,}5\\ \\text{m}$, donc $A = 2 \\times 0{,}5 = 1$.",
+        "Deux longueurs en mètres multipliées donnent une aire en mètres carrés."
+      ],
+      "reponse": "$A = 1\\ \\text{m}^2$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "perimetre-disque",
+      "enonce": "Un disque a un rayon de $3\\ \\text{cm}$. Calcule son périmètre (on prend $\\pi \\approx 3{,}14$).",
+      "corrige": [
+        "La formule du périmètre du disque utilise le diamètre : $P = \\pi \\times D$. Il faut donc d'abord trouver le diamètre.",
+        "Le diamètre vaut le double du rayon : $D = 2 \\times r = 2 \\times 3 = 6\\ \\text{cm}$.",
+        "On calcule alors $P = \\pi \\times D \\approx 3{,}14 \\times 6 \\approx 18{,}84$.",
+        "Attention à ne pas confondre rayon et diamètre : utiliser le rayon à la place du diamètre diviserait le périmètre par deux."
+      ],
+      "reponse": "$P \\approx 18{,}84\\ \\text{cm}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "unite-volume",
+      "enonce": "On construit deux assemblages avec des cubes de $1\\ \\text{cm}$ d'arête. L'assemblage A mesure $3$ cubes de large, $3$ de profondeur et $3$ de haut. L'assemblage B mesure $5$ cubes de large, $2$ de profondeur et $2$ de haut. Quel assemblage a le plus grand volume ?",
+      "corrige": [
+        "Pour un solide fait de petits cubes, le volume est le nombre de cubes-unité qui le remplissent : on multiplie largeur × profondeur × hauteur.",
+        "Assemblage A : $3 \\times 3 \\times 3 = 27$ cubes, soit un volume de $27\\ \\text{cm}^3$.",
+        "Assemblage B : $5 \\times 2 \\times 2 = 20$ cubes, soit un volume de $20\\ \\text{cm}^3$.",
+        "Comparer deux volumes, c'est comparer combien de cubes chacun contient : $27 > 20$, donc A a le plus grand volume."
+      ],
+      "reponse": "L'assemblage A ($27\\ \\text{cm}^3$) a un volume plus grand que B ($20\\ \\text{cm}^3$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "distinction-grandeurs",
+      "enonce": "Un jardin rectangulaire mesure $12\\ \\text{m}$ de long et $8\\ \\text{m}$ de large. On veut l'entourer d'une clôture, puis le couvrir entièrement de gazon. Quelle longueur de clôture faut-il ? Quelle est l'aire à gazonner ? Exprime enfin cette aire en $\\text{dm}^2$.",
+      "corrige": [
+        "La clôture fait le tour du jardin : c'est le périmètre. On utilise $P = (L + l) \\times 2 = (12 + 8) \\times 2 = 20 \\times 2 = 40$. Il faut donc $40\\ \\text{m}$ de clôture.",
+        "Le gazon couvre la surface : c'est l'aire. On utilise $A = L \\times l = 12 \\times 8 = 96$, soit $96\\ \\text{m}^2$.",
+        "Pour convertir une aire, chaque unité vaut $100$ fois la suivante : $1\\ \\text{m}^2 = 100\\ \\text{dm}^2$.",
+        "Donc $96\\ \\text{m}^2 = 96 \\times 100 = 9600\\ \\text{dm}^2$."
+      ],
+      "reponse": "Clôture : $40\\ \\text{m}$ ; aire à gazonner : $96\\ \\text{m}^2 = 9600\\ \\text{dm}^2$."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "6e-math-nombres-entiers-decimaux-exos",
+  "chapitre": "6e-math-nombres-entiers-decimaux",
+  "titre": "Exercices — Nombres entiers et décimaux",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "grands-nombres",
+      "enonce": "Écris en chiffres le nombre « un milliard deux cent cinq millions trente mille sept cents ». Combien de chiffres a-t-il ?",
+      "corrige": [
+        "On partage le nombre en **classes** de trois chiffres, de la droite vers la gauche : milliards, millions, milliers, unités.",
+        "Classe des milliards : $1$. Classe des millions : $205$. Classe des milliers : $030$. Classe des unités : $700$.",
+        "On écrit les classes les unes à la suite des autres, séparées par un **espace** (jamais une virgule) : $1\\,205\\,030\\,700$.",
+        "On compte les chiffres : $1$-$2$-$0$-$5$-$0$-$3$-$0$-$7$-$0$-$0$, soit $10$ chiffres."
+      ],
+      "reponse": "$1\\,205\\,030\\,700$, qui a $10$ chiffres."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "ecritures-fraction-decimale",
+      "enonce": "Écris chacun de ces nombres sous forme de fraction décimale : a) $3{,}5$ ; b) $0{,}07$ ; c) $12{,}004$.",
+      "corrige": [
+        "Une fraction décimale a pour dénominateur $10$, $100$, $1\\,000$… Le dénominateur dépend du **nombre de chiffres après la virgule**.",
+        "a) $3{,}5$ a un seul chiffre après la virgule, donc dénominateur $10$ : $3{,}5 = \\dfrac{35}{10}$.",
+        "b) $0{,}07$ a deux chiffres après la virgule, donc dénominateur $100$ : $0{,}07 = \\dfrac{7}{100}$.",
+        "c) $12{,}004$ a trois chiffres après la virgule, donc dénominateur $1\\,000$ : $12{,}004 = \\dfrac{12\\,004}{1\\,000}$."
+      ],
+      "reponse": "$3{,}5 = \\dfrac{35}{10}$ ; $0{,}07 = \\dfrac{7}{100}$ ; $12{,}004 = \\dfrac{12\\,004}{1\\,000}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "comparaison",
+      "enonce": "Range ces cinq nombres dans l'ordre croissant : $7{,}3$ ; $7{,}25$ ; $7{,}03$ ; $7{,}250$ ; $8{,}1$.",
+      "corrige": [
+        "On compare d'abord les **parties entières**. Celle de $8{,}1$ est $8$, toutes les autres sont $7$ : donc $8{,}1$ est le plus grand.",
+        "Pour les quatre nombres qui commencent par $7$, on compare les **dixièmes**. $7{,}03$ a $0$ dixième : c'est le plus petit du groupe.",
+        "Restent $7{,}3$ (3 dixièmes) et $7{,}25$, $7{,}250$ (2 dixièmes). Comme $2 < 3$, ces deux-là passent avant $7{,}3$.",
+        "Enfin $7{,}25 = 7{,}250$ : le zéro final ne change pas la valeur, ce sont deux écritures du même nombre.",
+        "Ordre croissant : $7{,}03 < 7{,}25 = 7{,}250 < 7{,}3 < 8{,}1$."
+      ],
+      "reponse": "$7{,}03 < 7{,}25 = 7{,}250 < 7{,}3 < 8{,}1$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "encadrement-intercaler",
+      "enonce": "On considère le nombre $6{,}48$. a) Encadre-le entre deux nombres entiers qui se suivent. b) Encadre-le entre deux dixièmes qui se suivent. c) Trouve un nombre décimal compris entre $6{,}48$ et $6{,}5$.",
+      "corrige": [
+        "a) La partie entière de $6{,}48$ est $6$. Le nombre est donc entre $6$ et $7$ : $6 < 6{,}48 < 7$.",
+        "b) On regarde le rang des dixièmes. Le nombre est entre $6{,}4$ et $6{,}5$ : $6{,}4 < 6{,}48 < 6{,}5$.",
+        "c) On cherche un nombre entre $6{,}48$ et $6{,}5$. Le nombre $6{,}49$ convient car $6{,}48 < 6{,}49 < 6{,}5$.",
+        "Il en existe une infinité : on peut aussi ajouter un chiffre, par exemple $6{,}485$."
+      ],
+      "reponse": "a) $6 < 6{,}48 < 7$ ; b) $6{,}4 < 6{,}48 < 6{,}5$ ; c) par exemple $6{,}49$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "arrondi",
+      "enonce": "Un club partage équitablement $10$ euros de bénéfice entre ses $3$ membres. La calculatrice affiche $3{,}3333\\ldots$ a) Ce nombre est-il décimal ? Justifie. b) Donne la part de chacun arrondie au centième d'euro. c) Si on additionne les trois parts arrondies, retombe-t-on exactement sur $10$ € ?",
+      "corrige": [
+        "a) Son écriture à virgule ne s'arrête jamais : les $3$ continuent à l'infini. Un nombre décimal doit avoir un nombre **fini** de chiffres après la virgule, donc $3{,}3333\\ldots$ n'est **pas** un nombre décimal.",
+        "b) Pour arrondir au centième, on regarde le chiffre juste après, le **millième**. Ici c'est $3$, et $3 < 5$ : on garde le centième tel quel. La part arrondie est $3{,}33$ €.",
+        "c) On additionne les trois parts : $3{,}33 + 3{,}33 + 3{,}33 = 9{,}99$ €.",
+        "On ne retombe pas sur $10$ € : il manque $1$ centime. C'est normal, car on a remplacé chaque part par une valeur arrondie, un peu plus petite que la vraie part."
+      ],
+      "reponse": "a) Non, son écriture à virgule ne s'arrête pas ; b) $3{,}33$ € ; c) non, on obtient $9{,}99$ €."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "demi-droite-graduee",
+      "enonce": "Sur une demi-droite graduée, le point A a pour abscisse $3$ et le point B pour abscisse $4$. L'intervalle entre A et B est partagé en $5$ parts égales. a) Quelle est la longueur d'un petit pas ? b) Quelle est l'abscisse du 3ᵉ repère après A ? c) Le nombre $3{,}5$ tombe-t-il sur un repère, ou entre deux repères ?",
+      "corrige": [
+        "a) De $3$ à $4$, la longueur est $1$, partagée en $5$ pas égaux. On cherche le nombre qui, multiplié par $5$, donne $1$ : c'est $0{,}2$, car $5 \\times 0{,}2 = 1{,}0$. Un pas vaut donc $0{,}2$.",
+        "b) On part de A ($3$) et on avance de $3$ pas de $0{,}2$ : $3 + 0{,}2 + 0{,}2 + 0{,}2 = 3 + 0{,}6 = 3{,}6$.",
+        "c) Les repères sont : $3$ ; $3{,}2$ ; $3{,}4$ ; $3{,}6$ ; $3{,}8$ ; $4$. Le nombre $3{,}5$ n'y figure pas.",
+        "Comme $3{,}4 < 3{,}5 < 3{,}6$, le nombre $3{,}5$ se trouve **entre** les repères $3{,}4$ et $3{,}6$ (juste au milieu)."
+      ],
+      "reponse": "a) $0{,}2$ ; b) $3{,}6$ ; c) entre les repères $3{,}4$ et $3{,}6$."
+    }
+  ]
+}

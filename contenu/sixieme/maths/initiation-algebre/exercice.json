@@ -1,0 +1,91 @@
+{
+  "id": "6e-math-initiation-algebre-exos",
+  "chapitre": "6e-math-initiation-algebre",
+  "titre": "Exercices — Initiation à la pensée algébrique",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "regularite",
+      "enonce": "Voici un motif qui grandit à chaque étape : étape 1 → $3$ points, étape 2 → $8$ points, étape 3 → $13$ points. Quelle est la régularité ? Combien de points aux étapes 4 et 5 ?",
+      "corrige": [
+        "On regarde ce qui change d'une étape à la suivante : $8 - 3 = 5$, puis $13 - 8 = 5$.",
+        "On trouve $5$ les deux fois de suite : la régularité est donc « on ajoute $5$ » à chaque étape.",
+        "Étape 4 : on repart du dernier résultat connu et on ajoute $5$ : $13 + 5 = 18$.",
+        "Étape 5 : $18 + 5 = 23$."
+      ],
+      "reponse": "Régularité : « on ajoute $5$ ». Étape 4 → $18$ points, étape 5 → $23$ points."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "nombre-inconnu",
+      "enonce": "Je pense à un nombre. Je lui enlève $8$ et j'obtiens $5$. On note ce nombre par une case : $\\boxed{\\ ?\\ } - 8 = 5$. Quel est ce nombre ?",
+      "corrige": [
+        "Pour retrouver le nombre de départ, on annule l'opération faite : l'énoncé enlève $8$, on fait donc l'opération inverse, on ajoute $8$.",
+        "$5 + 8 = 13$.",
+        "Vérification : $13 - 8 = 5$. ✓"
+      ],
+      "reponse": "Le nombre est $13$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "structure",
+      "enonce": "Dans un motif fait de carreaux, on sait que le nombre de carreaux est toujours le quadruple du numéro de l'étape, plus $2$. a) Combien de carreaux aux étapes 1, 2 et 3 ? b) Combien à l'étape 20 ?",
+      "corrige": [
+        "La structure relie directement le numéro de l'étape au résultat : nombre de carreaux $= 4 \\times (\\text{numéro de l'étape}) + 2$.",
+        "a) Étape 1 : $4 \\times 1 + 2 = 6$. Étape 2 : $4 \\times 2 + 2 = 10$. Étape 3 : $4 \\times 3 + 2 = 14$.",
+        "On retrouve bien une régularité « on ajoute $4$ » entre $6$, $10$ et $14$ : la structure est cohérente.",
+        "b) Étape 20 : $4 \\times 20 + 2 = 80 + 2 = 82$. La structure permet de sauter directement à l'étape 20 sans dessiner les 19 précédentes."
+      ],
+      "reponse": "a) $6$, $10$ puis $14$ carreaux. b) $82$ carreaux à l'étape 20."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "schema-en-barres",
+      "enonce": "Dans une classe, il y a $2$ fois plus de filles que de garçons. La classe compte $27$ élèves en tout. À l'aide d'un schéma en barres (garçons = $1$ part, filles = $2$ parts), trouve le nombre de garçons et de filles.",
+      "corrige": [
+        "On dessine une barre pour les garçons ($1$ part) et une barre pour les filles ($2$ parts, car « $2$ fois plus »).",
+        "En tout, cela fait $1 + 2 = 3$ parts égales, qui valent ensemble $27$ élèves.",
+        "Une part vaut $27 \\div 3 = 9$ : c'est le nombre de garçons.",
+        "Les filles représentent $2$ parts : $2 \\times 9 = 18$. Vérification : $9 + 18 = 27$. ✓"
+      ],
+      "reponse": "$9$ garçons et $18$ filles."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "nombre-inconnu",
+      "enonce": "Je pense à un nombre. Je le multiplie par $3$, puis j'enlève $4$ : j'obtiens $20$. a) Écris la suite d'opérations avec une case. b) Retrouve le nombre en remontant à l'envers.",
+      "corrige": [
+        "a) La suite d'opérations s'écrit : $\\boxed{\\ ?\\ } \\times 3 - 4 = 20$.",
+        "b) On remonte dans l'ordre inverse. La dernière opération faite est « $-4$ » : on l'annule en premier en ajoutant $4$ : $20 + 4 = 24$.",
+        "Il reste à annuler le « $\\times 3$ » : on fait l'opération inverse, on divise par $3$ : $24 \\div 3 = 8$.",
+        "Vérification : $8 \\times 3 - 4 = 24 - 4 = 20$. ✓"
+      ],
+      "reponse": "Le nombre est $8$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "regularite",
+      "enonce": "Un nénuphar couvre une mare. Chaque jour, la surface qu'il recouvre est multipliée par $2$. Le 1er jour, il couvre $3$ m², ce qui donne la suite $3, 6, 12, \\dots$ a) La régularité est-elle « on ajoute quelque chose » ou « on multiplie » ? Justifie. b) Quelle surface au 5e jour (5e terme) ?",
+      "corrige": [
+        "a) On teste d'abord l'addition : $6 - 3 = 3$, mais $12 - 6 = 6$. L'écart change, ce n'est donc pas une régularité additive.",
+        "On teste la multiplication : $3 \\times 2 = 6$, puis $6 \\times 2 = 12$. On multiplie par $2$ à chaque fois : la régularité est multiplicative, « on multiplie par $2$ ».",
+        "b) On poursuit la suite : jour 3 → $12$, jour 4 → $12 \\times 2 = 24$, jour 5 → $24 \\times 2 = 48$.",
+        "Attention à ne pas confondre : ici on multiplie par $2$, on n'ajoute pas $3$ (l'écart entre les termes n'est pas constant)."
+      ],
+      "reponse": "a) Régularité multiplicative : « on multiplie par $2$ ». b) $48$ m² au 5e jour."
+    }
+  ]
+}

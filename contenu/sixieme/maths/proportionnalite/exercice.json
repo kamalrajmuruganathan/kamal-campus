@@ -1,0 +1,92 @@
+{
+  "id": "6e-math-proportionnalite-exos",
+  "chapitre": "6e-math-proportionnalite",
+  "titre": "Exercices — Proportionnalité",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "reconnaitre",
+      "enonce": "Voici les prix affichés dans une boulangerie pour des croissants identiques.\n\n| Nombre de croissants | $2$ | $5$ | $10$ |\n|---|---|---|---|\n| Prix (€) | $1{,}80$ | $4{,}50$ | $9{,}00$ |\n\nCe tableau est-il un tableau de proportionnalité ? Justifie.",
+      "corrige": [
+        "Pour savoir si c'est proportionnel, on regarde si le prix d'**un** croissant reste toujours le même. On calcule donc le prix « par croissant » pour chaque colonne.",
+        "Colonne $2$ croissants : $1{,}80 \\div 2 = 0{,}90$ € par croissant.",
+        "Colonne $5$ croissants : $4{,}50 \\div 5 = 0{,}90$ € par croissant.",
+        "Colonne $10$ croissants : $9{,}00 \\div 10 = 0{,}90$ € par croissant.",
+        "Le prix par croissant est **toujours** $0{,}90$ € : on multiplie toujours par le même nombre. C'est donc bien un tableau de proportionnalité."
+      ],
+      "reponse": "Oui, c'est proportionnel : le prix par croissant est constant, $0{,}90$ € à chaque fois."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "langage-fois-plus",
+      "enonce": "$6$ billes identiques pèsent $30$ g. Combien pèsent $18$ billes identiques ?",
+      "corrige": [
+        "On compare $18$ billes à $6$ billes : $18 = 6 \\times 3$, donc il y a $3$ fois plus de billes.",
+        "La situation est proportionnelle : $3$ fois plus de billes, c'est $3$ fois plus de masse.",
+        "On multiplie donc la masse par $3$ : $30 \\times 3 = 90$ g."
+      ],
+      "reponse": "$18$ billes pèsent $90$ g."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "retour-a-l-unite",
+      "enonce": "Un lot de $8$ cahiers identiques coûte $12$ €. Combien coûtent $5$ de ces cahiers ?",
+      "corrige": [
+        "Ici $5$ n'est ni le double, ni la moitié de $8$ : le retour à l'unité est la procédure la plus sûre. On cherche d'abord le prix d'**un** cahier.",
+        "Prix de $1$ cahier : $12 \\div 8 = 1{,}50$ €.",
+        "On multiplie ensuite par le nombre de cahiers voulu : $1{,}50 \\times 5 = 7{,}50$ €."
+      ],
+      "reponse": "$5$ cahiers coûtent $7{,}50$ €."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "echelles",
+      "enonce": "Sur le plan d'un jardin, $1$ cm représente $200$ cm en réalité (soit $2$ m). Une allée mesure $7$ cm sur le plan. Quelle est sa longueur réelle ? Donne le résultat en cm, puis en m.",
+      "corrige": [
+        "Le plan et la réalité sont proportionnels : pour passer du plan à la réalité, on multiplie toujours par le même nombre, ici $200$.",
+        "Longueur réelle : $7 \\times 200 = 1400$ cm. On garde l'unité : c'est bien $1400$ cm et pas $1400$ m.",
+        "On convertit en mètres : $100$ cm $= 1$ m, donc $1400$ cm $= 1400 \\div 100 = 14$ m."
+      ],
+      "reponse": "L'allée mesure $1400$ cm, c'est-à-dire $14$ m."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "reconnaitre",
+      "enonce": "Une société de location de vélos demande $4$ € d'inscription, puis $3$ € par heure de location. Le prix payé est-il proportionnel à la durée de location ? Pour répondre, calcule le prix pour $1$ h, pour $2$ h et pour $4$ h, puis conclus.",
+      "corrige": [
+        "Prix pour $1$ h : $4 + 3 = 7$ €.",
+        "Prix pour $2$ h : $4 + 3 \\times 2 = 4 + 6 = 10$ €.",
+        "Prix pour $4$ h : $4 + 3 \\times 4 = 4 + 12 = 16$ €.",
+        "Si la situation était proportionnelle, doubler la durée devrait doubler le prix. Or $2$ h, c'est le double de $1$ h, mais $10$ € n'est pas le double de $7$ € (le double serait $14$ €).",
+        "C'est le « $4$ € d'inscription » fixe, payé une seule fois au départ, qui casse la proportionnalité."
+      ],
+      "reponse": "Non, ce n'est pas proportionnel : le montant fixe de $4$ € au départ empêche le prix d'être multiplié par le même nombre que la durée."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "linearite-additive",
+      "enonce": "Pour $6$ personnes, une recette de soupe demande $900$ g de légumes. Recopie et complète le tableau pour $3$, $12$ et $8$ personnes, en choisissant à chaque fois la procédure la plus simple.\n\n| Nombre de personnes | $6$ | $3$ | $12$ | $8$ |\n|---|---|---|---|---|\n| Légumes (g) | $900$ | ? | ? | ? |",
+      "corrige": [
+        "Pour $3$ personnes : $3$ est la moitié de $6$, donc on prend la moitié des légumes. $900 \\div 2 = 450$ g.",
+        "Pour $12$ personnes : $12 = 6 \\times 2$, donc on multiplie par $2$. $900 \\times 2 = 1800$ g.",
+        "Pour $8$ personnes : on utilise l'addition, $8 = 6 + 2$. Il faut d'abord la quantité pour $2$ personnes.",
+        "Quantité pour $2$ personnes : soit on prend le tiers de $6$ personnes ($900 \\div 3 = 300$ g), soit on passe par $1$ personne ($900 \\div 6 = 150$ g par personne, puis $150 \\times 2 = 300$ g). On trouve $300$ g.",
+        "Donc pour $8$ personnes : $900 + 300 = 1200$ g."
+      ],
+      "reponse": "$3$ personnes $\\rightarrow 450$ g ; $12$ personnes $\\rightarrow 1800$ g ; $8$ personnes $\\rightarrow 1200$ g."
+    }
+  ]
+}

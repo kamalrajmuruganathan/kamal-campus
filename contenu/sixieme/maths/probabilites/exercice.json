@@ -1,0 +1,89 @@
+{
+  "id": "6e-math-probabilites-exos",
+  "chapitre": "6e-math-probabilites",
+  "titre": "Exercices — Premières probabilités",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "vocabulaire",
+      "enonce": "On tourne une roue partagée en $8$ secteurs identiques numérotés de $1$ à $8$. a) Cette expérience est-elle aléatoire ? b) Donne une issue possible. c) L'événement « obtenir un nombre pair » regroupe combien d'issues, et lesquelles ?",
+      "corrige": [
+        "a) On connaît tous les résultats possibles ($1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$) mais on ne sait pas lequel va sortir : c'est bien une **expérience aléatoire**.",
+        "b) Une **issue** est un seul résultat possible : par exemple « obtenir $5$ » (n'importe quel nombre de $1$ à $8$ convient).",
+        "c) Les nombres pairs entre $1$ et $8$ sont $2$, $4$, $6$ et $8$ : l'**événement** « obtenir un nombre pair » regroupe $4$ issues."
+      ],
+      "reponse": "a) oui, c'est une expérience aléatoire ; b) une issue : par exemple $5$ ; c) l'événement « pair » regroupe $4$ issues : $2$, $4$, $6$, $8$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "certain-impossible-possible",
+      "enonce": "Avec un dé à six faces (numérotées de $1$ à $6$), indique pour chaque événement s'il est **certain**, **impossible** ou **possible** : a) « obtenir $5$ » ; b) « obtenir $0$ » ; c) « obtenir un nombre plus petit que $10$ ».",
+      "corrige": [
+        "a) Le $5$ est bien sur le dé, mais il ne sort pas à chaque lancer : parfois oui, parfois non. L'événement est **possible**.",
+        "b) Le $0$ n'existe pas sur un dé numéroté de $1$ à $6$ : il ne peut jamais sortir. L'événement est **impossible**.",
+        "c) Tous les nombres du dé ($1$, $2$, $3$, $4$, $5$, $6$) sont plus petits que $10$ : l'événement se produit à coup sûr. Il est **certain**."
+      ],
+      "reponse": "a) possible ; b) impossible ; c) certain."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "ecriture-nombre",
+      "enonce": "Un sac contient $4$ boules jaunes, $1$ boule noire et $5$ boules blanches, toutes identiques au toucher. On tire une boule au hasard. a) Combien de chances sur combien a-t-on de tirer une boule **jaune** ? b) Écris cette probabilité sous forme de fraction, de nombre décimal, puis de pourcentage.",
+      "corrige": [
+        "On compte d'abord **toutes** les boules pour le total : $4 + 1 + 5 = 10$ boules. Elles sont identiques au toucher, donc il y a équiprobabilité.",
+        "a) Les boules jaunes sont au nombre de $4$. On a donc **$4$ chances sur $10$**.",
+        "b) « $4$ chances sur $10$ » s'écrit le nombre $\\dfrac{4}{10}$, que l'on peut simplifier en $\\dfrac{2}{5}$.",
+        "En décimal : $4 \\div 10 = 0{,}4$. En pourcentage : $0{,}4 = 40\\ \\%$."
+      ],
+      "reponse": "$4$ chances sur $10$, soit $\\dfrac{4}{10} = \\dfrac{2}{5} = 0{,}4 = 40\\ \\%$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "chances",
+      "enonce": "Dans un chapeau, on place les prénoms de $7$ filles et $5$ garçons, écrits sur des papiers identiques. On tire un prénom au hasard. a) Quelle est la probabilité de tirer un **garçon** (sous forme de fraction) ? b) Est-il plus probable de tirer une fille ou un garçon ? Explique.",
+      "corrige": [
+        "On compte le total de papiers : $7 + 5 = 12$ prénoms, tous avec la même chance d'être tirés.",
+        "a) Il y a $5$ garçons, donc la probabilité de tirer un garçon est $\\dfrac{5}{12}$.",
+        "b) La probabilité de tirer une fille est $\\dfrac{7}{12}$. Les deux fractions ont le même dénominateur $12$ : on compare les numérateurs. Comme $7 > 5$, on a $\\dfrac{7}{12} > \\dfrac{5}{12}$.",
+        "Il est donc plus probable de tirer une fille qu'un garçon."
+      ],
+      "reponse": "a) $\\dfrac{5}{12}$ ; b) il est plus probable de tirer une fille, car $\\dfrac{7}{12} > \\dfrac{5}{12}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "frequence",
+      "enonce": "On soupçonne une pièce d'être truquée. On la lance $200$ fois : elle tombe $150$ fois sur « pile ». a) Calcule la **fréquence** de « pile » sous forme décimale. b) Pour une pièce **équilibrée**, quelle probabilité attend-on pour « pile » ? c) Que peux-tu en conclure sur cette pièce ?",
+      "corrige": [
+        "a) La fréquence se constate après coup : c'est le nombre de « pile » divisé par le nombre de lancers, soit $\\dfrac{150}{200} = 0{,}75$.",
+        "b) Pour une pièce équilibrée, « pile » et « face » ont la même chance (équiprobabilité) : la probabilité de « pile » est $\\dfrac{1}{2} = 0{,}5$. Cette probabilité se calcule à l'avance.",
+        "c) Sur un grand nombre de lancers ($200$), la fréquence devrait se **rapprocher** de $0{,}5$. Ici elle vaut $0{,}75$, bien plus grande : l'écart est trop important pour être dû au hasard. La pièce paraît **truquée**, elle favorise « pile »."
+      ],
+      "reponse": "a) fréquence $= 0{,}75$ ; b) on attend $0{,}5$ ; c) sur $200$ lancers, un tel écart montre que la pièce semble truquée."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "total",
+      "enonce": "Un sac contient $3$ boules rouges et $2$ boules vertes, identiques au toucher. a) Quelle est la probabilité de tirer une **rouge** ? b) On veut que « tirer une rouge » devienne exactement « $1$ chance sur $2$ ». Combien de boules **vertes** faut-il ajouter dans le sac pour y arriver (sans toucher aux rouges) ?",
+      "corrige": [
+        "a) Total de boules : $3 + 2 = 5$. Il y a $3$ rouges, donc la probabilité de tirer une rouge est $\\dfrac{3}{5}$.",
+        "b) « $1$ chance sur $2$ » signifie que la moitié des boules doivent être rouges. On garde les $3$ rouges, il faut donc que le total soit $6$ boules, car $\\dfrac{3}{6} = \\dfrac{1}{2}$.",
+        "Le sac contient déjà $5$ boules. Il faut donc ajouter $6 - 5 = 1$ boule verte.",
+        "Vérification : on aurait alors $3$ rouges et $3$ vertes, soit $6$ boules en tout, et $\\dfrac{3}{6} = \\dfrac{1}{2}$ = « $1$ chance sur $2$ ». ✓"
+      ],
+      "reponse": "a) $\\dfrac{3}{5}$ ; b) il faut ajouter $1$ boule verte (le sac aura alors $3$ rouges sur $6$ boules)."
+    }
+  ]
+}

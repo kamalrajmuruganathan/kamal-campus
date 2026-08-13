@@ -1,0 +1,87 @@
+{
+  "id": "6e-math-gestion-donnees-exos",
+  "chapitre": "6e-math-gestion-donnees",
+  "titre": "Exercices — Organisation et gestion de données",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "tableau-simple",
+      "enonce": "Un refuge pour animaux a rangé ses pensionnaires dans un tableau simple.\n\n| Animal | Nombre |\n|---|---|\n| Chiens | 15 |\n| Chats | 22 |\n| Lapins | 6 |\n| Oiseaux | 9 |\n\n1. Combien de chats le refuge héberge-t-il ?\n2. Quel est l'animal le plus nombreux ?",
+      "corrige": [
+        "Pour lire une valeur, je repère d'abord la ligne de la catégorie, puis je lis le nombre écrit en face. Ligne « Chats » → $22$.",
+        "L'animal le plus nombreux est celui dont le nombre est le plus grand : je compare $15$, $22$, $6$ et $9$. Le plus grand est $22$.",
+        "Ce $22$ correspond à la ligne « Chats » : c'est donc le chat qui est le plus nombreux."
+      ],
+      "reponse": "Il y a $22$ chats ; l'animal le plus nombreux est le chat."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "diagramme-barres",
+      "enonce": "Un diagramme en barres indique le nombre de livres empruntés à la bibliothèque du collège par chaque niveau. Voici la hauteur lue sur l'axe gradué pour chaque barre.\n\n| Niveau | Hauteur de la barre (nombre de livres) |\n|---|---|\n| 6e | 40 |\n| 5e | 35 |\n| 4e | 25 |\n| 3e | 30 |\n\n1. Combien de livres les élèves de 4e ont-ils empruntés ?\n2. Quel niveau a emprunté le plus de livres ?",
+      "corrige": [
+        "Dans un diagramme en barres, on lit la valeur d'une catégorie en regardant la hauteur de sa barre sur l'axe gradué. Barre « 4e » → $25$ livres.",
+        "Le niveau qui a le plus emprunté correspond à la barre la plus haute : je compare les hauteurs $40$, $35$, $25$ et $30$. La plus grande est $40$.",
+        "Cette hauteur $40$ est celle de la barre « 6e » : ce sont donc les 6e qui ont le plus emprunté."
+      ],
+      "reponse": "Les 4e ont emprunté $25$ livres ; les 6e ont le plus emprunté, avec $40$ livres."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "tableau-double-entree",
+      "enonce": "Un tableau à double entrée donne le moyen de transport des élèves d'une classe, réparti entre garçons et filles.\n\n| | Garçons | Filles |\n|---|---|---|\n| **À pied** | 7 | 10 |\n| **En bus** | 5 | 4 |\n| **En vélo** | 6 | 3 |\n\n1. Combien de filles viennent à pied ?\n2. Combien d'élèves en tout viennent en bus ?",
+      "corrige": [
+        "Pour lire une case, je suis la ligne ET la colonne en même temps. Ligne « À pied », colonne « Filles » → $10$ filles.",
+        "Pour le bus, il faut réunir les garçons et les filles : je lis les deux cases de la ligne « En bus », soit $5$ (garçons) et $4$ (filles).",
+        "J'additionne ces deux cases : $5 + 4 = 9$ élèves viennent en bus."
+      ],
+      "reponse": "$10$ filles viennent à pied ; $9$ élèves en tout viennent en bus."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "calcul-donnees",
+      "enonce": "Une école compte $60$ élèves. Le tableau donne la part des élèves qui déjeunent à la cantine selon le jour.\n\n| Jour | Part des élèves à la cantine |\n|---|---|\n| Lundi | $25\\,\\%$ |\n| Mardi | $40\\,\\%$ |\n\n1. Combien d'élèves déjeunent à la cantine le lundi ?\n2. Combien y a-t-il d'élèves de plus à la cantine le mardi que le lundi ?",
+      "corrige": [
+        "Un pourcentage s'applique au total. Le lundi : $25\\,\\%$ de $60$, c'est-à-dire $60 \\times \\dfrac{25}{100} = 15$. On peut aussi voir que $25\\,\\%$ est le quart : $60 \\div 4 = 15$ élèves.",
+        "Le mardi : $40\\,\\%$ de $60$, c'est-à-dire $60 \\times \\dfrac{40}{100} = 24$ élèves.",
+        "Pour comparer les deux jours, je calcule la différence : $24 - 15 = 9$ élèves de plus le mardi."
+      ],
+      "reponse": "$15$ élèves le lundi ; $9$ élèves de plus le mardi (soit $24$ au total)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "filtrer",
+      "enonce": "Voici le tableau d'inscription au club de robotique.\n\n| Prénom | Âge | Classe |\n|---|---|---|\n| Léa | 10 | 6e |\n| Tom | 12 | 5e |\n| Nour | 11 | 6e |\n| Sami | 13 | 4e |\n| Éva | 12 | 5e |\n| Malo | 10 | 6e |\n\nLe club veut former un groupe réservé aux élèves de **plus de $11$ ans** (âge strictement supérieur à $11$).\n\n1. Quels élèves sont retenus ?\n2. Combien sont-ils ?\n3. Quelle fraction de tout le club cela représente-t-il ?",
+      "corrige": [
+        "Filtrer, c'est ne garder que les lignes qui respectent le critère « âge $> 11$ ». Je parcours chaque ligne : Léa $10$ → non ; Tom $12$ → oui ; Nour $11$ → non (car $11$ n'est pas strictement supérieur à $11$) ; Sami $13$ → oui ; Éva $12$ → oui ; Malo $10$ → non.",
+        "Les élèves retenus sont donc Tom, Sami et Éva, ce qui fait $3$ élèves.",
+        "Le club compte $6$ élèves en tout (les $6$ lignes du tableau). La part retenue est $3$ sur $6$, soit $\\dfrac{3}{6} = \\dfrac{1}{2}$ : la moitié du club."
+      ],
+      "reponse": "Tom, Sami et Éva sont retenus ; ils sont $3$, soit la moitié du club ($\\dfrac{1}{2}$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "courbe",
+      "enonce": "On a relevé la température (en °C) d'une ville, heure par heure, pour tracer une courbe.\n\n| Heure | 8 h | 10 h | 12 h | 14 h | 16 h | 18 h |\n|---|---|---|---|---|---|---|\n| Température (°C) | 12 | 16 | 20 | 23 | 21 | 17 |\n\n1. À quelle heure fait-il le plus chaud ?\n2. Entre 14 h et 18 h, la courbe monte-t-elle ou descend-elle ? Que signifie ce sens ?\n3. De combien la température a-t-elle augmenté entre 8 h et 14 h ?\n4. Pourquoi une courbe est-elle mieux adaptée qu'un diagramme circulaire pour ces relevés ?",
+      "corrige": [
+        "Je cherche la plus grande valeur du tableau : parmi $12$, $16$, $20$, $23$, $21$ et $17$, la plus grande est $23$, relevée à $14$ h. C'est donc à $14$ h qu'il fait le plus chaud.",
+        "De $14$ h à $18$ h, les valeurs passent de $23$ à $21$ puis à $17$ : elles diminuent, donc la courbe descend. Une courbe qui descend signifie que la grandeur mesurée baisse : ici, la température refroidit.",
+        "Entre $8$ h et $14$ h, la température passe de $12$ à $23$. L'augmentation est la différence : $23 - 12 = 11$. La température a augmenté de $11$ °C.",
+        "Ces relevés montrent une évolution dans le temps (heure par heure) : c'est justement le rôle de la courbe. Un diagramme circulaire montre des proportions à un instant donné, il ne montrerait pas comment la température change au fil des heures."
+      ],
+      "reponse": "Le plus chaud à $14$ h ($23$ °C) ; entre $14$ h et $18$ h la courbe descend (il refroidit) ; $+11$ °C entre $8$ h et $14$ h ; la courbe convient car elle montre une évolution dans le temps."
+    }
+  ]
+}

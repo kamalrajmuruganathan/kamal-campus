@@ -1,0 +1,95 @@
+{
+  "id": "6e-math-configurations-planes-exos",
+  "chapitre": "6e-math-configurations-planes",
+  "titre": "Exercices — Géométrie : configurations planes",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "cercle-disque",
+      "enonce": "On veut tracer un cercle $\\mathcal{C}$ de centre $O$ et de rayon $r = 3{,}5$ cm. **a)** Décris précisément comment le tracer au compas. **b)** Quelle est la longueur de son diamètre ? **c)** Un point $M$ vérifie $OM = 5$ cm. Appartient-il au **disque** de centre $O$ et de rayon $3{,}5$ cm ?",
+      "corrige": [
+        "**a)** Je règle l'écartement du compas : pointe sèche sur la graduation $0$ de la règle, crayon sur la graduation $3{,}5$ ; l'écartement vaut alors $3{,}5$ cm.",
+        "Je plante la pointe sèche sur le centre $O$ et je fais tourner le compas d'un tour complet : j'obtiens le cercle $\\mathcal{C}$.",
+        "**b)** Le diamètre mesure **deux fois** le rayon : $2 \\times 3{,}5 = 7$ cm.",
+        "**c)** Le disque de centre $O$ et de rayon $3{,}5$ cm est formé des points $M$ tels que $OM \\leq 3{,}5$ cm. Ici $OM = 5$ cm, et $5 > 3{,}5$ : le point $M$ est en dehors du disque, il n'y appartient pas."
+      ],
+      "reponse": "Diamètre $= 7$ cm ; $M$ n'appartient pas au disque car $OM = 5 > 3{,}5$ cm."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "angles",
+      "enonce": "**a)** Construis un angle $\\widehat{xOy}$ de mesure $65^\\circ$ : décris chaque geste avec la règle et le rapporteur. **b)** Cet angle est-il aigu, droit ou obtus ?",
+      "corrige": [
+        "**a)** Je trace à la règle une demi-droite $[Ox)$ et je marque son origine $O$.",
+        "Je pose le **centre** du rapporteur sur le sommet $O$ et je fais coïncider la demi-droite $[Ox)$ avec la graduation $0$.",
+        "Je repère la graduation $65$ sur la rangée qui part du $0$ posé sur $[Ox)$, puis je marque un point $y$ en face.",
+        "Je trace la demi-droite $[Oy)$ : l'angle $\\widehat{xOy}$ ainsi obtenu mesure $65^\\circ$.",
+        "**b)** Comme $65^\\circ$ est compris entre $0^\\circ$ et $90^\\circ$, l'angle est **aigu**."
+      ],
+      "reponse": "L'angle $\\widehat{xOy} = 65^\\circ$ est un angle aigu."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "triangle-construction",
+      "enonce": "On veut construire un triangle $ABC$ tel que $AB = 6$ cm, $AC = 4$ cm et $BC = 5$ cm. **a)** Vérifie d'abord que ce triangle est constructible. **b)** Décris précisément sa construction à la règle et au compas.",
+      "corrige": [
+        "**a)** Le plus long côté est $AB = 6$ cm. La somme des deux autres vaut $AC + BC = 4 + 5 = 9$ cm. Comme $6 < 9$, le plus long côté ne dépasse pas la somme des deux autres : le triangle est constructible.",
+        "**b)** Je trace à la règle le segment $[AB]$ de longueur $6$ cm.",
+        "J'écarte le compas de $AC = 4$ cm, je plante la pointe sèche sur $A$ et je trace un arc de cercle.",
+        "J'écarte le compas de $BC = 5$ cm, je plante la pointe sèche sur $B$ et je trace un second arc : il croise le premier au point $C$.",
+        "Je relie $C$ à $A$ et à $B$ : le triangle $ABC$ est construit."
+      ],
+      "reponse": "Triangle constructible car $6 < 4 + 5$ ; le sommet $C$ est à l'intersection des deux arcs (rayon $4$ cm depuis $A$, rayon $5$ cm depuis $B$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "symetrie-axiale",
+      "enonce": "On donne une droite $(d)$ et un point $M$ situé à $3$ cm de $(d)$. **a)** Décris la construction du symétrique $M'$ de $M$ par rapport à $(d)$. **b)** Un segment $[MN]$ mesure $7$ cm ; son symétrique par rapport à $(d)$ est le segment $[M'N']$. Combien mesure $M'N'$ ? Justifie.",
+      "corrige": [
+        "**a)** À l'équerre, je trace la perpendiculaire à $(d)$ passant par $M$.",
+        "Je mesure la distance de $M$ à la droite $(d)$ : elle vaut $3$ cm. Sur cette perpendiculaire, je reporte $3$ cm **de l'autre côté** de $(d)$ : j'obtiens le point $M'$. Ainsi $(d)$ est la médiatrice de $[MM']$.",
+        "**b)** La symétrie axiale **conserve les longueurs** : le symétrique d'un segment a la même longueur que ce segment.",
+        "Donc $M'N' = MN = 7$ cm."
+      ],
+      "reponse": "$M'$ est à $3$ cm de $(d)$, du côté opposé à $M$, sur la perpendiculaire à $(d)$ ; et $M'N' = 7$ cm car la symétrie conserve les longueurs."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "somme-angles-triangle",
+      "enonce": "Un triangle $ABC$ est isocèle en $A$ (donc $AB = AC$) et son angle au sommet vaut $\\widehat{A} = 40^\\circ$. **a)** Que peux-tu dire des angles $\\widehat{B}$ et $\\widehat{C}$ ? **b)** Calcule leur mesure. **c)** Vérifie ton résultat.",
+      "corrige": [
+        "**a)** Dans un triangle isocèle en $A$, les deux angles à la base sont égaux : $\\widehat{B} = \\widehat{C}$.",
+        "**b)** La somme des angles d'un triangle vaut $180^\\circ$ : $\\widehat{A} + \\widehat{B} + \\widehat{C} = 180^\\circ$. Comme $\\widehat{B} = \\widehat{C}$, cela donne $40 + \\widehat{B} + \\widehat{B} = 180$, c'est-à-dire $40 + 2 \\times \\widehat{B} = 180$.",
+        "Je retranche $40$ : $2 \\times \\widehat{B} = 140$, puis je divise par $2$ : $\\widehat{B} = 70^\\circ$. Donc $\\widehat{B} = \\widehat{C} = 70^\\circ$.",
+        "**c)** Contrôle de la somme : $40 + 70 + 70 = 180^\\circ$. ✓"
+      ],
+      "reponse": "$\\widehat{B} = \\widehat{C} = 70^\\circ$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "cercle-circonscrit",
+      "enonce": "Trois maisons $A$, $B$ et $C$ ne sont pas alignées. On veut placer une fontaine $F$ à **égale distance** des trois maisons. **a)** Explique pourquoi $F$ est le centre du cercle circonscrit au triangle $ABC$. **b)** Décris comment construire $F$ au compas en n'utilisant que **deux** médiatrices, et justifie que deux suffisent.",
+      "corrige": [
+        "**a)** Les points à égale distance de $A$ et de $B$ sont ceux de la médiatrice de $[AB]$ ; ceux à égale distance de $B$ et de $C$ sont ceux de la médiatrice de $[BC]$. Le point $F$, à égale distance des trois maisons, est donc à la fois sur ces deux médiatrices. Étant à la même distance de $A$, $B$ et $C$, il est le centre du cercle qui passe par les trois sommets : le cercle circonscrit au triangle $ABC$.",
+        "**b)** Je construis la médiatrice de $[AB]$ : écartement de compas plus grand que la moitié de $AB$, pointe sèche sur $A$ (deux arcs), puis sur $B$ sans changer l'écartement (deux arcs) ; je trace la droite passant par les deux points d'intersection des arcs.",
+        "Je construis de la même manière la médiatrice de $[BC]$.",
+        "Le point $F$ est l'intersection de ces deux médiatrices.",
+        "Deux médiatrices suffisent : $F$ est sur la médiatrice de $[AB]$ donc $FA = FB$, et sur celle de $[BC]$ donc $FB = FC$ ; par conséquent $FA = FB = FC$. La troisième médiatrice (celle de $[AC]$) passe alors automatiquement par $F$, car les trois médiatrices d'un triangle sont concourantes."
+      ],
+      "reponse": "$F$ est le centre du cercle circonscrit : il se trouve à l'intersection des médiatrices de $[AB]$ et de $[BC]$, et vérifie $FA = FB = FC$."
+    }
+  ]
+}

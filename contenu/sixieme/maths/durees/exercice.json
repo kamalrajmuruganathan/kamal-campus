@@ -1,0 +1,89 @@
+{
+  "id": "6e-math-durees-exos",
+  "chapitre": "6e-math-durees",
+  "titre": "Exercices — Durées et repérage dans le temps",
+  "voie": "college",
+  "niveau": "sixieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "conversion",
+      "enonce": "Convertis $150$ secondes en minutes et secondes.",
+      "corrige": [
+        "On passe d'une petite unité (les secondes) à une plus grande (les minutes) : on cherche combien de paquets de $60$ tiennent dans $150$.",
+        "$150 = 2 \\times 60 + 30$ : il y a $2$ paquets de $60$ secondes, et il reste $30$ secondes.",
+        "Chaque paquet de $60$ secondes fait $1$ minute, donc $150$ s $= 2$ min $30$ s."
+      ],
+      "reponse": "$150$ s $= 2$ min $30$ s."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "fractions-heure",
+      "enonce": "Combien de minutes durent, mises bout à bout, une demi-heure et un quart d'heure ?",
+      "corrige": [
+        "Une demi-heure, c'est la moitié de $60$ min, soit $30$ min.",
+        "Un quart d'heure, c'est le quart de $60$ min, soit $15$ min.",
+        "On additionne les deux durées : $30 + 15 = 45$ min."
+      ],
+      "reponse": "$45$ min (c'est trois quarts d'heure)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "calcul-horaire",
+      "enonce": "Un entraînement de basket commence à $17$ h $35$ et dure $40$ minutes. À quelle heure se termine-t-il ?",
+      "corrige": [
+        "Pour trouver l'heure d'arrivée, on ajoute la durée à l'heure de départ.",
+        "J'ajoute les minutes : $35 + 40 = 75$ min.",
+        "$75$ minutes, c'est trop pour rester en minutes : $75 = 60 + 15$, soit $1$ h $15$ min (retenue de $60$).",
+        "Je reporte cette heure : $17$ h $+ 1$ h $= 18$ h, et il reste $15$ min. L'entraînement finit à $18$ h $15$."
+      ],
+      "reponse": "$18$ h $15$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "piege-decimal",
+      "enonce": "Un trajet en voiture dure $2,5$ heures. Écris cette durée en heures et minutes, puis en minutes.",
+      "corrige": [
+        "Attention au piège : $2,5$ h ne se lit pas « $2$ h $50$ ». La virgule veut dire « deux heures et demie ».",
+        "Une demi-heure vaut $30$ min, donc $2,5$ h $= 2$ h $+ 30$ min $= 2$ h $30$ min.",
+        "En minutes : $2$ h $= 2 \\times 60 = 120$ min, puis $120 + 30 = 150$ min."
+      ],
+      "reponse": "$2,5$ h $= 2$ h $30$ min $= 150$ min."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "probleme",
+      "enonce": "Tom quitte la maison à $8$ h $35$. Il prend le bus pendant $25$ min, attend $10$ min à la gare, puis voyage $1$ h $20$ min en train. À quelle heure arrive-t-il ?",
+      "corrige": [
+        "On traite les étapes une par une, dans l'ordre du temps.",
+        "Le bus : $8$ h $35 + 25$ min. $35 + 25 = 60$ min $= 1$ h, donc on arrive à $8$ h $+ 1$ h $= 9$ h $00$ (retenue de $60$).",
+        "L'attente : $9$ h $00 + 10$ min $= 9$ h $10$.",
+        "Le train : $9$ h $10 + 1$ h $20$ min. J'ajoute les heures : $9$ h $+ 1$ h $= 10$ h ; puis les minutes : $10 + 20 = 30$ min. On arrive à $10$ h $30$."
+      ],
+      "reponse": "Tom arrive à $10$ h $30$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "calcul-duree",
+      "enonce": "Le film A est projeté de $14$ h $20$ à $16$ h $05$. Le film B est projeté de $15$ h $40$ à $17$ h $35$. Quel film est le plus long, et de combien de minutes ?",
+      "corrige": [
+        "Durée du film A : de $14$ h $20$ à $16$ h $20$, il s'écoule $2$ h. Mais on s'arrête à $16$ h $05$, soit $15$ min avant $16$ h $20$. Durée $= 2$ h $- 15$ min $= 1$ h $45$ min.",
+        "Durée du film B : de $15$ h $40$ à $17$ h $40$, il s'écoule $2$ h. Mais on s'arrête à $17$ h $35$, soit $5$ min avant $17$ h $40$. Durée $= 2$ h $- 5$ min $= 1$ h $55$ min.",
+        "On compare : $1$ h $55$ min $> 1$ h $45$ min, donc le film B est le plus long.",
+        "L'écart : les deux durées ont la même partie « $1$ h », donc on compare les minutes : $55 - 45 = 10$ min."
+      ],
+      "reponse": "Le film B est le plus long, de $10$ minutes."
+    }
+  ]
+}
