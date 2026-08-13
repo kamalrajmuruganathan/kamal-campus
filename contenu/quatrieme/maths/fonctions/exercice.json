@@ -1,0 +1,91 @@
+{
+  "id": "4e-math-fonctions-exos",
+  "chapitre": "4e-math-fonctions",
+  "titre": "Exercices — Fonctions : programmes de calcul et dépendance",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "programme-de-calcul",
+      "enonce": "Programme : « Choisis un nombre. Ajoute $7$. Multiplie par $2$. » Que renvoie ce programme pour le nombre $6$ ? Et pour le nombre $-5$ ?",
+      "corrige": [
+        "On exécute les étapes dans l'ordre écrit : chaque étape travaille sur le résultat de la précédente, jamais sur le nombre de départ.",
+        "Pour $6$ : $6 + 7 = 13$, puis $13 \\times 2 = 26$.",
+        "Pour $-5$ : $-5 + 7 = 2$, puis $2 \\times 2 = 4$."
+      ],
+      "reponse": "Le programme renvoie $26$ pour $6$, et $4$ pour $-5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "programme-de-calcul-variable",
+      "enonce": "Applique le programme suivant au nombre $x$, puis réduis l'expression obtenue : « Choisis un nombre. Multiplie-le par $5$. Soustrais $2$. »",
+      "corrige": [
+        "On note $x$ le nombre choisi et on écrit le résultat de chaque étape, l'un sous l'autre.",
+        "Multiplier par $5$ : on obtient $5x$.",
+        "Soustraire $2$ : on obtient $5x - 2$.",
+        "Contrôle avec $x = 3$ : le programme donne $3 \\times 5 = 15$ puis $15 - 2 = 13$, et $5 \\times 3 - 2 = 13$ ✓."
+      ],
+      "reponse": "$5x - 2$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "remonter-programme",
+      "enonce": "Programme : « Choisis un nombre. Soustrais $4$. Multiplie par $3$. » Ce programme renvoie $27$. Retrouve le nombre de départ.",
+      "corrige": [
+        "Pour remonter, on part de la dernière étape et on remplace chaque opération par son opération inverse.",
+        "Dernière étape « multiplier par $3$ » : on divise. $27 \\div 3 = 9$.",
+        "Étape précédente « soustraire $4$ » : on ajoute. $9 + 4 = 13$.",
+        "Vérification en refaisant le programme à l'endroit : $13 - 4 = 9$, puis $9 \\times 3 = 27$ ✓."
+      ],
+      "reponse": "Le nombre de départ était $13$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "formule-litterale",
+      "enonce": "Un club de sport facture $30$ € d'inscription, puis $4$ € par cours suivi. On note $n$ le nombre de cours et $C$ le coût en euros.\n1. Écris une formule donnant $C(n)$.\n2. Calcule le coût pour $12$ cours.\n3. Un adhérent a payé $74$ €. Combien de cours a-t-il suivis ?",
+      "corrige": [
+        "Ce qui est fixe ($30$ €) s'ajoute une seule fois ; ce qui varie ($4$ € par cours) se multiplie par le nombre de cours : $C(n) = 30 + 4n$.",
+        "Pour $12$ cours : $C(12) = 30 + 4 \\times 12 = 30 + 48 = 78$ € (on multiplie avant d'ajouter).",
+        "Pour retrouver le nombre de cours quand $C(n) = 74$, on remonte le calcul : $74 - 30 = 44$, puis $44 \\div 4 = 11$.",
+        "Vérification : $C(11) = 30 + 4 \\times 11 = 30 + 44 = 74$ ✓."
+      ],
+      "reponse": "$C(n) = 30 + 4n$ ; $C(12) = 78$ € ; un coût de $74$ € correspond à $11$ cours."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "pieges-de-calcul",
+      "enonce": "Programme 1 : « Choisis un nombre. Ajoute $4$. Multiplie par $3$. » Programme 2 : « Choisis un nombre. Multiplie par $3$. Ajoute $12$. » Ces deux programmes donnent-ils toujours le même résultat ? Justifie ta réponse.",
+      "corrige": [
+        "Un seul essai ne prouverait rien : pour comparer les programmes sur tous les nombres, on les applique à une variable $x$ et on réduit chaque expression.",
+        "Programme 1 : après « ajoute $4$ » on a $x + 4$, qu'on multiplie en entier par $3$ : $3 \\times (x + 4) = 3x + 12$.",
+        "Programme 2 : $x \\times 3 = 3x$, puis on ajoute $12$ : $3x + 12$.",
+        "Les deux expressions réduites sont égales à $3x + 12$ : les programmes donnent donc le même résultat pour tous les nombres."
+      ],
+      "reponse": "Oui : les deux programmes se réduisent à $3x + 12$, ils sont identiques pour n'importe quel nombre."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "graphique",
+      "enonce": "Un taxi facture $3$ € de prise en charge, puis $2$ € par kilomètre parcouru. On note $d$ la distance en kilomètres et $P$ le prix en euros.\n1. Écris la formule donnant $P(d)$.\n2. Construis le tableau de valeurs pour $d = 0, 1, 2, 3, 4$.\n3. Sur un graphique, les points obtenus sont-ils alignés ? La représentation passe-t-elle par l'origine ? Doit-on relier les points ?",
+      "corrige": [
+        "Ce qui est fixe ($3$ €) s'ajoute une seule fois, ce qui varie ($2$ € par km) se multiplie par $d$ : $P(d) = 3 + 2d$.",
+        "Tableau de valeurs : $P(0) = 3$, $P(1) = 5$, $P(2) = 7$, $P(3) = 9$, $P(4) = 11$.",
+        "D'une colonne à l'autre le prix augmente toujours de $2$ : les points sont alignés. Mais $P(0) = 3$ (et non $0$), donc la représentation ne passe pas par l'origine.",
+        "Une distance de $2{,}5$ km a un sens : les valeurs intermédiaires existent, on relie donc les points. On n'oublie pas de nommer les axes (horizontal : distance en km ; vertical : prix en €)."
+      ],
+      "reponse": "$P(d) = 3 + 2d$ ; les points sont alignés mais ne passent pas par l'origine ; on relie les points."
+    }
+  ]
+}

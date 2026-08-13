@@ -1,0 +1,92 @@
+{
+  "id": "4e-math-operations-nombres-relatifs-exos",
+  "chapitre": "4e-math-operations-nombres-relatifs",
+  "titre": "Exercices — Opérations sur les nombres relatifs",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "regle-des-signes",
+      "enonce": "Calcule chaque produit en appliquant la méthode en deux temps : d'abord le **signe**, puis les **valeurs absolues**.\n\na) $(-8) \\times 3$\nb) $5 \\times (-7)$\nc) $(-6) \\times (-9)$",
+      "corrige": [
+        "**a)** $(-8) \\times 3$ : les signes sont contraires, donc le résultat est négatif ; ensuite $8 \\times 3 = 24$. D'où $(-8) \\times 3 = -24$.",
+        "**b)** $5 \\times (-7)$ : signes contraires, résultat négatif ; $5 \\times 7 = 35$. D'où $5 \\times (-7) = -35$.",
+        "**c)** $(-6) \\times (-9)$ : les signes sont identiques, donc le résultat est positif ; $6 \\times 9 = 54$. D'où $(-6) \\times (-9) = +54$."
+      ],
+      "reponse": "a) $-24$ · b) $-35$ · c) $+54$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "division-relatifs",
+      "enonce": "Calcule chaque quotient. La division suit la **même règle des signes** que la multiplication : le signe d'abord, les valeurs absolues ensuite.\n\na) $(-72) \\div 8$\nb) $63 \\div (-9)$\nc) $(-48) \\div (-6)$",
+      "corrige": [
+        "**a)** $(-72) \\div 8$ : signes contraires, donc quotient négatif ; $72 \\div 8 = 9$. D'où $(-72) \\div 8 = -9$.",
+        "**b)** $63 \\div (-9)$ : signes contraires, quotient négatif ; $63 \\div 9 = 7$. D'où $63 \\div (-9) = -7$.",
+        "**c)** $(-48) \\div (-6)$ : signes identiques, donc quotient positif ; $48 \\div 6 = 8$. D'où $(-48) \\div (-6) = +8$."
+      ],
+      "reponse": "a) $-9$ · b) $-7$ · c) $+8$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "produit-plusieurs-facteurs",
+      "enonce": "Calcule $(-2) \\times 3 \\times (-5) \\times (-1)$. Indique d'abord le signe du résultat en comptant les facteurs négatifs, puis vérifie par le calcul de proche en proche.",
+      "corrige": [
+        "**Signe.** Je compte les facteurs négatifs : $-2$, $-5$ et $-1$, soit **trois** facteurs négatifs. Un nombre impair de facteurs négatifs donne un produit négatif.",
+        "**Valeurs absolues.** $2 \\times 3 \\times 5 \\times 1 = 30$.",
+        "**Vérification de proche en proche.** $(-2) \\times 3 = -6$ ; puis $(-6) \\times (-5) = +30$ ; puis $(+30) \\times (-1) = -30$. On retrouve bien un résultat négatif.",
+        "Le facteur $3$ est positif : c'est bien le nombre de facteurs **négatifs** (impair ici) qui fixe le signe."
+      ],
+      "reponse": "$(-2) \\times 3 \\times (-5) \\times (-1) = -30$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "enchainement-operations",
+      "enonce": "Calcule $(-36) \\div (-4) + (-5) \\times 2$ en respectant les priorités opératoires.",
+      "corrige": [
+        "**Priorités.** La division et la multiplication passent avant l'addition. Je calcule donc les deux séparément.",
+        "$(-36) \\div (-4)$ : signes identiques, quotient positif, $36 \\div 4 = 9$. Donc $(-36) \\div (-4) = +9$.",
+        "$(-5) \\times 2$ : signes contraires, produit négatif, $5 \\times 2 = 10$. Donc $(-5) \\times 2 = -10$.",
+        "Il reste l'addition : $9 + (-10) = -1$."
+      ],
+      "reponse": "$(-36) \\div (-4) + (-5) \\times 2 = -1$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "produit-deux-negatifs",
+      "enonce": "On veut démontrer, sans l'admettre comme une règle toute faite, que $(-4) \\times (-6) = +24$. Complète le raisonnement en partant du produit $(-4) \\times \\big(6 + (-6)\\big)$.",
+      "corrige": [
+        "On part de $(-4) \\times \\big(6 + (-6)\\big)$. Comme $6 + (-6) = 0$ (somme des opposés), ce produit vaut $(-4) \\times 0 = 0$.",
+        "On développe le même produit avec la distributivité : $(-4) \\times 6 \\;+\\; (-4) \\times (-6) = 0$.",
+        "Or $(-4) \\times 6 = -24$ (un seul facteur négatif). L'égalité devient $-24 \\;+\\; (-4) \\times (-6) = 0$.",
+        "Donc $(-4) \\times (-6)$ est le nombre qui, ajouté à $-24$, donne $0$ : c'est l'opposé de $-24$, c'est-à-dire $+24$.",
+        "Ce n'est pas une convention : c'est la distributivité qui **impose** ce résultat."
+      ],
+      "reponse": "$(-4) \\times (-6) = +24$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "vocabulaire",
+      "enonce": "Écris en un seul calcul, puis effectue : « le **quotient** du **produit** de $-6$ par $4$ par la **somme** de $-5$ et de $+2$ ». Attention à l'ordre des opérations imposé par le vocabulaire.",
+      "corrige": [
+        "Le mot *produit* désigne $(-6) \\times 4$ et le mot *somme* désigne $(-5) + 2$ : chacun joue le rôle d'une parenthèse à calculer avant la division.",
+        "Le calcul s'écrit donc $\\big((-6) \\times 4\\big) \\div \\big((-5) + 2\\big)$.",
+        "Numérateur : $(-6) \\times 4$, signes contraires, produit négatif, $6 \\times 4 = 24$, soit $-24$.",
+        "Diviseur : $(-5) + 2 = -3$ (c'est une addition, pas une multiplication : le résultat reste négatif).",
+        "Il reste $(-24) \\div (-3)$ : signes identiques, quotient positif, $24 \\div 3 = 8$, soit $+8$."
+      ],
+      "reponse": "$\\big((-6) \\times 4\\big) \\div \\big((-5) + 2\\big) = +8$."
+    }
+  ]
+}

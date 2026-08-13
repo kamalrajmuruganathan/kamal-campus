@@ -1,0 +1,92 @@
+{
+  "id": "4e-math-puissances-exos",
+  "chapitre": "4e-math-puissances",
+  "titre": "Exercices — Puissances d'exposant positif",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "produit-meme-base",
+      "enonce": "Écris chaque produit sous la forme d'une seule puissance.\n\n**a)** $7^4 \\times 7^3$\n\n**b)** $5 \\times 5^6$",
+      "corrige": [
+        "**a)** Les deux puissances ont la **même base** $7$ : on garde la base et on **additionne** les exposants.",
+        "$7^4 \\times 7^3 = 7^{4+3} = 7^7$.",
+        "**b)** Un nombre seul est une puissance d'exposant $1$ : $5 = 5^1$.",
+        "Même base $5$, on additionne les exposants : $5^1 \\times 5^6 = 5^{1+6} = 5^7$."
+      ],
+      "reponse": "**a)** $7^7$  **b)** $5^7$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "puissances-de-10",
+      "enonce": "**a)** Donne la valeur de $10^5$.\n\n**b)** Écris $7\\,200$ sous la forme $a \\times 10^n$, où $a$ est un nombre décimal et $n$ un entier.",
+      "corrige": [
+        "**a)** Pour une puissance de 10, l'exposant donne le **nombre de zéros** : $10^5$ s'écrit $1$ suivi de cinq zéros.",
+        "$10^5 = 100\\,000$.",
+        "**b)** On part du chiffre significatif $7{,}2$ et on cherche par combien de rangs décaler la virgule pour retrouver $7\\,200$ : trois rangs vers la droite, donc un facteur $10^3$.",
+        "$7\\,200 = 7{,}2 \\times 10^3$. Contrôle : $7{,}2 \\times 1\\,000 = 7\\,200$."
+      ],
+      "reponse": "**a)** $10^5 = 100\\,000$  **b)** $7\\,200 = 7{,}2 \\times 10^3$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "produit-meme-exposant",
+      "enonce": "Calcule $2^5 \\times 5^5$ en utilisant une règle du cours, puis donne sa valeur.",
+      "corrige": [
+        "Les deux puissances ont ici le **même exposant** $5$, mais des bases différentes : on garde l'exposant et on **multiplie les bases**.",
+        "$2^5 \\times 5^5 = (2 \\times 5)^5 = 10^5$.",
+        "Enfin, $10^5 = 100\\,000$ ($1$ suivi de cinq zéros).",
+        "C'est bien plus rapide que de calculer $32 \\times 3\\,125$ séparément."
+      ],
+      "reponse": "$2^5 \\times 5^5 = 10^5 = 100\\,000$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "problemes",
+      "enonce": "Calcule $200 \\times 3\\,000$ en passant par les puissances de 10, sans poser la multiplication.",
+      "corrige": [
+        "On sépare chaque nombre en un chiffre simple et une puissance de 10 : $200 = 2 \\times 10^2$ et $3\\,000 = 3 \\times 10^3$.",
+        "On regroupe les nombres simples d'un côté et les puissances de 10 de l'autre : $(2 \\times 3) \\times (10^2 \\times 10^3)$.",
+        "Sur les puissances de 10, même base, on additionne les exposants : $10^2 \\times 10^3 = 10^5$.",
+        "Il reste $6 \\times 10^5 = 600\\,000$."
+      ],
+      "reponse": "$200 \\times 3\\,000 = 6 \\times 10^5 = 600\\,000$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "problemes",
+      "enonce": "Une culture contient $20$ bactéries. Leur nombre est **multiplié par $3$** chaque heure. Combien de bactéries la culture contient-elle au bout de $4$ heures ?",
+      "corrige": [
+        "Multiplier par $3$ à chaque heure pendant $4$ heures, c'est multiplier $4$ fois de suite par $3$, soit multiplier par $3^4$.",
+        "On calcule cette puissance : $3^4 = 3 \\times 3 \\times 3 \\times 3 = 81$.",
+        "On applique ce facteur à l'effectif de départ : $20 \\times 3^4 = 20 \\times 81$.",
+        "$20 \\times 81 = 1\\,620$ bactéries. (Une répétition de produits donne une **puissance**, et non un simple produit par $4$ ou par $12$.)"
+      ],
+      "reponse": "$20 \\times 3^4 = 1\\,620$ bactéries."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "produit-meme-base",
+      "enonce": "On considère le produit $2^3 \\times 5^3 \\times 10^2$.\n\n**a)** Écris-le sous la forme d'une seule puissance de 10.\n\n**b)** Donne alors sa valeur.",
+      "corrige": [
+        "**a)** On commence par $2^3 \\times 5^3$ : même exposant $3$, on multiplie les bases, $(2 \\times 5)^3 = 10^3$.",
+        "Le produit devient $10^3 \\times 10^2$ : cette fois même base $10$, on additionne les exposants, $10^{3+2} = 10^5$.",
+        "Donc $2^3 \\times 5^3 \\times 10^2 = 10^5$.",
+        "**b)** $10^5 = 100\\,000$ ($1$ suivi de cinq zéros)."
+      ],
+      "reponse": "**a)** $10^5$  **b)** $100\\,000$."
+    }
+  ]
+}

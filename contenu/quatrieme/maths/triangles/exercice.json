@@ -1,0 +1,91 @@
+{
+  "id": "4e-math-triangles-exos",
+  "chapitre": "4e-math-triangles",
+  "titre": "Exercices — Triangles",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "pythagore",
+      "enonce": "$\\mathrm{ABC}$ est un triangle rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 9$ cm et $\\mathrm{AC} = 12$ cm. Calcule la longueur de l'hypoténuse $\\mathrm{BC}$.",
+      "corrige": [
+        "L'angle droit est en $\\mathrm{A}$ : l'hypoténuse est le côté opposé, c'est-à-dire $[\\mathrm{BC}]$. On cherche une longueur à partir de l'angle droit, c'est donc le **théorème de Pythagore**.",
+        "D'après le théorème de Pythagore dans le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$ : $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
+        "On remplace : $\\mathrm{BC}^2 = 9^2 + 12^2 = 81 + 144 = 225$.",
+        "L'hypoténuse est seule dans la formule, on prend la racine carrée : $\\mathrm{BC} = \\sqrt{225} = 15$. Sans oublier l'unité."
+      ],
+      "reponse": "$\\mathrm{BC} = 15$ cm."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "droite-des-milieux",
+      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$ et $\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$. On sait que $\\mathrm{BC} = 11$ cm. Calcule $\\mathrm{IJ}$.",
+      "corrige": [
+        "$\\mathrm{I}$ et $\\mathrm{J}$ sont les milieux de deux côtés du triangle, $[\\mathrm{AB}]$ et $[\\mathrm{AC}]$. On peut donc utiliser le théorème de la droite des milieux sur la **longueur**.",
+        "Ce théorème dit que le segment qui joint les milieux de deux côtés mesure la moitié du troisième côté : $\\mathrm{IJ} = \\dfrac{\\mathrm{BC}}{2}$.",
+        "On remplace : $\\mathrm{IJ} = \\dfrac{11}{2} = 5{,}5$."
+      ],
+      "reponse": "$\\mathrm{IJ} = 5{,}5$ cm."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "pythagore",
+      "enonce": "$\\mathrm{ABC}$ est un triangle rectangle en $\\mathrm{B}$, avec $\\mathrm{AC} = 17$ cm et $\\mathrm{AB} = 8$ cm. Calcule la longueur $\\mathrm{BC}$.",
+      "corrige": [
+        "Attention à l'hypoténuse : l'angle droit est en $\\mathrm{B}$, donc l'hypoténuse est le côté opposé $[\\mathrm{AC}]$ (et non $[\\mathrm{BC}]$).",
+        "D'après le théorème de Pythagore dans le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{B}$ : $\\mathrm{AC}^2 = \\mathrm{AB}^2 + \\mathrm{BC}^2$.",
+        "L'inconnue $\\mathrm{BC}$ est un côté de l'angle droit : elle n'est pas seule, on **isole** son carré en soustrayant. $\\mathrm{BC}^2 = \\mathrm{AC}^2 - \\mathrm{AB}^2 = 17^2 - 8^2 = 289 - 64 = 225$.",
+        "On prend la racine carrée : $\\mathrm{BC} = \\sqrt{225} = 15$. On vérifie le bon sens : $15$ cm est bien plus court que l'hypoténuse $17$ cm."
+      ],
+      "reponse": "$\\mathrm{BC} = 15$ cm."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "reciproque",
+      "enonce": "Un triangle $\\mathrm{DEF}$ a pour côtés $\\mathrm{DE} = 5$ cm, $\\mathrm{EF} = 12$ cm et $\\mathrm{DF} = 13$ cm. Démontre que ce triangle est rectangle et précise en quel sommet.",
+      "corrige": [
+        "On connaît les trois longueurs et on cherche à prouver un angle droit : c'est la **réciproque** du théorème de Pythagore. On ne sait pas encore que l'égalité est vraie, on calcule donc les deux membres **séparément**.",
+        "Le plus grand côté est $[\\mathrm{DF}]$ ($13$ cm) : c'est lui qui jouerait le rôle de l'hypoténuse. D'un côté : $\\mathrm{DF}^2 = 13^2 = 169$.",
+        "De l'autre côté, avec les deux autres côtés : $\\mathrm{DE}^2 + \\mathrm{EF}^2 = 5^2 + 12^2 = 25 + 144 = 169$.",
+        "Les deux résultats sont égaux ($169 = 169$), donc d'après la réciproque du théorème de Pythagore le triangle est rectangle. L'angle droit est au sommet opposé au plus grand côté $[\\mathrm{DF}]$, c'est-à-dire en $\\mathrm{E}$."
+      ],
+      "reponse": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{E}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "contraposee",
+      "enonce": "Un menuisier a découpé une pièce triangulaire $\\mathrm{MNP}$ et veut vérifier qu'elle possède bien un angle droit. Il mesure $\\mathrm{MN} = 8$ cm, $\\mathrm{NP} = 9$ cm et $\\mathrm{MP} = 12$ cm. La pièce a-t-elle un angle droit ? Justifie.",
+      "corrige": [
+        "On connaît les trois longueurs et on veut savoir s'il y a un angle droit : c'est un travail sur la réciproque et sa **contraposée**. On calcule les deux membres séparément, puis on compare.",
+        "Le plus grand côté est $[\\mathrm{MP}]$ ($12$ cm) : si un angle droit existait, il serait opposé à ce côté. D'un côté : $\\mathrm{MP}^2 = 12^2 = 144$.",
+        "De l'autre côté : $\\mathrm{MN}^2 + \\mathrm{NP}^2 = 8^2 + 9^2 = 64 + 81 = 145$.",
+        "Les deux résultats sont différents ($144 \\neq 145$), donc d'après la **contraposée** du théorème de Pythagore le triangle n'est pas rectangle au sommet opposé au plus grand côté. Comme un éventuel angle droit ne pourrait être qu'à ce sommet, la pièce n'a aucun angle droit — même si les nombres sont très proches."
+      ],
+      "reponse": "Non : $144 \\neq 145$, la pièce $\\mathrm{MNP}$ n'est pas rectangle."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "droite-des-milieux",
+      "enonce": "$\\mathrm{ABC}$ est un triangle. $\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$. La parallèle à $(\\mathrm{BC})$ passant par $\\mathrm{I}$ coupe $[\\mathrm{AC}]$ en $\\mathrm{J}$. On donne $\\mathrm{AC} = 14$ cm et $\\mathrm{BC} = 10$ cm.\\n1. Démontre que $\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$, puis donne $\\mathrm{AJ}$.\\n2. Calcule ensuite $\\mathrm{IJ}$.",
+      "corrige": [
+        "1. On sait que $\\mathrm{I}$ est le milieu d'un côté ($[\\mathrm{AB}]$) et que la droite $(\\mathrm{IJ})$ est parallèle à un deuxième côté ($(\\mathrm{BC})$). C'est exactement l'hypothèse du théorème de la droite des milieux qui **prouve un milieu**.",
+        "D'après ce théorème, la droite coupe le troisième côté $[\\mathrm{AC}]$ en son milieu : $\\mathrm{J}$ est donc le milieu de $[\\mathrm{AC}]$.",
+        "Comme $\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$ : $\\mathrm{AJ} = \\dfrac{\\mathrm{AC}}{2} = \\dfrac{14}{2} = 7$ cm.",
+        "2. Maintenant $\\mathrm{I}$ et $\\mathrm{J}$ sont les milieux de deux côtés, $[\\mathrm{AB}]$ et $[\\mathrm{AC}]$. Le théorème de la droite des milieux sur la longueur donne $\\mathrm{IJ} = \\dfrac{\\mathrm{BC}}{2} = \\dfrac{10}{2} = 5$ cm."
+      ],
+      "reponse": "$\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$, $\\mathrm{AJ} = 7$ cm et $\\mathrm{IJ} = 5$ cm."
+    }
+  ]
+}

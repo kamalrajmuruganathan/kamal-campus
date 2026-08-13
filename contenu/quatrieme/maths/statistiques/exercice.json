@@ -1,0 +1,93 @@
+{
+  "id": "4e-math-statistiques-exos",
+  "chapitre": "4e-math-statistiques",
+  "titre": "Exercices — Statistiques : moyenne pondérée, médiane, étendue",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "moyenne-ponderee",
+      "enonce": "Le tableau donne le nombre de buts marqués par une équipe lors de ses $20$ derniers matchs. Calcule le nombre moyen de buts par match.\n\n| Buts marqués | $0$ | $1$ | $2$ | $3$ | $4$ |\n|---|---|---|---|---|---|\n| **Effectif** | $3$ | $6$ | $5$ | $4$ | $2$ |",
+      "corrige": [
+        "On multiplie chaque valeur par son effectif, puis on additionne : $0\\times 3 + 1\\times 6 + 2\\times 5 + 3\\times 4 + 4\\times 2 = 0 + 6 + 10 + 12 + 8 = 36$.",
+        "L'effectif total est donné : $3 + 6 + 5 + 4 + 2 = 20$ matchs.",
+        "$\\text{moyenne} = \\dfrac{36}{20} = 1{,}8$ but par match.",
+        "Contrôle : $1{,}8$ est bien compris entre la plus petite valeur ($0$) et la plus grande ($4$)."
+      ],
+      "reponse": "$1{,}8$ but par match."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "mediane",
+      "enonce": "On a relevé la taille (en cm) de $7$ élèves : $152$ ; $148$ ; $160$ ; $155$ ; $149$ ; $158$ ; $151$. Détermine la médiane de cette série.",
+      "corrige": [
+        "On range d'abord les valeurs dans l'ordre croissant : $148$ ; $149$ ; $151$ ; $152$ ; $155$ ; $158$ ; $160$.",
+        "L'effectif est impair ($n = 7$) : la médiane est la valeur du milieu, de rang $\\dfrac{n+1}{2} = \\dfrac{7+1}{2} = 4$.",
+        "La $4^{\\text{e}}$ valeur est $152$ : il y a $3$ tailles en dessous et $3$ au-dessus.",
+        "La médiane vaut donc $152$ cm."
+      ],
+      "reponse": "Médiane $= 152$ cm."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "moyenne-ponderee",
+      "enonce": "Voici les résultats bruts d'un lancer de dé répété $8$ fois : $6$ ; $8$ ; $6$ ; $10$ ; $8$ ; $6$ ; $8$ ; $12$. Calcule la moyenne de cette série.",
+      "corrige": [
+        "On construit d'abord le tableau d'effectifs en comptant chaque valeur : $6$ apparaît $3$ fois, $8$ apparaît $3$ fois, $10$ apparaît $1$ fois, $12$ apparaît $1$ fois.",
+        "Vérification de l'effectif total : $3 + 3 + 1 + 1 = 8$, c'est bien le nombre de données de départ.",
+        "Somme des $(\\text{valeur} \\times \\text{effectif})$ : $6\\times 3 + 8\\times 3 + 10\\times 1 + 12\\times 1 = 18 + 24 + 10 + 12 = 64$.",
+        "$\\text{moyenne} = \\dfrac{64}{8} = 8$. Contrôle : $8$ est bien entre $6$ et $12$."
+      ],
+      "reponse": "Moyenne $= 8$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "mediane",
+      "enonce": "On mesure le temps (en minutes) mis par $8$ élèves pour venir au collège : $13$ ; $7$ ; $19$ ; $10$ ; $7$ ; $22$ ; $16$ ; $10$. Détermine la médiane, puis l'étendue de cette série.",
+      "corrige": [
+        "On range la série dans l'ordre croissant, sans oublier les valeurs répétées : $7$ ; $7$ ; $10$ ; $10$ ; $13$ ; $16$ ; $19$ ; $22$.",
+        "L'effectif est pair ($n = 8$) : la médiane est la demi-somme des deux valeurs centrales, celles de rang $4$ et $5$, c'est-à-dire $10$ et $13$.",
+        "$\\text{médiane} = \\dfrac{10 + 13}{2} = \\dfrac{23}{2} = 11{,}5$ minutes.",
+        "L'étendue est la différence entre la plus grande et la plus petite valeur : $22 - 7 = 15$ minutes."
+      ],
+      "reponse": "Médiane $= 11{,}5$ min ; étendue $= 15$ min."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "valeur-extreme",
+      "enonce": "Cinq employés d'un petit atelier gagnent (en centaines d'euros) : $18$ ; $19$ ; $20$ ; $21$ ; $22$. Le patron, qui gagne $50$, dit : « en moyenne, ici, on gagne bien ». Calcule la moyenne, la médiane et l'étendue avant, puis après avoir ajouté le salaire du patron. Que révèle la comparaison ?",
+      "corrige": [
+        "Avant (les $5$ employés) : moyenne $= \\dfrac{18+19+20+21+22}{5} = \\dfrac{100}{5} = 20$ ; série déjà rangée, effectif impair, médiane $= 20$ (valeur centrale) ; étendue $= 22 - 18 = 4$.",
+        "On ajoute $50$. La série rangée devient $18$ ; $19$ ; $20$ ; $21$ ; $22$ ; $50$ (effectif $6$, désormais pair).",
+        "Après : moyenne $= \\dfrac{100 + 50}{6} = \\dfrac{150}{6} = 25$ ; médiane $=$ demi-somme des rangs $3$ et $4$ $= \\dfrac{20 + 21}{2} = 20{,}5$ ; étendue $= 50 - 18 = 32$.",
+        "La moyenne bondit de $20$ à $25$ ($+5$) et l'étendue de $4$ à $32$, alors que la médiane ne bouge presque pas ($20 \\to 20{,}5$). La moyenne, tirée par le salaire extrême du patron, ne décrit pas ce que gagne un employé : ici la médiane ($20{,}5$) est bien plus représentative."
+      ],
+      "reponse": "Avant : moyenne $20$, médiane $20$, étendue $4$. Après : moyenne $25$, médiane $20{,}5$, étendue $32$. La valeur extrême gonfle surtout la moyenne (et l'étendue) ; la médiane résiste et décrit mieux la série."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "moyenne-ponderee",
+      "enonce": "Un professeur a saisi les notes d'un devoir dans ce tableau, mais un effectif a été effacé. La classe compte $20$ élèves.\n\n| Note | $8$ | $10$ | $12$ | $14$ | $16$ |\n|---|---|---|---|---|---|\n| **Effectif** | $2$ | $5$ | $?$ | $4$ | $1$ |\n\nRetrouve l'effectif manquant, puis calcule la moyenne et l'étendue des notes.",
+      "corrige": [
+        "La somme des effectifs doit égaler l'effectif total ($20$). Les effectifs connus font $2 + 5 + 4 + 1 = 12$.",
+        "L'effectif manquant (celui de la note $12$) vaut donc $20 - 12 = 8$.",
+        "Somme des $(\\text{note} \\times \\text{effectif})$ : $8\\times 2 + 10\\times 5 + 12\\times 8 + 14\\times 4 + 16\\times 1 = 16 + 50 + 96 + 56 + 16 = 234$.",
+        "$\\text{moyenne} = \\dfrac{234}{20} = 11{,}7$. Contrôle : $11{,}7$ est bien entre $8$ et $16$.",
+        "L'étendue se lit sur les valeurs, pas sur les effectifs : $16 - 8 = 8$ points."
+      ],
+      "reponse": "Effectif manquant $= 8$ ; moyenne $= 11{,}7$ ; étendue $= 8$ points."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "4e-math-reperage-exos",
+  "chapitre": "4e-math-reperage",
+  "titre": "Exercices — Repérage sur une droite et dans le plan",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "droite-graduee-relatifs",
+      "enonce": "Sur une droite graduée, deux traits portent les nombres $-6$ et $-4$ ; ils sont séparés par $4$ intervalles égaux. Quelle est l'abscisse du point situé $3$ graduations à droite de $-6$ ?",
+      "corrige": [
+        "Je cherche d'abord ce que vaut une graduation : l'écart entre $-6$ et $-4$ est de $2$, et il y a $4$ intervalles, donc une graduation vaut $\\dfrac{2}{4} = 0{,}5$.",
+        "De quel côté ? À droite de $-6$, on se rapproche de $0$ : le nombre augmente, j'ajoute.",
+        "$3$ graduations valent $3 \\times 0{,}5 = 1{,}5$, donc l'abscisse est $-6 + 1{,}5 = -4{,}5$.",
+        "Contrôle : $-4{,}5$ est bien situé entre $-6$ et $-4$. ✓"
+      ],
+      "reponse": "L'abscisse cherchée est $-4{,}5$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "coordonnees-plan",
+      "enonce": "Dans un repère orthogonal d'origine $O$, décris précisément comment placer les points $M(-2\\,;5)$ et $P(4\\,;-3)$ à partir de $O$, puis indique où se trouve chacun par rapport à l'origine (en haut/en bas, à gauche/à droite).",
+      "corrige": [
+        "Rappel : le premier nombre est l'abscisse (on se déplace horizontalement), le second est l'ordonnée (on se déplace verticalement). On part toujours de $O$.",
+        "Pour $M(-2\\,;5)$ : l'abscisse $-2$ est négative, donc $2$ vers la gauche ; l'ordonnée $5$ est positive, donc $5$ vers le haut. $M$ est en haut à gauche.",
+        "Pour $P(4\\,;-3)$ : l'abscisse $4$ est positive, donc $4$ vers la droite ; l'ordonnée $-3$ est négative, donc $3$ vers le bas. $P$ est en bas à droite.",
+        "Les deux points portent les chiffres $2$, $3$, $4$, $5$ mais sont dans des régions opposées : c'est l'ordre et le signe qui décident, pas les chiffres."
+      ],
+      "reponse": "$M$ : $2$ à gauche puis $5$ en haut (en haut à gauche). $P$ : $4$ à droite puis $3$ en bas (en bas à droite)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "droite-graduee-relatifs",
+      "enonce": "Sur une droite graduée d'unité $1$, chaque unité est partagée en $5$ parts égales. Un point $A$ est situé $7$ graduations à gauche de l'origine $O$. Donne l'abscisse de $A$ sous forme de fraction, puis vérifie ta réponse en l'encadrant par deux entiers consécutifs.",
+      "corrige": [
+        "Une unité est partagée en $5$, donc une graduation vaut $\\dfrac{1}{5}$.",
+        "$A$ est à gauche de $0$ : son abscisse est négative. $7$ graduations à gauche donnent $-7 \\times \\dfrac{1}{5} = -\\dfrac{7}{5}$.",
+        "Contrôle par encadrement : $-\\dfrac{7}{5} = -1{,}4$, donc $-2 < -\\dfrac{7}{5} < -1$. $A$ est entre $-2$ et $-1$.",
+        "C'est cohérent : $7$ graduations à gauche, c'est plus d'une unité mais moins de deux, donc entre $-2$ et $-1$. ✓"
+      ],
+      "reponse": "$A$ a pour abscisse $-\\dfrac{7}{5}$ (soit $-1{,}4$), entre $-2$ et $-1$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "graphique-fonction",
+      "enonce": "Un service de location de vélos facture $4$ € d'inscription, puis $3$ € par heure d'utilisation. On note $p$ le prix payé (en €) en fonction de la durée $t$ (en heures). 1) Exprime $p$ en fonction de $t$. 2) Construis un tableau de valeurs pour $t = 0$, $1$, $2$, $3$. 3) Donne les coordonnées des points à placer, la durée en abscisse. 4) Cette situation est-elle une situation de proportionnalité ? Justifie.",
+      "corrige": [
+        "1) On paie $4$ € fixes, puis $3$ € pour chaque heure : $p = 4 + 3 \\times t$.",
+        "2) Tableau : pour $t=0$, $p = 4$ ; pour $t=1$, $p = 7$ ; pour $t=2$, $p = 10$ ; pour $t=3$, $p = 13$.",
+        "3) La durée est en abscisse et le prix en ordonnée : on place $(0\\,;4)$, $(1\\,;7)$, $(2\\,;10)$, $(3\\,;13)$.",
+        "4) Non : à $t = 0$ on paie déjà $4$ €, donc la représentation ne passe pas par l'origine. De plus $10$ (à $2$ h) n'est pas le double de $7$ (à $1$ h) : le prix n'est pas proportionnel à la durée."
+      ],
+      "reponse": "$p = 4 + 3t$ ; points $(0\\,;4)$, $(1\\,;7)$, $(2\\,;10)$, $(3\\,;13)$ ; ce n'est pas une proportionnalité (la représentation ne passe pas par l'origine)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "graphique-fonction",
+      "enonce": "Une chambre froide est réglée à $-6$ °C. On coupe le système de refroidissement : la température $T$ (en °C) monte alors de $3$ °C par heure. On note $t$ le temps écoulé (en heures). 1) Exprime $T$ en fonction de $t$. 2) Fais un tableau de valeurs pour $t = 0$, $1$, $2$, $3$, $4$. 3) Entre quelles valeurs l'axe vertical doit-il s'étendre, et quelle graduation choisir ? 4) Au bout de combien de temps la température devient-elle positive ?",
+      "corrige": [
+        "1) On part de $-6$ °C et on ajoute $3$ °C par heure : $T = -6 + 3 \\times t$.",
+        "2) Tableau : $t=0 \\to T=-6$ ; $t=1 \\to T=-3$ ; $t=2 \\to T=0$ ; $t=3 \\to T=3$ ; $t=4 \\to T=6$.",
+        "3) Les valeurs vont de $-6$ à $6$ : l'axe vertical doit descendre jusqu'à $-6$ et monter jusqu'à $6$. On le gradue de $3$ en $3$ (ou de $2$ en $2$) pour que les points ne soient pas écrasés ; les premiers points, négatifs, sont sous l'axe horizontal.",
+        "4) On cherche quand $T$ dépasse $0$ : $-6 + 3t > 0$ donne $3t > 6$, soit $t > 2$. À $t = 2$ h la température vaut exactement $0$ °C (le point est sur l'axe horizontal), et elle devient positive après $2$ h."
+      ],
+      "reponse": "$T = -6 + 3t$ ; valeurs $-6$, $-3$, $0$, $3$, $6$ ; la température atteint $0$ °C à $t = 2$ h et devient positive au-delà."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "Dans un repère orthogonal, l'axe horizontal est gradué de $2$ en $2$ et l'axe vertical de $5$ en $5$. On repère trois points : $A$ est $3$ graduations à droite et $2$ graduations au-dessus de l'origine ; $B$ est $1$ graduation à gauche et $3$ graduations en dessous de l'origine ; $C$ est sur l'axe horizontal, $4$ graduations à droite de l'origine. 1) Donne les coordonnées de $A$, $B$ et $C$. 2) Explique pourquoi on ne peut pas compter les graduations comme si chacune valait $1$.",
+      "corrige": [
+        "Chaque axe se lit avec sa propre unité : horizontalement une graduation vaut $2$, verticalement une graduation vaut $5$.",
+        "$A$ : $3$ graduations à droite $\\to 3 \\times 2 = 6$ ; $2$ graduations au-dessus $\\to 2 \\times 5 = 10$. Donc $A(6\\,;10)$.",
+        "$B$ : $1$ graduation à gauche $\\to -1 \\times 2 = -2$ ; $3$ graduations en dessous $\\to -3 \\times 5 = -15$. Donc $B(-2\\,;-15)$.",
+        "$C$ : il est sur l'axe horizontal, donc son ordonnée est nulle ; $4$ graduations à droite $\\to 4 \\times 2 = 8$. Donc $C(8\\,;0)$.",
+        "2) « Orthogonal » signifie que les axes sont perpendiculaires, pas qu'ils ont la même unité. Ici une graduation vaut $2$ sur un axe et $5$ sur l'autre : compter comme si chacune valait $1$ donnerait $A(3\\,;2)$, $B(-1\\,;-3)$, $C(4\\,;0)$, tous faux. Il faut recalculer la valeur d'une graduation sur chaque axe."
+      ],
+      "reponse": "$A(6\\,;10)$, $B(-2\\,;-15)$, $C(8\\,;0)$ ; chaque axe a sa propre unité (orthogonal ne veut pas dire même unité sur les deux axes)."
+    }
+  ]
+}

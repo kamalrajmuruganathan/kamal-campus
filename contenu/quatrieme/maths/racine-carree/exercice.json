@@ -1,0 +1,91 @@
+{
+  "id": "4e-math-racine-carree-exos",
+  "chapitre": "4e-math-racine-carree",
+  "titre": "Exercices — Racine carrée",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Calcule sans calculatrice : $\\sqrt{81}$, $\\sqrt{100}$ et $\\sqrt{144}$.",
+      "corrige": [
+        "$\\sqrt{a}$ est le nombre **positif** dont le carré vaut $a$ : pour chaque nombre, on cherche donc le carré parfait correspondant dans la table.",
+        "$\\sqrt{81} = 9$, car $9$ est positif et $9^2 = 81$.",
+        "$\\sqrt{100} = 10$, car $10^2 = 100$.",
+        "$\\sqrt{144} = 12$, car $12^2 = 144$."
+      ],
+      "reponse": "$\\sqrt{81} = 9$, $\\sqrt{100} = 10$ et $\\sqrt{144} = 12$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "proprietes",
+      "enonce": "Calcule $\\sqrt{6^2}$ puis $\\left(\\sqrt{15}\\right)^2$.",
+      "corrige": [
+        "Pour $\\sqrt{6^2}$, on calcule d'abord sous le radical : $6^2 = 36$, puis $\\sqrt{36} = 6$. Comme $6$ est positif, la racine annule le carré : $\\sqrt{6^2} = 6$.",
+        "Pour $\\left(\\sqrt{15}\\right)^2$, on utilise que $\\sqrt{15}$ est justement le nombre dont le carré vaut $15$ : élever $\\sqrt{15}$ au carré redonne donc $15$.",
+        "Inutile de chercher une valeur décimale de $\\sqrt{15}$ : le carré la fait disparaitre."
+      ],
+      "reponse": "$\\sqrt{6^2} = 6$ et $\\left(\\sqrt{15}\\right)^2 = 15$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "condition-existence",
+      "enonce": "Parmi les écritures $\\sqrt{16}$, $\\sqrt{-25}$, $\\sqrt{0}$ et $\\sqrt{-1}$, indique celles qui ont un sens, puis calcule leur valeur.",
+      "corrige": [
+        "Une racine carrée $\\sqrt{a}$ n'existe que si le radicande $a$ est positif ou nul. On regarde donc d'abord le signe de chaque nombre placé sous le radical.",
+        "$\\sqrt{-25}$ et $\\sqrt{-1}$ n'ont **pas** de sens : aucun nombre multiplié par lui-même ne donne un résultat négatif.",
+        "$\\sqrt{16}$ et $\\sqrt{0}$ existent car $16 \\geqslant 0$ et $0 \\geqslant 0$.",
+        "On les calcule : $\\sqrt{16} = 4$ (car $4^2 = 16$) et $\\sqrt{0} = 0$."
+      ],
+      "reponse": "Seules $\\sqrt{16} = 4$ et $\\sqrt{0} = 0$ existent ; $\\sqrt{-25}$ et $\\sqrt{-1}$ n'ont pas de sens."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "encadrement",
+      "enonce": "Encadre $\\sqrt{75}$ par deux entiers consécutifs.",
+      "corrige": [
+        "On cherche les deux carrés parfaits qui entourent $75$ dans la table : $64$ et $81$.",
+        "On écrit l'encadrement : $64 < 75 < 81$.",
+        "La racine carrée respecte l'ordre, donc $\\sqrt{64} < \\sqrt{75} < \\sqrt{81}$.",
+        "Or $\\sqrt{64} = 8$ et $\\sqrt{81} = 9$, d'où $8 < \\sqrt{75} < 9$."
+      ],
+      "reponse": "$8 < \\sqrt{75} < 9$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "lien-geometrique",
+      "enonce": "Un carré a une aire de $40\\ \\text{cm}^2$. Donne la valeur exacte de la longueur de son côté, puis encadre cette longueur par deux entiers consécutifs.",
+      "corrige": [
+        "L'aire d'un carré de côté $c$ vaut $c^2$. Pour remonter de l'aire au côté, on prend la racine carrée : $c = \\sqrt{40}\\ \\text{cm}$.",
+        "$40$ n'est pas un carré parfait : $\\sqrt{40}$ ne tombe pas juste, la valeur exacte du côté est donc $\\sqrt{40}\\ \\text{cm}$, telle quelle.",
+        "Pour l'encadrer, on repère les carrés parfaits qui entourent $40$ : $36 < 40 < 49$.",
+        "En prenant la racine de chaque membre : $\\sqrt{36} < \\sqrt{40} < \\sqrt{49}$, soit $6 < c < 7$."
+      ],
+      "reponse": "Le côté vaut $\\sqrt{40}\\ \\text{cm}$, compris entre $6$ et $7\\ \\text{cm}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "proprietes",
+      "enonce": "Range dans l'ordre croissant, sans calculatrice : $\\sqrt{30}$, $6$ et $\\sqrt{40}$.",
+      "corrige": [
+        "L'astuce est d'écrire les trois nombres sous la même forme. L'entier $6$ s'écrit $6 = \\sqrt{36}$, car $6^2 = 36$.",
+        "Il suffit alors de comparer les nombres sous les radicaux : $30$, $36$ et $40$.",
+        "On les range : $30 < 36 < 40$.",
+        "La racine carrée respecte l'ordre, donc $\\sqrt{30} < \\sqrt{36} < \\sqrt{40}$, c'est-à-dire $\\sqrt{30} < 6 < \\sqrt{40}$."
+      ],
+      "reponse": "$\\sqrt{30} < 6 < \\sqrt{40}$."
+    }
+  ]
+}

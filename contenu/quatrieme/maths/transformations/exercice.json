@@ -1,0 +1,88 @@
+{
+  "id": "4e-math-transformations-exos",
+  "chapitre": "4e-math-transformations",
+  "titre": "Exercices — Transformations : la translation",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "construction",
+      "enonce": "Sur un quadrillage muni d'un repère, on considère la translation qui transforme le point $A(1\\,;\\,2)$ en $A'(6\\,;\\,4)$. Détermine les coordonnées de l'image $M'$ du point $M(-2\\,;\\,3)$.",
+      "corrige": [
+        "Je lis d'abord le déplacement modèle, de $A$ vers $A'$ : l'abscisse passe de $1$ à $6$, soit $+5$ (5 carreaux vers la droite) ; l'ordonnée passe de $2$ à $4$, soit $+2$ (2 carreaux vers le haut).",
+        "Dans une translation, tous les points font exactement le même trajet : je refais donc $+5$ sur l'abscisse et $+2$ sur l'ordonnée à partir de $M$.",
+        "$M'$ a pour abscisse $-2 + 5 = 3$ et pour ordonnée $3 + 2 = 5$."
+      ],
+      "reponse": "$M'(3\\,;\\,5)$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "conservation",
+      "enonce": "Un triangle $ABC$ a pour côtés $AB = 5{,}2$ cm, $BC = 4{,}8$ cm, $CA = 3{,}5$ cm, et un angle $\\widehat{BAC} = 63°$. On appelle $A'B'C'$ son image par une translation. Sans faire aucune mesure, donne les longueurs $A'B'$, $B'C'$, $C'A'$ et la mesure de l'angle $\\widehat{B'A'C'}$.",
+      "corrige": [
+        "La translation conserve les longueurs : chaque côté image a la même longueur que le côté de départ. Donc $A'B' = AB = 5{,}2$ cm, $B'C' = BC = 4{,}8$ cm et $C'A' = CA = 3{,}5$ cm.",
+        "La translation conserve aussi les mesures d'angles : l'angle image a la même mesure que l'angle de départ. Donc $\\widehat{B'A'C'} = \\widehat{BAC} = 63°$.",
+        "Rien n'est à recalculer : la figure a seulement glissé, elle n'a été ni agrandie ni déformée."
+      ],
+      "reponse": "$A'B' = 5{,}2$ cm, $B'C' = 4{,}8$ cm, $C'A' = 3{,}5$ cm et $\\widehat{B'A'C'} = 63°$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "invariants",
+      "enonce": "Une translation $t$ transforme le point $A(0\\,;\\,0)$ en $A'(3\\,;\\,1)$. On applique $t$ au point $M(2\\,;\\,5)$ : on obtient $M'$. On applique ensuite $t$ à $M'$ : on obtient $M''$. Détermine les coordonnées de $M'$ et de $M''$, puis vérifie que $M'$ est le milieu de $[MM'']$.",
+      "corrige": [
+        "Le déplacement modèle, de $A$ vers $A'$, est $+3$ sur l'abscisse et $+1$ sur l'ordonnée.",
+        "Première application, à $M(2\\,;\\,5)$ : $M'(2+3\\,;\\,5+1) = M'(5\\,;\\,6)$.",
+        "Deuxième application, à $M'(5\\,;\\,6)$ : $M''(5+3\\,;\\,6+1) = M''(8\\,;\\,7)$.",
+        "Milieu de $[MM'']$ : abscisse $\\dfrac{2+8}{2} = 5$, ordonnée $\\dfrac{5+7}{2} = 6$, soit le point $(5\\,;\\,6)$, qui est bien $M'$.",
+        "C'est logique : refaire deux fois la même translation fait glisser deux fois plus loin, donc $M'$ tombe au milieu du trajet total."
+      ],
+      "reponse": "$M'(5\\,;\\,6)$, $M''(8\\,;\\,7)$ ; $M'$ est bien le milieu de $[MM'']$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "reconnaitre-la-transformation",
+      "enonce": "Deux quadrilatères $ABCD$ et $A'B'C'D'$ sont superposables et se lisent dans le même sens (aucun n'est retourné). On trace les segments $[AA']$, $[BB']$, $[CC']$ et $[DD']$ : ils mesurent tous $4$ cm, sont parallèles entre eux et orientés dans le même sens. Quelle transformation envoie $ABCD$ sur $A'B'C'D'$ ? Justifie en écartant la symétrie axiale, puis le demi-tour.",
+      "corrige": [
+        "Étape 1 — la symétrie axiale est écartée : un miroir retourne la figure (la droite devient gauche). Or ici les deux quadrilatères se lisent dans le même sens, donc ce n'est pas une symétrie axiale.",
+        "Étape 2 — le demi-tour est écarté : pour un demi-tour, les segments $[AA']$, $[BB']$, $[CC']$, $[DD']$ se couperaient tous en un même point (leur milieu commun, le centre). Ici ils sont parallèles entre eux : ils ne se coupent pas, ce n'est donc pas un demi-tour.",
+        "Étape 3 — il reste la translation, et le critère colle : chaque sommet a fait le même trajet (même direction, même sens, même longueur $4$ cm). C'est exactement la signature d'un glissement."
+      ],
+      "reponse": "C'est une translation."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "conservation",
+      "enonce": "On applique une translation à toute une figure. Une droite $(d_1)$ est parallèle à la direction de la translation ; une droite $(d_2)$ est perpendiculaire à $(d_1)$. On note $(d_1')$ et $(d_2')$ leurs images.\\na) Quelle est l'image $(d_1')$ de $(d_1)$ ?\\nb) Que peut-on dire de $(d_1')$ et $(d_2')$ l'une par rapport à l'autre ?\\nc) Où se situe $(d_2')$ par rapport à $(d_2)$ ?",
+      "corrige": [
+        "a) $(d_1)$ est parallèle à la direction de la translation : ses points glissent le long d'elle, mais la droite entière ne change pas de place. Son image est donc elle-même : $(d_1') = (d_1)$.",
+        "b) La translation conserve les mesures d'angles : deux droites perpendiculaires ont pour images deux droites perpendiculaires. Comme $(d_1) \\perp (d_2)$, on a $(d_1') \\perp (d_2')$.",
+        "c) L'image d'une droite par une translation lui est parallèle : donc $(d_2') $ est parallèle à $(d_2)$. Mais $(d_2)$ n'est pas parallèle à la direction du glissement (elle lui est perpendiculaire), donc $(d_2')$ n'est pas confondue avec $(d_2)$ : elle s'est décalée à côté, en restant parallèle."
+      ],
+      "reponse": "a) $(d_1') = (d_1)$ ; b) $(d_1') \\perp (d_2')$ ; c) $(d_2')$ est parallèle à $(d_2)$, mais distincte (décalée à côté)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "effet",
+      "enonce": "Pour fabriquer un pavage, on répète un motif carré de côté $2$ cm en le faisant glisser à chaque fois de $2$ cm vers la droite : chaque copie est l'image de la précédente par cette même translation horizontale. Le motif de départ a un sommet placé à l'abscisse $0$, une aire de $4$ cm² et des angles de $90°$ à chaque coin.\\na) À quelle abscisse se retrouve ce sommet après $5$ translations successives ?\\nb) Quelle est l'aire d'une copie ? La mesure de ses angles ?\\nc) Une copie est-elle retournée ou tournée par rapport au motif de départ ? Qu'est-ce que cela explique pour le pavage ?",
+      "corrige": [
+        "a) Chaque translation décale de $2$ cm vers la droite. Cinq translations successives décalent donc de $5 \\times 2 = 10$ cm. Le sommet passe de l'abscisse $0$ à l'abscisse $0 + 10 = 10$.",
+        "b) La translation conserve les aires et les mesures d'angles : chaque copie a donc la même aire, $4$ cm², et les mêmes angles, $90°$ à chaque coin. Rien n'est déformé.",
+        "c) La translation ne retourne pas la figure (contrairement au miroir de la symétrie axiale) et ne la fait pas tourner : chaque copie se lit dans le même sens que le motif de départ, elle est simplement décalée. C'est précisément ce glissement identique et répété qui donne au pavage sa régularité, capable de continuer sans fin."
+      ],
+      "reponse": "a) à l'abscisse $10$ ; b) aire $4$ cm² et angles de $90°$ (conservés) ; c) ni retournée ni tournée, seulement glissée : d'où la régularité du pavage."
+    }
+  ]
+}

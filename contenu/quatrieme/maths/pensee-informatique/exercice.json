@@ -1,0 +1,97 @@
+{
+  "id": "4e-math-pensee-informatique-exos",
+  "chapitre": "4e-math-pensee-informatique",
+  "titre": "Exercices — La pensée informatique",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "operateurs-comparaison",
+      "enonce": "Traduis chacune de ces phrases en une **condition**, en utilisant la variable indiquée et l'un des six symboles `=`, `≠`, `<`, `>`, `≤`, `≥`.\n\na) « Il y a **au moins** 18 élèves présents » (variable `e`).\nb) « Le prix **ne dépasse pas** 25 euros » (variable `prix`).\nc) « L'âge est **strictement inférieur** à 12 ans » (variable `age`).\nd) « La note **atteint** la moyenne de 10 » (variable `note`).",
+      "corrige": [
+        "Pour chaque phrase, on repère les deux quantités comparées, le sens de l'inégalité, puis on se demande **si le cas d'égalité compte**.",
+        "a) « au moins 18 » veut dire 18 ou plus : le cas d'égalité est compris, donc $\\geqslant$. On écrit `e ≥ 18`.",
+        "b) « ne dépasse pas 25 » veut dire au plus 25, donc 25 ou moins, égalité comprise : `prix ≤ 25`.",
+        "c) « strictement inférieur à 12 » : le mot *strictement* exclut l'égalité, donc `age < 12`.",
+        "d) « atteint 10 » veut dire arriver à 10 ou plus : l'égalité est comprise, donc `note ≥ 10`."
+      ],
+      "reponse": "a) `e ≥ 18` · b) `prix ≤ 25` · c) `age < 12` · d) `note ≥ 10`."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "manipuler-variable",
+      "enonce": "Fais le **tableau de suivi** de ce programme (une colonne par variable), puis indique ce qu'il affiche.\n\n```\nmettre 4 dans a\nmettre 10 dans b\nmettre b − a dans a\nmettre a + b dans b\nafficher a\nafficher b\n```",
+      "corrige": [
+        "Après les deux premières lignes : `a` vaut $4$ et `b` vaut $10$.",
+        "`mettre b − a dans a` : la machine **calcule d'abord** $b - a = 10 - 4 = 6$, puis range ce résultat dans `a`. L'ancienne valeur $4$ est écrasée : `a` vaut $6$, `b` vaut toujours $10$.",
+        "`mettre a + b dans b` : on calcule $a + b = 6 + 10 = 16$ avec les valeurs actuelles, puis on range dans `b` : `b` vaut $16$, `a` vaut toujours $6$.",
+        "Tableau de suivi : $(a,b)$ passe de $(4,10)$ à $(6,10)$ puis à $(6,16)$.",
+        "Les deux affichages donnent donc `a` = $6$ puis `b` = $16$."
+      ],
+      "reponse": "Le programme affiche $6$ puis $16$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "instruction-conditionnelle",
+      "enonce": "Une salle de cinéma affiche « tarif réduit » quand l'âge du spectateur est **au plus 12 ans**, et « tarif plein » dans les autres cas.\n\na) Écris l'instruction conditionnelle correspondante, avec la variable `age` et la convention de la fiche (`si … alors … sinon … fin si`).\nb) Que s'affiche-t-il pour `age` = 12 ? pour `age` = 15 ?",
+      "corrige": [
+        "a) « au plus 12 ans » veut dire 12 ou moins, égalité comprise : la condition est `age ≤ 12`. Il y a une action dans les deux cas, donc on utilise un `sinon` :",
+        "```\nsi age ≤ 12 alors\n    afficher « tarif réduit »\nsinon\n    afficher « tarif plein »\nfin si\n```",
+        "b) Pour `age` = 12 : $12 \\leqslant 12$ est **vrai** (l'égalité est comprise), on part dans `alors` et le programme affiche « tarif réduit ».",
+        "Pour `age` = 15 : $15 \\leqslant 12$ est **faux**, on part dans `sinon` et le programme affiche « tarif plein »."
+      ],
+      "reponse": "Programme `si age ≤ 12 alors afficher « tarif réduit » sinon afficher « tarif plein » fin si` ; il affiche « tarif réduit » pour 12 ans et « tarif plein » pour 15 ans."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "suivi-variable",
+      "enonce": "Ce programme demande un nombre `n`. Donne ce qu'il affiche pour la saisie $n = 100$, puis pour la saisie $n = 200$, en justifiant chaque étape.\n\n```\nmettre 0 dans r\ndemander un nombre et le mettre dans n\nsi n > 100 alors\n    mettre 5 dans r\nfin si\nmettre r + 1 dans r\nafficher r\n```",
+      "corrige": [
+        "Saisie $n = 100$ : après les deux premières lignes, `r` vaut $0$ et `n` vaut $100$.",
+        "Test `100 > 100` : c'est **faux** (100 n'est pas strictement supérieur à 100), le bloc décalé est **sauté**, `r` reste à $0$.",
+        "`mettre r + 1 dans r` est écrit **après `fin si`** : il s'exécute quoi qu'il arrive, donc $r = 0 + 1 = 1$. Le programme affiche $1$.",
+        "Saisie $n = 200$ : cette fois `200 > 100` est **vrai**, le bloc s'exécute et met $5$ dans `r`.",
+        "Puis `mettre r + 1 dans r` donne $r = 5 + 1 = 6$. Le programme affiche $6$."
+      ],
+      "reponse": "Pour $n = 100$ il affiche $1$ ; pour $n = 200$ il affiche $6$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "ecrire-programme",
+      "enonce": "Un site marchand offre la livraison gratuite dès que le montant du panier **atteint 50 euros** ; en dessous, la livraison coûte 5 euros. On veut un programme qui demande le montant `m` du panier, puis affiche « livraison gratuite » ou « livraison : 5 euros ».\n\n1) Repère l'entrée et la sortie du programme.\n2) Écris le programme.\n3) Teste-le à la main pour `m` = 30, `m` = 60, et le cas frontière `m` = 50.",
+      "corrige": [
+        "1) Entrée : le montant `m` (à demander). Sortie : un message affiché.",
+        "2) « atteint 50 » comprend l'égalité, donc la condition est `m ≥ 50`. Deux messages possibles, donc un `sinon` :",
+        "```\ndemander un nombre et le mettre dans m\nsi m ≥ 50 alors\n    afficher « livraison gratuite »\nsinon\n    afficher « livraison : 5 euros »\nfin si\n```",
+        "3) `m` = 30 : $30 \\geqslant 50$ est faux → « livraison : 5 euros ». `m` = 60 : $60 \\geqslant 50$ est vrai → « livraison gratuite ».",
+        "Cas frontière `m` = 50 : $50 \\geqslant 50$ est **vrai** (égalité comprise) → « livraison gratuite ». C'est bien ce qu'on veut, puisque la gratuité s'applique **dès** 50 euros. Avec `m > 50`, le panier de 50 euros paierait la livraison à tort."
+      ],
+      "reponse": "Programme `si m ≥ 50 alors afficher « livraison gratuite » sinon afficher « livraison : 5 euros » fin si` ; il affiche « livraison : 5 euros » pour 30, « livraison gratuite » pour 60 et pour 50."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "modifier-programme",
+      "enonce": "À une fête foraine, un manège est autorisé aux personnes qui mesurent **au moins 140 cm** (la taille en cm est rangée dans la variable `taille`). Un élève a écrit :\n\n```\nsi taille > 140 alors\n    afficher « accès autorisé »\nsinon\n    afficher « accès refusé »\nfin si\n```\n\nCe programme se trompe pour une **seule** taille.\n\na) Pour quelle taille se trompe-t-il, et que devrait-il afficher ?\nb) Corrige le programme par la modification **minimale**.\nc) Explique en une phrase pourquoi c'est l'**opérateur** qui est en cause.",
+      "corrige": [
+        "La condition attendue traduit « au moins 140 » : 140 ou plus, égalité comprise, donc `taille ≥ 140`.",
+        "a) Le seul cas faux est `taille` = 140 exactement : `140 > 140` est **faux**, donc le programme part dans `sinon` et affiche « accès refusé ». Or 140 cm est autorisé (au moins 140), il devrait afficher « accès autorisé ».",
+        "b) Il suffit de remplacer `>` par `≥` :",
+        "```\nsi taille ≥ 140 alors\n    afficher « accès autorisé »\nsinon\n    afficher « accès refusé »\nfin si\n```",
+        "c) Un seul exemple faux, situé **pile sur la frontière** (140) : c'est la signature d'un opérateur trop strict. Le nombre 140 et les deux messages sont corrects ; seul le `>`, qui exclut l'égalité, devait devenir `≥`."
+      ],
+      "reponse": "Il se trompe pour `taille` = 140 (« accès refusé » au lieu de « accès autorisé ») ; on corrige en écrivant `si taille ≥ 140 alors`."
+    }
+  ]
+}
