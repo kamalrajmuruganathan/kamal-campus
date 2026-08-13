@@ -20,7 +20,7 @@ questions=0
 
 # Identifiants d'outils reconnus par l'écran Outils de l'application
 # (app/src/ecrans/Outils.js). Un outil.json ne peut pointer que vers ceux-ci.
-OUTILS_CONNUS='["second-degre","suite-arith","suite-geom","stats","derivee","masse-molaire","dilution","energie-cinetique","loi-ohm"]'
+OUTILS_CONNUS='["second-degre","suite-arith","suite-geom","stats","derivee","masse-molaire","dilution","energie-cinetique","loi-ohm","geo-distance","geo-droite","geo-produit-scalaire","trigo-valeurs","trigo-equation"]'
 
 signaler() { printf '  ✗ %s\n' "$1"; erreurs=$((erreurs + 1)); }
 

@@ -19,6 +19,8 @@ import { analyserSerie } from '../../lib/statistiques';
 import { deriver, variations } from '../../lib/derivation';
 import { masseMolaire, dilution } from '../../lib/chimie';
 import { energieCinetique, loiOhm } from '../../lib/physique';
+import { distance, milieu, produitScalaire, droiteParDeuxPoints } from '../../lib/geometrie';
+import { cosSin, degresVersRadians, resoudre } from '../../lib/trigonometrie';
 
 /**
  * Déclaration des outils. Chaque entrée décrit ses champs et la fonction à
@@ -122,6 +124,69 @@ const OUTILS = [
       { clef: 'I', libelle: 'I (A)', defaut: '0.2' },
     ],
     executer: (v) => loiOhm({ U: v.U, R: v.R, I: v.I }),
+  },
+  {
+    id: 'geo-distance',
+    titre: 'Distance et milieu',
+    resume: 'Entre deux points A et B du plan repéré',
+    champs: [
+      { clef: 'ax', libelle: 'xA', defaut: '1' },
+      { clef: 'ay', libelle: 'yA', defaut: '2' },
+      { clef: 'bx', libelle: 'xB', defaut: '4' },
+      { clef: 'by', libelle: 'yB', defaut: '6' },
+    ],
+    executer: (v) => {
+      const A = { x: v.ax, y: v.ay };
+      const B = { x: v.bx, y: v.by };
+      const d = distance(A, B);
+      if (!d.valide) return d;
+      const m = milieu(A, B);
+      return {
+        valide: true,
+        etapes: [...d.etapes, ...(m.valide ? m.etapes : [])],
+      };
+    },
+  },
+  {
+    id: 'geo-droite',
+    titre: 'Équation de droite',
+    resume: 'Droite passant par deux points',
+    champs: [
+      { clef: 'ax', libelle: 'xA', defaut: '1' },
+      { clef: 'ay', libelle: 'yA', defaut: '2' },
+      { clef: 'bx', libelle: 'xB', defaut: '4' },
+      { clef: 'by', libelle: 'yB', defaut: '8' },
+    ],
+    executer: (v) => droiteParDeuxPoints({ x: v.ax, y: v.ay }, { x: v.bx, y: v.by }),
+  },
+  {
+    id: 'geo-produit-scalaire',
+    titre: 'Produit scalaire',
+    resume: 'De deux vecteurs donnés par leurs coordonnées',
+    champs: [
+      { clef: 'ux', libelle: 'x du vecteur u', defaut: '3' },
+      { clef: 'uy', libelle: 'y du vecteur u', defaut: '4' },
+      { clef: 'vx', libelle: 'x du vecteur v', defaut: '-2' },
+      { clef: 'vy', libelle: 'y du vecteur v', defaut: '1' },
+    ],
+    executer: (v) => produitScalaire({ x: v.ux, y: v.uy }, { x: v.vx, y: v.vy }),
+  },
+  {
+    id: 'trigo-valeurs',
+    titre: 'Cosinus et sinus',
+    resume: 'Valeurs pour un angle donné en degrés',
+    champs: [{ clef: 'deg', libelle: 'angle (degrés)', defaut: '60' }],
+    executer: (v) => cosSin(degresVersRadians(v.deg)),
+  },
+  {
+    id: 'trigo-equation',
+    titre: 'Équation cos x = a / sin x = a',
+    resume: 'Résout sur un tour, valeurs exactes si possible',
+    champs: [
+      { clef: 'type', libelle: 'cos ou sin', defaut: 'cos', texte: true },
+      { clef: 'a', libelle: 'valeur a', defaut: '0.5' },
+    ],
+    executer: (v) => resoudre(String(v.type).trim().toLowerCase(), v.a),
   },
 ];
 
