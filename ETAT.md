@@ -1,42 +1,88 @@
 # Kamal Campus — État du contenu
 
-> Mis à jour le 2026-08-10. **Périmètre v1 complet**, extension collège amorcée.
+> Mis à jour le 2026-08-13. **Tout le collège de mathématiques est couvert (6e→3e)**,
+> en plus du périmètre v1 lycée. 100 chapitres, 1000 questions.
 
 ## Couverture
 
 | Bloc | Chapitres | Questions | Programme de référence |
 |---|---|---|---|
-| Collège **cinquième** maths | 8 | 80 | BO du 2 avril 2026 *(cycle 4)* |
+| Collège **sixième** maths | 10 | 100 | Cycle 3 (2025) |
+| Collège **cinquième** maths | 15 | 150 | Cycle 4 *(BO — voir note date)* |
+| Collège **quatrième** maths | 15 | 150 | Cycle 4 *(BO — voir note date)* |
+| Collège **troisième** maths | 14 | 140 | Cycle 4 *(BO — voir note date)* |
+| Seconde **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
 | Première spécialité **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
 | Première **maths — ens. scientifique** | 4 | 40 | BO du 2 avril 2026 *(nouveau)* |
-| Seconde **maths** | 10 | 100 | BO du 2 avril 2026 *(nouveau)* |
-| Première **physique-chimie** | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
-| Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
 | Première techno — maths | 5 | 50 | BO du 2 avril 2026 |
+| Seconde **physique-chimie** | 5 | 50 | BO spécial n°1 du 22 janvier 2019 |
+| Première **physique-chimie** | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
 | Première STI2D/STL — PC et maths | 6 | 60 | BO spécial n°1 du 22 janvier 2019 |
-| **Total** | **54** | **540** | |
+| **Total** | **100** | **1000** | |
 
-La 5e couvre 8 des 16 chapitres de son programme : c'est un début
-d'extension au collège, pas un niveau complet. Voir « Extension au collège » plus bas.
+**Le collège de mathématiques est complet** : les quatre niveaux couvrent chacun
+l'intégralité des entrées de leur programme (cycle 3 pour la 6e, cycle 4 pour
+5e/4e/3e). Chaque chapitre a été écrit contre sa plage de lignes du texte officiel
+réextrait, objectif d'apprentissage par objectif — la correspondance est tracée
+dans le bloc de notes de production de chaque fiche.
 
 Chaque chapitre comporte une `fiche.md` et un `qcm.json` de 10 questions (2 faciles,
-5 moyennes, 3 difficiles), avec correction expliquée nommant le piège.
+4 moyennes, 4 difficiles), avec correction expliquée nommant le piège.
 
-## Contrôles automatiques — au vert sur les 45
+### Point de vigilance sur les dates de BO — à trancher
+
+Trois dates circulent pour le **même** cycle 4 : les fiches portent « BO du 5 mars
+2026 », ce document annonçait « BO du 2 avril 2026 », et **aucune des deux
+n'apparaît dans le texte extrait**. Le programme de cycle 3 (6e) ne porte, lui,
+aucune date. L'une au moins de ces mentions est fausse : à confronter aux
+bulletins officiels avant publication. Toutes les fiches concernées sont donc à
+harmoniser d'un coup une fois la bonne date connue.
+
+### Arbitrages de conformité relevés pendant la production
+
+La confrontation systématique au texte officiel a fait apparaître plusieurs
+points où le programme contredit l'usage des manuels, ou reste ambigu. Les
+principaux, tous consignés dans les notes de production des fiches concernées :
+
+- **6e — frontière des opérations avec la 5e** : le texte de 6e liste
+  l'addition-soustraction des décimaux et des fractions de même dénominateur ;
+  elles ont été écartées pour ne pas doublonner avec la 5e. À trancher : 6e
+  introduit / 5e consolide, ou mutualisation en 5e.
+- **4e — racine carrée** : ni √(ab)=√a·√b ni la règle du quotient n'apparaissent
+  nulle part dans le cycle 4 (recherche exhaustive). Disparues du collège, ou
+  passées en Seconde ?
+- **3e — « Multiples et diviseurs »** n'a que des automatismes, sans objectif ;
+  PGCD, PPCM et algorithme d'Euclide ont zéro occurrence dans tout le cycle 4,
+  alors que la décomposition en facteurs premiers est exigée ailleurs. Perte
+  d'extraction probable, à confronter au PDF.
+- **3e — représentation de l'espace** : agrandissement-réduction (k, k², k³) et
+  aire de la sphère absents du texte 2026 — non traités.
+- **4e — recouvrement éditorial** « Transformations » / « Parallélogrammes et
+  translations » : le découpage est de nous, pas du BO ; les deux fiches sont à
+  relire ensemble.
+- **Correctif appliqué** : la fiche 5e « nombres relatifs » ne traitait que
+  l'addition ; la soustraction, les parenthèses et l'enchaînement, pourtant
+  exigés (l. 413-417), ont été ajoutés.
+
+## Contrôles automatiques — au vert sur les 100 chapitres
+
+Ces contrôles sont désormais outillés dans un script versionné, à relancer après
+tout ajout :
 
 ```bash
-for q in contenu/*/*/*/qcm.json; do
-  jq empty "$q"                                                          # JSON valide
-  jq '.questions|length' "$q"                                            # = 10
-  jq '[.questions[]|select(.reponse>=(.choix|length) or .reponse<0)]|length'  # = 0
-  jq '[.questions[]|select((.choix|length)!=4)]|length'                   # = 0
-  jq '[.questions[]|select(.explication==null or .explication=="")]|length'   # = 0
-done
+outils/verifier-contenu.sh
 ```
+
+Il vérifie, pour chaque chapitre : en-tête YAML complet, refus de `publie` sans
+relecture, JSON valide, 10 questions, 4 choix, index de réponse dans les bornes,
+explications non vides, ids 1→10, absence de choix en double, cohérence
+fiche/QCM, et unicité des identifiants sur tout le corpus. Dernier passage :
+**100 chapitres, 1000 questions, tout au vert.** Il ne dit rien de l'exactitude
+mathématique — seule la relecture humaine le peut.
 
 ## ⚠️ Aucune fiche n'a été relue
 
-**Les 54 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
+**Les 100 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
 La règle du gabarit interdit le passage en `publie` tant qu'un professeur de la matière n'a
 pas relu. Elle n'est pas négociable : une formule fausse fait perdre des points à un élève.
 
@@ -137,39 +183,47 @@ Deux prérequis machine découverts au premier démarrage :
 - `npm test` exige `node --test lib/*.test.js` — `node --test lib/` échoue sur Node 24,
   qui interprète le répertoire comme un module.
 
-## Extension au collège — le chiffrage
+## Collège — terminé
 
-Carte établie à partir des sommaires officiels réextraits (cycle 3 de 2025, cycle 4 du
-BO 2026) :
+Les quatre niveaux du collège de mathématiques sont couverts intégralement :
 
 | Niveau | Chapitres au programme | Écrits | Restants |
 |---|---|---|---|
-| Sixième *(cycle 3)* | 11 | 0 | 11 |
-| Cinquième | 16 | 8 | **7** |
-| Quatrième | 15 | 0 | 15 |
-| Troisième | 14 | 0 | 14 |
-| **Total collège** | **56** | **8** | **47** |
+| Sixième *(cycle 3)* | 10 | 10 | 0 |
+| Cinquième | 15 | 15 | 0 |
+| Quatrième | 15 | 15 | 0 |
+| Troisième | 14 | 14 | 0 |
+| **Total collège** | **54** | **54** | **0** |
 
-Détail de la 5e — 8 chapitres écrits couvrent 9 entrées du programme (`triangles-angles`
-en couvre deux). **Restent** : Opérations · Puissances · Repérage sur une droite et dans
-le plan · Représentation de l'espace · Transformations · Fonctions · Pensée informatique.
+Le regroupement de certaines entrées voisines (par ex. « Longueurs, aires et
+volumes » en 6e) explique que le nombre de chapitres diffère légèrement du nombre
+d'entrées brutes du sommaire officiel. Chaque entrée du programme est couverte.
 
-**Coût** : à la demi-journée par chapitre mesurée sur le pilote, relecture comprise,
-47 chapitres = **environ 23 jours de travail effectif**, soit un peu moins de 5 semaines.
-S'y ajoutent 500 questions de QCM.
+## Ce qui n'est PAS encore couvert
 
-⚠️ Le collège relève du **cycle 4**, dont le programme de maths est lui aussi celui du
-BO du 2 avril 2026 : même avantage de fraicheur qu'au lycée, et même échéance.
+- **Terminale** — maths (spécialité, complémentaires, expertes) et physique-chimie.
+  Le nouveau programme de maths de Terminale s'applique à la **rentrée 2027** ; il
+  est déjà publié (mirror xm1math : `term_gen_spe.pdf`, `term_maths_compl.pdf`,
+  `term_techno.pdf`). ⚠️ Ces PDF ne sont **pas encore dans `docs/`** : ils doivent
+  être réextraits proprement avec `app/scripts/extraire-pdf.mjs` avant toute
+  production, comme pour tout le reste — produire depuis une source résumée
+  trahirait la règle « seule source = le texte officiel exact ».
+- **Physique-chimie du collège** (cycle 4 : 5e/4e/3e, et sciences en 6e) — le
+  programme officiel n'est pas non plus dans `docs/`.
+- **Voie technologique au-delà de STI2D/STL** (STMG, ST2S, STD2A, STHR, S2TMD).
 
 ## Ce qui reste à faire
 
 1. **Relecture par un professeur** de chaque matière — le seul verrou réel.
-   Dossier prêt : [`docs/relecture.md`](docs/relecture.md)
-2. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue
-3. **Décider du périmètre collège** — 50 chapitres restants, ~25 jours (chiffrage ci-dessus)
-4. ✅ Contenu v1 — 54 chapitres, 540 questions
-5. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**
-6. ✅ Application Expo — écrite **et compilée**
-7. ✅ Node.js installé (v24.19.0). La licence Xcode n'est **pas** nécessaire :
-   ni Node, ni npm, ni Expo n'en dépendent — c'était une fausse piste.
-8. ✅ Programmes officiels réextraits proprement (`app/scripts/extraire-pdf.mjs`)
+   Dossier prêt : [`docs/relecture.md`](docs/relecture.md). Il ne couvre pour
+   l'instant que 7 fiches du lycée : **les 54 chapitres du collège sont à y
+   ajouter**, chacun avec les arbitrages listés dans son bloc de notes.
+2. **Trancher la date de BO du cycle 4** (voir plus haut) et harmoniser les fiches.
+3. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue.
+4. **Réextraire les programmes de Terminale** dans `docs/`, puis produire.
+5. ✅ Contenu — **100 chapitres, 1000 questions** (lycée v1 + collège complet).
+6. ✅ Collège de mathématiques complet — 6e à 3e, 54 chapitres.
+7. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**.
+8. ✅ Application Expo — écrite **et compilée**.
+9. ✅ Contrôle automatique du contenu outillé — `outils/verifier-contenu.sh`.
+10. ✅ Programmes officiels du collège et du lycée v1 réextraits (`docs/`).
