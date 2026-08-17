@@ -1,0 +1,92 @@
+{
+  "id": "tale-sti2d-pc-matiere-materiaux-exos",
+  "chapitre": "tale-sti2d-pc-matiere-materiaux",
+  "titre": "Exercices — Matière et matériaux (terminale)",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Comme au bac, les formules et les données numériques sont fournies dans les énoncés. Surveille les unités : kg, J/kg, mol/L.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "changements-etat",
+      "enonce": "En fonderie, on doit fondre $m = 250$ kg d'aluminium déjà porté à sa température de fusion ($660$ °C). Donnée : énergie massique de fusion de l'aluminium $L_f = 397$ kJ/kg ; $E = m \\times L$. Calcule l'énergie à fournir pour fondre toute la charge, en J puis en MJ. Que fait la température du métal pendant la fusion ?",
+      "corrige": [
+        "On vérifie d'abord les unités : $m$ est en kg, mais $L_f$ est donné en **kilo**joules par kg. Pour un résultat en joules : $L_f = 397$ kJ/kg $= 3{,}97 \\times 10^{5}$ J/kg.",
+        "On applique $E = m \\times L_f = 250 \\times 3{,}97 \\times 10^{5} = 9{,}925 \\times 10^{7}$ J.",
+        "On arrondit avec deux chiffres significatifs, comme les données : $E \\approx 9{,}9 \\times 10^{7}$ J, soit environ $99$ MJ. (Rester en kJ donnait directement $250 \\times 397 = 99\\,250$ kJ — même résultat, mais il faut alors penser à la conversion finale.)",
+        "Pendant toute la fusion, l'aluminium est un corps pur en changement d'état : sa température reste **constante** à $660$ °C — c'est le **palier de température**. Toute l'énergie fournie sert à fondre le métal, pas à le chauffer."
+      ],
+      "reponse": "$E \\approx 9{,}9 \\times 10^{7}$ J $\\approx 99$ MJ ; la température reste constante à $660$ °C (palier de fusion du corps pur)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "materiaux-masse-volumique",
+      "enonce": "Au contrôle qualité, une pièce mécanique non identifiée a une masse $m = 67{,}5$ g pour un volume $V = 25{,}0$ cm³ (mesuré par déplacement d'eau). Données : $\\rho = \\dfrac{m}{V}$ ; masses volumiques en kg/m³ : PVC $1\\,400$, aluminium $2\\,700$, acier $7\\,800$, cuivre $8\\,960$. Calcule $\\rho$ en g/cm³ puis en kg/m³, et identifie le matériau le plus probable.",
+      "corrige": [
+        "Avec les unités de l'énoncé : $\\rho = \\dfrac{m}{V} = \\dfrac{67{,}5}{25{,}0} = 2{,}70$ g/cm³.",
+        "Conversion vers les unités de la table : $1$ g/cm³ $= 1\\,000$ kg/m³, donc $\\rho = 2\\,700$ kg/m³. C'est LA conversion piège : comparer $2{,}70$ (en g/cm³) aux valeurs de la table (en kg/m³) sans convertir mènerait à un non-sens.",
+        "On compare à la table : $2\\,700$ kg/m³ correspond exactement à l'**aluminium**. Les autres candidats sont très éloignés (PVC deux fois plus léger, acier et cuivre environ trois fois plus denses).",
+        "Conclusion prudente : la masse volumique est **compatible** avec l'aluminium ; elle ne prouve pas à elle seule que c'en est (un alliage voisin resterait possible), mais elle exclut le PVC, l'acier et le cuivre."
+      ],
+      "reponse": "$\\rho = 2{,}70$ g/cm³ $= 2\\,700$ kg/m³ : la pièce est très probablement en aluminium."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "radioactivite-demi-vie",
+      "enonce": "Pour contrôler des soudures par gammagraphie, on utilise une source d'iridium 192, de demi-vie $t_{1/2} = 74$ jours et d'activité initiale $A_0 = 2{,}4 \\times 10^{12}$ Bq. Données : $t_{1/2} = \\dfrac{\\ln 2}{\\lambda}$ ; $A(t) = A_0\\,e^{-\\lambda t}$. a) Calcule la constante radioactive $\\lambda$ en $\\mathrm{j^{-1}}$. b) Calcule l'activité de la source au bout de $148$ jours, d'abord par un raisonnement en demi-vies, puis en vérifiant avec la loi exponentielle.",
+      "corrige": [
+        "a) On isole $\\lambda$ : $\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{74} \\approx 9{,}4 \\times 10^{-3}\\ \\mathrm{j^{-1}}$. Comme $t_{1/2}$ est en jours, $\\lambda$ sort en $\\mathrm{j^{-1}}$ — pour l'utiliser avec un temps en secondes, il faudrait d'abord convertir $t_{1/2}$ en secondes.",
+        "b) Raisonnement en demi-vies : $148 = 2 \\times 74$, soit exactement $2$ demi-vies. L'activité est divisée par $2$ **à chaque** demi-vie : $A = \\dfrac{A_0}{2^{2}} = \\dfrac{2{,}4 \\times 10^{12}}{4} = 6{,}0 \\times 10^{11}$ Bq. Attention au piège : après $2$ demi-vies il reste le **quart**, pas zéro et pas la moitié.",
+        "Vérification par la loi exponentielle : $\\lambda t = 9{,}37 \\times 10^{-3} \\times 148 \\approx 1{,}39 = 2\\ln 2$, donc $A = A_0\\,e^{-2\\ln 2} = A_0 \\times 0{,}25 = 6{,}0 \\times 10^{11}$ Bq. Les deux méthodes coïncident — normal, la loi $e^{-\\lambda t}$ **contient** la règle des demi-vies.",
+        "Cohérence des unités : dans $e^{-\\lambda t}$, le produit $\\lambda t$ doit être **sans unité** — ici $\\mathrm{j^{-1}} \\times \\mathrm{j}$, c'est bon. Mélanger $\\lambda$ en $\\mathrm{j^{-1}}$ et $t$ en secondes est l'erreur classique."
+      ],
+      "reponse": "a) $\\lambda \\approx 9{,}4 \\times 10^{-3}\\ \\mathrm{j^{-1}}$. b) $148$ j $= 2\\,t_{1/2}$, donc $A = A_0/4 = 6{,}0 \\times 10^{11}$ Bq (confirmé par $A_0\\,e^{-\\lambda t}$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "combustions-energie",
+      "enonce": "Un atelier est chauffé par un générateur d'air chaud au butane $\\mathrm{C_4H_{10}}$. Données : pouvoir calorifique du butane $PC = 46$ MJ/kg ; rendement du générateur $\\eta = 0{,}90$ ; $E = m \\times PC$. a) Écris l'équation ajustée de la combustion complète du butane. b) Calcule l'énergie libérée par la combustion de $m = 5{,}0$ kg de butane, puis l'énergie utile au chauffage. c) Quel gaz mortel apparaît si l'air vient à manquer, et quelle précaution s'impose ?",
+      "corrige": [
+        "a) La combustion est une oxydation rapide du butane par le dioxygène, qui produit $\\mathrm{CO_2}$ et $\\mathrm{H_2O}$. On ajuste dans l'ordre C, H, puis O : $4$ C $\\to 4\\,\\mathrm{CO_2}$ ; $10$ H $\\to 5\\,\\mathrm{H_2O}$ ; à droite $8 + 5 = 13$ O, nombre impair, donc on double tout : $$\\mathrm{2\\,C_4H_{10} + 13\\,O_2 \\longrightarrow 8\\,CO_2 + 10\\,H_2O}$$ Vérification : $8$ C, $20$ H, $26$ O de chaque côté.",
+        "b) Énergie libérée : $E = m \\times PC = 5{,}0 \\times 46 = 230$ MJ $= 2{,}3 \\times 10^{8}$ J. La masse est bien en **kg**, comme l'exige le $PC$ en MJ/kg — avec des grammes on se tromperait d'un facteur $1\\,000$.",
+        "Énergie utile : le rendement s'applique à l'énergie libérée : $E_u = \\eta \\times E = 0{,}90 \\times 230 = 207$ MJ $\\approx 2{,}1 \\times 10^{8}$ J. Le reste ($23$ MJ) part avec les fumées.",
+        "c) Si le dioxygène manque, la combustion devient **incomplète** : elle produit du **monoxyde de carbone CO**, gaz incolore, inodore et mortel, ainsi que des suies. Précaution : **aérer** le local (amenée d'air neuve) et faire entretenir le générateur — c'est une obligation de sécurité pour tout appareil à combustion."
+      ],
+      "reponse": "a) $\\mathrm{2\\,C_4H_{10} + 13\\,O_2 \\to 8\\,CO_2 + 10\\,H_2O}$. b) $E = 230$ MJ $= 2{,}3 \\times 10^{8}$ J ; utile : $E_u \\approx 2{,}1 \\times 10^{8}$ J ($207$ MJ). c) Le monoxyde de carbone CO ; aérer et entretenir l'appareil."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "radioactivite-decroissance",
+      "enonce": "La source d'iridium 192 de l'exercice 3 ($t_{1/2} = 74$ jours) doit être remplacée lorsque son activité tombe **en dessous de $10\\,\\%$** de son activité initiale. Données : $A(t) = A_0\\,e^{-\\lambda t}$ ; $\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$. Au bout de combien de jours faut-il remplacer la source ? Vérifie la cohérence du résultat avec un encadrement en demi-vies.",
+      "corrige": [
+        "On traduit la condition : on cherche $t$ tel que $A(t) = 0{,}10\\,A_0$, c'est-à-dire $A_0\\,e^{-\\lambda t} = 0{,}10\\,A_0$, d'où $e^{-\\lambda t} = 0{,}10$.",
+        "On applique le logarithme népérien (c'est lui qui « défait » l'exponentielle) : $-\\lambda t = \\ln 0{,}10$, donc $t = \\dfrac{\\ln 10}{\\lambda}$. Avec $\\lambda = \\dfrac{\\ln 2}{74} \\approx 9{,}37 \\times 10^{-3}\\ \\mathrm{j^{-1}}$ : $t = \\dfrac{2{,}30}{9{,}37 \\times 10^{-3}} \\approx 246$ jours. On peut aussi écrire directement $t = t_{1/2} \\times \\dfrac{\\ln 10}{\\ln 2} \\approx 74 \\times 3{,}32$.",
+        "Cohérence en demi-vies : après $3\\,t_{1/2} = 222$ j il reste $\\dfrac{1}{2^{3}} = 12{,}5\\,\\%$, après $4\\,t_{1/2} = 296$ j il reste $6{,}25\\,\\%$. Le seuil de $10\\,\\%$ est bien atteint **entre les deux**, et $246$ j est compris entre $222$ et $296$ j : le résultat est cohérent.",
+        "Piège évité : $10\\,\\%$ n'est **pas** « $10$ demi-vies » ni « $t_{1/2}/10$ » — la décroissance est exponentielle, jamais proportionnelle au temps. Résultat arrondi : $t \\approx 2{,}5 \\times 10^{2}$ jours, soit environ $8$ mois d'utilisation."
+      ],
+      "reponse": "$t = \\dfrac{\\ln 10}{\\lambda} = t_{1/2}\\,\\dfrac{\\ln 10}{\\ln 2} \\approx 246$ jours ($\\approx 8$ mois), bien compris entre $3\\,t_{1/2}$ ($12{,}5\\,\\%$) et $4\\,t_{1/2}$ ($6{,}25\\,\\%$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "acido-basique-ph",
+      "enonce": "Un bain de décapage usagé a un pH de $2{,}0$. La réglementation impose de neutraliser l'effluent à la soude (ions $\\mathrm{OH^-}$) avant rejet, avec un pH final entre $5{,}5$ et $8{,}5$. Données : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}}$ mol/L ; couples $\\mathrm{H_3O^+/H_2O}$ et $\\mathrm{H_2O/OH^-}$. a) Calcule $[\\mathrm{H_3O^+}]$ dans le bain usagé. b) Écris l'équation de la réaction de neutralisation entre $\\mathrm{H_3O^+}$ et $\\mathrm{OH^-}$ et identifie le transfert de $\\mathrm{H^+}$. c) Après traitement, le pH vaut $6{,}0$ : par quel facteur $[\\mathrm{H_3O^+}]$ a-t-elle été divisée, et le rejet est-il conforme ? d) Quelle règle de sécurité s'applique à la manipulation de ces solutions ?",
+      "corrige": [
+        "a) $[\\mathrm{H_3O^+}] = 10^{-2{,}0} = 1{,}0 \\times 10^{-2}$ mol/L. Un pH de $2$ est très acide : logique pour un bain de décapage.",
+        "b) Équation : $\\mathrm{H_3O^+ + OH^- \\longrightarrow 2\\,H_2O}$. C'est un transfert de $\\mathrm{H^+}$ entre deux couples **différents** : l'acide $\\mathrm{H_3O^+}$ (couple $\\mathrm{H_3O^+/H_2O}$) **cède** un ion $\\mathrm{H^+}$ à la base $\\mathrm{OH^-}$ (couple $\\mathrm{H_2O/OH^-}$), et chacun se transforme en sa forme conjuguée : de l'eau des deux côtés, d'où le coefficient $2$.",
+        "c) $[\\mathrm{H_3O^+}]$ passe de $10^{-2}$ à $10^{-6}$ mol/L : facteur $\\dfrac{10^{-2}}{10^{-6}} = 10^{4} = 10\\,000$. Piège : $4$ unités de pH ne font pas un facteur $4$ mais un facteur $10^{4}$ — chaque unité de pH vaut un facteur $10$. Le pH final de $6{,}0$ est bien dans la fourchette $[5{,}5\\,;\\,8{,}5]$ : le rejet est **conforme**.",
+        "d) Acides et bases concentrés sont **corrosifs** : gants, lunettes et blouse obligatoires. Et pour toute dilution d'un acide concentré, on verse **toujours l'acide dans l'eau**, jamais l'inverse — sinon échauffement brutal et projections. La neutralisation avant rejet (pH ramené vers $7$) est une obligation industrielle."
+      ],
+      "reponse": "a) $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-2}$ mol/L. b) $\\mathrm{H_3O^+ + OH^- \\to 2\\,H_2O}$ : $\\mathrm{H_3O^+}$ cède un $\\mathrm{H^+}$ à $\\mathrm{OH^-}$. c) Divisée par $10^{4}$ ; pH $6{,}0 \\in [5{,}5\\,;\\,8{,}5]$, rejet conforme. d) EPI, acide versé dans l'eau, neutralisation avant rejet."
+    }
+  ]
+}

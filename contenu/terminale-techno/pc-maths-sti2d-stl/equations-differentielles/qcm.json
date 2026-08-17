@@ -1,0 +1,154 @@
+{
+  "id": "tale-sti2d-math-equations-differentielles-qcm",
+  "chapitre": "tale-sti2d-math-equations-differentielles",
+  "titre": "QCM — Équations différentielles",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "notion-equation-differentielle",
+      "enonce": "Qu'est-ce qu'une équation différentielle ?",
+      "choix": [
+        "Une équation dont l'inconnue est une fonction, reliée à sa dérivée",
+        "Une équation dont l'inconnue est un nombre réel $x$",
+        "Une équation qui compare deux dérivées de fonctions connues",
+        "Une équation qui n'a jamais de solution exacte"
+      ],
+      "reponse": 0,
+      "explication": "Dans $y' = ay + b$, l'inconnue $y$ est une **fonction** : résoudre, c'est trouver toutes les fonctions dont la dérivée vérifie la relation. Le piège : la confondre avec une équation numérique classique, où l'inconnue est un nombre — ici un nombre ne peut pas être « dérivé »."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "resoudre-y-prime-ay",
+      "enonce": "Quelles sont toutes les solutions de l'équation différentielle $y' = 5y$ ?",
+      "choix": [
+        "$y(x) = C\\,e^{5x}$, avec $C \\in \\mathbb{R}$",
+        "$y(x) = C\\,e^{-5x}$, avec $C \\in \\mathbb{R}$",
+        "$y(x) = e^{5x} + C$, avec $C \\in \\mathbb{R}$",
+        "$y(x) = 5e^{x}$"
+      ],
+      "reponse": 0,
+      "explication": "Les solutions de $y' = ay$ sont les $y(x) = C\\,e^{ax}$ : ici $a = 5$, donc $C\\,e^{5x}$. Le piège : $e^{5x} + C$ ajoute la constante au lieu de la multiplier — en dérivant, on obtient $5e^{5x} \\neq 5(e^{5x} + C)$ ; et $5e^{x}$ met le coefficient au mauvais endroit."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "verifier-solution",
+      "enonce": "La fonction $f(x) = 3e^{-2x}$ est solution de l'équation différentielle…",
+      "choix": [
+        "$y' = 3y$",
+        "$y' = -2y$",
+        "$y' = -2y + 3$",
+        "$y' = 2y$"
+      ],
+      "reponse": 1,
+      "explication": "On dérive : $f'(x) = 3 \\times (-2)e^{-2x} = -6e^{-2x} = -2 \\times 3e^{-2x} = -2f(x)$, donc $f$ vérifie $y' = -2y$. Le piège : le coefficient $3$ devant l'exponentielle est la constante $C$, il ne joue aucun rôle dans l'équation — c'est le $-2$ de l'exposant qui donne le $a$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "resoudre-y-prime-ay-b",
+      "enonce": "Quelle est la solution particulière constante de l'équation $y' = 2y - 8$ ?",
+      "choix": [
+        "$y_p = 4$",
+        "$y_p = -4$",
+        "$y_p = 8$",
+        "$y_p = -\\dfrac{1}{4}$"
+      ],
+      "reponse": 0,
+      "explication": "Une fonction constante a une dérivée nulle : on pose $y' = 0$, soit $0 = 2y - 8$, d'où $y_p = 4$. C'est bien $-\\frac{b}{a} = -\\frac{-8}{2}$. Le piège : répondre $-4$ en appliquant $-\\frac{b}{a}$ avec $b = 8$ au lieu de $b = -8$ — le signe de $b$ se lit dans l'équation, d'où l'intérêt de poser $y' = 0$ et de résoudre à la main."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "resoudre-y-prime-ay-b",
+      "enonce": "Quelles sont toutes les solutions de l'équation $y' = -3y + 6$ ?",
+      "choix": [
+        "$y(x) = C\\,e^{-3x} + 2$, avec $C \\in \\mathbb{R}$",
+        "$y(x) = C\\,e^{-3x} - 2$, avec $C \\in \\mathbb{R}$",
+        "$y(x) = C\\,e^{3x} + 2$, avec $C \\in \\mathbb{R}$",
+        "$y(x) = C\\,e^{-3x} + 6$, avec $C \\in \\mathbb{R}$"
+      ],
+      "reponse": 0,
+      "explication": "Solution constante : $0 = -3y + 6$ donne $y_p = 2$ ; puis on ajoute les solutions de $y' = -3y$, soit $y(x) = C\\,e^{-3x} + 2$. Les pièges : $-2$ vient d'une erreur de signe sur $-\\frac{b}{a}$, $e^{3x}$ oublie le signe de $a = -3$ dans l'exposant, et $+6$ recopie $b$ au lieu de calculer l'équilibre $-\\frac{b}{a}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "condition-initiale",
+      "enonce": "Quelle est la solution de $y' = 2y$ vérifiant $y(0) = 3$ ?",
+      "choix": [
+        "$y(x) = 3e^{2x}$",
+        "$y(x) = 2e^{3x}$",
+        "$y(x) = 3e^{-2x}$",
+        "$y(x) = e^{2x} + 2$"
+      ],
+      "reponse": 0,
+      "explication": "Les solutions de $y' = 2y$ sont $C\\,e^{2x}$, et $y(0) = C\\,e^{0} = C = 3$ : la solution est $3e^{2x}$. Le piège : $2e^{3x}$ échange le rôle du coefficient $a$ (qui va dans l'**exposant**) et de la condition initiale (qui donne la constante **en facteur**)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "condition-initiale",
+      "enonce": "Quelle est la solution de $y' = -y + 4$ vérifiant $y(0) = 1$ ?",
+      "choix": [
+        "$y(x) = 4 - 3e^{-x}$",
+        "$y(x) = 4 + 3e^{-x}$",
+        "$y(x) = e^{-x} + 4$",
+        "$y(x) = -3e^{-x}$"
+      ],
+      "reponse": 0,
+      "explication": "Solutions générales : $y(x) = C\\,e^{-x} + 4$ (équilibre $-\\frac{b}{a} = 4$). Puis $y(0) = C + 4 = 1$ donne $C = -3$, d'où $y(x) = 4 - 3e^{-x}$. Le piège : poser $C = y(0) = 1$ (réponse $e^{-x} + 4$) — la constante n'est pas la valeur initiale dès que l'équation a un second membre $b$ ; et $-3e^{-x}$ oublie de recoller le $+4$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "application-rc",
+      "enonce": "Un condensateur de capacité $C_0 = 500$ µF se charge à travers une résistance $R = 2$ kΩ. Quelle est la constante de temps $\\tau = R\\,C_0$ du circuit ?",
+      "choix": [
+        "$\\tau = 1$ s",
+        "$\\tau = 1000$ s",
+        "$\\tau = 10$ s",
+        "$\\tau = 0{,}1$ s"
+      ],
+      "reponse": 0,
+      "explication": "On convertit d'abord : $R = 2 \\times 10^3$ Ω et $C_0 = 500 \\times 10^{-6} = 5 \\times 10^{-4}$ F, donc $\\tau = 2 \\times 10^3 \\times 5 \\times 10^{-4} = 1$ s. Le piège n°1 du chapitre : multiplier $2 \\times 500 = 1000$ en oubliant les préfixes kilo ($10^3$) et micro ($10^{-6}$) — $\\tau$ n'est en secondes qu'avec des ohms et des farads."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "application-newton",
+      "enonce": "Un objet se refroidit selon la loi de Newton $\\theta' = -0{,}5\\,(\\theta - 20)$, où $\\theta$ est sa température en °C. Vers quelle valeur tend $\\theta(t)$ quand $t$ devient très grand ?",
+      "choix": [
+        "$20$ °C",
+        "$0$ °C",
+        "$40$ °C",
+        "Cela dépend de la température initiale"
+      ],
+      "reponse": 0,
+      "explication": "En développant, $\\theta' = -0{,}5\\,\\theta + 10$ : la solution constante est $-\\frac{b}{a} = 20$ et, comme $a = -0{,}5 < 0$, le terme $C\\,e^{-0{,}5t}$ s'éteint : toutes les solutions tendent vers $20$ °C, la température ambiante. Le piège : croire que la limite dépend de $\\theta(0)$ — la condition initiale ne change que le point de départ ($C$), pas l'équilibre ; et $0$ °C serait la limite de $y' = ay$ sans second membre."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "verifier-solution",
+      "enonce": "La fonction $f(x) = 5e^{2x} - 3$ est solution de l'équation différentielle…",
+      "choix": [
+        "$y' = 2y + 6$",
+        "$y' = 2y - 3$",
+        "$y' = 2y - 6$",
+        "$y' = -2y + 6$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 10e^{2x}$ et $2f(x) + 6 = 10e^{2x} - 6 + 6 = 10e^{2x}$ : l'égalité vaut pour tout $x$, donc $f$ vérifie $y' = 2y + 6$. On retrouve la solution constante $-\\frac{b}{a} = -\\frac{6}{2} = -3$, cohérente avec le $-3$ de $f$. Le piège : recopier le $-3$ de la fonction comme second membre ($y' = 2y - 3$) — le second membre est $-a \\times y_p$, pas la constante de la solution."
+    }
+  ]
+}

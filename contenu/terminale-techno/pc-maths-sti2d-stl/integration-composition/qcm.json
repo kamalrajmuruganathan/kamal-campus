@@ -1,0 +1,154 @@
+{
+  "id": "tale-sti2d-math-integration-composition-qcm",
+  "chapitre": "tale-sti2d-math-integration-composition",
+  "titre": "QCM — Composition, primitives et intégration",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "composee",
+      "enonce": "On pose $h(x) = (3x+1)^4$. Comment écrire $h$ comme une composée $v \\circ u$ ?",
+      "choix": [
+        "$u(x) = 3x + 1$ et $v(x) = x^4$",
+        "$u(x) = x^4$ et $v(x) = 3x + 1$",
+        "$u(x) = 3x$ et $v(x) = (x+1)^4$",
+        "$u(x) = x + 1$ et $v(x) = 3x^4$"
+      ],
+      "reponse": 0,
+      "explication": "Dans $v \\circ u$, on applique $u$ EN PREMIER : $x \\mapsto 3x+1 \\mapsto (3x+1)^4$. La fonction intérieure est donc $u(x) = 3x+1$ et l'extérieure $v(x) = x^4$. Le piège est d'inverser l'ordre : avec $u(x) = x^4$ puis $v(x) = 3x+1$, on obtiendrait $(v \\circ u)(x) = 3x^4 + 1$, une tout autre fonction."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "integrale-aire",
+      "enonce": "Que vaut $\\displaystyle\\int_1^4 3\\,dx$ ?",
+      "choix": [
+        "$12$",
+        "$9$",
+        "$3$",
+        "$7$"
+      ],
+      "reponse": 1,
+      "explication": "La fonction constante $f(x) = 3$ est positive : l'intégrale est l'aire du rectangle de largeur $4 - 1 = 3$ et de hauteur $3$, soit $3 \\times 3 = 9$. Le piège : $12$ vient de la largeur $4$ (on oublie que le domaine commence en $x = 1$, pas en $0$), et $7$ additionne les nombres au lieu de calculer une aire."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $f(x) = e^{-3x}$ ?",
+      "choix": [
+        "$f'(x) = e^{-3x}$",
+        "$f'(x) = 3e^{-3x}$",
+        "$f'(x) = -3e^{-3x}$",
+        "$f'(x) = -3e^{-3x-1}$"
+      ],
+      "reponse": 2,
+      "explication": "C'est la forme $e^u$ avec $u = -3x$, donc $f' = u'e^u = -3e^{-3x}$. Le piège n°1 du chapitre : oublier le facteur $u'$ et répondre $e^{-3x}$. Deuxième piège : perdre le signe moins de $u' = -3$. Enfin, $-3e^{-3x-1}$ applique à tort la règle des puissances $x^n$ à un exposant qui contient la variable."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $f(x) = \\ln(x^2+1)$ ?",
+      "choix": [
+        "$f'(x) = \\dfrac{1}{x^2+1}$",
+        "$f'(x) = \\dfrac{2x}{x^2+1}$",
+        "$f'(x) = 2x\\,\\ln(x^2+1)$",
+        "$f'(x) = \\dfrac{1}{2x}$"
+      ],
+      "reponse": 1,
+      "explication": "C'est la forme $\\ln u$ avec $u = x^2+1 > 0$, donc $f' = \\dfrac{u'}{u} = \\dfrac{2x}{x^2+1}$. Le piège : répondre $\\frac{1}{x^2+1}$, c'est appliquer la formule $(\\ln x)' = \\frac{1}{x}$ en oubliant le facteur $u' = 2x$ au numérateur — le réflexe « dérivée de l'intérieure » manque."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "primitives-composees",
+      "enonce": "Quelle est une primitive de $f(x) = 2x\\,e^{x^2}$ ?",
+      "choix": [
+        "$F(x) = x^2 e^{x^2}$",
+        "$F(x) = 2e^{x^2}$",
+        "$F(x) = e^{x^2}$",
+        "$F(x) = e^{x^3/3}$"
+      ],
+      "reponse": 2,
+      "explication": "On reconnaît la forme $u'e^u$ avec $u = x^2$ et $u' = 2x$, exactement le facteur présent : une primitive est $e^u = e^{x^2}$. Vérification en redérivant : $(e^{x^2})' = 2x\\,e^{x^2}$. ✓ Le piège : $e^{x^3/3}$ vient de « primitiver l'exposant », ce qui n'a aucun sens — on ne primitive jamais morceau par morceau à l'intérieur d'une composée."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "proprietes",
+      "enonce": "On sait que $\\displaystyle\\int_0^2 f(x)\\,dx = 3$ et $\\displaystyle\\int_2^5 f(x)\\,dx = 4$. Que vaut $\\displaystyle\\int_0^5 f(x)\\,dx$ ?",
+      "choix": [
+        "$7$",
+        "$12$",
+        "$1$",
+        "On ne peut pas savoir sans connaître $f$"
+      ],
+      "reponse": 0,
+      "explication": "C'est la relation de Chasles : $\\int_0^2 f + \\int_2^5 f = \\int_0^5 f = 3 + 4 = 7$ — on recolle deux aires côte à côte, les bornes s'enchaînant ($0 \\to 2 \\to 5$). Le piège : multiplier les intégrales ($12$) ou les soustraire ($1$) ; et la connaissance de $f$ n'est pas nécessaire, les deux valeurs suffisent."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "integrale-primitive",
+      "enonce": "Que vaut $\\displaystyle\\int_0^1 x\\,e^{x^2}\\,dx$ ?",
+      "choix": [
+        "$e - 1$",
+        "$\\dfrac{e-1}{2}$",
+        "$\\dfrac{e}{2}$",
+        "$\\dfrac{e^2-1}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "Forme $u'e^u$ avec $u = x^2$, $u' = 2x$ : il manque un facteur $2$, donc $F(x) = \\frac{1}{2}e^{x^2}$ et $\\int_0^1 x e^{x^2} dx = \\frac{1}{2}e - \\frac{1}{2}e^0 = \\frac{e-1}{2}$. Les pièges : $e - 1$ oublie l'ajustement de la constante $\\frac{1}{2}$ ; $\\frac{e}{2}$ oublie $F(0) = \\frac{1}{2}$ (car $e^0 = 1$, pas $0$) ; $\\frac{e^2-1}{2}$ évalue $e^{x^2}$ en confondant $1^2$ et $2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "valeur-moyenne",
+      "enonce": "Quelle est la valeur moyenne de $f(x) = x^2$ sur l'intervalle $[0\\,;3]$ ?",
+      "choix": [
+        "$9$",
+        "$3$",
+        "$27$",
+        "$1$"
+      ],
+      "reponse": 1,
+      "explication": "$\\mu = \\dfrac{1}{3-0}\\int_0^3 x^2\\,dx = \\dfrac{1}{3}\\left[\\dfrac{x^3}{3}\\right]_0^3 = \\dfrac{1}{3} \\times 9 = 3$. Le piège classique : répondre $9$, c'est-à-dire l'intégrale seule, en oubliant le facteur $\\frac{1}{b-a}$ — une intégrale est une aire, pas une moyenne. Et $27$ est $F(3) = \\frac{27}{3}$ mal calculé : c'est $3^3$ sans la division par $3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "valeur-moyenne",
+      "enonce": "Un signal sinusoïdal $u(t) = U_{\\max}\\sin(\\omega t)$ est moyenné sur une période complète $T$. Que vaut sa valeur moyenne $\\langle u \\rangle = \\dfrac{1}{T}\\displaystyle\\int_0^T u(t)\\,dt$ ?",
+      "choix": [
+        "$U_{\\max}$",
+        "$\\dfrac{U_{\\max}}{2}$",
+        "$\\dfrac{U_{\\max}}{\\sqrt{2}}$",
+        "$0$"
+      ],
+      "reponse": 3,
+      "explication": "Sur une période complète, l'aire de l'alternance positive compense exactement celle de l'alternance négative (l'intégrale compte les aires sous l'axe en négatif) : l'intégrale, donc la moyenne, est nulle. C'est pourquoi un voltmètre en position DC affiche $0$ sur une sinusoïde pure. Le piège : $\\frac{U_{\\max}}{\\sqrt{2}}$ est la valeur EFFICACE, une autre grandeur, qui elle n'est jamais nulle."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "integrale-aire",
+      "enonce": "Pour encadrer $\\displaystyle\\int_0^1 x^2\\,dx$ par la méthode des rectangles, on découpe $[0\\,;1]$ en $5$ tranches et on prend la hauteur au bord GAUCHE de chaque tranche ($f$ est croissante et positive). La somme des aires des rectangles obtenus vaut $0{,}24$. Que peut-on affirmer ?",
+      "choix": [
+        "$0{,}24$ est une valeur approchée par excès de l'intégrale",
+        "$0{,}24$ est une valeur approchée par défaut de l'intégrale",
+        "$0{,}24$ est la valeur exacte de l'intégrale",
+        "On ne peut rien dire sans calculer la primitive"
+      ],
+      "reponse": 1,
+      "explication": "Comme $f$ est croissante, la hauteur prise au bord gauche est la plus PETITE valeur de $f$ sur chaque tranche : chaque rectangle reste sous la courbe, et la somme $0{,}24$ minore l'intégrale (qui vaut $\\frac{1}{3} \\approx 0{,}33$). Le piège : croire que la méthode donne la valeur exacte — elle donne un encadrement ($0{,}24 \\leqslant \\int \\leqslant 0{,}44$ avec les bords droits), qui se resserre quand le nombre de tranches augmente."
+    }
+  ]
+}

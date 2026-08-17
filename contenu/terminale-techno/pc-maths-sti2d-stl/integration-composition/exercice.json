@@ -1,0 +1,92 @@
+{
+  "id": "tale-sti2d-math-integration-composition-exos",
+  "chapitre": "tale-sti2d-math-integration-composition",
+  "titre": "Exercices — Composition, primitives et intégration",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Dériver chacune des fonctions suivantes en identifiant d'abord la fonction intérieure $u$ : (a) $f(x) = (2x+1)^3$ ; (b) $g(t) = e^{-0{,}5t}$ ; (c) $h(x) = \\ln(3x+2)$, définie pour $x > -\\dfrac{2}{3}$ ; (d) $k(t) = \\cos\\left(2t + \\dfrac{\\pi}{3}\\right)$.",
+      "corrige": [
+        "(a) Forme $u^n$ avec $u = 2x+1$, $u' = 2$, $n = 3$ : $f'(x) = n\\,u'\\,u^{n-1} = 3 \\times 2 \\times (2x+1)^2 = 6(2x+1)^2$.",
+        "(b) Forme $e^u$ avec $u = -0{,}5t$, $u' = -0{,}5$ : $g'(t) = u'e^u = -0{,}5\\,e^{-0{,}5t}$. Ne pas oublier le facteur $-0{,}5$ : c'est lui qui rend $g$ décroissante (décharge d'un condensateur, décroissance radioactive...).",
+        "(c) Forme $\\ln u$ avec $u = 3x+2$, $u' = 3$. Pour $x > -\\dfrac{2}{3}$, $u > 0$, donc $h'(x) = \\dfrac{u'}{u} = \\dfrac{3}{3x+2}$.",
+        "(d) Forme $\\cos u$ avec $u = 2t + \\dfrac{\\pi}{3}$, $u' = 2$ : $k'(t) = -u'\\sin u = -2\\sin\\left(2t + \\dfrac{\\pi}{3}\\right)$. Deux pièges cumulés : le signe moins de la dérivée du cosinus ET le facteur $u' = 2$."
+      ],
+      "reponse": "(a) $f'(x) = 6(2x+1)^2$ ; (b) $g'(t) = -0{,}5\\,e^{-0{,}5t}$ ; (c) $h'(x) = \\dfrac{3}{3x+2}$ ; (d) $k'(t) = -2\\sin\\left(2t + \\dfrac{\\pi}{3}\\right)$."
+      },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "integrale-primitive",
+      "enonce": "Soit $f(x) = 3x^2 + 1$. (a) Justifier que $F(x) = x^3 + x$ est une primitive de $f$. (b) Calculer $I = \\displaystyle\\int_0^2 f(x)\\,dx$. (c) En déduire la valeur moyenne de $f$ sur $[0\\,;2]$. (d) Interpréter géométriquement cette valeur moyenne.",
+      "corrige": [
+        "(a) On dérive $F$ : $F'(x) = 3x^2 + 1 = f(x)$, donc $F$ est bien une primitive de $f$. Redériver la primitive proposée est LE réflexe de vérification à avoir systématiquement.",
+        "(b) $I = \\big[x^3 + x\\big]_0^2 = F(2) - F(0) = (8 + 2) - 0 = 10$. Attention à l'ordre : borne du haut d'abord, $F(2) - F(0)$.",
+        "(c) $\\mu = \\dfrac{1}{2-0}\\displaystyle\\int_0^2 f(x)\\,dx = \\dfrac{10}{2} = 5$. Ne pas oublier le facteur $\\dfrac{1}{b-a}$ : l'intégrale seule ($10$) est une aire, pas une moyenne.",
+        "(d) Comme $f$ est positive sur $[0\\,;2]$, $I = 10$ est l'aire sous la courbe. Le rectangle de base $[0\\,;2]$ et de hauteur $\\mu = 5$ a la même aire : $2 \\times 5 = 10$. La valeur moyenne est la hauteur du rectangle qui « aplatit » la courbe sans changer l'aire."
+      ],
+      "reponse": "(a) $F' = f$ ; (b) $I = 10$ ; (c) $\\mu = 5$ ; (d) hauteur du rectangle de base $[0\\,;2]$ ayant la même aire ($10$ u.a.) que le domaine sous la courbe."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "primitives-composees",
+      "enonce": "Déterminer une primitive de chacune des fonctions suivantes, en identifiant la forme ($u'u^n$, $u'e^u$ ou $u'\\cos u$) et en ajustant si besoin la constante multiplicative : (a) $f(x) = 3x^2(x^3+1)^2$ ; (b) $g(x) = e^{4x}$ ; (c) $h(t) = \\cos(2t)$ ; (d) $k(x) = 4x(x^2+3)^5$.",
+      "corrige": [
+        "(a) $u = x^3 + 1$, $u' = 3x^2$ : le facteur $u'$ est exactement présent, forme $u'u^2$. Une primitive est $\\dfrac{u^3}{3} = \\dfrac{(x^3+1)^3}{3}$. Vérification : $\\left(\\dfrac{(x^3+1)^3}{3}\\right)' = \\dfrac{3 \\times 3x^2 (x^3+1)^2}{3} = 3x^2(x^3+1)^2$. ✓",
+        "(b) $u = 4x$, $u' = 4$ : il manque un facteur $4$. On écrit $g(x) = \\dfrac{1}{4} \\times 4e^{4x}$, forme $\\frac{1}{4} \\times u'e^u$, d'où $G(x) = \\dfrac{1}{4}e^{4x}$. Ni $e^{4x}$ (dériver donnerait $4e^{4x}$), ni $4e^{4x}$ : on divise par $u'$, on ne multiplie pas.",
+        "(c) $u = 2t$, $u' = 2$ : $h(t) = \\dfrac{1}{2} \\times 2\\cos(2t)$, forme $\\frac{1}{2} \\times u'\\cos u$, d'où $H(t) = \\dfrac{1}{2}\\sin(2t)$. Vérification : $H'(t) = \\dfrac{1}{2} \\times 2\\cos(2t) = \\cos(2t)$. ✓",
+        "(d) $u = x^2 + 3$, $u' = 2x$. Le facteur présent est $4x = 2 \\times 2x$, donc $k(x) = 2 \\times u'u^5$ et une primitive est $K(x) = 2 \\times \\dfrac{u^6}{6} = \\dfrac{(x^2+3)^6}{3}$. Piège double : ajuster la constante ($4x$ n'est pas $u'$) ET ne pas oublier le $n+1 = 6$ au dénominateur de $\\dfrac{u^{n+1}}{n+1}$."
+      ],
+      "reponse": "(a) $\\dfrac{(x^3+1)^3}{3}$ ; (b) $\\dfrac{1}{4}e^{4x}$ ; (c) $\\dfrac{1}{2}\\sin(2t)$ ; (d) $\\dfrac{(x^2+3)^6}{3}$ (chacune à une constante additive près)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "integrale-aire",
+      "enonce": "Soit $f(x) = x^2 - 4$. (a) Étudier le signe de $f$ sur $[0\\,;3]$. (b) Calculer $\\displaystyle\\int_0^2 f(x)\\,dx$ et en déduire l'aire, en unités d'aire, du domaine compris entre la courbe et l'axe des abscisses pour $x \\in [0\\,;2]$. (c) Calculer $\\displaystyle\\int_2^3 f(x)\\,dx$, puis $\\displaystyle\\int_0^3 f(x)\\,dx$ à l'aide de la relation de Chasles. (d) Expliquer pourquoi $\\displaystyle\\int_0^3 f(x)\\,dx$ n'est PAS l'aire totale entre la courbe et l'axe sur $[0\\,;3]$, et calculer cette aire totale.",
+      "corrige": [
+        "(a) $x^2 - 4 = (x-2)(x+2)$ s'annule en $x = 2$ sur $[0\\,;3]$ : $f(x) \\leqslant 0$ sur $[0\\,;2]$ et $f(x) \\geqslant 0$ sur $[2\\,;3]$.",
+        "(b) Une primitive de $f$ est $F(x) = \\dfrac{x^3}{3} - 4x$. Donc $\\displaystyle\\int_0^2 f(x)\\,dx = F(2) - F(0) = \\dfrac{8}{3} - 8 = -\\dfrac{16}{3}$. Comme $f \\leqslant 0$ sur $[0\\,;2]$, l'intégrale compte l'aire en négatif : l'aire du domaine vaut $-\\left(-\\dfrac{16}{3}\\right) = \\dfrac{16}{3}$ unités d'aire.",
+        "(c) $\\displaystyle\\int_2^3 f(x)\\,dx = F(3) - F(2) = (9 - 12) - \\left(\\dfrac{8}{3} - 8\\right) = -3 + \\dfrac{16}{3} = \\dfrac{7}{3}$. Par Chasles : $\\displaystyle\\int_0^3 f = \\int_0^2 f + \\int_2^3 f = -\\dfrac{16}{3} + \\dfrac{7}{3} = -3$.",
+        "(d) L'intégrale $-3$ est la DIFFÉRENCE entre l'aire au-dessus de l'axe $\\left(\\dfrac{7}{3}\\right)$ et l'aire en dessous $\\left(\\dfrac{16}{3}\\right)$ : les deux se compensent partiellement. L'aire totale, elle, additionne les deux aires positives : $\\mathcal{A} = \\dfrac{16}{3} + \\dfrac{7}{3} = \\dfrac{23}{3} \\approx 7{,}67$ unités d'aire. Retiens : aire totale $\\neq$ valeur absolue de l'intégrale ($|-3| = 3 \\neq \\frac{23}{3}$)."
+      ],
+      "reponse": "(a) $f \\leqslant 0$ sur $[0\\,;2]$, $f \\geqslant 0$ sur $[2\\,;3]$ ; (b) $\\int_0^2 f = -\\dfrac{16}{3}$, aire $= \\dfrac{16}{3}$ u.a. ; (c) $\\int_2^3 f = \\dfrac{7}{3}$ et $\\int_0^3 f = -3$ ; (d) aire totale $= \\dfrac{23}{3}$ u.a., car l'intégrale compense les aires de signes opposés."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "valeur-moyenne",
+      "enonce": "Un pont redresseur simple alternance ne laisse passer que la partie positive d'une tension sinusoïdale $u(t) = 10\\sin(100\\pi t)$ (en volts, $t$ en secondes), de fréquence $50$ Hz donc de période $T = 0{,}02$ s. (a) Vérifier, en dérivant, que $G(t) = -\\dfrac{1}{100\\pi}\\cos(100\\pi t)$ est une primitive de $g(t) = \\sin(100\\pi t)$. (b) Calculer $\\displaystyle\\int_0^{0{,}01} u(t)\\,dt$ (l'intégrale sur la demi-période où le signal est positif). (c) En déduire la valeur moyenne $\\langle u \\rangle$ du signal sur $[0\\,;0{,}01]$ et vérifier qu'elle vaut $\\dfrac{2U_{\\max}}{\\pi}$. (d) Que vaudrait la valeur moyenne de la sinusoïde NON redressée sur une période complète ? Interpréter.",
+      "corrige": [
+        "(a) $G$ est de la forme $-\\dfrac{1}{100\\pi}\\cos(w)$ avec $w = 100\\pi t$, $w' = 100\\pi$. Donc $G'(t) = -\\dfrac{1}{100\\pi} \\times \\big(-100\\pi\\sin(100\\pi t)\\big) = \\sin(100\\pi t) = g(t)$. ✓ C'est l'ajustement de constante habituel : primitiver $\\sin(\\omega t)$ fait apparaître un facteur $\\dfrac{1}{\\omega}$.",
+        "(b) Par linéarité, $\\displaystyle\\int_0^{0{,}01} 10\\sin(100\\pi t)\\,dt = 10\\big[G(t)\\big]_0^{0{,}01} = -\\dfrac{10}{100\\pi}\\big(\\cos(100\\pi \\times 0{,}01) - \\cos 0\\big)$. Or $100\\pi \\times 0{,}01 = \\pi$, et $\\cos\\pi = -1$, $\\cos 0 = 1$ : l'intégrale vaut $-\\dfrac{1}{10\\pi}(-1 - 1) = \\dfrac{2}{10\\pi} = \\dfrac{1}{5\\pi} \\approx 0{,}064$ V·s.",
+        "(c) $\\langle u \\rangle = \\dfrac{1}{0{,}01 - 0}\\displaystyle\\int_0^{0{,}01} u(t)\\,dt = 100 \\times \\dfrac{1}{5\\pi} = \\dfrac{20}{\\pi} \\approx 6{,}37$ V. Avec $U_{\\max} = 10$ V : $\\dfrac{2U_{\\max}}{\\pi} = \\dfrac{20}{\\pi}$. ✓ C'est la formule du cours d'électricité, ici démontrée par le calcul intégral.",
+        "(d) Sur une période complète $[0\\,;0{,}02]$, l'alternance négative donne une intégrale exactement opposée à celle de l'alternance positive (aires comptées en négatif sous l'axe) : $\\langle u \\rangle = 0$. C'est pourquoi un voltmètre DC affiche $0$ V sur une tension sinusoïdale pure — et pourquoi on redresse le signal avant de le moyenner. Ne pas confondre avec la valeur efficace $\\dfrac{U_{\\max}}{\\sqrt{2}} \\approx 7{,}07$ V, qui n'est pas nulle."
+      ],
+      "reponse": "(a) $G' = g$ ✓ ; (b) $\\displaystyle\\int_0^{0{,}01} u(t)\\,dt = \\dfrac{1}{5\\pi} \\approx 0{,}064$ V·s ; (c) $\\langle u \\rangle = \\dfrac{20}{\\pi} \\approx 6{,}37$ V $= \\dfrac{2U_{\\max}}{\\pi}$ ; (d) $0$ V : les deux alternances se compensent."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "integrale-aire",
+      "enonce": "On veut estimer $I = \\displaystyle\\int_0^1 x^2\\,dx$ par la méthode des rectangles, puis retrouver la valeur exacte. On découpe $[0\\,;1]$ en $5$ tranches de largeur $0{,}2$. (a) Calculer la somme $s$ des aires des $5$ rectangles dont la hauteur est prise au bord gauche de chaque tranche, puis la somme $S$ avec la hauteur au bord droit. (b) Justifier l'encadrement $s \\leqslant I \\leqslant S$. (c) Calculer la valeur exacte de $I$ à l'aide d'une primitive et vérifier l'encadrement. (d) On pose $F(x) = \\displaystyle\\int_0^x t^2\\,dt$. Exprimer $F(x)$ puis vérifier que $F'(x) = x^2$. Que représente $F(x)$ graphiquement ?",
+      "corrige": [
+        "(a) Bords gauches : $s = 0{,}2\\,(0^2 + 0{,}2^2 + 0{,}4^2 + 0{,}6^2 + 0{,}8^2) = 0{,}2 \\times (0 + 0{,}04 + 0{,}16 + 0{,}36 + 0{,}64) = 0{,}2 \\times 1{,}2 = 0{,}24$. Bords droits : $S = 0{,}2\\,(0{,}2^2 + 0{,}4^2 + 0{,}6^2 + 0{,}8^2 + 1^2) = 0{,}2 \\times 2{,}2 = 0{,}44$.",
+        "(b) La fonction $x \\mapsto x^2$ est croissante et positive sur $[0\\,;1]$ : sur chaque tranche, la hauteur au bord gauche est la plus petite valeur de $f$ (rectangle sous la courbe) et la hauteur au bord droit la plus grande (rectangle qui dépasse). En sommant : $s \\leqslant I \\leqslant S$, soit $0{,}24 \\leqslant I \\leqslant 0{,}44$.",
+        "(c) Une primitive de $x^2$ est $\\dfrac{x^3}{3}$, donc $I = \\left[\\dfrac{x^3}{3}\\right]_0^1 = \\dfrac{1}{3} \\approx 0{,}333$. On a bien $0{,}24 \\leqslant \\dfrac{1}{3} \\leqslant 0{,}44$. ✓ En augmentant le nombre de tranches, $s$ et $S$ se rapprocheraient de $\\dfrac{1}{3}$ : c'est ce que fait une calculatrice.",
+        "(d) $F(x) = \\left[\\dfrac{t^3}{3}\\right]_0^x = \\dfrac{x^3}{3}$, et $F'(x) = \\dfrac{3x^2}{3} = x^2$. ✓ On illustre le théorème du cours : la fonction « aire accumulée » $x \\mapsto \\int_0^x f(t)\\,dt$ est LA primitive de $f$ qui s'annule en $0$. Graphiquement, $F(x)$ est l'aire sous la parabole entre les abscisses $0$ et $x$ — dériver l'aire redonne la fonction."
+      ],
+      "reponse": "(a) $s = 0{,}24$ et $S = 0{,}44$ ; (b) $f$ croissante positive, donc $0{,}24 \\leqslant I \\leqslant 0{,}44$ ; (c) $I = \\dfrac{1}{3} \\approx 0{,}333$, dans l'encadrement ; (d) $F(x) = \\dfrac{x^3}{3}$, $F' = f$ : $F(x)$ est l'aire sous la courbe entre $0$ et $x$."
+    }
+  ]
+}

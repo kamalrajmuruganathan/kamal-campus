@@ -1,0 +1,91 @@
+{
+  "id": "tale-sti2d-pc-energie-electrique-thermique-exos",
+  "chapitre": "tale-sti2d-pc-energie-electrique-thermique",
+  "titre": "Exercices — Énergie électrique, thermique et lumineuse",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Surveille les unités : c'est là que se perdent les points.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "regime-sinusoidal",
+      "enonce": "Pour contrôler l'alimentation d'une maquette, un technicien branche un oscilloscope à la sortie d'un transformateur. Il lit sur l'écran une tension sinusoïdale de valeur maximale $U_{\\text{max}} = 17{,}0\\ \\mathrm{V}$ et de période $T = 20\\ \\mathrm{ms}$. Donnée : $U = \\dfrac{U_{\\text{max}}}{\\sqrt{2}}$. Calcule la fréquence $f$ de cette tension, puis la valeur efficace $U$ qu'afficherait un multimètre en mode AC.",
+      "corrige": [
+        "Fréquence : on convertit d'abord la période en secondes, $T = 20\\ \\mathrm{ms} = 0{,}020\\ \\mathrm{s}$, puis $f = \\dfrac{1}{T} = \\dfrac{1}{0{,}020} = 50\\ \\mathrm{Hz}$. On retrouve la fréquence du réseau : le transformateur change la tension, pas la fréquence.",
+        "Valeur efficace : $U = \\dfrac{U_{\\text{max}}}{\\sqrt{2}} = \\dfrac{17{,}0}{\\sqrt{2}} \\approx 12{,}0\\ \\mathrm{V}$. C'est cette valeur, et non $17{,}0\\ \\mathrm{V}$, qu'affiche un multimètre en mode AC.",
+        "Contrôle des pièges : on divise bien par $\\sqrt{2} \\approx 1{,}41$ et non par $2$ (qui donnerait $8{,}5\\ \\mathrm{V}$), et on n'a pas confondu la lecture d'oscilloscope ($U_{\\text{max}}$, $T$) avec celle du multimètre ($U$ efficace)."
+      ],
+      "reponse": "$f = 50\\ \\mathrm{Hz}$ et $U \\approx 12{,}0\\ \\mathrm{V}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "energie-interne",
+      "enonce": "Le chauffe-eau électrique d'un pavillon contient $200\\ \\mathrm{L}$ d'eau (masse volumique de l'eau : $1{,}0\\ \\mathrm{kg}$ par litre) qu'il porte de $15\\ ^\\circ\\mathrm{C}$ à $60\\ ^\\circ\\mathrm{C}$. Données : $\\Delta U = m\\,c\\,\\Delta T$ ; $c_{\\text{eau}} = 4185\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$ ; $1\\ \\mathrm{kWh} = 3{,}6 \\times 10^6\\ \\mathrm{J}$. Calcule la variation d'énergie interne de l'eau en joules puis en kWh, et la durée de chauffe si la résistance fournit $2400\\ \\mathrm{W}$ sans pertes.",
+      "corrige": [
+        "Masse d'eau : $m = 200\\ \\mathrm{L} \\times 1{,}0\\ \\mathrm{kg/L} = 200\\ \\mathrm{kg}$. Écart de température : $\\Delta T = 60 - 15 = 45\\ ^\\circ\\mathrm{C} = 45\\ \\mathrm{K}$ — un écart a la même valeur en °C et en K, on n'ajoute surtout pas $273$.",
+        "Énergie : $\\Delta U = m\\,c\\,\\Delta T = 200 \\times 4185 \\times 45 \\approx 3{,}77 \\times 10^7\\ \\mathrm{J}$.",
+        "Conversion : $\\dfrac{3{,}77 \\times 10^7}{3{,}6 \\times 10^6} \\approx 10{,}5\\ \\mathrm{kWh}$ — l'ordre de grandeur d'une bonne partie de la consommation électrique quotidienne du pavillon.",
+        "Durée : la puissance est l'énergie fournie par seconde, donc $t = \\dfrac{\\Delta U}{P} = \\dfrac{3{,}77 \\times 10^7}{2400} \\approx 1{,}57 \\times 10^4\\ \\mathrm{s}$, soit environ $4\\ \\mathrm{h}\\ 22\\ \\mathrm{min}$. C'est pour cela que les chauffe-eau tournent la nuit, aux heures creuses."
+      ],
+      "reponse": "$\\Delta U \\approx 3{,}77 \\times 10^7\\ \\mathrm{J} \\approx 10{,}5\\ \\mathrm{kWh}$ ; durée $\\approx 1{,}57 \\times 10^4\\ \\mathrm{s} \\approx 4\\ \\mathrm{h}\\ 22\\ \\mathrm{min}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "pertes-en-ligne",
+      "enonce": "Une ligne électrique de résistance totale $R = 5{,}0\\ \\Omega$ doit livrer une puissance $P = 20\\ \\mathrm{MW}$ à une zone industrielle. Données : $P = U \\cdot I$ ; $P_{\\text{pertes}} = R \\cdot I^2$. 1) Calcule l'intensité puis la puissance perdue par effet Joule si le transport se fait sous $U = 20\\ \\mathrm{kV}$. Exprime les pertes en pourcentage de la puissance transportée. 2) Reprends le calcul sous $U = 400\\ \\mathrm{kV}$. 3) Conclus sur l'intérêt de la très haute tension.",
+      "corrige": [
+        "1) Sous $20\\ \\mathrm{kV}$ : $I = \\dfrac{P}{U} = \\dfrac{20 \\times 10^6}{20 \\times 10^3} = 1000\\ \\mathrm{A}$. Pertes : $P_{\\text{pertes}} = 5{,}0 \\times 1000^2 = 5{,}0 \\times 10^6\\ \\mathrm{W} = 5{,}0\\ \\mathrm{MW}$, soit $\\dfrac{5{,}0}{20} = 25\\,\\%$ de la puissance transportée : un quart de l'énergie part en chaleur dans les câbles.",
+        "2) Sous $400\\ \\mathrm{kV}$ : $I = \\dfrac{20 \\times 10^6}{400 \\times 10^3} = 50\\ \\mathrm{A}$. Pertes : $P_{\\text{pertes}} = 5{,}0 \\times 50^2 = 1{,}25 \\times 10^4\\ \\mathrm{W} = 12{,}5\\ \\mathrm{kW}$, soit $\\dfrac{12\\,500}{20 \\times 10^6} \\approx 0{,}06\\,\\%$.",
+        "3) La tension a été multipliée par $20$, l'intensité divisée par $20$, et les pertes $RI^2$ divisées par $20^2 = 400$ (on vérifie : $\\dfrac{5{,}0 \\times 10^6}{12\\,500} = 400$). C'est le **carré** de l'intensité qui rend la haute tension si efficace : le réseau élève la tension à la sortie des centrales puis l'abaisse par transformateurs près des utilisateurs.",
+        "Piège évité : la puissance transportée $P = UI$ est la même dans les deux cas ($20\\ \\mathrm{MW}$) ; seule la répartition tension/intensité change, et avec elle la puissance perdue."
+      ],
+      "reponse": "Sous $20\\ \\mathrm{kV}$ : $I = 1000\\ \\mathrm{A}$, pertes $= 5{,}0\\ \\mathrm{MW}$ ($25\\,\\%$). Sous $400\\ \\mathrm{kV}$ : $I = 50\\ \\mathrm{A}$, pertes $= 12{,}5\\ \\mathrm{kW}$ ($\\approx 0{,}06\\,\\%$) : multiplier $U$ par $20$ divise les pertes par $400$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "flux-thermique",
+      "enonce": "Le mur d'un local technique, de surface $S = 20\\ \\mathrm{m}^2$, est constitué de deux couches : béton d'épaisseur $e_1 = 15\\ \\mathrm{cm}$ ($\\lambda_1 = 1{,}5\\ \\mathrm{W \\cdot m^{-1} \\cdot K^{-1}}$) et laine de verre d'épaisseur $e_2 = 10\\ \\mathrm{cm}$ ($\\lambda_2 = 0{,}040\\ \\mathrm{W \\cdot m^{-1} \\cdot K^{-1}}$). Il fait $19\\ ^\\circ\\mathrm{C}$ à l'intérieur et $-1\\ ^\\circ\\mathrm{C}$ dehors. Données : $R_{\\text{th}} = \\dfrac{e}{\\lambda \\cdot S}$ ; en série, $R_{\\text{th,total}} = R_{\\text{th},1} + R_{\\text{th},2}$ ; $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$ ; $1\\ \\mathrm{kWh} = 3{,}6 \\times 10^6\\ \\mathrm{J}$. Calcule le flux thermique à travers le mur, puis l'énergie perdue en $24\\ \\mathrm{h}$, en kWh.",
+      "corrige": [
+        "On convertit d'abord les épaisseurs en mètres : $e_1 = 0{,}15\\ \\mathrm{m}$ et $e_2 = 0{,}10\\ \\mathrm{m}$ — les laisser en cm fausserait les résistances d'un facteur $100$.",
+        "Résistances thermiques : $R_{\\text{th},1} = \\dfrac{0{,}15}{1{,}5 \\times 20} = 0{,}0050\\ \\mathrm{K \\cdot W^{-1}}$ (béton) et $R_{\\text{th},2} = \\dfrac{0{,}10}{0{,}040 \\times 20} = 0{,}125\\ \\mathrm{K \\cdot W^{-1}}$ (laine de verre). Les couches sont traversées l'une après l'autre par le même flux : elles sont en série, $R_{\\text{th,total}} = 0{,}0050 + 0{,}125 = 0{,}130\\ \\mathrm{K \\cdot W^{-1}}$. On remarque que l'isolant fait presque toute la résistance : le béton, bon conducteur, ne protège quasiment pas.",
+        "Flux : $\\Delta T = 19 - (-1) = 20\\ \\mathrm{K}$ (écart identique en °C et en K), donc $\\Phi = \\dfrac{20}{0{,}130} \\approx 154\\ \\mathrm{W}$ : le chauffage doit fournir en permanence $154\\ \\mathrm{J}$ par seconde pour compenser cette seule paroi.",
+        "Énergie sur $24\\ \\mathrm{h}$ : $E = \\Phi \\times \\Delta t = 154 \\times 86\\,400 \\approx 1{,}33 \\times 10^7\\ \\mathrm{J}$, soit $\\dfrac{1{,}33 \\times 10^7}{3{,}6 \\times 10^6} \\approx 3{,}7\\ \\mathrm{kWh}$ par jour, rien que pour ce mur."
+      ],
+      "reponse": "$R_{\\text{th,total}} = 0{,}130\\ \\mathrm{K \\cdot W^{-1}}$ ; $\\Phi \\approx 154\\ \\mathrm{W}$ ; énergie perdue $\\approx 1{,}33 \\times 10^7\\ \\mathrm{J} \\approx 3{,}7\\ \\mathrm{kWh}$ par jour."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "piles-accumulateurs",
+      "enonce": "La batterie d'un vélo à assistance électrique porte les indications $36\\ \\mathrm{V}$ et $12\\ \\mathrm{Ah}$. En côte, le moteur consomme une puissance constante $P = 250\\ \\mathrm{W}$. Données : $E = Q \\cdot U$ ; $P = U \\cdot I$ ; $1\\ \\mathrm{Wh} = 3600\\ \\mathrm{J}$. 1) Calcule l'énergie stockée dans la batterie, en Wh puis en joules. 2) Calcule l'intensité débitée par la batterie quand le moteur consomme $250\\ \\mathrm{W}$. 3) Détermine l'autonomie du vélo dans ces conditions, puis la distance parcourue à $20\\ \\mathrm{km/h}$.",
+      "corrige": [
+        "1) Énergie stockée : $E = Q \\times U = 12 \\times 36 = 432\\ \\mathrm{Wh}$, soit $432 \\times 3600 \\approx 1{,}6 \\times 10^6\\ \\mathrm{J}$. Attention : la capacité ($12\\ \\mathrm{Ah}$) compte une charge, pas une énergie — c'est le produit par la tension qui donne les wattheures.",
+        "2) Intensité : $I = \\dfrac{P}{U} = \\dfrac{250}{36} \\approx 6{,}9\\ \\mathrm{A}$.",
+        "3) Autonomie, première méthode (par l'énergie) : $t = \\dfrac{E}{P} = \\dfrac{432}{250} \\approx 1{,}73\\ \\mathrm{h}$. Deuxième méthode (par la capacité) : $t = \\dfrac{Q}{I} = \\dfrac{12}{6{,}9} \\approx 1{,}73\\ \\mathrm{h}$. Les deux méthodes concordent — normal, elles décrivent la même décharge. $0{,}73\\ \\mathrm{h} \\approx 44\\ \\mathrm{min}$, donc $t \\approx 1\\ \\mathrm{h}\\ 44\\ \\mathrm{min}$.",
+        "Distance : $d = v \\times t = 20 \\times 1{,}73 \\approx 35\\ \\mathrm{km}$. En réalité l'autonomie serait un peu moindre : la conversion n'est pas parfaite (rendement du moteur et de l'électronique) et la capacité utile diminue avec le vieillissement de l'accumulateur."
+      ],
+      "reponse": "$E = 432\\ \\mathrm{Wh} \\approx 1{,}6 \\times 10^6\\ \\mathrm{J}$ ; $I \\approx 6{,}9\\ \\mathrm{A}$ ; autonomie $\\approx 1{,}73\\ \\mathrm{h}$ ($1\\ \\mathrm{h}\\ 44\\ \\mathrm{min}$), soit environ $35\\ \\mathrm{km}$ à $20\\ \\mathrm{km/h}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "photovoltaique",
+      "enonce": "Le toit d'un hangar reçoit $8$ panneaux photovoltaïques de $1{,}7\\ \\mathrm{m}^2$ chacun, de rendement $\\eta = 18\\,\\%$, sous un éclairement de plein soleil $E_{\\text{écl}} = 1000\\ \\mathrm{W \\cdot m^{-2}}$. Données : $E_{\\text{photon}} = \\dfrac{hc}{\\lambda}$ avec $h = 6{,}63 \\times 10^{-34}\\ \\mathrm{J \\cdot s}$ et $c = 3{,}00 \\times 10^8\\ \\mathrm{m \\cdot s^{-1}}$ ; $\\eta = \\dfrac{P_{\\text{élec}}}{E_{\\text{écl}} \\cdot S}$. 1) Calcule l'énergie d'un photon de longueur d'onde $\\lambda = 600\\ \\mathrm{nm}$, puis le nombre de photons reçus chaque seconde par l'installation. 2) Calcule la puissance électrique produite en plein soleil. 3) La météo du site équivaut à $3{,}5\\ \\mathrm{h}$ de plein soleil par jour : quelle énergie électrique, en kWh, l'installation produit-elle par jour ?",
+      "corrige": [
+        "1) Conversion obligatoire : $\\lambda = 600\\ \\mathrm{nm} = 6{,}00 \\times 10^{-7}\\ \\mathrm{m}$. Énergie d'un photon : $E_{\\text{photon}} = \\dfrac{6{,}63 \\times 10^{-34} \\times 3{,}00 \\times 10^8}{6{,}00 \\times 10^{-7}} \\approx 3{,}3 \\times 10^{-19}\\ \\mathrm{J}$ — l'ordre de grandeur de tout photon visible.",
+        "Surface totale : $S = 8 \\times 1{,}7 = 13{,}6\\ \\mathrm{m}^2$, donc puissance lumineuse reçue $P_{\\text{reçue}} = E_{\\text{écl}} \\times S = 1000 \\times 13{,}6 = 1{,}36 \\times 10^4\\ \\mathrm{W}$. Nombre de photons par seconde (en assimilant toute la lumière à $600\\ \\mathrm{nm}$) : $N = \\dfrac{P_{\\text{reçue}}}{E_{\\text{photon}}} = \\dfrac{1{,}36 \\times 10^4}{3{,}3 \\times 10^{-19}} \\approx 4 \\times 10^{22}$ photons chaque seconde : l'énergie lumineuse arrive par grains, mais en nombre colossal.",
+        "2) Puissance électrique : $P_{\\text{élec}} = \\eta \\times P_{\\text{reçue}} = 0{,}18 \\times 1{,}36 \\times 10^4 \\approx 2{,}4 \\times 10^3\\ \\mathrm{W} = 2{,}4\\ \\mathrm{kW}$. Les $82\\,\\%$ restants sont réfléchis ou convertis en chaleur dans les cellules.",
+        "3) Énergie quotidienne : $E = P_{\\text{élec}} \\times t = 2{,}45 \\times 3{,}5 \\approx 8{,}6\\ \\mathrm{kWh}$ par jour (calcul mené avec $P_{\\text{élec}} = 2448\\ \\mathrm{W}$ avant arrondi). C'est presque l'énergie qu'exige le chauffe-eau de l'exercice 2 : une telle installation couvre à peu près l'eau chaude du pavillon, en moyenne sur l'année."
+      ],
+      "reponse": "$E_{\\text{photon}} \\approx 3{,}3 \\times 10^{-19}\\ \\mathrm{J}$ ; $N \\approx 4 \\times 10^{22}$ photons par seconde ; $P_{\\text{élec}} \\approx 2{,}4\\ \\mathrm{kW}$ ; production $\\approx 8{,}6\\ \\mathrm{kWh}$ par jour."
+    }
+  ]
+}

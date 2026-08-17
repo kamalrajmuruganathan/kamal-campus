@@ -4,12 +4,13 @@
 > physique-chimie, du collège à la Terminale, voies GÉNÉRALE ET TECHNOLOGIQUE,
 > est couvert** : options de Terminale (complémentaires, expertes), PC du collège
 > au lycée, et la Terminale technologique complète (programme commun à toutes les
-> séries + géométrie STD2A). **170 chapitres, 1700 questions, 170 jeux
+> séries + géométrie STD2A). **179 chapitres, 1790 questions, 179 jeux
 > d'exercices.** Chaque chapitre a ses quatre briques quand elles s'appliquent :
-> Cours, Exercices, QCM, Outils (36 chapitres reliés à un module de calcul).
+> Cours, Exercices, QCM, Outils (40 chapitres reliés à un module de calcul).
 > Sources : programmes officiels (education.gouv.fr / eduscol) pour tout le
-> corpus. Restent hors périmètre : les spécialités propres à chaque série
-> technologique (au-delà du tronc commun et de STI2D/STL Première).
+> corpus. La spécialité PC-maths de STI2D/STL est couverte en Première ET en
+> Terminale ; restent hors périmètre les spécialités non maths/PC des autres
+> séries (droit-éco STMG, biologie ST2S…), qui sont d'autres matières.
 
 ## Couverture
 
@@ -29,7 +30,8 @@
 | **Terminale spécialité maths** | 15 | 150 | BO du 2 avril 2026 *(officiel, rentrée 2027)* |
 | **Terminale PC · options maths · collège PC** | 45 | 450 | sources officielles education.gouv.fr |
 | **Terminale technologique maths** | 10 | 100 | BO du 2 avril 2026 *(officiel, rentrée 2027)* |
-| **Total** | **170** | **1700** | |
+| **Terminale STI2D/STL — PC et maths** | 9 | 90 | BO spécial n°8 du 25 juillet 2019 |
+| **Total** | **179** | **1790** | |
 
 > ✅ **Terminale spé maths — re-sourcée sur l'officiel.** La publication du
 > programme a été vérifiée sur education.gouv.fr (arrêté MENE2602919A, BO du
@@ -54,17 +56,17 @@ Un chapitre offre désormais quatre modes dans l'application, et non plus deux :
 - **Exercices** — un `exercice.json` de **6 exercices** (2 application / 2
   intermédiaire / 2 approfondissement), chacun avec un **corrigé rédigé en
   étapes** et sa réponse isolée. Dans l'appli, le corrigé reste caché jusqu'à ce
-  que l'élève le demande. **Les 170 chapitres en ont un** (1020 exercices).
+  que l'élève le demande. **Les 179 chapitres en ont un** (1074 exercices).
 - **QCM** — le `qcm.json`.
 - **Outils** — un `outil.json` (optionnel) qui relie le chapitre aux modules de
-  calcul déterministes de `app/lib/`. **36 chapitres calculatoires** sont reliés
+  calcul déterministes de `app/lib/`. **40 chapitres calculatoires** sont reliés
   (second degré, suites, statistiques, dérivée, masse molaire, dilution, énergie
   cinétique, loi d'Ohm, géométrie, trigonométrie, arithmétique, nombres complexes).
 
 Le format est documenté dans `docs/gabarit-chapitre.md` (§3 bis et §4) et validé
 par `outils/verifier-contenu.sh`. L'écran `Exercices.js`, la rangée d'accès dans
 `Chapitre.js` et le branchement de l'écran `Outils.js` sur un chapitre ont été
-ajoutés ; l'export Expo iOS passe (1257 modules). Les exercices sont, comme les
+ajoutés ; l'export Expo iOS passe (1284 modules). Les exercices sont, comme les
 fiches, en `statut: brouillon` — relecture professeur obligatoire.
 
 ### Point de vigilance sur les dates de BO — à trancher
@@ -102,7 +104,7 @@ principaux, tous consignés dans les notes de production des fiches concernées 
   l'addition ; la soustraction, les parenthèses et l'enchaînement, pourtant
   exigés (l. 413-417), ont été ajoutés.
 
-## Contrôles automatiques — au vert sur les 170 chapitres
+## Contrôles automatiques — au vert sur les 179 chapitres
 
 Ces contrôles sont désormais outillés dans un script versionné, à relancer après
 tout ajout :
@@ -115,12 +117,12 @@ Il vérifie, pour chaque chapitre : en-tête YAML complet, refus de `publie` san
 relecture, JSON valide, 10 questions, 4 choix, index de réponse dans les bornes,
 explications non vides, ids 1→10, absence de choix en double, cohérence
 fiche/QCM, et unicité des identifiants sur tout le corpus. Dernier passage :
-**170 chapitres, 1700 questions, tout au vert.** Il ne dit rien de l'exactitude
+**179 chapitres, 1790 questions, tout au vert.** Il ne dit rien de l'exactitude
 mathématique — seule la relecture humaine le peut.
 
 ## ⚠️ Aucune fiche n'a été relue
 
-**Les 170 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
+**Les 179 chapitres sont en `statut: brouillon` avec `relu_par: null`.**
 La règle du gabarit interdit le passage en `publie` tant qu'un professeur de la matière n'a
 pas relu. Elle n'est pas négociable : une formule fausse fait perdre des points à un élève.
 
@@ -128,7 +130,7 @@ Chaque fiche porte en fin de fichier un **bloc de notes de production** (comment
 invisible dans l'application) listant précisément ce qui doit être confronté au programme
 officiel.
 
-➡️ **Le dossier de relecture est dans [`docs/relecture.md`](docs/relecture.md)** : il reprend
+➡️ **Deux documents pour le relecteur** : [`docs/relecture.md`](docs/relecture.md) (dossier historique, 7 fiches approfondies) et surtout [`docs/relecture-notes.md`](docs/relecture-notes.md), GÉNÉRÉ par `outils/generer-dossier-relecture.sh`, qui assemble les notes de production des 179 fiches : il reprend
 les sept fiches ci-dessous en y ajoutant, pour chacune, ce que dit le programme officiel
 réextrait. Quatre de leurs questions ouvertes y sont tranchées, et deux écarts au programme
 apparaissent.
@@ -270,7 +272,7 @@ l'ensemble de la physique-chimie au-delà du périmètre v1 lycée.
 2. **Trancher la date de BO du cycle 4** (voir plus haut) et harmoniser les fiches.
 3. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue.
 4. **Réextraire les programmes de Terminale** dans `docs/`, puis produire.
-5. ✅ Contenu — **170 chapitres, 1700 questions, 1020 exercices** (collège → Terminale, voies générale et technologique).
+5. ✅ Contenu — **179 chapitres, 1790 questions, 1074 exercices** (collège → Terminale, voies générale et technologique).
 6. ✅ Collège de mathématiques complet — 6e à 3e, 54 chapitres.
 7. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**.
 8. ✅ Application Expo — écrite **et compilée**.

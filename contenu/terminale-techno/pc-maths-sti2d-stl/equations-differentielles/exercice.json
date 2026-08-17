@@ -1,0 +1,88 @@
+{
+  "id": "tale-sti2d-math-equations-differentielles-exos",
+  "chapitre": "tale-sti2d-math-equations-differentielles",
+  "titre": "Exercices — Équations différentielles",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "verifier-solution",
+      "enonce": "(a) Vérifier que la fonction $f$ définie sur $\\mathbb{R}$ par $f(t) = 4e^{-0{,}5t}$ est solution de l'équation différentielle $y' = -0{,}5\\,y$. (b) Vérifier que la fonction $g$ définie par $g(x) = e^{3x} + 2$ est solution de $y' = 3y - 6$. (c) La fonction $g$ est-elle aussi solution de $y' = 3y$ ?",
+      "corrige": [
+        "(a) On dérive : $f'(t) = 4 \\times (-0{,}5)e^{-0{,}5t} = -2e^{-0{,}5t}$. Par ailleurs $-0{,}5\\,f(t) = -0{,}5 \\times 4e^{-0{,}5t} = -2e^{-0{,}5t}$. Les deux expressions sont égales pour tout $t$ : $f$ est bien solution de $y' = -0{,}5\\,y$.",
+        "(b) On dérive : $g'(x) = 3e^{3x}$. On calcule le membre de droite : $3g(x) - 6 = 3(e^{3x} + 2) - 6 = 3e^{3x} + 6 - 6 = 3e^{3x}$. Pour tout $x$, $g'(x) = 3g(x) - 6$ : $g$ est solution de $y' = 3y - 6$.",
+        "(c) On compare $g'(x) = 3e^{3x}$ et $3g(x) = 3e^{3x} + 6$ : les deux expressions diffèrent de $6$, quel que soit $x$. L'égalité n'est jamais vérifiée, donc $g$ n'est pas solution de $y' = 3y$. Le terme constant $+2$ de $g$ change l'équation dont elle est solution."
+      ],
+      "reponse": "(a) et (b) : les vérifications aboutissent à une égalité vraie pour tout réel, $f$ et $g$ sont solutions. (c) Non : $g'(x) = 3e^{3x} \\neq 3g(x) = 3e^{3x} + 6$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "resoudre-y-prime-ay-b",
+      "enonce": "Résoudre chacune des équations différentielles suivantes (donner toutes les solutions). (a) $y' = 4y$. (b) $y' = 2y + 10$.",
+      "corrige": [
+        "(a) L'équation est de la forme $y' = ay$ avec $a = 4$. Ses solutions sont les fonctions $y(x) = C\\,e^{4x}$, où $C$ est une constante réelle quelconque. Contrôle : $y'(x) = 4C\\,e^{4x} = 4\\,y(x)$, l'équation est bien vérifiée.",
+        "(b) Étape 1 — solution particulière constante : on pose $y' = 0$, ce qui donne $0 = 2y + 10$, soit $y_p = -5$ (c'est $-\\frac{b}{a} = -\\frac{10}{2}$).",
+        "Étape 2 — solution générale : on ajoute à $y_p$ toutes les solutions de $y' = 2y$, c'est-à-dire les $C\\,e^{2x}$. Les solutions sont donc $y(x) = C\\,e^{2x} - 5$, $C \\in \\mathbb{R}$. Contrôle : $y' = 2C\\,e^{2x}$ et $2y + 10 = 2C\\,e^{2x} - 10 + 10 = 2C\\,e^{2x}$, égalité vraie pour tout $x$."
+      ],
+      "reponse": "(a) $y(x) = C\\,e^{4x}$, $C \\in \\mathbb{R}$. (b) $y(x) = C\\,e^{2x} - 5$, $C \\in \\mathbb{R}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "On considère l'équation différentielle $y' = -2y + 8$. (a) Déterminer toutes ses solutions. (b) Déterminer la solution $f$ vérifiant la condition initiale $f(0) = 1$. (c) Vers quelle valeur tend $f(x)$ quand $x$ tend vers $+\\infty$ ? Interpréter.",
+      "corrige": [
+        "(a) Solution particulière constante : $0 = -2y + 8$ donne $y_p = 4$. On ajoute les solutions de $y' = -2y$ : les solutions sont $y(x) = C\\,e^{-2x} + 4$, $C \\in \\mathbb{R}$.",
+        "(b) On impose $f(0) = 1$ : $f(0) = C\\,e^{0} + 4 = C + 4 = 1$, donc $C = -3$. La solution cherchée est $f(x) = 4 - 3e^{-2x}$. Attention : $C = -3$ n'est pas égal à $f(0) = 1$ — la constante se calcule, elle ne se lit pas.",
+        "(c) Quand $x \\to +\\infty$, $e^{-2x} \\to 0$, donc $f(x) \\to 4$. La courbe part de $1$ et monte vers la valeur d'équilibre $4$ (la solution constante) sans jamais la dépasser : le terme $-3e^{-2x}$ est le régime transitoire, qui s'éteint."
+      ],
+      "reponse": "(a) $y(x) = C\\,e^{-2x} + 4$, $C \\in \\mathbb{R}$. (b) $f(x) = 4 - 3e^{-2x}$. (c) $f(x) \\to 4$ : la solution tend vers la valeur d'équilibre."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "resoudre-y-prime-ay-b",
+      "enonce": "On considère l'équation différentielle $2y' + y = 6$. (a) Montrer qu'elle s'écrit sous la forme $y' = ay + b$ et préciser $a$ et $b$. (b) Déterminer toutes ses solutions. (c) Déterminer la solution $f$ telle que $f(0) = 0$, puis la valeur exacte de $x$ pour laquelle $f(x) = 3$.",
+      "corrige": [
+        "(a) On isole $y'$ : $2y' = -y + 6$, donc $y' = -\\dfrac{1}{2}y + 3$. C'est la forme du cours avec $a = -\\dfrac{1}{2}$ et $b = 3$. (Identifier $a$ et $b$ sur $2y' + y = 6$ sans diviser par $2$ est l'erreur classique.)",
+        "(b) Solution constante : $0 = -\\dfrac{1}{2}y + 3$ donne $y_p = 6$. Les solutions sont $y(x) = C\\,e^{-x/2} + 6$, $C \\in \\mathbb{R}$.",
+        "(c) $f(0) = C + 6 = 0$ donne $C = -6$, d'où $f(x) = 6\\left(1 - e^{-x/2}\\right)$. On résout $f(x) = 3$ : $6(1 - e^{-x/2}) = 3$, soit $e^{-x/2} = \\dfrac{1}{2}$, soit $-\\dfrac{x}{2} = \\ln\\dfrac{1}{2} = -\\ln 2$, d'où $x = 2\\ln 2 \\approx 1{,}39$."
+      ],
+      "reponse": "(a) $y' = -\\frac{1}{2}y + 3$ ($a = -\\frac{1}{2}$, $b = 3$). (b) $y(x) = C\\,e^{-x/2} + 6$. (c) $f(x) = 6(1 - e^{-x/2})$ et $f(x) = 3$ pour $x = 2\\ln 2 \\approx 1{,}39$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "application-rc",
+      "enonce": "Un générateur de tension constante $E = 12$ V charge, à travers une résistance $R = 1{,}0$ kΩ, un condensateur de capacité $C_0 = 2{,}0$ mF, initialement déchargé. La tension $u(t)$ (en volts, $t$ en secondes) aux bornes du condensateur vérifie $R\\,C_0\\,u' + u = E$. (a) Montrer que $u' = -0{,}5\\,u + 6$. (b) Résoudre cette équation avec la condition initiale $u(0) = 0$. (c) Calculer la constante de temps $\\tau = R\\,C_0$, puis $u(\\tau)$ (arrondir au dixième). (d) Au bout de combien de temps la tension atteint-elle $11$ V ? (valeur exacte puis arrondie au dixième de seconde)",
+      "corrige": [
+        "(a) On convertit : $R = 1{,}0 \\times 10^3$ Ω et $C_0 = 2{,}0 \\times 10^{-3}$ F, donc $R\\,C_0 = 10^3 \\times 2 \\times 10^{-3} = 2{,}0$ s. L'équation $2u' + u = 12$ donne, en isolant $u'$ : $u' = -\\dfrac{1}{2}u + 6$, soit $a = -0{,}5$ et $b = 6$.",
+        "(b) Solution constante : $0 = -0{,}5u + 6$ donne $u_p = 12$ — le condensateur chargé atteint la tension $E$ du générateur. Solutions : $u(t) = K\\,e^{-0{,}5t} + 12$. Avec $u(0) = K + 12 = 0$, on trouve $K = -12$, d'où $u(t) = 12\\left(1 - e^{-0{,}5t}\\right)$.",
+        "(c) $\\tau = R\\,C_0 = 2{,}0$ s (calculé en (a) : ohms × farads = secondes). Alors $u(\\tau) = u(2) = 12(1 - e^{-1}) \\approx 12 \\times 0{,}632 \\approx 7{,}6$ V, soit environ $63\\,\\%$ de $E$ : c'est la propriété caractéristique de la constante de temps.",
+        "(d) On résout $12(1 - e^{-0{,}5t}) = 11$ : $e^{-0{,}5t} = \\dfrac{1}{12}$, donc $-0{,}5t = \\ln\\dfrac{1}{12} = -\\ln 12$, d'où $t = 2\\ln 12 \\approx 5{,}0$ s. C'est environ $2{,}5\\,\\tau$ : la charge est presque terminée."
+      ],
+      "reponse": "(a) $R\\,C_0 = 2{,}0$ s donne $u' = -0{,}5u + 6$. (b) $u(t) = 12(1 - e^{-0{,}5t})$. (c) $\\tau = 2{,}0$ s et $u(\\tau) \\approx 7{,}6$ V ($\\approx 63\\,\\%$ de $E$). (d) $t = 2\\ln 12 \\approx 5{,}0$ s."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "application-newton",
+      "enonce": "Une pièce métallique sort d'un four à la température $\\theta_0 = 380$ °C et refroidit dans un atelier maintenu à $20$ °C. Sa température $\\theta(t)$ (en °C, $t$ en minutes) suit la loi de Newton : $\\theta' = -0{,}05\\,(\\theta - 20)$. (a) Montrer que cette équation est de la forme $y' = ay + b$ et préciser $a$ et $b$. (b) Déterminer $\\theta(t)$. (c) Calculer la température de la pièce au bout de $10$ minutes (arrondir à l'unité). (d) La pièce ne peut être manipulée sans gants qu'en dessous de $60$ °C : au bout de combien de temps est-ce possible ? (valeur exacte puis arrondie à la minute)",
+      "corrige": [
+        "(a) On développe : $\\theta' = -0{,}05\\,\\theta + 0{,}05 \\times 20 = -0{,}05\\,\\theta + 1$. C'est la forme du cours avec $a = -0{,}05$ et $b = 1$.",
+        "(b) Solution constante : $-\\frac{b}{a} = -\\frac{1}{-0{,}05} = 20$, la température ambiante — l'équilibre attendu physiquement. Solutions : $\\theta(t) = C\\,e^{-0{,}05t} + 20$. La condition initiale $\\theta(0) = C + 20 = 380$ donne $C = 360$, d'où $\\theta(t) = 20 + 360\\,e^{-0{,}05t}$.",
+        "(c) $\\theta(10) = 20 + 360\\,e^{-0{,}5} \\approx 20 + 360 \\times 0{,}6065 \\approx 20 + 218{,}4 \\approx 238$ °C. En 10 minutes, la pièce a perdu environ $142$ °C : le refroidissement est rapide au début, quand l'écart avec l'ambiance est grand.",
+        "(d) On résout $\\theta(t) = 60$ : $360\\,e^{-0{,}05t} = 40$, soit $e^{-0{,}05t} = \\dfrac{40}{360} = \\dfrac{1}{9}$. D'où $-0{,}05t = \\ln\\dfrac{1}{9} = -\\ln 9$, puis $t = \\dfrac{\\ln 9}{0{,}05} = 20\\ln 9 \\approx 44$ minutes. Il faut attendre environ trois quarts d'heure."
+      ],
+      "reponse": "(a) $\\theta' = -0{,}05\\,\\theta + 1$ ($a = -0{,}05$, $b = 1$). (b) $\\theta(t) = 20 + 360\\,e^{-0{,}05t}$. (c) $\\theta(10) \\approx 238$ °C. (d) $t = 20\\ln 9 \\approx 44$ min."
+    }
+  ]
+}

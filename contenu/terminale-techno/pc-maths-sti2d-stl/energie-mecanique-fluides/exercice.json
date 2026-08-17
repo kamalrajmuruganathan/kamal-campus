@@ -1,0 +1,89 @@
+{
+  "id": "tale-sti2d-pc-energie-mecanique-fluides-exos",
+  "chapitre": "tale-sti2d-pc-energie-mecanique-fluides",
+  "titre": "Exercices — Énergie mécanique : dynamique, rotation et fluides",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Prendre g = 9,81 N·kg⁻¹ sauf indication contraire.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "deuxieme-loi",
+      "enonce": "Sur une ligne de production, un chariot de masse $m = 80$ kg est tiré horizontalement par une force motrice de $180\\ \\mathrm{N}$ ; les frottements valent $60\\ \\mathrm{N}$.\n1. Calcule la résultante des forces horizontales.\n2. En déduire l'accélération du chariot (deuxième loi de Newton : $F_{\\text{résultante}} = m\\,a$).\n3. Le chariot part du repos : quelle est sa vitesse au bout de $4{,}0$ s, sachant que $v = a \\times t$ pour une accélération constante ?",
+      "corrige": [
+        "1. Bilan le long de l'axe du mouvement : la force motrice compte positivement, les frottements négativement (ils s'opposent au mouvement). Résultante : $F = 180 - 60 = 120\\ \\mathrm{N}$.",
+        "2. Deuxième loi de Newton : $a = \\dfrac{F}{m} = \\dfrac{120}{80} = 1{,}5$ m·s⁻². Attention à ne pas utiliser la seule force motrice ($180/80 = 2{,}25$ m·s⁻²) : c'est la **résultante** qui intervient dans $F = ma$.",
+        "3. Accélération constante et départ du repos : $v = a \\times t = 1{,}5 \\times 4{,}0 = 6{,}0$ m·s⁻¹ (environ $22$ km·h⁻¹, ordre de grandeur raisonnable pour un chariot)."
+      ],
+      "reponse": "$F = 120\\ \\mathrm{N}$ ; $a = 1{,}5$ m·s⁻² ; $v = 6{,}0$ m·s⁻¹ après $4{,}0$ s."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "moment-force",
+      "enonce": "La notice d'une culasse impose de serrer chaque vis avec un couple de $90\\ \\mathrm{N\\cdot m}$. Le mécanicien pousse perpendiculairement au manche de sa clé, à son extrémité.\n1. Quelle force doit-il exercer avec une clé de longueur $L = 30$ cm ? (Moment : $M = F \\times d$.)\n2. Même question avec une rallonge portant la longueur à $45$ cm. Conclure sur l'intérêt du bras de levier.",
+      "corrige": [
+        "1. La force est perpendiculaire au manche : le bras de levier est la longueur de la clé, convertie en mètres : $d = 30$ cm $= 0{,}30$ m. De $M = F \\times d$ on tire $F = \\dfrac{M}{d} = \\dfrac{90}{0{,}30} = 300\\ \\mathrm{N}$ — l'équivalent du poids d'une masse d'environ $30$ kg.",
+        "2. Avec $d = 0{,}45$ m : $F = \\dfrac{90}{0{,}45} = 200\\ \\mathrm{N}$. Oublier la conversion cm → m donnerait $F = 2$ ou $3$ N, absurde pour un serrage de culasse : contrôle toujours l'ordre de grandeur.",
+        "Conclusion : à moment imposé, allonger le bras de levier diminue la force nécessaire dans le même rapport ($\\times 1{,}5$ sur la longueur $\\Rightarrow$ $\\div 1{,}5$ sur la force). C'est tout le principe des clés dynamométriques à long manche."
+      ],
+      "reponse": "$F = 300\\ \\mathrm{N}$ avec la clé de $30$ cm ; $F = 200\\ \\mathrm{N}$ avec la rallonge de $45$ cm."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "puissance-couple",
+      "enonce": "Le moteur asynchrone d'une pompe industrielle fournit un couple $M = 20\\ \\mathrm{N\\cdot m}$ à la fréquence de rotation $N = 1450$ tr/min.\n1. Calcule la vitesse angulaire $\\omega$ en rad/s ($\\omega = \\dfrac{2\\pi N}{60}$).\n2. En déduire la puissance mécanique fournie ($P = M \\times \\omega$).\n3. Quelle énergie mécanique le moteur fournit-il en $10$ minutes de fonctionnement ? Donner le résultat en joules puis en kWh ($1$ kWh $= 3{,}6 \\times 10^{6}$ J).",
+      "corrige": [
+        "1. Conversion obligatoire des tr/min en rad/s : $\\omega = \\dfrac{2\\pi \\times 1450}{60} \\approx 152$ rad/s. C'est le piège n°1 du chapitre : injecter directement $1450$ dans $P = M\\omega$ donnerait $29\\,000$ « W », presque dix fois trop.",
+        "2. $P = M \\times \\omega = 20 \\times 151{,}8 \\approx 3{,}0 \\times 10^{3}$ W $= 3{,}0$ kW. Ordre de grandeur cohérent pour un moteur de pompe industrielle.",
+        "3. Durée en secondes : $\\Delta t = 10 \\times 60 = 600$ s. Énergie : $E = P \\times \\Delta t = 3{,}04 \\times 10^{3} \\times 600 \\approx 1{,}8 \\times 10^{6}$ J.",
+        "En kWh : $E = \\dfrac{1{,}8 \\times 10^{6}}{3{,}6 \\times 10^{6}} \\approx 0{,}51$ kWh. On retrouve le calcul direct $E = 3{,}0\\ \\mathrm{kW} \\times \\dfrac{1}{6}\\ \\mathrm{h} \\approx 0{,}5$ kWh : bon moyen de vérifier."
+      ],
+      "reponse": "$\\omega \\approx 152$ rad/s ; $P \\approx 3{,}0$ kW ; $E \\approx 1{,}8 \\times 10^{6}$ J $\\approx 0{,}51$ kWh."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "hydrostatique",
+      "enonce": "Un château d'eau alimente un quartier : la surface libre de l'eau est située $h = 25$ m au-dessus d'un robinet. Données : $\\rho_{\\text{eau}} = 1000$ kg·m⁻³ ; $g = 9{,}81$ N·kg⁻¹ ; $\\Delta p = \\rho g h$ ; $1$ bar $= 10^{5}$ Pa.\n1. Calcule la surpression (pression relative) de l'eau au robinet, en Pa puis en bar.\n2. La norme impose au moins $3{,}0$ bar de pression relative au pied des immeubles. Quelle hauteur d'eau minimale faudrait-il ?",
+      "corrige": [
+        "1. Principe fondamental de l'hydrostatique, tout en unités SI : $\\Delta p = \\rho g h = 1000 \\times 9{,}81 \\times 25 = 2{,}45 \\times 10^{5}$ Pa. Attention au piège de la masse volumique : $\\rho = 1000$ kg·m⁻³, pas $1$ — sinon le résultat est mille fois trop faible.",
+        "Conversion : $\\Delta p = \\dfrac{2{,}45 \\times 10^{5}}{10^{5}} \\approx 2{,}5$ bar. Cohérent avec la règle « environ $1$ bar tous les $10$ m d'eau » : $25$ m $\\rightarrow$ $2{,}5$ bar. C'est la hauteur du château d'eau, et elle seule, qui crée la pression du réseau.",
+        "2. On inverse la relation : $h = \\dfrac{\\Delta p}{\\rho g} = \\dfrac{3{,}0 \\times 10^{5}}{1000 \\times 9{,}81} \\approx 31$ m. Il faudrait environ $31$ m de dénivellation — au-delà, les réseaux réels utilisent des surpresseurs (pompes)."
+      ],
+      "reponse": "$\\Delta p = 2{,}45 \\times 10^{5}$ Pa $\\approx 2{,}5$ bar ; il faudrait $h \\approx 31$ m pour atteindre $3{,}0$ bar."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "verin-hydraulique",
+      "enonce": "Un pont élévateur de garage soulève une voiture de masse $m = 1800$ kg à l'aide d'un vérin hydraulique unique dont le piston, cylindrique, a un diamètre $D = 6{,}0$ cm.\n1. Calcule la force que le vérin doit exercer pour soutenir la voiture (on néglige la masse des bras du pont).\n2. Calcule la section du piston, en m² ($S = \\dfrac{\\pi D^2}{4}$).\n3. En déduire la pression nécessaire dans le circuit hydraulique, en Pa puis en bar. Ce résultat est-il réaliste pour un circuit dont la pompe est limitée à $250$ bar ?",
+      "corrige": [
+        "1. À l'équilibre, la force du vérin compense le poids : $F = P = m g = 1800 \\times 9{,}81 \\approx 1{,}77 \\times 10^{4}$ N. Piège classique : une masse en kg n'est pas une force — le passage kg → N se fait par $P = mg$.",
+        "2. Diamètre en mètres d'abord : $D = 6{,}0$ cm $= 0{,}060$ m. Section : $S = \\dfrac{\\pi D^2}{4} = \\dfrac{\\pi \\times (0{,}060)^2}{4} \\approx 2{,}8 \\times 10^{-3}$ m² (soit $28$ cm² : bon réflexe de contrôle, $1$ cm² $= 10^{-4}$ m²).",
+        "3. Pression : $p = \\dfrac{F}{S} = \\dfrac{1{,}77 \\times 10^{4}}{2{,}83 \\times 10^{-3}} \\approx 6{,}2 \\times 10^{6}$ Pa. En bar : $p \\approx \\dfrac{6{,}2 \\times 10^{6}}{10^{5}} \\approx 62$ bar.",
+        "Conclusion : $62$ bar $< 250$ bar, la pompe convient largement — les circuits hydrauliques industriels travaillent couramment entre $50$ et $300$ bar. Un petit piston suffit à soulever une voiture : c'est la force de l'hydraulique, au prix d'un débit d'huile (donc d'une durée de levée) important."
+      ],
+      "reponse": "$F \\approx 1{,}77 \\times 10^{4}$ N ; $S \\approx 2{,}8 \\times 10^{-3}$ m² ; $p \\approx 6{,}2 \\times 10^{6}$ Pa $\\approx 62$ bar : réaliste, la pompe de $250$ bar convient."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "puissance-couple",
+      "enonce": "Un treuil de chantier hisse une charge de masse $m = 500$ kg à la vitesse constante $v = 0{,}40$ m·s⁻¹. Le câble s'enroule sur un tambour de rayon $r = 0{,}20$ m entraîné par un moteur électrique. Données : à vitesse constante, la tension du câble vaut le poids de la charge ; $v = r\\,\\omega$ ; $P = M\\,\\omega$.\n1. Calcule la tension du câble, puis le couple que le tambour doit recevoir.\n2. Calcule la vitesse angulaire du tambour et la puissance mécanique utile.\n3. Le rendement de l'ensemble moteur + réducteur vaut $\\eta = 0{,}75$. Quelle puissance électrique le treuil absorbe-t-il ?",
+      "corrige": [
+        "1. Vitesse constante $\\Rightarrow$ les forces se compensent (deuxième loi avec $a = 0$) : la tension vaut $T = m g = 500 \\times 9{,}81 \\approx 4{,}9 \\times 10^{3}$ N. Le câble tire tangentiellement au tambour : le couple nécessaire est $M = T \\times r = 4905 \\times 0{,}20 \\approx 9{,}8 \\times 10^{2}$ N·m.",
+        "2. De $v = r\\omega$ : $\\omega = \\dfrac{v}{r} = \\dfrac{0{,}40}{0{,}20} = 2{,}0$ rad/s. Puissance utile : $P_u = M\\,\\omega = 981 \\times 2{,}0 \\approx 1{,}96 \\times 10^{3}$ W. Contrôle : en translation, $P_u = T \\times v = 4905 \\times 0{,}40 \\approx 1{,}96 \\times 10^{3}$ W — les deux calculs coïncident, la rotation ne fait que transmettre la même puissance.",
+        "3. Le rendement s'applique à la puissance : $\\eta = \\dfrac{P_u}{P_{\\text{abs}}}$ donc $P_{\\text{abs}} = \\dfrac{P_u}{\\eta} = \\dfrac{1{,}96 \\times 10^{3}}{0{,}75} \\approx 2{,}6 \\times 10^{3}$ W. On **divise** par le rendement pour remonter la chaîne (l'absorbé est forcément plus grand que l'utile) : multiplier par $0{,}75$ donnerait un absorbé plus petit que l'utile, impossible.",
+        "Bilan de la chaîne d'énergie (cf. chapitre de première) : électricité ($2{,}6$ kW) $\\rightarrow$ moteur + réducteur ($\\eta = 0{,}75$) $\\rightarrow$ mécanique de rotation ($M\\omega$) $\\rightarrow$ mécanique de translation ($T v = 1{,}96$ kW), les $25\\,\\%$ restants partant en chaleur."
+      ],
+      "reponse": "$T \\approx 4{,}9 \\times 10^{3}$ N ; $M \\approx 9{,}8 \\times 10^{2}$ N·m ; $\\omega = 2{,}0$ rad/s ; $P_u \\approx 1{,}96 \\times 10^{3}$ W ; $P_{\\text{abs}} \\approx 2{,}6 \\times 10^{3}$ W."
+    }
+  ]
+}

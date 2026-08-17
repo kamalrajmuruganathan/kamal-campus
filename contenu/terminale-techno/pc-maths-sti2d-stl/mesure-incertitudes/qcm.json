@@ -1,0 +1,154 @@
+{
+ "id": "tale-sti2d-pc-mesure-incertitudes-qcm",
+ "chapitre": "tale-sti2d-pc-mesure-incertitudes",
+ "titre": "QCM — Mesure et incertitudes (terminale)",
+ "voie": "technologique",
+ "niveau": "terminale-techno",
+ "parcours": "pc-maths-sti2d-stl",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question. Les formules de propagation sont rappelées dans les énoncés, comme au bac.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "incertitude-composee",
+   "enonce": "On calcule $R = \\dfrac{U}{I}$ à partir de deux mesures incertaines. Comment s'appelle l'incertitude de $R$ qui résulte de la propagation des incertitudes de $U$ et de $I$ ?",
+   "choix": [
+    "l'incertitude relative",
+    "l'incertitude-type composée",
+    "l'erreur systématique",
+    "l'écart normalisé"
+   ],
+   "reponse": 1,
+   "explication": "C'est la définition du chapitre : l'**incertitude-type composée** est l'incertitude-type d'une grandeur **calculée**, obtenue en propageant les incertitudes-types des grandeurs mesurées. L'incertitude **relative** est le quotient $u(X)/X$, et l'**écart normalisé** sert à juger la validité, pas à propager."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "propagation-somme-difference",
+   "enonce": "Pour une différence $y = a - b$, la formule fournie est $u(y) = \\sqrt{u(a)^2 + u(b)^2}$. Que font donc les incertitudes dans une différence ?",
+   "choix": [
+    "elles se soustraient",
+    "elles s'ajoutent « au carré », exactement comme pour une somme",
+    "on ne garde que la plus grande des deux",
+    "elles s'annulent si $u(a) = u(b)$"
+   ],
+   "reponse": 1,
+   "explication": "La formule est la **même** pour $a + b$ et $a - b$ : les incertitudes se composent en quadrature. Le piège classique est de les **soustraire** dans une différence — impossible, un doute ne peut pas en annuler un autre."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "propagation-produit-quotient",
+   "enonce": "Pour $y = a \\times b$, la formule fournie est $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$. Avec $\\dfrac{u(a)}{a} = 3\\,\\%$ et $\\dfrac{u(b)}{b} = 4\\,\\%$, que vaut $\\dfrac{u(y)}{y}$ ?",
+   "choix": [
+    "$7\\,\\%$",
+    "$5\\,\\%$",
+    "$3{,}5\\,\\%$",
+    "$1\\,\\%$"
+   ],
+   "reponse": 1,
+   "explication": "$\\sqrt{0{,}03^2 + 0{,}04^2} = \\sqrt{0{,}0009 + 0{,}0016} = \\sqrt{0{,}0025} = 0{,}05$, soit $5\\,\\%$. Le piège est d'**additionner simplement** $3 + 4 = 7\\,\\%$ : la formule contient une racine carrée, le résultat est toujours inférieur à la somme (et supérieur au plus grand des deux)."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "propagation-constante",
+   "enonce": "On mesure la durée de $10$ oscillations d'un pendule : $u(\\Delta t) = 0{,}05$ s. On calcule $T = \\dfrac{\\Delta t}{10}$. Sachant que $u(k\\,a) = |k|\\,u(a)$ pour $k$ constante exacte, que vaut $u(T)$ ?",
+   "choix": [
+    "$0{,}05$ s",
+    "$0{,}005$ s",
+    "$0{,}016$ s",
+    "$0{,}5$ s"
+   ],
+   "reponse": 1,
+   "explication": "$T = \\dfrac{1}{10}\\,\\Delta t$, donc $u(T) = \\dfrac{u(\\Delta t)}{10} = \\dfrac{0{,}05}{10} = 0{,}005$ s. Le piège est de diviser par $\\sqrt{10}$ (réponse $0{,}016$ s) : la quadrature vaut pour des mesures **indépendantes**, pas pour une division par une constante exacte. Mesurer $10$ périodes d'un coup divise bien l'incertitude par $10$."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "propagation-somme-difference",
+   "enonce": "Masse d'un liquide par différence : $m = m_{\\text{plein}} - m_{\\text{vide}}$, avec $u(m_{\\text{plein}}) = u(m_{\\text{vide}}) = 0{,}05$ g. On donne $u(m) = \\sqrt{u(m_{\\text{plein}})^2 + u(m_{\\text{vide}})^2}$. Que vaut $u(m)$, arrondie à $1$ chiffre significatif ?",
+   "choix": [
+    "$0$ g",
+    "$0{,}05$ g",
+    "$0{,}07$ g",
+    "$0{,}10$ g"
+   ],
+   "reponse": 2,
+   "explication": "$u(m) = \\sqrt{0{,}05^2 + 0{,}05^2} = \\sqrt{0{,}005} \\approx 0{,}07$ g : un peu plus qu'une seule pesée ($0{,}05$), nettement moins que la somme ($0{,}10$). Les distracteurs sont les trois erreurs types : soustraire ($0$), oublier la seconde pesée ($0{,}05$), additionner sans quadrature ($0{,}10$)."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "ecriture-resultat",
+   "enonce": "Un calcul brut donne $g = 9{,}7846$ m·s⁻² avec $u(g) = 0{,}0325$ m·s⁻². Quelle est l'écriture correcte du résultat ?",
+   "choix": [
+    "$g = 9{,}78 \\pm 0{,}03$ m·s⁻²",
+    "$g = 9{,}7846 \\pm 0{,}03$ m·s⁻²",
+    "$g = 9{,}78 \\pm 0{,}033$ m·s⁻²",
+    "$g = 9{,}8 \\pm 0{,}03$ m·s⁻²"
+   ],
+   "reponse": 0,
+   "explication": "L'incertitude s'arrondit à $1$ chiffre significatif : $u = 0{,}03$ m·s⁻² (rang : le centième). La valeur s'arrondit **au même rang** : $9{,}78$. Les distracteurs sont les deux écritures à bannir : valeur trop précise ($9{,}7846$), valeur arrondie plus grossièrement que l'incertitude ($9{,}8$), et incertitude à $2$ chiffres ($0{,}033$)."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "propagation-puissance",
+   "enonce": "Le volume d'un cube est $V = c^3$. On donne, pour $y = a^n$ : $\\dfrac{u(y)}{y} = |n|\\,\\dfrac{u(a)}{a}$. Si l'arête est mesurée avec $\\dfrac{u(c)}{c} = 2\\,\\%$, que vaut $\\dfrac{u(V)}{V}$ ?",
+   "choix": [
+    "$2\\,\\%$",
+    "$3{,}5\\,\\%$",
+    "$6\\,\\%$",
+    "$8\\,\\%$"
+   ],
+   "reponse": 2,
+   "explication": "$\\dfrac{u(V)}{V} = 3 \\times 2\\,\\% = 6\\,\\%$ : l'incertitude relative est **multipliée par l'exposant**. Ni $2\\,\\%$ (oubli de l'exposant), ni $\\sqrt{3} \\times 2 \\approx 3{,}5\\,\\%$ (fausse quadrature : $c$, $c$ et $c$ ne sont pas trois mesures indépendantes, c'est la même mesure), ni $2^3 = 8\\,\\%$ (on ne met pas le pourcentage au cube)."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "validite-ecart-normalise",
+   "enonce": "On mesure $m = 12{,}0$ g avec $u(m) = 0{,}2$ g ; l'étiquette annonce $m_{\\text{réf}} = 12{,}5$ g. On donne $z = \\dfrac{|m_{\\text{mes}} - m_{\\text{réf}}|}{u(m)}$ et le seuil usuel $2$. Que conclure ?",
+   "choix": [
+    "compatible, car $12{,}0$ et $12{,}5$ sont proches",
+    "non compatible : $z = 2{,}5 > 2$, il faut chercher pourquoi",
+    "compatible : l'écart $0{,}5$ g est inférieur à $2$",
+    "la mesure est fausse, puisqu'elle diffère de la référence"
+   ],
+   "reponse": 1,
+   "explication": "$z = \\dfrac{|12{,}0 - 12{,}5|}{0{,}2} = \\dfrac{0{,}5}{0{,}2} = 2{,}5 > 2$ : résultat **non compatible**. Deux pièges dans les distracteurs : comparer l'écart **brut** ($0{,}5$) au seuil $2$ qui porte sur $z$, sans unité ; et conclure « mesure fausse » — la bonne conclusion est **chercher pourquoi** : erreur systématique, incertitude sous-estimée ou référence inadaptée."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "propagation-constante",
+   "enonce": "On mesure $a$ une seule fois, puis on calcule $y = 2a$. Que vaut $u(y)$ ?",
+   "choix": [
+    "$u(a)$",
+    "$\\sqrt{2}\\,u(a)$",
+    "$2\\,u(a)$",
+    "$4\\,u(a)$"
+   ],
+   "reponse": 2,
+   "explication": "$y = k\\,a$ avec $k = 2$ constante exacte : $u(y) = |k|\\,u(a) = 2\\,u(a)$. Le piège est d'écrire $y = a + a$ puis d'appliquer la quadrature $\\sqrt{u(a)^2 + u(a)^2} = \\sqrt{2}\\,u(a)$ : cette formule vaut pour deux mesures **indépendantes**, pas pour la même mesure comptée deux fois — le doute sur $a$ se reporte deux fois **dans le même sens**."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "methode-propagation",
+   "enonce": "$\\rho = \\dfrac{m}{V}$ avec $m = 50{,}0 \\pm 0{,}5$ g et $V = 20{,}0 \\pm 0{,}6$ mL. On donne $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{\\left(\\dfrac{u(m)}{m}\\right)^2 + \\left(\\dfrac{u(V)}{V}\\right)^2}$. Quelle est l'écriture finale correcte ?",
+   "choix": [
+    "$\\rho = 2{,}50 \\pm 0{,}08$ g·mL⁻¹",
+    "$\\rho = 2{,}50 \\pm 0{,}10$ g·mL⁻¹",
+    "$\\rho = 2{,}5 \\pm 0{,}08$ g·mL⁻¹",
+    "$\\rho = 2{,}500 \\pm 0{,}079$ g·mL⁻¹"
+   ],
+   "reponse": 0,
+   "explication": "Valeur : $\\rho = 2{,}50$ g·mL⁻¹. Relatives : $\\dfrac{0{,}5}{50{,}0} = 1{,}0\\,\\%$ et $\\dfrac{0{,}6}{20{,}0} = 3{,}0\\,\\%$ ; composée : $\\sqrt{0{,}010^2 + 0{,}030^2} \\approx 3{,}2\\,\\%$ ; absolue : $u(\\rho) = 2{,}50 \\times 0{,}032 \\approx 0{,}08$ g·mL⁻¹, et valeur au **même rang** (le centième) : $2{,}50$. Les distracteurs : addition simple $1 + 3 = 4\\,\\% \\Rightarrow 0{,}10$ ; valeur arrondie au mauvais rang ($2{,}5$) ; trop de chiffres ($2{,}500 \\pm 0{,}079$)."
+  }
+ ]
+}

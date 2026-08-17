@@ -1,0 +1,154 @@
+{
+ "id": "tale-sti2d-pc-energie-electrique-thermique-qcm",
+ "chapitre": "tale-sti2d-pc-energie-electrique-thermique",
+ "titre": "QCM — Énergie électrique, thermique et lumineuse",
+ "voie": "technologique",
+ "niveau": "terminale-techno",
+ "parcours": "pc-maths-sti2d-stl",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question. Données : $h = 6{,}63 \\times 10^{-34}$ J·s ; $c = 3{,}00 \\times 10^8$ m·s⁻¹ ; $c_{\\text{eau}} = 4185$ J·kg⁻¹·K⁻¹.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "regime-sinusoidal",
+   "enonce": "Sur un oscilloscope, une tension sinusoïdale atteint au maximum $U_{\\text{max}} = 325$ V. On donne $U = \\dfrac{U_{\\text{max}}}{\\sqrt{2}}$. Quelle valeur affiche un multimètre en mode alternatif (AC) branché sur cette tension ?",
+   "choix": [
+    "$325$ V",
+    "$230$ V",
+    "$460$ V",
+    "$163$ V"
+   ],
+   "reponse": 1,
+   "explication": "Le multimètre AC affiche la valeur **efficace** : $U = \\dfrac{325}{\\sqrt{2}} \\approx 230$ V — c'est la tension du secteur. Les pièges : lire directement $U_{\\text{max}}$ ($325$ V), **multiplier** par $\\sqrt{2}$ ($460$ V) ou diviser par $2$ au lieu de $\\sqrt{2}$ ($163$ V)."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "photon",
+   "enonce": "Quelle relation donne l'énergie transportée par un photon de fréquence $\\nu$ ?",
+   "choix": [
+    "$E = h \\cdot \\nu$",
+    "$E = \\dfrac{h}{\\nu}$",
+    "$E = h \\cdot \\lambda$",
+    "$E = \\dfrac{\\nu}{h}$"
+   ],
+   "reponse": 0,
+   "explication": "L'énergie d'un photon est **proportionnelle à sa fréquence** : $E = h\\nu$, avec $h$ la constante de Planck. Avec la longueur d'onde, la relation devient $E = \\dfrac{hc}{\\lambda}$ : l'énergie est **inversement** proportionnelle à $\\lambda$ — d'où le piège $E = h\\lambda$, qui inverserait le classement des couleurs."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "regime-sinusoidal",
+   "enonce": "Le réseau électrique français oscille à la fréquence $f = 50$ Hz. Quelle est la période $T$ de la tension du secteur ?",
+   "choix": [
+    "$50$ ms",
+    "$2$ ms",
+    "$20$ ms",
+    "$0{,}02$ ms"
+   ],
+   "reponse": 2,
+   "explication": "$T = \\dfrac{1}{f} = \\dfrac{1}{50} = 0{,}020$ s, qu'il faut ensuite convertir : $0{,}020$ s $= 20$ ms. Deux pièges combinés : confondre $T$ et $f$ (répondre « $50$ ») et se tromper d'un facteur $1000$ dans la conversion s → ms ($0{,}02$ ms ou $2$ ms)."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "pertes-en-ligne",
+   "enonce": "Pourquoi transporte-t-on l'énergie électrique sous très haute tension (jusqu'à $400$ kV) plutôt que sous $230$ V ?",
+   "choix": [
+    "parce que la haute tension diminue la résistance $R$ des câbles",
+    "parce qu'à puissance transportée $P = UI$ fixée, augmenter $U$ diminue $I$, donc écrase les pertes $P_{\\text{pertes}} = RI^2$",
+    "parce que la puissance transportée $P = UI$ devient plus grande, donc les pertes comptent moins",
+    "parce que le courant se déplace plus vite sous haute tension"
+   ],
+   "reponse": 1,
+   "explication": "La résistance des câbles ne dépend pas de la tension ; ce qui change, c'est l'**intensité** : pour livrer la même puissance $P = UI$, une tension $10$ fois plus grande impose un courant $10$ fois plus faible, et les pertes $RI^2$ chutent d'un facteur $100$ grâce au **carré**. Le piège est de raisonner sur $P = UI$ (puissance transportée) au lieu de $RI^2$ (puissance perdue)."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "energie-interne",
+   "enonce": "On chauffe $2{,}0$ kg d'eau de $15\\ ^\\circ$C à $25\\ ^\\circ$C. On donne $\\Delta U = m\\,c\\,\\Delta T$ avec $c_{\\text{eau}} = 4185$ J·kg⁻¹·K⁻¹. Que vaut $\\Delta U$ ?",
+   "choix": [
+    "$8{,}4$ kJ",
+    "$2{,}4$ MJ",
+    "$84$ MJ",
+    "$84$ kJ"
+   ],
+   "reponse": 3,
+   "explication": "$\\Delta T = 25 - 15 = 10\\ ^\\circ$C $= 10$ K (un **écart** de température a la même valeur en °C et en K), donc $\\Delta U = 2{,}0 \\times 4185 \\times 10 = 83\\,700$ J $\\approx 84$ kJ. Le piège majeur : ajouter $273$ à l'écart ($\\Delta T = 283$ K), qui donne $2{,}4$ MJ. Les autres distracteurs : masse laissée en grammes ($84$ MJ) et glissement d'une puissance de dix ($8{,}4$ kJ)."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "piles-accumulateurs",
+   "enonce": "Une batterie de voiture porte les indications $12$ V et $60$ Ah. On donne $E = Q \\cdot U$. Quelle énergie stocke-t-elle ?",
+   "choix": [
+    "$60$ Wh",
+    "$5$ Wh",
+    "$720$ Wh",
+    "$216\\,000$ Wh"
+   ],
+   "reponse": 2,
+   "explication": "$E = Q \\times U = 60 \\times 12 = 720$ Wh (le wattheure vient naturellement du produit Ah × V), soit $720 \\times 3600 \\approx 2{,}6 \\times 10^6$ J. Les pièges : confondre capacité et énergie ($60$ Wh), diviser au lieu de multiplier ($5$ Wh), ou convertir les Ah en coulombs ($60 \\times 3600 = 216\\,000$) tout en gardant l'unité Wh — un mélange d'unités incohérent."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "flux-thermique",
+   "enonce": "La paroi d'un local a une résistance thermique $R_{\\text{th}} = 0{,}50$ K·W⁻¹. Il fait $19\\ ^\\circ$C à l'intérieur et $-1\\ ^\\circ$C à l'extérieur. On donne $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$. Quel flux thermique traverse la paroi ?",
+   "choix": [
+    "$40$ W",
+    "$10$ W",
+    "$38$ W",
+    "$584$ W"
+   ],
+   "reponse": 0,
+   "explication": "$\\Delta T = 19 - (-1) = 20\\ ^\\circ$C $= 20$ K, donc $\\Phi = \\dfrac{20}{0{,}50} = 40$ W. Trois pièges : **multiplier** par $R_{\\text{th}}$ au lieu de diviser ($10$ W), oublier la température extérieure négative et prendre $\\Delta T = 19$ K ($38$ W), ou convertir $19\\ ^\\circ$C en $292$ K comme si c'était un écart ($584$ W)."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "pertes-en-ligne",
+   "enonce": "Un câble de distribution a une résistance $R = 2{,}0\\ \\Omega$ et il est parcouru par un courant d'intensité efficace $I = 100$ A. Quelle puissance est perdue par effet Joule dans ce câble ?",
+   "choix": [
+    "$200$ W",
+    "$20$ kW",
+    "$400$ W",
+    "$2{,}0$ kW"
+   ],
+   "reponse": 1,
+   "explication": "$P_{\\text{pertes}} = R\\,I^2 = 2{,}0 \\times 100^2 = 2{,}0 \\times 10^4$ W $= 20$ kW. Le piège n°1 est d'oublier le **carré** et de calculer $R \\times I = 200$ W — cent fois trop faible. Les autres distracteurs : mettre $R$ au carré au lieu de $I$ ($400$ W) ou glisser d'une puissance de dix ($2{,}0$ kW)."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "photon",
+   "enonce": "Quelle est l'énergie d'un photon de lumière rouge, de longueur d'onde $\\lambda = 663$ nm ? On donne $E = \\dfrac{hc}{\\lambda}$, $h = 6{,}63 \\times 10^{-34}$ J·s, $c = 3{,}00 \\times 10^8$ m·s⁻¹.",
+   "choix": [
+    "$3{,}00 \\times 10^{-28}$ J",
+    "$4{,}40 \\times 10^{-40}$ J",
+    "$3{,}00 \\times 10^{-19}$ J",
+    "$3{,}00 \\times 10^{-16}$ J"
+   ],
+   "reponse": 2,
+   "explication": "Il faut d'abord convertir : $\\lambda = 663$ nm $= 6{,}63 \\times 10^{-7}$ m, puis $E = \\dfrac{6{,}63 \\times 10^{-34} \\times 3{,}00 \\times 10^8}{6{,}63 \\times 10^{-7}} = 3{,}00 \\times 10^{-19}$ J — l'ordre de grandeur à retenir pour un photon visible. Les pièges : laisser $\\lambda = 663$ au dénominateur ($3{,}00 \\times 10^{-28}$ J), multiplier $h$ par $\\lambda$ ($4{,}40 \\times 10^{-40}$ J) ou se tromper dans la conversion des nm ($10^{-12}$ au lieu de $10^{-9}$, d'où $3{,}00 \\times 10^{-16}$ J)."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "photovoltaique",
+   "enonce": "Un panneau photovoltaïque de surface $S = 2{,}0$ m² reçoit un éclairement $E_{\\text{écl}} = 800$ W·m⁻² et délivre une puissance électrique de $288$ W. On donne $\\eta = \\dfrac{P_{\\text{élec}}}{E_{\\text{écl}} \\cdot S}$. Quel est son rendement ?",
+   "choix": [
+    "$36\\,\\%$",
+    "$18\\,\\%$",
+    "$14{,}4\\,\\%$",
+    "$0{,}18\\,\\%$"
+   ],
+   "reponse": 1,
+   "explication": "Puissance lumineuse reçue : $P_{\\text{reçue}} = E_{\\text{écl}} \\times S = 800 \\times 2{,}0 = 1600$ W, puis $\\eta = \\dfrac{288}{1600} = 0{,}18 = 18\\,\\%$. Les pièges : oublier la surface et diviser par $800$ seulement ($36\\,\\%$), remplacer l'éclairement donné par la valeur standard $1000$ W·m⁻² ($14{,}4\\,\\%$), ou confondre la valeur décimale $0{,}18$ avec un pourcentage ($0{,}18\\,\\%$)."
+  }
+ ]
+}

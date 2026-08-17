@@ -1,0 +1,109 @@
+{
+  "id": "tale-sti2d-math-exponentielle-logarithme-qcm",
+  "chapitre": "tale-sti2d-math-exponentielle-logarithme",
+  "titre": "QCM — Fonctions exponentielle et logarithme népérien",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Calculatrice inutile.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "nombre-e",
+      "enonce": "Quelle est la valeur approchée du nombre $e$ ?",
+      "choix": ["$3{,}14$", "$2{,}72$", "$1{,}62$", "$2{,}30$"],
+      "reponse": 1,
+      "explication": "$e \\approx 2{,}718$, entre $2$ et $3$. Le piège est de le confondre avec $\\pi \\approx 3{,}14$ ou avec $\\ln 10 \\approx 2{,}30$ : trois constantes différentes qui traînent dans les mêmes chapitres."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "derivees",
+      "enonce": "Quelle est la dérivée de la fonction $x \\mapsto e^x$ ?",
+      "choix": ["$x\\,e^{x-1}$", "$e^{x-1}$", "$e^x$", "$\\dfrac{e^x}{x}$"],
+      "reponse": 2,
+      "explication": "L'exponentielle est sa propre dérivée : $(e^x)' = e^x$. Le distracteur $x\\,e^{x-1}$ vient d'appliquer à tort la règle $(x^n)' = nx^{n-1}$, qui concerne les puissances de $x$, pas les exponentielles."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "derivees",
+      "enonce": "Quelle est la dérivée de la fonction $x \\mapsto e^{-3x}$ ?",
+      "choix": ["$e^{-3x}$", "$-3e^{-3x}$", "$3e^{-3x}$", "$-3x\\,e^{-3x-1}$"],
+      "reponse": 1,
+      "explication": "$(e^{kx})' = k\\,e^{kx}$ avec $k = -3$ : le coefficient descend en facteur, signe compris. Oublier le $k$ (choix 1) ou perdre le signe moins (choix 3) sont les deux erreurs classiques."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "Que vaut $\\left(e^x\\right)^2$ ?",
+      "choix": ["$e^{x^2}$", "$2e^x$", "$e^{x+2}$", "$e^{2x}$"],
+      "reponse": 3,
+      "explication": "Élever une puissance à une puissance multiplie les exposants : $(e^x)^2 = e^{2x}$. Le piège $e^{x^2}$ élève l'exposant au carré au lieu de le doubler — pour $x = 3$ : $e^6 \\neq e^9$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "limites-croissance-comparee",
+      "enonce": "Que vaut $\\lim\\limits_{x \\to -\\infty} e^x$ ?",
+      "choix": ["$0$", "$-\\infty$", "$-1$", "$+\\infty$"],
+      "reponse": 0,
+      "explication": "En $-\\infty$, $e^x$ tend vers $0$ (par valeurs positives) : la courbe colle à l'axe des abscisses sans jamais le toucher. Répondre $-\\infty$ oublie qu'une exponentielle est toujours strictement positive."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "logarithme-neperien",
+      "enonce": "Que vaut $\\ln\\left(e^3\\right)$ ?",
+      "choix": ["$e^3$", "$3$", "$3e$", "$\\ln 3$"],
+      "reponse": 1,
+      "explication": "$\\ln$ et $\\exp$ sont réciproques : $\\ln(e^x) = x$, donc $\\ln(e^3) = 3$. On peut aussi le voir par $\\ln(e^3) = 3\\ln e = 3 \\times 1 = 3$. Confondre $\\ln e = 1$ et $\\ln 1 = 0$ fait dérailler ce calcul."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "limites-croissance-comparee",
+      "enonce": "Que vaut $\\lim\\limits_{x \\to +\\infty} \\dfrac{e^x}{x^2}$ ?",
+      "choix": ["$0$", "$1$", "$+\\infty$", "Cette limite n'existe pas"],
+      "reponse": 2,
+      "explication": "Forme indéterminée $\\frac{\\infty}{\\infty}$, tranchée par la croissance comparée : $e^x$ croît plus vite que toute puissance de $x$, donc le quotient tend vers $+\\infty$. Répondre $0$ inverse le rapport de forces entre numérateur et dénominateur."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "equations-inequations",
+      "enonce": "Quelle est la solution de l'équation $e^{2x} = 6$ ?",
+      "choix": ["$x = \\ln 3$", "$x = \\dfrac{\\ln 6}{2}$", "$x = 2\\ln 6$", "$x = \\dfrac{6}{2e}$"],
+      "reponse": 1,
+      "explication": "On prend le $\\ln$ des deux membres : $2x = \\ln 6$, donc $x = \\frac{\\ln 6}{2} \\approx 0{,}90$. Le piège $\\ln 3$ vient de diviser à l'intérieur du logarithme ($\\ln\\frac{6}{2}$) au lieu de diviser le logarithme par $2$ : $\\ln 3 \\approx 1{,}10$, ce n'est pas le même nombre."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "equations-inequations",
+      "enonce": "Quel est l'ensemble des solutions de l'inéquation $\\ln x > 3$ ?",
+      "choix": ["$]3\\,;+\\infty[$", "$]\\ln 3\\,;+\\infty[$", "$]0\\,;e^3[$", "$]e^3\\,;+\\infty[$"],
+      "reponse": 3,
+      "explication": "$\\ln$ est strictement croissante : $\\ln x > 3 = \\ln(e^3) \\iff x > e^3 \\approx 20{,}1$. Répondre $x > 3$ oublie d'appliquer l'exponentielle ; $]0\\,;e^3[$ inverse le sens de l'inégalité."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "lien-log",
+      "enonce": "Quelle relation lie le logarithme décimal $\\log$ et le logarithme népérien $\\ln$ ?",
+      "choix": [
+        "$\\log x = \\dfrac{\\ln x}{\\ln 10}$",
+        "$\\log x = \\ln x \\times \\ln 10$",
+        "$\\log x = \\ln\\left(\\dfrac{x}{10}\\right)$",
+        "$\\log x = \\dfrac{\\ln x}{10}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log x = \\dfrac{\\ln x}{\\ln 10}$ avec $\\ln 10 \\approx 2{,}303$. Contrôle : $\\log 10 = \\frac{\\ln 10}{\\ln 10} = 1$ ✓. Diviser par $10$ au lieu de $\\ln 10$, ou multiplier au lieu de diviser, échoue à ce test immédiat."
+    }
+  ]
+}

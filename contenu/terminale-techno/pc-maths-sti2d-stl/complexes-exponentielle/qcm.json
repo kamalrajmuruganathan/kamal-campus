@@ -1,0 +1,144 @@
+{
+  "id": "tale-sti2d-math-complexes-exponentielle-qcm",
+  "chapitre": "tale-sti2d-math-complexes-exponentielle",
+  "titre": "QCM — Nombres complexes : exponentielle complexe et signal",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "exponentielle-complexe",
+      "enonce": "Que vaut $\\mathrm{e}^{\\mathrm{i}\\pi}$ ?",
+      "choix": ["$-1$", "$1$", "$\\mathrm{i}$", "$0$"],
+      "reponse": 0,
+      "explication": "$\\mathrm{e}^{\\mathrm{i}\\pi} = \\cos\\pi + \\mathrm{i}\\sin\\pi = -1 + 0 = -1$. Le piège est de croire qu'une exponentielle est toujours positive : c'est vrai pour $\\mathrm{e}^x$ avec $x$ réel, mais $\\mathrm{e}^{\\mathrm{i}\\theta}$ tourne sur le cercle trigonométrique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "forme-exponentielle",
+      "enonce": "Quel est le module de $z = 5\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$ ?",
+      "choix": ["$5$", "$\\dfrac{\\pi}{3}$", "$\\dfrac{5\\pi}{3}$", "$\\mathrm{e}^{5}$"],
+      "reponse": 0,
+      "explication": "Dans l'écriture $r\\,\\mathrm{e}^{\\mathrm{i}\\theta}$, le module est $r = 5$ et l'argument est $\\theta = \\pi/3$. Le piège classique est de confondre les deux rôles : le module est devant, l'argument est dans l'exposant."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "passage-formes",
+      "enonce": "Quelle est la forme exponentielle de $z = 1 + \\mathrm{i}$ ?",
+      "choix": [
+        "$\\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$",
+        "$2\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$",
+        "$\\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$",
+        "$\\mathrm{e}^{\\mathrm{i}\\pi/4}$"
+      ],
+      "reponse": 0,
+      "explication": "$|z| = \\sqrt{1^2+1^2} = \\sqrt{2}$ (et non $2$ : ne pas oublier la racine), puis $\\cos\\theta = \\sin\\theta = \\frac{\\sqrt2}{2}$ donne $\\theta = \\frac{\\pi}{4}$. Répondre $2\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$, c'est avoir calculé $a^2+b^2$ sans prendre la racine carrée."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "operations-exponentielle",
+      "enonce": "Que vaut $2\\,\\mathrm{e}^{\\mathrm{i}\\pi/6} \\times 3\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$ ?",
+      "choix": [
+        "$6\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$",
+        "$5\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$",
+        "$6\\,\\mathrm{e}^{\\mathrm{i}\\pi^2/18}$",
+        "$\\dfrac{2}{3}\\,\\mathrm{e}^{-\\mathrm{i}\\pi/6}$"
+      ],
+      "reponse": 0,
+      "explication": "Les modules se MULTIPLIENT ($2 \\times 3 = 6$) et les arguments s'ADDITIONNENT ($\\frac{\\pi}{6} + \\frac{\\pi}{3} = \\frac{\\pi}{2}$). Le piège est d'additionner les modules ($5$) ou de multiplier les arguments : chaque opération va à sa place."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "linearisation",
+      "enonce": "Quelle est la linéarisation de $\\cos^2\\theta$ ?",
+      "choix": [
+        "$\\dfrac{1 + \\cos(2\\theta)}{2}$",
+        "$\\dfrac{1 - \\cos(2\\theta)}{2}$",
+        "$\\dfrac{1 + \\sin(2\\theta)}{2}$",
+        "$\\dfrac{\\cos(2\\theta)}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "On isole $\\cos^2\\theta$ dans $\\cos(2\\theta) = 2\\cos^2\\theta - 1$. Le signe $+$ va avec $\\cos^2$, le $-$ avec $\\sin^2$ : le piège est de les inverser. Test en $\\theta = 0$ : $\\cos^2 0 = 1$ et $\\frac{1+\\cos 0}{2} = 1$, c'est cohérent."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "equations",
+      "enonce": "Quelles sont les solutions dans $\\mathbb{C}$ de l'équation $z^2 = -16$ ?",
+      "choix": [
+        "$4\\mathrm{i}$ et $-4\\mathrm{i}$",
+        "$4$ et $-4$",
+        "$4\\mathrm{i}$ seulement",
+        "$16\\mathrm{i}$ et $-16\\mathrm{i}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour $a < 0$, les solutions de $z^2 = a$ sont $\\pm\\mathrm{i}\\sqrt{-a}$, ici $\\pm\\mathrm{i}\\sqrt{16} = \\pm 4\\mathrm{i}$. Vérification : $(4\\mathrm{i})^2 = 16\\mathrm{i}^2 = -16$. Les pièges : oublier le signe moins ($\\pm 4$ résout $z^2 = +16$), ne donner qu'une solution, ou oublier la racine ($\\pm 16\\mathrm{i}$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "signal",
+      "enonce": "Le signal $u(t) = \\cos(\\omega t) + \\sqrt{3}\\sin(\\omega t)$ s'écrit sous la forme $A\\cos(\\omega t + \\varphi)$ :",
+      "choix": [
+        "$2\\cos\\!\\left(\\omega t - \\dfrac{\\pi}{3}\\right)$",
+        "$2\\cos\\!\\left(\\omega t + \\dfrac{\\pi}{3}\\right)$",
+        "$4\\cos\\!\\left(\\omega t - \\dfrac{\\pi}{3}\\right)$",
+        "$\\sqrt{2}\\cos\\!\\left(\\omega t - \\dfrac{\\pi}{3}\\right)$"
+      ],
+      "reponse": 0,
+      "explication": "$A = \\sqrt{1 + 3} = 2$, puis $\\cos\\varphi = \\frac{1}{2}$ et $\\sin\\varphi = -\\frac{\\sqrt3}{2}$, d'où $\\varphi = -\\frac{\\pi}{3}$. Le piège n°1 est le signe de la phase : le développement de $\\cos(\\omega t + \\varphi)$ donne $-\\sin\\varphi\\sin(\\omega t)$, donc $\\sin\\varphi = -b/A$. Le choix $4$ oublie la racine dans $A$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "formules-addition",
+      "enonce": "On sait que $\\cos a = \\dfrac{3}{5}$. Que vaut $\\cos(2a)$ ?",
+      "choix": [
+        "$-\\dfrac{7}{25}$",
+        "$\\dfrac{7}{25}$",
+        "$\\dfrac{18}{25}$",
+        "$\\dfrac{6}{5}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\cos(2a) = 2\\cos^2 a - 1 = 2 \\times \\frac{9}{25} - 1 = \\frac{18}{25} - \\frac{25}{25} = -\\frac{7}{25}$. Le piège : oublier le $-1$ (ce qui donne $\\frac{18}{25}$) ou croire que $\\cos(2a) = 2\\cos a$ (ce qui donnerait $\\frac{6}{5} > 1$, impossible pour un cosinus)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "transformations",
+      "enonce": "Dans le plan complexe, la transformation $z \\mapsto \\mathrm{i}z$ est :",
+      "choix": [
+        "la rotation de centre $O$ et d'angle $\\dfrac{\\pi}{2}$",
+        "la translation de vecteur d'affixe $\\mathrm{i}$",
+        "l'homothétie de centre $O$ et de rapport $-1$",
+        "la rotation de centre $O$ et d'angle $\\pi$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathrm{i} = \\mathrm{e}^{\\mathrm{i}\\pi/2}$ est de module $1$ : multiplier par $\\mathrm{i}$ conserve le module et ajoute $\\frac{\\pi}{2}$ à l'argument, c'est un quart de tour direct autour de $O$. Le piège : confondre avec $z \\mapsto z + \\mathrm{i}$ (translation) ou avec $z \\mapsto -z$ (rotation d'angle $\\pi$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "linearisation",
+      "enonce": "Quelle est une primitive de $t \\mapsto \\cos^2 t$ ?",
+      "choix": [
+        "$t \\mapsto \\dfrac{t}{2} + \\dfrac{\\sin(2t)}{4}$",
+        "$t \\mapsto \\dfrac{\\cos^3 t}{3}$",
+        "$t \\mapsto \\dfrac{t}{2} - \\dfrac{\\sin(2t)}{4}$",
+        "$t \\mapsto \\dfrac{t}{2} + \\dfrac{\\sin(2t)}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "On linéarise d'abord : $\\cos^2 t = \\frac{1}{2} + \\frac{\\cos(2t)}{2}$, puis on primitive : $\\frac{t}{2} + \\frac{\\sin(2t)}{4}$. Le piège du dernier choix : oublier de diviser par $2$ en primitivant $\\cos(2t)$. Le choix $\\frac{t}{2} - \\frac{\\sin(2t)}{4}$ est la primitive de $\\sin^2 t$, pas de $\\cos^2 t$. Quant à $\\frac{\\cos^3 t}{3}$, primitiver n'est pas l'inverse de dériver terme à terme sur la puissance."
+    }
+  ]
+}

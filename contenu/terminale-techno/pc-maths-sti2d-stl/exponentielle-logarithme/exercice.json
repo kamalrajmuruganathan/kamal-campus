@@ -1,0 +1,97 @@
+{
+  "id": "tale-sti2d-math-exponentielle-logarithme-exos",
+  "chapitre": "tale-sti2d-math-exponentielle-logarithme",
+  "titre": "Exercices — Fonctions exponentielle et logarithme népérien",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "1. Simplifier $\\dfrac{e^{3x} \\times e^{-x}}{e^{x+1}}$.\n2. Exprimer $\\ln 8$ puis $\\ln\\left(\\dfrac{2}{e}\\right)$ en fonction de $\\ln 2$.\n3. Écrire $\\ln 12 - \\ln 3$ sous la forme d'un seul logarithme, puis en fonction de $\\ln 2$.",
+      "corrige": [
+        "1. Au numérateur, les exposants s'ajoutent : $e^{3x} \\times e^{-x} = e^{3x + (-x)} = e^{2x}$.",
+        "Pour le quotient, les exposants se soustraient : $\\dfrac{e^{2x}}{e^{x+1}} = e^{2x - (x+1)} = e^{x-1}$.",
+        "2. $8 = 2^3$, donc $\\ln 8 = \\ln\\left(2^3\\right) = 3\\ln 2$. Ensuite $\\ln\\left(\\dfrac{2}{e}\\right) = \\ln 2 - \\ln e = \\ln 2 - 1$, car $\\ln e = 1$.",
+        "3. Le logarithme transforme les différences en quotients : $\\ln 12 - \\ln 3 = \\ln\\dfrac{12}{3} = \\ln 4$.",
+        "Enfin $4 = 2^2$, donc $\\ln 4 = 2\\ln 2$."
+      ],
+      "reponse": "1. $e^{x-1}$ ; 2. $\\ln 8 = 3\\ln 2$ et $\\ln\\left(\\frac{2}{e}\\right) = \\ln 2 - 1$ ; 3. $\\ln 12 - \\ln 3 = \\ln 4 = 2\\ln 2$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Dériver les fonctions suivantes :\n1. $f(x) = e^{4x}$ ;\n2. $g(x) = 3e^{-2x} + x^3$ ;\n3. $h(t) = 10\\left(1 - e^{-2t}\\right)$ (tension de charge d'un condensateur, en volts).",
+      "corrige": [
+        "1. On applique $(e^{kx})' = k\\,e^{kx}$ avec $k = 4$ : $f'(x) = 4e^{4x}$.",
+        "2. On dérive terme à terme : $\\left(3e^{-2x}\\right)' = 3 \\times (-2)e^{-2x} = -6e^{-2x}$ et $\\left(x^3\\right)' = 3x^2$. Donc $g'(x) = -6e^{-2x} + 3x^2$.",
+        "3. La constante $10$ reste en facteur, la dérivée de $1$ est nulle, et $\\left(e^{-2t}\\right)' = -2e^{-2t}$.",
+        "Donc $h'(t) = 10\\left(0 - (-2e^{-2t})\\right) = 20e^{-2t}$. Cette dérivée est strictement positive et tend vers $0$ : la tension monte de moins en moins vite vers sa valeur finale, ce qui est bien le comportement d'une charge."
+      ],
+      "reponse": "$f'(x) = 4e^{4x}$ ; $g'(x) = -6e^{-2x} + 3x^2$ ; $h'(t) = 20e^{-2t}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "equations-inequations",
+      "enonce": "Résoudre dans $\\mathbb{R}$ :\n1. $e^{2x} = 5$ ;\n2. $e^{3x} = -2$ ;\n3. $\\ln x = -1$ ;\n4. $\\ln x > 2$.\nDonner les valeurs exactes, puis des valeurs approchées au centième quand c'est pertinent.",
+      "corrige": [
+        "1. $5 > 0$, on peut prendre le logarithme népérien des deux membres : $\\ln\\left(e^{2x}\\right) = \\ln 5$, soit $2x = \\ln 5$, d'où $x = \\dfrac{\\ln 5}{2} \\approx 0{,}80$.",
+        "2. Une exponentielle est strictement positive : $e^{3x} > 0$ pour tout $x$, donc $e^{3x} = -2$ n'a aucune solution. Il ne faut surtout pas écrire $\\ln(-2)$, qui n'existe pas.",
+        "3. On applique l'exponentielle aux deux membres : $x = e^{-1} = \\dfrac{1}{e} \\approx 0{,}37$. Un second membre négatif ne pose aucun problème : la solution est simplement dans $]0\\,;1[$.",
+        "4. $\\ln$ est strictement croissante sur $]0\\,;+\\infty[$ et $2 = \\ln\\left(e^2\\right)$ : l'inéquation équivaut à $x > e^2 \\approx 7{,}39$. L'ensemble des solutions est $\\left]e^2\\,;+\\infty\\right[$."
+      ],
+      "reponse": "1. $x = \\dfrac{\\ln 5}{2} \\approx 0{,}80$ ; 2. pas de solution ; 3. $x = e^{-1} \\approx 0{,}37$ ; 4. $S = \\left]e^2\\,;+\\infty\\right[$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "equations-inequations",
+      "enonce": "Un condensateur se décharge dans une résistance. La tension à ses bornes est modélisée par $u(t) = 12\\,e^{-t/0{,}5}$, avec $t$ en secondes et $u$ en volts (constante de temps $\\tau = 0{,}5$ s).\n1. Au bout de combien de temps la tension vaut-elle $6$ V ? (valeur exacte puis arrondie au centième de seconde)\n2. À partir de quel instant la tension est-elle inférieure à $5\\,\\%$ de sa valeur initiale ?",
+      "corrige": [
+        "1. On résout $12\\,e^{-t/0{,}5} = 6$, soit $e^{-2t} = \\dfrac{6}{12} = 0{,}5$.",
+        "On prend le logarithme népérien : $-2t = \\ln(0{,}5) = -\\ln 2$, d'où $t = \\dfrac{\\ln 2}{2} \\approx 0{,}35$ s. On retrouve la formule de demi-vie $t_{1/2} = \\tau\\ln 2 = 0{,}5\\ln 2$.",
+        "2. $5\\,\\%$ de $12$ V vaut $0{,}6$ V. On résout l'inéquation $12\\,e^{-2t} < 0{,}6$, soit $e^{-2t} < 0{,}05$.",
+        "Le logarithme est strictement croissant, il conserve le sens : $-2t < \\ln(0{,}05)$. Or $\\ln(0{,}05) = \\ln\\dfrac{1}{20} = -\\ln 20$, donc $-2t < -\\ln 20$, puis en divisant par $-2$ (qui CHANGE le sens) : $t > \\dfrac{\\ln 20}{2}$.",
+        "$\\ln 20 = \\ln 2 + \\ln 10 \\approx 0{,}693 + 2{,}303 = 2{,}996$, donc $t > 1{,}50$ s environ : cohérent avec le critère « $3\\tau$ pour atteindre $5\\,\\%$ » du cours de physique ($3 \\times 0{,}5 = 1{,}5$ s)."
+      ],
+      "reponse": "1. $t = \\dfrac{\\ln 2}{2} = 0{,}5\\ln 2 \\approx 0{,}35$ s ; 2. à partir de $t = \\dfrac{\\ln 20}{2} \\approx 1{,}50$ s."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "etude-fonctions",
+      "enonce": "La réponse d'un système du premier ordre à une impulsion est modélisée par $f(x) = x\\,e^{-x}$ sur $[0\\,;+\\infty[$.\n1. Montrer que $f'(x) = (1 - x)\\,e^{-x}$.\n2. Étudier le signe de $f'$ et dresser le tableau de variations de $f$.\n3. Déterminer la limite de $f$ en $+\\infty$ et interpréter physiquement.",
+      "corrige": [
+        "1. $f$ est un produit $u \\times v$ avec $u(x) = x$ et $v(x) = e^{-x}$, donc $u'(x) = 1$ et $v'(x) = -e^{-x}$ (formule $(e^{kx})' = ke^{kx}$ avec $k = -1$).",
+        "$f'(x) = u'v + uv' = 1 \\times e^{-x} + x \\times \\left(-e^{-x}\\right) = (1 - x)\\,e^{-x}$.",
+        "2. Pour tout $x$, $e^{-x} > 0$ : le signe de $f'(x)$ est celui de $1 - x$. Donc $f'(x) > 0$ sur $[0\\,;1[$ et $f'(x) < 0$ sur $]1\\,;+\\infty[$.",
+        "$f$ est croissante sur $[0\\,;1]$ puis décroissante sur $[1\\,;+\\infty[$, avec $f(0) = 0$ et un maximum en $x = 1$ : $f(1) = 1 \\times e^{-1} = \\dfrac{1}{e} \\approx 0{,}37$.",
+        "3. En $+\\infty$, $f(x) = \\dfrac{x}{e^x}$ est une forme indéterminée $\\frac{\\infty}{\\infty}$. Par croissance comparée, l'exponentielle l'emporte sur toute puissance de $x$ : $\\lim\\limits_{x \\to +\\infty} x\\,e^{-x} = 0$.",
+        "Interprétation : le signal part de $0$, culmine à $\\frac{1}{e}$ à l'instant $x = 1$, puis s'éteint progressivement — c'est le profil typique d'une réponse impulsionnelle."
+      ],
+      "reponse": "$f'(x) = (1-x)e^{-x}$ ; $f$ croît sur $[0\\,;1]$, décroît sur $[1\\,;+\\infty[$, maximum $f(1) = \\dfrac{1}{e} \\approx 0{,}37$ ; $\\lim\\limits_{x\\to+\\infty} f(x) = 0$ (croissance comparée)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "equations-inequations",
+      "enonce": "Le nombre de noyaux radioactifs d'un échantillon est modélisé par $N(t) = N_0\\,e^{-\\lambda t}$, avec $t$ en années et $\\lambda = 0{,}025$ an⁻¹ (modèle vu en physique-chimie).\n1. Montrer que la demi-vie, durée au bout de laquelle $N(t) = \\dfrac{N_0}{2}$, vaut $t_{1/2} = \\dfrac{\\ln 2}{\\lambda}$, et la calculer.\n2. Au bout de combien d'années reste-t-il moins de $10\\,\\%$ des noyaux initiaux ?\n3. Vérifier la cohérence : exprimer la durée trouvée en 2. en nombre de demi-vies.",
+      "corrige": [
+        "1. On résout $N_0\\,e^{-\\lambda t} = \\dfrac{N_0}{2}$. Après division par $N_0 \\neq 0$ : $e^{-\\lambda t} = \\dfrac{1}{2}$.",
+        "On prend le logarithme népérien : $-\\lambda t = \\ln\\dfrac{1}{2} = -\\ln 2$, d'où $t_{1/2} = \\dfrac{\\ln 2}{\\lambda}$. La demi-vie ne dépend pas de $N_0$ : c'est la signature du modèle exponentiel.",
+        "Application numérique : $t_{1/2} = \\dfrac{0{,}693}{0{,}025} \\approx 27{,}7$ ans.",
+        "2. On résout $e^{-\\lambda t} < 0{,}1$. Le logarithme conserve le sens : $-\\lambda t < \\ln(0{,}1) = -\\ln 10$, puis en divisant par $-\\lambda < 0$ (le sens change) : $t > \\dfrac{\\ln 10}{\\lambda} = \\dfrac{2{,}303}{0{,}025} \\approx 92{,}1$ ans.",
+        "3. $\\dfrac{\\ln 10 / \\lambda}{\\ln 2 / \\lambda} = \\dfrac{\\ln 10}{\\ln 2} \\approx 3{,}32$ : il faut environ $3{,}3$ demi-vies. Cohérent : après $3$ demi-vies il reste $\\left(\\frac{1}{2}\\right)^3 = 12{,}5\\,\\% > 10\\,\\%$, après $4$ il en reste $6{,}25\\,\\% < 10\\,\\%$."
+      ],
+      "reponse": "1. $t_{1/2} = \\dfrac{\\ln 2}{\\lambda} \\approx 27{,}7$ ans ; 2. au-delà de $t = \\dfrac{\\ln 10}{\\lambda} \\approx 92{,}1$ ans ; 3. $\\dfrac{\\ln 10}{\\ln 2} \\approx 3{,}3$ demi-vies."
+    }
+  ]
+}

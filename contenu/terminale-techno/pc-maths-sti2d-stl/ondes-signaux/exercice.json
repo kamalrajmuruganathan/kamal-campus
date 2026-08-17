@@ -1,0 +1,89 @@
+{
+  "id": "tale-sti2d-pc-ondes-signaux-exos",
+  "chapitre": "tale-sti2d-pc-ondes-signaux",
+  "titre": "Exercices — Ondes et signaux (terminale)",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Données pour toute la série : $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻² et $c = 3{,}00 \\times 10^8$ m·s⁻¹.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "spectre-amplitude",
+      "enonce": "Le spectre d'amplitude d'un son enregistré comporte trois raies : à $220$ Hz (amplitude $2{,}0$), à $440$ Hz (amplitude $1{,}2$) et à $660$ Hz (amplitude $0{,}4$), en unités arbitraires. (a) Identifie le fondamental et le rang de chaque harmonique. (b) Quelle est la fréquence du signal ? Sa période ? (c) Ce son est-il un son pur ?",
+      "corrige": [
+        "(a) Le fondamental est la raie de **plus basse fréquence** : $f_1 = 220$ Hz. Les autres raies sont à $440 = 2 \\times 220$ Hz (harmonique de rang $2$) et $660 = 3 \\times 220$ Hz (harmonique de rang $3$) : on vérifie bien que ce sont des multiples entiers de $f_1$.",
+        "(b) La fréquence du signal est celle du fondamental : $f = 220$ Hz — et non $660$ Hz, même si on serait tenté de lire la dernière raie. La période s'en déduit : $T = \\dfrac{1}{f} = \\dfrac{1}{220} \\approx 4{,}5 \\times 10^{-3}$ s $= 4{,}5$ ms.",
+        "(c) Un son **pur** est sinusoïdal : son spectre ne comporte qu'**une seule** raie. Ici il y en a trois : c'est un son **composé**. Les amplitudes relatives des harmoniques ($2{,}0$ ; $1{,}2$ ; $0{,}4$) font le **timbre** de ce son."
+      ],
+      "reponse": "(a) Fondamental à $220$ Hz, harmoniques de rangs $2$ ($440$ Hz) et $3$ ($660$ Hz). (b) $f = 220$ Hz, $T \\approx 4{,}5$ ms. (c) Son composé, pas un son pur."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Au poste de travail d'un opérateur, un capteur mesure une intensité acoustique $I = 2{,}5 \\times 10^{-4}$ W·m⁻². Donnée : $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻². (a) Calcule le niveau sonore $L$. (b) Le code du travail impose des protections auditives au-delà de $85$ dB (exposition prolongée) : qu'en conclus-tu ?",
+      "corrige": [
+        "(a) On forme d'abord le rapport sans unité : $\\dfrac{I}{I_0} = \\dfrac{2{,}5 \\times 10^{-4}}{1{,}0 \\times 10^{-12}} = 2{,}5 \\times 10^{8}$.",
+        "Puis $L = 10\\log(2{,}5 \\times 10^{8}) = 10\\,(\\log 2{,}5 + 8) = 10\\,(0{,}40 + 8) = 84$ dB. Attention : touche **log** (logarithme décimal) de la calculatrice, pas **ln** — avec ln on obtiendrait environ $193$ dB, absurde.",
+        "(b) $L = 84$ dB $< 85$ dB : le seuil réglementaire n'est pas dépassé, mais il est presque atteint. Comme l'échelle est logarithmique, $+1$ dB représente déjà environ $26\\,\\%$ d'intensité en plus : la moindre machine supplémentaire fera franchir le seuil — une protection auditive est déjà prudente."
+      ],
+      "reponse": "(a) $L = 84$ dB. (b) Juste sous le seuil de $85$ dB : conforme, mais à la limite."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Une enceinte de sonorisation rayonne une puissance acoustique $P = 0{,}50$ W, supposée répartie uniformément dans toutes les directions. Données : $I = \\dfrac{P}{4\\pi d^2}$ et $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$, $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻². (a) Calcule l'intensité acoustique à $d = 3{,}0$ m. (b) Calcule le niveau sonore correspondant. (c) Que devient le niveau si on s'éloigne à $30$ m ?",
+      "corrige": [
+        "(a) Surface de la sphère de rayon $3{,}0$ m : $S = 4\\pi d^2 = 4\\pi \\times (3{,}0)^2 \\approx 113$ m². D'où $I = \\dfrac{0{,}50}{113} \\approx 4{,}4 \\times 10^{-3}$ W·m⁻².",
+        "(b) $\\dfrac{I}{I_0} = \\dfrac{4{,}4 \\times 10^{-3}}{1{,}0 \\times 10^{-12}} = 4{,}4 \\times 10^{9}$, donc $L = 10\\log(4{,}4 \\times 10^{9}) = 10\\,(0{,}64 + 9) \\approx 96$ dB. C'est nettement au-dessus du seuil de risque auditif ($\\approx 85$ dB).",
+        "(c) À $30$ m, la distance est multipliée par $10$, donc $d^2$ par $100$ : l'intensité est divisée par $100$, et le niveau baisse de $10\\log(100) = 20$ dB : $L \\approx 96 - 20 = 76$ dB. Inutile de tout recalculer — mais on peut vérifier : $I = \\dfrac{0{,}50}{4\\pi \\times 900} \\approx 4{,}4 \\times 10^{-5}$ W·m⁻², qui redonne bien $\\approx 76$ dB.",
+        "Morale : l'intensité décroît en $1/d^2$ ($-6$ dB quand on double la distance, $-20$ dB quand on la décuple) — s'éloigner est le moyen le plus simple de se protéger."
+      ],
+      "reponse": "(a) $I \\approx 4{,}4 \\times 10^{-3}$ W·m⁻². (b) $L \\approx 96$ dB. (c) $L \\approx 76$ dB à $30$ m."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "ondes-em-transmission",
+      "enonce": "Deux maillons d'un réseau de télécommunication : une antenne 5G émettant à $f = 3{,}5$ GHz en propagation libre, et une fibre optique parcourue par la lumière d'un laser de longueur d'onde $\\lambda = 1550$ nm en propagation guidée. Donnée : $c = \\lambda f$, avec $c = 3{,}00 \\times 10^8$ m·s⁻¹. (a) Calcule la longueur d'onde de l'onde 5G. (b) Calcule la fréquence de la lumière du laser et indique son domaine (le visible s'étend d'environ $400$ à $800$ nm). (c) Rappelle ce qui distingue propagation libre et propagation guidée.",
+      "corrige": [
+        "(a) Conversion d'abord : $f = 3{,}5$ GHz $= 3{,}5 \\times 10^{9}$ Hz. Puis $\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00 \\times 10^{8}}{3{,}5 \\times 10^{9}} \\approx 8{,}6 \\times 10^{-2}$ m $= 8{,}6$ cm. Ordre de grandeur cohérent avec les micro-ondes.",
+        "(b) Conversion : $\\lambda = 1550$ nm $= 1{,}55 \\times 10^{-6}$ m. Puis $f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}00 \\times 10^{8}}{1{,}55 \\times 10^{-6}} \\approx 1{,}9 \\times 10^{14}$ Hz. Comme $1550$ nm $> 800$ nm, cette lumière est **au-delà du rouge** : c'est de l'**infrarouge**, invisible à l'œil — les fibres télécoms n'utilisent pas de lumière visible.",
+        "(c) En propagation **libre**, l'onde électromagnétique se propage dans l'air dans toutes les directions permises (ondes hertziennes : radio, 4G/5G, Wi-Fi). En propagation **guidée**, l'onde est confinée dans un guide (câble coaxial, fibre optique) : l'atténuation est bien plus faible, ce qui permet de transmettre l'information sur de très longues distances."
+      ],
+      "reponse": "(a) $\\lambda \\approx 8{,}6$ cm. (b) $f \\approx 1{,}9 \\times 10^{14}$ Hz, domaine infrarouge. (c) Libre : onde hertzienne dans l'air ; guidée : onde confinée (fibre, câble), atténuation réduite."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Dans un atelier, une machine seule produit au poste de contrôle un niveau sonore $L_1 = 80$ dB. Données : $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$, $I = I_0 \\times 10^{L/10}$, $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻² ; les intensités acoustiques de plusieurs sources s'ajoutent. (a) Calcule l'intensité acoustique $I_1$ produite par une machine. (b) Quel est le niveau sonore avec deux machines identiques ? (c) Combien de machines identiques peuvent fonctionner ensemble sans dépasser $90$ dB ?",
+      "corrige": [
+        "(a) $I_1 = I_0 \\times 10^{L_1/10} = 10^{-12} \\times 10^{8} = 1{,}0 \\times 10^{-4}$ W·m⁻².",
+        "(b) Ce sont les **intensités** qui s'ajoutent, jamais les décibels : $I = 2\\,I_1 = 2{,}0 \\times 10^{-4}$ W·m⁻², d'où $L = 10\\log(2{,}0 \\times 10^{8}) = 10\\,(0{,}30 + 8) = 83$ dB. Doubler les sources ajoute $3$ dB — on ne passe pas à $160$ dB.",
+        "(c) On cherche $n$ tel que $n\\,I_1 \\leqslant I_{\\max}$ avec $I_{\\max} = I_0 \\times 10^{90/10} = 10^{-12} \\times 10^{9} = 1{,}0 \\times 10^{-3}$ W·m⁻².",
+        "D'où $n \\leqslant \\dfrac{1{,}0 \\times 10^{-3}}{1{,}0 \\times 10^{-4}} = 10$ : dix machines au maximum. Cohérent avec le réflexe « intensité $\\times 10$ $\\Rightarrow$ $+10$ dB » : $80 + 10 = 90$ dB pour $10$ machines."
+      ],
+      "reponse": "(a) $I_1 = 1{,}0 \\times 10^{-4}$ W·m⁻². (b) $L = 83$ dB. (c) $10$ machines au maximum ($90$ dB atteints exactement)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "spectre-amplitude",
+      "enonce": "Un générateur produit la tension $u(t) = 5{,}0\\cos(2\\pi \\times 100\\,t) + 1{,}5\\cos(2\\pi \\times 300\\,t)$ ($u$ en V, $t$ en s). (a) Trace (ou décris) le spectre d'amplitude de $u$. (b) Donne la fréquence et la période du signal. Est-il sinusoïdal ? (c) Un camarade affirme que la tension $v(t) = 3{,}0\\cos(2\\pi \\times 100\\,t) + 4{,}0\\sin(2\\pi \\times 100\\,t)$ a, elle aussi, un spectre à deux raies. A-t-il raison ? (On rappelle, du cours de maths, que $a\\cos(\\omega t) + b\\sin(\\omega t) = A\\cos(\\omega t + \\varphi)$ avec $A = \\sqrt{a^2 + b^2}$.)",
+      "corrige": [
+        "(a) $u$ est la somme de deux sinusoïdes de fréquences $100$ Hz et $300$ Hz : son spectre comporte **deux raies** — une à $100$ Hz d'amplitude $5{,}0$ V (le fondamental) et une à $300$ Hz d'amplitude $1{,}5$ V (l'harmonique de rang $3$, car $300 = 3 \\times 100$).",
+        "(b) La fréquence du signal est celle du fondamental : $f = 100$ Hz, donc $T = \\dfrac{1}{100} = 10$ ms. Le signal est périodique mais **non sinusoïdal** : un signal sinusoïdal n'aurait qu'une seule raie.",
+        "(c) Non. Les deux termes de $v$ ont la **même** fréquence, $100$ Hz. D'après le cours de maths (chapitre exponentielle complexe), $a\\cos(\\omega t) + b\\sin(\\omega t)$ est une **seule** sinusoïde : $v(t) = A\\cos(2\\pi \\times 100\\,t + \\varphi)$ avec $A = \\sqrt{3{,}0^2 + 4{,}0^2} = \\sqrt{25} = 5{,}0$ V.",
+        "Le spectre de $v$ comporte donc **une seule raie**, à $100$ Hz, d'amplitude $5{,}0$ V : $v$ est un signal sinusoïdal pur. Le piège : une raie par **fréquence** présente dans le signal, pas une raie par terme de la formule."
+      ],
+      "reponse": "(a) Deux raies : $(100 \\text{ Hz} ; 5{,}0 \\text{ V})$ et $(300 \\text{ Hz} ; 1{,}5 \\text{ V})$. (b) $f = 100$ Hz, $T = 10$ ms, signal non sinusoïdal. (c) Non : une seule raie à $100$ Hz, d'amplitude $5{,}0$ V."
+    }
+  ]
+}

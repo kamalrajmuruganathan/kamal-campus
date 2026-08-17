@@ -1,0 +1,154 @@
+{
+ "id": "tale-sti2d-pc-ondes-signaux-qcm",
+ "chapitre": "tale-sti2d-pc-ondes-signaux",
+ "titre": "QCM — Ondes et signaux (terminale)",
+ "voie": "technologique",
+ "niveau": "terminale-techno",
+ "parcours": "pc-maths-sti2d-stl",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question. Donnée pour tout le QCM : $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻² et $c = 3{,}00 \\times 10^8$ m·s⁻¹.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "spectre-amplitude",
+   "enonce": "Que représente le spectre d'amplitude d'un signal périodique ?",
+   "choix": [
+    "l'amplitude du signal en fonction du temps",
+    "l'amplitude de chaque composante sinusoïdale en fonction de sa fréquence",
+    "l'intensité acoustique en fonction de la distance à la source",
+    "la fréquence du signal en fonction de son amplitude"
+   ],
+   "reponse": 1,
+   "explication": "Le spectre d'amplitude est le graphique **amplitude en fonction de la fréquence** : chaque composante sinusoïdale du signal y apparaît comme une raie. Le piège est de le confondre avec l'**oscillogramme**, qui montre le même signal mais **en fonction du temps** — ce sont deux représentations du même signal, avec des axes différents."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "L'intensité acoustique est définie par $I = \\dfrac{P}{S}$. Dans quelle unité s'exprime-t-elle ?",
+   "choix": [
+    "en watts (W)",
+    "en décibels (dB)",
+    "en watts par mètre carré (W·m⁻²)",
+    "en watts par mètre (W·m⁻¹)"
+   ],
+   "reponse": 2,
+   "explication": "$I$ est une **puissance par unité de surface** : W divisés par m², donc W·m⁻². Le piège principal est le décibel : le dB est l'unité du **niveau sonore** $L = 10\\log(I/I_0)$, pas de l'intensité — confondre $I$ et $L$ fait échouer tous les calculs du chapitre."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "spectre-amplitude",
+   "enonce": "Le spectre d'un son comporte des raies à $150$, $300$, $450$ et $600$ Hz. Quelle est la fréquence du signal ?",
+   "choix": [
+    "$600$ Hz",
+    "$150$ Hz",
+    "$375$ Hz",
+    "$1500$ Hz"
+   ],
+   "reponse": 1,
+   "explication": "La fréquence du signal est celle du **fondamental**, la raie de **plus basse fréquence** : $150$ Hz. Les autres raies sont les harmoniques de rangs $2$, $3$ et $4$ ($300 = 2 \\times 150$, etc.). Les pièges : prendre la dernière raie ($600$), faire une moyenne ($375$) ou additionner les fréquences ($1500$) — les fréquences ne s'ajoutent pas."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "hauteur-timbre",
+   "enonce": "Une guitare et un piano jouent la même note, aussi fort l'un que l'autre, et on les distingue pourtant à l'oreille. Qu'est-ce qui diffère entre les deux sons ?",
+   "choix": [
+    "la fréquence du fondamental",
+    "la hauteur",
+    "le nombre et les amplitudes relatives des harmoniques — le timbre",
+    "l'intensité acoustique"
+   ],
+   "reponse": 2,
+   "explication": "Même note = même fréquence de fondamental = même **hauteur** ; même force = même intensité. Ce qui reste, c'est le **timbre** : la composition en harmoniques (nombre de raies et amplitudes relatives), différente d'un instrument à l'autre. Le piège est de croire que deux sons de même hauteur ont le même spectre : ils ne partagent que la raie du fondamental."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Une intensité acoustique vaut $I = 1{,}0 \\times 10^{-6}$ W·m⁻². On donne $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻². Que vaut le niveau sonore ?",
+   "choix": [
+    "$60$ dB",
+    "$-60$ dB",
+    "$6$ dB",
+    "$120$ dB"
+   ],
+   "reponse": 0,
+   "explication": "$\\dfrac{I}{I_0} = \\dfrac{10^{-6}}{10^{-12}} = 10^{6}$, donc $L = 10\\log(10^{6}) = 10 \\times 6 = 60$ dB. Les pièges : oublier de diviser par $I_0$ (ce qui donne $10\\log(10^{-6}) = -60$ dB, absurde pour un son audible), oublier le facteur $10$ ($6$ dB), ou le compter deux fois ($120$ dB)."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "ondes-em-transmission",
+   "enonce": "Une station de radio FM émet à $f = 100$ MHz. On donne $c = \\lambda f$ avec $c = 3{,}00 \\times 10^8$ m·s⁻¹. Quelle est la longueur d'onde ?",
+   "choix": [
+    "$3{,}00$ m",
+    "$0{,}33$ m",
+    "$3{,}00 \\times 10^{6}$ m",
+    "$30{,}0$ m"
+   ],
+   "reponse": 0,
+   "explication": "On convertit d'abord : $100$ MHz $= 1{,}00 \\times 10^{8}$ Hz. Puis $\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00 \\times 10^{8}}{1{,}00 \\times 10^{8}} = 3{,}00$ m. Les pièges : inverser la formule ($f/c \\approx 0{,}33$), ou oublier le préfixe méga et diviser par $100$ ($3 \\times 10^{6}$ m — une « onde » de $3000$ km doit alerter)."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Une machine seule produit un niveau sonore de $80$ dB en un point. On place à côté une seconde machine identique. On donne $10\\log 2 \\approx 3{,}0$. Quel est le nouveau niveau sonore ?",
+   "choix": [
+    "$160$ dB",
+    "$83$ dB",
+    "$90$ dB",
+    "$80$ dB"
+   ],
+   "reponse": 1,
+   "explication": "Ce sont les **intensités** qui s'ajoutent : $I \\to 2I$, donc $L \\to L + 10\\log 2 \\approx 80 + 3 = 83$ dB. Le piège majeur est d'additionner les décibels ($160$ dB, un niveau destructeur, absurde pour deux machines) ; $+10$ dB correspondrait à **dix** machines, pas deux."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "À $2$ m d'une sirène (source isotrope, $I = \\dfrac{P}{4\\pi d^2}$), le niveau sonore vaut $90$ dB. Que vaut-il à $20$ m, en champ libre ?",
+   "choix": [
+    "$80$ dB",
+    "$70$ dB",
+    "$45$ dB",
+    "$9$ dB"
+   ],
+   "reponse": 1,
+   "explication": "La distance est multipliée par $10$, donc $d^2$ par $100$ : l'intensité est **divisée par $100$**, et $L$ diminue de $10\\log(100) = 20$ dB : $90 - 20 = 70$ dB. Les pièges : croire que $I$ décroît en $1/d$ ($-10$ dB, soit $80$ dB), ou appliquer le facteur directement au niveau ($90/2$ ou $90/10$) — on ne divise jamais des décibels."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Le règlement d'un atelier limite le niveau sonore à $L = 70$ dB. On donne $I = I_0 \\times 10^{L/10}$ avec $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻². Quelle intensité acoustique cela représente-t-il ?",
+   "choix": [
+    "$1{,}0 \\times 10^{-5}$ W·m⁻²",
+    "$1{,}0 \\times 10^{-7}$ W·m⁻²",
+    "$7{,}0 \\times 10^{-12}$ W·m⁻²",
+    "$1{,}0 \\times 10^{7}$ W·m⁻²"
+   ],
+   "reponse": 0,
+   "explication": "$I = 10^{-12} \\times 10^{70/10} = 10^{-12} \\times 10^{7} = 1{,}0 \\times 10^{-5}$ W·m⁻². Les pièges : se tromper de signe dans l'exposant ($10^{-12-7} = 10^{-19}$, ou ici $10^{-7}$ en oubliant $I_0$ à moitié), multiplier $I_0$ par $7$ au lieu de $10^{7}$, ou oublier complètement $I_0$ ($10^{7}$ W·m⁻², une intensité colossale qui doit alerter)."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "hauteur-timbre",
+   "enonce": "Avec un filtre, on supprime tous les harmoniques d'un son de guitare pour ne garder que le fondamental. Qu'entend-on ?",
+   "choix": [
+    "plus rien : sans harmoniques, il n'y a plus de son",
+    "un son plus grave, car il a perdu ses fréquences élevées",
+    "un son de même hauteur mais de timbre différent — un son pur",
+    "le même son, car seul le fondamental compte"
+   ],
+   "reponse": 2,
+   "explication": "La **hauteur** ne dépend que de la fréquence du **fondamental**, qui est conservé : la note perçue est la même. Mais le spectre est réduit à une seule raie : le son est devenu **pur**, son **timbre** a changé (il sonne comme un diapason). Le piège est de croire que perdre les harmoniques rend le son plus grave — les harmoniques ne fixent pas la hauteur, ils font le timbre."
+  }
+ ]
+}

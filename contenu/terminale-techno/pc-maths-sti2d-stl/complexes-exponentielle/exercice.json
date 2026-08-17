@@ -1,0 +1,93 @@
+{
+  "id": "tale-sti2d-math-complexes-exponentielle-exos",
+  "chapitre": "tale-sti2d-math-complexes-exponentielle",
+  "titre": "Exercices — Nombres complexes : exponentielle complexe et signal",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "passage-formes",
+      "enonce": "Donner la forme exponentielle de $z_1 = \\sqrt{3} + \\mathrm{i}$, puis la forme algébrique de $z_2 = 2\\,\\mathrm{e}^{\\mathrm{i}2\\pi/3}$.",
+      "corrige": [
+        "**Pour $z_1$** : on calcule d'abord le module. $|z_1| = \\sqrt{(\\sqrt3)^2 + 1^2} = \\sqrt{3+1} = 2$.",
+        "On cherche $\\theta$ avec les DEUX équations : $\\cos\\theta = \\dfrac{\\sqrt3}{2}$ et $\\sin\\theta = \\dfrac{1}{2}$, donc $\\theta = \\dfrac{\\pi}{6}$.",
+        "D'où $z_1 = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/6}$.",
+        "**Pour $z_2$** : on développe avec la définition. $z_2 = 2\\cos\\dfrac{2\\pi}{3} + 2\\mathrm{i}\\sin\\dfrac{2\\pi}{3} = 2 \\times \\left(-\\dfrac{1}{2}\\right) + 2\\mathrm{i} \\times \\dfrac{\\sqrt3}{2} = -1 + \\mathrm{i}\\sqrt{3}$."
+      ],
+      "reponse": "$z_1 = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/6}$ et $z_2 = -1 + \\mathrm{i}\\sqrt{3}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{C}$ : a) $(1+\\mathrm{i})z = 4\\mathrm{i}$ ; b) $z^2 = -49$.",
+      "corrige": [
+        "**a)** On isole $z$ : $z = \\dfrac{4\\mathrm{i}}{1+\\mathrm{i}}$. On multiplie numérateur et dénominateur par le conjugué du dénominateur, $1 - \\mathrm{i}$.",
+        "$z = \\dfrac{4\\mathrm{i}(1-\\mathrm{i})}{(1+\\mathrm{i})(1-\\mathrm{i})} = \\dfrac{4\\mathrm{i} - 4\\mathrm{i}^2}{1^2 + 1^2} = \\dfrac{4\\mathrm{i} + 4}{2} = 2 + 2\\mathrm{i}$.",
+        "**b)** Ici $a = -49 < 0$ : les solutions sont $z = \\pm\\mathrm{i}\\sqrt{49} = \\pm 7\\mathrm{i}$. Il y a bien DEUX solutions opposées.",
+        "Vérification : $(7\\mathrm{i})^2 = 49\\,\\mathrm{i}^2 = -49$ et $(-7\\mathrm{i})^2 = 49\\,\\mathrm{i}^2 = -49$."
+      ],
+      "reponse": "a) $z = 2 + 2\\mathrm{i}$ ; b) $z = 7\\mathrm{i}$ ou $z = -7\\mathrm{i}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "operations-exponentielle",
+      "enonce": "On pose $z_1 = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$ et $z_2 = 3\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$. Calculer $z_1 z_2$ et $\\dfrac{z_1}{z_2}$ sous forme exponentielle, puis $z_1^4$ sous forme algébrique.",
+      "corrige": [
+        "**Produit** : les modules se multiplient, les arguments s'additionnent. $z_1 z_2 = 2 \\times 3\\,\\mathrm{e}^{\\mathrm{i}(\\pi/4 + \\pi/3)} = 6\\,\\mathrm{e}^{\\mathrm{i}7\\pi/12}$ (car $\\frac{\\pi}{4} + \\frac{\\pi}{3} = \\frac{3\\pi + 4\\pi}{12} = \\frac{7\\pi}{12}$).",
+        "**Quotient** : les modules se divisent, les arguments se soustraient. $\\dfrac{z_1}{z_2} = \\dfrac{2}{3}\\,\\mathrm{e}^{\\mathrm{i}(\\pi/4 - \\pi/3)} = \\dfrac{2}{3}\\,\\mathrm{e}^{-\\mathrm{i}\\pi/12}$.",
+        "**Puissance** : $z_1^4 = 2^4\\,\\mathrm{e}^{\\mathrm{i}4\\pi/4} = 16\\,\\mathrm{e}^{\\mathrm{i}\\pi}$.",
+        "Comme $\\mathrm{e}^{\\mathrm{i}\\pi} = -1$, on obtient $z_1^4 = -16$ : un réel, alors que $z_1$ ne l'était pas."
+      ],
+      "reponse": "$z_1 z_2 = 6\\,\\mathrm{e}^{\\mathrm{i}7\\pi/12}$, $\\dfrac{z_1}{z_2} = \\dfrac{2}{3}\\,\\mathrm{e}^{-\\mathrm{i}\\pi/12}$, $z_1^4 = -16$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "signal",
+      "enonce": "Une tension est modélisée par $u(t) = 3\\cos(100\\pi t) + 3\\sin(100\\pi t)$ (en volts, $t$ en secondes). Mettre $u(t)$ sous la forme $A\\cos(100\\pi t + \\varphi)$ avec $A > 0$, et donner l'amplitude et la phase à l'origine du signal.",
+      "corrige": [
+        "L'amplitude vaut $A = \\sqrt{a^2 + b^2} = \\sqrt{3^2 + 3^2} = \\sqrt{18} = 3\\sqrt{2}$.",
+        "On développe la cible : $A\\cos(100\\pi t + \\varphi) = A\\cos\\varphi\\cos(100\\pi t) - A\\sin\\varphi\\sin(100\\pi t)$, puis on identifie : $A\\cos\\varphi = 3$ et $-A\\sin\\varphi = 3$.",
+        "D'où $\\cos\\varphi = \\dfrac{3}{3\\sqrt2} = \\dfrac{\\sqrt2}{2}$ et $\\sin\\varphi = -\\dfrac{\\sqrt2}{2}$ (attention au signe MOINS, il vient du développement). Donc $\\varphi = -\\dfrac{\\pi}{4}$.",
+        "Conclusion : $u(t) = 3\\sqrt{2}\\cos\\!\\left(100\\pi t - \\dfrac{\\pi}{4}\\right)$. Vérification : $3\\sqrt2\\left[\\cos(100\\pi t)\\cos\\frac{\\pi}{4} + \\sin(100\\pi t)\\sin\\frac{\\pi}{4}\\right] = 3\\cos(100\\pi t) + 3\\sin(100\\pi t)$."
+      ],
+      "reponse": "$u(t) = 3\\sqrt{2}\\cos\\!\\left(100\\pi t - \\dfrac{\\pi}{4}\\right)$ : amplitude $A = 3\\sqrt{2} \\approx 4{,}24$ V, phase à l'origine $\\varphi = -\\dfrac{\\pi}{4}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "linearisation",
+      "enonce": "1) En utilisant $\\cos(2t) = 1 - 2\\sin^2 t$, linéariser $\\sin^2 t$. 2) En déduire la valeur exacte de $I = \\displaystyle\\int_0^{\\pi/2} \\sin^2 t\\,\\mathrm{d}t$. 3) Interpréter : quelle est la valeur moyenne de $\\sin^2$ sur $\\left[0\\,;\\dfrac{\\pi}{2}\\right]$ ?",
+      "corrige": [
+        "**1)** On isole $\\sin^2 t$ dans la formule de duplication : $2\\sin^2 t = 1 - \\cos(2t)$, donc $\\sin^2 t = \\dfrac{1 - \\cos(2t)}{2} = \\dfrac{1}{2} - \\dfrac{\\cos(2t)}{2}$.",
+        "**2)** Une primitive de $\\dfrac{1}{2}$ est $\\dfrac{t}{2}$ ; une primitive de $\\cos(2t)$ est $\\dfrac{\\sin(2t)}{2}$ (ne pas oublier le facteur $\\frac{1}{2}$). Donc une primitive de $\\sin^2 t$ est $F(t) = \\dfrac{t}{2} - \\dfrac{\\sin(2t)}{4}$.",
+        "$I = F\\!\\left(\\dfrac{\\pi}{2}\\right) - F(0) = \\left(\\dfrac{\\pi}{4} - \\dfrac{\\sin\\pi}{4}\\right) - (0 - 0) = \\dfrac{\\pi}{4}$, car $\\sin\\pi = 0$.",
+        "**3)** La valeur moyenne est $\\dfrac{1}{\\pi/2 - 0} \\times I = \\dfrac{2}{\\pi} \\times \\dfrac{\\pi}{4} = \\dfrac{1}{2}$. C'est le résultat utilisé en électricité : la valeur moyenne de $\\sin^2$ (ou $\\cos^2$) vaut $\\dfrac{1}{2}$, d'où le facteur $\\dfrac{1}{\\sqrt2}$ des valeurs efficaces."
+      ],
+      "reponse": "$\\sin^2 t = \\dfrac{1 - \\cos(2t)}{2}$ ; $I = \\dfrac{\\pi}{4}$ ; valeur moyenne $= \\dfrac{1}{2}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "transformations",
+      "enonce": "Dans le plan complexe, on considère les transformations $f : z \\mapsto (1+\\mathrm{i})z$ et $g : z \\mapsto z + 3 - 2\\mathrm{i}$. 1) Écrire $1+\\mathrm{i}$ sous forme exponentielle et décrire géométriquement $f$. 2) Décrire géométriquement $g$. 3) Le point $\\mathrm{B}$ a pour affixe $2 - \\mathrm{i}$ ; calculer l'affixe de $\\mathrm{B}' = f(\\mathrm{B})$ et vérifier que $\\mathrm{OB}' = \\sqrt{2}\\,\\mathrm{OB}$.",
+      "corrige": [
+        "**1)** $|1+\\mathrm{i}| = \\sqrt{1+1} = \\sqrt{2}$ et $\\cos\\theta = \\sin\\theta = \\dfrac{\\sqrt2}{2}$ donne $\\theta = \\dfrac{\\pi}{4}$, donc $1+\\mathrm{i} = \\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$.",
+        "Multiplier par $\\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$ multiplie le module par $\\sqrt2$ et ajoute $\\dfrac{\\pi}{4}$ à l'argument : $f$ est la rotation de centre $\\mathrm{O}$ et d'angle $\\dfrac{\\pi}{4}$, suivie de l'homothétie de centre $\\mathrm{O}$ et de rapport $\\sqrt{2}$.",
+        "**2)** $g$ ajoute une constante à l'affixe : c'est la translation de vecteur d'affixe $3 - 2\\mathrm{i}$, c'est-à-dire de coordonnées $(3\\,;-2)$.",
+        "**3)** $z_{\\mathrm{B}'} = (1+\\mathrm{i})(2-\\mathrm{i}) = 2 - \\mathrm{i} + 2\\mathrm{i} - \\mathrm{i}^2 = 2 + \\mathrm{i} + 1 = 3 + \\mathrm{i}$.",
+        "$\\mathrm{OB} = |2-\\mathrm{i}| = \\sqrt{4+1} = \\sqrt{5}$ et $\\mathrm{OB}' = |3+\\mathrm{i}| = \\sqrt{9+1} = \\sqrt{10} = \\sqrt{2}\\times\\sqrt{5}$ : on a bien $\\mathrm{OB}' = \\sqrt{2}\\,\\mathrm{OB}$, conforme au rapport $\\sqrt2$ de l'homothétie."
+      ],
+      "reponse": "$1+\\mathrm{i} = \\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$ ; $f$ = rotation d'angle $\\pi/4$ et homothétie de rapport $\\sqrt2$ (centre $\\mathrm{O}$) ; $g$ = translation de vecteur d'affixe $3-2\\mathrm{i}$ ; $z_{\\mathrm{B}'} = 3 + \\mathrm{i}$, et $\\mathrm{OB}' = \\sqrt{10} = \\sqrt{2}\\,\\mathrm{OB}$."
+    }
+  ]
+}

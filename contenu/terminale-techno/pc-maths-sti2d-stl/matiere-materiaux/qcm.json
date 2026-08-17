@@ -1,0 +1,154 @@
+{
+ "id": "tale-sti2d-pc-matiere-materiaux-qcm",
+ "chapitre": "tale-sti2d-pc-matiere-materiaux",
+ "titre": "QCM — Matière et matériaux (terminale)",
+ "voie": "technologique",
+ "niveau": "terminale-techno",
+ "parcours": "pc-maths-sti2d-stl",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question. Les formules et les données numériques nécessaires sont rappelées dans les énoncés, comme au bac.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "materiaux-familles",
+   "enonce": "Un ski est fabriqué en fibre de carbone noyée dans une résine. À quelle famille de matériaux appartient-il ?",
+   "choix": [
+    "les métaux et alliages",
+    "les polymères",
+    "les céramiques et verres",
+    "les composites"
+   ],
+   "reponse": 3,
+   "explication": "Un **composite** associe une **matrice** (ici la résine) et un **renfort** (ici la fibre de carbone) pour obtenir un matériau à la fois léger ET résistant. Le piège est de répondre « polymère » parce qu'il y a une résine : la résine seule est un polymère, mais l'ensemble matrice + renfort forme bien un composite, comme le béton armé."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "combustions",
+   "enonce": "Qu'est-ce qu'une combustion ?",
+   "choix": [
+    "une réaction d'oxydation rapide entre un combustible et un comburant, déclenchée par une source d'énergie",
+    "un transfert d'ion $\\mathrm{H^+}$ entre un acide et une base",
+    "un changement d'état qui libère de l'énergie sans réaction chimique",
+    "une désintégration spontanée de noyaux instables"
+   ],
+   "reponse": 0,
+   "explication": "La combustion est une réaction d'**oxydation rapide** : le combustible est oxydé par le comburant (le dioxygène de l'air), après amorçage par une source d'énergie — ce sont les trois côtés du **triangle du feu**. Le piège est de la confondre avec un simple changement d'état « qui chauffe » : la combustion est une **réaction chimique**, les espèces sont transformées ($\\mathrm{CO_2}$, $\\mathrm{H_2O}$), alors qu'un changement d'état conserve l'espèce chimique."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "materiaux-masse-volumique",
+   "enonce": "La masse volumique de l'acier est $\\rho = 7{,}8$ g/cm³. Que vaut-elle en kg/m³ ?",
+   "choix": [
+    "$7{,}8$ kg/m³",
+    "$780$ kg/m³",
+    "$7\\,800$ kg/m³",
+    "$78\\,000$ kg/m³"
+   ],
+   "reponse": 2,
+   "explication": "$1$ g/cm³ $= 1000$ kg/m³, donc $7{,}8$ g/cm³ $= 7\\,800$ kg/m³. C'est LA conversion piège du volet matériaux : répondre $7{,}8$ kg/m³ (croire que les unités sont équivalentes) est l'erreur classique — un mètre cube d'acier ne pèse évidemment pas $7{,}8$ kg, mais presque $8$ tonnes."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "changements-etat",
+   "enonce": "Faire fondre $4{,}0$ kg de glace à $0$ °C demande une énergie $E = m \\times L_f$ avec $L_f = 334$ kJ/kg. Que vaut $E$ ?",
+   "choix": [
+    "$E \\approx 1{,}3 \\times 10^{6}$ J",
+    "$E \\approx 1{,}3 \\times 10^{3}$ J",
+    "$E \\approx 84$ kJ",
+    "$E = 334$ kJ"
+   ],
+   "reponse": 0,
+   "explication": "$E = 4{,}0 \\times 334 = 1\\,336$ kJ $\\approx 1{,}3 \\times 10^{6}$ J. Deux pièges : oublier que $L_f$ est en **kilo**joules par kg (répondre $1{,}3 \\times 10^{3}$ J, mille fois trop petit), ou diviser au lieu de multiplier ($334/4 \\approx 84$ kJ). Et pendant toute la fusion, la température reste bloquée à $0$ °C : c'est le palier du corps pur."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "radioactivite-demi-vie",
+   "enonce": "Un échantillon contient $N_0$ noyaux radioactifs de demi-vie $t_{1/2}$. Combien en reste-t-il au bout de $3\\,t_{1/2}$ ?",
+   "choix": [
+    "$N_0/3$",
+    "$N_0/6$",
+    "$N_0/8$",
+    "pratiquement zéro"
+   ],
+   "reponse": 2,
+   "explication": "On divise par $2$ **à chaque** demi-vie : $N_0 \\to N_0/2 \\to N_0/4 \\to N_0/8$, soit $N_0/2^{\\,3}$. Les pièges : diviser par $3$ (décroissance supposée linéaire), diviser par $2 \\times 3 = 6$ (confondre $2^n$ et $2n$), ou croire qu'il ne reste rien — après $3$ demi-vies il reste encore $12{,}5\\,\\%$ des noyaux."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "acido-basique-couples",
+   "enonce": "Dans le couple acide/base $\\mathrm{NH_4^+ / NH_3}$, quelle espèce est la base, et pourquoi ?",
+   "choix": [
+    "$\\mathrm{NH_3}$, car elle peut capter un ion $\\mathrm{H^+}$",
+    "$\\mathrm{NH_4^+}$, car il porte une charge positive",
+    "$\\mathrm{NH_3}$, car elle peut céder un ion $\\mathrm{H^+}$",
+    "$\\mathrm{NH_4^+}$, car il possède le plus d'atomes d'hydrogène"
+   ],
+   "reponse": 0,
+   "explication": "Une **base capte** un $\\mathrm{H^+}$, un **acide** le **cède** : $\\mathrm{NH_3} + \\mathrm{H^+} \\to \\mathrm{NH_4^+}$, donc $\\mathrm{NH_3}$ est la base et $\\mathrm{NH_4^+}$ l'acide du couple. Les pièges : inverser « céder » et « capter », ou raisonner sur la charge — le signe de la charge ne dit pas qui est l'acide ($\\mathrm{OH^-}$ est une base négative, $\\mathrm{NH_4^+}$ un acide positif). Les deux formes du couple ne diffèrent que d'**un** $\\mathrm{H^+}$."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "combustions-equation",
+   "enonce": "Quelle est l'équation ajustée de la combustion complète de l'éthane $\\mathrm{C_2H_6}$ ?",
+   "choix": [
+    "$\\mathrm{C_2H_6 + 7\\,O_2 \\longrightarrow 2\\,CO_2 + 3\\,H_2O}$",
+    "$\\mathrm{2\\,C_2H_6 + 7\\,O_2 \\longrightarrow 4\\,CO_2 + 6\\,H_2O}$",
+    "$\\mathrm{2\\,C_2H_6 + 5\\,O_2 \\longrightarrow 4\\,CO_2 + 6\\,H_2O}$",
+    "$\\mathrm{C_2H_6 + 3\\,O_2 \\longrightarrow 2\\,CO_2 + 3\\,H_2O}$"
+   ],
+   "reponse": 1,
+   "explication": "Méthode : C d'abord ($4$ C $\\to 4\\,\\mathrm{CO_2}$), H ensuite ($12$ H $\\to 6\\,\\mathrm{H_2O}$), O **en dernier** : à droite $8 + 6 = 14$ O, donc $7\\,\\mathrm{O_2}$ à gauche — d'où le facteur $2$ devant $\\mathrm{C_2H_6}$ pour garder des coefficients entiers. Les distracteurs ne conservent pas l'oxygène : compte toujours les O en dernier et vérifie chaque élément des deux côtés."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "radioactivite-activite",
+   "enonce": "Une source contient $N = 3{,}0 \\times 10^{15}$ noyaux radioactifs de constante radioactive $\\lambda = 2{,}0 \\times 10^{-9}\\ \\mathrm{s^{-1}}$. Sachant que $A = \\lambda N$, que vaut son activité ?",
+   "choix": [
+    "$A = 6{,}0 \\times 10^{6}$ Bq",
+    "$A = 6{,}0 \\times 10^{24}$ Bq",
+    "$A = 1{,}5 \\times 10^{24}$ Bq",
+    "$A = 1{,}5 \\times 10^{6}$ Bq"
+   ],
+   "reponse": 0,
+   "explication": "$A = \\lambda N = 2{,}0 \\times 10^{-9} \\times 3{,}0 \\times 10^{15} = 6{,}0 \\times 10^{6}$ Bq, soit six millions de désintégrations par seconde. Les pièges : se tromper de signe en ajoutant les exposants ($-9 + 15 = 6$, pas $24$) ou diviser $N$ par $\\lambda$ ($1{,}5 \\times 10^{24}$). Et l'activité n'est en becquerels que si $\\lambda$ est en $\\mathrm{s^{-1}}$ : $1$ Bq $= 1$ désintégration **par seconde**."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "combustions-energie",
+   "enonce": "On brûle $500$ g de bois sec, de pouvoir calorifique $PC = 15$ MJ/kg. Sachant que $E = m \\times PC$, quelle énergie est libérée ?",
+   "choix": [
+    "$E = 7{,}5$ MJ",
+    "$E = 7\\,500$ MJ",
+    "$E = 30$ MJ",
+    "$E = 15$ MJ"
+   ],
+   "reponse": 0,
+   "explication": "Le $PC$ est en MJ par **kg** : il faut convertir $m = 500$ g $= 0{,}500$ kg, d'où $E = 0{,}500 \\times 15 = 7{,}5$ MJ. Le piège n°1 du chapitre : garder $m$ en grammes donne $7\\,500$ MJ, mille fois trop — l'énergie d'une demi-tonne de bois, pas d'une demi-bûche. Les autres distracteurs divisent au lieu de multiplier ($30$) ou oublient la masse ($15$)."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "acido-basique-ph",
+   "enonce": "Une pluie acide fait passer l'eau d'un bassin de pH $= 5$ à pH $= 3$. Sachant que $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}}$ mol/L, comment la concentration en ions oxonium a-t-elle évolué ?",
+   "choix": [
+    "elle a été multipliée par $2$",
+    "elle a été multipliée par $10$",
+    "elle a été multipliée par $100$",
+    "elle a été divisée par $100$"
+   ],
+   "reponse": 2,
+   "explication": "$[\\mathrm{H_3O^+}]$ passe de $10^{-5}$ à $10^{-3}$ mol/L : facteur $\\dfrac{10^{-3}}{10^{-5}} = 10^{2} = 100$. Deux pièges dans les distracteurs : croire que $2$ unités de pH font un facteur $2$ (le pH est un **logarithme** : une unité $=$ un facteur $10$), et se tromper de sens — le pH **diminue**, donc la solution est **plus** acide et $[\\mathrm{H_3O^+}]$ **augmente**."
+  }
+ ]
+}
