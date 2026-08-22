@@ -1,0 +1,89 @@
+{
+  "id": "1st2s-pc-securite-chimique-acide-base-exos",
+  "chapitre": "1st2s-pc-securite-chimique-acide-base",
+  "titre": "Exercices — Sécurité chimique : acides, bases et pH",
+  "voie": "technologique",
+  "niveau": "premiere",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "quantite-de-matiere",
+      "enonce": "Le bicarbonate de sodium $\\mathrm{NaHCO_3}$ est utilisé comme antiacide. Sa masse molaire vaut $M = 84$ g·mol⁻¹. Un comprimé en contient $m = 4{,}2$ g. Quelle quantité de matière $n$ de bicarbonate le comprimé apporte-t-il ?",
+      "corrige": [
+        "On utilise la relation $n = \\dfrac{m}{M}$, avec $m$ en g et $M$ en g·mol⁻¹.",
+        "Application numérique : $n = \\dfrac{4{,}2}{84} = 0{,}050$ mol.",
+        "On vérifie l'unité : g $\\div$ (g·mol⁻¹) = mol. Le résultat est bien une quantité de matière."
+      ],
+      "reponse": "$n = \\dfrac{m}{M} = \\dfrac{4{,}2}{84} = 0{,}050$ mol (soit $5{,}0 \\times 10^{-2}$ mol)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "concentrations",
+      "enonce": "Un sérum physiologique contient $m = 9{,}0$ g de chlorure de sodium NaCl dissous dans $V = 1{,}0$ L de solution. La masse molaire est $M = 58{,}5$ g·mol⁻¹. 1) Calculer la concentration massique $C_m$. 2) En déduire la concentration molaire $C$.",
+      "corrige": [
+        "Concentration massique : $C_m = \\dfrac{m}{V} = \\dfrac{9{,}0}{1{,}0} = 9{,}0$ g·L⁻¹.",
+        "Concentration molaire : $C = \\dfrac{C_m}{M} = \\dfrac{9{,}0}{58{,}5} = 0{,}15$ mol·L⁻¹.",
+        "On peut vérifier par l'autre chemin : $n = \\dfrac{m}{M} = \\dfrac{9{,}0}{58{,}5} = 0{,}15$ mol, puis $C = \\dfrac{n}{V} = \\dfrac{0{,}15}{1{,}0} = 0{,}15$ mol·L⁻¹. ✔"
+      ],
+      "reponse": "$C_m = 9{,}0$ g·L⁻¹ et $C = \\dfrac{C_m}{M} = 0{,}15$ mol·L⁻¹."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "ph-concentration",
+      "enonce": "Le sang artériel a un pH voisin de $7{,}4$. 1) Calculer la concentration en ions oxonium $[\\mathrm{H_3O^+}]$. 2) La comparer à celle de l'eau pure neutre ($10^{-7}$ mol·L⁻¹) et conclure sur le caractère acide ou basique du sang.",
+      "corrige": [
+        "On applique $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-7{,}4}$ mol·L⁻¹.",
+        "On écrit $10^{-7{,}4} = 10^{0{,}6} \\times 10^{-8} \\approx 4{,}0 \\times 10^{-8}$ mol·L⁻¹.",
+        "Comparaison : $4{,}0 \\times 10^{-8} < 1{,}0 \\times 10^{-7}$ mol·L⁻¹. Il y a moins d'ions $\\mathrm{H_3O^+}$ que dans l'eau pure.",
+        "Comme pH $= 7{,}4 > 7$, le sang est **légèrement basique** : c'est cohérent avec $[\\mathrm{H_3O^+}]$ plus petite que $10^{-7}$."
+      ],
+      "reponse": "$[\\mathrm{H_3O^+}] = 10^{-7{,}4} \\approx 4{,}0 \\times 10^{-8}$ mol·L⁻¹, inférieure à $10^{-7}$ : le sang est légèrement basique (pH $> 7$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "produit-ionique",
+      "enonce": "Un produit d'entretien basique a un pH égal à $11{,}0$ à 25 °C. On donne le produit ionique de l'eau $K_e = 1{,}0 \\times 10^{-14}$. 1) Calculer $[\\mathrm{H_3O^+}]$. 2) En déduire $[\\mathrm{HO^-}]$. 3) Vérifier la cohérence avec le caractère basique de la solution.",
+      "corrige": [
+        "Concentration en ions oxonium : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-11{,}0} = 1{,}0 \\times 10^{-11}$ mol·L⁻¹.",
+        "On utilise $K_e = [\\mathrm{H_3O^+}] \\times [\\mathrm{HO^-}]$, d'où $[\\mathrm{HO^-}] = \\dfrac{K_e}{[\\mathrm{H_3O^+}]} = \\dfrac{1{,}0 \\times 10^{-14}}{1{,}0 \\times 10^{-11}} = 1{,}0 \\times 10^{-3}$ mol·L⁻¹.",
+        "Cohérence : $[\\mathrm{HO^-}] = 10^{-3} > [\\mathrm{H_3O^+}] = 10^{-11}$. Les ions hydroxyde dominent très largement : la solution est bien **basique**."
+      ],
+      "reponse": "$[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-11}$ mol·L⁻¹ et $[\\mathrm{HO^-}] = 1{,}0 \\times 10^{-3}$ mol·L⁻¹ ; comme $[\\mathrm{HO^-}] > [\\mathrm{H_3O^+}]$, la solution est basique."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "concentrations",
+      "enonce": "Au laboratoire de ST2S, on veut préparer $V = 250$ mL d'une solution de chlorure de sodium NaCl de concentration molaire $C = 0{,}20$ mol·L⁻¹ ($M = 58{,}5$ g·mol⁻¹). 1) Quelle quantité de matière $n$ de NaCl faut-il ? 2) Quelle masse $m$ doit-on peser ? 3) Retrouver la concentration massique $C_m$ de la solution préparée.",
+      "corrige": [
+        "On convertit d'abord le volume en litres : $V = 250$ mL $= 0{,}250$ L. C'est l'étape à ne pas oublier.",
+        "Quantité de matière : $n = C \\times V = 0{,}20 \\times 0{,}250 = 0{,}050$ mol.",
+        "Masse à peser : $m = n \\times M = 0{,}050 \\times 58{,}5 = 2{,}9$ g (valeur arrondie ; $2{,}925$ g exactement).",
+        "Concentration massique : $C_m = C \\times M = 0{,}20 \\times 58{,}5 = 11{,}7$ g·L⁻¹. On peut la vérifier avec $C_m = \\dfrac{m}{V} = \\dfrac{2{,}925}{0{,}250} = 11{,}7$ g·L⁻¹. ✔"
+      ],
+      "reponse": "$n = C \\times V = 0{,}050$ mol ; $m = n \\times M = 2{,}9$ g à peser ; $C_m = C \\times M = 11{,}7$ g·L⁻¹."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "reaction-acido-basique",
+      "enonce": "Un détartrant est une solution acide contenant des ions oxonium $\\mathrm{H_3O^+}$ (pH $= 1{,}0$). Un déboucheur de canalisation est une solution basique concentrée en ions hydroxyde $\\mathrm{HO^-}$. On lit sur les deux flacons le pictogramme « corrosif ». 1) Écrire l'équation de la réaction acido-basique entre $\\mathrm{H_3O^+}$ et $\\mathrm{HO^-}$. 2) Calculer $[\\mathrm{H_3O^+}]$ dans le détartrant. 3) Expliquer pourquoi il ne faut jamais mélanger ces deux produits.",
+      "corrige": [
+        "Couples mis en jeu : $\\mathrm{H_3O^+}/\\mathrm{H_2O}$ (l'acide $\\mathrm{H_3O^+}$ cède un $\\mathrm{H^+}$) et $\\mathrm{H_2O}/\\mathrm{HO^-}$ (la base $\\mathrm{HO^-}$ capte un $\\mathrm{H^+}$).",
+        "Transfert de $\\mathrm{H^+}$ de l'acide vers la base : $\\mathrm{H_3O^+} + \\mathrm{HO^-} \\longrightarrow 2\\,\\mathrm{H_2O}$.",
+        "Concentration : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-1{,}0} = 1{,}0 \\times 10^{-1}$ mol·L⁻¹, soit $0{,}10$ mol·L⁻¹ : le détartrant est très acide.",
+        "Danger : les deux produits sont **corrosifs** (attaquent la peau et les yeux) et leur réaction acido-basique est **fortement exothermique** — elle dégage beaucoup de chaleur et peut provoquer des projections brûlantes. On ne les mélange jamais et on porte gants et lunettes."
+      ],
+      "reponse": "$\\mathrm{H_3O^+} + \\mathrm{HO^-} \\rightarrow 2\\,\\mathrm{H_2O}$ ; $[\\mathrm{H_3O^+}] = 0{,}10$ mol·L⁻¹ ; le mélange de deux produits corrosifs libère une forte chaleur (réaction exothermique) et provoque des projections dangereuses."
+    }
+  ]
+}

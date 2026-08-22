@@ -1,0 +1,91 @@
+{
+  "id": "1st2s-pc-infrarouge-securite-routiere-exos",
+  "chapitre": "1st2s-pc-infrarouge-securite-routiere",
+  "titre": "Exercices — Rayonnement infrarouge et sécurité routière",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "loi-de-wien",
+      "enonce": "Une plaque chauffante est portée à la température $\\theta = 227$ °C. 1) Convertir cette température en kelvins. 2) Calculer la longueur d'onde $\\lambda_{max}$ de son maximum d'émission. 3) À quel domaine du spectre appartient-elle ? (constante de Wien $= 2{,}9 \\times 10^{-3}$ m·K)",
+      "corrige": [
+        "Conversion en température absolue : $T = \\theta + 273 = 227 + 273 = 500$ K.",
+        "Loi de Wien : $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{T} = \\dfrac{2{,}9 \\times 10^{-3}}{500} = 5{,}8 \\times 10^{-6}$ m.",
+        "Soit $\\lambda_{max} = 5{,}8$ µm. Cette longueur d'onde est supérieure à $0{,}8$ µm : elle appartient donc à l'**infrarouge**. La plaque émet un rayonnement de chaleur invisible."
+      ],
+      "reponse": "$T = 500$ K, $\\lambda_{max} = 5{,}8 \\times 10^{-6}$ m $= 5{,}8$ µm : domaine **infrarouge**."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "energie-cinetique",
+      "enonce": "Une moto de masse $m = 200$ kg roule à $72$ km/h. 1) Convertir sa vitesse en m·s⁻¹. 2) Calculer son énergie cinétique $E_c = \\frac{1}{2}mv^{2}$.",
+      "corrige": [
+        "Conversion de la vitesse : $v = \\dfrac{72}{3{,}6} = 20$ m·s⁻¹.",
+        "Énergie cinétique : $E_c = \\dfrac{1}{2} \\times m \\times v^{2} = \\dfrac{1}{2} \\times 200 \\times 20^{2}$.",
+        "$E_c = \\dfrac{1}{2} \\times 200 \\times 400 = 40\\,000$ J, soit $4{,}0 \\times 10^{4}$ J."
+      ],
+      "reponse": "$v = 20$ m·s⁻¹ et $E_c = 4{,}0 \\times 10^{4}$ J."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "distances-arret",
+      "enonce": "En ville, une voiture roule à $50$ km/h. Le temps de réaction du conducteur est $t_r = 1{,}0$ s et, sur route sèche, la distance de freinage vaut $d_f = 12$ m. 1) Convertir la vitesse en m·s⁻¹. 2) Calculer la distance de réaction $d_r$. 3) En déduire la distance d'arrêt $d_a$.",
+      "corrige": [
+        "Conversion : $v = \\dfrac{50}{3{,}6} \\approx 13{,}9$ m·s⁻¹.",
+        "Distance de réaction (la voiture roule encore à pleine vitesse) : $d_r = v \\times t_r = 13{,}9 \\times 1{,}0 \\approx 14$ m.",
+        "Distance d'arrêt : $d_a = d_r + d_f = 14 + 12 = 26$ m.",
+        "Autrement dit, même à faible allure « en ville », il faut environ $26$ m pour s'arrêter — soit plusieurs longueurs de voiture."
+      ],
+      "reponse": "$v \\approx 13{,}9$ m·s⁻¹, $d_r \\approx 14$ m, $d_a = d_r + d_f \\approx 26$ m."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "loi-de-wien",
+      "enonce": "L'analyse de la lumière d'une étoile montre que son maximum d'émission est à $\\lambda_{max} = 0{,}29$ µm. 1) Convertir cette longueur d'onde en mètres. 2) Déterminer la température de surface $T$ de l'étoile. 3) Ce rayonnement maximal appartient-il au visible ? (constante de Wien $= 2{,}9 \\times 10^{-3}$ m·K)",
+      "corrige": [
+        "Conversion : $\\lambda_{max} = 0{,}29$ µm $= 0{,}29 \\times 10^{-6}$ m $= 2{,}9 \\times 10^{-7}$ m.",
+        "On isole $T$ dans la loi de Wien $\\lambda_{max} \\times T = 2{,}9 \\times 10^{-3}$ : $T = \\dfrac{2{,}9 \\times 10^{-3}}{\\lambda_{max}} = \\dfrac{2{,}9 \\times 10^{-3}}{2{,}9 \\times 10^{-7}}$.",
+        "$T = 1{,}0 \\times 10^{4}$ K, soit $10\\,000$ K (une étoile très chaude, bien plus que le Soleil à $5\\,800$ K).",
+        "$\\lambda_{max} = 0{,}29$ µm $= 290$ nm est inférieure à $0{,}4$ µm : le maximum est dans l'**ultraviolet**, pas dans le visible."
+      ],
+      "reponse": "$\\lambda_{max} = 2{,}9 \\times 10^{-7}$ m, $T = 1{,}0 \\times 10^{4}$ K ; le maximum est dans l'**ultraviolet**."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "influence-vitesse",
+      "enonce": "Une voiture de masse $m = 1\\,000$ kg est étudiée à deux vitesses : $v_1 = 50$ km/h puis $v_2 = 100$ km/h. 1) Convertir les deux vitesses en m·s⁻¹. 2) Calculer l'énergie cinétique dans chaque cas. 3) Par quel facteur l'énergie cinétique est-elle multipliée quand la vitesse double ? 4) Qu'en déduire pour la distance de freinage ?",
+      "corrige": [
+        "Conversions : $v_1 = \\dfrac{50}{3{,}6} \\approx 13{,}9$ m·s⁻¹ et $v_2 = \\dfrac{100}{3{,}6} \\approx 27{,}8$ m·s⁻¹.",
+        "À $v_1$ : $E_{c1} = \\dfrac{1}{2} \\times 1\\,000 \\times 13{,}9^{2} \\approx \\dfrac{1}{2} \\times 1\\,000 \\times 193 \\approx 9{,}6 \\times 10^{4}$ J.",
+        "À $v_2$ : $E_{c2} = \\dfrac{1}{2} \\times 1\\,000 \\times 27{,}8^{2} \\approx \\dfrac{1}{2} \\times 1\\,000 \\times 772 \\approx 3{,}9 \\times 10^{5}$ J.",
+        "Rapport : $\\dfrac{E_{c2}}{E_{c1}} \\approx \\dfrac{3{,}9 \\times 10^{5}}{9{,}6 \\times 10^{4}} \\approx 4$. En doublant la vitesse, l'énergie cinétique est multipliée par $4$ (car $E_c \\propto v^{2}$, et $2^{2} = 4$).",
+        "La distance de freinage sert à dissiper cette énergie : elle est elle aussi multipliée par $4$. Doubler la vitesse **quadruple** la distance de freinage — et la gravité d'un choc éventuel."
+      ],
+      "reponse": "$v_1 \\approx 13{,}9$ m·s⁻¹, $v_2 \\approx 27{,}8$ m·s⁻¹ ; $E_{c1} \\approx 9{,}6 \\times 10^{4}$ J, $E_{c2} \\approx 3{,}9 \\times 10^{5}$ J ; facteur $\\times 4$, donc distance de freinage $\\times 4$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "distances-arret",
+      "enonce": "Sur autoroute, une voiture roule à $90$ km/h. La distance de freinage est $d_f = 45$ m. On compare deux conducteurs : l'un attentif ($t_r = 1{,}0$ s), l'autre fatigué ($t_r = 2{,}0$ s). 1) Convertir la vitesse en m·s⁻¹. 2) Calculer la distance d'arrêt de chacun. 3) De combien de mètres la fatigue allonge-t-elle l'arrêt, et pourquoi ce terme seul change-t-il ?",
+      "corrige": [
+        "Conversion : $v = \\dfrac{90}{3{,}6} = 25$ m·s⁻¹.",
+        "Conducteur attentif : $d_r = v \\times t_r = 25 \\times 1{,}0 = 25$ m, donc $d_a = d_r + d_f = 25 + 45 = 70$ m.",
+        "Conducteur fatigué : $d_r = 25 \\times 2{,}0 = 50$ m, donc $d_a = 50 + 45 = 95$ m.",
+        "La fatigue allonge l'arrêt de $95 - 70 = 25$ m (l'équivalent d'environ cinq voitures). Seule la distance de **réaction** change, car elle dépend du temps de réaction $t_r$ ($d_r = v\\,t_r$) ; la distance de freinage, elle, ne dépend que de la vitesse et de la route, pas du conducteur."
+      ],
+      "reponse": "$v = 25$ m·s⁻¹ ; $d_a = 70$ m (attentif) contre $95$ m (fatigué) : $+25$ m, dus à la seule distance de réaction $d_r = v\\,t_r$."
+    }
+  ]
+}

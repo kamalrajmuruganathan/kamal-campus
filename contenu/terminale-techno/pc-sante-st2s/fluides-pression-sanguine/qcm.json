@@ -1,0 +1,164 @@
+{
+  "id": "tale-st2s-pc-fluides-pression-sanguine-qcm",
+  "chapitre": "tale-st2s-pc-fluides-pression-sanguine",
+  "titre": "QCM — Propriétés des fluides et pression sanguine",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "debit-volumique",
+      "enonce": "Que mesure le débit volumique $D$ d'un fluide ?",
+      "choix": [
+        "La force avec laquelle le fluide pousse sur une paroi",
+        "Le volume de fluide qui traverse une section par unité de temps",
+        "La masse d'un litre de fluide",
+        "La hauteur de fluide au-dessus d'un point"
+      ],
+      "reponse": 1,
+      "explication": "Le débit est un volume par durée : $D = V/\\Delta t$. Le piège est de le confondre avec la pression (une force par surface) ou la masse volumique (une masse par volume).",
+      "notion_fiche": "1. Le débit d'un fluide"
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "tension-arterielle",
+      "enonce": "Dans une tension artérielle notée « systolique / diastolique », que représente la valeur systolique ?",
+      "choix": [
+        "La pression minimale, quand le cœur se relâche",
+        "La pression maximale, quand le cœur se contracte et éjecte le sang",
+        "La moyenne des deux valeurs",
+        "La pression de l'air dans le brassard au repos"
+      ],
+      "reponse": 1,
+      "explication": "La systole est la contraction du cœur : la pression y est maximale. Le piège est d'inverser avec la diastolique (cœur relâché, pression minimale). Le premier nombre écrit est toujours le plus grand.",
+      "notion_fiche": "5. La tension artérielle"
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "debit-cardiaque",
+      "enonce": "Au repos, une personne a une fréquence cardiaque $f_C = 60$ bpm et un volume d'éjection systolique $VES = 80$ mL. Quel est son débit cardiaque ?",
+      "choix": [
+        "$DC = 4800$ mL/min $= 4{,}8$ L/min",
+        "$DC = 140$ mL/min",
+        "$DC = 80$ mL/min",
+        "$DC = 0{,}75$ mL/min"
+      ],
+      "reponse": 0,
+      "explication": "On applique $DC = f_C \\times VES = 60 \\times 80 = 4800$ mL/min $= 4{,}8$ L/min. Le piège est d'additionner ($60 + 80 = 140$) au lieu de multiplier, ou de garder le seul $VES$ (volume d'un battement).",
+      "notion_fiche": "2. Le débit cardiaque"
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "pression-force",
+      "enonce": "Une force pressante $F = 50$ N s'exerce perpendiculairement sur une surface d'aire $S = 0{,}02$ m². Quelle est la pression ?",
+      "choix": [
+        "$p = 1$ Pa",
+        "$p = 2500$ Pa",
+        "$p = 1000$ Pa",
+        "$p = 100$ Pa"
+      ],
+      "reponse": 1,
+      "explication": "On applique $p = F/S = 50 / 0{,}02 = 2500$ Pa. Le piège est de multiplier ($50 \\times 0{,}02 = 1$) au lieu de diviser. La pression, c'est la force divisée par la surface.",
+      "notion_fiche": "3. Force pressante et pression"
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "conversions-pression",
+      "enonce": "Une tension diastolique est de $8$ cmHg. Combien vaut-elle en millimètres de mercure (mmHg) ?",
+      "choix": [
+        "$0{,}8$ mmHg",
+        "$8$ mmHg",
+        "$80$ mmHg",
+        "$800$ mmHg"
+      ],
+      "reponse": 2,
+      "explication": "$1$ cmHg $= 10$ mmHg, donc $8$ cmHg $= 80$ mmHg. Le piège est de croire que cmHg et mmHg sont égaux, ou de diviser par 10 au lieu de multiplier quand on passe des cmHg aux mmHg.",
+      "notion_fiche": "3. Force pressante et pression"
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "statique-fluides",
+      "enonce": "Dans un fluide au repos, comment varie la pression quand on descend en profondeur ?",
+      "choix": [
+        "Elle diminue quand on descend",
+        "Elle reste constante partout dans le fluide",
+        "Elle augmente quand on descend",
+        "Elle dépend uniquement de la forme du récipient"
+      ],
+      "reponse": 2,
+      "explication": "Le fluide situé au-dessus appuie sur ce qui est en dessous : $\\Delta p = \\rho g h$ augmente avec la profondeur $h$. Le piège est de croire que la pression ne dépend que de la forme du récipient, alors qu'elle ne dépend que de $\\rho$, $g$ et $h$.",
+      "notion_fiche": "4. La pression augmente avec la profondeur"
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "debit-vitesse-section",
+      "enonce": "De l'eau circule à $v = 0{,}4$ m/s dans un tube de section $S = 5$ cm². Quel est le débit $D = v \\times S$ en m³/s ?",
+      "choix": [
+        "$D = 2 \\times 10^{-4}$ m³/s",
+        "$D = 2$ m³/s",
+        "$D = 2 \\times 10^{-2}$ m³/s",
+        "$D = 0{,}08$ m³/s"
+      ],
+      "reponse": 0,
+      "explication": "Il faut convertir la section : $5$ cm² $= 5 \\times 10^{-4}$ m² (une aire : $1$ cm² $= 10^{-4}$ m²). Alors $D = 0{,}4 \\times 5 \\times 10^{-4} = 2 \\times 10^{-4}$ m³/s. Le piège est d'écrire $5$ cm² $= 5 \\times 10^{-2}$ m² (oubli du carré), qui donne $2 \\times 10^{-2}$, soit 100 fois trop.",
+      "notion_fiche": "1. Le débit d'un fluide"
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "statique-fluides",
+      "enonce": "Dans l'eau ($\\rho = 1000$ kg/m³, $g = 10$ N/kg), de combien augmente la pression entre la surface et une profondeur $h = 2$ m ?",
+      "choix": [
+        "$\\Delta p = 200$ Pa",
+        "$\\Delta p = 20\\,000$ Pa",
+        "$\\Delta p = 2\\,000\\,000$ Pa",
+        "$\\Delta p = 5000$ Pa"
+      ],
+      "reponse": 1,
+      "explication": "On applique $\\Delta p = \\rho g h = 1000 \\times 10 \\times 2 = 20\\,000$ Pa. Le piège est d'oublier un facteur (par exemple $1000 \\times 2 = 2000$, en oubliant $g$) ou de se tromper de puissance de 10.",
+      "notion_fiche": "4. La pression augmente avec la profondeur"
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "principe-mesure",
+      "enonce": "Avec un tensiomètre, on gonfle le brassard puis on le dégonfle lentement. À quel moment lit-on la pression systolique sur le manomètre ?",
+      "choix": [
+        "Quand le brassard est totalement gonflé et qu'on n'entend rien",
+        "Quand la pression du brassard descend juste sous celle du sang et que les premiers bruits apparaissent",
+        "Quand les bruits disparaissent définitivement",
+        "Quand le brassard est totalement dégonflé"
+      ],
+      "reponse": 1,
+      "explication": "La systolique se lit à l'apparition des bruits : la pression du brassard vient de passer sous la pression maximale du sang, qui force le passage. Le piège est de la confondre avec la diastolique, lue à la disparition des bruits (le sang coule alors librement).",
+      "notion_fiche": "5. La tension artérielle"
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "conversions-pression",
+      "enonce": "Une pression systolique vaut $120$ mmHg. Sachant que $1$ mmHg $\\approx 133$ Pa, à combien cela correspond-il en pascals ?",
+      "choix": [
+        "$\\approx 0{,}9$ Pa",
+        "$\\approx 253$ Pa",
+        "$\\approx 1{,}6 \\times 10^{4}$ Pa",
+        "$\\approx 1{,}6 \\times 10^{6}$ Pa"
+      ],
+      "reponse": 2,
+      "explication": "On multiplie : $120 \\times 133 = 15\\,960 \\approx 1{,}6 \\times 10^{4}$ Pa. Le piège est de diviser au lieu de multiplier (on obtiendrait $0{,}9$), ou d'additionner ($120 + 133 = 253$).",
+      "notion_fiche": "3. Force pressante et pression"
+    }
+  ]
+}

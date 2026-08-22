@@ -1,0 +1,89 @@
+{
+  "id": "tale-st2s-pc-fluides-pression-sanguine-exos",
+  "chapitre": "tale-st2s-pc-fluides-pression-sanguine",
+  "titre": "Exercices — Propriétés des fluides et pression sanguine",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "debit-cardiaque",
+      "enonce": "Au repos, le cœur d'un patient bat à la fréquence $f_C = 75$ bpm et éjecte un volume $VES = 72$ mL à chaque battement. 1) Calculer son débit cardiaque $DC$ en mL/min. 2) Exprimer ce débit en litres par minute (L/min).",
+      "corrige": [
+        "Le débit cardiaque est le produit de la fréquence par le volume d'éjection systolique : $DC = f_C \\times VES$.",
+        "Application numérique : $DC = 75 \\times 72 = 5400$ mL/min.",
+        "Conversion : $1$ L $= 1000$ mL, donc $DC = \\dfrac{5400}{1000} = 5{,}4$ L/min."
+      ],
+      "reponse": "$DC = f_C \\times VES = 5400$ mL/min $= 5{,}4$ L/min."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "pression-force",
+      "enonce": "Une personne de poids $F = 600$ N est debout. On rappelle $p = \\dfrac{F}{S}$. 1) Calculer la pression exercée sur le sol lorsqu'elle répartit son poids sur ses deux pieds, de surface totale $S = 0{,}03$ m². 2) Calculer cette pression lorsqu'elle se tient sur un seul pied ($S = 0{,}015$ m²). 3) Commenter.",
+      "corrige": [
+        "Sur deux pieds : $p = \\dfrac{F}{S} = \\dfrac{600}{0{,}03} = 20\\,000$ Pa.",
+        "Sur un seul pied, la surface est deux fois plus petite : $p = \\dfrac{600}{0{,}015} = 40\\,000$ Pa.",
+        "À poids égal, diviser la surface d'appui par deux double la pression : la pression est inversement proportionnelle à la surface."
+      ],
+      "reponse": "$p_{\\text{deux pieds}} = 20\\,000$ Pa et $p_{\\text{un pied}} = 40\\,000$ Pa : moitié moins de surface, deux fois plus de pression."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "debit-vitesse-section",
+      "enonce": "Dans l'aorte, le sang circule à la vitesse moyenne $v = 0{,}3$ m/s à travers une section $S = 3$ cm². On rappelle $D = v \\times S$. 1) Convertir la section en mètres carrés. 2) Calculer le débit $D$ en m³/s. 3) Convertir ce débit en L/min et comparer à un débit cardiaque au repos ($\\approx 5$ L/min).",
+      "corrige": [
+        "Conversion de la section : une aire se convertit avec le carré, $1$ cm² $= (10^{-2}\\ \\text{m})^2 = 10^{-4}$ m². Donc $S = 3$ cm² $= 3 \\times 10^{-4}$ m².",
+        "Débit : $D = v \\times S = 0{,}3 \\times 3 \\times 10^{-4} = 9 \\times 10^{-5}$ m³/s.",
+        "Conversion : $1$ m³ $= 1000$ L, donc $D = 9 \\times 10^{-5} \\times 1000 = 0{,}09$ L/s. Puis $\\times 60$ : $D = 0{,}09 \\times 60 = 5{,}4$ L/min.",
+        "Ce débit ($5{,}4$ L/min) est cohérent avec le débit cardiaque au repos (environ $5$ L/min) : c'est bien le même sang qui traverse l'aorte."
+      ],
+      "reponse": "$S = 3 \\times 10^{-4}$ m², $D = 9 \\times 10^{-5}$ m³/s $= 5{,}4$ L/min, cohérent avec un débit cardiaque de repos."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "conversions-pression",
+      "enonce": "Un médecin relève une tension artérielle de $12{,}5\\,/\\,8$ (en cmHg). On rappelle $1$ cmHg $= 10$ mmHg et $1$ mmHg $\\approx 133$ Pa. 1) Exprimer les deux valeurs en mmHg. 2) Identifier laquelle est la systolique et laquelle est la diastolique, en justifiant. 3) Convertir la pression systolique en pascals.",
+      "corrige": [
+        "Conversion en mmHg : on multiplie par $10$. Systolique : $12{,}5$ cmHg $= 125$ mmHg. Diastolique : $8$ cmHg $= 80$ mmHg.",
+        "La systolique est la valeur maximale (cœur qui se contracte) : c'est $125$ mmHg. La diastolique est la valeur minimale (cœur relâché) : c'est $80$ mmHg. Le premier nombre écrit est toujours le plus grand.",
+        "Systolique en pascals : $p = 125 \\times 133 = 16\\,625$ Pa $\\approx 1{,}7 \\times 10^{4}$ Pa."
+      ],
+      "reponse": "$125\\,/\\,80$ mmHg ; systolique $= 125$ mmHg (max), diastolique $= 80$ mmHg (min) ; systolique $\\approx 1{,}7 \\times 10^{4}$ Pa."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "statique-fluides",
+      "enonce": "Debout, les pieds d'une personne sont à une hauteur $h = 1{,}3$ m sous le niveau du cœur. Le sang a une masse volumique $\\rho = 1060$ kg/m³ et on prend $g = 10$ N/kg. On rappelle $\\Delta p = \\rho g h$ et $1$ mmHg $\\approx 133$ Pa. Au niveau du cœur, la pression systolique vaut $120$ mmHg. 1) Calculer en pascals la différence de pression $\\Delta p$ entre le cœur et les pieds due à la colonne de sang. 2) Convertir $\\Delta p$ en mmHg. 3) En déduire la pression systolique au niveau des pieds, en mmHg.",
+      "corrige": [
+        "Différence de pression : $\\Delta p = \\rho g h = 1060 \\times 10 \\times 1{,}3 = 13\\,780$ Pa (environ $1{,}4 \\times 10^{4}$ Pa).",
+        "Conversion en mmHg : $\\Delta p = \\dfrac{13\\,780}{133} \\approx 104$ mmHg.",
+        "Les pieds sont plus bas que le cœur : la pression y est plus grande de $\\Delta p$. Pression systolique aux pieds $= 120 + 104 = 224$ mmHg.",
+        "C'est pourquoi la pression sanguine dépend de la position du corps : elle est bien plus élevée dans les membres inférieurs quand on est debout."
+      ],
+      "reponse": "$\\Delta p = 13\\,780$ Pa $\\approx 104$ mmHg, d'où une systolique aux pieds d'environ $120 + 104 = 224$ mmHg."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "debit-cardiaque",
+      "enonce": "Un sportif a, au repos, $f_C = 70$ bpm et $VES = 70$ mL ; à l'effort, $f_C = 160$ bpm et $VES = 110$ mL. Son corps contient environ $5$ L de sang. 1) Calculer le débit cardiaque au repos et à l'effort (en L/min). 2) Par quel facteur le débit cardiaque est-il multiplié à l'effort ? 3) À l'effort, en combien de temps (en secondes) le cœur fait-il circuler l'équivalent de tout le sang du corps ?",
+      "corrige": [
+        "Repos : $DC = f_C \\times VES = 70 \\times 70 = 4900$ mL/min $= 4{,}9$ L/min. Effort : $DC = 160 \\times 110 = 17\\,600$ mL/min $= 17{,}6$ L/min.",
+        "Facteur d'augmentation : $\\dfrac{17{,}6}{4{,}9} \\approx 3{,}6$. Le débit cardiaque est multiplié par environ $3{,}6$.",
+        "À l'effort, le cœur envoie $17{,}6$ L en $1$ min $= 60$ s. Pour $5$ L, la durée est $\\Delta t = \\dfrac{5}{17{,}6} \\times 60 \\approx 17$ s.",
+        "En moins de $20$ secondes, tout le volume sanguin a fait un tour : c'est ainsi que l'organisme alimente les muscles pendant l'effort."
+      ],
+      "reponse": "Repos : $4{,}9$ L/min ; effort : $17{,}6$ L/min ; facteur $\\approx 3{,}6$ ; tout le sang ($5$ L) circule en $\\approx 17$ s à l'effort."
+    }
+  ]
+}

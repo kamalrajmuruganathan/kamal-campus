@@ -1,0 +1,91 @@
+{
+  "id": "1st2s-pc-oxydoreduction-desinfectants-exos",
+  "chapitre": "1st2s-pc-oxydoreduction-desinfectants",
+  "titre": "Exercices — Oxydoréduction : désinfectants et antiseptiques",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "oxydant-reducteur",
+      "enonce": "On plonge une lame de cuivre dans une solution d'ions argent $\\mathrm{Ag^+}$. Il se produit la réaction : $\\mathrm{Cu} + 2\\,\\mathrm{Ag^+} \\longrightarrow \\mathrm{Cu^{2+}} + 2\\,\\mathrm{Ag}$. 1) Quelle espèce **cède** des électrons ? 2) Identifier l'oxydant et le réducteur. 3) Quelle espèce est **oxydée**, laquelle est **réduite** ?",
+      "corrige": [
+        "Le cuivre passe de $\\mathrm{Cu}$ (sans charge) à $\\mathrm{Cu^{2+}}$ : il **perd** $2$ électrons. C'est donc $\\mathrm{Cu}$ qui **cède** les électrons.",
+        "Celui qui cède les électrons est le **réducteur** : c'est $\\mathrm{Cu}$. Celui qui les **capte** est l'**oxydant** : l'ion $\\mathrm{Ag^+}$ passe de la charge $+1$ à $0$ (argent métal), il a donc capté un électron.",
+        "Le réducteur $\\mathrm{Cu}$ est **oxydé** (il perd des électrons) ; l'oxydant $\\mathrm{Ag^+}$ est **réduit** (il gagne des électrons)."
+      ],
+      "reponse": "$\\mathrm{Cu}$ cède les électrons : c'est le **réducteur**, il est **oxydé**. $\\mathrm{Ag^+}$ est l'**oxydant**, il est **réduit**."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "dilution",
+      "enonce": "On dispose d'une eau oxygénée de concentration $C_1 = 1{,}0$ mol·L⁻¹. On souhaite préparer $V_2 = 100$ mL d'une solution antiseptique diluée à $C_2 = 0{,}10$ mol·L⁻¹. 1) Quel volume $V_1$ de solution mère faut-il prélever ? 2) Quel est le facteur de dilution $F$ ?",
+      "corrige": [
+        "La quantité de soluté se conserve : $C_1 V_1 = C_2 V_2$, donc $V_1 = \\dfrac{C_2 V_2}{C_1}$.",
+        "Les volumes sont exprimés en mL des deux côtés (l'unité se simplifie) : $V_1 = \\dfrac{0{,}10 \\times 100}{1{,}0} = 10$ mL.",
+        "Facteur de dilution : $F = \\dfrac{C_1}{C_2} = \\dfrac{1{,}0}{0{,}10} = 10$ (on retrouve aussi $F = \\dfrac{V_2}{V_1} = \\dfrac{100}{10} = 10$)."
+      ],
+      "reponse": "$V_1 = \\dfrac{C_2 V_2}{C_1} = 10$ mL ; facteur de dilution $F = 10$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "demi-equation",
+      "enonce": "L'eau de Javel doit son pouvoir désinfectant à l'ion hypochlorite, oxydant du couple $\\mathrm{ClO^-\\,/\\,Cl^-}$. Écrire la **demi-équation électronique** de ce couple en milieu acide, en détaillant les étapes d'équilibrage.",
+      "corrige": [
+        "Étape 1 — élément chlore : il est déjà équilibré ($1$ Cl de chaque côté) : $\\mathrm{ClO^-} \\rightarrow \\mathrm{Cl^-}$.",
+        "Étape 2 — oxygène : $1$ atome O à gauche, $0$ à droite. On ajoute $1\\,\\mathrm{H_2O}$ à droite : $\\mathrm{ClO^-} \\rightarrow \\mathrm{Cl^-} + \\mathrm{H_2O}$.",
+        "Étape 3 — hydrogène : $0$ H à gauche, $2$ à droite. On ajoute $2\\,\\mathrm{H^+}$ à gauche : $\\mathrm{ClO^-} + 2\\,\\mathrm{H^+} \\rightarrow \\mathrm{Cl^-} + \\mathrm{H_2O}$.",
+        "Étape 4 — charges : à gauche $-1 + 2 = +1$, à droite $-1$. On ajoute $2\\,e^-$ à gauche pour égaliser : $\\mathrm{ClO^-} + 2\\,\\mathrm{H^+} + 2\\,e^- = \\mathrm{Cl^-} + \\mathrm{H_2O}$. Vérification : charge $-1$ des deux côtés. ✔"
+      ],
+      "reponse": "$\\mathrm{ClO^-} + 2\\,\\mathrm{H^+} + 2\\,e^- = \\mathrm{Cl^-} + \\mathrm{H_2O}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "equation-oxydoreduction",
+      "enonce": "On verse quelques gouttes d'eau de Javel dans une solution d'ions iodure $\\mathrm{I^-}$ acidifiée : la solution brunit, signe de la formation de diiode $\\mathrm{I_2}$. Les couples sont $\\mathrm{ClO^-\\,/\\,Cl^-}$ et $\\mathrm{I_2\\,/\\,I^-}$. Demi-équations : $\\mathrm{ClO^-} + 2\\,\\mathrm{H^+} + 2\\,e^- = \\mathrm{Cl^-} + \\mathrm{H_2O}$ et $\\mathrm{I_2} + 2\\,e^- = 2\\,\\mathrm{I^-}$. Écrire l'équation bilan de la réaction.",
+      "corrige": [
+        "L'oxydant est l'ion hypochlorite $\\mathrm{ClO^-}$ (il capte les électrons, sens de la réduction) : $\\mathrm{ClO^-} + 2\\,\\mathrm{H^+} + 2\\,e^- \\rightarrow \\mathrm{Cl^-} + \\mathrm{H_2O}$.",
+        "Le réducteur est l'ion iodure $\\mathrm{I^-}$ (il cède les électrons, sens de l'oxydation) : $2\\,\\mathrm{I^-} \\rightarrow \\mathrm{I_2} + 2\\,e^-$.",
+        "Les deux demi-équations échangent le **même nombre** d'électrons ($2\\,e^-$) : on peut les additionner directement, les électrons s'éliminent.",
+        "Équation bilan : $\\mathrm{ClO^-} + 2\\,\\mathrm{H^+} + 2\\,\\mathrm{I^-} \\rightarrow \\mathrm{Cl^-} + \\mathrm{H_2O} + \\mathrm{I_2}$. Vérification des charges : à gauche $-1 + 2 - 2 = -1$, à droite $-1$. ✔"
+      ],
+      "reponse": "$\\mathrm{ClO^-} + 2\\,\\mathrm{H^+} + 2\\,\\mathrm{I^-} \\longrightarrow \\mathrm{Cl^-} + \\mathrm{H_2O} + \\mathrm{I_2}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "dilution",
+      "enonce": "Dans un service de soins, on prépare une solution désinfectante à partir d'une eau de Javel mère de concentration $C_1 = 0{,}50$ mol·L⁻¹. On veut obtenir $V_2 = 500$ mL de solution diluée à $C_2 = 0{,}025$ mol·L⁻¹. 1) Calculer le volume $V_1$ de solution mère à prélever. 2) En déduire le facteur de dilution $F$. 3) Décrire le protocole (verrerie). 4) Rappeler une règle de sécurité propre à l'eau de Javel.",
+      "corrige": [
+        "Conservation du soluté : $C_1 V_1 = C_2 V_2$, d'où $V_1 = \\dfrac{C_2 V_2}{C_1} = \\dfrac{0{,}025 \\times 500}{0{,}50}$ (volumes en mL des deux côtés).",
+        "$V_1 = \\dfrac{12{,}5}{0{,}50} = 25$ mL.",
+        "Facteur de dilution : $F = \\dfrac{C_1}{C_2} = \\dfrac{0{,}50}{0{,}025} = 20$ (cohérent avec $F = \\dfrac{V_2}{V_1} = \\dfrac{500}{25} = 20$).",
+        "Protocole : prélever $25$ mL de solution mère à la **pipette jaugée**, les verser dans une **fiole jaugée de $500$ mL**, puis **compléter à l'eau jusqu'au trait de jauge** et homogénéiser.",
+        "Sécurité : porter gants et lunettes ; **ne jamais mélanger l'eau de Javel avec un produit acide** (détartrant) ni avec de l'ammoniaque, sous peine de dégagement de gaz toxique ($\\mathrm{Cl_2}$)."
+      ],
+      "reponse": "$V_1 = 25$ mL, $F = 20$. Prélèvement à la pipette jaugée, dilution en fiole jaugée de $500$ mL complétée à l'eau ; ne jamais mélanger la Javel à un acide."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "equation-oxydoreduction",
+      "enonce": "L'eau oxygénée peut oxyder les ions fer(II) $\\mathrm{Fe^{2+}}$. Les couples mis en jeu sont $\\mathrm{H_2O_2\\,/\\,H_2O}$ (demi-équation : $\\mathrm{H_2O_2} + 2\\,\\mathrm{H^+} + 2\\,e^- = 2\\,\\mathrm{H_2O}$) et $\\mathrm{Fe^{3+}\\,/\\,Fe^{2+}}$ (demi-équation : $\\mathrm{Fe^{3+}} + e^- = \\mathrm{Fe^{2+}}$). 1) Identifier l'oxydant et le réducteur. 2) Écrire l'équation bilan de la réaction (attention au nombre d'électrons).",
+      "corrige": [
+        "L'eau oxygénée $\\mathrm{H_2O_2}$ **capte** des électrons (elle est réduite en eau) : c'est l'**oxydant**. L'ion $\\mathrm{Fe^{2+}}$ **cède** un électron (il est oxydé en $\\mathrm{Fe^{3+}}$) : c'est le **réducteur**.",
+        "Demi-équations dans le bon sens : réduction $\\mathrm{H_2O_2} + 2\\,\\mathrm{H^+} + 2\\,e^- \\rightarrow 2\\,\\mathrm{H_2O}$ (2 électrons) ; oxydation $\\mathrm{Fe^{2+}} \\rightarrow \\mathrm{Fe^{3+}} + e^-$ (1 électron).",
+        "Pour que les électrons s'éliminent, on **multiplie par 2** la demi-équation du fer : $2\\,\\mathrm{Fe^{2+}} \\rightarrow 2\\,\\mathrm{Fe^{3+}} + 2\\,e^-$. Les deux échangent alors $2\\,e^-$.",
+        "On additionne, les $2\\,e^-$ disparaissent : $\\mathrm{H_2O_2} + 2\\,\\mathrm{H^+} + 2\\,\\mathrm{Fe^{2+}} \\rightarrow 2\\,\\mathrm{H_2O} + 2\\,\\mathrm{Fe^{3+}}$. Vérification des charges : à gauche $+2 + (2 \\times 2) = +6$, à droite $2 \\times (+3) = +6$. ✔"
+      ],
+      "reponse": "Oxydant : $\\mathrm{H_2O_2}$ ; réducteur : $\\mathrm{Fe^{2+}}$. Bilan : $\\mathrm{H_2O_2} + 2\\,\\mathrm{H^+} + 2\\,\\mathrm{Fe^{2+}} \\longrightarrow 2\\,\\mathrm{H_2O} + 2\\,\\mathrm{Fe^{3+}}$."
+    }
+  ]
+}

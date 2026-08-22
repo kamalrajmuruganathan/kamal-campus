@@ -1,0 +1,164 @@
+{
+  "id": "1st2s-pc-risques-electriques-qcm",
+  "chapitre": "1st2s-pc-risques-electriques",
+  "titre": "QCM — Risques électriques dans l'habitat",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "tension-alternative-sinusoidale",
+      "enonce": "Qu'est-ce qui caractérise une tension alternative sinusoïdale, comme celle du secteur ?",
+      "choix": [
+        "Elle garde toujours le même signe, comme une pile",
+        "Elle change de signe régulièrement et sa courbe a la forme d'une sinusoïde",
+        "Elle vaut zéro en permanence",
+        "Elle augmente sans jamais redescendre"
+      ],
+      "reponse": 1,
+      "explication": "Le piège est de confondre continu et alternatif. Une tension continue (pile) garde le même signe ; l'alternatif du secteur passe périodiquement du positif au négatif, en suivant une sinusoïde.",
+      "notion_fiche": "1. La tension alternative sinusoïdale"
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "prise-de-courant",
+      "enonce": "Dans une prise domestique, à quoi sert la borne de terre (fil vert et jaune) ?",
+      "choix": [
+        "À faire fonctionner l'appareil comme la phase",
+        "À augmenter la tension disponible",
+        "À relier les carcasses métalliques au sol pour la sécurité",
+        "À remplacer le neutre s'il est coupé"
+      ],
+      "reponse": 2,
+      "explication": "Le piège est de croire que la terre alimente l'appareil : elle ne sert qu'à la sécurité. Elle relie la carcasse métallique au sol pour évacuer un courant de défaut si celle-ci se retrouve sous tension.",
+      "notion_fiche": "4. La prise de courant : phase, neutre, terre"
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "periode-frequence",
+      "enonce": "La fréquence du secteur français est $f = 50$ Hz. Quelle est la période $T$ de cette tension ?",
+      "choix": [
+        "$T = 50$ s",
+        "$T = 20$ ms",
+        "$T = 5$ s",
+        "$T = 0{,}5$ s"
+      ],
+      "reponse": 1,
+      "explication": "On applique $T = 1/f = 1/50 = 0{,}020$ s, soit $20$ ms. Le piège est de recopier la fréquence comme si c'était une période, ou de se tromper de puissance de 10 dans la conversion s ↔ ms.",
+      "notion_fiche": "1. La tension alternative sinusoïdale"
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "valeur-efficace",
+      "enonce": "Un voltmètre en position alternatif branché sur une prise affiche $230$ V. Que représente cette valeur ?",
+      "choix": [
+        "La valeur maximale $U_{max}$ de la tension",
+        "La valeur minimale de la tension",
+        "La valeur efficace $U$ de la tension",
+        "La somme du maximum et du minimum"
+      ],
+      "reponse": 2,
+      "explication": "Un voltmètre alternatif indique la valeur efficace, pas le pic. Le piège classique est de croire que $230$ V est le maximum : en réalité $U_{max} = 230\\sqrt{2} \\approx 325$ V.",
+      "notion_fiche": "1. La tension alternative sinusoïdale"
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "electrisation-electrocution",
+      "enonce": "Quelle est la différence entre une électrisation et une électrocution ?",
+      "choix": [
+        "Ce sont deux mots pour exactement la même chose",
+        "L'électrocution est une électrisation mortelle ; l'électrisation ne l'est pas toujours",
+        "L'électrisation est mortelle, l'électrocution est bénigne",
+        "L'électrocution concerne les appareils, l'électrisation les personnes"
+      ],
+      "reponse": 1,
+      "explication": "Le piège est d'inverser les deux termes. L'électrisation est le passage du courant dans le corps (mortel ou non) ; l'électrocution est réservée au cas mortel. Toute électrocution est une électrisation, l'inverse est faux.",
+      "notion_fiche": "3. Les risques électriques pour le corps"
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "intensite-danger",
+      "enonce": "Lorsqu'une personne est électrisée, quelle grandeur physique décide réellement de la gravité de l'accident ?",
+      "choix": [
+        "La tension seule, indépendamment du reste",
+        "L'intensité du courant qui traverse le corps",
+        "La fréquence de la tension",
+        "La couleur du fil touché"
+      ],
+      "reponse": 1,
+      "explication": "Le piège est de croire que « c'est la tension qui tue ». C'est l'intensité traversant le corps qui blesse ; elle dépend de la tension mais aussi de la résistance du corps, donc de l'humidité de la peau.",
+      "notion_fiche": "2. L'intensité du courant électrique"
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "valeur-efficace",
+      "enonce": "La valeur efficace du secteur est $U = 230$ V. Quelle est, environ, sa valeur maximale $U_{max}$ ? (On prend $\\sqrt{2} \\approx 1{,}41$.)",
+      "choix": [
+        "$U_{max} \\approx 163$ V",
+        "$U_{max} \\approx 230$ V",
+        "$U_{max} \\approx 325$ V",
+        "$U_{max} \\approx 460$ V"
+      ],
+      "reponse": 2,
+      "explication": "Depuis $U = U_{max}/\\sqrt{2}$, on isole $U_{max} = U\\sqrt{2} = 230 \\times 1{,}41 \\approx 325$ V. Le piège est de diviser par $\\sqrt{2}$ (on obtient $163$ V) au lieu de multiplier, ou de multiplier par $2$ (on obtient $460$ V).",
+      "notion_fiche": "1. La tension alternative sinusoïdale"
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "dispositifs-securite",
+      "enonce": "Comment le disjoncteur différentiel protège-t-il les personnes ?",
+      "choix": [
+        "Il fait fondre un fil dès que l'intensité totale dépasse $16$ A",
+        "Il compare l'intensité de la phase et celle du neutre et coupe si l'écart dépasse le seuil",
+        "Il augmente la résistance du corps humain",
+        "Il transforme la tension alternative en tension continue"
+      ],
+      "reponse": 1,
+      "explication": "Le piège est de le confondre avec le fusible/disjoncteur (surintensité). Le différentiel surveille l'écart $I_{\\text{phase}} - I_{\\text{neutre}}$ : une fuite de courant (par un corps vers la terre) crée un déséquilibre, et il coupe dès $30$ mA.",
+      "notion_fiche": "5. Les dispositifs de sécurité"
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "effets-du-courant",
+      "enonce": "Le seuil de $30$ mA est celui à partir duquel un disjoncteur différentiel de protection des personnes coupe le circuit. À quoi correspond ce seuil pour le corps ?",
+      "choix": [
+        "$30$ mA $= 30$ A, la fibrillation immédiate",
+        "$30$ mA $= 0{,}030$ A, seuil d'atteinte des muscles respiratoires",
+        "$30$ mA $= 3$ A, un simple picotement",
+        "$30$ mA $= 0{,}30$ A, le seuil de perception"
+      ],
+      "reponse": 1,
+      "explication": "Deux pièges combinés : la conversion ($30$ mA $= 30 \\times 10^{-3}$ A $= 0{,}030$ A, jamais $30$ A) et l'effet associé (vers $30$ mA la respiration est menacée). C'est pour cela que le seuil du différentiel est fixé à cette valeur.",
+      "notion_fiche": "3. Les risques électriques pour le corps"
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "prise-de-courant",
+      "enonce": "Un fil de phase se dénude à l'intérieur d'un lave-linge et touche sa carcasse métallique. Pourquoi la mise à la terre limite-t-elle le danger ?",
+      "choix": [
+        "Elle empêche définitivement tout courant de circuler dans l'appareil",
+        "Elle offre au courant de défaut un chemin vers le sol, ce qui crée un déséquilibre détecté par le différentiel qui coupe",
+        "Elle augmente la tension pour faire fondre le fusible plus vite",
+        "Elle transforme la phase en neutre"
+      ],
+      "reponse": 1,
+      "explication": "La terre seule ne « bloque » pas le courant : elle l'écoule vers le sol. Ce courant de fuite déséquilibre phase et neutre, et c'est le différentiel qui déclenche. Le piège est de croire que la terre agit seule ; terre et différentiel travaillent ensemble.",
+      "notion_fiche": "4. La prise de courant : phase, neutre, terre"
+    }
+  ]
+}

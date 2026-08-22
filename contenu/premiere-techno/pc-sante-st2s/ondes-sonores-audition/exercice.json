@@ -1,0 +1,91 @@
+{
+  "id": "1st2s-pc-ondes-sonores-audition-exos",
+  "chapitre": "1st2s-pc-ondes-sonores-audition",
+  "titre": "Exercices — Ondes sonores et audition",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "frequence-hauteur",
+      "enonce": "Un émetteur produit un son de fréquence $f = 500$ Hz. 1) Calculer sa période $T$ en seconde, puis en milliseconde. 2) Parmi les trois sources suivantes, dire lesquelles sont audibles par l'humain, et nommer les autres : une source à $12$ Hz, une à $500$ Hz, une à $30$ kHz.",
+      "corrige": [
+        "La période et la fréquence sont liées par $T = \\dfrac{1}{f}$.",
+        "Application : $T = \\dfrac{1}{500} = 0{,}002$ s. Conversion : $0{,}002$ s $= 2$ ms (car $1$ s $= 1000$ ms).",
+        "La plage audible va de $20$ Hz à $20$ kHz $= 20\\,000$ Hz. La source à $12$ Hz est en dessous de $20$ Hz : c'est un $\\textbf{infrason}$ (inaudible). La source à $500$ Hz est dans la plage : elle est $\\textbf{audible}$. La source à $30$ kHz est au-dessus de $20$ kHz : c'est un $\\textbf{ultrason}$ (inaudible)."
+      ],
+      "reponse": "$T = 0{,}002$ s $= 2$ ms. Audible : seulement la source à $500$ Hz. $12$ Hz = infrason, $30$ kHz = ultrason (inaudibles)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "calcul-niveau",
+      "enonce": "On rappelle $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 10^{-12}$ W·m⁻². 1) Une rue passante a une intensité sonore $I = 10^{-4}$ W·m⁻². Calculer son niveau $L$ en dB. 2) Un chuchotement a une intensité $I = 10^{-9}$ W·m⁻². Calculer son niveau.",
+      "corrige": [
+        "Rue passante : on calcule d'abord le rapport $\\dfrac{I}{I_0} = \\dfrac{10^{-4}}{10^{-12}} = 10^{-4-(-12)} = 10^{8}$.",
+        "Puis $L = 10\\log(10^{8}) = 10 \\times 8 = 80$ dB.",
+        "Chuchotement : $\\dfrac{I}{I_0} = \\dfrac{10^{-9}}{10^{-12}} = 10^{3}$, donc $L = 10\\log(10^{3}) = 10 \\times 3 = 30$ dB.",
+        "On vérifie l'ordre de grandeur : une rue passante ($80$ dB) est bien plus bruyante qu'un chuchotement ($30$ dB)."
+      ],
+      "reponse": "Rue passante : $L = 80$ dB. Chuchotement : $L = 30$ dB."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "calcul-inverse",
+      "enonce": "Le seuil de danger pour l'audition est fixé à $L = 90$ dB. On rappelle $I_0 = 10^{-12}$ W·m⁻². 1) Calculer l'intensité sonore $I$ correspondante. 2) Par combien cette intensité est-elle plus grande que l'intensité du seuil d'audibilité $I_0$ ?",
+      "corrige": [
+        "On part de $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$ et on isole le rapport : $\\dfrac{I}{I_0} = 10^{L/10}$.",
+        "Application : $\\dfrac{I}{I_0} = 10^{90/10} = 10^{9}$.",
+        "On en déduit $I = 10^{9} \\times I_0 = 10^{9} \\times 10^{-12} = 10^{-3}$ W·m⁻².",
+        "Le rapport $\\dfrac{I}{I_0} = 10^{9}$ signifie que cette intensité est $\\textbf{un milliard}$ de fois plus grande que celle du seuil d'audibilité : c'est pour compresser des rapports aussi énormes qu'on utilise l'échelle logarithmique des décibels."
+      ],
+      "reponse": "$I = 10^{-3}$ W·m⁻², soit $10^{9}$ (un milliard) de fois l'intensité de référence $I_0$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "additivite-decibels",
+      "enonce": "Dans un atelier, une machine seule produit un niveau sonore de $80$ dB, ce qui correspond à une intensité $I_1 = 10^{-4}$ W·m⁻². 1) On fait fonctionner $2$ machines identiques en même temps. Calculer l'intensité totale, puis le niveau sonore. 2) Même question avec $10$ machines identiques. 3) Que penser de l'affirmation « $2$ machines à $80$ dB font $160$ dB » ?",
+      "corrige": [
+        "Les intensités s'additionnent (pas les décibels). Pour $2$ machines : $I = 2 \\times I_1 = 2 \\times 10^{-4}$ W·m⁻².",
+        "Niveau : $L = 10\\log\\!\\left(\\dfrac{2 \\times 10^{-4}}{10^{-12}}\\right) = 10\\log(2 \\times 10^{8}) = 10\\,(\\log 2 + 8) = 10\\,(0{,}30 + 8) \\approx 83$ dB. Doubler l'intensité n'ajoute que $+3$ dB.",
+        "Pour $10$ machines : $I = 10 \\times 10^{-4} = 10^{-3}$ W·m⁻², d'où $L = 10\\log\\!\\left(\\dfrac{10^{-3}}{10^{-12}}\\right) = 10\\log(10^{9}) = 90$ dB. Multiplier l'intensité par $10$ ajoute $+10$ dB.",
+        "L'affirmation est fausse : les décibels ne s'additionnent pas. $2$ machines donnent $\\approx 83$ dB (et non $160$ dB), car ce sont les intensités qu'on additionne avant de reprendre le logarithme."
+      ],
+      "reponse": "$2$ machines : $\\approx 83$ dB. $10$ machines : $90$ dB. Non, « $80+80=160$ dB » est faux : on additionne les intensités, doubler $I$ n'ajoute que $+3$ dB."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "risques-auditifs",
+      "enonce": "Un concert atteint un niveau sonore $L = 100$ dB. On rappelle $I_0 = 10^{-12}$ W·m⁻² et que le seuil de danger est $85$ dB. 1) Calculer l'intensité sonore $I$ du concert. 2) Un spectateur met des bouchons d'oreille qui abaissent le niveau reçu de $20$ dB. Quel niveau reçoit-il alors, et par combien l'intensité reçue est-elle divisée ? 3) Ce niveau protégé est-il en dessous du seuil de danger ?",
+      "corrige": [
+        "Intensité du concert : $\\dfrac{I}{I_0} = 10^{100/10} = 10^{10}$, donc $I = 10^{10} \\times 10^{-12} = 10^{-2}$ W·m⁻².",
+        "Avec les bouchons, le niveau reçu passe de $100$ dB à $100 - 20 = 80$ dB.",
+        "Retirer $20$ dB revient à diviser l'intensité par $10^{20/10} = 10^{2} = 100$ : le spectateur reçoit une intensité $100$ fois plus faible.",
+        "Le niveau protégé $80$ dB est inférieur au seuil de danger $85$ dB : avec les bouchons, l'exposition prolongée redevient sans danger, alors qu'à $100$ dB sans protection le risque pour les cellules ciliées était réel."
+      ],
+      "reponse": "$I = 10^{-2}$ W·m⁻². Avec bouchons : $80$ dB (intensité divisée par $100$), soit en dessous du seuil de danger de $85$ dB."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "compensation-prothese",
+      "enonce": "Une personne souffre d'une déficience auditive : son seuil d'audition est monté à $45$ dB (elle n'entend plus les sons plus faibles). 1) Entend-elle un chuchotement à $30$ dB ? Une conversation à $60$ dB ? 2) On lui pose une prothèse auditive qui amplifie tous les sons de $+30$ dB. Par quel facteur l'intensité sonore est-elle multipliée ? 3) Avec la prothèse, entend-elle désormais le chuchotement à $30$ dB ? 4) Expliquer pourquoi on parle de « compensation » et non de « guérison ».",
+      "corrige": [
+        "Sans prothèse : elle n'entend que les sons de niveau supérieur à son seuil de $45$ dB. Le chuchotement ($30$ dB) est en dessous de $45$ dB : $\\textbf{non entendu}$. La conversation ($60$ dB) est au-dessus de $45$ dB : $\\textbf{entendue}$.",
+        "Amplifier de $+30$ dB revient à multiplier l'intensité par $10^{30/10} = 10^{3} = 1000$ : la prothèse fournit à l'oreille une intensité $1000$ fois plus grande.",
+        "Avec la prothèse, le chuchotement à $30$ dB est reçu à $30 + 30 = 60$ dB. Ce niveau ($60$ dB) dépasse maintenant le seuil de $45$ dB : le chuchotement devient $\\textbf{audible}$.",
+        "La prothèse $\\textbf{compense}$ la perte en montant le niveau des sons au-dessus du seuil restant ; elle ne $\\textbf{répare pas}$ les cellules ciliées détruites de la cochlée, qui ne se régénèrent pas. On corrige l'effet (sons trop faibles), pas la cause : c'est une compensation, pas une guérison."
+      ],
+      "reponse": "Sans prothèse : chuchotement ($30$ dB) non entendu, conversation ($60$ dB) entendue. La prothèse ($+30$ dB $\\Rightarrow$ intensité $\\times 1000$) ramène le chuchotement à $60$ dB, désormais audible. Elle compense la déficience sans réparer les cellules ciliées."
+    }
+  ]
+}

@@ -53,6 +53,9 @@ const LIBELLES_PARCOURS = {
   'maths-expertes': 'Maths expertes',
   'maths-enseignement-scientifique': 'Maths — enseignement scientifique',
   'pc-maths-sti2d-stl': 'Physique-chimie et maths — STI2D/STL',
+  'pc-sante-st2s': 'Physique-chimie pour la santé — ST2S',
+  'spcl-stl': 'Sciences physiques en laboratoire — STL',
+  'enseignement-scientifique': 'Enseignement scientifique',
   'tronc-commun': 'Tronc commun',
 };
 

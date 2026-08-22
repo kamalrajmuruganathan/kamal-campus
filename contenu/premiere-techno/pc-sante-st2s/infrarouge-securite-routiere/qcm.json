@@ -1,0 +1,154 @@
+{
+  "id": "1st2s-pc-infrarouge-securite-routiere-qcm",
+  "chapitre": "1st2s-pc-infrarouge-securite-routiere",
+  "titre": "QCM — Rayonnement infrarouge et sécurité routière",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Dans le spectre électromagnétique, où se situe l'infrarouge ?",
+      "choix": [
+        "Juste après le violet, à une longueur d'onde plus petite que le visible",
+        "Juste après le rouge, à une longueur d'onde plus grande que le visible",
+        "Entre les rayons X et les rayons γ",
+        "Au milieu du domaine visible"
+      ],
+      "reponse": 1,
+      "explication": "L'infrarouge (IR) prolonge le **rouge** vers les **grandes** longueurs d'onde (de $0{,}8$ µm à $1$ mm) : il est donc invisible. Le piège est de le confondre avec l'ultraviolet, qui prolonge au contraire le violet vers les **petites** longueurs d'onde."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "temperature-rayonnement",
+      "enonce": "Que peut-on dire d'un corps dont la température n'est pas nulle ?",
+      "choix": [
+        "Il n'émet un rayonnement que s'il est éclairé",
+        "Il émet un rayonnement électromagnétique",
+        "Il absorbe toute la lumière qu'il reçoit",
+        "Il n'émet qu'un son"
+      ],
+      "reponse": 1,
+      "explication": "**Tout** corps chaud émet spontanément un rayonnement électromagnétique, sans avoir besoin d'être éclairé. Plus il est chaud, plus ce rayonnement se décale vers les courtes longueurs d'onde (loi de Wien)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "loi-de-wien",
+      "enonce": "Dans la loi de Wien $\\lambda_{max} \\times T = 2{,}9 \\times 10^{-3}$ m·K, en quelle unité faut-il exprimer la température $T$ ?",
+      "choix": [
+        "En degrés Celsius (°C)",
+        "En kelvins (K)",
+        "En joules (J)",
+        "Peu importe, les deux marchent"
+      ],
+      "reponse": 1,
+      "explication": "La température doit être **absolue**, en **kelvins** : $T(\\text{K}) = \\theta(°\\text{C}) + 273$. Garder les degrés Celsius est l'erreur classique — elle fausse tout le calcul, et devient absurde pour un corps sous $0$ °C."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "loi-de-wien",
+      "enonce": "Le corps humain est à $37$ °C. Vers quelle longueur d'onde émet-il le plus ? (constante de Wien $= 2{,}9 \\times 10^{-3}$ m·K)",
+      "choix": [
+        "$9{,}4$ µm",
+        "$78$ µm",
+        "$0{,}50$ µm",
+        "$9{,}4$ m"
+      ],
+      "reponse": 0,
+      "explication": "On convertit d'abord : $T = 37 + 273 = 310$ K. Puis $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{310} = 9{,}4 \\times 10^{-6}$ m $= 9{,}4$ µm (infrarouge). Le distracteur $78$ µm vient d'avoir divisé par $37$ au lieu de $310$ (oubli de la conversion en kelvins)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "conversion-vitesse",
+      "enonce": "Une voiture roule à $90$ km/h. Quelle est sa vitesse en mètres par seconde ?",
+      "choix": [
+        "$25$ m·s⁻¹",
+        "$324$ m·s⁻¹",
+        "$90$ m·s⁻¹",
+        "$2{,}5$ m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "Pour passer des km/h aux m·s⁻¹, on **divise par $3{,}6$** : $\\dfrac{90}{3{,}6} = 25$ m·s⁻¹. Le distracteur $324$ correspond à une **multiplication** par $3{,}6$ (conversion dans le mauvais sens)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "energie-cinetique",
+      "enonce": "Une voiture de masse $m = 1\\,000$ kg roule à $v = 25$ m·s⁻¹. Quelle est son énergie cinétique $E_c = \\frac{1}{2}mv^{2}$ ?",
+      "choix": [
+        "$3{,}1 \\times 10^{5}$ J",
+        "$6{,}3 \\times 10^{5}$ J",
+        "$1{,}25 \\times 10^{4}$ J",
+        "$2{,}5 \\times 10^{4}$ J"
+      ],
+      "reponse": 0,
+      "explication": "$E_c = \\dfrac{1}{2} \\times 1\\,000 \\times 25^{2} = \\dfrac{1}{2} \\times 1\\,000 \\times 625 = 3{,}1 \\times 10^{5}$ J. Le distracteur $6{,}3 \\times 10^{5}$ oublie le facteur $\\frac{1}{2}$ ; le distracteur $1{,}25 \\times 10^{4}$ oublie d'élever $v$ au **carré**."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "detection-ir",
+      "enonce": "Comment fonctionne un thermomètre médical sans contact visé sur le front ?",
+      "choix": [
+        "Il envoie un rayonnement infrarouge qui chauffe le front",
+        "Il reçoit l'infrarouge émis naturellement par la peau",
+        "Il mesure la lumière visible réfléchie par le front",
+        "Il doit toucher la peau pour conduire la chaleur"
+      ],
+      "reponse": 1,
+      "explication": "La détection est **passive** : l'appareil **capte** le rayonnement IR que le corps émet déjà de lui-même (le corps est à $310$ K, il rayonne vers $9{,}4$ µm). Il n'envoie rien et ne chauffe pas le patient — c'est justement son intérêt hygiénique."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "influence-vitesse",
+      "enonce": "Si un conducteur double sa vitesse, que devient sa distance de freinage ?",
+      "choix": [
+        "Elle double",
+        "Elle est multipliée par quatre",
+        "Elle reste identique",
+        "Elle est multipliée par trois"
+      ],
+      "reponse": 1,
+      "explication": "La distance de freinage provient de l'énergie cinétique $E_c = \\frac{1}{2}mv^{2}$ : elle est **proportionnelle à $v^{2}$**. Doubler $v$ multiplie donc $d_f$ par $2^{2} = 4$. Croire qu'elle double, c'est oublier le carré — l'erreur la plus dangereuse du chapitre."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "influence-vitesse",
+      "enonce": "En doublant sa vitesse, que devient la distance d'arrêt totale $d_a = d_r + d_f$ d'un véhicule ?",
+      "choix": [
+        "Elle double exactement",
+        "Elle plus que double (réaction ×2, freinage ×4)",
+        "Elle quadruple exactement",
+        "Elle reste identique"
+      ],
+      "reponse": 1,
+      "explication": "La distance de **réaction** ($d_r = v\\,t_r$) double, mais la distance de **freinage** ($\\propto v^{2}$) quadruple. La somme augmente donc **plus que du double** sans pour autant quadrupler exactement, car ses deux termes ne suivent pas la même loi."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "loi-de-wien",
+      "enonce": "Quand un corps devient de plus en plus chaud, que devient la longueur d'onde $\\lambda_{max}$ de son maximum d'émission ?",
+      "choix": [
+        "Elle augmente",
+        "Elle diminue (le rayonnement se décale vers les courtes longueurs d'onde)",
+        "Elle ne change pas",
+        "Elle devient nulle"
+      ],
+      "reponse": 1,
+      "explication": "D'après Wien, $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{T}$ : si $T$ **augmente**, $\\lambda_{max}$ **diminue**. C'est ce qu'on observe quand une plaque passe du rouge sombre au blanc éblouissant en chauffant — son émission gagne les courtes longueurs d'onde du visible."
+    }
+  ]
+}

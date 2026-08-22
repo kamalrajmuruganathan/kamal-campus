@@ -1,0 +1,164 @@
+{
+  "id": "1st2s-pc-ondes-sonores-audition-qcm",
+  "chapitre": "1st2s-pc-ondes-sonores-audition",
+  "titre": "QCM — Ondes sonores et audition",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "hauteur-frequence",
+      "enonce": "Un son aigu, comparé à un son grave, correspond à :",
+      "choix": [
+        "une fréquence plus basse",
+        "une fréquence plus haute",
+        "une intensité plus grande",
+        "une célérité plus grande"
+      ],
+      "reponse": 1,
+      "explication": "La hauteur d'un son dépend uniquement de sa fréquence : plus le son est aigu, plus $f$ est élevée. Le piège est de confondre aigu et fort : « aigu » ne veut pas dire « fort » (l'intensité), et la célérité ne dépend pas du son mais du milieu.",
+      "notion_fiche": "2. Fréquence et hauteur d'un son"
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "sons-audibles",
+      "enonce": "Quelle est la plage de fréquences audibles par une oreille humaine jeune ?",
+      "choix": [
+        "de $0$ Hz à $20$ Hz",
+        "de $20$ Hz à $20\\ 000$ Hz",
+        "de $20$ kHz à $200$ kHz",
+        "de $2$ Hz à $2\\ 000$ Hz"
+      ],
+      "reponse": 1,
+      "explication": "L'oreille humaine perçoit les sons de $20$ Hz à $20$ kHz, soit $20\\,000$ Hz. Le piège est d'oublier que $20$ kHz $= 20\\,000$ Hz : la borne haute n'est pas $2\\,000$ Hz.",
+      "notion_fiche": "3. Les sons audibles, les infrasons et les ultrasons"
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "infrasons-ultrasons",
+      "enonce": "L'échographie médicale utilise des sons de fréquence très élevée (plusieurs MHz). Comment les nomme-t-on, et sont-ils audibles ?",
+      "choix": [
+        "des infrasons, inaudibles",
+        "des ultrasons, inaudibles",
+        "des ultrasons, audibles",
+        "des sons audibles graves"
+      ],
+      "reponse": 1,
+      "explication": "Au-dessus de $20$ kHz, on parle d'ultrasons, inaudibles pour l'humain. Le piège est de confondre infrasons (sous $20$ Hz) et ultrasons (au-dessus de $20$ kHz) : plusieurs MHz, c'est bien au-dessus de la borne haute.",
+      "notion_fiche": "3. Les sons audibles, les infrasons et les ultrasons"
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "frequence-periode",
+      "enonce": "Le « la » d'un diapason a une fréquence $f = 440$ Hz. Quelle est sa période $T$ ?",
+      "choix": [
+        "$T = 440$ s",
+        "$T \\approx 2{,}3 \\times 10^{-3}$ s",
+        "$T = 440$ ms",
+        "$T \\approx 2{,}3$ s"
+      ],
+      "reponse": 1,
+      "explication": "On applique $T = 1/f = 1/440 \\approx 0{,}0023$ s $= 2{,}3 \\times 10^{-3}$ s (soit $2{,}3$ ms). Le piège est de recopier la fréquence comme si c'était une période, ou d'oublier la puissance de 10.",
+      "notion_fiche": "2. Fréquence et hauteur d'un son"
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "niveau-intensite",
+      "enonce": "Dans la formule $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$, que vaut l'intensité de référence $I_0$ et à quel niveau correspond-elle ?",
+      "choix": [
+        "$I_0 = 10^{-12}$ W·m⁻² ; elle correspond à $L = 0$ dB (seuil d'audibilité)",
+        "$I_0 = 10^{12}$ W·m⁻² ; elle correspond au seuil de douleur",
+        "$I_0 = 10^{-12}$ W·m⁻² ; elle correspond à $L = 12$ dB",
+        "$I_0 = 1$ W·m⁻² ; elle correspond à $L = 0$ dB"
+      ],
+      "reponse": 0,
+      "explication": "$I_0 = 10^{-12}$ W·m⁻² est le seuil d'audibilité : pour $I = I_0$, $L = 10\\log(1) = 0$ dB. Le piège est le signe de l'exposant ($10^{-12}$, pas $10^{12}$) et l'idée fausse que la référence donnerait $12$ dB.",
+      "notion_fiche": "4. Le niveau d'intensité sonore (en décibels)"
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "calcul-niveau",
+      "enonce": "Une conversation a une intensité sonore $I = 10^{-6}$ W·m⁻². Quel est son niveau $L$ ? (On rappelle $I_0 = 10^{-12}$ W·m⁻².)",
+      "choix": [
+        "$L = 6$ dB",
+        "$L = 60$ dB",
+        "$L = 600$ dB",
+        "$L = 12$ dB"
+      ],
+      "reponse": 1,
+      "explication": "$L = 10\\log\\!\\left(\\dfrac{10^{-6}}{10^{-12}}\\right) = 10\\log(10^{6}) = 10 \\times 6 = 60$ dB. Le piège est d'oublier le facteur $10$ (on trouverait $6$, qui serait des bels, pas des décibels).",
+      "notion_fiche": "4. Le niveau d'intensité sonore (en décibels)"
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "additivite-decibels",
+      "enonce": "Deux haut-parleurs identiques produisent chacun $80$ dB. Allumés ensemble, quel niveau obtient-on à peu près ?",
+      "choix": [
+        "$160$ dB",
+        "$83$ dB",
+        "$80$ dB",
+        "$90$ dB"
+      ],
+      "reponse": 1,
+      "explication": "Les décibels ne s'additionnent pas : ce sont les intensités qui s'ajoutent. Doubler l'intensité ajoute $10\\log(2) \\approx 3$ dB, d'où environ $83$ dB. Le piège classique est d'additionner les dB ($80+80=160$), ce qui est faux.",
+      "notion_fiche": "4. Le niveau d'intensité sonore (en décibels)"
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "calcul-inverse",
+      "enonce": "Un concert atteint $L = 100$ dB. À quelle intensité sonore $I$ cela correspond-il ? (On rappelle $I_0 = 10^{-12}$ W·m⁻².)",
+      "choix": [
+        "$I = 10^{-10}$ W·m⁻²",
+        "$I = 10^{-2}$ W·m⁻²",
+        "$I = 10^{2}$ W·m⁻²",
+        "$I = 100$ W·m⁻²"
+      ],
+      "reponse": 1,
+      "explication": "On isole : $\\dfrac{I}{I_0} = 10^{L/10} = 10^{100/10} = 10^{10}$, donc $I = 10^{10} \\times 10^{-12} = 10^{-2}$ W·m⁻². Le piège est d'oublier de diviser $L$ par $10$ (on prendrait $10^{100}$) ou de ne pas remultiplier par $I_0$.",
+      "notion_fiche": "4. Le niveau d'intensité sonore (en décibels)"
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "risques-auditifs",
+      "enonce": "Une personne écoute son baladeur à $95$ dB pendant plusieurs heures sans ressentir aucune douleur. Que peut-on en conclure ?",
+      "choix": [
+        "Aucun risque : tant qu'il n'y a pas de douleur, l'oreille n'est pas abîmée",
+        "Il y a un risque réel : au-delà de $85$ dB, la durée d'exposition abîme les cellules ciliées, même sans douleur",
+        "Aucun risque : $95$ dB est en dessous du seuil d'audibilité",
+        "Le risque n'existe qu'au-dessus de $120$ dB, jamais avant"
+      ],
+      "reponse": 1,
+      "explication": "Les dégâts auditifs dépendent du niveau ET de la durée, et commencent dès $85$ dB, bien avant le seuil de douleur ($120$ dB). Les cellules ciliées, non régénérées, s'usent sans douleur. Le piège est de croire que « sans douleur = sans danger ».",
+      "notion_fiche": "6. Les risques auditifs : niveau ET durée"
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "compensation-prothese",
+      "enonce": "Une prothèse auditive permet de compenser une déficience de l'audition. Sur quel principe repose-t-elle ?",
+      "choix": [
+        "Elle répare les cellules ciliées détruites de la cochlée",
+        "Elle capte le son avec un microphone, l'amplifie, puis le restitue par un haut-parleur",
+        "Elle abaisse la fréquence des sons pour les rendre plus graves",
+        "Elle diminue le niveau sonore reçu pour protéger l'oreille"
+      ],
+      "reponse": 1,
+      "explication": "La prothèse compense par amplification : micro → amplificateur → haut-parleur, en montant surtout les fréquences perdues. Le piège est de croire qu'elle « répare » l'oreille : elle compense la perte, elle ne régénère pas les cellules ciliées détruites.",
+      "notion_fiche": "7. Compenser une déficience auditive"
+    }
+  ]
+}

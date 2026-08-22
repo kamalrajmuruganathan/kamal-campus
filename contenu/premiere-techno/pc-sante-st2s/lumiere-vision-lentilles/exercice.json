@@ -1,0 +1,91 @@
+{
+  "id": "1st2s-pc-lumiere-vision-lentilles-exos",
+  "chapitre": "1st2s-pc-lumiere-vision-lentilles",
+  "titre": "Exercices — Lumière, vision et lentilles",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "distance-focale-vergence",
+      "enonce": "1) Une lentille convergente a une distance focale $f' = 20$ cm. Calculer sa vergence $V$ en dioptries. 2) Une autre lentille a une vergence $V = -5{,}0\\ \\delta$. Calculer sa distance focale $f'$ en mètre puis en centimètre, et préciser sa nature.",
+      "corrige": [
+        "1) On convertit d'abord la distance focale en mètre : $f' = 20\\ \\text{cm} = 0{,}20\\ \\text{m}$. C'est indispensable car la formule $V = 1/f'$ ne donne des dioptries que si $f'$ est en mètre.",
+        "1) On applique $V = \\dfrac{1}{f'} = \\dfrac{1}{0{,}20} = 5{,}0\\ \\delta$. La vergence est positive : cohérent, la lentille est convergente.",
+        "2) On inverse la relation : $f' = \\dfrac{1}{V} = \\dfrac{1}{-5{,}0} = -0{,}20\\ \\text{m}$, soit $-20\\ \\text{cm}$.",
+        "2) La distance focale est négative ($f' < 0$), donc la lentille est divergente."
+      ],
+      "reponse": "1) $V = 5{,}0\\ \\delta$ (convergente). 2) $f' = -0{,}20\\ \\text{m} = -20\\ \\text{cm}$, lentille divergente."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "grandissement",
+      "enonce": "Un objet $AB$ de hauteur $1{,}5$ cm est placé devant une lentille convergente. On mesure sur l'écran une image $A'B'$ renversée de hauteur $4{,}5$ cm. 1) Calculer le grandissement $\\gamma$. 2) L'image est-elle réelle ou virtuelle ? Agrandie ou réduite ? Justifier à partir du signe et de la valeur de $\\gamma$.",
+      "corrige": [
+        "1) Le grandissement est le rapport des tailles : $\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}}$. L'image étant renversée, sa mesure algébrique est négative : $\\overline{A'B'} = -4{,}5\\ \\text{cm}$.",
+        "1) On calcule : $\\gamma = \\dfrac{-4{,}5}{1{,}5} = -3{,}0$. C'est un nombre sans unité.",
+        "2) Le signe est négatif ($\\gamma < 0$) : l'image est renversée, donc réelle (elle a d'ailleurs été recueillie sur un écran).",
+        "2) La valeur absolue vaut $3{,}0 > 1$ : l'image est agrandie, trois fois plus grande que l'objet."
+      ],
+      "reponse": "$\\gamma = -3{,}0$ : image réelle (renversée) et agrandie 3 fois."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "lentilles-accolees",
+      "enonce": "On accole deux lentilles minces de même axe : $L_1$ de vergence $V_1 = +7{,}0\\ \\delta$ et $L_2$ de vergence $V_2 = -2{,}0\\ \\delta$. 1) Calculer la vergence $V$ de l'ensemble. 2) En déduire sa distance focale $f'$ (en m puis en cm) et sa nature.",
+      "corrige": [
+        "1) Pour deux lentilles accolées, les vergences s'ajoutent : $V = V_1 + V_2$.",
+        "1) On calcule : $V = 7{,}0 + (-2{,}0) = +5{,}0\\ \\delta$.",
+        "2) On revient à la distance focale par $f' = \\dfrac{1}{V} = \\dfrac{1}{5{,}0} = 0{,}20\\ \\text{m} = 20\\ \\text{cm}$.",
+        "2) La vergence totale est positive : l'ensemble se comporte comme une seule lentille convergente."
+      ],
+      "reponse": "$V = +5{,}0\\ \\delta$, $f' = 0{,}20\\ \\text{m} = 20\\ \\text{cm}$, ensemble convergent."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "defauts-correction",
+      "enonce": "Une patiente voit flou de loin mais net de près. L'ophtalmologiste prescrit un verre de vergence $V = -2{,}0\\ \\delta$ par œil. 1) Quel est le défaut de vision ? 2) Le verre est-il convergent ou divergent ? Justifier par le signe de $V$. 3) Calculer la distance focale $f'$ du verre.",
+      "corrige": [
+        "1) « Flou de loin, net de près » est le signe caractéristique de la myopie : l'œil est trop convergent, l'image d'un objet éloigné se forme avant la rétine.",
+        "2) La vergence prescrite est négative ($V = -2{,}0\\ \\delta < 0$), donc le verre est divergent : il écarte les rayons avant l'œil et repousse l'image sur la rétine. C'est bien la correction attendue pour une myopie.",
+        "3) On calcule la distance focale : $f' = \\dfrac{1}{V} = \\dfrac{1}{-2{,}0} = -0{,}50\\ \\text{m} = -50\\ \\text{cm}$ (négative, cohérent avec une lentille divergente)."
+      ],
+      "reponse": "1) Myopie. 2) Verre divergent ($V<0$). 3) $f' = -0{,}50\\ \\text{m} = -50\\ \\text{cm}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "loupe",
+      "enonce": "Une loupe est une lentille convergente de distance focale $f' = 5{,}0$ cm. 1) Calculer sa vergence $V$. 2) On l'utilise pour lire : on place le texte à $3{,}0$ cm de la lentille. En comparant cette distance à la distance focale, expliquer pourquoi l'image obtenue est virtuelle, droite et agrandie. 3) Que se passerait-il si on éloignait le texte à $8{,}0$ cm de la loupe ?",
+      "corrige": [
+        "1) On convertit : $f' = 5{,}0\\ \\text{cm} = 0{,}050\\ \\text{m}$, puis $V = \\dfrac{1}{f'} = \\dfrac{1}{0{,}050} = 20\\ \\delta$.",
+        "2) L'objet est à $3{,}0$ cm de la lentille, soit à une distance INFÉRIEURE à la distance focale ($3{,}0\\ \\text{cm} < 5{,}0\\ \\text{cm}$) : il est situé entre le centre optique O et le foyer objet F.",
+        "2) Dans cette position, les rayons ressortent en divergeant : ils ne se croisent pas réellement, seuls leurs prolongements se coupent en arrière. L'image est donc virtuelle, dans le même sens que l'objet (droite) et plus grande : c'est le rôle de la loupe.",
+        "3) À $8{,}0$ cm, l'objet est au-delà du foyer ($8{,}0\\ \\text{cm} > 5{,}0\\ \\text{cm}$) : l'image deviendrait réelle et renversée, donc inutilisable pour lire — l'objet doit rester dans la distance focale."
+      ],
+      "reponse": "1) $V = 20\\ \\delta$. 2) Objet dans la distance focale (entre O et F) → image virtuelle, droite, agrandie. 3) Au-delà de F, l'image devient réelle et renversée."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "defauts-correction",
+      "enonce": "On modélise l'œil corrigé par deux lentilles accolées : le système de l'œil, de vergence $V_{\\text{œil}}$, et le verre correcteur, de vergence $V_{\\text{verre}}$, dont les vergences s'ajoutent. Pour voir net un objet éloigné, la vergence totale de l'ensemble doit valoir $V_0 = 60\\ \\delta$. Un œil myope au repos a une vergence $V_{\\text{œil}} = 62{,}5\\ \\delta$. 1) Écrire la relation entre $V_0$, $V_{\\text{œil}}$ et $V_{\\text{verre}}$. 2) Calculer $V_{\\text{verre}}$. 3) En déduire la nature du verre et sa distance focale $f'$.",
+      "corrige": [
+        "1) Les deux lentilles sont accolées, donc leurs vergences s'ajoutent : $V_0 = V_{\\text{œil}} + V_{\\text{verre}}$.",
+        "2) On isole la vergence du verre : $V_{\\text{verre}} = V_0 - V_{\\text{œil}} = 60 - 62{,}5 = -2{,}5\\ \\delta$.",
+        "3) La vergence du verre est négative, donc le verre est divergent : c'est cohérent, il faut retirer de la vergence à un œil myope (trop convergent).",
+        "3) Sa distance focale vaut $f' = \\dfrac{1}{V_{\\text{verre}}} = \\dfrac{1}{-2{,}5} = -0{,}40\\ \\text{m} = -40\\ \\text{cm}$."
+      ],
+      "reponse": "1) $V_0 = V_{\\text{œil}} + V_{\\text{verre}}$. 2) $V_{\\text{verre}} = -2{,}5\\ \\delta$. 3) Verre divergent, $f' = -0{,}40\\ \\text{m} = -40\\ \\text{cm}$."
+    }
+  ]
+}

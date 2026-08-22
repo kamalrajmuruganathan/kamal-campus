@@ -1,0 +1,89 @@
+{
+  "id": "1st2s-pc-risques-electriques-exos",
+  "chapitre": "1st2s-pc-risques-electriques",
+  "titre": "Exercices — Risques électriques dans l'habitat",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "pc-sante-st2s",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "periode-frequence",
+      "enonce": "Aux États-Unis, le secteur électrique a une fréquence $f = 60$ Hz. 1) Calculer sa période $T$ en seconde. 2) Exprimer cette période en millisecondes (ms).",
+      "corrige": [
+        "La période et la fréquence sont liées par $T = \\dfrac{1}{f}$.",
+        "Application numérique : $T = \\dfrac{1}{60} \\approx 0{,}0167$ s.",
+        "Conversion en millisecondes : $1$ s $= 1000$ ms, donc $T \\approx 0{,}0167 \\times 1000 \\approx 16{,}7$ ms."
+      ],
+      "reponse": "$T = \\dfrac{1}{f} \\approx 0{,}0167$ s $\\approx 16{,}7$ ms."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "valeur-efficace",
+      "enonce": "Le secteur français a une valeur efficace $U = 230$ V. On prend $\\sqrt{2} \\approx 1{,}414$. 1) Calculer la valeur maximale $U_{max}$ de la tension. 2) En déduire la valeur minimale $U_{min}$.",
+      "corrige": [
+        "La valeur efficace et la valeur maximale sont liées par $U = \\dfrac{U_{max}}{\\sqrt{2}}$. On isole $U_{max}$ : $U_{max} = U \\times \\sqrt{2}$.",
+        "Application numérique : $U_{max} = 230 \\times 1{,}414 \\approx 325$ V.",
+        "La sinusoïde est symétrique par rapport à zéro, donc $U_{min} = -U_{max} \\approx -325$ V."
+      ],
+      "reponse": "$U_{max} = U\\sqrt{2} \\approx 325$ V et $U_{min} \\approx -325$ V."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "intensite-danger",
+      "enonce": "Une personne touche accidentellement un fil sous tension efficace $U = 230$ V. On modélise son corps par une résistance $R$. On rappelle la loi d'Ohm $U = R \\times I$. 1) Calculer l'intensité $I$ qui traverse le corps si la peau est **sèche** ($R = 5000\\ \\Omega$). 2) Même question si la peau est **mouillée** ($R = 1000\\ \\Omega$). 3) Exprimer les deux résultats en milliampères et commenter le rôle de l'humidité.",
+      "corrige": [
+        "On isole l'intensité dans la loi d'Ohm : $I = \\dfrac{U}{R}$.",
+        "Peau sèche : $I = \\dfrac{230}{5000} = 0{,}046$ A $= 46$ mA.",
+        "Peau mouillée : $I = \\dfrac{230}{1000} = 0{,}230$ A $= 230$ mA.",
+        "Quand la peau est mouillée, la résistance chute, donc l'intensité augmente fortement (de $46$ à $230$ mA ici). Les deux valeurs dépassent le seuil de tétanisation ($10$ mA) ; $230$ mA dépasse même le seuil de fibrillation cardiaque ($\\geq 100$ mA). L'humidité rend l'accident bien plus grave."
+      ],
+      "reponse": "$I_{\\text{sec}} = 46$ mA et $I_{\\text{mouillé}} = 230$ mA : mouillée, la peau laisse passer un courant 5 fois plus grand, donc bien plus dangereux."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "dispositifs-securite",
+      "enonce": "Un disjoncteur différentiel de calibre $30$ mA équipe une installation. Il compare l'intensité de la phase $I_{\\text{phase}}$ et celle du neutre $I_{\\text{neutre}}$, et coupe le circuit dès que l'écart $|I_{\\text{phase}} - I_{\\text{neutre}}|$ atteint $30$ mA. Pour chaque situation, dire s'il déclenche : a) $I_{\\text{phase}} = 4{,}500$ A et $I_{\\text{neutre}} = 4{,}500$ A ; b) $I_{\\text{phase}} = 4{,}525$ A et $I_{\\text{neutre}} = 4{,}500$ A ; c) $I_{\\text{phase}} = 4{,}540$ A et $I_{\\text{neutre}} = 4{,}500$ A.",
+      "corrige": [
+        "On calcule l'écart puis on le convertit en milliampères pour le comparer au seuil de $30$ mA.",
+        "a) $\\Delta I = 4{,}500 - 4{,}500 = 0$ A $= 0$ mA. Tout le courant qui part revient : aucune fuite, il ne déclenche pas.",
+        "b) $\\Delta I = 4{,}525 - 4{,}500 = 0{,}025$ A $= 25$ mA. C'est inférieur à $30$ mA : il ne déclenche pas encore.",
+        "c) $\\Delta I = 4{,}540 - 4{,}500 = 0{,}040$ A $= 40$ mA. C'est supérieur à $30$ mA : il déclenche et coupe le circuit."
+      ],
+      "reponse": "a) non ($0$ mA) ; b) non ($25$ mA $< 30$ mA) ; c) oui ($40$ mA $\\geq 30$ mA)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "tension-alternative-sinusoidale",
+      "enonce": "Un technicien branche un oscilloscope sur une prise inconnue. Il lit une tension sinusoïdale de valeur maximale $U_{max} = 325$ V et de période $T = 20$ ms. On prend $\\sqrt{2} \\approx 1{,}41$. 1) Calculer la fréquence $f$. 2) Calculer la valeur efficace $U$. 3) S'agit-il du secteur domestique français ?",
+      "corrige": [
+        "Fréquence : il faut d'abord convertir la période en seconde. $T = 20$ ms $= 20 \\times 10^{-3}$ s $= 0{,}020$ s. Puis $f = \\dfrac{1}{T} = \\dfrac{1}{0{,}020} = 50$ Hz.",
+        "Valeur efficace : $U = \\dfrac{U_{max}}{\\sqrt{2}} = \\dfrac{325}{1{,}41} \\approx 230$ V.",
+        "Le secteur domestique français a pour caractéristiques $f = 50$ Hz et $U = 230$ V : les deux valeurs correspondent, il s'agit bien du secteur français."
+      ],
+      "reponse": "$f = 50$ Hz, $U \\approx 230$ V : oui, ce sont les caractéristiques du secteur domestique français."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "risques-du-corps",
+      "enonce": "Dans une salle de bain, une personne aux mains mouillées touche un sèche-cheveux dont un fil de phase est en contact avec la carcasse métallique. La tension efficace est $U = 230$ V et la résistance de son corps vaut alors $R = 1150\\ \\Omega$. On rappelle $U = R \\times I$. 1) Calculer l'intensité $I$ traversant le corps, en mA. 2) À l'aide des seuils du cours ($10$ mA tétanisation, $30$ mA respiration, $\\geq 100$ mA fibrillation), qualifier le danger. 3) L'installation est protégée par un disjoncteur différentiel $30$ mA : expliquer pourquoi il sauve la personne.",
+      "corrige": [
+        "Intensité : $I = \\dfrac{U}{R} = \\dfrac{230}{1150} = 0{,}200$ A. Conversion : $0{,}200$ A $= 200$ mA.",
+        "Comparaison aux seuils : $200$ mA dépasse largement $100$ mA, seuil de fibrillation ventriculaire. Sans protection, ce courant provoquerait un arrêt cardiaque : la situation est potentiellement mortelle (risque d'électrocution).",
+        "Le courant de $200$ mA part par la phase mais s'écoule vers la terre à travers le corps : il ne revient pas par le neutre. L'écart $I_{\\text{phase}} - I_{\\text{neutre}} \\approx 200$ mA dépasse très largement le seuil de $30$ mA du différentiel.",
+        "Le disjoncteur différentiel détecte ce déséquilibre et coupe le circuit en une fraction de seconde, avant que le passage prolongé du courant ne devienne fatal : c'est lui qui protège la personne."
+      ],
+      "reponse": "$I = 200$ mA : danger mortel (au-delà du seuil de fibrillation). Le différentiel $30$ mA détecte la fuite ($\\approx 200$ mA $> 30$ mA) et coupe le circuit très vite, ce qui sauve la personne."
+    }
+  ]
+}
