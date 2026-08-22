@@ -1,0 +1,91 @@
+{
+  "id": "tale-esc-production-conversion-energie-electrique-exos",
+  "chapitre": "tale-esc-production-conversion-energie-electrique",
+  "titre": "Exercices — Production et conversion de l'énergie électrique",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "rendement-conversion",
+      "enonce": "Un panneau photovoltaïque reçoit du Soleil une énergie lumineuse $E_{\\text{reçue}} = 2{,}0 \\times 10^{4}$ J et fournit une énergie électrique $E_{\\text{utile}} = 3{,}6 \\times 10^{3}$ J. 1) Calculer le rendement de conversion $\\eta$ du panneau. 2) L'exprimer en pourcentage.",
+      "corrige": [
+        "Le rendement est le rapport de l'énergie utile sur l'énergie reçue : $\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{reçue}}}$.",
+        "Application numérique : $\\eta = \\dfrac{3{,}6 \\times 10^{3}}{2{,}0 \\times 10^{4}} = \\dfrac{3{,}6}{20} = 0{,}18$.",
+        "Comme $\\eta$ est sans unité, on le convertit en pourcentage en multipliant par 100 : $\\eta = 0{,}18 = 18\\ \\%$. C'est un ordre de grandeur réaliste pour un panneau du commerce."
+      ],
+      "reponse": "$\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{reçue}}} = 0{,}18$, soit $18\\ \\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "effet-joule",
+      "enonce": "Une ligne électrique a une résistance totale $R = 3{,}0\\ \\Omega$ et transporte un courant d'intensité $I = 20$ A. 1) Calculer la puissance $P$ dissipée par effet Joule dans la ligne. 2) Quelle énergie est ainsi perdue en chaleur au bout de $t = 1{,}0$ heure ? (Donner le résultat en joules.)",
+      "corrige": [
+        "La puissance dissipée par effet Joule vaut $P = R I^2$. Attention : l'intensité est au carré.",
+        "Application numérique : $P = 3{,}0 \\times (20)^2 = 3{,}0 \\times 400 = 1200$ W, soit $1{,}2$ kW.",
+        "L'énergie perdue est $E = P \\times t$. Il faut convertir la durée en secondes : $t = 1{,}0$ h $= 3600$ s.",
+        "$E = 1200 \\times 3600 = 4{,}32 \\times 10^{6}$ J, soit environ $4{,}3 \\times 10^{6}$ J (ce qui vaut $1{,}2$ kWh)."
+      ],
+      "reponse": "$P = RI^2 = 1200$ W ; $E = P\\,t = 4{,}3 \\times 10^{6}$ J (soit $1{,}2$ kWh)."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "rendement-global",
+      "enonce": "Dans une centrale hydraulique, l'énergie de l'eau est convertie en trois étapes : la turbine (rendement $\\eta_1 = 0{,}90$), l'alternateur ($\\eta_2 = 0{,}95$), puis le transformateur et la ligne ($\\eta_3 = 0{,}88$). 1) Calculer le rendement global $\\eta_{\\text{g}}$ de la chaîne. 2) Sur $500$ kJ d'énergie fournis par l'eau, quelle énergie électrique arrive à l'utilisateur ?",
+      "corrige": [
+        "Le rendement global d'une chaîne est le **produit** des rendements de chaque étape : $\\eta_{\\text{g}} = \\eta_1 \\times \\eta_2 \\times \\eta_3$.",
+        "Application numérique : $\\eta_{\\text{g}} = 0{,}90 \\times 0{,}95 \\times 0{,}88 = 0{,}7524 \\approx 0{,}75$, soit $75\\ \\%$.",
+        "L'énergie reçue à l'entrée est $E_{\\text{reçue}} = 500$ kJ. L'énergie utile en sortie vaut $E_{\\text{utile}} = \\eta_{\\text{g}} \\times E_{\\text{reçue}}$.",
+        "$E_{\\text{utile}} = 0{,}75 \\times 500 = 375$ kJ. Environ un quart de l'énergie de départ a été perdu en chaleur le long de la chaîne."
+      ],
+      "reponse": "$\\eta_{\\text{g}} = \\eta_1 \\eta_2 \\eta_3 \\approx 0{,}75$ ($75\\ \\%$) ; $E_{\\text{utile}} = 375$ kJ."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "unites-energie",
+      "enonce": "Une éolienne délivre une puissance électrique moyenne $P = 2{,}0$ MW pendant une journée entière ($24$ h). 1) Calculer l'énergie produite en kWh. 2) Convertir cette énergie en joules. Donnée : $1$ kWh $= 3{,}6 \\times 10^{6}$ J.",
+      "corrige": [
+        "On utilise $E = P \\times t$. Pour obtenir des kWh, on prend la puissance en kW et la durée en h.",
+        "Conversion de la puissance : $P = 2{,}0$ MW $= 2{,}0 \\times 10^{3}$ kW $= 2000$ kW.",
+        "$E = 2000\\ \\text{kW} \\times 24\\ \\text{h} = 48\\,000$ kWh, soit $4{,}8 \\times 10^{4}$ kWh.",
+        "Conversion en joules : $E = 4{,}8 \\times 10^{4} \\times 3{,}6 \\times 10^{6} = 1{,}728 \\times 10^{11}$ J, soit environ $1{,}7 \\times 10^{11}$ J."
+      ],
+      "reponse": "$E = 4{,}8 \\times 10^{4}$ kWh $= 1{,}7 \\times 10^{11}$ J."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "effet-joule",
+      "enonce": "On veut transporter une puissance électrique $P = 1{,}0 \\times 10^{6}$ W sur une ligne de résistance $R = 5{,}0\\ \\Omega$. On compare deux tensions de transport. 1) Sous $U_1 = 1{,}0 \\times 10^{3}$ V, calculer l'intensité $I_1$ puis les pertes Joule $P_{\\text{J,1}}$. 2) Sous $U_2 = 1{,}0 \\times 10^{5}$ V, calculer $I_2$ puis $P_{\\text{J,2}}$. 3) Par quel facteur les pertes ont-elles été divisées ? Conclure.",
+      "corrige": [
+        "La puissance transportée s'écrit $P = U \\times I$, donc l'intensité vaut $I = \\dfrac{P}{U}$. Les pertes par effet Joule dans la ligne valent $P_{\\text{J}} = R I^2$.",
+        "Cas 1 : $I_1 = \\dfrac{1{,}0 \\times 10^{6}}{1{,}0 \\times 10^{3}} = 1{,}0 \\times 10^{3}$ A. Pertes : $P_{\\text{J,1}} = 5{,}0 \\times (1{,}0 \\times 10^{3})^2 = 5{,}0 \\times 10^{6}$ W, soit $5{,}0$ MW.",
+        "Cas 2 : $I_2 = \\dfrac{1{,}0 \\times 10^{6}}{1{,}0 \\times 10^{5}} = 10$ A. Pertes : $P_{\\text{J,2}} = 5{,}0 \\times (10)^2 = 500$ W.",
+        "Facteur de réduction : $\\dfrac{P_{\\text{J,1}}}{P_{\\text{J,2}}} = \\dfrac{5{,}0 \\times 10^{6}}{500} = 1{,}0 \\times 10^{4}$. On a multiplié la tension par 100, donc divisé l'intensité par 100, donc divisé les pertes (en $I^2$) par $100^2 = 10\\,000$. C'est pourquoi on transporte l'électricité à très haute tension."
+      ],
+      "reponse": "$P_{\\text{J,1}} = 5{,}0 \\times 10^{6}$ W et $P_{\\text{J,2}} = 500$ W : les pertes sont divisées par $10\\,000$ en passant de $1$ kV à $100$ kV."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "stockage",
+      "enonce": "Une STEP stocke l'électricité en pompant de l'eau vers un réservoir haut, puis la restitue en turbinant l'eau qui redescend. Le pompage a un rendement $\\eta_{\\text{pompe}} = 0{,}85$ et le turbinage un rendement $\\eta_{\\text{turbine}} = 0{,}90$. On fournit $E_{\\text{entrée}} = 1000$ kWh d'électricité au pompage. 1) Quelle énergie électrique récupère-t-on après l'aller-retour complet ? 2) Calculer le rendement global du stockage. 3) Sous quelle forme l'énergie est-elle stockée entre les deux étapes ?",
+      "corrige": [
+        "Le stockage enchaîne deux conversions : d'abord le pompage (électrique → énergie de position de l'eau), puis le turbinage (énergie de position → électrique). L'énergie récupérée est le produit des deux rendements par l'énergie d'entrée : $E_{\\text{sortie}} = \\eta_{\\text{pompe}} \\times \\eta_{\\text{turbine}} \\times E_{\\text{entrée}}$.",
+        "$E_{\\text{sortie}} = 0{,}85 \\times 0{,}90 \\times 1000 = 0{,}765 \\times 1000 = 765$ kWh.",
+        "Le rendement global du stockage est $\\eta_{\\text{g}} = \\dfrac{E_{\\text{sortie}}}{E_{\\text{entrée}}} = \\dfrac{765}{1000} = 0{,}765 \\approx 0{,}77$, soit environ $77\\ \\%$. On peut aussi l'obtenir directement : $\\eta_{\\text{g}} = 0{,}85 \\times 0{,}90 = 0{,}765$.",
+        "Entre le pompage et le turbinage, l'eau est retenue en hauteur : l'énergie est stockée sous forme **mécanique** (énergie de position de l'eau). Comme le stockage impose deux conversions, son rendement global ($77\\ \\%$) est inférieur à celui de chaque étape prise seule."
+      ],
+      "reponse": "$E_{\\text{sortie}} = 765$ kWh ; $\\eta_{\\text{g}} = 0{,}765 \\approx 77\\ \\%$ ; stockage mécanique (énergie de position de l'eau)."
+    }
+  ]
+}

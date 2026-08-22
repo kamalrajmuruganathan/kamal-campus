@@ -1,7 +1,7 @@
 # Dossier de relecture — notes de production de toutes les fiches
 
 > Document GÉNÉRÉ par `outils/generer-dossier-relecture.sh` — ne pas éditer à la main.
-> Régénéré le 2026-08-17. Il assemble les blocs de notes de production
+> Régénéré le 2026-08-22. Il assemble les blocs de notes de production
 > (invisibles dans l'application) de chaque fiche du corpus.
 >
 > **Mode d'emploi pour le relecteur** : chaque entrée liste la source
@@ -1544,6 +1544,597 @@ La liste des angles associés de la section 4 suit exactement cette énumératio
   décalage de phase) est-elle exigible, ou seulement la lecture des paramètres ?
 - L'exemple du réseau électrique (325 V, 50 Hz) est un choix personnel : vérifier
   qu'il correspond aux contextes visés par le programme.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+## premiere-techno / pc-sante-st2s
+
+### infrarouge-securite-routiere  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de « Physique-chimie pour la santé », série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée). Thème 1 « Prévenir et sécuriser ».
+Chapitre réunissant DEUX sections courtes du programme, extraites de
+docs/programme-st2s-physique-chimie-sante.txt :
+  - « Rayonnement infrarouge et détection (1re) », lignes 41-44 :
+      · Domaine des ondes électromagnétiques.
+      · Température d'un corps et rayonnement émis ; loi de Wien (λmax·T = constante).
+      · Émission d'infrarouges par le corps humain ; systèmes de détection.
+  - « Sécurité routière : vitesse et distance d'arrêt (1re) », lignes 46-48 :
+      · Vitesse d'un corps ; énergie cinétique de translation Ec = ½mv².
+      · Distance de freinage, distance de réaction, distance d'arrêt.
+Le .txt précise (lignes 12-15) que la répartition 1re/Tale suit la progression usuelle et
+reste À CONFIRMER au PDF officiel (https://www.education.gouv.fr/media/25040/download).
+Source à confronter au PDF officiel via WebFetch avant publication.
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+
+⚠️ CHOIX À CONFRONTER AU PDF OFFICIEL / AU RELECTEUR :
+- niveau YAML = "premiere-techno" (imposé par la consigne de production, cohérent avec le
+  chapitre ST2S risques-electriques). Les chapitres securite-chimique-acide-base et
+  oxydoreduction-desinfectants portent niveau: "premiere" : incohérence à harmoniser sur
+  tout le parcours pc-sante-st2s avant publication.
+- Constante de Wien : valeur exacte 2,898×10⁻³ m·K, arrondie à 2,9×10⁻³ m·K comme demandé.
+  T(K) = θ(°C) + 273 (arrondi ; 273,15 rigoureux). Vérifier l'arrondi attendu au programme.
+- Loi de Wien : le programme la cite comme relation « λmax·T = constante » à utiliser ;
+  vérifier si l'expression est fournie le jour de l'épreuve ou exigible de mémoire.
+- Bornes du spectre EM : ordres de grandeur usuels (visible 0,4–0,8 µm). Le programme
+  n'exige probablement pas de mémoriser les bornes précises de chaque domaine : vérifier
+  le niveau d'exigence (savoir situer l'IR par rapport au visible suffit sans doute).
+- Corps humain : θ = 37 °C → T = 310 K → λmax ≈ 9,4 µm (IR moyen). Valeur robuste.
+- Sécurité routière : t_r = 1 s est une valeur de référence standard (temps de réaction).
+  Les valeurs chiffrées de d_f (route sèche) dépendent de la décélération (a ≈ 7–8 m·s⁻²) :
+  présentées comme ordres de grandeur cohérents (d_f ∝ v²), NON comme valeurs officielles.
+  Le message exigible est la PROPORTIONNALITÉ (d_r ∝ v, d_f ∝ v²), à confirmer au relecteur.
+- Le lien travail de la force de freinage / Ec (F·d_f = ½mv²) est utilisé pour justifier
+  d_f ∝ v². Vérifier que ce niveau de justification énergétique est attendu en ST2S (le
+  programme peut se contenter du constat qualitatif). Le théorème de l'énergie cinétique
+  n'est pas nommé dans la fiche pour rester au niveau ST2S.
+
+Statut : brouillon, non relu.
+```
+
+### lumiere-vision-lentilles  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — à confronter au relecteur (professeur de physique-chimie ST2S)
+
+Source : programme officiel ST2S, BO spécial n°1 du 22 janvier 2019 — « Physique-chimie
+pour la santé », série ST2S. Section « Lumière, vision et lentilles (1re) », Thème 2
+« Analyser et diagnostiquer ». Contenu extrait de docs/programme-st2s-physique-chimie-sante.txt
+(lignes 58-64). À confronter au PDF officiel education.gouv.fr / eduscol avant publication.
+
+Programme (recopié) : propagation de la lumière ; mécanisme sommaire de la vision ;
+lentilles minces convergentes/divergentes, centre optique, foyers F et F' ; distance
+focale f' et vergence V = 1/f' ; formation d'une image, caractère réel/virtuel,
+grandissement, principe de la loupe ; accommodation ; myopie, hypermétropie, presbytie ;
+verres correcteurs ; vergence de deux lentilles accolées (V = V1 + V2).
+
+Points à trancher / confirmer :
+- CONVENTION niveau : les premiers chapitres ST2S écrits (securite-chimique-acide-base,
+  oxydoreduction-desinfectants) portent niveau: "premiere" ; risques-electriques,
+  infrarouge-securite-routiere et ondes-sonores-audition portent "premiere-techno".
+  Cette fiche suit "premiere-techno" (comme demandé). Incohérence de parcours à harmoniser
+  avant publication sur l'ensemble de pc-sante-st2s.
+- CONVENTION DE SIGNE : le programme 2019 mentionne « distance focale f' et vergence
+  V = 1/f' ». J'ai utilisé la convention algébrique (f' = OF' > 0 convergente, < 0 divergente)
+  qui rend V = 1/f' cohérente avec les signes des verres correcteurs. Vérifier que ce niveau
+  d'algébrisation (mesures algébriques OA', notation gamma) est bien celui attendu en ST2S,
+  et non une simple approche qualitative + calcul de V en valeur.
+- RELATION DE CONJUGAISON : volontairement NON introduite (1/OA' − 1/OA = 1/f'). Le grandissement
+  est présenté comme mesure sur une construction (γ = A'B'/AB). Les exercices ne l'exigent pas.
+  Confirmer que le programme ST2S ne demande PAS la relation de Descartes (a priori hors programme
+  à ce niveau — approche géométrique/graphique privilégiée). Si un exercice de conjugaison est
+  attendu, l'ajouter comme outil admis.
+- VÉRIFS NUMÉRIQUES faites : f'=5 cm → V=20 δ ; f'=−25 cm → V=−4 δ ; V1=+8 et V2=−3 → V=+5 δ,
+  f'=0,20 m ; V=+5 δ → f'=0,20 m ; γ = −6,0/2,0 = −3,0. Ordres de grandeur : punctum proximum ≈ 25 cm,
+  cristallin ≈ +60 δ au repos (non chiffré dans la fiche, à confirmer si attendu).
+- ANATOMIE de l'œil (cornée, iris/pupille, cristallin, rétine, cônes/bâtonnets, nerf optique) :
+  présentée de façon « sommaire » comme le demande le programme. Possible recoupement avec la
+  SVT / biologie et physiopathologie humaines : vérifier la profondeur attendue.
+- PRESBYTIE corrigée « pour la vision de près » par verre convergent : correct. Ne pas laisser
+  entendre qu'un seul verre corrige presbytie ET myopie (verres progressifs = hors programme).
+
+Statut : brouillon, non relu.
+```
+
+### ondes-sonores-audition  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de « Physique-chimie pour la santé », série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée). Thème 2 « Analyser et
+diagnostiquer », section « Ondes sonores et audition (1re) ».
+Extrait de référence utilisé : docs/programme-st2s-physique-chimie-sante.txt,
+lignes 53-56 :
+  - Fréquence et hauteur d'un son ; sons audibles.
+  - Niveau d'intensité sonore (dB).
+  - Perception d'un son par l'oreille ; risques auditifs ; amplification (compensation).
+Le .txt (lignes 12-15) précise que la répartition 1re/Tale suit la progression usuelle
+et reste À CONFIRMER au PDF officiel (https://www.education.gouv.fr/media/25040/download).
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+
+⚠️ CHOIX À CONFRONTER AU PDF OFFICIEL / AU RELECTEUR :
+- niveau YAML = "premiere-techno" (imposé par la consigne de production). Les deux
+  premiers chapitres ST2S écrits (securite-chimique-acide-base, oxydoreduction-
+  desinfectants) portent niveau: "premiere" ; risques-electriques et
+  infrarouge-securite-routiere portent "premiere-techno". Incohérence à trancher pour
+  tout le parcours pc-sante-st2s : harmoniser sur une seule valeur avant publication.
+- Formule L = 10·log(I/I0) avec I0 = 10^-12 W/m² : valeur standard du seuil d'audibilité,
+  conforme à l'énoncé de la consigne. Vérifier que le programme exige bien la manipulation
+  du logarithme décimal (log(10^n)=n) à ce niveau, et son articulation avec le cours de
+  maths ST2S (le log est parfois vu APRÈS ce chapitre) — sinon donner log comme outil admis.
+- Bornes audibles 20 Hz – 20 kHz : ordre de grandeur standard (oreille jeune). À valider
+  comme valeurs à connaître (et non seulement ordres de grandeur).
+- Seuils de risque : 85 dB / 8 h et règle « +3 dB → durée /2 » = valeurs de référence en
+  santé au travail (INRS / Code du travail). Le programme cite « risques auditifs » sans
+  forcément chiffrer : confirmer le niveau d'exigence attendu (valeurs précises vs principe).
+  Seuil de douleur ≈ 120 dB (I = 1 W/m²).
+- Anatomie de l'oreille (externe/moyenne/interne, osselets, cochlée, cellules ciliées) :
+  présentée de façon simplifiée. Vérifier la profondeur attendue par le programme ST2S
+  (possible recoupement avec la SVT / biologie et physiopathologie humaines).
+- Prothèse auditive (micro + ampli + haut-parleur) et « amplification » comme compensation :
+  conforme à la consigne. Confirmer qu'aucune notion supplémentaire (implant cochléaire)
+  n'est exigée au programme de Première.
+- Vérifs numériques faites : 60 dB ↔ 10^-6 W/m² ; 100 dB ↔ 10^-2 W/m² ; 120 dB ↔ 1 W/m² ;
+  ×10 sur I → +10 dB ; ×2 sur I → +10·log(2) ≈ 3,01 dB.
+
+Statut : brouillon, non relu.
+```
+
+### oxydoreduction-desinfectants  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de PHYSIQUE-CHIMIE POUR LA SANTÉ, série ST2S, BO spécial n°1 du
+22 janvier 2019 (réforme du lycée). Section « Oxydoréduction : désinfectants et antiseptiques
+(1re) », thème 1 « Prévenir et sécuriser ».
+Fichier de travail : docs/programme-st2s-physique-chimie-sante.txt (lignes 29-32), extrait via
+WebFetch depuis le PDF officiel education.gouv.fr (https://www.education.gouv.fr/media/25040/download)
+et eduscol ST2S. À CONFRONTER AU PDF OFFICIEL avant publication.
+
+Notions couvertes, telles que listées par le programme :
+- oxydant, réducteur ; couple oxydant/réducteur ; demi-équation d'oxydoréduction ;
+- réaction d'oxydoréduction ; propriétés oxydantes (eau de Javel, eau oxygénée) ;
+- action antiseptique qualitative d'un oxydant sur un micro-organisme ;
+- dilution d'une solution ; règles de sécurité (produits oxydants).
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Le champ YAML « niveau » vaut ici « premiere-techno » (consigne explicite de production).
+  ATTENTION : le chapitre voisin « securite-chimique-acide-base » du MÊME dossier utilise
+  « niveau: premiere ». Incohérence à trancher par le relecteur : soit aligner ce chapitre sur
+  « premiere », soit migrer l'autre vers « premiere-techno ». Le segment de chemin
+  « premiere-techno/pc-sante-st2s » est identique dans les deux cas.
+- Les demi-équations sont écrites en MILIEU ACIDE (H+). Le programme ST2S 1re attend-il la
+  méthode complète d'équilibrage (O par H2O, H par H+, charges par e-), ou seulement des
+  demi-équations fournies à exploiter ? J'ai enseigné la méthode ; à confirmer selon le niveau.
+- Couples retenus : Cu2+/Cu, I2/I-, H2O2/H2O, ClO-/Cl-, Fe3+/Fe2+. Vérifier lesquels sont
+  explicitement au programme (les deux oxydants cités par le BO sont bien eau de Javel = ClO-
+  et eau oxygénée = H2O2).
+- La demi-équation ClO-/Cl- retenue est : ClO- + 2H+ + 2e- = Cl- + H2O (équilibrée en éléments
+  et charges, vérifiée). Certains manuels passent par ClO-/Cl2 ou HClO ; à harmoniser avec le
+  manuel de la classe.
+- La notion d'eau oxygénée « en volumes » est mentionnée qualitativement ; est-elle exigible ?
+- Distinction antiseptique (vivant) / désinfectant (surfaces) : standard, mais vérifier le
+  vocabulaire attendu par le programme (« action antiseptique » y figure explicitement).
+- Concentrations et volumes des exemples/exercices choisis pour tomber « ronds » ; valeurs
+  pédagogiques, pas des données réelles de produits commerciaux.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### risques-electriques  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de « Physique-chimie pour la santé », série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée). Thème 1 « Prévenir et
+sécuriser », section « Risques électriques dans l'habitat (1re) ».
+Extrait de référence utilisé : docs/programme-st2s-physique-chimie-sante.txt,
+lignes 35-39 :
+  - Tension alternative sinusoïdale : période, fréquence, valeurs max/min, valeur efficace.
+  - Intensité du courant électrique.
+  - Risques électriques ; électrisation et électrocution.
+  - Prise de courant : phase, neutre, mise à la terre ; sécurité.
+Le .txt précise (lignes 12-15) que la répartition 1re/Tale suit la progression usuelle
+et reste À CONFIRMER au PDF officiel (https://www.education.gouv.fr/media/25040/download).
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+
+⚠️ CHOIX À CONFRONTER AU PDF OFFICIEL / AU RELECTEUR :
+- niveau YAML = "premiere-techno" (imposé par la consigne de production). Les deux
+  autres chapitres ST2S déjà écrits (securite-chimique-acide-base, oxydoreduction-
+  desinfectants) portent niveau: "premiere". Incohérence à trancher pour tout le
+  parcours pc-sante-st2s : harmoniser sur une seule valeur avant publication.
+- La consigne « valeur efficace » est traitée par U = Umax/√2. Le programme cite la
+  notion sans exiger de démonstration : l'expression est donnée comme relation à
+  connaître/utiliser. À confirmer que la relation figure bien parmi les capacités
+  exigibles (et non seulement en note).
+- Les SEUILS d'intensité (1, 10, 30, 100 mA) et les effets associés sont des valeurs
+  de référence standard en sécurité électrique. Le libellé exact du programme ne
+  chiffre pas forcément ces seuils : vérifier le niveau d'exigence attendu (ordres de
+  grandeur vs valeurs précises) et l'accord avec les documents d'accompagnement eduscol.
+- Valeur du secteur : U = 230 V, f = 50 Hz, Umax ≈ 325 V (230×√2 = 325,27 V).
+- Le rôle exact « courant de défaut → terre → détecté par le différentiel » est
+  présenté de façon simplifiée (couplage terre + DDR 30 mA) : à valider par un
+  professeur pour la rigueur du mécanisme.
+- Couleurs des fils (phase marron/rouge, neutre bleu, terre vert-jaune) : normes NF ;
+  vérifier qu'on reste dans l'attendu du programme (santé/sécurité domestique).
+
+Statut : brouillon, non relu.
+```
+
+### securite-chimique-acide-base  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de PHYSIQUE-CHIMIE POUR LA SANTÉ, série ST2S, BO spécial n°1 du
+22 janvier 2019 (réforme du lycée). Section « Sécurité chimique : acides, bases et pH (1re) »,
+thème 1 « Prévenir et sécuriser ».
+Fichier de travail : docs/programme-st2s-physique-chimie-sante.txt (lignes 21-27), extrait via
+WebFetch depuis le PDF officiel education.gouv.fr (https://www.education.gouv.fr/media/25040/download)
+et eduscol ST2S. À CONFRONTER AU PDF OFFICIEL avant publication.
+
+Notions couvertes, telles que listées par le programme :
+- n = m/M ; soluté/solvant/solution ; Cm et C ; pH et [H3O+]=10^(-pH) ;
+  acides/bases, couples, réaction acido-basique, échelles d'acidité ;
+  autoprotolyse, produit ionique, [H3O+] et [HO-] ; pictogrammes et règles de sécurité.
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Le champ YAML « niveau » est mis à « premiere » (et non « premiere-techno ») pour rester
+  homogène avec tous les autres chapitres du dépôt (voie technologique) ; le segment de chemin
+  reste bien « premiere-techno/pc-sante-st2s ». À valider par le relecteur si une convention
+  différente est souhaitée.
+- La définition de Brønsted (acide/base = céder/capter H+) est-elle explicitement au programme
+  ST2S 1re, ou seulement la notion qualitative de couple ? J'ai retenu Brønsted, standard au lycée.
+- Le logarithme : le programme demande-t-il pH = -log[H3O+] (fonction log), ou seulement la
+  relation directe [H3O+] = 10^(-pH) ? Les deux sont données ; à confirmer selon le niveau de maths ST2S.
+- Le produit ionique est-il exigible avec sa valeur numérique (1,0e-14 à 25 °C), ou seulement
+  qualitativement ? J'ai donné la valeur, usuelle mais à confirmer pour la série.
+- Vérifier les valeurs de pH « milieux biologiques » citées (sang 7,4 ; suc gastrique ~2) —
+  ordres de grandeur usuels, contextes ST2S, mais à valider.
+- Masses molaires atomiques utilisées : H 1,0 ; C 12,0 ; N 14,0 ; O 16,0 ; Na 23,0 ; Cl 35,5 g·mol⁻¹.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+## premiere-techno / spcl-stl
+
+### analyses-spectroscopies-dosages  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel « Sciences physiques et chimiques en laboratoire » (SPCL),
+série STL, classe de première — BO du 22 janvier 2019.
+Extrait : docs/programme-stl-spcl.txt, section « Analyses physico-chimiques :
+spectroscopies et dosages (1re) » (ligne 34), qui liste :
+  - Tests d'identification ; propriétés physiques des espèces.
+  - Spectroscopies UV-visible et infrarouge (identification de groupes).
+  - Dosage par étalonnage spectrophotométrique (loi de Beer-Lambert).
+  - Dosage direct par titrage.
+Le programme de référence est très synthétique ; le contenu détaillé (valeurs de bandes IR,
+étoile des couleurs, protocole d'étalonnage) a été rédigé à partir des attendus usuels du
+niveau. À CONFRONTER AU PDF/BO OFFICIEL par un professeur avant publication (le .txt fourni
+ne donne que les intitulés, pas le détail des capacités exigibles).
+
+⚠️ POINTS À CONFRONTER AU RELECTEUR :
+- Les valeurs de bandes IR (tableau §3) sont des ordres de grandeur usuels ; vérifier
+  qu'elles correspondent à la table de référence utilisée en STL SPCL.
+- Le coefficient ε est-il nommé « coefficient d'absorption molaire » ou « absorptivité
+  molaire » dans le référentiel STL ? Unité L·mol⁻¹·cm⁻¹ retenue.
+- Le titrage : le programme dit « dosage direct par titrage » sans préciser suivi (coloré /
+  pH-métrique / conductimétrique). J'ai présenté l'équivalence de façon générale sans fixer
+  le type de suivi. À valider.
+- Faut-il traiter le titrage colorimétrique par un exemple d'oxydoréduction (permanganate)
+  plutôt qu'acide-base ? Choix acide-base fait pour rester sur du 1–1 simple.
+- λmax de CuSO4 (~800 nm, proche IR) : exemple correct mais à la limite du visible ;
+  un relecteur préférera peut-être un exemple pleinement visible.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### appareil-photo-image-numerique  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de Sciences physiques et chimiques en laboratoire (SPCL),
+enseignement de spécialité de la série STL, classe de première.
+BO du 22 janvier 2019 (BO spécial n° 1 du 22 janvier 2019 ; repris au BO spécial n° 8 du
+25 juillet 2019).
+Fichier de référence interne : docs/programme-stl-spcl.txt, section
+« Appareil photo numérique et image numérique (1re) » :
+  - Modèle de l'appareil : nombre d'ouverture, temps de pose, profondeur de champ.
+  - Capteur CCD/CMOS : sensibilité, résolution ; pixel et ses dimensions.
+  - Codage RVB, niveaux de gris ; capacité mémoire, formats ; débit binaire.
+Extrait via WebFetch depuis le PDF officiel education.gouv.fr :
+« Programme de sciences physiques et chimiques en laboratoire de première STL-251820.pdf ».
+À confronter au PDF officiel avant publication.
+
+Prérequis cités conformément à la consigne :
+  - « Image : photographie et lentilles » (SPCL, 1re) — objectif = lentille convergente,
+    capteur = écran, image réelle sur écran, mise au point (relation de conjugaison).
+  - « Image : couleur et vision » (SPCL, 1re) — modèle colorimétrique RVB.
+
+CONVENTIONS RETENUES (à confronter au PDF et à l'usage de l'équipe) :
+- 1 octet = 8 bits (ferme).
+- Unités de taille : convention DÉCIMALE (SI) 1 ko = 10^3 o, 1 Mo = 10^6 o, 1 Go = 10^9 o,
+  employée pour tous les calculs de poids/débit. La convention binaire (1 kio = 1024 o,
+  1 Mio = 2^20 o) est signalée comme piège (§9). Vérifier laquelle est attendue dans les sujets
+  et TP de l'établissement — les manuels hésitent encore.
+- Débit binaire donné en bit/s (avec conversion octet → bit par ×8).
+- Profondeur de couleur RVB = 24 bits = 3 octets/pixel ; niveaux de gris = 8 bits = 1 octet.
+
+À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Niveau d'exigence sur le nombre d'ouverture : la relation lumière ∝ 1/N^2 et la notion de
+  « stop » (facteur √2) sont-elles attendues, ou seulement N = f'/D et le sens (grand N = peu
+  de lumière) ?
+- Profondeur de champ : traitement uniquement qualitatif (aucune formule au programme), à
+  confirmer ; dépendance à f' et à la distance présentée sans calcul.
+- Sensibilité ISO (§5) : présentée comme troisième réglage de l'exposition ; vérifier si le
+  « triangle d'exposition » est explicitement au programme ou seulement la notion de sensibilité.
+- Distinction définition / résolution : formulation à valider (certaines ressources emploient
+  « résolution » pour la définition — usage à trancher avec l'équipe).
+- Valeurs numériques et arrondis des exemples (poids 6,2 Mo ; débit vidéo 1,24 Gbit/s ;
+  taille de pixel 6,0 µm) recalculés et vérifiés ; homogénéité des chiffres significatifs à
+  confirmer.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### image-couleur-vision  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de Sciences physiques et chimiques en laboratoire (SPCL),
+enseignement de spécialité de la série STL, classe de première.
+BO spécial n° 1 du 22 janvier 2019 (et BO spécial n° 8 du 25 juillet 2019).
+Fichier de référence interne : docs/programme-stl-spcl.txt, section « Image : couleur et
+vision (1re) » (modèle optique de l'œil ; vision des couleurs, daltonisme ; synthèse additive
+RVB et soustractive CMJ, filtres ; modèle colorimétrique RVB).
+Extrait via WebFetch depuis le PDF officiel education.gouv.fr :
+Programme de sciences physiques et chimiques en laboratoire de première STL-251820.pdf.
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Longueurs d'onde de sensibilité des cônes (S≈420, M≈530, L≈560 nm) : valeurs communément
+  admises ; le programme exige-t-il des valeurs chiffrées ou seulement l'ordre S<M<L ?
+- Bornes du domaine visible : j'ai retenu ~400–800 nm (cohérent avec le programme de Seconde).
+  Certains manuels écrivent 380–780 nm. À harmoniser avec la convention retenue par l'équipe.
+- Le codage RVB sur 8 bits (0–255) et le code hexadécimal figurent explicitement au programme
+  de première SPCL (module « Image ») — confirmer le niveau d'exigence sur la conversion
+  décimal↔hexadécimal (méthode par division, ou simple lecture ?).
+- La notion d'accommodation du cristallin : incluse ici comme lien avec le chapitre
+  « Photographie et lentilles ». Vérifier qu'elle relève bien de ce module et n'empiète pas.
+- Prévoir le lien avec « Appareil photo numérique et image numérique » (codage RVB, niveaux
+  de gris) pour éviter les redites entre les deux chapitres du thème Image.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### image-photographie-lentilles  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de Sciences physiques et chimiques en laboratoire (SPCL),
+enseignement de spécialité de la série STL, classe de première.
+BO spécial n° 1 du 22 janvier 2019.
+Fichier de référence interne : docs/programme-stl-spcl.txt, section « Image : photographie et
+lentilles (1re) » :
+  - Chambre noire, sténopé ; lentilles minces convergentes.
+  - Foyers, distance focale, focométrie ; vergence.
+  - Relation de conjugaison et grandissement ; image réelle/virtuelle ; loupe.
+Extrait via WebFetch depuis le PDF officiel education.gouv.fr :
+Programme de sciences physiques et chimiques en laboratoire de première STL-251820.pdf.
+
+Prérequis « Image : couleur et vision » cité (modèle optique de l'œil : cristallin = lentille,
+rétine = écran), conformément à la consigne (chapitre du même parcours spcl-stl).
+
+CONVENTIONS DE SIGNES RETENUES (à confronter au PDF et à l'usage de l'équipe) :
+- Axe optique orienté dans le sens de propagation de la lumière (gauche → droite).
+- Origine des mesures algébriques : centre optique O.
+- Objet réel : OA < 0 ; image réelle : OA' > 0 ; image virtuelle : OA' < 0.
+- f' = OF' > 0 (convergente) ; OF = -f'.
+- Relation de conjugaison de Descartes (origine O) : 1/OA' - 1/OA = 1/f'.
+- Grandissement : gamma = OA'/OA = A'B'/AB.
+Ces conventions sont les plus répandues au lycée ; vérifier qu'elles correspondent à celles
+adoptées dans les TP et sujets d'examen de l'établissement (certaines ressources notent la
+conjugaison avec origine au foyer — Newton — non exigible ici).
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Niveau d'exigence sur la focométrie : les trois méthodes (objet à l'infini, conjugaison,
+  autocollimation) sont-elles toutes attendues, ou seulement le principe de la mesure de f' ?
+- Le sténopé : la relation A'B'/AB = d'/d (Thalès) est-elle explicitement au programme, ou
+  seulement la description qualitative (image réelle renversée, compromis netteté/luminosité) ?
+- Vérifier les valeurs numériques et arrondis des exemples (conjugaison, loupe) et l'homogénéité
+  des chiffres significatifs.
+- Lien avec « Appareil photo numérique et image numérique » (mise au point, capteur = écran) :
+  évoqué en §8 pour préparer le chapitre suivant, sans empiéter sur nombre d'ouverture / temps
+  de pose qui y sont traités.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### instrumentation-chaine-mesure  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel SPCL, série STL, classe de première — BO du 22 janvier 2019
+(docs/programme-stl-spcl.txt, section « Instrumentation : chaîne de mesure (1re) », lignes 55-59) :
+« Caractéristiques d'un instrument : résolution, étendue, temps de réponse ; chaîne de mesure :
+capteur, conditionneur, caractéristique de transfert ; CAN : quantum, résolution ; chaîne en
+tout ou rien : alerte, régulation, hystérésis. »
+Extraction via WebFetch depuis le PDF officiel education.gouv.fr (spe260_annexe... / première STL),
+à CONFRONTER au PDF avant publication.
+
+CONVENTIONS DE CALCUL RETENUES (à valider par le relecteur) :
+- Quantum q = calibre / 2^n, conformément à l'intitulé fourni. Certaines ressources écrivent
+  q = étendue / (2^n − 1) (nombre d'intervalles). J'ai suivi calibre/2^n de bout en bout, y
+  compris dans les exercices. À trancher avec l'équipe pour homogénéité inter-chapitres.
+- Valeur numérique N = partie entière de U_e / q (troncature, pas arrondi). Convention courante ;
+  à confirmer si l'épreuve attend un arrondi.
+- « calibre » = étendue de tension d'entrée du CAN ; supposé de 0 à V_max (unipolaire) dans tous
+  les exemples et exercices. Aucun CAN bipolaire n'est traité.
+
+À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Le temps de réponse est-il défini quantitativement au programme (t_90 / t_95 %) ou seulement
+  qualitativement ? J'ai retenu l'approche qualitative.
+- « précision » : le programme distingue-t-il explicitement justesse/fidélité dans CE module, ou
+  seulement dans « Mesure et incertitudes » ? J'ai fait le lien avec le chapitre incertitudes.
+- L'écriture U = S·G + U0 de la caractéristique linéaire est-elle attendue, ou seulement la
+  lecture graphique de la pente ?
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel. Statut : brouillon, non relu.
+```
+
+### mesure-incertitudes-labo  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de SCIENCES PHYSIQUES ET CHIMIQUES EN LABORATOIRE (SPCL),
+enseignement de spécialité de la série STL, classe de première.
+Fichier : docs/programme-stl-spcl.txt, section « Mesure et incertitudes en laboratoire
+(1re) » :
+  - Sources d'erreurs et variabilité ; justesse et fidélité.
+  - Évaluation des incertitudes-types (type A statistique, type B).
+  - Expression d'un résultat de mesure avec son incertitude et ses chiffres significatifs.
+Le fichier renvoie aux PDF officiels education.gouv.fr (Première SPCL). Le fichier source
+cite le BO spécial n°8 du 25 juillet 2019 ET le BO spécial n°1 du 22 janvier 2019.
+Extraits via WebFetch, À CONFRONTER AUX PDF OFFICIELS avant publication.
+
+Champ « programme » de l'en-tête : renseigné à l'identique de la consigne de production
+(« BO du 22 janvier 2019 — SPCL, série STL, classe de première »).
+⚠️ À FAIRE VÉRIFIER AU RELECTEUR : l'intitulé exact du BO à afficher (22 janvier 2019 vs
+25 juillet 2019) — même remarque que pour le chapitre « syntheses-extraction-purification ».
+
+POINTS À CONFRONTER AU RELECTEUR / CONVENTIONS DE MÉTROLOGIE :
+- CONVENTION TYPE B (POINT LE PLUS SENSIBLE). La consigne de production impose
+  explicitement les formules u = graduation/√3 et u = tolérance/√3, retenues telles
+  quelles dans la fiche. ATTENTION : les conventions varient selon les manuels/référentiels.
+  Pour une RÉSOLUTION (demi-largeur = graduation/2), la loi uniforme rigoureuse donne
+  plutôt u = graduation/(2√3) = graduation/√12. La formule u = graduation/√3 retenue ici
+  suppose que « graduation » désigne la demi-largeur de l'intervalle de doute (loi
+  rectangulaire de demi-largeur = graduation). À FAIRE TRANCHER par le relecteur selon le
+  référentiel STL retenu par l'établissement / le PDF officiel. Les exemples chiffrés
+  (burette 0,1 mL → u ≈ 0,06 mL) suivent la convention de la consigne.
+- Pour la TOLÉRANCE (verrerie jaugée ± t), u = t/√3 fait l'hypothèse d'une loi uniforme de
+  demi-largeur t : convention standard et cohérente avec la consigne.
+- TYPE A : u(x̄) = s/√n avec s = écart-type expérimental (σ_{n-1}). Convention GUM/lycée
+  standard. L'exemple (5 mesures, s ≈ 0,24 s, u ≈ 0,11 s) a été recalculé à la main :
+  moyenne 20,12 s ; Σ(écarts²) = 0,228 ; s = √(0,228/4) = 0,239 s ; u = 0,239/√5 = 0,107 s.
+- INCERTITUDE COMPOSÉE : formules de propagation en quadrature (somme → absolues ;
+  produit/quotient → relatives). Présentées « formule fournie » conformément à la
+  consigne ; au niveau première STL elles sont données, non démontrées.
+- Facteur d'élargissement / intervalle de confiance : volontairement NON abordé (hors
+  programme de première ; « valeur ± u » = incertitude-type, k=1). La phrase de lecture au
+  §9 (« très probablement entre… ») reste qualitative pour cette raison. À valider.
+- Arrondi de l'incertitude à 1 c.s. PAR EXCÈS et valeur au même rang : convention
+  pédagogique répandue ; certains référentiels tolèrent 2 c.s. À confirmer.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### securite-chimie-verte  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de physique-chimie, spécialité SPCL, série STL, classe de
+première, BO du 22 janvier 2019. Section « Sécurité au laboratoire et chimie verte
+(1re) » du fichier docs/programme-stl-spcl.txt (lignes 24-27) :
+- Règles de laboratoire ; équipements de protection (EPI).
+- Pictogrammes, fiches de données de sécurité (FDS), règlement CLP, stockage.
+- Chimie verte : principes, économie d'atomes, impact environnemental.
+Extrait à confronter au PDF officiel eduscol/education.gouv.fr avant publication.
+
+À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Les 9 pictogrammes SGH/CLP et leurs intitulés : vérifier la formulation exacte
+  attendue (SGH08 « danger pour la santé » / CMR ; SGH05 corrosif peau ET métaux).
+- Les 12 principes de la chimie verte sont donnés « en substance » (reformulés) : le
+  programme demande-t-il de les connaître par cœur, ou seulement les grands axes
+  (prévention, économie d'atomes, solvants, énergie) ? J'ai supposé « en substance ».
+- Économie d'atomes : la formule attendue est-elle bien M(produit)/ΣM(réactifs)×100 ?
+  Certains manuels pondèrent par les coefficients stœchiométriques — à confirmer.
+  Vérifs numériques : EA hydratation éthène = 46/46 = 100 %. EA élimination =
+  28/149 = 18,8 % ≈ 19 %. M(C2H5Br)=2·12+5·1+80=109 ; M(NaOH)=40 ; somme 149.
+- Facteur E : E = m_déchets/m_produit, sans unité. Exemple élimination :
+  déchets NaBr(103)+H2O(18)=121 ; produit 28 ; E=121/28=4,32. OK.
+- La FDS « 16 rubriques » : nombre normalisé (règlement REACH) — à confirmer au niveau
+  première STL (parfois seulement évoqué).
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### syntheses-extraction-purification  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de SCIENCES PHYSIQUES ET CHIMIQUES EN LABORATOIRE (SPCL),
+enseignement de spécialité de la série STL, classe de première.
+Fichier : docs/programme-stl-spcl.txt, section « Synthèses chimiques : extraction et
+purification (1re) » :
+  - Synthèse d'un composé organique ; réactif limitant, rendement.
+  - Extraction liquide-liquide, filtration, distillation, recristallisation.
+  - Contrôles de pureté : chromatographie sur couche mince (CCM), température de fusion.
+Le fichier renvoie aux PDF officiels education.gouv.fr (Première SPCL, BO spécial n°8 du
+25 juillet 2019, et BO spécial n°1 du 22 janvier 2019). Extraits via WebFetch, À
+CONFRONTER AUX PDF OFFICIELS avant publication.
+
+Champ « programme » de l'en-tête : renseigné à l'identique de la consigne de production
+(« BO du 22 janvier 2019 — SPCL, série STL, classe de première »). ⚠️ À FAIRE VÉRIFIER
+AU RELECTEUR : le fichier source cite pour la Première SPCL le BO spécial n°8 du 25
+juillet 2019 (le 22 janvier 2019 étant l'autre référence mentionnée). L'intitulé exact
+du BO à afficher est à confirmer sur le PDF officiel.
+
+POINTS À CONFRONTER AU RELECTEUR / PROGRAMME DÉTAILLÉ :
+- Formule du rendement : la consigne et l'usage STL retiennent η = n_obtenu / n_théorique
+  (en quantités de matière). Certains énoncés le définissent sur les masses,
+  η = m_obtenue / m_théorique ; les deux coïncident quand il s'agit du même produit
+  (même M). La fiche a choisi la définition en quantités de matière, la plus générale.
+  À valider comme formulation attendue.
+- Seuils chiffrés « rendement de TP entre 60 et 90 % » : ordre de grandeur pédagogique,
+  pas une donnée du programme.
+- Densité de la phase organique « en bas / en haut » : illustré avec dichlorométhane
+  (d≈1,33) et éther/cyclohexane (d<1). Valeurs de densité usuelles, à vérifier si des
+  valeurs officielles sont imposées.
+- Le seuil « une impureté abaisse et étale θ_fus » est un fait de laboratoire classique,
+  non chiffré ici : conforme au niveau première.
+- Détails de gestes (Büchner, Vigreux, banc Kofler, révélation UV) : matériel usuel de
+  laboratoire STL, cohérent avec le contexte « contrôles de pureté » du programme, mais
+  la liste précise du matériel exigible est à confirmer sur le PDF.
 
 Rédaction originale à partir du programme. Aucun emprunt à un manuel.
 Statut : brouillon, non relu.
@@ -5351,9 +5942,662 @@ Rédaction originale à partir du programme. Aucun emprunt à un manuel.
 Statut : brouillon, non relu.
 ```
 
+## terminale-techno / pc-sante-st2s
+
+### besoins-energetiques-alimentation  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — à confronter au relecteur avant publication.
+
+Source unique : programme officiel PHYSIQUE-CHIMIE POUR LA SANTÉ, série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée). Fichier local :
+docs/programme-st2s-physique-chimie-sante.txt, section « Besoins énergétiques et
+alimentation (Tale) », THÈME 3 « Faire des choix autonomes et responsables ».
+Notions et contenus couverts par l'intitulé officiel :
+« Dépense énergétique journalière. Transferts thermiques : rayonnement, convection,
+conduction ; application au corps humain. Conversion d'énergie ; activité musculaire.
+Transformations endothermique et exothermique. Aliments, combustibles du corps ;
+valeur énergétique des aliments. Aspect énergétique des transformations biochimiques ;
+combustion ; hydrolyse. »
+Extraction du programme via WebFetch depuis le PDF officiel education.gouv.fr —
+À CONFRONTER au PDF officiel avant publication.
+
+Points à confirmer par le relecteur :
+1. Valeur de conversion : la fiche fixe 1 cal = 4,18 J (valeur usuelle en lycée).
+   Certains manuels utilisent 4,184 J ou 4,1855 J. Confirmer la valeur attendue par
+   l'appli pour la cohérence des exercices (tous les calculs de la fiche et des exos
+   utilisent 4,18).
+2. Coefficients énergétiques : 17 / 38 / 17 kJ·g⁻¹ (glucides / lipides / protides),
+   valeurs standard du programme. Équivalents kcal donnés : 4 / 9 / 4 kcal·g⁻¹.
+   Vérifier que ces arrondis sont ceux attendus (17 kJ ≈ 4,07 kcal, 38 kJ ≈ 9,09 kcal).
+   L'alcool (~29 kJ·g⁻¹) et les fibres ne sont pas traités : hors périmètre nutriments
+   énergétiques principaux — confirmer.
+3. Rendement musculaire : la fiche annonce ≈ 25 % (valeur physiologique classique,
+   fourchette réelle 20–25 %). Confirmer la valeur retenue pour les exercices.
+4. Métabolisme de base : présenté qualitativement (60–70 % de la DEJ, ordres de
+   grandeur 6000–7500 kJ/jour). AUCUNE formule chiffrée type Harris-Benedict n'est
+   donnée car non exigible en ST2S — confirmer que ce niveau d'exigence convient et
+   qu'aucune formule de MB n'est attendue à l'examen.
+5. Évaporation de la sueur : présentée comme mécanisme complémentaire aux 3 modes de
+   transfert. Ce n'est PAS un 4e mode de transfert thermique au sens strict (c'est un
+   changement d'état endothermique) — la fiche le distingue explicitement. Confirmer
+   ce choix de présentation.
+6. Respiration cellulaire : équation C6H12O6 + 6 O2 → 6 CO2 + 6 H2O donnée comme
+   « même bilan qu'une combustion ». Vérifier le niveau d'exigence sur l'équation
+   (ajustée, exothermique) attendu en ST2S.
+7. Hydrolyse : présentée comme réaction de la digestion (amidon→glucose,
+   triglycérides→acides gras + glycérol, protéines→acides aminés). Fait le lien avec
+   le chapitre « Glucides : classification et transformations (Tale) » et
+   « Biomolécules et eau (Tale) ». Confirmer la profondeur attendue.
+```
+
+### biomolecules-eau  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de PHYSIQUE-CHIMIE POUR LA SANTÉ, série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée), thème 2 « Analyser et
+diagnostiquer », section « Biomolécules et eau (Tale) » :
+  docs/programme-st2s-physique-chimie-sante.txt (bloc « === Biomolécules et eau (Tale) === »).
+  Notions listées : « Glucides ; lipides (acides gras saturés/insaturés, triglycérides,
+  stérols) ; acides α-aminés, protéines, liaison peptidique ; urée ; vitamines. Eau,
+  molécule polaire ; liaison hydrogène ; états physiques. Solubilité ; hydrophilie et
+  hydrophobie ; miscibilité ; phases aqueuse et organique. »
+Extraction via WebFetch du PDF officiel (https://www.education.gouv.fr/media/25040/download).
+À CONFRONTER au PDF officiel avant publication (capacités exigibles détaillées).
+
+Prérequis cité : chapitre « molecules-organiques » du même parcours (esters, amides,
+acide carboxylique, amine, alcool réutilisés ici).
+
+Points à confirmer par le relecteur :
+1. Profondeur exigible en ST2S sur les glucides : la fiche distingue oses / diosides /
+   polyosides et donne des exemples (saccharose, amidon, glycogène, cellulose). La
+   classification « simples/complexes » figure explicitement dans le thème 3
+   (« Glucides : classification et transformations ») ; vérifier le partage exact
+   entre ce chapitre (thème 2) et le chapitre glucides du thème 3 pour éviter les
+   redites — j'ai gardé ici la vue d'ensemble et laissé hydrolyse/condensation
+   détaillées au thème 3.
+2. Représentations LaTeX : la formule de l'acide aminé (§3) utilise un \underset pour
+   figurer la chaîne latérale R ; le zwitterion et la liaison peptidique sont écrits en
+   ligne. Vérifier le rendu KaTeX et idéalement remplacer par des schémas dans l'appli.
+3. Zwitterion / caractère amphotère de l'acide aminé (§3) : à confirmer comme exigible
+   en ST2S ou à présenter seulement comme complément.
+4. Liste des vitamines : classification hydrosolubles (B, C) / liposolubles (A, D, E, K)
+   donnée à titre d'exemple ; confirmer le niveau d'exigence (le programme dit seulement
+   « vitamines »).
+5. Densité des phases (§8) : exemples eau/cyclohexane (organique au-dessus) et
+   eau/dichlorométhane (organique en dessous) — confirmer que l'extraction
+   liquide-liquide et l'ampoule à décanter sont au périmètre ST2S (elles relèvent des
+   techniques de chimie ; à vérifier au PDF).
+6. Urée présentée comme diamide de l'acide carbonique — vérifier que ce niveau de détail
+   structural est attendu, ou s'en tenir à « déchet azoté, formule CO(NH2)2 ».
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### fluides-pression-sanguine  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de « Physique-chimie pour la santé », série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée). Thème 2 « Analyser et
+diagnostiquer », section « Propriétés des fluides et pression sanguine (Tale) ».
+Extrait de référence utilisé : docs/programme-st2s-physique-chimie-sante.txt,
+lignes 66-71 :
+  - Débit ; relation débit = vitesse × section.
+  - Débit cardiaque DC = fC × VES (fréquence cardiaque × volume d'éjection systolique).
+  - Force pressante et pression ; unités (Pa, cmHg).
+  - Variation de la pression avec la profondeur ; loi fondamentale de la statique des fluides.
+  - Tension artérielle systolique et diastolique ; principe de la mesure.
+Le .txt (lignes 11-15) précise que la répartition 1re/Tale suit la progression usuelle
+et reste À CONFIRMER au PDF officiel (https://www.education.gouv.fr/media/25040/download).
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+
+⚠️ CHOIX À CONFRONTER AU PDF OFFICIEL / AU RELECTEUR :
+- niveau YAML = "terminale-techno" (imposé par la consigne de production), cohérent
+  avec le chapitre de forme de référence 1st2s "premiere-techno". À harmoniser sur
+  tout le parcours pc-sante-st2s si d'autres chapitres portent "premiere"/"terminale"
+  sans suffixe.
+- CONVERSION 1 mmHg : valeur exacte 133,322 Pa ; arrondie à 133 Pa dans toute la fiche
+  et les exercices. 760 mmHg = 1 atm = 101 325 Pa (1,013×10^5). Vérifier le niveau
+  d'arrondi attendu (133 Pa vs 133,3 Pa) et l'usage cmHg (usage clinique français) vs
+  mmHg (unité SI-adjacente internationale) — le programme cite explicitement « Pa, cmHg ».
+- MASSE VOLUMIQUE DU SANG : ρ ≈ 1060 kg/m³ (valeur physiologique courante 1050–1060).
+  g pris à 10 N/kg pour rester en cohérence avec les autres chapitres PC ; certains
+  sujets prennent 9,81. À harmoniser.
+- LOI FONDAMENTALE : énoncée sous forme Δp = ρgh (différence entre deux points) et
+  p_bas = p_haut + ρgh. Le programme parle de « variation de la pression avec la
+  profondeur » : formulation simplifiée retenue (pas de convention d'axe z orienté),
+  à valider par un professeur pour la rigueur (signe/orientation).
+- DÉBIT CARDIAQUE : DC exprimé en L/min ; valeurs repos ~5 L/min (fC=70, VES=70 mL) et
+  effort ~15 L/min standard. Ordres de grandeur physiologiques, à confirmer au niveau
+  d'exigence du programme (valeurs vs ordres de grandeur).
+- PRINCIPE DE MESURE : méthode auscultatoire (bruits de Korotkoff) décrite simplement ;
+  les tensiomètres électroniques usuels sont oscillométriques. Vérifier le degré de
+  détail attendu (le programme demande « le principe de la mesure »).
+- RELATION D = v×S : donnée comme relation à utiliser ; le programme ne demande pas de
+  démonstration. À confirmer parmi les capacités exigibles.
+
+Statut : brouillon, non relu.
+```
+
+### glucides-ressources-naturelles  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de PHYSIQUE-CHIMIE POUR LA SANTÉ, série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée). Thème 3 « Faire des choix
+autonomes et responsables ». Extrait via WebFetch depuis le PDF officiel
+education.gouv.fr (https://www.education.gouv.fr/media/25040/download) et
+eduscol ST2S. Fichier local : docs/programme-st2s-physique-chimie-sante.txt,
+sections « Glucides : classification et transformations (Tale) » ET
+« Gestion des ressources naturelles (Tale) ».
+
+Notions du programme couvertes :
+- Glucides : classification (simples/complexes ; oses/diholosides/polyosides),
+  isomérie, hydrolyse acide et enzymatique, condensation du glucose en glycogène.
+- Ressources : critères chimiques de potabilité, origines de la pollution de l'eau,
+  sols comme milieux d'échange de matière, engrais N-P-K.
+
+Chapitre réunissant les DEUX sous-parties « glucides » et « ressources naturelles »
+du même thème, comme demandé. Prérequis « biomolecules-eau » cité : ce chapitre-là
+introduit déjà les glucides au niveau des familles et exemples ; on suppose donc
+acquises les définitions ose/diholoside/polyoside et on approfondit ici l'isomérie,
+l'hydrolyse (deux voies) et la condensation.
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR DE LA MATIÈRE :
+- Répartition Première/Terminale : le .txt indique que la progression est « à confirmer
+  au PDF ». Vérifier que « Glucides : transformations » et « Ressources naturelles »
+  relèvent bien de la TERMINALE ST2S et non de la Première.
+- Profondeur exigible sur l'ISOMÉRIE : la fiche distingue isomérie de constitution
+  (glucose aldose / fructose cétose) et évoque la stéréoisomérie (galactose). Confirmer
+  si la stéréoisomérie est au programme ST2S ou seulement « même formule brute, structures
+  différentes » sans le vocabulaire.
+- Équation de CONDENSATION du glycogène : présentée en (n-1) H2O pour n oses (exact pour
+  une chaîne de n unités), la formule idéalisée du polymère (C6H10O5)n correspondant à
+  n H2O (approximation grand n). Vérifier le niveau de rigueur attendu ; l'étape élémentaire
+  2 glucose → maltose + H2O est, elle, sans ambiguïté.
+- Valeurs de POTABILITÉ : limites réglementaires (nitrates 50 mg/L, nitrites 0,5 mg/L,
+  pesticides 0,1 µg/L par substance, plomb 10 µg/L, pH 6,5-9) tirées de la réglementation
+  française/UE sur les eaux de consommation. Vérifier lesquelles sont exigibles et si des
+  valeurs chiffrées sont attendues à l'examen, ou seulement les paramètres.
+- Indice NPK exprimé en N / P2O5 / K2O : convention agronomique standard. Confirmer que
+  le programme attend cette précision ou se contente de « teneurs en N, P, K ».
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### molecules-organiques  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — à confronter au relecteur avant publication.
+
+Source unique : programme officiel PHYSIQUE-CHIMIE POUR LA SANTÉ, série ST2S,
+BO spécial n°1 du 22 janvier 2019 (réforme du lycée). Fichier local :
+docs/programme-st2s-physique-chimie-sante.txt, section « Molécules organiques :
+description (Tale) », THÈME 2 « Analyser et diagnostiquer ». Notions et contenus :
+« Formules brute, développée, semi-développée, topologique ; liaisons covalentes.
+Squelette carboné ; fonctions chimiques ; isomérie de constitution ; nomenclature. »
+Extraction du programme via WebFetch depuis le PDF officiel education.gouv.fr
+(https://www.education.gouv.fr/media/25040/download) — À CONFRONTER au PDF officiel
+avant publication, notamment la LISTE EXACTE des fonctions exigibles en ST2S.
+
+Points à confirmer par le relecteur :
+1. Périmètre des fonctions : la fiche traite alcool, aldéhyde, cétone, acide
+   carboxylique, amine, ester, amide (les 7 demandées par la consigne interne).
+   Vérifier lesquelles sont RÉELLEMENT exigibles en ST2S (le programme dit seulement
+   « fonctions chimiques »). L'ester et l'amide préparent les liaisons du vivant
+   (triglycérides = esters, liaison peptidique = amide) : à garder pour amorcer le
+   chapitre biomolécules, mais confirmer le niveau d'exigence.
+2. Nomenclature : profondeur attendue en ST2S. La fiche se limite aux alcanes C1–C6,
+   aux alcools et au repérage des principaux suffixes/ramifications simples. Confirmer
+   qu'on n'exige pas la nomenclature complète des ramifications multiples ni des
+   stéréodescripteurs (non au programme ST2S).
+3. Isomérie : seule l'isomérie DE CONSTITUTION est au programme (pas la
+   stéréoisomérie). Vérifié dans l'intitulé. Les 3 sous-types (chaîne, position,
+   fonction) sont un ajout pédagogique classique — confirmer qu'ils ne dépassent pas
+   l'exigence.
+4. Représentations LaTeX : la formule développée de l'éthanol (§2) est rendue avec un
+   array approximatif faute de dessin ; à remplacer idéalement par un schéma vectoriel
+   dans l'appli. De même la topologique de l'éthanol est décrite en toutes lettres.
+   Vérifier le rendu KaTeX de \equiv, \mathrm et de l'array.
+5. Prépare explicitement le chapitre « Biomolécules et eau (Tale) » : acides gras
+   saturés/insaturés (§3), esters (triglycérides) et amides (liaison peptidique) au §4.
+```
+
+## terminale-techno / spcl-stl
+
+### composition-systemes-chimiques  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel « Sciences physiques et chimiques en laboratoire » (SPCL),
+enseignement de spécialité, série STL, classe terminale — BO spécial n°8 du 25 juillet 2019.
+PDF officiel Terminale SPCL :
+https://cache.media.education.gouv.fr/file/SPE8_MENJ_25_7_2019/16/7/spe260_annexe3_1159167.pdf
+Extrait : docs/programme-stl-spcl.txt, section « Composition des systèmes chimiques (Tale) »,
+qui liste :
+  - Solubilité, dissolution, précipitation.
+  - Acides et bases ; pH ; couples ; conductivité et conductimétrie.
+  - Oxydoréduction ; piles.
+Le .txt fourni ne donne que les intitulés (pas le détail des capacités exigibles) : contenu
+détaillé (Ks/Qr, relation s–Ks, force des acides, σ=Σλc, potentiels, f.é.m.) rédigé à partir
+des attendus usuels du niveau terminale. À CONFRONTER AU PDF/BO OFFICIEL par un professeur
+avant publication.
+
+⚠️ POINTS À CONFRONTER AU RELECTEUR :
+- Ks est ici manipulé via les concentrations en mol/L (échelle du niveau). Formellement Ks est
+  défini avec des activités et donc sans dimension : vérifier la convention retenue en STL SPCL
+  et l'homogénéité voulue (avec/sans c° de référence).
+- Constante d'acidité Ka / pKa : présentée brièvement. Confirmer que Ka est au programme
+  terminale STL SPCL (relation de Henderson NON incluse volontairement, à valider si attendue).
+- Potentiels standards E° : valeurs Cu²⁺/Cu = +0,34 V et Zn²⁺/Zn = −0,76 V (tables usuelles).
+  Vérifier que le référentiel STL utilise bien E° (et non une simple comparaison qualitative
+  des pouvoirs oxydants sans valeurs chiffrées). Relation de Nernst NON introduite.
+- Valeurs de conductivités molaires ioniques λ (Na⁺ 5,0e-3 ; Cl⁻ 7,6e-3 ; H₃O⁺ ~35e-3 ;
+  HO⁻ ~20e-3 S·m²·mol⁻¹) : ordres de grandeur usuels à 25 °C, à recaler sur la table STL.
+- Ks(AgCl) = 1,8e-10 et pH(CH₃COOH 1e-2) ≈ 3,4 : valeurs standard, à confirmer sur les tables
+  de référence du niveau.
+- Le programme dit « dosage » sans détailler pH-métrique vs conductimétrique vs colorimétrique :
+  les trois suivis sont évoqués. À valider selon les capacités exigibles du BO.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### ondes-mecaniques-em-spectres  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de SPCL (Sciences physiques et chimiques en laboratoire),
+enseignement de spécialité de la série STL, classe terminale — BO spécial n°8 du 25 juillet
+2019. Fichier docs/programme-stl-spcl.txt, section « Ondes : mécaniques, électromagnétiques
+et spectres (Tale) » :
+  - Ondes mécaniques et électromagnétiques ; célérité, longueur d'onde, fréquence.
+  - Des ondes pour mesurer (échographie, télémétrie) et pour observer (spectroscopies).
+  - Spectres ; analyse spectrale.
+PDF officiel Terminale SPCL :
+https://cache.media.education.gouv.fr/file/SPE8_MENJ_25_7_2019/16/7/spe260_annexe3_1159167.pdf
+Extraction résumée via WebFetch — À CONFRONTER AU PDF OFFICIEL avant publication pour les
+capacités exigibles détaillées.
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR DE LA MATIÈRE :
+- Bornes du visible : j'ai retenu 400–800 nm (convention fréquente en STL). Certaines
+  références utilisent 380–780 nm. À aligner sur la référence retenue par l'établissement.
+- Effet Doppler : le programme le veut-il seulement QUALITATIF, ou la relation quantitative
+  (Δf/f = v/c pour source lente) est-elle exigible en Tale SPCL ? Je suis resté qualitatif,
+  conformément à la consigne.
+- Beer-Lambert : rappelée ici comme prérequis de Première STL. Est-elle re-mobilisée en
+  Terminale (dosage spectrophotométrique) ou seulement citée ? À confirmer.
+- Bandes IR : valeurs INDICATIVES (O–H, C=O ~1700, C–H). En épreuve, une table est fournie —
+  vérifier qu'aucune valeur numérique n'est présentée comme « à connaître par cœur ».
+- Célérité des ultrasons dans les tissus : valeur usuelle 1540 m/s ; j'ai arrondi à
+  1,5×10³ m·s⁻¹ pour les exemples. Cohérent avec les corrigés du QCM et des exercices.
+- Vérifier que « radar / télémétrie laser » (ondes EM) est bien admis comme illustration au
+  même titre que l'échographie et le sonar (ondes mécaniques).
+
+Rédaction originale à partir du programme officiel. Aucun emprunt à un manuel ou à un site.
+Statut : brouillon, non relu.
+```
+
+### ondes-transmission-stockage  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de SPCL (Sciences physiques et chimiques en laboratoire),
+enseignement de spécialité de la série STL, classe terminale — BO spécial n°8 du 25 juillet
+2019. Fichier docs/programme-stl-spcl.txt, section « Ondes : transmettre, stocker, lire et
+afficher (Tale) » (lignes 82-84) :
+  - Numérisation d'un signal ; débit binaire.
+  - Transmission (guidée, libre), stockage optique, affichage.
+Le libellé du programme est TRÈS condensé : le détail des capacités exigibles
+(échantillonnage/quantification, atténuation en dB, cuvettes/plats, sous-pixels RVB) a été
+reconstitué à partir de la consigne de production et des usages STL, à CONFRONTER au document
+d'accompagnement / au PDF officiel avant publication.
+PDF officiel Terminale SPCL :
+https://cache.media.education.gouv.fr/file/SPE8_MENJ_25_7_2019/16/7/spe260_annexe3_1159167.pdf
+Extraction résumée via WebFetch — À CONFRONTER AU PDF OFFICIEL.
+Prérequis cité : chapitre « Ondes : mécaniques, électromagnétiques et spectres » du même
+parcours (id tale-stl-spcl-ondes-mecaniques-em-spectres), pour λ = c/f et le spectre EM.
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR DE LA MATIÈRE :
+- Pas de quantification : j'ai retenu q = U / 2^n (convention STL dominante). Certaines
+  références écrivent q = U / (2^n − 1) (les 2^n niveaux bornent la plage aux extrémités).
+  À aligner sur la convention de l'établissement — impacte les corrigés (exo 3, QCM Q6).
+- Critère de Shannon : formulé fe ≥ 2 fmax. Vérifier s'il est exigible quantitativement en
+  Tale SPCL ou seulement cité qualitativement (notion de repliement).
+- Atténuation : formule 10 log(Pe/Ps) pour un rapport de PUISSANCES. Si l'épreuve raisonne
+  en amplitudes/tensions, le facteur est 20 log — à vérifier. Coefficient linéique α en dB/km
+  supposé exigible (calcul fibre).
+- Convention préfixes : j'ai posé k/M/G = 10^3/10^6/10^9 par défaut, kio/Mio/Gio = 2^10/2^20.
+  Confirmer que c'est bien la convention attendue (télécom décimal vs stockage binaire).
+- Capacités des disques (700 Mo / 4,7 Go / 25 Go) et longueurs d'onde des lasers
+  (780/650/405 nm) : valeurs usuelles, à vérifier comme « ordres de grandeur » et non comme
+  valeurs à connaître par cœur.
+- Débit CD audio : 44,1 kHz × 16 bits × 2 voies = 1 411 200 bit/s ≈ 1,41 Mbit/s (vérifié).
+  Taille d'un morceau de 3 min ≈ 32 Mo non compressé (vérifié, ÷8 pour les octets).
+- Codage couleur 24 bits (8 bits/sous-pixel, 16,7 M de couleurs) : standard, à confirmer
+  exigible.
+
+Rédaction originale à partir du programme officiel. Aucun emprunt à un manuel ou à un site.
+Statut : brouillon, non relu.
+```
+
+### syntheses-mecanismes  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — à confronter au relecteur / au PDF officiel avant publication.
+
+Source : programme officiel SPCL, série STL, classe terminale.
+  BO spécial n°8 du 25 juillet 2019.
+  PDF officiel Terminale SPCL :
+  https://cache.media.education.gouv.fr/file/SPE8_MENJ_25_7_2019/16/7/spe260_annexe3_1159167.pdf
+Section utilisée : « Synthèses chimiques et mécanismes (Tale) » du fichier
+  docs/programme-stl-spcl.txt (extrait via WebFetch du PDF officiel education.gouv.fr).
+Intitulés couverts : aspects macroscopiques (rendement, sélectivité, chimiosélectivité,
+  contrôle des conditions), catalyse (homogène/hétérogène/enzymatique), cinétique appliquée
+  (facteurs cinétiques, temps de demi-réaction) ; mécanismes réactionnels (liaison covalente
+  et doublets liants/non liants, sites donneurs et accepteurs de doublet, flèche courbe,
+  étape élémentaire, types substitution/addition/élimination). Contexte : synthèse au
+  laboratoire, dans la continuité de la Première (extraction et purification).
+
+Prérequis cités : chapitre Première STL SPCL « Synthèses chimiques : extraction et
+  purification » (contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/) —
+  rendement, réactif limitant, quantité de matière y sont établis.
+
+Points à confronter au relecteur :
+  - Périmètre exact des « aspects macroscopiques » attendus : la sélectivité et la
+    chimiosélectivité doivent-elles être chiffrées (rapport de quantités) ou rester
+    qualitatives au niveau STL SPCL ? Choix retenu : présentation qualitative + mention
+    d'un rapport de quantités, sans formule imposée.
+  - Cinétique : le programme demande-t-il l'expression d'une vitesse de réaction/de
+    disparition (v = -d[R]/dt) ou se limite-t-il aux facteurs cinétiques et à t1/2 ?
+    Choix prudent retenu : facteurs cinétiques + temps de demi-réaction, sans dérivée,
+    pour rester au niveau technologique. À confirmer.
+  - Vocabulaire mécanismes : le programme parle-t-il de « nucléophile/électrophile » ou
+    reste-t-il à « site donneur / site accepteur de doublet » ? Choix retenu : uniquement
+    « site donneur/accepteur » (formulation du programme rénové). À valider.
+  - Vérifier que le contrôle des conditions n'exige PAS de notion d'équilibre chimique /
+    déplacement d'équilibre (K, quotient de réaction) à ce niveau. Rédigé sans, à confirmer.
+  - Confirmer les exemples de catalyseurs (Fe3+/Pt sur H2O2, H+ sur estérification,
+    catalase) comme conformes aux attendus STL.
+```
+
+### systemes-procedes-flux  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel de Sciences physiques et chimiques en laboratoire (SPCL),
+enseignement de spécialité de la série STL, classe terminale — BO spécial n°8 du
+25 juillet 2019. Fichier docs/programme-stl-spcl.txt, section « Systèmes et procédés :
+flux d'information, d'énergie et de matière (Tale) » :
+  - Analyse et contrôle des flux d'information (chaîne, régulation).
+  - Conversions et transferts des flux d'énergie (rendement, bilan).
+  - Transport et transformation des flux de matière (procédés).
+PDF officiel Terminale SPCL :
+  https://cache.media.education.gouv.fr/file/SPE8_MENJ_25_7_2019/16/7/spe260_annexe3_1159167.pdf
+Extraction via WebFetch depuis le PDF officiel — à CONFRONTER au PDF pour les capacités
+exigibles détaillées avant publication.
+
+Prérequis « Instrumentation : la chaîne de mesure » (Première STL SPCL) cité comme demandé :
+capteur, conditionneur, régulation tout ou rien, hystérésis y sont introduits.
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR DE LA SPÉCIALITÉ :
+- Découpage exact des chaînes : la chaîne d'information « acquérir/traiter/communiquer » et
+  la chaîne d'énergie « alimenter/distribuer/convertir/transmettre » suivent le vocabulaire
+  STI2D/SysML usuel. Vérifier que c'est bien la nomenclature attendue en SPCL 2019 (le PDF
+  peut employer un autre découpage, ex. « stocker »).
+- Le correcteur proportionnel : la loi S = k·ε et le vocabulaire « gain » sont-ils
+  exigibles, ou seulement l'opposition qualitative TOR / proportionnel ? Le PID
+  (intégral, dérivé) est volontairement EXCLU (hors programme à ce niveau).
+- Bilan de matière : le régime permanent (entrées = sorties) est présenté comme cas central ;
+  le terme d'accumulation est donné en complément — confirmer le niveau d'exigence.
+- Vérifier que l'expression du rendement en chaîne (produit des rendements) est attendue.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
 ---
 
 # terminale
+
+## terminale / enseignement-scientifique
+
+### atmosphere-effet-de-serre-climat  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel d'ENSEIGNEMENT SCIENTIFIQUE (tronc commun), terminale générale —
+BO du 22 janvier 2019, version aménagée (2023). Thème 1 « Science, climat et société »,
+sujets 1.1, 1.2, 1.3.
+  Programme (PDF) : https://www.education.gouv.fr/media/133235/download
+  eduscol : https://eduscol.education.gouv.fr/5790/programmes-et-ressources-en-enseignement-scientifique-voie-g
+Section reprise dans docs/programme-terminale-enseignement-scientifique.txt (lignes 21-28) :
+composition de l'atmosphère (primitive/actuelle) et ozone stratosphérique (absorption UV) ;
+bilan radiatif terrestre, GES et forçage radiatif ; rétroactions positives/négatives et rôle
+des océans (absorption, dilatation thermique) ; indicateurs, modèles numériques, projections.
+Extraction via WebFetch depuis le PDF officiel. À CONFRONTER AU PDF avant publication.
+
+⚠️ À CONFRONTER AU PDF / À SOUMETTRE AU RELECTEUR :
+- Valeurs numériques (ordres de grandeur pédagogiques) : S0 ≈ 1360 W/m² (parfois 1361 ou 1367
+  selon les sources), P_moy = S0/4 ≈ 340 W/m², albédo A ≈ 0,30, P_abs ≈ 240 W/m²,
+  T_eff ≈ 255 K ≈ -18 °C (calcul : (238/5,67e-8)^0,25 = 254,5 K). Température réelle ≈ 15 °C,
+  écart de serre ≈ +33 °C. Toutes à valider par le relecteur ; le programme n'impose pas de
+  valeurs chiffrées, il attend surtout la compréhension du bilan.
+- Loi de Stefan-Boltzmann : le programme d'ENSEIGNEMENT SCIENTIFIQUE la veut « qualitative /
+  simple » (dépendance en T^4). J'ai donné la formule P = σT^4 encadrée mais insisté sur le
+  qualitatif. Vérifier que le niveau de calcul demandé dans les exercices (résolution de
+  (1-A)S0/4 = σT^4 pour T) reste dans le périmètre attendu du tronc commun — l'exercice 4
+  fait ce calcul avec racine 4e ; à trancher (peut être fourni sous forme guidée).
+- Forçage radiatif : donné en ordre de grandeur +2 à +3 W/m² depuis le préindustriel
+  (GIEC AR6 : ~+2,7 W/m² pour les GES bien mélangés). À confirmer/actualiser.
+- Coefficient de dilatation de l'eau de mer α ≈ 2e-4 K⁻¹ (dépend fortement de T et de la
+  salinité) : valeur pédagogique pour l'exercice 6 ; l'énoncé fournit la valeur. À valider.
+- Concentration CO2 : 280 ppm préindustriel → ~420 ppm (années 2020). À actualiser à la date
+  de publication.
+- Périmètre : l'atmosphère primitive et la photosynthèse touchent à la SVT ; traitées ici de
+  façon minimale (dominante PC : rayonnement, bilan d'énergie). Conforme à la note de
+  périmètre en tête du fichier programme.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### energie-carbone-transition  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme d'ENSEIGNEMENT SCIENTIFIQUE, tronc commun, terminale générale,
+BO du 22 janvier 2019 (version aménagée 2023). Thème 2 « Le futur des énergies »,
+sous-partie 2.3 « Énergie, carbone et transition ».
+Fichier de travail : docs/programme-terminale-enseignement-scientifique.txt, section
+« === Énergie, carbone et transition (physique-chimie et maths) === ».
+Extraction via WebFetch depuis le PDF officiel (https://www.education.gouv.fr/media/133235/download).
+À CONFRONTER AU PDF OFFICIEL avant publication.
+
+Chiffres d'ordres de grandeur (à faire valider par le relecteur) :
+- Réservoirs de carbone (Gt C) : atmosphère ~870 ; biosphère (végétation+sols) ~2000-3000 ;
+  océans ~38 000 ; lithosphère ~10^7-10^8. Valeurs GIEC/usuelles, arrondies en puissances de 10
+  dans la fiche. Vérifier que le manuel de référence retient les mêmes bornes.
+- Émissions anthropiques ~10 Gt C/an <=> ~37 Gt CO2/an (facteur 44/12 exact = 3,67).
+  « Moitié réabsorbée » = airborne fraction ~50 %, à confirmer.
+- 1 tep = 41,868 GJ exactement -> arrondi à 42 GJ / 4,2e10 J / ~1,16e4 kWh.
+- Essence modélisée par l'octane C8H18 (M=114) : 2,3 kg CO2/L pour rho=0,75 kg/L. Le diesel
+  (~2,6 kg/L) n'est pas traité ; à ajouter si le programme l'exige.
+- Empreinte carbone France ~9-10 t CO2eq/hab/an (avec importations, données ~2019) ;
+  objectif ~2 t. Monde ~6-7 t. Vol Paris-NY ~1 t CO2eq/passager (ordre de grandeur).
+- Part des fossiles dans le mix mondial ~80 %.
+
+POINTS À TRANCHER AVEC LE RELECTEUR :
+- Le programme attend-il l'équilibrage complet des équations de combustion (octane), ou seulement
+  le raisonnement C -> CO2 avec le facteur 44/12 ? J'ai mis les deux.
+- Faut-il chiffrer les flux naturels (photosynthèse ~120 Gt C/an, océan ~90) ? Non inclus pour
+  ne pas alourdir ; à ajouter si exigible.
+- Le vocabulaire « budget carbone » est-il attendu explicitement ?
+- Distinction t CO2 / t CO2eq : niveau d'exigence attendu à confirmer.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### modeles-demographiques  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+SOURCE : docs/programme-terminale-enseignement-scientifique.txt, section
+« Modèles démographiques (mathématiques) » [Thème 3 — Une histoire du vivant : 3.4] :
+  - Variation absolue et modèle linéaire (suite arithmétique).
+  - Variation relative et modèle exponentiel (suite géométrique) ; modèle de Malthus.
+  - Temps de doublement ; ajustement d'une courbe de tendance ; validation d'un modèle.
+Programme : Enseignement scientifique (tronc commun), terminale générale, BO du 22 janvier
+2019, version aménagée 2023. Extraction WebFetch depuis le PDF officiel
+(education.gouv.fr : https://www.education.gouv.fr/media/133235/download ; eduscol).
+À CONFRONTER AU PDF OFFICIEL avant publication.
+
+PÉRIMÈTRE / CHOIX DIDACTIQUES (à confirmer par un relecteur) :
+  - Chapitre traité en MATHÉMATIQUES au sein de l'enseignement scientifique (pluridisciplinaire).
+    Champ « matiere: mathematiques », « parcours: enseignement-scientifique », « theme:
+    Une histoire du vivant » — conventions reprises des chapitres ES déjà écrits
+    (tale-esc-atmosphere-effet-de-serre-climat, tale-esc-energie-carbone-transition).
+  - Formalisation par SUITES (u_{n+1} = u_n + r ; u_{n+1} = u_n × q) conforme au niveau
+    terminale, en prolongement du chapitre de Première ES « Phénomènes d'évolution »
+    (1es-math-phenomenes-evolution) qui, lui, restait au niveau des fonctions f(n)=f(0)q^n.
+    Ce chapitre de Première est cité comme prérequis principal.
+  - Temps de doublement : introduit N = ln2/ln q (utilise ln, prérequis Terminale) + la
+    « règle de 70 » comme ordre de grandeur. Vérifier que le niveau d'exigence attendu en
+    ES tolère l'usage de ln ; sinon, le doublement peut être présenté uniquement par
+    lecture graphique / tableur. À TRANCHER PAR LE RELECTEUR.
+  - Ajustement / courbe de tendance : présenté par la méthode différences vs quotients
+    (démarche tableur), sans régression formelle (moindres carrés hors programme ES).
+
+CONTRÔLES CHIFFRÉS (relus) :
+  §1 : 20500−20000 = 500 ; 500/20000 = 0,025 = 2,5 %. OK.
+  §2 : u_10 = 8000 + 500×10 = 13000. OK.
+  §3 : 1,03^10 ≈ 1,3439 ; 20000×1,3439 ≈ 26878. OK.
+  §4 : quotients 1100/1000 = 1210/1100 = 1331/1210 = 1,1 ; 1000×1,1^3 = 1331. OK.
+  §6 : ln2/ln1,02 = 0,6931/0,019803 ≈ 35,0 ans ; ln2/ln1,03 ≈ 23,4 ans ; règle 70/2=35,
+       70/3≈23,3. OK.
+  §7 : 55000/50000 = 60500/55000 = 1,1 ; 50000×1,1 = 55000, ×1,1 = 60500. OK.
+  §8 : 20000×1,03^5 = 20000×1,159274 ≈ 23185 ; écart à 23100 ≈ 85/23185 ≈ 0,37 % < 0,4 %. OK.
+
+Rédaction 100 % originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### probabilites-bayes-ia  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : /tmp/kamal-campus/docs/programme-terminale-enseignement-scientifique.txt,
+section « === Probabilités, Bayes et intelligence artificielle (mathématiques) === »
+(lignes 50-57), rattachée au Thème 3 « Une histoire du vivant » (3.5, et 3.1 pour
+l'intervalle de confiance). Programme d'enseignement scientifique, terminale
+générale, BO du 22 janvier 2019 (version aménagée 2023).
+
+⚠️ PROVENANCE : le fichier .txt du programme a été extrait des PDF officiels
+education.gouv.fr / eduscol via WebFetch. Cette extraction doit être CONFRONTÉE au
+PDF officiel du BO avant publication.
+
+Contenus du programme couverts :
+- Numérisation des données texte/image/son ; données massives ; corrélation et
+  causalité ; biais dans les données (§1-4).
+- Probabilités conditionnelles ; formule de Bayes ; application au diagnostic,
+  faux positifs/négatifs (§5-7). Sensibilité, spécificité, VPP et paradoxe des
+  tests rares développés via arbre pondéré.
+- Estimation : fréquence, intervalle de confiance (échantillonnage) et
+  capture-marquage-recapture (§8-9).
+
+CHOIX DE PÉRIMÈTRE / À SOUMETTRE AU RELECTEUR :
+- Intervalle de confiance retenu : la forme simplifiée [f - 1/√n ; f + 1/√n] au
+  niveau 95 %, cohérente avec l'enseignement scientifique et le programme de
+  Seconde. Vérifier que c'est bien la formule attendue (et non l'intervalle
+  asymptotique 1,96·√(f(1-f)/n) réservé à la spécialité).
+- La condition de validité usuelle (n ≥ 30, nf ≥ 5, n(1-f) ≥ 5) n'a pas été
+  détaillée pour ne pas alourdir ; à ajouter si le relecteur le souhaite.
+- Notation Se / Sp introduite bien qu'elle ne figure pas littéralement dans
+  l'intitulé : elle structure le diagnostic médical demandé (faux positifs/négatifs)
+  et est d'usage courant. À valider.
+- Le coefficient de corrélation est cité sans être calculé (hors capacités
+  attendues en ES) ; l'accent est mis sur l'interprétation corrélation/causalité.
+
+VÉRIFICATIONS NUMÉRIQUES (refaites à la main, cohérentes) :
+- Bayes/VPP : P(T+) = 0,01·0,99 + 0,99·0,02 = 0,0099 + 0,0198 = 0,0297 ;
+  VPP = 0,0099/0,0297 = 1/3 ≈ 0,33. Comptage sur 10 000 : 99 vrais positifs,
+  198 faux positifs — cohérent.
+- IC sondage : 1/√1000 ≈ 0,0316 → [0,488 ; 0,552], contient 0,50.
+- Capture-recapture : N ≈ 60·50/15 = 200 ; 1/√50 ≈ 0,1414 → f ∈ [0,159 ; 0,441] ;
+  N ∈ [60/0,441 ; 60/0,159] ≈ [136 ; 377].
+
+Rédaction originale à partir du seul programme officiel, aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
+
+### production-conversion-energie-electrique  `brouillon` (relu par : null)
+
+```
+
+NOTES DE PRODUCTION — ne pas afficher dans l'application
+
+Source : programme officiel d'ENSEIGNEMENT SCIENTIFIQUE, tronc commun, terminale générale,
+BO du 22 janvier 2019, version aménagée 2023 (docs/programme-terminale-enseignement-scientifique.txt,
+section « Production et conversion de l'énergie électrique (physique) », thème 2 « Le futur des
+énergies », lignes 30-35 du .txt extrait). Points du programme couverts :
+  - Induction électromagnétique ; alternateur ; production sans combustion.
+  - Rendement de conversion ; rendement global d'une chaîne énergétique.
+  - Effet photovoltaïque (semi-conducteurs) ; pertes par effet Joule.
+  - Stockage de l'énergie (chimique, mécanique, électromagnétique).
+
+Provenance : extraction via WebFetch depuis le PDF officiel education.gouv.fr / eduscol
+(https://www.education.gouv.fr/media/133235/download). À CONFRONTER AU PDF officiel avant
+publication.
+
+⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
+- Niveau d'exigence sur l'induction : le programme d'enseignement scientifique reste QUALITATIF
+  (pas de loi de Faraday e = -dΦ/dt, pas de calcul de flux). J'ai volontairement gardé le
+  qualitatif. À confirmer qu'aucune expression quantitative n'est attendue.
+- Les « trois voies » (mécanique/radiative/électrochimique) : cette structuration en trois voies
+  est une reformulation pédagogique fidèle à l'esprit du thème ; vérifier la terminologie exacte
+  attendue.
+- P = RI² : l'effet Joule est explicitement au programme. Le lien « haute tension → moins de
+  pertes » est classique et attendu ; confirmer qu'un calcul chiffré (comme l'exemple §7) est
+  bien du niveau tronc commun terminale.
+- Rendement global = produit des rendements : central au programme, exemples numériques fournis.
+- Stockage : les trois familles (chimique/mécanique/électromagnétique) sont citées telles quelles
+  par le programme. Le dihydrogène est-il à ranger en « chimique » (mon choix) — à valider.
+- Ordres de grandeur cités (rendement PV 15-20 %, 1 kWh = 3,6 MJ) : exacts, mais vérifier qu'ils
+  ne dépassent pas le périmètre attendu.
+
+Rédaction originale à partir du programme. Aucun emprunt à un manuel.
+Statut : brouillon, non relu.
+```
 
 ## terminale / maths-complementaires
 
@@ -8601,4 +9845,4 @@ Statut : brouillon, non relu.
 
 ---
 
-_179 fiches assemblées._
+_208 fiches assemblées._

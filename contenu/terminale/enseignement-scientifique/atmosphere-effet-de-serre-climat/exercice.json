@@ -1,0 +1,90 @@
+{
+  "id": "tale-esc-atmosphere-effet-de-serre-climat-exos",
+  "chapitre": "tale-esc-atmosphere-effet-de-serre-climat",
+  "titre": "Exercices — Atmosphère, effet de serre et climat",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé. Surveille les unités (W/m², °C ou K, ppm) et n'oublie jamais le facteur 4 ni l'albédo.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "bilan-radiatif",
+      "enonce": "La constante solaire (puissance reçue par une surface face au Soleil, au sommet de l'atmosphère) vaut $S_0 = 1360$ W/m². L'albédo moyen de la Terre est $A = 0{,}30$. 1) Calculer la puissance solaire moyenne $P_{\\\\text{moy}}$ reçue par mètre carré de surface terrestre. 2) En déduire la puissance moyenne $P_{\\\\text{abs}}$ réellement absorbée par la Terre.",
+      "corrige": [
+        "1) La Terre est une sphère : l'énergie interceptée par le disque ($\\\\pi R^2$) se répartit sur toute la sphère ($4\\\\pi R^2$), soit une aire $4$ fois plus grande. On divise donc la constante solaire par $4$ : $P_{\\\\text{moy}} = \\\\dfrac{S_0}{4} = \\\\dfrac{1360}{4} = 340$ W/m².",
+        "2) L'albédo $A = 0{,}30$ est la fraction **réfléchie** : la fraction **absorbée** est $1 - A = 0{,}70$.",
+        "$P_{\\\\text{abs}} = (1 - A)\\\\,\\\\dfrac{S_0}{4} = 0{,}70 \\\\times 340 = 238$ W/m², soit environ $240$ W/m²."
+      ],
+      "reponse": "$P_{\\\\text{moy}} = S_0/4 = 340$ W/m² ; $P_{\\\\text{abs}} = 0{,}70 \\\\times 340 = 238 \\\\approx 240$ W/m²."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "forcage-radiatif",
+      "enonce": "Avant l'ère industrielle, la concentration de $\\\\text{CO}_2$ dans l'atmosphère était d'environ $280$ ppm. Elle atteint aujourd'hui environ $420$ ppm. 1) Exprimer la concentration actuelle en pourcentage volumique. 2) Calculer l'augmentation relative de la concentration de $\\\\text{CO}_2$ depuis l'ère préindustrielle.",
+      "corrige": [
+        "1) $1$ ppm $= 1$ partie par million $= 10^{-6}$. Donc $420$ ppm $= 420 \\\\times 10^{-6} = 4{,}2 \\\\times 10^{-4}$, soit en pourcentage $4{,}2 \\\\times 10^{-4} \\\\times 100 = 0{,}042\\\\ \\\\%$.",
+        "2) L'augmentation relative se calcule par $\\\\dfrac{\\\\text{valeur finale} - \\\\text{valeur initiale}}{\\\\text{valeur initiale}}$.",
+        "$\\\\dfrac{420 - 280}{280} = \\\\dfrac{140}{280} = 0{,}50$, soit $+50\\\\ \\\\%$. Attention : l'écart absolu ($140$ ppm) n'est pas un pourcentage — il faut le rapporter à la valeur de départ."
+      ],
+      "reponse": "$420$ ppm $= 0{,}042\\\\ \\\\%$ ; augmentation relative $= \\\\dfrac{420-280}{280} = +50\\\\ \\\\%$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "albedo",
+      "enonce": "On prend $P_{\\\\text{moy}} = 340$ W/m². Sur une région polaire, la banquise (albédo $A_1 = 0{,}30$ à l'échelle du globe) fond et laisse place à l'océan, ce qui abaisse l'albédo moyen à $A_2 = 0{,}26$. 1) Calculer la puissance absorbée par mètre carré avant et après ($P_1$ et $P_2$). 2) En déduire le supplément de puissance absorbée et préciser s'il s'agit d'une rétroaction positive ou négative.",
+      "corrige": [
+        "1) Avant : $P_1 = (1 - A_1)\\\\,P_{\\\\text{moy}} = 0{,}70 \\\\times 340 = 238$ W/m².",
+        "Après : $P_2 = (1 - A_2)\\\\,P_{\\\\text{moy}} = 0{,}74 \\\\times 340 = 251{,}6$ W/m² $\\\\approx 252$ W/m².",
+        "2) Supplément absorbé : $\\\\Delta P = P_2 - P_1 = 251{,}6 - 238 = 13{,}6$ W/m² $\\\\approx 14$ W/m².",
+        "La Terre absorbe **plus** d'énergie, donc se réchauffe, ce qui fait fondre encore la glace : l'effet amplifie sa propre cause. C'est une **rétroaction positive** (rétroaction glace-albédo)."
+      ],
+      "reponse": "$P_1 = 238$ W/m², $P_2 \\\\approx 252$ W/m², $\\\\Delta P \\\\approx +14$ W/m² : rétroaction **positive** (glace-albédo)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "stefan-boltzmann",
+      "enonce": "À l'équilibre radiatif, la Terre émet autant qu'elle absorbe : $\\\\sigma T^4 = P_{\\\\text{abs}}$, avec $P_{\\\\text{abs}} = 238$ W/m² et $\\\\sigma = 5{,}67 \\\\times 10^{-8}$ W·m⁻²·K⁻⁴. 1) Calculer la température moyenne d'équilibre $T$ de la Terre (en kelvin). 2) La convertir en degrés Celsius et commenter par rapport à la température réelle du sol ($\\\\approx 15\\\\ \\\\text{°C}$).",
+      "corrige": [
+        "1) On isole $T^4$ : $T^4 = \\\\dfrac{P_{\\\\text{abs}}}{\\\\sigma} = \\\\dfrac{238}{5{,}67 \\\\times 10^{-8}} = 4{,}20 \\\\times 10^{9}\\\\ \\\\text{K}^4$.",
+        "On prend la racine quatrième (deux racines carrées successives) : $\\\\sqrt{4{,}20 \\\\times 10^{9}} = 6{,}48 \\\\times 10^{4}$, puis $\\\\sqrt{6{,}48 \\\\times 10^{4}} = 255$. Donc $T \\\\approx 255$ K.",
+        "2) Conversion : $\\\\theta = T - 273 = 255 - 273 = -18\\\\ \\\\text{°C}$.",
+        "La température réelle du sol ($\\\\approx +15\\\\ \\\\text{°C}$) est bien plus élevée que cette valeur d'équilibre « nue » : l'écart de $\\\\approx 33\\\\ \\\\text{°C}$ est apporté par l'**effet de serre**. Sans lui, la Terre serait gelée."
+      ],
+      "reponse": "$T^4 = 238/(5{,}67\\\\times10^{-8}) = 4{,}2\\\\times10^{9}$, donc $T \\\\approx 255$ K $= -18\\\\ \\\\text{°C}$ ; l'écart de $\\\\approx +33\\\\ \\\\text{°C}$ avec le réel est dû à l'effet de serre."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "forcage-radiatif",
+      "enonce": "Depuis l'ère préindustrielle, l'accroissement des gaz à effet de serre crée un forçage radiatif d'environ $f = 2{,}5$ W/m² : la Terre absorbe, en moyenne et par mètre carré, $2{,}5$ W de plus qu'elle n'en émet. La surface de la Terre est $\\\\mathcal{S} = 5{,}1 \\\\times 10^{14}$ m². 1) Calculer la puissance totale $P$ correspondant à ce déséquilibre. 2) En déduire l'énergie $E$ accumulée par le système climatique en une année ($1$ an $\\\\approx 3{,}15 \\\\times 10^{7}$ s).",
+      "corrige": [
+        "1) Le forçage est une puissance **par mètre carré** : pour obtenir la puissance totale, on le multiplie par la surface de la Terre. $P = f \\\\times \\\\mathcal{S} = 2{,}5 \\\\times 5{,}1 \\\\times 10^{14} = 1{,}3 \\\\times 10^{15}$ W.",
+        "2) L'énergie est la puissance multipliée par la durée : $E = P \\\\times \\\\Delta t$.",
+        "$E = 1{,}3 \\\\times 10^{15} \\\\times 3{,}15 \\\\times 10^{7} = 4{,}0 \\\\times 10^{22}$ J.",
+        "Cet excédent d'énergie (de l'ordre de $10^{22}$ J par an) est absorbé à plus de $90\\\\ \\\\%$ par les océans, ce qui explique leur réchauffement et leur dilatation. Un forçage en W/m² n'est pas une température : c'est un déséquilibre de puissance qui, accumulé, provoque le réchauffement."
+      ],
+      "reponse": "$P = f\\\\,\\\\mathcal{S} = 2{,}5 \\\\times 5{,}1\\\\times10^{14} \\\\approx 1{,}3\\\\times10^{15}$ W ; $E = P\\\\,\\\\Delta t \\\\approx 4{,}0\\\\times10^{22}$ J en un an."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "oceans",
+      "enonce": "En se réchauffant, l'eau de mer se dilate. Pour une couche d'océan de hauteur $h = 700$ m qui se réchauffe uniformément de $\\\\Delta T = 0{,}20\\\\ \\\\text{°C}$, l'élévation du niveau due à la dilatation vaut $\\\\Delta h = h \\\\times \\\\alpha \\\\times \\\\Delta T$, avec un coefficient de dilatation $\\\\alpha = 2{,}0 \\\\times 10^{-4}$ K⁻¹. 1) Expliquer pourquoi un océan plus chaud fait monter le niveau de la mer, même sans fonte des glaces. 2) Calculer $\\\\Delta h$ et l'exprimer en centimètres.",
+      "corrige": [
+        "1) Quand l'eau se réchauffe, ses molécules s'agitent davantage et l'eau occupe **plus de volume** (dilatation thermique). La quantité d'eau ne change pas, mais comme la surface de l'océan est fixée, l'augmentation de volume se traduit par une hausse de la **hauteur** : le niveau monte. C'est un effet distinct de la fonte des glaces.",
+        "2) Un écart de température se transpose tel quel en kelvins : $\\\\Delta T = 0{,}20\\\\ \\\\text{°C} = 0{,}20$ K.",
+        "$\\\\Delta h = h \\\\times \\\\alpha \\\\times \\\\Delta T = 700 \\\\times 2{,}0 \\\\times 10^{-4} \\\\times 0{,}20 = 2{,}8 \\\\times 10^{-2}$ m.",
+        "Conversion : $\\\\Delta h = 2{,}8 \\\\times 10^{-2}$ m $= 2{,}8$ cm. Une hausse de seulement $0{,}20\\\\ \\\\text{°C}$ sur $700$ m d'eau suffit à élever le niveau de près de $3$ cm : à l'échelle des océans, la dilatation thermique est loin d'être négligeable."
+      ],
+      "reponse": "La dilatation augmente le volume, donc la hauteur, sans fonte ; $\\\\Delta h = 700 \\\\times 2{,}0\\\\times10^{-4} \\\\times 0{,}20 = 2{,}8\\\\times10^{-2}$ m $= 2{,}8$ cm."
+    }
+  ]
+}

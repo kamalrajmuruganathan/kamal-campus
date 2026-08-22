@@ -1,0 +1,154 @@
+{
+  "id": "tale-esc-production-conversion-energie-electrique-qcm",
+  "chapitre": "tale-esc-production-conversion-energie-electrique",
+  "titre": "QCM — Production et conversion de l'énergie électrique",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "induction-electromagnetique",
+      "enonce": "À quelle condition une bobine placée près d'un aimant voit-elle apparaître une tension induite ?",
+      "choix": [
+        "L'aimant doit être immobile tout contre la bobine",
+        "Le champ magnétique traversant la bobine doit varier au cours du temps",
+        "La bobine doit être branchée sur une pile",
+        "La bobine doit être chauffée"
+      ],
+      "reponse": 1,
+      "explication": "L'induction exige une **variation** du champ magnétique. Un aimant immobile ne produit rien, même collé à la bobine : c'est le mouvement, le changement, qui crée la tension."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "alternateur",
+      "enonce": "Que convertit un alternateur ?",
+      "choix": [
+        "de l'énergie lumineuse en énergie électrique",
+        "de l'énergie chimique en énergie électrique",
+        "de l'énergie mécanique (mouvement) en énergie électrique",
+        "de l'énergie électrique en chaleur"
+      ],
+      "reponse": 2,
+      "explication": "Un alternateur transforme un **mouvement de rotation** en électricité grâce à l'induction. La voie lumineuse correspond au photovoltaïque, la voie chimique à la pile."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "voies-production",
+      "enonce": "Parmi ces modes de production, lequel n'utilise **pas** d'alternateur ?",
+      "choix": [
+        "une centrale hydraulique (barrage)",
+        "une éolienne",
+        "un panneau photovoltaïque",
+        "une usine marémotrice"
+      ],
+      "reponse": 2,
+      "explication": "Le photovoltaïque convertit la lumière **directement** en électricité, sans aucune pièce en rotation. Barrage, éolienne et marémotrice font tous tourner un alternateur."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "effet-photovoltaique",
+      "enonce": "L'effet photovoltaïque repose sur un matériau particulier. Lequel ?",
+      "choix": [
+        "un métal isolant",
+        "un semi-conducteur, comme le silicium",
+        "un aimant permanent",
+        "un gaz sous pression"
+      ],
+      "reponse": 1,
+      "explication": "Une cellule photovoltaïque est faite d'un **semi-conducteur** (le silicium le plus souvent) : un photon assez énergétique y libère un électron, ce qui crée le courant. Le piège est de confondre avec un aimant (alternateur)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "rendement-conversion",
+      "enonce": "Une cellule reçoit $1500$ J de lumière et fournit $300$ J d'électricité. Quel est son rendement ?",
+      "choix": [
+        "$0{,}20$, soit $20\\ \\%$",
+        "$5$, soit $500\\ \\%$",
+        "$1200$ J",
+        "$0{,}80$, soit $80\\ \\%$"
+      ],
+      "reponse": 0,
+      "explication": "$\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{reçue}}} = \\dfrac{300}{1500} = 0{,}20 = 20\\ \\%$. Le choix $500\\ \\%$ inverse la fraction (impossible : $\\eta \\le 1$) ; $0{,}80$ correspond aux pertes, pas au rendement."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "effet-joule",
+      "enonce": "Un câble de résistance $R = 4{,}0\\ \\Omega$ est parcouru par un courant $I = 5{,}0$ A. Quelle puissance dissipe-t-il par effet Joule ?",
+      "choix": [
+        "$20$ W",
+        "$100$ W",
+        "$1{,}25$ W",
+        "$80$ W"
+      ],
+      "reponse": 1,
+      "explication": "$P = R I^2 = 4{,}0 \\times (5{,}0)^2 = 4{,}0 \\times 25 = 100$ W. Le choix $20$ W vient de la faute $P = RI$ (on oublie le carré de l'intensité)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "rendement-global",
+      "enonce": "Une chaîne comporte deux conversions de rendements $\\eta_1 = 0{,}90$ et $\\eta_2 = 0{,}80$. Quel est le rendement global ?",
+      "choix": [
+        "$1{,}70$, soit $170\\ \\%$",
+        "$0{,}85$, soit $85\\ \\%$",
+        "$0{,}72$, soit $72\\ \\%$",
+        "$0{,}10$, soit $10\\ \\%$"
+      ],
+      "reponse": 2,
+      "explication": "Le rendement global est le **produit** : $\\eta = 0{,}90 \\times 0{,}80 = 0{,}72 = 72\\ \\%$. Le choix $170\\ \\%$ additionne (impossible), $85\\ \\%$ fait la moyenne : les deux sont faux, on multiplie toujours."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "effet-joule",
+      "enonce": "Pour transporter une puissance donnée, on augmente fortement la tension des lignes. Pourquoi cela réduit-il les pertes par effet Joule ?",
+      "choix": [
+        "parce que la résistance $R$ du câble diminue quand la tension augmente",
+        "parce qu'à puissance $P = UI$ fixée, augmenter $U$ diminue $I$, et les pertes varient en $I^2$",
+        "parce qu'une tension élevée empêche le câble de chauffer",
+        "parce que l'énergie voyage plus vite"
+      ],
+      "reponse": 1,
+      "explication": "À puissance transportée $P = UI$ fixée, augmenter $U$ **diminue $I$**. Comme les pertes valent $P_{\\text{perdue}} = R I^2$, diviser $I$ par 10 divise les pertes par 100. La résistance du câble, elle, ne dépend pas de la tension."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "stockage",
+      "enonce": "Une STEP (station de pompage) qui remonte de l'eau vers un réservoir en hauteur stocke l'énergie sous quelle forme ?",
+      "choix": [
+        "chimique",
+        "mécanique (énergie de position de l'eau)",
+        "électromagnétique",
+        "électrique directement"
+      ],
+      "reponse": 1,
+      "explication": "L'eau remontée en altitude possède de l'énergie de **position** : c'est un stockage **mécanique**. On la restitue en la laissant redescendre dans une turbine. Le stockage chimique correspond aux batteries, l'électromagnétique aux supercondensateurs."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "unites-energie",
+      "enonce": "Un panneau fournit une puissance moyenne de $250$ W pendant $4{,}0$ heures. Quelle énergie a-t-il produite ?",
+      "choix": [
+        "$1{,}0$ kWh, soit $3{,}6 \\times 10^6$ J",
+        "$62{,}5$ kWh",
+        "$1000$ J",
+        "$250$ kWh"
+      ],
+      "reponse": 0,
+      "explication": "$E = P \\times t = 250\\ \\text{W} \\times 4{,}0\\ \\text{h} = 1000$ Wh $= 1{,}0$ kWh. Et $1$ kWh $= 3{,}6 \\times 10^6$ J. Le piège : une puissance ($250$ W) n'est pas une énergie, il faut la multiplier par la durée."
+    }
+  ]
+}

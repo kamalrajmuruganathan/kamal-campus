@@ -1,0 +1,86 @@
+{
+  "id": "tale-esc-modeles-demographiques-exos",
+  "chapitre": "tale-esc-modeles-demographiques",
+  "titre": "Exercices — Modèles démographiques",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "modele-lineaire",
+      "enonce": "Un village compte $12\\,000$ habitants en $2020$ et gagne chaque année $300$ habitants (modèle linéaire). On note $u_n$ l'effectif après $n$ années, avec $u_0 = 12\\,000$. a) Écrire la relation de récurrence et calculer $u_5$. b) Donner le terme général $u_n$. c) En quelle année la population atteint-elle $15\\,000$ habitants ?",
+      "corrige": [
+        "a) La population gagne le même nombre d'habitants chaque année : suite arithmétique de raison $r = 300$, donc $u_{n+1} = u_n + 300$. On calcule $u_5 = u_0 + 5 \\times 300 = 12\\,000 + 1\\,500 = 13\\,500$ habitants.",
+        "b) Le terme général d'une suite arithmétique est $u_n = u_0 + n\\,r = 12\\,000 + 300\\,n$.",
+        "c) On résout $12\\,000 + 300\\,n = 15\\,000$, soit $300\\,n = 3\\,000$, donc $n = 10$. La population atteint $15\\,000$ habitants au bout de $10$ ans, soit en $2030$."
+      ],
+      "reponse": "a) $u_{n+1} = u_n + 300$ et $u_5 = 13\\,500$ ; b) $u_n = 12\\,000 + 300\\,n$ ; c) en $2030$ ($n = 10$)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population de $30\\,000$ habitants augmente de $4\\,\\%$ par an (modèle exponentiel). On note $u_n$ l'effectif après $n$ années, $u_0 = 30\\,000$. a) Déterminer le coefficient multiplicateur $q$, puis calculer $u_1$ et $u_2$. b) Donner le terme général $u_n$. c) Estimer l'effectif au bout de $10$ ans (arrondi à l'unité).",
+      "corrige": [
+        "a) Une hausse de $4\\,\\%$ donne $q = 1 + \\dfrac{4}{100} = 1{,}04$. Alors $u_1 = 30\\,000 \\times 1{,}04 = 31\\,200$ et $u_2 = 31\\,200 \\times 1{,}04 = 32\\,448$ habitants.",
+        "b) Pour une suite géométrique, $u_n = u_0 \\times q^{\\,n} = 30\\,000 \\times 1{,}04^{\\,n}$.",
+        "c) $u_{10} = 30\\,000 \\times 1{,}04^{\\,10}$. Comme $1{,}04^{\\,10} \\approx 1{,}4802$, on obtient $u_{10} \\approx 30\\,000 \\times 1{,}4802 \\approx 44\\,407$ habitants."
+      ],
+      "reponse": "a) $q = 1{,}04$, $u_1 = 31\\,200$, $u_2 = 32\\,448$ ; b) $u_n = 30\\,000 \\times 1{,}04^{\\,n}$ ; c) $u_{10} \\approx 44\\,407$ habitants."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "choix-du-modele",
+      "enonce": "Deux villes partent de $5\\,000$ habitants. On relève leurs effectifs sur trois années. Ville A : $5\\,000$, $5\\,500$, $6\\,000$, $6\\,500$. Ville B : $5\\,000$, $6\\,000$, $7\\,200$, $8\\,640$. a) Pour chaque ville, dire si le modèle est linéaire ou exponentiel, en le justifiant. b) Donner le terme général de chaque effectif. c) Comparer les deux villes après $10$ ans.",
+      "corrige": [
+        "a) Ville A — différences : $+500$, $+500$, $+500$ (constantes) : modèle linéaire de raison $r = 500$. Ville B — quotients : $\\dfrac{6\\,000}{5\\,000} = 1{,}2$, $\\dfrac{7\\,200}{6\\,000} = 1{,}2$, $\\dfrac{8\\,640}{7\\,200} = 1{,}2$ (constants) : modèle exponentiel de raison $q = 1{,}2$ (hausse de $20\\,\\%$).",
+        "b) Ville A : $a_n = 5\\,000 + 500\\,n$. Ville B : $b_n = 5\\,000 \\times 1{,}2^{\\,n}$.",
+        "c) Après $10$ ans : $a_{10} = 5\\,000 + 500 \\times 10 = 10\\,000$ habitants ; $b_{10} = 5\\,000 \\times 1{,}2^{\\,10} \\approx 5\\,000 \\times 6{,}19 \\approx 30\\,959$ habitants. La ville B (exponentielle) a très largement dépassé la ville A (linéaire), alors qu'elles partaient du même effectif : c'est la signature d'une croissance exponentielle."
+      ],
+      "reponse": "a) A linéaire ($r = 500$), B exponentielle ($q = 1{,}2$) ; b) $a_n = 5\\,000 + 500\\,n$, $b_n = 5\\,000 \\times 1{,}2^{\\,n}$ ; c) après $10$ ans, $a_{10} = 10\\,000$ contre $b_{10} \\approx 30\\,959$ : l'exponentielle domine largement."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "temps-de-doublement",
+      "enonce": "Une population croît de $5\\,\\%$ par an (modèle exponentiel, $q = 1{,}05$). a) Écrire l'équation vérifiée par le temps de doublement $N$, puis le calculer à l'aide de $N = \\dfrac{\\ln 2}{\\ln q}$. b) Retrouver un ordre de grandeur avec la « règle de 70 ». c) Le temps de doublement change-t-il si la population de départ est plus grande ? Justifier.",
+      "corrige": [
+        "a) Doubler signifie $u_N = 2\\,u_0$, soit $u_0 \\times 1{,}05^{\\,N} = 2\\,u_0$, d'où $1{,}05^{\\,N} = 2$. En prenant le logarithme népérien : $N = \\dfrac{\\ln 2}{\\ln 1{,}05} \\approx \\dfrac{0{,}693}{0{,}0488} \\approx 14{,}2$ ans.",
+        "b) La règle de 70 donne $N \\approx \\dfrac{70}{t} = \\dfrac{70}{5} = 14$ ans, cohérent avec le calcul exact.",
+        "c) Non. Dans $N = \\dfrac{\\ln 2}{\\ln q}$, l'effectif de départ $u_0$ n'apparaît pas : il s'est simplifié dans $u_0 \\times q^{\\,N} = 2\\,u_0$. Le temps de doublement ne dépend que du taux, pas de la taille initiale de la population."
+      ],
+      "reponse": "a) $1{,}05^{\\,N} = 2$, $N = \\dfrac{\\ln 2}{\\ln 1{,}05} \\approx 14{,}2$ ans ; b) $\\approx 70/5 = 14$ ans ; c) non, $N$ ne dépend que du taux (le $u_0$ se simplifie)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "validation-du-modele",
+      "enonce": "Un institut relève la population d'une région (en milliers) : $50$ en $2000$, $60$ en $2010$, $72$ en $2020$. On note $u_n$ la population $n$ décennies après $2000$ ($u_0 = 50$). a) Montrer que ces données suivent un modèle exponentiel et donner $u_n$. b) Quelle population le modèle prévoit-il pour $2030$ ? c) Le recensement de $2030$ donne finalement $79$ (milliers). Que peut-on en conclure sur le modèle ?",
+      "corrige": [
+        "a) On calcule les quotients d'une décennie à l'autre : $\\dfrac{60}{50} = 1{,}2$ et $\\dfrac{72}{60} = 1{,}2$. Ils sont constants : le modèle est exponentiel de raison $q = 1{,}2$ par décennie. Donc $u_n = 50 \\times 1{,}2^{\\,n}$ (avec $n$ en décennies).",
+        "b) L'année $2030$ correspond à $n = 3$ : $u_3 = 50 \\times 1{,}2^{\\,3} = 50 \\times 1{,}728 = 86{,}4$, soit environ $86\\,400$ habitants prévus.",
+        "c) Le réel ($79$) est nettement en dessous de la prévision ($86{,}4$) : l'écart vaut $\\dfrac{86{,}4 - 79}{79} \\approx 9{,}4\\,\\%$. La croissance a ralenti par rapport au modèle : le modèle exponentiel, valable sur les décennies $2000$–$2020$, n'est plus valide sur $2020$–$2030$. Il faut le corriger (taux plus faible), car aucune population ne croît indéfiniment au même rythme : le modèle n'est valable que sur un domaine limité."
+      ],
+      "reponse": "a) quotients constants $= 1{,}2$, donc $u_n = 50 \\times 1{,}2^{\\,n}$ ; b) $u_3 = 86{,}4$ (soit $\\approx 86\\,400$ habitants) ; c) le réel ($79$) est $\\approx 9{,}4\\,\\%$ en dessous : la croissance ralentit, le modèle exponentiel n'est plus valable et doit être révisé."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "modele-de-malthus",
+      "enonce": "On modélise à la manière de Malthus une population $u_n = 1\\,000 \\times 1{,}08^{\\,n}$ (croissance de $8\\,\\%$ par an) et les ressources alimentaires $R_n = 4\\,000 + 200\\,n$ (capables de nourrir $4\\,000$ personnes au départ, $+200$ par an). a) Comparer $u_n$ et $R_n$ pour $n = 10$, $n = 20$ et $n = 30$. b) À l'aide d'un tableur ou d'une calculatrice, déterminer la première année où la population dépasse les ressources. c) Que cela illustre-t-il du raisonnement de Malthus, et quelle est sa limite ?",
+      "corrige": [
+        "a) $n = 10$ : $u_{10} = 1\\,000 \\times 1{,}08^{\\,10} \\approx 2\\,159$ contre $R_{10} = 4\\,000 + 2\\,000 = 6\\,000$ (ressources supérieures). $n = 20$ : $u_{20} \\approx 1\\,000 \\times 4{,}661 \\approx 4\\,661$ contre $R_{20} = 8\\,000$ (ressources encore supérieures). $n = 30$ : $u_{30} \\approx 1\\,000 \\times 10{,}063 \\approx 10\\,063$ contre $R_{30} = 10\\,000$ : cette fois la population dépasse les ressources.",
+        "b) En calculant les termes de proche en proche, on trouve $u_{29} \\approx 9\\,317 < R_{29} = 9\\,800$ mais $u_{30} \\approx 10\\,063 > R_{30} = 10\\,000$. La population dépasse les ressources pour la première fois à l'année $n = 30$.",
+        "c) Cela illustre la thèse de Malthus : une croissance exponentielle finit toujours par dépasser une croissance linéaire, même si les ressources ont une large avance au départ ($4\\,000$ contre $1\\,000$). Sa limite : ce n'est qu'un modèle. Dans la réalité, la croissance de la population ralentit bien avant (ressources, natalité, plafond du milieu) ; le modèle exponentiel n'est valable que sur un domaine limité et ne doit pas être pris pour une prédiction certaine."
+      ],
+      "reponse": "a) ressources supérieures à $n=10$ et $n=20$, population supérieure à $n=30$ ; b) le dépassement a lieu à $n = 30$ ; c) l'exponentielle finit par dépasser le linéaire (Malthus), mais ce modèle de croissance illimitée n'est valable que sur un domaine limité."
+    }
+  ]
+}

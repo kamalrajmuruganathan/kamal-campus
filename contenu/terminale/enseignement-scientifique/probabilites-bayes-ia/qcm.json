@@ -1,0 +1,154 @@
+{
+  "id": "tale-esc-probabilites-bayes-ia-qcm",
+  "chapitre": "tale-esc-probabilites-bayes-ia",
+  "titre": "QCM — Probabilités, Bayes et intelligence artificielle",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "numerisation",
+      "enonce": "Combien de valeurs différentes peut coder un octet (8 bits) ?",
+      "choix": [
+        "$8$",
+        "$16$",
+        "$256$",
+        "$1\\,024$"
+      ],
+      "reponse": 2,
+      "explication": "Un octet vaut $8$ bits, chacun à $0$ ou $1$ : cela fait $2^8 = 256$ combinaisons. Le choix $8$ confond le nombre de bits avec le nombre de valeurs ; $1\\,024 = 2^{10}$ est le nombre d'octets dans un kio, pas les valeurs d'un octet."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "correlation-causalite",
+      "enonce": "Les ventes de glaces et le nombre de noyades sont fortement corrélées sur l'année. Que peut-on en conclure ?",
+      "choix": [
+        "Manger des glaces augmente le risque de noyade",
+        "Rien de causal : un facteur commun (la chaleur estivale) explique les deux",
+        "Les noyades font augmenter les ventes de glaces",
+        "La corrélation prouve toujours un lien de cause à effet"
+      ],
+      "reponse": 1,
+      "explication": "Corrélation n'est pas causalité. Ici la chaleur estivale est un **facteur de confusion** qui augmente à la fois les baignades (donc les noyades) et les ventes de glaces. Une corrélation, même forte, ne prouve jamais à elle seule un lien de cause à effet."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "biais",
+      "enonce": "Un sondage recueille $2$ millions de réponses, mais uniquement via un formulaire en ligne. Que peut-on dire de sa fiabilité ?",
+      "choix": [
+        "Il est fiable : $2$ millions, c'est un très grand échantillon",
+        "Il reste biaisé : seuls les internautes répondent, et augmenter la taille n'y change rien",
+        "Il n'a aucun biais car l'échantillon est aléatoire",
+        "La grande taille compense forcément le biais de recrutement"
+      ],
+      "reponse": 1,
+      "explication": "Un biais d'échantillonnage est une distorsion **systématique** : le hasard se dilue quand $n$ augmente, mais un biais, non. Un très grand échantillon d'internautes reste un échantillon d'internautes — le piège est de croire que le volume corrige tout."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "diagnostic",
+      "enonce": "La sensibilité d'un test de dépistage est définie comme :",
+      "choix": [
+        "la proportion de malades qui sont détectés positifs, $P_M(T^+)$",
+        "la proportion de positifs qui sont malades, $P_{T^+}(M)$",
+        "la proportion de sains détectés négatifs, $P_{\\overline{M}}(T^-)$",
+        "la proportion de la population qui est malade"
+      ],
+      "reponse": 0,
+      "explication": "La sensibilité est $\\text{Se} = P_M(T^+)$ : parmi les **malades**, ceux que le test repère. Le choix 2 est la spécificité ; le choix 1 ($P_{T^+}(M)$) est la valeur prédictive positive, un conditionnement inverse qu'il ne faut pas confondre avec la sensibilité."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "Une maladie touche $1\\,\\%$ de la population. Un test est positif chez $99\\,\\%$ des malades et chez $2\\,\\%$ des sains. Quelle est la probabilité $P(T^+)$ qu'une personne prise au hasard soit testée positive ?",
+      "choix": [
+        "$0{,}99$",
+        "$0{,}0099$",
+        "$0{,}0297$",
+        "$0{,}03$"
+      ],
+      "reponse": 2,
+      "explication": "Formule des probabilités totales : $P(T^+) = 0{,}01 \\times 0{,}99 + 0{,}99 \\times 0{,}02 = 0{,}0099 + 0{,}0198 = 0{,}0297$. Le choix $0{,}0099$ n'est que le chemin des vrais positifs ; il oublie les faux positifs, pourtant deux fois plus nombreux."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "intervalle-de-confiance",
+      "enonce": "Un sondage sur $n = 1\\,000$ personnes donne une fréquence $f = 0{,}52$. Quel est l'intervalle de confiance au niveau $95\\,\\%$ ?",
+      "choix": [
+        "$[0{,}488 \\;;\\; 0{,}552]$",
+        "$[0{,}510 \\;;\\; 0{,}530]$",
+        "$[0{,}420 \\;;\\; 0{,}620]$",
+        "$[0{,}519 \\;;\\; 0{,}521]$"
+      ],
+      "reponse": 0,
+      "explication": "$\\left[f - \\tfrac{1}{\\sqrt{n}} \\;;\\; f + \\tfrac{1}{\\sqrt{n}}\\right]$ avec $\\tfrac{1}{\\sqrt{1000}} \\approx 0{,}032$ donne $[0{,}488 \\;;\\; 0{,}552]$. Les autres choix utilisent $1/n$ ou $2/n$ au lieu de $1/\\sqrt{n}$ : la marge dépend de la racine de $n$, pas de $n$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "bayes",
+      "enonce": "Reprends le test : $P(M) = 0{,}01$, $P_M(T^+) = 0{,}99$, $P(T^+) = 0{,}0297$. Une personne est testée positive. Quelle est la probabilité qu'elle soit réellement malade (la VPP) ?",
+      "choix": [
+        "$0{,}99$",
+        "$\\dfrac{0{,}0099}{0{,}0297} \\approx 0{,}33$",
+        "$0{,}0099$",
+        "$0{,}0297$"
+      ],
+      "reponse": 1,
+      "explication": "Bayes : $P_{T^+}(M) = \\dfrac{P(M)\\,P_M(T^+)}{P(T^+)} = \\dfrac{0{,}0099}{0{,}0297} \\approx 0{,}33$. Le choix $0{,}99$ est la sensibilité $P_M(T^+)$ (conditionnement inverse), l'erreur reine : la maladie étant rare, un test positif ne vaut « que » $33\\,\\%$ de chances d'être malade."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "diagnostic",
+      "enonce": "Pourquoi, avec un excellent test ($99\\,\\%$ de sensibilité, $2\\,\\%$ de faux positifs), la valeur prédictive positive reste-t-elle faible pour une maladie rare ?",
+      "choix": [
+        "Parce que le test est en réalité de mauvaise qualité",
+        "Parce que les faux positifs, issus de la très nombreuse population saine, dépassent les vrais positifs",
+        "Parce que la sensibilité et la spécificité se compensent exactement",
+        "Parce que la VPP ne dépend pas de la prévalence de la maladie"
+      ],
+      "reponse": 1,
+      "explication": "Sur $10\\,000$ personnes : $99$ vrais positifs (parmi les $100$ malades) mais $198$ faux positifs (parmi les $9\\,900$ sains). Les faux positifs, issus d'une population saine énorme, noient les vrais. La VPP dépend fortement de la prévalence : c'est le paradoxe des tests rares."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "capture-recapture",
+      "enonce": "On marque $M = 60$ poissons et on les relâche. À la recapture, sur $n = 50$ poissons, $m = 15$ sont marqués. Quelle est l'estimation de l'effectif total $N$ du lac ?",
+      "choix": [
+        "$125$",
+        "$180$",
+        "$200$",
+        "$450$"
+      ],
+      "reponse": 2,
+      "explication": "La proportion de marqués recapturés estime celle de la population : $\\dfrac{m}{n} \\approx \\dfrac{M}{N}$, d'où $N \\approx \\dfrac{M \\times n}{m} = \\dfrac{60 \\times 50}{15} = 200$. Le piège : mettre le grand nombre au dénominateur. C'est bien $m = 15$ (marqués recapturés) qui divise."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "intervalle-de-confiance",
+      "enonce": "Un institut veut diviser par $2$ la marge d'erreur d'un sondage (l'amplitude $\\tfrac{2}{\\sqrt{n}}$ de l'intervalle de confiance). Par combien doit-il multiplier la taille $n$ de l'échantillon ?",
+      "choix": [
+        "par $2$",
+        "par $4$",
+        "par $\\sqrt{2}$",
+        "par $8$"
+      ],
+      "reponse": 1,
+      "explication": "La marge est $\\tfrac{2}{\\sqrt{n}}$. Pour la diviser par $2$, il faut multiplier $\\sqrt{n}$ par $2$, donc $n$ par $2^2 = 4$. Le piège est de répondre « par $2$ » : la précision dépend de $\\sqrt{n}$, pas de $n$, ce qui rend la précision coûteuse."
+    }
+  ]
+}

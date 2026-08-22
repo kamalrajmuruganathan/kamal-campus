@@ -1,0 +1,154 @@
+{
+  "id": "tale-esc-modeles-demographiques-qcm",
+  "chapitre": "tale-esc-modeles-demographiques",
+  "titre": "QCM — Modèles démographiques",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "modele-lineaire",
+      "enonce": "Une population gagne chaque année le même nombre d'habitants : $u_{n+1} = u_n + 500$. De quel modèle s'agit-il ?",
+      "choix": [
+        "Modèle exponentiel (suite géométrique)",
+        "Modèle linéaire (suite arithmétique)",
+        "Modèle de Malthus",
+        "Aucun modèle : la population est constante"
+      ],
+      "reponse": 1,
+      "explication": "Une variation absolue constante ($+500$ à chaque étape) définit une suite arithmétique de raison $r = 500$, donc un modèle linéaire. Le piège est de voir un pourcentage là où il n'y en a pas : $+500$ habitants n'est pas une hausse de $500\\,\\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population augmente de $3\\,\\%$ par an. Quel est le coefficient multiplicateur $q$ d'une année à la suivante ?",
+      "choix": [
+        "$q = 0{,}03$",
+        "$q = 3$",
+        "$q = 1{,}03$",
+        "$q = 0{,}97$"
+      ],
+      "reponse": 2,
+      "explication": "Le coefficient multiplicateur est $q = 1 + \\dfrac{t}{100} = 1 + \\dfrac{3}{100} = 1{,}03$. Le piège est de confondre le taux ($0{,}03$) avec le coefficient ($1{,}03$) : on multiplie l'effectif par $1{,}03$, pas par $0{,}03$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "variation-absolue-relative",
+      "enonce": "Une ville passe de $40\\,000$ à $41\\,000$ habitants en un an. Quelle est sa variation relative (taux d'évolution) ?",
+      "choix": [
+        "$1\\,000$ habitants",
+        "$2{,}5\\,\\%$",
+        "$2{,}4\\,\\%$",
+        "$1\\,\\%$"
+      ],
+      "reponse": 1,
+      "explication": "La variation relative est $\\dfrac{41\\,000 - 40\\,000}{40\\,000} = \\dfrac{1\\,000}{40\\,000} = 0{,}025 = 2{,}5\\,\\%$. Le piège : $1\\,000$ est la variation absolue (en habitants), pas la relative ; et il faut diviser par l'effectif de départ $40\\,000$, pas par $41\\,000$ (ce qui donnerait $2{,}4\\,\\%$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population de $10\\,000$ habitants croît de $2\\,\\%$ par an. Quel est le terme général $u_n$ (effectif après $n$ années) ?",
+      "choix": [
+        "$u_n = 10\\,000 + 0{,}02\\,n$",
+        "$u_n = 10\\,000 \\times 0{,}02^{\\,n}$",
+        "$u_n = 10\\,000 \\times 1{,}02 \\times n$",
+        "$u_n = 10\\,000 \\times 1{,}02^{\\,n}$"
+      ],
+      "reponse": 3,
+      "explication": "Pour un modèle exponentiel, $u_n = u_0 \\times q^{\\,n}$ avec $q = 1{,}02$, soit $u_n = 10\\,000 \\times 1{,}02^{\\,n}$. Le piège classique est d'écrire $q \\times n$ au lieu de $q^{\\,n}$ : multiplier par $n$, c'est le modèle linéaire, pas exponentiel."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "choix-du-modele",
+      "enonce": "Les effectifs relevés sont $2\\,000$, $2\\,200$, $2\\,420$, $2\\,662$. Quel modèle décrit ces données ?",
+      "choix": [
+        "Linéaire, de raison $+200$",
+        "Exponentiel, de raison $q = 1{,}1$",
+        "Linéaire, de raison $+220$",
+        "Exponentiel, de raison $q = 0{,}9$"
+      ],
+      "reponse": 1,
+      "explication": "Les quotients $\\dfrac{2\\,200}{2\\,000} = 1{,}1$, $\\dfrac{2\\,420}{2\\,200} = 1{,}1$, $\\dfrac{2\\,662}{2\\,420} = 1{,}1$ sont constants : modèle exponentiel de raison $1{,}1$ (hausse de $10\\,\\%$). Le piège est de regarder la première différence ($+200$) et de conclure « linéaire » : les différences suivantes ($+220$, $+242$) ne sont pas constantes."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population diminue de $15\\,\\%$ par an. Par quel coefficient multiplie-t-on l'effectif chaque année ?",
+      "choix": [
+        "$0{,}15$",
+        "$0{,}85$",
+        "$1{,}15$",
+        "$-0{,}15$"
+      ],
+      "reponse": 1,
+      "explication": "Une baisse de $15\\,\\%$ conserve $85\\,\\%$ de la population : $q = 1 - \\dfrac{15}{100} = 0{,}85$. Le piège est de multiplier par $0{,}15$ (ce qui reviendrait à perdre $85\\,\\%$) ou d'ajouter au lieu de retrancher."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "temps-de-doublement",
+      "enonce": "Dans un modèle exponentiel de raison $q > 1$, le temps de doublement $N$ vérifie $q^{\\,N} = 2$. De quoi dépend $N$ ?",
+      "choix": [
+        "De l'effectif de départ $u_0$ uniquement",
+        "Du taux (via $q$) uniquement",
+        "À la fois de $u_0$ et du taux",
+        "Ni de $u_0$ ni du taux : il est toujours de $10$ ans"
+      ],
+      "reponse": 1,
+      "explication": "De $q^{\\,N} = 2$ on tire $N = \\dfrac{\\ln 2}{\\ln q}$ : $u_0$ a disparu du calcul. Le temps de doublement ne dépend que du taux, jamais de l'effectif de départ. Une grande et une petite population au même taux doublent dans le même temps."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "temps-de-doublement",
+      "enonce": "Une population croît de $2\\,\\%$ par an ($q = 1{,}02$). En utilisant la « règle de 70 », son temps de doublement est d'environ :",
+      "choix": [
+        "$2$ ans",
+        "$14$ ans",
+        "$35$ ans",
+        "$70$ ans"
+      ],
+      "reponse": 2,
+      "explication": "La règle de 70 donne $N \\approx \\dfrac{70}{t} = \\dfrac{70}{2} = 35$ ans (le calcul exact $\\dfrac{\\ln 2}{\\ln 1{,}02} \\approx 35$ ans le confirme). Le piège est de diviser $t$ par $70$ (ce qui donnerait un temps absurde) ou de prendre directement $t$ comme durée."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "modele-de-malthus",
+      "enonce": "Selon le modèle de Malthus, la population croît géométriquement ($u_n = 1\\,000 \\times 1{,}03^{\\,n}$) et les ressources arithmétiquement ($R_n = 5\\,000 + 100\\,n$). Que prévoit le modèle à long terme ?",
+      "choix": [
+        "Les ressources restent toujours supérieures à la population",
+        "La population finit par dépasser les ressources",
+        "Population et ressources se stabilisent à la même valeur",
+        "La population tend vers $0$"
+      ],
+      "reponse": 1,
+      "explication": "Une croissance exponentielle ($q > 1$) finit toujours par dépasser une croissance linéaire, quelle que soit l'avance initiale de la droite. C'est le cœur du raisonnement de Malthus. Le piège est de croire que l'avance des ressources ($5\\,000$ contre $1\\,000$ au départ) est définitive : l'exponentielle rattrape puis dépasse."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "validation-du-modele",
+      "enonce": "Un modèle exponentiel de croissance à taux constant est utilisé pour prévoir une population. Quelle affirmation est correcte ?",
+      "choix": [
+        "Il est valable pour toujours, car il colle aux premières données",
+        "Il n'est valable que sur un domaine limité et doit être confronté au réel",
+        "Il devient exact dès qu'il passe par tous les points relevés",
+        "Il prédit toujours une population qui se stabilise"
+      ],
+      "reponse": 1,
+      "explication": "Une croissance à taux constant est illimitée et finit par prévoir des effectifs absurdes : le modèle exponentiel n'est valable que sur un domaine limité, et se valide en comparant ses prédictions aux valeurs réellement observées. Le piège est de croire qu'un bon ajustement sur le passé garantit la validité pour toujours."
+    }
+  ]
+}

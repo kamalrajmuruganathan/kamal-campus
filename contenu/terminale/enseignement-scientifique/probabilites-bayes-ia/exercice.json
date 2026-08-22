@@ -1,0 +1,87 @@
+{
+  "id": "tale-esc-probabilites-bayes-ia-exos",
+  "chapitre": "tale-esc-probabilites-bayes-ia",
+  "titre": "Exercices — Probabilités, Bayes et intelligence artificielle",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "numerisation",
+      "enonce": "On numérise des médias. a) Une photo a une définition de $1\\,920 \\times 1\\,080$ pixels, codée en RVB ($3$ octets par pixel). Calculer son poids en octets, puis en Mo (arrondi au dixième), avant compression. b) On enregistre $3$ minutes de musique en stéréo ($2$ canaux), échantillonnée à $44\\,100$ Hz sur $16$ bits. Sachant que $16$ bits $= 2$ octets, calculer le poids du fichier en Mo (arrondi à l'unité).",
+      "corrige": [
+        "a) Le poids est le nombre de pixels multiplié par les octets par pixel : $1\\,920 \\times 1\\,080 \\times 3 = 6\\,220\\,800$ octets. Comme $1$ Mo $= 10^6$ octets, cela fait $6\\,220\\,800 / 10^6 \\approx 6{,}2$ Mo.",
+        "b) Nombre d'octets par seconde : $44\\,100$ échantillons $\\times\\, 2$ octets $\\times\\, 2$ canaux $= 176\\,400$ octets/s. La durée est $3 \\times 60 = 180$ s. Poids total : $176\\,400 \\times 180 = 31\\,752\\,000$ octets, soit $\\approx 32$ Mo."
+      ],
+      "reponse": "a) $6\\,220\\,800$ octets $\\approx 6{,}2$ Mo ; b) $31\\,752\\,000$ octets $\\approx 32$ Mo."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "intervalle-de-confiance",
+      "enonce": "Dans un échantillon de $n = 400$ personnes, $168$ déclarent pratiquer un sport régulièrement. a) Calculer la fréquence observée $f$. b) Donner l'intervalle de confiance au niveau $95\\,\\%$ de la proportion $p$ dans la population. c) Peut-on affirmer que moins de la moitié de la population pratique un sport régulièrement ? d) Quelle taille d'échantillon faudrait-il pour ramener l'amplitude de l'intervalle à $0{,}04$ ?",
+      "corrige": [
+        "a) $f = \\dfrac{168}{400} = 0{,}42$.",
+        "b) L'intervalle est $\\left[f - \\dfrac{1}{\\sqrt{n}} \\;;\\; f + \\dfrac{1}{\\sqrt{n}}\\right]$ avec $\\dfrac{1}{\\sqrt{400}} = \\dfrac{1}{20} = 0{,}05$, soit $[0{,}42 - 0{,}05 \\;;\\; 0{,}42 + 0{,}05] = [0{,}37 \\;;\\; 0{,}47]$.",
+        "c) Oui : tout l'intervalle est situé en dessous de $0{,}50$ (borne supérieure $0{,}47 < 0{,}50$). On peut donc affirmer, au niveau de confiance $95\\,\\%$, que moins de la moitié de la population pratique un sport régulièrement.",
+        "d) L'amplitude vaut $\\dfrac{2}{\\sqrt{n}}$. On veut $\\dfrac{2}{\\sqrt{n}} \\leqslant 0{,}04$, soit $\\sqrt{n} \\geqslant \\dfrac{2}{0{,}04} = 50$, donc $n \\geqslant 50^2 = 2\\,500$."
+      ],
+      "reponse": "a) $f = 0{,}42$ ; b) $[0{,}37 \\;;\\; 0{,}47]$ ; c) oui, tout l'intervalle est sous $0{,}50$ ; d) $n \\geqslant 2\\,500$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "diagnostic",
+      "enonce": "Une maladie touche $5\\,\\%$ d'une population. Un test de dépistage a une sensibilité de $90\\,\\%$ (il détecte $90\\,\\%$ des malades) et une spécificité de $95\\,\\%$ (il est négatif chez $95\\,\\%$ des sains). On note $M$ « être malade » et $T^+$ « test positif ». a) Construire (décrire) l'arbre pondéré et donner les probabilités des quatre chemins. b) Calculer $P(T^+)$. c) Une personne est testée positive : calculer la valeur prédictive positive $P_{T^+}(M)$ (arrondie au millième) et l'interpréter.",
+      "corrige": [
+        "a) Premier niveau : $P(M) = 0{,}05$ et $P(\\overline{M}) = 0{,}95$. Second niveau — sensibilité et spécificité aux branches : $P_M(T^+) = 0{,}90$, $P_M(T^-) = 0{,}10$ (faux négatifs), $P_{\\overline{M}}(T^-) = 0{,}95$, $P_{\\overline{M}}(T^+) = 0{,}05$ (faux positifs). Les quatre chemins : malade positif $0{,}05 \\times 0{,}90 = 0{,}045$ ; malade négatif $0{,}05 \\times 0{,}10 = 0{,}005$ ; sain négatif $0{,}95 \\times 0{,}95 = 0{,}9025$ ; sain positif $0{,}95 \\times 0{,}05 = 0{,}0475$.",
+        "b) Formule des probabilités totales : $P(T^+) = P(M)P_M(T^+) + P(\\overline{M})P_{\\overline{M}}(T^+) = 0{,}045 + 0{,}0475 = 0{,}0925$.",
+        "c) Bayes : $P_{T^+}(M) = \\dfrac{P(M)P_M(T^+)}{P(T^+)} = \\dfrac{0{,}045}{0{,}0925} \\approx 0{,}486$. Interprétation : un test positif ne signifie qu'environ $48{,}6\\,\\%$ de chances d'être réellement malade — moins d'une chance sur deux — car les faux positifs ($0{,}0475$) sont presque aussi nombreux que les vrais positifs ($0{,}045$)."
+      ],
+      "reponse": "a) chemins $0{,}045$ / $0{,}005$ / $0{,}9025$ / $0{,}0475$ ; b) $P(T^+) = 0{,}0925$ ; c) $P_{T^+}(M) \\approx 0{,}486$ : moins d'une chance sur deux d'être malade malgré un test positif."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "capture-recapture",
+      "enonce": "Pour estimer le nombre de truites d'un étang, un biologiste en capture $M = 100$, les marque et les relâche. Une semaine plus tard, il recapture un échantillon de $n = 100$ truites, dont $m = 25$ portent la marque. a) Calculer la fréquence $f$ de truites marquées dans la recapture, puis estimer l'effectif total $N$ de l'étang. b) Donner l'intervalle de confiance au niveau $95\\,\\%$ de la vraie proportion de marquées. c) En déduire une fourchette pour $N$ (arrondir aux unités). d) Citer une hypothèse indispensable pour que la méthode soit valable.",
+      "corrige": [
+        "a) $f = \\dfrac{m}{n} = \\dfrac{25}{100} = 0{,}25$. La proportion de marquées dans la recapture estime celle de la population : $\\dfrac{m}{n} \\approx \\dfrac{M}{N}$, d'où $N \\approx \\dfrac{M \\times n}{m} = \\dfrac{100 \\times 100}{25} = 400$ truites.",
+        "b) $\\dfrac{1}{\\sqrt{n}} = \\dfrac{1}{\\sqrt{100}} = 0{,}1$, donc l'intervalle de confiance de la proportion est $[0{,}25 - 0{,}1 \\;;\\; 0{,}25 + 0{,}1] = [0{,}15 \\;;\\; 0{,}35]$.",
+        "c) Comme $N \\approx \\dfrac{M}{f}$ et que $f$ est encadré, $N$ est d'autant plus petit que $f$ est grand. Borne basse : $\\dfrac{100}{0{,}35} \\approx 286$ ; borne haute : $\\dfrac{100}{0{,}15} \\approx 667$. On estime donc $N$ entre $286$ et $667$ truites.",
+        "d) Il faut notamment que les truites marquées se soient **bien mélangées** à la population et que celle-ci n'ait pas changé (ni naissances, ni morts, ni migrations importantes) entre les deux captures ; sinon l'estimation est biaisée."
+      ],
+      "reponse": "a) $f = 0{,}25$, $N \\approx 400$ ; b) $[0{,}15 \\;;\\; 0{,}35]$ ; c) $N$ entre $286$ et $667$ ; d) mélange complet des marquées et population stable entre les deux captures."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "diagnostic",
+      "enonce": "Un même test de dépistage a une sensibilité de $98\\,\\%$ et une spécificité de $97\\,\\%$ (donc $3\\,\\%$ de faux positifs). On l'utilise dans deux contextes. a) Dépistage de masse : la maladie touche $0{,}2\\,\\%$ de la population générale. Calculer la valeur prédictive positive $P_{T^+}(M)$ (arrondie au dixième de pourcent). b) Dépistage ciblé : chez des patients à risque, la maladie touche $30\\,\\%$. Calculer à nouveau la VPP. c) Comparer et expliquer pourquoi, à test identique, on privilégie souvent un dépistage ciblé plutôt qu'un dépistage de toute la population.",
+      "corrige": [
+        "a) $P(M) = 0{,}002$, $P(\\overline{M}) = 0{,}998$. $P(T^+) = 0{,}002 \\times 0{,}98 + 0{,}998 \\times 0{,}03 = 0{,}00196 + 0{,}02994 = 0{,}0319$. VPP $= \\dfrac{0{,}00196}{0{,}0319} \\approx 0{,}0614$, soit environ $6{,}1\\,\\%$.",
+        "b) $P(M) = 0{,}30$, $P(\\overline{M}) = 0{,}70$. $P(T^+) = 0{,}30 \\times 0{,}98 + 0{,}70 \\times 0{,}03 = 0{,}294 + 0{,}021 = 0{,}315$. VPP $= \\dfrac{0{,}294}{0{,}315} \\approx 0{,}933$, soit environ $93{,}3\\,\\%$.",
+        "c) Avec exactement le même test, la VPP passe de $6{,}1\\,\\%$ à $93{,}3\\,\\%$ : elle dépend fortement de la **prévalence** de la maladie. En population générale, la maladie est si rare que les faux positifs (issus d'une immense population saine) écrasent les vrais positifs, ce qui multiplie les fausses alertes et l'anxiété inutile. En ciblant les personnes à risque, où $P(M)$ est élevée, un test positif devient nettement plus fiable. C'est le raisonnement de santé publique derrière le dépistage ciblé."
+      ],
+      "reponse": "a) VPP $\\approx 6{,}1\\,\\%$ ; b) VPP $\\approx 93{,}3\\,\\%$ ; c) à test identique, la VPP dépend de la prévalence : le dépistage ciblé (prévalence élevée) limite l'écrasement des vrais positifs par les faux positifs."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "ia-biais",
+      "enonce": "Une banque déploie une intelligence artificielle pour détecter les fraudes par carte. Une transaction sur mille est frauduleuse ($0{,}1\\,\\%$). L'IA, entraînée sur des transactions passées, déclenche une alerte chez $95\\,\\%$ des fraudes réelles (sensibilité) et se trompe (fausse alerte) sur $1\\,\\%$ des transactions honnêtes. a) Une alerte se déclenche : calculer la probabilité que la transaction soit réellement frauduleuse (arrondie au dixième de pourcent). b) Interpréter ce résultat du point de vue du service client. c) On découvre que les données d'entraînement contenaient très peu d'achats à l'étranger : quel type de problème cela pose-t-il, et pourquoi augmenter le volume de données ne suffirait pas forcément à le régler ?",
+      "corrige": [
+        "a) Notons $F$ « transaction frauduleuse » et $A$ « alerte ». $P(F) = 0{,}001$, $P(\\overline{F}) = 0{,}999$, $P_F(A) = 0{,}95$, $P_{\\overline{F}}(A) = 0{,}01$. Probabilités totales : $P(A) = 0{,}001 \\times 0{,}95 + 0{,}999 \\times 0{,}01 = 0{,}00095 + 0{,}00999 = 0{,}01094$. Bayes : $P_A(F) = \\dfrac{0{,}00095}{0{,}01094} \\approx 0{,}0868$, soit environ $8{,}7\\,\\%$.",
+        "b) Sur $100$ alertes, environ $9$ seulement correspondent à de vraies fraudes : plus de $91\\,\\%$ des alertes sont de **fausses alertes**. Bloquer systématiquement les cartes exaspérerait des milliers de clients honnêtes ; il faut donc une vérification humaine ou un ajustement du seuil de l'IA. La rareté de la fraude fait chuter la valeur prédictive positive, exactement comme pour un test médical rare.",
+        "c) C'est un **biais dans les données d'entraînement** (biais d'échantillonnage) : les achats à l'étranger étant sous-représentés, l'IA les a peu « vus » et risque de les classer à tort comme frauduleux. Augmenter simplement le **volume** ne corrige pas un biais **systématique** : si les nouvelles données présentent le même déséquilibre, le défaut persiste. Il faut des données **représentatives** de tous les usages, pas seulement plus nombreuses."
+      ],
+      "reponse": "a) $P_A(F) \\approx 8{,}7\\,\\%$ ; b) plus de $91\\,\\%$ de fausses alertes : nécessité d'une vérification humaine, la rareté fait chuter la VPP ; c) biais d'échantillonnage des données d'entraînement, qu'un simple surcroît de volume ne corrige pas — il faut des données représentatives."
+    }
+  ]
+}
