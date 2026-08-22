@@ -86,6 +86,58 @@
         "Le maximum est donc atteint en $x = \\dfrac{\\pi}{4}$ : $f\\!\\left(\\dfrac{\\pi}{4}\\right) = \\sin\\!\\left(\\dfrac{\\pi}{2}\\right) = 1$. (On vérifie aux bords : $f(0) = 0$ et $f(\\pi) = \\sin(2\\pi) = 0$, tous deux inférieurs à $1$.)"
       ],
       "reponse": "$f$ croît sur $\\left[0\\,;\\,\\dfrac{\\pi}{4}\\right]$, décroît sur $\\left[\\dfrac{\\pi}{4}\\,;\\,\\dfrac{3\\pi}{4}\\right]$, croît sur $\\left[\\dfrac{3\\pi}{4}\\,;\\,\\pi\\right]$ ; maximum $f\\!\\left(\\dfrac{\\pi}{4}\\right) = 1$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "parite-periodicite",
+      "enonce": "Calculer la valeur exacte de $\\cos\\!\\left(-\\dfrac{17\\pi}{6}\\right)$.",
+      "corrige": [
+        "La fonction $\\cos$ est paire : $\\cos\\!\\left(-\\dfrac{17\\pi}{6}\\right) = \\cos\\!\\left(\\dfrac{17\\pi}{6}\\right)$.",
+        "On enlève un tour complet grâce à la période $2\\pi$ : $\\dfrac{17\\pi}{6} = \\dfrac{5\\pi}{6} + 2\\pi$, donc $\\cos\\!\\left(\\dfrac{17\\pi}{6}\\right) = \\cos\\!\\left(\\dfrac{5\\pi}{6}\\right)$.",
+        "Enfin $\\cos\\!\\left(\\dfrac{5\\pi}{6}\\right) = \\cos\\!\\left(\\pi - \\dfrac{\\pi}{6}\\right) = -\\cos\\!\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$.",
+        "Conclusion : $\\cos\\!\\left(-\\dfrac{17\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$."
+      ],
+      "reponse": "$\\cos\\!\\left(-\\dfrac{17\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "equation-cos",
+      "enonce": "Résoudre l'équation $\\cos(x) = -\\dfrac{1}{2}$ sur l'intervalle $[-\\pi\\,;\\,\\pi]$.",
+      "corrige": [
+        "Comme $-1 \\leqslant -\\dfrac{1}{2} \\leqslant 1$, l'équation admet des solutions. On cherche l'angle de référence $\\alpha \\in [0\\,;\\,\\pi]$ tel que $\\cos(\\alpha) = -\\dfrac{1}{2}$ : c'est $\\alpha = \\dfrac{2\\pi}{3}$, car $\\cos\\!\\left(\\dfrac{2\\pi}{3}\\right) = -\\cos\\!\\left(\\dfrac{\\pi}{3}\\right) = -\\dfrac{1}{2}$.",
+        "Par parité du cosinus, $\\cos(-\\alpha) = \\cos(\\alpha) = -\\dfrac{1}{2}$ : la deuxième solution est $-\\dfrac{2\\pi}{3}$.",
+        "Les deux valeurs $\\dfrac{2\\pi}{3}$ et $-\\dfrac{2\\pi}{3}$ appartiennent bien à $[-\\pi\\,;\\,\\pi]$ : ce sont les seules solutions."
+      ],
+      "reponse": "$S = \\left\\{-\\dfrac{2\\pi}{3}\\,;\\,\\dfrac{2\\pi}{3}\\right\\}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "etude-de-fonction",
+      "enonce": "Soit $f$ la fonction définie sur $[0\\,;\\,2\\pi]$ par $f(x) = x + \\cos(x)$. Montrer que $f$ est croissante sur $[0\\,;\\,2\\pi]$, puis donner son minimum et son maximum.",
+      "corrige": [
+        "$f$ est une somme de fonctions dérivables ; sa dérivée est $f'(x) = 1 - \\sin(x)$ (car $\\cos'(x) = -\\sin(x)$ et la dérivée de $x$ est $1$).",
+        "Pour tout réel $x$, on a $\\sin(x) \\leqslant 1$, donc $1 - \\sin(x) \\geqslant 0$ : ainsi $f'(x) \\geqslant 0$ sur $[0\\,;\\,2\\pi]$.",
+        "La dérivée ne s'annule qu'en $x = \\dfrac{\\pi}{2}$ (là où $\\sin(x) = 1$), en un point isolé où elle ne change pas de signe : $f$ est donc croissante sur tout l'intervalle $[0\\,;\\,2\\pi]$.",
+        "Une fonction croissante atteint son minimum à la borne gauche et son maximum à la borne droite : $f(0) = 0 + \\cos(0) = 1$ et $f(2\\pi) = 2\\pi + \\cos(2\\pi) = 2\\pi + 1$."
+      ],
+      "reponse": "$f$ est croissante sur $[0\\,;\\,2\\pi]$ ; minimum $f(0) = 1$, maximum $f(2\\pi) = 2\\pi + 1 \\approx 7{,}28$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme-etude-optimisation",
+      "enonce": "Un mobile se déplace sur un axe gradué en mètres. À l'instant $t$ (en secondes), avec $t \\in [0\\,;\\,2\\pi]$, son abscisse est donnée par $x(t) = 2\\sin(t) - t$. On souhaite savoir à quel instant le mobile est le plus à droite (abscisse maximale). 1. Calculer la vitesse $v(t) = x'(t)$. 2. Résoudre l'équation $v(t) = 0$ sur $[0\\,;\\,2\\pi]$. 3. Étudier le signe de $v(t)$ et dresser le tableau de variations de $x$ sur $[0\\,;\\,2\\pi]$. 4. En déduire l'instant où l'abscisse est maximale et donner cette abscisse (valeur exacte puis valeur approchée au centième). 5. Le mobile repasse-t-il par sa position de départ ? Justifier.",
+      "corrige": [
+        "1. La vitesse est la dérivée de l'abscisse. En dérivant terme à terme, $\\big(2\\sin(t)\\big)' = 2\\cos(t)$ et $(-t)' = -1$, donc $v(t) = x'(t) = 2\\cos(t) - 1$.",
+        "2. $v(t) = 0 \\iff 2\\cos(t) - 1 = 0 \\iff \\cos(t) = \\dfrac{1}{2}$. Sur $[0\\,;\\,2\\pi]$, l'angle de référence est $\\dfrac{\\pi}{3}$ ; la seconde solution s'obtient par symétrie $t \\mapsto 2\\pi - t$, soit $2\\pi - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{3}$. Les solutions sont donc $t = \\dfrac{\\pi}{3}$ et $t = \\dfrac{5\\pi}{3}$.",
+        "3. $v(t) = 2\\cos(t) - 1 > 0 \\iff \\cos(t) > \\dfrac{1}{2}$, ce qui a lieu près de $t = 0$ et de $t = 2\\pi$, c'est-à-dire sur $\\left[0\\,;\\,\\dfrac{\\pi}{3}\\right[$ puis sur $\\left]\\dfrac{5\\pi}{3}\\,;\\,2\\pi\\right]$ ; $v(t) < 0$ sur $\\left]\\dfrac{\\pi}{3}\\,;\\,\\dfrac{5\\pi}{3}\\right[$. Donc $x$ croît sur $\\left[0\\,;\\,\\dfrac{\\pi}{3}\\right]$, décroît sur $\\left[\\dfrac{\\pi}{3}\\,;\\,\\dfrac{5\\pi}{3}\\right]$, puis croît sur $\\left[\\dfrac{5\\pi}{3}\\,;\\,2\\pi\\right]$.",
+        "4. L'abscisse maximale est un maximum : c'est soit le maximum local en $t = \\dfrac{\\pi}{3}$, soit la valeur à la borne droite $t = 2\\pi$. On compare : $x\\!\\left(\\dfrac{\\pi}{3}\\right) = 2\\sin\\!\\left(\\dfrac{\\pi}{3}\\right) - \\dfrac{\\pi}{3} = 2 \\times \\dfrac{\\sqrt{3}}{2} - \\dfrac{\\pi}{3} = \\sqrt{3} - \\dfrac{\\pi}{3} \\approx 0{,}69$, tandis que $x(2\\pi) = 2\\sin(2\\pi) - 2\\pi = -2\\pi \\approx -6{,}28$. Le maximum est donc atteint en $t = \\dfrac{\\pi}{3}$ s, où $x = \\sqrt{3} - \\dfrac{\\pi}{3} \\approx 0{,}69$ m.",
+        "5. La position de départ est $x(0) = 2\\sin(0) - 0 = 0$. Après $t = \\dfrac{\\pi}{3}$, $x$ décroît continûment de $\\approx 0{,}69$ jusqu'à $x\\!\\left(\\dfrac{5\\pi}{3}\\right) = 2\\sin\\!\\left(\\dfrac{5\\pi}{3}\\right) - \\dfrac{5\\pi}{3} = -\\sqrt{3} - \\dfrac{5\\pi}{3} \\approx -6{,}97 < 0$ : par continuité, $x$ prend à nouveau la valeur $0$ entre $\\dfrac{\\pi}{3}$ et $\\dfrac{5\\pi}{3}$. Le mobile repasse donc bien une fois par sa position de départ (puis s'en éloigne vers la gauche)."
+      ],
+      "reponse": "$v(t) = 2\\cos(t) - 1$ ; $v(t) = 0$ pour $t = \\dfrac{\\pi}{3}$ et $t = \\dfrac{5\\pi}{3}$. $x$ croît sur $\\left[0\\,;\\,\\dfrac{\\pi}{3}\\right]$, décroît sur $\\left[\\dfrac{\\pi}{3}\\,;\\,\\dfrac{5\\pi}{3}\\right]$, croît sur $\\left[\\dfrac{5\\pi}{3}\\,;\\,2\\pi\\right]$. Abscisse maximale en $t = \\dfrac{\\pi}{3}$ s : $x = \\sqrt{3} - \\dfrac{\\pi}{3} \\approx 0{,}69$ m. Oui, le mobile repasse une fois par $x = 0$."
     }
   ]
 }

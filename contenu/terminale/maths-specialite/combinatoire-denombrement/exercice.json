@@ -85,6 +85,58 @@
         "$\\binom{7}{3} = \\dfrac{7 \\times 6 \\times 5}{3!} = \\dfrac{210}{6} = 35$ triangles. (Comme aucun trio n'est aligné, chaque choix de $3$ points forme bien un vrai triangle.)"
       ],
       "reponse": "$21$ droites et $35$ triangles."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "arrangement",
+      "enonce": "Lors d'une compétition de natation, $12$ nageuses s'affrontent. On attribue une médaille d'or, une d'argent et une de bronze. De combien de façons différentes le podium peut-il être formé ?",
+      "corrige": [
+        "On choisit $3$ nageuses parmi $12$ pour les trois marches. L'ordre compte (l'or n'est pas l'argent) et une même nageuse ne peut occuper deux places : c'est un arrangement $A_{12}^3$.",
+        "$A_{12}^3 = 12 \\times 11 \\times 10$ (on garde les $3$ premiers facteurs à partir de $12$).",
+        "$12 \\times 11 \\times 10 = 1320$."
+      ],
+      "reponse": "$A_{12}^3 = 1320$ podiums différents."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "combinaison",
+      "enonce": "Un jury de $5$ personnes doit être composé de $3$ enseignants choisis parmi $7$ et de $2$ professionnels choisis parmi $5$. Combien de jurys différents peut-on constituer ?",
+      "corrige": [
+        "La constitution se fait en deux étapes successives (choisir les enseignants **et** choisir les professionnels) : on multipliera les résultats (principe multiplicatif).",
+        "Étape 1 — les $3$ enseignants parmi $7$, sans ordre : $\\binom{7}{3} = \\dfrac{7 \\times 6 \\times 5}{3!} = \\dfrac{210}{6} = 35$.",
+        "Étape 2 — les $2$ professionnels parmi $5$, sans ordre : $\\binom{5}{2} = \\dfrac{5 \\times 4}{2} = 10$.",
+        "On multiplie : $35 \\times 10 = 350$."
+      ],
+      "reponse": "$\\binom{7}{3} \\times \\binom{5}{2} = 350$ jurys."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "combinaison",
+      "enonce": "Dans une classe de $30$ élèves comptant $12$ filles et $18$ garçons, on choisit au hasard une équipe de $5$ élèves (sans ordre). Combien de ces équipes comportent au moins une fille ?",
+      "corrige": [
+        "On passe par le complémentaire : (équipes avec au moins une fille) = (toutes les équipes) − (équipes sans aucune fille, donc uniquement des garçons).",
+        "Toutes les équipes de $5$ élèves parmi $30$, l'ordre ne comptant pas : $\\binom{30}{5} = \\dfrac{30 \\times 29 \\times 28 \\times 27 \\times 26}{5!} = \\dfrac{17\\,100\\,720}{120} = 142\\,506$.",
+        "Équipes composées uniquement de garçons, soit $5$ garçons parmi $18$ : $\\binom{18}{5} = \\dfrac{18 \\times 17 \\times 16 \\times 15 \\times 14}{5!} = \\dfrac{1\\,028\\,160}{120} = 8568$.",
+        "On soustrait : $142\\,506 - 8568 = 133\\,938$."
+      ],
+      "reponse": "$\\binom{30}{5} - \\binom{18}{5} = 133\\,938$ équipes comportent au moins une fille."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "combinaison",
+      "enonce": "Une association compte $15$ membres : $9$ femmes et $6$ hommes. Pour former son bureau, on tire au sort $4$ membres parmi les $15$, chaque tirage de $4$ personnes étant équiprobable. 1) Combien de bureaux de $4$ personnes peut-on former ? 2) Combien de ces bureaux sont composés uniquement de femmes ? 3) Combien comportent exactement $2$ femmes et $2$ hommes ? 4) On tire un bureau au hasard : quelle est la probabilité qu'il comporte exactement $2$ femmes et $2$ hommes ? 5) Quelle est la probabilité que le bureau comporte au moins une femme ?",
+      "corrige": [
+        "1. Un bureau est un sous-ensemble de $4$ membres parmi $15$, sans ordre : c'est une combinaison $\\binom{15}{4}$. $\\binom{15}{4} = \\dfrac{15 \\times 14 \\times 13 \\times 12}{4!} = \\dfrac{32\\,760}{24} = 1365$. Il y a donc $1365$ bureaux possibles.",
+        "2. Un bureau de femmes seulement, c'est $4$ femmes parmi les $9$ : $\\binom{9}{4} = \\dfrac{9 \\times 8 \\times 7 \\times 6}{4!} = \\dfrac{3024}{24} = 126$ bureaux.",
+        "3. On choisit $2$ femmes parmi $9$ **et** $2$ hommes parmi $6$ (deux étapes, on multiplie) : $\\binom{9}{2} \\times \\binom{6}{2} = \\dfrac{9 \\times 8}{2} \\times \\dfrac{6 \\times 5}{2} = 36 \\times 15 = 540$ bureaux.",
+        "4. Les $1365$ bureaux étant équiprobables, la probabilité cherchée est le quotient (cas favorables) / (cas possibles) : $P = \\dfrac{540}{1365}$. On simplifie par $15$ : $\\dfrac{540}{1365} = \\dfrac{36}{91} \\approx 0{,}40$.",
+        "5. On passe par l'événement contraire « aucune femme », c'est-à-dire $4$ hommes parmi $6$ : $\\binom{6}{4} = \\binom{6}{2} = 15$ bureaux, de probabilité $\\dfrac{15}{1365} = \\dfrac{1}{91}$. D'où $P(\\text{au moins une femme}) = 1 - \\dfrac{1}{91} = \\dfrac{90}{91} \\approx 0{,}99$."
+      ],
+      "reponse": "1) $\\binom{15}{4} = 1365$ bureaux. 2) $\\binom{9}{4} = 126$. 3) $\\binom{9}{2}\\binom{6}{2} = 540$. 4) $\\dfrac{540}{1365} = \\dfrac{36}{91} \\approx 0{,}40$. 5) $1 - \\dfrac{1}{91} = \\dfrac{90}{91} \\approx 0{,}99$."
     }
   ]
 }

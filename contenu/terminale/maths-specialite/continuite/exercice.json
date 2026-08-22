@@ -91,6 +91,61 @@
         "Comme $\\ell \\geq 0$, on retient $\\ell = 3$."
       ],
       "reponse": "$\\ell = 3$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "tvi",
+      "enonce": "Soit $f$ la fonction définie sur $[1\\,;2]$ par $f(x) = x^3 + x^2 - 5$. Montrer que l'équation $f(x) = 0$ admet au moins une solution dans $[1\\,;2]$.",
+      "corrige": [
+        "$f$ est un polynôme, donc continue sur $[1\\,;2]$ : l'hypothèse de continuité du théorème des valeurs intermédiaires est vérifiée.",
+        "On calcule les valeurs aux bornes : $f(1) = 1 + 1 - 5 = -3$ et $f(2) = 8 + 4 - 5 = 7$.",
+        "$0$ est compris entre $f(1) = -3$ et $f(2) = 7$. D'après le théorème des valeurs intermédiaires, il existe au moins un réel $c \\in [1\\,;2]$ tel que $f(c) = 0$.",
+        "On n'a pas justifié de stricte monotonie : ici le TVI donne l'existence, mais pas l'unicité de la solution."
+      ],
+      "reponse": "L'équation $f(x) = 0$ admet au moins une solution dans $[1\\,;2]$ (par le TVI)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = x^3 + x - 3$. 1) Montrer que l'équation $f(x) = 0$ admet une unique solution réelle $\\alpha$. 2) Par balayage au pas de $0{,}1$, donner un encadrement de $\\alpha$ d'amplitude $0{,}1$.",
+      "corrige": [
+        "1) $f$ est un polynôme, donc continue et dérivable sur $\\mathbb{R}$. $f'(x) = 3x^2 + 1 > 0$ pour tout $x$ : $f$ est strictement croissante sur $\\mathbb{R}$.",
+        "$\\displaystyle\\lim_{x \\to -\\infty} f(x) = -\\infty$ et $\\displaystyle\\lim_{x \\to +\\infty} f(x) = +\\infty$. Comme $0$ est compris entre ces deux limites et que $f$ est continue et strictement croissante, le théorème de la bijection donne une unique solution $\\alpha \\in \\mathbb{R}$.",
+        "2) On balaie au pas de $0{,}1$ : $f(1{,}2) = 1{,}728 + 1{,}2 - 3 = -0{,}072 < 0$ et $f(1{,}3) = 2{,}197 + 1{,}3 - 3 = 0{,}497 > 0$.",
+        "Le changement de signe a lieu entre $1{,}2$ et $1{,}3$ : donc $1{,}2 < \\alpha < 1{,}3$, encadrement d'amplitude $0{,}1$."
+      ],
+      "reponse": "$f(x) = 0$ admet une unique solution $\\alpha$, avec $1{,}2 < \\alpha < 1{,}3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "point-fixe",
+      "enonce": "Soit $f$ une fonction continue sur $[0\\,;1]$ telle que, pour tout $x \\in [0\\,;1]$, on ait $f(x) \\in [0\\,;1]$. Montrer qu'il existe au moins un réel $c \\in [0\\,;1]$ tel que $f(c) = c$ (un tel réel est appelé point fixe de $f$).",
+      "corrige": [
+        "Idée : se ramener à une équation du type $g(x) = 0$. On introduit la fonction auxiliaire $g$ définie sur $[0\\,;1]$ par $g(x) = f(x) - x$.",
+        "$g$ est continue sur $[0\\,;1]$ comme différence de $f$ (continue par hypothèse) et de la fonction $x \\mapsto x$ (continue).",
+        "Valeurs aux bornes : $g(0) = f(0) - 0 = f(0) \\geq 0$ car $f(0) \\in [0\\,;1]$ ; et $g(1) = f(1) - 1 \\leq 0$ car $f(1) \\in [0\\,;1]$ donc $f(1) \\leq 1$.",
+        "Ainsi $0$ est compris entre $g(1)$ et $g(0)$. Par le théorème des valeurs intermédiaires appliqué à $g$, il existe $c \\in [0\\,;1]$ tel que $g(c) = 0$, c'est-à-dire $f(c) = c$.",
+        "(Cas limites : si $g(0) = 0$ alors $c = 0$ convient ; si $g(1) = 0$ alors $c = 1$ convient. La conclusion reste valable.)"
+      ],
+      "reponse": "En posant $g(x) = f(x) - x$, le TVI fournit un $c \\in [0\\,;1]$ tel que $f(c) = c$ : $f$ admet au moins un point fixe."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme-tvi-suite",
+      "enonce": "**Partie A.** On considère la fonction $g$ définie sur $\\mathbb{R}$ par $g(x) = x^3 + 3x - 5$.\n1. Justifier que $g$ est continue sur $\\mathbb{R}$ et étudier son sens de variation.\n2. Montrer que l'équation $g(x) = 0$ admet une unique solution $\\alpha$ dans $\\mathbb{R}$.\n3. Par balayage au pas de $0{,}1$, donner un encadrement de $\\alpha$ d'amplitude $0{,}1$.\n\n**Partie B.** On considère la fonction $f$ définie sur $[0\\,;+\\infty[$ par $f(x) = \\sqrt{3x + 4}$, ainsi que la suite $(u_n)$ définie par $u_0 = 0$ et, pour tout entier $n$, $u_{n+1} = f(u_n) = \\sqrt{3u_n + 4}$.\n4. Montrer par récurrence que, pour tout entier $n$, $0 \\leq u_n \\leq 4$.\n5. Montrer que la suite $(u_n)$ est croissante.\n6. En déduire que $(u_n)$ converge, puis déterminer sa limite $\\ell$ en utilisant la continuité de $f$.",
+      "corrige": [
+        "1. $g$ est un polynôme : elle est continue (et dérivable) sur $\\mathbb{R}$. $g'(x) = 3x^2 + 3 = 3(x^2 + 1) > 0$ pour tout $x$, donc $g$ est strictement croissante sur $\\mathbb{R}$.",
+        "2. $\\displaystyle\\lim_{x \\to -\\infty} g(x) = -\\infty$ et $\\displaystyle\\lim_{x \\to +\\infty} g(x) = +\\infty$. $g$ est continue et strictement croissante, et $0$ est compris entre ces deux limites : d'après le théorème de la bijection, l'équation $g(x) = 0$ admet une unique solution $\\alpha$ dans $\\mathbb{R}$.",
+        "3. On balaie au pas de $0{,}1$ : $g(1{,}1) = 1{,}331 + 3{,}3 - 5 = -0{,}369 < 0$ et $g(1{,}2) = 1{,}728 + 3{,}6 - 5 = 0{,}328 > 0$. Le changement de signe donne $1{,}1 < \\alpha < 1{,}2$, soit un encadrement d'amplitude $0{,}1$.",
+        "4. Initialisation : $u_0 = 0$, donc $0 \\leq u_0 \\leq 4$. Hérédité : supposons $0 \\leq u_n \\leq 4$. Alors $4 \\leq 3u_n + 4 \\leq 16$, donc $2 \\leq \\sqrt{3u_n + 4} \\leq 4$, c'est-à-dire $2 \\leq u_{n+1} \\leq 4$, et en particulier $0 \\leq u_{n+1} \\leq 4$. Par récurrence, $0 \\leq u_n \\leq 4$ pour tout entier $n$.",
+        "5. Pour $x \\in [0\\,;4]$, comparons $f(x)$ et $x$ : comme les deux membres sont positifs, $\\sqrt{3x + 4} \\geq x \\iff 3x + 4 \\geq x^2 \\iff x^2 - 3x - 4 \\leq 0 \\iff (x - 4)(x + 1) \\leq 0$, ce qui est vrai pour $x \\in [-1\\,;4]$, donc en particulier sur $[0\\,;4]$. Puisque $0 \\leq u_n \\leq 4$, on a $u_{n+1} = f(u_n) \\geq u_n$ : la suite $(u_n)$ est croissante.",
+        "6. $(u_n)$ est croissante et majorée par $4$ : d'après le théorème de la limite monotone, elle converge vers un réel $\\ell$ avec $0 \\leq \\ell \\leq 4$. La fonction $f$ est continue sur $[0\\,;+\\infty[$, donc en $\\ell$. En passant à la limite dans $u_{n+1} = f(u_n)$, on obtient $\\ell = f(\\ell)$, soit $\\sqrt{3\\ell + 4} = \\ell$. En élevant au carré : $\\ell^2 = 3\\ell + 4$, soit $\\ell^2 - 3\\ell - 4 = 0$, dont les racines sont $\\ell = 4$ et $\\ell = -1$. Comme $0 \\leq \\ell \\leq 4$, on conclut $\\ell = 4$."
+      ],
+      "reponse": "Partie A : l'équation $g(x) = 0$ a une unique solution $\\alpha$ avec $1{,}1 < \\alpha < 1{,}2$. Partie B : $(u_n)$ est croissante et majorée par $4$, donc converge, et sa limite est $\\ell = 4$."
     }
   ]
 }

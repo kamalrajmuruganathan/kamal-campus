@@ -91,6 +91,61 @@
         "Le plus petit entier qui convient est donc $n=8$."
       ],
       "reponse": "Au bout de $n = 8$ années."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier l'expression $A = \\ln(e^{4}) - \\ln\\!\\left(\\dfrac{1}{e}\\right) + \\ln 1$.",
+      "corrige": [
+        "Premier terme, par compensation entre $\\ln$ et $\\exp$ : $\\ln(e^{4}) = 4$.",
+        "Deuxième terme : $\\ln\\!\\left(\\dfrac{1}{e}\\right) = -\\ln e = -1$. Attention au signe : ce terme est soustrait, donc $-\\ln\\!\\left(\\dfrac{1}{e}\\right) = -(-1) = +1$.",
+        "Troisième terme, valeur clé : $\\ln 1 = 0$.",
+        "En additionnant : $A = 4 + 1 + 0 = 5$."
+      ],
+      "reponse": "$A = 5$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "derivee",
+      "enonce": "Calculer la dérivée de la fonction $f$ définie sur $]0\\,;+\\infty[$ par $f(x) = x^{2}\\ln x$.",
+      "corrige": [
+        "$f$ est un produit de deux fonctions dérivables sur $]0\\,;+\\infty[$ : $u(x) = x^{2}$ et $v(x) = \\ln x$. On applique la formule $(uv)' = u'v + uv'$.",
+        "On calcule les dérivées : $u'(x) = 2x$ et $v'(x) = \\dfrac{1}{x}$.",
+        "Donc $f'(x) = 2x\\times \\ln x + x^{2}\\times \\dfrac{1}{x} = 2x\\ln x + x$.",
+        "On factorise par $x$ : $f'(x) = x\\,(2\\ln x + 1)$."
+      ],
+      "reponse": "$f'(x) = 2x\\ln x + x = x\\,(2\\ln x + 1)$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "derivee",
+      "enonce": "Soit $f$ la fonction définie sur $]0\\,;+\\infty[$ par $f(x) = \\dfrac{\\ln x}{x}$. Étudier les variations de $f$ et déterminer son maximum, puis calculer $\\lim\\limits_{x\\to 0^{+}} f(x)$ et $\\lim\\limits_{x\\to +\\infty} f(x)$.",
+      "corrige": [
+        "$f$ est un quotient de fonctions dérivables sur $]0\\,;+\\infty[$, avec le dénominateur $x\\neq 0$. On applique $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^{2}}$ avec $u(x)=\\ln x$ ($u'(x)=\\dfrac1x$) et $v(x)=x$ ($v'(x)=1$).",
+        "$f'(x) = \\dfrac{\\frac{1}{x}\\times x - \\ln x \\times 1}{x^{2}} = \\dfrac{1 - \\ln x}{x^{2}}$.",
+        "Sur $]0\\,;+\\infty[$, $x^{2}>0$ : $f'(x)$ est du signe de $1-\\ln x$. Or $1-\\ln x>0 \\iff \\ln x<1 \\iff x<e$.",
+        "Ainsi $f$ est croissante sur $]0\\,;e]$ et décroissante sur $[e\\,;+\\infty[$ : elle admet un maximum en $x=e$, valant $f(e)=\\dfrac{\\ln e}{e}=\\dfrac{1}{e}$.",
+        "En $0^{+}$ : $\\ln x \\to -\\infty$ et $\\dfrac{1}{x}\\to +\\infty$, donc le produit $\\ln x\\times \\dfrac1x \\to -\\infty$. Ainsi $\\lim\\limits_{x\\to 0^{+}} f(x) = -\\infty$.",
+        "En $+\\infty$ : par croissances comparées, $\\lim\\limits_{x\\to +\\infty}\\dfrac{\\ln x}{x} = 0$. La droite $y=0$ est asymptote horizontale."
+      ],
+      "reponse": "$f$ croît sur $]0\\,;e]$ puis décroît sur $[e\\,;+\\infty[$ ; maximum $f(e)=\\dfrac1e$. $\\lim\\limits_{0^{+}} f = -\\infty$ et $\\lim\\limits_{+\\infty} f = 0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "equations",
+      "enonce": "Une application mobile est lancée en ligne. Le nombre d'utilisateurs actifs, exprimé en milliers, $t$ mois après le lancement, est modélisé par $N(t) = 50\\ln(t+1)$ pour $t\\geqslant 0$. On donne les approximations $\\ln 12 \\approx 2{,}485$ et $e^{2}\\approx 7{,}389$.\\n\\n1. Calculer $N(0)$ et interpréter ce résultat dans le contexte.\\n2. Calculer une valeur approchée du nombre d'utilisateurs actifs au bout de $11$ mois.\\n3. Étudier le sens de variation de $N$ sur $[0\\,;+\\infty[$.\\n4. Résoudre l'inéquation $N(t)\\geqslant 100$ et en déduire le nombre entier de mois à partir duquel l'application dépasse $100\\,000$ utilisateurs actifs.\\n5. On note $g(t)=\\dfrac{N(t)}{t}$ le nombre moyen d'utilisateurs gagnés par mois depuis le lancement, pour $t>0$. Déterminer $\\lim\\limits_{t\\to +\\infty} g(t)$ et interpréter.",
+      "corrige": [
+        "1. $N(0) = 50\\ln(0+1) = 50\\ln 1 = 50\\times 0 = 0$. Au moment du lancement ($t=0$), l'application compte $0$ utilisateur actif, ce qui est cohérent.",
+        "2. Au bout de $11$ mois : $N(11) = 50\\ln(11+1) = 50\\ln 12 \\approx 50\\times 2{,}485 = 124{,}25$. L'application compte alors environ $124\\,000$ utilisateurs actifs (le résultat est en milliers).",
+        "3. $N$ est de la forme $50\\ln(u)$ avec $u(t)=t+1>0$ sur $[0\\,;+\\infty[$ et $u'(t)=1$. Donc $N'(t) = 50\\times \\dfrac{u'}{u} = \\dfrac{50}{t+1}$. Comme $t+1>0$, on a $N'(t)>0$ : $N$ est strictement croissante sur $[0\\,;+\\infty[$. Le nombre d'utilisateurs ne cesse d'augmenter.",
+        "4. On résout $50\\ln(t+1)\\geqslant 100$, soit $\\ln(t+1)\\geqslant 2$. On écrit $2=\\ln(e^{2})$ : l'inéquation devient $\\ln(t+1)\\geqslant \\ln(e^{2})$. La fonction $\\ln$ étant strictement croissante (sens conservé), $t+1\\geqslant e^{2}$, d'où $t\\geqslant e^{2}-1 \\approx 7{,}389-1 = 6{,}389$. Le plus petit entier convenant est $t=7$ : c'est au bout de $7$ mois que l'application dépasse $100\\,000$ utilisateurs actifs.",
+        "5. Pour $t>0$, $g(t)=\\dfrac{50\\ln(t+1)}{t}$. Quand $t\\to +\\infty$, $\\ln(t+1)$ se comporte comme $\\ln t$, et par croissances comparées $\\dfrac{\\ln t}{t}\\to 0$. Donc $\\lim\\limits_{t\\to +\\infty} g(t) = 0$. Interprétation : sur le long terme, le nombre moyen d'utilisateurs gagnés par mois tend vers $0$ ; la croissance de l'application ralentit fortement (le logarithme croît de plus en plus lentement)."
+      ],
+      "reponse": "1. $N(0)=0$ (aucun utilisateur au lancement). 2. Environ $124\\,000$ utilisateurs au bout de $11$ mois. 3. $N'(t)=\\dfrac{50}{t+1}>0$ : $N$ strictement croissante. 4. $t\\geqslant e^{2}-1\\approx 6{,}39$, soit dès le $7^{\\text{e}}$ mois. 5. $\\lim\\limits_{+\\infty} g = 0$ : la croissance ralentit."
     }
   ]
 }

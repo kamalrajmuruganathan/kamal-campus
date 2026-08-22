@@ -87,6 +87,58 @@
         "$e^x \\to +\\infty$ et la parenthèse tend vers $1 > 0$, donc par produit la limite est $+\\infty$."
       ],
       "reponse": "$\\displaystyle\\lim_{x \\to +\\infty} \\big(e^x - x^2\\big) = +\\infty$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{7x - 4}{2x + 3}$, puis en déduire l'asymptote horizontale de la courbe représentative de cette fonction.",
+      "corrige": [
+        "Quand $x \\to +\\infty$, le numérateur $7x - 4 \\to +\\infty$ et le dénominateur $2x + 3 \\to +\\infty$ : c'est une forme indéterminée $\\dfrac{\\infty}{\\infty}$.",
+        "On factorise haut et bas par le terme de plus haut degré $x$ : $\\dfrac{7x - 4}{2x + 3} = \\dfrac{x\\big(7 - \\frac{4}{x}\\big)}{x\\big(2 + \\frac{3}{x}\\big)} = \\dfrac{7 - \\frac{4}{x}}{2 + \\frac{3}{x}}$.",
+        "Quand $x \\to +\\infty$ : $\\dfrac{4}{x} \\to 0$ et $\\dfrac{3}{x} \\to 0$, donc le numérateur tend vers $7$ et le dénominateur vers $2$. Le quotient tend vers $\\dfrac{7}{2}$.",
+        "La limite finie $\\dfrac{7}{2}$ en $+\\infty$ se traduit par une asymptote horizontale : la droite $y = \\dfrac{7}{2}$ est asymptote horizontale à la courbe."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{7x - 4}{2x + 3} = \\dfrac{7}{2}$ ; asymptote horizontale $y = \\dfrac{7}{2}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "levee-indetermination",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x \\to +\\infty} \\big(\\sqrt{x^2 + 3x} - x\\big)$.",
+      "corrige": [
+        "Quand $x \\to +\\infty$, $\\sqrt{x^2 + 3x} \\to +\\infty$ et $x \\to +\\infty$ : on est face à une forme indéterminée $\\infty - \\infty$ contenant une racine, on multiplie par la quantité conjuguée.",
+        "Pour $x > 0$ : $\\sqrt{x^2 + 3x} - x = \\dfrac{\\big(\\sqrt{x^2 + 3x} - x\\big)\\big(\\sqrt{x^2 + 3x} + x\\big)}{\\sqrt{x^2 + 3x} + x} = \\dfrac{(x^2 + 3x) - x^2}{\\sqrt{x^2 + 3x} + x} = \\dfrac{3x}{\\sqrt{x^2 + 3x} + x}$.",
+        "Pour $x > 0$, $\\sqrt{x^2 + 3x} = x\\sqrt{1 + \\frac{3}{x}}$, donc $\\dfrac{3x}{\\sqrt{x^2 + 3x} + x} = \\dfrac{3x}{x\\big(\\sqrt{1 + \\frac{3}{x}} + 1\\big)} = \\dfrac{3}{\\sqrt{1 + \\frac{3}{x}} + 1}$.",
+        "Quand $x \\to +\\infty$, $\\dfrac{3}{x} \\to 0$ donc $\\sqrt{1 + \\frac{3}{x}} \\to 1$ : le dénominateur tend vers $1 + 1 = 2$, et le quotient vers $\\dfrac{3}{2}$."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to +\\infty} \\big(\\sqrt{x^2 + 3x} - x\\big) = \\dfrac{3}{2}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{e^x + x}{x^2 + 1}$.",
+      "corrige": [
+        "Quand $x \\to +\\infty$, le numérateur $e^x + x \\to +\\infty$ et le dénominateur $x^2 + 1 \\to +\\infty$ : c'est une forme indéterminée $\\dfrac{\\infty}{\\infty}$.",
+        "On divise numérateur et dénominateur par $x^2$ : $\\dfrac{e^x + x}{x^2 + 1} = \\dfrac{\\frac{e^x}{x^2} + \\frac{1}{x}}{1 + \\frac{1}{x^2}}$.",
+        "Par croissance comparée, $\\dfrac{e^x}{x^2} \\to +\\infty$ ; de plus $\\dfrac{1}{x} \\to 0$, donc le numérateur tend vers $+\\infty$. Le dénominateur $1 + \\dfrac{1}{x^2} \\to 1$.",
+        "Le quotient d'une quantité tendant vers $+\\infty$ par une quantité tendant vers $1 > 0$ tend vers $+\\infty$."
+      ],
+      "reponse": "$\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{e^x + x}{x^2 + 1} = +\\infty$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "croissances-comparees",
+      "enonce": "On considère la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = (x^2 + x)\\,e^{-x} + 1$, et on note $\\mathcal{C}$ sa courbe représentative dans un repère. L'objectif est d'étudier le comportement de $\\mathcal{C}$ aux bornes de $\\mathbb{R}$.\n\n1. Déterminer $\\displaystyle\\lim_{x \\to +\\infty} (x^2 + x)\\,e^{-x}$. En déduire $\\displaystyle\\lim_{x \\to +\\infty} f(x)$ et l'existence d'une asymptote à $\\mathcal{C}$, dont on précisera l'équation.\n\n2. Déterminer $\\displaystyle\\lim_{x \\to -\\infty} x^2 e^{-x}$, puis, en factorisant $(x^2 + x)\\,e^{-x}$ par $x^2 e^{-x}$, déterminer $\\displaystyle\\lim_{x \\to -\\infty} f(x)$.\n\n3. La courbe $\\mathcal{C}$ admet-elle une asymptote horizontale en $-\\infty$ ? Justifier.\n\n4. Pour $x \\neq 0$, on pose $g(x) = \\dfrac{f(x) - 1}{x}$. Simplifier $g(x)$, puis déterminer $\\displaystyle\\lim_{x \\to +\\infty} g(x)$.",
+      "corrige": [
+        "1. On écrit $(x^2 + x)\\,e^{-x} = x^2 e^{-x} + x e^{-x} = \\dfrac{x^2}{e^x} + \\dfrac{x}{e^x}$. Par croissance comparée, $\\dfrac{e^x}{x^n} \\to +\\infty$ donc $\\dfrac{x^n}{e^x} = x^n e^{-x} \\to 0$ pour $n = 1$ et $n = 2$. Les deux termes tendent vers $0$, donc $\\displaystyle\\lim_{x \\to +\\infty} (x^2 + x)\\,e^{-x} = 0$. Par somme, $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 0 + 1 = 1$. La limite finie $1$ en $+\\infty$ donne une asymptote horizontale : la droite $y = 1$ est asymptote à $\\mathcal{C}$ en $+\\infty$.",
+        "2. Quand $x \\to -\\infty$ : $x^2 \\to +\\infty$ et, comme $-x \\to +\\infty$, $e^{-x} \\to +\\infty$ ; par produit $\\displaystyle\\lim_{x \\to -\\infty} x^2 e^{-x} = +\\infty$. On factorise ensuite $(x^2 + x)\\,e^{-x} = x^2 e^{-x}\\Big(1 + \\dfrac{1}{x}\\Big)$ (ce qui lève la forme indéterminée $\\infty - \\infty$ apparue entre $x^2 e^{-x} \\to +\\infty$ et $x e^{-x} \\to -\\infty$). Comme $x^2 e^{-x} \\to +\\infty$ et $1 + \\dfrac{1}{x} \\to 1 > 0$, le produit tend vers $+\\infty$. Donc $\\displaystyle\\lim_{x \\to -\\infty} f(x) = +\\infty$.",
+        "3. Une asymptote horizontale en $-\\infty$ correspondrait à une limite finie de $f$ en $-\\infty$. Or $\\displaystyle\\lim_{x \\to -\\infty} f(x) = +\\infty$ : la limite est infinie, donc $\\mathcal{C}$ n'admet pas d'asymptote horizontale en $-\\infty$.",
+        "4. Pour $x \\neq 0$ : $g(x) = \\dfrac{f(x) - 1}{x} = \\dfrac{(x^2 + x)\\,e^{-x}}{x} = \\dfrac{x(x + 1)\\,e^{-x}}{x} = (x + 1)\\,e^{-x} = x e^{-x} + e^{-x}$. Quand $x \\to +\\infty$, par croissance comparée $x e^{-x} \\to 0$ et $e^{-x} \\to 0$, donc $\\displaystyle\\lim_{x \\to +\\infty} g(x) = 0$."
+      ],
+      "reponse": "1. $\\displaystyle\\lim_{x \\to +\\infty} (x^2 + x)e^{-x} = 0$, donc $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 1$ et $\\mathcal{C}$ admet l'asymptote horizontale $y = 1$ en $+\\infty$. 2. $\\displaystyle\\lim_{x \\to -\\infty} x^2 e^{-x} = +\\infty$ et $\\displaystyle\\lim_{x \\to -\\infty} f(x) = +\\infty$. 3. Pas d'asymptote horizontale en $-\\infty$ (limite infinie). 4. $g(x) = (x + 1)e^{-x}$ et $\\displaystyle\\lim_{x \\to +\\infty} g(x) = 0$."
     }
   ]
 }

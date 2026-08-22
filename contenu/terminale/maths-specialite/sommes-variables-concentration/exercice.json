@@ -86,6 +86,61 @@
         "La condition $n \\geqslant 800$ étant déjà entière, la plus petite taille d'échantillon convenable est $n = 800$."
       ],
       "reponse": "Il faut $n \\geqslant 800$ : un échantillon de $800$ pièces garantit le risque demandé."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "moyenne-echantillon",
+      "enonce": "On dispose d'un échantillon de taille $n = 25$ d'une loi d'espérance $\\mu = 12$ et de variance $V = 8$, c'est-à-dire $25$ variables aléatoires indépendantes et de même loi. On note $S_{25} = X_1 + \\dots + X_{25}$ la somme et $M_{25} = \\dfrac{S_{25}}{25}$ la moyenne. Calculer $E(S_{25})$, $V(S_{25})$, puis $E(M_{25})$, $V(M_{25})$ et $\\sigma(M_{25})$ (valeur approchée au centième).",
+      "corrige": [
+        "Pour un échantillon (variables indépendantes de même loi), la somme vérifie $E(S_n) = n\\mu$ et $V(S_n) = nV$. Ici $E(S_{25}) = 25 \\times 12 = 300$.",
+        "Variance de la somme : $V(S_{25}) = 25 \\times 8 = 200$.",
+        "Pour la moyenne, $E(M_n) = \\mu$ reste inchangé : $E(M_{25}) = 12$.",
+        "La variance de la moyenne est divisée par $n$ : $V(M_{25}) = \\dfrac{V}{n} = \\dfrac{8}{25} = 0{,}32$.",
+        "Écart type de la moyenne : $\\sigma(M_{25}) = \\sqrt{V(M_{25})} = \\sqrt{0{,}32} \\approx 0{,}57$."
+      ],
+      "reponse": "$E(S_{25}) = 300$, $\\;V(S_{25}) = 200$, $\\;E(M_{25}) = 12$, $\\;V(M_{25}) = 0{,}32$, $\\;\\sigma(M_{25}) \\approx 0{,}57$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "binomiale",
+      "enonce": "Une chaîne de production fabrique des composants. Le nombre $X$ de composants défectueux dans un lot de $100$ suit la loi binomiale $\\mathcal{B}(100\\,;\\,0{,}03)$. Le coût de traitement des rebuts (en euros) est modélisé par $C = 2 + 5X$. Calculer l'espérance $E(C)$, la variance $V(C)$ et l'écart type $\\sigma(C)$ du coût (valeurs approchées au centième si besoin).",
+      "corrige": [
+        "**Étape 1 — la loi binomiale.** Pour $X \\sim \\mathcal{B}(100\\,;\\,0{,}03)$ : $E(X) = np = 100 \\times 0{,}03 = 3$ et $V(X) = np(1-p) = 100 \\times 0{,}03 \\times 0{,}97 = 2{,}91$.",
+        "**Étape 2 — la transformation affine $C = 2 + 5X$.** Par linéarité de l'espérance, $E(C) = 2 + 5\\,E(X) = 2 + 5 \\times 3 = 17$.",
+        "Pour la variance, la constante $+2$ ne change rien (elle ne fait que décaler les valeurs) et le facteur $5$ passe au carré : $V(C) = 5^2\\,V(X) = 25 \\times 2{,}91 = 72{,}75$.",
+        "Écart type : $\\sigma(C) = \\sqrt{72{,}75} \\approx 8{,}53$ euros."
+      ],
+      "reponse": "$E(C) = 17$ €, $\\;V(C) = 72{,}75$, $\\;\\sigma(C) \\approx 8{,}53$ €."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "variance-somme",
+      "enonce": "Une variable aléatoire $X$ a pour variance $V(X) = 5$. 1) Un élève écrit : « $V(X + X) = V(X) + V(X) = 10$ ». Expliquer pourquoi ce raisonnement est faux, puis calculer correctement $V(X + X)$. 2) Soit maintenant $Y$ une variable **indépendante** de $X$ et de **même loi** que $X$ (donc $V(Y) = 5$). Calculer $V(X + Y)$. 3) Comparer les deux résultats et conclure sur le rôle de l'indépendance.",
+      "corrige": [
+        "1) La règle $V(A + B) = V(A) + V(B)$ n'est valable que si $A$ et $B$ sont **indépendantes**. Or ici $A = B = X$ : une variable n'est jamais indépendante d'elle-même (connaître $X$ détermine entièrement l'autre terme). Le raisonnement est donc invalide.",
+        "Le bon calcul consiste à voir que $X + X = 2X$, puis à appliquer $V(aX) = a^2 V(X)$ : $V(X + X) = V(2X) = 2^2 \\times V(X) = 4 \\times 5 = 20$.",
+        "2) Comme $X$ et $Y$ sont **indépendantes**, les variances s'ajoutent : $V(X + Y) = V(X) + V(Y) = 5 + 5 = 10$.",
+        "3) On trouve $V(X + X) = 20$ mais $V(X + Y) = 10$, alors que $X$ et $Y$ ont la même loi que $X$. Additionner deux copies **indépendantes** ($10$) n'a pas le même effet qu'additionner une variable à elle-même ($20$) : c'est bien l'indépendance, et non la loi, qui autorise l'addition des variances."
+      ],
+      "reponse": "1) $V(X + X) = V(2X) = 4V(X) = 20$ (l'addition des variances exige l'indépendance, absente ici). 2) $V(X + Y) = 10$. 3) $20 \\neq 10$ : seule l'indépendance permet d'ajouter les variances."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "concentration",
+      "enonce": "Une usine remplit des bouteilles d'eau. On modélise le volume (en mL) d'une bouteille prise au hasard par une variable aléatoire $X$ d'espérance $\\mu = 500$ et de variance $V(X) = 25$. Les bouteilles sont remplies de façon indépendante les unes des autres. 1. Donner l'espérance, la variance et l'écart type du volume $X$ d'une bouteille. 2. Un pack contient $6$ bouteilles. On note $S = X_1 + \\dots + X_6$ le volume total du pack. Calculer $E(S)$, $V(S)$ et $\\sigma(S)$ (valeur approchée au centième). 3. Pour contrôler la production, on prélève un échantillon de $n$ bouteilles et on calcule le volume moyen $M_n$. Exprimer $E(M_n)$ et $V(M_n)$ en fonction de $n$. 4. Pour $n = 100$, majorer, à l'aide de l'inégalité de concentration, la probabilité $P(|M_{100} - 500| \\geqslant 1)$. 5. Déterminer la plus petite taille d'échantillon $n$ garantissant $P(|M_n - 500| \\geqslant 1) \\leqslant 0{,}01$. 6. Interpréter ce résultat à l'aide de la loi des grands nombres.",
+      "corrige": [
+        "1. Par hypothèse, $E(X) = \\mu = 500$ mL et $V(X) = 25$. L'écart type est $\\sigma(X) = \\sqrt{25} = 5$ mL.",
+        "2. Les $6$ bouteilles forment un échantillon (variables indépendantes de même loi). Donc $E(S) = 6\\mu = 6 \\times 500 = 3000$ mL et $V(S) = 6\\,V(X) = 6 \\times 25 = 150$. L'écart type est $\\sigma(S) = \\sqrt{150} \\approx 12{,}25$ mL.",
+        "3. La moyenne conserve l'espérance et divise la variance par $n$ : $E(M_n) = \\mu = 500$ et $V(M_n) = \\dfrac{V(X)}{n} = \\dfrac{25}{n}$.",
+        "4. L'inégalité de concentration s'écrit $P(|M_n - \\mu| \\geqslant \\delta) \\leqslant \\dfrac{V(X)}{n\\,\\delta^2}$. Avec $n = 100$ et $\\delta = 1$ : $P(|M_{100} - 500| \\geqslant 1) \\leqslant \\dfrac{25}{100 \\times 1^2} = \\dfrac{25}{100} = 0{,}25$.",
+        "5. On impose $\\dfrac{25}{n \\times 1^2} \\leqslant 0{,}01$, d'où $n \\geqslant \\dfrac{25}{0{,}01} = 2500$. La plus petite taille convenable est $n = 2500$ bouteilles.",
+        "6. Quand $n$ augmente, le majorant $\\dfrac{25}{n}$ tend vers $0$ : $P(|M_n - 500| \\geqslant 1) \\to 0$. C'est la loi des grands nombres : plus l'échantillon est grand, plus le volume moyen observé se concentre autour de la valeur théorique $500$ mL. Un grand échantillon rend donc le contrôle de plus en plus fiable."
+      ],
+      "reponse": "1. $E(X) = 500$, $V(X) = 25$, $\\sigma(X) = 5$. 2. $E(S) = 3000$, $V(S) = 150$, $\\sigma(S) \\approx 12{,}25$. 3. $E(M_n) = 500$, $V(M_n) = \\dfrac{25}{n}$. 4. $P(|M_{100} - 500| \\geqslant 1) \\leqslant 0{,}25$. 5. $n = 2500$. 6. Loi des grands nombres : $M_n$ se concentre autour de $500$ mL quand $n \\to +\\infty$."
     }
   ]
 }

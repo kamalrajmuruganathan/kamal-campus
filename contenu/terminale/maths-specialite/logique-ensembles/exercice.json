@@ -88,6 +88,59 @@
         "Ici, $\\mathcal{P}(0)$ jouerait le rôle de l'initialisation ; la démonstration complète de l'hérédité relève du chapitre « Suites »."
       ],
       "reponse": "1. Vraie pour $n = 0,1,2,3$. 2. Non : un nombre fini d'exemples ne prouve jamais un « pour tout ». 3. Le raisonnement par récurrence, développé dans le chapitre « Suites »."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "negation",
+      "enonce": "Écrire la négation de chacune des propositions suivantes :\n\n(a) $A : \\forall x \\in \\mathbb{R},\\ \\exists n \\in \\mathbb{N},\\ n > x$ ;\n\n(b) $B : \\forall x \\in \\mathbb{R},\\ (x \\geqslant 2 \\Rightarrow x^2 \\geqslant 4)$ ;\n\n(c) $C : \\exists x \\in \\mathbb{R},\\ (x \\leqslant -1 \\text{ ou } x \\geqslant 1)$.",
+      "corrige": [
+        "On nie de la gauche vers la droite : chaque $\\forall$ devient $\\exists$, chaque $\\exists$ devient $\\forall$, puis on nie l'intérieur.",
+        "(a) L'intérieur $n > x$ se nie en $n \\leqslant x$. En échangeant les deux quantificateurs dans l'ordre : $\\text{non}\\,A : \\exists x \\in \\mathbb{R},\\ \\forall n \\in \\mathbb{N},\\ n \\leqslant x$.",
+        "(b) La négation d'une implication $P \\Rightarrow Q$ est $P \\text{ et } \\text{non } Q$ (jamais une autre implication). Ici $P : x \\geqslant 2$ et $Q : x^2 \\geqslant 4$, donc $\\text{non } Q : x^2 < 4$. Le $\\forall$ devient $\\exists$ : $\\text{non}\\,B : \\exists x \\in \\mathbb{R},\\ (x \\geqslant 2 \\text{ et } x^2 < 4)$.",
+        "(c) L'intérieur est une disjonction ; par De Morgan, $\\text{non}\\,(A \\text{ ou } B) = (\\text{non } A) \\text{ et } (\\text{non } B)$. La négation de « $x \\leqslant -1$ ou $x \\geqslant 1$ » est « $x > -1$ et $x < 1$ ». Le $\\exists$ devient $\\forall$ : $\\text{non}\\,C : \\forall x \\in \\mathbb{R},\\ (x > -1 \\text{ et } x < 1)$."
+      ],
+      "reponse": "(a) $\\exists x \\in \\mathbb{R},\\ \\forall n \\in \\mathbb{N},\\ n \\leqslant x$ ; (b) $\\exists x \\in \\mathbb{R},\\ (x \\geqslant 2 \\text{ et } x^2 < 4)$ ; (c) $\\forall x \\in \\mathbb{R},\\ (x > -1 \\text{ et } x < 1)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "raisonnements",
+      "enonce": "Démontrer, par disjonction de cas, que pour tout entier $n \\in \\mathbb{Z}$, le carré $n^2$ est de la forme $4k$ ou $4k + 1$ avec $k \\in \\mathbb{Z}$ (autrement dit : un carré n'est jamais de la forme $4k + 2$ ni $4k + 3$).",
+      "corrige": [
+        "Tout entier est soit pair, soit impair : ces deux cas recouvrent tout $\\mathbb{Z}$.",
+        "Cas 1 — $n$ pair : on écrit $n = 2p$. Alors $n^2 = 4p^2 = 4k$ avec $k = p^2 \\in \\mathbb{Z}$. Le carré est de la forme $4k$.",
+        "Cas 2 — $n$ impair : on écrit $n = 2p + 1$. Alors $n^2 = 4p^2 + 4p + 1 = 4(p^2 + p) + 1 = 4k + 1$ avec $k = p^2 + p \\in \\mathbb{Z}$. Le carré est de la forme $4k + 1$.",
+        "Les deux cas couvrent tous les entiers : $n^2$ est toujours de la forme $4k$ ou $4k + 1$. En particulier, aucun carré parfait n'est de la forme $4k + 2$ ou $4k + 3$."
+      ],
+      "reponse": "$n^2 = 4p^2$ (forme $4k$) si $n = 2p$, et $n^2 = 4(p^2 + p) + 1$ (forme $4k + 1$) si $n = 2p + 1$. Un carré n'est donc jamais de la forme $4k + 2$ ni $4k + 3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "raisonnements",
+      "enonce": "Soit $r$ un nombre rationnel et $x$ un nombre irrationnel.\n\n1. Démontrer, par l'absurde, que la somme $r + x$ est irrationnelle.\n\n2. En déduire que $1 + \\sqrt{2}$ est irrationnel (on admet que $\\sqrt{2}$ est irrationnel).",
+      "corrige": [
+        "1. Raisonnement par l'absurde : on suppose que $r + x$ est rationnel et on cherche une contradiction.",
+        "1. Supposons donc $r + x \\in \\mathbb{Q}$ ; notons $s = r + x$ ce rationnel. Alors $x = s - r$. Or une différence de deux rationnels est un rationnel (les rationnels sont stables par soustraction). Donc $x \\in \\mathbb{Q}$.",
+        "1. Cela contredit l'hypothèse « $x$ irrationnel ». La supposition est absurde : $r + x$ est donc irrationnel.",
+        "2. On applique le résultat avec $r = 1 \\in \\mathbb{Q}$ et $x = \\sqrt{2}$, irrationnel par hypothèse admise. La somme $1 + \\sqrt{2}$ est donc irrationnelle."
+      ],
+      "reponse": "1. Si $r + x = s$ était rationnel, alors $x = s - r$ serait rationnel (différence de rationnels), ce qui contredit l'irrationalité de $x$ : donc $r + x$ est irrationnel. 2. Avec $r = 1$ et $x = \\sqrt{2}$, $1 + \\sqrt{2}$ est irrationnel."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "raisonnements",
+      "enonce": "Ce problème mobilise plusieurs modes de raisonnement du chapitre. On étudie des propriétés de parité, l'irrationalité, et une inégalité dépendant d'un entier.\n\nPour tout entier naturel $n$, on considère la proposition $A : \\forall n \\in \\mathbb{N},\\ (n \\geqslant 3 \\Rightarrow 2^n > 2n)$.\n\n1. Écrire la négation de la proposition $A$.\n\n2. Démontrer, par disjonction de cas, que pour tout entier $n \\in \\mathbb{Z}$, le nombre $n^2 + 3n$ est pair.\n\n3. Démontrer, en raisonnant par contraposée, l'implication : « si $5n + 2$ est pair, alors $n$ est pair » (où $n$ est un entier).\n\n4. Démontrer, par l'absurde, que $\\sqrt{3}$ est irrationnel. On admettra que, pour un entier $p$, si $3$ divise $p^2$ alors $3$ divise $p$.\n\n5. On revient à la proposition $A$. Quel mode de raisonnement permet d'établir que « $2^n > 2n$ » pour tout $n \\geqslant 3$ ? Vérifier l'étape d'initialisation, et préciser où l'hérédité est traitée. La proposition $A$ est-elle vraie ou fausse ?",
+      "corrige": [
+        "1. On nie l'implication intérieure : $\\text{non}\\,(P \\Rightarrow Q) = P \\text{ et } \\text{non } Q$, avec $P : n \\geqslant 3$ et $Q : 2^n > 2n$, donc $\\text{non } Q : 2^n \\leqslant 2n$. Le $\\forall$ devient $\\exists$ : $\\text{non}\\,A : \\exists n \\in \\mathbb{N},\\ (n \\geqslant 3 \\text{ et } 2^n \\leqslant 2n)$.",
+        "2. Disjonction de cas. Cas 1 — $n$ pair, $n = 2p$ : $n^2 + 3n = 4p^2 + 6p = 2(2p^2 + 3p)$, pair. Cas 2 — $n$ impair, $n = 2p + 1$ : $n^2 = 4p^2 + 4p + 1$ et $3n = 6p + 3$, donc $n^2 + 3n = 4p^2 + 10p + 4 = 2(2p^2 + 5p + 2)$, pair. Les deux cas couvrent $\\mathbb{Z}$ : $n^2 + 3n$ est pair pour tout $n$.",
+        "3. Contraposée. L'implication est $P \\Rightarrow Q$ avec $P : 5n + 2$ pair et $Q : n$ pair. Sa contraposée $\\text{non } Q \\Rightarrow \\text{non } P$ s'énonce : « si $n$ est impair, alors $5n + 2$ est impair ». Supposons $n = 2p + 1$ : $5n + 2 = 10p + 5 + 2 = 10p + 7 = 2(5p + 3) + 1$, qui est impair. La contraposée est vraie ; étant équivalente à l'énoncé de départ, celui-ci est démontré.",
+        "4. Par l'absurde. Supposons $\\sqrt{3}$ rationnel : $\\sqrt{3} = \\dfrac{p}{q}$ avec la fraction irréductible et $q \\neq 0$. En élevant au carré : $3 = \\dfrac{p^2}{q^2}$, soit $p^2 = 3q^2$. Donc $3$ divise $p^2$, et par la propriété admise, $3$ divise $p$ : $p = 3p'$. Alors $9p'^2 = 3q^2$, d'où $q^2 = 3p'^2$ : $3$ divise $q^2$, donc $3$ divise $q$. Ainsi $3$ divise à la fois $p$ et $q$, ce qui contredit l'irréductibilité de $\\dfrac{p}{q}$. La supposition est absurde : $\\sqrt{3}$ est irrationnel.",
+        "5. La propriété « $2^n > 2n$ » dépend de l'entier $n$ et se démontre de proche en proche : c'est le raisonnement par récurrence (prérequis, développé en détail dans le chapitre « Suites »). Initialisation en $n = 3$ : $2^3 = 8$ et $2 \\times 3 = 6$, donc $8 > 6$ : l'initialisation est vérifiée. L'hérédité $\\big(2^n > 2n \\Rightarrow 2^{n+1} > 2(n+1)\\big)$ relève du chapitre « Suites ». La récurrence étant valide, $A$ est vraie (et sa négation de la question 1 est donc fausse)."
+      ],
+      "reponse": "1. $\\text{non}\\,A : \\exists n \\in \\mathbb{N},\\ (n \\geqslant 3 \\text{ et } 2^n \\leqslant 2n)$. 2. $n^2 + 3n$ est pair : $2(2p^2 + 3p)$ si $n = 2p$, $2(2p^2 + 5p + 2)$ si $n = 2p + 1$. 3. Contraposée : $n$ impair $\\Rightarrow 5n + 2 = 2(5p + 3) + 1$ impair ; l'implication est vraie. 4. $\\sqrt{3}$ irrationnel (contradiction : $3$ diviserait $p$ et $q$ irréductibles). 5. Raisonnement par récurrence (chapitre « Suites ») ; initialisation vraie en $n = 3$ ($8 > 6$) ; $A$ est vraie."
     }
   ]
 }

@@ -88,6 +88,61 @@
         "3. Quand $n\\to+\\infty$, $\\dfrac{e}{n+1}\\to 0$. L'encadrement $0\\leqslant I_n\\leqslant \\dfrac{e}{n+1}$ et le théorème des gendarmes donnent $\\displaystyle\\lim_{n\\to+\\infty} I_n = 0.$"
       ],
       "reponse": "$(I_n)$ est décroissante, $0\\leqslant I_n\\leqslant\\dfrac{e}{n+1}$, et $\\displaystyle\\lim_{n\\to+\\infty}I_n=0.$"
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_0^1 (e^x+1)\\,dx$ à l'aide d'une primitive.",
+      "corrige": [
+        "On cherche une primitive $F$ de $f(x)=e^x+1$. Une primitive de $e^x$ est $e^x$ et une primitive de $1$ est $x$, donc $F(x)=e^x+x$.",
+        "On applique $\\displaystyle\\int_0^1 f(x)\\,dx=\\big[F(x)\\big]_0^1=F(1)-F(0)$.",
+        "$F(1)=e^1+1=e+1$ et $F(0)=e^0+0=1$.",
+        "D'où $\\displaystyle\\int_0^1 (e^x+1)\\,dx=(e+1)-1=e.$"
+      ],
+      "reponse": "$\\displaystyle\\int_0^1 (e^x+1)\\,dx = e.$"
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "chasles-bornes-echangees",
+      "enonce": "On donne $\\displaystyle\\int_0^3 f(x)\\,dx=8$ et $\\displaystyle\\int_0^1 f(x)\\,dx=2$. Déterminer $\\displaystyle\\int_3^1 f(x)\\,dx$.",
+      "corrige": [
+        "D'après la relation de Chasles, $\\displaystyle\\int_0^1 f(x)\\,dx+\\int_1^3 f(x)\\,dx=\\int_0^3 f(x)\\,dx$, donc $\\displaystyle\\int_1^3 f(x)\\,dx=\\int_0^3 f-\\int_0^1 f=8-2=6.$",
+        "On cherche $\\displaystyle\\int_3^1 f$, dont les bornes sont échangées par rapport à $\\displaystyle\\int_1^3 f$. Or échanger les bornes change le signe : $\\displaystyle\\int_3^1 f(x)\\,dx=-\\int_1^3 f(x)\\,dx=-6.$"
+      ],
+      "reponse": "$\\displaystyle\\int_3^1 f(x)\\,dx=-6.$"
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "aire-entre-courbes",
+      "enonce": "Soit $f(x)=-x^2+4x$ et $g(x)=x$, de courbes respectives $\\mathcal{C}_f$ et $\\mathcal{C}_g$. **1.** Déterminer les abscisses des points d'intersection de $\\mathcal{C}_f$ et $\\mathcal{C}_g$. **2.** Préciser, entre ces deux abscisses, laquelle des deux courbes est au-dessus de l'autre. **3.** En déduire l'aire, en unités d'aire, du domaine compris entre les deux courbes.",
+      "corrige": [
+        "1. On résout $f(x)=g(x)$ : $-x^2+4x=x$, soit $-x^2+3x=0$, c'est-à-dire $x(-x+3)=0$. Les solutions sont $x=0$ et $x=3$ : les deux courbes se coupent en ces abscisses.",
+        "2. Sur $[0\\,;3]$, étudions le signe de $f(x)-g(x)=-x^2+3x=x(3-x)$. Pour $x\\in[0\\,;3]$, $x\\geqslant 0$ et $3-x\\geqslant 0$, donc $f(x)-g(x)\\geqslant 0$ : la courbe $\\mathcal{C}_f$ est au-dessus de $\\mathcal{C}_g$.",
+        "3. L'aire cherchée vaut donc $\\mathcal{A}=\\displaystyle\\int_0^3\\big(f(x)-g(x)\\big)\\,dx=\\int_0^3(-x^2+3x)\\,dx.$",
+        "Une primitive de $-x^2+3x$ est $-\\dfrac{x^3}{3}+\\dfrac{3x^2}{2}$, d'où $\\mathcal{A}=\\left[-\\dfrac{x^3}{3}+\\dfrac{3x^2}{2}\\right]_0^3=\\left(-\\dfrac{27}{3}+\\dfrac{27}{2}\\right)-0=-9+\\dfrac{27}{2}=\\dfrac{9}{2}.$"
+      ],
+      "reponse": "Les courbes se coupent en $x=0$ et $x=3$, $\\mathcal{C}_f$ est au-dessus de $\\mathcal{C}_g$, et l'aire vaut $\\dfrac{9}{2}$ unités d'aire."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese-integrale",
+      "enonce": "On considère la fonction $f$ définie sur $[0\\,;1]$ par $f(x)=x\\,e^{-x}$, de courbe $\\mathcal{C}_f$. Pour tout entier $n\\geqslant 0$, on pose $I_n=\\displaystyle\\int_0^1 x^n e^{-x}\\,dx$ (on remarquera que $I_1=\\displaystyle\\int_0^1 f(x)\\,dx$). **1.** À l'aide d'une intégration par parties, calculer $I_1$. **2.** Déterminer la valeur moyenne de $f$ sur $[0\\,;1]$. **3.** Soit $g(x)=e^{-x}$. Montrer que sur $[0\\,;1]$ la courbe de $g$ est au-dessus de $\\mathcal{C}_f$, puis calculer l'aire, en unités d'aire, du domaine compris entre les deux courbes. **4.** À l'aide d'une intégration par parties, montrer que pour tout $n\\geqslant 1$, $I_n=n\\,I_{n-1}-\\dfrac{1}{e}$, et en déduire $I_2$. **5.** Montrer que la suite $(I_n)$ est décroissante et que, pour tout $n\\geqslant 0$, $0\\leqslant I_n\\leqslant\\dfrac{1}{n+1}$, puis déterminer sa limite.",
+      "corrige": [
+        "1. On pose $u(x)=x$ et $v'(x)=e^{-x}$, donc $u'(x)=1$ et $v(x)=-e^{-x}$ (fonctions dérivables à dérivées continues sur $[0\\,;1]$). La formule $\\displaystyle\\int_0^1 u\\,v'=\\big[uv\\big]_0^1-\\int_0^1 u'\\,v$ donne $I_1=\\big[-x e^{-x}\\big]_0^1-\\int_0^1(-e^{-x})\\,dx=-e^{-1}+\\int_0^1 e^{-x}\\,dx.$",
+        "1. (fin) Or $\\displaystyle\\int_0^1 e^{-x}\\,dx=\\big[-e^{-x}\\big]_0^1=-e^{-1}+1=1-\\dfrac{1}{e}$, d'où $I_1=-\\dfrac{1}{e}+1-\\dfrac{1}{e}=1-\\dfrac{2}{e}.$",
+        "2. La valeur moyenne de $f$ sur $[0\\,;1]$ est $\\mu=\\dfrac{1}{1-0}\\displaystyle\\int_0^1 f(x)\\,dx=I_1=1-\\dfrac{2}{e}.$",
+        "3. Sur $[0\\,;1]$, $g(x)-f(x)=e^{-x}-x e^{-x}=(1-x)e^{-x}$. Comme $1-x\\geqslant 0$ et $e^{-x}>0$, on a $g(x)\\geqslant f(x)$ : la courbe de $g$ est au-dessus de $\\mathcal{C}_f$.",
+        "3. (fin) L'aire vaut donc $\\mathcal{A}=\\displaystyle\\int_0^1\\big(g(x)-f(x)\\big)\\,dx=\\int_0^1 e^{-x}\\,dx-I_1=\\left(1-\\dfrac{1}{e}\\right)-\\left(1-\\dfrac{2}{e}\\right)=\\dfrac{1}{e}.$",
+        "4. Pour $n\\geqslant 1$, on pose $u(x)=x^n$ et $v'(x)=e^{-x}$, donc $u'(x)=n x^{n-1}$ et $v(x)=-e^{-x}$. Alors $I_n=\\big[-x^n e^{-x}\\big]_0^1-\\int_0^1 n x^{n-1}(-e^{-x})\\,dx=-e^{-1}+n\\int_0^1 x^{n-1}e^{-x}\\,dx=n\\,I_{n-1}-\\dfrac{1}{e}.$",
+        "4. (fin) Avec $n=2$ : $I_2=2\\,I_1-\\dfrac{1}{e}=2\\left(1-\\dfrac{2}{e}\\right)-\\dfrac{1}{e}=2-\\dfrac{4}{e}-\\dfrac{1}{e}=2-\\dfrac{5}{e}.$",
+        "5. Pour $x\\in[0\\,;1]$, $0\\leqslant x\\leqslant 1$ donne $x^{n+1}=x\\cdot x^n\\leqslant x^n$ ; comme $e^{-x}>0$, $x^{n+1}e^{-x}\\leqslant x^n e^{-x}$. En intégrant sur $[0\\,;1]$, $I_{n+1}\\leqslant I_n$ : la suite $(I_n)$ est décroissante.",
+        "5. (fin) Pour $x\\in[0\\,;1]$, $0<e^{-x}\\leqslant 1$ et $x^n\\geqslant 0$, donc $0\\leqslant x^n e^{-x}\\leqslant x^n$. En intégrant, $0\\leqslant I_n\\leqslant\\displaystyle\\int_0^1 x^n\\,dx=\\left[\\dfrac{x^{n+1}}{n+1}\\right]_0^1=\\dfrac{1}{n+1}$. Comme $\\dfrac{1}{n+1}\\to 0$, le théorème des gendarmes donne $\\displaystyle\\lim_{n\\to+\\infty}I_n=0.$"
+      ],
+      "reponse": "1. $I_1=1-\\dfrac{2}{e}$. 2. $\\mu=1-\\dfrac{2}{e}$. 3. Aire $=\\dfrac{1}{e}$ unité d'aire. 4. $I_n=n\\,I_{n-1}-\\dfrac{1}{e}$ et $I_2=2-\\dfrac{5}{e}$. 5. $(I_n)$ est décroissante, $0\\leqslant I_n\\leqslant\\dfrac{1}{n+1}$, et $\\displaystyle\\lim_{n\\to+\\infty}I_n=0.$"
     }
   ]
 }

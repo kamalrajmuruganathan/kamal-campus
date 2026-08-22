@@ -91,6 +91,60 @@
         "Conclusion : si $m\\neq0$, $d$ est sécante à $\\mathcal{P}_m$ (un point d'intersection) ; si $m=0$, $d$ est strictement parallèle à $\\mathcal{P}_0$ (aucune intersection)."
       ],
       "reponse": "Si $m\\neq0$, $d$ et $\\mathcal{P}_m$ sont sécants en un point ($t=\\tfrac1m$) ; si $m=0$, $d$ est strictement parallèle à $\\mathcal{P}_0$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "plans-perpendiculaires",
+      "enonce": "L'espace est muni d'un repère orthonormé. On considère les plans $\\mathcal{P}:2x-y+3z-1=0$, $\\mathcal{P}':x+5y+z+4=0$ et $\\mathcal{P}'':4x-2y+6z+7=0$. 1) Donner un vecteur normal à chacun des trois plans. 2) Démontrer que $\\mathcal{P}$ et $\\mathcal{P}'$ sont perpendiculaires. 3) Déterminer la position relative de $\\mathcal{P}$ et $\\mathcal{P}''$.",
+      "corrige": [
+        "Dans une équation $ax+by+cz+d=0$, les coefficients $(a,b,c)$ donnent directement un vecteur normal. Donc $\\vec{n}\\begin{pmatrix}2\\\\-1\\\\3\\end{pmatrix}$ est normal à $\\mathcal{P}$, $\\vec{n'}\\begin{pmatrix}1\\\\5\\\\1\\end{pmatrix}$ à $\\mathcal{P}'$ et $\\vec{n''}\\begin{pmatrix}4\\\\-2\\\\6\\end{pmatrix}$ à $\\mathcal{P}''$.",
+        "Deux plans sont perpendiculaires si et seulement si leurs vecteurs normaux sont orthogonaux. On calcule $\\vec{n}\\cdot\\vec{n'}=2\\times1+(-1)\\times5+3\\times1=2-5+3=0$, donc $\\mathcal{P}\\perp\\mathcal{P}'$.",
+        "On compare $\\vec{n}$ et $\\vec{n''}$ : $\\vec{n''}\\begin{pmatrix}4\\\\-2\\\\6\\end{pmatrix}=2\\begin{pmatrix}2\\\\-1\\\\3\\end{pmatrix}=2\\,\\vec{n}$. Les normaux sont colinéaires : les plans $\\mathcal{P}$ et $\\mathcal{P}''$ sont parallèles.",
+        "Sont-ils confondus ? En multipliant l'équation de $\\mathcal{P}$ par $2$ on obtient $4x-2y+6z-2=0$ ; le terme constant ($-2$) diffère de celui de $\\mathcal{P}''$ ($+7$). Les deux plans sont donc strictement parallèles (non confondus)."
+      ],
+      "reponse": "$\\vec{n}(2,-1,3)$, $\\vec{n'}(1,5,1)$, $\\vec{n''}(4,-2,6)$ ; $\\mathcal{P}\\perp\\mathcal{P}'$ car $\\vec{n}\\cdot\\vec{n'}=0$ ; $\\mathcal{P}$ et $\\mathcal{P}''$ sont strictement parallèles ($\\vec{n''}=2\\vec{n}$, constantes différentes)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "angle-triangle",
+      "enonce": "Dans un repère orthonormé, on donne les points $A(1,0,2)$, $B(3,1,1)$ et $C(2,-1,3)$. 1) Calculer $\\vec{AB}\\cdot\\vec{AC}$ et en déduire que le triangle $ABC$ est rectangle en $A$. 2) Calculer l'aire du triangle $ABC$.",
+      "corrige": [
+        "On calcule les coordonnées des vecteurs : $\\vec{AB}\\begin{pmatrix}3-1\\\\1-0\\\\1-2\\end{pmatrix}=\\begin{pmatrix}2\\\\1\\\\-1\\end{pmatrix}$ et $\\vec{AC}\\begin{pmatrix}2-1\\\\-1-0\\\\3-2\\end{pmatrix}=\\begin{pmatrix}1\\\\-1\\\\1\\end{pmatrix}$.",
+        "Produit scalaire : $\\vec{AB}\\cdot\\vec{AC}=2\\times1+1\\times(-1)+(-1)\\times1=2-1-1=0$. Comme $\\vec{AB}\\cdot\\vec{AC}=0$, les vecteurs $\\vec{AB}$ et $\\vec{AC}$ sont orthogonaux : le triangle $ABC$ est rectangle en $A$.",
+        "Les côtés de l'angle droit sont $[AB]$ et $[AC]$. On calcule leurs longueurs : $\\|\\vec{AB}\\|=\\sqrt{2^2+1^2+(-1)^2}=\\sqrt{6}$ et $\\|\\vec{AC}\\|=\\sqrt{1^2+(-1)^2+1^2}=\\sqrt{3}$.",
+        "Le triangle étant rectangle en $A$, son aire vaut $\\dfrac12\\times AB\\times AC=\\dfrac12\\times\\sqrt6\\times\\sqrt3=\\dfrac12\\sqrt{18}=\\dfrac{3\\sqrt2}{2}$."
+      ],
+      "reponse": "$\\vec{AB}\\cdot\\vec{AC}=0$, donc $ABC$ est rectangle en $A$ ; son aire vaut $\\dfrac{3\\sqrt2}{2}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "projete-orthogonal-droite",
+      "enonce": "Dans un repère orthonormé, on considère le point $M(4,-1,3)$ et la droite $d$ passant par $A(1,0,1)$ et dirigée par $\\vec{u}\\begin{pmatrix}2\\\\1\\\\2\\end{pmatrix}$. 1) Déterminer le projeté orthogonal $H$ de $M$ sur la droite $d$. 2) En déduire la distance de $M$ à la droite $d$. 3) Vérifier que le point $A$ est plus éloigné de $M$ que ne l'est $H$, ce qui illustre que $H$ réalise la distance minimale.",
+      "corrige": [
+        "Un point courant de $d$ s'écrit $H=A+t\\,\\vec{u}$, soit $H(1+2t,\\ t,\\ 1+2t)$ avec $t\\in\\mathbb{R}$. Le projeté orthogonal est le point de $d$ pour lequel $\\vec{MH}$ est orthogonal à la direction $\\vec{u}$.",
+        "On forme $\\vec{MH}\\begin{pmatrix}(1+2t)-4\\\\ t-(-1)\\\\ (1+2t)-3\\end{pmatrix}=\\begin{pmatrix}2t-3\\\\ t+1\\\\ 2t-2\\end{pmatrix}$, puis on impose $\\vec{MH}\\cdot\\vec{u}=0$ : $2(2t-3)+1(t+1)+2(2t-2)=0$, soit $4t-6+t+1+4t-4=0$, c'est-à-dire $9t-9=0$, d'où $t=1$.",
+        "Pour $t=1$ : $H(1+2,\\ 1,\\ 1+2)=H(3,1,3)$. (Contrôle : $\\vec{MH}\\begin{pmatrix}-1\\\\2\\\\0\\end{pmatrix}$ et $\\vec{MH}\\cdot\\vec{u}=-2+2+0=0$ ✓.)",
+        "La distance de $M$ à $d$ est $MH=\\sqrt{(-1)^2+2^2+0^2}=\\sqrt{1+4}=\\sqrt5$.",
+        "On compare avec $A$ : $\\vec{MA}\\begin{pmatrix}1-4\\\\0+1\\\\1-3\\end{pmatrix}=\\begin{pmatrix}-3\\\\1\\\\-2\\end{pmatrix}$, donc $MA=\\sqrt{9+1+4}=\\sqrt{14}$. Comme $\\sqrt{14}>\\sqrt5$, le point $A$ de $d$ est bien plus éloigné de $M$ que ne l'est $H$ : $H$ est le point de $d$ le plus proche de $M$."
+      ],
+      "reponse": "$H(3,1,3)$ ; $d(M,d)=MH=\\sqrt5$ ; $MA=\\sqrt{14}>\\sqrt5$, ce qui confirme que $H$ réalise la distance minimale."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "geometrie-repere-espace",
+      "enonce": "L'espace est muni d'un repère orthonormé. On considère le cube $ABCDEFGH$ de côté $3$ dont les sommets ont pour coordonnées $A(0,0,0)$, $B(3,0,0)$, $C(3,3,0)$, $D(0,3,0)$, $E(0,0,3)$, $F(3,0,3)$, $G(3,3,3)$ et $H(0,3,3)$. On s'intéresse au plan $(BDE)$. 1) Calculer $\\vec{BD}\\cdot\\vec{BE}$ et en déduire une mesure de l'angle $\\widehat{DBE}$. 2) Démontrer que le vecteur $\\vec{n}\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix}$ est normal au plan $(BDE)$, puis déterminer une équation cartésienne de ce plan. 3) Déterminer le projeté orthogonal $K$ du point $A$ sur le plan $(BDE)$, puis la distance de $A$ à $(BDE)$. 4) Donner une représentation paramétrique de la droite $(AG)$, démontrer qu'elle est orthogonale au plan $(BDE)$ et vérifier qu'elle coupe ce plan au point $K$. 5) Calculer la distance du point $G$ au plan $(BDE)$.",
+      "corrige": [
+        "1. On a $\\vec{BD}\\begin{pmatrix}0-3\\\\3-0\\\\0-0\\end{pmatrix}=\\begin{pmatrix}-3\\\\3\\\\0\\end{pmatrix}$ et $\\vec{BE}\\begin{pmatrix}0-3\\\\0-0\\\\3-0\\end{pmatrix}=\\begin{pmatrix}-3\\\\0\\\\3\\end{pmatrix}$. Donc $\\vec{BD}\\cdot\\vec{BE}=(-3)(-3)+3\\times0+0\\times3=9$. Or $\\|\\vec{BD}\\|=\\sqrt{9+9}=3\\sqrt2$ et $\\|\\vec{BE}\\|=\\sqrt{9+9}=3\\sqrt2$, d'où $\\cos\\widehat{DBE}=\\dfrac{\\vec{BD}\\cdot\\vec{BE}}{\\|\\vec{BD}\\|\\,\\|\\vec{BE}\\|}=\\dfrac{9}{3\\sqrt2\\times3\\sqrt2}=\\dfrac{9}{18}=\\dfrac12$, soit $\\widehat{DBE}=60°$.",
+        "2. $\\vec{BD}$ et $\\vec{BE}$ sont deux vecteurs non colinéaires du plan $(BDE)$. On vérifie $\\vec{n}\\cdot\\vec{BD}=1\\times(-3)+1\\times3+1\\times0=0$ et $\\vec{n}\\cdot\\vec{BE}=1\\times(-3)+1\\times0+1\\times3=0$ : $\\vec{n}$ est orthogonal à deux vecteurs directeurs non colinéaires, donc $\\vec{n}\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix}$ est normal à $(BDE)$. L'équation s'écrit alors $x+y+z+d=0$ ; en écrivant que $B(3,0,0)$ appartient au plan : $3+0+0+d=0$, d'où $d=-3$. Une équation cartésienne de $(BDE)$ est $x+y+z-3=0$ (contrôle : $D(0,3,0)$ et $E(0,0,3)$ la vérifient).",
+        "3. Le projeté orthogonal $K$ de $A$ sur $(BDE)$ est le point du plan tel que $\\vec{AK}$ soit colinéaire à $\\vec{n}$. La droite passant par $A(0,0,0)$ et dirigée par $\\vec{n}$ a pour représentation $\\begin{cases}x=t\\\\ y=t\\\\ z=t\\end{cases}$. On l'injecte dans l'équation du plan : $t+t+t-3=0$, soit $3t=3$, donc $t=1$. Ainsi $K(1,1,1)$. La distance vaut $d(A,(BDE))=AK=\\sqrt{1^2+1^2+1^2}=\\sqrt3$.",
+        "4. $\\vec{AG}\\begin{pmatrix}3\\\\3\\\\3\\end{pmatrix}=3\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix}=3\\,\\vec{n}$ est un vecteur directeur de $(AG)$ ; comme il est colinéaire au vecteur normal $\\vec{n}$ du plan, la droite $(AG)$ est orthogonale à $(BDE)$. Une représentation paramétrique de $(AG)$, avec le point $A(0,0,0)$ et le vecteur directeur $\\vec{n}$, est $\\begin{cases}x=t\\\\ y=t\\\\ z=t\\end{cases}$ ($t\\in\\mathbb{R}$). Son intersection avec $(BDE)$ est donnée par $3t-3=0$, soit $t=1$, ce qui redonne le point $K(1,1,1)$ : la droite $(AG)$ coupe le plan $(BDE)$ en $K$.",
+        "5. Le point $G$ appartient à la droite $(AG)$, qui est orthogonale au plan et le rencontre en $K$ : $K$ est donc aussi le projeté orthogonal de $G$ sur $(BDE)$. La distance cherchée est $GK$ avec $\\vec{GK}\\begin{pmatrix}1-3\\\\1-3\\\\1-3\\end{pmatrix}=\\begin{pmatrix}-2\\\\-2\\\\-2\\end{pmatrix}$, d'où $d(G,(BDE))=GK=\\sqrt{(-2)^2+(-2)^2+(-2)^2}=\\sqrt{12}=2\\sqrt3$."
+      ],
+      "reponse": "1. $\\vec{BD}\\cdot\\vec{BE}=9$ et $\\widehat{DBE}=60°$ (le triangle $BDE$ est équilatéral de côté $3\\sqrt2$). 2. $\\vec{n}(1,1,1)$ est normal à $(BDE)$, d'équation $x+y+z-3=0$. 3. Projeté $K(1,1,1)$ et $d(A,(BDE))=\\sqrt3$. 4. $(AG)$ : $x=y=z=t$ ; elle est orthogonale au plan car $\\vec{AG}=3\\vec{n}$, et le coupe en $K$. 5. $d(G,(BDE))=2\\sqrt3$."
     }
   ]
 }

@@ -89,6 +89,58 @@
         "Interprétation : au fil des rebonds, la hauteur devient aussi petite que l'on veut ; la balle finit par ne pratiquement plus rebondir. C'est un phénomène d'amortissement, typique du cas $|q| < 1$."
       ],
       "reponse": "a) $h_n = 2 \\times 0{,}8^{\\,n}$ ; b) $h_n \\to 0$ (la balle s'arrête peu à peu de rebondir)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "comparaison",
+      "enonce": "Montrer que la suite définie pour $n \\geq 0$ par $u_n = n + (-1)^n$ tend vers $+\\infty$.",
+      "corrige": [
+        "Pour tout entier $n$, on a $(-1)^n \\geq -1$ (ce terme vaut $+1$ ou $-1$). En ajoutant $n$ aux deux membres : $u_n = n + (-1)^n \\geq n - 1$.",
+        "Or la suite de terme général $n - 1$ tend vers $+\\infty$ quand $n \\to +\\infty$.",
+        "D'après le théorème de comparaison : comme $u_n \\geq n - 1$ à partir du rang $0$ et que $n - 1 \\to +\\infty$, on en déduit $u_n \\to +\\infty$. (La suite $(u_n)$ n'est pas croissante — elle oscille légèrement — mais elle tend bien vers $+\\infty$.)"
+      ],
+      "reponse": "$u_n \\to +\\infty$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "operations-limites",
+      "enonce": "Déterminer la limite de la suite définie pour $n \\geq 1$ par $u_n = \\dfrac{3n^2 - n}{2n^2 + 5}$.",
+      "corrige": [
+        "Le numérateur $3n^2 - n \\to +\\infty$ et le dénominateur $2n^2 + 5 \\to +\\infty$ : c'est une forme indéterminée $\\dfrac{\\infty}{\\infty}$, on ne peut pas conclure directement.",
+        "On factorise le numérateur et le dénominateur par $n^2$ (le terme de plus haut degré) : $u_n = \\dfrac{n^2\\left(3 - \\frac{1}{n}\\right)}{n^2\\left(2 + \\frac{5}{n^2}\\right)}$, puis on simplifie par $n^2$ (non nul) : $u_n = \\dfrac{3 - \\frac{1}{n}}{2 + \\frac{5}{n^2}}$.",
+        "Quand $n \\to +\\infty$ : $\\dfrac{1}{n} \\to 0$ et $\\dfrac{5}{n^2} \\to 0$. Le numérateur tend donc vers $3$ et le dénominateur vers $2$, d'où $u_n \\to \\dfrac{3}{2}$. La factorisation a levé l'indétermination."
+      ],
+      "reponse": "$u_n \\to \\dfrac{3}{2}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "gendarmes",
+      "enonce": "Pour tout entier $n \\geq 1$, on pose $u_n = \\dfrac{1}{n^2 + 1} + \\dfrac{1}{n^2 + 2} + \\dots + \\dfrac{1}{n^2 + n}$ (somme de $n$ termes). Déterminer $\\lim\\limits_{n \\to +\\infty} u_n$.",
+      "corrige": [
+        "La somme comporte $n$ termes, tous de la forme $\\dfrac{1}{n^2 + k}$ pour $k$ variant de $1$ à $n$. Le plus grand terme correspond à $k = 1$ et le plus petit à $k = n$ : pour chacun, $\\dfrac{1}{n^2 + n} \\leq \\dfrac{1}{n^2 + k} \\leq \\dfrac{1}{n^2 + 1}$.",
+        "En additionnant ces $n$ encadrements (il y a $n$ termes) : $n \\times \\dfrac{1}{n^2 + n} \\leq u_n \\leq n \\times \\dfrac{1}{n^2 + 1}$, soit $\\dfrac{n}{n^2 + n} \\leq u_n \\leq \\dfrac{n}{n^2 + 1}$.",
+        "La borne de gauche se simplifie : $\\dfrac{n}{n^2 + n} = \\dfrac{n}{n(n + 1)} = \\dfrac{1}{n + 1} \\to 0$. La borne de droite $\\dfrac{n}{n^2 + 1} = \\dfrac{\\frac{1}{n}}{1 + \\frac{1}{n^2}} \\to 0$ également.",
+        "Les deux bornes convergent vers la même limite $0$ ; d'après le théorème des gendarmes, $u_n \\to 0$."
+      ],
+      "reponse": "$u_n \\to 0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "recurrence",
+      "enonce": "Une plateforme de streaming compte $10$ milliers d'abonnés au $1^{\\text{er}}$ janvier $2026$. On modélise le nombre d'abonnés, en milliers, par la suite $(u_n)$, où $u_n$ désigne le nombre d'abonnés au $1^{\\text{er}}$ janvier de l'année $2026 + n$. Chaque année, la plateforme conserve $70\\,\\%$ de ses abonnés et en gagne $6$ milliers de nouveaux. On a donc $u_0 = 10$ et, pour tout entier $n \\geq 0$, $u_{n+1} = 0{,}7\\,u_n + 6$. 1. Calculer $u_1$ et $u_2$. 2. Démontrer par récurrence que, pour tout entier $n \\geq 0$, $u_n < 20$. 3. Étudier le sens de variation de $(u_n)$, puis justifier qu'elle est convergente. 4. On pose $v_n = u_n - 20$. Montrer que $(v_n)$ est géométrique, préciser sa raison et son premier terme, puis exprimer $v_n$, et enfin $u_n$, en fonction de $n$. 5. Déterminer $\\lim\\limits_{n \\to +\\infty} u_n$ et interpréter le résultat dans le contexte. 6. Déterminer le plus petit entier $n$ pour lequel $u_n \\geq 19{,}5$, et écrire un algorithme de seuil qui renvoie cette valeur.",
+      "corrige": [
+        "1. On applique la relation de récurrence : $u_1 = 0{,}7 \\times 10 + 6 = 7 + 6 = 13$, puis $u_2 = 0{,}7 \\times 13 + 6 = 9{,}1 + 6 = 15{,}1$.",
+        "2. Notons $P(n)$ la propriété « $u_n < 20$ ». Initialisation : $u_0 = 10 < 20$, donc $P(0)$ est vraie. Hérédité : supposons $u_k < 20$ pour un entier $k \\geq 0$ fixé. En multipliant par $0{,}7 > 0$ puis en ajoutant $6$ : $u_{k+1} = 0{,}7\\,u_k + 6 < 0{,}7 \\times 20 + 6 = 14 + 6 = 20$. Donc $P(k+1)$ est vraie. Par récurrence, $u_n < 20$ pour tout $n \\geq 0$.",
+        "3. On étudie le signe de $u_{n+1} - u_n = (0{,}7\\,u_n + 6) - u_n = -0{,}3\\,u_n + 6 = 0{,}3\\,(20 - u_n)$. D'après la question 2, $u_n < 20$, donc $20 - u_n > 0$ et $u_{n+1} - u_n > 0$ : la suite $(u_n)$ est strictement croissante. Étant croissante et majorée par $20$, elle converge d'après le théorème de la convergence monotone.",
+        "4. Pour tout $n \\geq 0$ : $v_{n+1} = u_{n+1} - 20 = 0{,}7\\,u_n + 6 - 20 = 0{,}7\\,u_n - 14 = 0{,}7\\,(u_n - 20) = 0{,}7\\,v_n$. La suite $(v_n)$ est donc géométrique de raison $q = 0{,}7$ et de premier terme $v_0 = u_0 - 20 = 10 - 20 = -10$. On en déduit $v_n = v_0 \\times q^n = -10 \\times 0{,}7^{\\,n}$, puis, comme $u_n = v_n + 20$, on obtient $u_n = 20 - 10 \\times 0{,}7^{\\,n}$.",
+        "5. Comme $|0{,}7| < 1$, on a $0{,}7^{\\,n} \\to 0$, donc $u_n = 20 - 10 \\times 0{,}7^{\\,n} \\to 20 - 0 = 20$. Interprétation : à long terme, le nombre d'abonnés se stabilise autour de $20$ milliers, soit $20\\,000$ abonnés. Ceci confirme la convergence annoncée à la question 3.",
+        "6. On résout l'inéquation $u_n \\geq 19{,}5$ : $20 - 10 \\times 0{,}7^{\\,n} \\geq 19{,}5 \\iff 10 \\times 0{,}7^{\\,n} \\leq 0{,}5 \\iff 0{,}7^{\\,n} \\leq 0{,}05$. À la calculatrice, $0{,}7^{\\,8} \\approx 0{,}0576 > 0{,}05$ tandis que $0{,}7^{\\,9} \\approx 0{,}0404 \\leq 0{,}05$ : le plus petit entier convenable est $n = 9$ (soit le $1^{\\text{er}}$ janvier $2035$). Algorithme de seuil correspondant : $n \\gets 0$ ; $u \\gets 10$ ; tant que $u < 19{,}5$, faire $u \\gets 0{,}7 \\times u + 6$ puis $n \\gets n + 1$ ; en sortie de boucle, afficher $n$. Cet algorithme renvoie $n = 9$."
+      ],
+      "reponse": "1. $u_1 = 13$ et $u_2 = 15{,}1$. 2-3. $u_n < 20$ pour tout $n$, la suite est croissante donc convergente. 4. $v_n = -10 \\times 0{,}7^{\\,n}$ et $u_n = 20 - 10 \\times 0{,}7^{\\,n}$. 5. $u_n \\to 20$ (stabilisation vers $20\\,000$ abonnés). 6. On a $u_n \\geq 19{,}5$ pour la première fois au rang $n = 9$."
     }
   ]
 }

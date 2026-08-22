@@ -88,6 +88,62 @@
         "Le plan $(ABCD)$ est dirigé par $(\\overrightarrow{AB},\\overrightarrow{AD})$. Le vecteur directeur $\\overrightarrow{IJ} = \\overrightarrow{AD}$ appartient à cette direction, et $I$ (de troisième coordonnée $1$) n'appartient pas au plan $(ABCD)$ (dont les points ont une troisième coordonnée nulle). La droite $(IJ)$ est donc strictement parallèle au plan $(ABCD)$."
       ],
       "reponse": "$\\overrightarrow{IJ} = (0\\,;1\\,;0) = \\overrightarrow{AD}$ ; $(IJ)$ est strictement parallèle à la droite $(AD)$ et strictement parallèle au plan $(ABCD)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "alignement",
+      "enonce": "L'espace est muni d'un repère $(O\\,;\\overrightarrow{i},\\overrightarrow{j},\\overrightarrow{k})$. On donne les points $A(-1\\,;2\\,;0)$, $B(1\\,;3\\,;2)$ et $C(5\\,;5\\,;6)$. Les points $A$, $B$ et $C$ sont-ils alignés ?",
+      "corrige": [
+        "Trois points sont alignés si et seulement si les vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ sont colinéaires. On calcule leurs coordonnées par différence des coordonnées d'extrémité et d'origine.",
+        "$\\overrightarrow{AB} = (1-(-1)\\,;\\,3-2\\,;\\,2-0) = (2\\,;1\\,;2)$ et $\\overrightarrow{AC} = (5-(-1)\\,;\\,5-2\\,;\\,6-0) = (6\\,;3\\,;6)$.",
+        "On cherche un réel $k$ tel que $\\overrightarrow{AC} = k\\,\\overrightarrow{AB}$ : $6 = k\\times 2$ donne $k=3$, $3 = k\\times 1$ donne $k=3$, $6 = k\\times 2$ donne $k=3$. Le même coefficient $k=3$ convient pour les trois coordonnées.",
+        "Ainsi $\\overrightarrow{AC} = 3\\,\\overrightarrow{AB}$ : les deux vecteurs sont colinéaires, donc les points $A$, $B$ et $C$ sont alignés."
+      ],
+      "reponse": "Oui, $A$, $B$, $C$ sont alignés car $\\overrightarrow{AC} = 3\\,\\overrightarrow{AB}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "coplanarite",
+      "enonce": "Dans un repère $(O\\,;\\overrightarrow{i},\\overrightarrow{j},\\overrightarrow{k})$, on considère $A(1\\,;0\\,;0)$, $B(2\\,;1\\,;2)$, $C(0\\,;2\\,;1)$ et $D(4\\,;0\\,;3)$. Ces quatre points sont-ils coplanaires ?",
+      "corrige": [
+        "On étudie la coplanarité de $A$, $B$, $C$, $D$ à l'aide des vecteurs $\\overrightarrow{AB}$, $\\overrightarrow{AC}$ et $\\overrightarrow{AD}$ : $\\overrightarrow{AB} = (1\\,;1\\,;2)$, $\\overrightarrow{AC} = (-1\\,;2\\,;1)$ et $\\overrightarrow{AD} = (3\\,;0\\,;3)$.",
+        "Première étape : $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ ne sont pas colinéaires (par exemple $-1 = k\\times 1$ imposerait $k=-1$, mais alors $2 = k\\times 1 = -1$ est faux). Ils dirigent donc bien un plan, le plan $(ABC)$.",
+        "Deuxième étape : on cherche $s$ et $t$ tels que $\\overrightarrow{AD} = s\\,\\overrightarrow{AB} + t\\,\\overrightarrow{AC}$. Cela donne le système $s - t = 3$, $s + 2t = 0$, $2s + t = 3$.",
+        "Les deux premières équations donnent, par soustraction, $-3t = 3$ soit $t = -1$, puis $s = 3 + t = 2$. On vérifie la troisième : $2s + t = 4 - 1 = 3$, ce qui est correct.",
+        "Le système a une solution $(s\\,;t) = (2\\,;-1)$ : $\\overrightarrow{AD} = 2\\,\\overrightarrow{AB} - \\overrightarrow{AC}$. Donc $D$ appartient au plan $(ABC)$ et les quatre points sont coplanaires."
+      ],
+      "reponse": "Oui, les quatre points sont coplanaires car $\\overrightarrow{AD} = 2\\,\\overrightarrow{AB} - \\overrightarrow{AC}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "positions-relatives",
+      "enonce": "Dans un repère $(O\\,;\\overrightarrow{i},\\overrightarrow{j},\\overrightarrow{k})$, la droite $(d)$ passe par $A(1\\,;2\\,;1)$ et a pour vecteur directeur $\\overrightarrow{u}\\,(1\\,;-1\\,;2)$. La droite $(d')$ passe par $B(0\\,;0\\,;0)$ et a pour vecteur directeur $\\overrightarrow{v}\\,(2\\,;1\\,;3)$. Étudie la position relative de $(d)$ et $(d')$, et, si elles se coupent, précise leur point d'intersection.",
+      "corrige": [
+        "On teste d'abord le parallélisme, c'est-à-dire la colinéarité des directeurs. Si $\\overrightarrow{v} = k\\,\\overrightarrow{u}$, alors $2 = k\\times 1$ donne $k=2$, mais $1 = k\\times(-1) = -2$ est faux. Les directeurs ne sont pas colinéaires : $(d)$ et $(d')$ ne sont pas parallèles.",
+        "On cherche ensuite un éventuel point commun. Un point de $(d)$ s'écrit $M(1+t\\,;\\,2-t\\,;\\,1+2t)$ (car $\\overrightarrow{AM} = t\\,\\overrightarrow{u}$) et un point de $(d')$ s'écrit $N(2s\\,;\\,s\\,;\\,3s)$ (car $\\overrightarrow{BN} = s\\,\\overrightarrow{v}$).",
+        "Il y a intersection si $M = N$, d'où le système $1+t = 2s$, $2-t = s$, $1+2t = 3s$. La deuxième équation donne $s = 2 - t$ ; en la reportant dans la première : $1+t = 2(2-t) = 4 - 2t$, soit $3t = 3$, donc $t = 1$ et $s = 1$.",
+        "On vérifie la troisième équation avec ces valeurs : $1 + 2\\times 1 = 3$ et $3\\times 1 = 3$ : l'égalité est satisfaite. Le système est compatible : les deux droites ont un unique point commun, elles sont donc sécantes (et par conséquent coplanaires).",
+        "On calcule le point d'intersection en remplaçant $t = 1$ dans $M$ : $M(1+1\\,;\\,2-1\\,;\\,1+2) = (2\\,;1\\,;3)$. On retrouve bien ce point avec $s=1$ dans $N$."
+      ],
+      "reponse": "$(d)$ et $(d')$ sont sécantes (donc coplanaires) et se coupent au point $I(2\\,;1\\,;3)$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "intersection-droite-plan",
+      "enonce": "L'espace est muni d'un repère orthonormé $(O\\,;\\overrightarrow{i},\\overrightarrow{j},\\overrightarrow{k})$. On considère les points $A(1\\,;0\\,;1)$, $B(2\\,;2\\,;1)$, $C(0\\,;1\\,;3)$ et $D(1\\,;3\\,;3)$, ainsi que le point $S(-1\\,;3\\,;1)$ et le vecteur $\\overrightarrow{w}\\,(1\\,;0\\,;1)$.\n\n1. Calculer les coordonnées de $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$, puis montrer que les points $A$, $B$ et $C$ ne sont pas alignés.\n2. En déduire que $A$, $B$, $C$ définissent un plan, noté $(\\mathcal{P})$. Le point $D$ appartient-il à $(\\mathcal{P})$ ?\n3. On note $(d)$ la droite passant par $S$ et de vecteur directeur $\\overrightarrow{w}$. Donner une représentation paramétrique de $(d)$.\n4. Étudier la position relative de la droite $(d)$ et du plan $(\\mathcal{P})$.\n5. Déterminer les coordonnées du point d'intersection de $(d)$ et de $(\\mathcal{P})$.\n6. Que peut-on dire du point $D$ vis-à-vis de $(d)$ et de $(\\mathcal{P})$ ?",
+      "corrige": [
+        "1. On calcule $\\overrightarrow{AB} = (2-1\\,;\\,2-0\\,;\\,1-1) = (1\\,;2\\,;0)$ et $\\overrightarrow{AC} = (0-1\\,;\\,1-0\\,;\\,3-1) = (-1\\,;1\\,;2)$. Pour l'alignement on teste la colinéarité : si $\\overrightarrow{AC} = k\\,\\overrightarrow{AB}$, la première coordonnée donne $-1 = k$, mais la troisième donne $2 = k\\times 0 = 0$, ce qui est impossible. Les vecteurs ne sont pas colinéaires, donc $A$, $B$, $C$ ne sont pas alignés.",
+        "2. Puisque $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ sont deux vecteurs non colinéaires, ils dirigent un plan $(\\mathcal{P})$ passant par $A$. Pour savoir si $D \\in (\\mathcal{P})$, on cherche $s$, $t$ tels que $\\overrightarrow{AD} = s\\,\\overrightarrow{AB} + t\\,\\overrightarrow{AC}$. Or $\\overrightarrow{AD} = (0\\,;3\\,;2)$, d'où le système $s - t = 0$, $2s + t = 3$, $2t = 2$. La dernière équation donne $t = 1$, la première $s = t = 1$, et la deuxième est vérifiée : $2\\times 1 + 1 = 3$. Donc $\\overrightarrow{AD} = \\overrightarrow{AB} + \\overrightarrow{AC}$ : $D$ appartient bien au plan $(\\mathcal{P})$.",
+        "3. Un point $M(x\\,;y\\,;z)$ appartient à $(d)$ si et seulement si $\\overrightarrow{SM} = k\\,\\overrightarrow{w}$ pour un réel $k$. En coordonnées, avec $S(-1\\,;3\\,;1)$ et $\\overrightarrow{w}(1\\,;0\\,;1)$, on obtient la représentation paramétrique $\\begin{cases} x = -1 + k \\\\ y = 3 \\\\ z = 1 + k \\end{cases}$, avec $k \\in \\mathbb{R}$.",
+        "4. La droite $(d)$ est parallèle ou incluse dans $(\\mathcal{P})$ si son directeur $\\overrightarrow{w}$ appartient à la direction du plan, c'est-à-dire s'il existe $s$, $t$ tels que $\\overrightarrow{w} = s\\,\\overrightarrow{AB} + t\\,\\overrightarrow{AC}$, soit $(s - t\\,;\\,2s + t\\,;\\,2t) = (1\\,;0\\,;1)$. La troisième coordonnée donne $t = \\tfrac{1}{2}$, la première $s = 1 + t = \\tfrac{3}{2}$, mais la deuxième donnerait $2s + t = 3 + \\tfrac{1}{2} = \\tfrac{7}{2} \\neq 0$. Aucun couple ne convient : $\\overrightarrow{w}$ n'est pas dans la direction de $(\\mathcal{P})$, donc $(d)$ est sécante au plan $(\\mathcal{P})$ (elle le perce en un unique point).",
+        "5. Un point $M$ de $(d)$ a pour coordonnées $(-1+k\\,;\\,3\\,;\\,1+k)$. Il appartient à $(\\mathcal{P})$ si $\\overrightarrow{AM} = s\\,\\overrightarrow{AB} + t\\,\\overrightarrow{AC}$, avec $\\overrightarrow{AM} = (k-2\\,;\\,3\\,;\\,k)$. Le système est $s - t = k - 2$, $2s + t = 3$, $2t = k$. On a $t = \\tfrac{k}{2}$, puis $s = (k-2) + t = \\tfrac{3k}{2} - 2$. En reportant dans la deuxième équation : $2\\left(\\tfrac{3k}{2} - 2\\right) + \\tfrac{k}{2} = \\tfrac{7k}{2} - 4 = 3$, soit $\\tfrac{7k}{2} = 7$, donc $k = 2$. Le point d'intersection est alors $(-1+2\\,;\\,3\\,;\\,1+2) = (1\\,;3\\,;3)$.",
+        "6. Le point d'intersection trouvé à la question 5 est $(1\\,;3\\,;3)$, c'est-à-dire exactement le point $D$. On retrouve que $D \\in (\\mathcal{P})$ (question 2) et l'on constate de plus que $D \\in (d)$ (obtenu pour $k=2$) : $D$ est donc le point d'intersection de la droite $(d)$ et du plan $(\\mathcal{P})$."
+      ],
+      "reponse": "1. $\\overrightarrow{AB}(1\\,;2\\,;0)$, $\\overrightarrow{AC}(-1\\,;1\\,;2)$ non colinéaires, donc $A$, $B$, $C$ non alignés. 2. Ils définissent le plan $(\\mathcal{P})$ et $D \\in (\\mathcal{P})$ car $\\overrightarrow{AD} = \\overrightarrow{AB} + \\overrightarrow{AC}$. 3. $(d)$ : $x=-1+k$, $y=3$, $z=1+k$. 4. $(d)$ est sécante à $(\\mathcal{P})$. 5. Point d'intersection $(1\\,;3\\,;3)$. 6. Ce point est $D$ : $D$ est l'intersection de $(d)$ et $(\\mathcal{P})$."
     }
   ]
 }
