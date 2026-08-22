@@ -1,0 +1,92 @@
+{
+  "id": "1stl-spcl-syntheses-extraction-purification-exos",
+  "chapitre": "1stl-spcl-syntheses-extraction-purification",
+  "titre": "Exercices — Synthèses chimiques : extraction et purification",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "reactif-limitant",
+      "enonce": "Pour la réaction $\\mathrm{A} + 3\\,\\mathrm{B} \\rightarrow \\mathrm{C}$, on introduit $n_\\mathrm{A} = 0{,}20\\ \\mathrm{mol}$ et $n_\\mathrm{B} = 0{,}45\\ \\mathrm{mol}$. Détermine le réactif limitant.",
+      "corrige": [
+        "On ne compare pas directement les quantités : on compare les rapports $\\dfrac{n}{\\text{coefficient stœchiométrique}}$.",
+        "Pour A : $\\dfrac{n_\\mathrm{A}}{1} = \\dfrac{0{,}20}{1} = 0{,}20$.",
+        "Pour B : $\\dfrac{n_\\mathrm{B}}{3} = \\dfrac{0{,}45}{3} = 0{,}15$.",
+        "Le plus petit rapport est celui de B ($0{,}15 < 0{,}20$) : B est donc entièrement consommé le premier."
+      ],
+      "reponse": "**B est le réactif limitant** (rapport $0{,}15$, contre $0{,}20$ pour A)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "rendement",
+      "enonce": "Une synthèse devrait fournir au maximum $n_{\\text{théorique}} = 0{,}30\\ \\mathrm{mol}$ de produit. En fin de manipulation, on en récupère réellement $n_{\\text{obtenu}} = 0{,}24\\ \\mathrm{mol}$. Calcule le rendement $\\eta$ et exprime-le en pourcentage.",
+      "corrige": [
+        "Le rendement est le rapport de la quantité obtenue à la quantité théorique : $\\eta = \\dfrac{n_{\\text{obtenu}}}{n_{\\text{théorique}}}$.",
+        "Application : $\\eta = \\dfrac{0{,}24}{0{,}30} = 0{,}80$.",
+        "En pourcentage : $\\eta = 0{,}80 \\times 100 = 80\\ \\%$. Le rendement est sans unité ; il est bien compris entre $0$ et $1$."
+      ],
+      "reponse": "$\\eta = 0{,}80 = 80\\ \\%$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "extraction-liquide-liquide",
+      "enonce": "On veut extraire une espèce dissoute dans $50\\ \\mathrm{mL}$ d'eau ($\\rho = 1{,}0\\ \\mathrm{g\\cdot mL^{-1}}$). L'espèce est bien plus soluble dans le cyclohexane, de densité $d = 0{,}78$, non miscible à l'eau. Après agitation dans l'ampoule à décanter et repos, deux phases se forment. Indique où se trouve la phase organique (celle qui contient le produit) et comment on la récupère. Justifie.",
+      "corrige": [
+        "Vérifions les conditions d'extraction : les deux solvants (eau et cyclohexane) sont non miscibles, et l'espèce est plus soluble dans le cyclohexane. L'extraction est donc possible.",
+        "La phase la plus dense se place en bas. Le cyclohexane a $d = 0{,}78 < 1$ : il est **moins dense que l'eau**.",
+        "La phase organique (cyclohexane + produit) est donc **au-dessus** de la phase aqueuse.",
+        "On ouvre le robinet du bas pour laisser d'abord partir la phase aqueuse (dense, en bas), puis on récupère à part la phase organique restée dans l'ampoule."
+      ],
+      "reponse": "La phase organique est **en haut** (cyclohexane, $d < 1$) ; on élimine d'abord la phase aqueuse par le robinet, puis on récupère la phase organique."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "ccm",
+      "enonce": "Sur une plaque de CCM, on dépose le produit synthétisé. Après élution et révélation, la tache du produit a migré de $h = 4{,}5\\ \\mathrm{cm}$ ; le front de l'éluant a atteint $H = 6{,}0\\ \\mathrm{cm}$ à partir de la ligne de dépôt. La plaque ne montre qu'une seule tache. Calcule le rapport frontal $R_f$ et conclus sur la pureté.",
+      "corrige": [
+        "Le rapport frontal se calcule par $R_f = \\dfrac{h}{H}$, où $h$ est la distance parcourue par la tache et $H$ celle du front de l'éluant, toutes deux mesurées depuis la ligne de dépôt.",
+        "Application : $R_f = \\dfrac{4{,}5}{6{,}0} = 0{,}75$. C'est un rapport sans unité, bien compris entre $0$ et $1$.",
+        "La plaque ne présente **qu'une seule tache** : l'échantillon ne contient qu'une seule espèce détectable.",
+        "Le produit est donc, a priori, pur (la CCM n'a pas révélé d'autre espèce, réactif ou sous-produit)."
+      ],
+      "reponse": "$R_f = 0{,}75$ ; une seule tache $\\Rightarrow$ produit **pur** (a priori)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "rendement",
+      "enonce": "On synthétise l'éthanoate d'éthyle ($M = 88\\ \\mathrm{g\\cdot mol^{-1}}$) selon $\\mathrm{acide} + \\mathrm{alcool} \\rightarrow \\mathrm{ester} + \\mathrm{eau}$ (proportions $1{:}1$). On introduit $12{,}0\\ \\mathrm{g}$ d'acide éthanoïque ($M = 60\\ \\mathrm{g\\cdot mol^{-1}}$) et $11{,}5\\ \\mathrm{g}$ d'éthanol ($M = 46\\ \\mathrm{g\\cdot mol^{-1}}$). Après isolement et purification, on pèse $12{,}3\\ \\mathrm{g}$ d'ester. Détermine le réactif limitant, la quantité théorique d'ester, puis le rendement.",
+      "corrige": [
+        "On passe des masses aux quantités de matière avec $n = \\dfrac{m}{M}$ : $n_{\\text{acide}} = \\dfrac{12{,}0}{60} = 0{,}20\\ \\mathrm{mol}$ et $n_{\\text{alcool}} = \\dfrac{11{,}5}{46} = 0{,}25\\ \\mathrm{mol}$.",
+        "Les coefficients valent $1$ pour chaque réactif : on compare $\\dfrac{0{,}20}{1} = 0{,}20$ (acide) et $\\dfrac{0{,}25}{1} = 0{,}25$ (alcool). Le plus petit est celui de l'acide : **l'acide éthanoïque est le réactif limitant**.",
+        "L'équation est en proportions $1{:}1$ : au maximum, la quantité d'ester égale celle du limitant, soit $n_{\\text{théorique}} = 0{,}20\\ \\mathrm{mol}$.",
+        "Quantité réellement obtenue : $n_{\\text{obtenu}} = \\dfrac{m_{\\text{ester}}}{M} = \\dfrac{12{,}3}{88} = 0{,}140\\ \\mathrm{mol}$.",
+        "Rendement : $\\eta = \\dfrac{n_{\\text{obtenu}}}{n_{\\text{théorique}}} = \\dfrac{0{,}140}{0{,}20} = 0{,}70 = 70\\ \\%$. On calcule bien $n_{\\text{théorique}}$ à partir du limitant, pas de l'alcool."
+      ],
+      "reponse": "Limitant : **acide éthanoïque** ; $n_{\\text{théorique}} = 0{,}20\\ \\mathrm{mol}$ ; $\\eta \\approx 0{,}70 = 70\\ \\%$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "controles-purete",
+      "enonce": "Un solide brut issu d'une synthèse fond entre $121$ et $126\\ \\mathrm{°C}$ au banc Kofler, alors que le produit pur tabulé fond nettement à $130\\ \\mathrm{°C}$. Explique ce que révèle cette mesure, propose une technique adaptée pour purifier ce solide en décrivant son principe, puis indique comment vérifier que la purification a réussi.",
+      "corrige": [
+        "Interprétation de la fusion : le solide fond à une température **plus basse** que la valeur tabulée ($< 130\\,\\mathrm{°C}$) et sur un **intervalle large** ($121$ à $126\\,\\mathrm{°C}$, soit $5\\,\\mathrm{°C}$). Or une impureté **abaisse et étale** la température de fusion : le solide est donc **impur**.",
+        "Technique de purification d'un solide : la **recristallisation**. Principe : on dissout le solide dans un minimum de solvant **chaud** (tout passe en solution), puis on **refroidit** lentement. Le produit, moins soluble à froid, **recristallise** ; les impuretés, présentes en faible quantité, **restent dissoutes** dans le solvant froid.",
+        "On récupère alors les cristaux purs par **filtration sous vide** (Büchner), on les lave et on les sèche ; les impuretés partent avec le filtrat.",
+        "Vérification de la réussite : on **remesure la température de fusion**. Si le solide purifié fond maintenant **nettement à $130\\,\\mathrm{°C}$** (valeur tabulée, sur un intervalle étroit), la purification a réussi. Une **CCM** ne montrant plus qu'**une seule tache** confirmerait aussi la pureté."
+      ],
+      "reponse": "Le solide est **impur** (fusion basse et étalée). On le purifie par **recristallisation** (dissolution à chaud, cristallisation à froid, filtration sous vide) ; la réussite se vérifie en retrouvant une fusion nette à $130\\ \\mathrm{°C}$ et/ou une seule tache en CCM."
+    }
+  ]
+}

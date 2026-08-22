@@ -1,0 +1,90 @@
+{
+  "id": "1stl-spcl-mesure-incertitudes-labo-exos",
+  "chapitre": "1stl-spcl-mesure-incertitudes-labo",
+  "titre": "Exercices — Mesure et incertitudes en laboratoire",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "type-a",
+      "enonce": "On pèse cinq fois le même échantillon (masses en $\\mathrm{g}$) : $12{,}44$ ; $12{,}47$ ; $12{,}41$ ; $12{,}46$ ; $12{,}42$. La calculatrice indique un écart-type expérimental $s = 0{,}045\\ \\mathrm{g}$. Calcule la masse moyenne $\\bar{m}$, puis l'incertitude-type de type A $u(\\bar{m})$, et exprime le résultat sous la forme $(\\bar{m} \\pm u)$.",
+      "corrige": [
+        "Moyenne : $\\bar{m} = \\dfrac{12{,}44 + 12{,}47 + 12{,}41 + 12{,}46 + 12{,}42}{5} = \\dfrac{62{,}20}{5} = 12{,}44\\ \\mathrm{g}$.",
+        "Incertitude-type de type A sur la moyenne : $u(\\bar{m}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}045}{\\sqrt{5}} = 0{,}020\\ \\mathrm{g}$ (on divise par $\\sqrt{5}$, pas par $5$).",
+        "On arrondit $u$ à $1$ chiffre significatif ($0{,}02\\ \\mathrm{g}$) et la valeur au même rang (le centième) : $\\bar{m} = 12{,}44\\ \\mathrm{g}$."
+      ],
+      "reponse": "$m = (12{,}44 \\pm 0{,}02)\\ \\mathrm{g}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "type-b",
+      "enonce": "On dispose de deux instruments de mesure de volume. (a) Une éprouvette graduée tous les $1\\ \\mathrm{mL}$, sur laquelle on lit $45\\ \\mathrm{mL}$. (b) Une fiole jaugée portant l'indication $100{,}0\\ \\mathrm{mL} \\pm 0{,}10\\ \\mathrm{mL}$. Pour chacune, calcule l'incertitude-type de type B ($u = \\text{graduation}/\\sqrt{3}$ ou $u = \\text{tolérance}/\\sqrt{3}$) et exprime la mesure.",
+      "corrige": [
+        "Éprouvette — on utilise la graduation : $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{1}{\\sqrt{3}} = 0{,}58 \\approx 0{,}6\\ \\mathrm{mL}$. La mesure s'écrit donc $V = (45{,}0 \\pm 0{,}6)\\ \\mathrm{mL}$.",
+        "Fiole jaugée — on utilise la tolérance : $u = \\dfrac{\\text{tolérance}}{\\sqrt{3}} = \\dfrac{0{,}10}{\\sqrt{3}} = 0{,}058 \\approx 0{,}06\\ \\mathrm{mL}$. La mesure s'écrit $V = (100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$.",
+        "On constate que la fiole jaugée est bien plus précise que l'éprouvette : c'est pour cela qu'on l'emploie pour préparer une solution de concentration connue."
+      ],
+      "reponse": "Éprouvette : $u \\approx 0{,}6\\ \\mathrm{mL}$, soit $(45{,}0 \\pm 0{,}6)\\ \\mathrm{mL}$. Fiole : $u \\approx 0{,}06\\ \\mathrm{mL}$, soit $(100{,}00 \\pm 0{,}06)\\ \\mathrm{mL}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "type-a",
+      "enonce": "Trois mesures d'une durée (en $\\mathrm{s}$) donnent : $8{,}1$ ; $8{,}7$ ; $8{,}4$. Sans utiliser le mode statistique de la calculatrice, calcule la moyenne, l'écart-type expérimental $s = \\sqrt{\\dfrac{1}{n-1}\\sum (x_i - \\bar{x})^2}$, puis l'incertitude-type $u(\\bar{t})$. Donne le résultat final correctement arrondi.",
+      "corrige": [
+        "Moyenne : $\\bar{t} = \\dfrac{8{,}1 + 8{,}7 + 8{,}4}{3} = \\dfrac{25{,}2}{3} = 8{,}40\\ \\mathrm{s}$.",
+        "Écarts à la moyenne : $8{,}1 - 8{,}40 = -0{,}30$ ; $8{,}7 - 8{,}40 = +0{,}30$ ; $8{,}4 - 8{,}40 = 0$. Somme des carrés : $(-0{,}30)^2 + (0{,}30)^2 + 0^2 = 0{,}18$.",
+        "Écart-type expérimental (division par $n-1 = 2$) : $s = \\sqrt{\\dfrac{0{,}18}{2}} = \\sqrt{0{,}09} = 0{,}30\\ \\mathrm{s}$.",
+        "Incertitude-type : $u(\\bar{t}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}30}{\\sqrt{3}} = 0{,}17 \\approx 0{,}2\\ \\mathrm{s}$. On arrondit $u$ à $1$ c.s. et la valeur au même rang (le dixième)."
+      ],
+      "reponse": "$t = (8{,}4 \\pm 0{,}2)\\ \\mathrm{s}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "incertitude-composee",
+      "enonce": "On prépare une solution en dissolvant une masse $m = (2{,}50 \\pm 0{,}01)\\ \\mathrm{g}$ de soluté dans un volume $V = (0{,}250 \\pm 0{,}002)\\ \\mathrm{L}$ de solution. La concentration en masse est $c = \\dfrac{m}{V}$. Calcule $c$, son incertitude-type $u(c)$ (composition d'un quotient) et exprime le résultat.",
+      "corrige": [
+        "Valeur : $c = \\dfrac{m}{V} = \\dfrac{2{,}50}{0{,}250} = 10{,}0\\ \\mathrm{g\\cdot L^{-1}}$.",
+        "Pour un quotient, on combine les incertitudes **relatives** : $\\dfrac{u(m)}{m} = \\dfrac{0{,}01}{2{,}50} = 0{,}0040$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}002}{0{,}250} = 0{,}0080$.",
+        "$\\dfrac{u(c)}{c} = \\sqrt{\\left(\\dfrac{u(m)}{m}\\right)^2 + \\left(\\dfrac{u(V)}{V}\\right)^2} = \\sqrt{0{,}0040^2 + 0{,}0080^2} = 0{,}0089$.",
+        "Incertitude absolue : $u(c) = 0{,}0089 \\times 10{,}0 = 0{,}089 \\approx 0{,}09\\ \\mathrm{g\\cdot L^{-1}}$. La valeur est arrondie au même rang : $c = 10{,}00\\ \\mathrm{g\\cdot L^{-1}}$."
+      ],
+      "reponse": "$c = (10{,}00 \\pm 0{,}09)\\ \\mathrm{g\\cdot L^{-1}}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "incertitude-composee",
+      "enonce": "On détermine la masse volumique d'un petit cylindre métallique. On le pèse : $m = (34{,}60 \\pm 0{,}05)\\ \\mathrm{g}$. On mesure son volume par déplacement d'eau dans une éprouvette graduée tous les $1\\ \\mathrm{mL}$ : le niveau passe de $20\\ \\mathrm{mL}$ à $24\\ \\mathrm{mL}$. (a) Donne le volume $V$ et son incertitude-type (type B, $u = \\text{graduation}/\\sqrt{3}$ sur chaque lecture, à combiner). (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Exprime $\\rho$ correctement et commente la précision.",
+      "corrige": [
+        "Volume : $V = 24 - 20 = 4\\ \\mathrm{mL}$. Chaque lecture a une incertitude $u = \\dfrac{1}{\\sqrt{3}} = 0{,}58\\ \\mathrm{mL}$ ; comme $V$ est une différence de deux lectures, on combine en quadrature : $u(V) = \\sqrt{0{,}58^2 + 0{,}58^2} = 0{,}82 \\approx 0{,}8\\ \\mathrm{mL}$.",
+        "Masse volumique : $\\rho = \\dfrac{m}{V} = \\dfrac{34{,}60}{4} = 8{,}65\\ \\mathrm{g\\cdot mL^{-1}}$.",
+        "Incertitudes relatives : $\\dfrac{u(m)}{m} = \\dfrac{0{,}05}{34{,}60} = 0{,}0014$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}8}{4} = 0{,}20$. La quadrature donne $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}0014^2 + 0{,}20^2} = 0{,}20$ : c'est le volume qui domine totalement l'incertitude.",
+        "Incertitude absolue : $u(\\rho) = 0{,}20 \\times 8{,}65 = 1{,}8 \\approx 2\\ \\mathrm{g\\cdot mL^{-1}}$. On arrondit la valeur au même rang (l'unité) : $\\rho \\approx 9\\ \\mathrm{g\\cdot mL^{-1}}$. Le résultat est très imprécis parce que le volume ($4\\ \\mathrm{mL}$ lu au $\\mathrm{mL}$ près) est mal connu ; une éprouvette plus fine ou une pesée du volume améliorerait beaucoup la précision."
+      ],
+      "reponse": "$\\rho = (9 \\pm 2)\\ \\mathrm{g\\cdot mL^{-1}}$. La mesure du volume (incertitude relative $\\approx 20\\ \\%$) domine : c'est elle qu'il faut améliorer."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "justesse-fidelite",
+      "enonce": "Deux binômes dosent chacun $5$ fois la même solution étalon, de concentration certifiée $0{,}100\\ \\mathrm{mol\\cdot L^{-1}}$. Binôme 1 : moyenne $0{,}100\\ \\mathrm{mol\\cdot L^{-1}}$, écart-type $s_1 = 0{,}008\\ \\mathrm{mol\\cdot L^{-1}}$. Binôme 2 : moyenne $0{,}112\\ \\mathrm{mol\\cdot L^{-1}}$, écart-type $s_2 = 0{,}002\\ \\mathrm{mol\\cdot L^{-1}}$. (a) Calcule l'incertitude-type de type A de chaque binôme. (b) Discute la justesse et la fidélité de chacun. (c) Lequel a probablement une erreur systématique, et que faut-il vérifier ?",
+      "corrige": [
+        "Incertitudes de type A ($u = s/\\sqrt{n}$, $n = 5$) : $u_1 = \\dfrac{0{,}008}{\\sqrt{5}} = 0{,}0036 \\approx 0{,}004\\ \\mathrm{mol\\cdot L^{-1}}$ et $u_2 = \\dfrac{0{,}002}{\\sqrt{5}} = 0{,}0009\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "Binôme 1 : sa moyenne ($0{,}100$) coïncide avec la valeur certifiée $\\Rightarrow$ il est **juste** ; mais son écart-type est relativement grand $\\Rightarrow$ il est **peu fidèle** (mesures dispersées).",
+        "Binôme 2 : son écart-type est très petit $\\Rightarrow$ il est **très fidèle** ; mais sa moyenne ($0{,}112$) est nettement au-dessus de $0{,}100$, un écart bien supérieur à son incertitude $\\Rightarrow$ il n'est **pas juste**.",
+        "C'est donc le **binôme 2** qui présente une **erreur systématique** : des résultats très reproductibles, mais tous décalés dans le même sens. Il faut vérifier ce qui décale toujours de la même façon : étalonnage de la verrerie ou de l'appareil, préparation de la solution titrante, tarage de la balance, lecture du même côté du ménisque."
+      ],
+      "reponse": "$u_1 \\approx 0{,}004$ et $u_2 \\approx 0{,}0009\\ \\mathrm{mol\\cdot L^{-1}}$. Binôme 1 : juste mais peu fidèle. Binôme 2 : fidèle mais pas juste $\\Rightarrow$ **erreur systématique** (à chercher dans l'étalonnage / le protocole)."
+    }
+  ]
+}

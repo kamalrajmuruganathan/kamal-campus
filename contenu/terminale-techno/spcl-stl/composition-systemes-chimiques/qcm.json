@@ -1,0 +1,154 @@
+{
+  "id": "tale-stl-spcl-composition-systemes-chimiques-qcm",
+  "chapitre": "tale-stl-spcl-composition-systemes-chimiques",
+  "titre": "QCM — Composition des systèmes chimiques",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "acides-bases-ph",
+      "enonce": "Une solution a une concentration $[\\mathrm{H_3O^+}] = 1{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Quel est son pH ?",
+      "choix": [
+        "$\\mathrm{pH} = 4{,}0$",
+        "$\\mathrm{pH} = -4{,}0$",
+        "$\\mathrm{pH} = 10{,}0$",
+        "$\\mathrm{pH} = 1{,}0\\times 10^{-4}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathrm{pH} = -\\log[\\mathrm{H_3O^+}] = -\\log(10^{-4}) = 4{,}0$. Le pH est **sans unité** et positif ici. Le piège est de recopier la concentration ($10^{-4}$) comme pH, ou d'oublier le signe moins du logarithme."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "oxydoreduction-piles",
+      "enonce": "Dans une demi-équation d'oxydoréduction $\\mathrm{Ox} + n\\,\\mathrm{e^-} \\rightleftharpoons \\mathrm{Red}$, l'oxydant est l'espèce qui :",
+      "choix": [
+        "cède des électrons",
+        "capte des électrons",
+        "capte un proton $\\mathrm{H^+}$",
+        "ne participe pas au transfert"
+      ],
+      "reponse": 1,
+      "explication": "L'**oxydant capte** les électrons (il est réduit), le **réducteur les cède** (il est oxydé). Le piège est de confondre avec les acides/bases, où c'est un **proton** $\\mathrm{H^+}$ (et non un électron) qui est échangé."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Le chlorure d'argent se dissout selon $\\mathrm{AgCl(s)} \\rightleftharpoons \\mathrm{Ag^+} + \\mathrm{Cl^-}$, avec $K_s = 1{,}6\\times 10^{-10}$. Quelle est sa solubilité $s$ ?",
+      "choix": [
+        "$s = 1{,}6\\times 10^{-10}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$s = 1{,}3\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$s = 4{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$s = 8{,}0\\times 10^{-11}\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 1,
+      "explication": "Type $1$–$1$ : $K_s = [\\mathrm{Ag^+}][\\mathrm{Cl^-}] = s^2$, donc $s = \\sqrt{K_s} = \\sqrt{1{,}6\\times 10^{-10}} = 1{,}3\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$. Le piège est de prendre $s = K_s$ (choix 1) : $s$ est une concentration, $K_s$ un produit de concentrations."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "On applique $\\sigma = \\sum_i \\lambda_i c_i$ avec des $\\lambda_i$ tabulés en $\\mathrm{S\\cdot m^2\\cdot mol^{-1}}$. Dans quelle unité faut-il exprimer les concentrations $c_i$ pour obtenir $\\sigma$ en $\\mathrm{S\\cdot m^{-1}}$ ?",
+      "choix": [
+        "$\\mathrm{mol\\cdot L^{-1}}$",
+        "$\\mathrm{mol\\cdot m^{-3}}$",
+        "$\\mathrm{g\\cdot L^{-1}}$",
+        "$\\mathrm{mol}$"
+      ],
+      "reponse": 1,
+      "explication": "Pour l'homogénéité SI : $\\mathrm{S\\cdot m^2\\cdot mol^{-1}} \\times \\mathrm{mol\\cdot m^{-3}} = \\mathrm{S\\cdot m^{-1}}$. Il faut donc $c$ en $\\mathrm{mol\\cdot m^{-3}}$. Le piège classique est de garder $\\mathrm{mol\\cdot L^{-1}}$ : rappel $1\\ \\mathrm{mol\\cdot L^{-1}} = 10^3\\ \\mathrm{mol\\cdot m^{-3}}$, soit un facteur $1000$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "acides-bases-ph",
+      "enonce": "À concentration apportée $c$ **identique**, comment se comparent les pH d'un acide fort et d'un acide faible ?",
+      "choix": [
+        "l'acide faible a un pH plus **petit** que l'acide fort",
+        "les deux ont exactement le même pH",
+        "l'acide faible a un pH plus **grand** que l'acide fort",
+        "l'acide faible a toujours un pH supérieur à $7$"
+      ],
+      "reponse": 2,
+      "explication": "L'acide fort réagit **totalement** ($[\\mathrm{H_3O^+}] = c$) ; l'acide faible n'est que **partiellement** dissocié, donc $[\\mathrm{H_3O^+}] < c$ et son pH est **plus grand**. Le piège est de croire « faible = moins concentré » : la concentration apportée est la même, c'est la dissociation qui diffère (et le pH reste $< 7$ pour un acide)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "On mélange des ions de sorte que le quotient de réaction vaut $Q_r = 5\\times 10^{-9}$, alors que le produit de solubilité du solide est $K_s = 2\\times 10^{-10}$. Que se passe-t-il ?",
+      "choix": [
+        "rien : la solution peut encore dissoudre du solide",
+        "la solution est exactement saturée, à l'équilibre",
+        "il y a **précipitation** du solide jusqu'à $Q_r = K_s$",
+        "le solide se dissout davantage"
+      ],
+      "reponse": 2,
+      "explication": "$Q_r > K_s$ ($5\\times 10^{-9} > 2\\times 10^{-10}$) : la solution est sursaturée, le solide **précipite** jusqu'à ce que $Q_r$ redescende à $K_s$. Le piège est d'inverser le critère : c'est $Q_r < K_s$ qui autorise encore la dissolution."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Lors d'un dosage conductimétrique de $\\mathrm{HCl}$ par $\\mathrm{NaOH}$, comment repère-t-on le volume à l'équivalence $V_E$ sur la courbe $\\sigma = f(V)$ ?",
+      "choix": [
+        "au maximum de $\\sigma$",
+        "au saut brutal de $\\sigma$, comme un saut de pH",
+        "à l'intersection des deux portions de droite",
+        "quand $\\sigma$ s'annule"
+      ],
+      "reponse": 2,
+      "explication": "La courbe est faite de **segments de droite** dont la pente change à l'équivalence ; $V_E$ se lit à leur **intersection**. Le piège est de chercher un « saut » (ça, c'est la pH-métrie) ou un extremum : en conductimétrie on prolonge deux droites, d'où la nécessité de points avant **et** après l'équivalence."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "oxydoreduction-piles",
+      "enonce": "Une pile est formée des couples $\\mathrm{Ag^+/Ag}$ ($E^\\circ = +0{,}80\\ \\mathrm{V}$) et $\\mathrm{Cu^{2+}/Cu}$ ($E^\\circ = +0{,}34\\ \\mathrm{V}$). Quelle est sa force électromotrice, et quelle est la borne positive ?",
+      "choix": [
+        "$E = 1{,}14\\ \\mathrm{V}$ ; borne $\\oplus$ : cuivre",
+        "$E = 0{,}46\\ \\mathrm{V}$ ; borne $\\oplus$ : argent",
+        "$E = 0{,}46\\ \\mathrm{V}$ ; borne $\\oplus$ : cuivre",
+        "$E = -0{,}46\\ \\mathrm{V}$ ; borne $\\oplus$ : argent"
+      ],
+      "reponse": 1,
+      "explication": "Le couple de plus **haut** potentiel ($\\mathrm{Ag^+/Ag}$, $0{,}80\\ \\mathrm{V}$) est la borne $\\oplus$ (cathode, réduction). f.é.m. $= E_\\oplus - E_\\ominus = 0{,}80 - 0{,}34 = 0{,}46\\ \\mathrm{V} > 0$. Le piège est d'additionner les potentiels ($1{,}14$) ou de désigner le cuivre comme borne $\\oplus$ : c'est le plus oxydant qui l'emporte."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Le fluorure de calcium se dissout selon $\\mathrm{CaF_2(s)} \\rightleftharpoons \\mathrm{Ca^{2+}} + 2\\,\\mathrm{F^-}$. Quelle est l'expression correcte de son produit de solubilité $K_s$ en fonction de la solubilité $s$ ?",
+      "choix": [
+        "$K_s = s^2$",
+        "$K_s = s^3$",
+        "$K_s = 4s^3$",
+        "$K_s = 2s^2$"
+      ],
+      "reponse": 2,
+      "explication": "Dissoudre $s$ mol donne $[\\mathrm{Ca^{2+}}] = s$ et $[\\mathrm{F^-}] = 2s$ (coefficient $2$). Donc $K_s = [\\mathrm{Ca^{2+}}][\\mathrm{F^-}]^2 = s\\times (2s)^2 = 4s^3$. Le piège est d'oublier le facteur $2$ sur $[\\mathrm{F^-}]$, qui, élevé au carré, donne le $4$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "dosage-acide-base",
+      "enonce": "On dose $V_A = 25{,}0\\ \\mathrm{mL}$ d'une solution d'acide chlorhydrique par de la soude à $C_B = 0{,}20\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$). L'équivalence est repérée à $V_E = 20{,}0\\ \\mathrm{mL}$. Quelle est la concentration $C_A$ de l'acide ?",
+      "choix": [
+        "$C_A = 0{,}16\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$C_A = 0{,}25\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$C_A = 4{,}0\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$C_A = 0{,}16\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 0,
+      "explication": "À l'équivalence ($1$–$1$) : $C_A = \\dfrac{C_B V_E}{V_A} = \\dfrac{0{,}20 \\times 20{,}0}{25{,}0} = 0{,}16\\ \\mathrm{mol\\cdot L^{-1}}$. Les volumes étant dans la même unité (mL), leur rapport est direct. Le choix $0{,}16\\times 10^{-3}$ vient d'avoir converti un seul volume en litres (facteur $1000$ parasite) ; $0{,}25$ inverse $V_E$ et $V_A$."
+    }
+  ]
+}

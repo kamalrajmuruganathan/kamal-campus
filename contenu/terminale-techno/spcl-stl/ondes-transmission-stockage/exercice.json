@@ -1,0 +1,96 @@
+{
+  "id": "tale-stl-spcl-ondes-transmission-stockage-exos",
+  "chapitre": "tale-stl-spcl-ondes-transmission-stockage",
+  "titre": "Exercices — Ondes : transmettre, stocker, lire et afficher",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "numeriser-echantillonnage",
+      "enonce": "Un signal est numérisé avec une période d'échantillonnage $T_e = 25\\ \\mu\\text{s}$.\n\n**a.** Calcule la fréquence d'échantillonnage $f_e$.\n**b.** Le signal contient des fréquences allant jusqu'à $f_{\\max} = 18$ kHz. Le critère de Shannon est-il respecté ?",
+      "corrige": [
+        "**a.** On convertit d'abord en unités SI : $T_e = 25\\ \\mu\\text{s} = 25\\times 10^{-6}\\ \\text{s}$.",
+        "$f_e = \\dfrac{1}{T_e} = \\dfrac{1}{25\\times 10^{-6}} = 4{,}0\\times 10^{4}\\ \\text{Hz} = 40\\ \\text{kHz}$.",
+        "**b.** Le critère de Shannon impose $f_e \\ge 2\\,f_{\\max}$, soit $f_e \\ge 2 \\times 18 = 36\\ \\text{kHz}$.",
+        "Or $f_e = 40\\ \\text{kHz} \\ge 36\\ \\text{kHz}$ : le critère est **respecté**, le signal pourra être reconstitué sans repliement."
+      ],
+      "reponse": "$f_e = 40$ kHz ; critère de Shannon respecté car $40 \\ge 2\\times 18 = 36$ kHz."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "debit-binaire",
+      "enonce": "Une connexion Internet a un débit binaire $D = 20$ Mbit/s. On télécharge un fichier de taille $Q = 300$ Mo.\n\nCalcule la durée $\\Delta t$ du téléchargement.\n\n*(Rappel : $1$ octet $= 8$ bits.)*",
+      "corrige": [
+        "Le débit est en **bit/s**, la taille du fichier en **octets** : il faut d'abord tout mettre dans la même unité. On convertit la taille en bits.",
+        "$Q = 300\\ \\text{Mo} = 300 \\times 8 = 2400\\ \\text{Mbit}$.",
+        "On applique $\\Delta t = \\dfrac{Q}{D} = \\dfrac{2400}{20} = 120\\ \\text{s}$.",
+        "Soit $\\Delta t = 120\\ \\text{s} = 2\\ \\text{min}$. (Oublier le facteur 8 aurait donné 15 s, huit fois trop court.)"
+      ],
+      "reponse": "$\\Delta t = 120$ s $= 2$ min."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "numeriser-quantification",
+      "enonce": "Un capteur délivre une tension comprise entre $0$ et $10$ V. On la numérise avec un convertisseur analogique-numérique.\n\n**a.** Pour $n = 8$ bits, donne le nombre de niveaux $N$ et le pas de quantification $q$ (on prendra $q = U/2^{n}$).\n**b.** On veut désormais une résolution $q \\le 5$ mV. Quel est le nombre de bits $n$ minimal ?",
+      "corrige": [
+        "**a.** Nombre de niveaux : $N = 2^{n} = 2^{8} = 256$.",
+        "Pas de quantification : $q = \\dfrac{U}{2^{n}} = \\dfrac{10}{256} = 3{,}9\\times 10^{-2}\\ \\text{V} \\approx 39\\ \\text{mV}$.",
+        "**b.** On cherche le plus petit $n$ tel que $q = \\dfrac{10}{2^{n}} \\le 5\\times 10^{-3}\\ \\text{V}$, soit $2^{n} \\ge \\dfrac{10}{5\\times 10^{-3}} = 2000$.",
+        "$2^{10} = 1024 < 2000$ (insuffisant) mais $2^{11} = 2048 \\ge 2000$ : il faut donc $n = 11$ bits.",
+        "Vérification : $q = \\dfrac{10}{2048} = 4{,}9\\times 10^{-3}\\ \\text{V} \\approx 4{,}9\\ \\text{mV} \\le 5\\ \\text{mV}$."
+      ],
+      "reponse": "**a.** $N = 256$, $q \\approx 39$ mV. **b.** $n = 11$ bits ($q \\approx 4{,}9$ mV)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "debit-binaire",
+      "enonce": "Le son d'un CD audio est échantillonné à $f_e = 44{,}1$ kHz, quantifié sur $n = 16$ bits, en **stéréo** ($k = 2$ voies).\n\n**a.** Calcule le débit binaire $D$ en Mbit/s.\n**b.** Un CD contient $74$ min de musique. Quelle taille de données cela représente-t-il, en Mo ?\n**c.** Un format compressé (MP3) divise cette taille par environ $10$. Donne la nouvelle taille approximative.",
+      "corrige": [
+        "**a.** $D = f_e \\times n \\times k = 44\\,100 \\times 16 \\times 2 = 1\\,411\\,200\\ \\text{bit/s} \\approx 1{,}41\\ \\text{Mbit/s}$.",
+        "**b.** On convertit la durée en secondes : $\\Delta t = 74\\ \\text{min} = 74 \\times 60 = 4440\\ \\text{s}$.",
+        "Quantité de données en bits : $Q = D \\times \\Delta t = 1\\,411\\,200 \\times 4440 = 6{,}27\\times 10^{9}\\ \\text{bit}$.",
+        "En octets : $\\dfrac{6{,}27\\times 10^{9}}{8} = 7{,}83\\times 10^{8}\\ \\text{octets} \\approx 783\\ \\text{Mo}$ (soit environ $0{,}78$ Go).",
+        "**c.** Compressé par $\\approx 10$ : $\\dfrac{783}{10} \\approx 78\\ \\text{Mo}$. C'est ce qui rend possible de stocker des centaines de morceaux sur un lecteur."
+      ],
+      "reponse": "**a.** $D \\approx 1{,}41$ Mbit/s. **b.** $\\approx 783$ Mo. **c.** $\\approx 78$ Mo en MP3."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "transmettre-attenuation",
+      "enonce": "Une fibre optique a un coefficient d'atténuation linéique $\\alpha = 0{,}22$ dB/km. L'émetteur injecte une puissance $P_e = 2{,}0$ mW. Le récepteur ne fonctionne que si la puissance reçue est au moins $P_s = 2{,}0\\ \\mu\\text{W}$.\n\n**a.** Calcule l'atténuation maximale $A_{\\max}$ (en dB) tolérable par la liaison.\n**b.** En déduire la portée maximale $L$ de la fibre (sans amplificateur), en km.\n\n*(On rappelle $A_{\\text{dB}} = 10\\log(P_e/P_s)$ et $A_{\\text{dB}} = \\alpha L$.)*",
+      "corrige": [
+        "**a.** On calcule le rapport des puissances (mêmes unités) : $\\dfrac{P_e}{P_s} = \\dfrac{2{,}0\\times 10^{-3}}{2{,}0\\times 10^{-6}} = 1{,}0\\times 10^{3} = 1000$.",
+        "$A_{\\max} = 10\\log\\!\\left(\\dfrac{P_e}{P_s}\\right) = 10\\log(1000) = 10 \\times 3 = 30\\ \\text{dB}$.",
+        "**b.** La portée est atteinte quand l'atténuation cumulée $\\alpha L$ égale $A_{\\max}$ : $L = \\dfrac{A_{\\max}}{\\alpha} = \\dfrac{30}{0{,}22}$.",
+        "$L \\approx 136\\ \\text{km}$ (soit $1{,}4\\times 10^{2}$ km). Au-delà, le signal est trop atténué : il faudrait un amplificateur (répéteur)."
+      ],
+      "reponse": "**a.** $A_{\\max} = 30$ dB. **b.** $L \\approx 136$ km ($\\approx 1{,}4\\times 10^{2}$ km)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "afficher-pixels",
+      "enonce": "Un écran Full HD a une définition de $1920 \\times 1080$ pixels. Chaque pixel est codé en couleur vraie sur $24$ bits (3 sous-pixels RVB, $8$ bits chacun). On affiche une vidéo **non compressée** à $25$ images par seconde.\n\n**a.** Calcule la taille d'une image, en Mo.\n**b.** Calcule le débit binaire de la vidéo, en Gbit/s.\n**c.** Quelle serait la taille d'un film de $1$ h $30$ non compressé, en Go ? Commente.",
+      "corrige": [
+        "**a.** Nombre de pixels : $1920 \\times 1080 = 2\\,073\\,600$ pixels. À $24$ bits $= 3$ octets par pixel : taille $= 2\\,073\\,600 \\times 3 = 6\\,220\\,800\\ \\text{octets} \\approx 6{,}2\\ \\text{Mo}$.",
+        "**b.** Débit $= (\\text{bits par image}) \\times (\\text{images par seconde})$. Bits par image : $2\\,073\\,600 \\times 24 = 4{,}98\\times 10^{7}\\ \\text{bit}$.",
+        "$D = 4{,}98\\times 10^{7} \\times 25 = 1{,}24\\times 10^{9}\\ \\text{bit/s} \\approx 1{,}24\\ \\text{Gbit/s}$.",
+        "**c.** Durée : $\\Delta t = 1\\ \\text{h}\\ 30 = 90\\ \\text{min} = 5400\\ \\text{s}$. Quantité : $Q = D \\times \\Delta t = 1{,}24\\times 10^{9} \\times 5400 \\approx 6{,}72\\times 10^{12}\\ \\text{bit}$.",
+        "En octets : $\\dfrac{6{,}72\\times 10^{12}}{8} \\approx 8{,}4\\times 10^{11}\\ \\text{octets} \\approx 840\\ \\text{Go}$.",
+        "**Commentaire.** $840$ Go ne tiennent ni sur un Blu-ray ($25$ Go) ni en streaming : la **compression vidéo** (codecs) est indispensable, elle réduit la taille d'un facteur de plusieurs centaines."
+      ],
+      "reponse": "**a.** $\\approx 6{,}2$ Mo. **b.** $D \\approx 1{,}24$ Gbit/s. **c.** $\\approx 840$ Go non compressé : impossible sans compression."
+    }
+  ]
+}

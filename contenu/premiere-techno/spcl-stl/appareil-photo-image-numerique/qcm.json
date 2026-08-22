@@ -1,0 +1,154 @@
+{
+  "id": "1stl-spcl-appareil-photo-image-numerique-qcm",
+  "chapitre": "1stl-spcl-appareil-photo-image-numerique",
+  "titre": "QCM — Appareil photo numérique et image numérique",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "modele-appareil",
+      "enonce": "Dans le modèle de l'appareil photo numérique, par quoi modélise-t-on l'objectif ?",
+      "choix": [
+        "Une lentille mince convergente",
+        "Un miroir plan",
+        "Une lentille divergente",
+        "Un simple trou (sténopé) sans lentille"
+      ],
+      "reponse": 0,
+      "explication": "L'objectif est une **lentille convergente** qui forme une image réelle sur le capteur (l'écran). Le sténopé est le modèle de la chambre noire, pas de l'appareil photo à objectif."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "codage-rvb",
+      "enonce": "Combien de bits contient un octet ?",
+      "choix": [
+        "1 bit",
+        "8 bits",
+        "10 bits",
+        "1000 bits"
+      ],
+      "reponse": 1,
+      "explication": "Par définition, **1 octet = 8 bits**. C'est le piège n°1 du chapitre : ne jamais confondre octet (poids d'un fichier) et bit (débit), et ne jamais prendre 10 bits au lieu de 8."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "nombre-ouverture",
+      "enonce": "Un objectif a une distance focale $f' = 50\\ \\text{mm}$ et un diaphragme de diamètre $D = 10\\ \\text{mm}$. Quel est le nombre d'ouverture $N$ ?",
+      "choix": [
+        "$N = 0{,}2$",
+        "$N = 5{,}0$",
+        "$N = 500$",
+        "$N = 40$"
+      ],
+      "reponse": 1,
+      "explication": "$N = \\dfrac{f'}{D} = \\dfrac{50}{10} = 5{,}0$. Le piège : inverser le rapport donne $D/f' = 0{,}2$. $N$ est sans unité, donc $f'$ et $D$ doivent être dans la même unité (ici des mm)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "definition",
+      "enonce": "Une image mesure $6000 \\times 4000$ pixels. Quelle est sa définition ?",
+      "choix": [
+        "10 000 pixels",
+        "24 000 pixels",
+        "24 mégapixels",
+        "2,4 mégapixels"
+      ],
+      "reponse": 2,
+      "explication": "La définition est le **produit** largeur × hauteur : $6000 \\times 4000 = 24\\,000\\,000$ px $= 24$ Mpx. Le piège : additionner (10 000) au lieu de multiplier, ou oublier que méga vaut $10^6$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "codage-rvb",
+      "enonce": "En codage RVB, chaque canal (rouge, vert, bleu) est codé sur 1 octet. Quel est le poids d'un seul pixel couleur ?",
+      "choix": [
+        "1 octet",
+        "3 octets",
+        "8 octets",
+        "24 octets"
+      ],
+      "reponse": 1,
+      "explication": "Trois canaux × 1 octet = **3 octets** par pixel (soit 24 bits). Le piège : « 24 octets » confond bits et octets — 24 est le nombre de **bits**, pas d'octets."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "formats-compression",
+      "enonce": "Que peut-on dire du format JPEG ?",
+      "choix": [
+        "C'est une compression sans perte : l'image d'origine est retrouvée à l'identique",
+        "C'est une compression avec perte : de l'information est supprimée définitivement",
+        "Il ne compresse pas l'image, il la stocke telle quelle",
+        "Il augmente la qualité de l'image à chaque enregistrement"
+      ],
+      "reponse": 1,
+      "explication": "Le **JPEG** est une compression **avec perte** : il supprime des détails peu visibles, de façon **irréversible**. Chaque réenregistrement dégrade encore l'image. Le PNG, lui, est sans perte (réversible)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "poids",
+      "enonce": "Quel est le poids d'une image de $1000 \\times 1000$ pixels en RVB, non compressée ? (convention $1\\ \\text{Mo} = 10^6\\ \\text{o}$)",
+      "choix": [
+        "1 Mo",
+        "3 Mo",
+        "3 ko",
+        "24 Mo"
+      ],
+      "reponse": 1,
+      "explication": "Pixels : $1000 \\times 1000 = 10^6$. Poids $= 10^6 \\times 3$ octets/pixel $= 3\\times 10^6$ o $= 3$ Mo. Le piège : oublier le ×3 du RVB (on trouve alors 1 Mo) ou compter en bits (24 Mo)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "debit-binaire",
+      "enonce": "On transfère un fichier de $2{,}0\\ \\text{Mo}$ en $4{,}0\\ \\text{s}$. Quel est le débit binaire, en bit/s ?",
+      "choix": [
+        "0,5 Mbit/s",
+        "4,0 Mbit/s",
+        "0,5 Mo/s",
+        "16 Mbit/s"
+      ],
+      "reponse": 1,
+      "explication": "Un débit est en **bits**/s : $Q = 2{,}0\\times 10^6 \\times 8 = 16\\times 10^6$ bits, puis $D = \\dfrac{16\\times 10^6}{4{,}0} = 4{,}0$ Mbit/s. Le piège : oublier le ×8 octet→bit (on trouve 0,5) ou oublier de diviser par la durée (16)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "profondeur-de-champ",
+      "enonce": "Pour un portrait avec un arrière-plan volontairement flou (faible profondeur de champ), quel réglage privilégier ?",
+      "choix": [
+        "Un grand nombre d'ouverture, par exemple $f/16$",
+        "Un petit nombre d'ouverture, par exemple $f/1{,}8$",
+        "Un temps de pose très long",
+        "Une sensibilité ISO très élevée"
+      ],
+      "reponse": 1,
+      "explication": "Un **petit** nombre d'ouverture ($f/1{,}8$) correspond à une **grande** ouverture du diaphragme, ce qui donne une **faible** profondeur de champ (fond flou). Le piège : $N = f'/D$, donc petit $N$ = grande ouverture ; ISO et temps de pose ne règlent pas la profondeur de champ."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "taille-pixel",
+      "enonce": "Un capteur mesure $30\\ \\text{mm}$ sur son côté le plus long, où l'image compte $6000$ pixels. Quelle est la taille (le côté) d'un pixel ?",
+      "choix": [
+        "$5\\ \\text{mm}$",
+        "$5\\ \\mu\\text{m}$",
+        "$0{,}5\\ \\mu\\text{m}$",
+        "$6\\ \\mu\\text{m}$"
+      ],
+      "reponse": 1,
+      "explication": "Taille d'un pixel $= \\dfrac{30\\ \\text{mm}}{6000} = 5{,}0\\times 10^{-3}\\ \\text{mm} = 5\\ \\mu\\text{m}$. Le piège : la conversion mm → µm ($1\\ \\text{mm} = 10^3\\ \\mu\\text{m}$), qui fait perdre ou gagner un facteur 1000."
+    }
+  ]
+}

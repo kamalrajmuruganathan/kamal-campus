@@ -1,0 +1,154 @@
+{
+  "id": "tale-stl-spcl-systemes-procedes-flux-qcm",
+  "chapitre": "tale-stl-spcl-systemes-procedes-flux",
+  "titre": "QCM — Systèmes et procédés : flux d'information, d'énergie et de matière",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "chaine-information",
+      "enonce": "Les trois fonctions de la chaîne d'information sont, dans l'ordre :",
+      "choix": [
+        "acquérir, traiter, communiquer",
+        "alimenter, distribuer, convertir",
+        "capter, chauffer, afficher",
+        "mesurer, stocker, transporter"
+      ],
+      "reponse": 0,
+      "explication": "La chaîne d'information va d'acquérir (capteur) à traiter (unité de décision) puis communiquer (afficheur, réseau). « Alimenter/distribuer/convertir » est le piège : c'est la chaîne d'ÉNERGIE, pas d'information."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "flux-energie",
+      "enonce": "Le rendement d'un convertisseur d'énergie s'exprime en :",
+      "choix": [
+        "aucune unité (nombre entre 0 et 1)",
+        "watts (W)",
+        "joules (J)",
+        "kg·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "Le rendement est un rapport de deux puissances (ou deux énergies) de même unité : $\\eta = P_\\text{utile}/P_\\text{absorbée}$. Les unités se simplifient, il reste un nombre sans dimension, compris entre 0 et 1."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "Ce qui distingue une régulation en boucle fermée d'une commande en boucle ouverte, c'est :",
+      "choix": [
+        "la présence d'une mesure qui revient vers l'entrée (retour)",
+        "la présence d'un actionneur",
+        "l'utilisation d'un moteur électrique",
+        "l'affichage de la valeur mesurée"
+      ],
+      "reponse": 0,
+      "explication": "La signature de la boucle fermée est le retour (feedback) : le capteur renvoie la mesure au correcteur, qui corrige. Un actionneur existe aussi en boucle ouverte : ce n'est donc pas le bon critère."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "Une consigne de température est fixée à 40 °C ; le capteur mesure 32 °C. L'écart de régulation $\\varepsilon$ vaut :",
+      "choix": [
+        "+8 °C",
+        "−8 °C",
+        "+72 °C",
+        "+8 %"
+      ],
+      "reponse": 0,
+      "explication": "Par définition $\\varepsilon = \\text{consigne} - \\text{mesure} = 40 - 32 = +8$ °C. Le piège −8 °C vient de l'ordre inversé (mesure − consigne). L'écart garde l'unité de la grandeur réglée, pas des %."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "Dans une régulation TOUT OU RIEN, l'actionneur :",
+      "choix": [
+        "ne prend que deux états : marche ou arrêt",
+        "délivre une action proportionnelle à l'écart",
+        "est toujours à l'arrêt",
+        "module son action en continu"
+      ],
+      "reponse": 0,
+      "explication": "Le tout ou rien (TOR) commute entre deux états seulement (ON/OFF) selon le signe de l'écart, souvent avec un hystérésis. L'action dosée proportionnelle à l'écart caractérise le correcteur PROPORTIONNEL, pas le TOR."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "flux-energie",
+      "enonce": "Un moteur absorbe 2000 W et fournit 1600 W utiles. Les pertes valent :",
+      "choix": [
+        "400 W",
+        "3600 W",
+        "0,80 W",
+        "1,25 W"
+      ],
+      "reponse": 0,
+      "explication": "Bilan de puissance : $P_\\text{pertes} = P_\\text{absorbée} - P_\\text{utile} = 2000 - 1600 = 400$ W. Le 3600 additionne au lieu de soustraire ; 0,80 est le rendement, pas les pertes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "flux-energie",
+      "enonce": "Une chaîne d'énergie enchaîne deux convertisseurs de rendements 0,90 puis 0,80. Le rendement global est :",
+      "choix": [
+        "0,72",
+        "0,85",
+        "1,70",
+        "0,10"
+      ],
+      "reponse": 0,
+      "explication": "Les rendements en cascade se MULTIPLIENT : $\\eta = 0{,}90 \\times 0{,}80 = 0{,}72$. On n'en fait pas la moyenne (0,85) ni la somme (1,70, impossible car > 1). Le global est toujours inférieur au plus faible maillon."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "flux-matiere",
+      "enonce": "De l'eau ($\\rho = 1000$ kg·m⁻³) s'écoule à $Q_V = 3{,}0$ L·s⁻¹. Le débit massique $Q_m$ vaut :",
+      "choix": [
+        "3,0 kg·s⁻¹",
+        "3000 kg·s⁻¹",
+        "0,33 kg·s⁻¹",
+        "3,0 × 10⁻³ kg·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "On convertit d'abord : $Q_V = 3{,}0$ L·s⁻¹ $= 3{,}0\\times 10^{-3}$ m³·s⁻¹. Puis $Q_m = \\rho\\,Q_V = 1000 \\times 3{,}0\\times 10^{-3} = 3{,}0$ kg·s⁻¹. Oublier la conversion L→m³ donne le piège 3000 kg·s⁻¹."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "flux-matiere",
+      "enonce": "Un mélangeur en régime permanent reçoit 5,0 kg·s⁻¹ et 2,0 kg·s⁻¹ par deux entrées. Le débit massique en sortie vaut :",
+      "choix": [
+        "7,0 kg·s⁻¹",
+        "3,0 kg·s⁻¹",
+        "10 kg·s⁻¹",
+        "impossible à déterminer"
+      ],
+      "reponse": 0,
+      "explication": "Conservation de la masse en régime permanent : $\\sum Q_\\text{entrant} = \\sum Q_\\text{sortant}$, donc $Q_s = 5{,}0 + 2{,}0 = 7{,}0$ kg·s⁻¹. Rien ne se crée ni ne disparaît : le bilan boucle nécessairement."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "flux-matiere",
+      "enonce": "Un débit est donné comme $Q_V = 12$ L·min⁻¹. Sa valeur en unités SI (m³·s⁻¹) est :",
+      "choix": [
+        "2,0 × 10⁻⁴ m³·s⁻¹",
+        "12 × 10⁻³ m³·s⁻¹",
+        "0,20 m³·s⁻¹",
+        "720 m³·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "Double conversion : $12\\ \\text{L·min}^{-1} = \\dfrac{12\\times 10^{-3}\\ \\text{m}^3}{60\\ \\text{s}} = 2{,}0\\times 10^{-4}$ m³·s⁻¹. Le piège $12\\times 10^{-3}$ oublie de diviser par 60 (la minute), le 720 multiplie par 60 au lieu de diviser."
+    }
+  ]
+}

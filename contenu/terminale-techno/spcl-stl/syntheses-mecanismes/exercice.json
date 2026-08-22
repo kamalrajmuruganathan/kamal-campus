@@ -1,0 +1,89 @@
+{
+  "id": "tale-stl-spcl-syntheses-mecanismes-exos",
+  "chapitre": "tale-stl-spcl-syntheses-mecanismes",
+  "titre": "Exercices — Synthèses chimiques et mécanismes réactionnels",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "aspects-macroscopiques",
+      "enonce": "Une synthèse devrait fournir au maximum $n_{\\text{théorique}} = 0{,}25\\ \\mathrm{mol}$ de produit. On récupère en réalité une masse $m = 27\\ \\mathrm{g}$ de ce produit, de masse molaire $M = 180\\ \\mathrm{g\\cdot mol^{-1}}$. Calcule le rendement $\\eta$ et exprime-le en pourcentage.",
+      "corrige": [
+        "On calcule d'abord la quantité de matière réellement obtenue : $n_{\\text{obtenu}} = \\dfrac{m}{M} = \\dfrac{27}{180} = 0{,}15\\ \\mathrm{mol}$.",
+        "Le rendement est le rapport de la quantité obtenue à la quantité théorique : $\\eta = \\dfrac{n_{\\text{obtenu}}}{n_{\\text{théorique}}} = \\dfrac{0{,}15}{0{,}25} = 0{,}60$.",
+        "En pourcentage : $\\eta = 0{,}60 \\times 100 = 60\\ \\%$. Le rendement est bien sans unité et compris entre 0 et 1."
+      ],
+      "reponse": "$\\eta = 0{,}60 = 60\\ \\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "types-transformation",
+      "enonce": "Pour chacune de ces transformations, indique s'il s'agit d'une substitution, d'une addition ou d'une élimination : (a) $\\mathrm{R\\!-\\!Br} + \\mathrm{HO^-} \\rightarrow \\mathrm{R\\!-\\!OH} + \\mathrm{Br^-}$ ; (b) $\\mathrm{CH_2\\!=\\!CH_2} + \\mathrm{H_2O} \\rightarrow \\mathrm{CH_3\\!-\\!CH_2\\!-\\!OH}$ ; (c) une molécule perd $\\mathrm{HBr}$ et voit apparaître une double liaison $\\mathrm{C=C}$.",
+      "corrige": [
+        "(a) Le groupe $-\\mathrm{Br}$ est remplacé par le groupe $-\\mathrm{OH}$ : un groupe part, un autre prend sa place, c'est une **substitution**.",
+        "(b) La double liaison $\\mathrm{C=C}$ s'ouvre et deux fragments ($\\mathrm{H}$ et $\\mathrm{OH}$) s'ajoutent : la liaison multiple disparaît, c'est une **addition**.",
+        "(c) Deux atomes voisins ($\\mathrm{H}$ et $\\mathrm{Br}$) sont arrachés et une double liaison $\\mathrm{C=C}$ apparaît : c'est une **élimination** (l'inverse de l'addition)."
+      ],
+      "reponse": "(a) substitution ; (b) addition ; (c) élimination."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "facteurs-cinetiques",
+      "enonce": "On suit la décomposition d'une espèce en mesurant sa concentration au cours du temps. À $t = 0$, $[\\mathrm{A}]_0 = 0{,}80\\ \\mathrm{mol\\cdot L^{-1}}$ ; la réaction est totale (concentration finale nulle en A). On lit sur le graphe que $[\\mathrm{A}]$ atteint $0{,}40\\ \\mathrm{mol\\cdot L^{-1}}$ au bout de $3{,}0\\ \\mathrm{min}$. (a) Détermine le temps de demi-réaction $t_{1/2}$, en minutes puis en secondes. (b) Si on refait l'expérience à température plus élevée, $t_{1/2}$ sera-t-il plus grand ou plus petit ?",
+      "corrige": [
+        "(a) Comme A est entièrement consommée, l'avancement final correspond à la disparition totale de A. Le temps de demi-réaction est atteint quand A a été consommée de **moitié**, c'est-à-dire quand $[\\mathrm{A}] = \\dfrac{[\\mathrm{A}]_0}{2} = \\dfrac{0{,}80}{2} = 0{,}40\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "Le graphe indique que cette valeur est atteinte à $3{,}0\\ \\mathrm{min}$ : donc $t_{1/2} = 3{,}0\\ \\mathrm{min}$.",
+        "Conversion : $t_{1/2} = 3{,}0 \\times 60 = 180\\ \\mathrm{s}$ (car $1\\ \\mathrm{min} = 60\\ \\mathrm{s}$).",
+        "(b) La température est un facteur cinétique : l'augmenter **accélère** la réaction, donc $t_{1/2}$ devient **plus petit**."
+      ],
+      "reponse": "(a) $t_{1/2} = 3{,}0\\ \\mathrm{min} = 180\\ \\mathrm{s}$. (b) $t_{1/2}$ plus petit à température plus élevée."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "catalyse",
+      "enonce": "L'eau oxygénée $\\mathrm{H_2O_2}$ se décompose selon $2\\,\\mathrm{H_2O_2} \\rightarrow 2\\,\\mathrm{H_2O} + \\mathrm{O_2}$. Sans catalyseur, cette réaction est très lente ; en présence d'ions $\\mathrm{Fe^{3+}}$, elle devient rapide. (a) Les ions $\\mathrm{Fe^{3+}}$ apparaissent-ils dans l'équation bilan ? Justifie. (b) S'agit-il d'une catalyse homogène ou hétérogène (les $\\mathrm{Fe^{3+}}$ et $\\mathrm{H_2O_2}$ sont en solution aqueuse) ? (c) La quantité finale de $\\mathrm{O_2}$ formée dépend-elle de la présence du catalyseur ?",
+      "corrige": [
+        "(a) Non : un catalyseur est régénéré en fin de transformation. Les $\\mathrm{Fe^{3+}}$ sont consommés puis restitués, la même quantité se retrouve à la fin ; ils **n'apparaissent pas** dans l'équation bilan.",
+        "(b) Le catalyseur ($\\mathrm{Fe^{3+}}$) et le réactif ($\\mathrm{H_2O_2}$) sont tous deux **en solution aqueuse**, donc dans la **même phase** : c'est une catalyse **homogène**.",
+        "(c) Non : le catalyseur ne change que la **vitesse**, pas le point d'arrivée. Pour une réaction totale, on obtient la **même quantité finale** de $\\mathrm{O_2}$, seulement plus vite."
+      ],
+      "reponse": "(a) non, régénéré ; (b) catalyse homogène ; (c) non, même quantité finale de $\\mathrm{O_2}$ (seule la vitesse change)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "mecanisme-fleche-courbe",
+      "enonce": "On étudie la réaction $\\mathrm{R\\!-\\!Cl} + \\mathrm{HO^-} \\rightarrow \\mathrm{R\\!-\\!OH} + \\mathrm{Cl^-}$. (a) Dans la liaison $\\mathrm{C\\!-\\!Cl}$, identifie le site accepteur de doublet en justifiant par l'électronégativité. (b) Identifie le site donneur apporté par l'ion $\\mathrm{HO^-}$. (c) Décris, avec des flèches courbes, les deux mouvements de doublets qui transforment les réactifs en produits, et nomme le type de cette transformation.",
+      "corrige": [
+        "(a) Le chlore est plus électronégatif que le carbone : il attire le doublet de la liaison $\\mathrm{C\\!-\\!Cl}$. Le carbone est donc appauvri en électrons ($\\delta+$) : c'est le **site accepteur** de doublet.",
+        "(b) L'oxygène de $\\mathrm{HO^-}$ porte une charge négative et des doublets non liants : il est riche en électrons, c'est le **site donneur**.",
+        "(c) Première flèche : elle part d'un doublet non liant de l'oxygène de $\\mathrm{HO^-}$ **vers** le carbone $\\delta+$ (formation de la liaison $\\mathrm{O\\!-\\!C}$). Deuxième flèche : elle part de la liaison $\\mathrm{C\\!-\\!Cl}$ **vers** le chlore (rupture de la liaison, départ de $\\mathrm{Cl^-}$).",
+        "Chaque flèche va du **donneur (riche)** vers l'**accepteur (pauvre)**. Un groupe ($-\\mathrm{Cl}$) est remplacé par un autre ($-\\mathrm{OH}$) : c'est une **substitution**."
+      ],
+      "reponse": "(a) le carbone ($\\delta+$) est le site accepteur ; (b) l'oxygène de $\\mathrm{HO^-}$ est le site donneur ; (c) flèche $\\mathrm{HO^-} \\to \\mathrm{C}$ (formation) et flèche $\\mathrm{C\\!-\\!Cl} \\to \\mathrm{Cl}$ (rupture) ; transformation de **substitution**."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "aspects-macroscopiques",
+      "enonce": "On veut synthétiser un ester E à partir d'un acide (limitant) selon $\\mathrm{acide} + \\mathrm{alcool} \\rightarrow \\mathrm{E} + \\mathrm{eau}$. On introduit $n_{\\text{acide}} = 0{,}20\\ \\mathrm{mol}$ (limitant) et un excès d'alcool, avec quelques gouttes d'acide sulfurique comme catalyseur. En fin de synthèse, on isole $n_E = 0{,}13\\ \\mathrm{mol}$ d'ester. (a) Détermine la quantité théorique maximale d'ester et le rendement. (b) L'acide sulfurique a-t-il modifié ce rendement maximal théorique ? Quel a été son rôle ? (c) Cite deux causes possibles d'un rendement inférieur à 100 %.",
+      "corrige": [
+        "(a) L'acide est le réactif limitant et le coefficient de l'ester vaut 1 : la quantité théorique maximale d'ester est $n_{\\text{théorique}} = n_{\\text{acide}} = 0{,}20\\ \\mathrm{mol}$.",
+        "Rendement : $\\eta = \\dfrac{n_E}{n_{\\text{théorique}}} = \\dfrac{0{,}13}{0{,}20} = 0{,}65 = 65\\ \\%$.",
+        "(b) Non : l'acide sulfurique est un **catalyseur**. Il n'apparaît pas dans le bilan et ne change pas la quantité théorique ni le maximum atteignable ; son rôle est d'**accélérer** la synthèse (l'estérification est lente sans lui).",
+        "(c) Rendement $< 100\\ \\%$ à cause, par exemple, d'une réaction non totale (transformation limitée) et des **pertes de matière** aux étapes d'extraction et de purification (produit resté sur la verrerie, extraction imparfaite...)."
+      ],
+      "reponse": "(a) $n_{\\text{théorique}} = 0{,}20\\ \\mathrm{mol}$, $\\eta = 0{,}65 = 65\\ \\%$ ; (b) non, il n'agit que sur la vitesse (catalyseur) ; (c) réaction non totale et pertes de matière lors de l'isolement/purification."
+    }
+  ]
+}

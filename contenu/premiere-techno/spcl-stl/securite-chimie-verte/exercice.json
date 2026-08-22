@@ -1,0 +1,94 @@
+{
+  "id": "1stl-spcl-securite-chimie-verte-exos",
+  "chapitre": "1stl-spcl-securite-chimie-verte",
+  "titre": "Exercices — Sécurité au laboratoire et chimie verte",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "pictogrammes",
+      "enonce": "Un flacon d'éthanol porte deux pictogrammes : une **flamme** dans un losange rouge, et un **point d'exclamation** dans un losange rouge. Donne le code SGH et la signification de chacun, puis liste les EPI que tu portes pour le manipuler.",
+      "corrige": [
+        "La flamme dans le losange rouge est le pictogramme **SGH02** : le produit est **inflammable**.",
+        "Le point d'exclamation est le pictogramme **SGH07** : le produit est **nocif / irritant** (ici, irritant pour les yeux).",
+        "Deux pictogrammes = deux dangers distincts. On tient l'éthanol éloigné de toute flamme (inflammable) et on protège les yeux (irritant).",
+        "EPI adaptés : **blouse** en coton fermée, **lunettes** de sécurité, **gants** adaptés aux solvants. On travaille de préférence **sous la hotte** pour évacuer les vapeurs."
+      ],
+      "reponse": "SGH02 = inflammable ; SGH07 = nocif/irritant. EPI : blouse, lunettes, gants (+ hotte)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "economie-atomes",
+      "enonce": "On étudie l'addition de dibrome sur l'éthène : $\\text{C}_2\\text{H}_4 + \\text{Br}_2 \\rightarrow \\text{C}_2\\text{H}_4\\text{Br}_2$. Calcule l'économie d'atomes de cette réaction. Données ($M$ en g·mol⁻¹) : C₂H₄ = 28 ; Br₂ = 160 ; C₂H₄Br₂ = 188.",
+      "corrige": [
+        "L'économie d'atomes se calcule avec les masses molaires : $\\text{EA} = \\dfrac{M(\\text{produit voulu})}{\\sum M(\\text{réactifs})} \\times 100$.",
+        "Le produit voulu est le 1,2-dibromoéthane : $M = 188$ g·mol⁻¹. Les réactifs sont C₂H₄ ($28$) et Br₂ ($160$), soit $\\sum M = 28 + 160 = 188$ g·mol⁻¹.",
+        "$\\text{EA} = \\dfrac{188}{188} \\times 100 = 100\\ \\%$.",
+        "C'est logique : une réaction d'**addition** incorpore tous les atomes des réactifs dans le produit, donc son économie d'atomes vaut toujours 100 %."
+      ],
+      "reponse": "$\\text{EA} = \\dfrac{188}{188}\\times 100 = 100\\ \\%$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "stockage",
+      "enonce": "Au laboratoire, on doit ranger quatre produits : acide sulfurique (corrosif), soude (corrosif), eau oxygénée concentrée (comburant) et acétone (très inflammable). Explique quels couples il ne faut surtout pas stocker ensemble et pourquoi.",
+      "corrige": [
+        "On range par **danger et incompatibilité**, pas par pictogramme. On identifie les réactions dangereuses possibles.",
+        "**Acide sulfurique + soude** : un acide et une base réagissent violemment (réaction exothermique, projections). À séparer, bien qu'ils portent tous deux SGH05.",
+        "**Eau oxygénée (comburant) + acétone (inflammable)** : un comburant apporte de l'oxygène et attise la combustion d'un produit inflammable. Ce couple présente un risque d'incendie / explosion : à séparer absolument.",
+        "En pratique : les acides d'un côté, les bases d'un autre, les inflammables dans une armoire ventilée dédiée, les comburants isolés des inflammables."
+      ],
+      "reponse": "À séparer : acide/soude (réaction acide-base violente) et eau oxygénée/acétone (comburant + inflammable = risque d'incendie)."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "economie-atomes",
+      "enonce": "Une substitution produit du bromométhane : $\\text{CH}_3\\text{OH} + \\text{HBr} \\rightarrow \\text{CH}_3\\text{Br} + \\text{H}_2\\text{O}$. Calcule l'économie d'atomes. Données ($M$ en g·mol⁻¹) : CH₃OH = 32 ; HBr = 81 ; CH₃Br = 95 ; H₂O = 18. Commente la valeur obtenue.",
+      "corrige": [
+        "Produit voulu : le bromométhane CH₃Br, $M = 95$ g·mol⁻¹. Réactifs : CH₃OH ($32$) et HBr ($81$), soit $\\sum M = 32 + 81 = 113$ g·mol⁻¹.",
+        "$\\text{EA} = \\dfrac{M(\\text{CH}_3\\text{Br})}{\\sum M(\\text{réactifs})} \\times 100 = \\dfrac{95}{113} \\times 100$.",
+        "$\\text{EA} \\approx 84\\ \\%$.",
+        "Contrairement à une addition (100 %), cette **substitution** rejette de l'eau comme sous-produit : l'économie d'atomes est inférieure à 100 %. Vérification : les 18 g d'eau « perdus » correspondent bien à $113 - 95 = 18$ g."
+      ],
+      "reponse": "$\\text{EA} = \\dfrac{95}{113}\\times 100 \\approx 84\\ \\%$ (l'eau formée n'est pas dans le produit)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "facteur-e",
+      "enonce": "Pour la synthèse du bromométhane de l'exercice 4, on part de $1{,}0$ mol de chaque réactif et la réaction est **totale**. a) Quelle masse de bromométhane obtient-on ? b) Quelle masse de déchets (ici l'eau) ? c) Calcule le facteur E. d) Compare la conclusion à celle de l'économie d'atomes. Données : $M(\\text{CH}_3\\text{Br}) = 95$ g·mol⁻¹, $M(\\text{H}_2\\text{O}) = 18$ g·mol⁻¹.",
+      "corrige": [
+        "a) La réaction est totale et $1{,}0$ mol de CH₃Br se forme : $m_{\\text{produit}} = n \\times M = 1{,}0 \\times 95 = 95$ g.",
+        "b) Il se forme aussi $1{,}0$ mol d'eau : $m_{\\text{déchets}} = 1{,}0 \\times 18 = 18$ g (on ne compte ici que le sous-produit, les réactifs étant entièrement consommés).",
+        "c) $E = \\dfrac{m_{\\text{déchets}}}{m_{\\text{produit}}} = \\dfrac{18}{95} \\approx 0{,}19$, sans unité.",
+        "d) Les deux indicateurs concordent : EA élevée (84 %) et facteur E faible (0,19) indiquent tous deux un procédé plutôt économe en atomes. Attention : si le procédé réel utilisait un solvant non récupéré, sa masse s'ajouterait aux déchets et E augmenterait, alors que l'EA (théorique) resterait inchangée."
+      ],
+      "reponse": "a) 95 g ; b) 18 g ; c) $E = 18/95 \\approx 0{,}19$ ; d) EA et E concordent, mais un solvant non récupéré alourdirait E sans changer l'EA."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "chimie-verte-principes",
+      "enonce": "Deux voies existent pour fabriquer le même composé. **Voie A** : réaction d'addition, EA = 100 %, à reflux (chauffage) dans un solvant chloré toxique. **Voie B** : réaction de substitution, EA = 78 %, à température ambiante dans l'eau, avec un catalyseur. En t'appuyant sur les 12 principes de la chimie verte, indique quelle voie est globalement la plus « verte » et justifie en discutant chaque critère.",
+      "corrige": [
+        "On ne peut pas conclure sur la seule économie d'atomes : la chimie verte évalue **plusieurs** critères (déchets, solvants, énergie, toxicité, catalyse).",
+        "**Économie d'atomes** : avantage à la voie A (100 % contre 78 %) — un seul point pour A.",
+        "**Solvant** : la voie B utilise l'eau (sûre), la voie A un solvant chloré toxique — net avantage B (principe : solvants plus sûrs).",
+        "**Énergie** : la voie B travaille à température ambiante, la voie A à reflux (chauffage coûteux) — avantage B (principe : efficacité énergétique).",
+        "**Catalyse** : la voie B emploie un catalyseur, ce que recommande la chimie verte — avantage B.",
+        "Bilan : malgré une économie d'atomes plus faible, la **voie B** cumule les avantages (solvant sûr, faible énergie, catalyse). Elle est globalement la plus verte. La leçon : une bonne EA ne suffit pas, il faut regarder l'ensemble des principes."
+      ],
+      "reponse": "La voie B est la plus verte : elle perd sur l'économie d'atomes mais gagne sur le solvant (eau), l'énergie (température ambiante) et la catalyse. L'EA seule ne décide pas."
+    }
+  ]
+}

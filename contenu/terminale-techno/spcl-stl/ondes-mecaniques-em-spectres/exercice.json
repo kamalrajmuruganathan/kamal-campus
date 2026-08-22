@@ -1,0 +1,91 @@
+{
+  "id": "tale-stl-spcl-ondes-mecaniques-em-spectres-exos",
+  "chapitre": "tale-stl-spcl-ondes-mecaniques-em-spectres",
+  "titre": "Exercices — Ondes : mécaniques, électromagnétiques et spectres",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Une station de radio émet une onde de fréquence $f = 90{,}0$ MHz. On donne la célérité de la lumière $c = 3{,}00\\times 10^{8}$ m·s⁻¹.\n\n**a.** De quelle nature (mécanique ou électromagnétique) est cette onde ? Peut-elle se propager dans le vide ?\n**b.** Calcule sa longueur d'onde $\\lambda$ dans l'air.",
+      "corrige": [
+        "**a.** Une onde radio est une onde **électromagnétique** : elle se propage dans le vide (et dans l'air) à la célérité $c$.",
+        "**b.** On convertit la fréquence en unités SI : $f = 90{,}0$ MHz $= 90{,}0\\times 10^{6}$ Hz $= 9{,}00\\times 10^{7}$ Hz.",
+        "On applique $\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00\\times 10^{8}}{9{,}00\\times 10^{7}}$.",
+        "Calcul : $\\lambda = 3{,}33$ m."
+      ],
+      "reponse": "Onde électromagnétique (radio), se propageant dans le vide ; $\\lambda = 3{,}33$ m."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "mesure-distance",
+      "enonce": "Le sonar d'un bateau émet une salve d'ultrasons vers le fond marin. L'écho revient au capteur après une durée $\\Delta t = 0{,}80$ s. La célérité des ultrasons dans l'eau de mer est $v = 1{,}5\\times 10^{3}$ m·s⁻¹.\n\nCalcule la profondeur $d$ du fond sous le bateau.",
+      "corrige": [
+        "Pendant $\\Delta t$, l'onde fait un **aller-retour** : elle parcourt $2d$. La distance à la cible est donc $d = \\dfrac{v\\,\\Delta t}{2}$.",
+        "Application numérique : $d = \\dfrac{1{,}5\\times 10^{3}\\times 0{,}80}{2} = \\dfrac{1{,}2\\times 10^{3}}{2}$.",
+        "Calcul : $d = 6{,}0\\times 10^{2}$ m $= 600$ m."
+      ],
+      "reponse": "$d = 6{,}0\\times 10^{2}$ m (600 m). Oublier le facteur 2 donnerait 1200 m."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "ondes-periodiques",
+      "enonce": "Une sonde d'échographie médicale émet des ultrasons de fréquence $f = 3{,}5$ MHz. Dans les tissus mous, la célérité vaut $v = 1{,}54\\times 10^{3}$ m·s⁻¹.\n\n**a.** Calcule la période $T$ de l'onde.\n**b.** Calcule sa longueur d'onde $\\lambda$ (en mm).\n**c.** L'échographie distingue mal deux structures plus proches qu'une longueur d'onde. Une longueur d'onde plus petite améliore-t-elle ou dégrade-t-elle la finesse (résolution) de l'image ?",
+      "corrige": [
+        "**a.** $f = 3{,}5$ MHz $= 3{,}5\\times 10^{6}$ Hz. La période est $T = \\dfrac{1}{f} = \\dfrac{1}{3{,}5\\times 10^{6}} = 2{,}9\\times 10^{-7}$ s, soit $0{,}29$ µs.",
+        "**b.** $\\lambda = \\dfrac{v}{f} = \\dfrac{1{,}54\\times 10^{3}}{3{,}5\\times 10^{6}} = 4{,}4\\times 10^{-4}$ m.",
+        "Conversion : $\\lambda = 4{,}4\\times 10^{-4}$ m $= 0{,}44$ mm.",
+        "**c.** Une longueur d'onde **plus petite** permet de séparer des détails plus rapprochés : elle **améliore** la résolution. C'est pourquoi on choisit des fréquences élevées (donc $\\lambda$ petites) pour l'imagerie fine."
+      ],
+      "reponse": "$T = 0{,}29$ µs ; $\\lambda = 0{,}44$ mm ; une $\\lambda$ plus petite améliore la résolution."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "spectres",
+      "enonce": "En analysant la lumière d'une étoile lointaine, un astronome constate que les raies de l'hydrogène sont décalées vers les **grandes** longueurs d'onde par rapport aux raies mesurées au laboratoire.\n\n**a.** Le spectre de l'étoile montre des raies **noires** sur un fond continu : de quel type de spectre s'agit-il ?\n**b.** Comment nomme-t-on le décalage observé, et quel phénomène en est responsable ?\n**c.** L'étoile se rapproche-t-elle ou s'éloigne-t-elle de la Terre ? Justifie.",
+      "corrige": [
+        "**a.** Des raies **noires** sur un fond **continu** correspondent à un spectre d'**absorption** : les gaz plus froids de l'atmosphère de l'étoile absorbent leurs longueurs d'onde caractéristiques.",
+        "**b.** Le décalage vers les grandes longueurs d'onde s'appelle le **décalage vers le rouge** (*redshift*). Il est dû à l'**effet Doppler** appliqué à la lumière.",
+        "**c.** Un décalage vers les grandes longueurs d'onde (fréquence perçue plus petite) correspond à une source qui **s'éloigne**. L'étoile s'éloigne donc de la Terre."
+      ],
+      "reponse": "a. spectre d'absorption ; b. décalage vers le rouge, dû à l'effet Doppler ; c. l'étoile s'éloigne."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "spectroscopies",
+      "enonce": "On cherche à identifier un composé organique liquide et incolore. Deux analyses sont menées :\n- **Spectroscopie IR** : une bande fine et intense apparaît vers $1715$ cm⁻¹ ; aucune bande large n'est visible entre $2500$ et $3600$ cm⁻¹.\n- **Spectroscopie UV-visible** : la solution n'absorbe pas dans le domaine visible.\n\n**a.** Que signale la bande IR vers $1715$ cm⁻¹ ?\n**b.** Que déduis-tu de l'absence de bande large vers $3000$–$3600$ cm⁻¹ ?\n**c.** Le composé peut-il être un acide carboxylique ou un alcool ? Est-il plutôt une cétone ou un aldéhyde ?\n**d.** L'absence d'absorption dans le visible est-elle cohérente avec un liquide incolore ?",
+      "corrige": [
+        "**a.** La bande fine et intense vers $1715$ cm⁻¹ est la signature d'une liaison **C=O** (groupe carbonyle).",
+        "**b.** L'absence de bande large vers $2500$–$3600$ cm⁻¹ indique l'**absence de liaison O–H** : ni alcool, ni acide carboxylique.",
+        "**c.** Il y a un C=O mais pas de O–H : ce n'est donc ni un acide, ni un alcool. Un groupe carbonyle sans O–H correspond à une **cétone** ou un **aldéhyde**.",
+        "**d.** Ne pas absorber dans le visible signifie qu'aucune longueur d'onde visible n'est retirée à la lumière blanche : le composé est bien **incolore**. C'est cohérent. (Il absorbe alors dans l'UV.)"
+      ],
+      "reponse": "C=O présent (carbonyle), O–H absent → cétone ou aldéhyde ; l'absence d'absorption visible confirme un composé incolore (absorption dans l'UV)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "mesure-distance",
+      "enonce": "La télémétrie laser Terre-Lune envoie une impulsion lumineuse vers un réflecteur posé sur la Lune et mesure le temps de retour. On prend la distance Terre-Lune $d = 3{,}84\\times 10^{8}$ m, la célérité $c = 3{,}00\\times 10^{8}$ m·s⁻¹, et un laser de longueur d'onde $\\lambda = 532$ nm.\n\n**a.** Calcule la durée $\\Delta t$ entre l'émission et la réception de l'impulsion.\n**b.** Pourquoi utilise-t-on un laser (onde EM) et non des ultrasons pour cette mesure ?\n**c.** Calcule la fréquence $f$ du laser. À quel domaine du spectre appartient-il ?",
+      "corrige": [
+        "**a.** L'impulsion fait un aller-retour, soit $2d$. On a $\\Delta t = \\dfrac{2d}{c} = \\dfrac{2\\times 3{,}84\\times 10^{8}}{3{,}00\\times 10^{8}} = \\dfrac{7{,}68\\times 10^{8}}{3{,}00\\times 10^{8}}$.",
+        "Calcul : $\\Delta t = 2{,}56$ s.",
+        "**b.** Entre la Terre et la Lune règne le **vide**. Les ultrasons sont des ondes **mécaniques** et ne s'y propagent pas ; seule une onde **électromagnétique** (le laser) peut traverser le vide.",
+        "**c.** On convertit $\\lambda = 532$ nm $= 532\\times 10^{-9}$ m $= 5{,}32\\times 10^{-7}$ m, puis $f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}00\\times 10^{8}}{5{,}32\\times 10^{-7}} = 5{,}64\\times 10^{14}$ Hz.",
+        "Cette longueur d'onde (532 nm) et cette fréquence placent le laser dans le domaine **visible** (lumière verte)."
+      ],
+      "reponse": "a. $\\Delta t = 2{,}56$ s ; b. les ultrasons ne se propagent pas dans le vide, contrairement à l'onde EM du laser ; c. $f = 5{,}64\\times 10^{14}$ Hz, domaine visible (vert)."
+    }
+  ]
+}

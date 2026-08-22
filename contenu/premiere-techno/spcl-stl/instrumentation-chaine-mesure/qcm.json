@@ -1,0 +1,154 @@
+{
+  "id": "1stl-spcl-instrumentation-chaine-mesure-qcm",
+  "chapitre": "1stl-spcl-instrumentation-chaine-mesure",
+  "titre": "QCM — Instrumentation : la chaîne de mesure",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "chaine-de-mesure",
+      "enonce": "Dans quel ordre les maillons d'une chaîne de mesure numérique traitent-ils l'information ?",
+      "choix": [
+        "CAN → capteur → conditionneur → traitement",
+        "capteur → conditionneur → CAN → traitement",
+        "conditionneur → capteur → traitement → CAN",
+        "capteur → CAN → conditionneur → traitement"
+      ],
+      "reponse": 1,
+      "explication": "Le **capteur** convertit la grandeur physique en signal électrique, le **conditionneur** met ce signal en forme (amplification…), le **CAN** le transforme en nombre, puis le **traitement** l'affiche. Le CAN vient forcément après le conditionneur : il faut d'abord une tension exploitable à convertir."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "capteur",
+      "enonce": "Quel est le rôle d'un capteur ?",
+      "choix": [
+        "Transformer un nombre en tension",
+        "Transformer une grandeur physique en grandeur électrique",
+        "Afficher la valeur mesurée à l'écran",
+        "Comparer la mesure à un seuil"
+      ],
+      "reponse": 1,
+      "explication": "Le capteur est l'**entrée** de la chaîne : il convertit la grandeur physique (température, pression, lumière…) en une grandeur électrique, le plus souvent une tension. Transformer un nombre en tension serait un convertisseur numérique-analogique, et comparer à un seuil est le rôle d'un comparateur."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "etendue-de-mesure",
+      "enonce": "Un manomètre mesure des pressions de $0{,}20$ bar à $6{,}00$ bar. Quelle est son étendue de mesure ?",
+      "choix": [
+        "$6{,}20$ bar",
+        "$0{,}20$ bar",
+        "$5{,}80$ bar",
+        "$6{,}00$ bar"
+      ],
+      "reponse": 2,
+      "explication": "$\\text{EM} = V_{\\max} - V_{\\min} = 6{,}00 - 0{,}20 = 5{,}80$ bar. Le piège est d'**additionner** les bornes ($6{,}20$) ou de confondre l'étendue avec la valeur maximale ($6{,}00$)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "sensibilite",
+      "enonce": "Un capteur de température linéaire délivre $U = 0{,}40$ V à $0$ °C et $U = 2{,}40$ V à $100$ °C. Quelle est sa sensibilité ?",
+      "choix": [
+        "$20$ mV·°C⁻¹",
+        "$24$ mV·°C⁻¹",
+        "$0{,}40$ mV·°C⁻¹",
+        "$200$ mV·°C⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "La sensibilité est la **pente** de la caractéristique : $S = \\dfrac{\\Delta U}{\\Delta \\theta} = \\dfrac{2{,}40 - 0{,}40}{100 - 0} = \\dfrac{2{,}00}{100} = 0{,}020$ V·°C⁻¹ $= 20$ mV·°C⁻¹. Le piège $24$ mV·°C⁻¹ vient de $\\dfrac{2{,}40}{100}$, en oubliant de soustraire l'ordonnée à l'origine $U_0 = 0{,}40$ V."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "caracteristiques-instrument",
+      "enonce": "Une balance affiche toujours $10{,}05$ g pour une masse étalon réelle de $10{,}00$ g, au centième de gramme près. Que peut-on dire ?",
+      "choix": [
+        "Sa résolution est mauvaise",
+        "Sa résolution est bonne mais sa justesse est mauvaise",
+        "Elle est à la fois juste et fidèle",
+        "Son étendue de mesure est trop faible"
+      ],
+      "reponse": 1,
+      "explication": "Elle affiche au $0{,}01$ g près : sa **résolution** est fine. Mais elle indique systématiquement $0{,}05$ g de trop : c'est une erreur systématique, donc un défaut de **justesse**. Résolution (pas d'affichage) et précision (écart à la valeur vraie) sont deux choses différentes."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "resolution-can",
+      "enonce": "Combien de niveaux (valeurs distinctes) un convertisseur analogique-numérique de $10$ bits peut-il coder ?",
+      "choix": [
+        "$10$",
+        "$100$",
+        "$1024$",
+        "$512$"
+      ],
+      "reponse": 2,
+      "explication": "Un CAN à $n$ bits code $2^n$ niveaux. Ici $2^{10} = 1024$. Le piège est de confondre $n$ (le nombre de bits, $10$) avec $2^n$ (le nombre de niveaux). $512 = 2^9$ correspondrait à $9$ bits."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "quantum",
+      "enonce": "Un CAN de $12$ bits a un calibre de $4{,}096$ V. Quelle est la valeur de son quantum $q$ ?",
+      "choix": [
+        "$1{,}0$ mV",
+        "$4{,}096$ V",
+        "$0{,}34$ mV",
+        "$16{,}8$ kV"
+      ],
+      "reponse": 0,
+      "explication": "$q = \\dfrac{\\text{calibre}}{2^{n}} = \\dfrac{4{,}096}{2^{12}} = \\dfrac{4{,}096}{4096} = 0{,}001$ V $= 1{,}0$ mV. Le piège $16{,}8$ kV vient de **multiplier** par $2^{12}$ au lieu de diviser ; $0{,}34$ mV vient de diviser par $12$ (le nombre de bits) au lieu de $2^{12}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "valeur-numerique",
+      "enonce": "Un CAN de $8$ bits, de calibre $5{,}00$ V, reçoit une tension d'entrée $U_e = 2{,}50$ V. Quelle valeur numérique $N$ délivre-t-il ?",
+      "choix": [
+        "$256$",
+        "$128$",
+        "$2$",
+        "$64$"
+      ],
+      "reponse": 1,
+      "explication": "Le quantum vaut $q = \\dfrac{5{,}00}{2^{8}} = \\dfrac{5{,}00}{256} \\approx 0{,}01953$ V. Puis $N = \\dfrac{U_e}{q} = \\dfrac{2{,}50}{0{,}01953} \\approx 128$. C'est cohérent : $2{,}50$ V est la moitié du calibre, donc la moitié des $256$ niveaux. Répondre $256$, c'est donner le nombre total de niveaux et non la valeur codée."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "etalonnage",
+      "enonce": "Un capteur linéaire de caractéristique $U = 0{,}020\\,\\theta + 0{,}50$ (en V, avec $\\theta$ en °C) fournit une tension mesurée $U = 1{,}50$ V. Quelle température cela correspond-il ?",
+      "choix": [
+        "$75$ °C",
+        "$50$ °C",
+        "$100$ °C",
+        "$30$ °C"
+      ],
+      "reponse": 1,
+      "explication": "On **inverse** la caractéristique : $\\theta = \\dfrac{U - U_0}{S} = \\dfrac{1{,}50 - 0{,}50}{0{,}020} = \\dfrac{1{,}00}{0{,}020} = 50$ °C. Le piège $75$ °C vient d'oublier l'ordonnée à l'origine $U_0$ et de calculer $\\dfrac{1{,}50}{0{,}020}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "hysteresis",
+      "enonce": "Dans une chaîne en tout ou rien qui régule un chauffage, pourquoi utilise-t-on deux seuils (un haut et un bas) plutôt qu'un seul ?",
+      "choix": [
+        "Pour augmenter la sensibilité du capteur",
+        "Pour éviter que la sortie ne bascule sans arrêt quand la mesure oscille près du seuil",
+        "Pour améliorer la résolution du CAN",
+        "Pour élargir l'étendue de mesure"
+      ],
+      "reponse": 1,
+      "explication": "C'est le rôle de l'**hystérésis** : avec un seuil unique, une petite oscillation autour de ce seuil ferait claqueter la sortie (marche/arrêt très rapides). Deux seuils distincts créent une zone morte : le chauffage ne redémarre qu'après être vraiment redescendu, ce qui stabilise la régulation et évite l'usure."
+    }
+  ]
+}

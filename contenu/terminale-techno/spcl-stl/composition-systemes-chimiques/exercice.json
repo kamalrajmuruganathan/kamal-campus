@@ -1,0 +1,91 @@
+{
+  "id": "tale-stl-spcl-composition-systemes-chimiques-exos",
+  "chapitre": "tale-stl-spcl-composition-systemes-chimiques",
+  "titre": "Exercices — Composition des systèmes chimiques",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Le sulfate de baryum se dissout selon $\\mathrm{BaSO_4(s)} \\rightleftharpoons \\mathrm{Ba^{2+}} + \\mathrm{SO_4^{2-}}$. À $25\\ \\mathrm{°C}$, son produit de solubilité vaut $K_s = 1{,}1\\times 10^{-10}$. (a) Exprime $K_s$ en fonction de la solubilité $s$ puis calcule $s$ en $\\mathrm{mol\\cdot L^{-1}}$. (b) Convertis $s$ en $\\mathrm{g\\cdot L^{-1}}$, sachant $M(\\mathrm{BaSO_4}) = 233\\ \\mathrm{g\\cdot mol^{-1}}$.",
+      "corrige": [
+        "(a) Dissoudre $s$ mol produit $s$ mol de $\\mathrm{Ba^{2+}}$ et $s$ mol de $\\mathrm{SO_4^{2-}}$ (coefficients $1$). Donc $K_s = [\\mathrm{Ba^{2+}}][\\mathrm{SO_4^{2-}}] = s\\times s = s^2$.",
+        "On en tire $s = \\sqrt{K_s} = \\sqrt{1{,}1\\times 10^{-10}} = 1{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "(b) On multiplie par la masse molaire : $s_{\\text{massique}} = s \\times M = 1{,}0\\times 10^{-5} \\times 233$.",
+        "$s_{\\text{massique}} = 2{,}4\\times 10^{-3}\\ \\mathrm{g\\cdot L^{-1}}$ : le sulfate de baryum est très peu soluble, ce qui justifie son usage comme produit de contraste."
+      ],
+      "reponse": "$s = 1{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}} = 2{,}4\\times 10^{-3}\\ \\mathrm{g\\cdot L^{-1}}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "dosage-acide-base",
+      "enonce": "On dose un volume $V_A = 15{,}0\\ \\mathrm{mL}$ d'une solution d'acide chlorhydrique (acide fort) par une solution d'hydroxyde de sodium de concentration $C_B = 0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$. La réaction $\\mathrm{H_3O^+ + HO^- \\rightarrow 2\\,H_2O}$ se fait $1$ pour $1$. Le saut de pH est centré sur $V_E = 12{,}0\\ \\mathrm{mL}$. (a) Écris la relation à l'équivalence. (b) Calcule la concentration $C_A$ de l'acide.",
+      "corrige": [
+        "(a) À l'équivalence, les réactifs sont dans les proportions stœchiométriques. La réaction étant $1$ pour $1$, les quantités sont égales : $n(\\mathrm{H_3O^+}) = n(\\mathrm{HO^-})$ versé, soit $C_A V_A = C_B V_E$.",
+        "(b) On isole $C_A$ : $C_A = \\dfrac{C_B\\, V_E}{V_A}$.",
+        "Les deux volumes sont en $\\mathrm{mL}$ : leur rapport est un nombre pur, aucune conversion nécessaire. $C_A = \\dfrac{0{,}10 \\times 12{,}0}{15{,}0} = 0{,}080\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$C_A = 0{,}080\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Une solution de chlorure de potassium a une concentration $c = 2{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Les conductivités molaires ioniques valent $\\lambda(\\mathrm{K^+}) = 7{,}4\\times 10^{-3}$ et $\\lambda(\\mathrm{Cl^-}) = 7{,}6\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$. Calcule la conductivité $\\sigma$ de la solution en $\\mathrm{S\\cdot m^{-1}}$. Attention aux unités de concentration.",
+      "corrige": [
+        "Le sel $\\mathrm{KCl}$ libère autant de $\\mathrm{K^+}$ que de $\\mathrm{Cl^-}$ : $[\\mathrm{K^+}] = [\\mathrm{Cl^-}] = c$.",
+        "**Conversion indispensable** : les $\\lambda_i$ sont en $\\mathrm{S\\cdot m^2\\cdot mol^{-1}}$, il faut donc $c$ en $\\mathrm{mol\\cdot m^{-3}}$. Or $1\\ \\mathrm{mol\\cdot L^{-1}} = 10^3\\ \\mathrm{mol\\cdot m^{-3}}$, donc $c = 2{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}} = 2{,}0\\ \\mathrm{mol\\cdot m^{-3}}$.",
+        "On applique $\\sigma = \\sum_i \\lambda_i c_i = \\lambda(\\mathrm{K^+})\\,c + \\lambda(\\mathrm{Cl^-})\\,c = \\big(7{,}4\\times 10^{-3} + 7{,}6\\times 10^{-3}\\big)\\times 2{,}0$.",
+        "$\\sigma = 15{,}0\\times 10^{-3} \\times 2{,}0 = 3{,}0\\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$. Sans la conversion, on aurait trouvé $3{,}0\\times 10^{-5}$, soit $1000$ fois trop petit."
+      ],
+      "reponse": "$\\sigma = 3{,}0\\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "oxydoreduction-piles",
+      "enonce": "On réalise la pile Daniell avec les couples $\\mathrm{Cu^{2+}/Cu}$ ($E^\\circ = +0{,}34\\ \\mathrm{V}$) et $\\mathrm{Zn^{2+}/Zn}$ ($E^\\circ = -0{,}76\\ \\mathrm{V}$). (a) Écris les deux demi-équations et identifie l'anode ($\\ominus$) et la cathode ($\\oplus$). (b) Écris l'équation de fonctionnement de la pile. (c) Calcule sa force électromotrice.",
+      "corrige": [
+        "(a) Le couple de plus **haut** potentiel ($\\mathrm{Cu^{2+}/Cu}$) subit la **réduction** : c'est la cathode, borne $\\oplus$. Demi-équation : $\\mathrm{Cu^{2+}} + 2\\,\\mathrm{e^-} \\rightarrow \\mathrm{Cu}$.",
+        "Le couple de plus **bas** potentiel ($\\mathrm{Zn^{2+}/Zn}$) subit l'**oxydation** : c'est l'anode, borne $\\ominus$. Demi-équation : $\\mathrm{Zn} \\rightarrow \\mathrm{Zn^{2+}} + 2\\,\\mathrm{e^-}$.",
+        "(b) Les deux demi-équations échangent le **même** nombre d'électrons ($2$) : on les additionne, les électrons se simplifient. Bilan : $\\mathrm{Cu^{2+}} + \\mathrm{Zn} \\rightarrow \\mathrm{Cu} + \\mathrm{Zn^{2+}}$.",
+        "(c) $E_{\\text{pile}} = E_\\oplus - E_\\ominus = 0{,}34 - (-0{,}76) = 1{,}10\\ \\mathrm{V}$. Le résultat est bien positif, ce qui confirme le choix des bornes."
+      ],
+      "reponse": "Cathode $\\oplus$ : $\\mathrm{Cu}$ ; anode $\\ominus$ : $\\mathrm{Zn}$ ; bilan $\\mathrm{Cu^{2+}} + \\mathrm{Zn} \\rightarrow \\mathrm{Cu} + \\mathrm{Zn^{2+}}$ ; $E_{\\text{pile}} = 1{,}10\\ \\mathrm{V}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Le fluorure de calcium se dissout selon $\\mathrm{CaF_2(s)} \\rightleftharpoons \\mathrm{Ca^{2+}} + 2\\,\\mathrm{F^-}$, avec $K_s = 3{,}9\\times 10^{-11}$ à $25\\ \\mathrm{°C}$. (a) Établis la relation entre $K_s$ et la solubilité $s$, puis calcule $s$. (b) On mélange des solutions telles que, juste après mélange, $[\\mathrm{Ca^{2+}}] = 1{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$ et $[\\mathrm{F^-}] = 1{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Un précipité de $\\mathrm{CaF_2}$ se forme-t-il ?",
+      "corrige": [
+        "(a) Dissoudre $s$ mol donne $[\\mathrm{Ca^{2+}}] = s$ et $[\\mathrm{F^-}] = 2s$ (coefficient $2$). Donc $K_s = [\\mathrm{Ca^{2+}}][\\mathrm{F^-}]^2 = s\\times(2s)^2 = 4s^3$.",
+        "On isole $s$ : $s = \\left(\\dfrac{K_s}{4}\\right)^{1/3} = \\left(\\dfrac{3{,}9\\times 10^{-11}}{4}\\right)^{1/3} = \\left(9{,}75\\times 10^{-12}\\right)^{1/3} = 2{,}1\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "(b) On calcule le quotient de réaction avec les concentrations effectives : $Q_r = [\\mathrm{Ca^{2+}}][\\mathrm{F^-}]^2 = 1{,}0\\times 10^{-3} \\times (1{,}0\\times 10^{-3})^2 = 1{,}0\\times 10^{-9}$.",
+        "On compare : $Q_r = 1{,}0\\times 10^{-9}$ est **supérieur** à $K_s = 3{,}9\\times 10^{-11}$. Comme $Q_r > K_s$, la solution est sursaturée : un précipité de $\\mathrm{CaF_2}$ **se forme** jusqu'à revenir à $Q_r = K_s$."
+      ],
+      "reponse": "$s = 2{,}1\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; comme $Q_r = 1{,}0\\times 10^{-9} > K_s$, il y a précipitation."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "On suit par conductimétrie le dosage de $V_A = 20{,}0\\ \\mathrm{mL}$ d'acide chlorhydrique par de la soude à $C_B = 0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$. On relève une courbe $\\sigma = f(V)$ décroissante puis croissante, formant un V. (a) Explique pourquoi $\\sigma$ diminue avant l'équivalence puis augmente après, sachant que $\\mathrm{H_3O^+}$ et $\\mathrm{HO^-}$ sont les ions les plus conducteurs. (b) L'intersection des deux droites se lit à $V_E = 14{,}0\\ \\mathrm{mL}$. Détermine la concentration $C_A$ de l'acide.",
+      "corrige": [
+        "(a) Avant l'équivalence, la réaction $\\mathrm{H_3O^+ + HO^- \\rightarrow 2\\,H_2O}$ **consomme** les $\\mathrm{H_3O^+}$ (très conducteurs) et les remplace par des $\\mathrm{Na^+}$ apportés (peu conducteurs) : $\\sigma$ **diminue**.",
+        "Après l'équivalence, tous les $\\mathrm{H_3O^+}$ ont été consommés ; on ajoute alors des ions $\\mathrm{Na^+}$ **et** $\\mathrm{HO^-}$ en excès. Les $\\mathrm{HO^-}$ étant très conducteurs, $\\sigma$ **augmente**. D'où la forme en V, dont la pointe marque l'équivalence.",
+        "(b) La réaction est $1$ pour $1$, donc à l'équivalence $C_A V_A = C_B V_E$, soit $C_A = \\dfrac{C_B V_E}{V_A}$.",
+        "$C_A = \\dfrac{0{,}10 \\times 14{,}0}{20{,}0} = 0{,}070\\ \\mathrm{mol\\cdot L^{-1}}$. L'atout de la conductimétrie : $V_E$ se lit par intersection de droites, sans indicateur coloré."
+      ],
+      "reponse": "$\\sigma$ décroît (perte des $\\mathrm{H_3O^+}$) puis croît (excès de $\\mathrm{HO^-}$) ; $C_A = 0{,}070\\ \\mathrm{mol\\cdot L^{-1}}$."
+    }
+  ]
+}

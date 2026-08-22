@@ -1,0 +1,92 @@
+{
+  "id": "tale-stl-spcl-systemes-procedes-flux-exos",
+  "chapitre": "tale-stl-spcl-systemes-procedes-flux",
+  "titre": "Exercices — Systèmes et procédés : flux d'information, d'énergie et de matière",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "flux-energie",
+      "enonce": "Un moteur électrique de laboratoire absorbe une puissance $P_a = 750\\ \\text{W}$ sur le réseau et fournit une puissance utile $P_u = 600\\ \\text{W}$ sur son arbre.\n\n**a.** Calcule la puissance perdue $P_\\text{pertes}$.\n**b.** Calcule le rendement $\\eta$ du moteur, en %.",
+      "corrige": [
+        "**a.** Bilan de puissance : $P_a = P_u + P_\\text{pertes}$, donc $P_\\text{pertes} = P_a - P_u$.",
+        "$P_\\text{pertes} = 750 - 600 = 150\\ \\text{W}$ (dissipés en chaleur, effet Joule et frottements).",
+        "**b.** Rendement : $\\eta = \\dfrac{P_u}{P_a} = \\dfrac{600}{750} = 0{,}80$.",
+        "En pourcentage : $\\eta = 0{,}80 = 80\\ \\%$. On vérifie que $\\eta < 1$ : cohérent."
+      ],
+      "reponse": "$P_\\text{pertes} = 150$ W ; $\\eta = 0{,}80 = 80\\ \\%$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "flux-matiere",
+      "enonce": "De l'eau (masse volumique $\\rho = 1000\\ \\text{kg·m}^{-3}$) circule dans une canalisation avec un débit volumique $Q_V = 4{,}0\\ \\text{L·s}^{-1}$.\n\nCalcule le débit massique $Q_m$ en kg·s⁻¹.",
+      "corrige": [
+        "On convertit d'abord le débit volumique en unités SI : $Q_V = 4{,}0\\ \\text{L·s}^{-1} = 4{,}0\\times 10^{-3}\\ \\text{m}^3\\text{·s}^{-1}$ (car $1\\ \\text{L} = 10^{-3}\\ \\text{m}^3$).",
+        "On applique la relation $Q_m = \\rho \\times Q_V$.",
+        "$Q_m = 1000 \\times 4{,}0\\times 10^{-3} = 4{,}0\\ \\text{kg·s}^{-1}$.",
+        "Vérification des unités : $\\text{kg·m}^{-3} \\times \\text{m}^3\\text{·s}^{-1} = \\text{kg·s}^{-1}$. Correct."
+      ],
+      "reponse": "$Q_m = 4{,}0$ kg·s⁻¹."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "Un bain thermostaté de laboratoire est régulé en boucle fermée. Consigne : $\\theta_c = 37{,}0\\ \\text{°C}$. À un instant donné, la sonde mesure $\\theta_m = 35{,}5\\ \\text{°C}$. La régulation est de type TOUT OU RIEN : la résistance chauffe tant que l'écart est positif.\n\n**a.** Nomme les quatre organes de la boucle de régulation et donne un exemple pour chacun ici.\n**b.** Calcule l'écart $\\varepsilon$ et indique si la résistance chauffe.\n**c.** Que devient l'action de la résistance quand $\\theta_m$ atteint 37,0 °C ?",
+      "corrige": [
+        "**a.** Consigne = 37,0 °C (valeur voulue) ; capteur = la sonde de température ; correcteur = le circuit qui compare mesure et consigne ; actionneur = la résistance chauffante.",
+        "**b.** $\\varepsilon = \\theta_c - \\theta_m = 37{,}0 - 35{,}5 = +1{,}5\\ \\text{°C}$. L'écart est positif, donc la résistance **chauffe**.",
+        "**c.** Quand $\\theta_m = 37{,}0\\ \\text{°C}$, l'écart s'annule ($\\varepsilon = 0$) : en tout ou rien, la résistance **s'arrête**.",
+        "Remarque : avec un hystérésis, elle ne se rallumera qu'après être redescendue sous un seuil bas (par ex. 36,8 °C), ce qui évite qu'elle claque en permanence."
+      ],
+      "reponse": "Organes : consigne, capteur (sonde), correcteur, actionneur (résistance). $\\varepsilon = +1{,}5$ °C > 0 : la résistance chauffe ; à 37,0 °C, $\\varepsilon = 0$ et elle s'arrête."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "flux-matiere",
+      "enonce": "Un réservoir de procédé est alimenté par une pompe à débit constant $Q_e = 6{,}0\\ \\text{kg·s}^{-1}$. Une vanne de sortie laisse s'écouler $Q_s = 4{,}5\\ \\text{kg·s}^{-1}$.\n\n**a.** Le système est-il en régime permanent ? Justifie.\n**b.** Calcule la masse d'eau accumulée dans le réservoir au bout de $\\Delta t = 2{,}0\\ \\text{min}$.",
+      "corrige": [
+        "**a.** En régime permanent, il faudrait $Q_e = Q_s$. Ici $Q_e = 6{,}0 \\neq Q_s = 4{,}5\\ \\text{kg·s}^{-1}$ : le système n'est **pas** en régime permanent, il **accumule** de la matière.",
+        "**b.** Le débit d'accumulation est $Q_\\text{acc} = Q_e - Q_s = 6{,}0 - 4{,}5 = 1{,}5\\ \\text{kg·s}^{-1}$.",
+        "On convertit la durée : $\\Delta t = 2{,}0\\ \\text{min} = 120\\ \\text{s}$.",
+        "Masse accumulée : $\\Delta m = Q_\\text{acc} \\times \\Delta t = 1{,}5 \\times 120 = 180\\ \\text{kg}$."
+      ],
+      "reponse": "Non, pas de régime permanent ($Q_e \\neq Q_s$). Masse accumulée : $\\Delta m = 180$ kg en 2,0 min."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "flux-energie",
+      "enonce": "Une pompe industrielle sert à élever de l'eau. Elle est alimentée par un moteur électrique. Le moteur a un rendement $\\eta_1 = 0{,}90$ et la partie hydraulique (pompe) un rendement $\\eta_2 = 0{,}75$. Le moteur absorbe sur le réseau une puissance $P_a = 4{,}0\\ \\text{kW}$.\n\n**a.** Calcule le rendement global $\\eta$ de l'ensemble moteur + pompe.\n**b.** Calcule la puissance hydraulique utile $P_u$ finalement transmise à l'eau.\n**c.** Calcule la puissance totale perdue dans l'ensemble.",
+      "corrige": [
+        "**a.** Les rendements des maillons successifs se multiplient : $\\eta = \\eta_1 \\times \\eta_2 = 0{,}90 \\times 0{,}75 = 0{,}675 \\approx 0{,}68$.",
+        "**b.** On convertit : $P_a = 4{,}0\\ \\text{kW} = 4{,}0\\times 10^{3}\\ \\text{W}$. Puissance utile : $P_u = \\eta \\times P_a = 0{,}675 \\times 4{,}0\\times 10^{3} = 2{,}7\\times 10^{3}\\ \\text{W} = 2{,}7\\ \\text{kW}$.",
+        "**c.** Puissance perdue : $P_\\text{pertes} = P_a - P_u = 4{,}0\\times 10^{3} - 2{,}7\\times 10^{3} = 1{,}3\\times 10^{3}\\ \\text{W} = 1{,}3\\ \\text{kW}$.",
+        "On vérifie : les pertes (1,3 kW) plus l'utile (2,7 kW) redonnent bien l'absorbée (4,0 kW)."
+      ],
+      "reponse": "$\\eta = 0{,}68$ (68 %) ; $P_u \\approx 2{,}7$ kW ; $P_\\text{pertes} \\approx 1{,}3$ kW."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "flux-matiere",
+      "enonce": "Dans un procédé de production, on mélange en continu deux fluides pour obtenir une solution. Entrée 1 : de l'eau, $Q_{V1} = 10\\ \\text{L·min}^{-1}$, $\\rho_1 = 1000\\ \\text{kg·m}^{-3}$. Entrée 2 : un sirop concentré, $Q_{V2} = 2{,}0\\ \\text{L·min}^{-1}$, $\\rho_2 = 1300\\ \\text{kg·m}^{-3}$. Le mélangeur fonctionne en régime permanent.\n\n**a.** Calcule le débit massique de chaque entrée en kg·s⁻¹.\n**b.** Déduis-en le débit massique de sortie $Q_{m,s}$.\n**c.** Exprime cette conclusion en une phrase (conservation).",
+      "corrige": [
+        "**a.** Conversions en SI : $Q_{V1} = 10\\ \\text{L·min}^{-1} = \\dfrac{10\\times 10^{-3}}{60} = 1{,}67\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$ et $Q_{V2} = 2{,}0\\ \\text{L·min}^{-1} = \\dfrac{2{,}0\\times 10^{-3}}{60} = 3{,}33\\times 10^{-5}\\ \\text{m}^3\\text{·s}^{-1}$.",
+        "Débits massiques : $Q_{m1} = \\rho_1 Q_{V1} = 1000 \\times 1{,}67\\times 10^{-4} = 0{,}167\\ \\text{kg·s}^{-1}$ ; $Q_{m2} = \\rho_2 Q_{V2} = 1300 \\times 3{,}33\\times 10^{-5} = 0{,}0433\\ \\text{kg·s}^{-1}$.",
+        "**b.** En régime permanent, conservation de la masse : $Q_{m,s} = Q_{m1} + Q_{m2} = 0{,}167 + 0{,}0433 = 0{,}21\\ \\text{kg·s}^{-1}$.",
+        "**c.** Toute la matière qui entre ressort : le débit massique de sortie est la somme des débits massiques d'entrée. La masse se conserve, le procédé n'en crée ni n'en perd."
+      ],
+      "reponse": "$Q_{m1} \\approx 0{,}167$ kg·s⁻¹, $Q_{m2} \\approx 0{,}043$ kg·s⁻¹ ; $Q_{m,s} \\approx 0{,}21$ kg·s⁻¹ (conservation de la masse)."
+    }
+  ]
+}

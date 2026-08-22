@@ -1,0 +1,86 @@
+{
+  "id": "1stl-spcl-instrumentation-chaine-mesure-exos",
+  "chapitre": "1stl-spcl-instrumentation-chaine-mesure",
+  "titre": "Exercices — Instrumentation : la chaîne de mesure",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "sensibilite",
+      "enonce": "Un capteur de pression linéaire mesure des pressions de $0$ bar à $10$ bar. Il délivre une tension $U = 0{,}50$ V pour une pression de $0$ bar, et $U = 4{,}50$ V pour une pression de $10$ bar. 1) Donner son étendue de mesure. 2) Calculer sa sensibilité $S$. 3) Écrire la relation $U = S\\,P + U_0$ de sa caractéristique de transfert.",
+      "corrige": [
+        "L'étendue de mesure est l'intervalle des pressions mesurables : $\\text{EM} = P_{\\max} - P_{\\min} = 10 - 0 = 10$ bar.",
+        "La sensibilité est la pente de la caractéristique : $S = \\dfrac{\\Delta U}{\\Delta P} = \\dfrac{4{,}50 - 0{,}50}{10 - 0} = \\dfrac{4{,}00}{10} = 0{,}40$ V·bar⁻¹.",
+        "L'ordonnée à l'origine est la tension pour $P = 0$ bar, soit $U_0 = 0{,}50$ V. La caractéristique s'écrit donc $U = 0{,}40\\,P + 0{,}50$ (avec $U$ en V et $P$ en bar)."
+      ],
+      "reponse": "$\\text{EM} = 10$ bar ; $S = 0{,}40$ V·bar⁻¹ ; $U = 0{,}40\\,P + 0{,}50$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "quantum",
+      "enonce": "Un convertisseur analogique-numérique (CAN) a une résolution de $8$ bits et un calibre de $5{,}0$ V. 1) Combien de niveaux distincts peut-il coder ? 2) Calculer son quantum $q$, en volts puis en millivolts.",
+      "corrige": [
+        "Un CAN à $n$ bits code $2^n$ niveaux : $2^8 = 256$ niveaux distincts.",
+        "Le quantum est le pas de conversion : $q = \\dfrac{\\text{calibre}}{2^n} = \\dfrac{5{,}0}{2^8} = \\dfrac{5{,}0}{256} \\approx 0{,}0195$ V.",
+        "Conversion en millivolts : $q \\approx 0{,}0195 \\times 10^{3} = 19{,}5$ mV. Deux tensions séparées de moins de $19{,}5$ mV seront codées par le même nombre."
+      ],
+      "reponse": "$256$ niveaux ; $q = \\dfrac{5{,}0}{256} \\approx 0{,}0195$ V $\\approx 19{,}5$ mV."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "etalonnage",
+      "enonce": "On étalonne un capteur de température linéaire. On relève : à $\\theta = 20$ °C, $U = 1{,}00$ V ; à $\\theta = 70$ °C, $U = 2{,}50$ V. 1) Calculer la sensibilité $S$. 2) Déterminer l'ordonnée à l'origine $U_0$ et écrire la caractéristique. 3) Le capteur affiche ensuite $U = 1{,}90$ V : quelle température mesure-t-il ?",
+      "corrige": [
+        "Sensibilité (pente) : $S = \\dfrac{\\Delta U}{\\Delta \\theta} = \\dfrac{2{,}50 - 1{,}00}{70 - 20} = \\dfrac{1{,}50}{50} = 0{,}030$ V·°C⁻¹ (soit $30$ mV·°C⁻¹).",
+        "La caractéristique est $U = S\\,\\theta + U_0$. On utilise le point $(20\\ \\text{°C} ; 1{,}00\\ \\text{V})$ : $1{,}00 = 0{,}030 \\times 20 + U_0 = 0{,}60 + U_0$, donc $U_0 = 0{,}40$ V. La caractéristique est $U = 0{,}030\\,\\theta + 0{,}40$. (Vérification au second point : $0{,}030 \\times 70 + 0{,}40 = 2{,}50$ V ✓.)",
+        "On inverse la caractéristique : $\\theta = \\dfrac{U - U_0}{S} = \\dfrac{1{,}90 - 0{,}40}{0{,}030} = \\dfrac{1{,}50}{0{,}030} = 50$ °C."
+      ],
+      "reponse": "$S = 0{,}030$ V·°C⁻¹ ; $U = 0{,}030\\,\\theta + 0{,}40$ ; pour $U = 1{,}90$ V, $\\theta = 50$ °C."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "valeur-numerique",
+      "enonce": "Un capteur délivre une tension $U_e = 3{,}00$ V. Cette tension entre dans un CAN de $10$ bits, de calibre $5{,}00$ V. 1) Calculer le quantum $q$. 2) Déterminer la valeur numérique $N$ délivrée par le CAN. 3) Vérifier en recalculant la tension à partir de $N$.",
+      "corrige": [
+        "Quantum : $q = \\dfrac{\\text{calibre}}{2^n} = \\dfrac{5{,}00}{2^{10}} = \\dfrac{5{,}00}{1024} \\approx 0{,}004883$ V (soit environ $4{,}88$ mV).",
+        "Valeur numérique : $N = \\text{partie entière de } \\dfrac{U_e}{q} = \\dfrac{3{,}00}{0{,}004883} \\approx 614{,}4$, donc $N = 614$.",
+        "Vérification : $U \\approx N \\times q = 614 \\times 0{,}004883 \\approx 3{,}00$ V. On retrouve bien la tension d'entrée, à un quantum près (l'écart de conversion est inférieur à $q$)."
+      ],
+      "reponse": "$q \\approx 4{,}88$ mV ; $N = 614$ ; reconversion $\\approx 3{,}00$ V (à un quantum près)."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "chaine-de-mesure",
+      "enonce": "Un capteur de luminosité délivre une tension comprise entre $0$ et $0{,}50$ V. On le relie à un CAN de $8$ bits, de calibre $5{,}00$ V. 1) Si on branche le capteur directement sur le CAN, quelle est la plus grande valeur numérique $N_{\\max}$ atteinte ? Que penser de l'utilisation du convertisseur ? 2) On intercale un conditionneur amplificateur de gain $G$ entre le capteur et le CAN. Quel gain $G$ faut-il pour que la tension maximale du capteur occupe tout le calibre ? 3) Après amplification, quelle est la plus petite variation de tension du capteur que le CAN peut alors distinguer ?",
+      "corrige": [
+        "Quantum du CAN : $q = \\dfrac{5{,}00}{2^8} = \\dfrac{5{,}00}{256} \\approx 0{,}01953$ V. La tension maximale du capteur ($0{,}50$ V) donne $N_{\\max} = \\dfrac{0{,}50}{0{,}01953} \\approx 25{,}6$, soit $N_{\\max} = 25$. Le capteur n'exploite donc que $26$ niveaux (de $0$ à $25$) sur les $256$ disponibles : la résolution du CAN est largement gaspillée.",
+        "Le conditionneur doit amener $0{,}50$ V à $5{,}00$ V (le calibre). Le gain nécessaire est $G = \\dfrac{U_{\\text{calibre}}}{U_{\\text{capteur max}}} = \\dfrac{5{,}00}{0{,}50} = 10$.",
+        "Après amplification (gain $10$), le quantum ramené à l'entrée du capteur vaut $\\dfrac{q}{G} = \\dfrac{0{,}01953}{10} \\approx 0{,}00195$ V $\\approx 1{,}95$ mV. Le CAN distingue désormais des variations dix fois plus fines côté capteur : c'est tout l'intérêt du conditionneur, qui adapte le signal au calibre pour utiliser toute la résolution."
+      ],
+      "reponse": "1) $N_{\\max} = 25$ : seuls $26$ des $256$ niveaux sont utilisés, résolution gaspillée. 2) $G = 10$. 3) Variation minimale distinguée $\\approx 1{,}95$ mV côté capteur (au lieu de $19{,}5$ mV)."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "hysteresis",
+      "enonce": "Un bain thermostaté est régulé par une chaîne en tout ou rien. Le chauffage s'arrête quand la température atteint le seuil haut $\\theta_H = 60$ °C et redémarre quand elle retombe au seuil bas $\\theta_B = 58$ °C. Le capteur est linéaire, de caractéristique $U = 0{,}020\\,\\theta$ (en V, $\\theta$ en °C). 1) Calculer les tensions de seuil $U_H$ et $U_B$. 2) Donner la largeur d'hystérésis, en °C puis en volts. 3) Le bain est à $55$ °C : décrire ce que fait le système jusqu'à ce qu'il se stabilise, et expliquer l'intérêt des deux seuils.",
+      "corrige": [
+        "Tensions de seuil : $U_H = 0{,}020 \\times 60 = 1{,}20$ V et $U_B = 0{,}020 \\times 58 = 1{,}16$ V. Le comparateur compare la tension du capteur à ces deux valeurs.",
+        "Largeur d'hystérésis en température : $\\theta_H - \\theta_B = 60 - 58 = 2$ °C. En tension : $U_H - U_B = 1{,}20 - 1{,}16 = 0{,}040$ V $= 40$ mV.",
+        "À $55$ °C, la tension est $U = 0{,}020 \\times 55 = 1{,}10$ V $< U_B$ : le chauffage est en marche. La température monte jusqu'à $60$ °C ($U = U_H = 1{,}20$ V) : le chauffage s'arrête. Le bain refroidit ; le chauffage ne redémarre qu'une fois redescendu à $58$ °C ($U = U_B = 1{,}16$ V). La température oscille ensuite entre $58$ et $60$ °C. L'intérêt des deux seuils (hystérésis) est d'éviter le claquetage : avec un seuil unique, la moindre oscillation autour de $60$ °C ferait basculer le chauffage marche/arrêt sans cesse, l'usant prématurément."
+      ],
+      "reponse": "1) $U_H = 1{,}20$ V, $U_B = 1{,}16$ V. 2) Hystérésis $= 2$ °C, soit $40$ mV. 3) Le chauffage marche jusqu'à $60$ °C, s'arrête, redémarre à $58$ °C ; la température oscille entre $58$ et $60$ °C. Les deux seuils évitent le claquetage."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "id": "tale-stl-spcl-ondes-transmission-stockage-qcm",
+  "chapitre": "tale-stl-spcl-ondes-transmission-stockage",
+  "titre": "QCM — Ondes : transmettre, stocker, lire et afficher",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "numeriser-echantillonnage",
+      "enonce": "Échantillonner un signal, c'est :",
+      "choix": [
+        "mesurer sa valeur à des instants réguliers",
+        "coder chaque valeur sur un nombre fini de niveaux",
+        "l'amplifier avant transmission",
+        "le compresser pour réduire sa taille"
+      ],
+      "reponse": 0,
+      "explication": "L'échantillonnage prélève la valeur du signal à intervalles réguliers (période $T_e$) : il découpe le **temps**. Coder chaque valeur sur un nombre fini de niveaux, c'est la **quantification** : c'est le distracteur à ne pas confondre."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "bits-octets-prefixes",
+      "enonce": "Un octet, c'est :",
+      "choix": [
+        "8 bits",
+        "1 bit",
+        "1024 bits",
+        "10 bits"
+      ],
+      "reponse": 0,
+      "explication": "Par définition, $1\\ \\text{octet} = 8\\ \\text{bits}$ (en anglais : 1 byte = 8 bits). Le $1024$ est le piège : il vaut pour le préfixe binaire (1 kio $= 1024$ octets), pas pour l'octet lui-même."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "numeriser-echantillonnage",
+      "enonce": "Un son contient des fréquences allant jusqu'à $f_{\\max} = 15$ kHz. Quelle fréquence d'échantillonnage minimale respecte le critère de Shannon ?",
+      "choix": [
+        "$30$ kHz",
+        "$15$ kHz",
+        "$7{,}5$ kHz",
+        "$1{,}5$ kHz"
+      ],
+      "reponse": 0,
+      "explication": "Le critère de Shannon impose $f_e \\ge 2\\,f_{\\max} = 2 \\times 15 = 30$ kHz. Choisir $15$ kHz (échantillonner à la fréquence du signal, sans le facteur 2) provoque un repliement de spectre et déforme le son."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "debit-binaire",
+      "enonce": "Un fichier de $40$ Mbit est transmis en $5{,}0$ s. Quel est le débit binaire ?",
+      "choix": [
+        "$8{,}0$ Mbit/s",
+        "$200$ Mbit/s",
+        "$45$ Mbit/s",
+        "$35$ Mbit/s"
+      ],
+      "reponse": 0,
+      "explication": "$D = \\dfrac{Q}{\\Delta t} = \\dfrac{40}{5{,}0} = 8{,}0$ Mbit/s. Le $200$ vient de multiplier au lieu de diviser ; $45$ et $35$ d'additionner ou soustraire quantité et durée, opération qui n'a pas de sens dimensionnel."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "transmettre-canaux",
+      "enonce": "Parmi ces supports, lequel est un canal de transmission **libre** (non guidé) ?",
+      "choix": [
+        "Les ondes hertziennes du Wi-Fi",
+        "La fibre optique",
+        "Le câble coaxial",
+        "La paire torsadée en cuivre"
+      ],
+      "reponse": 0,
+      "explication": "Les ondes hertziennes se propagent librement dans l'air/le vide : canal **libre**. Fibre optique, câble coaxial et paire torsadée confinent le signal dans un support matériel : ce sont des canaux **guidés** (filaires)."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "numeriser-quantification",
+      "enonce": "Un convertisseur quantifie une tension sur $n = 10$ bits. Combien de niveaux distincts peut-il coder ?",
+      "choix": [
+        "$1024$",
+        "$20$",
+        "$100$",
+        "$512$"
+      ],
+      "reponse": 0,
+      "explication": "Le nombre de niveaux est $N = 2^{n} = 2^{10} = 1024$. Le $20$ confond avec $2 \\times 10$ ; $512 = 2^{9}$ correspond à 9 bits (une erreur d'une puissance)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "debit-binaire",
+      "enonce": "Un signal audio **mono** est échantillonné à $f_e = 48$ kHz et quantifié sur $n = 16$ bits. Quel est son débit binaire ?",
+      "choix": [
+        "$768$ kbit/s",
+        "$1{,}5$ Mbit/s",
+        "$48$ kbit/s",
+        "$3{,}0$ kbit/s"
+      ],
+      "reponse": 0,
+      "explication": "$D = f_e \\times n \\times k = 48\\,000 \\times 16 \\times 1 = 768\\,000$ bit/s $= 768$ kbit/s. Le $1{,}5$ Mbit/s revient à compter 2 voies (stéréo) alors que le signal est mono ; $48$ kbit/s oublie le facteur $n = 16$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "transmettre-attenuation",
+      "enonce": "Sur un canal, l'atténuation vaut $A = 20$ dB. Par quel facteur la puissance du signal est-elle divisée ?",
+      "choix": [
+        "$100$",
+        "$20$",
+        "$2$",
+        "$40$"
+      ],
+      "reponse": 0,
+      "explication": "$A = 10\\log\\!\\left(\\dfrac{P_e}{P_s}\\right)$, donc $\\dfrac{P_e}{P_s} = 10^{A/10} = 10^{20/10} = 10^{2} = 100$. L'échelle est **logarithmique** : $20$ dB divise par $100$, pas par $20$. C'est le piège classique du décibel."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "stockage-optique",
+      "enonce": "Un Blu-ray (laser bleu, $405$ nm) stocke bien plus de données qu'un DVD (laser rouge, $650$ nm) de même diamètre. Pourquoi ?",
+      "choix": [
+        "La longueur d'onde plus courte permet des cuvettes plus petites et rapprochées, donc une plus grande densité",
+        "Le disque tourne beaucoup plus vite",
+        "Le laser bleu est bien plus puissant que le laser rouge",
+        "Le disque Blu-ray est physiquement plus épais"
+      ],
+      "reponse": 0,
+      "explication": "Une longueur d'onde plus courte permet de lire des détails plus fins : cuvettes plus petites, pistes plus serrées, densité de données plus élevée. Ni la vitesse de rotation ni la puissance du laser ne fixent la capacité."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "afficher-pixels",
+      "enonce": "Une image non compressée de $1000 \\times 2000$ pixels est codée en couleur vraie ($3$ octets par pixel). Quelle est sa taille (préfixes décimaux) ?",
+      "choix": [
+        "$6$ Mo",
+        "$48$ Mo",
+        "$2$ Mo",
+        "$6$ Go"
+      ],
+      "reponse": 0,
+      "explication": "Nombre de pixels $= 1000 \\times 2000 = 2{,}0\\times 10^{6}$ ; taille $= 2{,}0\\times 10^{6} \\times 3 = 6{,}0\\times 10^{6}$ octets $= 6$ Mo. Le $48$ Mo confond bits et octets ($6\\times 10^{6}$ octets $= 48\\times 10^{6}$ bits) : la taille se compte en **octets**."
+    }
+  ]
+}

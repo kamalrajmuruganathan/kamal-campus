@@ -1,0 +1,154 @@
+{
+  "id": "1stl-spcl-image-couleur-vision-qcm",
+  "chapitre": "1stl-spcl-image-couleur-vision",
+  "titre": "QCM — Image : couleur et vision",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "modele-optique-oeil",
+      "enonce": "Dans le modèle optique de l'œil, quel élément joue le rôle de l'écran qui reçoit l'image ?",
+      "choix": [
+        "Le cristallin",
+        "La rétine",
+        "L'iris",
+        "La pupille"
+      ],
+      "reponse": 1,
+      "explication": "Le **cristallin** est la lentille convergente ; c'est la **rétine** qui joue le rôle de l'écran où se forme l'image. L'iris (avec la pupille) est le diaphragme qui règle la lumière entrante."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "synthese-additive",
+      "enonce": "En synthèse additive, que donne la superposition Rouge + Vert + Bleu ?",
+      "choix": [
+        "Du noir",
+        "Du blanc",
+        "Du gris",
+        "Du jaune"
+      ],
+      "reponse": 1,
+      "explication": "En synthèse **additive** (mélange de lumières), R + V + B donne du **blanc** : c'est le principe des écrans. Le piège est de répondre « noir », qui est au contraire le résultat quand **aucune** lumière n'est émise."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "photorecepteurs",
+      "enonce": "Pourquoi ne distingue-t-on presque plus les couleurs dans la pénombre ?",
+      "choix": [
+        "Les cônes deviennent plus sensibles",
+        "Seuls les bâtonnets, qui ne codent pas la couleur, sont actifs",
+        "Le cristallin ne laisse plus passer les couleurs",
+        "Les trois types de cônes se confondent"
+      ],
+      "reponse": 1,
+      "explication": "En faible luminosité, les cônes (vision des couleurs) ne sont plus assez excités : seuls les **bâtonnets**, bien plus sensibles mais d'un **seul type**, fonctionnent. Ils ne distinguent pas les longueurs d'onde, d'où la vision en nuances de gris."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "synthese-soustractive",
+      "enonce": "Un filtre magenta reçoit de la lumière blanche. Quelle couleur absorbe-t-il ?",
+      "choix": [
+        "Le rouge",
+        "Le vert",
+        "Le bleu",
+        "Il n'absorbe rien"
+      ],
+      "reponse": 1,
+      "explication": "Chaque primaire soustractive absorbe une primaire additive : le magenta absorbe le **vert** et laisse passer rouge + bleu (dont le mélange redonne le magenta). Cyan absorbe le rouge, jaune absorbe le bleu."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "couleur-objet",
+      "enonce": "Un objet bleu est éclairé en lumière blanche. Que fait-il de la lumière ?",
+      "choix": [
+        "Il diffuse le bleu et absorbe le reste",
+        "Il absorbe le bleu et diffuse le reste",
+        "Il diffuse toutes les couleurs",
+        "Il absorbe toutes les couleurs"
+      ],
+      "reponse": 0,
+      "explication": "La couleur perçue = lumière incidente − lumière absorbée. Un objet **bleu** renvoie (diffuse) le **bleu** vers l'œil et **absorbe** les autres longueurs d'onde. Répondre l'inverse confond ce qui est vu et ce qui est retenu."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "codage-rvb",
+      "enonce": "Sur un octet par canal, quelles sont les valeurs extrêmes d'une composante RVB ?",
+      "choix": [
+        "de 0 à 100",
+        "de 1 à 256",
+        "de 0 à 255",
+        "de 0 à 1024"
+      ],
+      "reponse": 2,
+      "explication": "Un octet code $2^8 = 256$ niveaux, numérotés de **0 à 255** (et non 1 à 256). 0 = canal éteint, 255 = canal au maximum. Le piège classique est d'écrire « 0 à 256 » : il y a bien 256 valeurs, mais la dernière est 255."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "couleur-objet",
+      "enonce": "La tomate rouge de tout à l'heure est maintenant éclairée en lumière verte. Elle apparaît :",
+      "choix": [
+        "rouge",
+        "verte",
+        "jaune",
+        "noire"
+      ],
+      "reponse": 3,
+      "explication": "Une tomate rouge **absorbe** le vert (et le bleu) et ne diffuse que le rouge. Sous une lumière **uniquement verte**, elle n'a aucun rouge à renvoyer et absorbe le vert reçu : elle ne diffuse rien et apparaît **noire**. La couleur d'un objet dépend de l'éclairage."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "codage-rvb",
+      "enonce": "À quel code hexadécimal correspond la couleur RVB $(255, 128, 0)$ ?",
+      "choix": [
+        "#FF8000",
+        "#FF1280",
+        "#255128",
+        "#8000FF"
+      ],
+      "reponse": 0,
+      "explication": "On convertit canal par canal : $255 = 15\\times16+15 = \\text{FF}$, $128 = 8\\times16+0 = \\text{80}$, $0 = \\text{00}$. D'où **#FF8000**. Le piège #FF1280 recopie le nombre décimal 128 au lieu de le convertir, et #255128 mélange décimal et hexadécimal."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "daltonisme",
+      "enonce": "Quelle affirmation sur le daltonisme le plus courant est correcte ?",
+      "choix": [
+        "Il vient d'un défaut des bâtonnets",
+        "Il vient d'un cône déficient et provoque une confusion rouge/vert",
+        "Il empêche totalement de voir la nuit",
+        "Il touche autant les hommes que les femmes"
+      ],
+      "reponse": 1,
+      "explication": "Le daltonisme est un défaut des **cônes** (qui codent la couleur), pas des bâtonnets. La forme la plus fréquente touche les cônes L ou M et provoque une confusion **rouge/vert**. Héréditaire et lié au chromosome X, il touche surtout les **hommes** (~8 %)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "synthese-additive",
+      "enonce": "Sur un écran, un pixel affiche du jaune. Quels sous-pixels sont allumés ?",
+      "choix": [
+        "Le jaune uniquement",
+        "Le rouge et le vert",
+        "Le rouge et le bleu",
+        "Les trois : rouge, vert et bleu"
+      ],
+      "reponse": 1,
+      "explication": "Un écran ne possède que des sous-pixels **R**, **V**, **B** : il n'y a pas de sous-pixel jaune. Le jaune est obtenu par synthèse additive **Rouge + Vert**. Allumer les trois donnerait du blanc, et rouge + bleu donnerait du magenta."
+    }
+  ]
+}

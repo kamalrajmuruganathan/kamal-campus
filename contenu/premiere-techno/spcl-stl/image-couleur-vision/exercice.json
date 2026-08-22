@@ -1,0 +1,98 @@
+{
+  "id": "1stl-spcl-image-couleur-vision-exos",
+  "chapitre": "1stl-spcl-image-couleur-vision",
+  "titre": "Exercices — Image : couleur et vision",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "codage-rvb",
+      "enonce": "Une couleur est codée en RVB par le triplet $(200,\\ 16,\\ 255)$, chaque canal étant un entier de $0$ à $255$. Donne son code hexadécimal sous la forme `#RRVVBB`.",
+      "corrige": [
+        "On convertit chaque canal en hexadécimal par division par $16$ : le quotient donne le premier chiffre, le reste le second (avec $10=\\mathrm{A}, \\dots, 15=\\mathrm{F}$).",
+        "Rouge : $200 = 12\\times 16 + 8$, donc $200 = \\mathrm{C8}$ (car $12 = \\mathrm{C}$).",
+        "Vert : $16 = 1\\times 16 + 0$, donc $16 = \\mathrm{10}$.",
+        "Bleu : $255 = 15\\times 16 + 15$, donc $255 = \\mathrm{FF}$.",
+        "On assemble dans l'ordre R, V, B."
+      ],
+      "reponse": "$(200,16,255) \\rightarrow$ **`#C810FF`**."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "synthese-additive",
+      "enonce": "On superpose des faisceaux de lumière colorée sur un écran blanc. Indique la couleur obtenue dans chaque cas : (a) Rouge + Vert ; (b) Vert + Bleu ; (c) Rouge + Vert + Bleu ; (d) aucun faisceau.",
+      "corrige": [
+        "Il s'agit de synthèse **additive** : on part du noir (écran éteint) et on ajoute des lumières primaires R, V, B.",
+        "(a) Rouge + Vert donne du **jaune**.",
+        "(b) Vert + Bleu donne du **cyan**.",
+        "(c) Rouge + Vert + Bleu donne du **blanc**.",
+        "(d) Sans aucune lumière, l'écran reste **noir**."
+      ],
+      "reponse": "(a) jaune ; (b) cyan ; (c) blanc ; (d) noir."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "couleur-objet",
+      "enonce": "Un maillot est **rouge** en lumière blanche. Précise sa couleur perçue quand on l'éclaire successivement par une lumière : (a) blanche ; (b) rouge ; (c) verte ; (d) cyan (Vert + Bleu). Justifie à chaque fois.",
+      "corrige": [
+        "Principe : couleur perçue = lumière incidente − lumière absorbée. Un objet rouge **diffuse le rouge** et **absorbe le vert et le bleu**.",
+        "(a) Lumière blanche : elle contient du rouge, que l'objet diffuse. Il apparaît **rouge**.",
+        "(b) Lumière rouge : l'objet diffuse ce rouge. Il apparaît **rouge**.",
+        "(c) Lumière verte : l'objet absorbe le vert et n'a pas de rouge à diffuser. Il ne renvoie rien : il apparaît **noir**.",
+        "(d) Lumière cyan (Vert + Bleu) : l'objet absorbe le vert ET le bleu, et n'a toujours pas de rouge à renvoyer. Il apparaît **noir**."
+      ],
+      "reponse": "(a) rouge ; (b) rouge ; (c) noir ; (d) noir. Un objet ne peut diffuser que les couleurs présentes dans la lumière qui l'éclaire."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "synthese-soustractive",
+      "enonce": "Un faisceau de lumière **blanche** traverse d'abord un filtre **cyan**, puis un filtre **jaune** placé derrière. Quelle est la couleur de la lumière qui sort ? Détaille les absorptions.",
+      "corrige": [
+        "Rappel : cyan absorbe le rouge ; jaune absorbe le bleu. Chaque filtre retranche une primaire additive.",
+        "La lumière blanche = Rouge + Vert + Bleu.",
+        "Après le filtre **cyan** : le rouge est absorbé. Il reste **Vert + Bleu**.",
+        "Après le filtre **jaune** : le bleu est absorbé. Sur les deux couleurs restantes (Vert + Bleu), il ne subsiste que le **Vert**.",
+        "La lumière sortante est donc **verte**."
+      ],
+      "reponse": "La lumière sort **verte** : le cyan retire le rouge, le jaune retire le bleu, il ne reste que le vert."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "codage-rvb",
+      "enonce": "Une image numérique en couleurs vraies mesure $800$ pixels de large sur $600$ de haut. Chaque pixel est codé en RVB sur $3$ octets (un octet, soit $8$ bits, par canal). \\n(a) Combien de couleurs différentes ce codage permet-il par pixel ? \\n(b) Quelle est la taille du fichier (non compressé), en octets puis en méga-octets, avec la convention $1\\ \\mathrm{Mo} = 10^{6}\\ \\mathrm{octets}$ ?",
+      "corrige": [
+        "(a) Chaque canal a $2^8 = 256$ valeurs (0 à 255) ; les trois canaux sont indépendants.",
+        "Nombre de couleurs : $256 \\times 256 \\times 256 = 256^3 = 16\\,777\\,216$, soit environ $16{,}7$ millions.",
+        "(b) Nombre de pixels : $800 \\times 600 = 480\\,000$ pixels.",
+        "Chaque pixel occupe $3$ octets, donc taille $= 480\\,000 \\times 3 = 1\\,440\\,000$ octets.",
+        "Conversion : $1\\,440\\,000\\ \\mathrm{octets} = \\dfrac{1\\,440\\,000}{10^{6}}\\ \\mathrm{Mo} = 1{,}44\\ \\mathrm{Mo}$."
+      ],
+      "reponse": "(a) $256^3 = 16\\,777\\,216 \\approx 16{,}7$ millions de couleurs. (b) $1\\,440\\,000$ octets $= 1{,}44\\ \\mathrm{Mo}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "couleur-objet",
+      "enonce": "Dans une salle de labo, on éclaire une pomme **verte** avec une lampe qui n'émet que de la lumière **magenta** (Rouge + Bleu). \\n(a) De quelle couleur apparaît la pomme ? Justifie. \\n(b) On remplace la lampe par une lampe blanche et on regarde la pomme à travers un filtre **jaune**. De quelle couleur la voit-on alors ?",
+      "corrige": [
+        "Données : un objet **vert** diffuse le vert et absorbe le rouge et le bleu. La lumière magenta = Rouge + Bleu (elle ne contient pas de vert).",
+        "(a) La pomme absorbe le rouge et le bleu (les seules couleurs présentes) et n'a pas de vert à diffuser : elle ne renvoie aucune lumière. Elle apparaît **noire**.",
+        "(b) En lumière blanche, la pomme diffuse le **vert** vers l'observateur.",
+        "Le filtre **jaune** placé devant l'œil absorbe le bleu et laisse passer rouge + vert. Le vert diffusé par la pomme fait partie de ce qui passe.",
+        "La lumière verte traverse donc le filtre : la pomme reste vue **verte**."
+      ],
+      "reponse": "(a) noire (la lumière magenta ne contient pas de vert à diffuser) ; (b) verte (le filtre jaune laisse passer le vert diffusé par la pomme)."
+    }
+  ]
+}

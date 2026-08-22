@@ -1,0 +1,91 @@
+{
+  "id": "1stl-spcl-analyses-spectroscopies-dosages-exos",
+  "chapitre": "1stl-spcl-analyses-spectroscopies-dosages",
+  "titre": "Exercices — Analyses physico-chimiques : spectroscopies et dosages",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "beer-lambert",
+      "enonce": "Une solution de bleu patenté est placée dans une cuve d'épaisseur $\\ell = 1{,}0\\ \\mathrm{cm}$. À $\\lambda_{\\max}$, le coefficient d'absorption molaire vaut $\\varepsilon = 8{,}0\\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. La concentration est $c = 1{,}5\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$. Calcule l'absorbance $A$ et vérifie qu'elle est bien sans unité.",
+      "corrige": [
+        "On applique la loi de Beer-Lambert : $A = \\varepsilon \\cdot \\ell \\cdot c$.",
+        "$A = 8{,}0\\times 10^{4} \\times 1{,}0 \\times 1{,}5\\times 10^{-5}$.",
+        "Calcul des puissances de dix : $8{,}0 \\times 1{,}5 = 12$ et $10^{4}\\times 10^{-5} = 10^{-1}$, donc $A = 12 \\times 10^{-1} = 1{,}2$.",
+        "Vérification des unités : $\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}} \\times \\mathrm{cm} \\times \\mathrm{mol\\cdot L^{-1}}$ ; les $\\mathrm{L}$, $\\mathrm{mol}$ et $\\mathrm{cm}$ se simplifient tous : $A$ est bien **sans unité**."
+      ],
+      "reponse": "$A = 1{,}2$ (sans unité)."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "titrage",
+      "enonce": "On titre un volume $V_A = 10{,}0\\ \\mathrm{mL}$ d'une solution d'acide chlorhydrique par une solution d'hydroxyde de sodium de concentration $C_B = 0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$. La réaction $\\mathrm{H_3O^+ + HO^- \\rightarrow 2\\,H_2O}$ se fait $1$ pour $1$. L'équivalence est repérée pour un volume versé $V_E = 8{,}0\\ \\mathrm{mL}$. Détermine la concentration $C_A$ de l'acide.",
+      "corrige": [
+        "À l'équivalence, les réactifs sont dans les proportions stœchiométriques. Comme la réaction est $1$ pour $1$ : $n_A = n_B$ versé, soit $C_A V_A = C_B V_E$.",
+        "On isole $C_A$ : $C_A = \\dfrac{C_B \\, V_E}{V_A}$.",
+        "Les deux volumes sont en $\\mathrm{mL}$ : leur rapport est un nombre, pas besoin de convertir. $C_A = \\dfrac{0{,}10 \\times 8{,}0}{10{,}0} = 0{,}080\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$C_A = 0{,}080\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "etalonnage",
+      "enonce": "Pour doser un colorant, on prépare une gamme d'étalons et on mesure à $\\lambda_{\\max}$, dans une cuve de $1{,}0\\ \\mathrm{cm}$ :\\n\\n| $c\\ (\\mathrm{mol\\cdot L^{-1}})$ | $0$ | $1{,}0\\times 10^{-5}$ | $2{,}0\\times 10^{-5}$ | $3{,}0\\times 10^{-5}$ |\\n|---|---|---|---|---|\\n| $A$ | $0$ | $0{,}25$ | $0{,}50$ | $0{,}75$ |\\n\\nUne solution inconnue donne $A_x = 0{,}60$. (a) Justifie que la droite d'étalonnage passe par l'origine et donne son coefficient directeur $k$. (b) En déduire la concentration $c_x$ de l'inconnue.",
+      "corrige": [
+        "(a) D'après Beer-Lambert $A = \\varepsilon\\ell c$ : quand $c = 0$, $A = 0$, donc la droite passe par l'**origine**. C'est cohérent avec le tableau (le blanc donne $A=0$).",
+        "Le coefficient directeur se lit sur un point : $k = \\dfrac{A}{c} = \\dfrac{0{,}25}{1{,}0\\times 10^{-5}} = 2{,}5\\times 10^{4}$ (en $\\mathrm{L\\cdot mol^{-1}}$). On vérifie sur un autre point : $\\dfrac{0{,}50}{2{,}0\\times 10^{-5}} = 2{,}5\\times 10^{4}$ : la proportionnalité est confirmée.",
+        "(b) On lit l'inconnue sur la droite : $c_x = \\dfrac{A_x}{k} = \\dfrac{0{,}60}{2{,}5\\times 10^{4}}$.",
+        "$c_x = 2{,}4\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$. La valeur tombe bien dans la gamme des étalons ($0$ à $3{,}0\\times 10^{-5}$), la mesure est donc exploitable."
+      ],
+      "reponse": "$k = 2{,}5\\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}}$ ; $c_x = 2{,}4\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "identification-spectres",
+      "enonce": "On cherche à identifier un liquide inconnu. Mesures : densité $d = 0{,}79$, température d'ébullition $T_{\\mathrm{eb}} = 78\\ \\mathrm{°C}$. Son spectre IR présente une bande **large** vers $3300\\ \\mathrm{cm^{-1}}$ et **aucune** bande vers $1700\\ \\mathrm{cm^{-1}}$. Table : éthanol ($d=0{,}79$ ; $T_{\\mathrm{eb}}=78\\ \\mathrm{°C}$ ; famille alcool), acide éthanoïque ($d=1{,}05$ ; $T_{\\mathrm{eb}}=118\\ \\mathrm{°C}$ ; famille acide carboxylique), propanone ($d=0{,}79$ ; $T_{\\mathrm{eb}}=56\\ \\mathrm{°C}$ ; famille cétone). Identifie le liquide en justifiant par chaque critère.",
+      "corrige": [
+        "Propriétés physiques : $T_{\\mathrm{eb}} = 78\\ \\mathrm{°C}$ élimine l'acide éthanoïque ($118\\ \\mathrm{°C}$) et la propanone ($56\\ \\mathrm{°C}$) ; seul l'éthanol correspond. La densité $d=0{,}79$ est compatible avec l'éthanol (et la propanone, mais celle-ci est déjà écartée).",
+        "Spectre IR : la bande **large** vers $3300\\ \\mathrm{cm^{-1}}$ signale un groupe **O–H** — présent dans un alcool, absent d'une cétone. Cela confirme la famille alcool et exclut la propanone.",
+        "L'**absence** de bande C=O vers $1700\\ \\mathrm{cm^{-1}}$ exclut à la fois l'acide carboxylique et la cétone (qui portent un carbonyle).",
+        "Tous les critères convergent : le liquide est l'**éthanol**. La force de l'identification vient du croisement des critères, aucun pris seul ne suffirait."
+      ],
+      "reponse": "Le liquide est l'**éthanol** : $T_{\\mathrm{eb}}$ et $d$ concordants, bande O–H large en IR, pas de carbonyle."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "etalonnage",
+      "enonce": "Une eau colorée est trop concentrée : mesurée telle quelle, son absorbance $A = 2{,}1$ sort de la gamme d'étalonnage (droite $A = 3{,}0\\times 10^{4}\\, c$, valable jusqu'à $A = 1{,}5$). On prélève $10{,}0\\ \\mathrm{mL}$ de cette eau que l'on complète à $50{,}0\\ \\mathrm{mL}$ avec de l'eau distillée. La solution diluée donne alors $A_{\\mathrm{dil}} = 0{,}42$. Détermine la concentration $c_0$ de l'eau initiale.",
+      "corrige": [
+        "On calcule d'abord la concentration de la solution **diluée** avec la droite d'étalonnage : $c_{\\mathrm{dil}} = \\dfrac{A_{\\mathrm{dil}}}{k} = \\dfrac{0{,}42}{3{,}0\\times 10^{4}} = 1{,}4\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$. Cette valeur est bien dans la gamme.",
+        "Facteur de dilution : on est passé de $10{,}0\\ \\mathrm{mL}$ à $50{,}0\\ \\mathrm{mL}$, soit $F = \\dfrac{V_{\\mathrm{final}}}{V_{\\mathrm{prélevé}}} = \\dfrac{50{,}0}{10{,}0} = 5{,}0$.",
+        "La dilution divise la concentration par $F$ ; l'eau initiale est donc $F$ fois **plus** concentrée : $c_0 = F \\times c_{\\mathrm{dil}} = 5{,}0 \\times 1{,}4\\times 10^{-5}$.",
+        "$c_0 = 7{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$. Vérification : à cette concentration $A = 3{,}0\\times 10^{4} \\times 7{,}0\\times 10^{-5} = 2{,}1$, ce qui redonne bien la mesure hors gamme de départ."
+      ],
+      "reponse": "$c_0 = 7{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "titrage",
+      "enonce": "On dose les ions fer(II) d'une solution par les ions permanganate $\\mathrm{MnO_4^-}$. L'équation est : $\\mathrm{MnO_4^- + 5\\,Fe^{2+} + 8\\,H^+ \\rightarrow Mn^{2+} + 5\\,Fe^{3+} + 4\\,H_2O}$. On titre $V_A = 20{,}0\\ \\mathrm{mL}$ de solution de fer(II) ; l'équivalence, repérée par la persistance de la teinte violette, est atteinte pour $V_E = 12{,}0\\ \\mathrm{mL}$ de permanganate à $C_B = 2{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. Détermine la concentration $C_A$ en ions fer(II). Attention aux coefficients stœchiométriques.",
+      "corrige": [
+        "Quantité de permanganate versée à l'équivalence : $n(\\mathrm{MnO_4^-}) = C_B \\, V_E = 2{,}0\\times 10^{-2} \\times 12{,}0\\times 10^{-3} = 2{,}4\\times 10^{-4}\\ \\mathrm{mol}$ (on convertit $V_E$ en litres).",
+        "Relation à l'équivalence : les réactifs sont dans les proportions de l'équation, soit $\\dfrac{n(\\mathrm{Fe^{2+}})}{5} = \\dfrac{n(\\mathrm{MnO_4^-})}{1}$. Le permanganate réagit avec **5 fois** plus d'ions fer(II).",
+        "Quantité de fer(II) : $n(\\mathrm{Fe^{2+}}) = 5 \\times n(\\mathrm{MnO_4^-}) = 5 \\times 2{,}4\\times 10^{-4} = 1{,}2\\times 10^{-3}\\ \\mathrm{mol}$.",
+        "Concentration : $C_A = \\dfrac{n(\\mathrm{Fe^{2+}})}{V_A} = \\dfrac{1{,}2\\times 10^{-3}}{20{,}0\\times 10^{-3}} = 6{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. Oublier le facteur $5$ aurait donné une valeur $5$ fois trop petite."
+      ],
+      "reponse": "$C_A = 6{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    }
+  ]
+}

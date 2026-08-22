@@ -1,0 +1,90 @@
+{
+  "id": "1stl-spcl-appareil-photo-image-numerique-exos",
+  "chapitre": "1stl-spcl-appareil-photo-image-numerique",
+  "titre": "Exercices — Appareil photo numérique et image numérique",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche chaque exercice au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "application",
+      "notion": "nombre-ouverture",
+      "enonce": "Un objectif a une distance focale $f' = 50\\ \\text{mm}$. Il est réglé sur le nombre d'ouverture $N = 4$ (noté $f/4$).\n\n**a.** Calcule le diamètre $D$ du diaphragme.\n\n**b.** On ferme ensuite le diaphragme à $f/8$. Par combien la quantité de lumière reçue est-elle divisée ?",
+      "corrige": [
+        "**a.** On part de $N = \\dfrac{f'}{D}$, donc $D = \\dfrac{f'}{N} = \\dfrac{50}{4} = 12{,}5\\ \\text{mm}$.",
+        "**b.** Passer de $f/4$ à $f/8$ double le nombre d'ouverture ($N$ passe de $4$ à $8$), donc divise le diamètre par 2 ($D$ passe de $12{,}5$ à $6{,}25\\ \\text{mm}$).",
+        "La lumière reçue est proportionnelle à l'aire du trou, donc à $D^2$ (ou à $1/N^2$). Diviser $D$ par 2 divise l'aire par $2^2 = 4$."
+      ],
+      "reponse": "**a.** $D = 12{,}5\\ \\text{mm}$. **b.** La lumière est divisée par **4**."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Une image mesure $800 \\times 600$ pixels. Elle est codée en RVB (3 octets par pixel) et n'est pas compressée. Calcule son poids, en octets puis en Mo (on prend $1\\ \\text{Mo} = 10^6\\ \\text{o}$).",
+      "corrige": [
+        "Nombre de pixels (définition) : $800 \\times 600 = 480\\,000\\ \\text{px}$.",
+        "Poids en octets : chaque pixel pèse 3 octets (RVB), donc $480\\,000 \\times 3 = 1\\,440\\,000\\ \\text{o}$.",
+        "Conversion en Mo : $\\dfrac{1\\,440\\,000}{10^6} = 1{,}44\\ \\text{Mo}$ (soit $1440\\ \\text{ko}$)."
+      ],
+      "reponse": "Poids $= 1\\,440\\,000\\ \\text{o} = 1{,}44\\ \\text{Mo}$."
+    },
+    {
+      "id": 3,
+      "difficulte": "intermediaire",
+      "notion": "taille-pixel",
+      "enonce": "Un capteur « plein format » mesure $36\\ \\text{mm} \\times 24\\ \\text{mm}$. Sa définition est de $24$ mégapixels, avec un format d'image $3{:}2$ (le rapport largeur/hauteur vaut $3/2$).\n\n**a.** Détermine le nombre de pixels en largeur $L$ et en hauteur $H$.\n\n**b.** En déduis la taille (le côté) d'un pixel.",
+      "corrige": [
+        "**a.** On pose $L \\times H = 24\\times 10^6$ et $\\dfrac{L}{H} = \\dfrac{3}{2}$, donc $L = 1{,}5\\,H$.",
+        "En remplaçant : $1{,}5\\,H \\times H = 24\\times 10^6$, soit $H^2 = \\dfrac{24\\times 10^6}{1{,}5} = 16\\times 10^6$, d'où $H = 4000\\ \\text{px}$ et $L = 1{,}5 \\times 4000 = 6000\\ \\text{px}$.",
+        "**b.** Taille d'un pixel sur la largeur : $\\dfrac{36\\ \\text{mm}}{6000} = 6{,}0\\times 10^{-3}\\ \\text{mm} = 6{,}0\\ \\mu\\text{m}$.",
+        "Vérification sur la hauteur : $\\dfrac{24\\ \\text{mm}}{4000} = 6{,}0\\ \\mu\\text{m}$ : cohérent, les pixels sont carrés."
+      ],
+      "reponse": "**a.** $L = 6000\\ \\text{px}$, $H = 4000\\ \\text{px}$. **b.** Taille d'un pixel $= 6{,}0\\ \\mu\\text{m}$."
+    },
+    {
+      "id": 4,
+      "difficulte": "intermediaire",
+      "notion": "debit-binaire",
+      "enonce": "Une vidéo a une définition de $1280 \\times 720$ pixels, est codée en RVB (3 octets/pixel) et comporte $30$ images par seconde, sans compression.\n\n**a.** Calcule le débit binaire nécessaire, en Gbit/s.\n\n**b.** Le réseau ne supporte que $10\\ \\text{Mbit/s}$. Quel taux de compression minimal faut-il atteindre ?",
+      "corrige": [
+        "**a.** Poids d'une image : $1280 \\times 720 = 921\\,600\\ \\text{px}$, puis $\\times 3 = 2\\,764\\,800\\ \\text{o}$.",
+        "Par seconde : $2\\,764\\,800 \\times 30 = 82\\,944\\,000\\ \\text{o/s}$.",
+        "Conversion en bits : $82\\,944\\,000 \\times 8 = 663\\,552\\,000\\ \\text{bit/s} \\approx 0{,}66\\ \\text{Gbit/s}$ (soit $\\approx 664\\ \\text{Mbit/s}$).",
+        "**b.** Taux de compression minimal $= \\dfrac{\\text{débit non compressé}}{\\text{débit disponible}} = \\dfrac{664\\ \\text{Mbit/s}}{10\\ \\text{Mbit/s}} \\approx 66$."
+      ],
+      "reponse": "**a.** $D \\approx 0{,}66\\ \\text{Gbit/s}$ ($\\approx 664\\ \\text{Mbit/s}$). **b.** Taux de compression $\\gtrsim 66$ : la compression est indispensable."
+    },
+    {
+      "id": 5,
+      "difficulte": "approfondissement",
+      "notion": "temps-de-pose",
+      "enonce": "Une photo est correctement exposée avec les réglages : ouverture $f/4$, temps de pose $t = \\dfrac{1}{250}\\ \\text{s}$, sensibilité $100$ ISO.\n\nLe sujet bouge : on veut figer le mouvement en passant à $t = \\dfrac{1}{1000}\\ \\text{s}$, sans changer l'ISO.\n\n**a.** Par combien la lumière reçue est-elle divisée à cause du nouveau temps de pose ?\n\n**b.** Quel nombre d'ouverture faut-il choisir pour garder la même exposition ?\n\n**c.** Cite un autre réglage qui aurait permis de compenser.",
+      "corrige": [
+        "**a.** Le temps de pose passe de $\\tfrac{1}{250}$ à $\\tfrac{1}{1000}\\ \\text{s}$ : $\\dfrac{1/250}{1/1000} = \\dfrac{1000}{250} = 4$. Le temps est divisé par 4, donc la lumière aussi.",
+        "**b.** Pour compenser, il faut multiplier la lumière par 4 en ouvrant le diaphragme. La lumière varie en $1/N^2$ : la multiplier par 4 impose de diviser $N^2$ par 4, donc $N$ par 2.",
+        "On passe donc de $N = 4$ ($f/4$) à $N = 2$ ($f/2$).",
+        "**c.** On aurait pu quadrupler la sensibilité : passer de $100$ à $400$ ISO (deux doublements) redonne le même niveau de lumière, au prix d'un peu de bruit."
+      ],
+      "reponse": "**a.** Lumière divisée par 4. **b.** Ouverture $f/2$ ($N = 2$). **c.** Passer à $400$ ISO."
+    },
+    {
+      "id": 6,
+      "difficulte": "approfondissement",
+      "notion": "poids",
+      "enonce": "Un appareil produit une photo de $24$ mégapixels, en RVB (3 octets/pixel), non compressée. On prend $1\\ \\text{Mo} = 10^6\\ \\text{o}$ et $1\\ \\text{octet} = 8\\ \\text{bits}$.\n\n**a.** Calcule le poids brut de la photo, en Mo.\n\n**b.** Enregistrée en JPEG avec un taux de compression de $20$, quel est le nouveau poids ?\n\n**c.** On envoie ce fichier JPEG par une connexion de débit $8\\ \\text{Mbit/s}$. Combien de temps dure le transfert ?",
+      "corrige": [
+        "**a.** Nombre de pixels : $24\\ \\text{Mpx} = 24\\times 10^6\\ \\text{px}$. Poids brut : $24\\times 10^6 \\times 3 = 72\\times 10^6\\ \\text{o} = 72\\ \\text{Mo}$.",
+        "**b.** Le taux de compression est $\\dfrac{\\text{poids brut}}{\\text{poids compressé}} = 20$, donc poids JPEG $= \\dfrac{72}{20} = 3{,}6\\ \\text{Mo}$.",
+        "**c.** On convertit le poids en bits : $Q = 3{,}6\\times 10^6 \\times 8 = 28{,}8\\times 10^6\\ \\text{bits} = 28{,}8\\ \\text{Mbit}$.",
+        "Le débit étant $D = 8\\ \\text{Mbit/s}$, la durée est $\\Delta t = \\dfrac{Q}{D} = \\dfrac{28{,}8}{8} = 3{,}6\\ \\text{s}$."
+      ],
+      "reponse": "**a.** $72\\ \\text{Mo}$. **b.** $3{,}6\\ \\text{Mo}$. **c.** $\\Delta t = 3{,}6\\ \\text{s}$."
+    }
+  ]
+}

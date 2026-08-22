@@ -1,0 +1,154 @@
+{
+  "id": "1stl-spcl-mesure-incertitudes-labo-qcm",
+  "chapitre": "1stl-spcl-mesure-incertitudes-labo",
+  "titre": "QCM — Mesure et incertitudes en laboratoire",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "sources-erreurs",
+      "enonce": "Que permet de faire le fait de **répéter** une mesure plusieurs fois ?",
+      "choix": [
+        "corriger une erreur systématique (par exemple une balance mal tarée)",
+        "réduire l'effet des erreurs aléatoires, qui se compensent en moyenne",
+        "supprimer toutes les erreurs, aléatoires comme systématiques",
+        "rien : la répétition ne change jamais le résultat"
+      ],
+      "reponse": 1,
+      "explication": "Les erreurs **aléatoires** se dispersent autour de la valeur vraie : en moyennant plusieurs mesures, elles se compensent et l'incertitude diminue. En revanche une erreur **systématique** (balance mal tarée) décale toujours dans le même sens : la répétition ne la corrige jamais. C'est le piège classique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "incertitude-type",
+      "enonce": "On ne réalise qu'**une seule** mesure de volume avec une pipette jaugée portant l'indication $\\pm 0{,}03\\ \\mathrm{mL}$. Comment évalue-t-on l'incertitude ?",
+      "choix": [
+        "par une incertitude de type A, en calculant un écart-type",
+        "par une incertitude de type B, à partir de la tolérance de la pipette",
+        "on ne peut pas : une mesure unique n'a pas d'incertitude",
+        "par une incertitude de type A, car il s'agit d'un volume"
+      ],
+      "reponse": 1,
+      "explication": "Le type **A** exige une **série** de mesures répétées (analyse statistique). Avec **une seule** mesure, on passe par le type **B**, évalué à partir des caractéristiques de l'instrument — ici la tolérance : $u = \\text{tolérance}/\\sqrt{3}$. Une mesure unique a bel et bien une incertitude, sinon elle serait exacte."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "type-a",
+      "enonce": "À partir de l'écart-type expérimental $s$ d'une série de $n$ mesures, comment obtient-on l'incertitude-type de type A sur la **moyenne** ?",
+      "choix": [
+        "$u = s \\times \\sqrt{n}$",
+        "$u = \\dfrac{s}{n}$",
+        "$u = \\dfrac{s}{\\sqrt{n}}$",
+        "$u = s$"
+      ],
+      "reponse": 2,
+      "explication": "L'incertitude-type de type A vaut $u(\\bar{x}) = \\dfrac{s}{\\sqrt{n}}$. On divise par $\\sqrt{n}$, jamais par $n$ ni par $\\sqrt{n}$ au numérateur : plus $n$ augmente, plus l'incertitude sur la moyenne **diminue**. Diviser par $n$ ferait chuter l'incertitude beaucoup trop vite."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "type-b",
+      "enonce": "Une burette est graduée tous les $0{,}1\\ \\mathrm{mL}$. En prenant $u = \\dfrac{\\text{graduation}}{\\sqrt{3}}$, quelle est l'incertitude-type sur une lecture ?",
+      "choix": [
+        "$0{,}1\\ \\mathrm{mL}$",
+        "$0{,}06\\ \\mathrm{mL}$",
+        "$0{,}05\\ \\mathrm{mL}$",
+        "$0{,}03\\ \\mathrm{mL}$"
+      ],
+      "reponse": 1,
+      "explication": "$u = \\dfrac{0{,}1}{\\sqrt{3}} = 0{,}0577 \\approx 0{,}06\\ \\mathrm{mL}$. On divise la graduation par $\\sqrt{3}$, pas par $2$ ni par $2\\sqrt{3}$. Garder $0{,}1\\ \\mathrm{mL}$ (la graduation nue) surestime le doute ; c'est l'oubli du facteur $\\sqrt{3}$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "justesse-fidelite",
+      "enonce": "Sur une cible, des tirs **groupés** mais **tous décalés** du centre traduisent un instrument :",
+      "choix": [
+        "juste mais pas fidèle",
+        "fidèle mais pas juste",
+        "juste et fidèle",
+        "ni juste ni fidèle"
+      ],
+      "reponse": 1,
+      "explication": "Tirs **groupés** = faible dispersion = **fidèle**. Tirs **décalés** du centre = la moyenne n'est pas la valeur vraie = **pas juste** (erreur systématique). Un instrument peut donc être très fidèle et pourtant faux : la fidélité ne garantit jamais la justesse."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "expression-resultat",
+      "enonce": "Un calcul donne $\\bar{m} = 7{,}384\\ \\mathrm{g}$ et une incertitude $u = 0{,}03\\ \\mathrm{g}$. Quelle écriture du résultat est correcte ?",
+      "choix": [
+        "$m = (7{,}384 \\pm 0{,}03)\\ \\mathrm{g}$",
+        "$m = (7{,}38 \\pm 0{,}03)\\ \\mathrm{g}$",
+        "$m = (7{,}4 \\pm 0{,}03)\\ \\mathrm{g}$",
+        "$m = 7{,}38 \\pm 0{,}03$ (sans unité)"
+      ],
+      "reponse": 1,
+      "explication": "La valeur doit être arrondie au **même rang décimal** que l'incertitude. Ici $u = 0{,}03\\ \\mathrm{g}$ s'arrête au centième, donc $\\bar{m}$ aussi : $7{,}38\\ \\mathrm{g}$. Garder $7{,}384$ affiche un chiffre sans signification ; n'écrire que $7{,}4$ jette de l'information ; et l'unité est obligatoire."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "type-a",
+      "enonce": "Quatre mesures d'une longueur donnent une moyenne $\\bar{x} = 10{,}20\\ \\mathrm{cm}$ et un écart-type expérimental $s = 0{,}16\\ \\mathrm{cm}$. Que vaut l'incertitude-type $u(\\bar{x})$ ?",
+      "choix": [
+        "$0{,}16\\ \\mathrm{cm}$",
+        "$0{,}08\\ \\mathrm{cm}$",
+        "$0{,}04\\ \\mathrm{cm}$",
+        "$0{,}32\\ \\mathrm{cm}$"
+      ],
+      "reponse": 1,
+      "explication": "$u(\\bar{x}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}16}{\\sqrt{4}} = \\dfrac{0{,}16}{2} = 0{,}08\\ \\mathrm{cm}$. Diviser par $n = 4$ (au lieu de $\\sqrt{n} = 2$) donnerait $0{,}04\\ \\mathrm{cm}$ : c'est l'erreur à éviter. Garder $s$ lui-même oublie la division."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "incertitude-composee",
+      "enonce": "On calcule $\\rho = \\dfrac{m}{V}$ avec $m = (12{,}0 \\pm 0{,}1)\\ \\mathrm{g}$ et $V = (10{,}0 \\pm 0{,}2)\\ \\mathrm{mL}$, d'où $\\rho = 1{,}20\\ \\mathrm{g\\cdot mL^{-1}}$. Que vaut $u(\\rho)$ ?",
+      "choix": [
+        "$0{,}02\\ \\mathrm{g\\cdot mL^{-1}}$",
+        "$0{,}03\\ \\mathrm{g\\cdot mL^{-1}}$",
+        "$0{,}2\\ \\mathrm{g\\cdot mL^{-1}}$",
+        "$0{,}3\\ \\mathrm{g\\cdot mL^{-1}}$"
+      ],
+      "reponse": 1,
+      "explication": "Pour un quotient, on combine les incertitudes **relatives** : $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{\\left(\\dfrac{0{,}1}{12{,}0}\\right)^2 + \\left(\\dfrac{0{,}2}{10{,}0}\\right)^2} = \\sqrt{0{,}0083^2 + 0{,}020^2} = 0{,}022$. Donc $u(\\rho) = 0{,}022 \\times 1{,}20 = 0{,}026 \\approx 0{,}03\\ \\mathrm{g\\cdot mL^{-1}}$. Oublier de multiplier par $\\rho$ (rester à $0{,}022 \\approx 0{,}02$) ou combiner les incertitudes **absolues** ($\\sqrt{0{,}1^2+0{,}2^2}\\approx 0{,}2$, voire $0{,}1+0{,}2 = 0{,}3$) sont les erreurs classiques."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "incertitude-composee",
+      "enonce": "Lors d'un titrage, le volume versé est $V = V_f - V_i$ avec $V_f = (18{,}45 \\pm 0{,}03)\\ \\mathrm{mL}$ et $V_i = (2{,}10 \\pm 0{,}04)\\ \\mathrm{mL}$. Que vaut l'incertitude $u(V)$ ?",
+      "choix": [
+        "$0{,}00\\ \\mathrm{mL}$ : les incertitudes se compensent dans une différence",
+        "$0{,}05\\ \\mathrm{mL}$",
+        "$0{,}07\\ \\mathrm{mL}$",
+        "$0{,}01\\ \\mathrm{mL}$"
+      ],
+      "reponse": 1,
+      "explication": "Même pour une **différence**, les incertitudes ne se soustraient pas et ne s'annulent pas : elles se combinent **en quadrature** comme pour une somme. $u(V) = \\sqrt{u(V_f)^2 + u(V_i)^2} = \\sqrt{0{,}03^2 + 0{,}04^2} = \\sqrt{0{,}0025} = 0{,}05\\ \\mathrm{mL}$. Additionner ($0{,}03+0{,}04 = 0{,}07$) ou soustraire ($0{,}01$) les incertitudes sont deux fautes fréquentes."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "expression-resultat",
+      "enonce": "Un calcul complet donne $\\bar{x} = 3{,}2914\\ \\mathrm{g}$ et $u = 0{,}047\\ \\mathrm{g}$. Comment présenter correctement le résultat final ?",
+      "choix": [
+        "$x = (3{,}2914 \\pm 0{,}05)\\ \\mathrm{g}$",
+        "$x = (3{,}29 \\pm 0{,}05)\\ \\mathrm{g}$",
+        "$x = (3{,}3 \\pm 0{,}05)\\ \\mathrm{g}$",
+        "$x = (3{,}29 \\pm 0{,}047)\\ \\mathrm{g}$"
+      ],
+      "reponse": 1,
+      "explication": "On arrondit d'abord l'incertitude à **1 chiffre significatif** : $0{,}047 \\approx 0{,}05\\ \\mathrm{g}$. Puis la valeur au **même rang** (le centième) : $3{,}29\\ \\mathrm{g}$. D'où $(3{,}29 \\pm 0{,}05)\\ \\mathrm{g}$. Garder $3{,}2914$ affiche des chiffres non significatifs ; $3{,}3$ arrondit trop tôt ; et $0{,}047$ n'est pas arrondie à 1 c.s."
+    }
+  ]
+}

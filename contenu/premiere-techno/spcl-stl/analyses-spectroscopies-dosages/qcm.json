@@ -1,0 +1,154 @@
+{
+  "id": "1stl-spcl-analyses-spectroscopies-dosages-qcm",
+  "chapitre": "1stl-spcl-analyses-spectroscopies-dosages",
+  "titre": "QCM — Analyses physico-chimiques : spectroscopies et dosages",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "beer-lambert",
+      "enonce": "Quelle est l'unité de l'absorbance $A$ ?",
+      "choix": [
+        "$\\mathrm{mol\\cdot L^{-1}}$",
+        "$\\mathrm{cm}$",
+        "elle n'a pas d'unité",
+        "$\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$"
+      ],
+      "reponse": 2,
+      "explication": "L'absorbance est une grandeur **sans unité** : c'est un logarithme de rapport d'intensités lumineuses. L'unité $\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$ est celle du coefficient $\\varepsilon$, pas de $A$. Le piège est de recopier l'unité d'un autre terme de la loi $A=\\varepsilon\\ell c$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "identification-proprietes",
+      "enonce": "Un liquide a une densité $d = 0{,}79$. Quelle affirmation est correcte ?",
+      "choix": [
+        "$d$ s'exprime en $\\mathrm{g\\cdot mL^{-1}}$",
+        "$d$ est sans unité et le liquide est moins dense que l'eau",
+        "$d$ est sans unité et le liquide est plus dense que l'eau",
+        "$d = 0{,}79$ signifie que le liquide pèse $0{,}79\\ \\mathrm{g}$"
+      ],
+      "reponse": 1,
+      "explication": "La densité est un **rapport** de masses volumiques, donc **sans unité**. Comme $d < 1$, le liquide est **moins dense** que l'eau. La masse volumique $\\rho$, elle, s'exprime en $\\mathrm{g\\cdot mL^{-1}}$ ; le piège est de confondre densité et masse volumique."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "uv-visible",
+      "enonce": "Une solution absorbe principalement autour de $\\lambda_{\\max} \\approx 450\\ \\mathrm{nm}$ (bleu). De quelle couleur apparaît-elle ?",
+      "choix": [
+        "bleue",
+        "jaune-orangé",
+        "verte",
+        "incolore"
+      ],
+      "reponse": 1,
+      "explication": "La couleur **perçue** est la **complémentaire** de la couleur **absorbée**. Le complémentaire du bleu ($\\approx 450\\ \\mathrm{nm}$) est le jaune-orangé. Le piège est de croire que la solution renvoie la couleur de son $\\lambda_{\\max}$ : elle renvoie l'opposée."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "infrarouge",
+      "enonce": "Sur un spectre IR, une bande **fine et intense** vers $1710\\ \\mathrm{cm^{-1}}$ indique la présence :",
+      "choix": [
+        "d'une liaison O–H d'alcool",
+        "d'une liaison C=O (carbonyle)",
+        "d'une liaison C–H",
+        "d'aucun groupe : c'est du bruit"
+      ],
+      "reponse": 1,
+      "explication": "La bande fine et intense de la région $1700$–$1750\\ \\mathrm{cm^{-1}}$ est caractéristique du **carbonyle C=O**. Le O–H d'alcool donne au contraire une bande **large** vers $3200$–$3400\\ \\mathrm{cm^{-1}}$. Le piège est de confondre les zones : le nombre d'onde de la bande localise le groupe."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "identification-proprietes",
+      "enonce": "Après une recristallisation, on mesure la température de fusion du solide. Comparée à celle du corps pur tabulé, une fusion à température **plus basse et étalée sur un intervalle** signifie :",
+      "choix": [
+        "que le solide est parfaitement pur",
+        "que le solide contient encore des impuretés",
+        "que le thermomètre est en $\\mathrm{K}$",
+        "que l'espèce a changé de nature chimique"
+      ],
+      "reponse": 1,
+      "explication": "Une impureté **abaisse** et **élargit** le point de fusion. Un corps pur fond à température **fixe et nette**. Une fusion basse et étalée est donc le signe qu'il **reste des impuretés** : la purification est incomplète. C'est le critère de contrôle après recristallisation."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "beer-lambert",
+      "enonce": "Dans une cuve de $\\ell = 1{,}0\\ \\mathrm{cm}$, une espèce de coefficient $\\varepsilon = 5{,}0\\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$ est à $c = 4{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Quelle est son absorbance $A$ ?",
+      "choix": [
+        "$A = 2{,}0$",
+        "$A = 0{,}50$",
+        "$A = 2{,}0\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$A = 20$"
+      ],
+      "reponse": 0,
+      "explication": "$A = \\varepsilon\\,\\ell\\,c = 5{,}0\\times 10^{3} \\times 1{,}0 \\times 4{,}0\\times 10^{-4} = 2{,}0$, **sans unité**. Le distracteur $0{,}50$ vient d'une inversion des puissances de $10$ ; celui avec $\\mathrm{mol\\cdot L^{-1}}$ ajoute à tort une unité à $A$."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "etalonnage",
+      "enonce": "La droite d'étalonnage a pour équation $A = 2{,}5\\times 10^{3}\\, c$ (avec $c$ en $\\mathrm{mol\\cdot L^{-1}}$). Une solution inconnue donne $A_x = 0{,}40$. Quelle est sa concentration $c_x$ ?",
+      "choix": [
+        "$c_x = 1{,}0\\times 10^{3}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$c_x = 1{,}6\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$c_x = 6{,}25\\times 10^{3}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$c_x = 0{,}40\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 1,
+      "explication": "On **divise** l'absorbance par la pente : $c_x = \\dfrac{A_x}{k} = \\dfrac{0{,}40}{2{,}5\\times 10^{3}} = 1{,}6\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Le piège est de **multiplier** $A_x$ par la pente (ce qui donne $10^{3}$) au lieu de diviser."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "titrage",
+      "enonce": "On titre $V_A = 20{,}0\\ \\mathrm{mL}$ d'un acide (réaction $1$ pour $1$) par une base à $C_B = 0{,}050\\ \\mathrm{mol\\cdot L^{-1}}$. L'équivalence est à $V_E = 16{,}0\\ \\mathrm{mL}$. Quelle est la concentration $C_A$ de l'acide ?",
+      "choix": [
+        "$C_A = 0{,}040\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$C_A = 0{,}0625\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$C_A = 0{,}80\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$C_A = 40\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 0,
+      "explication": "À l'équivalence ($1$–$1$) : $C_A = \\dfrac{C_B V_E}{V_A} = \\dfrac{0{,}050 \\times 16{,}0}{20{,}0} = 0{,}040\\ \\mathrm{mol\\cdot L^{-1}}$. Comme $V_E$ et $V_A$ sont dans la même unité (mL), leur rapport est correct sans conversion. Le distracteur $0{,}0625$ inverse $V_E$ et $V_A$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "titrage",
+      "enonce": "Qu'est-ce que l'**équivalence** d'un titrage ?",
+      "choix": [
+        "l'instant où le titrant commence tout juste à être versé",
+        "l'instant où les réactifs ont été introduits dans les proportions stœchiométriques",
+        "l'instant où la solution devient incolore, quel que soit le volume versé",
+        "l'instant où l'on a versé exactement $10\\ \\mathrm{mL}$ de titrant"
+      ],
+      "reponse": 1,
+      "explication": "À l'équivalence, le réactif titrant a **exactement** consommé l'espèce titrée : les quantités sont dans les **proportions stœchiométriques** de l'équation. Avant, le titré est en excès ; après, le titrant. Ce n'est pas lié à un volume fixe ni au simple début du versement."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "etalonnage",
+      "enonce": "Lors d'un dosage par étalonnage, l'absorbance de l'inconnue vaut $A_x = 2{,}3$, alors que la gamme d'étalons ne monte que jusqu'à $A = 1{,}4$. Que faut-il faire ?",
+      "choix": [
+        "lire directement $c_x$ en prolongeant la droite, la loi restant linéaire partout",
+        "diluer l'inconnue, mesurer à nouveau, puis multiplier $c_x$ par le facteur de dilution",
+        "changer la longueur d'onde jusqu'à obtenir $A_x < 1{,}4$",
+        "prendre une cuve plus large pour augmenter $\\ell$"
+      ],
+      "reponse": 1,
+      "explication": "Au-delà du domaine linéaire (ici hors gamme, $A$ élevée), la loi de Beer-Lambert se courbe : prolonger la droite fausse le résultat. On **dilue** l'inconnue pour ramener $A_x$ dans la gamme, puis on **multiplie** la concentration trouvée par le facteur de dilution. Changer $\\lambda$ ou élargir la cuve ne corrige pas le problème de linéarité."
+    }
+  ]
+}
