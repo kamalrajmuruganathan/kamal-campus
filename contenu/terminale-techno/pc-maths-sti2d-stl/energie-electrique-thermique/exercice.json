@@ -86,6 +86,56 @@
         "3) Énergie quotidienne : $E = P_{\\text{élec}} \\times t = 2{,}45 \\times 3{,}5 \\approx 8{,}6\\ \\mathrm{kWh}$ par jour (calcul mené avec $P_{\\text{élec}} = 2448\\ \\mathrm{W}$ avant arrondi). C'est presque l'énergie qu'exige le chauffe-eau de l'exercice 2 : une telle installation couvre à peu près l'eau chaude du pavillon, en moyenne sur l'année."
       ],
       "reponse": "$E_{\\text{photon}} \\approx 3{,}3 \\times 10^{-19}\\ \\mathrm{J}$ ; $N \\approx 4 \\times 10^{22}$ photons par seconde ; $P_{\\text{élec}} \\approx 2{,}4\\ \\mathrm{kW}$ ; production $\\approx 8{,}6\\ \\mathrm{kWh}$ par jour."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "regime-sinusoidal",
+      "enonce": "Un sèche-cheveux se comporte comme un conducteur ohmique de résistance $R = 46\\ \\Omega$. On le branche sur le secteur : tension sinusoïdale de valeur efficace $U = 230\\ \\mathrm{V}$ et de fréquence $f = 50\\ \\mathrm{Hz}$. Données : $U_{\\text{max}} = U \\times \\sqrt{2}$ ; loi d'Ohm en valeurs efficaces $I = \\dfrac{U}{R}$ ; pour un conducteur ohmique $\\varphi = 0$ donc $P = U \\cdot I$. 1) Calcule la valeur maximale $U_{\\text{max}}$ de la tension. 2) Calcule l'intensité efficace $I$ traversant l'appareil. 3) Calcule la puissance électrique $P$ qu'il consomme.",
+      "corrige": [
+        "1) Valeur maximale : $U_{\\text{max}} = U \\times \\sqrt{2} = 230 \\times \\sqrt{2} \\approx 325\\ \\mathrm{V}$. Le « $230\\ \\mathrm{V}$ » de la prise est une valeur efficace : la tension atteint réellement $325\\ \\mathrm{V}$ en pointe, cent fois par seconde.",
+        "2) Intensité efficace : la loi d'Ohm s'applique aux valeurs efficaces, $I = \\dfrac{U}{R} = \\dfrac{230}{46} = 5{,}0\\ \\mathrm{A}$.",
+        "3) Puissance : un sèche-cheveux (chauffage) est un conducteur ohmique, donc $u$ et $i$ sont en phase ($\\varphi = 0$, $\\cos\\varphi = 1$) et $P = U \\cdot I = 230 \\times 5{,}0 = 1150\\ \\mathrm{W}$. On utilise bien les valeurs efficaces, jamais $U_{\\text{max}}$ : prendre $325\\ \\mathrm{V}$ surestimerait la puissance."
+      ],
+      "reponse": "$U_{\\text{max}} \\approx 325\\ \\mathrm{V}$ ; $I = 5{,}0\\ \\mathrm{A}$ ; $P = 1150\\ \\mathrm{W} \\approx 1{,}2\\ \\mathrm{kW}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "energie-interne",
+      "enonce": "Dans un atelier, une plaque chauffante porte une pièce en aluminium de masse $m = 3{,}0\\ \\mathrm{kg}$ de $20\\ ^\\circ\\mathrm{C}$ à $200\\ ^\\circ\\mathrm{C}$ avant usinage. Données : $\\Delta U = m\\,c\\,\\Delta T$ ; $c_{\\text{alu}} = 900\\ \\mathrm{J \\cdot kg^{-1} \\cdot K^{-1}}$ ; la plaque fournit une puissance $P = 1500\\ \\mathrm{W}$, supposée intégralement transmise à la pièce. 1) Calcule la variation d'énergie interne de la pièce. 2) En déduire la durée de chauffe.",
+      "corrige": [
+        "1) Écart de température : $\\Delta T = 200 - 20 = 180\\ ^\\circ\\mathrm{C} = 180\\ \\mathrm{K}$ — un écart garde la même valeur en °C et en K, on n'ajoute pas $273$. Énergie : $\\Delta U = m\\,c\\,\\Delta T = 3{,}0 \\times 900 \\times 180 = 4{,}86 \\times 10^5\\ \\mathrm{J}$. L'aluminium ($c = 900$) demande bien moins d'énergie que l'eau ($c = 4185$) pour un même échauffement.",
+        "2) La puissance est l'énergie fournie par seconde, donc $t = \\dfrac{\\Delta U}{P} = \\dfrac{4{,}86 \\times 10^5}{1500} = 324\\ \\mathrm{s}$, soit environ $5\\ \\mathrm{min}\\ 24\\ \\mathrm{s}$. En pratique la durée serait un peu plus longue : une partie de la chaleur part dans l'air et le support au lieu de la seule pièce."
+      ],
+      "reponse": "$\\Delta U = 4{,}86 \\times 10^5\\ \\mathrm{J}$ ; durée $t = 324\\ \\mathrm{s} \\approx 5\\ \\mathrm{min}\\ 24\\ \\mathrm{s}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "flux-thermique",
+      "enonce": "Une chambre froide a une paroi de surface totale $S = 30\\ \\mathrm{m}^2$, isolée par du polyuréthane de conductivité $\\lambda = 0{,}025\\ \\mathrm{W \\cdot m^{-1} \\cdot K^{-1}}$. On veut maintenir $4\\ ^\\circ\\mathrm{C}$ à l'intérieur alors qu'il fait $24\\ ^\\circ\\mathrm{C}$ dans l'atelier, en limitant le flux thermique entrant à $\\Phi = 300\\ \\mathrm{W}$. Données : $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$ ; $R_{\\text{th}} = \\dfrac{e}{\\lambda \\cdot S}$. 1) Détermine la résistance thermique minimale nécessaire. 2) En déduire l'épaisseur minimale $e$ d'isolant. 3) Que faudrait-il faire pour diviser le flux entrant par deux ?",
+      "corrige": [
+        "1) La contrainte porte sur le flux : $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$ donne $R_{\\text{th}} = \\dfrac{\\Delta T}{\\Phi}$. Avec $\\Delta T = 24 - 4 = 20\\ \\mathrm{K}$ (écart identique en °C et en K) : $R_{\\text{th}} = \\dfrac{20}{300} \\approx 0{,}067\\ \\mathrm{K \\cdot W^{-1}}$. Pour que le flux ne dépasse pas $300\\ \\mathrm{W}$, la paroi doit être au moins aussi résistante que cela.",
+        "2) On inverse $R_{\\text{th}} = \\dfrac{e}{\\lambda\\,S}$ en $e = R_{\\text{th}} \\times \\lambda \\times S = 0{,}0667 \\times 0{,}025 \\times 30 \\approx 0{,}050\\ \\mathrm{m}$, soit $5{,}0\\ \\mathrm{cm}$ de polyuréthane. On garde $e$ en mètres pour ne pas se tromper d'un facteur $100$.",
+        "3) Diviser le flux par $2$ à écart de température fixé revient à doubler la résistance thermique ($\\Phi$ et $R_{\\text{th}}$ sont inversement proportionnels). Comme $e$ et $R_{\\text{th}}$ sont proportionnels, il faut doubler l'épaisseur : $e = 10\\ \\mathrm{cm}$. On pourrait aussi choisir un isolant de $\\lambda$ deux fois plus faible.",
+        "Piège évité : on ne confond pas la donnée imposée (le flux maximal $\\Phi$) avec l'inconnue (l'épaisseur $e$). Ici le flux est le point de départ du calcul, pas son résultat."
+      ],
+      "reponse": "$R_{\\text{th}} \\approx 0{,}067\\ \\mathrm{K \\cdot W^{-1}}$ ; épaisseur minimale $e \\approx 5{,}0\\ \\mathrm{cm}$ ; pour diviser le flux par deux, il faut doubler $R_{\\text{th}}$ donc doubler l'épaisseur ($10\\ \\mathrm{cm}$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "energie-electrique-thermique",
+      "enonce": "Un refuge de montagne isolé n'est pas raccordé au réseau : il produit toute son électricité. Son toit porte des panneaux photovoltaïques (surface totale $S = 15\\ \\mathrm{m}^2$, rendement $\\eta = 20\\,\\%$). L'énergie est stockée dans une batterie de $48\\ \\mathrm{V}$ ($Q = 200\\ \\mathrm{Ah}$), puis un onduleur la convertit en tension sinusoïdale ($U = 230\\ \\mathrm{V}$ efficace, $f = 50\\ \\mathrm{Hz}$) pour les appareils. En hiver, le refuge est chauffé électriquement. Données : $\\eta = \\dfrac{P_{\\text{élec}}}{E_{\\text{écl}} \\cdot S}$ avec $E_{\\text{écl}} = 1000\\ \\mathrm{W \\cdot m^{-2}}$ en plein soleil ; $P = U \\cdot I$ ; $P_{\\text{pertes}} = R \\cdot I^2$ ; câble panneaux→batterie de résistance $R = 0{,}040\\ \\Omega$ ; $U_{\\text{max}} = U\\sqrt{2}$ ; $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$ avec $R_{\\text{th}} = 0{,}025\\ \\mathrm{K \\cdot W^{-1}}$ (parois du refuge) ; $E = Q \\cdot U$ ; $1\\ \\mathrm{kWh} = 3{,}6 \\times 10^6\\ \\mathrm{J}$. \n\n1. Calcule la puissance électrique $P_{\\text{élec}}$ produite par les panneaux en plein soleil. \n2. Cette puissance charge la batterie $48\\ \\mathrm{V}$ à travers le câble. Calcule l'intensité dans le câble, puis les pertes Joule ; exprime-les en pourcentage de la puissance produite. \n3. L'onduleur délivre une tension sinusoïdale de $230\\ \\mathrm{V}$ efficace à $50\\ \\mathrm{Hz}$. Calcule sa valeur maximale $U_{\\text{max}}$ et sa période $T$. \n4. Le refuge est à $18\\ ^\\circ\\mathrm{C}$ quand il fait $-7\\ ^\\circ\\mathrm{C}$ dehors. Calcule le flux thermique $\\Phi$ à travers les parois : c'est la puissance que le chauffage doit fournir en permanence. \n5. La nuit, plus de soleil : seul le chauffage fonctionne sur la batterie. Calcule l'énergie stockée (en kWh) et l'autonomie du chauffage.",
+      "corrige": [
+        "1. Puissance photovoltaïque : la puissance lumineuse reçue est $P_{\\text{reçue}} = E_{\\text{écl}} \\times S = 1000 \\times 15 = 1{,}5 \\times 10^4\\ \\mathrm{W}$, et la puissance électrique en découle par le rendement : $P_{\\text{élec}} = \\eta \\times P_{\\text{reçue}} = 0{,}20 \\times 1{,}5 \\times 10^4 = 3000\\ \\mathrm{W} = 3{,}0\\ \\mathrm{kW}$. Les $80\\,\\%$ restants sont réfléchis ou dissipés en chaleur dans les cellules.",
+        "2. Pertes en ligne : côté batterie la tension est faible ($48\\ \\mathrm{V}$), donc l'intensité est forte : $I = \\dfrac{P_{\\text{élec}}}{U_{\\text{batt}}} = \\dfrac{3000}{48} = 62{,}5\\ \\mathrm{A}$. Pertes Joule : $P_{\\text{pertes}} = R\\,I^2 = 0{,}040 \\times 62{,}5^2 \\approx 156\\ \\mathrm{W}$, soit $\\dfrac{156}{3000} \\approx 5{,}2\\,\\%$ de la puissance produite. C'est le carré de l'intensité qui punit la basse tension : d'où des câbles gros et courts entre panneaux et batterie.",
+        "3. Onduleur : valeur maximale $U_{\\text{max}} = U\\sqrt{2} = 230 \\times \\sqrt{2} \\approx 325\\ \\mathrm{V}$ ; période $T = \\dfrac{1}{f} = \\dfrac{1}{50} = 0{,}020\\ \\mathrm{s} = 20\\ \\mathrm{ms}$. Un multimètre en mode AC afficherait bien $230\\ \\mathrm{V}$ (efficace), pas $325\\ \\mathrm{V}$.",
+        "4. Chauffage : $\\Delta T = 18 - (-7) = 25\\ \\mathrm{K}$ (écart identique en °C et en K, on n'ajoute pas $273$). Flux thermique : $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}} = \\dfrac{25}{0{,}025} = 1000\\ \\mathrm{W}$. Pour maintenir la température, le chauffage doit compenser cette fuite en permanence, soit fournir $1000\\ \\mathrm{W}$.",
+        "5. Autonomie : énergie stockée $E = Q \\times U_{\\text{batt}} = 200 \\times 48 = 9600\\ \\mathrm{Wh} = 9{,}6\\ \\mathrm{kWh}$. Avec le seul chauffage ($1000\\ \\mathrm{W}$) : $t = \\dfrac{E}{P} = \\dfrac{9600}{1000} = 9{,}6\\ \\mathrm{h}$. La batterie tient donc une nuit d'hiver — à condition que la journée ensoleillée ait pu la recharger, ce qui suppose plusieurs heures de plein soleil équivalent."
+      ],
+      "reponse": "1. $P_{\\text{élec}} = 3{,}0\\ \\mathrm{kW}$. 2. $I = 62{,}5\\ \\mathrm{A}$, pertes $\\approx 156\\ \\mathrm{W}$ ($\\approx 5{,}2\\,\\%$). 3. $U_{\\text{max}} \\approx 325\\ \\mathrm{V}$, $T = 20\\ \\mathrm{ms}$. 4. $\\Phi = 1000\\ \\mathrm{W}$. 5. $E = 9{,}6\\ \\mathrm{kWh}$, autonomie $\\approx 9{,}6\\ \\mathrm{h}$."
     }
   ]
 }

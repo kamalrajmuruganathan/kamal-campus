@@ -90,6 +90,62 @@
         "Validité : écart $|2{,}675 - 2{,}70| = 0{,}025$ g·mL⁻¹, d'où $z = \\dfrac{0{,}025}{0{,}068} \\approx 0{,}4$. Comme $z \\leqslant 2$, le résultat est **compatible** avec la masse volumique de l'aluminium : la pièce peut être en aluminium. Attention à la conclusion prudente : la mesure ne **prouve** pas que c'est de l'aluminium (un autre alliage de masse volumique voisine resterait compatible), elle dit seulement que rien ne l'exclut."
       ],
       "reponse": "$\\rho = 2{,}68 \\pm 0{,}07$ g·mL⁻¹ ; $z \\approx 0{,}4 \\leqslant 2$ : résultat compatible avec l'aluminium — la pièce peut être en aluminium."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "propagation-constante",
+      "enonce": "Pour mesurer avec soin la période d'un pendule, on chronomètre la durée de $20$ oscillations plutôt qu'une seule : on lit $\\Delta t = 28{,}4\\ \\mathrm{s}$ avec $u(\\Delta t) = 0{,}2\\ \\mathrm{s}$ (temps de réaction au déclenchement). La période est $T = \\dfrac{\\Delta t}{20}$. Donnée : pour $y = k\\,a$ avec $k$ constante exacte, $u(y) = |k|\\,u(a)$. Calcule $T$ et $u(T)$, puis écris le résultat en secondes.",
+      "corrige": [
+        "Valeur : $T = \\dfrac{\\Delta t}{20} = \\dfrac{28{,}4}{20} = 1{,}42\\ \\mathrm{s}$.",
+        "Ici $T = k\\,\\Delta t$ avec la constante exacte $k = \\dfrac{1}{20}$. On applique la formule fournie : $u(T) = \\dfrac{1}{20}\\,u(\\Delta t) = \\dfrac{0{,}2}{20} = 0{,}01\\ \\mathrm{s}$.",
+        "Piège à éviter : la formule en quadrature $\\sqrt{\\cdots}$ ne s'applique pas ici — il n'y a qu'une seule mesure, $\\Delta t$, pas deux mesures indépendantes. On divise simplement l'incertitude par $20$ : chronométrer plusieurs oscillations d'un coup, c'est justement ce qui réduit l'incertitude sur la période.",
+        "L'incertitude a déjà $1$ chiffre significatif (rang : le centième) ; la valeur $1{,}42$ est au même rang. On assemble valeur, incertitude et unité."
+      ],
+      "reponse": "$T = 1{,}42 \\pm 0{,}01\\ \\mathrm{s}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "methode-propagation",
+      "enonce": "On détermine la masse volumique d'un liquide. On pèse un flacon plein : $m_{\\text{plein}} = 78{,}30\\ \\mathrm{g}$, puis vide : $m_{\\text{vide}} = 38{,}80\\ \\mathrm{g}$, chaque pesée avec $u = 0{,}05\\ \\mathrm{g}$ ; le volume prélevé est $V = 50{,}0 \\pm 0{,}5\\ \\mathrm{mL}$. On calcule $\\rho = \\dfrac{m}{V}$ avec $m = m_{\\text{plein}} - m_{\\text{vide}}$. Données : pour une différence, $u(m) = \\sqrt{u(a)^2 + u(b)^2}$ ; pour un quotient, $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{\\left(\\dfrac{u(m)}{m}\\right)^2 + \\left(\\dfrac{u(V)}{V}\\right)^2}$. Écris le résultat en g·mL⁻¹.",
+      "corrige": [
+        "Première étape — la masse par différence : $m = 78{,}30 - 38{,}80 = 39{,}50\\ \\mathrm{g}$, avec $u(m) = \\sqrt{0{,}05^2 + 0{,}05^2} \\approx 0{,}0707\\ \\mathrm{g}$ (les incertitudes s'ajoutent au carré, même pour une différence).",
+        "Valeur de la masse volumique : $\\rho = \\dfrac{39{,}50}{50{,}0} = 0{,}790$ g·mL⁻¹ (chiffres de garde conservés).",
+        "Seconde étape — le quotient utilise les incertitudes **relatives** : $\\dfrac{u(m)}{m} = \\dfrac{0{,}0707}{39{,}50} \\approx 0{,}0018$ (soit $0{,}18\\,\\%$) et $\\dfrac{u(V)}{V} = \\dfrac{0{,}5}{50{,}0} = 0{,}010$ (soit $1{,}0\\,\\%$). C'est le volume qui domine largement le bilan.",
+        "Composée : $\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}0018^2 + 0{,}010^2} \\approx 0{,}0102$, puis $u(\\rho) = 0{,}790 \\times 0{,}0102 \\approx 0{,}0080$ g·mL⁻¹, arrondie à $1$ chiffre significatif : $u(\\rho) = 0{,}008$ g·mL⁻¹ (rang : le millième).",
+        "On arrondit la valeur au même rang (le millième) : $\\rho = 0{,}790$ g·mL⁻¹. Écriture finale du résultat."
+      ],
+      "reponse": "$\\rho = 0{,}790 \\pm 0{,}008$ g·mL⁻¹."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "propagation-puissance",
+      "enonce": "On veut le volume d'un cylindre métallique (tronçon de barre). Au pied à coulisse : diamètre $d = 8{,}0 \\pm 0{,}1\\ \\mathrm{mm}$ ; longueur $L = 150{,}0 \\pm 0{,}5\\ \\mathrm{mm}$. Le volume vaut $V = \\dfrac{\\pi\\,d^2\\,L}{4}$. Données : pour $y = a^n$, $\\dfrac{u(y)}{y} = |n|\\,\\dfrac{u(a)}{a}$ ; pour un produit, les incertitudes relatives s'ajoutent en quadrature ; la constante exacte $\\dfrac{\\pi}{4}$ ne change pas l'incertitude relative. Calcule $V$ et $u(V)$, puis écris le résultat en mm³.",
+      "corrige": [
+        "Valeur : $V = \\dfrac{\\pi \\times 8{,}0^2 \\times 150{,}0}{4} = \\dfrac{\\pi \\times 64 \\times 150{,}0}{4} \\approx 7540\\ \\mathrm{mm}^3$ (chiffres de garde : $7539{,}8$).",
+        "Le diamètre intervient au carré : sa contribution relative est $\\dfrac{u(d^2)}{d^2} = 2 \\times \\dfrac{u(d)}{d} = 2 \\times \\dfrac{0{,}1}{8{,}0} = 0{,}025$ (soit $2{,}5\\,\\%$). Piège : on ne met pas le pourcentage au carré, et $d$ n'est pas deux mesures indépendantes — on multiplie la relative par $2$, on ne fait pas $\\sqrt{2}$.",
+        "La longueur contribue pour $\\dfrac{u(L)}{L} = \\dfrac{0{,}5}{150{,}0} \\approx 0{,}0033$ (soit $0{,}33\\,\\%$). La constante $\\dfrac{\\pi}{4}$, exacte, n'ajoute rien.",
+        "Composée (produit de $d^2$ et $L$) : $\\dfrac{u(V)}{V} = \\sqrt{0{,}025^2 + 0{,}0033^2} \\approx 0{,}025$ (soit $2{,}5\\,\\%$ : le diamètre domine). Absolue : $u(V) = 7539{,}8 \\times 0{,}025 \\approx 190\\ \\mathrm{mm}^3$, arrondie à $1$ chiffre significatif par excès : $u(V) = 200\\ \\mathrm{mm}^3$ (rang : la centaine).",
+        "On arrondit la valeur au même rang (la centaine) : $V = 7500\\ \\mathrm{mm}^3$, soit $V = 7{,}5 \\times 10^3\\ \\mathrm{mm}^3$."
+      ],
+      "reponse": "$V = 7500 \\pm 200\\ \\mathrm{mm}^3$ (incertitude relative de $2{,}5\\,\\%$, dominée par le diamètre élevé au carré)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme-synthese",
+      "enonce": "En travaux pratiques, un binôme mesure l'intensité de la pesanteur $g$ avec un pendule simple. Il mesure la longueur du fil : $L = 0{,}994\\ \\mathrm{m}$ avec $u(L) = 0{,}005\\ \\mathrm{m}$. Pour la période, il chronomètre la durée de $10$ oscillations : $\\Delta t = 20{,}1\\ \\mathrm{s}$ avec $u(\\Delta t) = 0{,}2\\ \\mathrm{s}$. La relation du pendule donne $g = \\dfrac{4\\pi^2 L}{T^2}$, où $T$ est la période. Données fournies : $u(T) = \\dfrac{u(\\Delta t)}{10}$ ; $\\dfrac{u(g)}{g} = \\sqrt{\\left(\\dfrac{u(L)}{L}\\right)^2 + \\left(2\\,\\dfrac{u(T)}{T}\\right)^2}$ ; écart normalisé $z = \\dfrac{|g_{\\text{mes}} - g_{\\text{réf}}|}{u(g)}$, seuil usuel $2$ ; valeur de référence $g_{\\text{réf}} = 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$.\\n\\n1. Calcule la période $T$ et son incertitude $u(T)$.\\n2. Calcule la valeur de $g$.\\n3. Calcule l'incertitude-type composée $u(g)$.\\n4. Écris le résultat de la mesure de $g$ avec un nombre de chiffres significatifs adapté.\\n5. La mesure est-elle compatible avec la valeur de référence ? Justifie par l'écart normalisé.\\n6. Quelle grandeur pèse le plus dans l'incertitude, et comment améliorer la mesure ?",
+      "corrige": [
+        "1. La période est $T = \\dfrac{\\Delta t}{10} = \\dfrac{20{,}1}{10} = 2{,}01\\ \\mathrm{s}$. C'est une division par une constante exacte : $u(T) = \\dfrac{u(\\Delta t)}{10} = \\dfrac{0{,}2}{10} = 0{,}02\\ \\mathrm{s}$. Chronométrer $10$ oscillations divise par $10$ l'incertitude sur la période.",
+        "2. Valeur de $g$ : $g = \\dfrac{4\\pi^2 \\times 0{,}994}{2{,}01^2} = \\dfrac{39{,}48 \\times 0{,}994}{4{,}040} \\approx 9{,}71\\ \\mathrm{m\\cdot s^{-2}}$ (chiffres de garde conservés).",
+        "3. Incertitudes relatives : $\\dfrac{u(L)}{L} = \\dfrac{0{,}005}{0{,}994} \\approx 0{,}0050$ (soit $0{,}50\\,\\%$) ; la période intervient au carré, d'où $2\\,\\dfrac{u(T)}{T} = 2 \\times \\dfrac{0{,}02}{2{,}01} \\approx 0{,}0199$ (soit $1{,}99\\,\\%$). Composée : $\\dfrac{u(g)}{g} = \\sqrt{0{,}0050^2 + 0{,}0199^2} \\approx 0{,}0205$, puis $u(g) = 9{,}71 \\times 0{,}0205 \\approx 0{,}20\\ \\mathrm{m\\cdot s^{-2}}$, arrondie à $1$ chiffre significatif : $u(g) = 0{,}2\\ \\mathrm{m\\cdot s^{-2}}$ (rang : le dixième).",
+        "4. On arrondit la valeur au même rang que l'incertitude (le dixième) : $g = 9{,}7\\ \\mathrm{m\\cdot s^{-2}}$. Résultat : $g = 9{,}7 \\pm 0{,}2\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "5. Écart à la référence : $|9{,}71 - 9{,}81| \\approx 0{,}10\\ \\mathrm{m\\cdot s^{-2}}$. Écart normalisé : $z = \\dfrac{0{,}10}{0{,}2} \\approx 0{,}5$. Comme $z \\approx 0{,}5 \\leqslant 2$, la mesure est **compatible** avec la valeur de référence $9{,}81\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "6. C'est la période qui pèse le plus : elle intervient au carré (sa relative compte double, $1{,}99\\,\\%$) alors que la longueur ne pèse que $0{,}50\\,\\%$. Le point faible est le temps de réaction au chronomètre. Pour améliorer la mesure, on chronomètre davantage d'oscillations (par exemple $20$ ou $50$), ce qui réduit d'autant $u(T)$ et donc $u(g)$."
+      ],
+      "reponse": "$T = 2{,}01 \\pm 0{,}02\\ \\mathrm{s}$ ; $g = 9{,}7 \\pm 0{,}2\\ \\mathrm{m\\cdot s^{-2}}$ ; $z \\approx 0{,}5 \\leqslant 2$ : mesure compatible avec $9{,}81\\ \\mathrm{m\\cdot s^{-2}}$. L'incertitude est dominée par la période (élevée au carré) ; chronométrer plus d'oscillations l'améliorerait."
     }
   ]
 }

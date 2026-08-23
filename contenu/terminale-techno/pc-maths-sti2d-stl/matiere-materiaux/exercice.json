@@ -87,6 +87,56 @@
         "d) Acides et bases concentrés sont **corrosifs** : gants, lunettes et blouse obligatoires. Et pour toute dilution d'un acide concentré, on verse **toujours l'acide dans l'eau**, jamais l'inverse — sinon échauffement brutal et projections. La neutralisation avant rejet (pH ramené vers $7$) est une obligation industrielle."
       ],
       "reponse": "a) $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-2}$ mol/L. b) $\\mathrm{H_3O^+ + OH^- \\to 2\\,H_2O}$ : $\\mathrm{H_3O^+}$ cède un $\\mathrm{H^+}$ à $\\mathrm{OH^-}$. c) Divisée par $10^{4}$ ; pH $6{,}0 \\in [5{,}5\\,;\\,8{,}5]$, rejet conforme. d) EPI, acide versé dans l'eau, neutralisation avant rejet."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "combustions-energie",
+      "enonce": "Une chaudière d'atelier est alimentée en éthanol $\\mathrm{C_2H_6O}$ (biocarburant). Données : pouvoir calorifique de l'éthanol $PC = 27$ MJ/kg ; $E = m \\times PC$. a) Écris l'équation ajustée de la combustion complète de l'éthanol (produits : $\\mathrm{CO_2}$ et $\\mathrm{H_2O}$). b) Calcule l'énergie libérée par la combustion de $m = 2{,}0$ kg d'éthanol, en MJ puis en J.",
+      "corrige": [
+        "a) La combustion complète oxyde l'éthanol par le dioxygène en donnant $\\mathrm{CO_2}$ et $\\mathrm{H_2O}$. On ajuste dans l'ordre C, H, puis O. Carbone : $2$ C $\\to 2\\,\\mathrm{CO_2}$. Hydrogène : $6$ H $\\to 3\\,\\mathrm{H_2O}$. Oxygène à droite : $2 \\times 2 + 3 = 7$ atomes ; à gauche l'éthanol en apporte déjà $1$, il en manque $6$, soit $3\\,\\mathrm{O_2}$ : $$\\mathrm{C_2H_6O + 3\\,O_2 \\longrightarrow 2\\,CO_2 + 3\\,H_2O}$$ Vérification : $2$ C, $6$ H et $7$ O de chaque côté.",
+        "b) On applique $E = m \\times PC$ avec $m$ bien en **kg**, comme l'exige le $PC$ en MJ/kg : $E = 2{,}0 \\times 27 = 54$ MJ. En joules : $54$ MJ $= 54 \\times 10^{6}$ J $= 5{,}4 \\times 10^{7}$ J."
+      ],
+      "reponse": "a) $\\mathrm{C_2H_6O + 3\\,O_2 \\to 2\\,CO_2 + 3\\,H_2O}$. b) $E = 54$ MJ $= 5{,}4 \\times 10^{7}$ J."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "acido-basique-ph",
+      "enonce": "Un détartrant liquide contient des ions oxonium à la concentration $[\\mathrm{H_3O^+}] = 5{,}0 \\times 10^{-2}$ mol/L. Données : $\\mathrm{pH} = -\\log[\\mathrm{H_3O^+}]$ ; $\\log 5 \\approx 0{,}70$. a) Calcule le pH du détartrant. b) On dilue ce détartrant $100$ fois avec de l'eau. En admettant que la concentration en ions oxonium est elle aussi divisée par $100$, calcule le nouveau $[\\mathrm{H_3O^+}]$ et le nouveau pH. De combien d'unités le pH a-t-il varié ?",
+      "corrige": [
+        "a) $\\mathrm{pH} = -\\log(5{,}0 \\times 10^{-2}) = -(\\log 5 + \\log 10^{-2}) = -(0{,}70 - 2) = 1{,}30$. Un pH d'environ $1{,}3$ : le détartrant est fortement acide, cohérent avec son usage.",
+        "b) Diluer $100$ fois divise la concentration par $100$ : $[\\mathrm{H_3O^+}] = \\dfrac{5{,}0 \\times 10^{-2}}{100} = 5{,}0 \\times 10^{-4}$ mol/L. Nouveau pH : $\\mathrm{pH} = -\\log(5{,}0 \\times 10^{-4}) = -(0{,}70 - 4) = 3{,}30$.",
+        "Le pH est passé de $1{,}30$ à $3{,}30$, soit une hausse de **$2{,}0$ unités**. C'est cohérent avec la règle « $1$ unité de pH $=$ facteur $10$ » : diviser $[\\mathrm{H_3O^+}]$ par $100 = 10^{2}$ augmente le pH de $2$ unités exactement. Piège : diluer $100$ fois n'ajoute pas $100$ au pH, et une solution diluée reste acide (pH toujours $< 7$)."
+      ],
+      "reponse": "a) $\\mathrm{pH} = 1{,}30$. b) $[\\mathrm{H_3O^+}] = 5{,}0 \\times 10^{-4}$ mol/L, $\\mathrm{pH} = 3{,}30$ ; le pH augmente de $2{,}0$ unités (facteur $100 = 10^{2}$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "radioactivite-decroissance",
+      "enonce": "On date un morceau de charpente en bois par la méthode du carbone 14, de demi-vie $t_{1/2} = 5\\,730$ ans. Le bois mesuré a une activité égale à $75\\,\\%$ de celle d'un bois vivant de référence (l'activité initiale du bois au moment de sa coupe). Données : $A(t) = A_0\\,e^{-\\lambda t}$ ; $\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$ ; $\\ln 2 \\approx 0{,}693$ ; $\\ln(0{,}75) \\approx -0{,}288$. Détermine l'âge du bois. Vérifie que le résultat est cohérent (l'âge doit rester inférieur à une demi-vie).",
+      "corrige": [
+        "On traduit l'énoncé : $A(t) = 0{,}75\\,A_0$, c'est-à-dire $A_0\\,e^{-\\lambda t} = 0{,}75\\,A_0$, d'où $e^{-\\lambda t} = 0{,}75$.",
+        "On applique le logarithme népérien pour « défaire » l'exponentielle : $-\\lambda t = \\ln(0{,}75) \\approx -0{,}288$, donc $t = \\dfrac{0{,}288}{\\lambda}$.",
+        "On calcule $\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{5\\,730} \\approx 1{,}21 \\times 10^{-4}\\ \\mathrm{an^{-1}}$. D'où $t = \\dfrac{0{,}288}{1{,}21 \\times 10^{-4}} \\approx 2{,}4 \\times 10^{3}$ ans, soit environ $2\\,400$ ans.",
+        "Cohérence : il reste $75\\,\\%$ de l'activité, c'est **plus** que la moitié ($50\\,\\%$), donc il s'est écoulé **moins** d'une demi-vie. Effectivement $2\\,400$ ans $< 5\\,730$ ans : le résultat est cohérent. Piège : la décroissance n'est pas linéaire, il serait faux d'écrire « $75\\,\\%$ restant $\\Rightarrow$ un quart de la demi-vie » — il faut passer par le logarithme."
+      ],
+      "reponse": "$t = \\dfrac{-\\ln(0{,}75)}{\\lambda}$ avec $\\lambda = \\dfrac{\\ln 2}{5\\,730} \\approx 1{,}21 \\times 10^{-4}\\ \\mathrm{an^{-1}}$, soit $t \\approx 2{,}4 \\times 10^{3}$ ans (bien inférieur à $t_{1/2}$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese-matiere-materiaux",
+      "enonce": "**Problème — De la fonte de l'acier au contrôle de la soudure.** Une entreprise de métallurgie fabrique, coule et assemble une pièce en acier, puis la prépare avant peinture. On étudie les étapes successibles. Données : $\\rho = \\dfrac{m}{V}$ ; masses volumiques (kg/m³) : aluminium $2\\,700$, acier $7\\,800$, cuivre $8\\,960$ ; énergie de changement d'état $E = m \\times L$ avec $L_f(\\text{acier}) = 270$ kJ/kg ; combustion et $E = m \\times PC$ avec $PC(\\text{méthane}) = 50$ MJ/kg ; rendement du four $\\eta = 0{,}80$ ; radioactivité $A(t) = A_0\\,e^{-\\lambda t}$, $\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$ ; source de cobalt 60 de demi-vie $t_{1/2} = 5{,}3$ ans et d'activité initiale $A_0 = 3{,}7 \\times 10^{11}$ Bq ; acido-basique $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}}$ mol/L. On donne $\\ln 2 \\approx 0{,}693$. 1. Un échantillon de l'alliage a une masse $m = 156$ g pour un volume $V = 20{,}0$ cm³. Calcule sa masse volumique en g/cm³ puis en kg/m³, et vérifie qu'il s'agit bien d'acier. 2. Pour la coulée, on fond $m = 500$ kg de cet acier, déjà porté à sa température de fusion. Calcule l'énergie de fusion nécessaire, en J, et précise ce que fait la température pendant la fusion. 3. Cette énergie de fusion est fournie par un four au gaz naturel (méthane), de rendement $\\eta = 0{,}80$. Écris l'équation ajustée de la combustion complète du méthane, puis calcule la masse de méthane à brûler pour fournir l'énergie de fusion de la question 2. 4. La soudure de la pièce est contrôlée par gammagraphie avec la source de cobalt 60. Calcule la constante radioactive $\\lambda$ (en $\\mathrm{an^{-1}}$), puis l'activité de la source au bout de $10{,}6$ ans, par un raisonnement en demi-vies. 5. Avant peinture, la pièce est décapée dans un bain acide de pH $= 1{,}5$. Calcule $[\\mathrm{H_3O^+}]$ dans le bain. L'effluent devra ensuite être neutralisé à la soude ($\\mathrm{OH^-}$) avant rejet : écris l'équation de la neutralisation et cite une règle de sécurité pour la manipulation du bain acide.",
+      "corrige": [
+        "1. Avec les unités de l'énoncé : $\\rho = \\dfrac{m}{V} = \\dfrac{156}{20{,}0} = 7{,}8$ g/cm³. Conversion : $1$ g/cm³ $= 1\\,000$ kg/m³, donc $\\rho = 7\\,800$ kg/m³. Cette valeur correspond exactement à l'**acier** de la table (l'aluminium à $2\\,700$ et le cuivre à $8\\,960$ sont nettement écartés) : l'alliage est bien de l'acier.",
+        "2. L'acier est un corps pur en changement d'état ; l'énergie de fusion vaut $E = m \\times L_f$. Attention aux unités : $L_f = 270$ kJ/kg $= 2{,}70 \\times 10^{5}$ J/kg. Donc $E = 500 \\times 2{,}70 \\times 10^{5} = 1{,}35 \\times 10^{8}$ J (soit $135$ MJ). Pendant toute la fusion, la température reste **constante** (palier de fusion) : toute l'énergie sert à faire fondre le métal, pas à l'échauffer.",
+        "3. Combustion complète du méthane, ajustée dans l'ordre C, H, O : $$\\mathrm{CH_4 + 2\\,O_2 \\longrightarrow CO_2 + 2\\,H_2O}$$ Le four ne restitue que $\\eta = 0{,}80$ de l'énergie libérée : il faut donc libérer $E_{\\text{lib}} = \\dfrac{E}{\\eta} = \\dfrac{135}{0{,}80} = 168{,}75$ MJ. La masse de méthane est $m = \\dfrac{E_{\\text{lib}}}{PC} = \\dfrac{168{,}75}{50} \\approx 3{,}4$ kg. (On divise par le rendement car l'énergie utile — la fusion — est plus petite que l'énergie libérée par le gaz.)",
+        "4. Constante radioactive : $\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{5{,}3} \\approx 0{,}13\\ \\mathrm{an^{-1}}$. Comme $10{,}6 = 2 \\times 5{,}3$, il s'est écoulé exactement $2$ demi-vies : l'activité est divisée par $2$ à chaque demi-vie, soit $A = \\dfrac{A_0}{2^{2}} = \\dfrac{3{,}7 \\times 10^{11}}{4} \\approx 9{,}3 \\times 10^{10}$ Bq. (Après $2$ demi-vies il reste le **quart**, pas zéro ni la moitié.)",
+        "5. $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-1{,}5} \\approx 3{,}2 \\times 10^{-2}$ mol/L : le bain est très acide. Neutralisation par la soude : $$\\mathrm{H_3O^+ + OH^- \\longrightarrow 2\\,H_2O}$$ (transfert d'un ion $\\mathrm{H^+}$ de l'acide $\\mathrm{H_3O^+}$ vers la base $\\mathrm{OH^-}$). Règle de sécurité : ces solutions sont corrosives, port de **gants, lunettes et blouse** obligatoire ; et pour diluer un acide concentré, on verse **toujours l'acide dans l'eau**, jamais l'inverse (risque de projections)."
+      ],
+      "reponse": "1. $\\rho = 7{,}8$ g/cm³ $= 7\\,800$ kg/m³ : acier. 2. $E = 1{,}35 \\times 10^{8}$ J ($135$ MJ), température constante (palier). 3. $\\mathrm{CH_4 + 2\\,O_2 \\to CO_2 + 2\\,H_2O}$ ; $m_{\\text{méthane}} = \\dfrac{135/0{,}80}{50} \\approx 3{,}4$ kg. 4. $\\lambda \\approx 0{,}13\\ \\mathrm{an^{-1}}$ ; $10{,}6$ ans $= 2\\,t_{1/2}$, $A = A_0/4 \\approx 9{,}3 \\times 10^{10}$ Bq. 5. $[\\mathrm{H_3O^+}] \\approx 3{,}2 \\times 10^{-2}$ mol/L ; $\\mathrm{H_3O^+ + OH^- \\to 2\\,H_2O}$ ; EPI et acide versé dans l'eau."
     }
   ]
 }

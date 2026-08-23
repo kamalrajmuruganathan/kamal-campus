@@ -84,6 +84,56 @@
         "Bilan de la chaîne d'énergie (cf. chapitre de première) : électricité ($2{,}6$ kW) $\\rightarrow$ moteur + réducteur ($\\eta = 0{,}75$) $\\rightarrow$ mécanique de rotation ($M\\omega$) $\\rightarrow$ mécanique de translation ($T v = 1{,}96$ kW), les $25\\,\\%$ restants partant en chaleur."
       ],
       "reponse": "$T \\approx 4{,}9 \\times 10^{3}$ N ; $M \\approx 9{,}8 \\times 10^{2}$ N·m ; $\\omega = 2{,}0$ rad/s ; $P_u \\approx 1{,}96 \\times 10^{3}$ W ; $P_{\\text{abs}} \\approx 2{,}6 \\times 10^{3}$ W."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "presse-hydraulique",
+      "enonce": "Dans un atelier, une presse hydraulique sert à emboutir des pièces. L'opérateur appuie sur le petit piston, de section $S_1 = 5{,}0\\ \\mathrm{cm^2}$, avec une force $F_1 = 120\\ \\mathrm{N}$. Le grand piston a une section $S_2 = 100\\ \\mathrm{cm^2}$. Données : $1\\ \\mathrm{cm^2} = 10^{-4}\\ \\mathrm{m^2}$ ; $1$ bar $= 10^{5}$ Pa ; $\\dfrac{F_1}{S_1} = \\dfrac{F_2}{S_2}$.\n1. Calcule la pression régnant dans le liquide, en Pa puis en bar.\n2. En déduire la force $F_2$ délivrée par le grand piston. Par quel facteur la presse multiplie-t-elle la force ?",
+      "corrige": [
+        "1. Conversion des surfaces d'abord : $S_1 = 5{,}0\\ \\mathrm{cm^2} = 5{,}0 \\times 10^{-4}\\ \\mathrm{m^2}$. La pression transmise au liquide par le petit piston est $p = \\dfrac{F_1}{S_1} = \\dfrac{120}{5{,}0 \\times 10^{-4}} = 2{,}4 \\times 10^{5}$ Pa. En bar : $p = \\dfrac{2{,}4 \\times 10^{5}}{10^{5}} = 2{,}4$ bar.",
+        "2. La pression est la même en tout point du liquide (transmission de la pression). Sur le grand piston, $S_2 = 100\\ \\mathrm{cm^2} = 1{,}0 \\times 10^{-2}\\ \\mathrm{m^2}$, d'où $F_2 = p \\times S_2 = 2{,}4 \\times 10^{5} \\times 1{,}0 \\times 10^{-2} = 2{,}4 \\times 10^{3}$ N. Contrôle direct : $F_2 = F_1 \\times \\dfrac{S_2}{S_1} = 120 \\times \\dfrac{100}{5{,}0} = 2400$ N.",
+        "La force est multipliée par $\\dfrac{S_2}{S_1} = 20$. Attention : l'énergie, elle, n'est pas multipliée — le petit piston doit s'enfoncer $20$ fois plus que le grand ne monte."
+      ],
+      "reponse": "$p = 2{,}4 \\times 10^{5}$ Pa $= 2{,}4$ bar ; $F_2 = 2{,}4 \\times 10^{3}$ N ; force multipliée par $20$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "moment-force",
+      "enonce": "Pour dégager une caisse coincée, un magasinier utilise un levier (une barre rigide) posé sur un point d'appui. Le côté « charge » a un bras de levier $d_1 = 0{,}25$ m, et la charge appuie sur la barre avec une force égale au poids d'une masse $m = 60$ kg. Le magasinier pousse verticalement à l'autre extrémité, à un bras de levier $d_2 = 1{,}0$ m du point d'appui.\n1. Calcule la force exercée par la charge sur le levier.\n2. À l'équilibre des moments autour du point d'appui, quelle force le magasinier doit-il exercer ? Que gagnerait-il à pousser $50$ cm plus loin ?",
+      "corrige": [
+        "1. La charge exerce sur le levier une force égale à son poids : $P = m g = 60 \\times 9{,}81 = 588{,}6 \\approx 5{,}9 \\times 10^{2}$ N. (Une masse en kg n'est pas une force : le passage se fait par $P = mg$.)",
+        "2. À l'équilibre, le moment de la force du magasinier équilibre celui de la charge, de part et d'autre du point d'appui : $F \\times d_2 = P \\times d_1$. D'où $F = P \\times \\dfrac{d_1}{d_2} = 588{,}6 \\times \\dfrac{0{,}25}{1{,}0} \\approx 1{,}5 \\times 10^{2}$ N. Grâce au bras de levier, il pousse quatre fois moins fort que le poids de la charge.",
+        "En poussant à $d_2 = 1{,}5$ m : $F = 588{,}6 \\times \\dfrac{0{,}25}{1{,}5} \\approx 98$ N. Allonger le bras de levier réduit encore la force nécessaire : c'est tout l'intérêt du levier."
+      ],
+      "reponse": "Force de la charge $\\approx 5{,}9 \\times 10^{2}$ N ; force du magasinier $\\approx 1{,}5 \\times 10^{2}$ N (et $\\approx 98$ N à $1{,}5$ m)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "deuxieme-loi",
+      "enonce": "Un monte-charge industriel hisse une cabine de masse totale $m = 800$ kg. Le câble unique exerce une tension verticale $T$. On étudie trois phases du trajet vers le haut.\n1. Phase de démarrage : la cabine monte avec une accélération $a = 1{,}2$ m·s⁻². Calcule la tension du câble.\n2. Phase de croisière : la cabine monte à vitesse constante $v = 2{,}0$ m·s⁻¹. Calcule la tension, puis la puissance mécanique fournie par le câble.\n3. Phase de freinage (juste avant l'arrêt en haut) : la cabine monte encore mais ralentit. La tension est-elle supérieure ou inférieure à celle de la croisière ? Justifie sans calcul.",
+      "corrige": [
+        "1. Bilan sur la cabine, axe vertical orienté vers le haut : la tension $T$ (vers le haut) et le poids $P = mg$ (vers le bas). Deuxième loi de Newton : $T - mg = m a$, donc $T = m(g + a) = 800 \\times (9{,}81 + 1{,}2) = 800 \\times 11{,}01 \\approx 8{,}8 \\times 10^{3}$ N. Au démarrage vers le haut, le câble doit tirer plus fort que le poids.",
+        "2. Vitesse constante $\\Rightarrow$ accélération nulle $\\Rightarrow$ les forces se compensent : $T = mg = 800 \\times 9{,}81 = 7848 \\approx 7{,}85 \\times 10^{3}$ N. La puissance fournie par le câble : $P = T \\times v = 7848 \\times 2{,}0 \\approx 1{,}6 \\times 10^{4}$ W, soit environ $16$ kW.",
+        "3. Pendant le freinage, la cabine monte mais ralentit : son accélération est dirigée vers le bas (sens opposé à la vitesse). La deuxième loi donne alors $T - mg = -m a'$, soit $T = m(g - a') < mg$. La tension est donc **inférieure** à celle de la croisière : le câble « retient » moins que le poids, ce qui laisse le poids décélérer la cabine."
+      ],
+      "reponse": "Démarrage : $T = m(g+a) \\approx 8{,}8 \\times 10^{3}$ N ; croisière : $T = mg \\approx 7{,}85 \\times 10^{3}$ N et $P \\approx 16$ kW ; freinage : $T < mg$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Problème — Un hayon élévateur hydraulique.** À l'arrière d'un camion de livraison, un hayon élévateur soulève les charges du sol jusqu'au plateau. Le hayon est un bras qui pivote autour d'un axe horizontal $O$ fixé au châssis. Une charge (palette + colis) de masse $m = 800$ kg est posée à l'extrémité du bras, à une distance $d_2 = 1{,}8$ m de l'axe $O$. Un vérin hydraulique unique pousse le bras en un point situé à $d_1 = 0{,}60$ m de l'axe $O$ ; on suppose sa poussée perpendiculaire au bras et on néglige le poids du bras.\n\nLe vérin est alimenté par un groupe hydraulique : un moteur électrique entraîne une pompe qui met l'huile sous pression. Le piston du vérin a un diamètre $D = 12$ cm. L'huile ($\\rho = 900$ kg·m⁻³) est aspirée dans un réservoir dont la surface libre est $h = 2{,}5$ m sous le vérin. Le moteur délivre un couple $M = 15\\ \\mathrm{N\\cdot m}$ à une fréquence de rotation $N = 1500$ tr/min, et le rendement du groupe moteur + pompe vaut $\\eta = 0{,}80$.\n\nDonnées : $g = 9{,}81$ N·kg⁻¹ ; $1$ bar $= 10^{5}$ Pa ; $1\\ \\mathrm{cm^2} = 10^{-4}\\ \\mathrm{m^2}$ ; $S = \\dfrac{\\pi D^2}{4}$ ; $\\omega = \\dfrac{2\\pi N}{60}$ ; $P = M\\,\\omega$.\n\n1. Calcule le poids de la charge.\n2. Le bras étant en équilibre, écris l'équilibre des moments autour de $O$ et calcule la force $F$ que le vérin doit exercer.\n3. Calcule la section du piston, puis la pression de service nécessaire dans le vérin (en Pa et en bar).\n4. La pompe aspire l'huile $h = 2{,}5$ m plus bas : calcule la différence de pression hydrostatique correspondante et montre qu'elle est négligeable devant la pression de service.\n5. Calcule la vitesse angulaire du moteur, la puissance mécanique qu'il fournit, puis la puissance électrique absorbée par le groupe.",
+      "corrige": [
+        "1. Poids de la charge : $P = m g = 800 \\times 9{,}81 = 7848 \\approx 7{,}85 \\times 10^{3}$ N. (Une masse en kg se convertit en force par $P = mg$.)",
+        "2. Le bras pivote autour de $O$ : à l'équilibre, le moment de la force du vérin équilibre le moment du poids de la charge. La poussée du vérin étant perpendiculaire au bras (et le poids appliqué à l'extrémité), $F \\times d_1 = P \\times d_2$. D'où $F = P \\times \\dfrac{d_2}{d_1} = 7848 \\times \\dfrac{1{,}8}{0{,}60} = 7848 \\times 3{,}0 \\approx 2{,}35 \\times 10^{4}$ N. Le vérin, plus près de l'axe, doit pousser trois fois plus fort que le poids : le bras de levier joue contre lui ici.",
+        "3. Diamètre en mètres : $D = 12\\ \\mathrm{cm} = 0{,}12$ m. Section : $S = \\dfrac{\\pi D^2}{4} = \\dfrac{\\pi \\times (0{,}12)^2}{4} \\approx 1{,}13 \\times 10^{-2}\\ \\mathrm{m^2}$ (soit $113\\ \\mathrm{cm^2}$). Pression de service : $p = \\dfrac{F}{S} = \\dfrac{2{,}35 \\times 10^{4}}{1{,}13 \\times 10^{-2}} \\approx 2{,}08 \\times 10^{6}$ Pa, soit $p \\approx \\dfrac{2{,}08 \\times 10^{6}}{10^{5}} \\approx 21$ bar. Ordre de grandeur réaliste pour un circuit hydraulique.",
+        "4. Différence de pression hydrostatique due à la colonne d'huile : $\\Delta p = \\rho g h = 900 \\times 9{,}81 \\times 2{,}5 \\approx 2{,}2 \\times 10^{4}$ Pa, soit environ $0{,}22$ bar. Comparée à la pression de service ($21$ bar), elle représente $\\dfrac{0{,}22}{21} \\approx 1\\,\\%$ : elle est bien négligeable. C'est ce qui justifie qu'en hydraulique industrielle on ignore le terme $\\rho g h$ devant les pressions de service.",
+        "5. Vitesse angulaire : $\\omega = \\dfrac{2\\pi N}{60} = \\dfrac{2\\pi \\times 1500}{60} \\approx 157$ rad/s (conversion tr/min $\\rightarrow$ rad/s obligatoire). Puissance mécanique fournie par le moteur : $P_{\\text{méca}} = M\\,\\omega = 15 \\times 157 \\approx 2{,}36 \\times 10^{3}$ W $\\approx 2{,}4$ kW. Le rendement s'applique à la puissance : $\\eta = \\dfrac{P_{\\text{méca}}}{P_{\\text{abs}}}$, donc $P_{\\text{abs}} = \\dfrac{P_{\\text{méca}}}{\\eta} = \\dfrac{2356}{0{,}80} \\approx 2{,}9 \\times 10^{3}$ W. On divise par le rendement : l'absorbé est toujours supérieur à la puissance fournie."
+      ],
+      "reponse": "$P \\approx 7{,}85 \\times 10^{3}$ N ; $F \\approx 2{,}35 \\times 10^{4}$ N ; $S \\approx 1{,}13 \\times 10^{-2}$ m² et $p \\approx 21$ bar ; $\\Delta p \\approx 0{,}22$ bar ($\\approx 1\\,\\%$, négligeable) ; $\\omega \\approx 157$ rad/s, $P_{\\text{méca}} \\approx 2{,}4$ kW, $P_{\\text{abs}} \\approx 2{,}9$ kW."
     }
   ]
 }

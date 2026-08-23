@@ -88,6 +88,60 @@
         "$\\mathrm{OB} = |2-\\mathrm{i}| = \\sqrt{4+1} = \\sqrt{5}$ et $\\mathrm{OB}' = |3+\\mathrm{i}| = \\sqrt{9+1} = \\sqrt{10} = \\sqrt{2}\\times\\sqrt{5}$ : on a bien $\\mathrm{OB}' = \\sqrt{2}\\,\\mathrm{OB}$, conforme au rapport $\\sqrt2$ de l'homothétie."
       ],
       "reponse": "$1+\\mathrm{i} = \\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$ ; $f$ = rotation d'angle $\\pi/4$ et homothétie de rapport $\\sqrt2$ (centre $\\mathrm{O}$) ; $g$ = translation de vecteur d'affixe $3-2\\mathrm{i}$ ; $z_{\\mathrm{B}'} = 3 + \\mathrm{i}$, et $\\mathrm{OB}' = \\sqrt{10} = \\sqrt{2}\\,\\mathrm{OB}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "duplication",
+      "enonce": "On sait que $\\sin a = \\dfrac{3}{5}$ avec $a \\in \\left[0\\,;\\dfrac{\\pi}{2}\\right]$. Calculer $\\cos a$, puis $\\sin(2a)$ et $\\cos(2a)$ à l'aide des formules de duplication.",
+      "corrige": [
+        "Comme $\\cos^2 a + \\sin^2 a = 1$, on a $\\cos^2 a = 1 - \\dfrac{9}{25} = \\dfrac{16}{25}$. Sur $\\left[0\\,;\\dfrac{\\pi}{2}\\right]$ le cosinus est positif, donc $\\cos a = \\dfrac{4}{5}$.",
+        "**Sinus** : $\\sin(2a) = 2\\sin a\\cos a = 2 \\times \\dfrac{3}{5} \\times \\dfrac{4}{5} = \\dfrac{24}{25}$.",
+        "**Cosinus** : $\\cos(2a) = 1 - 2\\sin^2 a = 1 - 2 \\times \\dfrac{9}{25} = 1 - \\dfrac{18}{25} = \\dfrac{7}{25}$.",
+        "Contrôle avec l'autre expression : $\\cos(2a) = 2\\cos^2 a - 1 = 2 \\times \\dfrac{16}{25} - 1 = \\dfrac{32}{25} - 1 = \\dfrac{7}{25}$ ✓. Les deux formules donnent le même résultat, sans avoir eu besoin de la valeur de $a$."
+      ],
+      "reponse": "$\\cos a = \\dfrac{4}{5}$, $\\sin(2a) = \\dfrac{24}{25}$, $\\cos(2a) = \\dfrac{7}{25}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "operations-exponentielle",
+      "enonce": "Soit $z = 1 + \\mathrm{i}\\sqrt{3}$. 1) Donner la forme exponentielle de $z$. 2) En déduire $z^6$ sous forme algébrique.",
+      "corrige": [
+        "**1)** Module : $|z| = \\sqrt{1^2 + (\\sqrt3)^2} = \\sqrt{1+3} = 2$. Argument : $\\cos\\theta = \\dfrac{1}{2}$ et $\\sin\\theta = \\dfrac{\\sqrt3}{2}$, donc $\\theta = \\dfrac{\\pi}{3}$. Ainsi $z = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$.",
+        "**2)** On élève à la puissance $6$ : le module est élevé à la puissance $6$, l'argument est multiplié par $6$. $z^6 = 2^6\\,\\mathrm{e}^{\\mathrm{i} \\times 6 \\times \\pi/3} = 64\\,\\mathrm{e}^{\\mathrm{i}2\\pi}$.",
+        "Or $\\mathrm{e}^{\\mathrm{i}2\\pi} = \\cos(2\\pi) + \\mathrm{i}\\sin(2\\pi) = 1$ (un tour complet ramène au point de départ).",
+        "Donc $z^6 = 64$ : c'est un réel. La forme exponentielle rend le calcul immédiat, là où développer $(1+\\mathrm{i}\\sqrt3)^6$ à la main serait très long."
+      ],
+      "reponse": "$z = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$ et $z^6 = 64$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "operations-exponentielle",
+      "enonce": "On veut les valeurs exactes de $\\cos\\dfrac{\\pi}{12}$ et $\\sin\\dfrac{\\pi}{12}$ ($\\dfrac{\\pi}{12} = 15°$, angle « non remarquable »). 1) Justifier que $\\mathrm{e}^{\\mathrm{i}\\pi/12} = \\mathrm{e}^{\\mathrm{i}\\pi/3} \\times \\mathrm{e}^{-\\mathrm{i}\\pi/4}$. 2) Développer ce produit sous forme algébrique. 3) En déduire $\\cos\\dfrac{\\pi}{12}$ et $\\sin\\dfrac{\\pi}{12}$.",
+      "corrige": [
+        "**1)** Les arguments s'additionnent dans un produit : $\\mathrm{e}^{\\mathrm{i}\\pi/3} \\times \\mathrm{e}^{-\\mathrm{i}\\pi/4} = \\mathrm{e}^{\\mathrm{i}(\\pi/3 - \\pi/4)}$. Or $\\dfrac{\\pi}{3} - \\dfrac{\\pi}{4} = \\dfrac{4\\pi - 3\\pi}{12} = \\dfrac{\\pi}{12}$, d'où l'égalité.",
+        "**2)** On remplace par les définitions : $\\mathrm{e}^{\\mathrm{i}\\pi/3} = \\dfrac{1}{2} + \\mathrm{i}\\dfrac{\\sqrt3}{2}$ et $\\mathrm{e}^{-\\mathrm{i}\\pi/4} = \\dfrac{\\sqrt2}{2} - \\mathrm{i}\\dfrac{\\sqrt2}{2}$.",
+        "Produit : $\\left(\\dfrac{1}{2} + \\mathrm{i}\\dfrac{\\sqrt3}{2}\\right)\\left(\\dfrac{\\sqrt2}{2} - \\mathrm{i}\\dfrac{\\sqrt2}{2}\\right)$. Partie réelle : $\\dfrac{1}{2}\\cdot\\dfrac{\\sqrt2}{2} + \\dfrac{\\sqrt3}{2}\\cdot\\dfrac{\\sqrt2}{2} = \\dfrac{\\sqrt2 + \\sqrt6}{4}$ (le terme $\\mathrm{i}\\dfrac{\\sqrt3}{2}\\times(-\\mathrm{i}\\dfrac{\\sqrt2}{2}) = +\\dfrac{\\sqrt6}{4}$ est réel).",
+        "Partie imaginaire : $-\\dfrac{1}{2}\\cdot\\dfrac{\\sqrt2}{2} + \\dfrac{\\sqrt3}{2}\\cdot\\dfrac{\\sqrt2}{2} = \\dfrac{\\sqrt6 - \\sqrt2}{4}$. Donc $\\mathrm{e}^{\\mathrm{i}\\pi/12} = \\dfrac{\\sqrt6 + \\sqrt2}{4} + \\mathrm{i}\\,\\dfrac{\\sqrt6 - \\sqrt2}{4}$.",
+        "**3)** Par identification avec $\\mathrm{e}^{\\mathrm{i}\\pi/12} = \\cos\\dfrac{\\pi}{12} + \\mathrm{i}\\sin\\dfrac{\\pi}{12}$ : $\\cos\\dfrac{\\pi}{12} = \\dfrac{\\sqrt6 + \\sqrt2}{4}$ et $\\sin\\dfrac{\\pi}{12} = \\dfrac{\\sqrt6 - \\sqrt2}{4}$. Contrôle numérique : $\\dfrac{\\sqrt6 - \\sqrt2}{4} \\approx 0{,}259 \\approx \\sin 15°$ ✓."
+      ],
+      "reponse": "$\\mathrm{e}^{\\mathrm{i}\\pi/12} = \\dfrac{\\sqrt6 + \\sqrt2}{4} + \\mathrm{i}\\dfrac{\\sqrt6 - \\sqrt2}{4}$, d'où $\\cos\\dfrac{\\pi}{12} = \\dfrac{\\sqrt6 + \\sqrt2}{4}$ et $\\sin\\dfrac{\\pi}{12} = \\dfrac{\\sqrt6 - \\sqrt2}{4}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "signal",
+      "enonce": "**Étude d'un signal électrique.** Dans un circuit, une tension est modélisée par $u(t) = 2\\cos(100\\pi t) + 2\\sqrt{3}\\,\\sin(100\\pi t)$, où $u$ est en volts et $t$ en secondes. Pour l'étudier, on lui associe le nombre complexe $z = 2 - 2\\sqrt{3}\\,\\mathrm{i}$ (dont les parties réelle et imaginaire sont les coefficients de $\\cos(100\\pi t)$ et de $-\\sin(100\\pi t)$), car $u(t)$ est la partie réelle de $z\\,\\mathrm{e}^{\\mathrm{i}100\\pi t}$.\\n\\n1. Déterminer le module et un argument de $z$, et donner sa forme exponentielle.\\n2. En déduire l'écriture de $u(t)$ sous la forme $A\\cos(100\\pi t + \\varphi)$ avec $A > 0$. Préciser l'amplitude et la phase à l'origine.\\n3. Calculer la période $T$ et la fréquence $f$ du signal. Calculer $u(0)$ à partir des deux expressions de $u(t)$ et vérifier la cohérence.\\n4. On admet que la valeur efficace $U$ vérifie $U^2 = $ valeur moyenne de $u^2(t)$ sur une période. En linéarisant, montrer que cette valeur moyenne vaut $\\\\dfrac{A^2}{2}$, puis calculer $U$.\\n5. L'étude d'un régime particulier du circuit conduit à l'équation $w^2 = -16$. Résoudre cette équation dans $\\\\mathbb{C}$.",
+      "corrige": [
+        "**1.** Module : $|z| = \\sqrt{2^2 + (2\\sqrt3)^2} = \\sqrt{4 + 12} = \\sqrt{16} = 4$. Argument $\\theta$ : $\\cos\\theta = \\dfrac{2}{4} = \\dfrac{1}{2}$ et $\\sin\\theta = \\dfrac{-2\\sqrt3}{4} = -\\dfrac{\\sqrt3}{2}$, donc $\\theta = -\\dfrac{\\pi}{3}$. Ainsi $z = 4\\,\\mathrm{e}^{-\\mathrm{i}\\pi/3}$.",
+        "**2.** En écrivant $z = A\\,\\mathrm{e}^{\\mathrm{i}\\varphi}$, on lit directement l'amplitude $A = |z| = 4$ et la phase $\\varphi = \\arg z = -\\dfrac{\\pi}{3}$. Donc $u(t) = 4\\cos\\!\\left(100\\pi t - \\dfrac{\\pi}{3}\\right)$. Vérification par développement : $4\\left[\\cos(100\\pi t)\\cos\\dfrac{\\pi}{3} + \\sin(100\\pi t)\\sin\\dfrac{\\pi}{3}\\right] = 4\\left[\\dfrac{1}{2}\\cos(100\\pi t) + \\dfrac{\\sqrt3}{2}\\sin(100\\pi t)\\right] = 2\\cos(100\\pi t) + 2\\sqrt3\\sin(100\\pi t)$ ✓. Amplitude $A = 4$ V, phase à l'origine $\\varphi = -\\dfrac{\\pi}{3}$.",
+        "**3.** La pulsation est $\\omega = 100\\pi$ rad/s. Période : $T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{100\\pi} = \\dfrac{1}{50} = 0{,}02$ s. Fréquence : $f = \\dfrac{1}{T} = 50$ Hz. Valeur en $0$ : avec la forme initiale, $u(0) = 2\\cos 0 + 2\\sqrt3\\sin 0 = 2$ V ; avec la forme condensée, $u(0) = 4\\cos\\!\\left(-\\dfrac{\\pi}{3}\\right) = 4 \\times \\dfrac{1}{2} = 2$ V. Les deux coïncident ✓.",
+        "**4.** $u^2(t) = A^2\\cos^2\\!\\left(100\\pi t + \\varphi\\right)$. En linéarisant, $\\cos^2 x = \\dfrac{1 + \\cos(2x)}{2}$, donc $u^2(t) = \\dfrac{A^2}{2} + \\dfrac{A^2}{2}\\cos\\!\\left(2(100\\pi t + \\varphi)\\right)$. Sur une période, la valeur moyenne d'un cosinus est nulle, il reste $\\dfrac{A^2}{2}$. D'où $U^2 = \\dfrac{A^2}{2} = \\dfrac{16}{2} = 8$, soit $U = \\sqrt{8} = 2\\sqrt2 \\approx 2{,}83$ V (c'est bien $\\dfrac{A}{\\sqrt2}$).",
+        "**5.** Ici $a = -16 < 0$ : l'équation $w^2 = -16$ admet DEUX solutions opposées, $w = \\mathrm{i}\\sqrt{16} = 4\\mathrm{i}$ et $w = -4\\mathrm{i}$. Vérification : $(4\\mathrm{i})^2 = 16\\,\\mathrm{i}^2 = -16$ ✓."
+      ],
+      "reponse": "1) $z = 4\\,\\mathrm{e}^{-\\mathrm{i}\\pi/3}$. 2) $u(t) = 4\\cos\\!\\left(100\\pi t - \\dfrac{\\pi}{3}\\right)$, amplitude $4$ V, phase $-\\dfrac{\\pi}{3}$. 3) $T = 0{,}02$ s, $f = 50$ Hz, $u(0) = 2$ V. 4) valeur moyenne de $u^2 = \\dfrac{A^2}{2} = 8$, valeur efficace $U = 2\\sqrt2 \\approx 2{,}83$ V. 5) $w = 4\\mathrm{i}$ ou $w = -4\\mathrm{i}$."
     }
   ]
 }

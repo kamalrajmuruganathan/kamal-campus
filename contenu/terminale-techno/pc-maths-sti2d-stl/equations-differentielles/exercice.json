@@ -83,6 +83,58 @@
         "(d) On résout $\\theta(t) = 60$ : $360\\,e^{-0{,}05t} = 40$, soit $e^{-0{,}05t} = \\dfrac{40}{360} = \\dfrac{1}{9}$. D'où $-0{,}05t = \\ln\\dfrac{1}{9} = -\\ln 9$, puis $t = \\dfrac{\\ln 9}{0{,}05} = 20\\ln 9 \\approx 44$ minutes. Il faut attendre environ trois quarts d'heure."
       ],
       "reponse": "(a) $\\theta' = -0{,}05\\,\\theta + 1$ ($a = -0{,}05$, $b = 1$). (b) $\\theta(t) = 20 + 360\\,e^{-0{,}05t}$. (c) $\\theta(10) \\approx 238$ °C. (d) $t = 20\\ln 9 \\approx 44$ min."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "resoudre-y-prime-ay-b",
+      "enonce": "(a) Résoudre l'équation différentielle $y' = 5y$ (donner toutes les solutions). (b) Résoudre l'équation différentielle $y' = -3y + 6$ (donner toutes les solutions). (c) Parmi les solutions de la question (b), déterminer celle qui vérifie $y(0) = 5$.",
+      "corrige": [
+        "(a) L'équation est de la forme $y' = ay$ avec $a = 5$. Ses solutions sont les fonctions $y(x) = C\\,e^{5x}$, $C \\in \\mathbb{R}$. Contrôle : $y'(x) = 5C\\,e^{5x} = 5\\,y(x)$.",
+        "(b) Étape 1 — solution particulière constante : on pose $y' = 0$, d'où $0 = -3y + 6$, soit $y_p = 2$ (c'est $-\\frac{b}{a} = -\\frac{6}{-3}$). Étape 2 — on ajoute les solutions de $y' = -3y$ : les solutions sont $y(x) = C\\,e^{-3x} + 2$, $C \\in \\mathbb{R}$. Contrôle : $y' = -3C\\,e^{-3x}$ et $-3y + 6 = -3C\\,e^{-3x} - 6 + 6 = -3C\\,e^{-3x}$.",
+        "(c) On impose $y(0) = 5$ dans $y(x) = C\\,e^{-3x} + 2$ : $y(0) = C + 2 = 5$, donc $C = 3$. La solution cherchée est $y(x) = 3e^{-3x} + 2$. Vérification : $y(0) = 3 + 2 = 5$."
+      ],
+      "reponse": "(a) $y(x) = C\\,e^{5x}$, $C \\in \\mathbb{R}$. (b) $y(x) = C\\,e^{-3x} + 2$, $C \\in \\mathbb{R}$. (c) $y(x) = 3e^{-3x} + 2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "resoudre-y-prime-ay",
+      "enonce": "Un échantillon radioactif contient initialement $N_0 = 800$ noyaux (en milliards). Le nombre $N(t)$ de noyaux non désintégrés (en milliards, $t$ en années) vérifie l'équation de décroissance radioactive $N' = -0{,}04\\,N$. (a) Déterminer l'expression de $N(t)$ tenant compte de la condition initiale $N(0) = 800$. (b) Calculer le nombre de noyaux restants au bout de $25$ ans (arrondir à l'unité). (c) La demi-vie est la durée au bout de laquelle la moitié des noyaux se sont désintégrés. Déterminer sa valeur exacte, puis une valeur approchée à l'année près.",
+      "corrige": [
+        "(a) L'équation $N' = -0{,}04\\,N$ est de la forme $y' = ay$ avec $a = -0{,}04$. Ses solutions sont $N(t) = C\\,e^{-0{,}04t}$. La condition initiale donne $N(0) = C = 800$, d'où $N(t) = 800\\,e^{-0{,}04t}$.",
+        "(b) On calcule $N(25) = 800\\,e^{-0{,}04 \\times 25} = 800\\,e^{-1} \\approx 800 \\times 0{,}3679 \\approx 294$ milliards de noyaux.",
+        "(c) La demi-vie $t_{1/2}$ vérifie $N(t_{1/2}) = \\frac{800}{2} = 400$, soit $800\\,e^{-0{,}04t} = 400$, donc $e^{-0{,}04t} = \\frac{1}{2}$. En passant au logarithme : $-0{,}04\\,t = \\ln\\frac{1}{2} = -\\ln 2$, d'où $t_{1/2} = \\dfrac{\\ln 2}{0{,}04} = 25\\ln 2 \\approx 17$ ans. (La demi-vie ne dépend pas de $N_0$ : c'est une propriété du noyau.)"
+      ],
+      "reponse": "(a) $N(t) = 800\\,e^{-0{,}04t}$. (b) $N(25) = 800\\,e^{-1} \\approx 294$ milliards. (c) $t_{1/2} = 25\\ln 2 \\approx 17$ ans."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "condition-initiale",
+      "enonce": "Un chauffe-eau électrique porte de l'eau vers sa température de régulation. La température $\\theta(t)$ de l'eau (en °C, $t$ en minutes) vérifie $\\theta' = -0{,}1\\,\\theta + 8$, avec $\\theta(0) = 20$. (a) Déterminer la solution constante de l'équation ; interpréter ce nombre comme régime permanent. (b) Déterminer l'expression de $\\theta(t)$. (c) Montrer, sans calculatrice, que pour tout $t \\geq 0$ on a $\\theta(t) < 80$ et que $\\theta$ est croissante. (d) Calculer $\\theta(10)$ (arrondir à l'unité), puis déterminer au bout de combien de temps l'eau atteint $75$ °C (valeur exacte puis arrondie à la minute).",
+      "corrige": [
+        "(a) Solution constante : on pose $\\theta' = 0$, d'où $0 = -0{,}1\\,\\theta + 8$, soit $\\theta = 80$ (c'est $-\\frac{b}{a} = -\\frac{8}{-0{,}1}$). Cette valeur $80$ °C est le régime permanent : la température vers laquelle l'eau se stabilise, correspondant à la consigne du thermostat.",
+        "(b) Les solutions sont $\\theta(t) = C\\,e^{-0{,}1t} + 80$. La condition initiale $\\theta(0) = C + 80 = 20$ donne $C = -60$, d'où $\\theta(t) = 80 - 60\\,e^{-0{,}1t}$.",
+        "(c) Pour tout $t \\geq 0$, $e^{-0{,}1t} > 0$, donc $60\\,e^{-0{,}1t} > 0$ et par suite $\\theta(t) = 80 - 60\\,e^{-0{,}1t} < 80$ : la température reste strictement sous les $80$ °C. De plus $\\theta'(t) = -60 \\times (-0{,}1)\\,e^{-0{,}1t} = 6\\,e^{-0{,}1t} > 0$ pour tout $t$ : $\\theta$ est strictement croissante. L'eau chauffe donc en montant vers $80$ °C sans jamais l'atteindre : c'est l'extinction du régime transitoire $-60\\,e^{-0{,}1t}$.",
+        "(d) $\\theta(10) = 80 - 60\\,e^{-1} \\approx 80 - 60 \\times 0{,}3679 \\approx 80 - 22{,}1 \\approx 58$ °C. Pour $\\theta(t) = 75$ : $60\\,e^{-0{,}1t} = 5$, soit $e^{-0{,}1t} = \\frac{1}{12}$, donc $-0{,}1t = \\ln\\frac{1}{12} = -\\ln 12$, d'où $t = 10\\ln 12 \\approx 25$ minutes."
+      ],
+      "reponse": "(a) Régime permanent $80$ °C. (b) $\\theta(t) = 80 - 60\\,e^{-0{,}1t}$. (c) $\\theta(t) < 80$ car $60e^{-0{,}1t} > 0$, et $\\theta' = 6e^{-0{,}1t} > 0$ (croissante). (d) $\\theta(10) \\approx 58$ °C ; $\\theta = 75$ °C pour $t = 10\\ln 12 \\approx 25$ min."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "application-rc",
+      "enonce": "PROBLÈME. Dans un circuit RC, un générateur de tension constante $E = 5{,}0$ V charge un condensateur de capacité $C_0 = 10$ µF à travers une résistance $R = 20$ kΩ. Le condensateur est initialement déchargé. La tension $u(t)$ à ses bornes (en volts, $t$ en secondes) vérifie la loi des mailles $R\\,C_0\\,u' + u = E$. On rappelle la constante de temps $\\tau = R\\,C_0$.\\n1. Calculer $\\tau$ en secondes (attention aux conversions d'unités).\\n2. Montrer que l'équation s'écrit $u' = -5\\,u + 25$ et préciser $a$ et $b$.\\n3. Déterminer la solution constante de l'équation et interpréter sa valeur physiquement.\\n4. Déterminer l'expression de $u(t)$ tenant compte de la condition initiale $u(0) = 0$.\\n5. Calculer $u(\\tau)$ (arrondir au dixième) et vérifier qu'il correspond à environ $63\\,\\%$ de $E$.\\n6. Déterminer, à la centième de seconde près, l'instant où la tension atteint $4{,}5$ V (soit $90\\,\\%$ de $E$). Comparer cette durée à $\\tau$.",
+      "corrige": [
+        "1. On convertit avant de multiplier : $R = 20$ kΩ $= 20 \\times 10^3 = 2{,}0 \\times 10^4$ Ω et $C_0 = 10$ µF $= 10 \\times 10^{-6} = 1{,}0 \\times 10^{-5}$ F. D'où $\\tau = R\\,C_0 = 2{,}0 \\times 10^4 \\times 1{,}0 \\times 10^{-5} = 0{,}20$ s (ohms × farads = secondes).",
+        "2. On part de $R\\,C_0\\,u' + u = E$, soit $0{,}20\\,u' + u = 5{,}0$. On isole $u'$ en divisant par $\\tau = 0{,}20$ : $u' = -\\dfrac{1}{0{,}20}\\,u + \\dfrac{5{,}0}{0{,}20} = -5\\,u + 25$. C'est la forme $y' = ay + b$ avec $a = -5$ et $b = 25$.",
+        "3. Solution constante : on pose $u' = 0$, d'où $0 = -5u + 25$, soit $u = 5$ (c'est $-\\frac{b}{a} = -\\frac{25}{-5} = 5$). Physiquement, une fois chargé le condensateur atteint la tension $u = E = 5{,}0$ V du générateur : plus aucun courant ne circule.",
+        "4. Les solutions sont $u(t) = K\\,e^{-5t} + 5$. La condition initiale $u(0) = 0$ donne $K + 5 = 0$, soit $K = -5$. Ainsi $u(t) = 5\\left(1 - e^{-5t}\\right)$.",
+        "5. $u(\\tau) = u(0{,}20) = 5\\left(1 - e^{-5 \\times 0{,}20}\\right) = 5\\left(1 - e^{-1}\\right) \\approx 5 \\times 0{,}632 \\approx 3{,}2$ V. Or $\\frac{3{,}2}{5{,}0} \\approx 0{,}63$ : à $t = \\tau$, la tension vaut bien environ $63\\,\\%$ de $E$, propriété caractéristique de la constante de temps.",
+        "6. On résout $5\\left(1 - e^{-5t}\\right) = 4{,}5$ : $1 - e^{-5t} = 0{,}9$, soit $e^{-5t} = 0{,}1 = \\frac{1}{10}$. En passant au logarithme : $-5t = \\ln\\frac{1}{10} = -\\ln 10$, d'où $t = \\dfrac{\\ln 10}{5} \\approx \\dfrac{2{,}303}{5} \\approx 0{,}46$ s. Comme $\\frac{0{,}46}{0{,}20} \\approx 2{,}3$, cette durée vaut environ $2{,}3\\,\\tau$ : il faut un peu plus de deux constantes de temps pour atteindre $90\\,\\%$ de la charge (et environ $5\\tau$ pour la charge quasi totale)."
+      ],
+      "reponse": "1. $\\tau = 0{,}20$ s. 2. $u' = -5u + 25$ ($a = -5$, $b = 25$). 3. Solution constante $u = 5$ V $= E$ (condensateur chargé). 4. $u(t) = 5(1 - e^{-5t})$. 5. $u(\\tau) = 5(1 - e^{-1}) \\approx 3{,}2$ V $\\approx 63\\,\\%$ de $E$. 6. $t = \\frac{\\ln 10}{5} \\approx 0{,}46$ s $\\approx 2{,}3\\,\\tau$."
     }
   ]
 }

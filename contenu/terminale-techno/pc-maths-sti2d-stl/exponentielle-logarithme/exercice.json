@@ -92,6 +92,63 @@
         "3. $\\dfrac{\\ln 10 / \\lambda}{\\ln 2 / \\lambda} = \\dfrac{\\ln 10}{\\ln 2} \\approx 3{,}32$ : il faut environ $3{,}3$ demi-vies. Cohérent : après $3$ demi-vies il reste $\\left(\\frac{1}{2}\\right)^3 = 12{,}5\\,\\% > 10\\,\\%$, après $4$ il en reste $6{,}25\\,\\% < 10\\,\\%$."
       ],
       "reponse": "1. $t_{1/2} = \\dfrac{\\ln 2}{\\lambda} \\approx 27{,}7$ ans ; 2. au-delà de $t = \\dfrac{\\ln 10}{\\lambda} \\approx 92{,}1$ ans ; 3. $\\dfrac{\\ln 10}{\\ln 2} \\approx 3{,}3$ demi-vies."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "derivees",
+      "enonce": "Dériver les fonctions suivantes :\n1. $f(x) = e^{5x} - 4e^{-x}$ ;\n2. $g(x) = (2x + 1)\\,e^{x}$ ;\n3. $h(t) = 20\\,e^{-0{,}1t}$ (écart de température, en °C, d'une pièce qui refroidit).",
+      "corrige": [
+        "1. On dérive terme à terme avec $(e^{kx})' = k\\,e^{kx}$ : $\\left(e^{5x}\\right)' = 5e^{5x}$ et $\\left(-4e^{-x}\\right)' = -4 \\times (-1)e^{-x} = 4e^{-x}$. Donc $f'(x) = 5e^{5x} + 4e^{-x}$.",
+        "2. $g$ est un produit $u \\times v$ avec $u(x) = 2x + 1$ et $v(x) = e^{x}$, donc $u'(x) = 2$ et $v'(x) = e^{x}$.",
+        "$g'(x) = u'v + uv' = 2e^{x} + (2x + 1)e^{x} = (2x + 3)\\,e^{x}$, après mise en facteur de $e^{x}$.",
+        "3. La constante $20$ reste en facteur et $\\left(e^{-0{,}1t}\\right)' = -0{,}1\\,e^{-0{,}1t}$ : $h'(t) = 20 \\times (-0{,}1)e^{-0{,}1t} = -2e^{-0{,}1t}$. Cette dérivée est strictement négative : l'écart de température diminue, la pièce refroidit."
+      ],
+      "reponse": "$f'(x) = 5e^{5x} + 4e^{-x}$ ; $g'(x) = (2x + 3)\\,e^{x}$ ; $h'(t) = -2e^{-0{,}1t}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "equations-inequations",
+      "enonce": "Une pièce métallique sort d'un four et refroidit dans un atelier maintenu à $20$ °C. Sa température est modélisée par $T(t) = 20 + 180\\,e^{-0{,}05t}$, avec $t$ en minutes et $T$ en degrés Celsius.\n1. Quelle est la température de la pièce à sa sortie du four ? Vers quelle température tend-elle si l'on attend très longtemps ?\n2. Au bout de combien de temps la température atteint-elle $80$ °C ? (valeur exacte puis arrondie à la minute)\n3. À partir de quel instant la température devient-elle inférieure à $50$ °C ?",
+      "corrige": [
+        "1. À la sortie du four, $t = 0$ : $T(0) = 20 + 180\\,e^{0} = 20 + 180 = 200$ °C. Quand $t \\to +\\infty$, $e^{-0{,}05t} \\to 0$, donc $T(t) \\to 20$ °C : la pièce tend vers la température de l'atelier.",
+        "2. On résout $20 + 180\\,e^{-0{,}05t} = 80$, soit $180\\,e^{-0{,}05t} = 60$, puis $e^{-0{,}05t} = \\dfrac{60}{180} = \\dfrac{1}{3}$.",
+        "On prend le logarithme népérien : $-0{,}05t = \\ln\\dfrac{1}{3} = -\\ln 3$, d'où $t = \\dfrac{\\ln 3}{0{,}05} = 20\\ln 3 \\approx 22$ min.",
+        "3. On résout $20 + 180\\,e^{-0{,}05t} < 50$, soit $180\\,e^{-0{,}05t} < 30$, puis $e^{-0{,}05t} < \\dfrac{30}{180} = \\dfrac{1}{6}$.",
+        "Le logarithme conserve le sens : $-0{,}05t < \\ln\\dfrac{1}{6} = -\\ln 6$. En divisant par $-0{,}05 < 0$ (le sens CHANGE) : $t > \\dfrac{\\ln 6}{0{,}05} = 20\\ln 6$. Or $\\ln 6 = \\ln 2 + \\ln 3 \\approx 0{,}693 + 1{,}099 = 1{,}792$, donc $t > 20 \\times 1{,}792 \\approx 35{,}8$ min : la pièce passe sous $50$ °C au bout d'environ $36$ minutes."
+      ],
+      "reponse": "1. $T(0) = 200$ °C, et $T(t) \\to 20$ °C ; 2. $t = 20\\ln 3 \\approx 22$ min ; 3. à partir de $t = 20\\ln 6 \\approx 35{,}8$ min."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "etude-fonctions",
+      "enonce": "On considère la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = (x + 1)\\,e^{-x}$.\n1. Montrer que $f'(x) = -x\\,e^{-x}$.\n2. Étudier le signe de $f'$ et dresser le tableau de variations de $f$ (on précisera l'extremum).\n3. Déterminer les limites de $f$ en $-\\infty$ et en $+\\infty$.",
+      "corrige": [
+        "1. $f$ est un produit $u \\times v$ avec $u(x) = x + 1$ et $v(x) = e^{-x}$, donc $u'(x) = 1$ et $v'(x) = -e^{-x}$.",
+        "$f'(x) = u'v + uv' = 1 \\times e^{-x} + (x + 1)\\left(-e^{-x}\\right) = e^{-x}\\big[1 - (x + 1)\\big] = -x\\,e^{-x}$.",
+        "2. Pour tout $x$, $e^{-x} > 0$ : le signe de $f'(x) = -x\\,e^{-x}$ est celui de $-x$. Donc $f'(x) > 0$ sur $]-\\infty\\,;0[$ et $f'(x) < 0$ sur $]0\\,;+\\infty[$.",
+        "$f$ est donc croissante sur $]-\\infty\\,;0]$ puis décroissante sur $[0\\,;+\\infty[$ : elle admet un maximum en $x = 0$, de valeur $f(0) = (0 + 1)e^{0} = 1$.",
+        "3. En $+\\infty$ : $f(x) = \\dfrac{x + 1}{e^{x}}$, forme indéterminée $\\frac{\\infty}{\\infty}$ ; par croissance comparée, l'exponentielle l'emporte et $\\lim\\limits_{x \\to +\\infty} f(x) = 0$.",
+        "En $-\\infty$ : $x + 1 \\to -\\infty$ et $e^{-x} \\to +\\infty$, donc le produit tend vers $-\\infty$ : $\\lim\\limits_{x \\to -\\infty} f(x) = -\\infty$."
+      ],
+      "reponse": "$f'(x) = -x\\,e^{-x}$ ; $f$ croît sur $]-\\infty\\,;0]$, décroît sur $[0\\,;+\\infty[$, maximum $f(0) = 1$ ; $\\lim\\limits_{x\\to-\\infty} f(x) = -\\infty$ et $\\lim\\limits_{x\\to+\\infty} f(x) = 0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "etude-fonctions",
+      "enonce": "On charge un condensateur à travers une résistance sous une tension d'alimentation $E = 5$ V. La tension aux bornes du condensateur est modélisée par $u(t) = 5\\left(1 - e^{-t/2}\\right)$, où $t$ est le temps en secondes ($\\tau = 2$ s est la constante de temps du circuit).\n1. Calculer $u(0)$ et déterminer $\\lim\\limits_{t \\to +\\infty} u(t)$. Interpréter ces deux résultats.\n2. Montrer que $u'(t) = 2{,}5\\,e^{-t/2}$, puis en déduire le sens de variation de $u$ sur $[0\\,;+\\infty[$.\n3. Vérifier qu'à $t = \\tau$ la tension atteint environ $63\\,\\%$ de $E$.\n4. Déterminer, à la seconde près, l'instant où la tension atteint $90\\,\\%$ de sa valeur finale ($4{,}5$ V).\n5. En électronique, on considère le condensateur « chargé » au bout de $5\\tau$. Calculer $u(5\\tau)$ et le pourcentage de $E$ alors atteint.",
+      "corrige": [
+        "1. $u(0) = 5\\left(1 - e^{0}\\right) = 5(1 - 1) = 0$ V : à l'instant initial le condensateur est déchargé. Quand $t \\to +\\infty$, $e^{-t/2} \\to 0$, donc $u(t) \\to 5(1 - 0) = 5$ V : la tension tend vers la tension d'alimentation $E = 5$ V (le condensateur est complètement chargé).",
+        "2. On dérive : la constante $5$ reste en facteur, $(1)' = 0$ et $\\left(-e^{-t/2}\\right)' = -\\left(-\\dfrac{1}{2}\\right)e^{-t/2} = \\dfrac{1}{2}e^{-t/2}$, car $\\left(e^{kt}\\right)' = k\\,e^{kt}$ avec $k = -\\dfrac{1}{2}$. Donc $u'(t) = 5 \\times \\dfrac{1}{2}e^{-t/2} = 2{,}5\\,e^{-t/2}$.",
+        "2 (suite). Pour tout $t$, $e^{-t/2} > 0$, donc $u'(t) > 0$ : $u$ est strictement croissante sur $[0\\,;+\\infty[$. La tension monte de $0$ V vers $5$ V sans jamais dépasser cette valeur.",
+        "3. À $t = \\tau = 2$ : $u(2) = 5\\left(1 - e^{-2/2}\\right) = 5\\left(1 - e^{-1}\\right)$. Or $e^{-1} \\approx 0{,}368$, donc $u(2) \\approx 5 \\times 0{,}632 = 3{,}16$ V, soit $\\dfrac{3{,}16}{5} \\approx 0{,}63 = 63\\,\\%$ de $E$. On retrouve le repère classique « $63\\,\\%$ à une constante de temps ».",
+        "4. On résout $5\\left(1 - e^{-t/2}\\right) = 4{,}5$, soit $1 - e^{-t/2} = 0{,}9$, d'où $e^{-t/2} = 0{,}1$. On prend le logarithme népérien : $-\\dfrac{t}{2} = \\ln(0{,}1) = -\\ln 10$, donc $t = 2\\ln 10 \\approx 2 \\times 2{,}303 = 4{,}61$ s, soit environ $5$ s.",
+        "5. $5\\tau = 10$ s : $u(10) = 5\\left(1 - e^{-10/2}\\right) = 5\\left(1 - e^{-5}\\right)$. Or $e^{-5} \\approx 0{,}0067$, donc $u(10) \\approx 5 \\times 0{,}9933 \\approx 4{,}97$ V, soit environ $99{,}3\\,\\%$ de $E$. Après $5\\tau$ la tension est à moins de $1\\,\\%$ de sa valeur finale : le condensateur est bien considéré comme chargé."
+      ],
+      "reponse": "1. $u(0) = 0$ V (condensateur déchargé), $u(t) \\to 5$ V $= E$ (chargé) ; 2. $u'(t) = 2{,}5\\,e^{-t/2} > 0$, $u$ strictement croissante ; 3. $u(\\tau) = 5(1 - e^{-1}) \\approx 3{,}16$ V $\\approx 63\\,\\%$ de $E$ ; 4. $t = 2\\ln 10 \\approx 4{,}6$ s ; 5. $u(5\\tau) \\approx 4{,}97$ V, soit $\\approx 99{,}3\\,\\%$ de $E$."
     }
   ]
 }

@@ -84,6 +84,57 @@
         "Le spectre de $v$ comporte donc **une seule raie**, à $100$ Hz, d'amplitude $5{,}0$ V : $v$ est un signal sinusoïdal pur. Le piège : une raie par **fréquence** présente dans le signal, pas une raie par terme de la formule."
       ],
       "reponse": "(a) Deux raies : $(100 \\text{ Hz} ; 5{,}0 \\text{ V})$ et $(300 \\text{ Hz} ; 1{,}5 \\text{ V})$. (b) $f = 100$ Hz, $T = 10$ ms, signal non sinusoïdal. (c) Non : une seule raie à $100$ Hz, d'amplitude $5{,}0$ V."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "La notice d'un casque audio annonce un niveau sonore $L = 94$ dB à volume maximal. Donnée : $I = I_0 \\times 10^{L/10}$ avec $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻². (a) Calcule l'intensité acoustique $I$ correspondante. (b) Ce niveau dépasse-t-il le seuil de risque auditif pour une exposition prolongée ($\\approx 85$ dB) ?",
+      "corrige": [
+        "(a) On applique la formule inverse : $I = I_0 \\times 10^{L/10} = 1{,}0 \\times 10^{-12} \\times 10^{94/10} = 1{,}0 \\times 10^{-12} \\times 10^{9{,}4}$.",
+        "Or $10^{9{,}4} = 10^{9} \\times 10^{0{,}4} \\approx 2{,}5 \\times 10^{9}$, donc $I \\approx 1{,}0 \\times 10^{-12} \\times 2{,}5 \\times 10^{9} = 2{,}5 \\times 10^{-3}$ W·m⁻².",
+        "(b) $L = 94$ dB $> 85$ dB : le seuil de risque auditif est nettement dépassé. À ce volume, l'écoute prolongée est dangereuse pour l'audition."
+      ],
+      "reponse": "(a) $I \\approx 2{,}5 \\times 10^{-3}$ W·m⁻². (b) Oui, $94$ dB $> 85$ dB : au-dessus du seuil de risque."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "À $d = 1{,}0$ m d'un petit haut-parleur de smartphone, un sonomètre mesure un niveau sonore $L = 70$ dB. On suppose l'émission isotrope. Données : $I = I_0 \\times 10^{L/10}$, $I = \\dfrac{P}{4\\pi d^2}$, $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻². (a) Calcule l'intensité acoustique $I$ à $1{,}0$ m. (b) En déduis la puissance acoustique $P$ rayonnée par le haut-parleur.",
+      "corrige": [
+        "(a) $I = I_0 \\times 10^{L/10} = 1{,}0 \\times 10^{-12} \\times 10^{70/10} = 1{,}0 \\times 10^{-12} \\times 10^{7} = 1{,}0 \\times 10^{-5}$ W·m⁻².",
+        "(b) On isole $P$ dans $I = \\dfrac{P}{4\\pi d^2}$ : $P = I \\times 4\\pi d^2 = 1{,}0 \\times 10^{-5} \\times 4\\pi \\times (1{,}0)^2 \\approx 1{,}0 \\times 10^{-5} \\times 12{,}6 \\approx 1{,}3 \\times 10^{-4}$ W.",
+        "La puissance acoustique n'est donc que de $0{,}13$ mW environ : un haut-parleur de smartphone convertit très peu de puissance électrique en son — ce qui n'empêche pas $70$ dB, niveau d'une conversation, car l'oreille est très sensible."
+      ],
+      "reponse": "(a) $I = 1{,}0 \\times 10^{-5}$ W·m⁻². (b) $P \\approx 1{,}3 \\times 10^{-4}$ W (soit $\\approx 0{,}13$ mW)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "spectre-amplitude",
+      "enonce": "Le spectre d'amplitude d'une note d'instrument comporte quatre raies : $200$ Hz (amplitude $4{,}0$), $400$ Hz ($2{,}0$), $600$ Hz ($1{,}2$) et $800$ Hz ($0{,}6$), en unités arbitraires. On fait passer ce signal dans un filtre **passe-bas** qui supprime toute composante de fréquence supérieure à $500$ Hz. (a) Quelles raies subsistent après le filtrage ? (b) La **hauteur** du son perçu change-t-elle ? Justifie. (c) Le **timbre** change-t-il ?",
+      "corrige": [
+        "(a) Le filtre passe-bas ne laisse passer que les fréquences inférieures à $500$ Hz. Il subsiste donc les raies à $200$ Hz (amplitude $4{,}0$, le fondamental) et à $400$ Hz (amplitude $2{,}0$, harmonique de rang $2$). Les raies à $600$ Hz et $800$ Hz sont supprimées.",
+        "(b) Non : la hauteur est fixée par la fréquence du **fondamental**, $f_1 = 200$ Hz, qui n'est pas touchée par le filtre (car $200 < 500$). Le son garde donc la même hauteur, et la même période $T = \\dfrac{1}{200} = 5{,}0 \\times 10^{-3}$ s $= 5{,}0$ ms.",
+        "(c) Oui : le timbre dépend du **nombre et des amplitudes relatives des harmoniques**. En supprimant deux harmoniques, on modifie la composition du spectre : le son paraîtra plus « sourd », moins riche — c'est un changement de timbre, à hauteur inchangée."
+      ],
+      "reponse": "(a) Raies à $200$ Hz ($4{,}0$) et $400$ Hz ($2{,}0$). (b) Non, le fondamental ($200$ Hz) est conservé : même hauteur. (c) Oui, moins d'harmoniques : le timbre change."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "spectre-amplitude, intensite-niveau-sonore, ondes-em-transmission",
+      "enonce": "**Sonorisation d'un concert en plein air.** Un groupe se produit sur une scène équipée d'enceintes, de micros sans fil et de projecteurs. Données : $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻² ; $c = 3{,}00 \\times 10^8$ m·s⁻¹ ; $I = \\dfrac{P}{4\\pi d^2}$ ; $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$ ; $c = \\lambda f$. Le visible s'étend d'environ $400$ à $800$ nm. \\n\\n**Partie A — Le son de la basse.** On enregistre une note de guitare basse. Son spectre d'amplitude présente trois raies : $55$ Hz (amplitude $3{,}0$), $110$ Hz ($1{,}8$) et $165$ Hz ($0{,}9$), en unités arbitraires. \\n1. Identifie le fondamental et le rang des harmoniques. Donne la fréquence du signal et sa période. \\n2. Ce son est-il pur ou composé ? Qu'est-ce qui, dans ce spectre, caractérise le **timbre** de la basse ? \\n\\n**Partie B — Le niveau sonore.** Une enceinte rayonne une puissance acoustique $P = 20$ W, supposée répartie de façon isotrope. \\n3. Calcule l'intensité acoustique $I$ à $d = 10$ m de l'enceinte, puis le niveau sonore $L$ à cette distance. \\n4. Les premiers spectateurs sont à $5{,}0$ m de l'enceinte. Sans tout recalculer, déduis le niveau sonore qu'ils subissent, et compare-le au seuil de douleur ($\\approx 120$ dB). \\n\\n**Partie C — Les ondes électromagnétiques.** \\n5. Le micro sans fil du chanteur émet une onde radio de fréquence $f = 700$ MHz. Calcule sa longueur d'onde $\\lambda$. S'agit-il d'une propagation libre ou guidée ? \\n6. Un projecteur laser vert émet une lumière de longueur d'onde $\\lambda' = 532$ nm. Calcule sa fréquence et vérifie qu'elle appartient bien au domaine visible.",
+      "corrige": [
+        "1. Le fondamental est la raie de plus basse fréquence : $f_1 = 55$ Hz. Les autres raies sont à $110 = 2 \\times 55$ Hz (harmonique de rang $2$) et $165 = 3 \\times 55$ Hz (harmonique de rang $3$) : ce sont bien des multiples entiers de $f_1$. La fréquence du signal est celle du fondamental, $f = 55$ Hz, et sa période $T = \\dfrac{1}{f} = \\dfrac{1}{55} \\approx 1{,}8 \\times 10^{-2}$ s $= 18$ ms.",
+        "2. Le spectre comporte **trois** raies : le son est **composé** (un son pur n'aurait qu'une seule raie). Le timbre de la basse est caractérisé par le **nombre d'harmoniques et leurs amplitudes relatives** ($3{,}0$ ; $1{,}8$ ; $0{,}9$) : c'est cette composition qui la distingue d'un autre instrument jouant la même note.",
+        "3. À $d = 10$ m : $S = 4\\pi d^2 = 4\\pi \\times (10)^2 \\approx 1{,}26 \\times 10^{3}$ m², d'où $I = \\dfrac{P}{4\\pi d^2} = \\dfrac{20}{1{,}26 \\times 10^{3}} \\approx 1{,}6 \\times 10^{-2}$ W·m⁻². Puis $\\dfrac{I}{I_0} = \\dfrac{1{,}6 \\times 10^{-2}}{1{,}0 \\times 10^{-12}} = 1{,}6 \\times 10^{10}$, donc $L = 10\\log(1{,}6 \\times 10^{10}) = 10\\,(0{,}20 + 10) \\approx 102$ dB.",
+        "4. Passer de $10$ m à $5{,}0$ m divise la distance par $2$ : $d^2$ est divisé par $4$, donc l'intensité est **multipliée par $4$**, et le niveau augmente de $10\\log(4) \\approx 6$ dB. Les spectateurs subissent donc $L' \\approx 102 + 6 = 108$ dB. C'est en dessous du seuil de douleur ($\\approx 120$ dB), mais très au-dessus du seuil de risque auditif ($\\approx 85$ dB) : une protection auditive est vivement recommandée.",
+        "5. Conversion : $f = 700$ MHz $= 7{,}00 \\times 10^{8}$ Hz. Puis $\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00 \\times 10^{8}}{7{,}00 \\times 10^{8}} \\approx 0{,}43$ m $= 43$ cm. L'onde radio du micro sans fil se propage dans l'air (onde hertzienne) : c'est une propagation **libre**.",
+        "6. Conversion : $\\lambda' = 532$ nm $= 5{,}32 \\times 10^{-7}$ m. Puis $f' = \\dfrac{c}{\\lambda'} = \\dfrac{3{,}00 \\times 10^{8}}{5{,}32 \\times 10^{-7}} \\approx 5{,}6 \\times 10^{14}$ Hz. Comme $400$ nm $< 532$ nm $< 800$ nm, cette lumière appartient bien au domaine **visible** (couleur verte)."
+      ],
+      "reponse": "1. Fondamental $55$ Hz ; harmoniques de rangs $2$ ($110$ Hz) et $3$ ($165$ Hz) ; $f = 55$ Hz, $T \\approx 18$ ms. 2. Son composé ; timbre = composition en harmoniques. 3. $I \\approx 1{,}6 \\times 10^{-2}$ W·m⁻², $L \\approx 102$ dB. 4. $L' \\approx 108$ dB à $5{,}0$ m ($+6$ dB), sous le seuil de douleur mais dangereux. 5. $\\lambda \\approx 0{,}43$ m ; propagation libre. 6. $f' \\approx 5{,}6 \\times 10^{14}$ Hz, domaine visible."
     }
   ]
 }
