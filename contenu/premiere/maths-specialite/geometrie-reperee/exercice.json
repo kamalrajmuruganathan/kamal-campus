@@ -87,6 +87,60 @@
         "Ces deux vecteurs sont non nuls (car $a > 0$) et de produit scalaire nul : ils sont orthogonaux. Les diagonales $[\\mathrm{OB}]$ et $[\\mathrm{AC}]$ sont donc perpendiculaires."
       ],
       "reponse": "$\\mathrm{B}(a\\,;a)$ ; $\\overrightarrow{\\mathrm{OB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 0$, donc $(\\mathrm{OB}) \\perp (\\mathrm{AC})$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "distance-milieu",
+      "enonce": "Le plan est muni d'un repère orthonormé (unité : le cm). On donne les points $\\mathrm{A}(-3\\,;2)$ et $\\mathrm{B}(5\\,;-4)$. 1) Déterminer les coordonnées du milieu $\\mathrm{I}$ de $[\\mathrm{AB}]$. 2) Calculer la longueur $\\mathrm{AB}$.",
+      "corrige": [
+        "1) Le milieu de $[\\mathrm{AB}]$ a pour coordonnées $\\left(\\dfrac{x_\\mathrm{A}+x_\\mathrm{B}}{2}\\,;\\dfrac{y_\\mathrm{A}+y_\\mathrm{B}}{2}\\right)$.",
+        "On remplace : $\\mathrm{I}\\left(\\dfrac{-3+5}{2}\\,;\\dfrac{2+(-4)}{2}\\right) = \\mathrm{I}\\left(\\dfrac{2}{2}\\,;\\dfrac{-2}{2}\\right) = \\mathrm{I}(1\\,;-1)$.",
+        "2) La distance vaut $\\mathrm{AB} = \\sqrt{(x_\\mathrm{B}-x_\\mathrm{A})^2 + (y_\\mathrm{B}-y_\\mathrm{A})^2}$.",
+        "On calcule : $\\mathrm{AB} = \\sqrt{(5-(-3))^2 + (-4-2)^2} = \\sqrt{8^2 + (-6)^2} = \\sqrt{64+36} = \\sqrt{100} = 10$ cm."
+      ],
+      "reponse": "$\\mathrm{I}(1\\,;-1)$ et $\\mathrm{AB} = 10$ cm."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "mediatrice",
+      "enonce": "Le plan est muni d'un repère orthonormé. On donne $\\mathrm{A}(1\\,;2)$ et $\\mathrm{B}(5\\,;4)$. Déterminer une équation de la médiatrice $\\Delta$ du segment $[\\mathrm{AB}]$. (On rappelle que la médiatrice de $[\\mathrm{AB}]$ passe par le milieu de $[\\mathrm{AB}]$ et lui est perpendiculaire.)",
+      "corrige": [
+        "Étape 1 — le point de passage. La médiatrice passe par le milieu $\\mathrm{I}$ de $[\\mathrm{AB}]$ : $\\mathrm{I}\\left(\\dfrac{1+5}{2}\\,;\\dfrac{2+4}{2}\\right) = \\mathrm{I}(3\\,;3)$.",
+        "Étape 2 — un vecteur normal. La médiatrice est perpendiculaire à $[\\mathrm{AB}]$ : le vecteur $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 5-1 \\\\ 4-2 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$ est donc un vecteur normal de $\\Delta$.",
+        "On écrit l'équation avec le point $\\mathrm{I}(3\\,;3)$ et le vecteur normal $\\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$ : $4(x-3) + 2(y-3) = 0$, soit $4x - 12 + 2y - 6 = 0$, donc $4x + 2y - 18 = 0$.",
+        "On simplifie en divisant par $2$ : $2x + y - 9 = 0$. Contrôle : $\\mathrm{I}(3\\,;3)$ vérifie $2\\times 3 + 3 - 9 = 0$ ✓."
+      ],
+      "reponse": "$2x + y - 9 = 0$ (équivalente à $4x + 2y - 18 = 0$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "triangle-produit-scalaire",
+      "enonce": "Le plan est muni d'un repère orthonormé. On considère les points $\\mathrm{A}(-1\\,;1)$, $\\mathrm{B}(2\\,;5)$ et $\\mathrm{C}(6\\,;2)$. 1) Calculer les longueurs $\\mathrm{AB}$ et $\\mathrm{BC}$. 2) Démontrer que le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{B}$. 3) En déduire l'aire du triangle $\\mathrm{ABC}$.",
+      "corrige": [
+        "1) $\\mathrm{AB} = \\sqrt{(2-(-1))^2 + (5-1)^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9+16} = \\sqrt{25} = 5$.",
+        "$\\mathrm{BC} = \\sqrt{(6-2)^2 + (2-5)^2} = \\sqrt{4^2 + (-3)^2} = \\sqrt{16+9} = \\sqrt{25} = 5$.",
+        "2) On étudie le produit scalaire de $\\overrightarrow{\\mathrm{BA}}$ et $\\overrightarrow{\\mathrm{BC}}$. Leurs coordonnées : $\\overrightarrow{\\mathrm{BA}}\\begin{pmatrix} -1-2 \\\\ 1-5 \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ -4 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{BC}}\\begin{pmatrix} 6-2 \\\\ 2-5 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$.",
+        "Le repère étant orthonormé : $\\overrightarrow{\\mathrm{BA}} \\cdot \\overrightarrow{\\mathrm{BC}} = (-3)\\times 4 + (-4)\\times(-3) = -12 + 12 = 0$. Le produit scalaire est nul, donc les vecteurs sont orthogonaux : le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{B}$.",
+        "3) Le triangle étant rectangle en $\\mathrm{B}$, les côtés $[\\mathrm{BA}]$ et $[\\mathrm{BC}]$ sont perpendiculaires : ils servent de base et de hauteur. L'aire vaut $\\dfrac{\\mathrm{BA} \\times \\mathrm{BC}}{2} = \\dfrac{5 \\times 5}{2} = \\dfrac{25}{2} = 12{,}5$ unités d'aire."
+      ],
+      "reponse": "$\\mathrm{AB} = \\mathrm{BC} = 5$ ; $\\overrightarrow{\\mathrm{BA}} \\cdot \\overrightarrow{\\mathrm{BC}} = 0$ donc $\\mathrm{ABC}$ est rectangle (et isocèle) en $\\mathrm{B}$ ; aire $= 12{,}5$ unités d'aire."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "geometrie-reperee-synthese",
+      "enonce": "Le plan est muni d'un repère orthonormé (unité : $100$ m). Sur le plan d'un domaine, on place trois bornes de surveillance : $\\mathrm{A}(-1\\,;4)$, $\\mathrm{B}(3\\,;2)$ et $\\mathrm{C}(5\\,;6)$. Un chemin rectiligne relie $\\mathrm{A}$ et $\\mathrm{B}$. 1) Déterminer les coordonnées du milieu $\\mathrm{I}$ de $[\\mathrm{AB}]$ et la longueur $\\mathrm{AB}$. 2) Déterminer une équation de la droite $(\\mathrm{AB})$. 3) Un piquet est planté en $\\mathrm{D}(7\\,;0)$. Les points $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{D}$ sont-ils alignés ? 4) On installe une clôture circulaire $\\mathscr{C}$ de diamètre $[\\mathrm{AC}]$. Déterminer une équation de $\\mathscr{C}$. 5) Montrer que la borne $\\mathrm{B}$ est située sur cette clôture, puis en déduire la nature de l'angle $\\widehat{\\mathrm{ABC}}$.",
+      "corrige": [
+        "1. Le milieu de $[\\mathrm{AB}]$ est $\\mathrm{I}\\left(\\dfrac{-1+3}{2}\\,;\\dfrac{4+2}{2}\\right) = \\mathrm{I}(1\\,;3)$. Sa longueur vaut $\\mathrm{AB} = \\sqrt{(3-(-1))^2 + (2-4)^2} = \\sqrt{4^2 + (-2)^2} = \\sqrt{16+4} = \\sqrt{20} = 2\\sqrt{5}$ (soit environ $447$ m).",
+        "2. Un vecteur directeur de $(\\mathrm{AB})$ est $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ -2 \\end{pmatrix}$ ; un vecteur normal est donc $\\vec{n}\\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$, que l'on simplifie en $\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$. Avec le point $\\mathrm{A}(-1\\,;4)$ : $1\\big(x-(-1)\\big) + 2(y-4) = 0$, soit $x + 1 + 2y - 8 = 0$, donc $x + 2y - 7 = 0$. Contrôle : $\\mathrm{B}(3\\,;2)$ donne $3 + 4 - 7 = 0$ ✓.",
+        "3. On teste si $\\mathrm{D}(7\\,;0)$ vérifie l'équation de $(\\mathrm{AB})$ : $7 + 2\\times 0 - 7 = 0$. L'égalité est vraie, donc $\\mathrm{D} \\in (\\mathrm{AB})$ : les points $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{D}$ sont alignés. (On peut aussi l'établir par colinéarité : $\\overrightarrow{\\mathrm{AD}}\\begin{pmatrix} 8 \\\\ -4 \\end{pmatrix} = 2\\,\\overrightarrow{\\mathrm{AB}}$, les deux vecteurs sont colinéaires.)",
+        "4. La clôture a pour diamètre $[\\mathrm{AC}]$. Son centre est le milieu de $[\\mathrm{AC}]$ : $\\Omega\\left(\\dfrac{-1+5}{2}\\,;\\dfrac{4+6}{2}\\right) = \\Omega(2\\,;5)$. Son rayon est la moitié de $\\mathrm{AC}$ : $\\mathrm{AC} = \\sqrt{(5-(-1))^2 + (6-4)^2} = \\sqrt{36+4} = \\sqrt{40}$, donc $R = \\dfrac{\\sqrt{40}}{2}$ et $R^2 = \\dfrac{40}{4} = 10$. Une équation de $\\mathscr{C}$ est $(x-2)^2 + (y-5)^2 = 10$.",
+        "5. On teste $\\mathrm{B}(3\\,;2)$ dans l'équation de $\\mathscr{C}$ : $(3-2)^2 + (2-5)^2 = 1^2 + (-3)^2 = 1 + 9 = 10$. L'égalité est vérifiée, donc $\\mathrm{B} \\in \\mathscr{C}$. Comme $\\mathrm{B}$ appartient au cercle de diamètre $[\\mathrm{AC}]$ et est distinct de $\\mathrm{A}$ et de $\\mathrm{C}$, l'angle $\\widehat{\\mathrm{ABC}}$ est un angle droit."
+      ],
+      "reponse": "1. $\\mathrm{I}(1\\,;3)$, $\\mathrm{AB} = 2\\sqrt{5}$. 2. $(\\mathrm{AB}) : x + 2y - 7 = 0$. 3. Oui, $\\mathrm{A}$, $\\mathrm{B}$, $\\mathrm{D}$ sont alignés ($\\mathrm{D}$ appartient à $(\\mathrm{AB})$). 4. $\\mathscr{C} : (x-2)^2 + (y-5)^2 = 10$. 5. $\\mathrm{B} \\in \\mathscr{C}$, donc l'angle $\\widehat{\\mathrm{ABC}}$ est droit."
     }
   ]
 }

@@ -88,6 +88,70 @@
         "Le produit scalaire est nul : l'angle $\\widehat{\\mathrm{ACB}}$ est droit, donc $\\mathrm{C}$ appartient bien au cercle de diamètre $[\\mathrm{AB}]$."
       ],
       "reponse": "Oui : $\\overrightarrow{\\mathrm{CA}} \\cdot \\overrightarrow{\\mathrm{CB}} = 0$, donc $\\mathrm{C}$ est sur le cercle de diamètre $[\\mathrm{AB}]$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "angle",
+      "enonce": "Dans un repère orthonormé, on donne les points $\\mathrm{A}(1\\,;\\,1)$, $\\mathrm{B}(4\\,;\\,4)$ et $\\mathrm{C}(1\\,;\\,6)$. Déterminer la mesure de l'angle $\\widehat{\\mathrm{BAC}}$.",
+      "corrige": [
+        "On calcule les deux vecteurs de l'angle : $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4-1 \\\\ 4-1 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 1-1 \\\\ 6-1 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 5 \\end{pmatrix}$.",
+        "Produit scalaire en coordonnées : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 3 \\times 0 + 3 \\times 5 = 15$.",
+        "Normes : $\\|\\overrightarrow{\\mathrm{AB}}\\| = \\sqrt{3^2 + 3^2} = \\sqrt{18} = 3\\sqrt{2}$ et $\\|\\overrightarrow{\\mathrm{AC}}\\| = \\sqrt{0^2 + 5^2} = 5$.",
+        "On applique $\\cos\\widehat{\\mathrm{BAC}} = \\dfrac{\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}}{\\|\\overrightarrow{\\mathrm{AB}}\\|\\,\\|\\overrightarrow{\\mathrm{AC}}\\|} = \\dfrac{15}{3\\sqrt{2} \\times 5} = \\dfrac{15}{15\\sqrt{2}} = \\dfrac{1}{\\sqrt{2}}$.",
+        "Or $\\cos 45° = \\dfrac{1}{\\sqrt{2}}$, donc $\\widehat{\\mathrm{BAC}} = 45°$."
+      ],
+      "reponse": "$\\widehat{\\mathrm{BAC}} = 45°$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Deux vecteurs $\\vec{u}$ et $\\vec{v}$ vérifient $\\|\\vec{u}\\| = 6$, $\\|\\vec{v}\\| = 5$ et $\\|\\vec{u} + \\vec{v}\\| = \\sqrt{91}$. Calculer $\\vec{u} \\cdot \\vec{v}$, puis en déduire la mesure de l'angle $\\theta$ entre $\\vec{u}$ et $\\vec{v}$.",
+      "corrige": [
+        "On développe le carré de la norme de la somme : $\\|\\vec{u} + \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$.",
+        "On remplace par les données : $\\left(\\sqrt{91}\\right)^2 = 6^2 + 2\\,\\vec{u}\\cdot\\vec{v} + 5^2$, c'est-à-dire $91 = 36 + 2\\,\\vec{u}\\cdot\\vec{v} + 25$.",
+        "Donc $2\\,\\vec{u}\\cdot\\vec{v} = 91 - 61 = 30$, d'où $\\vec{u}\\cdot\\vec{v} = 15$.",
+        "Pour l'angle, on utilise $\\cos\\theta = \\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|} = \\dfrac{15}{6 \\times 5} = \\dfrac{15}{30} = \\dfrac{1}{2}$.",
+        "Or $\\cos 60° = \\dfrac{1}{2}$, donc $\\theta = 60°$."
+      ],
+      "reponse": "$\\vec{u}\\cdot\\vec{v} = 15$ et $\\theta = 60°$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "al-kashi",
+      "enonce": "Un terrain a la forme d'un triangle $\\mathrm{ABC}$. On mesure $\\mathrm{AB} = 5$ hm, $\\mathrm{AC} = 8$ hm et l'angle $\\widehat{\\mathrm{A}} = 60°$. 1. Calculer la longueur $\\mathrm{BC}$. 2. En déduire la mesure de l'angle $\\widehat{\\mathrm{B}}$, arrondie au dixième de degré.",
+      "corrige": [
+        "1. On applique le théorème d'Al-Kashi avec l'angle $\\widehat{\\mathrm{A}}$, opposé au côté $\\mathrm{BC}$ : $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2 - 2 \\times \\mathrm{AB} \\times \\mathrm{AC} \\times \\cos\\widehat{\\mathrm{A}}$.",
+        "1. Numériquement : $\\mathrm{BC}^2 = 5^2 + 8^2 - 2 \\times 5 \\times 8 \\times \\cos 60° = 25 + 64 - 80 \\times \\dfrac{1}{2} = 89 - 40 = 49$.",
+        "1. Comme une longueur est positive, $\\mathrm{BC} = \\sqrt{49} = 7$ hm.",
+        "2. Pour l'angle $\\widehat{\\mathrm{B}}$ (opposé au côté $\\mathrm{AC}$), on écrit Al-Kashi en $\\mathrm{B}$ : $\\mathrm{AC}^2 = \\mathrm{AB}^2 + \\mathrm{BC}^2 - 2 \\times \\mathrm{AB} \\times \\mathrm{BC} \\times \\cos\\widehat{\\mathrm{B}}$.",
+        "2. On isole le cosinus : $\\cos\\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AB}^2 + \\mathrm{BC}^2 - \\mathrm{AC}^2}{2 \\times \\mathrm{AB} \\times \\mathrm{BC}} = \\dfrac{25 + 49 - 64}{2 \\times 5 \\times 7} = \\dfrac{10}{70} = \\dfrac{1}{7}$.",
+        "2. Donc $\\widehat{\\mathrm{B}} = \\arccos\\left(\\dfrac{1}{7}\\right) \\approx 81{,}8°$."
+      ],
+      "reponse": "$\\mathrm{BC} = 7$ hm et $\\widehat{\\mathrm{B}} \\approx 81{,}8°$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "produit-scalaire-plan",
+      "enonce": "On munit le plan d'un repère orthonormé. Un architecte place trois piliers aux points $\\mathrm{A}(2\\,;\\,1)$, $\\mathrm{B}(6\\,;\\,3)$ et $\\mathrm{C}(4\\,;\\,7)$ (les unités sont en dizaines de mètres). 1. Calculer le produit scalaire $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}$ et préciser ce que son signe indique sur l'angle $\\widehat{\\mathrm{BAC}}$. 2. Calculer $\\|\\overrightarrow{\\mathrm{AB}}\\|$ et $\\|\\overrightarrow{\\mathrm{AC}}\\|$, puis déterminer la mesure exacte de l'angle $\\widehat{\\mathrm{BAC}}$. 3. Démontrer que le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{B}$. 4. Retrouver la longueur $\\mathrm{BC}$ à l'aide du théorème d'Al-Kashi appliqué à l'angle $\\widehat{\\mathrm{A}}$. 5. On veut installer un projecteur $\\mathrm{I}$ à égale distance des trois piliers. Déterminer les coordonnées de $\\mathrm{I}$ et cette distance commune.",
+      "corrige": [
+        "1. On a $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 4 \\\\ 2 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 2 \\\\ 6 \\end{pmatrix}$. Le repère étant orthonormé : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 4 \\times 2 + 2 \\times 6 = 8 + 12 = 20$.",
+        "1. Ce produit scalaire est strictement positif, ce qui indique que l'angle $\\widehat{\\mathrm{BAC}}$ est aigu.",
+        "2. $\\|\\overrightarrow{\\mathrm{AB}}\\| = \\sqrt{4^2 + 2^2} = \\sqrt{20} = 2\\sqrt{5}$ et $\\|\\overrightarrow{\\mathrm{AC}}\\| = \\sqrt{2^2 + 6^2} = \\sqrt{40} = 2\\sqrt{10}$.",
+        "2. $\\cos\\widehat{\\mathrm{BAC}} = \\dfrac{20}{2\\sqrt{5} \\times 2\\sqrt{10}} = \\dfrac{20}{4\\sqrt{50}} = \\dfrac{20}{4 \\times 5\\sqrt{2}} = \\dfrac{20}{20\\sqrt{2}} = \\dfrac{1}{\\sqrt{2}}$, donc $\\widehat{\\mathrm{BAC}} = 45°$.",
+        "3. On calcule $\\overrightarrow{\\mathrm{BA}}\\begin{pmatrix} -4 \\\\ -2 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{BC}}\\begin{pmatrix} -2 \\\\ 4 \\end{pmatrix}$, d'où $\\overrightarrow{\\mathrm{BA}} \\cdot \\overrightarrow{\\mathrm{BC}} = (-4) \\times (-2) + (-2) \\times 4 = 8 - 8 = 0$.",
+        "3. Le produit scalaire est nul : $\\overrightarrow{\\mathrm{BA}} \\perp \\overrightarrow{\\mathrm{BC}}$, donc le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{B}$.",
+        "4. Al-Kashi avec $\\widehat{\\mathrm{A}}$ (opposé à $\\mathrm{BC}$) : $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2 - 2 \\times \\mathrm{AB} \\times \\mathrm{AC} \\times \\cos\\widehat{\\mathrm{A}}$, avec $\\mathrm{AB}^2 = 20$, $\\mathrm{AC}^2 = 40$ et $\\cos 45° = \\dfrac{1}{\\sqrt{2}}$.",
+        "4. Or $\\mathrm{AB} \\times \\mathrm{AC} = 2\\sqrt{5} \\times 2\\sqrt{10} = 4\\sqrt{50} = 20\\sqrt{2}$, donc $2 \\times \\mathrm{AB} \\times \\mathrm{AC} \\times \\cos\\widehat{\\mathrm{A}} = 2 \\times 20\\sqrt{2} \\times \\dfrac{1}{\\sqrt{2}} = 40$.",
+        "4. Ainsi $\\mathrm{BC}^2 = 20 + 40 - 40 = 20$, soit $\\mathrm{BC} = \\sqrt{20} = 2\\sqrt{5}$. On retrouve $\\mathrm{AB} = \\mathrm{BC} = 2\\sqrt{5}$ : le triangle est rectangle isocèle en $\\mathrm{B}$.",
+        "5. Comme le triangle est rectangle en $\\mathrm{B}$, il est inscrit dans le cercle de diamètre $[\\mathrm{AC}]$. Le point $\\mathrm{I}$ équidistant des trois sommets est donc le centre de ce cercle, c'est-à-dire le milieu de $[\\mathrm{AC}]$.",
+        "5. $\\mathrm{I}\\left(\\dfrac{2+4}{2}\\,;\\,\\dfrac{1+7}{2}\\right) = \\mathrm{I}(3\\,;\\,4)$, et la distance commune vaut $\\dfrac{\\mathrm{AC}}{2} = \\dfrac{2\\sqrt{10}}{2} = \\sqrt{10}$.",
+        "5. Vérification : $\\overrightarrow{\\mathrm{IB}}\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$ donne $\\mathrm{IB} = \\sqrt{3^2 + (-1)^2} = \\sqrt{10}$, égale à $\\mathrm{IA} = \\mathrm{IC} = \\sqrt{10}$ : $\\mathrm{I}$ est bien équidistant des trois piliers."
+      ],
+      "reponse": "1. $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 20 > 0$, l'angle $\\widehat{\\mathrm{BAC}}$ est aigu. 2. $\\widehat{\\mathrm{BAC}} = 45°$. 3. Rectangle en $\\mathrm{B}$ car $\\overrightarrow{\\mathrm{BA}} \\cdot \\overrightarrow{\\mathrm{BC}} = 0$. 4. $\\mathrm{BC} = 2\\sqrt{5}$. 5. $\\mathrm{I}(3\\,;\\,4)$, distance $\\sqrt{10} \\approx 3{,}16$ dizaines de mètres (soit environ $31{,}6$ m)."
     }
   ]
 }

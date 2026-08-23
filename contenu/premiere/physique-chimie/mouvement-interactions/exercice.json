@@ -83,6 +83,56 @@
         "5) La « force du mouvement » n'existe pas : aucune force ne pousse la balle vers le haut. Pendant la montée, le vecteur vitesse est dirigé vers le haut alors que $\\Delta\\vec{v}$ est dirigé vers le bas : à chaque instant le vecteur vitesse diminue, la balle ralentit. C'est justement parce que $\\sum \\vec{F}$ est opposée à la vitesse (et non dans son sens) qu'elle freine la balle."
       ],
       "reponse": "Système = balle, référentiel terrestre galiléen ; seule force = le poids ; chute libre ; $\\sum \\vec{F}$ et $\\Delta\\vec{v}$ verticaux vers le bas ; pas de « force du mouvement » : la balle ralentit car $\\Delta\\vec{v}$ est opposé à sa vitesse."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "vecteur-vitesse",
+      "enonce": "Une bille descend une gouttière rectiligne. Sur la chronophotographie de son mouvement, la durée entre deux positions successives est $\\tau = 40$ ms. On mesure la distance entre les points $\\mathrm{M}_2$ et $\\mathrm{M}_4$ : $\\mathrm{M}_2\\mathrm{M}_4 = 8{,}0$ cm. Calculer la valeur du vecteur vitesse $\\vec{v_3}$ au point $\\mathrm{M}_3$.",
+      "corrige": [
+        "Le vecteur vitesse au point $\\mathrm{M}_3$ est encadré par les points $\\mathrm{M}_2$ et $\\mathrm{M}_4$ : $\\vec{v_3} \\approx \\dfrac{\\overrightarrow{\\mathrm{M}_2\\mathrm{M}_4}}{2\\tau}$, donc sa valeur vaut $v_3 \\approx \\dfrac{\\mathrm{M}_2\\mathrm{M}_4}{2\\tau}$.",
+        "On convertit dans les unités du système international : $\\mathrm{M}_2\\mathrm{M}_4 = 8{,}0$ cm $= 0{,}080$ m et $\\tau = 40$ ms $= 0{,}040$ s.",
+        "$v_3 \\approx \\dfrac{0{,}080}{2 \\times 0{,}040} = \\dfrac{0{,}080}{0{,}080} = 1{,}0$ m/s."
+      ],
+      "reponse": "$v_3 \\approx 1{,}0$ m/s."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "bilan-forces",
+      "enonce": "Un ascenseur démarre depuis le rez-de-chaussée et monte en allant de plus en plus vite. On étudie la cabine dans le référentiel terrestre supposé galiléen. 1) Faire le bilan des forces exercées sur la cabine et donner la direction et le sens de la somme des forces. 2) En déduire une comparaison entre la valeur de la tension $T$ du câble et celle du poids $P$ de la cabine.",
+      "corrige": [
+        "1) Système : la cabine. Les forces sont le poids $\\vec{P}$ (vertical, vers le bas) et la tension $\\vec{T}$ du câble (verticale, vers le haut). Le mouvement est rectiligne vertical et la valeur de la vitesse augmente : le vecteur vitesse, dirigé vers le haut, s'allonge, donc $\\Delta\\vec{v}$ est vertical, orienté vers le haut. D'après le principe fondamental, $\\sum \\vec{F}$ a même direction et même sens que $\\Delta\\vec{v}$ : la somme des forces est verticale, dirigée vers le haut.",
+        "2) La somme des forces $\\sum \\vec{F} = \\vec{T} + \\vec{P}$ est dirigée vers le haut, c'est-à-dire dans le sens de $\\vec{T}$. Pour que la résultante soit orientée vers le haut, la tension doit l'emporter sur le poids : $T > P$."
+      ],
+      "reponse": "$\\sum \\vec{F}$ est verticale, dirigée vers le haut ; par conséquent $T > P$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "chute-libre",
+      "enonce": "Un footballeur dégage le ballon qui décrit une trajectoire en cloche (une parabole) avant de retomber. On néglige les frottements de l'air. 1) Préciser le système et le référentiel. 2) Faire le bilan des forces et dire si le ballon est en chute libre. 3) Donner la direction et le sens de $\\sum \\vec{F}$, puis de $\\Delta\\vec{v}$, en tout point de la trajectoire. 4) Au sommet de la trajectoire, la vitesse du ballon est horizontale : le vecteur vitesse est-il nul en ce point ? Justifier à l'aide de $\\Delta\\vec{v}$.",
+      "corrige": [
+        "1) Système : le ballon. Référentiel : terrestre, supposé galiléen.",
+        "2) Les frottements de l'air étant négligés, une seule force s'exerce : le poids $\\vec{P}$, vertical et dirigé vers le bas. Le ballon n'est soumis qu'à son poids : il est donc en chute libre pendant toute la trajectoire, montée comprise.",
+        "3) $\\sum \\vec{F} = \\vec{P}$ est verticale, dirigée vers le bas, et garde cette même direction et ce même sens en tout point. D'après le principe fondamental, $\\Delta\\vec{v}$ a même direction et même sens que $\\sum \\vec{F}$ : $\\Delta\\vec{v}$ est donc vertical, dirigé vers le bas, à chaque instant.",
+        "4) Au sommet, le ballon possède encore une vitesse horizontale non nulle (il continue d'avancer), donc le vecteur vitesse n'est pas nul : seule sa composante verticale s'annule. Comme $\\Delta\\vec{v}$ reste dirigé vers le bas, la composante verticale de la vitesse, positive pendant la montée, devient négative pendant la descente en passant par zéro au sommet, tandis que la composante horizontale, elle, ne change pas."
+      ],
+      "reponse": "Système = ballon, référentiel terrestre galiléen ; seule force = le poids, donc chute libre ; $\\sum \\vec{F}$ et $\\Delta\\vec{v}$ verticaux, dirigés vers le bas partout ; au sommet le vecteur vitesse n'est pas nul (il reste horizontal), seule sa composante verticale s'annule."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "principe",
+      "enonce": "Un parachutiste de masse totale $m = 80$ kg s'élance d'un avion. On distingue trois phases de son saut, étudiées dans le référentiel terrestre supposé galiléen. Phase A : juste après le saut, sa vitesse (dirigée vers le bas) augmente. Phase B : après quelques secondes, parachute encore fermé, il descend en ligne droite à vitesse constante — on dit qu'il a atteint sa « vitesse limite ». Phase C : il ouvre son parachute ; sa vitesse diminue alors nettement avant de se stabiliser à une valeur plus faible. On prendra $g = 9{,}8$ N/kg. 1. Préciser le système étudié et rappeler pourquoi le choix du référentiel est indispensable. 2. Faire le bilan des forces qui s'exercent sur le parachutiste pendant la chute (avant l'ouverture) et calculer la valeur de son poids. 3. Phase A : donner la direction et le sens de $\\Delta\\vec{v}$, puis ceux de la somme des forces. Comparer alors la valeur du poids et celle des frottements de l'air. 4. Phase B : en invoquant le principe d'inertie, que peut-on dire de la somme des forces ? En déduire la valeur de la force de frottement de l'air à la vitesse limite. 5. Phase C : à l'instant de l'ouverture, la vitesse diminue. Donner la direction et le sens de $\\Delta\\vec{v}$, puis de la somme des forces. Un camarade affirme qu'« une force dirigée vers le haut ralentit le parachutiste, donc il remonte » : que lui répondre ?",
+      "corrige": [
+        "1. Système : le parachutiste (avec son équipement), assimilé à un point matériel de masse $m = 80$ kg. Le choix du référentiel est indispensable car un mouvement n'a de sens que par rapport à un repère : la même chute est décrite différemment depuis le sol ou depuis l'avion. On retient le référentiel terrestre, supposé galiléen, pour pouvoir appliquer le principe fondamental.",
+        "2. Deux forces s'exercent sur le parachutiste pendant la chute : le poids $\\vec{P}$, vertical et dirigé vers le bas, et la force de frottement de l'air $\\vec{f}$, verticale et dirigée vers le haut (elle s'oppose au mouvement). La valeur du poids vaut $P = m\\,g = 80 \\times 9{,}8 = 7{,}8 \\times 10^{2}$ N, soit environ $784$ N.",
+        "3. Phase A : le mouvement est rectiligne vers le bas et la valeur de la vitesse augmente, donc le vecteur vitesse s'allonge vers le bas : $\\Delta\\vec{v}$ est vertical, dirigé vers le bas. D'après le principe fondamental, $\\sum \\vec{F}$ a même direction et même sens : elle est verticale, dirigée vers le bas. Comme la résultante de $\\vec{P}$ (vers le bas) et de $\\vec{f}$ (vers le haut) est orientée vers le bas, le poids l'emporte : $P > f$.",
+        "4. Phase B : le mouvement est rectiligne uniforme, donc le vecteur vitesse est constant et $\\Delta\\vec{v} = \\vec{0}$. D'après le principe d'inertie, les forces se compensent : $\\sum \\vec{F} = \\vec{0}$. Le poids et le frottement sont alors opposés et de même valeur, donc $f = P \\approx 784$ N à la vitesse limite.",
+        "5. Phase C : le mouvement reste dirigé vers le bas mais la valeur de la vitesse diminue, donc le vecteur vitesse raccourcit : $\\Delta\\vec{v}$ est vertical, dirigé vers le haut (sens opposé à la vitesse). D'après le principe fondamental, $\\sum \\vec{F}$ est alors verticale, dirigée vers le haut : à l'ouverture, le frottement (fortement augmenté par la voilure) dépasse le poids. Réponse au camarade : la somme des forces vers le haut n'inverse pas le mouvement, elle en modifie seulement la variation. Le parachutiste continue de descendre, mais de plus en plus lentement ; il ne remonte pas, car son vecteur vitesse reste dirigé vers le bas — il ne fait que diminuer."
+      ],
+      "reponse": "Système = parachutiste, référentiel terrestre galiléen ; $P = m g \\approx 784$ N. Phase A : $\\Delta\\vec{v}$ et $\\sum \\vec{F}$ vers le bas, $P > f$. Phase B (vitesse limite) : principe d'inertie, $\\sum \\vec{F} = \\vec{0}$ donc $f = P \\approx 784$ N. Phase C : $\\Delta\\vec{v}$ et $\\sum \\vec{F}$ vers le haut ($f > P$) mais le parachutiste continue de descendre en ralentissant, il ne remonte pas."
     }
   ]
 }

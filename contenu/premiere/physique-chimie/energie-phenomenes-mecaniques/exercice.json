@@ -87,6 +87,59 @@
         "Cette perte correspond à l'énergie dissipée sous forme de chaleur : $E_{\\text{dissipée}} = |\\Delta E_m| = 1040$ J. (Sans frottements, on aurait eu $v = \\sqrt{2gh} = 14$ m·s⁻¹.)"
       ],
       "reponse": "$E_{\\text{dissipée}} = |\\Delta E_m| = 1040$ J."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "travail",
+      "enonce": "Un déménageur tire une caisse sur un sol horizontal à l'aide d'une corde. La force exercée a pour intensité $F = 200$ N et fait un angle $\\alpha = 30^\\circ$ avec le déplacement, sur une distance $d = 12$ m. Calculer le travail de cette force.",
+      "corrige": [
+        "Le travail d'une force constante s'écrit $W = F \\times d \\times \\cos\\alpha$, où $\\alpha$ est l'angle entre la force et le déplacement.",
+        "On remplace : $W = 200 \\times 12 \\times \\cos(30^\\circ)$, avec $\\cos(30^\\circ) \\approx 0{,}866$.",
+        "$W = 2400 \\times 0{,}866 \\approx 2{,}1 \\times 10^{3}$ J. Le travail est positif : la force est motrice."
+      ],
+      "reponse": "$W = F\\,d\\cos\\alpha \\approx 2{,}1 \\times 10^{3}$ J."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "conservation",
+      "enonce": "Un skieur de masse $m = 70$ kg aborde une descente avec une vitesse initiale $v_0 = 5{,}0$ m·s⁻¹. Le dénivelé entre le sommet et le bas de la piste vaut $h = 20$ m. En négligeant les frottements, déterminer sa vitesse $v$ en bas de la descente.",
+      "corrige": [
+        "Sans frottements, l'énergie mécanique se conserve entre le sommet et le bas : $E_{m,\\text{haut}} = E_{m,\\text{bas}}$. On prend l'origine des altitudes en bas de la piste.",
+        "Au sommet : $E_m = \\dfrac{1}{2}mv_0^2 + mgh$. En bas : $E_m = \\dfrac{1}{2}mv^2 + 0$.",
+        "En égalant : $\\dfrac{1}{2}mv_0^2 + mgh = \\dfrac{1}{2}mv^2$. La masse se simplifie, d'où $v^2 = v_0^2 + 2gh$.",
+        "$v^2 = 5{,}0^2 + 2 \\times 9{,}8 \\times 20 = 25 + 392 = 417$ m²·s⁻², donc $v = \\sqrt{417} \\approx 20$ m·s⁻¹."
+      ],
+      "reponse": "$v = \\sqrt{v_0^2 + 2gh} \\approx 20$ m·s⁻¹."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "frottements",
+      "enonce": "Un bloc de masse $m = 2{,}0$ kg glisse sans vitesse initiale le long d'un plan incliné de longueur $L = 4{,}0$ m faisant un angle $\\theta = 30^\\circ$ avec l'horizontale. Le long du plan, les frottements exercent une force constante $f = 3{,}0$ N opposée au déplacement. Déterminer la vitesse du bloc en bas du plan.",
+      "corrige": [
+        "Le bloc descend d'une hauteur $h = L\\sin\\theta = 4{,}0 \\times \\sin(30^\\circ) = 4{,}0 \\times 0{,}50 = 2{,}0$ m.",
+        "On applique le théorème de l'énergie cinétique. Le poids travaille : $W(\\vec P) = mgh$ ; la réaction normale est perpendiculaire au déplacement donc $W(\\vec N) = 0$ ; les frottements sont résistants : $W(\\vec f) = -f \\times L$.",
+        "$\\Delta E_c = W(\\vec P) + W(\\vec N) + W(\\vec f)$, soit $\\dfrac{1}{2}mv^2 - 0 = mgh - fL$.",
+        "$mgh = 2{,}0 \\times 9{,}8 \\times 2{,}0 = 39{,}2$ J et $fL = 3{,}0 \\times 4{,}0 = 12$ J, d'où $\\dfrac{1}{2}mv^2 = 39{,}2 - 12 = 27{,}2$ J.",
+        "$v^2 = \\dfrac{2 \\times 27{,}2}{2{,}0} = 27{,}2$ m²·s⁻², donc $v = \\sqrt{27{,}2} \\approx 5{,}2$ m·s⁻¹."
+      ],
+      "reponse": "$\\dfrac{1}{2}mv^2 = mgh - fL = 27{,}2$ J, d'où $v \\approx 5{,}2$ m·s⁻¹."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "energie-mecanique",
+      "enonce": "**Un toboggan aquatique.** Dans un parc aquatique, un enfant de masse $m = 60$ kg s'élance sans vitesse initiale du haut d'un toboggan. Le point de départ est situé à une hauteur $H = 8{,}0$ m au-dessus du bassin d'arrivée. La longueur du toboggan, mesurée le long de la glissière, vaut $L = 15$ m. On prend l'origine des altitudes au niveau du bassin et $g = 9{,}8$ N·kg⁻¹.\\n\\n1. Calculer l'énergie potentielle de pesanteur de l'enfant au point de départ.\\n2. En supposant les frottements négligeables, déterminer la vitesse qu'aurait l'enfant en bas du toboggan.\\n3. En réalité, un capteur mesure une vitesse d'arrivée $v = 10$ m·s⁻¹. Calculer l'énergie cinétique correspondante, puis l'énergie dissipée par les frottements le long de la descente.\\n4. En déduire l'intensité moyenne de la force de frottement le long du toboggan.\\n5. Quelle proportion de l'énergie de départ a été dissipée par les frottements ?",
+      "corrige": [
+        "1. Au départ, l'enfant est immobile à l'altitude $H$. Son énergie potentielle de pesanteur vaut $E_{pp} = mgH = 60 \\times 9{,}8 \\times 8{,}0 = 4704$ J $\\approx 4{,}7 \\times 10^{3}$ J.",
+        "2. Sans frottements, l'énergie mécanique se conserve. Au départ $E_m = mgH$ (vitesse nulle) ; en bas $E_m = \\dfrac{1}{2}mv^2$ (altitude nulle). Donc $\\dfrac{1}{2}mv^2 = mgH$, d'où $v = \\sqrt{2gH} = \\sqrt{2 \\times 9{,}8 \\times 8{,}0} = \\sqrt{156{,}8} \\approx 12{,}5$ m·s⁻¹.",
+        "3. Avec la vitesse mesurée : $E_c = \\dfrac{1}{2}mv^2 = \\dfrac{1}{2} \\times 60 \\times 10^2 = 3000$ J. L'énergie mécanique en bas ($E_{pp} = 0$) vaut donc $3000$ J, contre $4704$ J au départ. L'énergie dissipée par les frottements est $E_{\\text{dissipée}} = |\\Delta E_m| = 4704 - 3000 = 1704$ J $\\approx 1{,}7 \\times 10^{3}$ J.",
+        "4. Le travail des frottements, résistant, vaut $W(\\vec f) = -f \\times L$, et sa valeur absolue égale l'énergie dissipée : $f \\times L = 1704$ J. D'où $f = \\dfrac{1704}{15} \\approx 1{,}1 \\times 10^{2}$ N.",
+        "5. La proportion dissipée est $\\dfrac{E_{\\text{dissipée}}}{E_{pp,\\text{départ}}} = \\dfrac{1704}{4704} \\approx 0{,}36$, soit environ $36\\%$ de l'énergie de départ."
+      ],
+      "reponse": "1. $E_{pp} \\approx 4{,}7 \\times 10^{3}$ J. 2. $v = \\sqrt{2gH} \\approx 12{,}5$ m·s⁻¹. 3. $E_c = 3000$ J, $E_{\\text{dissipée}} \\approx 1{,}7 \\times 10^{3}$ J. 4. $f \\approx 1{,}1 \\times 10^{2}$ N. 5. Environ $36\\%$."
     }
   ]
 }

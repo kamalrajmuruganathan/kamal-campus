@@ -93,6 +93,61 @@
         "Volume maximal : $V(2) = 2\\times(12 - 4)^2 = 2\\times 8^2 = 2\\times 64 = 128$ cm³."
       ],
       "reponse": "Volume maximal pour $x = 2$ cm, égal à $V(2) = 128$ cm³."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "parite",
+      "enonce": "Étudier la parité des fonctions suivantes, définies sur $\\mathbb{R}$ : (a) $f(x) = 2x^4 - 5x^2 + 3$ ; (b) $g(x) = x^3 - 4x$.",
+      "corrige": [
+        "Les deux fonctions sont définies sur $\\mathbb{R}$, ensemble symétrique par rapport à $0$ : la condition préalable à toute étude de parité est vérifiée.",
+        "(a) On calcule $f(-x) = 2(-x)^4 - 5(-x)^2 + 3 = 2x^4 - 5x^2 + 3 = f(x)$. Donc $f$ est **paire**.",
+        "(b) On calcule $g(-x) = (-x)^3 - 4(-x) = -x^3 + 4x = -(x^3 - 4x) = -g(x)$. Donc $g$ est **impaire**.",
+        "Traduction géométrique : la courbe de $f$ est symétrique par rapport à l'axe des ordonnées, celle de $g$ est symétrique par rapport à l'origine."
+      ],
+      "reponse": "$f$ est paire ; $g$ est impaire."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "etude-variations",
+      "enonce": "Soit $f(x) = x^4 - 2x^2$ définie sur $\\mathbb{R}$. Calculer et factoriser $f'(x)$, dresser le tableau de variations de $f$, puis préciser les extrémums locaux et leurs valeurs.",
+      "corrige": [
+        "Dérivée : $f'(x) = 4x^3 - 4x = 4x(x^2 - 1) = 4x(x-1)(x+1)$.",
+        "Signe de $f'$ : les racines sont $-1$, $0$ et $1$. On étudie le signe du produit sur chaque intervalle : $f'(x) < 0$ sur $]-\\infty\\,;-1[$, $f'(x) > 0$ sur $]-1\\,;0[$, $f'(x) < 0$ sur $]0\\,;1[$, $f'(x) > 0$ sur $]1\\,;+\\infty[$.",
+        "Variations : $f$ décroît sur $]-\\infty\\,;-1]$, croît sur $[-1\\,;0]$, décroît sur $[0\\,;1]$, puis croît sur $[1\\,;+\\infty[$.",
+        "Extrémums : $f'$ change de signe en $-1$ (de $-$ à $+$) et en $1$ (de $-$ à $+$) : deux minimums locaux ; et en $0$ (de $+$ à $-$) : un maximum local.",
+        "Valeurs : $f(-1) = 1 - 2 = -1$ et $f(1) = 1 - 2 = -1$ (minimums locaux) ; $f(0) = 0$ (maximum local)."
+      ],
+      "reponse": "Minimums locaux $f(-1) = f(1) = -1$ ; maximum local $f(0) = 0$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "parametre",
+      "enonce": "Soit $a$ un réel et $f(x) = x^3 - 3x^2 + ax$ définie sur $\\mathbb{R}$. Déterminer les valeurs de $a$ pour lesquelles $f$ est strictement croissante sur $\\mathbb{R}$.",
+      "corrige": [
+        "On dérive : $f'(x) = 3x^2 - 6x + a$.",
+        "$f$ est croissante sur $\\mathbb{R}$ si et seulement si $f'(x) \\geqslant 0$ pour tout réel $x$. Comme le coefficient dominant de ce trinôme est $3 > 0$, il reste positif sur $\\mathbb{R}$ si et seulement s'il ne change pas de signe, c'est-à-dire si son discriminant vérifie $\\Delta \\leqslant 0$.",
+        "Discriminant : $\\Delta = (-6)^2 - 4\\times 3\\times a = 36 - 12a$. On résout $\\Delta \\leqslant 0 \\iff 36 - 12a \\leqslant 0 \\iff a \\geqslant 3$.",
+        "Vérification du cas limite $a = 3$ : $f'(x) = 3x^2 - 6x + 3 = 3(x-1)^2 \\geqslant 0$, qui ne s'annule qu'en $x = 1$ sans changer de signe. La dérivée reste positive, donc $f$ est bien strictement croissante sur $\\mathbb{R}$.",
+        "Pour $a < 3$, on a $\\Delta > 0$ : $f'$ possède deux racines distinctes et change de signe entre elles, donc $f$ n'est pas monotone."
+      ],
+      "reponse": "$f$ est strictement croissante sur $\\mathbb{R}$ si et seulement si $a \\geqslant 3$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme",
+      "enonce": "Une petite entreprise fabrique des articles. Lorsqu'elle en produit $x$ centaines (avec $0 \\leqslant x \\leqslant 8$), son bénéfice mensuel, exprimé en centaines d'euros, est modélisé par $B(x) = -x^3 + 6x^2 + 15x - 50$. 1. Calculer $B(0)$ et interpréter ce résultat dans le contexte. 2. Calculer $B'(x)$ et montrer que $B'(x) = -3(x-5)(x+1)$. 3. Étudier le signe de $B'(x)$ sur $[0\\,;8]$ et dresser le tableau de variations de $B$. 4. En déduire la production qui rend le bénéfice maximal, et donner ce bénéfice maximal en euros. 5. Déterminer une équation de la tangente $T$ à la courbe de $B$ au point d'abscisse $0$.",
+      "corrige": [
+        "1. $B(0) = -0 + 0 + 0 - 50 = -50$. Le bénéfice vaut $-50$ centaines d'euros, soit $-5000$ € : sans production, l'entreprise perd $5000$ €, ce qui correspond à ses coûts fixes.",
+        "2. On dérive : $B'(x) = -3x^2 + 12x + 15$. On factorise : $B'(x) = -3(x^2 - 4x - 5)$. Le trinôme $x^2 - 4x - 5$ a pour racines évidentes $5$ et $-1$ (somme $4$, produit $-5$), d'où $x^2 - 4x - 5 = (x-5)(x+1)$ et $B'(x) = -3(x-5)(x+1)$.",
+        "3. Sur $[0\\,;8]$, le facteur $x+1$ est toujours strictement positif. Le signe de $B'(x) = -3(x-5)(x+1)$ est donc l'opposé de celui de $x-5$ : $B'(x) > 0$ pour $0 \\leqslant x < 5$ et $B'(x) < 0$ pour $5 < x \\leqslant 8$, avec $B'(5) = 0$. Donc $B$ croît sur $[0\\,;5]$ puis décroît sur $[5\\,;8]$ ; comme $B'$ change de signe de $+$ à $-$ en $5$, $B$ y admet un maximum.",
+        "4. Le maximum est atteint en $x = 5$, soit une production de $500$ articles. On calcule $B(5) = -125 + 6\\times 25 + 15\\times 5 - 50 = -125 + 150 + 75 - 50 = 50$. Le bénéfice maximal vaut $50$ centaines d'euros, soit $5000$ €.",
+        "5. La tangente au point d'abscisse $0$ a pour équation $y = B'(0)(x - 0) + B(0)$. Or $B'(0) = -3(0-5)(0+1) = 15$ et $B(0) = -50$, d'où $T : y = 15x - 50$."
+      ],
+      "reponse": "$B(0) = -50$ (coûts fixes de $5000$ €) ; $B'(x) = -3(x-5)(x+1)$ ; $B$ croît sur $[0\\,;5]$ puis décroît sur $[5\\,;8]$ ; bénéfice maximal de $5000$ € pour une production de $500$ articles ($x = 5$) ; tangente $T : y = 15x - 50$."
     }
   ]
 }

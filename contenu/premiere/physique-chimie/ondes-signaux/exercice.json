@@ -85,6 +85,58 @@
         "Le piège serait d'oublier le facteur $2$ et d'annoncer $300$ m : l'écho correspond à un aller-retour."
       ],
       "reponse": "$D = v\\,\\Delta t = 300$ m, donc la profondeur est $h = \\dfrac{D}{2} = 150$ m."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "relation-fondamentale",
+      "enonce": "Sur un lac, des vagues régulières se succèdent. On mesure une distance de $\\lambda = 6{,}0$ m entre deux crêtes successives, et l'ensemble se déplace à la célérité $v = 3{,}0$ m·s⁻¹. 1) Calculer la période $T$ de cette onde. 2) En déduire sa fréquence $f$.",
+      "corrige": [
+        "La distance entre deux crêtes successives est la longueur d'onde $\\lambda$. La relation fondamentale $\\lambda = v \\times T$ permet d'isoler la période : $T = \\dfrac{\\lambda}{v}$.",
+        "Application numérique : $T = \\dfrac{6{,}0}{3{,}0} = 2{,}0$ s.",
+        "La fréquence est l'inverse de la période : $f = \\dfrac{1}{T} = \\dfrac{1}{2{,}0} = 0{,}50$ Hz."
+      ],
+      "reponse": "$T = \\dfrac{\\lambda}{v} = 2{,}0$ s, d'où $f = \\dfrac{1}{T} = 0{,}50$ Hz."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "relation-conjugaison",
+      "enonce": "On utilise une lentille mince convergente de distance focale $f' = 12$ cm comme loupe. Un timbre-poste est placé à seulement $8{,}0$ cm devant la lentille. 1) Déterminer la position $\\overline{OA'}$ de l'image. 2) Calculer le grandissement $\\gamma$ et préciser la nature de l'image (réelle/virtuelle, droite/renversée, agrandie/réduite).",
+      "corrige": [
+        "L'objet réel est placé avant la lentille : $\\overline{OA} = -8{,}0$ cm, et $\\overline{OF'} = f' = 12$ cm. Relation de conjugaison : $\\dfrac{1}{\\overline{OA'}} = \\dfrac{1}{\\overline{OF'}} + \\dfrac{1}{\\overline{OA}} = \\dfrac{1}{12} + \\dfrac{1}{-8{,}0}$.",
+        "Au même dénominateur $24$ : $\\dfrac{1}{\\overline{OA'}} = \\dfrac{2}{24} - \\dfrac{3}{24} = -\\dfrac{1}{24}$, d'où $\\overline{OA'} = -24$ cm.",
+        "Grandissement : $\\gamma = \\dfrac{\\overline{OA'}}{\\overline{OA}} = \\dfrac{-24}{-8{,}0} = +3{,}0$.",
+        "Lecture des signes : $\\overline{OA'} < 0$ → image virtuelle (visible à l'œil, pas sur un écran) ; $\\gamma > 0$ → droite ; $|\\gamma| = 3 > 1$ → agrandie trois fois. C'est bien le fonctionnement d'une loupe : l'objet doit être placé plus près que le foyer."
+      ],
+      "reponse": "$\\overline{OA'} = -24$ cm, $\\gamma = +3{,}0$ : image virtuelle, droite et trois fois plus grande (rôle de loupe)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "relation-conjugaison",
+      "enonce": "Pour mesurer la distance focale d'une lentille convergente, un élève vise à travers elle un immeuble très éloigné et forme son image nette sur un écran ; il mesure alors une distance lentille-écran de $10$ cm. 1) Justifier que cette distance donne directement la distance focale $f'$. 2) Il place ensuite un objet lumineux à $15$ cm devant la même lentille : déterminer la position $\\overline{OA'}$ de l'image. 3) Calculer le grandissement $\\gamma$ et donner la nature de l'image.",
+      "corrige": [
+        "Un objet très éloigné envoie des rayons quasi parallèles ($\\overline{OA} \\to -\\infty$). La relation de conjugaison devient $\\dfrac{1}{\\overline{OA'}} = \\dfrac{1}{\\overline{OF'}} + \\dfrac{1}{\\overline{OA}} \\approx \\dfrac{1}{\\overline{OF'}}$, donc $\\overline{OA'} = f'$ : l'image se forme dans le plan focal. La distance lentille-écran vaut donc $f' = 10$ cm.",
+        "Objet à $15$ cm : $\\overline{OA} = -15$ cm et $f' = 10$ cm. $\\dfrac{1}{\\overline{OA'}} = \\dfrac{1}{10} + \\dfrac{1}{-15} = \\dfrac{3}{30} - \\dfrac{2}{30} = \\dfrac{1}{30}$, d'où $\\overline{OA'} = 30$ cm.",
+        "Grandissement : $\\gamma = \\dfrac{\\overline{OA'}}{\\overline{OA}} = \\dfrac{30}{-15} = -2$.",
+        "$\\overline{OA'} > 0$ → image réelle ; $\\gamma < 0$ → renversée ; $|\\gamma| = 2 > 1$ → agrandie deux fois."
+      ],
+      "reponse": "1) $f' = 10$ cm (image d'un objet lointain dans le plan focal). 2) $\\overline{OA'} = 30$ cm. 3) $\\gamma = -2$ : image réelle, renversée et deux fois plus grande."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Un club d'astronomie organise une soirée d'observation. Les données du son dans l'air : $v = 340$ m·s⁻¹.\\n\\n1. Pendant l'installation, un feu d'artifice éclate au loin. Un membre voit l'éclat lumineux, puis entend la détonation $\\Delta t = 2{,}5$ s plus tard. Déterminer la distance $d$ séparant le feu d'artifice de l'observateur (la lumière est supposée reçue instantanément).\\n2. La détonation contient un son grave de fréquence $f = 85$ Hz. Calculer sa longueur d'onde $\\lambda$ dans l'air.\\n3. L'objectif de la lunette est une lentille convergente de distance focale $f'_1 = 60$ cm. Pour la tester, on place un petit objet $AB$ de hauteur $2{,}0$ cm à $90$ cm devant l'objectif. Déterminer $\\overline{OA'}$, le grandissement $\\gamma$, la taille $\\overline{A'B'}$ de l'image et sa nature.\\n4. On pointe ensuite la lunette vers une étoile, objet très éloigné. Où se forme l'image donnée par l'objectif seul ? Justifier.\\n5. L'oculaire a pour distance focale $f'_2 = 3{,}0$ cm et la lunette est réglée en configuration afocale. Calculer le grossissement $G$.",
+      "corrige": [
+        "1. Le son est perçu avec un retard $\\Delta t$ correspondant au trajet feu d'artifice → observateur : $d = v \\times \\Delta t = 340 \\times 2{,}5 = 850$ m.",
+        "2. Relation fondamentale : $\\lambda = \\dfrac{v}{f} = \\dfrac{340}{85} = 4{,}0$ m.",
+        "3. Objet réel : $\\overline{OA} = -90$ cm, $f'_1 = 60$ cm. $\\dfrac{1}{\\overline{OA'}} = \\dfrac{1}{60} + \\dfrac{1}{-90} = \\dfrac{3}{180} - \\dfrac{2}{180} = \\dfrac{1}{180}$, donc $\\overline{OA'} = 180$ cm. Grandissement : $\\gamma = \\dfrac{\\overline{OA'}}{\\overline{OA}} = \\dfrac{180}{-90} = -2$. Taille : $\\overline{A'B'} = \\gamma \\times \\overline{AB} = -2 \\times 2{,}0 = -4{,}0$ cm. Signes : $\\overline{OA'} > 0$ → réelle, $\\gamma < 0$ → renversée, $|\\gamma| > 1$ → agrandie deux fois.",
+        "4. L'étoile est un objet très éloigné : ses rayons arrivent quasi parallèles ($\\overline{OA} \\to -\\infty$). La relation de conjugaison donne alors $\\dfrac{1}{\\overline{OA'}} \\approx \\dfrac{1}{f'_1}$, soit $\\overline{OA'} = f'_1 = 60$ cm : l'image se forme dans le plan focal image de l'objectif (image réelle, quasi ponctuelle).",
+        "5. En configuration afocale, le grossissement vaut $G = \\dfrac{f'_1}{f'_2} = \\dfrac{60}{3{,}0} = 20$. Attention à ne pas inverser le rapport : écrire $\\dfrac{f'_2}{f'_1}$ donnerait $0{,}05$, ce qui réduirait l'image au lieu de l'agrandir."
+      ],
+      "reponse": "1. $d = v\\,\\Delta t = 850$ m. 2. $\\lambda = \\dfrac{v}{f} = 4{,}0$ m. 3. $\\overline{OA'} = 180$ cm, $\\gamma = -2$, $\\overline{A'B'} = -4{,}0$ cm (réelle, renversée, agrandie). 4. Image dans le plan focal image, à $\\overline{OA'} = f'_1 = 60$ cm. 5. $G = \\dfrac{f'_1}{f'_2} = 20$."
     }
   ]
 }

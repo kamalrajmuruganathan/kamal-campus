@@ -87,6 +87,57 @@
         "On passe au complément : $P(\\text{au moins un succès}) = 1 - 0{,}4096 = 0{,}5904$."
       ],
       "reponse": "$1 - 0{,}8^4 = 0{,}5904$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "tableau-croise",
+      "enonce": "Une entreprise interroge ses $200$ salariés sur leur satisfaction, selon qu'ils sont en télétravail ou sur site.\n\n|  | Satisfait | Pas satisfait | **Total** |\n|---|---|---|---|\n| Télétravail | 84 | 36 | **120** |\n| Sur site | 40 | 40 | **80** |\n| **Total** | **124** | **76** | **200** |\n\nCalculer la probabilité qu'un salarié soit satisfait **sachant** qu'il est en télétravail.",
+      "corrige": [
+        "L'événement qui conditionne est « être en télétravail » : on se restreint donc à la ligne « Télétravail », dont l'effectif total est $120$.",
+        "Parmi ces $120$ salariés en télétravail, $84$ se déclarent satisfaits.",
+        "$P_{\\text{télétravail}}(\\text{satisfait}) = \\dfrac{84}{120} = 0{,}7$."
+      ],
+      "reponse": "$\\dfrac{84}{120} = 0{,}7$, soit $70\\,\\%$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "arbre",
+      "enonce": "Pour se rendre au lycée, Léa prend un bus puis un train. Le bus est à l'heure avec une probabilité $0{,}8$, le train avec une probabilité $0{,}9$, et les deux retards sont indépendants. 1) Calculer la probabilité que Léa arrive à l'heure (les deux transports à l'heure). 2) En déduire la probabilité qu'elle soit en retard.",
+      "corrige": [
+        "1) « Arriver à l'heure » correspond au chemin de l'arbre « bus à l'heure ET train à l'heure ». Comme les deux événements sont indépendants, on multiplie les probabilités des deux branches : $0{,}8 \\times 0{,}9$.",
+        "$0{,}8 \\times 0{,}9 = 0{,}72$.",
+        "2) « Être en retard » est l'événement contraire de « arriver à l'heure » : il suffit qu'au moins un des deux transports soit en retard. On passe au complément : $1 - 0{,}72 = 0{,}28$."
+      ],
+      "reponse": "1) $0{,}8 \\times 0{,}9 = 0{,}72$ ; 2) $1 - 0{,}72 = 0{,}28$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "Un basketteur réussit chaque lancer franc avec une probabilité $p = 0{,}3$. Il effectue $4$ lancers de façon identique et indépendante. Calculer la probabilité qu'il réussisse **exactement deux** lancers.",
+      "corrige": [
+        "On répète une épreuve de Bernoulli ($n = 4$, $p = 0{,}3$). Chaque chemin réalisant « exactement deux succès » comporte deux succès (probabilité $0{,}3$ chacun) et deux échecs (probabilité $0{,}7$ chacun), donc a pour probabilité $0{,}3^2 \\times 0{,}7^2$.",
+        "$0{,}3^2 \\times 0{,}7^2 = 0{,}09 \\times 0{,}49 = 0{,}0441$.",
+        "Il faut ensuite compter le nombre de chemins qui donnent exactement deux succès sur quatre : SSÉÉ, SÉSÉ, SÉÉS, ÉSSÉ, ÉSÉS, ÉÉSS. Il y en a $6$.",
+        "On additionne ces $6$ chemins équiprobables : $P = 6 \\times 0{,}0441 = 0{,}2646$."
+      ],
+      "reponse": "$6 \\times 0{,}3^2 \\times 0{,}7^2 = 0{,}2646$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "conditionnelle",
+      "enonce": "Dans une population, une maladie touche $4\\,\\%$ des personnes. On dispose d'un test de dépistage. Chez une personne **malade**, le test est positif dans $90\\,\\%$ des cas. Chez une personne **saine**, le test est positif dans $5\\,\\%$ des cas (faux positifs).\n\nOn choisit une personne au hasard. On note $\\mathrm{M}$ l'événement « la personne est malade » et $\\mathrm{T}$ l'événement « le test est positif ».\n\n1. Traduire les données de l'énoncé en probabilités et représenter la situation par un arbre pondéré.\n2. Calculer $P(\\mathrm{M} \\cap \\mathrm{T})$.\n3. En déduire $P(\\mathrm{T})$, la probabilité que le test soit positif.\n4. Une personne a un test positif. Calculer la probabilité qu'elle soit réellement malade, $P_\\mathrm{T}(\\mathrm{M})$. Commenter.\n5. On teste $4$ personnes choisies au hasard et de façon indépendante dans cette population. Calculer la probabilité qu'**au moins une** ait un test positif (arrondir au millième).",
+      "corrige": [
+        "1. Les données se traduisent par : $P(\\mathrm{M}) = 0{,}04$ et donc $P(\\overline{\\mathrm{M}}) = 0{,}96$ ; $P_\\mathrm{M}(\\mathrm{T}) = 0{,}90$ (et $P_\\mathrm{M}(\\overline{\\mathrm{T}}) = 0{,}10$) ; $P_{\\overline{\\mathrm{M}}}(\\mathrm{T}) = 0{,}05$ (et $P_{\\overline{\\mathrm{M}}}(\\overline{\\mathrm{T}}) = 0{,}95$). L'arbre a un premier niveau $\\mathrm{M}$ / $\\overline{\\mathrm{M}}$, puis à chaque nœud un second niveau $\\mathrm{T}$ / $\\overline{\\mathrm{T}}$.",
+        "2. $P(\\mathrm{M} \\cap \\mathrm{T})$ est la probabilité du chemin « malade puis positif » : on multiplie le long de ce chemin. $P(\\mathrm{M} \\cap \\mathrm{T}) = P(\\mathrm{M}) \\times P_\\mathrm{M}(\\mathrm{T}) = 0{,}04 \\times 0{,}90 = 0{,}036$.",
+        "3. Deux chemins mènent à un test positif. Par la formule des probabilités totales : $P(\\mathrm{T}) = P(\\mathrm{M}) \\times P_\\mathrm{M}(\\mathrm{T}) + P(\\overline{\\mathrm{M}}) \\times P_{\\overline{\\mathrm{M}}}(\\mathrm{T}) = 0{,}036 + 0{,}96 \\times 0{,}05 = 0{,}036 + 0{,}048 = 0{,}084$.",
+        "4. On cherche $P_\\mathrm{T}(\\mathrm{M}) = \\dfrac{P(\\mathrm{M} \\cap \\mathrm{T})}{P(\\mathrm{T})} = \\dfrac{0{,}036}{0{,}084} = \\dfrac{3}{7} \\approx 0{,}43$. Bien que le test détecte $90\\,\\%$ des malades, un test positif ne correspond à une personne réellement malade que dans environ $43\\,\\%$ des cas : c'est le paradoxe du dépistage, dû à la rareté de la maladie et au grand nombre de personnes saines, qui produit beaucoup de faux positifs.",
+        "5. Pour une personne, la probabilité d'un test positif est $p = P(\\mathrm{T}) = 0{,}084$. On répète l'épreuve $4$ fois de façon identique et indépendante. « Au moins un test positif » a pour contraire « aucun test positif », soit quatre tests négatifs : $P(\\text{aucun}) = (1 - 0{,}084)^4 = 0{,}916^4 \\approx 0{,}7040$. Donc $P(\\text{au moins un}) = 1 - 0{,}916^4 \\approx 0{,}296$."
+      ],
+      "reponse": "$P(\\mathrm{M} \\cap \\mathrm{T}) = 0{,}036$ ; $P(\\mathrm{T}) = 0{,}084$ ; $P_\\mathrm{T}(\\mathrm{M}) = \\dfrac{3}{7} \\approx 0{,}43$ (paradoxe du dépistage) ; $P(\\text{au moins un positif sur }4) = 1 - 0{,}916^4 \\approx 0{,}296$."
     }
   ]
 }

@@ -88,6 +88,59 @@
         "On a donc bien $f'(a) = -\\dfrac{1}{a^2}$."
       ],
       "reponse": "$f'(a) = -\\dfrac{1}{a^2}$, ce qui confirme la dérivée usuelle de la fonction inverse."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "derivees-usuelles",
+      "enonce": "Déterminer la fonction dérivée de $f(x) = 2\\sqrt{x} + \\dfrac{3}{x}$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "On dérive chaque terme séparément avec les dérivées usuelles $(\\sqrt{x})' = \\dfrac{1}{2\\sqrt{x}}$ et $\\left(\\dfrac{1}{x}\\right)' = -\\dfrac{1}{x^2}$, et la règle $(k\\,u)' = k\\,u'$.",
+        "Dérivée de $2\\sqrt{x}$ : $2 \\times \\dfrac{1}{2\\sqrt{x}} = \\dfrac{1}{\\sqrt{x}}$.",
+        "Dérivée de $\\dfrac{3}{x} = 3 \\times \\dfrac{1}{x}$ : $3 \\times \\left(-\\dfrac{1}{x^2}\\right) = -\\dfrac{3}{x^2}$.",
+        "On additionne : $f'(x) = \\dfrac{1}{\\sqrt{x}} - \\dfrac{3}{x^2}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{1}{\\sqrt{x}} - \\dfrac{3}{x^2}$ sur $]0\\,;+\\infty[$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Soit $f(x) = \\dfrac{2x}{x+1}$ définie sur $]-1\\,;+\\infty[$. Déterminer l'équation de la tangente à la courbe de $f$ au point d'abscisse $a = 1$.",
+      "corrige": [
+        "On calcule d'abord $f'$ avec la formule du quotient. On pose $u = 2x$ et $v = x+1$, donc $u' = 2$ et $v' = 1$.",
+        "$f'(x) = \\dfrac{u'v - uv'}{v^2} = \\dfrac{2(x+1) - 2x \\times 1}{(x+1)^2} = \\dfrac{2x + 2 - 2x}{(x+1)^2} = \\dfrac{2}{(x+1)^2}$.",
+        "On évalue la pente en $a = 1$ : $f'(1) = \\dfrac{2}{(1+1)^2} = \\dfrac{2}{4} = \\dfrac{1}{2}$, et l'ordonnée du point de contact : $f(1) = \\dfrac{2 \\times 1}{1+1} = 1$.",
+        "On applique $y = f'(a)(x - a) + f(a)$ : $y = \\dfrac{1}{2}(x - 1) + 1 = \\dfrac{1}{2}x + \\dfrac{1}{2}$."
+      ],
+      "reponse": "$y = \\dfrac{1}{2}x + \\dfrac{1}{2}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "tangente",
+      "enonce": "Soit $f(x) = x^3 - 3x + 1$ définie sur $\\mathbb{R}$. Déterminer les abscisses des points de la courbe de $f$ en lesquels la tangente est parallèle à la droite d'équation $y = 9x + 2$, puis donner l'équation de chacune de ces tangentes.",
+      "corrige": [
+        "Deux droites sont parallèles lorsqu'elles ont le même coefficient directeur. La droite $y = 9x + 2$ a pour pente $9$ : on cherche donc les abscisses $x$ telles que $f'(x) = 9$.",
+        "On dérive : $f'(x) = 3x^2 - 3$. L'équation $f'(x) = 9$ s'écrit $3x^2 - 3 = 9$, soit $3x^2 = 12$, d'où $x^2 = 4$ et $x = 2$ ou $x = -2$.",
+        "En $x = 2$ : $f(2) = 8 - 6 + 1 = 3$. La tangente est $y = 9(x - 2) + 3 = 9x - 15$.",
+        "En $x = -2$ : $f(-2) = -8 + 6 + 1 = -1$. La tangente est $y = 9(x + 2) - 1 = 9x + 17$."
+      ],
+      "reponse": "Deux points, d'abscisses $x = 2$ et $x = -2$. Tangentes : $y = 9x - 15$ et $y = 9x + 17$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "optimisation",
+      "enonce": "On dispose d'une plaque de carton carrée de $12$ cm de côté. Dans chacun des quatre coins, on découpe un carré de côté $x$ (en cm), puis on relève les bords pour former une boîte ouverte (sans couvercle). On note $V(x)$ le volume de cette boîte, en cm³.\\n\\n1. Justifier que $x$ appartient à l'intervalle $]0\\,;6[$, et montrer que $V(x) = x(12 - 2x)^2$.\\n2. Développer $V(x)$, puis montrer que $V'(x) = 12(x - 2)(x - 6)$.\\n3. Étudier le signe de $V'(x)$ sur $]0\\,;6[$ et dresser le tableau de variations de $V$.\\n4. En déduire la valeur de $x$ qui rend le volume maximal, ainsi que ce volume maximal.\\n5. Déterminer l'équation de la tangente à la courbe de $V$ au point d'abscisse $x = 1$, et interpréter concrètement le nombre dérivé $V'(1)$.",
+      "corrige": [
+        "1. Le côté $x$ découpé doit être strictement positif ($x > 0$) pour qu'il y ait une découpe. Comme on découpe un carré de côté $x$ à chaque extrémité d'un côté de longueur $12$, il faut $2x < 12$, soit $x < 6$ ; donc $x \\in\\; ]0\\,;6[$. Après pliage, la base de la boîte est un carré de côté $12 - 2x$ et la hauteur vaut $x$. Le volume est $V(x) = \\text{base} \\times \\text{hauteur} = (12 - 2x)^2 \\times x = x(12 - 2x)^2$.",
+        "2. On développe : $(12 - 2x)^2 = 144 - 48x + 4x^2$, donc $V(x) = x(144 - 48x + 4x^2) = 4x^3 - 48x^2 + 144x$. On dérive : $V'(x) = 12x^2 - 96x + 144 = 12(x^2 - 8x + 12)$. Comme $x^2 - 8x + 12 = (x - 2)(x - 6)$, on obtient $V'(x) = 12(x - 2)(x - 6)$.",
+        "3. Sur $]0\\,;6[$, le facteur $x - 6$ est toujours négatif. Le facteur $x - 2$ est négatif sur $]0\\,;2[$ et positif sur $]2\\,;6[$. Donc $V'(x) = 12(x-2)(x-6)$ est positif sur $]0\\,;2[$ (produit de deux facteurs négatifs) et négatif sur $]2\\,;6[$. La fonction $V$ est donc croissante sur $]0\\,;2]$ puis décroissante sur $[2\\,;6[$.",
+        "4. D'après le tableau de variations, $V$ atteint son maximum en $x = 2$. Ce volume vaut $V(2) = 2 \\times (12 - 4)^2 = 2 \\times 8^2 = 2 \\times 64 = 128$. Le volume maximal est donc de $128$ cm³, obtenu pour une découpe de côté $x = 2$ cm.",
+        "5. On calcule $V(1) = 1 \\times (12 - 2)^2 = 10^2 = 100$ et $V'(1) = 12(1 - 2)(1 - 6) = 12 \\times (-1) \\times (-5) = 60$. La tangente en $x = 1$ a pour équation $y = V'(1)(x - 1) + V(1) = 60(x - 1) + 100 = 60x + 40$. Le nombre dérivé $V'(1) = 60$ signifie qu'autour de $x = 1$ cm, le volume augmente d'environ $60$ cm³ par cm de découpe supplémentaire (vitesse instantanée de variation du volume)."
+      ],
+      "reponse": "Domaine $]0\\,;6[$ ; $V(x) = 4x^3 - 48x^2 + 144x$ et $V'(x) = 12(x-2)(x-6)$. $V$ croît sur $]0\\,;2]$ puis décroît sur $[2\\,;6[$ : le volume est maximal pour $x = 2$ cm et vaut $128$ cm³. Tangente en $x = 1$ : $y = 60x + 40$, et $V'(1) = 60$ cm³/cm."
     }
   ]
 }

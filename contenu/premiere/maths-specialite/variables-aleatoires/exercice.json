@@ -88,6 +88,65 @@
         "$E(Y) = 3 \\times E(X) + 2 = 3 \\times 1 + 2 = 5$."
       ],
       "reponse": "$E(X) = 1$, $V(X) = 1$, $\\sigma(X) = 1$ ; le coût moyen mensuel est $E(Y) = 5$ €."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "Un concessionnaire estime le nombre $X$ de voitures vendues en une journée selon la loi de probabilité suivante :\n\n| $x_i$ | $0$ | $1$ | $2$ | $3$ |\n|---|---|---|---|---|\n| $P(X = x_i)$ | $0{,}3$ | $0{,}4$ | $0{,}2$ | $0{,}1$ |\n\nCalculer le nombre moyen de voitures vendues par jour, c'est-à-dire l'espérance $E(X)$.",
+      "corrige": [
+        "L'espérance est la somme des valeurs pondérées par leurs probabilités : $E(X) = \\sum x_i\\,p_i$.",
+        "$E(X) = 0 \\times 0{,}3 + 1 \\times 0{,}4 + 2 \\times 0{,}2 + 3 \\times 0{,}1$.",
+        "On calcule chaque terme : $0 + 0{,}4 + 0{,}4 + 0{,}3$.",
+        "En additionnant : $E(X) = 1{,}1$. En moyenne, le concessionnaire vend $1{,}1$ voiture par jour."
+      ],
+      "reponse": "$E(X) = 1{,}1$ voiture par jour."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "loi",
+      "enonce": "On lance simultanément deux pièces de monnaie équilibrées. On note $X$ le nombre de « Pile » obtenus.\n\n1. Établir la loi de probabilité de $X$.\n2. Calculer $E(X)$ et $V(X)$.",
+      "corrige": [
+        "Les issues, toutes équiprobables, sont : (Pile, Pile), (Pile, Face), (Face, Pile) et (Face, Face). Il y a donc $4$ issues de probabilité $\\dfrac{1}{4} = 0{,}25$ chacune.",
+        "$X = 0$ correspond à la seule issue (Face, Face) : $P(X = 0) = 0{,}25$. $X = 1$ correspond aux deux issues (Pile, Face) et (Face, Pile) : $P(X = 1) = \\dfrac{2}{4} = 0{,}5$. $X = 2$ correspond à (Pile, Pile) : $P(X = 2) = 0{,}25$.",
+        "Contrôle : $0{,}25 + 0{,}5 + 0{,}25 = 1$, la loi est cohérente.",
+        "Espérance : $E(X) = 0 \\times 0{,}25 + 1 \\times 0{,}5 + 2 \\times 0{,}25 = 0 + 0{,}5 + 0{,}5 = 1$.",
+        "Moyenne des carrés : $E(X^2) = 0^2 \\times 0{,}25 + 1^2 \\times 0{,}5 + 2^2 \\times 0{,}25 = 0 + 0{,}5 + 1 = 1{,}5$.",
+        "König-Huygens : $V(X) = E(X^2) - \\left(E(X)\\right)^2 = 1{,}5 - 1^2 = 0{,}5$."
+      ],
+      "reponse": "$P(X=0) = 0{,}25$, $P(X=1) = 0{,}5$, $P(X=2) = 0{,}25$ ; $E(X) = 1$ et $V(X) = 0{,}5$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "loi",
+      "enonce": "La variable aléatoire $X$ prend uniquement les valeurs $0$, $1$ et $2$. On sait que $P(X = 0) = 0{,}5$ et que l'espérance vaut $E(X) = 0{,}7$.\n\n1. Déterminer la loi de probabilité complète de $X$.\n2. En déduire la variance $V(X)$.",
+      "corrige": [
+        "Notons $a = P(X = 1)$ et $b = P(X = 2)$, les deux probabilités inconnues.",
+        "Première équation : la somme des probabilités vaut $1$, donc $0{,}5 + a + b = 1$, soit $a + b = 0{,}5$.",
+        "Deuxième équation : $E(X) = 0 \\times 0{,}5 + 1 \\times a + 2 \\times b = a + 2b = 0{,}7$.",
+        "On soustrait la première équation de la seconde : $(a + 2b) - (a + b) = 0{,}7 - 0{,}5$, d'où $b = 0{,}2$. Puis $a = 0{,}5 - 0{,}2 = 0{,}3$.",
+        "La loi est donc $P(X = 0) = 0{,}5$, $P(X = 1) = 0{,}3$, $P(X = 2) = 0{,}2$.",
+        "Pour la variance : $E(X^2) = 0^2 \\times 0{,}5 + 1^2 \\times 0{,}3 + 2^2 \\times 0{,}2 = 0 + 0{,}3 + 0{,}8 = 1{,}1$.",
+        "König-Huygens : $V(X) = E(X^2) - \\left(E(X)\\right)^2 = 1{,}1 - 0{,}7^2 = 1{,}1 - 0{,}49 = 0{,}61$."
+      ],
+      "reponse": "$P(X=1) = 0{,}3$ et $P(X=2) = 0{,}2$ ; $V(X) = 0{,}61$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "jeu-equitable",
+      "enonce": "À une fête foraine, un stand propose le jeu suivant. Pour jouer, on paie une mise de $5$ €, puis on fait tourner une roue équilibrée partagée en $8$ secteurs identiques : $1$ secteur « JACKPOT » fait gagner $20$ €, $3$ secteurs font gagner $5$ €, et les $4$ secteurs restants ne font rien gagner. On note $G$ la somme gagnée grâce à la roue (sans tenir compte de la mise), et $X = G - 5$ le gain algébrique du joueur (ce qu'il gagne à la roue, diminué de sa mise).\n\n1. Déterminer la loi de probabilité de $G$.\n2. Calculer l'espérance $E(G)$.\n3. En déduire $E(X)$. Le jeu est-il favorable au joueur ?\n4. Calculer la variance $V(G)$, puis l'écart-type $\\sigma(G)$ arrondi au centième.\n5. L'organisateur souhaite rendre le jeu équitable en modifiant uniquement la mise. Quelle mise $m$ doit-il fixer ?\n6. Au cours d'une journée, $400$ personnes tentent leur chance (mise inchangée à $5$ €). Quel bénéfice moyen l'organisateur peut-il espérer réaliser sur cette journée ?",
+      "corrige": [
+        "1. Les $8$ secteurs sont identiques, donc chaque secteur a la probabilité $\\dfrac{1}{8}$. La roue fait gagner $20$ € pour $1$ secteur, $5$ € pour $3$ secteurs et $0$ € pour $4$ secteurs. La loi de $G$ est : $P(G = 20) = \\dfrac{1}{8} = 0{,}125$, $P(G = 5) = \\dfrac{3}{8} = 0{,}375$, $P(G = 0) = \\dfrac{4}{8} = 0{,}5$. Contrôle : $0{,}125 + 0{,}375 + 0{,}5 = 1$.",
+        "2. $E(G) = 20 \\times 0{,}125 + 5 \\times 0{,}375 + 0 \\times 0{,}5 = 2{,}5 + 1{,}875 + 0 = 4{,}375$. En moyenne, la roue rapporte $4{,}375$ € par partie.",
+        "3. Le gain algébrique est $X = G - 5$. Par linéarité de l'espérance, $E(X) = E(G) - 5 = 4{,}375 - 5 = -0{,}625$. Comme $E(X) < 0$, le jeu n'est pas favorable au joueur : en moyenne, il perd $0{,}625$ € par partie.",
+        "4. On calcule d'abord $E(G^2) = 20^2 \\times 0{,}125 + 5^2 \\times 0{,}375 + 0^2 \\times 0{,}5 = 400 \\times 0{,}125 + 25 \\times 0{,}375 = 50 + 9{,}375 = 59{,}375$. König-Huygens : $V(G) = E(G^2) - \\left(E(G)\\right)^2 = 59{,}375 - 4{,}375^2 = 59{,}375 - 19{,}140625 = 40{,}234375$. L'écart-type est $\\sigma(G) = \\sqrt{40{,}234375} \\approx 6{,}34$ €.",
+        "5. Le jeu est équitable lorsque $E(X) = 0$, c'est-à-dire $E(G) - m = 0$, soit $m = E(G) = 4{,}375$ €. L'organisateur devrait donc fixer la mise à $4{,}375$ € (environ $4{,}38$ €).",
+        "6. Pour chaque partie, l'organisateur encaisse la mise de $5$ € et reverse en moyenne $E(G) = 4{,}375$ €. Son bénéfice moyen par partie est donc $5 - 4{,}375 = 0{,}625$ € (c'est l'opposé de $E(X)$). Pour $400$ parties : $400 \\times 0{,}625 = 250$ €."
+      ],
+      "reponse": "Loi de $G$ : $P(G=20)=0{,}125$, $P(G=5)=0{,}375$, $P(G=0)=0{,}5$. $E(G) = 4{,}375$ € et $E(X) = -0{,}625$ € : le jeu est défavorable au joueur. $V(G) = 40{,}234375$ et $\\sigma(G) \\approx 6{,}34$ €. Mise équitable : $m = 4{,}375$ €. Bénéfice moyen de l'organisateur sur $400$ parties : $250$ €."
     }
   ]
 }

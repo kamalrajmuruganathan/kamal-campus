@@ -84,6 +84,60 @@
         "Quatrième étape — l'énergie dissipée. On convertit la durée : $2$ min $= 120$ s, puis $E_{\\text{dissipée}} = P_{\\text{dissipée}} \\times \\Delta t = 12 \\times 120 = 1440$ J."
       ],
       "reponse": "$P_{\\text{reçue}} = 60$ W, $\\eta = 0{,}8$ ($80\\,\\%$), et $E_{\\text{dissipée}} = 1440$ J en $2$ min."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "effet-joule",
+      "enonce": "Un fil conducteur de résistance $R = 8{,}0\\ \\Omega$ est parcouru par un courant d'intensité $I = 4{,}0$ A. Quelle puissance dissipe-t-il par effet Joule ?",
+      "corrige": [
+        "La puissance dissipée par effet Joule dans une résistance vaut $P_\\mathrm{J} = R \\times I^2$. Attention à l'exposant : c'est $I^2$, pas $I$.",
+        "On applique avec $R = 8{,}0\\ \\Omega$ et $I = 4{,}0$ A : $P_\\mathrm{J} = 8{,}0 \\times 4{,}0^2 = 8{,}0 \\times 16$.",
+        "$P_\\mathrm{J} = 128$ W."
+      ],
+      "reponse": "$P_\\mathrm{J} = R\\,I^2 = 128$ W."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "energie",
+      "enonce": "Un chauffe-eau électrique de puissance $2500$ W chauffe l'eau pendant $45$ minutes. Calculer l'énergie consommée d'abord en joules, puis en kilowattheures.",
+      "corrige": [
+        "Première étape — l'énergie en joules. On utilise $E = P \\times \\Delta t$ avec la durée en secondes : $45$ min $= 45 \\times 60 = 2700$ s.",
+        "$E = 2500 \\times 2700 = 6\\,750\\,000$ J, soit $E = 6{,}75 \\times 10^{6}$ J.",
+        "Deuxième étape — l'énergie en kilowattheures. On reprend la puissance en kilowatts et la durée en heures : $P = 2500$ W $= 2{,}5$ kW et $45$ min $= 0{,}75$ h.",
+        "$E = 2{,}5 \\times 0{,}75 = 1{,}875$ kWh. (Vérification : $1{,}875 \\times 3{,}6 \\times 10^{6} = 6{,}75 \\times 10^{6}$ J, cohérent.)"
+      ],
+      "reponse": "$E = 6{,}75 \\times 10^{6}$ J, soit $1{,}875$ kWh."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "generateur",
+      "enonce": "Une batterie de force électromotrice $E = 12$ V voit la tension à ses bornes chuter à $U = 11{,}4$ V lorsqu'elle débite un courant d'intensité $I = 3{,}0$ A. Déterminer sa résistance interne $r$, la puissance dissipée par effet Joule à l'intérieur de la batterie, puis vérifier le bilan de puissance (puissance totale fournie par la fem, puissance transmise au circuit extérieur).",
+      "corrige": [
+        "Première étape — la résistance interne. Le modèle du générateur réel s'écrit $U = E - r\\,I$. On en tire $r = \\dfrac{E - U}{I} = \\dfrac{12 - 11{,}4}{3{,}0} = \\dfrac{0{,}6}{3{,}0}$.",
+        "$r = 0{,}20\\ \\Omega$.",
+        "Deuxième étape — la puissance dissipée en interne. $P_\\mathrm{J} = r\\,I^2 = 0{,}20 \\times 3{,}0^2 = 0{,}20 \\times 9{,}0 = 1{,}8$ W.",
+        "Troisième étape — le bilan. La fem fournit $P_{\\text{fem}} = E \\times I = 12 \\times 3{,}0 = 36$ W ; le circuit extérieur reçoit $P_{\\text{utile}} = U \\times I = 11{,}4 \\times 3{,}0 = 34{,}2$ W.",
+        "Vérification : $P_{\\text{fem}} - P_\\mathrm{J} = 36 - 1{,}8 = 34{,}2$ W $= P_{\\text{utile}}$. Le bilan est exact : toute la puissance de la fem se répartit entre le circuit et les pertes internes."
+      ],
+      "reponse": "$r = 0{,}20\\ \\Omega$, $P_\\mathrm{J} = 1{,}8$ W dissipés en interne ; le bilan $36 = 34{,}2 + 1{,}8$ (en watts) est vérifié."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "bilan-energetique",
+      "enonce": "**Le transport de l'énergie électrique.** Une centrale doit acheminer une puissance électrique $P = 100$ kW jusqu'à une ville, à travers une ligne dont la résistance totale des câbles vaut $R = 2{,}0\\ \\Omega$. On étudie l'influence de la tension de transport sur les pertes en ligne.\\n\\n1. La ligne fonctionne d'abord sous une tension $U_1 = 1000$ V. Calculer l'intensité $I_1$ du courant dans la ligne.\\n2. En déduire la puissance $P_{J1}$ dissipée par effet Joule dans les câbles.\\n3. Quelle proportion (en %) de la puissance transportée est ainsi perdue en chaleur ?\\n4. On passe maintenant à une tension de transport $U_2 = 20\\,000$ V (20 kV). Calculer la nouvelle intensité $I_2$, puis les nouvelles pertes Joule $P_{J2}$.\\n5. Dans ce second cas, quelle énergie (en kWh) est perdue en ligne au cours d'une journée de fonctionnement continu (24 h) ?\\n6. Expliquer, à partir de ces résultats, pourquoi l'électricité est transportée à très haute tension.",
+      "corrige": [
+        "1. L'intensité se déduit de $P = U \\times I$, soit $I_1 = \\dfrac{P}{U_1} = \\dfrac{100\\,000}{1000} = 100$ A. (On a converti $P = 100$ kW $= 100\\,000$ W.)",
+        "2. Les pertes par effet Joule dans les câbles valent $P_{J1} = R\\,I_1^{\\,2} = 2{,}0 \\times 100^2 = 2{,}0 \\times 10\\,000 = 20\\,000$ W, soit $P_{J1} = 20$ kW.",
+        "3. La proportion perdue est $\\dfrac{P_{J1}}{P} = \\dfrac{20\\,000}{100\\,000} = 0{,}20$, soit $20\\,\\%$ de la puissance transportée dissipés en pure perte : c'est considérable.",
+        "4. Sous $U_2 = 20\\,000$ V, l'intensité devient $I_2 = \\dfrac{P}{U_2} = \\dfrac{100\\,000}{20\\,000} = 5{,}0$ A. Les pertes valent alors $P_{J2} = R\\,I_2^{\\,2} = 2{,}0 \\times 5{,}0^2 = 2{,}0 \\times 25 = 50$ W. L'intensité a été divisée par $20$, donc les pertes (en $I^2$) par $20^2 = 400$.",
+        "5. En une journée, $\\Delta t = 24$ h. Avec $P_{J2} = 50$ W $= 0{,}050$ kW : $E = P_{J2} \\times \\Delta t = 0{,}050 \\times 24 = 1{,}2$ kWh perdus, contre $20 \\times 24 = 480$ kWh dans le premier cas.",
+        "6. Les pertes Joule varient en $I^2$. À puissance transportée fixée, augmenter la tension diminue proportionnellement l'intensité ($I = P/U$), donc réduit les pertes comme le carré de ce facteur. Transporter à très haute tension permet ainsi de limiter drastiquement l'énergie dissipée dans les câbles : c'est la raison des lignes à haute et très haute tension du réseau."
+      ],
+      "reponse": "1. $I_1 = 100$ A. 2. $P_{J1} = 20$ kW. 3. $20\\,\\%$ de pertes. 4. $I_2 = 5{,}0$ A et $P_{J2} = 50$ W. 5. $1{,}2$ kWh perdus en 24 h. 6. Les pertes en $I^2$ chutent quand on élève la tension (donc quand $I$ baisse) : d'où le transport en très haute tension."
     }
   ]
 }

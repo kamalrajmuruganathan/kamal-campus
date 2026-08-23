@@ -87,6 +87,60 @@
         "On revient à une masse : $m_{\\mathrm{MgO}} = n_{\\mathrm{MgO}} \\times M(\\mathrm{MgO}) = 0{,}10 \\times 40 = 4{,}0$ g."
       ],
       "reponse": "$n_\\mathrm{Mg} = 0{,}10$ mol, $\\mathrm{Mg}$ est limitant, et $m_{\\mathrm{MgO}} = 4{,}0$ g."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "avancement",
+      "enonce": "Le zinc réagit avec l'acide chlorhydrique selon $\\mathrm{Zn} + 2\\,\\mathrm{HCl} \\rightarrow \\mathrm{ZnCl_2} + \\mathrm{H_2}$. On introduit $n_\\mathrm{Zn} = 0{,}10$ mol de zinc et $n_\\mathrm{HCl} = 0{,}30$ mol de chlorure d'hydrogène. Dresser le tableau d'avancement, déterminer le réactif limitant et l'avancement maximal $x_{\\max}$, puis la quantité de dihydrogène formée.",
+      "corrige": [
+        "À l'avancement $x$, les réactifs diminuent (avec leur nombre stœchiométrique) et les produits augmentent : $n_\\mathrm{Zn} = 0{,}10 - x$, $n_\\mathrm{HCl} = 0{,}30 - 2x$, $n_{\\mathrm{ZnCl_2}} = x$ et $n_{\\mathrm{H_2}} = x$.",
+        "On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{Zn}$, $\\dfrac{0{,}10}{1} = 0{,}10$ ; pour $\\mathrm{HCl}$, $\\dfrac{0{,}30}{2} = 0{,}15$. Le plus petit est $0{,}10$ : le zinc est le réactif limitant.",
+        "L'avancement maximal annule le limitant : $0{,}10 - x = 0$ donne $x_{\\max} = 0{,}10$ mol.",
+        "Le dihydrogène est un produit de nombre stœchiométrique $1$ : $n_{\\mathrm{H_2}} = x_{\\max} = 0{,}10$ mol (il reste $0{,}30 - 2\\times 0{,}10 = 0{,}10$ mol de $\\mathrm{HCl}$ non consommé)."
+      ],
+      "reponse": "$\\mathrm{Zn}$ est limitant, $x_{\\max} = 0{,}10$ mol et $n_{\\mathrm{H_2}} = 0{,}10$ mol."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "titrage",
+      "enonce": "Pour déterminer la concentration d'une solution commerciale $\\mathrm{S_0}$, on en prépare d'abord une solution fille $\\mathrm{S}$ en la diluant $10$ fois. On titre ensuite $V_\\mathrm{A} = 20{,}0$ mL de la solution fille $\\mathrm{S}$ par une solution titrante $\\mathrm{B}$ de concentration $c_\\mathrm{B} = 0{,}020$ mol·L⁻¹. La réaction $\\mathrm{A} + \\mathrm{B} \\rightarrow$ produits se fait mole à mole et l'équivalence est atteinte pour $V_{\\mathrm{B},\\text{éq}} = 15{,}0$ mL. 1) Déterminer la concentration $c_\\mathrm{A}$ de la solution fille. 2) En déduire la concentration $c_0$ de la solution commerciale $\\mathrm{S_0}$.",
+      "corrige": [
+        "1. Les nombres stœchiométriques valent $1$ : à l'équivalence, $c_\\mathrm{A} V_\\mathrm{A} = c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}$, d'où $c_\\mathrm{A} = \\dfrac{c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}}{V_\\mathrm{A}} = \\dfrac{0{,}020 \\times 15{,}0}{20{,}0} = 0{,}015$ mol·L⁻¹ (le rapport des volumes est indépendant de l'unité).",
+        "2. La solution fille a été obtenue par une dilution de facteur $10$ : une dilution divise la concentration par le facteur de dilution, donc $c_0 = 10 \\times c_\\mathrm{A}$.",
+        "On applique : $c_0 = 10 \\times 0{,}015 = 0{,}15$ mol·L⁻¹."
+      ],
+      "reponse": "$c_\\mathrm{A} = 0{,}015$ mol·L⁻¹ et $c_0 = 0{,}15$ mol·L⁻¹."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "reactif-limitant",
+      "enonce": "On mélange $V_1 = 50{,}0$ mL d'une solution de nitrate d'argent de concentration $c_1 = 0{,}10$ mol·L⁻¹ avec $V_2 = 100{,}0$ mL d'une solution de chlorure de sodium de concentration $c_2 = 0{,}040$ mol·L⁻¹. Il se forme un précipité de chlorure d'argent selon $\\mathrm{Ag^+} + \\mathrm{Cl^-} \\rightarrow \\mathrm{AgCl}\\,(s)$. Données : $M(\\mathrm{AgCl}) = 143{,}5$ g·mol⁻¹. 1) Calculer les quantités initiales d'ions $\\mathrm{Ag^+}$ et $\\mathrm{Cl^-}$. 2) Identifier le réactif limitant et calculer la masse de précipité formé. 3) Déterminer la concentration de l'ion en excès dans le mélange final.",
+      "corrige": [
+        "1. On utilise $n = c \\times V$ avec les volumes en litres : $n(\\mathrm{Ag^+}) = 0{,}10 \\times 0{,}0500 = 5{,}0 \\times 10^{-3}$ mol et $n(\\mathrm{Cl^-}) = 0{,}040 \\times 0{,}1000 = 4{,}0 \\times 10^{-3}$ mol.",
+        "2. La réaction est mole à mole : on compare directement les quantités. $n(\\mathrm{Cl^-}) = 4{,}0 \\times 10^{-3}$ mol $< n(\\mathrm{Ag^+}) = 5{,}0 \\times 10^{-3}$ mol, donc $\\mathrm{Cl^-}$ est le réactif limitant et $x_{\\max} = 4{,}0 \\times 10^{-3}$ mol.",
+        "La quantité de précipité vaut $n(\\mathrm{AgCl}) = x_{\\max} = 4{,}0 \\times 10^{-3}$ mol, soit une masse $m = n \\times M = 4{,}0 \\times 10^{-3} \\times 143{,}5 = 0{,}57$ g.",
+        "3. L'ion argent est en excès : il en reste $n = 5{,}0 \\times 10^{-3} - 4{,}0 \\times 10^{-3} = 1{,}0 \\times 10^{-3}$ mol. Le volume total du mélange est $V = V_1 + V_2 = 150{,}0$ mL $= 0{,}150$ L.",
+        "La concentration résiduelle en ion argent est $[\\mathrm{Ag^+}] = \\dfrac{1{,}0 \\times 10^{-3}}{0{,}150} = 6{,}7 \\times 10^{-3}$ mol·L⁻¹."
+      ],
+      "reponse": "$\\mathrm{Cl^-}$ est limitant, $m(\\mathrm{AgCl}) = 0{,}57$ g et $[\\mathrm{Ag^+}]$ restant $= 6{,}7 \\times 10^{-3}$ mol·L⁻¹."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "titrage",
+      "enonce": "Un pharmacien vérifie la teneur en diiode $\\mathrm{I_2}$ d'un antiseptique. Le diiode, de couleur brune en solution, est dosé par une solution de thiosulfate de sodium selon la réaction totale $\\mathrm{I_2} + 2\\,\\mathrm{S_2O_3^{2-}} \\rightarrow 2\\,\\mathrm{I^-} + \\mathrm{S_4O_6^{2-}}$. On titre une prise d'essai de $V = 10{,}0$ mL d'antiseptique par une solution de thiosulfate de concentration $c = 0{,}10$ mol·L⁻¹ ; l'équivalence, repérée par la disparition de la teinte brune, est atteinte pour $V_{\\text{éq}} = 12{,}0$ mL. Donnée : $M(\\mathrm{I_2}) = 254$ g·mol⁻¹.\n1) Justifier qu'on puisse repérer l'équivalence à l'œil nu.\n2) Donner la relation entre les quantités de $\\mathrm{I_2}$ et de $\\mathrm{S_2O_3^{2-}}$ à l'équivalence.\n3) Calculer la quantité de matière de diiode contenue dans la prise d'essai.\n4) En déduire la concentration $c(\\mathrm{I_2})$ de l'antiseptique.\n5) Calculer la masse de diiode présente dans la prise d'essai.\n6) Dans un essai préliminaire, on avait mélangé $6{,}0 \\times 10^{-4}$ mol de diiode et $1{,}0 \\times 10^{-3}$ mol d'ions thiosulfate. Déterminer le réactif limitant et l'avancement maximal.",
+      "corrige": [
+        "1. Le diiode $\\mathrm{I_2}$ est brun tandis que les ions $\\mathrm{I^-}$ et $\\mathrm{S_4O_6^{2-}}$ formés sont incolores. Tant qu'il reste du diiode, la solution est colorée ; la teinte brune disparaît exactement lorsque tout le diiode a réagi, c'est-à-dire à l'équivalence : le changement de couleur sert d'indicateur naturel.",
+        "2. À l'équivalence, les réactifs sont introduits dans les proportions stœchiométriques : $\\dfrac{n(\\mathrm{I_2})}{1} = \\dfrac{n(\\mathrm{S_2O_3^{2-}})_{\\text{versé}}}{2}$, soit $n(\\mathrm{I_2}) = \\dfrac{n(\\mathrm{S_2O_3^{2-}})_{\\text{éq}}}{2}$. Attention : le coefficient $2$ interdit d'écrire simplement $cV = c'V'$.",
+        "3. La quantité de thiosulfate versé à l'équivalence est $n(\\mathrm{S_2O_3^{2-}})_{\\text{éq}} = c \\times V_{\\text{éq}} = 0{,}10 \\times 12{,}0 \\times 10^{-3} = 1{,}2 \\times 10^{-3}$ mol. On en déduit $n(\\mathrm{I_2}) = \\dfrac{1{,}2 \\times 10^{-3}}{2} = 6{,}0 \\times 10^{-4}$ mol.",
+        "4. La concentration en diiode est $c(\\mathrm{I_2}) = \\dfrac{n(\\mathrm{I_2})}{V} = \\dfrac{6{,}0 \\times 10^{-4}}{10{,}0 \\times 10^{-3}} = 6{,}0 \\times 10^{-2}$ mol·L⁻¹.",
+        "5. La masse de diiode dans la prise d'essai vaut $m = n(\\mathrm{I_2}) \\times M(\\mathrm{I_2}) = 6{,}0 \\times 10^{-4} \\times 254 = 0{,}15$ g.",
+        "6. On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{I_2}$, $\\dfrac{6{,}0 \\times 10^{-4}}{1} = 6{,}0 \\times 10^{-4}$ ; pour $\\mathrm{S_2O_3^{2-}}$, $\\dfrac{1{,}0 \\times 10^{-3}}{2} = 5{,}0 \\times 10^{-4}$. Le plus petit est $5{,}0 \\times 10^{-4}$ : le thiosulfate est limitant. L'avancement maximal annule le limitant : $1{,}0 \\times 10^{-3} - 2x = 0$ donne $x_{\\max} = 5{,}0 \\times 10^{-4}$ mol."
+      ],
+      "reponse": "$n(\\mathrm{I_2}) = 6{,}0 \\times 10^{-4}$ mol, $c(\\mathrm{I_2}) = 6{,}0 \\times 10^{-2}$ mol·L⁻¹ et $m = 0{,}15$ g ; dans l'essai préliminaire, le thiosulfate est limitant et $x_{\\max} = 5{,}0 \\times 10^{-4}$ mol."
     }
   ]
 }

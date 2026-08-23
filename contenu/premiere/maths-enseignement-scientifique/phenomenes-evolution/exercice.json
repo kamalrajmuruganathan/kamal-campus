@@ -86,6 +86,59 @@
         "C'est bien un maximum (et non un minimum) car $a < 0$ : c'est justement ce qu'un modèle affine, toujours monotone, ne pourrait pas représenter."
       ],
       "reponse": "La balle atteint sa hauteur maximale de $20$ m à l'instant $t = 2$ s."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "r0",
+      "enonce": "Au début d'une épidémie, on compte $5$ personnes contaminées. Le taux de reproduction du virus est $R_0 = 2$ : chaque malade contamine en moyenne $2$ nouvelles personnes à la génération suivante. On modélise le nombre de personnes contaminées à la génération $n$ par $f(n) = f(0) \\times R_0^{\\,n}$. Écrire $f(n)$, puis calculer le nombre de personnes contaminées à la $4^{\\text{e}}$ génération.",
+      "corrige": [
+        "Comme $R_0 = 2 > 1$, l'épidémie **croît de façon exponentielle** : à chaque génération, le nombre de contaminés est multiplié par $2$.",
+        "La valeur initiale est $f(0) = 5$ et la raison est $q = R_0 = 2$, donc $f(n) = 5 \\times 2^{\\,n}$.",
+        "À la $4^{\\text{e}}$ génération : $f(4) = 5 \\times 2^{4} = 5 \\times 16 = 80$."
+      ],
+      "reponse": "$f(n) = 5 \\times 2^{\\,n}$ ; à la $4^{\\text{e}}$ génération, $80$ personnes sont contaminées."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "point-equilibre",
+      "enonce": "Sur un marché, l'offre est modélisée par $O(p) = 3p - 20$ et la demande par $D(p) = -2p + 55$, où $p$ est le prix unitaire (en euros) et où $O$ et $D$ sont des quantités. Déterminer le prix d'équilibre, puis la quantité échangée à ce prix.",
+      "corrige": [
+        "Le **point d'équilibre** est atteint lorsque l'offre égale la demande : $O(p) = D(p)$, soit $3p - 20 = -2p + 55$.",
+        "On résout : $3p + 2p = 55 + 20$, donc $5p = 75$ et $p = 15$. Le prix d'équilibre est de $15$ €.",
+        "Quantité échangée : $O(15) = 3 \\times 15 - 20 = 45 - 20 = 25$. On vérifie avec la demande : $D(15) = -2 \\times 15 + 55 = -30 + 55 = 25$."
+      ],
+      "reponse": "Prix d'équilibre $p = 15$ € ; quantité échangée $= 25$ unités."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "malthus",
+      "enonce": "Dans un territoire isolé, la population est modélisée par $P(n) = 500 \\times 1{,}04^{\\,n}$ (croissance de $4\\,\\%$ par an) et les ressources alimentaires, exprimées en nombre de personnes qu'elles permettent de nourrir, par $R(n) = 600 + 30n$, où $n$ est le nombre d'années. En calculant $P(n)$ et $R(n)$ pour $n = 0$, $10$, $20$ et $30$, montrer que la population finit par dépasser les ressources, puis interpréter.",
+      "corrige": [
+        "La population suit un modèle **exponentiel** (pourcentage constant, $\\times 1{,}04$ par an), tandis que les ressources suivent un modèle **affine** (accroissement constant de $+30$ par an).",
+        "Pour $n = 0$ : $P(0) = 500$ et $R(0) = 600$ — les ressources dépassent la population.",
+        "Pour $n = 10$ : $P(10) = 500 \\times 1{,}04^{10} \\approx 740$ et $R(10) = 600 + 300 = 900$ — les ressources restent supérieures.",
+        "Pour $n = 20$ : $P(20) = 500 \\times 1{,}04^{20} \\approx 1\\,096$ et $R(20) = 600 + 600 = 1\\,200$ — encore supérieures, mais l'écart se réduit nettement.",
+        "Pour $n = 30$ : $P(30) = 500 \\times 1{,}04^{30} \\approx 1\\,622$ et $R(30) = 600 + 900 = 1\\,500$ — cette fois **la population dépasse les ressources**.",
+        "Interprétation (modèle de Malthus) : quelle que soit l'avance initiale des ressources, une croissance exponentielle finit **toujours** par dépasser une croissance affine. Ici le basculement se produit entre la $20^{\\text{e}}$ et la $30^{\\text{e}}$ année."
+      ],
+      "reponse": "Les ressources sont d'abord supérieures, mais la population (exponentielle) dépasse les ressources (affines) entre $n = 20$ et $n = 30$ : c'est le raisonnement de Malthus."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Une nouvelle plateforme de streaming lance son service. Le tableau ci-dessous donne le nombre d'abonnés (en milliers) au bout de $n$ mois : pour $n = 0$, $50$ ; pour $n = 1$, $60$ ; pour $n = 2$, $72$ ; pour $n = 3$, $86{,}4$.\\n\\n1. Montrer que l'évolution du nombre d'abonnés n'est pas affine, puis qu'elle est exponentielle, et préciser le pourcentage d'augmentation mensuel.\\n2. En déduire l'expression de $f(n)$, nombre d'abonnés (en milliers) au bout de $n$ mois.\\n3. Prévoir, selon ce modèle, le nombre d'abonnés au bout de $6$ mois.\\n4. Un service concurrent modélise sa croissance par $g(n) = 80 + 15n$ (en milliers). Comparer les deux plateformes au bout de $12$ mois et commenter l'évolution de leur écart.\\n5. Peut-on raisonnablement utiliser $f$ pour prévoir le nombre d'abonnés au bout de $5$ ans (soit $60$ mois) ? Justifier.",
+      "corrige": [
+        "1. **Test des différences** : $60 - 50 = 10$ ; $72 - 60 = 12$ ; $86{,}4 - 72 = 14{,}4$. Elles ne sont pas constantes : l'évolution n'est **pas affine**. **Test des quotients** : $\\dfrac{60}{50} = 1{,}2$ ; $\\dfrac{72}{60} = 1{,}2$ ; $\\dfrac{86{,}4}{72} = 1{,}2$. Les quotients sont constants : l'évolution est **exponentielle**, de raison $q = 1{,}2$, soit une augmentation de $+20\\,\\%$ par mois.",
+        "2. La valeur initiale est $f(0) = 50$ et la raison $q = 1{,}2$, donc $f(n) = 50 \\times 1{,}2^{\\,n}$ (en milliers d'abonnés).",
+        "3. Au bout de $6$ mois : $f(6) = 50 \\times 1{,}2^{6} = 50 \\times 2{,}985984 \\approx 149{,}3$ milliers, soit environ $149\\,300$ abonnés.",
+        "4. Au bout de $12$ mois : $f(12) = 50 \\times 1{,}2^{12} \\approx 50 \\times 8{,}916 \\approx 445{,}8$ milliers pour la nouvelle plateforme, contre $g(12) = 80 + 15 \\times 12 = 80 + 180 = 260$ milliers pour le concurrent. Au départ, le concurrent était en avance ($g(0) = 80 > f(0) = 50$), mais la croissance exponentielle de $f$ finit par le dépasser largement : l'écart, d'abord favorable au concurrent, se creuse ensuite en faveur de la nouvelle plateforme.",
+        "5. Au bout de $60$ mois, $f(60) = 50 \\times 1{,}2^{60} \\approx 2{,}8$ milliards d'abonnés (car $1{,}2^{60} \\approx 56\\,000$). Ce nombre dépasse toute clientèle réaliste : le modèle exponentiel n'est **pas valable** à si long terme. Comme tout modèle, il ne décrit correctement le phénomène que dans son **domaine de validité** — ici les premiers mois — car une croissance de $+20\\,\\%$ par mois ne peut se poursuivre indéfiniment."
+      ],
+      "reponse": "1. non affine, exponentielle de raison $1{,}2$ ($+20\\,\\%$/mois). 2. $f(n) = 50 \\times 1{,}2^{\\,n}$. 3. environ $149\\,300$ abonnés à $6$ mois. 4. à $12$ mois, $\\approx 446$ milliers contre $260$ milliers : l'exponentielle dépasse l'affine. 5. non, le modèle sort de son domaine de validité (résultat absurde à $60$ mois)."
     }
   ]
 }

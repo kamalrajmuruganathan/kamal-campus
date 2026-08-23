@@ -86,6 +86,58 @@
         "On additionne ces chemins de même probabilité : $P = 4 \\times 0{,}1024 = 0{,}4096$. Ne pas oublier le facteur $4$, qui vient du nombre de chemins."
       ],
       "reponse": "$P = 4 \\times 0{,}8^3 \\times 0{,}2 = 0{,}4096$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Une agence de voyage a vendu $200$ séjours. $80$ sont des séjours à la montagne (événement $\\mathrm{M}$), les autres à la mer. Parmi les séjours à la montagne, $30$ incluent une assurance annulation (événement $\\mathrm{A}$). On choisit un dossier au hasard. Sachant que c'est un séjour à la montagne, quelle est la probabilité qu'il inclue l'assurance annulation ?",
+      "corrige": [
+        "On cherche $P_\\mathrm{M}(\\mathrm{A}) = \\dfrac{P(\\mathrm{M} \\cap \\mathrm{A})}{P(\\mathrm{M})}$ : on se restreint à l'univers des séjours à la montagne.",
+        "Ces séjours sont au nombre de $80$, et parmi eux $30$ incluent l'assurance.",
+        "Donc $P_\\mathrm{M}(\\mathrm{A}) = \\dfrac{30}{80} = \\dfrac{3}{8} = 0{,}375$."
+      ],
+      "reponse": "$P_\\mathrm{M}(\\mathrm{A}) = \\dfrac{3}{8} = 0{,}375$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "arbre",
+      "enonce": "Un site de vente en ligne expédie ses colis par deux transporteurs. Le transporteur X livre $60\\,\\%$ des colis et $92\\,\\%$ de ses livraisons arrivent à l'heure ; le transporteur Y livre les $40\\,\\%$ restants, dont $80\\,\\%$ à l'heure. On note $\\mathrm{H}$ l'événement « le colis est livré à l'heure ». a) Construire l'arbre pondéré et calculer $P(\\mathrm{H})$. b) Calculer la probabilité qu'un colis soit livré par Y et arrive en retard.",
+      "corrige": [
+        "L'arbre a deux premières branches : $\\mathrm{X}$ de probabilité $0{,}6$ et $\\mathrm{Y}$ de probabilité $0{,}4$ (leur somme vaut $1$).",
+        "De $\\mathrm{X}$ partent $P_\\mathrm{X}(\\mathrm{H}) = 0{,}92$ et $P_\\mathrm{X}(\\overline{\\mathrm{H}}) = 0{,}08$ ; de $\\mathrm{Y}$ partent $P_\\mathrm{Y}(\\mathrm{H}) = 0{,}80$ et $P_\\mathrm{Y}(\\overline{\\mathrm{H}}) = 0{,}20$.",
+        "a) Deux chemins mènent à $\\mathrm{H}$ : $P(\\mathrm{X} \\cap \\mathrm{H}) = 0{,}6 \\times 0{,}92 = 0{,}552$ et $P(\\mathrm{Y} \\cap \\mathrm{H}) = 0{,}4 \\times 0{,}80 = 0{,}32$. Par la formule des probabilités totales, $P(\\mathrm{H}) = 0{,}552 + 0{,}32 = 0{,}872$.",
+        "b) « Livré par Y et en retard » est un seul chemin : $P(\\mathrm{Y} \\cap \\overline{\\mathrm{H}}) = 0{,}4 \\times 0{,}20 = 0{,}08$."
+      ],
+      "reponse": "a) $P(\\mathrm{H}) = 0{,}872$ ; b) $P(\\mathrm{Y} \\cap \\overline{\\mathrm{H}}) = 0{,}08$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "independance",
+      "enonce": "Dans une population, $30\\,\\%$ des personnes pratiquent un sport régulièrement (événement $\\mathrm{S}$) et $40\\,\\%$ suivent un régime alimentaire particulier (événement $\\mathrm{R}$). On observe que $12\\,\\%$ des personnes font les deux. a) Les événements $\\mathrm{S}$ et $\\mathrm{R}$ sont-ils indépendants ? b) Calculer $P_\\mathrm{S}(\\mathrm{R})$ et interpréter le résultat au regard de la question a).",
+      "corrige": [
+        "On relève $P(\\mathrm{S}) = 0{,}30$, $P(\\mathrm{R}) = 0{,}40$ et $P(\\mathrm{S} \\cap \\mathrm{R}) = 0{,}12$.",
+        "a) Le critère d'indépendance est $P(\\mathrm{S} \\cap \\mathrm{R}) = P(\\mathrm{S}) \\times P(\\mathrm{R})$. Or $P(\\mathrm{S}) \\times P(\\mathrm{R}) = 0{,}30 \\times 0{,}40 = 0{,}12$, qui est exactement $P(\\mathrm{S} \\cap \\mathrm{R})$ : les événements $\\mathrm{S}$ et $\\mathrm{R}$ sont donc indépendants.",
+        "b) Par définition, $P_\\mathrm{S}(\\mathrm{R}) = \\dfrac{P(\\mathrm{S} \\cap \\mathrm{R})}{P(\\mathrm{S})} = \\dfrac{0{,}12}{0{,}30} = 0{,}40$.",
+        "On retrouve $P_\\mathrm{S}(\\mathrm{R}) = 0{,}40 = P(\\mathrm{R})$ : savoir qu'une personne fait du sport ne change rien à la probabilité qu'elle suive un régime. C'est la traduction concrète de l'indépendance."
+      ],
+      "reponse": "a) Oui, car $0{,}30 \\times 0{,}40 = 0{,}12 = P(\\mathrm{S} \\cap \\mathrm{R})$. b) $P_\\mathrm{S}(\\mathrm{R}) = 0{,}40 = P(\\mathrm{R})$, ce qui confirme l'indépendance."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probabilites-conditionnelles",
+      "enonce": "Une entreprise assemble des vélos électriques sur deux lignes de production. La ligne 1 assemble $60\\,\\%$ des vélos, la ligne 2 les $40\\,\\%$ restants. Un vélo issu de la ligne 1 présente un défaut avec une probabilité de $0{,}05$ ; un vélo issu de la ligne 2 avec une probabilité de $0{,}02$. On prélève un vélo au hasard en sortie d'usine. On note $\\mathrm{L_1}$ « le vélo vient de la ligne 1 », $\\mathrm{L_2}$ « le vélo vient de la ligne 2 » et $\\mathrm{D}$ « le vélo est défectueux ». 1. Construire l'arbre pondéré traduisant la situation. 2. Calculer la probabilité qu'un vélo provienne de la ligne 1 et soit défectueux. 3. Montrer que la probabilité qu'un vélo soit défectueux est $P(\\mathrm{D}) = 0{,}038$. 4. Un vélo prélevé présente un défaut. Quelle est la probabilité qu'il provienne de la ligne 2 ? Interpréter. 5. Un contrôleur prélève $3$ vélos au hasard, de façon indépendante. Calculer la probabilité qu'aucun ne soit défectueux, puis la probabilité qu'au moins un le soit.",
+      "corrige": [
+        "1. Le premier niveau de l'arbre porte $P(\\mathrm{L_1}) = 0{,}6$ et $P(\\mathrm{L_2}) = 0{,}4$. De $\\mathrm{L_1}$ partent $P_{\\mathrm{L_1}}(\\mathrm{D}) = 0{,}05$ et $P_{\\mathrm{L_1}}(\\overline{\\mathrm{D}}) = 0{,}95$ ; de $\\mathrm{L_2}$ partent $P_{\\mathrm{L_2}}(\\mathrm{D}) = 0{,}02$ et $P_{\\mathrm{L_2}}(\\overline{\\mathrm{D}}) = 0{,}98$.",
+        "2. On multiplie le long du chemin $\\mathrm{L_1}$ puis $\\mathrm{D}$ : $P(\\mathrm{L_1} \\cap \\mathrm{D}) = 0{,}6 \\times 0{,}05 = 0{,}03$.",
+        "3. De même, $P(\\mathrm{L_2} \\cap \\mathrm{D}) = 0{,}4 \\times 0{,}02 = 0{,}008$. Comme $\\mathrm{L_1}$ et $\\mathrm{L_2}$ forment une partition, la formule des probabilités totales donne $P(\\mathrm{D}) = P(\\mathrm{L_1} \\cap \\mathrm{D}) + P(\\mathrm{L_2} \\cap \\mathrm{D}) = 0{,}03 + 0{,}008 = 0{,}038$.",
+        "4. On cherche $P_\\mathrm{D}(\\mathrm{L_2}) = \\dfrac{P(\\mathrm{L_2} \\cap \\mathrm{D})}{P(\\mathrm{D})} = \\dfrac{0{,}008}{0{,}038} \\approx 0{,}211$. Ainsi, même si la ligne 2 est la moins productrice de défauts, environ $21\\,\\%$ des vélos défectueux en proviennent.",
+        "5. Chaque vélo est défectueux avec la probabilité $0{,}038$, donc non défectueux avec la probabilité $1 - 0{,}038 = 0{,}962$. Les $3$ prélèvements étant indépendants, $P(\\text{aucun défectueux}) = 0{,}962^3 \\approx 0{,}890$. Par événement contraire, $P(\\text{au moins un défectueux}) = 1 - 0{,}962^3 \\approx 1 - 0{,}890 = 0{,}110$."
+      ],
+      "reponse": "2. $P(\\mathrm{L_1} \\cap \\mathrm{D}) = 0{,}03$. 3. $P(\\mathrm{D}) = 0{,}038$. 4. $P_\\mathrm{D}(\\mathrm{L_2}) = \\dfrac{0{,}008}{0{,}038} \\approx 0{,}211$. 5. $P(\\text{aucun}) = 0{,}962^3 \\approx 0{,}890$ et $P(\\text{au moins un}) \\approx 0{,}110$."
     }
   ]
 }

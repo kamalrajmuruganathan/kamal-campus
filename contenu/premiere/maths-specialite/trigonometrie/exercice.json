@@ -86,6 +86,59 @@
         "Le terme en $\\cos x$ disparaît : $A(x)$ vaut $0$ quelle que soit la valeur de $x$, l'expression est donc bien constante."
       ],
       "reponse": "$A(x) = 0$ pour tout réel $x$ : l'expression est constante, égale à $0$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "periodicite",
+      "enonce": "Déterminer le réel appartenant à l'intervalle $[0\\,;2\\pi[$ qui est associé au même point du cercle trigonométrique que le réel $\\dfrac{29\\pi}{6}$.",
+      "corrige": [
+        "Deux réels sont associés au même point du cercle lorsqu'ils diffèrent d'un multiple de $2\\pi$ (un ou plusieurs tours complets). On cherche donc à retrancher des tours à $\\dfrac{29\\pi}{6}$.",
+        "On écrit $2\\pi = \\dfrac{12\\pi}{6}$. Un premier tour : $\\dfrac{29\\pi}{6} - \\dfrac{12\\pi}{6} = \\dfrac{17\\pi}{6}$, qui est encore supérieur à $2\\pi = \\dfrac{12\\pi}{6}$.",
+        "Un second tour : $\\dfrac{17\\pi}{6} - \\dfrac{12\\pi}{6} = \\dfrac{5\\pi}{6}$. Cette fois $0 \\leqslant \\dfrac{5\\pi}{6} < 2\\pi$.",
+        "On a retranché $2 \\times 2\\pi = 4\\pi$ en tout : $\\dfrac{29\\pi}{6} = \\dfrac{5\\pi}{6} + 4\\pi$, donc les deux réels arrivent bien au même point."
+      ],
+      "reponse": "Le réel cherché est $\\dfrac{5\\pi}{6}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "relation-fondamentale",
+      "enonce": "On sait que $\\cos x = \\dfrac{1}{3}$ et que $x \\in \\left]0\\,;\\dfrac{\\pi}{2}\\right[$. Déterminer la valeur exacte de $\\sin x$, puis en déduire les valeurs de $\\sin(\\pi - x)$ et de $\\cos(\\pi + x)$.",
+      "corrige": [
+        "Avec la relation fondamentale $\\cos^2 x + \\sin^2 x = 1$ : $\\sin^2 x = 1 - \\cos^2 x = 1 - \\dfrac{1}{9} = \\dfrac{8}{9}$.",
+        "Donc $\\sin x = \\pm\\sqrt{\\dfrac{8}{9}} = \\pm\\dfrac{2\\sqrt{2}}{3}$. Comme $x \\in \\left]0\\,;\\dfrac{\\pi}{2}\\right[$ (premier quadrant), le sinus est positif : $\\sin x = \\dfrac{2\\sqrt{2}}{3}$.",
+        "Angles associés : $\\sin(\\pi - x) = \\sin x = \\dfrac{2\\sqrt{2}}{3}$.",
+        "De même $\\cos(\\pi + x) = -\\cos x = -\\dfrac{1}{3}$."
+      ],
+      "reponse": "$\\sin x = \\dfrac{2\\sqrt{2}}{3}$, $\\sin(\\pi - x) = \\dfrac{2\\sqrt{2}}{3}$ et $\\cos(\\pi + x) = -\\dfrac{1}{3}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "angles-associes",
+      "enonce": "Montrer que, pour tout réel $x$, l'expression $B(x) = \\sin\\left(\\dfrac{\\pi}{2} - x\\right)\\cos(\\pi - x) + \\cos\\left(\\dfrac{\\pi}{2} - x\\right)\\sin(\\pi + x)$ est constante, et donner sa valeur.",
+      "corrige": [
+        "On transforme chaque facteur à l'aide des angles associés (section 5). $\\sin\\left(\\dfrac{\\pi}{2} - x\\right) = \\cos x$ et $\\cos(\\pi - x) = -\\cos x$.",
+        "De même $\\cos\\left(\\dfrac{\\pi}{2} - x\\right) = \\sin x$ et $\\sin(\\pi + x) = -\\sin x$.",
+        "On remplace : $B(x) = \\cos x \\times (-\\cos x) + \\sin x \\times (-\\sin x) = -\\cos^2 x - \\sin^2 x = -(\\cos^2 x + \\sin^2 x)$.",
+        "Par la relation fondamentale $\\cos^2 x + \\sin^2 x = 1$, donc $B(x) = -1$ quel que soit le réel $x$ : l'expression est constante."
+      ],
+      "reponse": "$B(x) = -1$ pour tout réel $x$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "cercle-trigonometrique",
+      "enonce": "Une grande roue est modélisée par le cercle trigonométrique de centre $\\mathrm{O}$ et de rayon $1$, orienté dans le sens positif. La position d'une nacelle est repérée par le réel $x$ (en radians) associé, par enroulement, au point $\\mathrm{M}$ du cercle. On rappelle que $\\mathrm{M}(\\cos x\\,;\\,\\sin x)$.\\n\\n1. Une nacelle est à la position correspondant à l'angle $210°$. Convertir cet angle en radians.\\n2. Déterminer les coordonnées exactes du point $\\mathrm{M}$ associé à $x = \\dfrac{7\\pi}{6}$.\\n3. Une autre nacelle $\\mathrm{P}$ a pour abscisse $\\cos x = -\\dfrac{4}{5}$ et se situe dans le troisième quadrant (ordonnée négative). Déterminer la valeur exacte de son ordonnée $\\sin x$.\\n4. Déterminer tous les réels $x$ de l'intervalle $[0\\,;2\\pi[$ pour lesquels $\\cos x = \\dfrac{1}{2}$.\\n5. Le point associé à $x = \\dfrac{5\\pi}{6}$ et le point $\\mathrm{M}$ de la question 2 sont symétriques par rapport à un axe du repère. Préciser lequel et le justifier.",
+      "corrige": [
+        "1. Pour convertir des degrés en radians, on multiplie par $\\dfrac{\\pi}{180}$ : $210 \\times \\dfrac{\\pi}{180} = \\dfrac{210\\pi}{180} = \\dfrac{7\\pi}{6}$ (simplification de $\\dfrac{210}{180}$ par $30$). L'angle vaut donc $\\dfrac{7\\pi}{6}$ radians.",
+        "2. On écrit $\\dfrac{7\\pi}{6} = \\pi + \\dfrac{\\pi}{6}$. Par les angles associés, $\\cos(\\pi + x) = -\\cos x$ et $\\sin(\\pi + x) = -\\sin x$ : $\\cos\\left(\\dfrac{7\\pi}{6}\\right) = -\\cos\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{\\sqrt{3}}{2}$ et $\\sin\\left(\\dfrac{7\\pi}{6}\\right) = -\\sin\\left(\\dfrac{\\pi}{6}\\right) = -\\dfrac{1}{2}$. Donc $\\mathrm{M}\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\,-\\dfrac{1}{2}\\right)$.",
+        "3. Avec la relation fondamentale $\\cos^2 x + \\sin^2 x = 1$ : $\\sin^2 x = 1 - \\left(-\\dfrac{4}{5}\\right)^2 = 1 - \\dfrac{16}{25} = \\dfrac{9}{25}$, donc $\\sin x = \\pm\\dfrac{3}{5}$. La nacelle $\\mathrm{P}$ est dans le troisième quadrant, où l'ordonnée est négative : $\\sin x = -\\dfrac{3}{5}$.",
+        "4. Sur le cercle, l'abscisse vaut $\\dfrac{1}{2}$ en $x = \\dfrac{\\pi}{3}$ (valeur remarquable). Par symétrie par rapport à l'axe des abscisses, le réel $-\\dfrac{\\pi}{3}$ a le même cosinus ; ramené dans $[0\\,;2\\pi[$, il s'écrit $-\\dfrac{\\pi}{3} + 2\\pi = \\dfrac{5\\pi}{3}$. Les solutions dans $[0\\,;2\\pi[$ sont donc $x = \\dfrac{\\pi}{3}$ et $x = \\dfrac{5\\pi}{3}$.",
+        "5. Le point associé à $\\dfrac{5\\pi}{6} = \\pi - \\dfrac{\\pi}{6}$ a pour coordonnées $\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\,\\dfrac{1}{2}\\right)$, tandis que $\\mathrm{M}\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\,-\\dfrac{1}{2}\\right)$. Les deux points ont la même abscisse et des ordonnées opposées : ils sont symétriques par rapport à l'axe des abscisses. (C'est cohérent avec $\\dfrac{7\\pi}{6} = -\\dfrac{5\\pi}{6} + 2\\pi$, la relation $-x$ correspondant justement à cette symétrie.)"
+      ],
+      "reponse": "1. $210° = \\dfrac{7\\pi}{6}$. 2. $\\mathrm{M}\\left(-\\dfrac{\\sqrt{3}}{2}\\,;\\,-\\dfrac{1}{2}\\right)$. 3. $\\sin x = -\\dfrac{3}{5}$. 4. $x = \\dfrac{\\pi}{3}$ ou $x = \\dfrac{5\\pi}{3}$. 5. Symétrie par rapport à l'axe des abscisses."
     }
   ]
 }

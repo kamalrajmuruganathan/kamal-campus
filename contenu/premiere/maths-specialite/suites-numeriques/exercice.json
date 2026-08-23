@@ -85,6 +85,59 @@
         "Donc $S = 3 \\times 255 = 765$ €."
       ],
       "reponse": "$(d_k)$ géométrique, $d_k = 3 \\times 2^{\\,k-1}$, somme totale $= 765$ €."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "arithmetique",
+      "enonce": "Une suite $(u_n)$ est définie par $u_0 = 100$ et, pour tout entier $n$, $u_{n+1} = u_n - 7$. 1) Justifier que $(u_n)$ est arithmétique et donner sa raison. 2) Donner la forme explicite de $u_n$ en fonction de $n$. 3) Calculer $u_{10}$.",
+      "corrige": [
+        "1) On passe d'un terme au suivant en ajoutant toujours le même nombre : $u_{n+1} = u_n + (-7)$. La différence $u_{n+1} - u_n = -7$ est constante, donc $(u_n)$ est arithmétique de raison $r = -7$.",
+        "2) La forme explicite d'une suite arithmétique est $u_n = u_0 + n\\,r$. Avec $u_0 = 100$ et $r = -7$ : $u_n = 100 - 7n$.",
+        "3) On remplace $n$ par $10$ : $u_{10} = 100 - 7 \\times 10 = 100 - 70 = 30$."
+      ],
+      "reponse": "$(u_n)$ arithmétique de raison $r = -7$, $u_n = 100 - 7n$ et $u_{10} = 30$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "geometrique",
+      "enonce": "Une suite géométrique $(v_n)$ de raison positive vérifie $v_2 = 20$ et $v_5 = 160$. 1) Déterminer la raison $q$. 2) En déduire $v_0$, puis la forme explicite de $v_n$. 3) Calculer $v_8$.",
+      "corrige": [
+        "1) Pour une suite géométrique, $v_5 = v_2 \\times q^{\\,5-2} = v_2 \\times q^3$. Donc $q^3 = \\dfrac{v_5}{v_2} = \\dfrac{160}{20} = 8$. Comme $q > 0$ et $2^3 = 8$, on obtient $q = 2$.",
+        "2) De $v_2 = v_0 \\times q^2$ on tire $v_0 = \\dfrac{v_2}{q^2} = \\dfrac{20}{2^2} = \\dfrac{20}{4} = 5$. La forme explicite est donc $v_n = v_0 \\times q^{\\,n} = 5 \\times 2^{\\,n}$.",
+        "3) On remplace $n$ par $8$ : $v_8 = 5 \\times 2^8 = 5 \\times 256 = 1\\,280$."
+      ],
+      "reponse": "$q = 2$, $v_0 = 5$, $v_n = 5 \\times 2^{\\,n}$ et $v_8 = 1\\,280$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "somme-entiers",
+      "enonce": "On empile des briques en pyramide : la rangée du haut compte $1$ brique, la rangée suivante $2$ briques, puis $3$, et ainsi de suite, chaque rangée comptant une brique de plus que celle du dessus. On note $S_n$ le nombre total de briques d'une pyramide de $n$ rangées. 1) Exprimer $S_n$ en fonction de $n$. 2) Combien de briques faut-il pour une pyramide de $30$ rangées ? 3) On dispose d'exactement $210$ briques, toutes utilisées. Combien de rangées la pyramide comporte-t-elle ?",
+      "corrige": [
+        "1) Le nombre total de briques est $S_n = 1 + 2 + 3 + \\cdots + n$, la somme des $n$ premiers entiers. D'après la formule du cours, $S_n = \\dfrac{n(n+1)}{2}$.",
+        "2) Pour $n = 30$ : $S_{30} = \\dfrac{30 \\times 31}{2} = \\dfrac{930}{2} = 465$ briques.",
+        "3) On cherche $n$ tel que $\\dfrac{n(n+1)}{2} = 210$, c'est-à-dire $n(n+1) = 420$. On cherche deux entiers consécutifs dont le produit vaut $420$ : $20 \\times 21 = 420$. Donc $n = 20$.",
+        "Vérification : $S_{20} = \\dfrac{20 \\times 21}{2} = 210$. La pyramide comporte bien $20$ rangées."
+      ],
+      "reponse": "$S_n = \\dfrac{n(n+1)}{2}$, $S_{30} = 465$ briques, et $210$ briques donnent une pyramide de $20$ rangées."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "modele",
+      "enonce": "Une entreprise propose à une nouvelle recrue deux contrats de salaire annuel, à partir de l'année $2026$. On note $u_n$ (offre A) et $v_n$ (offre B) le salaire, en euros, de l'année $2026 + n$ (l'année $2026$ correspond donc à $n = 0$).\\n\\n• Offre A : un salaire de $24\\,000$ € la première année, augmenté de $800$ € chaque année.\\n• Offre B : un salaire de $22\\,000$ € la première année, augmenté de $4\\,\\%$ chaque année.\\n\\n1) Justifier que $(u_n)$ est arithmétique, préciser sa raison et donner $u_n$ en fonction de $n$. 2) Justifier que $(v_n)$ est géométrique, préciser sa raison et donner $v_n$ en fonction de $n$. 3) Comparer les salaires proposés par les deux offres pour la $4^{\\text{e}}$ année. 4) Donner le sens de variation de chacune des deux suites. 5) Calculer le montant total perçu avec chaque offre sur les $5$ premières années (de $n = 0$ à $n = 4$) et indiquer l'offre la plus avantageuse à court terme.",
+      "corrige": [
+        "1) Chaque année, l'offre A ajoute la même somme $800$ € : $u_{n+1} = u_n + 800$. La différence est constante, donc $(u_n)$ est arithmétique de raison $r = 800$, de premier terme $u_0 = 24\\,000$. Sa forme explicite est $u_n = u_0 + n\\,r = 24\\,000 + 800\\,n$.",
+        "2) Une augmentation de $4\\,\\%$ revient à multiplier chaque année par $q = 1 + \\dfrac{4}{100} = 1{,}04$. Comme on multiplie toujours par le même nombre, $(v_n)$ est géométrique de raison $q = 1{,}04$, de premier terme $v_0 = 22\\,000$. Sa forme explicite est $v_n = v_0 \\times q^{\\,n} = 22\\,000 \\times 1{,}04^{\\,n}$.",
+        "3) La $4^{\\text{e}}$ année correspond à $n = 3$ (car $2026 + 3 = 2029$). Offre A : $u_3 = 24\\,000 + 800 \\times 3 = 26\\,400$ €. Offre B : $v_3 = 22\\,000 \\times 1{,}04^3 = 22\\,000 \\times 1{,}124864 \\approx 24\\,747{,}01$ €. La $4^{\\text{e}}$ année, l'offre A est plus avantageuse (environ $1\\,653$ € de plus).",
+        "4) Offre A : la raison $r = 800 > 0$, donc $(u_n)$ est croissante. Offre B : $v_0 = 22\\,000 > 0$ et $q = 1{,}04 > 1$, donc $(v_n)$ est croissante. Les deux salaires augmentent chaque année.",
+        "5) Offre A (somme d'une suite arithmétique) : $u_0 + u_1 + \\cdots + u_4 = \\sum_{n=0}^{4}(24\\,000 + 800\\,n) = 5 \\times 24\\,000 + 800 \\times (0 + 1 + 2 + 3 + 4)$. Or $0 + 1 + 2 + 3 + 4 = \\dfrac{4 \\times 5}{2} = 10$, d'où un total de $120\\,000 + 800 \\times 10 = 128\\,000$ €.",
+        "Offre B (somme d'une suite géométrique) : $v_0 + v_1 + \\cdots + v_4 = 22\\,000 \\times (1 + 1{,}04 + \\cdots + 1{,}04^4) = 22\\,000 \\times \\dfrac{1 - 1{,}04^{5}}{1 - 1{,}04} \\approx 22\\,000 \\times 5{,}416323 \\approx 119\\,159{,}10$ €.",
+        "Sur les $5$ premières années, l'offre A rapporte environ $128\\,000$ € contre environ $119\\,159$ € pour l'offre B : l'offre A est la plus avantageuse à court terme."
+      ],
+      "reponse": "$u_n = 24\\,000 + 800\\,n$ (arithmétique, $r = 800$) ; $v_n = 22\\,000 \\times 1{,}04^{\\,n}$ (géométrique, $q = 1{,}04$). La $4^{\\text{e}}$ année : $u_3 = 26\\,400$ € $>$ $v_3 \\approx 24\\,747$ €. Les deux suites sont croissantes. Total sur $5$ ans : $128\\,000$ € (A) contre $\\approx 119\\,159$ € (B), donc l'offre A est la plus avantageuse à court terme."
     }
   ]
 }

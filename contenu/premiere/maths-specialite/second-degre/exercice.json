@@ -84,6 +84,56 @@
         "En $x = 5$, l'autre côté vaut aussi $5$ : le rectangle d'aire maximale est un carré, d'aire $A(5) = 25$ cm²."
       ],
       "reponse": "$A(x) = -x^2 + 10x$, maximale en $x = 5$ (carré), soit $25$ cm²."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "identite-remarquable",
+      "enonce": "Factoriser $g(x) = 4x^2 - 25$, puis en déduire ses racines.",
+      "corrige": [
+        "On reconnaît une différence de deux carrés : $4x^2 = (2x)^2$ et $25 = 5^2$.",
+        "L'identité $a^2 - b^2 = (a-b)(a+b)$ donne $g(x) = (2x - 5)(2x + 5)$.",
+        "Un produit est nul si l'un des facteurs est nul : $2x - 5 = 0$ donne $x = \\dfrac{5}{2}$, et $2x + 5 = 0$ donne $x = -\\dfrac{5}{2}$."
+      ],
+      "reponse": "$g(x) = (2x-5)(2x+5)$ ; racines $\\dfrac{5}{2}$ et $-\\dfrac{5}{2}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $h(x) = x^2 - x - 6$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "On cherche d'abord les racines par somme et produit : deux nombres de somme $S = -\\dfrac{b}{a} = 1$ et de produit $P = \\dfrac{c}{a} = -6$. Ce sont $3$ et $-2$ ($3 + (-2) = 1$ et $3 \\times (-2) = -6$).",
+        "Ici $a = 1 > 0$ : le trinôme est du signe de $a$ (positif) à l'extérieur des racines, et du signe de $-a$ (négatif) entre les racines.",
+        "Donc $h(x) > 0$ sur $]-\\infty\\,;\\,-2[ \\cup ]3\\,;\\,+\\infty[$, $h(x) < 0$ sur $]-2\\,;\\,3[$, et $h(x) = 0$ en $x = -2$ et $x = 3$."
+      ],
+      "reponse": "$h(x) < 0$ sur $]-2\\,;\\,3[$, positif à l'extérieur, nul en $-2$ et $3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "parametre",
+      "enonce": "Pour quelles valeurs du réel $m$ (avec $m \\neq 0$) l'équation $mx^2 - 4x + 1 = 0$ admet-elle une racine double ? Préciser alors cette racine.",
+      "corrige": [
+        "Comme $m \\neq 0$, il s'agit bien d'une équation du second degré. Elle admet une racine double si et seulement si $\\Delta = 0$.",
+        "$\\Delta = (-4)^2 - 4 \\times m \\times 1 = 16 - 4m$. On résout $\\Delta = 0 \\iff 16 - 4m = 0 \\iff m = 4$.",
+        "Pour $m = 4$, la racine double vaut $x_0 = -\\dfrac{b}{2a} = -\\dfrac{-4}{2 \\times 4} = \\dfrac{4}{8} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "Racine double pour $m = 4$, et cette racine vaut $\\dfrac{1}{2}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme",
+      "enonce": "Une petite entreprise fabrique et vend un article. Lorsqu'elle produit et vend $x$ centaines d'articles (avec $0 \\leqslant x \\leqslant 10$), son bénéfice, exprimé en milliers d'euros, est donné par $B(x) = -2x^2 + 16x - 24$.\\n\\n1. Mettre $B(x)$ sous forme canonique.\\n2. Résoudre l'équation $B(x) = 0$ et interpréter les solutions (seuils de rentabilité).\\n3. Étudier le signe de $B(x)$ sur $[0\\,;\\,10]$ et en déduire les productions pour lesquelles l'entreprise réalise un bénéfice strictement positif.\\n4. Déterminer la production qui rend le bénéfice maximal et calculer ce bénéfice maximal.\\n5. Combien d'articles l'entreprise doit-elle vendre, et quel bénéfice maximal en euros peut-elle espérer ?",
+      "corrige": [
+        "1. On a $a = -2$, $b = 16$, $c = -24$. L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{16}{2\\times(-2)} = 4$, et $\\beta = B(4) = -2\\times 16 + 16\\times 4 - 24 = -32 + 64 - 24 = 8$. Donc $B(x) = -2(x - 4)^2 + 8$.",
+        "2. On résout $-2x^2 + 16x - 24 = 0$. En divisant par $-2$ : $x^2 - 8x + 12 = 0$. Par somme et produit, deux nombres de somme $8$ et de produit $12$ sont $2$ et $6$. Les solutions sont donc $x = 2$ et $x = 6$ : ce sont les seuils de rentabilité, soit $200$ et $600$ articles.",
+        "3. Comme $a = -2 < 0$, $B(x)$ est du signe de $-a$ (positif) entre les racines et du signe de $a$ (négatif) à l'extérieur. Sur $[0\\,;\\,10]$ : $B(x) < 0$ sur $[0\\,;\\,2[$, $B(x) > 0$ sur $]2\\,;\\,6[$, $B(x) < 0$ sur $]6\\,;\\,10]$. L'entreprise réalise un bénéfice strictement positif lorsque $x \\in \\,]2\\,;\\,6[$.",
+        "4. La forme canonique $B(x) = -2(x-4)^2 + 8$ avec $a < 0$ montre que $B$ admet un maximum. Le terme $-2(x-4)^2$ est toujours négatif ou nul, maximal (nul) en $x = 4$. Le bénéfice maximal vaut donc $\\beta = 8$, atteint pour $x = 4$.",
+        "5. $x = 4$ correspond à $400$ articles, et $B(4) = 8$ milliers d'euros, soit $8\\,000$ €. L'entreprise doit vendre $400$ articles pour un bénéfice maximal de $8\\,000$ €."
+      ],
+      "reponse": "$B(x) = -2(x-4)^2 + 8$ ; seuils de rentabilité en $x = 2$ et $x = 6$ (200 et 600 articles) ; bénéfice positif pour $x \\in \\,]2\\,;\\,6[$ ; bénéfice maximal de $8\\,000$ € pour $400$ articles ($x = 4$)."
     }
   ]
 }
