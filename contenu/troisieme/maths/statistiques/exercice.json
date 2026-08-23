@@ -85,6 +85,62 @@
         "Attention : conclure « même médiane, donc même service » serait une faute d'interprétation. La médiane donne seulement le niveau général ; c'est la largeur de la boite qui renseigne sur la régularité."
       ],
       "reponse": "Le magasin A : même médiane ($5$ min) et même étendue ($11$ min) que B, mais un écart interquartile de $2$ min contre $7$ min, donc des temps d'attente plus réguliers."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "effectifs-cumules",
+      "enonce": "Un magasin interroge $40$ clients sur le nombre d'articles achetés lors de leur passage en caisse. Les valeurs $1$ ; $2$ ; $3$ ; $4$ ; $5$ ont pour effectifs respectifs $8$ ; $12$ ; $10$ ; $7$ ; $3$. Construis la ligne des effectifs cumulés croissants, puis détermine combien de clients ont acheté au plus $3$ articles.",
+      "corrige": [
+        "Chaque case des cumuls vaut « cumul précédent $+$ effectif », en partant de la gauche.",
+        "$8$ ; puis $8+12 = 20$ ; puis $20+10 = 30$ ; puis $30+7 = 37$ ; puis $37+3 = 40$.",
+        "Contrôles : la ligne $8$ ; $20$ ; $30$ ; $37$ ; $40$ est croissante, et la dernière case $40$ égale l'effectif total ($8+12+10+7+3 = 40$). Les deux contrôles passent.",
+        "« Au plus $3$ articles » se lit directement sur l'effectif cumulé de la valeur $3$ : $30$ clients."
+      ],
+      "reponse": "Effectifs cumulés croissants : $8$ ; $20$ ; $30$ ; $37$ ; $40$. $30$ clients ont acheté au plus $3$ articles."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "diagramme-barres",
+      "enonce": "Un professeur relève, sous forme de diagramme en barres, le nombre de connexions quotidiennes à l'espace de travail de la classe. Les hauteurs des barres sont $3$ ; $6$ ; $9$ ; $7$ ; $4$ ; $1$ pour les valeurs $0$ ; $1$ ; $2$ ; $3$ ; $4$ ; $5$ connexions. Recopie un tableau d'effectifs avec la ligne des cumuls, puis détermine la médiane de la série.",
+      "corrige": [
+        "La hauteur d'une barre est l'effectif de la valeur écrite dessous. L'effectif total n'est écrit nulle part : on additionne les hauteurs, $3+6+9+7+4+1 = 30$.",
+        "Ligne des cumuls croissants : $3$ ; $9$ ; $18$ ; $25$ ; $29$ ; $30$. Dernière case $30 =$ effectif total : contrôle passé.",
+        "$n = 30$ est pair : il faut les rangs $\\dfrac{n}{2} = 15$ et $\\dfrac{n}{2}+1 = 16$. Le premier cumul $\\geqslant 15$ est $18$, celui de la valeur $2$ ; pour le rang $16$, c'est encore $18$, valeur $2$.",
+        "Les deux valeurs centrales valent $2$, donc la médiane est $\\dfrac{2+2}{2} = 2$ connexions."
+      ],
+      "reponse": "Médiane $= 2$ connexions."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "boite-a-moustaches",
+      "enonce": "Un club d'athlétisme note le nombre de kilomètres courus en une semaine par ses $40$ membres. Les valeurs $5$ ; $10$ ; $15$ ; $20$ ; $25$ ; $30$ (en km) ont pour effectifs $3$ ; $6$ ; $9$ ; $11$ ; $7$ ; $4$. Détermine les cinq valeurs de position et l'écart interquartile. Un membre qui a couru $25$ km affirme faire partie du quart des coureurs les plus assidus : a-t-il raison ?",
+      "corrige": [
+        "Effectif total : $3+6+9+11+7+4 = 40$. Cumuls croissants : $3$ ; $9$ ; $18$ ; $29$ ; $36$ ; $40$. Le minimum est $5$ et le maximum $30$.",
+        "Médiane ($n = 40$ pair) : rangs $20$ et $21$. Le premier cumul $\\geqslant 20$ est $29$ (valeur $20$), et pour le rang $21$ c'est encore $29$. Médiane $= 20$.",
+        "$Q_1$ : $\\dfrac{40}{4} = 10$, entier, on le garde comme rang. Premier cumul $\\geqslant 10$ : $18$, valeur $15$. Donc $Q_1 = 15$.",
+        "$Q_3$ : $\\dfrac{3\\times 40}{4} = 30$, entier, on le garde. Premier cumul $\\geqslant 30$ : $36$, valeur $25$. Donc $Q_3 = 25$.",
+        "Écart interquartile : $Q_3 - Q_1 = 25 - 15 = 10$ km. Les cinq valeurs de position sont min $5$ ; $Q_1 = 15$ ; médiane $20$ ; $Q_3 = 25$ ; max $30$.",
+        "Raisonnement : $Q_3 = 25$ est la plus petite valeur telle qu'au moins trois quarts des membres ont couru $25$ km ou moins (ici $36$ des $40$ membres, soit $90\\ \\%$). Le coureur à $25$ km se situe donc à la frontière $Q_3$, pas au-delà : il marque l'entrée du dernier quart mais n'en fait pas partie. Son affirmation est inexacte."
+      ],
+      "reponse": "min $5$ ; $Q_1 = 15$ ; médiane $20$ ; $Q_3 = 25$ ; max $30$ ; écart interquartile $= 10$ km. Non : $25$ km correspond à $Q_3$, la frontière du dernier quart, et non au quart des plus assidus."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un club de natation prépare une compétition. L'entraineur chronomètre le temps (en secondes) de ses $24$ nageurs sur $50$ m :\n\n| Temps (s) | $30$ | $32$ | $34$ | $36$ | $38$ |\n|---|---|---|---|---|---|\n| Effectif | $3$ | $5$ | $8$ | $5$ | $3$ |\n\n1. Vérifie que le club compte bien $24$ nageurs.\n2. Construis la ligne des effectifs cumulés croissants.\n3. Détermine la médiane des temps et interprète-la.\n4. Détermine le premier quartile $Q_1$ et le troisième quartile $Q_3$.\n5. Calcule l'étendue et l'écart interquartile de la série.\n6. Décris la boite à moustaches que l'entraineur pourrait tracer.",
+      "corrige": [
+        "1. On additionne les effectifs : $3 + 5 + 8 + 5 + 3 = 24$. Le total annoncé est confirmé : aucune donnée n'a été oubliée.",
+        "2. Chaque cumul vaut « cumul précédent $+$ effectif » : $3$ ; $8$ ; $16$ ; $21$ ; $24$. La dernière case $24$ égale l'effectif total : le contrôle passe.",
+        "3. $n = 24$ est pair : rangs $\\dfrac{n}{2} = 12$ et $\\dfrac{n}{2}+1 = 13$. Le premier cumul $\\geqslant 12$ est $16$ (temps $34$), et pour le rang $13$ c'est encore $16$ (temps $34$). Médiane $= \\dfrac{34+34}{2} = 34$ s : au moins la moitié des nageurs réalisent $34$ s ou moins.",
+        "4. $Q_1$ : $\\dfrac{24}{4} = 6$, entier, gardé comme rang. Premier cumul $\\geqslant 6$ : $8$, temps $32$. Donc $Q_1 = 32$ s. $Q_3$ : $\\dfrac{3\\times 24}{4} = 18$, entier, gardé. Premier cumul $\\geqslant 18$ : $21$, temps $36$. Donc $Q_3 = 36$ s.",
+        "5. Étendue : $\\text{max} - \\text{min} = 38 - 30 = 8$ s. Écart interquartile : $Q_3 - Q_1 = 36 - 32 = 4$ s.",
+        "6. Sur un axe gradué régulier en secondes, on trace la boite de $Q_1 = 32$ à $Q_3 = 36$, avec le trait de la médiane à $34$, puis deux moustaches prolongées jusqu'au minimum $30$ et au maximum $38$."
+      ],
+      "reponse": "$24$ nageurs ; cumuls $3$ ; $8$ ; $16$ ; $21$ ; $24$ ; médiane $= 34$ s ; $Q_1 = 32$ s ; $Q_3 = 36$ s ; étendue $= 8$ s ; écart interquartile $= 4$ s."
     }
   ]
 }

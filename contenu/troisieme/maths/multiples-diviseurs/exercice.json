@@ -86,6 +86,59 @@
         "On barre ces facteurs : $\\dfrac{2\\,940}{3\\,150} = \\dfrac{210 \\times 14}{210 \\times 15} = \\dfrac{14}{15}$. Contrôle : $14 = 2 \\times 7$ et $15 = 3 \\times 5$ n'ont aucun facteur commun : c'est irréductible."
       ],
       "reponse": "$\\dfrac{2\\,940}{3\\,150} = \\dfrac{14}{15}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "factorisation",
+      "enonce": "Décompose $504$ en produit de facteurs premiers.",
+      "corrige": [
+        "$504$ est pair : on divise par $2$ tant que possible. $504 \\div 2 = 252$, $252 \\div 2 = 126$, $126 \\div 2 = 63$. $63$ est impair, on arrête les $2$.",
+        "Somme des chiffres de $63$ : $6+3 = 9$, multiple de $3$ : on divise par $3$. $63 \\div 3 = 21$, puis $21 \\div 3 = 7$.",
+        "$7$ est premier : $7 \\div 7 = 1$, on s'arrête.",
+        "On regroupe en puissances : $504 = 2^3 \\times 3^2 \\times 7$. Contrôle en remontant : $8 \\times 9 \\times 7 = 72 \\times 7 = 504$ ✓."
+      ],
+      "reponse": "$504 = 2^3 \\times 3^2 \\times 7$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "denominateur-commun",
+      "enonce": "Compare les fractions $\\dfrac{4}{15}$ et $\\dfrac{3}{10}$ (indique laquelle est la plus grande).",
+      "corrige": [
+        "On cherche un dénominateur commun en décomposant : $15 = 3 \\times 5$ et $10 = 2 \\times 5$.",
+        "Il faut assez de chaque facteur : un $2$, un $3$ et un $5$, soit $2 \\times 3 \\times 5 = 30$.",
+        "On met les deux fractions sur $30$ : $\\dfrac{4}{15} = \\dfrac{8}{30}$ (on multiplie par $2$) et $\\dfrac{3}{10} = \\dfrac{9}{30}$ (on multiplie par $3$).",
+        "À dénominateur égal, on compare les numérateurs : $8 < 9$, donc $\\dfrac{4}{15} < \\dfrac{3}{10}$. Attention : $4 > 3$ mais c'est bien $\\dfrac{4}{15}$ la plus petite, un numérateur plus grand ne suffit pas à conclure."
+      ],
+      "reponse": "$\\dfrac{4}{15} < \\dfrac{3}{10}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "problemes-diviseurs",
+      "enonce": "On dispose de deux rubans, l'un de $120$ cm, l'autre de $72$ cm. On veut les couper en morceaux tous de la même longueur, la plus grande possible, sans aucune chute. Quelle est cette longueur, et combien de morceaux obtient-on en tout ?",
+      "corrige": [
+        "La longueur d'un morceau doit diviser à la fois $120$ et $72$ (aucune chute) : on cherche le plus grand diviseur commun aux deux.",
+        "On décompose : $120 = 2^3 \\times 3 \\times 5$ et $72 = 2^3 \\times 3^2$.",
+        "On prend les facteurs communs avec le plus petit exposant : trois $2$ et un $3$, soit $2^3 \\times 3 = 8 \\times 3 = 24$. Les morceaux mesurent donc $24$ cm.",
+        "Nombre de morceaux : $120 \\div 24 = 5$ pour le premier ruban et $72 \\div 24 = 3$ pour le second, soit $5 + 3 = 8$ morceaux au total."
+      ],
+      "reponse": "Des morceaux de $24$ cm, soit $8$ morceaux en tout ($5 + 3$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un collège organise une soirée jeux dans la salle des fêtes. Il y a $132$ élèves de 4e et $156$ élèves de 3e. On mobilisera plusieurs notions du chapitre pour tout organiser.\n\n1. Décompose $132$ et $156$ en produits de facteurs premiers.\n2. On répartit les élèves en équipes : une équipe ne mélange pas les deux niveaux, et toutes les équipes ont le même effectif, le plus grand possible. Combien d'élèves par équipe ? Combien d'équipes en tout ?\n3. Parmi les $156$ élèves de 3e, $108$ participent au grand tournoi. Quelle fraction cela représente-t-il ? Donne-la sous forme irréductible.\n4. Sur une table du buffet, la partie salée occupe $\\dfrac{5}{12}$ de la table et la partie sucrée $\\dfrac{3}{8}$. Quelle fraction de la table est occupée en tout ? Reste-t-il de la place ?\n5. Deux guirlandes lumineuses clignotent, l'une toutes les $18$ s, l'autre toutes les $30$ s. Elles s'allument ensemble à l'ouverture. Au bout de combien de temps clignoteront-elles de nouveau ensemble ?",
+      "corrige": [
+        "1. $132 \\div 2 = 66$, $\\div 2 = 33$, $\\div 3 = 11$, $\\div 11 = 1$ : donc $132 = 2^2 \\times 3 \\times 11$. Et $156 \\div 2 = 78$, $\\div 2 = 39$, $\\div 3 = 13$, $\\div 13 = 1$ : donc $156 = 2^2 \\times 3 \\times 13$.",
+        "2. L'effectif d'une équipe doit diviser $132$ et $156$, le plus grand possible : on prend les facteurs communs avec le plus petit exposant, soit $2^2 \\times 3 = 12$. Il y a donc $12$ élèves par équipe. Nombre d'équipes : $132 \\div 12 = 11$ chez les 4e et $156 \\div 12 = 13$ chez les 3e, soit $11 + 13 = 24$ équipes.",
+        "3. La fraction est $\\dfrac{108}{156}$. On décompose : $108 = 2^2 \\times 3^3$ et $156 = 2^2 \\times 3 \\times 13$. Facteurs communs : $2^2 \\times 3 = 12$. On barre : $\\dfrac{108}{156} = \\dfrac{12 \\times 9}{12 \\times 13} = \\dfrac{9}{13}$. Comme $9 = 3^2$ et $13$ est premier, la fraction est irréductible.",
+        "4. On additionne $\\dfrac{5}{12} + \\dfrac{3}{8}$. Dénominateur commun : $12 = 2^2 \\times 3$ et $8 = 2^3$, il faut $2^3 \\times 3 = 24$. Alors $\\dfrac{5}{12} = \\dfrac{10}{24}$ et $\\dfrac{3}{8} = \\dfrac{9}{24}$, d'où $\\dfrac{10}{24} + \\dfrac{9}{24} = \\dfrac{19}{24}$ ($19$ est premier, la fraction est irréductible). Comme $\\dfrac{19}{24} < 1$, la table n'est pas pleine : il reste $\\dfrac{24}{24} - \\dfrac{19}{24} = \\dfrac{5}{24}$ de libre.",
+        "5. Elles clignotent ensemble quand le temps écoulé est un multiple commun de $18$ et $30$ : on cherche le plus petit. $18 = 2 \\times 3^2$ et $30 = 2 \\times 3 \\times 5$ ; il faut assez de chaque facteur : $2 \\times 3^2 \\times 5 = 90$ s. Soit $1$ min $30$ s après l'ouverture."
+      ],
+      "reponse": "1. $132 = 2^2 \\times 3 \\times 11$ et $156 = 2^2 \\times 3 \\times 13$. 2. $12$ élèves par équipe, soit $24$ équipes ($11 + 13$). 3. $\\dfrac{108}{156} = \\dfrac{9}{13}$. 4. $\\dfrac{19}{24}$ de la table, il reste $\\dfrac{5}{24}$ de libre. 5. Au bout de $90$ s, soit $1$ min $30$ s."
     }
   ]
 }

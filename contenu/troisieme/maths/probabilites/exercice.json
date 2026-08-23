@@ -88,6 +88,59 @@
         "L'erreur du camarade ($\\dfrac{2}{3}$) est celle de D'Alembert : il ne compte que trois cas (« $P$ », « $F$ puis $P$ », « $F$ puis $F$ ») en croyant qu'ils ont la même chance. Or le cas « $P$ » regroupe à lui seul deux issues $(P\\,;P)$ et $(P\\,;F)$ : les trois cas ne sont pas équiprobables, donc on ne peut pas écrire $\\dfrac{2}{3}$."
       ],
       "reponse": "$P(A \\cup B) = \\dfrac{3}{4}$ (et non $\\dfrac{2}{3}$ : les trois cas de D'Alembert ne sont pas équiprobables)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "relation-addition",
+      "enonce": "Dans un sondage, $P(T) = 0{,}55$ est la probabilité qu'une personne aime le thé, $P(C) = 0{,}45$ celle qu'elle aime le café, et $P(T \\cap C) = 0{,}25$ celle qu'elle aime **les deux**. On interroge une personne au hasard : calcule la probabilité qu'elle aime **au moins l'une** des deux boissons.",
+      "corrige": [
+        "« Au moins l'une » se traduit par la réunion $T \\cup C$. On écrit la relation d'addition sous la forme qui donne la réunion : $P(T \\cup C) = P(T) + P(C) - P(T \\cap C)$.",
+        "On remplace les trois valeurs : $P(T \\cup C) = 0{,}55 + 0{,}45 - 0{,}25$.",
+        "On calcule : $0{,}55 + 0{,}45 = 1$, puis $1 - 0{,}25 = 0{,}75$.",
+        "Contrôle : $0{,}75 \\geqslant 0{,}55$ et $0{,}75 \\geqslant 0{,}45$ (la réunion contient chaque évènement) et $0{,}75 \\leqslant 1$. La réponse est vraisemblable."
+      ],
+      "reponse": "$P(T \\cup C) = 0{,}75$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "methode-relation",
+      "enonce": "On tire une carte au hasard dans un jeu de $32$ cartes (il contient $4$ rois et $8$ cœurs). On note $R$ : « obtenir un roi » et $C$ : « obtenir un cœur ». Calcule d'abord $P(R \\cup C)$, puis la probabilité de n'obtenir **ni** un roi **ni** un cœur.",
+      "corrige": [
+        "On repère les probabilités : $P(R) = \\dfrac{4}{32}$, $P(C) = \\dfrac{8}{32}$, et l'intersection est la seule carte à la fois roi et cœur, le roi de cœur, donc $P(R \\cap C) = \\dfrac{1}{32}$.",
+        "Première étape — la réunion : $P(R \\cup C) = P(R) + P(C) - P(R \\cap C) = \\dfrac{4}{32} + \\dfrac{8}{32} - \\dfrac{1}{32} = \\dfrac{11}{32}$.",
+        "Seconde étape — « ni roi ni cœur » est l'évènement contraire de « roi ou cœur » : $P(\\overline{R \\cup C}) = 1 - P(R \\cup C) = 1 - \\dfrac{11}{32} = \\dfrac{21}{32}$.",
+        "Contrôle par les effectifs : $4 + 8 - 1 = 11$ cartes sont un roi ou un cœur, donc $32 - 11 = 21$ cartes ne sont ni l'un ni l'autre, soit $\\dfrac{21}{32}$ ✓."
+      ],
+      "reponse": "$P(R \\cup C) = \\dfrac{11}{32}$ et $P(\\overline{R \\cup C}) = \\dfrac{21}{32}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "controle-vraisemblance",
+      "enonce": "On sait que $P(A) = 0{,}7$ et $P(B) = 0{,}6$, sans connaître $P(A \\cap B)$. Un camarade affirme que $A$ et $B$ pourraient être incompatibles, c'est-à-dire $A \\cap B = \\varnothing$. Montre que c'est impossible, puis détermine la **plus petite** valeur possible de $P(A \\cap B)$.",
+      "corrige": [
+        "Si $A$ et $B$ étaient incompatibles, on aurait $P(A \\cap B) = 0$, donc $P(A \\cup B) = P(A) + P(B) = 0{,}7 + 0{,}6 = 1{,}3$. Or une probabilité ne peut pas dépasser $1$ : c'est impossible. Les deux évènements se chevauchent forcément.",
+        "Cherchons jusqu'où l'intersection peut être petite. D'après la relation, $P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 1{,}3 - P(A \\cup B)$ : l'intersection est d'autant plus petite que la réunion est grande.",
+        "La réunion est une probabilité, donc $P(A \\cup B) \\leqslant 1$. La valeur $P(A \\cap B) = 1{,}3 - P(A \\cup B)$ est donc minimale quand $P(A \\cup B)$ est maximale, c'est-à-dire égale à $1$ : $P(A \\cap B) = 1{,}3 - 1 = 0{,}3$.",
+        "Contrôle : $0{,}3 \\leqslant 0{,}7$ et $0{,}3 \\leqslant 0{,}6$ (l'intersection est bien contenue dans chaque évènement). La plus petite valeur possible est donc $0{,}3$, et jamais $0$."
+      ],
+      "reponse": "$A$ et $B$ ne peuvent pas être incompatibles ; la plus petite valeur possible est $P(A \\cap B) = 0{,}3$ (atteinte lorsque $A \\cup B = \\Omega$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "methode-relation",
+      "enonce": "À une kermesse, un stand propose de faire tourner une roue équilibrée partagée en $6$ secteurs identiques numérotés de $1$ à $6$.\n\n**Partie A — un tour de roue.** On note $A$ : « obtenir un nombre pair » et $B$ : « obtenir un nombre supérieur ou égal à $5$ ».\n\n1. Donne $P(A)$, $P(B)$, puis $P(A \\cap B)$ en listant les issues.\n2. Calcule $P(A \\cup B)$ à l'aide de la relation d'addition.\n3. Le joueur gagne un lot s'il obtient un nombre pair **ou** un nombre supérieur ou égal à $5$. Quelle est la probabilité qu'il ne gagne **rien** ?\n\n**Partie B — deux tours de roue.** On fait maintenant tourner la roue **deux fois de suite**. On note $C$ : « obtenir un $6$ au premier tour » et $D$ : « obtenir un $6$ au second tour ».\n\n4. Calcule $P(C \\cup D)$, la probabilité d'obtenir **au moins un** $6$, et explique pourquoi on ne peut pas simplement additionner $P(C)$ et $P(D)$.\n5. Déduis-en la probabilité de n'obtenir **aucun** $6$ sur les deux tours.",
+      "corrige": [
+        "1. Sur les six secteurs, les nombres pairs sont $\\{2 \\,;\\, 4 \\,;\\, 6\\}$, donc $P(A) = \\dfrac{3}{6} = \\dfrac{1}{2}$. Les nombres supérieurs ou égaux à $5$ sont $\\{5 \\,;\\, 6\\}$, donc $P(B) = \\dfrac{2}{6} = \\dfrac{1}{3}$. La seule issue à la fois paire et $\\geqslant 5$ est le $6$, donc $A \\cap B = \\{6\\}$ et $P(A \\cap B) = \\dfrac{1}{6}$.",
+        "2. On applique la relation : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\dfrac{3}{6} + \\dfrac{2}{6} - \\dfrac{1}{6} = \\dfrac{4}{6} = \\dfrac{2}{3}$.",
+        "3. « Ne rien gagner » est le contraire de « pair ou $\\geqslant 5$ » : $P(\\overline{A \\cup B}) = 1 - P(A \\cup B) = 1 - \\dfrac{2}{3} = \\dfrac{1}{3}$. Vérification directe : les issues perdantes sont $\\{1 \\,;\\, 3\\}$, soit $\\dfrac{2}{6} = \\dfrac{1}{3}$ ✓.",
+        "4. Chaque tour donne un $6$ avec la probabilité $\\dfrac{1}{6}$, donc $P(C) = \\dfrac{1}{6}$ et $P(D) = \\dfrac{1}{6}$. L'intersection $C \\cap D$ est « un $6$ aux deux tours », c'est-à-dire le seul couple $(6 \\,;\\, 6)$ parmi les $36$ couples possibles, donc $P(C \\cap D) = \\dfrac{1}{36}$ (obtenue **en comptant** les couples, pas en multipliant). La relation donne $P(C \\cup D) = P(C) + P(D) - P(C \\cap D) = \\dfrac{6}{36} + \\dfrac{6}{36} - \\dfrac{1}{36} = \\dfrac{11}{36}$. On ne peut pas additionner directement $\\dfrac{1}{6} + \\dfrac{1}{6}$ car le couple $(6 \\,;\\, 6)$ appartient aux deux évènements et serait compté deux fois.",
+        "5. « Aucun $6$ » est le contraire de « au moins un $6$ » : $P(\\overline{C \\cup D}) = 1 - P(C \\cup D) = 1 - \\dfrac{11}{36} = \\dfrac{25}{36}$."
+      ],
+      "reponse": "Partie A : $P(A) = \\dfrac{1}{2}$, $P(B) = \\dfrac{1}{3}$, $P(A \\cap B) = \\dfrac{1}{6}$, $P(A \\cup B) = \\dfrac{2}{3}$, et $P(\\text{ne rien gagner}) = \\dfrac{1}{3}$. Partie B : $P(\\text{au moins un } 6) = \\dfrac{11}{36}$ et $P(\\text{aucun } 6) = \\dfrac{25}{36}$."
     }
   ]
 }

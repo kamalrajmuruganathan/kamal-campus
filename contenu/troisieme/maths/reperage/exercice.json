@@ -86,6 +86,57 @@
         "Ces antécédents correspondent aux deux points $(-2\\,;4)$ et $(2\\,;4)$ de la courbe."
       ],
       "reponse": "(a) $25\\,;9\\,;0\\,;9\\,;25$. (b) Les ordonnées montent jusqu'à $25$ : graduer de $1$ en $1$ ferait déborder la feuille, on gradue l'axe vertical de $5$ en $5$. (c) Deux antécédents : $-2$ et $2$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "methode-droite-graduee",
+      "enonce": "Sur une droite graduée, les points d'abscisses $-12$ et $-3$ sont repérés par deux traits séparés par $3$ intervalles égaux. (a) Quelle est la valeur d'une graduation ? (b) Quelle est l'abscisse du point $B$ situé $2$ graduations **à droite** de $-12$ ?",
+      "corrige": [
+        "(a) Entre $-12$ et $-3$, l'écart vaut $-3-(-12) = 9$, réparti sur $3$ intervalles : une graduation vaut $\\dfrac{9}{3} = 3$.",
+        "(b) Aller **à droite**, c'est augmenter : on part de $-12$ et on ajoute $2$ graduations, soit $2 \\times 3 = 6$. L'abscisse de $B$ est donc $-12 + 6 = -6$.",
+        "Contrôle : $-6$ se trouve bien entre $-12$ et $-3$, du bon côté (à droite de $-12$). ✓"
+      ],
+      "reponse": "(a) Une graduation vaut $3$. (b) $B$ a pour abscisse $-6$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "fonction-affine-graphique",
+      "enonce": "La droite représentant une fonction affine $g$ coupe l'axe des ordonnées au point $(0\\,;-1)$ et passe par le point $(3\\,;5)$. (a) Détermine l'expression de $g$. (b) Le point $P(10\\,;19)$ appartient-il à cette droite ?",
+      "corrige": [
+        "(a) L'ordonnée du point d'abscisse $0$ donne directement l'ordonnée à l'origine : $b = -1$. Le coefficient directeur se calcule avec les deux points : $a = \\dfrac{5-(-1)}{3-0} = \\dfrac{6}{3} = 2$. Donc $g(x) = 2x - 1$.",
+        "(b) Un point appartient à la droite si ses coordonnées vérifient $y = g(x)$. On calcule $g(10) = 2 \\times 10 - 1 = 19$.",
+        "L'image de $10$ vaut $19$, qui est justement l'ordonnée de $P$ : le point $P(10\\,;19)$ appartient donc à la droite. ✓"
+      ],
+      "reponse": "(a) $g(x) = 2x - 1$. (b) Oui, car $g(10) = 19$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "fonction-affine-graphique",
+      "enonce": "Sur un graphique, l'axe des abscisses est gradué de $2$ en $2$ et l'axe des ordonnées de $10$ en $10$ (les carreaux ont la même taille sur les deux axes). La droite d'une fonction affine $f$ passe par les points $(0\\,;-10)$ et $(4\\,;10)$. (a) Explique pourquoi on ne peut pas trouver le coefficient directeur en comptant les carreaux. (b) Détermine $a$ et $b$, puis l'expression de $f$. (c) Résous l'équation $f(x) = 0$.",
+      "corrige": [
+        "(a) Un repère orthogonal n'est pas forcément orthonormé : ici un carreau horizontal représente $2$, mais un carreau vertical représente $10$. Compter « autant de carreaux vers le haut que vers la droite » donnerait une pente fausse. On lit donc les **nombres écrits sur les axes**, pas les carreaux.",
+        "(b) L'ordonnée du point d'abscisse $0$ donne $b = -10$. Le coefficient directeur : $a = \\dfrac{10-(-10)}{4-0} = \\dfrac{20}{4} = 5$. Donc $f(x) = 5x - 10$.",
+        "(c) $f(x) = 0 \\iff 5x - 10 = 0 \\iff 5x = 10 \\iff x = 2$.",
+        "Contrôle : la droite coupe l'axe des abscisses au point $(2\\,;0)$, ce qui est cohérent avec une droite partant de $(0\\,;-10)$ et montant de $5$ par unité. ✓"
+      ],
+      "reponse": "(a) Les deux axes n'ont pas la même unité (orthogonal ≠ orthonormé). (b) $a = 5$, $b = -10$, donc $f(x) = 5x - 10$. (c) $x = 2$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "fonction-affine-graphique",
+      "enonce": "Un club propose deux formules de location de vélo pour une journée. On note $x$ le nombre d'heures de location et $y$ le prix payé, en euros ; chaque tarif est représenté par une droite dans un repère (en abscisse les heures, en ordonnée le prix).\\n\\n- Formule **Cyclo** : un abonnement de $4$ € puis $3$ € par heure. Sa droite passe par les points $(0\\,;4)$ et $(2\\,;10)$.\\n- Formule **Balade** : aucun abonnement, mais $5$ € par heure, de fonction $g(x) = 5x$. Sa droite passe par $(0\\,;0)$ et $(2\\,;10)$.\\n\\n1. Les deux droites se croisent au point $A(2\\,;10)$. Que représente concrètement ce point ?\\n2. Détermine l'expression de la fonction $f$ qui donne le prix de la formule Cyclo.\\n3. Avec la formule Balade : quel est le prix pour $3$ heures ? Pour un budget de $20$ €, combien d'heures peut-on louer au maximum ?\\n4. À partir de combien d'heures la formule Cyclo devient-elle plus avantageuse (moins chère) que la formule Balade ?",
+      "corrige": [
+        "1. Le point $A(2\\,;10)$ appartient aux deux droites : pour $x = 2$ heures, les deux formules donnent le même prix $y = 10$ €. Louer $2$ heures coûte donc $10$ € avec l'une comme avec l'autre.",
+        "2. La droite de Cyclo coupe l'axe des ordonnées en $(0\\,;4)$, donc $b = 4$ (l'abonnement). Le coefficient directeur : $a = \\dfrac{10 - 4}{2 - 0} = \\dfrac{6}{2} = 3$ (le prix horaire). D'où $f(x) = 3x + 4$.",
+        "3. Pour $3$ heures : $g(3) = 5 \\times 3 = 15$ €. Pour un budget de $20$ €, on cherche les $x$ tels que $5x \\leqslant 20$, soit $x \\leqslant 4$. On peut donc louer au maximum $4$ heures.",
+        "4. Cyclo est moins chère lorsque $f(x) < g(x)$, soit $3x + 4 < 5x$, d'où $4 < 2x$, donc $x > 2$. Graphiquement, au-delà du point d'intersection $A$, la droite de Cyclo passe en dessous de celle de Balade.",
+        "Contrôle : à $3$ heures, Cyclo coûte $f(3) = 3 \\times 3 + 4 = 13$ € contre $g(3) = 15$ € pour Balade : Cyclo est bien la moins chère dès que la durée dépasse $2$ heures. ✓"
+      ],
+      "reponse": "1. Pour $2$ h, les deux formules coûtent $10$ € (même prix). 2. $f(x) = 3x + 4$. 3. $g(3) = 15$ €, et au maximum $4$ heures pour un budget de $20$ €. 4. Cyclo est plus avantageuse dès que $x > 2$ heures."
     }
   ]
 }

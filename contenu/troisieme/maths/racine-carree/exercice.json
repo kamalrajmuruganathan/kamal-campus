@@ -81,6 +81,56 @@
         "3) Un produit est nul si et seulement si l'un de ses facteurs est nul : $x - \\sqrt{10} = 0$ ou $x + \\sqrt{10} = 0$, donc $x = \\sqrt{10}$ ou $x = -\\sqrt{10}$. La factorisation prouve qu'il y a exactement ces deux solutions, et aucune autre."
       ],
       "reponse": "$x = \\sqrt{10}$ ou $x = -\\sqrt{10}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "equation-x2-a",
+      "enonce": "Résous l'équation $x^2 = 121$.",
+      "corrige": [
+        "$121 > 0$ : l'équation admet deux solutions opposées, $x = \\sqrt{121}$ ou $x = -\\sqrt{121}$.",
+        "Or $11^2 = 121$, donc $\\sqrt{121} = 11$.",
+        "Les solutions sont $11$ et $-11$. On vérifie : $11^2 = 121$ ✓ et $(-11)^2 = 121$ ✓. ⚠️ N'écrire que $11$ ferait perdre la moitié des solutions."
+      ],
+      "reponse": "$x = 11$ ou $x = -11$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "se-ramener-forme-x2",
+      "enonce": "Résous l'équation $2x^2 - 7 = 43$.",
+      "corrige": [
+        "L'équation n'est pas de la forme $x^2 = a$ : il faut isoler $x^2$. On ajoute d'abord $7$ aux deux membres : $2x^2 = 43 + 7 = 50$.",
+        "On divise ensuite les deux membres par $2$ : $x^2 = \\dfrac{50}{2} = 25$.",
+        "$25 > 0$ : deux solutions opposées, $x = \\sqrt{25} = 5$ ou $x = -5$, car $5^2 = 25$. ⚠️ On transpose le $-7$ puis on divise par $2$ avant de prendre la racine : la réponse n'est pas $\\sqrt{50}$ ni $\\sqrt{43}$."
+      ],
+      "reponse": "$x = 5$ ou $x = -5$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "nombre-de-solutions",
+      "enonce": "Selon la valeur du nombre $a$, discute le nombre de solutions de l'équation $x^2 = a$. Applique ensuite ton raisonnement aux trois cas $x^2 = 7$, $x^2 = 0$ et $x^2 = -3$.",
+      "corrige": [
+        "Tout dépend du signe de $a$. Si $a > 0$, l'équation a deux solutions opposées, $x = \\sqrt{a}$ et $x = -\\sqrt{a}$ ; si $a = 0$, elle a une seule solution, $x = 0$ ; si $a < 0$, elle n'a aucune solution, car un carré n'est jamais négatif.",
+        "Cas $x^2 = 7$ : ici $a = 7 > 0$, donc deux solutions opposées. $7$ n'est pas un carré parfait, on garde les valeurs exactes $x = \\sqrt{7}$ ou $x = -\\sqrt{7}$.",
+        "Cas $x^2 = 0$ : ici $a = 0$, une seule solution $x = 0$ (on n'écrit pas « $0$ et $-0$ »).",
+        "Cas $x^2 = -3$ : ici $a = -3 < 0$, aucune solution ; on l'écrit par une phrase, pas par une case vide."
+      ],
+      "reponse": "$a > 0$ : deux solutions opposées ; $a = 0$ : une seule ($0$) ; $a < 0$ : aucune. Donc $x^2 = 7 \\Rightarrow \\sqrt{7}$ et $-\\sqrt{7}$ ; $x^2 = 0 \\Rightarrow 0$ ; $x^2 = -3 \\Rightarrow$ aucune solution."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "probleme-pythagore",
+      "enonce": "Marc aménage une terrasse carrée et y tend des câbles. On raisonne avec des valeurs exactes, sauf mention contraire. 1. La terrasse est un carré d'aire $196\\ \\text{m}^2$. Quelle est la longueur exacte de son côté ? 2. Marc tend un câble le long d'une diagonale de la terrasse. À l'aide du théorème de Pythagore, donne la longueur exacte de cette diagonale. 3. Contre un côté, il dresse un mât vertical de $8$ m ; un hauban relie le sommet du mât à un piquet planté à $6$ m du pied du mât. Quelle est la longueur du hauban ? 4. Marc envisage une seconde terrasse carrée dont le côté mesurerait exactement $\\sqrt{200}$ m. Quelle serait alors son aire ?",
+      "corrige": [
+        "1. On note $c$ le côté (en m). L'aire d'un carré est $c^2$, donc $c^2 = 196$. Comme $196 > 0$, on a $c = \\sqrt{196} = 14$ ou $c = -14$, car $14^2 = 196$. Une longueur n'est pas négative : on écarte $-14$ et on garde $c = 14$. Le côté mesure $14$ m.",
+        "2. La diagonale $d$ est l'hypoténuse d'un triangle rectangle isocèle dont les deux côtés de l'angle droit sont deux côtés de la terrasse, chacun de $14$ m. Par Pythagore : $d^2 = 14^2 + 14^2 = 196 + 196 = 392$. Donc $d = \\sqrt{392}$ ou $d = -\\sqrt{392}$ ; une longueur est positive, donc $d = \\sqrt{392}$ m (soit environ $19{,}8$ m).",
+        "3. Le mât ($8$ m), le sol jusqu'au piquet ($6$ m) et le hauban forment un triangle rectangle, le hauban $h$ étant l'hypoténuse. Par Pythagore : $h^2 = 8^2 + 6^2 = 64 + 36 = 100$. Donc $h = \\sqrt{100} = 10$ m (on écarte $-10$, qui n'est pas une longueur).",
+        "4. Si le côté vaut $\\sqrt{200}$ m, l'aire est le carré du côté : $(\\sqrt{200})^2 = 200$, car $(\\sqrt{a})^2 = a$ pour $a \\geqslant 0$. L'aire serait donc de $200\\ \\text{m}^2$."
+      ],
+      "reponse": "1. Côté $= 14$ m. 2. Diagonale $= \\sqrt{392}$ m $\\approx 19{,}8$ m. 3. Hauban $= 10$ m. 4. Aire $= 200\\ \\text{m}^2$."
     }
   ]
 }

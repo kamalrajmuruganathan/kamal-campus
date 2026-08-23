@@ -91,6 +91,58 @@
         "Or $\\overrightarrow{DB} + \\overrightarrow{BD} = \\overrightarrow{DD} = \\vec{0}$ (un aller-retour). Il reste $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$, ce qu'il fallait démontrer."
       ],
       "reponse": "En décomposant par Chasles, les vecteurs $\\overrightarrow{DB}$ et $\\overrightarrow{BD}$ s'annulent : $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "somme-chasles",
+      "enonce": "Donne à chaque fois le résultat le plus simple.\n\na) $\\overrightarrow{PR} + \\overrightarrow{RP}$\n\nb) l'opposé du vecteur $\\overrightarrow{UV}$\n\nc) $\\overrightarrow{GH} + \\overrightarrow{HK} + \\overrightarrow{KG}$",
+      "corrige": [
+        "a) On fait l'aller de $P$ à $R$, puis le retour de $R$ à $P$ : on revient au point de départ. Par Chasles, $\\overrightarrow{PR} + \\overrightarrow{RP} = \\overrightarrow{PP} = \\vec{0}$.",
+        "b) L'opposé d'un vecteur garde la même direction et la même longueur, mais change de sens : on échange l'origine et l'extrémité. L'opposé de $\\overrightarrow{UV}$ est donc $\\overrightarrow{VU}$.",
+        "c) On applique Chasles de proche en proche : $\\overrightarrow{GH} + \\overrightarrow{HK} = \\overrightarrow{GK}$ ($H$ disparaît), puis $\\overrightarrow{GK} + \\overrightarrow{KG} = \\overrightarrow{GG} = \\vec{0}$. La somme parcourt un circuit fermé $G \\to H \\to K \\to G$ : elle vaut le vecteur nul."
+      ],
+      "reponse": "a) $\\vec{0}$  ·  b) $\\overrightarrow{VU}$  ·  c) $\\vec{0}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "egalite-vecteurs",
+      "enonce": "La translation de vecteur $\\overrightarrow{AB}$ transforme le point $M$ en $N$ et le point $P$ en $Q$ (les points $M$, $N$ et $P$ n'étant pas alignés).\n\na) Que peut-on dire des vecteurs $\\overrightarrow{MN}$, $\\overrightarrow{PQ}$ et $\\overrightarrow{AB}$ ?\n\nb) Déduis-en la nature du quadrilatère $MNQP$.",
+      "corrige": [
+        "a) Par définition d'une translation, l'image d'un point fournit un vecteur égal au vecteur de la translation. Comme $N$ est l'image de $M$, on a $\\overrightarrow{MN} = \\overrightarrow{AB}$ ; comme $Q$ est l'image de $P$, on a $\\overrightarrow{PQ} = \\overrightarrow{AB}$.",
+        "Deux vecteurs égaux à un même troisième sont égaux entre eux : $\\overrightarrow{MN} = \\overrightarrow{PQ}$.",
+        "b) On applique la propriété du cours en soignant l'ordre des lettres : $\\overrightarrow{MN} = \\overrightarrow{PQ} \\iff MNQP$ est un parallélogramme (on parcourt le contour $M \\to N \\to Q \\to P \\to M$).",
+        "Ce n'est pas $MNPQ$ (qui serait croisé) : les deux flèches $\\overrightarrow{MN}$ et $\\overrightarrow{PQ}$ sont des côtés opposés, et les diagonales de $MNQP$ sont $[MQ]$ et $[NP]$."
+      ],
+      "reponse": "a) $\\overrightarrow{MN} = \\overrightarrow{PQ} = \\overrightarrow{AB}$  ·  b) $MNQP$ est un parallélogramme."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "somme-chasles",
+      "enonce": "$A$, $B$, $C$ et $D$ sont quatre points du plan tels que $\\overrightarrow{AB} = \\overrightarrow{CD}$. En utilisant la relation de Chasles, démontre que l'on a aussi $\\overrightarrow{AC} = \\overrightarrow{BD}$.",
+      "corrige": [
+        "On exprime chacun des deux vecteurs à comparer en passant par un même point intermédiaire, grâce à la relation de Chasles.",
+        "Pour $\\overrightarrow{AC}$, on passe par $B$ : $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC}$.",
+        "Pour $\\overrightarrow{BD}$, on passe par $C$ : $\\overrightarrow{BD} = \\overrightarrow{BC} + \\overrightarrow{CD}$.",
+        "Or l'énoncé donne $\\overrightarrow{AB} = \\overrightarrow{CD}$. En remplaçant dans la première décomposition : $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{CD} + \\overrightarrow{BC} = \\overrightarrow{BC} + \\overrightarrow{CD} = \\overrightarrow{BD}$.",
+        "On retrouve la remarque du cours : le parallélogramme $ABDC$ donne deux égalités de vecteurs, $\\overrightarrow{AB} = \\overrightarrow{CD}$ et $\\overrightarrow{AC} = \\overrightarrow{BD}$, une par paire de côtés opposés."
+      ],
+      "reponse": "En décomposant par Chasles, $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{CD} + \\overrightarrow{BC} = \\overrightarrow{BD}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "lien-parallelogramme",
+      "enonce": "Maëlle programme un robot qui se déplace sur un quadrillage en enchaînant des translations : chaque déplacement est une translation, décrite par son vecteur. Le robot part d'un point $A$.\n\n1. Le robot effectue d'abord la translation de vecteur $\\overrightarrow{AB}$ et arrive en $B$, puis la translation de vecteur $\\overrightarrow{BC}$ et arrive en $C$. Écris en un seul vecteur le déplacement total qui mène directement de $A$ à $C$.\n\n2. Maëlle place ensuite un point $D$ tel que $\\overrightarrow{AD} = \\overrightarrow{BC}$. Démontre que $ABCD$ est un parallélogramme.\n\n3. Vérifie l'égalité $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AC}$. Que signifie-t-elle pour les deux trajets qui mènent de $A$ à $C$ ?\n\n4. Une fois arrivé en $C$, quel unique déplacement (donné par son vecteur) ramène le robot en $A$ ? Que vaut alors la somme $\\overrightarrow{AC} + \\overrightarrow{CA}$ ?",
+      "corrige": [
+        "1. L'extrémité du premier déplacement, $B$, est l'origine du second : la relation de Chasles s'applique et $B$ disparaît. On obtient $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$. Le robot aurait donc pu rejoindre $C$ en un seul déplacement, la translation de vecteur $\\overrightarrow{AC}$.",
+        "2. On a $\\overrightarrow{AD} = \\overrightarrow{BC}$, autrement dit $\\overrightarrow{BC} = \\overrightarrow{AD}$. La propriété du cours donne $\\overrightarrow{BC} = \\overrightarrow{AD} \\iff BCDA$ est un parallélogramme (contour $B \\to C \\to D \\to A \\to B$). Or $BCDA$ et $ABCD$ désignent le même quadrilatère, simplement décrit en partant d'un autre sommet : $ABCD$ est donc un parallélogramme, dont $[AD]$ et $[BC]$ sont deux côtés opposés égaux et parallèles.",
+        "3. Puisque $ABCD$ est un parallélogramme, les vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{AD}$ partent du même point $A$ : c'est la règle de la somme de deux vecteurs de même origine, $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AC}$. On peut aussi le retrouver par Chasles, car $\\overrightarrow{AD} = \\overrightarrow{BC}$ : $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$. Concrètement, les deux trajets « $A \\to B \\to C$ » et « $A \\to D \\to C$ » aboutissent au même point $C$.",
+        "4. Le déplacement de retour a la même direction et la même longueur que $\\overrightarrow{AC}$, mais le sens contraire : c'est son opposé, $\\overrightarrow{CA}$. En enchaînant l'aller et le retour, le robot revient à son point de départ : $\\overrightarrow{AC} + \\overrightarrow{CA} = \\overrightarrow{AA} = \\vec{0}$."
+      ],
+      "reponse": "1. $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$.  ·  2. $ABCD$ est un parallélogramme.  ·  3. $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AC}$ : les deux trajets aboutissent en $C$.  ·  4. Le retour est $\\overrightarrow{CA}$, et $\\overrightarrow{AC} + \\overrightarrow{CA} = \\vec{0}$."
     }
   ]
 }

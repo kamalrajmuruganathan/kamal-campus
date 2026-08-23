@@ -88,6 +88,58 @@
         "En gardant la valeur non arrondie de $\\widehat{\\mathrm{B}}$ en mémoire (pour ne pas arrondir trop tôt) : $\\mathrm{BC} \\approx 8{,}2$ m. Contrôle : l'hypoténuse est bien le plus long des trois côtés ($8{,}2 > 8$)."
       ],
       "reponse": "$\\widehat{\\mathrm{B}} \\approx 14°$ et $\\mathrm{BC} \\approx 8{,}2$ m."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "trigonometrie",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$. On donne $\\widehat{\\mathrm{B}} = 55°$ et l'hypoténuse $\\mathrm{BC} = 12$ cm. Calculer la longueur $\\mathrm{AB}$, arrondie au dixième de cm.",
+      "corrige": [
+        "On repère l'angle droit en $\\mathrm{A}$, puis l'angle de travail $\\widehat{\\mathrm{B}}$. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AB}]$ est le côté adjacent (il touche l'angle sans être l'hypoténuse) et $[\\mathrm{BC}]$ l'hypoténuse.",
+        "Les deux côtés en jeu sont l'adjacent et l'hypoténuse : c'est le cosinus (CAH). $\\cos \\widehat{\\mathrm{B}} = \\dfrac{\\text{adjacent}}{\\text{hypoténuse}} = \\dfrac{\\mathrm{AB}}{\\mathrm{BC}}$.",
+        "On remplace : $\\cos 55° = \\dfrac{\\mathrm{AB}}{12}$. L'inconnue est au numérateur, donc on multiplie : $\\mathrm{AB} = 12 \\times \\cos 55°$.",
+        "À la calculatrice en mode DEG : $\\mathrm{AB} = 12 \\times \\cos 55° \\approx 6{,}9$ cm. Contrôle : l'adjacent $6{,}9$ est bien plus court que l'hypoténuse $12$."
+      ],
+      "reponse": "$\\mathrm{AB} \\approx 6{,}9$ cm."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "trigonometrie",
+      "enonce": "Une échelle de $4$ m est appuyée contre un mur vertical ; elle fait un angle de $70°$ avec le sol horizontal. On modélise la situation par le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$ : $\\mathrm{A}$ est le pied du mur, $[\\mathrm{AB}]$ le sol, $[\\mathrm{AC}]$ le mur et $[\\mathrm{BC}] = 4$ m l'échelle, avec $\\widehat{\\mathrm{B}} = 70°$. 1. À quelle hauteur $\\mathrm{AC}$ l'échelle touche-t-elle le mur, au dixième de mètre ? 2. À quelle distance $\\mathrm{AB}$ du mur se trouve le pied de l'échelle, au dixième de mètre ?",
+      "corrige": [
+        "Question 1. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est le côté opposé (il lui fait face) et $[\\mathrm{BC}]$ l'hypoténuse. Opposé et hypoténuse : c'est le sinus (SOH).",
+        "$\\sin \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AC}}{\\mathrm{BC}}$, soit $\\sin 70° = \\dfrac{\\mathrm{AC}}{4}$. L'inconnue est au numérateur : $\\mathrm{AC} = 4 \\times \\sin 70° \\approx 3{,}8$ m.",
+        "Question 2. On cherche $[\\mathrm{AB}]$, l'adjacent à $\\widehat{\\mathrm{B}}$, avec l'hypoténuse $[\\mathrm{BC}]$ : c'est le cosinus (CAH). $\\cos \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AB}}{\\mathrm{BC}}$, soit $\\cos 70° = \\dfrac{\\mathrm{AB}}{4}$.",
+        "L'inconnue est au numérateur : $\\mathrm{AB} = 4 \\times \\cos 70° \\approx 1{,}4$ m. Contrôle : les deux côtés $3{,}8$ et $1{,}4$ sont bien plus courts que l'échelle $4$ m."
+      ],
+      "reponse": "$\\mathrm{AC} \\approx 3{,}8$ m et $\\mathrm{AB} \\approx 1{,}4$ m."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "contraposee-thales",
+      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{M}$ est un point de $[\\mathrm{AB}]$ et $\\mathrm{N}$ un point de $[\\mathrm{AC}]$, placés dans l'ordre $\\mathrm{A}$, $\\mathrm{M}$, $\\mathrm{B}$ et $\\mathrm{A}$, $\\mathrm{N}$, $\\mathrm{C}$. On donne $\\mathrm{AM} = 3$ cm, $\\mathrm{AB} = 5$ cm, $\\mathrm{AN} = 4$ cm et $\\mathrm{AC} = 7$ cm. Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ? Justifier.",
+      "corrige": [
+        "On veut trancher le parallélisme à partir des longueurs : c'est le domaine de la réciproque et de la contraposée de Thalès. On n'a donc pas le droit de supposer l'égalité des rapports ; on calcule chacun de son côté, puis on compare.",
+        "D'un côté $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{3}{5}$ ; de l'autre $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{4}{7}$.",
+        "Pour comparer sans se fier à l'œil, on réduit au même dénominateur ($5 \\times 7 = 35$) : $\\dfrac{3}{5} = \\dfrac{21}{35}$ et $\\dfrac{4}{7} = \\dfrac{20}{35}$.",
+        "Les deux rapports sont différents ($\\dfrac{21}{35} \\neq \\dfrac{20}{35}$). D'après la contraposée du théorème de Thalès, les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ ne sont pas parallèles."
+      ],
+      "reponse": "Non : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{21}{35} \\neq \\dfrac{20}{35} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$, donc d'après la contraposée de Thalès $(\\mathrm{MN})$ et $(\\mathrm{BC})$ ne sont pas parallèles."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "thales-trigonometrie",
+      "enonce": "Un charpentier étudie une ferme de toit modélisée par le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$. $[\\mathrm{AB}]$ est la base horizontale, $[\\mathrm{AC}]$ la hauteur verticale et $[\\mathrm{BC}]$ le rampant (le chevron incliné qui monte de la base jusqu'au faîte). On donne $\\mathrm{AB} = 6$ m et $\\mathrm{AC} = 2{,}5$ m. 1. Calculer la longueur $\\mathrm{BC}$ du chevron. 2. Calculer la mesure de l'angle $\\widehat{\\mathrm{B}}$ que le chevron fait avec la base, arrondie au degré. 3. Pour renforcer la structure, on pose une jambe de force verticale $[\\mathrm{MN}]$ : $\\mathrm{M}$ est sur $[\\mathrm{AB}]$ avec $\\mathrm{BM} = 2{,}4$ m, $\\mathrm{N}$ est sur le chevron $[\\mathrm{BC}]$, et $(\\mathrm{MN}) \\parallel (\\mathrm{AC})$. Calculer la hauteur $\\mathrm{MN}$ de cette jambe de force. 4. Calculer la longueur $\\mathrm{BN}$, du bas du chevron jusqu'à la jambe de force.",
+      "corrige": [
+        "1. Le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ et on connait les deux côtés de l'angle droit : on applique l'égalité de Pythagore. $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2 = 6^2 + 2{,}5^2 = 36 + 6{,}25 = 42{,}25$, donc $\\mathrm{BC} = \\sqrt{42{,}25} = 6{,}5$ m.",
+        "2. On connait deux longueurs et on cherche l'angle $\\widehat{\\mathrm{B}}$. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est l'opposé et $[\\mathrm{AB}]$ l'adjacent (l'hypoténuse n'intervient pas) : c'est la tangente (TOA). $\\tan \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AC}}{\\mathrm{AB}} = \\dfrac{2{,}5}{6} \\approx 0{,}417$, puis avec la fonction inverse $\\widehat{\\mathrm{B}} = \\tan^{-1}(0{,}417) \\approx 23°$.",
+        "3. Les droites $(\\mathrm{BA})$ et $(\\mathrm{BC})$ sont sécantes en $\\mathrm{B}$ et coupées par les parallèles $(\\mathrm{MN})$ et $(\\mathrm{AC})$ : c'est la configuration des triangles emboités de sommet $\\mathrm{B}$. Le théorème de Thalès donne $\\dfrac{\\mathrm{BM}}{\\mathrm{BA}} = \\dfrac{\\mathrm{BN}}{\\mathrm{BC}} = \\dfrac{\\mathrm{MN}}{\\mathrm{AC}}$. Avec les rapports contenant $\\mathrm{MN}$ : $\\dfrac{2{,}4}{6} = \\dfrac{\\mathrm{MN}}{2{,}5}$, d'où $\\mathrm{MN} = \\dfrac{2{,}4 \\times 2{,}5}{6} = \\dfrac{6}{6} = 1$ m.",
+        "4. On reprend la chaine de Thalès avec les rapports contenant $\\mathrm{BN}$ : $\\dfrac{\\mathrm{BM}}{\\mathrm{BA}} = \\dfrac{\\mathrm{BN}}{\\mathrm{BC}}$, soit $\\dfrac{2{,}4}{6} = \\dfrac{\\mathrm{BN}}{6{,}5}$. Produit en croix : $\\mathrm{BN} = \\dfrac{2{,}4 \\times 6{,}5}{6} = \\dfrac{15{,}6}{6} = 2{,}6$ m."
+      ],
+      "reponse": "1. $\\mathrm{BC} = 6{,}5$ m. 2. $\\widehat{\\mathrm{B}} \\approx 23°$. 3. $\\mathrm{MN} = 1$ m. 4. $\\mathrm{BN} = 2{,}6$ m."
     }
   ]
 }

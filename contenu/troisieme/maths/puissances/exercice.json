@@ -84,6 +84,56 @@
         "Vérification de l'ordre de grandeur : $2{,}4 \\times 10^{13}$, soit $24$ mille milliards d'opérations — cohérent pour près de deux heures de calcul."
       ],
       "reponse": "$N = 2{,}4 \\times 10^{13}$ opérations."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "notation-scientifique",
+      "enonce": "Le diamètre d'un globule rouge est d'environ $0{,}0000075$ m. Écris cette mesure en notation scientifique. Écris aussi le nombre $6\\,200\\,000$ en notation scientifique.",
+      "corrige": [
+        "Rappel : la notation scientifique s'écrit $a \\times 10^{\\,n}$ avec $1 \\leqslant a < 10$, c'est-à-dire un seul chiffre non nul avant la virgule.",
+        "Pour $0{,}0000075$ : on place la virgule juste après le premier chiffre non nul, soit $a = 7{,}5$. La virgule a avancé de **6 rangs** (on compte les rangs, pas les zéros) et le nombre est petit, donc $n = -6$ : $0{,}0000075 = 7{,}5 \\times 10^{-6}$.",
+        "Pour $6\\,200\\,000$ : on place la virgule juste après le $6$, soit $a = 6{,}2$. La virgule a reculé de **6 rangs** et le nombre est grand, donc $n = 6$ : $6\\,200\\,000 = 6{,}2 \\times 10^{6}$."
+      ],
+      "reponse": "$0{,}0000075 = 7{,}5 \\times 10^{-6}$ ; $6\\,200\\,000 = 6{,}2 \\times 10^{6}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "notation-scientifique",
+      "enonce": "Écris le quotient $\\dfrac{2 \\times 10^{-4}}{8 \\times 10^{3}}$ en notation scientifique.",
+      "corrige": [
+        "On sépare les mantisses et les puissances de 10 : $\\dfrac{2 \\times 10^{-4}}{8 \\times 10^{3}} = \\dfrac{2}{8} \\times 10^{\\,-4-3} = 0{,}25 \\times 10^{-7}$. Attention au signe des exposants : $-4 - 3 = -7$.",
+        "Il faut **renormaliser** : $0{,}25$ n'est pas compris entre $1$ et $10$. On écrit $0{,}25 = 2{,}5 \\times 10^{-1}$, donc $0{,}25 \\times 10^{-7} = 2{,}5 \\times 10^{-1} \\times 10^{-7} = 2{,}5 \\times 10^{-8}$.",
+        "Contrôle de l'ordre de grandeur : $2{,}5 \\times 10^{-8}$ est un très petit nombre positif, ce qui est cohérent puisqu'on divise un petit numérateur par un nombre bien plus grand."
+      ],
+      "reponse": "$\\dfrac{2 \\times 10^{-4}}{8 \\times 10^{3}} = 2{,}5 \\times 10^{-8}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "La masse de la Terre est d'environ $6 \\times 10^{24}$ kg et celle de la Lune d'environ $7{,}4 \\times 10^{22}$ kg. Combien de fois la Terre est-elle plus lourde que la Lune ? Donne une valeur approchée du résultat, puis son ordre de grandeur.",
+      "corrige": [
+        "« Combien de fois plus lourde » se traduit par un **quotient** : $\\dfrac{m_{\\text{Terre}}}{m_{\\text{Lune}}} = \\dfrac{6 \\times 10^{24}}{7{,}4 \\times 10^{22}}$.",
+        "On sépare mantisses et puissances de 10 : $\\dfrac{6}{7{,}4} \\times 10^{\\,24-22} = 0{,}81 \\times 10^{2}$, car $6 \\div 7{,}4 \\approx 0{,}81$.",
+        "On **renormalise** : $0{,}81 \\times 10^{2} = 8{,}1 \\times 10^{-1} \\times 10^{2} = 8{,}1 \\times 10^{1} = 81$. La Terre est donc environ **81 fois** plus lourde que la Lune.",
+        "Ordre de grandeur : le résultat est proche de $10^{2}$, soit quelques dizaines. Contrôle de bon sens : les exposants $24$ et $22$ diffèrent de $2$, donc le rapport est de l'ordre de $10^{2}$ — cohérent."
+      ],
+      "reponse": "$\\dfrac{6 \\times 10^{24}}{7{,}4 \\times 10^{22}} \\approx 8{,}1 \\times 10^{1} = 81$ : la Terre est environ $81$ fois plus lourde que la Lune (ordre de grandeur $10^{2}$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "**Optique et télécommunications.** Un laboratoire étudie une onde de lumière rouge de longueur d'onde $\\lambda = 6 \\times 10^{-7}$ m. La lumière se propage dans le vide à la vitesse $c = 3 \\times 10^{8}$ m/s.\n\n1. Exprime $\\lambda$ en nanomètres, sachant que $1$ nm $= 10^{-9}$ m.\n2. En une seconde, la lumière parcourt $c$ mètres. Combien de longueurs d'onde $\\lambda$ tiennent dans cette distance ? Donne le résultat en notation scientifique. (Ce nombre est la fréquence de l'onde, exprimée en hertz.)\n3. Ce laboratoire communique avec un satellite géostationnaire situé à une altitude de $3{,}6 \\times 10^{7}$ m. Quelle durée met un signal lumineux pour monter du sol jusqu'au satellite ? Donne le résultat en secondes.\n4. Cette durée est-elle négligeable devant $1$ seconde ? Justifie à l'aide de l'ordre de grandeur.",
+      "corrige": [
+        "1. Convertir en nanomètres revient à diviser par $10^{-9}$ : $\\lambda = \\dfrac{6 \\times 10^{-7}}{10^{-9}} = 6 \\times 10^{\\,-7-(-9)} = 6 \\times 10^{2} = 600$. Donc $\\lambda = 600$ nm. (Soustraire $-9$ revient à ajouter $9$ : $-7 + 9 = 2$.)",
+        "2. Le nombre de longueurs d'onde est $\\dfrac{c}{\\lambda} = \\dfrac{3 \\times 10^{8}}{6 \\times 10^{-7}} = \\dfrac{3}{6} \\times 10^{\\,8-(-7)} = 0{,}5 \\times 10^{15}$. On **renormalise** : $0{,}5 \\times 10^{15} = 5 \\times 10^{-1} \\times 10^{15} = 5 \\times 10^{14}$. La fréquence vaut donc $5 \\times 10^{14}$ Hz.",
+        "3. La durée est $t = \\dfrac{d}{c} = \\dfrac{3{,}6 \\times 10^{7}}{3 \\times 10^{8}} = \\dfrac{3{,}6}{3} \\times 10^{\\,7-8} = 1{,}2 \\times 10^{-1}$ s, soit $0{,}12$ s.",
+        "4. On compare $t = 1{,}2 \\times 10^{-1}$ s à $1$ s $= 1 \\times 10^{0}$ s. Les exposants ne diffèrent que de $1$ : la durée est seulement environ dix fois plus petite qu'une seconde. Elle **n'est pas négligeable** devant $1$ s — elle en représente à peu près un dixième."
+      ],
+      "reponse": "1. $\\lambda = 600$ nm. 2. Fréquence $= 5 \\times 10^{14}$ Hz. 3. $t = 1{,}2 \\times 10^{-1}$ s $= 0{,}12$ s. 4. Non négligeable : un seul ordre de grandeur sous $1$ s (environ un dixième de seconde)."
     }
   ]
 }

@@ -86,6 +86,59 @@
         "On convertit : $1\\,750\\,000 \\div 100\\,000 = 17{,}5$ km."
       ],
       "reponse": "1. L'échelle est $\\dfrac{1}{250\\,000}$. 2. La distance réelle est $17{,}5$ km."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "partage-ratio",
+      "enonce": "Un club de sport reçoit une subvention de $4\\,200$ € qu'il partage entre sa section tennis et sa section natation proportionnellement à leur nombre de licenciés, dans le ratio $3 : 4$. Calcule la part de chaque section.",
+      "corrige": [
+        "On additionne les termes du ratio pour connaître le nombre total de parts : $3 + 4 = 7$ parts.",
+        "On cherche la valeur d'une part : $4\\,200 \\div 7 = 600$ €.",
+        "Tennis : $3 \\times 600 = 1\\,800$ € ; natation : $4 \\times 600 = 2\\,400$ €.",
+        "Contrôle : $1\\,800 + 2\\,400 = 4\\,200$ € ✓. On divise bien par la somme des termes, jamais par un seul."
+      ],
+      "reponse": "La section tennis reçoit $1\\,800$ € et la section natation $2\\,400$ €."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "graphique-thales",
+      "enonce": "Un cycliste roule à allure constante. Sur le graphique distance–temps, les points sont alignés avec l'origine. On lit qu'en $3$ h il a parcouru $54$ km. \\n1. Quelle distance parcourt-il en $5$ h ? \\n2. Combien de temps lui faut-il pour parcourir $126$ km ?",
+      "corrige": [
+        "Les points étant alignés avec l'origine, la distance est proportionnelle au temps. Le coefficient est $\\dfrac{54}{3} = 18$ (soit $18$ km par heure).",
+        "1. En $5$ h : $18 \\times 5 = 90$ km. (Thalès : $\\dfrac{3}{5} = \\dfrac{54}{d}$ donne $d = \\dfrac{5 \\times 54}{3} = 90$ km.)",
+        "2. Pour $126$ km, on divise par le coefficient : $126 \\div 18 = 7$ h.",
+        "Contrôle : en $7$ h, $18 \\times 7 = 126$ km ✓. Sur une droite passant par l'origine, on multiplie (ou on divise) — on n'ajoute pas."
+      ],
+      "reponse": "1. Il parcourt $90$ km en $5$ h. 2. Il lui faut $7$ h pour parcourir $126$ km."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "evolutions-successives",
+      "enonce": "Le cours d'une action gagne $50\\,\\%$ en une semaine, puis perd $40\\,\\%$ la semaine suivante. Détermine le taux d'évolution global sur les deux semaines, puis dis si l'action a finalement gagné, perdu ou retrouvé sa valeur de départ.",
+      "corrige": [
+        "À une hausse de $50\\,\\%$ correspond le coefficient $1 + \\dfrac{50}{100} = 1{,}50$ ; à une baisse de $40\\,\\%$ correspond le coefficient $1 - \\dfrac{40}{100} = 0{,}60$.",
+        "Pour deux évolutions successives, on MULTIPLIE les coefficients : $1{,}50 \\times 0{,}60 = 0{,}90$.",
+        "On traduit ce coefficient global en taux : $t = (0{,}90 - 1) \\times 100 = -10$.",
+        "Le taux global est négatif : l'action a perdu de la valeur. Contrôle sur $100$ € : $100 \\to 150 \\to 90$, soit bien $-10\\,\\%$ au total (et non $+10\\,\\%$)."
+      ],
+      "reponse": "Le taux d'évolution global est $-10\\,\\%$ : l'action a perdu $10\\,\\%$ de sa valeur de départ."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "evolutions-successives",
+      "enonce": "Un magasin vend un vélo électrique au prix de $1\\,200$ € en janvier. On étudie l'évolution de son prix, de ses ventes et de son chiffre d'affaires sur l'année. \\n1. En février, le magasin applique une remise de $15\\,\\%$ sur ce vélo. Calcule le prix soldé. \\n2. En mars, les soldes terminées, ce prix soldé augmente à son tour de $15\\,\\%$. Le vélo retrouve-t-il exactement son prix de janvier ? Justifie par le calcul. \\n3. Finalement, le magasin fixe le prix d'avril à $1\\,242$ €, à partir du prix de janvier ($1\\,200$ €). Quel est le taux d'évolution du prix entre janvier et avril ? \\n4. Le nombre de vélos de ce modèle vendus est passé de $80$ en janvier à $92$ en avril. Quel est le taux d'évolution des ventes ? \\n5. Le chiffre d'affaires d'un mois est le produit (prix $\\times$ nombre de vélos vendus). Détermine le taux d'évolution global du chiffre d'affaires entre janvier et avril.",
+      "corrige": [
+        "1. Une remise de $15\\,\\%$ correspond au coefficient $1 - \\dfrac{15}{100} = 0{,}85$. Prix soldé : $1\\,200 \\times 0{,}85 = 1\\,020$ €.",
+        "2. Une hausse de $15\\,\\%$ correspond au coefficient $1{,}15$ : $1\\,020 \\times 1{,}15 = 1\\,173$ €. Ce n'est PAS $1\\,200$ €. En effet $0{,}85 \\times 1{,}15 = 0{,}9775$, soit un taux global de $-2{,}25\\,\\%$ : une baisse suivie d'une hausse de même pourcentage ne ramène pas au prix de départ, car les deux taux ne portent pas sur la même base.",
+        "3. Taux entre janvier et avril : $t = \\dfrac{V_a - V_d}{V_d} \\times 100 = \\dfrac{1\\,242 - 1\\,200}{1\\,200} \\times 100 = \\dfrac{42}{1\\,200} \\times 100 = 3{,}5$. C'est une hausse de $+3{,}5\\,\\%$.",
+        "4. Taux des ventes : $\\dfrac{92 - 80}{80} \\times 100 = \\dfrac{12}{80} \\times 100 = 15$, soit $+15\\,\\%$.",
+        "5. Le chiffre d'affaires est le produit prix $\\times$ ventes : son coefficient global est le produit des deux coefficients, $1{,}035 \\times 1{,}15 = 1{,}19025$, soit un taux de $+19{,}025\\,\\%$. Contrôle direct : CA de janvier $= 1\\,200 \\times 80 = 96\\,000$ € ; CA d'avril $= 1\\,242 \\times 92 = 114\\,264$ € ; $\\dfrac{114\\,264 - 96\\,000}{96\\,000} \\times 100 = 19{,}025$ ✓."
+      ],
+      "reponse": "1. $1\\,020$ €. 2. Non : $1\\,173$ € (globalement $-2{,}25\\,\\%$). 3. $+3{,}5\\,\\%$. 4. $+15\\,\\%$. 5. Le chiffre d'affaires évolue de $+19{,}025\\,\\%$ (de $96\\,000$ € à $114\\,264$ €)."
     }
   ]
 }

@@ -88,6 +88,58 @@
         "La boule occupe donc les deux tiers du cylindre qui la contient : c'est le résultat d'Archimède."
       ],
       "reponse": "a) $V_{\\text{cylindre}} = 2\\pi R^3$. b) $\\dfrac{V_{\\text{boule}}}{V_{\\text{cylindre}}} = \\dfrac{2}{3}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "section-pave",
+      "enonce": "Un pavé droit a pour dimensions $8$ cm $\\times$ $6$ cm $\\times$ $4$ cm. On le coupe par un plan parallèle à sa face $8 \\times 6$. a) Quelle est la nature de la section obtenue ? b) Donne ses dimensions, puis calcule son aire.",
+      "corrige": [
+        "a) La section d'un pavé par un plan parallèle à l'une de ses faces est un rectangle identique à cette face, et cela quelle que soit la hauteur de la coupe.",
+        "b) La section a donc les mêmes dimensions que la face $8 \\times 6$, soit $8$ cm sur $6$ cm.",
+        "Son aire vaut $\\mathcal{A} = 8 \\times 6 = 48 \\text{ cm}^2$. La dimension $4$ cm (la hauteur du pavé) n'intervient pas : elle indique seulement à quelles hauteurs on peut placer la coupe."
+      ],
+      "reponse": "a) Un rectangle. b) Il mesure $8 \\times 6$ (cm) et son aire est $48 \\text{ cm}^2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "section-boule",
+      "enonce": "Une boule de centre $O$ a pour diamètre $20$ cm. Un plan la coupe à la distance $d = 6$ cm du centre. a) Quel est le rayon $R$ de la boule ? b) Calcule le rayon $r$ du disque de section. c) Calcule l'aire de ce disque ($\\pi \\approx 3{,}14$).",
+      "corrige": [
+        "a) Le rayon est la moitié du diamètre : $R = \\dfrac{20}{2} = 10$ cm. Attention à ne pas garder $20$ comme rayon.",
+        "b) La section d'une boule est un disque. Comme le plan ne passe pas par le centre, on utilise Pythagore : $r = \\sqrt{R^2 - d^2}$.",
+        "$r = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8$ cm.",
+        "c) L'aire du disque de section est $\\mathcal{A} = \\pi r^2 = 3{,}14 \\times 8^2 = 3{,}14 \\times 64 = 200{,}96 \\text{ cm}^2$."
+      ],
+      "reponse": "a) $R = 10$ cm. b) $r = 8$ cm. c) $\\mathcal{A} = 200{,}96 \\text{ cm}^2$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "volume-boule",
+      "enonce": "On place une boule de rayon $R = 3$ cm dans le plus petit cube qui peut la contenir. On prend $\\pi \\approx 3{,}14$. a) Quelle est l'arête de ce cube ? b) Calcule le volume du cube, puis celui de la boule. c) Quel volume, à l'intérieur du cube, n'est pas occupé par la boule ?",
+      "corrige": [
+        "a) Pour contenir la boule au plus juste, chaque arête du cube doit valoir le diamètre de la boule : $a = 2R = 2 \\times 3 = 6$ cm.",
+        "b) Volume du cube : $V_{\\text{cube}} = a^3 = 6^3 = 216 \\text{ cm}^3$.",
+        "Volume de la boule : $V_{\\text{boule}} = \\dfrac{4}{3} \\times 3{,}14 \\times 3^3 = \\dfrac{4}{3} \\times 3{,}14 \\times 27 = \\dfrac{339{,}12}{3} = 113{,}04 \\text{ cm}^3$.",
+        "c) Le volume vide est la différence : $V_{\\text{vide}} = 216 - 113{,}04 = 102{,}96 \\text{ cm}^3$. La boule, bien qu'inscrite au plus juste, laisse donc près de la moitié du cube inoccupée (les huit coins)."
+      ],
+      "reponse": "a) $a = 6$ cm. b) $V_{\\text{cube}} = 216 \\text{ cm}^3$ et $V_{\\text{boule}} = 113{,}04 \\text{ cm}^3$. c) $V_{\\text{vide}} = 102{,}96 \\text{ cm}^3$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "boule-sections-volume",
+      "enonce": "Un artisan fabrique une boule décorative pleine en verre, de centre $O$ et de rayon $R = 15$ cm. Pour toutes les questions, on prend $\\pi \\approx 3{,}14$. 1. Quelle est la longueur du diamètre de cette boule ? 2. Calcule le volume de verre nécessaire, en cm³, puis exprime-le en litres (on rappelle $1 \\text{ L} = 1000 \\text{ cm}^3$). 3. L'artisan scie la boule par un plan passant par le centre $O$. Quelle est la nature et le rayon de la section ? Calcule son aire. 4. Il réalise une seconde coupe, par un plan situé cette fois à $d = 9$ cm du centre. Calcule le rayon $r$ de cette section, puis son aire. 5. On enferme la boule dans le plus petit cylindre qui la contient (rayon $15$ cm, hauteur $30$ cm). Calcule le volume de ce cylindre et vérifie que le volume de la boule en représente bien les deux tiers.",
+      "corrige": [
+        "1. Le diamètre vaut deux fois le rayon : $d = 2R = 2 \\times 15 = 30$ cm.",
+        "2. Le volume de la boule est $V = \\dfrac{4}{3} \\times \\pi \\times R^3$. On calcule $R^3 = 15^3 = 3375$, puis $3375 \\times 3{,}14 = 10597{,}5$, puis $\\times 4 = 42390$, et enfin $\\div 3 = 14130$. Donc $V = 14130 \\text{ cm}^3$. Comme $1 \\text{ L} = 1000 \\text{ cm}^3$, cela fait $14130 \\div 1000 = 14{,}13$ L de verre.",
+        "3. Toute section d'une boule est un disque ; comme le plan passe par le centre, c'est un grand cercle de rayon égal à celui de la boule : $r = R = 15$ cm. Son aire est $\\mathcal{A} = \\pi r^2 = 3{,}14 \\times 15^2 = 3{,}14 \\times 225 = 706{,}5 \\text{ cm}^2$.",
+        "4. Le plan ne passe pas par le centre : on applique Pythagore, $r = \\sqrt{R^2 - d^2} = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12$ cm. Son aire vaut $\\mathcal{A} = 3{,}14 \\times 12^2 = 3{,}14 \\times 144 = 452{,}16 \\text{ cm}^2$. Cette section est plus petite que le grand cercle, ce qui est logique puisque le plan s'éloigne du centre.",
+        "5. Le cylindre a pour volume $V_{\\text{cyl}} = \\pi R^2 \\times h = 3{,}14 \\times 225 \\times 30 = 21195 \\text{ cm}^3$. Les deux tiers de ce volume valent $\\dfrac{2}{3} \\times 21195 = 14130 \\text{ cm}^3$, ce qui est exactement le volume de la boule trouvé à la question 2 : on retrouve le résultat d'Archimède."
+      ],
+      "reponse": "1. $d = 30$ cm. 2. $V = 14130 \\text{ cm}^3 = 14{,}13$ L. 3. Un grand cercle (disque) de rayon $15$ cm, d'aire $706{,}5 \\text{ cm}^2$. 4. $r = 12$ cm, d'aire $452{,}16 \\text{ cm}^2$. 5. $V_{\\text{cyl}} = 21195 \\text{ cm}^3$ et $\\dfrac{2}{3} \\times 21195 = 14130 \\text{ cm}^3 = V_{\\text{boule}}$."
     }
   ]
 }

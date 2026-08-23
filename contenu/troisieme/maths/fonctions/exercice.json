@@ -86,6 +86,56 @@
         "**3.** Pour $10$ photos : $A(10) = 0{,}60 \\times 10 = 6$ € et $B(10) = 0{,}20 \\times 10 + 6 = 2 + 6 = 8$ €. Comme $6 < 8$, l'**offre A** est la plus avantageuse pour $10$ photos (elle l'est tant que le nombre de photos reste inférieur à $15$)."
       ],
       "reponse": "$A(x) = 0{,}60x$ (linéaire) et $B(x) = 0{,}20x + 6$ (affine) ; les deux offres coûtent $9$ € pour $15$ photos ; pour $10$ photos l'offre A ($6$ €) est plus avantageuse que l'offre B ($8$ €)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "fonction-carre",
+      "enonce": "Soit $g$ la fonction carré, définie par $g(x) = x^2$. \n1. Calculer les images de $7$ et de $-5$ par $g$. \n2. Déterminer les antécédents de $36$ par $g$. \n3. Le nombre $-9$ a-t-il un antécédent par $g$ ? Justifier.",
+      "corrige": [
+        "**1. Images.** On **remplace** $x$ par le nombre donné : $g(7) = 7^2 = 49$ et $g(-5) = (-5)^2 = 25$. Attention : le carré d'un nombre négatif est **positif**, $(-5)^2 = 25$ et non $-25$.",
+        "**2. Antécédents de $36$.** On **résout** $g(x) = 36$, c'est-à-dire $x^2 = 36$. Deux nombres ont pour carré $36$ : $6$ (car $6^2 = 36$) et $-6$ (car $(-6)^2 = 36$). Le nombre $36$ a donc **deux** antécédents : $6$ et $-6$.",
+        "**3.** On cherche $x$ tel que $x^2 = -9$. Or un carré est **toujours positif ou nul** : il ne peut jamais valoir $-9$. Donc $-9$ n'a **aucun** antécédent par $g$."
+      ],
+      "reponse": "$g(7) = 49$ et $g(-5) = 25$ ; les antécédents de $36$ sont $6$ et $-6$ ; $-9$ n'a aucun antécédent (un carré n'est jamais négatif)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "fonction-affine",
+      "enonce": "On sait que $f$ est une fonction **affine** et que $f(2) = 7$ et $f(5) = 16$. \n1. Déterminer le coefficient directeur $a$ de $f$. \n2. En déduire l'ordonnée à l'origine $b$, puis l'expression de $f(x)$. \n3. Déterminer l'antécédent de $22$ par $f$.",
+      "corrige": [
+        "**1.** Pour une fonction affine $f(x) = ax + b$, le coefficient directeur se calcule à partir de deux images : quand $x$ passe de $2$ à $5$ (augmentation de $3$), l'image passe de $7$ à $16$ (augmentation de $9$). Donc $a = \\dfrac{16 - 7}{5 - 2} = \\dfrac{9}{3} = 3$.",
+        "**2.** On a maintenant $f(x) = 3x + b$. On utilise $f(2) = 7$ : $3 \\times 2 + b = 7$, soit $6 + b = 7$, donc $b = 1$. Ainsi $f(x) = 3x + 1$. (Vérification avec l'autre point : $f(5) = 3 \\times 5 + 1 = 16$. ✓)",
+        "**3. Antécédent de $22$.** On **résout** $f(x) = 22$, soit $3x + 1 = 22$. On enlève $1$ : $3x = 21$, puis on divise par $3$ : $x = 7$."
+      ],
+      "reponse": "$a = 3$, $b = 1$ et $f(x) = 3x + 1$ ; l'antécédent de $22$ est $7$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "fonction-lineaire",
+      "enonce": "Un cycliste roule à vitesse constante. La distance parcourue, en kilomètres, en fonction du temps $t$ écoulé (en heures) est donnée par $d(t) = 25t$. \n1. La fonction $d$ est-elle linéaire ou affine ? La distance est-elle proportionnelle au temps ? Calculer l'image de $3$ et interpréter. \n2. Combien de temps met le cycliste pour parcourir $60$ km ? \n3. Résoudre l'inéquation $d(t) < 40$ et interpréter le résultat dans la situation.",
+      "corrige": [
+        "**1.** $d(t) = 25t$ est de la forme $at$ (avec $a = 25$) : la fonction est **linéaire**, donc la distance est **proportionnelle** au temps (le coefficient $25$ est la vitesse, en km/h). Image de $3$ : $d(3) = 25 \\times 3 = 75$. En $3$ heures, le cycliste a parcouru $75$ km.",
+        "**2.** On cherche l'**antécédent** de $60$ : on résout $d(t) = 60$, soit $25t = 60$, donc $t = \\dfrac{60}{25} = 2{,}4$. Le cycliste met $2{,}4$ heures, c'est-à-dire $2$ h $24$ min, pour parcourir $60$ km.",
+        "**3.** On résout $25t < 40$, donc $t < \\dfrac{40}{25} = 1{,}6$. La distance parcourue reste inférieure à $40$ km tant que le temps écoulé est inférieur à $1{,}6$ heure (soit $1$ h $36$ min). Comme le temps est positif, la solution est $0 \\le t < 1{,}6$."
+      ],
+      "reponse": "$d$ est linéaire, la distance est proportionnelle au temps ; $d(3) = 75$ km ; il faut $2{,}4$ h (2 h 24 min) pour $60$ km ; $d(t) < 40$ pour $t < 1{,}6$ h (1 h 36 min)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "fonctions-affines",
+      "enonce": "Une bougie neuve mesure $20$ cm. Elle brûle régulièrement et sa hauteur diminue de $2{,}5$ cm par heure. On note $t$ le temps écoulé depuis l'allumage, en heures, et $h(t)$ la hauteur de la bougie, en centimètres. \n1. Exprimer $h(t)$ en fonction de $t$. La fonction $h$ est-elle linéaire ou affine ? Que représentent les nombres $20$ et $-2{,}5$ pour la bougie ? \n2. Quelle est la hauteur de la bougie au bout de $3$ heures ? \n3. Au bout de combien de temps la bougie ne mesure-t-elle plus que $5$ cm ? \n4. À quel instant la bougie est-elle entièrement consumée (hauteur nulle) ? \n5. On allume en même temps une seconde bougie dont la hauteur est donnée par $g(t) = 15 - 1{,}5t$. À quel instant les deux bougies ont-elles la même hauteur ? Quelle est alors cette hauteur ?",
+      "corrige": [
+        "1. En $t$ heures, la bougie a perdu $2{,}5t$ cm à partir de sa hauteur initiale de $20$ cm : $h(t) = 20 - 2{,}5t$. C'est de la forme $at + b$ avec $a = -2{,}5$ et $b = 20$ : la fonction est **affine** (et non linéaire, car $b \\neq 0$). Le nombre $20$ est la **hauteur initiale** (l'ordonnée à l'origine, $h(0) = 20$) et $-2{,}5$ est le **coefficient directeur** : la hauteur baisse de $2{,}5$ cm chaque heure.",
+        "2. On cherche l'**image** de $3$ : $h(3) = 20 - 2{,}5 \\times 3 = 20 - 7{,}5 = 12{,}5$. Au bout de $3$ heures, la bougie mesure $12{,}5$ cm.",
+        "3. On cherche l'**antécédent** de $5$ : on résout $h(t) = 5$, soit $20 - 2{,}5t = 5$. On obtient $-2{,}5t = 5 - 20 = -15$, puis $t = \\dfrac{-15}{-2{,}5} = 6$. La bougie mesure $5$ cm au bout de $6$ heures.",
+        "4. On résout $h(t) = 0$, soit $20 - 2{,}5t = 0$, donc $2{,}5t = 20$ et $t = \\dfrac{20}{2{,}5} = 8$. La bougie est entièrement consumée au bout de $8$ heures.",
+        "5. Les deux bougies ont la même hauteur quand $h(t) = g(t)$, soit $20 - 2{,}5t = 15 - 1{,}5t$. On regroupe : $20 - 15 = 2{,}5t - 1{,}5t$, donc $5 = t$. À $t = 5$ heures, les hauteurs sont égales. La hauteur commune est $h(5) = 20 - 2{,}5 \\times 5 = 20 - 12{,}5 = 7{,}5$ cm (vérification : $g(5) = 15 - 1{,}5 \\times 5 = 15 - 7{,}5 = 7{,}5$ cm. ✓)."
+      ],
+      "reponse": "$h(t) = 20 - 2{,}5t$, fonction affine ($20$ = hauteur initiale, $-2{,}5$ = perte par heure) ; $h(3) = 12{,}5$ cm ; la bougie mesure $5$ cm au bout de $6$ h ; elle est consumée au bout de $8$ h ; les deux bougies ont la même hauteur $7{,}5$ cm à $t = 5$ h."
     }
   ]
 }

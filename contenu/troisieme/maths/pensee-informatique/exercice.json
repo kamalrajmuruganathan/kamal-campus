@@ -90,6 +90,59 @@
         "Vérification sur $80, 30, 60, 0$ : $80 > 50$ → `chers` $= 1$ ; $30 > 50$ faux ; $60 > 50$ → `chers` $= 2$ ; puis $0 ≠ 0$ est faux, on sort sans compter le $0$. Il affiche $2$."
       ],
       "reponse": "Voir le programme structuré dans le corrigé ; sur $80, 30, 60, 0$ il affiche $2$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "conditions-composees",
+      "enonce": "Dans un musée, l'entrée est **gratuite** pour les moins de $6$ ans **et** pour les $65$ ans ou plus. Écris la condition informatique `gratuit`, portant sur la variable `age`, qui est vraie **exactement** dans ces deux cas.",
+      "corrige": [
+        "On découpe la phrase en deux conditions simples : « moins de $6$ ans » s'écrit `age < 6` ; « $65$ ans ou plus » s'écrit `age ≥ 65`.",
+        "Le « et » de la phrase **énumère deux catégories** de visiteurs : il suffit d'appartenir à **l'une** d'elles pour entrer gratuitement. Le lien logique est donc `ou`, pas `et`.",
+        "Test sur les bornes : à $5$ ans, `age < 6` est vraie → gratuit ✓ ; à $70$ ans, `age ≥ 65` est vraie → gratuit ✓ ; à $30$ ans, les deux sont fausses → payant ✓.",
+        "Avec `et` on écrirait `age < 6 et age ≥ 65` : aucun âge n'est à la fois inférieur à $6$ et supérieur à $65$, donc la condition serait vraie pour **personne**."
+      ],
+      "reponse": "`age < 6 ou age ≥ 65`."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "boucle-conditionnelle",
+      "enonce": "On exécute ce programme. Déroule-le dans un tableau de suivi avec une colonne pour le test, puis donne ce qu'il affiche. Attention à la dernière valeur.\n\n```\nmettre 3 dans n\ntant que n < 100 faire\n    mettre n * 2 dans n\nfin tant que\nafficher n\n```",
+      "corrige": [
+        "Avant la boucle, `n` vaut $3$. Le test `n < 100` se lit **avant** chaque tour, et le bloc double `n`.",
+        "Déroulé : $3 \\rightarrow 6 \\rightarrow 12 \\rightarrow 24 \\rightarrow 48 \\rightarrow 96 \\rightarrow 192$.",
+        "Au sixième test, $96 < 100$ est **encore vrai** : on fait donc un tour de plus et `n` devient $192$.",
+        "Test suivant : $192 < 100$ est **faux**, on sort. Le piège est là : on affiche la première valeur qui **ne vérifie plus** la condition, soit $192$ — et non $96$, la dernière qui la vérifiait."
+      ],
+      "reponse": "Il affiche $192$ (et non $96$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "terminaison",
+      "enonce": "Ce programme part de $n = 20$ et devrait s'arrêter en atteignant $0$, mais il ne s'arrête jamais. Explique précisément pourquoi, corrige-le en changeant **uniquement la condition**, puis donne alors ce qu'il affiche.\n\n```\nmettre 20 dans n\ntant que n ≠ 0 faire\n    mettre n − 3 dans n\nfin tant que\nafficher n\n```",
+      "corrige": [
+        "La variable testée `n` est bien initialisée et le bloc la modifie bien : `n` prend les valeurs $20, 17, 14, 11, 8, 5, 2, -1, -4, \\dots$",
+        "Mais `n` **enjambe** le $0$ : elle passe de $2$ à $-1$ sans jamais valoir exactement $0$. La condition `n ≠ 0` reste donc vraie à chaque test et la boucle tourne à l'infini. C'est la fragilité d'un test d'égalité (`≠`) sur une variable qui avance de $3$ en $3$.",
+        "On remplace le test par une **inégalité**, qui « pardonne » ce dépassement : `tant que n > 0 faire`. La boucle s'arrête alors dès que `n` devient négatif ou nul.",
+        "Avec `n > 0` : à partir de $2$, le test $2 > 0$ est vrai → `n` devient $-1$ ; puis $-1 > 0$ est faux, on sort. Le programme affiche $-1$."
+      ],
+      "reponse": "Le test `≠` saute la valeur $0$ ; en écrivant `tant que n > 0`, le programme s'arrête et affiche $-1$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "conditions-composees",
+      "enonce": "**La borne automatique d'un parc d'attractions.** Un parc installe une borne qui gère les entrées. Le tarif dépend de l'âge : l'entrée est **gratuite** pour les moins de $4$ ans et pour les $75$ ans ou plus ; sinon elle coûte $18$ € (plein tarif). On étudie le programme de cette borne, en réutilisant les notions de la fiche.\n\n**1.** Écris la condition `gratuit`, portant sur `age`, vraie exactement quand l'entrée est gratuite.\n\n**2.** En déduis la condition `payant`, vraie exactement quand l'entrée est au plein tarif. Vérifie-la aux âges $3$, $4$, $74$ et $75$.\n\n**3.** Un groupe dispose de $100$ €. La borne fait payer une entrée à $18$ € **tant qu'il reste assez d'argent**. Écris un programme structuré (préparation · traitement · conclusion) qui affiche le nombre d'entrées payées.\n\n**4.** Déroule ton programme : combien d'entrées sont payées, et quelle somme reste-t-il ?\n\n**5.** On refait tourner le programme avec un budget de seulement $17$ €. Combien d'entrées sont payées ? Quelle notion de la boucle `tant que` ce cas illustre-t-il ?",
+      "corrige": [
+        "1. « moins de $4$ ans » s'écrit `age < 4`, « $75$ ans ou plus » s'écrit `age ≥ 75`. Ce sont deux catégories, reliées par `ou` : `gratuit` = `age < 4 ou age ≥ 75`.",
+        "2. Une entrée est payante exactement quand elle **n'est pas** gratuite, c'est-à-dire quand `age` n'est ni petit ni grand : il faut `age ≥ 4` **et** `age < 75` **en même temps**, donc `payant` = `age ≥ 4 et age < 75`. Vérification : $3$ → payant faux (gratuit) ; $4$ → $4 ≥ 4$ et $4 < 75$ vrais → payant ✓ ; $74$ → payant ✓ ; $75$ → $75 < 75$ faux → payant faux (gratuit). Les deux bornes tombent du bon côté.",
+        "3. Le nombre d'entrées n'est pas connu d'avance (il dépend du budget) → boucle `tant que`. **Préparation** : on fixe le budget et on initialise le compteur à $0$. **Traitement** : tant qu'il reste au moins $18$ €, on retire $18$ € et on compte une entrée. **Conclusion** : on affiche le compteur.\n\n```\nmettre 100 dans budget\nmettre 0 dans entrees\ntant que budget ≥ 18 faire\n    mettre budget − 18 dans budget\n    mettre entrees + 1 dans entrees\nfin tant que\nafficher entrees\n```",
+        "4. Déroulé du budget : $100 \\rightarrow 82 \\rightarrow 64 \\rightarrow 46 \\rightarrow 28 \\rightarrow 10$, et `entrees` passe de $0$ à $5$. Au test suivant, $10 ≥ 18$ est **faux** : on sort. Le programme affiche $5$, et il reste $10$ € (avec lesquels on ne peut plus payer d'entrée). La boucle s'arrête forcément car le budget **diminue** de $18$ à chaque tour et finit sous $18$ : c'est la terminaison.",
+        "5. Avec un budget de $17$ €, le tout premier test $17 ≥ 18$ est **faux** : le bloc n'est **jamais** exécuté et le programme affiche $0$. C'est le cas « **zéro tour** » : une boucle `tant que` peut ne s'exécuter aucune fois, car le test a lieu **avant** le premier tour."
+      ],
+      "reponse": "1. `age < 4 ou age ≥ 75`. 2. `age ≥ 4 et age < 75`. 3-4. Le programme affiche $5$ entrées, reste $10$ €. 5. $0$ entrée : c'est le cas « zéro tour » (le test précède le premier tour)."
     }
   ]
 }

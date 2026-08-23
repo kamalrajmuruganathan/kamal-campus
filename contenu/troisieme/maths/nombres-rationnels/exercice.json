@@ -86,6 +86,59 @@
         "Les deux écritures ont la même forme irréductible $-\\dfrac{5}{7}$. Or un nombre rationnel n'a qu'une seule forme irréductible à dénominateur positif : c'est donc le même nombre."
       ],
       "reponse": "Oui : les deux valent $-\\dfrac{5}{7}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Calculer $\\dfrac{1}{6} + \\dfrac{1}{10}$ et donner le résultat sous forme irréductible.",
+      "corrige": [
+        "Pour additionner, il faut d'abord un **même dénominateur**. Un dénominateur commun à $6$ et $10$ est $30$.",
+        "On convertit : $\\dfrac{1}{6} = \\dfrac{1 \\times 5}{6 \\times 5} = \\dfrac{5}{30}$ et $\\dfrac{1}{10} = \\dfrac{1 \\times 3}{10 \\times 3} = \\dfrac{3}{30}$.",
+        "On additionne les numérateurs : $\\dfrac{5}{30} + \\dfrac{3}{30} = \\dfrac{8}{30}$.",
+        "On réduit : $8 = 2 \\times 4$ et $30 = 2 \\times 15$ ont le facteur commun $2$, donc $\\dfrac{8}{30} = \\dfrac{4}{15}$. Comme $4 = 2 \\times 2$ et $15 = 3 \\times 5$ n'ont plus de facteur commun, c'est fini."
+      ],
+      "reponse": "$\\dfrac{1}{6} + \\dfrac{1}{10} = \\dfrac{4}{15}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Calculer $A = \\dfrac{2}{3} + \\dfrac{1}{4} \\times \\dfrac{8}{5}$ et donner le résultat sous forme irréductible.",
+      "corrige": [
+        "**Priorité à la multiplication** : on effectue d'abord $\\dfrac{1}{4} \\times \\dfrac{8}{5}$, puis seulement on ajoute $\\dfrac{2}{3}$.",
+        "$\\dfrac{1}{4} \\times \\dfrac{8}{5}$ : on simplifie avant de multiplier, $8$ et $4$ se divisent par $4$ (ils deviennent $2$ et $1$). Il reste $\\dfrac{1 \\times 2}{1 \\times 5} = \\dfrac{2}{5}$.",
+        "Il reste à calculer $A = \\dfrac{2}{3} + \\dfrac{2}{5}$. Dénominateur commun $15$ : $\\dfrac{2}{3} = \\dfrac{10}{15}$ et $\\dfrac{2}{5} = \\dfrac{6}{15}$.",
+        "$A = \\dfrac{10}{15} + \\dfrac{6}{15} = \\dfrac{16}{15}$. Comme $16 = 2^4$ et $15 = 3 \\times 5$ n'ont aucun facteur commun, $\\dfrac{16}{15}$ est irréductible."
+      ],
+      "reponse": "$A = \\dfrac{16}{15}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "probleme",
+      "enonce": "Léa lit un roman. Lundi, elle lit les $\\dfrac{3}{8}$ du livre. Mardi, elle lit le tiers **de ce qui lui reste**. Quelle fraction du livre lui reste-t-il à lire à la fin de mardi ?",
+      "corrige": [
+        "Après lundi, la part **non lue** est le tout moins la part lue : $1 - \\dfrac{3}{8} = \\dfrac{8}{8} - \\dfrac{3}{8} = \\dfrac{5}{8}$ du livre.",
+        "« Le tiers **de ce qui reste** » se traduit par une multiplication : mardi elle lit $\\dfrac{1}{3} \\times \\dfrac{5}{8} = \\dfrac{5}{24}$ du livre. (Le piège serait de soustraire $\\dfrac{1}{3}$ du livre entier : $\\dfrac{1}{3}$ ne porte pas sur le livre, mais sur le reste.)",
+        "Part lue en tout : $\\dfrac{3}{8} + \\dfrac{5}{24}$. Dénominateur commun $24$ : $\\dfrac{3}{8} = \\dfrac{9}{24}$, donc $\\dfrac{9}{24} + \\dfrac{5}{24} = \\dfrac{14}{24} = \\dfrac{7}{12}$.",
+        "Il reste à lire le tout moins la part lue : $1 - \\dfrac{7}{12} = \\dfrac{12}{12} - \\dfrac{7}{12} = \\dfrac{5}{12}$. Contrôle : $\\dfrac{5}{12} \\approx 0{,}42$, un peu moins de la moitié, ce qui est cohérent ✓."
+      ],
+      "reponse": "Il lui reste $\\dfrac{5}{12}$ du livre à lire."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "probleme",
+      "enonce": "Un jardinier aménage un terrain rectangulaire de $96\\ \\text{m}^2$. Il réserve $\\dfrac{3}{8}$ du terrain aux tomates et $\\dfrac{1}{6}$ aux courgettes. Sur la partie encore libre, il plante des fraises sur les $\\dfrac{3}{4}$ de cette surface restante.\n\n1. Quelle fraction du terrain les tomates et les courgettes occupent-elles ensemble ?\n2. Quelle fraction du terrain reste-t-il libre après les tomates et les courgettes ?\n3. Quelle fraction du terrain entier est plantée de fraises ?\n4. Comparer la surface des tomates et celle des fraises.\n5. Quelle est, en $\\text{m}^2$, l'aire réservée aux tomates ?",
+      "corrige": [
+        "1. Les deux fractions portent sur le même tout (le terrain), on les additionne. Dénominateur commun à $8$ et $6$ : $24$. $\\dfrac{3}{8} = \\dfrac{9}{24}$ et $\\dfrac{1}{6} = \\dfrac{4}{24}$, donc $\\dfrac{3}{8} + \\dfrac{1}{6} = \\dfrac{9}{24} + \\dfrac{4}{24} = \\dfrac{13}{24}$. ($13$ est premier, la fraction est irréductible.)",
+        "2. La partie libre est le tout moins ce qui est déjà occupé : $1 - \\dfrac{13}{24} = \\dfrac{24}{24} - \\dfrac{13}{24} = \\dfrac{11}{24}$ du terrain.",
+        "3. « Les $\\dfrac{3}{4}$ **de la surface restante** » se traduit par une multiplication : $\\dfrac{3}{4} \\times \\dfrac{11}{24} = \\dfrac{33}{96}$. On réduit : $33 = 3 \\times 11$ et $96 = 3 \\times 32$ ont le facteur commun $3$, donc $\\dfrac{33}{96} = \\dfrac{11}{32}$ du terrain.",
+        "4. On compare les tomates ($\\dfrac{3}{8}$) et les fraises ($\\dfrac{11}{32}$) au même dénominateur $32$ : $\\dfrac{3}{8} = \\dfrac{12}{32}$. Comme $12 > 11$, on a $\\dfrac{12}{32} > \\dfrac{11}{32}$ : les tomates occupent une surface **plus grande** que les fraises.",
+        "5. « L'aire des tomates » est $\\dfrac{3}{8}$ **de** $96\\ \\text{m}^2$, soit $\\dfrac{3}{8} \\times 96 = 3 \\times \\dfrac{96}{8} = 3 \\times 12 = 36\\ \\text{m}^2$."
+      ],
+      "reponse": "1. $\\dfrac{13}{24}$. 2. $\\dfrac{11}{24}$. 3. $\\dfrac{11}{32}$. 4. Les tomates ($\\dfrac{12}{32}$) dépassent les fraises ($\\dfrac{11}{32}$). 5. $36\\ \\text{m}^2$."
     }
   ]
 }
