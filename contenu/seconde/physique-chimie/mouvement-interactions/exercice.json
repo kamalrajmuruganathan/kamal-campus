@@ -86,6 +86,58 @@
         "On en déduit que les forces exercées sur la Lune **ne se compensent pas** : c'est l'attraction gravitationnelle de la Terre qui modifie sans cesse la direction du vecteur vitesse."
       ],
       "reponse": "1) Non : la valeur est constante, mais le vecteur vitesse change de direction en permanence. 2) Les forces ne se compensent pas (attraction gravitationnelle de la Terre)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Un rover d'exploration a une masse $m = 25$ kg. On l'imagine posé sur Mars, où l'intensité de pesanteur vaut $g_\\mathrm{Mars} = 3{,}7$ N·kg⁻¹. a) Calcule son poids sur Mars. b) Rappelle sa masse sur Mars. c) Quel serait son poids sur Terre, où $g = 9{,}8$ N·kg⁻¹ ?",
+      "corrige": [
+        "Le poids est une force : $P = m \\times g$, avec $m$ en kg et $g$ en N·kg⁻¹, pour un poids en newtons (N).",
+        "a) Sur Mars : $P_\\mathrm{Mars} = 25 \\times 3{,}7 = 92{,}5$ N.",
+        "b) La masse ne dépend pas du lieu : elle vaut toujours $m = 25$ kg, sur Mars comme ailleurs. Masse (kg) et poids (N) sont deux grandeurs distinctes.",
+        "c) Sur Terre : $P_\\mathrm{Terre} = 25 \\times 9{,}8 = 245$ N. Le poids est plus grand sur Terre car $g$ y est plus élevé, alors que la masse, elle, est inchangée."
+      ],
+      "reponse": "a) $P_\\mathrm{Mars} = 92{,}5$ N ; b) $m = 25$ kg (inchangée) ; c) $P_\\mathrm{Terre} = 245$ N."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "vitesse-moyenne",
+      "enonce": "Dans le référentiel terrestre, une moto roule en ligne droite à la vitesse constante de $108$ km·h⁻¹. a) Convertis cette vitesse en m·s⁻¹. b) Quelle distance parcourt-elle en $2{,}0$ min ?",
+      "corrige": [
+        "a) Pour passer des km·h⁻¹ aux m·s⁻¹, on **divise** par $3{,}6$ : $v = \\dfrac{108}{3{,}6} = 30$ m·s⁻¹.",
+        "b) On repart de $v = \\dfrac{d}{\\Delta t}$, d'où $d = v \\times \\Delta t$. Il faut d'abord convertir la durée en secondes : $2{,}0$ min $= 2{,}0 \\times 60 = 120$ s.",
+        "$d = 30 \\times 120 = 3600$ m $= 3{,}6$ km."
+      ],
+      "reponse": "a) $v = 30$ m·s⁻¹ ; b) $d = 3600$ m, soit $3{,}6$ km."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "inertie",
+      "enonce": "Un parachutiste saute d'un avion, parachute non ouvert. Dans le référentiel terrestre, sa vitesse augmente d'abord pendant quelques secondes, puis devient constante : il tombe alors en ligne droite à vitesse constante (« vitesse limite »). Deux forces s'exercent sur lui : son poids et les frottements de l'air. 1) Pendant la phase où la vitesse augmente, ces deux forces se compensent-elles ? Justifie. 2) Lorsque la vitesse est devenue constante, que peut-on dire de ces deux forces ? 3) Le parachutiste tombe pourtant : est-ce en contradiction avec le principe d'inertie ?",
+      "corrige": [
+        "On travaille dans le référentiel terrestre, supposé galiléen.",
+        "1) Pendant cette phase, la vitesse augmente : le mouvement n'est ni immobile ni rectiligne uniforme. D'après le principe d'inertie, les forces **ne se compensent donc pas** : le poids l'emporte sur les frottements de l'air, encore faibles à basse vitesse.",
+        "2) La vitesse est maintenant constante et le mouvement rectiligne : c'est un mouvement **rectiligne uniforme**. Le principe d'inertie indique alors que les forces **se compensent** : le poids est exactement équilibré par les frottements de l'air, qui ont augmenté avec la vitesse.",
+        "3) Il n'y a aucune contradiction. Le principe d'inertie ne dit pas qu'un corps soumis à des forces compensées doit être immobile : il peut aussi être en mouvement rectiligne uniforme. La chute à vitesse constante en est précisément un exemple. Une force n'est pas nécessaire pour entretenir le mouvement, seulement pour le modifier."
+      ],
+      "reponse": "1) Non, elles ne se compensent pas (le poids l'emporte). 2) Elles se compensent (poids et frottements s'équilibrent). 3) Non : une chute rectiligne à vitesse constante est un mouvement rectiligne uniforme, pleinement cohérent avec le principe d'inertie."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "mouvement-interactions",
+      "enonce": "La Station spatiale internationale (ISS), de masse $m_\\mathrm{ISS} = 4{,}2 \\times 10^{5}$ kg, tourne autour de la Terre sur une orbite quasi circulaire, à une distance $d = 6{,}8 \\times 10^{6}$ m du centre de la Terre. Elle effectue un tour complet en une durée $T = 5{,}6 \\times 10^{3}$ s. On donne la masse de la Terre $m_\\mathrm{T} = 6{,}0 \\times 10^{24}$ kg et $G = 6{,}67 \\times 10^{-11}$ N·m²·kg⁻². On rappelle que la longueur d'un cercle de rayon $R$ vaut $2\\pi R$.\n\n1. Dans quel référentiel décrit-on le mouvement de l'ISS autour de la Terre ? Donne la nature de ce mouvement (trajectoire et évolution de la vitesse).\n2. Ce mouvement peut-il être qualifié de « sans changement » ? Justifie à l'aide du vecteur vitesse.\n3. Calcule la longueur de l'orbite, puis la valeur de la vitesse de l'ISS en m·s⁻¹ et en km·h⁻¹.\n4. Calcule la valeur de la force d'interaction gravitationnelle exercée par la Terre sur l'ISS.\n5. À l'aide du principe d'inertie, les forces exercées sur l'ISS se compensent-elles ? Justifie.",
+      "corrige": [
+        "1. On étudie le mouvement de l'ISS autour de la Terre dans le **référentiel géocentrique** (centré sur la Terre). La trajectoire est un cercle et la valeur de la vitesse est constante : le mouvement est **circulaire uniforme**.",
+        "2. Non. « Uniforme » ne porte que sur la valeur de la vitesse. Le vecteur vitesse reste tangent à la trajectoire circulaire, donc sa direction tourne en permanence : le vecteur vitesse change sans cesse. Le mouvement n'est pas « sans changement ».",
+        "3. Longueur de l'orbite : $L = 2\\pi d = 2\\pi \\times 6{,}8 \\times 10^{6} \\approx 4{,}27 \\times 10^{7}$ m. Vitesse : $v = \\dfrac{L}{T} = \\dfrac{4{,}27 \\times 10^{7}}{5{,}6 \\times 10^{3}} \\approx 7{,}6 \\times 10^{3}$ m·s⁻¹. Conversion : $v \\approx 7{,}6 \\times 10^{3} \\times 3{,}6 \\approx 2{,}7 \\times 10^{4}$ km·h⁻¹.",
+        "4. On applique $F = G\\,\\dfrac{m_\\mathrm{T} \\times m_\\mathrm{ISS}}{d^2}$. Numérateur : $6{,}67 \\times 10^{-11} \\times 6{,}0 \\times 10^{24} \\times 4{,}2 \\times 10^{5} \\approx 1{,}68 \\times 10^{20}$. Dénominateur : $d^2 = (6{,}8 \\times 10^{6})^2 \\approx 4{,}62 \\times 10^{13}$ m² (bien penser à élever la distance au carré). D'où $F \\approx \\dfrac{1{,}68 \\times 10^{20}}{4{,}62 \\times 10^{13}} \\approx 3{,}6 \\times 10^{6}$ N.",
+        "5. Le mouvement est circulaire, donc ni immobile ni rectiligne uniforme. D'après le principe d'inertie (référentiel géocentrique supposé galiléen), les forces **ne se compensent pas** : l'attraction gravitationnelle de la Terre, non compensée, courbe en permanence la trajectoire et fait tourner le vecteur vitesse."
+      ],
+      "reponse": "1. Référentiel géocentrique ; mouvement circulaire uniforme. 2. Non : le vecteur vitesse change de direction en permanence. 3. $L \\approx 4{,}27 \\times 10^{7}$ m, $v \\approx 7{,}6 \\times 10^{3}$ m·s⁻¹ soit $\\approx 2{,}7 \\times 10^{4}$ km·h⁻¹. 4. $F \\approx 3{,}6 \\times 10^{6}$ N. 5. Non, les forces ne se compensent pas (attraction gravitationnelle non compensée)."
     }
   ]
 }

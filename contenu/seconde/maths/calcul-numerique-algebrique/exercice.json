@@ -86,6 +86,60 @@
         "L'inégalité étant large, les bornes $-2$ et $8$ sont incluses : les crochets sont fermés."
       ],
       "reponse": "$x \\in [-2\\,;\\,8]$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "facteur-commun",
+      "enonce": "Factoriser l'expression $E = 15x^2 - 10x$.",
+      "corrige": [
+        "On cherche un facteur commun aux deux termes. Le coefficient : $15$ et $10$ ont pour diviseur commun $5$. La partie littérale : $x^2 = x \\times x$ et $x$ contiennent tous deux $x$.",
+        "Le facteur commun est donc $5x$. On l'écrit devant, puis on trouve ce qui reste dans chaque terme : $15x^2 = 5x \\times 3x$ et $10x = 5x \\times 2$.",
+        "D'où $E = 5x(3x - 2)$.",
+        "Vérification en redéveloppant : $5x \\times 3x - 5x \\times 2 = 15x^2 - 10x$."
+      ],
+      "reponse": "$E = 5x(3x - 2)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "racines",
+      "enonce": "Écrire $F = \\sqrt{50} + \\sqrt{18} - \\sqrt{8}$ sous la forme $a\\sqrt{2}$, où $a$ est un entier.",
+      "corrige": [
+        "On simplifie chaque racine en extrayant le plus grand carré parfait. $50 = 25 \\times 2$, donc $\\sqrt{50} = \\sqrt{25}\\,\\sqrt{2} = 5\\sqrt{2}$.",
+        "$18 = 9 \\times 2$, donc $\\sqrt{18} = \\sqrt{9}\\,\\sqrt{2} = 3\\sqrt{2}$. Puis $8 = 4 \\times 2$, donc $\\sqrt{8} = \\sqrt{4}\\,\\sqrt{2} = 2\\sqrt{2}$.",
+        "Toutes les racines sont maintenant des multiples de $\\sqrt{2}$, on peut les regrouper : $F = 5\\sqrt{2} + 3\\sqrt{2} - 2\\sqrt{2} = (5 + 3 - 2)\\sqrt{2}$.",
+        "D'où $F = 6\\sqrt{2}$."
+      ],
+      "reponse": "$F = 6\\sqrt{2}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "produit-nul",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $(2x - 1)^2 = (x + 4)^2$.",
+      "corrige": [
+        "On ramène tout dans le membre de gauche pour obtenir une équation à second membre nul : $(2x - 1)^2 - (x + 4)^2 = 0$.",
+        "On reconnaît une différence de deux carrés $a^2 - b^2 = (a - b)(a + b)$, avec $a = 2x - 1$ et $b = x + 4$. Le premier facteur : $a - b = (2x - 1) - (x + 4) = x - 5$. Le second : $a + b = (2x - 1) + (x + 4) = 3x + 3$.",
+        "L'équation devient $(x - 5)(3x + 3) = 0$. On peut au passage factoriser $3x + 3 = 3(x + 1)$, mais ce n'est pas nécessaire.",
+        "D'après la règle du produit nul : $x - 5 = 0$ ou $3x + 3 = 0$, c'est-à-dire $x = 5$ ou $x = -1$.",
+        "Vérification : pour $x = 5$, $(2 \\times 5 - 1)^2 = 9^2 = 81$ et $(5 + 4)^2 = 9^2 = 81$. Pour $x = -1$, $(-3)^2 = 9$ et $(3)^2 = 9$."
+      ],
+      "reponse": "$S = \\{-1\\,;\\,5\\}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Une commune aménage un square. Le square est un carré de côté $x$ mètres, avec $x > 0$.\n\n1. Le revêtement choisi a un coût, en euros par m², donné par $c = \\dfrac{5^3 \\times 5^{-1}}{5^2}$. Écrire $c$ sous la forme d'une puissance de $5$, puis donner sa valeur.\n\n2. On entoure le square d'une allée de largeur constante, ce qui porte le côté de l'ensemble à $(x + 2)$ mètres. Exprimer l'aire totale $\\mathcal{A}(x) = (x + 2)^2$ sous forme développée.\n\n3. L'aire de l'allée seule est égale à l'aire totale diminuée de l'aire du square. Montrer qu'elle vaut $4x + 4$, puis la factoriser.\n\n4. La commune souhaite que l'aire totale $\\mathcal{A}(x)$ soit égale à $49$ m². Résoudre l'équation $(x + 2)^2 = 49$ et en déduire la valeur de $x$ compatible avec le contexte.\n\n5. Le square (de côté $5$ m) est partagé : $\\dfrac{1}{3}$ de sa surface en pelouse et $\\dfrac{1}{4}$ en massifs de fleurs. Quelle fraction de la surface reste-t-il pour les allées internes ?",
+      "corrige": [
+        "1. On regroupe les puissances de même base : au numérateur $5^3 \\times 5^{-1} = 5^{3 + (-1)} = 5^2$. On divise ensuite par $5^2$ en soustrayant les exposants : $c = \\dfrac{5^2}{5^2} = 5^{2 - 2} = 5^0 = 1$. Le coût est donc $c = 1$ euro par m².",
+        "2. On développe le carré avec $(a + b)^2 = a^2 + 2ab + b^2$, ici $a = x$ et $b = 2$ : $\\mathcal{A}(x) = (x + 2)^2 = x^2 + 2 \\times x \\times 2 + 2^2 = x^2 + 4x + 4$. Ne pas oublier le double produit $4x$.",
+        "3. L'aire de l'allée est $\\mathcal{A}(x) - x^2 = (x^2 + 4x + 4) - x^2 = 4x + 4$. Les termes en $x^2$ se compensent. On factorise ensuite par le facteur commun $4$ : $4x + 4 = 4(x + 1)$.",
+        "4. On ramène l'équation à un second membre nul : $(x + 2)^2 - 49 = 0$. Comme $49 = 7^2$, c'est une différence de carrés : $(x + 2)^2 - 7^2 = \\big[(x + 2) - 7\\big]\\big[(x + 2) + 7\\big] = (x - 5)(x + 9)$. La règle du produit nul donne $x = 5$ ou $x = -9$. Un côté étant une longueur, $x > 0$ : seule la solution $x = 5$ m convient.",
+        "5. La part occupée par la pelouse et les massifs est $\\dfrac{1}{3} + \\dfrac{1}{4}$. Au même dénominateur $12$ : $\\dfrac{1}{3} = \\dfrac{4}{12}$ et $\\dfrac{1}{4} = \\dfrac{3}{12}$, d'où $\\dfrac{4}{12} + \\dfrac{3}{12} = \\dfrac{7}{12}$. Il reste donc $1 - \\dfrac{7}{12} = \\dfrac{12}{12} - \\dfrac{7}{12} = \\dfrac{5}{12}$ de la surface pour les allées internes."
+      ],
+      "reponse": "1. $c = 5^0 = 1$ €/m². 2. $\\mathcal{A}(x) = x^2 + 4x + 4$. 3. Aire de l'allée $= 4x + 4 = 4(x + 1)$. 4. $x = 5$ m (la solution $-9$ est écartée car $x > 0$). 5. Il reste $\\dfrac{5}{12}$ de la surface."
     }
   ]
 }

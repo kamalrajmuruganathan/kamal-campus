@@ -86,6 +86,59 @@
         "Tableau de signes de $h$ sur $[0\\,;4]$ : $h(0) = 0$, puis $h(t) > 0$ pour tout $t$ de $]0\\,;4[$, puis $h(4) = 0$. La balle est donc en l'air pendant tout l'intervalle $]0\\,;4[$."
       ],
       "reponse": "$D = [0\\,;4]$ ; hauteur maximale $20$ m en $t = 2$ ; $h(t) > 0$ sur $]0\\,;4[$ (nulle en $t = 0$ et $t = 4$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $f$ la fonction affine définie sur $\\mathbb{R}$ par $f(x) = -3x + 5$. Calcule l'image de $0$, de $4$ et de $-2$ par $f$.",
+      "corrige": [
+        "L'image d'un nombre s'obtient en remplaçant $x$ par ce nombre dans l'expression $f(x) = -3x + 5$.",
+        "Image de $0$ : $f(0) = -3\\times 0 + 5 = 0 + 5 = 5$.",
+        "Image de $4$ : $f(4) = -3\\times 4 + 5 = -12 + 5 = -7$.",
+        "Image de $-2$ : $f(-2) = -3\\times(-2) + 5 = 6 + 5 = 11$. Attention au signe : $-3\\times(-2)$ vaut $+6$."
+      ],
+      "reponse": "$f(0) = 5$, $f(4) = -7$ et $f(-2) = 11$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "representations",
+      "enonce": "On considère le programme de calcul suivant : « Choisir un nombre, le multiplier par $4$, puis retrancher $7$ au résultat. » On note $f$ la fonction qui, à un nombre $x$, associe le résultat du programme.\n\n1. Exprime $f(x)$ en fonction de $x$. 2. Calcule l'image de $3$, puis détermine l'antécédent de $5$ par $f$.",
+      "corrige": [
+        "1. On traduit le programme étape par étape : multiplier $x$ par $4$ donne $4x$, puis retrancher $7$ donne $4x - 7$. Donc $f(x) = 4x - 7$.",
+        "2. Image de $3$ : on remplace $x$ par $3$ dans l'expression : $f(3) = 4\\times 3 - 7 = 12 - 7 = 5$.",
+        "Antécédent de $5$ : on cherche $x$ tel que $f(x) = 5$, soit $4x - 7 = 5$.",
+        "On isole $x$ : $4x = 5 + 7 = 12$, donc $x = \\dfrac{12}{4} = 3$. L'antécédent de $5$ est $3$."
+      ],
+      "reponse": "$f(x) = 4x - 7$ ; l'image de $3$ est $5$ et l'antécédent de $5$ est $3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "ensemble-definition",
+      "enonce": "Détermine l'ensemble de définition de la fonction $f$ définie par $f(x) = \\dfrac{\\sqrt{x - 1}}{x - 4}$.",
+      "corrige": [
+        "Deux interdits doivent être respectés en même temps : la quantité sous la racine doit être positive ou nulle, et le dénominateur doit être non nul.",
+        "Condition de la racine : $x - 1 \\geqslant 0$, soit $x \\geqslant 1$. Cela donne l'intervalle $[1\\,;+\\infty[$.",
+        "Condition du dénominateur : $x - 4 \\neq 0$, soit $x \\neq 4$.",
+        "On ne garde que les nombres qui vérifient les deux conditions : ceux de $[1\\,;+\\infty[$ en retirant $4$."
+      ],
+      "reponse": "$D_f = [1\\,;4[\\ \\cup\\ ]4\\,;+\\infty[$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Un artisan fabrique et vend des lampes. Lorsqu'il en vend $x$ (avec $x$ compris entre $0$ et $60$), son bénéfice, en euros, est donné par une fonction $B$ définie sur $[0\\,;60]$. On dispose du tableau de valeurs suivant.\n\n| $x$ | $0$ | $10$ | $20$ | $30$ | $40$ | $50$ | $60$ |\n|---|---|---|---|---|---|---|---|\n| $B(x)$ | $-400$ | $100$ | $500$ | $600$ | $500$ | $100$ | $-400$ |\n\nOn sait de plus que $B$ est croissante sur $[0\\,;30]$ puis décroissante sur $[30\\,;60]$, et que $B$ ne s'annule qu'en $x = 8$ et en $x = 52$.\n\n1. Que représente concrètement $B(20)$ et quelle est sa valeur ? 2. Résous l'équation $B(x) = 500$ à l'aide du tableau et interprète le résultat. 3. Détermine le bénéfice maximal de l'artisan et le nombre de lampes correspondant. 4. Dresse le tableau de signes de $B$ sur $[0\\,;60]$ et précise pour combien de lampes vendues l'activité est rentable. 5. Sans calcul, compare $B(15)$ et $B(25)$ en justifiant.",
+      "corrige": [
+        "1. $B(20)$ est le bénéfice, en euros, réalisé lorsque l'artisan vend $20$ lampes. Le tableau donne $B(20) = 500$ : vendre $20$ lampes rapporte un bénéfice de $500$ €.",
+        "2. Résoudre $B(x) = 500$ revient à chercher les antécédents de $500$. Dans le tableau, la valeur $500$ apparaît deux fois : pour $x = 20$ et pour $x = 40$. Les solutions sont donc $x = 20$ et $x = 40$ : deux quantités de lampes différentes procurent le même bénéfice de $500$ €.",
+        "3. Le bénéfice maximal est le maximum de $B$. Comme $B$ croît sur $[0\\,;30]$ puis décroît sur $[30\\,;60]$, ce maximum est atteint au sommet, en $x = 30$, et vaut $B(30) = 600$. Le bénéfice maximal est donc $600$ €, obtenu pour $30$ lampes vendues.",
+        "4. $B$ s'annule en $x = 8$ et $x = 52$. Sur $[0\\,;8[$, $B(0) = -400 < 0$ donc $B$ est négative ; sur $]8\\,;52[$, $B(20) = 500 > 0$ donc $B$ est positive ; sur $]52\\,;60]$, $B(60) = -400 < 0$ donc $B$ est négative. Tableau de signes : $B$ négative sur $[0\\,;8[$, nulle en $8$, positive sur $]8\\,;52[$, nulle en $52$, négative sur $]52\\,;60]$. L'activité est rentable quand $B(x) > 0$, c'est-à-dire pour un nombre de lampes strictement compris entre $8$ et $52$.",
+        "5. Les nombres $15$ et $25$ appartiennent tous deux à $[0\\,;30]$, intervalle sur lequel $B$ est croissante. Une fonction croissante conserve l'ordre : comme $15 < 25$, on a $B(15) < B(25)$."
+      ],
+      "reponse": "$B(20) = 500$ € (bénéfice pour $20$ lampes) ; $B(x) = 500$ pour $x = 20$ et $x = 40$ ; bénéfice maximal $600$ € pour $30$ lampes ; activité rentable pour $x \\in\\ ]8\\,;52[$ ; $B(15) < B(25)$ car $B$ est croissante sur $[0\\,;30]$."
     }
   ]
 }

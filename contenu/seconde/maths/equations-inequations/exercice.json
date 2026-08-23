@@ -87,6 +87,57 @@
         "Comme $n$ est un nombre entier de séances, la première valeur qui convient est $n = 11$."
       ],
       "reponse": "La formule B devient strictement plus avantageuse à partir de $11$ séances ($n > 10$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "premier-degre",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $3(x - 2) + 4 = 5x - 6$.",
+      "corrige": [
+        "On développe le membre de gauche : $3(x - 2) + 4 = 3x - 6 + 4 = 3x - 2$. L'équation devient $3x - 2 = 5x - 6$.",
+        "On rassemble les termes en $x$ d'un même côté en soustrayant $3x$ des deux côtés (opération qui ne change rien au sens de l'égalité) : $-2 = 2x - 6$.",
+        "On ajoute $6$ des deux côtés : $4 = 2x$, puis on divise par $2$ (nombre positif) : $x = 2$.",
+        "Vérification : $3(2 - 2) + 4 = 4$ et $5 \\times 2 - 6 = 4$. Les deux membres sont bien égaux."
+      ],
+      "reponse": "$S = \\{2\\}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "produit-nul",
+      "enonce": "Résoudre l'équation $(2x + 1)^2 - (x - 3)^2 = 0$.",
+      "corrige": [
+        "On reconnaît une différence de deux carrés $A^2 - B^2 = (A - B)(A + B)$, avec $A = 2x + 1$ et $B = x - 3$. On factorise plutôt que de tout développer.",
+        "On calcule chaque facteur : $A - B = (2x + 1) - (x - 3) = 2x + 1 - x + 3 = x + 4$ et $A + B = (2x + 1) + (x - 3) = 3x - 2$. L'équation s'écrit donc $(x + 4)(3x - 2) = 0$.",
+        "Règle du produit nul : $x + 4 = 0$ ou $3x - 2 = 0$, soit $x = -4$ ou $x = \\dfrac{2}{3}$."
+      ],
+      "reponse": "$S = \\left\\{-4\\,;\\,\\dfrac{2}{3}\\right\\}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "tableau-signes",
+      "enonce": "Résoudre l'inéquation $(2x - 1)(3 - x) \\geqslant 0$ à l'aide d'un tableau de signes, et donner l'ensemble des solutions sous forme d'intervalle.",
+      "corrige": [
+        "On étudie le signe de chaque facteur affine. $2x - 1$ s'annule en $x = \\dfrac{1}{2}$ ; son coefficient $a = 2 > 0$, il est donc négatif avant $\\dfrac{1}{2}$ et positif après.",
+        "$3 - x = -x + 3$ s'annule en $x = 3$ ; son coefficient $a = -1 < 0$, il est donc positif avant $3$ et négatif après.",
+        "On dresse le tableau de signes du produit. Sur $\\left]-\\infty\\,;\\dfrac{1}{2}\\right[$ : $(-)\\times(+) = -$. Sur $\\left]\\dfrac{1}{2}\\,;3\\right[$ : $(+)\\times(+) = +$. Sur $\\left]3\\,;+\\infty\\right[$ : $(+)\\times(-) = -$.",
+        "On cherche où le produit est positif ou nul. Il est positif entre les deux racines, et nul en $\\dfrac{1}{2}$ et en $3$ ; les bornes sont incluses car l'inégalité est large."
+      ],
+      "reponse": "$S = \\left[\\dfrac{1}{2}\\,;3\\right]$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "methode",
+      "enonce": "Un maraîcher clôture une parcelle rectangulaire. La longueur mesure $4$ mètres de plus que la largeur. On note $x$ la largeur, exprimée en mètres, avec $x > 0$.\n\n1. Exprimer, en fonction de $x$, le périmètre $P(x)$ et l'aire $A(x)$ de la parcelle.\n2. Le maraîcher utilise exactement $36$ mètres de clôture. Déterminer la valeur de $x$, puis les dimensions de la parcelle.\n3. Il souhaite obtenir une aire de $32$ m$^2$. Montrer que cela revient à résoudre $x^2 + 4x - 32 = 0$, puis résoudre cette équation.\n4. Déterminer les largeurs $x$ pour lesquelles l'aire de la parcelle est strictement supérieure à $45$ m$^2$.",
+      "corrige": [
+        "1. La largeur est $x$ et la longueur $x + 4$. Le périmètre est $P(x) = 2\\big(x + (x + 4)\\big) = 2(2x + 4) = 4x + 8$. L'aire est $A(x) = x(x + 4) = x^2 + 4x$ (en m$^2$).",
+        "2. Utiliser exactement $36$ m de clôture signifie $P(x) = 36$, soit $4x + 8 = 36$. On obtient $4x = 28$, donc $x = 7$. La largeur vaut $7$ m et la longueur $7 + 4 = 11$ m.",
+        "3. Une aire de $32$ m$^2$ se traduit par $A(x) = 32$, soit $x^2 + 4x = 32$, c'est-à-dire $x^2 + 4x - 32 = 0$. On factorise en cherchant deux nombres de produit $-32$ et de somme $4$ : ce sont $8$ et $-4$, d'où $x^2 + 4x - 32 = (x + 8)(x - 4)$. La règle du produit nul donne $x = -8$ ou $x = 4$. Comme $x > 0$, seule $x = 4$ convient : la largeur est $4$ m et la longueur $8$ m.",
+        "4. « Aire strictement supérieure à $45$ m$^2$ » s'écrit $A(x) > 45$, soit $x^2 + 4x - 45 > 0$. On factorise : deux nombres de produit $-45$ et de somme $4$ sont $9$ et $-5$, donc $x^2 + 4x - 45 = (x + 9)(x - 5)$. On dresse le tableau de signes : $x + 9$ est positif pour tout $x > 0$, et $x - 5$ est négatif avant $5$, positif après. Le produit est donc strictement positif pour $x > 5$. En tenant compte de la contrainte $x > 0$, l'aire dépasse $45$ m$^2$ lorsque $x > 5$."
+      ],
+      "reponse": "1. $P(x) = 4x + 8$ et $A(x) = x^2 + 4x$. 2. $x = 7$ : parcelle de $7$ m sur $11$ m. 3. $x = 4$ : parcelle de $4$ m sur $8$ m. 4. L'aire dépasse $45$ m$^2$ pour $x > 5$, soit $S = \\left]5\\,;+\\infty\\right[$."
     }
   ]
 }

@@ -85,6 +85,58 @@
         "Comme $12 \\leq 20$, cette note est possible sur un devoir noté sur $20$ : l'objectif est atteignable."
       ],
       "reponse": "Léa doit obtenir $12$ au cinquième devoir ; l'objectif est atteignable."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "frequences",
+      "enonce": "Un sondage réalisé auprès de $40$ personnes sur leur moyen de transport principal donne : vélo $8$ personnes, bus $14$, voiture $12$, marche $6$. Calculer la fréquence de chaque moyen de transport (en pourcentage) et vérifier que la somme des fréquences vaut $1$.",
+      "corrige": [
+        "L'effectif total est $N = 8 + 14 + 12 + 6 = 40$.",
+        "Chaque fréquence s'obtient par $f_i = \\dfrac{n_i}{N}$. Vélo : $\\dfrac{8}{40} = 0{,}20 = 20\\,\\%$. Bus : $\\dfrac{14}{40} = 0{,}35 = 35\\,\\%$. Voiture : $\\dfrac{12}{40} = 0{,}30 = 30\\,\\%$. Marche : $\\dfrac{6}{40} = 0{,}15 = 15\\,\\%$.",
+        "Vérification : $0{,}20 + 0{,}35 + 0{,}30 + 0{,}15 = 1$, soit $100\\,\\%$."
+      ],
+      "reponse": "Vélo $20\\,\\%$, bus $35\\,\\%$, voiture $30\\,\\%$, marche $15\\,\\%$ ; la somme des fréquences vaut bien $1$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "linearite",
+      "enonce": "À un contrôle noté sur $20$, la moyenne des notes d'une classe est $\\bar{x} = 10{,}5$. Trouvant le sujet difficile, le professeur décide de modifier chaque note $x$ en appliquant la transformation $y = 1{,}2\\,x - 1$. Quelle est la nouvelle moyenne de la classe ?",
+      "corrige": [
+        "Toutes les notes subissent la même transformation affine $y = a x + b$, avec ici $a = 1{,}2$ et $b = -1$.",
+        "Par linéarité de la moyenne, $\\bar{y} = a\\,\\bar{x} + b = 1{,}2 \\times 10{,}5 - 1$.",
+        "On calcule : $1{,}2 \\times 10{,}5 = 12{,}6$, puis $12{,}6 - 1 = 11{,}6$."
+      ],
+      "reponse": "La nouvelle moyenne est $\\bar{y} = 11{,}6$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "tableau-croise",
+      "enonce": "Dans un lycée, on interroge $200$ élèves et on croise le sexe avec la pratique d'un sport en club. Parmi les $100$ filles, $45$ pratiquent un sport en club ; parmi les $100$ garçons, $70$ en pratiquent un. 1. Quel pourcentage de l'ensemble des élèves pratique un sport en club ? 2. Parmi les filles, quel pourcentage pratique un sport en club ? 3. Parmi les élèves qui pratiquent un sport en club, quel pourcentage sont des garçons ? 4. Expliquer pourquoi ces trois pourcentages sont différents.",
+      "corrige": [
+        "On organise les données : $45$ filles et $70$ garçons pratiquent un sport, soit $45 + 70 = 115$ pratiquants sur $200$ élèves.",
+        "1. Par rapport au total général : $\\dfrac{115}{200} = 0{,}575 = 57{,}5\\,\\%$ des élèves pratiquent un sport en club.",
+        "2. Par rapport au total des filles : $\\dfrac{45}{100} = 45\\,\\%$ des filles pratiquent un sport en club.",
+        "3. Par rapport au total des pratiquants : $\\dfrac{70}{115} \\approx 0{,}609$, soit environ $60{,}9\\,\\%$ des pratiquants sont des garçons.",
+        "4. Ces trois pourcentages diffèrent car ils sont calculés sur des bases différentes : l'effectif total ($200$), l'effectif des filles ($100$) et l'effectif des pratiquants ($115$). Les comparer ou les additionner directement n'aurait pas de sens."
+      ],
+      "reponse": "$57{,}5\\,\\%$ de l'ensemble des élèves ; $45\\,\\%$ des filles ; environ $60{,}9\\,\\%$ des pratiquants sont des garçons — trois bases de calcul différentes."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "comparaison-series",
+      "enonce": "Une enseigne possède deux magasins A et B. On relève, sur $11$ jours ouvrés, le nombre de clients reçus chaque jour. Magasin A : $55\\,;\\ 40\\,;\\ 60\\,;\\ 49\\,;\\ 57\\,;\\ 52\\,;\\ 61\\,;\\ 46\\,;\\ 59\\,;\\ 54\\,;\\ 61$. Magasin B : $58\\,;\\ 30\\,;\\ 68\\,;\\ 42\\,;\\ 74\\,;\\ 52\\,;\\ 63\\,;\\ 35\\,;\\ 70\\,;\\ 54\\,;\\ 48$. 1. Ordonner chaque série, puis calculer la fréquentation moyenne de chaque magasin. 2. Déterminer la médiane de chaque série. 3. Déterminer les quartiles $\\mathrm{Q}_1$ et $\\mathrm{Q}_3$, puis l'écart interquartile de chaque série. 4. Calculer l'étendue de chaque série. 5. Les deux magasins reçoivent en moyenne le même nombre de clients : en comparant les indicateurs de dispersion, indiquer lequel a la fréquentation la plus régulière et justifier.",
+      "corrige": [
+        "1. Magasin A ordonné : $40\\,;\\ 46\\,;\\ 49\\,;\\ 52\\,;\\ 54\\,;\\ 55\\,;\\ 57\\,;\\ 59\\,;\\ 60\\,;\\ 61\\,;\\ 61$. La somme vaut $594$, donc $\\bar{x}_A = \\dfrac{594}{11} = 54$ clients. Magasin B ordonné : $30\\,;\\ 35\\,;\\ 42\\,;\\ 48\\,;\\ 52\\,;\\ 54\\,;\\ 58\\,;\\ 63\\,;\\ 68\\,;\\ 70\\,;\\ 74$. La somme vaut aussi $594$, donc $\\bar{x}_B = \\dfrac{594}{11} = 54$ clients.",
+        "2. Chaque série a $N = 11$ valeurs, un nombre impair : la médiane est la valeur de rang $\\dfrac{N+1}{2} = 6$. Pour A, la $6^\\text{e}$ valeur est $\\mathrm{Me}_A = 55$ ; pour B, $\\mathrm{Me}_B = 54$.",
+        "3. Pour $\\mathrm{Q}_1$ : $\\dfrac{N}{4} = \\dfrac{11}{4} = 2{,}75$, non entier, on prend le rang supérieur, soit le rang $3$. Pour $\\mathrm{Q}_3$ : $\\dfrac{3N}{4} = 8{,}25$, on prend le rang $9$. Magasin A : $\\mathrm{Q}_1 = 49$ et $\\mathrm{Q}_3 = 60$, d'où un écart interquartile de $60 - 49 = 11$. Magasin B : $\\mathrm{Q}_1 = 42$ et $\\mathrm{Q}_3 = 68$, d'où un écart interquartile de $68 - 42 = 26$.",
+        "4. Étendue du magasin A : $61 - 40 = 21$. Étendue du magasin B : $74 - 30 = 44$.",
+        "5. Les deux magasins ont la même moyenne ($54$) et des médianes voisines ($55$ et $54$), mais le magasin A est bien moins dispersé : écart interquartile de $11$ contre $26$, et étendue de $21$ contre $44$. Les valeurs du magasin A sont donc plus resserrées autour du centre : c'est le magasin A qui a la fréquentation la plus régulière."
+      ],
+      "reponse": "Même moyenne ($54$ clients) pour les deux. A : $\\mathrm{Me} = 55$, $\\mathrm{Q}_1 = 49$, $\\mathrm{Q}_3 = 60$, écart interquartile $11$, étendue $21$. B : $\\mathrm{Me} = 54$, $\\mathrm{Q}_1 = 42$, $\\mathrm{Q}_3 = 68$, écart interquartile $26$, étendue $44$. Le magasin A, moins dispersé, a la fréquentation la plus régulière."
     }
   ]
 }

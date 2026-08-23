@@ -91,6 +91,59 @@
         "$k^2 + k$ est un entier, donc $n^2$ s'écrit $4 \\times (\\text{entier}) + 1$ : c'est un nombre de la forme $4k'+1$, qui laisse un reste $1$ et n'est donc pas un multiple de $4$."
       ],
       "reponse": "1) $n^2 = 4k^2$, multiple de $4$. 2) $n^2 = 4(k^2+k)+1$, de la forme $4k'+1$ : jamais multiple de $4$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "plus-grand-multiple",
+      "enonce": "Déterminer le plus grand multiple de $8$ inférieur ou égal à $70$.",
+      "corrige": [
+        "On applique l'algorithme du cours : on part de $8$ et on ajoute $8$ tant qu'on ne dépasse pas $70$.",
+        "On liste les multiples de $8$ : $8,\\ 16,\\ 24,\\ 32,\\ 40,\\ 48,\\ 56,\\ 64$.",
+        "Le multiple suivant serait $64 + 8 = 72$, or $72 > 70$ : on s'arrête.",
+        "Le dernier multiple obtenu sans dépasser $70$ est donc $64 = 8 \\times 8$."
+      ],
+      "reponse": "Le plus grand multiple de $8$ inférieur ou égal à $70$ est $64$ (car $64 = 8 \\times 8$ et $72 > 70$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "ecriture-algebrique",
+      "enonce": "Montrer que le produit de deux nombres impairs est toujours impair.",
+      "corrige": [
+        "On pose l'écriture algébrique de chaque nombre, avec deux lettres distinctes : $a = 2k+1$ et $b = 2k'+1$, où $k$ et $k'$ sont des entiers.",
+        "On calcule le produit : $a \\times b = (2k+1)(2k'+1) = 4kk' + 2k + 2k' + 1$.",
+        "On factorise par $2$ ce qui peut l'être : $a \\times b = 2(2kk' + k + k') + 1$.",
+        "Comme $2kk' + k + k'$ est un entier, $a \\times b$ est de la forme $2 \\times (\\text{entier}) + 1$ : le produit est donc impair."
+      ],
+      "reponse": "$a \\times b = 2(2kk'+k+k')+1$ : le produit de deux nombres impairs est impair."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "demonstration",
+      "enonce": "Soit $n$ un entier. Démontrer que la somme de trois entiers consécutifs est toujours un multiple de $3$.",
+      "corrige": [
+        "On écrit trois entiers consécutifs à partir de $n$ : ce sont $n$, $n+1$ et $n+2$.",
+        "On calcule leur somme : $n + (n+1) + (n+2) = 3n + 3$.",
+        "On factorise par $3$ : $3n + 3 = 3(n + 1)$.",
+        "Comme $n + 1$ est un entier, la somme s'écrit $3 \\times (\\text{entier})$ : c'est donc un multiple de $3$."
+      ],
+      "reponse": "$n + (n+1) + (n+2) = 3(n+1)$ : la somme de trois entiers consécutifs est toujours un multiple de $3$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme-synthese",
+      "enonce": "Un animateur prépare un jeu de société avec des jetons. **Partie A.** Il dispose de $90$ jetons. 1) Montrer que $90$ est un multiple de $5$, en précisant l'entier $k$ tel que $90 = 5k$. Le nombre $90$ est-il aussi un multiple de $4$ ? Justifier. 2) Il souhaite aligner les $90$ jetons en rangées de même longueur, sans qu'aucun jeton ne reste seul. Parmi des rangées de $6$, de $7$ ou de $8$ jetons, lesquelles sont possibles ? Justifier chaque cas par une division. 3) Le nombre $90$ est-il un nombre premier ? Justifier, puis donner son plus petit diviseur premier. **Partie B.** L'animateur ajoute un jeton : il en a maintenant $91$. 4) Sachant que $90$ est pair, montrer que $91$ est impair. 5) Le nombre $91$ est-il premier ? Justifier.",
+      "corrige": [
+        "1. On cherche un entier $k$ tel que $90 = 5k$ : on a $90 = 5 \\times 18$, et $18$ est un entier, donc $90$ est bien un multiple de $5$ (avec $k = 18$). En revanche $90$ n'est pas un multiple de $4$ : la division donne $90 = 4 \\times 22 + 2$, le reste vaut $2 \\neq 0$, donc aucun entier $k$ ne vérifie $90 = 4k$.",
+        "2. On teste chaque taille de rangée en regardant si la division tombe juste (reste $0$). Rangées de $6$ : $90 = 6 \\times 15$, reste $0$ — c'est possible ($15$ rangées). Rangées de $7$ : $90 = 7 \\times 12 + 6$, reste $6 \\neq 0$ — impossible. Rangées de $8$ : $90 = 8 \\times 11 + 2$, reste $2 \\neq 0$ — impossible. Seules les rangées de $6$ jetons conviennent.",
+        "3. Un nombre premier a exactement deux diviseurs : $1$ et lui-même. Or $90 = 2 \\times 45$, donc $2$ est un diviseur de $90$ différent de $1$ et de $90$ : le nombre $90$ n'est pas premier. Comme $90$ est pair, il est divisible par $2$, et $2$ est son plus petit diviseur premier.",
+        "4. On sait que $90$ est pair, donc $90 = 2k$ avec $k = 45$ entier. Alors $91 = 90 + 1 = 2 \\times 45 + 1$, qui est de la forme $2k + 1$ avec $k$ entier : le nombre $91$ est donc impair.",
+        "5. On cherche un diviseur de $91$ autre que $1$ et $91$. On teste les petits entiers : $91$ n'est ni pair, ni multiple de $3$ (car $9+1 = 10$ n'est pas multiple de $3$), ni multiple de $5$ (il ne finit ni par $0$ ni par $5$). En essayant $7$ : $91 = 7 \\times 13$. Donc $91$ admet les diviseurs $7$ et $13$ en plus de $1$ et $91$ : il n'est pas premier."
+      ],
+      "reponse": "1) $90 = 5 \\times 18$ (multiple de $5$) ; $90$ n'est pas multiple de $4$ (reste $2$). 2) Seules les rangées de $6$ conviennent ($90 = 6 \\times 15$) ; $7$ et $8$ donnent un reste. 3) $90$ n'est pas premier ($90 = 2 \\times 45$), son plus petit diviseur premier est $2$. 4) $91 = 2 \\times 45 + 1$ est impair. 5) $91$ n'est pas premier car $91 = 7 \\times 13$."
     }
   ]
 }

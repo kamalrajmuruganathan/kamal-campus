@@ -86,6 +86,57 @@
         "Vérification : avec $2$ rouges ajoutées, on a $6$ rouges sur $12$ boules, et $\\dfrac{6}{12} = \\dfrac{1}{2}$. ✓"
       ],
       "reponse": "Il faut ajouter $2$ boules rouges."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "contraire",
+      "enonce": "Un sac contient $20$ jetons numérotés de $1$ à $20$, indiscernables au toucher. On en tire un au hasard. Quelle est la probabilité que le numéro tiré ne soit **pas** un multiple de $5$ ?",
+      "corrige": [
+        "Les jetons sont indiscernables : les $20$ tirages sont équiprobables. On note $\\mathrm{M}$ : « le numéro est un multiple de $5$ ». On cherche $P\\left(\\overline{\\mathrm{M}}\\right)$.",
+        "Les multiples de $5$ entre $1$ et $20$ sont $5, 10, 15, 20$, soit $4$ issues favorables à $\\mathrm{M}$ : $P(\\mathrm{M}) = \\dfrac{4}{20} = \\dfrac{1}{5}$.",
+        "Par l'événement contraire : $P\\left(\\overline{\\mathrm{M}}\\right) = 1 - \\dfrac{1}{5} = \\dfrac{4}{5}$."
+      ],
+      "reponse": "$P(\\text{pas un multiple de } 5) = \\dfrac{4}{5}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "denombrement",
+      "enonce": "On lance une pièce équilibrée (côtés Pile et Face), puis un dé équilibré à six faces. Quelle est la probabilité d'obtenir **Pile et un numéro strictement supérieur à $4$** ?",
+      "corrige": [
+        "L'expérience a deux étapes ; on la représente par un arbre. La pièce donne $2$ résultats et le dé $6$, soit $2 \\times 6 = 12$ issues équiprobables.",
+        "L'événement demandé impose Pile à la première étape et un numéro parmi $\\{5, 6\\}$ à la seconde, soit $1 \\times 2 = 2$ issues favorables : $(\\text{Pile}, 5)$ et $(\\text{Pile}, 6)$.",
+        "$P(\\text{Pile et numéro} > 4) = \\dfrac{2}{12} = \\dfrac{1}{6}$."
+      ],
+      "reponse": "$P(\\text{Pile et numéro} > 4) = \\dfrac{1}{6}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "union",
+      "enonce": "Dans une classe de $30$ élèves, $18$ pratiquent un sport, $12$ jouent d'un instrument de musique et $7$ font les deux. On choisit un élève au hasard et on note $\\mathrm{S}$ : « il pratique un sport » et $\\mathrm{M}$ : « il joue d'un instrument ».\\n\\n1. Calculer $P(\\mathrm{S} \\cup \\mathrm{M})$, la probabilité qu'il pratique au moins une des deux activités.\\n2. En déduire la probabilité qu'il ne pratique aucune des deux.\\n3. Quelle est la probabilité qu'il pratique **exactement une** des deux activités ?",
+      "corrige": [
+        "Les $30$ élèves sont choisis au hasard, donc équiprobables. On a $P(\\mathrm{S}) = \\dfrac{18}{30}$, $P(\\mathrm{M}) = \\dfrac{12}{30}$ et $P(\\mathrm{S} \\cap \\mathrm{M}) = \\dfrac{7}{30}$.",
+        "1. Par l'inclusion-exclusion : $P(\\mathrm{S} \\cup \\mathrm{M}) = \\dfrac{18}{30} + \\dfrac{12}{30} - \\dfrac{7}{30} = \\dfrac{23}{30}$.",
+        "2. « Aucune des deux » est le contraire de $\\mathrm{S} \\cup \\mathrm{M}$ : $P\\left(\\overline{\\mathrm{S} \\cup \\mathrm{M}}\\right) = 1 - \\dfrac{23}{30} = \\dfrac{7}{30}$.",
+        "3. « Exactement une » exclut les $7$ élèves qui font les deux : on retire l'intersection de la réunion, soit $\\dfrac{23}{30} - \\dfrac{7}{30} = \\dfrac{16}{30} = \\dfrac{8}{15}$. (On peut vérifier : $11$ font uniquement du sport et $5$ uniquement de la musique, soit $16$ élèves.)"
+      ],
+      "reponse": "$P(\\mathrm{S} \\cup \\mathrm{M}) = \\dfrac{23}{30}$ ; aucune $= \\dfrac{7}{30}$ ; exactement une $= \\dfrac{8}{15}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Un club sportif compte $400$ membres. Chaque membre est soit un homme, soit une femme, et possède soit une licence **compétition**, soit une licence **loisir**. On dispose des données partielles suivantes : le club compte $240$ femmes ; $150$ membres au total ont une licence compétition ; parmi les femmes, $90$ ont une licence compétition.\\n\\n1. Recopier et compléter le tableau à double entrée des effectifs (lignes : femmes, hommes ; colonnes : compétition, loisir ; avec les totaux).\\n2. On choisit un membre au hasard. On note $\\mathrm{F}$ : « le membre est une femme » et $\\mathrm{C}$ : « le membre a une licence compétition ». Calculer $P(\\mathrm{F})$ et $P(\\mathrm{C})$.\\n3. Calculer $P(\\mathrm{F} \\cap \\mathrm{C})$ puis $P(\\mathrm{F} \\cup \\mathrm{C})$. Interpréter $P(\\mathrm{F} \\cup \\mathrm{C})$ par une phrase.\\n4. En déduire la probabilité que le membre choisi soit un homme ayant une licence loisir.\\n5. On interroge maintenant au hasard deux membres l'un après l'autre, en notant à chaque fois le type de licence (C : compétition, L : loisir). Le premier membre interrogé est réintégré au club avant le second tirage, de sorte que les deux tirages sont indépendants et équiprobables. Construire un arbre pondéré et calculer la probabilité que les **deux** aient une licence compétition, puis la probabilité qu'**au moins un** des deux ait une licence compétition.",
+      "corrige": [
+        "1. Le club compte $400$ membres dont $240$ femmes, donc $400 - 240 = 160$ hommes. Il y a $150$ licences compétition, donc $400 - 150 = 250$ licences loisir. Parmi les femmes, $90$ sont en compétition, donc $240 - 90 = 150$ femmes en loisir. Il reste $150 - 90 = 60$ hommes en compétition et $160 - 60 = 100$ hommes en loisir. Tableau : femmes $= 90$ compétition, $150$ loisir ($240$) ; hommes $= 60$ compétition, $100$ loisir ($160$) ; totaux $= 150$ compétition, $250$ loisir ($400$).",
+        "2. Le membre est choisi au hasard parmi $400$ : équiprobabilité. $P(\\mathrm{F}) = \\dfrac{240}{400} = \\dfrac{3}{5} = 0{,}6$ et $P(\\mathrm{C}) = \\dfrac{150}{400} = \\dfrac{3}{8} = 0{,}375$.",
+        "3. $P(\\mathrm{F} \\cap \\mathrm{C}) = \\dfrac{90}{400} = \\dfrac{9}{40} = 0{,}225$. Par l'inclusion-exclusion : $P(\\mathrm{F} \\cup \\mathrm{C}) = 0{,}6 + 0{,}375 - 0{,}225 = 0{,}75$. Interprétation : il y a $75\\,\\%$ de chances que le membre choisi soit une femme **ou** possède une licence compétition (ou les deux).",
+        "4. « Homme ayant une licence loisir » est exactement le contraire de $\\mathrm{F} \\cup \\mathrm{C}$ (ni femme, ni compétition). Donc $P = 1 - 0{,}75 = 0{,}25$. On le retrouve dans le tableau : $\\dfrac{100}{400} = 0{,}25$. ✓",
+        "5. À chaque tirage, $P(\\mathrm{C}) = \\dfrac{150}{400} = \\dfrac{3}{8}$ et $P(\\mathrm{L}) = \\dfrac{250}{400} = \\dfrac{5}{8}$. L'arbre a deux niveaux (premier membre : C ou L ; second membre : C ou L), chaque branche étant pondérée par ces valeurs car les tirages sont indépendants. « Les deux en compétition » suit la branche C puis C : $P = \\dfrac{3}{8} \\times \\dfrac{3}{8} = \\dfrac{9}{64}$. « Au moins un en compétition » se calcule par le contraire « aucun en compétition » (branche L puis L) : $P = 1 - \\dfrac{5}{8} \\times \\dfrac{5}{8} = 1 - \\dfrac{25}{64} = \\dfrac{39}{64}$."
+      ],
+      "reponse": "Tableau : femmes $90$/$150$, hommes $60$/$100$. $P(\\mathrm{F}) = 0{,}6$, $P(\\mathrm{C}) = 0{,}375$, $P(\\mathrm{F} \\cap \\mathrm{C}) = 0{,}225$, $P(\\mathrm{F} \\cup \\mathrm{C}) = 0{,}75$ ; homme-loisir $= 0{,}25$. Deux en compétition $= \\dfrac{9}{64}$ ; au moins un $= \\dfrac{39}{64}$."
     }
   ]
 }

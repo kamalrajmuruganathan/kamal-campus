@@ -88,6 +88,60 @@
         "Pour l'étoile à $4{,}0$ a.l. : $d = 4{,}0 \\times 9{,}47 \\times 10^{15} \\approx 3{,}8 \\times 10^{16}$ m."
       ],
       "reponse": "$1\\ \\text{a.l.} \\approx 9{,}47 \\times 10^{15}$ m, donc l'étoile est à $d \\approx 3{,}8 \\times 10^{16}$ m."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "vergence",
+      "enonce": "Une loupe est une lentille convergente de distance focale $f' = 25$ cm. Calcule sa vergence $C$ et exprime-la en dioptries (δ).",
+      "corrige": [
+        "La vergence est reliée à la distance focale par $C = \\dfrac{1}{f'}$, avec $f'$ exprimée en mètres.",
+        "On convertit d'abord la distance focale en mètres : $f' = 25$ cm $= 0{,}25$ m (étape à ne pas oublier).",
+        "$C = \\dfrac{1}{f'} = \\dfrac{1}{0{,}25} = 4{,}0$ δ.",
+        "Contrôle des unités : l'inverse d'une longueur en mètres donne bien des dioptries."
+      ],
+      "reponse": "$C = 4{,}0$ δ."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "son",
+      "enonce": "Debout face à une falaise, un randonneur pousse un cri. Il perçoit son écho $1{,}5$ s plus tard. La vitesse du son dans l'air vaut $v = 340$ m·s⁻¹. À quelle distance $d$ se trouve-t-il de la falaise ?",
+      "corrige": [
+        "Pendant la durée mesurée, le son fait un aller-retour : il parcourt la distance $d$ jusqu'à la falaise, puis revient, soit une longueur totale $2d$.",
+        "On relie distance et durée : $2d = v \\times \\Delta t$.",
+        "On isole $d$ : $d = \\dfrac{v \\times \\Delta t}{2} = \\dfrac{340 \\times 1{,}5}{2} = \\dfrac{510}{2} = 255$ m.",
+        "Contrôle des unités : m·s⁻¹ $\\times$ s donne des mètres ; le facteur $2$ traduit bien l'aller-retour."
+      ],
+      "reponse": "$d = 255$ m (soit environ $2{,}6 \\times 10^{2}$ m)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "circuits",
+      "enonce": "On branche en dérivation, aux bornes d'un générateur de tension $U = 6{,}0$ V, deux résistances $R_1 = 100$ Ω et $R_2 = 200$ Ω. Détermine la tension aux bornes de chaque résistance, les intensités $I_1$ et $I_2$ qui les traversent, puis l'intensité totale $I$ débitée par le générateur.",
+      "corrige": [
+        "En dérivation, la tension est identique aux bornes de chaque branche : $U_1 = U_2 = U = 6{,}0$ V.",
+        "On applique la loi d'Ohm dans chaque branche. Branche 1 : $I_1 = \\dfrac{U}{R_1} = \\dfrac{6{,}0}{100} = 0{,}060$ A.",
+        "Branche 2 : $I_2 = \\dfrac{U}{R_2} = \\dfrac{6{,}0}{200} = 0{,}030$ A.",
+        "En dérivation, les intensités s'additionnent : $I = I_1 + I_2 = 0{,}060 + 0{,}030 = 0{,}090$ A.",
+        "Vérification de cohérence : la branche de plus faible résistance ($R_1$) est bien parcourue par l'intensité la plus grande."
+      ],
+      "reponse": "$U_1 = U_2 = 6{,}0$ V, $I_1 = 0{,}060$ A, $I_2 = 0{,}030$ A et $I = 0{,}090$ A."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "ondes-signaux",
+      "enonce": "**Un orage sur la côte.** Depuis la plage, Léa observe un orage au-dessus de la mer. Munie d'un chronomètre, elle mesure les signaux qui lui parviennent. On donne la vitesse de la lumière dans le vide $c = 3{,}00 \\times 10^{8}$ m·s⁻¹, la vitesse du son dans l'air $v = 340$ m·s⁻¹, l'indice de l'air $n_1 = 1{,}00$ et l'indice de l'eau de mer $n_2 = 1{,}33$. On donne aussi $\\sin 40° = 0{,}643$ et $\\arcsin(0{,}483) \\approx 29°$.\\n\\n1. Léa voit l'éclair, puis entend le tonnerre $6{,}0$ s plus tard. Sachant que l'éclair est distant d'environ $2$ km, estime la durée mise par la lumière pour lui parvenir et justifie qu'on la considère comme quasi instantanée devant celle du son.\\n2. En négligeant la durée de propagation de la lumière, calcule la distance $d$ séparant Léa de l'impact de la foudre.\\n3. Un rayon lumineux de l'éclair atteint la surface de la mer avec un angle d'incidence $i_1 = 40°$ par rapport à la normale. Calcule l'angle de réfraction $i_2$ du rayon dans l'eau.\\n4. Un enregistreur capte le tonnerre : le signal sonore a une période $T = 5{,}0$ ms. Calcule sa fréquence $f$ et indique si ce son est audible (domaine : $20$ Hz à $20\\,000$ Hz).\\n5. Une photorésistance placée sur la station de Léa détecte l'éclair. Éclairée, elle présente une résistance $R = 2{,}0$ kΩ et la tension à ses bornes vaut $U = 5{,}0$ V. Calcule l'intensité $I$ du courant qui la traverse.",
+      "corrige": [
+        "1. La lumière parcourt les $2$ km en $\\Delta t_{\\text{lum}} = \\dfrac{d}{c} = \\dfrac{2{,}0 \\times 10^{3}}{3{,}00 \\times 10^{8}} \\approx 6{,}7 \\times 10^{-6}$ s, soit quelques microsecondes. C'est environ un million de fois plus court que les $6{,}0$ s du son : on peut donc considérer que l'éclair est vu quasi instantanément et que le retard mesuré est celui du son.",
+        "2. En négligeant le temps de la lumière, le retard de $6{,}0$ s est le temps de propagation du son : $d = v \\times \\Delta t = 340 \\times 6{,}0 = 2{,}0 \\times 10^{3}$ m, soit environ $2{,}0$ km (cohérent avec l'énoncé).",
+        "3. Loi de Snell-Descartes (angles mesurés par rapport à la normale) : $n_1 \\sin i_1 = n_2 \\sin i_2$, d'où $\\sin i_2 = \\dfrac{n_1 \\sin i_1}{n_2} = \\dfrac{1{,}00 \\times 0{,}643}{1{,}33} = 0{,}483$. Donc $i_2 = \\arcsin(0{,}483) \\approx 29°$. Le rayon se rapproche de la normale en entrant dans le milieu plus réfringent, ce qui est cohérent.",
+        "4. On convertit la période : $T = 5{,}0$ ms $= 5{,}0 \\times 10^{-3}$ s. La fréquence vaut $f = \\dfrac{1}{T} = \\dfrac{1}{5{,}0 \\times 10^{-3}} = 200$ Hz. Comme $20 < 200 < 20\\,000$, ce son est bien audible par l'oreille humaine.",
+        "5. Loi d'Ohm : $U = R \\times I$, donc $I = \\dfrac{U}{R}$. On convertit $R = 2{,}0$ kΩ $= 2{,}0 \\times 10^{3}$ Ω, puis $I = \\dfrac{5{,}0}{2{,}0 \\times 10^{3}} = 2{,}5 \\times 10^{-3}$ A $= 2{,}5$ mA. Contrôle des unités : des volts divisés par des ohms donnent des ampères."
+      ],
+      "reponse": "1. $\\Delta t_{\\text{lum}} \\approx 6{,}7 \\times 10^{-6}$ s, négligeable devant $6{,}0$ s. 2. $d = 2{,}0 \\times 10^{3}$ m. 3. $i_2 \\approx 29°$. 4. $f = 200$ Hz, son audible. 5. $I = 2{,}5 \\times 10^{-3}$ A $= 2{,}5$ mA."
     }
   ]
 }

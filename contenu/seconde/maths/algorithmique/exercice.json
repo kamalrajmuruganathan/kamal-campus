@@ -92,6 +92,60 @@
         "Pour `somme(100)`, on additionne tous les entiers de $1$ à $100$. Cette somme vaut $\\dfrac{100 \\times 101}{2} = 5050$ (résultat vu dans la fiche)."
       ],
       "reponse": "La fonction renvoie la somme $1 + 2 + \\ldots + n$ ; `somme(100)` renvoie $5050$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "boucle-for",
+      "enonce": "Qu'affiche ce programme ?\n```python\nP = 1\nfor k in range(1, 5):\n    P = P * k\nprint(P)\n```",
+      "corrige": [
+        "On repère les valeurs prises par `k`. `range(1, 5)` part de $1$ et s'arrête **avant** $5$ : `k` prend les valeurs $1, 2, 3, 4$.",
+        "Ici `P` est une variable d'accumulation par **produit** : elle est initialisée à $1$ (et non à $0$, sinon tout produit resterait nul). À chaque tour, on multiplie `P` par `k`.",
+        "On suit l'exécution : départ `P` = $1$ ; tour $k = 1$ : `P` = $1 \\times 1 = 1$ ; tour $k = 2$ : `P` = $1 \\times 2 = 2$ ; tour $k = 3$ : `P` = $2 \\times 3 = 6$ ; tour $k = 4$ : `P` = $6 \\times 4 = 24$.",
+        "Le `print` est **hors** de la boucle (il n'est pas indenté) : il n'affiche qu'une seule fois, à la fin, la valeur finale de `P`."
+      ],
+      "reponse": "Le programme affiche $24$ (c'est le produit $1 \\times 2 \\times 3 \\times 4$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "fonction",
+      "enonce": "Écrire une fonction `valeur_absolue(x)` qui **renvoie** la valeur absolue de `x` sans utiliser la fonction `abs`, en s'appuyant sur une instruction conditionnelle. Que renvoient alors `valeur_absolue(-4)` et `valeur_absolue(5)` ?",
+      "corrige": [
+        "La valeur absolue vaut $-x$ quand $x$ est négatif, et $x$ sinon. On traduit ce raisonnement par un `if ... else` à l'intérieur de la fonction.",
+        "On utilise `return` (et non `print`) pour **renvoyer** une valeur réutilisable dans un calcul. Le programme est :\n```python\ndef valeur_absolue(x):\n    if x < 0:\n        return -x\n    else:\n        return x\n```",
+        "Pour `valeur_absolue(-4)` : $-4 < 0$ est vrai, on exécute `return -x`, soit `return -(-4)` $= 4$.",
+        "Pour `valeur_absolue(5)` : $5 < 0$ est faux, on passe au `else`, on exécute `return x`, soit $5$."
+      ],
+      "reponse": "`valeur_absolue(-4)` renvoie $4$ et `valeur_absolue(5)` renvoie $5$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "while",
+      "enonce": "On considère la fonction suivante.\n```python\ndef mystere(N):\n    n = 0\n    p = 1\n    while p < N:\n        p = p * 2\n        n = n + 1\n    return n\n```\n**(a)** Que renvoie `mystere(1000)` ? **(b)** Décrire en une phrase ce que calcule cette fonction pour un entier `N` strictement positif.",
+      "corrige": [
+        "**(a)** On suit l'exécution en notant, à chaque tour, les valeurs de `p` et `n` après les deux affectations. Départ : `p` = $1$, `n` = $0$. La condition testée est `p < 1000`.",
+        "Tours successifs : `p` prend les valeurs $2$ (`n`=1), $4$ (2), $8$ (3), $16$ (4), $32$ (5), $64$ (6), $128$ (7), $256$ (8), $512$ (9), puis $1024$ (`n`=10).",
+        "À ce dernier tour `p` = $1024$, donc `p < 1000` devient **faux** : la boucle s'arrête et la fonction renvoie `n` = $10$. On remarque que `p` vaut toujours une puissance de $2$ : après le tour numéro `n`, on a $p = 2^n$.",
+        "**(b)** La boucle continue tant que $2^n < N$ et s'arrête dès que $2^n \\ge N$. La fonction renvoie donc le **plus petit entier $n$ tel que $2^n \\ge N$**. La boucle se termine bien car `p` double à chaque tour et finit par dépasser `N`.",
+        "Vérification pour $N = 1000$ : $2^9 = 512 < 1000$ mais $2^{10} = 1024 \\ge 1000$, d'où $n = 10$, ce qui confirme le (a)."
+      ],
+      "reponse": "**(a)** `mystere(1000)` renvoie $10$. **(b)** La fonction renvoie le plus petit entier $n$ tel que $2^n \\ge N$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Léa place un capital de $500$ € sur un livret qui rapporte $3\\%$ d'intérêts composés par an : chaque année, le capital est **multiplié par $1{,}03$**. On note $C_n$ le capital (en euros) après $n$ années, avec $C_0 = 500$.\n\n1. En Python, la variable `C` contient le capital d'une année donnée. Écrire l'affectation qui fait passer `C` au capital de l'année suivante.\n2. Recopier et compléter le programme ci-dessous pour qu'il calcule le capital après $5$ ans.\n```python\nC = 500\nfor annee in range(...):\n    C = ...\nprint(C)\n```\n3. Écrire une fonction `capital(n)` qui **renvoie** le capital après `n` années.\n4. Léa veut savoir au bout de combien d'années son capital dépasse $600$ €. Écrire une boucle `while` qui calcule et affiche ce nombre d'années.\n5. Donner, en justifiant par le calcul, le capital après $5$ ans (arrondi au centime) et le nombre d'années trouvé à la question 4.",
+      "corrige": [
+        "1. Gagner $3\\%$ revient à multiplier par $1{,}03$. L'affectation est `C = C * 1.03` (le séparateur décimal est le **point**, jamais la virgule). On lit l'ancien capital, on le multiplie par $1{,}03$, on range le résultat dans `C`.",
+        "2. Il faut répéter cette mise à jour **une fois par année**, donc $5$ tours : `range(5)` convient (il produit $0, 1, 2, 3, 4$, soit exactement $5$ valeurs). Le programme complété :\n```python\nC = 500\nfor annee in range(5):\n    C = C * 1.03\nprint(C)\n```",
+        "3. On définit la fonction avec `def`, on initialise le capital à $500$ **avant** la boucle, on applique $n$ fois la mise à jour, puis on **renvoie** le résultat avec `return` (et non `print`, car on veut une valeur réutilisable) :\n```python\ndef capital(n):\n    C = 500\n    for annee in range(n):\n        C = C * 1.03\n    return C\n```",
+        "4. On ne connaît pas d'avance le nombre de tours : on utilise un `while` piloté par la condition « tant que le capital n'a pas dépassé $600$ ». On compte les années dans une variable `n` :\n```python\nC = 500\nn = 0\nwhile C <= 600:\n    C = C * 1.03\n    n = n + 1\nprint(n)\n```\nLa condition finit par devenir fausse car le capital augmente à chaque tour : la boucle n'est pas infinie.",
+        "5. Après $5$ ans : $C_5 = 500 \\times 1{,}03^5$. Or $1{,}03^5 \\approx 1{,}159274$, donc $C_5 \\approx 579{,}64$ €. Pour la question 4, on poursuit : $C_6 = 500 \\times 1{,}03^6 \\approx 597{,}03$ € (encore $\\le 600$), puis $C_7 = 500 \\times 1{,}03^7 \\approx 614{,}94$ € ($> 600$). La boucle s'arrête donc à $n = 7$."
+      ],
+      "reponse": "Après $5$ ans, le capital vaut environ $579{,}64$ € ; il dépasse $600$ € au bout de $7$ ans."
     }
   ]
 }

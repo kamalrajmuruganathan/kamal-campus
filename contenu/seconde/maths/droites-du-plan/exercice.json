@@ -84,6 +84,57 @@
         "Géométriquement, chaque équation est celle d'une droite ; le système ayant une solution unique, les deux droites sont sécantes et se coupent au point $(8\\,;5)$."
       ],
       "reponse": "Une place adulte coûte $8$ € et une place enfant $5$ € ; les droites associées sont sécantes en $(8\\,;5)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "equation-reduite",
+      "enonce": "La droite $d$ a pour coefficient directeur $m = 3$ et passe par le point $\\mathrm{A}(-1\\,;2)$. Déterminer son équation réduite.",
+      "corrige": [
+        "Comme le coefficient directeur est connu, l'équation réduite est de la forme $y = 3x + p$ ; il reste à déterminer $p$.",
+        "Le point $\\mathrm{A}(-1\\,;2)$ appartient à $d$, donc ses coordonnées vérifient l'équation : $2 = 3 \\times (-1) + p$, soit $2 = -3 + p$, d'où $p = 5$.",
+        "On vérifie avec $\\mathrm{A}$ : $3 \\times (-1) + 5 = -3 + 5 = 2$ ✓. L'équation réduite est $y = 3x + 5$."
+      ],
+      "reponse": "$y = 3x + 5$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "equation-cartesienne",
+      "enonce": "Soit la droite $d$ d'équation cartésienne $4x - 2y + 6 = 0$. Déterminer son équation réduite, puis en déduire son coefficient directeur et son ordonnée à l'origine.",
+      "corrige": [
+        "On isole $y$. À partir de $4x - 2y + 6 = 0$, on écrit $-2y = -4x - 6$.",
+        "On divise chaque terme par $-2$ : $y = \\dfrac{-4x}{-2} + \\dfrac{-6}{-2} = 2x + 3$.",
+        "L'équation réduite est donc $y = 2x + 3$ : le coefficient directeur est $m = 2$ et l'ordonnée à l'origine est $p = 3$."
+      ],
+      "reponse": "$y = 2x + 3$, avec $m = 2$ et $p = 3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "alignement",
+      "enonce": "On donne les points $\\mathrm{A}(-2\\,;-3)$, $\\mathrm{B}(1\\,;3)$ et $\\mathrm{C}(4\\,;9)$. Démontrer que ces trois points sont alignés.",
+      "corrige": [
+        "Trois points sont alignés lorsque les droites $(\\mathrm{AB})$ et $(\\mathrm{AC})$ ont le même coefficient directeur (elles partagent alors le point $\\mathrm{A}$ et une même direction).",
+        "Coefficient directeur de $(\\mathrm{AB})$ : $m_{\\mathrm{AB}} = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}} = \\dfrac{3 - (-3)}{1 - (-2)} = \\dfrac{6}{3} = 2$.",
+        "Coefficient directeur de $(\\mathrm{AC})$ : $m_{\\mathrm{AC}} = \\dfrac{y_\\mathrm{C} - y_\\mathrm{A}}{x_\\mathrm{C} - x_\\mathrm{A}} = \\dfrac{9 - (-3)}{4 - (-2)} = \\dfrac{12}{6} = 2$.",
+        "Les deux coefficients directeurs sont égaux et les droites passent toutes deux par $\\mathrm{A}$ : $(\\mathrm{AB})$ et $(\\mathrm{AC})$ sont confondues. Les points $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{C}$ sont donc alignés."
+      ],
+      "reponse": "$m_{\\mathrm{AB}} = m_{\\mathrm{AC}} = 2$ : les points $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{C}$ sont alignés."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Sur le plan d'un parc, muni d'un repère orthonormé d'unité $100$ m, les allées sont rectilignes. On repère les points $\\mathrm{A}(-1\\,;-1)$, $\\mathrm{B}(2\\,;5)$, $\\mathrm{C}(0\\,;-2)$ et $\\mathrm{D}(3\\,;4)$. L'allée principale est la droite $(\\mathrm{AB})$, une deuxième allée est la droite $(\\mathrm{CD})$, et une troisième allée $\\Delta$ a pour équation $y = -x + 10$. 1. Déterminer l'équation réduite de l'allée $(\\mathrm{AB})$. 2. Calculer le coefficient directeur de l'allée $(\\mathrm{CD})$ et démontrer que les allées $(\\mathrm{AB})$ et $(\\mathrm{CD})$ sont parallèles. 3. Une fontaine est située à l'intersection de l'allée principale $(\\mathrm{AB})$ et de l'allée $\\Delta$. Déterminer ses coordonnées. 4. L'entrée du parc est le point $\\mathrm{E}(4\\,;9)$. Montrer que $\\mathrm{E}$ appartient à l'allée principale $(\\mathrm{AB})$. 5. Les allées $(\\mathrm{CD})$ et $\\Delta$ se coupent-elles ? Justifier, puis déterminer le point de croisement.",
+      "corrige": [
+        "1. On cherche $(\\mathrm{AB})$ sous la forme $y = mx + p$. Coefficient directeur : $m = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}} = \\dfrac{5 - (-1)}{2 - (-1)} = \\dfrac{6}{3} = 2$. On détermine $p$ avec $\\mathrm{A}(-1\\,;-1)$ : $-1 = 2 \\times (-1) + p$, soit $-1 = -2 + p$, d'où $p = 1$. L'équation réduite de $(\\mathrm{AB})$ est $y = 2x + 1$ (vérification avec $\\mathrm{B}$ : $2 \\times 2 + 1 = 5$ ✓).",
+        "2. Coefficient directeur de $(\\mathrm{CD})$ : $m' = \\dfrac{y_\\mathrm{D} - y_\\mathrm{C}}{x_\\mathrm{D} - x_\\mathrm{C}} = \\dfrac{4 - (-2)}{3 - 0} = \\dfrac{6}{3} = 2$. On trouve $m' = 2 = m$ : les deux droites ont le même coefficient directeur, donc les allées $(\\mathrm{AB})$ et $(\\mathrm{CD})$ sont parallèles.",
+        "3. La fontaine est le point d'intersection de $(\\mathrm{AB}) : y = 2x + 1$ et de $\\Delta : y = -x + 10$. On résout $2x + 1 = -x + 10$, soit $3x = 9$, donc $x = 3$ ; puis $y = 2 \\times 3 + 1 = 7$. Les coordonnées de la fontaine sont $(3\\,;7)$, soit un point situé à $300$ m et $700$ m des axes.",
+        "4. Le point $\\mathrm{E}(4\\,;9)$ appartient à $(\\mathrm{AB})$ si ses coordonnées vérifient $y = 2x + 1$. On calcule $2 \\times 4 + 1 = 9$, qui est bien égal à l'ordonnée de $\\mathrm{E}$. Donc $\\mathrm{E}$ appartient à l'allée principale $(\\mathrm{AB})$.",
+        "5. L'allée $(\\mathrm{CD})$ a pour équation réduite $y = 2x + p'$ avec $\\mathrm{C}(0\\,;-2)$, d'où $p' = -2$ : $y = 2x - 2$. Son coefficient directeur est $2$, celui de $\\Delta$ est $-1$ ; comme $2 \\neq -1$, les deux allées ne sont pas parallèles : elles se coupent en un unique point. On résout $2x - 2 = -x + 10$, soit $3x = 12$, donc $x = 4$ ; puis $y = 2 \\times 4 - 2 = 6$. Le point de croisement est $(4\\,;6)$."
+      ],
+      "reponse": "1. $(\\mathrm{AB}) : y = 2x + 1$. 2. $(\\mathrm{CD})$ a pour coefficient directeur $2$, égal à celui de $(\\mathrm{AB})$ : les deux allées sont parallèles. 3. Fontaine en $(3\\,;7)$. 4. $2 \\times 4 + 1 = 9$ : $\\mathrm{E}$ est bien sur $(\\mathrm{AB})$. 5. Coefficients directeurs $2$ et $-1$ différents : $(\\mathrm{CD})$ et $\\Delta$ sont sécantes en $(4\\,;6)$."
     }
   ]
 }
