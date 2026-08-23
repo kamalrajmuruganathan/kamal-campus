@@ -84,6 +84,59 @@
         "b) « Perdre » (somme inférieure ou égale à $9$) est l'événement contraire de « gagner ». Donc $P(\\text{perdre}) = 1 - P(\\text{gagner}) = 1 - \\dfrac{1}{6} = \\dfrac{5}{6}$."
       ],
       "reponse": "a) $P(\\text{gagner}) = \\dfrac{6}{36} = \\dfrac{1}{6}$ ; b) $P(\\text{perdre}) = \\dfrac{5}{6}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "evenement-contraire",
+      "enonce": "Une roue de loterie équilibrée est partagée en neuf secteurs identiques numérotés de $1$ à $9$. On la fait tourner une fois et on note $R$ l'événement « obtenir un multiple de $3$ ». Écris $R$ entre accolades, calcule $P(R)$, puis $P(\\overline{R})$.",
+      "corrige": [
+        "Les neuf secteurs étant identiques, la roue s'arrête sur chacun avec la même chance : l'univers $\\Omega = \\{1 \\,;\\, 2 \\,;\\, 3 \\,;\\, 4 \\,;\\, 5 \\,;\\, 6 \\,;\\, 7 \\,;\\, 8 \\,;\\, 9\\}$ compte $9$ issues équiprobables.",
+        "L'événement $R$ rassemble les multiples de $3$ : $R = \\{3 \\,;\\, 6 \\,;\\, 9\\}$, soit $3$ issues. Donc $P(R) = \\dfrac{3}{9} = \\dfrac{1}{3}$.",
+        "Le contraire $\\overline{R}$ (« ne pas obtenir de multiple de $3$ ») se calcule avec $P(\\overline{R}) = 1 - P(R) = 1 - \\dfrac{1}{3} = \\dfrac{2}{3}$."
+      ],
+      "reponse": "$R = \\{3 \\,;\\, 6 \\,;\\, 9\\}$, $P(R) = \\dfrac{1}{3}$ et $P(\\overline{R}) = \\dfrac{2}{3}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "reunion",
+      "enonce": "Dans un jeu de $32$ cartes (les valeurs $7$, $8$, $9$, $10$, valet, dame, roi et as, dans chacune des quatre couleurs), on tire une carte au hasard. On pose $C$ : « obtenir un cœur » et $F$ : « obtenir une figure » (valet, dame ou roi). Calcule $P(C \\cup F)$.",
+      "corrige": [
+        "Les $32$ cartes sont équiprobables. L'événement $C$ regroupe les $8$ cœurs, donc $C$ compte $8$ issues. Les figures sont le valet, la dame et le roi de chaque couleur, soit $3 \\times 4 = 12$ cartes : $F$ compte $12$ issues.",
+        "Trois cartes sont à la fois cœur et figure : le valet, la dame et le roi de cœur. Donc $C \\cap F$ compte $3$ issues.",
+        "On ne peut pas additionner $8 + 12$, car cela compterait deux fois ces $3$ cartes communes. Le nombre d'issues de $C \\cup F$ est $8 + 12 - 3 = 17$.",
+        "Donc $P(C \\cup F) = \\dfrac{17}{32}$."
+      ],
+      "reponse": "$C \\cup F$ compte $17$ cartes, donc $P(C \\cup F) = \\dfrac{17}{32}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "evenement-contraire",
+      "enonce": "On lance deux dés équilibrés à six faces. Quelle est la probabilité d'obtenir **au moins un** multiple de $3$ (c'est-à-dire au moins un $3$ ou un $6$) sur les deux dés ? On passera par l'événement contraire.",
+      "corrige": [
+        "Chaque dé a $6$ résultats possibles, donc l'univers compte $6 \\times 6 = 36$ couples équiprobables.",
+        "Le contraire de « au moins un multiple de $3$ » est « aucun multiple de $3$ », c'est-à-dire un résultat pris parmi $\\{1 \\,;\\, 2 \\,;\\, 4 \\,;\\, 5\\}$ sur chaque dé, soit $4$ possibilités par dé.",
+        "Il y a donc $4 \\times 4 = 16$ couples sans aucun multiple de $3$, d'où $P(\\text{aucun multiple de } 3) = \\dfrac{16}{36} = \\dfrac{4}{9}$.",
+        "On retranche à $1$ : $P(\\text{au moins un multiple de } 3) = 1 - \\dfrac{4}{9} = \\dfrac{5}{9}$."
+      ],
+      "reponse": "$P(\\text{au moins un multiple de } 3) = 1 - \\dfrac{16}{36} = \\dfrac{5}{9}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "À la fête du collège, le stand « Roue & Dés » propose un jeu en deux temps. **La roue** est équilibrée et partagée en vingt secteurs identiques numérotés de $1$ à $20$ ; on la fait d'abord tourner une fois. **Les dés** : si le joueur a gagné à la roue, il lance ensuite deux dés équilibrés à six faces et additionne les deux résultats.\n\n1. Écris l'univers de la roue et donne son nombre d'issues.\n2. On gagne à la roue lorsque le numéro obtenu est un multiple de $4$. Écris l'événement $G$ « gagner à la roue » et calcule $P(G)$.\n3. Calcule la probabilité de **ne pas** gagner à la roue.\n4. On note $H$ : « obtenir un multiple de $4$ **et** un numéro supérieur ou égal à $12$ ». Liste les issues de $H$ et calcule $P(H)$.\n5. Un joueur a gagné à la roue et lance les deux dés. À l'aide du tableau des sommes de deux dés, calcule la probabilité que la somme obtenue soit égale à $8$.\n6. Le lot maximal est remis si la somme des deux dés est **supérieure ou égale à $11$**. Calcule cette probabilité.",
+      "corrige": [
+        "1. Les vingt secteurs sont identiques, donc équiprobables : $\\Omega = \\{1 \\,;\\, 2 \\,;\\, 3 \\,;\\, \\dots \\,;\\, 20\\}$, soit $20$ issues.",
+        "2. Les multiples de $4$ entre $1$ et $20$ sont $G = \\{4 \\,;\\, 8 \\,;\\, 12 \\,;\\, 16 \\,;\\, 20\\}$, soit $5$ issues. Donc $P(G) = \\dfrac{5}{20} = \\dfrac{1}{4}$.",
+        "3. « Ne pas gagner » est le contraire de $G$ : $P(\\overline{G}) = 1 - P(G) = 1 - \\dfrac{1}{4} = \\dfrac{3}{4}$.",
+        "4. On garde dans $G$ les numéros supérieurs ou égaux à $12$ : $H = \\{12 \\,;\\, 16 \\,;\\, 20\\}$, soit $3$ issues. Donc $P(H) = \\dfrac{3}{20}$.",
+        "5. Avec deux dés, l'univers compte $6 \\times 6 = 36$ issues équiprobables. Dans le tableau des sommes, la somme $8$ apparaît $5$ fois : $(2\\,;6)$, $(3\\,;5)$, $(4\\,;4)$, $(5\\,;3)$ et $(6\\,;2)$. Donc $P(\\text{somme} = 8) = \\dfrac{5}{36}$.",
+        "6. Les sommes supérieures ou égales à $11$ sont $11$ (qui apparaît $2$ fois) et $12$ (qui apparaît $1$ fois), soit $2 + 1 = 3$ issues favorables. Donc $P(\\text{somme} \\ge 11) = \\dfrac{3}{36} = \\dfrac{1}{12}$."
+      ],
+      "reponse": "1. $\\Omega$ compte $20$ issues. 2. $G = \\{4 \\,;\\, 8 \\,;\\, 12 \\,;\\, 16 \\,;\\, 20\\}$, $P(G) = \\dfrac{1}{4}$. 3. $P(\\overline{G}) = \\dfrac{3}{4}$. 4. $H = \\{12 \\,;\\, 16 \\,;\\, 20\\}$, $P(H) = \\dfrac{3}{20}$. 5. $P(\\text{somme} = 8) = \\dfrac{5}{36}$. 6. $P(\\text{somme} \\ge 11) = \\dfrac{1}{12}$."
     }
   ]
 }

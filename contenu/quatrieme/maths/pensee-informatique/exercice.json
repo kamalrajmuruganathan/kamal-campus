@@ -92,6 +92,57 @@
         "c) Un seul exemple faux, situé **pile sur la frontière** (140) : c'est la signature d'un opérateur trop strict. Le nombre 140 et les deux messages sont corrects ; seul le `>`, qui exclut l'égalité, devait devenir `≥`."
       ],
       "reponse": "Il se trompe pour `taille` = 140 (« accès refusé » au lieu de « accès autorisé ») ; on corrige en écrivant `si taille ≥ 140 alors`."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "compteur",
+      "enonce": "Fais le **tableau de suivi** de ce programme (une ligne par tour de boucle), puis indique ce qu'il affiche.\n\n```\nmettre 20 dans stock\nrépéter 3 fois\n    mettre stock − 6 dans stock\nfin répéter\nafficher stock\n```",
+      "corrige": [
+        "`mettre 20 dans stock` : au départ, `stock` vaut $20$. La boucle répète **3 fois** la ligne décalée `mettre stock − 6 dans stock`, qui **retire** $6$ à chaque tour (la machine calcule d'abord `stock − 6`, puis range le résultat).",
+        "Tour 1 : $20 - 6 = 14$, donc `stock` vaut $14$. Tour 2 : $14 - 6 = 8$. Tour 3 : $8 - 6 = 2$.",
+        "Tableau de suivi : `stock` passe de $20$ à $14$, puis $8$, puis $2$. Après le `fin répéter`, `afficher stock` donne la valeur finale."
+      ],
+      "reponse": "Le programme affiche $2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "suivi-variable",
+      "enonce": "Ce programme enchaîne une **boucle** puis une **instruction conditionnelle**. Donne, en justifiant chaque étape, ce qu'il affiche.\n\n```\nmettre 0 dans t\nrépéter 5 fois\n    mettre t + 2 dans t\nfin répéter\nsi t ≥ 10 alors\n    afficher « objectif atteint »\nsinon\n    afficher « continue »\nfin si\n```",
+      "corrige": [
+        "**Étape 1 — la boucle.** `t` part de $0$ et gagne $2$ à chaque tour, sur $5$ tours : $2$, puis $4$, $6$, $8$, $10$. Après le `fin répéter`, `t` vaut donc $10$.",
+        "**Étape 2 — le test.** On évalue la condition avec cette valeur : $10 \\geqslant 10$ est **vrai**, car l'égalité est comprise dans $\\geqslant$.",
+        "La condition étant vraie, le programme part dans la branche `alors` et affiche « objectif atteint » ; la branche `sinon` n'est pas exécutée."
+      ],
+      "reponse": "Après la boucle `t` vaut $10$, donc le programme affiche « objectif atteint »."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "raisonnement",
+      "enonce": "On considère ce programme, où l'utilisateur saisit un nombre `n`.\n\n```\ndemander un nombre et le mettre dans n\nmettre n + 3 dans n\nsi n ≥ 10 alors\n    afficher « ok »\nsinon\n    afficher « trop petit »\nfin si\n```\n\na) Que s'affiche-t-il pour la saisie `n` = 4 ? pour `n` = 7 ?\nb) Détermine **toutes** les saisies pour lesquelles le programme affiche « ok ». Justifie.",
+      "corrige": [
+        "Attention à l'ordre : la ligne `mettre n + 3 dans n` s'exécute **avant** le test, donc la condition porte sur la valeur **après** l'ajout de $3$, et non sur la saisie.",
+        "a) Saisie $4$ : après `mettre n + 3 dans n`, `n` vaut $4 + 3 = 7$. Test $7 \\geqslant 10$ : **faux** → « trop petit ». Saisie $7$ : `n` devient $7 + 3 = 10$ ; $10 \\geqslant 10$ est **vrai** → « ok ».",
+        "b) Le programme affiche « ok » exactement quand la valeur testée vérifie `n + 3 ≥ 10`, c'est-à-dire quand la saisie de départ vaut **au moins** $7$ (car $7 + 3 = 10$ est la plus petite valeur qui atteint $10$).",
+        "Vérification par la frontière : la saisie $6$ donne $9 < 10$ → « trop petit », tandis que $7$ donne $10 \\geqslant 10$ → « ok ». La frontière est donc bien à $7$, inclus."
+      ],
+      "reponse": "a) « trop petit » pour $4$, « ok » pour $7$. b) Le programme affiche « ok » pour toutes les saisies supérieures ou égales à $7$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "boucle-condition",
+      "enonce": "Nadia économise pour s'acheter un jeu. Sa tirelire est vide au départ. Pendant **6 semaines**, elle y ajoute **5 €** chaque semaine. À la fin, un programme lui dit si elle peut acheter le jeu, qui coûte **28 €**.\n\n```\nmettre 0 dans cagnotte\nrépéter 6 fois\n    mettre cagnotte + 5 dans cagnotte\nfin répéter\nsi cagnotte ≥ 28 alors\n    afficher « achat possible »\nsinon\n    afficher « pas encore »\nfin si\n```\n\n1. Quelle est la valeur de `cagnotte` après la boucle ?\n2. Qu'affiche le programme ?\n3. Le jeu passe à **32 €**. Quelle modification **minimale** faut-il faire, et qu'affiche alors le programme (le montant épargné ne change pas) ?\n4. Toujours au prix de 32 €, combien de semaines d'épargne faudrait-il **au total** pour que l'achat devienne possible ?\n5. Explique en une phrase pourquoi la ligne `mettre 0 dans cagnotte`, placée avant la boucle, est indispensable.",
+      "corrige": [
+        "1. `cagnotte` part de $0$ et gagne $5$ à chaque tour, sur $6$ tours : $5$, $10$, $15$, $20$, $25$, $30$. Après le `fin répéter`, `cagnotte` vaut $30$ (soit $6 \\times 5 = 30$ €).",
+        "2. On teste $30 \\geqslant 28$ : c'est **vrai**, donc le programme part dans `alors` et affiche « achat possible ».",
+        "3. Seul le **nombre** de la condition change : on remplace `28` par `32`, ce qui donne `si cagnotte ≥ 32 alors`. La cagnotte vaut toujours $30$, et $30 \\geqslant 32$ est **faux** : le programme affiche « pas encore ».",
+        "4. Avec $5$ € par semaine, il faut atteindre au moins $32$ €. En $6$ semaines on a $30$ € (insuffisant) ; en $7$ semaines, $7 \\times 5 = 35$ € : comme $35 \\geqslant 32$, il faut **7 semaines** au total.",
+        "5. Cette ligne **initialise** le compteur : sans elle, la machine ne saurait pas de quelle valeur partir avant d'ajouter les $5$ €, et le total serait imprévisible."
+      ],
+      "reponse": "`cagnotte` = $30$ € et le programme affiche « achat possible » ; au prix de $32$ € on remplace `28` par `32` et il affiche « pas encore » ; il faudrait alors $7$ semaines d'épargne. La ligne `mettre 0 dans cagnotte` sert à initialiser le compteur."
     }
   ]
 }

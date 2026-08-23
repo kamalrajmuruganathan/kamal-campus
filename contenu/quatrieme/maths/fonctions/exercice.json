@@ -86,6 +86,59 @@
         "Une distance de $2{,}5$ km a un sens : les valeurs intermédiaires existent, on relie donc les points. On n'oublie pas de nommer les axes (horizontal : distance en km ; vertical : prix en €)."
       ],
       "reponse": "$P(d) = 3 + 2d$ ; les points sont alignés mais ne passent pas par l'origine ; on relie les points."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "notation-fonctionnelle",
+      "enonce": "La hauteur d'une bougie qui brûle est donnée par $H(t) = 20 - 1{,}5\\,t$, où $t$ est la durée écoulée en heures et $H$ la hauteur en centimètres. Calcule $H(4)$ et $H(8)$, puis dis ce que représente chacun de ces résultats.",
+      "corrige": [
+        "Calculer $H(t)$ pour une valeur, c'est remplacer $t$ par cette valeur en respectant les priorités : on multiplie avant de soustraire.",
+        "$H(4) = 20 - 1{,}5 \\times 4 = 20 - 6 = 14$.",
+        "$H(8) = 20 - 1{,}5 \\times 8 = 20 - 12 = 8$.",
+        "$H(4) = 14$ signifie qu'après $4$ heures la bougie mesure $14$ cm ; $H(8) = 8$ qu'après $8$ heures elle ne mesure plus que $8$ cm."
+      ],
+      "reponse": "$H(4) = 14$ cm et $H(8) = 8$ cm."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "programme-de-calcul",
+      "enonce": "Programme : « Choisis un nombre. Multiplie-le par $4$. Ajoute $6$. »\n1. Applique ce programme au nombre $x$ et réduis l'expression obtenue.\n2. Ce programme renvoie $34$. Retrouve le nombre de départ.",
+      "corrige": [
+        "1. On écrit le résultat de chaque étape sous forme littérale : multiplier $x$ par $4$ donne $4x$, puis ajouter $6$ donne $4x + 6$.",
+        "2. Pour retrouver le nombre de départ, on remonte le programme en inversant chaque opération, de la dernière vers la première.",
+        "On défait « ajouter $6$ » (on soustrait) : $34 - 6 = 28$. On défait « multiplier par $4$ » (on divise) : $28 \\div 4 = 7$.",
+        "Vérification à l'endroit : $7 \\times 4 = 28$, puis $28 + 6 = 34$ ✓."
+      ],
+      "reponse": "1. $4x + 6$. 2. Le nombre de départ était $7$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "graphique",
+      "enonce": "On remplit une citerne et, chaque minute, on relève le volume d'eau $V$ (en litres) : à $t = 0$ min la citerne contient déjà $50$ L, puis on lit $70$ L à $1$ min, $90$ L à $2$ min et $110$ L à $3$ min.\n1. Écris une formule donnant le volume $V(t)$ en fonction du temps $t$.\n2. Les points de la représentation graphique sont-ils alignés ? La représentation passe-t-elle par l'origine ? Justifie.",
+      "corrige": [
+        "1. On repère ce qui est fixe et ce qui varie. Au départ ($t = 0$) la citerne contient déjà $50$ L : c'est la partie fixe. D'une minute à l'autre le volume augmente toujours de $20$ L ($70 - 50 = 20$, $90 - 70 = 20$, $110 - 90 = 20$) : c'est ce qui varie, $20$ L par minute.",
+        "On écrit donc $V(t) = 50 + 20t$. Contrôle avec $t = 3$ : $50 + 20 \\times 3 = 50 + 60 = 110$ ✓.",
+        "2. Comme le volume augmente d'une même valeur ($20$ L) à chaque minute, les points sont alignés.",
+        "Mais $V(0) = 50$ (et non $0$) : la représentation ne passe donc pas par l'origine, puisque la citerne n'est pas vide au départ. Comme le temps peut prendre des valeurs intermédiaires (à $2{,}5$ min le remplissage a un sens), on relie les points."
+      ],
+      "reponse": "$V(t) = 50 + 20t$ ; les points sont alignés mais ne passent pas par l'origine (la citerne contient déjà $50$ L au départ)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un parc d'accrobranche facture $9$ € d'entrée, puis $4$ € par parcours réalisé. On note $n$ le nombre de parcours et $P$ le prix payé, en euros.\n1. Quel prix paie un visiteur qui réalise $5$ parcours ?\n2. Écris une formule donnant $P(n)$.\n3. Nadia a payé $37$ €. Combien de parcours a-t-elle réalisés ?\n4. Dresse le tableau de valeurs de $P(n)$ pour $n = 0, 1, 2, 3, 4$. Les points sont-ils alignés ? La représentation passe-t-elle par l'origine ? Doit-on relier les points ?\n5. Un ami affirme : « Pour trouver le prix, on peut multiplier le nombre de parcours par $4$ puis ajouter $9$ ; ou bien ajouter d'abord $9$ au nombre de parcours puis multiplier par $4$ : c'est pareil. » A-t-il raison ?",
+      "corrige": [
+        "1. Ce qui est fixe ($9$ € d'entrée) se paie une fois, ce qui varie ($4$ € par parcours) se multiplie par le nombre de parcours : pour $5$ parcours, $9 + 4 \\times 5 = 9 + 20 = 29$ € (on multiplie avant d'ajouter).",
+        "2. En remplaçant le nombre de parcours par la lettre $n$ : $P(n) = 9 + 4n$, où $n$ est le nombre de parcours et $P$ le prix en euros.",
+        "3. On remonte le calcul à partir de $37$ € : on défait « ajouter $9$ » ($37 - 9 = 28$), puis « multiplier par $4$ » ($28 \\div 4 = 7$). Vérification : $9 + 4 \\times 7 = 37$ ✓. Nadia a réalisé $7$ parcours.",
+        "4. Tableau : $P(0) = 9$, $P(1) = 13$, $P(2) = 17$, $P(3) = 21$, $P(4) = 25$. D'une colonne à l'autre le prix augmente toujours de $4$ : les points sont alignés. Mais $P(0) = 9$ (et non $0$), donc la représentation ne passe pas par l'origine. Un nombre de parcours est un entier ($2{,}5$ parcours n'existe pas) : on ne relie donc pas les points, on obtient un nuage de points.",
+        "5. Traduisons les deux procédés avec la lettre $n$. « Multiplier par $4$ puis ajouter $9$ » donne $4n + 9$, ce qui est bien la formule correcte. « Ajouter $9$ puis multiplier par $4$ » donne $4 \\times (n + 9) = 4n + 36$ : les parenthèses sont obligatoires, et cette expression n'est pas égale à $4n + 9$. L'ami a donc tort : contrôle avec $n = 1$, le vrai prix est $13$ € alors que son second procédé donne $4 \\times 10 = 40$ €."
+      ],
+      "reponse": "1. $29$ €. 2. $P(n) = 9 + 4n$. 3. $7$ parcours. 4. Points alignés, ne passant pas par l'origine, non reliés (nombre de parcours entier). 5. Non : le bon procédé donne $4n + 9$, tandis que « ajouter $9$ puis multiplier par $4$ » donne $4n + 36$, ce qui est différent."
     }
   ]
 }

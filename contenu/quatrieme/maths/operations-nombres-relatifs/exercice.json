@@ -87,6 +87,60 @@
         "Il reste $(-24) \\div (-3)$ : signes identiques, quotient positif, $24 \\div 3 = 8$, soit $+8$."
       ],
       "reponse": "$\\big((-6) \\times 4\\big) \\div \\big((-5) + 2\\big) = +8$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "regle-des-signes",
+      "enonce": "Calcule chaque résultat avec la méthode en deux temps : le **signe** d'abord, les **valeurs absolues** ensuite. Pour c), rappelle-toi que multiplier par $100$ déplace la virgule sans changer le signe.\n\na) $(-7) \\times (-6)$\nb) $8 \\times (-9)$\nc) $(-3{,}5) \\times 100$\nd) $(-64) \\div (-8)$",
+      "corrige": [
+        "**a)** $(-7) \\times (-6)$ : signes identiques, donc résultat positif ; $7 \\times 6 = 42$. D'où $(-7) \\times (-6) = +42$.",
+        "**b)** $8 \\times (-9)$ : signes contraires, donc résultat négatif ; $8 \\times 9 = 72$. D'où $8 \\times (-9) = -72$.",
+        "**c)** $(-3{,}5) \\times 100$ : multiplier par $100$ déplace la virgule de deux rangs vers la droite et ne change pas le signe ; $3{,}5 \\times 100 = 350$. D'où $(-3{,}5) \\times 100 = -350$.",
+        "**d)** $(-64) \\div (-8)$ : signes identiques, donc quotient positif ; $64 \\div 8 = 8$. D'où $(-64) \\div (-8) = +8$."
+      ],
+      "reponse": "a) $+42$ · b) $-72$ · c) $-350$ · d) $+8$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "enchainement-operations",
+      "enonce": "Calcule $A = (-5) \\times (-4) - 3 \\times (-6)$ en respectant les priorités opératoires. Sois particulièrement vigilant sur le signe « $-$ » du milieu.",
+      "corrige": [
+        "**Priorités.** Les deux multiplications passent avant la soustraction : je les calcule d'abord, séparément.",
+        "$(-5) \\times (-4)$ : signes identiques, produit positif, $5 \\times 4 = 20$. Donc $(-5) \\times (-4) = +20$.",
+        "$3 \\times (-6)$ : signes contraires, produit négatif, $3 \\times 6 = 18$. Donc $3 \\times (-6) = -18$.",
+        "Il reste $A = 20 - (-18)$. Soustraire $-18$, c'est ajouter son opposé : $20 - (-18) = 20 + 18 = 38$.",
+        "Le piège serait d'écrire $20 + (-18) = 2$ en confondant le signe de la soustraction avec le signe du nombre $-18$."
+      ],
+      "reponse": "$A = (-5) \\times (-4) - 3 \\times (-6) = 38$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "produit-plusieurs-facteurs",
+      "enonce": "On multiplie **cinq** nombres relatifs, tous non nuls : **trois** d'entre eux sont négatifs et les deux autres positifs. \n\n1. Sans faire aucun calcul, détermine le signe de ce produit et justifie.\n2. Propose un exemple numérique de cinq tels nombres, puis calcule le produit pour vérifier ta prévision.",
+      "corrige": [
+        "**1.** Seul le nombre de facteurs **négatifs** fixe le signe : un nombre **pair** de facteurs négatifs donne un produit positif, un nombre **impair** un produit négatif. Ici il y a trois facteurs négatifs, soit un nombre **impair** : le produit est donc **négatif**. Les deux facteurs positifs ne changent rien au signe.",
+        "**2.** Prenons par exemple $(-2)$, $(-1)$, $(-5)$ (les trois négatifs) et $3$, $4$ (les deux positifs).",
+        "Valeurs absolues : $2 \\times 1 \\times 5 \\times 3 \\times 4 = 120$.",
+        "Vérification de proche en proche : $(-2) \\times (-1) = +2$ ; $(+2) \\times (-5) = -10$ ; $(-10) \\times 3 = -30$ ; $(-30) \\times 4 = -120$. Le résultat est bien **négatif**, conforme à la prévision."
+      ],
+      "reponse": "Le produit est **négatif** (trois facteurs négatifs, nombre impair). Exemple : $(-2) \\times (-1) \\times (-5) \\times 3 \\times 4 = -120$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "probleme-relatifs",
+      "enonce": "**Un sous-marin d'exploration.**\n\nUn sous-marin repère sa position par son **altitude** en mètres : la surface de l'eau correspond à $0$ m, et une position sous l'eau est comptée avec un nombre **négatif** (par exemple $-120$ m signifie « $120$ m sous la surface »).\n\nLe sous-marin part de la surface. Réponds aux questions dans l'ordre.\n\n1. Il descend pendant $8$ minutes à la vitesse constante de $-15$ m par minute. Quelle est son altitude au bout de ces $8$ minutes ?\n2. Depuis cette altitude, il poursuit sa descente, toujours à $-15$ m par minute, jusqu'à atteindre $-300$ m. Combien de minutes cette seconde descente dure-t-elle ?\n3. Arrivé à $-300$ m, il remonte à la vitesse de $+25$ m par minute pendant $6$ minutes. Quelle est sa nouvelle altitude ?\n4. La température de l'eau varie de $-2$°C par tranche de $100$ m de descente. En surface, l'eau est à $18$°C. Quelle est la température de l'eau à $-300$ m ?\n5. Le pilote remarque qu'un cycle « descendre $1$ minute puis remonter $1$ minute » ne le ramène pas à son point de départ. En utilisant les vitesses des questions 1 et 3, calcule le déplacement net (en mètres) d'un tel cycle et dis s'il monte ou descend.",
+      "corrige": [
+        "**1.** L'altitude est le produit de la vitesse par la durée : $(-15) \\times 8$. Signes contraires, donc résultat négatif ; $15 \\times 8 = 120$. L'altitude est $-120$ m, c'est-à-dire $120$ m sous la surface.",
+        "**2.** La descente à effectuer va de $-120$ m à $-300$ m, soit une variation de $(-300) - (-120) = -300 + 120 = -180$ m. À raison de $-15$ m par minute, la durée est $(-180) \\div (-15)$ : signes identiques, quotient positif, $180 \\div 15 = 12$. La seconde descente dure $12$ minutes.",
+        "**3.** En remontant, l'altitude augmente de $25 \\times 6 = 150$ m. Partant de $-300$ m : $-300 + 150 = -150$ m. Le sous-marin est alors à $-150$ m.",
+        "**4.** De la surface à $-300$ m, la descente est de $300$ m, soit $300 \\div 100 = 3$ tranches de $100$ m. La température varie de $3 \\times (-2) = -6$°C. En partant de $18$°C : $18 + (-6) = 12$°C. L'eau est à $12$°C.",
+        "**5.** En $1$ minute de descente l'altitude varie de $-15$ m, en $1$ minute de remontée de $+25$ m. Sur le cycle, la variation nette est $(-15) + (+25) = +10$ m. Le résultat est positif : à chaque cycle le sous-marin **monte** de $10$ m, ce qui explique qu'il ne revienne pas à son point de départ."
+      ],
+      "reponse": "1. $-120$ m · 2. $12$ min · 3. $-150$ m · 4. $12$°C · 5. déplacement net $+10$ m par cycle, le sous-marin monte."
     }
   ]
 }

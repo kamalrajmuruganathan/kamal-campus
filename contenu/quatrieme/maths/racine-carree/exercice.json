@@ -86,6 +86,57 @@
         "La racine carrée respecte l'ordre, donc $\\sqrt{30} < \\sqrt{36} < \\sqrt{40}$, c'est-à-dire $\\sqrt{30} < 6 < \\sqrt{40}$."
       ],
       "reponse": "$\\sqrt{30} < 6 < \\sqrt{40}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Calcule sans calculatrice : $\\sqrt{25}$, $\\sqrt{121}$ et $\\sqrt{4}$.",
+      "corrige": [
+        "$\\sqrt{a}$ est le nombre **positif** dont le carré vaut $a$ : on cherche dans la table des carrés parfaits le nombre qui convient.",
+        "$\\sqrt{25} = 5$, car $5$ est positif et $5^2 = 25$.",
+        "$\\sqrt{121} = 11$, car $11^2 = 121$.",
+        "$\\sqrt{4} = 2$, car $2^2 = 4$."
+      ],
+      "reponse": "$\\sqrt{25} = 5$, $\\sqrt{121} = 11$ et $\\sqrt{4} = 2$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "encadrement",
+      "enonce": "Un entier $n$ vérifie $10 < \\sqrt{n} < 11$. Quelles valeurs entières $n$ peut-il prendre ?",
+      "corrige": [
+        "Attention au piège : ce n'est pas $n$ qui est compris entre $10$ et $11$, mais sa **racine**. Pour retrouver $n$, on élève chaque membre de l'encadrement au carré.",
+        "La fonction racine respecte l'ordre, donc élever au carré aussi : $10 < \\sqrt{n} < 11$ donne $10^2 < n < 11^2$, soit $100 < n < 121$.",
+        "Les inégalités sont strictes : $n$ ne peut valoir ni $100$ ni $121$. Il prend donc toutes les valeurs entières de $101$ à $120$."
+      ],
+      "reponse": "$n$ est un entier de $101$ à $120$ (soit $100 < n < 121$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "proprietes",
+      "enonce": "Range dans l'ordre croissant, sans calculatrice : $7$, $\\sqrt{50}$, $\\sqrt{60}$ et $8$.",
+      "corrige": [
+        "L'idée est d'écrire les quatre nombres sous la même forme, celle d'une racine. Les deux entiers deviennent : $7 = \\sqrt{49}$ (car $7^2 = 49$) et $8 = \\sqrt{64}$ (car $8^2 = 64$).",
+        "Il reste à comparer les nombres placés sous les radicaux : $49$, $50$, $60$ et $64$.",
+        "On les range : $49 < 50 < 60 < 64$.",
+        "La racine carrée respecte l'ordre, donc $\\sqrt{49} < \\sqrt{50} < \\sqrt{60} < \\sqrt{64}$, c'est-à-dire $7 < \\sqrt{50} < \\sqrt{60} < 8$."
+      ],
+      "reponse": "$7 < \\sqrt{50} < \\sqrt{60} < 8$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "lien-geometrique",
+      "enonce": "Léa aménage une terrasse **carrée** dans son jardin et dispose de $90\\ \\text{m}^2$ de dalles.\\n\\n1. Elle veut d'abord utiliser toutes ses dalles pour une terrasse carrée d'aire $90\\ \\text{m}^2$. Donne la valeur **exacte** de la longueur de son côté.\\n2. Encadre cette longueur par deux entiers consécutifs.\\n3. Son voisin affirme : « une terrasse carrée d'aire $90\\ \\text{m}^2$ a un côté de $45\\ \\text{m}$ ». A-t-il raison ? Explique son erreur.\\n4. Finalement, Léa préfère une terrasse carrée de côté $9\\ \\text{m}$. Quelle est son aire ? Lui reste-t-il des dalles ?",
+      "corrige": [
+        "1. L'aire d'un carré de côté $c$ vaut $c^2$. Pour remonter de l'aire au côté, on prend la racine carrée : $c = \\sqrt{90}\\ \\text{m}$. Comme $90$ n'est pas un carré parfait, cette écriture $\\sqrt{90}\\ \\text{m}$ **est** la valeur exacte, on la garde telle quelle.",
+        "2. On repère les carrés parfaits qui entourent $90$ : $81 < 90 < 100$. En prenant la racine de chaque membre : $\\sqrt{81} < \\sqrt{90} < \\sqrt{100}$, soit $9 < \\sqrt{90} < 10$. Le côté mesure donc entre $9$ et $10\\ \\text{m}$.",
+        "3. Le voisin a tort : il a divisé l'aire par $2$, alors que la racine carrée n'est **pas** une moitié. On le vérifie : $45^2 = 2025$, très loin de $90$. Le vrai côté, $\\sqrt{90}$, est compris entre $9$ et $10\\ \\text{m}$ d'après la question 2.",
+        "4. Pour une terrasse carrée de côté $9\\ \\text{m}$, l'aire vaut $9^2 = 81\\ \\text{m}^2$. Léa avait $90\\ \\text{m}^2$ de dalles : il lui en reste $90 - 81 = 9\\ \\text{m}^2$."
+      ],
+      "reponse": "1. côté $= \\sqrt{90}\\ \\text{m}$ (valeur exacte). 2. $9 < \\sqrt{90} < 10$. 3. Non, le voisin confond racine carrée et moitié ($45^2 = 2025 \\neq 90$). 4. aire $= 81\\ \\text{m}^2$, il reste $9\\ \\text{m}^2$ de dalles."
     }
   ]
 }

@@ -86,6 +86,58 @@
         "**Vérification.** Périmètre $= 2 \\times 7 + 2 \\times 11 = 14 + 22 = 36$ cm ✓."
       ],
       "reponse": "Largeur $7$ cm et longueur $11$ cm."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "distributivite",
+      "enonce": "Développe puis réduis chaque expression : a) $3(4x + 5) + 7x$ ; b) $-4(x - 2) + 9$.",
+      "corrige": [
+        "**Méthode.** On développe d'abord la parenthèse avec $k(a \\pm b) = ka \\pm kb$, puis on réduit en regroupant les termes en $x$ entre eux et les nombres entre eux.",
+        "a) $3(4x + 5) = 3 \\times 4x + 3 \\times 5 = 12x + 15$. En ajoutant $7x$ : $12x + 15 + 7x = (12x + 7x) + 15 = 19x + 15$.",
+        "b) $-4(x - 2) = -4 \\times x - 4 \\times (-2) = -4x + 8$, car $(-4) \\times (-2) = +8$. En ajoutant $9$ : $-4x + 8 + 9 = -4x + 17$."
+      ],
+      "reponse": "a) $19x + 15$ ; b) $-4x + 17$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "equation-deux-membres",
+      "enonce": "Résous l'équation $4(x + 3) = 2x + 20$, puis vérifie ta solution.",
+      "corrige": [
+        "On développe d'abord le membre de gauche : $4(x + 3) = 4x + 12$. L'équation devient $4x + 12 = 2x + 20$.",
+        "On rassemble les $x$ à gauche en enlevant $2x$ des deux membres : $4x - 2x + 12 = 20$, soit $2x + 12 = 20$.",
+        "On enlève $12$ aux deux membres : $2x = 20 - 12 = 8$, puis on divise par $2$ : $x = \\dfrac{8}{2} = 4$.",
+        "Vérification dans l'équation de départ : $4 \\times (4 + 3) = 4 \\times 7 = 28$ et $2 \\times 4 + 20 = 28$ : les deux membres sont égaux ✓."
+      ],
+      "reponse": "$x = 4$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "demonstration",
+      "enonce": "Démontre que la somme de cinq entiers consécutifs est toujours un multiple de $5$.",
+      "corrige": [
+        "**Choix de l'écriture générale.** Appelons $n$ le plus petit des cinq entiers. Les cinq entiers consécutifs s'écrivent alors $n$, $n+1$, $n+2$, $n+3$ et $n+4$.",
+        "**Calcul de la somme.** $n + (n+1) + (n+2) + (n+3) + (n+4) = 5n + (1 + 2 + 3 + 4) = 5n + 10$.",
+        "**Factorisation, cœur de la preuve.** $5n + 10 = 5 \\times n + 5 \\times 2 = 5(n + 2)$. Comme $n + 2$ est un entier, la somme est bien $5$ fois un entier, donc un multiple de $5$. ∎",
+        "**Contrôle sur un exemple.** Pour $n = 3$ : $3 + 4 + 5 + 6 + 7 = 25 = 5 \\times 5$, et la formule donne $5(3 + 2) = 25$ ✓. (Un exemple ne démontre rien, mais il rassure sur le calcul.)"
+      ],
+      "reponse": "La somme vaut $5n + 10 = 5(n+2)$, qui est un multiple de $5$ pour tout entier $n$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un jardinier aménage un terrain rectangulaire. Sa largeur mesure $x$ mètres et sa longueur mesure $5$ m de plus que la largeur.\\n\\n1. Exprime le périmètre du terrain en fonction de $x$, sous forme développée et réduite.\\n2. Le périmètre mesure $70$ m. Détermine la largeur et la longueur du terrain.\\n3. Exprime l'aire du terrain en fonction de $x$, sous forme développée.\\n4. Calcule l'aire du terrain pour les dimensions trouvées à la question 2.\\n5. Le jardinier entoure le terrain d'un grillage vendu en rouleaux de $8$ m. Combien de rouleaux doit-il acheter au minimum ?",
+      "corrige": [
+        "1. La longueur vaut $x + 5$. Le périmètre est $P = 2 \\times \\text{largeur} + 2 \\times \\text{longueur} = 2x + 2(x + 5)$. On développe $2(x + 5) = 2x + 10$, puis on réduit : $P = 2x + 2x + 10 = 4x + 10$ (en mètres).",
+        "2. On résout $4x + 10 = 70$. On enlève $10$ aux deux membres : $4x = 60$, puis on divise par $4$ : $x = \\dfrac{60}{4} = 15$. La largeur vaut donc $15$ m et la longueur $15 + 5 = 20$ m. Vérification : $2 \\times 15 + 2 \\times 20 = 30 + 40 = 70$ m ✓.",
+        "3. L'aire est $\\mathcal{A} = \\text{largeur} \\times \\text{longueur} = x(x + 5)$. Le facteur $x$ multiplie chaque terme : $\\mathcal{A} = x \\times x + x \\times 5 = x^2 + 5x$ (en m²).",
+        "4. Pour $x = 15$ : $\\mathcal{A} = 15^2 + 5 \\times 15 = 225 + 75 = 300$ m². On retrouve bien $15 \\times 20 = 300$ m² en multipliant directement les dimensions ✓.",
+        "5. Le grillage doit faire le tour du terrain, soit $70$ m. Comme $70 \\div 8 = 8{,}75$, huit rouleaux ne donnent que $8 \\times 8 = 64$ m, ce qui est insuffisant. Il faut donc $9$ rouleaux (soit $72$ m, avec $2$ m de reste)."
+      ],
+      "reponse": "1. $P = 4x + 10$. 2. Largeur $15$ m, longueur $20$ m. 3. $\\mathcal{A} = x^2 + 5x$. 4. Aire $= 300$ m². 5. $9$ rouleaux de grillage."
     }
   ]
 }

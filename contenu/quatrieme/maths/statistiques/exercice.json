@@ -88,6 +88,59 @@
         "L'étendue se lit sur les valeurs, pas sur les effectifs : $16 - 8 = 8$ points."
       ],
       "reponse": "Effectif manquant $= 8$ ; moyenne $= 11{,}7$ ; étendue $= 8$ points."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "moyenne-ponderee",
+      "enonce": "Le tableau donne les pointures de chaussures des $25$ élèves d'une classe. Calcule la pointure moyenne.\n\n| Pointure | $36$ | $37$ | $38$ | $39$ | $40$ |\n|---|---|---|---|---|---|\n| **Effectif** | $4$ | $6$ | $8$ | $5$ | $2$ |",
+      "corrige": [
+        "On multiplie chaque valeur par son effectif, puis on additionne : $36\\times 4 + 37\\times 6 + 38\\times 8 + 39\\times 5 + 40\\times 2 = 144 + 222 + 304 + 195 + 80 = 945$.",
+        "Vérification de l'effectif total : $4 + 6 + 8 + 5 + 2 = 25$ élèves.",
+        "$\\text{moyenne} = \\dfrac{945}{25} = 37{,}8$.",
+        "Contrôle : $37{,}8$ est bien compris entre la plus petite pointure ($36$) et la plus grande ($40$)."
+      ],
+      "reponse": "Pointure moyenne $= 37{,}8$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "mediane",
+      "enonce": "Un basketteur a marqué, lors de ses $10$ derniers matchs : $12$ ; $18$ ; $15$ ; $22$ ; $9$ ; $18$ ; $14$ ; $20$ ; $15$ ; $11$ points. Détermine la médiane, puis l'étendue de cette série.",
+      "corrige": [
+        "On range d'abord la série dans l'ordre croissant, sans oublier les valeurs répétées : $9$ ; $11$ ; $12$ ; $14$ ; $15$ ; $15$ ; $18$ ; $18$ ; $20$ ; $22$.",
+        "L'effectif est pair ($n = 10$) : la médiane est la demi-somme des deux valeurs centrales, celles de rang $5$ et $6$, c'est-à-dire $15$ et $15$.",
+        "$\\text{médiane} = \\dfrac{15 + 15}{2} = 15$ points.",
+        "L'étendue est la différence entre la plus grande et la plus petite valeur : $22 - 9 = 13$ points."
+      ],
+      "reponse": "Médiane $= 15$ points ; étendue $= 13$ points."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "moyenne-ponderee",
+      "enonce": "Pour valider son trimestre, Léa doit obtenir une moyenne d'au moins $12$ sur ses $5$ devoirs de mathématiques. Ses quatre premiers devoirs, notés sur $20$, sont : $9$ ; $13$ ; $11$ ; $14$. Quelle note minimale doit-elle obtenir au cinquième devoir pour atteindre cette moyenne de $12$ ? Cet objectif est-il réalisable ?",
+      "corrige": [
+        "Pour que la moyenne des $5$ devoirs vaille $12$, la somme des cinq notes doit être $12 \\times 5 = 60$.",
+        "La somme des quatre notes déjà obtenues est $9 + 13 + 11 + 14 = 47$.",
+        "La cinquième note doit donc valoir au moins $60 - 47 = 13$ pour que la moyenne atteigne (au minimum) $12$.",
+        "Comme les devoirs sont notés sur $20$ et que $13 \\leq 20$, l'objectif est réalisable : il suffit à Léa d'obtenir $13$ ou plus."
+      ],
+      "reponse": "Il lui faut au moins $13/20$ au cinquième devoir ; l'objectif est réalisable (car $13 \\leq 20$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un club de natation compte $25$ nageurs. À l'entraînement, l'entraîneur a relevé le nombre de longueurs de bassin nagées par chacun. Il les a regroupées dans ce tableau, mais un effectif a été effacé.\n\n| Longueurs nagées | $10$ | $15$ | $20$ | $25$ | $30$ |\n|---|---|---|---|---|---|\n| **Effectif** | $2$ | $8$ | $?$ | $4$ | $1$ |\n\n1. Combien de nageurs ont nagé exactement $20$ longueurs ?\n2. Calcule le nombre moyen de longueurs nagées par nageur.\n3. Détermine l'étendue de la série et interprète-la en une phrase.\n4. L'entraîneur affirme : « plus de la moitié des nageurs ont nagé au moins $20$ longueurs ». A-t-il raison ?\n5. Un nouveau nageur rejoint le groupe et nage $30$ longueurs. La nouvelle moyenne augmente-t-elle ? L'étendue change-t-elle ?",
+      "corrige": [
+        "1. La somme des effectifs doit égaler l'effectif total ($25$). Les effectifs connus font $2 + 8 + 4 + 1 = 15$, donc l'effectif manquant (celui des $20$ longueurs) vaut $25 - 15 = 10$ nageurs.",
+        "2. Somme des $(\\text{longueurs} \\times \\text{effectif})$ : $10\\times 2 + 15\\times 8 + 20\\times 10 + 25\\times 4 + 30\\times 1 = 20 + 120 + 200 + 100 + 30 = 470$. La moyenne vaut $\\dfrac{470}{25} = 18{,}8$ longueurs par nageur. Contrôle : $18{,}8$ est bien entre $10$ et $30$.",
+        "3. L'étendue se lit sur les valeurs, pas sur les effectifs : $30 - 10 = 20$ longueurs. Cela signifie que, du moins actif au plus actif, les nageurs s'étalent sur une largeur de $20$ longueurs.",
+        "4. « Au moins $20$ longueurs » regroupe les nageurs à $20$, $25$ et $30$ longueurs : $10 + 4 + 1 = 15$ nageurs. Or la moitié de l'effectif est $\\dfrac{25}{2} = 12{,}5$, et $15 > 12{,}5$ (soit $\\dfrac{15}{25} = 60\\ \\%$). L'entraîneur a donc raison.",
+        "5. On ajoute une valeur ($30$) supérieure à l'ancienne moyenne, donc la moyenne augmente : nouvelle moyenne $= \\dfrac{470 + 30}{26} = \\dfrac{500}{26} \\approx 19{,}2$ longueurs. En revanche l'étendue ne change pas : $30$ était déjà la plus grande valeur et $10$ reste la plus petite, donc elle vaut toujours $30 - 10 = 20$ longueurs."
+      ],
+      "reponse": "1. $10$ nageurs. 2. Moyenne $= 18{,}8$ longueurs. 3. Étendue $= 20$ longueurs (dispersion des nageurs). 4. Oui : $15$ nageurs sur $25$ ($60\\ \\%$) ont nagé au moins $20$ longueurs. 5. La moyenne augmente ($\\approx 19{,}2$), l'étendue reste $20$ longueurs."
     }
   ]
 }

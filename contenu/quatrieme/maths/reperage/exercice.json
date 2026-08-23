@@ -88,6 +88,58 @@
         "2) « Orthogonal » signifie que les axes sont perpendiculaires, pas qu'ils ont la même unité. Ici une graduation vaut $2$ sur un axe et $5$ sur l'autre : compter comme si chacune valait $1$ donnerait $A(3\\,;2)$, $B(-1\\,;-3)$, $C(4\\,;0)$, tous faux. Il faut recalculer la valeur d'une graduation sur chaque axe."
       ],
       "reponse": "$A(6\\,;10)$, $B(-2\\,;-15)$, $C(8\\,;0)$ ; chaque axe a sa propre unité (orthogonal ne veut pas dire même unité sur les deux axes)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "coordonnees-plan",
+      "enonce": "Dans un repère orthogonal d'unité $1$ sur chaque axe, on atteint un point $R$ à partir de l'origine $O$ en se déplaçant d'abord de $5$ vers la gauche, puis de $2$ vers le bas. Donne les coordonnées de $R$ et indique dans quelle région du plan il se trouve.",
+      "corrige": [
+        "Un déplacement horizontal vers la gauche donne une abscisse négative : ici $x = -5$.",
+        "Un déplacement vertical vers le bas donne une ordonnée négative : ici $y = -2$.",
+        "On écrit l'abscisse d'abord, puis l'ordonnée : $R(-5\\,;-2)$.",
+        "Comme $x < 0$ et $y < 0$, le point est en bas à gauche de l'origine."
+      ],
+      "reponse": "$R(-5\\,;-2)$, situé en bas à gauche de l'origine."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "droite-graduee-relatifs",
+      "enonce": "Sur une droite graduée, deux traits portent les nombres $-20$ et $-8$ ; ils sont séparés par $4$ intervalles égaux. 1) Quelle est la valeur d'une graduation ? 2) Quelle est l'abscisse du point situé $5$ graduations à gauche de $-8$ ?",
+      "corrige": [
+        "1) L'écart entre $-20$ et $-8$ vaut $-8 - (-20) = 12$, réparti sur $4$ intervalles : une graduation vaut $\\dfrac{12}{4} = 3$.",
+        "2) À gauche de $-8$, on s'éloigne de zéro, donc le nombre diminue : $5$ graduations valent $5 \\times 3 = 15$, et l'abscisse est $-8 - 15 = -23$.",
+        "Contrôle : $-23$ est bien plus petit que $-20$, ce qui est cohérent avec un point situé à gauche de $-8$ et même de $-20$. ✓"
+      ],
+      "reponse": "Une graduation vaut $3$ ; l'abscisse cherchée est $-23$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "graphique-fonction",
+      "enonce": "Une bougie mesure $20$ cm et se consume régulièrement de $4$ cm par heure. On note $h$ sa hauteur (en cm) en fonction du temps $t$ (en heures). 1) Exprime $h$ en fonction de $t$. 2) Construis un tableau de valeurs pour $t = 0$, $1$, $2$, $3$, $4$, $5$. 3) Au bout de combien de temps la bougie est-elle entièrement consumée ? 4) Cette situation est-elle une situation de proportionnalité ? Justifie.",
+      "corrige": [
+        "1) On part de $20$ cm et on retire $4$ cm par heure : $h = 20 - 4 \\times t$.",
+        "2) Tableau : $t=0 \\to h=20$ ; $t=1 \\to h=16$ ; $t=2 \\to h=12$ ; $t=3 \\to h=8$ ; $t=4 \\to h=4$ ; $t=5 \\to h=0$.",
+        "3) La bougie est finie quand $h = 0$ : $20 - 4t = 0$ donne $4t = 20$, soit $t = 5$. Elle est entièrement consumée au bout de $5$ h (au-delà, la formule n'a plus de sens : la hauteur ne devient pas négative).",
+        "4) Non : quand $t$ passe de $1$ à $2$ (le double), $h$ passe de $16$ à $12$, qui n'est pas la moitié de $16$. La hauteur diminue au lieu d'augmenter avec le temps : ce n'est pas une situation de proportionnalité."
+      ],
+      "reponse": "$h = 20 - 4t$ ; hauteurs $20$, $16$, $12$, $8$, $4$, $0$ ; bougie consumée à $t = 5$ h ; ce n'est pas une proportionnalité."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Une course d'orientation est organisée dans un parc. Sur la carte, un repère orthogonal a pour origine $O$ l'accueil. Sur l'axe horizontal (direction Est), une graduation représente $20$ m ; sur l'axe vertical (direction Nord), une graduation représente $50$ m. Les distances sont données en mètres.\\n1. La balise $A$ s'atteint depuis l'accueil en allant de $3$ graduations vers l'Est puis $2$ graduations vers le Nord. Donne les coordonnées de $A$.\\n2. La balise $B$ a pour coordonnées $(-40\\,;150)$. Décris le trajet depuis $O$ pour l'atteindre, en graduations puis en mètres.\\n3. La balise $C$ est sur l'axe Est (l'axe horizontal), à $4$ graduations à l'Est de $O$. Donne ses coordonnées.\\n4. Un sentier est modélisé par une droite graduée dont $O$ est le $0$. Deux poteaux y portent les nombres $-100$ et $-40$, séparés par $3$ intervalles égaux. Quelle distance représente une graduation, et quelle est l'abscisse du poteau situé $2$ graduations à gauche de $-100$ ?\\n5. L'inscription coûte $5$ € plus $2$ € par balise validée. On note $p$ le prix payé (en €) selon le nombre $n$ de balises. Exprime $p$ en fonction de $n$, puis donne le point à placer pour $n = 4$ (nombre de balises en abscisse). S'agit-il d'une proportionnalité ?",
+      "corrige": [
+        "1. Chaque axe a sa propre unité. Vers l'Est : $3 \\times 20 = 60$ m, donc $x = 60$. Vers le Nord : $2 \\times 50 = 100$ m, donc $y = 100$. On obtient $A(60\\,;100)$.",
+        "2. L'abscisse $-40$ correspond à $\\dfrac{-40}{20} = -2$ graduations, soit $2$ graduations vers l'Ouest (gauche). L'ordonnée $150$ correspond à $\\dfrac{150}{50} = 3$ graduations vers le Nord (haut). Trajet : $2$ graduations à l'Ouest ($40$ m) puis $3$ graduations au Nord ($150$ m).",
+        "3. $C$ est sur l'axe horizontal, donc son ordonnée est nulle : $y = 0$. À l'Est : $4 \\times 20 = 80$ m. Donc $C(80\\,;0)$.",
+        "4. L'écart entre $-100$ et $-40$ vaut $-40 - (-100) = 60$, réparti sur $3$ intervalles : une graduation vaut $\\dfrac{60}{3} = 20$ m. À gauche de $-100$ le nombre diminue : $-100 - 2 \\times 20 = -140$.",
+        "5. On paie $5$ € fixes plus $2$ € par balise : $p = 5 + 2 \\times n$. Pour $n = 4$ : $p = 5 + 8 = 13$, donc le point est $(4\\,;13)$. Ce n'est pas une proportionnalité : à $n = 0$ on paie déjà $5$ €, la représentation ne passe pas par l'origine."
+      ],
+      "reponse": "1. $A(60\\,;100)$. 2. $B$ : $2$ graduations à l'Ouest ($40$ m) puis $3$ au Nord ($150$ m). 3. $C(80\\,;0)$. 4. Une graduation vaut $20$ m ; abscisse $-140$. 5. $p = 5 + 2n$, point $(4\\,;13)$, pas de proportionnalité."
     }
   ]
 }

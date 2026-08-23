@@ -88,6 +88,60 @@
         "La base est un carré, donc son aire est côté au carré : $\\text{côté}^2 = 100$, d'où $\\text{côté} = \\sqrt{100} = 10 \\text{ cm}$."
       ],
       "reponse": "$\\mathcal{A}_{\\text{base}} = 100 \\text{ cm}^2$ et le côté mesure $10 \\text{ cm}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "volume-pyramide",
+      "enonce": "Une pyramide a une base rectangulaire de $5$ cm sur $4$ cm et une hauteur de $9$ cm. Calcule son volume.",
+      "corrige": [
+        "La base est un rectangle, donc son aire est $\\mathcal{A}_{\\text{base}} = L \\times \\ell = 5 \\times 4 = 20 \\text{ cm}^2$.",
+        "Le volume d'une pyramide est $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3}$, où $h$ est la hauteur du solide.",
+        "On remplace : $V = \\dfrac{20 \\times 9}{3} = \\dfrac{180}{3} = 60 \\text{ cm}^3$.",
+        "On divise bien par $3$ (solide pointu) et on écrit l'unité en $\\text{cm}^3$."
+      ],
+      "reponse": "$V = 60 \\text{ cm}^3$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "unites-capacite",
+      "enonce": "On fait tourner un triangle rectangle dont les côtés de l'angle droit mesurent $9$ cm et $12$ cm autour du côté de $12$ cm. Quelle est, en litres, la capacité du cône obtenu ? On prend $\\pi \\approx 3{,}14$.",
+      "corrige": [
+        "Le côté fixe donne la hauteur : $h = 12$ cm. L'autre côté de l'angle droit balaie le disque de base, c'est le rayon : $r = 9$ cm.",
+        "Aire de la base : $\\mathcal{A}_{\\text{base}} = \\pi r^2 \\approx 3{,}14 \\times 9^2 = 3{,}14 \\times 81 = 254{,}34 \\text{ cm}^2$.",
+        "Volume : $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3} \\approx \\dfrac{254{,}34 \\times 12}{3} = 254{,}34 \\times 4 = 1017{,}36 \\text{ cm}^3$.",
+        "Conversion : $1 \\text{ L} = 1000 \\text{ cm}^3$, donc on divise par $1000$ : $1017{,}36 \\text{ cm}^3 \\approx 1{,}02 \\text{ L}$."
+      ],
+      "reponse": "$V \\approx 1017{,}36 \\text{ cm}^3 \\approx 1{,}02 \\text{ L}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "volume-cone",
+      "enonce": "Un cône de révolution a une hauteur de $6$ cm et un volume de $100{,}48 \\text{ cm}^3$. Calcule le rayon de sa base. On prend $\\pi \\approx 3{,}14$.",
+      "corrige": [
+        "On part de la formule $V = \\dfrac{\\pi r^2 \\times h}{3}$, où l'inconnue est le rayon $r$.",
+        "On remplace les valeurs connues : $100{,}48 = \\dfrac{3{,}14 \\times r^2 \\times 6}{3} = 3{,}14 \\times r^2 \\times 2 = 6{,}28 \\times r^2$.",
+        "On isole $r^2$ : $r^2 = \\dfrac{100{,}48}{6{,}28} = 16$.",
+        "Le rayon est une longueur positive, donc $r = \\sqrt{16} = 4 \\text{ cm}$.",
+        "Vérification : $\\dfrac{3{,}14 \\times 4^2 \\times 6}{3} = \\dfrac{3{,}14 \\times 16 \\times 6}{3} = \\dfrac{301{,}44}{3} = 100{,}48 \\text{ cm}^3$ : c'est bien le volume donné."
+      ],
+      "reponse": "$r = 4 \\text{ cm}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "cone-revolution",
+      "enonce": "Un fabricant produit des gobelets en carton en forme de cône de révolution. L'ouverture est un disque de rayon $6$ cm et la hauteur du gobelet est de $8$ cm. On prend $\\pi \\approx 3{,}14$.\\n\\n1. Calcule l'aire du disque d'ouverture du gobelet.\\n2. Calcule le volume du gobelet, en $\\text{cm}^3$.\\n3. Donne la capacité du gobelet en millilitres (mL).\\n4. Pour tracer le patron, on a besoin de la longueur $g$ du segment qui va du sommet du cône jusqu'au bord de l'ouverture. Calcule $g$ à l'aide du théorème de Pythagore.\\n5. La surface latérale déroulée est un secteur de disque dont l'arc a pour longueur le périmètre du disque de base. Calcule la longueur de cet arc.",
+      "corrige": [
+        "1. Le disque d'ouverture a pour rayon $r = 6$ cm. Son aire est $\\mathcal{A}_{\\text{base}} = \\pi r^2 \\approx 3{,}14 \\times 6^2 = 3{,}14 \\times 36 = 113{,}04 \\text{ cm}^2$.",
+        "2. Le volume du cône est $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3} \\approx \\dfrac{113{,}04 \\times 8}{3} = \\dfrac{904{,}32}{3} = 301{,}44 \\text{ cm}^3$.",
+        "3. Comme $1 \\text{ mL} = 1 \\text{ cm}^3$, la capacité vaut directement $301{,}44 \\text{ mL}$.",
+        "4. La hauteur ($8$ cm) et le rayon ($6$ cm) forment les deux côtés de l'angle droit d'un triangle rectangle dont $g$ est l'hypoténuse. Par Pythagore : $g^2 = 6^2 + 8^2 = 36 + 64 = 100$, donc $g = \\sqrt{100} = 10 \\text{ cm}$.",
+        "5. L'arc a pour longueur le périmètre du disque de base : $2\\pi r \\approx 2 \\times 3{,}14 \\times 6 = 37{,}68 \\text{ cm}$ (on utilise ici le périmètre $2\\pi r$, et non l'aire $\\pi r^2$)."
+      ],
+      "reponse": "$\\mathcal{A}_{\\text{base}} \\approx 113{,}04 \\text{ cm}^2$ ; $V \\approx 301{,}44 \\text{ cm}^3 = 301{,}44 \\text{ mL}$ ; $g = 10 \\text{ cm}$ ; arc $\\approx 37{,}68 \\text{ cm}$."
     }
   ]
 }
