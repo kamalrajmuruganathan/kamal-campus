@@ -81,6 +81,56 @@
         "On calcule d'abord la parenthèse : $0{,}1 + 0{,}25 + 0{,}15 = 0{,}5$. Donc $P(\\text{rien}) = 1 - 0{,}5 = 0{,}5$. On perd donc une fois sur deux en moyenne."
       ],
       "reponse": "1. Non, les secteurs ne sont pas équiprobables. 2. $P(\\text{ne rien gagner}) = 0{,}5$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "equiprobabilite",
+      "enonce": "Un sac contient $20$ jetons **identiques**, numérotés de $1$ à $20$. On tire un jeton au hasard. Quelle est la probabilité d'obtenir un nombre **pair** ? Donne le résultat sous forme de fraction, décimale et pourcentage.",
+      "corrige": [
+        "Les jetons sont identiques : il y a équiprobabilité, on peut utiliser la formule $P = \\dfrac{\\text{nombre d'issues favorables}}{\\text{nombre total d'issues}}$.",
+        "Les issues favorables sont les nombres pairs de $1$ à $20$ : $2, 4, 6, \\ldots, 20$. Il y en a $10$. Le nombre total d'issues est $20$.",
+        "Donc $P(\\text{pair}) = \\dfrac{10}{20}$. On simplifie en divisant en haut et en bas par $10$ : $\\dfrac{10}{20} = \\dfrac{1}{2}$. En écriture décimale : $1 \\div 2 = 0{,}5$, soit $50\\ \\%$."
+      ],
+      "reponse": "$P(\\text{pair}) = \\dfrac{10}{20} = \\dfrac{1}{2} = 0{,}5 = 50\\ \\%$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "somme-probabilites",
+      "enonce": "Une roue équilibrée est partagée en $10$ secteurs **identiques** : $4$ sont verts, $1$ est rouge, et tous les autres sont jaunes.\n\n1. Combien y a-t-il de secteurs jaunes ? Quelle est la probabilité de s'arrêter sur un secteur jaune ?\n2. Quelle est la probabilité de **ne pas** s'arrêter sur le secteur rouge ?",
+      "corrige": [
+        "1. Les jaunes sont ce qui reste : $10 - 4 - 1 = 5$ secteurs jaunes. Comme les secteurs sont identiques (équiprobabilité), $P(\\text{jaune}) = \\dfrac{5}{10} = \\dfrac{1}{2} = 0{,}5$.",
+        "2. Il n'y a qu'un secteur rouge sur $10$, donc $P(\\text{rouge}) = \\dfrac{1}{10} = 0{,}1$. « Ne pas s'arrêter sur le rouge » est le contraire : sa probabilité est $1 - P(\\text{rouge})$.",
+        "On calcule : $P(\\text{pas rouge}) = 1 - 0{,}1 = 0{,}9$, soit $\\dfrac{9}{10}$ ou $90\\ \\%$."
+      ],
+      "reponse": "1. $5$ secteurs jaunes, $P(\\text{jaune}) = \\dfrac{1}{2}$. 2. $P(\\text{pas rouge}) = \\dfrac{9}{10} = 0{,}9$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "equiprobabilite",
+      "enonce": "Un sac contient $3$ boules rouges et $7$ boules vertes, toutes **identiques**. Combien de boules rouges faut-il **ajouter** dans le sac pour que la probabilité de tirer une rouge devienne exactement $\\dfrac{1}{2}$ ?",
+      "corrige": [
+        "Au départ, il y a $3$ rouges et $7$ vertes, soit $10$ boules. Si on ajoute $x$ boules rouges, il y aura $3 + x$ rouges et $10 + x$ boules en tout (on ne change pas le nombre de vertes).",
+        "On veut $P(\\text{rouge}) = \\dfrac{3 + x}{10 + x} = \\dfrac{1}{2}$. Une probabilité vaut $\\dfrac{1}{2}$ quand il y a autant de rouges que de non-rouges. Les vertes restent $7$ : il faut donc $7$ boules rouges au total.",
+        "Comme il y a déjà $3$ rouges, il faut en ajouter $7 - 3 = 4$. Vérification : $3 + 4 = 7$ rouges sur $10 + 4 = 14$ boules, et $\\dfrac{7}{14} = \\dfrac{1}{2}$ ✓."
+      ],
+      "reponse": "Il faut ajouter $4$ boules rouges ($7$ rouges sur $14$ boules, soit $\\dfrac{1}{2}$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "À la kermesse de l'école, un stand propose une **roue équilibrée** partagée en $20$ secteurs **identiques**. $1$ secteur donne le **gros lot**, $4$ secteurs donnent un **petit lot**, et tous les autres sont **perdants**. On fait tourner la roue.\n\n1. Faire tourner la roue est-il une expérience aléatoire ? « Gagner un lot » est-il une issue ou un événement ?\n2. Donne la probabilité de gagner le gros lot sous forme de fraction, décimale et pourcentage.\n3. Combien y a-t-il de secteurs perdants ? Quelle est la probabilité d'être perdant ?\n4. Vérifie que la somme des probabilités (gros lot, petit lot, perdant) vaut $1$.\n5. Pendant la kermesse, la roue a tourné $50$ fois et le gros lot est sorti $4$ fois. Calcule la fréquence de sortie du gros lot et compare-la à sa probabilité.",
+      "corrige": [
+        "1. Oui : on connaît tous les résultats possibles (les $20$ secteurs) sans savoir lequel sortira, c'est donc une **expérience aléatoire**. « Gagner un lot » regroupe plusieurs secteurs (le gros lot et les $4$ petits lots) : c'est un **événement**, pas une issue. Une issue serait un secteur précis.",
+        "2. Un seul secteur sur $20$ donne le gros lot, et les secteurs sont identiques (équiprobabilité) : $P(\\text{gros lot}) = \\dfrac{1}{20}$. En décimale : $1 \\div 20 = 0{,}05$. En pourcentage : $0{,}05 \\times 100 = 5\\ \\%$. Donc $\\dfrac{1}{20} = 0{,}05 = 5\\ \\%$.",
+        "3. Les perdants sont ce qui reste : $20 - 1 - 4 = 15$ secteurs. Donc $P(\\text{perdant}) = \\dfrac{15}{20}$. On simplifie par $5$ : $\\dfrac{15}{20} = \\dfrac{3}{4} = 0{,}75$, soit $75\\ \\%$.",
+        "4. On additionne : $P(\\text{gros lot}) = 0{,}05$, $P(\\text{petit lot}) = \\dfrac{4}{20} = 0{,}2$, $P(\\text{perdant}) = 0{,}75$. Leur somme : $0{,}05 + 0{,}2 + 0{,}75 = 1$ ✓. Le contrôle est vérifié.",
+        "5. La fréquence se **constate** après l'expérience : $\\dfrac{4}{50} = 0{,}08$, soit $8\\ \\%$. La probabilité, elle, se **calcule** avant : $0{,}05$ ($5\\ \\%$). La fréquence observée ($0{,}08$) est proche mais différente de la probabilité ($0{,}05$) : sur seulement $50$ tours, c'est normal. En répétant beaucoup plus, la fréquence se rapprocherait de $0{,}05$."
+      ],
+      "reponse": "1. Oui, expérience aléatoire ; « gagner un lot » est un événement. 2. $P(\\text{gros lot}) = \\dfrac{1}{20} = 0{,}05 = 5\\ \\%$. 3. $15$ secteurs perdants, $P(\\text{perdant}) = \\dfrac{3}{4} = 0{,}75$. 4. Somme $= 1$ ✓. 5. Fréquence $= 0{,}08$, proche de la probabilité $0{,}05$ (écart normal sur $50$ tours)."
     }
   ]
 }

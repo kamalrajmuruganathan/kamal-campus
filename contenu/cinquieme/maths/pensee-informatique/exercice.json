@@ -82,6 +82,56 @@
         "Vérification pour $n = 3$ : $8 \\times 3 + 5 = 24 + 5 = 29$ €."
       ],
       "reponse": "`afficher 8 * n + 5` ; le prix total vaut $8 \\times n + 5$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "prevoir-valeur",
+      "enonce": "Sans exécuter le programme, prévois ce qu'il affiche.\n\n```\nchoisir 12\najouter 8\ndiviser par 5\nmultiplier par 3\nafficher le résultat\n```",
+      "corrige": [
+        "On lit les instructions **de haut en bas**, une par une, en gardant à jour le résultat courant.",
+        "`choisir 12` : le résultat vaut $12$. `ajouter 8` : $12 + 8 = 20$.",
+        "`diviser par 5` : $20 \\div 5 = 4$. `multiplier par 3` : $4 \\times 3 = 12$. La dernière ligne affiche ce résultat."
+      ],
+      "reponse": "Le programme affiche $12$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "boucle",
+      "enonce": "Voici un programme.\n\n```\nrépéter 3 fois\n    avancer de 20\n    tourner de 120°\nfin répéter\nafficher « fini »\n```\n\n1. Combien d'instructions sont exécutées en tout ?\n2. Quelle figure le robot trace-t-il ?",
+      "corrige": [
+        "1. La boucle contient $2$ instructions et fait $3$ tours : $3 \\times 2 = 6$ instructions. Le `afficher « fini »` est écrit **après** `fin répéter`, donc **hors** de la boucle : il s'exécute une seule fois.",
+        "En tout : $6 + 1 = 7$ instructions exécutées.",
+        "2. À chaque tour, le robot avance de $20$ puis tourne de $120°$. Comme $360 \\div 120 = 3$, il referme la figure en $3$ côtés égaux : c'est un **triangle équilatéral** de côté $20$."
+      ],
+      "reponse": "$7$ instructions exécutées ; le robot trace un triangle équilatéral de côté $20$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "sequence",
+      "enonce": "On dispose des instructions `choisir un nombre`, `ajouter 3` et `multiplier par 2`.\n\n1. Écris le programme qui, en partant de $5$, calcule $(5 + 3) \\times 2$, puis donne sa sortie.\n2. Toujours en partant de $5$, dans quel ordre placer les deux opérations pour que le programme affiche $13$ ? Justifie.",
+      "corrige": [
+        "1. La parenthèse impose d'ajouter **avant** de multiplier :\n\n```\nchoisir 5\najouter 3\nmultiplier par 2\nafficher\n```\n\nSortie : $(5 + 3) \\times 2 = 8 \\times 2 = 16$.",
+        "2. On cherche à obtenir $13$. En multipliant d'abord : $5 \\times 2 = 10$, puis $10 + 3 = 13$. Il faut donc `multiplier par 2` **puis** `ajouter 3`.",
+        "Ce sont les mêmes deux instructions qu'à la question 1, mais dans l'ordre inverse : $16$ d'un côté, $13$ de l'autre. **L'ordre change le résultat.**"
+      ],
+      "reponse": "1. Sortie $16$. 2. `multiplier par 2` puis `ajouter 3` affiche $13$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Léa programme un robot tortue pour décorer une carte : il trace une frise, puis le programme affiche le prix du ruban.\n\n**Le tracé.** Pour un carré de côté $30$, Léa écrit :\n\n```\nrépéter 4 fois\n    avancer de 30\n    tourner de 90°\nfin répéter\n```\n\n**Le prix.** Le ruban coûte $2$ € le mètre, plus $3$ € de mise en place (frais fixes). La longueur totale de ruban, **en centimètres**, est rangée dans la variable `longueur`.\n\n1. Combien d'instructions le programme du carré exécute-t-il ?\n2. Léa préfère finalement un **pentagone régulier** ($5$ côtés) de côté $30$. Écris son programme et justifie l'angle du virage.\n3. Quelle longueur de ruban, en cm, ce pentagone utilise-t-il ? (c'est la valeur de `longueur`.)\n4. Le prix se calcule à partir de `longueur` : il faut d'abord la convertir de centimètres en mètres. Écris l'expression informatique qui donne le prix en euros.\n5. Prévois le prix affiché pour ce pentagone.",
+      "corrige": [
+        "1. La boucle contient $2$ instructions et fait $4$ tours : $4 \\times 2 = 8$ instructions exécutées.",
+        "2. Un pentagone a $5$ côtés, donc `répéter 5 fois`. En parcourant la figure, le robot fait un tour complet de $360°$ réparti en $5$ virages identiques : l'angle vaut $360 \\div 5 = 72°$.\n\n```\nrépéter 5 fois\n    avancer de 30\n    tourner de 72°\nfin répéter\n```",
+        "3. Le pentagone a $5$ côtés de longueur $30$ : $5 \\times 30 = 150$. La variable `longueur` vaut donc $150$ (cm).",
+        "4. On convertit d'abord en mètres en divisant par $100$ (`longueur / 100`), puis on multiplie par $2$ € et on ajoute les $3$ € fixes : `longueur / 100 * 2 + 3`. Aucune parenthèse n'est nécessaire — division et multiplication passent avant l'addition et se lisent de gauche à droite.",
+        "5. On remplace `longueur` par $150$ : $150 \\div 100 = 1{,}5$ m, puis $1{,}5 \\times 2 = 3$, enfin $3 + 3 = 6$. Le programme affiche $6$ €."
+      ],
+      "reponse": "1. $8$ instructions. 2. `répéter 5 fois` / `avancer de 30` / `tourner de 72°`, car $360 \\div 5 = 72°$. 3. `longueur` $= 150$ cm. 4. `longueur / 100 * 2 + 3`. 5. $6$ €."
     }
   ]
 }

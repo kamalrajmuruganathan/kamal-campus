@@ -82,6 +82,58 @@
         "Le quatrième sommet est donc $D(1\\,;3)$."
       ],
       "reponse": "$D(1\\,;3)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "lire-abscisse",
+      "enonce": "Sur une droite graduée, l'intervalle entre $8$ et $9$ est partagé en $5$ parts égales. Un point $R$ est situé $3$ graduations après $8$, vers la droite. Quelle est l'abscisse de $R$ ?",
+      "corrige": [
+        "L'intervalle entre $8$ et $9$ mesure $1$ unité, partagé en $5$ parts égales : une graduation vaut $1 \\div 5 = 0{,}2$.",
+        "On part de $8$ et on avance de $3$ graduations : $3 \\times 0{,}2 = 0{,}6$.",
+        "L'abscisse de $R$ est donc $8 + 0{,}6 = 8{,}6$."
+      ],
+      "reponse": "$R(8{,}6)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees",
+      "enonce": "Sur un graphique, l'axe horizontal représente le temps ($1$ graduation $= 2$ heures) et l'axe vertical une distance ($1$ graduation $= 50$ km). Un point $M$ est placé $3$ graduations à droite de l'origine et $4$ graduations au-dessus. Donne les coordonnées de $M$.",
+      "corrige": [
+        "On lit les nombres représentés sur chaque axe, pas les traits : les deux axes n'ont pas la même unité.",
+        "Sur l'axe horizontal, une graduation vaut $2$ : abscisse $= 3 \\times 2 = 6$.",
+        "Sur l'axe vertical, une graduation vaut $50$ : ordonnée $= 4 \\times 50 = 200$.",
+        "On écrit le couple, abscisse d'abord : $M(6\\,;200)$."
+      ],
+      "reponse": "$M(6\\,;200)$, soit $6$ heures et $200$ km."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthogonal, on place $A(-2\\,;1)$ et $B(4\\,;1)$. On veut construire un carré $ABCD$ dont $[AB]$ est un côté. Donne les coordonnées possibles de $C$ et $D$ (il y a deux solutions).",
+      "corrige": [
+        "$A$ et $B$ ont la même ordonnée ($1$) : le côté $[AB]$ est horizontal. Sa longueur est l'écart des abscisses : $4 - (-2) = 6$.",
+        "Dans un carré $ABCD$, tous les côtés mesurent $6$ et sont perpendiculaires : à partir de $B$ puis de $A$, on se déplace verticalement de $6$, soit vers le haut, soit vers le bas.",
+        "En montant : $C$ est au-dessus de $B$, donc $C(4\\,;1+6) = C(4\\,;7)$, et $D$ au-dessus de $A$, donc $D(-2\\,;7)$.",
+        "En descendant : $C(4\\,;1-6) = C(4\\,;-5)$ et $D(-2\\,;-5)$."
+      ],
+      "reponse": "Deux carrés possibles : $C(4\\,;7)$ et $D(-2\\,;7)$, ou bien $C(4\\,;-5)$ et $D(-2\\,;-5)$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "coordonnees",
+      "enonce": "Le plan d'un quartier est modélisé par un repère orthogonal dont l'origine $O$ est la mairie. Sur chaque axe, une graduation représente $100$ m (même unité sur les deux axes) ; l'est correspond à la droite, le nord au haut. On repère quatre lieux : l'école $E$ est à $3$ graduations à l'est et $4$ au nord de la mairie ; la gare $G$ est à $5$ graduations à l'ouest et $4$ au nord ; le stade $S$ est à $3$ graduations à l'est, exactement sur l'axe est-ouest ; la fontaine $F$ est à $2$ graduations au sud de la mairie, sur l'axe nord-sud.\\n\\n1. Donne les coordonnées de $E$, $G$, $S$ et $F$.\\n2. Parmi ces quatre lieux, lesquels sont situés sur un axe du repère ? Justifie en parlant d'abscisse ou d'ordonnée nulle.\\n3. L'école et la gare ont la même ordonnée. Calcule la distance $EG$ en graduations, puis convertis-la en mètres.\\n4. On veut clôturer un terrain rectangulaire dont trois sommets sont la gare $G$, l'école $E$ et le point $B$ situé $3$ graduations à l'est et $1$ graduation au sud de la mairie. Donne les coordonnées du quatrième sommet $C$.\\n5. Quelle est la longueur, en mètres, du côté $[EB]$ de ce terrain ?",
+      "corrige": [
+        "1. On lit chaque déplacement : l'est et le nord sont les sens positifs, l'ouest et le sud les sens négatifs. $E$ : $3$ à l'est et $4$ au nord, donc $E(3\\,;4)$. $G$ : $5$ à l'ouest et $4$ au nord, donc $G(-5\\,;4)$. $S$ : $3$ à l'est et sur l'axe est-ouest (horizontal), donc $S(3\\,;0)$. $F$ : $2$ au sud et sur l'axe nord-sud (vertical), donc $F(0\\,;-2)$.",
+        "2. Le stade $S$ est sur l'axe des abscisses (l'axe horizontal) : son ordonnée est nulle, $S(3\\,;0)$. La fontaine $F$ est sur l'axe des ordonnées (l'axe vertical) : son abscisse est nulle, $F(0\\,;-2)$. L'école et la gare, elles, ne sont sur aucun axe.",
+        "3. $E$ et $G$ ont la même ordonnée ($4$) : le segment $[EG]$ est horizontal, sa longueur est l'écart des abscisses. De $-5$ à $3$ : $3 - (-5) = 8$ graduations. Comme une graduation vaut $100$ m : $EG = 8 \\times 100 = 800$ m.",
+        "4. Le point $B$ est à $3$ à l'est et $1$ au sud, donc $B(3\\,;-1)$. Dans le rectangle, $G(-5\\,;4)$ et $E(3\\,;4)$ forment le côté du haut (même ordonnée $4$) ; $E(3\\,;4)$ et $B(3\\,;-1)$ forment un côté vertical (même abscisse $3$). Le quatrième sommet $C$ a l'abscisse de $G$ et l'ordonnée de $B$ : $C(-5\\,;-1)$.",
+        "5. Le côté $[EB]$ est vertical ($E$ et $B$ ont la même abscisse $3$). Sa longueur en graduations est l'écart des ordonnées : de $-1$ à $4$, cela fait $4 - (-1) = 5$ graduations, soit $5 \\times 100 = 500$ m."
+      ],
+      "reponse": "$E(3\\,;4)$, $G(-5\\,;4)$, $S(3\\,;0)$, $F(0\\,;-2)$ ; $S$ et $F$ sont sur un axe (ordonnée ou abscisse nulle) ; $EG = 8$ graduations $= 800$ m ; $C(-5\\,;-1)$ ; $[EB] = 500$ m."
     }
   ]
 }

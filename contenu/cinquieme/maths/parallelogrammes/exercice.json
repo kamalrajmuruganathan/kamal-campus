@@ -87,6 +87,58 @@
         "Conversion : $1$ m² $= 10\\,000$ cm² (on multiplie par $100$ à chaque rang, pas par $10$), donc $34$ m² $= 34 \\times 10\\,000 = 340\\,000$ cm²."
       ],
       "reponse": "Aire $= 34$ m² $= 340\\,000$ cm²."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "particuliers",
+      "enonce": "Les diagonales d'un quadrilatère $MNPQ$ se coupent en leur milieu, ont la même longueur et sont perpendiculaires. Quelle est la nature précise de $MNPQ$ ? Justifier.",
+      "corrige": [
+        "Les diagonales se coupent en leur milieu : c'est la propriété caractéristique du parallélogramme, donc $MNPQ$ est déjà un parallélogramme.",
+        "Elles ont de plus la même longueur : des diagonales qui se coupent en leur milieu ET de même longueur caractérisent un rectangle.",
+        "Elles sont de plus perpendiculaires : des diagonales qui se coupent en leur milieu ET perpendiculaires caractérisent un losange.",
+        "$MNPQ$ est donc à la fois un rectangle et un losange : c'est un carré."
+      ],
+      "reponse": "$MNPQ$ est un carré."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "aire",
+      "enonce": "Un vitrail est composé de losanges identiques. Chaque losange a des diagonales de $12$ cm et $9$ cm. 1) Calculer l'aire d'un losange. 2) Le vitrail compte $20$ losanges ; calculer l'aire totale de verre coloré, en cm² puis en dm².",
+      "corrige": [
+        "1) L'aire d'un losange se calcule à partir de ses diagonales : $\\mathcal{A} = \\dfrac{D \\times d}{2}$, où $D$ et $d$ sont les longueurs des deux diagonales.",
+        "$\\mathcal{A} = \\dfrac{12 \\times 9}{2} = \\dfrac{108}{2} = 54$ cm².",
+        "2) Pour $20$ losanges identiques : $54 \\times 20 = 1\\,080$ cm².",
+        "Conversion en dm² : $1$ dm² $= 100$ cm² (on divise par $100$ à chaque rang, pas par $10$), donc $1\\,080$ cm² $= 1\\,080 \\div 100 = 10{,}8$ dm²."
+      ],
+      "reponse": "Un losange : $54$ cm². Total : $1\\,080$ cm² $= 10{,}8$ dm²."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "demonstration",
+      "enonce": "$ABCD$ est un quadrilatère (sommets dans cet ordre) dont les diagonales $[AC]$ et $[BD]$ se coupent en un point $O$. On sait que $O$ est le milieu de $[AC]$ et le milieu de $[BD]$, et que $AC = BD$. Démontrer, en deux temps, d'abord que $ABCD$ est un parallélogramme, puis qu'il s'agit d'un rectangle.",
+      "corrige": [
+        "Premier temps. Je sais que : $O$ est le milieu de $[AC]$ et de $[BD]$, c'est-à-dire que les diagonales de $ABCD$ se coupent en leur milieu. Or : si les diagonales d'un quadrilatère se coupent en leur milieu, alors ce quadrilatère est un parallélogramme (propriété caractéristique). Donc : $ABCD$ est un parallélogramme.",
+        "Second temps. Je sais que, de plus, $AC = BD$ : les deux diagonales ont la même longueur. Or : si un parallélogramme a ses diagonales de même longueur, alors c'est un rectangle (propriété caractéristique). Donc : $ABCD$ est un rectangle.",
+        "On a bien utilisé deux propriétés caractéristiques successives : la première donne le parallélogramme (grâce aux milieux), la seconde précise sa nature (grâce à l'égalité des longueurs). Attention, on ne sait rien sur la perpendicularité des diagonales : rien ne permet d'affirmer que c'est un carré."
+      ],
+      "reponse": "$ABCD$ est un rectangle : ses diagonales se coupent en leur milieu (parallélogramme) et sont de même longueur (rectangle)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Maxime aménage un coin de son jardin. Il crée d'abord un massif de fleurs, puis le décore avec des dalles et l'entoure d'un cadre. On étudie chaque élément.\n\n1. Le massif a la forme d'un parallélogramme de base $8$ m et de hauteur $3$ m ; son côté oblique mesure $3{,}5$ m. Calculer l'aire du massif.\n2. Convertir cette aire en cm².\n3. Les dalles sont des quadrilatères dont les diagonales se coupent en leur milieu, sont perpendiculaires, mais n'ont pas la même longueur. Quelle est la nature exacte d'une dalle ? Justifier.\n4. Sur une dalle, les diagonales mesurent $20$ cm et $15$ cm. Calculer l'aire de cette dalle.\n5. Maxime borde le massif d'un cadre dont les diagonales se coupent en leur milieu et ont la même longueur, sans être perpendiculaires. Quelle est la nature exacte du cadre ?",
+      "corrige": [
+        "1. L'aire d'un parallélogramme vaut base $\\times$ hauteur. Le côté oblique ($3{,}5$ m) ne sert pas : ce n'est pas la hauteur. $\\mathcal{A} = 8 \\times 3 = 24$ m².",
+        "2. Conversion : $1$ m² $= 10\\,000$ cm² (on multiplie par $100$ à chaque rang, pas par $10$). Donc $24$ m² $= 24 \\times 10\\,000 = 240\\,000$ cm².",
+        "3. Les diagonales se coupent en leur milieu : la dalle est un parallélogramme. Elles sont de plus perpendiculaires : des diagonales qui se coupent en leur milieu ET perpendiculaires caractérisent un losange. Comme elles n'ont pas la même longueur, ce n'est ni un rectangle, ni un carré : la dalle est un losange.",
+        "4. L'aire d'un losange se calcule avec ses diagonales : $\\mathcal{A} = \\dfrac{D \\times d}{2} = \\dfrac{20 \\times 15}{2} = \\dfrac{300}{2} = 150$ cm².",
+        "5. Les diagonales du cadre se coupent en leur milieu (parallélogramme) et ont la même longueur : c'est un rectangle. Comme elles ne sont pas perpendiculaires, ce n'est pas un carré : le cadre est un rectangle."
+      ],
+      "reponse": "1. et 2. : massif d'aire $24$ m² $= 240\\,000$ cm². 3. et 4. : la dalle est un losange, d'aire $150$ cm². 5. : le cadre est un rectangle."
     }
   ]
 }

@@ -84,6 +84,58 @@
         "On retrouve bien le sens unique du cours : les nombres divisibles par $9$ ($720$ et $729$) sont aussi divisibles par $3$, mais $723$ et $726$ sont divisibles par $3$ sans l'être par $9$."
       ],
       "reponse": "Divisible par $3$ pour $a \\in \\{0\\,;\\,3\\,;\\,6\\,;\\,9\\}$ ; divisible par $9$ pour $a = 0$ ou $a = 9$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "division-par-un-decimal",
+      "enonce": "Calcule en te ramenant à un diviseur entier : $A = 6{,}3 \\div 0{,}7$ et $B = 20 \\div 0{,}8$.",
+      "corrige": [
+        "Pour $A$, je multiplie le dividende et le diviseur par $10$ afin de rendre le diviseur entier : $6{,}3 \\div 0{,}7 = 63 \\div 7$. Le quotient ne change pas.",
+        "$63 \\div 7 = 9$, donc $A = 9$.",
+        "Pour $B$, je multiplie de même les deux nombres par $10$ : $20 \\div 0{,}8 = 200 \\div 8 = 25$, donc $B = 25$. On remarque que diviser par un nombre plus petit que $1$ a donné un résultat plus grand que $20$."
+      ],
+      "reponse": "$A = 9$ et $B = 25$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "priorites-operatoires",
+      "enonce": "Calcule en détaillant les étapes : $C = 100 - (7 + 2) \\times 8$ et $D = 36 \\div 6 \\div 3 + 2 \\times (5 - 1)$.",
+      "corrige": [
+        "Pour $C$, je commence par la parenthèse : $7 + 2 = 9$, donc $C = 100 - 9 \\times 8$.",
+        "La multiplication est prioritaire sur la soustraction : $9 \\times 8 = 72$, donc $C = 100 - 72 = 28$.",
+        "Pour $D$, la parenthèse donne $5 - 1 = 4$. Les deux divisions ont la même priorité : je les calcule de gauche à droite, $36 \\div 6 = 6$ puis $6 \\div 3 = 2$.",
+        "Il reste $D = 2 + 2 \\times 4$. La multiplication passe avant l'addition : $2 \\times 4 = 8$, donc $D = 2 + 8 = 10$."
+      ],
+      "reponse": "$C = 28$ et $D = 10$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "programme-de-calcul",
+      "enonce": "On considère le programme de calcul : « Choisis un nombre, ajoute $4$, puis multiplie le résultat par $3$. » Écris l'expression obtenue pour un nombre $n$, calcule le résultat pour $n = 6$, puis détermine quel nombre de départ donne $27$ à la fin.",
+      "corrige": [
+        "L'addition doit être faite en premier, or elle n'est pas prioritaire : il faut donc des parenthèses. L'expression est $(n + 4) \\times 3$.",
+        "Pour $n = 6$ : $(6 + 4) \\times 3 = 10 \\times 3 = 30$.",
+        "Pour obtenir $27$, je remonte le programme à l'envers : avant le « $\\times 3$ », le résultat valait $27 \\div 3 = 9$ ; avant le « $+ 4$ », le nombre valait $9 - 4 = 5$.",
+        "Le nombre de départ cherché est $5$. Vérification : $(5 + 4) \\times 3 = 9 \\times 3 = 27$ ✓."
+      ],
+      "reponse": "Expression $(n + 4) \\times 3$ ; pour $n = 6$ le résultat est $30$ ; le nombre donnant $27$ est $5$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un professeur d'EPS prépare la rentrée du club de sport. Le collège lui alloue un budget de $250$ €.\\n\\n1. Il achète $12$ ballons à $8$ € l'un et $5$ cordes à sauter à $6$ € l'une. Écris le montant total de ces achats en une seule expression, puis calcule-le.\\n2. Combien lui reste-t-il alors sur son budget de $250$ € ?\\n3. Avec la somme restante, il veut acheter des maillots à $17$ € pièce. À l'aide d'une division euclidienne, détermine combien de maillots il peut acheter et la somme qui restera.\\n4. Il répartit équitablement les $12$ ballons entre les $4$ groupes d'élèves. Combien de ballons par groupe ?\\n5. Pour aller vite, un élève propose le calcul $250 - 12 \\times 8 + 5 \\times 6$ pour trouver ce qui reste après les ballons et les cordes. Ce calcul donne-t-il le bon résultat ? Sinon, corrige-le.",
+      "corrige": [
+        "1. Le prix des ballons est $12 \\times 8$ et celui des cordes $5 \\times 6$ ; le total s'écrit $12 \\times 8 + 5 \\times 6$. Les multiplications étant prioritaires : $12 \\times 8 + 5 \\times 6 = 96 + 30 = 126$. Les achats coûtent $126$ €.",
+        "2. Il reste $250 - 126 = 124$ € sur le budget.",
+        "3. « Combien de maillots à $17$ € dans $124$ € » est une division euclidienne de $124$ par $17$. Comme $17 \\times 7 = 119$ et $17 \\times 8 = 136 > 124$, le quotient est $7$ et le reste $124 - 119 = 5$ (bien inférieur à $17$). On écrit $124 = 17 \\times 7 + 5$ : il peut acheter $7$ maillots et il lui restera $5$ €.",
+        "4. Répartir équitablement $12$ ballons entre $4$ groupes, c'est faire $12 \\div 4 = 3$. Chaque groupe reçoit $3$ ballons.",
+        "5. Le calcul de l'élève vaut $250 - 12 \\times 8 + 5 \\times 6 = 250 - 96 + 30 = 184$, et non $124$ : le prix des cordes est ajouté au lieu d'être retranché du budget. Il faut regrouper les deux achats dans une parenthèse : $250 - (12 \\times 8 + 5 \\times 6) = 250 - 126 = 124$ € ✓."
+      ],
+      "reponse": "1. $126$ € d'achats. 2. Il reste $124$ €. 3. $124 = 17 \\times 7 + 5$ : $7$ maillots, reste $5$ €. 4. $3$ ballons par groupe. 5. Le calcul de l'élève donne $184$ € ; l'expression correcte est $250 - (12 \\times 8 + 5 \\times 6) = 124$ €."
     }
   ]
 }

@@ -87,6 +87,55 @@
         "Vraie moyenne : $\\dfrac{360}{30} = 12$. L'élève a tort : faire la moyenne des deux moyennes donnerait $12{,}5$, mais cela reviendrait à donner autant de poids aux $10$ élèves de $B$ qu'aux $20$ élèves de $A$. Il faut diviser par l'effectif total."
       ],
       "reponse": "L'élève a tort : la vraie moyenne des $30$ élèves est $12$ (et non $12{,}5$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "diagramme",
+      "enonce": "Dans un club de $30$ membres, on demande le sport préféré : $12$ membres répondent « football ». On veut représenter les réponses par un **diagramme circulaire**. Quelle est la mesure de l'angle du secteur « football » ?",
+      "corrige": [
+        "L'angle d'un secteur est proportionnel à l'effectif : on calcule d'abord la fréquence du football. $\\dfrac{\\text{effectif}}{\\text{effectif total}} = \\dfrac{12}{30} = 0{,}4$.",
+        "L'angle s'obtient en multipliant la fréquence par $360°$ (le disque entier) : $\\text{angle} = 0{,}4 \\times 360 = 144°$."
+      ],
+      "reponse": "Le secteur « football » mesure $144°$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "moyenne",
+      "enonce": "Pendant les vacances, on a demandé à des élèves combien de livres ils ont lus :\n\n| Nombre de livres | $0$ | $1$ | $2$ | $3$ | $4$ |\n|---|---|---|---|---|---|\n| Effectif | $3$ | $7$ | $8$ | $5$ | $2$ |\n\n1. Détermine l'effectif total.\n2. Calcule le nombre moyen de livres lus.",
+      "corrige": [
+        "1. L'effectif total est la somme des effectifs : $3 + 7 + 8 + 5 + 2 = 25$ élèves.",
+        "2. On multiplie chaque valeur par son effectif, puis on additionne : $0 \\times 3 + 1 \\times 7 + 2 \\times 8 + 3 \\times 5 + 4 \\times 2 = 0 + 7 + 16 + 15 + 8 = 46$.",
+        "La moyenne est cette somme divisée par l'effectif total : $\\dfrac{46}{25} = 1{,}84$. On divise bien par $25$ (le nombre d'élèves), pas par $5$."
+      ],
+      "reponse": "Effectif total $= 25$ ; le nombre moyen de livres lus est $1{,}84$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "moyenne",
+      "enonce": "Dans une classe de $24$ élèves, on a compté le nombre de bonnes réponses à un quiz. Une case du tableau a été effacée :\n\n| Nombre de bonnes réponses | $1$ | $2$ | $3$ | $4$ |\n|---|---|---|---|---|\n| Effectif | $4$ | $?$ | $8$ | $4$ |\n\n1. Retrouve l'effectif manquant, sachant que la classe compte $24$ élèves.\n2. Calcule le nombre moyen de bonnes réponses.",
+      "corrige": [
+        "1. La somme de tous les effectifs doit valoir l'effectif total, soit $24$. Les effectifs connus donnent $4 + 8 + 4 = 16$. L'effectif manquant est donc $24 - 16 = 8$.",
+        "2. On complète le tableau (effectif de « $2$ » égal à $8$), puis on multiplie chaque valeur par son effectif : $1 \\times 4 + 2 \\times 8 + 3 \\times 8 + 4 \\times 4 = 4 + 16 + 24 + 16 = 60$.",
+        "La moyenne est cette somme divisée par l'effectif total : $\\dfrac{60}{24} = 2{,}5$."
+      ],
+      "reponse": "L'effectif manquant est $8$ ; le nombre moyen de bonnes réponses est $2{,}5$."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Voici les notes obtenues par les élèves d'une classe à un contrôle noté sur $20$ :\n\n| Note | $8$ | $10$ | $12$ | $14$ | $16$ |\n|---|---|---|---|---|---|\n| Effectif | $3$ | $6$ | $8$ | $5$ | $3$ |\n\n1. Vérifie que la classe compte $25$ élèves.\n2. Calcule la note moyenne de la classe.\n3. Quelle est la fréquence de la note $12$ ? Donne-la en pourcentage.\n4. Combien d'élèves ont obtenu **au moins** $12$ ? Quel pourcentage de la classe cela représente-t-il ?\n5. On veut construire un diagramme circulaire. Quelle est la mesure de l'angle du secteur correspondant à la note $10$ ?",
+      "corrige": [
+        "1. On additionne les effectifs : $3 + 6 + 8 + 5 + 3 = 25$. Le total correspond bien à l'effectif annoncé : aucune donnée n'a été oubliée.",
+        "2. On multiplie chaque note par son effectif : $8 \\times 3 + 10 \\times 6 + 12 \\times 8 + 14 \\times 5 + 16 \\times 3 = 24 + 60 + 96 + 70 + 48 = 298$. La moyenne est $\\dfrac{298}{25} = 11{,}92$.",
+        "3. La fréquence de la note $12$ est $\\dfrac{8}{25} = 0{,}32$, soit $0{,}32 \\times 100 = 32\\ \\%$.",
+        "4. « Au moins $12$ » signifie $12$, $14$ ou $16$ : $8 + 5 + 3 = 16$ élèves. Cela représente $\\dfrac{16}{25} = 0{,}64 = 64\\ \\%$ de la classe.",
+        "5. L'angle est proportionnel à l'effectif : fréquence de la note $10$ $= \\dfrac{6}{25} = 0{,}24$, puis $\\text{angle} = 0{,}24 \\times 360 = 86{,}4°$."
+      ],
+      "reponse": "$25$ élèves ; moyenne $= 11{,}92$ ; fréquence de $12$ : $32\\ \\%$ ; au moins $12$ : $16$ élèves soit $64\\ \\%$ ; angle du secteur « $10$ » $= 86{,}4°$."
     }
   ]
 }

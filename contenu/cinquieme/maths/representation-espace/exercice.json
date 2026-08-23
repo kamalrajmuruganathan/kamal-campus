@@ -89,6 +89,58 @@
         "c) Le patron d'un prisme droit est fait des deux bases et d'une bande de rectangles, un par côté de la base : ici $2$ triangles $(5\\,;12\\,;13)$ et $3$ rectangles de hauteur $20$ cm et de largeurs respectives $5$ cm, $12$ cm et $13$ cm."
       ],
       "reponse": "a) Les deux triangles (sur les côtés). b) $V = 600 \\text{ cm}^3$. c) $2$ triangles $(5;12;13)$ + $3$ rectangles de hauteur $20$ cm et de largeurs $5$, $12$ et $13$ cm."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "vues-empilements",
+      "enonce": "Un empilement plein de petits cubes forme un pavé de $5$ cubes de long, $4$ de large et $3$ de haut. a) Combien de petits cubes contient-il en tout ? b) Combien de carrés voit-on sur la vue de face (longueur $\\times$ hauteur) ? c) Combien de carrés voit-on sur la vue de dessus ?",
+      "corrige": [
+        "a) On compte couche par couche : chaque couche est un rectangle de $5 \\times 4 = 20$ cubes, et il y a $3$ couches empilées. Total : $20 \\times 3 = 60$ cubes.",
+        "b) La vue de face montre la longueur et la hauteur, à plat : $5 \\times 3 = 15$ carrés. La largeur (la profondeur) n'apparait pas sur cette vue.",
+        "c) La vue de dessus montre la longueur et la largeur : $5 \\times 4 = 20$ carrés. La hauteur, elle, n'apparait pas sur une vue de dessus."
+      ],
+      "reponse": "a) $60$ cubes. b) $15$ carrés. c) $20$ carrés."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "volumes",
+      "enonce": "Un aquarium a la forme d'un pavé droit de longueur $0{,}8$ m, de largeur $40$ cm et de hauteur $50$ cm. a) Convertis toutes les dimensions en centimètres, puis calcule le volume de l'aquarium en cm³. b) Donne sa contenance en litres.",
+      "corrige": [
+        "a) Avant tout calcul, il faut mettre toutes les longueurs dans la même unité. $0{,}8 \\text{ m} = 80 \\text{ cm}$ ; les deux autres sont déjà en cm. Volume : $V = 80 \\times 40 \\times 50 = 160\\,000 \\text{ cm}^3$.",
+        "b) On passe des cm³ aux dm³ en divisant par $1000$ : $160\\,000 \\div 1000 = 160 \\text{ dm}^3$.",
+        "Comme $1 \\text{ dm}^3 = 1 \\text{ L}$, la contenance est de $160 \\text{ L}$."
+      ],
+      "reponse": "a) $V = 160\\,000 \\text{ cm}^3$. b) $160 \\text{ L}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "volumes",
+      "enonce": "Deux boites ont la forme de cylindres de révolution et exactement le même volume. La boite A a un rayon de $3$ cm et une hauteur de $10$ cm. La boite B a un rayon de $6$ cm, soit le double de celui de A. Explique d'abord, sans calculer les volumes, quelle doit être la hauteur de la boite B, puis vérifie par le calcul. On prend $\\pi \\approx 3{,}14$.",
+      "corrige": [
+        "Le volume d'un cylindre est $V = \\pi r^2 \\times h$. Le rayon y intervient au carré : en doublant le rayon, l'aire de la base $\\pi r^2$ est multipliée par $2^2 = 4$.",
+        "Pour conserver le même volume avec une base $4$ fois plus grande, il faut une hauteur $4$ fois plus petite : $h_B = 10 \\div 4 = 2{,}5 \\text{ cm}$.",
+        "Vérification, volume de A : $V_A = 3{,}14 \\times 3^2 \\times 10 = 3{,}14 \\times 9 \\times 10 = 282{,}6 \\text{ cm}^3$.",
+        "Volume de B avec $h_B = 2{,}5$ cm : $V_B = 3{,}14 \\times 6^2 \\times 2{,}5 = 3{,}14 \\times 36 \\times 2{,}5 = 282{,}6 \\text{ cm}^3$. On retrouve bien le même volume."
+      ],
+      "reponse": "La hauteur de B doit être $4$ fois plus petite que celle de A : $h_B = 2{,}5 \\text{ cm}$ (et $V_A = V_B = 282{,}6 \\text{ cm}^3$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "volumes",
+      "enonce": "Un jardinier installe un composteur en forme de prisme droit et récupère l'eau de pluie dans un tonneau cylindrique.\n\nLe **composteur** est un prisme droit dont la base est un triangle rectangle de côtés de l'angle droit $60$ cm et $80$ cm (l'hypoténuse mesure $100$ cm) ; sa longueur, c'est-à-dire la distance entre les deux bases triangulaires, est $120$ cm.\n\nLe **tonneau** est un cylindre de révolution de rayon $30$ cm et de hauteur $100$ cm. On prend $\\pi \\approx 3{,}14$.\n\n1. Calcule l'aire de la base triangulaire du composteur.\n2. Déduis-en le volume du composteur, en cm³ puis en dm³.\n3. Décris les pièces du patron du composteur (nombre et dimensions).\n4. Calcule le volume du tonneau en cm³.\n5. Donne la contenance du tonneau en litres.\n6. Le jardinier vide le tonneau plein dans des arrosoirs de $10$ L. Combien d'arrosoirs peut-il remplir complètement, et combien de litres restent-ils ?",
+      "corrige": [
+        "1. La base est un triangle rectangle : son aire se calcule avec les deux côtés de l'angle droit. $\\mathcal{A}_{\\text{base}} = \\dfrac{60 \\times 80}{2} = \\dfrac{4800}{2} = 2400 \\text{ cm}^2$. L'hypoténuse $100$ cm ne sert pas au calcul de l'aire.",
+        "2. Pour un prisme, $V = \\mathcal{A}_{\\text{base}} \\times h$, où $h$ est la longueur $120$ cm : $V = 2400 \\times 120 = 288\\,000 \\text{ cm}^3$. On passe aux dm³ en divisant par $1000$ : $288\\,000 \\div 1000 = 288 \\text{ dm}^3$.",
+        "3. Le patron d'un prisme droit est fait des deux bases et d'un rectangle par côté de la base : ici $2$ triangles rectangles $(60\\,;80\\,;100)$ et $3$ rectangles de hauteur $120$ cm et de largeurs respectives $60$ cm, $80$ cm et $100$ cm.",
+        "4. Le tonneau est un cylindre : $V = \\pi r^2 \\times h = 3{,}14 \\times 30^2 \\times 100 = 3{,}14 \\times 900 \\times 100 = 3{,}14 \\times 90\\,000 = 282\\,600 \\text{ cm}^3$.",
+        "5. On utilise le pont $1 \\text{ cm}^3 = 1 \\text{ mL}$ : $282\\,600 \\text{ cm}^3 = 282\\,600 \\text{ mL}$. On divise par $1000$ pour obtenir des litres : $282\\,600 \\div 1000 = 282{,}6 \\text{ L}$.",
+        "6. On partage $282{,}6$ L en arrosoirs de $10$ L : $282{,}6 \\div 10 = 28{,}26$. Il peut donc remplir complètement $28$ arrosoirs (soit $28 \\times 10 = 280 \\text{ L}$), et il reste $282{,}6 - 280 = 2{,}6 \\text{ L}$."
+      ],
+      "reponse": "1. $2400 \\text{ cm}^2$. 2. $V = 288\\,000 \\text{ cm}^3 = 288 \\text{ dm}^3$. 3. $2$ triangles $(60;80;100)$ + $3$ rectangles de hauteur $120$ cm et de largeurs $60$, $80$ et $100$ cm. 4. $V = 282\\,600 \\text{ cm}^3$. 5. $282{,}6 \\text{ L}$. 6. $28$ arrosoirs pleins, il reste $2{,}6 \\text{ L}$."
     }
   ]
 }

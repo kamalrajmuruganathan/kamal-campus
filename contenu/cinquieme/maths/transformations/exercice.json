@@ -89,6 +89,60 @@
         "(d) L'image d'une droite par un demi-tour lui est **parallèle**. Donc $(A'B')$ est parallèle à $(AB)$."
       ],
       "reponse": "(a) rectangle en $A'$ ; (b) $A'B' = 6$ cm, $A'C' = 8$ cm, $B'C' = 10$ cm ; (c) aire $= 24$ cm² ; (d) $(A'B') \\parallel (AB)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "symetrie-axiale",
+      "enonce": "Dans un repère tracé sur quadrillage, l'axe $(d)$ est la droite **verticale** qui passe par l'origine (l'axe des ordonnées). On place le point $P(4\\,;\\,2)$. Construis le symétrique $P'$ de $P$ par rapport à $(d)$ et donne ses coordonnées.",
+      "corrige": [
+        "L'axe $(d)$ est vertical. Pour une symétrie axiale sur quadrillage, on compte les carreaux qui séparent le point de l'axe, puis on reporte le même nombre de l'autre côté, sur la même ligne.",
+        "Le point $P(4\\,;\\,2)$ est situé $4$ carreaux **à droite** de l'axe des ordonnées.",
+        "Son symétrique $P'$ est donc $4$ carreaux **à gauche** de l'axe, sur la même horizontale : on reste sur la ligne d'ordonnée $2$.",
+        "On lit $P'(-4\\,;\\,2)$. Vérification : $(d)$ coupe bien $[PP']$ en son milieu $(0\\,;\\,2)$ et perpendiculairement."
+      ],
+      "reponse": "$P'(-4\\,;\\,2)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "demi-tour-definition",
+      "enonce": "Dans un repère, on sait que le point $M(5\\,;\\,3)$ a pour image $M'(-1\\,;\\,-1)$ par un demi-tour de centre $O$. **1.** Détermine les coordonnées du centre $O$. **2.** À l'aide de ce centre, détermine les coordonnées de l'image $N'$ du point $N(2\\,;\\,4)$ par ce même demi-tour.",
+      "corrige": [
+        "**1.** Par le demi-tour de centre $O$, l'image $M'$ vérifie que $O$ est le **milieu** de $[MM']$. On calcule donc les coordonnées du milieu de $[MM']$ : $O\\left(\\dfrac{5+(-1)}{2}\\,;\\,\\dfrac{3+(-1)}{2}\\right) = (2\\,;\\,1)$.",
+        "**2.** Le centre $O(2\\,;\\,1)$ doit aussi être le milieu de $[NN']$. En partant de $N(2\\,;\\,4)$ : pour aller de $N$ à $O$, on descend de $3$ carreaux (l'abscisse ne change pas). On continue le même déplacement au-delà de $O$ : encore $3$ carreaux vers le bas.",
+        "On obtient $N'(2\\,;\\,-2)$. Vérification : le milieu de $[NN']$ est $\\left(\\dfrac{2+2}{2}\\,;\\,\\dfrac{4+(-2)}{2}\\right) = (2\\,;\\,1) = O$."
+      ],
+      "reponse": "$O(2\\,;\\,1)$ ; $N'(2\\,;\\,-2)$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "parallelogramme",
+      "enonce": "$ABC$ est un triangle. On appelle $O$ le milieu du côté $[BC]$, puis on construit le point $A'$, image de $A$ par le demi-tour de centre $O$. Démontre que le quadrilatère $ABA'C$ est un parallélogramme.",
+      "corrige": [
+        "Par définition du demi-tour de centre $O$, l'image $A'$ de $A$ est le point tel que $O$ soit le **milieu** de $[AA']$.",
+        "Par ailleurs, l'énoncé pose que $O$ est le **milieu** de $[BC]$.",
+        "Dans le quadrilatère $ABA'C$ (sommets pris dans cet ordre), les diagonales sont $[AA']$ et $[BC]$. Or ces deux segments ont le **même milieu** $O$.",
+        "On utilise la propriété caractéristique du parallélogramme : un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme.",
+        "Conclusion : les diagonales $[AA']$ et $[BC]$ de $ABA'C$ se coupent en leur milieu $O$, donc $ABA'C$ est un parallélogramme."
+      ],
+      "reponse": "Les diagonales $[AA']$ et $[BC]$ ont le même milieu $O$ ; un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme, donc $ABA'C$ en est un."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Léa décore un carreau de faïence. Sur du papier quadrillé muni d'un repère, elle dessine d'abord un petit motif triangulaire $T$ de sommets $A(1\\,;\\,1)$, $B(3\\,;\\,1)$ et $C(1\\,;\\,2)$, où une unité représente $1$ cm. Pour composer sa rosace, elle va combiner deux transformations.\\n\\n**1.** Léa applique au motif $T$ la symétrie axiale d'axe des ordonnées (l'axe vertical). Donne les coordonnées des sommets $A_1$, $B_1$, $C_1$ de l'image $T_1$.\\n**2.** Elle applique ensuite au motif $T$ de départ le demi-tour de centre $O(0\\,;\\,0)$. Donne les coordonnées des sommets $A_2$, $B_2$, $C_2$ de l'image $T_2$.\\n**3.** Le côté $[AB]$ mesure $2$ cm. Sans mesurer, donne la longueur $A_2B_2$ et justifie.\\n**4.** Le triangle $T$ est rectangle en $A$. Quelle est la nature du triangle $T_2$ ? Justifie.\\n**5.** Quelle est la position de la droite $(A_2B_2)$ par rapport à la droite $(AB)$ ?\\n**6.** Léa remarque que $T_1$ semble « retourné » comme dans un miroir, mais pas $T_2$. Laquelle des deux transformations conserve le sens de lecture du motif ?",
+      "corrige": [
+        "1. La symétrie d'axe des ordonnées change une abscisse en son opposé et garde l'ordonnée : chaque point $(x\\,;\\,y)$ devient $(-x\\,;\\,y)$. On reporte, pour chaque sommet, le même nombre de carreaux de l'autre côté de l'axe vertical. On obtient $A_1(-1\\,;\\,1)$, $B_1(-3\\,;\\,1)$ et $C_1(-1\\,;\\,2)$.",
+        "2. Pour le demi-tour de centre $O(0\\,;\\,0)$, le centre $O$ est le milieu de chaque segment joignant un point à son image : chaque point $(x\\,;\\,y)$ devient $(-x\\,;\\,-y)$. On obtient $A_2(-1\\,;\\,-1)$, $B_2(-3\\,;\\,-1)$ et $C_2(-1\\,;\\,-2)$.",
+        "3. Le demi-tour **conserve les longueurs**. Donc $A_2B_2 = AB = 2$ cm, sans aucune mesure.",
+        "4. Le demi-tour **conserve les mesures d'angles** : l'angle droit en $A$ a pour image un angle droit en $A_2$. Le triangle $T_2$ est donc rectangle en $A_2$.",
+        "5. L'image d'une droite par un demi-tour lui est **parallèle**. Donc $(A_2B_2)$ est parallèle à $(AB)$.",
+        "6. La symétrie axiale **retourne** la figure (effet miroir) : c'est $T_1$. Le demi-tour, lui, **conserve le sens** de lecture : c'est donc le demi-tour qui conserve le sens, ce qui explique que $T_2$ ne paraît pas retourné."
+      ],
+      "reponse": "1. $A_1(-1\\,;\\,1)$, $B_1(-3\\,;\\,1)$, $C_1(-1\\,;\\,2)$. 2. $A_2(-1\\,;\\,-1)$, $B_2(-3\\,;\\,-1)$, $C_2(-1\\,;\\,-2)$. 3. $A_2B_2 = 2$ cm (longueurs conservées). 4. rectangle en $A_2$ (angles conservés). 5. $(A_2B_2) \\parallel (AB)$. 6. le demi-tour conserve le sens ; la symétrie axiale retourne la figure."
     }
   ]
 }

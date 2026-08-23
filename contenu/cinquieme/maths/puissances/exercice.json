@@ -83,6 +83,56 @@
         "Le volume s'exprime en centimètres cubes (cm$^3$)."
       ],
       "reponse": "**a)** Le côté mesure $6$ cm. **b)** Le volume du cube est $6^3 = 216$ cm$^3$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "calcul-carre-cube",
+      "enonce": "Calcule le carré de $11$, puis le cube de $3$.",
+      "corrige": [
+        "Le **carré** de $11$ est $11^2 = 11 \\times 11$. On effectue le produit : $11 \\times 11 = 121$.",
+        "Le **cube** de $3$ est $3^3 = 3 \\times 3 \\times 3$. On calcule de gauche à droite : $3 \\times 3 = 9$, puis $9 \\times 3 = 27$.",
+        "Attention à ne pas confondre : le carré multiplie le nombre **deux** fois par lui-même, le cube **trois** fois."
+      ],
+      "reponse": "$11^2 = 121$ et $3^3 = 27$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "priorites",
+      "enonce": "Calcule $5 \\times 3^2 - 4^2$.",
+      "corrige": [
+        "Les **puissances** passent en premier : $3^2 = 3 \\times 3 = 9$ et $4^2 = 4 \\times 4 = 16$. L'expression devient $5 \\times 9 - 16$.",
+        "Vient ensuite la **multiplication** : $5 \\times 9 = 45$. Il reste $45 - 16$.",
+        "On termine par la **soustraction** : $45 - 16 = 29$. (Le carré ne porte que sur le $3$ : ce n'est pas $(5 \\times 3)^2$.)"
+      ],
+      "reponse": "$5 \\times 3^2 - 4^2 = 45 - 16 = 29$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "pieges",
+      "enonce": "Karim affirme que $2^3 = 3^2$, « parce qu'il y a un $2$ et un $3$ des deux côtés ». A-t-il raison ? Justifie en calculant chacun des deux nombres.",
+      "corrige": [
+        "On calcule d'abord $2^3$ : la base est $2$, l'exposant $3$, donc $2^3 = 2 \\times 2 \\times 2 = 8$.",
+        "On calcule ensuite $3^2$ : la base est $3$, l'exposant $2$, donc $3^2 = 3 \\times 3 = 9$.",
+        "On compare : $8 \\neq 9$, donc les deux écritures ne sont **pas** égales. Karim a tort.",
+        "Ce qui change tout, c'est le rôle de chaque nombre : la **base** est le nombre qu'on multiplie, l'**exposant** compte les facteurs. Échanger base et exposant change le résultat."
+      ],
+      "reponse": "Non : $2^3 = 8$ tandis que $3^2 = 9$. Ces deux nombres sont différents, on ne peut pas échanger la base et l'exposant."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un artisan fabrique une petite boîte en forme de **cube** dont l'arête mesure $5$ cm. Il veut la peindre entièrement, puis la poser sur un carreau.\\n\\n**1.** Une face de la boîte est un carré de côté $5$ cm. Calcule l'aire d'une face.\\n\\n**2.** La boîte possède $6$ faces carrées identiques. Calcule l'aire totale de bois à peindre.\\n\\n**3.** Calcule le volume de la boîte.\\n\\n**4.** L'artisan pose la boîte sur un carreau carré de côté $8$ cm. Calcule l'aire du carreau, puis l'aire qui reste visible autour de la boîte (aire du carreau moins l'aire de la face posée).",
+      "corrige": [
+        "**1.** Une face est un carré de côté $5$ cm : son aire vaut $5^2 = 5 \\times 5 = 25$. L'aire d'une face est donc $25$ cm$^2$.",
+        "**2.** Les $6$ faces sont identiques, chacune de $25$ cm$^2$. L'aire totale à peindre est $6 \\times 25 = 150$ cm$^2$.",
+        "**3.** Le volume d'un cube d'arête $a$ vaut $a^3$. Ici $a = 5$, donc $5^3 = 5 \\times 5 \\times 5 = 25 \\times 5 = 125$. Le volume est $125$ cm$^3$ (bien en centimètres **cubes**).",
+        "**4.** L'aire du carreau est $8^2 = 8 \\times 8 = 64$ cm$^2$. La face posée occupe $25$ cm$^2$. L'aire visible autour est donc $64 - 25 = 39$ cm$^2$."
+      ],
+      "reponse": "**1.** $25$ cm$^2$. **2.** $6 \\times 25 = 150$ cm$^2$. **3.** $5^3 = 125$ cm$^3$. **4.** carreau $8^2 = 64$ cm$^2$, aire visible $64 - 25 = 39$ cm$^2$."
     }
   ]
 }

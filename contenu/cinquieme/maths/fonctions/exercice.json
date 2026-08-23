@@ -84,6 +84,56 @@
         "*Deuxième raison — les points.* Les valeurs $1$, $4$, $9$, $16$, $25$ montent de plus en plus vite ($+3$, puis $+5$, puis $+7$, puis $+9$) : les points ne sont pas alignés. Léa a donc tort : deux grandeurs peuvent augmenter ensemble sans être proportionnelles."
       ],
       "reponse": "$A = c \\times c$ ; Léa a tort : les quotients sont inégaux et les points ne sont pas alignés."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "formule-vers-tableau",
+      "enonce": "Un escargot s'éloigne de son terrier à vitesse régulière. Au début de l'observation, il se trouve déjà à $3$ m du terrier, et il s'en éloigne de $2$ m chaque heure. Sa distance $D$ au terrier, en mètres, varie en fonction du nombre $h$ d'heures écoulées :\n$$D = 3 + 2 \\times h$$\nRecopie et complète le tableau de valeurs pour $h = 0$, $1$, $2$, $3$ et $4$.\n\n| Heures $h$ | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| Distance $D$ (m) | ? | ? | ? | ? | ? |",
+      "corrige": [
+        "On **remplace** la lettre $h$ par chaque valeur, puis on calcule en respectant les priorités : la multiplication passe **avant** l'addition.",
+        "$h = 0$ : $D = 3 + 2 \\times 0 = 3 + 0 = 3$. $h = 1$ : $D = 3 + 2 \\times 1 = 3 + 2 = 5$.",
+        "$h = 2$ : $D = 3 + 4 = 7$. $h = 3$ : $D = 3 + 6 = 9$. $h = 4$ : $D = 3 + 8 = 11$."
+      ],
+      "reponse": "Distances successives : $3$, $5$, $7$, $9$ et $11$ m."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "produire-une-formule",
+      "enonce": "Un service de livraison facture $5$ € de prise en charge, puis $3$ € par colis livré. On note $P$ le prix, en euros, et $n$ le nombre de colis.\n**1.** Écris une formule donnant $P$ en fonction de $n$.\n**2.** Quel est le prix pour $6$ colis ?\n**3.** Un client a payé $29$ €. Combien de colis a-t-il fait livrer ?",
+      "corrige": [
+        "**1.** Les $5$ € de prise en charge sont **fixes** (payés une seule fois), les $3$ € se paient pour **chaque** colis (partie qui varie) : $P = 5 + 3 \\times n$.",
+        "**2.** On remplace $n$ par $6$ : $P = 5 + 3 \\times 6 = 5 + 18 = 23$ €. On calcule d'abord $3 \\times 6$, **puis** on ajoute $5$.",
+        "**3.** On cherche $n$ tel que $5 + 3 \\times n = 29$. On retire d'abord les $5$ € fixes : $29 - 5 = 24$ € pour les colis. Puis $24 \\div 3 = 8$. Vérification : $5 + 3 \\times 8 = 5 + 24 = 29$ €. ✓"
+      ],
+      "reponse": "$P = 5 + 3 \\times n$ ; $23$ € pour $6$ colis ; $8$ colis pour $29$ €."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "proportionnalite-graphique",
+      "enonce": "Dans un magasin, le tissu est vendu au mètre. Le tableau donne le prix $P$, en euros, en fonction de la longueur $L$ de tissu achetée, en mètres.\n\n| Longueur $L$ (m) | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| Prix $P$ (€) | 4 | 8 | 12 | 16 |\n\n**1.** Le prix est-il proportionnel à la longueur ? Justifie avec les quotients.\n**2.** Que vaudrait le prix pour $0$ m ? Où passerait alors la droite dans un repère ?\n**3.** Sans tracer, décris comment sont placés dans un repère les points de ce tableau.",
+      "corrige": [
+        "**1.** On calcule les quotients $\\dfrac{P}{L}$ : $\\dfrac{4}{1} = 4$, $\\dfrac{8}{2} = 4$, $\\dfrac{12}{3} = 4$, $\\dfrac{16}{4} = 4$. Ils sont **tous égaux** à $4$, donc le prix **est proportionnel** à la longueur, de coefficient $4$ (le tissu coûte $4$ € le mètre).",
+        "**2.** Pour $0$ m on ne paie rien : $P = 0$ €. Le point $(0\\,;0)$ est l'**origine** du repère : la droite passe donc **par l'origine**.",
+        "**3.** Les points $(1\\,;4)$, $(2\\,;8)$, $(3\\,;12)$ et $(4\\,;16)$ sont **alignés** et, avec l'origine, sur une **droite passant par l'origine** : c'est exactement la signature graphique de la proportionnalité (les deux conditions à la fois)."
+      ],
+      "reponse": "Oui, c'est proportionnel (coefficient $4$) : quotients tous égaux à $4$, et droite passant par l'origine."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un club de randonnée organise une sortie en car. Le car coûte $120$ € pour la journée, quel que soit le nombre de participants. En plus, chaque participant paie $5$ € d'entrée au site visité. On note $n$ le nombre de participants et $C$ le coût total de la sortie, en euros.\n\n**1.** Écris une formule donnant $C$ en fonction de $n$.\n**2.** Recopie et complète le tableau suivant.\n\n| Participants $n$ | 0 | 10 | 20 | 30 |\n|---|---|---|---|---|\n| Coût total $C$ (€) | ? | ? | ? | ? |\n\n**3.** On veut placer ces valeurs dans un repère (participants en abscisse, coût en ordonnée). Donne les coordonnées des quatre points.\n**4.** Le coût total est-il proportionnel au nombre de participants ? Justifie de deux façons.\n**5.** Le club dispose d'un budget de $270$ €. Combien de participants au maximum peut-il emmener ?",
+      "corrige": [
+        "**1.** Les $120$ € du car sont **fixes** : on les paie une seule fois, même pour $0$ participant. Les $5$ € d'entrée se paient pour **chaque** participant, cette partie varie avec $n$. On additionne : $C = 120 + 5 \\times n$.",
+        "**2.** On remplace $n$ par chaque valeur (multiplication d'abord). $n = 0$ : $C = 120 + 5 \\times 0 = 120$. $n = 10$ : $C = 120 + 50 = 170$. $n = 20$ : $C = 120 + 100 = 220$. $n = 30$ : $C = 120 + 150 = 270$.",
+        "**3.** Chaque colonne donne un point (participants ; coût), l'**abscisse d'abord** : $(0\\,;120)$, $(10\\,;170)$, $(20\\,;220)$ et $(30\\,;270)$.",
+        "**4.** *Quotients :* $\\dfrac{170}{10} = 17$ mais $\\dfrac{220}{20} = 11$ ; ils ne sont pas égaux. *Origine :* pour $n = 0$ le coût vaut $120$ € et non $0$ €, donc dans un repère la droite ne passe **pas** par l'origine. Ce n'est donc **pas** proportionnel, même si les points sont alignés.",
+        "**5.** On cherche le plus grand $n$ tel que $120 + 5 \\times n \\le 270$. On retire d'abord le car : $270 - 120 = 150$ € restent pour les entrées. Puis $150 \\div 5 = 30$. Le tableau le confirme : $n = 30$ donne exactement $270$ €."
+      ],
+      "reponse": "$C = 120 + 5 \\times n$ ; coûts $120$, $170$, $220$, $270$ € ; points $(0\\,;120)$, $(10\\,;170)$, $(20\\,;220)$, $(30\\,;270)$ ; **non** proportionnel (quotients inégaux et droite ne passant pas par l'origine) ; avec $270$ €, **$30$ participants** au maximum."
     }
   ]
 }
