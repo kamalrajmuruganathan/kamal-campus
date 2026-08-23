@@ -85,6 +85,58 @@
         "Conversion : $\\\\Delta h = 2{,}8 \\\\times 10^{-2}$ m $= 2{,}8$ cm. Une hausse de seulement $0{,}20\\\\ \\\\text{°C}$ sur $700$ m d'eau suffit à élever le niveau de près de $3$ cm : à l'échelle des océans, la dilatation thermique est loin d'être négligeable."
       ],
       "reponse": "La dilatation augmente le volume, donc la hauteur, sans fonte ; $\\\\Delta h = 700 \\\\times 2{,}0\\\\times10^{-4} \\\\times 0{,}20 = 2{,}8\\\\times10^{-2}$ m $= 2{,}8$ cm."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "bilan-radiatif",
+      "enonce": "Sur la planète Mars, la constante solaire (puissance reçue par une surface face au Soleil) vaut $S_0 = 590$ W/m² et l'albédo moyen est $A = 0{,}25$. 1) Calculer la puissance solaire moyenne $P_{\\\\text{moy}}$ reçue par mètre carré de surface martienne. 2) En déduire la puissance moyenne $P_{\\\\text{abs}}$ réellement absorbée par Mars.",
+      "corrige": [
+        "1) Comme pour toute planète sphérique, l'énergie interceptée par le disque ($\\\\pi R^2$) se répartit sur une sphère d'aire $4$ fois plus grande ($4\\\\pi R^2$) : on divise la constante solaire par $4$. $P_{\\\\text{moy}} = \\\\dfrac{S_0}{4} = \\\\dfrac{590}{4} = 147{,}5$ W/m² $\\\\approx 148$ W/m².",
+        "2) L'albédo $A = 0{,}25$ est la fraction **réfléchie** ; la fraction **absorbée** vaut $1 - A = 0{,}75$.",
+        "$P_{\\\\text{abs}} = (1 - A)\\\\,\\\\dfrac{S_0}{4} = 0{,}75 \\\\times 147{,}5 = 110{,}6$ W/m² $\\\\approx 111$ W/m². Mars, plus éloignée du Soleil que la Terre, reçoit et absorbe bien moins d'énergie par mètre carré."
+      ],
+      "reponse": "$P_{\\\\text{moy}} = 590/4 = 147{,}5 \\\\approx 148$ W/m² ; $P_{\\\\text{abs}} = 0{,}75 \\\\times 147{,}5 \\\\approx 111$ W/m²."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "stefan-boltzmann",
+      "enonce": "La loi de Stefan-Boltzmann donne la puissance rayonnée par mètre carré d'un corps : $P = \\\\sigma T^4$, avec $\\\\sigma = 5{,}67 \\\\times 10^{-8}$ W·m⁻²·K⁻⁴ et $T$ la température **absolue** en kelvin. La surface de la Terre est à une température moyenne de $15\\\\ \\\\text{°C}$. 1) Calculer la puissance $P_1$ rayonnée par mètre carré à cette température. 2) La Terre se réchauffe de $1\\\\ \\\\text{°C}$ : calculer la nouvelle puissance émise $P_2$, puis le supplément $\\\\Delta P$. Préciser en quoi ce mécanisme constitue une rétroaction négative.",
+      "corrige": [
+        "1) On convertit d'abord en kelvin (indispensable dans $T^4$) : $T_1 = 15 + 273 = 288$ K. Comme $288^4 \\\\approx 6{,}88 \\\\times 10^{9}$, on a $P_1 = \\\\sigma T_1^4 = 5{,}67 \\\\times 10^{-8} \\\\times 6{,}88 \\\\times 10^{9} \\\\approx 390$ W/m².",
+        "2) Après réchauffement : $T_2 = 16 + 273 = 289$ K, et $289^4 \\\\approx 6{,}98 \\\\times 10^{9}$, donc $P_2 = 5{,}67 \\\\times 10^{-8} \\\\times 6{,}98 \\\\times 10^{9} \\\\approx 395$ W/m².",
+        "Le supplément émis vaut $\\\\Delta P = P_2 - P_1 \\\\approx 395 - 390 = 5$ W/m².",
+        "En se réchauffant, la Terre émet davantage vers l'espace ($+5$ W/m² pour $+1\\\\ \\\\text{°C}$) : cette émission accrue évacue une partie de l'excédent d'énergie et **freine** le réchauffement. L'effet s'oppose à sa cause : c'est une **rétroaction négative** (stabilisatrice)."
+      ],
+      "reponse": "$P_1 = \\\\sigma \\\\times 288^4 \\\\approx 390$ W/m² ; $P_2 = \\\\sigma \\\\times 289^4 \\\\approx 395$ W/m² ; $\\\\Delta P \\\\approx +5$ W/m² : rétroaction **négative** (loi de Stefan-Boltzmann)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "retroactions",
+      "enonce": "On étudie un scénario de refroidissement extrême. Une extension massive des glaces fait passer l'albédo terrestre à $A = 0{,}60$ (surface très réfléchissante). On garde $P_{\\\\text{moy}} = S_0/4 = 340$ W/m² et $\\\\sigma = 5{,}67 \\\\times 10^{-8}$ W·m⁻²·K⁻⁴. 1) Calculer la puissance absorbée $P_{\\\\text{abs}}$ avec ce nouvel albédo. 2) En déduire la température moyenne d'équilibre $T$ (en K puis en °C). 3) Comparer à la température d'équilibre habituelle ($\\\\approx 255$ K) et expliquer pourquoi ce mécanisme peut conduire à un emballement (« Terre boule de neige »).",
+      "corrige": [
+        "1) La fraction absorbée est $1 - A = 0{,}40$. $P_{\\\\text{abs}} = (1 - A)\\\\,P_{\\\\text{moy}} = 0{,}40 \\\\times 340 = 136$ W/m².",
+        "2) À l'équilibre radiatif $\\\\sigma T^4 = P_{\\\\text{abs}}$, donc $T^4 = \\\\dfrac{136}{5{,}67 \\\\times 10^{-8}} = 2{,}40 \\\\times 10^{9}\\\\ \\\\text{K}^4$. En prenant la racine quatrième (deux racines carrées) : $\\\\sqrt{2{,}40 \\\\times 10^{9}} \\\\approx 4{,}90 \\\\times 10^{4}$, puis $\\\\sqrt{4{,}90 \\\\times 10^{4}} \\\\approx 221$. Donc $T \\\\approx 221$ K, soit $\\\\theta = 221 - 273 = -52\\\\ \\\\text{°C}$.",
+        "3) Cette température ($\\\\approx 221$ K $= -52\\\\ \\\\text{°C}$) est bien plus basse que l'équilibre habituel ($\\\\approx 255$ K $= -18\\\\ \\\\text{°C}$) : un albédo plus élevé refroidit fortement la planète.",
+        "Or un refroidissement favorise l'extension des glaces, ce qui **augmente encore** l'albédo, donc refroidit davantage : la cause s'auto-entretient. C'est une **rétroaction positive** (glace-albédo) qui peut emballer le système jusqu'à une Terre entièrement gelée."
+      ],
+      "reponse": "$P_{\\\\text{abs}} = 0{,}40 \\\\times 340 = 136$ W/m² ; $T = (136/\\\\sigma)^{1/4} \\\\approx 221$ K $= -52\\\\ \\\\text{°C}$, bien plus froid : la rétroaction **positive** glace-albédo peut emballer le refroidissement (Terre boule de neige)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Problème — Du bilan radiatif aux projections climatiques.**\\n\\nOn étudie le climat de la Terre à partir des documents suivants.\\n\\n**Document 1 — Rayonnement solaire.** Constante solaire $S_0 = 1361$ W/m² ; albédo moyen actuel $A = 0{,}29$.\\n\\n**Document 2 — Loi de Stefan-Boltzmann.** Un corps à la température absolue $T$ (en K) rayonne $P = \\\\sigma T^4$ par mètre carré, avec $\\\\sigma = 5{,}67 \\\\times 10^{-8}$ W·m⁻²·K⁻⁴. La température moyenne réelle du sol est $\\\\approx 15\\\\ \\\\text{°C}$.\\n\\n**Document 3 — Dioxyde de carbone.** Concentration préindustrielle : $280$ ppm ; concentration actuelle : $425$ ppm.\\n\\n**Document 4 — Déséquilibre énergétique.** Le forçage radiatif dû aux GES vaut aujourd'hui $f = 2{,}7$ W/m². Surface de la Terre $\\\\mathcal{S} = 5{,}1 \\\\times 10^{14}$ m² ; $1$ an $\\\\approx 3{,}15 \\\\times 10^{7}$ s. Les océans absorbent plus de $90\\\\ \\\\%$ de l'énergie excédentaire.\\n\\n**Document 5 — Projections 2100.** Deux scénarios d'émissions conduisent à un réchauffement moyen de la couche océanique supérieure (épaisseur $h = 1000$ m) de $\\\\Delta T = 2\\\\ \\\\text{°C}$ (scénario sobre) ou $\\\\Delta T = 4\\\\ \\\\text{°C}$ (scénario intensif). Coefficient de dilatation de l'eau $\\\\alpha = 2{,}0 \\\\times 10^{-4}$ K⁻¹.\\n\\n1. À l'aide du document 1, calculer la puissance moyenne reçue $P_{\\\\text{moy}}$ et la puissance absorbée $P_{\\\\text{abs}}$ par mètre carré.\\n2. À l'équilibre radiatif $\\\\sigma T^4 = P_{\\\\text{abs}}$. Calculer la température d'équilibre $T$ (en K puis en °C) et la comparer à la température réelle (document 2). Nommer le mécanisme responsable de l'écart.\\n3. Expliquer en une phrase comment un gaz à effet de serre réchauffe la surface, puis calculer, à l'aide du document 3, l'augmentation relative de la concentration de $\\\\text{CO}_2$ depuis l'ère préindustrielle.\\n4. À l'aide du document 4, calculer la puissance totale du déséquilibre énergétique, puis l'énergie accumulée en une année. Où va l'essentiel de cette énergie ?\\n5. À l'aide du document 5, calculer l'élévation du niveau de la mer due à la dilatation thermique dans chacun des deux scénarios. Que montre la comparaison sur l'intérêt de réduire les émissions ?",
+      "corrige": [
+        "1. La Terre étant sphérique, on divise la constante solaire par $4$ : $P_{\\\\text{moy}} = \\\\dfrac{S_0}{4} = \\\\dfrac{1361}{4} \\\\approx 340$ W/m². La fraction absorbée est $1 - A = 0{,}71$, donc $P_{\\\\text{abs}} = (1 - A)\\\\,P_{\\\\text{moy}} = 0{,}71 \\\\times 340 \\\\approx 242$ W/m².",
+        "2. À l'équilibre : $T^4 = \\\\dfrac{P_{\\\\text{abs}}}{\\\\sigma} = \\\\dfrac{242}{5{,}67 \\\\times 10^{-8}} \\\\approx 4{,}27 \\\\times 10^{9}\\\\ \\\\text{K}^4$. La racine quatrième donne $T \\\\approx 256$ K, soit $\\\\theta = 256 - 273 \\\\approx -17\\\\ \\\\text{°C}$. La température réelle ($+15\\\\ \\\\text{°C}$, soit $288$ K) lui est supérieure d'environ $33\\\\ \\\\text{°C}$ : cet écart est apporté par l'**effet de serre**.",
+        "3. Un gaz à effet de serre est transparent au rayonnement solaire (visible) qui arrive, mais absorbe l'infrarouge émis par le sol et en réémet une partie vers la surface, qui reçoit ainsi un supplément d'énergie et se réchauffe. Augmentation relative du $\\\\text{CO}_2$ : $\\\\dfrac{425 - 280}{280} = \\\\dfrac{145}{280} \\\\approx 0{,}52$, soit environ $+52\\\\ \\\\%$.",
+        "4. Le forçage est une puissance **par mètre carré** : la puissance totale du déséquilibre vaut $P = f \\\\times \\\\mathcal{S} = 2{,}7 \\\\times 5{,}1 \\\\times 10^{14} \\\\approx 1{,}4 \\\\times 10^{15}$ W. L'énergie accumulée en un an est $E = P \\\\times \\\\Delta t = 1{,}4 \\\\times 10^{15} \\\\times 3{,}15 \\\\times 10^{7} \\\\approx 4{,}3 \\\\times 10^{22}$ J. Plus de $90\\\\ \\\\%$ de cette énergie est absorbée par les **océans**, qui se réchauffent et se dilatent.",
+        "5. L'élévation due à la dilatation vaut $\\\\Delta h = h \\\\times \\\\alpha \\\\times \\\\Delta T$ (un écart de température se transpose tel quel : $\\\\text{°C} = $ K). Scénario sobre : $\\\\Delta h = 1000 \\\\times 2{,}0 \\\\times 10^{-4} \\\\times 2 = 0{,}40$ m $= 40$ cm. Scénario intensif : $\\\\Delta h = 1000 \\\\times 2{,}0 \\\\times 10^{-4} \\\\times 4 = 0{,}80$ m $= 80$ cm. Le scénario sobre réchauffe moins les océans et limite de moitié la montée du niveau de la mer : une projection n'est pas une prédiction unique mais un **éventail** de futurs qui dépend de nos émissions."
+      ],
+      "reponse": "1. $P_{\\\\text{moy}} \\\\approx 340$ W/m², $P_{\\\\text{abs}} \\\\approx 242$ W/m². 2. $T \\\\approx 256$ K $\\\\approx -17\\\\ \\\\text{°C}$, écart de $\\\\approx +33\\\\ \\\\text{°C}$ dû à l'effet de serre. 3. GES : infrarouge piégé réémis vers le sol ; $\\\\text{CO}_2 \\\\approx +52\\\\ \\\\%$. 4. $P \\\\approx 1{,}4 \\\\times 10^{15}$ W, $E \\\\approx 4{,}3 \\\\times 10^{22}$ J/an, surtout dans les océans. 5. $\\\\Delta h \\\\approx 40$ cm (sobre) contre $80$ cm (intensif) : réduire les émissions limite la montée des eaux."
     }
   ]
 }

@@ -90,6 +90,61 @@
         "$U = (I-A)^{-1}C = \\begin{pmatrix} 3 & 1 \\\\ 2 & 4\\end{pmatrix}\\begin{pmatrix} 4 \\\\ 3\\end{pmatrix} = \\begin{pmatrix} 12+3 \\\\ 8+12\\end{pmatrix} = \\begin{pmatrix} 15 \\\\ 20\\end{pmatrix}$."
       ],
       "reponse": "$U_1 = \\begin{pmatrix} 4 \\\\ 3\\end{pmatrix}$, $U_2 = \\begin{pmatrix} 6{,}7 \\\\ 5{,}9\\end{pmatrix}$, état stable $U = \\begin{pmatrix} 15 \\\\ 20\\end{pmatrix}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "matrices",
+      "enonce": "On pose $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 0 \\end{pmatrix}$ et $B = \\begin{pmatrix} 0 & 1 \\\\ 2 & 1 \\end{pmatrix}$. Calculer les produits $A\\times B$ et $B\\times A$, puis conclure quant à la commutativité du produit.",
+      "corrige": [
+        "Les deux produits existent car $A$ et $B$ sont carrées de même taille. On applique « ligne de la première fois colonne de la seconde ».",
+        "$A\\times B$ : $(AB)_{11}=1\\times0+2\\times2=4$, $(AB)_{12}=1\\times1+2\\times1=3$, $(AB)_{21}=3\\times0+0\\times2=0$, $(AB)_{22}=3\\times1+0\\times1=3$. Donc $AB=\\begin{pmatrix} 4 & 3 \\\\ 0 & 3\\end{pmatrix}$.",
+        "$B\\times A$ : $(BA)_{11}=0\\times1+1\\times3=3$, $(BA)_{12}=0\\times2+1\\times0=0$, $(BA)_{21}=2\\times1+1\\times3=5$, $(BA)_{22}=2\\times2+1\\times0=4$. Donc $BA=\\begin{pmatrix} 3 & 0 \\\\ 5 & 4\\end{pmatrix}$.",
+        "On constate que $AB\\neq BA$ : le produit matriciel n'est pas commutatif, l'ordre des facteurs compte."
+      ],
+      "reponse": "$AB = \\begin{pmatrix} 4 & 3 \\\\ 0 & 3\\end{pmatrix}$ et $BA = \\begin{pmatrix} 3 & 0 \\\\ 5 & 4\\end{pmatrix}$ : $AB\\neq BA$, le produit n'est pas commutatif."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "adjacence",
+      "enonce": "On considère le graphe carré de sommets $A, B, C, D$ (numérotés $1,2,3,4$) et d'arêtes $A\\!-\\!B$, $B\\!-\\!C$, $C\\!-\\!D$, $D\\!-\\!A$. Écrire sa matrice d'adjacence $M$, calculer $M^{2}$, puis déterminer le nombre de chemins de longueur $2$ de $A$ à $C$. Expliquer pourquoi il n'existe aucun chemin de longueur $2$ de $A$ à $B$.",
+      "corrige": [
+        "Chaque sommet est relié à ses deux voisins du carré. Avec l'ordre $A,B,C,D$, la matrice d'adjacence est $M = \\begin{pmatrix} 0&1&0&1 \\\\ 1&0&1&0 \\\\ 0&1&0&1 \\\\ 1&0&1&0 \\end{pmatrix}$ (symétrique car le graphe est non orienté).",
+        "On calcule $M^{2} = M\\times M = \\begin{pmatrix} 2&0&2&0 \\\\ 0&2&0&2 \\\\ 2&0&2&0 \\\\ 0&2&0&2 \\end{pmatrix}$.",
+        "Le nombre de chemins de longueur $2$ de $A$ à $C$ est le coefficient ligne $1$, colonne $3$ : $\\big(M^{2}\\big)_{13}=2$. Ce sont les chemins $A-B-C$ et $A-D-C$.",
+        "Le coefficient $\\big(M^{2}\\big)_{12}=0$ : aucun chemin de longueur $2$ ne relie $A$ à $B$. En effet $A$ et $B$ sont voisins directs, et dans ce graphe « biparti » on ne peut relier deux sommets voisins qu'avec un nombre impair d'arêtes."
+      ],
+      "reponse": "$M = \\begin{pmatrix} 0&1&0&1 \\\\ 1&0&1&0 \\\\ 0&1&0&1 \\\\ 1&0&1&0 \\end{pmatrix}$, $M^{2} = \\begin{pmatrix} 2&0&2&0 \\\\ 0&2&0&2 \\\\ 2&0&2&0 \\\\ 0&2&0&2 \\end{pmatrix}$ ; $2$ chemins de longueur $2$ de $A$ à $C$, aucun de $A$ à $B$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "matrices",
+      "enonce": "Soit $A = \\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix}$ et $I$ la matrice identité $2\\times2$. Montrer que $A^{2} = 5A - 6I$. En déduire, sans utiliser la formule de l'inverse $2\\times2$, que $A$ est inversible et exprimer $A^{-1}$.",
+      "corrige": [
+        "Calcul de $A^{2}$ : $(A^{2})_{11}=2\\times2+0\\times1=4$, $(A^{2})_{12}=0$, $(A^{2})_{21}=1\\times2+3\\times1=5$, $(A^{2})_{22}=3\\times3=9$. Donc $A^{2}=\\begin{pmatrix} 4 & 0 \\\\ 5 & 9\\end{pmatrix}$.",
+        "Par ailleurs $5A-6I = \\begin{pmatrix} 10 & 0 \\\\ 5 & 15\\end{pmatrix} - \\begin{pmatrix} 6 & 0 \\\\ 0 & 6\\end{pmatrix} = \\begin{pmatrix} 4 & 0 \\\\ 5 & 9\\end{pmatrix}$. On a bien $A^{2}=5A-6I$.",
+        "On réécrit la relation : $A^{2}-5A = -6I$, soit $A(A-5I) = -6I$, donc $A\\times\\left(\\dfrac{5I-A}{6}\\right) = I$.",
+        "Ainsi $A$ est inversible et $A^{-1} = \\dfrac{1}{6}(5I - A) = \\dfrac{1}{6}\\begin{pmatrix} 3 & 0 \\\\ -1 & 2\\end{pmatrix} = \\begin{pmatrix} \\tfrac12 & 0 \\\\ -\\tfrac16 & \\tfrac13\\end{pmatrix}$.",
+        "Vérification par la formule usuelle : $ad-bc = 2\\times3-0 = 6\\neq0$ et $\\dfrac{1}{6}\\begin{pmatrix} 3 & 0 \\\\ -1 & 2\\end{pmatrix}$ : cohérent."
+      ],
+      "reponse": "$A^{2}=5A-6I$ ; on en tire $A\\left(\\tfrac{5I-A}{6}\\right)=I$, donc $A$ est inversible et $A^{-1}=\\dfrac16\\begin{pmatrix} 3 & 0 \\\\ -1 & 2\\end{pmatrix}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Une ville dispose de trois stations de vélos en libre-service $A$, $B$, $C$ et d'une station-relais $D$. Les pistes cyclables reliant directement deux stations sont : $A\\!-\\!B$, $A\\!-\\!C$, $A\\!-\\!D$, $B\\!-\\!C$. On numérote les sommets dans l'ordre $A(1), B(2), C(3), D(4)$.\\n\\n**Partie A — Le réseau.**\\n1. Donner l'ordre du graphe et le degré de chaque station, puis vérifier le théorème des degrés. Le réseau est-il connexe ?\\n2. Écrire la matrice d'adjacence $M$ du graphe.\\n3. Calculer $M^{2}$. En déduire le nombre de trajets de longueur $2$ (deux pistes empruntées) reliant $A$ à $B$, et interpréter le coefficient $\\big(M^{2}\\big)_{11}$.\\n\\n**Partie B — Les usagers.** Un usager se déplace à vélo (état $V$) ou en voiture (état $T$) un jour donné. S'il roule à vélo, il recommence le lendemain avec probabilité $0{,}8$. S'il prend la voiture, il passe au vélo le lendemain avec probabilité $0{,}3$. Le premier jour il roule à vélo.\\n4. Écrire la matrice de transition $P$ (états $V$ puis $T$) et vérifier ses lignes. Calculer les distributions $\\pi_1$ et $\\pi_2$.\\n5. Déterminer l'état stable, c'est-à-dire la distribution invariante $\\pi=(x\\ \\ y)$.\\n6. Interpréter ce résultat pour la fréquentation à long terme.",
+      "corrige": [
+        "1. Ordre $=4$ (quatre stations). Degrés : $\\deg(A)=3$ (arêtes $AB,AC,AD$), $\\deg(B)=2$ ($AB,BC$), $\\deg(C)=2$ ($AC,BC$), $\\deg(D)=1$ ($AD$). Somme $=3+2+2+1=8=2\\times4$ arêtes : le théorème des degrés est vérifié. De toute station on atteint les autres (par exemple $D-A-B-C$) : le réseau est connexe.",
+        "2. Avec l'ordre $A,B,C,D$, la matrice d'adjacence est $M=\\begin{pmatrix} 0&1&1&1 \\\\ 1&0&1&0 \\\\ 1&1&0&0 \\\\ 1&0&0&0 \\end{pmatrix}$ (symétrique, graphe non orienté).",
+        "3. On calcule $M^{2}=\\begin{pmatrix} 3&1&1&0 \\\\ 1&2&1&1 \\\\ 1&1&2&1 \\\\ 0&1&1&1 \\end{pmatrix}$. Le nombre de trajets de longueur $2$ de $A$ à $B$ est $\\big(M^{2}\\big)_{12}=1$ (l'unique trajet $A-C-B$). Le coefficient $\\big(M^{2}\\big)_{11}=3$ compte les trajets de longueur $2$ partant de $A$ et y revenant : $A-B-A$, $A-C-A$ et $A-D-A$.",
+        "4. Depuis $V$ : reste $V$ avec $0{,}8$, passe en $T$ avec $0{,}2$. Depuis $T$ : passe en $V$ avec $0{,}3$, reste $T$ avec $0{,}7$. D'où $P=\\begin{pmatrix} 0{,}8 & 0{,}2 \\\\ 0{,}3 & 0{,}7\\end{pmatrix}$ (chaque ligne somme à $1$). État initial $\\pi_0=(\\,1\\ \\ 0\\,)$. $\\pi_1=\\pi_0 P=(\\,0{,}8\\ \\ 0{,}2\\,)$. $\\pi_2=\\pi_1 P=(\\,0{,}8\\times0{,}8+0{,}2\\times0{,}3\\ \\ ;\\ 0{,}8\\times0{,}2+0{,}2\\times0{,}7\\,)=(\\,0{,}7\\ \\ 0{,}3\\,)$.",
+        "5. La distribution invariante $\\pi=(x\\ \\ y)$ vérifie $\\pi P=\\pi$ avec $x+y=1$. La première équation donne $x=0{,}8x+0{,}3y$, soit $0{,}2x=0{,}3y$. Avec $y=1-x$ : $0{,}2x=0{,}3(1-x)$, d'où $0{,}5x=0{,}3$, donc $x=0{,}6$ et $y=0{,}4$. Vérification : $(0{,}6\\ \\ 0{,}4)P=(0{,}6\\ \\ 0{,}4)$.",
+        "6. À long terme, la distribution converge vers l'état stable $(0{,}6\\ \\ 0{,}4)$ indépendamment du jour de départ : environ $60\\,\\%$ des usagers rouleront à vélo et $40\\,\\%$ en voiture."
+      ],
+      "reponse": "Partie A : ordre $4$, degrés $3,2,2,1$ (somme $8=2\\times4$), réseau connexe ; $M^{2}=\\begin{pmatrix} 3&1&1&0 \\\\ 1&2&1&1 \\\\ 1&1&2&1 \\\\ 0&1&1&1 \\end{pmatrix}$, $1$ trajet de longueur $2$ de $A$ à $B$, $\\big(M^{2}\\big)_{11}=3$. Partie B : $P=\\begin{pmatrix} 0{,}8 & 0{,}2 \\\\ 0{,}3 & 0{,}7\\end{pmatrix}$, $\\pi_1=(0{,}8\\ \\ 0{,}2)$, $\\pi_2=(0{,}7\\ \\ 0{,}3)$, état stable $(0{,}6\\ \\ 0{,}4)$ : à terme $60\\,\\%$ à vélo, $40\\,\\%$ en voiture."
     }
   ]
 }

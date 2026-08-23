@@ -90,6 +90,62 @@
         "Le module vaut $|i|=1$ : $\\dfrac{AC}{AB}=1$, donc $AC=AB$ (triangle isocèle en $A$). L'argument vaut $\\arg(i)=\\dfrac{\\pi}{2}$ : l'angle $\\big(\\overrightarrow{AB},\\overrightarrow{AC}\\big)=\\dfrac{\\pi}{2}$, donc le triangle est rectangle en $A$."
       ],
       "reponse": "Le quotient vaut $i$, donc $ABC$ est un triangle rectangle isocèle en $A$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "affixe",
+      "enonce": "Dans le plan complexe muni d'un repère orthonormé direct, on considère les points $A$ et $B$ d'affixes $z_A=2-3i$ et $z_B=-4+5i$. Déterminer l'affixe du vecteur $\\overrightarrow{AB}$, puis l'affixe du milieu $I$ du segment $[AB]$.",
+      "corrige": [
+        "L'affixe d'un vecteur défini par deux points est la différence des affixes : $z_{\\overrightarrow{AB}}=z_B-z_A$.",
+        "On calcule : $z_{\\overrightarrow{AB}}=(-4+5i)-(2-3i)=-6+8i$. Le vecteur $\\overrightarrow{AB}$ a donc pour coordonnées $(-6\\,;8)$.",
+        "L'affixe du milieu $I$ de $[AB]$ est la moyenne des affixes : $z_I=\\dfrac{z_A+z_B}{2}$.",
+        "On calcule : $z_I=\\dfrac{(2-3i)+(-4+5i)}{2}=\\dfrac{-2+2i}{2}=-1+i$. Le point $I$ a pour coordonnées $(-1\\,;1)$."
+      ],
+      "reponse": "$z_{\\overrightarrow{AB}}=-6+8i$ et $z_I=-1+i$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "moivre-euler",
+      "enonce": "Écrire le complexe $z=\\big(1-i\\sqrt3\\big)^4$ sous forme algébrique $a+ib$.",
+      "corrige": [
+        "On passe d'abord $1-i\\sqrt3$ sous forme exponentielle. Module : $\\left|1-i\\sqrt3\\right|=\\sqrt{1^2+(\\sqrt3)^2}=\\sqrt4=2$.",
+        "Argument $\\theta$ : $\\cos\\theta=\\dfrac12$ et $\\sin\\theta=-\\dfrac{\\sqrt3}{2}$ (partie imaginaire négative), donc $\\theta=-\\dfrac{\\pi}{3}$. Ainsi $1-i\\sqrt3=2\\,e^{-i\\pi/3}$.",
+        "On élève à la puissance $4$ à l'aide de la formule de Moivre : $z=\\big(2\\,e^{-i\\pi/3}\\big)^4=2^4\\,e^{-i4\\pi/3}=16\\,e^{-i4\\pi/3}$.",
+        "On revient à la forme algébrique : $e^{-i4\\pi/3}=\\cos\\!\\left(-\\dfrac{4\\pi}{3}\\right)+i\\sin\\!\\left(-\\dfrac{4\\pi}{3}\\right)=-\\dfrac12+i\\dfrac{\\sqrt3}{2}$.",
+        "Donc $z=16\\left(-\\dfrac12+i\\dfrac{\\sqrt3}{2}\\right)=-8+8i\\sqrt3$."
+      ],
+      "reponse": "$z=(1-i\\sqrt3)^4=-8+8i\\sqrt3$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "interpretation-geometrique",
+      "enonce": "Déterminer et caractériser l'ensemble $(\\mathcal{E})$ des points $M$ d'affixe $z$ du plan complexe vérifiant $|z-3|=2|z|$.",
+      "corrige": [
+        "On pose $z=x+iy$ avec $x,y$ réels. Alors $|z-3|^2=(x-3)^2+y^2$ et $|z|^2=x^2+y^2$.",
+        "Les deux membres de $|z-3|=2|z|$ étant positifs, l'égalité équivaut à $|z-3|^2=4|z|^2$, soit $(x-3)^2+y^2=4(x^2+y^2)$.",
+        "On développe : $x^2-6x+9+y^2=4x^2+4y^2$, d'où $0=3x^2+3y^2+6x-9$, puis en divisant par $3$ : $x^2+y^2+2x-3=0$.",
+        "On complète le carré pour reconnaître un cercle : $(x+1)^2-1+y^2-3=0$, soit $(x+1)^2+y^2=4$.",
+        "L'ensemble $(\\mathcal{E})$ est donc le cercle de centre $\\Omega(-1\\,;0)$ (d'affixe $-1$) et de rayon $2$."
+      ],
+      "reponse": "$(\\mathcal{E})$ est le cercle de centre $\\Omega(-1\\,;0)$ et de rayon $2$, d'équation $(x+1)^2+y^2=4$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Le plan complexe est muni d'un repère orthonormé direct $(O\\,;\\vec u,\\vec v)$. On considère les nombres complexes $z_1=\\sqrt3+i$ et $z_2=1+i$, et on pose $Z=\\dfrac{z_2}{z_1}$.\n\n1. Déterminer le module et un argument de $z_1$, puis de $z_2$, et écrire chacun sous forme exponentielle.\n2. En déduire le module, un argument et la forme exponentielle de $Z$.\n3. Écrire $Z$ sous forme algébrique en multipliant le numérateur et le dénominateur par le conjugué de $z_1$.\n4. En comparant les deux formes obtenues pour $Z$, déterminer les valeurs exactes de $\\cos\\dfrac{\\pi}{12}$ et $\\sin\\dfrac{\\pi}{12}$.\n5. Calculer $z_1^{\\,6}$ à l'aide de la formule de Moivre et donner le résultat sous forme algébrique.\n6. Déterminer et caractériser l'ensemble des points $M$ d'affixe $z$ tels que $|z-z_1|=2$.",
+      "corrige": [
+        "1. Pour $z_1=\\sqrt3+i$ : $|z_1|=\\sqrt{(\\sqrt3)^2+1^2}=\\sqrt4=2$, avec $\\cos\\theta=\\dfrac{\\sqrt3}{2}$ et $\\sin\\theta=\\dfrac12$, donc $\\arg(z_1)=\\dfrac{\\pi}{6}$ et $z_1=2\\,e^{i\\pi/6}$. Pour $z_2=1+i$ : $|z_2|=\\sqrt{1^2+1^2}=\\sqrt2$, avec $\\cos\\theta=\\sin\\theta=\\dfrac{1}{\\sqrt2}$, donc $\\arg(z_2)=\\dfrac{\\pi}{4}$ et $z_2=\\sqrt2\\,e^{i\\pi/4}$.",
+        "2. Pour un quotient, on divise les modules et on soustrait les arguments : $|Z|=\\dfrac{|z_2|}{|z_1|}=\\dfrac{\\sqrt2}{2}$ et $\\arg(Z)=\\dfrac{\\pi}{4}-\\dfrac{\\pi}{6}=\\dfrac{3\\pi-2\\pi}{12}=\\dfrac{\\pi}{12}$. Donc $Z=\\dfrac{\\sqrt2}{2}\\,e^{i\\pi/12}$.",
+        "3. On multiplie par le conjugué $\\bar z_1=\\sqrt3-i$ : $Z=\\dfrac{(1+i)(\\sqrt3-i)}{(\\sqrt3+i)(\\sqrt3-i)}$. Le dénominateur vaut $(\\sqrt3)^2+1^2=4$. Le numérateur : $(1+i)(\\sqrt3-i)=\\sqrt3-i+i\\sqrt3+1=(\\sqrt3+1)+i(\\sqrt3-1)$. Donc $Z=\\dfrac{(\\sqrt3+1)+i(\\sqrt3-1)}{4}$.",
+        "4. Les deux formes de $Z$ ont la même partie réelle et la même partie imaginaire. Comme $Z=\\dfrac{\\sqrt2}{2}\\left(\\cos\\dfrac{\\pi}{12}+i\\sin\\dfrac{\\pi}{12}\\right)$, on a $\\cos\\dfrac{\\pi}{12}=\\dfrac{\\operatorname{Re}(Z)}{|Z|}$ et $\\sin\\dfrac{\\pi}{12}=\\dfrac{\\operatorname{Im}(Z)}{|Z|}$. Il vient $\\cos\\dfrac{\\pi}{12}=\\dfrac{(\\sqrt3+1)/4}{\\sqrt2/2}=\\dfrac{\\sqrt3+1}{2\\sqrt2}=\\dfrac{\\sqrt6+\\sqrt2}{4}$ et $\\sin\\dfrac{\\pi}{12}=\\dfrac{(\\sqrt3-1)/4}{\\sqrt2/2}=\\dfrac{\\sqrt3-1}{2\\sqrt2}=\\dfrac{\\sqrt6-\\sqrt2}{4}$.",
+        "5. Avec $z_1=2\\,e^{i\\pi/6}$, la formule de Moivre donne $z_1^{\\,6}=2^6\\,e^{i\\times 6\\times\\pi/6}=64\\,e^{i\\pi}$. Comme $e^{i\\pi}=-1$, on obtient $z_1^{\\,6}=-64$.",
+        "6. On écrit $|z-z_1|=AM$ où $A$ est le point d'affixe $z_1=\\sqrt3+i$, soit $A(\\sqrt3\\,;1)$. L'égalité $AM=2$ caractérise le cercle de centre $A(\\sqrt3\\,;1)$ et de rayon $2$. (Remarque : $OA=|z_1|=2$, donc ce cercle passe par l'origine $O$.)"
+      ],
+      "reponse": "$z_1=2\\,e^{i\\pi/6}$, $z_2=\\sqrt2\\,e^{i\\pi/4}$ et $Z=\\dfrac{\\sqrt2}{2}\\,e^{i\\pi/12}$ ; $\\cos\\dfrac{\\pi}{12}=\\dfrac{\\sqrt6+\\sqrt2}{4}$ et $\\sin\\dfrac{\\pi}{12}=\\dfrac{\\sqrt6-\\sqrt2}{4}$ ; $z_1^{\\,6}=-64$ ; l'ensemble cherché est le cercle de centre $A(\\sqrt3\\,;1)$ et de rayon $2$."
     }
   ]
 }

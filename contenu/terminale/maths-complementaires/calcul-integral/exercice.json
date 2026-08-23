@@ -86,6 +86,57 @@
         "Comme $m>0$, on garde la solution positive : $m=4.$ (On peut vérifier géométriquement : le domaine est un triangle rectangle de base $4$ et de hauteur $4$, d'aire $\\frac{4\\times 4}{2}=8$.)"
       ],
       "reponse": "$m=4.$"
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_0^2 (3x^2-2x)\\,dx$ à l'aide d'une primitive.",
+      "corrige": [
+        "On cherche une primitive $F$ de $f(x)=3x^2-2x$. Une primitive de $3x^2$ est $x^3$ et une primitive de $-2x$ est $-x^2$, donc $F(x)=x^3-x^2$.",
+        "On applique la formule $\\displaystyle\\int_0^2 f(x)\\,dx=\\big[F(x)\\big]_0^2=F(2)-F(0)$.",
+        "$F(2)=2^3-2^2=8-4=4$ et $F(0)=0^3-0^2=0$.",
+        "D'où $\\displaystyle\\int_0^2 (3x^2-2x)\\,dx=4-0=4.$"
+      ],
+      "reponse": "$\\displaystyle\\int_0^2 (3x^2-2x)\\,dx = 4.$"
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "valeur-moyenne",
+      "enonce": "Déterminer la valeur moyenne de la fonction $f$ définie par $f(x)=x^2+1$ sur l'intervalle $[0\\,;3]$.",
+      "corrige": [
+        "La valeur moyenne sur $[a\\,;b]$ est $\\mu=\\dfrac{1}{b-a}\\displaystyle\\int_a^b f(x)\\,dx$, ici avec $a=0$ et $b=3$. On calcule d'abord l'intégrale.",
+        "Une primitive de $x^2+1$ est $\\dfrac{x^3}{3}+x$, donc $\\displaystyle\\int_0^3 (x^2+1)\\,dx=\\left[\\dfrac{x^3}{3}+x\\right]_0^3=\\left(\\dfrac{27}{3}+3\\right)-0=9+3=12.$",
+        "On multiplie par $\\dfrac{1}{b-a}=\\dfrac{1}{3-0}=\\dfrac{1}{3}$ : $\\mu=\\dfrac{1}{3}\\times 12=4.$"
+      ],
+      "reponse": "La valeur moyenne de $f$ sur $[0\\,;3]$ vaut $\\mu = 4.$"
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "aire-entre-courbes",
+      "enonce": "On considère les fonctions $f(x)=2x$ et $g(x)=x^2$. Déterminer les abscisses des points d'intersection de leurs courbes, puis calculer l'aire, en unités d'aire, du domaine compris entre ces deux courbes.",
+      "corrige": [
+        "Les courbes se coupent lorsque $f(x)=g(x)$, soit $2x=x^2$, c'est-à-dire $x^2-2x=0$, donc $x(x-2)=0$ : les abscisses d'intersection sont $x=0$ et $x=2$. Le domaine est donc borné par $[0\\,;2]$.",
+        "Sur $[0\\,;2]$, on a $2x\\geqslant x^2$ (par exemple en $x=1$ : $2\\geqslant 1$), donc la courbe de $f$ est au-dessus de celle de $g$. L'aire vaut $\\mathcal{A}=\\displaystyle\\int_0^2\\big(f(x)-g(x)\\big)\\,dx=\\int_0^2 (2x-x^2)\\,dx.$",
+        "Une primitive de $2x-x^2$ est $x^2-\\dfrac{x^3}{3}$, donc $\\displaystyle\\int_0^2 (2x-x^2)\\,dx=\\left[x^2-\\dfrac{x^3}{3}\\right]_0^2=\\left(4-\\dfrac{8}{3}\\right)-0=\\dfrac{12}{3}-\\dfrac{8}{3}=\\dfrac{4}{3}.$"
+      ],
+      "reponse": "Les courbes se coupent en $x=0$ et $x=2$ ; l'aire du domaine vaut $\\dfrac{4}{3}$ unité d'aire."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "calcul-integral-contexte",
+      "enonce": "Dans une station de pompage, le débit d'eau (exprimé en mètres cubes par heure, $\\text{m}^3/\\text{h}$) est modélisé, pour $t$ compris entre $0$ et $6$ heures, par la fonction $f$ définie sur $[0\\,;6]$ par $f(t)=-t^2+6t$.\\n\\n1. Montrer que $f(t)\\geqslant 0$ pour tout $t$ de $[0\\,;6]$.\\n2. Déterminer l'instant $t$ où le débit est maximal et la valeur de ce débit maximal.\\n3. Calculer $\\displaystyle\\int_0^6 f(t)\\,dt$ et interpréter le résultat dans le contexte.\\n4. Déterminer le débit moyen de la station sur les $6$ heures.\\n5. Calculer le volume d'eau écoulé pendant les $3$ premières heures et comparer au volume total.",
+      "corrige": [
+        "1. On factorise : $f(t)=-t^2+6t=t(6-t)$. Sur $[0\\,;6]$, le facteur $t$ est positif ($t\\geqslant 0$) et le facteur $6-t$ est positif ($t\\leqslant 6$). Un produit de deux nombres positifs est positif, donc $f(t)\\geqslant 0$ sur $[0\\,;6]$. Le débit est bien toujours positif : l'intégrale de $f$ mesurera donc une aire, c'est-à-dire un volume.",
+        "2. $f$ est dérivable et $f'(t)=-2t+6$. On a $f'(t)=0$ pour $t=3$, avec $f'(t)>0$ sur $[0\\,;3[$ et $f'(t)<0$ sur $]3\\,;6]$ : $f$ croît puis décroît, donc atteint son maximum en $t=3$. Ce débit maximal vaut $f(3)=-3^2+6\\times 3=-9+18=9$. Le débit est maximal au bout de $3$ heures et vaut $9\\ \\text{m}^3/\\text{h}$.",
+        "3. Une primitive de $f(t)=-t^2+6t$ est $F(t)=-\\dfrac{t^3}{3}+3t^2$. Donc $\\displaystyle\\int_0^6 f(t)\\,dt=\\big[F(t)\\big]_0^6=\\left(-\\dfrac{6^3}{3}+3\\times 6^2\\right)-0=\\left(-72+108\\right)=36.$ Comme $f\\geqslant 0$, cette intégrale représente l'aire sous la courbe, c'est-à-dire le volume total d'eau écoulé : $36\\ \\text{m}^3$ en $6$ heures.",
+        "4. Le débit moyen est la valeur moyenne de $f$ sur $[0\\,;6]$ : $\\mu=\\dfrac{1}{6-0}\\displaystyle\\int_0^6 f(t)\\,dt=\\dfrac{1}{6}\\times 36=6.$ Le débit moyen sur les $6$ heures est de $6\\ \\text{m}^3/\\text{h}$.",
+        "5. Le volume écoulé pendant les $3$ premières heures vaut $\\displaystyle\\int_0^3 f(t)\\,dt=\\big[F(t)\\big]_0^3=\\left(-\\dfrac{3^3}{3}+3\\times 3^2\\right)-0=\\left(-9+27\\right)=18.$ Ce volume est de $18\\ \\text{m}^3$, soit exactement la moitié du volume total ($36\\ \\text{m}^3$) : autant d'eau s'écoule dans la première moitié du temps que dans la seconde, ce qui traduit la symétrie de la courbe autour de $t=3$."
+      ],
+      "reponse": "1. $f(t)=t(6-t)\\geqslant 0$ sur $[0\\,;6]$. 2. Débit maximal $9\\ \\text{m}^3/\\text{h}$ atteint à $t=3\\ \\text{h}$. 3. $\\displaystyle\\int_0^6 f(t)\\,dt=36$ : volume total $36\\ \\text{m}^3$. 4. Débit moyen $6\\ \\text{m}^3/\\text{h}$. 5. Volume des $3$ premières heures $=18\\ \\text{m}^3$, soit la moitié du total."
     }
   ]
 }

@@ -90,6 +90,62 @@
         "Vérification sur un exemple : pour $n = 2$, $n^5 - n = 32 - 2 = 30 = 5\\times 6$. ✓"
       ],
       "reponse": "Pour tout entier $n$, $n^{5} \\equiv n\\ [5]$, donc $5 \\mid (n^{5} - n)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "congruences",
+      "enonce": "Déterminer le chiffre des unités de $7^{2023}$.",
+      "corrige": [
+        "Le chiffre des unités d'un entier est son reste dans la division par $10$ : on travaille donc modulo $10$.",
+        "On calcule les premières puissances de $7$ modulo $10$ : $7^1 \\equiv 7$, $7^2 = 49 \\equiv 9$, $7^3 = 343 \\equiv 3$, $7^4 = 2401 \\equiv 1\\ [10]$.",
+        "Comme $7^4 \\equiv 1\\ [10]$, les restes se répètent avec une période de $4$. On décompose l'exposant : $2023 = 4\\times 505 + 3$.",
+        "Par compatibilité des congruences avec la puissance : $7^{2023} = (7^4)^{505}\\times 7^3 \\equiv 1^{505}\\times 3 \\equiv 3\\ [10]$.",
+        "Le chiffre des unités de $7^{2023}$ est donc $3$."
+      ],
+      "reponse": "Le chiffre des unités de $7^{2023}$ est $3$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "decomposition-premiers",
+      "enonce": "Décomposer $360$ et $84$ en produits de facteurs premiers, puis en déduire $\\mathrm{pgcd}(360, 84)$ et $\\mathrm{ppcm}(360, 84)$.",
+      "corrige": [
+        "Décomposition de $360$ : $360 = 2\\times 180 = 2^2\\times 90 = 2^3\\times 45 = 2^3\\times 3^2\\times 5$.",
+        "Décomposition de $84$ : $84 = 2\\times 42 = 2^2\\times 21 = 2^2\\times 3\\times 7$.",
+        "Le PGCD se lit en prenant chaque facteur premier commun à sa plus petite puissance : les premiers communs sont $2$ (puissances $3$ et $2$, on garde $2^2$) et $3$ (puissances $2$ et $1$, on garde $3^1$). Donc $\\mathrm{pgcd}(360,84) = 2^2\\times 3 = 12$.",
+        "Le PPCM se lit en prenant chaque facteur premier apparaissant dans l'une ou l'autre à sa plus grande puissance : $2^3$, $3^2$, $5$ et $7$. Donc $\\mathrm{ppcm}(360,84) = 2^3\\times 3^2\\times 5\\times 7 = 2520$.",
+        "Vérification par la relation $\\mathrm{pgcd}\\times\\mathrm{ppcm} = |a\\times b|$ : $12\\times 2520 = 30240$ et $360\\times 84 = 30240$. ✓"
+      ],
+      "reponse": "$360 = 2^3\\times 3^2\\times 5$, $84 = 2^2\\times 3\\times 7$, $\\mathrm{pgcd}(360,84) = 12$ et $\\mathrm{ppcm}(360,84) = 2520$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "congruences",
+      "enonce": "Démontrer que le carré d'un entier est congru à $0$ ou à $1$ modulo $4$. En déduire que $2023$ ne peut pas s'écrire comme la somme de deux carrés d'entiers.",
+      "corrige": [
+        "Soit $n$ un entier. On raisonne selon sa parité. Si $n$ est pair, $n = 2k$ avec $k$ entier, alors $n^2 = 4k^2 \\equiv 0\\ [4]$.",
+        "Si $n$ est impair, $n = 2k+1$, alors $n^2 = 4k^2 + 4k + 1 = 4(k^2+k) + 1 \\equiv 1\\ [4]$.",
+        "Dans tous les cas, $n^2 \\equiv 0\\ [4]$ ou $n^2 \\equiv 1\\ [4]$ : un carré n'est jamais congru à $2$ ni à $3$ modulo $4$.",
+        "Soit alors une somme de deux carrés $a^2 + b^2$. Par compatibilité de l'addition avec les congruences, $a^2 + b^2$ est congru modulo $4$ à une somme de deux termes valant chacun $0$ ou $1$ : les valeurs possibles sont donc $0$, $1$ ou $2\\ [4]$.",
+        "Or $2023 = 4\\times 505 + 3$, donc $2023 \\equiv 3\\ [4]$. Comme $3$ n'est pas parmi les restes atteignables ($0$, $1$, $2$), $2023$ ne peut pas s'écrire comme somme de deux carrés d'entiers."
+      ],
+      "reponse": "Pour tout entier $n$, $n^2 \\equiv 0$ ou $1\\ [4]$ ; une somme de deux carrés est donc $\\equiv 0$, $1$ ou $2\\ [4]$. Comme $2023 \\equiv 3\\ [4]$, ce n'est pas une somme de deux carrés."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "codage-affine",
+      "enonce": "On code les $26$ lettres de l'alphabet par les entiers de $0$ à $25$ ($A=0$, $B=1$, …, $Z=25$). Pour chiffrer un message, on remplace la lettre de rang $x$ par la lettre de rang $y$, où $y$ est l'unique entier de $\\{0,\\dots,25\\}$ tel que $y \\equiv 5x + 8\\ [26]$ (chiffrement affine). 1. Justifier que $5$ et $26$ sont premiers entre eux, puis déterminer, à l'aide de l'algorithme d'Euclide, un entier $u$ tel que $5u \\equiv 1\\ [26]$ (un inverse de $5$ modulo $26$). 2. Chiffrer la lettre $M$. 3. Montrer que le déchiffrement est donné par $x \\equiv 21(y - 8)\\ [26]$. 4. Déchiffrer la lettre $D$. 5. Expliquer pourquoi le coefficient $a$ d'un chiffrement affine $y \\equiv ax + b\\ [26]$ doit être choisi premier avec $26$ pour que le déchiffrement soit toujours possible.",
+      "corrige": [
+        "1. Algorithme d'Euclide : $26 = 5\\times 5 + 1$, puis $5 = 1\\times 5 + 0$. Le dernier reste non nul est $1$, donc $\\mathrm{pgcd}(5,26) = 1$ : $5$ et $26$ sont premiers entre eux. On remonte l'égalité du reste $1$ : $1 = 26 - 5\\times 5$, soit $5\\times(-5) + 26\\times 1 = 1$. Ainsi $5\\times(-5) \\equiv 1\\ [26]$, et comme $-5 \\equiv 21\\ [26]$, l'entier $u = 21$ convient : $5\\times 21 = 105 = 26\\times 4 + 1 \\equiv 1\\ [26]$. ✓",
+        "2. La lettre $M$ a pour rang $x = 12$. On calcule $y \\equiv 5\\times 12 + 8 = 68\\ [26]$. Or $68 = 26\\times 2 + 16$, donc $y = 16$, ce qui correspond à la lettre $Q$. La lettre $M$ est chiffrée en $Q$.",
+        "3. On part de $y \\equiv 5x + 8\\ [26]$, d'où $y - 8 \\equiv 5x\\ [26]$. On multiplie les deux membres par l'inverse $21$ de $5$ : $21(y-8) \\equiv 21\\times 5\\,x \\equiv 105\\,x \\equiv x\\ [26]$, car $105 \\equiv 1\\ [26]$. On obtient donc $x \\equiv 21(y - 8)\\ [26]$.",
+        "4. La lettre $D$ a pour rang $y = 3$. On applique la formule : $x \\equiv 21(3 - 8) = 21\\times(-5) = -105\\ [26]$. Or $-105 = 26\\times(-4) - 1$, donc $-105 \\equiv -1 \\equiv 25\\ [26]$, soit $x = 25$, la lettre $Z$. Vérification : chiffrer $Z$ donne $5\\times 25 + 8 = 133 = 26\\times 5 + 3 \\equiv 3\\ [26]$, c'est bien $D$. ✓",
+        "5. Le déchiffrement revient à résoudre $ax \\equiv y - b\\ [26]$ d'inconnue $x$. Cette équation admet une solution unique modulo $26$ pour chaque valeur de $y$ si et seulement si $a$ possède un inverse modulo $26$, c'est-à-dire (théorème de Bézout) si et seulement si $\\mathrm{pgcd}(a,26) = 1$. Cette hypothèse assure aussi l'unicité : si $ax \\equiv ax'\\ [26]$ avec $\\mathrm{pgcd}(a,26)=1$, le théorème de Gauss donne $x \\equiv x'\\ [26]$, donc deux lettres distinctes ne sont jamais chiffrées de la même façon. Si au contraire $a$ n'était pas premier avec $26$, le chiffrement ne serait pas injectif et le déchiffrement deviendrait impossible."
+      ],
+      "reponse": "1. $\\mathrm{pgcd}(5,26)=1$ et un inverse de $5$ modulo $26$ est $u = 21$. 2. $M$ (rang $12$) se chiffre en $Q$ (rang $16$). 3. Déchiffrement : $x \\equiv 21(y-8)\\ [26]$. 4. $D$ (rang $3$) se déchiffre en $Z$ (rang $25$). 5. Il faut $\\mathrm{pgcd}(a,26)=1$ pour que $a$ soit inversible modulo $26$ (Bézout) et que le chiffrement soit une bijection (Gauss)."
     }
   ]
 }

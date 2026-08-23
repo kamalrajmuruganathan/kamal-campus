@@ -90,6 +90,61 @@
         "Vérification : $(2+i)^{2} = 4 + 4i + i^{2} = 3 + 4i$ ✔. Les deux solutions sont opposées."
       ],
       "reponse": "$z = 2 + i$ ou $z = -2 - i$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "conjugue",
+      "enonce": "Écrire sous forme algébrique le complexe $C = \\overline{3 - 2i} + (1+i)^{2}$, puis calculer $i^{2023}$.",
+      "corrige": [
+        "Le conjugué change le signe de la partie imaginaire : $\\overline{3 - 2i} = 3 + 2i$.",
+        "On développe le carré : $(1+i)^{2} = 1 + 2i + i^{2} = 1 + 2i - 1 = 2i$.",
+        "On additionne : $C = (3 + 2i) + 2i = 3 + 4i$.",
+        "Pour $i^{2023}$, on divise l'exposant par $4$ : $2023 = 4\\times 505 + 3$, le reste est $3$. Donc $i^{2023} = i^{3} = -i$."
+      ],
+      "reponse": "$C = 3 + 4i$ et $i^{2023} = -i$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "inverse-quotient",
+      "enonce": "On pose $Z = \\dfrac{1 + 3i}{2 + i}$. 1) Écrire $Z$ sous forme algébrique. 2) En déduire les formes algébriques de $Z^{2}$ et de $\\dfrac{1}{Z}$.",
+      "corrige": [
+        "1) On multiplie numérateur et dénominateur par le conjugué du dénominateur, $\\overline{2+i} = 2-i$. Dénominateur : $(2+i)(2-i) = 2^{2} + 1^{2} = 5$.",
+        "Numérateur : $(1+3i)(2-i) = 2 - i + 6i - 3i^{2} = 2 + 5i + 3 = 5 + 5i$. Donc $Z = \\dfrac{5+5i}{5} = 1 + i$.",
+        "2) On calcule le carré : $Z^{2} = (1+i)^{2} = 1 + 2i + i^{2} = 2i$.",
+        "Pour l'inverse : $\\dfrac{1}{Z} = \\dfrac{1}{1+i} = \\dfrac{1-i}{(1+i)(1-i)} = \\dfrac{1-i}{1^{2}+1^{2}} = \\dfrac{1-i}{2} = \\dfrac{1}{2} - \\dfrac{1}{2}i$."
+      ],
+      "reponse": "$Z = 1 + i$, $Z^{2} = 2i$ et $\\dfrac{1}{Z} = \\dfrac{1}{2} - \\dfrac{1}{2}i$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "equations-z-zbarre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z^{2} = \\overline{z}$.",
+      "corrige": [
+        "On pose $z = x + iy$ avec $x, y$ réels, d'où $\\overline{z} = x - iy$ et $z^{2} = (x^{2} - y^{2}) + 2xy\\,i$.",
+        "On identifie partie réelle et partie imaginaire : $x^{2} - y^{2} = x$ (partie réelle) et $2xy = -y$ (partie imaginaire).",
+        "La deuxième équation s'écrit $y(2x + 1) = 0$, donc $y = 0$ ou $x = -\\dfrac{1}{2}$.",
+        "Cas $y = 0$ : la première équation devient $x^{2} = x$, soit $x(x-1)=0$, d'où $x = 0$ ou $x = 1$. On obtient $z = 0$ et $z = 1$.",
+        "Cas $x = -\\dfrac{1}{2}$ : la première équation donne $\\dfrac{1}{4} - y^{2} = -\\dfrac{1}{2}$, soit $y^{2} = \\dfrac{3}{4}$, d'où $y = \\pm\\dfrac{\\sqrt{3}}{2}$. On obtient $z = -\\dfrac{1}{2} \\pm \\dfrac{\\sqrt{3}}{2}i$.",
+        "Vérification pour $z = -\\dfrac{1}{2} + \\dfrac{\\sqrt{3}}{2}i$ : $z^{2} = \\left(\\dfrac{1}{4} - \\dfrac{3}{4}\\right) + 2\\times\\left(-\\dfrac{1}{2}\\right)\\times\\dfrac{\\sqrt{3}}{2}\\,i = -\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{2}i = \\overline{z}$ ✔."
+      ],
+      "reponse": "Quatre solutions : $z = 0$, $z = 1$, $z = -\\dfrac{1}{2} + \\dfrac{\\sqrt{3}}{2}i$ et $z = -\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{2}i$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "second-degre",
+      "enonce": "On considère le polynôme $P(z) = z^{3} - 6z^{2} + 13z - 10$, défini pour tout complexe $z$.\\n1. Vérifier que $2$ est une solution de l'équation $P(z) = 0$.\\n2. Déterminer les réels $a$, $b$, $c$ tels que, pour tout $z$, $P(z) = (z - 2)(az^{2} + bz + c)$.\\n3. Résoudre dans $\\mathbb{C}$ l'équation $P(z) = 0$.\\n4. On note $z_B$ et $z_C$ les deux solutions non réelles. Montrer qu'elles sont conjuguées, puis calculer $z_B + z_C$ et $z_B \\times z_C$ ; vérifier ces valeurs à l'aide des relations somme-produit du second degré.\\n5. Écrire sous forme algébrique l'inverse $\\dfrac{1}{z_B}$ de la solution $z_B = 2 + i$.",
+      "corrige": [
+        "1. On calcule $P(2) = 2^{3} - 6\\times 2^{2} + 13\\times 2 - 10 = 8 - 24 + 26 - 10 = 0$. Donc $2$ est bien une solution de $P(z) = 0$.",
+        "2. On développe $(z-2)(az^{2}+bz+c) = az^{3} + bz^{2} + cz - 2az^{2} - 2bz - 2c = az^{3} + (b - 2a)z^{2} + (c - 2b)z - 2c$. Par identification avec $z^{3} - 6z^{2} + 13z - 10$ : $a = 1$, $b - 2a = -6$ donne $b = -4$, et $-2c = -10$ donne $c = 5$ (on vérifie $c - 2b = 5 + 8 = 13$ ✔). Donc $P(z) = (z-2)(z^{2} - 4z + 5)$.",
+        "3. $P(z) = 0 \\iff z - 2 = 0$ ou $z^{2} - 4z + 5 = 0$. Pour le facteur du second degré, à coefficients réels : $\\Delta = (-4)^{2} - 4\\times 1\\times 5 = 16 - 20 = -4 < 0$. On a $\\sqrt{-\\Delta} = 2$, d'où $z = \\dfrac{4 \\pm 2i}{2} = 2 \\pm i$. L'ensemble des solutions est $S = \\{2\\,;\\,2+i\\,;\\,2-i\\}$.",
+        "4. Les deux solutions non réelles sont $z_B = 2 + i$ et $z_C = 2 - i$ : elles ont même partie réelle et des parties imaginaires opposées, donc $z_C = \\overline{z_B}$ : elles sont conjuguées. Leur somme : $z_B + z_C = (2+i) + (2-i) = 4$. Leur produit : $z_B \\times z_C = (2+i)(2-i) = 2^{2} + 1^{2} = 5$. Ces valeurs correspondent aux relations somme-produit du facteur $z^{2} - 4z + 5$ : $z_B + z_C = -\\dfrac{b}{a} = -\\dfrac{-4}{1} = 4$ ✔ et $z_B \\times z_C = \\dfrac{c}{a} = \\dfrac{5}{1} = 5$ ✔.",
+        "5. $\\dfrac{1}{z_B} = \\dfrac{1}{2+i} = \\dfrac{\\overline{2+i}}{(2+i)(2-i)} = \\dfrac{2-i}{2^{2}+1^{2}} = \\dfrac{2-i}{5} = \\dfrac{2}{5} - \\dfrac{1}{5}i$."
+      ],
+      "reponse": "$2$ est racine ; $P(z) = (z-2)(z^{2}-4z+5)$ avec $a=1$, $b=-4$, $c=5$ ; $S = \\{2\\,;\\,2+i\\,;\\,2-i\\}$ ; $z_B = 2+i$ et $z_C = 2-i$ sont conjuguées, de somme $4$ et de produit $5$ ; enfin $\\dfrac{1}{z_B} = \\dfrac{2}{5} - \\dfrac{1}{5}i$."
     }
   ]
 }

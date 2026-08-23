@@ -86,6 +86,59 @@
         "Entre le pompage et le turbinage, l'eau est retenue en hauteur : l'énergie est stockée sous forme **mécanique** (énergie de position de l'eau). Comme le stockage impose deux conversions, son rendement global ($77\\ \\%$) est inférieur à celui de chaque étape prise seule."
       ],
       "reponse": "$E_{\\text{sortie}} = 765$ kWh ; $\\eta_{\\text{g}} = 0{,}765 \\approx 77\\ \\%$ ; stockage mécanique (énergie de position de l'eau)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "rendement-conversion",
+      "enonce": "Une cellule photovoltaïque reçoit une puissance lumineuse $P_{\\text{reçue}} = 250$ W et fournit une puissance électrique $P_{\\text{utile}} = 45$ W. 1) Calculer le rendement de conversion $\\eta$ de la cellule. 2) L'exprimer en pourcentage.",
+      "corrige": [
+        "Le rendement peut se calculer directement avec les puissances, car le temps se simplifie : $\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{reçue}}}$.",
+        "Application numérique : $\\eta = \\dfrac{45}{250} = 0{,}18$.",
+        "Le rendement est sans unité ; en pourcentage : $\\eta = 0{,}18 = 18\\ \\%$. C'est un ordre de grandeur réaliste pour une cellule au silicium."
+      ],
+      "reponse": "$\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{reçue}}} = 0{,}18$, soit $18\\ \\%$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "conversion-energie",
+      "enonce": "Une éolienne capte du vent, au niveau de ses pales, une puissance mécanique $P_{\\text{méca}} = 1{,}5$ MW. Son alternateur convertit ce mouvement en électricité avec un rendement $\\eta = 0{,}92$. 1) Calculer la puissance électrique $P_{\\text{élec}}$ produite. 2) Quelle énergie électrique, en kWh, produit-elle en $t = 8{,}0$ h de fonctionnement ?",
+      "corrige": [
+        "L'alternateur convertit l'énergie mécanique en énergie électrique. La puissance utile vaut $P_{\\text{élec}} = \\eta \\times P_{\\text{méca}}$.",
+        "Application numérique : $P_{\\text{élec}} = 0{,}92 \\times 1{,}5 = 1{,}38$ MW, soit $1{,}38 \\times 10^{3}$ kW $= 1380$ kW.",
+        "L'énergie est $E = P_{\\text{élec}} \\times t$. En prenant la puissance en kW et la durée en h, on obtient directement des kWh.",
+        "$E = 1380\\ \\text{kW} \\times 8{,}0\\ \\text{h} = 11\\,040$ kWh, soit environ $1{,}1 \\times 10^{4}$ kWh."
+      ],
+      "reponse": "$P_{\\text{élec}} = \\eta\\, P_{\\text{méca}} = 1{,}38$ MW ; $E = P_{\\text{élec}}\\,t \\approx 1{,}1 \\times 10^{4}$ kWh."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "effet-photovoltaique",
+      "enonce": "Un toit est équipé de $S = 20\\ \\text{m}^2$ de panneaux photovoltaïques de rendement $\\eta = 0{,}20$. En plein midi, l'éclairement solaire (puissance lumineuse reçue par unité de surface) vaut $G = 1{,}0 \\times 10^{3}\\ \\text{W/m}^2$. 1) Calculer la puissance lumineuse totale $P_{\\text{reçue}}$ captée par les panneaux. 2) En déduire la puissance électrique $P_{\\text{élec}}$ fournie. 3) Sur une journée équivalant à $4{,}0$ h d'ensoleillement maximal, quelle énergie électrique (en kWh) est produite ? 4) Le foyer consomme en moyenne $10$ kWh par jour : l'installation couvre-t-elle ce besoin ?",
+      "corrige": [
+        "La puissance lumineuse reçue est l'éclairement multiplié par la surface : $P_{\\text{reçue}} = G \\times S = 1{,}0 \\times 10^{3} \\times 20 = 2{,}0 \\times 10^{4}$ W, soit $20$ kW.",
+        "La puissance électrique fournie est la fraction utile de cette puissance : $P_{\\text{élec}} = \\eta \\times P_{\\text{reçue}} = 0{,}20 \\times 2{,}0 \\times 10^{4} = 4{,}0 \\times 10^{3}$ W, soit $4{,}0$ kW.",
+        "L'énergie produite sur la journée est $E = P_{\\text{élec}} \\times t = 4{,}0\\ \\text{kW} \\times 4{,}0\\ \\text{h} = 16$ kWh.",
+        "Comme $16\\ \\text{kWh} > 10\\ \\text{kWh}$, la production journalière dépasse le besoin moyen : en énergie sur la journée, l'installation couvre la consommation (à condition de gérer le décalage entre production et demande par le réseau ou un stockage, la production solaire étant intermittente)."
+      ],
+      "reponse": "$P_{\\text{reçue}} = 20$ kW ; $P_{\\text{élec}} = 4{,}0$ kW ; $E = 16$ kWh $> 10$ kWh : le besoin journalier est couvert (sous réserve du stockage/réseau)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "conversion-energie",
+      "enonce": "**Une ferme photovoltaïque raccordée au réseau.** Une ferme solaire comporte $S = 5000\\ \\text{m}^2$ de panneaux photovoltaïques de rendement $\\eta_{\\text{pv}} = 0{,}20$. L'éclairement reçu vaut $G = 1{,}0 \\times 10^{3}\\ \\text{W/m}^2$. Le courant continu produit passe par un onduleur (rendement $\\eta_{\\text{ond}} = 0{,}95$) qui le rend utilisable, puis l'électricité est transportée par une ligne de résistance $R = 0{,}50\\ \\Omega$ sous une tension $U = 2{,}0 \\times 10^{4}$ V (20 kV). Donnée : $1$ kWh $= 3{,}6 \\times 10^{6}$ J. 1) Calculer la puissance lumineuse totale $P_{\\text{reçue}}$ captée par les panneaux. 2) En déduire la puissance électrique $P_{\\text{pv}}$ produite par les panneaux, puis la puissance $P_{\\text{ond}}$ disponible en sortie de l'onduleur. 3) Calculer le rendement global $\\eta_{\\text{g}}$ de la conversion, du Soleil à la sortie de l'onduleur. 4) La puissance $P_{\\text{ond}}$ est transportée sous $U = 20$ kV. Calculer l'intensité $I$ dans la ligne, puis la puissance $P_{\\text{J}}$ perdue par effet Joule. 5) On envisage de transporter la même puissance sous $U' = 400$ V. Calculer les nouvelles pertes $P'_{\\text{J}}$ et expliquer pourquoi ce choix est impossible : conclure sur l'intérêt de la haute tension. 6) Sur une journée équivalant à $5{,}0$ h de production à pleine puissance, quelle énergie électrique (en kWh puis en J) l'onduleur délivre-t-il ?",
+      "corrige": [
+        "1. La puissance lumineuse captée est l'éclairement multiplié par la surface : $P_{\\text{reçue}} = G \\times S = 1{,}0 \\times 10^{3} \\times 5000 = 5{,}0 \\times 10^{6}$ W, soit $5{,}0$ MW.",
+        "2. Les panneaux convertissent une fraction $\\eta_{\\text{pv}}$ de cette puissance : $P_{\\text{pv}} = \\eta_{\\text{pv}} \\times P_{\\text{reçue}} = 0{,}20 \\times 5{,}0 \\times 10^{6} = 1{,}0 \\times 10^{6}$ W $= 1{,}0$ MW. En sortie de l'onduleur : $P_{\\text{ond}} = \\eta_{\\text{ond}} \\times P_{\\text{pv}} = 0{,}95 \\times 1{,}0 \\times 10^{6} = 9{,}5 \\times 10^{5}$ W, soit $0{,}95$ MW.",
+        "3. Le rendement global est le produit des rendements des deux maillons : $\\eta_{\\text{g}} = \\eta_{\\text{pv}} \\times \\eta_{\\text{ond}} = 0{,}20 \\times 0{,}95 = 0{,}19$, soit $19\\ \\%$. (On vérifie : $\\eta_{\\text{g}} = P_{\\text{ond}}/P_{\\text{reçue}} = 9{,}5 \\times 10^{5} / 5{,}0 \\times 10^{6} = 0{,}19$.)",
+        "4. La puissance transportée s'écrit $P_{\\text{ond}} = U \\times I$, donc $I = \\dfrac{P_{\\text{ond}}}{U} = \\dfrac{9{,}5 \\times 10^{5}}{2{,}0 \\times 10^{4}} = 47{,}5$ A. Les pertes par effet Joule valent $P_{\\text{J}} = R I^2 = 0{,}50 \\times (47{,}5)^2 = 0{,}50 \\times 2256 \\approx 1{,}1 \\times 10^{3}$ W, soit environ $1{,}1$ kW. Ces pertes ne représentent que $1{,}1 \\times 10^{3} / 9{,}5 \\times 10^{5} \\approx 0{,}12\\ \\%$ de la puissance transportée.",
+        "5. Sous $U' = 400$ V, l'intensité serait $I' = \\dfrac{9{,}5 \\times 10^{5}}{400} \\approx 2375$ A, et les pertes $P'_{\\text{J}} = R I'^2 = 0{,}50 \\times (2375)^2 \\approx 2{,}8 \\times 10^{6}$ W, soit $2{,}8$ MW. Or on ne transporte que $0{,}95$ MW : on perdrait plus que ce qu'on achemine, ce qui est physiquement impossible. Comme les pertes varient en $I^2$ et que $I = P/U$, augmenter la tension diminue l'intensité et fait chuter les pertes : c'est tout l'intérêt de transporter à haute tension.",
+        "6. L'énergie délivrée est $E = P_{\\text{ond}} \\times t = 0{,}95\\ \\text{MW} \\times 5{,}0\\ \\text{h} = 950\\ \\text{kW} \\times 5{,}0\\ \\text{h} = 4750$ kWh, soit $4{,}75 \\times 10^{3}$ kWh. En joules : $E = 4750 \\times 3{,}6 \\times 10^{6} = 1{,}71 \\times 10^{10}$ J."
+      ],
+      "reponse": "$P_{\\text{reçue}} = 5{,}0$ MW ; $P_{\\text{pv}} = 1{,}0$ MW ; $P_{\\text{ond}} = 0{,}95$ MW ; $\\eta_{\\text{g}} = 0{,}19$ ($19\\ \\%$). Sous 20 kV : $I = 47{,}5$ A et $P_{\\text{J}} \\approx 1{,}1$ kW ($0{,}12\\ \\%$) ; sous 400 V les pertes ($\\approx 2{,}8$ MW) dépasseraient la puissance transportée, d'où la haute tension. Énergie : $E \\approx 4750$ kWh $\\approx 1{,}7 \\times 10^{10}$ J."
     }
   ]
 }

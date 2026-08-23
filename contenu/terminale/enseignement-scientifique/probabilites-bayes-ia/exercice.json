@@ -82,6 +82,58 @@
         "c) C'est un **biais dans les données d'entraînement** (biais d'échantillonnage) : les achats à l'étranger étant sous-représentés, l'IA les a peu « vus » et risque de les classer à tort comme frauduleux. Augmenter simplement le **volume** ne corrige pas un biais **systématique** : si les nouvelles données présentent le même déséquilibre, le défaut persiste. Il faut des données **représentatives** de tous les usages, pas seulement plus nombreuses."
       ],
       "reponse": "a) $P_A(F) \\approx 8{,}7\\,\\%$ ; b) plus de $91\\,\\%$ de fausses alertes : nécessité d'une vérification humaine, la rareté fait chuter la VPP ; c) biais d'échantillonnage des données d'entraînement, qu'un simple surcroît de volume ne corrige pas — il faut des données représentatives."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "probabilite-conditionnelle",
+      "enonce": "Pour entraîner une IA de conduite, on dispose d'une base de $2\\,000$ images étiquetées. $1\\,200$ ont été prises de jour et $800$ de nuit. Parmi les images de jour, $900$ contiennent un piéton ; parmi les images de nuit, $200$ contiennent un piéton. On tire une image au hasard. On note $J$ « l'image est de jour » et $P$ « l'image contient un piéton ». a) Calculer $P(J)$. b) Calculer la probabilité conditionnelle $P_J(P)$. c) En déduire $P(J \\cap P)$ et vérifier la cohérence avec la question précédente. d) Calculer $P(P)$, probabilité qu'une image contienne un piéton.",
+      "corrige": [
+        "a) Il y a $1\\,200$ images de jour sur $2\\,000$ : $P(J) = \\dfrac{1\\,200}{2\\,000} = 0{,}6$.",
+        "b) Parmi les $1\\,200$ images de jour, $900$ contiennent un piéton, donc $P_J(P) = \\dfrac{900}{1\\,200} = 0{,}75$.",
+        "c) Les images à la fois de jour et avec piéton sont au nombre de $900$ : $P(J \\cap P) = \\dfrac{900}{2\\,000} = 0{,}45$. On retrouve bien $P(J) \\times P_J(P) = 0{,}6 \\times 0{,}75 = 0{,}45$, conformément à la règle $P(J \\cap P) = P(J)\\,P_J(P)$.",
+        "d) Le nombre total d'images avec piéton est $900 + 200 = 1\\,100$, donc $P(P) = \\dfrac{1\\,100}{2\\,000} = 0{,}55$."
+      ],
+      "reponse": "a) $P(J) = 0{,}6$ ; b) $P_J(P) = 0{,}75$ ; c) $P(J \\cap P) = 0{,}45 = 0{,}6 \\times 0{,}75$ ; d) $P(P) = 0{,}55$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "Un modèle d'IA de reconnaissance vocale est entraîné sur des enregistrements dont $70\\,\\%$ proviennent d'adultes et $30\\,\\%$ d'enfants. Le modèle reconnaît correctement $95\\,\\%$ des phrases prononcées par des adultes et seulement $80\\,\\%$ de celles prononcées par des enfants. On tire une phrase au hasard ; on note $A$ « la phrase est d'un adulte », $E$ « la phrase est d'un enfant » et $R$ « la phrase est correctement reconnue ». a) Calculer, à l'aide de la formule des probabilités totales, la probabilité $P(R)$ qu'une phrase soit correctement reconnue. b) Une phrase a été mal reconnue. Calculer la probabilité qu'elle ait été prononcée par un enfant (arrondir au millième). Que révèle ce résultat sur les données d'entraînement ?",
+      "corrige": [
+        "a) Premier niveau : $P(A) = 0{,}70$ et $P(E) = 0{,}30$. Second niveau : $P_A(R) = 0{,}95$ et $P_E(R) = 0{,}80$. Probabilités totales : $P(R) = P(A)P_A(R) + P(E)P_E(R) = 0{,}70 \\times 0{,}95 + 0{,}30 \\times 0{,}80 = 0{,}665 + 0{,}24 = 0{,}905$.",
+        "b) L'événement « mal reconnue » est $\\overline{R}$, avec $P_A(\\overline{R}) = 0{,}05$ et $P_E(\\overline{R}) = 0{,}20$. La probabilité d'une erreur est $P(\\overline{R}) = 0{,}70 \\times 0{,}05 + 0{,}30 \\times 0{,}20 = 0{,}035 + 0{,}06 = 0{,}095$ (on retrouve $1 - 0{,}905$). Formule de Bayes : $P_{\\overline{R}}(E) = \\dfrac{P(E)P_E(\\overline{R})}{P(\\overline{R})} = \\dfrac{0{,}06}{0{,}095} \\approx 0{,}632$. Ainsi, près de $63\\,\\%$ des erreurs concernent des enfants, alors qu'ils ne représentent que $30\\,\\%$ des phrases : le modèle est nettement moins performant sur les voix d'enfants, un signe que les données d'entraînement les représentaient mal."
+      ],
+      "reponse": "a) $P(R) = 0{,}905$ ; b) $P_{\\overline{R}}(E) = \\dfrac{0{,}06}{0{,}095} \\approx 0{,}632$ : les enfants concentrent près des deux tiers des erreurs, signe de données d'entraînement peu adaptées à leurs voix."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "intervalle-de-confiance",
+      "enonce": "Un site teste deux versions d'un algorithme de recommandation (test A/B). La version A, proposée à $n = 625$ utilisateurs, obtient une fréquence de clic $f_A = 0{,}60$ ; la version B, proposée à $625$ autres utilisateurs, obtient $f_B = 0{,}66$. a) Donner l'intervalle de confiance au niveau $95\\,\\%$ de la vraie proportion de clics pour chaque version. b) Peut-on affirmer, à ce niveau de confiance, que la version B est réellement meilleure que la version A ? Justifier. c) L'équipe veut réduire l'amplitude de chaque intervalle à $0{,}02$ pour trancher. Quelle taille d'échantillon faut-il par version ? d) On apprend que la version B a surtout été testée le week-end. En quoi cela peut-il fausser la comparaison ?",
+      "corrige": [
+        "a) Ici $\\dfrac{1}{\\sqrt{n}} = \\dfrac{1}{\\sqrt{625}} = \\dfrac{1}{25} = 0{,}04$. Pour A : $[0{,}60 - 0{,}04 \\;;\\; 0{,}60 + 0{,}04] = [0{,}56 \\;;\\; 0{,}64]$. Pour B : $[0{,}66 - 0{,}04 \\;;\\; 0{,}66 + 0{,}04] = [0{,}62 \\;;\\; 0{,}70]$.",
+        "b) Non. Les deux intervalles se chevauchent sur $[0{,}62 \\;;\\; 0{,}64]$ : la vraie proportion de A pourrait valoir $0{,}64$ et celle de B $0{,}62$. L'écart observé ($0{,}06$) reste compatible avec des proportions réelles égales ou même inversées ; on ne peut donc pas conclure, au niveau $95\\,\\%$, que B est réellement supérieure.",
+        "c) L'amplitude vaut $\\dfrac{2}{\\sqrt{n}}$. On veut $\\dfrac{2}{\\sqrt{n}} \\leqslant 0{,}02$, soit $\\sqrt{n} \\geqslant \\dfrac{2}{0{,}02} = 100$, donc $n \\geqslant 100^2 = 10\\,000$ utilisateurs par version. (L'amplitude passe de $0{,}08$ à $0{,}02$, divisée par $4$ : il faut donc multiplier $n$ par $16$, et $625 \\times 16 = 10\\,000$.)",
+        "d) Comparer une version testée le week-end à une version testée en semaine introduit un **facteur de confusion** : les utilisateurs et leurs comportements diffèrent (plus de loisirs le week-end, par exemple). L'écart mesuré pourrait tenir au **moment** du test — un biais d'échantillonnage — et non à la qualité de l'algorithme. Pour une comparaison valable, il faut répartir chaque version au hasard sur les mêmes périodes."
+      ],
+      "reponse": "a) A : $[0{,}56 \\;;\\; 0{,}64]$, B : $[0{,}62 \\;;\\; 0{,}70]$ ; b) non, les intervalles se chevauchent ; c) $n \\geqslant 10\\,000$ par version ; d) le moment du test (week-end) est un facteur de confusion / biais d'échantillonnage qui fausse la comparaison."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Un hôpital déploie une IA qui analyse des radiographies pulmonaires pour dépister une maladie rare. Dans la population concernée, la maladie touche $2\\,\\%$ des personnes. Après entraînement, l'IA a une sensibilité de $96\\,\\%$ (elle détecte $96\\,\\%$ des malades) et une spécificité de $90\\,\\%$ (elle est négative chez $90\\,\\%$ des sains). On note $M$ « être malade » et $T^+$ « l'IA rend un résultat positif ». 1. Chaque radiographie est une image de $2\\,048 \\times 2\\,048$ pixels codée en niveaux de gris ($1$ octet par pixel). Calculer son poids en octets, puis en Mo (arrondi au dixième). 2. Décrire l'arbre pondéré de l'expérience et donner la probabilité d'un faux positif et celle d'un faux négatif. 3. Calculer $P(T^+)$, probabilité que l'IA rende un résultat positif pour une personne prise au hasard. 4. Une personne reçoit un résultat positif. Calculer la valeur prédictive positive $P_{T^+}(M)$ (arrondie au millième) et l'interpréter. 5. Sur un groupe de $10\\,000$ personnes, dénombrer les vrais positifs et les faux positifs, et retrouver la VPP. 6. Pour vérifier la sensibilité annoncée, on soumet à l'IA $625$ radiographies de patients dont on sait qu'ils sont malades : l'IA en détecte $600$. Calculer la fréquence observée, puis donner l'intervalle de confiance au niveau $95\\,\\%$ de la vraie sensibilité. La valeur annoncée de $96\\,\\%$ est-elle compatible avec ce test ?",
+      "corrige": [
+        "1. Le nombre de pixels est $2\\,048 \\times 2\\,048 = 4\\,194\\,304$. Avec $1$ octet par pixel, l'image pèse $4\\,194\\,304$ octets. Comme $1$ Mo $= 10^6$ octets, cela fait $4\\,194\\,304 / 10^6 \\approx 4{,}2$ Mo.",
+        "2. Premier niveau : $P(M) = 0{,}02$ et $P(\\overline{M}) = 0{,}98$. Second niveau, aux branches : $P_M(T^+) = 0{,}96$ (sensibilité) et $P_M(T^-) = 0{,}04$ ; $P_{\\overline{M}}(T^-) = 0{,}90$ (spécificité) et $P_{\\overline{M}}(T^+) = 0{,}10$. Un **faux négatif** (malade non détecté) a pour probabilité conditionnelle $P_M(T^-) = 1 - 0{,}96 = 0{,}04$ ; un **faux positif** (sain déclaré positif) a pour probabilité conditionnelle $P_{\\overline{M}}(T^+) = 1 - 0{,}90 = 0{,}10$.",
+        "3. Formule des probabilités totales : $P(T^+) = P(M)P_M(T^+) + P(\\overline{M})P_{\\overline{M}}(T^+) = 0{,}02 \\times 0{,}96 + 0{,}98 \\times 0{,}10 = 0{,}0192 + 0{,}098 = 0{,}1172$.",
+        "4. Formule de Bayes : $P_{T^+}(M) = \\dfrac{P(M)P_M(T^+)}{P(T^+)} = \\dfrac{0{,}0192}{0{,}1172} \\approx 0{,}164$. Interprétation : un résultat positif ne correspond qu'à environ $16{,}4\\,\\%$ de chances d'être réellement malade. Malgré une IA performante, la rareté de la maladie fait chuter la valeur prédictive positive : un résultat positif doit être confirmé par un examen complémentaire.",
+        "5. Sur $10\\,000$ personnes : $10\\,000 \\times 0{,}02 = 200$ malades, dont $200 \\times 0{,}96 = 192$ vrais positifs ; et $10\\,000 \\times 0{,}98 = 9\\,800$ sains, dont $9\\,800 \\times 0{,}10 = 980$ faux positifs. On retrouve $\\text{VPP} = \\dfrac{192}{192 + 980} = \\dfrac{192}{1\\,172} \\approx 0{,}164$. Les faux positifs ($980$) sont environ cinq fois plus nombreux que les vrais positifs ($192$) : ils les « noient », ce qui explique la faible VPP.",
+        "6. La fréquence observée est $f = \\dfrac{600}{625} = 0{,}96$. Avec $\\dfrac{1}{\\sqrt{625}} = \\dfrac{1}{25} = 0{,}04$, l'intervalle de confiance au niveau $95\\,\\%$ de la vraie sensibilité est $[0{,}96 - 0{,}04 \\;;\\; 0{,}96 + 0{,}04] = [0{,}92 \\;;\\; 1{,}00]$. La sensibilité annoncée, $0{,}96$, appartient à cet intervalle : elle est donc compatible avec le résultat du test."
+      ],
+      "reponse": "1. $4\\,194\\,304$ octets $\\approx 4{,}2$ Mo ; 2. faux négatif $0{,}04$, faux positif $0{,}10$ ; 3. $P(T^+) = 0{,}1172$ ; 4. $P_{T^+}(M) \\approx 0{,}164$, soit $16{,}4\\,\\%$ malgré une IA performante (maladie rare) ; 5. $192$ vrais positifs contre $980$ faux positifs sur $10\\,000$, VPP $\\approx 0{,}164$ ; 6. $f = 0{,}96$, IC $= [0{,}92 \\;;\\; 1{,}00]$, valeur annoncée compatible."
     }
   ]
 }

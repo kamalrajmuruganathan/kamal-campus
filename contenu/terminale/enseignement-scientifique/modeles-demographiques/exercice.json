@@ -81,6 +81,57 @@
         "c) Cela illustre la thèse de Malthus : une croissance exponentielle finit toujours par dépasser une croissance linéaire, même si les ressources ont une large avance au départ ($4\\,000$ contre $1\\,000$). Sa limite : ce n'est qu'un modèle. Dans la réalité, la croissance de la population ralentit bien avant (ressources, natalité, plafond du milieu) ; le modèle exponentiel n'est valable que sur un domaine limité et ne doit pas être pris pour une prédiction certaine."
       ],
       "reponse": "a) ressources supérieures à $n=10$ et $n=20$, population supérieure à $n=30$ ; b) le dépassement a lieu à $n = 30$ ; c) l'exponentielle finit par dépasser le linéaire (Malthus), mais ce modèle de croissance illimitée n'est valable que sur un domaine limité."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "modele-exponentiel",
+      "enonce": "Une commune de $25\\,000$ habitants voit sa population diminuer de $2\\,\\%$ par an (modèle exponentiel). On note $u_n$ l'effectif après $n$ années, avec $u_0 = 25\\,000$. a) Déterminer le coefficient multiplicateur $q$, puis calculer $u_1$ et $u_2$. b) Donner le terme général $u_n$. c) Estimer l'effectif au bout de $10$ ans (arrondi à l'unité).",
+      "corrige": [
+        "a) Une baisse de $2\\,\\%$ conserve $98\\,\\%$ de la population : $q = 1 - \\dfrac{2}{100} = 0{,}98$. Alors $u_1 = 25\\,000 \\times 0{,}98 = 24\\,500$ et $u_2 = 24\\,500 \\times 0{,}98 = 24\\,010$ habitants.",
+        "b) Pour une suite géométrique, $u_n = u_0 \\times q^{\\,n} = 25\\,000 \\times 0{,}98^{\\,n}$.",
+        "c) $u_{10} = 25\\,000 \\times 0{,}98^{\\,10}$. Comme $0{,}98^{\\,10} \\approx 0{,}8171$, on obtient $u_{10} \\approx 25\\,000 \\times 0{,}8171 \\approx 20\\,427$ habitants."
+      ],
+      "reponse": "a) $q = 0{,}98$, $u_1 = 24\\,500$, $u_2 = 24\\,010$ ; b) $u_n = 25\\,000 \\times 0{,}98^{\\,n}$ ; c) $u_{10} \\approx 20\\,427$ habitants."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "variation-absolue-relative",
+      "enonce": "Une ville compte $18\\,000$ habitants au début de $2020$. Au cours de l'année, elle gagne $540$ habitants. On suppose ensuite que le taux d'évolution annuel reste constant (modèle exponentiel). On note $u_n$ l'effectif $n$ années après le début de $2020$, avec $u_0 = 18\\,000$. a) Calculer le taux d'évolution $t$ de l'année $2020$. b) En déduire le coefficient multiplicateur $q$ et le terme général $u_n$. c) Estimer l'effectif au début de $2025$.",
+      "corrige": [
+        "a) La variation absolue est de $540$ habitants ; le taux d'évolution (variation relative) est $t = \\dfrac{540}{18\\,000} = 0{,}03 = 3\\,\\%$.",
+        "b) Un taux constant de $3\\,\\%$ donne le coefficient $q = 1 + \\dfrac{3}{100} = 1{,}03$. Le modèle étant exponentiel, $u_n = u_0 \\times q^{\\,n} = 18\\,000 \\times 1{,}03^{\\,n}$.",
+        "c) Le début de $2025$ correspond à $n = 5$ : $u_5 = 18\\,000 \\times 1{,}03^{\\,5}$. Comme $1{,}03^{\\,5} \\approx 1{,}1593$, on obtient $u_5 \\approx 18\\,000 \\times 1{,}1593 \\approx 20\\,867$ habitants."
+      ],
+      "reponse": "a) $t = \\dfrac{540}{18\\,000} = 3\\,\\%$ ; b) $q = 1{,}03$ et $u_n = 18\\,000 \\times 1{,}03^{\\,n}$ ; c) $u_5 \\approx 20\\,867$ habitants."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "temps-de-doublement",
+      "enonce": "On observe qu'une population suit un modèle exponentiel et qu'elle double tous les $25$ ans. a) À l'aide de la « règle de 70 », estimer le taux de croissance annuel $t$. b) Sans utiliser le taux, justifier qu'au bout de $100$ ans la population a été multipliée par $16$. c) Une ville de $40\\,000$ habitants suit ce modèle : quel effectif prévoit-on après $100$ ans ? Le temps de doublement dépend-il de cet effectif de départ ?",
+      "corrige": [
+        "a) La règle de 70 relie le temps de doublement $N$ et le taux annuel $t$ (en %) par $N \\approx \\dfrac{70}{t}$, d'où $t \\approx \\dfrac{70}{N} = \\dfrac{70}{25} = 2{,}8\\,\\%$ par an.",
+        "b) Puisque la population double tous les $25$ ans, $100$ ans représentent $\\dfrac{100}{25} = 4$ périodes de doublement successives. À chaque période l'effectif est multiplié par $2$, donc sur $4$ périodes il est multiplié par $2^4 = 16$. On n'a pas eu besoin de connaître le taux exact.",
+        "c) La ville passe de $40\\,000$ à $40\\,000 \\times 16 = 640\\,000$ habitants en $100$ ans. Non, le temps de doublement ne dépend pas de l'effectif de départ : dans $u_0 \\times q^{\\,N} = 2\\,u_0$, le $u_0$ se simplifie et $N = \\dfrac{\\ln 2}{\\ln q}$ ne dépend que du taux. Une ville plus grande ou plus petite au même taux doublerait aussi tous les $25$ ans."
+      ],
+      "reponse": "a) $t \\approx \\dfrac{70}{25} = 2{,}8\\,\\%$ ; b) $100$ ans $= 4$ doublements, donc $\\times 2^4 = \\times 16$ ; c) $40\\,000 \\times 16 = 640\\,000$ habitants, et $N$ ne dépend que du taux, pas de l'effectif de départ."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Sur une île, les recensements donnent la population (en milliers d'habitants) : $250$ en $2000$, $300$ en $2010$, $360$ en $2020$. On note $u_n$ la population $n$ décennies après $2000$, avec $u_0 = 250$. Les ressources alimentaires de l'île peuvent nourrir $R_n$ milliers de personnes, avec $R_n = 400 + 30\\,n$ ($400$ milliers en $2000$, $+30$ milliers par décennie). 1. Montrer que la population suit un modèle exponentiel et donner l'expression de $u_n$. 2. Quelle population le modèle prévoit-il pour $2030$ et $2040$ ? 3. Au bout de combien de temps la population double-t-elle (on utilisera $N = \\dfrac{\\ln 2}{\\ln q}$) ? 4. À la manière de Malthus, comparer $u_n$ et $R_n$ pour $n = 0$, puis déterminer la première décennie où la population dépasse les ressources. 5. Le recensement de $2030$ donne finalement $410$ (milliers). Comparer à la prévision et conclure sur la validité du modèle. 6. Que peut-on dire de la thèse de Malthus et de sa limite au vu de cet exemple ?",
+      "corrige": [
+        "1. On calcule les quotients d'une décennie à la suivante : $\\dfrac{300}{250} = 1{,}2$ et $\\dfrac{360}{300} = 1{,}2$. Ils sont constants : le modèle est exponentiel de raison $q = 1{,}2$ par décennie (hausse de $20\\,\\%$). Le terme général est donc $u_n = 250 \\times 1{,}2^{\\,n}$ (avec $n$ en décennies depuis $2000$).",
+        "2. $2030$ correspond à $n = 3$ : $u_3 = 250 \\times 1{,}2^{\\,3} = 250 \\times 1{,}728 = 432$ milliers. $2040$ correspond à $n = 4$ : $u_4 = 250 \\times 1{,}2^{\\,4} = 250 \\times 2{,}0736 = 518{,}4$ milliers. Le modèle prévoit environ $432\\,000$ habitants en $2030$ et $518\\,400$ en $2040$.",
+        "3. Le temps de doublement $N$ (en décennies) vérifie $1{,}2^{\\,N} = 2$, soit $N = \\dfrac{\\ln 2}{\\ln 1{,}2} \\approx \\dfrac{0{,}693}{0{,}182} \\approx 3{,}8$ décennies, c'est-à-dire environ $38$ ans : la population double tous les $38$ ans environ.",
+        "4. Pour $n = 0$ : $u_0 = 250$ contre $R_0 = 400$ : les ressources sont supérieures. On compare ensuite décennie par décennie. Pour $n = 4$ : $u_4 = 518{,}4$ contre $R_4 = 400 + 120 = 520$ : les ressources sont encore (de justesse) supérieures. Pour $n = 5$ : $u_5 = 250 \\times 1{,}2^{\\,5} = 250 \\times 2{,}48832 \\approx 622$ contre $R_5 = 400 + 150 = 550$ : la population dépasse les ressources. C'est donc à la décennie $n = 5$ (année $2050$) que la population dépasse pour la première fois les ressources.",
+        "5. Le modèle prévoyait $u_3 = 432$ milliers pour $2030$, mais le recensement réel donne $410$ milliers. L'écart vaut $\\dfrac{432 - 410}{410} \\approx 5{,}4\\,\\%$ : le modèle surestime la population. La croissance a commencé à ralentir par rapport au modèle exponentiel ajusté sur $2000$–$2020$ ; le modèle n'est plus tout à fait valable au-delà et devrait être révisé (taux plus faible).",
+        "6. Cet exemple illustre la thèse de Malthus : une population en croissance exponentielle finit par rattraper puis dépasser des ressources en croissance seulement linéaire, malgré l'avance initiale de ces ressources ($400$ contre $250$). Mais sa limite apparaît aussitôt : dès $2030$ la croissance réelle ralentit (question 5). Aucune population ne croît indéfiniment au même rythme ; le modèle exponentiel n'est valable que sur un domaine limité, et la catastrophe annoncée par Malthus n'est donc pas une prophétie certaine."
+      ],
+      "reponse": "1. quotients constants $= 1{,}2$, donc $u_n = 250 \\times 1{,}2^{\\,n}$ ; 2. $u_3 = 432$ et $u_4 = 518{,}4$ (milliers), soit $\\approx 432\\,000$ en $2030$ et $\\approx 518\\,400$ en $2040$ ; 3. $N = \\dfrac{\\ln 2}{\\ln 1{,}2} \\approx 3{,}8$ décennies ($\\approx 38$ ans) ; 4. les ressources dominent jusqu'à $n = 4$, la population les dépasse à $n = 5$ (année $2050$) ; 5. réel $410 <$ prévu $432$ ($\\approx 5{,}4\\,\\%$ d'écart) : la croissance ralentit, le modèle doit être révisé ; 6. Malthus (l'exponentielle dépasse le linéaire) se vérifie, mais son modèle de croissance illimitée n'est valable que sur un domaine limité."
     }
   ]
 }

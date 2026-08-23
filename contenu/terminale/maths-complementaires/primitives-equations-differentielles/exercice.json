@@ -87,6 +87,59 @@
         "Contrôle : $N'(t) = 2\\times 0{,}5\\,e^{0{,}5t} = e^{0{,}5t}$ et $0{,}5\\,N - 2 = 0{,}5(2e^{0{,}5t}+4) - 2 = e^{0{,}5t} + 2 - 2 = e^{0{,}5t}$ ✓."
       ],
       "reponse": "$N(t) = 2e^{0{,}5t} + 4$ ; la population augmente (car $a>0$ et $C>0$, croissance exponentielle)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "linearite",
+      "enonce": "Déterminer toutes les primitives sur $]0;+\\infty[$ de la fonction $f(x) = 3e^{x} + \\dfrac{1}{\\sqrt{x}}$.",
+      "corrige": [
+        "On primitive terme à terme (linéarité). Une primitive de $e^{x}$ est $e^{x}$, donc une primitive de $3e^{x}$ est $3e^{x}$.",
+        "D'après le tableau des primitives usuelles, une primitive de $\\dfrac{1}{\\sqrt{x}}$ sur $]0;+\\infty[$ est $2\\sqrt{x}$.",
+        "On rassemble sans oublier la constante : $F(x) = 3e^{x} + 2\\sqrt{x} + C$, avec $C\\in\\mathbb{R}$.",
+        "Contrôle en dérivant : $F'(x) = 3e^{x} + 2\\times\\dfrac{1}{2\\sqrt{x}} = 3e^{x} + \\dfrac{1}{\\sqrt{x}} = f(x)$ ✓."
+      ],
+      "reponse": "$F(x) = 3e^{x} + 2\\sqrt{x} + C$, $\\;C\\in\\mathbb{R}$ (sur $]0;+\\infty[$)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = 2x + \\dfrac{1}{x^{2}}$ sur $]0;+\\infty[$ qui vérifie $F(1) = 3$.",
+      "corrige": [
+        "On cherche d'abord toutes les primitives, terme à terme. Une primitive de $2x$ est $x^{2}$.",
+        "Une primitive de $\\dfrac{1}{x^{2}}$ sur $]0;+\\infty[$ est $-\\dfrac{1}{x}$ (attention au signe). Donc $F(x) = x^{2} - \\dfrac{1}{x} + C$, avec $C\\in\\mathbb{R}$.",
+        "On fixe $C$ avec la condition initiale : $F(1) = 1^{2} - \\dfrac{1}{1} + C = 1 - 1 + C = C$. On impose $C = 3$.",
+        "Ainsi $F(x) = x^{2} - \\dfrac{1}{x} + 3$. Vérification : $F'(x) = 2x + \\dfrac{1}{x^{2}} = f(x)$ et $F(1) = 1 - 1 + 3 = 3$ ✓."
+      ],
+      "reponse": "$F(x) = x^{2} - \\dfrac{1}{x} + 3$ (sur $]0;+\\infty[$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Après une injection, la concentration d'un médicament dans le sang (en mg/L) est modélisée par une fonction $C$ du temps $t\\geq 0$ (en heures) vérifiant $C'(t) = -0{,}5\\,C(t) + 10$ et $C(0) = 0$. 1) Déterminer $C(t)$. 2) Au bout de combien de temps la concentration atteint-elle $15$ mg/L ?",
+      "corrige": [
+        "1) L'équation est de la forme $y' = ay + b$ avec $a = -0{,}5$ et $b = 10$ ($a\\neq 0$). Solution particulière constante : $0 = -0{,}5\\,C + 10$, d'où la valeur constante $-\\dfrac{b}{a} = -\\dfrac{10}{-0{,}5} = 20$.",
+        "Toutes les solutions s'écrivent $C(t) = Ke^{-0{,}5t} + 20$, avec $K\\in\\mathbb{R}$ (on note la constante $K$ pour ne pas la confondre avec la concentration $C$).",
+        "Condition initiale : $C(0) = K + 20 = 0$, donc $K = -20$. Ainsi $C(t) = 20 - 20e^{-0{,}5t} = 20\\left(1 - e^{-0{,}5t}\\right)$.",
+        "2) On résout $20\\left(1 - e^{-0{,}5t}\\right) = 15$, soit $1 - e^{-0{,}5t} = 0{,}75$, donc $e^{-0{,}5t} = 0{,}25$. En passant au logarithme népérien : $-0{,}5t = \\ln(0{,}25)$, d'où $t = -\\dfrac{\\ln(0{,}25)}{0{,}5} = 2\\ln 4 \\approx 2{,}77$ heures (soit environ $2$ h $46$ min)."
+      ],
+      "reponse": "$C(t) = 20\\left(1 - e^{-0{,}5t}\\right)$ ; la concentration atteint $15$ mg/L au bout de $t = 2\\ln 4 \\approx 2{,}8$ h."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "modelisation",
+      "enonce": "Un lac contient initialement $50$ tonnes d'un polluant. Grâce à un dispositif de traitement, la masse de polluant $Q(t)$ (en tonnes), où $t$ désigne le temps en semaines, est modélisée par la fonction $Q$ solution de l'équation différentielle $Q'(t) = -0{,}4\\,Q(t) + 2$ avec la condition initiale $Q(0) = 50$.\n\n1. Justifier que, si la masse de polluant était constante, elle vaudrait $5$ tonnes.\n2. Résoudre l'équation différentielle $Q' = -0{,}4\\,Q + 2$ (solutions générales).\n3. Déterminer l'expression de $Q(t)$ correspondant à cette situation.\n4. Étudier le sens de variation de $Q$ et sa limite en $+\\infty$, puis interpréter dans le contexte.\n5. Un second rejet apporte un polluant secondaire à un débit $r(t) = 0{,}6\\,t$ (en tonnes par semaine). Déterminer la masse cumulée $R(t)$ rejetée depuis $t = 0$, c'est-à-dire la primitive de $r$ vérifiant $R(0) = 0$, puis calculer $R(5)$.",
+      "corrige": [
+        "1. Si $Q$ est constante, alors $Q'(t) = 0$. L'équation devient $0 = -0{,}4\\,Q + 2$, soit $0{,}4\\,Q = 2$, d'où $Q = \\dfrac{2}{0{,}4} = 5$. La masse constante (solution particulière) vaut donc $5$ tonnes ; c'est bien $-\\dfrac{b}{a} = -\\dfrac{2}{-0{,}4}$.",
+        "2. L'équation est de la forme $y' = ay + b$ avec $a = -0{,}4$ et $b = 2$ ($a\\neq 0$). D'après le cours, ses solutions sont $Q(t) = Ke^{-0{,}4t} - \\dfrac{b}{a} = Ke^{-0{,}4t} + 5$, avec $K\\in\\mathbb{R}$.",
+        "3. On utilise la condition initiale $Q(0) = 50$ : $Q(0) = K + 5 = 50$, donc $K = 45$. La masse de polluant est donc $Q(t) = 45e^{-0{,}4t} + 5$.",
+        "4. On dérive : $Q'(t) = 45\\times(-0{,}4)e^{-0{,}4t} = -18e^{-0{,}4t} < 0$ pour tout $t\\geq 0$, donc $Q$ est strictement décroissante. Comme $-0{,}4 < 0$, le terme $45e^{-0{,}4t}$ tend vers $0$ quand $t\\to+\\infty$, donc $Q(t) \\to 5$. Interprétation : la masse de polluant décroît de $50$ tonnes vers un seuil de $5$ tonnes, sans jamais descendre en dessous.",
+        "5. On cherche une primitive de $r(t) = 0{,}6\\,t$. Une primitive de $t$ est $\\dfrac{t^{2}}{2}$, donc $R(t) = 0{,}6\\times\\dfrac{t^{2}}{2} + C = 0{,}3\\,t^{2} + C$. La condition $R(0) = 0$ donne $C = 0$, d'où $R(t) = 0{,}3\\,t^{2}$. Enfin $R(5) = 0{,}3\\times 5^{2} = 0{,}3\\times 25 = 7{,}5$ tonnes."
+      ],
+      "reponse": "1. $5$ tonnes. 2. $Q(t) = Ke^{-0{,}4t} + 5$, $K\\in\\mathbb{R}$. 3. $Q(t) = 45e^{-0{,}4t} + 5$. 4. $Q$ strictement décroissante, $\\lim_{t\\to+\\infty} Q(t) = 5$ tonnes (seuil incompressible). 5. $R(t) = 0{,}3\\,t^{2}$ et $R(5) = 7{,}5$ tonnes."
     }
   ]
 }

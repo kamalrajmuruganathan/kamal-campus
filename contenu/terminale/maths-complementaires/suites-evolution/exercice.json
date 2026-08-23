@@ -83,6 +83,57 @@
         "c) Comme $0 < 0{,}9 < 1$ et $v_0 = 4000 > 0$, la suite $v_n = 4000 \\times 0{,}9^{\\,n}$ est décroissante et positive ; donc $(u_n)$ est décroissante. Enfin $0{,}9^{\\,n} \\to 0$, donc $u_n \\to 8000$ : le nombre d'abonnés décroît et se stabilise autour de $8000$."
       ],
       "reponse": "a) $u_{n+1} = 0{,}9\\,u_n + 800$ ; b) $u_n = 4000 \\times 0{,}9^{\\,n} + 8000$ ; c) suite décroissante, $u_n \\to 8000$ abonnés."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "suites-geometriques",
+      "enonce": "Soit $(u_n)$ la suite géométrique de premier terme $u_0 = 3$ et de raison $q = 0{,}8$. a) Exprimer $u_n$ en fonction de $n$. b) Calculer $u_5$ (valeur arrondie au centième). c) Déterminer $\\lim\\limits_{n \\to +\\infty} u_n$.",
+      "corrige": [
+        "a) Le terme général d'une suite géométrique est $u_n = u_0 \\times q^{\\,n}$, donc ici $u_n = 3 \\times 0{,}8^{\\,n}$.",
+        "b) On applique la formule au rang $5$ : $u_5 = 3 \\times 0{,}8^{\\,5} = 3 \\times 0{,}32768 = 0{,}98304 \\approx 0{,}98$.",
+        "c) La raison $q = 0{,}8$ vérifie $|q| < 1$, donc $0{,}8^{\\,n} \\to 0$ ; par produit par la constante $3$, on obtient $u_n \\to 0$. La suite converge vers $0$."
+      ],
+      "reponse": "a) $u_n = 3 \\times 0{,}8^{\\,n}$ ; b) $u_5 \\approx 0{,}98$ ; c) $u_n \\to 0$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Soit $(u_n)$ définie par $u_0 = 2$ et $u_{n+1} = 0{,}4\\,u_n + 9$. a) Déterminer le point fixe $\\ell$. b) Montrer que $v_n = u_n - \\ell$ est géométrique et donner son terme général. c) En déduire $u_n$ puis $\\lim\\limits_{n \\to +\\infty} u_n$.",
+      "corrige": [
+        "a) Le point fixe vérifie $\\ell = 0{,}4\\,\\ell + 9$, soit $\\ell(1 - 0{,}4) = 9$, donc $\\ell = \\dfrac{9}{0{,}6} = 15$.",
+        "b) On pose $v_n = u_n - 15$. Alors $v_{n+1} = u_{n+1} - 15 = (0{,}4\\,u_n + 9) - 15 = 0{,}4\\,u_n - 6 = 0{,}4(u_n - 15) = 0{,}4\\,v_n$. Donc $(v_n)$ est géométrique de raison $0{,}4$, avec $v_0 = u_0 - 15 = 2 - 15 = -13$. Ainsi $v_n = -13 \\times 0{,}4^{\\,n}$.",
+        "c) On revient à $u_n = v_n + 15 = -13 \\times 0{,}4^{\\,n} + 15$. Comme $|0{,}4| < 1$, on a $0{,}4^{\\,n} \\to 0$, donc $u_n \\to 15$."
+      ],
+      "reponse": "a) $\\ell = 15$ ; b) $v_n = -13 \\times 0{,}4^{\\,n}$ ; c) $u_n = -13 \\times 0{,}4^{\\,n} + 15$ et $u_n \\to 15$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Une forêt compte $50\\,000$ arbres. Chaque année, $8\\%$ des arbres disparaissent (coupes et maladies), puis les gestionnaires en replantent $5\\,000$. On note $u_n$ le nombre d'arbres l'année $n$, avec $u_0 = 50\\,000$. a) Justifier que $u_{n+1} = 0{,}92\\,u_n + 5\\,000$. b) Déterminer le terme général $u_n$. c) Étudier le sens de variation de $(u_n)$, déterminer sa limite et interpréter.",
+      "corrige": [
+        "a) Perdre $8\\%$ des arbres revient à en conserver $92\\%$, soit multiplier par $0{,}92$ ; on ajoute ensuite les $5\\,000$ arbres replantés. D'où $u_{n+1} = 0{,}92\\,u_n + 5\\,000$.",
+        "b) Point fixe : $\\ell = 0{,}92\\,\\ell + 5\\,000 \\iff \\ell(1 - 0{,}92) = 5\\,000 \\iff \\ell = \\dfrac{5\\,000}{0{,}08} = 62\\,500$. On pose $v_n = u_n - 62\\,500$ : c'est une suite géométrique de raison $0{,}92$, avec $v_0 = 50\\,000 - 62\\,500 = -12\\,500$, donc $v_n = -12\\,500 \\times 0{,}92^{\\,n}$.",
+        "On revient à $u_n = v_n + 62\\,500 = -12\\,500 \\times 0{,}92^{\\,n} + 62\\,500$.",
+        "c) Comme $0 < 0{,}92 < 1$ et $v_0 = -12\\,500 < 0$, la suite $v_n = -12\\,500 \\times 0{,}92^{\\,n}$ est négative et croissante (elle se rapproche de $0$) ; donc $(u_n)$ est croissante. De plus $0{,}92^{\\,n} \\to 0$, donc $u_n \\to 62\\,500$. Interprétation : le nombre d'arbres augmente d'année en année et se stabilise à long terme autour de $62\\,500$ arbres."
+      ],
+      "reponse": "a) conservation de $92\\%$ + $5\\,000$ arbres ; b) $u_n = -12\\,500 \\times 0{,}92^{\\,n} + 62\\,500$ ; c) suite croissante, $u_n \\to 62\\,500$ arbres."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "modelisation",
+      "enonce": "Une plateforme de streaming compte $20\\,000$ abonnés en janvier 2025. Une étude montre que, chaque mois, la plateforme perd $15\\%$ de ses abonnés (résiliations) mais en gagne $4\\,500$ nouveaux grâce à sa publicité. On note $u_n$ le nombre d'abonnés $n$ mois après janvier 2025, de sorte que $u_0 = 20\\,000$. 1. Justifier que, pour tout entier $n \\geq 0$, $u_{n+1} = 0{,}85\\,u_n + 4\\,500$, puis calculer $u_1$ (le nombre d'abonnés en février 2025). 2. On pose $v_n = u_n - 30\\,000$. Montrer que $(v_n)$ est géométrique ; préciser sa raison et son premier terme $v_0$. 3. Exprimer $v_n$, puis $u_n$, en fonction de $n$. 4. Étudier le sens de variation de $(u_n)$, déterminer sa limite et interpréter le résultat. 5. Déterminer, par le calcul, le premier mois à partir duquel la plateforme dépassera $27\\,000$ abonnés.",
+      "corrige": [
+        "1. Perdre $15\\%$ des abonnés revient à en conserver $85\\%$ (facteur $0{,}85$), puis on ajoute les $4\\,500$ nouveaux abonnés : $u_{n+1} = 0{,}85\\,u_n + 4\\,500$. On en déduit $u_1 = 0{,}85 \\times 20\\,000 + 4\\,500 = 17\\,000 + 4\\,500 = 21\\,500$ abonnés en février 2025.",
+        "2. On a $v_{n+1} = u_{n+1} - 30\\,000 = (0{,}85\\,u_n + 4\\,500) - 30\\,000 = 0{,}85\\,u_n - 25\\,500 = 0{,}85(u_n - 30\\,000) = 0{,}85\\,v_n$. Donc $(v_n)$ est géométrique de raison $q = 0{,}85$, avec $v_0 = u_0 - 30\\,000 = 20\\,000 - 30\\,000 = -10\\,000$. (Le nombre $30\\,000$ est le point fixe : $\\ell = \\dfrac{4\\,500}{1 - 0{,}85} = \\dfrac{4\\,500}{0{,}15} = 30\\,000$.)",
+        "3. Comme $(v_n)$ est géométrique, $v_n = v_0 \\times q^{\\,n} = -10\\,000 \\times 0{,}85^{\\,n}$. En revenant à $u_n = v_n + 30\\,000$, on obtient $u_n = -10\\,000 \\times 0{,}85^{\\,n} + 30\\,000$.",
+        "4. Comme $0 < 0{,}85 < 1$ et $v_0 = -10\\,000 < 0$, la suite $v_n = -10\\,000 \\times 0{,}85^{\\,n}$ est négative et croissante (elle tend vers $0$ par valeurs négatives) ; donc $(u_n)$ est croissante. De plus $0{,}85^{\\,n} \\to 0$, donc $u_n \\to 30\\,000$. Interprétation : le nombre d'abonnés augmente mois après mois et se stabilise à long terme autour de $30\\,000$ abonnés.",
+        "5. On cherche le premier $n$ tel que $u_n > 27\\,000$, soit $-10\\,000 \\times 0{,}85^{\\,n} + 30\\,000 > 27\\,000$, c'est-à-dire $0{,}85^{\\,n} < 0{,}3$. En calculant les termes : $u_7 = -10\\,000 \\times 0{,}85^{\\,7} + 30\\,000 \\approx 26\\,794 < 27\\,000$, tandis que $u_8 = -10\\,000 \\times 0{,}85^{\\,8} + 30\\,000 \\approx 27\\,275 > 27\\,000$. C'est donc au rang $n = 8$, soit en septembre 2025 (janvier 2025 correspondant au rang $0$), que la plateforme dépasse pour la première fois $27\\,000$ abonnés."
+      ],
+      "reponse": "1. $u_{n+1} = 0{,}85\\,u_n + 4\\,500$ et $u_1 = 21\\,500$ ; 2. $(v_n)$ géométrique de raison $0{,}85$, $v_0 = -10\\,000$ ; 3. $u_n = -10\\,000 \\times 0{,}85^{\\,n} + 30\\,000$ ; 4. suite croissante, $u_n \\to 30\\,000$ abonnés ; 5. dès le rang $n = 8$ (septembre 2025)."
     }
   ]
 }

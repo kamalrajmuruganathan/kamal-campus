@@ -90,6 +90,60 @@
         "Donc $P(X \\geqslant 3) = \\dfrac{4}{16} + \\dfrac{1}{16} = \\dfrac{5}{16} = 0{,}3125$."
       ],
       "reponse": "$X \\sim B(4\\,;\\,0{,}5)$, $E(X) = 2$ ; $P(X = 4) = \\dfrac{1}{16}$ ; $P(X \\geqslant 3) = \\dfrac{5}{16} = 0{,}3125$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "Un cinéma interroge $500$ spectateurs à la sortie d'un film. Parmi eux, $300$ sont des habitués (événement $A$) et $210$ sont des habitués qui ont aimé le film (événement $A \\cap B$, où $B$ = « avoir aimé le film »). On choisit un spectateur au hasard. Calculer la probabilité qu'il ait aimé le film **sachant** qu'il est un habitué.",
+      "corrige": [
+        "On cherche la probabilité conditionnelle $P_A(B) = \\dfrac{P(A \\cap B)}{P(A)}$.",
+        "On calcule les deux probabilités à partir des effectifs : $P(A) = \\dfrac{300}{500} = 0{,}6$ et $P(A \\cap B) = \\dfrac{210}{500} = 0{,}42$.",
+        "Donc $P_A(B) = \\dfrac{0{,}42}{0{,}6} = 0{,}7$.",
+        "On pouvait aussi raisonner directement sur les effectifs : parmi les $300$ habitués, $210$ ont aimé le film, soit $\\dfrac{210}{300} = 0{,}7$."
+      ],
+      "reponse": "$P_A(B) = \\dfrac{210}{300} = 0{,}7$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "Un horticulteur sème $6$ graines indépendantes d'une même variété ; chaque graine germe avec la probabilité $0{,}9$. On note $X$ le nombre de graines qui germent. **1.** Justifier que $X \\sim B(6\\,;\\,0{,}9)$ et donner le nombre moyen de graines qui germent. **2.** Calculer $P(X = 6)$ (toutes les graines germent), puis $P(X = 5)$. Arrondir au millième.",
+      "corrige": [
+        "**1.** Chaque graine donne une épreuve de Bernoulli à deux issues (germe / ne germe pas), de succès « germe » de probabilité $p = 0{,}9$. Les $6$ semis sont identiques et indépendants : c'est un schéma de Bernoulli, donc $X \\sim B(6\\,;\\,0{,}9)$. Le nombre moyen de graines qui germent est $E(X) = np = 6 \\times 0{,}9 = 5{,}4$.",
+        "**2.** Pour $P(X = 6)$, il n'y a qu'un chemin (toutes germent) : $P(X = 6) = \\dbinom{6}{6}(0{,}9)^6(0{,}1)^0 = 0{,}9^6 \\approx 0{,}531$.",
+        "Pour $P(X = 5)$, on place l'unique échec parmi les $6$ graines : $\\dbinom{6}{5} = 6$, donc $P(X = 5) = \\dbinom{6}{5}(0{,}9)^5(0{,}1)^1 = 6 \\times 0{,}9^5 \\times 0{,}1$.",
+        "Or $0{,}9^5 = 0{,}59049$, donc $P(X = 5) = 6 \\times 0{,}59049 \\times 0{,}1 = 0{,}354294 \\approx 0{,}354$."
+      ],
+      "reponse": "$X \\sim B(6\\,;\\,0{,}9)$, $E(X) = 5{,}4$ ; $P(X = 6) = 0{,}9^6 \\approx 0{,}531$ ; $P(X = 5) \\approx 0{,}354$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "bayes",
+      "enonce": "Un logiciel antispam traite les courriels reçus par une messagerie. Parmi ces courriels, $30\\,\\%$ sont réellement des spams (événement $S$). Le logiciel classe « indésirable » (événement $I$) $96\\,\\%$ des spams, mais il classe aussi à tort « indésirable » $4\\,\\%$ des courriels légitimes. Un courriel est classé indésirable. **1.** Représenter la situation par un arbre et calculer $P(I)$. **2.** Calculer la probabilité que ce courriel soit réellement un spam, $P_I(S)$, arrondie au centième. **3.** Commenter la fiabilité du classement.",
+      "corrige": [
+        "**1.** L'arbre a pour premier niveau $S$ / $\\overline{S}$ avec $P(S) = 0{,}30$ et $P(\\overline{S}) = 0{,}70$, puis $I$ / $\\overline{I}$ avec $P_S(I) = 0{,}96$ et $P_{\\overline{S}}(I) = 0{,}04$.",
+        "Par la formule des probabilités totales : $P(I) = P(S)P_S(I) + P(\\overline{S})P_{\\overline{S}}(I) = 0{,}30 \\times 0{,}96 + 0{,}70 \\times 0{,}04$.",
+        "On calcule chaque chemin : $0{,}30 \\times 0{,}96 = 0{,}288$ et $0{,}70 \\times 0{,}04 = 0{,}028$, donc $P(I) = 0{,}288 + 0{,}028 = 0{,}316$.",
+        "**2.** Formule de Bayes : $P_I(S) = \\dfrac{P(S)P_S(I)}{P(I)} = \\dfrac{0{,}288}{0{,}316} \\approx 0{,}91$.",
+        "**3.** Un courriel classé indésirable est réellement un spam dans environ $91\\,\\%$ des cas : le classement est plutôt fiable. À l'inverse d'un dépistage de maladie rare, ici les spams sont assez fréquents ($30\\,\\%$) et le taux de faux positifs est faible ($4\\,\\%$), si bien que la probabilité inverse $P_I(S)$ reste élevée."
+      ],
+      "reponse": "$P(I) = 0{,}316$ ; $P_I(S) = \\dfrac{0{,}288}{0{,}316} \\approx 0{,}91$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "Une entreprise fabrique des clés USB dans deux ateliers. L'atelier $A$ produit $60\\,\\%$ des clés, dont $5\\,\\%$ sont défectueuses ; l'atelier $B$ produit les $40\\,\\%$ restants, dont $10\\,\\%$ sont défectueuses. On prélève une clé au hasard dans la production et on note $D$ l'événement « la clé est défectueuse ». **1.** Représenter la situation par un arbre pondéré. **2.** Calculer la probabilité qu'une clé prélevée au hasard soit défectueuse, $P(D)$. **3.** Une clé prélevée est défectueuse ; montrer que la probabilité qu'elle provienne de l'atelier $B$ est $\\dfrac{4}{7}$, puis en donner une valeur approchée au centième. **4.** On prélève maintenant, au hasard dans la production, un lot de $10$ clés. La production est suffisamment grande pour que ces prélèvements soient assimilés à des tirages indépendants. On note $Y$ le nombre de clés défectueuses dans le lot. Justifier que $Y \\sim B(10\\,;\\,0{,}07)$. **5.** Calculer la probabilité qu'au moins une clé du lot soit défectueuse (arrondie au millième), puis donner le nombre moyen de clés défectueuses attendu dans un lot.",
+      "corrige": [
+        "**1.** Le premier niveau de l'arbre distingue les ateliers : $P(A) = 0{,}60$ et $P(B) = 0{,}40$ (ils forment une partition, une clé vient d'un atelier ou de l'autre). Le second niveau porte l'état de la clé : $P_A(D) = 0{,}05$ et $P_A(\\overline{D}) = 0{,}95$ après $A$ ; $P_B(D) = 0{,}10$ et $P_B(\\overline{D}) = 0{,}90$ après $B$.",
+        "**2.** Formule des probabilités totales : $P(D) = P(A)P_A(D) + P(B)P_B(D) = 0{,}60 \\times 0{,}05 + 0{,}40 \\times 0{,}10$. On calcule chaque chemin : $0{,}60 \\times 0{,}05 = 0{,}03$ et $0{,}40 \\times 0{,}10 = 0{,}04$, donc $P(D) = 0{,}03 + 0{,}04 = 0{,}07$.",
+        "**3.** On cherche le conditionnement inverse $P_D(B)$ (formule de Bayes) : $P_D(B) = \\dfrac{P(B \\cap D)}{P(D)} = \\dfrac{0{,}04}{0{,}07}$. En simplifiant, $\\dfrac{0{,}04}{0{,}07} = \\dfrac{4}{7}$, d'où $P_D(B) = \\dfrac{4}{7} \\approx 0{,}57$.",
+        "**4.** Prélever une clé au hasard dans la production est une épreuve de Bernoulli à deux issues (défectueuse / correcte), de succès « défectueuse » de probabilité $p = P(D) = 0{,}07$. Comme la production est grande, les $10$ prélèvements sont assimilés à des épreuves identiques et indépendantes : c'est un schéma de Bernoulli, donc $Y \\sim B(10\\,;\\,0{,}07)$.",
+        "**5.** « Au moins une défectueuse » est le contraire de « aucune » : $P(Y \\geqslant 1) = 1 - P(Y = 0)$, avec $P(Y = 0) = (1 - p)^{10} = 0{,}93^{10} \\approx 0{,}484$. Donc $P(Y \\geqslant 1) = 1 - 0{,}93^{10} \\approx 1 - 0{,}484 = 0{,}516$. Le nombre moyen de clés défectueuses est l'espérance $E(Y) = np = 10 \\times 0{,}07 = 0{,}7$."
+      ],
+      "reponse": "$P(D) = 0{,}07$ ; $P_D(B) = \\dfrac{4}{7} \\approx 0{,}57$ ; $Y \\sim B(10\\,;\\,0{,}07)$ ; $P(Y \\geqslant 1) = 1 - 0{,}93^{10} \\approx 0{,}516$ ; $E(Y) = 0{,}7$."
     }
   ]
 }

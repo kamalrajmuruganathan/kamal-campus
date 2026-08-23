@@ -85,6 +85,59 @@
         "3. On écrit $P(X>20)=e^{-20\\lambda}=\\big(e^{-10\\lambda}\\big)^2=(0{,}3)^2=0{,}09.$ (On a utilisé $e^{-20\\lambda}=(e^{-10\\lambda})^2$, sans passer par la valeur approchée.)"
       ],
       "reponse": "$\\lambda=-\\dfrac{\\ln(0{,}3)}{10}\\approx 0{,}120$ ; temps moyen $\\approx 8{,}31$ min ; $P(X>20)=(0{,}3)^2=0{,}09.$"
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "loi-uniforme",
+      "enonce": "Un bus passe à un arrêt toutes les $12$ minutes. Un usager arrive au hasard : son temps d'attente $X$ (en minutes) suit la loi uniforme sur $[0\\,;12]$. **1.** Calculer $P(X\\leqslant 4)$. **2.** Calculer $P(X>9)$. **3.** Donner le temps d'attente moyen $E(X)$.",
+      "corrige": [
+        "1. Pour la loi uniforme sur $[a\\,;b]$, $P(X\\leqslant t)=\\dfrac{t-a}{b-a}$. Ici $a=0$, $b=12$, $t=4$ : $P(X\\leqslant 4)=\\dfrac{4-0}{12-0}=\\dfrac{4}{12}=\\dfrac13\\approx 0{,}333.$",
+        "2. On utilise $P(X>t)=\\dfrac{b-t}{b-a}$ : $P(X>9)=\\dfrac{12-9}{12-0}=\\dfrac{3}{12}=\\dfrac14=0{,}25.$",
+        "3. L'espérance est le milieu de l'intervalle : $E(X)=\\dfrac{a+b}{2}=\\dfrac{0+12}{2}=6$ minutes."
+      ],
+      "reponse": "$P(X\\leqslant 4)=\\dfrac13\\approx 0{,}333$ ; $P(X>9)=0{,}25$ ; $E(X)=6$ minutes."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "modelisation-temps-attente",
+      "enonce": "La durée $X$ (en minutes) d'une communication téléphonique suit une loi exponentielle de durée moyenne $3$ minutes. **1.** Déterminer le paramètre $\\lambda$. **2.** Calculer la probabilité qu'un appel dure plus de $5$ minutes. **3.** Calculer $P(2\\leqslant X\\leqslant 4)$. (Valeurs approchées au millième.)",
+      "corrige": [
+        "1. La moyenne d'une loi exponentielle est $E(X)=\\dfrac{1}{\\lambda}$. Comme $E(X)=3$, on a $\\lambda=\\dfrac{1}{3}\\approx 0{,}333.$",
+        "2. $P(X>5)=e^{-\\lambda t}=e^{-\\frac{1}{3}\\times 5}=e^{-\\frac{5}{3}}\\approx 0{,}189.$",
+        "3. $P(2\\leqslant X\\leqslant 4)=e^{-\\lambda\\times 2}-e^{-\\lambda\\times 4}=e^{-\\frac{2}{3}}-e^{-\\frac{4}{3}}.$",
+        "Valeur approchée : $e^{-\\frac{2}{3}}-e^{-\\frac{4}{3}}\\approx 0{,}513-0{,}264=0{,}250.$"
+      ],
+      "reponse": "$\\lambda=\\dfrac13\\approx 0{,}333$ ; $P(X>5)=e^{-5/3}\\approx 0{,}189$ ; $P(2\\leqslant X\\leqslant 4)=e^{-2/3}-e^{-4/3}\\approx 0{,}250.$"
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "loi-a-densite",
+      "enonce": "On considère la fonction $f$ définie sur $[0\\,;4]$ par $f(x)=kx$, où $k$ est un réel positif. **1.** Déterminer la valeur de $k$ pour que $f$ soit une densité de probabilité sur $[0\\,;4]$. Une variable $X$ admet alors $f$ pour densité. **2.** Calculer $P(1\\leqslant X\\leqslant 3)$. **3.** Calculer l'espérance $E(X)$.",
+      "corrige": [
+        "1. $f$ est continue et positive sur $[0\\,;4]$ dès que $k\\geqslant 0$. Pour que ce soit une densité, l'aire totale doit valoir $1$ : $\\displaystyle\\int_0^4 kx\\,dx=k\\left[\\dfrac{x^2}{2}\\right]_0^4=k\\times\\dfrac{16}{2}=8k.$",
+        "On résout $8k=1$, d'où $k=\\dfrac18$. La densité est donc $f(x)=\\dfrac{x}{8}$ sur $[0\\,;4]$.",
+        "2. $P(1\\leqslant X\\leqslant 3)=\\displaystyle\\int_1^3 \\dfrac{x}{8}\\,dx=\\dfrac18\\left[\\dfrac{x^2}{2}\\right]_1^3=\\dfrac18\\times\\dfrac{9-1}{2}=\\dfrac18\\times 4=\\dfrac12=0{,}5.$",
+        "3. $E(X)=\\displaystyle\\int_0^4 x\\,f(x)\\,dx=\\int_0^4 x\\cdot\\dfrac{x}{8}\\,dx=\\dfrac18\\int_0^4 x^2\\,dx=\\dfrac18\\left[\\dfrac{x^3}{3}\\right]_0^4=\\dfrac18\\times\\dfrac{64}{3}=\\dfrac{8}{3}\\approx 2{,}667.$"
+      ],
+      "reponse": "$k=\\dfrac18$ (densité $f(x)=\\frac{x}{8}$) ; $P(1\\leqslant X\\leqslant 3)=0{,}5$ ; $E(X)=\\dfrac83\\approx 2{,}667.$"
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "temps-attente",
+      "enonce": "Un service d'assistance téléphonique étudie le parcours d'un client. On s'intéresse d'abord au temps d'attente avant qu'un conseiller décroche, puis à la durée de l'appel.\n\n**Partie A — Temps d'attente.** Le temps d'attente $T$ (en minutes) avant qu'un conseiller réponde suit une loi exponentielle de paramètre $\\lambda$. Le temps d'attente moyen constaté est de $2$ minutes.\n**1.** Déterminer $\\lambda$, puis donner l'expression de la densité $f$ de $T$ pour $t\\geqslant 0$.\n**2.** Calculer la probabilité qu'un client attende plus de $3$ minutes (valeur approchée au millième).\n**3.** Un client patiente déjà depuis $2$ minutes. Quelle est la probabilité qu'il attende encore plus de $3$ minutes supplémentaires ? On nommera la propriété utilisée.\n\n**Partie B — Durée de l'appel.** La durée $D$ (en minutes) de l'appel avec le conseiller est modélisée par une loi uniforme sur $[4\\,;12]$.\n**4.** Calculer $P(D\\leqslant 6)$.\n**5.** Déterminer la durée moyenne d'un appel.\n**6.** Sachant qu'un appel dure au moins $8$ minutes, calculer la probabilité qu'il dure au moins $10$ minutes.",
+      "corrige": [
+        "1. La moyenne d'une loi exponentielle est $E(T)=\\dfrac{1}{\\lambda}$. Comme $E(T)=2$, on a $\\lambda=\\dfrac12=0{,}5.$ La densité est donc $f(t)=\\lambda e^{-\\lambda t}=0{,}5\\,e^{-0{,}5t}$ pour $t\\geqslant 0$ (et $f(t)=0$ pour $t<0$).",
+        "2. Pour la loi exponentielle, $P(T>t)=e^{-\\lambda t}$. Donc $P(T>3)=e^{-0{,}5\\times 3}=e^{-1{,}5}\\approx 0{,}223.$",
+        "3. On cherche $P_{T>2}(T>2+3)=P_{T>2}(T>5)$. La loi exponentielle possède la propriété d'**absence de mémoire** : $P_{T>s}(T>s+t)=P(T>t)$. Avec $s=2$ et $t=3$, cela vaut $P(T>3)=e^{-1{,}5}\\approx 0{,}223.$ La probabilité est la même que pour un client qui vient d'arriver : le temps déjà écoulé ne compte pas.",
+        "4. Pour la loi uniforme sur $[a\\,;b]$, $P(D\\leqslant t)=\\dfrac{t-a}{b-a}$. Ici $a=4$, $b=12$ : $P(D\\leqslant 6)=\\dfrac{6-4}{12-4}=\\dfrac{2}{8}=0{,}25.$",
+        "5. L'espérance de la loi uniforme est le milieu de l'intervalle : $E(D)=\\dfrac{a+b}{2}=\\dfrac{4+12}{2}=8$ minutes.",
+        "6. Comme $\\{D\\geqslant 10\\}\\subset\\{D\\geqslant 8\\}$, on a $P_{D\\geqslant 8}(D\\geqslant 10)=\\dfrac{P(D\\geqslant 10)}{P(D\\geqslant 8)}$. Avec $P(D\\geqslant t)=\\dfrac{b-t}{b-a}$ : $P(D\\geqslant 10)=\\dfrac{12-10}{8}=\\dfrac{2}{8}$ et $P(D\\geqslant 8)=\\dfrac{12-8}{8}=\\dfrac{4}{8}$, d'où $\\dfrac{2/8}{4/8}=\\dfrac24=0{,}5.$"
+      ],
+      "reponse": "Partie A : $\\lambda=0{,}5$, $f(t)=0{,}5e^{-0{,}5t}$ ; $P(T>3)=e^{-1{,}5}\\approx 0{,}223$ ; par absence de mémoire, la probabilité d'attendre encore $3$ min vaut aussi $\\approx 0{,}223$. Partie B : $P(D\\leqslant 6)=0{,}25$ ; $E(D)=8$ min ; $P_{D\\geqslant 8}(D\\geqslant 10)=0{,}5.$"
     }
   ]
 }

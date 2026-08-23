@@ -90,6 +90,60 @@
         "Le seuil est franchi entre la $8^{\\text{e}}$ et la $9^{\\text{e}}$ heure ; à l'heure près, il faut donc $t = 9$ heures pour que la population dépasse $3000$."
       ],
       "reponse": "Au bout d'environ $9$ heures (car $t > \\dfrac{\\ln 6}{0{,}2} \\approx 8{,}95$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier l'expression $A = 2\\ln 6 - \\ln 4 - \\ln 9$.",
+      "corrige": [
+        "On fait d'abord descendre le coefficient dans le logarithme : $2\\ln 6 = \\ln(6^{2}) = \\ln 36$.",
+        "On regroupe alors la somme de logarithmes en un seul quotient : $A = \\ln 36 - \\ln 4 - \\ln 9 = \\ln\\!\\left(\\dfrac{36}{4\\times 9}\\right)$.",
+        "On calcule le contenu : $\\dfrac{36}{4\\times 9} = \\dfrac{36}{36} = 1$, donc $A = \\ln 1$.",
+        "Or $\\ln 1 = 0$."
+      ],
+      "reponse": "$A = 0$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "inequations",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $\\ln(2x-3) < \\ln(x+1)$.",
+      "corrige": [
+        "Condition d'existence : il faut $2x-3>0$ **et** $x+1>0$, soit $x>\\dfrac{3}{2}$ et $x>-1$. La contrainte la plus forte l'emporte : on travaille sur $\\left]\\dfrac{3}{2}\\,;+\\infty\\right[$.",
+        "La fonction $\\ln$ est strictement croissante, elle conserve le sens de l'inégalité : $\\ln(2x-3)<\\ln(x+1) \\iff 2x-3 < x+1$.",
+        "On résout : $2x - x < 1+3$, soit $x < 4$.",
+        "On croise avec la condition d'existence $x>\\dfrac{3}{2}$ : les solutions vérifient $\\dfrac{3}{2} < x < 4$."
+      ],
+      "reponse": "$S = \\left]\\dfrac{3}{2}\\,;4\\right[$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "etude-de-fonction",
+      "enonce": "Soit $f$ la fonction définie sur $]0\\,;+\\infty[$ par $f(x) = x - \\ln x$. Déterminer les limites de $f$ en $0^{+}$ et en $+\\infty$, étudier ses variations, puis en déduire que $f(x)>0$ pour tout $x>0$.",
+      "corrige": [
+        "Limite en $0^{+}$ : quand $x\\to 0^{+}$, $x\\to 0$ et $\\ln x\\to -\\infty$, donc $-\\ln x\\to +\\infty$. Ainsi $f(x) = x - \\ln x \\to +\\infty$.",
+        "Limite en $+\\infty$ : on factorise par $x$ : $f(x) = x\\left(1 - \\dfrac{\\ln x}{x}\\right)$. Par croissance comparée, $\\dfrac{\\ln x}{x}\\to 0$, donc le facteur entre parenthèses tend vers $1$ et $f(x)\\to +\\infty$.",
+        "Dérivée : $f'(x) = 1 - \\dfrac{1}{x} = \\dfrac{x-1}{x}$. Sur $]0\\,;+\\infty[$, $x>0$, donc $f'(x)$ est du signe de $x-1$.",
+        "Ainsi $f'(x)<0$ sur $]0\\,;1[$ et $f'(x)>0$ sur $]1\\,;+\\infty[$ : $f$ décroît sur $]0\\,;1[$, croît sur $]1\\,;+\\infty[$ et admet un minimum en $x=1$.",
+        "Ce minimum vaut $f(1) = 1 - \\ln 1 = 1 - 0 = 1$. Le minimum de $f$ sur $]0\\,;+\\infty[$ étant $1$, on a $f(x)\\geqslant 1 > 0$ pour tout $x>0$, ce qui prouve que $f(x)>0$."
+      ],
+      "reponse": "$\\lim\\limits_{0^{+}} f = +\\infty$, $\\lim\\limits_{+\\infty} f = +\\infty$ ; $f$ décroît sur $]0\\,;1[$, croît sur $]1\\,;+\\infty[$, minimum $f(1)=1$. Comme ce minimum vaut $1>0$, on a $f(x)>0$ pour tout $x>0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "applications",
+      "enonce": "Une tasse de café est servie à $90\\,^{\\circ}\\text{C}$ dans une pièce maintenue à $20\\,^{\\circ}\\text{C}$. Sa température (en degrés Celsius) au bout de $t$ minutes est modélisée par $T(t) = 20 + 70\\,e^{-0{,}05 t}$, pour $t\\geqslant 0$.\n\n1. Vérifier que $T(0) = 90$ et interpréter.\n2. Déterminer $\\lim\\limits_{t\\to +\\infty} T(t)$ et interpréter ce résultat dans le contexte.\n3. Étudier le sens de variation de $T$ sur $[0\\,;+\\infty[$.\n4. Déterminer, à la minute près, l'instant où la température atteint $55\\,^{\\circ}\\text{C}$. On donne $\\ln 2 \\approx 0{,}69$.\n5. Déterminer au bout de combien de temps la température devient inférieure à $30\\,^{\\circ}\\text{C}$. On donne $\\ln 7 \\approx 1{,}95$.",
+      "corrige": [
+        "1. $T(0) = 20 + 70\\,e^{-0{,}05\\times 0} = 20 + 70\\,e^{0} = 20 + 70 = 90$. La température initiale du café est bien $90\\,^{\\circ}\\text{C}$, conforme à l'énoncé.",
+        "2. Quand $t\\to +\\infty$, $-0{,}05t\\to -\\infty$, donc $e^{-0{,}05t}\\to 0^{+}$ et $70\\,e^{-0{,}05t}\\to 0$. Ainsi $\\lim\\limits_{t\\to +\\infty} T(t) = 20$. La droite $T=20$ est asymptote horizontale : le café refroidit et sa température tend vers celle de la pièce ($20\\,^{\\circ}\\text{C}$).",
+        "3. $T$ est dérivable et $T'(t) = 70\\times(-0{,}05)\\,e^{-0{,}05t} = -3{,}5\\,e^{-0{,}05t}$. Comme $e^{-0{,}05t}>0$, on a $T'(t)<0$ pour tout $t\\geqslant 0$ : $T$ est strictement décroissante sur $[0\\,;+\\infty[$. Le café ne cesse de refroidir.",
+        "4. On résout $T(t) = 55$ : $20 + 70\\,e^{-0{,}05t} = 55$, soit $70\\,e^{-0{,}05t} = 35$, puis $e^{-0{,}05t} = \\dfrac{35}{70} = \\dfrac{1}{2}$. On applique $\\ln$ : $-0{,}05t = \\ln\\!\\left(\\dfrac{1}{2}\\right) = -\\ln 2$, d'où $t = \\dfrac{\\ln 2}{0{,}05} = 20\\ln 2 \\approx 20\\times 0{,}69 = 13{,}8$. La température atteint $55\\,^{\\circ}\\text{C}$ au bout d'environ $14$ minutes.",
+        "5. On résout $T(t) < 30$ : $20 + 70\\,e^{-0{,}05t} < 30$, soit $70\\,e^{-0{,}05t} < 10$, puis $e^{-0{,}05t} < \\dfrac{10}{70} = \\dfrac{1}{7}$. On applique $\\ln$ (strictement croissante, sens conservé) : $-0{,}05t < \\ln\\!\\left(\\dfrac{1}{7}\\right) = -\\ln 7$. On divise ensuite par $-0{,}05<0$, ce qui **inverse** le sens de l'inégalité : $t > \\dfrac{\\ln 7}{0{,}05} = 20\\ln 7 \\approx 20\\times 1{,}95 = 39$. La température passe sous $30\\,^{\\circ}\\text{C}$ au bout d'environ $39$ minutes (pour $t>39$ min)."
+      ],
+      "reponse": "$T(0)=90\\,^{\\circ}\\text{C}$ ; $\\lim\\limits_{+\\infty} T = 20\\,^{\\circ}\\text{C}$ (asymptote, température de la pièce) ; $T$ strictement décroissante car $T'(t)=-3{,}5\\,e^{-0{,}05t}<0$ ; $T=55\\,^{\\circ}\\text{C}$ pour $t=20\\ln 2\\approx 14$ min ; $T<30\\,^{\\circ}\\text{C}$ pour $t>20\\ln 7\\approx 39$ min."
     }
   ]
 }
