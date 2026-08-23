@@ -84,6 +84,57 @@
         "En moins de $20$ secondes, tout le volume sanguin a fait un tour : c'est ainsi que l'organisme alimente les muscles pendant l'effort."
       ],
       "reponse": "Repos : $4{,}9$ L/min ; effort : $17{,}6$ L/min ; facteur $\\approx 3{,}6$ ; tout le sang ($5$ L) circule en $\\approx 17$ s à l'effort."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "debit-volumique",
+      "enonce": "Une poche de perfusion contient un volume $V = 750$ mL de solution, à administrer en une durée $\\Delta t = 5$ h. On rappelle $D = \\dfrac{V}{\\Delta t}$. 1) Convertir la durée en minutes. 2) Calculer le débit de la perfusion en mL/min.",
+      "corrige": [
+        "Conversion de la durée : $1$ h $= 60$ min, donc $\\Delta t = 5 \\times 60 = 300$ min.",
+        "Débit : $D = \\dfrac{V}{\\Delta t} = \\dfrac{750}{300} = 2{,}5$ mL/min.",
+        "Chaque minute, $2{,}5$ mL de solution passent dans la veine du patient."
+      ],
+      "reponse": "$\\Delta t = 300$ min et $D = \\dfrac{750}{300} = 2{,}5$ mL/min."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "pression-force",
+      "enonce": "Une personne en équilibre sur la pointe d'un seul pied appuie sur le sol avec une force pressante $F = 700$ N répartie sur une surface d'appui $S = 50$ cm². On rappelle $p = \\dfrac{F}{S}$. 1) Convertir la surface en mètres carrés. 2) Calculer la pression exercée sur le sol, en pascals.",
+      "corrige": [
+        "Conversion de la surface : une aire se convertit avec le carré, $1$ cm² $= 10^{-4}$ m². Donc $S = 50$ cm² $= 50 \\times 10^{-4} = 5{,}0 \\times 10^{-3}$ m².",
+        "Pression : $p = \\dfrac{F}{S} = \\dfrac{700}{5{,}0 \\times 10^{-3}} = 140\\,000$ Pa, soit $1{,}4 \\times 10^{5}$ Pa.",
+        "Concentrer tout le poids sur une petite surface d'appui donne une pression élevée : c'est le même effet qu'un talon aiguille."
+      ],
+      "reponse": "$S = 5{,}0 \\times 10^{-3}$ m² et $p = \\dfrac{700}{5{,}0 \\times 10^{-3}} = 1{,}4 \\times 10^{5}$ Pa."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "statique-fluides",
+      "enonce": "Pour qu'une perfusion s'écoule dans une veine, on suspend la poche plus haut que le bras du patient. La solution a une masse volumique $\\rho = 1000$ kg/m³ et on prend $g = 10$ N/kg. La poche est placée à une hauteur $h = 1{,}2$ m au-dessus du point de perfusion. On rappelle $\\Delta p = \\rho g h$ et $1$ mmHg $\\approx 133$ Pa. 1) Calculer la pression $\\Delta p$ due à la colonne de liquide, en pascals. 2) Convertir $\\Delta p$ en mmHg. 3) Sachant que la pression du sang dans la veine est d'environ $10$ mmHg, expliquer pourquoi il faut suspendre la poche en hauteur.",
+      "corrige": [
+        "Pression de la colonne de liquide : $\\Delta p = \\rho g h = 1000 \\times 10 \\times 1{,}2 = 12\\,000$ Pa.",
+        "Conversion en mmHg : $\\Delta p = \\dfrac{12\\,000}{133} \\approx 90$ mmHg.",
+        "La colonne de liquide crée à l'aiguille une pression d'environ $90$ mmHg, bien supérieure aux $10$ mmHg de la veine : le liquide peut donc entrer dans la veine.",
+        "Si la poche était au niveau du bras ($h = 0$), on aurait $\\Delta p = 0$ : rien ne pousserait le liquide contre la pression veineuse et la perfusion ne s'écoulerait pas. C'est la hauteur qui fournit la pression nécessaire."
+      ],
+      "reponse": "$\\Delta p = 12\\,000$ Pa $\\approx 90$ mmHg, très supérieure aux $10$ mmHg de la veine : c'est cette pression de colonne qui pousse le liquide dans la veine, d'où la nécessité de suspendre la poche en hauteur."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "fluides-pression-sanguine",
+      "enonce": "Lors d'une consultation, on relève chez un patient les données suivantes : fréquence cardiaque $f_C = 80$ bpm, volume d'éjection systolique $VES = 70$ mL, tension artérielle $14\\,/\\,9$ (en cmHg). L'aorte a une section $S = 3{,}5$ cm². Le sang a une masse volumique $\\rho = 1060$ kg/m³ et on prend $g = 10$ N/kg. On rappelle $DC = f_C \\times VES$, $D = v \\times S$, $\\Delta p = \\rho g h$, $1$ cmHg $= 10$ mmHg et $1$ mmHg $\\approx 133$ Pa. 1) Calculer le débit cardiaque $DC$ en L/min. 2) En déduire la vitesse moyenne $v$ du sang dans l'aorte, en m/s (on convertira $DC$ en m³/s et $S$ en m²). 3) Exprimer la tension $14\\,/\\,9$ en mmHg et préciser laquelle est la systolique et laquelle est la diastolique. 4) Convertir la pression systolique en pascals. 5) Le cerveau est situé à une hauteur $h = 0{,}40$ m au-dessus du cœur. Calculer la différence de pression $\\Delta p$ entre le cœur et le cerveau, en mmHg, puis en déduire la pression systolique au niveau du cerveau.",
+      "corrige": [
+        "1. Débit cardiaque : $DC = f_C \\times VES = 80 \\times 70 = 5600$ mL/min $= 5{,}6$ L/min.",
+        "2. Conversions : $DC = 5{,}6$ L/min $= 5{,}6 \\times 10^{-3}$ m³/min $= \\dfrac{5{,}6 \\times 10^{-3}}{60} \\approx 9{,}3 \\times 10^{-5}$ m³/s ; $S = 3{,}5$ cm² $= 3{,}5 \\times 10^{-4}$ m². La relation $D = v \\times S$ donne $v = \\dfrac{D}{S} = \\dfrac{9{,}3 \\times 10^{-5}}{3{,}5 \\times 10^{-4}} \\approx 0{,}27$ m/s.",
+        "3. Conversion en mmHg (on multiplie par $10$) : $14$ cmHg $= 140$ mmHg et $9$ cmHg $= 90$ mmHg. La systolique est la valeur maximale (cœur contracté), soit $140$ mmHg ; la diastolique est la valeur minimale (cœur relâché), soit $90$ mmHg.",
+        "4. Pression systolique en pascals : $p = 140 \\times 133 = 18\\,620$ Pa $\\approx 1{,}9 \\times 10^{4}$ Pa.",
+        "5. Différence de pression : $\\Delta p = \\rho g h = 1060 \\times 10 \\times 0{,}40 = 4240$ Pa, soit $\\dfrac{4240}{133} \\approx 32$ mmHg. Le cerveau est plus haut que le cœur : la pression y est plus faible de $\\Delta p$. Pression systolique au cerveau $= 140 - 32 = 108$ mmHg."
+      ],
+      "reponse": "$DC = 5{,}6$ L/min ; $v \\approx 0{,}27$ m/s ; tension $= 140\\,/\\,90$ mmHg (systolique $140$, diastolique $90$) ; systolique $\\approx 1{,}9 \\times 10^{4}$ Pa ; $\\Delta p \\approx 32$ mmHg d'où une systolique au cerveau d'environ $108$ mmHg."
     }
   ]
 }

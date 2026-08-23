@@ -87,6 +87,59 @@
         "**c.** Toute la matière qui entre ressort : le débit massique de sortie est la somme des débits massiques d'entrée. La masse se conserve, le procédé n'en crée ni n'en perd."
       ],
       "reponse": "$Q_{m1} \\approx 0{,}167$ kg·s⁻¹, $Q_{m2} \\approx 0{,}043$ kg·s⁻¹ ; $Q_{m,s} \\approx 0{,}21$ kg·s⁻¹ (conservation de la masse)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "La température d'un réacteur est réglée en boucle fermée par un correcteur **proportionnel**. La consigne est $\\theta_c = 60{,}0\\ \\text{°C}$ et le gain du correcteur vaut $k = 5{,}0\\ \\%\\cdot\\text{°C}^{-1}$. La commande envoyée à la vanne de chauffage est $S = k\\times\\varepsilon$ (exprimée en % d'ouverture).\n\n**a.** À un instant, la sonde mesure $\\theta_m = 52{,}0\\ \\text{°C}$. Calcule l'écart $\\varepsilon$ puis la commande $S$.\n**b.** Plus tard, la sonde mesure $\\theta_m = 58{,}0\\ \\text{°C}$. Calcule à nouveau $\\varepsilon$ puis $S$.\n**c.** Que montre la comparaison des deux commandes sur le comportement d'un correcteur proportionnel, comparé à un correcteur tout ou rien (TOR) ?",
+      "corrige": [
+        "**a.** Écart : $\\varepsilon = \\theta_c - \\theta_m = 60{,}0 - 52{,}0 = +8{,}0\\ \\text{°C}$. Commande : $S = k\\times\\varepsilon = 5{,}0 \\times 8{,}0 = 40\\ \\%$.",
+        "**b.** Écart : $\\varepsilon = 60{,}0 - 58{,}0 = +2{,}0\\ \\text{°C}$. Commande : $S = 5{,}0 \\times 2{,}0 = 10\\ \\%$.",
+        "**c.** À mesure que la température se rapproche de la consigne, l'écart diminue, donc la commande est **dosée** et diminue progressivement (de 40 % à 10 %). Un correcteur TOR, lui, resterait à fond (ON) puis basculerait brutalement à l'arrêt (OFF) : le proportionnel évite les à-coups et limite le dépassement."
+      ],
+      "reponse": "**a.** $\\varepsilon = +8{,}0$ °C, $S = 40\\ \\%$. **b.** $\\varepsilon = +2{,}0$ °C, $S = 10\\ \\%$. **c.** La commande est dosée et décroît quand on approche la consigne, contrairement au TOR (ON/OFF)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "flux-energie",
+      "enonce": "Une résistance chauffante d'un procédé absorbe une puissance électrique $P_a = 2{,}0\\ \\text{kW}$ pendant une durée $\\Delta t = 30\\ \\text{min}$. Son rendement de chauffe vaut $\\eta = 0{,}95$ (5 % de l'énergie est perdue par les amenées de courant et le boîtier).\n\n**a.** Calcule l'énergie électrique absorbée $E_a$ pendant cette durée, en kJ.\n**b.** Déduis-en l'énergie utile $E_u$ transmise au fluide, puis l'énergie perdue $E_\\text{pertes}$.",
+      "corrige": [
+        "**a.** On convertit d'abord en unités SI : $P_a = 2{,}0\\ \\text{kW} = 2{,}0\\times 10^{3}\\ \\text{W}$ et $\\Delta t = 30\\ \\text{min} = 30\\times 60 = 1800\\ \\text{s}$.",
+        "Énergie absorbée : $E_a = P_a \\times \\Delta t = 2{,}0\\times 10^{3} \\times 1800 = 3{,}6\\times 10^{6}\\ \\text{J} = 3600\\ \\text{kJ}$.",
+        "**b.** Le rendement relie l'énergie utile à l'énergie absorbée : $E_u = \\eta \\times E_a = 0{,}95 \\times 3{,}6\\times 10^{6} = 3{,}42\\times 10^{6}\\ \\text{J} = 3420\\ \\text{kJ}$.",
+        "Énergie perdue : $E_\\text{pertes} = E_a - E_u = 3600 - 3420 = 180\\ \\text{kJ}$. On vérifie que $E_u + E_\\text{pertes} = E_a$ : cohérent."
+      ],
+      "reponse": "$E_a = 3{,}6\\times 10^{6}$ J $= 3600$ kJ ; $E_u = 3420$ kJ ; $E_\\text{pertes} = 180$ kJ."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "flux-matiere",
+      "enonce": "Un mélangeur continu doit produire une solution saline avec un débit massique de sortie $Q_{m,s} = 0{,}50\\ \\text{kg·s}^{-1}$, en régime permanent. La première entrée est de l'eau ($\\rho_1 = 1000\\ \\text{kg·m}^{-3}$) au débit volumique $Q_{V1} = 24\\ \\text{L·min}^{-1}$. La deuxième entrée est une saumure de masse volumique $\\rho_2 = 1200\\ \\text{kg·m}^{-3}$.\n\n**a.** Calcule le débit massique $Q_{m1}$ de l'eau, en kg·s⁻¹.\n**b.** Déduis-en le débit massique $Q_{m2}$ que doit fournir la saumure.\n**c.** Calcule le débit volumique $Q_{V2}$ de la saumure à régler, exprimé en L·min⁻¹.",
+      "corrige": [
+        "**a.** Conversion en SI : $Q_{V1} = 24\\ \\text{L·min}^{-1} = \\dfrac{24\\times 10^{-3}}{60} = 4{,}0\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$. Puis $Q_{m1} = \\rho_1 \\times Q_{V1} = 1000 \\times 4{,}0\\times 10^{-4} = 0{,}40\\ \\text{kg·s}^{-1}$.",
+        "**b.** En régime permanent, conservation de la masse : $Q_{m,s} = Q_{m1} + Q_{m2}$, donc $Q_{m2} = Q_{m,s} - Q_{m1} = 0{,}50 - 0{,}40 = 0{,}10\\ \\text{kg·s}^{-1}$.",
+        "**c.** On inverse la relation $Q_m = \\rho\\,Q_V$ (attention : $Q_V = Q_m/\\rho$, pas l'inverse) : $Q_{V2} = \\dfrac{Q_{m2}}{\\rho_2} = \\dfrac{0{,}10}{1200} = 8{,}33\\times 10^{-5}\\ \\text{m}^3\\text{·s}^{-1}$.",
+        "Reconversion en L·min⁻¹ : $Q_{V2} = 8{,}33\\times 10^{-5}\\ \\text{m}^3\\text{·s}^{-1} \\times 1000 \\times 60 = 5{,}0\\ \\text{L·min}^{-1}$."
+      ],
+      "reponse": "$Q_{m1} = 0{,}40$ kg·s⁻¹ ; $Q_{m2} = 0{,}10$ kg·s⁻¹ ; $Q_{V2} = 5{,}0$ L·min⁻¹."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "procede-flux",
+      "enonce": "**Problème — Pasteurisateur de lait en continu.**\n\nDans une laiterie, un pasteuriseur chauffe du lait qui circule en continu dans une canalisation. Le lait entre à un débit volumique $Q_V = 30\\ \\text{L·min}^{-1}$ ; sa masse volumique est $\\rho = 1030\\ \\text{kg·m}^{-3}$. Une résistance électrique chauffe le lait ; elle absorbe une puissance $P_a = 20\\ \\text{kW}$ et a un rendement $\\eta = 0{,}85$. Un régulateur maintient la température de sortie du lait à la consigne $\\theta_c = 72{,}0\\ \\text{°C}$ : une sonde placée en sortie mesure la température réelle et commande la résistance. On considère le procédé en régime permanent.\n\n**1.** S'agit-il d'une boucle ouverte ou d'une boucle fermée ? Justifie, puis nomme les quatre organes de la boucle de régulation en les identifiant sur cette installation.\n**2.** Le régulateur est de type tout ou rien. À un instant, la sonde mesure $\\theta_m = 70{,}0\\ \\text{°C}$. Calcule l'écart $\\varepsilon$ et indique si la résistance chauffe.\n**3.** Calcule la puissance utile $P_u$ réellement transmise au lait, puis la puissance perdue $P_\\text{pertes}$.\n**4.** Calcule le débit massique $Q_m$ de lait entrant, en kg·s⁻¹.\n**5.** Quel est le débit massique de lait sortant ? Justifie par un bilan de matière.\n**6.** Pendant une durée $\\Delta t = 1{,}0\\ \\text{min}$ de fonctionnement, calcule l'énergie utile $E_u$ fournie au lait et la masse $m$ de lait traitée.",
+      "corrige": [
+        "**1.** C'est une **boucle fermée** : la sonde de sortie renvoie en permanence une **mesure** vers le régulateur, qui corrige l'action — c'est ce retour (*feedback*) qui signe la boucle fermée. Les quatre organes : la **consigne** (72,0 °C, valeur voulue), le **capteur** (la sonde de température en sortie), le **correcteur** (le régulateur qui compare mesure et consigne) et l'**actionneur** (la résistance chauffante).",
+        "**2.** Écart : $\\varepsilon = \\theta_c - \\theta_m = 72{,}0 - 70{,}0 = +2{,}0\\ \\text{°C}$. L'écart est positif, donc en tout ou rien la résistance **chauffe** (elle est à l'état ON).",
+        "**3.** Le rendement donne la puissance utile : $P_u = \\eta \\times P_a = 0{,}85 \\times 20 = 17\\ \\text{kW}$. Puissance perdue : $P_\\text{pertes} = P_a - P_u = 20 - 17 = 3{,}0\\ \\text{kW}$.",
+        "**4.** Conversion : $Q_V = 30\\ \\text{L·min}^{-1} = \\dfrac{30\\times 10^{-3}}{60} = 5{,}0\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$. Débit massique : $Q_m = \\rho \\times Q_V = 1030 \\times 5{,}0\\times 10^{-4} = 0{,}515\\ \\text{kg·s}^{-1} \\approx 0{,}52\\ \\text{kg·s}^{-1}$.",
+        "**5.** En régime permanent, rien ne s'accumule : par conservation de la masse, $Q_{m,\\text{sortant}} = Q_{m,\\text{entrant}} = 0{,}52\\ \\text{kg·s}^{-1}$. Le lait n'est ni créé ni détruit, il est seulement chauffé au passage.",
+        "**6.** Durée en SI : $\\Delta t = 1{,}0\\ \\text{min} = 60\\ \\text{s}$. Énergie utile : $E_u = P_u \\times \\Delta t = 17\\times 10^{3} \\times 60 = 1{,}02\\times 10^{6}\\ \\text{J} \\approx 1{,}0\\ \\text{MJ}$. Masse de lait traitée : $m = Q_m \\times \\Delta t = 0{,}515 \\times 60 = 30{,}9\\ \\text{kg} \\approx 31\\ \\text{kg}$."
+      ],
+      "reponse": "Boucle fermée (mesure de retour) ; organes : consigne, capteur, correcteur, actionneur. $\\varepsilon = +2{,}0$ °C : la résistance chauffe. $P_u = 17$ kW, $P_\\text{pertes} = 3{,}0$ kW. $Q_m \\approx 0{,}52$ kg·s⁻¹, identique en sortie (régime permanent). En 1,0 min : $E_u \\approx 1{,}0$ MJ, $m \\approx 31$ kg de lait."
     }
   ]
 }

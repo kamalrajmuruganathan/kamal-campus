@@ -86,6 +86,60 @@
         "$C_A = \\dfrac{0{,}10 \\times 14{,}0}{20{,}0} = 0{,}070\\ \\mathrm{mol\\cdot L^{-1}}$. L'atout de la conductimétrie : $V_E$ se lit par intersection de droites, sans indicateur coloré."
       ],
       "reponse": "$\\sigma$ décroît (perte des $\\mathrm{H_3O^+}$) puis croît (excès de $\\mathrm{HO^-}$) ; $C_A = 0{,}070\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "acides-bases-ph",
+      "enonce": "Une solution d'acide nitrique $\\mathrm{HNO_3}$ (acide fort) a une concentration apportée $c = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. (a) Calcule son pH. (b) En déduis la concentration en ions hydroxyde $[\\mathrm{HO^-}]$ à $25\\ \\mathrm{°C}$, sachant que $K_e = 1{,}0\\times 10^{-14}$.",
+      "corrige": [
+        "(a) L'acide nitrique est un acide **fort** : il réagit totalement avec l'eau, donc $[\\mathrm{H_3O^+}] = c = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "On applique $\\mathrm{pH} = -\\log[\\mathrm{H_3O^+}] = -\\log(5{,}0\\times 10^{-3}) = 2{,}3$.",
+        "(b) Le produit ionique de l'eau relie les deux concentrations : $K_e = [\\mathrm{H_3O^+}][\\mathrm{HO^-}]$, donc $[\\mathrm{HO^-}] = \\dfrac{K_e}{[\\mathrm{H_3O^+}]}$.",
+        "$[\\mathrm{HO^-}] = \\dfrac{1{,}0\\times 10^{-14}}{5{,}0\\times 10^{-3}} = 2{,}0\\times 10^{-12}\\ \\mathrm{mol\\cdot L^{-1}}$. On vérifie $\\mathrm{pH} < 7$ et $[\\mathrm{H_3O^+}] > [\\mathrm{HO^-}]$ : la solution est bien acide."
+      ],
+      "reponse": "$\\mathrm{pH} = 2{,}3$ ; $[\\mathrm{HO^-}] = 2{,}0\\times 10^{-12}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Une solution de sulfate de sodium se dissout selon $\\mathrm{Na_2SO_4(s)} \\rightarrow 2\\,\\mathrm{Na^+} + \\mathrm{SO_4^{2-}}$. Sa concentration en soluté apporté est $c = 1{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. On donne $\\lambda(\\mathrm{Na^+}) = 5{,}0\\times 10^{-3}$ et $\\lambda(\\mathrm{SO_4^{2-}}) = 16{,}0\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$. Calcule la conductivité $\\sigma$ de la solution. Attention aux coefficients stœchiométriques et aux unités.",
+      "corrige": [
+        "Une mole de $\\mathrm{Na_2SO_4}$ libère $2$ mol de $\\mathrm{Na^+}$ et $1$ mol de $\\mathrm{SO_4^{2-}}$ : $[\\mathrm{Na^+}] = 2c$ et $[\\mathrm{SO_4^{2-}}] = c$.",
+        "**Conversion indispensable** : les $\\lambda_i$ sont en $\\mathrm{S\\cdot m^2\\cdot mol^{-1}}$, il faut donc les concentrations en $\\mathrm{mol\\cdot m^{-3}}$. Comme $1\\ \\mathrm{mol\\cdot L^{-1}} = 10^3\\ \\mathrm{mol\\cdot m^{-3}}$ : $c = 1{,}0\\ \\mathrm{mol\\cdot m^{-3}}$, d'où $[\\mathrm{Na^+}] = 2{,}0\\ \\mathrm{mol\\cdot m^{-3}}$ et $[\\mathrm{SO_4^{2-}}] = 1{,}0\\ \\mathrm{mol\\cdot m^{-3}}$.",
+        "On applique $\\sigma = \\lambda(\\mathrm{Na^+})\\,[\\mathrm{Na^+}] + \\lambda(\\mathrm{SO_4^{2-}})\\,[\\mathrm{SO_4^{2-}}] = 5{,}0\\times 10^{-3}\\times 2{,}0 + 16{,}0\\times 10^{-3}\\times 1{,}0$.",
+        "$\\sigma = 10{,}0\\times 10^{-3} + 16{,}0\\times 10^{-3} = 26{,}0\\times 10^{-3} = 2{,}6\\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$. Oublier le facteur $2$ sur $[\\mathrm{Na^+}]$ aurait donné un résultat trop petit."
+      ],
+      "reponse": "$\\sigma = 2{,}6\\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "oxydoreduction-piles",
+      "enonce": "On associe les couples $\\mathrm{Ag^+/Ag}$ ($E^\\circ = +0{,}80\\ \\mathrm{V}$) et $\\mathrm{Al^{3+}/Al}$ ($E^\\circ = -1{,}66\\ \\mathrm{V}$) pour former une pile. (a) Identifie la cathode et l'anode, puis écris les deux demi-équations. (b) Établis l'équation de fonctionnement de la pile en équilibrant les électrons — les deux couples n'en échangent pas le même nombre. (c) Calcule la force électromotrice.",
+      "corrige": [
+        "(a) Le couple de plus **haut** potentiel, $\\mathrm{Ag^+/Ag}$, subit la **réduction** : c'est la cathode, borne $\\oplus$. Demi-équation : $\\mathrm{Ag^+} + \\mathrm{e^-} \\rightarrow \\mathrm{Ag}$. Le couple de plus **bas** potentiel, $\\mathrm{Al^{3+}/Al}$, subit l'**oxydation** : c'est l'anode, borne $\\ominus$. Demi-équation : $\\mathrm{Al} \\rightarrow \\mathrm{Al^{3+}} + 3\\,\\mathrm{e^-}$.",
+        "(b) La réduction met en jeu $1\\ \\mathrm{e^-}$, l'oxydation $3\\ \\mathrm{e^-}$ : pour équilibrer les électrons échangés, on multiplie la demi-équation de l'argent par $3$ (PPCM $= 3$). On obtient $3\\,\\mathrm{Ag^+} + 3\\,\\mathrm{e^-} \\rightarrow 3\\,\\mathrm{Ag}$ et $\\mathrm{Al} \\rightarrow \\mathrm{Al^{3+}} + 3\\,\\mathrm{e^-}$.",
+        "On additionne : les $3\\ \\mathrm{e^-}$ se simplifient. Bilan : $3\\,\\mathrm{Ag^+} + \\mathrm{Al} \\rightarrow 3\\,\\mathrm{Ag} + \\mathrm{Al^{3+}}$.",
+        "(c) $E_{\\text{pile}} = E_\\oplus - E_\\ominus = 0{,}80 - (-1{,}66) = 2{,}46\\ \\mathrm{V}$. Le résultat est positif, ce qui confirme le choix des bornes."
+      ],
+      "reponse": "Cathode $\\oplus$ : $\\mathrm{Ag}$ ; anode $\\ominus$ : $\\mathrm{Al}$ ; bilan $3\\,\\mathrm{Ag^+} + \\mathrm{Al} \\rightarrow 3\\,\\mathrm{Ag} + \\mathrm{Al^{3+}}$ ; $E_{\\text{pile}} = 2{,}46\\ \\mathrm{V}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "composition-systemes-chimiques",
+      "enonce": "**Problème — Contrôle d'une solution d'acide chlorhydrique au laboratoire.** Un technicien caractérise une solution $S$ d'acide chlorhydrique (acide fort, ions $\\mathrm{H_3O^+}$ et $\\mathrm{Cl^-}$). Données à $25\\ \\mathrm{°C}$ : $K_e = 1{,}0\\times 10^{-14}$ ; $K_s(\\mathrm{AgCl}) = 1{,}8\\times 10^{-10}$ ; conductivités molaires ioniques $\\lambda(\\mathrm{H_3O^+}) = 35{,}0\\times 10^{-3}$, $\\lambda(\\mathrm{Cl^-}) = 7{,}6\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$ ; couples $\\mathrm{2\\,H_3O^+/H_2}$ ($E^\\circ = 0{,}00\\ \\mathrm{V}$) et $\\mathrm{Zn^{2+}/Zn}$ ($E^\\circ = -0{,}76\\ \\mathrm{V}$). Le pH-mètre affiche $\\mathrm{pH} = 2{,}0$ pour $S$.\\n\\n1. Détermine $[\\mathrm{H_3O^+}]$ dans $S$, puis $[\\mathrm{HO^-}]$.\\n2. $S$ étant un acide fort, en déduis sa concentration apportée $C_A$.\\n3. On dose $V_A = 20{,}0\\ \\mathrm{mL}$ de $S$ par une solution d'hydroxyde de sodium de concentration $C_B = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$). Prévois le volume à l'équivalence $V_E$.\\n4. Calcule la conductivité $\\sigma$ de la solution $S$ **avant** tout ajout de soude.\\n5. À un échantillon de $S$ on ajoute des ions argent $\\mathrm{Ag^+}$ jusqu'à $[\\mathrm{Ag^+}] = 1{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$, sans dilution notable ($[\\mathrm{Cl^-}] = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$). Un précipité de $\\mathrm{AgCl}$ apparaît-il ?\\n6. On plonge une lame de zinc dans $S$ : le zinc est attaqué. Écris l'équation de la réaction et calcule la f.é.m. de la pile $\\mathrm{2\\,H_3O^+/H_2}$–$\\mathrm{Zn^{2+}/Zn}$ correspondante.",
+      "corrige": [
+        "1. Par définition du pH : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-2{,}0} = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. Puis, avec le produit ionique de l'eau, $[\\mathrm{HO^-}] = \\dfrac{K_e}{[\\mathrm{H_3O^+}]} = \\dfrac{1{,}0\\times 10^{-14}}{1{,}0\\times 10^{-2}} = 1{,}0\\times 10^{-12}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "2. L'acide chlorhydrique est un acide **fort** : sa réaction avec l'eau est totale, donc $[\\mathrm{H_3O^+}] = C_A$. On en déduit $C_A = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "3. La réaction de dosage étant $1$ pour $1$, à l'équivalence $C_A V_A = C_B V_E$, d'où $V_E = \\dfrac{C_A V_A}{C_B} = \\dfrac{1{,}0\\times 10^{-2}\\times 20{,}0}{1{,}0\\times 10^{-2}} = 20{,}0\\ \\mathrm{mL}$.",
+        "4. Dans $S$, $[\\mathrm{H_3O^+}] = [\\mathrm{Cl^-}] = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. **Conversion** en $\\mathrm{mol\\cdot m^{-3}}$ : $c = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}} = 10\\ \\mathrm{mol\\cdot m^{-3}}$. Alors $\\sigma = \\big(\\lambda(\\mathrm{H_3O^+}) + \\lambda(\\mathrm{Cl^-})\\big)\\,c = (35{,}0 + 7{,}6)\\times 10^{-3}\\times 10 = 42{,}6\\times 10^{-3}\\times 10 = 0{,}43\\ \\mathrm{S\\cdot m^{-1}}$.",
+        "5. On calcule le quotient de réaction pour $\\mathrm{AgCl(s)} \\rightleftharpoons \\mathrm{Ag^+} + \\mathrm{Cl^-}$ avec les concentrations effectives : $Q_r = [\\mathrm{Ag^+}][\\mathrm{Cl^-}] = 1{,}0\\times 10^{-4}\\times 1{,}0\\times 10^{-2} = 1{,}0\\times 10^{-6}$. On compare à $K_s = 1{,}8\\times 10^{-10}$ : comme $Q_r > K_s$, la solution est sursaturée et un précipité de $\\mathrm{AgCl}$ **se forme**.",
+        "6. Le couple de plus **haut** potentiel, $\\mathrm{2\\,H_3O^+/H_2}$ ($0{,}00\\ \\mathrm{V}$), est réduit (cathode $\\oplus$) ; le zinc, de plus bas potentiel, est oxydé (anode $\\ominus$). Demi-équations : $2\\,\\mathrm{H_3O^+} + 2\\,\\mathrm{e^-} \\rightarrow \\mathrm{H_2} + 2\\,\\mathrm{H_2O}$ et $\\mathrm{Zn} \\rightarrow \\mathrm{Zn^{2+}} + 2\\,\\mathrm{e^-}$. Bilan (2 électrons de part et d'autre) : $\\mathrm{Zn} + 2\\,\\mathrm{H_3O^+} \\rightarrow \\mathrm{Zn^{2+}} + \\mathrm{H_2} + 2\\,\\mathrm{H_2O}$. f.é.m. : $E_{\\text{pile}} = E_\\oplus - E_\\ominus = 0{,}00 - (-0{,}76) = 0{,}76\\ \\mathrm{V}$."
+      ],
+      "reponse": "1. $[\\mathrm{H_3O^+}] = 1{,}0\\times 10^{-2}$ et $[\\mathrm{HO^-}] = 1{,}0\\times 10^{-12}\\ \\mathrm{mol\\cdot L^{-1}}$. 2. $C_A = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. 3. $V_E = 20{,}0\\ \\mathrm{mL}$. 4. $\\sigma = 0{,}43\\ \\mathrm{S\\cdot m^{-1}}$. 5. $Q_r = 1{,}0\\times 10^{-6} > K_s$ : précipitation d'$\\mathrm{AgCl}$. 6. $\\mathrm{Zn} + 2\\,\\mathrm{H_3O^+} \\rightarrow \\mathrm{Zn^{2+}} + \\mathrm{H_2} + 2\\,\\mathrm{H_2O}$ ; $E_{\\text{pile}} = 0{,}76\\ \\mathrm{V}$."
     }
   ]
 }

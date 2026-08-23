@@ -86,6 +86,59 @@
         "Cette longueur d'onde (532 nm) et cette fréquence placent le laser dans le domaine **visible** (lumière verte)."
       ],
       "reponse": "a. $\\Delta t = 2{,}56$ s ; b. les ultrasons ne se propagent pas dans le vide, contrairement à l'onde EM du laser ; c. $f = 5{,}64\\times 10^{14}$ Hz, domaine visible (vert)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "ondes-periodiques",
+      "enonce": "Un diapason vibre et émet un son pur de fréquence $f = 440$ Hz (la note « la »). Le son se propage dans l'air à la célérité $v = 340$ m·s⁻¹.\n\n**a.** Cette onde est-elle mécanique ou électromagnétique ? Peut-elle se propager dans le vide ?\n**b.** Calcule la période $T$ de ce son.\n**c.** Calcule sa longueur d'onde $\\lambda$ dans l'air.",
+      "corrige": [
+        "**a.** Un son est une onde **mécanique** (compressions et dilatations de l'air) : il a besoin d'un milieu matériel et **ne se propage pas dans le vide**.",
+        "**b.** La période est $T = \\dfrac{1}{f} = \\dfrac{1}{440} = 2{,}3\\times 10^{-3}$ s, soit environ $2{,}3$ ms.",
+        "**c.** La longueur d'onde vaut $\\lambda = \\dfrac{v}{f} = \\dfrac{340}{440} = 0{,}77$ m."
+      ],
+      "reponse": "a. onde mécanique (son), ne traverse pas le vide ; b. $T = 2{,}3$ ms ; c. $\\lambda = 0{,}77$ m."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "ondes-periodiques",
+      "enonce": "Un émetteur produit des ultrasons de fréquence $f = 40$ kHz. Ils se propagent d'abord dans l'air ($v_{\\text{air}} = 340$ m·s⁻¹), puis pénètrent dans l'eau où la célérité vaut $v_{\\text{eau}} = 1{,}50\\times 10^{3}$ m·s⁻¹.\n\n**a.** Calcule la longueur d'onde $\\lambda_{\\text{air}}$ des ultrasons dans l'air.\n**b.** Lorsque l'onde passe de l'air à l'eau, sa fréquence change-t-elle ? Calcule alors sa longueur d'onde $\\lambda_{\\text{eau}}$ dans l'eau.",
+      "corrige": [
+        "**a.** On convertit : $f = 40$ kHz $= 4{,}0\\times 10^{4}$ Hz. Dans l'air, $\\lambda_{\\text{air}} = \\dfrac{v_{\\text{air}}}{f} = \\dfrac{340}{4{,}0\\times 10^{4}} = 8{,}5\\times 10^{-3}$ m, soit $8{,}5$ mm.",
+        "**b.** La fréquence est **imposée par la source** : elle ne change **pas** au passage dans l'eau ($f = 4{,}0\\times 10^{4}$ Hz). C'est la célérité qui change, donc la longueur d'onde.",
+        "On calcule $\\lambda_{\\text{eau}} = \\dfrac{v_{\\text{eau}}}{f} = \\dfrac{1{,}50\\times 10^{3}}{4{,}0\\times 10^{4}} = 3{,}8\\times 10^{-2}$ m, soit environ $3{,}8$ cm.",
+        "La longueur d'onde a **augmenté** (l'onde va plus vite dans l'eau), alors que la fréquence est restée identique."
+      ],
+      "reponse": "a. $\\lambda_{\\text{air}} = 8{,}5$ mm ; b. $f$ inchangée (imposée par la source), $\\lambda_{\\text{eau}} = 3{,}8\\times 10^{-2}$ m ($\\approx 3{,}8$ cm)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "spectroscopies",
+      "enonce": "On étudie une solution aqueuse de sulfate de cuivre, de couleur bleue. Son spectre d'absorption UV-visible présente un maximum d'absorption à $\\lambda_{\\max} \\approx 800$ nm.\n\n**a.** Dans quelle zone de couleur se situe $\\lambda_{\\max}$ ? La couleur bleue perçue est-elle cohérente avec cette absorption ?\n**b.** Pour doser cette solution, on utilise la loi de Beer-Lambert $A = \\varepsilon\\,\\ell\\,c$. Une solution étalon de concentration $c_0 = 0{,}100$ mol·L⁻¹ donne, à $\\lambda_{\\max}$, une absorbance $A_0 = 0{,}65$. La solution à doser, mesurée dans les mêmes conditions, a une absorbance $A = 0{,}39$. Détermine sa concentration $c$.\n**c.** Si l'on diluait la solution étalon deux fois, que deviendrait son absorbance ?",
+      "corrige": [
+        "**a.** $\\lambda_{\\max} \\approx 800$ nm correspond au **rouge** (limite du visible). La solution absorbe donc le rouge et laisse passer sa couleur **complémentaire**, le **bleu** : c'est cohérent avec la couleur bleue observée.",
+        "**b.** À longueur d'onde et trajet optique fixés, l'absorbance est **proportionnelle** à la concentration : $\\dfrac{A}{A_0} = \\dfrac{c}{c_0}$, d'où $c = c_0\\times\\dfrac{A}{A_0}$.",
+        "Application : $c = 0{,}100\\times\\dfrac{0{,}39}{0{,}65} = 0{,}060$ mol·L⁻¹.",
+        "**c.** L'absorbance étant proportionnelle à la concentration, diviser la concentration par $2$ **divise l'absorbance par $2$** : $A_0$ passerait de $0{,}65$ à environ $0{,}33$."
+      ],
+      "reponse": "a. absorption dans le rouge ($\\approx 800$ nm) → couleur perçue bleue (complémentaire), cohérent ; b. $c = c_0\\,A/A_0 = 0{,}060$ mol·L⁻¹ ; c. l'absorbance serait divisée par 2 ($\\approx 0{,}33$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Une mission spatiale d'exploration.** Une sonde en orbite autour de la planète Mars communique avec la Terre et cartographie le relief martien. Un télescope de la mission analyse par ailleurs la lumière d'une étoile lointaine. On donne la célérité de la lumière dans le vide $c = 3{,}00\\times 10^{8}$ m·s⁻¹.\n\n**Partie A — Communications et altimétrie radar.**\n**1.** La sonde émet vers la Terre une onde radio de fréquence $f = 8{,}40$ GHz. Quelle est la nature de cette onde ? Peut-elle traverser le vide interplanétaire ? Calcule sa longueur d'onde $\\lambda$ et indique le domaine du spectre électromagnétique concerné.\n**2.** À cet instant, la distance Terre-Mars vaut $d = 2{,}25\\times 10^{11}$ m. Calcule la durée $\\Delta t$ que met le signal pour parcourir, en ligne droite, la distance de la sonde jusqu'à la Terre.\n**3.** Un altimètre radar embarqué envoie une impulsion vers le sol martien ; l'écho est reçu après une durée $\\Delta t' = 2{,}0$ ms. Calcule l'altitude $h$ de la sonde au-dessus du sol.\n\n**Partie B — Analyse de la lumière d'une étoile.**\n**4.** Le spectre de l'étoile présente de fines raies noires sur un fond continu coloré. De quel type de spectre s'agit-il et que révèlent ces raies ?\n**5.** Une raie de l'hydrogène, mesurée à $\\lambda_0 = 656{,}3$ nm au laboratoire, apparaît à $\\lambda = 657{,}8$ nm dans le spectre de l'étoile. Dans quel sens se fait le décalage ? Comment se nomme-t-il ? L'étoile se rapproche-t-elle ou s'éloigne-t-elle de la Terre ?\n**6.** Calcule la fréquence $f_0$ correspondant à la longueur d'onde $\\lambda_0 = 656{,}3$ nm.",
+      "corrige": [
+        "1. Une onde radio est une onde **électromagnétique** : elle traverse le vide, ce qui est indispensable dans l'espace interplanétaire. On convertit $f = 8{,}40$ GHz $= 8{,}40\\times 10^{9}$ Hz, puis $\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00\\times 10^{8}}{8{,}40\\times 10^{9}} = 3{,}57\\times 10^{-2}$ m ($\\approx 3{,}6$ cm). Cette longueur d'onde (entre 1 m et 1 mm) place l'onde dans le domaine des **micro-ondes**.",
+        "2. Le signal parcourt la distance $d$ en ligne droite à la célérité $c$ : $\\Delta t = \\dfrac{d}{c} = \\dfrac{2{,}25\\times 10^{11}}{3{,}00\\times 10^{8}} = 7{,}50\\times 10^{2}$ s, soit $750$ s $= 12{,}5$ min. Ici le trajet est un **aller simple** : pas de facteur 2.",
+        "3. L'impulsion radar fait un **aller-retour** entre la sonde et le sol : elle parcourt $2h$. Donc $h = \\dfrac{c\\,\\Delta t'}{2}$. On convertit $\\Delta t' = 2{,}0$ ms $= 2{,}0\\times 10^{-3}$ s, puis $h = \\dfrac{3{,}00\\times 10^{8}\\times 2{,}0\\times 10^{-3}}{2} = 3{,}0\\times 10^{5}$ m $= 300$ km. Oublier le facteur 2 donnerait 600 km.",
+        "4. Des raies **noires** sur un fond **continu** forment un spectre d'**absorption** : les gaz plus froids de l'atmosphère de l'étoile absorbent leurs longueurs d'onde caractéristiques. Ces raies constituent une **signature** qui permet d'**identifier les éléments chimiques** présents.",
+        "5. La longueur d'onde observée ($657{,}8$ nm) est **plus grande** que celle de référence ($656{,}3$ nm) : le décalage se fait vers les **grandes longueurs d'onde**, c'est le **décalage vers le rouge** (*redshift*), dû à l'**effet Doppler**. Une fréquence perçue plus petite correspond à une source qui **s'éloigne** : l'étoile s'éloigne de la Terre.",
+        "6. $f_0 = \\dfrac{c}{\\lambda_0}$. On convertit $\\lambda_0 = 656{,}3$ nm $= 6{,}563\\times 10^{-7}$ m, puis $f_0 = \\dfrac{3{,}00\\times 10^{8}}{6{,}563\\times 10^{-7}} = 4{,}57\\times 10^{14}$ Hz (domaine visible, lumière rouge)."
+      ],
+      "reponse": "1. onde EM (micro-ondes), $\\lambda = 3{,}6\\times 10^{-2}$ m ; 2. $\\Delta t = 750$ s ($12{,}5$ min, aller simple) ; 3. $h = 3{,}0\\times 10^{5}$ m $= 300$ km (aller-retour) ; 4. spectre d'absorption, identifie les éléments ; 5. décalage vers le rouge (Doppler), l'étoile s'éloigne ; 6. $f_0 = 4{,}57\\times 10^{14}$ Hz (visible)."
     }
   ]
 }

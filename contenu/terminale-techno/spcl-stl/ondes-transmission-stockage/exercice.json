@@ -91,6 +91,60 @@
         "**Commentaire.** $840$ Go ne tiennent ni sur un Blu-ray ($25$ Go) ni en streaming : la **compression vidéo** (codecs) est indispensable, elle réduit la taille d'un facteur de plusieurs centaines."
       ],
       "reponse": "**a.** $\\approx 6{,}2$ Mo. **b.** $D \\approx 1{,}24$ Gbit/s. **c.** $\\approx 840$ Go non compressé : impossible sans compression."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "stockage-optique",
+      "enonce": "On s'intéresse au stockage optique.\n\n**a.** Un DVD a une capacité de $4{,}7$ Go. On y enregistre des photos de $6{,}0$ Mo chacune. Combien de photos peut-on stocker au maximum ?\n**b.** Le laser d'un lecteur de DVD émet une lumière rouge de longueur d'onde $\\lambda = 650$ nm. Calcule sa fréquence $f$ (on prendra $c = 3{,}0\\times 10^{8}\\ \\text{m/s}$).",
+      "corrige": [
+        "**a.** On travaille avec des préfixes décimaux : $4{,}7\\ \\text{Go} = 4{,}7\\times 10^{3}\\ \\text{Mo} = 4700\\ \\text{Mo}$.",
+        "Nombre de photos : $\\dfrac{4700}{6{,}0} = 783{,}3$. On ne peut stocker qu'un nombre entier de fichiers complets : **783 photos** (le reste ne suffit pas à une photo de plus).",
+        "**b.** On convertit la longueur d'onde en mètres : $\\lambda = 650\\ \\text{nm} = 650\\times 10^{-9}\\ \\text{m} = 6{,}50\\times 10^{-7}\\ \\text{m}$.",
+        "On applique la relation $\\lambda = \\dfrac{c}{f}$, d'où $f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}0\\times 10^{8}}{6{,}50\\times 10^{-7}} = 4{,}6\\times 10^{14}\\ \\text{Hz}$ : c'est bien une onde du domaine visible (lumière rouge)."
+      ],
+      "reponse": "**a.** 783 photos. **b.** $f = 4{,}6\\times 10^{14}$ Hz."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "debit-binaire",
+      "enonce": "En téléphonie numérique, on transmet la voix dont les fréquences utiles montent jusqu'à $f_{\\max} = 3{,}4$ kHz. Le signal est échantillonné à $f_e = 8{,}0$ kHz, quantifié sur $n = 8$ bits, en **mono** ($k = 1$).\n\n**a.** Le critère de Shannon est-il respecté ?\n**b.** Calcule le débit binaire $D$, en kbit/s.\n**c.** Quelle taille de données (en Mo) représente une conversation de $5{,}0$ min ?",
+      "corrige": [
+        "**a.** Le critère de Shannon impose $f_e \\ge 2\\,f_{\\max} = 2 \\times 3{,}4 = 6{,}8\\ \\text{kHz}$. Or $f_e = 8{,}0\\ \\text{kHz} \\ge 6{,}8\\ \\text{kHz}$ : le critère est **respecté**.",
+        "**b.** $D = f_e \\times n \\times k = 8000 \\times 8 \\times 1 = 64\\,000\\ \\text{bit/s} = 64\\ \\text{kbit/s}$.",
+        "**c.** On convertit la durée : $\\Delta t = 5{,}0\\ \\text{min} = 300\\ \\text{s}$. Quantité de bits : $Q = D \\times \\Delta t = 64\\,000 \\times 300 = 1{,}92\\times 10^{7}\\ \\text{bit}$.",
+        "En octets : $\\dfrac{1{,}92\\times 10^{7}}{8} = 2{,}4\\times 10^{6}\\ \\text{octets} = 2{,}4\\ \\text{Mo}$."
+      ],
+      "reponse": "**a.** Oui ($8{,}0 \\ge 6{,}8$ kHz). **b.** $D = 64$ kbit/s. **c.** $\\approx 2{,}4$ Mo."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "transmettre-attenuation",
+      "enonce": "On veut établir une liaison de $L = 200$ km avec une fibre optique de coefficient d'atténuation linéique $\\alpha = 0{,}25$ dB/km. L'émetteur injecte une puissance $P_e = 1{,}0$ mW ; le récepteur exige une puissance reçue d'au moins $P_s = 1{,}0\\ \\mu\\text{W}$.\n\n**a.** Calcule l'atténuation maximale $A_{\\max}$ (en dB) que peut supporter la liaison.\n**b.** Calcule l'atténuation totale sur $200$ km. Le signal arrive-t-il exploitable sans amplification ?\n**c.** On place des amplificateurs (répéteurs) qui régénèrent le signal. Combien en faut-il au minimum, et à quel espacement les placer ?",
+      "corrige": [
+        "**a.** Rapport des puissances : $\\dfrac{P_e}{P_s} = \\dfrac{1{,}0\\times 10^{-3}}{1{,}0\\times 10^{-6}} = 1000$. D'où $A_{\\max} = 10\\log(1000) = 10 \\times 3 = 30\\ \\text{dB}$.",
+        "**b.** Sur $200$ km : $A = \\alpha L = 0{,}25 \\times 200 = 50\\ \\text{dB}$. Or $50\\ \\text{dB} > 30\\ \\text{dB}$ : l'atténuation dépasse le maximum tolérable, le signal arrive **trop affaibli** et n'est pas exploitable sans amplification.",
+        "**c.** Chaque tronçon doit rester sous $A_{\\max} = 30\\ \\text{dB}$. La longueur maximale d'un tronçon est $L_{\\text{tronçon}} = \\dfrac{A_{\\max}}{\\alpha} = \\dfrac{30}{0{,}25} = 120\\ \\text{km}$.",
+        "Avec **un seul** amplificateur, on obtient deux tronçons ; il suffit qu'ils fassent chacun au plus $120$ km, par exemple $100 + 100$ km. Chaque tronçon subit alors $0{,}25 \\times 100 = 25\\ \\text{dB} \\le 30\\ \\text{dB}$ : c'est correct. **Un amplificateur** placé vers le milieu (au plus à $120$ km de l'émetteur) suffit donc."
+      ],
+      "reponse": "**a.** $A_{\\max} = 30$ dB. **b.** $A = 50$ dB $> 30$ dB : non exploitable. **c.** 1 amplificateur (tronçons $\\le 120$ km, ex. $100 + 100$ km)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "chaine-numerique-complete",
+      "enonce": "**Problème — Du studio à l'écran.** Un studio enregistre un concert d'une durée de $1{,}0$ h, puis diffuse le film. On suit la chaîne complète de l'information. Données : $1$ octet $= 8$ bits ; k $= 10^{3}$, M $= 10^{6}$, G $= 10^{9}$ ; capacité d'un Blu-ray $\\approx 25$ Go.\n\n**1.** La piste **audio** est échantillonnée à $f_e = 48$ kHz, quantifiée sur $n = 24$ bits, en stéréo ($k = 2$ voies). Calcule le débit binaire de l'audio, en Mbit/s.\n**2.** Les fréquences audibles du concert montent jusqu'à $f_{\\max} = 22$ kHz. Le choix de $f_e = 48$ kHz respecte-t-il le critère de Shannon ?\n**3.** La **vidéo** est en 4K UHD : définition $3840 \\times 2160$ pixels, couleur vraie ($24$ bits par pixel), $25$ images par seconde. Calcule la taille d'une image (en Mo) puis le débit binaire de la vidéo non compressée (en Gbit/s).\n**4.** Estime la taille des données **vidéo brutes** du concert entier (en Go, puis en To). Un Blu-ray de $25$ Go suffit-il ? Que faut-il faire ?\n**5.** Après compression, le film « pèse » $20$ Go. On le transmet par une fibre de coefficient $\\alpha = 0{,}20$ dB/km sur $L = 100$ km, avec une puissance émise $P_e = 5{,}0$ mW. Calcule l'atténuation puis la puissance reçue $P_s$.\n**6.** Cette même liaison offre un débit $D = 100$ Mbit/s. Combien de temps faut-il pour transmettre le film de $20$ Go ? Ce film tient-il sur un Blu-ray ?",
+      "corrige": [
+        "**1.** Débit audio : $D_{\\text{audio}} = f_e \\times n \\times k = 48\\,000 \\times 24 \\times 2 = 2\\,304\\,000\\ \\text{bit/s} \\approx 2{,}3\\ \\text{Mbit/s}$.",
+        "**2.** Le critère de Shannon impose $f_e \\ge 2\\,f_{\\max} = 2 \\times 22 = 44\\ \\text{kHz}$. Or $f_e = 48\\ \\text{kHz} \\ge 44\\ \\text{kHz}$ : le critère est **respecté** (avec une petite marge).",
+        "**3.** Nombre de pixels : $3840 \\times 2160 = 8\\,294\\,400$ pixels. À $24$ bits $= 3$ octets par pixel, la taille d'une image vaut $8\\,294\\,400 \\times 3 = 2{,}49\\times 10^{7}\\ \\text{octets} \\approx 24{,}9\\ \\text{Mo}$ (environ $25$ Mo). Débit vidéo : bits par image $= 8\\,294\\,400 \\times 24 = 1{,}99\\times 10^{8}\\ \\text{bit}$, donc $D_{\\text{vidéo}} = 1{,}99\\times 10^{8} \\times 25 = 4{,}98\\times 10^{9}\\ \\text{bit/s} \\approx 5{,}0\\ \\text{Gbit/s}$.",
+        "**4.** Durée : $\\Delta t = 1{,}0\\ \\text{h} = 3600\\ \\text{s}$. Quantité de bits : $Q = D_{\\text{vidéo}} \\times \\Delta t = 4{,}98\\times 10^{9} \\times 3600 = 1{,}79\\times 10^{13}\\ \\text{bit}$. En octets : $\\dfrac{1{,}79\\times 10^{13}}{8} = 2{,}24\\times 10^{12}\\ \\text{octets} \\approx 2240\\ \\text{Go} \\approx 2{,}2\\ \\text{To}$. C'est environ $90$ fois la capacité d'un Blu-ray ($25$ Go) : le stockage brut est impossible, il faut **compresser** la vidéo.",
+        "**5.** Atténuation : $A = \\alpha L = 0{,}20 \\times 100 = 20\\ \\text{dB}$. La puissance reçue vaut $P_s = \\dfrac{P_e}{10^{A/10}} = \\dfrac{5{,}0}{10^{20/10}} = \\dfrac{5{,}0}{10^{2}} = \\dfrac{5{,}0}{100} = 0{,}050\\ \\text{mW} = 50\\ \\mu\\text{W}$ : la puissance a été divisée par $100$.",
+        "**6.** Taille en bits : $Q = 20\\ \\text{Go} = 20 \\times 8 = 160\\ \\text{Gbit} = 1{,}6\\times 10^{5}\\ \\text{Mbit}$. Durée de transmission : $\\Delta t = \\dfrac{Q}{D} = \\dfrac{1{,}6\\times 10^{5}}{100} = 1600\\ \\text{s} \\approx 27\\ \\text{min}$. Enfin $20\\ \\text{Go} \\le 25\\ \\text{Go}$ : le film compressé **tient** sur un Blu-ray."
+      ],
+      "reponse": "**1.** $D_{\\text{audio}} \\approx 2{,}3$ Mbit/s. **2.** Oui ($48 \\ge 44$ kHz). **3.** image $\\approx 25$ Mo, $D_{\\text{vidéo}} \\approx 5{,}0$ Gbit/s. **4.** $\\approx 2{,}2$ To, soit $\\approx 90$ Blu-ray : compression indispensable. **5.** $A = 20$ dB, $P_s = 50\\ \\mu$W. **6.** $\\Delta t = 1600$ s $\\approx 27$ min ; oui, $20 \\le 25$ Go."
     }
   ]
 }
