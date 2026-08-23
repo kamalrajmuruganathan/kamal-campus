@@ -87,6 +87,59 @@
         "Cette déviation ($7{,}0$ mm) est inférieure à la demi-distance entre les plaques ($d/2 = 2{,}0$ cm $= 20$ mm) : l'électron sort donc bien du condensateur sans heurter de plaque."
       ],
       "reponse": "$E = 5{,}0 \\times 10^{3}$ V·m⁻¹, $a \\approx 8{,}8 \\times 10^{14}$ m·s⁻² ; $x = v_0 t$, $y = \\tfrac{1}{2}a t^{2}$ ; déviation à la sortie $y \\approx 7{,}0$ mm $< d/2 = 20$ mm : l'électron ne heurte pas les plaques."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "deuxieme-loi-de-newton",
+      "enonce": "Sur une patinoire (frottements négligés), un palet de hockey de masse $m = 0{,}17$ kg est soumis à une force horizontale résultante constante $F = 0{,}85$ N. Il part du repos. 1) Calculer la valeur de son accélération. 2) Calculer sa vitesse au bout de $t = 2{,}0$ s. 3) Calculer la distance parcourue pendant ces $2{,}0$ s.",
+      "corrige": [
+        "Système : le palet, dans le référentiel terrestre supposé galiléen. Le poids et la réaction de la glace se compensent verticalement ; il ne reste que la force horizontale $\\vec{F}$. La deuxième loi de Newton projetée sur l'horizontale donne $F = m\\,a$.",
+        "1) $a = \\dfrac{F}{m} = \\dfrac{0{,}85}{0{,}17} = 5{,}0$ m·s⁻². L'accélération est constante : le mouvement est rectiligne uniformément accéléré.",
+        "2) Le palet partant du repos, $v(t) = a\\,t$, donc $v(2{,}0) = 5{,}0 \\times 2{,}0 = 10$ m·s⁻¹.",
+        "3) La distance parcourue depuis le repos vaut $d = \\tfrac{1}{2}a\\,t^{2} = \\tfrac{1}{2} \\times 5{,}0 \\times (2{,}0)^{2} = 10$ m."
+      ],
+      "reponse": "$a = \\dfrac{F}{m} = 5{,}0$ m·s⁻² ; $v = a\\,t = 10$ m·s⁻¹ ; $d = \\tfrac{1}{2}a\\,t^{2} = 10$ m."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "lois-de-kepler",
+      "enonce": "On admet que la Terre et Mars décrivent des orbites quasi circulaires autour du Soleil. Pour la Terre : période $T_T = 365{,}25$ jours et rayon d'orbite $a_T = 1{,}50 \\times 10^{11}$ m. Pour Mars, le rayon d'orbite vaut $a_M = 2{,}28 \\times 10^{11}$ m. 1) Rappeler la 3e loi de Kepler et expliquer pourquoi le rapport $\\dfrac{T^{2}}{a^{3}}$ est le même pour les deux planètes. 2) En déduire l'expression puis la valeur de la période $T_M$ de Mars (en jours).",
+      "corrige": [
+        "1) La 3e loi de Kepler s'écrit $\\dfrac{T^{2}}{a^{3}} = \\dfrac{4\\pi^{2}}{G\\,M_S}$, où $M_S$ est la masse du Soleil. Le membre de droite ne dépend que de l'astre central : il est donc identique pour toutes les planètes du système solaire. On a ainsi $\\dfrac{T_T^{2}}{a_T^{3}} = \\dfrac{T_M^{2}}{a_M^{3}}$.",
+        "2) On isole $T_M$ : $T_M^{2} = T_T^{2}\\left(\\dfrac{a_M}{a_T}\\right)^{3}$, soit $T_M = T_T\\left(\\dfrac{a_M}{a_T}\\right)^{3/2}$.",
+        "Application numérique : $\\dfrac{a_M}{a_T} = \\dfrac{2{,}28 \\times 10^{11}}{1{,}50 \\times 10^{11}} = 1{,}52$, donc $\\left(1{,}52\\right)^{3/2} \\approx 1{,}87$. On obtient $T_M = 365{,}25 \\times 1{,}87 \\approx 6{,}8 \\times 10^{2}$ jours (environ $684$ jours, soit près de $1{,}9$ an), en bon accord avec la valeur réelle ($\\approx 687$ jours)."
+      ],
+      "reponse": "$\\dfrac{T_T^{2}}{a_T^{3}} = \\dfrac{T_M^{2}}{a_M^{3}}$ d'où $T_M = T_T\\left(\\dfrac{a_M}{a_T}\\right)^{3/2} \\approx 6{,}8 \\times 10^{2}$ jours ($\\approx 684$ jours)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "chute-champ-pesanteur",
+      "enonce": "Une bille quitte le bord d'une table horizontalement avec une vitesse $v_0 = 5{,}0$ m·s⁻¹. Le plateau est à une hauteur $H = 1{,}25$ m du sol. On néglige les frottements et on prend $g = 9{,}8$ m·s⁻². L'origine $O$ est au point de départ, l'axe $x$ est horizontal dans le sens de $\\vec{v}_0$ et l'axe $y$ vertical vers le haut. 1) Établir les équations horaires $x(t)$ et $y(t)$. 2) Calculer la durée de la chute et la distance horizontale parcourue avant de toucher le sol. 3) Calculer la valeur de la vitesse de la bille au moment de l'impact.",
+      "corrige": [
+        "La seule force est le poids, donc $\\vec{a} = \\vec{g}$ : $a_x = 0$ et $a_y = -g$. Les conditions initiales sont $v_{0x} = v_0 = 5{,}0$ m·s⁻¹, $v_{0y} = 0$ (lancer horizontal) et un départ depuis $O$.",
+        "1) En intégrant une fois : $v_x(t) = 5{,}0$ et $v_y(t) = -g\\,t$. En intégrant à nouveau : $x(t) = 5{,}0\\,t$ et $y(t) = -\\tfrac{1}{2}g\\,t^{2} = -4{,}9\\,t^{2}$.",
+        "2) La bille touche le sol lorsque $y = -H = -1{,}25$ m : $-4{,}9\\,t^{2} = -1{,}25 \\Rightarrow t = \\sqrt{\\dfrac{1{,}25}{4{,}9}} \\approx 0{,}51$ s. La distance horizontale vaut alors $x = 5{,}0 \\times 0{,}51 \\approx 2{,}5$ m.",
+        "3) À l'impact, $v_x = 5{,}0$ m·s⁻¹ et $v_y = -g\\,t = -9{,}8 \\times 0{,}51 \\approx -5{,}0$ m·s⁻¹. La valeur de la vitesse est $v = \\sqrt{v_x^{2} + v_y^{2}} = \\sqrt{5{,}0^{2} + 5{,}0^{2}} \\approx 7{,}0$ m·s⁻¹."
+      ],
+      "reponse": "$x = 5{,}0\\,t$, $y = -4{,}9\\,t^{2}$ ; durée $t \\approx 0{,}51$ s, distance horizontale $x \\approx 2{,}5$ m ; vitesse à l'impact $v \\approx 7{,}0$ m·s⁻¹."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "chute-champ-pesanteur",
+      "enonce": "Lors d'un entraînement, un joueur frappe un ballon depuis le sol. Le ballon part de l'origine $O$ avec une vitesse initiale $v_0 = 15$ m·s⁻¹ faisant un angle $\\alpha = 35°$ avec l'horizontale. On néglige les frottements de l'air ; on prend $g = 9{,}8$ m·s⁻². Le repère a un axe $x$ horizontal (sens du tir) et un axe $y$ vertical vers le haut. 1) Après avoir défini le système et le référentiel, faire le bilan des forces et montrer, à l'aide de la deuxième loi de Newton, que l'accélération du ballon vaut $\\vec{a} = \\vec{g}$. 2) Donner les composantes $v_{0x}$ et $v_{0y}$ de la vitesse initiale. 3) Établir les équations horaires $x(t)$ et $y(t)$. 4) En déduire l'équation de la trajectoire $y(x)$ et préciser sa nature. 5) Calculer la hauteur maximale (flèche) atteinte par le ballon et la date correspondante. 6) Un mur de hauteur $h_m = 2{,}5$ m se dresse à la distance $D = 12$ m du point de tir. Le ballon passe-t-il au-dessus du mur ?",
+      "corrige": [
+        "1. Système : le ballon, assimilé à son centre de masse, étudié dans le référentiel terrestre supposé galiléen. Les frottements étant négligés, la seule force extérieure est le poids $\\vec{P} = m\\vec{g}$. La deuxième loi de Newton donne $\\sum \\vec{F}_{\\text{ext}} = m\\vec{a}$, soit $m\\vec{g} = m\\vec{a}$ ; la masse se simplifie, d'où $\\vec{a} = \\vec{g}$ : l'accélération est constante (chute libre).",
+        "2. $v_{0x} = v_0\\cos\\alpha = 15 \\times \\cos 35° \\approx 12{,}3$ m·s⁻¹ et $v_{0y} = v_0\\sin\\alpha = 15 \\times \\sin 35° \\approx 8{,}6$ m·s⁻¹.",
+        "3. Avec $a_x = 0$ et $a_y = -g$, et un départ depuis $O$ : une première intégration donne $v_x(t) = 12{,}3$ et $v_y(t) = -9{,}8\\,t + 8{,}6$ ; une seconde donne $x(t) = 12{,}3\\,t$ et $y(t) = -4{,}9\\,t^{2} + 8{,}6\\,t$.",
+        "4. On élimine le temps : $t = \\dfrac{x}{v_0\\cos\\alpha} = \\dfrac{x}{12{,}3}$. En reportant dans $y(t)$ : $y(x) = -\\dfrac{g}{2\\,v_0^{2}\\cos^{2}\\alpha}\\,x^{2} + (\\tan\\alpha)\\,x$. Numériquement $\\dfrac{g}{2\\,v_0^{2}\\cos^{2}\\alpha} = \\dfrac{9{,}8}{2 \\times 15^{2} \\times \\cos^{2}35°} \\approx 0{,}0325$ et $\\tan 35° \\approx 0{,}70$, d'où $y(x) = -0{,}0325\\,x^{2} + 0{,}70\\,x$. Le coefficient de $x^{2}$ étant négatif, la trajectoire est une parabole tournée vers le bas.",
+        "5. Au sommet, $v_y = 0$ : $-9{,}8\\,t + 8{,}6 = 0 \\Rightarrow t = \\dfrac{v_0\\sin\\alpha}{g} = \\dfrac{8{,}6}{9{,}8} \\approx 0{,}88$ s. La flèche vaut $h = \\dfrac{(v_0\\sin\\alpha)^{2}}{2g} = \\dfrac{8{,}6^{2}}{2 \\times 9{,}8} \\approx 3{,}8$ m.",
+        "6. On calcule l'altitude du ballon à $x = D = 12$ m : $y(12) = -0{,}0325 \\times 12^{2} + 0{,}70 \\times 12 = -4{,}68 + 8{,}40 \\approx 3{,}7$ m. Comme $3{,}7$ m $> h_m = 2{,}5$ m, le ballon passe au-dessus du mur (avec une marge d'environ $1{,}2$ m)."
+      ],
+      "reponse": "$\\vec{a} = \\vec{g}$ ; $v_{0x} \\approx 12{,}3$ m·s⁻¹, $v_{0y} \\approx 8{,}6$ m·s⁻¹ ; $x = 12{,}3\\,t$, $y = -4{,}9\\,t^{2} + 8{,}6\\,t$ ; $y(x) = -0{,}0325\\,x^{2} + 0{,}70\\,x$ (parabole) ; flèche $\\approx 3{,}8$ m à $t \\approx 0{,}88$ s ; à $D = 12$ m, $y \\approx 3{,}7$ m $> 2{,}5$ m : le ballon passe au-dessus du mur."
     }
   ]
 }

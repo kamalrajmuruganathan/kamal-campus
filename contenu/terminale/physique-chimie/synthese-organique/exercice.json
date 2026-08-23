@@ -87,6 +87,61 @@
         "Remarque : un catalyseur, s'il existait ici, accélérerait la réaction mais ne changerait pas le rendement — il ne répondrait donc qu'à la première demande."
       ],
       "reponse": "1) Modification de groupe caractéristique (3 carbones conservés). 2) Oxydation ménagée d'un alcool primaire, via l'aldéhyde (propanal). 3) Accélérer : chauffer ou concentrer l'oxydant (vitesse) ; améliorer le rendement : oxydant en excès (déplacement vers le produit)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "modification-molecule",
+      "enonce": "Pour chacune des transformations suivantes, indiquer s'il s'agit d'une **modification de chaîne carbonée** ou d'une **modification de groupe caractéristique**, en justifiant par le nombre d'atomes de carbone. a) $\\text{CH}_3\\text{-CHOH-CH}_3 \\to \\text{CH}_3\\text{-CO-CH}_3$. b) Deux fragments à deux atomes de carbone sont réunis par une nouvelle liaison $\\text{C-C}$ pour donner une molécule à quatre atomes de carbone. c) $\\text{CH}_3\\text{-CH}_2\\text{-Br} \\to \\text{CH}_3\\text{-CH}_2\\text{-OH}$.",
+      "corrige": [
+        "a) Le propan-2-ol et la propanone possèdent tous deux **3 atomes de carbone** : le squelette est conservé, seule la fonction change (alcool secondaire → cétone). C'est une **modification de groupe caractéristique** (oxydation ménagée).",
+        "b) On passe de fragments à 2 carbones à une molécule à 4 carbones en créant une liaison $\\text{C-C}$ : le squelette est **allongé**. C'est une **modification de chaîne carbonée**.",
+        "c) L'halogénoalcane et l'alcool ont tous deux **2 atomes de carbone** ; le groupe $\\text{Br}$ est remplacé par $\\text{OH}$ sans toucher au squelette. C'est une **modification de groupe caractéristique** (substitution).",
+        "Méthode : compte les atomes de carbone avant et après. S'il y a création ou rupture d'une liaison $\\text{C-C}$ (le nombre de carbones du squelette change) → modification de chaîne ; sinon → modification de groupe caractéristique."
+      ],
+      "reponse": "a) groupe caractéristique (3 C conservés) ; b) chaîne carbonée (allongement, 2 + 2 → 4 C) ; c) groupe caractéristique (2 C conservés)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "rendement",
+      "enonce": "On réalise l'estérification entre l'acide éthanoïque et le propan-1-ol, de coefficients stœchiométriques $1{:}1{:}1$, formant l'éthanoate de propyle ($M = 102$ g·mol⁻¹). On introduit $n_1 = 0{,}40$ mol d'acide éthanoïque et $n_2 = 0{,}60$ mol de propan-1-ol. Après purification, on récupère $m = 30{,}6$ g d'ester. 1) Déterminer le réactif limitant et en déduire $n_{\\text{théorique}}$. 2) Calculer le rendement de la synthèse.",
+      "corrige": [
+        "1) Les coefficients valent $1{:}1$ pour les deux réactifs : on compare directement les quantités engagées. On a $n_1 = 0{,}40$ mol d'acide contre $n_2 = 0{,}60$ mol d'alcool. L'acide éthanoïque, en plus petite quantité, est le **réactif limitant**. Si la réaction était totale, il donnerait autant d'ester : $n_{\\text{théorique}} = 0{,}40$ mol.",
+        "2) Quantité réellement obtenue : $n_{\\text{obtenu}} = \\dfrac{m}{M} = \\dfrac{30{,}6}{102} = 0{,}30$ mol.",
+        "Rendement : $\\eta = \\dfrac{n_{\\text{obtenu}}}{n_{\\text{théorique}}} = \\dfrac{0{,}30}{0{,}40} = 0{,}75$, soit $75\\ \\%$.",
+        "Piège : on ne prend pas $n_2 = 0{,}60$ mol comme référence. $n_{\\text{théorique}}$ se calcule à partir du **réactif limitant** (ici l'acide), jamais du réactif en excès."
+      ],
+      "reponse": "1) Réactif limitant : l'acide éthanoïque ($0{,}40 < 0{,}60$), donc $n_{\\text{théorique}} = 0{,}40$ mol. 2) $n_{\\text{obtenu}} = 30{,}6/102 = 0{,}30$ mol, d'où $\\eta = 0{,}30/0{,}40 = 0{,}75 = 75\\ \\%$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "mecanisme",
+      "enonce": "On étudie la réaction $\\text{CH}_3\\text{-Cl} + \\text{NH}_3 \\to \\text{CH}_3\\text{-NH}_2 + \\text{HCl}$. Données d'électronégativité (Pauling) : $\\chi(\\text{C}) = 2{,}5$ ; $\\chi(\\text{N}) = 3{,}0$ ; $\\chi(\\text{Cl}) = 3{,}2$. 1) Identifier le site accepteur et le site donneur de doublet. 2) Décrire, à l'aide de flèches courbes, le mouvement des doublets d'électrons, puis nommer le type de réaction. 3) Un élève trace une flèche courbe partant du carbone vers l'azote. Expliquer pourquoi c'est une faute.",
+      "corrige": [
+        "1) Comme $\\chi(\\text{Cl}) > \\chi(\\text{C})$, la liaison $\\text{C-Cl}$ est polarisée : $\\text{C}^{\\delta+}$, pauvre en électrons, est le **site accepteur**. L'azote de $\\text{NH}_3$ porte un **doublet non liant** : c'est un site **riche** en électrons, donc le **site donneur**.",
+        "2) Une première flèche courbe part du **doublet non liant de l'azote** (donneur) vers le carbone $\\text{C}^{\\delta+}$ (accepteur) : elle forme la nouvelle liaison $\\text{C-N}$. Une seconde flèche part de la **liaison $\\text{C-Cl}$** vers le chlore, qui s'en va avec le doublet sous forme d'ion chlorure $\\text{Cl}^-$. Le groupe $\\text{Cl}$ est remplacé par le groupe azoté, sans qu'aucune liaison multiple n'apparaisse ni ne disparaisse : c'est une **substitution**.",
+        "3) La règle est absolue : une flèche courbe part **toujours d'un site donneur (un doublet, site riche) vers un site accepteur (site pauvre)**. Le carbone est ici $\\text{C}^{\\delta+}$, donc **accepteur** : une flèche qui en partirait irait « du pauvre vers le riche », ce qui est interdit. La flèche doit partir du doublet de l'azote, pas du carbone.",
+        "À retenir : le sens d'une flèche courbe n'est jamais arbitraire — donneur → accepteur, c'est-à-dire du riche vers le pauvre en électrons."
+      ],
+      "reponse": "1) Accepteur : le carbone $\\text{C}^{\\delta+}$ de la liaison $\\text{C-Cl}$ ; donneur : le doublet non liant de l'azote de $\\text{NH}_3$. 2) Flèche du doublet de N vers le carbone, flèche de la liaison C-Cl vers Cl : réaction de substitution. 3) Une flèche part toujours du donneur (un doublet) vers l'accepteur ; la faire partir du carbone $\\delta^+$ (accepteur) est interdit."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "strategie-synthese",
+      "enonce": "**Synthèse d'un arôme de banane.** L'éthanoate de 3-méthylbutyle ($M = 130$ g·mol⁻¹) est un ester à l'odeur de banane, préparé en deux étapes à partir de l'éthanol. **Étape 1** : l'éthanol $\\text{CH}_3\\text{-CH}_2\\text{-OH}$ subit une oxydation ménagée qui le transforme en acide éthanoïque $\\text{CH}_3\\text{-COOH}$. **Étape 2** : l'acide éthanoïque réagit avec le 3-méthylbutan-1-ol (estérification de coefficients $1{:}1{:}1$, réaction limitée et athermique) pour donner l'ester. 1) Pour chacune des deux étapes, préciser s'il s'agit d'une modification de chaîne carbonée ou de groupe caractéristique, et nommer le type de réaction. 2) L'oxydation ménagée de l'éthanol passe par un intermédiaire : le nommer et donner sa fonction. Quelle précaution prendre pour obtenir l'acide et non cet intermédiaire ? 3) L'estérification de l'étape 2 est lente et limitée. Proposer une opération pour l'accélérer et une autre pour améliorer son rendement, en précisant sur quelle grandeur chacune agit. 4) Pour l'étape 2, on introduit $0{,}50$ mol d'acide éthanoïque (réactif limitant) et on récupère $m = 45{,}5$ g d'ester. Calculer le rendement $\\eta_2$ de cette étape. 5) L'étape 1 a un rendement $\\eta_1 = 0{,}80$. En déduire le rendement global de la synthèse. 6) On souhaite maintenant estérifier uniquement la fonction acide d'un acide aminé, qui porte aussi une fonction amine $\\text{-NH}_2$. Expliquer pourquoi une étape de protection est nécessaire, sur quel groupe elle porte, et quel est son coût.",
+      "corrige": [
+        "1. **Étape 1** : l'éthanol (2 C) devient l'acide éthanoïque (2 C) ; le squelette carboné est conservé, seule la fonction change. C'est une **modification de groupe caractéristique**, par **oxydation ménagée** d'un alcool primaire. **Étape 2** : la réaction remplace le groupe $\\text{-OH}$ de l'acide par le groupe $\\text{-O-R}$ issu de l'alcool, sans modifier les squelettes. C'est aussi une **modification de groupe caractéristique**, de type **estérification** (une substitution).",
+        "2. L'oxydation ménagée d'un alcool primaire passe d'abord par un **aldéhyde** ($\\text{CH}_3\\text{-CHO}$, l'éthanal), de fonction aldéhyde, avant de conduire à l'acide carboxylique. Pour ne pas s'arrêter à l'aldéhyde, on introduit l'**oxydant en excès** : l'aldéhyde formé est alors oxydé à son tour en acide.",
+        "3. Pour **accélérer** (agir sur la **vitesse**) : chauffer le mélange, ou ajouter quelques gouttes d'acide sulfurique concentré comme **catalyseur** — ce sont des facteurs cinétiques. Pour **améliorer le rendement** : introduire l'alcool en **excès**, ou **éliminer l'eau** au fur et à mesure de sa formation ; ces opérations déplacent l'équilibre vers l'ester et agissent sur le **rendement**.",
+        "4. La réaction étant de coefficients $1{:}1$, le réactif limitant ($0{,}50$ mol) donnerait au maximum $n_{\\text{théorique}} = 0{,}50$ mol d'ester. Quantité obtenue : $n_{\\text{obtenu}} = \\dfrac{m}{M} = \\dfrac{45{,}5}{130} = 0{,}35$ mol. Rendement de l'étape 2 : $\\eta_2 = \\dfrac{0{,}35}{0{,}50} = 0{,}70$, soit $70\\ \\%$.",
+        "5. Le rendement global d'une séquence est le **produit** des rendements des étapes successives : $\\eta_{\\text{global}} = \\eta_1 \\times \\eta_2 = 0{,}80 \\times 0{,}70 = 0{,}56$, soit $56\\ \\%$. Il est toujours inférieur au rendement de chaque étape : c'est le coût d'une synthèse multi-étapes.",
+        "6. Un acide aminé porte **deux** groupes réactifs ($\\text{-COOH}$ et $\\text{-NH}_2$). Sans précaution, l'amine d'une molécule pourrait réagir avec l'acide d'une autre : la réaction ne serait pas sélective. On **protège** donc la fonction **amine $\\text{-NH}_2$** (on la rend inerte), on estérifie l'acide resté libre, puis on **déprotège** pour régénérer l'amine. Cette stratégie ajoute deux étapes (protection + déprotection) dont les rendements se multiplient : elle **abaisse le rendement global** et ne se justifie que par la sélectivité qu'elle apporte.",
+        "Bilan : une synthèse se raisonne comme une séquence — chaque étape a un type (modification de chaîne ou de groupe), une vitesse et un rendement propres ; le rendement global se dégrade à chaque étape, et toute protection ajoutée doit être justifiée par la sélectivité."
+      ],
+      "reponse": "1) Deux modifications de groupe caractéristique : oxydation ménagée (étape 1) et estérification/substitution (étape 2). 2) Intermédiaire : l'éthanal (aldéhyde) ; oxydant en excès pour aller jusqu'à l'acide. 3) Accélérer : chauffage ou catalyseur $\\text{H}_2\\text{SO}_4$ (vitesse) ; améliorer le rendement : alcool en excès ou élimination de l'eau (déplacement d'équilibre). 4) $n_{\\text{obtenu}} = 45{,}5/130 = 0{,}35$ mol, $\\eta_2 = 0{,}35/0{,}50 = 0{,}70 = 70\\ \\%$. 5) $\\eta_{\\text{global}} = 0{,}80 \\times 0{,}70 = 0{,}56 = 56\\ \\%$. 6) Protéger la fonction amine $\\text{-NH}_2$ pour assurer la sélectivité, estérifier, puis déprotéger ; coût : deux étapes supplémentaires et un rendement global abaissé."
     }
   ]
 }

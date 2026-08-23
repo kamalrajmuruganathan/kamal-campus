@@ -86,6 +86,59 @@
         "Comme $P_1 - P_2 > 0$, on a $P_2 < P_1$ : la pression est la plus faible dans le rétrécissement, là où la vitesse est la plus grande."
       ],
       "reponse": "$v_2 = 8{,}0$ m·s⁻¹ ; $P_1 - P_2 = 3{,}0 \\times 10^{4}$ Pa ; la pression est minimale dans la partie étroite ($P_2 < P_1$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "poussee-archimede",
+      "enonce": "Une bille métallique de volume $V = 500$ cm³ est entièrement immergée dans de l'eau de mer de masse volumique $\\rho_{\\text{mer}} = 1{,}025 \\times 10^{3}$ kg·m⁻³ ($g = 9{,}81$ N·kg⁻¹). Calculer la valeur de la poussée d'Archimède qu'elle subit.",
+      "corrige": [
+        "On convertit le volume immergé en unités SI : $V = 500$ cm³ $= 500 \\times 10^{-6}$ m³ $= 5{,}0 \\times 10^{-4}$ m³ (car $1$ cm³ $= 10^{-6}$ m³).",
+        "On applique l'expression de la poussée avec la masse volumique du fluide (l'eau de mer) : $F_A = \\rho_{\\text{mer}} \\, V \\, g$.",
+        "Application numérique : $F_A = 1{,}025 \\times 10^{3} \\times 5{,}0 \\times 10^{-4} \\times 9{,}81 \\approx 5{,}0$ N.",
+        "C'est bien la masse volumique du fluide déplacé, et non celle du métal, qui intervient dans le calcul."
+      ],
+      "reponse": "$F_A = \\rho_{\\text{mer}} V g \\approx 5{,}0$ N (dirigée vers le haut)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "debit-volumique",
+      "enonce": "Une pompe débite de l'eau dans un tuyau de section $S_1 = 12$ cm² à la vitesse $v_1 = 2{,}5$ m·s⁻¹. 1) Calculer le débit volumique $D_v$ et l'exprimer en L·s⁻¹. 2) En déduire la durée nécessaire pour remplir un bassin de $300$ L. 3) Le tuyau se termine par une buse de section $S_2 = 4{,}0$ cm² ; calculer la vitesse $v_2$ de l'eau à la sortie.",
+      "corrige": [
+        "On convertit la section : $S_1 = 12$ cm² $= 12 \\times 10^{-4}$ m² $= 1{,}2 \\times 10^{-3}$ m². Le débit vaut $D_v = S_1 v_1 = 1{,}2 \\times 10^{-3} \\times 2{,}5 = 3{,}0 \\times 10^{-3}$ m³·s⁻¹, soit, avec $1$ m³ $= 10^{3}$ L, $D_v = 3{,}0$ L·s⁻¹.",
+        "La durée de remplissage se déduit de $D_v = V / \\Delta t$, donc $\\Delta t = V / D_v = \\dfrac{300}{3{,}0} = 100$ s (le volume et le débit étant tous deux exprimés en litres, la conversion se compense).",
+        "Le débit se conserve dans la buse : $S_1 v_1 = S_2 v_2$, d'où $v_2 = v_1 \\dfrac{S_1}{S_2} = 2{,}5 \\times \\dfrac{12}{4{,}0} = 2{,}5 \\times 3{,}0 = 7{,}5$ m·s⁻¹.",
+        "La section étant divisée par 3, la vitesse de sortie est bien triplée."
+      ],
+      "reponse": "$D_v = 3{,}0 \\times 10^{-3}$ m³·s⁻¹ $= 3{,}0$ L·s⁻¹ ; $\\Delta t = 100$ s ; $v_2 = 7{,}5$ m·s⁻¹."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "De l'eau ($\\rho = 1{,}0 \\times 10^{3}$ kg·m⁻³) circule dans une canalisation qui monte. Au point bas $A$, la section vaut $S_A = 8{,}0$ cm², la vitesse $v_A = 3{,}0$ m·s⁻¹ et la pression $P_A = 2{,}5 \\times 10^{5}$ Pa. Au point haut $B$, situé $4{,}0$ m plus haut que $A$, la section se réduit à $S_B = 4{,}0$ cm² ($g = 9{,}81$ N·kg⁻¹). 1) Calculer la vitesse $v_B$ au point $B$. 2) En appliquant la relation de Bernoulli, calculer la pression $P_B$.",
+      "corrige": [
+        "Conservation du débit entre $A$ et $B$ : $S_A v_A = S_B v_B$, donc $v_B = v_A \\dfrac{S_A}{S_B} = 3{,}0 \\times \\dfrac{8{,}0}{4{,}0} = 6{,}0$ m·s⁻¹.",
+        "La canalisation n'est pas horizontale : on garde les trois termes de Bernoulli. Entre $A$ et $B$ : $P_A + \\tfrac{1}{2}\\rho v_A^2 + \\rho g z_A = P_B + \\tfrac{1}{2}\\rho v_B^2 + \\rho g z_B$, d'où $P_B = P_A + \\tfrac{1}{2}\\rho(v_A^2 - v_B^2) - \\rho g (z_B - z_A)$.",
+        "On calcule chaque terme : $\\tfrac{1}{2}\\rho(v_A^2 - v_B^2) = 500 \\times (9{,}0 - 36) = -1{,}35 \\times 10^{4}$ Pa ; $\\rho g (z_B - z_A) = 1000 \\times 9{,}81 \\times 4{,}0 = 3{,}92 \\times 10^{4}$ Pa.",
+        "Donc $P_B = 2{,}5 \\times 10^{5} - 1{,}35 \\times 10^{4} - 3{,}92 \\times 10^{4} \\approx 1{,}97 \\times 10^{5}$ Pa. La pression chute car l'eau monte (terme de pesanteur) et accélère (terme cinétique)."
+      ],
+      "reponse": "$v_B = 6{,}0$ m·s⁻¹ ; $P_B \\approx 1{,}97 \\times 10^{5}$ Pa (soit $\\approx 2{,}0 \\times 10^{5}$ Pa)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "poussee-archimede, bernoulli, debit-volumique, effet-venturi",
+      "enonce": "Un château d'eau alimente en eau une habitation. La surface libre de l'eau dans le réservoir, ouvert à l'air, est à une hauteur $H = 25$ m au-dessus d'un robinet situé au niveau du sol. On donne $\\rho_{\\text{eau}} = 1{,}0 \\times 10^{3}$ kg·m⁻³, $g = 9{,}81$ N·kg⁻¹ et $P_{\\text{atm}} = 1{,}0 \\times 10^{5}$ Pa.\\n\\n1. Pour contrôler le niveau, un flotteur sphérique de volume $V_f = 2{,}0 \\times 10^{-3}$ m³ et de masse $m_f = 0{,}60$ kg est posé à la surface. Justifier qu'il flotte, puis déterminer le pourcentage de son volume immergé à l'équilibre.\\n2. Le robinet, de section $s = 3{,}0$ cm², est ouvert et l'eau s'écoule à l'air libre. La surface du réservoir descend très lentement. Établir puis calculer la vitesse $v$ de l'eau à la sortie du robinet.\\n3. En déduire le débit volumique $D_v$ au robinet, exprimé en L·s⁻¹.\\n4. Sur la conduite horizontale d'alimentation, un débitmètre Venturi présente une section large $S_1 = 20$ cm² puis un col $S_2 = 5{,}0$ cm². Le débit y est celui de la question 3. Calculer les vitesses $v_1$ et $v_2$, puis la différence de pression $P_1 - P_2$ entre la partie large et le col.\\n5. Combien de temps faut-il pour remplir un seau de $10$ L à ce robinet ?",
+      "corrige": [
+        "1. La masse volumique du flotteur est $\\rho_f = \\dfrac{m_f}{V_f} = \\dfrac{0{,}60}{2{,}0 \\times 10^{-3}} = 300$ kg·m⁻³. Comme $\\rho_f = 300 < \\rho_{\\text{eau}} = 1000$ kg·m⁻³, le flotteur flotte. À l'équilibre, la poussée compense le poids : $\\rho_{\\text{eau}} V_{\\text{im}} g = m_f g$, donc $V_{\\text{im}} = \\dfrac{m_f}{\\rho_{\\text{eau}}} = \\dfrac{0{,}60}{1000} = 6{,}0 \\times 10^{-4}$ m³. Le pourcentage immergé vaut $\\dfrac{V_{\\text{im}}}{V_f} = \\dfrac{6{,}0 \\times 10^{-4}}{2{,}0 \\times 10^{-3}} = 0{,}30$, soit $30\\,\\%$.",
+        "2. On applique Bernoulli entre la surface libre (point 1) et le robinet (point 2) sur une même ligne de courant. Aux deux points la pression est $P_{\\text{atm}}$ (surface libre et sortie à l'air), et $v_1 \\approx 0$ (le réservoir est grand). Il reste $\\rho g H = \\tfrac{1}{2}\\rho v^2$, d'où $v = \\sqrt{2 g H}$ (théorème de Torricelli). Application : $v = \\sqrt{2 \\times 9{,}81 \\times 25} = \\sqrt{490{,}5} \\approx 22$ m·s⁻¹.",
+        "3. On convertit la section : $s = 3{,}0$ cm² $= 3{,}0 \\times 10^{-4}$ m². Le débit vaut $D_v = s \\times v = 3{,}0 \\times 10^{-4} \\times 22 = 6{,}6 \\times 10^{-3}$ m³·s⁻¹, soit $D_v = 6{,}6$ L·s⁻¹.",
+        "4. Le débit se conserve : $v_1 = \\dfrac{D_v}{S_1} = \\dfrac{6{,}6 \\times 10^{-3}}{20 \\times 10^{-4}} = 3{,}3$ m·s⁻¹ et $v_2 = \\dfrac{D_v}{S_2} = \\dfrac{6{,}6 \\times 10^{-3}}{5{,}0 \\times 10^{-4}} = 13{,}2$ m·s⁻¹. La conduite étant horizontale, l'effet Venturi donne $P_1 - P_2 = \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = 500 \\times (13{,}2^2 - 3{,}3^2) = 500 \\times (174{,}2 - 10{,}9) \\approx 8{,}2 \\times 10^{4}$ Pa. La pression est plus faible au col, là où la vitesse est la plus grande.",
+        "5. Le temps de remplissage se déduit de $D_v = V / \\Delta t$ : $\\Delta t = \\dfrac{V}{D_v} = \\dfrac{10 \\times 10^{-3}}{6{,}6 \\times 10^{-3}} \\approx 1{,}5$ s."
+      ],
+      "reponse": "1. Il flotte ($\\rho_f = 300 < 1000$ kg·m⁻³), $30\\,\\%$ du volume immergé. 2. $v = \\sqrt{2gH} \\approx 22$ m·s⁻¹. 3. $D_v \\approx 6{,}6 \\times 10^{-3}$ m³·s⁻¹ $= 6{,}6$ L·s⁻¹. 4. $v_1 = 3{,}3$ m·s⁻¹, $v_2 = 13{,}2$ m·s⁻¹, $P_1 - P_2 \\approx 8{,}2 \\times 10^{4}$ Pa. 5. $\\Delta t \\approx 1{,}5$ s."
     }
   ]
 }

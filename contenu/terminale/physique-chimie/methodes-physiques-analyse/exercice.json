@@ -87,6 +87,59 @@
         "$c_0 = 1{,}5 \\times 10^{-4} \\times 20 = 3{,}0 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. La solution mère est bien **plus concentrée** que la fille (facteur $20$), ce qui est cohérent avec une dilution."
       ],
       "reponse": "$c_1 = A/k = 1{,}5 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_0 = c_1 \\times V_2/V_1 = 3{,}0 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
+      "enonce": "Un conductimètre applique une tension $U = 2{,}0\\ \\mathrm{V}$ aux bornes d'une cellule plongée dans une solution ionique ; il mesure un courant d'intensité $I = 0{,}050\\ \\mathrm{A}$. 1) Calculer la conductance $G$ de la portion de solution. 2) La constante de la cellule vaut $k_{\\text{cell}} = 0{,}80\\ \\mathrm{m}$ (telle que $G = k_{\\text{cell}}\\,\\sigma$). En déduire la conductivité $\\sigma$ de la solution.",
+      "corrige": [
+        "1) La conductance est le rapport de l'intensité à la tension : $G = \\dfrac{I}{U} = \\dfrac{0{,}050}{2{,}0} = 0{,}025\\ \\mathrm{S} = 2{,}5 \\times 10^{-2}\\ \\mathrm{S}$. L'unité est le siemens ($\\mathrm{S}$).",
+        "2) On isole la conductivité dans $G = k_{\\text{cell}}\\,\\sigma$ : $\\sigma = \\dfrac{G}{k_{\\text{cell}}}$.",
+        "$\\sigma = \\dfrac{0{,}025}{0{,}80} = 3{,}1 \\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$. Contrôle d'unité : $\\dfrac{\\mathrm{S}}{\\mathrm{m}} = \\mathrm{S\\cdot m^{-1}}$, c'est bien l'unité d'une conductivité.",
+        "Attention à ne pas confondre les deux grandeurs : $G$ (en $\\mathrm{S}$) dépend de la cellule, $\\sigma$ (en $\\mathrm{S\\cdot m^{-1}}$) ne dépend que de la solution."
+      ],
+      "reponse": "$G = I/U = 2{,}5 \\times 10^{-2}\\ \\mathrm{S}$ ; $\\sigma = G/k_{\\text{cell}} = 3{,}1 \\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "absorbance-et-loi-de-beer-lambert",
+      "enonce": "Le spectre UV-visible d'une solution colorée présente, à sa longueur d'onde d'absorption maximale, une absorbance $A = 0{,}84$. La mesure est réalisée dans une cuve d'épaisseur $\\ell = 2{,}0\\ \\mathrm{cm}$. À cette longueur d'onde, le coefficient d'absorption molaire de l'espèce vaut $\\varepsilon = 6{,}0 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. 1) Déterminer la concentration $c$ de la solution. 2) Sans nouvelle mesure, prévoir l'absorbance $A'$ que l'on lirait, dans la même cuve, après avoir dilué cette solution deux fois (facteur $2$).",
+      "corrige": [
+        "1) On part de la loi de Beer-Lambert $A = \\varepsilon\\,\\ell\\,c$ et on isole la concentration : $c = \\dfrac{A}{\\varepsilon\\,\\ell}$. Attention : ici $\\ell = 2{,}0\\ \\mathrm{cm}$, il ne faut pas l'oublier au dénominateur.",
+        "$c = \\dfrac{0{,}84}{6{,}0 \\times 10^{3} \\times 2{,}0} = \\dfrac{0{,}84}{1{,}2 \\times 10^{4}} = 7{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "2) L'absorbance est proportionnelle à la concentration ($A = k\\,c$ à cuve et longueur d'onde fixées). Diviser la concentration par $2$ divise donc l'absorbance par $2$.",
+        "$A' = \\dfrac{A}{2} = \\dfrac{0{,}84}{2} = 0{,}42$. C'est bien un nombre sans unité, et il reste dans le domaine de validité ($A' \\lesssim 1$)."
+      ],
+      "reponse": "$c = A/(\\varepsilon\\ell) = 7{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$ ; après dilution par $2$, $A' = A/2 = 0{,}42$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
+      "enonce": "Avant de doser une solution, on doit étalonner la cellule conductimétrique. Étape 1 : plongée dans une solution étalon de conductivité connue $\\sigma_{\\text{ref}} = 0{,}25\\ \\mathrm{S\\cdot m^{-1}}$, la cellule donne une conductance $G_{\\text{ref}} = 0{,}20\\ \\mathrm{S}$. Étape 2 : la même cellule, plongée dans une solution de chlorure de sodium $(\\mathrm{Na^+ + Cl^-})$ de concentration inconnue, donne $G = 0{,}12\\ \\mathrm{S}$. Données : $\\lambda_{\\mathrm{Na^+}} = 5{,}0 \\times 10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. 1) Déterminer la constante $k_{\\text{cell}}$ de la cellule. 2) Calculer la conductivité $\\sigma$ de la solution de $\\mathrm{NaCl}$. 3) En déduire sa concentration $c$, en $\\mathrm{mol\\cdot L^{-1}}$.",
+      "corrige": [
+        "1) La constante de cellule relie conductance et conductivité par $G = k_{\\text{cell}}\\,\\sigma$. Avec la solution étalon : $k_{\\text{cell}} = \\dfrac{G_{\\text{ref}}}{\\sigma_{\\text{ref}}} = \\dfrac{0{,}20}{0{,}25} = 0{,}80\\ \\mathrm{m}$.",
+        "2) On applique la même constante à la solution inconnue : $\\sigma = \\dfrac{G}{k_{\\text{cell}}} = \\dfrac{0{,}12}{0{,}80} = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$.",
+        "3) Loi de Kohlrausch pour $\\mathrm{NaCl}$, avec $[\\mathrm{Na^+}] = [\\mathrm{Cl^-}] = c$ : $\\sigma = (\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}})\\,c$, d'où $c = \\dfrac{\\sigma}{\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}}} = \\dfrac{0{,}15}{(5{,}0 + 7{,}6) \\times 10^{-3}} = \\dfrac{0{,}15}{12{,}6 \\times 10^{-3}} = 11{,}9\\ \\mathrm{mol\\cdot m^{-3}}$.",
+        "Conversion vers l'unité usuelle : $c = 11{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 11{,}9 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}} = 1{,}2 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ (on divise par $10^{3}$)."
+      ],
+      "reponse": "$k_{\\text{cell}} = G_{\\text{ref}}/\\sigma_{\\text{ref}} = 0{,}80\\ \\mathrm{m}$ ; $\\sigma = G/k_{\\text{cell}} = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$ ; $c = 11{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 1{,}2 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "absorbance-et-loi-de-beer-lambert",
+      "enonce": "**Dosage d'un colorant bleu dans un sirop de menthe.** Le colorant bleu patenté (E131) donne au sirop de menthe sa teinte : mélangé au colorant jaune, il fait paraître le sirop vert. On souhaite déterminer la concentration en E131 d'un sirop du commerce par spectrophotométrie. Le spectre UV-visible du E131 présente un maximum d'absorption à $\\lambda_{\\max} = 640\\ \\mathrm{nm}$. On trace, à cette longueur d'onde et dans une cuve de $\\ell = 1{,}0\\ \\mathrm{cm}$, une courbe d'étalonnage à partir de solutions de concentrations connues : elle est linéaire et passe par le point $\\left(c = 5{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}\\ ;\\ A = 0{,}60\\right)$. On prélève ensuite $V_1 = 10{,}0\\ \\mathrm{mL}$ de sirop que l'on complète à $V_2 = 100{,}0\\ \\mathrm{mL}$ avec de l'eau distillée ; l'absorbance de cette solution diluée, mesurée dans la même cuve à $640\\ \\mathrm{nm}$, vaut $A_{\\text{d}} = 0{,}72$. Donnée : masse molaire du E131, $M = 5{,}83 \\times 10^{2}\\ \\mathrm{g\\cdot mol^{-1}}$. 1) Le E131 est bleu. Justifier que l'on choisisse de mesurer l'absorbance vers $640\\ \\mathrm{nm}$. 2) Déterminer le coefficient directeur $k$ de la courbe d'étalonnage. 3) Vérifier que la mesure $A_{\\text{d}} = 0{,}72$ est exploitable avec la loi de Beer-Lambert, puis calculer la concentration $c_{\\text{d}}$ de la solution diluée. 4) En déduire la concentration $c_{\\text{sirop}}$ du sirop, en $\\mathrm{mol\\cdot L^{-1}}$. 5) En déduire la concentration en masse $c_m$ du colorant dans le sirop, en $\\mathrm{g\\cdot L^{-1}}$.",
+      "corrige": [
+        "1. Une espèce colorée apparaît de la couleur **complémentaire** de celle qu'elle absorbe. Le E131 est **bleu** : il absorbe donc dans la zone complémentaire, l'orange-rouge, ce qui correspond bien à $\\lambda_{\\max} \\approx 640\\ \\mathrm{nm}$. On dose toujours à $\\lambda_{\\max}$ : l'absorbance y est maximale, donc la mesure est la plus sensible et la plus précise.",
+        "2. La courbe passe par l'origine (Beer-Lambert) : $A = k\\,c$, donc $k = \\dfrac{A}{c} = \\dfrac{0{,}60}{5{,}0 \\times 10^{-5}} = 1{,}2 \\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}}$.",
+        "3. La loi de Beer-Lambert n'est valable que pour une solution diluée, soit $A \\lesssim 1$. Ici $A_{\\text{d}} = 0{,}72 < 1$ : la mesure est exploitable (c'est d'ailleurs pour cela qu'on a dilué le sirop, trop concentré pour être mesuré directement). On dose alors avec la droite : $c_{\\text{d}} = \\dfrac{A_{\\text{d}}}{k} = \\dfrac{0{,}72}{1{,}2 \\times 10^{4}} = 6{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "4. La dilution conserve la quantité de matière prélevée : $c_{\\text{sirop}} \\times V_1 = c_{\\text{d}} \\times V_2$, donc $c_{\\text{sirop}} = c_{\\text{d}} \\times \\dfrac{V_2}{V_1}$. Le facteur de dilution vaut $\\dfrac{V_2}{V_1} = \\dfrac{100{,}0}{10{,}0} = 10$ (rapport de deux volumes en $\\mathrm{mL}$ : sans unité). D'où $c_{\\text{sirop}} = 6{,}0 \\times 10^{-5} \\times 10 = 6{,}0 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "5. On passe de la concentration molaire à la concentration en masse par $c_m = c_{\\text{sirop}} \\times M = 6{,}0 \\times 10^{-4} \\times 5{,}83 \\times 10^{2}$. Numériquement : $6{,}0 \\times 5{,}83 = 35{,}0$ et $10^{-4} \\times 10^{2} = 10^{-2}$, d'où $c_m = 35{,}0 \\times 10^{-2} = 0{,}35\\ \\mathrm{g\\cdot L^{-1}}$. Contrôle d'unité : $\\mathrm{mol\\cdot L^{-1}} \\times \\mathrm{g\\cdot mol^{-1}} = \\mathrm{g\\cdot L^{-1}}$."
+      ],
+      "reponse": "On mesure à $640\\ \\mathrm{nm}$ car le E131 bleu absorbe sa couleur complémentaire (orange-rouge) et l'on dose à $\\lambda_{\\max}$. $k = 1{,}2 \\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}}$ ; $c_{\\text{d}} = A_{\\text{d}}/k = 6{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_{\\text{sirop}} = c_{\\text{d}} \\times V_2/V_1 = 6{,}0 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_m = c_{\\text{sirop}} \\times M = 0{,}35\\ \\mathrm{g\\cdot L^{-1}}$."
     }
   ]
 }

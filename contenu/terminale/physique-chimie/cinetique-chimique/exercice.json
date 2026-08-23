@@ -85,6 +85,58 @@
         "4) Non. Un catalyseur change la **vitesse**, pas l'**état final** : il fait arriver plus vite au même point. Sans $\\text{Fe}^{3+}$, la réaction serait beaucoup plus lente (durée bien plus longue), mais la même quantité de $\\text{H}_2\\text{O}_2$ se décomposerait au total, donnant **la même quantité finale de $\\text{O}_2$**."
       ],
       "reponse": "$\\text{Fe}^{3+}$ = catalyseur (catalyse homogène) ; $k = \\dfrac{\\ln 2}{t_{1/2}} \\approx 1{,}2 \\times 10^{-2}$ s⁻¹ ; $[\\text{H}_2\\text{O}_2] = 0{,}050$ mol·L⁻¹ au bout de $3\\,t_{1/2} = 180$ s ; sans catalyseur, la quantité finale de $\\text{O}_2$ est inchangée (seule la durée change)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "vitesse-disparition-apparition",
+      "enonce": "Au cours d'une transformation, on suit l'apparition d'un produit $P$ en traçant $[P] = f(t)$. La tangente à la courbe à la date $t = 0$ part de l'origine $[P] = 0$ et passe par le point de coordonnées $(60$ s $;\\ 0{,}12$ mol·L⁻¹$)$. 1) Déterminer la vitesse volumique d'apparition initiale $v_{\\text{app}}(0)$. 2) Exprimer cette vitesse en mol·L⁻¹·min⁻¹.",
+      "corrige": [
+        "1) La vitesse d'apparition d'un produit est la variation de sa concentration par unité de temps, soit **le coefficient directeur de la tangente** à la courbe $[P] = f(t)$ : $v_{\\text{app}}(P) = +\\dfrac{\\mathrm{d}[P]}{\\mathrm{d}t}$. Ici $[P]$ augmente, la dérivée est positive : pas de signe « − ».",
+        "Coefficient directeur de la tangente à $t = 0$ : $\\dfrac{0{,}12 - 0}{60 - 0} = 2{,}0 \\times 10^{-3}$ mol·L⁻¹·s⁻¹. Donc $v_{\\text{app}}(0) = 2{,}0 \\times 10^{-3}$ mol·L⁻¹·s⁻¹.",
+        "2) Pour convertir en minutes, on multiplie par $60$ s·min⁻¹ : $v_{\\text{app}}(0) = 2{,}0 \\times 10^{-3} \\times 60 = 0{,}12$ mol·L⁻¹·min⁻¹. (Une vitesse par minute est numériquement plus grande qu'une vitesse par seconde, ce qui est cohérent.)"
+      ],
+      "reponse": "$v_{\\text{app}}(0) = 2{,}0 \\times 10^{-3}$ mol·L⁻¹·s⁻¹, soit $0{,}12$ mol·L⁻¹·min⁻¹."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "loi-ordre-1",
+      "enonce": "La disparition d'un réactif $R$ suit une loi de vitesse d'ordre 1. Sa concentration initiale est $[R]_0 = 0{,}60$ mol·L⁻¹ et, à la date $t = 90$ s, on mesure $[R] = 0{,}20$ mol·L⁻¹. 1) Déterminer la constante de vitesse $k$. 2) En déduire le temps de demi-réaction $t_{1/2}$.",
+      "corrige": [
+        "1) Pour une loi d'ordre 1, $[R](t) = [R]_0\\, e^{-kt}$. On isole l'exponentielle : $\\dfrac{[R]}{[R]_0} = e^{-kt}$, soit $\\dfrac{0{,}20}{0{,}60} = \\dfrac{1}{3} = e^{-k \\times 90}$.",
+        "On passe au logarithme : $-k \\times 90 = \\ln\\!\\left(\\dfrac{1}{3}\\right) = -\\ln 3 = -1{,}10$. Donc $k = \\dfrac{1{,}10}{90} \\approx 1{,}2 \\times 10^{-2}$ s⁻¹.",
+        "2) Le temps de demi-réaction d'un ordre 1 vaut $t_{1/2} = \\dfrac{\\ln 2}{k} = \\dfrac{0{,}693}{1{,}2 \\times 10^{-2}} \\approx 57$ s. (Cohérence : à $t = 90$ s $> t_{1/2}$, il reste moins de la moitié de $[R]_0$, ce que confirme $0{,}20 < 0{,}30$ mol·L⁻¹.)"
+      ],
+      "reponse": "$k = \\dfrac{\\ln 3}{90} \\approx 1{,}2 \\times 10^{-2}$ s⁻¹ ; $t_{1/2} = \\dfrac{\\ln 2}{k} \\approx 57$ s."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "loi-ordre-1",
+      "enonce": "On étudie une même transformation d'ordre 1 à deux températures. À $\\theta_1 = 20$ °C, on mesure un temps de demi-réaction $t_{1/2,1} = 240$ s ; à $\\theta_2 = 40$ °C, $t_{1/2,2} = 60$ s. 1) Calculer les constantes de vitesse $k_1$ et $k_2$. 2) Par quel facteur la constante de vitesse est-elle multipliée quand on passe de 20 à 40 °C ? 3) Quel facteur cinétique est ici en jeu et le résultat est-il cohérent ? 4) À 40 °C, en partant de $[R]_0 = 0{,}50$ mol·L⁻¹, quelle concentration reste-t-il au bout de 3 min ?",
+      "corrige": [
+        "1) Pour un ordre 1, $t_{1/2} = \\dfrac{\\ln 2}{k}$, donc $k = \\dfrac{\\ln 2}{t_{1/2}}$. À 20 °C : $k_1 = \\dfrac{0{,}693}{240} \\approx 2{,}9 \\times 10^{-3}$ s⁻¹. À 40 °C : $k_2 = \\dfrac{0{,}693}{60} \\approx 1{,}2 \\times 10^{-2}$ s⁻¹.",
+        "2) Le rapport des constantes vaut $\\dfrac{k_2}{k_1} = \\dfrac{t_{1/2,1}}{t_{1/2,2}} = \\dfrac{240}{60} = 4$. La constante de vitesse est **multipliée par 4** entre 20 et 40 °C.",
+        "3) Le facteur cinétique en jeu est la **température** : plus elle est élevée, plus les chocs entre entités sont fréquents et énergétiques, donc plus la transformation est rapide. Ici $k$ augmente (et $t_{1/2}$ diminue) avec la température : c'est bien cohérent.",
+        "4) À 40 °C, $t_{1/2,2} = 60$ s et $3$ min $= 180$ s $= 3 \\times t_{1/2,2}$ : la concentration est divisée par $2^3 = 8$. On obtient $[R] = \\dfrac{0{,}50}{8} \\approx 6{,}3 \\times 10^{-2}$ mol·L⁻¹."
+      ],
+      "reponse": "$k_1 \\approx 2{,}9 \\times 10^{-3}$ s⁻¹ et $k_2 \\approx 1{,}2 \\times 10^{-2}$ s⁻¹ ; $k$ est multipliée par 4 (facteur température, cohérent) ; après 3 min à 40 °C, $[R] = [R]_0/8 \\approx 6{,}3 \\times 10^{-2}$ mol·L⁻¹."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "suivi-temporel-loi-ordre-1",
+      "enonce": "**Suivi spectrophotométrique d'une décoloration.** Une espèce colorée $B$ se décompose lentement en solution aqueuse. On suit sa disparition en mesurant, à la longueur d'onde $\\lambda = 500$ nm, l'absorbance $A$ de la solution, proportionnelle à sa concentration selon la loi de Beer-Lambert $A = \\varepsilon\\,\\ell\\,[B]$, avec ici $\\varepsilon\\,\\ell = 4{,}0 \\times 10^{2}$ L·mol⁻¹. Les mesures donnent :\n\n| $t$ (s) | 0 | 150 | 300 | 450 | 600 |\n|---|---|---|---|---|---|\n| $A$ | 0,80 | 0,40 | 0,20 | 0,10 | 0,05 |\n\n1) Justifier qu'un suivi cinétique dans le temps est ici possible. 2) À l'aide de la loi de Beer-Lambert, calculer la concentration $[B]$ à chaque date et donner la concentration initiale $[B]_0$. 3) Déterminer plusieurs temps de demi-réaction successifs et en déduire que la disparition de $B$ est d'ordre 1. 4) Calculer la constante de vitesse $k$. 5) Déterminer la vitesse volumique de disparition de $B$ à l'instant initial. 6) On refait l'expérience à une température plus élevée. Indiquer, en justifiant, l'effet sur $k$, sur $t_{1/2}$ et sur la quantité finale de $B$ décomposée.",
+      "corrige": [
+        "1) La transformation est **lente** : son évolution s'étale sur plusieurs centaines de secondes (l'absorbance diminue progressivement de $0{,}80$ à $0{,}05$). On peut donc en suivre le déroulement dans le temps, ce qu'autorise justement une étude cinétique (une réaction rapide, quasi instantanée, ne le permettrait pas).",
+        "2) La loi de Beer-Lambert donne $[B] = \\dfrac{A}{\\varepsilon\\,\\ell} = \\dfrac{A}{4{,}0 \\times 10^{2}}$ (en mol·L⁻¹). On obtient : à $t = 0$, $[B]_0 = \\dfrac{0{,}80}{400} = 2{,}0 \\times 10^{-3}$ mol·L⁻¹ ; puis $1{,}0 \\times 10^{-3}$ ($t=150$ s), $5{,}0 \\times 10^{-4}$ ($t=300$ s), $2{,}5 \\times 10^{-4}$ ($t=450$ s) et $1{,}25 \\times 10^{-4}$ mol·L⁻¹ ($t=600$ s). Comme $[B]$ est proportionnelle à $A$, on peut d'ailleurs raisonner directement sur $A$.",
+        "3) Un temps de demi-réaction est la durée au bout de laquelle $[B]$ (donc $A$) est divisée par deux. De $A = 0{,}80$ à $0{,}40$ : $t_{1/2} = 150 - 0 = 150$ s. De $0{,}40$ à $0{,}20$ : $300 - 150 = 150$ s. De $0{,}20$ à $0{,}10$ : $450 - 300 = 150$ s. Les temps de demi-réaction successifs sont **tous égaux** ($150$ s), indépendamment de la concentration : c'est la **signature d'une loi d'ordre 1**.",
+        "4) Pour un ordre 1, $t_{1/2} = \\dfrac{\\ln 2}{k}$, d'où $k = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{150} \\approx 4{,}6 \\times 10^{-3}$ s⁻¹.",
+        "5) Pour un ordre 1, la vitesse volumique de disparition s'écrit $v_{\\text{disp}}(B) = k\\,[B]$. À l'instant initial : $v_{\\text{disp}}(0) = k\\,[B]_0 = 4{,}6 \\times 10^{-3} \\times 2{,}0 \\times 10^{-3} \\approx 9{,}2 \\times 10^{-6}$ mol·L⁻¹·s⁻¹. C'est la vitesse maximale ; elle décroît ensuite avec $[B]$.",
+        "6) La température est un **facteur cinétique** : en l'augmentant, la transformation est plus rapide, donc $k$ **augmente** et $t_{1/2} = \\ln 2/k$ **diminue**. En revanche la température ne change pas l'**état final** : la même quantité de $B$ finit par se décomposer, seulement plus vite."
+      ],
+      "reponse": "$[B]_0 = 2{,}0 \\times 10^{-3}$ mol·L⁻¹ ; $t_{1/2} = 150$ s constant → ordre 1, avec $k = \\dfrac{\\ln 2}{t_{1/2}} \\approx 4{,}6 \\times 10^{-3}$ s⁻¹ ; $v_{\\text{disp}}(0) = k[B]_0 \\approx 9{,}2 \\times 10^{-6}$ mol·L⁻¹·s⁻¹ ; à température plus élevée $k$ augmente, $t_{1/2}$ diminue, mais la quantité finale de $B$ décomposée est inchangée."
     }
   ]
 }

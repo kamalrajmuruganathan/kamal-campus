@@ -82,6 +82,55 @@
         "Interprétation : une baisse de seulement $0{,}1$ unité de pH correspond à $+26\\ \\%$ d'ions oxonium, car l'échelle de pH est **logarithmique** — d'où la gravité de l'acidification des océans."
       ],
       "reponse": "$[\\mathrm{H_3O^+}]_1 = 6{,}3\\times10^{-9}$ et $[\\mathrm{H_3O^+}]_2 = 7{,}9\\times10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$ ; hausse d'environ $26\\ \\%$ ($10^{0{,}1}$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "couple-acide-base",
+      "enonce": "Pour chacune des espèces suivantes, écrire le couple acide-base auquel elle appartient (en précisant l'acide et la base conjuguée), puis la demi-équation acido-basique correspondante. a) L'acide benzoïque $\\mathrm{C_6H_5COOH}$, un conservateur alimentaire. b) La méthylamine $\\mathrm{CH_3NH_2}$, responsable de l'odeur du poisson avarié.",
+      "corrige": [
+        "a) L'acide benzoïque est un acide carboxylique : il **cède** le proton porté par son groupe $\\mathrm{-COOH}$. Sa base conjuguée est l'ion benzoate $\\mathrm{C_6H_5COO^-}$ (on a retiré un H et la charge est passée de $0$ à $-1$). Le couple est $\\mathrm{C_6H_5COOH / C_6H_5COO^-}$, de demi-équation $\\mathrm{C_6H_5COOH = C_6H_5COO^- + H^+}$.",
+        "b) La méthylamine est une amine : l'azote porte un doublet non liant, elle **capte** un proton. Son acide conjugué est l'ion méthylammonium $\\mathrm{CH_3NH_3^+}$ (on a ajouté un H et la charge est passée de $0$ à $+1$). Le couple est $\\mathrm{CH_3NH_3^+ / CH_3NH_2}$, de demi-équation $\\mathrm{CH_3NH_3^+ = CH_3NH_2 + H^+}$."
+      ],
+      "reponse": "Couple $\\mathrm{C_6H_5COOH / C_6H_5COO^-}$, demi-équation $\\mathrm{C_6H_5COOH = C_6H_5COO^- + H^+}$ ; couple $\\mathrm{CH_3NH_3^+ / CH_3NH_2}$, demi-équation $\\mathrm{CH_3NH_3^+ = CH_3NH_2 + H^+}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "ph-definition",
+      "enonce": "Un soda contient des ions oxonium à la concentration $[\\mathrm{H_3O^+}] = 2{,}5 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$. 1) Calculer le pH du soda et préciser si la solution est acide, neutre ou basique. 2) Sachant que l'eau pure neutre à 25 °C a $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$, déterminer combien de fois le soda est plus concentré en ions oxonium que l'eau pure. (On donne $\\log 2{,}5 \\approx 0{,}40$.)",
+      "corrige": [
+        "1) On applique la définition avec $[\\mathrm{H_3O^+}]$ en $\\mathrm{mol \\cdot L^{-1}}$ : $\\mathrm{pH} = -\\log(2{,}5 \\times 10^{-3}) = -(\\log 2{,}5 - 3) = 3 - 0{,}40 = 2{,}6$. Comme $\\mathrm{pH} = 2{,}6 < 7$, la solution est **acide**.",
+        "2) On compare les deux concentrations par leur rapport : $\\dfrac{[\\mathrm{H_3O^+}]_{\\text{soda}}}{[\\mathrm{H_3O^+}]_{\\text{eau}}} = \\dfrac{2{,}5 \\times 10^{-3}}{1{,}0 \\times 10^{-7}} = 2{,}5 \\times 10^{4}$.",
+        "Le soda est donc $2{,}5 \\times 10^{4}$ fois (soit $25\\,000$ fois) plus concentré en ions oxonium que l'eau pure. Cet écart énorme pour seulement $4{,}4$ unités de pH illustre le caractère **logarithmique** de l'échelle."
+      ],
+      "reponse": "$\\mathrm{pH} = 2{,}6$ (solution acide) ; le soda est $2{,}5 \\times 10^{4}$ fois plus concentré en $\\mathrm{H_3O^+}$ que l'eau pure."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "reaction-acide-base",
+      "enonce": "On introduit de l'acide méthanoïque $\\mathrm{HCOOH}$ dans une solution aqueuse d'ammoniac $\\mathrm{NH_3}$. Les couples mis en jeu sont $\\mathrm{HCOOH / HCOO^-}$ et $\\mathrm{NH_4^+ / NH_3}$. 1) Écrire l'équation de la réaction acide-base et identifier l'acide et la base. 2) Après réaction, on mesure un pH de $8{,}5$. Le milieu est-il acide, neutre ou basique ? Justifier. 3) Calculer la concentration en ions oxonium $[\\mathrm{H_3O^+}]$ correspondante. (On donne $10^{-0{,}5} \\approx 0{,}32$.)",
+      "corrige": [
+        "1) L'acide méthanoïque **cède** son proton, l'ammoniac le **capte**. On écrit la demi-équation de $\\mathrm{HCOOH}$ dans le sens de la perte de $\\mathrm{H^+}$ et celle de $\\mathrm{NH_3}$ dans le sens du gain, puis on additionne pour que $\\mathrm{H^+}$ disparaisse : $\\mathrm{HCOOH + NH_3 \\longrightarrow HCOO^- + NH_4^+}$. L'**acide** est $\\mathrm{HCOOH}$, la **base** est $\\mathrm{NH_3}$.",
+        "2) Le pH mesuré vaut $8{,}5$, ce qui est $> 7$ : le milieu est **basique**.",
+        "3) On utilise la relation inverse : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-8{,}5}\\ \\mathrm{mol \\cdot L^{-1}}$. On écrit $-8{,}5 = -0{,}5 - 8$, donc $10^{-8{,}5} = 10^{-0{,}5} \\times 10^{-8} = 0{,}32 \\times 10^{-8} = 3{,}2 \\times 10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$. On a bien $[\\mathrm{H_3O^+}] < 1{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$, ce qui confirme le caractère basique."
+      ],
+      "reponse": "$\\mathrm{HCOOH + NH_3 \\longrightarrow HCOO^- + NH_4^+}$ (acide $\\mathrm{HCOOH}$, base $\\mathrm{NH_3}$) ; pH $= 8{,}5 > 7$ donc milieu basique ; $[\\mathrm{H_3O^+}] = 3{,}2 \\times 10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "acide-base-ph",
+      "enonce": "**Le dioxyde de carbone dissous dans une eau minérale gazeuse.** Dans une eau gazeuse, le dioxyde de carbone dissous forme l'acide carbonique, noté $\\mathrm{CO_2,H_2O}$. Cette espèce intervient dans les couples $\\mathrm{CO_2,H_2O / HCO_3^-}$ et $\\mathrm{HCO_3^- / CO_3^{2-}}$. Un pH-mètre indique, pour une bouteille fraîchement ouverte, $\\mathrm{pH} = 5{,}0$. Données : $\\log 2 \\approx 0{,}30$ ; $10^{0{,}3} \\approx 2{,}0$. 1) Écrire la demi-équation acido-basique du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$ et préciser lequel est l'acide, lequel est la base. 2) Dans l'eau gazeuse, l'acide carbonique réagit avec l'eau, celle-ci jouant le rôle de base (couple $\\mathrm{H_3O^+ / H_2O}$). Écrire l'équation de cette réaction acide-base et identifier l'acide et la base. 3) Montrer que l'ion hydrogénocarbonate $\\mathrm{HCO_3^-}$ est une espèce amphotère. 4) À partir du pH mesuré, calculer la concentration en ions oxonium $[\\mathrm{H_3O^+}]$ de l'eau gazeuse et vérifier que la solution est bien acide. 5) On laisse la bouteille ouverte : le $\\mathrm{CO_2}$ s'échappe peu à peu et le pH remonte à $6{,}7$. Calculer la nouvelle concentration $[\\mathrm{H_3O^+}]$, puis déterminer par quel facteur la concentration en ions oxonium a été divisée entre l'ouverture et cet instant.",
+      "corrige": [
+        "1. Dans le couple $\\mathrm{CO_2,H_2O / HCO_3^-}$, l'acide est celui qui possède le proton à céder : c'est $\\mathrm{CO_2,H_2O}$ ; sa base conjuguée est $\\mathrm{HCO_3^-}$. La demi-équation s'écrit $\\mathrm{CO_2,H_2O = HCO_3^- + H^+}$.",
+        "2. L'acide carbonique cède son proton, l'eau (base du couple $\\mathrm{H_3O^+/H_2O}$) le capte. En additionnant les deux demi-équations de façon à éliminer $\\mathrm{H^+}$ : $\\mathrm{CO_2,H_2O + H_2O \\longrightarrow HCO_3^- + H_3O^+}$. L'**acide** est $\\mathrm{CO_2,H_2O}$, la **base** est $\\mathrm{H_2O}$.",
+        "3. $\\mathrm{HCO_3^-}$ est la **base** du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$ (il peut capter un $\\mathrm{H^+}$ pour redonner $\\mathrm{CO_2,H_2O}$) et l'**acide** du couple $\\mathrm{HCO_3^- / CO_3^{2-}}$ (il peut céder un $\\mathrm{H^+}$ pour donner $\\mathrm{CO_3^{2-}}$). Étant l'acide d'un couple ET la base d'un autre, il est **amphotère**.",
+        "4. Relation inverse : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-5{,}0} = 1{,}0 \\times 10^{-5}\\ \\mathrm{mol \\cdot L^{-1}}$. Comme $\\mathrm{pH} = 5{,}0 < 7$ (et $[\\mathrm{H_3O^+}] > 1{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$), la solution est bien **acide** : c'est le $\\mathrm{CO_2}$ dissous qui acidifie l'eau gazeuse.",
+        "5. À $\\mathrm{pH} = 6{,}7$ : $[\\mathrm{H_3O^+}]' = 10^{-6{,}7}\\ \\mathrm{mol \\cdot L^{-1}}$. On écrit $-6{,}7 = 0{,}3 - 7$, donc $10^{-6{,}7} = 10^{0{,}3} \\times 10^{-7} = 2{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$. Le facteur de division est $\\dfrac{[\\mathrm{H_3O^+}]}{[\\mathrm{H_3O^+}]'} = \\dfrac{1{,}0 \\times 10^{-5}}{2{,}0 \\times 10^{-7}} = 50$. La concentration en ions oxonium a été divisée par $50$ : en s'échappant, le $\\mathrm{CO_2}$ rend l'eau nettement moins acide."
+      ],
+      "reponse": "1. $\\mathrm{CO_2,H_2O = HCO_3^- + H^+}$ (acide $\\mathrm{CO_2,H_2O}$, base $\\mathrm{HCO_3^-}$). 2. $\\mathrm{CO_2,H_2O + H_2O \\longrightarrow HCO_3^- + H_3O^+}$ (acide $\\mathrm{CO_2,H_2O}$, base $\\mathrm{H_2O}$). 3. $\\mathrm{HCO_3^-}$ est base dans $\\mathrm{CO_2,H_2O/HCO_3^-}$ et acide dans $\\mathrm{HCO_3^-/CO_3^{2-}}$, donc amphotère. 4. $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-5}\\ \\mathrm{mol \\cdot L^{-1}}$, solution acide. 5. $[\\mathrm{H_3O^+}]' = 2{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$, concentration divisée par $50$."
     }
   ]
 }

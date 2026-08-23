@@ -86,6 +86,59 @@
         "Comme on n'utilise que des rapports ($P_1/P_2$ et $T_2/T_1$), les unités de $P$ (bar) et de $V$ (mL) se conservent : seules les températures doivent impérativement être en kelvins. La bulle grossit en remontant, surtout à cause de la chute de pression."
       ],
       "reponse": "$V_2 = V_1 \\dfrac{P_1}{P_2}\\dfrac{T_2}{T_1} \\approx 6{,}3$ mL : la bulle grossit en remontant."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "equation-etat",
+      "enonce": "Un petit flacon rigide de volume $V = 0{,}50$ L contient de l'hélium, assimilé à un gaz parfait, sous la pression $P = 1{,}2$ bar à la température $\\theta = 22$ °C. Calculer la quantité de matière $n$ d'hélium contenue dans le flacon.",
+      "corrige": [
+        "On isole la quantité de matière dans l'équation d'état : $n = \\dfrac{PV}{RT}$.",
+        "On convertit chaque grandeur en unités SI : $V = 0{,}50$ L $= 5{,}0 \\times 10^{-4}$ m³, $P = 1{,}2$ bar $= 1{,}2 \\times 10^{5}$ Pa et $T = 22 + 273 = 295$ K.",
+        "Application numérique : $n = \\dfrac{1{,}2 \\times 10^{5} \\times 5{,}0 \\times 10^{-4}}{8{,}314 \\times 295} \\approx 2{,}4 \\times 10^{-2}$ mol."
+      ],
+      "reponse": "$n = \\dfrac{PV}{RT} \\approx 2{,}4 \\times 10^{-2}$ mol."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "equation-etat",
+      "enonce": "Un récipient rigide de volume $V = 3{,}0$ L contient une masse $m = 8{,}8$ g de dioxyde de carbone $\\mathrm{CO_2}$ ($M = 44$ g·mol⁻¹), assimilé à un gaz parfait, à la température $\\theta = 25$ °C. Calculer la pression $P$ régnant dans le récipient.",
+      "corrige": [
+        "Première étape — la quantité de matière : $n = \\dfrac{m}{M} = \\dfrac{8{,}8}{44} = 0{,}20$ mol.",
+        "Seconde étape — l'équation d'état, où l'on isole la pression : $P = \\dfrac{nRT}{V}$.",
+        "On convertit en unités SI : $V = 3{,}0$ L $= 3{,}0 \\times 10^{-3}$ m³ et $T = 25 + 273 = 298$ K.",
+        "Application numérique : $P = \\dfrac{0{,}20 \\times 8{,}314 \\times 298}{3{,}0 \\times 10^{-3}} \\approx 1{,}7 \\times 10^{5}$ Pa (soit environ $1{,}7$ bar)."
+      ],
+      "reponse": "$n = \\dfrac{m}{M} = 0{,}20$ mol, puis $P = \\dfrac{nRT}{V} \\approx 1{,}7 \\times 10^{5}$ Pa."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "grandeurs-macroscopiques",
+      "enonce": "En laboratoire, on mesure la masse volumique d'un gaz pur inconnu, assimilé à un gaz parfait : $\\rho = 1{,}17$ kg·m⁻³ à $\\theta = 15$ °C sous $P = 1{,}0 \\times 10^{5}$ Pa. 1) Établir l'expression de la masse molaire $M$ du gaz en fonction de $\\rho$, $P$, $R$ et $T$. 2) Calculer $M$ et identifier le gaz parmi : diazote $\\mathrm{N_2}$ ($28$ g·mol⁻¹), dioxygène $\\mathrm{O_2}$ ($32$ g·mol⁻¹), dioxyde de carbone $\\mathrm{CO_2}$ ($44$ g·mol⁻¹).",
+      "corrige": [
+        "1) On part de $\\rho = \\dfrac{m}{V} = \\dfrac{nM}{V}$ et de l'équation d'état $PV = nRT$, soit $\\dfrac{n}{V} = \\dfrac{P}{RT}$. En combinant : $\\rho = \\dfrac{P M}{R T}$, d'où on isole $M = \\dfrac{\\rho R T}{P}$.",
+        "2) On convertit la température : $T = 15 + 273 = 288$ K (la pression et la masse volumique sont déjà en unités SI).",
+        "Application numérique : $M = \\dfrac{1{,}17 \\times 8{,}314 \\times 288}{1{,}0 \\times 10^{5}} \\approx 2{,}80 \\times 10^{-2}$ kg·mol⁻¹, soit $M \\approx 28$ g·mol⁻¹.",
+        "Cette valeur correspond au diazote $\\mathrm{N_2}$ ($28$ g·mol⁻¹) : c'est donc lui. Le dioxygène ($32$) et le dioxyde de carbone ($44$) donneraient une masse volumique nettement plus grande dans les mêmes conditions."
+      ],
+      "reponse": "$M = \\dfrac{\\rho R T}{P} \\approx 28$ g·mol⁻¹ : le gaz est le diazote $\\mathrm{N_2}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "equation-etat",
+      "enonce": "Une bouteille de plongée rigide, de volume $V = 12$ L, est remplie d'air (assimilé à un gaz parfait, de masse molaire moyenne $M = 29$ g·mol⁻¹) sous la pression $P_1 = 200$ bar à la température $\\theta_1 = 20$ °C. On prendra $R = 8{,}314$ J·K⁻¹·mol⁻¹.\n\n1. Convertir le volume $V$, la pression $P_1$ et la température $\\theta_1$ en unités du Système international.\n2. Calculer la quantité de matière $n$ d'air enfermée dans la bouteille.\n3. En déduire la masse $m$ d'air comprimé dans la bouteille.\n4. Oubliée en plein soleil, la bouteille (indéformable, donc à volume et quantité de matière constants) voit sa température monter à $\\theta_2 = 50$ °C. Calculer la nouvelle pression $P_2$.\n5. Interpréter, à l'échelle microscopique, cette variation de pression.\n6. La bouteille est remplie sous $200$ bar : le modèle du gaz parfait est-il ici pleinement justifié ? Justifier.",
+      "corrige": [
+        "1. Conversions en unités SI : $V = 12$ L $= 1{,}2 \\times 10^{-2}$ m³ ; $P_1 = 200$ bar $= 2{,}0 \\times 10^{7}$ Pa ; $T_1 = \\theta_1 + 273 = 20 + 273 = 293$ K.",
+        "2. On isole la quantité de matière dans l'équation d'état : $n = \\dfrac{P_1 V}{R T_1} = \\dfrac{2{,}0 \\times 10^{7} \\times 1{,}2 \\times 10^{-2}}{8{,}314 \\times 293} \\approx 99$ mol.",
+        "3. Masse d'air correspondante : $m = nM = 99 \\times 29 \\approx 2{,}9 \\times 10^{3}$ g, soit environ $2{,}9$ kg d'air comprimé.",
+        "4. Le volume et la quantité de matière sont constants ; entre les deux états, $\\dfrac{P_1 V}{T_1} = \\dfrac{P_2 V}{T_2}$ se simplifie en $\\dfrac{P_1}{T_1} = \\dfrac{P_2}{T_2}$. Avec $T_2 = 50 + 273 = 323$ K : $P_2 = P_1 \\times \\dfrac{T_2}{T_1} = 200 \\times \\dfrac{323}{293} \\approx 2{,}2 \\times 10^{2}$ bar (le rapport de températures autorise à garder les bars).",
+        "5. À l'échelle microscopique, chauffer le gaz augmente l'agitation thermique : les particules vont plus vite et heurtent les parois plus violemment et plus fréquemment. À volume constant, ce surcroît de chocs par unité de surface se traduit par une pression plus élevée.",
+        "6. Sous $200$ bar, la pression est très élevée : le volume propre des molécules n'est plus négligeable devant le volume disponible et les hypothèses du gaz parfait sont mises en défaut. Le modèle ne fournit donc qu'une valeur approchée ; un modèle de gaz réel décrirait plus fidèlement l'air ainsi comprimé."
+      ],
+      "reponse": "$n = \\dfrac{P_1 V}{R T_1} \\approx 99$ mol ; $m = nM \\approx 2{,}9$ kg ; $P_2 = P_1 \\dfrac{T_2}{T_1} \\approx 2{,}2 \\times 10^{2}$ bar. La hausse de pression traduit l'agitation thermique accrue ; mais à $200$ bar (haute pression), le modèle du gaz parfait atteint ses limites."
     }
   ]
 }

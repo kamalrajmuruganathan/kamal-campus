@@ -87,6 +87,60 @@
         "Masse de fer : $m = n(\\mathrm{Fe^{2+}}) \\times M(\\mathrm{Fe}) = 1{,}6 \\times 10^{-3} \\times 55{,}8 = 8{,}9 \\times 10^{-2}$ g, soit environ $89$ mg de fer dans le comprimé."
       ],
       "reponse": "$n(\\mathrm{MnO_4^-}) = 3{,}2 \\times 10^{-4}$ mol ; $n(\\mathrm{Fe^{2+}}) = 5\\,n(\\mathrm{MnO_4^-}) = 1{,}6 \\times 10^{-3}$ mol ; $m = 8{,}9 \\times 10^{-2}$ g $\\approx 89$ mg de fer."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "relation-equivalence",
+      "enonce": "On titre l'acide éthanoïque (acide faible) d'un vinaigre dilué par une solution de soude (hydroxyde de sodium) de concentration $C_B = 0{,}10$ mol·L⁻¹. La réaction support est $\\mathrm{CH_3COOH} + \\mathrm{OH^-} \\rightarrow \\mathrm{CH_3COO^-} + \\mathrm{H_2O}$. On prélève $V_A = 10{,}0$ mL de vinaigre dilué et l'équivalence, repérée par pH-métrie, est atteinte pour $V_{\\text{éq}} = 12{,}0$ mL. Déterminer la concentration $C_A$ en acide éthanoïque de la solution titrée.",
+      "corrige": [
+        "La réaction est de type 1:1 : à l'équivalence, $n(\\mathrm{CH_3COOH}) = n(\\mathrm{OH^-}\\text{ versé})$, soit $C_A \\times V_A = C_B \\times V_{\\text{éq}}$.",
+        "On isole la concentration cherchée : $C_A = \\dfrac{C_B \\times V_{\\text{éq}}}{V_A}$.",
+        "Le calcul porte sur un rapport de volumes $\\dfrac{V_{\\text{éq}}}{V_A}$ : les deux peuvent rester en mL. $C_A = \\dfrac{0{,}10 \\times 12{,}0}{10{,}0} = 0{,}12$ mol·L⁻¹.",
+        "Cohérence : $V_{\\text{éq}} > V_A$ donne bien $C_A > C_B$."
+      ],
+      "reponse": "$C_A = \\dfrac{C_B V_{\\text{éq}}}{V_A} = 0{,}12$ mol·L⁻¹."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "titre-massique",
+      "enonce": "On dose l'acide ascorbique (vitamine C, $\\mathrm{C_6H_8O_6}$) d'un comprimé effervescent dissous dans $V_A = 20{,}0$ mL de solution. Le titrage se fait par de la soude à $C_B = 0{,}020$ mol·L⁻¹, selon la réaction 1:1 $\\mathrm{C_6H_8O_6} + \\mathrm{OH^-} \\rightarrow \\mathrm{C_6H_7O_6^-} + \\mathrm{H_2O}$ ; l'équivalence est atteinte pour $V_{\\text{éq}} = 14{,}0$ mL. On donne $M(\\mathrm{C_6H_8O_6}) = 176$ g·mol⁻¹. 1) Déterminer la quantité de matière $n$ de vitamine C titrée. 2) En déduire la masse $m$ de vitamine C contenue dans le comprimé.",
+      "corrige": [
+        "À l'équivalence (réaction 1:1) : $n = n(\\mathrm{OH^-}\\text{ versé}) = C_B \\times V_{\\text{éq}}$. Le calcul porte sur une quantité de matière : le volume doit être en litres, $V_{\\text{éq}} = 14{,}0 \\times 10^{-3}$ L.",
+        "$n = 0{,}020 \\times 14{,}0 \\times 10^{-3} = 2{,}8 \\times 10^{-4}$ mol.",
+        "La masse se déduit de la masse molaire : $m = n \\times M = 2{,}8 \\times 10^{-4} \\times 176$.",
+        "$m = 4{,}9 \\times 10^{-2}$ g, soit environ $49$ mg de vitamine C dans le comprimé."
+      ],
+      "reponse": "$n = C_B V_{\\text{éq}} = 2{,}8 \\times 10^{-4}$ mol ; $m = nM = 4{,}9 \\times 10^{-2}$ g $\\approx 49$ mg."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "stoechiometrie-dilution",
+      "enonce": "Une eau oxygénée commerciale contient du peroxyde d'hydrogène $\\mathrm{H_2O_2}$. Trop concentrée pour être titrée directement, elle est d'abord diluée $10$ fois. On titre ensuite $V_A = 10{,}0$ mL de la solution diluée par du permanganate de potassium à $C_B = 0{,}020$ mol·L⁻¹, selon $2\\,\\mathrm{MnO_4^-} + 5\\,\\mathrm{H_2O_2} + 6\\,\\mathrm{H^+} \\rightarrow 2\\,\\mathrm{Mn^{2+}} + 5\\,\\mathrm{O_2} + 8\\,\\mathrm{H_2O}$. L'équivalence, repérée par la persistance de la teinte violette, est atteinte pour $V_{\\text{éq}} = 20{,}0$ mL. 1) Quantité de permanganate versée à l'équivalence. 2) Quantité de $\\mathrm{H_2O_2}$ dans la prise d'essai diluée. 3) Concentration en $\\mathrm{H_2O_2}$ de la solution commerciale.",
+      "corrige": [
+        "Quantité de titrant à l'équivalence (volume en litres) : $n(\\mathrm{MnO_4^-}) = C_B \\times V_{\\text{éq}} = 0{,}020 \\times 20{,}0 \\times 10^{-3} = 4{,}0 \\times 10^{-4}$ mol.",
+        "La réaction n'est pas 1:1 : $a = 5$ pour $\\mathrm{H_2O_2}$ et $b = 2$ pour $\\mathrm{MnO_4^-}$. L'équivalence s'écrit $\\dfrac{n(\\mathrm{H_2O_2})}{5} = \\dfrac{n(\\mathrm{MnO_4^-})}{2}$, donc $n(\\mathrm{H_2O_2}) = \\dfrac{5}{2}\\,n(\\mathrm{MnO_4^-}) = 2{,}5 \\times 4{,}0 \\times 10^{-4} = 1{,}0 \\times 10^{-3}$ mol.",
+        "Concentration de la solution diluée : $C_{\\text{fille}} = \\dfrac{n(\\mathrm{H_2O_2})}{V_A} = \\dfrac{1{,}0 \\times 10^{-3}}{10{,}0 \\times 10^{-3}} = 0{,}10$ mol·L⁻¹.",
+        "La dilution divise la concentration par $F = 10$ ; pour remonter à la solution commerciale on multiplie : $C_{\\text{mère}} = F \\times C_{\\text{fille}} = 10 \\times 0{,}10 = 1{,}0$ mol·L⁻¹."
+      ],
+      "reponse": "$n(\\mathrm{MnO_4^-}) = 4{,}0 \\times 10^{-4}$ mol ; $n(\\mathrm{H_2O_2}) = \\tfrac{5}{2}\\,n(\\mathrm{MnO_4^-}) = 1{,}0 \\times 10^{-3}$ mol ; $C_{\\text{mère}} = 1{,}0$ mol·L⁻¹."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "titrage-complet",
+      "enonce": "Contrôle qualité d'un vinaigre. Une étiquette annonce un vinaigre « $6°$ », le degré étant défini comme la masse, en grammes, d'acide éthanoïque $\\mathrm{CH_3COOH}$ contenue dans $100$ g de vinaigre. On souhaite vérifier cette indication. Le vinaigre étant trop concentré, on le dilue $10$ fois. On prélève $V_A = 10{,}0$ mL de vinaigre dilué que l'on titre par une solution de soude (hydroxyde de sodium) de concentration $C_B = 0{,}10$ mol·L⁻¹, avec suivi pH-métrique. La méthode des tangentes donne l'équivalence à $V_{\\text{éq}} = 10{,}0$ mL ; le pH y est mesuré à $8{,}4$. Données : masse volumique du vinaigre $\\rho = 1{,}01 \\times 10^{3}$ g·L⁻¹, $M(\\mathrm{CH_3COOH}) = 60{,}0$ g·mol⁻¹, $\\rho_{\\text{eau}} = 1000$ g·L⁻¹. 1) Écrire la réaction support et justifier qu'elle convient à un titrage. 2) Pourquoi dilue-t-on avant de titrer ? Donner le facteur de dilution $F$. 3) Déterminer la concentration $C_{\\text{fille}}$ en acide éthanoïque de la solution diluée. 4) En déduire la concentration $C_0$ du vinaigre non dilué. 5) Le pH à l'équivalence vaut $8{,}4$ et non $7$ : expliquer pourquoi et préciser comment on a repéré $V_{\\text{éq}}$. 6) Calculer le degré du vinaigre et conclure sur l'étiquette.",
+      "corrige": [
+        "1. La réaction support est $\\mathrm{CH_3COOH} + \\mathrm{OH^-} \\rightarrow \\mathrm{CH_3COO^-} + \\mathrm{H_2O}$. Elle convient car elle est totale (la soude est une base forte, l'acide éthanoïque est entièrement consommé), rapide et unique.",
+        "2. Le vinaigre est trop concentré pour un titrage précis (volume à l'équivalence trop faible, verrerie mal adaptée) : on le dilue pour ramener sa concentration dans une gamme mesurable. Facteur de dilution $F = 10$.",
+        "3. Réaction 1:1, à l'équivalence $C_{\\text{fille}} \\times V_A = C_B \\times V_{\\text{éq}}$, donc $C_{\\text{fille}} = \\dfrac{C_B V_{\\text{éq}}}{V_A} = \\dfrac{0{,}10 \\times 10{,}0}{10{,}0} = 0{,}10$ mol·L⁻¹ (rapport de volumes en mL).",
+        "4. La dilution ayant divisé la concentration par $F = 10$, on multiplie pour remonter au vinaigre : $C_0 = F \\times C_{\\text{fille}} = 10 \\times 0{,}10 = 1{,}0$ mol·L⁻¹.",
+        "5. L'acide éthanoïque est un acide faible titré par une base forte : à l'équivalence, la solution contient sa base conjuguée (l'ion éthanoate $\\mathrm{CH_3COO^-}$), qui rend le milieu basique, d'où pH $> 7$ (ici $8{,}4$). On ne repère donc pas l'équivalence à pH $=7$ mais par le saut de pH, à l'aide de la méthode des tangentes (ou de la dérivée $\\mathrm{d(pH)}/\\mathrm{d}V$ maximale).",
+        "6. Titre massique du vinaigre : $t = C_0 \\times M = 1{,}0 \\times 60{,}0 = 60$ g·L⁻¹. Un litre de vinaigre a une masse $\\rho = 1{,}01 \\times 10^{3}$ g et contient $60$ g d'acide ; le degré (masse d'acide pour $100$ g de vinaigre) vaut $\\text{degré} = \\dfrac{60}{1{,}01 \\times 10^{3}} \\times 100 = 5{,}9°$. C'est très proche de $6°$ : l'étiquette est confirmée."
+      ],
+      "reponse": "$C_{\\text{fille}} = 0{,}10$ mol·L⁻¹ ; $C_0 = 1{,}0$ mol·L⁻¹ ; pH $> 7$ car titrage d'un acide faible (base conjuguée éthanoate), équivalence repérée par le saut de pH (tangentes/dérivée) ; degré $\\approx 5{,}9°$, conforme au $6°$ annoncé."
     }
   ]
 }

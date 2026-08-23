@@ -89,6 +89,59 @@
         "Vérification du signe : $\\theta_f = 44\\ \\text{°C}$ est bien **entre** $20$ et $80\\ \\text{°C}$, et plus proche de $20\\ \\text{°C}$ car il y a davantage d'eau froide. Cohérent."
       ],
       "reponse": "Transfert du chaud vers le froid ; $\\theta_f = \\dfrac{m_1\\theta_1 + m_2\\theta_2}{m_1 + m_2} = \\dfrac{16 + 6}{0{,}50} = 44\\ \\text{°C}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "loi-newton-refroidissement",
+      "enonce": "Une canalisation d'eau chaude, dont la surface est à la température $T = 60\\ \\text{°C}$, traverse une pièce à $T_{\\text{ext}} = 20\\ \\text{°C}$. Elle échange avec l'air selon la loi de Newton du refroidissement : $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$, avec un coefficient d'échange $h = 8{,}0$ W·m⁻²·K⁻¹ et une surface d'échange $S = 0{,}25\\ \\text{m}^2$. Calculer le flux thermique $\\varphi$ perdu par la canalisation.",
+      "corrige": [
+        "On calcule d'abord l'écart de température entre la surface et l'air : $T - T_{\\text{ext}} = 60 - 20 = 40\\ \\text{°C} = 40$ K (un **écart** de température se transpose tel quel en kelvins).",
+        "On applique la loi de Newton : $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$, toutes les grandeurs étant déjà dans les bonnes unités.",
+        "Application numérique : $\\varphi = 8{,}0 \\times 0{,}25 \\times 40 = 80$ W.",
+        "La canalisation perd donc un flux thermique de $\\varphi = 80$ W vers la pièce. Plus $T$ s'approcherait de $T_{\\text{ext}}$, plus ce flux diminuerait."
+      ],
+      "reponse": "$\\varphi = h\\,S\\,(T - T_{\\text{ext}}) = 8{,}0 \\times 0{,}25 \\times 40 = 80$ W."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "premier-principe",
+      "enonce": "Un gaz enfermé dans un cylindre reçoit de l'extérieur un transfert thermique $Q = +2{,}0 \\times 10^{3}$ J. Au cours de la transformation, sa variation d'énergie interne mesurée vaut $\\Delta U = +1{,}2 \\times 10^{3}$ J. 1) À l'aide du premier principe, calculer la valeur algébrique du travail $W$ échangé. 2) Le gaz a-t-il reçu ou fourni ce travail ? Interpréter.",
+      "corrige": [
+        "1) Le premier principe s'écrit $\\Delta U = Q + W$. On en tire le travail : $W = \\Delta U - Q$.",
+        "Application numérique : $W = 1{,}2\\times10^{3} - 2{,}0\\times10^{3} = -0{,}8\\times10^{3} = -8{,}0\\times10^{2}$ J.",
+        "2) La valeur algébrique du travail reçu est **négative** ($W < 0$) : cela signifie que le gaz **cède** du travail à l'extérieur. Il en fournit $800$ J (typiquement en poussant un piston lors de sa détente).",
+        "Cohérence : le gaz reçoit $2000$ J de chaleur mais son énergie interne n'augmente que de $1200$ J ; les $800$ J manquants sont exactement le travail qu'il a fourni au milieu extérieur."
+      ],
+      "reponse": "$W = \\Delta U - Q = 1{,}2\\times10^{3} - 2{,}0\\times10^{3} = -8{,}0\\times10^{2}$ J : le gaz **fournit** $800$ J de travail à l'extérieur."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "resistance-thermique",
+      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}020$ K·W⁻¹ sépare l'intérieur d'un logement maintenu à $20\\ \\text{°C}$ de l'extérieur à $6\\ \\text{°C}$. 1) Calculer le flux thermique $\\varphi$ perdu à travers le mur. 2) En déduire l'énergie thermique perdue $Q$ pendant une journée entière (24 h), en joules puis en kWh. 3) Sachant que l'électricité de chauffage coûte $0{,}20$ € par kWh, estimer le coût journalier de ces pertes à travers ce seul mur.",
+      "corrige": [
+        "1) L'écart de température entre les deux faces vaut $\\Delta T = 20 - 6 = 14\\ \\text{°C} = 14$ K. Le flux est $\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{14}{0{,}020} = 7{,}0\\times10^{2}$ W. Le mur laisse fuir $700$ W.",
+        "2) L'énergie est le flux multiplié par la durée : $Q = \\varphi \\times \\Delta t$, avec $\\Delta t = 24$ h $= 24 \\times 3600 = 8{,}64\\times10^{4}$ s.",
+        "$Q = 700 \\times 8{,}64\\times10^{4} = 6{,}05\\times10^{7}$ J. Pour convertir en kWh, on peut aussi raisonner directement : $\\varphi = 0{,}70$ kW pendant $24$ h, soit $Q = 0{,}70 \\times 24 = 16{,}8$ kWh (on retrouve bien $16{,}8\\ \\text{kWh} = 16{,}8 \\times 3{,}6\\times10^{6}\\ \\text{J} \\approx 6{,}0\\times10^{7}$ J).",
+        "3) Coût $= 16{,}8\\ \\text{kWh} \\times 0{,}20\\ \\text{€/kWh} = 3{,}4$ €. Ces pertes coûtent environ $3{,}4$ € par jour pour ce seul mur : mieux isoler (augmenter $R_{th}$) réduirait proportionnellement le flux, l'énergie et donc la facture."
+      ],
+      "reponse": "$\\varphi = \\dfrac{14}{0{,}020} = 7{,}0\\times10^{2}$ W ; $Q = \\varphi\\,\\Delta t = 700 \\times 8{,}64\\times10^{4} \\approx 6{,}0\\times10^{7}$ J $= 16{,}8$ kWh, soit un coût d'environ $3{,}4$ € par jour."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Confort thermique d'un séjour en hiver.** Dans un chalet, un séjour est chauffé par un plancher chauffant à eau. Une nuit d'hiver, la température extérieure est $\\theta_{\\text{ext}} = 0\\ \\text{°C}$ et l'on souhaite maintenir l'intérieur à $\\theta_{\\text{int}} = 20\\ \\text{°C}$. Données : capacité thermique massique de l'eau $c = 4{,}18 \\times 10^{3}$ J·kg⁻¹·K⁻¹ ; l'eau est incompressible et n'échange pas de travail. \\n\\n1. Pour mettre en route le plancher, une chaudière porte $m = 80$ kg d'eau de $20\\ \\text{°C}$ à $45\\ \\text{°C}$. Calculer l'énergie thermique $Q$ à fournir à cette eau. \\n2. La chaudière développe une puissance constante $P = 2{,}5$ kW, entièrement transmise à l'eau. Déterminer la durée $\\Delta t$ nécessaire pour atteindre $45\\ \\text{°C}$. Exprimer le résultat en minutes. \\n3. Une fois le séjour à $20\\ \\text{°C}$, il perd de la chaleur vers l'extérieur à travers ses parois, de résistance thermique globale $R_{th} = 0{,}020$ K·W⁻¹. Calculer le flux thermique $\\varphi_{\\text{pertes}}$ perdu par le séjour. \\n4. La chaudière fournit en régime permanent une puissance de $2{,}5$ kW. Ce chauffage suffit-il à compenser les pertes calculées à la question 3 ? Justifier par un bilan d'énergie. \\n5. Au milieu de la nuit, on éteint le chauffage. En invoquant la loi de Newton du refroidissement, décrire qualitativement comment évolue la température du séjour au cours du temps.",
+      "corrige": [
+        "1. L'eau est incompressible et n'échange pas de travail, donc $\\Delta U = Q = m\\,c\\,\\Delta T$. L'écart vaut $\\Delta T = 45 - 20 = 25\\ \\text{°C} = 25$ K. Application : $Q = 80 \\times 4{,}18\\times10^{3} \\times 25 = 8{,}36\\times10^{6}$ J, soit $Q \\approx 8{,}4\\times10^{6}$ J (environ $8{,}4$ MJ).",
+        "2. La puissance relie énergie et durée : $P = \\dfrac{Q}{\\Delta t}$, donc $\\Delta t = \\dfrac{Q}{P}$. Avec $P = 2{,}5$ kW $= 2{,}5\\times10^{3}$ W : $\\Delta t = \\dfrac{8{,}36\\times10^{6}}{2{,}5\\times10^{3}} = 3{,}34\\times10^{3}$ s. Conversion : $\\Delta t = \\dfrac{3340}{60} \\approx 56$ min.",
+        "3. L'écart entre intérieur et extérieur est $\\Delta T = 20 - 0 = 20\\ \\text{°C} = 20$ K. Le flux perdu est $\\varphi_{\\text{pertes}} = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{20}{0{,}020} = 1{,}0\\times10^{3}$ W, soit $1{,}0$ kW.",
+        "4. Bilan : la chaudière apporte $2{,}5$ kW, les parois évacuent $1{,}0$ kW. Comme $2{,}5\\ \\text{kW} > 1{,}0\\ \\text{kW}$, la puissance fournie dépasse les pertes : le chauffage suffit largement à compenser les pertes et à maintenir (voire élever) la température du séjour. L'excédent disponible est $2{,}5 - 1{,}0 = 1{,}5$ kW.",
+        "5. Chauffage éteint, le séjour se refroidit. D'après la loi de Newton, $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$ : le flux de pertes est proportionnel à l'écart $T - T_{\\text{ext}}$. Au début, l'écart est grand ($20$ K), donc le refroidissement est rapide ; à mesure que $T$ diminue, l'écart se réduit et le refroidissement ralentit. La température décroît de façon **exponentielle** vers $\\theta_{\\text{ext}} = 0\\ \\text{°C}$, sans jamais descendre en dessous."
+      ],
+      "reponse": "1. $Q = m\\,c\\,\\Delta T = 80 \\times 4{,}18\\times10^{3} \\times 25 \\approx 8{,}4\\times10^{6}$ J. 2. $\\Delta t = \\dfrac{Q}{P} = \\dfrac{8{,}36\\times10^{6}}{2{,}5\\times10^{3}} \\approx 3{,}3\\times10^{3}$ s $\\approx 56$ min. 3. $\\varphi_{\\text{pertes}} = \\dfrac{20}{0{,}020} = 1{,}0\\times10^{3}$ W. 4. Oui : $2{,}5$ kW $> 1{,}0$ kW, la chaudière compense les pertes (excédent $1{,}5$ kW). 5. Refroidissement exponentiel vers $0\\ \\text{°C}$, rapide puis de plus en plus lent (loi de Newton)."
     }
   ]
 }

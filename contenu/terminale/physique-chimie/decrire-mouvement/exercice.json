@@ -87,6 +87,60 @@
         "La composante tangentielle est non nulle (la valeur de la vitesse change), donc le mouvement n'est **pas** circulaire uniforme : il est circulaire **accéléré**."
       ],
       "reponse": "$a_t = 2{,}0$ m·s⁻², $a_n = \\dfrac{v^2}{R} = 5{,}0$ m·s⁻², $a = \\sqrt{a_t^2 + a_n^2} \\approx 5{,}4$ m·s⁻² ; le mouvement n'est pas uniforme (car $a_t \\neq 0$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "vecteur-vitesse",
+      "enonce": "Une bille est lâchée depuis un chariot qui roule. Dans le repère $(\\mathrm{O}, \\vec{\\imath}, \\vec{\\jmath})$, avec $\\vec{\\jmath}$ dirigé vers le haut, ses équations horaires sont $x(t) = 8{,}0\\,t$ et $y(t) = -5{,}0\\,t^2$ (unités SI). 1) Déterminer les vecteurs vitesse $\\vec{v}(t)$ et accélération $\\vec{a}(t)$. 2) Calculer la valeur de la vitesse à $t = 2{,}0$ s.",
+      "corrige": [
+        "Vitesse (dérivée de chaque coordonnée de la position) : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 8{,}0$ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = -10\\,t$. Donc $\\vec{v}(t) = 8{,}0\\,\\vec{\\imath} - 10\\,t\\,\\vec{\\jmath}$ (m·s⁻¹).",
+        "Accélération (dérivée de la vitesse) : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 0$ et $a_y = \\dfrac{\\mathrm{d}v_y}{\\mathrm{d}t} = -10$. Donc $\\vec{a} = -10\\,\\vec{\\jmath}$ (m·s⁻²) : accélération constante, dirigée vers le bas.",
+        "À $t = 2{,}0$ s : $v_x = 8{,}0$ m·s⁻¹ et $v_y = -10 \\times 2{,}0 = -20$ m·s⁻¹.",
+        "Norme : $v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{(8{,}0)^2 + (-20)^2} = \\sqrt{64 + 400} = \\sqrt{464} \\approx 22$ m·s⁻¹."
+      ],
+      "reponse": "$\\vec{v}(t) = 8{,}0\\,\\vec{\\imath} - 10\\,t\\,\\vec{\\jmath}$, $\\vec{a} = -10\\,\\vec{\\jmath}$ (m·s⁻², constante) ; à $t = 2{,}0$ s, $v = \\sqrt{464} \\approx 22$ m·s⁻¹."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Un point situé à l'extrémité d'une pale de ventilateur décrit un cercle de rayon $R = 0{,}12$ m. Le ventilateur tourne à la fréquence $f = 25$ tours par seconde, à vitesse constante. 1) Déterminer la période $T$ du mouvement. 2) Calculer la valeur $v$ de la vitesse du point. 3) En déduire la norme de son accélération et préciser sa direction. On prend $\\pi \\approx 3{,}14$.",
+      "corrige": [
+        "La période est la durée d'un tour : $T = \\dfrac{1}{f} = \\dfrac{1}{25} = 0{,}040$ s.",
+        "En un tour, le point parcourt le périmètre $2\\pi R$ pendant $T$, donc $v = \\dfrac{2\\pi R}{T} = \\dfrac{2 \\times 3{,}14 \\times 0{,}12}{0{,}040} = \\dfrac{0{,}754}{0{,}040} \\approx 19$ m·s⁻¹.",
+        "Le mouvement est circulaire uniforme (vitesse constante en valeur) : l'accélération se réduit à sa composante normale $a = \\dfrac{v^2}{R} = \\dfrac{(18{,}8)^2}{0{,}12} = \\dfrac{354}{0{,}12}$.",
+        "Soit $a \\approx 3{,}0 \\times 10^3$ m·s⁻², dirigée vers le centre du cercle (accélération centripète)."
+      ],
+      "reponse": "$T = \\dfrac{1}{f} = 0{,}040$ s ; $v = \\dfrac{2\\pi R}{T} \\approx 19$ m·s⁻¹ ; $a = \\dfrac{v^2}{R} \\approx 3{,}0 \\times 10^3$ m·s⁻² (centripète)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Un mobile a pour équations horaires $x(t) = 2t$ et $y(t) = t^3 - 3t$ (unités SI, $t \\geq 0$). 1) Déterminer les vecteurs vitesse $\\vec{v}(t)$ et accélération $\\vec{a}(t)$. 2) À quel instant le vecteur accélération est-il nul ? 3) Ce mouvement est-il l'un des trois mouvements types du cours (rectiligne uniforme, rectiligne uniformément accéléré, circulaire uniforme) ? Justifier.",
+      "corrige": [
+        "Vitesse : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 2$ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = 3t^2 - 3$. Donc $\\vec{v}(t) = 2\\,\\vec{\\imath} + (3t^2 - 3)\\,\\vec{\\jmath}$ (m·s⁻¹).",
+        "Accélération : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 0$ et $a_y = \\dfrac{\\mathrm{d}v_y}{\\mathrm{d}t} = 6t$. Donc $\\vec{a}(t) = 6t\\,\\vec{\\jmath}$ (m·s⁻²).",
+        "$\\vec{a} = \\vec{0} \\iff 6t = 0 \\iff t = 0$ s : l'accélération n'est nulle qu'à l'instant initial, et non nulle ensuite.",
+        "Les coordonnées de $\\vec{a}$ dépendent du temps (via le terme $6t$) : l'accélération n'est pas constante. Le mouvement n'est donc ni rectiligne uniforme ($\\vec{a} \\neq \\vec{0}$), ni rectiligne uniformément accéléré ($\\vec{a}$ non constant). En éliminant $t$ ($t = x/2$), la trajectoire a pour équation $y = \\left(\\dfrac{x}{2}\\right)^3 - 3\\dfrac{x}{2}$ : ce n'est pas un cercle, donc pas circulaire uniforme non plus. Ce mouvement n'entre dans aucun des trois cas types."
+      ],
+      "reponse": "$\\vec{v}(t) = 2\\,\\vec{\\imath} + (3t^2 - 3)\\,\\vec{\\jmath}$, $\\vec{a}(t) = 6t\\,\\vec{\\jmath}$ ; $\\vec{a} = \\vec{0}$ seulement à $t = 0$ s ; l'accélération variant avec le temps, le mouvement n'est aucun des trois types du cours."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Essai d'une voiture sur un circuit. On étudie le mouvement dans le référentiel terrestre. **Phase 1 — ligne droite.** Partant de l'arrêt, la voiture roule en ligne droite selon l'axe $(\\mathrm{O}, \\vec{\\imath})$ ; son équation horaire est $x(t) = 2{,}5\\,t^2$ (position en mètres, $t$ en secondes), avec $y(t) = 0$. **Phase 2 — virage.** Plus loin, la voiture aborde un virage circulaire de rayon $R = 80$ m qu'elle parcourt à vitesse constante $v = 20$ m·s⁻¹. On donne $g = 9{,}8$ m·s⁻². 1) Pour la phase 1, déterminer les vecteurs $\\vec{v}(t)$ et $\\vec{a}(t)$, puis caractériser le mouvement. 2) Calculer la valeur de la vitesse à $t = 8{,}0$ s et l'exprimer en km·h⁻¹. 3) Quelle distance la voiture a-t-elle parcourue au bout de ces $8{,}0$ s ? 4) Pour la phase 2, justifier que l'accélération n'est pas nulle bien que la valeur de la vitesse soit constante. 5) Calculer la norme de l'accélération dans le virage et préciser sa direction et son sens. 6) Comparer cette accélération à $g$ et commenter.",
+      "corrige": [
+        "1. Phase 1 : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 5{,}0\\,t$ et $v_y = 0$, soit $\\vec{v}(t) = 5{,}0\\,t\\,\\vec{\\imath}$ (m·s⁻¹). Puis $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 5{,}0$ et $a_y = 0$, soit $\\vec{a} = 5{,}0\\,\\vec{\\imath}$ (m·s⁻²). La trajectoire est une droite et $\\vec{a}$ est constant, colinéaire à $\\vec{v}$ et de même sens : le mouvement est **rectiligne uniformément accéléré**.",
+        "2. À $t = 8{,}0$ s : $v = v_x = 5{,}0 \\times 8{,}0 = 40$ m·s⁻¹. En km·h⁻¹ : $v = 40 \\times 3{,}6 = 144$ km·h⁻¹.",
+        "3. Distance parcourue depuis le départ (en $x = 0$ à $t = 0$) : $x(8{,}0) = 2{,}5 \\times (8{,}0)^2 = 2{,}5 \\times 64 = 160$ m.",
+        "4. Phase 2 : dans le virage, la **valeur** de la vitesse est constante, mais sa **direction** change en permanence (trajectoire courbe). Le vecteur $\\vec{v}$ varie donc, ce qui impose $\\vec{a} \\neq \\vec{0}$.",
+        "5. Le mouvement étant circulaire uniforme, la composante tangentielle est nulle et il ne reste que la composante normale : $a = \\dfrac{v^2}{R} = \\dfrac{20^2}{80} = \\dfrac{400}{80} = 5{,}0$ m·s⁻². Elle est portée par $\\vec{u_n}$, dirigée vers le **centre** du virage (accélération centripète).",
+        "6. On compare : $\\dfrac{a}{g} = \\dfrac{5{,}0}{9{,}8} \\approx 0{,}51$. L'accélération dans le virage vaut environ la moitié de $g$ : elle est loin d'être négligeable et explique la sensation d'être « plaqué » vers l'extérieur du virage."
+      ],
+      "reponse": "Phase 1 : $\\vec{v}(t) = 5{,}0\\,t\\,\\vec{\\imath}$, $\\vec{a} = 5{,}0\\,\\vec{\\imath}$ m·s⁻² (rectiligne uniformément accéléré) ; à $t = 8{,}0$ s, $v = 40$ m·s⁻¹ $= 144$ km·h⁻¹ et $x = 160$ m. Phase 2 : $\\vec{a} \\neq \\vec{0}$ car la direction de $\\vec{v}$ change ; $a = \\dfrac{v^2}{R} = 5{,}0$ m·s⁻² (centripète), soit environ $0{,}5\\,g$."
     }
   ]
 }

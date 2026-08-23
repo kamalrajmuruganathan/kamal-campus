@@ -87,6 +87,59 @@
         "D'où $a = \\dfrac{3{,}17 \\times 10^{-6}}{3{,}2 \\times 10^{-2}} = 9{,}9 \\times 10^{-5}$ m, soit $a \\approx 0{,}10$ mm."
       ],
       "reponse": "$a = \\dfrac{2\\lambda D}{\\ell} \\approx 9{,}9 \\times 10^{-5}$ m $\\approx 0{,}10$ mm."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "effet-doppler",
+      "enonce": "Une voiture de police roule en **s'éloignant** d'un piéton immobile. Sa sirène émet un son de fréquence $f_E = 680$ Hz. La voiture roule à $v = 20\\ \\text{m·s}^{-1}$ et la célérité du son dans l'air vaut $c = 340\\ \\text{m·s}^{-1}$. Calculer la fréquence $f_R$ perçue par le piéton, puis le décalage Doppler $\\Delta f = f_R - f_E$.",
+      "corrige": [
+        "La source s'**éloigne** de l'observateur : les fronts d'onde se dilatent derrière elle, la fréquence perçue est **plus petite** que la fréquence émise (son plus grave). On utilise donc la formule de l'éloignement : $f_R = f_E\\,\\dfrac{c}{c + v}$.",
+        "Application numérique : $f_R = 680 \\times \\dfrac{340}{340 + 20} = 680 \\times \\dfrac{340}{360}$.",
+        "On calcule : $\\dfrac{340}{360} = 0{,}944$, donc $f_R = 680 \\times 0{,}944 \\approx 642$ Hz.",
+        "Le décalage Doppler vaut $\\Delta f = f_R - f_E = 642 - 680 = -38$ Hz : négatif, ce qui confirme l'éloignement."
+      ],
+      "reponse": "$f_R = f_E\\,\\dfrac{c}{c+v} \\approx 642$ Hz, soit $\\Delta f \\approx -38$ Hz (son plus grave)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "diffraction",
+      "enonce": "Un laser vert de longueur d'onde $\\lambda = 532$ nm éclaire une fente de largeur $a = 0{,}12$ mm. On observe la figure de diffraction sur un écran situé à $D = 3{,}0$ m de la fente. 1) Calculer le demi-angle de diffraction $\\theta = \\dfrac{\\lambda}{a}$. 2) En déduire la largeur totale $\\ell = \\dfrac{2\\lambda D}{a}$ de la tache centrale, en centimètres.",
+      "corrige": [
+        "1) On convertit dans la même unité (le mètre) : $\\lambda = 532\\ \\text{nm} = 5{,}32 \\times 10^{-7}$ m et $a = 0{,}12\\ \\text{mm} = 1{,}2 \\times 10^{-4}$ m.",
+        "On applique $\\theta = \\dfrac{\\lambda}{a} = \\dfrac{5{,}32 \\times 10^{-7}}{1{,}2 \\times 10^{-4}} \\approx 4{,}4 \\times 10^{-3}$ rad.",
+        "2) La largeur de la tache centrale vaut $\\ell = \\dfrac{2\\lambda D}{a} = 2 D \\theta = 2 \\times 3{,}0 \\times 4{,}4 \\times 10^{-3}$.",
+        "On calcule : $\\ell = 2{,}7 \\times 10^{-2}$ m, soit $\\ell \\approx 2{,}7$ cm."
+      ],
+      "reponse": "$\\theta \\approx 4{,}4 \\times 10^{-3}$ rad et $\\ell = \\dfrac{2\\lambda D}{a} \\approx 2{,}7$ cm."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "effet-doppler",
+      "enonce": "En astronomie, on observe la raie H$\\alpha$ de l'hydrogène. Émise au repos à $\\lambda_E = 656{,}3$ nm, elle est reçue depuis une galaxie lointaine à $\\lambda_R = 662{,}9$ nm. On donne la célérité de la lumière $c = 3{,}00 \\times 10^{8}\\ \\text{m·s}^{-1}$. 1) La galaxie s'approche-t-elle ou s'éloigne-t-elle de la Terre ? Justifier. 2) À partir de la relation Doppler $f_R = f_E\\,\\dfrac{c}{c+v}$ (éloignement), établir l'expression de la vitesse $v$ en fonction de $\\lambda_E$, $\\lambda_R$ et $c$. 3) Calculer $v$.",
+      "corrige": [
+        "1) La longueur d'onde reçue est **plus grande** que celle émise ($\\lambda_R > \\lambda_E$) : la lumière est décalée vers le rouge (les grandes longueurs d'onde). Une longueur d'onde plus grande correspond à une fréquence plus petite, signe d'un **éloignement** : la galaxie s'éloigne de la Terre.",
+        "2) En éloignement, $f_R = f_E\\,\\dfrac{c}{c+v}$. En passant aux longueurs d'onde ($\\lambda = c/f$), on a $\\dfrac{c}{\\lambda_R} = \\dfrac{c}{\\lambda_E}\\cdot\\dfrac{c}{c+v}$, soit $\\lambda_R = \\lambda_E\\,\\dfrac{c+v}{c}$.",
+        "On isole $v$ : $\\dfrac{\\lambda_R}{\\lambda_E} = \\dfrac{c+v}{c} = 1 + \\dfrac{v}{c}$, d'où $v = c\\,\\dfrac{\\lambda_R - \\lambda_E}{\\lambda_E}$.",
+        "3) Application numérique : $\\lambda_R - \\lambda_E = 662{,}9 - 656{,}3 = 6{,}6$ nm, donc $v = 3{,}00 \\times 10^{8} \\times \\dfrac{6{,}6}{656{,}3} \\approx 3{,}0 \\times 10^{6}\\ \\text{m·s}^{-1}$ (environ $1\\%$ de $c$)."
+      ],
+      "reponse": "$\\lambda_R > \\lambda_E$ : la galaxie s'éloigne ; $v = c\\,\\dfrac{\\lambda_R - \\lambda_E}{\\lambda_E} \\approx 3{,}0 \\times 10^{6}\\ \\text{m·s}^{-1}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "phenomenes-ondulatoires",
+      "enonce": "**Un festival en plein air.** On étudie plusieurs phénomènes ondulatoires observés lors d'un concert. Données : célérité du son dans l'air $c = 340\\ \\text{m·s}^{-1}$ ; intensité sonore de référence $I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$ ; on prendra $10\\log 2 \\approx 3{,}0$ dB. 1. À la place d'un spectateur, une **seule** enceinte délivre une intensité sonore $I_1 = 1{,}0 \\times 10^{-2}\\ \\text{W·m}^{-2}$. Calculer le niveau d'intensité sonore $L_1$ correspondant. 2. On met en marche une **seconde** enceinte identique, à côté de la première : les intensités s'additionnent. Sans nouveau calcul de logarithme, en déduire le niveau sonore total $L_2$. 3. Les deux enceintes, synchrones, émettent un son de fréquence $f = 170$ Hz. Un spectateur M est à $d_1 = 8{,}0$ m de la première et $d_2 = 11{,}0$ m de la seconde. Calculer la longueur d'onde $\\lambda$, puis la différence de marche $\\delta$ en M, et préciser la nature de l'interférence. 4. Un spectacle laser utilise un laser de longueur d'onde $\\lambda' = 650$ nm qui traverse une fente de largeur $a = 0{,}20$ mm. Calculer le demi-angle de diffraction $\\theta = \\dfrac{\\lambda'}{a}$. 5. Une ambulance passe près du festival, sirène allumée ($f_E = 700$ Hz), en se rapprochant d'un spectateur immobile à $v = 25\\ \\text{m·s}^{-1}$. Calculer la fréquence $f_R$ perçue et le décalage Doppler $\\Delta f$.",
+      "corrige": [
+        "1. Le niveau d'une enceinte : $L_1 = 10\\log\\!\\left(\\dfrac{I_1}{I_0}\\right) = 10\\log\\!\\left(\\dfrac{1{,}0 \\times 10^{-2}}{1{,}0 \\times 10^{-12}}\\right) = 10\\log(10^{10}) = 10 \\times 10 = 100$ dB.",
+        "2. Deux enceintes identiques : l'intensité double ($I_2 = 2\\,I_1$). Or doubler l'intensité ajoute $10\\log 2 \\approx 3{,}0$ dB au niveau. Donc $L_2 = L_1 + 3{,}0 = 103$ dB : le niveau ne double pas, il ne gagne que $3$ dB.",
+        "3. La longueur d'onde vaut $\\lambda = \\dfrac{c}{f} = \\dfrac{340}{170} = 2{,}0$ m. La différence de marche est $\\delta = d_2 - d_1 = 11{,}0 - 8{,}0 = 3{,}0$ m. On compare : $\\dfrac{\\delta}{\\lambda} = \\dfrac{3{,}0}{2{,}0} = 1{,}5 = \\left(1 + \\tfrac{1}{2}\\right)$. C'est un **demi-entier** : l'interférence est **destructive** (amplitude minimale, le son est atténué en M).",
+        "4. On convertit : $\\lambda' = 650\\ \\text{nm} = 6{,}5 \\times 10^{-7}$ m et $a = 0{,}20\\ \\text{mm} = 2{,}0 \\times 10^{-4}$ m. D'où $\\theta = \\dfrac{\\lambda'}{a} = \\dfrac{6{,}5 \\times 10^{-7}}{2{,}0 \\times 10^{-4}} = 3{,}3 \\times 10^{-3}$ rad.",
+        "5. La source se rapproche : $f_R = f_E\\,\\dfrac{c}{c - v} = 700 \\times \\dfrac{340}{340 - 25} = 700 \\times \\dfrac{340}{315} \\approx 756$ Hz. Le décalage vaut $\\Delta f = f_R - f_E = 756 - 700 = +56$ Hz (son plus aigu)."
+      ],
+      "reponse": "1. $L_1 = 100$ dB ; 2. $L_2 = 103$ dB ; 3. $\\lambda = 2{,}0$ m, $\\delta = 3{,}0$ m $= 1{,}5\\,\\lambda$ → interférence **destructive** ; 4. $\\theta \\approx 3{,}3 \\times 10^{-3}$ rad ; 5. $f_R \\approx 756$ Hz, $\\Delta f \\approx +56$ Hz."
     }
   ]
 }
