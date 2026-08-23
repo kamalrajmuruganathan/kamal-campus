@@ -88,6 +88,58 @@
         "L'angle dont le cosinus vaut $\\dfrac{1}{2}$ est $\\theta = 60°$."
       ],
       "reponse": "$\\vec{u}\\cdot\\vec{v} = 6$ et $\\theta = 60°$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "coordonnees",
+      "enonce": "Dans un repère orthonormé, on considère les vecteurs $\\vec{u}\\begin{pmatrix} 5 \\\\ -2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$. Calculer $\\vec{u} \\cdot \\vec{v}$, puis préciser la nature (aigu, droit ou obtus) de l'angle formé par ces deux vecteurs.",
+      "corrige": [
+        "Les vecteurs sont donnés par leurs coordonnées dans un repère orthonormé : on utilise l'expression $\\vec{u} \\cdot \\vec{v} = xx' + yy'$.",
+        "On remplace : $\\vec{u} \\cdot \\vec{v} = 5 \\times 3 + (-2) \\times 4 = 15 - 8 = 7$.",
+        "Le produit scalaire est un nombre strictement positif. Comme les normes sont toujours positives, c'est le signe de $\\cos\\theta$ qui suit celui du produit scalaire : ici $\\cos\\theta > 0$, donc l'angle est aigu."
+      ],
+      "reponse": "$\\vec{u} \\cdot \\vec{v} = 7$ ; l'angle est aigu."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "calcul-angle",
+      "enonce": "Dans un repère orthonormé, on donne les points $\\mathrm{A}(2\\,;\\,1)$, $\\mathrm{B}(6\\,;\\,2)$ et $\\mathrm{C}(3\\,;\\,5)$. Déterminer une mesure de l'angle $\\widehat{\\mathrm{BAC}}$, arrondie au degré.",
+      "corrige": [
+        "L'angle $\\widehat{\\mathrm{BAC}}$ est l'angle entre les vecteurs $\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{AC}}$. On calcule d'abord leurs coordonnées : $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 6-2 \\\\ 2-1 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 1 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 3-2 \\\\ 5-1 \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$.",
+        "On calcule le produit scalaire en coordonnées : $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 4 \\times 1 + 1 \\times 4 = 8$, et les normes : $\\|\\overrightarrow{\\mathrm{AB}}\\| = \\sqrt{4^2 + 1^2} = \\sqrt{17}$ et $\\|\\overrightarrow{\\mathrm{AC}}\\| = \\sqrt{1^2 + 4^2} = \\sqrt{17}$.",
+        "On applique la formule de l'angle : $\\cos\\widehat{\\mathrm{BAC}} = \\dfrac{\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}}}{\\|\\overrightarrow{\\mathrm{AB}}\\| \\times \\|\\overrightarrow{\\mathrm{AC}}\\|} = \\dfrac{8}{\\sqrt{17} \\times \\sqrt{17}} = \\dfrac{8}{17} \\approx 0{,}471$.",
+        "On en déduit $\\widehat{\\mathrm{BAC}} = \\arccos\\!\\left(\\dfrac{8}{17}\\right) \\approx 62°$."
+      ],
+      "reponse": "$\\widehat{\\mathrm{BAC}} \\approx 62°$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "projection-travail",
+      "enonce": "Une caisse est tirée en ligne droite sur un sol horizontal, sur un déplacement $\\overrightarrow{\\mathrm{AB}}$ de longueur $15$ m. La corde de traction fait un angle $\\alpha = 30°$ avec l'horizontale et la force de traction $\\vec{F}$ a pour intensité $120$ N. 1. Calculer le travail de $\\vec{F}$ sur le trajet $\\mathrm{AB}$. 2. Calculer la composante horizontale de $\\vec{F}$ (sa projection sur la direction du déplacement) et retrouver le travail à partir de cette composante.",
+      "corrige": [
+        "1. Le travail est le produit scalaire $W = \\vec{F} \\cdot \\overrightarrow{\\mathrm{AB}} = F \\times \\mathrm{AB} \\times \\cos\\alpha$, où $\\alpha$ est l'angle entre la force et le déplacement.",
+        "On remplace : $W = 120 \\times 15 \\times \\cos 30° = 1800 \\times \\dfrac{\\sqrt{3}}{2} = 900\\sqrt{3} \\approx 1559$ J. Le travail est positif : la traction est motrice.",
+        "2. La composante de $\\vec{F}$ dans la direction du déplacement est $F_{\\parallel} = F\\cos 30° = 120 \\times \\dfrac{\\sqrt{3}}{2} = 60\\sqrt{3} \\approx 104$ N.",
+        "En multipliant cette composante par la longueur du déplacement, on retrouve $W = F_{\\parallel} \\times \\mathrm{AB} = 60\\sqrt{3} \\times 15 = 900\\sqrt{3}$ J. C'est l'interprétation par projection : seule la part de la force dans la direction du déplacement travaille, la composante verticale ($F\\sin 30°$, perpendiculaire au déplacement) ne travaille pas."
+      ],
+      "reponse": "$W = 900\\sqrt{3} \\approx 1559$ J ; composante horizontale $F_{\\parallel} = 60\\sqrt{3} \\approx 104$ N, qui redonne bien $W = 900\\sqrt{3}$ J."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme-orthogonalite-angles",
+      "enonce": "Le plan est muni d'un repère orthonormé (unité : le mètre). Sur le plan d'une pièce mécanique, on repère quatre points $\\mathrm{A}(1\\,;\\,2)$, $\\mathrm{B}(5\\,;\\,0)$, $\\mathrm{C}(7\\,;\\,4)$ et $\\mathrm{D}(3\\,;\\,6)$. 1. Déterminer les coordonnées des vecteurs $\\overrightarrow{\\mathrm{AB}}$ et $\\overrightarrow{\\mathrm{DC}}$. Que peut-on en déduire pour le quadrilatère $\\mathrm{ABCD}$ ? 2. Calculer $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{BC}}$ et en déduire la nature de l'angle en $\\mathrm{B}$. 3. Calculer les longueurs $\\mathrm{AB}$ et $\\mathrm{BC}$, puis conclure sur la nature précise du quadrilatère $\\mathrm{ABCD}$. 4. Déterminer une mesure de l'angle $\\widehat{\\mathrm{BAC}}$ entre le côté $[\\mathrm{AB}]$ et la diagonale $[\\mathrm{AC}]$. 5. Démontrer que les diagonales $(\\mathrm{AC})$ et $(\\mathrm{BD})$ sont perpendiculaires.",
+      "corrige": [
+        "1. $\\overrightarrow{\\mathrm{AB}}\\begin{pmatrix} 5-1 \\\\ 0-2 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ -2 \\end{pmatrix}$ et $\\overrightarrow{\\mathrm{DC}}\\begin{pmatrix} 7-3 \\\\ 4-6 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ -2 \\end{pmatrix}$. Les deux vecteurs sont égaux : $\\overrightarrow{\\mathrm{AB}} = \\overrightarrow{\\mathrm{DC}}$, donc $\\mathrm{ABCD}$ est un parallélogramme.",
+        "2. On a $\\overrightarrow{\\mathrm{BC}}\\begin{pmatrix} 7-5 \\\\ 4-0 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$, d'où $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{BC}} = 4 \\times 2 + (-2) \\times 4 = 8 - 8 = 0$. Le produit scalaire est nul et les vecteurs sont non nuls : l'angle en $\\mathrm{B}$ est droit. Un parallélogramme ayant un angle droit est un rectangle.",
+        "3. $\\mathrm{AB} = \\|\\overrightarrow{\\mathrm{AB}}\\| = \\sqrt{4^2 + (-2)^2} = \\sqrt{20} = 2\\sqrt{5}$ et $\\mathrm{BC} = \\|\\overrightarrow{\\mathrm{BC}}\\| = \\sqrt{2^2 + 4^2} = \\sqrt{20} = 2\\sqrt{5}$. Deux côtés consécutifs du rectangle sont égaux : $\\mathrm{ABCD}$ est un carré.",
+        "4. On calcule $\\overrightarrow{\\mathrm{AC}}\\begin{pmatrix} 7-1 \\\\ 4-2 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 2 \\end{pmatrix}$, puis $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{AC}} = 4 \\times 6 + (-2) \\times 2 = 24 - 4 = 20$. Avec $\\|\\overrightarrow{\\mathrm{AB}}\\| = 2\\sqrt{5}$ et $\\|\\overrightarrow{\\mathrm{AC}}\\| = \\sqrt{6^2 + 2^2} = \\sqrt{40} = 2\\sqrt{10}$ : $\\cos\\widehat{\\mathrm{BAC}} = \\dfrac{20}{2\\sqrt{5} \\times 2\\sqrt{10}} = \\dfrac{20}{4\\sqrt{50}} = \\dfrac{20}{20\\sqrt{2}} = \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$. Donc $\\widehat{\\mathrm{BAC}} = 45°$ : la diagonale du carré coupe bien l'angle en deux angles de $45°$.",
+        "5. On calcule $\\overrightarrow{\\mathrm{BD}}\\begin{pmatrix} 3-5 \\\\ 6-0 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 6 \\end{pmatrix}$, puis $\\overrightarrow{\\mathrm{AC}} \\cdot \\overrightarrow{\\mathrm{BD}} = 6 \\times (-2) + 2 \\times 6 = -12 + 12 = 0$. Le produit scalaire est nul : les diagonales $(\\mathrm{AC})$ et $(\\mathrm{BD})$ sont perpendiculaires, ce qui est cohérent avec la nature de carré établie à la question 3."
+      ],
+      "reponse": "1. $\\overrightarrow{\\mathrm{AB}} = \\overrightarrow{\\mathrm{DC}} = (4\\,;\\,-2)$ : $\\mathrm{ABCD}$ est un parallélogramme. 2. $\\overrightarrow{\\mathrm{AB}} \\cdot \\overrightarrow{\\mathrm{BC}} = 0$ : angle droit en $\\mathrm{B}$, donc rectangle. 3. $\\mathrm{AB} = \\mathrm{BC} = 2\\sqrt{5}$ m : c'est un carré. 4. $\\widehat{\\mathrm{BAC}} = 45°$. 5. $\\overrightarrow{\\mathrm{AC}} \\cdot \\overrightarrow{\\mathrm{BD}} = 0$ : les diagonales sont perpendiculaires."
     }
   ]
 }

@@ -90,6 +90,60 @@
         "Interprétation : sur un grand nombre de prélèvements de $2$ pièces, on compte en moyenne $0{,}2$ pièce défectueuse par prélèvement."
       ],
       "reponse": "$P(X=0)=0{,}81$, $P(X=1)=0{,}18$, $P(X=2)=0{,}01$ ; $E(X) = 0{,}2$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "loi-bernoulli",
+      "enonce": "Un footballeur tire un penalty : il marque avec la probabilité $0{,}75$, sinon il rate. On note $X$ la variable aléatoire qui vaut $1$ si le penalty est marqué et $0$ sinon. Reconnaître la loi suivie par $X$ et calculer son espérance $E(X)$.",
+      "corrige": [
+        "L'expérience n'a que deux issues (marqué ou raté) et $X$ ne prend que les valeurs $0$ et $1$ : $X$ suit une loi de Bernoulli de paramètre $p = 0{,}75$.",
+        "La loi de $X$ est donc : $P(X=1) = 0{,}75$ (marqué) et $P(X=0) = 1 - 0{,}75 = 0{,}25$ (raté).",
+        "Pour une loi de Bernoulli, l'espérance est égale au paramètre : $E(X) = 0 \\times 0{,}25 + 1 \\times 0{,}75 = p = 0{,}75$."
+      ],
+      "reponse": "$X$ suit une loi de Bernoulli de paramètre $p = 0{,}75$ et $E(X) = 0{,}75$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "repetition",
+      "enonce": "Un vendeur reçoit $3$ clients successifs. Chaque client, indépendamment des autres, réalise un achat avec la probabilité $0{,}4$. Quelle est la probabilité qu'au moins un des $3$ clients réalise un achat ?",
+      "corrige": [
+        "On répète $3$ fois une épreuve de Bernoulli : « achat » (probabilité $0{,}4$) ou « pas d'achat » (probabilité $0{,}6$).",
+        "L'événement contraire de « au moins un achat » est « aucun achat », plus simple à calculer : un seul chemin (les trois clients n'achètent pas).",
+        "$P(\\text{aucun achat}) = 0{,}6 \\times 0{,}6 \\times 0{,}6 = 0{,}6^3 = 0{,}216$.",
+        "On passe à l'événement cherché par le complémentaire : $P(\\text{au moins un achat}) = 1 - 0{,}216 = 0{,}784$."
+      ],
+      "reponse": "$P(\\text{au moins un achat}) = 0{,}784$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "gain-algebrique",
+      "enonce": "Un jeu consiste à miser $5$ €. Le jeu rapporte alors $30$ € avec une probabilité $p$, et rien avec la probabilité $1 - p$. On note $X$ le gain algébrique du joueur. Pour quelle valeur de $p$ le jeu rapporte-t-il en moyenne $1$ € par partie au joueur ?",
+      "corrige": [
+        "Le gain algébrique retranche la mise de $5$ € dans chaque cas : $X = 30 - 5 = 25$ avec probabilité $p$, et $X = -5$ avec probabilité $1 - p$.",
+        "On exprime l'espérance en fonction de $p$ : $E(X) = 25\\,p + (-5)(1 - p)$.",
+        "On développe : $E(X) = 25p - 5 + 5p = 30p - 5$.",
+        "Le joueur gagne en moyenne $1$ € par partie lorsque $E(X) = 1$, soit $30p - 5 = 1$, d'où $30p = 6$ et $p = 0{,}2$."
+      ],
+      "reponse": "Le jeu rapporte en moyenne $1$ € par partie pour $p = 0{,}2$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "repetition-esperance",
+      "enonce": "Dans une fête foraine, un stand propose le jeu suivant. Le joueur lance $3$ fléchettes sur une cible. À chaque lancer, indépendamment des autres, il atteint la cible (« succès ») avec la probabilité $0{,}6$. On note $Y$ le nombre de fléchettes ayant atteint la cible parmi les $3$ lancers.\n\n1. Justifier que la situation est une répétition d'épreuves de Bernoulli et préciser le paramètre $p$ et le nombre $n$ de répétitions.\n2. Calculer la probabilité d'atteindre la cible exactement $2$ fois.\n3. Calculer la probabilité d'atteindre la cible au moins une fois.\n4. Établir la loi de probabilité de $Y$, vérifier que la somme des probabilités vaut $1$, puis calculer et interpréter $E(Y)$.\n5. Pour jouer, le joueur mise $2$ €. Il remporte $8$ € s'il réalise $3$ succès, et rien sinon. On note $X$ le gain algébrique du joueur. Calculer $E(X)$ et dire si le jeu est favorable au joueur.",
+      "corrige": [
+        "1. Chaque lancer n'a que deux issues, « succès » (probabilité $0{,}6$) ou « échec » (probabilité $0{,}4$), et les lancers sont identiques et indépendants. On répète donc $n = 3$ fois une épreuve de Bernoulli de paramètre $p = 0{,}6$.",
+        "2. Les chemins à exactement $2$ succès et $1$ échec sont au nombre de $3$ (SSÉ, SÉS, ÉSS). Chacun vaut $0{,}6 \\times 0{,}6 \\times 0{,}4 = 0{,}144$. Donc $P(Y=2) = 3 \\times 0{,}144 = 0{,}432$.",
+        "3. On passe par l'événement contraire « aucun succès », un seul chemin : $P(Y=0) = 0{,}4^3 = 0{,}064$. Ainsi $P(Y \\geq 1) = 1 - 0{,}064 = 0{,}936$.",
+        "4. On complète la loi. $P(Y=1) = 3 \\times 0{,}6 \\times 0{,}4^2 = 3 \\times 0{,}096 = 0{,}288$ et $P(Y=3) = 0{,}6^3 = 0{,}216$. La loi est : $P(Y=0)=0{,}064$, $P(Y=1)=0{,}288$, $P(Y=2)=0{,}432$, $P(Y=3)=0{,}216$. Vérification : $0{,}064 + 0{,}288 + 0{,}432 + 0{,}216 = 1$.",
+        "4. (suite) Espérance : $E(Y) = 0\\times 0{,}064 + 1\\times 0{,}288 + 2\\times 0{,}432 + 3\\times 0{,}216 = 0{,}288 + 0{,}864 + 0{,}648 = 1{,}8$. Interprétation : sur un grand nombre de parties, le joueur atteint en moyenne $1{,}8$ fois la cible par série de $3$ lancers.",
+        "5. Le gain algébrique retranche la mise de $2$ €. Le joueur gagne seulement avec $3$ succès : $X = 8 - 2 = 6$ avec probabilité $P(Y=3) = 0{,}216$, et $X = -2$ sinon, avec probabilité $1 - 0{,}216 = 0{,}784$.",
+        "5. (suite) $E(X) = 6 \\times 0{,}216 + (-2) \\times 0{,}784 = 1{,}296 - 1{,}568 = -0{,}272$. Comme $E(X) < 0$, le jeu est défavorable au joueur : à long terme, il perd en moyenne environ $0{,}27$ € par partie."
+      ],
+      "reponse": "$P(Y=2)=0{,}432$ ; $P(Y \\geq 1)=0{,}936$ ; loi : $0{,}064$, $0{,}288$, $0{,}432$, $0{,}216$ avec $E(Y)=1{,}8$ ; $E(X) = -0{,}272$ €, jeu défavorable au joueur."
     }
   ]
 }

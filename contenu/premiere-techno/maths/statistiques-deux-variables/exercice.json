@@ -83,6 +83,58 @@
         "c) Une corrélation ne permet jamais à elle seule de conclure à une causalité. Le raisonnement du journaliste est donc infondé : ce n'est pas le nombre de médecins qui cause les décès, mais une variable cachée (la population) qui agit sur les deux."
       ],
       "reponse": "La corrélation s'explique par une cause commune (la population) : corrélation n'est pas causalité, la conclusion du journaliste est fausse."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "point-moyen",
+      "enonce": "Une jardinière mesure la hauteur $y$ (en cm) d'un jeune plant selon le nombre $x$ de semaines écoulées depuis sa plantation. Elle relève les couples $(1\\,;6)$, $(2\\,;11)$, $(3\\,;15)$, $(4\\,;20)$, $(5\\,;23)$. Déterminer les coordonnées du point moyen $\\mathrm{G}$ de ce nuage de points.",
+      "corrige": [
+        "Le point moyen a pour coordonnées $\\mathrm{G}(\\bar x\\,;\\bar y)$, où $\\bar x$ et $\\bar y$ sont les moyennes respectives des deux variables.",
+        "$\\bar x = \\dfrac{1+2+3+4+5}{5} = \\dfrac{15}{5} = 3$ (semaines).",
+        "$\\bar y = \\dfrac{6+11+15+20+23}{5} = \\dfrac{75}{5} = 15$ (cm).",
+        "Le point moyen du nuage est donc $\\mathrm{G}(3\\,;15)$."
+      ],
+      "reponse": "$\\mathrm{G}(3\\,;15)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "ajustement",
+      "enonce": "On suspend différentes masses à un ressort et on mesure son allongement. On note $x$ la masse (en grammes) et $y$ l'allongement (en millimètres). Le nuage est formé des couples $(10\\,;27)$, $(20\\,;41)$, $(30\\,;58)$, $(40\\,;74)$. On admet que la droite d'ajustement de ce nuage a pour coefficient directeur $a = 1{,}5$. a) Déterminer son ordonnée à l'origine $b$, sachant que toute droite d'ajustement passe par le point moyen. b) En déduire une estimation de l'allongement pour une masse de $35$ g et préciser s'il s'agit d'une interpolation.",
+      "corrige": [
+        "a) On calcule d'abord le point moyen. $\\bar x = \\dfrac{10+20+30+40}{4} = \\dfrac{100}{4} = 25$ et $\\bar y = \\dfrac{27+41+58+74}{4} = \\dfrac{200}{4} = 50$, donc $\\mathrm{G}(25\\,;50)$.",
+        "La droite $y = 1{,}5x + b$ passe par $\\mathrm{G}$ : on remplace $x$ par $25$ et $y$ par $50$. $50 = 1{,}5 \\times 25 + b = 37{,}5 + b$, d'où $b = 50 - 37{,}5 = 12{,}5$. La droite d'ajustement est $y = 1{,}5x + 12{,}5$.",
+        "b) Pour $x = 35$ : $y = 1{,}5 \\times 35 + 12{,}5 = 52{,}5 + 12{,}5 = 65$.",
+        "La masse $35$ g est comprise entre $10$ g et $40$ g, c'est-à-dire à l'intérieur des valeurs mesurées : il s'agit d'une interpolation, l'estimation est donc raisonnablement fiable. On obtient $y = 65$ mm."
+      ],
+      "reponse": "a) $b = 12{,}5$, soit $y = 1{,}5x + 12{,}5$. b) $y = 65$ mm, par interpolation."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "ajustement",
+      "enonce": "Une entreprise étudie le lien entre son budget publicitaire mensuel $x$ (en milliers d'euros) et son chiffre d'affaires $y$ (en milliers d'euros). Elle relève $(2\\,;24)$, $(4\\,;32)$, $(6\\,;40)$, $(8\\,;48)$, $(10\\,;58)$. À la calculatrice, l'ajustement affine par la méthode des moindres carrés donne $y = 4{,}2x + 15$. a) Interpréter dans le contexte le coefficient directeur $4{,}2$ et l'ordonnée à l'origine $15$. b) Estimer le chiffre d'affaires pour un budget de $8$ milliers d'euros et commenter la fiabilité. c) Le directeur veut prévoir le chiffre d'affaires pour un budget de $50$ milliers d'euros. Que lui répondre ?",
+      "corrige": [
+        "a) Le coefficient directeur $4{,}2$ indique que chaque millier d'euros dépensé en publicité fait augmenter le chiffre d'affaires d'environ $4{,}2$ milliers d'euros. L'ordonnée à l'origine $15$ correspond à la valeur de $y$ pour $x = 0$ : c'est le chiffre d'affaires estimé (environ $15$ milliers d'euros) sans aucune dépense publicitaire — ici cette valeur a un sens concret.",
+        "b) Pour $x = 8$ : $y = 4{,}2 \\times 8 + 15 = 33{,}6 + 15 = 48{,}6$. La valeur $8$ est comprise entre $2$ et $10$, il s'agit d'une interpolation : l'estimation $y \\approx 48{,}6$ milliers d'euros est raisonnablement fiable.",
+        "c) Pour $x = 50$ : $y = 4{,}2 \\times 50 + 15 = 210 + 15 = 225$. Mais $50$ est très au-delà de la plus grande valeur mesurée ($10$) : ce serait une extrapolation lointaine. Rien ne garantit que la relation linéaire se prolonge — un marché finit par saturer et le rendement de la publicité par plafonner. Cette prévision n'est donc pas fiable et doit être annoncée avec prudence."
+      ],
+      "reponse": "a) $+4{,}2$ milliers d'euros de CA par millier d'euros de pub ; $15$ = CA estimé sans publicité. b) $y \\approx 48{,}6$ (interpolation fiable). c) $y = 225$ par extrapolation lointaine : prévision non fiable."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "ajustement",
+      "enonce": "Depuis 2018, une commune installe des bornes de recharge pour véhicules électriques. Le tableau ci-dessous donne, pour chaque année, le rang $x$ de l'année (avec $x = 0$ pour 2018) et le nombre $y$ de bornes en service.\\n\\n| Année | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |\\n|---|---|---|---|---|---|---|\\n| Rang $x$ | 0 | 1 | 2 | 3 | 4 | 5 |\\n| Nombre de bornes $y$ | 12 | 20 | 25 | 34 | 41 | 48 |\\n\\n1. Justifier qu'un ajustement affine est pertinent pour décrire l'évolution du nombre de bornes.\\n2. Calculer les coordonnées du point moyen $\\mathrm{G}$ du nuage.\\n3. À la calculatrice, l'ajustement affine par la méthode des moindres carrés donne $y = 7{,}2x + 12$. Vérifier que cette droite passe par le point moyen $\\mathrm{G}$, puis interpréter le coefficient directeur $7{,}2$ dans le contexte.\\n4. En supposant que la tendance se poursuit, estimer le nombre de bornes en 2025. S'agit-il d'une interpolation ou d'une extrapolation ? Quelle précaution faut-il prendre ?\\n5. Le modèle est-il cohérent avec la valeur réellement observée en 2021 ?",
+      "corrige": [
+        "1. En reportant les points dans un repère, on constate que le nuage a une allure rectiligne : les points sont resserrés autour d'une même tendance croissante, sans courbure marquée. Un ajustement affine (par une droite) est donc pertinent.",
+        "2. $\\bar x = \\dfrac{0+1+2+3+4+5}{6} = \\dfrac{15}{6} = 2{,}5$ et $\\bar y = \\dfrac{12+20+25+34+41+48}{6} = \\dfrac{180}{6} = 30$. Le point moyen est $\\mathrm{G}(2{,}5\\,;30)$.",
+        "3. On teste la droite pour $x = 2{,}5$ : $y = 7{,}2 \\times 2{,}5 + 12 = 18 + 12 = 30$. On retrouve exactement $\\bar y = 30$, donc la droite passe bien par $\\mathrm{G}(2{,}5\\,;30)$, ce qui est cohérent avec la propriété de la droite d'ajustement. Le coefficient directeur $7{,}2$ signifie que, selon ce modèle, le nombre de bornes augmente d'environ $7{,}2$ (soit à peu près $7$ bornes) chaque année.",
+        "4. L'année 2025 correspond au rang $x = 7$. On calcule $y = 7{,}2 \\times 7 + 12 = 50{,}4 + 12 = 62{,}4$, soit environ $62$ bornes. Comme $x = 7$ est au-delà du dernier rang mesuré ($x = 5$, année 2023), il s'agit d'une extrapolation : il faut rester prudent, car rien ne garantit que le rythme d'installation se maintienne (saturation possible, changement de politique, etc.).",
+        "5. Pour 2021, le rang est $x = 3$ : le modèle donne $y = 7{,}2 \\times 3 + 12 = 21{,}6 + 12 = 33{,}6$, soit environ $34$ bornes. La valeur réellement observée en 2021 est $34$ : le modèle est très proche de la réalité, il est donc cohérent avec cette donnée."
+      ],
+      "reponse": "1. Nuage rectiligne croissant : ajustement affine pertinent. 2. $\\mathrm{G}(2{,}5\\,;30)$. 3. La droite passe par $\\mathrm{G}$ (car $7{,}2 \\times 2{,}5 + 12 = 30$) ; $7{,}2$ = environ $7$ bornes de plus par an. 4. En 2025 ($x = 7$) : environ $62$ bornes, par extrapolation (prudence requise). 5. Modèle $\\approx 34$ pour 2021, conforme à la valeur réelle."
     }
   ]
 }

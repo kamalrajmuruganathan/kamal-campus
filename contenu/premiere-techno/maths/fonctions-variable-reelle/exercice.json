@@ -87,6 +87,58 @@
         "D'après le théorème reliant le signe du taux de variation au sens de variation, $f$ est croissante sur l'intervalle $[0\\,;+\\infty[$."
       ],
       "reponse": "$\\tau = a + b > 0$, donc $f$ est croissante sur $[0\\,;+\\infty[$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "taux-variation",
+      "enonce": "Soit $f(x) = -2x^2 + x$. Calculer le taux de variation de $f$ entre $a = -1$ et $b = 2$, puis préciser si, en moyenne, $f$ monte ou descend sur cet intervalle.",
+      "corrige": [
+        "On calcule les deux images : $f(-1) = -2\\times(-1)^2 + (-1) = -2 - 1 = -3$ et $f(2) = -2\\times 2^2 + 2 = -8 + 2 = -6$.",
+        "On applique la formule : $\\tau = \\dfrac{f(b) - f(a)}{b - a} = \\dfrac{f(2) - f(-1)}{2 - (-1)} = \\dfrac{-6 - (-3)}{2 + 1}$.",
+        "$\\tau = \\dfrac{-3}{3} = -1$.",
+        "Le taux de variation est négatif : en moyenne, $f$ descend de $1$ par unité de $x$ sur l'intervalle $[-1\\,;2]$."
+      ],
+      "reponse": "$\\tau = -1$ : $f$ décroît en moyenne sur $[-1\\,;2]$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "symetrie",
+      "enonce": "Soit $f(x) = 2x^2 + 4x - 6$. Déterminer l'abscisse $\\alpha$ du sommet de la parabole, puis, en utilisant la symétrie, trouver un réel différent de $0$ qui a la même image que $0$.",
+      "corrige": [
+        "On identifie $a = 2$ et $b = 4$. L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{4}{2\\times 2} = -\\dfrac{4}{4} = -1$. L'axe de symétrie de la parabole est donc la droite $x = -1$.",
+        "Deux réels symétriques par rapport à $\\alpha = -1$ ont la même image. Le symétrique de $0$ par rapport à $-1$ est le réel $x'$ tel que $-1$ soit le milieu de $0$ et $x'$ : $\\dfrac{0 + x'}{2} = -1$, d'où $x' = -2$.",
+        "On vérifie que $0$ et $-2$ ont bien la même image : $f(0) = -6$ et $f(-2) = 2\\times(-2)^2 + 4\\times(-2) - 6 = 8 - 8 - 6 = -6$. Les deux valeurs coïncident."
+      ],
+      "reponse": "$\\alpha = -1$ ; le réel $-2$ a la même image que $0$ (à savoir $-6$)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "racines",
+      "enonce": "On considère la fonction $f(x) = x^2 - 4x + m$, où $m$ est un nombre réel. Sans utiliser de discriminant, déterminer les valeurs de $m$ pour lesquelles la parabole représentant $f$ ne coupe pas l'axe des abscisses (c'est-à-dire $f$ n'a aucune racine).",
+      "corrige": [
+        "Ici $a = 1 > 0$ : la parabole est tournée vers le haut, son sommet est un minimum. Elle ne coupe pas l'axe des abscisses lorsque ce minimum est strictement au-dessus de l'axe, c'est-à-dire lorsque l'ordonnée du sommet est strictement positive.",
+        "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-4}{2\\times 1} = 2$, et son ordonnée est $f(2) = 2^2 - 4\\times 2 + m = 4 - 8 + m = m - 4$.",
+        "La condition « aucune racine » s'écrit donc $f(2) > 0$, soit $m - 4 > 0$, c'est-à-dire $m > 4$.",
+        "Conclusion : pour $m > 4$, le point le plus bas de la parabole est déjà au-dessus de l'axe des abscisses, donc $f$ n'a aucune racine. (Pour $m = 4$ elle en a une, pour $m < 4$ elle en a deux.)"
+      ],
+      "reponse": "La parabole ne coupe pas l'axe des abscisses pour $m > 4$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "modelisation",
+      "enonce": "Une station de ski fixe le prix $x$ (en euros) de son forfait journalier. Une étude montre que le bénéfice quotidien, exprimé en centaines d'euros, est modélisé par la fonction $B(x) = -x^2 + 70x - 1000$, pour $x$ compris entre $0$ et $70$. On appelle $\\mathcal{C}$ la courbe représentant $B$.\\n\\n1. Calculer $B(20)$ et $B(50)$. Interpréter ces deux résultats dans le contexte.\\n2. Calculer le taux de variation de $B$ entre $x = 20$ et $x = 35$, puis l'interpréter.\\n3. Déterminer le prix du forfait qui rend le bénéfice maximal, et donner ce bénéfice maximal en euros.\\n4. Dresser le tableau de variations de $B$ sur l'intervalle $[0\\,;70]$.\\n5. Sachant que $B(x) = -(x - 20)(x - 50)$, déterminer les prix pour lesquels le bénéfice est strictement positif.",
+      "corrige": [
+        "1. $B(20) = -20^2 + 70\\times 20 - 1000 = -400 + 1400 - 1000 = 0$ et $B(50) = -50^2 + 70\\times 50 - 1000 = -2500 + 3500 - 1000 = 0$. Pour un forfait à $20$ € comme à $50$ €, le bénéfice est nul : ce sont les deux prix pour lesquels la station rentre tout juste dans ses frais.",
+        "2. On a déjà $B(20) = 0$, et $B(35) = -35^2 + 70\\times 35 - 1000 = -1225 + 2450 - 1000 = 225$. Le taux de variation est $\\tau = \\dfrac{B(35) - B(20)}{35 - 20} = \\dfrac{225 - 0}{15} = 15$. Entre les prix $20$ € et $35$ €, le bénéfice augmente en moyenne de $15$ centaines d'euros (soit $1\\,500$ €) par euro ajouté au prix du forfait.",
+        "3. Comme $a = -1 < 0$, la parabole est tournée vers le bas : $B$ admet un maximum au sommet. Son abscisse est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{70}{2\\times(-1)} = 35$. Le bénéfice maximal est $B(35) = 225$ centaines d'euros, soit $22\\,500$ €, atteint pour un forfait à $35$ €.",
+        "4. Puisque le sommet est un maximum atteint en $x = 35$, $B$ est croissante sur $[0\\,;35]$ puis décroissante sur $[35\\,;70]$. Le tableau de variations montre donc une montée de $B(0) = -1000$ jusqu'au maximum $B(35) = 225$, suivie d'une descente jusqu'à $B(70) = -70^2 + 70\\times 70 - 1000 = -1000$.",
+        "5. À partir de $B(x) = -(x - 20)(x - 50)$, le bénéfice est strictement positif quand $-(x-20)(x-50) > 0$, donc quand $(x-20)(x-50) < 0$ : c'est le cas lorsque $x$ est compris strictement entre les deux racines. Le bénéfice est donc strictement positif pour un prix de forfait tel que $20 < x < 50$."
+      ],
+      "reponse": "1. $B(20) = B(50) = 0$ (bénéfice nul). 2. $\\tau = 15$ centaines d'euros par euro. 3. Bénéfice maximal $22\\,500$ € pour un forfait à $35$ €. 4. Croissante sur $[0\\,;35]$, décroissante sur $[35\\,;70]$. 5. Bénéfice strictement positif pour $20 < x < 50$."
     }
   ]
 }

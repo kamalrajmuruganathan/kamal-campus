@@ -87,6 +87,62 @@
         "On retrouve pourquoi on gagne peu au-delà d'une dizaine de mesures : réduire l'incertitude coûte de plus en plus cher en nombre de répétitions."
       ],
       "reponse": "$20$ mesures pour atteindre $0{,}15\\ \\mathrm{mm}$, et $45$ mesures pour $0{,}10\\ \\mathrm{mm}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "chiffres-significatifs",
+      "enonce": "Au labo, on mesure les deux côtés d'une plaque rectangulaire avec un réglet : $L = 4{,}2\\ \\mathrm{cm}$ et $\\ell = 2{,}5\\ \\mathrm{cm}$. Calcule l'aire de la plaque et écris-la avec le nombre correct de chiffres significatifs.",
+      "corrige": [
+        "L'aire d'un rectangle est $A = L \\times \\ell = 4{,}2 \\times 2{,}5$. La calculatrice affiche $A = 10{,}5\\ \\mathrm{cm^2}$.",
+        "Pour un produit, on garde le nombre de chiffres significatifs du facteur le moins précis. Ici $4{,}2$ et $2{,}5$ ont chacun $2$ chiffres significatifs : le résultat doit donc en avoir $2$.",
+        "On arrondit $10{,}5$ à $2$ chiffres significatifs : $A = 11\\ \\mathrm{cm^2}$. Garder $10{,}5$ ferait croire à une précision (3 chiffres) que la mesure ne permet pas : un calcul n'ajoute jamais de précision.",
+        "On n'oublie pas l'unité, ici le $\\mathrm{cm^2}$."
+      ],
+      "reponse": "$A = 11\\ \\mathrm{cm^2}$ (2 chiffres significatifs)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "type-a-et-reference",
+      "enonce": "En TP, on mesure l'intensité de la pesanteur $g$ avec un pendule. On obtient $n = 9$ mesures d'écart-type $s = 0{,}24\\ \\mathrm{m\\cdot s^{-2}}$ et de moyenne $\\bar{g} = 9{,}90\\ \\mathrm{m\\cdot s^{-2}}$. La valeur de référence est $g_{\\text{réf}} = 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$. Calcule l'incertitude-type de type A, puis dis si le résultat est compatible avec la référence.",
+      "corrige": [
+        "Première étape — l'incertitude-type de type A : $u = \\dfrac{s}{\\sqrt{n}}$ avec $n = 9$, donc $\\sqrt{n} = 3$ et $u = \\dfrac{0{,}24}{3} = 0{,}08\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "Le résultat s'écrit alors $g = 9{,}90 \\pm 0{,}08\\ \\mathrm{m\\cdot s^{-2}}$ (valeur arrondie au même rang que l'incertitude).",
+        "Deuxième étape — la comparaison à la référence : on calcule l'écart $\\left| \\bar{g} - g_{\\text{réf}} \\right| = \\left| 9{,}90 - 9{,}81 \\right| = 0{,}09\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "On l'évalue en nombre d'incertitudes-types : $\\dfrac{0{,}09}{0{,}08} \\approx 1{,}1$. C'est inférieur à $2$ : l'écart s'explique par le seul hasard des mesures.",
+        "Le résultat est donc compatible avec la valeur de référence."
+      ],
+      "reponse": "$u = 0{,}08\\ \\mathrm{m\\cdot s^{-2}}$ ; écart de $1{,}1\\,u < 2\\,u$ : résultat compatible avec la référence."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "justesse-fidelite",
+      "enonce": "On vérifie une balance avec une masse étalon de valeur de référence $m_{\\text{réf}} = 100{,}0\\ \\mathrm{g}$. On pèse l'étalon $n = 10$ fois : la moyenne est $\\bar{m} = 100{,}45\\ \\mathrm{g}$ et l'écart-type $s = 0{,}12\\ \\mathrm{g}$. Calcule l'incertitude-type de type A, écris le résultat, puis analyse la balance en termes de justesse et de fidélité.",
+      "corrige": [
+        "Incertitude-type de type A : $u = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}12}{\\sqrt{10}}$. Avec $\\sqrt{10} \\approx 3{,}16$, on obtient $u \\approx 0{,}038$, soit $u \\approx 0{,}04\\ \\mathrm{g}$ (un chiffre significatif).",
+        "On écrit le résultat en arrondissant la moyenne au même rang que l'incertitude : $m = 100{,}45 \\pm 0{,}04\\ \\mathrm{g}$.",
+        "Comparaison à la référence : l'écart vaut $\\left| 100{,}45 - 100{,}0 \\right| = 0{,}45\\ \\mathrm{g}$, soit en nombre d'incertitudes-types $\\dfrac{0{,}45}{0{,}04} \\approx 11$. C'est très supérieur à $2$ : le résultat n'est pas compatible avec la référence.",
+        "Interprétation : l'écart-type $s$ est petit, donc les pesées sont très resserrées entre elles — la balance est fidèle. Mais la moyenne est décalée de $0{,}45\\ \\mathrm{g}$ au-dessus de l'étalon — la balance n'est pas juste.",
+        "Ce décalage constant est la signature d'une erreur systématique (un zéro mal réglé). Répéter les pesées ne la corrigera pas ; il faut étalonner la balance. C'est le piège « fidèle ne veut pas dire juste »."
+      ],
+      "reponse": "$u \\approx 0{,}04\\ \\mathrm{g}$ ; $m = 100{,}45 \\pm 0{,}04\\ \\mathrm{g}$. Balance fidèle (faible $s$) mais non juste (écart de $\\approx 11\\,u$) : erreur systématique, il faut l'étalonner."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme-mesure-complet",
+      "enonce": "TP — détermination expérimentale de l'intensité de la pesanteur $g$.\\n\\nUn groupe d'élèves mesure $g$ par une méthode de chute libre. Il réalise $n = 5$ mesures indépendantes (en $\\mathrm{m\\cdot s^{-2}}$) : $9{,}7$ ; $10{,}1$ ; $9{,}9$ ; $9{,}8$ ; $10{,}0$. L'écart-type de cette série est $s = 0{,}15\\ \\mathrm{m\\cdot s^{-2}}$. La valeur de référence est $g_{\\text{réf}} = 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$.\\n\\n1. Calcule la meilleure estimation de $g$ à partir de la série.\\n2. Calcule l'incertitude-type de type A associée.\\n3. Écris le résultat de la mesure sous la forme correcte.\\n4. Le résultat du groupe est-il compatible avec la valeur de référence ? Justifie.\\n5. Un second groupe trouve $\\bar{g}_B = 9{,}60\\ \\mathrm{m\\cdot s^{-2}}$ avec $s_B = 0{,}05\\ \\mathrm{m\\cdot s^{-2}}$ (toujours $n = 5$). Compare les deux groupes en termes de justesse et de fidélité.\\n6. Le premier groupe veut diviser son incertitude-type par $2$ sans changer de méthode. Combien de mesures doit-il réaliser au total ?",
+      "corrige": [
+        "1. La meilleure estimation est la moyenne : $\\bar{g} = \\dfrac{9{,}7 + 10{,}1 + 9{,}9 + 9{,}8 + 10{,}0}{5} = \\dfrac{49{,}5}{5} = 9{,}90\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "2. Incertitude-type de type A : $u = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}15}{\\sqrt{5}}$. Avec $\\sqrt{5} \\approx 2{,}24$, on obtient $u \\approx 0{,}067$, arrondi à un chiffre significatif : $u \\approx 0{,}07\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "3. On arrondit la valeur au même rang que l'incertitude (le centième) : $g = 9{,}90 \\pm 0{,}07\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "4. Écart à la référence : $\\left| 9{,}90 - 9{,}81 \\right| = 0{,}09\\ \\mathrm{m\\cdot s^{-2}}$. En nombre d'incertitudes-types : $\\dfrac{0{,}09}{0{,}07} \\approx 1{,}3$. C'est inférieur à $2$ : le résultat est compatible avec la valeur de référence.",
+        "5. Le groupe B a un écart-type plus petit ($s_B = 0{,}05 < 0{,}15$) : ses mesures sont plus resserrées, il est donc plus fidèle. Mais sa moyenne $9{,}60$ est loin de la référence ($\\left| 9{,}60 - 9{,}81 \\right| = 0{,}21$, soit avec $u_B = \\dfrac{0{,}05}{\\sqrt{5}} \\approx 0{,}02$ un écart d'environ $10\\,u_B$, non compatible) : le groupe B est moins juste. Le groupe A, moins fidèle, est plus juste. Le décalage régulier de B trahit une erreur systématique.",
+        "6. À $s$ constant, $u$ varie en $\\dfrac{1}{\\sqrt{n}}$ : diviser $u$ par $2$ impose de multiplier $n$ par $2^2 = 4$. Il faut donc $n = 4 \\times 5 = 20$ mesures au total."
+      ],
+      "reponse": "$\\bar{g} = 9{,}90\\ \\mathrm{m\\cdot s^{-2}}$, $u \\approx 0{,}07\\ \\mathrm{m\\cdot s^{-2}}$, soit $g = 9{,}90 \\pm 0{,}07\\ \\mathrm{m\\cdot s^{-2}}$ ; compatible avec $9{,}81$ (écart $\\approx 1{,}3\\,u < 2\\,u$). Groupe A plus juste, groupe B plus fidèle mais entaché d'une erreur systématique. Pour diviser $u$ par $2$ : $20$ mesures."
     }
   ]
 }

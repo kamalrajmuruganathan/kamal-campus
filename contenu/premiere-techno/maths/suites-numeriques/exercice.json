@@ -88,6 +88,60 @@
         "On compare : $199{,}65 < 290$, donc la quatrième année l'abonnement B est moins cher que l'abonnement A."
       ],
       "reponse": "$(a_n)$ arithmétique ($r = 30$), $(b_n)$ géométrique ($q = 1{,}10$) ; $a_4 = 290$ € et $b_4 = 199{,}65$ € : B est le moins cher la 4e année."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "geometrique",
+      "enonce": "Le nombre de nénuphars à la surface d'un étang est multiplié par $1{,}5$ chaque semaine. Au départ, on compte $64$ nénuphars. On note $b_n$ le nombre de nénuphars au bout de $n$ semaines. Donner l'expression de $b_n$, calculer $b_1$ et $b_2$, puis le nombre de nénuphars au bout de $4$ semaines.",
+      "corrige": [
+        "Le nombre est multiplié chaque semaine par le même coefficient $1{,}5$ : la suite $(b_n)$ est géométrique de raison $q = 1{,}5$, de premier terme $b_0 = 64$.",
+        "Le terme général est $b_n = b_0 \\times q^{\\,n} = 64 \\times 1{,}5^{\\,n}$.",
+        "$b_1 = 64 \\times 1{,}5 = 96$, puis $b_2 = 96 \\times 1{,}5 = 144$.",
+        "Au bout de $4$ semaines : $b_4 = 64 \\times 1{,}5^{4} = 64 \\times 5{,}0625 = 324$ nénuphars."
+      ],
+      "reponse": "$b_n = 64 \\times 1{,}5^{\\,n}$ ; $b_1 = 96$, $b_2 = 144$ et $b_4 = 324$ nénuphars."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "arithmetique",
+      "enonce": "Une suite arithmétique $(u_n)$ vérifie $u_2 = 17$ et $u_5 = 32$. Déterminer sa raison $r$ et son premier terme $u_0$, puis calculer $u_{20}$.",
+      "corrige": [
+        "Entre le rang $2$ et le rang $5$, on ajoute la raison $3$ fois : $u_5 = u_2 + 3r$, donc $32 = 17 + 3r$.",
+        "On en tire $3r = 32 - 17 = 15$, soit $r = 5$.",
+        "Comme $u_2 = u_0 + 2r$, on a $17 = u_0 + 2\\times 5 = u_0 + 10$, donc $u_0 = 7$.",
+        "Avec le terme général $u_n = u_0 + n\\,r = 7 + 5n$, on obtient $u_{20} = 7 + 5\\times 20 = 107$."
+      ],
+      "reponse": "$r = 5$, $u_0 = 7$ (soit $u_n = 7 + 5n$) et $u_{20} = 107$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "seuil",
+      "enonce": "La production annuelle d'une usine est de $5\\,000$ pièces la première année, puis diminue de $6\\,\\%$ chaque année. On note $P_n$ la production au bout de $n$ années ($P_0 = 5\\,000$). Justifier que $(P_n)$ est géométrique, donner son expression, puis déterminer à partir de quelle année la production passe pour la première fois sous le seuil de $3\\,500$ pièces.",
+      "corrige": [
+        "La production baisse chaque année d'un pourcentage constant, donc elle est multipliée par le même coefficient : $(P_n)$ est géométrique de raison $q = 1 - \\dfrac{6}{100} = 0{,}94$, avec $P_0 = 5000$.",
+        "Le terme général est $P_n = 5000 \\times 0{,}94^{\\,n}$.",
+        "On calcule les termes de proche en proche : $P_4 \\approx 3904$, $P_5 \\approx 3670$, encore au-dessus de $3500$.",
+        "$P_6 = 5000 \\times 0{,}94^{6} \\approx 3449$, qui est inférieur à $3500$ pour la première fois.",
+        "C'est donc au bout de $6$ années que la production passe sous le seuil de $3\\,500$ pièces."
+      ],
+      "reponse": "$(P_n)$ est géométrique de raison $0{,}94$, $P_n = 5000 \\times 0{,}94^{\\,n}$ ; la production passe sous $3\\,500$ pièces au bout de $6$ ans ($P_6 \\approx 3449$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probleme",
+      "enonce": "Une association reçoit chaque année un don de deux mécènes. Le mécène A verse $800$ € la première année (année $1$), puis augmente son don de $150$ € chaque année. Le mécène B verse $500$ € la première année, puis augmente son don de $20\\,\\%$ chaque année. On note $a_n$ le don du mécène A et $b_n$ le don du mécène B lors de la $n$-ième année ($n \\geq 1$, l'année $1$ correspond au premier terme). 1. Préciser la nature de chacune des suites $(a_n)$ et $(b_n)$, ainsi que son premier terme et sa raison. 2. Donner l'expression de $a_n$ en fonction de $n$, puis calculer $a_2$, $a_3$ et $a_4$. 3. Donner l'expression de $b_n$ en fonction de $n$, puis calculer $b_2$, $b_3$ et $b_4$. 4. Calculer le don total de chaque mécène sur les $4$ premières années. 5. Montrer qu'à partir d'une certaine année, le don annuel de B dépasse celui de A, et déterminer la première année où cela se produit.",
+      "corrige": [
+        "1. Le mécène A ajoute chaque année la quantité fixe $150$ € : $(a_n)$ est arithmétique de raison $r = 150$, de premier terme $a_1 = 800$. Le mécène B augmente d'un pourcentage constant ($+20\\,\\%$), donc multiplie par le même coefficient : $(b_n)$ est géométrique de raison $q = 1{,}20$, de premier terme $b_1 = 500$.",
+        "2. Le premier terme étant d'indice $1$ : $a_n = a_1 + (n-1)\\,r = 800 + (n-1)\\times 150 = 650 + 150n$. On obtient $a_2 = 950$ €, $a_3 = 1100$ € et $a_4 = 1250$ €.",
+        "3. De même $b_n = b_1 \\times q^{\\,n-1} = 500 \\times 1{,}20^{\\,n-1}$. On obtient $b_2 = 500 \\times 1{,}2 = 600$ €, $b_3 = 720$ € et $b_4 = 864$ €.",
+        "4. Don total de A sur $4$ ans : $a_1 + a_2 + a_3 + a_4 = 800 + 950 + 1100 + 1250 = 4100$ €. Don total de B sur $4$ ans : $b_1 + b_2 + b_3 + b_4 = 500 + 600 + 720 + 864 = 2684$ €. Sur ces $4$ premières années, A donne davantage.",
+        "5. On compare les dons annuels année après année. $a_5 = 1400$ et $b_5 = 500 \\times 1{,}2^{4} \\approx 1037$ ; $a_8 = 1850$ et $b_8 \\approx 1792$ (B encore en dessous) ; $a_9 = 2000$ et $b_9 = 500 \\times 1{,}2^{8} \\approx 2150$. Comme la croissance de B est géométrique, elle finit toujours par l'emporter sur la croissance arithmétique de A : le don de B dépasse pour la première fois celui de A lors de l'année $9$."
+      ],
+      "reponse": "$(a_n)$ arithmétique ($a_1 = 800$, $r = 150$, $a_n = 650 + 150n$) ; $(b_n)$ géométrique ($b_1 = 500$, $q = 1{,}20$, $b_n = 500 \\times 1{,}2^{\\,n-1}$). Dons sur $4$ ans : A $= 4100$ €, B $= 2684$ €. Le don de B dépasse celui de A à partir de l'année $9$."
     }
   ]
 }

@@ -83,6 +83,56 @@
         "C'est la **directivité** du laser : toute sa puissance arrive concentrée sur une surface minuscule, donc dans $I = P/S$ le dénominateur $S$ est très petit et $I$ devient énorme. L'œil focalise encore ce faisceau sur la rétine, d'où une lésion irréversible — on ne regarde jamais dans l'axe d'un laser, même de faible puissance."
       ],
       "reponse": "(a) $I = 1\\,000$ W·m⁻² ; (b) $I' \\approx 1{,}2$ W·m⁻² ; (c) le laser produit une intensité environ $800$ fois plus grande à cause de sa directivité (surface $S$ minuscule)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "relation-fondamentale",
+      "enonce": "Une station de radio FM émet une onde électromagnétique de fréquence $f = 100$ MHz. Calculer la longueur d'onde $\\lambda$ de cette onde dans l'air (on prendra $c = 3{,}00 \\times 10^8$ m·s⁻¹).",
+      "corrige": [
+        "Une onde radio est une onde **électromagnétique** : elle se propage à la célérité de la lumière, $c = 3{,}00 \\times 10^8$ m·s⁻¹.",
+        "On convertit la fréquence en hertz : $f = 100$ MHz $= 100 \\times 10^6$ Hz $= 1{,}00 \\times 10^8$ Hz.",
+        "On applique la relation fondamentale : $\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}00 \\times 10^8}{1{,}00 \\times 10^8} = 3{,}0$ m."
+      ],
+      "reponse": "$\\lambda = 3{,}0$ m."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "distance-sans-reflexion",
+      "enonce": "Pendant un orage, on voit d'abord l'éclair, puis on entend le tonnerre $\\Delta t = 6{,}0$ s plus tard. Sachant que la lumière se propage quasi instantanément sur cette distance, à quelle distance l'éclair s'est-il produit ? (On prendra $v_{son} = 340$ m·s⁻¹.)",
+      "corrige": [
+        "L'éclair (lumière) parcourt la distance en un temps totalement négligeable devant $6$ s : à $c = 3{,}00 \\times 10^8$ m·s⁻¹, quelques kilomètres sont franchis en quelques microsecondes. On considère donc que l'éclair est vu au moment où il se produit.",
+        "Le délai $\\Delta t = 6{,}0$ s correspond alors uniquement au temps mis par le **son** pour parcourir la distance $d$. Il n'y a **pas** de réflexion ici : le trajet est simple, pas d'aller-retour, donc **pas de facteur 2**.",
+        "On applique $d = v_{son} \\times \\Delta t = 340 \\times 6{,}0 = 2\\,040$ m, soit environ $2$ km."
+      ],
+      "reponse": "L'éclair est à environ $d = 2\\,040$ m $\\approx 2$ km."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "sources-lumineuses",
+      "enonce": "Un laser de pointage émet une lumière verte de longueur d'onde $\\lambda = 532$ nm. \\n(a) Calculer sa fréquence $f$ (on prendra $c = 3{,}00 \\times 10^8$ m·s⁻¹). \\n(b) Cette lumière est-elle visible par l'œil humain ? Justifier. \\n(c) Un second laser émet une lumière de longueur d'onde plus courte. Son faisceau transporte-t-il plus ou moins d'énergie que le premier ? Justifier sans calcul.",
+      "corrige": [
+        "(a) On convertit la longueur d'onde en mètres : $\\lambda = 532$ nm $= 532 \\times 10^{-9}$ m $= 5{,}32 \\times 10^{-7}$ m. La fréquence vaut $f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}00 \\times 10^8}{5{,}32 \\times 10^{-7}} \\approx 5{,}6 \\times 10^{14}$ Hz.",
+        "(b) L'œil humain perçoit les longueurs d'onde comprises entre environ $400$ nm (violet) et $800$ nm (rouge). Ici $\\lambda = 532$ nm est dans cet intervalle : la lumière est donc **visible**, et sa position au milieu du domaine correspond bien au vert.",
+        "(c) Plus la longueur d'onde est **courte**, plus la fréquence $f = c/\\lambda$ est **élevée** ; or plus la fréquence est élevée, plus l'onde transporte d'énergie. Le second laser, de longueur d'onde plus courte, transporte donc **plus** d'énergie que le premier."
+      ],
+      "reponse": "(a) $f \\approx 5{,}6 \\times 10^{14}$ Hz ; (b) oui, $532$ nm est entre $400$ et $800$ nm ; (c) plus d'énergie, car une longueur d'onde plus courte correspond à une fréquence plus élevée."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese-ondes-information",
+      "enonce": "**Un capteur de recul et un radar sur une voiture.** \\nUne voiture est équipée d'un capteur de recul qui émet des **ultrasons** de fréquence $f = 40$ kHz dans l'air ($v_{son} = 340$ m·s⁻¹) et détecte les obstacles par leur écho. Elle possède aussi un **radar** qui émet des ondes électromagnétiques ($c = 3{,}00 \\times 10^8$ m·s⁻¹). \\n1. Calculer la longueur d'onde des ultrasons émis par le capteur de recul dans l'air. \\n2. En reculant, le capteur reçoit l'écho d'un mur $\\Delta t = 5{,}0$ ms après l'émission. À quelle distance se trouve le mur ? \\n3. Le conducteur n'entend pas ces ultrasons. Expliquer pourquoi, en s'appuyant sur le domaine audible. \\n4. Le capteur transmet ensuite la distance mesurée à l'ordinateur de bord, qui l'affiche à l'écran. Expliquer par quel principe une onde peut transporter cette information. \\n5. Le radar, lui, détecte une voiture située à $d = 150$ m. Calculer la durée $\\Delta t'$ de l'aller-retour de son onde. Comparer avec la question 2 et conclure sur l'intérêt d'utiliser une onde électromagnétique plutôt qu'un ultrason pour détecter à grande distance.",
+      "corrige": [
+        "1. Les ultrasons sont une onde sonore : $\\lambda = \\dfrac{v_{son}}{f} = \\dfrac{340}{40 \\times 10^3} = 8{,}5 \\times 10^{-3}$ m $= 8{,}5$ mm.",
+        "2. L'onde effectue un **aller-retour** (émission, réflexion sur le mur, retour) : on applique $d = \\dfrac{v_{son} \\times \\Delta t}{2}$. Avec $\\Delta t = 5{,}0$ ms $= 5{,}0 \\times 10^{-3}$ s : $d = \\dfrac{340 \\times 5{,}0 \\times 10^{-3}}{2} = \\dfrac{1{,}7}{2} = 0{,}85$ m.",
+        "3. Le domaine audible par l'oreille humaine s'étend d'environ $20$ Hz à $20\\,000$ Hz ($20$ kHz). Or la fréquence émise est $f = 40$ kHz, **supérieure à $20$ kHz** : ce sont des **ultrasons**, inaudibles pour l'homme. C'est justement ce qui permet au capteur de fonctionner sans gêner le conducteur.",
+        "4. Une onde peut transporter une information si on la **module selon un code** : l'émetteur fait varier une de ses caractéristiques (amplitude, fréquence) au rythme de l'information — ici la valeur de la distance mesurée. L'onde se propage jusqu'à l'ordinateur de bord (le récepteur), qui détecte ces variations et **décode** le message, à condition de connaître le code utilisé. Ce n'est pas l'onde qui *est* l'information, c'est la façon dont elle est modifiée.",
+        "5. Le radar émet une onde **électromagnétique**, de célérité $c = 3{,}00 \\times 10^8$ m·s⁻¹. Pour un aller-retour sur $2d$ : $\\Delta t' = \\dfrac{2d}{c} = \\dfrac{2 \\times 150}{3{,}00 \\times 10^8} = \\dfrac{300}{3{,}00 \\times 10^8} = 1{,}0 \\times 10^{-6}$ s $= 1{,}0$ µs. Comparaison : à la question 2, le son mettait $5$ ms pour un mur à moins d'un mètre, tandis que l'onde électromagnétique met seulement $1$ µs pour un obstacle à $150$ m. L'onde électromagnétique, environ un million de fois plus rapide, permet une détection **quasi instantanée à grande distance** — ce que l'ultrason, bien plus lent, ne permet que sur quelques mètres."
+      ],
+      "reponse": "1. $\\lambda = 8{,}5$ mm ; 2. mur à $d = 0{,}85$ m (aller-retour, facteur 2) ; 3. $f = 40$ kHz $> 20$ kHz, donc ultrasons inaudibles ; 4. transport par une onde **modulée selon un code** que le récepteur décode ; 5. $\\Delta t' = 1{,}0$ µs, l'onde EM ($c = 3{,}00 \\times 10^8$ m·s⁻¹) est bien plus rapide, d'où une détection quasi instantanée à grande distance."
     }
   ]
 }

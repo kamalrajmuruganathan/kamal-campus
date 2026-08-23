@@ -87,6 +87,62 @@
         "Pour $x = 2$, on a $\\mathrm{Im}(z) = 2 + 2 = 4 \\neq 0$ : $z = 4\\mathrm{i}$ est bien un imaginaire pur."
       ],
       "reponse": "$z$ est imaginaire pur pour $x = 2$ (on obtient alors $z = 4\\mathrm{i}$)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "forme-trigonometrique",
+      "enonce": "Soit $z = -3 + 3\\mathrm{i}$. Déterminer son module $r$ et un argument $\\theta$, puis écrire $z$ sous forme trigonométrique.",
+      "corrige": [
+        "**Module** : $r = |z| = \\sqrt{(-3)^2 + 3^2} = \\sqrt{9 + 9} = \\sqrt{18} = 3\\sqrt{2}$.",
+        "**Argument** : on cherche $\\theta$ tel que $\\cos\\theta = \\dfrac{a}{r} = \\dfrac{-3}{3\\sqrt2} = -\\dfrac{\\sqrt2}{2}$ et $\\sin\\theta = \\dfrac{b}{r} = \\dfrac{3}{3\\sqrt2} = \\dfrac{\\sqrt2}{2}$.",
+        "Le cosinus est négatif et le sinus positif : l'image de $z$ est dans le deuxième quadrant. Les deux équations donnent $\\theta = \\dfrac{3\\pi}{4}$.",
+        "**Forme trigonométrique** : $z = 3\\sqrt{2}\\left(\\cos\\dfrac{3\\pi}{4} + \\mathrm{i}\\sin\\dfrac{3\\pi}{4}\\right)$."
+      ],
+      "reponse": "$r = 3\\sqrt{2}$, $\\theta = \\dfrac{3\\pi}{4}$, soit $z = 3\\sqrt{2}\\left(\\cos\\dfrac{3\\pi}{4} + \\mathrm{i}\\sin\\dfrac{3\\pi}{4}\\right)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "forme-trigonometrique",
+      "enonce": "On donne $z = 6\\left(\\cos\\dfrac{2\\pi}{3} + \\mathrm{i}\\sin\\dfrac{2\\pi}{3}\\right)$. Écrire $z$ sous forme algébrique, puis donner son conjugué $\\bar z$.",
+      "corrige": [
+        "On utilise $a = r\\cos\\theta$ et $b = r\\sin\\theta$, avec $r = 6$ et $\\theta = \\dfrac{2\\pi}{3}$.",
+        "Valeurs remarquables : $\\cos\\dfrac{2\\pi}{3} = -\\dfrac{1}{2}$ et $\\sin\\dfrac{2\\pi}{3} = \\dfrac{\\sqrt3}{2}$.",
+        "Partie réelle : $a = 6 \\times \\left(-\\dfrac{1}{2}\\right) = -3$. Partie imaginaire : $b = 6 \\times \\dfrac{\\sqrt3}{2} = 3\\sqrt3$. Donc $z = -3 + 3\\sqrt{3}\\,\\mathrm{i}$.",
+        "Le conjugué change le signe de la partie imaginaire : $\\bar z = -3 - 3\\sqrt{3}\\,\\mathrm{i}$."
+      ],
+      "reponse": "$z = -3 + 3\\sqrt{3}\\,\\mathrm{i}$ et $\\bar z = -3 - 3\\sqrt{3}\\,\\mathrm{i}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "operations",
+      "enonce": "Soit $x$ un réel et $z = \\dfrac{x + \\mathrm{i}}{1 + \\mathrm{i}}$. Déterminer la valeur de $x$ pour laquelle $z$ est un nombre réel.",
+      "corrige": [
+        "On multiplie numérateur et dénominateur par le **conjugué du dénominateur**, soit $1 - \\mathrm{i}$.",
+        "Numérateur : $(x + \\mathrm{i})(1 - \\mathrm{i}) = x - x\\mathrm{i} + \\mathrm{i} - \\mathrm{i}^2 = (x + 1) + (1 - x)\\mathrm{i}$ (le $-\\mathrm{i}^2$ devient $+1$).",
+        "Dénominateur : $(1 + \\mathrm{i})(1 - \\mathrm{i}) = 1^2 + 1^2 = 2$.",
+        "Donc $z = \\dfrac{x + 1}{2} + \\dfrac{1 - x}{2}\\,\\mathrm{i}$ : la partie imaginaire est $\\dfrac{1 - x}{2}$.",
+        "$z$ est réel lorsque sa partie imaginaire est nulle : $\\dfrac{1 - x}{2} = 0$, soit $x = 1$.",
+        "Pour $x = 1$, on a $z = \\dfrac{2}{2} = 1$, qui est bien un réel."
+      ],
+      "reponse": "$z$ est réel pour $x = 1$ (on obtient alors $z = 1$)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Contexte.** En électricité, en régime sinusoïdal, une impédance se modélise par un nombre complexe $Z = R + \\mathrm{i}X$, où $R$ (en $\\Omega$) est la résistance et $X$ (en $\\Omega$) la réactance. Le module $|Z|$ donne l'impédance (en $\\Omega$) et un argument de $Z$ donne le déphasage $\\varphi$ entre la tension et le courant. On étudie le dipôle d'impédance $Z = 3 + 3\\sqrt{3}\\,\\mathrm{i}$ (en $\\Omega$).\\n\\n1. Donner la résistance $R$ et la réactance $X$ de ce dipôle.\\n2. Calculer $|Z|$, c'est-à-dire l'impédance du dipôle, en $\\Omega$.\\n3. Déterminer un argument $\\varphi$ de $Z$ (le déphasage).\\n4. En déduire l'écriture de $Z$ sous forme trigonométrique.\\n5. L'admittance du dipôle est le complexe $Y = \\dfrac{1}{Z}$. Écrire $Y$ sous forme algébrique, puis vérifier que $|Y| = \\dfrac{1}{|Z|}$.",
+      "corrige": [
+        "1. On identifie $Z = R + \\mathrm{i}X$ avec l'écriture $a + \\mathrm{i}b$ : la résistance est $R = \\mathrm{Re}(Z) = 3~\\Omega$ et la réactance est le **réel** $X = \\mathrm{Im}(Z) = 3\\sqrt{3}~\\Omega$ (et non $3\\sqrt3\\,\\mathrm{i}$).",
+        "2. $|Z| = \\sqrt{R^2 + X^2} = \\sqrt{3^2 + (3\\sqrt3)^2} = \\sqrt{9 + 27} = \\sqrt{36} = 6$. L'impédance vaut $6~\\Omega$ (une distance, donc bien positive).",
+        "3. On cherche $\\varphi$ tel que $\\cos\\varphi = \\dfrac{R}{|Z|} = \\dfrac{3}{6} = \\dfrac{1}{2}$ et $\\sin\\varphi = \\dfrac{X}{|Z|} = \\dfrac{3\\sqrt3}{6} = \\dfrac{\\sqrt3}{2}$. Le cosinus et le sinus étant tous deux positifs, on obtient $\\varphi = \\dfrac{\\pi}{3}$.",
+        "4. Avec $|Z| = 6$ et $\\varphi = \\dfrac{\\pi}{3}$ : $Z = 6\\left(\\cos\\dfrac{\\pi}{3} + \\mathrm{i}\\sin\\dfrac{\\pi}{3}\\right)$.",
+        "5. On calcule $Y = \\dfrac{1}{3 + 3\\sqrt3\\,\\mathrm{i}}$ en multipliant par le conjugué du dénominateur $3 - 3\\sqrt3\\,\\mathrm{i}$. Le dénominateur devient $Z\\bar Z = 3^2 + (3\\sqrt3)^2 = 36$. Donc $Y = \\dfrac{3 - 3\\sqrt3\\,\\mathrm{i}}{36} = \\dfrac{1}{12} - \\dfrac{\\sqrt3}{12}\\,\\mathrm{i}$.",
+        "Vérification : $|Y| = \\sqrt{\\left(\\dfrac{1}{12}\\right)^2 + \\left(\\dfrac{\\sqrt3}{12}\\right)^2} = \\sqrt{\\dfrac{1 + 3}{144}} = \\sqrt{\\dfrac{4}{144}} = \\dfrac{2}{12} = \\dfrac{1}{6}$, qui est bien égal à $\\dfrac{1}{|Z|} = \\dfrac{1}{6}$."
+      ],
+      "reponse": "1. $R = 3~\\Omega$, $X = 3\\sqrt3~\\Omega$. 2. $|Z| = 6~\\Omega$. 3. $\\varphi = \\dfrac{\\pi}{3}$. 4. $Z = 6\\left(\\cos\\dfrac{\\pi}{3} + \\mathrm{i}\\sin\\dfrac{\\pi}{3}\\right)$. 5. $Y = \\dfrac{1}{12} - \\dfrac{\\sqrt3}{12}\\,\\mathrm{i}$ et $|Y| = \\dfrac{1}{6} = \\dfrac{1}{|Z|}$."
     }
   ]
 }

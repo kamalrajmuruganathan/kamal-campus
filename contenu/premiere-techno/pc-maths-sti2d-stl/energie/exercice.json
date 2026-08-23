@@ -86,6 +86,59 @@
         "Vérification : $\\eta_{\\text{global}} = 0{,}765 < 1$, cohérent, et les $141\\ \\mathrm{Wh}$ perdus le sont surtout sous forme thermique (effet Joule, frottements)."
       ],
       "reponse": "$\\eta_{\\text{global}} = 0{,}765$ ($76{,}5\\,\\%$), $E_{\\text{utile}} = 459\\ \\mathrm{Wh}$, $E_{\\text{dissipée}} = 141\\ \\mathrm{Wh}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "effet-joule",
+      "enonce": "Un radiateur électrique est constitué d'une résistance $R = 25\\ \\Omega$ parcourue par une intensité $I = 8\\ \\mathrm{A}$. Calculer la puissance dissipée par effet Joule dans la résistance.",
+      "corrige": [
+        "La puissance dissipée par effet Joule dans une résistance est $P_\\mathrm{J} = R\\,I^{2}$ (attention : c'est bien $I^2$, et non $R\\,I$).",
+        "Application numérique : $P_\\mathrm{J} = 25 \\times 8^{2} = 25 \\times 64 = 1\\,600\\ \\mathrm{W}$.",
+        "Dans un radiateur, cette chaleur est l'effet **utile** recherché : $P_\\mathrm{J} = 1\\,600\\ \\mathrm{W} = 1{,}6\\ \\mathrm{kW}$, un ordre de grandeur cohérent pour un chauffage d'appoint."
+      ],
+      "reponse": "$P_\\mathrm{J} = R\\,I^{2} = 1\\,600\\ \\mathrm{W} = 1{,}6\\ \\mathrm{kW}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "energie-rendement",
+      "enonce": "Une bouilloire électrique de puissance $P = 2\\,000\\ \\mathrm{W}$ a un rendement de $90\\,\\%$. Elle fonctionne pendant $5\\ \\mathrm{min}$. Calculer l'énergie électrique consommée (en joules), puis l'énergie utile réellement transmise à l'eau.",
+      "corrige": [
+        "Première étape — énergie électrique consommée. On applique $E = P \\times \\Delta t$, avec la durée **en secondes** : $\\Delta t = 5\\ \\mathrm{min} = 5 \\times 60 = 300\\ \\mathrm{s}$.",
+        "$E_{\\text{fournie}} = P \\times \\Delta t = 2\\,000 \\times 300 = 600\\,000\\ \\mathrm{J} = 6{,}0 \\times 10^{5}\\ \\mathrm{J}$.",
+        "Deuxième étape — énergie utile. Le rendement relie l'utile au fourni : $E_{\\text{utile}} = \\eta \\times E_{\\text{fournie}} = 0{,}90 \\times 600\\,000 = 540\\,000\\ \\mathrm{J} = 5{,}4 \\times 10^{5}\\ \\mathrm{J}$.",
+        "Les $60\\,000\\ \\mathrm{J}$ restants ($10\\,\\%$) sont dissipés, notamment en chauffant l'air et le corps de l'appareil."
+      ],
+      "reponse": "$E_{\\text{fournie}} = 6{,}0 \\times 10^{5}\\ \\mathrm{J}$ et $E_{\\text{utile}} = 5{,}4 \\times 10^{5}\\ \\mathrm{J}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "rendement-comparaison",
+      "enonce": "Une ampoule à incandescence de puissance $60\\ \\mathrm{W}$ a un rendement lumineux de $5\\,\\%$. On souhaite la remplacer par une LED qui produit la **même** puissance lumineuse utile, avec un rendement de $40\\,\\%$. 1. Calculer la puissance lumineuse utile de l'ampoule à incandescence. 2. En déduire la puissance électrique consommée par la LED. 3. Sur une durée d'utilisation de $1\\,000\\ \\mathrm{h}$, calculer l'énergie économisée (en kWh) en remplaçant l'ampoule par la LED.",
+      "corrige": [
+        "1. La puissance utile est la fraction du fourni valorisée : $P_{\\text{utile}} = \\eta \\times P = 0{,}05 \\times 60 = 3\\ \\mathrm{W}$ de lumière.",
+        "2. Pour la LED, on cherche le fourni connaissant l'utile : $P_{\\text{LED}} = \\dfrac{P_{\\text{utile}}}{\\eta_{\\text{LED}}} = \\dfrac{3}{0{,}40} = 7{,}5\\ \\mathrm{W}$. À éclairage égal, la LED consomme donc $7{,}5\\ \\mathrm{W}$ contre $60\\ \\mathrm{W}$.",
+        "3. Sur $1\\,000\\ \\mathrm{h}$ : incandescence $E_1 = 0{,}060\\ \\mathrm{kW} \\times 1\\,000\\ \\mathrm{h} = 60\\ \\mathrm{kWh}$ ; LED $E_2 = 0{,}0075\\ \\mathrm{kW} \\times 1\\,000\\ \\mathrm{h} = 7{,}5\\ \\mathrm{kWh}$.",
+        "Économie : $\\Delta E = 60 - 7{,}5 = 52{,}5\\ \\mathrm{kWh}$, soit une réduction d'environ $88\\,\\%$ de la consommation pour le même service rendu."
+      ],
+      "reponse": "$P_{\\text{utile}} = 3\\ \\mathrm{W}$, $P_{\\text{LED}} = 7{,}5\\ \\mathrm{W}$, économie $\\Delta E = 52{,}5\\ \\mathrm{kWh}$ sur $1\\,000\\ \\mathrm{h}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "chaine-energetique-vehicule",
+      "enonce": "**Étude d'une voiture électrique.** Une voiture électrique est équipée d'une batterie de capacité $E_{\\text{batt}} = 50\\ \\mathrm{kWh}$. L'ensemble moteur + transmission a un rendement $\\eta_{\\text{m}} = 0{,}80$. En usage urbain, la voiture demande une puissance mécanique moyenne $P = 8\\ \\mathrm{kW}$ à la roue. Pour la recharge, le chargeur a un rendement $\\eta_{\\text{c}} = 0{,}90$ et l'électricité est facturée $0{,}20$ € le kWh. 1. Exprimer la capacité de la batterie en joules. 2. Calculer l'énergie mécanique utile transmise aux roues lorsque la batterie, pleine, se décharge entièrement. 3. En déduire l'autonomie de la voiture, c'est-à-dire la durée de fonctionnement possible, en usage urbain. 4. Sous quelle forme, et en quelle quantité (en kWh), l'énergie non transmise aux roues est-elle perdue ? 5. Quelle énergie électrique faut-il prélever sur le réseau pour recharger complètement la batterie ? En déduire le coût d'une recharge complète. 6. Décrire la chaîne énergétique du réseau jusqu'à la roue et calculer le rendement global correspondant.",
+      "corrige": [
+        "1. Un kilowattheure vaut $3{,}6 \\times 10^{6}\\ \\mathrm{J}$, donc $E_{\\text{batt}} = 50 \\times 3{,}6 \\times 10^{6} = 1{,}8 \\times 10^{8}\\ \\mathrm{J}$.",
+        "2. Le rendement moteur + transmission donne l'énergie utile aux roues : $E_{\\text{utile}} = \\eta_{\\text{m}} \\times E_{\\text{batt}} = 0{,}80 \\times 50 = 40\\ \\mathrm{kWh}$.",
+        "3. L'autonomie se déduit de $E = P \\times \\Delta t$, soit $\\Delta t = \\dfrac{E_{\\text{utile}}}{P} = \\dfrac{40\\ \\mathrm{kWh}}{8\\ \\mathrm{kW}} = 5\\ \\mathrm{h}$ (les kWh divisés par des kW donnent bien des heures).",
+        "4. Par conservation de l'énergie, $E_{\\text{dissipée}} = E_{\\text{batt}} - E_{\\text{utile}} = 50 - 40 = 10\\ \\mathrm{kWh}$. Cette énergie est perdue sous forme **thermique** (effet Joule dans le moteur et les câbles, frottements de la transmission).",
+        "5. Le chargeur ayant un rendement $\\eta_{\\text{c}} = 0{,}90$, il faut prélever plus que la capacité stockée : $E_{\\text{réseau}} = \\dfrac{E_{\\text{batt}}}{\\eta_{\\text{c}}} = \\dfrac{50}{0{,}90} \\approx 55{,}6\\ \\mathrm{kWh}$. Coût : $55{,}6 \\times 0{,}20 \\approx 11{,}1$ €.",
+        "6. Chaîne énergétique : réseau (énergie **électrique**) $\\rightarrow$ chargeur $\\rightarrow$ batterie (énergie **chimique**) $\\rightarrow$ moteur (énergie **mécanique**) $\\rightarrow$ roue, avec des pertes **thermiques** à chaque convertisseur. Le rendement global du réseau à la roue est le produit des rendements : $\\eta_{\\text{global}} = \\eta_{\\text{c}} \\times \\eta_{\\text{m}} = 0{,}90 \\times 0{,}80 = 0{,}72$, soit $72\\,\\%$."
+      ],
+      "reponse": "1. $E_{\\text{batt}} = 1{,}8 \\times 10^{8}\\ \\mathrm{J}$. 2. $E_{\\text{utile}} = 40\\ \\mathrm{kWh}$. 3. autonomie $\\Delta t = 5\\ \\mathrm{h}$. 4. $E_{\\text{dissipée}} = 10\\ \\mathrm{kWh}$ (thermique). 5. $E_{\\text{réseau}} \\approx 55{,}6\\ \\mathrm{kWh}$, coût $\\approx 11{,}1$ €. 6. $\\eta_{\\text{global}} = 0{,}72$ ($72\\,\\%$)."
     }
   ]
 }
