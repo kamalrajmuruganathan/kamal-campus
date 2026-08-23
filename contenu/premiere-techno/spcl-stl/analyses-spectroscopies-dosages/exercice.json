@@ -86,6 +86,56 @@
         "Concentration : $C_A = \\dfrac{n(\\mathrm{Fe^{2+}})}{V_A} = \\dfrac{1{,}2\\times 10^{-3}}{20{,}0\\times 10^{-3}} = 6{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. Oublier le facteur $5$ aurait donné une valeur $5$ fois trop petite."
       ],
       "reponse": "$C_A = 6{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "identification-proprietes",
+      "enonce": "On cherche à identifier un liquide par sa densité. On tare un récipient sur la balance, puis on y verse un volume $V = 25{,}0\\ \\mathrm{mL}$ de ce liquide : la balance affiche alors $m = 19{,}75\\ \\mathrm{g}$. Calcule la masse volumique $\\rho$ du liquide, puis sa densité $d$. On donne $\\rho_{\\mathrm{eau}} = 1{,}00\\ \\mathrm{g\\cdot mL^{-1}}$.",
+      "corrige": [
+        "La masse volumique est le rapport de la masse au volume : $\\rho = \\dfrac{m}{V} = \\dfrac{19{,}75}{25{,}0} = 0{,}79\\ \\mathrm{g\\cdot mL^{-1}}$.",
+        "La densité compare cette masse volumique à celle de l'eau : $d = \\dfrac{\\rho}{\\rho_{\\mathrm{eau}}} = \\dfrac{0{,}79}{1{,}00} = 0{,}79$.",
+        "La densité est un rapport de deux masses volumiques : elle est **sans unité**. Numériquement, en $\\mathrm{g\\cdot mL^{-1}}$, $\\rho$ et $d$ ont bien la même valeur."
+      ],
+      "reponse": "$\\rho = 0{,}79\\ \\mathrm{g\\cdot mL^{-1}}$ et $d = 0{,}79$ (sans unité)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "uv-visible",
+      "enonce": "Une solution de permanganate de potassium apparaît **violette**. Son spectre d'absorption présente un maximum vers $\\lambda_{\\max} \\approx 520\\ \\mathrm{nm}$ (domaine du vert). (a) Montre que la couleur perçue est cohérente avec ce $\\lambda_{\\max}$, en utilisant la complémentarité des couleurs. (b) Dans une cuve d'épaisseur $\\ell = 1{,}0\\ \\mathrm{cm}$, à $\\lambda_{\\max}$, le coefficient d'absorption molaire vaut $\\varepsilon = 2{,}4\\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. On mesure $A = 0{,}72$. Détermine la concentration $c$ de la solution.",
+      "corrige": [
+        "(a) La couleur **perçue** est la **complémentaire** de la couleur **absorbée**. Ici la solution absorbe le vert ($\\lambda_{\\max} \\approx 520\\ \\mathrm{nm}$) ; sa complémentaire est le rouge-magenta, teinte pourpre/violette. C'est bien cohérent avec l'aspect violet observé : la solution ne renvoie pas le vert qu'elle absorbe, mais sa couleur opposée.",
+        "(b) On part de la loi de Beer-Lambert $A = \\varepsilon\\,\\ell\\,c$ et on isole $c$ : $c = \\dfrac{A}{\\varepsilon\\,\\ell}$.",
+        "$c = \\dfrac{0{,}72}{2{,}4\\times 10^{3} \\times 1{,}0} = 3{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Comme $A = 0{,}72 < 1{,}5$, on reste dans le domaine linéaire : la valeur est exploitable."
+      ],
+      "reponse": "(a) Absorbe le vert, perçue rouge-magenta/violette : cohérent. (b) $c = 3{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "titrage",
+      "enonce": "On veut déterminer la concentration en acide éthanoïque d'un vinaigre. Trop concentré pour être titré directement, il est d'abord dilué : on prélève $V_0 = 10{,}0\\ \\mathrm{mL}$ de vinaigre que l'on complète à $100{,}0\\ \\mathrm{mL}$ avec de l'eau distillée. On titre ensuite $V_A = 20{,}0\\ \\mathrm{mL}$ de cette solution diluée par de la soude (hydroxyde de sodium) à $C_B = 0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$, selon la réaction $\\mathrm{CH_3COOH + HO^- \\rightarrow CH_3COO^- + H_2O}$ (proportions $1$ pour $1$). L'équivalence est atteinte pour $V_E = 15{,}0\\ \\mathrm{mL}$. (a) Détermine la concentration $C_{\\mathrm{dil}}$ en acide de la solution diluée. (b) En déduire la concentration $C_0$ du vinaigre. (c) Sachant que la masse molaire de l'acide éthanoïque est $M = 60\\ \\mathrm{g\\cdot mol^{-1}}$, calcule la concentration massique $c_m$ du vinaigre.",
+      "corrige": [
+        "(a) À l'équivalence, réaction $1$ pour $1$ : $C_{\\mathrm{dil}}\\,V_A = C_B\\,V_E$, d'où $C_{\\mathrm{dil}} = \\dfrac{C_B\\,V_E}{V_A} = \\dfrac{0{,}10 \\times 15{,}0}{20{,}0} = 0{,}075\\ \\mathrm{mol\\cdot L^{-1}}$ (les volumes en $\\mathrm{mL}$ des deux côtés, leur rapport est un nombre).",
+        "(b) La dilution a divisé la concentration par le facteur $F = \\dfrac{V_{\\mathrm{final}}}{V_0} = \\dfrac{100{,}0}{10{,}0} = 10$. Le vinaigre est donc $10$ fois plus concentré : $C_0 = F \\times C_{\\mathrm{dil}} = 10 \\times 0{,}075 = 0{,}75\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "(c) La concentration massique relie concentration molaire et masse molaire : $c_m = C_0 \\times M = 0{,}75 \\times 60 = 45\\ \\mathrm{g\\cdot L^{-1}}$."
+      ],
+      "reponse": "$C_{\\mathrm{dil}} = 0{,}075\\ \\mathrm{mol\\cdot L^{-1}}$ ; $C_0 = 0{,}75\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_m = 45\\ \\mathrm{g\\cdot L^{-1}}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "spectroscopies-dosages",
+      "enonce": "**Contrôle d'un antiseptique à base de diiode.** Un antiseptique est une solution aqueuse de diiode $\\mathrm{I_2}$, de couleur brune, dont on veut vérifier la concentration $c_S$ par deux méthodes.\\n\\nLe diiode absorbe dans le visible, avec un maximum vers $\\lambda_{\\max} \\approx 460\\ \\mathrm{nm}$. Pour l'étalonnage, on prépare une gamme d'étalons de diiode et, dans une cuve d'épaisseur $\\ell = 1{,}0\\ \\mathrm{cm}$, réglée sur $\\lambda_{\\max}$, on obtient une droite d'étalonnage d'équation $A = 8{,}0\\times 10^{2}\\, c$ (avec $c$ en $\\mathrm{mol\\cdot L^{-1}}$), valable jusqu'à $A = 1{,}5$.\\n\\n1. Justifie que l'on règle le spectrophotomètre sur $\\lambda_{\\max}$ pour ce dosage, et rappelle l'opération à faire avant de mesurer les étalons.\\n2. À partir de l'équation de la droite d'étalonnage, détermine le coefficient d'absorption molaire $\\varepsilon$ du diiode à $\\lambda_{\\max}$.\\n3. La solution $S$ est trop concentrée pour être mesurée directement. On en prélève $5{,}0\\ \\mathrm{mL}$ que l'on complète à $50{,}0\\ \\mathrm{mL}$ avec de l'eau distillée ; la solution diluée donne $A_x = 0{,}40$. Détermine la concentration de la solution diluée, puis la concentration $c_S$ de la solution $S$.\\n4. Pour confirmer, on titre $V_A = 10{,}0\\ \\mathrm{mL}$ de $S$ par une solution de thiosulfate de sodium de concentration $C_B = 2{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$, selon $\\mathrm{I_2 + 2\\,S_2O_3^{2-} \\rightarrow 2\\,I^- + S_4O_6^{2-}}$. L'équivalence est atteinte pour $V_E = 5{,}0\\ \\mathrm{mL}$. Détermine $c_S$ par cette méthode.\\n5. Compare les deux résultats et cite un avantage propre à chacune des deux méthodes.",
+      "corrige": [
+        "1. On se place à $\\lambda_{\\max}$ car c'est là que l'absorbance est la plus grande : la **sensibilité** du dosage est maximale et une variation de concentration se traduit par la plus grande variation d'absorbance. Avant de mesurer les étalons, on **fait le blanc** : on règle le zéro d'absorbance sur le solvant seul (eau distillée), pour ne mesurer que l'absorption due au diiode.",
+        "2. La droite d'étalonnage traduit Beer-Lambert $A = \\varepsilon\\,\\ell\\,c$ : sa pente vaut $k = \\varepsilon\\,\\ell$. Donc $\\varepsilon = \\dfrac{k}{\\ell} = \\dfrac{8{,}0\\times 10^{2}}{1{,}0} = 8{,}0\\times 10^{2}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$.",
+        "3. On lit d'abord la concentration de la solution **diluée** sur la droite : $c_{\\mathrm{dil}} = \\dfrac{A_x}{k} = \\dfrac{0{,}40}{8{,}0\\times 10^{2}} = 5{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ (valeur dans la gamme, $A_x = 0{,}40 < 1{,}5$). Le facteur de dilution est $F = \\dfrac{50{,}0}{5{,}0} = 10$, donc $c_S = F \\times c_{\\mathrm{dil}} = 10 \\times 5{,}0\\times 10^{-4} = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "4. Quantité de thiosulfate versée à l'équivalence : $n(\\mathrm{S_2O_3^{2-}}) = C_B\\,V_E = 2{,}0\\times 10^{-2} \\times 5{,}0\\times 10^{-3} = 1{,}0\\times 10^{-4}\\ \\mathrm{mol}$ ($V_E$ converti en litres). D'après l'équation, $\\dfrac{n(\\mathrm{I_2})}{1} = \\dfrac{n(\\mathrm{S_2O_3^{2-}})}{2}$, donc $n(\\mathrm{I_2}) = \\dfrac{1{,}0\\times 10^{-4}}{2} = 5{,}0\\times 10^{-5}\\ \\mathrm{mol}$. Enfin $c_S = \\dfrac{n(\\mathrm{I_2})}{V_A} = \\dfrac{5{,}0\\times 10^{-5}}{10{,}0\\times 10^{-3}} = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "5. Les deux méthodes donnent la même valeur $c_S = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$ : les résultats se confirment. Avantage du dosage spectrophotométrique : il est **non destructif** (l'échantillon n'est pas consommé) et rapide une fois la droite d'étalonnage tracée. Avantage du titrage : il est **direct** (pas besoin d'étalonnage préalable ni de connaître $\\varepsilon$) et s'applique même à une espèce **incolore**."
+      ],
+      "reponse": "$\\varepsilon = 8{,}0\\times 10^{2}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$ ; par spectrophotométrie $c_S = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$ ; par titrage $c_S = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Les deux méthodes concordent."
     }
   ]
 }

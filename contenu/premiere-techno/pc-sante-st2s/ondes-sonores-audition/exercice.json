@@ -86,6 +86,59 @@
         "La prothèse $\\textbf{compense}$ la perte en montant le niveau des sons au-dessus du seuil restant ; elle ne $\\textbf{répare pas}$ les cellules ciliées détruites de la cochlée, qui ne se régénèrent pas. On corrige l'effet (sons trop faibles), pas la cause : c'est une compensation, pas une guérison."
       ],
       "reponse": "Sans prothèse : chuchotement ($30$ dB) non entendu, conversation ($60$ dB) entendue. La prothèse ($+30$ dB $\\Rightarrow$ intensité $\\times 1000$) ramène le chuchotement à $60$ dB, désormais audible. Elle compense la déficience sans réparer les cellules ciliées."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "frequence-hauteur",
+      "enonce": "Un diapason médical vibre à la fréquence $f = 250$ Hz. 1) Calculer sa période $T$ en seconde, puis en milliseconde. 2) Une seconde source vibre à $f' = 1$ kHz. Laquelle des deux produit le son le plus aigu ? Justifier. 3) Classer chacune des fréquences suivantes en infrason, son audible ou ultrason : $8$ Hz, $250$ Hz, $25$ kHz.",
+      "corrige": [
+        "Période : $T = \\dfrac{1}{f} = \\dfrac{1}{250} = 0{,}004$ s. Conversion : $0{,}004$ s $= 4$ ms (car $1$ s $= 1000$ ms).",
+        "La hauteur d'un son est fixée uniquement par sa fréquence : plus $f$ est grande, plus le son est aigu. Or $f' = 1$ kHz $= 1000$ Hz $> 250$ Hz : c'est donc la source à $1$ kHz qui produit le son le plus $\\textbf{aigu}$.",
+        "La plage audible va de $20$ Hz à $20$ kHz $= 20\\,000$ Hz. $8$ Hz $< 20$ Hz : $\\textbf{infrason}$. $250$ Hz est dans la plage : $\\textbf{audible}$. $25$ kHz $> 20$ kHz : $\\textbf{ultrason}$."
+      ],
+      "reponse": "$T = 0{,}004$ s $= 4$ ms. La source à $1$ kHz est la plus aiguë (fréquence plus élevée). $8$ Hz = infrason, $250$ Hz = audible, $25$ kHz = ultrason."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "comparaison-niveaux",
+      "enonce": "On rappelle $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$ avec $I_0 = 10^{-12}$ W·m⁻². Un aspirateur émet une intensité sonore $I_1 = 10^{-5}$ W·m⁻² ; un sèche-cheveux émet $I_2 = 10^{-4}$ W·m⁻². 1) Calculer les niveaux sonores $L_1$ et $L_2$. 2) De combien de décibels le sèche-cheveux est-il plus fort que l'aspirateur, et par quel facteur son intensité est-elle plus grande ? 3) Ces deux appareils dépassent-ils le seuil de danger de $85$ dB ?",
+      "corrige": [
+        "Aspirateur : $\\dfrac{I_1}{I_0} = \\dfrac{10^{-5}}{10^{-12}} = 10^{7}$, donc $L_1 = 10\\log(10^{7}) = 70$ dB.",
+        "Sèche-cheveux : $\\dfrac{I_2}{I_0} = \\dfrac{10^{-4}}{10^{-12}} = 10^{8}$, donc $L_2 = 10\\log(10^{8}) = 80$ dB.",
+        "Écart : $L_2 - L_1 = 80 - 70 = 10$ dB. Rapport des intensités : $\\dfrac{I_2}{I_1} = \\dfrac{10^{-4}}{10^{-5}} = 10$. On retrouve la règle : multiplier l'intensité par $10$ ajoute bien $+10$ dB.",
+        "Les deux niveaux ($70$ dB et $80$ dB) restent inférieurs au seuil de danger de $85$ dB : une exposition prolongée à ces appareils reste sans danger."
+      ],
+      "reponse": "$L_1 = 70$ dB, $L_2 = 80$ dB. Écart de $10$ dB pour une intensité $\\times 10$. Les deux restent sous le seuil de danger de $85$ dB."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "duree-exposition",
+      "enonce": "En santé au travail, le seuil de danger est de $85$ dB pour une exposition de $8$ h par jour, et chaque $+3$ dB (soit une intensité doublée) divise par deux la durée d'exposition tolérable. Un ouvrier travaille près d'une machine de niveau $L = 94$ dB. 1) Combien de fois faut-il ajouter $+3$ dB pour passer de $85$ dB à $94$ dB ? 2) En déduire la durée d'exposition « à risque » à $94$ dB. 3) L'ouvrier reste $4$ h par jour à ce poste : est-il en danger ? 4) On lui fournit des bouchons qui abaissent le niveau reçu de $10$ dB. Quel niveau perçoit-il alors, et son exposition de $4$ h redevient-elle sans danger ?",
+      "corrige": [
+        "De $85$ dB à $94$ dB, l'écart est de $94 - 85 = 9$ dB, soit $\\dfrac{9}{3} = 3$ paliers de $+3$ dB.",
+        "Chaque palier de $+3$ dB divise la durée par $2$. Partant de $8$ h : durée $= \\dfrac{8}{2^{3}} = \\dfrac{8}{8} = 1$ h. À $94$ dB, l'exposition sans risque tombe à $1$ h.",
+        "L'ouvrier reste $4$ h alors que la durée tolérable n'est que de $1$ h : $4$ h $> 1$ h, il est donc $\\textbf{en danger}$ pour son audition.",
+        "Avec les bouchons, le niveau reçu passe de $94$ dB à $94 - 10 = 84$ dB. Ce niveau ($84$ dB) est inférieur au seuil de danger de $85$ dB : l'exposition prolongée redevient sans danger, donc $4$ h à $84$ dB ne présente plus de risque."
+      ],
+      "reponse": "$3$ paliers de $+3$ dB ; à $94$ dB la durée sans risque est de $1$ h. À $4$ h, l'ouvrier est en danger. Avec les bouchons : $84$ dB $< 85$ dB, l'exposition redevient sans danger."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese-ondes-sonores-audition",
+      "enonce": "Hugo, élève de ST2S, prépare un exposé sur le bruit et l'audition. Données : $I_0 = 10^{-12}$ W·m⁻² ; une oreille jeune entend de $20$ Hz à $20$ kHz ; le seuil de danger est $85$ dB pour $8$ h, et chaque $+3$ dB (intensité doublée) divise par deux la durée d'exposition sans risque ; seuil de douleur $\\approx 120$ dB. On rappelle $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$, $I = I_0 \\times 10^{L/10}$ et $\\log 2 \\approx 0{,}30$.\n\n1. Un haut-parleur émet un son de fréquence $f = 1$ kHz. Calculer sa période $T$. Puis, pour les trois fréquences $5$ Hz, $1$ kHz et $25$ kHz, indiquer si une oreille jeune les perçoit et nommer leur domaine.\n2. Dans le hall d'une salle de spectacle, une sono délivre une intensité $I = 10^{-4}$ W·m⁻². Calculer le niveau sonore $L$ correspondant.\n3. On met en marche une seconde sono identique. Calculer le niveau sonore total. L'affirmation « $80 + 80 = 160$ dB » est-elle correcte ?\n4. Plus tard, le niveau dans le hall atteint $88$ dB. De combien dépasse-t-il le seuil de danger ? En déduire la durée d'exposition sans risque à $88$ dB. Hugo y reste $6$ h : que conclure ?\n5. Expliquer, en citant l'élément de l'oreille interne en cause, pourquoi une exposition répétée à un tel niveau peut provoquer une perte auditive définitive.\n6. Le grand-père de Hugo a un seuil d'audition monté à $50$ dB. Entend-il une conversation à $60$ dB ? un chuchotement à $30$ dB ? Sa prothèse ajoute $+30$ dB : par quel facteur multiplie-t-elle l'intensité, et à quel niveau lui parvient alors le chuchotement à $30$ dB ? Est-il redevenu audible pour lui ?",
+      "corrige": [
+        "1. Période : $T = \\dfrac{1}{f} = \\dfrac{1}{1000} = 10^{-3}$ s $= 1$ ms. Domaines (plage audible $20$ Hz–$20$ kHz) : $5$ Hz $< 20$ Hz $\\Rightarrow$ $\\textbf{infrason}$, non perçu ; $1$ kHz $= 1000$ Hz, dans la plage $\\Rightarrow$ $\\textbf{audible}$, perçu ; $25$ kHz $> 20$ kHz $\\Rightarrow$ $\\textbf{ultrason}$, non perçu.",
+        "2. $\\dfrac{I}{I_0} = \\dfrac{10^{-4}}{10^{-12}} = 10^{8}$, donc $L = 10\\log(10^{8}) = 10 \\times 8 = 80$ dB.",
+        "3. Les intensités s'additionnent : $I_{tot} = 2 \\times 10^{-4}$ W·m⁻². D'où $L_{tot} = 10\\log\\!\\left(\\dfrac{2 \\times 10^{-4}}{10^{-12}}\\right) = 10\\log(2 \\times 10^{8}) = 10\\,(\\log 2 + 8) = 10\\,(0{,}30 + 8) \\approx 83$ dB. L'affirmation « $80 + 80 = 160$ dB » est $\\textbf{fausse}$ : on additionne les intensités, et doubler l'intensité n'ajoute que $+3$ dB (on obtient $\\approx 83$ dB, non $160$ dB).",
+        "4. Dépassement du seuil : $88 - 85 = 3$ dB, soit un palier de $+3$ dB (une intensité doublée). La durée sans risque est donc divisée par $2$ : $\\dfrac{8}{2} = 4$ h. Hugo reste $6$ h $> 4$ h : il dépasse la durée tolérable, son audition est $\\textbf{en danger}$.",
+        "5. Dans l'oreille interne, ce sont les $\\textbf{cellules ciliées}$ de la cochlée qui convertissent la vibration en message nerveux. Fragiles et $\\textbf{non régénérées}$, elles sont détruites définitivement par un bruit trop fort ou trop prolongé : leur destruction entraîne une perte auditive irréversible.",
+        "6. Sans prothèse, il n'entend que les sons dépassant son seuil de $50$ dB : la conversation ($60$ dB $> 50$ dB) est $\\textbf{entendue}$, le chuchotement ($30$ dB $< 50$ dB) $\\textbf{non entendu}$. La prothèse ajoute $+30$ dB, ce qui multiplie l'intensité par $10^{30/10} = 10^{3} = 1000$. Le chuchotement lui parvient alors à $30 + 30 = 60$ dB $> 50$ dB : il redevient $\\textbf{audible}$."
+      ],
+      "reponse": "1. $T = 1$ ms ; $5$ Hz infrason, $1$ kHz audible, $25$ kHz ultrason. 2. $L = 80$ dB. 3. $L_{tot} \\approx 83$ dB ; « $160$ dB » est faux (on additionne les intensités, $\\times 2 \\Rightarrow +3$ dB). 4. Dépassement de $3$ dB $\\Rightarrow$ durée sans risque $4$ h ; à $6$ h, en danger. 5. Cellules ciliées de la cochlée, fragiles et non régénérées $\\Rightarrow$ perte définitive. 6. Conversation entendue, chuchotement non ; prothèse $+30$ dB $\\Rightarrow$ intensité $\\times 1000$, chuchotement porté à $60$ dB, redevenu audible."
     }
   ]
 }

@@ -93,6 +93,59 @@
         "La lumière verte traverse donc le filtre : la pomme reste vue **verte**."
       ],
       "reponse": "(a) noire (la lumière magenta ne contient pas de vert à diffuser) ; (b) verte (le filtre jaune laisse passer le vert diffusé par la pomme)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "codage-rvb",
+      "enonce": "Un logiciel affiche la couleur d'un pixel sous son code hexadécimal **`#3CB0FF`** (forme `#RRVVBB`). Donne le triplet RVB en décimal $(R,\\ V,\\ B)$, chaque canal étant un entier de $0$ à $255$.",
+      "corrige": [
+        "On relit deux chiffres hexadécimaux par canal et on convertit chacun en décimal avec la règle : chiffre de gauche $\\times 16 +$ chiffre de droite (où $\\mathrm{A}=10, \\dots, \\mathrm{F}=15$).",
+        "Rouge : $\\mathrm{3C} = 3\\times 16 + 12 = 48 + 12 = 60$.",
+        "Vert : $\\mathrm{B0} = 11\\times 16 + 0 = 176$ (car $\\mathrm{B}=11$).",
+        "Bleu : $\\mathrm{FF} = 15\\times 16 + 15 = 255$.",
+        "On assemble dans l'ordre R, V, B."
+      ],
+      "reponse": "$\\texttt{\\#3CB0FF} \\rightarrow (60,\\ 176,\\ 255)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "spectre-longueur-onde",
+      "enonce": "Une diode électroluminescente (DEL) émet une lumière de longueur d'onde $\\lambda = 470\\ \\mathrm{nm}$. \\n(a) Exprime cette longueur d'onde en mètres, en écriture scientifique (rappel : $1\\ \\mathrm{nm} = 10^{-9}\\ \\mathrm{m}$). \\n(b) Cette radiation appartient-elle au domaine visible ($\\approx 400$ à $800\\ \\mathrm{nm}$) ? À quelle couleur correspond-elle approximativement ?",
+      "corrige": [
+        "(a) On convertit les nanomètres en mètres : $\\lambda = 470\\ \\mathrm{nm} = 470 \\times 10^{-9}\\ \\mathrm{m}$.",
+        "En écriture scientifique : $470 \\times 10^{-9} = 4{,}70 \\times 10^{-7}\\ \\mathrm{m}$.",
+        "(b) La valeur $470\\ \\mathrm{nm}$ est bien comprise entre $400$ et $800\\ \\mathrm{nm}$ : la radiation est **visible**.",
+        "Une longueur d'onde proche de $470\\ \\mathrm{nm}$ se situe vers le début du spectre (côté violet ≈ 400 nm) : elle correspond à une lumière **bleue**."
+      ],
+      "reponse": "(a) $\\lambda = 4{,}70 \\times 10^{-7}\\ \\mathrm{m}$. (b) Oui, elle est visible ($400$–$800\\ \\mathrm{nm}$) et apparaît **bleue**."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "synthese-additive-couleur-objet",
+      "enonce": "Sur une scène de théâtre, on superpose un projecteur **rouge** et un projecteur **vert** dirigés vers le même endroit. Cette lumière éclaire deux costumes posés côte à côte : l'un est **jaune**, l'autre est **bleu**. \\n(a) De quelle couleur est la lumière produite par les deux projecteurs ? \\n(b) De quelle couleur apparaît le costume jaune ? \\n(c) De quelle couleur apparaît le costume bleu ? Justifie chaque réponse.",
+      "corrige": [
+        "(a) Superposer deux lumières relève de la synthèse **additive** : Rouge + Vert donne du **jaune**. La scène est donc baignée d'une lumière jaune (= Rouge + Vert, sans bleu).",
+        "(b) Un costume **jaune** diffuse le rouge et le vert et absorbe le bleu. La lumière incidente (Rouge + Vert) ne contient que des couleurs qu'il diffuse : il renvoie tout, il apparaît **jaune**.",
+        "(c) Un costume **bleu** diffuse le bleu et absorbe le rouge et le vert. Or la lumière incidente (Rouge + Vert) ne contient **aucun bleu** : le costume n'a rien à diffuser et absorbe le reste. Il apparaît **noir**."
+      ],
+      "reponse": "(a) jaune (Rouge + Vert, additive) ; (b) jaune ; (c) noir (pas de bleu dans la lumière à diffuser)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese-additive-soustractive-codage-couleur-objet",
+      "enonce": "**Un logo pour l'écran et pour l'affiche.** Léa conçoit un logo représentant un **soleil jaune** sur un **fond cyan**. Elle veut d'abord l'afficher sur un site web (écran), puis l'imprimer sur une affiche. On rappelle qu'un écran mélange des lumières et qu'une imprimante superpose des encres sur du papier blanc. \\n\\n1. Sur l'**écran**, chaque pixel est fait de trois sous-pixels Rouge, Vert et Bleu. Quels sous-pixels faut-il allumer pour obtenir le **jaune** du soleil ? pour obtenir le **cyan** du fond ? De quel type de synthèse s'agit-il ? \\n2. Dans le fichier, le jaune vif est codé $(255,\\ 255,\\ 0)$ et le cyan $(0,\\ 255,\\ 255)$. Donne le code **hexadécimal** `#RRVVBB` de chacune de ces deux couleurs. \\n3. Chaque canal est codé sur un octet ($8$ bits). Combien de niveaux différents cela fait-il par canal, et combien de couleurs différentes au total ? \\n4. Pour l'**affiche** imprimée, quelle(s) encre(s) parmi Cyan, Magenta, Jaune faut-il pour obtenir le soleil jaune ? le fond cyan ? De quel type de synthèse s'agit-il cette fois ? \\n5. On éclaire l'affiche terminée avec une lampe qui n'émet que de la lumière **bleue**. De quelle couleur apparaissent alors le soleil (jaune sur l'affiche) et le fond (cyan) ?",
+      "corrige": [
+        "1. Un écran superpose des lumières : c'est de la synthèse **additive** (primaires R, V, B ; on part du noir). Le **jaune** s'obtient par Rouge + Vert (sous-pixels R et V allumés, B éteint). Le **cyan** s'obtient par Vert + Bleu (sous-pixels V et B allumés, R éteint).",
+        "2. On convertit chaque canal en hexadécimal ($255 = 15\\times16+15 = \\mathrm{FF}$ ; $0 = \\mathrm{00}$). Jaune $(255,255,0) \\rightarrow$ `#FFFF00`. Cyan $(0,255,255) \\rightarrow$ `#00FFFF`.",
+        "3. Un octet vaut $8$ bits, soit $2^8 = 256$ niveaux par canal (les entiers de $0$ à $255$). Les trois canaux étant indépendants, le nombre total de couleurs est $256 \\times 256 \\times 256 = 256^3 = 16\\,777\\,216 \\approx 16{,}7$ millions.",
+        "4. Une imprimante retire des couleurs à la lumière blanche du papier : c'est de la synthèse **soustractive** (primaires C, M, J ; on part du blanc). Le **jaune** s'obtient directement avec l'encre **Jaune** (elle absorbe le bleu, laisse Rouge + Vert). Le **cyan** s'obtient avec l'encre **Cyan** (elle absorbe le rouge, laisse Vert + Bleu). Chaque couleur du logo est ici une primaire soustractive : une seule encre suffit.",
+        "5. Couleur perçue = lumière incidente − lumière absorbée ; la lampe n'émet que du **bleu**. Le soleil **jaune** diffuse Rouge + Vert et absorbe le bleu : il n'a aucun bleu à renvoyer et absorbe le seul bleu reçu → il apparaît **noir**. Le fond **cyan** diffuse Vert + Bleu et absorbe le rouge : il diffuse le bleu qu'il reçoit → il apparaît **bleu**."
+      ],
+      "reponse": "1. Additive : jaune = R+V, cyan = V+B. 2. `#FFFF00` (jaune) et `#00FFFF` (cyan). 3. $256$ niveaux par canal, $256^3 = 16\\,777\\,216 \\approx 16{,}7$ millions de couleurs. 4. Soustractive : encre Jaune pour le soleil, encre Cyan pour le fond. 5. Sous lumière bleue, le soleil apparaît **noir** et le fond **bleu**."
     }
   ]
 }

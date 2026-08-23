@@ -85,6 +85,59 @@
         "Le débit étant $D = 8\\ \\text{Mbit/s}$, la durée est $\\Delta t = \\dfrac{Q}{D} = \\dfrac{28{,}8}{8} = 3{,}6\\ \\text{s}$."
       ],
       "reponse": "**a.** $72\\ \\text{Mo}$. **b.** $3{,}6\\ \\text{Mo}$. **c.** $\\Delta t = 3{,}6\\ \\text{s}$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "codage-rvb",
+      "enonce": "Sur un écran, chaque pixel est codé en RVB : les trois canaux (rouge, vert, bleu) occupent chacun $1$ octet.\n\n**a.** Donne la profondeur de couleur d'un pixel, en octets puis en bits.\n\n**b.** Combien de couleurs différentes peut-on afficher ?\n\n**c.** La même image est convertie en niveaux de gris ($1$ octet par pixel). Combien de nuances de gris sont alors possibles ?",
+      "corrige": [
+        "**a.** Chaque canal pèse $1$ octet et il y a $3$ canaux : la profondeur de couleur vaut $3$ octets. Comme $1$ octet $= 8$ bits, cela fait $3 \\times 8 = 24$ bits par pixel.",
+        "**b.** Chaque canal code $2^8 = 256$ niveaux. Le nombre de couleurs est $256^3 = 2^{24} = 16\\,777\\,216 \\approx 16{,}7$ millions de couleurs.",
+        "**c.** En niveaux de gris, un pixel est codé sur $1$ octet $= 8$ bits, soit $2^8 = 256$ nuances (du noir $0$ au blanc $255$)."
+      ],
+      "reponse": "**a.** $3$ octets $= 24$ bits. **b.** $2^{24} \\approx 16{,}7$ millions de couleurs. **c.** $256$ nuances de gris."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "resolution",
+      "enonce": "Une image a une largeur de $3000$ pixels. On rappelle que $1\\ \\text{pouce} = 2{,}54\\ \\text{cm}$.\n\n**a.** On l'imprime avec une résolution de $300$ ppp (points par pouce). Quelle est la largeur d'impression, en cm ?\n\n**b.** On décide finalement de l'imprimer sur une affiche de $50\\ \\text{cm}$ de large. Quelle est alors la résolution, en px/cm ?",
+      "corrige": [
+        "**a.** La résolution est un nombre de pixels par unité de longueur : $\\text{largeur} = \\dfrac{\\text{nombre de pixels}}{\\text{résolution}} = \\dfrac{3000}{300} = 10\\ \\text{pouces}$.",
+        "En centimètres : $10 \\times 2{,}54 = 25{,}4\\ \\text{cm}$.",
+        "**b.** Sur $50\\ \\text{cm}$ de large : $\\text{résolution} = \\dfrac{3000\\ \\text{px}}{50\\ \\text{cm}} = 60\\ \\text{px/cm}$.",
+        "Plus la taille d'impression augmente, plus la résolution (la densité de pixels) diminue : l'image apparaît plus grossière sur l'affiche."
+      ],
+      "reponse": "**a.** Largeur $= 25{,}4\\ \\text{cm}$. **b.** Résolution $= 60\\ \\text{px/cm}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "profondeur-de-champ",
+      "enonce": "Un photographe réalise un portrait : il veut un **arrière-plan flou** tout en **figeant** un léger mouvement du modèle. La photo est d'abord correctement exposée à $f/8$, temps de pose $t = \\dfrac{1}{125}\\ \\text{s}$, à ISO constant.\n\n**a.** Quel type de profondeur de champ recherche-t-il, et faut-il un grand ou un petit nombre d'ouverture ?\n\n**b.** Il ouvre le diaphragme de $f/8$ à $f/2$. Par combien la quantité de lumière reçue est-elle multipliée ?\n\n**c.** Pour conserver la même exposition sans changer l'ISO, comment doit-il régler le temps de pose ? Ce choix est-il compatible avec l'objectif de figer le mouvement ?",
+      "corrige": [
+        "**a.** Un arrière-plan flou correspond à une **faible** profondeur de champ. Elle s'obtient avec une grande ouverture, donc un **petit** nombre d'ouverture (par exemple $f/2$).",
+        "**b.** La lumière varie en $1/N^2$. Passer de $N = 8$ à $N = 2$ divise $N$ par $4$, donc multiplie $1/N^2$ par $4^2 = 16$ : la lumière est **multipliée par 16**.",
+        "**c.** Pour garder la même exposition, il faut compenser en divisant la lumière par $16$, donc en divisant le temps de pose par $16$ : $t = \\dfrac{1}{125}\\ \\text{s} \\div 16 = \\dfrac{1}{2000}\\ \\text{s}$.",
+        "Ce temps de pose plus court fige mieux le mouvement : le choix est parfaitement compatible avec l'objectif (l'ouverture apporte le flou d'arrière-plan et raccourcit le temps de pose, ce qui fige le sujet)."
+      ],
+      "reponse": "**a.** Faible profondeur de champ, petit $N$ ($f/2$). **b.** Lumière $\\times 16$. **c.** Temps de pose divisé par $16$ : $t = \\dfrac{1}{2000}\\ \\text{s}$, compatible (temps plus court = mouvement figé)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Un smartphone photographe.**\n\nUn smartphone est équipé d'un objectif portant l'inscription « $5{,}4\\ \\text{mm}\\ 1{:}1{,}8$ » et d'un capteur CMOS de dimensions $7{,}6\\ \\text{mm} \\times 5{,}7\\ \\text{mm}$ (format $4{:}3$), de définition $12$ mégapixels. Sauf indication contraire, on prend $1\\ \\text{octet} = 8\\ \\text{bits}$, $1\\ \\text{Mo} = 10^6\\ \\text{o}$ et $1\\ \\text{Mbit} = 10^6\\ \\text{bits}$.\n\n**1.** Décode l'inscription de l'objectif : donne la distance focale $f'$ et le nombre d'ouverture maximal $N$. En déduis le diamètre $D$ du diaphragme à pleine ouverture.\n\n**2.** Le format $4{:}3$ signifie $\\dfrac{L}{H} = \\dfrac{4}{3}$. Détermine le nombre de pixels en largeur $L$ et en hauteur $H$, puis la taille (le côté) d'un pixel du capteur.\n\n**3.** Chaque pixel est codé en RVB, un octet par canal. Donne la profondeur de couleur d'un pixel (en octets et en bits) et le nombre de couleurs affichables.\n\n**4.** Calcule le poids brut (non compressé) d'une photo de ce capteur, en Mo.\n\n**5.** La photo est enregistrée en JPEG avec un taux de compression de $15$. Quel est le poids du fichier JPEG ?\n\n**6.** Ce fichier JPEG est envoyé par une connexion de débit binaire $12\\ \\text{Mbit/s}$. Combien de temps dure le transfert ?",
+      "corrige": [
+        "**1.** L'inscription « $5{,}4\\ \\text{mm}\\ 1{:}1{,}8$ » donne la distance focale $f' = 5{,}4\\ \\text{mm}$ et le nombre d'ouverture maximal $N = 1{,}8$. Le diamètre à pleine ouverture est $D = \\dfrac{f'}{N} = \\dfrac{5{,}4}{1{,}8} = 3{,}0\\ \\text{mm}$.",
+        "**2.** On a $L \\times H = 12\\times 10^6$ et $L = \\dfrac{4}{3}H$. Donc $\\dfrac{4}{3}H^2 = 12\\times 10^6$, soit $H^2 = 9\\times 10^6$, d'où $H = 3000\\ \\text{px}$ et $L = \\dfrac{4}{3}\\times 3000 = 4000\\ \\text{px}$. Taille d'un pixel : $\\dfrac{7{,}6\\ \\text{mm}}{4000} = 1{,}9\\times 10^{-3}\\ \\text{mm} = 1{,}9\\ \\mu\\text{m}$ (vérification sur la hauteur : $\\dfrac{5{,}7}{3000} = 1{,}9\\ \\mu\\text{m}$ : pixels carrés).",
+        "**3.** RVB avec $1$ octet par canal et $3$ canaux : profondeur de couleur $= 3$ octets $= 24$ bits par pixel. Nombre de couleurs : $256^3 = 2^{24} \\approx 16{,}7$ millions.",
+        "**4.** Poids brut $=$ définition $\\times$ profondeur de couleur $= 12\\times 10^6\\ \\text{px} \\times 3\\ \\text{o/px} = 36\\times 10^6\\ \\text{o} = 36\\ \\text{Mo}$.",
+        "**5.** Le taux de compression vaut $\\dfrac{\\text{poids brut}}{\\text{poids compressé}} = 15$, donc le fichier JPEG pèse $\\dfrac{36}{15} = 2{,}4\\ \\text{Mo}$.",
+        "**6.** On convertit le poids en bits : $Q = 2{,}4\\times 10^6\\ \\text{o} \\times 8 = 19{,}2\\times 10^6\\ \\text{bits} = 19{,}2\\ \\text{Mbit}$. Avec $D = 12\\ \\text{Mbit/s}$ : $\\Delta t = \\dfrac{Q}{D} = \\dfrac{19{,}2}{12} = 1{,}6\\ \\text{s}$."
+      ],
+      "reponse": "**1.** $f' = 5{,}4\\ \\text{mm}$, $N = 1{,}8$, $D = 3{,}0\\ \\text{mm}$. **2.** $L = 4000\\ \\text{px}$, $H = 3000\\ \\text{px}$, pixel $= 1{,}9\\ \\mu\\text{m}$. **3.** $3$ octets $= 24$ bits, $\\approx 16{,}7$ M couleurs. **4.** $36\\ \\text{Mo}$. **5.** $2{,}4\\ \\text{Mo}$. **6.** $\\Delta t = 1{,}6\\ \\text{s}$."
     }
   ]
 }

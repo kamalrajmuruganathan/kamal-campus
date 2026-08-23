@@ -81,6 +81,57 @@
         "À $55$ °C, la tension est $U = 0{,}020 \\times 55 = 1{,}10$ V $< U_B$ : le chauffage est en marche. La température monte jusqu'à $60$ °C ($U = U_H = 1{,}20$ V) : le chauffage s'arrête. Le bain refroidit ; le chauffage ne redémarre qu'une fois redescendu à $58$ °C ($U = U_B = 1{,}16$ V). La température oscille ensuite entre $58$ et $60$ °C. L'intérêt des deux seuils (hystérésis) est d'éviter le claquetage : avec un seuil unique, la moindre oscillation autour de $60$ °C ferait basculer le chauffage marche/arrêt sans cesse, l'usant prématurément."
       ],
       "reponse": "1) $U_H = 1{,}20$ V, $U_B = 1{,}16$ V. 2) Hystérésis $= 2$ °C, soit $40$ mV. 3) Le chauffage marche jusqu'à $60$ °C, s'arrête, redémarre à $58$ °C ; la température oscille entre $58$ et $60$ °C. Les deux seuils évitent le claquetage."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "quantum",
+      "enonce": "Une carte d'acquisition utilise un CAN de $12$ bits, de calibre $3{,}30$ V. 1) Combien de niveaux distincts ce CAN peut-il coder ? 2) Calculer son quantum $q$, en volts puis en millivolts. 3) Un capteur lui envoie une tension $U_e = 2{,}00$ V : déterminer la valeur numérique $N$ délivrée par le CAN.",
+      "corrige": [
+        "Un CAN à $n$ bits code $2^n$ niveaux : $2^{12} = 4096$ niveaux distincts.",
+        "Le quantum est le pas de conversion : $q = \\dfrac{\\text{calibre}}{2^n} = \\dfrac{3{,}30}{4096} \\approx 8{,}06 \\times 10^{-4}$ V, soit $q \\approx 0{,}806$ mV.",
+        "Valeur numérique : $N = \\text{partie entière de } \\dfrac{U_e}{q} = \\dfrac{2{,}00}{8{,}06 \\times 10^{-4}} \\approx 2482{,}4$, donc $N = 2482$. (Vérification : $2482 \\times 8{,}06 \\times 10^{-4} \\approx 2{,}00$ V, on retrouve la tension à un quantum près.)"
+      ],
+      "reponse": "$4096$ niveaux ; $q = \\dfrac{3{,}30}{4096} \\approx 0{,}806$ mV ; $N = 2482$ pour $U_e = 2{,}00$ V."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "chaine-de-mesure",
+      "enonce": "Un capteur d'humidité linéaire a pour caractéristique $U = 0{,}030\\,H + 0{,}20$ (avec $U$ en volts et $H$ l'humidité relative en %). Sa tension entre dans un CAN de $10$ bits, de calibre $5{,}00$ V. Pour une humidité $H = 60$ % : 1) Calculer la tension $U$ délivrée par le capteur. 2) Calculer le quantum $q$ du CAN. 3) En déduire la valeur numérique $N$ délivrée en sortie de chaîne.",
+      "corrige": [
+        "Tension du capteur : $U = 0{,}030 \\times 60 + 0{,}20 = 1{,}80 + 0{,}20 = 2{,}00$ V.",
+        "Quantum du CAN : $q = \\dfrac{\\text{calibre}}{2^n} = \\dfrac{5{,}00}{2^{10}} = \\dfrac{5{,}00}{1024} \\approx 0{,}004883$ V (soit $\\approx 4{,}88$ mV).",
+        "Valeur numérique : $N = \\text{partie entière de } \\dfrac{U}{q} = \\dfrac{2{,}00}{0{,}004883} \\approx 409{,}6$, donc $N = 409$. La chaîne capteur → CAN transforme donc $60$ % d'humidité en le nombre $409$."
+      ],
+      "reponse": "$U = 2{,}00$ V ; $q \\approx 4{,}88$ mV ; $N = 409$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "resolution-can",
+      "enonce": "Un capteur de température linéaire convertit la plage $0$–$200$ °C en une tension de $0$ à $2{,}00$ V. Cette tension est numérisée par un CAN de calibre $2{,}00$ V. On souhaite pouvoir distinguer des variations de température de $0{,}1$ °C. 1) Déterminer la sensibilité $S$ du capteur, puis la variation de tension $\\Delta U$ qui correspond à $0{,}1$ °C. 2) Quel doit être, au maximum, le quantum du CAN ? En déduire le nombre de bits minimal. 3) Vérifier que $10$ bits ne suffisent pas, mais que la solution choisie convient.",
+      "corrige": [
+        "Sensibilité : $S = \\dfrac{\\Delta U}{\\Delta \\theta} = \\dfrac{2{,}00 - 0}{200 - 0} = 0{,}010$ V·°C⁻¹ (soit $10$ mV·°C⁻¹). Une variation de $0{,}1$ °C donne $\\Delta U = S \\times 0{,}1 = 0{,}010 \\times 0{,}1 = 0{,}001$ V $= 1$ mV.",
+        "Pour distinguer cette variation, le quantum doit être au plus égal à $\\Delta U$ : $q \\le 1$ mV $= 0{,}001$ V. Or $q = \\dfrac{2{,}00}{2^n}$, donc il faut $\\dfrac{2{,}00}{2^n} \\le 0{,}001$, c'est-à-dire $2^n \\ge \\dfrac{2{,}00}{0{,}001} = 2000$. Comme $2^{10} = 1024$ et $2^{11} = 2048$, le plus petit entier convenant est $n = 11$ bits.",
+        "Avec $10$ bits : $q = \\dfrac{2{,}00}{1024} \\approx 0{,}00195$ V $\\approx 1{,}95$ mV $> 1$ mV : insuffisant, une variation de $0{,}1$ °C passerait inaperçue. Avec $11$ bits : $q = \\dfrac{2{,}00}{2048} \\approx 0{,}000977$ V $\\approx 0{,}98$ mV $< 1$ mV : la variation de $0{,}1$ °C est bien détectée. Il faut donc un CAN d'au moins $11$ bits."
+      ],
+      "reponse": "1) $S = 0{,}010$ V·°C⁻¹, $\\Delta U = 1$ mV. 2) $q \\le 1$ mV $\\Rightarrow 2^n \\ge 2000 \\Rightarrow n = 11$ bits. 3) $10$ bits ($q \\approx 1{,}95$ mV) insuffisant ; $11$ bits ($q \\approx 0{,}98$ mV) convient."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "chaine-de-mesure",
+      "enonce": "Une serre horticole est surveillée par une chaîne de mesure numérique. Le capteur de température est linéaire : il délivre $U = 0{,}40$ V pour $\\theta = 0$ °C et $U = 2{,}40$ V pour $\\theta = 50$ °C. Sa tension est numérisée par un CAN de $10$ bits, de calibre $5{,}00$ V, puis affichée par un ordinateur. Un dispositif « tout ou rien » commande en outre la ventilation. 1. Donner l'étendue de mesure du capteur et calculer sa sensibilité $S$. 2. Écrire la caractéristique de transfert sous la forme $U = S\\,\\theta + U_0$ (déterminer $U_0$). 3. La serre est à $\\theta = 25$ °C : calculer la tension délivrée par le capteur. 4. Calculer le quantum $q$ du CAN, puis la valeur numérique $N$ affichée à $25$ °C. 5. À quelle variation de température correspond un quantum ? (résolution de la chaîne, en °C). 6. La ventilation est commandée par un comparateur à hystérésis : elle démarre au seuil haut $\\theta_H = 30$ °C et s'arrête au seuil bas $\\theta_B = 28$ °C. Calculer les tensions de seuil $U_H$ et $U_B$, la largeur d'hystérésis (en °C et en V), et décrire le fonctionnement lorsque la serre, partant de $25$ °C, se réchauffe.",
+      "corrige": [
+        "1. Le capteur mesure de $0$ °C à $50$ °C : son étendue de mesure est $\\text{EM} = 50 - 0 = 50$ °C. La sensibilité est la pente de la caractéristique : $S = \\dfrac{\\Delta U}{\\Delta \\theta} = \\dfrac{2{,}40 - 0{,}40}{50 - 0} = \\dfrac{2{,}00}{50} = 0{,}040$ V·°C⁻¹ (soit $40$ mV·°C⁻¹).",
+        "2. La caractéristique est $U = S\\,\\theta + U_0$. À $\\theta = 0$ °C, $U = 0{,}40$ V, donc $U_0 = 0{,}40$ V. La caractéristique s'écrit $U = 0{,}040\\,\\theta + 0{,}40$. (Vérification à $50$ °C : $0{,}040 \\times 50 + 0{,}40 = 2{,}40$ V ✓.)",
+        "3. À $\\theta = 25$ °C : $U = 0{,}040 \\times 25 + 0{,}40 = 1{,}00 + 0{,}40 = 1{,}40$ V.",
+        "4. Quantum : $q = \\dfrac{\\text{calibre}}{2^n} = \\dfrac{5{,}00}{2^{10}} = \\dfrac{5{,}00}{1024} \\approx 0{,}004883$ V ($\\approx 4{,}88$ mV). Valeur numérique à $25$ °C : $N = \\text{partie entière de } \\dfrac{1{,}40}{0{,}004883} \\approx 286{,}7$, donc $N = 286$.",
+        "5. Un quantum correspond à une variation de tension $q$, donc à une variation de température $\\Delta \\theta = \\dfrac{q}{S} = \\dfrac{0{,}004883}{0{,}040} \\approx 0{,}12$ °C. La chaîne ne peut donc pas distinguer deux températures séparées de moins de $0{,}12$ °C environ : c'est sa résolution.",
+        "6. Tensions de seuil : $U_H = 0{,}040 \\times 30 + 0{,}40 = 1{,}60$ V et $U_B = 0{,}040 \\times 28 + 0{,}40 = 1{,}52$ V. Largeur d'hystérésis : en température $\\theta_H - \\theta_B = 30 - 28 = 2$ °C ; en tension $U_H - U_B = 1{,}60 - 1{,}52 = 0{,}08$ V $= 80$ mV. Fonctionnement : à $25$ °C, $U = 1{,}40$ V $< U_B$, la ventilation est à l'arrêt. La serre se réchauffe ; dès que $\\theta$ atteint $30$ °C ($U = U_H = 1{,}60$ V), la ventilation démarre. Elle reste en marche et ne s'arrête que lorsque la température est redescendue à $28$ °C ($U = U_B = 1{,}52$ V). Entre $28$ et $30$ °C, l'état ne change pas : les deux seuils (hystérésis) évitent que la ventilation ne claquette marche/arrêt autour d'un seuil unique."
+      ],
+      "reponse": "1. $\\text{EM} = 50$ °C, $S = 0{,}040$ V·°C⁻¹. 2. $U = 0{,}040\\,\\theta + 0{,}40$ ($U_0 = 0{,}40$ V). 3. $U = 1{,}40$ V à $25$ °C. 4. $q \\approx 4{,}88$ mV, $N = 286$. 5. Résolution $\\approx 0{,}12$ °C par quantum. 6. $U_H = 1{,}60$ V, $U_B = 1{,}52$ V, hystérésis $= 2$ °C $= 80$ mV ; ventilation ON à $30$ °C, OFF à $28$ °C, pas de claquetage."
     }
   ]
 }

@@ -86,6 +86,59 @@
         "La fatigue allonge l'arrêt de $95 - 70 = 25$ m (l'équivalent d'environ cinq voitures). Seule la distance de **réaction** change, car elle dépend du temps de réaction $t_r$ ($d_r = v\\,t_r$) ; la distance de freinage, elle, ne dépend que de la vitesse et de la route, pas du conducteur."
       ],
       "reponse": "$v = 25$ m·s⁻¹ ; $d_a = 70$ m (attentif) contre $95$ m (fatigué) : $+25$ m, dus à la seule distance de réaction $d_r = v\\,t_r$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Une télécommande envoie un rayonnement infrarouge de longueur d'onde $\\lambda = 0{,}95$ µm. Les ondes électromagnétiques se propagent dans le vide à $c = 3{,}0 \\times 10^{8}$ m·s⁻¹. 1) Convertir $\\lambda$ en mètres. 2) Calculer la fréquence $f$ de ce rayonnement à l'aide de la relation $\\lambda = \\dfrac{c}{f}$.",
+      "corrige": [
+        "Conversion : $\\lambda = 0{,}95$ µm $= 0{,}95 \\times 10^{-6}$ m $= 9{,}5 \\times 10^{-7}$ m.",
+        "On isole la fréquence dans $\\lambda = \\dfrac{c}{f}$, ce qui donne $f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}0 \\times 10^{8}}{9{,}5 \\times 10^{-7}}$.",
+        "$f = 3{,}2 \\times 10^{14}$ Hz. C'est une fréquence élevée, cohérente avec l'infrarouge, juste en dessous du visible."
+      ],
+      "reponse": "$\\lambda = 9{,}5 \\times 10^{-7}$ m et $f = \\dfrac{c}{\\lambda} = 3{,}2 \\times 10^{14}$ Hz."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "distances-arret",
+      "enonce": "Une voiture de masse $m = 1\\,200$ kg roule à $108$ km/h. Lors d'un freinage d'urgence, les freins exercent une force constante $F = 9\\,000$ N. 1) Convertir la vitesse en m·s⁻¹. 2) Calculer l'énergie cinétique $E_c = \\frac{1}{2}mv^{2}$. 3) Sachant que le freinage doit dissiper toute cette énergie ($F \\times d_f = E_c$), en déduire la distance de freinage $d_f$.",
+      "corrige": [
+        "Conversion : $v = \\dfrac{108}{3{,}6} = 30$ m·s⁻¹.",
+        "Énergie cinétique : $E_c = \\dfrac{1}{2} \\times 1\\,200 \\times 30^{2} = \\dfrac{1}{2} \\times 1\\,200 \\times 900 = 5{,}4 \\times 10^{5}$ J.",
+        "La force de freinage dissipe cette énergie sur la distance $d_f$ : $d_f = \\dfrac{E_c}{F} = \\dfrac{5{,}4 \\times 10^{5}}{9\\,000} = 60$ m.",
+        "Il faut donc $60$ m rien que pour le freinage, sans compter la distance de réaction : à $108$ km/h, la moindre erreur d'anticipation est lourde de conséquences."
+      ],
+      "reponse": "$v = 30$ m·s⁻¹, $E_c = 5{,}4 \\times 10^{5}$ J et $d_f = \\dfrac{E_c}{F} = 60$ m."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "influence-vitesse",
+      "enonce": "Des essais montrent qu'à $v_1 = 45$ km/h, une voiture a une distance de freinage $d_f = 10$ m ; le temps de réaction du conducteur est $t_r = 1{,}0$ s. On étudie maintenant la même voiture à $v_2 = 90$ km/h. 1) Convertir les deux vitesses en m·s⁻¹. 2) Sans recalculer de force, déterminer la nouvelle distance de freinage en exploitant la proportionnalité $d_f \\propto v^{2}$. 3) Calculer la distance de réaction dans chaque cas. 4) En déduire les deux distances d'arrêt et le facteur par lequel l'arrêt est multiplié quand la vitesse double.",
+      "corrige": [
+        "Conversions : $v_1 = \\dfrac{45}{3{,}6} = 12{,}5$ m·s⁻¹ et $v_2 = \\dfrac{90}{3{,}6} = 25$ m·s⁻¹. La vitesse est exactement doublée ($v_2 = 2\\,v_1$).",
+        "La distance de freinage est proportionnelle à $v^{2}$ : quand $v$ double, $d_f$ est multipliée par $2^{2} = 4$. Donc $d_f(v_2) = 4 \\times 10 = 40$ m.",
+        "Distances de réaction (proportionnelles à $v$) : $d_r(v_1) = 12{,}5 \\times 1{,}0 = 12{,}5$ m et $d_r(v_2) = 25 \\times 1{,}0 = 25$ m.",
+        "Distances d'arrêt : $d_a(v_1) = 12{,}5 + 10 = 22{,}5$ m et $d_a(v_2) = 25 + 40 = 65$ m.",
+        "Facteur global : $\\dfrac{d_a(v_2)}{d_a(v_1)} = \\dfrac{65}{22{,}5} \\approx 2{,}9$. En doublant la vitesse, la distance d'arrêt est presque **triplée**, car la partie freinage (en $v^{2}$) prend un poids croissant."
+      ],
+      "reponse": "$v_1 = 12{,}5$ m·s⁻¹, $v_2 = 25$ m·s⁻¹ ; $d_f$ passe de $10$ à $40$ m ($\\times 4$), $d_a$ de $22{,}5$ à $65$ m, soit un facteur $\\approx 2{,}9$ (presque triplée)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Vision nocturne et freinage d'urgence.** Une voiture récente est équipée d'une **caméra thermique** de vision nocturne, capable de détecter le rayonnement infrarouge émis par un piéton. La nuit, sur une route de campagne, la voiture roule à $90$ km/h. Sa masse est $m = 1\\,440$ kg. Un piéton, à la température $\\theta = 37$ °C, s'engage sur la chaussée ; la caméra le repère à une distance $D = 100$ m. Le conducteur, alerté, a un temps de réaction $t_r = 1{,}0$ s, et les freins exercent alors une force $F = 9\\,000$ N. Données : constante de Wien $= 2{,}9 \\times 10^{-3}$ m·K ; $c = 3{,}0 \\times 10^{8}$ m·s⁻¹. \\n\\n1. Déterminer la longueur d'onde $\\lambda_{max}$ du maximum d'émission du piéton et vérifier que la caméra travaille bien dans l'infrarouge. \\n2. Calculer la fréquence $f$ correspondant à cette longueur d'onde. \\n3. Convertir la vitesse de la voiture en m·s⁻¹, puis calculer son énergie cinétique $E_c$. \\n4. Calculer la distance de réaction $d_r$, puis la distance de freinage $d_f$ (le freinage dissipe toute l'énergie cinétique : $F \\times d_f = E_c$). \\n5. En déduire la distance d'arrêt $d_a$. La voiture s'arrête-t-elle avant le piéton ? Quel est l'intérêt de la caméra thermique pour la sécurité routière ?",
+      "corrige": [
+        "1. Température absolue du piéton : $T = \\theta + 273 = 37 + 273 = 310$ K. Loi de Wien : $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{310} = 9{,}4 \\times 10^{-6}$ m $= 9{,}4$ µm. Cette valeur est supérieure à $0{,}8$ µm : elle est bien dans l'**infrarouge**. La caméra détecte donc ce rayonnement IR que le corps émet en permanence.",
+        "2. Fréquence associée : $f = \\dfrac{c}{\\lambda_{max}} = \\dfrac{3{,}0 \\times 10^{8}}{9{,}4 \\times 10^{-6}} = 3{,}2 \\times 10^{13}$ Hz.",
+        "3. Vitesse : $v = \\dfrac{90}{3{,}6} = 25$ m·s⁻¹. Énergie cinétique : $E_c = \\dfrac{1}{2} \\times 1\\,440 \\times 25^{2} = \\dfrac{1}{2} \\times 1\\,440 \\times 625 = 4{,}5 \\times 10^{5}$ J.",
+        "4. Distance de réaction (la voiture roule encore à $25$ m·s⁻¹) : $d_r = v \\times t_r = 25 \\times 1{,}0 = 25$ m. Distance de freinage : $d_f = \\dfrac{E_c}{F} = \\dfrac{4{,}5 \\times 10^{5}}{9\\,000} = 50$ m.",
+        "5. Distance d'arrêt : $d_a = d_r + d_f = 25 + 50 = 75$ m. Comme $d_a = 75$ m $< D = 100$ m, la voiture s'arrête à environ $25$ m avant le piéton. La caméra thermique, en détectant le rayonnement IR du piéton bien avant que les phares ne l'éclairent, offre au conducteur une distance de détection suffisante pour s'arrêter à temps : elle rallonge le temps disponible et sauve la marge de sécurité."
+      ],
+      "reponse": "$\\lambda_{max} = 9{,}4$ µm (**IR**) ; $f = 3{,}2 \\times 10^{13}$ Hz ; $v = 25$ m·s⁻¹ et $E_c = 4{,}5 \\times 10^{5}$ J ; $d_r = 25$ m, $d_f = 50$ m, $d_a = 75$ m. Comme $75$ m $< 100$ m, la voiture s'arrête avant le piéton : la vision thermique permet une détection précoce, décisive de nuit."
     }
   ]
 }

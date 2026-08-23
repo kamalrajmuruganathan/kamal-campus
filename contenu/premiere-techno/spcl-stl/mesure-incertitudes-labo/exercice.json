@@ -85,6 +85,59 @@
         "C'est donc le **binôme 2** qui présente une **erreur systématique** : des résultats très reproductibles, mais tous décalés dans le même sens. Il faut vérifier ce qui décale toujours de la même façon : étalonnage de la verrerie ou de l'appareil, préparation de la solution titrante, tarage de la balance, lecture du même côté du ménisque."
       ],
       "reponse": "$u_1 \\approx 0{,}004$ et $u_2 \\approx 0{,}0009\\ \\mathrm{mol\\cdot L^{-1}}$. Binôme 1 : juste mais peu fidèle. Binôme 2 : fidèle mais pas juste $\\Rightarrow$ **erreur systématique** (à chercher dans l'étalonnage / le protocole)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "expression-resultat",
+      "enonce": "Un calcul d'incertitude, mené à la calculatrice, a fourni les valeurs **brutes** suivantes pour une concentration : $c = 0{,}047835\\ \\mathrm{mol\\cdot L^{-1}}$ et $u(c) = 0{,}002714\\ \\mathrm{mol\\cdot L^{-1}}$. Exprime ce résultat correctement (arrondi de l'incertitude, puis de la valeur, avec l'unité), et indique entre quelles bornes se situe très probablement la concentration.",
+      "corrige": [
+        "On arrondit **d'abord l'incertitude**, à $1$ chiffre significatif et **par excès** (pour ne pas sous-estimer le doute) : $u(c) = 0{,}002714 \\to 0{,}003\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "On arrondit **ensuite la valeur** au **même rang** que l'incertitude (le millième) : $c = 0{,}047835 \\to 0{,}048\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "On écrit le résultat avec l'unité **hors parenthèses** : $c = (0{,}048 \\pm 0{,}003)\\ \\mathrm{mol\\cdot L^{-1}}$. Cela signifie que la valeur vraie est très probablement comprise entre $0{,}045$ et $0{,}051\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$c = (0{,}048 \\pm 0{,}003)\\ \\mathrm{mol\\cdot L^{-1}}$, soit une valeur vraie très probablement entre $0{,}045$ et $0{,}051\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "type-b",
+      "enonce": "Lors d'un titrage, on lit le niveau d'une burette graduée tous les $0{,}1\\ \\mathrm{mL}$ **avant** puis **après** l'écoulement : lecture initiale $1{,}50\\ \\mathrm{mL}$, lecture finale $15{,}80\\ \\mathrm{mL}$. Le volume versé est $V = V_{\\text{finale}} - V_{\\text{initiale}}$. (a) Calcule l'incertitude-type de type B sur **une** lecture. (b) Le volume versé étant une **différence** de deux lectures, calcule $u(V)$. (c) Exprime le volume versé.",
+      "corrige": [
+        "Volume versé : $V = 15{,}80 - 1{,}50 = 14{,}30\\ \\mathrm{mL}$.",
+        "Incertitude de type B sur **chaque** lecture (graduation $0{,}1\\ \\mathrm{mL}$) : $u = \\dfrac{\\text{graduation}}{\\sqrt{3}} = \\dfrac{0{,}1}{\\sqrt{3}} = 0{,}058\\ \\mathrm{mL}$.",
+        "$V$ est une **différence** de deux lectures indépendantes : on combine les incertitudes **absolues** en quadrature. $u(V) = \\sqrt{u_{\\text{init}}^2 + u_{\\text{fin}}^2} = \\sqrt{0{,}058^2 + 0{,}058^2} = 0{,}058\\times\\sqrt{2} = 0{,}082 \\approx 0{,}08\\ \\mathrm{mL}$.",
+        "On arrondit $u$ à $1$ c.s. ($0{,}08\\ \\mathrm{mL}$) et la valeur au même rang (le centième) : $V = (14{,}30 \\pm 0{,}08)\\ \\mathrm{mL}$."
+      ],
+      "reponse": "$u$ sur une lecture $= 0{,}058\\ \\mathrm{mL}$ ; le volume versé vaut $V = (14{,}30 \\pm 0{,}08)\\ \\mathrm{mL}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "incertitude-composee",
+      "enonce": "On mesure la masse volumique d'un liquide. On pèse une fiole vide : $m_1 = (32{,}15 \\pm 0{,}01)\\ \\mathrm{g}$, puis la même fiole contenant un volume $V = (50{,}00 \\pm 0{,}04)\\ \\mathrm{mL}$ de ce liquide (prélevé à la pipette jaugée) : $m_2 = (72{,}65 \\pm 0{,}01)\\ \\mathrm{g}$. (a) Détermine la masse $m$ de liquide et son incertitude $u(m)$. (b) Calcule $\\rho = \\dfrac{m}{V}$. (c) Calcule $u(\\rho)$ et indique quelle mesure limite la précision. (d) Exprime $\\rho$.",
+      "corrige": [
+        "Masse de liquide, par **différence** de deux pesées : $m = m_2 - m_1 = 72{,}65 - 32{,}15 = 40{,}50\\ \\mathrm{g}$. Différence $\\Rightarrow$ on combine les incertitudes **absolues** : $u(m) = \\sqrt{0{,}01^2 + 0{,}01^2} = 0{,}014\\ \\mathrm{g}$.",
+        "Masse volumique : $\\rho = \\dfrac{m}{V} = \\dfrac{40{,}50}{50{,}00} = 0{,}8100\\ \\mathrm{g\\cdot mL^{-1}}$.",
+        "$\\rho$ est un **quotient** : on combine les incertitudes **relatives**. $\\dfrac{u(m)}{m} = \\dfrac{0{,}014}{40{,}50} = 0{,}00035$ et $\\dfrac{u(V)}{V} = \\dfrac{0{,}04}{50{,}00} = 0{,}00080$ : c'est le **volume** qui contribue le plus (la pesée par différence est ici très précise).",
+        "$\\dfrac{u(\\rho)}{\\rho} = \\sqrt{0{,}00035^2 + 0{,}00080^2} = 0{,}00087$, donc $u(\\rho) = 0{,}00087 \\times 0{,}8100 = 0{,}00071 \\approx 0{,}0007\\ \\mathrm{g\\cdot mL^{-1}}$.",
+        "On arrondit la valeur au même rang que $u$ (le dix-millième) : $\\rho = (0{,}8100 \\pm 0{,}0007)\\ \\mathrm{g\\cdot mL^{-1}}$. Pour gagner encore en précision, il faudrait surtout mieux connaître le **volume** (verrerie plus précise)."
+      ],
+      "reponse": "$m = 40{,}50\\ \\mathrm{g}$ ($u(m) = 0{,}014\\ \\mathrm{g}$) ; $\\rho = (0{,}8100 \\pm 0{,}0007)\\ \\mathrm{g\\cdot mL^{-1}}$. C'est l'incertitude sur le **volume** qui domine."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Contrôle de la concentration d'une solution d'acide chlorhydrique.**\n\nAu laboratoire, on veut vérifier la concentration $c_A$ d'une solution d'acide chlorhydrique. On prélève un volume $V_A = 10{,}00\\ \\mathrm{mL}$ de cette solution à la **pipette jaugée** (tolérance annoncée $\\pm 0{,}02\\ \\mathrm{mL}$) et on le dose par une solution de soude de concentration $C_B = (0{,}100 \\pm 0{,}001)\\ \\mathrm{mol\\cdot L^{-1}}$. On répète le titrage $4$ fois ; les volumes de soude versés à l'équivalence (en $\\mathrm{mL}$) sont : $11{,}4$ ; $11{,}6$ ; $11{,}5$ ; $11{,}5$. À l'équivalence, $c_A = \\dfrac{C_B \\times \\bar{V_E}}{V_A}$.\n\n1. Calcule l'incertitude-type de type B sur le volume prélevé $V_A$.\n2. Calcule le volume équivalent moyen $\\bar{V_E}$ et l'incertitude-type de type A $u(\\bar{V_E})$ (calcule l'écart-type expérimental à la main).\n3. Calcule la valeur de la concentration $c_A$.\n4. Calcule l'incertitude-type composée $u(c_A)$ et indique quelle grandeur limite la précision.\n5. Exprime le résultat final, puis conclus sur la façon d'améliorer la précision.",
+      "corrige": [
+        "1. Type B, à partir de la **tolérance** de la pipette jaugée : $u(V_A) = \\dfrac{\\text{tolérance}}{\\sqrt{3}} = \\dfrac{0{,}02}{\\sqrt{3}} = 0{,}012\\ \\mathrm{mL}$.",
+        "2. Moyenne : $\\bar{V_E} = \\dfrac{11{,}4 + 11{,}6 + 11{,}5 + 11{,}5}{4} = \\dfrac{46{,}0}{4} = 11{,}50\\ \\mathrm{mL}$. Écarts à la moyenne : $-0{,}1$ ; $+0{,}1$ ; $0$ ; $0$, d'où $\\sum (V_i - \\bar{V_E})^2 = 0{,}02$. Écart-type expérimental (division par $n-1 = 3$) : $s = \\sqrt{\\dfrac{0{,}02}{3}} = 0{,}082\\ \\mathrm{mL}$. Incertitude de type A : $u(\\bar{V_E}) = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}082}{\\sqrt{4}} = 0{,}041\\ \\mathrm{mL}$.",
+        "3. Concentration : $c_A = \\dfrac{C_B \\times \\bar{V_E}}{V_A} = \\dfrac{0{,}100 \\times 11{,}50}{10{,}00} = 0{,}1150\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "4. $c_A$ résulte d'un **produit/quotient** : on combine les incertitudes **relatives**. $\\dfrac{u(C_B)}{C_B} = \\dfrac{0{,}001}{0{,}100} = 0{,}0100$ ; $\\dfrac{u(\\bar{V_E})}{\\bar{V_E}} = \\dfrac{0{,}041}{11{,}50} = 0{,}0036$ ; $\\dfrac{u(V_A)}{V_A} = \\dfrac{0{,}012}{10{,}00} = 0{,}0012$. En quadrature : $\\dfrac{u(c_A)}{c_A} = \\sqrt{0{,}0100^2 + 0{,}0036^2 + 0{,}0012^2} = 0{,}0107$. C'est de loin la **concentration de la soude** $C_B$ qui domine (contribution relative $0{,}0100$, contre $0{,}0036$ et $0{,}0012$). Incertitude absolue : $u(c_A) = 0{,}0107 \\times 0{,}1150 = 0{,}0012 \\approx 0{,}002\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "5. On arrondit $u$ à $1$ c.s. par excès ($0{,}002\\ \\mathrm{mol\\cdot L^{-1}}$) et la valeur au même rang (le millième) : $c_A = (0{,}115 \\pm 0{,}002)\\ \\mathrm{mol\\cdot L^{-1}}$. Puisque c'est l'incertitude sur $C_B$ qui limite le résultat, **répéter encore le titrage n'améliorerait presque rien** (cela ne réduit que le terme de type A, déjà négligeable) : il faudrait d'abord disposer d'une solution de soude **mieux étalonnée** (plus petit $u(C_B)$)."
+      ],
+      "reponse": "$u(V_A) = 0{,}012\\ \\mathrm{mL}$ ; $\\bar{V_E} = 11{,}50\\ \\mathrm{mL}$ avec $u(\\bar{V_E}) = 0{,}041\\ \\mathrm{mL}$ ; $c_A = (0{,}115 \\pm 0{,}002)\\ \\mathrm{mol\\cdot L^{-1}}$. La précision est limitée par l'incertitude sur la soude $C_B$ : c'est elle qu'il faut réduire, pas le nombre de titrages."
     }
   ]
 }

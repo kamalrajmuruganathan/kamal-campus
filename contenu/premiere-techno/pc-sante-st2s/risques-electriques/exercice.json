@@ -84,6 +84,60 @@
         "Le disjoncteur différentiel détecte ce déséquilibre et coupe le circuit en une fraction de seconde, avant que le passage prolongé du courant ne devienne fatal : c'est lui qui protège la personne."
       ],
       "reponse": "$I = 200$ mA : danger mortel (au-delà du seuil de fibrillation). Le différentiel $30$ mA détecte la fuite ($\\approx 200$ mA $> 30$ mA) et coupe le circuit très vite, ce qui sauve la personne."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "intensite-seuils-danger",
+      "enonce": "Pour chaque intensité qui traverse un corps humain, la convertir en milliampères, puis indiquer l'effet correspondant à l'aide du cours ($1$ mA perception, $10$ mA tétanisation, $30$ mA asphyxie, $\\geq 100$ mA fibrillation). a) $I = 0{,}001$ A ; b) $I = 0{,}020$ A ; c) $I = 0{,}150$ A.",
+      "corrige": [
+        "On convertit chaque intensité en milliampères : $1$ A $= 1000$ mA, donc on multiplie la valeur en ampères par $1000$.",
+        "a) $I = 0{,}001$ A $= 1$ mA : c'est le seuil de **perception**, un léger picotement.",
+        "b) $I = 0{,}020$ A $= 20$ mA : entre $10$ et $30$ mA, on est dans la zone de **tétanisation** des muscles : la personne ne peut plus lâcher le conducteur.",
+        "c) $I = 0{,}150$ A $= 150$ mA : au-delà de $100$ mA, c'est la **fibrillation** cardiaque, potentiellement mortelle."
+      ],
+      "reponse": "a) $1$ mA → perception ; b) $20$ mA → tétanisation ; c) $150$ mA → fibrillation (mortel)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "loi-ohm-differentiel",
+      "enonce": "Dans un jardin, une personne aux mains humides saisit une tondeuse électrique défectueuse dont la carcasse métallique est portée à la tension efficace $U = 230$ V. La résistance de son corps vaut alors $R = 2300\\ \\Omega$. On rappelle la loi d'Ohm $U = R \\times I$. 1) Calculer l'intensité $I$ qui traverse le corps, en ampères puis en milliampères. 2) Ce courant s'écoule vers la terre à travers le corps : il ne revient pas par le neutre. L'installation est protégée par un disjoncteur différentiel de seuil $30$ mA. Déclenche-t-il ?",
+      "corrige": [
+        "On isole l'intensité dans la loi d'Ohm : $I = \\dfrac{U}{R} = \\dfrac{230}{2300} = 0{,}100$ A.",
+        "Conversion : $0{,}100$ A $= 100$ mA.",
+        "Comme le courant part par la phase mais s'écoule vers la terre par le corps, il ne revient pas par le neutre : la fuite détectée vaut environ $100$ mA.",
+        "$100$ mA $> 30$ mA : l'écart dépasse le seuil du différentiel, donc il **déclenche** et coupe le circuit."
+      ],
+      "reponse": "$I = 0{,}100$ A $= 100$ mA. La fuite ($100$ mA) dépasse $30$ mA : le disjoncteur différentiel déclenche et coupe le circuit."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "periode-frequence-efficace",
+      "enonce": "Sur l'écran d'un oscilloscope branché sur une prise inconnue, une tension sinusoïdale effectue exactement $3$ périodes complètes en $50$ ms. Sa valeur maximale lue est $U_{max} = 170$ V. On prend $\\sqrt{2} \\approx 1{,}41$. 1) Déterminer la période $T$ d'une oscillation, en millisecondes puis en seconde. 2) En déduire la fréquence $f$. 3) Calculer la valeur efficace $U$. 4) Cette prise correspond-elle au secteur domestique français ($f = 50$ Hz, $U = 230$ V) ? Justifier.",
+      "corrige": [
+        "Période : $3$ périodes durent $50$ ms, donc une période dure $T = \\dfrac{50}{3} \\approx 16{,}7$ ms $= 0{,}0167$ s.",
+        "Fréquence : le plus simple est de compter les périodes par seconde. $f = \\dfrac{3}{0{,}050} = 60$ Hz (on retrouve bien $f = \\dfrac{1}{T} = \\dfrac{1}{0{,}0167} \\approx 60$ Hz).",
+        "Valeur efficace : $U = \\dfrac{U_{max}}{\\sqrt{2}} = \\dfrac{170}{1{,}41} \\approx 121$ V.",
+        "Comparaison : $f \\approx 60$ Hz $\\neq 50$ Hz et $U \\approx 121$ V $\\neq 230$ V. Ni la fréquence ni la valeur efficace ne correspondent : ce n'est **pas** le secteur français (ce sont plutôt les caractéristiques d'un secteur de type nord-américain, $60$ Hz / $120$ V)."
+      ],
+      "reponse": "$T \\approx 16{,}7$ ms, $f = 60$ Hz, $U \\approx 121$ V. Non : ni $f$ ni $U$ ne correspondent au secteur français ($50$ Hz / $230$ V)."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "risques-electriques-synthese",
+      "enonce": "Léa, future aide-soignante, révise la sécurité électrique à partir d'une prise de sa salle de bain. Elle y branche un oscilloscope et observe une tension sinusoïdale : la courbe se répète tous les $20$ ms et son sommet atteint $U_{max} = 325$ V. On prend $\\sqrt{2} \\approx 1{,}41$ et on rappelle la loi d'Ohm $U = R \\times I$. **1.** Déterminer la fréquence $f$ du secteur observé, en Hz. **2.** Calculer la valeur efficace $U$ de cette tension, puis donner la valeur minimale $U_{min}$ atteinte par la sinusoïde. **3.** Les mains bien sèches, la résistance du corps de Léa vaut $R = 4600\\ \\Omega$. Si elle touchait un conducteur sous la tension efficace $U$ trouvée au 2., quelle intensité $I$ traverserait son corps ? L'exprimer en mA. **4.** Elle se remouille les mains : sa résistance chute à $R' = 1150\\ \\Omega$. Calculer la nouvelle intensité $I'$, puis, à l'aide des seuils du cours ($10$ mA tétanisation, $30$ mA asphyxie, $\\geq 100$ mA fibrillation), comparer la gravité des deux situations. **5.** La prise est protégée par un disjoncteur différentiel de seuil $30$ mA. Dans la situation du 4., expliquer pourquoi il déclenche et protège Léa. **6.** La ligne comporte aussi un fusible de calibre $16$ A. Protège-t-il Léa contre l'électrisation du 4. ? Justifier en précisant ce que protège réellement chaque dispositif.",
+      "corrige": [
+        "1. La courbe se répète tous les $20$ ms, donc la période vaut $T = 20$ ms $= 0{,}020$ s. La fréquence est $f = \\dfrac{1}{T} = \\dfrac{1}{0{,}020} = 50$ Hz.",
+        "2. Valeur efficace : $U = \\dfrac{U_{max}}{\\sqrt{2}} = \\dfrac{325}{1{,}41} \\approx 230$ V. La sinusoïde étant symétrique par rapport à zéro, la valeur minimale est $U_{min} = -U_{max} = -325$ V.",
+        "3. Mains sèches : $I = \\dfrac{U}{R} = \\dfrac{230}{4600} = 0{,}050$ A $= 50$ mA.",
+        "4. Mains mouillées : $I' = \\dfrac{U}{R'} = \\dfrac{230}{1150} = 0{,}200$ A $= 200$ mA. Mains sèches, $50$ mA dépasse déjà le seuil d'asphyxie ($30$ mA) : c'est grave. Mains mouillées, $200$ mA dépasse le seuil de fibrillation ($\\geq 100$ mA) : risque d'arrêt cardiaque, donc mortel. En faisant chuter la résistance, l'humidité a multiplié l'intensité par $4$ et rendu l'accident bien plus dangereux.",
+        "5. Le courant de $200$ mA s'écoule par le corps vers la terre : il part par la phase mais ne revient pas par le neutre. L'écart $I_{\\text{phase}} - I_{\\text{neutre}} \\approx 200$ mA dépasse très largement les $30$ mA du seuil. Le disjoncteur différentiel détecte cette fuite et coupe le circuit en une fraction de seconde, avant que le passage prolongé du courant ne devienne fatal : c'est lui qui protège Léa.",
+        "6. Non. Le fusible $16$ A ne fond que si l'intensité de la ligne dépasse $16$ A (surintensité) ; or la fuite ne vaut que $0{,}200$ A, très en dessous de $16$ A : il ne réagit pas. Le fusible protège l'**installation** contre les surintensités (risque d'incendie), tandis que le différentiel protège les **personnes** en détectant une fuite. Ce sont deux rôles distincts."
+      ],
+      "reponse": "1. $f = 50$ Hz. 2. $U \\approx 230$ V, $U_{min} = -325$ V. 3. $I = 50$ mA (mains sèches). 4. $I' = 200$ mA : sèches c'est déjà grave ($> 30$ mA), mouillées c'est mortel ($> 100$ mA). 5. La fuite ($\\approx 200$ mA $> 30$ mA) fait déclencher le différentiel, qui coupe et sauve Léa. 6. Le fusible $16$ A ne la protège pas (il ne coupe qu'au-delà de $16$ A) : il protège l'installation, pas les personnes."
     }
   ]
 }

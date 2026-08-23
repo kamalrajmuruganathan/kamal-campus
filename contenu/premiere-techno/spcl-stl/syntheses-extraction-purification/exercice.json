@@ -87,6 +87,58 @@
         "Vérification de la réussite : on **remesure la température de fusion**. Si le solide purifié fond maintenant **nettement à $130\\,\\mathrm{°C}$** (valeur tabulée, sur un intervalle étroit), la purification a réussi. Une **CCM** ne montrant plus qu'**une seule tache** confirmerait aussi la pureté."
       ],
       "reponse": "Le solide est **impur** (fusion basse et étalée). On le purifie par **recristallisation** (dissolution à chaud, cristallisation à froid, filtration sous vide) ; la réussite se vérifie en retrouvant une fusion nette à $130\\ \\mathrm{°C}$ et/ou une seule tache en CCM."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "distillation",
+      "enonce": "On sépare par distillation fractionnée un mélange de deux liquides miscibles : de l'éthanoate d'éthyle ($\\theta_{\\text{eb}} = 77\\ \\mathrm{°C}$) et du propan-1-ol ($\\theta_{\\text{eb}} = 97\\ \\mathrm{°C}$). Indique lequel des deux liquides est recueilli en premier et quelle température on lit alors en tête de colonne. Justifie.",
+      "corrige": [
+        "La distillation sépare des liquides miscibles selon leur température d'ébullition : le liquide le plus **volatil** (celui dont $\\theta_{\\text{eb}}$ est la plus **basse**) s'évapore et distille le premier.",
+        "Ici $77\\ \\mathrm{°C} < 97\\ \\mathrm{°C}$ : l'**éthanoate d'éthyle** est le plus volatil, c'est donc lui qu'on recueille en premier.",
+        "Tant que c'est l'éthanoate d'éthyle qui distille, le thermomètre en tête de colonne se stabilise autour de sa température d'ébullition, soit **environ $77\\ \\mathrm{°C}$**. La température ne monte vers $97\\ \\mathrm{°C}$ que lorsque l'éthanoate d'éthyle est épuisé et que le propan-1-ol commence à passer."
+      ],
+      "reponse": "On recueille d'abord l'**éthanoate d'éthyle** (le plus volatil, $\\theta_{\\text{eb}} = 77\\ \\mathrm{°C}$) ; le thermomètre en tête indique alors environ $77\\ \\mathrm{°C}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "quantite-matiere",
+      "enonce": "Pour une synthèse, on prélève $V = 20{,}0\\ \\mathrm{mL}$ de méthanol liquide, de masse volumique $\\rho = 0{,}80\\ \\mathrm{g\\cdot mL^{-1}}$ et de masse molaire $M = 32\\ \\mathrm{g\\cdot mol^{-1}}$. Détermine la quantité de matière $n$ de méthanol prélevée.",
+      "corrige": [
+        "On ne peut pas passer directement d'un volume à une quantité de matière : il faut d'abord la **masse**. On l'obtient avec $m = \\rho \\times V$.",
+        "Étape 1 — masse : $m = \\rho \\times V = 0{,}80 \\times 20{,}0 = 16{,}0\\ \\mathrm{g}$. Les unités sont cohérentes ($\\mathrm{g\\cdot mL^{-1}} \\times \\mathrm{mL} = \\mathrm{g}$).",
+        "Étape 2 — quantité de matière : $n = \\dfrac{m}{M} = \\dfrac{16{,}0}{32} = 0{,}50\\ \\mathrm{mol}$."
+      ],
+      "reponse": "$m = 16{,}0\\ \\mathrm{g}$ puis $n = \\dfrac{16{,}0}{32} = 0{,}50\\ \\mathrm{mol}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "rendement",
+      "enonce": "Une synthèse du composé P (équation en proportions $1{:}1$, un seul réactif limitant A de masse molaire $M_\\mathrm{A} = 74\\ \\mathrm{g\\cdot mol^{-1}}$) donne, dans les conditions du laboratoire, un rendement habituel de $60\\ \\%$. On souhaite récupérer au final $n_{\\text{obtenu}} = 0{,}30\\ \\mathrm{mol}$ de P. Quelle quantité de matière de A faut-il introduire au minimum ? À quelle masse cela correspond-il ?",
+      "corrige": [
+        "On part de la définition du rendement $\\eta = \\dfrac{n_{\\text{obtenu}}}{n_{\\text{théorique}}}$. Ici on connaît $\\eta = 0{,}60$ et l'objectif $n_{\\text{obtenu}} = 0{,}30\\ \\mathrm{mol}$ : c'est $n_{\\text{théorique}}$ qui est l'inconnue.",
+        "On isole $n_{\\text{théorique}} = \\dfrac{n_{\\text{obtenu}}}{\\eta} = \\dfrac{0{,}30}{0{,}60} = 0{,}50\\ \\mathrm{mol}$. Il faut viser une production théorique de $0{,}50\\ \\mathrm{mol}$ pour n'en récupérer réellement que $0{,}30$.",
+        "L'équation est en proportions $1{:}1$ : la quantité théorique de P égale celle du réactif limitant A. Il faut donc introduire au minimum $n_\\mathrm{A} = n_{\\text{théorique}} = 0{,}50\\ \\mathrm{mol}$.",
+        "On convertit en masse avec $m = n \\times M$ : $m_\\mathrm{A} = 0{,}50 \\times 74 = 37\\ \\mathrm{g}$. « Au minimum », car tout excès de A (ou des pertes plus grandes) obligerait à en mettre davantage."
+      ],
+      "reponse": "$n_{\\text{théorique}} = \\dfrac{0{,}30}{0{,}60} = 0{,}50\\ \\mathrm{mol}$, donc $n_\\mathrm{A} = 0{,}50\\ \\mathrm{mol}$, soit $m_\\mathrm{A} = 0{,}50 \\times 74 = 37\\ \\mathrm{g}$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese-organique",
+      "enonce": "**Synthèse d'un arôme de banane.** L'éthanoate de 3-méthylbutyle est un ester à l'odeur de banane utilisé en agroalimentaire. On le prépare par chauffage à reflux d'acide éthanoïque et de 3-méthylbutan-1-ol (alcool isoamylique), selon : $\\mathrm{acide} + \\mathrm{alcool} \\rightarrow \\mathrm{ester} + \\mathrm{eau}$ (proportions $1{:}1$). Données : $M(\\text{acide éthanoïque}) = 60\\ \\mathrm{g\\cdot mol^{-1}}$, $M(\\text{alcool}) = 88\\ \\mathrm{g\\cdot mol^{-1}}$, $M(\\text{ester}) = 130\\ \\mathrm{g\\cdot mol^{-1}}$ ; densité de l'ester $d = 0{,}87$ (non miscible à l'eau). On introduit $18{,}0\\ \\mathrm{g}$ d'acide éthanoïque et $17{,}6\\ \\mathrm{g}$ d'alcool isoamylique.\\n\\n1. Détermine le réactif limitant.\\n2. Pourquoi chauffe-t-on le mélange **à reflux** plutôt qu'à l'air libre ?\\n3. Calcule la quantité maximale (théorique) d'ester, puis le rendement sachant qu'on isole finalement $19{,}5\\ \\mathrm{g}$ d'ester.\\n4. Après réaction, on lave le mélange à l'eau dans une ampoule à décanter. Indique où se trouve la phase organique (celle qui contient l'ester) et comment on la récupère.\\n5. On contrôle le produit par CCM : la tache de l'ester a migré de $h = 3{,}0\\ \\mathrm{cm}$ et le front de l'éluant a atteint $H = 5{,}0\\ \\mathrm{cm}$ ; la plaque ne montre qu'une seule tache. Calcule le $R_f$ et conclus sur la pureté.\\n6. Cite l'usage de cet ester évoqué dans l'énoncé.",
+      "corrige": [
+        "1. On convertit les masses en quantités de matière avec $n = \\dfrac{m}{M}$ : $n_{\\text{acide}} = \\dfrac{18{,}0}{60} = 0{,}30\\ \\mathrm{mol}$ et $n_{\\text{alcool}} = \\dfrac{17{,}6}{88} = 0{,}20\\ \\mathrm{mol}$. Les coefficients valant $1$, on compare $\\dfrac{0{,}30}{1} = 0{,}30$ et $\\dfrac{0{,}20}{1} = 0{,}20$ : le plus petit rapport est celui de l'alcool. **Le 3-méthylbutan-1-ol (alcool) est le réactif limitant.**",
+        "2. Le chauffage à reflux permet de chauffer **fort et longtemps** — donc d'accélérer la réaction — **sans perdre de matière** : les vapeurs montent, se condensent dans le réfrigérant et **retombent** dans le ballon au lieu de s'échapper. On évite ainsi l'évaporation des réactifs volatils.",
+        "3. En proportions $1{:}1$, la quantité maximale d'ester égale celle du réactif limitant : $n_{\\text{théorique}} = 0{,}20\\ \\mathrm{mol}$. La quantité réellement obtenue est $n_{\\text{obtenu}} = \\dfrac{m_{\\text{ester}}}{M} = \\dfrac{19{,}5}{130} = 0{,}15\\ \\mathrm{mol}$. Le rendement vaut donc $\\eta = \\dfrac{n_{\\text{obtenu}}}{n_{\\text{théorique}}} = \\dfrac{0{,}15}{0{,}20} = 0{,}75 = 75\\ \\%$.",
+        "4. L'ester a une densité $d = 0{,}87 < 1$ : il est **moins dense que l'eau**. La phase organique (ester) se place donc **au-dessus** de la phase aqueuse. On ouvre le robinet de l'ampoule pour laisser d'abord partir la phase aqueuse (en bas), puis on récupère la phase organique restée dans l'ampoule.",
+        "5. Le rapport frontal vaut $R_f = \\dfrac{h}{H} = \\dfrac{3{,}0}{5{,}0} = 0{,}60$ (sans unité, entre $0$ et $1$). La plaque ne montre **qu'une seule tache** : l'échantillon ne contient qu'une espèce détectable, l'ester est donc **a priori pur**.",
+        "6. L'énoncé indique que cet ester a une **odeur de banane** et qu'il est utilisé comme **arôme en agroalimentaire**."
+      ],
+      "reponse": "1. Limitant : **alcool isoamylique** ($0{,}20\\ \\mathrm{mol} < 0{,}30\\ \\mathrm{mol}$). 2. Reflux = chauffer sans perdre de matière (vapeurs recondensées). 3. $n_{\\text{théorique}} = 0{,}20\\ \\mathrm{mol}$, $n_{\\text{obtenu}} = 0{,}15\\ \\mathrm{mol}$, $\\eta = 75\\ \\%$. 4. Phase organique **en haut** ($d < 1$), récupérée après avoir vidangé la phase aqueuse. 5. $R_f = 0{,}60$ ; une seule tache $\\Rightarrow$ produit **pur**. 6. Arôme de **banane** (agroalimentaire)."
     }
   ]
 }
