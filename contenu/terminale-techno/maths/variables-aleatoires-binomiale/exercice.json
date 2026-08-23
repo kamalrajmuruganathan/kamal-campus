@@ -83,6 +83,59 @@
         "(d) $E(X) = np = 6 \\times 0{,}25 = 1{,}5$ : en répondant au hasard, un élève obtient en moyenne $1{,}5$ bonne réponse sur $6$. La moyenne est nettement sous le seuil de réussite de $3$ bonnes réponses : répondre au hasard est une mauvaise stratégie — apprendre son cours reste la seule option raisonnable."
       ],
       "reponse": "(a) $X \\sim B(6\\,;\\ 0{,}25)$ ; (b) $P(X = 6) = \\dfrac{1}{4096} \\approx 0{,}0002$ ; (c) $P(X = 2) \\approx 0{,}297$ ; (d) $E(X) = 1{,}5 < 3$ : le hasard ne suffit pas."
-      }
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "calculer-p-x-k",
+      "enonce": "Un maraîcher sème $6$ graines issues d'un même sachet ; d'après le fournisseur, chaque graine germe avec la probabilité $0{,}8$, indépendamment des autres. On note $X$ le nombre de graines qui germent. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Calculer la probabilité que les $6$ graines germent (valeur exacte, puis arrondie au millième). (c) Calculer la probabilité qu'aucune graine ne germe (valeur exacte).",
+      "corrige": [
+        "(a) Semer une graine est une épreuve de Bernoulli : succès « la graine germe » de probabilité $p = 0{,}8$, échec sinon. Cette épreuve est répétée $n = 6$ fois de façon identique et indépendante, et $X$ compte le nombre de succès : $X \\sim B(6\\,;\\ 0{,}8)$.",
+        "(b) « Les $6$ graines germent » est l'événement $\\{X = 6\\}$ : un seul chemin (que des succès), donc $\\dbinom{6}{6} = 1$ et $P(X = 6) = 0{,}8^6 = 0{,}262144 \\approx 0{,}262$.",
+        "(c) « Aucune graine ne germe » est l'événement $\\{X = 0\\}$ : un seul chemin (que des échecs), donc $P(X = 0) = (1 - 0{,}8)^6 = 0{,}2^6 = 0{,}000064$. C'est quasiment impossible : avec un taux de germination de $80\\,\\%$, il serait très étonnant qu'aucune des six graines ne lève."
+      ],
+      "reponse": "(a) $X \\sim B(6\\,;\\ 0{,}8)$ ; (b) $P(X = 6) = 0{,}8^6 \\approx 0{,}262$ ; (c) $P(X = 0) = 0{,}2^6 = 0{,}000064$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Une association vend $500$ billets de tombola à $2$ € l'unité. Un billet gagne le gros lot de $300$ €, cinq billets gagnent chacun $20$ € et tous les autres billets ne gagnent rien. Une personne achète un billet ; on note $X$ son gain algébrique (montant reçu moins le prix du billet). (a) Donner la loi de probabilité de $X$ et vérifier qu'il s'agit bien d'une loi de probabilité. (b) Calculer $E(X)$ et l'interpréter pour l'acheteur. (c) En déduire le bénéfice moyen de l'association si les $500$ billets sont vendus.",
+      "corrige": [
+        "(a) Sur les $500$ billets : $1$ rapporte $300 - 2 = 298$ € (probabilité $\\dfrac{1}{500} = 0{,}002$), $5$ rapportent $20 - 2 = 18$ € (probabilité $\\dfrac{5}{500} = 0{,}01$) et les $494$ restants rapportent $0 - 2 = -2$ € (probabilité $\\dfrac{494}{500} = 0{,}988$). Contrôle : $0{,}002 + 0{,}01 + 0{,}988 = 1$, c'est bien une loi de probabilité.",
+        "(b) $E(X) = 298 \\times 0{,}002 + 18 \\times 0{,}01 + (-2) \\times 0{,}988 = 0{,}596 + 0{,}18 - 1{,}976 = -1{,}2$. Sur un grand nombre de billets achetés, l'acheteur perd en moyenne $1{,}20$ € par billet : le jeu lui est défavorable, ce qui est normal pour une tombola destinée à financer l'association.",
+        "(c) Ce que le joueur perd en moyenne, l'association le gagne : environ $1{,}20$ € par billet, soit $500 \\times 1{,}20 = 600$ € pour les $500$ billets. Vérification directe : recette $500 \\times 2 = 1000$ €, lots distribués $300 + 5 \\times 20 = 400$ €, bénéfice $1000 - 400 = 600$ €. ✓"
+      ],
+      "reponse": "(a) $P(X = 298) = 0{,}002$ ; $P(X = 18) = 0{,}01$ ; $P(X = -2) = 0{,}988$ ; (b) $E(X) = -1{,}2$ € ; (c) bénéfice moyen de l'association $\\approx 600$ €."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "loi-binomiale",
+      "enonce": "Un atelier possède $5$ machines identiques fonctionnant indépendamment les unes des autres. Un jour donné, chaque machine tombe en panne avec la probabilité $0{,}1$. On note $X$ le nombre de machines en panne ce jour-là. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Calculer la probabilité qu'aucune machine ne tombe en panne (arrondie au millième). (c) En déduire la probabilité qu'au moins une machine tombe en panne. Le chef d'atelier affirme : « il y a moins d'une chance sur trois qu'au moins une machine tombe en panne un jour donné ». A-t-il raison ? (d) Calculer $E(X)$ et l'interpréter.",
+      "corrige": [
+        "(a) Pour une machine, « tomber en panne ce jour-là » est une épreuve de Bernoulli de paramètre $p = 0{,}1$. Les $5$ machines sont identiques et indépendantes, et $X$ compte le nombre de pannes (les succès) : $X \\sim B(5\\,;\\ 0{,}1)$.",
+        "(b) « Aucune panne » est l'événement $\\{X = 0\\}$ : $P(X = 0) = (1 - 0{,}1)^5 = 0{,}9^5 = 0{,}59049 \\approx 0{,}590$.",
+        "(c) « Au moins une machine tombe en panne » est l'événement contraire de « aucune panne » : $P(X \\geq 1) = 1 - P(X = 0) = 1 - 0{,}59049 = 0{,}40951 \\approx 0{,}410$. Or $\\dfrac{1}{3} \\approx 0{,}333$ et $0{,}410 > 0{,}333$ : il y a en réalité plus d'une chance sur trois qu'au moins une machine tombe en panne. Le chef d'atelier a donc tort.",
+        "(d) $E(X) = np = 5 \\times 0{,}1 = 0{,}5$ : sur un grand nombre de jours, on compte en moyenne $0{,}5$ machine en panne par jour, soit environ une panne tous les deux jours. $0{,}5$ n'est pas une valeur possible de $X$ : c'est une moyenne, pas un résultat certain."
+      ],
+      "reponse": "(a) $X \\sim B(5\\,;\\ 0{,}1)$ ; (b) $P(X = 0) = 0{,}9^5 \\approx 0{,}590$ ; (c) $P(X \\geq 1) \\approx 0{,}410 > \\frac{1}{3}$, le chef a tort ; (d) $E(X) = 0{,}5$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "loi-binomiale",
+      "enonce": "**Problème.** Un artisan fabrique des jouets en bois qu'il vend par lots de $6$. Chaque jouet présente un défaut avec la probabilité $0{,}05$, indépendamment des autres. Avant la vente, il contrôle les $6$ jouets d'un lot ; on note $X$ le nombre de jouets défectueux du lot.\n\n**Partie A — étude du nombre de défauts.**\n1. Justifier que $X$ suit la loi binomiale $B(6\\,;\\ 0{,}05)$.\n2. Rappeler la ligne $6$ du triangle de Pascal, puis en déduire $\\dbinom{6}{0}$, $\\dbinom{6}{1}$ et $\\dbinom{6}{2}$.\n3. Calculer $P(X = 0)$ puis $P(X = 1)$, arrondies au millième.\n4. En déduire la probabilité qu'un lot contienne au moins $2$ jouets défectueux, arrondie au millième.\n5. Calculer $E(X)$ et interpréter.\n\n**Partie B — bénéfice de l'artisan.**\nL'artisan tire de chaque lot un bénéfice $G$ (en euros) qui dépend du nombre de défauts : si le lot n'a aucun défaut, $G = 40$ ; s'il a exactement un défaut, $G = 25$ ; s'il a deux défauts ou plus, le lot est mis au rebut et $G = -10$.\n6. Donner la loi de probabilité de $G$ (on utilisera les probabilités arrondies de la Partie A).\n7. Calculer $E(G)$ et interpréter le résultat pour l'artisan.",
+      "corrige": [
+        "1. Contrôler un jouet est une épreuve de Bernoulli : succès « le jouet est défectueux » de probabilité $p = 0{,}05$, échec sinon. L'épreuve est répétée $n = 6$ fois de façon identique et indépendante, et $X$ compte les succès : $X \\sim B(6\\,;\\ 0{,}05)$.",
+        "2. La ligne $6$ du triangle de Pascal est $1\\ 6\\ 15\\ 20\\ 15\\ 6\\ 1$. En numérotant les colonnes à partir de $0$ : $\\dbinom{6}{0} = 1$, $\\dbinom{6}{1} = 6$ et $\\dbinom{6}{2} = 15$.",
+        "3. $P(X = 0) = \\dbinom{6}{0} \\times 0{,}05^0 \\times 0{,}95^6 = 0{,}95^6 \\approx 0{,}735$. $P(X = 1) = \\dbinom{6}{1} \\times 0{,}05^1 \\times 0{,}95^5 = 6 \\times 0{,}05 \\times 0{,}95^5 \\approx 6 \\times 0{,}05 \\times 0{,}7738 \\approx 0{,}232$. Les exposants somment bien à $6$ dans chaque cas.",
+        "4. « Au moins $2$ défauts » est l'événement contraire de « $0$ ou $1$ défaut » : $P(X \\geq 2) = 1 - P(X = 0) - P(X = 1) \\approx 1 - 0{,}735 - 0{,}232 = 0{,}033$.",
+        "5. $E(X) = np = 6 \\times 0{,}05 = 0{,}3$ : sur un grand nombre de lots, un lot contient en moyenne $0{,}3$ jouet défectueux. C'est une moyenne, pas une valeur possible de $X$.",
+        "6. $G$ vaut $40$ quand $X = 0$ (probabilité $\\approx 0{,}735$), $25$ quand $X = 1$ (probabilité $\\approx 0{,}232$) et $-10$ quand $X \\geq 2$ (probabilité $\\approx 0{,}033$). Contrôle : $0{,}735 + 0{,}232 + 0{,}033 = 1$. ✓",
+        "7. $E(G) = 40 \\times 0{,}735 + 25 \\times 0{,}232 + (-10) \\times 0{,}033 = 29{,}4 + 5{,}8 - 0{,}33 = 34{,}87$. Sur un grand nombre de lots, l'artisan dégage un bénéfice moyen d'environ $34{,}87$ € par lot. Le risque de rebut (environ $3{,}3\\,\\%$ des lots) pèse peu : l'activité est nettement rentable en moyenne."
+      ],
+      "reponse": "Partie A : $X \\sim B(6\\,;\\ 0{,}05)$ ; $P(X = 0) \\approx 0{,}735$ ; $P(X = 1) \\approx 0{,}232$ ; $P(X \\geq 2) \\approx 0{,}033$ ; $E(X) = 0{,}3$. Partie B : $E(G) \\approx 34{,}87$ € de bénéfice moyen par lot."
+    }
   ]
 }

@@ -84,6 +84,57 @@
         "(d) Sur $6$ ans, le contrat A est plus avantageux : environ $132\\,000 - 129\\,368 = 2\\,632$ € de plus au total. Une hausse de $3\\,\\%$ de $20\\,000$ € ne vaut que $600$ € la première année, contre $800$ € pour le contrat A : la croissance géométrique met du temps à rattraper. À très long terme, en revanche, elle finit toujours par dépasser la croissance arithmétique (ici, le salaire B ne dépasse le salaire A qu'au-delà de la $20^{\\text{e}}$ année)."
       ],
       "reponse": "(a) $a_n = 20000 + 800n$ (arithmétique) ; $b_n = 20000 \\times 1{,}03^n$ (géométrique) ; (b) $a_5 = 24\\,000$ € contre $b_5 \\approx 23\\,185$ € ; (c) $S_A = 132\\,000$ € contre $S_B \\approx 129\\,368$ € ; (d) contrat A sur $6$ ans."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "terme-de-rang-n",
+      "enonce": "On place $2\\,000$ € sur un compte rémunéré à intérêts composés de $3\\,\\%$ par an. On note $u_n$ le capital disponible au bout de $n$ années, avec $u_0 = 2000$. (a) Justifier que $(u_n)$ est une suite géométrique et préciser sa raison. (b) Calculer $u_1$ et $u_2$. (c) Exprimer $u_n$ en fonction de $n$, puis calculer le capital au bout de $8$ ans (arrondir au centime).",
+      "corrige": [
+        "(a) Chaque année, le capital est multiplié par $1 + \\dfrac{3}{100} = 1{,}03$ : $u_{n+1} = 1{,}03\\,u_n$. La suite $(u_n)$ est donc géométrique de premier terme $u_0 = 2000$ et de raison $q = 1{,}03$ (termes strictement positifs).",
+        "(b) $u_1 = 2000 \\times 1{,}03 = 2\\,060$ € ; $u_2 = u_1 \\times 1{,}03 = 2060 \\times 1{,}03 = 2\\,121{,}80$ €.",
+        "(c) Le terme général est $u_n = u_0 \\times q^n = 2000 \\times 1{,}03^n$. Au bout de $8$ ans : $u_8 = 2000 \\times 1{,}03^8 \\approx 2000 \\times 1{,}266770 \\approx 2\\,533{,}54$ €. Ordre de grandeur cohérent : un peu plus de $500$ € d'intérêts en $8$ ans."
+      ],
+      "reponse": "(a) géométrique, $q = 1{,}03$ ; (b) $u_1 = 2\\,060$ € et $u_2 = 2\\,121{,}80$ € ; (c) $u_n = 2000 \\times 1{,}03^n$ et $u_8 \\approx 2\\,533{,}54$ €."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "terme-de-rang-n",
+      "enonce": "$(u_n)$ est une suite géométrique à termes strictement positifs telle que $u_2 = 18$ et $u_5 = 486$. (a) Déterminer la raison $q$. (b) Calculer $u_0$ et exprimer $u_n$ en fonction de $n$. (c) Calculer $u_7$.",
+      "corrige": [
+        "(a) De $u_2$ à $u_5$, on multiplie $5 - 2 = 3$ fois par la raison : $u_5 = u_2 \\times q^3$, donc $q^3 = \\dfrac{486}{18} = 27$, d'où $q = \\sqrt[3]{27} = 3$ (raison positive). Attention à compter $3$ pas, et non $4$.",
+        "(b) On redescend de $u_2$ à $u_0$ en divisant $2$ fois par la raison : $u_0 = \\dfrac{u_2}{q^2} = \\dfrac{18}{9} = 2$. Le terme général est donc $u_n = u_0 \\times q^n = 2 \\times 3^n$. Vérification : $u_2 = 2 \\times 3^2 = 18$ ✓ et $u_5 = 2 \\times 3^5 = 486$ ✓.",
+        "(c) $u_7 = 2 \\times 3^7 = 2 \\times 2187 = 4\\,374$."
+      ],
+      "reponse": "(a) $q = 3$ ; (b) $u_0 = 2$ et $u_n = 2 \\times 3^n$ ; (c) $u_7 = 4\\,374$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "terme-de-rang-n",
+      "enonce": "Une machine-outil achetée $24\\,000$ € perd $20\\,\\%$ de sa valeur chaque année. On note $v_n$ sa valeur au bout de $n$ années, avec $v_0 = 24\\,000$. (a) Justifier que $(v_n)$ est une suite géométrique et préciser sa raison. (b) Calculer la valeur de la machine au bout de $5$ ans (arrondir à l'euro). (c) À partir de quelle année la valeur de la machine devient-elle inférieure à la moitié de son prix d'achat, soit $12\\,000$ € ? (d) Cette valeur peut-elle finir par devenir nulle ? Justifier.",
+      "corrige": [
+        "(a) Perdre $20\\,\\%$, c'est multiplier par $1 - \\dfrac{20}{100} = 0{,}80$ chaque année : $v_{n+1} = 0{,}80\\,v_n$. La suite $(v_n)$ est géométrique de premier terme $v_0 = 24\\,000$ et de raison $q = 0{,}80$ (attention : une baisse de $20\\,\\%$ donne $q = 0{,}80$, jamais $q = -0{,}20$). Les termes restent strictement positifs.",
+        "(b) $v_5 = 24\\,000 \\times 0{,}80^5 = 24\\,000 \\times 0{,}32768 \\approx 7\\,864$ €.",
+        "(c) On compare les valeurs successives à $12\\,000$ € : $v_3 = 24\\,000 \\times 0{,}80^3 = 24\\,000 \\times 0{,}512 = 12\\,288$ € (encore au-dessus) ; $v_4 = 24\\,000 \\times 0{,}80^4 = 24\\,000 \\times 0{,}4096 = 9\\,830{,}40$ € (en dessous). C'est donc à partir de la $4^{\\text{e}}$ année ($n = 4$) que la valeur passe sous les $12\\,000$ €.",
+        "(d) Non. Comme $q = 0{,}80 > 0$ et $v_0 > 0$, tous les termes $v_n = 24\\,000 \\times 0{,}80^n$ sont strictement positifs : la valeur se rapproche indéfiniment de $0$ sans jamais l'atteindre. Une suite géométrique à termes positifs ne s'annule jamais."
+      ],
+      "reponse": "(a) géométrique, $q = 0{,}80$ ; (b) $v_5 \\approx 7\\,864$ € ; (c) à partir de la $4^{\\text{e}}$ année ($v_4 \\approx 9\\,830$ €) ; (d) non, tous les termes restent strictement positifs."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "situation-de-somme",
+      "enonce": "Une PME réalise un chiffre d'affaires (CA) de $50\\,000$ € en 2026, année prise comme rang $0$. Pour prévoir son activité, elle étudie deux modèles de croissance. Modèle A : le CA augmente de $8\\,000$ € chaque année. Modèle B : le CA augmente de $12\\,\\%$ chaque année. On note $a_n$ le CA de l'année $2026 + n$ selon le modèle A, et $b_n$ selon le modèle B. 1. Préciser la nature de la suite $(a_n)$, exprimer $a_n$ en fonction de $n$, puis calculer le CA prévu en 2030 selon le modèle A. 2. Préciser la nature de la suite $(b_n)$, exprimer $b_n$ en fonction de $n$, puis calculer le CA prévu en 2030 selon le modèle B (arrondir à l'euro). 3. Selon quel modèle le CA de 2030 est-il le plus élevé ? 4. Calculer, pour chaque modèle, le CA cumulé de 2026 à 2033 incluses (arrondir à l'euro). 5. Un troisième modèle C prévoit un CA de $50\\,000$ € en 2026 et de $72\\,000$ € en 2028. Déterminer le CA de 2027 pour que ces trois valeurs soient, dans cet ordre, trois termes consécutifs d'une suite géométrique, et préciser le taux d'évolution annuel correspondant.",
+      "corrige": [
+        "1. Le modèle A ajoute $8\\,000$ € chaque année : $(a_n)$ est arithmétique de premier terme $a_0 = 50\\,000$ et de raison $r = 8\\,000$, donc $a_n = 50\\,000 + 8\\,000\\,n$. L'année 2030 correspond à $n = 2030 - 2026 = 4$ : $a_4 = 50\\,000 + 8\\,000 \\times 4 = 82\\,000$ €.",
+        "2. Le modèle B multiplie le CA par $1 + \\dfrac{12}{100} = 1{,}12$ chaque année : $(b_n)$ est géométrique de premier terme $b_0 = 50\\,000$ et de raison $q = 1{,}12$, donc $b_n = 50\\,000 \\times 1{,}12^n$. Pour 2030 ($n = 4$) : $b_4 = 50\\,000 \\times 1{,}12^4 \\approx 50\\,000 \\times 1{,}573519 \\approx 78\\,676$ €.",
+        "3. On compare $a_4 = 82\\,000$ € et $b_4 \\approx 78\\,676$ € : en 2030, le CA est plus élevé avec le modèle A (environ $3\\,324$ € de plus). La croissance de $12\\,\\%$ n'a pas encore rattrapé le gain fixe de $8\\,000$ €.",
+        "4. « CA cumulé de 2026 à 2033 incluses » : c'est une somme portant sur $2033 - 2026 + 1 = 8$ années, soit les termes de rang $0$ à $7$. Modèle A (somme arithmétique) : le dernier terme est $a_7 = 50\\,000 + 8\\,000 \\times 7 = 106\\,000$ €, donc $S_A = 8 \\times \\dfrac{a_0 + a_7}{2} = 8 \\times \\dfrac{50\\,000 + 106\\,000}{2} = 8 \\times 78\\,000 = 624\\,000$ €. Modèle B (somme géométrique de $8$ termes) : $S_B = b_0 \\times \\dfrac{1 - q^8}{1 - q} = 50\\,000 \\times \\dfrac{1{,}12^8 - 1}{1{,}12 - 1} = 50\\,000 \\times \\dfrac{2{,}475963 - 1}{0{,}12} \\approx 50\\,000 \\times 12{,}2997 \\approx 614\\,985$ €. Sur $8$ ans, le modèle A cumule un peu plus (environ $9\\,000$ € de plus).",
+        "5. On cherche le CA $x$ de 2027 tel que $50\\,000$ ; $x$ ; $72\\,000$ soient trois termes consécutifs d'une suite géométrique : le terme du milieu est la moyenne géométrique de ses voisins, donc $x = \\sqrt{50\\,000 \\times 72\\,000} = \\sqrt{3\\,600\\,000\\,000} = 60\\,000$ €. La raison est $q = \\dfrac{60\\,000}{50\\,000} = 1{,}2$, ce qui correspond à un taux d'évolution annuel de $+20\\,\\%$ (et l'on vérifie $60\\,000 \\times 1{,}2 = 72\\,000$ ✓)."
+      ],
+      "reponse": "1. $(a_n)$ arithmétique, $a_n = 50\\,000 + 8\\,000n$, $a_4 = 82\\,000$ € ; 2. $(b_n)$ géométrique, $b_n = 50\\,000 \\times 1{,}12^n$, $b_4 \\approx 78\\,676$ € ; 3. modèle A en 2030 ; 4. $S_A = 624\\,000$ € contre $S_B \\approx 614\\,985$ € ; 5. CA 2027 $= 60\\,000$ € (moyenne géométrique), soit $+20\\,\\%$ par an."
     }
   ]
 }

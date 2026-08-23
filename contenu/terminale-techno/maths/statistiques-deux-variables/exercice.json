@@ -87,6 +87,59 @@
         "(e) Pour $x = 130$ : $y = \\dfrac{130^2}{200} = \\dfrac{16\\,900}{200} = 84{,}5$ m. C'est une extrapolation ($130 > 110$) : elle reste modérée (proche de la plage mesurée) et le modèle physique sous-jacent (énergie cinétique proportionnelle au carré de la vitesse) la rend plausible, mais elle doit être annoncée comme une estimation hors des données observées."
       ],
       "reponse": "(a) Accroissements de $y$ : $8$, $12$, $16$, $20$ — non constants, nuage courbe. (b) $X$ : $900$ ; $2\\,500$ ; $4\\,900$ ; $8\\,100$ ; $12\\,100$ ; nuage $(X\\,;y)$ aligné. (c) $y = \\dfrac{x^2}{200}$ ; $50$ m à $100$ km/h. (d) Distance multipliée par $4$. (e) $84{,}5$ m à $130$ km/h, extrapolation à signaler."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "changement-inverse",
+      "enonce": "Un gaz est enfermé dans un cylindre à température constante. On note $y$ sa pression (en bar) lorsque le gaz occupe un volume $x$ (en L) : $x = 1$ : $y = 20$ ; $x = 2$ : $y = 10$ ; $x = 4$ : $y = 5$ ; $x = 5$ : $y = 4$. On pose $z = \\dfrac{1}{y}$. (a) Compléter le tableau des valeurs de $z$, arrondies au millième. (b) La calculatrice donne l'ajustement $z = 0{,}05x$ (avec $b \\approx 0$). Exprimer $y$ en fonction de $x$. (c) Estimer la pression lorsque le volume vaut $2{,}5$ L. S'agit-il d'une interpolation ou d'une extrapolation ?",
+      "corrige": [
+        "(a) $z = \\dfrac{1}{y}$ : $\\dfrac{1}{20} = 0{,}050$ ; $\\dfrac{1}{10} = 0{,}100$ ; $\\dfrac{1}{5} = 0{,}200$ ; $\\dfrac{1}{4} = 0{,}250$. Les points $(x\\,;z)$ sont alignés sur une droite passant par l'origine : quand $x$ passe de $1$ à $5$, $z$ passe de $0{,}050$ à $0{,}250$, soit un accroissement de $0{,}05$ par litre.",
+        "(b) De $\\dfrac{1}{y} = 0{,}05x$ et $y > 0$, on tire $y = \\dfrac{1}{0{,}05x} = \\dfrac{20}{x}$. Attention à inverser tout le membre : $y$ n'est pas $0{,}05x$ inversé terme à terme. On reconnaît la loi de Boyle-Mariotte $x \\times y = 20$ : à température constante, le produit pression $\\times$ volume est constant.",
+        "(c) Pour $x = 2{,}5$ L : $y = \\dfrac{20}{2{,}5} = 8$ bar. Comme $2{,}5$ est à l'intérieur de la plage observée $[1\\,;5]$, il s'agit d'une interpolation : l'estimation est fiable."
+      ],
+      "reponse": "(a) $z$ : $0{,}050$ ; $0{,}100$ ; $0{,}200$ ; $0{,}250$. (b) $y = \\dfrac{20}{x}$. (c) $y = 8$ bar ; interpolation."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "changement-log",
+      "enonce": "Après une injection, on mesure la concentration $y$ (en mg/L) d'un médicament dans le sang, $x$ heures après l'injection : $x = 0$ : $100$ ; $x = 1$ : $79$ ; $x = 2$ : $63$ ; $x = 3$ : $50$ ; $x = 4$ : $40$. On pose $z = \\log(y)$. (a) Compléter le tableau des $z_i$ arrondis au centième et vérifier que le nuage $(x\\,;z)$ est rectiligne. (b) La calculatrice donne l'ajustement $z = -0{,}10x + 2{,}00$. En déduire un modèle de la forme $y = k \\times q^x$ ($k$ arrondi à l'unité, $q$ au centième). (c) De quel pourcentage la concentration diminue-t-elle chaque heure selon ce modèle ?",
+      "corrige": [
+        "(a) $z = \\log(y)$ : $\\log(100) = 2{,}00$ ; $\\log(79) \\approx 1{,}90$ ; $\\log(63) \\approx 1{,}80$ ; $\\log(50) \\approx 1{,}70$ ; $\\log(40) \\approx 1{,}60$. Les $z_i$ diminuent régulièrement de $0{,}10$ par heure : les points $(x\\,;z)$ sont alignés sur une droite décroissante, alors que le nuage $(x\\,;y)$ décroît de moins en moins vite (il est courbe).",
+        "(b) $\\log(y) = -0{,}10x + 2{,}00$ donne $y = 10^{\\,-0{,}10x + 2{,}00} = 10^{2{,}00} \\times \\left(10^{-0{,}10}\\right)^x$. Or $10^{2{,}00} = 100$ et $10^{-0{,}10} \\approx 0{,}79$, d'où le modèle $y \\approx 100 \\times 0{,}79^x$.",
+        "(c) Quand $x$ augmente de $1$, $y$ est multiplié par $10^{-0{,}10} \\approx 0{,}79$ : la concentration est multipliée par $0{,}79$ chaque heure, soit une diminution d'environ $21\\,\\%$ ($0{,}79 - 1 = -0{,}21$). Piège classique : la pente $-0{,}10$ n'est pas le taux d'évolution — ce n'est pas $-10\\,\\%$ par heure, mais bien $-21\\,\\%$."
+      ],
+      "reponse": "(a) $z$ : $2{,}00$ ; $1{,}90$ ; $1{,}80$ ; $1{,}70$ ; $1{,}60$ (décroissance de $0{,}10$/h, points alignés). (b) $y \\approx 100 \\times 0{,}79^x$. (c) Environ $-21\\,\\%$ par heure."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "changement-carre",
+      "enonce": "En négligeant la résistance de l'air, on mesure la durée de chute $y$ (en s) d'une bille lâchée d'une hauteur $x$ (en m) : $x = 5$ : $y = 1{,}00$ ; $x = 10$ : $y = 1{,}41$ ; $x = 15$ : $y = 1{,}73$ ; $x = 20$ : $y = 2{,}00$ ; $x = 25$ : $y = 2{,}24$. (a) En calculant les accroissements successifs de $y$, expliquer pourquoi le nuage $(x\\,;y)$ n'est pas rectiligne. (b) On pose $z = y^2$. Compléter le tableau des $z_i$ et vérifier que le nuage $(x\\,;z)$ est aligné sur une droite passant par l'origine. (c) La calculatrice donne l'ajustement $z = 0{,}2x$. Exprimer $y$ en fonction de $x$, puis estimer la durée de chute depuis une hauteur de $18$ m. (d) D'après le modèle, que devient la durée de chute lorsque la hauteur est multipliée par $4$ ? Justifier. (e) Estimer la durée de chute depuis $45$ m et commenter la fiabilité.",
+      "corrige": [
+        "(a) Les hauteurs augmentent régulièrement de $5$ m, mais les accroissements de $y$ valent $1{,}41 - 1{,}00 = 0{,}41$ ; puis $0{,}32$ ; $0{,}27$ ; $0{,}24$ : ils diminuent au lieu de rester constants. Le nuage $(x\\,;y)$ est donc courbe (la durée augmente de moins en moins vite), un ajustement affine direct serait inadapté.",
+        "(b) $z = y^2$ : $1{,}00^2 = 1{,}00$ ; $1{,}41^2 \\approx 1{,}99$ ; $1{,}73^2 \\approx 2{,}99$ ; $2{,}00^2 = 4{,}00$ ; $2{,}24^2 \\approx 5{,}02$. Ces valeurs augmentent d'environ $1{,}00$ chaque fois que $x$ augmente de $5$, et $\\dfrac{z}{x} \\approx 0{,}2$ pour tous les points : le nuage $(x\\,;z)$ est aligné sur une droite passant par l'origine.",
+        "(c) De $z = y^2 = 0{,}2x$ et $y > 0$ (une durée est positive), on tire $y = \\sqrt{0{,}2x}$. Pour $x = 18$ m : $y = \\sqrt{0{,}2 \\times 18} = \\sqrt{3{,}6} \\approx 1{,}90$ s. Comme $18$ est dans la plage $[5\\,;25]$, c'est une interpolation.",
+        "(d) Si la hauteur est multipliée par $4$, $x$ devient $4x$ et $y$ devient $\\sqrt{0{,}2 \\times 4x} = \\sqrt{4} \\times \\sqrt{0{,}2x} = 2\\sqrt{0{,}2x} = 2y$ : la durée de chute est seulement multipliée par $2$ (et non par $4$). C'est la signature du modèle en racine carrée.",
+        "(e) Pour $x = 45$ m : $y = \\sqrt{0{,}2 \\times 45} = \\sqrt{9} = 3{,}00$ s. C'est une extrapolation ($45 > 25$) : le modèle néglige la résistance de l'air, qui devient sensible pour de grandes hauteurs et allongerait la durée réelle. L'estimation est donc à annoncer avec réserve."
+      ],
+      "reponse": "(a) Accroissements de $y$ décroissants ($0{,}41$ ; $0{,}32$ ; $0{,}27$ ; $0{,}24$) : nuage courbe. (b) $z$ : $1{,}00$ ; $1{,}99$ ; $2{,}99$ ; $4{,}00$ ; $5{,}02$ ; alignés, $z \\approx 0{,}2x$. (c) $y = \\sqrt{0{,}2x}$ ; $y \\approx 1{,}90$ s à $18$ m (interpolation). (d) Durée multipliée par $2$. (e) $3{,}00$ s à $45$ m, extrapolation à signaler."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "changement-log",
+      "enonce": "Une région suit l'évolution de sa puissance photovoltaïque installée. On note $y$ cette puissance (en MW) et $x$ le nombre d'années écoulées depuis $2015$. Les relevés sont : $x = 0$ (2015) : $y = 100$ ; $x = 2$ : $y = 200$ ; $x = 4$ : $y = 400$ ; $x = 6$ : $y = 800$ ; $x = 8$ (2023) : $y = 1\\,600$. Devant l'allure du nuage, on pose $z = \\log(y)$. 1. Calculer les quotients $\\dfrac{y_{i+1}}{y_i}$ et expliquer pourquoi le nuage $(x\\,;y)$ n'est pas rectiligne, mais justifie le choix du changement de variable $z = \\log(y)$. 2. Compléter le tableau des $z_i$ arrondis au centième et vérifier que le nuage $(x\\,;z)$ est rectiligne. 3. La calculatrice donne l'ajustement affine $z = 0{,}15x + 2{,}00$. En déduire un modèle de la forme $y = k \\times q^x$ ($k$ arrondi à l'unité, $q$ au centième), et donner le taux d'évolution annuel de la puissance installée. 4. Estimer la puissance installée prévue pour $2027$. S'agit-il d'une interpolation ou d'une extrapolation ? 5. À partir de quelle année la puissance installée dépasserait-elle $5\\,000$ MW selon ce modèle ? 6. Peut-on faire pleinement confiance à la prévision de la question 5 ? Argumenter.",
+      "corrige": [
+        "1. Les quotients valent $\\dfrac{200}{100} = 2$ ; $\\dfrac{400}{200} = 2$ ; $\\dfrac{800}{400} = 2$ ; $\\dfrac{1\\,600}{800} = 2$ : la puissance double tous les $2$ ans. Les différences successives ($100$, $200$, $400$, $800$) ne sont pas constantes, la croissance accélère : le nuage $(x\\,;y)$ est courbe. Des quotients constants sont la signature d'un modèle exponentiel $y = k \\times q^x$ ; or $\\log(k \\times q^x) = \\log(k) + x\\log(q)$ est affine en $x$, ce qui justifie de poser $z = \\log(y)$.",
+        "2. $z = \\log(y)$ : $\\log(100) = 2{,}00$ ; $\\log(200) \\approx 2{,}30$ ; $\\log(400) \\approx 2{,}60$ ; $\\log(800) \\approx 2{,}90$ ; $\\log(1\\,600) \\approx 3{,}20$. Les $z_i$ augmentent de $0{,}30$ tous les $2$ ans, soit $0{,}15$ par an : les points $(x\\,;z)$ sont sensiblement alignés.",
+        "3. $\\log(y) = 0{,}15x + 2{,}00$ donne $y = 10^{\\,0{,}15x + 2{,}00} = 10^{2{,}00} \\times \\left(10^{0{,}15}\\right)^x$. Or $10^{2{,}00} = 100$ et $10^{0{,}15} \\approx 1{,}41$, d'où $y \\approx 100 \\times 1{,}41^x$. Quand $x$ augmente de $1$, $y$ est multiplié par $10^{0{,}15} \\approx 1{,}41$ : le taux d'évolution annuel est d'environ $+41\\,\\%$ (et non $+15\\,\\%$ : la pente est l'accroissement du logarithme, pas le taux d'évolution de $y$).",
+        "4. L'année $2027$ correspond à $x = 12$. Alors $z = 0{,}15 \\times 12 + 2{,}00 = 3{,}80$, donc $y = 10^{3{,}80} \\approx 6\\,310$, soit environ $6\\,300$ MW. Comme $x = 12$ est au-delà de la plage observée $[0\\,;8]$, il s'agit d'une extrapolation.",
+        "5. Chercher $y > 5\\,000$ revient, en passant au logarithme, à résoudre $z > \\log(5\\,000)$. Or $\\log(5\\,000) = \\log(5) + \\log(1\\,000) \\approx 0{,}70 + 3 = 3{,}70$. On résout $0{,}15x + 2{,}00 = 3{,}70$, soit $0{,}15x = 1{,}70$ et $x = \\dfrac{1{,}70}{0{,}15} \\approx 11{,}3$. La puissance dépasserait $5\\,000$ MW pour $x \\approx 11{,}3$, soit dans le courant de l'année $2026$.",
+        "6. Non : les questions 4 et 5 reposent sur une extrapolation, à plus de $3$ ans au-delà du dernier relevé ($x = 8$, soit $2023$). Une croissance de $+41\\,\\%$ par an ne peut pas se maintenir indéfiniment (saturation des sites disponibles, évolution des aides publiques, contraintes de raccordement au réseau). La prévision « $5\\,000$ MW dès $2026$ » n'est valable que si la tendance passée se poursuit, ce qu'il faut signaler explicitement."
+      ],
+      "reponse": "1. Quotients tous égaux à $2$ (doublement tous les $2$ ans) → modèle exponentiel → $z = \\log(y)$. 2. $z$ : $2{,}00$ ; $2{,}30$ ; $2{,}60$ ; $2{,}90$ ; $3{,}20$ (points alignés, $+0{,}15$/an). 3. $y \\approx 100 \\times 1{,}41^x$, soit environ $+41\\,\\%$ par an. 4. En $2027$ ($x = 12$) : $y \\approx 6\\,300$ MW (extrapolation). 5. $x \\approx 11{,}3$, soit courant $2026$. 6. Non : extrapolation lointaine, la croissance finit par saturer — prévision « si la tendance se poursuit »."
     }
   ]
 }

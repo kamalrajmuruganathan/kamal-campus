@@ -84,6 +84,55 @@
         "(d) Parce que la perspective centrale **ne conserve ni les longueurs ni les milieux** : la moitié de la façade la plus éloignée de l'observateur occupe moins de place sur le dessin que la moitié proche. Le milieu mesuré à la règle sur $[ad]$ n'est donc pas l'image du milieu réel : la porte serait décalée vers le côté éloigné. Seule la construction par les diagonales, qui ne repose que sur des propriétés conservées (alignement, intersection), donne la position exacte."
       ],
       "reponse": "(a) $[ab]$ et $[dc]$ verticaux et parallèles (frontales) ; (b) au point de fuite principal $F$, sur la ligne d'horizon ; (c) intersection $i$ des diagonales de $abcd$, puis verticale par $i$ — correcte car la perspective conserve alignements et intersections ; (d) les milieux ne sont pas conservés : le milieu « à la règle » est faux."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "sections-planes",
+      "enonce": "Un abat-jour est modélisé par un cône de révolution. Le fabricant indique un **angle au sommet** (angle complet, entre deux génératrices diamétralement opposées) de $80°$. (a) En déduire le demi-angle au sommet $\\alpha$. (b) On coupe ce cône par un plan perpendiculaire à l'axe, à $9$ cm du sommet (le long de l'axe) : calculer le rayon de la section circulaire, arrondi au millimètre. (c) On coupe maintenant le cône (deux nappes) par un plan ne passant pas par le sommet et faisant un angle de $30°$ avec l'axe : donner la nature de la section.",
+      "corrige": [
+        "(a) L'angle au sommet complet vaut $2\\alpha$ (deux fois l'angle entre l'axe et une génératrice). Ici $2\\alpha = 80°$, donc le demi-angle au sommet est $\\alpha = 40°$. La classification des sections se fait toujours avec le demi-angle $\\alpha$, jamais avec l'angle complet : c'est un piège de conversion classique.",
+        "(b) Vu de profil, le cône donne un triangle rectangle : à la distance $d = 9$ cm du sommet, le rayon vaut $r = d \\times \\tan \\alpha = 9 \\tan 40° \\approx 9 \\times 0{,}839 \\approx 7{,}6$ cm.",
+        "(c) On compare l'angle plan–axe $\\beta = 30°$ au demi-angle au sommet $\\alpha = 40°$ : $\\beta = 30° < \\alpha = 40°$. Le plan est plus « redressé » que les génératrices et coupe les **deux nappes** : la section est une **hyperbole** (deux branches, une sur chaque nappe)."
+      ],
+      "reponse": "(a) $\\alpha = 40°$ ; (b) $r = 9\\tan 40° \\approx 7{,}6$ cm ; (c) hyperbole."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Pour un objet décoratif, une roue circulaire de centre $O$ et de rayon $8$ cm est reliée à un point fixe $A$ par deux tiges rectilignes, chacune **tangente** à la roue (aux points de contact $T$ et $T'$). On mesure $AT = 15$ cm. (a) Justifier que le triangle $OTA$ est rectangle et calculer la distance $OA$. (b) Calculer une valeur approchée, au degré près, de l'angle $\\widehat{TAT'}$ formé par les deux tiges.",
+      "corrige": [
+        "(a) La tige $(AT)$ est tangente à la roue en $T$, donc perpendiculaire au rayon $[OT]$ : le triangle $OTA$ est **rectangle en $T$**. Par le théorème de Pythagore, $OA^2 = OT^2 + AT^2 = 8^2 + 15^2 = 64 + 225 = 289$, donc $OA = \\sqrt{289} = 17$ cm.",
+        "(b) La figure est symétrique par rapport à la droite $(OA)$ : celle-ci partage l'angle $\\widehat{TAT'}$ en deux angles égaux, $\\widehat{TAO} = \\widehat{T'AO} = \\tfrac{1}{2}\\widehat{TAT'}$. Dans le triangle $OTA$ rectangle en $T$, le côté $[OT]$ est opposé à l'angle $\\widehat{TAO}$ et $[OA]$ est l'hypoténuse : $\\sin \\widehat{TAO} = \\dfrac{OT}{OA} = \\dfrac{8}{17} \\approx 0{,}471$, d'où $\\widehat{TAO} \\approx 28{,}1°$. Ainsi $\\widehat{TAT'} \\approx 2 \\times 28{,}1° \\approx 56°$."
+      ],
+      "reponse": "(a) $OTA$ rectangle en $T$, $OA = 17$ cm ; (b) $\\widehat{TAT'} \\approx 56°$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "perspective-et-coniques",
+      "enonce": "Une roue de vélo, assimilée à un cercle, roule sur un sol horizontal rectiligne : le sol est **tangent** au cercle au point de contact $C$. On représente la scène en perspective centrale, la roue étant vue de biais (ni de face, ni exactement de profil). (a) Quelle est la nature de l'image de la roue sur le tableau ? Justifier en évoquant le cône des rayons visuels issus de l'œil. (b) Sur le dessin, quelle est la position de l'image du sol par rapport à l'image de la roue ? Justifier à l'aide d'un invariant de la perspective centrale. (c) Un élève dessine la roue comme un ovale « en œuf », plus pointu du côté qui s'enfonce dans la profondeur, et affirme : « c'est normal, le côté éloigné est plus petit ». Donner les deux raisons pour lesquelles ce tracé est faux.",
+      "corrige": [
+        "(a) Les rayons visuels issus de l'œil $O$ et s'appuyant sur le cercle de la roue forment un **cône** de sommet $O$. Le tableau ne passe pas par $O$ : il coupe ce cône, donc l'image est une **section plane de cône**, c'est-à-dire une **conique**. La roue étant vue de biais, l'image est une courbe fermée : c'est une **ellipse** (une vue exactement de face donnerait un cercle, une vue de profil un segment).",
+        "(b) La perspective centrale **conserve le contact** : l'image d'une droite tangente à une courbe est tangente à l'image de cette courbe. Le sol étant tangent au cercle en $C$, son image — une droite, car l'alignement est conservé — est **tangente à l'ellipse** au point image de $C$. La roue « pose » donc sur le sol dans le dessin comme dans la réalité, en un seul point de contact.",
+        "(c) Deux raisons. 1) Une ellipse possède **deux axes de symétrie** : ses deux moitiés, de part et d'autre de chaque axe, sont superposables ; elle ne peut donc pas être plus pointue d'un côté que de l'autre. La forme « en œuf » n'a qu'un seul axe de symétrie : ce n'est pas une conique, donc pas une image possible du cercle. 2) L'argument « le côté éloigné est plus petit » est mal traduit : le raccourcissement de la profondeur ne crée pas de pointe, il fait seulement que le **centre de l'ellipse image n'est pas l'image du centre du cercle** (les milieux ne sont pas conservés). La courbe, elle, reste une ellipse exacte à deux axes."
+      ],
+      "reponse": "(a) une ellipse (section, par le tableau, du cône des rayons visuels) ; (b) l'image du sol est tangente à l'ellipse au point image de $C$, car la perspective conserve le contact ; (c) l'ellipse a deux axes de symétrie (l'« œuf » un seul) et le raccourcissement déplace le centre sans créer de pointe."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "synthese",
+      "enonce": "**Problème.** Un studio de design conçoit une lampe de bureau. On étudie successivement l'abat-jour, un arceau de protection et le dessin de la lampe en perspective. On rappelle que le demi-angle au sommet d'un cône de révolution est l'angle entre son axe et une génératrice.\\n\\n**Partie A — L'abat-jour.** L'abat-jour est modélisé par un cône de révolution de sommet $S$ et de demi-angle au sommet $\\alpha = 25°$.\\n1. La base circulaire de l'abat-jour est la section du cône par un plan perpendiculaire à l'axe, situé à $d = 20$ cm du sommet (le long de l'axe). Calculer le rayon $r$ de cette base, arrondi au millimètre.\\n2. Pour un effet lumineux, on coupe ce même cône par un plan ne passant pas par le sommet et faisant un angle $\\beta = 60°$ avec l'axe. Déterminer la nature de la section obtenue, en justifiant.\\n\\n**Partie B — L'arceau de protection.** Un arceau circulaire de centre $O$ et de rayon $8$ cm entoure l'ampoule. Une tige rectiligne, fixée à la structure en un point $A$ tel que $OA = 17$ cm, est tangente à l'arceau en un point $T$.\\n3. Calculer la longueur $AT$ de la portion de tige comprise entre $A$ et le point de contact $T$.\\n\\n**Partie C — Le dessin en perspective.** La lampe est posée sur une table ; le contour du socle est un disque de centre $\\Omega$ et de rayon $9$ cm. On dessine la scène en perspective centrale, le socle étant vu de biais.\\n4. Quelle est la nature de l'image du contour du socle sur le tableau ? Justifier en évoquant le cône des rayons visuels.\\n5. Le plateau de la table est, dans la réalité, un rectangle $ABCD$ ; son image en perspective est le quadrilatère $abcd$. On veut graver un motif exactement au centre du plateau. Décrire la construction géométrique qui place l'image de ce centre sur le dessin, et expliquer pourquoi placer le motif au milieu « mesuré à la règle » de $abcd$ serait faux.",
+      "corrige": [
+        "1. Vu de profil, le cône devient un triangle rectangle : à la distance $d = 20$ cm du sommet, le rayon de la section perpendiculaire à l'axe vaut $r = d \\times \\tan \\alpha = 20 \\tan 25° \\approx 20 \\times 0{,}466 \\approx 9{,}3$ cm.",
+        "2. On compare l'angle plan–axe $\\beta = 60°$ au demi-angle au sommet $\\alpha = 25°$ : on a $\\alpha = 25° < \\beta = 60° < 90°$. Le plan est incliné mais coupe toutes les génératrices d'une même nappe : la section est une **ellipse** (courbe fermée).",
+        "3. La tige $(AT)$ est tangente à l'arceau en $T$, donc perpendiculaire au rayon $[OT]$ : le triangle $OTA$ est rectangle en $T$. Par le théorème de Pythagore, $AT^2 = OA^2 - OT^2 = 17^2 - 8^2 = 289 - 64 = 225$, d'où $AT = \\sqrt{225} = 15$ cm.",
+        "4. Les rayons visuels issus de l'œil et s'appuyant sur le cercle du socle forment un cône de sommet l'œil ; le tableau, qui ne passe pas par ce sommet, coupe ce cône : l'image est une **conique**. Le socle étant vu de biais, cette conique est une courbe fermée : c'est une **ellipse**.",
+        "5. Construction : tracer les deux diagonales $[ac]$ et $[bd]$ du quadrilatère $abcd$ ; elles se coupent en un point $i$, image du centre du plateau, où l'on grave le motif. Justification : dans la réalité, les diagonales du rectangle $ABCD$ se coupent en son centre ; la perspective centrale conserve l'**alignement** et les **intersections**, donc l'image du centre est l'intersection des images des diagonales, c'est-à-dire $i$. Placer le motif au milieu « mesuré à la règle » de $abcd$ serait faux car la perspective **ne conserve ni les longueurs ni les milieux** : la moitié du plateau la plus éloignée de l'observateur occupe moins de place sur le dessin, si bien que le milieu mesuré n'est pas l'image du centre réel."
+      ],
+      "reponse": "1. $r = 20\\tan 25° \\approx 9{,}3$ cm ; 2. ellipse (car $\\alpha < \\beta < 90°$) ; 3. $AT = 15$ cm ; 4. une ellipse (image du cercle du socle par la perspective) ; 5. centre = intersection $i$ des diagonales de $abcd$ ; le milieu « à la règle » est faux car ni longueurs ni milieux ne sont conservés."
     }
   ]
 }

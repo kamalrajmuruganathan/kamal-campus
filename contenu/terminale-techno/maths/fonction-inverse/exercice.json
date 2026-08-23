@@ -84,6 +84,57 @@
         "(d) $M(10) = 1 + 5 + 9 = 15$ € et $M(100) = 10 + 5 + 0{,}9 = 15{,}90$ €. Si l'on produit trop peu, les frais fixes ($90$ €, le terme $\\dfrac{90}{x}$) se répartissent sur très peu d'objets et plombent le coût unitaire. Si l'on produit trop, c'est le terme $0{,}1x$ (surcoûts croissants : heures supplémentaires, usure…) qui domine. Le minimum en $x = 30$ réalise le meilleur équilibre entre les deux effets — c'est l'intérêt économique typique des fonctions $ax + b + \\dfrac{c}{x}$."
       ],
       "reponse": "(a) $M(x) = 0{,}1x + 5 + \\dfrac{90}{x}$ ; (b) $M'(x) = \\dfrac{0{,}1x^2 - 90}{x^2}$, négatif avant $30$, positif après ; (c) coût moyen minimal de $11$ € par objet pour $30$ objets par jour ; (d) $M(10) = 15$ €, $M(100) = 15{,}90$ € : frais fixes mal amortis d'un côté, surcoûts croissants de l'autre."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $f(x) = \\dfrac{12}{x}$, définie pour $x \\neq 0$. (a) Calculer $f'(x)$. (b) Calculer $f(-2)$ et $f'(-2)$. (c) En déduire l'équation réduite de la tangente à la courbe de $f$ au point d'abscisse $-2$.",
+      "corrige": [
+        "(a) La dérivée de $\\dfrac{c}{x}$ est $-\\dfrac{c}{x^2}$, donc $f'(x) = -\\dfrac{12}{x^2}$. Le signe moins fait partie de la formule.",
+        "(b) $f(-2) = \\dfrac{12}{-2} = -6$ et $f'(-2) = -\\dfrac{12}{(-2)^2} = -\\dfrac{12}{4} = -3$. Le point de contact est $(-2\\,;-6)$ et la pente de la tangente vaut $-3$ (négative : la fonction reste décroissante sur la branche des $x < 0$ également).",
+        "(c) Formule de Première : $y = f'(a)(x - a) + f(a)$ avec $a = -2$, soit $y = -3\\,(x - (-2)) + (-6) = -3(x + 2) - 6 = -3x - 6 - 6 = -3x - 12$. Vérification : en $x = -2$, $-3 \\times (-2) - 12 = 6 - 12 = -6$. ✓"
+      ],
+      "reponse": "(a) $f'(x) = -\\dfrac{12}{x^2}$ ; (b) $f(-2) = -6$ et $f'(-2) = -3$ ; (c) $y = -3x - 12$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Soit $f(x) = 4x + \\dfrac{25}{x}$ définie sur $\\left]0\\,;+\\infty\\right[$. (a) Calculer $f'(x)$ et montrer que $f'(x) = \\dfrac{(2x-5)(2x+5)}{x^2}$. (b) Étudier le signe de $f'(x)$ sur $\\left]0\\,;+\\infty\\right[$ et dresser le tableau de variations de $f$. (c) En déduire le minimum de $f$ sur $\\left]0\\,;+\\infty\\right[$.",
+      "corrige": [
+        "(a) $f'(x) = 4 - \\dfrac{25}{x^2}$. En mettant au même dénominateur : $f'(x) = \\dfrac{4x^2 - 25}{x^2}$. Or $4x^2 - 25 = (2x)^2 - 5^2 = (2x-5)(2x+5)$ (identité remarquable), d'où $f'(x) = \\dfrac{(2x-5)(2x+5)}{x^2}$.",
+        "(b) Sur $\\left]0\\,;+\\infty\\right[$ : $x^2 > 0$ et $2x + 5 > 0$, donc $f'(x)$ a le signe de $2x - 5$, qui s'annule en $x = \\dfrac{5}{2} = 2{,}5$. Ainsi $f'(x) < 0$ pour $0 < x < 2{,}5$ et $f'(x) > 0$ pour $x > 2{,}5$ : $f$ est décroissante sur $\\left]0\\,;2{,}5\\right]$ puis croissante sur $\\left[2{,}5\\,;+\\infty\\right[$.",
+        "(c) Le tableau montre un minimum atteint en $x = 2{,}5$, de valeur $f(2{,}5) = 4 \\times 2{,}5 + \\dfrac{25}{2{,}5} = 10 + 10 = 20$. Le minimum de $f$ sur $\\left]0\\,;+\\infty\\right[$ est donc $20$. Vérification : $f(1) = 4 + 25 = 29 > 20$ et $f(5) = 20 + 5 = 25 > 20$. ✓"
+      ],
+      "reponse": "(a) $f'(x) = \\dfrac{4x^2-25}{x^2} = \\dfrac{(2x-5)(2x+5)}{x^2}$ ; (b) $f$ décroissante sur $\\left]0\\,;2{,}5\\right]$, croissante sur $\\left[2{,}5\\,;+\\infty\\right[$ ; (c) minimum $20$, atteint en $x = 2{,}5$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "sens-de-variation",
+      "enonce": "Soit $f(x) = x + \\dfrac{25}{x}$, définie pour $x \\neq 0$. On l'étudie ici sur l'intervalle $\\left]-\\infty\\,;0\\right[$. (a) Montrer que $f'(x) = \\dfrac{(x-5)(x+5)}{x^2}$. (b) Étudier le signe de $f'(x)$ sur $\\left]-\\infty\\,;0\\right[$ et dresser le tableau de variations de $f$ sur cet intervalle. (c) En déduire que $f$ admet sur $\\left]-\\infty\\,;0\\right[$ un maximum, dont on précisera la valeur. (d) Sur $\\left]0\\,;+\\infty\\right[$, la même fonction admet un minimum égal à $10$, atteint en $x = 5$. Expliquer pourquoi il n'est pas contradictoire qu'un maximum ($-10$) soit plus petit qu'un minimum ($10$).",
+      "corrige": [
+        "(a) $f'(x) = 1 - \\dfrac{25}{x^2} = \\dfrac{x^2 - 25}{x^2} = \\dfrac{(x-5)(x+5)}{x^2}$, par mise au même dénominateur puis identité remarquable $x^2 - 25 = (x-5)(x+5)$.",
+        "(b) Sur $\\left]-\\infty\\,;0\\right[$ : $x^2 > 0$ et $x - 5 < 0$ (car $x < 0 < 5$), donc $f'(x)$ a le signe contraire de celui de $x + 5$. Pour $x < -5$ : $x + 5 < 0$, donc $f'(x) > 0$ et $f$ est croissante ; pour $-5 < x < 0$ : $x + 5 > 0$, donc $f'(x) < 0$ et $f$ est décroissante. $f$ croît sur $\\left]-\\infty\\,;-5\\right]$ puis décroît sur $\\left[-5\\,;0\\right[$.",
+        "(c) $f$ passe de croissante à décroissante en $x = -5$ : c'est un maximum, de valeur $f(-5) = -5 + \\dfrac{25}{-5} = -5 - 5 = -10$. Sur $\\left]-\\infty\\,;0\\right[$, $f$ admet donc un maximum égal à $-10$, atteint en $x = -5$.",
+        "(d) Le maximum $-10$ est un extremum LOCAL, valable uniquement sur la branche des $x < 0$ ; le minimum $10$ ne concerne que la branche des $x > 0$. Les deux branches sont séparées par la valeur interdite $0$, où $f$ n'est pas définie et « saute » de valeurs très négatives (juste à gauche de $0$) à des valeurs très grandes (juste à droite de $0$). Chaque extremum est le meilleur ou le pire de SA branche seulement : aucune comparaison globale n'a de sens. C'est exactement pour cela qu'on n'énonce jamais les variations sur la réunion $\\left]-\\infty\\,;0\\right[ \\cup \\left]0\\,;+\\infty\\right[$."
+      ],
+      "reponse": "(a) $f'(x) = \\dfrac{(x-5)(x+5)}{x^2}$ ; (b) $f$ croissante sur $\\left]-\\infty\\,;-5\\right]$, décroissante sur $\\left[-5\\,;0\\right[$ ; (c) maximum $-10$, atteint en $x = -5$ ; (d) le maximum et le minimum sont locaux, sur deux branches séparées par la valeur interdite $0$ : aucune contradiction."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Un agriculteur veut clôturer un enclos rectangulaire adossé à un long mur droit déjà existant. Le mur constitue l'un des grands côtés de l'enclos : il n'y a donc de la clôture que sur les trois autres côtés — les deux côtés perpendiculaires au mur, de longueur $x$ mètres chacun, et le côté parallèle au mur. L'enclos doit avoir une aire de $800$ m². On note $x > 0$ la longueur (en mètres) de chaque côté perpendiculaire au mur. 1. Exprimer la longueur du côté parallèle au mur en fonction de $x$, puis montrer que la longueur totale de clôture est $L(x) = 2x + \\dfrac{800}{x}$ sur $\\left]0\\,;+\\infty\\right[$. 2. Calculer $L'(x)$ et montrer que $L'(x) = \\dfrac{2(x-20)(x+20)}{x^2}$. 3. Étudier le signe de $L'(x)$ sur $\\left]0\\,;+\\infty\\right[$ et dresser le tableau de variations de $L$. 4. En déduire les dimensions de l'enclos qui rendent la longueur de clôture minimale, ainsi que la valeur de cette longueur minimale. 5. Décrire ce que devient $L(x)$ quand $x$ se rapproche de $0$, puis quand $x$ devient très grand, et interpréter concrètement ces deux comportements pour la forme de l'enclos.",
+      "corrige": [
+        "1. L'aire vaut (côté perpendiculaire) × (côté parallèle) $= x \\times (\\text{côté parallèle}) = 800$, donc le côté parallèle au mur mesure $\\dfrac{800}{x}$ mètres. La clôture couvre les deux côtés perpendiculaires ($x$ mètres chacun) et le côté parallèle : $L(x) = x + x + \\dfrac{800}{x} = 2x + \\dfrac{800}{x}$, définie pour $x > 0$.",
+        "2. On dérive terme à terme : $L'(x) = 2 - \\dfrac{800}{x^2}$. Au même dénominateur : $L'(x) = \\dfrac{2x^2 - 800}{x^2} = \\dfrac{2(x^2 - 400)}{x^2} = \\dfrac{2(x-20)(x+20)}{x^2}$, car $x^2 - 400 = (x-20)(x+20)$.",
+        "3. Sur $\\left]0\\,;+\\infty\\right[$ : $x^2 > 0$ et $x + 20 > 0$, donc $L'(x)$ a le signe de $x - 20$. Ainsi $L'(x) < 0$ pour $0 < x < 20$ et $L'(x) > 0$ pour $x > 20$ : $L$ est décroissante sur $\\left]0\\,;20\\right]$ puis croissante sur $\\left[20\\,;+\\infty\\right[$, avec un minimum en $x = 20$.",
+        "4. Le minimum est atteint en $x = 20$ : $L(20) = 2 \\times 20 + \\dfrac{800}{20} = 40 + 40 = 80$. Le côté parallèle au mur mesure alors $\\dfrac{800}{20} = 40$ m. L'enclos le plus économique mesure donc $20$ m sur ses côtés perpendiculaires et $40$ m le long du mur, pour une longueur de clôture minimale de $80$ mètres.",
+        "5. Quand $x$ se rapproche de $0$, le terme $\\dfrac{800}{x}$ devient aussi grand que l'on veut et $L(x)$ explose : la courbe longe l'asymptote verticale $x = 0$. Concrètement, un enclos très étroit et très profond (petit $x$, donc côté parallèle immense) exige une clôture démesurée. Quand $x$ devient très grand, $\\dfrac{800}{x}$ devient négligeable et $L(x)$ se rapproche de la droite $y = 2x$ : la clôture croît alors sans limite. Concrètement, un enclos très large mais très peu profond gaspille de la clôture sur ses deux longs côtés perpendiculaires. Entre ces deux excès, $x = 20$ réalise le meilleur compromis."
+      ],
+      "reponse": "1. côté parallèle $= \\dfrac{800}{x}$, d'où $L(x) = 2x + \\dfrac{800}{x}$ ; 2. $L'(x) = \\dfrac{2(x-20)(x+20)}{x^2}$ ; 3. $L$ décroissante sur $\\left]0\\,;20\\right]$, croissante sur $\\left[20\\,;+\\infty\\right[$ ; 4. clôture minimale de $80$ m pour un enclos de $20$ m (côtés perpendiculaires) sur $40$ m (le long du mur) ; 5. près de $0$ et pour $x$ grand, $L$ tend vers des valeurs immenses (asymptote $x = 0$, puis rapprochement de la droite $y = 2x$) — les formes extrêmes gaspillent la clôture."
     }
   ]
 }

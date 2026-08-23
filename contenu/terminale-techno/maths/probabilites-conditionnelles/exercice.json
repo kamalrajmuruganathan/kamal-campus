@@ -84,6 +84,57 @@
         "(d) Oui : sachant qu'une bouteille est non conforme, la ligne $C$ est la plus probable ($\\approx 42\\,\\%$ des non-conformités), devant $B$ ($\\approx 32\\,\\%$) et $A$ ($\\approx 26\\,\\%$), alors que $C$ n'assure que $20\\,\\%$ de la production. Son taux de défaut ($4\\,\\%$, soit quatre fois celui de $A$) l'emporte sur sa petite part de production. Nuance : « première source » signifie $P_N(C)$ maximal — cela ne veut pas dire que $C$ produit majoritairement du non-conforme ($P_C(N) = 0{,}04$ seulement)."
       ],
       "reponse": "(b) $P(N) = 0{,}019$ ; (c) $P_N(A) = \\dfrac{5}{19} \\approx 0{,}263$ ; $P_N(B) = \\dfrac{6}{19} \\approx 0{,}316$ ; $P_N(C) = \\dfrac{8}{19} \\approx 0{,}421$ ; (d) oui, la ligne $C$ concentre $\\approx 42\\,\\%$ des non-conformités."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Sur une plateforme de streaming, $40\\,\\%$ des abonnés ont souscrit l'offre famille ($F$). Parmi les abonnés à l'offre famille, $60\\,\\%$ regardent des programmes jeunesse chaque semaine ($J$). (a) Traduire les deux données de l'énoncé en notations de probabilités. (b) Calculer $P(F \\cap J)$. (c) On sait par ailleurs que, sur l'ensemble des abonnés, $30\\,\\%$ regardent des programmes jeunesse chaque semaine, c'est-à-dire $P(J) = 0{,}3$. Calculer $P_J(F)$ et interpréter le résultat par une phrase.",
+      "corrige": [
+        "(a) « $40\\,\\%$ des abonnés ont l'offre famille » porte sur tous les abonnés : c'est une probabilité simple, $P(F) = 0{,}4$. « Parmi les abonnés à l'offre famille, $60\\,\\%$ regardent la jeunesse » restreint l'univers aux abonnés famille : c'est une conditionnelle, $P_F(J) = 0{,}6$.",
+        "(b) « Avoir l'offre famille ET regarder la jeunesse » s'obtient par la formule du produit : $P(F \\cap J) = P(F) \\times P_F(J) = 0{,}4 \\times 0{,}6 = 0{,}24$. Ainsi $24\\,\\%$ de l'ensemble des abonnés sont dans les deux catégories à la fois.",
+        "(c) On renverse la condition avec la définition : $P_J(F) = \\dfrac{P(F \\cap J)}{P(J)} = \\dfrac{0{,}24}{0{,}3} = 0{,}8$. Interprétation : parmi les abonnés qui regardent des programmes jeunesse, $80\\,\\%$ ont l'offre famille. Attention : $P_J(F) = 0{,}8 \\neq P_F(J) = 0{,}6$, les deux conditionnelles n'ont pas le même ensemble de référence."
+      ],
+      "reponse": "(a) $P(F) = 0{,}4$ ; $P_F(J) = 0{,}6$ ; (b) $P(F \\cap J) = 0{,}24$ ; (c) $P_J(F) = 0{,}8$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "arbre-pondere",
+      "enonce": "Une entreprise reçoit des candidatures par deux voies : $60\\,\\%$ arrivent via un site d'emploi ($S$) et le reste par cooptation (un salarié recommande un candidat). Un candidat passant par le site d'emploi obtient un entretien ($E$) dans $25\\,\\%$ des cas ; un candidat coopté en obtient un dans $50\\,\\%$ des cas. On choisit une candidature au hasard. (a) Traduire les données et construire l'arbre pondéré. (b) Calculer la probabilité qu'une candidature vienne d'une cooptation et débouche sur un entretien. (c) Calculer la probabilité qu'une candidature débouche sur un entretien.",
+      "corrige": [
+        "(a) Premier niveau (partition de l'origine) : $P(S) = 0{,}6$ et $P(\\bar{S}) = 0{,}4$. Deuxième niveau (conditionnelles) : $P_S(E) = 0{,}25$ donc $P_S(\\bar{E}) = 0{,}75$ ; $P_{\\bar{S}}(E) = 0{,}5$ donc $P_{\\bar{S}}(\\bar{E}) = 0{,}5$. On vérifie que les branches de chaque nœud somment à $1$.",
+        "(b) « Cooptation ET entretien » est le chemin $\\bar{S} \\to E$ : on multiplie le long du chemin, $P(\\bar{S} \\cap E) = P(\\bar{S}) \\times P_{\\bar{S}}(E) = 0{,}4 \\times 0{,}5 = 0{,}2$.",
+        "(c) $E$ est atteint par deux chemins ; on additionne (formule des probabilités totales) : $P(E) = P(S \\cap E) + P(\\bar{S} \\cap E) = 0{,}6 \\times 0{,}25 + 0{,}2 = 0{,}15 + 0{,}2 = 0{,}35$. Au total, $35\\,\\%$ des candidatures débouchent sur un entretien."
+      ],
+      "reponse": "(a) $P(S) = 0{,}6$ ; $P_S(E) = 0{,}25$ ; $P_{\\bar{S}}(E) = 0{,}5$ ; (b) $P(\\bar{S} \\cap E) = 0{,}2$ ; (c) $P(E) = 0{,}35$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "inverser-la-condition",
+      "enonce": "Un fournisseur d'accès à internet a deux types d'abonnés : $40\\,\\%$ sont en fibre ($F$) et $60\\,\\%$ en ADSL. Le mois dernier, $5\\,\\%$ des abonnés fibre ont subi une panne ($P$). Le service technique constate que, sur l'ensemble des abonnés, $8\\,\\%$ ont subi une panne, soit $P(P) = 0{,}08$, mais a perdu le taux de panne des abonnés ADSL. (a) Écrire la formule des probabilités totales pour $P$ en laissant $P_{\\bar{F}}(P)$ comme inconnue. (b) En déduire $P_{\\bar{F}}(P)$, le taux de panne des abonnés ADSL. (c) Un abonné a subi une panne. Calculer la probabilité qu'il soit en fibre, arrondie au millième. (d) Comparer $P_{\\bar{F}}(P)$ et $P_P(F)$ : que représentent ces deux nombres ?",
+      "corrige": [
+        "(a) $F$ et $\\bar{F}$ (ADSL) forment une partition. La formule des probabilités totales donne $P(P) = P(F) \\times P_F(P) + P(\\bar{F}) \\times P_{\\bar{F}}(P)$, soit $0{,}08 = 0{,}4 \\times 0{,}05 + 0{,}6 \\times P_{\\bar{F}}(P)$.",
+        "(b) On isole l'inconnue : $0{,}08 = 0{,}02 + 0{,}6 \\times P_{\\bar{F}}(P)$, donc $0{,}6 \\times P_{\\bar{F}}(P) = 0{,}06$ et $P_{\\bar{F}}(P) = \\dfrac{0{,}06}{0{,}6} = 0{,}1$. Le taux de panne des abonnés ADSL est de $10\\,\\%$.",
+        "(c) On renverse la condition : $P_P(F) = \\dfrac{P(F \\cap P)}{P(P)} = \\dfrac{0{,}4 \\times 0{,}05}{0{,}08} = \\dfrac{0{,}02}{0{,}08} = 0{,}25$. Parmi les abonnés ayant subi une panne, $25\\,\\%$ sont en fibre.",
+        "(d) $P_{\\bar{F}}(P) = 0{,}1$ est le taux de panne parmi les abonnés ADSL (référence : les abonnés ADSL). $P_P(F) = 0{,}25$ est la proportion d'abonnés fibre parmi ceux qui ont eu une panne (référence : les abonnés en panne). Deux ensembles de référence différents, deux nombres différents : ils ne se comparent pas directement et ne doivent pas être confondus."
+      ],
+      "reponse": "(b) $P_{\\bar{F}}(P) = 0{,}1$ (soit $10\\,\\%$) ; (c) $P_P(F) = 0{,}25$ ; (d) $P_{\\bar{F}}(P)$ = taux de panne chez les ADSL, $P_P(F)$ = part de fibre parmi les abonnés en panne."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "probabilites-totales",
+      "enonce": "Une entreprise assemble des trottinettes électriques et s'approvisionne en batteries auprès de deux fournisseurs. Le fournisseur $X$ livre $70\\,\\%$ des batteries et le fournisseur $Y$ les $30\\,\\%$ restants. D'après les contrôles, $3\\,\\%$ des batteries livrées par $X$ présentent un défaut ($D$), contre $6\\,\\%$ des batteries livrées par $Y$. On prélève une batterie au hasard dans le stock. Les résultats seront arrondis au millième si nécessaire. 1. Traduire les données de l'énoncé en notations de probabilités, puis construire l'arbre pondéré de la situation. 2. Calculer la probabilité que la batterie prélevée provienne du fournisseur $Y$ et présente un défaut. 3. Montrer que la probabilité qu'une batterie prélevée présente un défaut est $P(D) = 0{,}039$. 4. Calculer la probabilité qu'une batterie prélevée ne présente aucun défaut. 5. Le service qualité met de côté toutes les batteries défectueuses. Une batterie est défectueuse : calculer la probabilité qu'elle provienne du fournisseur $X$, arrondie au millième, puis comparer ce résultat à la part de $X$ dans l'approvisionnement.",
+      "corrige": [
+        "1. « $X$ livre $70\\,\\%$ des batteries » et « $Y$ les $30\\,\\%$ restants » donnent le premier niveau : $P(X) = 0{,}7$ et $P(Y) = 0{,}3$ ($\\{X, Y\\}$ est une partition du stock). « $3\\,\\%$ des batteries de $X$ sont défectueuses » et « $6\\,\\%$ de celles de $Y$ » sont des conditionnelles (deuxième niveau) : $P_X(D) = 0{,}03$ et $P_Y(D) = 0{,}06$. On complète chaque nœud pour que la somme fasse $1$ : $P_X(\\bar{D}) = 0{,}97$ et $P_Y(\\bar{D}) = 0{,}94$.",
+        "2. « Provenir de $Y$ ET être défectueuse » est le chemin $Y \\to D$ : formule du produit, $P(Y \\cap D) = P(Y) \\times P_Y(D) = 0{,}3 \\times 0{,}06 = 0{,}018$.",
+        "3. La partition $\\{X, Y\\}$ donne, par la formule des probabilités totales : $P(D) = P(X) \\times P_X(D) + P(Y) \\times P_Y(D) = 0{,}7 \\times 0{,}03 + 0{,}3 \\times 0{,}06 = 0{,}021 + 0{,}018 = 0{,}039$. On a bien $P(D) = 0{,}039$, soit $3{,}9\\,\\%$ de batteries défectueuses en tout.",
+        "4. « Aucun défaut » est l'événement contraire de $D$ : $P(\\bar{D}) = 1 - P(D) = 1 - 0{,}039 = 0{,}961$. Environ $96{,}1\\,\\%$ des batteries sont sans défaut.",
+        "5. On renverse la condition avec la définition : $P_D(X) = \\dfrac{P(X \\cap D)}{P(D)} = \\dfrac{0{,}7 \\times 0{,}03}{0{,}039} = \\dfrac{0{,}021}{0{,}039} = \\dfrac{21}{39} = \\dfrac{7}{13} \\approx 0{,}538$. Ainsi, parmi les batteries défectueuses, environ $53{,}8\\,\\%$ viennent de $X$. C'est un peu moins que la part de $X$ dans l'approvisionnement ($70\\,\\%$) : bien que $X$ fournisse la majorité des batteries, son taux de défaut plus faible ($3\\,\\%$ contre $6\\,\\%$ pour $Y$) fait que $Y$ est surreprésenté parmi les défectueuses ($P_D(Y) = \\dfrac{6}{13} \\approx 0{,}462$, soit $46{,}2\\,\\%$ pour seulement $30\\,\\%$ de l'approvisionnement)."
+      ],
+      "reponse": "2. $P(Y \\cap D) = 0{,}018$ ; 3. $P(D) = 0{,}039$ ; 4. $P(\\bar{D}) = 0{,}961$ ; 5. $P_D(X) = \\dfrac{7}{13} \\approx 0{,}538$, soit un peu moins que les $70\\,\\%$ de $X$ dans l'approvisionnement (car $Y$ a un taux de défaut deux fois plus élevé)."
     }
   ]
 }

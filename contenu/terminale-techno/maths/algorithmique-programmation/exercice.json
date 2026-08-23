@@ -84,6 +84,57 @@
         "(d) On remplace la liste par un **compteur**, initialisé avant la boucle, et on retourne la condition :\n```python\nc = 0\nfor n in range(10):\n    if 2000 * 0.85 ** n >= 1000:\n        c = c + 1\n```\n`c` vaut $5$ (les rangs $0$ à $4$). Garder des valeurs → `append` ; les compter → `c = c + 1`. On vérifie la cohérence : $5$ rangs retenus $+$ $5$ rangs de la question (c) $= 10 =$ nombre de tours de boucle."
       ],
       "reponse": "(a) géométrique, $u_0 = 2000$, $q = 0{,}85$ ; (b) les rangs des années où la valeur est $< 1000$ € ; (c) $u_4 \\approx 1044{,}01$, $u_5 \\approx 887{,}41$, donc `annees = [5, 6, 7, 8, 9]` ; (d) compteur `c = c + 1` sous la condition `>= 1000`, qui donne $c = 5$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "fonctions",
+      "enonce": "Une course de taxi coûte $2{,}50$ € de prise en charge (montant fixe payé dès la montée), plus $1{,}20$ € par kilomètre parcouru. Le prix d'une course de $d$ kilomètres est donc $p(d) = 2{,}50 + 1{,}20\\,d$. (a) Écrire une fonction Python `prix(d)` qui renvoie le prix d'une course de `d` kilomètres. (b) Que renvoie `prix(10)` ? (c) Que renvoie `prix(0)`, et à quoi correspond ce montant ?",
+      "corrige": [
+        "(a) On traduit directement l'expression $p(d) = 2{,}50 + 1{,}20\\,d$, en écrivant les décimaux avec un **point** :\n```python\ndef prix(d):\n    return 2.5 + 1.2 * d\n```\nLe `def` définit la fonction et le `return` renvoie le résultat, réutilisable dans un calcul.",
+        "(b) `prix(10)` remplace `d` par $10$ : la fonction renvoie $2{,}50 + 1{,}20 \\times 10 = 2{,}50 + 12 = 14{,}50$. Une course de $10$ km coûte $14{,}50$ €.",
+        "(c) `prix(0)` renvoie $2{,}50 + 1{,}20 \\times 0 = 2{,}50$. C'est le prix d'une course de $0$ km : la seule **prise en charge**, payée même sans distance parcourue."
+      ],
+      "reponse": "(a) `def prix(d): return 2.5 + 1.2 * d` ; (b) $14{,}50$ € ; (c) $2{,}50$ €, la prise en charge (partie fixe)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "generation-parcours-listes",
+      "enonce": "Les recettes d'un site valent $100$ € le premier mois (rang $n = 0$) et augmentent de $10\\,\\%$ chaque mois : la recette du mois de rang $n$ est $u_n = 100 \\times 1{,}1^n$ (suite géométrique). (a) Écrire un programme qui construit, par ajouts successifs, la liste `recettes` des recettes des $5$ premiers mois (rangs $0$ à $4$). (b) Écrire une fonction `total(L)` qui renvoie la somme des éléments d'une liste `L`. (c) En déduire la recette totale des $5$ premiers mois (arrondir au centime).",
+      "corrige": [
+        "(a) On part de la liste vide et on remplit dans une boucle. Les $5$ premiers mois sont les rangs $0$ à $4$, soit $5$ valeurs : `range(5)` produit exactement $0, 1, 2, 3, 4$.\n```python\nrecettes = []\nfor n in range(5):\n    recettes.append(100 * 1.1 ** n)\n# recettes vaut [100.0, 110.0, 121.0, 133.1, 146.41]\n```",
+        "(b) Une somme se calcule avec un **accumulateur** initialisé **avant** la boucle, puis mis à jour à chaque tour ; le `return` est placé **après** la boucle :\n```python\ndef total(L):\n    s = 0\n    for x in L:\n        s = s + x\n    return s\n```",
+        "(c) L'appel `total(recettes)` additionne $100 + 110 + 121 + 133{,}1 + 146{,}41 = 610{,}51$. La recette totale des $5$ premiers mois est donc environ $610{,}51$ €."
+      ],
+      "reponse": "(a) `for n in range(5)` avec `recettes.append(100 * 1.1 ** n)` → `[100, 110, 121, 133.1, 146.41]` ; (b) accumulateur `s = 0` puis `s = s + x`, `return` après la boucle ; (c) total $\\approx 610{,}51$ €."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "selection-donnees",
+      "enonce": "Les notes obtenues par un élève à ses huit devoirs de l'année sont `notes = [7, 13, 15, 6, 11, 18, 9, 14]`. On considère qu'un devoir est **réussi** si la note est **supérieure ou égale à $10$**. (a) Écrire une fonction `reussis(L)` qui renvoie la liste des notes de `L` supérieures ou égales à $10$. (b) Que renvoie `reussis(notes)` ? (c) Écrire une fonction `taux(L)` qui renvoie le pourcentage de devoirs réussis dans `L`. (d) Calculer `taux(notes)`. Pourquoi une note de $10$ pile est-elle comptée comme réussie ici ?",
+      "corrige": [
+        "(a) On applique le schéma « liste vide → parcours → `if` condition → `append` », avec une condition **au sens large** ($\\geqslant$) :\n```python\ndef reussis(L):\n    resultat = []\n    for x in L:\n        if x >= 10:\n            resultat.append(x)\n    return resultat\n```\nLa liste de départ n'est pas modifiée ; seules les notes qui vérifient la condition sont ajoutées.",
+        "(b) On teste chaque note : $7$ (non), $13$ (oui), $15$ (oui), $6$ (non), $11$ (oui), $18$ (oui), $9$ (non), $14$ (oui). La fonction renvoie `[13, 15, 11, 18, 14]`, dans l'ordre de la liste de départ.",
+        "(c) Le pourcentage est le nombre de réussis rapporté au nombre total, multiplié par $100$. On peut réutiliser la fonction précédente :\n```python\ndef taux(L):\n    return len(reussis(L)) / len(L) * 100\n```\n`len(reussis(L))` compte les notes retenues et `len(L)` le total.",
+        "(d) Il y a $5$ devoirs réussis sur $8$, soit $\\dfrac{5}{8} \\times 100 = 62{,}5$. `taux(notes)` renvoie $62{,}5$ (%). Une note de $10$ pile serait comptée réussie car la condition `x >= 10` est **au sens large** : elle est vraie pour $x = 10$. Avec `x > 10` (strict), un $10$ serait au contraire rejeté."
+      ],
+      "reponse": "(a) filtre `if x >= 10` avec `append` ; (b) `[13, 15, 11, 18, 14]` ; (c) `len(reussis(L)) / len(L) * 100` ; (d) $62{,}5\\,\\%$ ; un $10$ est retenu car le seuil `>=` est au sens large."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "variables-fonctions-listes-selection",
+      "enonce": "Une plateforme de streaming compte $500$ abonnés en janvier (mois de rang $n = 0$) et prévoit une hausse de $8\\,\\%$ chaque mois. On note $u_n$ le nombre d'abonnés prévu le mois de rang $n$, avec $u_n = 500 \\times 1{,}08^n$.\n\n1. On exécute le programme suivant :\n```python\nu = 500\nu = u * 1.08\nu = u * 1.08\n```\nDérouler ce programme ligne par ligne et donner la valeur finale de `u`. À quel terme de la suite correspond-elle ?\n\n2. Écrire une fonction Python `abonnes(n)` qui renvoie $u_n$. Que renvoient `abonnes(0)` et `abonnes(6)` (arrondir à l'unité près pour ce dernier) ?\n\n3. Écrire un programme qui construit, par ajouts successifs, la liste `prev` des effectifs prévus pour les $12$ premiers mois (rangs $0$ à $11$). Justifier la borne du `range`, puis donner `prev[0]` et `prev[11]` (arrondi au centième).\n\n4. On exécute :\n```python\ndepasse = []\nfor n in range(12):\n    if 500 * 1.08 ** n > 1000:\n        depasse.append(n)\n```\nQue contient la liste `depasse` ? On justifiera en comparant $u_9$ et $u_{10}$ au seuil de $1\\,000$ abonnés.\n\n5. Modifier le programme de la question 4 pour compter, à l'aide d'un compteur, le nombre de mois (rangs $0$ à $11$) où l'effectif prévu reste **inférieur ou égal** à $1\\,000$ abonnés. Vérifier la cohérence avec la question 4.",
+      "corrige": [
+        "1. Déroulé ligne par ligne. Après `u = 500` : $u = 500$. Après `u = u * 1.08` : on calcule $500 \\times 1{,}08 = 540$ puis on écrase, $u = 540$. Après le second `u = u * 1.08` : $540 \\times 1{,}08 = 583{,}2$, donc $u = 583{,}2$. L'affectation `u = u * 1.08` traduit la relation de récurrence $u_{n+1} = 1{,}08\\,u_n$ d'une suite géométrique de raison $1{,}08$. La valeur finale $583{,}2$ correspond à $u_2 = 500 \\times 1{,}08^2$ (deux multiplications par $1{,}08$).",
+        "2. On traduit le terme général $u_n = 500 \\times 1{,}08^n$ :\n```python\ndef abonnes(n):\n    return 500 * 1.08 ** n\n```\n`abonnes(0)` renvoie $500 \\times 1{,}08^0 = 500 \\times 1 = 500$ (les $500$ abonnés de départ). `abonnes(6)` renvoie $500 \\times 1{,}08^6 \\approx 500 \\times 1{,}58687 \\approx 793{,}44$, soit environ $793$ abonnés.",
+        "3. Pour les rangs $0$ à $11$ inclus, il y a $12$ termes ; or `range(12)` produit exactement les entiers $0, 1, \\ldots, 11$ (la borne $12$ est exclue).\n```python\nprev = []\nfor n in range(12):\n    prev.append(500 * 1.08 ** n)\n```\n`prev[0]` est le premier élément : $u_0 = 500$. `prev[11]` est le dernier (indice $\\texttt{len(prev)} - 1 = 11$) : $u_{11} = 500 \\times 1{,}08^{11} \\approx 1165{,}82$ abonnés.",
+        "4. Le programme parcourt les rangs $n$ de $0$ à $11$ et sélectionne, avec `append`, ceux dont l'effectif dépasse **strictement** $1\\,000$ : `depasse` contient donc les **rangs** des mois où le nombre d'abonnés prévu dépasse $1\\,000$. On compare au seuil : $u_9 = 500 \\times 1{,}08^9 \\approx 999{,}50 < 1000$ (rang $9$ **non** retenu, l'effectif est juste sous le seuil), tandis que $u_{10} = 500 \\times 1{,}08^{10} \\approx 1079{,}46 > 1000$ (rang $10$ retenu). La suite étant croissante (raison $1{,}08 > 1$), tous les rangs suivants dépassent aussi le seuil. Ainsi `depasse` vaut `[10, 11]` : le seuil de $1\\,000$ abonnés est franchi à partir du mois de rang $10$.",
+        "5. On remplace la liste par un **compteur** initialisé avant la boucle, et on retourne la condition (au sens large) :\n```python\nc = 0\nfor n in range(12):\n    if 500 * 1.08 ** n <= 1000:\n        c = c + 1\n```\n`c` vaut $10$ : ce sont les rangs $0$ à $9$ (l'effectif reste $\\leqslant 1000$ jusqu'à $u_9 \\approx 999{,}50$). Cohérence avec la question 4 : $10$ mois sous le seuil $+$ $2$ mois au-dessus (rangs $10$ et $11$) $= 12$, le nombre total de mois examinés. Garder les rangs → `append` ; les compter → `c = c + 1`."
+      ],
+      "reponse": "1. $u = 583{,}2 = u_2$ ; 2. `def abonnes(n): return 500 * 1.08 ** n`, `abonnes(0)` $= 500$, `abonnes(6)` $\\approx 793$ ; 3. `range(12)` pour $12$ termes, `prev[0]` $= 500$, `prev[11]` $\\approx 1165{,}82$ ; 4. `depasse = [10, 11]` (car $u_9 \\approx 999{,}50 < 1000 < u_{10} \\approx 1079{,}46$) ; 5. compteur `c = 10` mois avec effectif $\\leqslant 1000$, et $10 + 2 = 12$."
     }
   ]
 }

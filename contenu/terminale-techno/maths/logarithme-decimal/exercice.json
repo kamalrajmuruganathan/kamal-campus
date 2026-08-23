@@ -84,6 +84,59 @@
         "Comme $x \\mapsto 2^x$ est strictement croissante, la population dépasse le million après $x \\approx 10{,}97$ h, soit au bout d'environ $11$ heures (à l'heure entière : $N(10) = 512\\,000 < 10^6$ et $N(11) = 1\\,024\\,000 > 10^6$)."
       ],
       "reponse": "(a) au bout de $4$ ans ($x \\approx 3{,}49$) ; (b) $a = 2^{1/10} \\approx 1{,}0718$, soit $t \\approx 7{,}2\\,\\%$ par an ; (c) $x = \\dfrac{\\log 2000}{\\log 2} \\approx 10{,}97$, soit environ $11$ h."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "transformations",
+      "enonce": "Transformer les expressions suivantes. On donne $\\log 2 \\approx 0{,}301$ et $\\log 3 \\approx 0{,}477$. (a) Exprimer à l'aide de $\\log 2$ et $\\log 3$, puis donner une valeur approchée : $\\log 6$, $\\log\\dfrac{9}{2}$ et $\\log 24$. (b) Regrouper en un seul logarithme et simplifier si possible : $2\\log 3 + \\log 2$ et $\\log 40 - \\log 4$.",
+      "corrige": [
+        "(a) $\\log 6 = \\log(2 \\times 3) = \\log 2 + \\log 3 \\approx 0{,}301 + 0{,}477 = 0{,}778$.",
+        "$\\log\\dfrac{9}{2} = \\log 9 - \\log 2 = \\log(3^2) - \\log 2 = 2\\log 3 - \\log 2 \\approx 0{,}954 - 0{,}301 = 0{,}653$.",
+        "$\\log 24 = \\log(2^3 \\times 3) = 3\\log 2 + \\log 3 \\approx 0{,}903 + 0{,}477 = 1{,}380$. Le réflexe : décomposer le nombre en produit, quotient ou puissance de $2$, $3$ et $10$, dont on connaît le log.",
+        "(b) $2\\log 3 + \\log 2 = \\log(3^2) + \\log 2 = \\log 9 + \\log 2 = \\log(9 \\times 2) = \\log 18 \\approx 1{,}255$.",
+        "$\\log 40 - \\log 4 = \\log\\dfrac{40}{4} = \\log 10 = 1$. Ici la simplification est exacte, sans valeur approchée : une somme (ou différence) de logs peut rentrer dans un seul log."
+      ],
+      "reponse": "(a) $\\log 6 \\approx 0{,}778$ ; $\\log\\dfrac{9}{2} = 2\\log 3 - \\log 2 \\approx 0{,}653$ ; $\\log 24 = 3\\log 2 + \\log 3 \\approx 1{,}380$. (b) $2\\log 3 + \\log 2 = \\log 18 \\approx 1{,}255$ ; $\\log 40 - \\log 4 = \\log 10 = 1$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "contextes",
+      "enonce": "La magnitude d'un séisme sur l'échelle de Richter est $M = \\log\\dfrac{A}{A_0}$, où $A$ est l'amplitude maximale enregistrée et $A_0$ une amplitude de référence. (a) Un séisme a une amplitude $A = 3 \\times 10^6\\,A_0$. Calculer sa magnitude (arrondir au dixième ; on prend $\\log 3 \\approx 0{,}477$). (b) Le séisme de Kobe (1995) a atteint la magnitude $7{,}3$ et celui de L'Aquila (2009) la magnitude $6{,}3$. Combien de fois l'amplitude du séisme de Kobe est-elle plus grande que celle de L'Aquila ?",
+      "corrige": [
+        "(a) $M = \\log\\dfrac{A}{A_0} = \\log(3 \\times 10^6) = \\log 3 + \\log(10^6) = \\log 3 + 6 \\approx 0{,}477 + 6 = 6{,}477$, soit une magnitude d'environ $6{,}5$.",
+        "(b) Notons $A_1$ et $A_2$ les amplitudes de Kobe et de L'Aquila. On a $\\log\\dfrac{A_1}{A_0} = 7{,}3$ et $\\log\\dfrac{A_2}{A_0} = 6{,}3$. En soustrayant et en utilisant $\\log\\dfrac{A_1}{A_0} - \\log\\dfrac{A_2}{A_0} = \\log\\dfrac{A_1}{A_2}$, on obtient $\\log\\dfrac{A_1}{A_2} = 7{,}3 - 6{,}3 = 1$.",
+        "Par définition du logarithme, $\\log\\dfrac{A_1}{A_2} = 1$ équivaut à $\\dfrac{A_1}{A_2} = 10^1 = 10$ : l'amplitude du séisme de Kobe est $10$ fois plus grande. Le piège classique : $1$ point d'écart de magnitude, ce n'est pas « un peu plus fort », c'est une amplitude multipliée par $10$."
+      ],
+      "reponse": "(a) $M = \\log 3 + 6 \\approx 6{,}5$ ; (b) $\\dfrac{A_1}{A_2} = 10^{7{,}3 - 6{,}3} = 10^1 = 10$ fois plus grande."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "resolution-equations",
+      "enonce": "Deux placements sont proposés. Le placement A part de $10\\,000$ € à $3\\,\\%$ par an ; sa valeur au bout de $x$ années est $A(x) = 10\\,000 \\times 1{,}03^x$. Le placement B part de $12\\,000$ € à $1{,}5\\,\\%$ par an : $B(x) = 12\\,000 \\times 1{,}015^x$. (a) Au bout de combien d'années entières le placement A dépasse-t-il le placement B ? (b) Vérifier la réponse en comparant $A(x)$ et $B(x)$ à cette année-là et à la précédente.",
+      "corrige": [
+        "(a) On cherche $x$ tel que $A(x) > B(x)$, soit $10\\,000 \\times 1{,}03^x > 12\\,000 \\times 1{,}015^x$. On regroupe les puissances d'un même côté : $\\dfrac{1{,}03^x}{1{,}015^x} > \\dfrac{12\\,000}{10\\,000}$, c'est-à-dire $\\left(\\dfrac{1{,}03}{1{,}015}\\right)^x > 1{,}2$.",
+        "Le coefficient vaut $\\dfrac{1{,}03}{1{,}015} \\approx 1{,}01478 > 1$. On résout l'équation associée $1{,}01478^x = 1{,}2$ en prenant le log : $x = \\dfrac{\\log 1{,}2}{\\log 1{,}01478} \\approx \\dfrac{0{,}07918}{0{,}006371} \\approx 12{,}43$.",
+        "Comme la fonction $x \\mapsto 1{,}01478^x$ est strictement croissante (base $> 1$), l'inégalité $\\left(\\dfrac{1{,}03}{1{,}015}\\right)^x > 1{,}2$ est vraie à partir de $x \\approx 12{,}43$ : le placement A dépasse le placement B au bout de $13$ années entières.",
+        "(b) Vérification : $A(12) = 10\\,000 \\times 1{,}03^{12} \\approx 14\\,258$ € et $B(12) = 12\\,000 \\times 1{,}015^{12} \\approx 14\\,347$ € : à $12$ ans, B est encore devant. À $13$ ans, $A(13) \\approx 14\\,685$ € et $B(13) \\approx 14\\,562$ € : A est passé devant. La réponse « $13$ ans » est bien confirmée."
+      ],
+      "reponse": "(a) $\\left(\\dfrac{1{,}03}{1{,}015}\\right)^x > 1{,}2$, soit $x > \\dfrac{\\log 1{,}2}{\\log 1{,}01478} \\approx 12{,}43$ : A dépasse B au bout de $13$ ans. (b) $A(12) \\approx 14\\,258 < B(12) \\approx 14\\,347$ et $A(13) \\approx 14\\,685 > B(13) \\approx 14\\,562$."
+    },
+    {
+      "id": 10,
+      "difficulte": "bac",
+      "notion": "contextes",
+      "enonce": "PROBLÈME. Après une injection, la quantité de médicament présente dans le sang d'un patient, en milligrammes, au bout de $x$ heures, est modélisée par $Q(x) = 240 \\times 0{,}8^{x}$. On donne $\\log 2 \\approx 0{,}30103$. 1. Calculer la quantité de médicament au bout de $3$ heures (arrondir au dixième de mg). 2. Quel pourcentage du médicament présent est éliminé chaque heure ? Interpréter le coefficient $0{,}8$. 3. Résoudre l'équation $Q(x) = 120$ et interpréter le résultat (valeur exacte puis arrondi au dixième d'heure). 4. Le médicament n'est plus actif dès que la quantité passe sous $30$ mg. Déterminer au bout de combien d'heures entières il cesse d'être actif. 5. On double la dose injectée : $Q_2(x) = 480 \\times 0{,}8^{x}$. Montrer que le médicament ne reste actif qu'environ $3$ heures de plus, et relier ce résultat à la question 3.",
+      "corrige": [
+        "1. $Q(3) = 240 \\times 0{,}8^{3} = 240 \\times 0{,}512 = 122{,}88$, soit environ $122{,}9$ mg.",
+        "2. D'une heure à la suivante, la quantité est multipliée par $0{,}8$ : il en reste $80\\,\\%$, donc $20\\,\\%$ du médicament présent est éliminé chaque heure. Le coefficient $0{,}8 = 1 - 0{,}20$ traduit une baisse de $20\\,\\%$ par heure.",
+        "3. $Q(x) = 120$ s'écrit $240 \\times 0{,}8^{x} = 120$, soit $0{,}8^{x} = 0{,}5$. On prend le log : $x = \\dfrac{\\log 0{,}5}{\\log 0{,}8}$. Or $\\log 0{,}5 = -\\log 2 \\approx -0{,}30103$ et $\\log 0{,}8 = \\log\\dfrac{8}{10} = 3\\log 2 - 1 \\approx -0{,}09691$, d'où $x = \\dfrac{-0{,}30103}{-0{,}09691} \\approx 3{,}1$ h. C'est le temps de demi-vie : au bout d'environ $3{,}1$ heures, il ne reste que la moitié de la dose initiale.",
+        "4. On cherche le plus petit entier $x$ tel que $Q(x) < 30$, soit $240 \\times 0{,}8^{x} < 30$, c'est-à-dire $0{,}8^{x} < 0{,}125 = \\dfrac{1}{8}$. On résout $0{,}8^{x} = \\dfrac{1}{8}$ : $x = \\dfrac{\\log(1/8)}{\\log 0{,}8} = \\dfrac{-3\\log 2}{3\\log 2 - 1} \\approx \\dfrac{-0{,}90309}{-0{,}09691} \\approx 9{,}32$. La fonction étant décroissante, on encadre : $Q(9) = 240 \\times 0{,}8^{9} \\approx 32{,}2$ mg $> 30$ et $Q(10) = 240 \\times 0{,}8^{10} \\approx 25{,}8$ mg $< 30$. Le médicament cesse donc d'être actif au bout de $10$ heures.",
+        "5. Avec la dose double, le seuil de $30$ mg est atteint quand $480 \\times 0{,}8^{x} = 30$, soit $0{,}8^{x} = \\dfrac{30}{480} = \\dfrac{1}{16}$, d'où $x = \\dfrac{\\log(1/16)}{\\log 0{,}8} = \\dfrac{-4\\log 2}{3\\log 2 - 1} \\approx \\dfrac{-1{,}20412}{-0{,}09691} \\approx 12{,}43$ h, contre $\\approx 9{,}32$ h avec la dose simple. L'écart est $12{,}43 - 9{,}32 \\approx 3{,}1$ h : doubler la dose ne fait gagner qu'une demi-vie (le temps trouvé à la question 3), car passer du seuil $\\dfrac{1}{16}$ au seuil $\\dfrac{1}{8}$ revient à multiplier la quantité par $2$."
+      ],
+      "reponse": "1. $Q(3) = 122{,}88 \\approx 122{,}9$ mg. 2. $20\\,\\%$ éliminés par heure (coefficient $0{,}8$). 3. $x = \\dfrac{\\log 0{,}5}{\\log 0{,}8} \\approx 3{,}1$ h (demi-vie). 4. au bout de $10$ heures ($Q(9) \\approx 32{,}2 > 30 > Q(10) \\approx 25{,}8$). 5. seuil atteint vers $12{,}4$ h au lieu de $9{,}3$ h, soit $\\approx 3{,}1$ h de plus : doubler la dose ne gagne qu'une demi-vie."
     }
   ]
 }
