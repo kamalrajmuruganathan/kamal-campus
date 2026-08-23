@@ -82,6 +82,56 @@
         "Ces relevés montrent une évolution dans le temps (heure par heure) : c'est justement le rôle de la courbe. Un diagramme circulaire montre des proportions à un instant donné, il ne montrerait pas comment la température change au fil des heures."
       ],
       "reponse": "Le plus chaud à $14$ h ($23$ °C) ; entre $14$ h et $18$ h la courbe descend (il refroidit) ; $+11$ °C entre $8$ h et $14$ h ; la courbe convient car elle montre une évolution dans le temps."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "diagramme-circulaire",
+      "enonce": "Un sondage sur le fruit préféré de $20$ élèves est présenté dans un diagramme circulaire. Le tableau ci-dessous donne la part de chaque fruit dans le disque.\n\n| Fruit | Part du disque |\n|---|---|\n| Pomme | $50\\,\\%$ |\n| Banane | $25\\,\\%$ |\n| Fraise | $15\\,\\%$ |\n| Kiwi | $10\\,\\%$ |\n\n1. Quel fruit occupe la plus grande part du disque ?\n2. Combien d'élèves préfèrent la pomme ?",
+      "corrige": [
+        "Sur un diagramme circulaire, la plus grande part correspond au plus grand pourcentage. Je compare $50\\,\\%$, $25\\,\\%$, $15\\,\\%$ et $10\\,\\%$ : le plus grand est $50\\,\\%$, celui de la pomme.",
+        "Le diagramme circulaire donne une proportion : pour trouver un nombre d'élèves, j'applique le pourcentage au total. La pomme, c'est $50\\,\\%$ de $20$, autrement dit la moitié : $20 \\div 2 = 10$ élèves."
+      ],
+      "reponse": "La pomme occupe la plus grande part ($50\\,\\%$) ; elle est préférée par $10$ élèves."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "calcul-donnees",
+      "enonce": "Une boulangerie note le nombre de croissants vendus chaque matin.\n\n| Jour | Croissants vendus |\n|---|---|\n| Lundi | 48 |\n| Mardi | 52 |\n| Mercredi | 65 |\n| Jeudi | 55 |\n\n1. Combien de croissants ont été vendus en tout sur ces quatre jours ?\n2. Quelle est la différence entre le jour le plus vendeur et le jour le moins vendeur ?",
+      "corrige": [
+        "Pour le total, j'additionne les quatre valeurs de la colonne : $48 + 52 + 65 + 55 = 220$ croissants.",
+        "Le jour le plus vendeur est celui de la plus grande valeur, le mercredi ($65$) ; le moins vendeur est celui de la plus petite, le lundi ($48$).",
+        "La différence est l'écart entre ces deux valeurs : $65 - 48 = 17$ croissants."
+      ],
+      "reponse": "$220$ croissants vendus en tout ; $17$ croissants d'écart entre le mercredi et le lundi."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "choix-representation",
+      "enonce": "Voici les temps relevés lors d'une enquête sur le trajet domicile-collège de $8$ élèves.\n\n| Prénom | Temps de trajet (min) |\n|---|---|\n| Awa | 25 |\n| Hugo | 10 |\n| Lina | 40 |\n| Marc | 15 |\n| Zoé | 35 |\n| Ali | 5 |\n| Jade | 30 |\n| Noé | 20 |\n\nL'infirmerie veut repérer les élèves dont le trajet dure **au moins $30$ minutes** (temps supérieur ou égal à $30$).\n\n1. Quels élèves sont concernés ?\n2. Quelle fraction des élèves interrogés cela représente-t-il ?\n3. Pour présenter le temps de trajet de chaque élève et les comparer d'un coup d'œil, vaut-il mieux une courbe ou un diagramme en barres ? Justifie.",
+      "corrige": [
+        "Je filtre selon le critère « temps $\\geq 30$ ». Je parcours chaque ligne : Awa $25$ → non ; Hugo $10$ → non ; Lina $40$ → oui ; Marc $15$ → non ; Zoé $35$ → oui ; Ali $5$ → non ; Jade $30$ → oui (car $30$ est bien supérieur ou égal à $30$) ; Noé $20$ → non.",
+        "Les élèves concernés sont donc Lina, Zoé et Jade, ce qui fait $3$ élèves.",
+        "Il y a $8$ élèves interrogés en tout (les $8$ lignes). La part concernée est $3$ sur $8$, soit la fraction $\\dfrac{3}{8}$.",
+        "Ici on veut **comparer** le temps de chaque élève : c'est le rôle du **diagramme en barres**, où l'élève au trajet le plus long a la barre la plus haute. Une courbe servirait à montrer une évolution dans le temps, ce qui n'est pas le cas ici : les élèves sont des catégories, pas des instants qui se suivent."
+      ],
+      "reponse": "Lina, Zoé et Jade sont concernés, soit $\\dfrac{3}{8}$ des élèves ; un diagramme en barres est le mieux adapté pour comparer les temps."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Le collège a organisé un cross inter-classes. Le tableau à double entrée ci-dessous donne le nombre de médailles gagnées par chaque classe, selon le type de médaille.\n\n| | Or | Argent | Bronze |\n|---|---|---|---|\n| **6e A** | 3 | 2 | 4 |\n| **6e B** | 1 | 5 | 2 |\n| **6e C** | 4 | 1 | 3 |\n\n1. Combien de médailles d'argent la classe 6e B a-t-elle gagnées ?\n2. Combien de médailles la classe 6e A a-t-elle gagnées en tout ?\n3. Quelle classe a gagné le plus grand nombre de médailles au total ?\n4. Combien de médailles d'or ont été distribuées en tout aux trois classes ?\n5. Le professeur veut afficher un dessin permettant de comparer d'un coup d'œil le nombre total de médailles de chaque classe. Quel type de diagramme lui conseilles-tu ?",
+      "corrige": [
+        "1. Pour lire une case d'un tableau à double entrée, je croise la ligne et la colonne : ligne « 6e B », colonne « Argent » → $5$ médailles d'argent.",
+        "2. Le total d'une classe s'obtient en additionnant les trois cases de sa ligne. Pour la 6e A : $3 + 2 + 4 = 9$ médailles.",
+        "3. Je calcule le total de chaque ligne : 6e A $= 3 + 2 + 4 = 9$ ; 6e B $= 1 + 5 + 2 = 8$ ; 6e C $= 4 + 1 + 3 = 8$. Le plus grand total est $9$ : c'est la 6e A qui a gagné le plus de médailles.",
+        "4. Les médailles d'or se lisent dans la colonne « Or » : $3$ (6e A), $1$ (6e B) et $4$ (6e C). J'additionne cette colonne : $3 + 1 + 4 = 8$ médailles d'or au total.",
+        "5. On veut **comparer** des catégories (les classes) entre elles : le dessin adapté est le **diagramme en barres**, où la classe ayant le plus de médailles est celle dont la barre est la plus haute. Un diagramme circulaire montrerait des proportions, et une courbe une évolution dans le temps : ni l'un ni l'autre ne répond à la question posée."
+      ],
+      "reponse": "1. $5$ médailles d'argent ; 2. $9$ médailles pour la 6e A ; 3. la 6e A (avec $9$ médailles) ; 4. $8$ médailles d'or en tout ; 5. un diagramme en barres."
     }
   ]
 }

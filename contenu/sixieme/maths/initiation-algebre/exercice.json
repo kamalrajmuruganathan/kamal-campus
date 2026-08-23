@@ -86,6 +86,59 @@
         "Attention à ne pas confondre : ici on multiplie par $2$, on n'ajoute pas $3$ (l'écart entre les termes n'est pas constant)."
       ],
       "reponse": "a) Régularité multiplicative : « on multiplie par $2$ ». b) $48$ m² au 5e jour."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "schema-en-barres",
+      "enonce": "Sur un collier, il y a $4$ fois plus de perles rouges que de perles bleues. Le collier compte $40$ perles en tout. À l'aide d'un schéma en barres (bleues = $1$ part, rouges = $4$ parts), trouve le nombre de perles de chaque couleur.",
+      "corrige": [
+        "On dessine une barre pour les perles bleues ($1$ part) et une barre pour les perles rouges ($4$ parts, car « $4$ fois plus »).",
+        "En tout, cela fait $1 + 4 = 5$ parts égales, qui valent ensemble $40$ perles.",
+        "Une part vaut $40 \\div 5 = 8$ : c'est le nombre de perles bleues.",
+        "Les rouges représentent $4$ parts : $4 \\times 8 = 32$. Vérification : $8 + 32 = 40$. ✓"
+      ],
+      "reponse": "$8$ perles bleues et $32$ perles rouges."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "structure",
+      "enonce": "Une guirlande de lampions s'allonge à chaque étape : étape 1 → $4$ lampions, étape 2 → $10$, étape 3 → $16$. a) Quelle est la régularité ? b) On sait que le nombre de lampions est toujours « six fois le numéro de l'étape, moins $2$ ». À quelle étape la guirlande a-t-elle exactement $46$ lampions ?",
+      "corrige": [
+        "a) On regarde ce qui change d'une étape à la suivante : $10 - 4 = 6$, puis $16 - 10 = 6$. La régularité est « on ajoute $6$ ».",
+        "b) La structure donne : nombre de lampions $= 6 \\times (\\text{numéro de l'étape}) - 2$. On cherche l'étape qui donne $46$, donc on remonte à l'envers.",
+        "On annule d'abord le « $-2$ » en ajoutant $2$ : $46 + 2 = 48$. Puis on annule le « $\\times 6$ » en divisant par $6$ : $48 \\div 6 = 8$.",
+        "Vérification : $6 \\times 8 - 2 = 48 - 2 = 46$. ✓ C'est bien l'étape $8$."
+      ],
+      "reponse": "a) « On ajoute $6$ ». b) La guirlande a $46$ lampions à l'étape $8$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "schema-en-barres",
+      "enonce": "Dans un club de sport, il y a $12$ membres de plus au judo qu'au karaté. En tout, le club compte $40$ membres. À l'aide d'un schéma en barres, trouve le nombre de membres de chaque activité.",
+      "corrige": [
+        "On dessine deux barres : celle du karaté ($1$ part) et celle du judo (la même part, plus un morceau de $12$ pour les « $12$ de plus »).",
+        "Si on enlève d'abord ces $12$ membres en trop du total, il reste $40 - 12 = 28$ membres à répartir en $2$ parts égales.",
+        "Une part vaut $28 \\div 2 = 14$ : c'est le nombre de membres au karaté.",
+        "Le judo a $14 + 12 = 26$ membres. Vérification : $14 + 26 = 40$, et $26 - 14 = 12$. ✓"
+      ],
+      "reponse": "$14$ membres au karaté et $26$ membres au judo."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "structure",
+      "enonce": "Un jardinier pose une bordure de dalles autour d'un massif, qu'il agrandit à chaque étape. À l'étape 1 il a posé $6$ dalles, à l'étape 2 il en a posé $10$ en tout, à l'étape 3, $14$ en tout.\n\n1. Quelle est la régularité de ce motif ?\n2. Combien de dalles aux étapes 4 et 5 ?\n3. On remarque que le nombre de dalles est toujours « quatre fois le numéro de l'étape, plus $2$ ». Combien de dalles à l'étape 12 ?\n4. À une certaine étape, le jardinier a posé $42$ dalles. De quelle étape s'agit-il ?\n5. À cette étape, il y a $2$ fois plus de dalles grises que de dalles blanches parmi les $42$ dalles. Combien de dalles de chaque couleur ?",
+      "corrige": [
+        "1. On regarde ce qui change d'une étape à la suivante : $10 - 6 = 4$, puis $14 - 10 = 4$. On trouve $4$ deux fois de suite : la régularité est « on ajoute $4$ ».",
+        "2. On repart du dernier résultat connu : étape 4 → $14 + 4 = 18$ dalles, étape 5 → $18 + 4 = 22$ dalles.",
+        "3. La structure donne : nombre de dalles $= 4 \\times (\\text{numéro de l'étape}) + 2$. À l'étape 12 : $4 \\times 12 + 2 = 48 + 2 = 50$ dalles.",
+        "4. On cherche l'étape qui donne $42$ dalles, donc on remonte à l'envers : on annule le « $+2$ » ($42 - 2 = 40$), puis le « $\\times 4$ » ($40 \\div 4 = 10$). Vérification : $4 \\times 10 + 2 = 42$. ✓ C'est l'étape $10$.",
+        "5. Schéma en barres : blanches = $1$ part, grises = $2$ parts, soit $1 + 2 = 3$ parts pour $42$ dalles. Une part vaut $42 \\div 3 = 14$ : il y a $14$ dalles blanches et $2 \\times 14 = 28$ dalles grises. Vérification : $14 + 28 = 42$. ✓"
+      ],
+      "reponse": "1. « On ajoute $4$ ». 2. $18$ puis $22$ dalles. 3. $50$ dalles à l'étape 12. 4. L'étape $10$. 5. $14$ dalles blanches et $28$ dalles grises."
     }
   ]
 }

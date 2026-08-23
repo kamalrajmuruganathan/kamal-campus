@@ -90,6 +90,59 @@
         "Deux médiatrices suffisent : $F$ est sur la médiatrice de $[AB]$ donc $FA = FB$, et sur celle de $[BC]$ donc $FB = FC$ ; par conséquent $FA = FB = FC$. La troisième médiatrice (celle de $[AC]$) passe alors automatiquement par $F$, car les trois médiatrices d'un triangle sont concourantes."
       ],
       "reponse": "$F$ est le centre du cercle circonscrit : il se trouve à l'intersection des médiatrices de $[AB]$ et de $[BC]$, et vérifie $FA = FB = FC$."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "bissectrice",
+      "enonce": "**a)** Construis un angle $\\widehat{xOy}$ de mesure $74^\\circ$ au rapporteur. **b)** Trace ensuite sa **bissectrice** $[Oz)$ au compas : décris chaque geste. **c)** Combien mesure chacun des deux angles $\\widehat{xOz}$ et $\\widehat{zOy}$ ainsi obtenus ?",
+      "corrige": [
+        "**a)** Je trace une demi-droite $[Ox)$, je pose le centre du rapporteur sur $O$ avec le $0$ sur $[Ox)$, je repère la graduation $74$ et je marque un point $y$, puis je trace $[Oy)$ : l'angle $\\widehat{xOy}$ mesure $74^\\circ$.",
+        "**b)** Pointe sèche du compas sur le sommet $O$, je trace un arc qui coupe $[Ox)$ en $M$ et $[Oy)$ en $N$.",
+        "Sans changer l'écartement, pointe sèche sur $M$ puis sur $N$ : je trace deux arcs qui se croisent en un point $P$ situé à l'intérieur de l'angle.",
+        "Je trace la demi-droite $[Oz)$ passant par $P$ : c'est la bissectrice, elle partage l'angle en deux angles égaux.",
+        "**c)** La bissectrice partage l'angle en deux parts égales : chacun des angles mesure $74 \\div 2 = 37^\\circ$. Donc $\\widehat{xOz} = \\widehat{zOy} = 37^\\circ$."
+      ],
+      "reponse": "La bissectrice $[Oz)$ partage l'angle : $\\widehat{xOz} = \\widehat{zOy} = 37^\\circ$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Deux droites $(AC)$ et $(BD)$ se coupent en un point $O$ (les points $A$, $O$, $C$ sont alignés, de même que $B$, $O$, $D$). On mesure $\\widehat{AOB} = 118^\\circ$. **a)** Calcule $\\widehat{BOC}$. **b)** Calcule $\\widehat{COD}$. **c)** Calcule $\\widehat{AOD}$.",
+      "corrige": [
+        "**a)** Comme $A$, $O$, $C$ sont alignés, l'angle $\\widehat{AOC}$ est plat : il vaut $180^\\circ$. Les angles $\\widehat{AOB}$ et $\\widehat{BOC}$ sont adjacents et forment cet angle plat, ils sont donc **supplémentaires** : $\\widehat{BOC} = 180 - 118 = 62^\\circ$.",
+        "**b)** Les angles $\\widehat{AOB}$ et $\\widehat{COD}$ sont **opposés par le sommet** (formés par les deux droites de part et d'autre de $O$) : ils sont égaux. Donc $\\widehat{COD} = 118^\\circ$.",
+        "**c)** De même, $\\widehat{AOD}$ et $\\widehat{BOC}$ sont opposés par le sommet, donc égaux : $\\widehat{AOD} = 62^\\circ$. Contrôle : $\\widehat{AOB} + \\widehat{AOD} = 118 + 62 = 180^\\circ$, l'angle plat $\\widehat{BOD}$. ✓"
+      ],
+      "reponse": "$\\widehat{BOC} = 62^\\circ$ (supplémentaire), $\\widehat{COD} = 118^\\circ$ et $\\widehat{AOD} = 62^\\circ$ (opposés par le sommet)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "somme-angles-triangle",
+      "enonce": "Un triangle $RST$ est **rectangle en $R$**. De plus, son angle $\\widehat{S}$ est le **double** de son angle $\\widehat{T}$. **a)** Que vaut $\\widehat{S} + \\widehat{T}$ ? Justifie. **b)** Calcule $\\widehat{S}$ et $\\widehat{T}$. **c)** Le triangle $RST$ est-il isocèle ?",
+      "corrige": [
+        "**a)** Le triangle est rectangle en $R$, donc $\\widehat{R} = 90^\\circ$. La somme des angles d'un triangle vaut $180^\\circ$ : $\\widehat{R} + \\widehat{S} + \\widehat{T} = 180^\\circ$. En retranchant $\\widehat{R} = 90^\\circ$, il reste $\\widehat{S} + \\widehat{T} = 180 - 90 = 90^\\circ$.",
+        "**b)** On sait que $\\widehat{S} = 2 \\times \\widehat{T}$. En remplaçant dans $\\widehat{S} + \\widehat{T} = 90$, on obtient $2 \\times \\widehat{T} + \\widehat{T} = 90$, c'est-à-dire $3 \\times \\widehat{T} = 90$. Donc $\\widehat{T} = 90 \\div 3 = 30^\\circ$, puis $\\widehat{S} = 2 \\times 30 = 60^\\circ$.",
+        "Contrôle : $90 + 60 + 30 = 180^\\circ$. ✓",
+        "**c)** Les trois angles $90^\\circ$, $60^\\circ$ et $30^\\circ$ sont tous différents, donc les trois côtés ont des longueurs différentes : le triangle **n'est pas isocèle** (il est quelconque, seulement rectangle)."
+      ],
+      "reponse": "$\\widehat{S} + \\widehat{T} = 90^\\circ$ ; $\\widehat{T} = 30^\\circ$ et $\\widehat{S} = 60^\\circ$ ; le triangle n'est pas isocèle (trois angles distincts)."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "synthese-configurations-planes",
+      "enonce": "Léa dessine le plan d'un cerf-volant $ABCD$ en suivant un **programme de construction**. Reproduis-le pas à pas, puis réponds aux questions.\\n\\n*Programme :* (1) Trace un segment $[BD]$ de longueur $10$ cm et place son milieu $O$. (2) Trace la médiatrice $(d)$ du segment $[BD]$. (3) Sur la droite $(d)$, place le point $A$ à $4$ cm de $O$, puis le point $C$ à $6$ cm de $O$, **de part et d'autre** de $O$. (4) Trace le quadrilatère $ABCD$ en reliant $A$, $B$, $C$, $D$ dans cet ordre.\\n\\n**1.** Quelle est la longueur $OB$ ? **2.** Rappelle la propriété caractéristique des points de la médiatrice $(d)$. **3.** Déduis-en pourquoi $AB = AD$ et $CB = CD$. **4.** On mesure $\\widehat{BAO} = 51^\\circ$. En utilisant la symétrie, détermine $\\widehat{DAO}$ puis l'angle $\\widehat{BAD}$. **5.** Quelle est la nature du triangle $ABD$ ? Calcule ses angles à la base $\\widehat{ABD}$ et $\\widehat{ADB}$.",
+      "corrige": [
+        "**1.** $O$ est le milieu de $[BD]$ et $BD = 10$ cm, donc $OB = OD = \\dfrac{BD}{2} = \\dfrac{10}{2} = 5$ cm.",
+        "**2.** La médiatrice $(d)$ de $[BD]$ est l'ensemble des points **à égale distance** de $B$ et de $D$ : un point $M$ est sur $(d)$ si, et seulement si, $MB = MD$.",
+        "**3.** Par construction, $A$ et $C$ sont placés **sur** la médiatrice $(d)$. D'après la propriété du 2., tout point de $(d)$ est à égale distance de $B$ et $D$. Donc $A$ vérifie $AB = AD$, et $C$ vérifie $CB = CD$.",
+        "**4.** La médiatrice $(d)$ de $[BD]$ est perpendiculaire à $[BD]$ en son milieu $O$ : c'est donc l'axe de symétrie qui échange $B$ et $D$ (le point $D$ est le symétrique de $B$ par rapport à $(d)$, et $A$, $O$ sont sur l'axe). La symétrie **conserve les angles**, donc $\\widehat{DAO} = \\widehat{BAO} = 51^\\circ$. Les demi-droites $[AB)$ et $[AD)$ étant de part et d'autre de l'axe $[AO)$, l'angle total est $\\widehat{BAD} = \\widehat{BAO} + \\widehat{DAO} = 51 + 51 = 102^\\circ$.",
+        "**5.** Comme $AB = AD$ (question 3.), le triangle $ABD$ est **isocèle en $A$**. Ses deux angles à la base sont égaux : $\\widehat{ABD} = \\widehat{ADB}$. La somme des angles vaut $180^\\circ$, donc $\\widehat{ABD} + \\widehat{ADB} = 180 - \\widehat{BAD} = 180 - 102 = 78^\\circ$, d'où $\\widehat{ABD} = \\widehat{ADB} = 78 \\div 2 = 39^\\circ$."
+      ],
+      "reponse": "$OB = 5$ cm ; les points de $(d)$ vérifient $MB = MD$, d'où $AB = AD$ et $CB = CD$ ; $\\widehat{DAO} = 51^\\circ$ (symétrie) et $\\widehat{BAD} = 102^\\circ$ ; le triangle $ABD$ est isocèle en $A$ avec $\\widehat{ABD} = \\widehat{ADB} = 39^\\circ$."
     }
   ]
 }
