@@ -82,6 +82,56 @@
         "Conversion en minutes : $t = \\dfrac{500}{60} \\approx 8{,}3$ min. La lumière du Soleil met donc un peu plus de $8$ minutes à nous parvenir."
       ],
       "reponse": "$t = \\dfrac{d}{v} = 500$ s, soit environ $8{,}3$ min."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "ondes-lumineuses",
+      "enonce": "On envoie une impulsion laser depuis la Terre vers la Lune, située à une distance $d = 3{,}84 \\times 10^{8}$ m. La lumière se propage dans le vide à la vitesse $c = 3 \\times 10^{8}$ m/s. Calcule la durée $t$ que met la lumière pour atteindre la Lune.",
+      "corrige": [
+        "On cherche une durée : on part de $v = \\dfrac{d}{t}$ et on isole $t$, ce qui donne $t = \\dfrac{d}{c}$.",
+        "Les valeurs sont déjà en mètres et en m/s, aucune conversion n'est nécessaire.",
+        "Calcul avec les puissances de dix : $t = \\dfrac{3{,}84 \\times 10^{8}}{3 \\times 10^{8}} = 1{,}28$ s. La lumière met un peu plus d'une seconde pour parcourir la distance Terre-Lune."
+      ],
+      "reponse": "$t = \\dfrac{d}{c} = 1{,}28$ s."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "ondes-sonores",
+      "enonce": "Un ouvrier frappe un long rail en acier. Un second ouvrier, l'oreille collée au rail, se trouve à une distance $d = 2{,}0$ km. Le son se propage dans l'acier à $v = 5000$ m/s. 1) Convertis la distance en mètres. 2) Calcule la durée $t$ mise par le son pour parcourir le rail.",
+      "corrige": [
+        "Conversion de la distance : $d = 2{,}0$ km $= 2{,}0 \\times 1000 = 2000$ m. Il faut toujours travailler en mètres avant de calculer.",
+        "On cherche une durée : on isole $t$ dans $v = \\dfrac{d}{t}$, ce qui donne $t = \\dfrac{d}{v}$.",
+        "Calcul : $t = \\dfrac{2000}{5000} = 0{,}40$ s. Dans l'air, le même trajet aurait pris bien plus longtemps ($\\approx 5{,}9$ s), car le son va plus vite dans les solides."
+      ],
+      "reponse": "$d = 2000$ m et $t = \\dfrac{d}{v} = 0{,}40$ s."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "comparaison-son-lumiere",
+      "enonce": "Un éclair frappe à une distance $d = 1700$ m d'un observateur. Le son se propage dans l'air à $v = 340$ m/s et la lumière dans l'air à $c = 3 \\times 10^{8}$ m/s. 1) Calcule la durée $t_{\\text{son}}$ mise par le tonnerre pour parvenir à l'observateur. 2) Calcule la durée $t_{\\text{lum}}$ mise par la lumière de l'éclair. 3) Justifie pourquoi on peut dire que l'éclair est vu « instantanément ».",
+      "corrige": [
+        "Durée du son : $t_{\\text{son}} = \\dfrac{d}{v} = \\dfrac{1700}{340} = 5{,}0$ s.",
+        "Durée de la lumière : $t_{\\text{lum}} = \\dfrac{d}{c} = \\dfrac{1700}{3 \\times 10^{8}} \\approx 5{,}7 \\times 10^{-6}$ s, c'est-à-dire moins de six millionièmes de seconde.",
+        "La lumière met environ un million de fois moins de temps que le son ($5{,}7 \\times 10^{-6}$ s contre $5{,}0$ s) : ce délai est imperceptible, on voit donc l'éclair « instantanément » alors que le tonnerre arrive 5 secondes plus tard."
+      ],
+      "reponse": "$t_{\\text{son}} = 5{,}0$ s et $t_{\\text{lum}} \\approx 5{,}7 \\times 10^{-6}$ s : la lumière est environ un million de fois plus rapide, d'où l'impression d'instantanéité."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "propagation-signal",
+      "enonce": "Un navire de pêche est en mer par nuit d'orage. Le marin observe la scène et utilise ses instruments. On donne : vitesse du son dans l'air $v_{\\text{air}} = 340$ m/s, vitesse du son dans l'eau $v_{\\text{eau}} = 1500$ m/s, vitesse de la lumière $c = 3 \\times 10^{8}$ m/s.\\n\\n1. Le marin voit un éclair, puis entend le tonnerre $t = 6{,}0$ s plus tard. À quelle distance $d$ l'orage s'est-il produit ?\\n2. Exprime cette distance en kilomètres.\\n3. Le sonar du navire envoie une salve d'ultrasons vers le fond. L'écho revient $t' = 0{,}20$ s après l'émission. Quelle distance totale $D$ le son a-t-il parcourue dans l'eau ?\\n4. En déduire la profondeur $h$ du fond marin sous le navire.\\n5. Un phare situé à $6{,}0$ km émet un flash lumineux. Calcule la durée mise par sa lumière pour atteindre le navire, et explique pourquoi le marin le voit « tout de suite ».",
+      "corrige": [
+        "1. La lumière de l'éclair arrivant quasi instantanément, le retard de $6{,}0$ s correspond au temps mis par le SON dans l'air. On cherche une distance : $d = v_{\\text{air}} \\times t = 340 \\times 6{,}0 = 2040$ m.",
+        "2. Conversion : $2040$ m $= 2{,}04$ km, soit environ $2{,}0$ km (car $1$ km $= 1000$ m).",
+        "3. Pendant $t' = 0{,}20$ s, le son fait l'aller (vers le fond) puis le retour (vers le navire) : la distance totale est $D = v_{\\text{eau}} \\times t' = 1500 \\times 0{,}20 = 300$ m.",
+        "4. La profondeur ne correspond qu'à un seul trajet (l'aller), soit la moitié : $h = \\dfrac{D}{2} = \\dfrac{300}{2} = 150$ m. Oublier le facteur $2$ (annoncer $300$ m) serait le piège classique du sonar.",
+        "5. Durée de la lumière : $6{,}0$ km $= 6000$ m, donc $t_{\\text{phare}} = \\dfrac{d}{c} = \\dfrac{6000}{3 \\times 10^{8}} = 2 \\times 10^{-5}$ s. Ce délai (deux centièmes de milliseconde) est imperceptible car la lumière est environ un million de fois plus rapide que le son : le marin voit le flash « tout de suite »."
+      ],
+      "reponse": "1. et 2. $d = v_{\\text{air}} \\times t = 2040$ m $\\approx 2{,}0$ km. 3. et 4. $D = 300$ m donc $h = \\dfrac{D}{2} = 150$ m. 5. $t_{\\text{phare}} = 2 \\times 10^{-5}$ s : négligeable car la lumière est environ un million de fois plus rapide que le son."
     }
   ]
 }

@@ -82,6 +82,57 @@
         "Dans une maison, le **fusible** (ou le **disjoncteur**) détecte cette intensité trop élevée et **coupe automatiquement** le courant pour protéger l'installation."
       ],
       "reponse": "C'est un **court-circuit** : l'intensité devient très grande et le fil chauffe fortement (risque d'incendie). Le **fusible** ou le **disjoncteur** coupe alors automatiquement le courant."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "intensite-ampere",
+      "enonce": "Le phare avant d'un vélo électrique est traversé par un courant d'intensité $I = 0{,}45\\ \\text{A}$. 1) Comment s'appelle la grandeur mesurée, quel est son symbole et son unité ? 2) Avec quel appareil la mesure-t-on, et comment le branche-t-on dans le circuit ? 3) Exprime cette intensité en milliampères ($\\text{mA}$).",
+      "corrige": [
+        "La grandeur mesurée est l'**intensité** du courant, de symbole $I$. Son unité est l'**ampère**, de symbole $\\text{A}$.",
+        "On la mesure avec un **ampèremètre**, branché **en série** dans la boucle : le courant du phare doit le **traverser** pour être mesuré.",
+        "Conversion : $1\\ \\text{A} = 1\\,000\\ \\text{mA}$, donc $I = 0{,}45\\ \\text{A} = 0{,}45 \\times 1\\,000 = 450\\ \\text{mA}$."
+      ],
+      "reponse": "C'est l'**intensité** $I$, en **ampères** ($\\text{A}$), mesurée à l'**ampèremètre** branché **en série**. On a $I = 0{,}45\\ \\text{A} = 450\\ \\text{mA}$."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "intensite-ampere",
+      "enonce": "Dans un circuit, trois lampes identiques sont branchées **en série** avec une pile. Un ampèremètre placé juste après la pile indique une intensité $I = 0{,}12\\ \\text{A}$. 1) Quelle est l'intensité du courant qui traverse la deuxième lampe ? Justifie à l'aide de la règle de l'intensité en série. 2) Exprime cette intensité en milliampères.",
+      "corrige": [
+        "En **série**, il n'y a qu'une seule boucle : l'intensité du courant est la **même partout** dans le circuit. Le courant qui traverse la deuxième lampe est donc identique à celui mesuré après la pile.",
+        "L'intensité dans la deuxième lampe vaut donc aussi $I = 0{,}12\\ \\text{A}$.",
+        "Conversion : $1\\ \\text{A} = 1\\,000\\ \\text{mA}$, donc $0{,}12\\ \\text{A} = 0{,}12 \\times 1\\,000 = 120\\ \\text{mA}$."
+      ],
+      "reponse": "En série l'intensité est la **même partout** : la deuxième lampe est traversée par $I = 0{,}12\\ \\text{A} = 120\\ \\text{mA}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "energie-joule",
+      "enonce": "La batterie d'une trottinette électrique stocke une énergie de $0{,}5\\ \\text{MJ}$. 1) Convertis cette énergie en joules. 2) Quand la trottinette roule, cette énergie est transférée : cite le mode de transfert vers le moteur, puis ce que devient l'énergie une fois la trottinette lancée (donne deux formes). 3) Une fois la batterie vide, peut-on dire que l'énergie a « disparu » ? Justifie avec l'idée de conservation.",
+      "corrige": [
+        "Le préfixe **méga** signifie $\\times 1\\,000\\,000$ : $0{,}5\\ \\text{MJ} = 0{,}5 \\times 1\\,000\\,000 = 500\\,000\\ \\text{J}$.",
+        "De la batterie vers le moteur, le transfert d'énergie se fait par voie **électrique** (par les fils). Une fois la trottinette lancée, cette énergie se retrouve surtout sous forme d'énergie de **mouvement** (mécanique) et, à cause des frottements et de l'échauffement des composants, sous forme de **chaleur** (énergie thermique).",
+        "Non, l'énergie n'a pas disparu : **elle n'est jamais créée ni détruite**, seulement **transférée** puis stockée ailleurs. L'énergie de la batterie a été transférée au mouvement puis dissipée dans l'air et les pièces sous forme de chaleur : le total se conserve."
+      ],
+      "reponse": "$0{,}5\\ \\text{MJ} = 500\\,000\\ \\text{J}$. Transfert **électrique** batterie → moteur, puis énergie de **mouvement** et de **chaleur**. L'énergie n'a pas disparu : elle est **conservée**, seulement transférée ailleurs."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "circuit-tension-intensite",
+      "enonce": "Léa réalise un circuit pour éclairer une maquette. Elle dispose d'une pile de $6\\ \\text{V}$, de trois lampes **identiques**, d'un interrupteur, de fils de connexion, d'un voltmètre et d'un ampèremètre. Elle commence par brancher les trois lampes **en série** avec la pile et l'interrupteur, en une seule boucle.\\n\\n1. Quand elle **ferme** l'interrupteur, les lampes s'allument ; quand elle l'**ouvre**, elles s'éteignent. Explique ces deux observations avec les mots « circuit fermé » et « circuit ouvert ».\\n2. En cours d'utilisation, une des trois lampes grille. Que deviennent les deux autres ? Justifie par le nombre de boucles du montage en série.\\n3. La tension de la pile se **répartit** entre les trois lampes identiques. Quelle tension $U$ mesure-t-on aux bornes de **chaque** lampe ? Avec quel appareil et quel branchement la mesure-t-on ?\\n4. Léa insère un ampèremètre en série et lit $I = 0{,}10\\ \\text{A}$. Quelle est l'intensité qui traverse chacune des trois lampes ? Exprime-la aussi en milliampères.\\n5. Léa refait tout le montage **en dérivation** (chaque lampe sur sa propre branche). Cette fois, une lampe grille : que deviennent les deux autres ? Explique la différence avec la série.\\n6. Tentée de « voir des étincelles », Léa veut relier directement les deux bornes de la pile par un simple fil, sans lampe. Pourquoi est-ce dangereux, et comment appelle-t-on cette situation ?",
+      "corrige": [
+        "1. Interrupteur **fermé** : la boucle est complète, c'est un **circuit fermé**, le courant circule et les lampes brillent. Interrupteur **ouvert** : la boucle est coupée, c'est un **circuit ouvert**, plus aucun courant ne circule et les lampes s'éteignent.",
+        "2. En **série**, il n'y a qu'**une seule boucle**. Si une lampe grille, elle coupe cette unique boucle : le courant ne passe plus nulle part, donc les **deux autres lampes s'éteignent** elles aussi.",
+        "3. En série, les tensions aux bornes des dipôles s'**ajoutent** pour redonner celle de la pile : $U_{\\text{pile}} = U + U + U = 3\\,U$. Comme les trois lampes sont identiques, $3\\,U = 6\\ \\text{V}$, donc $U = \\dfrac{6}{3} = 2\\ \\text{V}$ aux bornes de chaque lampe. On mesure cette tension avec un **voltmètre** branché **en dérivation**, aux bornes de la lampe.",
+        "4. En série, l'intensité est la **même partout** dans la boucle : chacune des trois lampes est traversée par la même intensité que celle lue à l'ampèremètre, soit $I = 0{,}10\\ \\text{A}$. En milliampères : $0{,}10\\ \\text{A} = 0{,}10 \\times 1\\,000 = 100\\ \\text{mA}$.",
+        "5. En **dérivation**, chaque lampe est sur sa **propre branche**, qui forme sa propre boucle avec la pile. Si une lampe grille, seule sa branche est coupée : les **deux autres restent allumées**. C'est la différence avec la série, où couper un point éteint tout.",
+        "6. Relier directement les deux bornes de la pile par un fil sans récepteur est un **court-circuit** : l'intensité devient **très grande**, le fil chauffe très fortement, ce qui peut causer une brûlure ou un **incendie** et détériorer la pile. Il ne faut jamais le faire."
+      ],
+      "reponse": "1. Fermé → courant qui circule (lampes allumées) ; ouvert → circuit coupé (lampes éteintes). 2. En série, une lampe grillée éteint les deux autres (boucle unique). 3. $U = 6/3 = 2\\ \\text{V}$ par lampe, mesurée au **voltmètre en dérivation**. 4. Intensité identique partout : $I = 0{,}10\\ \\text{A} = 100\\ \\text{mA}$ (ampèremètre en série). 5. En dérivation, les deux autres **restent allumées** (branches séparées). 6. C'est un **court-circuit** : très grande intensité, fil brûlant, risque d'incendie."
     }
   ]
 }

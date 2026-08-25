@@ -83,6 +83,56 @@
         "3) En rapprochant la balle de la lampe, les rayons arrêtés s'écartent davantage avant d'atteindre le mur : l'ombre **grandit**. (On peut le vérifier en traçant les rayons lumineux partant de la lampe et passant au bord de la balle.)"
       ],
       "reponse": "1) La balle opaque bloque les rayons rectilignes, créant une zone sans lumière. 2) Une ombre nette n'existe que si la lumière va tout droit. 3) L'ombre grandit quand on rapproche la balle de la lampe."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "niveau-sonore",
+      "enonce": "À un concert, un sonomètre affiche un niveau sonore de $102$ dB. 1) Quelle grandeur mesure-t-on avec un sonomètre, et dans quelle unité ? 2) Sachant que l'oreille est en danger au-delà d'environ $85$ dB, ce niveau présente-t-il un risque ? 3) Citer une précaution simple pour se protéger.",
+      "corrige": [
+        "1) Le sonomètre mesure le **niveau sonore**, c'est-à-dire si un son est **fort ou faible**. Son unité est le **décibel**, de symbole **dB**. (Attention : ce n'est pas la hauteur, qui se mesure en Hz.)",
+        "2) On compare au seuil de danger : $102$ dB $>$ $85$ dB. Le niveau dépasse le seuil : oui, il **présente un risque** pour l'oreille, d'autant plus si l'exposition dure longtemps.",
+        "3) Pour se protéger : **s'éloigner** des enceintes, porter des **bouchons d'oreille**, faire des **pauses** au calme, ou baisser le volume."
+      ],
+      "reponse": "Le sonomètre mesure le niveau sonore, en décibels (dB). $102$ dB $>$ $85$ dB : c'est dangereux ; se protéger (bouchons, pauses, s'éloigner)."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "frequence-domaines",
+      "enonce": "Une chauve-souris émet un cri très rapide : son émetteur vibre $45\\,000$ fois en $0{,}5$ seconde. 1) Calculer la fréquence $f$ de ce son. 2) Exprimer cette fréquence en kilohertz. 3) S'agit-il d'un infrason, d'un son audible ou d'un ultrason ?",
+      "corrige": [
+        "1) La fréquence est le nombre de vibrations par seconde : $f = \\dfrac{N}{\\Delta t} = \\dfrac{45\\,000}{0{,}5}$. Diviser par $0{,}5$ revient à multiplier par $2$, donc $f = 90\\,000$ Hz.",
+        "2) Conversion en kilohertz : on divise par $1000$. $f = \\dfrac{90\\,000}{1000} = 90$ kHz.",
+        "3) On compare à la borne haute de l'audible : $90\\,000$ Hz $>$ $20\\,000$ Hz. C'est donc un **ultrason**, inaudible pour l'oreille humaine (mais la chauve-souris s'en sert pour se repérer)."
+      ],
+      "reponse": "$f = \\dfrac{45\\,000}{0{,}5} = 90\\,000$ Hz $= 90$ kHz $>$ $20\\,000$ Hz : c'est un ultrason."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "hauteur-niveau-sonore",
+      "enonce": "Dans un orchestre, une grosse caisse produit un son de fréquence $80$ Hz mesuré à $95$ dB, tandis qu'un triangle produit un son de $6000$ Hz mesuré à $55$ dB. 1) Lequel de ces deux sons est le plus **aigu** ? Justifier. 2) Lequel est le plus **fort** ? Justifier. 3) Un élève affirme : « le son le plus aigu est forcément le plus fort ». A-t-il raison ? Expliquer.",
+      "corrige": [
+        "1) La hauteur (grave/aigu) dépend de la **fréquence** : plus $f$ est grande, plus le son est aigu. Or $6000$ Hz $>$ $80$ Hz, donc le **triangle** ($6000$ Hz) est le son le plus aigu ; la grosse caisse ($80$ Hz) est grave.",
+        "2) Le caractère fort/faible dépend du **niveau sonore** en décibels, pas de la fréquence. Or $95$ dB $>$ $55$ dB, donc la **grosse caisse** ($95$ dB) est le son le plus fort.",
+        "3) Non, il a tort. Ici le son le plus aigu (le triangle) est en réalité le plus **faible**. Hauteur et force sont deux grandeurs **différentes** : la hauteur se mesure en Hz, la force en dB. Un son peut être aigu et faible, ou grave et fort."
+      ],
+      "reponse": "1) Le triangle ($6000$ Hz) est le plus aigu. 2) La grosse caisse ($95$ dB) est le plus fort. 3) Non : hauteur (Hz) et niveau sonore (dB) sont indépendants."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "signaux-sonores-lumineux",
+      "enonce": "Le soir du 14 juillet, Malo regarde un feu d'artifice depuis un parc. Il observe d'abord l'éclat lumineux d'une fusée, puis entend la détonation un court instant plus tard, alors que les deux se produisent au même moment. 1) Expliquer pourquoi Malo voit l'éclat **avant** d'entendre la détonation. 2) Une fusée « sifflante » émet un son de fréquence $4$ kHz. Convertir cette fréquence en hertz, puis indiquer si le son est audible et s'il est plutôt grave ou aigu. 3) Près des tubes de tir, un sonomètre affiche $100$ dB. Quelle grandeur mesure-t-il, et ce niveau est-il dangereux pour l'oreille (danger au-delà d'environ $85$ dB) ? 4) Pendant l'explosion, les étincelles colorées de la fusée sont-elles une source primaire ou un objet diffusant ? Et la fumée que l'on voit ensuite éclairée dans le ciel ? Justifier. 5) Un lampadaire du parc, resté allumé, projette sur le sol l'ombre nette d'un poteau. Qu'est-ce que cela prouve sur la façon dont la lumière se propage ?",
+      "corrige": [
+        "1. La lumière voyage **beaucoup plus vite** que le son. La lumière de l'éclat arrive quasi instantanément aux yeux de Malo, alors que le son, bien plus lent (~$340$ m/s dans l'air), met un peu de temps à parcourir la même distance. Malo voit donc l'éclat avant d'entendre la détonation.",
+        "2. Conversion : $1$ kHz $= 1000$ Hz, donc $4$ kHz $= 4 \\times 1000 = 4000$ Hz. Comme $20$ Hz $<$ $4000$ Hz $<$ $20\\,000$ Hz, le son est **audible**. Sa fréquence est assez grande : c'est un son plutôt **aigu**.",
+        "3. Le sonomètre mesure le **niveau sonore** (le son est-il fort ou faible), en **décibels (dB)**. On compare au seuil de danger : $100$ dB $>$ $85$ dB, donc ce niveau est **dangereux** pour l'oreille, surtout si l'exposition dure ; mieux vaut s'éloigner ou se protéger.",
+        "4. Les étincelles produisent elles-mêmes leur lumière : c'est une **source primaire**. La fumée, elle, ne produit aucune lumière ; on la voit seulement parce qu'elle **renvoie** la lumière reçue (des fusées, des lampadaires) : c'est un **objet diffusant**.",
+        "5. Le poteau est opaque : il arrête les rayons qui vont **en ligne droite** depuis le lampadaire, laissant derrière lui une zone sans lumière. L'existence d'une **ombre nette** prouve que la lumière se propage **en ligne droite** (propagation rectiligne)."
+      ],
+      "reponse": "1. La lumière va bien plus vite que le son. 2. $4$ kHz $= 4000$ Hz : audible et plutôt aigu. 3. Niveau sonore en dB ; $100$ dB $>$ $85$ dB donc dangereux. 4. Étincelles = source primaire ; fumée éclairée = objet diffusant. 5. L'ombre nette prouve la propagation rectiligne de la lumière."
     }
   ]
 }

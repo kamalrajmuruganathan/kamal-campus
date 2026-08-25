@@ -85,6 +85,56 @@
         "Comme $15$ A $< 16$ A, le disjoncteur ne coupe pas : on peut brancher les deux, mais la marge est faible."
       ],
       "reponse": "$I_1 = 10$ A ; l'intensité totale serait $15$ A $< 16$ A, donc oui, on peut brancher les deux appareils sans faire disjoncter."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "energie-formule",
+      "enonce": "Une bouilloire de puissance $P = 1200$ W chauffe de l'eau pendant $t = 50$ s. Calculer l'énergie $E$ transférée à l'eau, en joules.",
+      "corrige": [
+        "On cherche une énergie à partir d'une puissance et d'une durée : on utilise $E = P \\times t$.",
+        "Les unités sont déjà correctes : la puissance est en watts (W) et la durée en secondes (s), donc l'énergie sortira en joules (J).",
+        "Application numérique : $E = 1200 \\times 50 = 60\\,000$ J, soit $E = 60$ kJ."
+      ],
+      "reponse": "$E = P \\times t = 60\\,000$ J $= 60$ kJ."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "puissance-electrique",
+      "enonce": "Une box internet reste allumée en permanence. Elle fonctionne sous une tension $U = 12$ V et est parcourue par une intensité $I = 1{,}5$ A. 1) Calculer sa puissance $P$. 2) En déduire l'énergie $E$ qu'elle consomme en une journée complète, soit $24$ h (en joules).",
+      "corrige": [
+        "1) La puissance électrique vaut $P = U \\times I = 12 \\times 1{,}5 = 18$ W.",
+        "2) Pour l'énergie on utilise $E = P \\times t$, avec la durée en secondes : $t = 24$ h $= 24 \\times 3600 = 86\\,400$ s.",
+        "Application numérique : $E = 18 \\times 86\\,400 = 1\\,555\\,200$ J, soit environ $E \\approx 1{,}56 \\times 10^{6}$ J $= 1{,}56$ MJ."
+      ],
+      "reponse": "$P = 18$ W ; $E = 18 \\times 86\\,400 = 1\\,555\\,200$ J $\\approx 1{,}56$ MJ."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "energie-formule",
+      "enonce": "Un radiateur électrique de puissance $P = 1500$ W fonctionne $3{,}0$ heures par jour pendant tout le mois de janvier ($31$ jours). 1) Calculer l'énergie consommée en un jour, en kilowattheures (kWh). 2) En déduire l'énergie consommée sur le mois. 3) Sachant que le kWh est facturé $0{,}20$ €, calculer le coût du chauffage pour ce mois.",
+      "corrige": [
+        "1) On utilise $E = P \\times t$ en gardant la puissance en kilowatts et la durée en heures pour obtenir des kWh : $P = 1500$ W $= 1{,}5$ kW. En un jour : $E_{\\text{jour}} = 1{,}5 \\times 3{,}0 = 4{,}5$ kWh.",
+        "2) Sur $31$ jours : $E_{\\text{mois}} = 4{,}5 \\times 31 = 139{,}5$ kWh.",
+        "3) Le coût est le nombre de kWh multiplié par le prix du kWh : $\\text{coût} = 139{,}5 \\times 0{,}20 = 27{,}9$ €.",
+        "Vérification d'ordre de grandeur : quelques dizaines d'euros pour un radiateur allumé $3$ h par jour tout le mois, c'est réaliste."
+      ],
+      "reponse": "$E_{\\text{jour}} = 4{,}5$ kWh ; $E_{\\text{mois}} = 139{,}5$ kWh ; coût $= 27{,}9$ €."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "puissance-energie",
+      "enonce": "Maxime possède une trottinette électrique. Son moteur fonctionne sous une tension $U = 36$ V et est parcouru, en marche normale, par une intensité $I = 8{,}0$ A. La batterie de la trottinette stocke une énergie totale $E_{\\text{batt}} = 1{,}3 \\times 10^{6}$ J. On suppose le moteur alimenté à puissance constante pendant tout le trajet.\n\n1. Calculer la puissance $P$ du moteur.\n2. Maxime roule pendant $15$ min à cette puissance. Calculer l'énergie $E$ consommée par le moteur (en joules). Attention aux unités.\n3. Exprimer cette énergie $E$ en kilowattheures, sachant que $1$ kWh $= 3{,}6 \\times 10^{6}$ J.\n4. En partant d'une batterie pleine, pendant combien de temps (en minutes) Maxime peut-il rouler avant de vider complètement la batterie ?",
+      "corrige": [
+        "1. La puissance électrique du moteur vaut $P = U \\times I = 36 \\times 8{,}0 = 288$ W.",
+        "2. On utilise $E = P \\times t$ avec la durée en secondes : $t = 15$ min $= 15 \\times 60 = 900$ s. Alors $E = 288 \\times 900 = 259\\,200$ J, soit $E \\approx 2{,}6 \\times 10^{5}$ J.",
+        "3. Conversion en kilowattheures : $E = \\dfrac{259\\,200}{3{,}6 \\times 10^{6}} = 0{,}072$ kWh.",
+        "4. On cherche une durée à partir de l'énergie stockée et de la puissance : de $P = \\dfrac{E}{t}$ on tire $t = \\dfrac{E_{\\text{batt}}}{P} = \\dfrac{1{,}3 \\times 10^{6}}{288} \\approx 4514$ s. En minutes : $t = \\dfrac{4514}{60} \\approx 75$ min, soit environ $1$ h $15$ min d'autonomie."
+      ],
+      "reponse": "$P = 288$ W ; $E = 259\\,200$ J $\\approx 2{,}6 \\times 10^{5}$ J $= 0{,}072$ kWh ; autonomie $t = \\dfrac{E_{\\text{batt}}}{P} \\approx 4514$ s $\\approx 75$ min."
     }
   ]
 }

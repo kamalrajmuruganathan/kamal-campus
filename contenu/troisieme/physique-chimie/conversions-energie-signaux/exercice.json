@@ -81,6 +81,55 @@
         "3) Non : la lumière reçue aujourd'hui est partie il y a $4{,}3$ ans. On voit donc Proxima **telle qu'elle était il y a 4,3 ans**, pas telle qu'elle est maintenant. Voir loin, c'est voir dans le passé."
       ],
       "reponse": "$d = 4{,}1 \\times 10^{16}$ m ; la lumière met $4{,}3$ ans ; on voit l'étoile telle qu'elle était il y a $4{,}3$ ans."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "telemetrie",
+      "enonce": "Lors d'une échographie, la sonde émet des ultrasons qui se propagent dans les tissus du corps à la vitesse $v = 1540$ m·s⁻¹. L'écho renvoyé par un organe revient $\\Delta t = 1{,}0 \\times 10^{-4}$ s après l'émission. À quelle profondeur se trouve cet organe ?",
+      "corrige": [
+        "Pendant la durée $\\Delta t$, l'ultrason fait l'aller jusqu'à l'organe ET le retour : il parcourt donc la distance totale $D = v \\times \\Delta t = 1540 \\times 1{,}0 \\times 10^{-4} = 0{,}154$ m.",
+        "L'organe n'est qu'à un aller simple, soit la moitié : $d = \\dfrac{D}{2} = \\dfrac{0{,}154}{2} = 0{,}077$ m, c'est-à-dire environ $7{,}7$ cm sous la sonde."
+      ],
+      "reponse": "$d = \\dfrac{v \\times \\Delta t}{2} = 0{,}077$ m $\\approx 7{,}7$ cm."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "rendement",
+      "enonce": "Un moteur électrique reçoit une puissance électrique $P_{\\text{reçue}} = 1500$ W et fournit une puissance mécanique utile $P_{\\text{utile}} = 1200$ W. 1) Calculer le rendement $\\eta$ du moteur (en % ). 2) Le moteur fonctionne pendant $t = 2{,}0$ min ; calculer l'énergie perdue (dissipée en chaleur) pendant cette durée, en joules.",
+      "corrige": [
+        "1) Le rendement se calcule aussi avec les puissances, à condition qu'elles soient dans la même unité : $\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{reçue}}} = \\dfrac{1200}{1500} = 0{,}80$, soit $\\eta = 80\\,\\%$.",
+        "2) La puissance perdue est $P_{\\text{perdue}} = P_{\\text{reçue}} - P_{\\text{utile}} = 1500 - 1200 = 300$ W. On convertit la durée en secondes : $t = 2{,}0$ min $= 120$ s.",
+        "L'énergie perdue vaut alors $E_{\\text{perdue}} = P_{\\text{perdue}} \\times t = 300 \\times 120 = 36\\,000$ J $= 3{,}6 \\times 10^{4}$ J."
+      ],
+      "reponse": "$\\eta = 0{,}80 = 80\\,\\%$ ; $E_{\\text{perdue}} = 3{,}6 \\times 10^{4}$ J."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "telemetrie",
+      "enonce": "Pour mesurer très précisément la distance Terre–Lune, on envoie depuis la Terre une impulsion laser vers un miroir posé sur la Lune ; la lumière réfléchie revient sur Terre. La lumière se propage à $c = 3{,}0 \\times 10^{8}$ m·s⁻¹. On mesure que l'impulsion revient $\\Delta t = 2{,}56$ s après son émission. 1) Quelle distance totale la lumière a-t-elle parcourue pendant $\\Delta t$ ? 2) En déduire la distance Terre–Lune. 3) La Lune brille parce qu'elle renvoie la lumière du Soleil. Expliquer pourquoi on la voit toujours telle qu'elle était un peu plus d'une seconde plus tôt.",
+      "corrige": [
+        "1) Pendant $\\Delta t$, la lumière fait l'aller vers la Lune ET le retour : $D = c \\times \\Delta t = 3{,}0 \\times 10^{8} \\times 2{,}56 = 7{,}68 \\times 10^{8}$ m.",
+        "2) La distance Terre–Lune est un seul trajet, soit la moitié : $d = \\dfrac{D}{2} = \\dfrac{7{,}68 \\times 10^{8}}{2} = 3{,}84 \\times 10^{8}$ m (environ $384\\,000$ km).",
+        "3) La lumière qui nous parvient de la Lune a mis $\\dfrac{\\Delta t}{2} = 1{,}28$ s pour faire le trajet Lune → Terre. On voit donc la Lune telle qu'elle était il y a $1{,}28$ s, et non à l'instant présent : regarder au loin, c'est toujours regarder un peu dans le passé."
+      ],
+      "reponse": "$D = 7{,}68 \\times 10^{8}$ m ; $d = 3{,}84 \\times 10^{8}$ m ; on voit la Lune telle qu'elle était il y a $1{,}28$ s."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "chaine-energie",
+      "enonce": "Un petit rover d'exploration est alimenté par un panneau solaire (cellule photovoltaïque) qui recharge une batterie. Cette batterie alimente un moteur électrique qui fait tourner les roues, ainsi qu'un capteur à ultrasons qui mesure la distance aux obstacles pour éviter les collisions.\n\nDonnées :\n• le panneau reçoit du Soleil une puissance lumineuse $P_{\\text{lum}} = 15$ W ; son rendement est $\\eta = 0{,}20$ ;\n• le moteur a une puissance $P_{\\text{mot}} = 6{,}0$ W ;\n• le capteur émet des ultrasons dans l'air, où $v = 340$ m·s⁻¹.\n\n1. Décrire la chaîne d'énergie du rover, de la source jusqu'au mouvement des roues, et nommer le convertisseur qui transforme la lumière en électricité.\n2. Calculer la puissance électrique utile $P_{\\text{utile}}$ fournie par le panneau solaire.\n3. Le rover roule (moteur allumé) pendant $t = 5{,}0$ min. Calculer l'énergie électrique consommée par le moteur, en joules.\n4. En supposant que toute l'énergie produite par le panneau sert à alimenter le moteur, pendant combien de temps le panneau doit-il fonctionner pour fournir cette énergie ?\n5. En roulant, le capteur détecte un obstacle : l'écho ultrasonore revient $\\Delta t = 2{,}0 \\times 10^{-2}$ s après l'émission. À quelle distance se trouve l'obstacle ?",
+      "corrige": [
+        "1. Chaîne d'énergie : Soleil (source, énergie lumineuse) → cellule photovoltaïque (convertisseur) → batterie (stockage de l'énergie électrique) → moteur électrique (convertisseur) → mouvement des roues (énergie mécanique, utilisation). À chaque étape, une partie fuit en chaleur. Le convertisseur qui transforme la lumière en électricité est la cellule photovoltaïque.",
+        "2. La puissance utile du panneau est reliée à la puissance reçue par le rendement : $P_{\\text{utile}} = \\eta \\times P_{\\text{lum}} = 0{,}20 \\times 15 = 3{,}0$ W.",
+        "3. On convertit d'abord la durée en secondes : $t = 5{,}0$ min $= 300$ s. Puis $E = P_{\\text{mot}} \\times t = 6{,}0 \\times 300 = 1800$ J $= 1{,}8 \\times 10^{3}$ J.",
+        "4. Le panneau fournit $P_{\\text{utile}} = 3{,}0$ W. La durée nécessaire pour produire $E = 1800$ J est $t' = \\dfrac{E}{P_{\\text{utile}}} = \\dfrac{1800}{3{,}0} = 600$ s $= 10$ min. (Le panneau, deux fois moins puissant que le moteur, met deux fois plus de temps à produire l'énergie que le moteur consomme.)",
+        "5. Pendant $\\Delta t$, l'ultrason parcourt l'aller-retour : $D = v \\times \\Delta t = 340 \\times 2{,}0 \\times 10^{-2} = 6{,}8$ m. L'obstacle est à la moitié : $d = \\dfrac{D}{2} = \\dfrac{6{,}8}{2} = 3{,}4$ m."
+      ],
+      "reponse": "1. Soleil → cellule photovoltaïque → batterie → moteur → roues. 2. $P_{\\text{utile}} = 3{,}0$ W. 3. $E = 1{,}8 \\times 10^{3}$ J. 4. $t' = 600$ s $= 10$ min. 5. $d = 3{,}4$ m."
     }
   ]
 }

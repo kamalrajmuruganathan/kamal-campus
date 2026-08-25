@@ -84,6 +84,57 @@
         "(c) Vérification par le calcul direct : $P_{\\text{Lune}} = m \\times g_{\\text{Lune}} = 70 \\times 1{,}6 = 112$ N. On retrouve bien le même résultat."
       ],
       "reponse": "(a) $m = 70$ kg ; (b) et (c) $P_{\\text{Lune}} = 70 \\times 1{,}6 = 112$ N (environ 6 fois moins que sur Terre)."
+    },
+    {
+      "id": 7,
+      "difficulte": "application",
+      "notion": "relation-poids-masse",
+      "enonce": "Une télévision a une masse $m = 8{,}0$ kg. Calculer son poids $P$ sur Terre. On prend $g = 9{,}8$ N/kg.",
+      "corrige": [
+        "On applique la relation entre le poids et la masse : $P = m \\times g$, avec $m$ en kg et $g$ en N/kg pour obtenir $P$ en newtons.",
+        "Application numérique : $P = 8{,}0 \\times 9{,}8 = 78{,}4$ N.",
+        "On conserve deux chiffres significatifs : $P \\approx 78$ N."
+      ],
+      "reponse": "$P = m \\times g = 8{,}0 \\times 9{,}8 = 78{,}4 \\approx 78$ N."
+    },
+    {
+      "id": 8,
+      "difficulte": "intermediaire",
+      "notion": "poids-autres-astres",
+      "enonce": "Un colis a une masse $m = 4{,}0$ kg. (a) Calculer son poids sur Terre ($g_{\\text{Terre}} = 9{,}8$ N/kg). (b) Ce colis est ensuite emporté sur Jupiter, où $g_{\\text{Jupiter}} = 25$ N/kg. Calculer son poids sur Jupiter.",
+      "corrige": [
+        "(a) Sur Terre : $P_{\\text{Terre}} = m \\times g_{\\text{Terre}} = 4{,}0 \\times 9{,}8 = 39{,}2$ N, soit $P_{\\text{Terre}} \\approx 39$ N.",
+        "(b) La masse ne change pas d'un astre à l'autre : elle vaut toujours $m = 4{,}0$ kg. On applique $P = m \\times g$ avec la pesanteur de Jupiter.",
+        "Sur Jupiter : $P_{\\text{Jupiter}} = m \\times g_{\\text{Jupiter}} = 4{,}0 \\times 25 = 100$ N.",
+        "Le colis pèse donc bien plus lourd sur Jupiter que sur Terre, car $g_{\\text{Jupiter}} > g_{\\text{Terre}}$."
+      ],
+      "reponse": "(a) $P_{\\text{Terre}} = 4{,}0 \\times 9{,}8 = 39{,}2 \\approx 39$ N ; (b) $P_{\\text{Jupiter}} = 4{,}0 \\times 25 = 100$ N."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "equilibre",
+      "enonce": "Un objet est accroché à un dynamomètre et reste immobile. Sur Terre ($g_{\\text{Terre}} = 9{,}8$ N/kg), le dynamomètre indique $19{,}6$ N. (a) Expliquer pourquoi l'indication du dynamomètre est égale au poids de l'objet. (b) En déduire la masse de l'objet. (c) On refait exactement la même mesure sur la Lune ($g_{\\text{Lune}} = 1{,}6$ N/kg). Qu'indiquera le dynamomètre ?",
+      "corrige": [
+        "(a) L'objet est immobile : il est donc **en équilibre**. Il subit deux forces qui se compensent, son **poids** $\\vec{P}$ (vers le bas) et la **tension du dynamomètre** $\\vec{T}$ (vers le haut). Elles ont la même valeur : $T = P$. Comme le dynamomètre mesure la force $T$ qu'il exerce, son indication est égale au poids.",
+        "(b) On a donc $P = 19{,}6$ N. En isolant la masse dans $P = m \\times g$ : $m = \\dfrac{P}{g_{\\text{Terre}}} = \\dfrac{19{,}6}{9{,}8} = 2{,}0$ kg.",
+        "(c) Sur la Lune, la **masse** est inchangée ($2{,}0$ kg), mais le poids change. Le nouveau poids vaut $P_{\\text{Lune}} = m \\times g_{\\text{Lune}} = 2{,}0 \\times 1{,}6 = 3{,}2$ N. L'objet étant toujours en équilibre, le dynamomètre indiquera donc $3{,}2$ N."
+      ],
+      "reponse": "(a) À l'équilibre, $T = P$, donc le dynamomètre affiche le poids ; (b) $m = \\dfrac{19{,}6}{9{,}8} = 2{,}0$ kg ; (c) sur la Lune il indiquera $P_{\\text{Lune}} = 2{,}0 \\times 1{,}6 = 3{,}2$ N."
+    },
+    {
+      "id": 10,
+      "difficulte": "probleme",
+      "notion": "poids-masse-equilibre",
+      "enonce": "Un géologue prépare une mission d'exploration. Il doit transporter une caisse d'échantillons de masse $m = 15$ kg. On donne $g_{\\text{Terre}} = 9{,}8$ N/kg et $g_{\\text{Mars}} = 3{,}7$ N/kg. **1.** Calculer le poids de la caisse sur Terre. **2.** Sur Terre, la caisse est soulevée par une grue et reste immobile, suspendue à un câble. Quelle est la valeur de la tension du câble ? Justifier à l'aide de l'équilibre. **3.** La mission se poursuit sur Mars. La masse de la caisse change-t-elle ? Justifier et donner sa valeur sur Mars. **4.** Calculer le poids de la caisse sur Mars. **5.** Sur Mars, la caisse est de nouveau suspendue, immobile, au câble. Le câble supporte-t-il une tension plus grande ou plus petite que sur Terre, et environ combien de fois ?",
+      "corrige": [
+        "1. On applique la relation poids-masse sur Terre : $P_{\\text{Terre}} = m \\times g_{\\text{Terre}} = 15 \\times 9{,}8 = 147$ N.",
+        "2. La caisse est immobile, donc **en équilibre**. Elle subit son poids $\\vec{P}$ (vers le bas) et la tension du câble $\\vec{T}$ (vers le haut), qui se compensent. Ces deux forces ont donc la même valeur : $T = P_{\\text{Terre}} = 147$ N.",
+        "3. La **masse** est une quantité de matière : elle ne dépend pas de l'astre. Elle reste donc identique, $m = 15$ kg sur Mars comme sur Terre.",
+        "4. Sur Mars, on applique la même relation avec la pesanteur de Mars : $P_{\\text{Mars}} = m \\times g_{\\text{Mars}} = 15 \\times 3{,}7 = 55{,}5$ N.",
+        "5. Sur Mars aussi la caisse est en équilibre, donc la tension vaut $T_{\\text{Mars}} = P_{\\text{Mars}} = 55{,}5$ N. C'est **plus petit** que sur Terre. Le rapport vaut $\\dfrac{P_{\\text{Terre}}}{P_{\\text{Mars}}} = \\dfrac{147}{55{,}5} \\approx 2{,}6$ (on retrouve $\\dfrac{g_{\\text{Terre}}}{g_{\\text{Mars}}} = \\dfrac{9{,}8}{3{,}7} \\approx 2{,}6$) : le câble est environ $2{,}6$ fois moins tendu sur Mars."
+      ],
+      "reponse": "$P_{\\text{Terre}} = 147$ N et la tension du câble vaut aussi $147$ N (équilibre). La masse reste $15$ kg partout. Sur Mars, $P_{\\text{Mars}} = 15 \\times 3{,}7 = 55{,}5$ N, donc le câble n'y supporte que $55{,}5$ N, soit environ $2{,}6$ fois moins que sur Terre."
     }
   ]
 }
