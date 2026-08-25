@@ -170,7 +170,6 @@ Structure, calquée sur `qcm.json` :
 ### Règles
 
 - **10 exercices** par chapitre : application, intermédiaire, approfondissement, et un **problème type bac** (lycée) ou **de synthèse** (collège) en 10e position. Historiquement 6 ; étendus à 10.
-  **2 approfondissement** (problème, paramètre, modélisation).
 - Le **corrigé est un tableau d'étapes** : il montre le raisonnement, pas seulement la réponse.
   C'est ce qui distingue l'exercice corrigé d'un simple corrigé de manuel.
 - `enonce`, `corrige` (non vide) et `reponse` sont **obligatoires**. LaTeX autorisé partout
