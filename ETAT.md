@@ -57,10 +57,10 @@ Chaque chapitre comporte une `fiche.md` et un `qcm.json` de 10 questions (2 faci
 Un chapitre offre désormais quatre modes dans l'application, et non plus deux :
 
 - **Cours** — la `fiche.md`.
-- **Exercices** — un `exercice.json` de **6 exercices** (2 application / 2
+- **Exercices** — un `exercice.json` de **10 exercices** (dont un problème type bac ou de synthèse) (2 application / 2
   intermédiaire / 2 approfondissement), chacun avec un **corrigé rédigé en
   étapes** et sa réponse isolée. Dans l'appli, le corrigé reste caché jusqu'à ce
-  que l'élève le demande. **Les 208 chapitres en ont un** (1248 exercices).
+  que l'élève le demande. **Les 208 chapitres en ont un** (2080 exercices).
 - **QCM** — le `qcm.json`.
 - **Outils** — un `outil.json` (optionnel) qui relie le chapitre aux modules de
   calcul déterministes de `app/lib/`. **48 chapitres calculatoires** sont reliés
@@ -276,7 +276,7 @@ l'ensemble de la physique-chimie au-delà du périmètre v1 lycée.
 2. **Trancher la date de BO du cycle 4** (voir plus haut) et harmoniser les fiches.
 3. **Regarder l'application sur un téléphone** — elle compile, personne ne l'a vue.
 4. **Réextraire les programmes de Terminale** dans `docs/`, puis produire.
-5. ✅ Contenu — **208 chapitres, 2080 questions, 1248 exercices** (collège → Terminale, voies générale et technologique).
+5. ✅ Contenu — **208 chapitres, 2080 questions, 2080 exercices** (collège → Terminale, voies générale et technologique).
 6. ✅ Collège de mathématiques complet — 6e à 3e, 54 chapitres.
 7. ✅ Outils de calcul — 9 modules, 234 tests **exécutés, tous au vert**.
 8. ✅ Application Expo — écrite **et compilée**.
