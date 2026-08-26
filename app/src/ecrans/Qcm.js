@@ -106,6 +106,11 @@ export default function Qcm({ route, navigation }) {
                   {bilan.sansFaute ? ' · sans-faute, bonus appliqué !' : ''}
                 </Text>
               )}
+              {bilan.badgesGagnes?.length > 0 && (
+                <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, marginTop: 8 }}>
+                  Nouveau badge : {bilan.badgesGagnes.map((b) => `${b.icone} ${b.titre}`).join(' · ')}
+                </Text>
+              )}
             </View>
           )}
 

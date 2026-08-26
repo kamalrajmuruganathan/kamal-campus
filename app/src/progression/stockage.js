@@ -20,6 +20,8 @@ export function profilVide() {
     reponsesTotal: 0,
     sansFautes: 0,
     meilleureSerie: 0,
+    flashcardsRevues: 0, // nombre de cartes vues (toutes sessions)
+    flashcardsConnues: 0, // nombre de cartes marquées « je savais »
     chapitres: {}, // { [idChapitre]: { titre, meilleurScore, tentatives } }
     historique: [], // [{ date, titre, justes, total, points, matiere }] — récents d'abord
   };

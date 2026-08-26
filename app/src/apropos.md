@@ -43,12 +43,17 @@ sert exactement le contenu de ton programme.
 
 ## Ta progression
 
-Chaque QCM et chaque bac blanc rapporte des **points d'expérience** : plus tu as
-de bonnes réponses, plus ton **niveau** et ton **rang** montent (de Débutant à
-Génie). Les questions difficiles rapportent davantage, et un sans-faute donne un
-bonus. L'écran **« Ma progression »** récapitule ton niveau, ton taux de réussite,
-ta meilleure série et les chapitres que tu maîtrises. Tout est gardé **sur ton
-téléphone**, sans compte.
+Chaque QCM, chaque bac blanc et chaque carte de révision rapporte des **points
+d'expérience** : plus tu as de bonnes réponses, plus ton **niveau** et ton **rang**
+montent (de Débutant à Génie). Les questions difficiles rapportent davantage, et un
+sans-faute donne un bonus. Tu décroches aussi des **badges** en atteignant des
+objectifs (première réussite, séries de bonnes réponses, chapitres maîtrisés…).
+L'écran **« Ma progression »** récapitule ton niveau, ton taux de réussite, ta
+meilleure série, tes badges et les chapitres que tu maîtrises. Tout est gardé **sur
+ton téléphone**, sans compte.
+
+Depuis la liste des chapitres d'un parcours, un **QCM du parcours** mélange les
+questions de tous ses chapitres pour une révision d'ensemble.
 
 ---
 

@@ -11,6 +11,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { useProgression } from '../progression/Contexte';
 import { niveauPourXp } from '../../lib/progression';
+import { evaluerBadges } from '../../lib/badges';
 
 const LIBELLE_MATIERE = {
   mathematiques: 'Mathématiques',
@@ -55,6 +56,8 @@ export default function Profil({ navigation }) {
       : 0;
   const chapitres = Object.values(profil.chapitres || {});
   const maitrises = chapitres.filter((c) => c.meilleurScore >= 0.8).length;
+  const badges = evaluerBadges(profil);
+  const badgesObtenus = badges.filter((b) => b.obtenu).length;
 
   const matieres = Object.entries(profil.xpParMatiere || {})
     .filter(([, v]) => v > 0)
@@ -126,6 +129,33 @@ export default function Profil({ navigation }) {
             {n.xpDansNiveau} / {n.largeurNiveau} XP — encore {n.xpRestant} pour le niveau {n.niveau + 1}
           </Text>
         </View>
+
+        {/* Accès aux badges */}
+        <Pressable
+          onPress={() => navigation.navigate('Badges')}
+          accessibilityRole="button"
+          style={({ pressed }) => [
+            st.badges,
+            {
+              backgroundColor: t.couleur.surface,
+              borderColor: t.couleur.trait,
+              borderRadius: t.rayon.m,
+              marginTop: t.espace.m,
+              opacity: pressed ? 0.7 : 1,
+            },
+          ]}
+        >
+          <Text style={{ fontSize: 20, marginRight: t.espace.m }}>🏅</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+              Badges
+            </Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+              {badgesObtenus} / {badges.length} décrochés
+            </Text>
+          </View>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
+        </Pressable>
 
         {vierge ? (
           <View
@@ -241,6 +271,7 @@ export default function Profil({ navigation }) {
 
 const st = StyleSheet.create({
   section: { fontSize: 12, fontWeight: '700', letterSpacing: 0.8, marginTop: 28, marginBottom: 10 },
+  badges: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, padding: 14 },
   piste: { height: 6, borderRadius: 3, overflow: 'hidden' },
   ligneMatiere: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   ligneHisto: {

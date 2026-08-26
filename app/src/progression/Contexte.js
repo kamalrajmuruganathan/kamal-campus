@@ -13,9 +13,11 @@ import {
   meilleureSerie as calcSerie,
   niveauPourXp,
 } from '../../lib/progression';
+import { badgesNouveaux } from '../../lib/badges';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
 
 const MAX_HISTORIQUE = 30;
+const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
 
 const ProgressionContexte = createContext(null);
 
@@ -97,6 +99,57 @@ export function ProgressionProvider({ children }) {
         niveauAvant,
         niveauApres,
         monteeDeNiveau: niveauApres > niveauAvant,
+        badgesGagnes: badgesNouveaux(profil, suivant),
+      };
+    },
+    [profil],
+  );
+
+  /**
+   * Enregistre une session de flashcards (auto-évaluation « je savais »).
+   * @param {{connues, total, chapitreId?, titre?, matiere?}} arg
+   * @returns {{points, connues, total, niveauAvant, niveauApres,
+   *            monteeDeNiveau, badgesGagnes}}
+   */
+  const enregistrerFlashcards = useCallback(
+    ({ connues = 0, total = 0, titre = 'Cartes de révision', matiere = null }) => {
+      const points = connues * XP_PAR_CARTE_CONNUE;
+      const niveauAvant = niveauPourXp(profil.xp).niveau;
+      const niveauApres = niveauPourXp(profil.xp + points).niveau;
+
+      const suivant = {
+        ...profil,
+        xp: profil.xp + points,
+        xpParMatiere: { ...profil.xpParMatiere },
+        flashcardsRevues: (profil.flashcardsRevues || 0) + total,
+        flashcardsConnues: (profil.flashcardsConnues || 0) + connues,
+      };
+      if (matiere && points > 0) {
+        suivant.xpParMatiere[matiere] = (suivant.xpParMatiere[matiere] || 0) + points;
+      }
+      suivant.historique = [
+        {
+          date: new Date().toISOString(),
+          titre: `Cartes — ${titre}`,
+          justes: connues,
+          total,
+          points,
+          matiere: matiere || null,
+        },
+        ...profil.historique,
+      ].slice(0, MAX_HISTORIQUE);
+
+      setProfil(suivant);
+      sauverProfil(suivant);
+
+      return {
+        points,
+        connues,
+        total,
+        niveauAvant,
+        niveauApres,
+        monteeDeNiveau: niveauApres > niveauAvant,
+        badgesGagnes: badgesNouveaux(profil, suivant),
       };
     },
     [profil],
@@ -110,7 +163,7 @@ export function ProgressionProvider({ children }) {
 
   return (
     <ProgressionContexte.Provider
-      value={{ profil, charge, enregistrerResultat, reinitialiser }}
+      value={{ profil, charge, enregistrerResultat, enregistrerFlashcards, reinitialiser }}
     >
       {children}
     </ProgressionContexte.Provider>
@@ -127,7 +180,11 @@ export function useProgression() {
       charge: false,
       enregistrerResultat: () => ({
         points: 0, justes: 0, total: 0, taux: 0, sansFaute: false,
-        serie: 0, niveauAvant: 1, niveauApres: 1, monteeDeNiveau: false,
+        serie: 0, niveauAvant: 1, niveauApres: 1, monteeDeNiveau: false, badgesGagnes: [],
+      }),
+      enregistrerFlashcards: () => ({
+        points: 0, connues: 0, total: 0,
+        niveauAvant: 1, niveauApres: 1, monteeDeNiveau: false, badgesGagnes: [],
       }),
       reinitialiser: () => {},
     };
