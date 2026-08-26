@@ -1,0 +1,24 @@
+{
+  "id": "tale-spe-math-loi-binomiale-cartes",
+  "chapitre": "tale-spe-math-loi-binomiale",
+  "titre": "Cartes — Succession d'épreuves, schéma de Bernoulli et loi binomiale",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Comment calcule-t-on la probabilité d'une issue d'une succession d'épreuves indépendantes ?", "verso": "On multiplie : $P(x_1, \\dots, x_n) = P(x_1) \\times P(x_2) \\times \\cdots \\times P(x_n)$." },
+    { "recto": "Qu'est-ce qu'une épreuve de Bernoulli et sa loi ?", "verso": "Une expérience à deux issues (succès $S$ de probabilité $p$, échec de probabilité $1-p$) ; $X=1$ en cas de succès, $X=0$ sinon, avec $P(X=1)=p$." },
+    { "recto": "Quelles sont les trois conditions d'un schéma de Bernoulli ?", "verso": "1) chaque épreuve n'a que deux issues ; 2) les épreuves sont indépendantes ; 3) $p$ est le même à chaque épreuve." },
+    { "recto": "Que compte la variable $X$ suivant la loi binomiale $B(n,p)$ ?", "verso": "Le nombre de succès parmi les $n$ épreuves (elle prend les valeurs entières de $0$ à $n$)." },
+    { "recto": "Quelle est la formule de $P(X=k)$ pour $X \\sim B(n,p)$ ?", "verso": "$P(X = k) = \\dbinom{n}{k} p^k (1-p)^{n-k}$, pour $0 \\leqslant k \\leqslant n$." },
+    { "recto": "À quoi correspond le coefficient $\\binom{n}{k}$ dans la loi binomiale ?", "verso": "Au nombre de chemins donnant exactement $k$ succès (façons de placer les $k$ succès parmi les $n$ épreuves)." },
+    { "recto": "Que valent l'espérance et la variance de $X \\sim B(n,p)$ ?", "verso": "$E(X) = np$ et $V(X) = np(1-p)$." },
+    { "recto": "Que valent $P(X=0)$ et $P(X=n)$ pour une loi binomiale ?", "verso": "$P(X=0) = (1-p)^n$ et $P(X=n) = p^n$ (car $\\binom{n}{0}=\\binom{n}{n}=1$)." },
+    { "recto": "Comment calculer $P(X \\geqslant k)$ par passage au complémentaire ?", "verso": "$P(X \\geqslant k) = 1 - P(X \\leqslant k-1)$. En particulier $P(X \\geqslant 1) = 1 - (1-p)^n$." },
+    { "recto": "Comment calculer $P(k \\leqslant X \\leqslant k')$ avec des probabilités cumulées ?", "verso": "$P(k \\leqslant X \\leqslant k') = P(X \\leqslant k') - P(X \\leqslant k-1)$ (attention : $k-1$, pas $k$)." },
+    { "recto": "Un tirage sans remise donne-t-il un schéma de Bernoulli ?", "verso": "Non : sans remise, les épreuves sont dépendantes ($p$ change), donc ce n'est pas binomial." }
+  ]
+}

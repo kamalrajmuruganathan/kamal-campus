@@ -1,0 +1,24 @@
+{
+  "id": "tale-spe-math-primitives-equations-differentielles-cartes",
+  "chapitre": "tale-spe-math-primitives-equations-differentielles",
+  "titre": "Cartes — Primitives et équations différentielles",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce qu'une primitive $F$ de $f$ sur un intervalle $I$ ?", "verso": "Une fonction $F$ telle que $F' = f$ sur $I$ (on la vérifie toujours en la dérivant)." },
+    { "recto": "Comment sont reliées deux primitives d'une même fonction sur un intervalle ?", "verso": "Elles diffèrent d'une constante : toutes les primitives sont les $F + C$, $C \\in \\mathbb{R}$ (une infinité)." },
+    { "recto": "Comment fixer une unique primitive ?", "verso": "En imposant une condition initiale $F(x_0) = y_0$, qui détermine $C$." },
+    { "recto": "Quelle est une primitive de $x^n$ (avec $n \\neq -1$) ?", "verso": "$\\dfrac{x^{n+1}}{n+1}$." },
+    { "recto": "Quelles sont les primitives de $e^x$, $\\sin x$ et $\\cos x$ ?", "verso": "$e^x$ ; $-\\cos x$ (attention au signe) ; $\\sin x$." },
+    { "recto": "Quelle est une primitive de la forme $u' e^{u}$ et de $\\dfrac{u'}{\\sqrt{u}}$ ?", "verso": "$e^{u}$ pour $u'e^u$ ; $2\\sqrt{u}$ (si $u>0$) pour $\\dfrac{u'}{\\sqrt u}$." },
+    { "recto": "Quelles sont les solutions de l'équation différentielle $y' = ay$ ?", "verso": "$y(x) = C e^{ax}$, $C \\in \\mathbb{R}$." },
+    { "recto": "Quelles sont les solutions de $y' = ay + b$ (avec $a \\neq 0$) ?", "verso": "$y(x) = C e^{ax} - \\dfrac{b}{a}$ ; la solution constante particulière est $-\\dfrac{b}{a}$." },
+    { "recto": "Connaissant une solution particulière $g$ de $y' = ay + f$, quelles sont toutes les solutions ?", "verso": "$y(x) = g(x) + C e^{ax}$, $C \\in \\mathbb{R}$." },
+    { "recto": "Pourquoi la formule $\\dfrac{x^{n+1}}{n+1}$ ne marche-t-elle pas pour $n = -1$ ?", "verso": "Car $n+1 = 0$ (division par zéro) ; une primitive de $\\dfrac{1}{x}$ est $\\ln|x|$." },
+    { "recto": "Quelle est l'erreur n°1 à éviter en cherchant les primitives ?", "verso": "Oublier la constante $+C$ : une fonction a une infinité de primitives, sans le $C$ on ne peut plus utiliser la condition initiale." }
+  ]
+}

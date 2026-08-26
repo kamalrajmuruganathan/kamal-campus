@@ -1,0 +1,24 @@
+{
+  "id": "tale-esc-probabilites-bayes-ia-cartes",
+  "chapitre": "tale-esc-probabilites-bayes-ia",
+  "titre": "Cartes — Probabilités, Bayes et intelligence artificielle",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "enseignement-scientifique",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce qu'un **bit** et un **octet** ?", "verso": "Un bit vaut $0$ ou $1$ ; un octet $=8$ bits, qui code $2^8 = 256$ valeurs." },
+    { "recto": "Poids (non compressé) d'une image en RVB ?", "verso": "largeur $\\times$ hauteur $\\times$ nombre d'octets par pixel (3 octets/pixel en RVB)." },
+    { "recto": "« Corrélation n'est pas causalité » : quelles explications possibles ?", "verso": "Le **hasard**, la **causalité inverse**, ou un **facteur de confusion** $C$ influant sur les deux grandeurs." },
+    { "recto": "Qu'est-ce qu'un **biais** dans les données, et se corrige-t-il avec plus de données ?", "verso": "Une distorsion **systématique** par rapport à la réalité ; contrairement au hasard, il **ne se corrige pas** en augmentant $n$." },
+    { "recto": "Formule des **probabilités totales** (partition $A/\\overline{A}$) ?", "verso": "$P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B)$." },
+    { "recto": "Énonce la **formule de Bayes** $P_B(A)$ ?", "verso": "$P_B(A) = \\dfrac{P(A)\\,P_A(B)}{P(B)}$ : on descend l'arbre pour $P(B)$, puis on remonte." },
+    { "recto": "Définitions de la **sensibilité** et de la **spécificité** d'un test ?", "verso": "$\\text{Se} = P_M(T^+)$ (malades bien détectés) ; $\\text{Sp} = P_{\\overline{M}}(T^-)$ (sains bien détectés)." },
+    { "recto": "Que valent les probabilités d'un **faux positif** et d'un **faux négatif** ?", "verso": "Faux positif : $P_{\\overline{M}}(T^+) = 1-\\text{Sp}$ ; faux négatif : $P_M(T^-) = 1-\\text{Se}$." },
+    { "recto": "Pourquoi un test positif peut-il ne donner que ~33 % de chances d'être malade ?", "verso": "Le **paradoxe des tests rares** : quand $P(M)$ est faible, les faux positifs noient les vrais positifs, ce qui abaisse la valeur prédictive positive (VPP)." },
+    { "recto": "**Intervalle de confiance** à 95 % pour une fréquence observée $f$ ?", "verso": "$\\left[\\,f - \\dfrac{1}{\\sqrt{n}}\\ ;\\ f + \\dfrac{1}{\\sqrt{n}}\\,\\right]$, d'amplitude $\\dfrac{2}{\\sqrt{n}}$." },
+    { "recto": "Estimation d'un effectif $N$ par **capture–recapture** ?", "verso": "$N \\approx \\dfrac{M \\times n}{m}$ ($M$ marqués relâchés, $n$ recapturés, $m$ marqués parmi eux)." }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "tale-compl-math-lois-densite-temps-attente-cartes",
+  "chapitre": "tale-compl-math-lois-densite-temps-attente",
+  "titre": "Cartes — Lois à densité : temps d'attente",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-complementaires",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce qu'une **densité de probabilité** $f$ sur $I$ ?", "verso": "Une fonction continue et positive sur $I$ dont l'aire totale vaut $1$ : $\\displaystyle\\int_I f(x)\\,dx = 1$." },
+    { "recto": "Pour une loi à densité, comment calcule-t-on $P(c \\leqslant X \\leqslant d)$ ?", "verso": "$P(c \\leqslant X \\leqslant d) = \\displaystyle\\int_c^d f(x)\\,dx$ (l'aire sous la courbe entre $c$ et $d$)." },
+    { "recto": "Que vaut $P(X=c)$ pour une loi à densité ?", "verso": "$P(X=c)=0$ : les inégalités strictes ou larges sont **interchangeables**." },
+    { "recto": "Formule de l'**espérance** d'une loi à densité ?", "verso": "$E(X) = \\displaystyle\\int_I x\\,f(x)\\,dx$." },
+    { "recto": "Densité et espérance de la **loi uniforme** sur $[a\\,;b]$ ?", "verso": "Densité $f(x)=\\dfrac{1}{b-a}$ ; espérance $E(X)=\\dfrac{a+b}{2}$ (le milieu)." },
+    { "recto": "Loi uniforme sur $[a\\,;b]$ : $P(c \\leqslant X \\leqslant d)$ ?", "verso": "$P(c \\leqslant X \\leqslant d) = \\dfrac{d-c}{b-a}$." },
+    { "recto": "Densité de la **loi exponentielle** de paramètre $\\lambda>0$ ?", "verso": "$f(t) = \\lambda\\,\\mathrm{e}^{-\\lambda t}$ pour $t \\geqslant 0$." },
+    { "recto": "Loi exponentielle : que valent $P(X \\leqslant t)$ et $P(X>t)$ ?", "verso": "$P(X \\leqslant t) = 1 - \\mathrm{e}^{-\\lambda t}$ et $P(X>t) = \\mathrm{e}^{-\\lambda t}$." },
+    { "recto": "Espérance de la loi exponentielle de paramètre $\\lambda$ ?", "verso": "$E(X) = \\dfrac{1}{\\lambda}$ (attention : ce n'est pas $\\lambda$)." },
+    { "recto": "Énonce la propriété d'**absence de mémoire** de la loi exponentielle.", "verso": "$P_{X>s}(X>s+t) = P(X>t)$ : le système ne « vieillit » pas." },
+    { "recto": "Comment retrouve-t-on $\\lambda$ quand l'énoncé donne la moyenne ?", "verso": "$E(X)=\\dfrac{1}{\\lambda}$, donc $\\lambda = \\dfrac{1}{E(X)}$." }
+  ]
+}

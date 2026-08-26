@@ -1,0 +1,24 @@
+{
+  "id": "tale-spe-math-listes-cartes",
+  "chapitre": "tale-spe-math-listes",
+  "titre": "Cartes — Algorithmique : listes",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce qui distingue une liste d'un ensemble mathématique ?", "verso": "Une liste a un ordre et autorise les répétitions : `[15, 15]` a deux éléments, alors que $\\{15, 15\\} = \\{15\\}$." },
+    { "recto": "Quelles sont les trois façons de générer une liste au programme ?", "verso": "En extension (`[1,2,3]`), par ajouts successifs (`L=[]` puis `L.append(x)`), et en compréhension (`[f(x) for x in ...]`)." },
+    { "recto": "Que fait `len(L)` ?", "verso": "Renvoie le nombre d'éléments de la liste `L`." },
+    { "recto": "À quel indice commence le premier élément d'une liste Python ?", "verso": "À l'indice `0` : `L[0]` est le premier élément." },
+    { "recto": "Quel est l'indice du dernier élément d'une liste de longueur $n$ ?", "verso": "`len(L) - 1` (soit $n-1$) ; `L[len(L)]` déclenche une `IndexError`. On peut aussi écrire `L[-1]`." },
+    { "recto": "Quels entiers produit `range(n)` ?", "verso": "Les entiers de `0` à `n-1` : la borne de droite est exclue. `range(5)` donne `0,1,2,3,4`." },
+    { "recto": "Que fait `L.append(x)` ?", "verso": "Ajoute `x` à la fin de la liste `L`, sur place (ne renvoie rien)." },
+    { "recto": "Que renvoie `x in L` ?", "verso": "`True` si `x` figure dans la liste, `False` sinon : c'est le $\\in$ mathématique." },
+    { "recto": "Que supprime `L.remove(v)` ?", "verso": "La première occurrence de la valeur `v`, pas toutes les occurrences." },
+    { "recto": "Quelle est la différence entre `for e in L:` et `for i in range(len(L)):` ?", "verso": "Le premier itère directement sur les valeurs ; le second parcourt les indices et accède à `L[i]` (utile quand on a besoin de la position)." },
+    { "recto": "Écris en compréhension la liste des carrés des entiers de 0 à 4.", "verso": "`[x**2 for x in range(5)]`, qui vaut `[0, 1, 4, 9, 16]`." }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "tale-spe-math-continuite-cartes",
+  "chapitre": "tale-spe-math-continuite",
+  "titre": "Cartes — Continuité et théorème des valeurs intermédiaires",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Comment définit-on la continuité de $f$ en un point $a$ ?", "verso": "$f$ est continue en $a$ si $\\lim_{x \\to a} f(x) = f(a)$." },
+    { "recto": "Quel est le lien entre dérivabilité et continuité ?", "verso": "Si $f$ est dérivable en $a$, alors $f$ est continue en $a$. La réciproque est fausse." },
+    { "recto": "Quel est le contre-exemple à connaître d'une fonction continue mais non dérivable ?", "verso": "$f(x) = |x|$ : continue en $0$ mais non dérivable en $0$ (point anguleux)." },
+    { "recto": "Si $u_n \\to \\ell$ et $f$ est continue en $\\ell$, que vaut $\\lim f(u_n)$ ?", "verso": "$\\lim_{n \\to +\\infty} f(u_n) = f(\\ell)$." },
+    { "recto": "Énonce le théorème des valeurs intermédiaires (TVI).", "verso": "Si $f$ est continue sur $[a\\,;b]$ et $k$ est compris entre $f(a)$ et $f(b)$, alors il existe $c \\in [a\\,;b]$ tel que $f(c) = k$." },
+    { "recto": "Que garantit le TVI : existence, unicité, ou valeur de la solution ?", "verso": "Seulement l'existence d'au moins une solution — ni l'unicité, ni la valeur de $c$." },
+    { "recto": "Quelle hypothèse ajouter au TVI pour obtenir l'unicité de la solution ?", "verso": "La stricte monotonie de $f$ (théorème de la bijection) : $\\exists! \\, c$ tel que $f(c) = k$." },
+    { "recto": "Que signifie une flèche dans un tableau de variations ?", "verso": "Par convention, que $f$ est continue et strictement monotone sur l'intervalle concerné." },
+    { "recto": "Comment encadrer une solution par dichotomie ?", "verso": "On part d'un intervalle où $f$ change de signe et on le coupe en deux à chaque étape en gardant la moitié qui contient la solution ; la longueur est divisée par 2 à chaque tour." },
+    { "recto": "Si une suite $u_{n+1} = f(u_n)$ converge vers $\\ell$ avec $f$ continue, quelle équation vérifie $\\ell$ ?", "verso": "$f(\\ell) = \\ell$ — mais seulement après avoir prouvé la convergence de la suite." },
+    { "recto": "Pour appliquer le TVI, la dérivabilité de $f$ est-elle nécessaire ?", "verso": "Non, seule la continuité est requise ; la dérivabilité sert seulement à obtenir la monotonie via le signe de $f'$." }
+  ]
+}

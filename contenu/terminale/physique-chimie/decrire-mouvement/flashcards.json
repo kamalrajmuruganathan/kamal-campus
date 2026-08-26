@@ -1,0 +1,24 @@
+{
+  "id": "tale-spe-pc-decrire-mouvement-cartes",
+  "chapitre": "tale-spe-pc-decrire-mouvement",
+  "titre": "Cartes — Décrire un mouvement",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Comment s'écrit le vecteur position en coordonnées cartésiennes (2D) ?", "verso": "$\\vec{\\mathrm{OM}}(t) = x(t)\\,\\vec{\\imath} + y(t)\\,\\vec{\\jmath}$ ; $x(t)$ et $y(t)$ sont les équations horaires (en mètres)." },
+    { "recto": "Comment obtient-on le vecteur vitesse à partir de la position ?", "verso": "$\\vec{v}(t) = \\dfrac{\\mathrm{d}\\vec{\\mathrm{OM}}}{\\mathrm{d}t}$ ; on dérive chaque coordonnée : $v_x = \\dot{x}$, $v_y = \\dot{y}$. Unité : m·s⁻¹." },
+    { "recto": "Quelle est la direction du vecteur vitesse ?", "verso": "Il est **toujours tangent à la trajectoire**, orienté dans le sens du mouvement." },
+    { "recto": "Comment obtient-on le vecteur accélération ?", "verso": "$\\vec{a}(t) = \\dfrac{\\mathrm{d}\\vec{v}}{\\mathrm{d}t} = \\dfrac{\\mathrm{d}^2\\vec{\\mathrm{OM}}}{\\mathrm{d}t^2}$ ; $a_x = \\ddot{x}$, $a_y = \\ddot{y}$. Unité : m·s⁻²." },
+    { "recto": "« Vitesse constante en valeur » implique-t-il $\\vec{a} = \\vec{0}$ ?", "verso": "Non : $\\vec{a} = \\vec{0}$ seulement si $\\vec{v}$ est constant **en norme ET en direction**. Un changement de direction (mouvement circulaire) crée une accélération." },
+    { "recto": "Comment estime-t-on la vitesse au point $M_i$ sur un enregistrement (pas $\\tau$) ?", "verso": "$v_i \\approx \\dfrac{M_{i-1}M_{i+1}}{2\\tau}$ : on **encadre** le point ($M_{i-1}$ et $M_{i+1}$), pas $M_i M_{i+1}$." },
+    { "recto": "Comment est défini le repère de Frenet en mouvement circulaire ?", "verso": "Deux vecteurs unitaires : $\\vec{u_t}$ tangent (sens du mouvement) et $\\vec{u_n}$ normal, dirigé vers le **centre** du cercle." },
+    { "recto": "Comment se décompose l'accélération dans le repère de Frenet ?", "verso": "$\\vec{a} = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t}\\,\\vec{u_t} + \\dfrac{v^2}{R}\\,\\vec{u_n}$ : $a_t$ traduit le changement de valeur de $v$, $a_n = \\dfrac{v^2}{R}$ le changement de direction." },
+    { "recto": "Que vaut l'accélération d'un mouvement rectiligne uniforme ? uniformément accéléré ?", "verso": "Rectiligne uniforme : $\\vec{a} = \\vec{0}$. Rectiligne uniformément accéléré : $\\vec{a}$ constant, colinéaire à $\\vec{v}$." },
+    { "recto": "Que vaut l'accélération d'un mouvement circulaire uniforme ?", "verso": "$\\vec{a} = \\dfrac{v^2}{R}\\,\\vec{u_n}$ : centripète (vers le centre), constante en norme mais changeant sans cesse de direction. ($a_t = 0$)" },
+    { "recto": "Dans $a_n = \\dfrac{v^2}{R}$, où sont le carré et le rayon ?", "verso": "La vitesse est **au carré** au numérateur, le rayon $R$ **au dénominateur** : plus on va vite ou plus le virage est serré (petit $R$), plus $a_n$ est grande." }
+  ]
+}

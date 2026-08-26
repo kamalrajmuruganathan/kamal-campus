@@ -1,0 +1,23 @@
+{
+  "id": "tale-exp-math-graphes-matrices-cartes",
+  "chapitre": "tale-exp-math-graphes-matrices",
+  "titre": "Cartes — Graphes et matrices",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-expertes",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Ordre d'un graphe et degré d'un sommet ?", "verso": "L'**ordre** = nombre de sommets ; le **degré** de $S$ = nombre d'arêtes incidentes à $S$ (une boucle compte pour $2$)." },
+    { "recto": "Théorème des degrés (« poignées de main ») ?", "verso": "$\\displaystyle\\sum_{\\text{sommets}} \\deg(S) = 2\\times(\\text{nombre d'arêtes})$." },
+    { "recto": "Longueur d'une chaîne ?", "verso": "Son **nombre d'arêtes** (une chaîne de longueur $k$ a $k+1$ sommets)." },
+    { "recto": "Condition d'existence du **produit** $AB$ ?", "verso": "Le nombre de colonnes de $A$ doit égaler le nombre de lignes de $B$. Attention : $AB \\neq BA$ en général." },
+    { "recto": "Inverse d'une matrice $2\\times 2$ $A=\\begin{pmatrix} a & b \\\\ c & d\\end{pmatrix}$ ?", "verso": "Si $ad-bc\\neq 0$ : $A^{-1} = \\dfrac{1}{ad-bc}\\begin{pmatrix} d & -b \\\\ -c & a\\end{pmatrix}$." },
+    { "recto": "Que compte le coefficient $(M^k)_{ij}$ de la matrice d'adjacence ?", "verso": "Le **nombre de chemins de longueur exactement $k$** allant du sommet $i$ au sommet $j$." },
+    { "recto": "État **stable** de la suite $U_{n+1}=AU_n+C$ ?", "verso": "$U = AU + C$, soit $(I-A)U = C$, donc $U = (I-A)^{-1}C$ si $I-A$ est inversible." },
+    { "recto": "Propriété des lignes d'une **matrice de transition** $P$ (Markov) ?", "verso": "La somme des coefficients de **chaque ligne** vaut $1$ ; $p_{ij}$ = probabilité d'aller de $i$ vers $j$." },
+    { "recto": "Évolution d'une distribution $\\pi_n$ dans une chaîne de Markov ?", "verso": "$\\pi_{n+1} = \\pi_n \\times P$ (distribution ligne $\\times P$ à droite), et $\\pi_n = \\pi_0 \\times P^n$." },
+    { "recto": "Comment trouve-t-on une **distribution invariante** $\\pi$ ?", "verso": "On résout $\\pi = \\pi P$ **avec** la condition $\\sum \\pi = 1$ (sans elle, une infinité de solutions)." }
+  ]
+}

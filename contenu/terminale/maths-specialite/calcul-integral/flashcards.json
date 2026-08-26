@@ -1,0 +1,24 @@
+{
+  "id": "tale-spe-math-calcul-integral-cartes",
+  "chapitre": "tale-spe-math-calcul-integral",
+  "titre": "Cartes — Calcul intégral",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Que représente $\\int_a^b f(x)\\,dx$ quand $f$ est continue et positive sur $[a\\,;b]$ ?", "verso": "L'aire, en unités d'aire, du domaine sous la courbe entre les droites $x=a$ et $x=b$ et l'axe des abscisses." },
+    { "recto": "Quelle est la formule de calcul d'une intégrale à l'aide d'une primitive $F$ ?", "verso": "$\\int_a^b f(x)\\,dx = \\big[F(x)\\big]_a^b = F(b) - F(a)$." },
+    { "recto": "Que vaut $\\int_a^a f(x)\\,dx$ et $\\int_b^a f(x)\\,dx$ ?", "verso": "$\\int_a^a f = 0$ et $\\int_b^a f = -\\int_a^b f$ (échanger les bornes change le signe)." },
+    { "recto": "Quelle est la primitive de $f$ qui s'annule en $a$ ?", "verso": "$F_a(x) = \\int_a^x f(t)\\,dt$, car $F_a(a) = 0$." },
+    { "recto": "Énonce la linéarité de l'intégrale.", "verso": "$\\int_a^b (f+g) = \\int_a^b f + \\int_a^b g$ et $\\int_a^b k f = k \\int_a^b f$." },
+    { "recto": "Énonce la relation de Chasles.", "verso": "$\\int_a^b f + \\int_b^c f = \\int_a^c f$." },
+    { "recto": "Que donne l'intégration des inégalités si $f \\leqslant g$ sur $[a\\,;b]$ ?", "verso": "$\\int_a^b f(x)\\,dx \\leqslant \\int_a^b g(x)\\,dx$ (outil pour majorer/minorer)." },
+    { "recto": "Quelle est la valeur moyenne de $f$ sur $[a\\,;b]$ ?", "verso": "$\\mu = \\dfrac{1}{b-a}\\int_a^b f(x)\\,dx$." },
+    { "recto": "Quelle est la formule de l'intégration par parties ?", "verso": "$\\int_a^b u v' = \\big[u v\\big]_a^b - \\int_a^b u' v$." },
+    { "recto": "Comment calculer l'aire entre deux courbes $f$ et $g$ avec $f \\geqslant g$ sur $[a\\,;b]$ ?", "verso": "$\\mathcal{A} = \\int_a^b \\big(f(x) - g(x)\\big)\\,dx$." },
+    { "recto": "Pour $f \\leqslant 0$ sur $[a\\,;b]$, quel lien entre l'aire et l'intégrale ?", "verso": "L'aire vaut $-\\int_a^b f(x)\\,dx$ (une aire est positive, l'intégrale d'une fonction négative est négative)." }
+  ]
+}

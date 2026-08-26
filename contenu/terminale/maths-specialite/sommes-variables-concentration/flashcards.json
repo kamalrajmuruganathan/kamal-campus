@@ -1,0 +1,24 @@
+{
+  "id": "tale-spe-math-sommes-variables-concentration-cartes",
+  "chapitre": "tale-spe-math-sommes-variables-concentration",
+  "titre": "Cartes — Sommes de variables aléatoires, concentration et loi des grands nombres",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "L'espérance d'une somme $E(X+Y)$ exige-t-elle l'indépendance ?", "verso": "Non : $E(X+Y) = E(X) + E(Y)$ est toujours vraie, sans aucune condition (linéarité de l'espérance)." },
+    { "recto": "Quelle condition pour que $V(X+Y) = V(X) + V(Y)$ ?", "verso": "Il faut que $X$ et $Y$ soient indépendantes." },
+    { "recto": "Que vaut $V(aX)$ ?", "verso": "$V(aX) = a^2 V(X)$ (le facteur passe au carré) ; l'écart type, lui, est multiplié par $|a|$." },
+    { "recto": "Comment retrouve-t-on $E(X) = np$ pour la binomiale ?", "verso": "En écrivant $X = X_1 + \\dots + X_n$ (somme de Bernoulli, $E(X_i)=p$) et par linéarité : $E(X) = np$." },
+    { "recto": "Comment retrouve-t-on $V(X) = np(1-p)$ pour la binomiale ?", "verso": "Les $X_i$ sont indépendantes, donc les variances s'ajoutent : $V(X) = n \\times p(1-p) = np(1-p)$." },
+    { "recto": "Que valent l'espérance et la variance de la moyenne $M_n$ d'un échantillon ?", "verso": "$E(M_n) = \\mu$ (inchangée) et $V(M_n) = \\dfrac{V}{n}$ ($\\sigma(M_n) = \\dfrac{\\sigma}{\\sqrt{n}}$)." },
+    { "recto": "Que valent l'espérance et la variance de la somme $S_n$ d'un échantillon ?", "verso": "$E(S_n) = n\\mu$ et $V(S_n) = nV$ ($\\sigma(S_n) = \\sqrt{n}\\,\\sigma$)." },
+    { "recto": "Énonce l'inégalité de Bienaymé-Tchebychev.", "verso": "$P\\big(|X - \\mu| \\geqslant \\delta\\big) \\leqslant \\dfrac{V(X)}{\\delta^2}$, pour tout $\\delta > 0$." },
+    { "recto": "Énonce l'inégalité de concentration pour la moyenne $M_n$.", "verso": "$P\\big(|M_n - \\mu| \\geqslant \\delta\\big) \\leqslant \\dfrac{V}{n\\,\\delta^2}$, pour $\\delta > 0$." },
+    { "recto": "Que dit la loi des grands nombres ?", "verso": "$P\\big(|M_n - \\mu| \\geqslant \\delta\\big) \\to 0$ quand $n \\to +\\infty$ : la moyenne se concentre autour de l'espérance $\\mu$." },
+    { "recto": "Quand $n$ augmente, qu'arrive-t-il à $E(M_n)$ et $V(M_n)$ ?", "verso": "$E(M_n) = \\mu$ reste constante ; c'est $V(M_n) = \\frac{V}{n}$ qui diminue (la moyenne se resserre autour de $\\mu$)." }
+  ]
+}
