@@ -6,7 +6,7 @@
 > au lycée, et la Terminale technologique complète (programme commun à toutes les
 > séries + géométrie STD2A). **208 chapitres, 2080 questions, 208 jeux
 > d'exercices.** Chaque chapitre a ses quatre briques quand elles s'appliquent :
-> Cours, Exercices, QCM, Outils (48 chapitres reliés à un module de calcul).
+> Cours, Exercices, QCM, Outils (48 reliés à un module de calcul) et Flashcards (cartes de révision, sur les 208 chapitres).
 > Sources : programmes officiels (education.gouv.fr / eduscol) pour tout le
 > corpus. Sont désormais couvertes aussi : la série ST2S (physique-chimie pour la
 > santé), la spécialité STL SPCL (sciences physiques en laboratoire) et
