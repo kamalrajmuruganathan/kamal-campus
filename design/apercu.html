@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamal Campus — identité</title>
+<style>
+  :root{ --bleu:#1f6feb; --violet:#7a3fd4; --texte:#16232e; --attenue:#5b6b7a; --trait:#e3e8ee; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--texte); background:#f6f8fb; padding:32px; }
+  .wrap{ max-width:900px; margin:0 auto; }
+  h1{ font-family:Georgia,serif; font-weight:700; font-size:30px; margin:0 0 4px; }
+  h1 span{ color:var(--bleu); }
+  .sub{ color:var(--attenue); margin:0 0 28px; }
+  .card{ background:#fff; border:1px solid var(--trait); border-radius:16px; padding:24px; margin-bottom:20px; }
+  .label{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--attenue); margin:0 0 16px; }
+  .icons{ display:flex; gap:28px; align-items:flex-end; flex-wrap:wrap; }
+  .ico{ text-align:center; }
+  .ico small{ display:block; color:var(--attenue); margin-top:8px; font-size:12px; }
+  .rnd-180{ width:180px;height:180px;border-radius:40px; overflow:hidden; box-shadow:0 8px 24px rgba(31,111,235,.25); }
+  .rnd-96{ width:96px;height:96px;border-radius:22px; overflow:hidden; }
+  .rnd-56{ width:56px;height:56px;border-radius:13px; overflow:hidden; }
+  .sw{ display:flex; gap:14px; flex-wrap:wrap; }
+  .chip{ border:1px solid var(--trait); border-radius:12px; overflow:hidden; width:150px; }
+  .chip .col{ height:64px; }
+  .chip .meta{ padding:8px 10px; font-size:12px; }
+  .chip .meta b{ display:block; font-size:13px; }
+  .grad{ background:linear-gradient(135deg,var(--bleu),var(--violet)); }
+</style></head>
+<body><div class="wrap">
+  <h1>Kamal <span>Campus</span> — identité visuelle</h1>
+  <p class="sub">Deux couleurs (une par matière), un dégradé qui fait le pont. Marque : un K prolongé en courbe ascendante.</p>
+
+  <div class="card">
+    <p class="label">Logo</p>
+    <img src="logo.svg" alt="logo" style="max-width:100%;height:auto">
+  </div>
+
+  <div class="card">
+    <p class="label">Icône d'application — aux différentes tailles</p>
+    <div class="icons">
+      <div class="ico"><div class="rnd-180"><img src="icon.svg" width="180" height="180"></div><small>180 px</small></div>
+      <div class="ico"><div class="rnd-96"><img src="icon.svg" width="96" height="96"></div><small>96 px</small></div>
+      <div class="ico"><div class="rnd-56"><img src="icon.svg" width="56" height="56"></div><small>56 px</small></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="label">Palette</p>
+    <div class="sw">
+      <div class="chip"><div class="col grad"></div><div class="meta"><b>Dégradé marque</b>#1f6feb → #7a3fd4</div></div>
+      <div class="chip"><div class="col" style="background:#1f6feb"></div><div class="meta"><b>Bleu — maths</b>#1f6feb</div></div>
+      <div class="chip"><div class="col" style="background:#7a3fd4"></div><div class="meta"><b>Violet — PC</b>#7a3fd4</div></div>
+      <div class="chip"><div class="col" style="background:#16232e"></div><div class="meta"><b>Texte</b>#16232e</div></div>
+      <div class="chip"><div class="col" style="background:#1a7f4b"></div><div class="meta"><b>Succès</b>#1a7f4b</div></div>
+      <div class="chip"><div class="col" style="background:#c02a2a"></div><div class="meta"><b>Erreur</b>#c02a2a</div></div>
+    </div>
+  </div>
+</div></body></html>

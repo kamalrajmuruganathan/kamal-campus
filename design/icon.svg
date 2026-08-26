@@ -1,0 +1,22 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fond" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#7a3fd4"/>
+    </linearGradient>
+  </defs>
+  <!-- fond plein (le masque arrondi est appliqué par iOS/Android) -->
+  <rect width="1024" height="1024" fill="url(#fond)"/>
+  <!-- marque : un K construit sur une barre + un chevron, l'arme haute prolongée
+       en courbe ascendante (fonction / trajectoire) ; point = particule / sommet -->
+  <g fill="none" stroke="#ffffff" stroke-width="74" stroke-linecap="round" stroke-linejoin="round">
+    <!-- barre verticale du K -->
+    <path d="M360 300 V724"/>
+    <!-- diagonale basse -->
+    <path d="M360 512 L636 724"/>
+    <!-- arme haute prolongée en courbe (parabole montante) -->
+    <path d="M360 512 C 470 470, 560 400, 636 300"/>
+  </g>
+  <!-- point / astre au sommet de la courbe -->
+  <circle cx="676" cy="286" r="52" fill="#ffffff"/>
+</svg>
