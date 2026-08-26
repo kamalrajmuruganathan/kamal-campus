@@ -136,6 +136,20 @@ export default function Accueil({ navigation }) {
             onPress={() => navigation.navigate('Outils')}
           />
         </View>
+
+        <Text
+          onPress={() => navigation.navigate('APropos')}
+          accessibilityRole="button"
+          style={{
+            color: t.couleur.attenue,
+            fontSize: t.police.petite,
+            textAlign: 'center',
+            marginTop: t.espace.xl,
+            textDecorationLine: 'underline',
+          }}
+        >
+          À propos de Kamal Campus
+        </Text>
       </ScrollView>
     </SafeAreaView>
   );

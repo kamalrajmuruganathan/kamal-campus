@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamal Campus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#f6f8fc; --surface:#ffffff; --surface-2:#eef2f9;
+    --ink:#141f2b; --muted:#5a6a7b; --faint:#8695a4;
+    --line:#e0e7f0; --line-strong:#cfd9e6;
+    --maths:#1f6feb; --pc:#7a3fd4; --ok:#1a7f4b; --ok-bg:#e8f6ee;
+    --grad: linear-gradient(135deg,#1f6feb,#7a3fd4);
+    --shadow: 0 1px 2px rgba(20,31,43,.04), 0 12px 30px rgba(20,31,43,.06);
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f151c; --surface:#161e28; --surface-2:#1c2733;
+      --ink:#e7edf4; --muted:#a2b0be; --faint:#7b8a99;
+      --line:#243040; --line-strong:#31404f;
+      --maths:#6aa8ff; --pc:#b98cff; --ok:#5fd398; --ok-bg:#12291f;
+      --grad: linear-gradient(135deg,#2f7ff5,#9a5cff);
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 34px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f151c; --surface:#161e28; --surface-2:#1c2733;
+    --ink:#e7edf4; --muted:#a2b0be; --faint:#7b8a99;
+    --line:#243040; --line-strong:#31404f;
+    --maths:#6aa8ff; --pc:#b98cff; --ok:#5fd398; --ok-bg:#12291f;
+    --grad: linear-gradient(135deg,#2f7ff5,#9a5cff);
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 14px 34px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px}
+  .col{max-width:66ch}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif; text-wrap:balance; line-height:1.12; margin:0}
+  a{color:var(--maths); text-decoration:none}
+  .eyebrow{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); font-weight:600}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* Masthead */
+  header.top{padding:64px 0 40px; border-bottom:1px solid var(--line)}
+  .mark-row{display:flex; align-items:center; gap:16px; margin-bottom:26px}
+  .mark{width:60px;height:60px;border-radius:16px;flex:0 0 auto;box-shadow:var(--shadow)}
+  .mark-row .name{font-family:"Fraunces",serif; font-weight:600; font-size:22px; letter-spacing:-.01em}
+  .mark-row .name b{color:var(--maths); font-weight:600}
+  .mark-row .kicker{display:block; font-family:"Archivo"; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); font-weight:600; margin-top:2px}
+  h1{font-size:clamp(38px,7vw,68px); font-weight:600; letter-spacing:-.02em}
+  h1 .g{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .lede{font-size:clamp(18px,2.4vw,21px); color:var(--muted); margin-top:22px; max-width:60ch}
+
+  /* KPI band */
+  .kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--line);
+        border:1px solid var(--line); border-radius:16px; overflow:hidden; margin:44px 0 8px}
+  .kpi{background:var(--surface); padding:20px 20px 18px}
+  .kpi .v{font-family:"Fraunces",serif; font-weight:600; font-size:34px; letter-spacing:-.02em}
+  .kpi .k{font-size:13px; color:var(--muted); margin-top:2px}
+  .kpi.b .v{color:var(--maths)} .kpi.p .v{color:var(--pc)}
+
+  section{padding:52px 0; border-bottom:1px solid var(--line)}
+  .sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:24px}
+  .sec-head .no{font-family:"Fraunces",serif; font-weight:600; color:var(--faint); font-size:16px; font-variant-numeric:tabular-nums}
+  h2{font-size:clamp(24px,3.4vw,32px); font-weight:600; letter-spacing:-.01em}
+  p{margin:0 0 16px}
+  p.col, .col p{max-width:66ch}
+  .muted{color:var(--muted)}
+
+  /* Brick cards */
+  .grid{display:grid; gap:16px}
+  .g5{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 20px 22px; box-shadow:var(--shadow)}
+  .card .tag{display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+             padding:4px 10px; border-radius:999px; margin-bottom:12px}
+  .t-maths{background:color-mix(in srgb,var(--maths) 14%,transparent); color:var(--maths)}
+  .t-pc{background:color-mix(in srgb,var(--pc) 15%,transparent); color:var(--pc)}
+  .t-ok{background:var(--ok-bg); color:var(--ok)}
+  .card h3{font-size:19px; font-weight:600; margin-bottom:6px; font-family:"Archivo"; letter-spacing:-.01em}
+  .card p{font-size:15px; color:var(--muted); margin:0}
+  .card .big{font-family:"Fraunces",serif; font-size:15px; color:var(--ink)}
+  .dot{width:8px;height:8px;border-radius:50%}
+
+  /* Coverage table */
+  .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:14px; background:var(--surface); box-shadow:var(--shadow)}
+  table{border-collapse:collapse; width:100%; font-size:15px; min-width:560px}
+  th,td{text-align:left; padding:11px 18px; border-bottom:1px solid var(--line)}
+  thead th{font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint); font-weight:600; background:var(--surface-2)}
+  td.n, th.n{text-align:right; font-variant-numeric:tabular-nums}
+  tr.group td{background:var(--surface-2); font-family:"Fraunces",serif; font-weight:600; font-size:14px; letter-spacing:.02em; color:var(--ink)}
+  tr.sub td{font-weight:700; color:var(--ink)}
+  tr:last-child td{border-bottom:none}
+  .pill{display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:6px}
+  .pill.m{background:color-mix(in srgb,var(--maths) 13%,transparent); color:var(--maths)}
+  .pill.c{background:color-mix(in srgb,var(--pc) 14%,transparent); color:var(--pc)}
+  .total-line{display:flex; justify-content:space-between; align-items:baseline; margin-top:14px; padding:0 4px}
+  .total-line .lab{color:var(--muted); font-size:14px}
+  .total-line .val{font-family:"Fraunces",serif; font-weight:600; font-size:22px}
+
+  /* lists */
+  ul.clean{list-style:none; padding:0; margin:14px 0 0; display:grid; gap:10px}
+  ul.clean li{display:flex; gap:12px; align-items:flex-start; font-size:15.5px}
+  ul.clean li .b{flex:0 0 auto; margin-top:9px}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+  .chip{font-size:13px; background:var(--surface-2); border:1px solid var(--line); border-radius:999px; padding:5px 12px; color:var(--ink); font-variant-numeric:tabular-nums}
+
+  .callout{display:flex; gap:16px; align-items:flex-start; background:var(--surface); border:1px solid var(--line);
+           border-left:4px solid var(--ok); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow)}
+  .callout .ic{flex:0 0 auto; width:26px;height:26px;border-radius:8px; background:var(--ok-bg); color:var(--ok);
+               display:flex;align-items:center;justify-content:center;font-weight:800}
+  .callout.warn{border-left-color:#c58a00}
+  .callout.warn .ic{background:color-mix(in srgb,#c58a00 16%,transparent); color:#a97400}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .callout.warn .ic{color:#e6b53d}}
+  :root[data-theme="dark"] .callout.warn .ic{color:#e6b53d}
+
+  footer{padding:40px 0 64px; color:var(--muted); font-size:14px}
+  footer .row{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:center}
+  .tnum{font-variant-numeric:tabular-nums}
+  @media (prefers-reduced-motion:no-preference){
+    .card{transition:transform .18s ease, box-shadow .18s ease}
+    .card:hover{transform:translateY(-2px)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="mark-row">
+      <svg class="mark" viewBox="0 0 1024 1024" aria-hidden="true">
+        <defs><linearGradient id="mk" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#1f6feb"/><stop offset="1" stop-color="#7a3fd4"/></linearGradient></defs>
+        <rect width="1024" height="1024" rx="232" fill="url(#mk)"/>
+        <g fill="none" stroke="#fff" stroke-width="74" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M360 300 V724"/><path d="M360 512 L636 724"/><path d="M360 512 C470 470 560 400 636 300"/></g>
+        <circle cx="676" cy="286" r="52" fill="#fff"/>
+      </svg>
+      <div>
+        <span class="name">Kamal <b>Campus</b></span>
+        <span class="kicker">Rapport d'application</span>
+      </div>
+    </div>
+    <h1>Une appli de révision <span class="g">complète</span>, du collège à la Terminale.</h1>
+    <p class="lede">Maths et physique-chimie, toutes voies et séries. Chaque chapitre offre cinq façons d'apprendre — cours, exercices corrigés, QCM, outils de calcul et cartes de révision — et le tout est bâti sur les programmes officiels du ministère.</p>
+
+    <div class="kpis">
+      <div class="kpi b"><div class="v num">208</div><div class="k">chapitres</div></div>
+      <div class="kpi"><div class="v num">2 080</div><div class="k">questions de QCM</div></div>
+      <div class="kpi"><div class="v num">2 080</div><div class="k">exercices corrigés</div></div>
+      <div class="kpi p"><div class="v num">2 326</div><div class="k">cartes de révision</div></div>
+      <div class="kpi"><div class="v num">48</div><div class="k">chapitres outillés</div></div>
+      <div class="kpi"><div class="v num">45</div><div class="k">ressources transversales</div></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="no">01</span><h2>Ce qu'est Kamal Campus</h2></div>
+    <div class="col">
+      <p>Kamal Campus est une application mobile de révision (Android et iOS, construite avec Expo / React Native) pour les élèves du <b>collège et du lycée</b>, en <b>mathématiques</b> et en <b>physique-chimie</b>. Elle fonctionne <b>hors ligne</b> : on révise dans le métro, au CDI, en cours.</p>
+      <p>Son parti pris tient en une idée : ne pas demander « ta filière » — les filières S/ES/L n'existent plus. L'élève déclare son <b>niveau</b> et son <b>parcours</b> (spécialité maths, enseignement scientifique, série technologique…), et l'appli lui sert exactement le contenu de son programme.</p>
+      <p>Le contenu vit <b>hors du code</b>, en fichiers Markdown et JSON versionnés : il se relit, se corrige et se met à jour sans repasser par la validation des stores, et reste réutilisable pour un site web plus tard.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">02</span><h2>Les cinq briques d'un chapitre</h2></div>
+    <p class="col muted">Chaque chapitre est une unité complète. On y entre par le cours, puis on s'entraîne de quatre manières.</p>
+    <div class="grid g5" style="margin-top:22px">
+      <div class="card"><span class="tag t-maths">Cours</span><h3>La fiche</h3><p>Définitions, propriétés, méthodes et « les erreurs qui coûtent des points », rendues avec les formules en LaTeX. Suit l'ordre du programme, pas celui des manuels.</p></div>
+      <div class="card"><span class="tag t-maths">Exercices</span><h3>10 par chapitre</h3><p><span class="big">2 080 exercices</span> — application, intermédiaire, approfondissement, et un <b>problème type bac</b> (ou de synthèse au collège). Corrigé rédigé en étapes, caché jusqu'à ce que l'élève cherche.</p></div>
+      <div class="card"><span class="tag t-maths">QCM</span><h3>10 questions</h3><p><span class="big">2 080 questions.</span> Correction immédiate qui <b>nomme le piège</b> — un QCM dont on ne voit le score qu'à la fin n'apprend rien. Bilan des notions à revoir en fin de série.</p></div>
+      <div class="card"><span class="tag t-ok">Outils</span><h3>Calcul exact</h3><p><b>48 chapitres</b> reliés à un module de calcul déterministe (jamais une IA) : résultat exact <b>avec le détail des étapes</b>. Un outil qui se trompe ferait perdre des points.</p></div>
+      <div class="card"><span class="tag t-pc">Flashcards</span><h3>Mémorisation active</h3><p><span class="big">2 326 cartes</span> recto/verso. Une question, on cherche de tête, on retourne la carte. Se tester plutôt que relire.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">03</span><h2>Ressources transversales</h2></div>
+    <p class="col muted">Au-delà des chapitres, trois outils de révision qui traversent tout un niveau.</p>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="card"><span class="tag t-maths">Formulaires</span><h3>14 aide-mémoire</h3><p>« Tout ce qu'il faut savoir par cœur » pour un niveau et une matière — formules encadrées, définitions, unités. Du collège à la Terminale, général et techno.</p></div>
+      <div class="card"><span class="tag t-pc">Sujets</span><h3>11 épreuves complètes</h3><p>Des sujets entiers type <b>bac et brevet</b>, énoncé + corrigé détaillé, pour s'entraîner en conditions. Couvre brevet, bac général (spé, PC, compl., expertes) et bac techno.</p></div>
+      <div class="card"><span class="tag t-ok">Bac blancs</span><h3>20 QCM de révision</h3><p><span class="big">359 questions.</span> Des QCM qui <b>mélangent les chapitres</b> d'un niveau, un par voie et par matière, pour tester où l'on en est.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">04</span><h2>Couverture du programme</h2></div>
+    <p class="col muted">208 chapitres, chacun écrit contre le texte officiel de son programme. Maths et physique-chimie, de la 6ᵉ à la Terminale.</p>
+    <div class="table-wrap" style="margin-top:22px">
+      <table>
+        <thead><tr><th>Niveau</th><th>Parcours</th><th class="n">Chapitres</th><th>Matière</th></tr></thead>
+        <tbody>
+          <tr class="group"><td colspan="4">Collège — 71 chapitres</td></tr>
+          <tr><td>Sixième</td><td>Mathématiques</td><td class="n num">10</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Cinquième</td><td>Mathématiques</td><td class="n num">15</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Cinquième</td><td>Physique-chimie</td><td class="n num">6</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Quatrième</td><td>Mathématiques</td><td class="n num">15</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Quatrième</td><td>Physique-chimie</td><td class="n num">6</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Troisième</td><td>Mathématiques</td><td class="n num">14</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Troisième</td><td>Physique-chimie</td><td class="n num">5</td><td><span class="pill c">PC</span></td></tr>
+
+          <tr class="group"><td colspan="4">Lycée général — 83 chapitres</td></tr>
+          <tr><td>Seconde</td><td>Mathématiques</td><td class="n num">10</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Seconde</td><td>Physique-chimie</td><td class="n num">5</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Première</td><td>Spécialité maths</td><td class="n num">10</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Première</td><td>Maths — ens. scientifique</td><td class="n num">4</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Première</td><td>Physique-chimie</td><td class="n num">6</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Terminale</td><td>Spécialité maths</td><td class="n num">15</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Terminale</td><td>Maths complémentaires</td><td class="n num">8</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Terminale</td><td>Maths expertes</td><td class="n num">4</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Terminale</td><td>Physique-chimie</td><td class="n num">16</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Terminale</td><td>Enseignement scientifique</td><td class="n num">5</td><td><span class="pill m">Maths</span> <span class="pill c">PC</span></td></tr>
+
+          <tr class="group"><td colspan="4">Lycée technologique — 54 chapitres</td></tr>
+          <tr><td>Première techno</td><td>Maths (tronc commun)</td><td class="n num">5</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Première techno</td><td>STI2D / STL — PC et maths</td><td class="n num">6</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Première techno</td><td>ST2S — PC pour la santé</td><td class="n num">6</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Première techno</td><td>STL — SPCL (laboratoire)</td><td class="n num">8</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Terminale techno</td><td>Maths (tronc commun + STD2A)</td><td class="n num">10</td><td><span class="pill m">Maths</span></td></tr>
+          <tr><td>Terminale techno</td><td>STI2D / STL — PC et maths</td><td class="n num">9</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Terminale techno</td><td>ST2S — PC pour la santé</td><td class="n num">5</td><td><span class="pill c">PC</span></td></tr>
+          <tr><td>Terminale techno</td><td>STL — SPCL (laboratoire)</td><td class="n num">5</td><td><span class="pill c">PC</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="total-line"><span class="lab">Total du corpus</span><span class="val num">208 chapitres</span></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">05</span><h2>Les outils de calcul</h2></div>
+    <div class="col">
+      <p>Onze modules déterministes, <b>sans aucune dépendance externe et sans IA</b>. Chacun renvoie le résultat <b>exact</b> (fractions réduites quand c'est possible) accompagné de ses <b>étapes</b> — c'est ce qui distingue l'outil d'une simple calculatrice. Les cas invalides sont refusés par un message qui enseigne (« si a = 0, la fonction est affine »).</p>
+    </div>
+    <div class="chips">
+      <span class="chip">Second degré</span><span class="chip">Suites arith. &amp; géom.</span><span class="chip">Statistiques</span>
+      <span class="chip">Dérivation &amp; variations</span><span class="chip">Géométrie repérée</span><span class="chip">Trigonométrie</span>
+      <span class="chip">Arithmétique &amp; congruences</span><span class="chip">Nombres complexes</span><span class="chip">Chimie (mole, dilution)</span>
+      <span class="chip">Physique (énergie, Ohm)</span>
+    </div>
+    <div class="callout t-ok" style="margin-top:22px">
+      <div class="ic">✓</div>
+      <div><b>276 tests automatisés, tous au vert.</b> <span class="muted">Chaque module est couvert par des tests unitaires exécutés à chaque évolution — un outil de calcul faux ferait perdre des points à un élève, donc rien n'est laissé au hasard côté code.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">06</span><h2>L'application</h2></div>
+    <div class="col">
+      <p>Dix écrans, une navigation simple. Depuis l'accueil : choisir son niveau et son parcours, ou aller droit aux ressources de révision.</p>
+    </div>
+    <ul class="clean col">
+      <li><span class="b dot" style="background:var(--maths)"></span><span><b>Accueil → Chapitres → Chapitre.</b> Le chapitre présente le cours, puis une rangée d'accès : Exercices, Cartes de révision, QCM, Outils.</span></li>
+      <li><span class="b dot" style="background:var(--maths)"></span><span><b>Exercices &amp; QCM.</b> Corrigé dépliable pas à pas ; QCM à correction immédiate et bilan des lacunes.</span></li>
+      <li><span class="b dot" style="background:var(--pc)"></span><span><b>Cartes de révision.</b> Un paquet par chapitre, carte retournable au toucher.</span></li>
+      <li><span class="b dot" style="background:var(--ok)"></span><span><b>Outils, Formulaires, Sujets, Bac blanc.</b> Accessibles directement depuis l'accueil pour réviser avant un contrôle ou un examen.</span></li>
+    </ul>
+    <p class="col muted" style="margin-top:20px">Rendu des formules par <b>KaTeX embarqué</b> (polices incluses en base64) : aucune requête réseau, fonctionnement entièrement hors ligne. Thème clair et sombre automatiques. Une identité visuelle dédiée (logo, icône, écran de démarrage) décline le bleu des maths et le violet de la physique-chimie.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="no">07</span><h2>Sources, qualité et la seule étape restante</h2></div>
+    <div class="col">
+      <p><b>Sources 100 % officielles.</b> Tout le contenu est écrit à partir des programmes du ministère (<span class="muted">education.gouv.fr / éduscol, bulletins officiels</span>) — jamais recopié d'un manuel ou d'un site de cours. C'est la seule source légitime, et elle est publique.</p>
+      <p><b>Contrôle automatique.</b> Un script vérifie tout le corpus : en-têtes complets, JSON valides, 10 questions par QCM, 4 choix, index de réponse dans les bornes, explications non vides, cohérence et unicité des identifiants. Il passe au vert sur les 208 chapitres — mais il ne juge pas l'exactitude scientifique.</p>
+    </div>
+    <div class="callout warn" style="margin-top:8px">
+      <div class="ic">!</div>
+      <div><b>Le seul verrou : la relecture par un professeur.</b> <span class="muted">Tout le contenu est en statut « brouillon » tant qu'un enseignant de la matière ne l'a pas relu — une formule fausse fait perdre des points. Chaque fiche porte, en note invisible, ses points précis à confronter au programme, et un dossier de relecture réunit ces notes pour les 208 fiches. C'est l'étape qui reste, et elle est humaine.</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div>Kamal Campus · maths &amp; physique-chimie · collège → Terminale, toutes voies et séries.</div>
+      <div class="tnum">208 chapitres · 2 080 exercices · 2 326 cartes · 11 sujets · 20 bac blancs</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

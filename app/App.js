@@ -22,6 +22,7 @@ import Outils from './src/ecrans/Outils';
 import Formulaires from './src/ecrans/Formulaires';
 import Sujets from './src/ecrans/Sujets';
 import BacBlanc from './src/ecrans/BacBlanc';
+import APropos from './src/ecrans/APropos';
 
 const Pile = createNativeStackNavigator();
 
@@ -82,6 +83,7 @@ export default function App() {
           <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
           <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
           <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
+          <Pile.Screen name="APropos" component={APropos} options={{ title: 'À propos' }} />
         </Pile.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
