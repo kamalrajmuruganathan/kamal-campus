@@ -1,0 +1,25 @@
+{
+  "id": "3e-math-pensee-informatique-cartes",
+  "chapitre": "3e-math-pensee-informatique",
+  "titre": "Cartes — La pensée informatique",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Comment échanger les valeurs de deux variables ?", "verso": "Il faut une troisième variable temporaire : mettre a dans t, puis b dans a, puis t dans b. Sinon la première valeur est écrasée et perdue." },
+    { "recto": "Quelle différence entre un compteur et un accumulateur ?", "verso": "Un compteur compte combien de fois (mettre c + 1 dans c) ; un accumulateur additionne les valeurs (mettre s + note dans s). Tous deux initialisés à 0 avant la boucle." },
+    { "recto": "Quand « A et B » et « A ou B » sont-elles vraies ?", "verso": "« A et B » : vraie seulement si les deux le sont. « A ou B » : vraie dès qu'une l'est (le « ou » informatique est inclusif)." },
+    { "recto": "Comment traduire « n est entre 10 et 20, bornes comprises » ?", "verso": "`n ≥ 10 et n ≤ 20`. Un encadrement se coupe toujours en deux conditions reliées par `et`, jamais par `ou`." },
+    { "recto": "Que fait la boucle « tant que … faire … fin tant que » ?", "verso": "Elle répète le bloc tant que la condition reste vraie. Le nombre de tours n'est pas connu à l'avance : c'est la condition qui décide." },
+    { "recto": "Quand la condition d'une boucle « tant que » est-elle testée ?", "verso": "Avant chaque tour. Si elle est fausse au départ, le bloc n'est jamais exécuté (zéro tour possible)." },
+    { "recto": "La valeur finale d'une boucle « tant que » vérifie-t-elle la condition ?", "verso": "Non : elle ne la vérifie plus, c'est justement pour cela qu'on est sorti. Ex. : `tant que n < 20`, `mettre n*2 dans n` sort sur $32$, pas $16$." },
+    { "recto": "Pourquoi une boucle « tant que » peut-elle ne jamais s'arrêter ?", "verso": "Si le bloc ne modifie pas la variable testée, ou si la condition ne devient jamais fausse. Il faut initialiser, modifier ce qui est testé, et que la condition devienne fausse." },
+    { "recto": "Pourquoi un test d'arrêt avec `≠` est-il fragile ?", "verso": "La variable peut enjamber la valeur d'arrêt sans jamais l'atteindre exactement. Un test d'inégalité (`<`, `>`) est plus sûr." },
+    { "recto": "En combien de temps structure-t-on un programme de 3e ?", "verso": "En trois temps : préparation (entrées, initialisation), traitement (la boucle et ses tests), conclusion (l'affichage, après la boucle)." },
+    { "recto": "Comment choisir entre « répéter n fois » et « tant que » ?", "verso": "Le nombre de tours est-il connu avant de commencer ? Oui → répéter n fois. Non (« jusqu'à ce que », « on ne sait pas combien ») → tant que." },
+    { "recto": "Relier deux catégories qui s'excluent (moins de 12 ans, 65 ans ou plus) : `et` ou `ou` ?", "verso": "`age < 12 ou age ≥ 65`. Le « et » de la phrase énumère deux catégories ; avec `et` logique, personne ne conviendrait." }
+  ]
+}

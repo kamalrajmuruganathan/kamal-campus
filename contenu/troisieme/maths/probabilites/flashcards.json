@@ -1,0 +1,25 @@
+{
+  "id": "3e-math-probabilites-cartes",
+  "chapitre": "3e-math-probabilites",
+  "titre": "Cartes — Probabilités",
+  "voie": "college",
+  "niveau": "troisieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Quelle est la relation d'addition des probabilités ?", "verso": "$P(A \\cup B) + P(A \\cap B) = P(A) + P(B)$." },
+    { "recto": "Comment calculer $P(A \\cup B)$ avec cette relation ?", "verso": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$." },
+    { "recto": "Comment calculer $P(A \\cap B)$ ?", "verso": "$P(A \\cap B) = P(A) + P(B) - P(A \\cup B)$." },
+    { "recto": "Pourquoi doit-on retirer $P(A \\cap B)$ dans la réunion ?", "verso": "Parce que les issues communes aux deux événements seraient comptées deux fois dans $P(A) + P(B)$." },
+    { "recto": "Quand a-t-on simplement $P(A \\cup B) = P(A) + P(B)$ ?", "verso": "Quand $A \\cap B = \\varnothing$ (événements incompatibles), donc $P(A \\cap B) = 0$. À vérifier avant d'appliquer." },
+    { "recto": "Comment retrouve-t-on $P(A) + P(\\overline{A}) = 1$ avec la relation ?", "verso": "En prenant $B = \\overline{A}$ : $A \\cup \\overline{A} = \\Omega$ et $A \\cap \\overline{A} = \\varnothing$, donc $1 + 0 = P(A) + P(\\overline{A})$." },
+    { "recto": "Quels contrôles de vraisemblance sur $P(A \\cap B)$ et $P(A \\cup B)$ ?", "verso": "$P(A \\cap B) \\leqslant P(A)$ et $\\leqslant P(B)$ ; $P(A \\cup B) \\geqslant P(A)$ et $\\geqslant P(B)$ ; et $P(A \\cup B) \\leqslant 1$." },
+    { "recto": "Qu'est-ce que simuler une expérience aléatoire ?", "verso": "La remplacer par un dispositif qui obéit au même modèle (tableur, générateur au hasard) pour la répéter des milliers de fois. Cela n'est pas une démonstration." },
+    { "recto": "Que signifie que des répétitions sont indépendantes ?", "verso": "Elles n'ont aucune influence les unes sur les autres : le résultat d'un tirage ne dépend pas du précédent." },
+    { "recto": "Qu'est-ce que la loi des grands nombres ?", "verso": "Quand le nombre de répétitions augmente, la fréquence observée se stabilise autour de la probabilité. Stabilisation n'est pas égalité exacte." },
+    { "recto": "La probabilité change-t-elle quand on répète l'expérience ?", "verso": "Non : elle appartient au modèle et ne bouge pas. Seules les fréquences observées se déplacent. On ne dit jamais que la probabilité se rapproche de la fréquence." },
+    { "recto": "Quelle est l'erreur de D'Alembert (au moins un pile sur deux lancers) ?", "verso": "Il annonce $\\dfrac{2}{3}$ avec trois cas non équiprobables. Les 4 issues équiprobables $(P;P),(P;F),(F;P),(F;F)$ donnent $\\dfrac{3}{4}$." }
+  ]
+}

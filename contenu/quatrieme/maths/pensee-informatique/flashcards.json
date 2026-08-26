@@ -1,0 +1,25 @@
+{
+  "id": "4e-math-pensee-informatique-cartes",
+  "chapitre": "4e-math-pensee-informatique",
+  "titre": "Cartes — La pensée informatique",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce qu'une condition en informatique ?", "verso": "Une affirmation sur des données qui est soit vraie, soit fausse (jamais « ça dépend »). Ce n'est pas une instruction : on ne l'exécute pas." },
+    { "recto": "Comment traduit-on « au plus » et « au moins » ?", "verso": "« au plus » $\\rightarrow \\leqslant$ ; « au moins » $\\rightarrow \\geqslant$." },
+    { "recto": "Quelle est la différence entre « atteint » et « dépasse » ?", "verso": "« atteint la moyenne » $\\rightarrow$ note $\\geqslant 10$ (égalité comprise) ; « dépasse » $\\rightarrow$ note $> 10$ (strictement)." },
+    { "recto": "Que fait une instruction conditionnelle « si … alors … sinon … » ?", "verso": "Si la condition est vraie, le premier bloc s'exécute ; si elle est fausse, c'est le bloc « sinon ». Une seule branche s'exécute, jamais les deux." },
+    { "recto": "Le « sinon » est-il obligatoire ?", "verso": "Non, il est facultatif. Sans lui, une condition fausse ne déclenche rien." },
+    { "recto": "Ce qui est écrit après « fin si » dépend-il du test ?", "verso": "Non : c'est exécuté quoi qu'il arrive. Seul le décalage dit ce qui dépend du test." },
+    { "recto": "Que fait « mettre a + b dans a » ? Dans quel ordre ?", "verso": "La machine calcule d'abord a + b avec les valeurs actuelles, puis range le résultat dans a en écrasant l'ancienne valeur." },
+    { "recto": "« mettre a + 1 dans a » est-il l'égalité $a = a + 1$ des maths ?", "verso": "Non : c'est un ordre (« la nouvelle valeur de a, c'est l'ancienne plus un »), pas une égalité, qui serait impossible en maths." },
+    { "recto": "Que faut-il faire d'un compteur avant une boucle ?", "verso": "L'initialiser (ex. « mettre 0 dans s ») : sinon la machine ne sait pas par où commencer." },
+    { "recto": "Deux « si » d'affilée forment-ils un « si … sinon » ?", "verso": "Non : ils sont indépendants et leurs deux blocs peuvent s'exécuter tous les deux." },
+    { "recto": "Comment tester un programme avec une condition, notamment aux frontières ?", "verso": "On teste un exemple par cas plus un exemple pile sur la frontière : c'est lui qui dénonce un $\\geqslant$ écrit à la place d'un $>$." },
+    { "recto": "Combien de temps une variable garde-t-elle sa valeur ?", "verso": "Jusqu'à ce qu'une instruction la change." }
+  ]
+}
