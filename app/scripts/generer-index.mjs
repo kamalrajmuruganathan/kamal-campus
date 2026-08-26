@@ -115,6 +115,7 @@ for (const niveau of dossiers(CONTENU)) {
       const qcm = join(dossier, 'qcm.json');
       const exercice = join(dossier, 'exercice.json');
       const outil = join(dossier, 'outil.json');
+      const flash = join(dossier, 'flashcards.json');
 
       let meta;
       try {
@@ -153,6 +154,18 @@ for (const niveau of dossiers(CONTENU)) {
         }
       }
 
+      // flashcards.json OPTIONNEL : cartes de révision recto/verso.
+      let nbFlashcards = 0;
+      let aFlashcards = false;
+      if (existsSync(flash)) {
+        try {
+          nbFlashcards = JSON.parse(readFileSync(flash, 'utf8')).cartes.length;
+          aFlashcards = true;
+        } catch {
+          console.warn(`  ⚠️  flashcards.json illisible : ${niveau}/${parcours}/${chapitre}`);
+        }
+      }
+
       chapitres.push({
         id: meta.id ?? `${niveau}-${parcours}-${chapitre}`,
         dossier: chapitre,
@@ -168,11 +181,16 @@ for (const niveau of dossiers(CONTENU)) {
         nbQuestions,
         nbExercices,
         aExercice,
+        nbFlashcards,
+        aFlashcards,
         outils,
         cheminFiche: './' + relative(join(RACINE_APP, 'src'), fiche).split('\\').join('/'),
         cheminQcm: './' + relative(join(RACINE_APP, 'src'), qcm).split('\\').join('/'),
         cheminExercice: aExercice
           ? './' + relative(join(RACINE_APP, 'src'), exercice).split('\\').join('/')
+          : null,
+        cheminFlashcards: aFlashcards
+          ? './' + relative(join(RACINE_APP, 'src'), flash).split('\\').join('/')
           : null,
       });
     }
@@ -203,6 +221,7 @@ const imports = chapitres.map((c, i) => {
   // Les .md sont chargés en texte brut par le transformer Metro (voir metro.config.cjs)
   let ligne = `import fiche${i} from '${c.cheminFiche}';\nimport qcm${i} from '${c.cheminQcm}';`;
   if (c.cheminExercice) ligne += `\nimport exercice${i} from '${c.cheminExercice}';`;
+  if (c.cheminFlashcards) ligne += `\nimport flash${i} from '${c.cheminFlashcards}';`;
   return ligne;
 }).join('\n');
 
@@ -220,10 +239,12 @@ const entrees = chapitres.map((c, i) => `  {
     reluPar: ${JSON.stringify(c.reluPar)},
     nbQuestions: ${c.nbQuestions},
     nbExercices: ${c.nbExercices},
+    nbFlashcards: ${c.nbFlashcards},
     outils: ${JSON.stringify(c.outils)},
     fiche: fiche${i},
     qcm: qcm${i},
     exercice: ${c.cheminExercice ? `exercice${i}` : 'null'},
+    flashcards: ${c.cheminFlashcards ? `flash${i}` : 'null'},
   },`).join('\n');
 
 const sortie = `/**

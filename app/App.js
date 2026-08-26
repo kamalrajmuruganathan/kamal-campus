@@ -16,6 +16,7 @@ import Accueil from './src/ecrans/Accueil';
 import Chapitres from './src/ecrans/Chapitres';
 import Chapitre from './src/ecrans/Chapitre';
 import Exercices from './src/ecrans/Exercices';
+import Flashcards from './src/ecrans/Flashcards';
 import Qcm from './src/ecrans/Qcm';
 import Outils from './src/ecrans/Outils';
 
@@ -63,6 +64,11 @@ export default function App() {
             name="Exercices"
             component={Exercices}
             options={{ title: 'Exercices' }}
+          />
+          <Pile.Screen
+            name="Flashcards"
+            component={Flashcards}
+            options={{ title: 'Cartes de révision' }}
           />
           <Pile.Screen
             name="Qcm"

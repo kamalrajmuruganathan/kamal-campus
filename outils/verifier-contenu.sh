@@ -116,6 +116,23 @@ for fiche in "$RACINE"/*/*/*/fiche.md; do
       [ -z "$inconnus" ] || signaler "$dossier/outil.json : outil(s) inconnu(s) de l'app : $inconnus"
     fi
   fi
+
+  # ---- flashcards.json (optionnel) ----
+  fc="$dossier/flashcards.json"
+  if [ -f "$fc" ]; then
+    if ! jq empty "$fc" 2>/dev/null; then
+      signaler "$dossier/flashcards.json : JSON invalide"
+    else
+      ncc=$(jq '.cartes | length' "$fc" 2>/dev/null || echo 0)
+      [ "$ncc" -ge 1 ] || signaler "$dossier/flashcards.json : aucune carte"
+      vides=$(jq '[.cartes[] | select(.recto == null or .recto == "" or .verso == null or .verso == "")] | length' "$fc")
+      [ "$vides" -eq 0 ] || signaler "$dossier/flashcards.json : $vides carte(s) avec recto ou verso vide"
+      lien_fc=$(jq -r '.chapitre // empty' "$fc")
+      if [ -n "$lien_fc" ] && [ "$lien_fc" != "$id_fiche" ]; then
+        signaler "$dossier/flashcards.json : champ chapitre « $lien_fc » ≠ id de la fiche « $id_fiche »"
+      fi
+    fi
+  fi
 done
 
 # ---- unicité des identifiants sur tout le corpus ----

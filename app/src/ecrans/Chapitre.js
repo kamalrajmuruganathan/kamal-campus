@@ -67,6 +67,29 @@ export default function Chapitre({ route, navigation }) {
             </Pressable>
           )}
 
+          {chapitre.nbFlashcards > 0 && (
+            <Pressable
+              onPress={() => navigation.navigate('Flashcards', { id: chapitre.id, titre: chapitre.titre })}
+              accessibilityRole="button"
+              style={({ pressed }) => [
+                st.bouton,
+                {
+                  backgroundColor: 'transparent',
+                  borderWidth: StyleSheet.hairlineWidth,
+                  borderColor: accent,
+                  borderRadius: t.rayon.m,
+                  paddingVertical: t.espace.m,
+                  marginTop: t.espace.m,
+                  opacity: pressed ? 0.7 : 1,
+                },
+              ]}
+            >
+              <Text style={{ color: accent, fontSize: t.police.moyenne, fontWeight: '650' }}>
+                Cartes de révision · {chapitre.nbFlashcards}
+              </Text>
+            </Pressable>
+          )}
+
           <Pressable
             onPress={() => navigation.navigate('Qcm', { id: chapitre.id, titre: chapitre.titre })}
             accessibilityRole="button"
