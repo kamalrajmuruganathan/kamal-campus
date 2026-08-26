@@ -1,0 +1,292 @@
+{
+  "id": "bac-blanc-techno-maths",
+  "titre": "Bac blanc — Maths techno",
+  "examen": "Bac blanc",
+  "niveau": "terminale-techno",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "sections-planes",
+      "enonce": "On coupe un cône de révolution par un plan perpendiculaire à son axe, ne passant pas par le sommet. Quelle est la section obtenue ?",
+      "choix": [
+        "Un cercle",
+        "Une ellipse allongée",
+        "Une parabole",
+        "Un point"
+      ],
+      "reponse": 0,
+      "explication": "Un plan perpendiculaire à l'axe ($\\beta = 90°$) coupe le cône selon un cercle — c'est la lampe torche qui vise le mur bien en face. Le piège : l'ellipse n'apparaît que si le plan est **incliné** ($\\alpha < \\beta < 90°$), et le point n'est obtenu que si le plan passe par le sommet."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "sections-planes",
+      "enonce": "Le plan de coupe est parallèle à une génératrice du cône (et à une seule), sans passer par le sommet. Quelle est la section ?",
+      "choix": [
+        "Une hyperbole",
+        "Une parabole",
+        "Une ellipse très allongée",
+        "Une génératrice du cône"
+      ],
+      "reponse": 1,
+      "explication": "Plan parallèle à une génératrice et une seule, c'est exactement le cas frontière $\\beta = \\alpha$ : la section est une parabole, courbe ouverte à une seule branche. Le piège : l'hyperbole exige que le plan coupe les **deux nappes** ($\\beta < \\alpha$), et la génératrice seule n'apparaît que si le plan passe **par le sommet** en restant tangent au cône."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "variables-affectation",
+      "enonce": "On exécute `a = 3` puis `a = a + 2`. Que vaut `a` à la fin ?",
+      "choix": [
+        "$5$",
+        "$3$",
+        "$2$",
+        "Rien : `a = a + 2` est impossible"
+      ],
+      "reponse": 0,
+      "explication": "L'affectation se lit de droite à gauche : on calcule `a + 2` avec l'ancienne valeur ($3 + 2 = 5$), puis on range $5$ dans `a`. Le piège est de lire `a = a + 2` comme une équation mathématique (qui n'aurait pas de solution) : en Python, `=` signifie « reçoit », pas « égale »."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "variables-affectation",
+      "enonce": "On exécute :\n```python\na = 4\nb = a + 1\na = 2 * b\n```\nQue vaut `a` à la fin ?",
+      "choix": [
+        "$10$",
+        "$8$",
+        "$5$",
+        "$9$"
+      ],
+      "reponse": 0,
+      "explication": "Ligne 2 : `b` reçoit $4 + 1 = 5$. Ligne 3 : `a` reçoit $2 \\times 5 = 10$ — l'ancien $4$ est écrasé. Le piège : répondre $8$ revient à calculer `2 * a` au lieu de `2 * b`, et $5$ est la valeur de `b`, pas de `a`."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quel est l'ensemble de définition de la fonction inverse $x \\mapsto \\dfrac{1}{x}$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$\\left]-\\infty\\,;0\\right[ \\cup \\left]0\\,;+\\infty\\right[$",
+        "$\\left]0\\,;+\\infty\\right[$",
+        "$\\left[0\\,;+\\infty\\right[$"
+      ],
+      "reponse": 1,
+      "explication": "On ne peut pas diviser par $0$ : le nombre $0$ est la seule valeur interdite, et tous les autres réels (positifs comme négatifs) ont un inverse. L'ensemble de définition est donc $\\mathbb{R}$ privé de $0$, soit deux intervalles. Le piège : $\\left]0\\,;+\\infty\\right[$ oublie toute la branche des négatifs, et $\\mathbb{R}$ oublie la valeur interdite."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "comportement-bornes",
+      "enonce": "Quand $x$ devient très grand (par exemple $x = 10\\,000$ puis $x = 1\\,000\\,000$), que fait $\\dfrac{1}{x}$ ?",
+      "choix": [
+        "Il devient très grand aussi",
+        "Il se rapproche de $1$",
+        "Il se rapproche de $0$ en restant positif",
+        "Il devient très négatif"
+      ],
+      "reponse": 2,
+      "explication": "$\\frac{1}{10\\,000} = 0{,}0001$ puis $\\frac{1}{1\\,000\\,000} = 0{,}000001$ : l'inverse d'un grand nombre est un petit nombre, aussi proche de $0$ que l'on veut mais toujours positif. C'est ce comportement qui fait de la droite $y = 0$ une asymptote horizontale. Le piège : confondre avec le comportement près de $0$, où $\\frac{1}{x}$ devient au contraire très grand."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Soit $a > 0$. Que vaut $a^0$ ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "$a$",
+        "Cela dépend de la valeur de $a$"
+      ],
+      "reponse": 1,
+      "explication": "Pour toute base $a > 0$, $a^0 = 1$ : c'est pourquoi toutes les courbes $y = a^x$ passent par le point $(0\\,;1)$. Le piège : répondre $0$ en confondant « exposant nul » et « résultat nul » — une exponentielle ne s'annule jamais."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "Pour tous réels $x$ et $y$, $2^x \\times 2^y$ est égal à…",
+      "choix": [
+        "$2^{x+y}$",
+        "$2^{xy}$",
+        "$4^{x+y}$",
+        "$4^{xy}$"
+      ],
+      "reponse": 0,
+      "explication": "C'est la propriété fondamentale $a^{x} \\times a^{y} = a^{x+y}$ : un produit de puissances de même base s'obtient en **additionnant** les exposants, sans toucher à la base. Le piège : multiplier les exposants ($2^{xy}$) ou multiplier les bases ($4^{\\ldots}$) — vérifie sur $x = y = 1$ : $2 \\times 2 = 4 = 2^2$."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que vaut $\\log(1000)$ ?",
+      "choix": [
+        "$3$",
+        "$100$",
+        "$10$",
+        "$1000$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(1000)$ répond à la question « 10 puissance combien donne 1000 ? » : comme $10^3 = 1000$, $\\log(1000) = 3$. Le piège : confondre le log avec une division par 10 ($1000/10 = 100$) — le log compte les puissances de 10, il ne divise pas."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "On donne $\\log 2 \\approx 0{,}301$. Que vaut $\\log(200)$ ?",
+      "choix": [
+        "$\\approx 2{,}301$",
+        "$\\approx 0{,}602$",
+        "$\\approx 30{,}1$",
+        "$\\approx 60{,}2$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log 200 = \\log(2 \\times 100) = \\log 2 + \\log 100 = \\log 2 + 2 \\approx 2{,}301$ : le produit dans le log devient une somme. Le piège : multiplier $\\log 2$ par 100 ($30{,}1$) — le log transforme la multiplication par 100 en addition de 2, pas en multiplication."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "appartenance-inclusion",
+      "enonce": "Soit $E = \\{2\\,;4\\,;6\\,;8\\}$. Laquelle de ces écritures est correcte ?",
+      "choix": [
+        "$4 \\in E$",
+        "$4 \\subset E$",
+        "$\\{4\\} \\in E$",
+        "$E \\in 4$"
+      ],
+      "reponse": 0,
+      "explication": "$4$ est un **élément** de $E$, donc on écrit $4 \\in E$. Le symbole $\\subset$ relie deux **ensembles** : on aurait pu écrire $\\{4\\} \\subset E$, mais pas $4 \\subset E$. Confondre $\\in$ et $\\subset$ est le piège n°1 du chapitre."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "reunion-intersection-complementaire",
+      "enonce": "$A = \\{1\\,;2\\,;3\\,;4\\}$ et $B = \\{3\\,;4\\,;5\\,;6\\}$. Que vaut $A \\cup B$ ?",
+      "choix": [
+        "$\\{3\\,;4\\}$",
+        "$\\{1\\,;2\\,;3\\,;4\\,;5\\,;6\\}$",
+        "$\\{1\\,;2\\,;3\\,;4\\,;3\\,;4\\,;5\\,;6\\}$",
+        "$\\{1\\,;2\\,;5\\,;6\\}$"
+      ],
+      "reponse": 1,
+      "explication": "La réunion rassemble **tous** les éléments de $A$ ou de $B$, chacun compté **une seule fois** : $\\{1\\,;2\\,;3\\,;4\\,;5\\,;6\\}$. Le choix $\\{3\\,;4\\}$ est l'intersection $A \\cap B$ — la confusion $\\cup$/$\\cap$ est le piège classique."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "On donne $P(A) = 0{,}5$ et $P(A \\cap B) = 0{,}2$. Que vaut $P_A(B)$ ?",
+      "choix": [
+        "$0{,}4$",
+        "$0{,}1$",
+        "$0{,}7$",
+        "$2{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition, $P_A(B) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0{,}2}{0{,}5} = 0{,}4$. Le piège : $0{,}1$ vient de multiplier au lieu de diviser, $0{,}7$ d'additionner, et $2{,}5$ de diviser dans le mauvais sens ($0{,}5/0{,}2$) — une probabilité ne peut jamais dépasser $1$, ce qui doit t'alerter."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "lien-produit",
+      "enonce": "On donne $P(A) = 0{,}6$ et $P_A(B) = 0{,}25$. Que vaut $P(A \\cap B)$ ?",
+      "choix": [
+        "$0{,}15$",
+        "$0{,}25$",
+        "$0{,}85$",
+        "$\\approx 0{,}42$"
+      ],
+      "reponse": 0,
+      "explication": "Formule du produit : $P(A \\cap B) = P(A) \\times P_A(B) = 0{,}6 \\times 0{,}25 = 0{,}15$. Le piège n°1 du chapitre : répondre $0{,}25$, c'est confondre $P_A(B)$ (proportion parmi les $A$) avec $P(A \\cap B)$ (proportion sur l'univers entier). $0{,}85$ additionne, et $0{,}42$ divise ($0{,}25/0{,}6$) au lieu de multiplier."
+    },
+    {
+      "id": 15,
+      "difficulte": "facile",
+      "notion": "principe-changement",
+      "enonce": "À quoi sert un changement de variable dans l'étude d'une série statistique à deux variables ?",
+      "choix": [
+        "À ramener un nuage de points courbe à un nuage rectiligne, pour pouvoir faire un ajustement affine",
+        "À supprimer les points aberrants du nuage",
+        "À calculer plus vite les coordonnées du point moyen",
+        "À remplacer la méthode des moindres carrés par une méthode plus précise"
+      ],
+      "reponse": 0,
+      "explication": "Quand le nuage $(x\\,;y)$ est courbe, une droite serait un mauvais modèle. On transforme une variable (par exemple $z = \\log(y)$) pour que le nuage $(x\\,;z)$ soit rectiligne : l'ajustement redevient affine, avec les mêmes outils qu'en Première. Le piège : croire qu'on change de méthode d'ajustement — non, ce sont toujours les moindres carrés, appliqués au nuage transformé."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "changement-log",
+      "enonce": "On pose $z = \\log(y)$. Pour $y = 250$, la valeur de $z$ arrondie au centième est :",
+      "choix": [
+        "$2{,}40$",
+        "$2{,}50$",
+        "$5{,}52$",
+        "$0{,}40$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(250) \\approx 2{,}398$, soit $2{,}40$ : c'est cohérent car $250$ est entre $10^2 = 100$ et $10^3 = 1\\,000$, donc $z$ est entre $2$ et $3$. Les pièges : $2{,}50$ vient de lire « 250 » au lieu de calculer le log ; $5{,}52$ est le logarithme népérien $\\ln(250)$, hors programme ici — en terminale technologique, on travaille avec le logarithme décimal."
+    },
+    {
+      "id": 17,
+      "difficulte": "facile",
+      "notion": "moyennes",
+      "enonce": "Quelle est la moyenne arithmétique de $8$ et $14$ ?",
+      "choix": [
+        "$11$",
+        "$22$",
+        "$\\sqrt{112} \\approx 10{,}6$",
+        "$3$"
+      ],
+      "reponse": 0,
+      "explication": "La moyenne arithmétique de $a$ et $b$ est $\\dfrac{a+b}{2} = \\dfrac{8+14}{2} = 11$. Le piège classique est d'oublier de diviser par $2$ (ce qui donne $22$) ou de confondre avec la moyenne géométrique $\\sqrt{ab} = \\sqrt{112} \\approx 10{,}6$, qui est une autre notion."
+    },
+    {
+      "id": 18,
+      "difficulte": "moyen",
+      "notion": "moyennes",
+      "enonce": "Quelle est la moyenne géométrique de $4$ et $25$ ?",
+      "choix": [
+        "$14{,}5$",
+        "$10$",
+        "$50$",
+        "$100$"
+      ],
+      "reponse": 1,
+      "explication": "La moyenne géométrique de deux nombres positifs est $\\sqrt{ab} = \\sqrt{4 \\times 25} = \\sqrt{100} = 10$. Le piège : $14{,}5$ est la moyenne **arithmétique** $\\frac{4+25}{2}$, $100$ est le produit sans la racine, et $50$ la moitié du produit."
+    },
+    {
+      "id": 19,
+      "difficulte": "facile",
+      "notion": "esperance",
+      "enonce": "Une variable aléatoire $X$ prend les valeurs $0$, $1$ et $2$ avec les probabilités $0{,}5$, $0{,}3$ et $0{,}2$. Que vaut $E(X)$ ?",
+      "choix": [
+        "$0{,}7$",
+        "$1$",
+        "$3$",
+        "$0{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = 0 \\times 0{,}5 + 1 \\times 0{,}3 + 2 \\times 0{,}2 = 0 + 0{,}3 + 0{,}4 = 0{,}7$. Le piège : $1$ est la moyenne simple des valeurs $\\frac{0+1+2}{3}$ — l'espérance pondère chaque valeur par sa probabilité. $3$ additionne les valeurs, et $0{,}5$ est la probabilité la plus grande, pas une moyenne."
+    },
+    {
+      "id": 20,
+      "difficulte": "moyen",
+      "notion": "triangle-de-pascal",
+      "enonce": "La ligne $5$ du triangle de Pascal est $1$, $5$, $10$, $10$, $5$, $1$. Comment obtenir $\\dbinom{6}{2}$ ?",
+      "choix": [
+        "$\\dbinom{6}{2} = 5 + 10 = 15$",
+        "$\\dbinom{6}{2} = 5 \\times 10 = 50$",
+        "$\\dbinom{6}{2} = 10 + 10 = 20$",
+        "$\\dbinom{6}{2} = 10$"
+      ],
+      "reponse": 0,
+      "explication": "Règle de construction du triangle : chaque nombre est la somme des deux nombres situés au-dessus de lui, $\\dbinom{6}{2} = \\dbinom{5}{1} + \\dbinom{5}{2} = 5 + 10 = 15$. Le piège : multiplier au lieu d'additionner ($50$), ou prendre les deux mauvais voisins — $10 + 10 = 20$ donne $\\dbinom{6}{3}$, un cran trop à droite."
+    }
+  ]
+}

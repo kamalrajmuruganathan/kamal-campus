@@ -1,0 +1,348 @@
+{
+  "id": "bac-blanc-terminale-pc",
+  "titre": "Bac blanc — Physique-chimie",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "acide-base-bronsted",
+      "enonce": "Selon Brönsted, un **acide** est une espèce chimique capable de :",
+      "choix": [
+        "capter un ion hydrogène $\\mathrm{H^+}$",
+        "céder un ion hydrogène $\\mathrm{H^+}$",
+        "céder un électron",
+        "capter un électron"
+      ],
+      "reponse": 1,
+      "explication": "Un acide de Brönsted **cède** un proton $\\mathrm{H^+}$ ; c'est la base qui le capte. Céder ou capter un **électron** relève de l'oxydoréduction, pas de l'acido-basicité : c'est le piège classique de confondre les deux types de transfert."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "ph-definition",
+      "enonce": "Une solution a $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-2}\\ \\mathrm{mol·L^{-1}}$. Quel est son pH ?",
+      "choix": [
+        "$\\mathrm{pH} = 2{,}0$",
+        "$\\mathrm{pH} = 12{,}0$",
+        "$\\mathrm{pH} = 0{,}01$",
+        "$\\mathrm{pH} = -2{,}0$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathrm{pH} = -\\log(1{,}0\\times10^{-2}) = 2{,}0$. Le choix $-2{,}0$ oublie le signe moins de la définition ; $0{,}01$ recopie la concentration sans appliquer le logarithme ; $12{,}0$ confond avec $14-2$."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "transformations-lentes-rapides",
+      "enonce": "Quelle transformation peut faire l'objet d'un suivi cinétique dans le temps ?",
+      "choix": [
+        "Une transformation rapide, quasi instantanée",
+        "Une transformation lente, dont l'évolution s'étale sur une durée observable",
+        "N'importe quelle transformation, rapide ou lente",
+        "Aucune : une vitesse ne se mesure pas"
+      ],
+      "reponse": 1,
+      "explication": "Seules les transformations **lentes** laissent le temps d'enregistrer l'évolution d'une concentration. Une transformation rapide paraît instantanée : on ne peut pas suivre son déroulement."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "vecteur-vitesse",
+      "enonce": "Le vecteur vitesse d'un point mobile est la dérivée par rapport au temps :",
+      "choix": [
+        "du vecteur position $\\vec{\\mathrm{OM}}$",
+        "du vecteur accélération $\\vec{a}$",
+        "de la trajectoire",
+        "de la distance à l'origine"
+      ],
+      "reponse": 0,
+      "explication": "Par définition $\\vec{v} = \\dfrac{\\mathrm{d}\\vec{\\mathrm{OM}}}{\\mathrm{d}t}$ : on dérive la **position**. C'est l'accélération, elle, qui est la dérivée de la vitesse. Confondre les deux, c'est se tromper d'un cran dans la chaîne position → vitesse → accélération."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "methode",
+      "enonce": "Un mobile a pour équations horaires $x(t) = 4t^2$ et $y(t) = 0$ (unités SI). Quelle est la coordonnée $v_x$ de sa vitesse à l'instant $t = 3{,}0$ s ?",
+      "choix": [
+        "$12$ m·s⁻¹",
+        "$24$ m·s⁻¹",
+        "$36$ m·s⁻¹",
+        "$72$ m·s⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "On dérive d'abord : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 8t$, puis on remplace : $v_x = 8 \\times 3{,}0 = 24$ m·s⁻¹. Le piège $36$ vient de ne PAS dériver et de calculer $4 \\times 3^2$ ; le piège $12$ d'une dérivée fausse ($4t$ au lieu de $8t$)."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "condensateur",
+      "enonce": "La charge $q$ portée par une armature d'un condensateur de capacité $C$ soumis à une tension $u$ vaut :",
+      "choix": [
+        "$q = C \\times u$",
+        "$q = \\dfrac{u}{C}$",
+        "$q = \\dfrac{C}{u}$",
+        "$q = C + u$"
+      ],
+      "reponse": 0,
+      "explication": "La charge est **proportionnelle** à la tension : $q = C\\,u$. Le piège des formes en fraction vient d'un mélange avec la loi d'Ohm ; ici $C$ est un simple coefficient de proportionnalité."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "poussee-archimede",
+      "enonce": "Un corps est plongé dans un fluide au repos. La poussée d'Archimède est dirigée :",
+      "choix": [
+        "vers le bas, dans le sens de $\\vec{g}$",
+        "vers le haut, à l'opposé de $\\vec{g}$",
+        "horizontalement",
+        "dans le sens du mouvement du corps"
+      ],
+      "reponse": 1,
+      "explication": "La poussée est **verticale, vers le haut**, opposée à $\\vec{g}$ : c'est ce que traduit le signe moins dans $\\vec{F}_A = -\\rho_{\\text{fluide}} V \\vec{g}$. La confondre avec le poids (vers le bas) est l'erreur classique."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "poussee-archimede",
+      "enonce": "Un objet de volume $V = 2{,}0$ L est entièrement immergé dans l'eau ($\\rho = 1{,}0 \\times 10^{3}$ kg·m⁻³, $g = 9{,}81$ N·kg⁻¹). Quelle est la valeur de la poussée d'Archimède ?",
+      "choix": [
+        "$20$ N",
+        "$2{,}0 \\times 10^{4}$ N",
+        "$2{,}0$ N",
+        "$9{,}8$ N"
+      ],
+      "reponse": 0,
+      "explication": "Il faut convertir $2{,}0$ L $= 2{,}0 \\times 10^{-3}$ m³ **avant** le calcul : $F_A = \\rho V g = 1000 \\times 2{,}0 \\times 10^{-3} \\times 9{,}81 \\approx 20$ N. Oublier la conversion L → m³ donne $2{,}0 \\times 10^{4}$ N, mille fois trop grand : c'est le piège."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "evolution-spontanee-ou-forcee",
+      "enonce": "Qu'est-ce qui caractérise une électrolyse par rapport à une pile ?",
+      "choix": [
+        "Le système évolue spontanément et débite un courant",
+        "Un générateur force le système à évoluer dans le sens non spontané",
+        "Aucun courant ne circule",
+        "Le système est à l'équilibre chimique"
+      ],
+      "reponse": 1,
+      "explication": "Une pile évolue **spontanément** et fournit du courant. L'électrolyse fait l'inverse : un **générateur extérieur** impose un courant qui **force** la transformation dans le sens **non spontané**. Sans générateur, rien ne se passe."
+    },
+    {
+      "id": 10,
+      "difficulte": "facile",
+      "notion": "etat-equilibre",
+      "enonce": "À quoi reconnaît-on qu'une transformation chimique a atteint un état d'équilibre ?",
+      "choix": [
+        "Tous les réactifs ont disparu",
+        "Les quantités de matière n'évoluent plus alors qu'il reste des réactifs",
+        "La réaction est totalement arrêtée, même à l'échelle microscopique",
+        "Le réactif limitant est entièrement consommé"
+      ],
+      "reponse": 1,
+      "explication": "À l'équilibre, les quantités sont **constantes** mais **il reste des réactifs** : la transformation est **non totale**. Le piège : croire que la réaction est « finie ». À l'échelle microscopique, les sens direct et inverse se poursuivent à la même vitesse (équilibre **dynamique**)."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "quotient-reaction",
+      "enonce": "Pour la réaction $\\mathrm{2\\,A_{(aq)} + B_{(aq)} = 3\\,C_{(aq)}}$, quelle est l'expression du quotient de réaction $Q_r$ ?",
+      "choix": [
+        "$Q_r = \\dfrac{[\\mathrm{C}]^3}{[\\mathrm{A}]^2\\,[\\mathrm{B}]}$",
+        "$Q_r = \\dfrac{[\\mathrm{A}]^2\\,[\\mathrm{B}]}{[\\mathrm{C}]^3}$",
+        "$Q_r = \\dfrac{3\\,[\\mathrm{C}]}{2\\,[\\mathrm{A}]\\,[\\mathrm{B}]}$",
+        "$Q_r = \\dfrac{[\\mathrm{C}]}{[\\mathrm{A}]\\,[\\mathrm{B}]}$"
+      ],
+      "reponse": 0,
+      "explication": "Produits au **numérateur**, réactifs au **dénominateur**, chaque concentration élevée à son nombre stœchiométrique **en exposant**. Le choix 2 inverse num/dénom ; le choix 3 met les coefficients en **facteurs** au lieu d'exposants ; le choix 4 oublie complètement les exposants."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "modele-gaz-parfait",
+      "enonce": "Dans le modèle du gaz parfait, quelle hypothèse est retenue ?",
+      "choix": [
+        "Les particules ont un volume propre important",
+        "Les particules sont ponctuelles et sans interaction à distance",
+        "Les particules s'attirent fortement entre elles",
+        "Les chocs entre particules font perdre de l'énergie"
+      ],
+      "reponse": 1,
+      "explication": "Le gaz parfait suppose des particules **ponctuelles** (volume propre négligeable), **sans interaction** à distance et dont les chocs sont **élastiques** (l'énergie cinétique est conservée). Les autres propositions décrivent justement ce qui fait échouer le modèle pour un gaz réel."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "deuxieme-loi-de-newton",
+      "enonce": "Quelle est l'expression correcte de la deuxième loi de Newton dans un référentiel galiléen ?",
+      "choix": [
+        "$\\sum \\vec{F}_{\\text{ext}} = m\\,\\vec{v}$",
+        "$\\sum \\vec{F}_{\\text{ext}} = m\\,\\vec{a}$",
+        "$\\sum \\vec{F}_{\\text{ext}} = \\vec{a}\\,/\\,m$",
+        "$\\sum \\vec{F}_{\\text{ext}} = \\vec{0}$"
+      ],
+      "reponse": 1,
+      "explication": "La somme des forces extérieures est égale au produit de la **masse** par l'**accélération** : $\\sum \\vec{F}_{\\text{ext}} = m\\vec{a}$. Le premier choix confond accélération et vitesse, le dernier est la condition d'équilibre (cas particulier $\\vec{a}=\\vec{0}$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "chute-champ-pesanteur",
+      "enonce": "Une bille de masse $m$ est lâchée en chute libre (frottements négligés). Que vaut son accélération ?",
+      "choix": [
+        "$\\vec{a} = m\\vec{g}$",
+        "$\\vec{a} = \\vec{g}$, indépendante de $m$",
+        "$\\vec{a} = \\vec{g}/m$",
+        "$\\vec{a} = \\vec{0}$"
+      ],
+      "reponse": 1,
+      "explication": "La seule force est le poids $\\vec{P}=m\\vec{g}$. La deuxième loi donne $m\\vec{g}=m\\vec{a}$, la masse se **simplifie** : $\\vec{a}=\\vec{g}$. C'est pourquoi tous les corps tombent de la même façon dans le vide, quelle que soit leur masse."
+    },
+    {
+      "id": 15,
+      "difficulte": "facile",
+      "notion": "lunette-afocale",
+      "enonce": "Une lunette astronomique afocale est modélisée par :",
+      "choix": [
+        "deux lentilles convergentes de même axe optique",
+        "une lentille convergente et un miroir",
+        "deux lentilles divergentes",
+        "une lentille convergente et une lentille divergente"
+      ],
+      "reponse": 0,
+      "explication": "L'objectif **et** l'oculaire sont deux lentilles **convergentes** alignées sur le même axe. L'objectif a une grande focale $f'_1$, l'oculaire une petite focale $f'_2$."
+    },
+    {
+      "id": 16,
+      "difficulte": "facile",
+      "notion": "absorbance-et-loi-de-beer-lambert",
+      "enonce": "Quelle est l'unité de l'absorbance $A$ d'une solution ?",
+      "choix": [
+        "$\\mathrm{mol\\cdot L^{-1}}$",
+        "Elle n'a pas d'unité : c'est un nombre pur",
+        "$\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$",
+        "$\\mathrm{cm}$"
+      ],
+      "reponse": 1,
+      "explication": "L'absorbance est un **nombre sans unité**. Le piège est de lui coller l'unité d'une autre grandeur de la loi $A = \\varepsilon\\ell c$ : $\\mathrm{mol\\cdot L^{-1}}$ est celle de $c$, $\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$ celle de $\\varepsilon$, $\\mathrm{cm}$ celle de $\\ell$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "absorbance-et-loi-de-beer-lambert",
+      "enonce": "Une espèce a un coefficient $\\varepsilon = 2{,}0\\times10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. Dans une cuve de $\\ell = 1{,}0\\ \\mathrm{cm}$, une solution à $c = 2{,}0\\times10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ a pour absorbance :",
+      "choix": [
+        "$0{,}40$",
+        "$0{,}20$",
+        "$4{,}0$",
+        "$40$"
+      ],
+      "reponse": 0,
+      "explication": "$A = \\varepsilon\\ell c = 2{,}0\\times10^{3} \\times 1{,}0 \\times 2{,}0\\times10^{-4} = 0{,}40$. Attention aux puissances de $10$ : $10^{3}\\times10^{-4} = 10^{-1}$, et $2{,}0\\times2{,}0 = 4{,}0$, d'où $4{,}0\\times10^{-1} = 0{,}40$."
+    },
+    {
+      "id": 18,
+      "difficulte": "facile",
+      "notion": "intensite-niveau-sonore",
+      "enonce": "Dans quelle unité s'exprime le niveau d'intensité sonore $L$ ?",
+      "choix": [
+        "le watt par mètre carré ($\\text{W·m}^{-2}$)",
+        "le décibel (dB)",
+        "le hertz (Hz)",
+        "le watt (W)"
+      ],
+      "reponse": 1,
+      "explication": "Le **niveau** sonore $L = 10\\log(I/I_0)$ est un nombre sans dimension exprimé en **décibels** (dB). Le piège est de le confondre avec l'**intensité** sonore $I$, qui, elle, se mesure en $\\text{W·m}^{-2}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "facile",
+      "notion": "energie-interne",
+      "enonce": "Dans quelle unité s'exprime l'énergie interne $U$ d'un système ?",
+      "choix": [
+        "le watt (W)",
+        "le joule (J)",
+        "le kelvin (K)",
+        "le joule par kelvin (J·K⁻¹)"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie interne est une **énergie** : elle se mesure en **joules (J)**. Le watt est une puissance (un flux), le kelvin une température, et J·K⁻¹ est l'unité d'une capacité thermique — pas d'une énergie."
+    },
+    {
+      "id": 20,
+      "difficulte": "moyen",
+      "notion": "premier-principe",
+      "enonce": "Une tasse de café refroidit sur une table sans échanger de travail. Que peut-on dire de son transfert thermique $Q$ et de sa variation d'énergie interne $\\Delta U$ ?",
+      "choix": [
+        "$Q > 0$ et $\\Delta U > 0$",
+        "$Q < 0$ et $\\Delta U < 0$",
+        "$Q < 0$ et $\\Delta U > 0$",
+        "$Q > 0$ et $\\Delta U < 0$"
+      ],
+      "reponse": 1,
+      "explication": "Le café **cède** de l'énergie au milieu : du point de vue du système, $Q < 0$. Sans travail, $\\Delta U = Q < 0$ : sa température baisse. Le piège classique est de compter positif un transfert que le système **perd**."
+    },
+    {
+      "id": 21,
+      "difficulte": "facile",
+      "notion": "types-reactions",
+      "enonce": "Dans la réaction $\\text{R-Cl} + \\text{HO}^- \\to \\text{R-OH} + \\text{Cl}^-$, de quel type de réaction s'agit-il ?",
+      "choix": [
+        "Addition",
+        "Substitution",
+        "Élimination",
+        "Oxydation"
+      ],
+      "reponse": 1,
+      "explication": "Un groupe ($\\text{Cl}$) est **remplacé** par un autre ($\\text{OH}$) : c'est une **substitution**. Aucune liaison multiple n'apparaît ni ne disparaît, ce qui écarte l'addition et l'élimination."
+    },
+    {
+      "id": 22,
+      "difficulte": "facile",
+      "notion": "equivalence",
+      "enonce": "À l'équivalence d'un titrage, que peut-on affirmer sur les réactifs titré et titrant ?",
+      "choix": [
+        "Le titrant est en large excès",
+        "Ils ont été introduits dans les proportions stœchiométriques et sont tous les deux entièrement consommés",
+        "L'espèce titrée est encore en excès",
+        "Leurs concentrations sont égales"
+      ],
+      "reponse": 1,
+      "explication": "L'équivalence est le changement de réactif limitant : titré et titrant sont dans les proportions stœchiométriques, donc **tous deux consommés**. Le piège « concentrations égales » confond l'égalité des **quantités de matière** avec celle des concentrations."
+    },
+    {
+      "id": 23,
+      "difficulte": "moyen",
+      "notion": "relation-equivalence",
+      "enonce": "On titre $V_A = 20{,}0$ mL d'acide chlorhydrique par de la soude à $C_B = 0{,}10$ mol·L⁻¹. L'équivalence est atteinte pour $V_{\\text{éq}} = 15{,}0$ mL. Que vaut $C_A$ ?",
+      "choix": [
+        "$7{,}5 \\times 10^{-2}$ mol·L⁻¹",
+        "$0{,}13$ mol·L⁻¹",
+        "$1{,}5$ mol·L⁻¹",
+        "$3{,}0 \\times 10^{-2}$ mol·L⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "$C_A = \\dfrac{C_B V_{\\text{éq}}}{V_A} = \\dfrac{0{,}10 \\times 15{,}0}{20{,}0} = 7{,}5\\times 10^{-2}$ mol·L⁻¹. Le choix $0{,}13$ inverse le rapport des volumes ; comme les deux volumes sont en mL, ils se simplifient : nul besoin de convertir en L."
+    },
+    {
+      "id": 24,
+      "difficulte": "facile",
+      "notion": "diagramme-nz",
+      "enonce": "Dans le diagramme $(N, Z)$, un noyau situé **en dehors** de la vallée de stabilité est :",
+      "choix": [
+        "stable",
+        "instable, donc radioactif",
+        "toujours un isotope de l'hydrogène",
+        "dépourvu de neutrons"
+      ],
+      "reponse": 1,
+      "explication": "La vallée de stabilité rassemble les noyaux **stables**. Un noyau qui en sort a un mauvais rapport neutrons/protons : il est **instable** et se désintègre spontanément (radioactif). Sa position par rapport à la vallée indique le type de radioactivité (α, β⁻ ou β⁺)."
+    }
+  ]
+}

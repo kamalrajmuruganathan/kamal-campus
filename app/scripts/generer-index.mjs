@@ -21,6 +21,7 @@ const RACINE_APP = join(ICI, '..');
 const CONTENU = join(RACINE_APP, '..', 'contenu');
 const FORMULAIRES_DIR = join(RACINE_APP, '..', 'formulaires');
 const SUJETS_DIR = join(RACINE_APP, '..', 'sujets');
+const QUIZ_DIR = join(RACINE_APP, '..', 'quiz');
 const SORTIE = join(RACINE_APP, 'src', 'contenu-index.js');
 
 // ─────────────────────────── libellés d'affichage ───────────────────────────
@@ -273,6 +274,42 @@ if (existsSync(SUJETS_DIR)) {
   }
   sujets.sort((a, b) => rang(a.niveau) - rang(b.niveau) || a.matiere.localeCompare(b.matiere));
 }
+// ─────────────────────────── quiz / bac blanc (JSON) ────────────────────────
+const quiz = [];
+if (existsSync(QUIZ_DIR)) {
+  for (const f of readdirSync(QUIZ_DIR)) {
+    if (!f.endsWith('.json')) continue;
+    const chemin = join(QUIZ_DIR, f);
+    try {
+      const data = JSON.parse(readFileSync(chemin, 'utf8'));
+      quiz.push({
+        id: data.id ?? f.replace(/\.json$/, ''),
+        titre: data.titre ?? f,
+        examen: data.examen ?? '',
+        niveau: data.niveau ?? '',
+        matiere: data.matiere ?? 'mathematiques',
+        statut: data.statut ?? 'brouillon',
+        reluPar: data.relu_par === 'null' ? null : (data.relu_par ?? null),
+        nbQuestions: (data.questions ?? []).length,
+        chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
+      });
+    } catch { console.warn(`  ⚠️  quiz illisible : ${f}`); }
+  }
+  quiz.sort((a, b) => rang(a.niveau) - rang(b.niveau) || a.matiere.localeCompare(b.matiere));
+}
+const importsQuiz = quiz.map((q, i) => `import quiz${i} from '${q.chemin}';`).join('\n');
+const entreesQuiz = quiz.map((q, i) => `  {
+    id: ${JSON.stringify(q.id)},
+    titre: ${JSON.stringify(q.titre)},
+    examen: ${JSON.stringify(q.examen)},
+    niveau: ${JSON.stringify(q.niveau)},
+    matiere: ${JSON.stringify(q.matiere)},
+    statut: ${JSON.stringify(q.statut)},
+    reluPar: ${JSON.stringify(q.reluPar)},
+    nbQuestions: ${q.nbQuestions},
+    questions: quiz${i}.questions,
+  },`).join('\n');
+
 const importsSujets = sujets.map((s, i) => `import sujet${i} from '${s.chemin}';`).join('\n');
 const entreesSujets = sujets.map((s, i) => `  {
     id: ${JSON.stringify(s.id)},
@@ -326,6 +363,7 @@ const sortie = `/**
 ${imports}
 ${importsFormulaires}
 ${importsSujets}
+${importsQuiz}
 
 export const FORMULAIRES = [
 ${entreesFormulaires}
@@ -333,6 +371,10 @@ ${entreesFormulaires}
 
 export const SUJETS = [
 ${entreesSujets}
+];
+
+export const QUIZ = [
+${entreesQuiz}
 ];
 
 export const LIBELLES_NIVEAU = ${JSON.stringify(LIBELLES_NIVEAU, null, 2)};

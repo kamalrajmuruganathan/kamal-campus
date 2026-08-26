@@ -1,0 +1,362 @@
+{
+  "id": "bac-blanc-spe-maths",
+  "titre": "Bac blanc — Spé maths",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Pour une fonction $f$ continue et **positive** sur $[a\\,;b]$, que représente $\\displaystyle\\int_a^b f(x)\\,dx$ ?",
+      "choix": [
+        "La pente de la tangente à la courbe en $a$",
+        "La longueur de la courbe de $f$ entre $a$ et $b$",
+        "L'aire, en unités d'aire, du domaine entre la courbe, l'axe des abscisses et les droites $x=a$ et $x=b$",
+        "La valeur maximale de $f$ sur $[a\\,;b]$"
+      ],
+      "reponse": 2,
+      "explication": "L'intégrale est **définie** comme une aire, pas comme une pente : confondre avec la dérivée (la pente) est le contresens classique. Il s'agit de l'aire sous la courbe, entre les deux bornes verticales."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "bornes-echangees",
+      "enonce": "On sait que $\\displaystyle\\int_1^5 f(x)\\,dx = 7$. Combien vaut $\\displaystyle\\int_5^1 f(x)\\,dx$ ?",
+      "choix": [
+        "$7$",
+        "$0$",
+        "$-7$",
+        "$\\dfrac{1}{7}$"
+      ],
+      "reponse": 2,
+      "explication": "Échanger les bornes **change le signe** : $\\int_5^1 f = -\\int_1^5 f = -7$. Garder $7$ (choix A) est l'oubli classique du changement de signe quand on inverse le sens de parcours."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "factorielle",
+      "enonce": "Combien vaut $4!$ ?",
+      "choix": [
+        "$12$",
+        "$16$",
+        "$24$",
+        "$10$"
+      ],
+      "reponse": 2,
+      "explication": "$4! = 1 \\times 2 \\times 3 \\times 4 = 24$. Piège classique : $16 = 4^2$ (une puissance, pas une factorielle) et $10 = 1+2+3+4$ (une somme). La factorielle est un **produit**."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "pascal",
+      "enonce": "En utilisant la relation de Pascal $\\binom{6}{3} = \\binom{5}{2} + \\binom{5}{3}$, combien vaut $\\binom{6}{3}$ ?",
+      "choix": [
+        "$18$",
+        "$20$",
+        "$15$",
+        "$40$"
+      ],
+      "reponse": 1,
+      "explication": "$\\binom{5}{2} = 10$ et $\\binom{5}{3} = \\binom{5}{2} = 10$, donc $\\binom{6}{3} = 10 + 10 = 20$. Le piège $15 = \\binom{6}{2}$ : c'est le voisin dans le triangle, pas la valeur cherchée."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Soit $f$ définie sur un intervalle $I$ et $a \\in I$. Par quelle condition définit-on « $f$ continue en $a$ » ?",
+      "choix": [
+        "$f(a) = 0$",
+        "$f$ est croissante autour de $a$",
+        "$\\displaystyle\\lim_{x \\to a} f(x) = f(a)$",
+        "$f'(a)$ existe"
+      ],
+      "reponse": 2,
+      "explication": "La continuité en $a$ se définit **par les limites** : la limite de $f$ en $a$ doit exister ET valoir $f(a)$. Le choix $f'(a)$ existe décrit la dérivabilité, une propriété **plus forte** : c'est la confusion classique à éviter."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "methode-fxk",
+      "enonce": "$f$ est continue et strictement décroissante sur $[0\\,;2]$, avec $f(0) = 5$ et $f(2) = -1$. Combien l'équation $f(x) = 2$ admet-elle de solutions dans $[0\\,;2]$ ?",
+      "choix": [
+        "aucune, car $f$ décroît",
+        "une unique solution",
+        "au moins deux solutions",
+        "une solution seulement si $f$ est positive"
+      ],
+      "reponse": 1,
+      "explication": "$2$ est compris entre $-1$ et $5$, et $f$ est continue **et strictement monotone** : le théorème de la bijection donne une **unique** solution. La décroissance n'empêche rien — c'est justement une stricte monotonie, ce qui assure l'unicité."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "composee",
+      "enonce": "Quelle est la formule de dérivation d'une composée $v \\circ u$ ?",
+      "choix": [
+        "$(v' \\circ u')$",
+        "$v' \\times u'$",
+        "$(v' \\circ u) \\times u'$",
+        "$(v' \\circ u) + u'$"
+      ],
+      "reponse": 2,
+      "explication": "On dérive l'extérieur en gardant l'intérieur intact, $v' \\circ u$, PUIS on multiplie par la dérivée de l'intérieur $u'$. Le facteur $\\times u'$ est celui qu'on oublie le plus souvent : sans lui, le résultat est faux."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "point-inflexion",
+      "enonce": "La courbe de $f(x) = x^4$ (avec $f''(x) = 12x^2$) admet-elle un point d'inflexion en $0$ ?",
+      "choix": [
+        "Oui, car $f''(0) = 0$",
+        "Oui, car la courbe est convexe",
+        "Non, car $f'(0) = 0$",
+        "Non, car $f''$ ne change pas de signe en $0$"
+      ],
+      "reponse": 3,
+      "explication": "Un point d'inflexion exige que $f''$ s'annule EN CHANGEANT DE SIGNE. Ici $f''(x) = 12x^2 \\geqslant 0$ partout : $f$ reste convexe. Le piège est de conclure dès que $f''(0) = 0$, ce qui ne suffit pas."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quel est l'ensemble de définition de la fonction $\\ln$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$]0\\,;+\\infty[$",
+        "$[0\\,;+\\infty[$",
+        "$\\mathbb{R}\\setminus\\{0\\}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\ln$ est la réciproque de $\\exp$, qui prend ses valeurs dans $]0\\,;+\\infty[$ : on ne peut donc calculer $\\ln x$ que pour $x>0$, **strictement**. Le piège est d'inclure $0$ : or $\\ln 0$ n'existe pas."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "equations",
+      "enonce": "Quelle est la solution de l'équation $\\ln(2x-6)=\\ln(x-1)$ ?",
+      "choix": [
+        "$x=5$",
+        "$x=7$",
+        "Aucune solution",
+        "$x=-5$"
+      ],
+      "reponse": 0,
+      "explication": "Existence : $2x-6>0$ et $x-1>0$, soit $x>3$. On identifie : $2x-6=x-1\\Rightarrow x=5$. Comme $5>3$, la solution convient. Le piège : oublier de vérifier la condition d'existence à la fin."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Sur le cercle trigonométrique, si $M$ est le point associé au réel $x$, à quoi correspond $\\cos(x)$ ?",
+      "choix": [
+        "à l'ordonnée de $M$",
+        "à l'abscisse de $M$",
+        "au rayon du cercle",
+        "à la longueur de l'arc"
+      ],
+      "reponse": 1,
+      "explication": "Par définition, $\\cos(x)$ est l'**abscisse** (coordonnée horizontale) de $M$ et $\\sin(x)$ son **ordonnée**. Le piège est d'intervertir les deux : retiens que le cosinus se lit sur l'axe horizontal."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "equation-cos",
+      "enonce": "Quelles sont les solutions de $\\cos(x)=\\dfrac{1}{2}$ sur $[-\\pi\\,;\\,\\pi]$ ?",
+      "choix": [
+        "$x=\\dfrac{\\pi}{3}$ uniquement",
+        "$x=\\dfrac{\\pi}{3}$ et $x=-\\dfrac{\\pi}{3}$",
+        "$x=\\dfrac{\\pi}{3}$ et $x=\\dfrac{2\\pi}{3}$",
+        "$x=\\dfrac{\\pi}{6}$ et $x=-\\dfrac{\\pi}{6}$"
+      ],
+      "reponse": 1,
+      "explication": "On a $\\cos\\left(\\dfrac{\\pi}{3}\\right)=\\dfrac12$, et par **parité** $\\cos\\left(-\\dfrac{\\pi}{3}\\right)=\\dfrac12$ aussi. Il y a donc **deux** solutions, $\\pm\\dfrac{\\pi}{3}$. Le piège est de n'en garder qu'une."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que signifie $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 3$ ?",
+      "choix": [
+        "$f(3) = +\\infty$",
+        "$f(x)$ se rapproche autant qu'on veut de $3$ quand $x$ devient très grand",
+        "$x$ se rapproche de $3$",
+        "$f$ est constante égale à $3$"
+      ],
+      "reponse": 1,
+      "explication": "Une limite en $+\\infty$ décrit le comportement de $f(x)$ quand $x$ grandit, pas la valeur de $f$ en un point précis. Le piège du choix A est de confondre $\\lim_{x\\to+\\infty}$ avec une image $f(3)$."
+    },
+    {
+      "id": 14,
+      "difficulte": "difficile",
+      "notion": "levee-indetermination",
+      "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$ ?",
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$2$",
+        "$4$"
+      ],
+      "reponse": 3,
+      "explication": "C'est une forme $\\frac{0}{0}$. On factorise $x^2-4 = (x-2)(x+2)$, on simplifie par $(x-2)$, il reste $x+2 \\to 4$. Le piège est de croire que $\\frac{0}{0}$ vaut $0$ ou n'existe pas : ici la limite est bien finie."
+    },
+    {
+      "id": 15,
+      "difficulte": "facile",
+      "notion": "liste",
+      "enonce": "Combien d'éléments contient la liste Python `[4, 4, 7]` ?",
+      "choix": [
+        "$2$",
+        "$3$",
+        "$1$",
+        "$4$"
+      ],
+      "reponse": 1,
+      "explication": "`len([4, 4, 7])` vaut $3$. Contrairement à un **ensemble** où $\\{4, 4, 7\\} = \\{4, 7\\}$, une liste **garde les doublons** : le $4$ répété compte deux fois."
+    },
+    {
+      "id": 16,
+      "difficulte": "difficile",
+      "notion": "indices",
+      "enonce": "On pose `L = [10, 20, 30]`. Que renvoie `L[3]` ?",
+      "choix": [
+        "$30$",
+        "$0$",
+        "une erreur (`IndexError`)",
+        "$20$"
+      ],
+      "reponse": 2,
+      "explication": "La liste a $3$ éléments, d'indices $0, 1, 2$. Le dernier indice valide est `len(L) - 1 = 2`. L'indice $3$ n'existe pas : Python lève une `IndexError`. Croire que `L[3]` vaut $30$ confond longueur et dernier indice."
+    },
+    {
+      "id": 17,
+      "difficulte": "facile",
+      "notion": "appartenance-inclusion",
+      "enonce": "Quelle écriture est correcte pour dire que le nombre $3$ est un élément de l'ensemble $A = \\{1, 3, 5\\}$ ?",
+      "choix": [
+        "$3 \\subset A$",
+        "$3 \\in A$",
+        "$A \\in 3$",
+        "$3 \\notin A$"
+      ],
+      "reponse": 1,
+      "explication": "Le symbole $\\in$ relie un **élément** à un **ensemble** : $3 \\in A$. Le piège est $\\subset$, qui relie deux **ensembles** entre eux, pas un nombre à un ensemble."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "negation",
+      "enonce": "Quelle est la négation de l'implication « $P \\Rightarrow Q$ » ?",
+      "choix": [
+        "$Q \\Rightarrow P$",
+        "$P \\Rightarrow \\text{non } Q$",
+        "$\\text{non } P \\Rightarrow \\text{non } Q$",
+        "$P \\text{ et } \\text{non } Q$"
+      ],
+      "reponse": 3,
+      "explication": "Une implication n'est fausse que dans un cas : $P$ vraie **et** $Q$ fausse. Sa négation est donc « $P$ et $\\text{non } Q$ », pas une autre implication. Le choix B ($P \\Rightarrow \\text{non } Q$) est l'erreur la plus fréquente."
+    },
+    {
+      "id": 19,
+      "difficulte": "facile",
+      "notion": "bernoulli",
+      "enonce": "Qu'est-ce qui caractérise une épreuve de Bernoulli ?",
+      "choix": [
+        "Elle a exactement deux issues : un succès et un échec",
+        "Elle a toujours trois issues possibles",
+        "Elle consiste à répéter $n$ fois la même expérience",
+        "Toutes ses issues ont la même probabilité"
+      ],
+      "reponse": 0,
+      "explication": "Une épreuve de Bernoulli n'a que **deux** issues : succès (probabilité $p$) et échec (probabilité $1-p$). Répéter l'épreuve $n$ fois, ce n'est pas l'épreuve elle-même mais le **schéma** de Bernoulli : ne confonds pas les deux."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "cumul",
+      "enonce": "Un QCM a 10 questions ; un candidat répond au hasard ($X\\sim B(10\\,;\\,0{,}5)$ compte ses bonnes réponses). Quelle expression donne la probabilité qu'il ait **au moins 8** bonnes réponses ?",
+      "choix": [
+        "$P(X=8)$",
+        "$P(X=8)+P(X=9)+P(X=10)$",
+        "$P(X\\leqslant 8)$",
+        "$P(X=8)+P(X=9)$"
+      ],
+      "reponse": 1,
+      "explication": "« Au moins 8 » signifie $X=8$, $9$ **ou** $10$ : on somme ces trois probabilités. Le piège n°1 est de répondre $P(X=8)$ (« exactement 8 ») : « exactement » ≠ « au moins ». Le choix 4 oublie $X=10$."
+    },
+    {
+      "id": 21,
+      "difficulte": "moyen",
+      "notion": "deux-primitives-constante",
+      "enonce": "Deux primitives d'une même fonction continue sur un intervalle :",
+      "choix": [
+        "sont nécessairement égales",
+        "diffèrent d'une fonction affine",
+        "diffèrent d'une constante",
+        "ont des dérivées différentes"
+      ],
+      "reponse": 2,
+      "explication": "C'est la propriété clé : elles diffèrent d'une **constante** ($F$ et $F+C$). En les dérivant, la constante disparaît, ce qui explique qu'elles donnent la même fonction. Croire qu'il n'y en a qu'une (choix 1) fait oublier le $+C$."
+    },
+    {
+      "id": 22,
+      "difficulte": "moyen",
+      "notion": "orthogonalite",
+      "enonce": "Lequel de ces vecteurs est orthogonal à $\\vec{u}\\begin{pmatrix}1\\\\2\\\\1\\end{pmatrix}$ ?",
+      "choix": [
+        "$\\vec{a}(1,2,1)$",
+        "$\\vec{b}(2,-1,0)$",
+        "$\\vec{c}(1,1,1)$",
+        "$\\vec{d}(2,1,0)$"
+      ],
+      "reponse": 1,
+      "explication": "Deux vecteurs sont orthogonaux quand leur produit scalaire est nul. Pour $\\vec{b}$ : $1\\times2+2\\times(-1)+1\\times0=2-2+0=0$. Les autres donnent $6$, $4$ et $4$. Il faut tester le produit scalaire, pas se fier à l'allure des coordonnées."
+    },
+    {
+      "id": 23,
+      "difficulte": "moyen",
+      "notion": "variance-somme",
+      "enonce": "$X$ et $Y$ sont **indépendantes**, avec $V(X)=3$ et $V(Y)=5$. Combien vaut $V(X+Y)$ ?",
+      "choix": [
+        "$8$",
+        "$15$",
+        "$\\sqrt{34}$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $X$ et $Y$ sont indépendantes, les variances s'ajoutent : $V(X+Y)=V(X)+V(Y)=3+5=8$. Le choix $15$ multiplie les variances (faux), et $\\sqrt{34}$ confond variance et écart type."
+    },
+    {
+      "id": 24,
+      "difficulte": "moyen",
+      "notion": "convergence",
+      "enonce": "Une suite qui tend vers $+\\infty$ est dite :",
+      "choix": [
+        "convergente",
+        "divergente",
+        "bornée",
+        "majorée"
+      ],
+      "reponse": 1,
+      "explication": "« Converger » veut dire avoir une limite **finie**. Tendre vers $+\\infty$, c'est **diverger** (vers $+\\infty$). Le piège classique est de croire qu'« avoir une limite » = « converger » : c'est faux quand la limite est infinie."
+    },
+    {
+      "id": 25,
+      "difficulte": "moyen",
+      "notion": "colinearite",
+      "enonce": "Les vecteurs $\\overrightarrow{u}\\,(2\\,;-1\\,;3)$ et $\\overrightarrow{v}\\,(-4\\,;2\\,;-6)$ sont-ils colinéaires ?",
+      "choix": [
+        "Non, car leurs coordonnées sont de signes opposés",
+        "Oui, car $\\overrightarrow{v} = 2\\,\\overrightarrow{u}$",
+        "Non, aucun réel ne convient",
+        "Oui, car $\\overrightarrow{v} = -2\\,\\overrightarrow{u}$"
+      ],
+      "reponse": 3,
+      "explication": "On cherche un réel $k$ tel que chaque coordonnée de $\\overrightarrow{v}$ vaille $k$ fois celle de $\\overrightarrow{u}$ : $-4 = k\\times 2$, $2 = k\\times(-1)$, $-6 = k\\times 3$ donnent tous $k = -2$. Un coefficient négatif ne pose aucun problème : colinéaire ne veut pas dire égal. Avec $k = 2$ on obtiendrait $(4\\,;-2\\,;6)$, faux."
+    }
+  ]
+}

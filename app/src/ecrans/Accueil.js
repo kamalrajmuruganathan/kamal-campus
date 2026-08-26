@@ -111,6 +111,15 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="Bac blanc / brevet blanc"
+            sousTitre="QCM de révision, plusieurs chapitres"
+            detail="Teste où tu en es"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('BacBlanc')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="Sujets type bac / brevet"
             sousTitre="Des épreuves entières, corrigées"
             detail="S'entraîner en conditions"

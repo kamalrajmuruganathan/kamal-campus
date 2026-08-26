@@ -1,0 +1,292 @@
+{
+  "id": "bac-blanc-seconde-maths",
+  "titre": "Révision — Seconde maths",
+  "examen": "Révision",
+  "niveau": "seconde",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "range",
+      "enonce": "Quelles valeurs prend `i` dans `for i in range(4):` ?",
+      "choix": [
+        "$1, 2, 3, 4$",
+        "$0, 1, 2, 3$",
+        "$0, 1, 2, 3, 4$",
+        "$4$ seulement"
+      ],
+      "reponse": 1,
+      "explication": "`range(4)` produit **quatre** valeurs en commençant à $0$ et **sans atteindre** $4$ : $0, 1, 2, 3$. C'est l'erreur la plus fréquente de tout le chapitre."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "range",
+      "enonce": "Quelles valeurs produit `range(2, 11, 3)` ?",
+      "choix": [
+        "$2, 5, 8$",
+        "$2, 5, 8, 11$",
+        "$2, 3, 4, \\ldots, 10$",
+        "$3, 6, 9$"
+      ],
+      "reponse": 0,
+      "explication": "On part de $2$, on avance de $3$ en $3$, **sans atteindre** $11$ : $2$, $5$, $8$ — le suivant serait $11$, exclu. Le troisième argument est le **pas**."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "ensembles-n-z",
+      "enonce": "À quel(s) ensemble(s) le nombre $-4$ appartient-il ?",
+      "choix": [
+        "à $\\mathbb{N}$ seulement",
+        "à $\\mathbb{Z}$ seulement",
+        "à $\\mathbb{N}$ et à $\\mathbb{Z}$",
+        "à aucun des deux"
+      ],
+      "reponse": 1,
+      "explication": "$\\mathbb{N}$ ne contient que les entiers **naturels**, à partir de $0$ : les négatifs en sont exclus. $\\mathbb{Z}$ contient les entiers **relatifs**, donc $-4$. On a toujours $\\mathbb{N} \\subset \\mathbb{Z}$, jamais l'inverse."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "multiple-diviseur",
+      "enonce": "Pour prouver qu'un entier $a$ est un multiple de $5$, que faut-il établir ?",
+      "choix": [
+        "qu'il existe un entier $k$ tel que $a = 5k$",
+        "que $a$ se termine par $0$ ou $5$",
+        "qu'il existe un nombre $k$ tel que $a = 5k$",
+        "que $a$ est plus grand que $5$"
+      ],
+      "reponse": 0,
+      "explication": "La définition officielle exige l'existence d'un $k$ **entier** tel que $a = 5k$. La réponse C omet ce mot : sans lui, n'importe quel nombre conviendrait, puisque $k = a/5$ existe toujours. C'est précisément le mot « entier » qui fait la démonstration, et l'oublier coûte le point."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "ensembles",
+      "enonce": "À quel ensemble le nombre $\\sqrt{2}$ appartient-il, mais pas aux précédents ?",
+      "choix": [
+        "$\\mathbb{N}$",
+        "$\\mathbb{Z}$",
+        "$\\mathbb{Q}$",
+        "$\\mathbb{R}$"
+      ],
+      "reponse": 3,
+      "explication": "$\\sqrt{2}$ est **irrationnel** : il ne s'écrit pas comme quotient de deux entiers, donc il n'est pas dans $\\mathbb{Q}$. Il appartient à $\\mathbb{R}$ et pas aux ensembles plus petits."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "facteur-commun",
+      "enonce": "Quelle est la forme factorisée de $(x+2)(x-5) + (x+2)(3x)$ ?",
+      "choix": [
+        "$(x+2)(4x-5)$",
+        "$(x+2)(x-5+3x)$ seulement",
+        "$(x+2)(3x^2-5)$",
+        "$4x - 5$"
+      ],
+      "reponse": 0,
+      "explication": "Le facteur commun est l'expression $(x+2)$. On obtient $(x+2)\\big[(x-5) + 3x\\big] = (x+2)(4x-5)$. Le choix B s'arrête avant de réduire le crochet : la factorisation n'est pas terminée."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "verticale",
+      "enonce": "Quelle est l'équation d'une droite verticale passant par le point d'abscisse $5$ ?",
+      "choix": [
+        "$y = 5$",
+        "$x = 5$",
+        "$y = 5x$",
+        "$y = x + 5$"
+      ],
+      "reponse": 1,
+      "explication": "Une droite verticale est l'ensemble des points de même abscisse : $x = 5$. Elle n'admet **pas** d'équation réduite $y = mx+p$. Le choix $y = 5$ décrit une droite horizontale."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "vecteur-directeur",
+      "enonce": "Quel vecteur est directeur de la droite $3x - 2y + 5 = 0$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 5 \\\\ 0 \\end{pmatrix}$"
+      ],
+      "reponse": 1,
+      "explication": "Pour $ax+by+c=0$, un vecteur directeur est $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$, ici $\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$. Le choix A donne les coefficients $(a\\,;b)$, qui formeront un vecteur **normal** — notion vue en Première."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "premier-degre",
+      "enonce": "Quelle est la solution de $4x - 7 = 9$ ?",
+      "choix": [
+        "$x = 4$",
+        "$x = 2$",
+        "$x = \\dfrac{1}{2}$",
+        "$x = 16$"
+      ],
+      "reponse": 0,
+      "explication": "$4x = 16$ donc $x = 4$. Vérification systématique en remplaçant : $4 \\times 4 - 7 = 9$ ✓. Ce réflexe de vérification coûte cinq secondes et évite bien des erreurs."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "methode",
+      "enonce": "Pour résoudre $\\dfrac{2}{x} > 3$, quelle démarche est correcte ?",
+      "choix": [
+        "Multiplier les deux membres par $x$ pour obtenir $2 > 3x$",
+        "Tout ramener à gauche, réduire au même dénominateur, puis faire un tableau de signes",
+        "Prendre l'inverse : $x < \\dfrac{2}{3}$",
+        "$x > \\dfrac{2}{3}$"
+      ],
+      "reponse": 1,
+      "explication": "Multiplier par $x$ est interdit : son **signe est inconnu**, on ne sait donc pas si l'inégalité change de sens. La méthode sûre est toujours : tout d'un côté, factoriser ou réduire au même dénominateur, tableau de signes."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "carre",
+      "enonce": "Quel est le signe de $x^2$ pour $x$ réel ?",
+      "choix": [
+        "Toujours strictement positif",
+        "Toujours positif ou nul",
+        "Du signe de $x$",
+        "Toujours négatif"
+      ],
+      "reponse": 1,
+      "explication": "Un carré est toujours **positif ou nul** — il s'annule en $x = 0$. Dire « strictement positif » serait faux à cause de cette valeur."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "Laquelle de ces fonctions de référence est **impaire** ?",
+      "choix": [
+        "$x^2$",
+        "$\\sqrt{x}$",
+        "$\\dfrac{1}{x}$",
+        "$x^2 + 1$"
+      ],
+      "reponse": 2,
+      "explication": "$\\dfrac{1}{-x} = -\\dfrac{1}{x}$ : la fonction inverse est impaire, sa courbe est symétrique par rapport à l'origine. $x^2$ est paire, et $\\sqrt{x}$ n'est ni l'une ni l'autre (son domaine n'est pas symétrique)."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "image",
+      "enonce": "Pour $f(x) = 3x - 5$, quelle est l'image de $4$ ?",
+      "choix": [
+        "$7$",
+        "$3$",
+        "$-5$",
+        "$12$"
+      ],
+      "reponse": 0,
+      "explication": "On remplace $x$ par $4$ : $f(4) = 3 \\times 4 - 5 = 12 - 5 = 7$. Le choix $12$ s'arrête avant de soustraire $5$."
+    },
+    {
+      "id": 14,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Sur un graphique, comment lit-on l'ensemble des solutions de $f(x) > 2$ ?",
+      "choix": [
+        "Les abscisses des points où la courbe est au-dessus de la droite $y = 2$",
+        "Les ordonnées des points où la courbe est au-dessus de $y = 2$",
+        "Les abscisses où la courbe est en dessous de $y = 2$",
+        "L'intersection avec l'axe des abscisses"
+      ],
+      "reponse": 0,
+      "explication": "$f(x) > 2$ signifie que l'**ordonnée** dépasse $2$, donc que la courbe est **au-dessus** de l'horizontale. Mais la réponse attendue est l'ensemble des **abscisses** correspondantes — c'est le double piège de cette lecture."
+    },
+    {
+      "id": 15,
+      "difficulte": "facile",
+      "notion": "encadrement",
+      "enonce": "Laquelle de ces valeurs ne peut **pas** être une probabilité ?",
+      "choix": [
+        "$0$",
+        "$0{,}45$",
+        "$1$",
+        "$1{,}2$"
+      ],
+      "reponse": 3,
+      "explication": "Une probabilité est toujours comprise entre $0$ et $1$. Obtenir $1{,}2$ signale une erreur de calcul — c'est un contrôle à faire systématiquement avant de conclure."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "contraire",
+      "enonce": "Si $P(\\mathrm{A}) = 0{,}3$, que vaut $P\\left(\\overline{\\mathrm{A}}\\right)$ ?",
+      "choix": [
+        "$0{,}3$",
+        "$0{,}7$",
+        "$-0{,}3$",
+        "$1{,}3$"
+      ],
+      "reponse": 1,
+      "explication": "$P\\left(\\overline{\\mathrm{A}}\\right) = 1 - P(\\mathrm{A}) = 1 - 0{,}3 = 0{,}7$. L'événement et son contraire se partagent la totalité des issues."
+    },
+    {
+      "id": 17,
+      "difficulte": "facile",
+      "notion": "moyenne",
+      "enonce": "Quelle est la moyenne de la série $4\\,;\\ 7\\,;\\ 10\\,;\\ 11$ ?",
+      "choix": [
+        "$8$",
+        "$8{,}5$",
+        "$32$",
+        "$9$"
+      ],
+      "reponse": 0,
+      "explication": "$\\dfrac{4+7+10+11}{4} = \\dfrac{32}{4} = 8$. Le choix $32$ s'arrête à la somme sans diviser par l'effectif."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "choix-indicateur",
+      "enonce": "Pour décrire les salaires d'une entreprise où le dirigeant gagne très largement plus que les autres, quel indicateur est le plus représentatif ?",
+      "choix": [
+        "La moyenne, car elle utilise toutes les valeurs",
+        "La médiane, car elle n'est pas influencée par les valeurs extrêmes",
+        "L'étendue",
+        "Le maximum"
+      ],
+      "reponse": 1,
+      "explication": "La moyenne est tirée vers le haut par le salaire du dirigeant et ne reflète alors la situation de presque personne. La **médiane** partage l'effectif en deux et reste stable — c'est pourquoi les statistiques officielles sur les revenus la privilégient."
+    },
+    {
+      "id": 19,
+      "difficulte": "facile",
+      "notion": "chasles",
+      "enonce": "Que vaut $\\overrightarrow{\\mathrm{AB}} + \\overrightarrow{\\mathrm{BC}}$ ?",
+      "choix": [
+        "$\\overrightarrow{\\mathrm{AC}}$",
+        "$\\overrightarrow{\\mathrm{CA}}$",
+        "$\\vec{0}$",
+        "$\\overrightarrow{\\mathrm{AB}}$"
+      ],
+      "reponse": 0,
+      "explication": "Relation de Chasles : le point $\\mathrm{B}$, commun aux deux vecteurs, disparaît. Il reste $\\overrightarrow{\\mathrm{AC}}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "moyen",
+      "notion": "colinearite",
+      "enonce": "Les vecteurs $\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$ et $\\begin{pmatrix} 6 \\\\ 8 \\end{pmatrix}$ sont-ils colinéaires ?",
+      "choix": [
+        "Oui, car $3 \\times 8 - 4 \\times 6 = 0$",
+        "Non, car leurs coordonnées diffèrent",
+        "Oui, car ils ont la même norme",
+        "On ne peut pas savoir"
+      ],
+      "reponse": 0,
+      "explication": "Le déterminant $xy' - yx' = 24 - 24 = 0$ : ils sont colinéaires. On le voit aussi directement, le second est le double du premier."
+    }
+  ]
+}

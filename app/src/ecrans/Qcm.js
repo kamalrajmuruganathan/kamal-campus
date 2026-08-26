@@ -21,14 +21,19 @@ const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 export default function Qcm({ route, navigation }) {
   const t = theme(useColorScheme() === 'dark');
-  const chapitre = chapitreParId(route.params.id);
+  // Deux usages : QCM d'un chapitre (route.params.id) OU QCM de révision / bac
+  // blanc dont les questions sont fournies directement (route.params.questions).
+  const chapitre = route.params?.questions ? null : chapitreParId(route.params?.id);
 
-  const questions = useMemo(() => chapitre?.qcm?.questions ?? [], [chapitre]);
+  const questions = useMemo(
+    () => route.params?.questions ?? chapitre?.qcm?.questions ?? [],
+    [chapitre, route.params],
+  );
   const [index, setIndex] = useState(0);
   const [choisi, setChoisi] = useState(null);
   const [reponses, setReponses] = useState([]);
 
-  if (!chapitre || questions.length === 0) {
+  if (questions.length === 0) {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }}>
         <Text style={{ color: t.couleur.texte, padding: t.espace.l }}>QCM indisponible.</Text>

@@ -16,6 +16,7 @@ config.watchFolders = [
   path.resolve(__dirname, '..', 'contenu'),
   path.resolve(__dirname, '..', 'formulaires'),
   path.resolve(__dirname, '..', 'sujets'),
+  path.resolve(__dirname, '..', 'quiz'),
 ];
 
 module.exports = config;

@@ -1,0 +1,292 @@
+{
+  "id": "bac-blanc-premiere-spe-maths",
+  "titre": "Révision — Première spé maths",
+  "examen": "Révision",
+  "niveau": "premiere",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "taux-de-variation",
+      "enonce": "Quel est le taux de variation de $f(x) = x^2$ entre $1$ et $4$ ?",
+      "choix": [
+        "$3$",
+        "$5$",
+        "$15$",
+        "$8$"
+      ],
+      "reponse": 1,
+      "explication": "$\\tau = \\dfrac{f(4) - f(1)}{4 - 1} = \\dfrac{16 - 1}{3} = \\dfrac{15}{3} = 5$. Le piège est de s'arrêter à $15$ en oubliant de diviser par l'écart des abscisses."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "operations",
+      "enonce": "Quelle est la dérivée de $f(x) = \\dfrac{2x+1}{x-3}$ sur $]3\\,;+\\infty[$ ?",
+      "choix": [
+        "$\\dfrac{-7}{(x-3)^2}$",
+        "$\\dfrac{7}{(x-3)^2}$",
+        "$\\dfrac{2}{1}$",
+        "$\\dfrac{-5}{(x-3)^2}$"
+      ],
+      "reponse": 0,
+      "explication": "$u = 2x+1$, $u' = 2$, $v = x-3$, $v' = 1$. Alors $f' = \\dfrac{u'v - uv'}{v^2} = \\dfrac{2(x-3) - (2x+1)}{(x-3)^2} = \\dfrac{2x - 6 - 2x - 1}{(x-3)^2} = \\dfrac{-7}{(x-3)^2}$. Inverser l'ordre du numérateur donnerait $+7$ : c'est le piège du choix B."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quelle propriété caractérise la fonction exponentielle ?",
+      "choix": [
+        "$f' = -f$ et $f(0) = 1$",
+        "$f' = f$ et $f(0) = 1$",
+        "$f' = f$ et $f(1) = 0$",
+        "$f' = f^2$ et $f(0) = 1$"
+      ],
+      "reponse": 1,
+      "explication": "L'exponentielle est l'**unique** fonction dérivable sur $\\mathbb{R}$ égale à sa propre dérivée et valant $1$ en $0$. C'est de cette définition que découlent toutes les autres propriétés."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "signe",
+      "enonce": "Sur $\\mathbb{R}$, quel est le signe de $f(x) = (x - 3)\\,\\mathrm{e}^{2x}$ ?",
+      "choix": [
+        "Toujours positif",
+        "Négatif sur $]-\\infty\\,;3[$, positif sur $]3\\,;+\\infty[$",
+        "Toujours négatif",
+        "Positif sur $]-\\infty\\,;3[$, négatif sur $]3\\,;+\\infty[$"
+      ],
+      "reponse": 1,
+      "explication": "$\\mathrm{e}^{2x} > 0$ toujours : ce facteur **n'influence pas le signe** et peut être écarté. Le signe de $f$ est donc celui de $x - 3$ : négatif avant $3$, positif après. C'est l'usage pratique le plus courant de la stricte positivité."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "vecteur-normal",
+      "enonce": "Quel vecteur est normal à la droite d'équation $4x - 3y + 1 = 0$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -3 \\\\ 4 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour $ax + by + c = 0$, le vecteur normal a pour coordonnées $\\begin{pmatrix} a \\\\ b \\end{pmatrix}$, ici $\\begin{pmatrix} 4 \\\\ -3 \\end{pmatrix}$. Le choix C, $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$, est un vecteur **directeur**."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "forme-developpee",
+      "enonce": "Quel est le rayon du cercle d'équation $x^2 + y^2 - 4x + 6y - 3 = 0$ ?",
+      "choix": [
+        "$3$",
+        "$4$",
+        "$16$",
+        "$\\sqrt{3}$"
+      ],
+      "reponse": 1,
+      "explication": "$x^2 - 4x = (x-2)^2 - 4$ et $y^2 + 6y = (y+3)^2 - 9$. L'équation devient $(x-2)^2 + (y+3)^2 - 4 - 9 - 3 = 0$, soit $(x-2)^2 + (y+3)^2 = 16$. Le rayon est $\\sqrt{16} = 4$, le centre $(2\\,;-3)$."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Comment se calcule $P_\\mathrm{A}(\\mathrm{B})$ ?",
+      "choix": [
+        "$\\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{B})}$",
+        "$\\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{A})}$",
+        "$P(\\mathrm{A}) \\times P(\\mathrm{B})$",
+        "$P(\\mathrm{A}) + P(\\mathrm{B})$"
+      ],
+      "reponse": 1,
+      "explication": "On divise par la probabilité de l'événement **qui conditionne**, celui écrit en indice. Diviser par $P(\\mathrm{B})$ donnerait $P_\\mathrm{B}(\\mathrm{A})$, qui est une autre quantité."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "arbre",
+      "enonce": "Une usine : la machine 1 fait $70\\,\\%$ des pièces avec $3\\,\\%$ de défauts, la machine 2 fait le reste avec $8\\,\\%$ de défauts. Quelle est la probabilité qu'une pièce prise au hasard soit défectueuse ?",
+      "choix": [
+        "$0{,}11$",
+        "$0{,}045$",
+        "$0{,}024$",
+        "$0{,}055$"
+      ],
+      "reponse": 1,
+      "explication": "$P(\\mathrm{D}) = 0{,}7 \\times 0{,}03 + 0{,}3 \\times 0{,}08 = 0{,}021 + 0{,}024 = 0{,}045$, soit $4{,}5\\,\\%$. Le choix $0{,}11$ additionne les taux de défauts sans les pondérer par les parts de production."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "nature",
+      "enonce": "Le produit scalaire de deux vecteurs est :",
+      "choix": [
+        "un vecteur",
+        "un nombre réel",
+        "un angle",
+        "une longueur toujours positive"
+      ],
+      "reponse": 1,
+      "explication": "C'est un **nombre réel** — d'où le nom *scalaire*. Il peut être positif, négatif ou nul, ce qui exclut aussi la dernière réponse."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle, $b = 5$, $c = 8$ et $\\widehat{\\mathrm{A}} = 60°$. Que vaut $a^2$ ?",
+      "choix": [
+        "$89$",
+        "$49$",
+        "$129$",
+        "$29$"
+      ],
+      "reponse": 1,
+      "explication": "Al-Kashi : $a^2 = b^2 + c^2 - 2bc\\cos\\widehat{\\mathrm{A}} = 25 + 64 - 2 \\times 5 \\times 8 \\times 0{,}5 = 89 - 40 = 49$. Donc $a = 7$. Le choix $89$ oublie le terme correctif, le choix $129$ met un $+$ au lieu d'un $-$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Parmi ces fonctions, laquelle n'est **pas** une fonction polynôme du second degré ?",
+      "choix": [
+        "$f(x) = 3x^2 - 7$",
+        "$f(x) = -x^2 + x - 1$",
+        "$f(x) = 0x^2 + 4x - 5$",
+        "$f(x) = (x-1)(x+2)$"
+      ],
+      "reponse": 2,
+      "explication": "Le coefficient $a$ doit être non nul. Ici $a = 0$, la fonction se réduit à $4x - 5$, qui est affine. La dernière est bien du second degré : en développant, $(x-1)(x+2) = x^2 + x - 2$."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "signe",
+      "enonce": "$f(x) = -2x^2 + 4x + 6$ a pour racines $-1$ et $3$. Sur quel intervalle a-t-on $f(x) > 0$ ?",
+      "choix": [
+        "$]-\\infty\\,;-1[ \\ \\cup \\ ]3\\,;+\\infty[$",
+        "$]-1\\,;3[$",
+        "$\\mathbb{R}$ tout entier",
+        "Sur aucun intervalle"
+      ],
+      "reponse": 1,
+      "explication": "Le trinôme est du signe de $a$ à l'**extérieur** des racines. Ici $a = -2 < 0$, donc $f$ est négative à l'extérieur et **positive entre** les racines, soit sur $]-1\\,;3[$. Le piège est d'oublier que $a$ est négatif."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "modes-de-generation",
+      "enonce": "La suite définie par $u_0 = 4$ et $u_{n+1} = u_n + 3$ est définie :",
+      "choix": [
+        "de façon explicite",
+        "par une relation de récurrence",
+        "par un algorithme",
+        "par un motif géométrique"
+      ],
+      "reponse": 1,
+      "explication": "Chaque terme se déduit du **précédent** : c'est une relation de récurrence. Une forme explicite donnerait $u_n$ directement en fonction de $n$, ici $u_n = 4 + 3n$."
+    },
+    {
+      "id": 14,
+      "difficulte": "difficile",
+      "notion": "somme-geometrique",
+      "enonce": "Combien vaut $1 + 2 + 2^2 + \\cdots + 2^{10}$ ?",
+      "choix": [
+        "$1\\,023$",
+        "$2\\,047$",
+        "$1\\,024$",
+        "$2\\,046$"
+      ],
+      "reponse": 1,
+      "explication": "$\\dfrac{1 - q^{n+1}}{1 - q} = \\dfrac{1 - 2^{11}}{1 - 2} = \\dfrac{1 - 2048}{-1} = 2047$. Le piège est le **nombre de termes** : de $2^0$ à $2^{10}$ il y en a $11$, d'où l'exposant $11$. Le choix $1\\,023$ correspond à $2^{10} - 1$, c'est-à-dire une somme s'arrêtant à $2^9$."
+    },
+    {
+      "id": 15,
+      "difficulte": "facile",
+      "notion": "radian",
+      "enonce": "À combien de radians correspond un angle de $90°$ ?",
+      "choix": [
+        "$\\pi$",
+        "$\\dfrac{\\pi}{2}$",
+        "$\\dfrac{\\pi}{4}$",
+        "$2\\pi$"
+      ],
+      "reponse": 1,
+      "explication": "$\\pi$ radians valent $180°$, donc $90°$ correspond à la moitié : $\\dfrac{\\pi}{2}$. La conversion générale est $\\text{rad} = \\text{deg} \\times \\dfrac{\\pi}{180}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "difficile",
+      "notion": "angles-associes",
+      "enonce": "Que vaut $\\cos\\left(\\dfrac{3\\pi}{4}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{\\sqrt{2}}{2}$",
+        "$-\\dfrac{\\sqrt{2}}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\dfrac{3\\pi}{4} = \\pi - \\dfrac{\\pi}{4}$. Or $\\cos(\\pi - x) = -\\cos x$, donc le résultat vaut $-\\cos\\left(\\frac{\\pi}{4}\\right) = -\\dfrac{\\sqrt{2}}{2}$. Contrôle visuel : le point est dans le deuxième quadrant, où l'abscisse est négative."
+    },
+    {
+      "id": 17,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Une variable aléatoire réelle est :",
+      "choix": [
+        "un nombre tiré au hasard",
+        "une fonction qui associe un réel à chaque issue",
+        "une probabilité",
+        "un événement"
+      ],
+      "reponse": 1,
+      "explication": "C'est une **fonction** de l'univers $\\Omega$ vers $\\mathbb{R}$. Garder cette nature en tête évite la plupart des confusions du chapitre : $X$ n'est pas un nombre, c'est une règle d'association."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "variance",
+      "enonce": "$X$ prend les valeurs $0$ et $2$ avec les probabilités $0{,}6$ et $0{,}4$. Que vaut $V(X)$ ?",
+      "choix": [
+        "$0{,}96$",
+        "$0{,}8$",
+        "$1{,}6$",
+        "$0{,}64$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = 0 \\times 0{,}6 + 2 \\times 0{,}4 = 0{,}8$ et $E(X^2) = 0 \\times 0{,}6 + 4 \\times 0{,}4 = 1{,}6$. Donc $V(X) = 1{,}6 - 0{,}8^2 = 1{,}6 - 0{,}64 = 0{,}96$. Le choix $1{,}6$ oublie de soustraire le carré de l'espérance."
+    },
+    {
+      "id": 19,
+      "difficulte": "facile",
+      "notion": "signe-derivee",
+      "enonce": "Si $f'(x) > 0$ pour tout $x$ d'un intervalle $I$, alors sur $I$ la fonction $f$ est :",
+      "choix": [
+        "décroissante",
+        "croissante",
+        "constante",
+        "positive"
+      ],
+      "reponse": 1,
+      "explication": "Une dérivée strictement positive sur un intervalle signifie que $f$ y est strictement croissante. Attention à ne pas confondre le signe de $f'$ (qui donne les **variations**) et le signe de $f$ (qui donne la position par rapport à l'axe des abscisses)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "intervalle",
+      "enonce": "La fonction inverse $f(x) = \\dfrac{1}{x}$ a une dérivée négative sur $\\mathbb{R}^*$. Peut-on dire qu'elle est décroissante sur $\\mathbb{R}^*$ ?",
+      "choix": [
+        "Oui, puisque $f' < 0$ partout",
+        "Non, $\\mathbb{R}^*$ n'est pas un intervalle : elle décroît sur chacun des deux intervalles séparément",
+        "Non, sa dérivée est positive",
+        "Oui, mais seulement pour $x > 0$"
+      ],
+      "reponse": 1,
+      "explication": "Le théorème exige un **intervalle**. $\\mathbb{R}^*$ est une réunion de deux intervalles. Contre-exemple : $f(-1) = -1$ et $f(1) = 1$, donc $f(-1) < f(1)$ alors que $-1 < 1$ — pas de décroissance globale."
+    }
+  ]
+}

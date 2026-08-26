@@ -1,0 +1,320 @@
+{
+  "id": "brevet-blanc-maths",
+  "titre": "Brevet blanc — Maths",
+  "examen": "Brevet blanc",
+  "niveau": "troisieme",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "nature-expression",
+      "enonce": "Quelle est la nature de l'expression $5(x+4)$ ?",
+      "choix": [
+        "Une somme",
+        "Un produit",
+        "Une différence",
+        "Un quotient"
+      ],
+      "reponse": 1,
+      "explication": "C'est la **dernière opération** qui donne la nature : ici on multiplie $5$ par le contenu de la parenthèse, donc c'est un **produit**. Le piège est le $+$ visible à l'intérieur : il est enfermé dans la parenthèse, il ne s'effectue pas en dernier. Cette distinction commande tout : seul un produit permet d'utiliser la règle du produit nul."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "sens-de-lecture",
+      "enonce": "Factorise $x^2 - 14x + 49$.",
+      "choix": [
+        "$(x+7)^2$",
+        "$(x-7)^2$",
+        "$(x-7)(x+7)$",
+        "$(x-14)(x+49)$"
+      ],
+      "reponse": 1,
+      "explication": "**Trois** termes, dont deux carrés ($x^2$ et $49 = 7^2$) : la piste est $(a\\pm b)^2$. On vérifie le double produit : $2 \\times x \\times 7 = 14x$, et il est **négatif** ici, donc c'est $(a-b)^2$. Le piège est le choix $(x-7)(x+7)$ : en le développant on obtient $x^2 - 49$, sans aucun terme en $x$ — ce n'est donc pas l'expression de départ. Le réflexe qui tranche : **redéveloppe toujours** ta factorisation."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "On sait que $f(4) = 11$. Quelle phrase est correcte ?",
+      "choix": [
+        "$11$ est l'image de $4$",
+        "$4$ est l'image de $11$",
+        "$11$ est un antécédent de $4$",
+        "$4$ est le coefficient de $f$"
+      ],
+      "reponse": 0,
+      "explication": "Dans $f(4) = 11$, le nombre de départ est $4$ et le nombre obtenu est $11$ : donc $11$ est l'**image** de $4$, et $4$ est un **antécédent** de $11$. Les choix B et C inversent image et antécédent — c'est la confusion la plus fréquente."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "fonction-lineaire",
+      "enonce": "Quelle est l'expression d'une fonction linéaire de coefficient $-2$ ?",
+      "choix": [
+        "$f(x) = x - 2$",
+        "$f(x) = -2x$",
+        "$f(x) = 2x$",
+        "$f(x) = -2x - 2$"
+      ],
+      "reponse": 1,
+      "explication": "Une fonction linéaire s'écrit $f(x) = ax$, sans terme constant. Avec $a = -2$ : $f(x) = -2x$. Le choix $x - 2$ **ajoute** $-2$ au lieu de multiplier, et $-2x - 2$ est affine (un $b$ en trop), donc plus linéaire."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "criteres-divisibilite",
+      "enonce": "Le nombre $2\\,025$ est divisible :",
+      "choix": [
+        "par $2$ et par $9$",
+        "par $3$ mais pas par $9$",
+        "par $9$ et par $5$",
+        "par $2$ et par $5$"
+      ],
+      "reponse": 2,
+      "explication": "$2\\,025$ se termine par $5$ : il est divisible par $5$, mais il est **impair**, donc pas par $2$. Sa somme des chiffres vaut $2+0+2+5 = 9$, multiple de $9$ : il est donc divisible par $9$ (et par $3$). Le piège du choix B est de s'arrêter au critère de $3$ sans tester celui de $9$ : ici la somme des chiffres tombe pile sur $9$."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "irreductible-definition",
+      "enonce": "Une fraction est **irréductible** lorsque…",
+      "choix": [
+        "son numérateur est plus petit que son dénominateur",
+        "son dénominateur est un nombre premier",
+        "sa valeur est inférieure à $1$",
+        "son numérateur et son dénominateur n'ont aucun diviseur commun autre que $1$"
+      ],
+      "reponse": 3,
+      "explication": "Être irréductible ne dit rien sur la **taille** du nombre : $\\dfrac{7}{3}$ est irréductible et pourtant supérieure à $1$. Le seul critère est qu'il ne reste plus rien à simplifier, donc aucun diviseur commun sauf $1$. Le piège est de confondre une propriété de l'**écriture** avec une propriété de la **valeur**."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "operations",
+      "enonce": "Combien vaut $\\dfrac{9}{10} \\div \\dfrac{6}{5}$, sous forme irréductible ?",
+      "choix": [
+        "$\\dfrac{27}{25}$",
+        "$\\dfrac{4}{3}$",
+        "$\\dfrac{45}{60}$",
+        "$\\dfrac{3}{4}$"
+      ],
+      "reponse": 3,
+      "explication": "Diviser, c'est multiplier par l'inverse de la **deuxième** fraction : $\\dfrac{9}{10} \\times \\dfrac{5}{6} = \\dfrac{45}{60} = \\dfrac{3}{4}$. $\\dfrac{45}{60}$ est donc le bon nombre, mais non réduit — l'énoncé demande la forme irréductible. $\\dfrac{27}{25}$ vient d'une multiplication au lieu d'une division, et $\\dfrac{4}{3}$ d'avoir retourné la mauvaise fraction."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "variables",
+      "enonce": "`a` vaut $3$ et `b` vaut $8$. Que valent-elles après ces deux lignes ?\n\n```\nmettre b dans a\nmettre a dans b\n```",
+      "choix": [
+        "`a` vaut $8$ et `b` vaut $3$",
+        "`a` vaut $3$ et `b` vaut $8$",
+        "`a` vaut $3$ et `b` vaut $3$",
+        "`a` vaut $8$ et `b` vaut $8$"
+      ],
+      "reponse": 3,
+      "explication": "La première ligne range $8$ dans `a` et **écrase** le $3$, qui n'existe plus nulle part. La seconde ligne recopie donc la valeur actuelle de `a`, soit $8$, dans `b`. Le piège est de lire les deux lignes comme un échange simultané : pour échanger, il faut d'abord mettre `a` à l'abri dans une **variable temporaire**."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "relation-addition",
+      "enonce": "On donne $P(A) = 0{,}4$, $P(B) = 0{,}3$ et $P(A \\cap B) = 0{,}1$. Combien vaut $P(A \\cup B)$ ?",
+      "choix": [
+        "$0{,}7$",
+        "$0{,}8$",
+        "$0{,}12$",
+        "$0{,}6$"
+      ],
+      "reponse": 3,
+      "explication": "La relation donne $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0{,}4 + 0{,}3 - 0{,}1 = 0{,}6$. Le piège est $0{,}7$ : c'est $P(A) + P(B)$ sans retirer l'intersection, donc les issues communes comptées **deux fois**. Ce raccourci ne serait valable que si $A \\cap B$ était vide."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "cas-particuliers",
+      "enonce": "Avec un dé équilibré à six faces, $A = \\{1 \\,;\\, 2\\}$ et $B = \\{5 \\,;\\, 6\\}$. Combien vaut $P(A \\cup B)$ ?",
+      "choix": [
+        "$\\dfrac{4}{12}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{1}{3}$",
+        "$0$"
+      ],
+      "reponse": 1,
+      "explication": "Ici $A \\cap B = \\varnothing$ : aucune issue commune, donc $P(A \\cup B) = P(A) + P(B) = \\dfrac{2}{6} + \\dfrac{2}{6} = \\dfrac{4}{6} = \\dfrac{2}{3}$. Le choix $\\dfrac{4}{12}$ vient de l'addition des dénominateurs, interdite. Attention : ce raccourci ne s'applique **que** parce que l'intersection est vide — vérifie-le toujours avant."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "traduire-evolution",
+      "enonce": "De $40$ € à $46$ €, la hausse est de $+15\\,\\%$. Quel est le taux d'évolution de $46$ € à $40$ € ?",
+      "choix": [
+        "$-15\\,\\%$",
+        "$-13\\,\\%$",
+        "$+15\\,\\%$",
+        "$-6\\,\\%$"
+      ],
+      "reponse": 1,
+      "explication": "Le taux se calcule sur la nouvelle base de départ ($46$) : $\\dfrac{40 - 46}{46} \\times 100 = \\dfrac{-6}{46} \\times 100 \\approx -13\\,\\%$. Piège : une hausse de $15\\,\\%$ ne s'annule pas par une baisse de $15\\,\\%$ ; les deux taux n'ont pas la même base ($40$ contre $46$)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "notation-scientifique",
+      "enonce": "Quelle est la notation scientifique de $32\\,000$ ?",
+      "choix": [
+        "$32 \\times 10^{3}$",
+        "$3{,}2 \\times 10^{4}$",
+        "$0{,}32 \\times 10^{5}$",
+        "$3{,}2 \\times 10^{3}$"
+      ],
+      "reponse": 1,
+      "explication": "La mantisse doit vérifier $1 \\leqslant a < 10$ : **un seul chiffre non nul avant la virgule**. Les écritures $32 \\times 10^{3}$ et $0{,}32 \\times 10^{5}$ donnent bien $32\\,000$, mais ne respectent pas cette condition — c'est le piège classique, une valeur juste dans une forme fausse. La virgule recule de $4$ rangs, donc l'exposant est $4$, pas $3$."
+    },
+    {
+      "id": 13,
+      "difficulte": "difficile",
+      "notion": "division-puissances",
+      "enonce": "Combien vaut $\\dfrac{10^{-3}}{10^{-7}}$ ?",
+      "choix": [
+        "$10^{4}$",
+        "$10^{-4}$",
+        "$10^{-10}$",
+        "$10^{10}$"
+      ],
+      "reponse": 0,
+      "explication": "On soustrait les exposants **avec leurs signes** : $-3 - (-7) = -3 + 7 = 4$. Soustraire un nombre négatif revient à ajouter. Le choix $10^{-10}$ vient de $-3 + (-7)$ (règle du produit appliquée à un quotient), $10^{-4}$ de la soustraction faite **à l'envers**, $-7 - (-3)$, et $10^{10}$ de l'addition des exposants sans leurs signes. Contrôle de bon sens : diviser par $10^{-7}$, c'est diviser par un tout petit nombre, donc le résultat doit **augmenter**."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "nombre-vs-equation",
+      "enonce": "Quelle affirmation est **correcte** ?",
+      "choix": [
+        "$\\sqrt{49} = 7$, et l'équation $x^2 = 49$ a deux solutions",
+        "$\\sqrt{49} = \\pm 7$, et l'équation $x^2 = 49$ a deux solutions",
+        "$\\sqrt{49} = 7$, et l'équation $x^2 = 49$ a une seule solution",
+        "$\\sqrt{49} = -7$ est aussi acceptable"
+      ],
+      "reponse": 0,
+      "explication": "Il faut séparer deux objets. $\\sqrt{49}$ est **un nombre**, toujours positif : il vaut $7$, et uniquement $7$. L'équation $x^2 = 49$ est **une question**, et elle admet deux réponses, $7$ et $-7$. L'erreur symétrique, très fréquente, est d'écrire $\\sqrt{49} = \\pm 7$ : le « $\\pm$ » appartient à la résolution de l'équation, jamais au symbole radical."
+    },
+    {
+      "id": 15,
+      "difficulte": "facile",
+      "notion": "definitions",
+      "enonce": "Dans un repère orthogonal, dans quel ordre écrit-on les coordonnées d'un point ?",
+      "choix": [
+        "$(\\text{abscisse}\\,;\\text{ordonnée})$",
+        "$(\\text{ordonnée}\\,;\\text{abscisse})$",
+        "L'ordre n'a pas d'importance",
+        "La plus grande des deux d'abord"
+      ],
+      "reponse": 0,
+      "explication": "L'abscisse (lue sur l'axe horizontal) se note **toujours en premier**. Le piège est que $(-2\\,;5)$ et $(5\\,;-2)$ contiennent les mêmes nombres : ce sont pourtant deux points opposés dans le repère, l'un en haut à gauche, l'autre en bas à droite."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "vecteurs-perimetre",
+      "enonce": "En classe de 3e, comment le programme demande-t-il de définir la translation ?",
+      "choix": [
+        "Par les coordonnées d'un vecteur dans un repère orthogonal",
+        "Par une définition ponctuelle utilisant un parallélogramme",
+        "Par une équation de droite",
+        "Par le théorème de Thalès"
+      ],
+      "reponse": 1,
+      "explication": "En 3e, translation et vecteurs se définissent **par des figures** : définition ponctuelle avec parallélogramme, vecteurs égaux, somme par enchainement de deux translations, relation de Chasles. Le piège est d'anticiper le lycée : les **coordonnées** d'un vecteur et les calculs associés n'arrivent qu'en Seconde. Cette année, le repère sert aux fonctions, pas aux vecteurs."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "rayon-diametre",
+      "enonce": "Quel est le volume d'une boule de **diamètre** $12$ cm ? (On prend $\\pi \\approx 3{,}14$.)",
+      "choix": [
+        "$7234{,}56 \\text{ cm}^3$",
+        "$904{,}32 \\text{ cm}^3$",
+        "$113{,}04 \\text{ cm}^3$",
+        "$452{,}16 \\text{ cm}^3$"
+      ],
+      "reponse": 1,
+      "explication": "Le diamètre vaut $12$ cm, donc le **rayon** est $R = 6$ cm : $V = \\dfrac{4}{3} \\times 3{,}14 \\times 6^3 = \\dfrac{2712{,}96}{3} = 904{,}32 \\text{ cm}^3$. $7234{,}56$ utilise $R = 12$ (le diamètre pris pour le rayon, ce qui multiplie par $8$) ; $113{,}04$ prend $R = 3$ (moitié du rayon) ; $452{,}16 = \\pi \\times 12^2$ confond avec une aire."
+    },
+    {
+      "id": 18,
+      "difficulte": "facile",
+      "notion": "boite-a-moustaches",
+      "enonce": "Sur une boite à moustaches, que représente le trait vertical tracé à l'intérieur de la boite ?",
+      "choix": [
+        "La moyenne de la série",
+        "La médiane de la série",
+        "L'étendue de la série",
+        "L'effectif total"
+      ],
+      "reponse": 1,
+      "explication": "Les cinq valeurs de position dessinées sont le minimum, $Q_1$, la **médiane**, $Q_3$ et le maximum : le trait intérieur est la médiane. Le piège est de croire qu'on lit la moyenne sur une boite — elle n'y figure jamais, pas plus que les effectifs. L'étendue, elle, est la longueur totale d'une moustache à l'autre, pas un trait."
+    },
+    {
+      "id": 19,
+      "difficulte": "moyen",
+      "notion": "effectifs-cumules",
+      "enonce": "Même série de $25$ élèves, cumuls croissants $2$ ; $7$ ; $13$ ; $20$ ; $23$ ; $25$ pour les notes $6$ ; $8$ ; $10$ ; $12$ ; $14$ ; $16$. Combien d'élèves ont eu une note **strictement supérieure** à $12$ ?",
+      "choix": [
+        "$20$",
+        "$12$",
+        "$7$",
+        "$5$"
+      ],
+      "reponse": 3,
+      "explication": "Un cumul croissant répond à « au plus » : $20$ élèves ont eu $12$ ou moins. Pour « plus de $12$ », il faut passer au complément : $25 - 20 = 5$. Le piège est de lire le cumul tel quel ($20$) sans le soustraire à l'effectif total. $7$ est le cumul de la note $8$, et $12$ est une note, pas un nombre d'élèves."
+    },
+    {
+      "id": 20,
+      "difficulte": "moyen",
+      "notion": "vecteur-nul-oppose",
+      "enonce": "$M$ et $N$ sont deux points distincts. Quelle affirmation est vraie ?",
+      "choix": [
+        "$\\overrightarrow{MN} = \\overrightarrow{NM}$",
+        "$\\overrightarrow{MN} = \\vec{0}$",
+        "$\\overrightarrow{MN} + \\overrightarrow{NM} = \\overrightarrow{MN}$",
+        "$\\overrightarrow{MN} + \\overrightarrow{NM} = \\vec{0}$"
+      ],
+      "reponse": 3,
+      "explication": "Chasles donne $\\overrightarrow{MN} + \\overrightarrow{NM} = \\overrightarrow{MM} = \\vec{0}$ : l'aller-retour ne déplace rien. Le piège est de traiter le vecteur comme un segment : $[MN]$ et $[NM]$ sont bien le même segment, mais $\\overrightarrow{MN}$ et $\\overrightarrow{NM}$ sont **opposés**, donc différents."
+    },
+    {
+      "id": 21,
+      "difficulte": "facile",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, à quoi est égal le cosinus d'un angle aigu ?",
+      "choix": [
+        "$\\dfrac{\\text{opposé}}{\\text{hypoténuse}}$",
+        "$\\dfrac{\\text{adjacent}}{\\text{hypoténuse}}$",
+        "$\\dfrac{\\text{opposé}}{\\text{adjacent}}$",
+        "$\\dfrac{\\text{hypoténuse}}{\\text{adjacent}}$"
+      ],
+      "reponse": 1,
+      "explication": "SOH-CAH-TOA : **CAH** = **C**osinus, **A**djacent sur **H**ypoténuse. Le piège classique est de confondre avec le sinus ($\\frac{\\text{opp}}{\\text{hyp}}$) ou la tangente ($\\frac{\\text{opp}}{\\text{adj}}$)."
+    },
+    {
+      "id": 22,
+      "difficulte": "difficile",
+      "notion": "logique",
+      "enonce": "Un exercice te dit que $(\\mathrm{MN})\\parallel(\\mathrm{BC})$ et te demande de calculer $\\mathrm{AN}$. Quel énoncé appliques-tu ?",
+      "choix": [
+        "la réciproque de Thalès",
+        "le théorème de Thalès",
+        "la contraposée de Thalès",
+        "le théorème de Pythagore"
+      ],
+      "reponse": 1,
+      "explication": "Le parallélisme t'est **donné** et tu cherches une **longueur** → théorème de Thalès. La réciproque fait l'inverse : elle part des longueurs pour **prouver** le parallélisme. Confondre les deux est l'erreur n°1 du chapitre."
+    }
+  ]
+}
