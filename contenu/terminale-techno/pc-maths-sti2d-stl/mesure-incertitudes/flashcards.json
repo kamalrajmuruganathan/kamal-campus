@@ -1,0 +1,25 @@
+{
+  "id": "tale-sti2d-pc-mesure-incertitudes-cartes",
+  "chapitre": "tale-sti2d-pc-mesure-incertitudes",
+  "titre": "Cartes — Mesure et incertitudes (terminale)",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce que l'incertitude-type composée d'une grandeur calculée ?", "verso": "L'incertitude qui résulte de la propagation des incertitudes-types des grandeurs mesurées intervenant dans le calcul." },
+    { "recto": "Quelle formule de propagation utilise-t-on pour une somme ou une différence $y = a \\pm b$ ?", "verso": "$u(y) = \\sqrt{u(a)^2 + u(b)^2}$ (les incertitudes absolues s'ajoutent en quadrature, même pour une différence)." },
+    { "recto": "Quelle formule de propagation utilise-t-on pour un produit ou un quotient $y = a \\times b$ ou $a/b$ ?", "verso": "$\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$ (les incertitudes relatives s'ajoutent en quadrature)." },
+    { "recto": "Comment propager l'incertitude pour $y = k\\,a$ ($k$ constante exacte) et $y = a^n$ ?", "verso": "$u(y) = |k|\\,u(a)$ ; et $\\dfrac{u(y)}{y} = |n|\\,\\dfrac{u(a)}{a}$." },
+    { "recto": "Qu'est-ce que l'incertitude relative ?", "verso": "Le quotient $\\dfrac{u(X)}{X}$, sans unité (souvent en %), qui se propage dans les produits et quotients." },
+    { "recto": "Comment écrit-on un résultat de mesure ?", "verso": "$X = X_{\\text{mes}} \\pm u(X)$ avec l'unité." },
+    { "recto": "À quel rang arrondit-on l'incertitude, puis la valeur ?", "verso": "L'incertitude à 1 chiffre significatif ; la valeur au même rang (même position décimale) que l'incertitude." },
+    { "recto": "Comment calcule-t-on l'écart normalisé entre une mesure et une référence ?", "verso": "$z = \\dfrac{|X_{\\text{mes}} - X_{\\text{réf}}|}{u(X)}$." },
+    { "recto": "Comment conclut-on sur la validité d'un résultat selon l'écart normalisé $z$ ?", "verso": "$z \\leqslant 2$ : compatible avec la référence ; $z > 2$ : non compatible, il faut chercher pourquoi." },
+    { "recto": "Que peut-on invoquer quand $z > 2$ ?", "verso": "Une erreur systématique, une incertitude sous-estimée, ou un modèle hors de son domaine de validité — jamais « la mesure est fausse » sans discussion." },
+    { "recto": "Piège : $y = 2a$ donne-t-il $u(y) = \\sqrt{2}\\,u(a)$ ?", "verso": "Non : $u(y) = 2\\,u(a)$. La quadrature vaut pour deux mesures indépendantes, pas pour la même comptée deux fois." },
+    { "recto": "Piège : peut-on additionner directement les incertitudes ($u(y) = u(a) + u(b)$) ?", "verso": "Non : elles se composent en quadrature (racine de la somme des carrés). Les doutes ne s'additionnent pas simplement." }
+  ]
+}

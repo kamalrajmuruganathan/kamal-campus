@@ -1,0 +1,25 @@
+{
+  "id": "tale-techno-math-probabilites-conditionnelles-cartes",
+  "chapitre": "tale-techno-math-probabilites-conditionnelles",
+  "titre": "Cartes — Probabilités conditionnelles",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Comment définit-on la probabilité de $B$ sachant $A$ ?", "verso": "$P_A(B) = \\dfrac{P(A \\cap B)}{P(A)}$, avec $P(A) \\neq 0$ (on restreint l'univers à $A$)." },
+    { "recto": "Quelle est la formule du produit ?", "verso": "$P(A \\cap B) = P(A) \\times P_A(B)$." },
+    { "recto": "Que vaut $P_A(B) + P_A(\\bar{B})$ ?", "verso": "1 : une probabilité conditionnelle se comporte comme une probabilité ordinaire (entre 0 et 1)." },
+    { "recto": "Quels trois nombres ne faut-il jamais confondre en probabilités conditionnelles ?", "verso": "$P(A \\cap B)$ (sur l'univers entier), $P_A(B)$ (parmi les $A$) et $P_B(A)$ (parmi les $B$) : trois valeurs différentes." },
+    { "recto": "Que porte une branche de deuxième niveau d'un arbre pondéré (de $A$ vers $B$) ?", "verso": "La probabilité conditionnelle $P_A(B)$, jamais $P(B)$ ni $P(A \\cap B)$." },
+    { "recto": "Combien vaut la somme des probabilités des branches issues d'un même nœud ?", "verso": "1." },
+    { "recto": "Sur un arbre : multiplie-t-on ou additionne-t-on le long d'un chemin ? entre les chemins ?", "verso": "On multiplie le long d'un chemin (produit des branches), on additionne entre les chemins qui réalisent l'événement." },
+    { "recto": "Quelle est la formule des probabilités totales pour une partition $A_1, \\ldots, A_n$ ?", "verso": "$P(B) = P(A_1)P_{A_1}(B) + \\cdots + P(A_n)P_{A_n}(B)$." },
+    { "recto": "Comment renverser la condition, c'est-à-dire calculer $P_B(A)$ à partir de l'arbre ?", "verso": "$P_B(A) = \\dfrac{P(A \\cap B)}{P(B)}$ : un chemin au numérateur, $P(B)$ (probabilités totales) au dénominateur." },
+    { "recto": "Qu'est-ce qu'une partition de l'univers ?", "verso": "Des événements deux à deux incompatibles dont la réunion est l'univers : chaque issue appartient à un et un seul d'entre eux (ex. $\\{A, \\bar{A}\\}$)." },
+    { "recto": "Piège : « $5\\,\\%$ des pièces de $M_2$ sont défectueuses » se traduit par quelle probabilité ?", "verso": "Par la conditionnelle $P_{M_2}(D) = 0{,}05$, pas par l'intersection $P(M_2 \\cap D)$." },
+    { "recto": "Piège : $P(D)$ pour des taux de $2\\,\\%$ et $5\\,\\%$ (parts $0{,}6$ et $0{,}4$) vaut-il $3{,}5\\,\\%$ ?", "verso": "Non : c'est une moyenne pondérée, $0{,}6\\times0{,}02 + 0{,}4\\times0{,}05 = 0{,}032$, soit $3{,}2\\,\\%$." }
+  ]
+}

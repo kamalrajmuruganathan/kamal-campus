@@ -1,0 +1,25 @@
+{
+  "id": "tale-sti2d-math-integration-composition-cartes",
+  "chapitre": "tale-sti2d-math-integration-composition",
+  "titre": "Cartes — Composition, primitives et intégration",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Comment définit-on la composée $v \\circ u$ ?", "verso": "$(v \\circ u)(x) = v\\big(u(x)\\big)$ : on applique d'abord $u$, puis $v$ au résultat (l'ordre compte)." },
+    { "recto": "Quelle est la formule de dérivation d'une composée ?", "verso": "$(v \\circ u)' = u' \\times (v' \\circ u)$ : dérivée de l'intérieure fois dérivée de l'extérieure évaluée en $u$." },
+    { "recto": "Quelles sont les dérivées de $u^n$, $\\cos u$, $e^u$ et $\\ln u$ ?", "verso": "$(u^n)' = n u' u^{n-1}$ ; $(\\cos u)' = -u'\\sin u$ ; $(e^u)' = u'e^u$ ; $(\\ln u)' = \\dfrac{u'}{u}$." },
+    { "recto": "Quelles sont les primitives des formes $u'u^n$, $u'e^u$ et $u'\\cos u$ ?", "verso": "$u'u^n \\to \\dfrac{u^{n+1}}{n+1}$ ; $u'e^u \\to e^u$ ; $u'\\cos u \\to \\sin u$." },
+    { "recto": "Que représente $\\int_a^b f(x)\\,dx$ pour $f$ continue et positive sur $[a\\,;b]$ ?", "verso": "L'aire du domaine sous la courbe de $f$, entre l'axe des abscisses et les droites $x = a$ et $x = b$." },
+    { "recto": "Quelle est la formule de calcul d'une intégrale à l'aide d'une primitive ?", "verso": "$\\int_a^b f(x)\\,dx = \\big[F(x)\\big]_a^b = F(b) - F(a)$ (borne du haut d'abord)." },
+    { "recto": "Que vaut la dérivée de la fonction aire $F(x) = \\int_a^x f(t)\\,dt$ ?", "verso": "$F' = f$ : $F$ est la primitive de $f$ qui s'annule en $a$." },
+    { "recto": "Quelles sont la linéarité et la relation de Chasles pour les intégrales ?", "verso": "$\\int_a^b (kf + g) = k\\int_a^b f + \\int_a^b g$ ; $\\int_a^b f + \\int_b^c f = \\int_a^c f$." },
+    { "recto": "Comment calcule-t-on la valeur moyenne de $f$ sur $[a\\,;b]$ ?", "verso": "$\\mu = \\dfrac{1}{b-a}\\int_a^b f(x)\\,dx$." },
+    { "recto": "Que vaut la valeur moyenne d'une sinusoïde pure sur une période complète ?", "verso": "Zéro : l'alternance positive compense exactement l'alternance négative (ne pas confondre avec la valeur efficace)." },
+    { "recto": "Piège : quelle est une primitive de $e^{3x}$ ?", "verso": "$\\dfrac{1}{3}e^{3x}$ (ajustement par la constante $\\dfrac{1}{u'}$), pas $e^{3x}$ ni $3e^{3x}$." },
+    { "recto": "Piège : par quoi peut-on ajuster pour primitiver une forme composée ?", "verso": "Seulement par une constante. On ne peut pas primitiver $e^{x^2}$ seul (le facteur manquant $2x$ contient $x$)." }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tale-stl-spcl-ondes-transmission-stockage-cartes",
+  "chapitre": "tale-stl-spcl-ondes-transmission-stockage",
+  "titre": "Cartes — Ondes : transmettre, stocker, lire et afficher",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Quelles sont les deux étapes de la numérisation d'un signal ?", "verso": "L'échantillonnage (découpe le temps) puis la quantification (découpe l'amplitude)." },
+    { "recto": "Qu'est-ce que la fréquence d'échantillonnage $f_e$ ?", "verso": "Le nombre d'échantillons prélevés par seconde : $f_e = \\dfrac{1}{T_e}$ (en Hz)." },
+    { "recto": "Quel est le critère de Shannon (Nyquist) ?", "verso": "$f_e \\ge 2\\,f_{\\max}$, sinon le signal est déformé (repliement de spectre)." },
+    { "recto": "Combien de niveaux et quel pas de quantification pour un codage sur $n$ bits ?", "verso": "$N = 2^n$ niveaux ; pas de quantification $q = \\dfrac{U}{2^n}$ (en V)." },
+    { "recto": "Quelles sont les deux expressions du débit binaire $D$ ?", "verso": "$D = \\dfrac{Q}{\\Delta t}$ (bit/s) et, pour un signal numérisé, $D = f_e \\times n \\times k$ (k = nombre de voies)." },
+    { "recto": "Combien de bits dans un octet ?", "verso": "$1\\ \\text{octet} = 8\\ \\text{bits}$ (débits en bit/s, tailles de fichiers en octets)." },
+    { "recto": "Que valent par défaut les préfixes k, M, G dans ce cours ?", "verso": "$\\mathrm{k} = 10^3$, $\\mathrm{M} = 10^6$, $\\mathrm{G} = 10^9$ (les préfixes binaires kio, Mio valent $2^{10}$, $2^{20}$)." },
+    { "recto": "Quelles sont les deux familles de canaux de transmission ?", "verso": "Canal guidé (câble électrique, fibre optique) et canal libre (ondes hertziennes, électromagnétiques)." },
+    { "recto": "Comment calcule-t-on l'atténuation en décibels ?", "verso": "$A_{\\text{dB}} = 10\\,\\log\\!\\left(\\dfrac{P_e}{P_s}\\right) = \\alpha \\times L$ (échelle logarithmique)." },
+    { "recto": "Comment un disque optique (CD, DVD, Blu-ray) code-t-il l'information et comment est-elle lue ?", "verso": "Par une alternance de cuvettes et de plats sur une piste en spirale, lue par un laser dont la réflexion donne le signal binaire." },
+    { "recto": "Pourquoi le Blu-ray stocke-t-il plus que le CD ?", "verso": "Son laser a une longueur d'onde plus courte (405 nm contre 780 nm), donc des cuvettes plus petites et une densité de données plus grande." },
+    { "recto": "De quoi est composé un pixel et quelle est la différence entre définition et résolution ?", "verso": "Trois sous-pixels RVB (synthèse additive) ; la définition est le nombre total de pixels, la résolution une densité (ppp/dpi)." }
+  ]
+}

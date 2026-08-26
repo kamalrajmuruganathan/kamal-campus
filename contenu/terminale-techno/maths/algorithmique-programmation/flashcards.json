@@ -1,0 +1,25 @@
+{
+  "id": "tale-techno-math-algorithmique-programmation-cartes",
+  "chapitre": "tale-techno-math-algorithmique-programmation",
+  "titre": "Cartes — Algorithmique et programmation",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "En Python, que signifie l'affectation `u = u + r` ?", "verso": "La nouvelle valeur de `u` est l'ancienne plus `r` ; se lit de droite à gauche (l'ancienne valeur est écrasée)." },
+    { "recto": "Quelle est la différence entre `=` et `==` en Python ?", "verso": "`=` affecte (range une valeur) ; `==` compare et renvoie `True` ou `False`. Dans un `if`, on utilise `==`." },
+    { "recto": "À quoi servent `def` et `return` dans une fonction ?", "verso": "`def nom(arguments):` définit la fonction (rien ne s'exécute) ; `return resultat` renvoie la valeur et termine la fonction." },
+    { "recto": "Quelle différence entre `return` et `print` ?", "verso": "`return` renvoie une valeur réutilisable dans un calcul ; `print` se contente d'afficher et ne renvoie rien." },
+    { "recto": "À partir de quel indice commencent les éléments d'une liste ? Quel est l'indice du dernier ?", "verso": "Indices à partir de 0 ; le dernier élément a l'indice `len(L) - 1`." },
+    { "recto": "Que fait `L.append(x)` ?", "verso": "Ajoute `x` à la fin de la liste `L` ; sert à construire une liste dans une boucle (en partant de `L = []`)." },
+    { "recto": "Quels entiers produit `range(n)` ?", "verso": "Les entiers de 0 à n-1 : la borne de droite est exclue (`range(10)` s'arrête à 9)." },
+    { "recto": "Comment calculer la somme des éléments d'une liste avec un accumulateur ?", "verso": "`total = 0` avant la boucle, puis `total = total + x` dans la boucle `for x in L:`." },
+    { "recto": "Où doit-on initialiser l'accumulateur d'une boucle ?", "verso": "Avant la boucle. Le mettre dans la boucle le remet à zéro à chaque tour." },
+    { "recto": "Quel schéma permet de filtrer les valeurs d'une liste vérifiant une condition ?", "verso": "Liste vide → parcours `for` → `if condition:` → `append`. La liste de départ n'est pas modifiée." },
+    { "recto": "En Python, comment s'écrivent la puissance et le séparateur décimal ?", "verso": "La puissance avec `**` (ex. `1.04 ** n`) et le séparateur décimal avec un point (`1.04`, pas `1,04`)." },
+    { "recto": "Piège : où placer le `return` dans une fonction contenant une boucle qui accumule ?", "verso": "Après la boucle (aligné avec le `for`) ; indenté dans la boucle, il s'exécuterait dès le premier tour." }
+  ]
+}

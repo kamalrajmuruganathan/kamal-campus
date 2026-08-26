@@ -1,0 +1,25 @@
+{
+  "id": "tale-sti2d-math-equations-differentielles-cartes",
+  "chapitre": "tale-sti2d-math-equations-differentielles",
+  "titre": "Cartes — Équations différentielles",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce qu'une équation différentielle ?", "verso": "Une équation dont l'inconnue est une fonction $y$ et qui relie $y$ à sa dérivée $y'$." },
+    { "recto": "Comment vérifier qu'une fonction $f$ est solution d'une équation différentielle ?", "verso": "Calculer $f'$, calculer le membre de droite avec $y = f$, et vérifier l'égalité pour tout $x$ (pas seulement en une valeur)." },
+    { "recto": "Quelles sont les solutions de $y' = ay$ ?", "verso": "$y(x) = C\\,e^{ax}$, $C \\in \\mathbb{R}$ (une infinité de solutions)." },
+    { "recto": "Comment trouver la solution particulière constante de $y' = ay + b$ ($a \\neq 0$) ?", "verso": "Poser $y' = 0$ : $0 = ay + b$, donc $y_p = -\\dfrac{b}{a}$ (la valeur d'équilibre)." },
+    { "recto": "Quelles sont toutes les solutions de $y' = ay + b$ ($a \\neq 0$) ?", "verso": "$y(x) = C\\,e^{ax} - \\dfrac{b}{a}$, $C \\in \\mathbb{R}$." },
+    { "recto": "À quoi sert une condition initiale $y(x_0) = y_0$ ?", "verso": "À fixer la constante $C$, donc à isoler une unique solution parmi la famille." },
+    { "recto": "Vers quoi tendent les solutions de $y' = ay + b$ quand $a < 0$ ?", "verso": "Vers la valeur d'équilibre $-\\dfrac{b}{a}$ (régime permanent), le terme $Ce^{ax}$ s'éteignant (régime transitoire)." },
+    { "recto": "Quelle est la solution de la charge d'un condensateur RC initialement déchargé ?", "verso": "$u(t) = E(1 - e^{-t/\\tau})$ avec la constante de temps $\\tau = RC_0$ (en secondes)." },
+    { "recto": "À $t = \\tau$, quel pourcentage de la charge finale atteint un condensateur RC ?", "verso": "Environ 63 % : $u(\\tau) = E(1 - e^{-1}) \\approx 0{,}63\\,E$." },
+    { "recto": "Quelle est la solution de la loi de refroidissement de Newton $\\theta' = -k(\\theta - \\theta_{\\text{amb}})$ ?", "verso": "$\\theta(t) = \\theta_{\\text{amb}} + (\\theta_0 - \\theta_{\\text{amb}})e^{-kt}$." },
+    { "recto": "Piège : la constante $C$ est-elle toujours égale à la valeur initiale $y_0$ ?", "verso": "Non. Pour $y' = ay+b$, $y(0) = C - \\dfrac{b}{a}$ ; $C = y_0$ seulement si $x_0 = 0$ et $b = 0$." },
+    { "recto": "Piège : peut-on résoudre $RC_0\\,u' + u = E$ telle quelle ?", "verso": "Non : il faut d'abord isoler $u'$ pour obtenir la forme $y' = ay + b$." }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tale-techno-math-variables-aleatoires-binomiale-cartes",
+  "chapitre": "tale-techno-math-variables-aleatoires-binomiale",
+  "titre": "Cartes — Variables aléatoires et loi binomiale",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Quelle condition doit vérifier la loi de probabilité d'une variable aléatoire ?", "verso": "La somme des probabilités vaut 1 : $p_1 + p_2 + \\cdots + p_n = 1$." },
+    { "recto": "Comment calcule-t-on l'espérance d'une variable aléatoire discrète finie ?", "verso": "$E(X) = x_1 p_1 + x_2 p_2 + \\cdots + x_n p_n$ (moyenne des valeurs pondérée par les probabilités)." },
+    { "recto": "Que signifie $E(X) = 0$ pour le gain algébrique d'un jeu ?", "verso": "Le jeu est équitable ($E(X) > 0$ favorable au joueur, $E(X) < 0$ défavorable)." },
+    { "recto": "Comment construit-on le triangle de Pascal ?", "verso": "Chaque ligne commence et finit par 1 ; chaque autre nombre est la somme des deux situés au-dessus : $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$." },
+    { "recto": "Quelle est la propriété de symétrie des coefficients binomiaux ?", "verso": "$\\binom{n}{k} = \\binom{n}{n-k}$." },
+    { "recto": "Quelles sont les trois conditions d'une situation binomiale ?", "verso": "Répéter $n$ fois la même épreuve de Bernoulli, répétitions indépendantes, et $X$ compte le nombre de succès." },
+    { "recto": "Que représente l'événement $\\{X = k\\}$ pour une loi binomiale ?", "verso": "« Obtenir exactement $k$ succès au cours des $n$ épreuves » (ni au moins, ni au plus)." },
+    { "recto": "Quelle est la formule de $P(X = k)$ pour $X \\sim B(n, p)$ ?", "verso": "$P(X = k) = \\binom{n}{k}\\, p^k\\, (1-p)^{n-k}$." },
+    { "recto": "Que valent $P(X = 0)$ et $P(X = n)$ pour une loi binomiale ?", "verso": "$P(X = 0) = (1-p)^n$ (que des échecs) et $P(X = n) = p^n$ (que des succès)." },
+    { "recto": "Quelle est l'espérance d'une loi binomiale $B(n, p)$ ?", "verso": "$E(X) = np$." },
+    { "recto": "Piège : $p^k (1-p)^{n-k}$ suffit-il pour $P(X = k)$ ?", "verso": "Non : c'est la probabilité d'un seul chemin. Il faut la multiplier par $\\binom{n}{k}$." },
+    { "recto": "Un tirage sans remise dans un petit lot suit-il une loi binomiale ?", "verso": "Non : la probabilité change à chaque tirage, les épreuves ne sont pas indépendantes." }
+  ]
+}

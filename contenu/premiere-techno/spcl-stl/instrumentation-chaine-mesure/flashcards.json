@@ -1,0 +1,24 @@
+{
+  "id": "1stl-spcl-instrumentation-chaine-mesure-cartes",
+  "chapitre": "1stl-spcl-instrumentation-chaine-mesure",
+  "titre": "Cartes — Instrumentation : la chaîne de mesure",
+  "voie": "technologique",
+  "niveau": "premiere-techno",
+  "parcours": "spcl-stl",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce que l'étendue de mesure d'un instrument ?", "verso": "$\\text{EM} = V_{max} - V_{min}$, l'intervalle des valeurs mesurables." },
+    { "recto": "Qu'est-ce que la résolution d'un instrument ?", "verso": "La plus petite variation de la grandeur qu'il peut détecter et afficher (à ne pas confondre avec la précision)." },
+    { "recto": "Comment définit-on la sensibilité d'un instrument ?", "verso": "$S = \\dfrac{\\Delta(\\text{sortie})}{\\Delta(\\text{entrée})}$ ; c'est la pente de la caractéristique de transfert. Elle a une unité." },
+    { "recto": "Quels sont les quatre maillons d'une chaîne de mesure ?", "verso": "Capteur → conditionneur → convertisseur analogique-numérique (CAN) → traitement/affichage." },
+    { "recto": "Quelle est l'équation d'un capteur linéaire ?", "verso": "$U = S \\times G + U_0$ ($S$ = pente/sensibilité, $U_0$ = valeur à $G=0$)." },
+    { "recto": "Comment remonte-t-on à la grandeur par étalonnage ?", "verso": "On inverse la caractéristique : $G = \\dfrac{U - U_0}{S}$." },
+    { "recto": "Combien de niveaux code un CAN de $n$ bits ?", "verso": "$2^n$ niveaux (ex : 8 bits → 256, pas 8)." },
+    { "recto": "Comment calcule-t-on le quantum d'un CAN ?", "verso": "$q = \\dfrac{\\text{calibre}}{2^{n}}$, une tension (en volts) : la plus petite variation détectable." },
+    { "recto": "Comment obtient-on la valeur numérique $N$ pour une tension $U_e$ ?", "verso": "$N = $ partie entière de $\\dfrac{U_e}{q}$." },
+    { "recto": "Qu'est-ce qu'une chaîne en tout ou rien ?", "verso": "Une chaîne à deux états (marche/arrêt) : un comparateur bascule au franchissement d'un seuil." },
+    { "recto": "À quoi sert l'hystérésis dans une régulation ?", "verso": "Utiliser deux seuils (haut pour enclencher, bas pour couper) pour éviter que la sortie claquette autour du seuil." }
+  ]
+}

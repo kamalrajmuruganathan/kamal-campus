@@ -1,0 +1,25 @@
+{
+  "id": "tale-sti2d-math-exponentielle-logarithme-cartes",
+  "chapitre": "tale-sti2d-math-exponentielle-logarithme",
+  "titre": "Cartes — Fonctions exponentielle et logarithme népérien",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "pc-maths-sti2d-stl",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce qui caractérise la fonction exponentielle de base $e$ ($e \\approx 2{,}718$) ?", "verso": "C'est l'unique fonction égale à sa propre dérivée : $(e^x)' = e^x$. Elle vérifie $e^0 = 1$, $e^1 = e$ et $e^x > 0$ pour tout $x$." },
+    { "recto": "Quelles sont les propriétés algébriques de l'exponentielle ?", "verso": "$e^{a+b} = e^a e^b$ ; $e^{-a} = \\dfrac{1}{e^a}$ ; $\\dfrac{e^a}{e^b} = e^{a-b}$ ; $(e^a)^n = e^{na}$." },
+    { "recto": "Quelle est la dérivée de $x \\mapsto e^{kx}$ ?", "verso": "$(e^{kx})' = k\\,e^{kx}$ : le coefficient $k$ descend en facteur." },
+    { "recto": "Que valent $\\lim_{x\\to-\\infty} e^x$ et $\\lim_{x\\to+\\infty} e^x$ ?", "verso": "$0$ en $-\\infty$ (asymptote $y=0$) et $+\\infty$ en $+\\infty$." },
+    { "recto": "Que dit la croissance comparée entre exponentielle et puissance ?", "verso": "$\\lim_{x\\to+\\infty} \\dfrac{e^x}{x^n} = +\\infty$ et $\\lim_{x\\to-\\infty} x^n e^x = 0$ : l'exponentielle l'emporte." },
+    { "recto": "Comment définit-on le logarithme népérien $\\ln(a)$ ?", "verso": "Pour $a > 0$, $\\ln(a)$ est l'unique solution de $e^x = a$. On a $e^{\\ln a} = a$ et $\\ln(e^x) = x$." },
+    { "recto": "Que valent $\\ln 1$ et $\\ln e$ ? Pour quelles valeurs $\\ln x$ existe-t-il ?", "verso": "$\\ln 1 = 0$ et $\\ln e = 1$ ; $\\ln x$ n'existe que pour $x > 0$." },
+    { "recto": "Quelles sont les propriétés algébriques de $\\ln$ ?", "verso": "$\\ln(ab) = \\ln a + \\ln b$ ; $\\ln\\dfrac{a}{b} = \\ln a - \\ln b$ ; $\\ln(a^n) = n\\ln a$." },
+    { "recto": "Comment résoudre $e^{ax} = b$ (avec $a \\neq 0$) ?", "verso": "Si $b > 0$ : $x = \\dfrac{\\ln b}{a}$. Si $b \\leqslant 0$ : aucune solution ($e^{ax} > 0$)." },
+    { "recto": "Comment résoudre $\\ln x = b$ et l'inéquation $\\ln x > b$ ?", "verso": "$\\ln x = b \\iff x = e^b$ (pour tout réel $b$) ; $\\ln x > b \\iff x > e^b$." },
+    { "recto": "Quelle est la demi-vie d'une décroissance $e^{-\\lambda t}$ ?", "verso": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda}$." },
+    { "recto": "Piège : $(e^{-2x})'$ vaut-il $e^{-2x}$ ?", "verso": "Non : $(e^{-2x})' = -2e^{-2x}$. Il ne faut pas oublier le facteur $k$." }
+  ]
+}

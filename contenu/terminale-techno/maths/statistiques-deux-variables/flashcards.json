@@ -1,0 +1,25 @@
+{
+  "id": "tale-techno-math-statistiques-deux-variables-cartes",
+  "chapitre": "tale-techno-math-statistiques-deux-variables",
+  "titre": "Cartes — Séries statistiques à deux variables : changement de variable",
+  "voie": "technologique",
+  "niveau": "terminale-techno",
+  "parcours": "maths",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "À quoi sert un changement de variable en statistiques à deux variables ?", "verso": "À ramener un nuage courbe à un nuage rectiligne, ajustable par une droite (moindres carrés)." },
+    { "recto": "Quelles sont les 4 étapes de la méthode du changement de variable ?", "verso": "Poser $z$ et compléter le tableau → tracer le nuage $(x\\,;z)$ rectiligne → ajuster $z = ax+b$ → revenir à $y$." },
+    { "recto": "Au bac, qui fournit le changement de variable à effectuer ?", "verso": "L'énoncé (« on pose $z = \\log(y)$ »). On n'a pas à le deviner." },
+    { "recto": "Comment reconnaître un modèle exponentiel dans un tableau à pas régulier ?", "verso": "Les quotients $\\dfrac{y_{i+1}}{y_i}$ sont à peu près constants. On pose alors $z = \\log(y)$." },
+    { "recto": "Après ajustement $z = ax+b$ avec $z = \\log(y)$, quel est le retour à $y$ ?", "verso": "$y = 10^{ax+b} = 10^b \\times (10^a)^x$ : un modèle exponentiel." },
+    { "recto": "Après ajustement $z = ax+b$ avec $z = \\dfrac{1}{y}$, quel est le retour à $y$ ?", "verso": "$y = \\dfrac{1}{ax+b}$." },
+    { "recto": "Après ajustement $z = ax+b$ avec $z = y^2$ (et $y > 0$), quel est le retour à $y$ ?", "verso": "$y = \\sqrt{ax+b}$." },
+    { "recto": "Dans le cas $z = \\log(y)$ avec $z = ax+b$, par quel facteur $y$ est-il multiplié quand $x$ augmente de 1 ?", "verso": "Par $10^a$ ; le taux d'évolution est $10^a - 1$." },
+    { "recto": "Piège : la pente $a = 0{,}175$ (cas $z = \\log y$) signifie-t-elle $+17{,}5\\,\\%$ par an ?", "verso": "Non : le facteur est $10^{0{,}175} \\approx 1{,}50$, soit $+50\\,\\%$ par an." },
+    { "recto": "Quelle différence entre interpoler et extrapoler ?", "verso": "Interpoler : estimer $y$ à l'intérieur de la plage observée. Extrapoler : estimer au-delà, en signalant la réserve." },
+    { "recto": "Sur quel nuage doit-on calculer la droite des moindres carrés ?", "verso": "Sur le nuage transformé $(x\\,;z)$, pas sur $(x\\,;y)$." },
+    { "recto": "Comment répondre à « quand $y$ dépassera-t-il un seuil $s$ ? » avec $z = \\log(y)$ et $z = ax+b$ ?", "verso": "En résolvant $ax + b > \\log(s)$ : une équation du chapitre logarithme." }
+  ]
+}
