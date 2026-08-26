@@ -15,6 +15,7 @@ config.transformer.babelTransformerPath = require.resolve('./transformer-md.cjs'
 config.watchFolders = [
   path.resolve(__dirname, '..', 'contenu'),
   path.resolve(__dirname, '..', 'formulaires'),
+  path.resolve(__dirname, '..', 'sujets'),
 ];
 
 module.exports = config;

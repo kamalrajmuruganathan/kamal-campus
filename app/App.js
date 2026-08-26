@@ -20,6 +20,7 @@ import Flashcards from './src/ecrans/Flashcards';
 import Qcm from './src/ecrans/Qcm';
 import Outils from './src/ecrans/Outils';
 import Formulaires from './src/ecrans/Formulaires';
+import Sujets from './src/ecrans/Sujets';
 
 const Pile = createNativeStackNavigator();
 
@@ -78,6 +79,7 @@ export default function App() {
           />
           <Pile.Screen name="Outils" component={Outils} options={{ title: 'Outils de calcul' }} />
           <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
+          <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
         </Pile.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

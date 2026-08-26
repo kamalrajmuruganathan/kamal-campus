@@ -111,6 +111,15 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="Sujets type bac / brevet"
+            sousTitre="Des épreuves entières, corrigées"
+            detail="S'entraîner en conditions"
+            couleur={t.couleur.physique}
+            onPress={() => navigation.navigate('Sujets')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="Outils de calcul"
             sousTitre="Second degré, dérivée, statistiques, chimie…"
             detail="Calcul exact, avec le détail des étapes"

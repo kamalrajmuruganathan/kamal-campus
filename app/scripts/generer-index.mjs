@@ -20,6 +20,7 @@ const ICI = dirname(fileURLToPath(import.meta.url));
 const RACINE_APP = join(ICI, '..');
 const CONTENU = join(RACINE_APP, '..', 'contenu');
 const FORMULAIRES_DIR = join(RACINE_APP, '..', 'formulaires');
+const SUJETS_DIR = join(RACINE_APP, '..', 'sujets');
 const SORTIE = join(RACINE_APP, 'src', 'contenu-index.js');
 
 // ─────────────────────────── libellés d'affichage ───────────────────────────
@@ -251,6 +252,39 @@ const entreesFormulaires = formulaires.map((f, i) => `  {
     contenu: formulaire${i},
   },`).join('\n');
 
+// ─────────────────────────── sujets (annales complètes) ─────────────────────
+const sujets = [];
+if (existsSync(SUJETS_DIR)) {
+  for (const f of readdirSync(SUJETS_DIR)) {
+    if (!f.endsWith('.md')) continue;
+    const chemin = join(SUJETS_DIR, f);
+    let meta;
+    try { meta = lireEntete(chemin); } catch { console.warn(`  ⚠️  sujet illisible : ${f}`); continue; }
+    sujets.push({
+      id: meta.id ?? f.replace(/\.md$/, ''),
+      titre: meta.titre ?? f,
+      examen: meta.examen ?? '',
+      niveau: meta.niveau ?? '',
+      matiere: meta.matiere ?? 'mathematiques',
+      statut: meta.statut ?? 'brouillon',
+      reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+      chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
+    });
+  }
+  sujets.sort((a, b) => rang(a.niveau) - rang(b.niveau) || a.matiere.localeCompare(b.matiere));
+}
+const importsSujets = sujets.map((s, i) => `import sujet${i} from '${s.chemin}';`).join('\n');
+const entreesSujets = sujets.map((s, i) => `  {
+    id: ${JSON.stringify(s.id)},
+    titre: ${JSON.stringify(s.titre)},
+    examen: ${JSON.stringify(s.examen)},
+    niveau: ${JSON.stringify(s.niveau)},
+    matiere: ${JSON.stringify(s.matiere)},
+    statut: ${JSON.stringify(s.statut)},
+    reluPar: ${JSON.stringify(s.reluPar)},
+    contenu: sujet${i},
+  },`).join('\n');
+
 const imports = chapitres.map((c, i) => {
   // Les .md sont chargés en texte brut par le transformer Metro (voir metro.config.cjs)
   let ligne = `import fiche${i} from '${c.cheminFiche}';\nimport qcm${i} from '${c.cheminQcm}';`;
@@ -291,9 +325,14 @@ const sortie = `/**
 
 ${imports}
 ${importsFormulaires}
+${importsSujets}
 
 export const FORMULAIRES = [
 ${entreesFormulaires}
+];
+
+export const SUJETS = [
+${entreesSujets}
 ];
 
 export const LIBELLES_NIVEAU = ${JSON.stringify(LIBELLES_NIVEAU, null, 2)};
