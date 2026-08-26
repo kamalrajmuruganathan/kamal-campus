@@ -7,6 +7,8 @@
 > séries + géométrie STD2A). **208 chapitres, 2080 questions, 208 jeux
 > d'exercices.** Chaque chapitre a ses quatre briques quand elles s'appliquent :
 > Cours, Exercices, QCM, Outils (48 reliés à un module de calcul) et Flashcards (cartes de révision, sur les 208 chapitres).
+>
+> **Ressources transversales** : 14 formulaires (aide-mémoire par niveau/matière), 11 sujets type bac/brevet complets et corrigés, et 20 bac blancs (QCM de révision mêlant les chapitres). Écrans dédiés dans l'app (Formulaires, Sujets, Bac blanc), accessibles depuis l'accueil.
 > Sources : programmes officiels (education.gouv.fr / eduscol) pour tout le
 > corpus. Sont désormais couvertes aussi : la série ST2S (physique-chimie pour la
 > santé), la spécialité STL SPCL (sciences physiques en laboratoire) et
