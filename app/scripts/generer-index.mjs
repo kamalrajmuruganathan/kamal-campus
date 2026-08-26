@@ -19,6 +19,7 @@ import { fileURLToPath } from 'node:url';
 const ICI = dirname(fileURLToPath(import.meta.url));
 const RACINE_APP = join(ICI, '..');
 const CONTENU = join(RACINE_APP, '..', 'contenu');
+const FORMULAIRES_DIR = join(RACINE_APP, '..', 'formulaires');
 const SORTIE = join(RACINE_APP, 'src', 'contenu-index.js');
 
 // ─────────────────────────── libellés d'affichage ───────────────────────────
@@ -217,6 +218,39 @@ for (const p of [...new Set(chapitres.map((c) => c.parcours))].filter((p) => !(p
 
 // ────────────────────────────── génération ──────────────────────────────────
 
+// ─────────────────────────── formulaires (aide-mémoire) ─────────────────────
+// Fichiers Markdown de formulaires/*.md, indépendants des chapitres.
+const formulaires = [];
+if (existsSync(FORMULAIRES_DIR)) {
+  for (const f of readdirSync(FORMULAIRES_DIR)) {
+    if (!f.endsWith('.md')) continue;
+    const chemin = join(FORMULAIRES_DIR, f);
+    let meta;
+    try { meta = lireEntete(chemin); } catch { console.warn(`  ⚠️  formulaire illisible : ${f}`); continue; }
+    formulaires.push({
+      id: meta.id ?? f.replace(/\.md$/, ''),
+      titre: meta.titre ?? f,
+      niveau: meta.niveau ?? '',
+      matiere: meta.matiere ?? 'mathematiques',
+      statut: meta.statut ?? 'brouillon',
+      reluPar: meta.relu_par === 'null' ? null : (meta.relu_par ?? null),
+      chemin: './' + relative(join(RACINE_APP, 'src'), chemin).split('\\').join('/'),
+    });
+  }
+  formulaires.sort((a, b) => rang(a.niveau) - rang(b.niveau) || a.matiere.localeCompare(b.matiere));
+}
+
+const importsFormulaires = formulaires.map((f, i) => `import formulaire${i} from '${f.chemin}';`).join('\n');
+const entreesFormulaires = formulaires.map((f, i) => `  {
+    id: ${JSON.stringify(f.id)},
+    titre: ${JSON.stringify(f.titre)},
+    niveau: ${JSON.stringify(f.niveau)},
+    matiere: ${JSON.stringify(f.matiere)},
+    statut: ${JSON.stringify(f.statut)},
+    reluPar: ${JSON.stringify(f.reluPar)},
+    contenu: formulaire${i},
+  },`).join('\n');
+
 const imports = chapitres.map((c, i) => {
   // Les .md sont chargés en texte brut par le transformer Metro (voir metro.config.cjs)
   let ligne = `import fiche${i} from '${c.cheminFiche}';\nimport qcm${i} from '${c.cheminQcm}';`;
@@ -256,6 +290,11 @@ const sortie = `/**
  */
 
 ${imports}
+${importsFormulaires}
+
+export const FORMULAIRES = [
+${entreesFormulaires}
+];
 
 export const LIBELLES_NIVEAU = ${JSON.stringify(LIBELLES_NIVEAU, null, 2)};
 export const LIBELLES_PARCOURS = ${JSON.stringify(LIBELLES_PARCOURS, null, 2)};

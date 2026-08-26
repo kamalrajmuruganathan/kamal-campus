@@ -12,6 +12,9 @@ config.resolver.sourceExts = [...config.resolver.sourceExts, 'md'];
 config.transformer.babelTransformerPath = require.resolve('./transformer-md.cjs');
 
 // le repertoire contenu/ est un cran au-dessus de app/
-config.watchFolders = [path.resolve(__dirname, '..', 'contenu')];
+config.watchFolders = [
+  path.resolve(__dirname, '..', 'contenu'),
+  path.resolve(__dirname, '..', 'formulaires'),
+];
 
 module.exports = config;

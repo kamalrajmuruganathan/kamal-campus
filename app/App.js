@@ -19,6 +19,7 @@ import Exercices from './src/ecrans/Exercices';
 import Flashcards from './src/ecrans/Flashcards';
 import Qcm from './src/ecrans/Qcm';
 import Outils from './src/ecrans/Outils';
+import Formulaires from './src/ecrans/Formulaires';
 
 const Pile = createNativeStackNavigator();
 
@@ -76,6 +77,7 @@ export default function App() {
             options={({ route }) => ({ title: route.params?.titre ?? 'QCM' })}
           />
           <Pile.Screen name="Outils" component={Outils} options={{ title: 'Outils de calcul' }} />
+          <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
         </Pile.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

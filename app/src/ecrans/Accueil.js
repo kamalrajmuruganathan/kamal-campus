@@ -102,6 +102,15 @@ export default function Accueil({ navigation }) {
         <View style={{ marginTop: t.espace.xl }}>
           <Carte
             t={t}
+            titre="Formulaires"
+            sousTitre="L'essentiel à savoir par cœur, par niveau"
+            detail="Aide-mémoire de révision"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('Formulaires')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="Outils de calcul"
             sousTitre="Second degré, dérivée, statistiques, chimie…"
             detail="Calcul exact, avec le détail des étapes"
