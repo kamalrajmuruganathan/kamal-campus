@@ -35,7 +35,7 @@ export default function BacBlanc({ navigation }) {
             titre={q.titre}
             sousTitre={`${q.examen || (LIBELLES_NIVEAU[q.niveau] ?? q.niveau)} · ${q.nbQuestions} questions`}
             couleur={couleurMatiere(t, q.matiere)}
-            onPress={() => navigation.navigate('Qcm', { questions: q.questions, titre: q.titre })}
+            onPress={() => navigation.navigate('Qcm', { questions: q.questions, titre: q.titre, matiere: q.matiere })}
           />
         ))}
       </ScrollView>

@@ -10,12 +10,13 @@
  * que les fiches.
  */
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { chapitreParId } from '../contenu-index';
+import { useProgression } from '../progression/Contexte';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
 
@@ -32,6 +33,27 @@ export default function Qcm({ route, navigation }) {
   const [index, setIndex] = useState(0);
   const [choisi, setChoisi] = useState(null);
   const [reponses, setReponses] = useState([]);
+
+  // Progression : on enregistre le résultat UNE fois, quand le QCM se termine.
+  const { enregistrerResultat } = useProgression();
+  const [bilan, setBilan] = useState(null);
+  const dejaEnregistre = useRef(false);
+  const estTermine = questions.length > 0 && index >= questions.length;
+
+  useEffect(() => {
+    if (estTermine && !dejaEnregistre.current) {
+      dejaEnregistre.current = true;
+      setBilan(
+        enregistrerResultat({
+          questions,
+          reponses,
+          chapitreId: chapitre?.id ?? null,
+          titre: route.params?.titre ?? chapitre?.titre ?? 'QCM',
+          matiere: route.params?.matiere ?? chapitre?.matiere ?? null,
+        }),
+      );
+    }
+  }, [estTermine]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (questions.length === 0) {
     return (
@@ -59,6 +81,33 @@ export default function Qcm({ route, navigation }) {
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.normale, marginTop: 4 }}>
             {pourcent} % de bonnes réponses
           </Text>
+
+          {bilan && (
+            <View
+              style={{
+                marginTop: t.espace.l,
+                padding: t.espace.m,
+                backgroundColor: bilan.monteeDeNiveau ? t.couleur.succesFond : t.couleur.surface,
+                borderRadius: t.rayon.m,
+                borderLeftWidth: 3,
+                borderLeftColor: bilan.monteeDeNiveau ? t.couleur.succes : t.couleur.accent,
+              }}
+            >
+              <Text style={{ color: t.couleur.texte, fontSize: t.police.grande, fontWeight: '700' }}>
+                +{bilan.points} points
+              </Text>
+              {bilan.monteeDeNiveau ? (
+                <Text style={{ color: t.couleur.succes, fontSize: t.police.normale, fontWeight: '650', marginTop: 4 }}>
+                  🎉 Niveau supérieur ! Tu passes niveau {bilan.niveauApres}.
+                </Text>
+              ) : (
+                <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 4 }}>
+                  Niveau {bilan.niveauApres}
+                  {bilan.sansFaute ? ' · sans-faute, bonus appliqué !' : ''}
+                </Text>
+              )}
+            </View>
+          )}
 
           {notionsARevoir.length > 0 && (
             <View
@@ -94,7 +143,11 @@ export default function Qcm({ route, navigation }) {
           )}
 
           <Pressable
-            onPress={() => { setIndex(0); setChoisi(null); setReponses([]); }}
+            onPress={() => {
+              dejaEnregistre.current = false;
+              setBilan(null);
+              setIndex(0); setChoisi(null); setReponses([]);
+            }}
             style={({ pressed }) => [
               st.bouton,
               { backgroundColor: t.couleur.accent, borderRadius: t.rayon.m, marginTop: t.espace.l, opacity: pressed ? 0.8 : 1 },
@@ -103,6 +156,21 @@ export default function Qcm({ route, navigation }) {
             <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '650' }}>
               Recommencer
             </Text>
+          </Pressable>
+
+          <Pressable
+            onPress={() => navigation.navigate('Profil')}
+            style={({ pressed }) => [
+              st.bouton,
+              {
+                backgroundColor: t.couleur.surface,
+                borderRadius: t.rayon.m,
+                marginTop: t.espace.s,
+                opacity: pressed ? 0.8 : 1,
+              },
+            ]}
+          >
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne }}>Voir ma progression</Text>
           </Pressable>
 
           <Pressable

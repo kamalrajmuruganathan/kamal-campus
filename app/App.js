@@ -12,6 +12,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { theme } from './src/theme';
+import { ProgressionProvider } from './src/progression/Contexte';
 import Accueil from './src/ecrans/Accueil';
 import Chapitres from './src/ecrans/Chapitres';
 import Chapitre from './src/ecrans/Chapitre';
@@ -22,6 +23,7 @@ import Outils from './src/ecrans/Outils';
 import Formulaires from './src/ecrans/Formulaires';
 import Sujets from './src/ecrans/Sujets';
 import BacBlanc from './src/ecrans/BacBlanc';
+import Profil from './src/ecrans/Profil';
 import APropos from './src/ecrans/APropos';
 
 const Pile = createNativeStackNavigator();
@@ -44,6 +46,7 @@ export default function App() {
 
   return (
     <SafeAreaProvider>
+      <ProgressionProvider>
       <NavigationContainer theme={themeNavigation}>
         <StatusBar style={sombre ? 'light' : 'dark'} />
         <Pile.Navigator
@@ -83,9 +86,11 @@ export default function App() {
           <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
           <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
           <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
+          <Pile.Screen name="Profil" component={Profil} options={{ title: 'Ma progression' }} />
           <Pile.Screen name="APropos" component={APropos} options={{ title: 'À propos' }} />
         </Pile.Navigator>
       </NavigationContainer>
+      </ProgressionProvider>
     </SafeAreaProvider>
   );
 }

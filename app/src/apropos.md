@@ -41,6 +41,17 @@ sert exactement le contenu de ton programme.
 
 ---
 
+## Ta progression
+
+Chaque QCM et chaque bac blanc rapporte des **points d'expérience** : plus tu as
+de bonnes réponses, plus ton **niveau** et ton **rang** montent (de Débutant à
+Génie). Les questions difficiles rapportent davantage, et un sans-faute donne un
+bonus. L'écran **« Ma progression »** récapitule ton niveau, ton taux de réussite,
+ta meilleure série et les chapitres que tu maîtrises. Tout est gardé **sur ton
+téléphone**, sans compte.
+
+---
+
 ## Ce qui est couvert
 
 **Collège** (6ᵉ → 3ᵉ) : maths et physique-chimie.

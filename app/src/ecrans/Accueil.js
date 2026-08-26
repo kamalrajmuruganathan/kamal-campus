@@ -8,15 +8,19 @@
  */
 
 import { useState } from 'react';
-import { View, Text, ScrollView, useColorScheme, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte } from '../composants/communs';
 import { niveaux, parcoursDe, LIBELLES_NIVEAU, LIBELLES_PARCOURS, CHAPITRES } from '../contenu-index';
+import { useProgression } from '../progression/Contexte';
+import { niveauPourXp } from '../../lib/progression';
 
 export default function Accueil({ navigation }) {
   const t = theme(useColorScheme() === 'dark');
   const [niveau, setNiveau] = useState(null);
+  const { profil } = useProgression();
+  const prog = niveauPourXp(profil.xp);
 
   const listeNiveaux = niveaux();
   const totalQuestions = CHAPITRES.reduce((s, c) => s + c.nbQuestions, 0);
@@ -30,6 +34,58 @@ export default function Accueil({ navigation }) {
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.normale, marginTop: 4 }}>
           Maths & Physique-Chimie — {CHAPITRES.length} chapitres, {totalQuestions} questions
         </Text>
+
+        {/* Ma progression — niveau et XP, accès direct au profil */}
+        <Pressable
+          onPress={() => navigation.navigate('Profil')}
+          accessibilityRole="button"
+          accessibilityLabel={`Ma progression, niveau ${prog.niveau}, ${prog.titre}`}
+          style={({ pressed }) => [
+            st.progression,
+            {
+              backgroundColor: t.couleur.surface,
+              borderColor: t.couleur.trait,
+              borderRadius: t.rayon.m,
+              marginTop: t.espace.l,
+              opacity: pressed ? 0.7 : 1,
+            },
+          ]}
+        >
+          <View
+            style={{
+              width: 40,
+              height: 40,
+              borderRadius: 20,
+              backgroundColor: t.couleur.accent,
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginRight: t.espace.m,
+            }}
+          >
+            <Text style={{ color: t.couleur.accentTexte, fontSize: 18, fontWeight: '800' }}>
+              {prog.niveau}
+            </Text>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+              Ma progression · {prog.titre}
+            </Text>
+            <View style={[st.piste, { backgroundColor: t.couleur.trait, marginTop: 6 }]}>
+              <View
+                style={{
+                  width: `${Math.round(prog.progression * 100)}%`,
+                  height: '100%',
+                  backgroundColor: t.couleur.accent,
+                  borderRadius: 3,
+                }}
+              />
+            </View>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 4 }}>
+              {profil.xp} XP · encore {prog.xpRestant} pour le niveau {prog.niveau + 1}
+            </Text>
+          </View>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande, marginLeft: t.espace.s }}>›</Text>
+        </Pressable>
 
         {!niveau ? (
           <>
@@ -158,4 +214,6 @@ export default function Accueil({ navigation }) {
 const st = StyleSheet.create({
   section: { fontSize: 12, fontWeight: '700', letterSpacing: 0.8, marginBottom: 10 },
   enTete: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  progression: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, padding: 14 },
+  piste: { height: 6, borderRadius: 3, overflow: 'hidden' },
 });
