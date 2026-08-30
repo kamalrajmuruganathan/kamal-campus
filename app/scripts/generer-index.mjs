@@ -65,11 +65,15 @@ const LIBELLES_PARCOURS = {
   'spcl-stl': 'Sciences physiques en laboratoire — STL',
   'enseignement-scientifique': 'Enseignement scientifique',
   'tronc-commun': 'Tronc commun',
+  sciences: 'Sciences',
+  svt: 'SVT',
 };
 
 const LIBELLES_MATIERE = {
   mathematiques: 'Mathématiques',
   'physique-chimie': 'Physique-chimie',
+  sciences: 'Sciences',
+  svt: 'SVT',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────

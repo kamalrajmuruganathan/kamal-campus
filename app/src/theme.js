@@ -68,5 +68,8 @@ const SOMBRE = {
 export const theme = (sombre) => (sombre ? SOMBRE : CLAIR);
 
 /** Couleur associée à une matière, pour distinguer les parcours d'un coup d'œil. */
-export const couleurMatiere = (t, matiere) =>
-  matiere === 'physique-chimie' ? t.couleur.physique : t.couleur.maths;
+export const couleurMatiere = (t, matiere) => {
+  if (matiere === 'physique-chimie') return t.couleur.physique;
+  if (matiere === 'svt' || matiere === 'sciences') return t.couleur.succes;
+  return t.couleur.maths;
+};

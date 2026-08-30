@@ -1,0 +1,106 @@
+---
+id: cm1-sciences-energie-et-circuits-electriques
+titre: Énergie et circuits électriques
+voie: primaire
+niveau: cm1
+parcours: sciences
+matiere: sciences
+programme: Cycle 3 — Sciences et technologie (programme officiel)
+duree_lecture_min: 8
+prerequis:
+  - Objets techniques du quotidien
+  - Notion de matière
+statut: brouillon
+relu_par: null
+---
+
+# Énergie et circuits électriques
+
+L'**énergie** est ce qui permet de **produire une action** : faire de la lumière,
+chauffer, faire du bruit, faire tourner un moteur ou nous faire bouger. Sans énergie,
+rien ne fonctionne. Dans ce chapitre, on découvre les sources d'énergie et une forme
+très utilisée : l'**électricité**.
+
+## À quoi sert l'énergie ?
+
+L'énergie sert par exemple à :
+
+- **s'éclairer** (une lampe) ;
+- **chauffer** (un radiateur, une plaque de cuisson) ;
+- **mettre en mouvement** (une voiture, un vélo, nos muscles) ;
+- **faire fonctionner des appareils** (téléphone, ordinateur).
+
+## Les sources d'énergie
+
+L'énergie vient de différentes **sources** :
+
+- l'énergie des **aliments**, qui fait fonctionner notre corps ;
+- l'énergie du **Soleil** (lumière et chaleur) ;
+- l'énergie du **vent** et de l'**eau** qui coule ;
+- l'énergie des **combustibles** comme le bois, le charbon, le pétrole ou le gaz ;
+- l'énergie **électrique**, qui arrive chez nous par des câbles ou est stockée dans
+  des **piles**.
+
+On distingue les sources **renouvelables** (le Soleil, le vent, l'eau : elles ne
+s'épuisent pas) et les sources **non renouvelables** (le pétrole, le charbon, le gaz :
+elles finissent par manquer).
+
+## Le circuit électrique
+
+Pour qu'une lampe s'allume avec une pile, il faut un **circuit électrique**, c'est-à-dire
+un **chemin fermé** que le courant peut parcourir en **boucle**.
+
+Un circuit simple contient :
+
+- un **générateur** (la **pile**) : il fournit l'énergie électrique ;
+- un **récepteur** (la **lampe**, le moteur) : il utilise cette énergie ;
+- des **fils électriques** qui relient les éléments ;
+- parfois un **interrupteur** pour ouvrir ou fermer le circuit.
+
+## Circuit ouvert, circuit fermé
+
+- Le circuit est **fermé** quand la boucle est **complète** : le courant circule, la
+  lampe **s'allume**.
+- Le circuit est **ouvert** quand la boucle est **coupée** (fil débranché, interrupteur
+  ouvert) : le courant ne passe plus, la lampe **s'éteint**.
+
+L'**interrupteur** sert justement à ouvrir ou fermer le circuit sans débrancher les fils.
+
+## Conducteurs et isolants
+
+Tous les matériaux ne laissent pas passer le courant :
+
+- Les **conducteurs** laissent passer le courant : ce sont surtout les **métaux**
+  (fer, cuivre, aluminium).
+- Les **isolants** ne laissent **pas** passer le courant : le **plastique**, le **bois
+  sec**, le **verre**, le **caoutchouc**.
+
+C'est pour cela que les fils électriques sont en **métal** (conducteur) à l'intérieur,
+et entourés de **plastique** (isolant) pour nous protéger.
+
+## La sécurité électrique
+
+L'électricité des **prises de la maison** est **dangereuse** : elle peut provoquer des
+brûlures ou des accidents graves. Règles importantes :
+
+- On ne met **jamais** les doigts ou un objet dans une prise.
+- On ne touche pas un appareil électrique avec les mains **mouillées** (l'eau conduit
+  le courant).
+- Les expériences se font avec des **piles plates** (peu dangereuses), jamais avec le
+  courant des prises.
+
+## Ce qu'il faut retenir
+
+- L'**énergie** permet d'agir : éclairer, chauffer, mettre en mouvement.
+- Il existe plusieurs **sources** d'énergie, **renouvelables** ou non.
+- Un **circuit électrique** est une **boucle fermée** : générateur (pile) + récepteur
+  (lampe) + fils.
+- Circuit **fermé** = la lampe s'allume ; circuit **ouvert** = elle s'éteint.
+- Les **métaux conduisent** le courant ; le **plastique, le bois, le verre isolent**.
+
+## Les erreurs à éviter
+
+- **Croire qu'une lampe s'allume avec un seul fil.** Il faut une boucle complète.
+- **Confondre ouvert et fermé.** Circuit fermé = ça marche ; circuit ouvert = coupé.
+- **Penser que tout laisse passer le courant.** Le plastique et le bois sont des isolants.
+- **Faire des expériences avec les prises murales.** On n'utilise que des piles.
