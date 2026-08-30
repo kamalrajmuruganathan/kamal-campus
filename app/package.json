@@ -10,7 +10,7 @@
     "start": "npm run preparer && expo start",
     "android": "npm run preparer && expo start --android",
     "ios": "npm run preparer && expo start --ios",
-    "test": "node --test lib/*.test.js"
+    "test": "node --test lib/*.test.js lib/**/*.test.js"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",

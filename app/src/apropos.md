@@ -26,8 +26,10 @@ sert exactement le contenu de ton programme.
   erreurs qui coûtent des points », avec les formules bien rendues.
 - **Exercices** — 10 par chapitre, du plus simple au **problème type bac**, avec
   un corrigé rédigé en étapes que tu ouvres après avoir cherché.
-- **QCM** — 10 questions, correction immédiate qui **nomme le piège**, et le
-  bilan des notions à revoir.
+- **QCM** — correction immédiate qui **nomme le piège** et bilan des notions à
+  revoir. Sur les chapitres de calcul, les questions sont **générées à l'infini**
+  (nombres tirés au hasard, réponse calculée par l'appli) : jamais deux fois les
+  mêmes. Ailleurs, elles sont piochées au hasard dans une banque de 20.
 - **Outils de calcul** — résultat **exact avec les étapes** (jamais une réponse
   sortie d'une IA). Un outil qui se trompe te ferait perdre des points.
 - **Cartes de révision** — recto question, verso réponse : tu te testes de tête

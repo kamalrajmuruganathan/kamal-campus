@@ -18,10 +18,11 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { melanger } from '../../lib/quizmix';
+import { aGenerateur, genererQuestions } from '../../lib/generateurs';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
-// Nombre de questions tirées au hasard dans la banque d'un chapitre.
-const TAILLE_QCM_CHAPITRE = 15;
+// Nombre de questions tirées / générées à chaque QCM de chapitre.
+const TAILLE_QCM_CHAPITRE = 20;
 
 export default function Qcm({ route, navigation }) {
   const t = theme(useColorScheme() === 'dark');
@@ -34,8 +35,12 @@ export default function Qcm({ route, navigation }) {
   const questions = useMemo(() => {
     // QCM de révision / bac blanc / parcours : questions déjà fournies.
     if (route.params?.questions) return route.params.questions;
-    // QCM de chapitre : on pioche TAILLE_QCM_CHAPITRE questions au hasard dans
-    // la banque du chapitre (toute la banque si elle est plus petite).
+    // QCM de chapitre équipé d'un générateur : questions FABRIQUÉES à la volée
+    // (réservoir illimité, réponses calculées). Sinon : pioche au hasard dans
+    // la banque écrite (toute la banque si elle est plus petite).
+    if (chapitre && aGenerateur(chapitre.id)) {
+      return genererQuestions(chapitre.id, TAILLE_QCM_CHAPITRE);
+    }
     const banque = chapitre?.qcm?.questions ?? [];
     return melanger(banque).slice(0, TAILLE_QCM_CHAPITRE);
     // eslint-disable-next-line react-hooks/exhaustive-deps
