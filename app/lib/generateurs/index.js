@@ -11,6 +11,7 @@ import {
   relatifsSomme, relatifsProduit, moyenne, discriminant, secondDegreRacines,
   nombreDerive, suiteArithmetique, suiteGeometrique, produitScalaire,
   racineCarreParfait,
+  additionSimple, soustractionSimple, multiplicationSimple, complementDix, leDouble,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -73,6 +74,19 @@ export const REGISTRE = {
   // Produit scalaire
   '1spe-math-produit-scalaire': [produitScalaire],
   '1sti2d-produit-scalaire': [produitScalaire],
+
+  // ── Primaire : calcul à volonté (nombres positifs) ──
+  'cp-math-addition': [additionSimple],
+  'cp-math-soustraction': [soustractionSimple],
+  'cp-math-calcul-mental': [additionSimple, soustractionSimple, complementDix, leDouble],
+  'ce1-math-addition-posee': [additionSimple],
+  'ce1-math-soustraction-posee': [soustractionSimple],
+  'ce1-math-tables-de-multiplication': [multiplicationSimple],
+  'ce1-math-calcul-mental': [additionSimple, soustractionSimple, multiplicationSimple, complementDix, leDouble],
+  'ce2-math-multiplication-posee': [multiplicationSimple],
+  'ce2-math-calcul-mental': [additionSimple, soustractionSimple, multiplicationSimple, leDouble],
+  'cm1-math-multiplication-posee': [multiplicationSimple],
+  'cm2-math-calcul-mental': [additionSimple, soustractionSimple, multiplicationSimple, leDouble],
 };
 
 /** Le chapitre a-t-il au moins un générateur ? */

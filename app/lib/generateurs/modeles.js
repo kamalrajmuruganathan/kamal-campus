@@ -330,6 +330,81 @@ export function produitScalaire(rand) {
   }, rand);
 }
 
+// ── Primaire (nombres positifs, adaptés aux petits) ──────────────────────────
+
+/** Addition simple (CP → CE2). */
+export function additionSimple(rand) {
+  const a = entier(rand, 2, 12);
+  const b = entier(rand, 2, 12);
+  const s = a + b;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'addition',
+    enonce: `Combien font ${a} + ${b} ?`,
+    bonne: `${s}`,
+    distracteurs: [`${s - 1}`, `${s + 1}`, `${s + 10}`, `${Math.abs(a - b)}`, `${s + 2}`, `${s - 2}`],
+    explication: `${a} + ${b} = ${s}. On ajoute les deux nombres.`,
+  }, rand);
+}
+
+/** Soustraction simple à résultat positif. */
+export function soustractionSimple(rand) {
+  const a = entier(rand, 6, 18);
+  const b = entier(rand, 1, a - 1);
+  const d = a - b;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'soustraction',
+    enonce: `Combien font ${a} − ${b} ?`,
+    bonne: `${d}`,
+    distracteurs: [`${d + 1}`, `${d - 1}`, `${a + b}`, `${d + 2}`, `${d + 10}`, `${d - 2}`],
+    explication: `${a} − ${b} = ${d}. On enlève ${b} à ${a}.`,
+  }, rand);
+}
+
+/** Multiplication (tables). */
+export function multiplicationSimple(rand) {
+  const a = entier(rand, 2, 10);
+  const b = entier(rand, 2, 10);
+  const p = a * b;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'multiplication',
+    enonce: `Combien font ${a} × ${b} ?`,
+    bonne: `${p}`,
+    distracteurs: [`${p + a}`, `${p - a}`, `${a + b}`, `${p + b}`, `${p + 2}`, `${p - 2}`, `${p + 10}`],
+    explication: `${a} × ${b} = ${p}. C'est ${a} additionné ${b} fois.`,
+  }, rand);
+}
+
+/** Complément à 10. */
+export function complementDix(rand) {
+  const a = entier(rand, 1, 9);
+  const r = 10 - a;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'complement',
+    enonce: `${a} + ? = 10. Que vaut le nombre manquant ?`,
+    bonne: `${r}`,
+    distracteurs: [`${r + 1}`, `${r - 1}`, `${a}`, `${10 + a}`, `${r + 2}`, `${r + 10}`],
+    explication: `Pour aller de ${a} à 10, il faut ${r} (car ${a} + ${r} = 10).`,
+  }, rand);
+}
+
+/** Le double d'un nombre. */
+export function leDouble(rand) {
+  const a = entier(rand, 2, 20);
+  const d = 2 * a;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'double',
+    enonce: `Quel est le double de ${a} ?`,
+    bonne: `${d}`,
+    distracteurs: [`${a + 2}`, `${a}`, `${d + 1}`, `${d - 2}`, `${d + 2}`, `${d + 10}`],
+    explication: `Le double de ${a}, c'est ${a} + ${a} = ${d}.`,
+  }, rand);
+}
+
 /** Racine carrée d'un carré parfait. */
 export function racineCarreParfait(rand) {
   const k = entier(rand, 4, 20);
