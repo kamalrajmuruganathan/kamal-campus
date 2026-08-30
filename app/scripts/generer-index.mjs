@@ -31,6 +31,11 @@ const SORTIE = join(RACINE_APP, 'src', 'contenu-index.js');
 // « premiere » — d'où la table d'ordre plutôt qu'un localeCompare.
 // Ajouter un niveau = ajouter une ligne ici, à sa place dans la scolarité.
 const NIVEAUX = [
+  ['cp', 'CP'],
+  ['ce1', 'CE1'],
+  ['ce2', 'CE2'],
+  ['cm1', 'CM1'],
+  ['cm2', 'CM2'],
   ['sixieme', 'Sixième'],
   ['cinquieme', 'Cinquième'],
   ['quatrieme', 'Quatrième'],
