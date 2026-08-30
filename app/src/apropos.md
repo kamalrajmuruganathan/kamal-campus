@@ -32,6 +32,9 @@ sert exactement le contenu de ton programme.
   mêmes. Ailleurs, elles sont piochées au hasard dans une banque de 20.
 - **Outils de calcul** — résultat **exact avec les étapes** (jamais une réponse
   sortie d'une IA). Un outil qui se trompe te ferait perdre des points.
+- **Résolveur pas à pas** — saisis un calcul, une fraction ou une équation
+  (1er/2nd degré) : l'appli donne le résultat **et déroule les étapes**, en
+  calcul exact. Comme un Photomath, sans la photo.
 - **Cartes de révision** — recto question, verso réponse : tu te testes de tête
   plutôt que de relire.
 

@@ -166,6 +166,15 @@ export default function Accueil({ navigation }) {
         <View style={{ marginTop: t.espace.xl }}>
           <Carte
             t={t}
+            titre="🧮 Résolveur pas à pas"
+            sousTitre="Calculs, fractions, équations — avec les étapes"
+            detail="Saisis, l'appli résout et explique"
+            couleur={t.couleur.succes}
+            onPress={() => navigation.navigate('Resolveur')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="🧩 Énigmes"
             sousTitre="Suites, grilles, calcul mental, allumettes"
             detail="Défis de logique, tous niveaux"
