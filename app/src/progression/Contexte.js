@@ -19,6 +19,7 @@ import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stocka
 
 const MAX_HISTORIQUE = 30;
 const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
+const XP_ENIGME = { facile: 8, moyen: 12, difficile: 18 };
 
 const ProgressionContexte = createContext(null);
 
@@ -203,6 +204,49 @@ export function ProgressionProvider({ children }) {
     [profil],
   );
 
+  /**
+   * Enregistre une énigme tentée. Rapporte de l'XP seulement si réussie.
+   * @param {{difficulte?, reussi, titre?}} arg
+   */
+  const enregistrerEnigme = useCallback(({ difficulte = 'moyen', reussi = false, titre = 'Énigme' }) => {
+    const points = reussi ? (XP_ENIGME[difficulte] ?? 10) : 0;
+    const niveauAvant = niveauPourXp(profil.xp).niveau;
+    const niveauApres = niveauPourXp(profil.xp + points).niveau;
+
+    const suivant = {
+      ...profil,
+      xp: profil.xp + points,
+      enigmesResolues: (profil.enigmesResolues || 0) + (reussi ? 1 : 0),
+    };
+    if (reussi) {
+      suivant.historique = [
+        { date: new Date().toISOString(), titre, justes: 1, total: 1, points, matiere: null },
+        ...profil.historique,
+      ].slice(0, MAX_HISTORIQUE);
+    }
+
+    const s = calculerSerie(suivant, points);
+    Object.assign(suivant, {
+      jourCourant: s.jourCourant,
+      xpDuJour: s.xpDuJour,
+      serieJours: s.serieJours,
+      dernierJourValide: s.dernierJourValide,
+      meilleureSerieJours: s.meilleureSerieJours,
+    });
+
+    setProfil(suivant);
+    sauverProfil(suivant);
+
+    return {
+      points,
+      niveauAvant,
+      niveauApres,
+      monteeDeNiveau: niveauApres > niveauAvant,
+      badgesGagnes: badgesNouveaux(profil, suivant),
+      serieJour: { atteint: s.objectifAtteintMaintenant, serie: s.serieJours, objectif: s.objectifQuotidien },
+    };
+  }, [profil]);
+
   const reinitialiser = useCallback(() => {
     const vide = profilVide();
     setProfil(vide);
@@ -231,7 +275,7 @@ export function ProgressionProvider({ children }) {
   return (
     <ProgressionContexte.Provider
       value={{
-        profil, charge, enregistrerResultat, enregistrerFlashcards,
+        profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme,
         reinitialiser, definirReglages, terminerOnboarding,
       }}
     >
@@ -255,6 +299,10 @@ export function useProgression() {
       enregistrerFlashcards: () => ({
         points: 0, connues: 0, total: 0,
         niveauAvant: 1, niveauApres: 1, monteeDeNiveau: false, badgesGagnes: [],
+      }),
+      enregistrerEnigme: () => ({
+        points: 0, niveauAvant: 1, niveauApres: 1, monteeDeNiveau: false,
+        badgesGagnes: [], serieJour: { atteint: false, serie: 0, objectif: 50 },
       }),
       reinitialiser: () => {},
       definirReglages: () => {},

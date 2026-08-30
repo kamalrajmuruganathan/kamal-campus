@@ -166,6 +166,15 @@ export default function Accueil({ navigation }) {
         <View style={{ marginTop: t.espace.xl }}>
           <Carte
             t={t}
+            titre="🧩 Énigmes"
+            sousTitre="Suites, grilles, calcul mental, allumettes"
+            detail="Défis de logique, tous niveaux"
+            couleur={t.couleur.physique}
+            onPress={() => navigation.navigate('Enigmes')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="Formulaires"
             sousTitre="L'essentiel à savoir par cœur, par niveau"
             detail="Aide-mémoire de révision"

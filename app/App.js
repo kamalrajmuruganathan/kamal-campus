@@ -26,6 +26,9 @@ import Sujets from './src/ecrans/Sujets';
 import BacBlanc from './src/ecrans/BacBlanc';
 import Profil from './src/ecrans/Profil';
 import Badges from './src/ecrans/Badges';
+import Enigmes from './src/ecrans/Enigmes';
+import LecteurEnigme from './src/ecrans/LecteurEnigme';
+import LecteurAllumettes from './src/ecrans/LecteurAllumettes';
 import APropos from './src/ecrans/APropos';
 
 const Pile = createNativeStackNavigator();
@@ -89,6 +92,13 @@ function Navigation() {
         <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
         <Pile.Screen name="Profil" component={Profil} options={{ title: 'Ma progression' }} />
         <Pile.Screen name="Badges" component={Badges} options={{ title: 'Badges' }} />
+        <Pile.Screen name="Enigmes" component={Enigmes} options={{ title: 'Énigmes' }} />
+        <Pile.Screen
+          name="LecteurEnigme"
+          component={LecteurEnigme}
+          options={({ route }) => ({ title: route.params?.titre ?? 'Énigme' })}
+        />
+        <Pile.Screen name="LecteurAllumettes" component={LecteurAllumettes} options={{ title: 'Allumettes' }} />
         <Pile.Screen name="APropos" component={APropos} options={{ title: 'À propos' }} />
       </Pile.Navigator>
     </NavigationContainer>

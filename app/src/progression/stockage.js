@@ -22,6 +22,7 @@ export function profilVide() {
     meilleureSerie: 0,
     flashcardsRevues: 0, // nombre de cartes vues (toutes sessions)
     flashcardsConnues: 0, // nombre de cartes marquées « je savais »
+    enigmesResolues: 0, // énigmes réussies (toutes familles)
     chapitres: {}, // { [idChapitre]: { titre, meilleurScore, tentatives } }
     historique: [], // [{ date, titre, justes, total, points, matiere }] — récents d'abord
 

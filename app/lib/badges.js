@@ -50,6 +50,9 @@ export const BADGES = [
   { id: 'serie-7', icone: '🗓️', titre: 'Une semaine', desc: 'Objectif atteint 7 jours d’affilée', cible: 7, valeur: (p) => p.meilleureSerieJours || 0 },
   { id: 'serie-30', icone: '🏅', titre: 'Un mois entier', desc: 'Objectif atteint 30 jours d’affilée', cible: 30, valeur: (p) => p.meilleureSerieJours || 0 },
 
+  { id: 'enigmes-10', icone: '🧩', titre: 'Curieux', desc: 'Résoudre 10 énigmes', cible: 10, valeur: (p) => p.enigmesResolues || 0 },
+  { id: 'enigmes-50', icone: '🧠', titre: 'Fin limier', desc: 'Résoudre 50 énigmes', cible: 50, valeur: (p) => p.enigmesResolues || 0 },
+
   { id: 'deux-matieres', icone: '⚗️', titre: 'Touche-à-tout', desc: 'Gagner des points en maths ET en physique-chimie', cible: 2, valeur: (p, s) => s.matieresEntamees },
 ];
 

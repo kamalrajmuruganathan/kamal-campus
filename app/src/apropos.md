@@ -40,6 +40,9 @@ sert exactement le contenu de ton programme.
 - **Formulaires** — l'essentiel à savoir par cœur, par niveau et matière.
 - **Sujets** — des épreuves entières type bac ou brevet, corrigées.
 - **Bac blanc / brevet blanc** — des QCM qui mélangent les chapitres d'un niveau.
+- **Énigmes** — un coin logique pour tous les niveaux : suites, grilles, calcul
+  mental (générés à l'infini) et énigmes d'allumettes. Chaque énigme résolue
+  rapporte de l'XP et nourrit ta série.
 
 ---
 
