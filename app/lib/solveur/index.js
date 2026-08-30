@@ -11,6 +11,7 @@
 
 import { Rationnel, ZERO } from './rationnel.js';
 import { analyser, normaliser } from './parseur.js';
+import { poserDepuisTexte } from './poser.js';
 
 // ── Mise en forme d'un AST en texte lisible ──────────────────────────────────
 
@@ -273,7 +274,9 @@ export function resoudre(entree) {
       };
     }
     const { valeur, etapes } = reduireCalcul(ast);
-    return { ok: true, type: 'calcul', entree: etapes[0], resultat: valeur.texte(), etapes };
+    // Pour « entier op entier » (+ − ×), on ajoute l'opération posée détaillée.
+    const posee = poserDepuisTexte(brut);
+    return { ok: true, type: 'calcul', entree: etapes[0], resultat: valeur.texte(), etapes, posee };
   } catch (e) {
     return { ok: false, erreur: e.message || 'Expression invalide.' };
   }

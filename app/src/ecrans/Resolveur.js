@@ -117,6 +117,18 @@ export default function Resolveur() {
                 <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, flex: 1, lineHeight: 22 }}>{e}</Text>
               </View>
             ))}
+
+            {res.posee && res.posee.length > 0 && (
+              <>
+                <Text style={[st.section, { color: t.couleur.attenue }]}>OPÉRATION POSÉE (retenues)</Text>
+                {res.posee.map((e, i) => (
+                  <View key={i} style={{ flexDirection: 'row', marginBottom: t.espace.s }}>
+                    <Text style={{ color: t.couleur.succes, fontWeight: '700', width: 26 }}>•</Text>
+                    <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, flex: 1, lineHeight: 22 }}>{e}</Text>
+                  </View>
+                ))}
+              </>
+            )}
           </View>
         )}
       </ScrollView>
