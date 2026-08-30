@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Un carré a 4 côtés et 4 coins : il faut donc 4 fois « avancer puis tourner de 90° ». Le choix 0 (3 fois) ne ferme pas la figure ; le choix 2 oublie les virages et trace une seule ligne droite."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Comment lit-on (exécute-t-on) une séquence d'instructions ?",
+      "choix": [
+        "de bas en haut, une instruction après l'autre",
+        "de haut en bas, une instruction après l'autre",
+        "toutes les instructions en même temps",
+        "dans l'ordre que l'on veut, ça ne change rien"
+      ],
+      "reponse": 1,
+      "explication": "On déroule une séquence de haut en bas, une instruction à la fois, comme une recette : on ne saute pas de ligne et on ne revient pas en arrière. Le piège du dernier choix est de croire que l'ordre est libre : changer l'ordre change le résultat."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "execution",
+      "enonce": "On exécute : choisir 6, ajouter 4, afficher. Qu'affiche le programme ?",
+      "choix": [
+        "46",
+        "10",
+        "2",
+        "24"
+      ],
+      "reponse": 1,
+      "explication": "On déroule pas à pas : 6, puis 6 + 4 = 10. Le piège « 46 » consiste à coller les chiffres 4 et 6 au lieu de faire l'addition ; « 2 » vient d'une soustraction alors que l'instruction est « ajouter »."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "entrees-sorties",
+      "enonce": "Dans un programme de calcul, l'ENTRÉE, c'est :",
+      "choix": [
+        "le nombre affiché à la fin",
+        "le nombre d'instructions du programme",
+        "le nombre choisi au départ",
+        "le nom donné au programme"
+      ],
+      "reponse": 2,
+      "explication": "L'entrée est ce que le programme reçoit au départ : ici le nombre choisi. Le nombre affiché à la fin (premier choix) est au contraire la sortie. Confondre entrée et sortie est l'erreur classique."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "sequence",
+      "enonce": "On exécute : choisir 2, ajouter 4, multiplier par 3, afficher. Qu'affiche le programme ?",
+      "choix": [
+        "14",
+        "18",
+        "10",
+        "20"
+      ],
+      "reponse": 1,
+      "explication": "On déroule chaque étape : 2, puis 2 + 4 = 6, puis 6 × 3 = 18. Le piège « 14 » vient de lire 2 + 4 × 3 comme une expression avec priorités (4 × 3 d'abord) : un programme de calcul se déroule dans l'ordre, chaque instruction part du résultat de la précédente."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "repetition",
+      "enonce": "On écrit : répéter 5 fois ( avancer de 10, tourner à droite, avancer de 5 ). Combien d'instructions sont exécutées en tout ?",
+      "choix": [
+        "3",
+        "5",
+        "15",
+        "8"
+      ],
+      "reponse": 2,
+      "explication": "Le bloc répété contient 3 instructions, refaites 5 fois : 5 × 3 = 15. Le piège « 3 » compte les instructions écrites dans le bloc, et « 5 » ne compte que le nombre de tours : il faut multiplier le nombre de tours par le nombre d'instructions du bloc."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "repetition",
+      "enonce": "Un robot exécute : répéter 4 fois ( avancer de 2 cases ). Combien de cases a-t-il parcourues en tout ?",
+      "choix": [
+        "6",
+        "4",
+        "8",
+        "2"
+      ],
+      "reponse": 2,
+      "explication": "Le robot avance de 2 cases, quatre fois de suite : 4 × 2 = 8 cases. Le piège « 4 » compte le nombre de tours au lieu des cases réellement parcourues, et « 2 » ne compte qu'un seul tour."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "chemin",
+      "enonce": "Un robot exécute : avancer de 3 cases, tourner à gauche, avancer de 3 cases, tourner à gauche, avancer de 3 cases. Combien de cases a-t-il parcourues en tout ?",
+      "choix": [
+        "9",
+        "6",
+        "3",
+        "12"
+      ],
+      "reponse": 0,
+      "explication": "On additionne seulement les déplacements : 3 + 3 + 3 = 9 cases. Le piège est de compter les « tourner à gauche » : un virage change la direction mais ne fait avancer d'aucune case, il ne compte pas dans la distance."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "sequence",
+      "enonce": "Deux programmes partent de : choisir 8. Le premier fait ensuite « diviser par 2 » puis « ajouter 6 » ; le second « ajouter 6 » puis « diviser par 2 ». Qu'affichent-ils ?",
+      "choix": [
+        "les deux affichent 10",
+        "7 pour le premier, 10 pour le second",
+        "10 pour le premier, 7 pour le second",
+        "les deux affichent 7"
+      ],
+      "reponse": 2,
+      "explication": "Premier : 8 ÷ 2 = 4, puis 4 + 6 = 10. Second : 8 + 6 = 14, puis 14 ÷ 2 = 7. Mêmes instructions, ordre différent, résultat différent : c'est tout le sens de la séquence. Croire que l'ordre ne change rien est le piège visé."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "execution",
+      "enonce": "On exécute : choisir 3, multiplier par 3, retirer 4, multiplier par 2, afficher. Qu'affiche le programme ?",
+      "choix": [
+        "18",
+        "5",
+        "10",
+        "20"
+      ],
+      "reponse": 2,
+      "explication": "On déroule chaque étape : 3, puis 3 × 3 = 9, puis 9 − 4 = 5, puis 5 × 2 = 10. Le piège « 5 » consiste à s'arrêter avant le dernier « multiplier par 2 », et « 18 » à oublier le « retirer 4 » (9 × 2). Il faut suivre toutes les instructions, dans l'ordre, sans en sauter."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "repetition",
+      "enonce": "On exécute : avancer de 5, puis répéter 3 fois ( tourner à droite, avancer de 5 ). Combien d'instructions sont exécutées en tout ?",
+      "choix": [
+        "6",
+        "7",
+        "9",
+        "4"
+      ],
+      "reponse": 1,
+      "explication": "Seul le bloc décalé est répété : 3 tours × 2 instructions = 6, auxquelles s'ajoute le premier « avancer de 5 » écrit AVANT la répétition (hors du bloc), soit 6 + 1 = 7. Le piège « 6 » oublie l'instruction placée en dehors de la répétition : seul ce qui est décalé est répété."
     }
   ]
 }

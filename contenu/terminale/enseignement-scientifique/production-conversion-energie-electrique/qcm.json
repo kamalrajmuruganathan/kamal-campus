@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "$E = P \\times t = 250\\ \\text{W} \\times 4{,}0\\ \\text{h} = 1000$ Wh $= 1{,}0$ kWh. Et $1$ kWh $= 3{,}6 \\times 10^6$ J. Le piège : une puissance ($250$ W) n'est pas une énergie, il faut la multiplier par la durée."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "induction-electromagnetique",
+      "enonce": "Comment augmenter la tension induite dans une bobine par un aimant ?",
+      "choix": [
+        "en laissant l'aimant parfaitement immobile",
+        "en déplaçant l'aimant plus rapidement devant la bobine",
+        "en éloignant définitivement l'aimant",
+        "en refroidissant la bobine"
+      ],
+      "reponse": 1,
+      "explication": "Plus le champ magnétique varie **vite**, plus la tension induite est grande : on déplace l'aimant plus rapidement (ou on multiplie les spires). C'est pourquoi une dynamo de vélo brille davantage quand on pédale plus fort. Un aimant immobile ne produit rien."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "effet-photovoltaique",
+      "enonce": "Quel dispositif produit de l'**électricité** à partir de la lumière du Soleil ?",
+      "choix": [
+        "un chauffe-eau solaire (solaire thermique)",
+        "une cellule photovoltaïque",
+        "un alternateur",
+        "une turbine à vapeur"
+      ],
+      "reponse": 1,
+      "explication": "La **cellule photovoltaïque** convertit directement la lumière en électricité. Le piège est le chauffe-eau solaire : il capte la **chaleur** du Soleil (solaire thermique), pas de l'électricité. Ce sont deux technologies différentes."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "voies-production",
+      "enonce": "Quel dispositif produit de l'électricité à partir d'une réaction **chimique** ?",
+      "choix": [
+        "l'alternateur",
+        "la cellule photovoltaïque",
+        "la pile (ou l'accumulateur)",
+        "la turbine"
+      ],
+      "reponse": 2,
+      "explication": "La **pile** (ou l'accumulateur) exploite la voie **électrochimique** : une réaction chimique fournit directement le courant. L'alternateur part d'un mouvement, la cellule photovoltaïque de la lumière : trois voies de départ différentes."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "rendement-conversion",
+      "enonce": "Un convertisseur reçoit $2000$ J et n'en restitue que $500$ J d'énergie utile. Quel est son rendement ?",
+      "choix": [
+        "$0{,}25$, soit $25\\ \\%$",
+        "$4$, soit $400\\ \\%$",
+        "$1500$ J",
+        "$0{,}75$, soit $75\\ \\%$"
+      ],
+      "reponse": 0,
+      "explication": "$\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{reçue}}} = \\dfrac{500}{2000} = 0{,}25 = 25\\ \\%$. Le choix $400\\ \\%$ inverse la fraction (impossible, $\\eta \\le 1$) ; $1500$ J est l'énergie perdue, et $75\\ \\%$ la part perdue, pas le rendement."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "alternateur",
+      "enonce": "Dans une centrale hydraulique, quel élément **produit** réellement le courant électrique ?",
+      "choix": [
+        "la turbine",
+        "l'alternateur",
+        "l'eau du barrage elle-même",
+        "la ligne à haute tension"
+      ],
+      "reponse": 1,
+      "explication": "La **turbine** ne fait que fournir le **mouvement** de rotation ; c'est l'**alternateur** qui convertit ce mouvement en électricité par induction. Confondre les deux est une erreur classique : c'est toujours l'alternateur qui produit le courant."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "rendement-global",
+      "enonce": "Une chaîne comporte une turbine ($\\eta_1 = 0{,}90$), un alternateur ($\\eta_2 = 0{,}95$) et une ligne de transport ($\\eta_3 = 0{,}92$). Quel est le rendement global ?",
+      "choix": [
+        "environ $0{,}79$",
+        "environ $2{,}77$",
+        "environ $0{,}92$",
+        "environ $0{,}90$"
+      ],
+      "reponse": 0,
+      "explication": "Le rendement global est le **produit** : $0{,}90 \\times 0{,}95 \\times 0{,}92 \\approx 0{,}79$, soit $79\\ \\%$. Le choix $2{,}77$ additionne les rendements (ce qui donnerait $277\\ \\%$, absurde). On multiplie toujours, et le global est plus petit que le plus faible maillon."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "effet-joule",
+      "enonce": "Un câble de résistance $R = 5{,}0\\ \\Omega$ est parcouru par un courant $I = 4{,}0$ A. Quelle puissance dissipe-t-il par effet Joule ?",
+      "choix": [
+        "$80$ W",
+        "$20$ W",
+        "$100$ W",
+        "$40$ W"
+      ],
+      "reponse": 0,
+      "explication": "$P = R I^2 = 5{,}0 \\times (4{,}0)^2 = 5{,}0 \\times 16 = 80$ W. Le choix $20$ W vient de la faute $P = RI$ (on oublie d'élever l'intensité au carré), qui est pourtant tout l'enjeu du transport à haute tension."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "effet-joule",
+      "enonce": "Pour transporter $P = 1{,}0\\times10^{6}$ W, on passe d'une tension de $1000$ V (donc $I = 1000$ A) à $100\\,000$ V (donc $I = 10$ A). Par combien les pertes par effet Joule sont-elles divisées ?",
+      "choix": [
+        "par $10\\,000$",
+        "par $100$",
+        "par $10$",
+        "par $1000$"
+      ],
+      "reponse": 0,
+      "explication": "Les pertes valent $R I^2$. L'intensité est divisée par $\\dfrac{1000}{10} = 100$, donc les pertes, qui varient en $I^2$, sont divisées par $100^2 = 10\\,000$. C'est tout l'intérêt de transporter à très haute tension : moins d'intensité, beaucoup moins de pertes."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "stockage",
+      "enonce": "Pourquoi le rendement global d'un système de stockage (batterie, STEP…) est-il forcément inférieur à celui d'une seule conversion ?",
+      "choix": [
+        "parce que le stockage crée de l'énergie",
+        "parce qu'on convertit deux fois (aller puis retour) et que les rendements se multiplient",
+        "parce que l'énergie stockée disparaît toujours entièrement",
+        "parce qu'un rendement peut dépasser 100 %"
+      ],
+      "reponse": 1,
+      "explication": "Stocker, c'est convertir **deux fois** : une fois pour stocker, une fois pour restituer. Chaque conversion a un rendement inférieur à 1, et ces rendements se **multiplient**, ce qui fait toujours baisser le rendement global sous celui d'un seul maillon."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "unites-energie",
+      "enonce": "Une batterie stocke une énergie de $2{,}0$ kWh. À combien de joules cela correspond-il ? ($1$ kWh $= 3{,}6\\times10^{6}$ J)",
+      "choix": [
+        "$7{,}2\\times10^{6}$ J",
+        "$3{,}6\\times10^{6}$ J",
+        "$2{,}0\\times10^{6}$ J",
+        "$7\\,200$ J"
+      ],
+      "reponse": 0,
+      "explication": "$E = 2{,}0 \\times 3{,}6\\times10^{6} = 7{,}2\\times10^{6}$ J. Le piège $3{,}6\\times10^{6}$ J oublie de multiplier par les $2{,}0$ kWh ; il faut bien appliquer la conversion à toute l'énergie stockée."
     }
   ]
 }

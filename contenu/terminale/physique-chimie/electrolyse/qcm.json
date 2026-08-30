@@ -1,154 +1,294 @@
 {
- "id": "tale-spe-pc-electrolyse-qcm",
- "chapitre": "tale-spe-pc-electrolyse",
- "titre": "QCM — Électrolyse : forcer le sens d'évolution",
- "voie": "generale",
- "niveau": "terminale",
- "parcours": "physique-chimie",
- "matiere": "physique-chimie",
- "statut": "brouillon",
- "relu_par": null,
- "consigne": "Une seule réponse correcte par question.",
- "questions": [
-  {
-   "id": 1,
-   "difficulte": "facile",
-   "notion": "evolution-spontanee-ou-forcee",
-   "enonce": "Qu'est-ce qui caractérise une électrolyse par rapport à une pile ?",
-   "choix": [
-    "Le système évolue spontanément et débite un courant",
-    "Un générateur force le système à évoluer dans le sens non spontané",
-    "Aucun courant ne circule",
-    "Le système est à l'équilibre chimique"
-   ],
-   "reponse": 1,
-   "explication": "Une pile évolue **spontanément** et fournit du courant. L'électrolyse fait l'inverse : un **générateur extérieur** impose un courant qui **force** la transformation dans le sens **non spontané**. Sans générateur, rien ne se passe."
-  },
-  {
-   "id": 2,
-   "difficulte": "facile",
-   "notion": "anode-cathode",
-   "enonce": "À la cathode d'un électrolyseur, il se produit :",
-   "choix": [
-    "une oxydation",
-    "une réduction",
-    "aucune réaction",
-    "une dissolution de l'électrolyte"
-   ],
-   "reponse": 1,
-   "explication": "La règle est universelle : **cathode = réduction** (moyen mnémotechnique « réd-cat »). Les électrons **arrivent** à la cathode et sont captés par une espèce. L'oxydation, elle, a lieu à l'anode."
-  },
-  {
-   "id": 3,
-   "difficulte": "moyen",
-   "notion": "charge-q-i-dt",
-   "enonce": "Un courant constant $I = 2{,}0$ A traverse un électrolyseur pendant $5{,}0$ min. Quelle charge a circulé ?",
-   "choix": [
-    "$600$ C",
-    "$10$ C",
-    "$150$ C",
-    "$1200$ C"
-   ],
-   "reponse": 0,
-   "explication": "Il faut d'abord convertir : $\\Delta t = 5{,}0$ min $= 300$ s. Alors $Q = I\\,\\Delta t = 2{,}0 \\times 300 = 600$ C. Le distracteur $10$ C oublie la conversion ($2{,}0\\times5{,}0$) : c'est le piège n°1 de tout le chapitre."
-  },
-  {
-   "id": 4,
-   "difficulte": "moyen",
-   "notion": "constante-de-faraday",
-   "enonce": "Une charge $Q = 9650$ C traverse un électrolyseur. Quelle quantité d'électrons a circulé ? ($F = 96500$ C·mol⁻¹)",
-   "choix": [
-    "$0{,}10$ mol",
-    "$10$ mol",
-    "$0{,}050$ mol",
-    "$1{,}0$ mol"
-   ],
-   "reponse": 0,
-   "explication": "$n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{9650}{96500} = 0{,}10$ mol. Le distracteur $10$ mol inverse la division ($F/Q$) ; $0{,}050$ mol ajoute un facteur $2$ inutile."
-  },
-  {
-   "id": 5,
-   "difficulte": "moyen",
-   "notion": "anode-cathode",
-   "enonce": "Dans un électrolyseur, à quelle borne du générateur la cathode est-elle reliée ?",
-   "choix": [
-    "À la borne négative (−)",
-    "À la borne positive (+)",
-    "À aucune borne",
-    "Cela dépend de l'électrolyte"
-   ],
-   "reponse": 0,
-   "explication": "Dans un **électrolyseur**, la cathode (réduction) est reliée à la borne **−** du générateur — l'**inverse** d'une pile, où la cathode est le pôle +. D'où le piège : on identifie une électrode par sa **réaction**, jamais par son signe."
-  },
-  {
-   "id": 6,
-   "difficulte": "moyen",
-   "notion": "constante-de-faraday",
-   "enonce": "Que représente la constante de Faraday $F \\approx 96500$ C·mol⁻¹ ?",
-   "choix": [
-    "La charge d'une mole d'électrons",
-    "Le nombre d'électrons dans une mole",
-    "La charge d'un seul électron",
-    "Le nombre d'Avogadro"
-   ],
-   "reponse": 0,
-   "explication": "$F = \\mathcal{N}_A \\times e$ est la **charge d'une mole d'électrons** (en C·mol⁻¹). Le nombre d'Avogadro ($6{,}02\\times10^{23}$ mol⁻¹) est un nombre d'entités ; la charge élémentaire ($1{,}60\\times10^{-19}$ C) est celle d'un seul électron. Confondre $F$ et $\\mathcal{N}_A$ fausse tout le calcul."
-  },
-  {
-   "id": 7,
-   "difficulte": "difficile",
-   "notion": "quantite-de-matiere-transformee",
-   "enonce": "On argente un objet : $\\text{Ag}^+ + \\text{e}^- \\rightarrow \\text{Ag}$. Une charge $Q = 96500$ C traverse la cellule. Quelle masse d'argent se dépose ? ($M(\\text{Ag}) = 108$ g·mol⁻¹, $F = 96500$ C·mol⁻¹)",
-   "choix": [
-    "$108$ g",
-    "$54$ g",
-    "$216$ g",
-    "$1{,}1\\times10^{-3}$ g"
-   ],
-   "reponse": 0,
-   "explication": "$n(\\text{e}^-) = \\dfrac{96500}{96500} = 1{,}0$ mol. La demi-équation est en rapport $1{:}1$, donc $n(\\text{Ag}) = 1{,}0$ mol et $m = n\\times M = 1{,}0 \\times 108 = 108$ g. Le distracteur $54$ g applique à tort un facteur $\\frac{1}{2}$ (comme pour le cuivre) : ici il n'y a qu'**un** électron par ion."
-  },
-  {
-   "id": 8,
-   "difficulte": "difficile",
-   "notion": "quantite-de-matiere-transformee",
-   "enonce": "Production d'aluminium : $\\text{Al}^{3+} + 3\\,\\text{e}^- \\rightarrow \\text{Al}$. Quelle quantité d'électrons faut-il pour obtenir $2{,}0$ mol d'aluminium ?",
-   "choix": [
-    "$6{,}0$ mol",
-    "$2{,}0$ mol",
-    "$0{,}67$ mol",
-    "$3{,}0$ mol"
-   ],
-   "reponse": 0,
-   "explication": "La demi-équation demande **3** électrons par atome : $n(\\text{e}^-) = 3\\times n(\\text{Al}) = 3\\times 2{,}0 = 6{,}0$ mol. Le distracteur $2{,}0$ mol suppose un rapport $1{:}1$, $0{,}67$ mol divise au lieu de multiplier."
-  },
-  {
-   "id": 9,
-   "difficulte": "difficile",
-   "notion": "quantite-de-matiere-transformee",
-   "enonce": "À la cathode lors de l'électrolyse de l'eau : $2\\,\\text{H}_2\\text{O} + 2\\,\\text{e}^- \\rightarrow \\text{H}_2 + 2\\,\\text{HO}^-$. Si $0{,}20$ mol d'électrons y arrive, quel volume de dihydrogène se forme ? ($V_m = 24$ L·mol⁻¹)",
-   "choix": [
-    "$2{,}4$ L",
-    "$4{,}8$ L",
-    "$1{,}2$ L",
-    "$0{,}20$ L"
-   ],
-   "reponse": 0,
-   "explication": "Il faut **2** électrons par molécule de $\\text{H}_2$ : $n(\\text{H}_2) = \\dfrac{n(\\text{e}^-)}{2} = 0{,}10$ mol. Puis $V = n\\times V_m = 0{,}10\\times 24 = 2{,}4$ L. Le distracteur $4{,}8$ L oublie de diviser par $2$."
-  },
-  {
-   "id": 10,
-   "difficulte": "difficile",
-   "notion": "quantite-de-matiere-transformee",
-   "enonce": "On veut déposer $0{,}10$ mol de cuivre ($\\text{Cu}^{2+} + 2\\,\\text{e}^- \\rightarrow \\text{Cu}$) avec un courant $I = 5{,}0$ A. Quelle durée faut-il ? ($F = 96500$ C·mol⁻¹)",
-   "choix": [
-    "$3860$ s (environ $64$ min)",
-    "$1930$ s",
-    "$7720$ s",
-    "$965$ s"
-   ],
-   "reponse": 0,
-   "explication": "Il faut $2$ électrons par atome : $n(\\text{e}^-) = 2\\times 0{,}10 = 0{,}20$ mol. Puis $Q = n(\\text{e}^-)\\times F = 0{,}20\\times 96500 = 19300$ C, et $\\Delta t = \\dfrac{Q}{I} = \\dfrac{19300}{5{,}0} = 3860$ s. Le distracteur $1930$ s oublie le facteur $2$ de la demi-équation."
-  }
- ]
+  "id": "tale-spe-pc-electrolyse-qcm",
+  "chapitre": "tale-spe-pc-electrolyse",
+  "titre": "QCM — Électrolyse : forcer le sens d'évolution",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "evolution-spontanee-ou-forcee",
+      "enonce": "Qu'est-ce qui caractérise une électrolyse par rapport à une pile ?",
+      "choix": [
+        "Le système évolue spontanément et débite un courant",
+        "Un générateur force le système à évoluer dans le sens non spontané",
+        "Aucun courant ne circule",
+        "Le système est à l'équilibre chimique"
+      ],
+      "reponse": 1,
+      "explication": "Une pile évolue **spontanément** et fournit du courant. L'électrolyse fait l'inverse : un **générateur extérieur** impose un courant qui **force** la transformation dans le sens **non spontané**. Sans générateur, rien ne se passe."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "anode-cathode",
+      "enonce": "À la cathode d'un électrolyseur, il se produit :",
+      "choix": [
+        "une oxydation",
+        "une réduction",
+        "aucune réaction",
+        "une dissolution de l'électrolyte"
+      ],
+      "reponse": 1,
+      "explication": "La règle est universelle : **cathode = réduction** (moyen mnémotechnique « réd-cat »). Les électrons **arrivent** à la cathode et sont captés par une espèce. L'oxydation, elle, a lieu à l'anode."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "charge-q-i-dt",
+      "enonce": "Un courant constant $I = 2{,}0$ A traverse un électrolyseur pendant $5{,}0$ min. Quelle charge a circulé ?",
+      "choix": [
+        "$600$ C",
+        "$10$ C",
+        "$150$ C",
+        "$1200$ C"
+      ],
+      "reponse": 0,
+      "explication": "Il faut d'abord convertir : $\\Delta t = 5{,}0$ min $= 300$ s. Alors $Q = I\\,\\Delta t = 2{,}0 \\times 300 = 600$ C. Le distracteur $10$ C oublie la conversion ($2{,}0\\times5{,}0$) : c'est le piège n°1 de tout le chapitre."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "constante-de-faraday",
+      "enonce": "Une charge $Q = 9650$ C traverse un électrolyseur. Quelle quantité d'électrons a circulé ? ($F = 96500$ C·mol⁻¹)",
+      "choix": [
+        "$0{,}10$ mol",
+        "$10$ mol",
+        "$0{,}050$ mol",
+        "$1{,}0$ mol"
+      ],
+      "reponse": 0,
+      "explication": "$n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{9650}{96500} = 0{,}10$ mol. Le distracteur $10$ mol inverse la division ($F/Q$) ; $0{,}050$ mol ajoute un facteur $2$ inutile."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "anode-cathode",
+      "enonce": "Dans un électrolyseur, à quelle borne du générateur la cathode est-elle reliée ?",
+      "choix": [
+        "À la borne négative (−)",
+        "À la borne positive (+)",
+        "À aucune borne",
+        "Cela dépend de l'électrolyte"
+      ],
+      "reponse": 0,
+      "explication": "Dans un **électrolyseur**, la cathode (réduction) est reliée à la borne **−** du générateur — l'**inverse** d'une pile, où la cathode est le pôle +. D'où le piège : on identifie une électrode par sa **réaction**, jamais par son signe."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "constante-de-faraday",
+      "enonce": "Que représente la constante de Faraday $F \\approx 96500$ C·mol⁻¹ ?",
+      "choix": [
+        "La charge d'une mole d'électrons",
+        "Le nombre d'électrons dans une mole",
+        "La charge d'un seul électron",
+        "Le nombre d'Avogadro"
+      ],
+      "reponse": 0,
+      "explication": "$F = \\mathcal{N}_A \\times e$ est la **charge d'une mole d'électrons** (en C·mol⁻¹). Le nombre d'Avogadro ($6{,}02\\times10^{23}$ mol⁻¹) est un nombre d'entités ; la charge élémentaire ($1{,}60\\times10^{-19}$ C) est celle d'un seul électron. Confondre $F$ et $\\mathcal{N}_A$ fausse tout le calcul."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "On argente un objet : $\\text{Ag}^+ + \\text{e}^- \\rightarrow \\text{Ag}$. Une charge $Q = 96500$ C traverse la cellule. Quelle masse d'argent se dépose ? ($M(\\text{Ag}) = 108$ g·mol⁻¹, $F = 96500$ C·mol⁻¹)",
+      "choix": [
+        "$108$ g",
+        "$54$ g",
+        "$216$ g",
+        "$1{,}1\\times10^{-3}$ g"
+      ],
+      "reponse": 0,
+      "explication": "$n(\\text{e}^-) = \\dfrac{96500}{96500} = 1{,}0$ mol. La demi-équation est en rapport $1{:}1$, donc $n(\\text{Ag}) = 1{,}0$ mol et $m = n\\times M = 1{,}0 \\times 108 = 108$ g. Le distracteur $54$ g applique à tort un facteur $\\frac{1}{2}$ (comme pour le cuivre) : ici il n'y a qu'**un** électron par ion."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "Production d'aluminium : $\\text{Al}^{3+} + 3\\,\\text{e}^- \\rightarrow \\text{Al}$. Quelle quantité d'électrons faut-il pour obtenir $2{,}0$ mol d'aluminium ?",
+      "choix": [
+        "$6{,}0$ mol",
+        "$2{,}0$ mol",
+        "$0{,}67$ mol",
+        "$3{,}0$ mol"
+      ],
+      "reponse": 0,
+      "explication": "La demi-équation demande **3** électrons par atome : $n(\\text{e}^-) = 3\\times n(\\text{Al}) = 3\\times 2{,}0 = 6{,}0$ mol. Le distracteur $2{,}0$ mol suppose un rapport $1{:}1$, $0{,}67$ mol divise au lieu de multiplier."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "À la cathode lors de l'électrolyse de l'eau : $2\\,\\text{H}_2\\text{O} + 2\\,\\text{e}^- \\rightarrow \\text{H}_2 + 2\\,\\text{HO}^-$. Si $0{,}20$ mol d'électrons y arrive, quel volume de dihydrogène se forme ? ($V_m = 24$ L·mol⁻¹)",
+      "choix": [
+        "$2{,}4$ L",
+        "$4{,}8$ L",
+        "$1{,}2$ L",
+        "$0{,}20$ L"
+      ],
+      "reponse": 0,
+      "explication": "Il faut **2** électrons par molécule de $\\text{H}_2$ : $n(\\text{H}_2) = \\dfrac{n(\\text{e}^-)}{2} = 0{,}10$ mol. Puis $V = n\\times V_m = 0{,}10\\times 24 = 2{,}4$ L. Le distracteur $4{,}8$ L oublie de diviser par $2$."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "On veut déposer $0{,}10$ mol de cuivre ($\\text{Cu}^{2+} + 2\\,\\text{e}^- \\rightarrow \\text{Cu}$) avec un courant $I = 5{,}0$ A. Quelle durée faut-il ? ($F = 96500$ C·mol⁻¹)",
+      "choix": [
+        "$3860$ s (environ $64$ min)",
+        "$1930$ s",
+        "$7720$ s",
+        "$965$ s"
+      ],
+      "reponse": 0,
+      "explication": "Il faut $2$ électrons par atome : $n(\\text{e}^-) = 2\\times 0{,}10 = 0{,}20$ mol. Puis $Q = n(\\text{e}^-)\\times F = 0{,}20\\times 96500 = 19300$ C, et $\\Delta t = \\dfrac{Q}{I} = \\dfrac{19300}{5{,}0} = 3860$ s. Le distracteur $1930$ s oublie le facteur $2$ de la demi-équation."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "anode-cathode",
+      "enonce": "À l'anode d'un électrolyseur, il se produit :",
+      "choix": [
+        "une réduction",
+        "une oxydation",
+        "aucune réaction",
+        "un dépôt de métal"
+      ],
+      "reponse": 1,
+      "explication": "La règle est universelle : **anode = oxydation**. Une espèce y **cède** des électrons, qui partent dans le fil vers le générateur. La réduction, elle, a lieu à la cathode (« réd-cat »)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "electrolyseur",
+      "enonce": "De quoi est constitué un électrolyseur ?",
+      "choix": [
+        "d'un générateur, de deux électrodes et d'un électrolyte",
+        "d'une seule électrode plongée dans l'eau pure",
+        "de deux piles montées en série",
+        "d'un condensateur et d'une résistance"
+      ],
+      "reponse": 0,
+      "explication": "Un électrolyseur associe deux **électrodes** (conducteurs solides) plongées dans un **électrolyte** (solution contenant des ions mobiles), le tout relié à un **générateur** qui impose le courant. Sans générateur, aucune transformation forcée n'a lieu."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "evolution-spontanee-ou-forcee",
+      "enonce": "Lors d'une électrolyse, l'énergie est convertie :",
+      "choix": [
+        "d'énergie chimique en énergie électrique",
+        "d'énergie électrique en énergie chimique",
+        "d'énergie thermique en énergie électrique",
+        "sans aucune conversion d'énergie"
+      ],
+      "reponse": 1,
+      "explication": "L'électrolyseur est un **récepteur** : il consomme l'énergie électrique fournie par le générateur pour la convertir en énergie chimique (formation d'espèces non spontanées). C'est la pile qui fait l'inverse (chimique → électrique)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "charge-q-i-dt",
+      "enonce": "Un courant $I = 200$ mA traverse un électrolyseur pendant $10$ min. Quelle charge a circulé ?",
+      "choix": [
+        "$2{,}0 \\times 10^{3}$ C",
+        "$1{,}2 \\times 10^{3}$ C",
+        "$120$ C",
+        "$0{,}12$ C"
+      ],
+      "reponse": 2,
+      "explication": "Deux conversions : $I = 200$ mA $= 0{,}20$ A et $\\Delta t = 10$ min $= 600$ s. Alors $Q = I\\,\\Delta t = 0{,}20 \\times 600 = 120$ C. Employer $200 \\times 10$ sans convertir donne $2{,}0\\times10^{3}$, faux d'un facteur $60$ (les minutes) et $10^3$ (les mA)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "anode-cathode",
+      "enonce": "Dans un électrolyseur, à quelle borne du générateur l'anode est-elle reliée ?",
+      "choix": [
+        "à la borne positive (+)",
+        "à la borne négative (−)",
+        "à aucune borne",
+        "cela dépend de la nature du métal"
+      ],
+      "reponse": 0,
+      "explication": "Dans un électrolyseur, l'anode (oxydation) est reliée à la borne **+** du générateur, et la cathode à la borne **−** : c'est l'**inverse** d'une pile. On identifie donc une électrode par sa **réaction**, jamais par son signe."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "constante-de-faraday",
+      "enonce": "Une charge $Q = 48250$ C traverse un électrolyseur. Quelle quantité d'électrons a circulé ? ($F = 96500$ C·mol⁻¹)",
+      "choix": [
+        "$2{,}0$ mol",
+        "$0{,}50$ mol",
+        "$0{,}25$ mol",
+        "$5{,}0$ mol"
+      ],
+      "reponse": 1,
+      "explication": "$n(\\text{e}^-) = \\dfrac{Q}{F} = \\dfrac{48250}{96500} = 0{,}50$ mol. Le distracteur $2{,}0$ mol inverse la division ($F/Q$) : penser à vérifier que $Q < F$ implique moins d'une mole d'électrons."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "constante-de-faraday",
+      "enonce": "Quelle relation lie la constante de Faraday $F$, le nombre d'Avogadro $\\mathcal{N}_A$ et la charge élémentaire $e$ ?",
+      "choix": [
+        "$F = \\mathcal{N}_A \\times e$",
+        "$F = \\dfrac{\\mathcal{N}_A}{e}$",
+        "$F = \\dfrac{e}{\\mathcal{N}_A}$",
+        "$F = \\mathcal{N}_A + e$"
+      ],
+      "reponse": 0,
+      "explication": "$F = \\mathcal{N}_A \\times e$ : la charge d'une mole d'électrons est le produit du nombre d'électrons par mole ($\\mathcal{N}_A$) par la charge de chacun ($e$). Numériquement $6{,}02\\times10^{23} \\times 1{,}60\\times10^{-19} \\approx 96500$ C·mol⁻¹."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "Dépôt de cuivre : $\\text{Cu}^{2+} + 2\\,\\text{e}^- \\rightarrow \\text{Cu}$. Une charge $Q = 1930$ C traverse la cellule. Quelle masse de cuivre se dépose ? ($M(\\text{Cu}) = 63{,}5$ g·mol⁻¹, $F = 96500$ C·mol⁻¹)",
+      "choix": [
+        "$0{,}64$ g",
+        "$1{,}3$ g",
+        "$0{,}32$ g",
+        "$0{,}020$ g"
+      ],
+      "reponse": 0,
+      "explication": "$n(\\text{e}^-) = \\dfrac{1930}{96500} = 0{,}020$ mol ; comme il faut **2** électrons par atome, $n(\\text{Cu}) = \\dfrac{0{,}020}{2} = 0{,}010$ mol. Donc $m = n\\,M = 0{,}010 \\times 63{,}5 = 0{,}64$ g. Le distracteur $1{,}3$ g oublie de diviser par $2$ (rapport $1{:}1$ supposé à tort)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "quantite-de-matiere-transformee",
+      "enonce": "À l'anode d'une électrolyse : $2\\,\\text{Cl}^- \\rightarrow \\text{Cl}_2 + 2\\,\\text{e}^-$. Si $0{,}40$ mol d'électrons y sont échangés, quel volume de dichlore se forme ? ($V_m = 24$ L·mol⁻¹)",
+      "choix": [
+        "$9{,}6$ L",
+        "$4{,}8$ L",
+        "$2{,}4$ L",
+        "$0{,}40$ L"
+      ],
+      "reponse": 1,
+      "explication": "La demi-équation libère $2$ électrons par molécule de $\\text{Cl}_2$ : $n(\\text{Cl}_2) = \\dfrac{n(\\text{e}^-)}{2} = \\dfrac{0{,}40}{2} = 0{,}20$ mol. Puis $V = n\\,V_m = 0{,}20 \\times 24 = 4{,}8$ L. Le distracteur $9{,}6$ L oublie de diviser par $2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "charge-q-i-dt",
+      "enonce": "Au cours d'une électrolyse, l'intensité $I$ n'est **pas** constante mais varie au cours du temps. Comment détermine-t-on la charge totale $Q$ ayant circulé ?",
+      "choix": [
+        "$Q$ est l'aire sous la courbe $I(t)$",
+        "$Q = I_{\\max} \\times \\Delta t$",
+        "$Q = \\dfrac{I_{\\text{moyen}}}{\\Delta t}$",
+        "on ne peut pas déterminer $Q$ dans ce cas"
+      ],
+      "reponse": 0,
+      "explication": "La relation $Q = I\\,\\Delta t$ ne vaut que si $I$ est constant. Quand $I$ varie, la charge est l'**aire sous la courbe** $I(t)$ (intégrale du courant). Prendre $I_{\\max}\\,\\Delta t$ surestime $Q$, et diviser par $\\Delta t$ n'a pas la bonne dimension."
+    }
+  ]
 }

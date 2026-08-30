@@ -124,6 +124,116 @@
       ],
       "reponse": 0,
       "explication": "$\\Delta = 9 + 16 = 25$, $\\sqrt{\\Delta} = 5$, donc $x_1 = \\dfrac{3-5}{4} = -\\dfrac{1}{2}$ et $x_2 = \\dfrac{3+5}{4} = 2$. La forme factorisée est $2\\left(x + \\dfrac{1}{2}\\right)(x-2)$, et en distribuant le $2$ dans la première parenthèse : $(2x+1)(x-2)$. N'oublie jamais le coefficient $a$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "forme-factorisee",
+      "enonce": "Quelles sont les racines de $f(x) = 2(x - 4)(x + 1)$ ?",
+      "choix": ["$4$ et $-1$", "$-4$ et $1$", "$2$ et $-4$", "$4$ et $1$"],
+      "reponse": 0,
+      "explication": "Un produit est nul si l'un de ses facteurs l'est : $x - 4 = 0$ donne $4$, et $x + 1 = 0$ donne $-1$. Piège : lire les signes tels quels ($-4$ et $1$) au lieu de résoudre chaque facteur. Le coefficient $2$ ne s'annule jamais."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "discriminant",
+      "enonce": "Si le discriminant d'un trinôme vérifie $\\Delta < 0$, combien a-t-il de racines réelles ?",
+      "choix": ["aucune", "une seule", "deux", "une infinité"],
+      "reponse": 0,
+      "explication": "$\\Delta < 0$ signifie **aucune racine réelle** : la parabole ne coupe pas l'axe des abscisses. Piège : conclure « pas de solution » sans préciser *dans $\\mathbb{R}$*. Un discriminant nul donnerait une racine double, un discriminant positif deux racines."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "identite-remarquable",
+      "enonce": "Quelles sont les racines de $f(x) = x^2 - 16$ ?",
+      "choix": ["$4$ et $-4$", "$16$ et $-16$", "$4$ (racine double)", "$8$ et $-8$"],
+      "reponse": 0,
+      "explication": "On reconnaît une différence de carrés : $x^2 - 16 = (x-4)(x+4)$, donc les racines sont $4$ et $-4$. Piège : croire que la racine est $16$, ou n'en donner qu'une seule en oubliant la valeur négative."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "somme-produit",
+      "enonce": "Pour $f(x) = x^2 - 7x + 10$, que valent la somme $S$ et le produit $P$ des racines ?",
+      "choix": [
+        "$S = 7$ et $P = 10$",
+        "$S = -7$ et $P = 10$",
+        "$S = 7$ et $P = -10$",
+        "$S = 10$ et $P = 7$"
+      ],
+      "reponse": 0,
+      "explication": "$S = -\\dfrac{b}{a} = -\\dfrac{-7}{1} = 7$ et $P = \\dfrac{c}{a} = \\dfrac{10}{1} = 10$. Piège : oublier le double signe de $S$ et écrire $-7$. Vérification : les racines sont $2$ et $5$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "racine-evidente",
+      "enonce": "$f(x) = x^2 - 3x - 4$. En remarquant que $-1$ est racine évidente, quelle est l'autre racine ?",
+      "choix": ["$4$", "$-4$", "$3$", "$1$"],
+      "reponse": 0,
+      "explication": "$f(-1) = 1 + 3 - 4 = 0$, donc $-1$ est racine. Le produit des racines vaut $P = \\dfrac{c}{a} = -4$, donc la seconde est $\\dfrac{-4}{-1} = 4$. Piège : oublier le signe et donner $-4$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "discriminant",
+      "enonce": "Quel est le discriminant de $f(x) = x^2 - 6x + 9$ ?",
+      "choix": ["$0$", "$36$", "$-36$", "$72$"],
+      "reponse": 0,
+      "explication": "$\\Delta = b^2 - 4ac = (-6)^2 - 4 \\times 1 \\times 9 = 36 - 36 = 0$. Un discriminant nul signale une **racine double** (ici $3$). On aurait pu le voir directement : $x^2 - 6x + 9 = (x-3)^2$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "somme-produit-reciproque",
+      "enonce": "Deux nombres ont pour somme $3$ et pour produit $-10$. De quelle équation sont-ils les racines ?",
+      "choix": [
+        "$x^2 - 3x - 10 = 0$",
+        "$x^2 + 3x - 10 = 0$",
+        "$x^2 - 3x + 10 = 0$",
+        "$x^2 + 10x - 3 = 0$"
+      ],
+      "reponse": 0,
+      "explication": "Deux nombres de somme $s$ et de produit $p$ sont racines de $x^2 - sx + p$. Ici $s = 3$ et $p = -10$, d'où $x^2 - 3x - 10$. Ce sont $5$ et $-2$. Piège : le signe **moins** porte sur la somme, pas sur le produit."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "signe",
+      "enonce": "$f(x) = x^2 - x - 6$ a pour racines $-2$ et $3$. Sur quel intervalle a-t-on $f(x) < 0$ ?",
+      "choix": [
+        "$]-2\\,;3[$",
+        "$]-\\infty\\,;-2[ \\ \\cup \\ ]3\\,;+\\infty[$",
+        "$\\mathbb{R}$ tout entier",
+        "Sur aucun intervalle"
+      ],
+      "reponse": 0,
+      "explication": "Le trinôme est du signe de $a$ à l'**extérieur** des racines. Ici $a = 1 > 0$, donc $f$ est positive à l'extérieur et **négative entre** les racines : $]-2\\,;3[$. Piège : confondre l'intérieur et l'extérieur des racines."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "forme-canonique",
+      "enonce": "Quelles sont les coordonnées du sommet de la parabole d'équation $y = 2x^2 - 8x + 5$ ?",
+      "choix": ["$(2\\,;-3)$", "$(-2\\,;29)$", "$(2\\,;5)$", "$(4\\,;5)$"],
+      "reponse": 0,
+      "explication": "$\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-8}{4} = 2$, puis $\\beta = f(2) = 2 \\times 4 - 8 \\times 2 + 5 = 8 - 16 + 5 = -3$. Le sommet est $(2\\,;-3)$. Comme $a > 0$, c'est un **minimum**. Piège : oublier le signe moins et lire $\\alpha = -2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "factorisation",
+      "enonce": "Quelle est la forme factorisée de $f(x) = 3x^2 + 5x - 2$ ?",
+      "choix": [
+        "$(x + 2)(3x - 1)$",
+        "$3(x + 2)(x - 1)$",
+        "$(3x + 2)(x - 1)$",
+        "$(x - 2)(3x + 1)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\Delta = 25 + 24 = 49$, $\\sqrt{\\Delta} = 7$, donc $x_1 = \\dfrac{-5-7}{6} = -2$ et $x_2 = \\dfrac{-5+7}{6} = \\dfrac{1}{3}$. La forme est $3(x+2)\\left(x - \\dfrac{1}{3}\\right)$ ; en distribuant le $3$ dans la seconde parenthèse : $(x+2)(3x-1)$. Vérification : $(x+2)(3x-1) = 3x^2 + 5x - 2$ ✓."
     }
   ]
 }

@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "exponentielle-complexe",
       "enonce": "Que vaut $\\mathrm{e}^{\\mathrm{i}\\pi}$ ?",
-      "choix": ["$-1$", "$1$", "$\\mathrm{i}$", "$0$"],
+      "choix": [
+        "$-1$",
+        "$1$",
+        "$\\mathrm{i}$",
+        "$0$"
+      ],
       "reponse": 0,
       "explication": "$\\mathrm{e}^{\\mathrm{i}\\pi} = \\cos\\pi + \\mathrm{i}\\sin\\pi = -1 + 0 = -1$. Le piège est de croire qu'une exponentielle est toujours positive : c'est vrai pour $\\mathrm{e}^x$ avec $x$ réel, mais $\\mathrm{e}^{\\mathrm{i}\\theta}$ tourne sur le cercle trigonométrique."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "forme-exponentielle",
       "enonce": "Quel est le module de $z = 5\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$ ?",
-      "choix": ["$5$", "$\\dfrac{\\pi}{3}$", "$\\dfrac{5\\pi}{3}$", "$\\mathrm{e}^{5}$"],
+      "choix": [
+        "$5$",
+        "$\\dfrac{\\pi}{3}$",
+        "$\\dfrac{5\\pi}{3}$",
+        "$\\mathrm{e}^{5}$"
+      ],
       "reponse": 0,
       "explication": "Dans l'écriture $r\\,\\mathrm{e}^{\\mathrm{i}\\theta}$, le module est $r = 5$ et l'argument est $\\theta = \\pi/3$. Le piège classique est de confondre les deux rôles : le module est devant, l'argument est dans l'exposant."
     },
@@ -139,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "On linéarise d'abord : $\\cos^2 t = \\frac{1}{2} + \\frac{\\cos(2t)}{2}$, puis on primitive : $\\frac{t}{2} + \\frac{\\sin(2t)}{4}$. Le piège du dernier choix : oublier de diviser par $2$ en primitivant $\\cos(2t)$. Le choix $\\frac{t}{2} - \\frac{\\sin(2t)}{4}$ est la primitive de $\\sin^2 t$, pas de $\\cos^2 t$. Quant à $\\frac{\\cos^3 t}{3}$, primitiver n'est pas l'inverse de dériver terme à terme sur la puissance."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "exponentielle-complexe",
+      "enonce": "Que vaut $\\mathrm{e}^{-\\mathrm{i}\\pi/2}$ ?",
+      "choix": [
+        "$-\\mathrm{i}$",
+        "$\\mathrm{i}$",
+        "$-1$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathrm{e}^{-\\mathrm{i}\\pi/2} = \\cos\\left(-\\frac{\\pi}{2}\\right) + \\mathrm{i}\\sin\\left(-\\frac{\\pi}{2}\\right) = 0 - \\mathrm{i} = -\\mathrm{i}$. Le piège : oublier le signe de l'angle et répondre $\\mathrm{i}$ (qui vaut $\\mathrm{e}^{+\\mathrm{i}\\pi/2}$), ou confondre avec $\\mathrm{e}^{\\mathrm{i}\\pi} = -1$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "transformations",
+      "enonce": "Dans le plan complexe, la transformation $z \\mapsto z + 2 - 3\\mathrm{i}$ est :",
+      "choix": [
+        "la translation de vecteur d'affixe $2 - 3\\mathrm{i}$",
+        "l'homothétie de centre $O$ et de rapport $2$",
+        "la rotation de centre $O$ et d'angle $\\dfrac{\\pi}{2}$",
+        "la translation de vecteur d'affixe $-2 + 3\\mathrm{i}$"
+      ],
+      "reponse": 0,
+      "explication": "Ajouter une constante $b$ à l'affixe translate le point : $z \\mapsto z + b$ est la translation de vecteur d'affixe $b = 2 - 3\\mathrm{i}$ (soit $2$ vers la droite et $3$ vers le bas). Le piège : confondre avec la multiplication $z \\mapsto az$ (qui donne rotation/homothétie), ou prendre l'affixe opposée $-2 + 3\\mathrm{i}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "linearisation",
+      "enonce": "Quelle est la linéarisation de $\\sin^2\\theta$ ?",
+      "choix": [
+        "$\\dfrac{1 - \\cos(2\\theta)}{2}$",
+        "$\\dfrac{1 + \\cos(2\\theta)}{2}$",
+        "$\\dfrac{1 - \\sin(2\\theta)}{2}$",
+        "$\\dfrac{\\cos(2\\theta) - 1}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "On isole $\\sin^2\\theta$ dans $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$ : le signe $-$ va avec $\\sin^2$ (et le $+$ avec $\\cos^2$). Test en $\\theta = 0$ : $\\sin^2 0 = 0$ et $\\frac{1 - \\cos 0}{2} = 0$, cohérent. Le piège est d'inverser les signes ou de mettre $\\sin(2\\theta)$ au numérateur."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "operations-exponentielle",
+      "enonce": "Que vaut $\\dfrac{6\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}}{3\\,\\mathrm{e}^{\\mathrm{i}\\pi/6}}$ ?",
+      "choix": [
+        "$2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$",
+        "$2\\,\\mathrm{e}^{\\mathrm{i}2\\pi/3}$",
+        "$18\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$",
+        "$2\\,\\mathrm{e}^{-\\mathrm{i}\\pi/3}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour un quotient, les modules se DIVISENT ($6/3 = 2$) et les arguments se SOUSTRAIENT ($\\frac{\\pi}{2} - \\frac{\\pi}{6} = \\frac{3\\pi - \\pi}{6} = \\frac{2\\pi}{6} = \\frac{\\pi}{3}$). Le piège : additionner les arguments ($\\frac{2\\pi}{3}$), multiplier les modules ($18$) ou se tromper de signe dans la soustraction."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "passage-formes",
+      "enonce": "Quelle est la forme exponentielle de $z = -1 + \\mathrm{i}\\sqrt{3}$ ?",
+      "choix": [
+        "$2\\,\\mathrm{e}^{\\mathrm{i}2\\pi/3}$",
+        "$2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$",
+        "$4\\,\\mathrm{e}^{\\mathrm{i}2\\pi/3}$",
+        "$2\\,\\mathrm{e}^{-\\mathrm{i}2\\pi/3}$"
+      ],
+      "reponse": 0,
+      "explication": "$|z| = \\sqrt{(-1)^2 + (\\sqrt3)^2} = \\sqrt{4} = 2$, puis $\\cos\\theta = -\\frac{1}{2}$ et $\\sin\\theta = \\frac{\\sqrt3}{2}$ : le point est dans le deuxième quadrant, donc $\\theta = \\frac{2\\pi}{3}$. Le piège : oublier le signe de la partie réelle et prendre $\\frac{\\pi}{3}$, ne pas prendre la racine dans le module ($4$), ou se tromper de signe d'argument."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "formules-addition",
+      "enonce": "Laquelle de ces égalités est correcte pour tous réels $a$ et $b$ ?",
+      "choix": [
+        "$\\cos(a - b) = \\cos a\\cos b + \\sin a\\sin b$",
+        "$\\cos(a + b) = \\cos a\\cos b + \\sin a\\sin b$",
+        "$\\cos(a - b) = \\cos a\\cos b - \\sin a\\sin b$",
+        "$\\sin(a + b) = \\sin a\\sin b + \\cos a\\cos b$"
+      ],
+      "reponse": 0,
+      "explication": "En remplaçant $b$ par $-b$ dans $\\cos(a+b) = \\cos a\\cos b - \\sin a\\sin b$, le sinus étant impair, on obtient $\\cos(a-b) = \\cos a\\cos b + \\sin a\\sin b$. Le piège : mettre le $+$ dans $\\cos(a+b)$ (qui prend un $-$) ou écrire $\\sin(a+b)$ avec deux produits de mêmes fonctions — c'est $\\sin a\\cos b + \\cos a\\sin b$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "duplication",
+      "enonce": "On sait que $\\sin a = \\dfrac{3}{5}$ et $\\cos a = \\dfrac{4}{5}$. Que vaut $\\sin(2a)$ ?",
+      "choix": [
+        "$\\dfrac{24}{25}$",
+        "$\\dfrac{6}{5}$",
+        "$\\dfrac{7}{25}$",
+        "$\\dfrac{12}{25}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\sin(2a) = 2\\sin a\\cos a = 2 \\times \\frac{3}{5} \\times \\frac{4}{5} = \\frac{24}{25}$. Le piège : oublier le facteur $2$ ($\\frac{12}{25}$), croire que $\\sin(2a) = 2\\sin a = \\frac{6}{5} > 1$ (impossible pour un sinus), ou confondre avec $\\cos(2a) = \\cos^2 a - \\sin^2 a = \\frac{7}{25}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "signal",
+      "enonce": "Le signal $u(t) = \\sqrt{3}\\cos(\\omega t) + \\sin(\\omega t)$ s'écrit sous la forme $A\\cos(\\omega t + \\varphi)$ :",
+      "choix": [
+        "$2\\cos\\!\\left(\\omega t - \\dfrac{\\pi}{6}\\right)$",
+        "$2\\cos\\!\\left(\\omega t + \\dfrac{\\pi}{6}\\right)$",
+        "$2\\cos\\!\\left(\\omega t - \\dfrac{\\pi}{3}\\right)$",
+        "$4\\cos\\!\\left(\\omega t - \\dfrac{\\pi}{6}\\right)$"
+      ],
+      "reponse": 0,
+      "explication": "$A = \\sqrt{(\\sqrt3)^2 + 1^2} = \\sqrt{4} = 2$, puis $\\cos\\varphi = \\frac{a}{A} = \\frac{\\sqrt3}{2}$ et $\\sin\\varphi = -\\frac{b}{A} = -\\frac{1}{2}$, d'où $\\varphi = -\\frac{\\pi}{6}$. Le piège n°1 est le signe de la phase ($\\sin\\varphi = -b/A$) ; le choix à $\\frac{\\pi}{3}$ intervertit les rôles de $a$ et $b$, et le choix $4$ oublie la racine dans $A$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "equations",
+      "enonce": "Quelle est la solution dans $\\mathbb{C}$ de l'équation $(2 - \\mathrm{i})\\,z = 5$ ?",
+      "choix": [
+        "$z = 2 + \\mathrm{i}$",
+        "$z = 2 - \\mathrm{i}$",
+        "$z = 1 + 2\\mathrm{i}$",
+        "$z = 10 - 5\\mathrm{i}$"
+      ],
+      "reponse": 0,
+      "explication": "$z = \\dfrac{5}{2 - \\mathrm{i}} = \\dfrac{5(2 + \\mathrm{i})}{(2 - \\mathrm{i})(2 + \\mathrm{i})} = \\dfrac{5(2 + \\mathrm{i})}{4 + 1} = 2 + \\mathrm{i}$. Le piège : oublier de multiplier par le conjugué et écrire $z = 2 - \\mathrm{i}$, ou faire $z = 5(2 - \\mathrm{i}) = 10 - 5\\mathrm{i}$ en confondant division et multiplication."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "transformations",
+      "enonce": "Dans le plan complexe, la transformation $z \\mapsto 2\\mathrm{i}\\,z$ est :",
+      "choix": [
+        "la composée de la rotation de centre $O$ et d'angle $\\dfrac{\\pi}{2}$ et de l'homothétie de centre $O$ et de rapport $2$",
+        "la rotation de centre $O$ et d'angle $\\dfrac{\\pi}{2}$ seule",
+        "l'homothétie de centre $O$ et de rapport $2$ seule",
+        "la translation de vecteur d'affixe $2\\mathrm{i}$"
+      ],
+      "reponse": 0,
+      "explication": "$2\\mathrm{i} = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$ : multiplier par ce nombre multiplie le module par $2$ (homothétie de rapport $2$) et ajoute $\\frac{\\pi}{2}$ à l'argument (rotation d'un quart de tour). Les pièges : ne garder que la rotation (oubli du module $2$), que l'homothétie (oubli de l'argument), ou confondre avec $z \\mapsto z + 2\\mathrm{i}$ (translation)."
     }
   ]
 }

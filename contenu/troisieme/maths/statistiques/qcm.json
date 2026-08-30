@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "effectifs-cumules",
       "enonce": "Dans un tableau, les valeurs $6$, $8$, $10$, $12$ ont pour effectifs respectifs $2$, $5$, $6$, $7$. Quel est l'effectif cumulé croissant de la valeur $10$ ?",
-      "choix": ["$13$", "$6$", "$7$", "$20$"],
+      "choix": [
+        "$13$",
+        "$6$",
+        "$7$",
+        "$20$"
+      ],
       "reponse": 0,
       "explication": "L'effectif cumulé croissant compte toutes les données **inférieures ou égales** à $10$ : $2+5+6 = 13$. Le piège est de recopier l'effectif de $10$ tout seul ($6$) sans cumuler, ou de s'arrêter à la valeur précédente ($7$). $20$ est l'effectif total, c'est-à-dire le **dernier** cumul."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "boite-a-moustaches",
       "enonce": "Sur une boite à moustaches, que représente le trait vertical tracé à l'intérieur de la boite ?",
-      "choix": ["La moyenne de la série", "La médiane de la série", "L'étendue de la série", "L'effectif total"],
+      "choix": [
+        "La moyenne de la série",
+        "La médiane de la série",
+        "L'étendue de la série",
+        "L'effectif total"
+      ],
       "reponse": 1,
       "explication": "Les cinq valeurs de position dessinées sont le minimum, $Q_1$, la **médiane**, $Q_3$ et le maximum : le trait intérieur est la médiane. Le piège est de croire qu'on lit la moyenne sur une boite — elle n'y figure jamais, pas plus que les effectifs. L'étendue, elle, est la longueur totale d'une moustache à l'autre, pas un trait."
     },
@@ -33,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "mediane-tableau",
       "enonce": "Les valeurs $5$, $6$, $7$, $8$ ont pour effectifs respectifs $4$, $6$, $7$, $3$. Quelle est la médiane de cette série ?",
-      "choix": ["$6$", "$6{,}5$", "$7$", "$6{,}45$"],
+      "choix": [
+        "$6$",
+        "$6{,}5$",
+        "$7$",
+        "$6{,}45$"
+      ],
       "reponse": 1,
       "explication": "L'effectif total vaut $20$, donc il faut les rangs $10$ et $11$. Les cumuls sont $4$ ; $10$ ; $17$ ; $20$ : le rang $10$ tombe sur $6$, le rang $11$ sur $7$. La médiane est leur demi-somme, $\\dfrac{6+7}{2} = 6{,}5$. Le piège est de ne garder qu'une des deux valeurs centrales ($6$ ou $7$) ; $6{,}45$ est la **moyenne** ($\\dfrac{129}{20}$), pas la médiane."
     },
@@ -42,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "quartiles",
       "enonce": "Notes de $25$ élèves : les valeurs $6$, $8$, $10$, $12$, $14$, $16$ ont pour effectifs cumulés croissants $2$ ; $7$ ; $13$ ; $20$ ; $23$ ; $25$. Quel est le premier quartile $Q_1$ ?",
-      "choix": ["$8$", "$6$", "$10$", "$6{,}25$"],
+      "choix": [
+        "$8$",
+        "$6$",
+        "$10$",
+        "$6{,}25$"
+      ],
       "reponse": 0,
       "explication": "$\\dfrac{25}{4} = 6{,}25$ n'est pas entier : on arrondit au-dessus, le rang cherché est $7$. Le premier cumul qui atteint $7$ est celui de la note $8$. Le piège majeur est de répondre $6{,}25$ : c'est un **rang**, une place dans la file, pas une note. $10$ est la médiane et $6$ le minimum."
     },
@@ -51,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "effectifs-cumules",
       "enonce": "Même série de $25$ élèves, cumuls croissants $2$ ; $7$ ; $13$ ; $20$ ; $23$ ; $25$ pour les notes $6$ ; $8$ ; $10$ ; $12$ ; $14$ ; $16$. Combien d'élèves ont eu une note **strictement supérieure** à $12$ ?",
-      "choix": ["$20$", "$12$", "$7$", "$5$"],
+      "choix": [
+        "$20$",
+        "$12$",
+        "$7$",
+        "$5$"
+      ],
       "reponse": 3,
       "explication": "Un cumul croissant répond à « au plus » : $20$ élèves ont eu $12$ ou moins. Pour « plus de $12$ », il faut passer au complément : $25 - 20 = 5$. Le piège est de lire le cumul tel quel ($20$) sans le soustraire à l'effectif total. $7$ est le cumul de la note $8$, et $12$ est une note, pas un nombre d'élèves."
     },
@@ -74,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "diagramme-en-barres",
       "enonce": "Un diagramme en barres donne, pour les valeurs $1$ ; $2$ ; $3$ ; $4$ ; $5$, les hauteurs $4$ ; $5$ ; $3$ ; $6$ ; $2$. Quel est le troisième quartile $Q_3$ ?",
-      "choix": ["$3$", "$6$", "$5$", "$4$"],
+      "choix": [
+        "$3$",
+        "$6$",
+        "$5$",
+        "$4$"
+      ],
       "reponse": 3,
       "explication": "La hauteur d'une barre est un **effectif** : le total vaut $4+5+3+6+2 = 20$ et les cumuls sont $4$ ; $9$ ; $12$ ; $18$ ; $20$. $\\dfrac{3 \\times 20}{4} = 15$ : le premier cumul qui atteint le rang $15$ est $18$, celui de la valeur $4$. Le piège est de chercher $Q_3$ sur la ligne des hauteurs ($6$) au lieu des valeurs, ou de le confondre avec la médiane ($3$) ou le maximum ($5$)."
     },
@@ -119,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "$24$ est pair : la série a **deux** valeurs centrales, celles des rangs $\\dfrac{24}{2} = 12$ et $12+1 = 13$, et la convention est d'en prendre la demi-somme. Le piège est de n'en garder qu'une des deux (rang $12$ ou rang $13$). Quant au rang $12{,}5$, il n'existe pas : c'est la médiane qui peut valoir un nombre « à mi-chemin », jamais le rang, qui est une place dans la file."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "effectifs-cumules",
+      "enonce": "Les valeurs $3$, $4$, $5$, $6$ ont pour effectifs respectifs $1$, $3$, $4$, $2$. Quel est l'effectif cumulé croissant de la valeur $5$ ?",
+      "choix": [
+        "$8$",
+        "$4$",
+        "$5$",
+        "$10$"
+      ],
+      "reponse": 0,
+      "explication": "On additionne les effectifs depuis la gauche jusqu'à $5$ inclus : $1+3+4 = 8$. Le piège est de recopier l'effectif de $5$ tout seul ($4$) sans cumuler, ou de confondre avec la valeur ($5$). $10$ est l'effectif total, c'est-à-dire le **dernier** cumul, pas celui de $5$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "boite-a-moustaches",
+      "enonce": "Une boite à moustaches a pour minimum $3$, $Q_1 = 5$, médiane $8$, $Q_3 = 11$ et maximum $15$. Quelle est l'étendue de la série ?",
+      "choix": [
+        "$12$",
+        "$6$",
+        "$8$",
+        "$15$"
+      ],
+      "reponse": 0,
+      "explication": "L'étendue est la longueur d'une moustache à l'autre : $\\text{max} - \\text{min} = 15 - 3 = 12$. Le piège est de calculer la **largeur de la boite** $Q_3 - Q_1 = 6$, qui mesure la moitié centrale, pas l'étendue. $8$ est la médiane et $15$ seulement le maximum."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "mediane-tableau",
+      "enonce": "Les valeurs $2$, $3$, $4$, $5$ ont pour effectifs respectifs $3$, $4$, $5$, $3$. Quelle est la médiane de cette série ?",
+      "choix": [
+        "$4$",
+        "$3$",
+        "$8$",
+        "$3{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "L'effectif total vaut $15$ (impair), donc on cherche le rang $\\dfrac{15+1}{2} = 8$. Les cumuls sont $3$ ; $7$ ; $12$ ; $15$ : le premier qui atteint $8$ est celui de $4$. La médiane est $4$. Le piège est de donner le **rang** $8$ au lieu de la valeur, ou de faire une demi-somme inutile ici puisque $n$ est impair."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "quartiles",
+      "enonce": "Les valeurs $5$, $10$, $15$, $20$ ont pour effectifs respectifs $2$, $4$, $6$, $4$. Quel est le troisième quartile $Q_3$ ?",
+      "choix": [
+        "$15$",
+        "$20$",
+        "$12$",
+        "$10$"
+      ],
+      "reponse": 0,
+      "explication": "L'effectif total vaut $16$ et $\\dfrac{3\\times 16}{4} = 12$ est entier : on **garde** le rang $12$. Les cumuls sont $2$ ; $6$ ; $12$ ; $16$ : le premier qui atteint $12$ est celui de $15$. Le piège est de répondre $12$ (c'est un **rang**, pas une valeur) ou de confondre $Q_3$ avec le maximum $20$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "quartiles",
+      "enonce": "Les valeurs $1$, $2$, $3$, $4$, $5$ ont pour effectifs respectifs $3$, $2$, $5$, $6$, $4$. Quel est le premier quartile $Q_1$ ?",
+      "choix": [
+        "$2$",
+        "$3$",
+        "$1$",
+        "$5$"
+      ],
+      "reponse": 0,
+      "explication": "L'effectif total vaut $20$ et $\\dfrac{20}{4} = 5$ est entier : on garde le rang $5$. Les cumuls sont $3$ ; $5$ ; $10$ ; $16$ ; $20$ : le premier qui atteint $5$ est celui de la valeur $2$ (son cumul vaut exactement $5$). Le piège est de passer à la valeur suivante ($3$) en croyant qu'il faut **dépasser** strictement le rang : il faut l'atteindre."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "diagramme-en-barres",
+      "enonce": "Un diagramme en barres donne, pour les valeurs $10$ ; $11$ ; $12$ ; $13$ ; $14$, les hauteurs $3$ ; $5$ ; $4$ ; $6$ ; $2$. Quelle est la médiane ?",
+      "choix": [
+        "$12$",
+        "$11$",
+        "$6$",
+        "$13$"
+      ],
+      "reponse": 0,
+      "explication": "La hauteur d'une barre est un **effectif** : le total vaut $3+5+4+6+2 = 20$ et les cumuls sont $3$ ; $8$ ; $12$ ; $18$ ; $20$. Pour $n=20$ (pair), les rangs $10$ et $11$ tombent tous deux sur la valeur $12$ (premier cumul $\\geqslant 10$ et $\\geqslant 11$ : $12$). La médiane est $12$. Le piège est de lire la médiane sur les **hauteurs** ($6$ est la plus grande) au lieu des valeurs."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "effectifs-cumules",
+      "enonce": "Les notes $8$ ; $10$ ; $12$ ; $14$ ; $16$ ont pour effectifs cumulés croissants $3$ ; $9$ ; $15$ ; $19$ ; $22$. Combien d'élèves ont eu une note **strictement supérieure** à $12$ ?",
+      "choix": [
+        "$7$",
+        "$15$",
+        "$19$",
+        "$6$"
+      ],
+      "reponse": 0,
+      "explication": "Le cumul croissant répond à « au plus » : $15$ élèves ont eu $12$ ou moins. Pour « plus de $12$ », on prend le complément : $22 - 15 = 7$. Le piège est de lire le cumul $15$ tel quel sans le soustraire à l'effectif total $22$. $6$ est l'effectif de la note $12$ seule ($15-9$), pas le nombre d'élèves au-dessus."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "interpretation",
+      "enonce": "Deux séries ont même minimum $2$, même médiane $10$ et même maximum $18$. Pour A : $Q_1 = 8$ et $Q_3 = 12$ ; pour B : $Q_1 = 4$ et $Q_3 = 16$. Que peut-on conclure ?",
+      "choix": [
+        "A est plus homogène : sa moitié centrale tient sur $4$ points, contre $12$ pour B",
+        "Les deux séries se valent, puisque même médiane et même étendue",
+        "B est plus homogène, car sa boite est plus large",
+        "On ne peut rien conclure sans connaitre les effectifs"
+      ],
+      "reponse": 0,
+      "explication": "Médiane ($10$) et étendue ($16$) sont identiques : elles ne séparent pas les deux séries. C'est la **largeur de la boite** qui les distingue : $12-8 = 4$ pour A, $16-4 = 12$ pour B. Une boite large signifie des données **éclatées**, donc B est moins homogène. Le piège est de conclure « même médiane, donc même chose » : la boite décrit le cœur de la série, et deux boites se comparent même sans les effectifs."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "quartiles",
+      "enonce": "Les valeurs $1$ à $6$ ont pour effectifs respectifs $4$, $5$, $6$, $7$, $5$, $3$. Quel est le troisième quartile $Q_3$ ?",
+      "choix": [
+        "$5$",
+        "$4$",
+        "$22{,}5$",
+        "$6$"
+      ],
+      "reponse": 0,
+      "explication": "L'effectif total vaut $30$ et $\\dfrac{3\\times 30}{4} = 22{,}5$ n'est pas entier : on arrondit **au-dessus**, le rang cherché est $23$. Les cumuls sont $4$ ; $9$ ; $15$ ; $22$ ; $27$ ; $30$ : le premier qui atteint $23$ est celui de $5$ ($27$). Le piège est de s'arrêter à la valeur $4$ (cumul $22$, juste en dessous de $23$) ou de répondre $22{,}5$, qui est un **rang**, pas une valeur."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "interpretation",
+      "enonce": "Sur une boite à moustaches, la moustache de droite (de $Q_3$ au maximum) est très longue. Que peux-tu affirmer avec certitude ?",
+      "choix": [
+        "Au plus un quart des données se trouvent entre $Q_3$ et le maximum",
+        "Au moins un quart des données valent le maximum",
+        "Beaucoup d'élèves ont obtenu une valeur élevée",
+        "La moyenne de la série est proche du maximum"
+      ],
+      "reponse": 0,
+      "explication": "Par définition de $Q_3$, au moins trois quarts des données lui sont inférieures ou égales : il reste donc **au plus un quart** au-delà, entre $Q_3$ et le maximum. Le piège est de croire qu'une longue moustache signifie « beaucoup d'élèves » : elle peut n'être due qu'à **une seule** donnée extrême. Et la boite ne donne jamais la moyenne."
     }
   ]
 }

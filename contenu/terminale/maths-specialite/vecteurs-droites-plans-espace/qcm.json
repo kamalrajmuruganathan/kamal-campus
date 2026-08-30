@@ -29,7 +29,12 @@
       "difficulte": "facile",
       "notion": "base",
       "enonce": "Combien de vecteurs non coplanaires faut-il pour former une base de l'espace ?",
-      "choix": ["$2$", "$3$", "$4$", "une infinité"],
+      "choix": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "une infinité"
+      ],
       "reponse": 1,
       "explication": "Dans le plan, $2$ vecteurs non colinéaires suffisent ; dans l'espace il faut $3$ vecteurs **non coplanaires**, soit une direction de plus. Le piège est de garder le réflexe du plan et de répondre $2$."
     },
@@ -80,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "positions-relatives",
       "enonce": "Dans le cube $ABCDEFGH$, quelle est la position relative des droites $(AB)$ et $(CG)$ ?",
-      "choix": ["parallèles", "sécantes", "non coplanaires", "confondues"],
+      "choix": [
+        "parallèles",
+        "sécantes",
+        "non coplanaires",
+        "confondues"
+      ],
       "reponse": 2,
       "explication": "$(AB)$ est une arête horizontale du bas, $(CG)$ est un montant vertical : leurs directions diffèrent, donc elles ne sont pas parallèles, et elles n'ont aucun point commun. Il n'existe aucun plan les contenant toutes deux : c'est le cas **non coplanaire**, qui n'existe pas dans le plan."
     },
@@ -139,6 +149,146 @@
       ],
       "reponse": 3,
       "explication": "$\\overrightarrow{BD} = \\overrightarrow{AD} - \\overrightarrow{AB}$ est combinaison linéaire de $\\overrightarrow{AB}$ et $\\overrightarrow{AD}$ : les trois vecteurs sont donc coplanaires (tous dans le plan $ABCD$). Une base exige trois vecteurs **non coplanaires** ; l'orthogonalité, elle, n'a rien à voir (une base peut être quelconque)."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "egalite-vecteurs",
+      "enonce": "Dans le cube $ABCDEFGH$, à quel vecteur le vecteur $\\overrightarrow{AB}$ est-il égal ?",
+      "choix": [
+        "$\\overrightarrow{HG}$",
+        "$\\overrightarrow{GH}$",
+        "$\\overrightarrow{CD}$",
+        "$\\overrightarrow{BA}$"
+      ],
+      "reponse": 0,
+      "explication": "Sur le cube, $\\overrightarrow{AB} = \\overrightarrow{DC} = \\overrightarrow{EF} = \\overrightarrow{HG}$ : même direction, même sens, même longueur. Le piège est de choisir $\\overrightarrow{GH}$, $\\overrightarrow{CD}$ ou $\\overrightarrow{BA}$, qui ont la bonne direction mais le sens **opposé** : ce sont les opposés de $\\overrightarrow{AB}$, pas des vecteurs égaux."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "relation-chasles",
+      "enonce": "Dans le cube $ABCDEFGH$, simplifie la somme $\\overrightarrow{AB} + \\overrightarrow{BC} + \\overrightarrow{CG}$.",
+      "choix": [
+        "$\\overrightarrow{AC}$",
+        "$\\overrightarrow{AF}$",
+        "$\\overrightarrow{AG}$",
+        "$\\overrightarrow{CG}$"
+      ],
+      "reponse": 2,
+      "explication": "Par la relation de Chasles, $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$, puis $\\overrightarrow{AC} + \\overrightarrow{CG} = \\overrightarrow{AG}$ : les points intermédiaires s'éliminent, il reste l'origine et l'arrivée. S'arrêter à $\\overrightarrow{AC}$ oublie le dernier déplacement $\\overrightarrow{CG}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "coordonnees",
+      "enonce": "Dans le repère $(A\\,;\\overrightarrow{AB},\\overrightarrow{AD},\\overrightarrow{AE})$ du cube, quelles sont les coordonnées du sommet $C$ ?",
+      "choix": [
+        "$(1\\,;0\\,;1)$",
+        "$(1\\,;1\\,;0)$",
+        "$(1\\,;1\\,;1)$",
+        "$(0\\,;1\\,;1)$"
+      ],
+      "reponse": 1,
+      "explication": "$C$ est le sommet opposé à $A$ sur la face du bas : $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD}$, sans composante verticale. Les coordonnées sont donc $(1\\,;1\\,;0)$. Le piège est d'ajouter une hauteur et d'écrire $(1\\,;1\\,;1)$, qui sont en réalité les coordonnées de $G$ (au-dessus de $C$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "colinearite",
+      "enonce": "Les vecteurs $\\overrightarrow{u}\\,(1\\,;2\\,;-1)$ et $\\overrightarrow{v}\\,(-3\\,;-6\\,;3)$ sont-ils colinéaires ?",
+      "choix": [
+        "Oui, car $\\overrightarrow{v} = 3\\,\\overrightarrow{u}$",
+        "Non, aucun réel ne convient",
+        "Oui, car $\\overrightarrow{v} = -3\\,\\overrightarrow{u}$",
+        "Non, car les coordonnées changent de signe"
+      ],
+      "reponse": 2,
+      "explication": "On cherche $k$ tel que chaque coordonnée de $\\overrightarrow{v}$ vaille $k$ fois celle de $\\overrightarrow{u}$ : $-3 = k\\times 1$, $-6 = k\\times 2$, $3 = k\\times(-1)$ donnent tous $k = -3$. Les vecteurs sont colinéaires. Avec $k = 3$ on obtiendrait $(3\\,;6\\,;-3)$, faux : le signe du coefficient compte."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "combinaison-lineaire",
+      "enonce": "Dans le cube $ABCDEFGH$, exprime $\\overrightarrow{EC}$ en fonction de $\\overrightarrow{AB}$, $\\overrightarrow{AD}$ et $\\overrightarrow{AE}$.",
+      "choix": [
+        "$\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE}$",
+        "$\\overrightarrow{AB} + \\overrightarrow{AD} - \\overrightarrow{AE}$",
+        "$-\\overrightarrow{AB} - \\overrightarrow{AD} + \\overrightarrow{AE}$",
+        "$\\overrightarrow{AB} - \\overrightarrow{AD} - \\overrightarrow{AE}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\overrightarrow{EC} = \\overrightarrow{EA} + \\overrightarrow{AC} = -\\overrightarrow{AE} + \\overrightarrow{AB} + \\overrightarrow{AD}$. En coordonnées, $E(0\\,;0\\,;1)$ et $C(1\\,;1\\,;0)$ donnent $\\overrightarrow{EC}(1\\,;1\\,;-1)$. Le piège est d'oublier le signe $-$ devant $\\overrightarrow{AE}$ : on descend de $E$ (en haut) vers $C$ (en bas)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "positions-relatives",
+      "enonce": "Dans le cube $ABCDEFGH$, quelle est la position relative de la droite $(EF)$ et du plan $(ABCD)$ ?",
+      "choix": [
+        "incluse dans le plan",
+        "sécante en un point",
+        "parallèle au plan",
+        "confondue avec le plan"
+      ],
+      "reponse": 2,
+      "explication": "$(EF)$ est une arête de la face du haut ; son directeur $\\overrightarrow{EF} = \\overrightarrow{AB}$ appartient à la direction du plan $(ABCD)$, mais la droite n'est pas dans ce plan (elle est un étage au-dessus). Elle est donc **parallèle** au plan. La croire sécante oublierait qu'elle ne perce jamais la face du bas."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "droite-directeur",
+      "enonce": "Dans le cube $ABCDEFGH$, lequel de ces vecteurs est un vecteur directeur de la droite $(EG)$ ?",
+      "choix": [
+        "$\\overrightarrow{AB} + \\overrightarrow{AE}$",
+        "$\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AE}$",
+        "$\\overrightarrow{AD} - \\overrightarrow{AB}$",
+        "$\\overrightarrow{AB} + \\overrightarrow{AD}$"
+      ],
+      "reponse": 3,
+      "explication": "$\\overrightarrow{EG} = \\overrightarrow{EF} + \\overrightarrow{FG} = \\overrightarrow{AB} + \\overrightarrow{AD}$ : c'est la diagonale de la face du haut, de même direction que $\\overrightarrow{AC}$. Le choix $\\overrightarrow{AB}+\\overrightarrow{AD}+\\overrightarrow{AE}$ est la grande diagonale $\\overrightarrow{AG}$, pas la direction de $(EG)$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "coplanarite",
+      "enonce": "Les vecteurs $\\overrightarrow{u}\\,(1\\,;0\\,;1)$, $\\overrightarrow{v}\\,(0\\,;1\\,;1)$ et $\\overrightarrow{w}\\,(1\\,;1\\,;2)$ sont-ils coplanaires ?",
+      "choix": [
+        "Oui, car $\\overrightarrow{w} = \\overrightarrow{u} + \\overrightarrow{v}$",
+        "Non, ils forment une base de l'espace",
+        "Oui, car $\\overrightarrow{w} = \\overrightarrow{u} - \\overrightarrow{v}$",
+        "Non, car $\\overrightarrow{w}$ n'est colinéaire ni à $\\overrightarrow{u}$ ni à $\\overrightarrow{v}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\overrightarrow{u} + \\overrightarrow{v} = (1\\,;1\\,;2) = \\overrightarrow{w}$ : le troisième vecteur est combinaison linéaire des deux premiers (non colinéaires), donc les trois sont coplanaires et ne forment **pas** une base. La coplanarité n'exige aucune colinéarité entre les vecteurs : c'est le piège du dernier choix."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "base",
+      "enonce": "Dans le cube $ABCDEFGH$, les vecteurs $\\overrightarrow{AB}$, $\\overrightarrow{AC}$ et $\\overrightarrow{AE}$ forment-ils une base de l'espace ?",
+      "choix": [
+        "Non, car $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD}$",
+        "Oui, car $\\overrightarrow{AE}$ n'est pas dans le plan $(ABCD)$ et $\\overrightarrow{AB},\\overrightarrow{AC}$ ne sont pas colinéaires",
+        "Non, car les trois vecteurs sont coplanaires",
+        "Oui, car les trois vecteurs sont deux à deux orthogonaux"
+      ],
+      "reponse": 1,
+      "explication": "$\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ sont deux vecteurs non colinéaires de la face du bas, et $\\overrightarrow{AE}$ (vertical) n'appartient pas à cette face : les trois vecteurs sont **non coplanaires**, donc forment une base. L'orthogonalité n'est pas requise ($\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ ne le sont d'ailleurs pas) : une base peut être quelconque."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "positions-relatives",
+      "enonce": "Dans le cube $ABCDEFGH$, quelle est la position relative des droites $(AF)$ et $(DG)$ ?",
+      "choix": [
+        "sécantes",
+        "non coplanaires",
+        "strictement parallèles",
+        "confondues"
+      ],
+      "reponse": 2,
+      "explication": "$\\overrightarrow{AF} = \\overrightarrow{AB} + \\overrightarrow{AE}$ et $\\overrightarrow{DG} = \\overrightarrow{DC} + \\overrightarrow{CG} = \\overrightarrow{AB} + \\overrightarrow{AE}$ : mêmes directeurs, les droites sont donc parallèles. Comme $A$ n'appartient pas à $(DG)$, elles ne sont pas confondues : elles sont **strictement parallèles** (deux diagonales des faces $ABFE$ et $DCGH$)."
     }
   ]
 }

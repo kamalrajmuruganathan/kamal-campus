@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "La formule du produit $P(A \\cap B) = P(A) \\times P_A(B)$ découle directement de la définition de $P_A(B)$ : elle est toujours vraie. Le piège : $P(A) \\times P(B)$ ne vaut l'intersection que dans des cas particuliers (événements indépendants), et les deux dernières égalités sont les deux confusions types du chapitre — $P_A(B)$, $P_B(A)$ et $P(A \\cap B)$ sont en général trois nombres différents."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "On donne $P(A) = 0{,}4$ et $P(A \\cap B) = 0{,}1$. Que vaut $P_A(B)$ ?",
+      "choix": [
+        "$0{,}25$",
+        "$0{,}04$",
+        "$0{,}5$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition, $P_A(B) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0{,}1}{0{,}4} = 0{,}25$. Le piège : $0{,}04$ multiplie au lieu de diviser, et $4$ divise dans le mauvais sens ($0{,}4/0{,}1$) — une probabilité ne dépasse jamais $1$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "arbre-pondere",
+      "enonce": "Sur une branche d'un arbre, on lit $P_A(B) = 0{,}7$. Que vaut $P_A(\\bar{B})$ ?",
+      "choix": [
+        "$0{,}3$",
+        "$0{,}7$",
+        "$1$",
+        "on ne peut pas savoir sans $P(A)$"
+      ],
+      "reponse": 0,
+      "explication": "Les deux branches issues du nœud $A$ somment à $1$ : $P_A(\\bar{B}) = 1 - P_A(B) = 1 - 0{,}7 = 0{,}3$. Le piège : croire qu'il faut connaître $P(A)$ — la somme des branches d'un même nœud vaut toujours $1$, indépendamment du reste de l'arbre."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "traduire-enonce",
+      "enonce": "Dans un club, $30$ membres sont abonnés ($A$) ; parmi ces abonnés, $12$ utilisent l'appli ($M$). Que vaut $P_A(M)$ ?",
+      "choix": [
+        "$0{,}4$",
+        "$0{,}15$",
+        "$0{,}12$",
+        "$0{,}3$"
+      ],
+      "reponse": 0,
+      "explication": "« Parmi les abonnés » restreint l'univers à $A$ : $P_A(M) = \\dfrac{12}{30} = 0{,}4$. Le piège : diviser par un autre effectif (par exemple le total des membres) au lieu de l'effectif des abonnés — sur un tableau, la conditionnelle divise par l'effectif de la **ligne de la condition**."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "lien-produit",
+      "enonce": "On donne $P(A) = 0{,}2$ et $P_A(B) = 0{,}5$. Quelle est la probabilité du chemin $A$ puis $B$, c'est-à-dire $P(A \\cap B)$ ?",
+      "choix": [
+        "$0{,}1$",
+        "$0{,}7$",
+        "$0{,}5$",
+        "$0{,}25$"
+      ],
+      "reponse": 0,
+      "explication": "Le long d'un chemin, on **multiplie** : $P(A \\cap B) = P(A) \\times P_A(B) = 0{,}2 \\times 0{,}5 = 0{,}1$. Le piège : additionner ($0{,}7$), garder la seule conditionnelle $0{,}5$ (confusion avec $P(A \\cap B)$), ou diviser ($0{,}25$)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "arbre-pondere",
+      "enonce": "Sur un arbre pondéré, la probabilité d'un **chemin** s'obtient à partir des probabilités de ses branches en…",
+      "choix": [
+        "les **multipliant**",
+        "les **additionnant**",
+        "prenant la plus grande",
+        "faisant leur moyenne"
+      ],
+      "reponse": 0,
+      "explication": "Règle des chemins : on **multiplie** les probabilités le long d'un chemin (c'est la formule du produit lue sur le dessin), et on **additionne** entre les différents chemins qui réalisent un même événement. Le piège classique : inverser ces deux opérations."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "Une enseigne se fournit chez $A$ ($50\\,\\%$ des livraisons), $B$ ($30\\,\\%$) et $C$ ($20\\,\\%$), avec des taux de retard respectifs de $4\\,\\%$, $10\\,\\%$ et $5\\,\\%$. Quelle est la probabilité qu'une livraison soit en retard ?",
+      "choix": [
+        "$0{,}06$",
+        "$0{,}19$",
+        "$0{,}063$",
+        "$0{,}02$"
+      ],
+      "reponse": 0,
+      "explication": "Probabilités totales sur la partition des trois fournisseurs : $P(R) = 0{,}5 \\times 0{,}04 + 0{,}3 \\times 0{,}10 + 0{,}2 \\times 0{,}05 = 0{,}02 + 0{,}03 + 0{,}01 = 0{,}06$. Le piège : $0{,}19$ additionne les taux sans pondérer, $0{,}063$ est leur moyenne simple — il faut pondérer chaque taux par la part de son fournisseur."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "traduire-enonce",
+      "enonce": "« $5\\,\\%$ de **toutes** les pièces produites sont à la fois issues de $M_2$ et défectueuses. » Comment traduire cette phrase ?",
+      "choix": [
+        "$P(M_2 \\cap D) = 0{,}05$",
+        "$P_{M_2}(D) = 0{,}05$",
+        "$P_D(M_2) = 0{,}05$",
+        "$P(D) = 0{,}05$"
+      ],
+      "reponse": 0,
+      "explication": "« à la fois… et… » sur l'ensemble de la production est une **intersection** calculée sur l'univers entier : $P(M_2 \\cap D) = 0{,}05$. Le piège : $P_{M_2}(D)$ signifierait « $5\\,\\%$ **des pièces de $M_2$** sont défectueuses » (univers restreint à $M_2$) — une phrase différente qui donne une autre valeur."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "inverser-la-condition",
+      "enonce": "On donne $P(A \\cap B) = 0{,}12$ et $P(B) = 0{,}3$. Que vaut $P_B(A)$ ?",
+      "choix": [
+        "$0{,}4$",
+        "$0{,}036$",
+        "$0{,}12$",
+        "$2{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "On renverse la condition par la définition : $P_B(A) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{0{,}12}{0{,}3} = 0{,}4$. Le piège : $0{,}036$ multiplie au lieu de diviser, $0{,}12$ confond avec l'intersection, et $2{,}5$ divise dans le mauvais sens ($0{,}3/0{,}12$, absurde pour une probabilité)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "probabilites-totales",
+      "enonce": "Dans une entreprise, $20\\,\\%$ des salariés sont en télétravail ($T$). $15\\,\\%$ des télétravailleurs arrivent en retard à une réunion, contre $8\\,\\%$ des autres salariés. Quelle est la probabilité qu'un salarié pris au hasard soit en retard ?",
+      "choix": [
+        "$0{,}094$",
+        "$0{,}23$",
+        "$0{,}115$",
+        "$0{,}012$"
+      ],
+      "reponse": 0,
+      "explication": "Probabilités totales sur $\\{T, \\bar{T}\\}$ : $P(R) = 0{,}2 \\times 0{,}15 + 0{,}8 \\times 0{,}08 = 0{,}03 + 0{,}064 = 0{,}094$. Le piège : $0{,}115$ est la moyenne simple des deux taux (il faut pondérer par $0{,}2$ et $0{,}8$), $0{,}23$ additionne les taux et $0{,}012$ les multiplie entre eux."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "inverser-la-condition",
+      "enonce": "On sait que $80\\,\\%$ des sportifs réguliers boivent de l'eau plate, soit $P_S(E) = 0{,}8$. Peut-on en déduire que $80\\,\\%$ des buveurs d'eau plate sont des sportifs réguliers ?",
+      "choix": [
+        "Non : $P_E(S)$ peut être très différent de $P_S(E)$",
+        "Oui, toujours : les deux sont égales",
+        "Oui, car les conditionnelles sont symétriques",
+        "Non : $P_E(S)$ vaut forcément $0{,}2$"
+      ],
+      "reponse": 0,
+      "explication": "$P_S(E)$ et $P_E(S)$ renversent la condition et n'ont en général aucune raison d'être égales : elles restreignent l'univers à des ensembles différents (les sportifs / les buveurs d'eau), avec des dénominateurs différents. Le piège : croire les conditionnelles symétriques — c'est l'erreur type $P_A(B) = P_B(A)$, et rien n'impose que $P_E(S)$ vaille $0{,}2$."
     }
   ]
 }

@@ -149,6 +149,146 @@
    ],
    "reponse": 1,
    "explication": "Parmi deux entiers consécutifs, l'un est pair et l'autre impair : le produit contient donc un facteur $2$. Les exemples du choix A illustrent mais ne démontrent pas ; le choix C ne traite qu'un cas sur deux."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "ensembles-n-z",
+   "enonce": "Parmi ces affirmations sur les ensembles $\\mathbb{N}$ et $\\mathbb{Z}$, laquelle est vraie ?",
+   "choix": [
+    "$\\mathbb{Z} \\subset \\mathbb{N}$",
+    "$\\mathbb{N} \\subset \\mathbb{Z}$",
+    "$\\mathbb{N}$ contient les entiers négatifs",
+    "$-7 \\in \\mathbb{N}$"
+   ],
+   "reponse": 1,
+   "explication": "On a toujours $\\mathbb{N} \\subset \\mathbb{Z}$ : tout entier naturel est un entier relatif, jamais l'inverse. Le piège est d'écrire l'inclusion dans le mauvais sens : $\\mathbb{Z}$ contient les négatifs, que $\\mathbb{N}$ n'a pas."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "multiple-diviseur",
+   "enonce": "Laquelle de ces égalités prouve directement que $48$ est un multiple de $6$ ?",
+   "choix": [
+    "$48 = 8 \\times 6$",
+    "$48 = 6 + 42$",
+    "$6 = 8 \\times 48$",
+    "$48 = 6 \\times 7 + 6$"
+   ],
+   "explication": "Être multiple de $6$, c'est s'écrire $48 = k \\times 6$ avec $k$ entier : ici $k = 8$. Les autres écritures sont vraies numériquement (une somme, un reste) mais ne montrent pas la forme $k \\times 6$ exigée par la définition.",
+   "reponse": 0
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "ecriture-algebrique",
+   "enonce": "Comment écrire correctement **deux** nombres pairs **distincts** ?",
+   "choix": [
+    "$2k$ et $2k$",
+    "$2k$ et $2k'$",
+    "$2k+1$ et $2k'+1$",
+    "$k$ et $k'$"
+   ],
+   "reponse": 1,
+   "explication": "Deux nombres distincts exigent deux lettres : $2k$ et $2k'$. Écrire $2k$ deux fois désigne le même nombre. La forme $2k+1$ est celle d'un nombre impair, pas pair."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "fraction-irreductible",
+   "enonce": "Quelle est la forme irréductible de $\\dfrac{60}{144}$ ?",
+   "choix": [
+    "$\\dfrac{30}{72}$",
+    "$\\dfrac{5}{12}$",
+    "$\\dfrac{15}{36}$",
+    "$\\dfrac{10}{24}$"
+   ],
+   "reponse": 1,
+   "explication": "On simplifie jusqu'au bout : $\\dfrac{60}{144} = \\dfrac{30}{72} = \\dfrac{15}{36} = \\dfrac{5}{12}$ (division finale par $3$). Les autres réponses sont des étapes intermédiaires : $5$ et $12$ n'ont plus de diviseur commun, elles si. L'erreur classique est de s'arrêter trop tôt."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "multiple-diviseur",
+   "enonce": "Un élève écrit : « $a$ est un multiple de $5$ car $a = 5k$ ». Que manque-t-il pour que la preuve soit complète ?",
+   "choix": [
+    "préciser que $k$ est un entier",
+    "préciser que $a > 5$",
+    "préciser que $a$ est pair",
+    "rien, la preuve est déjà complète"
+   ],
+   "reponse": 0,
+   "explication": "Sans le mot **entier**, l'égalité $a = 5k$ est toujours possible (il suffit de prendre $k = a/5$), donc elle ne prouve rien. C'est précisément l'existence d'un $k$ entier qui caractérise un multiple, et l'oublier coûte le point."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "algorithme",
+   "enonce": "Quel est le plus grand multiple de $9$ inférieur ou égal à $100$ ?",
+   "choix": [
+    "$90$",
+    "$99$",
+    "$108$",
+    "$96$"
+   ],
+   "reponse": 1,
+   "explication": "On avance de $9$ en $9$ : $\\dots, 90, 99$, puis $108$ qui dépasse $100$. La réponse est $99$. Le piège est de répondre $108$ (multiple de $9$ mais trop grand) ou $96$ (inférieur à $100$ mais pas multiple de $9$)."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "demonstration-exigible",
+   "enonce": "Pour démontrer que la somme de deux multiples de $7$ est un multiple de $7$, on pose $m = 7k$ et $n = 7k'$. Quelle étape permet de conclure ?",
+   "choix": [
+    "$m+n = 7k \\times 7k' = 49kk'$",
+    "$m+n = 7k + 7k' = 7(k+k')$",
+    "$m+n = 14(k+k')$",
+    "$m+n = 7(k+k') + 1$"
+   ],
+   "reponse": 1,
+   "explication": "On factorise par $7$ : $m+n = 7k + 7k' = 7(k+k')$, et $k+k'$ est entier, donc $m+n$ est multiple de $7$. Le choix A **multiplie** au lieu d'additionner, le choix C se trompe de facteur et D ajoute un $+1$ parasite."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "demonstration",
+   "enonce": "Dans la démonstration « le carré d'un nombre impair est impair », on part de $n = 2k+1$. Quel développement de $n^2$ est correct ?",
+   "choix": [
+    "$4k^2 + 1$",
+    "$4k^2 + 2k + 1$",
+    "$4k^2 + 4k + 1$",
+    "$2k^2 + 4k + 1$"
+   ],
+   "reponse": 2,
+   "explication": "$(2k+1)^2 = 4k^2 + 4k + 1$ : le double produit vaut $2 \\times 2k \\times 1 = 4k$. Le choix A oublie ce double produit, le choix B le divise par deux. On conclut ensuite en écrivant $2(2k^2+2k)+1$."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "demonstration",
+   "enonce": "On veut montrer que la somme de deux nombres impairs est paire. Avec $a = 2k+1$ et $b = 2k'+1$, quelle écriture le prouve ?",
+   "choix": [
+    "$a+b = 4kk' + 1$",
+    "$a+b = 2(k+k'+1)$",
+    "$a+b = 2(k+k') + 1$",
+    "$a+b = 2k + 2k'$"
+   ],
+   "reponse": 1,
+   "explication": "$a+b = 2k+1 + 2k'+1 = 2k+2k'+2 = 2(k+k'+1)$, avec $k+k'+1$ entier : la somme est un multiple de $2$, donc paire. Le choix C est de la forme $2\\times(\\dots)+1$, c'est-à-dire impair, et le choix D oublie le $+2$."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "contre-exemple",
+   "enonce": "Pour montrer que la propriété « tout multiple de $4$ est un multiple de $8$ » est fausse, quel contre-exemple convient ?",
+   "choix": [
+    "$16$",
+    "$12$",
+    "$24$",
+    "$8$"
+   ],
+   "reponse": 1,
+   "explication": "$12 = 4 \\times 3$ est un multiple de $4$, mais $12$ n'est pas un multiple de $8$ : c'est un contre-exemple, il suffit à réfuter la propriété. Les autres ($16, 24, 8$) sont justement multiples de $8$, donc ne contredisent rien."
   }
  ]
 }

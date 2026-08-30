@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Comme $f$ est croissante, la hauteur prise au bord gauche est la plus PETITE valeur de $f$ sur chaque tranche : chaque rectangle reste sous la courbe, et la somme $0{,}24$ minore l'intégrale (qui vaut $\\frac{1}{3} \\approx 0{,}33$). Le piège : croire que la méthode donne la valeur exacte — elle donne un encadrement ($0{,}24 \\leqslant \\int \\leqslant 0{,}44$ avec les bords droits), qui se resserre quand le nombre de tranches augmente."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "composee",
+      "enonce": "On pose $u(x) = 2x$ et $v(x) = x^2$. Que vaut $(v \\circ u)(x)$ ?",
+      "choix": [
+        "$2x^2$",
+        "$4x^2$",
+        "$4x$",
+        "$2x^4$"
+      ],
+      "reponse": 1,
+      "explication": "$(v \\circ u)(x) = v\\big(u(x)\\big) = v(2x) = (2x)^2 = 4x^2$ : on applique $u$ d'abord, puis $v$. Le piège : oublier de mettre au carré le coefficient et écrire $2x^2$, ce qui correspondrait à $(u \\circ v)(x) = u(x^2) = 2x^2$ — l'ordre de composition compte."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $f(t) = \\cos(5t)$ ?",
+      "choix": [
+        "$-\\sin(5t)$",
+        "$5\\sin(5t)$",
+        "$-5\\sin(5t)$",
+        "$-5\\cos(5t)$"
+      ],
+      "reponse": 2,
+      "explication": "C'est la forme $\\cos u$ avec $u = 5t$, donc $f' = -u'\\sin u = -5\\sin(5t)$. Le piège récurrent est d'oublier le facteur $u' = 5$ et de répondre $-\\sin(5t)$. Pour un signal $\\cos(\\omega t)$, la pulsation $\\omega$ sort toujours en facteur à la dérivation."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "primitives-composees",
+      "enonce": "Quelle est une primitive de $f(x) = 3e^{3x}$ ?",
+      "choix": [
+        "$3e^{3x}$",
+        "$e^{3x}$",
+        "$\\dfrac{1}{3}e^{3x}$",
+        "$9e^{3x}$"
+      ],
+      "reponse": 1,
+      "explication": "On reconnaît la forme $u'e^u$ avec $u = 3x$ et $u' = 3$, exactement le facteur présent : une primitive est $e^u = e^{3x}$. Vérification : $(e^{3x})' = 3e^{3x} = f(x)$. ✓ Le piège : recopier $f$ ($3e^{3x}$) ou sur-ajuster en $\\frac{1}{3}e^{3x}$ alors que le facteur $u'$ est déjà là — inutile de diviser encore."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $f(x) = (x^2+1)^3$ ?",
+      "choix": [
+        "$3(x^2+1)^2$",
+        "$6x(x^2+1)^2$",
+        "$(x^2+1)^2$",
+        "$3x(x^2+1)^2$"
+      ],
+      "reponse": 1,
+      "explication": "C'est la forme $u^n$ avec $u = x^2+1$, $u' = 2x$ et $n = 3$ : $f' = n\\,u'\\,u^{n-1} = 3 \\times 2x \\times (x^2+1)^2 = 6x(x^2+1)^2$. Le piège : oublier le facteur $u' = 2x$ et répondre $3(x^2+1)^2$ — le réflexe « dérivée de l'intérieure » est indispensable."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "primitives-composees",
+      "enonce": "Quelle est une primitive de $f(t) = \\cos(100\\pi t)$ ?",
+      "choix": [
+        "$100\\pi\\sin(100\\pi t)$",
+        "$\\dfrac{1}{100\\pi}\\sin(100\\pi t)$",
+        "$\\sin(100\\pi t)$",
+        "$-\\dfrac{1}{100\\pi}\\sin(100\\pi t)$"
+      ],
+      "reponse": 1,
+      "explication": "Forme $u'\\cos u$ avec $u = 100\\pi t$, $u' = 100\\pi$ : le facteur $100\\pi$ manque, on l'ajuste par la constante $\\frac{1}{100\\pi}$, d'où $F(t) = \\frac{1}{100\\pi}\\sin(100\\pi t)$. Vérification : $F'(t) = \\frac{1}{100\\pi} \\times 100\\pi\\cos(100\\pi t) = \\cos(100\\pi t)$. ✓ Le piège du signe (le $-$) concerne la primitive de $\\sin$, pas de $\\cos$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "proprietes",
+      "enonce": "On sait que $\\displaystyle\\int_0^2 f = 5$ et $\\displaystyle\\int_0^2 g = -1$. Que vaut $\\displaystyle\\int_0^2 (3f + g)$ ?",
+      "choix": [
+        "$4$",
+        "$14$",
+        "$15$",
+        "$16$"
+      ],
+      "reponse": 1,
+      "explication": "Par linéarité, $\\int_0^2 (3f + g) = 3\\int_0^2 f + \\int_0^2 g = 3 \\times 5 + (-1) = 14$. Le piège : oublier de multiplier la première intégrale par $3$ (ce qui donnerait $5 - 1 = 4$), ou additionner $15 + 1$ en négligeant le signe de $\\int g = -1$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "integrale-signe",
+      "enonce": "Que vaut $\\displaystyle\\int_0^3 (-2)\\,dx$ ?",
+      "choix": [
+        "$6$",
+        "$-6$",
+        "$-2$",
+        "$0$"
+      ],
+      "reponse": 1,
+      "explication": "La fonction $f(x) = -2$ est négative : l'intégrale compte l'aire en négatif. Avec la primitive $F(x) = -2x$, $\\int_0^3 (-2)\\,dx = F(3) - F(0) = -6 - 0 = -6$. Le piège : répondre $6$, qui est l'AIRE (toujours positive) du rectangle ; l'intégrale d'une fonction négative, elle, vaut $-\\mathcal{A}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "integrale-primitive",
+      "enonce": "Que vaut $\\displaystyle\\int_0^1 e^{-2x}\\,dx$ ?",
+      "choix": [
+        "$1 - e^{-2}$",
+        "$\\dfrac{1 - e^{-2}}{2}$",
+        "$\\dfrac{e^{-2} - 1}{2}$",
+        "$-\\dfrac{1}{2}e^{-2}$"
+      ],
+      "reponse": 1,
+      "explication": "Forme $u'e^u$ avec $u = -2x$, $u' = -2$ : une primitive est $F(x) = -\\frac{1}{2}e^{-2x}$. Donc $\\int_0^1 e^{-2x}\\,dx = F(1) - F(0) = -\\frac{1}{2}e^{-2} + \\frac{1}{2} = \\frac{1 - e^{-2}}{2}$. Les pièges : oublier l'ajustement $\\frac{1}{2}$ ($1 - e^{-2}$), inverser l'ordre en $F(0) - F(1)$ (signe opposé), ou ne calculer que $F(1)$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "aire-entre-courbes",
+      "enonce": "Sur $[0\\,;1]$, on a $x \\geqslant x^2$. Quelle est l'aire du domaine compris entre les courbes de $f(x) = x$ et $g(x) = x^2$ ?",
+      "choix": [
+        "$\\dfrac{1}{6}$",
+        "$-\\dfrac{1}{6}$",
+        "$\\dfrac{5}{6}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "L'aire vaut $\\int_0^1 \\big(f - g\\big) = \\int_0^1 (x - x^2)\\,dx = \\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_0^1 = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}$ (courbe du haut moins courbe du bas). Le piège : soustraire dans le mauvais sens ($x^2 - x$) donne $-\\frac{1}{6}$, une aire négative impossible ; additionner les deux intégrales donne $\\frac{5}{6}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "valeur-moyenne",
+      "enonce": "Quelle est la valeur moyenne de $f(x) = 2x + 1$ sur $[0\\,;4]$ ?",
+      "choix": [
+        "$20$",
+        "$5$",
+        "$9$",
+        "$10$"
+      ],
+      "reponse": 1,
+      "explication": "$\\mu = \\frac{1}{4 - 0}\\int_0^4 (2x+1)\\,dx = \\frac{1}{4}\\big[x^2 + x\\big]_0^4 = \\frac{1}{4}(16 + 4) = \\frac{20}{4} = 5$. Le piège classique : donner $20$, c'est-à-dire l'intégrale seule, en oubliant le facteur $\\frac{1}{b-a}$. La valeur $9$ est $f(4)$, une valeur ponctuelle et non la moyenne."
     }
   ]
 }

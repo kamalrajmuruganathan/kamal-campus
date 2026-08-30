@@ -149,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "$P(k\\leqslant X\\leqslant k')=P(X\\leqslant k')-P(X\\leqslant k-1)$. Ici $k=2$, donc on retire $P(X\\leqslant 1)$, pas $P(X\\leqslant 2)$ : sinon on **perd le terme** $P(X=2)$, qui doit rester dans le compte."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "intersection",
+      "enonce": "Pour deux événements $A$ et $B$ (avec $P(A)\\neq 0$), à quoi est égale $P(A\\cap B)$ ?",
+      "choix": [
+        "$P(A)+P(B)$",
+        "$P(A)\\times P_A(B)$",
+        "$\\dfrac{P(A)}{P(B)}$",
+        "$P(A)\\times P(B)$ dans tous les cas"
+      ],
+      "reponse": 1,
+      "explication": "La formule de l'intersection (le long d'un chemin d'arbre) est $P(A\\cap B)=P(A)\\times P_A(B)$. Le produit $P(A)\\times P(B)$ n'est valable que si $A$ et $B$ sont INDÉPENDANTS : ce n'est pas le cas général."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "bernoulli",
+      "enonce": "$X$ suit une loi de Bernoulli de paramètre $p$ ($X=1$ en cas de succès, $X=0$ sinon). Que vaut $P(X=0)$ ?",
+      "choix": [
+        "$p$",
+        "$1-p$",
+        "$0$",
+        "$1$"
+      ],
+      "reponse": 1,
+      "explication": "$X=0$ correspond à l'échec, de probabilité $1-p$. Le piège est de recopier $p$ (la probabilité du succès $X=1$) : succès et échec se partagent la probabilité totale $1$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "independance",
+      "enonce": "Deux événements incompatibles ($A\\cap B=\\varnothing$), de probabilités non nulles, sont-ils indépendants ?",
+      "choix": [
+        "oui, toujours",
+        "non, jamais",
+        "seulement si $P(A)=P(B)$",
+        "cela dépend de l'univers"
+      ],
+      "reponse": 1,
+      "explication": "Incompatibles et non nuls, ils ne sont JAMAIS indépendants : si $A$ se produit, $B$ devient impossible, donc $A$ change bien la probabilité de $B$. Confondre « incompatible » ($A\\cap B=\\varnothing$) et « indépendant » ($P_A(B)=P(B)$) est le piège classique."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "arbre-pondere",
+      "enonce": "La machine $A$ fabrique $70\\,\\%$ des pièces et produit $2\\,\\%$ de défauts. Quelle est la probabilité du chemin « pièce de la machine $A$ ET défectueuse » ?",
+      "choix": [
+        "$0{,}014$",
+        "$0{,}72$",
+        "$0{,}02$",
+        "$0{,}0286$"
+      ],
+      "reponse": 0,
+      "explication": "Le long d'un chemin, on MULTIPLIE : $P(A\\cap D)=P(A)\\times P_A(D)=0{,}70\\times 0{,}02=0{,}014$. Le piège $0{,}72$ additionne les probabilités des branches au lieu de les multiplier."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "schema-bernoulli",
+      "enonce": "Une urne contient $5$ boules dont $2$ gagnantes. On tire $2$ boules **sans remise** et $X$ compte les gagnantes. $X$ suit-elle une loi binomiale ?",
+      "choix": [
+        "oui, $X\\sim B(2\\,;\\,0{,}4)$",
+        "non, car les tirages sont sans remise, donc non indépendants",
+        "oui, $X\\sim B(5\\,;\\,0{,}4)$",
+        "non, car il y a plus de deux issues"
+      ],
+      "reponse": 1,
+      "explication": "Sans remise, la probabilité de succès change d'un tirage à l'autre : les épreuves ne sont pas indépendantes, ce n'est donc PAS un schéma de Bernoulli. La loi binomiale exige des épreuves identiques et indépendantes (donc un tirage AVEC remise)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "loi-binomiale",
+      "enonce": "$X\\sim B(6\\,;\\,0{,}3)$. Quelle expression donne $P(X=2)$ ?",
+      "choix": [
+        "$\\binom{6}{2}(0{,}3)^{2}(0{,}7)^{4}$",
+        "$(0{,}3)^{2}(0{,}7)^{4}$",
+        "$\\binom{6}{2}(0{,}3)^{4}(0{,}7)^{2}$",
+        "$\\binom{6}{2}(0{,}3)^{2}(0{,}7)^{6}$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X=k)=\\binom{n}{k}p^{k}(1-p)^{n-k}$ : avec $n=6$, $k=2$, on obtient $\\binom{6}{2}(0{,}3)^{2}(0{,}7)^{4}$. Le choix sans coefficient oublie $\\binom{6}{2}$ (un seul chemin) ; le troisième intervertit les exposants $k$ et $n-k$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "independance",
+      "enonce": "$A$ et $B$ sont indépendants, avec $P(A)=0{,}3$ et $P(B)=0{,}5$. Que vaut $P(A\\cap B)$ ?",
+      "choix": [
+        "$0{,}15$",
+        "$0{,}8$",
+        "$0{,}6$",
+        "$0{,}2$"
+      ],
+      "reponse": 0,
+      "explication": "Pour des événements indépendants, $P(A\\cap B)=P(A)\\times P(B)=0{,}3\\times 0{,}5=0{,}15$. Le piège $0{,}8$ additionne les probabilités : l'addition concerne l'union d'événements incompatibles, pas l'intersection."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "complementaire",
+      "enonce": "$X$ suit une loi binomiale. Comment exprimer $P(X\\geqslant 3)$ à l'aide des probabilités cumulées ?",
+      "choix": [
+        "$1-P(X\\leqslant 2)$",
+        "$1-P(X\\leqslant 3)$",
+        "$P(X\\leqslant 3)-1$",
+        "$1-P(X=3)$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X\\geqslant k)=1-P(X\\leqslant k-1)$ : avec $k=3$, on retire $P(X\\leqslant 2)$. Le piège $1-P(X\\leqslant 3)$ enlève aussi $P(X=3)$, qui doit pourtant rester compté dans « $X\\geqslant 3$ »."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "loi-binomiale",
+      "enonce": "$X\\sim B(3\\,;\\,0{,}2)$. Que vaut $P(X=1)$ ?",
+      "choix": [
+        "$0{,}384$",
+        "$0{,}128$",
+        "$0{,}2$",
+        "$0{,}096$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X=1)=\\binom{3}{1}(0{,}2)^{1}(0{,}8)^{2}=3\\times 0{,}2\\times 0{,}64=0{,}384$. Le piège $0{,}128$ oublie le coefficient $\\binom{3}{1}=3$ : il ne compte qu'un seul des trois chemins possibles."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "complementaire",
+      "enonce": "On répète $10$ fois, de façon indépendante, une expérience dont le succès a la probabilité $p=0{,}2$. Quelle est la probabilité d'obtenir **au moins un** succès ?",
+      "choix": [
+        "$1-(0{,}8)^{10}$",
+        "$(0{,}2)^{10}$",
+        "$10\\times 0{,}2$",
+        "$1-(0{,}2)^{10}$"
+      ],
+      "reponse": 0,
+      "explication": "« Au moins un » passe par le complémentaire : $P(X\\geqslant 1)=1-P(X=0)=1-(1-p)^{n}=1-(0{,}8)^{10}$. Le piège $1-(0{,}2)^{10}$ utilise $p$ au lieu de $1-p$ pour l'événement « aucun succès »."
     }
   ]
 }

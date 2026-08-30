@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Une croissance à taux constant est illimitée et finit par prévoir des effectifs absurdes : le modèle exponentiel n'est valable que sur un domaine limité, et se valide en comparant ses prédictions aux valeurs réellement observées. Le piège est de croire qu'un bon ajustement sur le passé garantit la validité pour toujours."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "modele-lineaire",
+      "enonce": "Un village de $u_0 = 8\\,000$ habitants gagne $r = 500$ habitants par an ($u_n = u_0 + n\\,r$). Combien d'habitants au bout de $10$ ans ?",
+      "choix": [
+        "$13\\,000$",
+        "$8\\,500$",
+        "$40\\,000$",
+        "$85\\,000$"
+      ],
+      "reponse": 0,
+      "explication": "$u_{10} = 8\\,000 + 500 \\times 10 = 8\\,000 + 5\\,000 = 13\\,000$ habitants. Le piège $8\\,500$ n'ajoute la raison qu'une seule fois (une année) au lieu de la multiplier par $n = 10$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "variation-absolue-relative",
+      "enonce": "Une ville passe de $u_0 = 20\\,000$ à $u_1 = 20\\,500$ habitants. Quelle est la **variation absolue** ?",
+      "choix": [
+        "$500$ habitants",
+        "$2{,}5\\,\\%$",
+        "$1{,}025$",
+        "$20\\,500$ habitants"
+      ],
+      "reponse": 0,
+      "explication": "La variation absolue est la simple différence $u_1 - u_0 = 20\\,500 - 20\\,000 = 500$ habitants. Le piège est de la confondre avec la variation **relative** ($500/20\\,000 = 2{,}5\\,\\%$), qui, elle, est un pourcentage sans unité."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "modele-exponentiel",
+      "enonce": "Dans un modèle **exponentiel** (suite géométrique), qu'est-ce qui reste constant d'une année à l'autre ?",
+      "choix": [
+        "la variation absolue (le nombre d'habitants ajouté)",
+        "la variation relative (le taux d'évolution en %)",
+        "l'effectif total de la population",
+        "la différence $u_{n+1} - u_n$"
+      ],
+      "reponse": 1,
+      "explication": "Le modèle exponentiel correspond à une **variation relative** (un taux en %) constante : on multiplie par le même coefficient $q$ chaque année. C'est la variation **absolue** constante qui caractérise, elle, le modèle linéaire."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population de $u_0 = 20\\,000$ habitants croît de $3\\,\\%$ par an. Sachant que $1{,}03^{\\,10} \\approx 1{,}34$, quel est l'effectif au bout de $10$ ans ?",
+      "choix": [
+        "environ $26\\,900$ habitants",
+        "environ $20\\,600$ habitants",
+        "environ $23\\,000$ habitants",
+        "environ $60\\,000$ habitants"
+      ],
+      "reponse": 0,
+      "explication": "$u_{10} = 20\\,000 \\times 1{,}03^{\\,10} \\approx 20\\,000 \\times 1{,}34 \\approx 26\\,900$ habitants. Le piège $20\\,600$ n'applique la hausse qu'une seule année ($20\\,000 \\times 1{,}03$) au lieu d'élever $q$ à la puissance $10$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "choix-du-modele",
+      "enonce": "Les effectifs relevés sont $1\\,000$, $1\\,200$, $1\\,400$, $1\\,600$. Quel modèle décrit ces données ?",
+      "choix": [
+        "Exponentiel, de raison $q = 1{,}2$",
+        "Linéaire, de raison $r = +200$",
+        "Exponentiel, de raison $q = 1{,}1$",
+        "Linéaire, de raison $r = +100$"
+      ],
+      "reponse": 1,
+      "explication": "Les différences $u_{n+1} - u_n$ valent $+200$, $+200$, $+200$ : elles sont **constantes**, donc modèle linéaire de raison $200$. Le piège est de regarder le premier quotient ($1\\,200/1\\,000 = 1{,}2$) et de conclure « exponentiel » : les quotients suivants ($1{,}17$, $1{,}14$) ne sont pas constants."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "modele-exponentiel",
+      "enonce": "Une population de $u_0 = 5\\,000$ habitants diminue de $10\\,\\%$ par an. Quel est l'effectif au bout de $2$ ans ?",
+      "choix": [
+        "$4\\,050$",
+        "$4\\,000$",
+        "$4\\,500$",
+        "$3\\,000$"
+      ],
+      "reponse": 0,
+      "explication": "Une baisse de $10\\,\\%$ correspond à $q = 0{,}90$, donc $u_2 = 5\\,000 \\times 0{,}90^{\\,2} = 5\\,000 \\times 0{,}81 = 4\\,050$. Le piège est de retrancher deux fois $10\\,\\%$ de $5\\,000$ (soit $1\\,000$) pour trouver $4\\,000$ : les pourcentages ne s'additionnent pas, ils se composent."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "modele-de-malthus",
+      "enonce": "Selon le modèle de Malthus, comment croissent les **ressources** (production agricole) ?",
+      "choix": [
+        "de façon géométrique (exponentielle)",
+        "de façon arithmétique (linéaire)",
+        "elles ne croissent pas du tout",
+        "plus vite que la population"
+      ],
+      "reponse": 1,
+      "explication": "Malthus suppose que la **population** croît géométriquement (exponentiellement) mais que les **ressources** ne croissent qu'**arithmétiquement** (linéairement). C'est ce décalage qui, à long terme, fait dépasser les ressources par la population."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "temps-de-doublement",
+      "enonce": "Une population croît de $5\\,\\%$ par an. En utilisant la « règle de 70 », son temps de doublement est d'environ :",
+      "choix": [
+        "$14$ ans",
+        "$35$ ans",
+        "$5$ ans",
+        "$70$ ans"
+      ],
+      "reponse": 0,
+      "explication": "La règle de 70 donne $N \\approx \\dfrac{70}{t} = \\dfrac{70}{5} = 14$ ans (le calcul exact $\\dfrac{\\ln 2}{\\ln 1{,}05} \\approx 14{,}2$ ans le confirme). Le piège est de prendre directement le taux comme durée, ou de confondre avec le cas $t = 2\\,\\%$ (qui donne $35$ ans)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "ajustement",
+      "enonce": "Des recensements donnent $50\\,000$ en 2000, $55\\,000$ en 2005, $60\\,500$ en 2010, bien ajustés par $u_n = 50\\,000 \\times 1{,}1^{\\,n}$ où $n$ compte les périodes de $5$ ans. Quelle population le modèle prévoit-il pour 2015 ?",
+      "choix": [
+        "$66\\,550$",
+        "$66\\,000$",
+        "$65\\,500$",
+        "$71\\,000$"
+      ],
+      "reponse": 0,
+      "explication": "2015 correspond à $n = 3$ (trois périodes de 5 ans après 2000) : $u_3 = 50\\,000 \\times 1{,}1^{\\,3} = 50\\,000 \\times 1{,}331 = 66\\,550$. Le piège est de compter $n$ en années plutôt qu'en périodes de 5 ans, ou d'ajouter $5\\,500$ (croissance linéaire) au lieu de multiplier par $1{,}1$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "choix-du-modele",
+      "enonce": "On compare, à partir de la même valeur de départ, un modèle linéaire ($u_{n+1} = u_n + r$) et un modèle exponentiel croissant ($q > 1$). Que se passe-t-il à long terme ?",
+      "choix": [
+        "le modèle linéaire finit toujours par dépasser l'exponentiel",
+        "l'exponentiel finit toujours par dépasser le linéaire, même avec un taux très petit",
+        "les deux modèles donnent toujours les mêmes valeurs",
+        "l'exponentiel finit par se stabiliser en dessous du linéaire"
+      ],
+      "reponse": 1,
+      "explication": "Une croissance exponentielle ($q > 1$) finit **toujours** par dépasser une croissance linéaire, aussi petit soit son taux : c'est le cœur du raisonnement de Malthus. Le piège est de croire qu'un taux faible garde l'exponentielle sous la droite pour toujours — elle ne fait que tarder à la rattraper."
     }
   ]
 }

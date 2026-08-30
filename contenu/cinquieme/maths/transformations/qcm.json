@@ -149,6 +149,131 @@
       ],
       "reponse": 3,
       "explication": "Deux indices pointent vers le demi-tour : les côtés parallèles deux à deux, et surtout le sens de lecture **conservé**. Une symétrie axiale agit comme un miroir, elle **retourne** la figure — c'est le piège du choix A, car elle conserve bien les longueurs, mais pas le sens. Et le choix C oublie que les deux transformations conservent les longueurs."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "demi-tour-definition",
+      "enonce": "Le demi-tour est aussi appelé :",
+      "choix": [
+        "translation",
+        "symétrie centrale",
+        "rotation d'un quart de tour",
+        "symétrie axiale"
+      ],
+      "reponse": 1,
+      "explication": "Le programme précise que le demi-tour est aussi nommé **symétrie centrale** : deux mots pour une seule transformation, qui se fait par rapport à un point. Le piège est de la confondre avec la symétrie axiale, qui se fait par rapport à une droite."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "demi-tour-definition",
+      "enonce": "De combien de degrés tourne-t-on la figure lors d'un demi-tour ?",
+      "choix": ["$90°$", "$180°$", "$360°$", "$45°$"],
+      "reponse": 1,
+      "explication": "Un demi-tour correspond à $180°$, la moitié d'un tour complet ($360°$). Le piège $90°$ est un quart de tour, et $360°$ un tour complet qui ramènerait la figure sur elle-même."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "points-invariants",
+      "enonce": "Par le demi-tour de centre $O$, quelle est l'image du point $O$ ?",
+      "choix": [
+        "Un point situé à $180°$",
+        "Le point $O$ lui-même",
+        "Le milieu du segment",
+        "$O$ n'a pas d'image"
+      ],
+      "reponse": 1,
+      "explication": "Le centre du demi-tour est son propre symétrique : $O$ ne bouge pas. Le piège est de vouloir le déplacer, alors que c'est le seul point invariant de la transformation."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "proprietes-demi-tour",
+      "enonce": "Un angle mesure $47°$. Quelle est la mesure de son image par un demi-tour ?",
+      "choix": ["$133°$", "$47°$", "$94°$", "$23{,}5°$"],
+      "reponse": 1,
+      "explication": "Le demi-tour **conserve les mesures d'angles** : l'image d'un angle de $47°$ est un angle de $47°$. Le piège $133°$ vient de calculer $180 - 47$, et $23{,}5°$ de diviser par deux à cause du mot « demi »."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "symetrie-axiale",
+      "enonce": "Sur un quadrillage, l'axe de symétrie est vertical et le point $M$ est à $4$ carreaux à gauche de l'axe. Où se trouve son image $M'$ ?",
+      "choix": [
+        "À $4$ carreaux à droite de l'axe, sur la même ligne",
+        "À $4$ carreaux à gauche de l'axe, sur la même ligne",
+        "À $8$ carreaux à droite de l'axe",
+        "À $2$ carreaux à droite de l'axe"
+      ],
+      "reponse": 0,
+      "explication": "On reporte le même nombre de carreaux de l'autre côté de l'axe, sur la même ligne : $4$ carreaux à droite. Le piège est de laisser le point du même côté, ou de doubler la distance à l'axe."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "construction",
+      "enonce": "Pour aller de $M$ au centre $O$ sur un quadrillage, on se déplace de $1$ carreau à gauche et $3$ carreaux vers le bas. Quel déplacement mène de $O$ à l'image $M'$ ?",
+      "choix": [
+        "$1$ carreau à droite et $3$ vers le haut",
+        "$1$ carreau à gauche et $3$ vers le bas",
+        "$3$ carreaux à gauche et $1$ vers le bas",
+        "$1$ carreau à gauche et $3$ vers le haut"
+      ],
+      "reponse": 1,
+      "explication": "Comme $O$ est le milieu de $[MM']$, on **continue le même déplacement** au-delà de $O$ : $1$ à gauche et $3$ vers le bas. Le piège (choix A) inverse le déplacement, ce qui ramènerait sur $M$ de départ."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "proprietes-demi-tour",
+      "enonce": "Un triangle a une aire de $15$ cm². Quelle est l'aire de son image par un demi-tour ?",
+      "choix": ["$30$ cm²", "$15$ cm²", "$7{,}5$ cm²", "$15$ cm"],
+      "reponse": 1,
+      "explication": "Le demi-tour **conserve les aires** : l'image d'un triangle de $15$ cm² a aussi une aire de $15$ cm². Le piège est de diviser par deux (mot « demi ») ou de doubler ; l'aire s'exprime bien en cm², pas en cm."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "comparaison",
+      "enonce": "Quelle transformation agit comme un miroir et **retourne** la figure (une main droite devient une main gauche) ?",
+      "choix": [
+        "Le demi-tour",
+        "La symétrie axiale",
+        "Aucune des deux",
+        "Les deux de la même façon"
+      ],
+      "reponse": 1,
+      "explication": "La **symétrie axiale** retourne la figure comme un miroir : le sens de lecture est inversé. Le demi-tour, lui, **conserve** le sens : une main droite reste une main droite. C'est un critère clé pour distinguer les deux."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "points-invariants",
+      "enonce": "Par le demi-tour de centre $O$, quelle est l'image d'une droite $(d)$ qui passe par $O$ ?",
+      "choix": [
+        "Une droite parallèle distincte de $(d)$",
+        "La droite $(d)$ elle-même",
+        "Une droite perpendiculaire à $(d)$",
+        "Le seul point $O$"
+      ],
+      "reponse": 1,
+      "explication": "Une droite passant par le centre a pour image **elle-même** : ses points glissent le long d'elle, mais la droite dans son ensemble ne change pas. Le piège est de répondre « parallèle distincte », vrai seulement lorsque la droite ne passe **pas** par $O$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "comparaison",
+      "enonce": "Dans un parallélogramme $ABCD$, les diagonales se coupent en $O$. Que fait le demi-tour de centre $O$ à ce parallélogramme ?",
+      "choix": [
+        "Il l'agrandit",
+        "Il l'envoie sur lui-même",
+        "Il le transforme en rectangle",
+        "Il n'a aucun effet, tous les points sont fixes"
+      ],
+      "reponse": 1,
+      "explication": "Le point d'intersection des diagonales est le centre de symétrie du parallélogramme : le demi-tour de centre $O$ **envoie la figure sur elle-même** (par exemple $A$ va sur $C$ et $B$ sur $D$). Le piège du dernier choix confond « la figure globale est invariante » avec « chaque point est fixe » : seuls $O$ est fixe, les sommets, eux, se déplacent."
     }
   ]
 }

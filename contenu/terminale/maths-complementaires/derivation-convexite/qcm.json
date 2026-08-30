@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Comme $\\mathrm{e}^{x} > 0$, le signe de $f'$ est celui de $1 - x$ : positif pour $x < 1$. Donc $f$ croît sur $]-\\infty\\,;1]$. Le piège est d'oublier que le dénominateur $\\mathrm{e}^x$ est toujours positif et n'inverse pas le signe."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "tangente",
+      "enonce": "Pour $f(x) = x^2$, quelle est l'équation de la tangente à la courbe au point d'abscisse $3$ ?",
+      "choix": [
+        "$y = 6x - 9$",
+        "$y = 2x + 9$",
+        "$y = 6x + 9$",
+        "$y = 9x - 6$"
+      ],
+      "reponse": 0,
+      "explication": "La tangente en $a$ est $y = f'(a)(x-a) + f(a)$. Ici $f'(x) = 2x$ donc $f'(3) = 6$ et $f(3) = 9$ : $y = 6(x-3) + 9 = 6x - 9$. Le piège est d'utiliser $f(3)$ comme pente au lieu de $f'(3)$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "fonctions-reference",
+      "enonce": "Quelle est la dérivée de $f(x) = x^5$ ?",
+      "choix": [
+        "$5x^4$",
+        "$x^4$",
+        "$5x^5$",
+        "$4x^3$"
+      ],
+      "reponse": 0,
+      "explication": "La règle $(x^n)' = n\\,x^{n-1}$ donne $5x^4$. On abaisse l'exposant de $1$ et on le fait descendre en facteur. Oublier le facteur $5$ (réponse $x^4$) est l'erreur classique."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "convexite",
+      "enonce": "Si une fonction $f$ est **concave** sur un intervalle, où se situe sa courbe par rapport à ses tangentes ?",
+      "choix": [
+        "au-dessus de ses tangentes",
+        "en dessous de ses tangentes",
+        "confondue avec ses tangentes",
+        "toujours décroissante"
+      ],
+      "reponse": 1,
+      "explication": "Une fonction concave (bosse $\\cap$) a sa courbe EN DESSOUS de ses tangentes. C'est l'inverse d'une fonction convexe, au-dessus de ses tangentes. Astuce : le « v » de con**v**exe pointe vers le bas, comme le creux."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "extremums",
+      "enonce": "La dérivée $f'$ s'annule en $x = a$ en passant du signe $+$ au signe $-$. Que présente $f$ en $a$ ?",
+      "choix": [
+        "un minimum local",
+        "un maximum local",
+        "un point d'inflexion",
+        "rien de particulier"
+      ],
+      "reponse": 1,
+      "explication": "$f'$ passe de $+$ à $-$ : la courbe monte puis descend, donc $f$ atteint un maximum local en $a$. Le passage $-$ puis $+$ donnerait au contraire un minimum : ne pas inverser les deux cas."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "derivee-seconde",
+      "enonce": "Pour $f(x) = x^3 - 2x^2 + 5$, quelle est la dérivée seconde $f''(x)$ ?",
+      "choix": [
+        "$6x - 4$",
+        "$3x^2 - 4x$",
+        "$6x^2 - 4$",
+        "$6x$"
+      ],
+      "reponse": 0,
+      "explication": "On dérive deux fois : $f'(x) = 3x^2 - 4x$, puis $f''(x) = 6x - 4$. Le piège $3x^2 - 4x$ est la dérivée PREMIÈRE : on s'arrête à la première dérivation au lieu de dériver une seconde fois."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "convexite",
+      "enonce": "Sur un intervalle $I$, la dérivée $f'$ de $f$ est croissante. Que peut-on affirmer sur $f$ ?",
+      "choix": [
+        "$f$ est croissante sur $I$",
+        "$f$ est convexe sur $I$",
+        "$f$ est concave sur $I$",
+        "$f$ est décroissante sur $I$"
+      ],
+      "reponse": 1,
+      "explication": "$f'$ croissante équivaut à $f'' \\geqslant 0$, c'est-à-dire $f$ convexe (les pentes augmentent). Attention : le fait que $f'$ croisse ne dit rien sur les variations de $f$ elle-même, qui dépendent du signe de $f'$, pas de son sens de variation."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "fonctions-reference",
+      "enonce": "Quelle est la dérivée de $f(x) = x\\,\\mathrm{e}^{x}$ ?",
+      "choix": [
+        "$(1+x)\\,\\mathrm{e}^{x}$",
+        "$\\mathrm{e}^{x}$",
+        "$x\\,\\mathrm{e}^{x}$",
+        "$(1-x)\\,\\mathrm{e}^{x}$"
+      ],
+      "reponse": 0,
+      "explication": "Avec $u = x$ et $v = \\mathrm{e}^x$ : $(uv)' = u'v + uv' = 1\\cdot \\mathrm{e}^x + x\\cdot \\mathrm{e}^x = (1+x)\\,\\mathrm{e}^x$. Le piège $\\mathrm{e}^x$ oublie le terme $uv'$ ; multiplier simplement les dérivées est une faute de règle."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "point-inflexion",
+      "enonce": "La courbe de $f(x) = x^3$ (avec $f''(x) = 6x$) admet-elle un point d'inflexion en $0$ ?",
+      "choix": [
+        "Non, car $f'(0) = 0$",
+        "Oui, car $f''$ s'annule en changeant de signe en $0$",
+        "Non, car $f$ est croissante partout",
+        "Oui, car $f$ admet un extremum en $0$"
+      ],
+      "reponse": 1,
+      "explication": "$f''(x) = 6x$ passe du négatif au positif en $0$ : la courbe change de convexité, c'est un point d'inflexion (elle y traverse sa tangente). Que $f$ soit croissante partout n'y change rien : variations et convexité sont indépendantes."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "convexite",
+      "enonce": "Sur quel intervalle la fonction $f(x) = x^3$ est-elle **convexe** ?",
+      "choix": [
+        "sur $\\mathbb{R}$ tout entier",
+        "sur $]-\\infty\\,;0]$",
+        "sur $[0\\,;+\\infty[$",
+        "elle n'est jamais convexe"
+      ],
+      "reponse": 2,
+      "explication": "$f''(x) = 6x$ est positif pour $x \\geqslant 0$ : $f$ est convexe sur $[0\\,;+\\infty[$ (et concave sur $]-\\infty\\,;0]$). Croire qu'elle est convexe sur tout $\\mathbb{R}$ confond « croissante partout » et « convexe partout »."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "inegalite-tangente",
+      "enonce": "$f(x) = \\sqrt{x}$ est concave sur $]0\\,;+\\infty[$. Sa tangente au point d'abscisse $4$ a pour équation $y = \\dfrac{x}{4} + 1$. Quelle inégalité en déduit-on pour tout $x > 0$ ?",
+      "choix": [
+        "$\\sqrt{x} \\geqslant \\dfrac{x}{4} + 1$",
+        "$\\sqrt{x} \\leqslant \\dfrac{x}{4} + 1$",
+        "$\\sqrt{x} = \\dfrac{x}{4} + 1$",
+        "$\\sqrt{x} \\geqslant \\dfrac{x}{4}$"
+      ],
+      "reponse": 1,
+      "explication": "Une fonction concave est SOUS ses tangentes, donc $\\sqrt{x} \\leqslant \\dfrac{x}{4} + 1$. Le sens $\\geqslant$ correspondrait à une fonction convexe : inverser le sens de l'inégalité est l'erreur la plus fréquente."
     }
   ]
 }

@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "liste",
       "enonce": "Combien d'éléments contient la liste Python `[4, 4, 7]` ?",
-      "choix": ["$2$", "$3$", "$1$", "$4$"],
+      "choix": [
+        "$2$",
+        "$3$",
+        "$1$",
+        "$4$"
+      ],
       "reponse": 1,
       "explication": "`len([4, 4, 7])` vaut $3$. Contrairement à un **ensemble** où $\\{4, 4, 7\\} = \\{4, 7\\}$, une liste **garde les doublons** : le $4$ répété compte deux fois."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "indices",
       "enonce": "On pose `L = [10, 20, 30, 40]`. Que vaut `L[0]` ?",
-      "choix": ["$10$", "$20$", "$30$", "$40$"],
+      "choix": [
+        "$10$",
+        "$20$",
+        "$30$",
+        "$40$"
+      ],
       "reponse": 0,
       "explication": "Les indices commencent à **0** : `L[0]` est le **premier** élément, donc $10$. Le piège classique est de croire que `L[0]` serait le « zéroième » ou que le premier serait `L[1]`."
     },
@@ -33,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "indices",
       "enonce": "On pose `L = [5, 6, 7, 8]`. Que vaut `L[2]` ?",
-      "choix": ["$6$", "$7$", "$5$", "$8$"],
+      "choix": [
+        "$6$",
+        "$7$",
+        "$5$",
+        "$8$"
+      ],
       "reponse": 1,
       "explication": "L'indice $2$ désigne le **troisième** élément, car on compte $0, 1, 2$. On obtient donc $7$. Répondre $6$ revient à décaler d'un cran en oubliant que l'indice $0$ existe."
     },
@@ -126,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "combinatoire",
       "enonce": "On pose `issues = [(a, b) for a in [0, 1] for b in [0, 1]]`. Que vaut `len(issues)` ?",
-      "choix": ["$2$", "$3$", "$4$", "$8$"],
+      "choix": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$8$"
+      ],
       "reponse": 2,
       "explication": "La double compréhension énumère tous les couples $(a, b)$ : c'est le produit cartésien $\\{0,1\\} \\times \\{0,1\\}$, soit $2 \\times 2 = 4$ couples. La longueur de la liste **est** le cardinal de l'ensemble dénombré — le lien direct avec la combinatoire."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "liste",
+      "enonce": "Comment s'écrit la liste vide en Python ?",
+      "choix": [
+        "`[]`",
+        "`{}`",
+        "`()`",
+        "`0`"
+      ],
+      "reponse": 0,
+      "explication": "La liste vide se note avec des crochets vides `[]`. Le piège `{}` correspond à un dictionnaire (ou un ensemble) vide, et `()` à un tuple vide : ce ne sont pas des listes."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "indices",
+      "enonce": "On pose `L = [10, 20, 30, 40]`. Que vaut `L[-1]` ?",
+      "choix": [
+        "`10`",
+        "`40`",
+        "`30`",
+        "une erreur `IndexError`"
+      ],
+      "reponse": 1,
+      "explication": "Un indice négatif compte depuis la fin : `L[-1]` est le DERNIER élément, ici `40`. Le piège est de croire que `-1` renvoie le premier élément ou déclenche une erreur."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "range",
+      "enonce": "Quels entiers `range(1, 5)` produit-il ?",
+      "choix": [
+        "`1, 2, 3, 4`",
+        "`1, 2, 3, 4, 5`",
+        "`0, 1, 2, 3, 4`",
+        "`1, 2, 3`"
+      ],
+      "reponse": 0,
+      "explication": "`range(1, 5)` va de `1` (inclus) à `5` EXCLU, soit `1, 2, 3, 4`. Le piège numéro un est d'inclure la borne de droite `5` : elle est toujours exclue."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "manipulation",
+      "enonce": "On pose `L = [10, 20, 30]` puis on exécute `L.append(40)`. Que contient `L` ensuite ?",
+      "choix": [
+        "`[10, 20, 30, 40]`",
+        "`[40, 10, 20, 30]`",
+        "`[10, 20, 40]`",
+        "`[10, 20, 30]`"
+      ],
+      "reponse": 0,
+      "explication": "`append(x)` ajoute `x` à la FIN de la liste : `L` devient `[10, 20, 30, 40]`. Le piège `[40, 10, 20, 30]` place l'élément au début, ce que ferait `insert(0, 40)`, pas `append`."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "manipulation",
+      "enonce": "On pose `L = [10, 20, 30]` puis on exécute `L.insert(1, 99)`. Que contient `L` ensuite ?",
+      "choix": [
+        "`[10, 99, 20, 30]`",
+        "`[99, 10, 20, 30]`",
+        "`[10, 20, 99, 30]`",
+        "`[10, 20, 30, 99]`"
+      ],
+      "reponse": 0,
+      "explication": "`insert(1, 99)` insère `99` à l'indice `1`, décalant les suivants : `[10, 99, 20, 30]`. Le piège est de croire que `99` prend la place de `20` (remplacement) : `insert` insère, il n'écrase pas."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "comprehension",
+      "enonce": "Que vaut la liste `[2*x for x in range(1, 4)]` ?",
+      "choix": [
+        "`[2, 4, 6]`",
+        "`[0, 2, 4]`",
+        "`[2, 4, 6, 8]`",
+        "`[1, 2, 3]`"
+      ],
+      "reponse": 0,
+      "explication": "`range(1, 4)` donne `1, 2, 3`, et on double chaque valeur : `[2, 4, 6]`. Le piège `[0, 2, 4]` viendrait de `range(3)` (qui commence à `0`), et `[2, 4, 6, 8]` d'inclure la borne `4`, qui est exclue."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "appartenance",
+      "enonce": "On pose `L = [10, 20, 30]`. Que renvoie `30 in L` ?",
+      "choix": [
+        "`True`",
+        "`False`",
+        "`30`",
+        "l'indice `2`"
+      ],
+      "reponse": 0,
+      "explication": "`x in L` teste l'APPARTENANCE (le `\\in` mathématique) et renvoie un booléen : `30 in L` vaut `True`. Le piège est d'attendre l'indice de l'élément : `in` répond seulement « présent ou non », pas « à quelle position »."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "manipulation",
+      "enonce": "On pose `L = [10, 20, 30]` puis on exécute `del L[0]`. Que contient `L` ensuite ?",
+      "choix": [
+        "`[20, 30]`",
+        "`[10, 30]`",
+        "`[10, 20]`",
+        "`[10, 20, 30]`"
+      ],
+      "reponse": 0,
+      "explication": "`del L[0]` supprime l'élément d'INDICE `0`, c'est-à-dire `10` (le premier) : il reste `[20, 30]`. Le piège est de confondre indice et valeur : `del L[0]` n'enlève pas la valeur `0` mais l'élément en position `0`."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "iteration",
+      "enonce": "Que vaut `moyenne` après ce code ?\n```python\nnotes = [12, 15, 8, 17]\ntotal = 0\nfor note in notes:\n    total = total + note\nmoyenne = total / len(notes)\n```",
+      "choix": [
+        "`13.0`",
+        "`13`",
+        "`52`",
+        "`52.0`"
+      ],
+      "reponse": 0,
+      "explication": "La boucle calcule `total = 52`, puis `moyenne = 52 / 4`. En Python, l'opérateur `/` renvoie toujours un FLOTTANT : le résultat est `13.0`, pas l'entier `13`. Le piège `52` oublie la division par `len(notes)`."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "liste",
+      "enonce": "Combien d'éléments la LISTE `[3, 3]` contient-elle, et l'ENSEMBLE mathématique $\\{3, 3\\}$ ?",
+      "choix": [
+        "liste : 2, ensemble : 1",
+        "liste : 1, ensemble : 1",
+        "liste : 2, ensemble : 2",
+        "liste : 1, ensemble : 2"
+      ],
+      "reponse": 0,
+      "explication": "Une liste garde l'ordre ET les doublons : `[3, 3]` a DEUX éléments. Un ensemble ignore les répétitions : $\\{3, 3\\} = \\{3\\}$ n'en a qu'UN. Confondre les deux (croire que `[3, 3]` n'a qu'un élément) est le piège classique."
     }
   ]
 }

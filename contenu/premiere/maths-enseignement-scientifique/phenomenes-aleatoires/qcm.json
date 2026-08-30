@@ -129,6 +129,116 @@
       ],
       "reponse": 1,
       "explication": "Si presque tout le monde porte la ceinture, il est normal que la plupart des accidentés en portent une. La question utile est **l'inverse** : quel est le risque de blessure grave **sachant** qu'on porte la ceinture ? Inverser un conditionnement est une manipulation courante de l'information."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "arbre",
+      "enonce": "Un événement peut être atteint par plusieurs chemins d'un arbre pondéré. Comment obtient-on sa probabilité ?",
+      "choix": [
+        "en multipliant les probabilités de tous les chemins entre eux",
+        "en additionnant les probabilités des chemins qui le réalisent",
+        "en gardant seulement le chemin le plus probable",
+        "en soustrayant les chemins les uns aux autres"
+      ],
+      "reponse": 1,
+      "explication": "On **multiplie** le long d'un même chemin, puis on **additionne** les probabilités des différents chemins menant à l'événement (formule des probabilités totales). Multiplier entre les chemins est l'erreur classique."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "conditionnelle",
+      "enonce": "Comment lit-on la notation $P_\\mathrm{A}(\\mathrm{B})$ ?",
+      "choix": [
+        "probabilité de A sachant B",
+        "probabilité de B sachant A",
+        "probabilité de A et B",
+        "probabilité de A ou B"
+      ],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{A}(\\mathrm{B})$ se lit « probabilité de **B sachant A** » : l'événement en indice ($\\mathrm{A}$) est celui qui conditionne, celui que l'on suppose déjà réalisé. Confondre avec $P_\\mathrm{B}(\\mathrm{A})$ est l'erreur de fond du chapitre."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "tableau-croise",
+      "enonce": "Dans un tableau croisé portant sur $1000$ personnes, $185$ ont un test positif. Quelle est la probabilité qu'une personne choisie au hasard ait un test positif ?",
+      "choix": [
+        "$\\dfrac{185}{1000} = 18{,}5\\,\\%$",
+        "$\\dfrac{185}{815}$",
+        "$\\dfrac{95}{185}$",
+        "$\\dfrac{185}{100}$"
+      ],
+      "reponse": 0,
+      "explication": "La base est l'effectif **total** ($1000$), car aucune condition n'est imposée : $P(\\text{positif}) = \\dfrac{185}{1000} = 18{,}5\\,\\%$. Prendre une autre base (815, 100) reviendrait à calculer une probabilité conditionnelle, non demandée ici."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "tableau-croise",
+      "enonce": "Un tableau croisé indique $810$ tests négatifs parmi $900$ personnes saines. Que vaut $P_{\\text{sain}}(\\text{négatif})$ ?",
+      "choix": ["$0{,}90$", "$0{,}81$", "$0{,}99$", "$0{,}05$"],
+      "reponse": 0,
+      "explication": "L'événement qui conditionne est « être sain » : la base est l'effectif des sains, soit $900$. On obtient $\\dfrac{810}{900} = 0{,}90$. Le choix $0{,}81$ diviserait par $1000$ (le total général) au lieu de la colonne des sains."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "independance",
+      "enonce": "Pour deux événements A et B avec $P(\\mathrm{A}) \\neq 0$, quelle égalité traduit aussi leur indépendance ?",
+      "choix": [
+        "$P_\\mathrm{A}(\\mathrm{B}) = P(\\mathrm{B})$",
+        "$P_\\mathrm{A}(\\mathrm{B}) = P(\\mathrm{A})$",
+        "$P(\\mathrm{A} \\cap \\mathrm{B}) = 0$",
+        "$P(\\mathrm{A}) = P(\\mathrm{B})$"
+      ],
+      "reponse": 0,
+      "explication": "L'indépendance équivaut à $P_\\mathrm{A}(\\mathrm{B}) = P(\\mathrm{B})$ : savoir que A s'est produit **ne change rien** à la probabilité de B. L'égalité $P(\\mathrm{A} \\cap \\mathrm{B}) = 0$ traduit au contraire l'**incompatibilité**, à ne pas confondre avec l'indépendance."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "Une chaîne : la machine A fabrique $60\\,\\%$ des pièces avec $2\\,\\%$ de défauts, la machine B les $40\\,\\%$ restants avec $5\\,\\%$ de défauts. Quelle est la probabilité qu'une pièce soit défectueuse ?",
+      "choix": ["$0{,}032$", "$0{,}07$", "$0{,}035$", "$0{,}02$"],
+      "reponse": 0,
+      "explication": "On additionne les deux chemins pondérés : $0{,}60 \\times 0{,}02 + 0{,}40 \\times 0{,}05 = 0{,}012 + 0{,}020 = 0{,}032$. Le choix $0{,}07$ additionne les taux de défaut sans les pondérer par les parts de production."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "conditionnelle",
+      "enonce": "On donne $P(\\mathrm{B}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Que vaut $P_\\mathrm{B}(\\mathrm{A})$ ?",
+      "choix": ["$0{,}4$", "$0{,}1$", "$0{,}25$", "$0{,}7$"],
+      "reponse": 0,
+      "explication": "$P_\\mathrm{B}(\\mathrm{A}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{B})} = \\dfrac{0{,}2}{0{,}5} = 0{,}4$. On divise par la probabilité de l'événement **en indice** (celui qui conditionne). Le choix $0{,}1$ multiplie au lieu de diviser."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "bernoulli",
+      "enonce": "On répète $2$ fois, de façon identique et indépendante, une épreuve de succès $p = 0{,}3$. Quelle est la probabilité d'obtenir au moins un succès ?",
+      "choix": ["$0{,}51$", "$0{,}09$", "$0{,}6$", "$0{,}49$"],
+      "reponse": 0,
+      "explication": "On passe par l'événement contraire « aucun succès » : $P(\\text{0 succès}) = 0{,}7 \\times 0{,}7 = 0{,}49$, donc $P(\\text{au moins un}) = 1 - 0{,}49 = 0{,}51$. Le choix $0{,}49$ oublie de prendre le complément ; $0{,}6$ additionne naïvement $0{,}3 + 0{,}3$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "probabilites-totales",
+      "enonce": "Reprenons l'usine (A : $70\\,\\%$ des pièces, $3\\,\\%$ de défauts ; B : $30\\,\\%$, $8\\,\\%$ de défauts ; probabilité totale de défaut $= 0{,}045$). Une pièce est défectueuse : quelle est la probabilité qu'elle provienne de la machine A ?",
+      "choix": ["environ $0{,}47$", "$0{,}03$", "$0{,}70$", "environ $0{,}53$"],
+      "reponse": 0,
+      "explication": "On inverse le conditionnement : $P_{\\text{défaut}}(\\mathrm{A}) = \\dfrac{P(\\mathrm{A} \\cap \\text{défaut})}{P(\\text{défaut})} = \\dfrac{0{,}70 \\times 0{,}03}{0{,}045} = \\dfrac{0{,}021}{0{,}045} \\approx 0{,}47$. Le choix $0{,}53$ correspond à la machine B, et $0{,}70$ confond avec la part de production de A (sans conditionner par le défaut)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "bernoulli",
+      "enonce": "On répète $3$ fois une épreuve de succès $p = 0{,}5$. Quelle est la probabilité d'obtenir exactement deux succès ?",
+      "choix": ["$0{,}375$", "$0{,}125$", "$0{,}25$", "$0{,}5$"],
+      "reponse": 0,
+      "explication": "Trois chemins réalisent « exactement deux succès » (SSÉ, SÉS, ÉSS), chacun de probabilité $0{,}5^3 = 0{,}125$. Total : $3 \\times 0{,}125 = 0{,}375$. Le choix $0{,}125$ oublie de **compter les trois chemins**."
     }
   ]
 }

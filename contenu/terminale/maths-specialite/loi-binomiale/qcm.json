@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "Un problème de seuil se lit sur la probabilité **cumulée** $P(X\\leqslant s)$, qui croît avec $s$ : on l'évalue (calculatrice ou algorithme) jusqu'à franchir $0{,}95$. Ici on trouve $s=9$. L'espérance $np=5$ ne donne pas le seuil, et $P(X=s)=0{,}95$ n'a pas de solution entière pertinente."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "esperance",
+      "enonce": "Si $X$ suit la loi binomiale $B(n\\,;\\,p)$, que vaut son espérance $E(X)$ ?",
+      "choix": [
+        "$np$",
+        "$np(1-p)$",
+        "$n + p$",
+        "$\\dfrac{n}{p}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour une loi binomiale, $E(X) = np$. Le piège est de la confondre avec la VARIANCE $V(X) = np(1-p)$ : l'espérance ne contient pas le facteur $(1-p)$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "bernoulli",
+      "enonce": "Pour une variable $X$ suivant la loi de Bernoulli de paramètre $p$, que vaut $P(X = 0)$ ?",
+      "choix": [
+        "$p$",
+        "$1 - p$",
+        "$0$",
+        "$1$"
+      ],
+      "reponse": 1,
+      "explication": "$X = 0$ correspond à l'ÉCHEC, de probabilité $1 - p$ (alors que $P(X = 1) = p$ est le succès). Le piège est d'attribuer $p$ à l'échec : $p$ est toujours la probabilité du succès."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "schema-bernoulli",
+      "enonce": "Un tirage SANS remise dans une urne constitue-t-il un schéma de Bernoulli ?",
+      "choix": [
+        "oui, toujours",
+        "non, car les épreuves ne sont pas indépendantes",
+        "oui, s'il n'y a que deux couleurs",
+        "non, car il y a trop d'issues"
+      ],
+      "reponse": 1,
+      "explication": "Sans remise, la composition de l'urne change à chaque tirage : $p$ varie et les épreuves deviennent DÉPENDANTES. Le schéma de Bernoulli exige des épreuves indépendantes à $p$ constant : le modèle binomial ne s'applique donc pas."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "loi-binomiale",
+      "enonce": "Une pièce équilibrée est lancée 3 fois ($X \\sim B(3\\,;\\,0{,}5)$ compte les Piles). Que vaut $P(X = 2)$ ?",
+      "choix": [
+        "$\\dfrac{3}{8}$",
+        "$\\dfrac{1}{8}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{1}{4}$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X=2) = \\binom{3}{2}\\left(\\tfrac12\\right)^2\\left(\\tfrac12\\right)^1 = 3 \\times \\tfrac18 = \\tfrac38$. Le piège $\\tfrac18$ oublie le coefficient $\\binom{3}{2} = 3$ : c'est la probabilité d'UN seul chemin, pas de tous."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "cas-particulier",
+      "enonce": "Pour $X \\sim B(n\\,;\\,p)$, quelle est la probabilité de n'obtenir AUCUN succès, $P(X = 0)$ ?",
+      "choix": [
+        "$(1 - p)^n$",
+        "$p^n$",
+        "$np$",
+        "$1 - p^n$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $\\binom{n}{0} = 1$, on a $P(X = 0) = (1-p)^n$ : les $n$ épreuves sont des échecs. Le piège $p^n$ correspond au contraire à $P(X = n)$ (que des succès)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "variance",
+      "enonce": "Si $X$ suit la loi binomiale $B(n\\,;\\,p)$, que vaut sa variance $V(X)$ ?",
+      "choix": [
+        "$np$",
+        "$np(1 - p)$",
+        "$\\sqrt{np}$",
+        "$np^2$"
+      ],
+      "reponse": 1,
+      "explication": "Pour une loi binomiale, $V(X) = np(1 - p)$. Le piège est de répondre $np$, qui est l'ESPÉRANCE $E(X)$ : la variance, elle, comporte le facteur $(1 - p)$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "succession-independante",
+      "enonce": "On lance deux fois un dé équilibré (lancers indépendants). Quelle est la probabilité d'obtenir un 6 au premier lancer PUIS un résultat autre que 6 au second ?",
+      "choix": [
+        "$\\dfrac{5}{36}$",
+        "$\\dfrac{1}{36}$",
+        "$\\dfrac{6}{36}$",
+        "$\\dfrac{5}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "La probabilité d'une issue d'une succession indépendante est le PRODUIT des probabilités : $\\dfrac{1}{6} \\times \\dfrac{5}{6} = \\dfrac{5}{36}$. Le piège $\\dfrac{1}{36}$ oublie que « pas 6 » a pour probabilité $\\dfrac{5}{6}$, pas $\\dfrac{1}{6}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "cumul",
+      "enonce": "Pour $X \\sim B(n\\,;\\,p)$, l'événement « obtenir AU PLUS 2 succès » se traduit par :",
+      "choix": [
+        "$P(X = 2)$",
+        "$P(X \\leqslant 2)$",
+        "$P(X \\geqslant 2)$",
+        "$P(X = 0) + P(X = 1)$"
+      ],
+      "reponse": 1,
+      "explication": "« Au plus 2 » signifie $X \\leqslant 2$, soit $P(X = 0) + P(X = 1) + P(X = 2)$. Le piège $P(X = 2)$ est « exactement 2 » ; le dernier choix ($P(X=0)+P(X=1)$) est « au plus 1 » et oublie le terme $P(X = 2)$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "complementaire",
+      "enonce": "Pour $X \\sim B(n\\,;\\,p)$, quelle expression donne $P(X \\geqslant k)$ à partir des probabilités cumulées ?",
+      "choix": [
+        "$1 - P(X \\leqslant k)$",
+        "$1 - P(X \\leqslant k - 1)$",
+        "$P(X \\leqslant k) - 1$",
+        "$P(X \\leqslant k - 1)$"
+      ],
+      "reponse": 1,
+      "explication": "$X \\geqslant k$ est le complémentaire de $X \\leqslant k - 1$, d'où $P(X \\geqslant k) = 1 - P(X \\leqslant k - 1)$. Le piège $1 - P(X \\leqslant k)$ retire aussi la valeur $X = k$, qui doit pourtant RESTER dans l'événement."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "loi-binomiale",
+      "enonce": "$X \\sim B(10\\,;\\,0{,}2)$. Quelle est une valeur approchée de $P(X = 3)$ ?",
+      "choix": [
+        "$0{,}201$",
+        "$0{,}008$",
+        "$0{,}060$",
+        "$0{,}500$"
+      ],
+      "reponse": 0,
+      "explication": "$P(X=3) = \\binom{10}{3}(0{,}2)^3(0{,}8)^7 = 120 \\times 0{,}008 \\times 0{,}2097 \\approx 0{,}201$. Le piège $0{,}008$ est seulement $(0{,}2)^3$ : il oublie le coefficient $\\binom{10}{3} = 120$ et les échecs $(0{,}8)^7$."
     }
   ]
 }

@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "definition",
       "enonce": "Que vaut $i^{2}$ ?",
-      "choix": ["$1$", "$-1$", "$i$", "$-i$"],
+      "choix": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$"
+      ],
       "reponse": 1,
       "explication": "Par définition du nombre $i$, on a $i^{2}=-1$. C'est la seule règle nouvelle des complexes. Le piège : confondre $i^2=-1$ avec $i^2=1$ (ce serait $i=\\pm 1$, donc un réel)."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "definition",
       "enonce": "Pour le complexe $z = 4 - 7i$, quelle est la partie imaginaire $\\operatorname{Im}(z)$ ?",
-      "choix": ["$-7i$", "$7$", "$-7$", "$4$"],
+      "choix": [
+        "$-7i$",
+        "$7$",
+        "$-7$",
+        "$4$"
+      ],
       "reponse": 2,
       "explication": "La partie imaginaire est le coefficient réel qui multiplie $i$, ici $-7$. Le piège classique du choix 0 : inclure le $i$ ; or $\\operatorname{Im}(z)$ est toujours un réel, sans $i$."
     },
@@ -33,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "operations",
       "enonce": "Le produit $(2+3i)(1-2i)$ est égal à :",
-      "choix": ["$8 - i$", "$2 - 6i$", "$-4 - i$", "$8 - 7i$"],
+      "choix": [
+        "$8 - i$",
+        "$2 - 6i$",
+        "$-4 - i$",
+        "$8 - 7i$"
+      ],
       "reponse": 0,
       "explication": "$(2+3i)(1-2i)=2-4i+3i-6i^{2}=2-i+6=8-i$, car $-6i^{2}=+6$. Le piège du choix 3 : oublier de remplacer $i^2$ par $-1$ et laisser $-6i^2$, ce qui fausse la partie réelle."
     },
@@ -42,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "conjugue",
       "enonce": "Quel est le conjugué de $z = -5 + 2i$ ?",
-      "choix": ["$5 - 2i$", "$-5 - 2i$", "$5 + 2i$", "$-5 + 2i$"],
+      "choix": [
+        "$5 - 2i$",
+        "$-5 - 2i$",
+        "$5 + 2i$",
+        "$-5 + 2i$"
+      ],
       "reponse": 1,
       "explication": "Le conjugué change le signe de la seule partie imaginaire : $\\overline{-5+2i}=-5-2i$. Le piège du choix 0 : changer aussi le signe de la partie réelle, ce qui donne l'opposé $-z$, pas le conjugué."
     },
@@ -51,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "conjugue",
       "enonce": "Pour $z = 3 + 4i$, combien vaut $z\\,\\overline{z}$ ?",
-      "choix": ["$25$", "$7i$", "$-7$", "$9 - 16 = -7$"],
+      "choix": [
+        "$25$",
+        "$7i$",
+        "$-7$",
+        "$9 - 16 = -7$"
+      ],
       "reponse": 0,
       "explication": "$z\\overline{z}=a^{2}+b^{2}=3^{2}+4^{2}=9+16=25$, un réel positif. Le piège des choix 2 et 3 : appliquer $(a+ib)(a-ib)=a^2-b^2$ au lieu de $a^2+b^2$ ; ici le produit conjugué ajoute les carrés."
     },
@@ -60,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "puissances-de-i",
       "enonce": "Que vaut $i^{2026}$ ?",
-      "choix": ["$1$", "$i$", "$-1$", "$-i$"],
+      "choix": [
+        "$1$",
+        "$i$",
+        "$-1$",
+        "$-i$"
+      ],
       "reponse": 2,
       "explication": "Les puissances de $i$ ont un cycle de période 4. On divise $2026$ par $4$ : reste $2$ (car $2026=4\\times 506+2$), donc $i^{2026}=i^{2}=-1$. Le piège : oublier le cycle et répondre au hasard."
     },
@@ -97,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "equations-z-zbarre",
       "enonce": "La solution de l'équation $3z + \\overline{z} = 8 + 2i$ (avec $z=x+iy$) est :",
-      "choix": ["$z = 2 + i$", "$z = 2 - i$", "$z = 4 + i$", "$z = 2 + 2i$"],
+      "choix": [
+        "$z = 2 + i$",
+        "$z = 2 - i$",
+        "$z = 4 + i$",
+        "$z = 2 + 2i$"
+      ],
       "reponse": 0,
       "explication": "Avec $z=x+iy$ : $3(x+iy)+(x-iy)=4x+2iy=8+2i$. Identification : $4x=8$ et $2y=2$, donc $x=2$, $y=1$. Le piège : additionner les $i$ à tort et oublier que $\\overline z=x-iy$ retire $iy$ à la partie imaginaire."
     },
@@ -114,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "$z$ imaginaire pur signifie $\\operatorname{Re}(z)=0$, ce qui équivaut à $\\overline z=-z$ (les parties réelles s'annulent). Le piège du choix 1 : $\\overline z=z$ caractérise au contraire les RÉELS, pas les imaginaires purs."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Pour le complexe $z = -3 + 8i$, quelle est la partie réelle $\\operatorname{Re}(z)$ ?",
+      "choix": [
+        "$-3$",
+        "$8$",
+        "$3$",
+        "$-3 + 8i$"
+      ],
+      "reponse": 0,
+      "explication": "La partie réelle est le terme sans $i$, ici $-3$. Le piège est de donner la partie imaginaire ($8$), ou de recopier $z$ tout entier : $\\operatorname{Re}(z)$ est un réel."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "operations",
+      "enonce": "Quelle est la forme algébrique de $(3 - 2i) + (-1 + 5i)$ ?",
+      "choix": [
+        "$2 + 3i$",
+        "$2 - 3i$",
+        "$4 - 7i$",
+        "$2 + 7i$"
+      ],
+      "reponse": 0,
+      "explication": "On ajoute les parties réelles entre elles et les parties imaginaires entre elles : $(3 - 1) + (-2 + 5)i = 2 + 3i$. Le piège est de se tromper de signe sur $-2 + 5 = 3$ (et non $-7$)."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "puissances-de-i",
+      "enonce": "Que vaut $i^{3}$ ?",
+      "choix": [
+        "$-i$",
+        "$i$",
+        "$-1$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "$i^{3} = i^{2} \\times i = (-1)\\times i = -i$. Le piège est d'oublier que $i^2 = -1$ et de laisser $i^3 = i$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "operations",
+      "enonce": "Quelle est la forme algébrique de $(1 + i)^{2}$ ?",
+      "choix": [
+        "$2i$",
+        "$2$",
+        "$0$",
+        "$1 + 2i$"
+      ],
+      "reponse": 0,
+      "explication": "$(1+i)^2 = 1 + 2i + i^2 = 1 + 2i - 1 = 2i$. Le piège du choix $2$ : oublier le terme $2i$ ; le piège du choix $1+2i$ : laisser $i^2$ sans le remplacer par $-1$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "conjugue",
+      "enonce": "Pour $z = 4 - 3i$, combien vaut $z + \\overline{z}$ ?",
+      "choix": [
+        "$8$",
+        "$-6i$",
+        "$8 - 6i$",
+        "$-6$"
+      ],
+      "reponse": 0,
+      "explication": "$z + \\overline{z} = 2\\operatorname{Re}(z) = 2 \\times 4 = 8$, un réel. Le piège est de croire que $z + \\overline z = z - \\overline z = 2i\\operatorname{Im}(z)$ (ce qui donnerait $-6i$) : c'est la différence qui isole la partie imaginaire."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "inverse-quotient",
+      "enonce": "L'écriture algébrique de $\\dfrac{4 + 2i}{1 + i}$ est :",
+      "choix": [
+        "$3 - i$",
+        "$3 + i$",
+        "$6 - 2i$",
+        "$3 - 3i$"
+      ],
+      "reponse": 0,
+      "explication": "On multiplie haut et bas par le conjugué du dénominateur : $\\dfrac{(4+2i)(1-i)}{(1+i)(1-i)} = \\dfrac{6 - 2i}{2} = 3 - i$. Le piège du choix $6 - 2i$ : oublier de diviser par le dénominateur réel $(1+i)(1-i) = 2$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "second-degre",
+      "enonce": "Les solutions dans $\\mathbb{C}$ de $z^{2} - 6z + 9 = 0$ sont :",
+      "choix": [
+        "$3$ (racine double)",
+        "$3$ et $-3$",
+        "$-3$ (racine double)",
+        "$3 + 3i$ et $3 - 3i$"
+      ],
+      "reponse": 0,
+      "explication": "$\\Delta = (-6)^2 - 4\\times 9 = 36 - 36 = 0$ : il y a une racine réelle double $z = \\dfrac{-b}{2a} = \\dfrac{6}{2} = 3$. Le piège est de croire à deux solutions opposées ou complexes alors que $\\Delta = 0$ donne une racine unique."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "second-degre",
+      "enonce": "Les solutions dans $\\mathbb{C}$ de $z^{2} - 2z + 10 = 0$ sont :",
+      "choix": [
+        "$1 + 3i$ et $1 - 3i$",
+        "$-1 + 3i$ et $-1 - 3i$",
+        "$1 + 6i$ et $1 - 6i$",
+        "aucune solution"
+      ],
+      "reponse": 0,
+      "explication": "$\\Delta = (-2)^2 - 4\\times 10 = 4 - 40 = -36 < 0$, donc $\\sqrt{-\\Delta} = 6$ et $z = \\dfrac{2 \\pm 6i}{2} = 1 \\pm 3i$. Le piège du choix « aucune solution » : $\\Delta < 0$ interdit les racines réelles, mais donne deux racines complexes conjuguées."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "equations-z-zbarre",
+      "enonce": "La solution de l'équation $z - 2\\overline{z} = 3 + 6i$ (avec $z = x + iy$) est :",
+      "choix": [
+        "$z = -3 + 2i$",
+        "$z = 3 + 2i$",
+        "$z = -3 - 2i$",
+        "$z = -3 + 6i$"
+      ],
+      "reponse": 0,
+      "explication": "Avec $z = x + iy$ : $(x + iy) - 2(x - iy) = -x + 3iy = 3 + 6i$. Identification : $-x = 3$ et $3y = 6$, donc $x = -3$, $y = 2$. Le piège est d'oublier que $\\overline z = x - iy$ change le signe de la partie imaginaire, ce qui fait $+3iy$ et non $-iy$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "binome-newton",
+      "enonce": "Sachant que $(1 + i)^{2} = 2i$, que vaut $(1 + i)^{4}$ ?",
+      "choix": [
+        "$-4$",
+        "$4$",
+        "$4i$",
+        "$-4i$"
+      ],
+      "reponse": 0,
+      "explication": "$(1+i)^4 = \\big((1+i)^2\\big)^2 = (2i)^2 = 4i^2 = -4$. Le piège du choix $4$ : oublier que $i^2 = -1$ et écrire $(2i)^2 = 4$ ; le piège $4i$ : confondre $(2i)^2$ avec $2 \\times 2i$."
     }
   ]
 }

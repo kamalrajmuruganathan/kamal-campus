@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "C'est exactement ce qu'on démontre par l'absurde : le carré d'un décimal non entier garde toujours des chiffres après la virgule, il ne peut donc pas valoir l'entier $2$. Les trois autres choix sont des raisonnements fautifs classiques. Être compris entre $1$ et $2$ est vrai mais ne prouve rien ($1{,}5$ l'est aussi et il est décimal). $\\sqrt{2}$ **existe** bel et bien : c'est le côté d'un carré d'aire $2$. Et la calculatrice affiche une valeur **approchée** — d'où le signe $\\approx$, jamais $=$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Combien vaut $\\sqrt{64}$ ?",
+      "choix": [
+        "$8$",
+        "$32$",
+        "$8$ et $-8$",
+        "$4096$"
+      ],
+      "reponse": 0,
+      "explication": "$\\sqrt{64}$ est le nombre **positif** dont le carré vaut $64$ : c'est $8$, car $8^2 = 64$. Le piège $32$ divise par $2$ ; le choix « $8$ et $-8$ » donne deux réponses, alors que le radical désigne **un seul** nombre, positif. Le choix $4096$ élève $64$ au carré."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "carres-parfaits",
+      "enonce": "Combien vaut $\\sqrt{121}$ ?",
+      "choix": [
+        "$11$",
+        "$60{,}5$",
+        "$12$",
+        "$11$ et $-11$"
+      ],
+      "reponse": 0,
+      "explication": "$121$ est le carré parfait de $11$ ($11^2 = 121$), donc $\\sqrt{121} = 11$. Le piège $60{,}5$ confond racine et division par $2$ ; le choix $12$ vient de $\\sqrt{144}$. La racine d'un carré parfait se lit dans la table des carrés de $0$ à $12$, prise à l'envers."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "condition-existence",
+      "enonce": "Parmi ces écritures, laquelle **n'a pas de sens** ?",
+      "choix": [
+        "$\\sqrt{-4}$",
+        "$\\sqrt{4}$",
+        "$\\sqrt{0}$",
+        "$\\sqrt{40}$"
+      ],
+      "reponse": 0,
+      "explication": "Une racine carrée n'existe que si le radicande est **positif ou nul**. Aucun nombre multiplié par lui-même ne donne $-4$, donc $\\sqrt{-4}$ est interdit. Le piège est de croire que $\\sqrt{-4} = -2$ en « sortant » le signe : c'est faux. En revanche $\\sqrt{0} = 0$ existe très bien."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "proprietes",
+      "enonce": "Combien vaut $\\left(\\sqrt{5}\\right)^2$ ?",
+      "choix": [
+        "$5$",
+        "$25$",
+        "$10$",
+        "$\\sqrt{5}$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition, $\\sqrt{5}$ est le nombre positif dont le carré vaut $5$ : l'élever au carré redonne donc $5$. Le carré et la racine s'annulent. Le piège $25$ élève le radicande au carré ($5^2$) au lieu de la racine ; le choix $10$ confond le carré avec un doublement."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "proprietes",
+      "enonce": "Combien vaut $\\sqrt{9^2}$ ?",
+      "choix": [
+        "$9$",
+        "$81$",
+        "$18$",
+        "$3$"
+      ],
+      "reponse": 0,
+      "explication": "On calcule sous le radical : $9^2 = 81$, puis $\\sqrt{81} = 9$. Comme $9$ est positif, la racine annule le carré et on retrouve le nombre de départ : $\\sqrt{9^2} = 9$. Le piège est de s'arrêter à $81$, c'est-à-dire d'oublier d'appliquer la racine."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "encadrement",
+      "enonce": "Entre quels deux entiers consécutifs se trouve $\\sqrt{30}$ ?",
+      "choix": [
+        "entre $5$ et $6$",
+        "entre $6$ et $7$",
+        "entre $15$ et $16$",
+        "entre $25$ et $36$"
+      ],
+      "reponse": 0,
+      "explication": "On repère les deux carrés parfaits qui entourent $30$ : $25$ et $36$. De $25 < 30 < 36$ on déduit $\\sqrt{25} < \\sqrt{30} < \\sqrt{36}$, donc $5 < \\sqrt{30} < 6$. Le piège « entre $25$ et $36$ » encadre $30$ au lieu d'encadrer sa **racine** ; « entre $15$ et $16$ » vient d'une division par $2$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "lien-geometrique",
+      "enonce": "Un carré a une aire de $144\\ \\text{cm}^2$. Quelle est la longueur de son côté ?",
+      "choix": [
+        "$12$ cm",
+        "$72$ cm",
+        "$36$ cm",
+        "$14$ cm"
+      ],
+      "reponse": 0,
+      "explication": "L'aire d'un carré de côté $c$ vaut $c^2$ ; pour remonter au côté on prend la racine : $c = \\sqrt{144} = 12$ cm. Vérification : $12 \\times 12 = 144$ ✓. Le piège $72$ divise l'aire par $2$ ; le choix $36$ la divise par $4$ (confusion avec le périmètre)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "pieges",
+      "enonce": "Combien vaut $\\sqrt{36 + 64}$ ?",
+      "choix": [
+        "$10$",
+        "$14$",
+        "$100$",
+        "$50$"
+      ],
+      "reponse": 0,
+      "explication": "Le radical joue le rôle d'une parenthèse : on calcule d'abord la somme, $36 + 64 = 100$, puis $\\sqrt{100} = 10$. Le piège majeur est de distribuer la racine : $\\sqrt{36} + \\sqrt{64} = 6 + 8 = 14$, ce qui est faux. Retiens le contre-exemple : $\\sqrt{a+b} \\neq \\sqrt{a} + \\sqrt{b}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "encadrement",
+      "enonce": "On sait que $6 < \\sqrt{n} < 7$, où $n$ est un entier. Laquelle de ces valeurs $n$ peut-il prendre ?",
+      "choix": [
+        "$45$",
+        "$6{,}5$",
+        "$50$",
+        "$36$"
+      ],
+      "reponse": 0,
+      "explication": "On élève l'encadrement au carré : $6^2 < n < 7^2$, donc $36 < n < 49$. Seul $45$ convient. Le piège $6{,}5$ suppose que $n$ est entre $6$ et $7$ : c'est la **racine** qui l'est, pas $n$. Le choix $50$ dépasse $49$, et $36$ est exclu car l'inégalité est **stricte** ($\\sqrt{36} = 6$)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "proprietes",
+      "enonce": "Sans calculatrice, quel est le plus grand : $\\sqrt{50}$ ou $7$ ?",
+      "choix": [
+        "$\\sqrt{50}$",
+        "$7$",
+        "ils sont égaux",
+        "impossible à savoir sans calculatrice"
+      ],
+      "reponse": 0,
+      "explication": "On écrit les deux nombres sous la même forme : $7 = \\sqrt{49}$. Comme $49 < 50$ et que la racine carrée respecte l'ordre, $\\sqrt{49} < \\sqrt{50}$, donc $7 < \\sqrt{50}$. Le piège est de croire qu'il faut une valeur décimale : la propriété d'ordre suffit. Contrôle : $49 < 50 < 64$, donc $\\sqrt{50}$ est entre $7$ et $8$."
     }
   ]
 }

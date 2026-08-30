@@ -149,6 +149,146 @@
    ],
    "reponse": 0,
    "explication": "Une solution colorée apparaît de la couleur **complémentaire** de celle qu'elle absorbe. Le complémentaire du **jaune** est le **bleu** : elle absorbe donc vers $\\lambda_{\\max}\\approx450\\ \\mathrm{nm}$. Croire qu'une solution jaune absorbe le jaune ($580\\ \\mathrm{nm}$) est l'erreur type."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "absorbance",
+   "enonce": "Quelle est l'unité de l'absorbance $A$ d'une solution ?",
+   "choix": [
+    "Elle s'exprime en mol·L⁻¹",
+    "C'est un nombre sans unité",
+    "Elle s'exprime en cm",
+    "Elle s'exprime en S·m⁻¹"
+   ],
+   "reponse": 1,
+   "explication": "L'absorbance $A$ est un **nombre sans unité** : dans $A = \\varepsilon\\,\\ell\\,c$, les unités de $\\varepsilon$ (L·mol⁻¹·cm⁻¹), de $\\ell$ (cm) et de $c$ (mol·L⁻¹) se simplifient. Écrire « $A = 0{,}40$ mol·L⁻¹ » est une faute classique : c'est $c$ qui a cette unité."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "infrarouge",
+   "enonce": "Laquelle des deux spectroscopies sert à **identifier** les groupes caractéristiques d'une molécule ?",
+   "choix": [
+    "La spectroscopie UV-visible",
+    "La conductimétrie",
+    "La spectrophotométrie visible seule",
+    "La spectroscopie infrarouge (IR)"
+   ],
+   "reponse": 3,
+   "explication": "L'**infrarouge** fait vibrer les liaisons : chaque groupe caractéristique absorbe à une position propre (nombre d'onde), ce qui permet de l'**identifier**. L'UV-visible sert plutôt à **doser** une espèce colorée via la loi de Beer-Lambert."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "beer-lambert",
+   "enonce": "Quelle est l'expression de la loi de Beer-Lambert reliant l'absorbance $A$, le coefficient d'absorption molaire $\\varepsilon$, l'épaisseur $\\ell$ et la concentration $c$ ?",
+   "choix": [
+    "$A = \\varepsilon\\,\\ell\\,c$",
+    "$A = \\dfrac{\\varepsilon\\,c}{\\ell}$",
+    "$A = \\varepsilon + \\ell + c$",
+    "$A = \\dfrac{\\ell\\,c}{\\varepsilon}$"
+   ],
+   "reponse": 0,
+   "explication": "La loi de Beer-Lambert s'écrit $A = \\varepsilon\\,\\ell\\,c$ : l'absorbance est **proportionnelle** à la concentration (pour une solution diluée, à une longueur d'onde fixée). En regroupant $\\varepsilon$ et $\\ell$ constants, on obtient la forme $A = k\\,c$."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "beer-lambert",
+   "enonce": "Pour une cuve et une longueur d'onde fixées, la loi de Beer-Lambert s'écrit $A = k\\,c$ avec $k = 5{,}0 \\times 10^{3}$ L·mol⁻¹. Quelle est l'absorbance d'une solution de concentration $c = 2{,}0 \\times 10^{-4}$ mol·L⁻¹ ?",
+   "choix": [
+    "$0{,}10$",
+    "$2{,}5 \\times 10^{6}$",
+    "$1{,}0$",
+    "$4{,}0 \\times 10^{-8}$"
+   ],
+   "reponse": 2,
+   "explication": "On applique $A = k\\,c = 5{,}0 \\times 10^{3} \\times 2{,}0 \\times 10^{-4} = 1{,}0$. Le résultat est bien un nombre pur. Diviser au lieu de multiplier ($k/c$) donnerait $2{,}5 \\times 10^{6}$, valeur aberrante pour une absorbance."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "courbe-etalonnage",
+   "enonce": "Une courbe d'étalonnage a pour équation $A = 4{,}0 \\times 10^{3}\\,c$ (avec $c$ en mol·L⁻¹). Une solution inconnue donne $A_x = 0{,}60$. Quelle est sa concentration ?",
+   "choix": [
+    "$2{,}4 \\times 10^{3}$ mol·L⁻¹",
+    "$6{,}7 \\times 10^{3}$ mol·L⁻¹",
+    "$1{,}5 \\times 10^{-3}$ mol·L⁻¹",
+    "$1{,}5 \\times 10^{-4}$ mol·L⁻¹"
+   ],
+   "reponse": 3,
+   "explication": "On isole $c_x = \\dfrac{A_x}{k} = \\dfrac{0{,}60}{4{,}0 \\times 10^{3}} = 1{,}5 \\times 10^{-4}$ mol·L⁻¹. **Multiplier** $A_x$ par $k$ au lieu de diviser donne $2{,}4 \\times 10^{3}$ mol·L⁻¹, une concentration impossible."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "conductance-conductivite",
+   "enonce": "Quelle grandeur ne dépend **que** de la solution, indépendamment de la géométrie de la cellule de mesure ?",
+   "choix": [
+    "La conductivité $\\sigma$",
+    "La conductance $G$",
+    "L'intensité $I$",
+    "La tension $U$"
+   ],
+   "reponse": 0,
+   "explication": "La **conductance** $G = \\dfrac{I}{U}$ dépend à la fois de la solution et de la géométrie de la cellule (surface et écartement des électrodes). La **conductivité** $\\sigma$, reliée à $G$ par $G = k_{\\text{cell}}\\,\\sigma$, ne caractérise que la solution : c'est une grandeur intrinsèque."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "nombre-onde",
+   "enonce": "En spectroscopie infrarouge, une bande d'absorption est repérée à la longueur d'onde $\\lambda = 5{,}0$ µm. Quel est le nombre d'onde correspondant ?",
+   "choix": [
+    "$5{,}0 \\times 10^{-4}$ cm⁻¹",
+    "$2{,}0 \\times 10^{5}$ cm⁻¹",
+    "$2{,}0 \\times 10^{3}$ cm⁻¹",
+    "$5{,}0$ cm⁻¹"
+   ],
+   "reponse": 2,
+   "explication": "Le nombre d'onde vaut $\\sigma = \\dfrac{1}{\\lambda}$ en cm⁻¹, avec $\\lambda$ en cm : $\\lambda = 5{,}0$ µm $= 5{,}0 \\times 10^{-4}$ cm, donc $\\sigma = \\dfrac{1}{5{,}0 \\times 10^{-4}} = 2{,}0 \\times 10^{3}$ cm⁻¹. C'est une valeur cohérente avec l'axe d'un spectre IR (de $4000$ à $500$ cm⁻¹)."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "kohlrausch",
+   "enonce": "Une solution de chlorure de potassium a une concentration $c = 2{,}0 \\times 10^{-2}$ mol·L⁻¹. On donne $\\lambda_{\\mathrm{K^+}} = 7{,}4 \\times 10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6 \\times 10^{-3}$ S·m²·mol⁻¹. Quelle est la conductivité de la solution ?",
+   "choix": [
+    "$3{,}0 \\times 10^{-4}$ S·m⁻¹",
+    "$0{,}30$ S·m⁻¹",
+    "$0{,}15$ S·m⁻¹",
+    "$3{,}0 \\times 10^{2}$ S·m⁻¹"
+   ],
+   "reponse": 1,
+   "explication": "La loi de Kohlrausch exige les concentrations en **mol·m⁻³** : $[\\mathrm{K^+}] = [\\mathrm{Cl^-}] = 2{,}0 \\times 10^{-2}$ mol·L⁻¹ $= 20$ mol·m⁻³. Alors $\\sigma = (\\lambda_{\\mathrm{K^+}} + \\lambda_{\\mathrm{Cl^-}}) \\times 20 = 1{,}5 \\times 10^{-2} \\times 20 = 0{,}30$ S·m⁻¹. Garder $c$ en mol·L⁻¹ donne $3{,}0 \\times 10^{-4}$ : l'oubli du facteur $1000$ est le piège n°1 du chapitre."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "conversions",
+   "enonce": "Dans la loi de Kohlrausch, les concentrations doivent être exprimées en mol·m⁻³. À combien de mol·m⁻³ correspond une concentration de $1{,}0 \\times 10^{-2}$ mol·L⁻¹ ?",
+   "choix": [
+    "$1{,}0 \\times 10^{-5}$ mol·m⁻³",
+    "$1{,}0 \\times 10^{-2}$ mol·m⁻³",
+    "$1{,}0 \\times 10^{4}$ mol·m⁻³",
+    "$10$ mol·m⁻³"
+   ],
+   "reponse": 3,
+   "explication": "La conversion est $1$ mol·L⁻¹ $= 10^{3}$ mol·m⁻³, donc $1{,}0 \\times 10^{-2}$ mol·L⁻¹ $= 1{,}0 \\times 10^{-2} \\times 10^{3} = 10$ mol·m⁻³. **Diviser** par $1000$ au lieu de multiplier donne $1{,}0 \\times 10^{-5}$, l'erreur exactement inverse."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "infrarouge",
+   "enonce": "Sur un spectre IR, on relève une bande forte et fine vers $1700$ cm⁻¹ ($\\mathrm{C\\!=\\!O}$) **et** une bande très large entre $2500$ et $3200$ cm⁻¹ ($\\mathrm{O\\!-\\!H}$). Quel groupe caractéristique ces deux bandes signent-elles ensemble ?",
+   "choix": [
+    "Un acide carboxylique",
+    "Un alcool seul",
+    "Une amine",
+    "Un alcane"
+   ],
+   "reponse": 0,
+   "explication": "La présence **simultanée** d'un carbonyle $\\mathrm{C\\!=\\!O}$ (vers $1700$ cm⁻¹) et d'une bande $\\mathrm{O\\!-\\!H}$ **très large** ($2500$-$3200$ cm⁻¹) est caractéristique d'un **acide carboxylique**. Un $\\mathrm{C\\!=\\!O}$ seul (sans $\\mathrm{O\\!-\\!H}$) orienterait vers un aldéhyde ou une cétone ; un alcane ne présente ni l'un ni l'autre."
   }
  ]
 }

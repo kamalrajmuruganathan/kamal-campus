@@ -1,154 +1,294 @@
 {
- "id": "1spe-math-variables-aleatoires-qcm",
- "chapitre": "1spe-math-variables-aleatoires",
- "titre": "QCM — Variables aléatoires",
- "voie": "generale",
- "niveau": "premiere",
- "parcours": "maths-specialite",
- "matiere": "mathematiques",
- "statut": "brouillon",
- "relu_par": null,
- "consigne": "Une seule réponse correcte par question.",
- "questions": [
-  {
-   "id": 1,
-   "difficulte": "facile",
-   "notion": "definition",
-   "enonce": "Une variable aléatoire réelle est :",
-   "choix": [
-    "un nombre tiré au hasard",
-    "une fonction qui associe un réel à chaque issue",
-    "une probabilité",
-    "un événement"
-   ],
-   "reponse": 1,
-   "explication": "C'est une **fonction** de l'univers $\\Omega$ vers $\\mathbb{R}$. Garder cette nature en tête évite la plupart des confusions du chapitre : $X$ n'est pas un nombre, c'est une règle d'association."
-  },
-  {
-   "id": 2,
-   "difficulte": "facile",
-   "notion": "loi",
-   "enonce": "Dans le tableau d'une loi de probabilité, que doit valoir la somme de la seconde ligne ?",
-   "choix": [
-    "$0$",
-    "$1$",
-    "$100$",
-    "Cela dépend du nombre de valeurs"
-   ],
-   "reponse": 1,
-   "explication": "La somme des probabilités de toutes les valeurs possibles vaut toujours $1$. C'est le contrôle le plus rapide à faire avant tout calcul d'espérance ou de variance."
-  },
-  {
-   "id": 3,
-   "difficulte": "moyen",
-   "notion": "esperance",
-   "enonce": "$X$ prend les valeurs $1$, $2$ et $5$ avec les probabilités $0{,}5$, $0{,}3$ et $0{,}2$. Que vaut $E(X)$ ?",
-   "choix": [
-    "$2{,}1$",
-    "$2{,}67$",
-    "$8$",
-    "$1{,}6$"
-   ],
-   "reponse": 0,
-   "explication": "$E(X) = 1 \\times 0{,}5 + 2 \\times 0{,}3 + 5 \\times 0{,}2 = 0{,}5 + 0{,}6 + 1{,}0 = 2{,}1$. Le choix $2{,}67$ correspond à la moyenne simple $(1+2+5)/3$, qui ignore les probabilités."
-  },
-  {
-   "id": 4,
-   "difficulte": "moyen",
-   "notion": "notations",
-   "enonce": "Que désigne l'écriture $\\{X = 3\\}$ ?",
-   "choix": [
-    "La probabilité que $X$ vaille $3$",
-    "L'événement « $X$ prend la valeur $3$ »",
-    "La valeur $3$",
-    "L'espérance de $X$"
-   ],
-   "reponse": 1,
-   "explication": "Les accolades désignent un **événement**. Sa **probabilité** s'écrit $P(X = 3)$ et c'est un nombre. Cette distinction entre événement et probabilité est explicitement attendue par le programme."
-  },
-  {
-   "id": 5,
-   "difficulte": "moyen",
-   "notion": "konig-huygens",
-   "enonce": "Quelle est la formule de König-Huygens ?",
-   "choix": [
-    "$V(X) = \\left(E(X)\\right)^2 - E(X^2)$",
-    "$V(X) = E(X^2) - \\left(E(X)\\right)^2$",
-    "$V(X) = E(X^2) + \\left(E(X)\\right)^2$",
-    "$V(X) = \\sqrt{E(X)}$"
-   ],
-   "reponse": 1,
-   "explication": "« Moyenne des carrés moins carré de la moyenne ». L'ordre est essentiel : l'inverser donnerait une variance négative, ce qui est impossible — un bon signal d'alerte en contrôle."
-  },
-  {
-   "id": 6,
-   "difficulte": "moyen",
-   "notion": "jeu-equitable",
-   "enonce": "Un jeu est dit équitable lorsque :",
-   "choix": [
-    "$E(X) = 1$",
-    "$E(X) = 0$",
-    "$V(X) = 0$",
-    "toutes les probabilités sont égales"
-   ],
-   "reponse": 1,
-   "explication": "Un jeu équitable ne favorise ni le joueur ni l'organisateur : le gain algébrique moyen est nul, donc $E(X) = 0$. Une espérance négative signifie que le joueur perd en moyenne."
-  },
-  {
-   "id": 7,
-   "difficulte": "difficile",
-   "notion": "variance",
-   "enonce": "$X$ prend les valeurs $0$ et $2$ avec les probabilités $0{,}6$ et $0{,}4$. Que vaut $V(X)$ ?",
-   "choix": [
-    "$0{,}96$",
-    "$0{,}8$",
-    "$1{,}6$",
-    "$0{,}64$"
-   ],
-   "reponse": 0,
-   "explication": "$E(X) = 0 \\times 0{,}6 + 2 \\times 0{,}4 = 0{,}8$ et $E(X^2) = 0 \\times 0{,}6 + 4 \\times 0{,}4 = 1{,}6$. Donc $V(X) = 1{,}6 - 0{,}8^2 = 1{,}6 - 0{,}64 = 0{,}96$. Le choix $1{,}6$ oublie de soustraire le carré de l'espérance."
-  },
-  {
-   "id": 8,
-   "difficulte": "difficile",
-   "notion": "echantillonnage",
-   "enonce": "On simule des échantillons d'une variable aléatoire d'espérance $\\mu$ et d'écart-type $\\sigma$. Pour diviser par $2$ l'écart typique entre la moyenne $m$ d'un échantillon et $\\mu$, il faut multiplier la taille $n$ de l'échantillon par :",
-   "choix": [
-    "$2$",
-    "$4$",
-    "$8$",
-    "$16$"
-   ],
-   "reponse": 1,
-   "explication": "L'écart entre $m$ et $\\mu$ est le plus souvent inférieur à $\\dfrac{2\\sigma}{\\sqrt{n}}$ : il décroît en $\\dfrac{1}{\\sqrt{n}}$, pas en $\\dfrac{1}{n}$. Pour le diviser par $2$, il faut donc que $\\sqrt{n}$ double, c'est-à-dire **quadrupler** $n$. Le piège est de répondre $2$ en oubliant la racine. C'est la même loi que pour l'incertitude d'une mesure physique répétée."
-  },
-  {
-   "id": 9,
-   "difficulte": "difficile",
-   "notion": "esperance-gain",
-   "enonce": "On mise $3$ € à un jeu. On gagne $20$ € avec probabilité $0{,}1$, sinon rien. Quelle est l'espérance de gain algébrique ?",
-   "choix": [
-    "$2$ €",
-    "$-1$ €",
-    "$-0{,}3$ €",
-    "$17$ €"
-   ],
-   "reponse": 1,
-   "explication": "Le gain **algébrique** tient compte de la mise : $X = 17$ (gain de $20$ moins la mise de $3$) avec probabilité $0{,}1$, et $X = -3$ avec probabilité $0{,}9$. Donc $E(X) = 17 \\times 0{,}1 - 3 \\times 0{,}9 = 1{,}7 - 2{,}7 = -1$ €. Oublier de retrancher la mise est l'erreur classique."
-  },
-  {
-   "id": 10,
-   "difficulte": "difficile",
-   "notion": "ecart-type",
-   "enonce": "Une variable aléatoire a pour variance $V(X) = 0{,}25$. Que vaut son écart-type ?",
-   "choix": [
-    "$0{,}0625$",
-    "$0{,}5$",
-    "$0{,}25$",
-    "$2$"
-   ],
-   "reponse": 1,
-   "explication": "$\\sigma(X) = \\sqrt{V(X)} = \\sqrt{0{,}25} = 0{,}5$. Attention avec les nombres inférieurs à $1$ : la racine est **plus grande** que le nombre de départ, contrairement à l'intuition. Le choix $0{,}0625$ est le carré, pas la racine."
-  }
- ]
+  "id": "1spe-math-variables-aleatoires-qcm",
+  "chapitre": "1spe-math-variables-aleatoires",
+  "titre": "QCM — Variables aléatoires",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "maths-specialite",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Une variable aléatoire réelle est :",
+      "choix": [
+        "un nombre tiré au hasard",
+        "une fonction qui associe un réel à chaque issue",
+        "une probabilité",
+        "un événement"
+      ],
+      "reponse": 1,
+      "explication": "C'est une **fonction** de l'univers $\\Omega$ vers $\\mathbb{R}$. Garder cette nature en tête évite la plupart des confusions du chapitre : $X$ n'est pas un nombre, c'est une règle d'association."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "loi",
+      "enonce": "Dans le tableau d'une loi de probabilité, que doit valoir la somme de la seconde ligne ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "$100$",
+        "Cela dépend du nombre de valeurs"
+      ],
+      "reponse": 1,
+      "explication": "La somme des probabilités de toutes les valeurs possibles vaut toujours $1$. C'est le contrôle le plus rapide à faire avant tout calcul d'espérance ou de variance."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "esperance",
+      "enonce": "$X$ prend les valeurs $1$, $2$ et $5$ avec les probabilités $0{,}5$, $0{,}3$ et $0{,}2$. Que vaut $E(X)$ ?",
+      "choix": [
+        "$2{,}1$",
+        "$2{,}67$",
+        "$8$",
+        "$1{,}6$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = 1 \\times 0{,}5 + 2 \\times 0{,}3 + 5 \\times 0{,}2 = 0{,}5 + 0{,}6 + 1{,}0 = 2{,}1$. Le choix $2{,}67$ correspond à la moyenne simple $(1+2+5)/3$, qui ignore les probabilités."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "notations",
+      "enonce": "Que désigne l'écriture $\\{X = 3\\}$ ?",
+      "choix": [
+        "La probabilité que $X$ vaille $3$",
+        "L'événement « $X$ prend la valeur $3$ »",
+        "La valeur $3$",
+        "L'espérance de $X$"
+      ],
+      "reponse": 1,
+      "explication": "Les accolades désignent un **événement**. Sa **probabilité** s'écrit $P(X = 3)$ et c'est un nombre. Cette distinction entre événement et probabilité est explicitement attendue par le programme."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "konig-huygens",
+      "enonce": "Quelle est la formule de König-Huygens ?",
+      "choix": [
+        "$V(X) = \\left(E(X)\\right)^2 - E(X^2)$",
+        "$V(X) = E(X^2) - \\left(E(X)\\right)^2$",
+        "$V(X) = E(X^2) + \\left(E(X)\\right)^2$",
+        "$V(X) = \\sqrt{E(X)}$"
+      ],
+      "reponse": 1,
+      "explication": "« Moyenne des carrés moins carré de la moyenne ». L'ordre est essentiel : l'inverser donnerait une variance négative, ce qui est impossible — un bon signal d'alerte en contrôle."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "jeu-equitable",
+      "enonce": "Un jeu est dit équitable lorsque :",
+      "choix": [
+        "$E(X) = 1$",
+        "$E(X) = 0$",
+        "$V(X) = 0$",
+        "toutes les probabilités sont égales"
+      ],
+      "reponse": 1,
+      "explication": "Un jeu équitable ne favorise ni le joueur ni l'organisateur : le gain algébrique moyen est nul, donc $E(X) = 0$. Une espérance négative signifie que le joueur perd en moyenne."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "variance",
+      "enonce": "$X$ prend les valeurs $0$ et $2$ avec les probabilités $0{,}6$ et $0{,}4$. Que vaut $V(X)$ ?",
+      "choix": [
+        "$0{,}96$",
+        "$0{,}8$",
+        "$1{,}6$",
+        "$0{,}64$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = 0 \\times 0{,}6 + 2 \\times 0{,}4 = 0{,}8$ et $E(X^2) = 0 \\times 0{,}6 + 4 \\times 0{,}4 = 1{,}6$. Donc $V(X) = 1{,}6 - 0{,}8^2 = 1{,}6 - 0{,}64 = 0{,}96$. Le choix $1{,}6$ oublie de soustraire le carré de l'espérance."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "echantillonnage",
+      "enonce": "On simule des échantillons d'une variable aléatoire d'espérance $\\mu$ et d'écart-type $\\sigma$. Pour diviser par $2$ l'écart typique entre la moyenne $m$ d'un échantillon et $\\mu$, il faut multiplier la taille $n$ de l'échantillon par :",
+      "choix": [
+        "$2$",
+        "$4$",
+        "$8$",
+        "$16$"
+      ],
+      "reponse": 1,
+      "explication": "L'écart entre $m$ et $\\mu$ est le plus souvent inférieur à $\\dfrac{2\\sigma}{\\sqrt{n}}$ : il décroît en $\\dfrac{1}{\\sqrt{n}}$, pas en $\\dfrac{1}{n}$. Pour le diviser par $2$, il faut donc que $\\sqrt{n}$ double, c'est-à-dire **quadrupler** $n$. Le piège est de répondre $2$ en oubliant la racine. C'est la même loi que pour l'incertitude d'une mesure physique répétée."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "esperance-gain",
+      "enonce": "On mise $3$ € à un jeu. On gagne $20$ € avec probabilité $0{,}1$, sinon rien. Quelle est l'espérance de gain algébrique ?",
+      "choix": [
+        "$2$ €",
+        "$-1$ €",
+        "$-0{,}3$ €",
+        "$17$ €"
+      ],
+      "reponse": 1,
+      "explication": "Le gain **algébrique** tient compte de la mise : $X = 17$ (gain de $20$ moins la mise de $3$) avec probabilité $0{,}1$, et $X = -3$ avec probabilité $0{,}9$. Donc $E(X) = 17 \\times 0{,}1 - 3 \\times 0{,}9 = 1{,}7 - 2{,}7 = -1$ €. Oublier de retrancher la mise est l'erreur classique."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "ecart-type",
+      "enonce": "Une variable aléatoire a pour variance $V(X) = 0{,}25$. Que vaut son écart-type ?",
+      "choix": [
+        "$0{,}0625$",
+        "$0{,}5$",
+        "$0{,}25$",
+        "$2$"
+      ],
+      "reponse": 1,
+      "explication": "$\\sigma(X) = \\sqrt{V(X)} = \\sqrt{0{,}25} = 0{,}5$. Attention avec les nombres inférieurs à $1$ : la racine est **plus grande** que le nombre de départ, contrairement à l'intuition. Le choix $0{,}0625$ est le carré, pas la racine."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "notations",
+      "enonce": "Parmi ces écritures, laquelle désigne un **nombre** (et non un événement) ?",
+      "choix": [
+        "$\\{X = 4\\}$",
+        "$P(X \\leqslant 4)$",
+        "$\\{X \\leqslant 4\\}$",
+        "$\\{X = 0\\}$"
+      ],
+      "reponse": 1,
+      "explication": "$P(X \\leqslant 4)$ est une probabilité, donc un nombre. Les écritures entre accolades $\\{X = 4\\}$ ou $\\{X \\leqslant 4\\}$ désignent des événements. Piège : confondre l'événement et sa probabilité."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "ecart-type",
+      "enonce": "L'écart-type d'une variable aléatoire se calcule à partir de la variance par :",
+      "choix": [
+        "$\\sigma(X) = V(X)^2$",
+        "$\\sigma(X) = \\sqrt{V(X)}$",
+        "$\\sigma(X) = \\dfrac{V(X)}{2}$",
+        "$\\sigma(X) = 2\\,V(X)$"
+      ],
+      "reponse": 1,
+      "explication": "L'écart-type est la **racine carrée** de la variance : $\\sigma(X)=\\sqrt{V(X)}$. Son avantage est d'être dans la même unité que $X$. Piège : confondre variance et écart-type."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "loi",
+      "enonce": "$X$ prend les valeurs $1$, $2$, $3$ avec les probabilités $0{,}2$, $p$ et $0{,}5$. Que vaut $p$ ?",
+      "choix": [
+        "$0{,}3$",
+        "$0{,}7$",
+        "$0{,}5$",
+        "$0{,}1$"
+      ],
+      "reponse": 0,
+      "explication": "La somme des probabilités vaut $1$ : $0{,}2 + p + 0{,}5 = 1$, donc $p = 1 - 0{,}7 = 0{,}3$. Piège : oublier de vérifier que $\\sum p_i = 1$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "esperance",
+      "enonce": "$X$ prend les valeurs $-2$, $0$ et $3$ avec les probabilités $0{,}25$, $0{,}5$ et $0{,}25$. Que vaut $E(X)$ ?",
+      "choix": [
+        "$0{,}25$",
+        "$0{,}5$",
+        "$1$",
+        "$0$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = -2\\times0{,}25 + 0\\times0{,}5 + 3\\times0{,}25 = -0{,}5 + 0 + 0{,}75 = 0{,}25$. Piège : négliger le signe de la valeur négative ou faire une moyenne simple."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "linearite-esperance",
+      "enonce": "Si $E(X) = 4$, que vaut $E(3X - 5)$ ?",
+      "choix": [
+        "$7$",
+        "$12$",
+        "$-2$",
+        "$3E(X)$ seulement"
+      ],
+      "reponse": 0,
+      "explication": "Par linéarité de l'espérance, $E(aX+b)=aE(X)+b$, donc $E(3X-5)=3\\times4-5=12-5=7$. Piège : oublier de soustraire $5$ et répondre $12$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "esperance-carre",
+      "enonce": "$X$ prend les valeurs $1$ et $3$ avec les probabilités $0{,}5$ et $0{,}5$. Que vaut $E(X^2)$ ?",
+      "choix": [
+        "$4$",
+        "$5$",
+        "$2$",
+        "$16$"
+      ],
+      "reponse": 1,
+      "explication": "$E(X^2) = 1^2\\times0{,}5 + 3^2\\times0{,}5 = 0{,}5 + 4{,}5 = 5$. Piège : calculer $(E(X))^2 = 2^2 = 4$ au lieu de $E(X^2)$ : ce sont deux quantités différentes (leur écart est la variance)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "echantillonnage",
+      "enonce": "$E(X)$ est un nombre fixe ; la moyenne $m$ d'un échantillon simulé de $X$ est :",
+      "choix": [
+        "également fixe et égale à $E(X)$",
+        "aléatoire : elle change d'une simulation à l'autre",
+        "toujours plus grande que $E(X)$",
+        "égale à la variance"
+      ],
+      "reponse": 1,
+      "explication": "$E(X)$ est une propriété de la loi, donc fixe. La moyenne $m$ d'un échantillon est **aléatoire** : deux simulations donnent deux valeurs différentes, mais $m$ approche $E(X)$ quand $n$ grandit. Piège : confondre $\\mu$ et $m$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "variance",
+      "enonce": "$X$ prend les valeurs $1$, $2$, $3$ avec les probabilités $0{,}2$, $0{,}5$, $0{,}3$. Que vaut $V(X)$ ?",
+      "choix": [
+        "$0{,}49$",
+        "$2{,}1$",
+        "$4{,}9$",
+        "$0{,}7$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X)=1\\times0{,}2+2\\times0{,}5+3\\times0{,}3=0{,}2+1+0{,}9=2{,}1$. $E(X^2)=1\\times0{,}2+4\\times0{,}5+9\\times0{,}3=0{,}2+2+2{,}7=4{,}9$. König-Huygens : $V(X)=4{,}9-2{,}1^2=4{,}9-4{,}41=0{,}49$. Piège : oublier de soustraire $(E(X))^2$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "linearite-esperance",
+      "enonce": "Un jeu rapporte $X$ euros, avec $E(X) = 5$. L'organisateur double les gains puis prélève une mise de $4$ €. Quel est le gain moyen réel du joueur ?",
+      "choix": [
+        "$6$ €",
+        "$10$ €",
+        "$1$ €",
+        "$14$ €"
+      ],
+      "reponse": 0,
+      "explication": "Le gain réel est $Y = 2X - 4$, donc $E(Y) = 2E(X) - 4 = 2\\times5 - 4 = 10 - 4 = 6$ €. Piège : appliquer le facteur $2$ à la mise aussi, ou oublier de la retrancher."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "echantillonnage",
+      "enonce": "Une variable a pour écart-type $\\sigma = 3$. Pour un échantillon de taille $n = 36$, quelle est la borne $\\dfrac{2\\sigma}{\\sqrt{n}}$ de l'écart typique entre $m$ et $\\mu$ ?",
+      "choix": [
+        "$1$",
+        "$0{,}5$",
+        "$6$",
+        "$0{,}17$"
+      ],
+      "reponse": 0,
+      "explication": "$\\dfrac{2\\sigma}{\\sqrt{n}} = \\dfrac{2\\times3}{\\sqrt{36}} = \\dfrac{6}{6} = 1$. Piège : oublier la racine au dénominateur et calculer $\\dfrac{6}{36}=0{,}17$."
+    }
+  ]
 }

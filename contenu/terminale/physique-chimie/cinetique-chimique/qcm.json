@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Des demi-vies **successives et égales** signent l'ordre 1 : $t_{1/2} = 12$ s est constant, indépendant de la concentration. La concentration est divisée par deux à chaque intervalle de $12$ s, comme pour une décroissance radioactive."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "suivi-transformation",
+      "enonce": "Quelle méthode permet de suivre une transformation en mesurant l'**absorbance** d'une espèce colorée ?",
+      "choix": [
+        "la spectrophotométrie",
+        "la conductimétrie",
+        "la pH-métrie",
+        "la manométrie"
+      ],
+      "reponse": 0,
+      "explication": "La **spectrophotométrie** mesure l'absorbance $A$, reliée à la concentration par la loi de Beer-Lambert $A = \\varepsilon \\ell [X]$. La conductimétrie mesure une conductivité, la pH-métrie un pH, la manométrie une pression : ces méthodes ne s'appliquent pas à une grandeur d'absorbance."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "facteurs-cinetiques",
+      "enonce": "La trempe consiste à refroidir (ou diluer) brutalement un prélèvement avant de le doser. Dans quel but ?",
+      "choix": [
+        "accélérer la réaction pour finir plus vite",
+        "bloquer la réaction le temps du dosage",
+        "modifier l'état final du système",
+        "catalyser la réaction"
+      ],
+      "reponse": 1,
+      "explication": "La trempe utilise un facteur cinétique (le froid, ou la dilution) pour **figer** la réaction pendant qu'on titre le prélèvement, afin qu'il ne continue pas d'évoluer. Elle ne change ni l'état final ni le bilan : elle ne fait que ralentir presque à l'arrêt."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "facteurs-cinetiques",
+      "enonce": "Comment évolue la vitesse d'une transformation lorsqu'on **augmente la concentration** des réactifs ?",
+      "choix": [
+        "elle augmente",
+        "elle diminue",
+        "elle reste inchangée",
+        "elle s'annule"
+      ],
+      "reponse": 0,
+      "explication": "Des réactifs plus concentrés, ce sont des entités plus nombreuses par unité de volume : les chocs efficaces sont plus fréquents, donc la vitesse **augmente**. C'est pourquoi la vitesse est maximale au début (réactifs concentrés) puis diminue à mesure qu'ils s'épuisent."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "vitesse-disparition-apparition",
+      "enonce": "Comment s'écrit la vitesse volumique d'apparition d'un produit $P$ (à volume constant) ?",
+      "choix": [
+        "$v_{\\text{app}}(P) = -\\dfrac{\\mathrm{d}[P]}{\\mathrm{d}t}$",
+        "$v_{\\text{app}}(P) = +\\dfrac{\\mathrm{d}[P]}{\\mathrm{d}t}$",
+        "$v_{\\text{app}}(P) = \\dfrac{[P]}{t}$",
+        "$v_{\\text{app}}(P) = -k\\,[P]$"
+      ],
+      "reponse": 1,
+      "explication": "La concentration d'un produit **augmente**, sa dérivée est donc positive : on garde le signe **+**. Le signe « − » est réservé aux **réactifs** (dont la concentration diminue) ; $[P]/t$ est une pente moyenne, pas la vitesse instantanée."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "evolution-vitesse",
+      "enonce": "Au cours d'une transformation lente, comment évolue en général la vitesse volumique de disparition d'un réactif ?",
+      "choix": [
+        "elle augmente jusqu'à la fin",
+        "elle reste constante tout du long",
+        "elle est maximale au début puis diminue et tend vers zéro",
+        "elle est nulle au début puis augmente"
+      ],
+      "reponse": 2,
+      "explication": "Au fur et à mesure que le réactif est consommé, sa concentration baisse, donc la vitesse **diminue** : elle est maximale au début et tend vers zéro. La courbe $[R]=f(t)$ part avec une forte pente puis s'aplatit."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "catalyse-catalyseur",
+      "enonce": "Dans un pot catalytique, un solide (platine) transforme des gaz d'échappement. De quel type de catalyse s'agit-il ?",
+      "choix": [
+        "homogène",
+        "hétérogène",
+        "enzymatique",
+        "acido-basique"
+      ],
+      "reponse": 1,
+      "explication": "Le catalyseur (solide) et les réactifs (gaz) sont dans des **phases différentes** : c'est une catalyse **hétérogène**. Elle serait homogène si tout était dans la même phase (par ex. tous en solution), et enzymatique si le catalyseur était une enzyme."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "catalyse-catalyseur",
+      "enonce": "La catalase, un catalyseur biologique très sélectif, accélère la décomposition de l'eau oxygénée. Ce type de catalyse est dit :",
+      "choix": [
+        "homogène",
+        "hétérogène",
+        "enzymatique",
+        "hétérocyclique"
+      ],
+      "reponse": 2,
+      "explication": "Une enzyme est un catalyseur **biologique** : la catalyse est dite **enzymatique**, réputée très sélective. Elle donne les mêmes produits ($\\text{H}_2\\text{O}$ et $\\text{O}_2$) que les catalyses homogène ($\\text{Fe}^{3+}$) ou hétérogène (platine) : seul le chemin, donc la vitesse, change."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "loi-ordre-1",
+      "enonce": "Un réactif d'ordre 1 part de $[R]_0 = 0{,}80$ mol·L⁻¹ avec un temps de demi-réaction $t_{1/2} = 15$ s. Quelle est sa concentration après $45$ s ?",
+      "choix": [
+        "$0{,}20$ mol·L⁻¹",
+        "$0{,}10$ mol·L⁻¹",
+        "$0{,}40$ mol·L⁻¹",
+        "$0{,}27$ mol·L⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "$45$ s $= 3\\,t_{1/2}$ : la concentration est divisée par deux **trois** fois, soit par $8$. On obtient $0{,}80/8 = 0{,}10$ mol·L⁻¹ ($0{,}80 \\to 0{,}40 \\to 0{,}20 \\to 0{,}10$). Le choix $0{,}27$ divise à tort par $3$ ; $0{,}20$ ne compte que deux demi-vies."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "loi-ordre-1",
+      "enonce": "Une réaction d'ordre 1 a un temps de demi-réaction $t_{1/2} = 20$ s. Quelle est sa constante de vitesse $k$ (on prend $\\ln 2 \\approx 0{,}69$) ?",
+      "choix": [
+        "$14$ s⁻¹",
+        "$29$ s⁻¹",
+        "$3{,}5 \\times 10^{-2}$ s⁻¹",
+        "$0{,}69$ s⁻¹"
+      ],
+      "reponse": 2,
+      "explication": "De $t_{1/2} = \\dfrac{\\ln 2}{k}$ on tire $k = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}69}{20} = 3{,}5 \\times 10^{-2}$ s⁻¹. Le choix $14$ multiplie ($20 \\times 0{,}69$) au lieu de diviser ; $29$ oublie le $\\ln 2$ ($20/0{,}69$)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "loi-ordre-1",
+      "enonce": "Un réactif d'ordre 1 part de $[R]_0 = 0{,}50$ mol·L⁻¹ avec $k = 0{,}20$ s⁻¹. Quelle est sa concentration après $5{,}0$ s (on donne $e^{-1} \\approx 0{,}37$) ?",
+      "choix": [
+        "$0{,}18$ mol·L⁻¹",
+        "$0{,}37$ mol·L⁻¹",
+        "$0{,}10$ mol·L⁻¹",
+        "$0{,}50$ mol·L⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "$[R](t) = [R]_0\\,e^{-kt}$ avec $kt = 0{,}20 \\times 5{,}0 = 1{,}0$, donc $[R] = 0{,}50 \\times e^{-1} = 0{,}50 \\times 0{,}37 = 0{,}18$ mol·L⁻¹. Le choix $0{,}37$ oublie de multiplier par $[R]_0$ ; $0{,}10$ calcule $[R]_0 \\times k$, ce qui n'a pas de sens."
     }
   ]
 }

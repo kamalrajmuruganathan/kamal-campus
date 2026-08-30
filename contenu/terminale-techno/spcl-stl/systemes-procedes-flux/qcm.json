@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "Double conversion : $12\\ \\text{L·min}^{-1} = \\dfrac{12\\times 10^{-3}\\ \\text{m}^3}{60\\ \\text{s}} = 2{,}0\\times 10^{-4}$ m³·s⁻¹. Le piège $12\\times 10^{-3}$ oublie de diviser par 60 (la minute), le 720 multiplie par 60 au lieu de diviser."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "chaine-energie",
+      "enonce": "Les quatre fonctions de la chaîne d'énergie sont, dans l'ordre :",
+      "choix": [
+        "alimenter, distribuer, convertir, transmettre",
+        "acquérir, traiter, communiquer, agir",
+        "alimenter, mesurer, corriger, afficher",
+        "convertir, alimenter, transmettre, distribuer"
+      ],
+      "reponse": 0,
+      "explication": "La chaîne d'énergie va d'**alimenter** (source) à **distribuer** (doser sur ordre), **convertir** (changer de forme) puis **transmettre** (amener à l'effecteur). Le piège « acquérir/traiter/communiquer » est la chaîne d'INFORMATION, pas d'énergie."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "flux-energie",
+      "enonce": "Quelle est l'unité de la puissance dans le Système international ?",
+      "choix": [
+        "le watt (W)",
+        "le joule (J)",
+        "le kilogramme par seconde (kg·s⁻¹)",
+        "le mètre cube par seconde (m³·s⁻¹)"
+      ],
+      "reponse": 0,
+      "explication": "La puissance $P = E/\\Delta t$ s'exprime en **watts (W)**. Le joule (J) est l'unité d'énergie, pas de puissance : le piège est de confondre les deux. Un watt correspond à un joule par seconde."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "Dans une boucle de régulation, l'organe qui **agit physiquement** sur le système (chauffage, vanne, moteur) est :",
+      "choix": [
+        "le capteur",
+        "l'actionneur",
+        "la consigne",
+        "le correcteur"
+      ],
+      "reponse": 1,
+      "explication": "L'**actionneur** est l'organe qui agit physiquement sur le système. Le capteur mesure, le correcteur compare et décide, la consigne est la valeur voulue : aucun de ces trois n'agit directement sur le procédé."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "flux-energie",
+      "enonce": "Un moteur absorbe $P_{\\text{a}} = 1500\\ \\text{W}$ et fournit $P_{\\text{u}} = 1200\\ \\text{W}$ utiles. Quel est son rendement ?",
+      "choix": [
+        "$0{,}80$",
+        "$1{,}25$",
+        "$0{,}20$",
+        "$300$"
+      ],
+      "reponse": 0,
+      "explication": "$\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{absorbée}}} = \\dfrac{1200}{1500} = 0{,}80$. Le piège $1{,}25$ vient de mettre l'absorbée au numérateur, ce qui donnerait un rendement > 1, impossible. $300$ est la valeur des pertes en W."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "Dans un correcteur **proportionnel**, la loi de commande de l'actionneur est de la forme :",
+      "choix": [
+        "$S = k \\times \\varepsilon$",
+        "deux états ON / OFF selon le signe de $\\varepsilon$",
+        "$S = k / \\varepsilon$",
+        "une valeur constante indépendante de $\\varepsilon$"
+      ],
+      "reponse": 0,
+      "explication": "Le correcteur proportionnel délivre une action **dosée** proportionnelle à l'écart : $S = k\\,\\varepsilon$, où $k$ est le gain. Plus l'écart est grand, plus l'action est forte. Les deux états ON/OFF caractérisent le tout ou rien (TOR), pas le proportionnel."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "chaine-information",
+      "enonce": "Dans un système, quelle chaîne **commande** l'autre ?",
+      "choix": [
+        "la chaîne d'information commande la chaîne d'énergie",
+        "la chaîne d'énergie commande la chaîne d'information",
+        "les deux chaînes sont totalement indépendantes",
+        "c'est la chaîne de matière qui commande les deux autres"
+      ],
+      "reponse": 0,
+      "explication": "C'est la chaîne d'**information** (le correcteur) qui **pilote** la chaîne d'**énergie** (le distributeur) : la décision commande l'action. Les deux chaînes travaillent ensemble, mais l'information est celle qui donne les ordres."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "flux-matiere",
+      "enonce": "De l'huile de masse volumique $\\rho = 920\\ \\text{kg·m}^{-3}$ s'écoule à $Q_V = 5{,}0\\times 10^{-3}\\ \\text{m}^3\\text{·s}^{-1}$. Quel est le débit massique $Q_m$ ?",
+      "choix": [
+        "$4{,}6\\ \\text{kg·s}^{-1}$",
+        "$184\\ \\text{kg·s}^{-1}$",
+        "$5{,}4\\times 10^{-6}\\ \\text{kg·s}^{-1}$",
+        "$920\\ \\text{kg·s}^{-1}$"
+      ],
+      "reponse": 0,
+      "explication": "$Q_m = \\rho\\,Q_V = 920 \\times 5{,}0\\times 10^{-3} = 4{,}6\\ \\text{kg·s}^{-1}$. Le piège $5{,}4\\times 10^{-6}$ vient d'écrire $Q_m = Q_V/\\rho$ au lieu de $Q_m = \\rho\\,Q_V$ : un fluide dense a un plus GRAND débit massique, pas l'inverse."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "flux-energie",
+      "enonce": "Une chaîne d'énergie enchaîne trois convertisseurs de rendements $0{,}90$, $0{,}90$ et $0{,}80$. Quel est le rendement global ?",
+      "choix": [
+        "$0{,}65$",
+        "$0{,}87$",
+        "$2{,}6$",
+        "$0{,}80$"
+      ],
+      "reponse": 0,
+      "explication": "Les rendements en cascade se **multiplient** : $\\eta = 0{,}90 \\times 0{,}90 \\times 0{,}80 = 0{,}648 \\approx 0{,}65$. On ne fait ni la moyenne ($0{,}87$) ni la somme. Le rendement global est toujours **inférieur** au plus faible maillon."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "flux-matiere",
+      "enonce": "Un réacteur en régime permanent reçoit $8{,}0\\ \\text{kg·s}^{-1}$ en entrée et rejette $6{,}5\\ \\text{kg·s}^{-1}$ en sortie. Que se passe-t-il ?",
+      "choix": [
+        "$1{,}5\\ \\text{kg·s}^{-1}$ de matière s'accumulent dans le réacteur",
+        "$1{,}5\\ \\text{kg·s}^{-1}$ de matière disparaissent définitivement",
+        "le bilan est faux, car entrée et sortie doivent être égales",
+        "le débit de sortie va spontanément passer à $8{,}0\\ \\text{kg·s}^{-1}$"
+      ],
+      "reponse": 0,
+      "explication": "La masse se conserve : $Q_{\\text{ent}} = Q_{\\text{sort}} + \\dfrac{\\Delta m}{\\Delta t}$, donc $\\dfrac{\\Delta m}{\\Delta t} = 8{,}0 - 6{,}5 = 1{,}5\\ \\text{kg·s}^{-1}$ **s'accumulent**. La matière ne disparaît jamais : un écart entrée/sortie correspond à un stockage, pas à une perte."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "flux-matiere",
+      "enonce": "Un débit vaut $Q_V = 30\\ \\text{L·min}^{-1}$. Quelle est sa valeur en unités SI ($\\text{m}^3\\text{·s}^{-1}$) ?",
+      "choix": [
+        "$5{,}0\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$",
+        "$30\\times 10^{-3}\\ \\text{m}^3\\text{·s}^{-1}$",
+        "$0{,}50\\ \\text{m}^3\\text{·s}^{-1}$",
+        "$1800\\ \\text{m}^3\\text{·s}^{-1}$"
+      ],
+      "reponse": 0,
+      "explication": "Double conversion : $30\\ \\text{L·min}^{-1} = \\dfrac{30\\times 10^{-3}\\ \\text{m}^3}{60\\ \\text{s}} = 5{,}0\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$. Le piège $30\\times 10^{-3}$ oublie de diviser par 60 (la minute) ; $1800$ multiplie par 60 au lieu de diviser."
     }
   ]
 }

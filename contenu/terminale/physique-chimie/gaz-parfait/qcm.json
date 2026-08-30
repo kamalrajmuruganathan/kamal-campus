@@ -149,6 +149,146 @@
    ],
    "reponse": 2,
    "explication": "La pression est le résultat macroscopique des **chocs** des particules sur les parois. En réduisant le volume à quantité de matière fixée, on augmente le nombre de particules par unité de volume, donc le **nombre de chocs par unité de surface** : la pression monte. La vitesse moyenne, elle, ne dépend que de la température, ici constante."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "grandeurs-macroscopiques",
+   "enonce": "Quelle est l'unité SI de la pression ?",
+   "choix": [
+    "le newton (N)",
+    "le pascal (Pa)",
+    "le bar",
+    "l'atmosphère (atm)"
+   ],
+   "reponse": 1,
+   "explication": "Dans le Système international, la pression se mesure en **pascals** (Pa), avec $1$ Pa $= 1$ N·m⁻². Le newton est l'unité d'une **force**, pas d'une pression ; le bar et l'atmosphère sont des unités usuelles qu'il faut convertir en Pa avant tout calcul ($1$ bar $= 10^{5}$ Pa)."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "pression",
+   "enonce": "Une force pressante de $F = 30$ N s'exerce perpendiculairement sur une surface d'aire $S = 5{,}0 \\times 10^{-3}$ m². Quelle est la pression exercée ?",
+   "choix": [
+    "$1{,}5 \\times 10^{2}$ Pa",
+    "$6{,}0 \\times 10^{4}$ Pa",
+    "$1{,}7 \\times 10^{-4}$ Pa",
+    "$6{,}0 \\times 10^{3}$ Pa"
+   ],
+   "reponse": 3,
+   "explication": "On applique $P = \\dfrac{F}{S} = \\dfrac{30}{5{,}0 \\times 10^{-3}} = 6{,}0 \\times 10^{3}$ Pa. Le piège est de **multiplier** $F$ par $S$ (ce qui donnerait $1{,}5 \\times 10^{2}$) au lieu de diviser, ou d'inverser le quotient ($S/F$)."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "conversions",
+   "enonce": "À quelle valeur en pascals correspond une pression $P = 1{,}5$ bar ?",
+   "choix": [
+    "$1{,}5 \\times 10^{5}$ Pa",
+    "$1{,}5 \\times 10^{2}$ Pa",
+    "$1{,}5 \\times 10^{3}$ Pa",
+    "$1{,}5 \\times 10^{-5}$ Pa"
+   ],
+   "reponse": 0,
+   "explication": "La conversion est $1$ bar $= 10^{5}$ Pa, donc $1{,}5$ bar $= 1{,}5 \\times 10^{5}$ Pa. Confondre le bar avec l'hectopascal (facteur $10^{2}$) est l'erreur classique : $1$ hPa $= 100$ Pa, ce n'est pas la même chose que le bar."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "equation-etat",
+   "enonce": "Quelle pression exerce $n = 0{,}50$ mol de gaz parfait enfermé dans un volume $V = 2{,}0 \\times 10^{-2}$ m³ à $T = 400$ K ? (On prend $R = 8{,}314$ J·K⁻¹·mol⁻¹.)",
+   "choix": [
+    "$8{,}3 \\times 10^{2}$ Pa",
+    "$8{,}3 \\times 10^{6}$ Pa",
+    "$8{,}3 \\times 10^{4}$ Pa",
+    "$1{,}7 \\times 10^{3}$ Pa"
+   ],
+   "reponse": 2,
+   "explication": "On isole $P = \\dfrac{nRT}{V} = \\dfrac{0{,}50 \\times 8{,}314 \\times 400}{2{,}0 \\times 10^{-2}} \\approx 8{,}3 \\times 10^{4}$ Pa. Le piège est de multiplier par $V$ au lieu de diviser, ou d'oublier le facteur $n = 0{,}50$."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "conversions",
+   "enonce": "Quelle quantité de matière contient un récipient de $V = 3{,}0$ L de gaz parfait sous $P = 1{,}0 \\times 10^{5}$ Pa à $T = 300$ K ? (On prend $R = 8{,}314$ J·K⁻¹·mol⁻¹.)",
+   "choix": [
+    "$1{,}2 \\times 10^{2}$ mol",
+    "$0{,}40$ mol",
+    "$1{,}2 \\times 10^{-4}$ mol",
+    "$0{,}12$ mol"
+   ],
+   "reponse": 3,
+   "explication": "Il faut d'abord convertir le volume : $V = 3{,}0$ L $= 3{,}0 \\times 10^{-3}$ m³. Alors $n = \\dfrac{PV}{RT} = \\dfrac{1{,}0 \\times 10^{5} \\times 3{,}0 \\times 10^{-3}}{8{,}314 \\times 300} \\approx 0{,}12$ mol. Garder $V = 3{,}0$ (en litres) donne $1{,}2 \\times 10^{2}$ mol : l'oubli de conversion fausse le résultat d'un facteur $1000$."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "equation-etat",
+   "enonce": "Une quantité fixée de gaz parfait est chauffée **à volume constant** de $T_1 = 300$ K à $T_2 = 600$ K. Sa pression initiale vaut $P_1 = 1{,}0 \\times 10^{5}$ Pa. Que vaut $P_2$ ?",
+   "choix": [
+    "$2{,}0 \\times 10^{5}$ Pa",
+    "$5{,}0 \\times 10^{4}$ Pa",
+    "$1{,}0 \\times 10^{5}$ Pa",
+    "$4{,}0 \\times 10^{5}$ Pa"
+   ],
+   "reponse": 0,
+   "explication": "À $n$ et $V$ constants, $\\dfrac{P_1}{T_1} = \\dfrac{P_2}{T_2}$, donc $P_2 = P_1 \\dfrac{T_2}{T_1} = 1{,}0 \\times 10^{5} \\times \\dfrac{600}{300} = 2{,}0 \\times 10^{5}$ Pa. La température **thermodynamique** double (en kelvins), donc la pression double : penser en °C fausserait le rapport."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "interpretation-microscopique",
+   "enonce": "À volume et quantité de matière constants, on chauffe un gaz. Que devient sa pression, et pourquoi ?",
+   "choix": [
+    "Elle diminue, car les particules s'écartent",
+    "Elle reste constante, car le volume ne change pas",
+    "Elle augmente, car les chocs sur les parois sont plus violents et plus fréquents",
+    "Elle s'annule, car l'agitation cesse"
+   ],
+   "reponse": 2,
+   "explication": "Chauffer un gaz augmente la vitesse moyenne de ses particules (agitation thermique). Les chocs sur les parois deviennent plus **fréquents et plus violents** : la pression monte. C'est cohérent avec $P = \\dfrac{nRT}{V}$ à $V$ et $n$ fixés, où $P$ croît avec $T$."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "conversions",
+   "enonce": "Un flacon de $V = 250$ mL contient un gaz parfait sous $P = 1{,}02$ bar à $\\theta = 27$ °C. Quelle quantité de matière contient-il ? (On prend $R = 8{,}314$ J·K⁻¹·mol⁻¹.)",
+   "choix": [
+    "$1{,}0 \\times 10^{-5}$ mol",
+    "$1{,}0 \\times 10^{-2}$ mol",
+    "$1{,}0 \\times 10^{1}$ mol",
+    "$1{,}0$ mol"
+   ],
+   "reponse": 1,
+   "explication": "Trois conversions avant le calcul : $V = 250 \\times 10^{-6} = 2{,}5 \\times 10^{-4}$ m³, $P = 1{,}02 \\times 10^{5}$ Pa, $T = 27 + 273 = 300$ K. Alors $n = \\dfrac{PV}{RT} = \\dfrac{1{,}02 \\times 10^{5} \\times 2{,}5 \\times 10^{-4}}{8{,}314 \\times 300} \\approx 1{,}0 \\times 10^{-2}$ mol. Oublier une conversion (mL ou bar) décale le résultat d'une puissance de 10."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "equation-etat",
+   "enonce": "Un gaz parfait passe de l'état 1 ($P_1 = 1{,}0 \\times 10^{5}$ Pa, $V_1 = 2{,}0$ L, $T_1 = 300$ K) à l'état 2 ($V_2 = 1{,}0$ L, $T_2 = 450$ K). Quelle est la pression $P_2$ ?",
+   "choix": [
+    "$1{,}5 \\times 10^{5}$ Pa",
+    "$6{,}7 \\times 10^{4}$ Pa",
+    "$2{,}0 \\times 10^{5}$ Pa",
+    "$3{,}0 \\times 10^{5}$ Pa"
+   ],
+   "reponse": 3,
+   "explication": "À quantité de matière constante, $\\dfrac{P_1 V_1}{T_1} = \\dfrac{P_2 V_2}{T_2}$, d'où $P_2 = P_1 \\dfrac{V_1}{V_2} \\dfrac{T_2}{T_1} = 1{,}0 \\times 10^{5} \\times \\dfrac{2{,}0}{1{,}0} \\times \\dfrac{450}{300} = 3{,}0 \\times 10^{5}$ Pa. Ici les deux volumes sont en litres : leur rapport est correct sans conversion. Oublier l'effet de la température (facteur $1{,}5$) donne $2{,}0 \\times 10^{5}$ Pa."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "limites",
+   "enonce": "Pourquoi un gaz réel peut-il se liquéfier à basse température, alors que le modèle du gaz parfait ne prévoit jamais de liquéfaction ?",
+   "choix": [
+    "Parce que le modèle néglige les interactions attractives entre particules, qui redeviennent importantes à basse température",
+    "Parce que les particules du gaz parfait ont un volume propre non nul",
+    "Parce que la température devient négative en kelvin",
+    "Parce que la constante $R$ diminue quand la température baisse"
+   ],
+   "reponse": 0,
+   "explication": "Le gaz parfait suppose les particules **sans interaction**. À basse température, l'agitation thermique faiblit et les **forces attractives** (négligées par le modèle) suffisent à rapprocher les particules jusqu'à la liquéfaction. La constante $R$ ne dépend pas de la température, et $T$ en kelvins ne peut être négative."
   }
  ]
 }

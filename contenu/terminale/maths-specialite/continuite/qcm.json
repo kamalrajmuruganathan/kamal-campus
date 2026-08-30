@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Comme $f$ est continue, en passant à la limite dans $u_{n+1} = f(u_n)$ on obtient $\\ell = f(\\ell)$. Le piège : cette égalité n'est valable **qu'une fois** la convergence prouvée — l'énoncé la garantit ici. Confondre avec $f(\\ell) = 0$ est une erreur fréquente."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "fonctions-usuelles",
+      "enonce": "Pourquoi peut-on affirmer que $f(x) = x^{2} + 1$ est continue sur $\\mathbb{R}$ ?",
+      "choix": [
+        "car c'est un polynôme, donc continu sur $\\mathbb{R}$",
+        "car elle est positive sur $\\mathbb{R}$",
+        "car elle admet un minimum",
+        "il faut le prouver par un calcul de limite en chaque point"
+      ],
+      "reponse": 0,
+      "explication": "Les polynômes sont des fonctions usuelles, continues sur tout intervalle de leur ensemble de définition : une phrase suffit. Le piège est de croire qu'il faut calculer une limite en chaque point, alors que la continuité des fonctions usuelles se justifie."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "continuite",
+      "enonce": "En $x = 2$, la fonction partie entière $f(x) = \\lfloor x \\rfloor$ est :",
+      "choix": [
+        "continue et dérivable",
+        "continue mais pas dérivable",
+        "discontinue",
+        "dérivable mais pas continue"
+      ],
+      "reponse": 2,
+      "explication": "La partie entière saute de $1$ à $2$ en $x = 2$ : la limite à gauche ($1$) ne vaut pas $f(2) = 2$, elle est donc discontinue en tout entier. Une telle fonction ne relève pas du TVI."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "tableau-variations",
+      "enonce": "Dans un tableau de variations, une flèche oblique sur un intervalle signifie, par convention, que $f$ est :",
+      "choix": [
+        "continue seulement",
+        "strictement monotone seulement",
+        "continue **et** strictement monotone sur l'intervalle",
+        "dérivable et positive"
+      ],
+      "reponse": 2,
+      "explication": "La flèche encode deux informations à la fois : la continuité ET la stricte monotonie. C'est ce qui autorise à invoquer le théorème de la bijection directement à partir du tableau, une fois le signe de $f'$ justifié."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "tvi",
+      "enonce": "$f$ est continue sur $[0\\,;3]$ avec $f(0) = 1$ et $f(3) = 4$. Que dit le théorème des valeurs intermédiaires sur l'équation $f(x) = 6$ ?",
+      "choix": [
+        "elle a au moins une solution",
+        "elle a exactement une solution",
+        "le théorème ne permet pas de conclure",
+        "elle n'a aucune solution"
+      ],
+      "reponse": 2,
+      "explication": "$6$ n'est pas compris entre $f(0) = 1$ et $f(3) = 4$ : l'hypothèse du TVI n'est pas vérifiée, le théorème est muet. Avec la seule continuité, il pourrait y avoir zéro, une ou plusieurs solutions ; affirmer « aucune » est le piège."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "suite-convergente",
+      "enonce": "La suite $(u_n)$ converge vers $2$ et $f(x) = \\sqrt{x}$ est continue en $2$. Vers quoi converge $f(u_n)$ ?",
+      "choix": [
+        "$\\sqrt{2}$",
+        "$2$",
+        "$4$",
+        "on ne peut pas conclure"
+      ],
+      "reponse": 0,
+      "explication": "Image d'une suite convergente par une fonction continue : $f(u_n) \\to f(2) = \\sqrt{2}$. Le piège est de renvoyer la limite $2$ de la suite au lieu de son image $f(2)$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "suite-recurrente",
+      "enonce": "Une suite $u_{n+1} = f(u_n)$, avec $f(x) = \\sqrt{x+2}$ continue, converge vers un réel $\\ell \\geqslant 0$. Quelle est la valeur de $\\ell$ ?",
+      "choix": [
+        "$2$",
+        "$-1$",
+        "$1$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "À la limite, $\\ell = f(\\ell) = \\sqrt{\\ell+2}$, d'où $\\ell^{2} = \\ell + 2$, soit $\\ell^{2}-\\ell-2 = 0$ : les racines sont $2$ et $-1$. Comme $\\ell \\geqslant 0$, on garde $\\ell = 2$. Le piège $-1$ est la racine à rejeter (négative)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "changement-de-signe",
+      "enonce": "$f$ est continue sur $[2\\,;5]$ avec $f(2) = -3$ et $f(5) = 1$. Que peut-on affirmer sans autre hypothèse ?",
+      "choix": [
+        "$f$ ne s'annule jamais sur $[2\\,;5]$",
+        "$f$ s'annule au moins une fois sur $[2\\,;5]$",
+        "$f$ s'annule exactement une fois sur $[2\\,;5]$",
+        "$f$ est strictement croissante sur $[2\\,;5]$"
+      ],
+      "reponse": 1,
+      "explication": "$f$ est continue et change de signe entre $2$ et $5$ : par le TVI, elle s'annule au moins une fois. « Exactement une fois » exigerait la stricte monotonie ; le changement de signe seul ne donne que l'existence."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "decoupage",
+      "enonce": "$f$ est continue sur $[-3\\,;3]$ : décroissante de $f(-3) = 4$ à $f(0) = -2$, puis croissante de $-2$ à $f(3) = 4$. Combien l'équation $f(x) = 0$ a-t-elle de solutions sur $[-3\\,;3]$ ?",
+      "choix": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$0$"
+      ],
+      "reponse": 1,
+      "explication": "On découpe selon les variations. Sur $[-3\\,;0]$, $0$ est entre $-2$ et $4$ : une solution. Sur $[0\\,;3]$, $0$ est entre $-2$ et $4$ : une solution. En additionnant : $2$ solutions. Oublier un morceau donne $1$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "intervalle-infini",
+      "enonce": "$f$ est continue et strictement croissante sur $\\mathbb{R}$, avec $\\displaystyle\\lim_{x\\to -\\infty} f = -2$ et $\\displaystyle\\lim_{x\\to +\\infty} f = +\\infty$. Combien l'équation $f(x) = 5$ admet-elle de solutions ?",
+      "choix": [
+        "aucune",
+        "une unique solution",
+        "une infinité",
+        "impossible à dire car l'intervalle est infini"
+      ],
+      "reponse": 1,
+      "explication": "Le théorème de la bijection s'étend aux intervalles infinis en remplaçant les valeurs aux bornes par les limites. Comme $5$ est compris entre $-2$ et $+\\infty$, il existe une unique solution. En revanche $f(x) = -5$ n'en aurait aucune, car $-5 < -2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "tvi",
+      "enonce": "La partie entière $g(x) = \\lfloor x \\rfloor$ vérifie $g(0) = 0$ et $g(3) = 3$. Peut-on appliquer le théorème des valeurs intermédiaires pour affirmer que $g(x) = 1{,}5$ a une solution sur $[0\\,;3]$ ?",
+      "choix": [
+        "oui, car $1{,}5$ est compris entre $0$ et $3$",
+        "oui, il y a même une unique solution",
+        "non, car $g$ n'est pas continue : l'hypothèse du TVI n'est pas vérifiée",
+        "non, car $g$ n'est pas dérivable"
+      ],
+      "reponse": 2,
+      "explication": "Le TVI exige la continuité, or $g$ saute aux entiers : le théorème ne s'applique pas (et de fait, $\\lfloor x \\rfloor$ ne vaut jamais $1{,}5$). Le piège est d'appliquer le TVI juste parce que $1{,}5$ est entre les bornes ; la non-dérivabilité n'est pas l'obstacle pertinent."
     }
   ]
 }

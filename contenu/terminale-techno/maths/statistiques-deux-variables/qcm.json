@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "Interpoler, c'est estimer À L'INTÉRIEUR de la plage observée $[2\\,;10]$ : c'est le cas de $x = 6$. Les valeurs $x = 20$ et $x = 0$ sont HORS de la plage : ce sont des extrapolations, à manier avec prudence — y compris vers la gauche, un piège fréquent ($x = 0$ est avant les données). Recalculer une valeur mesurée n'est pas une estimation."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "changement-inverse",
+      "enonce": "On a posé $z = \\dfrac{1}{y}$ et obtenu un ajustement $z = ax + b$. Quelle est la formule de retour à $y$ ?",
+      "choix": [
+        "$y = ax + b$",
+        "$y = \\dfrac{1}{ax + b}$",
+        "$y = \\sqrt{ax + b}$",
+        "$y = 10^{\\,ax + b}$"
+      ],
+      "reponse": 1,
+      "explication": "De $\\dfrac{1}{y} = ax + b$ on tire $y = \\dfrac{1}{ax + b}$ : tout le membre de droite passe au dénominateur. Les pièges : oublier d'inverser ($y = ax + b$, qui est en fait $z$), ou confondre avec les retours des autres changements ($\\sqrt{ax+b}$ correspond à $z = y^2$, et $10^{ax+b}$ à $z = \\log(y)$)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "changement-log",
+      "enonce": "On pose $z = \\log(y)$. Pour le point tel que $y = 100\\,000$, la valeur de $z$ est :",
+      "choix": [
+        "$6$",
+        "$5$",
+        "$50\\,000$",
+        "$100\\,000$"
+      ],
+      "reponse": 1,
+      "explication": "$\\log(100\\,000) = \\log(10^5) = 5$ : le logarithme décimal compte l'exposant de $10$. Le piège est de recopier $y$ (ou sa moitié) au lieu de calculer le log ; $6$ vient d'une confusion en comptant les chiffres de $100\\,000$ au lieu des zéros."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "nuages-courbes",
+      "enonce": "Pour des $x_i$ régulièrement espacés, les différences $y_{i+1} - y_i$ sont à peu près constantes. Que peut-on en conclure sur le modèle ?",
+      "choix": [
+        "Le nuage est exponentiel : il faut poser $z = \\log(y)$",
+        "Le nuage est déjà rectiligne : un ajustement affine $y = ax + b$ suffit",
+        "Le nuage est une branche d'hyperbole : il faut poser $z = \\dfrac{1}{y}$",
+        "Le nuage est une demi-parabole : il faut poser $z = y^2$"
+      ],
+      "reponse": 1,
+      "explication": "Des différences constantes signifient que $y$ augmente d'une quantité fixe à chaque pas : c'est la signature d'une droite, l'ajustement affine de Première suffit, sans changement de variable. Le piège : ce sont les QUOTIENTS constants (et non les différences) qui trahissent un modèle exponentiel appelant $z = \\log(y)$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "changement-log",
+      "enonce": "On pose $z = \\log(y)$. Pour $y = 45$, la valeur de $z$ arrondie au centième est :",
+      "choix": [
+        "$1{,}55$",
+        "$1{,}65$",
+        "$3{,}81$",
+        "$4{,}50$"
+      ],
+      "reponse": 1,
+      "explication": "$\\log(45) \\approx 1{,}653$, soit $1{,}65$ : cohérent car $45$ est entre $10^1 = 10$ et $10^2 = 100$, donc $z$ est entre $1$ et $2$. Le piège $3{,}81$ est le logarithme népérien $\\ln(45)$, hors programme : en terminale technologique, on utilise le logarithme décimal. Le piège $4{,}50$ vient de lire « 45 » divisé par 10."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "changement-inverse",
+      "enonce": "On a posé $z = \\dfrac{1}{y}$ et obtenu l'ajustement $z = 0{,}25x + 0{,}5$. Le modèle pour $y$ est :",
+      "choix": [
+        "$y = 4x + 2$",
+        "$y = 0{,}25x + 0{,}5$",
+        "$y = \\dfrac{1}{0{,}25x + 0{,}5}$",
+        "$y = \\dfrac{1}{0{,}25x} + \\dfrac{1}{0{,}5}$"
+      ],
+      "reponse": 2,
+      "explication": "De $\\dfrac{1}{y} = 0{,}25x + 0{,}5$ on tire $y = \\dfrac{1}{0{,}25x + 0{,}5}$ : c'est tout le membre affine qui passe au dénominateur. Les pièges : inverser terme à terme ($4x + 2$), oublier le retour ($0{,}25x + 0{,}5$, qui est $z$), ou distribuer l'inverse sur chaque terme — l'inverse d'une somme n'est pas la somme des inverses."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "changement-abscisse",
+      "enonce": "Le nuage $(x^2\\,;y)$ est rectiligne. On pose $X = x^2$ et l'ajustement donne $y = 2X + 3$. Le modèle pour $y$ en fonction de $x$ est :",
+      "choix": [
+        "$y = 2x + 3$",
+        "$y = \\sqrt{2x + 3}$",
+        "$y = 2x^2 + 3$",
+        "$y = 2\\sqrt{x} + 3$"
+      ],
+      "reponse": 2,
+      "explication": "Le changement porte ici sur l'abscisse : $X = x^2$, donc $y = 2X + 3 = 2x^2 + 3$ — il suffit de remplacer $X$ par $x^2$, sans racine ni inversion. Le piège est de traiter ce cas comme un changement sur $y$ (d'où les $\\sqrt{\\ }$) : quand c'est $x$ qu'on transforme, le retour est une simple substitution."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "taux-evolution",
+      "enonce": "Avec $z = \\log(y)$, l'ajustement obtenu est $z = 0{,}1x + 2$ ($x$ en années). Quelle est l'évolution annuelle de $y$ ?",
+      "choix": [
+        "Environ $+10\\,\\%$ par an",
+        "$y$ est multiplié par $10^{0{,}1} \\approx 1{,}26$, soit environ $+26\\,\\%$ par an",
+        "Environ $+1\\,\\%$ par an",
+        "$y$ augmente de $0{,}1$ unité par an"
+      ],
+      "reponse": 1,
+      "explication": "Quand $x$ augmente de $1$, $z = \\log(y)$ augmente de $0{,}1$, donc $y$ est multiplié par $10^{0{,}1} \\approx 1{,}259$ : environ $+26\\,\\%$ par an. Le piège classique est de lire la pente comme un taux ($+10\\,\\%$) : la pente est l'accroissement du LOGARITHME de $y$, pas de $y$. Le coefficient multiplicateur est $10^a$, jamais $a$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "interpolation-extrapolation",
+      "enonce": "Avec $z = \\log(y)$ et l'ajustement $z = 0{,}15x + 2$, pour quelle valeur de $x$ le modèle prévoit-il que $y$ atteint $100\\,000$ ?",
+      "choix": [
+        "$x \\approx 666\\,653$",
+        "$x = 20$",
+        "$x = 3$",
+        "$x = 15$"
+      ],
+      "reponse": 1,
+      "explication": "$y = 100\\,000 = 10^5$ équivaut à $z = \\log(100\\,000) = 5$. On résout $0{,}15x + 2 = 5$, soit $0{,}15x = 3$ et $x = 20$. Le piège majeur est d'oublier de passer au logarithme et de résoudre $0{,}15x + 2 = 100\\,000$, ce qui donne l'énorme $x \\approx 666\\,653$ : il faut d'abord traduire le seuil en valeur de $z$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "principe-changement",
+      "enonce": "L'énoncé impose « on pose $z = \\log(y)$ ». Quelle affirmation est correcte ?",
+      "choix": [
+        "On transforme les abscisses $x_i$ ; les ordonnées $y_i$ restent inchangées",
+        "On transforme $x_i$ et $y_i$ simultanément",
+        "On transforme les ordonnées $y_i$ ; les abscisses $x_i$ restent inchangées, et il faut $y > 0$",
+        "Le changement n'est possible que si $x > 0$"
+      ],
+      "reponse": 2,
+      "explication": "$z = \\log(y)$ agit sur les ordonnées : on remplace chaque $y_i$ par $\\log(y_i)$, tandis que les $x_i$ ne bougent pas, et le logarithme exige $y > 0$. Le piège classique est de prendre le log de la mauvaise variable (les $x$) : c'est la variable citée dans le changement — ici $y$ — qui est transformée."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "changement-log",
+      "enonce": "Avec $z = \\log(y)$ et l'ajustement $z = 0{,}2x + 3$, quelle est l'estimation de $y$ pour $x = 5$ ?",
+      "choix": [
+        "$y = 4$",
+        "$y = 1\\,000$",
+        "$y = 10\\,000$",
+        "$y = 16$"
+      ],
+      "reponse": 2,
+      "explication": "On calcule d'abord $z = 0{,}2 \\times 5 + 3 = 4$, puis on revient à $y$ : $y = 10^z = 10^4 = 10\\,000$. Le piège principal est d'oublier le retour à $y$ et d'annoncer $y = 4$ : mais $4$ est la valeur de $z = \\log(y)$, pas de $y$. Le piège $1\\,000 = 10^3$ vient d'utiliser $b = 3$ seul, sans le terme en $x$."
     }
   ]
 }

@@ -99,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "calcul-donnees",
       "enonce": "Un tableau donne : Football $12$, Natation $8$, Basket $6$, Danse $4$ (total $30$ élèves). Combien d'élèves préfèrent un sport **autre** que le football ?",
-      "choix": ["$12$", "$30$", "$22$", "$18$"],
+      "choix": [
+        "$12$",
+        "$30$",
+        "$22$",
+        "$18$"
+      ],
       "reponse": 3,
       "explication": "Deux méthodes : $8 + 6 + 4 = 18$, ou bien $30 - 12 = 18$. Le piège est de répondre $12$ (le football lui-même) ou $30$ (le total, sans rien enlever). Il faut bien retirer la catégorie exclue."
     },
@@ -108,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "diagramme-circulaire",
       "enonce": "Un diagramme circulaire indique que $50\\,\\%$ des $40$ élèves interrogés viennent à l'école à pied. Combien d'élèves cela représente-t-il ?",
-      "choix": ["$50$", "$4$", "$20$", "$40$"],
+      "choix": [
+        "$50$",
+        "$4$",
+        "$20$",
+        "$40$"
+      ],
       "reponse": 2,
       "explication": "$50\\,\\%$, c'est la **moitié** : $40 \\div 2 = 20$ élèves. Le piège est de recopier le pourcentage ($50$) comme si c'était un nombre d'élèves — or un pourcentage est une proportion, il faut l'appliquer au total."
     },
@@ -139,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "On décide **d'abord** la question et qui on interroge (planifier), on récolte et on note les données, et on **interprète en dernier**, une fois les données présentées. Le piège est de vouloir conclure avant même d'avoir des données."
+    },
+    {
+      "difficulte": "facile",
+      "notion": "courbe",
+      "enonce": "Sur une courbe de température heure par heure, la courbe reste **horizontale (plate)** entre 8 h et 10 h. Que se passe-t-il ?",
+      "choix": [
+        "La température ne change pas",
+        "La température augmente",
+        "La température diminue",
+        "La température double"
+      ],
+      "reponse": 0,
+      "explication": "Une courbe **plate** signifie que la valeur mesurée ne bouge pas : la température reste constante. Elle monte quand ça augmente, descend quand ça baisse. Le piège est de croire qu'une courbe « à plat » signifie qu'il ne se passe rien du tout, alors qu'elle décrit bien une température qui se maintient.",
+      "id": 11
+    },
+    {
+      "difficulte": "facile",
+      "notion": "diagramme-barres",
+      "enonce": "Sur un diagramme en barres, comment lit-on la valeur d'une catégorie ?",
+      "choix": [
+        "En regardant la hauteur de la barre sur l'axe gradué",
+        "En mesurant la largeur de la barre",
+        "En comptant le nombre total de barres",
+        "En additionnant toutes les barres"
+      ],
+      "reponse": 0,
+      "explication": "On lit la **hauteur** de la barre sur l'axe gradué : c'est elle qui donne la valeur. Le piège classique est de regarder la **largeur**, mais toutes les barres ont la même largeur : seule la hauteur compte.",
+      "id": 12
+    },
+    {
+      "difficulte": "facile",
+      "notion": "lire-interpreter",
+      "enonce": "Répondre à « Quel est le sport le plus rare ? » en comparant les nombres du tableau, c'est avant tout…",
+      "choix": [
+        "interpréter les données",
+        "seulement lire une valeur",
+        "filtrer les données",
+        "recueillir des données"
+      ],
+      "reponse": 0,
+      "explication": "**Lire**, c'est trouver une valeur précise ; **interpréter**, c'est tirer une conclusion en comparant plusieurs valeurs. Chercher « le plus rare » oblige à comparer les quatre nombres : c'est donc une interprétation, pas une simple lecture.",
+      "id": 13
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "tableau-double-entree",
+      "enonce": "Tableau à double entrée : Football (Garçons $8$, Filles $4$), Natation (Garçons $3$, Filles $5$). Combien de **filles** préfèrent la **natation** ?",
+      "choix": [
+        "$5$",
+        "$3$",
+        "$8$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "On croise la ligne « Natation » et la colonne « Filles » : la case vaut $5$. Le piège est de suivre la bonne ligne mais la mauvaise colonne (répondre $3$, les garçons) : il faut suivre ligne **et** colonne en même temps.",
+      "id": 14
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "choix-representation",
+      "enonce": "Tu veux montrer la **part de chaque catégorie dans le total**. Quelle représentation choisir ?",
+      "choix": [
+        "un diagramme circulaire",
+        "une courbe",
+        "un tableau à double entrée",
+        "un diagramme en barres"
+      ],
+      "reponse": 0,
+      "explication": "Le **diagramme circulaire** partage un disque : chaque part montre la proportion d'une catégorie dans le total. La courbe montre une évolution, les barres comparent des catégories. Choisir le bon dessin, c'est déjà répondre à la bonne question.",
+      "id": 15
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "construire-tableau",
+      "enonce": "Quand on construit un tableau pour présenter des données, pourquoi faut-il donner un **titre** à chaque colonne ?",
+      "choix": [
+        "Pour savoir ce que représentent les nombres",
+        "Pour rendre le tableau plus coloré",
+        "Pour pouvoir le trier automatiquement",
+        "Parce qu'un tableau doit toujours être carré"
+      ],
+      "reponse": 0,
+      "explication": "Un nombre sans étiquette ne veut rien dire : le titre de chaque colonne dit **ce que** les valeurs représentent (catégories, comptages…). Oublier les titres ou les unités est une erreur classique qui rend le tableau illisible.",
+      "id": 16
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "calcul-donnees",
+      "enonce": "Tableau : Football $12$, Natation $8$, Basket $6$, Danse $4$. Combien d'élèves préfèrent la **natation ou le basket** ?",
+      "choix": [
+        "$14$",
+        "$8$",
+        "$6$",
+        "$18$"
+      ],
+      "reponse": 0,
+      "explication": "On additionne les deux catégories demandées : $8 + 6 = 14$. Le piège est de ne lire qu'une seule ligne (répondre $8$ ou $6$) : « ou » réunit ici les deux catégories, il faut les cumuler.",
+      "id": 17
+    },
+    {
+      "difficulte": "difficile",
+      "notion": "tableau-double-entree",
+      "enonce": "Tableau à double entrée : Football (Garçons $8$, Filles $4$), Natation (Garçons $3$, Filles $5$). Combien de **garçons** ont été interrogés en tout ?",
+      "choix": [
+        "$11$",
+        "$8$",
+        "$12$",
+        "$16$"
+      ],
+      "reponse": 0,
+      "explication": "Pour le total des garçons, on additionne toute la colonne « Garçons » : $8 + 3 = 11$. Le piège est de ne lire qu'une case ($8$) ou de sommer la mauvaise ligne : il faut parcourir toute la colonne demandée.",
+      "id": 18
+    },
+    {
+      "difficulte": "difficile",
+      "notion": "diagramme-circulaire",
+      "enonce": "Un diagramme circulaire représente les $200$ spectateurs d'un cinéma. La part « comédie » occupe **le quart** du disque. Combien de spectateurs ont vu une comédie ?",
+      "choix": [
+        "$50$",
+        "$25$",
+        "$100$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "Le quart de $200$, c'est $200 \\div 4 = 50$ spectateurs. Le piège est de confondre « le quart » avec « $25$ » (le pourcentage $25\\,\\%$ pris pour un nombre) : une part donne une **proportion**, qu'il faut appliquer au total.",
+      "id": 19
+    },
+    {
+      "difficulte": "difficile",
+      "notion": "calcul-donnees",
+      "enonce": "Dans une classe de $25$ élèves, $40\\,\\%$ font de la musique. Combien d'élèves cela représente-t-il ?",
+      "choix": [
+        "$10$",
+        "$40$",
+        "$15$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "$40\\,\\%$ de $25$, c'est $\\dfrac{40}{100} \\times 25 = 10$ élèves. Le piège est de recopier $40$ (le pourcentage) comme un nombre d'élèves : un pourcentage est une proportion, il faut l'appliquer à l'effectif total.",
+      "id": 20
     }
   ]
 }

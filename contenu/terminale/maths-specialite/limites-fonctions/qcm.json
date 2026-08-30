@@ -29,7 +29,12 @@
       "difficulte": "facile",
       "notion": "fonctions-reference",
       "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to -\\infty} e^x$ ?",
-      "choix": ["$+\\infty$", "$-\\infty$", "$1$", "$0$"],
+      "choix": [
+        "$+\\infty$",
+        "$-\\infty$",
+        "$1$",
+        "$0$"
+      ],
       "reponse": 3,
       "explication": "En $-\\infty$, l'exponentielle s'écrase vers $0$ (l'axe des abscisses est asymptote horizontale). Le piège est de confondre avec $\\lim_{x\\to+\\infty} e^x = +\\infty$ : les deux bouts donnent des résultats opposés."
     },
@@ -38,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "fonctions-reference",
       "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to -\\infty} x^3$ ?",
-      "choix": ["$-\\infty$", "$+\\infty$", "$0$", "$3$"],
+      "choix": [
+        "$-\\infty$",
+        "$+\\infty$",
+        "$0$",
+        "$3$"
+      ],
       "reponse": 0,
       "explication": "Pour $x^n$ en $-\\infty$, le signe dépend de la parité de $n$ : exposant **impair** ($n=3$) donne $-\\infty$. Le piège est d'écrire $+\\infty$ comme pour $x^2$, où l'exposant est pair."
     },
@@ -75,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "levee-indetermination",
       "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to +\\infty} \\frac{3x^2 + 1}{x^2 - x}$ ?",
-      "choix": ["$3$", "$1$", "$+\\infty$", "$0$"],
+      "choix": [
+        "$3$",
+        "$1$",
+        "$+\\infty$",
+        "$0$"
+      ],
       "reponse": 0,
       "explication": "Cette forme $\\frac{\\infty}{\\infty}$ se lève avec les termes de plus haut degré : $\\frac{3x^2}{x^2} = 3$. Le piège est de conclure $+\\infty$ sans voir que numérateur et dénominateur ont le **même degré**, ce qui donne le rapport des coefficients."
     },
@@ -84,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "levee-indetermination",
       "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$ ?",
-      "choix": ["$0$", "$+\\infty$", "$2$", "$4$"],
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$2$",
+        "$4$"
+      ],
       "reponse": 3,
       "explication": "C'est une forme $\\frac{0}{0}$. On factorise $x^2-4 = (x-2)(x+2)$, on simplifie par $(x-2)$, il reste $x+2 \\to 4$. Le piège est de croire que $\\frac{0}{0}$ vaut $0$ ou n'existe pas : ici la limite est bien finie."
     },
@@ -93,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "croissances-comparees",
       "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to +\\infty} \\frac{e^x}{x^2}$ ?",
-      "choix": ["$0$", "$+\\infty$", "$1$", "n'existe pas"],
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$1$",
+        "n'existe pas"
+      ],
       "reponse": 1,
       "explication": "Par croissance comparée, l'exponentielle l'emporte sur toute puissance : $\\frac{e^x}{x^n}\\to+\\infty$. Le piège est d'inverser la hiérarchie et de répondre $0$ en pensant que $x^2$ « gagne » — c'est $e^x$ qui écrase $x^2$."
     },
@@ -102,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "croissances-comparees",
       "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to -\\infty} x\\,e^x$ ?",
-      "choix": ["$-\\infty$", "$+\\infty$", "$0$", "$1$"],
+      "choix": [
+        "$-\\infty$",
+        "$+\\infty$",
+        "$0$",
+        "$1$"
+      ],
       "reponse": 2,
       "explication": "C'est une forme indéterminée $0\\times\\infty$ ($x\\to-\\infty$ et $e^x\\to 0$). Par croissance comparée $x^n e^x\\to 0$ en $-\\infty$ : l'exponentielle écrase le facteur $x$. Le piège est de répondre $-\\infty$ en ne regardant que le facteur $x$."
     },
@@ -111,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "levee-indetermination",
       "enonce": "Combien vaut $\\displaystyle\\lim_{x \\to +\\infty} \\big(\\sqrt{x+1} - \\sqrt{x}\\big)$ ?",
-      "choix": ["$0$", "$1$", "$+\\infty$", "$-\\infty$"],
+      "choix": [
+        "$0$",
+        "$1$",
+        "$+\\infty$",
+        "$-\\infty$"
+      ],
       "reponse": 0,
       "explication": "Forme $\\infty-\\infty$ : on multiplie par la quantité conjuguée, $\\sqrt{x+1}-\\sqrt{x} = \\frac{1}{\\sqrt{x+1}+\\sqrt{x}} \\to 0$. Le piège est de conclure « $\\infty-\\infty = 0$ » directement ou de répondre $+\\infty$ sans lever l'indétermination."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "limites-reference",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x}$ ?",
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$1$",
+        "$-\\infty$"
+      ],
+      "reponse": 0,
+      "explication": "Quand $x$ devient très grand, $\\dfrac{1}{x}$ se rapproche autant qu'on veut de $0$ : la limite est $0$ (limite finie). La droite $y = 0$ est asymptote horizontale. Le piège est de confondre avec $\\displaystyle\\lim_{x \\to 0^+} \\dfrac{1}{x} = +\\infty$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "forme-indeterminee",
+      "enonce": "Parmi ces écritures, laquelle est une forme indéterminée ?",
+      "choix": [
+        "$\\infty + \\infty$",
+        "$\\infty - \\infty$",
+        "$\\dfrac{1}{\\infty}$",
+        "$0 + \\infty$"
+      ],
+      "reponse": 1,
+      "explication": "$\\infty - \\infty$ est l'une des quatre formes indéterminées : sous cette forme, on ne peut pas conclure directement. En revanche $\\infty + \\infty = +\\infty$ et $\\dfrac{1}{\\infty} = 0$ sont déterminées. « Indéterminée » ne veut pas dire « sans limite »."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "exponentielle",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to -\\infty} \\mathrm{e}^x$ ?",
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$-\\infty$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "En $-\\infty$, l'exponentielle s'écrase sur l'axe des abscisses : $\\displaystyle\\lim_{x \\to -\\infty} \\mathrm{e}^x = 0$ (asymptote horizontale $y = 0$). Le piège est de confondre avec $\\displaystyle\\lim_{x \\to +\\infty} \\mathrm{e}^x = +\\infty$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "asymptote",
+      "enonce": "La fonction $f(x) = 2 + \\dfrac{1}{x}$ vérifie $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 2$. Qu'en déduit-on ?",
+      "choix": [
+        "la droite $x = 2$ est asymptote verticale",
+        "la droite $y = 2$ est asymptote horizontale",
+        "la droite $y = 0$ est asymptote horizontale",
+        "la courbe n'a pas d'asymptote"
+      ],
+      "reponse": 1,
+      "explication": "Une limite FINIE $\\ell$ à l'infini donne une asymptote HORIZONTALE $y = \\ell$, ici $y = 2$. Le piège est de croiser les deux types : une limite finie à l'infini ne donne jamais une asymptote verticale."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "polynome",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\big(x^2 - 5x\\big)$ ?",
+      "choix": [
+        "$+\\infty$",
+        "$-\\infty$",
+        "$0$",
+        "$-5$"
+      ],
+      "reponse": 0,
+      "explication": "En $+\\infty$, un polynôme a la limite de son terme de plus haut degré : ici $x^2 \\to +\\infty$. C'est une F.I. $\\infty - \\infty$ que l'on lève en factorisant $x^2\\big(1 - \\tfrac{5}{x}\\big)$. Le piège est de croire que le $-5x$ tire la limite vers $-\\infty$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "rationnelle",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{3x^2 + 1}{x^2 - x}$ ?",
+      "choix": [
+        "$3$",
+        "$0$",
+        "$+\\infty$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "Une fonction rationnelle a, en $\\pm\\infty$, la limite du quotient de ses termes de plus haut degré : $\\dfrac{3x^2}{x^2} = 3$. C'est une F.I. $\\dfrac{\\infty}{\\infty}$ levée par cette règle."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "puissance",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to -\\infty} x^3$ ?",
+      "choix": [
+        "$+\\infty$",
+        "$-\\infty$",
+        "$0$",
+        "$3$"
+      ],
+      "reponse": 1,
+      "explication": "Pour $x^n$ en $-\\infty$, le résultat dépend de la parité de $n$ : exposant IMPAIR (ici $3$) donne $-\\infty$. Le piège est d'oublier le signe : $\\displaystyle\\lim_{x \\to -\\infty} x^2 = +\\infty$ (pair), mais $x^3 \\to -\\infty$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "croissances-comparees",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\mathrm{e}^x}{x^3}$ ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "$+\\infty$",
+        "$3$"
+      ],
+      "reponse": 2,
+      "explication": "C'est une F.I. $\\dfrac{\\infty}{\\infty}$, mais par croissances comparées l'exponentielle l'emporte sur toute puissance : $\\dfrac{\\mathrm{e}^x}{x^n} \\to +\\infty$. Le piège est d'inverser et de répondre $0$ : c'est $\\mathrm{e}^x$ qui écrase $x^3$, jamais l'inverse."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "forme-indeterminee",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 2} \\dfrac{x^2 - 4}{x - 2}$ ?",
+      "choix": [
+        "$0$",
+        "$4$",
+        "$+\\infty$",
+        "cette limite n'existe pas"
+      ],
+      "reponse": 1,
+      "explication": "C'est une F.I. $\\dfrac{0}{0}$ en $2$. On factorise $x^2 - 4 = (x-2)(x+2)$, puis on simplifie : $\\dfrac{x^2-4}{x-2} = x + 2 \\to 4$. Le piège est de conclure « $\\dfrac{0}{0} = 0$ » sans lever l'indétermination."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "croissances-comparees",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to -\\infty} x\\,\\mathrm{e}^x$ ?",
+      "choix": [
+        "$0$",
+        "$-\\infty$",
+        "$+\\infty$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "C'est une F.I. $0 \\times \\infty$ (car $x \\to -\\infty$ et $\\mathrm{e}^x \\to 0$). Par croissances comparées $x^n \\mathrm{e}^x \\to 0$ en $-\\infty$ : la limite vaut $0$. Le piège est de croire que le $x \\to -\\infty$ l'emporte et de répondre $-\\infty$."
     }
   ]
 }

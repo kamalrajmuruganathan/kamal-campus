@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "bernoulli",
       "enonce": "Combien d'issues une épreuve de Bernoulli comporte-t-elle ?",
-      "choix": ["Une", "Deux", "Trois", "Autant qu'on veut"],
+      "choix": [
+        "Une",
+        "Deux",
+        "Trois",
+        "Autant qu'on veut"
+      ],
       "reponse": 1,
       "explication": "Une épreuve de Bernoulli n'a que **deux issues** : succès (probabilité $p$) ou échec (probabilité $1-p$). Conforme ou défectueux, pile ou face, en panne ou non."
     },
@@ -38,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "loi-probabilite",
       "enonce": "Que doit valoir la somme des probabilités d'une loi de probabilité ?",
-      "choix": ["$0$", "$1$", "$100$", "Cela dépend du nombre de valeurs"],
+      "choix": [
+        "$0$",
+        "$1$",
+        "$100$",
+        "Cela dépend du nombre de valeurs"
+      ],
       "reponse": 1,
       "explication": "La somme vaut toujours $1$. C'est le contrôle le plus rapide à faire **avant** de calculer une espérance : si la somme ne vaut pas $1$, il y a une erreur et le reste sera faux."
     },
@@ -47,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "esperance",
       "enonce": "$X$ prend les valeurs $2$, $5$ et $10$ avec les probabilités $0{,}5$, $0{,}3$ et $0{,}2$. Que vaut $E(X)$ ?",
-      "choix": ["$4{,}5$", "$5{,}67$", "$17$", "$3{,}4$"],
+      "choix": [
+        "$4{,}5$",
+        "$5{,}67$",
+        "$17$",
+        "$3{,}4$"
+      ],
       "reponse": 0,
       "explication": "$E(X) = 2 \\times 0{,}5 + 5 \\times 0{,}3 + 10 \\times 0{,}2 = 1 + 1{,}5 + 2 = 4{,}5$. Le choix $5{,}67$ est la moyenne simple des trois valeurs, qui ignore les probabilités."
     },
@@ -56,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "loi-bernoulli",
       "enonce": "Une variable aléatoire suit une loi de Bernoulli de paramètre $p = 0{,}3$. Que vaut son espérance ?",
-      "choix": ["$0{,}3$", "$0{,}7$", "$1$", "$0{,}21$"],
+      "choix": [
+        "$0{,}3$",
+        "$0{,}7$",
+        "$1$",
+        "$0{,}21$"
+      ],
       "reponse": 0,
       "explication": "Pour une loi de Bernoulli, $E(X) = 0 \\times (1-p) + 1 \\times p = p = 0{,}3$. L'espérance **est** le paramètre — c'est le résultat le plus court du chapitre, et il tombe souvent."
     },
@@ -79,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "repetition",
       "enonce": "On répète $3$ fois une épreuve de succès $p = 0{,}5$. Quelle est la probabilité d'obtenir exactement $2$ succès ?",
-      "choix": ["$0{,}125$", "$0{,}375$", "$0{,}25$", "$0{,}5$"],
+      "choix": [
+        "$0{,}125$",
+        "$0{,}375$",
+        "$0{,}25$",
+        "$0{,}5$"
+      ],
       "reponse": 1,
       "explication": "Trois chemins conviennent (SSÉ, SÉS, ÉSS), chacun de probabilité $0{,}5^3 = 0{,}125$. Total : $3 \\times 0{,}125 = 0{,}375$. Le choix $0{,}125$ oublie de **compter les chemins**."
     },
@@ -88,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "gain-algebrique",
       "enonce": "On mise $3$ €. On gagne $20$ € avec probabilité $0{,}1$, sinon rien. Quelle est l'espérance de gain ?",
-      "choix": ["$2$ €", "$-1$ €", "$17$ €", "$-0{,}3$ €"],
+      "choix": [
+        "$2$ €",
+        "$-1$ €",
+        "$17$ €",
+        "$-0{,}3$ €"
+      ],
       "reponse": 1,
       "explication": "Le gain **algébrique** retranche la mise : $X = 17$ avec probabilité $0{,}1$, $X = -3$ avec probabilité $0{,}9$. Donc $E(X) = 1{,}7 - 2{,}7 = -1$ €. Oublier de retrancher la mise est l'erreur classique."
     },
@@ -111,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "repetition",
       "enonce": "Une machine produit $5\\,\\%$ de pièces défectueuses. Sur $3$ pièces prélevées, quelle est la probabilité qu'aucune ne soit défectueuse ?",
-      "choix": ["$0{,}857$", "$0{,}95$", "$0{,}15$", "$0{,}05$"],
+      "choix": [
+        "$0{,}857$",
+        "$0{,}95$",
+        "$0{,}15$",
+        "$0{,}05$"
+      ],
       "reponse": 0,
       "explication": "Un seul chemin convient : trois pièces conformes, de probabilité $0{,}95^3 \\approx 0{,}857$. Ici pas de facteur multiplicatif, car il n'existe qu'un chemin — c'est le cas $k = 0$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "arbre",
+      "enonce": "Que vaut la somme des probabilités des branches issues d'un même nœud d'un arbre ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "le nombre de branches",
+        "cela dépend de l'expérience"
+      ],
+      "reponse": 1,
+      "explication": "La somme des probabilités des branches partant d'un même nœud vaut toujours $1$ : c'est la première règle de l'arbre. Elle traduit le fait que l'une des issues se réalise forcément."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "bernoulli",
+      "enonce": "Dans une épreuve de Bernoulli, si la probabilité du succès est $p$, quelle est celle de l'échec ?",
+      "choix": [
+        "$p$",
+        "$1 - p$",
+        "$1 + p$",
+        "$\\dfrac{1}{p}$"
+      ],
+      "reponse": 1,
+      "explication": "Une épreuve de Bernoulli n'a que deux issues, de probabilités $p$ (succès) et $1 - p$ (échec). Leur somme vaut $p + (1-p) = 1$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "notations",
+      "enonce": "Comment note-t-on la probabilité que $X$ prenne la valeur $3$ ?",
+      "choix": [
+        "$\\{X = 3\\}$",
+        "$P(X = 3)$",
+        "$E(X)$",
+        "$X = 3$"
+      ],
+      "reponse": 1,
+      "explication": "$P(X = 3)$ est un **nombre** entre $0$ et $1$ : la probabilité de l'événement. L'écriture $\\{X = 3\\}$, avec des accolades, désigne l'**événement** lui-même, pas sa probabilité."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "loi-bernoulli",
+      "enonce": "Une variable aléatoire suit une loi de Bernoulli de paramètre $p = 0{,}45$. Que vaut son espérance ?",
+      "choix": [
+        "$0{,}45$",
+        "$0{,}55$",
+        "$1$",
+        "$0{,}225$"
+      ],
+      "reponse": 0,
+      "explication": "Pour une loi de Bernoulli, $E(X) = 0 \\times (1-p) + 1 \\times p = p = 0{,}45$. L'espérance **est** le paramètre $p$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "esperance",
+      "enonce": "$X$ prend les valeurs $-1$, $0$ et $4$ avec les probabilités $0{,}2$, $0{,}5$ et $0{,}3$. Que vaut $E(X)$ ?",
+      "choix": [
+        "$1$",
+        "$1{,}4$",
+        "$3$",
+        "$0$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = (-1) \\times 0{,}2 + 0 \\times 0{,}5 + 4 \\times 0{,}3 = -0{,}2 + 0 + 1{,}2 = 1$. Le choix $1{,}4$ oublie le **signe négatif** de la première valeur."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "loi-probabilite",
+      "enonce": "Dans la loi de $X$, on a $P(X = 1) = 0{,}2$, $P(X = 2) = 0{,}5$ et $P(X = 3) = ?$. Que vaut $P(X = 3)$ ?",
+      "choix": [
+        "$0{,}3$",
+        "$0{,}7$",
+        "$0{,}5$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "La somme des probabilités vaut $1$ : $P(X=3) = 1 - 0{,}2 - 0{,}5 = 0{,}3$. C'est le contrôle systématique de toute loi de probabilité."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "repetition",
+      "enonce": "On répète $2$ fois, de façon indépendante, une épreuve de succès $p = 0{,}3$. Quelle est la probabilité d'obtenir deux succès ?",
+      "choix": [
+        "$0{,}09$",
+        "$0{,}6$",
+        "$0{,}3$",
+        "$0{,}49$"
+      ],
+      "reponse": 0,
+      "explication": "Un seul chemin convient (SS), de probabilité $0{,}3 \\times 0{,}3 = 0{,}09$. On **multiplie** le long du chemin. Le choix $0{,}6$ additionne les branches au lieu de les multiplier."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "repetition",
+      "enonce": "On répète $4$ fois une épreuve de succès $p = 0{,}5$. Quelle est la probabilité d'obtenir exactement $1$ succès ?",
+      "choix": [
+        "$0{,}25$",
+        "$0{,}0625$",
+        "$0{,}5$",
+        "$0{,}125$"
+      ],
+      "reponse": 0,
+      "explication": "Il y a $4$ chemins avec exactement $1$ succès (SÉÉÉ, ÉSÉÉ, ÉÉSÉ, ÉÉÉS), chacun de probabilité $0{,}5^4 = 0{,}0625$. Total : $4 \\times 0{,}0625 = 0{,}25$. Le choix $0{,}0625$ oublie de **compter les chemins**."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "gain-algebrique",
+      "enonce": "Un billet de tombola coûte $5$ €. Il fait gagner $50$ € avec probabilité $0{,}05$, sinon rien. Quelle est l'espérance de gain (algébrique) ?",
+      "choix": [
+        "$-2{,}5$ €",
+        "$2{,}25$ €",
+        "$-0{,}25$ €",
+        "$45$ €"
+      ],
+      "reponse": 0,
+      "explication": "Le gain **algébrique** retranche la mise : $X = 45$ € avec probabilité $0{,}05$, $X = -5$ € avec probabilité $0{,}95$. Donc $E(X) = 45 \\times 0{,}05 + (-5) \\times 0{,}95 = 2{,}25 - 4{,}75 = -2{,}5$ €. Oublier de retrancher la mise est l'erreur classique."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "repetition",
+      "enonce": "Une machine produit $10\\,\\%$ de pièces défectueuses. Sur $2$ pièces prélevées indépendamment, quelle est la probabilité qu'**au moins une** soit défectueuse ?",
+      "choix": [
+        "$0{,}19$",
+        "$0{,}81$",
+        "$0{,}2$",
+        "$0{,}1$"
+      ],
+      "reponse": 0,
+      "explication": "On passe par l'événement contraire : « aucune défectueuse » a pour probabilité $0{,}9 \\times 0{,}9 = 0{,}81$. Donc « au moins une » vaut $1 - 0{,}81 = 0{,}19$. Le choix $0{,}2$ additionne naïvement $0{,}1 + 0{,}1$."
     }
   ]
 }

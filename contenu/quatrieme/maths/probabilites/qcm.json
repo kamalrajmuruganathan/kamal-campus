@@ -29,7 +29,12 @@
       "difficulte": "facile",
       "notion": "evenement-contraire",
       "enonce": "Un événement $A$ a pour probabilité $P(A) = 0{,}3$. Que vaut $P(\\overline{A})$ ?",
-      "choix": ["$0{,}7$", "$-0{,}3$", "$0{,}3$", "$1{,}3$"],
+      "choix": [
+        "$0{,}7$",
+        "$-0{,}3$",
+        "$0{,}3$",
+        "$1{,}3$"
+      ],
       "reponse": 0,
       "explication": "$A$ et $\\overline{A}$ se partagent tout l'univers, donc $P(A) + P(\\overline{A}) = 1$ : il reste $1 - 0{,}3 = 0{,}7$. Le piège est de confondre **contraire** et **opposé** : on ne change pas le signe, et une probabilité n'est jamais négative ni supérieure à $1$."
     },
@@ -52,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "intersection",
       "enonce": "Avec un dé à six faces, $A$ : « obtenir un nombre pair » et $B$ : « obtenir un nombre supérieur ou égal à $5$ ». Que vaut $P(A \\cap B)$ ?",
-      "choix": ["$\\dfrac{4}{6}$", "$\\dfrac{1}{6}$", "$\\dfrac{5}{6}$", "$0$"],
+      "choix": [
+        "$\\dfrac{4}{6}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{5}{6}$",
+        "$0$"
+      ],
       "reponse": 1,
       "explication": "L'intersection ne garde que les issues présentes dans **les deux** événements : $A = \\{2 \\,;\\, 4 \\,;\\, 6\\}$, $B = \\{5 \\,;\\, 6\\}$, donc $A \\cap B = \\{6\\}$ et $P = \\dfrac{1}{6}$. Le piège est d'échanger $\\cap$ et $\\cup$ : la réunion donnerait $\\dfrac{4}{6}$."
     },
@@ -61,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "reunion",
       "enonce": "Mêmes événements : $A = \\{2 \\,;\\, 4 \\,;\\, 6\\}$ et $B = \\{5 \\,;\\, 6\\}$ avec un dé à six faces. Que vaut $P(A \\cup B)$ ?",
-      "choix": ["$\\dfrac{5}{6}$", "$\\dfrac{1}{6}$", "$\\dfrac{2}{3}$", "$1$"],
+      "choix": [
+        "$\\dfrac{5}{6}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{2}{3}$",
+        "$1$"
+      ],
       "reponse": 2,
       "explication": "On liste les issues qui sont dans $A$ **ou** dans $B$ sans écrire le $6$ deux fois : $A \\cup B = \\{2 \\,;\\, 4 \\,;\\, 5 \\,;\\, 6\\}$, soit $\\dfrac{4}{6} = \\dfrac{2}{3}$. Le piège est d'additionner $P(A) + P(B) = \\dfrac{3}{6} + \\dfrac{2}{6} = \\dfrac{5}{6}$, ce qui compte le $6$ deux fois puisqu'il appartient aux deux événements."
     },
@@ -70,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "deux-epreuves",
       "enonce": "On lance une pièce équilibrée, puis un dé à six faces. Combien cette expérience à deux épreuves compte-t-elle d'issues ?",
-      "choix": ["$8$", "$2$", "$6$", "$12$"],
+      "choix": [
+        "$8$",
+        "$2$",
+        "$6$",
+        "$12$"
+      ],
       "reponse": 3,
       "explication": "Chacun des $2$ résultats de la pièce se combine avec chacun des $6$ résultats du dé : $2 \\times 6 = 12$ couples. Le piège est d'**additionner** $2 + 6 = 8$ au lieu de croiser les deux épreuves, ou de ne compter que la seconde épreuve ($6$)."
     },
@@ -79,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "deux-epreuves",
       "enonce": "On lance deux pièces équilibrées. Quelle est la probabilité d'obtenir **exactement un** pile ?",
-      "choix": ["$\\dfrac{1}{2}$", "$\\dfrac{1}{3}$", "$\\dfrac{1}{4}$", "$\\dfrac{2}{3}$"],
+      "choix": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{2}{3}$"
+      ],
       "reponse": 0,
       "explication": "L'univers compte quatre issues équiprobables : $(P\\,;P)$, $(P\\,;F)$, $(F\\,;P)$, $(F\\,;F)$. Deux d'entre elles conviennent, d'où $\\dfrac{2}{4} = \\dfrac{1}{2}$. Le piège classique est de croire que « deux piles », « un pile » et « zéro pile » sont trois cas équiprobables, ce qui donnerait $\\dfrac{1}{3}$ : « un pile » se réalise de **deux façons**, les autres d'une seule."
     },
@@ -88,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "evenement-contraire",
       "enonce": "On lance deux dés équilibrés à six faces. Quelle est la probabilité d'obtenir **au moins un** $6$ ?",
-      "choix": ["$\\dfrac{1}{6}$", "$\\dfrac{25}{36}$", "$\\dfrac{11}{36}$", "$\\dfrac{12}{36}$"],
+      "choix": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{25}{36}$",
+        "$\\dfrac{11}{36}$",
+        "$\\dfrac{12}{36}$"
+      ],
       "reponse": 2,
       "explication": "On passe par le contraire : « aucun $6$ » laisse $5$ possibilités par dé, soit $5 \\times 5 = 25$ issues sur $36$. Donc $P = 1 - \\dfrac{25}{36} = \\dfrac{11}{36}$. Deux pièges ici : additionner $\\dfrac{1}{6} + \\dfrac{1}{6} = \\dfrac{12}{36}$, ce qui compte deux fois l'issue $(6\\,;6)$ ; et s'arrêter à $\\dfrac{25}{36}$ en oubliant de retrancher le contraire à $1$."
     },
@@ -119,6 +149,146 @@
       ],
       "reponse": 3,
       "explication": "Pour un nombre de répétitions **fixé**, la fréquence observée change d'une série à l'autre autour de la probabilité : $0{,}58$ sur $50$ lancers est un écart banal. Deux pièges sont réunis ici : prendre un écart pour une preuve de truquage, et croire à une compensation — la pièce n'a pas de mémoire. La probabilité appartient au modèle, elle ne se met pas à jour d'après les résultats."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "univers",
+      "enonce": "On lance une pièce équilibrée. Quel est l'univers $\\Omega$ de cette expérience ?",
+      "choix": [
+        "$\\Omega = \\{P \\,;\\, F\\}$",
+        "$\\Omega = \\{0 \\,;\\, 1\\}$",
+        "$\\Omega = \\{P \\,;\\, P \\,;\\, F \\,;\\, F\\}$",
+        "$\\Omega = \\{P\\}$"
+      ],
+      "reponse": 0,
+      "explication": "L'univers rassemble **toutes les issues** d'une pièce : pile et face, soit $\\Omega = \\{P \\,;\\, F\\}$. Le piège $\\{0 \\,;\\, 1\\}$ confond les issues avec les bornes de l'échelle des probabilités ; écrire $\\{P \\,;\\, P \\,;\\, F \\,;\\, F\\}$ répète des issues, alors que chacune ne figure **qu'une fois** dans l'univers."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "probabilite-evenement",
+      "enonce": "On lance un dé équilibré à six faces. Quelle est la probabilité d'obtenir un multiple de $3$ ?",
+      "choix": [
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{1}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "Les multiples de $3$ sur le dé forment l'événement $\\{3 \\,;\\, 6\\}$, soit $2$ issues sur $6$ : $P = \\dfrac{2}{6} = \\dfrac{1}{3}$. Le piège est de compter le nombre de faces paires ($\\dfrac{1}{2}$) ou de ne compter qu'une seule issue ($\\dfrac{1}{6}$) en oubliant le $6$, qui est lui aussi multiple de $3$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "evenement-certain",
+      "enonce": "On lance un dé à six faces. Quelle est la probabilité d'obtenir un nombre inférieur à $7$ ?",
+      "choix": [
+        "$1$",
+        "$0$",
+        "$\\dfrac{6}{7}$",
+        "$\\dfrac{1}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "Toutes les issues du dé ($1$ à $6$) sont inférieures à $7$ : l'événement est **certain**, il est réalisé quoi qu'il arrive, donc $P(\\Omega) = 1$. Le piège est de diviser par $7$ comme s'il y avait sept issues : le dé n'a que **six** faces, et le $7$ n'est pas une issue."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "reunion",
+      "enonce": "Avec un dé à six faces, $A = \\{2 \\,;\\, 4 \\,;\\, 6\\}$ (« pair ») et $B = \\{3 \\,;\\, 6\\}$ (« multiple de $3$ »). Que vaut $P(A \\cup B)$ ?",
+      "choix": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{5}{6}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{3}$"
+      ],
+      "reponse": 0,
+      "explication": "On liste les issues de $A$ **ou** de $B$ sans écrire le $6$ deux fois : $A \\cup B = \\{2 \\,;\\, 3 \\,;\\, 4 \\,;\\, 6\\}$, soit $\\dfrac{4}{6} = \\dfrac{2}{3}$. Le piège est d'additionner $P(A) + P(B) = \\dfrac{3}{6} + \\dfrac{2}{6} = \\dfrac{5}{6}$, ce qui compte le $6$ deux fois puisqu'il appartient aux deux événements."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "intersection",
+      "enonce": "Mêmes événements : $A = \\{2 \\,;\\, 4 \\,;\\, 6\\}$ et $B = \\{3 \\,;\\, 6\\}$ avec un dé à six faces. Que vaut $P(A \\cap B)$ ?",
+      "choix": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{2}{3}$",
+        "$0$",
+        "$\\dfrac{5}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "L'intersection ne garde que les issues présentes dans **les deux** événements : seule le $6$ est à la fois pair et multiple de $3$, donc $A \\cap B = \\{6\\}$ et $P = \\dfrac{1}{6}$. Le piège est d'échanger $\\cap$ et $\\cup$ : la réunion donnerait $\\dfrac{2}{3}$. Ce n'est pas non plus l'ensemble vide, car $6$ convient."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "deux-epreuves",
+      "enonce": "On lance deux pièces équilibrées. Quelle est la probabilité d'obtenir **deux** piles ?",
+      "choix": [
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{2}{4}$"
+      ],
+      "reponse": 0,
+      "explication": "L'univers compte quatre issues équiprobables : $(P\\,;P)$, $(P\\,;F)$, $(F\\,;P)$, $(F\\,;F)$. Une seule donne deux piles, d'où $\\dfrac{1}{4}$. Le piège est de croire que « deux piles », « un pile » et « zéro pile » sont trois cas équiprobables, ce qui donnerait $\\dfrac{1}{3}$ : les issues équiprobables sont les **couples**, pas leurs résumés."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "deux-epreuves",
+      "enonce": "On lance une pièce équilibrée, puis un dé à six faces. Quelle est la probabilité d'obtenir **pile et un nombre strictement supérieur à $4$** ?",
+      "choix": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{12}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "L'univers a $2 \\times 6 = 12$ issues. Les favorables sont $(P\\,;5)$ et $(P\\,;6)$, soit $2$ issues : $P = \\dfrac{2}{12} = \\dfrac{1}{6}$. Le piège est de ne compter qu'une issue ($\\dfrac{1}{12}$) ou de traiter les deux épreuves séparément au lieu de croiser pile avec les nombres $5$ et $6$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "deux-des",
+      "enonce": "On lance deux dés équilibrés à six faces. Quelle est la probabilité que la **somme** des deux dés soit égale à $5$ ?",
+      "choix": [
+        "$\\dfrac{1}{9}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{5}{36}$",
+        "$\\dfrac{1}{11}$"
+      ],
+      "reponse": 0,
+      "explication": "Sur les $36$ issues équiprobables, la somme $5$ s'obtient par $(1\\,;4)$, $(2\\,;3)$, $(3\\,;2)$, $(4\\,;1)$, soit $4$ issues : $P = \\dfrac{4}{36} = \\dfrac{1}{9}$. Deux pièges : diviser par $11$ (le nombre de sommes possibles, de $2$ à $12$), qui ne sont **pas** équiprobables ; ou oublier que $(1\\,;4)$ et $(4\\,;1)$ sont deux issues distinctes."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "deux-des",
+      "enonce": "On lance deux dés équilibrés à six faces. Quelle est la probabilité que la somme soit **au moins égale à $11$** ?",
+      "choix": [
+        "$\\dfrac{1}{12}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{3}{11}$",
+        "$\\dfrac{2}{36}$"
+      ],
+      "reponse": 0,
+      "explication": "« Au moins $11$ » réunit les sommes $11$ et $12$. Somme $11$ : $(5\\,;6)$ et $(6\\,;5)$, soit $2$ issues ; somme $12$ : $(6\\,;6)$, soit $1$ issue. Total $3$ issues sur $36$ : $P = \\dfrac{3}{36} = \\dfrac{1}{12}$. Le piège $\\dfrac{2}{36}$ oublie l'issue $(6\\,;6)$ ; diviser par $11$ suppose à tort que les sommes sont équiprobables."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "fluctuation",
+      "enonce": "On simule $200$ lancers d'un dé équilibré : la face $4$ sort $40$ fois, soit une fréquence de $0{,}20$. Quelle est la probabilité théorique d'obtenir un $4$ ?",
+      "choix": [
+        "$\\dfrac{1}{6}$, la fréquence $0{,}20$ n'en diffère que par fluctuation",
+        "$0{,}20$, car la probabilité s'ajuste aux résultats observés",
+        "$\\dfrac{40}{200}$ devient la nouvelle probabilité du dé",
+        "$\\dfrac{1}{4}$, puisque la face est sortie souvent"
+      ],
+      "reponse": 0,
+      "explication": "La probabilité appartient au **modèle** : un dé équilibré donne $P(4) = \\dfrac{1}{6} \\approx 0{,}17$, et elle ne change pas d'après les tirages. La fréquence observée $0{,}20$ fluctue autour de cette valeur, sans la modifier. Le piège est de confondre la fréquence (qui bouge d'une simulation à l'autre) avec la probabilité (fixe)."
     }
   ]
 }

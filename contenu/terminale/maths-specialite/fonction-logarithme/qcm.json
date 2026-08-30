@@ -29,7 +29,12 @@
       "difficulte": "facile",
       "notion": "definition",
       "enonce": "Combien vaut $\\ln 1$ ?",
-      "choix": ["$1$", "$e$", "$0$", "$-1$"],
+      "choix": [
+        "$1$",
+        "$e$",
+        "$0$",
+        "$-1$"
+      ],
       "reponse": 2,
       "explication": "Par définition $\\ln 1 = y \\iff e^{y}=1$, or $e^{0}=1$, donc $\\ln 1 = 0$. Le piège classique est de confondre avec $\\ln e = 1$."
     },
@@ -80,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "limites",
       "enonce": "Que vaut $\\lim\\limits_{x\\to 0^{+}}\\ln x$ ?",
-      "choix": ["$0$", "$1$", "$+\\infty$", "$-\\infty$"],
+      "choix": [
+        "$0$",
+        "$1$",
+        "$+\\infty$",
+        "$-\\infty$"
+      ],
       "reponse": 3,
       "explication": "Quand $x$ tend vers $0$ par valeurs positives, $\\ln x$ tend vers $-\\infty$ : l'axe des ordonnées est asymptote verticale. Le piège est de croire que $\\ln$ « s'arrête » à $0$ ; en réalité elle plonge vers $-\\infty$."
     },
@@ -131,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "croissances-comparees",
       "enonce": "Que vaut $\\lim\\limits_{x\\to +\\infty}\\dfrac{\\ln x}{x}$ ?",
-      "choix": ["$+\\infty$", "$1$", "$0$", "$-\\infty$"],
+      "choix": [
+        "$+\\infty$",
+        "$1$",
+        "$0$",
+        "$-\\infty$"
+      ],
       "reponse": 2,
       "explication": "Par croissance comparée, la puissance de $x$ l'emporte sur le logarithme : $\\dfrac{\\ln x}{x}\\to 0$ en $+\\infty$. Le piège est de conclure « $\\dfrac{+\\infty}{+\\infty}$ donc $1$ » : c'est une forme indéterminée que la règle des croissances comparées tranche en faveur du dénominateur."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "compensation",
+      "enonce": "Que vaut $\\mathrm{e}^{\\ln 7}$ ?",
+      "choix": [
+        "$7$",
+        "$\\ln 7$",
+        "$\\mathrm{e}^7$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "$\\ln$ et $\\exp$ sont réciproques, donc $\\mathrm{e}^{\\ln x} = x$ pour tout $x > 0$ : ici $\\mathrm{e}^{\\ln 7} = 7$. Le piège est de laisser $\\ln 7$ ou d'écrire $\\mathrm{e}^7$ sans voir que les deux fonctions se compensent."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "produit",
+      "enonce": "Pour $a > 0$ et $b > 0$, à quoi est égal $\\ln(15) = \\ln(3 \\times 5)$ ?",
+      "choix": [
+        "$\\ln 3 \\times \\ln 5$",
+        "$\\ln 3 + \\ln 5$",
+        "$\\ln 3 - \\ln 5$",
+        "$3 \\ln 5$"
+      ],
+      "reponse": 1,
+      "explication": "La relation fondamentale est $\\ln(ab) = \\ln a + \\ln b$ : un produit devient une SOMME. Le piège classique est d'écrire $\\ln 3 \\times \\ln 5$ : le logarithme ne transforme jamais un produit en produit de logarithmes."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "domaine",
+      "enonce": "Quel est l'ensemble de définition de la fonction $\\ln$ ?",
+      "choix": [
+        "$\\mathbb{R}$",
+        "$[0\\,;+\\infty[$",
+        "$]0\\,;+\\infty[$",
+        "$\\mathbb{R}^*$"
+      ],
+      "reponse": 2,
+      "explication": "$\\ln$ n'est définie que pour un argument STRICTEMENT positif : son domaine est $]0\\,;+\\infty[$. Le piège est d'inclure $0$ : $\\ln 0$ n'existe pas (la courbe plonge vers $-\\infty$ en $0^+$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "puissance",
+      "enonce": "En fonction de $\\ln 2$, à quoi est égal $\\ln 8$ ?",
+      "choix": [
+        "$3 \\ln 2$",
+        "$8 \\ln 2$",
+        "$(\\ln 2)^3$",
+        "$\\ln 2 + 3$"
+      ],
+      "reponse": 0,
+      "explication": "On écrit $8 = 2^3$, puis $\\ln(a^n) = n \\ln a$ fait « descendre » la puissance : $\\ln 8 = \\ln(2^3) = 3 \\ln 2$. Le piège $(\\ln 2)^3$ confond puissance de l'argument et puissance du logarithme."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "derivee",
+      "enonce": "Quelle est la dérivée de $f(x) = \\ln(x^2 + 1)$ ?",
+      "choix": [
+        "$\\dfrac{1}{x^2+1}$",
+        "$\\dfrac{2x}{x^2+1}$",
+        "$\\dfrac{1}{2x}$",
+        "$2x \\ln(x^2+1)$"
+      ],
+      "reponse": 1,
+      "explication": "Forme $\\ln(u)$ : dérivée $\\dfrac{u'}{u}$ avec $u = x^2+1$ et $u' = 2x$, soit $\\dfrac{2x}{x^2+1}$. Le premier choix oublie le facteur $u' = 2x$ au numérateur, l'erreur type de la composée."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "equation",
+      "enonce": "Quelle est la solution de l'équation $\\ln x = 3$ ?",
+      "choix": [
+        "$x = 3$",
+        "$x = \\ln 3$",
+        "$x = 3\\mathrm{e}$",
+        "$x = \\mathrm{e}^3$"
+      ],
+      "reponse": 3,
+      "explication": "On applique l'exponentielle (réciproque de $\\ln$) : $\\ln x = 3 \\iff x = \\mathrm{e}^3$, et $\\mathrm{e}^3 > 0$ respecte la condition d'existence. Le piège est de répondre $x = 3$ en oubliant de « défaire » le logarithme."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "equation",
+      "enonce": "Quelle est la solution de l'équation $\\mathrm{e}^{2x} = 5$ ?",
+      "choix": [
+        "$x = \\dfrac{\\ln 5}{2}$",
+        "$x = \\ln\\dfrac{5}{2}$",
+        "$x = 2 \\ln 5$",
+        "$x = \\dfrac{5}{\\ln 2}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour isoler un exposant, on applique $\\ln$ : $\\mathrm{e}^{2x} = 5 \\Rightarrow 2x = \\ln 5 \\Rightarrow x = \\dfrac{\\ln 5}{2}$. Le piège $\\ln\\dfrac{5}{2}$ confond « diviser l'exposant par 2 » et « diviser l'argument par 2 »."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "croissances-comparees",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x}$ ?",
+      "choix": [
+        "$+\\infty$",
+        "$1$",
+        "$0$",
+        "$-\\infty$"
+      ],
+      "reponse": 2,
+      "explication": "Par croissances comparées, la puissance l'emporte sur le logarithme : $\\dfrac{\\ln x}{x^n} \\to 0$ en $+\\infty$, donc ici la limite vaut $0$. Le piège est de croire que $\\ln x$ « gagne » et de répondre $+\\infty$ : c'est $x$ qui écrase $\\ln x$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "piege-algebrique",
+      "enonce": "Pour $a > 0$ et $b > 0$, laquelle de ces égalités est TOUJOURS correcte ?",
+      "choix": [
+        "$\\ln(a + b) = \\ln a + \\ln b$",
+        "$\\ln(ab) = \\ln a \\times \\ln b$",
+        "$\\ln(a^2) = 2 \\ln a$",
+        "$\\ln(a - b) = \\ln a - \\ln b$"
+      ],
+      "reponse": 2,
+      "explication": "Seule $\\ln(a^2) = 2 \\ln a$ est correcte (règle de la puissance, valable car $a > 0$). Les trois autres sont les fautes types : le $\\ln$ ne rentre PAS dans une somme ou une différence, et $\\ln(ab) = \\ln a + \\ln b$, pas un produit de logarithmes."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "inequation",
+      "enonce": "Quel est l'ensemble des solutions de l'inéquation $\\ln x < 2$ ?",
+      "choix": [
+        "$x < \\mathrm{e}^2$",
+        "$]0\\,;\\mathrm{e}^2[$",
+        "$x > \\mathrm{e}^2$",
+        "$x < 2$"
+      ],
+      "reponse": 1,
+      "explication": "$\\ln$ est croissante, donc conserve le sens : $\\ln x < 2 \\iff x < \\mathrm{e}^2$. Mais il faut croiser avec la condition d'existence $x > 0$, d'où $]0\\,;\\mathrm{e}^2[$. Oublier ce croisement et écrire seulement $x < \\mathrm{e}^2$ (qui inclurait des $x \\leqslant 0$) est le piège."
     }
   ]
 }

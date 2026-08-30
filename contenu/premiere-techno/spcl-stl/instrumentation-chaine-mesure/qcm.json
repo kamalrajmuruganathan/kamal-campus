@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "C'est le rôle de l'**hystérésis** : avec un seuil unique, une petite oscillation autour de ce seuil ferait claqueter la sortie (marche/arrêt très rapides). Deux seuils distincts créent une zone morte : le chauffage ne redémarre qu'après être vraiment redescendu, ce qui stabilise la régulation et évite l'usure."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "conditionneur",
+      "enonce": "Quel maillon de la chaîne de mesure amplifie et met en forme le signal du capteur avant sa conversion en nombre ?",
+      "choix": [
+        "le capteur",
+        "le conditionneur",
+        "le CAN",
+        "l'écran d'affichage"
+      ],
+      "reponse": 1,
+      "explication": "Le **conditionneur** met en forme le signal issu du capteur : il l'amplifie, le filtre et l'adapte au calibre du CAN. Le capteur est en amont (il produit le signal) et le CAN en aval (il le convertit en nombre)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "resolution-instrument",
+      "enonce": "La résolution d'un instrument de mesure numérique désigne :",
+      "choix": [
+        "la plus grande valeur qu'il peut mesurer",
+        "la plus petite variation qu'il peut détecter et afficher",
+        "l'écart entre la valeur mesurée et la valeur vraie",
+        "le temps qu'il met à se stabiliser"
+      ],
+      "reponse": 1,
+      "explication": "La **résolution** est la plus petite variation détectable et affichable (le pas du dernier chiffre). La plus grande valeur mesurable relève de l'étendue, l'écart à la valeur vraie de la précision, et le délai de stabilisation du temps de réponse."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "convertisseur-analogique-numerique",
+      "enonce": "Quel est le rôle du convertisseur analogique-numérique (CAN) ?",
+      "choix": [
+        "transformer une grandeur physique en tension",
+        "transformer une tension analogique en nombre entier",
+        "amplifier le signal du capteur",
+        "comparer la tension à un seuil"
+      ],
+      "reponse": 1,
+      "explication": "Le **CAN** transforme la tension analogique (continue) en un **nombre entier** exploitable par l'ordinateur. Transformer une grandeur physique en tension est le rôle du capteur, et amplifier celui du conditionneur."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "temps-de-reponse",
+      "enonce": "Un thermomètre plongé dans l'eau chaude met quelques secondes avant d'afficher une valeur stable. Cette durée caractérise :",
+      "choix": [
+        "sa résolution",
+        "son étendue de mesure",
+        "son temps de réponse",
+        "sa sensibilité"
+      ],
+      "reponse": 2,
+      "explication": "Le **temps de réponse** est la durée nécessaire pour atteindre une valeur stable après un changement brusque de la grandeur. Un capteur lent, à grand temps de réponse, ne suit pas les variations rapides."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "sensibilite",
+      "enonce": "Un capteur de pression délivre une tension : elle augmente de $50$ mV quand la pression augmente de $2{,}0$ bar. Quelle est sa sensibilité ?",
+      "choix": [
+        "$25$ mV·bar⁻¹",
+        "$100$ mV·bar⁻¹",
+        "$0{,}040$ bar·mV⁻¹",
+        "$25$ mV"
+      ],
+      "reponse": 0,
+      "explication": "$S = \\dfrac{\\Delta(\\text{sortie})}{\\Delta(\\text{entrée})} = \\dfrac{50\\ \\text{mV}}{2{,}0\\ \\text{bar}} = 25$ mV·bar⁻¹. Le piège $25$ mV oublie l'unité composée : la sensibilité est un **rapport** sortie/entrée, pas une simple tension. L'option en bar·mV⁻¹ inverse le rapport."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "quantum",
+      "enonce": "Le quantum $q$ d'un convertisseur analogique-numérique représente :",
+      "choix": [
+        "le nombre de bits du convertisseur",
+        "la plus petite variation de tension qui fait changer le nombre de sortie",
+        "le nombre total de niveaux disponibles",
+        "la tension maximale du calibre"
+      ],
+      "reponse": 1,
+      "explication": "Le **quantum** $q = \\dfrac{\\text{calibre}}{2^n}$ est une **tension** : c'est le pas de conversion, la plus petite variation de tension d'entrée qui modifie le nombre de sortie. Le nombre de niveaux est $2^n$, et la tension maximale est le calibre — à ne pas confondre avec $q$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "capteur-lineaire",
+      "enonce": "Un capteur linéaire a pour caractéristique $U = 0{,}030\\,\\theta + 0{,}20$ (avec $U$ en V et $\\theta$ en °C). Quelle tension délivre-t-il à $\\theta = 20$ °C ?",
+      "choix": [
+        "$0{,}80$ V",
+        "$0{,}60$ V",
+        "$0{,}23$ V",
+        "$6{,}2$ V"
+      ],
+      "reponse": 0,
+      "explication": "$U = 0{,}030 \\times 20 + 0{,}20 = 0{,}60 + 0{,}20 = 0{,}80$ V. Le piège $0{,}60$ V oublie d'ajouter l'ordonnée à l'origine $U_0 = 0{,}20$ V ; il faut appliquer toute l'équation $U = S\\,\\theta + U_0$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "quantum",
+      "enonce": "Un CAN de $8$ bits possède un calibre de $2{,}00$ V. Quelle est la valeur de son quantum $q$ ?",
+      "choix": [
+        "$7{,}8$ mV",
+        "$0{,}25$ mV",
+        "$256$ mV",
+        "$512$ V"
+      ],
+      "reponse": 0,
+      "explication": "$q = \\dfrac{\\text{calibre}}{2^n} = \\dfrac{2{,}00}{2^{8}} = \\dfrac{2{,}00}{256} \\approx 0{,}0078$ V $= 7{,}8$ mV. Le piège $0{,}25$ mV vient de diviser par $8$ (le nombre de bits) au lieu de $256$ ; $512$ V vient de **multiplier** par $2^8$ au lieu de diviser."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "saturation-can",
+      "enonce": "Le signal appliqué à l'entrée d'un CAN dépasse la valeur maximale de son calibre. Que se passe-t-il ?",
+      "choix": [
+        "le CAN sature et bloque sur sa valeur maximale $2^n - 1$",
+        "le CAN augmente automatiquement son calibre",
+        "le quantum diminue pour compenser",
+        "le nombre de sortie devient négatif"
+      ],
+      "reponse": 0,
+      "explication": "Au-delà du calibre, le CAN **sature** : il reste bloqué sur sa valeur maximale $2^n - 1$ et la mesure est fausse. C'est pourquoi le calibre doit englober tout le signal ; le conditionneur adapte l'amplitude pour occuper la plage sans la dépasser."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "valeur-numerique",
+      "enonce": "Un CAN de $10$ bits, de calibre $5{,}00$ V, délivre la valeur numérique $N = 512$. À quelle tension d'entrée cela correspond-il environ ?",
+      "choix": [
+        "$2{,}50$ V",
+        "$5{,}00$ V",
+        "$1{,}25$ V",
+        "$0{,}50$ V"
+      ],
+      "reponse": 0,
+      "explication": "Le quantum vaut $q = \\dfrac{5{,}00}{2^{10}} = \\dfrac{5{,}00}{1024} \\approx 4{,}88$ mV, et $U \\approx N \\times q = 512 \\times 0{,}00488 \\approx 2{,}50$ V. Plus simplement, $N = 512$ est la moitié des $1024$ niveaux, donc la moitié du calibre : $2{,}50$ V. Répondre $5{,}00$ V confond avec la saturation ($N = 1023$)."
     }
   ]
 }

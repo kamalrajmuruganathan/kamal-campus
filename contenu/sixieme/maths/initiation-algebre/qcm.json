@@ -43,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "regularite",
       "enonce": "Un motif d'allumettes donne : étape 1 → $4$, étape 2 → $7$, étape 3 → $10$. Combien à l'étape 4 ?",
-      "choix": ["$11$", "$12$", "$13$", "$14$"],
+      "choix": [
+        "$11$",
+        "$12$",
+        "$13$",
+        "$14$"
+      ],
       "reponse": 2,
       "explication": "La régularité est « **on ajoute $3$** » à chaque étape : $10 + 3 = 13$. Le piège $12$ vient de faire $3 \\times 4$ (structure « triple du numéro ») **en oubliant le $+1$**."
     },
@@ -52,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "structure",
       "enonce": "Dans un motif, le nombre de carrés est égal au double du numéro de l'étape, plus 1. Combien de carrés à l'étape 5 ?",
-      "choix": ["$6$", "$10$", "$25$", "$11$"],
+      "choix": [
+        "$6$",
+        "$10$",
+        "$25$",
+        "$11$"
+      ],
       "reponse": 3,
       "explication": "Structure : « le double du numéro, plus 1 » donne $2 \\times 5 + 1 = 11$. Le piège $10$ oublie le $+1$ ; $6$ additionne $5+1$ ; $25$ prend $5 \\times 5$."
     },
@@ -61,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "schema-en-barres",
       "enonce": "Une barre représente $48$ et elle est partagée en $4$ parts égales. Combien vaut une part ?",
-      "choix": ["$4$", "$12$", "$44$", "$192$"],
+      "choix": [
+        "$4$",
+        "$12$",
+        "$44$",
+        "$192$"
+      ],
       "reponse": 1,
       "explication": "Une part vaut $48 \\div 4 = 12$. Le piège $192$ **multiplie** au lieu de partager ; $44$ fait $48 - 4$. Dans un schéma en barres, on cherche la valeur d'**une seule part**."
     },
@@ -70,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "nombre-inconnu",
       "enonce": "Je pense à un nombre, je lui ajoute $6$, j'obtiens $15$. Le schéma est $\\boxed{\\ ?\\ } + 6 = 15$. Quel est le nombre ?",
-      "choix": ["$21$", "$6$", "$3$", "$9$"],
+      "choix": [
+        "$21$",
+        "$6$",
+        "$3$",
+        "$9$"
+      ],
       "reponse": 3,
       "explication": "Pour retrouver le nombre, on **annule** le $+6$ : $15 - 6 = 9$. Le piège $21$ ajoute $6$ au lieu de l'enlever ($15 + 6$), en confondant le sens de l'opération à défaire."
     },
@@ -79,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "motif-evolutif",
       "enonce": "Un motif donne : étape 1 → $5$, étape 2 → $8$, étape 3 → $11$. Combien à l'étape 10 ?",
-      "choix": ["$30$", "$14$", "$32$", "$35$"],
+      "choix": [
+        "$30$",
+        "$14$",
+        "$32$",
+        "$35$"
+      ],
       "reponse": 2,
       "explication": "Régularité « $+3$ », donc structure « le triple du numéro, plus 2 » : $3 \\times 10 + 2 = 32$. Le piège $30$ fait $3 \\times 10$ **sans le $+2$** ; $14$ n'avance que d'une étape ($11 + 3$)."
     },
@@ -88,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "schema-en-barres",
       "enonce": "Léa a $3$ fois plus de billes que Tom. Ensemble ils en ont $48$. Avec un schéma (Tom = 1 part, Léa = 3 parts), combien de billes a Tom ?",
-      "choix": ["$36$", "$16$", "$12$", "$48$"],
+      "choix": [
+        "$36$",
+        "$16$",
+        "$12$",
+        "$48$"
+      ],
       "reponse": 2,
       "explication": "En tout $1 + 3 = 4$ parts égales pour $48$ : une part vaut $48 \\div 4 = 12$, c'est Tom. Le piège $16$ divise par $3$ (en oubliant la part de Tom) ; $36$ est le total de Léa, pas de Tom."
     },
@@ -111,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "nombre-inconnu",
       "enonce": "Je pense à un nombre, je le multiplie par $2$ puis j'ajoute $3$ : j'obtiens $17$. Quel est le nombre ?",
-      "choix": ["$7$", "$10$", "$14$", "$40$"],
+      "choix": [
+        "$7$",
+        "$10$",
+        "$14$",
+        "$40$"
+      ],
       "reponse": 0,
       "explication": "On remonte dans l'**ordre inverse** : d'abord enlever $3$ ($17 - 3 = 14$), puis diviser par $2$ ($14 \\div 2 = 7$). Le piège $14$ s'arrête après le $-3$ sans diviser ; $40$ fait $(17+3) \\times 2$, dans le mauvais sens."
+    },
+    {
+      "difficulte": "facile",
+      "notion": "pensee-algebrique",
+      "enonce": "« Léa a $2$ billes de plus que Tom. » Sans connaître les nombres, que sait-on **déjà** ?",
+      "choix": [
+        "Une relation entre les deux quantités : l'écart vaut $2$",
+        "Le nombre de billes de Léa",
+        "Le nombre de billes de Tom",
+        "On ne sait strictement rien"
+      ],
+      "reponse": 0,
+      "explication": "La pensée algébrique s'intéresse aux **relations** entre les quantités, pas à leurs valeurs exactes : ici on connaît l'écart ($2$) sans connaître aucun des deux nombres. Le piège est de croire qu'il faut absolument un nombre pour dire quelque chose.",
+      "id": 11
+    },
+    {
+      "difficulte": "facile",
+      "notion": "quantite-inconnue",
+      "enonce": "En 6e, pour parler d'un nombre qu'on ne connaît pas encore, on l'exprime avec…",
+      "choix": [
+        "un mot, un dessin ou une case vide",
+        "obligatoirement la lettre $x$",
+        "toujours le nombre $0$",
+        "une virgule"
+      ],
+      "reponse": 0,
+      "explication": "En 6e, une quantité inconnue s'exprime par un **mot, un dessin ou une case**. Les lettres comme $x$ (le calcul littéral) arrivent seulement au cycle 4 : c'est le piège classique, vouloir écrire $x$ trop tôt.",
+      "id": 12
+    },
+    {
+      "difficulte": "facile",
+      "notion": "regularite",
+      "enonce": "Dans la suite $3, 5, 7, 9, \\dots$, quelle est la régularité ?",
+      "choix": [
+        "On ajoute $2$ à chaque étape",
+        "On multiplie par $2$ à chaque étape",
+        "On ajoute $3$ à chaque étape",
+        "On multiplie par $3$ à chaque étape"
+      ],
+      "reponse": 0,
+      "explication": "D'une étape à la suivante on passe de $3$ à $5$, de $5$ à $7$… : on **ajoute toujours $2$**. Le piège est de voir un « fois $2$ » à cause du premier terme, alors que l'écart constant montre une régularité **additive**.",
+      "id": 13
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "motif-evolutif",
+      "enonce": "Un motif donne : étape 1 → $2$, étape 2 → $5$, étape 3 → $8$, étape 4 → $11$. Combien à l'**étape 5** ?",
+      "choix": [
+        "$14$",
+        "$13$",
+        "$11$",
+        "$16$"
+      ],
+      "reponse": 0,
+      "explication": "La régularité est « on ajoute $3$ » : après $11$ vient $11 + 3 = 14$. Le piège est de recopier $11$ (l'étape 4) ou d'ajouter un autre écart : il faut d'abord repérer la régularité, puis l'appliquer une fois de plus.",
+      "id": 14
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "structure",
+      "enonce": "Dans un motif, le nombre d'allumettes est « le **triple** du numéro de l'étape, **plus 1** ». Combien à l'**étape 10** ?",
+      "choix": [
+        "$31$",
+        "$30$",
+        "$34$",
+        "$13$"
+      ],
+      "reponse": 0,
+      "explication": "La structure donne directement le résultat : $3 \\times 10 + 1 = 31$. Le piège est d'oublier le « $+1$ » (et de répondre $30$) : la structure comprend bien le triple **et** l'ajout de $1$.",
+      "id": 15
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "schema-en-barres",
+      "enonce": "Un ruban de $60$ cm est partagé en $5$ morceaux **égaux**. Combien mesure **un** morceau ?",
+      "choix": [
+        "$12$ cm",
+        "$15$ cm",
+        "$55$ cm",
+        "$300$ cm"
+      ],
+      "reponse": 0,
+      "explication": "Les $5$ parts valent $60$ cm ensemble, donc une part vaut $60 \\div 5 = 12$ cm. Le piège est de confondre une part avec le total ($60$) ou d'enlever $5$ au lieu de diviser.",
+      "id": 16
+    },
+    {
+      "difficulte": "moyen",
+      "notion": "nombre-inconnu",
+      "enonce": "Je pense à un nombre, je lui **enlève $4$**, j'obtiens $9$. Quel était le nombre de départ ?",
+      "choix": [
+        "$13$",
+        "$5$",
+        "$9$",
+        "$36$"
+      ],
+      "reponse": 0,
+      "explication": "Pour remonter, on **annule** l'opération : puisqu'on a enlevé $4$, on rajoute $4$ : $9 + 4 = 13$. Vérification : $13 - 4 = 9$ ✓. Le piège est d'enlever encore $4$ (répondre $5$) au lieu d'inverser l'opération.",
+      "id": 17
+    },
+    {
+      "difficulte": "difficile",
+      "notion": "regularite",
+      "enonce": "Observe la suite $3, 6, 12, 24, \\dots$ Quelle est la régularité et le terme suivant ?",
+      "choix": [
+        "On multiplie par $2$ ; suivant $48$",
+        "On ajoute $3$ ; suivant $27$",
+        "On ajoute $6$ ; suivant $30$",
+        "On multiplie par $3$ ; suivant $72$"
+      ],
+      "reponse": 0,
+      "explication": "L'écart change ($+3$, puis $+6$, puis $+12$) : ce n'est pas additif. En revanche $3 \\times 2 = 6$, $6 \\times 2 = 12$, $12 \\times 2 = 24$ : on **multiplie par $2$**, donc le suivant est $24 \\times 2 = 48$. Le piège classique est de lire « on ajoute $3$ » à cause du début.",
+      "id": 18
+    },
+    {
+      "difficulte": "difficile",
+      "notion": "schema-en-barres",
+      "enonce": "Paul a $4$ fois plus d'images que Sarah. Ensemble, ils en ont $60$. Combien Sarah a-t-elle d'images ?",
+      "choix": [
+        "$12$",
+        "$15$",
+        "$48$",
+        "$60$"
+      ],
+      "reponse": 0,
+      "explication": "Sarah = $1$ part, Paul = $4$ parts, soit $1 + 4 = 5$ parts pour $60$ images. Une part : $60 \\div 5 = 12$, donc Sarah a $12$ images. Le piège est de diviser par $4$ ($60 \\div 4 = 15$) en oubliant la part de Sarah, ou de donner la part de Paul ($48$).",
+      "id": 19
+    },
+    {
+      "difficulte": "difficile",
+      "notion": "nombre-inconnu",
+      "enonce": "Je pense à un nombre, je le **multiplie par $3$** puis j'**enlève $5$** : j'obtiens $16$. Quel était le nombre ?",
+      "choix": [
+        "$7$",
+        "$11$",
+        "$3$",
+        "$63$"
+      ],
+      "reponse": 0,
+      "explication": "On remonte dans l'ordre **inverse** : d'abord rajouter $5$ ($16 + 5 = 21$), puis diviser par $3$ ($21 \\div 3 = 7$). Vérification : $7 \\times 3 - 5 = 16$ ✓. Le piège est de remonter dans le mauvais ordre (diviser avant d'ajouter).",
+      "id": 20
     }
   ]
 }

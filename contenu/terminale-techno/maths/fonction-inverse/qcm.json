@@ -149,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "Attention au signe de $c$ : ici $c = -8$, donc $\\left(-\\frac{8}{x}\\right)' = +\\frac{8}{x^2}$ et $f'(x) = 2 + \\frac{8}{x^2}$, somme de deux termes strictement positifs. La dérivée ne s'annule jamais : $f$ est strictement croissante, sans extremum. Le piège : appliquer machinalement le schéma « minimum en $\\sqrt{c/a}$ » sans regarder le signe de $c$ — il ne vaut que pour $a$ et $c$ de même signe."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quelle est l'image de $-4$ par la fonction inverse $x \\mapsto \\dfrac{1}{x}$ ?",
+      "choix": [
+        "$-0{,}25$",
+        "$0{,}25$",
+        "$-4$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "$f(-4) = \\dfrac{1}{-4} = -0{,}25$. Un nombre et son inverse ont toujours le **même signe** : comme $-4$ est négatif, son inverse l'est aussi. Le piège $0{,}25$ oublie le signe moins."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "signe",
+      "enonce": "Sur l'intervalle $\\left]-\\infty\\,;0\\right[$, quel est le signe de $\\dfrac{1}{x}$ ?",
+      "choix": [
+        "Négatif",
+        "Positif",
+        "Nul",
+        "Tantôt positif, tantôt négatif"
+      ],
+      "reponse": 0,
+      "explication": "$\\dfrac{1}{x}$ a toujours le **même signe que $x$** : pour $x < 0$, l'inverse est négatif. Le piège « tantôt positif, tantôt négatif » confond avec le fait que la fonction change de signe en traversant $0$ — mais sur $\\left]-\\infty\\,;0\\right[$ tout seul, le signe est constant."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "valeur-interdite",
+      "enonce": "Que peut-on dire de $f(0)$ pour la fonction inverse $f(x) = \\dfrac{1}{x}$ ?",
+      "choix": [
+        "$f(0)$ n'existe pas",
+        "$f(0) = 0$",
+        "$f(0) = 1$",
+        "$f(0) = +\\infty$"
+      ],
+      "reponse": 0,
+      "explication": "On ne peut pas diviser par $0$ : le nombre $0$ est la **valeur interdite** et n'a pas d'image. Répondre $f(0) = +\\infty$ est un piège fréquent : $+\\infty$ n'est pas un nombre, et l'image n'existe tout simplement pas — c'est ce qui crée l'asymptote verticale $x = 0$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "sens-de-variation",
+      "enonce": "Sans calculatrice, comment comparer $\\dfrac{1}{50}$ et $\\dfrac{1}{51}$ ?",
+      "choix": [
+        "$\\dfrac{1}{50} > \\dfrac{1}{51}$",
+        "$\\dfrac{1}{50} < \\dfrac{1}{51}$",
+        "$\\dfrac{1}{50} = \\dfrac{1}{51}$",
+        "On ne peut pas comparer sans calculer"
+      ],
+      "reponse": 0,
+      "explication": "Sur $\\left]0\\,;+\\infty\\right[$ la fonction inverse est **décroissante** : elle renverse l'ordre. Comme $50 < 51$, on a $\\dfrac{1}{50} > \\dfrac{1}{51}$. Le piège est de garder l'ordre des dénominateurs ($50 < 51$ donc $\\frac{1}{50} < \\frac{1}{51}$) — c'est exactement l'inversion que produit la décroissance."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "derivee",
+      "enonce": "Quelle est la dérivée de la fonction $g(x) = \\dfrac{7}{x}$ ?",
+      "choix": [
+        "$g'(x) = -\\dfrac{7}{x^2}$",
+        "$g'(x) = \\dfrac{7}{x^2}$",
+        "$g'(x) = -\\dfrac{7}{x}$",
+        "$g'(x) = -\\dfrac{1}{7x^2}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour une constante $c$, $\\left(\\dfrac{c}{x}\\right)' = -\\dfrac{c}{x^2}$, donc $g'(x) = -\\dfrac{7}{x^2}$. Les pièges : oublier le signe moins ($+\\frac{7}{x^2}$), oublier de mettre le dénominateur au carré, ou placer le $7$ au mauvais endroit."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "derivee",
+      "enonce": "Soit $g(x) = \\dfrac{5}{x}$. Quel est le coefficient directeur de la tangente à la courbe de $g$ au point d'abscisse $1$ ?",
+      "choix": [
+        "$-5$",
+        "$5$",
+        "$-1$",
+        "$\\dfrac{1}{5}$"
+      ],
+      "reponse": 0,
+      "explication": "Le coefficient directeur de la tangente en $x = a$ est $g'(a)$. Ici $g'(x) = -\\dfrac{5}{x^2}$, donc $g'(1) = -\\dfrac{5}{1} = -5$. Le piège $5$ oublie le signe moins de la dérivée ; le piège $\\frac{1}{5}$ confond la tangente avec la valeur $g(1) = 5$ ou son inverse."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "comportement-bornes",
+      "enonce": "Quand $x$ se rapproche de $0$ **par la droite** (par exemple $x = 0{,}01$ puis $x = 0{,}001$), que fait $\\dfrac{1}{x}$ ?",
+      "choix": [
+        "Il devient aussi grand que l'on veut (positif)",
+        "Il se rapproche de $0$",
+        "Il se rapproche de $1$",
+        "Il devient aussi négatif que l'on veut"
+      ],
+      "reponse": 0,
+      "explication": "$\\dfrac{1}{0{,}01} = 100$ puis $\\dfrac{1}{0{,}001} = 1\\,000$ : plus $x$ est proche de $0$, plus son inverse est grand — c'est l'asymptote verticale $x = 0$. Les pièges : se rapprocher de $0$ est le comportement à l'**autre** borne (vers $\\pm\\infty$), et devenir très négatif correspond à l'approche de $0$ par la **gauche**."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Soit $f(x) = x + \\dfrac{4}{x}$ sur $\\left]0\\,;+\\infty\\right[$. On admet que $f'(x) = \\dfrac{x^2 - 4}{x^2}$. Quel est le minimum de $f$ ?",
+      "choix": [
+        "$4$, atteint en $x = 2$",
+        "$2$, atteint en $x = 2$",
+        "$4$, atteint en $x = 4$",
+        "$8$, atteint en $x = 2$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x)$ a le signe de $x^2 - 4$ : négatif sur $\\left]0\\,;2\\right[$, positif au-delà, donc $f$ atteint son minimum en $x = 2$. La **valeur** du minimum est l'image $f(2) = 2 + \\dfrac{4}{2} = 4$. Le piège classique est de répondre $2$, qui est l'abscisse du minimum, pas sa valeur."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "comportement-bornes",
+      "enonce": "Soit $f(x) = 2x + 1 + \\dfrac{8}{x}$ sur $\\left]0\\,;+\\infty\\right[$. Quand $x$ se rapproche de $0$ (par exemple $x = 0{,}01$, qui donne $f(x) \\approx 801$), la courbe de $f$…",
+      "choix": [
+        "grimpe le long de l'asymptote verticale $x = 0$",
+        "se rapproche de la droite $y = 2x + 1$",
+        "se rapproche de $0$",
+        "se rapproche de $1$"
+      ],
+      "reponse": 0,
+      "explication": "Près de $0$, c'est le terme $\\dfrac{8}{x}$ qui **domine** et explose ($\\frac{8}{0{,}01} = 800$), d'où l'asymptote verticale $x = 0$. Le piège : la droite $y = 2x + 1$ est le comportement à l'**autre** borne, quand $x$ devient très grand et que $\\frac{8}{x}$ devient négligeable — ne confonds pas les deux bornes."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "combinaisons-lineaires",
+      "enonce": "Soit $f(x) = 4x + \\dfrac{1}{x}$ sur $\\left]0\\,;+\\infty\\right[$. On admet que $f'(x) = \\dfrac{4x^2 - 1}{x^2}$. Quel est le minimum de $f$ ?",
+      "choix": [
+        "$4$, atteint en $x = \\dfrac{1}{2}$",
+        "$2$, atteint en $x = \\dfrac{1}{2}$",
+        "$4$, atteint en $x = 2$",
+        "$5$, atteint en $x = 1$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x)$ a le signe de $4x^2 - 1$, qui s'annule pour $x^2 = \\dfrac{1}{4}$, soit $x = \\dfrac{1}{2}$ (positif). La valeur du minimum est $f\\left(\\dfrac{1}{2}\\right) = 4 \\times \\dfrac{1}{2} + \\dfrac{1}{\\,1/2\\,} = 2 + 2 = 4$. Le piège $2$ ne garde qu'un des deux termes ; le piège $x = 2$ oublie que la solution de $4x^2 = 1$ est $\\frac{1}{2}$, pas $2$."
     }
   ]
 }

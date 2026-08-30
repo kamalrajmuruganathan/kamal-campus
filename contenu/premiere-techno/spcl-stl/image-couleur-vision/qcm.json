@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Un écran ne possède que des sous-pixels **R**, **V**, **B** : il n'y a pas de sous-pixel jaune. Le jaune est obtenu par synthèse additive **Rouge + Vert**. Allumer les trois donnerait du blanc, et rouge + bleu donnerait du magenta."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "synthese-soustractive",
+      "enonce": "En synthèse soustractive, que donne la superposition Cyan + Magenta + Jaune ?",
+      "choix": [
+        "Du blanc",
+        "Du noir",
+        "Du gris clair",
+        "Du rouge"
+      ],
+      "reponse": 1,
+      "explication": "En synthèse **soustractive**, chaque primaire (C, M, J) absorbe une primaire additive ; superposées, elles cumulent les absorptions et retiennent tout : le résultat est le **noir**. Le piège est de raisonner comme en additif où R+V+B donne du blanc."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "lumiere-blanche-spectre",
+      "enonce": "Le domaine de la lumière visible s'étend environ de :",
+      "choix": [
+        "$400$ nm (violet) à $800$ nm (rouge)",
+        "$0$ nm à $400$ nm",
+        "$800$ nm à $1600$ nm",
+        "$400$ m à $800$ m"
+      ],
+      "reponse": 0,
+      "explication": "Le visible va d'environ **$400$ nm (violet)** à **$800$ nm (rouge)**. Le piège de la dernière option est l'unité : ce sont des **nanomètres** ($1\\ \\text{nm} = 10^{-9}\\ \\text{m}$), pas des mètres."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "photorecepteurs",
+      "enonce": "Combien de types de cônes la rétine humaine comporte-t-elle ?",
+      "choix": [
+        "Un seul",
+        "Deux",
+        "Trois",
+        "Quatre"
+      ],
+      "reponse": 2,
+      "explication": "Il existe **trois** types de cônes (S/bleu, M/vert, L/rouge) : c'est la base de la vision **trichromatique**. Le piège « un seul » correspond aux **bâtonnets**, qui eux ne distinguent pas les couleurs."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "synthese-additive",
+      "enonce": "En synthèse additive, quelle couleur obtient-on en superposant du Vert et du Bleu ?",
+      "choix": [
+        "Du jaune",
+        "Du cyan",
+        "Du magenta",
+        "Du blanc"
+      ],
+      "reponse": 1,
+      "explication": "Vert + Bleu (lumières) donne du **cyan**. Le piège : Rouge + Vert donne le jaune et Rouge + Bleu donne le magenta ; il faut donc bien associer chaque paire à sa secondaire."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "modele-optique-oeil",
+      "enonce": "L'image formée sur la rétine par le cristallin est :",
+      "choix": [
+        "virtuelle, droite et agrandie",
+        "réelle, renversée et plus petite que l'objet",
+        "réelle, droite et plus grande que l'objet",
+        "virtuelle, renversée et de même taille"
+      ],
+      "reponse": 1,
+      "explication": "Le cristallin, lentille convergente, forme sur la rétine (l'écran) une image **réelle, renversée et plus petite**. C'est le cerveau qui « remet à l'endroit ». Une image recueillie sur un écran est nécessairement **réelle**, jamais virtuelle."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "lumiere-blanche-spectre",
+      "enonce": "Une radiation a une longueur d'onde $\\lambda = 532$ nm. Quelle est sa valeur en mètres ?",
+      "choix": [
+        "$5{,}32\\times10^{-7}$ m",
+        "$5{,}32\\times10^{-9}$ m",
+        "$532\\times10^{-6}$ m",
+        "$5{,}32\\times10^{-3}$ m"
+      ],
+      "reponse": 0,
+      "explication": "$1\\ \\text{nm} = 10^{-9}\\ \\text{m}$, donc $532\\ \\text{nm} = 532\\times10^{-9} = 5{,}32\\times10^{-7}\\ \\text{m}$. Le piège $5{,}32\\times10^{-9}$ oublie de tenir compte des trois chiffres du nombre 532."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "synthese-soustractive",
+      "enonce": "On superpose un filtre cyan et un filtre jaune, éclairés en lumière blanche. Quelle couleur est transmise ?",
+      "choix": [
+        "Le rouge",
+        "Le vert",
+        "Le bleu",
+        "Le noir"
+      ],
+      "reponse": 1,
+      "explication": "Le cyan absorbe le rouge, le jaune absorbe le bleu : sur les trois primaires additives, seul le **vert** n'est absorbé par aucun des deux filtres, il est donc transmis. Cumuler les absorptions (rouge puis bleu) laisse passer le vert."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "codage-rvb",
+      "enonce": "En codant chaque canal RVB sur un octet, combien de couleurs différentes peut-on représenter ?",
+      "choix": [
+        "$768$ (soit $256\\times3$)",
+        "$16\\,777\\,216$ (soit $256^3$)",
+        "$256$",
+        "$65\\,536$"
+      ],
+      "reponse": 1,
+      "explication": "Chaque canal a $256$ niveaux et les trois sont indépendants : le nombre total vaut $256^3 = 16\\,777\\,216 \\approx 16{,}7$ millions. Le piège $256\\times3 = 768$ **additionne** au lieu de **multiplier** les possibilités des trois canaux."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "codage-rvb",
+      "enonce": "À quelle couleur correspond le code hexadécimal `#00FF00` ?",
+      "choix": [
+        "Rouge pur",
+        "Vert pur",
+        "Bleu pur",
+        "Jaune"
+      ],
+      "reponse": 1,
+      "explication": "En `#RRVVBB`, on lit $\\text{00}=0$ pour le rouge, $\\text{FF}=255$ pour le vert, $\\text{00}=0$ pour le bleu, soit $(0,255,0)$ = **vert pur**. Le piège rouge/bleu vient d'une confusion sur l'ordre des canaux R-V-B."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "couleur-objet",
+      "enonce": "Un pigment jaune est éclairé par une lumière **bleue** uniquement. De quelle couleur apparaît-il ?",
+      "choix": [
+        "Jaune",
+        "Bleu",
+        "Blanc",
+        "Noir"
+      ],
+      "reponse": 3,
+      "explication": "Un pigment jaune **absorbe le bleu** et diffuse le rouge et le vert. Sous une lumière **uniquement bleue**, il absorbe tout ce qu'il reçoit et n'a rien à diffuser : il apparaît **noir**. Le piège « jaune » suppose à tort que la couleur d'un objet est indépendante de l'éclairage."
     }
   ]
 }

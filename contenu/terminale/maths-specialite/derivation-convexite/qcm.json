@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "Forme $\\mathrm{e}^{u}$ : dérivée $u'\\,\\mathrm{e}^{u}$ avec $u = -x^2$ et $u' = -2x$, soit $-2x\\,\\mathrm{e}^{-x^2}$. Le choix $\\mathrm{e}^{-x^2}$ oublie le facteur $u'$ ; le dernier choix perd le signe moins de $u'$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "derivee-seconde",
+      "enonce": "Que donne le signe de la dérivée seconde $f''$ d'une fonction ?",
+      "choix": [
+        "les variations de $f$",
+        "la convexité de $f$",
+        "les zéros de $f$",
+        "le signe de $f$"
+      ],
+      "reponse": 1,
+      "explication": "Le signe de $f''$ renseigne sur la CONVEXITÉ (la courbure). Le piège classique est de croire qu'il donne les variations : ce sont le signe de $f'$, pas de $f''$, qui donne les variations de $f$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "formules-usuelles",
+      "enonce": "Quelle est la dérivée de $f(x) = \\dfrac{1}{x^2 + 1}$ ?",
+      "choix": [
+        "$\\dfrac{-2x}{(x^2+1)^2}$",
+        "$\\dfrac{2x}{(x^2+1)^2}$",
+        "$\\dfrac{-2x}{x^2+1}$",
+        "$\\dfrac{-1}{(x^2+1)^2}$"
+      ],
+      "reponse": 0,
+      "explication": "Forme $\\dfrac{1}{u}$ : dérivée $-\\dfrac{u'}{u^2}$ avec $u = x^2+1$ et $u' = 2x$, soit $\\dfrac{-2x}{(x^2+1)^2}$. Le choix positif oublie le signe moins ; le dernier oublie le facteur $u' = 2x$ au numérateur."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "point-inflexion",
+      "enonce": "Qu'est-ce qu'un point d'inflexion de la courbe de $f$ ?",
+      "choix": [
+        "un point où $f$ atteint un maximum",
+        "un point où la tangente est horizontale",
+        "un point où la courbe change de convexité",
+        "un point où $f$ s'annule"
+      ],
+      "reponse": 2,
+      "explication": "Un point d'inflexion est un point où la courbe CHANGE de convexité (passe de convexe à concave ou l'inverse) et traverse sa tangente. Le piège est de le confondre avec un extremum, qui se lit sur $f'$ et non sur $f''$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "composee",
+      "enonce": "Quelle est la dérivée de $f(x) = (2x^2 - 3)^4$ ?",
+      "choix": [
+        "$16x(2x^2-3)^3$",
+        "$4(2x^2-3)^3$",
+        "$4x(2x^2-3)^3$",
+        "$16x(2x^2-3)^4$"
+      ],
+      "reponse": 0,
+      "explication": "Forme $u^n$ : dérivée $n\\,u'\\,u^{n-1} = 4 \\times 4x \\times (2x^2-3)^3 = 16x(2x^2-3)^3$, car $u' = 4x$. Le choix $4(2x^2-3)^3$ oublie complètement $u'$ ; le dernier garde l'exposant $4$ au lieu de $3$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "derivee-seconde",
+      "enonce": "Pour $f(x) = 2x^4 - x^2$, que vaut la dérivée seconde $f''(x)$ ?",
+      "choix": [
+        "$24x^2 - 2$",
+        "$8x^3 - 2x$",
+        "$24x^2 - 2x$",
+        "$24x^3 - 2$"
+      ],
+      "reponse": 0,
+      "explication": "On dérive deux fois : $f'(x) = 8x^3 - 2x$, puis $f''(x) = 24x^2 - 2$. Le choix $8x^3 - 2x$ est $f'$ : on s'est arrêté à la première dérivation, l'erreur la plus fréquente."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "convexite",
+      "enonce": "Sur quel intervalle la fonction $f(x) = x^3 - 3x^2$ est-elle convexe ?",
+      "choix": [
+        "$]-\\infty\\,;1]$",
+        "$[1\\,;+\\infty[$",
+        "$\\mathbb{R}$",
+        "$[0\\,;+\\infty[$"
+      ],
+      "reponse": 1,
+      "explication": "On calcule $f'(x) = 3x^2 - 6x$ puis $f''(x) = 6x - 6 = 6(x-1)$. La convexité correspond à $f'' \\geqslant 0$, soit $x \\geqslant 1$ : $f$ est convexe sur $[1\\,;+\\infty[$. Sur $]-\\infty\\,;1]$ elle est concave."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "formules-usuelles",
+      "enonce": "Quelle est la dérivée de $f(x) = \\mathrm{e}^{3x - 1}$ ?",
+      "choix": [
+        "$\\mathrm{e}^{3x-1}$",
+        "$3\\,\\mathrm{e}^{3x-1}$",
+        "$3\\,\\mathrm{e}^{3x}$",
+        "$(3x-1)\\,\\mathrm{e}^{3x-1}$"
+      ],
+      "reponse": 1,
+      "explication": "Forme $\\mathrm{e}^{u}$ : dérivée $u'\\,\\mathrm{e}^{u}$ avec $u = 3x-1$ et $u' = 3$, soit $3\\,\\mathrm{e}^{3x-1}$. Le premier choix oublie le facteur $u' = 3$ ; l'exposant, lui, reste inchangé quand on dérive une exponentielle."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "inegalite-tangente",
+      "enonce": "La fonction $\\ln$ est concave sur $]0\\,;+\\infty[$. En utilisant sa tangente en $1$ (d'équation $y = x - 1$), quelle inégalité obtient-on pour tout $x > 0$ ?",
+      "choix": [
+        "$\\ln x \\geqslant x - 1$",
+        "$\\ln x \\leqslant x - 1$",
+        "$\\ln x \\geqslant x + 1$",
+        "$\\ln x \\leqslant x + 1$"
+      ],
+      "reponse": 1,
+      "explication": "Une fonction concave est EN DESSOUS de ses tangentes, donc $\\ln x \\leqslant x - 1$. Le sens $\\geqslant$ correspondrait à une fonction convexe : inverser le sens selon la convexité est l'erreur la plus fréquente."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "point-inflexion",
+      "enonce": "Quelle est l'abscisse du point d'inflexion de la courbe de $f(x) = x^3 - 3x$ ?",
+      "choix": [
+        "$x = 1$",
+        "$x = -1$",
+        "$x = 0$",
+        "il n'y a pas de point d'inflexion"
+      ],
+      "reponse": 2,
+      "explication": "On a $f''(x) = 6x$, qui s'annule en $0$ EN CHANGEANT de signe (négatif avant, positif après) : l'inflexion est en $x = 0$. Les valeurs $\\pm 1$ annulent $f'(x) = 3x^2 - 3$ : ce sont les extremums, à ne pas confondre avec l'inflexion."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "composee",
+      "enonce": "Quelle est la dérivée de $f(x) = (\\mathrm{e}^x + 1)^3$ ?",
+      "choix": [
+        "$3(\\mathrm{e}^x+1)^2$",
+        "$3\\,\\mathrm{e}^x(\\mathrm{e}^x+1)^2$",
+        "$3\\,\\mathrm{e}^x(\\mathrm{e}^x+1)^3$",
+        "$\\mathrm{e}^x(\\mathrm{e}^x+1)^2$"
+      ],
+      "reponse": 1,
+      "explication": "Forme $u^n$ avec $u = \\mathrm{e}^x + 1$, $u' = \\mathrm{e}^x$, $n = 3$ : dérivée $n\\,u'\\,u^{n-1} = 3\\,\\mathrm{e}^x(\\mathrm{e}^x+1)^2$. Le premier choix oublie $u' = \\mathrm{e}^x$ ; le troisième garde l'exposant $3$ au lieu de le baisser à $2$."
     }
   ]
 }

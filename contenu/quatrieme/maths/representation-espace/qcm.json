@@ -149,6 +149,146 @@
       ],
       "reponse": 3,
       "explication": "$V = \\dfrac{3{,}14 \\times 10^2 \\times 30}{3} = \\dfrac{9420}{3} = 3140 \\text{ cm}^3$. Or $1 \\text{ cm}^3 = 1 \\text{ mL}$, donc $3140 \\text{ cm}^3 = 3140 \\text{ mL} = 3{,}14 \\text{ L}$ : on divise par **$1000$**, pas par $100$ ni par $10\\,000$. $9{,}42$ L correspond à l'oubli du tiers."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "pyramide-definition",
+      "enonce": "Combien de bases possède une pyramide ?",
+      "choix": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "autant que de faces latérales"
+      ],
+      "reponse": 0,
+      "explication": "Une pyramide n'a qu'**une seule** base (un polygone) ; toutes ses autres faces sont des triangles qui montent vers le sommet $S$. Le piège est de recopier le prisme, qui a **deux** bases parallèles. Deux bases $\\Rightarrow$ prisme ; une base $\\Rightarrow$ pyramide."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "cone-revolution",
+      "enonce": "Quelle est la forme de la base d'un cône de révolution ?",
+      "choix": [
+        "un disque",
+        "un carré",
+        "un triangle",
+        "un rectangle"
+      ],
+      "reponse": 0,
+      "explication": "La base d'un cône de révolution est un **disque**, surmonté d'un sommet situé à la verticale de son centre. Le piège est de penser au triangle rectangle que l'on fait tourner pour l'engendrer : ce triangle **génère** le cône, mais la base obtenue est bien un disque."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "volume-cone",
+      "enonce": "Quelle est la formule du volume d'un cône de révolution de rayon $r$ et de hauteur $h$ ?",
+      "choix": [
+        "$\\dfrac{\\pi r^2 \\times h}{3}$",
+        "$\\pi r^2 \\times h$",
+        "$\\dfrac{\\pi r^2 \\times h}{2}$",
+        "$2\\pi r \\times h$"
+      ],
+      "reponse": 0,
+      "explication": "Un solide pointu vaut le **tiers** du solide droit de même base et même hauteur : $V = \\dfrac{\\pi r^2 \\times h}{3}$. Le choix $\\pi r^2 \\times h$ est le volume du **cylindre** (on a oublié le tiers) ; $2\\pi r$ est un périmètre, pas une aire de base."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "volume-pyramide",
+      "enonce": "Une pyramide a une base rectangulaire de $5$ cm $\\times$ $3$ cm et une hauteur de $4$ cm. Quel est son volume ?",
+      "choix": [
+        "$20 \\text{ cm}^3$",
+        "$60 \\text{ cm}^3$",
+        "$30 \\text{ cm}^3$",
+        "$20 \\text{ cm}^2$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathcal{A}_{\\text{base}} = 5 \\times 3 = 15 \\text{ cm}^2$, puis $V = \\dfrac{15 \\times 4}{3} = 20 \\text{ cm}^3$. Le choix $60$ oublie le tiers, $30$ divise par $2$ au lieu de $3$. Et un volume s'exprime en **cm³**, jamais en cm²."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "denombrement",
+      "enonce": "Combien de faces, d'arêtes et de sommets possède une pyramide à base carrée ?",
+      "choix": [
+        "$5$ faces, $8$ arêtes, $5$ sommets",
+        "$6$ faces, $8$ arêtes, $5$ sommets",
+        "$5$ faces, $8$ arêtes, $4$ sommets",
+        "$4$ faces, $6$ arêtes, $4$ sommets"
+      ],
+      "reponse": 0,
+      "explication": "Base à $n = 4$ côtés : $n+1 = 5$ faces (le carré $+$ $4$ triangles), $2n = 8$ arêtes ($4$ de base $+$ $4$ latérales), $n+1 = 5$ sommets (les $4$ de la base **$+$ le sommet $S$**). Le piège du troisième choix oublie de compter $S$ dans les sommets."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "perspective-cavaliere",
+      "enonce": "En perspective cavalière, comment se dessine le disque de base d'un cône ?",
+      "choix": [
+        "comme un ovale",
+        "comme un cercle parfait",
+        "comme un carré",
+        "comme un triangle"
+      ],
+      "reponse": 0,
+      "explication": "Un disque vu en perspective cavalière devient un **ovale** (une ellipse) aplati, jamais un cercle parfait. Le piège est de dessiner un rond au bas du cône : ce serait une figure fausse. La même règle vaut pour les deux disques d'un cylindre."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "volume-cone",
+      "enonce": "Un cône a un rayon de $3$ cm et une hauteur de $10$ cm. Quel est son volume ? (On prend $\\pi \\approx 3{,}14$.)",
+      "choix": [
+        "$94{,}2 \\text{ cm}^3$",
+        "$282{,}6 \\text{ cm}^3$",
+        "$94{,}2 \\text{ cm}^2$",
+        "$188{,}4 \\text{ cm}^3$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathcal{A}_{\\text{base}} = 3{,}14 \\times 3^2 = 28{,}26 \\text{ cm}^2$, puis $V = \\dfrac{28{,}26 \\times 10}{3} = \\dfrac{282{,}6}{3} = 94{,}2 \\text{ cm}^3$. Le choix $282{,}6$ oublie le tiers ; l'unité d'un volume est le **cm³**, pas le cm²."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "regle-du-tiers",
+      "enonce": "Un prisme droit a un volume de $90 \\text{ cm}^3$. Une pyramide a exactement la même base et la même hauteur. Quel est son volume ?",
+      "choix": [
+        "$30 \\text{ cm}^3$",
+        "$270 \\text{ cm}^3$",
+        "$45 \\text{ cm}^3$",
+        "$90 \\text{ cm}^3$"
+      ],
+      "reponse": 0,
+      "explication": "Même base et même hauteur : la pyramide (solide pointu) vaut le **tiers** du prisme, soit $90 \\div 3 = 30 \\text{ cm}^3$. Aucun calcul d'aire n'est nécessaire. Le choix $270$ multiplie par $3$ au lieu de diviser ; $45$ divise par $2$ : le facteur est bien $3$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "hauteur-piege",
+      "enonce": "Un cône a un rayon de $5$ cm et une hauteur de $12$ cm. Combien mesure le segment qui relie le sommet à un point du bord de la base ?",
+      "choix": [
+        "$13$ cm",
+        "$12$ cm",
+        "$17$ cm",
+        "$7$ cm"
+      ],
+      "reponse": 0,
+      "explication": "Ce segment est l'**hypoténuse** du triangle rectangle formé par la hauteur ($12$) et le rayon ($5$). Par Pythagore : $\\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$ cm. Le piège est de le confondre avec la hauteur ($12$), qui est plus courte, ou d'additionner $5 + 12 = 17$ au lieu d'appliquer Pythagore."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "unites-capacite",
+      "enonce": "Un entonnoir conique a un rayon de $6$ cm et une hauteur de $25$ cm. Quelle est sa capacité, en litres ? (On prend $\\pi \\approx 3{,}14$.)",
+      "choix": [
+        "$0{,}942 \\text{ L}$",
+        "$9{,}42 \\text{ L}$",
+        "$942 \\text{ L}$",
+        "$0{,}0942 \\text{ L}$"
+      ],
+      "reponse": 0,
+      "explication": "$V = \\dfrac{3{,}14 \\times 6^2 \\times 25}{3} = \\dfrac{3{,}14 \\times 36 \\times 25}{3} = \\dfrac{2826}{3} = 942 \\text{ cm}^3$. Or $1 \\text{ L} = 1000 \\text{ cm}^3$, donc $942 \\text{ cm}^3 = 0{,}942 \\text{ L}$ : on divise par **$1000$**, pas par $100$ ni par $10\\,000$. Le choix $9{,}42$ L oublie le tiers dans le volume."
     }
   ]
 }

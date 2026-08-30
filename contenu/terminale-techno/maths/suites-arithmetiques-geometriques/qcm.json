@@ -149,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "Il faut $x^2 = 4 \\times 25 = 100$, donc $x = 10$ (on garde la racine positive) : le terme du milieu est la moyenne **géométrique** de ses voisins. La raison est $q = \\frac{10}{4} = 2{,}5$, et on vérifie $10 \\times 2{,}5 = 25$. Le piège : $14{,}5$ est la moyenne arithmétique $\\frac{4+25}{2}$ (elle répondrait à la même question pour une suite **arithmétique**), et $100$ oublie la racine carrée."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "reconnaissance-modele",
+      "enonce": "Un loyer de $600$ € augmente de $3\\,\\%$ chaque année. La suite des loyers annuels est :",
+      "choix": [
+        "arithmétique de raison $r = 3$",
+        "géométrique de raison $q = 1{,}03$",
+        "géométrique de raison $q = 0{,}03$",
+        "arithmétique de raison $r = 1{,}03$"
+      ],
+      "reponse": 1,
+      "explication": "Une évolution en pourcentage se traduit par une multiplication : $+3\\,\\%$ correspond à $q = 1 + \\frac{3}{100} = 1{,}03$, donc une suite géométrique. Le mot « pourcentage » fait basculer en géométrique. Le piège : prendre $q = 0{,}03$ (le taux seul, sans le $1 +$) ou lire « $+3$ » comme une raison arithmétique alors qu'on multiplie, on n'ajoute pas."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "terme-de-rang-n",
+      "enonce": "$(u_n)$ est géométrique avec $u_0 = 2$ et $q = 3$. Quelle est l'expression du terme de rang $n$ ?",
+      "choix": [
+        "$u_n = 2 + 3n$",
+        "$u_n = 6^n$",
+        "$u_n = 2 \\times 3^n$",
+        "$u_n = 3 \\times 2^n$"
+      ],
+      "reponse": 2,
+      "explication": "Pour une suite géométrique, $u_n = u_0 \\times q^n = 2 \\times 3^n$. Le piège : $2 + 3n$ est le terme d'une suite **arithmétique**, $6^n$ multiplie $u_0$ et $q$ dans la base (interdit), et $3 \\times 2^n$ échange les rôles de $u_0$ et de $q$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "pourcentage-raison",
+      "enonce": "Une population diminue de $15\\,\\%$ chaque année. Quelle est la raison $q$ de la suite géométrique correspondante ?",
+      "choix": [
+        "$q = -0{,}15$",
+        "$q = 0{,}85$",
+        "$q = 1{,}15$",
+        "$q = -15$"
+      ],
+      "reponse": 1,
+      "explication": "Une baisse de $15\\,\\%$ correspond au coefficient multiplicateur $q = 1 - \\frac{15}{100} = 0{,}85$, strictement positif. Le piège classique est d'écrire $q = -0{,}15$ : une raison négative ferait alterner les signes, ce qui n'a pas de sens pour une population — et les suites géométriques du programme sont à termes strictement positifs. $q = 1{,}15$ correspondrait à une hausse."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "raison-deux-termes",
+      "enonce": "$(u_n)$ est arithmétique avec $u_3 = 10$ et $u_8 = 40$. Quelle est sa raison $r$ ?",
+      "choix": [
+        "$r = 5$",
+        "$r = 30$",
+        "$r = 6$",
+        "$r = 3$"
+      ],
+      "reponse": 2,
+      "explication": "De $u_3$ à $u_8$, il y a $8 - 3 = 5$ pas : $u_8 = u_3 + 5r$, donc $5r = 40 - 10 = 30$ et $r = 6$. Le piège : $30$ est l'écart total (il reste à diviser par le nombre de pas), et $r = 5$ vient de diviser par $6$ en comptant $u_3, u_4, \\ldots, u_8$ (six termes) au lieu des cinq pas qui les séparent."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "somme-arithmetique",
+      "enonce": "Une suite arithmétique compte $10$ termes ; le premier vaut $40$ et le dernier $130$. Quelle est la somme de ces $10$ termes ?",
+      "choix": [
+        "$170$",
+        "$850$",
+        "$1\\,700$",
+        "$950$"
+      ],
+      "reponse": 1,
+      "explication": "La somme vaut $\\text{nombre de termes} \\times \\frac{\\text{premier} + \\text{dernier}}{2} = 10 \\times \\frac{40 + 130}{2} = 10 \\times 85 = 850$. Le piège : $1\\,700$ oublie la division par $2$, et $170$ n'est que la somme du premier et du dernier terme, sans multiplier par le nombre de termes."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "trois-termes-consecutifs",
+      "enonce": "Pour quelle valeur de $x$ les nombres $5$ ; $x$ ; $17$ sont-ils, dans cet ordre, des termes consécutifs d'une suite arithmétique ?",
+      "choix": [
+        "$x = 11$",
+        "$x = \\sqrt{85}$",
+        "$x = 22$",
+        "$x = 6$"
+      ],
+      "reponse": 0,
+      "explication": "Pour une suite arithmétique, le terme du milieu est la moyenne arithmétique de ses voisins : $x = \\frac{5 + 17}{2} = 11$ (on vérifie $11 - 5 = 6 = 17 - 11$). Le piège : $\\sqrt{85} = \\sqrt{5 \\times 17}$ est la moyenne **géométrique**, qui répondrait pour une suite géométrique, et $22$ oublie de diviser par $2$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "moyenne-geometrique",
+      "enonce": "Un prix subit $+10\\,\\%$ une année, puis $+40\\,\\%$ l'année suivante. Quel est le coefficient annuel « moyen » qui, appliqué deux fois, produirait le même effet ?",
+      "choix": [
+        "Le prix est multiplié par $\\sqrt{1{,}54} \\approx 1{,}24$, soit environ $+24\\,\\%$ par an",
+        "Environ $+25\\,\\%$ par an",
+        "Environ $+54\\,\\%$ par an",
+        "Environ $+50\\,\\%$ par an"
+      ],
+      "reponse": 0,
+      "explication": "Les coefficients sont $1{,}1$ puis $1{,}4$, de produit $1{,}54$. Le coefficient moyen est la moyenne **géométrique** $\\sqrt{1{,}1 \\times 1{,}4} = \\sqrt{1{,}54} \\approx 1{,}24$, soit environ $+24\\,\\%$ par an. Le piège classique est de prendre la moyenne **arithmétique** des taux, $\\frac{10 + 40}{2} = 25\\,\\%$ : c'est faux car les évolutions se composent par multiplication, pas par addition."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "somme-geometrique",
+      "enonce": "Le chiffre d'affaires d'une entreprise vaut $500$ € la première année et augmente de $10\\,\\%$ par an. Quel est le chiffre d'affaires cumulé sur les $3$ premières années ?",
+      "choix": [
+        "$1\\,500$ €",
+        "$665{,}50$ €",
+        "$1\\,655$ €",
+        "$2\\,320{,}50$ €"
+      ],
+      "reponse": 2,
+      "explication": "Avec $u_0 = 500$, $q = 1{,}1$ et $3$ termes : $S = 500 \\times \\frac{1 - 1{,}1^3}{1 - 1{,}1} = 500 \\times \\frac{1 - 1{,}331}{-0{,}1} = 500 \\times 3{,}31 = 1\\,655$ €. Le piège : $1\\,500 = 3 \\times 500$ ignore la croissance, $665{,}50 = 500 \\times 1{,}1^3$ est une valeur ponctuelle (un terme), et $2\\,320{,}50$ additionne $4$ termes au lieu de $3$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "nombre-de-termes",
+      "enonce": "Combien de termes additionne-t-on dans la somme $u_5 + u_6 + \\cdots + u_{20}$ ?",
+      "choix": [
+        "$16$",
+        "$15$",
+        "$25$",
+        "$20$"
+      ],
+      "reponse": 0,
+      "explication": "De $u_5$ à $u_{20}$ inclus, il y a $20 - 5 + 1 = 16$ termes (on compte les deux bornes). Le piège classique est de faire $20 - 5 = 15$, qui donne le nombre de pas et non le nombre de termes. Compter les termes est indispensable avant d'appliquer une formule de somme, où ce nombre est l'exposant de $q$ ou le facteur multiplicatif."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "situation-de-somme",
+      "enonce": "Un atelier produit $200$ pièces le premier jour, puis $15$ de plus chaque jour. Combien de pièces produit-il AU TOTAL en $20$ jours ?",
+      "choix": [
+        "$6\\,850$ pièces",
+        "$7\\,000$ pièces",
+        "$685$ pièces",
+        "$13\\,700$ pièces"
+      ],
+      "reponse": 0,
+      "explication": "C'est une somme (mot-clé « au total »). Le premier terme est $u_0 = 200$ ; le $20^{\\text{e}}$ jour correspond au rang $19$, donc $u_{19} = 200 + 19 \\times 15 = 485$. La somme des $20$ termes vaut $20 \\times \\frac{200 + 485}{2} = 20 \\times 342{,}5 = 6\\,850$. Le piège : prendre $u_{20} = 500$ comme dernier terme (erreur d'un rang) donne $7\\,000$ ; oublier la division par $2$ donne $13\\,700$."
     }
   ]
 }

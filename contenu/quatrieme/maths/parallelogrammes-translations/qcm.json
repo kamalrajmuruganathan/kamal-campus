@@ -134,6 +134,121 @@
       ],
       "reponse": 2,
       "explication": "Les choix 1 et 4 ne prouvent rien : la conservation des longueurs et le parallélisme de l'image d'une droite sont vrais pour le demi-tour **aussi**. Le choix 2 est au contraire la signature du demi-tour, dont le centre est le milieu commun. Seuls des segments $[MM']$ tous parallèles, de même longueur et de même sens traduisent le glissement identique en tout point."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "conservations",
+      "enonce": "Par une translation, l'image d'un triangle d'aire $12$ cm² est un triangle d'aire :",
+      "choix": ["$12$ cm²", "$24$ cm²", "$6$ cm²", "$0$ cm²"],
+      "reponse": 0,
+      "explication": "La translation **conserve les aires** : la figure glisse sans se déformer, donc l'image a exactement la même aire, $12$ cm². Les autres choix supposent un agrandissement ou une réduction, ce qu'une translation ne fait jamais."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "ordre-des-lettres",
+      "enonce": "Dans le parallélogramme $ABDC$, quelles sont les **diagonales** ?",
+      "choix": ["$[AC]$ et $[BD]$", "$[AD]$ et $[BC]$", "$[AB]$ et $[CD]$", "$[AB]$ et $[DC]$"],
+      "reponse": 1,
+      "explication": "En parcourant le contour $A \\to B \\to D \\to C$, les diagonales relient les sommets **opposés** : $[AD]$ et $[BC]$. Le piège classique est de prendre $[AC]$ et $[BD]$, qui sont en réalité des **côtés** de $ABDC$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "translation-ou-demi-tour",
+      "enonce": "Combien de points restent invariants (immobiles) par une translation non nulle ?",
+      "choix": ["aucun", "un seul", "deux", "tous les points"],
+      "reponse": 0,
+      "explication": "Tous les points se déplacent du **même** glissement : aucun ne reste sur place (sauf si la translation est nulle). C'est ce qui la distingue du demi-tour, qui laisse **un seul** point invariant, son centre."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "propriete-caracteristique",
+      "enonce": "$ABDC$ est un parallélogramme. Quelle est l'image du point $C$ par la translation qui envoie $A$ sur $B$ ?",
+      "choix": ["le point $A$", "le point $B$", "le point $D$", "on ne peut pas le déterminer"],
+      "reponse": 2,
+      "explication": "La propriété est **caractéristique** : si $ABDC$ est un parallélogramme, alors la translation $A \\to B$ envoie $C$ sur $D$. Dans $ABDC$, $[AB]$ et $[CD]$ sont des côtés opposés, donc $C$ glisse vers $D$, exactement comme $A$ glisse vers $B$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "lien-parallelogramme",
+      "enonce": "Dans le parallélogramme $ABDC$ obtenu par la translation qui envoie $A$ sur $B$ et $C$ sur $D$, que peut-on dire des segments $[AB]$ et $[CD]$ ?",
+      "choix": [
+        "Ils sont consécutifs",
+        "Ils sont opposés, donc parallèles et de même longueur",
+        "Ce sont les diagonales de la figure",
+        "Ils sont perpendiculaires"
+      ],
+      "reponse": 1,
+      "explication": "Le glissement mène $A$ vers $B$ et $C$ vers $D$ du même déplacement : $[AB]$ et $[CD]$ sont donc **opposés** dans $ABDC$, ce qui les rend parallèles et de même longueur — c'est justement ce qui fait de $ABDC$ un parallélogramme. Les prendre pour des diagonales est l'erreur d'ordre des lettres."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "methodes",
+      "enonce": "Pour construire l'image d'un point $M$ par une translation sur feuille blanche, pourquoi le compas **seul** ne suffit-il pas ?",
+      "choix": [
+        "Parce qu'il ne donne pas la bonne longueur",
+        "Parce que deux points ont la bonne longueur : seul le sens du glissement tranche",
+        "Parce que la translation ne conserve pas les longueurs",
+        "Parce qu'il faut d'abord mesurer un angle au rapporteur"
+      ],
+      "reponse": 1,
+      "explication": "Le compas donne bien la longueur $AB$, mais **deux** points de la parallèle sont à cette distance de $M$ : le bon et son symétrique. C'est le **sens** du glissement (de $A$ vers $B$) qui désigne lequel est l'image. Reporter la longueur du mauvais côté donne le symétrique, pas l'image."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "conservations",
+      "enonce": "Parmi ces affirmations sur une translation, laquelle est **fausse** ?",
+      "choix": [
+        "Elle conserve les longueurs",
+        "Elle conserve les mesures d'angles",
+        "Elle retourne la figure et inverse le sens de lecture",
+        "L'image d'une droite lui est parallèle"
+      ],
+      "reponse": 2,
+      "explication": "Une translation **ne retourne pas** la figure : elle la fait glisser en conservant son sens de lecture, contrairement à une symétrie axiale. Les trois autres affirmations sont exactes : longueurs, angles et parallélisme de l'image d'une droite sont tous conservés."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "Dans une démonstration rédigée « je sais que… / or… / donc… », quel élément apporte réellement la **preuve** ?",
+      "choix": [
+        "Le « je sais que », qui rappelle l'hypothèse",
+        "Le « or », qui invoque une propriété du cours",
+        "Le « donc », qui énonce la conclusion",
+        "Une mesure prise sur la figure"
+      ],
+      "reponse": 1,
+      "explication": "C'est le **« or »** qui apporte la propriété générale reliant l'hypothèse à la conclusion : sans lui, on constate mais on ne démontre pas. Une mesure sur la figure ne prouve rien non plus — elle ne vaut que pour ce dessin particulier."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "angles",
+      "enonce": "Dans le parallélogramme $ABDC$, l'angle $\\widehat{CAB}$ mesure $50°$. Combien mesure l'angle $\\widehat{ABD}$ ?",
+      "choix": ["$50°$", "$130°$", "$40°$", "$100°$"],
+      "reponse": 1,
+      "explication": "La translation $A \\to B$ envoie $[AC]$ sur $[BD]$, donc $(AC) \\parallel (BD)$. Avec la sécante $(AB)$, les angles $\\widehat{CAB}$ et $\\widehat{ABD}$ sont **supplémentaires** : leur somme vaut $180°$, d'où $180 - 50 = 130°$. Le piège est de les croire égaux ($50°$), ce qui n'est vrai que pour les angles **opposés** du parallélogramme."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "translation-ou-demi-tour",
+      "enonce": "Les points $M$, $N$, $P$ ont pour images $M'$, $N'$, $P'$, et les segments $[MM']$, $[NN']$, $[PP']$ ont tous le **même milieu** $O$. De quelle transformation s'agit-il ?",
+      "choix": [
+        "une translation",
+        "un demi-tour de centre $O$",
+        "une symétrie axiale d'axe $O$",
+        "aucune transformation connue"
+      ],
+      "reponse": 1,
+      "explication": "Un milieu **commun** à tous les segments $[MM']$ est la signature du **demi-tour** de centre $O$ : chaque point et son image sont symétriques par rapport à $O$. Une translation donnerait au contraire des segments $[MM']$ parallèles, de même longueur et de même sens, sans milieu commun."
     }
   ]
 }

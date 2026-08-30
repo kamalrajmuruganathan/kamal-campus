@@ -104,6 +104,101 @@
       "choix": ["$7{,}2$ L", "$72$ L", "$720$ L", "$72\\,000$ L"],
       "reponse": 1,
       "explication": "$V = 60 \\times 30 \\times 40 = 72\\,000$ cm³. On passe aux dm³ en divisant par **$1000$** : $72$ dm³. Et $1$ dm³ $= 1$ L, donc $72$ L. Le piège est de diviser par $10$ ou par $100$ : ici le facteur entre cm³ et dm³ est bien $1000$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "solides-usuels",
+      "enonce": "Combien un cube possède-t-il d'arêtes ?",
+      "choix": ["$6$", "$8$", "$12$", "$4$"],
+      "reponse": 2,
+      "explication": "Un cube a $12$ arêtes (toutes de même longueur), $6$ faces carrées et $8$ sommets. Le piège est de confondre le nombre d'arêtes avec celui des faces ($6$) ou des sommets ($8$)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "volumes",
+      "enonce": "Quel est le volume d'un pavé droit de dimensions $5$ cm $\\times$ $3$ cm $\\times$ $2$ cm ?",
+      "choix": ["$10$ cm³", "$30$ cm³", "$60$ cm³", "$25$ cm³"],
+      "reponse": 1,
+      "explication": "$V = L \\times \\ell \\times h = 5 \\times 3 \\times 2 = 30$ cm³. Le piège est de n'utiliser que deux dimensions ($5 \\times 2 = 10$) ou d'additionner les longueurs."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "perspective-cavaliere",
+      "enonce": "En perspective cavalière, comment trace-t-on les arêtes cachées d'un solide ?",
+      "choix": [
+        "En trait plein épais",
+        "En pointillés",
+        "En rouge",
+        "On ne les trace pas"
+      ],
+      "reponse": 1,
+      "explication": "Les arêtes cachées se tracent en **pointillés** : elles existent mais ne sont pas visibles. Le piège est de les oublier ou de les tracer en trait plein comme les autres."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "solides-usuels",
+      "enonce": "Un prisme droit a pour base un pentagone ($5$ côtés). Combien a-t-il de faces ?",
+      "choix": ["$5$ faces", "$7$ faces", "$10$ faces", "$15$ faces"],
+      "reponse": 1,
+      "explication": "Pour une base à $n$ côtés, un prisme droit a $n + 2$ faces : $5 + 2 = 7$ (les $2$ bases pentagonales et $5$ rectangles latéraux). Le piège est d'oublier les deux bases et de ne compter que les $5$ rectangles, ou de confondre avec les $15$ arêtes ($3n$)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "unites-volume-capacite",
+      "enonce": "Combien vaut $3$ m³ en litres ?",
+      "choix": ["$3$ L", "$30$ L", "$300$ L", "$3000$ L"],
+      "reponse": 3,
+      "explication": "$1$ m³ $= 1000$ L, donc $3$ m³ $= 3000$ L. Le piège est d'appliquer un facteur $10$ ou $100$ au lieu de $1000$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "aire-du-disque",
+      "enonce": "Quelle est l'aire d'un disque de rayon $2$ cm ? On prend $\\pi \\approx 3{,}14$.",
+      "choix": ["$12{,}56$ cm²", "$6{,}28$ cm²", "$12{,}56$ cm", "$4$ cm²"],
+      "reponse": 0,
+      "explication": "$\\mathcal{A} = \\pi r^2 = 3{,}14 \\times 2^2 = 3{,}14 \\times 4 = 12{,}56$ cm². Le piège est de calculer le périmètre $2\\pi r = 6{,}28$ cm au lieu de l'aire, ou d'oublier le carré du rayon."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "patrons",
+      "enonce": "De combien de faces est composé le patron d'un pavé droit ?",
+      "choix": ["$4$ rectangles", "$5$ rectangles", "$6$ rectangles", "$8$ rectangles"],
+      "reponse": 2,
+      "explication": "Un pavé droit a $6$ faces rectangulaires, donc son patron comporte $6$ rectangles (identiques deux à deux). Le piège est d'oublier les faces cachées et de n'en compter que $4$ ou $5$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "volumes",
+      "enonce": "On double l'arête d'un cube : elle passe de $2$ cm à $4$ cm. Par combien est multiplié son volume ?",
+      "choix": ["Par $2$", "Par $4$", "Par $8$", "Par $6$"],
+      "reponse": 2,
+      "explication": "Le volume passe de $2^3 = 8$ cm³ à $4^3 = 64$ cm³, soit $64 \\div 8 = 8$ fois plus. Doubler l'arête multiplie le volume par $2^3 = 8$, pas par $2$. C'est le piège classique : on oublie que le volume dépend du cube de la longueur."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "volumes",
+      "enonce": "Un prisme droit a pour base un triangle rectangle de côtés de l'angle droit $6$ cm et $8$ cm, et une hauteur de $5$ cm. Quel est son volume ?",
+      "choix": ["$240$ cm³", "$120$ cm³", "$48$ cm³", "$60$ cm³"],
+      "reponse": 1,
+      "explication": "Aire de la base : $\\dfrac{6 \\times 8}{2} = 24$ cm². Volume : $V = 24 \\times 5 = 120$ cm³. Le piège n°1 est d'oublier le $\\div 2$ : on obtient $48 \\times 5 = 240$ cm³, le double."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "unites-volume-capacite",
+      "enonce": "Un pavé droit mesure $2$ m $\\times$ $50$ cm $\\times$ $30$ cm. Quel est son volume en m³ ?",
+      "choix": ["$3000$ m³", "$0{,}3$ m³", "$3$ m³", "$30$ m³"],
+      "reponse": 1,
+      "explication": "On convertit tout dans la même unité d'abord : $2$ m $= 200$ cm, donc $V = 200 \\times 50 \\times 30 = 300\\,000$ cm³. Puis $300\\,000$ cm³ $\\div 1\\,000\\,000 = 0{,}3$ m³ (car $1$ m³ $= 1\\,000\\,000$ cm³). Le piège est de multiplier les nombres sans convertir les mètres en centimètres."
     }
   ]
 }

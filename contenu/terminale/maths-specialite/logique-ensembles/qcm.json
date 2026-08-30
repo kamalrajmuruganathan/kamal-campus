@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "appartenance-inclusion",
       "enonce": "Quelle écriture est correcte pour dire que le nombre $3$ est un élément de l'ensemble $A = \\{1, 3, 5\\}$ ?",
-      "choix": ["$3 \\subset A$", "$3 \\in A$", "$A \\in 3$", "$3 \\notin A$"],
+      "choix": [
+        "$3 \\subset A$",
+        "$3 \\in A$",
+        "$A \\in 3$",
+        "$3 \\notin A$"
+      ],
       "reponse": 1,
       "explication": "Le symbole $\\in$ relie un **élément** à un **ensemble** : $3 \\in A$. Le piège est $\\subset$, qui relie deux **ensembles** entre eux, pas un nombre à un ensemble."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "ensemble-vide",
       "enonce": "Que vaut l'ensemble $\\{\\, x \\in \\mathbb{R} \\mid x^2 = -4 \\,\\}$ ?",
-      "choix": ["$\\{-2\\}$", "$\\{2, -2\\}$", "$\\varnothing$", "$\\{0\\}$"],
+      "choix": [
+        "$\\{-2\\}$",
+        "$\\{2, -2\\}$",
+        "$\\varnothing$",
+        "$\\{0\\}$"
+      ],
       "reponse": 2,
       "explication": "Aucun réel n'a un carré négatif : la condition n'est jamais satisfaite, l'ensemble est **vide**, noté $\\varnothing$. Attention à ne pas répondre $\\{0\\}$ : $\\{0\\}$ contient un élément, ce n'est pas l'ensemble vide."
     },
@@ -139,6 +149,146 @@
       ],
       "reponse": 3,
       "explication": "C'est une **disjonction de cas** : elle est valide seulement si les cas **recouvrent toute** la situation (ici tout $\\mathbb{N}$) et si l'on conclut dans **chacun**. Exhiber un exemple, ou un contre-exemple, ne prouve jamais un énoncé universel."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "appartenance-inclusion",
+      "enonce": "Quel symbole relie deux ensembles pour dire que l'un est inclus dans l'autre ?",
+      "choix": [
+        "$\\in$",
+        "$\\subset$",
+        "$\\mid$",
+        "$\\forall$"
+      ],
+      "reponse": 1,
+      "explication": "$A \\subset B$ signifie que tout élément de $A$ est aussi dans $B$ : $\\subset$ relie deux ENSEMBLES. Le piège est d'utiliser $\\in$, qui relie un ÉLÉMENT à un ensemble, jamais deux ensembles entre eux."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "ensemble-vide",
+      "enonce": "Dans combien d'ensembles l'ensemble vide $\\varnothing$ est-il inclus ?",
+      "choix": [
+        "aucun",
+        "tout ensemble",
+        "seulement lui-même",
+        "seulement $\\{0\\}$"
+      ],
+      "reponse": 1,
+      "explication": "L'ensemble vide est inclus dans TOUT ensemble : $\\varnothing \\subset A$ pour tout $A$ (il n'a aucun élément susceptible de manquer à $A$). Le piège est de croire qu'un ensemble sans élément ne peut être inclus nulle part."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "appartenance-inclusion",
+      "enonce": "Combien d'éléments l'ensemble $\\{0\\}$ contient-il ?",
+      "choix": [
+        "$0$ élément",
+        "$1$ élément",
+        "$2$ éléments",
+        "une infinité d'éléments"
+      ],
+      "reponse": 1,
+      "explication": "$\\{0\\}$ contient UN élément : le nombre $0$. Le piège est de le confondre avec l'ensemble vide $\\varnothing$, qui, lui, n'a AUCUN élément. $\\{0\\} \\neq \\varnothing$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "connecteurs",
+      "enonce": "D'après les lois de De Morgan, à quoi est égale la négation de « $P$ et $Q$ » ?",
+      "choix": [
+        "$(\\text{non } P) \\text{ et } (\\text{non } Q)$",
+        "$(\\text{non } P) \\text{ ou } (\\text{non } Q)$",
+        "$P \\text{ ou } Q$",
+        "$(\\text{non } P) \\Rightarrow (\\text{non } Q)$"
+      ],
+      "reponse": 1,
+      "explication": "$\\text{non}\\,(P \\text{ et } Q) \\iff (\\text{non } P) \\text{ ou } (\\text{non } Q)$ : la négation échange le « et » en « ou ». Le piège est de garder le « et » : nier une conjonction donne une DISJONCTION."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "implication",
+      "enonce": "Quelle est la réciproque de l'implication « $P \\Rightarrow Q$ » ?",
+      "choix": [
+        "$Q \\Rightarrow P$",
+        "$\\text{non } Q \\Rightarrow \\text{non } P$",
+        "$\\text{non } P \\Rightarrow \\text{non } Q$",
+        "$P \\iff Q$"
+      ],
+      "reponse": 0,
+      "explication": "La réciproque de $P \\Rightarrow Q$ est $Q \\Rightarrow P$ : on inverse le sens. Le piège est de la confondre avec la CONTRAPOSÉE $\\text{non } Q \\Rightarrow \\text{non } P$ ; seule cette dernière est équivalente à l'implication de départ."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "implication",
+      "enonce": "La contraposée d'une implication $P \\Rightarrow Q$ lui est :",
+      "choix": [
+        "équivalente",
+        "identique à sa réciproque",
+        "toujours de valeur opposée",
+        "sans rapport logique"
+      ],
+      "reponse": 0,
+      "explication": "$(P \\Rightarrow Q) \\iff (\\text{non } Q \\Rightarrow \\text{non } P)$ : la contraposée est ÉQUIVALENTE à l'implication, ce qui autorise le raisonnement par contraposée. Le piège est de la confondre avec la réciproque, qui, elle, n'est pas équivalente en général."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "equivalence",
+      "enonce": "Prouver une équivalence « $P \\iff Q$ », c'est prouver :",
+      "choix": [
+        "seulement $P \\Rightarrow Q$",
+        "les deux implications $P \\Rightarrow Q$ et $Q \\Rightarrow P$",
+        "seulement $Q \\Rightarrow P$",
+        "la contraposée de $P \\Rightarrow Q$ uniquement"
+      ],
+      "reponse": 1,
+      "explication": "$P \\iff Q$ signifie $(P \\Rightarrow Q)$ ET $(Q \\Rightarrow P)$ : il faut prouver les DEUX implications. Le piège est de n'en démontrer qu'une seule et de croire l'équivalence acquise."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "quantificateurs",
+      "enonce": "Quelle est la négation de « $\\exists x,\\ P(x)$ » ?",
+      "choix": [
+        "$\\exists x,\\ \\text{non } P(x)$",
+        "$\\forall x,\\ \\text{non } P(x)$",
+        "$\\forall x,\\ P(x)$",
+        "$\\exists x,\\ P(x)$"
+      ],
+      "reponse": 1,
+      "explication": "Nier « il existe » donne « pour tout... non » : $\\text{non}\\,(\\exists x,\\ P(x)) \\iff \\forall x,\\ \\text{non } P(x)$. Le piège est de garder le $\\exists$ : la négation échange TOUJOURS les quantificateurs."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "proposition",
+      "enonce": "Parmi ces énoncés, lequel est une proposition mathématique (vraie ou fausse) ?",
+      "choix": [
+        "$x + 1$",
+        "« $7$ est un nombre premier »",
+        "$3x^2 - 1$",
+        "« $x > 2$ »"
+      ],
+      "reponse": 1,
+      "explication": "« $7$ est premier » possède une valeur de vérité (elle est vraie) : c'est une proposition. $x+1$ et $3x^2-1$ sont des expressions, pas des énoncés ; « $x > 2$ » est un prédicat, sans valeur de vérité tant que $x$ n'est pas fixé."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "raisonnements",
+      "enonce": "Pour prouver « si $n^2$ est pair, alors $n$ est pair » par contraposée, quelle proposition démontre-t-on ?",
+      "choix": [
+        "« si $n$ est pair, alors $n^2$ est pair »",
+        "« si $n$ est impair, alors $n^2$ est impair »",
+        "« si $n^2$ est impair, alors $n$ est pair »",
+        "on suppose directement $n^2$ pair"
+      ],
+      "reponse": 1,
+      "explication": "La contraposée de « $n^2$ pair $\\Rightarrow n$ pair » est « $\\text{non}(n \\text{ pair}) \\Rightarrow \\text{non}(n^2 \\text{ pair})$ », soit « $n$ impair $\\Rightarrow n^2$ impair ». Le premier choix est la réciproque (« $n$ pair $\\Rightarrow n^2$ pair »), pas la contraposée."
     }
   ]
 }

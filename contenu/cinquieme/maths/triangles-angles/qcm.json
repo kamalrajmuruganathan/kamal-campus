@@ -119,6 +119,101 @@
       ],
       "reponse": 1,
       "explication": "Avec des droites **parallèles**, les angles alternes-internes sont **égaux**. La réciproque est tout aussi utile : si deux angles alternes-internes sont égaux, alors les droites sont parallèles — c'est ainsi qu'on démontre un parallélisme."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vocabulaire-angles",
+      "enonce": "Comment appelle-t-on un angle qui mesure exactement $90°$ ?",
+      "choix": ["aigu", "droit", "obtus", "plat"],
+      "reponse": 1,
+      "explication": "Un angle de $90°$ est un angle **droit**. Un angle aigu est plus petit que $90°$, un angle obtus est entre $90°$ et $180°$, et un angle plat vaut $180°$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "supplementaires",
+      "enonce": "Deux angles supplémentaires ont pour somme :",
+      "choix": ["$90°$", "$180°$", "$360°$", "$100°$"],
+      "reponse": 1,
+      "explication": "**S**upplémentaires comme ligne **s**traight : $180°$. Le piège est de les confondre avec les angles complémentaires, dont la somme vaut $90°$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "vocabulaire-angles",
+      "enonce": "Un angle mesure $120°$. Quelle est sa nature ?",
+      "choix": ["aigu", "droit", "obtus", "plat"],
+      "reponse": 2,
+      "explication": "Un angle compris entre $90°$ et $180°$ est **obtus** : $120°$ en fait partie. Le piège est de le dire aigu (réservé aux angles inférieurs à $90°$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "calcul-angle",
+      "enonce": "Un triangle a un angle de $90°$ et un angle de $30°$. Combien vaut le troisième ?",
+      "choix": ["$60°$", "$120°$", "$30°$", "$90°$"],
+      "reponse": 0,
+      "explication": "$180 - 90 - 30 = 60°$. On retire les deux angles connus de $180°$. Le piège $120°$ vient d'oublier de soustraire l'un des deux angles."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "complementaires",
+      "enonce": "Un angle mesure $32°$. Quel est son complémentaire ?",
+      "choix": ["$148°$", "$58°$", "$68°$", "$32°$"],
+      "reponse": 1,
+      "explication": "Deux angles complémentaires ont pour somme $90°$, donc le complémentaire vaut $90 - 32 = 58°$. Le piège $148°$ vient d'utiliser $180°$ (le supplémentaire) au lieu de $90°$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "isocele",
+      "enonce": "Dans un triangle isocèle, l'angle au sommet principal mesure $40°$. Combien mesure chaque angle à la base ?",
+      "choix": ["$70°$", "$40°$", "$140°$", "$100°$"],
+      "reponse": 0,
+      "explication": "Les deux angles à la base sont égaux et leur somme vaut $180 - 40 = 140°$, donc chacun vaut $140 \\div 2 = 70°$. Le piège est d'oublier de diviser par $2$ et de répondre $140°$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "inegalite-triangulaire",
+      "enonce": "Peut-on construire un triangle de côtés $5$ cm, $6$ cm et $8$ cm ?",
+      "choix": [
+        "Oui, car $5 + 6 = 11 > 8$",
+        "Non, car $8 > 6$",
+        "Non, car $5 + 6 < 8$",
+        "Oui, mais il sera plat"
+      ],
+      "reponse": 0,
+      "explication": "Le plus grand côté ($8$) doit être plus court que la somme des deux autres : $5 + 6 = 11 > 8$, donc le triangle existe. Le piège est de comparer les côtés deux à deux au lieu de comparer le plus grand à la somme des deux autres."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "angles-opposes",
+      "enonce": "Deux droites se coupent. L'un des quatre angles formés mesure $110°$. Combien mesure l'angle qui lui est opposé par le sommet ?",
+      "choix": ["$70°$", "$110°$", "$90°$", "$250°$"],
+      "reponse": 1,
+      "explication": "Les angles opposés par le sommet sont **égaux** : l'opposé de $110°$ vaut aussi $110°$. Le piège $70°$ correspond à l'angle **adjacent** (supplémentaire, $180 - 110$), pas à l'opposé."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "Le triangle $\\mathrm{ABC}$ est isocèle en $\\mathrm{A}$ et $\\widehat{\\mathrm{B}} = 70°$. Combien vaut $\\widehat{\\mathrm{A}}$ ?",
+      "choix": ["$70°$", "$40°$", "$55°$", "$110°$"],
+      "reponse": 1,
+      "explication": "Isocèle en $\\mathrm{A}$ : les angles à la base sont égaux, donc $\\widehat{\\mathrm{C}} = \\widehat{\\mathrm{B}} = 70°$. La somme des angles vaut $180°$, donc $\\widehat{\\mathrm{A}} = 180 - 70 - 70 = 40°$. Le piège est de croire que $\\widehat{\\mathrm{A}} = 70°$ en oubliant qu'ici $\\mathrm{A}$ est le sommet principal, pas un angle à la base."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "paralleles",
+      "enonce": "Deux droites parallèles sont coupées par une sécante. Un angle correspondant mesure $65°$. Combien mesure l'angle correspondant de l'autre parallèle ?",
+      "choix": ["$115°$", "$65°$", "$25°$", "$90°$"],
+      "reponse": 1,
+      "explication": "Quand les droites sont parallèles, les angles correspondants sont **égaux** : l'autre vaut aussi $65°$. Le piège $115°$ suppose à tort que les angles sont supplémentaires ($180 - 65$)."
     }
   ]
 }

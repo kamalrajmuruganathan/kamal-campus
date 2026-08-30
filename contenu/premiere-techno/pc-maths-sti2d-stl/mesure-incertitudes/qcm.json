@@ -149,6 +149,146 @@
    ],
    "reponse": 1,
    "explication": "L'incertitude porte sur le premier chiffre après la virgule : écrire $12{,}4567$ suggère une précision au dix-millième, ce qui contredit $\\pm 0{,}2$. Il faut arrondir la valeur au même rang : $m = 12{,}5 \\pm 0{,}2$ g."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "prefixes",
+   "enonce": "À quel facteur multiplicateur correspond le préfixe « micro » (µ) ?",
+   "choix": [
+    "$10^{-3}$",
+    "$10^{-6}$",
+    "$10^{-9}$",
+    "$10^{6}$"
+   ],
+   "reponse": 1,
+   "explication": "« micro » vaut $10^{-6}$. Le piège est de le confondre avec « milli » ($10^{-3}$) ou « nano » ($10^{-9}$). Un micromètre vaut ainsi un millionième de mètre."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "unites-si",
+   "enonce": "Quelle est l'unité SI de base de la quantité de matière ?",
+   "choix": [
+    "le gramme",
+    "la mole",
+    "le litre",
+    "le kelvin"
+   ],
+   "reponse": 1,
+   "explication": "La **mole** (mol) est l'unité de base de la quantité de matière. Le gramme et le litre ne sont pas des unités de base, et le kelvin mesure la température thermodynamique."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "incertitude-mesure-unique",
+   "enonce": "Avec une règle graduée au millimètre et une seule mesure, quelle incertitude-type estime-t-on couramment ?",
+   "choix": [
+    "$1$ mm",
+    "$0{,}5$ mm",
+    "$5$ mm",
+    "$0$ mm : la règle est exacte"
+   ],
+   "reponse": 1,
+   "explication": "Sur une mesure unique avec un instrument gradué, on estime l'incertitude à la **moitié de la plus petite graduation**, soit $0{,}5$ mm pour une règle au millimètre. Aucun instrument n'est exact, ce qui écarte le dernier choix."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "incertitude-type-a",
+   "enonce": "On répète $4$ fois une mesure ; l'écart-type de la série vaut $s = 0{,}8$ mm. Quelle est l'incertitude-type $u$ ?",
+   "choix": [
+    "$0{,}4$ mm",
+    "$0{,}8$ mm",
+    "$0{,}2$ mm",
+    "$1{,}6$ mm"
+   ],
+   "reponse": 0,
+   "explication": "Type A : $u = \\dfrac{s}{\\sqrt{n}} = \\dfrac{0{,}8}{\\sqrt{4}} = \\dfrac{0{,}8}{2} = 0{,}4$ mm. Diviser par $n = 4$ au lieu de $\\sqrt{n} = 2$ donnerait à tort $0{,}2$ mm."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "justesse-fidelite",
+   "enonce": "Sur une cible, des tirs très dispersés mais répartis en moyenne autour du centre traduisent :",
+   "choix": [
+    "une bonne justesse mais une mauvaise fidélité",
+    "une mauvaise justesse mais une bonne fidélité",
+    "une bonne justesse et une bonne fidélité",
+    "une mauvaise justesse et une mauvaise fidélité"
+   ],
+   "reponse": 0,
+   "explication": "La moyenne tombe sur le centre : la **justesse** est bonne (peu d'erreur systématique). Mais les tirs sont éparpillés : la **fidélité** est mauvaise (forte erreur aléatoire). Ne pas confondre les deux notions est l'objectif du chapitre."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "moyenne",
+   "enonce": "Quatre mesures d'une même grandeur donnent $10{,}2$ ; $10{,}4$ ; $10{,}0$ ; $10{,}6$. Quelle est la meilleure estimation de la grandeur ?",
+   "choix": [
+    "$10{,}3$",
+    "$10{,}6$",
+    "$10{,}2$",
+    "$41{,}2$"
+   ],
+   "reponse": 0,
+   "explication": "La meilleure estimation est la **moyenne** : $\\bar x = \\dfrac{10{,}2 + 10{,}4 + 10{,}0 + 10{,}6}{4} = \\dfrac{41{,}2}{4} = 10{,}3$. Le choix $41{,}2$ oublie de diviser par l'effectif."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "types-erreurs",
+   "enonce": "Comment corrige-t-on une erreur systématique due à un appareil déréglé ?",
+   "choix": [
+    "en répétant les mesures et en moyennant",
+    "en étalonnant l'appareil",
+    "en augmentant le nombre de chiffres significatifs",
+    "on ne peut pas la corriger"
+   ],
+   "reponse": 1,
+   "explication": "Une erreur systématique produit un décalage constant que la moyenne ne supprime pas : seul l'**étalonnage** (recalage sur une référence connue) la corrige. Répéter les mesures ne réduit que l'erreur aléatoire."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "incertitude-type-a",
+   "enonce": "Pour diviser par $2$ l'incertitude-type de type A d'une série, par combien faut-il multiplier le nombre de mesures ?",
+   "choix": [
+    "$2$",
+    "$4$",
+    "$8$",
+    "$16$"
+   ],
+   "reponse": 1,
+   "explication": "Comme $u = \\dfrac{s}{\\sqrt{n}}$, l'incertitude décroît en $\\sqrt{n}$ : la diviser par $2$ exige de multiplier $n$ par $2^2 = 4$. C'est pourquoi on gagne peu au-delà d'une dizaine de répétitions."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "valeur-reference",
+   "enonce": "On mesure une résistance $R = 98\\ \\Omega$ avec $u = 1{,}5\\ \\Omega$. La valeur de référence est $100\\ \\Omega$. Que conclure ?",
+   "choix": [
+    "l'écart vaut environ $1{,}3\\,u$ : le résultat est compatible avec la référence",
+    "l'écart vaut $2\\ \\Omega$ : le résultat est incompatible",
+    "la mesure est fausse car $98 \\neq 100$",
+    "l'écart vaut environ $0{,}75\\,u$ : incompatible"
+   ],
+   "reponse": 0,
+   "explication": "On rapporte l'écart à l'incertitude : $\\dfrac{|98 - 100|}{1{,}5} = \\dfrac{2}{1{,}5} \\approx 1{,}3$. Étant inférieur à $2$, le résultat est **compatible** avec la référence. Comparer l'écart brut ($2\\ \\Omega$) sans le diviser par $u$ est le piège classique."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "chiffres-significatifs",
+   "enonce": "On additionne deux longueurs mesurées : $12{,}3$ cm et $4{,}56$ cm. Comment écrire correctement le résultat ?",
+   "choix": [
+    "$16{,}86$ cm",
+    "$16{,}9$ cm",
+    "$17$ cm",
+    "$16{,}860$ cm"
+   ],
+   "reponse": 1,
+   "explication": "Pour une **somme**, on garde le nombre de **décimales** du terme le moins précis. $12{,}3$ n'a qu'une décimale, donc $12{,}3 + 4{,}56 = 16{,}86$ s'arrondit à $16{,}9$ cm. La règle des chiffres significatifs (utilisée pour les produits) ne s'applique pas ici."
   }
  ]
 }

@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "On **encadre** le point : on prend la distance entre le point d'avant $M_{i-1}$ et celui d'après $M_{i+1}$, parcourue en une durée $2\\tau$. D'où $v_i \\approx \\dfrac{M_{i-1}M_{i+1}}{2\\tau}$. Utiliser $M_i M_{i+1}/\\tau$ donne une vitesse décalée (moyenne entre deux points, pas au point $M_i$) ; oublier le $2$ au dénominateur double le résultat."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vecteur-acceleration",
+      "enonce": "Le vecteur accélération d'un point mobile est la dérivée par rapport au temps :",
+      "choix": [
+        "du vecteur position",
+        "du vecteur vitesse",
+        "de la trajectoire",
+        "de la distance à l'origine"
+      ],
+      "reponse": 1,
+      "explication": "Par définition $\\vec{a} = \\dfrac{\\mathrm{d}\\vec{v}}{\\mathrm{d}t}$ : on dérive la **vitesse** (donc la position deux fois). Confondre avec la dérivée de la position donnerait la vitesse, pas l'accélération : c'est se tromper d'un cran dans la chaîne position → vitesse → accélération."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "vecteur-vitesse",
+      "enonce": "Dans le Système international, la norme du vecteur vitesse s'exprime en :",
+      "choix": [
+        "m",
+        "m·s⁻¹",
+        "m·s⁻²",
+        "s"
+      ],
+      "reponse": 1,
+      "explication": "La vitesse est une position (m) dérivée par le temps (s) : elle s'exprime en **m·s⁻¹**. Le m·s⁻² est l'unité de l'accélération (une dérivation de plus), le m celle d'une position ou d'une distance."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "vecteur-position",
+      "enonce": "Un mobile a pour équations horaires $x(t) = 2t$ et $y(t) = 3$ (unités SI). Quelle est l'équation de sa trajectoire ?",
+      "choix": [
+        "$y = 3$",
+        "$x = 3$",
+        "$y = 2x$",
+        "$y = 3t$"
+      ],
+      "reponse": 0,
+      "explication": "La trajectoire est la relation entre $x$ et $y$, **sans le temps**. Ici $y$ vaut toujours $3$ quel que soit $t$ : la trajectoire est la droite horizontale $y = 3$. Le choix $y = 3t$ n'est pas une trajectoire car il contient encore $t$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "methode",
+      "enonce": "Un mobile a pour vitesse $\\vec{v}$ de coordonnées $v_x = 3{,}0$ m·s⁻¹ et $v_y = 4{,}0$ m·s⁻¹. Quelle est la valeur (norme) de sa vitesse ?",
+      "choix": [
+        "$7{,}0$ m·s⁻¹",
+        "$25$ m·s⁻¹",
+        "$5{,}0$ m·s⁻¹",
+        "$3{,}5$ m·s⁻¹"
+      ],
+      "reponse": 2,
+      "explication": "$v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{3{,}0^2 + 4{,}0^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5{,}0$ m·s⁻¹. Le choix $7{,}0$ additionne les coordonnées au lieu de composer par Pythagore ; $25$ oublie la racine carrée."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "vecteur-position",
+      "enonce": "À un instant donné, un point $\\mathrm{M}$ a pour coordonnées $(6{,}0\\ ;\\ 8{,}0)$ m. Quelle est sa distance à l'origine $\\mathrm{O}$ ?",
+      "choix": [
+        "$14$ m",
+        "$10$ m",
+        "$100$ m",
+        "$7{,}0$ m"
+      ],
+      "reponse": 1,
+      "explication": "La distance vaut $\\lVert\\vec{\\mathrm{OM}}\\rVert = \\sqrt{x^2 + y^2} = \\sqrt{6{,}0^2 + 8{,}0^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$ m. Le choix $14$ additionne les coordonnées ; $100$ oublie la racine carrée."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Une voiture **freine** en ligne droite. Que peut-on dire de son vecteur accélération ?",
+      "choix": [
+        "il est colinéaire à $\\vec{v}$ et de même sens",
+        "il est colinéaire à $\\vec{v}$ mais de sens opposé",
+        "il est nul",
+        "il est perpendiculaire à $\\vec{v}$"
+      ],
+      "reponse": 1,
+      "explication": "Sur une droite, l'accélération est portée par la trajectoire (composante normale nulle). Quand le mobile **freine**, la valeur de la vitesse diminue : $\\vec{a}$ est donc colinéaire à $\\vec{v}$ mais de **sens opposé**. Dans le même sens, le mobile accélérerait au lieu de freiner."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Un point décrit un cercle de rayon $R = 2{,}0$ m à vitesse constante, en effectuant un tour en $T = 4{,}0$ s. Quelle est la valeur de sa vitesse ?",
+      "choix": [
+        "$3{,}1$ m·s⁻¹",
+        "$12{,}6$ m·s⁻¹",
+        "$0{,}50$ m·s⁻¹",
+        "$6{,}3$ m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "En un tour, le point parcourt la circonférence $2\\pi R$ pendant la durée $T$ : $v = \\dfrac{2\\pi R}{T} = \\dfrac{2\\pi \\times 2{,}0}{4{,}0} = \\pi \\approx 3{,}1$ m·s⁻¹. Le choix $12{,}6$ oublie de diviser par $T$ ; $6{,}3$ oublie le facteur $2$ (il calcule $\\pi R$)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "frenet",
+      "enonce": "Un point parcourt un cercle de rayon $R = 4{,}0$ m avec une vitesse $v(t) = 3t$ (unités SI). À $t = 2{,}0$ s, quelle est la **norme** de son accélération totale ?",
+      "choix": [
+        "$9{,}5$ m·s⁻²",
+        "$9{,}0$ m·s⁻²",
+        "$12$ m·s⁻²",
+        "$3{,}0$ m·s⁻²"
+      ],
+      "reponse": 0,
+      "explication": "À $t = 2{,}0$ s, $v = 6{,}0$ m·s⁻¹. Composante normale $a_n = \\dfrac{v^2}{R} = \\dfrac{36}{4{,}0} = 9{,}0$ et tangentielle $a_t = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 3{,}0$. Les deux étant perpendiculaires, $a = \\sqrt{a_n^2 + a_t^2} = \\sqrt{81 + 9} \\approx 9{,}5$ m·s⁻². Le choix $9{,}0$ oublie $a_t$ ; le choix $12$ additionne $a_n$ et $a_t$ au lieu de les composer."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "caracteriser-mouvement",
+      "enonce": "Un mobile a pour équations horaires $x(t) = 2 + 3t$ et $y(t) = 1 - 4t$ (unités SI). Quelle est la nature de son mouvement ?",
+      "choix": [
+        "rectiligne uniforme",
+        "rectiligne uniformément accéléré",
+        "circulaire uniforme",
+        "curviligne accéléré"
+      ],
+      "reponse": 0,
+      "explication": "En dérivant : $v_x = 3$ et $v_y = -4$, constants, donc $\\vec{v}$ est constant en norme et en direction et $\\vec{a} = \\vec{0}$. La trajectoire est une droite : le mouvement est **rectiligne uniforme**. Un mouvement uniformément accéléré aurait une accélération constante non nulle."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "frenet",
+      "enonce": "Un cycliste **double sa vitesse** dans un virage dont le rayon $R$ ne change pas. Par quel facteur son accélération normale $a_n$ est-elle multipliée ?",
+      "choix": [
+        "$2$",
+        "$4$",
+        "$8$",
+        "$\\sqrt{2}$"
+      ],
+      "reponse": 1,
+      "explication": "$a_n = \\dfrac{v^2}{R}$ dépend du **carré** de la vitesse. Doubler $v$ à $R$ constant multiplie $a_n$ par $2^2 = 4$. Répondre $2$ oublie le carré : c'est le piège classique de la dépendance en $v^2$."
     }
   ]
 }

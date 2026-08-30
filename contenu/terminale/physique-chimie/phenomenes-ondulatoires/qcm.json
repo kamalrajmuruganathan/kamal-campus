@@ -1,154 +1,294 @@
 {
-  "id": "tale-spe-pc-phenomenes-ondulatoires-qcm",
-  "chapitre": "tale-spe-pc-phenomenes-ondulatoires",
-  "titre": "QCM — Phénomènes ondulatoires : diffraction, interférences, Doppler",
-  "voie": "generale",
-  "niveau": "terminale",
-  "parcours": "physique-chimie",
-  "matiere": "physique-chimie",
-  "statut": "brouillon",
-  "relu_par": null,
-  "consigne": "Une seule réponse correcte par question.",
-  "questions": [
-    {
-      "id": 1,
-      "difficulte": "facile",
-      "notion": "intensite-niveau-sonore",
-      "enonce": "Dans quelle unité s'exprime le niveau d'intensité sonore $L$ ?",
-      "choix": [
-        "le watt par mètre carré ($\\text{W·m}^{-2}$)",
-        "le décibel (dB)",
-        "le hertz (Hz)",
-        "le watt (W)"
-      ],
-      "reponse": 1,
-      "explication": "Le **niveau** sonore $L = 10\\log(I/I_0)$ est un nombre sans dimension exprimé en **décibels** (dB). Le piège est de le confondre avec l'**intensité** sonore $I$, qui, elle, se mesure en $\\text{W·m}^{-2}$."
-    },
-    {
-      "id": 2,
-      "difficulte": "facile",
-      "notion": "diffraction",
-      "enonce": "La diffraction d'une onde par une ouverture est d'autant plus marquée que l'ouverture est :",
-      "choix": [
-        "grande devant la longueur d'onde $\\lambda$",
-        "petite, du même ordre de grandeur que $\\lambda$",
-        "de couleur sombre",
-        "éclairée par une source puissante"
-      ],
-      "reponse": 1,
-      "explication": "La diffraction devient sensible quand la largeur $a$ de l'ouverture est **du même ordre de grandeur (ou plus petite)** que $\\lambda$. Comme $\\theta = \\lambda/a$, plus $a$ est petit, plus l'onde s'étale. Ni la couleur ni la puissance de la source n'interviennent."
-    },
-    {
-      "id": 3,
-      "difficulte": "moyen",
-      "notion": "intensite-niveau-sonore",
-      "enonce": "Une intensité sonore vaut $I = 1{,}0 \\times 10^{-8}\\ \\text{W·m}^{-2}$ (avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$). Quel est le niveau sonore $L$ ?",
-      "choix": [
-        "$4{,}0$ dB",
-        "$40$ dB",
-        "$80$ dB",
-        "$-40$ dB"
-      ],
-      "reponse": 1,
-      "explication": "$\\dfrac{I}{I_0} = \\dfrac{10^{-8}}{10^{-12}} = 10^{4}$, donc $L = 10\\log(10^{4}) = 10 \\times 4 = 40$ dB. Oublier le facteur $10$ donne $4{,}0$ dB ; inverser le rapport ($I_0/I$) donne $-40$ dB."
-    },
-    {
-      "id": 4,
-      "difficulte": "moyen",
-      "notion": "intensite-niveau-sonore",
-      "enonce": "Deux haut-parleurs identiques, mis en marche ensemble, délivrent une intensité sonore **deux fois** plus grande qu'un seul. De combien augmente le niveau sonore $L$ ?",
-      "choix": [
-        "il double",
-        "d'environ $+3$ dB",
-        "de $+10$ dB",
-        "de $+6$ dB"
-      ],
-      "reponse": 1,
-      "explication": "Multiplier $I$ par $2$ ajoute $10\\log 2 \\approx 3{,}0$ dB, **pas** le double du niveau. Le logarithme empêche le niveau de doubler : pour gagner $+10$ dB il faudrait multiplier $I$ par $10$."
-    },
-    {
-      "id": 5,
-      "difficulte": "moyen",
-      "notion": "diffraction",
-      "enonce": "Un laser de longueur d'onde $\\lambda = 600$ nm éclaire une fente de largeur $a = 0{,}20$ mm. Quel est le demi-angle de diffraction $\\theta = \\lambda/a$ ?",
-      "choix": [
-        "$3{,}0 \\times 10^{-3}$ rad",
-        "$3{,}0 \\times 10^{-6}$ rad",
-        "$3{,}0 \\times 10^{3}$ rad",
-        "$1{,}2 \\times 10^{-4}$ rad"
-      ],
-      "reponse": 0,
-      "explication": "Il faut tout convertir en mètres : $\\lambda = 6{,}0 \\times 10^{-7}$ m et $a = 0{,}20$ mm $= 2{,}0 \\times 10^{-4}$ m. Alors $\\theta = \\dfrac{6{,}0 \\times 10^{-7}}{2{,}0 \\times 10^{-4}} = 3{,}0 \\times 10^{-3}$ rad. Garder $a$ en mm ($0{,}20$) donne $3{,}0 \\times 10^{-6}$ ; mélanger nm et mm ($600/0{,}20$) donne l'absurde $3{,}0 \\times 10^{3}$ rad."
-    },
-    {
-      "id": 6,
-      "difficulte": "moyen",
-      "notion": "interferences",
-      "enonce": "Deux sources synchrones émettent une onde de longueur d'onde $\\lambda = 4{,}0$ cm. En un point M, les distances aux sources sont $d_1 = 10$ cm et $d_2 = 22$ cm. Quelle est la nature de l'interférence en M ?",
-      "choix": [
-        "constructive, car $\\delta = 3\\lambda$",
-        "destructive, car $\\delta = 3\\lambda$",
-        "constructive, car $\\delta = 12\\lambda$",
-        "aucune interférence, car $d_1 \\neq d_2$"
-      ],
-      "reponse": 0,
-      "explication": "La différence de marche vaut $\\delta = d_2 - d_1 = 22 - 10 = 12$ cm $= 3 \\times 4{,}0$ cm $= 3\\lambda$. Comme $k = 3$ est **entier**, l'interférence est **constructive**. Confondre $\\delta$ (en cm) avec le nombre de longueurs d'onde donnerait « $12\\lambda$ »."
-    },
-    {
-      "id": 7,
-      "difficulte": "difficile",
-      "notion": "intensite-niveau-sonore",
-      "enonce": "Au seuil de la douleur, le niveau sonore atteint $L = 90$ dB. Quelle intensité $I$ cela représente-t-il ($I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$) ?",
-      "choix": [
-        "$1{,}0 \\times 10^{-3}\\ \\text{W·m}^{-2}$",
-        "$9{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$",
-        "$1{,}0 \\times 10^{-21}\\ \\text{W·m}^{-2}$",
-        "$9{,}0 \\times 10^{1}\\ \\text{W·m}^{-2}$"
-      ],
-      "reponse": 0,
-      "explication": "On inverse la formule : $I = I_0 \\times 10^{L/10} = 10^{-12} \\times 10^{90/10} = 10^{-12} \\times 10^{9} = 1{,}0 \\times 10^{-3}\\ \\text{W·m}^{-2}$. Multiplier $I_0$ par $90$ (au lieu d'élever $10$ à la puissance $9$) donne $9{,}0 \\times 10^{-12}$ ; se tromper de signe à l'exposant donne $10^{-21}$."
-    },
-    {
-      "id": 8,
-      "difficulte": "difficile",
-      "notion": "intensite-niveau-sonore",
-      "enonce": "Une source produit un niveau de $50$ dB. On multiplie son intensité sonore $I$ par $100$. Quel est le nouveau niveau sonore ?",
-      "choix": [
-        "$70$ dB",
-        "$5000$ dB",
-        "$150$ dB",
-        "$52$ dB"
-      ],
-      "reponse": 0,
-      "explication": "Multiplier $I$ par $100 = 10^{2}$ ajoute $10\\log(10^{2}) = 10 \\times 2 = 20$ dB : le niveau passe à $50 + 20 = 70$ dB. On **additionne** $20$ dB, on ne multiplie pas le niveau par $100$ (ce qui donnerait l'absurde $5000$ dB)."
-    },
-    {
-      "id": 9,
-      "difficulte": "difficile",
-      "notion": "interferences",
-      "enonce": "Deux sources synchrones émettent une onde de longueur d'onde $\\lambda = 5{,}0$ cm. En un point M, la différence de marche vaut $\\delta = 12{,}5$ cm. Quelle est la nature de l'interférence ?",
-      "choix": [
-        "constructive, car $\\delta = 2{,}5\\,\\lambda$",
-        "destructive, car $\\delta = \\left(2 + \\tfrac{1}{2}\\right)\\lambda$",
-        "constructive, car $\\delta$ est positif",
-        "destructive, car $\\delta = 5\\lambda$"
-      ],
-      "reponse": 1,
-      "explication": "$\\dfrac{\\delta}{\\lambda} = \\dfrac{12{,}5}{5{,}0} = 2{,}5 = 2 + \\tfrac{1}{2}$ : c'est un **demi-entier**, donc l'interférence est **destructive** ($\\delta = (k+\\tfrac12)\\lambda$ avec $k = 2$). Un $\\delta$ demi-entier de $\\lambda$ annule le signal, même s'il est positif."
-    },
-    {
-      "id": 10,
-      "difficulte": "difficile",
-      "notion": "effet-doppler",
-      "enonce": "Une source sonore émet $f_E = 900$ Hz et se rapproche d'un observateur fixe à $v = 34\\ \\text{m·s}^{-1}$. La célérité du son vaut $c = 340\\ \\text{m·s}^{-1}$. Quelle fréquence $f_R$ l'observateur perçoit-il ?",
-      "choix": [
-        "$1000$ Hz",
-        "$818$ Hz",
-        "$900$ Hz",
-        "$1100$ Hz"
-      ],
-      "reponse": 0,
-      "explication": "La source se **rapproche** : les fronts d'onde se resserrent, donc $f_R = f_E\\,\\dfrac{c}{c-v} = 900 \\times \\dfrac{340}{340-34} = 900 \\times \\dfrac{340}{306} = 1000$ Hz. Le son est plus **aigu**. Utiliser $c+v$ (éloignement) donne à tort $818$ Hz."
-    }
-  ]
+ "id": "tale-spe-pc-phenomenes-ondulatoires-qcm",
+ "chapitre": "tale-spe-pc-phenomenes-ondulatoires",
+ "titre": "QCM — Phénomènes ondulatoires : diffraction, interférences, Doppler",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Dans quelle unité s'exprime le niveau d'intensité sonore $L$ ?",
+   "choix": [
+    "le watt par mètre carré ($\\text{W·m}^{-2}$)",
+    "le décibel (dB)",
+    "le hertz (Hz)",
+    "le watt (W)"
+   ],
+   "reponse": 1,
+   "explication": "Le **niveau** sonore $L = 10\\log(I/I_0)$ est un nombre sans dimension exprimé en **décibels** (dB). Le piège est de le confondre avec l'**intensité** sonore $I$, qui, elle, se mesure en $\\text{W·m}^{-2}$."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "diffraction",
+   "enonce": "La diffraction d'une onde par une ouverture est d'autant plus marquée que l'ouverture est :",
+   "choix": [
+    "grande devant la longueur d'onde $\\lambda$",
+    "petite, du même ordre de grandeur que $\\lambda$",
+    "de couleur sombre",
+    "éclairée par une source puissante"
+   ],
+   "reponse": 1,
+   "explication": "La diffraction devient sensible quand la largeur $a$ de l'ouverture est **du même ordre de grandeur (ou plus petite)** que $\\lambda$. Comme $\\theta = \\lambda/a$, plus $a$ est petit, plus l'onde s'étale. Ni la couleur ni la puissance de la source n'interviennent."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Une intensité sonore vaut $I = 1{,}0 \\times 10^{-8}\\ \\text{W·m}^{-2}$ (avec $I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$). Quel est le niveau sonore $L$ ?",
+   "choix": [
+    "$4{,}0$ dB",
+    "$40$ dB",
+    "$80$ dB",
+    "$-40$ dB"
+   ],
+   "reponse": 1,
+   "explication": "$\\dfrac{I}{I_0} = \\dfrac{10^{-8}}{10^{-12}} = 10^{4}$, donc $L = 10\\log(10^{4}) = 10 \\times 4 = 40$ dB. Oublier le facteur $10$ donne $4{,}0$ dB ; inverser le rapport ($I_0/I$) donne $-40$ dB."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Deux haut-parleurs identiques, mis en marche ensemble, délivrent une intensité sonore **deux fois** plus grande qu'un seul. De combien augmente le niveau sonore $L$ ?",
+   "choix": [
+    "il double",
+    "d'environ $+3$ dB",
+    "de $+10$ dB",
+    "de $+6$ dB"
+   ],
+   "reponse": 1,
+   "explication": "Multiplier $I$ par $2$ ajoute $10\\log 2 \\approx 3{,}0$ dB, **pas** le double du niveau. Le logarithme empêche le niveau de doubler : pour gagner $+10$ dB il faudrait multiplier $I$ par $10$."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "diffraction",
+   "enonce": "Un laser de longueur d'onde $\\lambda = 600$ nm éclaire une fente de largeur $a = 0{,}20$ mm. Quel est le demi-angle de diffraction $\\theta = \\lambda/a$ ?",
+   "choix": [
+    "$3{,}0 \\times 10^{-3}$ rad",
+    "$3{,}0 \\times 10^{-6}$ rad",
+    "$3{,}0 \\times 10^{3}$ rad",
+    "$1{,}2 \\times 10^{-4}$ rad"
+   ],
+   "reponse": 0,
+   "explication": "Il faut tout convertir en mètres : $\\lambda = 6{,}0 \\times 10^{-7}$ m et $a = 0{,}20$ mm $= 2{,}0 \\times 10^{-4}$ m. Alors $\\theta = \\dfrac{6{,}0 \\times 10^{-7}}{2{,}0 \\times 10^{-4}} = 3{,}0 \\times 10^{-3}$ rad. Garder $a$ en mm ($0{,}20$) donne $3{,}0 \\times 10^{-6}$ ; mélanger nm et mm ($600/0{,}20$) donne l'absurde $3{,}0 \\times 10^{3}$ rad."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "interferences",
+   "enonce": "Deux sources synchrones émettent une onde de longueur d'onde $\\lambda = 4{,}0$ cm. En un point M, les distances aux sources sont $d_1 = 10$ cm et $d_2 = 22$ cm. Quelle est la nature de l'interférence en M ?",
+   "choix": [
+    "constructive, car $\\delta = 3\\lambda$",
+    "destructive, car $\\delta = 3\\lambda$",
+    "constructive, car $\\delta = 12\\lambda$",
+    "aucune interférence, car $d_1 \\neq d_2$"
+   ],
+   "reponse": 0,
+   "explication": "La différence de marche vaut $\\delta = d_2 - d_1 = 22 - 10 = 12$ cm $= 3 \\times 4{,}0$ cm $= 3\\lambda$. Comme $k = 3$ est **entier**, l'interférence est **constructive**. Confondre $\\delta$ (en cm) avec le nombre de longueurs d'onde donnerait « $12\\lambda$ »."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Au seuil de la douleur, le niveau sonore atteint $L = 90$ dB. Quelle intensité $I$ cela représente-t-il ($I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$) ?",
+   "choix": [
+    "$1{,}0 \\times 10^{-3}\\ \\text{W·m}^{-2}$",
+    "$9{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$",
+    "$1{,}0 \\times 10^{-21}\\ \\text{W·m}^{-2}$",
+    "$9{,}0 \\times 10^{1}\\ \\text{W·m}^{-2}$"
+   ],
+   "reponse": 0,
+   "explication": "On inverse la formule : $I = I_0 \\times 10^{L/10} = 10^{-12} \\times 10^{90/10} = 10^{-12} \\times 10^{9} = 1{,}0 \\times 10^{-3}\\ \\text{W·m}^{-2}$. Multiplier $I_0$ par $90$ (au lieu d'élever $10$ à la puissance $9$) donne $9{,}0 \\times 10^{-12}$ ; se tromper de signe à l'exposant donne $10^{-21}$."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Une source produit un niveau de $50$ dB. On multiplie son intensité sonore $I$ par $100$. Quel est le nouveau niveau sonore ?",
+   "choix": [
+    "$70$ dB",
+    "$5000$ dB",
+    "$150$ dB",
+    "$52$ dB"
+   ],
+   "reponse": 0,
+   "explication": "Multiplier $I$ par $100 = 10^{2}$ ajoute $10\\log(10^{2}) = 10 \\times 2 = 20$ dB : le niveau passe à $50 + 20 = 70$ dB. On **additionne** $20$ dB, on ne multiplie pas le niveau par $100$ (ce qui donnerait l'absurde $5000$ dB)."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "interferences",
+   "enonce": "Deux sources synchrones émettent une onde de longueur d'onde $\\lambda = 5{,}0$ cm. En un point M, la différence de marche vaut $\\delta = 12{,}5$ cm. Quelle est la nature de l'interférence ?",
+   "choix": [
+    "constructive, car $\\delta = 2{,}5\\,\\lambda$",
+    "destructive, car $\\delta = \\left(2 + \\tfrac{1}{2}\\right)\\lambda$",
+    "constructive, car $\\delta$ est positif",
+    "destructive, car $\\delta = 5\\lambda$"
+   ],
+   "reponse": 1,
+   "explication": "$\\dfrac{\\delta}{\\lambda} = \\dfrac{12{,}5}{5{,}0} = 2{,}5 = 2 + \\tfrac{1}{2}$ : c'est un **demi-entier**, donc l'interférence est **destructive** ($\\delta = (k+\\tfrac12)\\lambda$ avec $k = 2$). Un $\\delta$ demi-entier de $\\lambda$ annule le signal, même s'il est positif."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "effet-doppler",
+   "enonce": "Une source sonore émet $f_E = 900$ Hz et se rapproche d'un observateur fixe à $v = 34\\ \\text{m·s}^{-1}$. La célérité du son vaut $c = 340\\ \\text{m·s}^{-1}$. Quelle fréquence $f_R$ l'observateur perçoit-il ?",
+   "choix": [
+    "$1000$ Hz",
+    "$818$ Hz",
+    "$900$ Hz",
+    "$1100$ Hz"
+   ],
+   "reponse": 0,
+   "explication": "La source se **rapproche** : les fronts d'onde se resserrent, donc $f_R = f_E\\,\\dfrac{c}{c-v} = 900 \\times \\dfrac{340}{340-34} = 900 \\times \\dfrac{340}{306} = 1000$ Hz. Le son est plus **aigu**. Utiliser $c+v$ (éloignement) donne à tort $818$ Hz."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "niveau-sonore",
+   "enonce": "Quelle relation définit le niveau d'intensité sonore $L$ (en dB) à partir de l'intensité $I$ et de l'intensité de référence $I_0$ ?",
+   "choix": [
+    "$L = 10\\ln\\!\\left(\\dfrac{I}{I_0}\\right)$",
+    "$L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$",
+    "$L = \\log\\!\\left(\\dfrac{I}{I_0}\\right)$",
+    "$L = 10\\,\\dfrac{I}{I_0}$"
+   ],
+   "reponse": 1,
+   "explication": "Le niveau d'intensité sonore s'écrit $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$, avec le logarithme **décimal** (base 10) et $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻². Utiliser le logarithme népérien $\\ln$ ou oublier le facteur $10$ fausse le résultat."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "diffraction",
+   "enonce": "Quelle relation donne le demi-angle de diffraction $\\theta$ d'une onde de longueur d'onde $\\lambda$ par une ouverture de largeur $a$ ?",
+   "choix": [
+    "$\\theta = \\dfrac{a}{\\lambda}$",
+    "$\\theta = \\lambda\\,a$",
+    "$\\theta = \\lambda - a$",
+    "$\\theta = \\dfrac{\\lambda}{a}$"
+   ],
+   "reponse": 3,
+   "explication": "L'angle caractéristique de diffraction vaut $\\theta = \\dfrac{\\lambda}{a}$ (en radians), avec $\\lambda$ et $a$ dans la **même unité**. Plus l'ouverture est petite devant $\\lambda$, plus $\\theta$ est grand : la tache centrale s'élargit. Inverser le rapport est une faute fréquente."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "effet-doppler",
+   "enonce": "Une source sonore se rapproche d'un observateur immobile. Comment le son est-il perçu par rapport au son émis ?",
+   "choix": [
+    "Plus aigu (fréquence perçue plus grande)",
+    "Plus grave (fréquence perçue plus petite)",
+    "Identique",
+    "Simplement plus fort"
+   ],
+   "reponse": 0,
+   "explication": "Lorsqu'une source se **rapproche**, les fronts d'onde se resserrent devant elle : la fréquence perçue $f_R = f_E\\dfrac{c}{c-v}$ est **plus grande** que $f_E$, donc le son est plus **aigu**. C'est l'effet Doppler ; quand la source s'éloigne, le son devient au contraire plus grave."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "niveau-sonore",
+   "enonce": "Un son a une intensité $I = 1{,}0 \\times 10^{-8}$ W·m⁻². Quel est son niveau d'intensité sonore ? (On prend $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻².)",
+   "choix": [
+    "$4$ dB",
+    "$80$ dB",
+    "$40$ dB",
+    "$10^{4}$ dB"
+   ],
+   "reponse": 2,
+   "explication": "On calcule $\\dfrac{I}{I_0} = \\dfrac{10^{-8}}{10^{-12}} = 10^{4}$, donc $L = 10\\log(10^{4}) = 10 \\times 4 = 40$ dB. Oublier le facteur $10$ devant le logarithme donne $4$ dB ; garder le rapport $10^{4}$ comme résultat oublie complètement le logarithme."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "niveau-sonore",
+   "enonce": "On multiplie l'intensité sonore $I$ d'une source par $100$. De combien augmente le niveau d'intensité sonore ?",
+   "choix": [
+    "$+100$ dB",
+    "$+3$ dB",
+    "$+2$ dB",
+    "$+20$ dB"
+   ],
+   "reponse": 3,
+   "explication": "Le logarithme transforme le produit en somme : $L' - L = 10\\log(100) = 10 \\times 2 = 20$ dB. Multiplier $I$ par $100$ ajoute donc $20$ dB (et non $100$ dB). Pour mémoire, multiplier $I$ par $2$ n'ajoute qu'environ $3$ dB."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "diffraction",
+   "enonce": "Un faisceau laser de longueur d'onde $\\lambda = 600$ nm est diffracté par une fente de largeur $a = 0{,}20$ mm. Quel est le demi-angle de diffraction $\\theta$ ?",
+   "choix": [
+    "$3{,}0 \\times 10^{-3}$ rad",
+    "$3{,}0 \\times 10^{-11}$ rad",
+    "$3{,}3 \\times 10^{2}$ rad",
+    "$1{,}2 \\times 10^{-10}$ rad"
+   ],
+   "reponse": 0,
+   "explication": "On convertit dans la même unité (des mètres) : $\\lambda = 6{,}0 \\times 10^{-7}$ m, $a = 2{,}0 \\times 10^{-4}$ m. Alors $\\theta = \\dfrac{\\lambda}{a} = \\dfrac{6{,}0 \\times 10^{-7}}{2{,}0 \\times 10^{-4}} = 3{,}0 \\times 10^{-3}$ rad. Inverser le rapport donne un angle absurde ($3{,}3 \\times 10^{2}$ rad)."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "interferences",
+   "enonce": "Deux sources synchrones émettent des ondes de longueur d'onde $\\lambda = 4{,}0$ cm. En un point M, la différence de marche vaut $\\delta = 12$ cm. Quel type d'interférence observe-t-on en M ?",
+   "choix": [
+    "Destructive, car $\\delta$ est un demi-entier de $\\lambda$",
+    "Aucune interférence",
+    "Constructive, car $\\delta = 3\\lambda$ est un multiple entier de $\\lambda$",
+    "Le type ne peut pas être déterminé"
+   ],
+   "reponse": 2,
+   "explication": "On compare $\\delta$ à $\\lambda$ : $\\dfrac{\\delta}{\\lambda} = \\dfrac{12}{4{,}0} = 3$, un **entier**. La condition $\\delta = k\\lambda$ (avec $k = 3$) est satisfaite : les ondes arrivent en phase, l'interférence est **constructive** (signal renforcé)."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "intensite-sonore",
+   "enonce": "Un niveau d'intensité sonore vaut $L = 90$ dB. Quelle est l'intensité sonore correspondante ? (On prend $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻².)",
+   "choix": [
+    "$9{,}0 \\times 10^{-12}$ W·m⁻²",
+    "$1{,}0 \\times 10^{-3}$ W·m⁻²",
+    "$1{,}0 \\times 10^{-21}$ W·m⁻²",
+    "$90$ W·m⁻²"
+   ],
+   "reponse": 1,
+   "explication": "On inverse la relation : $I = I_0 \\times 10^{L/10} = 10^{-12} \\times 10^{90/10} = 10^{-12} \\times 10^{9} = 1{,}0 \\times 10^{-3}$ W·m⁻². Multiplier $I_0$ par $L$ (au lieu d'élever $10$ à la puissance $L/10$) donne $9{,}0 \\times 10^{-12}$, ce qui néglige la nature logarithmique de l'échelle."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "interferences",
+   "enonce": "Deux sources synchrones émettent des ondes de longueur d'onde $\\lambda = 6{,}0$ cm. En un point M, la différence de marche vaut $\\delta = 15$ cm. Quel type d'interférence observe-t-on en M ?",
+   "choix": [
+    "Constructive, car $\\delta$ est un multiple entier de $\\lambda$",
+    "Constructive puis destructive",
+    "Aucune interférence",
+    "Destructive, car $\\delta = 2{,}5\\,\\lambda$ est un demi-entier de $\\lambda$"
+   ],
+   "reponse": 3,
+   "explication": "On calcule $\\dfrac{\\delta}{\\lambda} = \\dfrac{15}{6{,}0} = 2{,}5 = 2 + \\tfrac{1}{2}$, un **demi-entier**. La condition $\\delta = \\left(k + \\tfrac{1}{2}\\right)\\lambda$ (avec $k = 2$) est vérifiée : les ondes sont en opposition de phase, l'interférence est **destructive** (signal minimal, voire nul)."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "effet-doppler",
+   "enonce": "Une source sonore émet une fréquence $f_E = 680$ Hz et se rapproche d'un observateur immobile à la vitesse $v = 20$ m·s⁻¹. Quelle fréquence perçoit l'observateur ? (On prend $c = 340$ m·s⁻¹.)",
+   "choix": [
+    "$723$ Hz",
+    "$640$ Hz",
+    "$700$ Hz",
+    "$680$ Hz"
+   ],
+   "reponse": 0,
+   "explication": "Pour un rapprochement, $f_R = f_E\\dfrac{c}{c - v} = 680 \\times \\dfrac{340}{340 - 20} = 680 \\times \\dfrac{340}{320} \\approx 723$ Hz : la fréquence perçue augmente (son plus aigu). Utiliser $c + v$ au dénominateur (cas de l'éloignement) donnerait à tort $\\approx 640$ Hz."
+  }
+ ]
 }

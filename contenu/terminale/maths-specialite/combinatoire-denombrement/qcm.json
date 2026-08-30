@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "factorielle",
       "enonce": "Combien vaut $4!$ ?",
-      "choix": ["$12$", "$16$", "$24$", "$10$"],
+      "choix": [
+        "$12$",
+        "$16$",
+        "$24$",
+        "$10$"
+      ],
       "reponse": 2,
       "explication": "$4! = 1 \\times 2 \\times 3 \\times 4 = 24$. Piège classique : $16 = 4^2$ (une puissance, pas une factorielle) et $10 = 1+2+3+4$ (une somme). La factorielle est un **produit**."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "principe-multiplicatif",
       "enonce": "Un menu se compose d'une entrée parmi 3 **et** d'un plat parmi 4. Combien de menus différents ?",
-      "choix": ["$7$", "$12$", "$34$", "$81$"],
+      "choix": [
+        "$7$",
+        "$12$",
+        "$34$",
+        "$81$"
+      ],
       "reponse": 1,
       "explication": "Choix en deux étapes successives (« et ») : on **multiplie**, $3 \\times 4 = 12$. Le piège est d'additionner ($3+4=7$) : on additionne seulement quand il faut choisir **soit** l'un **soit** l'autre (cas disjoints)."
     },
@@ -33,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "combinaison",
       "enonce": "De combien de façons peut-on choisir 2 délégués parmi 6 élèves (l'ordre n'a pas d'importance) ?",
-      "choix": ["$15$", "$30$", "$36$", "$12$"],
+      "choix": [
+        "$15$",
+        "$30$",
+        "$36$",
+        "$12$"
+      ],
       "reponse": 0,
       "explication": "L'ordre ne compte pas : c'est une combinaison, $\\binom{6}{2} = \\dfrac{6 \\times 5}{2} = 15$. Le piège $30$ est $A_6^2 = 6\\times5$ : il **compte l'ordre** et surcompte chaque paire deux fois. Le $36 = 6^2$ (p-liste avec répétition) n'a pas lieu d'être ici."
     },
@@ -42,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "arrangement",
       "enonce": "Un podium (1er, 2e, 3e) est attribué à 3 coureurs parmi 5. Combien de podiums possibles ?",
-      "choix": ["$10$", "$60$", "$125$", "$15$"],
+      "choix": [
+        "$10$",
+        "$60$",
+        "$125$",
+        "$15$"
+      ],
       "reponse": 1,
       "explication": "L'ordre compte (1er ≠ 2e), sans répétition : arrangement $A_5^3 = 5\\times4\\times3 = 60$. Le piège $10 = \\binom{5}{3}$ oublie l'ordre ; $125 = 5^3$ autoriserait à tort un même coureur sur deux marches."
     },
@@ -51,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "p-liste",
       "enonce": "Combien de codes de 3 chiffres (de 0 à 9) peut-on former, répétitions autorisées ?",
-      "choix": ["$30$", "$720$", "$999$", "$1000$"],
+      "choix": [
+        "$30$",
+        "$720$",
+        "$999$",
+        "$1000$"
+      ],
       "reponse": 3,
       "explication": "Ordre et répétition : p-liste, $10^3 = 1000$. Chaque position a 10 possibilités indépendantes. Le piège $720 = A_{10}^3$ interdirait à tort la répétition (000, 121… seraient exclus)."
     },
@@ -60,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "symetrie",
       "enonce": "En utilisant la symétrie des coefficients binomiaux, combien vaut $\\binom{10}{8}$ ?",
-      "choix": ["$45$", "$80$", "$90$", "$20$"],
+      "choix": [
+        "$45$",
+        "$80$",
+        "$90$",
+        "$20$"
+      ],
       "reponse": 0,
       "explication": "Symétrie : $\\binom{10}{8} = \\binom{10}{2} = \\dfrac{10 \\times 9}{2} = 45$. Choisir les 8 qu'on garde revient à choisir les 2 qu'on écarte. Le piège $90 = A_{10}^2 = 10\\times9$ compte l'ordre ; il faut diviser par $2! = 2$."
     },
@@ -69,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "pascal",
       "enonce": "En utilisant la relation de Pascal $\\binom{6}{3} = \\binom{5}{2} + \\binom{5}{3}$, combien vaut $\\binom{6}{3}$ ?",
-      "choix": ["$18$", "$20$", "$15$", "$40$"],
+      "choix": [
+        "$18$",
+        "$20$",
+        "$15$",
+        "$40$"
+      ],
       "reponse": 1,
       "explication": "$\\binom{5}{2} = 10$ et $\\binom{5}{3} = \\binom{5}{2} = 10$, donc $\\binom{6}{3} = 10 + 10 = 20$. Le piège $15 = \\binom{6}{2}$ : c'est le voisin dans le triangle, pas la valeur cherchée."
     },
@@ -78,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "permutation",
       "enonce": "De combien de façons peut-on ranger 5 livres différents côte à côte sur une étagère ?",
-      "choix": ["$25$", "$3125$", "$10$", "$120$"],
+      "choix": [
+        "$25$",
+        "$3125$",
+        "$10$",
+        "$120$"
+      ],
       "reponse": 3,
       "explication": "On range **tous** les objets dans un ordre, sans répétition : permutation, $5! = 120$. Le piège $3125 = 5^5$ autoriserait de répéter un même livre à plusieurs places ; $25 = 5^2$ n'a aucun sens ici."
     },
@@ -87,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "combinaison",
       "enonce": "On forme un comité de 3 personnes parmi 10 (sans rôle attribué). Combien de comités possibles ?",
-      "choix": ["$720$", "$1000$", "$120$", "$30$"],
+      "choix": [
+        "$720$",
+        "$1000$",
+        "$120$",
+        "$30$"
+      ],
       "reponse": 2,
       "explication": "Aucun ordre entre les membres : combinaison $\\binom{10}{3} = \\dfrac{10 \\times 9 \\times 8}{3!} = \\dfrac{720}{6} = 120$. Le piège $720 = A_{10}^3$ oublie de **diviser par $3! = 6$** : il compte les $3! = 6$ ordres du même comité comme distincts."
     },
@@ -96,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "principe-additif",
       "enonce": "Dans une classe, 18 élèves font de l'anglais, 12 de l'espagnol, et 5 font les deux. Combien font au moins une de ces langues ?",
-      "choix": ["$30$", "$35$", "$23$", "$25$"],
+      "choix": [
+        "$30$",
+        "$35$",
+        "$23$",
+        "$25$"
+      ],
       "reponse": 3,
       "explication": "Les deux groupes se chevauchent : $\\mathrm{Card}(A \\cup B) = 18 + 12 - 5 = 25$. Le piège $30 = 18 + 12$ additionne sans retirer l'intersection, et compte donc **deux fois** les 5 bilingues."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "factorielle",
+      "enonce": "Par convention, combien vaut $0!$ ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "indéfini",
+        "$10$"
+      ],
+      "reponse": 1,
+      "explication": "Par convention, $0! = 1$ : c'est la seule façon de « ne rien ranger », et cela rend cohérentes toutes les formules de dénombrement. Le piège est de croire que $0! = 0$ et de bloquer dessus."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "coefficients-binomiaux",
+      "enonce": "Combien vaut $\\binom{7}{1}$ ?",
+      "choix": [
+        "$1$",
+        "$7$",
+        "$49$",
+        "$5040$"
+      ],
+      "reponse": 1,
+      "explication": "$\\binom{n}{1} = n$ : il y a $n$ façons de choisir un seul élément, donc $\\binom{7}{1} = 7$. Le piège $49 = 7^2$ et $5040 = 7!$ confondent avec d'autres opérations."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "principe-additif",
+      "enonce": "Pour un dessert, on choisit **soit** un gâteau parmi 3, **soit** une glace parmi 2 (pas les deux). Combien de choix possibles ?",
+      "choix": [
+        "$5$",
+        "$6$",
+        "$3$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "Les deux cas sont disjoints (« soit... soit ») : on ADDITIONNE, $3 + 2 = 5$. Le piège $6 = 3 \\times 2$ multiplie, ce qui vaudrait pour deux étapes successives (« et »), pas pour un choix unique entre deux familles."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "reconnaitre-modele",
+      "enonce": "On distribue une « main » de 5 cartes prises dans un jeu de 52 (l'ordre de réception n'a pas d'importance). Quel modèle décrit le nombre de mains ?",
+      "choix": [
+        "une $p$-liste, $52^{5}$",
+        "une combinaison, $\\binom{52}{5}$",
+        "un arrangement, $A_{52}^{5}$",
+        "une permutation, $52!$"
+      ],
+      "reponse": 1,
+      "explication": "Dans une main, l'ordre des cartes ne compte pas et on ne prend pas deux fois la même carte : c'est une combinaison, $\\binom{52}{5}$. L'arrangement $A_{52}^{5}$ compterait l'ordre et surcompterait chaque main $5!$ fois."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "lien-arrangement-combinaison",
+      "enonce": "Quelle relation lie l'arrangement $A_n^p$ et la combinaison $\\binom{n}{p}$ ?",
+      "choix": [
+        "$A_n^p = \\binom{n}{p} \\times p!$",
+        "$A_n^p = \\binom{n}{p} + p!$",
+        "$A_n^p = \\dfrac{\\binom{n}{p}}{p!}$",
+        "$A_n^p = \\binom{n}{p} \\times n!$"
+      ],
+      "reponse": 0,
+      "explication": "Un arrangement, c'est CHOISIR $p$ éléments (combinaison) PUIS les ranger ($p!$ ordres) : $A_n^p = \\binom{n}{p} \\times p!$. On en déduit $\\binom{n}{p} = \\dfrac{A_n^p}{p!}$ : la combinaison divise l'arrangement par $p!$, elle ne le multiplie pas."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "p-liste",
+      "enonce": "Une plaque est formée de 2 lettres (parmi 26) suivies de 3 chiffres (parmi 10), avec répétitions autorisées. Combien de plaques différentes ?",
+      "choix": [
+        "$26^{2} \\times 10^{3}$",
+        "$26 \\times 10$",
+        "$26! \\times 10!$",
+        "$A_{26}^{2} \\times A_{10}^{3}$"
+      ],
+      "reponse": 0,
+      "explication": "Chaque position est un choix indépendant avec répétition (principe multiplicatif) : $26^{2} \\times 10^{3}$. Le choix $A_{26}^{2} \\times A_{10}^{3}$ interdirait à tort les répétitions (comme AA ou 111)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "arrangement",
+      "enonce": "Dans une association de 8 membres, on attribue trois postes DISTINCTS : président, secrétaire, trésorier. Combien de répartitions possibles ?",
+      "choix": [
+        "$336$",
+        "$56$",
+        "$512$",
+        "$40320$"
+      ],
+      "reponse": 0,
+      "explication": "Les postes sont distincts, donc l'ordre compte, sans répétition : arrangement $A_8^3 = 8 \\times 7 \\times 6 = 336$. Le piège $56 = \\binom{8}{3}$ oublie que les rôles sont différents ; $512 = 8^3$ laisserait une même personne cumuler les postes."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "combinaison",
+      "enonce": "Combien de façons de choisir 3 fruits parmi 7 fruits différents (sans ordre) ?",
+      "choix": [
+        "$35$",
+        "$210$",
+        "$21$",
+        "$343$"
+      ],
+      "reponse": 0,
+      "explication": "Combinaison : $\\binom{7}{3} = \\dfrac{7 \\times 6 \\times 5}{3!} = \\dfrac{210}{6} = 35$. Le piège $210 = A_7^3$ oublie de diviser par $3! = 6$ et compte donc chaque sélection dans ses 6 ordres."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "symetrie",
+      "enonce": "En exploitant la symétrie des coefficients binomiaux, combien vaut $\\binom{20}{18}$ ?",
+      "choix": [
+        "$190$",
+        "$380$",
+        "$20$",
+        "$18$"
+      ],
+      "reponse": 0,
+      "explication": "Symétrie : $\\binom{20}{18} = \\binom{20}{2} = \\dfrac{20 \\times 19}{2} = 190$. Choisir les 18 qu'on garde revient à choisir les 2 qu'on écarte. Le piège $380 = A_{20}^2 = 20 \\times 19$ compte l'ordre ; il faut diviser par $2!$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "p-liste",
+      "enonce": "Un questionnaire comporte 10 questions, chacune à répondre par « Vrai » ou « Faux ». Combien de grilles de réponses différentes peut-on remplir ?",
+      "choix": [
+        "$1024$",
+        "$20$",
+        "$100$",
+        "$3\\,628\\,800$"
+      ],
+      "reponse": 0,
+      "explication": "Chaque question a 2 réponses possibles, indépendamment des autres : c'est une $p$-liste, $2^{10} = 1024$. Le piège $20 = 2 \\times 10$ confond avec un simple produit à deux facteurs ; $3\\,628\\,800 = 10!$ n'a pas de sens ici."
     }
   ]
 }

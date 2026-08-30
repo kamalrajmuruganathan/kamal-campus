@@ -119,6 +119,111 @@
       ],
       "reponse": 1,
       "explication": "La phase à l'origine **décale la courbe horizontalement**, sans toucher ni à l'amplitude (fixée par $A$) ni à la période (fixée par $\\omega$). C'est elle qui traduit le déphasage entre deux signaux, notion centrale en électricité."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "conversion",
+      "enonce": "À combien de radians correspond un angle de $90°$ ?",
+      "choix": ["$\\dfrac{\\pi}{2}$", "$\\pi$", "$\\dfrac{\\pi}{4}$", "$90$"],
+      "reponse": 0,
+      "explication": "$90° = 90 \\times \\dfrac{\\pi}{180} = \\dfrac{\\pi}{2}$ rad. C'est la moitié de $\\pi$ (qui vaut $180°$). Le quart de tour vaut donc $\\dfrac{\\pi}{2}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "valeurs-remarquables",
+      "enonce": "Que vaut $\\sin\\left(\\dfrac{\\pi}{2}\\right)$ ?",
+      "choix": ["$0$", "$1$", "$\\dfrac{\\sqrt{2}}{2}$", "$\\dfrac{1}{2}$"],
+      "reponse": 1,
+      "explication": "En $\\dfrac{\\pi}{2}$, le point du cercle est en haut, de coordonnées $(0\\,;1)$ : le sinus (ordonnée) vaut $1$ et le cosinus (abscisse) vaut $0$. Les intervertir est l'erreur classique."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "amplitude",
+      "enonce": "La tension du réseau s'écrit $u(t) = 325\\cos(100\\pi\\,t)$. Entre quelles valeurs varie-t-elle ?",
+      "choix": [
+        "entre $-325$ et $325$ V",
+        "entre $0$ et $325$ V",
+        "entre $-100\\pi$ et $100\\pi$ V",
+        "entre $-50$ et $50$ V"
+      ],
+      "reponse": 0,
+      "explication": "L'amplitude $A = 325$ V fixe les extrêmes : le signal oscille entre $-A$ et $+A$, soit $-325$ V et $325$ V. Le $100\\pi$ est la pulsation, pas une tension."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "frequence",
+      "enonce": "Un signal a pour période $T = 0{,}04$ s. Quelle est sa fréquence ?",
+      "choix": ["$25$ Hz", "$0{,}04$ Hz", "$40$ Hz", "$4$ Hz"],
+      "reponse": 0,
+      "explication": "$f = \\dfrac{1}{T} = \\dfrac{1}{0{,}04} = 25$ Hz. Le piège est de mal placer la virgule : $\\dfrac{1}{0{,}04} = \\dfrac{100}{4} = 25$, pas $40$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "conversion",
+      "enonce": "Convertir $\\dfrac{\\pi}{6}$ radians en degrés.",
+      "choix": ["$30°$", "$60°$", "$45°$", "$15°$"],
+      "reponse": 0,
+      "explication": "$\\dfrac{\\pi}{6} \\times \\dfrac{180}{\\pi} = \\dfrac{180}{6} = 30°$. Confondre avec $\\dfrac{\\pi}{3}$ (qui donne $60°$) est fréquent : plus le dénominateur est grand, plus l'angle est petit."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "pulsation-frequence",
+      "enonce": "Un signal a une fréquence $f = 50$ Hz. Quelle est sa pulsation $\\omega$ ?",
+      "choix": [
+        "$100\\pi$ rad·s⁻¹",
+        "$50$ rad·s⁻¹",
+        "$\\dfrac{50}{2\\pi}$ rad·s⁻¹",
+        "$25\\pi$ rad·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "$\\omega = 2\\pi f = 2\\pi \\times 50 = 100\\pi$ rad·s⁻¹. Confondre pulsation et fréquence ($\\omega = 50$) est l'erreur à éviter : il manque le facteur $2\\pi$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "Que vaut $\\sin(-x)$ ?",
+      "choix": ["$\\sin x$", "$-\\sin x$", "$\\cos x$", "$-\\cos x$"],
+      "reponse": 1,
+      "explication": "Le sinus est une fonction **impaire** : $\\sin(-x) = -\\sin x$. Sur le cercle, $-x$ est le symétrique de $x$ par rapport à l'axe des abscisses, ce qui change le signe de l'ordonnée (le sinus). Le cosinus, lui, est pair."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "equation",
+      "enonce": "Sur l'intervalle $[0\\,;2\\pi[$, quelles sont les solutions de $\\cos x = \\dfrac{1}{2}$ ?",
+      "choix": [
+        "$\\dfrac{\\pi}{3}$ et $\\dfrac{5\\pi}{3}$",
+        "$\\dfrac{\\pi}{3}$ et $\\dfrac{2\\pi}{3}$",
+        "$\\dfrac{\\pi}{6}$ et $\\dfrac{5\\pi}{6}$",
+        "$\\dfrac{\\pi}{3}$ seulement"
+      ],
+      "reponse": 0,
+      "explication": "On lit $\\dfrac{1}{2}$ sur l'axe des abscisses : deux points du cercle, symétriques par rapport à cet axe, donnent $\\dfrac{\\pi}{3}$ et $2\\pi - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{3}$. Le choix $\\dfrac{2\\pi}{3}$ correspondrait à une lecture sur l'axe des ordonnées."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "angles-associes",
+      "enonce": "Que vaut $\\sin(\\pi - x)$ ?",
+      "choix": ["$\\sin x$", "$-\\sin x$", "$\\cos x$", "$-\\cos x$"],
+      "reponse": 0,
+      "explication": "$\\pi - x$ est le symétrique de $x$ par rapport à l'axe des ordonnées : l'ordonnée (le sinus) est conservée, d'où $\\sin(\\pi - x) = \\sin x$. En revanche $\\cos(\\pi - x) = -\\cos x$, l'abscisse changeant de signe."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "relation-fondamentale",
+      "enonce": "Si $\\sin x = 0{,}6$ et $\\cos x < 0$, que vaut $\\cos x$ ?",
+      "choix": ["$-0{,}8$", "$0{,}8$", "$-0{,}4$", "$0{,}4$"],
+      "reponse": 0,
+      "explication": "$\\cos^2 x = 1 - \\sin^2 x = 1 - 0{,}36 = 0{,}64$, donc $\\cos x = \\pm 0{,}8$. La condition $\\cos x < 0$ impose $-0{,}8$. Le choix $-0{,}4$ oublie de prendre la racine carrée de $0{,}64$."
     }
   ]
 }

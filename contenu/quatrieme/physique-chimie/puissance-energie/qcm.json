@@ -1,154 +1,294 @@
 {
- "id": "4e-pc-puissance-energie-qcm",
- "chapitre": "4e-pc-puissance-energie",
- "titre": "QCM — Puissance et énergie",
- "voie": "college",
- "niveau": "quatrieme",
- "parcours": "physique-chimie",
- "matiere": "physique-chimie",
- "statut": "brouillon",
- "relu_par": null,
- "consigne": "Une seule réponse correcte par question.",
- "questions": [
-  {
-   "id": 1,
-   "difficulte": "facile",
-   "notion": "energie-unite",
-   "enonce": "Quelle est l'unité de l'énergie dans le système international ?",
-   "choix": [
-    "Le watt (W)",
-    "Le joule (J)",
-    "Le volt (V)",
-    "L'ampère (A)"
-   ],
-   "reponse": 1,
-   "explication": "L'énergie se mesure en **joule** (J). Le piège est de répondre « watt » : le watt est l'unité de la **puissance**, pas de l'énergie."
-  },
-  {
-   "id": 2,
-   "difficulte": "facile",
-   "notion": "modes-transfert",
-   "enonce": "Le Soleil chauffe ta peau à distance, sans aucun contact. De quel mode de transfert d'énergie s'agit-il ?",
-   "choix": [
-    "Transfert thermique",
-    "Transfert électrique",
-    "Transfert par rayonnement",
-    "Transfert mécanique"
-   ],
-   "reponse": 2,
-   "explication": "L'énergie du Soleil voyage par la **lumière**, sans support matériel : c'est le **rayonnement**. Le transfert thermique, lui, se fait par contact du chaud vers le froid."
-  },
-  {
-   "id": 3,
-   "difficulte": "moyen",
-   "notion": "puissance-formule",
-   "enonce": "Un appareil transfère une énergie $E = 600$ J en $t = 30$ s. Quelle est sa puissance ?",
-   "choix": [
-    "$20$ W",
-    "$18\\,000$ W",
-    "$0{,}05$ W",
-    "$630$ W"
-   ],
-   "reponse": 0,
-   "explication": "$P = \\dfrac{E}{t} = \\dfrac{600}{30} = 20$ W. Le choix $18\\,000$ multiplie au lieu de diviser ; le choix $0{,}05$ inverse la fraction."
-  },
-  {
-   "id": 4,
-   "difficulte": "moyen",
-   "notion": "puissance-electrique",
-   "enonce": "Une lampe est soumise à une tension $U = 12$ V et parcourue par une intensité $I = 0{,}5$ A. Quelle est sa puissance ?",
-   "choix": [
-    "$24$ W",
-    "$12{,}5$ W",
-    "$6$ W",
-    "$0{,}5$ W"
-   ],
-   "reponse": 2,
-   "explication": "$P = U \\times I = 12 \\times 0{,}5 = 6$ W. Le choix $24$ divise au lieu de multiplier ; le choix $12{,}5$ additionne $U$ et $I$."
-  },
-  {
-   "id": 5,
-   "difficulte": "moyen",
-   "notion": "energie-formule",
-   "enonce": "Un radiateur de puissance $P = 1500$ W fonctionne pendant $t = 10$ s. Quelle énergie transfère-t-il ?",
-   "choix": [
-    "$150$ J",
-    "$1510$ J",
-    "$15\\,000$ J",
-    "$0{,}0067$ J"
-   ],
-   "reponse": 2,
-   "explication": "$E = P \\times t = 1500 \\times 10 = 15\\,000$ J. Le choix $150$ divise au lieu de multiplier ; l'énergie s'obtient en multipliant la puissance par la durée."
-  },
-  {
-   "id": 6,
-   "difficulte": "moyen",
-   "notion": "generateur",
-   "enonce": "Un générateur alimente une lampe de $30$ W et un moteur de $45$ W. Quelle puissance fournit-il ?",
-   "choix": [
-    "$15$ W",
-    "$75$ W",
-    "$1350$ W",
-    "$37{,}5$ W"
-   ],
-   "reponse": 1,
-   "explication": "La puissance du générateur est la **somme** des puissances des dipôles : $30 + 45 = 75$ W. Le choix $15$ soustrait, le choix $1350$ multiplie."
-  },
-  {
-   "id": 7,
-   "difficulte": "difficile",
-   "notion": "conversion-duree",
-   "enonce": "Une bouilloire transfère $E = 180\\,000$ J en $3{,}0$ minutes. Quelle est sa puissance ?",
-   "choix": [
-    "$60\\,000$ W",
-    "$1000$ W",
-    "$540\\,000$ W",
-    "$100$ W"
-   ],
-   "reponse": 1,
-   "explication": "Il faut convertir la durée en secondes : $3{,}0$ min $= 180$ s. Alors $P = \\dfrac{180\\,000}{180} = 1000$ W. Le choix $60\\,000$ oublie de convertir et divise par $3$ au lieu de $180$."
-  },
-  {
-   "id": 8,
-   "difficulte": "difficile",
-   "notion": "puissance-electrique",
-   "enonce": "Un chargeur fonctionne sous $U = 5{,}0$ V avec une intensité $I = 400$ mA. Quelle est sa puissance ?",
-   "choix": [
-    "$2000$ W",
-    "$2{,}0$ W",
-    "$80$ W",
-    "$0{,}0125$ W"
-   ],
-   "reponse": 1,
-   "explication": "Il faut convertir l'intensité en ampères : $400$ mA $= 0{,}400$ A. Alors $P = U \\times I = 5{,}0 \\times 0{,}400 = 2{,}0$ W. Le choix $2000$ laisse l'intensité en milliampères."
-  },
-  {
-   "id": 9,
-   "difficulte": "difficile",
-   "notion": "energie-inverse",
-   "enonce": "Une ampoule de $60$ W a transféré une énergie de $1{,}8 \\times 10^{4}$ J. Pendant combien de temps a-t-elle fonctionné ?",
-   "choix": [
-    "$5$ min",
-    "$1{,}08 \\times 10^{6}$ s",
-    "$3{,}3 \\times 10^{-3}$ s",
-    "$300$ min"
-   ],
-   "reponse": 0,
-   "explication": "De $P = \\dfrac{E}{t}$ on tire $t = \\dfrac{E}{P} = \\dfrac{18\\,000}{60} = 300$ s, soit $5$ min. Le choix $1{,}08 \\times 10^{6}$ multiplie $E$ par $P$ au lieu de diviser."
-  },
-  {
-   "id": 10,
-   "difficulte": "difficile",
-   "notion": "generateur",
-   "enonce": "Un générateur fournit $100$ W. Il alimente déjà une lampe de $40$ W. On y branche en plus un moteur. Que peut-on dire ?",
-   "choix": [
-    "Le moteur reçoit $100$ W",
-    "Le moteur reçoit $60$ W, car la somme des puissances des dipôles égale celle du générateur",
-    "La lampe s'éteint car le générateur est saturé",
-    "Le générateur fournit maintenant $140$ W automatiquement"
-   ],
-   "reponse": 1,
-   "explication": "La puissance du générateur ($100$ W) est la **somme** des puissances des dipôles : lampe ($40$ W) + moteur. Donc le moteur reçoit $100 - 40 = 60$ W. Le générateur ne change pas de puissance tout seul : ce sont les dipôles qui se partagent les $100$ W."
-  }
- ]
+  "id": "4e-pc-puissance-energie-qcm",
+  "chapitre": "4e-pc-puissance-energie",
+  "titre": "QCM — Puissance et énergie",
+  "voie": "college",
+  "niveau": "quatrieme",
+  "parcours": "physique-chimie",
+  "matiere": "physique-chimie",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "energie-unite",
+      "enonce": "Quelle est l'unité de l'énergie dans le système international ?",
+      "choix": [
+        "Le watt (W)",
+        "Le joule (J)",
+        "Le volt (V)",
+        "L'ampère (A)"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie se mesure en **joule** (J). Le piège est de répondre « watt » : le watt est l'unité de la **puissance**, pas de l'énergie."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "modes-transfert",
+      "enonce": "Le Soleil chauffe ta peau à distance, sans aucun contact. De quel mode de transfert d'énergie s'agit-il ?",
+      "choix": [
+        "Transfert thermique",
+        "Transfert électrique",
+        "Transfert par rayonnement",
+        "Transfert mécanique"
+      ],
+      "reponse": 2,
+      "explication": "L'énergie du Soleil voyage par la **lumière**, sans support matériel : c'est le **rayonnement**. Le transfert thermique, lui, se fait par contact du chaud vers le froid."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "puissance-formule",
+      "enonce": "Un appareil transfère une énergie $E = 600$ J en $t = 30$ s. Quelle est sa puissance ?",
+      "choix": [
+        "$20$ W",
+        "$18\\,000$ W",
+        "$0{,}05$ W",
+        "$630$ W"
+      ],
+      "reponse": 0,
+      "explication": "$P = \\dfrac{E}{t} = \\dfrac{600}{30} = 20$ W. Le choix $18\\,000$ multiplie au lieu de diviser ; le choix $0{,}05$ inverse la fraction."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "puissance-electrique",
+      "enonce": "Une lampe est soumise à une tension $U = 12$ V et parcourue par une intensité $I = 0{,}5$ A. Quelle est sa puissance ?",
+      "choix": [
+        "$24$ W",
+        "$12{,}5$ W",
+        "$6$ W",
+        "$0{,}5$ W"
+      ],
+      "reponse": 2,
+      "explication": "$P = U \\times I = 12 \\times 0{,}5 = 6$ W. Le choix $24$ divise au lieu de multiplier ; le choix $12{,}5$ additionne $U$ et $I$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "energie-formule",
+      "enonce": "Un radiateur de puissance $P = 1500$ W fonctionne pendant $t = 10$ s. Quelle énergie transfère-t-il ?",
+      "choix": [
+        "$150$ J",
+        "$1510$ J",
+        "$15\\,000$ J",
+        "$0{,}0067$ J"
+      ],
+      "reponse": 2,
+      "explication": "$E = P \\times t = 1500 \\times 10 = 15\\,000$ J. Le choix $150$ divise au lieu de multiplier ; l'énergie s'obtient en multipliant la puissance par la durée."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "generateur",
+      "enonce": "Un générateur alimente une lampe de $30$ W et un moteur de $45$ W. Quelle puissance fournit-il ?",
+      "choix": [
+        "$15$ W",
+        "$75$ W",
+        "$1350$ W",
+        "$37{,}5$ W"
+      ],
+      "reponse": 1,
+      "explication": "La puissance du générateur est la **somme** des puissances des dipôles : $30 + 45 = 75$ W. Le choix $15$ soustrait, le choix $1350$ multiplie."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "conversion-duree",
+      "enonce": "Une bouilloire transfère $E = 180\\,000$ J en $3{,}0$ minutes. Quelle est sa puissance ?",
+      "choix": [
+        "$60\\,000$ W",
+        "$1000$ W",
+        "$540\\,000$ W",
+        "$100$ W"
+      ],
+      "reponse": 1,
+      "explication": "Il faut convertir la durée en secondes : $3{,}0$ min $= 180$ s. Alors $P = \\dfrac{180\\,000}{180} = 1000$ W. Le choix $60\\,000$ oublie de convertir et divise par $3$ au lieu de $180$."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "puissance-electrique",
+      "enonce": "Un chargeur fonctionne sous $U = 5{,}0$ V avec une intensité $I = 400$ mA. Quelle est sa puissance ?",
+      "choix": [
+        "$2000$ W",
+        "$2{,}0$ W",
+        "$80$ W",
+        "$0{,}0125$ W"
+      ],
+      "reponse": 1,
+      "explication": "Il faut convertir l'intensité en ampères : $400$ mA $= 0{,}400$ A. Alors $P = U \\times I = 5{,}0 \\times 0{,}400 = 2{,}0$ W. Le choix $2000$ laisse l'intensité en milliampères."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "energie-inverse",
+      "enonce": "Une ampoule de $60$ W a transféré une énergie de $1{,}8 \\times 10^{4}$ J. Pendant combien de temps a-t-elle fonctionné ?",
+      "choix": [
+        "$5$ min",
+        "$1{,}08 \\times 10^{6}$ s",
+        "$3{,}3 \\times 10^{-3}$ s",
+        "$300$ min"
+      ],
+      "reponse": 0,
+      "explication": "De $P = \\dfrac{E}{t}$ on tire $t = \\dfrac{E}{P} = \\dfrac{18\\,000}{60} = 300$ s, soit $5$ min. Le choix $1{,}08 \\times 10^{6}$ multiplie $E$ par $P$ au lieu de diviser."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "generateur",
+      "enonce": "Un générateur fournit $100$ W. Il alimente déjà une lampe de $40$ W. On y branche en plus un moteur. Que peut-on dire ?",
+      "choix": [
+        "Le moteur reçoit $100$ W",
+        "Le moteur reçoit $60$ W, car la somme des puissances des dipôles égale celle du générateur",
+        "La lampe s'éteint car le générateur est saturé",
+        "Le générateur fournit maintenant $140$ W automatiquement"
+      ],
+      "reponse": 1,
+      "explication": "La puissance du générateur ($100$ W) est la **somme** des puissances des dipôles : lampe ($40$ W) + moteur. Donc le moteur reçoit $100 - 40 = 60$ W. Le générateur ne change pas de puissance tout seul : ce sont les dipôles qui se partagent les $100$ W."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "puissance-unite",
+      "enonce": "Quelle est l'unité de la **puissance** dans le système international ?",
+      "choix": [
+        "Le joule (J)",
+        "Le watt (W)",
+        "Le volt (V)",
+        "L'ampère (A)"
+      ],
+      "reponse": 1,
+      "explication": "La puissance se mesure en **watt** (W). Le piège est de répondre « joule » : le joule est l'unité de l'**énergie**, pas de la puissance. Un watt correspond à un joule transféré chaque seconde."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "modes-transfert",
+      "enonce": "Un radiateur réchauffe une pièce par la chaleur, du chaud vers le froid. De quel mode de transfert s'agit-il ?",
+      "choix": [
+        "Transfert électrique",
+        "Transfert thermique",
+        "Transfert par rayonnement",
+        "Transfert mécanique"
+      ],
+      "reponse": 1,
+      "explication": "La chaleur qui passe du chaud vers le froid est un transfert **thermique**. Le rayonnement se ferait par la lumière sans contact (comme le Soleil), et le transfert électrique par un courant dans des fils."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "puissance-formule",
+      "enonce": "Que signifie une puissance de $1$ watt ?",
+      "choix": [
+        "$1$ joule transféré par heure",
+        "$1$ joule transféré chaque seconde",
+        "$1$ seconde par joule",
+        "$1$ volt par ampère"
+      ],
+      "reponse": 1,
+      "explication": "$1$ watt $= 1$ joule transféré **chaque seconde**. La puissance mesure donc la **vitesse** du transfert d'énergie. Une puissance de $60$ W signifie $60$ J transférés à chaque seconde."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "puissance-formule",
+      "enonce": "Un appareil transfère une énergie $E = 900$ J en $t = 30$ s. Quelle est sa puissance ?",
+      "choix": [
+        "$30$ W",
+        "$27\\,000$ W",
+        "$0{,}033$ W",
+        "$870$ W"
+      ],
+      "reponse": 0,
+      "explication": "$P = \\dfrac{E}{t} = \\dfrac{900}{30} = 30$ W. Le choix $27\\,000$ multiplie au lieu de diviser, et $0{,}033$ inverse la fraction ($\\dfrac{t}{E}$)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "puissance-electrique",
+      "enonce": "Un moteur soumis à une tension $U = 24$ V est parcouru par une intensité $I = 2$ A. Quelle est sa puissance ?",
+      "choix": [
+        "$48$ W",
+        "$12$ W",
+        "$26$ W",
+        "$22$ W"
+      ],
+      "reponse": 0,
+      "explication": "$P = U \\times I = 24 \\times 2 = 48$ W. Le choix $12$ divise au lieu de multiplier, et $26$ additionne $U$ et $I$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "energie-formule",
+      "enonce": "Une lampe de puissance $P = 40$ W reste allumée pendant $t = 5$ s. Quelle énergie transfère-t-elle ?",
+      "choix": [
+        "$200$ J",
+        "$8$ J",
+        "$45$ J",
+        "$35$ J"
+      ],
+      "reponse": 0,
+      "explication": "$E = P \\times t = 40 \\times 5 = 200$ J. Le choix $8$ divise ($\\dfrac{40}{5}$) au lieu de multiplier : l'énergie s'obtient en multipliant la puissance par la durée."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "generateur",
+      "enonce": "Un générateur alimente trois dipôles de puissances $20$ W, $30$ W et $10$ W. Quelle puissance fournit-il ?",
+      "choix": [
+        "$60$ W",
+        "$20$ W",
+        "$6000$ W",
+        "$30$ W"
+      ],
+      "reponse": 0,
+      "explication": "La puissance du générateur est la **somme** des puissances des dipôles : $20 + 30 + 10 = 60$ W. C'est une conséquence de la conservation de l'énergie : le générateur fournit exactement ce que les dipôles consomment."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "conversion-duree",
+      "enonce": "Un four transfère une énergie $E = 480\\,000$ J en $4{,}0$ minutes. Quelle est sa puissance ?",
+      "choix": [
+        "$2000$ W",
+        "$120\\,000$ W",
+        "$1\\,920\\,000$ W",
+        "$500$ W"
+      ],
+      "reponse": 0,
+      "explication": "Il faut convertir la durée en secondes : $4{,}0$ min $= 240$ s. Alors $P = \\dfrac{480\\,000}{240} = 2000$ W. Le choix $120\\,000$ oublie de convertir et divise par $4$ au lieu de $240$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "puissance-electrique",
+      "enonce": "Un petit ventilateur fonctionne sous $U = 6{,}0$ V avec une intensité $I = 200$ mA. Quelle est sa puissance ?",
+      "choix": [
+        "$1{,}2$ W",
+        "$1200$ W",
+        "$30$ W",
+        "$0{,}03$ W"
+      ],
+      "reponse": 0,
+      "explication": "Il faut convertir l'intensité en ampères : $200$ mA $= 0{,}200$ A. Alors $P = U \\times I = 6{,}0 \\times 0{,}200 = 1{,}2$ W. Le choix $1200$ laisse l'intensité en milliampères, ce qui multiplie le résultat par mille."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "energie-inverse",
+      "enonce": "Un chauffe-eau de puissance $P = 2000$ W a transféré une énergie $E = 2{,}4 \\times 10^{5}$ J. Pendant combien de temps a-t-il fonctionné ?",
+      "choix": [
+        "$2$ min",
+        "$20$ min",
+        "$4{,}8 \\times 10^{8}$ s",
+        "$0{,}0083$ s"
+      ],
+      "reponse": 0,
+      "explication": "De $P = \\dfrac{E}{t}$ on tire $t = \\dfrac{E}{P} = \\dfrac{240\\,000}{2000} = 120$ s, soit $2$ min. Le choix $4{,}8 \\times 10^{8}$ multiplie $E$ par $P$ au lieu de diviser."
+    }
+  ]
 }

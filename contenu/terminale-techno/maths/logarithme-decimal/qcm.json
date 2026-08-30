@@ -149,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "La seule vraie est $\\log(ab) = \\log a + \\log b$ : le log transforme les produits en sommes. Le piège n°1 du chapitre est le premier choix, $\\log(a+b) = \\log a + \\log b$ : teste $a = b = 10$, $\\log 20 \\approx 1{,}3$ alors que $\\log 10 + \\log 10 = 2$. De même le log d'un quotient est une DIFFÉRENCE de logs, pas un quotient."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que vaut $\\log(0{,}01)$ ?",
+      "choix": [
+        "$-2$",
+        "$2$",
+        "$-0{,}01$",
+        "$0{,}01$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(0{,}01)$ répond à « 10 puissance combien donne $0{,}01$ ? » : comme $10^{-2} = 0{,}01$, la réponse est $-2$. Le piège : oublier le signe et répondre $2$ — un nombre entre $0$ et $1$ a toujours un log **négatif**."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que vaut $\\log(10)$ ?",
+      "choix": [
+        "$1$",
+        "$10$",
+        "$0$",
+        "$-1$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(10)$ est la solution de $10^x = 10$, c'est-à-dire $x = 1$. Le piège classique : confondre $\\log 10 = 1$ avec $\\log 1 = 0$ — les deux valeurs à ne jamais mélanger."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "existence",
+      "enonce": "L'expression $\\log(-4)$…",
+      "choix": [
+        "vaut un nombre négatif",
+        "n'existe pas",
+        "vaut $4$",
+        "vaut $0$"
+      ],
+      "reponse": 1,
+      "explication": "$\\log(b)$ n'existe que pour $b > 0$ : l'équation $10^x = -4$ n'a aucune solution car $10^x$ est toujours strictement positif. Le piège : croire qu'un nombre négatif a un log négatif — c'est le contenu du log qui doit être positif, pas le résultat."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "resolution-equations",
+      "enonce": "Quelle est la solution de l'équation $10^x = 7$ ?",
+      "choix": [
+        "$x = \\log 7$",
+        "$x = 10^7$",
+        "$x = \\dfrac{7}{10}$",
+        "$x = \\log\\dfrac{1}{7}$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition même du logarithme décimal, la solution de $10^x = 7$ est $x = \\log 7 \\approx 0{,}845$. Le piège : $\\log\\frac{1}{7} = -\\log 7$ est l'opposé (solution de $10^x = \\frac{1}{7}$), et $\\frac{7}{10}$ ne résout rien."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "On donne $\\log 2 \\approx 0{,}301$. Que vaut $\\log(2^5)$ ?",
+      "choix": [
+        "$\\approx 1{,}505$",
+        "$\\approx 5{,}301$",
+        "$\\approx 0{,}0024$",
+        "$32$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(2^5) = 5\\log 2 \\approx 5 \\times 0{,}301 = 1{,}505$ : l'exposant descend en facteur. Les pièges : $5{,}301 = 5 + \\log 2$ ajoute au lieu de multiplier, $0{,}0024 \\approx (\\log 2)^5$ élève le log à la puissance, et $32 = 2^5$ oublie le log."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "transformations",
+      "enonce": "Sans calculatrice, que vaut $\\log(25) + \\log(4)$ ?",
+      "choix": [
+        "$2$",
+        "$\\log(29)$",
+        "$100$",
+        "$\\log(21)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log 25 + \\log 4 = \\log(25 \\times 4) = \\log 100 = 2$ : une somme de logs se regroupe en log d'un **produit**. Le piège : additionner les contenus ($\\log(25+4) = \\log 29$) — la somme de logs correspond au produit des nombres, pas à leur somme."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "contextes",
+      "enonce": "En acoustique, le niveau sonore est $L = 10\\log\\dfrac{I}{I_0}$ (en dB). Si l'intensité $I$ **double**, le niveau $L$…",
+      "choix": [
+        "augmente d'environ $3$ dB",
+        "double également",
+        "augmente de $10$ dB",
+        "augmente de $2$ dB"
+      ],
+      "reponse": 0,
+      "explication": "$10\\log\\dfrac{2I}{I_0} = 10\\log 2 + 10\\log\\dfrac{I}{I_0} \\approx 3 + L$ : doubler l'intensité n'ajoute qu'environ $3$ dB (car $10\\log 2 \\approx 3$). Le piège : croire que le niveau en dB double lui aussi — l'échelle est logarithmique, elle n'est pas proportionnelle à l'intensité."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "resolution-equations",
+      "enonce": "Une machine perd $10\\,\\%$ de sa valeur par an : elle est multipliée par $0{,}9^x$ au bout de $x$ ans. Au bout de combien de temps vaut-elle la moitié de son prix ?",
+      "choix": [
+        "$x = \\dfrac{\\log 0{,}5}{\\log 0{,}9} \\approx 6{,}6$ ans",
+        "$x = \\dfrac{0{,}5}{0{,}9} \\approx 0{,}6$ an",
+        "$x = \\log\\dfrac{0{,}5}{0{,}9} \\approx -0{,}26$ an",
+        "$x = 5$ ans"
+      ],
+      "reponse": 0,
+      "explication": "On résout $0{,}9^x = 0{,}5$, soit $x = \\dfrac{\\log 0{,}5}{\\log 0{,}9} = \\dfrac{-0{,}301}{-0{,}0458} \\approx 6{,}6$ ans. Les deux logs sont **négatifs** (nombres $< 1$), donc leur quotient est bien positif. Le piège : confondre le quotient des logs avec le log du quotient (troisième choix, absurde car négatif)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "transformations",
+      "enonce": "On donne $\\log 2 \\approx 0{,}301$. Que vaut $\\log(4 \\times 10^3)$ ?",
+      "choix": [
+        "$\\approx 3{,}602$",
+        "$\\approx 4{,}301$",
+        "$12$",
+        "$\\approx 3{,}301$"
+      ],
+      "reponse": 0,
+      "explication": "$\\log(4 \\times 10^3) = \\log 4 + \\log(10^3) = 2\\log 2 + 3 \\approx 0{,}602 + 3 = 3{,}602$. Les pièges : $4{,}301 = \\log 2 + 4$ traite mal le facteur $4$, et $3{,}301 = \\log 2 + 3$ oublie que $\\log 4 = 2\\log 2$ (et non $\\log 2$)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "resolution-equations",
+      "enonce": "Un capital placé à $3\\,\\%$ par an double lorsque $1{,}03^x = 2$, soit $x = \\dfrac{\\log 2}{\\log 1{,}03} \\approx 23{,}4$. Au bout de combien d'années **entières** a-t-il doublé ?",
+      "choix": [
+        "$24$ ans",
+        "$23$ ans",
+        "$23{,}4$ ans",
+        "$20$ ans"
+      ],
+      "reponse": 0,
+      "explication": "$x \\approx 23{,}4$ : au bout de $23$ ans le capital n'a **pas encore** doublé ($1{,}03^{23} \\approx 1{,}97 < 2$), au bout de $24$ ans oui ($1{,}03^{24} \\approx 2{,}03$). Pour une réponse en années entières, on arrondit à l'année **supérieure** : $24$ ans. Le piège : tronquer à $23$."
     }
   ]
 }

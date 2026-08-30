@@ -1,154 +1,294 @@
 {
-  "id": "tale-spe-pc-lunette-photons-qcm",
-  "chapitre": "tale-spe-pc-lunette-photons",
-  "titre": "QCM — Lunette astronomique et modèle du photon",
-  "voie": "generale",
-  "niveau": "terminale",
-  "parcours": "physique-chimie",
-  "matiere": "physique-chimie",
-  "statut": "brouillon",
-  "relu_par": null,
-  "consigne": "Une seule réponse correcte par question. Constantes : $h = 6{,}63\\times10^{-34}$ J·s, $c = 3{,}00\\times10^{8}$ m·s⁻¹, $1$ eV $= 1{,}60\\times10^{-19}$ J.",
-  "questions": [
-    {
-      "id": 1,
-      "difficulte": "facile",
-      "notion": "lunette-afocale",
-      "enonce": "Une lunette astronomique afocale est modélisée par :",
-      "choix": [
-        "deux lentilles convergentes de même axe optique",
-        "une lentille convergente et un miroir",
-        "deux lentilles divergentes",
-        "une lentille convergente et une lentille divergente"
-      ],
-      "reponse": 0,
-      "explication": "L'objectif **et** l'oculaire sont deux lentilles **convergentes** alignées sur le même axe. L'objectif a une grande focale $f'_1$, l'oculaire une petite focale $f'_2$."
-    },
-    {
-      "id": 2,
-      "difficulte": "facile",
-      "notion": "modele-photon",
-      "enonce": "Dans le modèle du photon, quelle est la masse d'un photon ?",
-      "choix": [
-        "égale à celle de l'électron",
-        "nulle",
-        "d'autant plus grande que la fréquence est élevée",
-        "égale à $h/c$"
-      ],
-      "reponse": 1,
-      "explication": "Le photon a une masse **nulle** ; il se déplace toujours à la célérité $c$ dans le vide. Il transporte de l'énergie $E = h\\nu$, mais pas de masse."
-    },
-    {
-      "id": 3,
-      "difficulte": "moyen",
-      "notion": "grossissement",
-      "enonce": "Une lunette a un objectif de distance focale $f'_1 = 900$ mm et un oculaire de distance focale $f'_2 = 30$ mm. Quel est son grossissement $G$ ?",
-      "choix": [
-        "$0{,}033$",
-        "$30$",
-        "$870$",
-        "$27\\,000$"
-      ],
-      "reponse": 1,
-      "explication": "$G = \\dfrac{f'_1}{f'_2} = \\dfrac{900}{30} = 30$ (sans unité). Le choix $0{,}033$ inverse la fraction ($f'_2/f'_1$), $870$ soustrait au lieu de diviser, $27\\,000$ multiplie."
-    },
-    {
-      "id": 4,
-      "difficulte": "moyen",
-      "notion": "energie-photon",
-      "enonce": "Quelle est l'énergie d'un photon de longueur d'onde $\\lambda = 500$ nm ?",
-      "choix": [
-        "$4{,}0\\times10^{-28}$ J",
-        "$4{,}0\\times10^{-19}$ J",
-        "$1{,}3\\times10^{-27}$ J",
-        "$9{,}9\\times10^{-32}$ J"
-      ],
-      "reponse": 1,
-      "explication": "$E = \\dfrac{hc}{\\lambda} = \\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{500\\times10^{-9}} = 4{,}0\\times10^{-19}$ J. Le piège $4{,}0\\times10^{-28}$ J vient d'avoir laissé $\\lambda$ en nm au lieu de la convertir en mètres."
-    },
-    {
-      "id": 5,
-      "difficulte": "moyen",
-      "notion": "electron-volt",
-      "enonce": "Un photon a une énergie de $3{,}0$ eV. Combien vaut-elle en joules ?",
-      "choix": [
-        "$1{,}9\\times10^{-19}$ J",
-        "$4{,}8\\times10^{-19}$ J",
-        "$3{,}0\\times10^{-19}$ J",
-        "$4{,}8\\times10^{19}$ J"
-      ],
-      "reponse": 1,
-      "explication": "Pour passer des eV aux joules, on **multiplie** par $1{,}60\\times10^{-19}$ : $E = 3{,}0\\times1{,}60\\times10^{-19} = 4{,}8\\times10^{-19}$ J. Le choix $1{,}9\\times10^{-19}$ vient d'avoir divisé au lieu de multiplier."
-    },
-    {
-      "id": 6,
-      "difficulte": "moyen",
-      "notion": "effet-photoelectrique",
-      "enonce": "Dans l'effet photoélectrique, quelle grandeur de la lumière détermine si un électron peut être arraché du métal ?",
-      "choix": [
-        "l'intensité lumineuse",
-        "la durée d'éclairement",
-        "la fréquence",
-        "la surface éclairée"
-      ],
-      "reponse": 2,
-      "explication": "Seule la **fréquence** (donc l'énergie $h\\nu$ de chaque photon) fixe le seuil. Augmenter l'intensité ajoute des photons mais ne change pas l'énergie de chacun : en dessous du seuil, rien n'est arraché."
-    },
-    {
-      "id": 7,
-      "difficulte": "difficile",
-      "notion": "grossissement",
-      "enonce": "Une lunette a un objectif de distance focale $f'_1 = 1{,}2$ m et un oculaire de distance focale $f'_2 = 25$ mm. Quel est son grossissement $G$ ?",
-      "choix": [
-        "$0{,}048$",
-        "$48$",
-        "$21$",
-        "$30$"
-      ],
-      "reponse": 1,
-      "explication": "Il faut d'abord mettre les deux focales dans la **même unité** : $f'_1 = 1{,}2$ m $= 1200$ mm. Alors $G = \\dfrac{1200}{25} = 48$. Le piège $0{,}048$ vient d'avoir divisé $1{,}2$ par $25$ sans convertir ($10^{3}$ d'écart)."
-    },
-    {
-      "id": 8,
-      "difficulte": "difficile",
-      "notion": "seuil-photoelectrique",
-      "enonce": "Le travail d'extraction d'un métal vaut $W = 2{,}0$ eV. Quelle est la longueur d'onde seuil $\\lambda_0$ au-delà de laquelle aucun électron n'est émis ?",
-      "choix": [
-        "$310$ nm",
-        "$620$ nm",
-        "$1240$ nm",
-        "$2480$ nm"
-      ],
-      "reponse": 1,
-      "explication": "$\\lambda_0 = \\dfrac{hc}{W}$. En convertissant $W = 2{,}0\\times1{,}60\\times10^{-19} = 3{,}2\\times10^{-19}$ J : $\\lambda_0 = \\dfrac{1{,}99\\times10^{-25}}{3{,}2\\times10^{-19}} = 6{,}2\\times10^{-7}$ m $= 620$ nm. (Astuce : $hc \\approx 1240$ eV·nm, donc $\\lambda_0 = 1240/2{,}0 = 620$ nm.)"
-    },
-    {
-      "id": 9,
-      "difficulte": "difficile",
-      "notion": "bilan-energie",
-      "enonce": "Un métal de travail d'extraction $W = 2{,}0$ eV est éclairé par une lumière de longueur d'onde $\\lambda = 400$ nm. Quelle est l'énergie cinétique maximale des électrons émis ?",
-      "choix": [
-        "$0{,}90$ eV",
-        "$1{,}1$ eV",
-        "$3{,}1$ eV",
-        "$5{,}1$ eV"
-      ],
-      "reponse": 1,
-      "explication": "Énergie du photon : $E = \\dfrac{hc}{\\lambda} = \\dfrac{1240}{400} = 3{,}1$ eV. Bilan : $E_c = h\\nu - W = 3{,}1 - 2{,}0 = 1{,}1$ eV. Le choix $3{,}1$ eV oublie de retrancher $W$, le choix $5{,}1$ eV **additionne** $W$ au lieu de le soustraire."
-    },
-    {
-      "id": 10,
-      "difficulte": "difficile",
-      "notion": "effet-photoelectrique",
-      "enonce": "On éclaire un métal avec une lumière dont la fréquence est **inférieure** à la fréquence seuil $\\nu_0$. On augmente fortement l'intensité de cette lumière. Que se passe-t-il ?",
-      "choix": [
-        "des électrons sont enfin émis, car il y a plus d'énergie",
-        "aucun électron n'est émis, quelle que soit l'intensité",
-        "les électrons émis sont plus rapides",
-        "l'émission commence puis s'arrête"
-      ],
-      "reponse": 1,
-      "explication": "Augmenter l'intensité augmente le **nombre** de photons, pas l'énergie $h\\nu$ de **chacun**. Si $h\\nu < W$, aucun photon ne peut à lui seul extraire un électron : **aucune émission**, même très éclairé. C'est l'argument décisif contre le modèle purement ondulatoire."
-    }
-  ]
+ "id": "tale-spe-pc-lunette-photons-qcm",
+ "chapitre": "tale-spe-pc-lunette-photons",
+ "titre": "QCM — Lunette astronomique et modèle du photon",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question. Constantes : $h = 6{,}63\\times10^{-34}$ J·s, $c = 3{,}00\\times10^{8}$ m·s⁻¹, $1$ eV $= 1{,}60\\times10^{-19}$ J.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "lunette-afocale",
+   "enonce": "Une lunette astronomique afocale est modélisée par :",
+   "choix": [
+    "deux lentilles convergentes de même axe optique",
+    "une lentille convergente et un miroir",
+    "deux lentilles divergentes",
+    "une lentille convergente et une lentille divergente"
+   ],
+   "reponse": 0,
+   "explication": "L'objectif **et** l'oculaire sont deux lentilles **convergentes** alignées sur le même axe. L'objectif a une grande focale $f'_1$, l'oculaire une petite focale $f'_2$."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "modele-photon",
+   "enonce": "Dans le modèle du photon, quelle est la masse d'un photon ?",
+   "choix": [
+    "égale à celle de l'électron",
+    "nulle",
+    "d'autant plus grande que la fréquence est élevée",
+    "égale à $h/c$"
+   ],
+   "reponse": 1,
+   "explication": "Le photon a une masse **nulle** ; il se déplace toujours à la célérité $c$ dans le vide. Il transporte de l'énergie $E = h\\nu$, mais pas de masse."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "grossissement",
+   "enonce": "Une lunette a un objectif de distance focale $f'_1 = 900$ mm et un oculaire de distance focale $f'_2 = 30$ mm. Quel est son grossissement $G$ ?",
+   "choix": [
+    "$0{,}033$",
+    "$30$",
+    "$870$",
+    "$27\\,000$"
+   ],
+   "reponse": 1,
+   "explication": "$G = \\dfrac{f'_1}{f'_2} = \\dfrac{900}{30} = 30$ (sans unité). Le choix $0{,}033$ inverse la fraction ($f'_2/f'_1$), $870$ soustrait au lieu de diviser, $27\\,000$ multiplie."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "energie-photon",
+   "enonce": "Quelle est l'énergie d'un photon de longueur d'onde $\\lambda = 500$ nm ?",
+   "choix": [
+    "$4{,}0\\times10^{-28}$ J",
+    "$4{,}0\\times10^{-19}$ J",
+    "$1{,}3\\times10^{-27}$ J",
+    "$9{,}9\\times10^{-32}$ J"
+   ],
+   "reponse": 1,
+   "explication": "$E = \\dfrac{hc}{\\lambda} = \\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{500\\times10^{-9}} = 4{,}0\\times10^{-19}$ J. Le piège $4{,}0\\times10^{-28}$ J vient d'avoir laissé $\\lambda$ en nm au lieu de la convertir en mètres."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "electron-volt",
+   "enonce": "Un photon a une énergie de $3{,}0$ eV. Combien vaut-elle en joules ?",
+   "choix": [
+    "$1{,}9\\times10^{-19}$ J",
+    "$4{,}8\\times10^{-19}$ J",
+    "$3{,}0\\times10^{-19}$ J",
+    "$4{,}8\\times10^{19}$ J"
+   ],
+   "reponse": 1,
+   "explication": "Pour passer des eV aux joules, on **multiplie** par $1{,}60\\times10^{-19}$ : $E = 3{,}0\\times1{,}60\\times10^{-19} = 4{,}8\\times10^{-19}$ J. Le choix $1{,}9\\times10^{-19}$ vient d'avoir divisé au lieu de multiplier."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "effet-photoelectrique",
+   "enonce": "Dans l'effet photoélectrique, quelle grandeur de la lumière détermine si un électron peut être arraché du métal ?",
+   "choix": [
+    "l'intensité lumineuse",
+    "la durée d'éclairement",
+    "la fréquence",
+    "la surface éclairée"
+   ],
+   "reponse": 2,
+   "explication": "Seule la **fréquence** (donc l'énergie $h\\nu$ de chaque photon) fixe le seuil. Augmenter l'intensité ajoute des photons mais ne change pas l'énergie de chacun : en dessous du seuil, rien n'est arraché."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "grossissement",
+   "enonce": "Une lunette a un objectif de distance focale $f'_1 = 1{,}2$ m et un oculaire de distance focale $f'_2 = 25$ mm. Quel est son grossissement $G$ ?",
+   "choix": [
+    "$0{,}048$",
+    "$48$",
+    "$21$",
+    "$30$"
+   ],
+   "reponse": 1,
+   "explication": "Il faut d'abord mettre les deux focales dans la **même unité** : $f'_1 = 1{,}2$ m $= 1200$ mm. Alors $G = \\dfrac{1200}{25} = 48$. Le piège $0{,}048$ vient d'avoir divisé $1{,}2$ par $25$ sans convertir ($10^{3}$ d'écart)."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "seuil-photoelectrique",
+   "enonce": "Le travail d'extraction d'un métal vaut $W = 2{,}0$ eV. Quelle est la longueur d'onde seuil $\\lambda_0$ au-delà de laquelle aucun électron n'est émis ?",
+   "choix": [
+    "$310$ nm",
+    "$620$ nm",
+    "$1240$ nm",
+    "$2480$ nm"
+   ],
+   "reponse": 1,
+   "explication": "$\\lambda_0 = \\dfrac{hc}{W}$. En convertissant $W = 2{,}0\\times1{,}60\\times10^{-19} = 3{,}2\\times10^{-19}$ J : $\\lambda_0 = \\dfrac{1{,}99\\times10^{-25}}{3{,}2\\times10^{-19}} = 6{,}2\\times10^{-7}$ m $= 620$ nm. (Astuce : $hc \\approx 1240$ eV·nm, donc $\\lambda_0 = 1240/2{,}0 = 620$ nm.)"
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "bilan-energie",
+   "enonce": "Un métal de travail d'extraction $W = 2{,}0$ eV est éclairé par une lumière de longueur d'onde $\\lambda = 400$ nm. Quelle est l'énergie cinétique maximale des électrons émis ?",
+   "choix": [
+    "$0{,}90$ eV",
+    "$1{,}1$ eV",
+    "$3{,}1$ eV",
+    "$5{,}1$ eV"
+   ],
+   "reponse": 1,
+   "explication": "Énergie du photon : $E = \\dfrac{hc}{\\lambda} = \\dfrac{1240}{400} = 3{,}1$ eV. Bilan : $E_c = h\\nu - W = 3{,}1 - 2{,}0 = 1{,}1$ eV. Le choix $3{,}1$ eV oublie de retrancher $W$, le choix $5{,}1$ eV **additionne** $W$ au lieu de le soustraire."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "effet-photoelectrique",
+   "enonce": "On éclaire un métal avec une lumière dont la fréquence est **inférieure** à la fréquence seuil $\\nu_0$. On augmente fortement l'intensité de cette lumière. Que se passe-t-il ?",
+   "choix": [
+    "des électrons sont enfin émis, car il y a plus d'énergie",
+    "aucun électron n'est émis, quelle que soit l'intensité",
+    "les électrons émis sont plus rapides",
+    "l'émission commence puis s'arrête"
+   ],
+   "reponse": 1,
+   "explication": "Augmenter l'intensité augmente le **nombre** de photons, pas l'énergie $h\\nu$ de **chacun**. Si $h\\nu < W$, aucun photon ne peut à lui seul extraire un électron : **aucune émission**, même très éclairé. C'est l'argument décisif contre le modèle purement ondulatoire."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "grossissement",
+   "enonce": "Comment s'exprime le grossissement $G$ d'une lunette afocale en fonction des distances focales de l'objectif $f'_1$ et de l'oculaire $f'_2$ ?",
+   "choix": [
+    "$G = \\dfrac{f'_2}{f'_1}$",
+    "$G = \\dfrac{f'_1}{f'_2}$",
+    "$G = f'_1 \\times f'_2$",
+    "$G = f'_1 - f'_2$"
+   ],
+   "reponse": 1,
+   "explication": "Le grossissement vaut $G = \\dfrac{f'_1}{f'_2}$ : la distance focale de l'**objectif** (grande) est au numérateur, celle de l'oculaire (petite) au dénominateur. Inverser le rapport donnerait $G < 1$, ce qui est absurde pour une lunette qui doit agrandir."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "modele-photon",
+   "enonce": "Dans le modèle du photon, quelle est la masse d'un photon ?",
+   "choix": [
+    "Elle est égale à celle de l'électron",
+    "Elle est très grande",
+    "Elle varie avec la fréquence",
+    "Elle est nulle"
+   ],
+   "reponse": 3,
+   "explication": "Un photon a une **masse nulle** : il se déplace toujours à la célérité $c$ dans le vide. Il transporte néanmoins une énergie $E = h\\nu$ liée à la fréquence de l'onde associée. Masse nulle n'implique pas énergie nulle."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "lunette-afocale",
+   "enonce": "Dans une lunette afocale, quelle relation lie le foyer image $F'_1$ de l'objectif et le foyer objet $F_2$ de l'oculaire ?",
+   "choix": [
+    "$F'_1 = F_2$",
+    "$F_1 = F'_2$",
+    "$F'_1 = F'_2$",
+    "$O_1 = O_2$"
+   ],
+   "reponse": 0,
+   "explication": "La lunette est afocale lorsque le foyer image de l'objectif coïncide avec le foyer objet de l'oculaire : $F'_1 = F_2$. L'image intermédiaire d'un astre à l'infini se forme en ce point commun, et l'oculaire la renvoie à l'infini pour une observation sans fatigue."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "grossissement",
+   "enonce": "Une lunette a un objectif de distance focale $f'_1 = 60$ cm et un oculaire de distance focale $f'_2 = 25$ mm. Quel est son grossissement ?",
+   "choix": [
+    "$2{,}4$",
+    "$15$",
+    "$24$",
+    "$0{,}042$"
+   ],
+   "reponse": 2,
+   "explication": "Il faut d'abord exprimer les deux focales dans la **même unité** : $f'_1 = 60$ cm $= 600$ mm. Alors $G = \\dfrac{f'_1}{f'_2} = \\dfrac{600}{25} = 24$. Diviser $60$ par $25$ sans convertir donne $2{,}4$ ; inverser le rapport donne $0{,}042$."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "energie-photon",
+   "enonce": "Quelle est l'énergie d'un photon de longueur d'onde $\\lambda = 500$ nm ? (On prend $h = 6{,}63 \\times 10^{-34}$ J·s et $c = 3{,}00 \\times 10^{8}$ m·s⁻¹.)",
+   "choix": [
+    "$4{,}0 \\times 10^{-28}$ J",
+    "$1{,}3 \\times 10^{-27}$ J",
+    "$2{,}5 \\times 10^{18}$ J",
+    "$4{,}0 \\times 10^{-19}$ J"
+   ],
+   "reponse": 3,
+   "explication": "On applique $E = \\dfrac{hc}{\\lambda}$ avec $\\lambda$ en **mètres** : $\\lambda = 500$ nm $= 5{,}00 \\times 10^{-7}$ m, donc $E = \\dfrac{6{,}63 \\times 10^{-34} \\times 3{,}00 \\times 10^{8}}{5{,}00 \\times 10^{-7}} \\approx 4{,}0 \\times 10^{-19}$ J. Laisser $\\lambda$ en nm fausse le résultat d'un facteur $10^{9}$ (on obtiendrait $4{,}0 \\times 10^{-28}$)."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "electron-volt",
+   "enonce": "Une énergie vaut $E = 3{,}2 \\times 10^{-19}$ J. Quelle est sa valeur en électron-volts ? (On prend $1$ eV $= 1{,}60 \\times 10^{-19}$ J.)",
+   "choix": [
+    "$2{,}0$ eV",
+    "$0{,}50$ eV",
+    "$5{,}1 \\times 10^{-38}$ eV",
+    "$3{,}2 \\times 10^{-19}$ eV"
+   ],
+   "reponse": 0,
+   "explication": "Pour convertir des joules en électron-volts, on **divise** par $1{,}60 \\times 10^{-19}$ : $E = \\dfrac{3{,}2 \\times 10^{-19}}{1{,}60 \\times 10^{-19}} = 2{,}0$ eV. Multiplier les deux valeurs (au lieu de diviser) donnerait $5{,}1 \\times 10^{-38}$, ce qui n'a pas de sens physique."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "effet-photoelectrique",
+   "enonce": "Dans l'effet photoélectrique, quelle grandeur de la lumière commande l'existence d'un seuil d'émission des électrons ?",
+   "choix": [
+    "L'intensité lumineuse",
+    "La durée d'éclairement",
+    "La fréquence de la lumière",
+    "La couleur de la plaque"
+   ],
+   "reponse": 2,
+   "explication": "L'émission d'électrons n'a lieu que si la **fréquence** dépasse un seuil $\\nu_0$ (c'est-à-dire si chaque photon apporte assez d'énergie $h\\nu \\geq W$). Augmenter l'intensité augmente le **nombre** de photons, pas leur énergie individuelle : en dessous du seuil, plus d'intensité n'arrache toujours aucun électron."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "bilan-energie",
+   "enonce": "Un métal de travail d'extraction $W = 2{,}0$ eV est éclairé par des photons d'énergie $E = 3{,}5$ eV. Quelle est l'énergie cinétique maximale des électrons émis ?",
+   "choix": [
+    "$5{,}5$ eV",
+    "$1{,}5$ eV",
+    "$0{,}57$ eV",
+    "$1{,}75$ eV"
+   ],
+   "reponse": 1,
+   "explication": "Le bilan d'énergie s'écrit $E_c = h\\nu - W = 3{,}5 - 2{,}0 = 1{,}5$ eV (les deux termes sont déjà en eV, aucune conversion n'est nécessaire). **Additionner** au lieu de soustraire donne $5{,}5$ eV : le travail d'extraction est retranché, pas ajouté."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "seuil-photoelectrique",
+   "enonce": "Un métal a un travail d'extraction $W = 3{,}0$ eV. Quelle est la longueur d'onde de seuil $\\lambda_0$ de l'effet photoélectrique ? (On prend $hc = 1{,}99 \\times 10^{-25}$ J·m et $1$ eV $= 1{,}60 \\times 10^{-19}$ J.)",
+   "choix": [
+    "$4{,}1 \\times 10^{-19}$ m",
+    "$6{,}6 \\times 10^{-7}$ m",
+    "$2{,}4 \\times 10^{6}$ m",
+    "$4{,}1 \\times 10^{-7}$ m"
+   ],
+   "reponse": 3,
+   "explication": "Le seuil vérifie $h\\nu_0 = W$, soit $\\lambda_0 = \\dfrac{hc}{W}$. On convertit $W = 3{,}0 \\times 1{,}60 \\times 10^{-19} = 4{,}8 \\times 10^{-19}$ J, d'où $\\lambda_0 = \\dfrac{1{,}99 \\times 10^{-25}}{4{,}8 \\times 10^{-19}} \\approx 4{,}1 \\times 10^{-7}$ m (soit $414$ nm). Oublier de convertir $W$ en joules fausse tout le calcul."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "transition-atomique",
+   "enonce": "Un atome émet un photon lors d'une transition entre deux niveaux d'énergie séparés de $\\Delta E = 3{,}0 \\times 10^{-19}$ J. Quelle est la fréquence de ce photon ? (On prend $h = 6{,}63 \\times 10^{-34}$ J·s.)",
+   "choix": [
+    "$4{,}5 \\times 10^{14}$ Hz",
+    "$4{,}5 \\times 10^{-15}$ Hz",
+    "$9{,}0 \\times 10^{-53}$ Hz",
+    "$1{,}4 \\times 10^{14}$ Hz"
+   ],
+   "reponse": 0,
+   "explication": "La transition vérifie $\\Delta E = h\\nu$, donc $\\nu = \\dfrac{\\Delta E}{h} = \\dfrac{3{,}0 \\times 10^{-19}}{6{,}63 \\times 10^{-34}} \\approx 4{,}5 \\times 10^{14}$ Hz. **Inverser** le quotient ($h/\\Delta E$) donnerait $4{,}5 \\times 10^{-15}$, ce qui ne peut pas être une fréquence de lumière visible."
+  }
+ ]
 }

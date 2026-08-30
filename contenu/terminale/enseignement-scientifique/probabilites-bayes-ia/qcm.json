@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "La marge est $\\tfrac{2}{\\sqrt{n}}$. Pour la diviser par $2$, il faut multiplier $\\sqrt{n}$ par $2$, donc $n$ par $2^2 = 4$. Le piège est de répondre « par $2$ » : la précision dépend de $\\sqrt{n}$, pas de $n$, ce qui rend la précision coûteuse."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "numerisation",
+      "enonce": "Une photo de $1\\,000 \\times 800$ pixels est codée en RVB ($3$ octets par pixel). Quel est son poids avant compression ?",
+      "choix": [
+        "environ $2{,}4$ Mo",
+        "environ $0{,}8$ Mo",
+        "environ $24$ Mo",
+        "environ $800$ octets"
+      ],
+      "reponse": 0,
+      "explication": "Poids $=$ largeur $\\times$ hauteur $\\times$ octets par pixel $= 1\\,000 \\times 800 \\times 3 = 2\\,400\\,000$ octets $\\approx 2{,}4$ Mo (car $1$ Mo $= 10^6$ octets). Le piège $0{,}8$ Mo oublie de multiplier par les $3$ octets des trois canaux de couleur."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "donnees-massives",
+      "enonce": "Parmi ces caractéristiques, laquelle fait partie des « trois V » qui définissent les données massives (big data) ?",
+      "choix": [
+        "le Volume",
+        "la Validité",
+        "la Valeur marchande",
+        "la Vérité"
+      ],
+      "reponse": 0,
+      "explication": "Les trois V sont le **Volume** (des téraoctets), la **Vélocité** (arrivée continue) et la **Variété** (textes, images, sons mêlés). « Validité », « valeur » ou « vérité » ne font pas partie de cette définition classique."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "biais",
+      "enonce": "Une IA de recrutement, entraînée sur les embauches passées d'une entreprise majoritairement masculine, se met à défavoriser les candidatures féminines. De quoi s'agit-il ?",
+      "choix": [
+        "d'un biais historique reproduit depuis les données passées",
+        "du pur hasard, qui disparaîtra en agrandissant les données",
+        "d'un défaut interne de l'algorithme, indépendant des données",
+        "d'une preuve que les femmes sont moins qualifiées"
+      ],
+      "reponse": 0,
+      "explication": "L'IA **reproduit** un biais **historique** contenu dans ses données d'entraînement : le problème vient des données, pas de l'algorithme. *Garbage in, garbage out* : des données biaisées donnent une IA biaisée, et augmenter leur volume n'y change rien."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "conditionnelle",
+      "enonce": "On donne $P(A) = 0{,}4$ et $P(A \\cap B) = 0{,}1$. Quelle est la probabilité conditionnelle $P_A(B)$ ?",
+      "choix": [
+        "$0{,}25$",
+        "$0{,}04$",
+        "$0{,}40$",
+        "$0{,}10$"
+      ],
+      "reponse": 0,
+      "explication": "$P_A(B) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0{,}1}{0{,}4} = 0{,}25$. Le piège $0{,}04$ **multiplie** $P(A)$ et $P(A\\cap B)$ au lieu de diviser ; il faut bien diviser l'intersection par la probabilité de l'événement conditionnant."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "diagnostic",
+      "enonce": "Un test a une sensibilité $\\text{Se} = 0{,}95$. Quelle est la probabilité d'un **faux négatif** (un malade testé négatif) ?",
+      "choix": [
+        "$0{,}05$",
+        "$0{,}95$",
+        "$0{,}50$",
+        "$0{,}02$"
+      ],
+      "reponse": 0,
+      "explication": "Un faux négatif a pour probabilité $P_M(T^-) = 1 - \\text{Se} = 1 - 0{,}95 = 0{,}05$. Le piège est de reprendre directement la sensibilité $0{,}95$ (qui est au contraire la proportion de malades **bien** détectés)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "diagnostic",
+      "enonce": "La spécificité d'un test de dépistage est définie comme :",
+      "choix": [
+        "la proportion de malades détectés positifs, $P_M(T^+)$",
+        "la proportion de sains détectés négatifs, $P_{\\overline{M}}(T^-)$",
+        "la proportion de positifs qui sont malades, $P_{T^+}(M)$",
+        "la proportion de la population qui est saine"
+      ],
+      "reponse": 1,
+      "explication": "La spécificité est $\\text{Sp} = P_{\\overline{M}}(T^-)$ : parmi les **sains**, ceux que le test classe correctement négatifs. Le choix 1 est la sensibilité (côté malades), le choix 3 la valeur prédictive positive : trois conditionnements à ne pas confondre."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "Une maladie touche $5\\,\\%$ de la population. Un test est positif chez $90\\,\\%$ des malades et chez $10\\,\\%$ des sains. Quelle est la probabilité $P(T^+)$ qu'une personne prise au hasard soit testée positive ?",
+      "choix": [
+        "$0{,}14$",
+        "$0{,}045$",
+        "$0{,}90$",
+        "$0{,}10$"
+      ],
+      "reponse": 0,
+      "explication": "Probabilités totales : $P(T^+) = 0{,}05 \\times 0{,}90 + 0{,}95 \\times 0{,}10 = 0{,}045 + 0{,}095 = 0{,}14$. Le choix $0{,}045$ ne compte que les vrais positifs et oublie les faux positifs, plus nombreux ici."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "bayes",
+      "enonce": "Avec $P(M) = 0{,}05$, $P_M(T^+) = 0{,}90$ et $P(T^+) = 0{,}14$, une personne est testée positive. Quelle est la probabilité qu'elle soit réellement malade (la VPP) ?",
+      "choix": [
+        "environ $0{,}90$",
+        "environ $0{,}32$",
+        "environ $0{,}045$",
+        "environ $0{,}14$"
+      ],
+      "reponse": 1,
+      "explication": "Bayes : $P_{T^+}(M) = \\dfrac{P(M)\\,P_M(T^+)}{P(T^+)} = \\dfrac{0{,}045}{0{,}14} \\approx 0{,}32$. Le choix $0{,}90$ est la sensibilité $P_M(T^+)$ : confondre « malade sachant positif » et « positif sachant malade » est l'erreur reine que Bayes corrige."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "bayes",
+      "enonce": "Pourquoi ne peut-on pas dire que $P_{T^+}(M)$ (malade sachant positif) est égale à $P_M(T^+)$ (positif sachant malade) ?",
+      "choix": [
+        "elles sont toujours égales, c'est la même chose",
+        "ce sont deux conditionnements inverses, en général différents, que relie la formule de Bayes",
+        "$P_M(T^+)$ n'existe pas mathématiquement",
+        "$P_{T^+}(M)$ est toujours plus grande que $P_M(T^+)$"
+      ],
+      "reponse": 1,
+      "explication": "« Positif sachant malade » (une qualité du test) et « malade sachant positif » (ce qui intéresse le patient) sont deux probabilités conditionnelles **inverses**, en général différentes. La formule de Bayes est précisément l'outil qui permet de passer de l'une à l'autre."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "capture-recapture",
+      "enonce": "On marque $M = 80$ animaux et on les relâche. À la recapture, sur $n = 40$ individus, $m = 10$ portent la marque. Quelle est l'estimation de l'effectif total $N$ ?",
+      "choix": [
+        "$320$",
+        "$200$",
+        "$50$",
+        "$3\\,200$"
+      ],
+      "reponse": 0,
+      "explication": "$N \\approx \\dfrac{M \\times n}{m} = \\dfrac{80 \\times 40}{10} = 320$. Le piège est d'inverser $M$ et $m$ : c'est le **petit** nombre de marqués recapturés ($m = 10$) qui doit figurer au dénominateur, pas au numérateur."
     }
   ]
 }

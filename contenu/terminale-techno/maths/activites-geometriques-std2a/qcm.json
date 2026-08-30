@@ -149,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "Les rayons visuels qui s'appuient sur le cercle forment un cône de sommet l'œil, et le tableau le coupe : l'image est une conique, presque toujours une ellipse — courbe fermée à deux axes de symétrie. Le piège est l'« œuf » : l'ellipse n'est pas plus pointue du côté éloigné, c'est l'erreur de tracé classique en dessin d'objet. Un cercle n'est obtenu que dans des positions très particulières, et une parabole est une courbe ouverte."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "cone-vocabulaire",
+      "enonce": "Dans un cône de révolution, le demi-angle au sommet $\\alpha$ est l'angle entre...",
+      "choix": [
+        "deux génératrices diamétralement opposées",
+        "l'axe et une génératrice",
+        "le plan de coupe et l'axe",
+        "l'axe et le plan de base du cône"
+      ],
+      "reponse": 1,
+      "explication": "Le demi-angle au sommet $\\alpha$ est l'angle entre l'axe et une génératrice ($0° < \\alpha < 90°$) : c'est l'« ouverture » du cône. Le piège est de le confondre avec l'angle au sommet complet, qui vaut $2\\alpha$ (entre deux génératrices opposées), ou avec l'angle $\\beta$ du plan de coupe."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "portrait-coniques",
+      "enonce": "Parmi ces coniques, laquelle est une courbe **fermée** ?",
+      "choix": [
+        "La parabole",
+        "L'hyperbole",
+        "L'ellipse",
+        "Aucune des trois"
+      ],
+      "reponse": 2,
+      "explication": "L'ellipse (comme le cercle) est une courbe fermée. Le piège : la parabole et l'hyperbole sont **ouvertes**, avec des branches infinies (une branche pour la parabole, deux pour l'hyperbole)."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "perspective-centrale",
+      "enonce": "En perspective centrale, l'image d'une droite est toujours...",
+      "choix": [
+        "une droite",
+        "une courbe",
+        "un point",
+        "une droite verticale"
+      ],
+      "reponse": 0,
+      "explication": "La perspective centrale conserve les alignements : l'image d'une droite est une droite, et des points alignés ont des images alignées (on construit donc à la règle). Le piège « verticale » ne vaut que pour les frontales verticales, pas pour toutes les droites."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "sections-planes",
+      "enonce": "Un cône a un demi-angle au sommet $\\alpha = 40°$. On le coupe par un plan ne passant pas par le sommet, faisant un angle $\\beta = 40°$ avec l'axe. Quelle est la section ?",
+      "choix": [
+        "Une ellipse",
+        "Une parabole",
+        "Un cercle",
+        "Une hyperbole"
+      ],
+      "reponse": 1,
+      "explication": "Ici $\\beta = \\alpha = 40°$ : le plan est parallèle à une génératrice et une seule, c'est exactement le cas frontière de la parabole. Le piège : l'ellipse exige $\\alpha < \\beta < 90°$ (plan plus redressé), et l'hyperbole $\\beta < \\alpha$ (plan qui coupe les deux nappes)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "sections-planes",
+      "enonce": "Un cône a un demi-angle au sommet $\\alpha = 25°$. On le coupe par un plan ne passant pas par le sommet, faisant un angle $\\beta = 15°$ avec l'axe. Quelle est la section ?",
+      "choix": [
+        "Une hyperbole",
+        "Une ellipse",
+        "Une parabole",
+        "Un cercle"
+      ],
+      "reponse": 0,
+      "explication": "Ici $\\beta = 15° < \\alpha = 25°$ : le plan est plus « redressé » que les génératrices, il coupe les **deux nappes** du cône. La section est une hyperbole (deux branches). Le piège : l'ellipse et le cercle demandent $\\beta \\ge \\alpha$, la parabole exactement $\\beta = \\alpha$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "portrait-coniques",
+      "enonce": "Combien de sommets possède une ellipse ?",
+      "choix": [
+        "$2$",
+        "$4$",
+        "$1$",
+        "une infinité"
+      ],
+      "reponse": 1,
+      "explication": "Une ellipse a **quatre** sommets : les extrémités du grand axe ($2a$) et du petit axe ($2b$). Le piège « $2$ » ne compte que les extrémités du grand axe ; « $1$ » est le nombre de sommets d'une parabole."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "perspective-centrale",
+      "enonce": "En perspective centrale, les arêtes verticales d'un immeuble (des frontales) sont représentées par...",
+      "choix": [
+        "des droites concourantes au point de fuite principal",
+        "des droites verticales, parallèles entre elles",
+        "des droites concourantes sur la ligne d'horizon",
+        "des courbes qui se resserrent vers le haut"
+      ],
+      "reponse": 1,
+      "explication": "Les verticales d'un immeuble sont **parallèles au tableau** (frontales) : leur direction est conservée et elles restent des verticales parallèles entre elles. Le piège est de les faire « fuir » vers un point : seules les droites qui s'enfoncent dans la profondeur (non frontales) convergent vers un point de fuite."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "section-circulaire",
+      "enonce": "Un cône de révolution a pour demi-angle au sommet $\\alpha = 60°$. On le coupe par un plan perpendiculaire à l'axe, à une distance $d = 3$ cm du sommet (le long de l'axe). Quel est le rayon $r$ de la section circulaire ? (On rappelle $r = d\\tan\\alpha$.)",
+      "choix": [
+        "$3\\ \\text{cm}$",
+        "$3\\sqrt{3}\\ \\text{cm}\\ (\\approx 5{,}2\\ \\text{cm})$",
+        "$\\sqrt{3}\\ \\text{cm}$",
+        "$6\\ \\text{cm}$"
+      ],
+      "reponse": 1,
+      "explication": "Le profil du cône donne un triangle rectangle : $r = d\\tan\\alpha = 3\\tan 60° = 3\\sqrt{3} \\approx 5{,}2$ cm. Le piège « $3$ cm » revient à prendre $\\tan 60° = 1$ (ce qui est vrai pour $45°$, pas pour $60°$) ; il faut bien utiliser $\\tan 60° = \\sqrt{3}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "tangente",
+      "enonce": "Les asymptotes d'une hyperbole sont-elles des tangentes à la courbe ?",
+      "choix": [
+        "Oui, ce sont les tangentes aux deux branches",
+        "Non, elles ne touchent la courbe en aucun point",
+        "Oui, tangentes aux sommets des branches",
+        "Oui, mais seulement en un point situé à l'infini"
+      ],
+      "reponse": 1,
+      "explication": "Les branches de l'hyperbole se **rapprochent indéfiniment** des asymptotes sans jamais les toucher : une asymptote n'a aucun point de contact avec la courbe, ce n'est donc pas une tangente. Le piège est de confondre « frôler de plus en plus » avec « toucher » : une tangente doit toucher la courbe en un point précis."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "perspective-centrale",
+      "enonce": "Pour placer le **centre** d'une façade rectangulaire dessinée en perspective centrale, on utilise...",
+      "choix": [
+        "le milieu mesuré à la règle graduée sur le dessin",
+        "l'intersection des diagonales de l'image du rectangle",
+        "le point de fuite principal",
+        "la ligne d'horizon"
+      ],
+      "reponse": 1,
+      "explication": "La perspective ne conserve ni les longueurs ni les milieux, mais elle conserve les alignements et les intersections : l'image du centre est donc l'**intersection des diagonales** de l'image du rectangle. Le piège est de reporter le milieu « à la règle » : le centre du dessin n'est pas l'image du centre réel de la façade."
     }
   ]
 }

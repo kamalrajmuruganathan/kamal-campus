@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Perdre $15\\,\\%$ par an, c'est multiplier chaque année par $a = 1 - 0{,}15 = 0{,}85$ : $V(3) = 24000 \\times 0{,}85^3 = 24000 \\times 0{,}614125 = 14\\,739$ €. Le piège : le modèle additif $13\\,200$ € retranche trois fois $15\\,\\%$ du prix **initial** (les baisses se composent, elles ne s'additionnent pas), et $0{,}15^3$ prend le taux comme base au lieu du coefficient $0{,}85$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "valeurs-cles",
+      "enonce": "Soit $a > 0$. Que vaut $a^1$ ?",
+      "choix": [
+        "$1$",
+        "$a$",
+        "$0$",
+        "$a^2$"
+      ],
+      "reponse": 1,
+      "explication": "Par convention, $a^1 = a$ pour toute base $a > 0$ : la courbe $y = a^x$ passe donc par le point $(1\\,;a)$. Le piège : confondre avec $a^0 = 1$ — l'exposant $0$ donne $1$, l'exposant $1$ redonne la base."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "signe",
+      "enonce": "Pour tout réel $x$, le nombre $0{,}3^x$ est…",
+      "choix": [
+        "toujours strictement positif",
+        "parfois négatif si $x < 0$",
+        "nul lorsque $x$ est très grand",
+        "négatif dès que $x > 1$"
+      ],
+      "reponse": 0,
+      "explication": "Une exponentielle $a^x$ (avec $a > 0$) est **toujours strictement positive** : elle ne s'annule jamais et n'est jamais négative. Ici $0{,}3^x$ décroît vers $0$ quand $x$ grandit, mais sans jamais l'atteindre. Le piège : croire qu'une fonction décroissante finit par devenir nulle ou négative."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Par quel point passent **toutes** les courbes d'équation $y = a^x$ (avec $a > 0$) ?",
+      "choix": [
+        "$(0\\,;1)$",
+        "$(1\\,;0)$",
+        "$(0\\,;0)$",
+        "$(1\\,;1)$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $a^0 = 1$ quelle que soit la base $a > 0$, chaque courbe $y = a^x$ passe par le point $(0\\,;1)$. Le piège : intervertir les coordonnées et proposer $(1\\,;0)$, ou penser à l'origine $(0\\,;0)$ — mais une exponentielle ne vaut jamais $0$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "Pour $a > 0$, à quoi est égal $a^{1/2}$ ?",
+      "choix": [
+        "$\\sqrt{a}$",
+        "$\\dfrac{a}{2}$",
+        "$a^2$",
+        "$2a$"
+      ],
+      "reponse": 0,
+      "explication": "Par définition $a^{1/2}$ est le nombre positif dont le carré vaut $a$, car $\\left(a^{1/2}\\right)^2 = a^{2 \\times \\frac{1}{2}} = a$ : c'est donc $\\sqrt{a}$. Le piège : lire l'exposant $\\frac{1}{2}$ comme une division par $2$ ($\\frac{a}{2}$) au lieu d'une racine carrée."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "proprietes-algebriques",
+      "enonce": "Pour tout réel $x$, que vaut $\\dfrac{7^x}{7^{x-2}}$ ?",
+      "choix": [
+        "$49$",
+        "$7$",
+        "$2$",
+        "$14$"
+      ],
+      "reponse": 0,
+      "explication": "Par la propriété du quotient, $\\dfrac{7^x}{7^{x-2}} = 7^{x-(x-2)} = 7^2 = 49$ : le résultat ne dépend pas de $x$. Le piège : soustraire les exposants sans revenir à la puissance et répondre $2$, ou confondre base et exposant avec $14 = 7 \\times 2$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "taux-moyen",
+      "enonce": "Un prix baisse de $19\\,\\%$ en $2$ ans. Quel est le taux d'évolution annuel moyen ?",
+      "choix": [
+        "$-9{,}5\\,\\%$",
+        "$-10\\,\\%$",
+        "$-9\\,\\%$",
+        "$-19\\,\\%$"
+      ],
+      "reponse": 1,
+      "explication": "Coefficient global $C = 1 - 0{,}19 = 0{,}81$ ; coefficient annuel moyen $c_m = 0{,}81^{1/2} = \\sqrt{0{,}81} = 0{,}9$, soit un taux de $-10\\,\\%$ par an. Vérification : $0{,}9 \\times 0{,}9 = 0{,}81$. ✓ Le piège : diviser le taux global par $2$ ($19/2 = 9{,}5\\,\\%$) alors que les baisses se composent."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "modelisation",
+      "enonce": "Une population de bactéries part de $500$ individus et **double** chaque heure. Quelle fonction donne l'effectif au bout de $x$ heures ?",
+      "choix": [
+        "$N(x) = 500 \\times 2^x$",
+        "$N(x) = 500 + 2x$",
+        "$N(x) = 500 \\times 2x$",
+        "$N(x) = 2 \\times 500^x$"
+      ],
+      "reponse": 0,
+      "explication": "Doubler chaque heure, c'est multiplier par $a = 2$ à chaque unité de temps ($+100\\,\\%$), avec la valeur initiale $k = 500$ : $N(x) = 500 \\times 2^x$. Le piège : modéliser en additif ($500 + 2x$) ou confondre le facteur constant avec la base ($2 \\times 500^x$) — c'est la base qui doit valoir $2$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "proprietes-algebriques",
+      "enonce": "Une quantité est modélisée par $N(x) = k \\times a^x$. Comment passe-t-on de $N(x)$ à $N(x+1)$ ?",
+      "choix": [
+        "en multipliant par $a$ : $N(x+1) = a \\times N(x)$",
+        "en ajoutant $a$ : $N(x+1) = N(x) + a$",
+        "en multipliant par $k$ : $N(x+1) = k \\times N(x)$",
+        "en ajoutant $k$ : $N(x+1) = N(x) + k$"
+      ],
+      "reponse": 0,
+      "explication": "$N(x+1) = k \\cdot a^{x+1} = a \\times k \\cdot a^x = a \\times N(x)$ : d'une unité de temps à la suivante, on multiplie toujours par la base $a$ — exactement comme la raison d'une suite géométrique. Le piège : croire qu'on ajoute une constante (modèle additif) ou faire jouer ce rôle au facteur initial $k$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "taux-moyen",
+      "enonce": "Un effectif est multiplié par $1{,}4641$ en $4$ ans. Quel est le taux d'évolution annuel moyen ?",
+      "choix": [
+        "$+10\\,\\%$",
+        "$+11{,}6\\,\\%$",
+        "$+46{,}41\\,\\%$",
+        "$+4\\,\\%$"
+      ],
+      "reponse": 0,
+      "explication": "Le coefficient annuel moyen est $c_m = 1{,}4641^{1/4} = 1{,}1$ (en effet $1{,}1^4 = 1{,}4641$), d'où un taux moyen de $+10\\,\\%$ par an. Le piège : diviser le taux global $46{,}41\\,\\%$ par $4$ donne $11{,}6\\,\\%$, ce qui est faux — c'est l'exposant $1/n$, pas la division, qui donne le taux moyen."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "modelisation",
+      "enonce": "Un capital suit $C(x) = 8000 \\times 1{,}21^x$ (en années). Quelle est sa valeur au bout de $6$ mois, soit $x = 0{,}5$ ?",
+      "choix": [
+        "$8\\,800$ €",
+        "$9\\,680$ €",
+        "$8\\,420$ €",
+        "$8\\,968$ €"
+      ],
+      "reponse": 0,
+      "explication": "$C(0{,}5) = 8000 \\times 1{,}21^{0{,}5} = 8000 \\times \\sqrt{1{,}21} = 8000 \\times 1{,}1 = 8\\,800$ €. L'intérêt de l'exponentielle est justement d'autoriser un exposant non entier. Le piège : prendre $x = 1$ et calculer $8000 \\times 1{,}21 = 9\\,680$ € (valeur au bout d'un an, pas de six mois)."
     }
   ]
 }

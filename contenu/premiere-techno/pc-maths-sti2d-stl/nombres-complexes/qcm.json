@@ -134,6 +134,111 @@
       ],
       "reponse": 1,
       "explication": "Un imaginaire pur s'écrit $z = \\mathrm{i}b$, donc sa partie réelle est nulle : son image a pour coordonnées $(0\\,;b)$, sur l'axe des **ordonnées**. L'axe des abscisses porte les nombres réels."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "partie-reelle",
+      "enonce": "Quelle est la partie réelle de $z = -4 + 6\\mathrm{i}$ ?",
+      "choix": ["$-4$", "$6$", "$6\\mathrm{i}$", "$-4 + 6\\mathrm{i}$"],
+      "reponse": 0,
+      "explication": "Dans l'écriture $z = a + \\mathrm{i}b$, la partie réelle est $a = -4$. Le signe compte : la confondre avec $4$ ou avec la partie imaginaire $6$ est le piège classique."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "En physique, on note souvent $\\mathrm{j}$ au lieu de $\\mathrm{i}$. Pourquoi ?",
+      "choix": [
+        "Parce que $\\mathrm{j}^2 \\neq -1$",
+        "Pour éviter la confusion avec l'intensité du courant",
+        "Parce que $\\mathrm{j}$ est plus grand que $\\mathrm{i}$",
+        "Parce qu'il s'agit d'un nombre différent"
+      ],
+      "reponse": 1,
+      "explication": "En électricité, $i$ désigne l'intensité : on note donc le nombre complexe $\\mathrm{j}$ pour éviter toute ambiguïté. Les deux notations désignent le **même** objet, avec $\\mathrm{j}^2 = -1$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "somme",
+      "enonce": "Que vaut $(3 + 2\\mathrm{i}) + (1 - 5\\mathrm{i})$ ?",
+      "choix": ["$4 - 3\\mathrm{i}$", "$4 + 7\\mathrm{i}$", "$2 + 7\\mathrm{i}$", "$4 - 3$"],
+      "reponse": 0,
+      "explication": "On additionne séparément les parties réelles ($3 + 1 = 4$) et imaginaires ($2 + (-5) = -3$) : $4 - 3\\mathrm{i}$. Le piège est de se tromper de signe sur $-5$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "module",
+      "enonce": "Quel est le module de $z = 5 - 12\\mathrm{i}$ ?",
+      "choix": ["$13$", "$17$", "$7$", "$\\sqrt{17}$"],
+      "reponse": 0,
+      "explication": "$|z| = \\sqrt{5^2 + (-12)^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$. Le signe de la partie imaginaire disparaît sous le carré ; le choix $17$ additionne $5 + 12$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "imaginaire-pur",
+      "enonce": "Parmi ces nombres, lequel est un imaginaire pur ?",
+      "choix": ["$2 + \\mathrm{i}$", "$3\\mathrm{i}$", "$-4$", "$1 + \\mathrm{i}$"],
+      "reponse": 1,
+      "explication": "Un imaginaire pur a une partie réelle **nulle** ($a = 0$). $3\\mathrm{i} = 0 + 3\\mathrm{i}$ convient. $-4$ est réel (partie imaginaire nulle), les deux autres ont leurs deux parties non nulles."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "produit",
+      "enonce": "Que vaut $(1 + \\mathrm{i})^2$ ?",
+      "choix": ["$2\\mathrm{i}$", "$2$", "$1 + 2\\mathrm{i}$", "$-2\\mathrm{i}$"],
+      "reponse": 0,
+      "explication": "$(1+\\mathrm{i})^2 = 1 + 2\\mathrm{i} + \\mathrm{i}^2 = 1 + 2\\mathrm{i} - 1 = 2\\mathrm{i}$. Le choix $1 + 2\\mathrm{i}$ oublie de remplacer $\\mathrm{i}^2$ par $-1$ — l'erreur type des produits."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "conjugue",
+      "enonce": "Dans le plan complexe, l'image de $\\bar{z}$ est le symétrique de celle de $z$ par rapport :",
+      "choix": [
+        "à l'axe des abscisses",
+        "à l'axe des ordonnées",
+        "à l'origine",
+        "à la première bissectrice"
+      ],
+      "reponse": 0,
+      "explication": "Le conjugué change $b$ en $-b$ sans toucher $a$ : le point $(a\\,;b)$ devient $(a\\,;-b)$, son symétrique par rapport à l'axe des **abscisses** (axe des réels). C'est l'interprétation géométrique attendue."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "quotient",
+      "enonce": "Que vaut $\\dfrac{3 + \\mathrm{i}}{1 - \\mathrm{i}}$ ?",
+      "choix": ["$1 + 2\\mathrm{i}$", "$2 + 4\\mathrm{i}$", "$1 - 2\\mathrm{i}$", "$3 - \\mathrm{i}$"],
+      "reponse": 0,
+      "explication": "On multiplie par le conjugué du dénominateur : $\\dfrac{(3+\\mathrm{i})(1+\\mathrm{i})}{(1-\\mathrm{i})(1+\\mathrm{i})} = \\dfrac{2 + 4\\mathrm{i}}{2} = 1 + 2\\mathrm{i}$. Oublier de diviser par $|1-\\mathrm{i}|^2 = 2$ donne le choix $2 + 4\\mathrm{i}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "forme-trigonometrique",
+      "enonce": "Quelle est la forme algébrique de $z = 2\\left(\\cos\\dfrac{\\pi}{3} + \\mathrm{i}\\sin\\dfrac{\\pi}{3}\\right)$ ?",
+      "choix": [
+        "$1 + \\mathrm{i}\\sqrt{3}$",
+        "$\\sqrt{3} + \\mathrm{i}$",
+        "$2 + 2\\mathrm{i}$",
+        "$\\dfrac{1}{2} + \\dfrac{\\sqrt{3}}{2}\\mathrm{i}$"
+      ],
+      "reponse": 0,
+      "explication": "$a = r\\cos\\theta = 2 \\times \\dfrac{1}{2} = 1$ et $b = r\\sin\\theta = 2 \\times \\dfrac{\\sqrt{3}}{2} = \\sqrt{3}$, d'où $z = 1 + \\mathrm{i}\\sqrt{3}$. Le dernier choix oublie de multiplier par le module $r = 2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "module",
+      "enonce": "On sait que $|z| = 3$ et $|z'| = 4$. Que vaut $|z \\times z'|$ ?",
+      "choix": ["$12$", "$7$", "$5$", "$\\sqrt{7}$"],
+      "reponse": 0,
+      "explication": "Le module d'un produit est le produit des modules : $|zz'| = |z| \\times |z'| = 3 \\times 4 = 12$. Le choix $7$ additionne les modules, le choix $5$ applique à tort une somme de type $\\sqrt{3^2+4^2}$."
     }
   ]
 }

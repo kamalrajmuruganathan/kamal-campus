@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "produit-scalaire-coordonnees",
       "enonce": "Dans une base orthonormée, $\\vec{u}\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix}3\\\\0\\\\2\\end{pmatrix}$. Combien vaut $\\vec{u}\\cdot\\vec{v}$ ?",
-      "choix": ["$1$", "$5$", "$-1$", "$6$"],
+      "choix": [
+        "$1$",
+        "$5$",
+        "$-1$",
+        "$6$"
+      ],
       "reponse": 0,
       "explication": "En base orthonormée, $\\vec{u}\\cdot\\vec{v}=xx'+yy'+zz'=1\\times3+2\\times0+(-1)\\times2=3+0-2=1$. Le piège : oublier le signe du dernier terme et écrire $3+0+2=5$."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "norme",
       "enonce": "Quelle est la norme du vecteur $\\vec{u}\\begin{pmatrix}2\\\\-1\\\\2\\end{pmatrix}$ ?",
-      "choix": ["$9$", "$5$", "$3$", "$\\sqrt5$"],
+      "choix": [
+        "$9$",
+        "$5$",
+        "$3$",
+        "$\\sqrt5$"
+      ],
       "reponse": 2,
       "explication": "$\\|\\vec{u}\\|=\\sqrt{x^2+y^2+z^2}=\\sqrt{4+1+4}=\\sqrt9=3$. Le piège classique est d'oublier la racine carrée et de répondre $9$, qui est en fait $\\|\\vec{u}\\|^2$."
     },
@@ -33,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "orthogonalite",
       "enonce": "Lequel de ces vecteurs est orthogonal à $\\vec{u}\\begin{pmatrix}1\\\\2\\\\1\\end{pmatrix}$ ?",
-      "choix": ["$\\vec{a}(1,2,1)$", "$\\vec{b}(2,-1,0)$", "$\\vec{c}(1,1,1)$", "$\\vec{d}(2,1,0)$"],
+      "choix": [
+        "$\\vec{a}(1,2,1)$",
+        "$\\vec{b}(2,-1,0)$",
+        "$\\vec{c}(1,1,1)$",
+        "$\\vec{d}(2,1,0)$"
+      ],
       "reponse": 1,
       "explication": "Deux vecteurs sont orthogonaux quand leur produit scalaire est nul. Pour $\\vec{b}$ : $1\\times2+2\\times(-1)+1\\times0=2-2+0=0$. Les autres donnent $6$, $4$ et $4$. Il faut tester le produit scalaire, pas se fier à l'allure des coordonnées."
     },
@@ -42,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "developpement",
       "enonce": "On sait que $\\|\\vec{u}\\|=3$, $\\|\\vec{v}\\|=4$ et $\\vec{u}\\cdot\\vec{v}=5$. Combien vaut $\\|\\vec{u}+\\vec{v}\\|^2$ ?",
-      "choix": ["$25$", "$49$", "$\\sqrt{35}$", "$35$"],
+      "choix": [
+        "$25$",
+        "$49$",
+        "$\\sqrt{35}$",
+        "$35$"
+      ],
       "reponse": 3,
       "explication": "$\\|\\vec{u}+\\vec{v}\\|^2=\\|\\vec{u}\\|^2+2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2=9+2\\times5+16=35$. Répondre $25$ revient à oublier le double produit $2\\,\\vec{u}\\cdot\\vec{v}$ ; $\\sqrt{35}$ est la norme, pas son carré."
     },
@@ -51,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "vecteur-normal",
       "enonce": "Un plan est dirigé par $\\vec{u}\\begin{pmatrix}1\\\\0\\\\1\\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix}0\\\\1\\\\-1\\end{pmatrix}$. Lequel de ces vecteurs lui est normal ?",
-      "choix": ["$(1,1,1)$", "$(1,0,1)$", "$(-1,1,1)$", "$(1,-1,1)$"],
+      "choix": [
+        "$(1,1,1)$",
+        "$(1,0,1)$",
+        "$(-1,1,1)$",
+        "$(1,-1,1)$"
+      ],
       "reponse": 2,
       "explication": "Un vecteur normal doit être orthogonal aux deux vecteurs directeurs. Pour $(-1,1,1)$ : $\\vec{n}\\cdot\\vec{u}=-1+0+1=0$ et $\\vec{n}\\cdot\\vec{v}=0+1-1=0$. Le piège : vérifier l'orthogonalité avec un seul vecteur directeur ne suffit pas, il en faut deux non colinéaires."
     },
@@ -60,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "equation-cartesienne",
       "enonce": "Quelle est une équation cartésienne du plan passant par $A(1,2,-1)$ et de vecteur normal $\\vec{n}\\begin{pmatrix}3\\\\-1\\\\2\\end{pmatrix}$ ?",
-      "choix": ["$3x-y+2z-1=0$", "$3x-y+2z+1=0$", "$3x+2y-z=0$", "$x-2y+3z+1=0$"],
+      "choix": [
+        "$3x-y+2z-1=0$",
+        "$3x-y+2z+1=0$",
+        "$3x+2y-z=0$",
+        "$x-2y+3z+1=0$"
+      ],
       "reponse": 1,
       "explication": "On écrit $\\vec{AM}\\cdot\\vec{n}=0$ : $3(x-1)-(y-2)+2(z+1)=0$, soit $3x-y+2z+(-3+2+2)=0$, d'où $3x-y+2z+1=0$. Contrôle avec $A$ : $3-2-2+1=0$ ✓. L'erreur de signe sur $d$ donne $-1$ à la place de $+1$."
     },
@@ -69,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "polarisation",
       "enonce": "On donne $\\|\\vec{u}\\|=2$, $\\|\\vec{v}\\|=3$ et $\\|\\vec{u}+\\vec{v}\\|=4$. Combien vaut $\\vec{u}\\cdot\\vec{v}$ ?",
-      "choix": ["$3$", "$-\\dfrac32$", "$\\dfrac32$", "$\\dfrac34$"],
+      "choix": [
+        "$3$",
+        "$-\\dfrac32$",
+        "$\\dfrac32$",
+        "$\\dfrac34$"
+      ],
       "reponse": 2,
       "explication": "Formule de polarisation : $\\vec{u}\\cdot\\vec{v}=\\tfrac12(\\|\\vec{u}+\\vec{v}\\|^2-\\|\\vec{u}\\|^2-\\|\\vec{v}\\|^2)=\\tfrac12(16-4-9)=\\tfrac32$. Oublier le facteur $\\tfrac12$ donne $3$ ; utiliser $\\tfrac14$ au lieu de $\\tfrac12$ donne $\\tfrac34$."
     },
@@ -78,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "projete-orthogonal",
       "enonce": "Quel est le projeté orthogonal du point $M(1,1,1)$ sur le plan $\\mathcal{P}:x+y+z-6=0$ ?",
-      "choix": ["$(6,6,6)$", "$(3,3,3)$", "$(0,0,0)$", "$(2,2,2)$"],
+      "choix": [
+        "$(6,6,6)$",
+        "$(3,3,3)$",
+        "$(0,0,0)$",
+        "$(2,2,2)$"
+      ],
       "reponse": 3,
       "explication": "La droite passant par $M$ et dirigée par le normal $\\vec{n}(1,1,1)$ est $(1+t,1+t,1+t)$. On l'injecte dans le plan : $3(1+t)-6=0\\Rightarrow t=1$, d'où $H(2,2,2)$. Le piège : croire que le projeté est un multiple simple des coordonnées de $M$ sans passer par l'équation du plan."
     },
@@ -87,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "representation-parametrique",
       "enonce": "La droite $d$ a pour représentation $\\begin{cases}x=4-t\\\\ y=1\\\\ z=2+t\\end{cases}$. Quel est un vecteur directeur de $d$ ?",
-      "choix": ["$(4,1,2)$", "$(-1,0,1)$", "$(1,0,1)$", "$(-1,1,1)$"],
+      "choix": [
+        "$(4,1,2)$",
+        "$(-1,0,1)$",
+        "$(1,0,1)$",
+        "$(-1,1,1)$"
+      ],
       "reponse": 1,
       "explication": "Le vecteur directeur se lit dans les coefficients du paramètre $t$ : $x=4-1\\cdot t$, $y=1+0\\cdot t$, $z=2+1\\cdot t$, soit $(-1,0,1)$. Le piège : lire $(4,1,2)$, qui est le point de la droite (les constantes), pas sa direction."
     },
@@ -96,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "systeme-configuration",
       "enonce": "Où la droite $\\begin{cases}x=t\\\\ y=1+t\\\\ z=2-t\\end{cases}$ coupe-t-elle le plan $x+y+z-3=0$ ?",
-      "choix": ["Pas d'intersection (droite parallèle au plan)", "au point $(1,2,1)$", "au point $(0,1,2)$", "une infinité de points (droite incluse dans le plan)"],
+      "choix": [
+        "Pas d'intersection (droite parallèle au plan)",
+        "au point $(1,2,1)$",
+        "au point $(0,1,2)$",
+        "une infinité de points (droite incluse dans le plan)"
+      ],
       "reponse": 2,
       "explication": "On injecte la paramétrique dans l'équation du plan : $t+(1+t)+(2-t)-3=0$, ce qui se simplifie en $t=0$. Une unique valeur de $t$ : la droite est sécante au plan au point $(0,1,2)$. Il faut toujours substituer, puis conclure par la position relative obtenue."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "produit-scalaire-coordonnees",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix}3\\\\1\\\\2\\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix}$. Combien vaut $\\vec{u}\\cdot\\vec{v}$ ?",
+      "choix": [
+        "$-3$",
+        "$3$",
+        "$7$",
+        "$1$"
+      ],
+      "reponse": 1,
+      "explication": "En base orthonormée, $\\vec{u}\\cdot\\vec{v}=xx'+yy'+zz'=3\\times1+1\\times2+2\\times(-1)=3+2-2=3$. Le piège est d'oublier le signe du dernier terme et d'écrire $3+2+2=7$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "norme",
+      "enonce": "Quelle est la norme du vecteur $\\vec{u}\\begin{pmatrix}6\\\\3\\\\-2\\end{pmatrix}$ ?",
+      "choix": [
+        "$49$",
+        "$11$",
+        "$7$",
+        "$\\sqrt{7}$"
+      ],
+      "reponse": 2,
+      "explication": "$\\|\\vec{u}\\|=\\sqrt{x^2+y^2+z^2}=\\sqrt{36+9+4}=\\sqrt{49}=7$. Le piège classique est d'oublier la racine et de répondre $49$ (qui est $\\|\\vec{u}\\|^2$), ou d'additionner les valeurs absolues $6+3+2=11$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "orthogonalite-vocabulaire",
+      "enonce": "Dans l'espace, deux droites sont dites **perpendiculaires** lorsqu'elles sont :",
+      "choix": [
+        "orthogonales seulement",
+        "orthogonales **et** sécantes",
+        "parallèles",
+        "sécantes seulement"
+      ],
+      "reponse": 1,
+      "explication": "Perpendiculaires = orthogonales **et** sécantes (elles se croisent). Le piège : dans l'espace deux droites peuvent être orthogonales sans se couper ; elles ne sont alors pas perpendiculaires. La distinction n'existait pas dans le plan."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "distance",
+      "enonce": "Quelle est la distance entre les points $A(1,2,2)$ et $B(4,6,2)$ ?",
+      "choix": [
+        "$25$",
+        "$7$",
+        "$5$",
+        "$\\sqrt{7}$"
+      ],
+      "reponse": 2,
+      "explication": "$AB=\\sqrt{(4-1)^2+(6-2)^2+(2-2)^2}=\\sqrt{9+16+0}=\\sqrt{25}=5$. Le piège est d'oublier la racine ($25=AB^2$) ou d'additionner les écarts $3+4+0=7$ sans passer par les carrés."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "developpement",
+      "enonce": "On sait que $\\|\\vec{u}\\|=5$, $\\|\\vec{v}\\|=3$ et $\\vec{u}\\cdot\\vec{v}=2$. Combien vaut $\\|\\vec{u}-\\vec{v}\\|^2$ ?",
+      "choix": [
+        "$38$",
+        "$34$",
+        "$30$",
+        "$\\sqrt{30}$"
+      ],
+      "reponse": 2,
+      "explication": "$\\|\\vec{u}-\\vec{v}\\|^2=\\|\\vec{u}\\|^2-2\\,\\vec{u}\\cdot\\vec{v}+\\|\\vec{v}\\|^2=25-2\\times2+9=30$. Le distracteur $38$ additionne le double produit au lieu de le soustraire, et $34$ l'oublie ; $\\sqrt{30}$ est la norme, pas son carré."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "vecteur-normal",
+      "enonce": "Un plan est dirigé par $\\vec{u}\\begin{pmatrix}2\\\\1\\\\0\\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix}0\\\\1\\\\1\\end{pmatrix}$. Lequel de ces vecteurs lui est normal ?",
+      "choix": [
+        "$(2,1,0)$",
+        "$(1,1,1)$",
+        "$(1,-2,2)$",
+        "$(2,1,1)$"
+      ],
+      "reponse": 2,
+      "explication": "Un vecteur normal doit être orthogonal aux deux directeurs. Pour $(1,-2,2)$ : $\\vec{n}\\cdot\\vec{u}=2-2+0=0$ et $\\vec{n}\\cdot\\vec{v}=0-2+2=0$. Le piège : vérifier l'orthogonalité avec un seul vecteur directeur ne suffit pas."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "equation-cartesienne",
+      "enonce": "Quelle est une équation cartésienne du plan passant par $A(2,-1,3)$ et de vecteur normal $\\vec{n}\\begin{pmatrix}1\\\\2\\\\-1\\end{pmatrix}$ ?",
+      "choix": [
+        "$x+2y-z-3=0$",
+        "$x+2y-z+3=0$",
+        "$2x-y+3z=0$",
+        "$x+2y-z+1=0$"
+      ],
+      "reponse": 1,
+      "explication": "On écrit $\\vec{AM}\\cdot\\vec{n}=0$ : $1(x-2)+2(y+1)-1(z-3)=0$, soit $x+2y-z+(-2+2+3)=0$, d'où $x+2y-z+3=0$. Contrôle avec $A$ : $2-2-3+3=0$ ✓. L'erreur de signe sur $d$ donne $-3$ au lieu de $+3$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "polarisation",
+      "enonce": "On donne $\\|\\vec{u}\\|=3$, $\\|\\vec{v}\\|=5$ et $\\|\\vec{u}-\\vec{v}\\|=7$. Combien vaut $\\vec{u}\\cdot\\vec{v}$ ?",
+      "choix": [
+        "$\\dfrac{15}{2}$",
+        "$-\\dfrac{15}{2}$",
+        "$-\\dfrac{15}{4}$",
+        "$15$"
+      ],
+      "reponse": 1,
+      "explication": "Polarisation : $\\vec{u}\\cdot\\vec{v}=\\tfrac12(\\|\\vec{u}\\|^2+\\|\\vec{v}\\|^2-\\|\\vec{u}-\\vec{v}\\|^2)=\\tfrac12(9+25-49)=\\tfrac12(-15)=-\\tfrac{15}{2}$. Oublier le signe donne $+\\tfrac{15}{2}$ ; utiliser $\\tfrac14$ au lieu de $\\tfrac12$ donne $-\\tfrac{15}{4}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "projete-orthogonal",
+      "enonce": "Quel est le projeté orthogonal de l'origine $O(0,0,0)$ sur le plan $\\mathcal{P}:x+2y+2z-9=0$ ?",
+      "choix": [
+        "$(9,18,18)$",
+        "$(3,6,6)$",
+        "$(1,2,2)$",
+        "$(1,1,1)$"
+      ],
+      "reponse": 2,
+      "explication": "La droite passant par $O$ et dirigée par le normal $\\vec{n}(1,2,2)$ est $(t,2t,2t)$. On l'injecte : $t+4t+4t-9=0\\Rightarrow 9t=9\\Rightarrow t=1$, d'où $H(1,2,2)$. Le piège : croire que le projeté est un multiple simple du normal sans résoudre en $t$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "systeme-configuration",
+      "enonce": "Quelle est la position de la droite $\\begin{cases}x=t\\\\ y=1+t\\\\ z=1\\end{cases}$ par rapport au plan $x-y+z-5=0$ ?",
+      "choix": [
+        "au point $(0,1,1)$",
+        "Pas d'intersection (droite parallèle au plan)",
+        "Une infinité de points (droite incluse dans le plan)",
+        "au point $(5,6,1)$"
+      ],
+      "reponse": 1,
+      "explication": "On injecte : $t-(1+t)+1-5=t-1-t+1-5=-5$. L'équation $-5=0$ n'a aucune solution : la droite ne coupe jamais le plan, elle lui est parallèle. Comme le point $(0,1,1)$ n'est pas dans le plan ($0-1+1-5=-5\\neq0$), elle n'y est pas incluse."
     }
   ]
 }

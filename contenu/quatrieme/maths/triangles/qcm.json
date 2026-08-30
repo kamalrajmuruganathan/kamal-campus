@@ -43,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "pythagore",
       "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 3$ cm et $\\mathrm{AC} = 4$ cm. Combien vaut $\\mathrm{BC}$ ?",
-      "choix": ["$5$ cm", "$7$ cm", "$25$ cm", "$12$ cm"],
+      "choix": [
+        "$5$ cm",
+        "$7$ cm",
+        "$25$ cm",
+        "$12$ cm"
+      ],
       "reponse": 0,
       "explication": "$\\mathrm{BC}^2 = 3^2 + 4^2 = 9 + 16 = 25$, donc $\\mathrm{BC} = \\sqrt{25} = 5$ cm. Le choix $7$ additionne les longueurs au lieu des carrés ; le choix $25$ oublie la **racine carrée** finale, c'est l'oubli le plus fréquent ; $12$ multiplie les côtés."
     },
@@ -52,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "pythagore",
       "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{BC} = 13$ cm et $\\mathrm{AB} = 5$ cm. Combien vaut $\\mathrm{AC}$ ?",
-      "choix": ["$18$ cm", "$12$ cm", "$\\sqrt{194}$ cm", "$8$ cm"],
+      "choix": [
+        "$18$ cm",
+        "$12$ cm",
+        "$\\sqrt{194}$ cm",
+        "$8$ cm"
+      ],
       "reponse": 1,
       "explication": "L'inconnue est un **côté de l'angle droit**, donc on soustrait : $\\mathrm{AC}^2 = 13^2 - 5^2 = 169 - 25 = 144$, d'où $\\mathrm{AC} = 12$ cm. Le choix $\\sqrt{194}$ vient d'une addition ($169 + 25$) au lieu d'une soustraction — et il est absurde, car un côté de l'angle droit ne peut pas dépasser l'hypoténuse. Les choix $18$ et $8$ ajoutent ou soustraient les longueurs sans passer par les carrés."
     },
@@ -117,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "pythagore",
       "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 2$ cm et $\\mathrm{AC} = 3$ cm. Quelle est la valeur **exacte** de $\\mathrm{BC}$ ?",
-      "choix": ["$5$ cm", "$\\sqrt{13}$ cm", "$13$ cm", "$\\sqrt{5}$ cm"],
+      "choix": [
+        "$5$ cm",
+        "$\\sqrt{13}$ cm",
+        "$13$ cm",
+        "$\\sqrt{5}$ cm"
+      ],
       "reponse": 1,
       "explication": "$\\mathrm{BC}^2 = 2^2 + 3^2 = 4 + 9 = 13$, donc $\\mathrm{BC} = \\sqrt{13}$ cm (environ $3{,}6$ cm). $13$ n'étant pas un carré parfait, la valeur exacte **garde le symbole racine**. Le choix $13$ oublie la racine, le choix $5$ additionne les longueurs, et $\\sqrt{5}$ vient d'une soustraction $9 - 4$ alors qu'on cherche l'hypoténuse."
     },
@@ -134,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "Le segment qui joint les milieux de deux côtés mesure la **moitié** du troisième côté : $\\mathrm{IJ} = 9 \\div 2 = 4{,}5$ cm. Le choix $18$ double au lieu de diviser. Et le dernier choix est le vrai piège : les autres longueurs du triangle n'interviennent pas, seul $\\mathrm{BC}$ compte."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "droites-remarquables",
+      "enonce": "Quelle droite d'un triangle est **perpendiculaire** à un côté **et** passe par son **milieu** ?",
+      "choix": [
+        "la médiane",
+        "la médiatrice",
+        "la hauteur",
+        "la bissectrice"
+      ],
+      "reponse": 1,
+      "explication": "La **médiatrice** d'un côté est perpendiculaire à ce côté et passe par son milieu. Le piège classique est la médiane, qui parle aussi d'un milieu mais **part d'un sommet** et n'est pas perpendiculaire ; la hauteur est perpendiculaire mais part d'un sommet."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "pythagore",
+      "enonce": "Le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{B}$. Quel côté est l'hypoténuse ?",
+      "choix": [
+        "$[\\mathrm{AB}]$",
+        "$[\\mathrm{BC}]$",
+        "$[\\mathrm{AC}]$",
+        "$[\\mathrm{AB}]$ et $[\\mathrm{BC}]$"
+      ],
+      "reponse": 2,
+      "explication": "L'hypoténuse est le côté **opposé à l'angle droit**. L'angle droit est en $\\mathrm{B}$, donc l'hypoténuse est le côté qui ne touche pas $\\mathrm{B}$ : $[\\mathrm{AC}]$. Le piège est de choisir un côté contenant la lettre $\\mathrm{B}$, qui sont justement les deux côtés de l'angle droit."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "droite-des-milieux",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$ et $\\mathrm{J}$ le milieu de $[\\mathrm{AC}]$. Que peut-on dire des droites $(\\mathrm{IJ})$ et $(\\mathrm{BC})$ ?",
+      "choix": [
+        "Elles sont perpendiculaires",
+        "Elles sont parallèles",
+        "Elles sont sécantes",
+        "Elles sont confondues"
+      ],
+      "reponse": 1,
+      "explication": "La droite qui joint les **milieux de deux côtés** est **parallèle au troisième côté** : $(\\mathrm{IJ}) \\parallel (\\mathrm{BC})$. Le piège « perpendiculaires » confond avec la médiatrice ; ici il s'agit de la droite des milieux, qui donne un parallélisme."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 6$ cm et $\\mathrm{AC} = 8$ cm. Combien vaut $\\mathrm{BC}$ ?",
+      "choix": [
+        "$10$ cm",
+        "$14$ cm",
+        "$100$ cm",
+        "$48$ cm"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathrm{BC}^2 = 6^2 + 8^2 = 36 + 64 = 100$, donc $\\mathrm{BC} = \\sqrt{100} = 10$ cm (c'est le triplet $6$–$8$–$10$). Le choix $14$ additionne les longueurs, $100$ oublie la **racine carrée** finale, et $48$ multiplie les côtés."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{BC} = 17$ cm et $\\mathrm{AB} = 8$ cm. Combien vaut $\\mathrm{AC}$ ?",
+      "choix": [
+        "$15$ cm",
+        "$\\sqrt{353}$ cm",
+        "$9$ cm",
+        "$25$ cm"
+      ],
+      "reponse": 0,
+      "explication": "L'inconnue est un **côté de l'angle droit**, donc on **soustrait** : $\\mathrm{AC}^2 = 17^2 - 8^2 = 289 - 64 = 225$, d'où $\\mathrm{AC} = \\sqrt{225} = 15$ cm. Le choix $\\sqrt{353}$ vient d'une addition ($289 + 64$) — absurde, car un côté de l'angle droit ne peut dépasser l'hypoténuse ; $9$ soustrait les longueurs ($17 - 8$)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "reciproque",
+      "enonce": "Un triangle $\\mathrm{ABC}$ a $\\mathrm{AB} = 9$ cm, $\\mathrm{BC} = 12$ cm et $\\mathrm{AC} = 15$ cm. Que peux-tu conclure ?",
+      "choix": [
+        "Il est rectangle en $\\mathrm{A}$",
+        "Il est rectangle en $\\mathrm{B}$",
+        "Il est rectangle en $\\mathrm{C}$",
+        "Il n'est pas rectangle"
+      ],
+      "reponse": 1,
+      "explication": "Le plus grand côté est $[\\mathrm{AC}]$ : $\\mathrm{AC}^2 = 15^2 = 225$, et $\\mathrm{AB}^2 + \\mathrm{BC}^2 = 81 + 144 = 225$. Les deux sont égaux, donc d'après la **réciproque** le triangle est rectangle, au sommet **opposé au plus grand côté**, c'est-à-dire en $\\mathrm{B}$. Le piège est de placer l'angle droit ailleurs qu'en face du côté de $15$ cm."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "droite-des-milieux",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{I}$ et $\\mathrm{J}$ sont les milieux de $[\\mathrm{AB}]$ et $[\\mathrm{AC}]$. On mesure $\\mathrm{IJ} = 6$ cm. Combien vaut $\\mathrm{BC}$ ?",
+      "choix": [
+        "$3$ cm",
+        "$6$ cm",
+        "$12$ cm",
+        "$24$ cm"
+      ],
+      "reponse": 2,
+      "explication": "Le segment des milieux mesure la **moitié** du troisième côté : $\\mathrm{IJ} = \\dfrac{\\mathrm{BC}}{2}$, donc $\\mathrm{BC} = 2 \\times \\mathrm{IJ} = 2 \\times 6 = 12$ cm. Le piège $3$ cm **divise** au lieu de multiplier : ici on remonte de $\\mathrm{IJ}$ vers $\\mathrm{BC}$, on multiplie donc par $2$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "contraposee",
+      "enonce": "Un triangle a pour côtés $5$ cm, $6$ cm et $8$ cm. Est-il rectangle ?",
+      "choix": [
+        "Oui, car $5 + 6 > 8$",
+        "Non, car $8^2 \\neq 5^2 + 6^2$",
+        "Oui, l'angle droit est opposé au côté de $8$ cm",
+        "On ne peut pas conclure sans les angles"
+      ],
+      "reponse": 1,
+      "explication": "On teste le plus grand côté : $8^2 = 64$ d'un côté, $5^2 + 6^2 = 25 + 36 = 61$ de l'autre. $64 \\neq 61$, donc la **contraposée** permet de conclure que le triangle **n'est pas rectangle**. Le choix A confond avec l'inégalité triangulaire, qui prouve seulement que le triangle **existe**, pas qu'il a un angle droit."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "cercle-circonscrit",
+      "enonce": "Un triangle $\\mathrm{ABC}$ est inscrit dans un cercle, et le côté $[\\mathrm{BC}]$ est un **diamètre** de ce cercle. Que peux-tu affirmer ?",
+      "choix": [
+        "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$",
+        "$\\mathrm{ABC}$ est rectangle en $\\mathrm{B}$",
+        "$\\mathrm{ABC}$ est équilatéral",
+        "$\\mathrm{ABC}$ est isocèle en $\\mathrm{A}$"
+      ],
+      "reponse": 0,
+      "explication": "Si un triangle est inscrit dans un cercle et que l'un de ses côtés est un **diamètre**, alors il est **rectangle**, l'angle droit étant au sommet opposé au diamètre. Ici le diamètre est $[\\mathrm{BC}]$, donc l'angle droit est en $\\mathrm{A}$, où que soit placé $\\mathrm{A}$ sur le cercle."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "cercle-circonscrit",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ avec $\\mathrm{BC} = 12$ cm, et $\\mathrm{O}$ est le milieu de $[\\mathrm{BC}]$. Combien mesure la médiane $[\\mathrm{AO}]$ issue de l'angle droit ?",
+      "choix": [
+        "$6$ cm",
+        "$12$ cm",
+        "$3$ cm",
+        "On ne peut pas le savoir sans $\\mathrm{AB}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\mathrm{O}$ est le centre du cercle circonscrit (milieu de l'hypoténuse) et $\\mathrm{A}$ est sur ce cercle : $\\mathrm{OA}$ est donc un **rayon**, égal à la **moitié de l'hypoténuse**, soit $12 \\div 2 = 6$ cm. Le piège $12$ cm confond le rayon avec le diamètre ; le dernier choix ignore que seule $\\mathrm{BC}$ compte."
     }
   ]
 }

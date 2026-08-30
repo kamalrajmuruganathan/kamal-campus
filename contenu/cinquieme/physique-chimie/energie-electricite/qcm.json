@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Relier les deux bornes sans récepteur est un **court-circuit** : l'intensité devient **très grande**, le fil chauffe dangereusement et peut provoquer un incendie ou détériorer la pile. C'est pour couper ce genre de courant excessif qu'existent les fusibles et disjoncteurs."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "energie-joule",
+      "enonce": "Le préfixe « méga » multiplie par un million. Combien vaut $2\\ \\text{MJ}$ en joules ?",
+      "choix": [
+        "$2\\,000\\ \\text{J}$",
+        "$20\\,000\\ \\text{J}$",
+        "$200\\,000\\ \\text{J}$",
+        "$2\\,000\\,000\\ \\text{J}$"
+      ],
+      "reponse": 3,
+      "explication": "$1\\ \\text{MJ} = 1\\,000\\,000\\ \\text{J}$, donc $2\\ \\text{MJ} = 2\\,000\\,000\\ \\text{J}$. Le piège est de confondre méga ($\\times 1\\,000\\,000$) avec kilo ($\\times 1\\,000$)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "stock-transfert",
+      "enonce": "Parmi ces éléments, lequel est un stock d'énergie ?",
+      "choix": [
+        "Un fil de connexion",
+        "Une pile",
+        "Un interrupteur",
+        "Un ampèremètre"
+      ],
+      "reponse": 1,
+      "explication": "Une **pile** est une réserve d'énergie : c'est un **stock**. Le fil, l'interrupteur et l'ampèremètre ne stockent pas d'énergie, ils servent à faire circuler ou à mesurer le courant."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "modes-transfert",
+      "enonce": "Le Soleil chauffe un mur à distance. Quel est le mode de transfert d'énergie utilisé ?",
+      "choix": [
+        "Électrique",
+        "Par la lumière (rayonnement)",
+        "Mécanique",
+        "Aucun, il n'y a pas de transfert"
+      ],
+      "reponse": 1,
+      "explication": "Le Soleil transfère son énergie **par la lumière (rayonnement)** : elle traverse le vide puis chauffe le mur. Ce n'est pas un transfert électrique ni mécanique. Le piège est de croire qu'un transfert exige un contact ou un fil."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "intensite-ampere",
+      "enonce": "Avec quel appareil, et comment le branche-t-on, mesure-t-on l'intensité du courant ?",
+      "choix": [
+        "Un voltmètre, branché en dérivation",
+        "Un ampèremètre, branché en série",
+        "Un ampèremètre, branché en dérivation",
+        "Un voltmètre, branché en série"
+      ],
+      "reponse": 1,
+      "explication": "L'**intensité** (en ampères) se mesure avec un **ampèremètre** branché **en série** : le courant doit le traverser. Le voltmètre, lui, mesure la tension et se branche en dérivation. Inverser les deux appareils est l'erreur classique."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "serie-derivation",
+      "enonce": "Dans un circuit en série, que peut-on dire de l'intensité du courant ?",
+      "choix": [
+        "Elle est la même partout dans la boucle",
+        "Elle se partage entre les dipôles",
+        "Elle est nulle",
+        "Elle augmente après chaque dipôle"
+      ],
+      "reponse": 0,
+      "explication": "En **série**, il n'y a qu'une seule boucle : l'intensité est la **même partout**. C'est en **dérivation** que l'intensité du circuit principal se partage entre les branches. Ne confonds pas les deux montages."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "tension-volt",
+      "enonce": "Une tension vaut $250\\ \\text{mV}$. Combien cela fait-il en volts ?",
+      "choix": [
+        "$0{,}250\\ \\text{V}$",
+        "$2{,}5\\ \\text{V}$",
+        "$25\\ \\text{V}$",
+        "$250\\,000\\ \\text{V}$"
+      ],
+      "reponse": 0,
+      "explication": "$1\\ \\text{V} = 1\\,000\\ \\text{mV}$, donc $250\\ \\text{mV} = \\dfrac{250}{1\\,000} = 0{,}250\\ \\text{V}$. Confondre mV et V est un facteur $1\\,000$, pas $10$ ni $100$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "circuit-ouvert-ferme",
+      "enonce": "Dans un circuit, l'interrupteur est ouvert. Que fait le courant ?",
+      "choix": [
+        "Il circule normalement",
+        "Il ne circule pas, car la boucle est coupée",
+        "Il circule plus fort",
+        "Il change de sens"
+      ],
+      "reponse": 1,
+      "explication": "Un interrupteur **ouvert coupe** la boucle : le courant **ne circule pas** et la lampe reste éteinte. Attention au vocabulaire : « ouvert » signifie « coupé », le contraire de l'intuition d'une porte."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "serie-derivation",
+      "enonce": "Un générateur de $4{,}5\\ \\text{V}$ alimente deux lampes identiques branchées en série. Que peut-on dire des tensions à leurs bornes ?",
+      "choix": [
+        "Chaque lampe reçoit $4{,}5\\ \\text{V}$",
+        "Les deux tensions s'ajoutent pour donner $4{,}5\\ \\text{V}$, soit $2{,}25\\ \\text{V}$ chacune",
+        "Chaque lampe reçoit $9\\ \\text{V}$",
+        "La tension aux bornes des lampes est nulle"
+      ],
+      "reponse": 1,
+      "explication": "En **série**, la tension du générateur se **répartit** entre les dipôles : les tensions s'**ajoutent** pour redonner $4{,}5\\ \\text{V}$. Deux lampes identiques se partagent également, soit $2{,}25\\ \\text{V}$ chacune. Le piège est de croire que chaque lampe reçoit la tension totale."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "serie-derivation",
+      "enonce": "Dans un circuit en dérivation, le courant principal vaut $0{,}6\\ \\text{A}$ et se partage entre deux branches identiques. Quelle intensité traverse chaque branche ?",
+      "choix": [
+        "$0{,}3\\ \\text{A}$",
+        "$0{,}6\\ \\text{A}$",
+        "$1{,}2\\ \\text{A}$",
+        "$0\\ \\text{A}$"
+      ],
+      "reponse": 0,
+      "explication": "En **dérivation**, l'intensité du circuit principal se **partage** entre les branches. Deux branches identiques se partagent également $0{,}6\\ \\text{A}$, soit $0{,}3\\ \\text{A}$ chacune. Le piège est de croire que chaque branche reçoit tout le courant ($0{,}6\\ \\text{A}$)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "securite",
+      "enonce": "Pourquoi un fusible ou un disjoncteur est-il un organe de sécurité ?",
+      "choix": [
+        "Il augmente la tension du circuit",
+        "Il coupe automatiquement le courant si l'intensité devient trop grande",
+        "Il recharge la pile",
+        "Il empêche la lampe de briller"
+      ],
+      "reponse": 1,
+      "explication": "Le fusible et le disjoncteur **coupent automatiquement le courant** quand l'intensité devient trop grande (par exemple lors d'un court-circuit), évitant échauffement et incendie. Il ne faut donc jamais les neutraliser : ce sont des dispositifs de protection."
     }
   ]
 }

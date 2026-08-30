@@ -12,7 +12,11 @@
 
 /** Points de base d'une bonne réponse, selon la difficulté de la question. */
 export const POINTS_PAR_DIFFICULTE = {
+  // Étiquettes des QCM
   facile: 8,
+  moyen: 11,
+  difficile: 14,
+  // Étiquettes des exercices (et variantes)
   application: 10,
   intermediaire: 12,
   approfondissement: 14,

@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "boucle-conditionnelle",
       "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 1 dans n\ntant que n < 20 faire\n    mettre n * 2 dans n\nfin tant que\nafficher n\n```",
-      "choix": ["$16$", "$20$", "$32$", "$40$"],
+      "choix": [
+        "$16$",
+        "$20$",
+        "$32$",
+        "$40$"
+      ],
       "reponse": 2,
       "explication": "`n` prend les valeurs $2$, $4$, $8$, $16$, puis $32$. Au test qui suit le $16$, la condition $16 < 20$ est **encore vraie** : la machine fait un tour de plus. Le piège est de s'arrêter à la dernière valeur qui vérifie la condition ($16$) : une boucle `tant que` fait toujours le tour de trop qui la fait sortir, et la valeur finale ne vérifie plus la condition."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "boucle-conditionnelle",
       "enonce": "Combien de fois le bloc décalé s'exécute-t-il ?\n\n```\nmettre 50 dans n\ntant que n < 20 faire\n    mettre n * 2 dans n\nfin tant que\n```",
-      "choix": ["$0$ fois", "$1$ fois", "$2$ fois", "Une infinité de fois"],
+      "choix": [
+        "$0$ fois",
+        "$1$ fois",
+        "$2$ fois",
+        "Une infinité de fois"
+      ],
       "reponse": 0,
       "explication": "Le test a lieu **avant** le premier tour : $50 < 20$ est faux d'entrée, donc le bloc est entièrement sauté et `n` vaut toujours $50$ à la sortie. Le piège est de croire qu'une boucle s'exécute forcément au moins une fois — avec `tant que`, zéro tour est un cas parfaitement normal."
     },
@@ -75,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "boucle-conditionnelle",
       "enonce": "L'utilisateur saisit $30$. Qu'affiche ce programme ?\n\n```\ndemander un nombre et le mettre dans s\nmettre 0 dans t\ntant que s ≥ 7 faire\n    mettre s − 7 dans s\n    mettre t + 1 dans t\nfin tant que\nafficher t\n```",
-      "choix": ["$2$", "$3$", "$4$", "$5$"],
+      "choix": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ],
       "reponse": 2,
       "explication": "Déroulé : `s` passe par $23$, $16$, $9$, $2$, et `t` compte $1$, $2$, $3$, $4$. Au test suivant, $2 \\geqslant 7$ est faux : on sort. Le programme affiche $4$, le **quotient** de $30$ par $7$, et `s` finit sur le **reste** $2$ — d'où le piège : $2$ est la valeur de `s`, pas celle de `t`. $5$ compterait un tour de trop, la boucle ne pouvant pas soustraire $7$ à $2$."
     },
@@ -98,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "structurer-programme",
       "enonce": "Les cinq notes saisies sont $12$, $8$, $15$, $10$ et $6$. Qu'affiche ce programme ?\n\n```\nmettre 0 dans compteur\nmettre 0 dans total\nrépéter 5 fois\n    demander une note et la mettre dans note\n    mettre total + note dans total\n    si note ≥ 10 alors\n        mettre compteur + 1 dans compteur\n    fin si\nfin répéter\nafficher compteur\n```",
-      "choix": ["$2$", "$3$", "$5$", "$51$"],
+      "choix": [
+        "$2$",
+        "$3$",
+        "$5$",
+        "$51$"
+      ],
       "reponse": 1,
       "explication": "Trois notes atteignent $10$ : $12$, $15$ et **$10$ lui-même**, car $\\geqslant$ inclut l'égalité — d'où le distracteur $2$. Le piège principal est de confondre le **compteur** (`+ 1` à chaque note retenue) et l'**accumulateur** `total`, qui vaut $51$ ; et $5$ compterait tous les tours, sans tenir compte du `si` imbriqué dans la boucle."
     },
@@ -107,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "boucle-conditionnelle",
       "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 0 dans s\nmettre 1 dans i\ntant que s < 10 faire\n    mettre s + i dans s\n    mettre i + 1 dans i\nfin tant que\nafficher s\n```",
-      "choix": ["$6$", "$15$", "$10$", "Le programme ne s'arrête jamais"],
+      "choix": [
+        "$6$",
+        "$15$",
+        "$10$",
+        "Le programme ne s'arrête jamais"
+      ],
       "reponse": 2,
       "explication": "`s` prend les valeurs $1$, $3$, $6$, puis $10$ (avec `i` qui vaut $1$, $2$, $3$, $4$). Au test suivant, $10 < 10$ est **faux** : on sort, et la sortie est $10$. Le piège est le caractère strict du test : $6$ correspond à un arrêt un tour trop tôt, $15$ à un tour de trop. La boucle s'arrête bien, car `i` progresse et `s` finit par franchir $10$."
     },
@@ -124,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "Tout se joue sur le cas limite où `n` est **déjà** un multiple de $7$ : avec $n = 28$, la condition `m ≤ n` est vraie ($28 \\leqslant 28$), donc un tour de plus donne $35$, strictement supérieur ✓ ; avec `m < n`, le programme s'arrête sur $28$ et rate le « strictement ». La troisième condition est inversée : avec $n = 30$, $7 \\geqslant 30$ est faux d'entrée et le programme affiche $7$. La quatrième fait un nombre de tours fixé à l'avance, alors qu'ici il dépend de `n` : c'est bien une boucle **conditionnelle** qu'il faut."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "conditions-composees",
+      "enonce": "La condition `A` est **vraie** et la condition `B` est **fausse**. Que valent « A et B » et « A ou B » ?",
+      "choix": [
+        "« A et B » est fausse, « A ou B » est vraie",
+        "« A et B » est vraie, « A ou B » est fausse",
+        "les deux sont vraies",
+        "les deux sont fausses"
+      ],
+      "reponse": 0,
+      "explication": "« A et B » n'est vraie que si les **deux** le sont : ici $B$ est fausse, donc elle est fausse. « A ou B » est vraie **dès qu'une** l'est : $A$ suffit, donc elle est vraie. Le piège est de croire qu'un `ou` exige les deux (c'est le rôle du `et`) : le `ou` de l'informatique est **inclusif** et se contente d'un seul « vrai »."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "boucle-conditionnelle",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 3 dans n\ntant que n < 10 faire\n    mettre n + 4 dans n\nfin tant que\nafficher n\n```",
+      "choix": [
+        "$11$",
+        "$7$",
+        "$10$",
+        "$15$"
+      ],
+      "reponse": 0,
+      "explication": "`n` prend les valeurs $7$ puis $11$. Au test qui suit le $7$, la condition $7 < 10$ est **encore vraie** : un tour de plus donne $11$, et $11 < 10$ est faux, on sort. Le piège est de s'arrêter à $7$, la dernière valeur qui vérifie la condition : la valeur finale d'une boucle `tant que` ne vérifie **plus** la condition, c'est justement pour cela qu'on est sorti."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "variables",
+      "enonce": "`a` vaut $3$ et `b` vaut $8$. Quelle suite de lignes **échange** correctement leurs valeurs (à la fin `a` vaut $8$ et `b` vaut $3$) ?",
+      "choix": [
+        "`mettre a dans t`, puis `mettre b dans a`, puis `mettre t dans b`",
+        "`mettre b dans a`, puis `mettre a dans b`",
+        "`mettre a dans b`, puis `mettre b dans a`",
+        "`mettre a dans b`, puis `mettre t dans a`"
+      ],
+      "reponse": 0,
+      "explication": "Il faut une **variable temporaire** : `t` garde le $3$ de `a` avant qu'il ne soit écrasé, `a` reçoit $8$, puis `b` récupère le $3$ rangé dans `t`. Le piège est la deuxième suite, sans temporaire : `mettre b dans a` détruit le $3$, et `mettre a dans b` recopie alors $8$ — les deux finissent à $8$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "conditions-composees",
+      "enonce": "Quelle condition est vraie **exactement** pour les nombres strictement compris entre $5$ et $12$ (bornes exclues) ?",
+      "choix": [
+        "`n > 5 et n < 12`",
+        "`n > 5 ou n < 12`",
+        "`n ≥ 5 et n ≤ 12`",
+        "`n < 5 et n > 12`"
+      ],
+      "reponse": 0,
+      "explication": "Un encadrement se coupe en **deux** comparaisons reliées par `et`, et « bornes exclues » impose $>$ et $<$ (stricts). Le piège est le `ou` : `n > 5 ou n < 12` est vraie pour **tous** les nombres ($100$ n'est pas $< 12$, mais il est $> 5$, et un seul « vrai » suffit). La troisième inclut les bornes, la quatrième n'est vraie pour personne."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "boucle-conditionnelle",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 45 dans s\nmettre 0 dans t\ntant que s ≥ 10 faire\n    mettre s − 10 dans s\n    mettre t + 1 dans t\nfin tant que\nafficher s\n```",
+      "choix": [
+        "$5$",
+        "$4$",
+        "$10$",
+        "$0$"
+      ],
+      "reponse": 0,
+      "explication": "Déroulé : `s` passe par $35$, $25$, $15$, $5$, et `t` compte $1$, $2$, $3$, $4$. Au test suivant, $5 \\geqslant 10$ est faux : on sort. Le programme affiche `s`, soit $5$ — le **reste** de $45$ par $10$ ($45 = 4 \\times 10 + 5$). Le piège est de répondre $4$, la valeur de `t` (le quotient) : on demande `s`, pas `t`."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "variables",
+      "enonce": "Sur les trois valeurs saisies $4$, $10$ et $7$, que valent `somme` et `nombre` à la fin ?\n\n```\nmettre 0 dans somme\nmettre 0 dans nombre\nrépéter 3 fois\n    demander une valeur et la mettre dans v\n    mettre somme + v dans somme\n    mettre nombre + 1 dans nombre\nfin répéter\n```",
+      "choix": [
+        "`somme` vaut $21$ et `nombre` vaut $3$",
+        "`somme` vaut $3$ et `nombre` vaut $21$",
+        "`somme` vaut $21$ et `nombre` vaut $21$",
+        "`somme` vaut $7$ et `nombre` vaut $3$"
+      ],
+      "reponse": 0,
+      "explication": "`somme` est un **accumulateur** : il additionne les valeurs, $4 + 10 + 7 = 21$. `nombre` est un **compteur** : il gagne $1$ à chaque tour, soit $3$. Le piège est d'intervertir les deux rôles — un accumulateur additionne les données, un compteur compte les tours, et sur ces nombres ils ne donnent pas le même résultat."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "structurer-programme",
+      "enonce": "Dans un programme structuré en trois temps (préparation · traitement · conclusion), où doit se trouver l'instruction qui **affiche le résultat** ?",
+      "choix": [
+        "dans la préparation, avant la boucle",
+        "après la boucle, dans la conclusion",
+        "à l'intérieur de la boucle, à chaque tour",
+        "avant l'initialisation des variables"
+      ],
+      "reponse": 1,
+      "explication": "L'affichage appartient à la **conclusion**, donc **après** la boucle, quand le calcul est terminé. Le piège est de le placer **dans** la boucle : le résultat serait alors affiché à chaque tour, avant même d'être complet. La préparation, elle, sert à saisir les entrées et à **initialiser** les variables."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "terminaison",
+      "enonce": "Un seul de ces quatre programmes **ne s'arrête jamais**. Lequel ?",
+      "choix": [
+        "```\nmettre 1 dans i\ntant que i ≤ 5 faire\n    mettre i + 1 dans i\nfin tant que\n```",
+        "```\nmettre 0 dans s\nmettre 1 dans i\ntant que i ≤ 5 faire\n    mettre s + i dans s\nfin tant que\n```",
+        "```\nmettre 10 dans n\ntant que n > 0 faire\n    mettre n − 2 dans n\nfin tant que\n```",
+        "```\nmettre 5 dans n\ntant que n < 20 faire\n    mettre n * 2 dans n\nfin tant que\n```"
+      ],
+      "reponse": 1,
+      "explication": "Dans le deuxième programme, le bloc modifie `s` mais **jamais `i`**, la variable testée : `i` vaut $1$ pour toujours, donc `i ≤ 5` reste vraie à chaque test — il manque `mettre i + 1 dans i` dans la boucle. Les trois autres font bien progresser la variable testée vers une condition qui devient fausse. Le piège est de croire qu'une variable qui bouge (`s`) suffit : c'est **la variable du test** qui doit évoluer."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "terminaison",
+      "enonce": "Ce programme s'arrête-t-il, et pourquoi ?\n\n```\nmettre 20 dans n\ntant que n ≠ 3 faire\n    mettre n − 4 dans n\nfin tant que\n```",
+      "choix": [
+        "Oui, il s'arrête dès que `n` vaut $3$",
+        "Non : `n` vaut $20$, $16$, $12$, $8$, $4$, $0$, $-4$, … et n'est jamais exactement $3$",
+        "Non, car `n` n'a pas été initialisée",
+        "Oui, il s'arrête au premier tour"
+      ],
+      "reponse": 1,
+      "explication": "`n` est bien initialisée et bien modifiée, mais en descendant de $4$ en $4$ à partir de $20$ elle **enjambe** le $3$, seule valeur qui rendrait la condition fausse : elle passe de $4$ à $0$ sans jamais valoir $3$. Le piège est de croire qu'il suffit que `n` change pour que la boucle s'arrête. Un test d'égalité (`≠`) est fragile ; avec `n > 3`, le programme s'arrêterait dès $0$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "structurer-programme",
+      "enonce": "Qu'affiche ce programme (un `si` imbriqué dans une boucle) ?\n\n```\nmettre 0 dans c\nmettre 30 dans n\ntant que n > 0 faire\n    mettre n − 7 dans n\n    si n ≥ 0 alors\n        mettre c + 1 dans c\n    fin si\nfin tant que\nafficher c\n```",
+      "choix": [
+        "$4$",
+        "$5$",
+        "$3$",
+        "$30$"
+      ],
+      "reponse": 0,
+      "explication": "Déroulé de `n` : $30 \\to 23 \\to 16 \\to 9 \\to 2 \\to -5$. Le `si n ≥ 0` incrémente `c` aux quatre premiers tours (n vaut $23$, $16$, $9$, $2$), mais **pas** au cinquième où `n` devient $-5$ : `c` vaut donc $4$. Le piège est de compter tous les tours ($5$) sans voir que le dernier passe dans la boucle (car $2 > 0$) mais **échoue** au `si` imbriqué."
     }
   ]
 }

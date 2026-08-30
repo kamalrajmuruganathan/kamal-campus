@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "nature-expression",
       "enonce": "Quelle est la nature de l'expression $5(x+4)$ ?",
-      "choix": ["Une somme", "Un produit", "Une différence", "Un quotient"],
+      "choix": [
+        "Une somme",
+        "Un produit",
+        "Une différence",
+        "Un quotient"
+      ],
       "reponse": 1,
       "explication": "C'est la **dernière opération** qui donne la nature : ici on multiplie $5$ par le contenu de la parenthèse, donc c'est un **produit**. Le piège est le $+$ visible à l'intérieur : il est enfermé dans la parenthèse, il ne s'effectue pas en dernier. Cette distinction commande tout : seul un produit permet d'utiliser la règle du produit nul."
     },
@@ -38,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "oppose-expression",
       "enonce": "Quelle expression est égale à $7 - (2x - 3)$ ?",
-      "choix": ["$10 - 2x$", "$4 - 2x$", "$10 + 2x$", "$4 + 2x$"],
+      "choix": [
+        "$10 - 2x$",
+        "$4 - 2x$",
+        "$10 + 2x$",
+        "$4 + 2x$"
+      ],
       "reponse": 0,
       "explication": "Le signe $-$ devant la parenthèse change le signe de **chaque** terme : $-(2x-3) = -2x + 3$. Donc $7 - 2x + 3 = 10 - 2x$. Le piège classique est de ne changer que le premier signe et d'écrire $7 - 2x - 3 = 4 - 2x$ : le $-3$ devient $+3$, il ne reste pas négatif."
     },
@@ -139,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "On divise les deux membres par $-2$, qui est **négatif** : le sens de l'inégalité **s'inverse**, et $\\dfrac{6}{-2} = -3$. On obtient $x \\leqslant -3$. Le choix $x \\geqslant -3$ est le piège central du chapitre : il garde le sens de départ. Contrôle avec $x = -4$ : $-2 \\times (-4) = 8 \\geqslant 6$ ✓, donc $-4$ est bien solution — ce qui exclut immédiatement les trois autres réponses."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "opposé",
+      "enonce": "Simplifier l'expression $7 - (2x - 3)$.",
+      "choix": [
+        "$10 - 2x$",
+        "$4 - 2x$",
+        "$10 + 2x$",
+        "$5 - 2x$"
+      ],
+      "reponse": 0,
+      "explication": "Le signe $-$ devant la parenthèse change **chaque** terme : $-(2x - 3) = -2x + 3$. Donc $7 - 2x + 3 = 10 - 2x$. Le piège classique ($4 - 2x$) est d'oublier de changer le signe du $-3$, qui devient $+3$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "carre-produit",
+      "enonce": "Que vaut $(3x)^2$ ?",
+      "choix": [
+        "$9x^2$",
+        "$6x^2$",
+        "$3x^2$",
+        "$6x$"
+      ],
+      "reponse": 0,
+      "explication": "Le carré porte sur **tout** le contenu de la parenthèse : $(3x)^2 = 3^2 \\times x^2 = 9x^2$. Le piège $6x^2$ vient de faire $2 \\times 3 = 6$ au lieu de $3^2 = 9$. Contrôle avec $x = 2$ : $(3 \\times 2)^2 = 36$ et $9 \\times 4 = 36$ ✓."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "identites-remarquables",
+      "enonce": "Développer $(x + 5)^2$.",
+      "choix": [
+        "$x^2 + 10x + 25$",
+        "$x^2 + 25$",
+        "$x^2 + 5x + 25$",
+        "$x^2 + 10x + 10$"
+      ],
+      "reponse": 0,
+      "explication": "$(a + b)^2 = a^2 + 2ab + b^2$, donc $(x + 5)^2 = x^2 + 2 \\times x \\times 5 + 5^2 = x^2 + 10x + 25$. Le piège n°1 du collège est d'écrire $x^2 + 25$ en oubliant le **double produit** $2 \\times x \\times 5 = 10x$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "double-distributivite",
+      "enonce": "Développer et réduire $(x + 3)(x - 5)$.",
+      "choix": [
+        "$x^2 - 2x - 15$",
+        "$x^2 + 2x - 15$",
+        "$x^2 - 8x - 15$",
+        "$x^2 - 15$"
+      ],
+      "reponse": 0,
+      "explication": "Double distributivité (4 produits) : $x^2 - 5x + 3x - 15$, puis on réduit $-5x + 3x = -2x$, d'où $x^2 - 2x - 15$. Le piège $x^2 - 15$ oublie les termes en $x$ ; $x^2 + 2x - 15$ se trompe de signe sur le terme central."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "identites-remarquables",
+      "enonce": "Développer $(2x - 5)^2$.",
+      "choix": [
+        "$4x^2 - 20x + 25$",
+        "$4x^2 - 25$",
+        "$4x^2 - 20x - 25$",
+        "$2x^2 - 20x + 25$"
+      ],
+      "reponse": 0,
+      "explication": "$(a - b)^2 = a^2 - 2ab + b^2$ : $(2x)^2 - 2 \\times 2x \\times 5 + 5^2 = 4x^2 - 20x + 25$. Seul le double produit est négatif ; le carré $5^2 = +25$ reste positif. Le piège $4x^2 - 20x - 25$ met à tort un $-25$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "factorisation",
+      "enonce": "Factoriser $x^2 - 14x + 49$.",
+      "choix": [
+        "$(x - 7)^2$",
+        "$(x + 7)^2$",
+        "$(x - 7)(x + 7)$",
+        "$(x - 14)^2$"
+      ],
+      "reponse": 0,
+      "explication": "On reconnaît $x^2 - 2 \\times x \\times 7 + 7^2$, soit $(x - 7)^2$. Le double produit est **négatif** donc c'est une différence, d'où $(x - 7)^2$ et non $(x + 7)^2$. La forme $(x-7)(x+7)$ vaudrait $x^2 - 49$ : ce n'est pas l'expression de départ."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "difference-carres",
+      "enonce": "Factoriser $9x^2 - 25$.",
+      "choix": [
+        "$(3x - 5)(3x + 5)$",
+        "$(3x - 5)^2$",
+        "$(9x - 25)(9x + 25)$",
+        "$(3x - 25)(3x + 1)$"
+      ],
+      "reponse": 0,
+      "explication": "C'est une différence de deux carrés : $9x^2 - 25 = (3x)^2 - 5^2 = (3x - 5)(3x + 5)$. Le piège $(3x - 5)^2$ confond avec un carré : redéveloppé, il donnerait $9x^2 - 30x + 25$, pas $9x^2 - 25$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "produit-nul",
+      "enonce": "Résoudre l'équation $(x - 3)(2x + 5) = 0$.",
+      "choix": [
+        "$x = 3$ ou $x = -\\dfrac{5}{2}$",
+        "$x = -3$ ou $x = \\dfrac{5}{2}$",
+        "$x = 3$ ou $x = \\dfrac{5}{2}$",
+        "$x = 3$ et $x = -\\dfrac{5}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "Un produit est nul si l'un des facteurs est nul : $x - 3 = 0$ donne $x = 3$ ; $2x + 5 = 0$ donne $x = -\\dfrac{5}{2}$. Deux pièges : se tromper de signe des solutions, et écrire « et » au lieu de « **ou** » — les deux solutions ne sont pas atteintes en même temps."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "produit-nul",
+      "enonce": "Résoudre l'équation $x^2 = 3x$.",
+      "choix": [
+        "$x = 0$ ou $x = 3$",
+        "$x = 3$ seulement",
+        "$x = 0$ ou $x = -3$",
+        "aucune solution"
+      ],
+      "reponse": 0,
+      "explication": "On ramène à zéro : $x^2 - 3x = 0$, puis on factorise $x(x - 3) = 0$, d'où $x = 0$ **ou** $x = 3$. Le piège majeur est de **diviser par $x$** : on obtient $x = 3$ et on **perd la solution $0$**. On ne divise jamais par une inconnue."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "inequation",
+      "enonce": "Résoudre l'inéquation $-2x \\geqslant 6$.",
+      "choix": [
+        "$x \\leqslant -3$",
+        "$x \\geqslant -3$",
+        "$x \\leqslant 3$",
+        "$x \\geqslant 3$"
+      ],
+      "reponse": 0,
+      "explication": "On divise les deux membres par $-2$ : diviser par un nombre **négatif inverse** le sens de l'inégalité, donc $x \\leqslant -3$. Vérification avec $x = -4$ : $-2 \\times (-4) = 8 \\geqslant 6$ ✓. Le piège ($x \\geqslant -3$) est d'oublier d'inverser le sens."
     }
   ]
 }

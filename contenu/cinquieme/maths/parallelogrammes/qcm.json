@@ -134,6 +134,126 @@
    ],
    "reponse": 1,
    "explication": "La caractérisation du losange comporte **deux** conditions : diagonales perpendiculaires **et** se coupant en leur milieu. Un **cerf-volant** a des diagonales perpendiculaires sans être un losange — elles ne se coupent pas en leur milieu. Oublier la seconde condition est l'erreur la plus fréquente du chapitre."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "proprietes",
+   "enonce": "Dans un parallélogramme, que peut-on dire des côtés opposés ?",
+   "choix": [
+    "ils sont perpendiculaires",
+    "ils ont la même longueur",
+    "ils sont de longueurs différentes",
+    "ils forment un angle droit"
+   ],
+   "reponse": 1,
+   "explication": "Les côtés opposés d'un parallélogramme sont à la fois **parallèles** et de **même longueur** : $AB = CD$ et $BC = AD$. C'est une conséquence du centre de symétrie, qui envoie chaque côté sur son opposé."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "figures-particulieres",
+   "enonce": "Un carré est-il un parallélogramme ?",
+   "choix": [
+    "oui, toujours",
+    "non, jamais",
+    "seulement s'il est de grande taille",
+    "seulement s'il est incliné"
+   ],
+   "reponse": 0,
+   "explication": "Un carré est un parallélogramme qui est **à la fois** rectangle et losange : il possède donc toutes les propriétés du parallélogramme. L'inclusion va dans un seul sens : carré $\\subset$ parallélogramme, mais un parallélogramme n'est pas toujours un carré."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "proprietes",
+   "enonce": "Quel est le centre de symétrie d'un parallélogramme ?",
+   "choix": [
+    "un de ses sommets",
+    "le milieu d'un de ses côtés",
+    "le point d'intersection de ses diagonales",
+    "il n'en possède pas"
+   ],
+   "reponse": 2,
+   "explication": "Le centre de symétrie est le **point d'intersection des diagonales**. Un demi-tour autour de ce point superpose la figure à elle-même : chaque sommet vient sur le sommet opposé. C'est cette propriété qui explique toutes les autres."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "aire",
+   "enonce": "Un parallélogramme a une base de $10$ cm, une hauteur de $4$ cm et un côté oblique de $6$ cm. Quelle est son aire ?",
+   "choix": ["$24\\ \\mathrm{cm^2}$", "$40\\ \\mathrm{cm^2}$", "$60\\ \\mathrm{cm^2}$", "$20\\ \\mathrm{cm^2}$"],
+   "reponse": 1,
+   "explication": "L'aire vaut **base $\\times$ hauteur** $= 10 \\times 4 = 40\\ \\mathrm{cm^2}$. La donnée $6$ cm sert à piéger : multiplier base et côté oblique ($10 \\times 6 = 60$) est l'erreur classique. La hauteur est la distance **perpendiculaire**, pas le côté."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "figures-particulieres",
+   "enonce": "Qu'est-ce qui distingue un losange d'un parallélogramme quelconque ?",
+   "choix": [
+    "ses diagonales se coupent en leur milieu",
+    "ses côtés opposés sont parallèles",
+    "ses diagonales sont perpendiculaires",
+    "ses angles opposés sont égaux"
+   ],
+   "reponse": 2,
+   "explication": "Un losange est un parallélogramme dont les diagonales sont **perpendiculaires** (ce qui découle de deux côtés consécutifs de même longueur). Les choix A, B et D sont vrais pour **tout** parallélogramme : ils ne distinguent donc rien."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "conversions",
+   "enonce": "À combien de $\\mathrm{cm^2}$ correspondent $3\\ \\mathrm{m^2}$ ?",
+   "choix": ["$300\\ \\mathrm{cm^2}$", "$3\\,000\\ \\mathrm{cm^2}$", "$30\\,000\\ \\mathrm{cm^2}$", "$300\\,000\\ \\mathrm{cm^2}$"],
+   "reponse": 2,
+   "explication": "Pour les **aires**, $1\\ \\mathrm{m^2} = 10\\,000\\ \\mathrm{cm^2}$, donc $3\\ \\mathrm{m^2} = 30\\,000\\ \\mathrm{cm^2}$. Le piège est de convertir comme une longueur ($\\times 100$) et de répondre $300$ : une aire se convertit avec le facteur au carré."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "caracteristique",
+   "enonce": "Dans un quadrilatère $ABCD$, les côtés $[AD]$ et $[BC]$ sont parallèles et de même longueur. Que peut-on conclure ?",
+   "choix": [
+    "rien de sûr sans les autres côtés",
+    "$ABCD$ est un parallélogramme",
+    "$ABCD$ est un rectangle",
+    "$ABCD$ est un losange"
+   ],
+   "reponse": 1,
+   "explication": "Propriété caractéristique : si **deux côtés opposés sont à la fois parallèles ET de même longueur**, le quadrilatère est un parallélogramme. Une seule paire suffit, à condition de vérifier les **deux** conditions. Rien ne permet en revanche d'affirmer un rectangle ou un losange."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "diagonales",
+   "enonce": "Les diagonales d'un quadrilatère se coupent en leur milieu et ont la même longueur, mais ne sont pas perpendiculaires. De quelle figure s'agit-il ?",
+   "choix": ["un losange", "un rectangle", "un carré", "un parallélogramme quelconque"],
+   "reponse": 1,
+   "explication": "« Se coupent en leur milieu » donne le parallélogramme ; « même longueur » ajoute le **rectangle**. Si elles étaient en plus perpendiculaires, ce serait un carré — c'est justement ce que l'énoncé exclut. Le losange correspondrait à des diagonales perpendiculaires."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "diagonales",
+   "enonce": "Un quadrilatère a ses diagonales de même longueur. Est-ce nécessairement un rectangle ?",
+   "choix": [
+    "oui, c'est la définition du rectangle",
+    "non, il faut aussi qu'elles se coupent en leur milieu",
+    "non, il faut aussi qu'elles soient perpendiculaires",
+    "oui, dès qu'il a quatre côtés"
+   ],
+   "reponse": 1,
+   "explication": "La caractérisation du rectangle comporte **deux** conditions : diagonales de même longueur **et** se coupant en leur milieu. Des diagonales de même longueur qui ne se coupent pas en leur milieu ne donnent pas un rectangle. Oublier la condition « milieu » est le piège symétrique de celui du losange."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "aire",
+   "enonce": "Une figure en L se découpe en deux rectangles d'aires $15\\ \\mathrm{cm^2}$ et $6\\ \\mathrm{cm^2}$. Quelle est l'aire de la figure complète ?",
+   "choix": ["$9\\ \\mathrm{cm^2}$", "$21\\ \\mathrm{cm^2}$", "$90\\ \\mathrm{cm^2}$", "$21\\ \\mathrm{cm}$"],
+   "reponse": 1,
+   "explication": "Pour une figure composée, on **découpe** en figures connues et on **additionne** les aires : $15 + 6 = 21\\ \\mathrm{cm^2}$. Le choix $9$ soustrait au lieu d'ajouter ; le choix $21\\ \\mathrm{cm}$ se trompe d'unité — une aire s'exprime en $\\mathrm{cm^2}$."
   }
  ]
 }

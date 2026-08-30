@@ -134,6 +134,106 @@
       ],
       "reponse": 1,
       "explication": "Il faut une sortie **dans les deux cas** : sans `sinon`, le premier programme n'affiche rien quand $a \\leqslant b$. Le troisième affiche systématiquement le plus **petit** : la condition et les actions sont inversées. Le dernier n'effectue aucun test. Contrôle du cas limite : si $a = b$, le bon programme part dans `sinon` et affiche `b`, qui est bien le maximum."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "operateurs-comparaison",
+      "enonce": "« La salle contient **au plus** 12 places. » Si `places` désigne le nombre de places, comment traduire cette contrainte ?",
+      "choix": ["`places < 12`", "`places ≤ 12`", "`places > 12`", "`places ≥ 12`"],
+      "reponse": 1,
+      "explication": "« Au plus 12 », c'est 12 **ou moins** : le cas d'égalité fait partie de la condition, donc $\\leqslant$. Avec `places < 12`, une salle de 12 places exactement serait exclue à tort. Le mot « au plus » décide de l'égalité ; retiens : « au plus » $\\rightarrow \\leqslant$, « au moins » $\\rightarrow \\geqslant$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "condition",
+      "enonce": "Si la variable `n` vaut $7$, la condition `n ≠ 10` est :",
+      "choix": ["vraie", "fausse", "ni vraie ni fausse", "cela dépend de l'utilisateur"],
+      "reponse": 0,
+      "explication": "`n ≠ 10` se lit « `n` est différent de 10 ». Comme `n` vaut $7$, qui n'est pas $10$, la condition est **vraie**. Une condition est toujours soit vraie, soit fausse : jamais « ça dépend »."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "operateurs-comparaison",
+      "enonce": "« La note **atteint** la moyenne de 10. » Quelle condition traduit cette phrase ?",
+      "choix": ["`note < 10`", "`note > 10`", "`note ≥ 10`", "`note = 10`"],
+      "reponse": 2,
+      "explication": "« Atteindre » 10, c'est valoir 10 **ou plus** : l'égalité est comprise, donc $\\geqslant$. Le piège est le mot « dépasse », qui lui **exclut** l'égalité et donne $>$. Ici « atteint » inclut la valeur 10 : `note ≥ 10`."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "instruction-conditionnelle",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 3 dans n\nsi n > 5 alors\n    afficher « grand »\nsinon\n    afficher « petit »\nfin si\n```",
+      "choix": ["« grand »", "« petit »", "« grand » puis « petit »", "Rien du tout"],
+      "reponse": 1,
+      "explication": "$3 > 5$ est **faux**, donc la branche `alors` est sautée et c'est la branche `sinon` qui s'exécute : le programme affiche « petit ». Avec un `sinon`, les deux branches sont **exclusives** : une seule s'exécute, jamais les deux."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "manipuler-variable",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 10 dans x\nmettre 4 dans x\nafficher x\n```",
+      "choix": ["$4$", "$10$", "$14$", "$6$"],
+      "reponse": 0,
+      "explication": "`mettre 4 dans x` **écrase** la valeur précédente : le $10$ est perdu, `x` vaut désormais $4$. Le piège $14$ additionne les deux valeurs, comme si la variable les gardait toutes les deux — or une variable ne retient que sa **dernière** valeur."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "compteur",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nmettre 10 dans s\nrépéter 3 fois\n    mettre s + 5 dans s\nfin répéter\nafficher s\n```",
+      "choix": ["$15$", "$30$", "$25$", "$20$"],
+      "reponse": 2,
+      "explication": "On part de $10$, puis on ajoute $5$ à chaque tour : $15$, puis $20$, puis $25$. La valeur $15$ correspondrait à un seul tour. Il faut suivre le compteur **tour par tour**, sans oublier la valeur initiale $10$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "instruction-conditionnelle",
+      "enonce": "L'utilisateur saisit $8$. Qu'affiche ce programme ?\n\n```\ndemander un nombre et le mettre dans n\nsi n > 10 alors\n    afficher « A »\nfin si\nsi n > 5 alors\n    afficher « B »\nfin si\n```",
+      "choix": ["« B » seulement", "« A » seulement", "« A » puis « B »", "Rien du tout"],
+      "reponse": 0,
+      "explication": "Ce sont **deux instructions conditionnelles indépendantes**. $8 > 10$ est faux : « A » n'est pas affiché. $8 > 5$ est vrai : « B » l'est. Chaque `si` est évalué pour lui-même ; sans `sinon`, il n'y a aucune exclusivité entre les deux tests."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "modifier-programme",
+      "enonce": "Le tarif senior s'applique **à partir de 65 ans inclus**. Un élève a écrit :\n\n```\nsi age > 65 alors\n    afficher « senior »\nsinon\n    afficher « plein tarif »\nfin si\n```\n\nQuelle modification **minimale** rend le programme conforme ?",
+      "choix": [
+        "Remplacer `>` par `≥`",
+        "Remplacer `>` par `<`",
+        "Échanger les deux affichages",
+        "Supprimer le `sinon`"
+      ],
+      "reponse": 0,
+      "explication": "Le programme ne se trompe que sur **un seul cas** : la personne de $65$ ans exactement, classée « plein tarif » alors qu'elle est senior. Un seul cas faux, pile sur la frontière : c'est la signature d'un opérateur trop strict. « À partir de … inclus » comprend l'égalité, donc $\\geqslant$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "suivi-variable",
+      "enonce": "L'utilisateur saisit $20$. Qu'affiche ce programme ?\n\n```\nmettre 0 dans p\ndemander un nombre et le mettre dans n\nsi n ≥ 18 alors\n    mettre 2 dans p\nfin si\nmettre p + 1 dans p\nafficher p\n```",
+      "choix": ["$0$", "$1$", "$2$", "$3$"],
+      "reponse": 3,
+      "explication": "$20 \\geqslant 18$ est **vrai** : le bloc s'exécute et `p` prend la valeur $2$. Ensuite `mettre p + 1 dans p` (après `fin si`) s'exécute quoi qu'il arrive : $p = 2 + 1 = 3$. Le piège est d'oublier cette dernière ligne, qui ne dépend d'aucun test. (Avec une saisie de $15$, on obtiendrait $1$.)"
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "ecrire-programme",
+      "enonce": "Objectif : afficher **le plus petit** des deux nombres `a` et `b`. Quel programme atteint cet objectif dans **tous** les cas ?",
+      "choix": [
+        "```\nsi a > b alors\n    afficher a\nsinon\n    afficher b\nfin si\n```",
+        "```\nsi a > b alors\n    afficher b\nsinon\n    afficher a\nfin si\n```",
+        "```\nsi a < b alors\n    afficher b\nsinon\n    afficher a\nfin si\n```",
+        "```\nafficher a\nafficher b\n```"
+      ],
+      "reponse": 1,
+      "explication": "Si `a > b`, le plus petit est `b`, sinon c'est `a` : c'est exactement le deuxième programme. Le premier affiche le plus **grand** (actions à l'envers). Contrôle du cas limite $a = b$ : on part dans `sinon` et on affiche `a`, qui vaut bien le minimum. Le dernier programme n'effectue aucun test."
     }
   ]
 }

@@ -149,6 +149,146 @@
       ],
       "reponse": 3,
       "explication": "La dichotomie coupe l'intervalle en son milieu et garde la moitié qui contient la solution : la longueur est divisée par 2 à chaque tour, d'où une convergence rapide. La division par $10$ correspondrait à un balayage au dixième, pas à la dichotomie."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "fonctions-usuelles",
+      "enonce": "Pourquoi peut-on affirmer, en une phrase, que $f(x) = x^3 - 2x + 1$ est continue sur $\\mathbb{R}$ ?",
+      "choix": [
+        "car c'est un polynôme, donc continu sur $\\mathbb{R}$",
+        "car elle est strictement croissante",
+        "car elle est positive sur $\\mathbb{R}$",
+        "il faut calculer $\\displaystyle\\lim_{x \\to a} f(x)$ en chaque réel $a$"
+      ],
+      "reponse": 0,
+      "explication": "Les polynômes sont des fonctions usuelles, continues sur tout intervalle de leur ensemble de définition : une phrase suffit. Le piège est de croire qu'il faut calculer une limite en chaque point, alors que la continuité des fonctions usuelles se justifie, elle ne se calcule pas."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "continuite",
+      "enonce": "Parmi ces fonctions, laquelle n'est **pas** continue en $x = 1$ ?",
+      "choix": [
+        "$x \\mapsto \\sqrt{x}$",
+        "$x \\mapsto \\lfloor x \\rfloor$ (partie entière)",
+        "$x \\mapsto e^x$",
+        "$x \\mapsto x^2$"
+      ],
+      "reponse": 1,
+      "explication": "La partie entière saute de $0$ à $1$ en $x = 1$ : sa limite à gauche ($0$) ne vaut pas $f(1) = 1$, elle est discontinue en chaque entier. Les trois autres sont des fonctions usuelles, continues sur leur ensemble de définition."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "tableau-variations",
+      "enonce": "Dans un tableau de variations, une flèche oblique sur un intervalle signifie, par convention, que $f$ est :",
+      "choix": [
+        "continue seulement",
+        "strictement monotone seulement",
+        "continue **et** strictement monotone sur l'intervalle",
+        "dérivable et positive"
+      ],
+      "reponse": 2,
+      "explication": "La flèche encode deux informations à la fois : la continuité ET la stricte monotonie. C'est ce qui permet d'invoquer directement le cas strictement monotone du TVI à partir du tableau, une fois le signe de $f'$ justifié."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "tvi",
+      "enonce": "La fonction partie entière $g(x) = \\lfloor x \\rfloor$ vérifie $g(0) = 0$ et $g(2) = 2$. Peut-on appliquer le théorème des valeurs intermédiaires pour affirmer que $g(x) = 1{,}5$ a une solution sur $[0\\,;2]$ ?",
+      "choix": [
+        "oui, car $1{,}5$ est compris entre $0$ et $2$",
+        "oui, il y a même une unique solution",
+        "non, car $g$ n'est pas dérivable en $1$",
+        "non, car $g$ n'est pas continue : l'hypothèse du TVI n'est pas vérifiée"
+      ],
+      "reponse": 3,
+      "explication": "Le TVI exige la continuité, or $g$ saute aux entiers : le théorème ne s'applique pas (et de fait, $\\lfloor x \\rfloor$ ne vaut jamais $1{,}5$). Le piège est d'appliquer le TVI juste parce que $1{,}5$ est entre les valeurs aux bornes ; la non-dérivabilité, elle, n'est pas l'obstacle pertinent."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "k-hors-bornes",
+      "enonce": "$f$ est continue sur $[0\\,;3]$ avec $f(0) = 2$ et $f(3) = 5$. Que dit le théorème des valeurs intermédiaires sur l'équation $f(x) = 7$ ?",
+      "choix": [
+        "elle a au moins une solution",
+        "le théorème ne permet pas de conclure",
+        "elle n'a aucune solution",
+        "elle a exactement une solution"
+      ],
+      "reponse": 1,
+      "explication": "$7$ n'est pas compris entre $f(0) = 2$ et $f(3) = 5$ : l'hypothèse du TVI n'est pas vérifiée, le théorème est muet. Avec la seule continuité, il pourrait y avoir zéro, une ou plusieurs solutions ; affirmer « aucune solution » est le piège."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "intervalle-ouvert",
+      "enonce": "$f$ est continue et strictement croissante sur $\\left]0\\,;+\\infty\\right[$, avec $\\displaystyle\\lim_{x \\to 0^+} f(x) = -\\infty$ et $\\displaystyle\\lim_{x \\to +\\infty} f(x) = 3$. Combien l'équation $f(x) = 1$ admet-elle de solutions ?",
+      "choix": [
+        "aucune",
+        "une unique solution",
+        "une infinité",
+        "impossible à dire car l'intervalle est ouvert"
+      ],
+      "reponse": 1,
+      "explication": "Le cas strictement monotone reste valable sur un intervalle ouvert ou infini : on remplace les valeurs aux bornes par les limites. Comme $1$ est compris entre $-\\infty$ et $3$, il existe une unique solution. L'ouverture de l'intervalle n'empêche pas de conclure."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "cas-strictement-monotone",
+      "enonce": "$f$ est continue et strictement croissante sur $[1\\,;5]$, avec $f(1) = -3$ et $f(5) = 4$. Combien l'équation $f(x) = 6$ admet-elle de solutions sur $[1\\,;5]$ ?",
+      "choix": [
+        "une unique solution",
+        "aucune solution",
+        "au moins deux solutions",
+        "on ne peut rien affirmer"
+      ],
+      "reponse": 1,
+      "explication": "Comme $f$ est continue et strictement croissante, elle prend exactement toutes les valeurs de $[-3\\,;4]$. Or $6 \\notin [-3\\,;4]$ : il n'y a aucune solution, et cette absence est certaine. C'est justement la stricte monotonie qui permet d'être catégorique, alors qu'avec la seule continuité le théorème resterait muet."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "decoupage",
+      "enonce": "$f$ est continue sur $[0\\,;4]$ : croissante de $f(0) = 1$ à $f(2) = 6$, puis décroissante de $6$ à $f(4) = -2$. Combien l'équation $f(x) = 3$ a-t-elle de solutions sur $[0\\,;4]$ ?",
+      "choix": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$0$"
+      ],
+      "reponse": 1,
+      "explication": "On découpe selon les variations. Sur $[0\\,;2]$, $3$ est entre $1$ et $6$ : une solution. Sur $[2\\,;4]$, $3$ est entre $-2$ et $6$ : une solution. En additionnant : $2$ solutions. Oublier un morceau donne $1$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "dichotomie",
+      "enonce": "On cherche la solution de $f(x) = 0$ avec $f$ continue, en partant de $[2\\,;3]$ où $f(2) < 0$ et $f(3) > 0$. On calcule $f(2{,}5) > 0$. Quel est le nouvel intervalle d'encadrement ?",
+      "choix": [
+        "$[2\\,;2{,}5]$",
+        "$[2{,}5\\,;3]$",
+        "$[2\\,;3]$",
+        "$[2{,}5\\,;2{,}75]$"
+      ],
+      "reponse": 0,
+      "explication": "$f(2) < 0$ et $f(2{,}5) > 0$ sont de signes contraires : par le TVI, la solution est dans $[2\\,;2{,}5]$, la moitié qu'on garde. Choisir $[2{,}5\\,;3]$ est l'erreur classique : garder la mauvaise moitié."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "dichotomie",
+      "enonce": "Par dichotomie à partir de l'intervalle $[0\\,;1]$ (de longueur $1$), combien d'étapes garantissent un encadrement de longueur strictement inférieure à $0{,}05$ ?",
+      "choix": [
+        "$4$",
+        "$5$",
+        "$10$",
+        "$20$"
+      ],
+      "reponse": 1,
+      "explication": "Après $n$ étapes, la longueur vaut $\\dfrac{1}{2^n}$. Il faut $2^n > 20$, donc $n = 5$ ($2^5 = 32$, longueur $\\approx 0{,}031$). Avec $n = 4$, la longueur vaut $0{,}0625 > 0{,}05$ : insuffisant. Le piège est de raisonner en dixièmes comme pour un balayage."
     }
   ]
 }

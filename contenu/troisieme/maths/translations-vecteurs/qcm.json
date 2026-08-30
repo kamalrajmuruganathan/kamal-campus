@@ -43,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "egalite-vecteurs",
       "enonce": "On sait que $\\overrightarrow{AB} = \\overrightarrow{CD}$, les points $A$, $B$ et $C$ n'étant pas alignés. Quel quadrilatère est un parallélogramme ?",
-      "choix": ["$ABCD$", "$ACBD$", "$ABDC$", "$ADBC$"],
+      "choix": [
+        "$ABCD$",
+        "$ACBD$",
+        "$ABDC$",
+        "$ADBC$"
+      ],
       "reponse": 2,
       "explication": "C'est $ABDC$ : on parcourt le contour $A \\to B \\to D \\to C \\to A$. Le piège classique est d'écrire $ABCD$, qui donne un quadrilatère **croisé**. Contrôle rapide : $[AB]$ et $[CD]$ portent les deux flèches, ce sont donc des **côtés opposés**, et les diagonales sont $[AD]$ et $[BC]$."
     },
@@ -66,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "definition-translation",
       "enonce": "$M'$ est l'image de $M$ par la translation qui transforme $A$ en $B$ (avec $A$, $B$, $M$ non alignés). Quel quadrilatère est un parallélogramme ?",
-      "choix": ["$ABMM'$", "$AMBM'$", "$ABM'M$", "$AM'BM$"],
+      "choix": [
+        "$ABMM'$",
+        "$AMBM'$",
+        "$ABM'M$",
+        "$AM'BM$"
+      ],
       "reponse": 2,
       "explication": "C'est la définition ponctuelle de la translation : $ABM'M$, contour $A \\to B \\to M' \\to M$. Le déplacement mène $A$ vers $B$ **et** $M$ vers $M'$ : $[AB]$ et $[MM']$ sont donc des côtés **opposés**. Écrire $ABMM'$ place $[AB]$ et $[MM']$ côte à côte et donne une figure croisée."
     },
@@ -139,6 +149,146 @@
       ],
       "reponse": 3,
       "explication": "La somme de deux vecteurs existe **toujours** — ce qui manque ici, c'est le point commun exigé par Chasles : l'extrémité du premier doit être l'origine du second. Le piège est de faire disparaître $B$ et $C$ au hasard et d'écrire $\\overrightarrow{AD}$, ce qui n'est vrai que dans le cas particulier $B = C$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vecteur",
+      "enonce": "Que peut-on dire des vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{BA}$ (avec $A \\neq B$) ?",
+      "choix": [
+        "Ils ont même direction et même longueur, mais des sens opposés",
+        "Ils sont égaux",
+        "Ils ont des directions différentes",
+        "Ils ont même sens mais des longueurs différentes"
+      ],
+      "reponse": 0,
+      "explication": "Ils sont portés par la même droite $(AB)$ (même direction) et ont la même longueur $AB$, mais on les parcourt en sens contraires : ce sont des vecteurs **opposés**, $\\overrightarrow{BA} = -\\overrightarrow{AB}$. Le piège est de confondre direction et sens : avoir la même direction ne suffit pas pour être égaux."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "vecteur-nul-oppose",
+      "enonce": "Pour un point $A$ quelconque, combien vaut le vecteur $\\overrightarrow{AA}$ ?",
+      "choix": [
+        "$\\vec{0}$",
+        "$\\overrightarrow{AB}$",
+        "$1$",
+        "$A$"
+      ],
+      "reponse": 0,
+      "explication": "$\\overrightarrow{AA}$ est le déplacement qui ne mène nulle part : c'est le **vecteur nul** $\\vec{0}$, de longueur $0$. Le piège est de le confondre avec le nombre $0$ ou avec le point $A$ : un vecteur n'est ni un nombre ni un point."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "vecteur-nul-oppose",
+      "enonce": "Quel vecteur est l'opposé de $\\overrightarrow{AB}$ ?",
+      "choix": [
+        "$\\overrightarrow{BA}$",
+        "$\\overrightarrow{AB}$",
+        "$\\vec{0}$",
+        "$\\overrightarrow{AA}$"
+      ],
+      "reponse": 0,
+      "explication": "L'opposé garde la direction et la longueur mais inverse le sens : $\\overrightarrow{BA} = -\\overrightarrow{AB}$, c'est le déplacement qui **défait** le premier. Le piège est de répondre $\\vec{0}$ en confondant « opposé » et « somme nulle » : c'est $\\overrightarrow{AB} + \\overrightarrow{BA}$ qui vaut $\\vec{0}$, pas l'opposé lui-même."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "egalite-vecteurs",
+      "enonce": "L'égalité $\\overrightarrow{AB} = \\overrightarrow{CD}$ (points non alignés) est équivalente à quelle propriété sur les milieux ?",
+      "choix": [
+        "$[AC]$ et $[BD]$ ont le même milieu",
+        "$[AD]$ et $[BC]$ ont le même milieu",
+        "$[AB]$ et $[CD]$ ont le même milieu",
+        "$[AB]$ et $[CD]$ ont la même longueur"
+      ],
+      "reponse": 1,
+      "explication": "$\\overrightarrow{AB} = \\overrightarrow{CD}$ équivaut à « $ABDC$ est un parallélogramme », donc à « ses diagonales $[AD]$ et $[BC]$ se coupent en leur milieu ». Le piège est de choisir $[AC]$ et $[BD]$, ou $[AB]$ et $[CD]$ : ce sont des côtés, pas les diagonales de $ABDC$. La seule égalité des longueurs ne suffit jamais."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "somme-chasles",
+      "enonce": "Simplifie la somme $\\overrightarrow{AB} + \\overrightarrow{BC} + \\overrightarrow{CD}$.",
+      "choix": [
+        "$\\overrightarrow{AD}$",
+        "$\\overrightarrow{AC}$",
+        "$\\overrightarrow{DA}$",
+        "$\\vec{0}$"
+      ],
+      "reponse": 0,
+      "explication": "On applique Chasles de proche en proche : $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$, puis $\\overrightarrow{AC} + \\overrightarrow{CD} = \\overrightarrow{AD}$. Les points intermédiaires $B$ et $C$ disparaissent, il reste l'origine $A$ et l'extrémité $D$. Le piège est de s'arrêter en cours de route ($\\overrightarrow{AC}$) ou d'inverser les lettres restantes ($\\overrightarrow{DA}$)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "definition-translation",
+      "enonce": "$M'$ est l'image de $M$ par la translation de vecteur $\\overrightarrow{AB}$. Quelle égalité vectorielle en découle ?",
+      "choix": [
+        "$\\overrightarrow{MM'} = \\overrightarrow{AB}$",
+        "$\\overrightarrow{MM'} = \\overrightarrow{BA}$",
+        "$\\overrightarrow{M'M} = \\overrightarrow{AB}$",
+        "$\\overrightarrow{MA} = \\overrightarrow{BM'}$"
+      ],
+      "reponse": 0,
+      "explication": "La translation de vecteur $\\overrightarrow{AB}$ déplace chaque point du même vecteur : elle mène $M$ vers $M'$, donc $\\overrightarrow{MM'} = \\overrightarrow{AB}$ (et $ABM'M$ est un parallélogramme). Le piège est d'inverser le sens ($\\overrightarrow{BA}$ ou $\\overrightarrow{M'M}$), ce qui décrit la translation **réciproque**, celle qui ramène $M'$ en $M$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "cas-particuliers",
+      "enonce": "Pour lequel de ces objets le fait d'échanger $A$ et $B$ change le résultat ?",
+      "choix": [
+        "Le vecteur $\\overrightarrow{AB}$",
+        "La droite $(AB)$",
+        "Le segment $[AB]$",
+        "La longueur $AB$"
+      ],
+      "reponse": 0,
+      "explication": "Droite, segment et longueur sont insensibles à l'ordre des lettres : $(AB) = (BA)$, $[AB] = [BA]$, $AB = BA$. Seul le **vecteur** change : $\\overrightarrow{BA}$ est l'opposé de $\\overrightarrow{AB}$. C'est précisément ce qui distingue le vecteur des autres objets géométriques : il porte un sens."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "somme-chasles",
+      "enonce": "$MNPQ$ est un parallélogramme. Combien vaut $\\overrightarrow{MN} + \\overrightarrow{MQ}$ ?",
+      "choix": [
+        "$\\overrightarrow{MP}$",
+        "$\\overrightarrow{NQ}$",
+        "$\\overrightarrow{QN}$",
+        "$\\overrightarrow{MN}$"
+      ],
+      "reponse": 0,
+      "explication": "Les deux vecteurs partent du même point $M$ : on ne peut pas appliquer Chasles directement. Comme $MNPQ$ est un parallélogramme, $\\overrightarrow{MQ} = \\overrightarrow{NP}$, donc $\\overrightarrow{MN} + \\overrightarrow{MQ} = \\overrightarrow{MN} + \\overrightarrow{NP} = \\overrightarrow{MP}$ : la somme est portée par la **diagonale** issue de $M$. Le piège est de répondre $\\overrightarrow{NQ}$, qui est l'autre diagonale."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "somme-chasles",
+      "enonce": "Simplifie la somme $\\overrightarrow{AB} + \\overrightarrow{CA}$.",
+      "choix": [
+        "$\\overrightarrow{CB}$",
+        "$\\overrightarrow{BC}$",
+        "$\\vec{0}$",
+        "$\\overrightarrow{AB}$"
+      ],
+      "reponse": 0,
+      "explication": "L'astuce est de **réordonner** les termes pour créer un point commun : $\\overrightarrow{AB} + \\overrightarrow{CA} = \\overrightarrow{CA} + \\overrightarrow{AB} = \\overrightarrow{CB}$ (le point $A$ disparait). Le piège est de croire que la somme ne se simplifie pas parce que les lettres ne s'enchainent pas dans l'ordre écrit ; l'addition de vecteurs est commutative."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "egalite-vecteurs",
+      "enonce": "On veut démontrer que le quadrilatère $EFHG$ est un parallélogramme à l'aide des vecteurs. Quelle égalité suffit ?",
+      "choix": [
+        "$\\overrightarrow{EF} = \\overrightarrow{GH}$",
+        "$\\overrightarrow{EF} = \\overrightarrow{HG}$",
+        "$\\overrightarrow{EF} = \\overrightarrow{FH}$",
+        "$EF = GH$ (égalité des longueurs)"
+      ],
+      "reponse": 0,
+      "explication": "La propriété est $\\overrightarrow{AB} = \\overrightarrow{CD} \\iff ABDC$ parallélogramme : en identifiant $A=E$, $B=F$, $D=H$, $C=G$, on obtient $\\overrightarrow{EF} = \\overrightarrow{GH} \\iff EFHG$ parallélogramme. Le piège est d'écrire $\\overrightarrow{EF} = \\overrightarrow{HG}$ (vecteurs opposés, figure croisée) ou de se contenter de l'égalité des **longueurs**, qui ne garantit ni la direction ni le sens."
     }
   ]
 }

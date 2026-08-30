@@ -159,6 +159,156 @@
       "reponse": 2,
       "explication": "On multiplie : $120 \\times 133 = 15\\,960 \\approx 1{,}6 \\times 10^{4}$ Pa. Le piège est de diviser au lieu de multiplier (on obtiendrait $0{,}9$), ou d'additionner ($120 + 133 = 253$).",
       "notion_fiche": "3. Force pressante et pression"
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "pression-force",
+      "enonce": "Quelle est l'unité de la pression dans le Système international ?",
+      "choix": [
+        "le newton (N)",
+        "le pascal (Pa)",
+        "le millimètre de mercure (mmHg)",
+        "le mètre cube par seconde (m³/s)"
+      ],
+      "reponse": 1,
+      "explication": "La pression $p = F/S$ s'exprime en **pascals** (Pa), avec $1$ Pa $= 1$ N/m². Le piège est de répondre « newton », qui est l'unité de la **force** $F$, pas de la pression. Le mmHg est une unité pratique en santé, mais pas l'unité SI.",
+      "notion_fiche": "3. Force pressante et pression"
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "debit-cardiaque",
+      "enonce": "Qu'est-ce que le débit cardiaque $DC$ ?",
+      "choix": [
+        "Le volume de sang éjecté par le cœur à chaque battement",
+        "Le volume de sang éjecté par le cœur en une minute",
+        "Le nombre de battements du cœur par minute",
+        "La pression du sang sur les artères"
+      ],
+      "reponse": 1,
+      "explication": "Le débit cardiaque est un volume **par minute** : $DC = f_C \\times VES$. Le piège est de le confondre avec le volume d'éjection systolique $VES$ (volume d'**un seul** battement) ou avec la fréquence cardiaque $f_C$ (le nombre de battements par minute).",
+      "notion_fiche": "2. Le débit cardiaque"
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "debit-vitesse-section",
+      "enonce": "À débit constant, que devient la vitesse d'un fluide dans un rétrécissement (là où la section $S$ diminue) ?",
+      "choix": [
+        "elle augmente",
+        "elle diminue",
+        "elle reste inchangée",
+        "elle devient nulle"
+      ],
+      "reponse": 0,
+      "explication": "Comme $D = v \\times S$ reste constant, si $S$ diminue alors $v$ doit **augmenter** : le fluide accélère dans un rétrécissement. Le piège est de croire l'inverse ; c'est ce qui explique que le sang aille vite dans l'aorte (section étroite) et lentement dans les capillaires (section totale énorme).",
+      "notion_fiche": "1. Le débit d'un fluide"
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "debit-volumique",
+      "enonce": "Une poche de perfusion de $300$ mL est perfusée en $60$ min. Quel est le débit $D = \\dfrac{V}{\\Delta t}$ ?",
+      "choix": [
+        "$D = 5$ mL/min",
+        "$D = 360$ mL/min",
+        "$D = 18\\,000$ mL/min",
+        "$D = 0{,}2$ mL/min"
+      ],
+      "reponse": 0,
+      "explication": "On divise le volume par la durée : $D = 300 / 60 = 5$ mL/min. Le piège est de **multiplier** ($300 \\times 60 = 18\\,000$) ou d'inverser le rapport ($60/300 = 0{,}2$).",
+      "notion_fiche": "1. Le débit d'un fluide"
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "debit-cardiaque",
+      "enonce": "À l'effort, une personne a $f_C = 100$ bpm et $VES = 90$ mL. Quel est son débit cardiaque ?",
+      "choix": [
+        "$DC = 190$ mL/min",
+        "$DC = 9000$ mL/min $= 9$ L/min",
+        "$DC = 90$ mL/min",
+        "$DC = 1{,}1$ mL/min"
+      ],
+      "reponse": 1,
+      "explication": "On applique $DC = f_C \\times VES = 100 \\times 90 = 9000$ mL/min $= 9$ L/min. Le piège est d'**additionner** ($100 + 90 = 190$) au lieu de multiplier, ou de ne garder que le $VES$ ($90$ mL, le volume d'un seul battement).",
+      "notion_fiche": "2. Le débit cardiaque"
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "pression-force",
+      "enonce": "On applique la **même** force pressante sur deux surfaces. Sur la plus **petite** surface, que devient la pression ?",
+      "choix": [
+        "elle est plus petite",
+        "elle est identique, car la force est la même",
+        "elle est plus grande",
+        "elle devient nulle"
+      ],
+      "reponse": 2,
+      "explication": "Comme $p = F/S$, à force $F$ égale, une surface $S$ plus petite donne une pression **plus grande** (c'est le principe du talon aiguille ou de la pointe d'une aiguille). Le piège est de croire que « même force » implique « même pression » : c'est la **répartition** sur la surface qui compte.",
+      "notion_fiche": "3. Force pressante et pression"
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "statique-fluides",
+      "enonce": "Dans l'eau ($\\rho = 1000$ kg/m³, $g = 10$ N/kg), de combien augmente la pression entre la surface et une profondeur $h = 5$ m ?",
+      "choix": [
+        "$\\Delta p = 5000$ Pa",
+        "$\\Delta p = 50\\,000$ Pa",
+        "$\\Delta p = 500\\,000$ Pa",
+        "$\\Delta p = 15$ Pa"
+      ],
+      "reponse": 1,
+      "explication": "On applique $\\Delta p = \\rho g h = 1000 \\times 10 \\times 5 = 50\\,000$ Pa. Le piège est d'oublier $g$ ($1000 \\times 5 = 5000$) ou d'**additionner** les trois facteurs ($1000 + 10 + 5 = 1015$), voire de se tromper de puissance de 10.",
+      "notion_fiche": "4. La pression augmente avec la profondeur"
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "debit-volumique",
+      "enonce": "Une perfusion s'écoule à un débit constant $D = 4$ mL/min pendant $\\Delta t = 30$ min. Quel volume a été perfusé ?",
+      "choix": [
+        "$V = 120$ mL",
+        "$V \\approx 0{,}13$ mL",
+        "$V = 7{,}5$ mL",
+        "$V = 34$ mL"
+      ],
+      "reponse": 0,
+      "explication": "De $D = V/\\Delta t$ on tire $V = D \\times \\Delta t = 4 \\times 30 = 120$ mL. Le piège est de **diviser** ($4/30 \\approx 0{,}13$ ou $30/4 = 7{,}5$) au lieu de multiplier, ou d'**additionner** ($4 + 30 = 34$).",
+      "notion_fiche": "1. Le débit d'un fluide"
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "pression-force",
+      "enonce": "Une pression $p = 2000$ Pa s'exerce sur une surface d'aire $S = 0{,}05$ m². Quelle est la force pressante $F$ ?",
+      "choix": [
+        "$F = 100$ N",
+        "$F = 40\\,000$ N",
+        "$F = 40$ N",
+        "$F = 2000{,}05$ N"
+      ],
+      "reponse": 0,
+      "explication": "De $p = F/S$ on tire $F = p \\times S = 2000 \\times 0{,}05 = 100$ N. Le piège est de **diviser** ($2000 / 0{,}05 = 40\\,000$, ou $0{,}05/2000$) au lieu de multiplier, ou d'additionner les deux valeurs.",
+      "notion_fiche": "3. Force pressante et pression"
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "conversions-pression",
+      "enonce": "Un tensiomètre affiche une tension de $120/80$ mmHg. Comment l'exprime-t-on en centimètres de mercure (cmHg) ?",
+      "choix": [
+        "$1200/800$ cmHg",
+        "$120/80$ cmHg",
+        "$12/8$ cmHg",
+        "$1{,}2/0{,}8$ cmHg"
+      ],
+      "reponse": 2,
+      "explication": "Comme $1$ cmHg $= 10$ mmHg, on passe des mmHg aux cmHg en **divisant par 10** : $120/80$ mmHg $= 12/8$ cmHg (la tension normale usuelle). Le piège est de multiplier par 10 ($1200/800$) ou de diviser par 100 ($1{,}2/0{,}8$).",
+      "notion_fiche": "3. Force pressante et pression"
     }
   ]
 }

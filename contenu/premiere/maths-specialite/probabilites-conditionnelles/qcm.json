@@ -124,6 +124,106 @@
       "choix": ["$0{,}35$", "$0{,}65$", "$1{,}35$", "On ne peut pas savoir"],
       "reponse": 1,
       "explication": "La somme des probabilités des branches issues d'un même nœud vaut toujours $1$. L'autre branche porte donc $1 - 0{,}35 = 0{,}65$. C'est un contrôle rapide et systématique de la cohérence d'un arbre."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "probabilites-composees",
+      "enonce": "Quelle formule donne $P(\\mathrm{A} \\cap \\mathrm{B})$ ?",
+      "choix": [
+        "$P(\\mathrm{A}) \\times P_\\mathrm{A}(\\mathrm{B})$",
+        "$P(\\mathrm{A}) + P(\\mathrm{B})$",
+        "$\\dfrac{P_\\mathrm{A}(\\mathrm{B})}{P(\\mathrm{A})}$",
+        "$P(\\mathrm{A}) - P(\\mathrm{B})$"
+      ],
+      "reponse": 0,
+      "explication": "La formule des probabilités composées est $P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P_\\mathrm{A}(\\mathrm{B})$ : c'est le produit lu le long d'un chemin d'arbre. Piège : additionner les probabilités au lieu de les multiplier."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "epreuves-independantes",
+      "enonce": "On lance deux fois un dé équilibré. Quelle est la probabilité d'obtenir deux fois le $6$ ?",
+      "choix": [
+        "$\\dfrac{1}{36}$",
+        "$\\dfrac{1}{12}$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{2}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "Les deux lancers sont indépendants, donc on multiplie : $\\dfrac{1}{6} \\times \\dfrac{1}{6} = \\dfrac{1}{36}$. Piège : additionner les probabilités ($\\dfrac{1}{6} + \\dfrac{1}{6} = \\dfrac{2}{6}$), ce qui n'a pas de sens pour une intersection."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "independance",
+      "enonce": "Si $\\mathrm{A}$ et $\\mathrm{B}$ sont indépendants (avec $P(\\mathrm{A}) \\neq 0$), que vaut $P_\\mathrm{A}(\\mathrm{B})$ ?",
+      "choix": ["$P(\\mathrm{B})$", "$P(\\mathrm{A})$", "$0$", "$1$"],
+      "reponse": 0,
+      "explication": "L'indépendance signifie précisément que savoir $\\mathrm{A}$ réalisé ne change rien à $\\mathrm{B}$ : $P_\\mathrm{A}(\\mathrm{B}) = P(\\mathrm{B})$. Piège : confondre avec l'incompatibilité, où $P_\\mathrm{A}(\\mathrm{B}) = 0$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "probabilites-composees",
+      "enonce": "$P(\\mathrm{A}) = 0{,}3$ et $P_\\mathrm{A}(\\mathrm{B}) = 0{,}5$. Que vaut $P(\\mathrm{A} \\cap \\mathrm{B})$ ?",
+      "choix": ["$0{,}15$", "$0{,}8$", "$0{,}6$", "$0{,}05$"],
+      "reponse": 0,
+      "explication": "$P(\\mathrm{A} \\cap \\mathrm{B}) = P(\\mathrm{A}) \\times P_\\mathrm{A}(\\mathrm{B}) = 0{,}3 \\times 0{,}5 = 0{,}15$. Piège : additionner ($0{,}8$) ou diviser ($0{,}6$) au lieu de multiplier le long du chemin."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "probabilites-totales",
+      "enonce": "$P(\\mathrm{A}) = 0{,}2$, $P_\\mathrm{A}(\\mathrm{B}) = 0{,}4$ et $P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}1$. Que vaut $P(\\mathrm{B})$ ?",
+      "choix": ["$0{,}16$", "$0{,}5$", "$0{,}08$", "$0{,}24$"],
+      "reponse": 0,
+      "explication": "$P(\\mathrm{B}) = P(\\mathrm{A})P_\\mathrm{A}(\\mathrm{B}) + P(\\overline{\\mathrm{A}})P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}2 \\times 0{,}4 + 0{,}8 \\times 0{,}1 = 0{,}08 + 0{,}08 = 0{,}16$. Piège : oublier le second chemin (celui passant par $\\overline{\\mathrm{A}}$) et s'arrêter à $0{,}08$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "epreuves-independantes",
+      "enonce": "Une roue donne un succès avec la probabilité $0{,}3$. On la tourne deux fois, de façon indépendante. Quelle est la probabilité de deux succès ?",
+      "choix": ["$0{,}09$", "$0{,}6$", "$0{,}3$", "$0{,}15$"],
+      "reponse": 0,
+      "explication": "Épreuves indépendantes : on multiplie, $0{,}3 \\times 0{,}3 = 0{,}09$. Piège : doubler la probabilité ($0{,}6$) en croyant qu'on additionne les chances des deux tours."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "calcul-conditionnelle",
+      "enonce": "$P(\\mathrm{B}) = 0{,}5$ et $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}2$. Que vaut $P_\\mathrm{B}(\\mathrm{A})$ ?",
+      "choix": ["$0{,}4$", "$0{,}1$", "$0{,}7$", "$0{,}25$"],
+      "reponse": 0,
+      "explication": "$P_\\mathrm{B}(\\mathrm{A}) = \\dfrac{P(\\mathrm{A} \\cap \\mathrm{B})}{P(\\mathrm{B})} = \\dfrac{0{,}2}{0{,}5} = 0{,}4$. Piège : diviser par $P(\\mathrm{A})$ au lieu de $P(\\mathrm{B})$ — on divise toujours par la probabilité de l'événement conditionnant (en indice)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "bernoulli",
+      "enonce": "On répète $3$ fois une épreuve dont le succès a pour probabilité $0{,}1$. Quelle est la probabilité d'obtenir **exactement un** succès ?",
+      "choix": ["$0{,}243$", "$0{,}081$", "$0{,}1$", "$0{,}729$"],
+      "reponse": 0,
+      "explication": "Un chemin à un succès et deux échecs vaut $0{,}1 \\times 0{,}9 \\times 0{,}9 = 0{,}081$. Il existe **trois** tels chemins (SÉÉ, ÉSÉ, ÉÉS), d'où $3 \\times 0{,}081 = 0{,}243$. Piège : oublier le facteur $3$ (le nombre de chemins) et donner $0{,}081$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "bernoulli",
+      "enonce": "On répète $2$ fois une épreuve dont le succès a pour probabilité $0{,}3$. Quelle est la probabilité d'obtenir **au moins un** succès ?",
+      "choix": ["$0{,}51$", "$0{,}49$", "$0{,}6$", "$0{,}09$"],
+      "reponse": 0,
+      "explication": "On passe par l'événement contraire : $P(\\text{aucun succès}) = 0{,}7 \\times 0{,}7 = 0{,}49$, donc $P(\\text{au moins un}) = 1 - 0{,}49 = 0{,}51$. Piège : additionner $0{,}3 + 0{,}3 = 0{,}6$, ce qui compte deux fois le cas des deux succès."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "inversion-conditionnement",
+      "enonce": "$P(\\mathrm{A}) = 0{,}5$, $P_\\mathrm{A}(\\mathrm{B}) = 0{,}6$ et $P_{\\overline{\\mathrm{A}}}(\\mathrm{B}) = 0{,}2$. Que vaut $P_\\mathrm{B}(\\mathrm{A})$ ?",
+      "choix": ["$0{,}75$", "$0{,}3$", "$0{,}6$", "$0{,}5$"],
+      "reponse": 0,
+      "explication": "On calcule d'abord $P(\\mathrm{A} \\cap \\mathrm{B}) = 0{,}5 \\times 0{,}6 = 0{,}3$, puis $P(\\mathrm{B}) = 0{,}3 + 0{,}5 \\times 0{,}2 = 0{,}4$ (probabilités totales). Enfin $P_\\mathrm{B}(\\mathrm{A}) = \\dfrac{0{,}3}{0{,}4} = 0{,}75$. Piège : confondre $P_\\mathrm{B}(\\mathrm{A})$ avec $P_\\mathrm{A}(\\mathrm{B}) = 0{,}6$."
     }
   ]
 }

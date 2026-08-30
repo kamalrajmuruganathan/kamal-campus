@@ -43,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "methode-droite-graduee",
       "enonce": "Sur une droite graduée, l'intervalle entre $-2$ et $-1$ est partagé en $5$ parts égales. Quelle est l'abscisse du point situé $3$ graduations **à gauche** de $-1$ ?",
-      "choix": ["$-0{,}4$", "$-4$", "$-1{,}3$", "$-1{,}6$"],
+      "choix": [
+        "$-0{,}4$",
+        "$-4$",
+        "$-1{,}3$",
+        "$-1{,}6$"
+      ],
       "reponse": 3,
       "explication": "Une graduation vaut $\\dfrac{1}{5} = 0{,}2$, et $3$ graduations valent $0{,}6$. À **gauche**, on retranche : $-1 - 0{,}6 = -1{,}6$. Les pièges : $-0{,}4$ vient d'un déplacement vers la droite (mauvais côté), $-4$ suppose qu'une graduation vaut $1$. Contrôle : $-1{,}6$ doit tomber entre $-2$ et $-1$, c'est bien le cas."
     },
@@ -108,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "fonction-affine-graphique",
       "enonce": "Sur un graphique, l'axe horizontal est gradué de $1$ en $1$ et l'axe vertical de $5$ en $5$ (mêmes carreaux). La droite de $h$ passe par $(0\\,;10)$ et $(2\\,;0)$. Quel est son coefficient directeur ?",
-      "choix": ["$-1$", "$5$", "$-\\dfrac{1}{5}$", "$-5$"],
+      "choix": [
+        "$-1$",
+        "$5$",
+        "$-\\dfrac{1}{5}$",
+        "$-5$"
+      ],
       "reponse": 3,
       "explication": "On lit les **nombres écrits sur les axes**, pas les carreaux : $a = \\dfrac{0 - 10}{2 - 0} = \\dfrac{-10}{2} = -5$. Le piège est exactement le choix $-1$ : en comptant « deux carreaux vers le bas pour deux carreaux à droite », on oublie qu'un carreau vertical vaut $5$ et non $1$. Un repère orthogonal n'est pas orthonormé : chaque axe a sa propre unité."
     },
@@ -117,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "lecture-graphique",
       "enonce": "Sur la représentation graphique de la fonction carré, combien de points ont pour ordonnée $9$ ?",
-      "choix": ["Deux", "Un seul", "Aucun", "Trois"],
+      "choix": [
+        "Deux",
+        "Un seul",
+        "Aucun",
+        "Trois"
+      ],
       "reponse": 0,
       "explication": "Il faut chercher les antécédents de $9$ : $3^2 = 9$ et $(-3)^2 = 9$, donc les points $(-3\\,;9)$ et $(3\\,;9)$. Le piège est de transposer la règle des images : un nombre a **une seule image**, mais il peut avoir **plusieurs antécédents** — ici deux, à cause de la symétrie de la courbe. Un nombre négatif, lui, n'en aurait aucun."
     },
@@ -134,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Le coefficient $2$ est positif, donc la droite monte : elle passe **au-dessus** de $y = 1$ à droite du point d'intersection, d'où $x \\geqslant 2$. Deux pièges : lire la réponse sur l'axe vertical et répondre $x \\geqslant 1$ (résoudre, c'est chercher des $x$, donc lire sur l'axe **horizontal**), ou inverser le sens de l'inégalité en oubliant que la fonction est croissante."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "notation",
+      "enonce": "Dans les coordonnées $A(x\\,;y)$ d'un point, quel nombre lit-on en **premier** ?",
+      "choix": [
+        "l'abscisse $x$",
+        "l'ordonnée $y$",
+        "l'origine $O$",
+        "peu importe l'ordre"
+      ],
+      "reponse": 0,
+      "explication": "L'ordre est fixe : **abscisse d'abord**, puis ordonnée. C'est pourquoi $M(-2\\,;5)$ et $N(5\\,;-2)$ sont deux points différents. Inverser l'ordre revient à placer un autre point."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "axes",
+      "enonce": "Dans un repère orthogonal, l'axe **horizontal** est l'axe des :",
+      "choix": [
+        "abscisses",
+        "ordonnées",
+        "origines",
+        "coordonnées"
+      ],
+      "reponse": 0,
+      "explication": "L'axe horizontal est l'axe des **abscisses** ($x$) ; l'axe vertical est celui des **ordonnées** ($y$). Confondre les deux fait lire les coordonnées à l'envers."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "point-sur-axe",
+      "enonce": "Où se situe le point $B(0\\,;-3)$ ?",
+      "choix": [
+        "sur l'axe des ordonnées",
+        "sur l'axe des abscisses",
+        "à l'origine",
+        "en haut à droite"
+      ],
+      "reponse": 0,
+      "explication": "Son abscisse est nulle ($x = 0$) : le point est **sur l'axe des ordonnées** (l'axe vertical). Règle : sur l'axe des ordonnées $x = 0$, sur l'axe des abscisses $y = 0$. Seul $O(0\\,;0)$ est sur les deux."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "quadrant",
+      "enonce": "Un point situé **en haut à gauche** de l'origine a des coordonnées :",
+      "choix": [
+        "$x < 0$ et $y > 0$",
+        "$x > 0$ et $y > 0$",
+        "$x < 0$ et $y < 0$",
+        "$x > 0$ et $y < 0$"
+      ],
+      "reponse": 0,
+      "explication": "« À gauche » impose une abscisse **négative** ($x < 0$) ; « en haut » impose une ordonnée **positive** ($y > 0$). La position donne les signes avant même de lire les nombres : une lecture qui contredit cela est fausse."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "position",
+      "enonce": "Que peut-on dire des points $M(-2\\,;5)$ et $N(5\\,;-2)$ ?",
+      "choix": [
+        "ce sont deux points différents",
+        "c'est le même point",
+        "ils sont symétriques par rapport à l'axe des abscisses",
+        "ils sont tous deux sur l'axe des ordonnées"
+      ],
+      "reponse": 0,
+      "explication": "Les coordonnées ne sont pas dans le même ordre : $M$ est en haut à gauche, $N$ en bas à droite. Mêmes chiffres, points **différents**. C'est l'illustration de la règle « abscisse d'abord »."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "graduation",
+      "enonce": "Sur une droite graduée, deux traits portent $-10$ et $-4$ et sont séparés par $3$ intervalles. Combien vaut une graduation ?",
+      "choix": [
+        "$2$",
+        "$3$",
+        "$6$",
+        "$-2$"
+      ],
+      "reponse": 0,
+      "explication": "Une graduation vaut $\\dfrac{-4 - (-10)}{3} = \\dfrac{6}{3} = 2$. Le piège $6$ oublie de diviser par le nombre d'intervalles ; une graduation est une longueur, donc **positive**. La valeur se recalcule sur chaque axe."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "image-antecedent",
+      "enonce": "La courbe d'une fonction $f$ passe par le point $A(3\\,;-2)$. Qu'en déduit-on ?",
+      "choix": [
+        "$f(3) = -2$",
+        "$f(-2) = 3$",
+        "$3$ est l'image de $-2$",
+        "$f(3) = 2$"
+      ],
+      "reponse": 0,
+      "explication": "Un point de la courbe s'écrit $\\big(x\\,;f(x)\\big)$, donc $A(3\\,;-2)$ signifie $f(3) = -2$ : $-2$ est l'image de $3$, et $3$ est un antécédent de $-2$. Le piège $f(-2) = 3$ inverse abscisse et ordonnée."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "coefficient-directeur",
+      "enonce": "Une droite passe par les points $(0\\,;-4)$ et $(2\\,;2)$. Quel est son coefficient directeur $a$ ?",
+      "choix": [
+        "$3$",
+        "$-4$",
+        "$\\dfrac{1}{3}$",
+        "$6$"
+      ],
+      "reponse": 0,
+      "explication": "$a = \\dfrac{\\text{variation des ordonnées}}{\\text{variation des abscisses}} = \\dfrac{2 - (-4)}{2 - 0} = \\dfrac{6}{2} = 3$. Le piège $-4$ donne l'ordonnée à l'origine $b$ (et non $a$) ; $6$ oublie de diviser par la variation des abscisses."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Pourquoi ne faut-il **jamais** compter les carreaux pour trouver le coefficient directeur $a$ ?",
+      "choix": [
+        "parce que les deux axes peuvent avoir des graduations différentes",
+        "parce que les carreaux ne sont pas carrés",
+        "parce que $a$ est toujours un nombre entier",
+        "parce qu'on lit toujours $a$ sur l'axe vertical"
+      ],
+      "reponse": 0,
+      "explication": "« Orthogonal » ne signifie pas « orthonormé » : l'unité de l'axe vertical peut différer de celle de l'axe horizontal. Compter les carreaux donne alors un $a$ faux. Il faut lire les **nombres écrits sur les axes**, pas les carreaux."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "vecteurs",
+      "enonce": "En classe de 3e, comment manipule-t-on un vecteur ?",
+      "choix": [
+        "sans coordonnées, à l'aide de figures (translations, parallélogrammes)",
+        "en calculant systématiquement ses coordonnées dans le repère",
+        "avec la formule $a = \\dfrac{\\Delta y}{\\Delta x}$",
+        "uniquement dans un repère orthonormé"
+      ],
+      "reponse": 0,
+      "explication": "Le programme de 3e définit les vecteurs par des figures (translation, vecteurs égaux, relation de Chasles) : aucune ligne ne parle de coordonnées. Le calcul des coordonnées de vecteurs, c'est la **Seconde**. Ce chapitre de repérage n'est donc pas une préparation calculatoire aux vecteurs."
     }
   ]
 }

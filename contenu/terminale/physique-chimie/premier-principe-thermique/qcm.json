@@ -149,6 +149,146 @@
    ],
    "reponse": 0,
    "explication": "$c$ est en J·**kg**⁻¹·K⁻¹ : il faut convertir $m = 250$ g $= 0{,}250$ kg. Alors $\\Delta U = 0{,}250 \\times 4{,}18\\times10^{3} \\times 30 = 3{,}1\\times10^{4}$ J. Le choix $3{,}1\\times10^{7}$ J garde la masse en grammes — une erreur d'un facteur $1000$."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "premier-principe",
+   "enonce": "Comment s'écrit le premier principe de la thermodynamique pour la variation d'énergie interne $\\Delta U$ d'un système échangeant un transfert thermique $Q$ et un travail $W$ ?",
+   "choix": [
+    "$\\Delta U = Q - W$",
+    "$\\Delta U = Q + W$",
+    "$\\Delta U = Q \\times W$",
+    "$\\Delta U = \\dfrac{Q}{W}$"
+   ],
+   "reponse": 1,
+   "explication": "Le premier principe s'écrit $\\Delta U = Q + W$ : la variation d'énergie interne est la **somme** des énergies échangées avec l'extérieur, comptées positivement si reçues. C'est un bilan de conservation de l'énergie."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "modes-transfert",
+   "enonce": "Quel mode de transfert thermique peut se propager à travers le vide (sans milieu matériel) ?",
+   "choix": [
+    "La conduction",
+    "La convection",
+    "Aucun des trois",
+    "Le rayonnement"
+   ],
+   "reponse": 3,
+   "explication": "Le **rayonnement** se fait par ondes électromagnétiques et ne nécessite aucun milieu matériel : c'est ainsi que l'énergie du Soleil traverse l'espace jusqu'à la Terre. La conduction (de proche en proche) et la convection (déplacement de matière) exigent toutes deux un milieu."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "sens-transfert",
+   "enonce": "Dans quel sens se fait spontanément un transfert thermique entre deux corps de températures différentes ?",
+   "choix": [
+    "Du corps le plus chaud vers le corps le plus froid",
+    "Du corps le plus froid vers le corps le plus chaud",
+    "Dans les deux sens de façon égale",
+    "Du corps le plus petit vers le plus grand"
+   ],
+   "reponse": 0,
+   "explication": "Un transfert thermique spontané va **toujours du chaud vers le froid**, jusqu'à l'égalité des températures (équilibre thermique). L'inverse ne se produit jamais spontanément : un glaçon refroidit la boisson, il ne la réchauffe pas."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "capacite-thermique",
+   "enonce": "Quelle énergie faut-il apporter pour chauffer $m = 0{,}25$ kg d'eau de $15$ °C à $35$ °C ? (On prend $c_{\\text{eau}} = 4{,}18 \\times 10^{3}$ J·kg⁻¹·K⁻¹.)",
+   "choix": [
+    "$2{,}1 \\times 10^{7}$ J",
+    "$1{,}0 \\times 10^{3}$ J",
+    "$2{,}1 \\times 10^{4}$ J",
+    "$4{,}2 \\times 10^{5}$ J"
+   ],
+   "reponse": 2,
+   "explication": "L'écart de température vaut $\\Delta T = 35 - 15 = 20$ K (identique en °C et en K pour un écart). Alors $\\Delta U = m\\,c\\,\\Delta T = 0{,}25 \\times 4{,}18 \\times 10^{3} \\times 20 \\approx 2{,}1 \\times 10^{4}$ J. Oublier de convertir la masse en kg (utiliser $250$ g) donne $2{,}1 \\times 10^{7}$ J, faux d'un facteur $1000$."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "flux-thermique",
+   "enonce": "Un système échange $Q = 6{,}0 \\times 10^{3}$ J en une durée $\\Delta t = 30$ s. Quel est le flux thermique correspondant ?",
+   "choix": [
+    "$1{,}8 \\times 10^{5}$ W",
+    "$5{,}0 \\times 10^{-3}$ W",
+    "$6{,}0 \\times 10^{3}$ W",
+    "$2{,}0 \\times 10^{2}$ W"
+   ],
+   "reponse": 3,
+   "explication": "Le flux thermique est une **puissance** : $\\varphi = \\dfrac{Q}{\\Delta t} = \\dfrac{6{,}0 \\times 10^{3}}{30} = 2{,}0 \\times 10^{2}$ W. **Multiplier** $Q$ par $\\Delta t$ (au lieu de diviser) donne $1{,}8 \\times 10^{5}$ : c'est confondre énergie et puissance."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "ecart-temperature",
+   "enonce": "Un écart de température vaut $\\Delta T = 40$ °C. À combien de kelvins cet écart correspond-il ?",
+   "choix": [
+    "$40$ K",
+    "$313$ K",
+    "$233$ K",
+    "$40{,}15$ K"
+   ],
+   "reponse": 0,
+   "explication": "Un **écart** de température est identique en °C et en K : $\\Delta T = 40$ °C $= 40$ K. La conversion $T(\\text{K}) = \\theta(\\text{°C}) + 273{,}15$ ne concerne que les températures **absolues**, jamais les écarts. Ajouter $273{,}15$ à un écart ($\\to 313$ K) est une faute classique."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "resistance-thermique",
+   "enonce": "Une paroi présente un écart de température $\\Delta T = 20$ K entre ses deux faces et une résistance thermique $R_{th} = 0{,}050$ K·W⁻¹. Quel est le flux thermique qui la traverse ?",
+   "choix": [
+    "$1{,}0$ W",
+    "$2{,}5 \\times 10^{-3}$ W",
+    "$4{,}0 \\times 10^{2}$ W",
+    "$4{,}0 \\times 10^{3}$ W"
+   ],
+   "reponse": 2,
+   "explication": "On applique $\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{20}{0{,}050} = 4{,}0 \\times 10^{2}$ W. **Multiplier** $\\Delta T$ par $R_{th}$ donnerait $1{,}0$ W : il faut bien diviser par la résistance, qui est au dénominateur."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "premier-principe",
+   "enonce": "On chauffe un liquide dans un calorimètre : le système est incompressible et n'échange pas de travail utile avec l'extérieur. À quoi se réduit alors le premier principe ?",
+   "choix": [
+    "$\\Delta U = W$",
+    "$\\Delta U = Q$",
+    "$\\Delta U = Q - W$",
+    "$\\Delta U = 0$"
+   ],
+   "reponse": 1,
+   "explication": "Pour un système incompressible sans travail utile, le travail des forces de pression est négligeable ($W \\approx 0$) et le premier principe $\\Delta U = Q + W$ se réduit à $\\Delta U = Q$. C'est le cas de presque tous les exercices de calorimétrie."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "premier-principe",
+   "enonce": "Un corps se refroidit en cédant de l'énergie à son environnement. Quels sont les signes du transfert thermique $Q$ et de la variation d'énergie interne $\\Delta U$ ?",
+   "choix": [
+    "$Q > 0$ et $\\Delta U > 0$",
+    "$Q < 0$ et $\\Delta U > 0$",
+    "$Q > 0$ et $\\Delta U < 0$",
+    "$Q < 0$ et $\\Delta U < 0$"
+   ],
+   "reponse": 3,
+   "explication": "On raisonne du point de vue du système : un corps qui **cède** de l'énergie a $Q < 0$. Comme il n'échange pas de travail, $\\Delta U = Q < 0$ : son énergie interne diminue (il refroidit). Confondre le point de vue (système ou environnement) inverse le signe."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "resistance-thermique",
+   "enonce": "Pour qu'une paroi isole le mieux possible (flux thermique le plus faible pour un écart de température donné), que doit-on chercher à faire de sa résistance thermique $R_{th}$ ?",
+   "choix": [
+    "La maximiser : un grand $R_{th}$ donne un flux faible",
+    "La minimiser : un petit $R_{th}$ donne un flux faible",
+    "L'annuler",
+    "Augmenter le flux en même temps"
+   ],
+   "reponse": 0,
+   "explication": "Comme $\\varphi = \\dfrac{\\Delta T}{R_{th}}$, à écart de température fixé, plus $R_{th}$ est **grand**, plus le flux $\\varphi$ est **faible**. Une bonne isolation cherche donc à **maximiser** $R_{th}$. Croire qu'un grand $R_{th}$ laisse passer plus de chaleur est l'erreur d'intuition typique."
   }
  ]
 }

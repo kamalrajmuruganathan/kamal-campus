@@ -144,6 +144,131 @@
       ],
       "reponse": 1,
       "explication": "L'ajustement **affine** suppose une tendance rectiligne. Le forcer sur un nuage courbe donnerait des estimations fausses, surtout aux extrémités. Retirer des points serait une falsification."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "point-moyen",
+      "enonce": "Pour les couples $(2\\,;4)$, $(4\\,;7)$, $(6\\,;13)$, quel est le point moyen $\\mathrm{G}$ ?",
+      "choix": [
+        "$(4\\,;8)$",
+        "$(12\\,;24)$",
+        "$(4\\,;7)$",
+        "$(6\\,;8)$"
+      ],
+      "reponse": 0,
+      "explication": "$\\bar x = \\dfrac{2+4+6}{3} = 4$ et $\\bar y = \\dfrac{4+7+13}{3} = \\dfrac{24}{3} = 8$, donc $\\mathrm{G}(4\\,;8)$. Le choix B donne les sommes sans diviser par l'effectif, le piège classique."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "correlation-causalite",
+      "enonce": "Deux variables sont fortement corrélées. Cela prouve-t-il que l'une est la cause de l'autre ?",
+      "choix": [
+        "Oui, toujours",
+        "Non, une corrélation ne suffit jamais à établir une cause",
+        "Oui, si les points sont bien alignés",
+        "Oui, s'il y a beaucoup de points"
+      ],
+      "reponse": 1,
+      "explication": "Une corrélation admet trois explications : un lien de cause à effet, une cause commune (variable cachée) ou une simple coïncidence. Un nuage de points ne permet **jamais** de trancher à lui seul."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "extrapolation",
+      "enonce": "Estimer une valeur **au-delà** de l'intervalle des données observées s'appelle :",
+      "choix": ["interpoler", "extrapoler", "ajuster", "moyenner"],
+      "reponse": 1,
+      "explication": "Estimer en dehors du domaine mesuré, c'est **extrapoler** — une démarche à justifier car rien ne garantit que la relation se prolonge. Rester à l'intérieur des données serait interpoler."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "interpretation-pente",
+      "enonce": "Un conducteur ohmique est ajusté par $U = 22I$ (avec $I$ en A, $U$ en V). Quelle tension estime-t-on pour $I = 3$ A ?",
+      "choix": ["$66$ V", "$25$ V", "$7{,}3$ V", "$19$ V"],
+      "reponse": 0,
+      "explication": "On remplace directement : $U = 22 \\times 3 = 66$ V. Le choix $25$ vient d'une addition $22 + 3$, erreur fréquente de confusion entre pente et ordonnée à l'origine."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "moindres-carres",
+      "enonce": "Pourquoi la méthode des moindres carrés élève-t-elle les écarts au carré plutôt que de les additionner tels quels ?",
+      "choix": [
+        "Pour simplifier les calculs à la main",
+        "Pour que les écarts positifs et négatifs ne se compensent pas",
+        "Pour obtenir un résultat sans unité",
+        "C'est un choix arbitraire sans justification"
+      ],
+      "reponse": 1,
+      "explication": "Additionner les écarts signés laisserait ceux du dessus et du dessous se **compenser**, donnant une somme proche de zéro pour n'importe quelle droite. Le carré rend tout positif et pénalise fortement les points très éloignés."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "point-moyen",
+      "enonce": "Un tableur donne la droite d'ajustement $y = 1{,}8x + 2$. Sachant que $\\bar x = 5$, que vaut nécessairement $\\bar y$ ?",
+      "choix": ["$11$", "$9$", "$6{,}8$", "$2$"],
+      "reponse": 0,
+      "explication": "La droite des moindres carrés passe **toujours** par $\\mathrm{G}(\\bar x\\,;\\bar y)$, donc $\\bar y = 1{,}8 \\times 5 + 2 = 11$. C'est le contrôle le plus rapide d'un résultat de calculatrice."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "ordonnee-origine",
+      "enonce": "Dans un ajustement affine $y = ax + b$, que représente le coefficient $b$ ?",
+      "choix": [
+        "Le coefficient directeur",
+        "L'ordonnée à l'origine, c'est-à-dire la valeur de $y$ quand $x = 0$",
+        "La moyenne des $y$",
+        "La pente de la droite"
+      ],
+      "reponse": 1,
+      "explication": "$b$ est l'**ordonnée à l'origine** : la valeur prédite pour $x = 0$. Attention, elle n'a parfois aucun sens physique et ne doit pas être interprétée hors contexte. Le coefficient directeur, lui, est $a$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "correlation-causalite",
+      "enonce": "Sur plusieurs années, le nombre de sorties de films et un indice sans rapport évoluent de façon très semblable, sans lien plausible. Quelle est l'explication la plus vraisemblable ?",
+      "choix": [
+        "Un lien de cause à effet",
+        "Une cause commune cachée",
+        "Une simple coïncidence (corrélation fortuite)",
+        "Une erreur dans toutes les mesures"
+      ],
+      "reponse": 2,
+      "explication": "Quand aucun mécanisme ni cause commune n'est plausible, il reste la troisième explication : le **hasard**. Deux séries peuvent coïncider fortuitement, surtout sur peu de points. C'est la limite fondamentale d'une corrélation."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "extrapolation",
+      "enonce": "On a mesuré $U$ en fonction de $I$ pour un conducteur ohmique entre $0$ et $2$ A. Peut-on utiliser l'ajustement pour prédire $U$ à $50$ A ?",
+      "choix": [
+        "Oui, la loi d'Ohm est toujours valable",
+        "Non sans réserve : à forte intensité le conducteur chauffe et sa résistance peut changer",
+        "Oui, si la calculatrice l'autorise",
+        "Non, c'est mathématiquement interdit"
+      ],
+      "reponse": 1,
+      "explication": "$50$ A est très **au-delà** du domaine mesuré : c'est une extrapolation risquée. L'échauffement modifie la résistance, donc la relation linéaire mesurée peut ne plus tenir. Ce n'est pas interdit, mais cela exige une réserve explicite."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "moindres-carres",
+      "enonce": "Un nuage présente une tendance nette, mais un point est très éloigné de tous les autres. Comment ce point influe-t-il sur la droite des moindres carrés ?",
+      "choix": [
+        "Il n'a aucune influence sur la droite",
+        "Il pèse fortement, car la méthode minimise le carré des écarts",
+        "Il est automatiquement ignoré par le calcul",
+        "Il empêche la droite de passer par le point moyen"
+      ],
+      "reponse": 1,
+      "explication": "Comme on minimise la somme des **carrés** des écarts, un point très éloigné produit un écart, donc un carré, énorme : il tire fortement la droite vers lui. La droite continue toutefois de passer par le point moyen — le choix D est faux."
     }
   ]
 }

@@ -119,6 +119,111 @@
       ],
       "reponse": 1,
       "explication": "Avec $0 < q < 1$ et un premier terme positif, chaque terme vaut $95\\,\\%$ du précédent : la suite **décroît** en se rapprochant de $0$ sans jamais l'atteindre. L'alternance de signe ne surviendrait que si $q$ était négatif."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "nature",
+      "enonce": "La température d'une pièce baisse de $3$ °C chaque heure. Quelle est la nature de la suite des températures ?",
+      "choix": ["géométrique", "arithmétique", "constante", "ni l'une ni l'autre"],
+      "reponse": 1,
+      "explication": "On **retire** toujours la même quantité fixe ($3$ °C) : la suite est **arithmétique** de raison $-3$. Un pourcentage de baisse donnerait au contraire une suite géométrique."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "La suite définie par $u_0 = 2$ et $u_{n+1} = u_n + 3$ est donnée :",
+      "choix": [
+        "par une formule explicite",
+        "par une relation de récurrence",
+        "par un graphique",
+        "par un pourcentage"
+      ],
+      "reponse": 1,
+      "explication": "Chaque terme est exprimé à partir du **précédent** ($u_{n+1} = f(u_n)$) avec un premier terme : c'est une définition par **récurrence**. Une définition explicite serait du type $u_n = 3n + 2$, calculable directement."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "arithmetique",
+      "enonce": "Une suite arithmétique a $u_0 = 7$ et $r = 4$. Que vaut $u_5$ ?",
+      "choix": ["$27$", "$23$", "$28$", "$20$"],
+      "reponse": 0,
+      "explication": "$u_n = u_0 + nr = 7 + 5 \\times 4 = 27$. Le choix $23$ oublie le premier terme ($u_0$ mal pris en compte), le choix $28$ vient d'un décalage d'indice ($7 + 6 \\times ...$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "geometrique",
+      "enonce": "Une suite géométrique a $u_0 = 1\\,000$ et $q = 1{,}1$. Que vaut $u_2$ ?",
+      "choix": ["$1\\,210$", "$1\\,200$", "$1\\,100$", "$1\\,331$"],
+      "reponse": 0,
+      "explication": "$u_n = u_0 \\times q^n = 1000 \\times 1{,}1^2 = 1000 \\times 1{,}21 = 1210$. Le choix $1\\,200$ additionne deux fois $10\\,\\%$ de $1000$ au lieu de multiplier, le choix $1\\,331$ correspond à $u_3$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "pourcentage",
+      "enonce": "Un chiffre d'affaires augmente de $8\\,\\%$ chaque année. Quelle est la raison de la suite géométrique associée ?",
+      "choix": ["$0{,}08$", "$1{,}08$", "$8$", "$1{,}8$"],
+      "reponse": 1,
+      "explication": "$q = 1 + \\dfrac{8}{100} = 1{,}08$. Multiplier par $1{,}08$, c'est ajouter $8\\,\\%$. Le choix $0{,}08$ oublie le $1 +$ et ferait fondre le chiffre d'affaires."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "reconnaissance",
+      "enonce": "Une suite vaut $5$, $8$, $11$, $14$. Quelle est sa nature ?",
+      "choix": [
+        "géométrique de raison $1{,}6$",
+        "arithmétique de raison $3$",
+        "arithmétique de raison $4$",
+        "ni l'une ni l'autre"
+      ],
+      "reponse": 1,
+      "explication": "Les **différences** sont constantes ($8-5 = 11-8 = 14-11 = 3$) : c'est une suite **arithmétique** de raison $3$. Les quotients, eux, ne sont pas constants ($8/5 = 1{,}6$ mais $11/8 \\approx 1{,}375$)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "pourcentage",
+      "enonce": "Un prix augmente de $10\\,\\%$ une année, puis encore de $10\\,\\%$ l'année suivante. Quelle est l'augmentation totale sur les deux ans ?",
+      "choix": ["$+20\\,\\%$", "$+21\\,\\%$", "$+10\\,\\%$", "$+11\\,\\%$"],
+      "reponse": 1,
+      "explication": "On **multiplie** les raisons : $1{,}1 \\times 1{,}1 = 1{,}21$, soit $+21\\,\\%$. Additionner les pourcentages ($10 + 10 = 20$) est le piège classique : les évolutions successives se composent, elles ne s'ajoutent pas."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "indice-depart",
+      "enonce": "Une suite arithmétique de raison $r = 3$ a pour premier terme $u_1 = 5$. Que vaut $u_{10}$ ?",
+      "choix": ["$32$", "$35$", "$30$", "$28$"],
+      "reponse": 0,
+      "explication": "Le premier terme est d'indice $1$, donc $u_n = u_1 + (n-1)r = 5 + 9 \\times 3 = 32$. Le choix $35$ applique $u_1 + 10r$ en oubliant le décalage d'indice."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "variation",
+      "enonce": "Une suite géométrique a $u_0 = 3 > 0$ et $q = -2$. Que peut-on dire de ses termes ?",
+      "choix": [
+        "Ils sont tous positifs et croissants",
+        "Ils sont tous négatifs",
+        "Ils alternent de signe",
+        "Ils tendent vers $0$"
+      ],
+      "reponse": 2,
+      "explication": "Avec $q < 0$, les termes **alternent** de signe : $3\\,;-6\\,;12\\,;-24\\ldots$ Une raison négative n'entraîne donc pas une décroissance régulière, mais une oscillation. Leur valeur absolue, elle, augmente ici."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "geometrique",
+      "enonce": "Une suite géométrique de premier terme $u_0 = 800$ vérifie $u_3 = 100$. Quelle est sa raison $q$ (positive) ?",
+      "choix": ["$0{,}5$", "$0{,}25$", "$2$", "$-0{,}5$"],
+      "reponse": 0,
+      "explication": "$u_3 = u_0 \\times q^3$ donne $q^3 = \\dfrac{100}{800} = 0{,}125$, donc $q = 0{,}5$. Vérification : $800 \\to 400 \\to 200 \\to 100$. Le choix $0{,}25$ suppose à tort deux étapes au lieu de trois."
     }
   ]
 }

@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "relation-addition",
       "enonce": "On donne $P(A) = 0{,}4$, $P(B) = 0{,}3$ et $P(A \\cap B) = 0{,}1$. Combien vaut $P(A \\cup B)$ ?",
-      "choix": ["$0{,}7$", "$0{,}8$", "$0{,}12$", "$0{,}6$"],
+      "choix": [
+        "$0{,}7$",
+        "$0{,}8$",
+        "$0{,}12$",
+        "$0{,}6$"
+      ],
       "reponse": 3,
       "explication": "La relation donne $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0{,}4 + 0{,}3 - 0{,}1 = 0{,}6$. Le piège est $0{,}7$ : c'est $P(A) + P(B)$ sans retirer l'intersection, donc les issues communes comptées **deux fois**. Ce raccourci ne serait valable que si $A \\cap B$ était vide."
     },
@@ -38,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "methode-relation",
       "enonce": "On donne $P(A) = 0{,}6$, $P(B) = 0{,}5$ et $P(A \\cup B) = 0{,}8$. Combien vaut $P(A \\cap B)$ ?",
-      "choix": ["$-0{,}3$", "$0{,}1$", "$0{,}3$", "$1{,}9$"],
+      "choix": [
+        "$-0{,}3$",
+        "$0{,}1$",
+        "$0{,}3$",
+        "$1{,}9$"
+      ],
       "reponse": 2,
       "explication": "On isole l'intersection : $P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0{,}6 + 0{,}5 - 0{,}8 = 0{,}3$. Le distracteur $-0{,}3$ vient de la soustraction faite à l'envers ($0{,}8 - 0{,}6 - 0{,}5$) : une probabilité négative est impossible, c'est le signal d'alarme."
     },
@@ -47,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "cas-particuliers",
       "enonce": "Avec un dé équilibré à six faces, $A = \\{1 \\,;\\, 2\\}$ et $B = \\{5 \\,;\\, 6\\}$. Combien vaut $P(A \\cup B)$ ?",
-      "choix": ["$\\dfrac{4}{12}$", "$\\dfrac{2}{3}$", "$\\dfrac{1}{3}$", "$0$"],
+      "choix": [
+        "$\\dfrac{4}{12}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{1}{3}$",
+        "$0$"
+      ],
       "reponse": 1,
       "explication": "Ici $A \\cap B = \\varnothing$ : aucune issue commune, donc $P(A \\cup B) = P(A) + P(B) = \\dfrac{2}{6} + \\dfrac{2}{6} = \\dfrac{4}{6} = \\dfrac{2}{3}$. Le choix $\\dfrac{4}{12}$ vient de l'addition des dénominateurs, interdite. Attention : ce raccourci ne s'applique **que** parce que l'intersection est vide — vérifie-le toujours avant."
     },
@@ -56,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "methode-relation",
       "enonce": "Dans une classe de $30$ élèves, $14$ jouent d'un instrument, $19$ font du sport en club et $8$ font les deux. On tire un élève au hasard : quelle est la probabilité qu'il pratique au moins l'une des deux activités ?",
-      "choix": ["$\\dfrac{11}{30}$", "$\\dfrac{33}{30}$", "$\\dfrac{4}{15}$", "$\\dfrac{5}{6}$"],
+      "choix": [
+        "$\\dfrac{11}{30}$",
+        "$\\dfrac{33}{30}$",
+        "$\\dfrac{4}{15}$",
+        "$\\dfrac{5}{6}$"
+      ],
       "reponse": 3,
       "explication": "$P(A \\cup B) = \\dfrac{14}{30} + \\dfrac{19}{30} - \\dfrac{8}{30} = \\dfrac{25}{30} = \\dfrac{5}{6}$. Le distracteur $\\dfrac{33}{30}$ oublie de retirer les $8$ élèves comptés deux fois — et il dépasse $1$, donc il est repérable sans même refaire le calcul."
     },
@@ -79,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "erreur-dalembert",
       "enonce": "On lance deux fois une pièce équilibrée. Quelle est la probabilité d'obtenir **au moins un pile** ?",
-      "choix": ["$\\dfrac{2}{3}$", "$\\dfrac{1}{2}$", "$\\dfrac{3}{4}$", "$\\dfrac{1}{4}$"],
+      "choix": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{1}{4}$"
+      ],
       "reponse": 2,
       "explication": "Les issues équiprobables sont les quatre couples $(P\\,;P)$, $(P\\,;F)$, $(F\\,;P)$, $(F\\,;F)$ : trois conviennent, d'où $\\dfrac{3}{4}$. Le choix $\\dfrac{2}{3}$ est l'erreur de D'Alembert : il ne compte que trois cas (« $P$ », « $FP$ », « $FF$ ») alors que le premier en regroupe deux et n'a donc pas la même chance que les autres."
     },
@@ -124,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "Avec $B = \\overline{A}$, la relation s'écrit $1 + 0 = P(A) + P(\\overline{A})$. La formule du contraire vue en 4e n'est donc pas une règle à part : c'est un **cas particulier** de la relation de 3e. Le choix $B = A$ ne donne que l'égalité $P(A) + P(A) = P(A) + P(A)$, qui n'apprend rien."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "relation-addition",
+      "enonce": "On donne $P(A) = 0{,}5$, $P(B) = 0{,}3$ et $P(A \\cap B) = 0{,}2$. Combien vaut $P(A \\cup B)$ ?",
+      "choix": [
+        "$0{,}8$",
+        "$0{,}6$",
+        "$1$",
+        "$0{,}1$"
+      ],
+      "reponse": 1,
+      "explication": "La relation donne $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0{,}5 + 0{,}3 - 0{,}2 = 0{,}6$. Le piège est $0{,}8$ : c'est $P(A) + P(B)$ sans retirer l'intersection, donc les issues communes comptées **deux fois**. Ce raccourci ne vaudrait que si $A \\cap B$ était vide."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "simulation",
+      "enonce": "Que veut dire que les répétitions d'une expérience aléatoire simulée sont **indépendantes** ?",
+      "choix": [
+        "Le résultat de l'une n'a aucune influence sur le résultat des autres",
+        "Elles donnent toujours le même résultat",
+        "Chaque répétition a une probabilité différente de la précédente",
+        "Le résultat de chaque répétition dépend du précédent"
+      ],
+      "reponse": 0,
+      "explication": "Indépendantes signifie **sans mémoire** : ce qui sort au $200^\\text{e}$ tirage ne dépend pas du $199^\\text{e}$. Le piège est de croire qu'indépendant veut dire « identique » ou « lié » : c'est l'inverse, aucune répétition n'influence les autres."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "cas-particuliers",
+      "enonce": "$A$ et $B$ ne peuvent pas se produire ensemble, donc $A \\cap B = \\varnothing$. Avec $P(A) = 0{,}2$ et $P(B) = 0{,}5$, combien vaut $P(A \\cup B)$ ?",
+      "choix": [
+        "$0{,}7$",
+        "$0{,}1$",
+        "$0{,}3$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $A \\cap B = \\varnothing$, on a $P(A \\cap B) = 0$ et la relation se simplifie : $P(A \\cup B) = P(A) + P(B) = 0{,}2 + 0{,}5 = 0{,}7$. Le piège serait de retirer une intersection : ici elle est nulle, donc rien à retirer. Ce raccourci se mérite : il faut avoir vérifié **avant** que l'intersection est bien vide."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "methode-relation",
+      "enonce": "On donne $P(A) = 0{,}7$, $P(B) = 0{,}4$ et $P(A \\cup B) = 0{,}9$. Combien vaut $P(A \\cap B)$ ?",
+      "choix": [
+        "$0{,}2$",
+        "$-0{,}2$",
+        "$1{,}1$",
+        "$0{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "On isole l'intersection : $P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 0{,}7 + 0{,}4 - 0{,}9 = 0{,}2$. Le distracteur $-0{,}2$ vient de la soustraction faite à l'envers ($0{,}9 - 0{,}7 - 0{,}4$) : une probabilité négative est impossible, c'est le signal d'alarme."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "methode-relation",
+      "enonce": "Dans un groupe de $40$ personnes, $22$ aiment le thé, $18$ aiment le café et $10$ aiment les deux. On en choisit une au hasard : quelle est la probabilité qu'elle aime au moins l'une des deux boissons ?",
+      "choix": [
+        "$\\dfrac{3}{4}$",
+        "$1$",
+        "$\\dfrac{5}{4}$",
+        "$\\dfrac{3}{10}$"
+      ],
+      "reponse": 0,
+      "explication": "$P(A \\cup B) = \\dfrac{22}{40} + \\dfrac{18}{40} - \\dfrac{10}{40} = \\dfrac{30}{40} = \\dfrac{3}{4}$. Le distracteur $\\dfrac{5}{4}$ oublie de retirer les $10$ personnes comptées deux fois — et il dépasse $1$, donc il est repérable sans même finir le calcul."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "controle-vraisemblance",
+      "enonce": "On sait que $P(A) = 0{,}3$. Parmi ces valeurs annoncées pour $P(A \\cap B)$, laquelle est **impossible** ?",
+      "choix": [
+        "$0{,}5$",
+        "$0{,}2$",
+        "$0{,}1$",
+        "$0{,}3$"
+      ],
+      "reponse": 0,
+      "explication": "L'intersection $A \\cap B$ est **contenue** dans $A$, donc $P(A \\cap B) \\leqslant P(A) = 0{,}3$ : une valeur de $0{,}5$ est impossible. Le piège est d'oublier ce contrôle — il repère une réponse absurde avant même de vérifier le calcul. Les trois autres valeurs, toutes $\\leqslant 0{,}3$, sont admissibles."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "cas-particuliers",
+      "enonce": "Avec un dé équilibré, $A = \\{2 \\,;\\, 4 \\,;\\, 6\\}$ (« pair ») et $B = \\{5 \\,;\\, 6\\}$ (« au moins $5$ »). Combien vaut $P(A \\cup B)$ ?",
+      "choix": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{5}{6}$",
+        "$\\dfrac{1}{6}$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "$A \\cup B = \\{2 \\,;\\, 4 \\,;\\, 5 \\,;\\, 6\\}$, soit $\\dfrac{4}{6} = \\dfrac{2}{3}$. Le piège est $\\dfrac{5}{6}$ : c'est $P(A) + P(B) = \\dfrac{3}{6} + \\dfrac{2}{6}$, qui compte **deux fois** le $6$, seule issue commune. Ici l'intersection n'est pas vide, on ne peut pas se contenter d'additionner."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "erreur-dalembert",
+      "enonce": "On lance **deux fois** un dé équilibré. Quelle est la probabilité d'obtenir **au moins un $6$** ?",
+      "choix": [
+        "$\\dfrac{11}{36}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{12}{36}$",
+        "$\\dfrac{1}{36}$"
+      ],
+      "reponse": 0,
+      "explication": "Avec $A$ : « $6$ au premier lancer » et $B$ : « $6$ au second », $P(A) = P(B) = \\dfrac{1}{6}$, et l'intersection $A \\cap B$ (le double $6$) vaut $\\dfrac{1}{36}$, **obtenue en comptant** $1$ issue sur $36$. Alors $P(A \\cup B) = \\dfrac{6}{36} + \\dfrac{6}{36} - \\dfrac{1}{36} = \\dfrac{11}{36}$. Le piège $\\dfrac{12}{36} = \\dfrac{1}{3}$ oublie de retirer l'intersection — il compterait le double $6$ deux fois."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "stabilisation",
+      "enonce": "Pour une pièce, l'équiprobabilité se justifie par symétrie. Mais pour le **sexe d'un enfant à la naissance**, aucune symétrie ne s'applique. Comment se donne-t-on alors une probabilité ?",
+      "choix": [
+        "On observe les fréquences sur un très grand nombre de naissances et on prend la valeur autour de laquelle elles se stabilisent",
+        "On calcule $\\dfrac{1}{2}$ par symétrie, exactement comme pour une pièce",
+        "On ne peut définir aucune probabilité dans ce cas",
+        "On prend la fréquence observée sur la toute première naissance"
+      ],
+      "reponse": 0,
+      "explication": "Faute de symétrie, on **construit** le modèle à partir de l'expérience : sur un très grand nombre de cas, les fréquences se stabilisent, et on adopte cette valeur comme probabilité. Un grand nombre de répétitions sert donc dans les deux sens — vérifier un modèle donné, ou en construire un quand on n'en a pas. Le piège est d'imposer $\\dfrac{1}{2}$ par analogie : rien ne garantit la symétrie ici."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "stabilisation",
+      "enonce": "Après $10\\,000$ lancers d'une pièce équilibrée, la fréquence de « pile » vaut $0{,}497$. Un élève en conclut que la probabilité de pile n'est « pas exactement $0{,}5$ ». Que penser de son raisonnement ?",
+      "choix": [
+        "Il a tort : dans le modèle la probabilité vaut $0{,}5$, et une fréquence proche sans l'atteindre est normale — se stabiliser n'est pas devenir égal",
+        "Il a raison : la fréquence prouve que la probabilité vaut $0{,}497$",
+        "Il a raison : sur $10\\,000$ lancers, la fréquence devrait tomber exactement sur $0{,}5$",
+        "On ne peut rien dire sans relancer la simulation"
+      ],
+      "reponse": 0,
+      "explication": "La probabilité appartient au **modèle** et vaut $0{,}5$ : elle ne bouge pas. Ce sont les **fréquences** qui se stabilisent autour d'elle sans forcément l'atteindre, même sur $10\\,000$ lancers. Le piège est de prendre la fréquence observée pour la probabilité : la stabilisation réduit l'ordre de grandeur de l'écart, elle ne l'annule pas."
     }
   ]
 }

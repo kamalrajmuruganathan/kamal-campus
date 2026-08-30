@@ -109,6 +109,101 @@
       ],
       "reponse": 1,
       "explication": "$9$ est impair mais vaut $3 \\times 3$ : un **seul contre-exemple** suffit à réfuter une affirmation universelle. La dissymétrie est essentielle : prouver qu'une propriété est vraie demande une démonstration générale."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "ecriture",
+      "enonce": "Comment écrit-on $a \\times a$ plus simplement ?",
+      "choix": ["$a^2$", "$2a$", "$aa$", "$a2$"],
+      "reponse": 0,
+      "explication": "Un facteur répété devient une puissance : $a \\times a = a^2$. Le piège est d'écrire $2a$, qui signifie $a + a$ (deux fois $a$), pas $a$ multiplié par lui-même."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "reduction",
+      "enonce": "Combien vaut $8x - 3x$ ?",
+      "choix": ["$5x$", "$5$", "$11x$", "$5x^2$"],
+      "reponse": 0,
+      "explication": "Les deux termes sont de **même nature** : $8$ fois $x$ moins $3$ fois $x$ font $5$ fois $x$. On soustrait les nombres, la lettre ne change pas. Répondre $5$ revient à oublier la lettre."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "ecriture",
+      "enonce": "Que signifie l'écriture $3a$ ?",
+      "choix": ["$3 \\times a$", "$3 + a$", "$a^3$", "$30 \\times a$"],
+      "reponse": 0,
+      "explication": "Devant une lettre, on supprime le signe × : $3a$ est une écriture abrégée de $3 \\times a$. Ce n'est ni une addition ($3 + a$) ni une puissance ($a^3$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "developpement",
+      "enonce": "Quel est le développement de $5(x + 2)$ ?",
+      "choix": ["$5x + 2$", "$5x + 10$", "$5x + 7$", "$x + 10$"],
+      "reponse": 1,
+      "explication": "Le $5$ multiplie **les deux termes** : $5 \\times x + 5 \\times 2 = 5x + 10$. Le choix $5x + 2$ oublie de multiplier le second terme — l'erreur la plus fréquente du chapitre."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "factorisation",
+      "enonce": "Quelle est la forme factorisée de $8x + 12$ ?",
+      "choix": ["$4(2x + 3)$", "$4(2x + 8)$", "$8(x + 12)$", "$2(4x + 3)$"],
+      "reponse": 0,
+      "explication": "Le facteur commun est $4$ : $8x = 4 \\times 2x$ et $12 = 4 \\times 3$, donc $8x + 12 = 4(2x + 3)$. Contrôle : en redéveloppant $4(2x+3)$ on retrouve bien $8x + 12$, ce que ne donnent pas les autres choix."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "test-egalite",
+      "enonce": "L'égalité $4x - 1 = 2x + 5$ est-elle vraie pour $x = 3$ ?",
+      "choix": ["Oui", "Non", "Seulement si $x = 0$", "On ne peut pas tester"],
+      "reponse": 0,
+      "explication": "On calcule les deux membres **séparément** : à gauche $4 \\times 3 - 1 = 11$, à droite $2 \\times 3 + 5 = 11$. Les deux valent $11$ : l'égalité est vraie pour $x = 3$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "developpement-signe",
+      "enonce": "Quel est le développement de $-3(x + 2)$ ?",
+      "choix": ["$-3x - 6$", "$-3x + 6$", "$-3x - 2$", "$3x + 6$"],
+      "reponse": 0,
+      "explication": "Le $-3$ multiplie les deux termes : $-3 \\times x = -3x$ et $-3 \\times 2 = -6$, donc $-3x - 6$. Se tromper sur le signe du second terme ($-3x + 6$) est le piège classique."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "developpement-signe",
+      "enonce": "Quel est le développement de $-5(x - 2)$ ?",
+      "choix": ["$-5x - 10$", "$-5x + 10$", "$5x - 10$", "$-5x - 2$"],
+      "reponse": 1,
+      "explication": "$-5 \\times x = -5x$, puis $(-5) \\times (-2) = +10$ : deux signes moins donnent un plus. Le résultat est $-5x + 10$. Garder $-10$ (choix A) oublie que le $-2$ change de signe."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "Comment s'écrit un nombre impair, avec $k$ entier ?",
+      "choix": ["$2k$", "$2k + 1$", "$k + 1$", "$2 + k$"],
+      "reponse": 1,
+      "explication": "Un nombre pair s'écrit $2k$ ; le nombre impair qui le suit vaut donc $2k + 1$. Le choix $2k$ est justement l'écriture d'un nombre **pair**, l'erreur à éviter. $k+1$ ou $2+k$ ne garantissent aucune parité."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "En additionnant un nombre pair $2k$ et un nombre impair $2k' + 1$, on obtient $2(k + k') + 1$. Que peut-on conclure ?",
+      "choix": [
+        "La somme est paire",
+        "La somme est impaire",
+        "La somme est un multiple de $4$",
+        "On ne peut pas conclure"
+      ],
+      "reponse": 1,
+      "explication": "Le résultat est de la forme $2n + 1$ (avec $n = k + k'$ entier) : c'est exactement l'écriture d'un nombre **impair**. La somme d'un pair et d'un impair est donc toujours impaire — et le raisonnement, valable pour tous $k$ et $k'$, vaut **démonstration**, pas un simple exemple."
     }
   ]
 }

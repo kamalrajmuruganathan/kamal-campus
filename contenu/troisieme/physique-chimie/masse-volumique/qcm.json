@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Il faut d'abord convertir le volume : $0{,}25$ L $= 250$ cm³ (car $1$ L $= 1000$ cm³). Alors $\\rho = \\dfrac{250}{250} = 1{,}0$ g/cm³. Diviser $250$ g par $0{,}25$ (sans convertir les litres) donne $1000$ : c'est le piège des unités."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Que peut-on dire de la masse volumique d'un matériau ?",
+      "choix": [
+        "Elle dépend de la taille de l'échantillon",
+        "Elle est la même pour tout échantillon d'un même matériau",
+        "Elle dépend seulement de la masse de l'objet",
+        "Elle vaut toujours $1$ g/cm³"
+      ],
+      "reponse": 1,
+      "explication": "La masse volumique est une **propriété du matériau** : un clou en fer et une poutre en fer ont la même $\\rho$. Elle ne dépend ni de la taille ni de la masse de l'objet, c'est pourquoi elle sert à **identifier** une matière. Le piège est de la confondre avec la masse, qui, elle, dépend de la taille."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "unites",
+      "enonce": "À combien de centimètres cubes correspond $1$ mL ?",
+      "choix": [
+        "$1$ cm³",
+        "$10$ cm³",
+        "$100$ cm³",
+        "$1000$ cm³"
+      ],
+      "reponse": 0,
+      "explication": "$1$ mL $= 1$ cm³ exactement. C'est très pratique : une éprouvette graduée en mL se lit directement en cm³, sans conversion. Le piège est d'appliquer un facteur $10$ ou $1000$ inutile."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "mesurer",
+      "enonce": "Comment mesure-t-on le volume d'un caillou de forme quelconque ?",
+      "choix": [
+        "Avec une règle graduée",
+        "Par la méthode du déplacement d'eau",
+        "Avec une balance électronique",
+        "Avec un chronomètre"
+      ],
+      "reponse": 1,
+      "explication": "Un solide de forme irrégulière n'a pas de formule de volume : on utilise le **déplacement d'eau**, en mesurant la montée du niveau dans une éprouvette ($V = V_2 - V_1$). La règle ne convient qu'aux formes géométriques ; la balance mesure une masse, pas un volume."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "definition",
+      "enonce": "Quel volume occupe une masse $m = 135$ g d'aluminium, de masse volumique $\\rho = 2{,}7$ g/cm³ ?",
+      "choix": [
+        "$364{,}5$ cm³",
+        "$50$ cm³",
+        "$0{,}02$ cm³",
+        "$137{,}7$ cm³"
+      ],
+      "reponse": 1,
+      "explication": "On réarrange la formule : $V = \\dfrac{m}{\\rho} = \\dfrac{135}{2{,}7} = 50$ cm³. Le piège est de **multiplier** ($135 \\times 2{,}7 = 364{,}5$), ce qui donnerait une masse au carré, pas un volume. Contrôle : $2{,}7 \\times 50 = 135$ g, cohérent."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "mesurer",
+      "enonce": "Un pavé de fer mesure $2$ cm de longueur, $3$ cm de largeur et $5$ cm de hauteur. Quel est son volume ?",
+      "choix": [
+        "$10$ cm³",
+        "$60$ cm³",
+        "$30$ cm³",
+        "$15$ cm³"
+      ],
+      "reponse": 2,
+      "explication": "Pour un solide géométrique, on applique la formule : $V = \\text{longueur} \\times \\text{largeur} \\times \\text{hauteur} = 2 \\times 3 \\times 5 = 30$ cm³. Le piège est d'**additionner** les dimensions ($2+3+5 = 10$) au lieu de les multiplier."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "unites",
+      "enonce": "À combien de centimètres cubes correspondent $2$ litres ?",
+      "choix": [
+        "$200$ cm³",
+        "$20$ cm³",
+        "$2000$ cm³",
+        "$2$ cm³"
+      ],
+      "reponse": 2,
+      "explication": "$1$ L $= 1000$ cm³, donc $2$ L $= 2 \\times 1000 = 2000$ cm³. Le piège est d'oublier le facteur $1000$ et d'appliquer un $10$ ou un $100$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "flotte-coule",
+      "enonce": "Un bloc d'aluminium ($\\rho = 2{,}7$ g/cm³) est plongé dans l'eau ($\\rho = 1{,}0$ g/cm³). Que se passe-t-il ?",
+      "choix": [
+        "Il flotte, car l'aluminium est un métal léger",
+        "Il coule, car $2{,}7 > 1{,}0$",
+        "Il flotte, car $2{,}7 > 1{,}0$",
+        "On ne peut pas savoir sans connaître sa masse"
+      ],
+      "reponse": 1,
+      "explication": "On compare les masses volumiques : $\\rho_{\\text{objet}} = 2{,}7 > \\rho_{\\text{eau}} = 1{,}0$, donc l'objet **coule**. Le piège est d'inverser la règle (une $\\rho$ plus grande fait couler, pas flotter) ou de croire que la masse de l'objet intervient : seul le rapport des masses volumiques compte."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "temperature",
+      "enonce": "Pourquoi un glaçon flotte-t-il à la surface de l'eau liquide ?",
+      "choix": [
+        "Parce que la glace est plus froide que l'eau",
+        "Parce que la masse volumique de la glace ($0{,}92$ g/cm³) est inférieure à celle de l'eau ($1{,}0$ g/cm³)",
+        "Parce que la glace est plus légère en masse que l'eau",
+        "Parce que la glace ne contient pas d'eau"
+      ],
+      "reponse": 1,
+      "explication": "L'eau est une **exception** : en gelant, elle voit son volume augmenter, donc sa masse volumique **diminuer** ($0{,}92 < 1{,}0$ g/cm³). Comme $\\rho_{\\text{glace}} < \\rho_{\\text{eau}}$, le glaçon flotte. Le piège est d'invoquer la température ou la masse : c'est bien la masse volumique qui décide."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "unites",
+      "enonce": "Un objet a une masse $m = 0{,}5$ kg et un volume $V = 250$ cm³. Quelle est sa masse volumique en g/cm³ ?",
+      "choix": [
+        "$0{,}002$ g/cm³",
+        "$500$ g/cm³",
+        "$2{,}0$ g/cm³",
+        "$125$ g/cm³"
+      ],
+      "reponse": 2,
+      "explication": "Il faut d'abord rendre les unités cohérentes : $0{,}5$ kg $= 500$ g. Alors $\\rho = \\dfrac{m}{V} = \\dfrac{500}{250} = 2{,}0$ g/cm³. Le piège est de diviser $0{,}5$ par $250$ sans convertir les kilogrammes en grammes, ce qui donne un résultat mille fois trop petit."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "flotte-coule",
+      "enonce": "On verse de l'huile ($\\rho = 0{,}92$ g/cm³) dans un verre d'eau ($\\rho = 1{,}0$ g/cm³). Où se place l'huile ?",
+      "choix": [
+        "Elle coule et se dépose au fond",
+        "Elle surnage au-dessus de l'eau",
+        "Elle se mélange uniformément à l'eau",
+        "Elle reste exactement au milieu du verre"
+      ],
+      "reponse": 1,
+      "explication": "L'huile est **moins dense** que l'eau ($0{,}92 < 1{,}0$ g/cm³) : elle flotte, donc elle **surnage** au-dessus. Le piège est de croire qu'un liquide « épais » coulerait forcément : c'est encore la comparaison des masses volumiques qui tranche, pas la viscosité."
     }
   ]
 }

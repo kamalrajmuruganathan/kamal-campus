@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "Nombre de pixels $= 1000 \\times 2000 = 2{,}0\\times 10^{6}$ ; taille $= 2{,}0\\times 10^{6} \\times 3 = 6{,}0\\times 10^{6}$ octets $= 6$ Mo. Le $48$ Mo confond bits et octets ($6\\times 10^{6}$ octets $= 48\\times 10^{6}$ bits) : la taille se compte en **octets**."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "numeriser-quantification",
+      "enonce": "Quantifier un signal, c'est :",
+      "choix": [
+        "mesurer sa valeur à des instants réguliers",
+        "attribuer à chaque échantillon une valeur parmi un nombre fini de niveaux",
+        "le transmettre par une fibre optique",
+        "doubler sa fréquence pour respecter Shannon"
+      ],
+      "reponse": 1,
+      "explication": "La quantification code l'**amplitude** : chaque échantillon reçoit une valeur parmi $N = 2^n$ niveaux. Le piège est de confondre avec l'**échantillonnage**, qui découpe le **temps** en mesurant à intervalles réguliers. Ce sont deux étapes distinctes de la numérisation."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "transmettre-canaux",
+      "enonce": "Dans une fibre optique, la lumière reste guidée dans le cœur grâce à :",
+      "choix": [
+        "la diffraction",
+        "la réflexion totale",
+        "l'effet Doppler",
+        "l'absorption par la gaine"
+      ],
+      "reponse": 1,
+      "explication": "La lumière est piégée dans le cœur de la fibre par **réflexion totale** : elle rebondit sans sortir et parcourt de longues distances avec très peu de pertes. Le piège est de citer l'absorption : au contraire, la fibre est choisie pour sa très **faible** atténuation."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "afficher-pixels",
+      "enonce": "Chaque pixel d'un écran couleur est composé de trois sous-pixels de couleurs :",
+      "choix": [
+        "cyan, magenta, jaune",
+        "rouge, vert, bleu",
+        "rouge, jaune, bleu",
+        "noir, blanc, gris"
+      ],
+      "reponse": 1,
+      "explication": "Un pixel est fait de trois sous-pixels **Rouge, Vert, Bleu (RVB)** : en dosant leur intensité, la **synthèse additive** recompose toutes les couleurs (R+V+B au maximum = blanc, tous éteints = noir). Le cyan-magenta-jaune est la synthèse **soustractive** (imprimerie), pas celle des écrans."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "numeriser-echantillonnage",
+      "enonce": "Un signal est échantillonné à la fréquence $f_e = 8{,}0$ kHz. Quelle est la période d'échantillonnage $T_e$ ?",
+      "choix": [
+        "$8$ µs",
+        "$125$ µs",
+        "$1250$ µs",
+        "$0{,}80$ ms"
+      ],
+      "reponse": 1,
+      "explication": "$T_e = \\dfrac{1}{f_e} = \\dfrac{1}{8{,}0\\times 10^{3}} = 1{,}25\\times 10^{-4}$ s $= 125$ µs. Le piège est de mal placer la virgule en oubliant de convertir les kHz, ou de recopier le « 8 ». Une période se compte ici en microsecondes."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "numeriser-quantification",
+      "enonce": "Un convertisseur code une tension sur une plage $U = 10$ V avec $n = 8$ bits. Quel est le pas de quantification $q$ ?",
+      "choix": [
+        "$1{,}25$ V",
+        "$39$ mV",
+        "$3{,}9$ mV",
+        "$78$ mV"
+      ],
+      "reponse": 1,
+      "explication": "$q = \\dfrac{U}{2^{n}} = \\dfrac{10}{2^{8}} = \\dfrac{10}{256} = 3{,}9\\times 10^{-2}$ V $\\approx 39$ mV. Le piège $1{,}25$ V vient de diviser par $8$ (le nombre de bits) au lieu de $2^{8} = 256$ (le nombre de niveaux) : c'est bien $N = 2^n$ qui compte."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "bits-octets-prefixes",
+      "enonce": "Une connexion à un débit $D = 16$ Mbit/s télécharge pendant $\\Delta t = 4{,}0$ s. Quelle quantité de données, en octets, a été reçue ?",
+      "choix": [
+        "$64$ Mo",
+        "$8$ Mo",
+        "$4$ Mo",
+        "$512$ Mo"
+      ],
+      "reponse": 1,
+      "explication": "$Q = D \\times \\Delta t = 16 \\times 4{,}0 = 64$ Mbit, qu'il faut convertir en octets : $\\dfrac{64}{8} = 8$ Mo. Le piège n°1 : oublier la division par $8$ et répondre $64$ Mo — les débits sont en **bit**/s, les fichiers en **octets**."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "bits-octets-prefixes",
+      "enonce": "Un débit vaut $D = 2{,}5$ Gbit/s. Combien cela fait-il en bit/s (préfixes décimaux) ?",
+      "choix": [
+        "$2{,}5\\times 10^{6}$ bit/s",
+        "$2{,}5\\times 10^{9}$ bit/s",
+        "$2{,}5\\times 10^{12}$ bit/s",
+        "$2{,}5\\times 10^{3}$ bit/s"
+      ],
+      "reponse": 1,
+      "explication": "Le préfixe G (giga) vaut $10^{9}$, donc $2{,}5$ Gbit/s $= 2{,}5\\times 10^{9}$ bit/s. Le piège est de confondre les préfixes : M $= 10^{6}$, G $= 10^{9}$, T $= 10^{12}$. Par défaut dans ce cours, k/M/G sont décimaux."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "transmettre-attenuation",
+      "enonce": "Une fibre optique a un coefficient d'atténuation linéique $\\alpha = 0{,}25$ dB/km. Sur une longueur $L = 40$ km, quelle est la puissance de sortie $P_s$ par rapport à la puissance d'entrée $P_e$ ?",
+      "choix": [
+        "$P_s = P_e/100$",
+        "$P_s = P_e/10$",
+        "$P_s = P_e/40$",
+        "$P_s = P_e/2$"
+      ],
+      "reponse": 1,
+      "explication": "L'atténuation totale vaut $A = \\alpha \\times L = 0{,}25 \\times 40 = 10$ dB. Or $A = 10\\log\\!\\left(\\dfrac{P_e}{P_s}\\right)$, donc $\\dfrac{P_e}{P_s} = 10^{10/10} = 10^{1} = 10$ : il reste un dixième de la puissance. Le piège est de raisonner en linéaire ($P_e/40$) : le décibel est **logarithmique**."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "debit-binaire",
+      "enonce": "Un signal audio **stéréo** est échantillonné à $f_e = 96$ kHz et quantifié sur $n = 24$ bits ($k = 2$ voies). Quel est son débit binaire ?",
+      "choix": [
+        "$2{,}3$ Mbit/s",
+        "$4{,}6$ Mbit/s",
+        "$4{,}6$ kbit/s",
+        "$1{,}2$ Mbit/s"
+      ],
+      "reponse": 1,
+      "explication": "$D = f_e \\times n \\times k = 96\\,000 \\times 24 \\times 2 = 4\\,608\\,000$ bit/s $\\approx 4{,}6$ Mbit/s. Le piège $2{,}3$ Mbit/s oublie le facteur $k = 2$ (compte comme du mono) ; il faut bien multiplier par le nombre de voies."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "afficher-pixels",
+      "enonce": "Que désigne exactement la **définition** d'un écran (par exemple $1920 \\times 1080$) ?",
+      "choix": [
+        "la densité de pixels, en points par pouce (ppp)",
+        "le nombre total de pixels (largeur × hauteur)",
+        "la taille de la dalle mesurée en pouces",
+        "le nombre de couleurs affichables"
+      ],
+      "reponse": 1,
+      "explication": "La **définition** est le nombre **total** de pixels, donné par largeur × hauteur (ici $1920 \\times 1080$). Le piège est de la confondre avec la **résolution**, qui est une **densité** (pixels par unité de longueur, en ppp) : deux écrans de même définition mais de tailles différentes n'ont pas la même résolution."
     }
   ]
 }

@@ -43,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "annee-lumiere",
       "enonce": "L'année-lumière est une unité de :",
-      "choix": ["temps", "distance", "vitesse", "énergie"],
+      "choix": [
+        "temps",
+        "distance",
+        "vitesse",
+        "énergie"
+      ],
       "reponse": 1,
       "explication": "C'est la **distance** parcourue par la lumière en un an. Le mot « année » induit en erreur, mais dire « l'étoile est à $4$ années-lumière » revient à donner une longueur."
     },
@@ -52,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "frequence",
       "enonce": "Un son a une période de $2{,}0$ ms. Quelle est sa fréquence ?",
-      "choix": ["$500$ Hz", "$2000$ Hz", "$0{,}5$ Hz", "$2$ Hz"],
+      "choix": [
+        "$500$ Hz",
+        "$2000$ Hz",
+        "$0{,}5$ Hz",
+        "$2$ Hz"
+      ],
       "reponse": 0,
       "explication": "$f = \\dfrac{1}{T} = \\dfrac{1}{2{,}0 \\times 10^{-3}} = 500$ Hz. **La conversion des millisecondes en secondes est indispensable** — l'oublier donnerait $0{,}5$ Hz, un infrason inaudible."
     },
@@ -61,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "loi-ohm",
       "enonce": "Une résistance de $50\\ \\Omega$ est traversée par un courant de $0{,}2$ A. Quelle est la tension à ses bornes ?",
-      "choix": ["$10$ V", "$250$ V", "$0{,}004$ V", "$50{,}2$ V"],
+      "choix": [
+        "$10$ V",
+        "$250$ V",
+        "$0{,}004$ V",
+        "$50{,}2$ V"
+      ],
       "reponse": 0,
       "explication": "$U = R \\times I = 50 \\times 0{,}2 = 10$ V. Le choix $250$ V divise au lieu de multiplier — le contrôle par les unités le confirme : $\\Omega \\times$ A donne bien des volts."
     },
@@ -84,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "vergence",
       "enonce": "Une lentille a une distance focale $f' = 20$ cm. Quelle est sa vergence ?",
-      "choix": ["$5$ δ", "$0{,}05$ δ", "$20$ δ", "$0{,}2$ δ"],
+      "choix": [
+        "$5$ δ",
+        "$0{,}05$ δ",
+        "$20$ δ",
+        "$0{,}2$ δ"
+      ],
       "reponse": 0,
       "explication": "Il faut d'abord convertir : $20$ cm $= 0{,}20$ m. Puis $C = \\dfrac{1}{f'} = \\dfrac{1}{0{,}20} = 5$ δ. **La conversion en mètres est obligatoire** : oubliée, elle donnerait $0{,}05$ δ."
     },
@@ -129,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Les angles se mesurent toujours **par rapport à la normale**, c'est-à-dire la perpendiculaire à la surface au point d'incidence. Les mesurer depuis la surface donnerait l'angle complémentaire et fausserait entièrement la loi $n_1 \\sin i_1 = n_2 \\sin i_2$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "son",
+      "enonce": "Quelle est la vitesse approximative du son dans l'air ?",
+      "choix": [
+        "$340$ m·s⁻¹",
+        "$3{,}00 \\times 10^{8}$ m·s⁻¹",
+        "$1500$ m·s⁻¹",
+        "$20$ m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "Le son se propage à environ **$340$ m·s⁻¹** dans l'air. La valeur $3{,}00 \\times 10^8$ m·s⁻¹ est celle de la **lumière**, un million de fois plus rapide."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "capteurs",
+      "enonce": "Quelle grandeur physique une thermistance permet-elle de mesurer ?",
+      "choix": [
+        "l'éclairement",
+        "la température",
+        "la pression acoustique",
+        "la tension"
+      ],
+      "reponse": 1,
+      "explication": "La **thermistance** est un capteur de **température** : sa résistance varie avec elle. La photorésistance mesure l'éclairement, le microphone la pression acoustique."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "son",
+      "enonce": "Le domaine des sons audibles par l'oreille humaine s'étend environ de :",
+      "choix": [
+        "$20$ Hz à $20\\,000$ Hz",
+        "$0$ à $100$ Hz",
+        "$20$ kHz à $200$ kHz",
+        "$1$ Hz à $1000$ Hz"
+      ],
+      "reponse": 0,
+      "explication": "L'oreille perçoit environ de **$20$ Hz à $20\\,000$ Hz**. En dessous ce sont les infrasons, au-dessus les ultrasons, tous deux inaudibles pour l'humain."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "frequence",
+      "enonce": "Un son a une période $T = 5{,}0$ ms. Quelle est sa fréquence ?",
+      "choix": [
+        "$200$ Hz",
+        "$5$ Hz",
+        "$2000$ Hz",
+        "$0{,}2$ Hz"
+      ],
+      "reponse": 0,
+      "explication": "$f = \\dfrac{1}{T} = \\dfrac{1}{5{,}0 \\times 10^{-3}} = 200$ Hz. **La conversion des millisecondes en secondes est indispensable** — l'oublier donnerait un résultat mille fois trop petit."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "loi-ohm",
+      "enonce": "Une tension de $12$ V est appliquée aux bornes d'un conducteur ohmique traversé par un courant de $0{,}5$ A. Quelle est sa résistance ?",
+      "choix": [
+        "$24\\ \\Omega$",
+        "$6\\ \\Omega$",
+        "$0{,}04\\ \\Omega$",
+        "$12{,}5\\ \\Omega$"
+      ],
+      "reponse": 0,
+      "explication": "De $U = R \\times I$ on tire $R = \\dfrac{U}{I} = \\dfrac{12}{0{,}5} = 24\\ \\Omega$. Le choix $6\\ \\Omega$ multiplie au lieu de diviser."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "circuits",
+      "enonce": "Dans un circuit en dérivation, que peut-on dire de la tension aux bornes des différentes branches ?",
+      "choix": [
+        "Elle est la même pour toutes les branches",
+        "Elle s'additionne",
+        "Elle est nulle",
+        "Elle diminue branche après branche"
+      ],
+      "reponse": 0,
+      "explication": "En **dérivation**, la tension est **identique** aux bornes de toutes les branches ; ce sont les **intensités** qui s'additionnent. C'est l'inverse du montage en série."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "lumiere",
+      "enonce": "La lumière met $2{,}0$ s pour parcourir une distance. Quelle est cette distance ? ($c = 3{,}0 \\times 10^{8}$ m·s⁻¹)",
+      "choix": [
+        "$6{,}0 \\times 10^{8}$ m",
+        "$1{,}5 \\times 10^{8}$ m",
+        "$3{,}0 \\times 10^{8}$ m",
+        "$6{,}0 \\times 10^{16}$ m"
+      ],
+      "reponse": 0,
+      "explication": "$d = c \\times \\Delta t = 3{,}0 \\times 10^{8} \\times 2{,}0 = 6{,}0 \\times 10^{8}$ m. Le choix $1{,}5 \\times 10^8$ divise au lieu de multiplier."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "vergence",
+      "enonce": "Une lentille convergente a une distance focale $f' = 50$ cm. Quelle est sa vergence ?",
+      "choix": [
+        "$2$ δ",
+        "$0{,}02$ δ",
+        "$50$ δ",
+        "$5$ δ"
+      ],
+      "reponse": 0,
+      "explication": "On convertit d'abord : $50$ cm $= 0{,}50$ m. Puis $C = \\dfrac{1}{f'} = \\dfrac{1}{0{,}50} = 2$ δ. **La conversion en mètres est obligatoire** : oubliée, elle donnerait $0{,}02$ δ."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "lentilles",
+      "enonce": "Que devient un rayon lumineux qui passe par le centre optique d'une lentille convergente ?",
+      "choix": [
+        "Il converge vers le foyer image $\\mathrm{F}'$",
+        "Il ressort parallèle à l'axe",
+        "Il n'est pas dévié",
+        "Il est réfléchi vers la source"
+      ],
+      "reponse": 2,
+      "explication": "Le rayon passant par le **centre optique** n'est **pas dévié** : il poursuit tout droit. Le rayon parallèle à l'axe, lui, converge vers le foyer image $\\mathrm{F}'$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "loi-ohm",
+      "enonce": "Un conducteur ohmique de résistance $200\\ \\Omega$ est soumis à une tension de $6$ V. Quelle est l'intensité du courant ?",
+      "choix": [
+        "$0{,}03$ A",
+        "$1200$ A",
+        "$33{,}3$ A",
+        "$3$ A"
+      ],
+      "reponse": 0,
+      "explication": "De $U = R \\times I$ on tire $I = \\dfrac{U}{R} = \\dfrac{6}{200} = 0{,}03$ A. Le choix $1200$ A multiplie au lieu de diviser — une valeur bien trop grande pour un simple conducteur."
     }
   ]
 }

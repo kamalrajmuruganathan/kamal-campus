@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Taille d'un pixel $= \\dfrac{30\\ \\text{mm}}{6000} = 5{,}0\\times 10^{-3}\\ \\text{mm} = 5\\ \\mu\\text{m}$. Le piège : la conversion mm → µm ($1\\ \\text{mm} = 10^3\\ \\mu\\text{m}$), qui fait perdre ou gagner un facteur 1000."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "temps-de-pose",
+      "enonce": "Qu'appelle-t-on le temps de pose d'une prise de vue ?",
+      "choix": [
+        "la durée pendant laquelle l'obturateur reste ouvert et laisse la lumière atteindre le capteur",
+        "le temps que met l'appareil à enregistrer le fichier sur la carte mémoire",
+        "la distance entre l'objectif et le capteur",
+        "le nombre de photos prises par seconde"
+      ],
+      "reponse": 0,
+      "explication": "Le temps de pose (ou d'exposition) est la **durée d'ouverture de l'obturateur** : plus il est long, plus il entre de lumière, mais plus le risque de flou de bougé augmente. Le piège est de le confondre avec le temps d'enregistrement du fichier, sans rapport optique."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "capteur",
+      "enonce": "Sur un capteur CCD ou CMOS, à chaque photosite correspond, dans l'image finale :",
+      "choix": [
+        "un pixel",
+        "trois pixels",
+        "un octet de couleur seulement",
+        "une image entière"
+      ],
+      "reponse": 0,
+      "explication": "Chaque **photosite** capte la lumière d'un point de l'image et donne **un pixel** (*picture element*). Le piège est de croire qu'il faut trois photosites par pixel : la couleur RVB est obtenue par des filtres colorés, mais la correspondance de base reste 1 photosite → 1 pixel."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "codage-rvb",
+      "enonce": "Une image en niveaux de gris code la nuance de chaque pixel sur :",
+      "choix": [
+        "1 octet (256 nuances de gris)",
+        "3 octets, comme le RVB",
+        "1 bit seulement",
+        "24 octets"
+      ],
+      "reponse": 0,
+      "explication": "Un seul canal suffit pour le gris : **1 octet par pixel**, soit $2^8 = 256$ nuances du noir ($0$) au blanc ($255$). Le RVB en couleur utilise 3 octets ; le noir et blanc pur (2 valeurs) n'utilise qu'1 bit. Le piège est de confondre gris (1 octet) et couleur (3 octets)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "nombre-ouverture",
+      "enonce": "Un objectif est réglé sur un **grand** nombre d'ouverture, par exemple $f/16$. Cela signifie que :",
+      "choix": [
+        "le diaphragme est peu ouvert et laisse entrer peu de lumière",
+        "le diaphragme est grand ouvert et laisse entrer beaucoup de lumière",
+        "la distance focale a doublé",
+        "le temps de pose est forcément long"
+      ],
+      "reponse": 0,
+      "explication": "Comme $N = \\dfrac{f'}{D}$, un **grand** $N$ correspond à un **petit** diamètre $D$ : le diaphragme est **fermé** et laisse passer **peu** de lumière. C'est le sens contre-intuitif du chapitre : « ouvrir » le diaphragme, c'est **diminuer** $N$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "definition",
+      "enonce": "Un capteur produit une image de $4000 \\times 3000$ pixels. Quelle est sa définition ?",
+      "choix": [
+        "12 mégapixels",
+        "7000 pixels",
+        "1,2 mégapixel",
+        "12 000 pixels"
+      ],
+      "reponse": 0,
+      "explication": "La définition est le **produit** largeur × hauteur : $4000 \\times 3000 = 12\\,000\\,000$ px $= 12$ Mpx. Le piège est d'**additionner** les deux dimensions ($7000$) au lieu de les multiplier, ou d'oublier que méga vaut $10^6$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "poids",
+      "enonce": "Quel est le poids d'une image de $2000 \\times 1000$ pixels en **niveaux de gris**, non compressée ? (convention $1\\ \\text{Mo} = 10^6\\ \\text{o}$)",
+      "choix": [
+        "2 Mo",
+        "6 Mo",
+        "2 ko",
+        "16 Mo"
+      ],
+      "reponse": 0,
+      "explication": "Pixels : $2000 \\times 1000 = 2\\times 10^6$. En niveaux de gris, chaque pixel pèse **1 octet** : poids $= 2\\times 10^6 \\times 1 = 2\\times 10^6$ o $= 2$ Mo. Le piège est d'utiliser 3 octets (RVB → 6 Mo) alors que le gris n'a qu'un canal, ou de compter en bits (16 Mo)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "resolution",
+      "enonce": "Une image de $1200$ pixels de large est imprimée sur une longueur de $10\\ \\text{cm}$. Quelle est sa résolution ?",
+      "choix": [
+        "$120\\ \\text{px/cm}$",
+        "$12\\ \\text{px/cm}$",
+        "$12\\,000\\ \\text{px/cm}$",
+        "$1200\\ \\text{px/cm}$"
+      ],
+      "reponse": 0,
+      "explication": "La résolution est une **densité** de pixels : $\\dfrac{1200}{10} = 120\\ \\text{px/cm}$. Le piège est de confondre la résolution (qui dépend de la taille d'impression) avec la définition (le nombre total de pixels, indépendant de l'affichage)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "codage-rvb",
+      "enonce": "En codage RVB, chaque canal est sur 1 octet (256 niveaux). Combien de couleurs différentes peut-on coder au total ?",
+      "choix": [
+        "environ 16,7 millions",
+        "768",
+        "256",
+        "24"
+      ],
+      "reponse": 0,
+      "explication": "Chaque canal a $256$ valeurs, et il y a 3 canaux indépendants : $256^3 = 2^{24} \\approx 16{,}7$ millions de couleurs. Le piège est d'**additionner** ($256 \\times 3 = 768$) au lieu de multiplier les possibilités des trois canaux."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "nombre-ouverture",
+      "enonce": "On passe le réglage d'ouverture de $f/4$ à $f/8$ (le diamètre $D$ est divisé par 2). Comment varie la quantité de lumière reçue par le capteur ?",
+      "choix": [
+        "elle est divisée par 4",
+        "elle est divisée par 2",
+        "elle est multipliée par 2",
+        "elle ne change pas"
+      ],
+      "reponse": 0,
+      "explication": "La lumière reçue est proportionnelle à l'aire du trou, donc à $D^2$ (soit $1/N^2$). Diviser $D$ par 2 divise l'aire par $2^2 = 4$ : la lumière est **divisée par 4**. Le piège est de penser qu'elle est simplement divisée par 2, en oubliant le carré."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "formats-compression",
+      "enonce": "Une image non compressée pèse $5{,}0\\ \\text{Mo}$. Enregistrée en JPEG, elle ne pèse plus que $0{,}25\\ \\text{Mo}$. Quel est le taux de compression ?",
+      "choix": [
+        "$20$",
+        "$4{,}75$",
+        "$0{,}05$",
+        "$1{,}25$"
+      ],
+      "reponse": 0,
+      "explication": "Le taux de compression est le rapport $\\dfrac{\\text{poids non compressé}}{\\text{poids compressé}} = \\dfrac{5{,}0}{0{,}25} = 20$. Le piège est de **soustraire** les poids ($4{,}75$) au lieu d'en faire le quotient, ou d'inverser le rapport ($0{,}05$)."
     }
   ]
 }

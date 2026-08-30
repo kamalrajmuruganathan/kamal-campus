@@ -114,6 +114,106 @@
       "choix": ["$10$", "$11$", "$14$", "$24$"],
       "reponse": 0,
       "explication": "La machine applique **les mêmes priorités qu'en mathématiques** : la multiplication d'abord, $3 \\times 2 = 6$, puis $4 + 6 = 10$. Le piège est $14$ : c'est le résultat d'un calcul mené de gauche à droite, comme sur une calculatrice basique. Pour obtenir $14$, il faudrait écrire `(4 + 3) * 2`."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Comment appelle-t-on plusieurs instructions mises **l'une après l'autre** ?",
+      "choix": ["une instruction", "une séquence", "une boucle", "une variable"],
+      "reponse": 1,
+      "explication": "Une **séquence** est une liste ordonnée d'instructions, lue de haut en bas. Une seule instruction n'est qu'un ordre isolé ; une boucle, elle, répète une séquence un nombre de fois fixé."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "sequence",
+      "enonce": "Qu'affiche ce programme ?\n\n```\nchoisir 5\najouter 4\nmultiplier par 3\nafficher le résultat\n```",
+      "choix": ["$27$", "$19$", "$17$", "$45$"],
+      "reponse": 0,
+      "explication": "On exécute **de haut en bas** : $5 + 4 = 9$, puis $9 \\times 3 = 27$. Le piège est $19$ : c'est ce qu'on obtient en multipliant d'abord ($5 \\times 3 = 15$) puis en ajoutant $4$, donc en inversant l'ordre des instructions."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "entrees-sorties",
+      "enonce": "Dans ce programme, quelle est la **sortie** ?\n\n```\ndemander un nombre et le mettre dans n\nafficher n × 2\n```",
+      "choix": [
+        "le nombre saisi au clavier",
+        "le nombre affiché à l'écran (le double)",
+        "le mot « nombre »",
+        "l'instruction « demander »"
+      ],
+      "reponse": 1,
+      "explication": "La sortie est ce que le programme **produit** : ici le nombre affiché, c'est-à-dire le double de la saisie. Le nombre saisi, lui, est l'**entrée** — c'est la confusion la plus fréquente entre ce qui entre et ce qui sort."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "boucle",
+      "enonce": "Combien d'instructions sont **exécutées** en tout par ce programme ?\n\n```\nrépéter 5 fois\n    avancer de 30\n    tourner de 72°\nfin répéter\n```",
+      "choix": ["$2$", "$5$", "$7$", "$10$"],
+      "reponse": 3,
+      "explication": "La boucle contient $2$ instructions et fait $5$ tours : $5 \\times 2 = 10$ instructions exécutées. Le piège est de compter les instructions **écrites** ($2$) au lieu des instructions **exécutées** — tout l'intérêt de la boucle."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "expression-informatique",
+      "enonce": "La formule $\\dfrac{a - b}{3}$ se traduit par quelle expression informatique ?",
+      "choix": ["`a - b / 3`", "`(a - b) / 3`", "`a - (b / 3)`", "`3 / (a - b)`"],
+      "reponse": 1,
+      "explication": "La barre de fraction regroupe **tout le numérateur** $a - b$. Écrite à plat, ce regroupement doit être remis entre **parenthèses** : `(a - b) / 3`. Sans elles, `a - b / 3` calcule $a - \\dfrac{b}{3}$, car la division est prioritaire."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "prevoir-valeur",
+      "enonce": "L'utilisateur saisit $4$, rangé dans la variable `nombre`. Qu'affiche l'instruction `afficher nombre + nombre × 2` ?",
+      "choix": ["$12$", "$16$", "$10$", "$8$"],
+      "reponse": 0,
+      "explication": "La multiplication passe en premier : $\\text{nombre} \\times 2 = 8$, puis $4 + 8 = 12$. Le piège est $16$ : il vient de calculer $(4 + 4) \\times 2$, c'est-à-dire d'ajouter avant de multiplier, en ignorant les priorités."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "variable",
+      "enonce": "L'utilisateur saisit $5$, rangé dans la variable `b`. Qu'affiche ce programme ?\n\n```\nafficher b × 3\nafficher b + 1\n```",
+      "choix": ["$15$ puis $6$", "$15$ puis $16$", "$8$ puis $6$", "$15$ puis $18$"],
+      "reponse": 0,
+      "explication": "`afficher` produit une **sortie**, il ne modifie pas `b`, qui vaut toujours $5$ à la deuxième ligne. On obtient $5 \\times 3 = 15$ puis $5 + 1 = 6$. Le piège « $15$ puis $16$ » suppose à tort que la première ligne a remplacé $5$ par $15$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "modifier-parametres",
+      "enonce": "Ce programme trace un carré.\n\n```\nrépéter 4 fois\n    avancer de 50\n    tourner de 90°\nfin répéter\n```\n\nQuels paramètres faut-il modifier pour tracer un **hexagone régulier** (6 côtés) ?",
+      "choix": [
+        "répéter $6$ fois et tourner de $60°$",
+        "répéter $6$ fois et tourner de $120°$",
+        "répéter $4$ fois et tourner de $60°$",
+        "répéter $6$ fois et tourner de $90°$"
+      ],
+      "reponse": 0,
+      "explication": "Six côtés, donc $6$ tours de boucle. Pour l'angle, le robot fait un tour complet de $360°$ réparti en $6$ virages identiques : $360 \\div 6 = 60°$. Le piège est de confondre l'angle du **virage** avec l'angle intérieur de l'hexagone ($120°$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "boucle",
+      "enonce": "Combien de mots ce programme affiche-t-il en tout ?\n\n```\nrépéter 4 fois\n    afficher « ok »\nfin répéter\nafficher « stop »\n```",
+      "choix": ["$4$", "$5$", "$8$", "$2$"],
+      "reponse": 1,
+      "explication": "Un affichage répété $4$ fois fait $4$ mots, puis `afficher « stop »` s'exécute **une seule fois** : $4 + 1 = 5$. Le piège est $8$ : il vient de croire que la dernière ligne est dans la boucle. C'est le **décalage vers la droite** qui dit ce qui est répété ; `fin répéter` ferme le bloc avant elle."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "expression-informatique",
+      "enonce": "Sans exécuter le programme, prévois la valeur de l'expression informatique `5 + 6 / 2`.",
+      "choix": ["$8$", "$5{,}5$", "$11$", "$3$"],
+      "reponse": 0,
+      "explication": "La machine applique **les mêmes priorités qu'en mathématiques** : la division d'abord, $6 / 2 = 3$, puis $5 + 3 = 8$. Le piège est $5{,}5$ : c'est le résultat de $(5 + 6) / 2$, comme si la division regroupait toute la ligne. Pour obtenir cela, il faudrait écrire `(5 + 6) / 2`."
     }
   ]
 }

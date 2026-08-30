@@ -17,8 +17,11 @@ import { theme } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
+import { melanger } from '../../lib/quizmix';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
+// Nombre de questions tirées au hasard dans la banque d'un chapitre.
+const TAILLE_QCM_CHAPITRE = 15;
 
 export default function Qcm({ route, navigation }) {
   const t = theme(useColorScheme() === 'dark');
@@ -26,10 +29,17 @@ export default function Qcm({ route, navigation }) {
   // blanc dont les questions sont fournies directement (route.params.questions).
   const chapitre = route.params?.questions ? null : chapitreParId(route.params?.id);
 
-  const questions = useMemo(
-    () => route.params?.questions ?? chapitre?.qcm?.questions ?? [],
-    [chapitre, route.params],
-  );
+  // `tirage` s'incrémente à chaque « Recommencer » pour re-piocher au hasard.
+  const [tirage, setTirage] = useState(0);
+  const questions = useMemo(() => {
+    // QCM de révision / bac blanc / parcours : questions déjà fournies.
+    if (route.params?.questions) return route.params.questions;
+    // QCM de chapitre : on pioche TAILLE_QCM_CHAPITRE questions au hasard dans
+    // la banque du chapitre (toute la banque si elle est plus petite).
+    const banque = chapitre?.qcm?.questions ?? [];
+    return melanger(banque).slice(0, TAILLE_QCM_CHAPITRE);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chapitre, route.params, tirage]);
   const [index, setIndex] = useState(0);
   const [choisi, setChoisi] = useState(null);
   const [reponses, setReponses] = useState([]);
@@ -151,6 +161,7 @@ export default function Qcm({ route, navigation }) {
             onPress={() => {
               dejaEnregistre.current = false;
               setBilan(null);
+              setTirage((n) => n + 1); // re-pioche de nouvelles questions
               setIndex(0); setChoisi(null); setReponses([]);
             }}
             style={({ pressed }) => [

@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "puissance",
       "enonce": "Quelle est la puissance d'un appareil sous $230$ V parcouru par un courant de $2$ A ?",
-      "choix": ["$460$ W", "$115$ W", "$232$ W", "$460$ J"],
+      "choix": [
+        "$460$ W",
+        "$115$ W",
+        "$232$ W",
+        "$460$ J"
+      ],
       "reponse": 0,
       "explication": "$P = U \\times I = 230 \\times 2 = 460$ W. Le dernier choix a la bonne valeur mais la mauvaise unité : le joule mesure une **énergie**, pas une puissance."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "unites",
       "enonce": "Le kilowattheure (kWh) est une unité de :",
-      "choix": ["puissance", "énergie", "tension", "intensité"],
+      "choix": [
+        "puissance",
+        "énergie",
+        "tension",
+        "intensité"
+      ],
       "reponse": 1,
       "explication": "Malgré le « watt » dans son nom, le kWh est une **énergie** : c'est une puissance multipliée par une durée. $1$ kWh $= 3{,}6 \\times 10^6$ J."
     },
@@ -61,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "rendement",
       "enonce": "Un moteur reçoit $800$ J et fournit $600$ J de travail utile. Quel est son rendement ?",
-      "choix": ["$0{,}75$", "$1{,}33$", "$200$", "$0{,}25$"],
+      "choix": [
+        "$0{,}75$",
+        "$1{,}33$",
+        "$200$",
+        "$0{,}25$"
+      ],
       "reponse": 0,
       "explication": "$\\eta = \\dfrac{600}{800} = 0{,}75$, soit $75\\,\\%$. Le choix $1{,}33$ inverse la fraction — et un rendement supérieur à $1$ est physiquement impossible, ce qui suffit à l'écarter."
     },
@@ -98,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "generateur",
       "enonce": "Un générateur a $E = 12$ V et $r = 0{,}5\\ \\Omega$. Quelle est la tension à ses bornes quand il débite $2$ A ?",
-      "choix": ["$12$ V", "$11$ V", "$13$ V", "$1$ V"],
+      "choix": [
+        "$12$ V",
+        "$11$ V",
+        "$13$ V",
+        "$1$ V"
+      ],
       "reponse": 1,
       "explication": "$U = E - rI = 12 - 0{,}5 \\times 2 = 12 - 1 = 11$ V. La tension aux bornes est toujours **inférieure** à la fem dès que le générateur débite du courant."
     },
@@ -129,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Un rendement supérieur à $1$ signifierait qu'on récupère plus d'énergie qu'on n'en fournit, ce qui viole la conservation de l'énergie. C'est **toujours** le signe d'une erreur de calcul ou d'identification de l'énergie utile."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "puissance",
+      "enonce": "Une lampe fonctionne sous $12$ V et est parcourue par un courant de $0{,}5$ A. Quelle est sa puissance ?",
+      "choix": [
+        "$6$ W",
+        "$24$ W",
+        "$12{,}5$ W",
+        "$6$ J"
+      ],
+      "reponse": 0,
+      "explication": "$P = U \\times I = 12 \\times 0{,}5 = 6$ W. Piège : le dernier choix a la bonne valeur mais l'unité d'une énergie (joule) et non d'une puissance (watt)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "unites",
+      "enonce": "Pour obtenir une énergie en **joules** avec $E = P\\times\\Delta t$, la durée $\\Delta t$ doit être exprimée en :",
+      "choix": [
+        "heures",
+        "minutes",
+        "secondes",
+        "kilowattheures"
+      ],
+      "reponse": 2,
+      "explication": "Dans le Système international, l'énergie en joules exige la durée en **secondes** (et la puissance en watts). Piège classique : laisser $\\Delta t$ en heures et obtenir un résultat faux d'un facteur $3600$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "effet-joule",
+      "enonce": "Dans lequel de ces appareils l'effet Joule est-il **utile** (recherché) ?",
+      "choix": [
+        "un câble d'alimentation",
+        "un radiateur électrique",
+        "un moteur électrique",
+        "un transformateur"
+      ],
+      "reponse": 1,
+      "explication": "Dans un **radiateur électrique**, la chaleur dégagée par effet Joule est précisément le but recherché. Dans un câble, un moteur ou un transformateur, c'est une perte parasite. Piège : croire que l'effet Joule est toujours indésirable."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "energie",
+      "enonce": "Un radiateur de $2000$ W fonctionne pendant $30$ minutes. Quelle énergie consomme-t-il en joules ?",
+      "choix": [
+        "$60\\,000$ J",
+        "$3{,}6 \\times 10^{6}$ J",
+        "$1000$ J",
+        "$6 \\times 10^{4}$ J"
+      ],
+      "reponse": 1,
+      "explication": "$30$ min $= 1800$ s, donc $E = 2000 \\times 1800 = 3{,}6 \\times 10^6$ J. Piège : multiplier $2000 \\times 30 = 60\\,000$ en oubliant de convertir les minutes en secondes."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "kilowattheure",
+      "enonce": "Combien de joules représente une énergie de $2$ kWh ?",
+      "choix": [
+        "$7200$ J",
+        "$7{,}2 \\times 10^{6}$ J",
+        "$2000$ J",
+        "$3{,}6 \\times 10^{6}$ J"
+      ],
+      "reponse": 1,
+      "explication": "$1$ kWh $= 3{,}6 \\times 10^6$ J, donc $2$ kWh $= 7{,}2 \\times 10^6$ J. Piège : oublier le facteur $3{,}6\\times10^6$ ou ne convertir qu'un seul kWh."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "effet-joule",
+      "enonce": "Une résistance de $10\\ \\Omega$ est parcourue par un courant de $3$ A. Quelle est la puissance dissipée par effet Joule ?",
+      "choix": [
+        "$30$ W",
+        "$90$ W",
+        "$300$ W",
+        "$3{,}3$ W"
+      ],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{J} = R I^2 = 10 \\times 3^2 = 10 \\times 9 = 90$ W. Piège : écrire $P = RI = 30$ W en oubliant le carré sur l'intensité."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "generateur",
+      "enonce": "Dans le modèle du générateur réel $U = E - rI$, comment évolue la tension $U$ aux bornes quand l'intensité débitée augmente ?",
+      "choix": [
+        "elle augmente",
+        "elle diminue",
+        "elle reste égale à $E$",
+        "elle devient nulle immédiatement"
+      ],
+      "reponse": 1,
+      "explication": "Le terme $rI$ croît avec $I$, donc $U = E - rI$ **diminue** : plus le générateur débite, plus la tension à ses bornes chute. Piège : croire que $U$ reste égale à la fem $E$, ce qui n'est vrai que pour un générateur idéal ($r=0$)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "effet-joule",
+      "enonce": "Une résistance dissipe $20$ W quand elle est parcourue par un courant $I$. Quelle puissance dissipera-t-elle si l'on triple l'intensité (à résistance constante) ?",
+      "choix": [
+        "$60$ W",
+        "$180$ W",
+        "$40$ W",
+        "$20$ W"
+      ],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{J} = RI^2$ dépend du carré de l'intensité : tripler $I$ multiplie la puissance par $3^2 = 9$, soit $20 \\times 9 = 180$ W. Piège : multiplier seulement par $3$ (réponse $60$ W) en oubliant le carré."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "generateur",
+      "enonce": "Un générateur de fem $E = 9$ V a une résistance interne $r = 1\\ \\Omega$. La tension mesurée à ses bornes vaut $6$ V. Quelle intensité débite-t-il ?",
+      "choix": [
+        "$3$ A",
+        "$6$ A",
+        "$15$ A",
+        "$1{,}5$ A"
+      ],
+      "reponse": 0,
+      "explication": "De $U = E - rI$ on tire $I = \\dfrac{E - U}{r} = \\dfrac{9 - 6}{1} = 3$ A. Piège : utiliser $U$ à la place de $E-U$, ou oublier de faire la différence des tensions."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "conservation",
+      "enonce": "Une perceuse électrique reçoit une puissance de $500$ W et dissipe $150$ W par effet Joule et frottements. Quel est son rendement ?",
+      "choix": [
+        "$0{,}70$",
+        "$0{,}30$",
+        "$0{,}75$",
+        "$3{,}3$"
+      ],
+      "reponse": 0,
+      "explication": "La puissance utile est $P_{\\text{utile}} = 500 - 150 = 350$ W (conservation de l'énergie). Le rendement vaut $\\eta = \\dfrac{350}{500} = 0{,}70$, soit $70\\ \\%$. Piège : prendre directement $\\dfrac{150}{500} = 0{,}30$, qui est la part dissipée, pas la part utile."
     }
   ]
 }

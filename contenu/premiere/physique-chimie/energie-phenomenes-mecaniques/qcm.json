@@ -29,7 +29,12 @@
       "difficulte": "facile",
       "notion": "travail",
       "enonce": "Quelle est l'unité du travail d'une force ?",
-      "choix": ["le newton", "le joule", "le watt", "le pascal"],
+      "choix": [
+        "le newton",
+        "le joule",
+        "le watt",
+        "le pascal"
+      ],
       "reponse": 1,
       "explication": "Le travail est une **énergie**, donc il s'exprime en **joules**. Le newton mesure une force, le watt une puissance."
     },
@@ -66,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "energie-potentielle",
       "enonce": "Un objet de $2$ kg est à $5$ m de hauteur. Quelle est son énergie potentielle de pesanteur ?",
-      "choix": ["$98$ J", "$10$ J", "$49$ J", "$980$ J"],
+      "choix": [
+        "$98$ J",
+        "$10$ J",
+        "$49$ J",
+        "$980$ J"
+      ],
       "reponse": 0,
       "explication": "$E_{pp} = mgz = 2 \\times 9{,}8 \\times 5 = 98$ J. Le choix $10$ J oublie de multiplier par $g$, ce qui reviendrait à confondre masse et poids."
     },
@@ -139,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "$\\Delta E_c = \\sum W(\\vec F)$. Son intérêt : il relie directement les **forces** à la **vitesse**, sans passer par l'accélération ni le temps. C'est l'outil à privilégier quand l'énoncé ne parle ni de durée ni d'accélération."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "energie-potentielle",
+      "enonce": "Quelle est l'expression de l'énergie potentielle de pesanteur ?",
+      "choix": [
+        "$E_{pp} = \\dfrac{1}{2}mv^2$",
+        "$E_{pp} = mgz$",
+        "$E_{pp} = mg$",
+        "$E_{pp} = \\dfrac{1}{2}mgz$"
+      ],
+      "reponse": 1,
+      "explication": "$E_{pp} = mgz$ : elle dépend de la masse, de l'intensité de la pesanteur $g$ et de l'altitude $z$. Piège : confondre avec l'énergie cinétique $\\frac12 mv^2$ ou oublier l'altitude."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "travail",
+      "enonce": "Une force $\\vec{F}$ fait un angle $\\alpha$ avec le déplacement. Le travail vaut $W = F\\times d\\times\\cos\\alpha$. Le travail est dit **résistant** quand :",
+      "choix": [
+        "$W > 0$",
+        "$W < 0$",
+        "$W = 0$",
+        "$W = F\\times d$"
+      ],
+      "reponse": 1,
+      "explication": "Un travail **résistant** est négatif ($W < 0$) : la force freine le mouvement (angle obtus, $\\cos\\alpha < 0$). Un travail moteur est positif et accélère. Piège : associer « résistant » à un travail nul."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "energie-mecanique",
+      "enonce": "L'énergie mécanique d'un système se définit comme :",
+      "choix": [
+        "$E_m = E_c - E_{pp}$",
+        "$E_m = E_c + E_{pp}$",
+        "$E_m = E_c \\times E_{pp}$",
+        "$E_m = E_{pp} - E_c$"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie mécanique est la **somme** de l'énergie cinétique et de l'énergie potentielle : $E_m = E_c + E_{pp}$. Piège : écrire une différence au lieu d'une somme."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "energie-cinetique",
+      "enonce": "Un cycliste et son vélo (masse totale $80$ kg) roulent à $10$ m·s⁻¹. Quelle est leur énergie cinétique ?",
+      "choix": [
+        "$4000$ J",
+        "$800$ J",
+        "$8000$ J",
+        "$400$ J"
+      ],
+      "reponse": 0,
+      "explication": "$E_c = \\dfrac12 m v^2 = \\dfrac12 \\times 80 \\times 10^2 = \\dfrac12 \\times 80 \\times 100 = 4000$ J. Piège : oublier le carré (donnerait $400$ J) ou le facteur $\\frac12$ (donnerait $8000$ J)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "travail-poids",
+      "enonce": "Un objet de $3$ kg descend d'une altitude $z_A = 8$ m à $z_B = 2$ m. Quel est le travail de son poids ? (On prend $g = 9{,}8$ N·kg⁻¹.)",
+      "choix": [
+        "$176{,}4$ J",
+        "$-176{,}4$ J",
+        "$294$ J",
+        "$58{,}8$ J"
+      ],
+      "reponse": 0,
+      "explication": "$W(\\vec P) = mg(z_A - z_B) = 3 \\times 9{,}8 \\times (8 - 2) = 3 \\times 9{,}8 \\times 6 = 176{,}4$ J. Il est **positif** car l'objet descend (travail moteur). Piège : se tromper de signe en inversant $z_A$ et $z_B$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "conversion-unites",
+      "enonce": "Une voiture roule à $72$ km·h⁻¹. Quelle vitesse faut-il utiliser dans le calcul de $E_c$ ?",
+      "choix": [
+        "$72$ m·s⁻¹",
+        "$20$ m·s⁻¹",
+        "$36$ m·s⁻¹",
+        "$7{,}2$ m·s⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie cinétique exige la vitesse en m·s⁻¹ : $72$ km·h⁻¹ $= \\dfrac{72}{3{,}6} = 20$ m·s⁻¹. Piège : utiliser directement $72$ dans la formule, ce qui fausse le résultat d'un facteur $3{,}6^2 \\approx 13$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "frottements",
+      "enonce": "Un solide glisse sur une piste **avec frottements**. Que devient son énergie mécanique ?",
+      "choix": [
+        "elle se conserve",
+        "elle augmente",
+        "elle diminue, la perte étant dissipée en chaleur",
+        "elle reste cinétique uniquement"
+      ],
+      "reponse": 2,
+      "explication": "Avec frottements, $\\Delta E_m = W(\\vec f) < 0$ : l'énergie mécanique **diminue**, la part perdue étant dissipée sous forme de chaleur. Piège : appliquer la conservation de $E_m$ alors qu'il y a des frottements."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "conservation",
+      "enonce": "Une bille est lâchée sans vitesse d'une hauteur $h = 1{,}8$ m. Sans frottements, quelle est sa vitesse en arrivant au sol ? (On prend $g = 9{,}8$ N·kg⁻¹.)",
+      "choix": [
+        "$5{,}9$ m·s⁻¹",
+        "$18$ m·s⁻¹",
+        "$3{,}0$ m·s⁻¹",
+        "$35$ m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "La conservation donne $v = \\sqrt{2gh} = \\sqrt{2 \\times 9{,}8 \\times 1{,}8} = \\sqrt{35{,}28} \\approx 5{,}9$ m·s⁻¹. La masse se simplifie. Piège : oublier la racine carrée (donnerait $35$) ou le facteur $2$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "theoreme",
+      "enonce": "Une caisse de $50$ kg, initialement à l'arrêt, est tirée sur un sol horizontal ; le travail total des forces vaut $2500$ J. Quelle est sa vitesse finale (sol supposé sans frottements) ?",
+      "choix": [
+        "$10$ m·s⁻¹",
+        "$100$ m·s⁻¹",
+        "$5$ m·s⁻¹",
+        "$50$ m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "Théorème de l'énergie cinétique : $\\Delta E_c = \\sum W$, donc $\\dfrac12 m v^2 - 0 = 2500$. Ainsi $v^2 = \\dfrac{2\\times2500}{50} = 100$, d'où $v = 10$ m·s⁻¹. Piège : oublier la racine (donnerait $100$) ou le facteur $2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "travail-nul",
+      "enonce": "Un satellite décrit une orbite **circulaire** autour de la Terre. Quel est le travail de la force gravitationnelle sur un tour ?",
+      "choix": [
+        "positif, car la force est attractive",
+        "nul, car la force est constamment perpendiculaire au déplacement",
+        "négatif, car la force freine le satellite",
+        "égal à $mg \\times 2\\pi R$"
+      ],
+      "reponse": 1,
+      "explication": "Sur une orbite circulaire, la force gravitationnelle (dirigée vers le centre) est à chaque instant **perpendiculaire** à la vitesse, donc au déplacement : $\\cos 90° = 0$ et le travail est **nul**. C'est pourquoi la vitesse reste constante. Piège : croire qu'une force attractive travaille forcément positivement."
     }
   ]
 }

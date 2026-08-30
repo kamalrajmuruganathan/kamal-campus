@@ -109,6 +109,111 @@
       "choix": ["$81\\ \\text{cm}$", "$40,5\\ \\text{cm}$", "$8,1\\ \\text{cm}$", "$9\\ \\text{cm}$"],
       "reponse": 3,
       "explication": "L'aire d'un carré de côté $c$ vaut $c^2$. Il faut donc trouver le nombre dont le carré fait $81$ : c'est $9$, car $9 \\times 9 = 81$. Le piège est de **diviser par $2$** ($40,5$) au lieu de chercher le nombre qui, multiplié par lui-même, donne l'aire."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "notation",
+      "enonce": "Dans l'écriture $7^2$, comment s'appelle le nombre $2$ ?",
+      "choix": ["La base", "L'exposant", "Le facteur", "Le produit"],
+      "reponse": 1,
+      "explication": "Dans $a^n$, le nombre en haut est l'**exposant** : il indique combien de fois la base est écrite dans le produit. Ici $7$ est la base et $2$ l'exposant. Le piège est de confondre base et exposant."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "carres-a-connaitre",
+      "enonce": "Combien vaut $7^2$ ?",
+      "choix": ["$14$", "$49$", "$77$", "$343$"],
+      "reponse": 1,
+      "explication": "$7^2 = 7 \\times 7 = 49$, un carré à connaître par cœur. $14$ vient de $7 \\times 2$ (l'exposant pris pour un facteur) et $343$ est en réalité $7^3$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "carre",
+      "enonce": "Un carré a un côté de $5$ cm. Quelle est son aire ?",
+      "choix": [
+        "$10\\ \\text{cm}^2$",
+        "$25\\ \\text{cm}^2$",
+        "$25\\ \\text{cm}^3$",
+        "$20\\ \\text{cm}^2$"
+      ],
+      "reponse": 1,
+      "explication": "L'aire d'un carré de côté $c$ vaut $c^2$, donc $5^2 = 25$ cm$^2$. Le piège est de calculer $5 \\times 2 = 10$ (l'exposant pris pour un facteur) ou de répondre en cm$^3$ : une aire s'exprime en unité **carré**."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "cube",
+      "enonce": "Combien vaut $2^3$ ?",
+      "choix": ["$6$", "$8$", "$9$", "$4$"],
+      "reponse": 1,
+      "explication": "$2^3 = 2 \\times 2 \\times 2 = 8$. Le piège $6$ vient de $2 \\times 3$ (l'exposant pris pour un facteur) et $9$ correspond à $3^2$ : inverser base et exposant change le résultat."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "ecrire-en-puissance",
+      "enonce": "Quelle égalité est vraie ?",
+      "choix": ["$27 = 3^3$", "$27 = 3^2$", "$27 = 9^3$", "$27 = 2^3$"],
+      "reponse": 0,
+      "explication": "$3^3 = 3 \\times 3 \\times 3 = 27$. Le piège est d'écrire $3^2 = 9$ (le carré au lieu du cube) ; $2^3 = 8$ inverse base et exposant."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "priorites",
+      "enonce": "Combien vaut $(2 + 3)^2$ ?",
+      "choix": ["$13$", "$25$", "$11$", "$10$"],
+      "reponse": 1,
+      "explication": "Les parenthèses passent en premier : $2 + 3 = 5$, puis $5^2 = 25$. Le piège est de distribuer l'exposant et de calculer $2^2 + 3^2 = 13$ : une puissance **ne se distribue pas** sur une somme."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "priorites",
+      "enonce": "Combien vaut $10 - 2^3$ ?",
+      "choix": ["$2$", "$4$", "$512$", "$6$"],
+      "reponse": 0,
+      "explication": "La puissance se calcule avant la soustraction : $2^3 = 8$, puis $10 - 8 = 2$. Le piège $4$ vient de calculer $2 \\times 3 = 6$ puis $10 - 6 = 4$ (l'exposant pris pour un facteur), et $512$ vient de $(10-2)^3 = 8^3$, en faisant la soustraction avant la puissance."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "expression-litterale",
+      "enonce": "Que vaut $2a^3$ pour $a = 3$ ?",
+      "choix": ["$54$", "$216$", "$18$", "$27$"],
+      "reponse": 0,
+      "explication": "On remplace puis on respecte les priorités : $2 \\times 3^3 = 2 \\times 27 = 54$. Le cube porte sur $a$ **seulement** : $216$ correspond à $(2 \\times 3)^3 = 6^3$. $18$ vient de $2 \\times 3 \\times 3$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "cube",
+      "enonce": "Un cube a une arête de $4$ cm. Quel est son volume ?",
+      "choix": [
+        "$12\\ \\text{cm}^3$",
+        "$64\\ \\text{cm}^3$",
+        "$16\\ \\text{cm}^3$",
+        "$64\\ \\text{cm}^2$"
+      ],
+      "reponse": 1,
+      "explication": "Le volume d'un cube d'arête $a$ vaut $a^3$, donc $4^3 = 4 \\times 4 \\times 4 = 64$ cm$^3$. Le piège $16$ est $4^2$ (le carré au lieu du cube), et répondre en cm$^2$ est faux : un volume s'exprime en unité **cube**."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "pieges",
+      "enonce": "Pour $a = 5$, laquelle de ces deux expressions est la plus grande : $a^2$ ou $2a$ ?",
+      "choix": [
+        "$a^2$, car $a^2 = 25$ et $2a = 10$",
+        "$2a$, car $2a = 25$ et $a^2 = 10$",
+        "Elles sont égales, toutes deux valent $10$",
+        "Elles sont égales, toutes deux valent $25$"
+      ],
+      "reponse": 0,
+      "explication": "$a^2 = 5 \\times 5 = 25$ tandis que $2a = 2 \\times 5 = 10$ : $a^2$ est plus grand. Le piège classique est de **confondre $a^2$ et $2a$**, alors que le carré n'est pas le double."
     }
   ]
 }

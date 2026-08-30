@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "signe-derivee",
       "enonce": "Si $f'(x) > 0$ pour tout $x$ d'un intervalle $I$, alors sur $I$ la fonction $f$ est :",
-      "choix": ["décroissante", "croissante", "constante", "positive"],
+      "choix": [
+        "décroissante",
+        "croissante",
+        "constante",
+        "positive"
+      ],
       "reponse": 1,
       "explication": "Une dérivée strictement positive sur un intervalle signifie que $f$ y est strictement croissante. Attention à ne pas confondre le signe de $f'$ (qui donne les **variations**) et le signe de $f$ (qui donne la position par rapport à l'axe des abscisses)."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "parite",
       "enonce": "Quelle fonction est **paire** ?",
-      "choix": ["$f(x) = x^3$", "$f(x) = x^2 + 1$", "$f(x) = x + 1$", "$f(x) = \\dfrac{1}{x}$"],
+      "choix": [
+        "$f(x) = x^3$",
+        "$f(x) = x^2 + 1$",
+        "$f(x) = x + 1$",
+        "$f(x) = \\dfrac{1}{x}$"
+      ],
       "reponse": 1,
       "explication": "$f(-x) = (-x)^2 + 1 = x^2 + 1 = f(x)$ : la fonction est paire, sa courbe est symétrique par rapport à l'axe des ordonnées. $x^3$ et $\\frac{1}{x}$ sont impaires, $x+1$ n'est ni l'une ni l'autre."
     },
@@ -75,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "parite",
       "enonce": "Si $f$ est impaire et définie en $0$, que vaut nécessairement $f(0)$ ?",
-      "choix": ["$1$", "$0$", "$-1$", "On ne peut pas savoir"],
+      "choix": [
+        "$1$",
+        "$0$",
+        "$-1$",
+        "On ne peut pas savoir"
+      ],
       "reponse": 1,
       "explication": "L'imparité donne $f(-0) = -f(0)$, soit $f(0) = -f(0)$, donc $2f(0) = 0$ et $f(0) = 0$. La courbe d'une fonction impaire définie en $0$ passe toujours par l'origine."
     },
@@ -98,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "etude-variations",
       "enonce": "Pour $f(x) = x^3 - 3x$, on a $f'(x) = 3(x-1)(x+1)$. Combien $f$ admet-elle d'extrémums locaux ?",
-      "choix": ["Aucun", "Un seul", "Deux", "Trois"],
+      "choix": [
+        "Aucun",
+        "Un seul",
+        "Deux",
+        "Trois"
+      ],
       "reponse": 2,
       "explication": "$f'$ s'annule en $-1$ et $1$, **et change de signe** aux deux : positive avant $-1$, négative entre, positive après. Il y a donc un maximum local en $-1$ et un minimum local en $1$, soit deux extrémums."
     },
@@ -129,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "$f'(x) = -4x + 8$ s'annule en $x = 2$. Comme $a = -2 < 0$, la parabole est tournée vers le bas : c'est un **maximum**. On retrouve bien $-\\dfrac{b}{2a} = -\\dfrac{8}{-4} = 2$, ce qui confirme le résultat par la forme canonique."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "signe-derivee",
+      "enonce": "Si $f'(x) < 0$ pour tout $x$ d'un intervalle $I$, alors sur $I$ la fonction $f$ est :",
+      "choix": [
+        "croissante",
+        "strictement décroissante",
+        "constante",
+        "négative"
+      ],
+      "reponse": 1,
+      "explication": "Une dérivée strictement négative sur un intervalle signifie que $f$ y est strictement décroissante. Piège : confondre le signe de $f'$ (variations) avec le signe de $f$ (position par rapport à l'axe des abscisses)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "parite",
+      "enonce": "Quelle fonction est **impaire** ?",
+      "choix": [
+        "$f(x) = x^2$",
+        "$f(x) = x^3$",
+        "$f(x) = x^2 + x$",
+        "$f(x) = \\cos x$"
+      ],
+      "reponse": 1,
+      "explication": "$f(-x) = (-x)^3 = -x^3 = -f(x)$ : la fonction est impaire, sa courbe est symétrique par rapport à l'origine. $x^2$ et $\\cos x$ sont paires ; $x^2+x$ n'est ni l'une ni l'autre."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "extremum",
+      "enonce": "En un extrémum local situé à l'intérieur d'un intervalle ouvert, la tangente à la courbe est :",
+      "choix": [
+        "verticale",
+        "horizontale",
+        "de coefficient directeur $1$",
+        "inexistante"
+      ],
+      "reponse": 1,
+      "explication": "En un extrémum local d'une fonction dérivable sur un intervalle ouvert, $f'(a)=0$ : la tangente est **horizontale**. Piège : croire que toute tangente horizontale signale un extrémum (faux pour $x^3$ en $0$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "etude-variations",
+      "enonce": "Pour $f(x) = x^2 + 4x + 1$, sur quel intervalle $f$ est-elle croissante ?",
+      "choix": [
+        "$[-2\\,;+\\infty[$",
+        "$]-\\infty\\,;-2]$",
+        "$[2\\,;+\\infty[$",
+        "$]-\\infty\\,;4]$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 2x + 4$, positive pour $x > -2$. Donc $f$ croît sur $[-2\\,;+\\infty[$. Piège : oublier le signe et écrire $x = 2$ au lieu de $x = -2$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "second-degre-derivation",
+      "enonce": "Pour $f(x) = 3x^2 - 12x + 7$, en quelle abscisse se situe l'extrémum, et de quelle nature ?",
+      "choix": [
+        "$x = 2$, minimum",
+        "$x = 2$, maximum",
+        "$x = -2$, minimum",
+        "$x = 4$, minimum"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 6x - 12$ s'annule en $x = 2$. Comme $a = 3 > 0$, la parabole est tournée vers le haut : c'est un **minimum**. Contrôle : $-\\dfrac{b}{2a} = -\\dfrac{-12}{6} = 2$. Piège : conclure à un maximum en oubliant le signe de $a$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "Avant de conclure qu'une fonction est paire ou impaire, quelle condition faut-il d'abord vérifier ?",
+      "choix": [
+        "Que $f(0) = 0$",
+        "Que l'ensemble de définition est symétrique par rapport à $0$",
+        "Que $f$ est croissante",
+        "Que $f'$ existe partout"
+      ],
+      "reponse": 1,
+      "explication": "La parité comme l'imparité exigent un ensemble de définition **symétrique par rapport à $0$** : si $x$ y est, $-x$ aussi. Sans cette symétrie, la question ne se pose pas. Piège : appliquer $f(-x)=f(x)$ sur un domaine comme $[0\\,;+\\infty[$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "signe-derivee",
+      "enonce": "On lit dans un tableau de variations que $f$ décroît puis croît, avec un minimum en $x = 5$. Quel est le signe de $f'$ juste avant $x = 5$ ?",
+      "choix": [
+        "positif",
+        "négatif",
+        "nul partout",
+        "on ne peut pas savoir"
+      ],
+      "reponse": 1,
+      "explication": "Avant un minimum, la fonction décroît, donc $f'$ est **négative** ; après, elle croît et $f'$ devient positive. $f'$ change de signe en $5$ en s'annulant. Piège : associer le minimum à une dérivée positive avant."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "extremum",
+      "enonce": "Pour $f(x) = x^3 + 1$, on a $f'(x) = 3x^2$. Combien $f$ admet-elle d'extrémums locaux sur $\\mathbb{R}$ ?",
+      "choix": [
+        "Aucun",
+        "Un seul",
+        "Deux",
+        "Trois"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 3x^2$ s'annule en $0$ mais reste **positive** de part et d'autre : $f'$ ne change pas de signe, donc $f$ est croissante sur $\\mathbb{R}$ et n'a aucun extrémum. Piège : conclure à un extrémum dès que $f'$ s'annule."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "etude-variations",
+      "enonce": "Pour $f(x) = x^3 - 12x$, on a $f'(x) = 3x^2 - 12 = 3(x-2)(x+2)$. Quelle est la valeur du maximum local ?",
+      "choix": [
+        "$16$",
+        "$-16$",
+        "$0$",
+        "$8$"
+      ],
+      "reponse": 0,
+      "explication": "$f'$ s'annule en $-2$ et $2$ ; positive avant $-2$, négative entre : le maximum local est en $x = -2$. $f(-2) = (-8) - 12\\times(-2) = -8 + 24 = 16$. Piège : évaluer en $x = 2$ (le minimum, $f(2) = -16$) au lieu de $-2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "intervalle",
+      "enonce": "$f$ vérifie $f'(x) < 0$ sur $]-\\infty\\,;0[$ et sur $]0\\,;+\\infty[$, mais $f$ n'est pas définie en $0$. Peut-on affirmer que $f$ est décroissante sur $]-\\infty\\,;0[\\cup]0\\,;+\\infty[$ ?",
+      "choix": [
+        "Oui, puisque $f' < 0$ sur les deux morceaux",
+        "Non, une réunion de deux intervalles n'est pas un intervalle : on ne peut conclure que sur chacun séparément",
+        "Oui, à condition que $f(0)$ existe",
+        "Non, car $f'$ devrait être positive"
+      ],
+      "reponse": 1,
+      "explication": "Le théorème sur le signe de $f'$ ne s'applique que sur un **intervalle**. Une réunion de deux intervalles n'en est pas un : $f$ décroît sur chaque morceau, mais on ne peut rien affirmer entre les deux (cf. la fonction inverse). Piège : recoller abusivement les deux branches."
     }
   ]
 }

@@ -1,154 +1,294 @@
 {
-  "id": "tale-sti2d-pc-energie-mecanique-fluides-qcm",
-  "chapitre": "tale-sti2d-pc-energie-mecanique-fluides",
-  "titre": "QCM — Énergie mécanique : dynamique, rotation et fluides",
-  "voie": "technologique",
-  "niveau": "terminale-techno",
-  "parcours": "pc-maths-sti2d-stl",
-  "matiere": "physique-chimie",
-  "statut": "brouillon",
-  "relu_par": null,
-  "consigne": "Une seule réponse correcte par question. Prendre g = 9,81 N·kg⁻¹ sauf indication contraire.",
-  "questions": [
-    {
-      "id": 1,
-      "difficulte": "facile",
-      "notion": "moment-force",
-      "enonce": "Dans quelle unité s'exprime le moment d'une force $M = F \\times d$ ?",
-      "choix": [
-        "le newton (N)",
-        "le joule (J)",
-        "le newton-mètre (N·m)",
-        "le watt (W)"
-      ],
-      "reponse": 2,
-      "explication": "Force (N) multipliée par bras de levier (m) : le moment s'exprime en **N·m**. Le piège est le joule : le moment a la même équation aux dimensions qu'une énergie, mais ce n'est **pas** une énergie — écrire un moment en J est compté faux. Le newton est l'unité de la force seule, le watt celle d'une puissance."
-    },
-    {
-      "id": 2,
-      "difficulte": "facile",
-      "notion": "pression",
-      "enonce": "La pression est définie par $p = \\dfrac{F}{S}$. Que vaut $1$ pascal ?",
-      "choix": [
-        "$1$ N·m⁻²",
-        "$1$ N·m",
-        "$1$ bar",
-        "$1$ N·m⁻³"
-      ],
-      "reponse": 0,
-      "explication": "Une force en newtons divisée par une surface en m² : $1$ Pa $= 1$ N·m⁻². Le piège est le bar, qui vaut $10^{5}$ Pa (proche de la pression atmosphérique), pas $1$ Pa. Le N·m est un moment, pas une pression."
-    },
-    {
-      "id": 3,
-      "difficulte": "moyen",
-      "notion": "deuxieme-loi",
-      "enonce": "Un chariot automatisé de masse $m = 1200$ kg subit une résultante des forces de $600$ N dans le sens du mouvement. D'après la deuxième loi de Newton, quelle est son accélération ?",
-      "choix": [
-        "$2{,}0$ m·s⁻²",
-        "$0{,}50$ m·s⁻²",
-        "$7{,}2 \\times 10^{5}$ m·s⁻²",
-        "$600$ m·s⁻²"
-      ],
-      "reponse": 1,
-      "explication": "$F = ma$ donc $a = \\dfrac{F}{m} = \\dfrac{600}{1200} = 0{,}50$ m·s⁻². Le piège classique est d'inverser le quotient ($m/F = 2{,}0$) ou de multiplier $F \\times m$. Vérifie la cohérence : une résultante modeste sur une grosse masse donne une petite accélération."
-    },
-    {
-      "id": 4,
-      "difficulte": "moyen",
-      "notion": "rotation-vitesse-angulaire",
-      "enonce": "Un moteur tourne à $N = 3000$ tr/min. Quelle est sa vitesse angulaire $\\omega$ en rad/s ?",
-      "choix": [
-        "$3000$ rad/s",
-        "$50$ rad/s",
-        "$314$ rad/s",
-        "$1{,}88 \\times 10^{4}$ rad/s"
-      ],
-      "reponse": 2,
-      "explication": "$\\omega = \\dfrac{2\\pi N}{60} = \\dfrac{2\\pi \\times 3000}{60} = 100\\pi \\approx 314$ rad/s. Les pièges : recopier $3000$ (tr/min n'est pas une unité SI), s'arrêter à $N/60 = 50$ tr/s en oubliant le facteur $2\\pi$, ou multiplier par $2\\pi$ sans diviser par $60$ ($1{,}88 \\times 10^{4}$)."
-    },
-    {
-      "id": 5,
-      "difficulte": "moyen",
-      "notion": "puissance-couple",
-      "enonce": "Un arbre moteur transmet un couple $M = 10$ N·m en tournant à $\\omega = 100$ rad/s. Quelle puissance mécanique transmet-il ?",
-      "choix": [
-        "$1{,}0 \\times 10^{3}$ W",
-        "$10$ W",
-        "$0{,}10$ W",
-        "$110$ W"
-      ],
-      "reponse": 0,
-      "explication": "$P = M \\times \\omega = 10 \\times 100 = 1{,}0 \\times 10^{3}$ W, soit $1$ kW. La formule est multiplicative : le piège est de diviser ($M/\\omega = 0{,}10$) ou d'additionner ($110$). $P = M\\omega$ est l'analogue en rotation de $P = Fv$ en translation."
-    },
-    {
-      "id": 6,
-      "difficulte": "moyen",
-      "notion": "hydrostatique",
-      "enonce": "D'après le principe fondamental de l'hydrostatique $\\Delta p = \\rho g h$, quel est le supplément de pression à $20$ m sous la surface de l'eau ($\\rho = 1000$ kg·m⁻³, $g = 9{,}81$ N·kg⁻¹) ?",
-      "choix": [
-        "$196$ Pa",
-        "$2{,}0 \\times 10^{5}$ Pa environ",
-        "$2{,}0 \\times 10^{4}$ Pa environ",
-        "$2{,}0 \\times 10^{8}$ Pa environ"
-      ],
-      "reponse": 1,
-      "explication": "$\\Delta p = 1000 \\times 9{,}81 \\times 20 = 1{,}96 \\times 10^{5} \\approx 2{,}0 \\times 10^{5}$ Pa, soit environ $2$ bar — cohérent avec « $1$ bar tous les $10$ m d'eau ». Le piège nommé : prendre $\\rho = 1$ (g·cm⁻³) au lieu de $1000$ kg·m⁻³, ce qui donne $196$ Pa, mille fois trop faible."
-    },
-    {
-      "id": 7,
-      "difficulte": "difficile",
-      "notion": "moment-force",
-      "enonce": "On tire sur une clé de longueur $40$ cm avec une force de $100$ N, mais la force n'est pas perpendiculaire au manche : le bras de levier (distance de l'axe à la droite d'action de la force) ne vaut que $20$ cm. Quel est le moment de la force ?",
-      "choix": [
-        "$40$ N·m",
-        "$20$ N·m",
-        "$4{,}0 \\times 10^{3}$ N·m",
-        "$60$ N·m"
-      ],
-      "reponse": 1,
-      "explication": "$M = F \\times d$ avec $d$ = **bras de levier**, pas la longueur de l'outil : $M = 100 \\times 0{,}20 = 20$ N·m. Le piège principal est d'utiliser les $40$ cm du manche ($40$ N·m) ; l'autre est d'oublier la conversion cm → m ($100 \\times 40 = 4000$)."
-    },
-    {
-      "id": 8,
-      "difficulte": "difficile",
-      "notion": "verin-hydraulique",
-      "enonce": "Un vérin de section $S = 20$ cm² est alimenté sous une pression $p = 150$ bar. Quelle force développe-t-il ? (Rappels : $1$ bar $= 10^{5}$ Pa ; $F = p \\times S$.)",
-      "choix": [
-        "$3{,}0 \\times 10^{4}$ N",
-        "$3{,}0 \\times 10^{8}$ N",
-        "$3{,}0 \\times 10^{3}$ N",
-        "$7{,}5 \\times 10^{5}$ N"
-      ],
-      "reponse": 0,
-      "explication": "Conversions d'abord : $p = 150 \\times 10^{5} = 1{,}5 \\times 10^{7}$ Pa et $S = 20$ cm² $= 20 \\times 10^{-4} = 2{,}0 \\times 10^{-3}$ m². Alors $F = 1{,}5 \\times 10^{7} \\times 2{,}0 \\times 10^{-3} = 3{,}0 \\times 10^{4}$ N (≈ 3 tonnes soulevées). Le piège : garder $S$ en cm² sans conversion, ce qui donne $3{,}0 \\times 10^{8}$ N, dix mille fois trop — $1$ cm² $= 10^{-4}$ m²."
-    },
-    {
-      "id": 9,
-      "difficulte": "difficile",
-      "notion": "presse-hydraulique",
-      "enonce": "Dans une presse hydraulique, on exerce $F_1 = 100$ N sur un piston de section $S_1 = 2{,}0$ cm² ; le second piston a une section $S_2 = 50$ cm². Sachant que $\\dfrac{F_1}{S_1} = \\dfrac{F_2}{S_2}$, quelle force $F_2$ le grand piston exerce-t-il ?",
-      "choix": [
-        "$4{,}0$ N",
-        "$2{,}5 \\times 10^{3}$ N",
-        "$100$ N",
-        "$5{,}0 \\times 10^{3}$ N"
-      ],
-      "reponse": 1,
-      "explication": "Même pression des deux côtés : $F_2 = F_1 \\times \\dfrac{S_2}{S_1} = 100 \\times \\dfrac{50}{2{,}0} = 2{,}5 \\times 10^{3}$ N. Le **grand** piston reçoit la **grande** force. Le piège est d'inverser le rapport des sections ($100 \\times 2/50 = 4{,}0$ N) ou de croire que la force se transmet telle quelle ($100$ N) : c'est la **pression** qui se transmet, pas la force."
-    },
-    {
-      "id": 10,
-      "difficulte": "difficile",
-      "notion": "puissance-couple",
-      "enonce": "Un moteur électrique absorbe une puissance électrique de $2{,}5$ kW et fournit sur son arbre un couple $M = 8{,}0$ N·m à $\\omega = 250$ rad/s. Quel est son rendement ?",
-      "choix": [
-        "$0{,}80$",
-        "$1{,}25$",
-        "$0{,}32$",
-        "$0{,}64$"
-      ],
-      "reponse": 0,
-      "explication": "Puissance mécanique utile : $P_u = M\\omega = 8{,}0 \\times 250 = 2{,}0 \\times 10^{3}$ W. Rendement : $\\eta = \\dfrac{P_u}{P_a} = \\dfrac{2000}{2500} = 0{,}80$. Le piège : inverser le quotient ($2500/2000 = 1{,}25$) — impossible, un rendement est toujours **inférieur à 1**, l'énergie utile ne peut pas dépasser l'énergie absorbée."
-    }
-  ]
+ "id": "tale-sti2d-pc-energie-mecanique-fluides-qcm",
+ "chapitre": "tale-sti2d-pc-energie-mecanique-fluides",
+ "titre": "QCM — Énergie mécanique : dynamique, rotation et fluides",
+ "voie": "technologique",
+ "niveau": "terminale-techno",
+ "parcours": "pc-maths-sti2d-stl",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question. Prendre g = 9,81 N·kg⁻¹ sauf indication contraire.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "moment-force",
+   "enonce": "Dans quelle unité s'exprime le moment d'une force $M = F \\times d$ ?",
+   "choix": [
+    "le newton (N)",
+    "le joule (J)",
+    "le newton-mètre (N·m)",
+    "le watt (W)"
+   ],
+   "reponse": 2,
+   "explication": "Force (N) multipliée par bras de levier (m) : le moment s'exprime en **N·m**. Le piège est le joule : le moment a la même équation aux dimensions qu'une énergie, mais ce n'est **pas** une énergie — écrire un moment en J est compté faux. Le newton est l'unité de la force seule, le watt celle d'une puissance."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "pression",
+   "enonce": "La pression est définie par $p = \\dfrac{F}{S}$. Que vaut $1$ pascal ?",
+   "choix": [
+    "$1$ N·m⁻²",
+    "$1$ N·m",
+    "$1$ bar",
+    "$1$ N·m⁻³"
+   ],
+   "reponse": 0,
+   "explication": "Une force en newtons divisée par une surface en m² : $1$ Pa $= 1$ N·m⁻². Le piège est le bar, qui vaut $10^{5}$ Pa (proche de la pression atmosphérique), pas $1$ Pa. Le N·m est un moment, pas une pression."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "deuxieme-loi",
+   "enonce": "Un chariot automatisé de masse $m = 1200$ kg subit une résultante des forces de $600$ N dans le sens du mouvement. D'après la deuxième loi de Newton, quelle est son accélération ?",
+   "choix": [
+    "$2{,}0$ m·s⁻²",
+    "$0{,}50$ m·s⁻²",
+    "$7{,}2 \\times 10^{5}$ m·s⁻²",
+    "$600$ m·s⁻²"
+   ],
+   "reponse": 1,
+   "explication": "$F = ma$ donc $a = \\dfrac{F}{m} = \\dfrac{600}{1200} = 0{,}50$ m·s⁻². Le piège classique est d'inverser le quotient ($m/F = 2{,}0$) ou de multiplier $F \\times m$. Vérifie la cohérence : une résultante modeste sur une grosse masse donne une petite accélération."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "rotation-vitesse-angulaire",
+   "enonce": "Un moteur tourne à $N = 3000$ tr/min. Quelle est sa vitesse angulaire $\\omega$ en rad/s ?",
+   "choix": [
+    "$3000$ rad/s",
+    "$50$ rad/s",
+    "$314$ rad/s",
+    "$1{,}88 \\times 10^{4}$ rad/s"
+   ],
+   "reponse": 2,
+   "explication": "$\\omega = \\dfrac{2\\pi N}{60} = \\dfrac{2\\pi \\times 3000}{60} = 100\\pi \\approx 314$ rad/s. Les pièges : recopier $3000$ (tr/min n'est pas une unité SI), s'arrêter à $N/60 = 50$ tr/s en oubliant le facteur $2\\pi$, ou multiplier par $2\\pi$ sans diviser par $60$ ($1{,}88 \\times 10^{4}$)."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "puissance-couple",
+   "enonce": "Un arbre moteur transmet un couple $M = 10$ N·m en tournant à $\\omega = 100$ rad/s. Quelle puissance mécanique transmet-il ?",
+   "choix": [
+    "$1{,}0 \\times 10^{3}$ W",
+    "$10$ W",
+    "$0{,}10$ W",
+    "$110$ W"
+   ],
+   "reponse": 0,
+   "explication": "$P = M \\times \\omega = 10 \\times 100 = 1{,}0 \\times 10^{3}$ W, soit $1$ kW. La formule est multiplicative : le piège est de diviser ($M/\\omega = 0{,}10$) ou d'additionner ($110$). $P = M\\omega$ est l'analogue en rotation de $P = Fv$ en translation."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "hydrostatique",
+   "enonce": "D'après le principe fondamental de l'hydrostatique $\\Delta p = \\rho g h$, quel est le supplément de pression à $20$ m sous la surface de l'eau ($\\rho = 1000$ kg·m⁻³, $g = 9{,}81$ N·kg⁻¹) ?",
+   "choix": [
+    "$196$ Pa",
+    "$2{,}0 \\times 10^{5}$ Pa environ",
+    "$2{,}0 \\times 10^{4}$ Pa environ",
+    "$2{,}0 \\times 10^{8}$ Pa environ"
+   ],
+   "reponse": 1,
+   "explication": "$\\Delta p = 1000 \\times 9{,}81 \\times 20 = 1{,}96 \\times 10^{5} \\approx 2{,}0 \\times 10^{5}$ Pa, soit environ $2$ bar — cohérent avec « $1$ bar tous les $10$ m d'eau ». Le piège nommé : prendre $\\rho = 1$ (g·cm⁻³) au lieu de $1000$ kg·m⁻³, ce qui donne $196$ Pa, mille fois trop faible."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "moment-force",
+   "enonce": "On tire sur une clé de longueur $40$ cm avec une force de $100$ N, mais la force n'est pas perpendiculaire au manche : le bras de levier (distance de l'axe à la droite d'action de la force) ne vaut que $20$ cm. Quel est le moment de la force ?",
+   "choix": [
+    "$40$ N·m",
+    "$20$ N·m",
+    "$4{,}0 \\times 10^{3}$ N·m",
+    "$60$ N·m"
+   ],
+   "reponse": 1,
+   "explication": "$M = F \\times d$ avec $d$ = **bras de levier**, pas la longueur de l'outil : $M = 100 \\times 0{,}20 = 20$ N·m. Le piège principal est d'utiliser les $40$ cm du manche ($40$ N·m) ; l'autre est d'oublier la conversion cm → m ($100 \\times 40 = 4000$)."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "verin-hydraulique",
+   "enonce": "Un vérin de section $S = 20$ cm² est alimenté sous une pression $p = 150$ bar. Quelle force développe-t-il ? (Rappels : $1$ bar $= 10^{5}$ Pa ; $F = p \\times S$.)",
+   "choix": [
+    "$3{,}0 \\times 10^{4}$ N",
+    "$3{,}0 \\times 10^{8}$ N",
+    "$3{,}0 \\times 10^{3}$ N",
+    "$7{,}5 \\times 10^{5}$ N"
+   ],
+   "reponse": 0,
+   "explication": "Conversions d'abord : $p = 150 \\times 10^{5} = 1{,}5 \\times 10^{7}$ Pa et $S = 20$ cm² $= 20 \\times 10^{-4} = 2{,}0 \\times 10^{-3}$ m². Alors $F = 1{,}5 \\times 10^{7} \\times 2{,}0 \\times 10^{-3} = 3{,}0 \\times 10^{4}$ N (≈ 3 tonnes soulevées). Le piège : garder $S$ en cm² sans conversion, ce qui donne $3{,}0 \\times 10^{8}$ N, dix mille fois trop — $1$ cm² $= 10^{-4}$ m²."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "presse-hydraulique",
+   "enonce": "Dans une presse hydraulique, on exerce $F_1 = 100$ N sur un piston de section $S_1 = 2{,}0$ cm² ; le second piston a une section $S_2 = 50$ cm². Sachant que $\\dfrac{F_1}{S_1} = \\dfrac{F_2}{S_2}$, quelle force $F_2$ le grand piston exerce-t-il ?",
+   "choix": [
+    "$4{,}0$ N",
+    "$2{,}5 \\times 10^{3}$ N",
+    "$100$ N",
+    "$5{,}0 \\times 10^{3}$ N"
+   ],
+   "reponse": 1,
+   "explication": "Même pression des deux côtés : $F_2 = F_1 \\times \\dfrac{S_2}{S_1} = 100 \\times \\dfrac{50}{2{,}0} = 2{,}5 \\times 10^{3}$ N. Le **grand** piston reçoit la **grande** force. Le piège est d'inverser le rapport des sections ($100 \\times 2/50 = 4{,}0$ N) ou de croire que la force se transmet telle quelle ($100$ N) : c'est la **pression** qui se transmet, pas la force."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "puissance-couple",
+   "enonce": "Un moteur électrique absorbe une puissance électrique de $2{,}5$ kW et fournit sur son arbre un couple $M = 8{,}0$ N·m à $\\omega = 250$ rad/s. Quel est son rendement ?",
+   "choix": [
+    "$0{,}80$",
+    "$1{,}25$",
+    "$0{,}32$",
+    "$0{,}64$"
+   ],
+   "reponse": 0,
+   "explication": "Puissance mécanique utile : $P_u = M\\omega = 8{,}0 \\times 250 = 2{,}0 \\times 10^{3}$ W. Rendement : $\\eta = \\dfrac{P_u}{P_a} = \\dfrac{2000}{2500} = 0{,}80$. Le piège : inverser le quotient ($2500/2000 = 1{,}25$) — impossible, un rendement est toujours **inférieur à 1**, l'énergie utile ne peut pas dépasser l'énergie absorbée."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "poids",
+   "enonce": "Une charge a une masse $m = 30$ kg. On donne $P = m\\,g$ avec $g = 9{,}81$ N·kg⁻¹. Quel est son poids ?",
+   "choix": [
+    "$30$ N",
+    "$294$ N",
+    "$3{,}1$ N",
+    "$0{,}33$ N"
+   ],
+   "reponse": 1,
+   "explication": "$P = m g = 30 \\times 9{,}81 \\approx 294$ N. Le piège majeur : confondre masse et poids et répondre « $30$ N » (une masse en kg n'est pas une force). Diviser par $g$ au lieu de multiplier donne $3{,}1$ N."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "puissance-couple",
+   "enonce": "Dans la formule de la puissance transmise par un couple $P = M \\times \\omega$, dans quelle unité doit impérativement être exprimée la vitesse angulaire $\\omega$ ?",
+   "choix": [
+    "en tours par minute (tr/min)",
+    "en radians par seconde (rad/s)",
+    "en tours par seconde (tr/s)",
+    "en newton-mètres (N·m)"
+   ],
+   "reponse": 1,
+   "explication": "$P = M\\omega$ n'est valable qu'avec $\\omega$ en **rad/s**. Injecter directement $N$ en tr/min est le piège n°1 du chapitre : il faut convertir avec $\\omega = \\dfrac{2\\pi N}{60}$. Le N·m est l'unité du **couple** $M$, pas de $\\omega$."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "unites-pression",
+   "enonce": "Un manomètre indique une pression de $3$ bar. À combien de pascals cela correspond-il ? On donne $1$ bar $= 10^{5}$ Pa.",
+   "choix": [
+    "$3 \\times 10^{5}$ Pa",
+    "$3 \\times 10^{3}$ Pa",
+    "$3$ Pa",
+    "$3 \\times 10^{8}$ Pa"
+   ],
+   "reponse": 0,
+   "explication": "$3$ bar $= 3 \\times 10^{5}$ Pa. Le piège : se tromper de puissance de dix ($1$ bar vaut $10^{5}$ Pa, pas $10^{3}$). Un bar est proche de la pression atmosphérique ($\\approx 1{,}013 \\times 10^{5}$ Pa)."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "deuxieme-loi",
+   "enonce": "Un chariot de masse $m = 400$ kg est tiré par une force motrice de $1200$ N ; les frottements valent $400$ N et s'opposent au mouvement. On donne $F_{\\text{résultante}} = m\\,a$. Quelle est l'accélération du chariot ?",
+   "choix": [
+    "$3{,}0$ m·s⁻²",
+    "$2{,}0$ m·s⁻²",
+    "$4{,}0$ m·s⁻²",
+    "$1{,}0$ m·s⁻²"
+   ],
+   "reponse": 1,
+   "explication": "Résultante le long de l'axe : $F = 1200 - 400 = 800$ N (les frottements se **retranchent**), puis $a = \\dfrac{F}{m} = \\dfrac{800}{400} = 2{,}0$ m·s⁻². Le piège : oublier les frottements et prendre $F = 1200$ N ($a = 3{,}0$), ou les additionner."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "rotation-vitesse-angulaire",
+   "enonce": "Un arbre tourne à la vitesse $N = 600$ tr/min. On donne $\\omega = \\dfrac{2\\pi N}{60}$. Quelle est sa vitesse angulaire $\\omega$ ?",
+   "choix": [
+    "$63$ rad/s",
+    "$600$ rad/s",
+    "$10$ rad/s",
+    "$3770$ rad/s"
+   ],
+   "reponse": 0,
+   "explication": "$\\omega = \\dfrac{2\\pi \\times 600}{60} = 20\\pi \\approx 63$ rad/s. Les pièges : garder $N$ tel quel ($600$), oublier le $2\\pi$ et faire $\\dfrac{600}{60} = 10$, ou oublier de diviser par $60$ ($2\\pi \\times 600 \\approx 3770$)."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "hydrostatique",
+   "enonce": "Dans un lac d'eau douce ($\\rho = 1000$ kg·m⁻³), quelle est la différence de pression $\\Delta p$ entre la surface et un plongeur situé à $5{,}0$ m de profondeur ? On donne $\\Delta p = \\rho g h$ et $g = 9{,}81$ N·kg⁻¹.",
+   "choix": [
+    "$4{,}9 \\times 10^{4}$ Pa",
+    "$49$ Pa",
+    "$4{,}9 \\times 10^{7}$ Pa",
+    "$5{,}0 \\times 10^{4}$ Pa"
+   ],
+   "reponse": 0,
+   "explication": "$\\Delta p = 1000 \\times 9{,}81 \\times 5{,}0 = 4{,}9 \\times 10^{4}$ Pa (environ $0{,}49$ bar, cohérent avec « $1$ bar tous les $10$ m »). Le piège classique : prendre $\\rho_{\\text{eau}} = 1$ (en kg·L⁻¹) au lieu de $1000$ kg·m⁻³, ce qui donne $49$ Pa, mille fois trop faible."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "moment-force",
+   "enonce": "Sur une balançoire à l'équilibre, un enfant de poids $300$ N est assis à $1{,}5$ m de l'axe. À quelle distance de l'axe, de l'autre côté, faut-il placer un adulte de poids $750$ N pour équilibrer ? On utilise $F_1 d_1 = F_2 d_2$.",
+   "choix": [
+    "$0{,}60$ m",
+    "$3{,}75$ m",
+    "$1{,}5$ m",
+    "$0{,}30$ m"
+   ],
+   "reponse": 0,
+   "explication": "Équilibre des moments : $300 \\times 1{,}5 = 750 \\times d_2$, donc $d_2 = \\dfrac{450}{750} = 0{,}60$ m. L'adulte, plus lourd, doit s'asseoir **plus près** de l'axe. Le piège : inverser le rapport ($750 \\times 1{,}5 / 300 = 3{,}75$ m), ce qui placerait le lourd plus loin."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "puissance-couple",
+   "enonce": "Un moteur fournit un couple $M = 8{,}0$ N·m en tournant à $N = 3000$ tr/min. On donne $\\omega = \\dfrac{2\\pi N}{60}$ et $P = M\\omega$. Quelle puissance mécanique délivre-t-il ?",
+   "choix": [
+    "$2{,}4 \\times 10^{4}$ W",
+    "$2{,}5 \\times 10^{3}$ W",
+    "$2{,}5 \\times 10^{5}$ W",
+    "$400$ W"
+   ],
+   "reponse": 1,
+   "explication": "D'abord $\\omega = \\dfrac{2\\pi \\times 3000}{60} \\approx 314$ rad/s, puis $P = 8{,}0 \\times 314 \\approx 2{,}5 \\times 10^{3}$ W ($\\approx 2{,}5$ kW). Le piège n°1 : injecter $N = 3000$ dans $P = M\\omega$ ($8 \\times 3000 = 2{,}4 \\times 10^4$ W), une valeur environ $9{,}5$ fois trop grande."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "verin-hydraulique",
+   "enonce": "Un vérin hydraulique de section $S = 40$ cm² est alimenté sous une pression $p = 100$ bar. On donne $F = p \\times S$. Quelle force développe-t-il ?",
+   "choix": [
+    "$4{,}0 \\times 10^{4}$ N",
+    "$4{,}0 \\times 10^{6}$ N",
+    "$4{,}0 \\times 10^{5}$ N",
+    "$400$ N"
+   ],
+   "reponse": 0,
+   "explication": "Conversions : $p = 100$ bar $= 1{,}0 \\times 10^{7}$ Pa et $S = 40$ cm² $= 40 \\times 10^{-4} = 4{,}0 \\times 10^{-3}$ m². Alors $F = 1{,}0 \\times 10^{7} \\times 4{,}0 \\times 10^{-3} = 4{,}0 \\times 10^{4}$ N. Le piège : écrire $S = 40$ cm² $= 0{,}40$ m² (mauvaise conversion, $1$ cm² $= 10^{-4}$ m²), qui donne une force $100$ fois trop grande ($4{,}0 \\times 10^{6}$ N)."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "presse-hydraulique",
+   "enonce": "Dans une presse hydraulique, le petit piston de section $S_1 = 5{,}0$ cm² reçoit une force $F_1 = 200$ N. Le grand piston a une section $S_2 = 300$ cm². On donne $\\dfrac{F_1}{S_1} = \\dfrac{F_2}{S_2}$. Quelle force $F_2$ développe le grand piston ?",
+   "choix": [
+    "$3{,}3$ N",
+    "$1{,}2 \\times 10^{4}$ N",
+    "$200$ N",
+    "$60$ N"
+   ],
+   "reponse": 1,
+   "explication": "$F_2 = F_1 \\times \\dfrac{S_2}{S_1} = 200 \\times \\dfrac{300}{5{,}0} = 200 \\times 60 = 1{,}2 \\times 10^{4}$ N. Le grand piston reçoit la **grande** force. Le piège : inverser le rapport des sections ($200 \\times \\dfrac{5}{300} = 3{,}3$ N), ce qui reviendrait à diminuer la force. Noter qu'inutile de convertir les cm² ici : c'est un **rapport** de sections."
+  }
+ ]
 }

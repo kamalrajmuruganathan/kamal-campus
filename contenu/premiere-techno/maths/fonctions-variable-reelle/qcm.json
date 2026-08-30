@@ -29,7 +29,12 @@
       "difficulte": "facile",
       "notion": "parabole",
       "enonce": "La parabole d'équation $y = 3x^2 - 5x + 1$ est tournée :",
-      "choix": ["vers le haut", "vers le bas", "vers la droite", "on ne peut pas savoir"],
+      "choix": [
+        "vers le haut",
+        "vers le bas",
+        "vers la droite",
+        "on ne peut pas savoir"
+      ],
       "reponse": 0,
       "explication": "$a = 3 > 0$ : la parabole est tournée **vers le haut**, et son sommet est un **minimum**. Le signe de $a$ suffit à conclure."
     },
@@ -38,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "taux-variation",
       "enonce": "Pour $f(x) = x^2$, quel est le taux de variation entre $2$ et $5$ ?",
-      "choix": ["$7$", "$21$", "$3$", "$9$"],
+      "choix": [
+        "$7$",
+        "$21$",
+        "$3$",
+        "$9$"
+      ],
       "reponse": 0,
       "explication": "$\\tau = \\dfrac{25 - 4}{5 - 2} = \\dfrac{21}{3} = 7$. Le choix $21$ s'arrête à l'écart des images sans diviser par l'écart des antécédents."
     },
@@ -47,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "sommet",
       "enonce": "Quelle est l'abscisse du sommet de la parabole $y = 2x^2 - 12x + 5$ ?",
-      "choix": ["$3$", "$-3$", "$6$", "$12$"],
+      "choix": [
+        "$3$",
+        "$-3$",
+        "$6$",
+        "$12$"
+      ],
       "reponse": 0,
       "explication": "$\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-12}{4} = 3$. Attention au double signe : $b$ vaut $-12$, donc $-b$ vaut $+12$."
     },
@@ -70,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "symetrie",
       "enonce": "Une parabole a pour axe de symétrie la droite $x = 4$. Si $f(1) = 7$, que vaut $f(7)$ ?",
-      "choix": ["$7$", "$1$", "$4$", "On ne peut pas savoir"],
+      "choix": [
+        "$7$",
+        "$1$",
+        "$4$",
+        "On ne peut pas savoir"
+      ],
       "reponse": 0,
       "explication": "$1$ et $7$ sont symétriques par rapport à $4$ (à distance $3$ de part et d'autre) : ils ont donc la **même image**, soit $7$. Cette symétrie permet de retrouver le sommet à mi-chemin entre deux points de même ordonnée."
     },
@@ -107,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "racines",
       "enonce": "Une parabole tournée vers le haut a son sommet au-dessus de l'axe des abscisses. Combien a-t-elle de racines ?",
-      "choix": ["Deux", "Une", "Aucune", "Une infinité"],
+      "choix": [
+        "Deux",
+        "Une",
+        "Aucune",
+        "Une infinité"
+      ],
       "reponse": 2,
       "explication": "Si le point le plus **bas** de la courbe est déjà au-dessus de l'axe, la parabole ne le croise jamais : il n'y a **aucune racine**. C'est un contrôle graphique rapide, sans aucun calcul."
     },
@@ -124,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "$f(x) > 3$ signifie que l'**ordonnée** dépasse $3$, donc que la courbe est au-dessus de l'horizontale. Mais la réponse attendue est l'ensemble des **abscisses** correspondantes : c'est le double piège de cette lecture."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "parabole",
+      "enonce": "La parabole d'équation $y = -2x^2 + x + 3$ est tournée :",
+      "choix": [
+        "vers le haut",
+        "vers le bas",
+        "vers la gauche",
+        "on ne peut pas savoir"
+      ],
+      "reponse": 1,
+      "explication": "$a = -2 < 0$ : la parabole est tournée **vers le bas**, et son sommet est un **maximum**. Le signe de $a$ suffit à conclure."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "parabole",
+      "enonce": "Pour une parabole tournée vers le haut ($a > 0$), le sommet est :",
+      "choix": [
+        "un maximum",
+        "un minimum",
+        "un point d'inflexion",
+        "une racine"
+      ],
+      "reponse": 1,
+      "explication": "Si $a > 0$, la parabole s'ouvre vers le haut : son sommet est le point le plus **bas**, donc un **minimum**. Pour $a < 0$, ce serait un maximum."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "taux-variation",
+      "enonce": "Le taux de variation de $f$ entre $a$ et $b$ est aussi le coefficient directeur de :",
+      "choix": [
+        "la tangente à la courbe",
+        "la sécante passant par les deux points",
+        "l'axe de symétrie",
+        "la parabole"
+      ],
+      "reponse": 1,
+      "explication": "Le taux de variation $\\dfrac{f(b)-f(a)}{b-a}$ est le coefficient directeur de la **sécante** joignant les deux points de la courbe. La tangente, elle, relève du chapitre de dérivation (position limite des sécantes)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "taux-variation",
+      "enonce": "Pour $f(x) = x^2$, quel est le taux de variation entre $-1$ et $3$ ?",
+      "choix": [
+        "$2$",
+        "$8$",
+        "$4$",
+        "$10$"
+      ],
+      "reponse": 0,
+      "explication": "$\\tau = \\dfrac{f(3) - f(-1)}{3 - (-1)} = \\dfrac{9 - 1}{4} = \\dfrac{8}{4} = 2$. Le choix $8$ s'arrête à l'écart des images sans diviser par l'écart des antécédents."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "sommet",
+      "enonce": "Quelle est l'abscisse du sommet de la parabole $y = x^2 - 8x + 2$ ?",
+      "choix": [
+        "$4$",
+        "$-4$",
+        "$8$",
+        "$2$"
+      ],
+      "reponse": 0,
+      "explication": "$\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-8}{2} = 4$. Attention au double signe : $b$ vaut $-8$, donc $-b$ vaut $+8$, et $\\dfrac{8}{2} = 4$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "symetrie",
+      "enonce": "Une parabole a pour axe de symétrie la droite $x = 2$. Si $f(0) = 5$, que vaut $f(4)$ ?",
+      "choix": [
+        "$5$",
+        "$0$",
+        "$2$",
+        "on ne peut pas savoir"
+      ],
+      "reponse": 0,
+      "explication": "$0$ et $4$ sont symétriques par rapport à $2$ (à distance $2$ de part et d'autre) : ils ont donc la **même image**, soit $5$. Cette symétrie permet de retrouver le sommet à mi-chemin entre deux points de même ordonnée."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "racines",
+      "enonce": "Que représentent les racines d'une fonction du second degré ?",
+      "choix": [
+        "Les abscisses des points où la parabole coupe l'axe des abscisses",
+        "Les coordonnées du sommet",
+        "Les points les plus hauts de la courbe",
+        "La position de l'axe de symétrie"
+      ],
+      "reponse": 0,
+      "explication": "Les **racines** sont les solutions de $f(x) = 0$ : ce sont les **abscisses** des points où la parabole coupe l'axe des abscisses. Une parabole peut en avoir deux, une, ou aucune."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "sommet",
+      "enonce": "Pour $f(x) = 2x^2 - 8x + 1$, quelles sont les coordonnées du sommet et sa nature ?",
+      "choix": [
+        "$(2\\,;-7)$, minimum",
+        "$(2\\,;-7)$, maximum",
+        "$(-2\\,;25)$, minimum",
+        "$(4\\,;1)$, minimum"
+      ],
+      "reponse": 0,
+      "explication": "$\\alpha = -\\dfrac{-8}{4} = 2$, puis $f(2) = 2 \\times 4 - 16 + 1 = -7$. Comme $a = 2 > 0$, la parabole est tournée vers le haut : le sommet $(2\\,;-7)$ est un **minimum**."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "racines",
+      "enonce": "Une parabole tournée vers le bas a son sommet en dessous de l'axe des abscisses. Combien a-t-elle de racines ?",
+      "choix": [
+        "Deux",
+        "Une",
+        "Aucune",
+        "Une infinité"
+      ],
+      "reponse": 2,
+      "explication": "Tournée vers le bas, le sommet est le point le plus **haut** de la courbe. S'il est déjà sous l'axe des abscisses, la parabole ne le croise jamais : il n'y a **aucune racine**. C'est un contrôle graphique immédiat."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "lecture-graphique",
+      "enonce": "Résoudre graphiquement $f(x) = g(x)$ revient à lire :",
+      "choix": [
+        "les abscisses des points d'intersection des deux courbes",
+        "les ordonnées communes aux deux courbes",
+        "les racines de $f$ uniquement",
+        "la position de l'axe de symétrie"
+      ],
+      "reponse": 0,
+      "explication": "$f(x) = g(x)$ est vérifiée là où les deux courbes se **croisent** : les solutions sont les **abscisses** de ces points d'intersection. On lit des abscisses, pas des ordonnées."
     }
   ]
 }

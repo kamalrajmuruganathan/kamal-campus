@@ -1,154 +1,294 @@
 {
-  "id": "tale-spe-pc-titrages-qcm",
-  "chapitre": "tale-spe-pc-titrages",
-  "titre": "QCM — Titrages",
-  "voie": "generale",
-  "niveau": "terminale",
-  "parcours": "physique-chimie",
-  "matiere": "physique-chimie",
-  "statut": "brouillon",
-  "relu_par": null,
-  "consigne": "Une seule réponse correcte par question.",
-  "questions": [
-    {
-      "id": 1,
-      "difficulte": "facile",
-      "notion": "equivalence",
-      "enonce": "À l'équivalence d'un titrage, que peut-on affirmer sur les réactifs titré et titrant ?",
-      "choix": [
-        "Le titrant est en large excès",
-        "Ils ont été introduits dans les proportions stœchiométriques et sont tous les deux entièrement consommés",
-        "L'espèce titrée est encore en excès",
-        "Leurs concentrations sont égales"
-      ],
-      "reponse": 1,
-      "explication": "L'équivalence est le changement de réactif limitant : titré et titrant sont dans les proportions stœchiométriques, donc **tous deux consommés**. Le piège « concentrations égales » confond l'égalité des **quantités de matière** avec celle des concentrations."
-    },
-    {
-      "id": 2,
-      "difficulte": "facile",
-      "notion": "relation-equivalence",
-      "enonce": "Pour une réaction de titrage de type 1:1 ($a=b=1$), quelle relation traduit l'équivalence ?",
-      "choix": [
-        "$C_{\\text{titré}} = C_{\\text{titrant}}$",
-        "$n_{\\text{titré}} = n_{\\text{titrant versé}}$",
-        "$V_{\\text{titré}} = V_{\\text{éq}}$",
-        "$n_{\\text{titré}} = 2\\,n_{\\text{titrant versé}}$"
-      ],
-      "reponse": 1,
-      "explication": "La relation porte sur les **quantités de matière** : $n_{\\text{titré}} = n_{\\text{titrant}}$, soit $C_A V_A = C_B V_{\\text{éq}}$. Égaler les concentrations ou les volumes est faux : ce sont les produits $C\\times V$ qui sont égaux."
-    },
-    {
-      "id": 3,
-      "difficulte": "moyen",
-      "notion": "relation-equivalence",
-      "enonce": "On titre $V_A = 20{,}0$ mL d'acide chlorhydrique par de la soude à $C_B = 0{,}10$ mol·L⁻¹. L'équivalence est atteinte pour $V_{\\text{éq}} = 15{,}0$ mL. Que vaut $C_A$ ?",
-      "choix": [
-        "$7{,}5 \\times 10^{-2}$ mol·L⁻¹",
-        "$0{,}13$ mol·L⁻¹",
-        "$1{,}5$ mol·L⁻¹",
-        "$3{,}0 \\times 10^{-2}$ mol·L⁻¹"
-      ],
-      "reponse": 0,
-      "explication": "$C_A = \\dfrac{C_B V_{\\text{éq}}}{V_A} = \\dfrac{0{,}10 \\times 15{,}0}{20{,}0} = 7{,}5\\times 10^{-2}$ mol·L⁻¹. Le choix $0{,}13$ inverse le rapport des volumes ; comme les deux volumes sont en mL, ils se simplifient : nul besoin de convertir en L."
-    },
-    {
-      "id": 4,
-      "difficulte": "moyen",
-      "notion": "composition-systeme",
-      "enonce": "On titre l'acide chlorhydrique par de la soude ($\\mathrm{H_3O^+} + \\mathrm{OH^-} \\rightarrow 2\\,\\mathrm{H_2O}$). Après avoir versé un volume $V < V_{\\text{éq}}$, quelle est la composition du bécher ?",
-      "choix": [
-        "Il reste de l'ion $\\mathrm{OH^-}$ en excès, milieu basique",
-        "Il ne reste ni $\\mathrm{H_3O^+}$ ni $\\mathrm{OH^-}$",
-        "Il reste de l'ion $\\mathrm{H_3O^+}$ en excès, milieu acide",
-        "La solution est neutre, pH = 7"
-      ],
-      "reponse": 2,
-      "explication": "Avant l'équivalence, le titrant $\\mathrm{OH^-}$ est le réactif limitant : il reste de l'espèce titrée $\\mathrm{H_3O^+}$, le milieu est **acide**. L'excès de $\\mathrm{OH^-}$ (milieu basique) n'apparaît qu'**après** l'équivalence."
-    },
-    {
-      "id": 5,
-      "difficulte": "moyen",
-      "notion": "ph-metrie",
-      "enonce": "Sur un titrage suivi par pH-métrie, comment repère-t-on précisément le volume à l'équivalence avec la courbe dérivée ?",
-      "choix": [
-        "Là où le pH vaut exactement 7",
-        "Là où la dérivée $\\dfrac{\\mathrm{d(pH)}}{\\mathrm{d}V}$ passe par un extrémum",
-        "Au tout premier point de la courbe",
-        "Là où le pH cesse de varier"
-      ],
-      "reponse": 1,
-      "explication": "Le saut de pH correspond à la variation la plus rapide : la dérivée $\\dfrac{\\mathrm{d(pH)}}{\\mathrm{d}V}$ y passe par un **pic** (extrémum), dont l'abscisse est $V_{\\text{éq}}$. Le pH ne vaut 7 à l'équivalence que pour un titrage acide fort / base forte."
-    },
-    {
-      "id": 6,
-      "difficulte": "moyen",
-      "notion": "conductimetrie",
-      "enonce": "Dans un titrage suivi par conductimétrie, comment se manifeste l'équivalence sur la courbe $\\sigma = f(V)$ ?",
-      "choix": [
-        "Par un maximum de conductivité",
-        "Par une rupture de pente, à l'intersection de deux segments de droite",
-        "Par une conductivité nulle",
-        "Par un saut brutal identique au saut de pH"
-      ],
-      "reponse": 1,
-      "explication": "La courbe conductimétrique est faite de **segments de droite** ; à l'équivalence, l'ion remplacé change, donc la pente change : c'est la **rupture de pente**. Il n'y a pas de « saut » brutal comme en pH-métrie, ni de conductivité nulle."
-    },
-    {
-      "id": 7,
-      "difficulte": "difficile",
-      "notion": "stoechiometrie",
-      "enonce": "On titre les ions fer(II) par une solution de permanganate de potassium selon $\\mathrm{MnO_4^-} + 5\\,\\mathrm{Fe^{2+}} + 8\\,\\mathrm{H^+} \\rightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$. Quelle est la relation à l'équivalence ?",
-      "choix": [
-        "$n(\\mathrm{Fe^{2+}}) = n(\\mathrm{MnO_4^-})$ versé",
-        "$n(\\mathrm{Fe^{2+}}) = 5\\,n(\\mathrm{MnO_4^-})$ versé",
-        "$5\\,n(\\mathrm{Fe^{2+}}) = n(\\mathrm{MnO_4^-})$ versé",
-        "$n(\\mathrm{Fe^{2+}}) = 8\\,n(\\mathrm{MnO_4^-})$ versé"
-      ],
-      "reponse": 1,
-      "explication": "Ici $a = 5$ (Fe²⁺) et $b = 1$ (MnO₄⁻) : $\\dfrac{n(\\mathrm{Fe^{2+}})}{5} = \\dfrac{n(\\mathrm{MnO_4^-})}{1}$, donc $n(\\mathrm{Fe^{2+}}) = 5\\,n(\\mathrm{MnO_4^-})$. Oublier le coefficient 5 (réponse 1:1) est l'erreur classique ; le coefficient 8 du proton n'intervient pas, $\\mathrm{H^+}$ n'étant ni titré ni titrant."
-    },
-    {
-      "id": 8,
-      "difficulte": "difficile",
-      "notion": "titre-massique-densite",
-      "enonce": "Un acide chlorhydrique commercial a un pourcentage massique $P = 37\\% = 0{,}37$ et une densité $d = 1{,}19$. On donne $M(\\mathrm{HCl}) = 36{,}5$ g·mol⁻¹ et $\\rho_{\\text{eau}} = 1000$ g·L⁻¹. Quelle est sa concentration molaire $C$ ?",
-      "choix": [
-        "$\\approx 10$ mol·L⁻¹",
-        "$\\approx 12$ mol·L⁻¹",
-        "$\\approx 4{,}4 \\times 10^{2}$ mol·L⁻¹",
-        "$\\approx 0{,}37$ mol·L⁻¹"
-      ],
-      "reponse": 1,
-      "explication": "$C = \\dfrac{P\\,d\\,\\rho_{\\text{eau}}}{M} = \\dfrac{0{,}37 \\times 1{,}19 \\times 1000}{36{,}5} \\approx 12$ mol·L⁻¹. Oublier la densité $d$ donne $\\approx 10$ ; oublier de diviser par $M$ donne $4{,}4\\times 10^{2}$ (qui est le **titre massique** en g·L⁻¹, pas une concentration molaire)."
-    },
-    {
-      "id": 9,
-      "difficulte": "difficile",
-      "notion": "dilution",
-      "enonce": "On prélève $10{,}0$ mL de la solution commerciale à $12$ mol·L⁻¹ et on complète à $1{,}00$ L avec de l'eau. Quelle est la concentration de la solution diluée ?",
-      "choix": [
-        "$0{,}12$ mol·L⁻¹",
-        "$1{,}2 \\times 10^{3}$ mol·L⁻¹",
-        "$1{,}2$ mol·L⁻¹",
-        "$12$ mol·L⁻¹"
-      ],
-      "reponse": 0,
-      "explication": "Facteur de dilution $F = \\dfrac{V_{\\text{fille}}}{V_{\\text{prélevé}}} = \\dfrac{1000}{10{,}0} = 100$, donc $C_{\\text{fille}} = \\dfrac{12}{100} = 0{,}12$ mol·L⁻¹. Diluer **divise** la concentration : multiplier par $F$ (réponse $1{,}2\\times 10^{3}$) est le contresens le plus fréquent."
-    },
-    {
-      "id": 10,
-      "difficulte": "difficile",
-      "notion": "ph-metrie",
-      "enonce": "On titre l'acide éthanoïque (acide faible) par de la soude (base forte). Que peut-on dire du pH à l'équivalence ?",
-      "choix": [
-        "$\\mathrm{pH} = 7$, la solution est neutre",
-        "$\\mathrm{pH} > 7$, la solution est basique",
-        "$\\mathrm{pH} < 7$, la solution est acide",
-        "Le pH n'est pas défini à l'équivalence"
-      ],
-      "reponse": 1,
-      "explication": "À l'équivalence, il ne reste que l'ion éthanoate, **base conjuguée** de l'acide faible, qui rend le milieu **basique** : $\\mathrm{pH} > 7$. Le repère $\\mathrm{pH} = 7$ ne vaut que pour un titrage acide fort / base forte ; l'appliquer ici sous-estimerait $V_{\\text{éq}}$."
-    }
-  ]
+ "id": "tale-spe-pc-titrages-qcm",
+ "chapitre": "tale-spe-pc-titrages",
+ "titre": "QCM — Titrages",
+ "voie": "generale",
+ "niveau": "terminale",
+ "parcours": "physique-chimie",
+ "matiere": "physique-chimie",
+ "statut": "brouillon",
+ "relu_par": null,
+ "consigne": "Une seule réponse correcte par question.",
+ "questions": [
+  {
+   "id": 1,
+   "difficulte": "facile",
+   "notion": "equivalence",
+   "enonce": "À l'équivalence d'un titrage, que peut-on affirmer sur les réactifs titré et titrant ?",
+   "choix": [
+    "Le titrant est en large excès",
+    "Ils ont été introduits dans les proportions stœchiométriques et sont tous les deux entièrement consommés",
+    "L'espèce titrée est encore en excès",
+    "Leurs concentrations sont égales"
+   ],
+   "reponse": 1,
+   "explication": "L'équivalence est le changement de réactif limitant : titré et titrant sont dans les proportions stœchiométriques, donc **tous deux consommés**. Le piège « concentrations égales » confond l'égalité des **quantités de matière** avec celle des concentrations."
+  },
+  {
+   "id": 2,
+   "difficulte": "facile",
+   "notion": "relation-equivalence",
+   "enonce": "Pour une réaction de titrage de type 1:1 ($a=b=1$), quelle relation traduit l'équivalence ?",
+   "choix": [
+    "$C_{\\text{titré}} = C_{\\text{titrant}}$",
+    "$n_{\\text{titré}} = n_{\\text{titrant versé}}$",
+    "$V_{\\text{titré}} = V_{\\text{éq}}$",
+    "$n_{\\text{titré}} = 2\\,n_{\\text{titrant versé}}$"
+   ],
+   "reponse": 1,
+   "explication": "La relation porte sur les **quantités de matière** : $n_{\\text{titré}} = n_{\\text{titrant}}$, soit $C_A V_A = C_B V_{\\text{éq}}$. Égaler les concentrations ou les volumes est faux : ce sont les produits $C\\times V$ qui sont égaux."
+  },
+  {
+   "id": 3,
+   "difficulte": "moyen",
+   "notion": "relation-equivalence",
+   "enonce": "On titre $V_A = 20{,}0$ mL d'acide chlorhydrique par de la soude à $C_B = 0{,}10$ mol·L⁻¹. L'équivalence est atteinte pour $V_{\\text{éq}} = 15{,}0$ mL. Que vaut $C_A$ ?",
+   "choix": [
+    "$7{,}5 \\times 10^{-2}$ mol·L⁻¹",
+    "$0{,}13$ mol·L⁻¹",
+    "$1{,}5$ mol·L⁻¹",
+    "$3{,}0 \\times 10^{-2}$ mol·L⁻¹"
+   ],
+   "reponse": 0,
+   "explication": "$C_A = \\dfrac{C_B V_{\\text{éq}}}{V_A} = \\dfrac{0{,}10 \\times 15{,}0}{20{,}0} = 7{,}5\\times 10^{-2}$ mol·L⁻¹. Le choix $0{,}13$ inverse le rapport des volumes ; comme les deux volumes sont en mL, ils se simplifient : nul besoin de convertir en L."
+  },
+  {
+   "id": 4,
+   "difficulte": "moyen",
+   "notion": "composition-systeme",
+   "enonce": "On titre l'acide chlorhydrique par de la soude ($\\mathrm{H_3O^+} + \\mathrm{OH^-} \\rightarrow 2\\,\\mathrm{H_2O}$). Après avoir versé un volume $V < V_{\\text{éq}}$, quelle est la composition du bécher ?",
+   "choix": [
+    "Il reste de l'ion $\\mathrm{OH^-}$ en excès, milieu basique",
+    "Il ne reste ni $\\mathrm{H_3O^+}$ ni $\\mathrm{OH^-}$",
+    "Il reste de l'ion $\\mathrm{H_3O^+}$ en excès, milieu acide",
+    "La solution est neutre, pH = 7"
+   ],
+   "reponse": 2,
+   "explication": "Avant l'équivalence, le titrant $\\mathrm{OH^-}$ est le réactif limitant : il reste de l'espèce titrée $\\mathrm{H_3O^+}$, le milieu est **acide**. L'excès de $\\mathrm{OH^-}$ (milieu basique) n'apparaît qu'**après** l'équivalence."
+  },
+  {
+   "id": 5,
+   "difficulte": "moyen",
+   "notion": "ph-metrie",
+   "enonce": "Sur un titrage suivi par pH-métrie, comment repère-t-on précisément le volume à l'équivalence avec la courbe dérivée ?",
+   "choix": [
+    "Là où le pH vaut exactement 7",
+    "Là où la dérivée $\\dfrac{\\mathrm{d(pH)}}{\\mathrm{d}V}$ passe par un extrémum",
+    "Au tout premier point de la courbe",
+    "Là où le pH cesse de varier"
+   ],
+   "reponse": 1,
+   "explication": "Le saut de pH correspond à la variation la plus rapide : la dérivée $\\dfrac{\\mathrm{d(pH)}}{\\mathrm{d}V}$ y passe par un **pic** (extrémum), dont l'abscisse est $V_{\\text{éq}}$. Le pH ne vaut 7 à l'équivalence que pour un titrage acide fort / base forte."
+  },
+  {
+   "id": 6,
+   "difficulte": "moyen",
+   "notion": "conductimetrie",
+   "enonce": "Dans un titrage suivi par conductimétrie, comment se manifeste l'équivalence sur la courbe $\\sigma = f(V)$ ?",
+   "choix": [
+    "Par un maximum de conductivité",
+    "Par une rupture de pente, à l'intersection de deux segments de droite",
+    "Par une conductivité nulle",
+    "Par un saut brutal identique au saut de pH"
+   ],
+   "reponse": 1,
+   "explication": "La courbe conductimétrique est faite de **segments de droite** ; à l'équivalence, l'ion remplacé change, donc la pente change : c'est la **rupture de pente**. Il n'y a pas de « saut » brutal comme en pH-métrie, ni de conductivité nulle."
+  },
+  {
+   "id": 7,
+   "difficulte": "difficile",
+   "notion": "stoechiometrie",
+   "enonce": "On titre les ions fer(II) par une solution de permanganate de potassium selon $\\mathrm{MnO_4^-} + 5\\,\\mathrm{Fe^{2+}} + 8\\,\\mathrm{H^+} \\rightarrow \\mathrm{Mn^{2+}} + 5\\,\\mathrm{Fe^{3+}} + 4\\,\\mathrm{H_2O}$. Quelle est la relation à l'équivalence ?",
+   "choix": [
+    "$n(\\mathrm{Fe^{2+}}) = n(\\mathrm{MnO_4^-})$ versé",
+    "$n(\\mathrm{Fe^{2+}}) = 5\\,n(\\mathrm{MnO_4^-})$ versé",
+    "$5\\,n(\\mathrm{Fe^{2+}}) = n(\\mathrm{MnO_4^-})$ versé",
+    "$n(\\mathrm{Fe^{2+}}) = 8\\,n(\\mathrm{MnO_4^-})$ versé"
+   ],
+   "reponse": 1,
+   "explication": "Ici $a = 5$ (Fe²⁺) et $b = 1$ (MnO₄⁻) : $\\dfrac{n(\\mathrm{Fe^{2+}})}{5} = \\dfrac{n(\\mathrm{MnO_4^-})}{1}$, donc $n(\\mathrm{Fe^{2+}}) = 5\\,n(\\mathrm{MnO_4^-})$. Oublier le coefficient 5 (réponse 1:1) est l'erreur classique ; le coefficient 8 du proton n'intervient pas, $\\mathrm{H^+}$ n'étant ni titré ni titrant."
+  },
+  {
+   "id": 8,
+   "difficulte": "difficile",
+   "notion": "titre-massique-densite",
+   "enonce": "Un acide chlorhydrique commercial a un pourcentage massique $P = 37\\% = 0{,}37$ et une densité $d = 1{,}19$. On donne $M(\\mathrm{HCl}) = 36{,}5$ g·mol⁻¹ et $\\rho_{\\text{eau}} = 1000$ g·L⁻¹. Quelle est sa concentration molaire $C$ ?",
+   "choix": [
+    "$\\approx 10$ mol·L⁻¹",
+    "$\\approx 12$ mol·L⁻¹",
+    "$\\approx 4{,}4 \\times 10^{2}$ mol·L⁻¹",
+    "$\\approx 0{,}37$ mol·L⁻¹"
+   ],
+   "reponse": 1,
+   "explication": "$C = \\dfrac{P\\,d\\,\\rho_{\\text{eau}}}{M} = \\dfrac{0{,}37 \\times 1{,}19 \\times 1000}{36{,}5} \\approx 12$ mol·L⁻¹. Oublier la densité $d$ donne $\\approx 10$ ; oublier de diviser par $M$ donne $4{,}4\\times 10^{2}$ (qui est le **titre massique** en g·L⁻¹, pas une concentration molaire)."
+  },
+  {
+   "id": 9,
+   "difficulte": "difficile",
+   "notion": "dilution",
+   "enonce": "On prélève $10{,}0$ mL de la solution commerciale à $12$ mol·L⁻¹ et on complète à $1{,}00$ L avec de l'eau. Quelle est la concentration de la solution diluée ?",
+   "choix": [
+    "$0{,}12$ mol·L⁻¹",
+    "$1{,}2 \\times 10^{3}$ mol·L⁻¹",
+    "$1{,}2$ mol·L⁻¹",
+    "$12$ mol·L⁻¹"
+   ],
+   "reponse": 0,
+   "explication": "Facteur de dilution $F = \\dfrac{V_{\\text{fille}}}{V_{\\text{prélevé}}} = \\dfrac{1000}{10{,}0} = 100$, donc $C_{\\text{fille}} = \\dfrac{12}{100} = 0{,}12$ mol·L⁻¹. Diluer **divise** la concentration : multiplier par $F$ (réponse $1{,}2\\times 10^{3}$) est le contresens le plus fréquent."
+  },
+  {
+   "id": 10,
+   "difficulte": "difficile",
+   "notion": "ph-metrie",
+   "enonce": "On titre l'acide éthanoïque (acide faible) par de la soude (base forte). Que peut-on dire du pH à l'équivalence ?",
+   "choix": [
+    "$\\mathrm{pH} = 7$, la solution est neutre",
+    "$\\mathrm{pH} > 7$, la solution est basique",
+    "$\\mathrm{pH} < 7$, la solution est acide",
+    "Le pH n'est pas défini à l'équivalence"
+   ],
+   "reponse": 1,
+   "explication": "À l'équivalence, il ne reste que l'ion éthanoate, **base conjuguée** de l'acide faible, qui rend le milieu **basique** : $\\mathrm{pH} > 7$. Le repère $\\mathrm{pH} = 7$ ne vaut que pour un titrage acide fort / base forte ; l'appliquer ici sous-estimerait $V_{\\text{éq}}$."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "reaction-titrage",
+   "enonce": "Quelles propriétés la réaction support d'un titrage doit-elle posséder ?",
+   "choix": [
+    "Elle doit être lente et limitée",
+    "Elle doit être totale, rapide et unique",
+    "Elle doit être réversible",
+    "Elle doit être exothermique"
+   ],
+   "reponse": 1,
+   "explication": "Pour être exploitable, la réaction de titrage doit être **totale** (elle épuise le réactif limitant), **rapide** (résultat instantané à chaque goutte) et **unique** (pas de réaction parasite). Une réaction limitée ou lente rendrait l'équivalence inexploitable."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "equivalence",
+   "enonce": "Pour un titrage dont la réaction support est de coefficients $1{:}1$ (comme $\\mathrm{H_3O^+} + \\mathrm{OH^-}$), quelle relation traduit l'équivalence ?",
+   "choix": [
+    "$C_A = C_B$",
+    "$V_A = V_{\\text{éq}}$",
+    "$C_A V_{\\text{éq}} = C_B V_A$",
+    "$C_A V_A = C_B V_{\\text{éq}}$"
+   ],
+   "reponse": 3,
+   "explication": "À l'équivalence (cas $1{:}1$), les quantités de matière sont égales : $n_A = n_B$, soit $C_A V_A = C_B V_{\\text{éq}}$. La relation porte sur les **quantités de matière**, pas sur les concentrations : écrire $C_A = C_B$ n'a aucun sens."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "ph-metrie",
+   "enonce": "Quel est le pH à l'équivalence d'un titrage d'un acide fort par une base forte ?",
+   "choix": [
+    "Égal à 7",
+    "Supérieur à 7",
+    "Inférieur à 7",
+    "Égal à 0"
+   ],
+   "reponse": 0,
+   "explication": "Pour un titrage **acide fort / base forte**, à l'équivalence il ne reste ni acide ni base en excès et le milieu est neutre : pH $= 7$. Ce n'est vrai que dans ce cas : avec un acide **faible**, l'équivalence se situe à pH $> 7$."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "equivalence",
+   "enonce": "On titre $V_A = 25{,}0$ mL d'une solution acide par une base de concentration $C_B = 0{,}20$ mol·L⁻¹ (réaction $1{:}1$). L'équivalence est atteinte pour $V_{\\text{éq}} = 20{,}0$ mL. Quelle est la concentration $C_A$ de l'acide ?",
+   "choix": [
+    "$0{,}25$ mol·L⁻¹",
+    "$6{,}3 \\times 10^{-3}$ mol·L⁻¹",
+    "$0{,}16$ mol·L⁻¹",
+    "$0{,}20$ mol·L⁻¹"
+   ],
+   "reponse": 2,
+   "explication": "On isole $C_A = \\dfrac{C_B V_{\\text{éq}}}{V_A} = \\dfrac{0{,}20 \\times 20{,}0}{25{,}0} = 0{,}16$ mol·L⁻¹. Les deux volumes étant en mL, le facteur de conversion se simplifie. Intervertir $V_A$ et $V_{\\text{éq}}$ donnerait $0{,}25$ mol·L⁻¹."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "dilution",
+   "enonce": "On prélève $V_{\\text{mère}} = 5{,}0$ mL d'une solution concentrée que l'on complète à $V_{\\text{fille}} = 500$ mL. Quel est le facteur de dilution ?",
+   "choix": [
+    "$0{,}010$",
+    "$505$",
+    "$495$",
+    "$100$"
+   ],
+   "reponse": 3,
+   "explication": "Le facteur de dilution vaut $F = \\dfrac{V_{\\text{fille}}}{V_{\\text{mère prélevé}}} = \\dfrac{500}{5{,}0} = 100$. La concentration est donc divisée par $100$. Inverser le rapport ($5{,}0/500$) donne $0{,}010$, l'erreur de sens la plus courante."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "conductimetrie",
+   "enonce": "Quelle est l'allure de la courbe $\\sigma = f(V)$ d'un titrage conductimétrique, et comment y repère-t-on l'équivalence ?",
+   "choix": [
+    "Des segments de droite dont l'intersection (rupture de pente) repère l'équivalence",
+    "Une courbe avec un saut brutal de conductivité",
+    "Une seule droite passant par l'origine",
+    "Une courbe exponentielle décroissante"
+   ],
+   "reponse": 0,
+   "explication": "En conductimétrie, la courbe $\\sigma = f(V)$ est formée de **segments de droite** : à l'équivalence, l'ion consommé change, donc la pente change **brutalement**. L'équivalence est repérée par la **rupture de pente** (intersection des deux droites), pas par un saut. Le saut, lui, caractérise la pH-métrie."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "titre-massique",
+   "enonce": "Une solution a un titre massique $t = 73$ g·L⁻¹ en un soluté de masse molaire $M = 36{,}5$ g·mol⁻¹. Quelle est sa concentration molaire ?",
+   "choix": [
+    "$0{,}50$ mol·L⁻¹",
+    "$2{,}7 \\times 10^{3}$ mol·L⁻¹",
+    "$2{,}0$ mol·L⁻¹",
+    "$36{,}5$ mol·L⁻¹"
+   ],
+   "reponse": 2,
+   "explication": "On applique $C = \\dfrac{t}{M} = \\dfrac{73}{36{,}5} = 2{,}0$ mol·L⁻¹. **Inverser** le rapport ($M/t$) donne $0{,}50$ mol·L⁻¹ ; **multiplier** $t$ par $M$ donne $2{,}7 \\times 10^{3}$, une concentration aberrante."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "ph-metrie",
+   "enonce": "Quel est le pH à l'équivalence d'un titrage d'un acide **faible** (comme l'acide éthanoïque) par une base forte ?",
+   "choix": [
+    "Égal à 7",
+    "Supérieur à 7 (le milieu est basique)",
+    "Inférieur à 7",
+    "Égal à 7 quel que soit l'acide"
+   ],
+   "reponse": 1,
+   "explication": "À l'équivalence d'un titrage acide **faible** / base forte, il subsiste la **base conjuguée** de l'acide (ici l'ion éthanoate), qui rend le milieu **basique** : pH $> 7$ (souvent $\\approx 8{,}5$). Croire que pH $= 7$ à toute équivalence conduit à mal repérer $V_{\\text{éq}}$."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "titre-massique",
+   "enonce": "Un acide nitrique commercial est décrit par un pourcentage massique $P = 0{,}20$, une densité $d = 1{,}10$ et une masse molaire $M = 63$ g·mol⁻¹. Quelle est sa concentration molaire ? (On prend $\\rho_{\\text{eau}} = 1000$ g·L⁻¹.)",
+   "choix": [
+    "$2{,}2 \\times 10^{2}$ mol·L⁻¹",
+    "$0{,}29$ mol·L⁻¹",
+    "$1{,}4 \\times 10^{2}$ mol·L⁻¹",
+    "$3{,}5$ mol·L⁻¹"
+   ],
+   "reponse": 3,
+   "explication": "On applique $C = \\dfrac{P \\times d \\times \\rho_{\\text{eau}}}{M} = \\dfrac{0{,}20 \\times 1{,}10 \\times 1000}{63} = \\dfrac{220}{63} \\approx 3{,}5$ mol·L⁻¹. Oublier de diviser par $M$ laisserait le titre massique $t = 220$ g·L⁻¹ (soit $2{,}2 \\times 10^{2}$), qui n'est pas une concentration molaire."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "composition-systeme",
+   "enonce": "On titre une quantité $n_A = 2{,}0 \\times 10^{-3}$ mol d'ions $\\mathrm{H_3O^+}$ par une soude de concentration $C_B = 0{,}10$ mol·L⁻¹. Décrire le système après avoir versé $V = 15{,}0$ mL de soude.",
+   "choix": [
+    "Il reste $5{,}0 \\times 10^{-4}$ mol de $\\mathrm{H_3O^+}$ : on est avant l'équivalence, milieu acide",
+    "Le système est exactement à l'équivalence, milieu neutre",
+    "La soude est en excès, milieu basique",
+    "Il ne reste plus aucun ion en solution"
+   ],
+   "reponse": 0,
+   "explication": "La quantité de soude versée vaut $n_B = C_B \\times V = 0{,}10 \\times 15{,}0 \\times 10^{-3} = 1{,}5 \\times 10^{-3}$ mol. Comme $n_B < n_A$, l'ion $\\mathrm{OH^-}$ est limitant : il reste $n_A - n_B = 2{,}0 \\times 10^{-3} - 1{,}5 \\times 10^{-3} = 5{,}0 \\times 10^{-4}$ mol d'ions $\\mathrm{H_3O^+}$. On est **avant** l'équivalence, le milieu est **acide**."
+  }
+ ]
 }

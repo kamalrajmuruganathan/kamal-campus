@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "La gravitation est dirigée vers la Terre et courbe sa trajectoire en permanence — c'est la force centripète. Sa vitesse tangentielle est telle qu'il « rate » la Terre indéfiniment : il tombe sans jamais toucher le sol."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "referentiel",
+      "enonce": "Avant tout bilan des forces, que faut-il obligatoirement préciser ?",
+      "choix": [
+        "la vitesse initiale",
+        "le système étudié et le référentiel",
+        "la masse exacte",
+        "la durée du mouvement"
+      ],
+      "reponse": 1,
+      "explication": "Un mouvement ne se décrit que par rapport à un **référentiel**, et les forces s'appliquent à un **système** défini. Ces deux choix sont le préalable indispensable. Piège : se lancer dans les calculs sans les avoir posés."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "principe",
+      "enonce": "Si la somme des forces exercées sur un système est nulle, alors :",
+      "choix": [
+        "le système accélère",
+        "le vecteur vitesse ne varie pas ($\\Delta\\vec v = \\vec 0$)",
+        "le système s'arrête toujours",
+        "la trajectoire est forcément circulaire"
+      ],
+      "reponse": 1,
+      "explication": "$\\sum\\vec F = \\vec 0$ entraîne $\\Delta\\vec v = \\vec 0$ : le vecteur vitesse reste constant (repos ou mouvement rectiligne uniforme). Piège : croire qu'une force est nécessaire pour maintenir un mouvement."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "chute-libre",
+      "enonce": "En chute libre, la variation du vecteur vitesse d'un corps dépend-elle de sa masse ?",
+      "choix": [
+        "oui, un corps lourd varie plus vite",
+        "non, elle est la même pour tous les corps",
+        "oui, un corps léger varie plus vite",
+        "seulement si l'air est présent"
+      ],
+      "reponse": 1,
+      "explication": "En chute libre, seul le poids $\\vec P = m\\vec g$ agit ; la variation de vitesse est liée à $\\vec g$, indépendante de la masse. Tous les corps tombent identiquement (Galilée). Piège : croire qu'un corps lourd tombe plus vite."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "vecteur-vitesse",
+      "enonce": "Sur un enregistrement, on mesure les positions $\\mathrm{M}_2$ et $\\mathrm{M}_4$ de part et d'autre de $\\mathrm{M}_3$, séparées par une durée totale $2\\tau = 0{,}1$ s et distantes de $4$ cm. Quelle est la valeur de la vitesse en $\\mathrm{M}_3$ ?",
+      "choix": [
+        "$0{,}4$ m·s⁻¹",
+        "$0{,}8$ m·s⁻¹",
+        "$4$ m·s⁻¹",
+        "$0{,}04$ m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "$v_3 \\approx \\dfrac{\\mathrm{M}_2\\mathrm{M}_4}{2\\tau} = \\dfrac{0{,}04\\ \\text{m}}{0{,}1\\ \\text{s}} = 0{,}4$ m·s⁻¹. Piège : oublier de convertir les cm en m, ou diviser par $\\tau$ au lieu de $2\\tau$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "circulaire",
+      "enonce": "Dans un mouvement circulaire **uniforme**, laquelle de ces affirmations est correcte ?",
+      "choix": [
+        "la valeur de la vitesse et sa direction sont constantes",
+        "la valeur de la vitesse est constante mais sa direction change",
+        "aucune force ne s'exerce",
+        "la somme des forces est tangente à la trajectoire"
+      ],
+      "reponse": 1,
+      "explication": "« Uniforme » signifie que la **valeur** de la vitesse est constante, mais sa **direction** change en permanence : le vecteur vitesse varie, donc une force centripète existe. Piège : conclure de la vitesse constante qu'il n'y a pas de force."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "principe",
+      "enonce": "Une bille roule et ralentit sur une table horizontale à cause des frottements. Quelle est la direction de la somme des forces horizontales ?",
+      "choix": [
+        "dans le sens du mouvement",
+        "opposée au mouvement",
+        "perpendiculaire au mouvement",
+        "nulle"
+      ],
+      "reponse": 1,
+      "explication": "La bille ralentit : $\\Delta\\vec v$ est **opposé** au mouvement, donc la somme des forces (ici les frottements) l'est aussi. La somme des forces indique le sens de la variation de vitesse. Piège : imaginer une force motrice dans le sens du déplacement."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "variation-vitesse",
+      "enonce": "Un mobile a un vecteur vitesse $\\vec{v_i}$ vers la droite, puis $\\vec{v_{i+1}}$ également vers la droite mais plus grand. Comment est orienté $\\Delta\\vec v$ ?",
+      "choix": [
+        "vers la gauche",
+        "vers la droite",
+        "vers le haut",
+        "il est nul"
+      ],
+      "reponse": 1,
+      "explication": "$\\Delta\\vec v = \\vec{v_{i+1}} - \\vec{v_i}$ ; les deux vecteurs étant colinéaires vers la droite avec $\\vec{v_{i+1}}$ plus grand, la différence pointe **vers la droite** : le mobile accélère. La somme des forces est donc aussi vers la droite. Piège : confondre le sens de $\\Delta\\vec v$ avec un ralentissement."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "principe",
+      "enonce": "Un skieur descend une pente rectiligne à vitesse **constante**. Que peut-on dire des forces qu'il subit ?",
+      "choix": [
+        "la somme des forces est dirigée vers le bas de la pente",
+        "les forces se compensent : la somme est nulle",
+        "la somme des forces est dirigée vers le haut de la pente",
+        "seul le poids agit"
+      ],
+      "reponse": 1,
+      "explication": "Vitesse constante en valeur ET en direction (trajectoire rectiligne) signifie $\\Delta\\vec v = \\vec 0$, donc $\\sum\\vec F = \\vec 0$ : le poids, la réaction du sol et les frottements se **compensent**. Piège : croire qu'un objet en mouvement subit forcément une force résultante non nulle."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "circulaire",
+      "enonce": "Un point d'une trajectoire circulaire uniforme a un vecteur vitesse tangent au cercle. Où pointe le vecteur $\\Delta\\vec v$ entre deux instants proches ?",
+      "choix": [
+        "vers l'extérieur du cercle",
+        "vers le centre du cercle",
+        "dans le sens du mouvement",
+        "à l'opposé du mouvement"
+      ],
+      "reponse": 1,
+      "explication": "Comme seule la direction de $\\vec v$ change, la construction $\\Delta\\vec v = \\vec{v_{i+1}} - \\vec{v_i}$ donne un vecteur dirigé vers le **centre** : c'est pourquoi la force résultante est centripète. Piège : croire à une force « centrifuge » vers l'extérieur, qui n'existe pas dans ce cadre."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "bilan-forces",
+      "enonce": "Un projectile a quitté un canon et vole dans l'air (frottements négligés). Quelles forces s'exercent réellement sur lui pendant le vol ?",
+      "choix": [
+        "son poids et une force de propulsion vers l'avant",
+        "son poids seul",
+        "une force du mouvement et le poids",
+        "aucune force"
+      ],
+      "reponse": 1,
+      "explication": "Une fois séparé du canon, le projectile n'est plus poussé : frottements négligés, **seul son poids** agit — c'est une chute libre. La « force de propulsion » n'existe plus après le départ. Piège : inventer une force du mouvement qui accompagnerait le projectile."
     }
   ]
 }

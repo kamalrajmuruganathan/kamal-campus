@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Au-delà du domaine linéaire (ici hors gamme, $A$ élevée), la loi de Beer-Lambert se courbe : prolonger la droite fausse le résultat. On **dilue** l'inconnue pour ramener $A_x$ dans la gamme, puis on **multiplie** la concentration trouvée par le facteur de dilution. Changer $\\lambda$ ou élargir la cuve ne corrige pas le problème de linéarité."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "uv-visible",
+      "enonce": "Quel appareil mesure l'absorbance $A$ d'une solution colorée, longueur d'onde par longueur d'onde ?",
+      "choix": [
+        "le spectrophotomètre",
+        "le pH-mètre",
+        "la burette",
+        "le thermomètre"
+      ],
+      "reponse": 0,
+      "explication": "C'est le **spectrophotomètre** qui mesure l'absorbance en fonction de la longueur d'onde et trace le spectre d'absorption. Le pH-mètre mesure un pH, la burette sert au titrage : le piège est de confondre les instruments du laboratoire."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "identification-proprietes",
+      "enonce": "Pour identifier une espèce chimique avec le plus de certitude par ses propriétés physiques, il faut :",
+      "choix": [
+        "croiser plusieurs propriétés concordantes (fusion, ébullition, densité...)",
+        "se fier à une seule propriété, cela suffit toujours",
+        "goûter le produit pour le reconnaître",
+        "mesurer uniquement sa couleur"
+      ],
+      "reponse": 0,
+      "explication": "Une seule propriété ne suffit pas : deux espèces peuvent la partager. On **croise plusieurs critères** concordants (le « faisceau » de propriétés). Au laboratoire on ne goûte jamais un produit : on le mesure."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "infrarouge",
+      "enonce": "Que permet principalement d'identifier la spectroscopie infrarouge (IR) ?",
+      "choix": [
+        "les groupes caractéristiques (liaisons) présents dans une molécule",
+        "la concentration exacte d'une solution",
+        "la température de fusion d'un solide",
+        "le pH d'une solution"
+      ],
+      "reponse": 0,
+      "explication": "L'IR fait vibrer les liaisons : chaque type de liaison absorbe à un nombre d'onde caractéristique, révélant les **groupes caractéristiques** de la molécule. Le piège est de croire qu'elle donne une concentration (c'est le rôle de la spectrophotométrie UV-visible et de Beer-Lambert)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "identification-proprietes",
+      "enonce": "Un volume de $25{,}0\\ \\mathrm{mL}$ d'un liquide a une masse de $22{,}0\\ \\mathrm{g}$. Quelle est sa densité $d$ ? (On donne $\\rho_{\\text{eau}} = 1{,}00\\ \\mathrm{g\\cdot mL^{-1}}$.)",
+      "choix": [
+        "$0{,}88$",
+        "$1{,}14$",
+        "$550$",
+        "$47$"
+      ],
+      "reponse": 0,
+      "explication": "On calcule $\\rho = \\dfrac{m}{V} = \\dfrac{22{,}0}{25{,}0} = 0{,}88\\ \\mathrm{g\\cdot mL^{-1}}$, et comme $\\rho_{\\text{eau}} = 1{,}00\\ \\mathrm{g\\cdot mL^{-1}}$, la densité vaut $d = 0{,}88$ (sans unité). Le distracteur $1{,}14$ vient d'avoir inversé la fraction ($V/m$)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "uv-visible",
+      "enonce": "Une solution absorbe principalement vers $\\lambda_{\\max} \\approx 620\\ \\mathrm{nm}$ (orangé). De quelle couleur apparaît-elle ?",
+      "choix": [
+        "bleue",
+        "orangée",
+        "verte",
+        "rouge"
+      ],
+      "reponse": 0,
+      "explication": "La couleur **perçue** est la **complémentaire** de la couleur absorbée : le complémentaire de l'orangé ($\\approx 620\\ \\mathrm{nm}$) est le bleu. Le piège est de croire que la solution paraît orangée, c'est-à-dire de la couleur qu'elle absorbe : c'est l'opposée."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "infrarouge",
+      "enonce": "Sur un spectre IR, une bande **large et forte** vers $3300\\ \\mathrm{cm^{-1}}$ est caractéristique :",
+      "choix": [
+        "d'une liaison O–H (alcool)",
+        "d'une liaison C=O (carbonyle)",
+        "d'une liaison C=C",
+        "de l'absence de tout groupe"
+      ],
+      "reponse": 0,
+      "explication": "La liaison **O–H d'un alcool** donne une bande **large et forte** dans la zone $3200$–$3400\\ \\mathrm{cm^{-1}}$. Le carbonyle C=O, lui, donne une bande **fine et intense** vers $1700\\ \\mathrm{cm^{-1}}$ : le piège est de confondre l'allure et la zone des deux bandes."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "beer-lambert",
+      "enonce": "Une solution a une absorbance $A = 1{,}2$ dans une cuve de $\\ell = 1{,}0\\ \\mathrm{cm}$, pour une espèce de coefficient $\\varepsilon = 6{,}0\\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. Quelle est sa concentration $c$ ?",
+      "choix": [
+        "$2{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$7{,}2\\times 10^{3}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$5{,}0\\times 10^{3}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$2{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 0,
+      "explication": "On isole $c$ dans $A = \\varepsilon\\,\\ell\\,c$ : $c = \\dfrac{A}{\\varepsilon\\,\\ell} = \\dfrac{1{,}2}{6{,}0\\times 10^{3} \\times 1{,}0} = 2{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Le distracteur $7{,}2\\times 10^{3}$ vient d'avoir **multiplié** $A$ par $\\varepsilon$ au lieu de diviser."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "etalonnage",
+      "enonce": "D'après la loi de Beer-Lambert, quelle est l'allure de la droite d'étalonnage $A = f(c)$ pour une espèce et une cuve données ?",
+      "choix": [
+        "une droite passant par l'origine, de coefficient directeur $k = \\varepsilon\\,\\ell$",
+        "une droite de pente $\\varepsilon\\,\\ell$ mais coupant l'axe des $A$ à $1$",
+        "une courbe exponentielle",
+        "une droite horizontale, $A$ ne dépendant pas de $c$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $A = \\varepsilon\\,\\ell\\,c$, l'absorbance est **proportionnelle** à $c$ : la droite passe par l'**origine** (à $c = 0$, $A = 0$) avec une pente $k = \\varepsilon\\,\\ell$. Le piège est de lui prêter une ordonnée à l'origine non nulle : il n'y en a pas dans le domaine dilué."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "titrage",
+      "enonce": "On titre $V_A = 25{,}0\\ \\mathrm{mL}$ d'un acide (réaction $1$ pour $1$) par une base à $C_B = 0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$. L'équivalence est atteinte pour $V_E = 20{,}0\\ \\mathrm{mL}$. Quelle est la concentration $C_A$ de l'acide ?",
+      "choix": [
+        "$0{,}080\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$0{,}125\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$0{,}80\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$2{,}0\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 0,
+      "explication": "À l'équivalence ($1$–$1$) : $C_A = \\dfrac{C_B V_E}{V_A} = \\dfrac{0{,}10 \\times 20{,}0}{25{,}0} = 0{,}080\\ \\mathrm{mol\\cdot L^{-1}}$. Les volumes étant dans la même unité (mL), le rapport se calcule sans conversion. Le distracteur $0{,}125$ inverse $V_E$ et $V_A$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "etalonnage",
+      "enonce": "Pour qu'un dosage par étalonnage spectrophotométrique soit fiable, comment doit-on mesurer les étalons et l'inconnue ?",
+      "choix": [
+        "avec la même cuve, à la même longueur d'onde, après le même « blanc »",
+        "avec des cuves de largeurs différentes pour varier les mesures",
+        "à des longueurs d'onde différentes pour chaque solution",
+        "sans faire de blanc, pour gagner du temps"
+      ],
+      "reponse": 0,
+      "explication": "Les mesures doivent être faites dans des conditions **identiques** : même cuve (même $\\ell$), même $\\lambda$ (à $\\lambda_{\\max}$), et même réglage du zéro sur le solvant (le « blanc »). Changer un paramètre entre la calibration et l'inconnue rend la comparaison invalide : c'est l'erreur à éviter."
     }
   ]
 }

@@ -124,6 +124,116 @@
       ],
       "reponse": 2,
       "explication": "Ce qui est **fixe** ($60$ €) s'ajoute une seule fois ; ce qui **varie** ($12$ € par personne) se multiplie par le nombre de personnes : $P(p) = 60 + 12p$, et $P(15) = 60 + 180 = 240$ €. Le $72p$ additionne les deux nombres du tarif avant de multiplier — les $60$ € seraient alors payés $15$ fois. Le $60p + 12$ échange les rôles du fixe et du variable. Le $12p$ oublie purement et simplement les frais fixes : contrôle-le toujours avec $p = 0$, où le prix doit valoir $60$ €."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "programme-de-calcul",
+      "enonce": "Programme : « Choisis un nombre. Multiplie-le par $2$. Ajoute $7$. » Que renvoie ce programme pour le nombre $3$ ?",
+      "choix": ["$20$", "$13$", "$17$", "$11$"],
+      "reponse": 1,
+      "explication": "On exécute les étapes **dans l'ordre** : $3 \\times 2 = 6$, puis $6 + 7 = 13$. Le $20$ vient de l'ordre inversé ($3 + 7 = 10$ puis $\\times 2$) : chaque étape travaille sur le résultat de la précédente, jamais sur le nombre de départ."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "notation-fonctionnelle",
+      "enonce": "Le prix de $n$ séances est $P(n) = 5 + 2n$. Combien vaut $P(0)$ ?",
+      "choix": ["$0$", "$5$", "$7$", "$2$"],
+      "reponse": 1,
+      "explication": "$P(0) = 5 + 2 \\times 0 = 5$ : sans aucune séance, on paie quand même l'abonnement de $5$ €. Le piège est de croire que $P(0) = 0$ : la valeur de la variable est nulle, mais la partie **fixe** de la formule, elle, ne disparaît pas."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "notation-fonctionnelle",
+      "enonce": "Que signifie l'écriture $P(3)$ ?",
+      "choix": [
+        "Le produit $P \\times 3$",
+        "La valeur obtenue pour $n = 3$",
+        "La fonction $P$ elle-même",
+        "$3$ fois la variable $n$"
+      ],
+      "reponse": 1,
+      "explication": "$P(3)$ est le résultat obtenu **pour** $n = 3$ : les parenthèses indiquent quelle valeur on donne à la variable, ce n'est **pas** une multiplication. Écrire $P(3) = P \\times 3$ est l'erreur numéro un sur cette notation."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "programme-de-calcul-variable",
+      "enonce": "Programme : « Choisis un nombre. Ajoute $5$. Multiplie par $3$. » Quelle expression obtient-on en l'appliquant au nombre $x$ ?",
+      "choix": ["$3x + 5$", "$3x + 8$", "$3x + 15$", "$x + 15$"],
+      "reponse": 2,
+      "explication": "Après l'étape « ajoute $5$ » on a $x + 5$ ; on multiplie **ce résultat entier** par $3$ : $3 \\times (x + 5) = 3x + 15$. L'oubli des parenthèses donne $3x + 5$, l'erreur la plus fréquente. Contrôle avec $x = 2$ : le programme donne $2 + 5 = 7$ puis $\\times 3 = 21$, et $3 \\times 2 + 15 = 21$ ✓."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "remonter-programme",
+      "enonce": "Programme : « Choisis un nombre. Multiplie par $4$. Ajoute $2$. » Il renvoie $30$. Quel était le nombre de départ ?",
+      "choix": ["$7$", "$128$", "$122$", "$8$"],
+      "reponse": 0,
+      "explication": "On remonte de la dernière étape vers la première en inversant chaque opération : $30 - 2 = 28$, puis $28 \\div 4 = 7$. Vérification à l'endroit : $7 \\times 4 + 2 = 30$ ✓. Le $128$ applique le programme à $30$ au lieu de le remonter ; le $122$ garde la multiplication au lieu de diviser."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "formule-litterale",
+      "enonce": "Un taxi facture $3$ € de prise en charge, puis $1{,}50$ € par kilomètre. Quelle formule donne le prix $C$ pour $d$ kilomètres, et quel est le prix pour $10$ km ?",
+      "choix": [
+        "$C(d) = 3 + 1{,}5\\,d$, soit $18$ € pour $10$ km",
+        "$C(d) = 4{,}5\\,d$, soit $45$ € pour $10$ km",
+        "$C(d) = 3d + 1{,}5$, soit $31{,}5$ € pour $10$ km",
+        "$C(d) = 1{,}5\\,d$, soit $15$ € pour $10$ km"
+      ],
+      "reponse": 0,
+      "explication": "Ce qui est **fixe** ($3$ €) s'ajoute une seule fois ; ce qui **varie** ($1{,}50$ € par km) se multiplie par la distance : $C(d) = 3 + 1{,}5\\,d$, et $C(10) = 3 + 15 = 18$ €. Le $4{,}5d$ additionne les deux nombres du tarif avant de multiplier ; le $1{,}5d$ oublie la prise en charge — contrôle avec $d = 0$, où le prix doit valoir $3$ €."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "graphique",
+      "enonce": "On représente le prix $P(n) = 5 + 2n$ de la piscine pour $n = 0, 1, 2, 3, 4$ séances. Comment traite-t-on les points obtenus ?",
+      "choix": [
+        "On les relie, car ils sont alignés",
+        "On ne les relie pas : un nombre de séances comme $2{,}5$ n'existe pas",
+        "Les points ne sont pas alignés, on trace une courbe",
+        "On relie seulement les deux points extrêmes"
+      ],
+      "reponse": 1,
+      "explication": "Les points $(0\\,;5), (1\\,;7), (2\\,;9), (3\\,;11), (4\\,;13)$ sont bien **alignés**, mais on ne les **relie pas** : un nombre de séances est entier, $2{,}5$ séances n'a pas de sens. On obtient un **nuage de points**. On ne relierait que si les valeurs intermédiaires existaient, comme pour une longueur."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "pieges-de-calcul",
+      "enonce": "Programme : « Choisis un nombre. Multiplie-le par lui-même. » Que renvoie-t-il pour le nombre $-3$ ?",
+      "choix": ["$-9$", "$9$", "$-6$", "$6$"],
+      "reponse": 1,
+      "explication": "« Multiplier par lui-même » donne $(-3) \\times (-3)$. Deux facteurs négatifs : le produit est **positif**, $9$. Le piège $-9$ oublie la règle des signes ; le piège $-6$ additionne au lieu de multiplier. Le carré d'un nombre négatif est toujours positif."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "notation-fonctionnelle",
+      "enonce": "Le programme A donne l'expression $R(x) = 3x + 4$. Combien vaut $R(-4)$ ?",
+      "choix": ["$-16$", "$-8$", "$8$", "$16$"],
+      "reponse": 1,
+      "explication": "On substitue $x = -4$ avec des parenthèses : $R(-4) = 3 \\times (-4) + 4 = -12 + 4 = -8$. Le piège $-16$ oublie d'ajouter $4$ ; les valeurs positives viennent d'un signe perdu sur $3 \\times (-4)$. Substituer un relatif sans parenthèses est l'erreur à éviter."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "pieges-de-calcul",
+      "enonce": "Les programmes « multiplie par $3$, puis ajoute $4$ » et « multiplie par $2$, puis ajoute $4$ » donnent tous deux $4$ pour le nombre $0$. Peut-on en conclure qu'ils sont identiques ?",
+      "choix": [
+        "Oui, puisqu'ils donnent le même résultat pour $0$",
+        "Non : il faut comparer les expressions réduites $3x + 4$ et $2x + 4$, qui diffèrent",
+        "Oui, ils donnent le même résultat pour tout nombre",
+        "Non, ils ne donnent jamais le même résultat"
+      ],
+      "reponse": 1,
+      "explication": "Un seul essai ne prouve rien : ici les deux programmes coïncident **uniquement** pour $x = 0$. Leurs expressions réduites, $3x + 4$ et $2x + 4$, sont différentes, donc les programmes diffèrent dès que $x \\neq 0$ (pour $x = 1$ : $7$ contre $6$). Seule la comparaison des expressions littérales tranche."
     }
   ]
 }

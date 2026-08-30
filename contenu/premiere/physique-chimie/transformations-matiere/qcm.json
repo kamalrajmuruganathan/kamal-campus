@@ -149,6 +149,146 @@
    ],
    "reponse": 1,
    "explication": "Une réaction **exothermique libère** de l'énergie vers le milieu, dont la température s'élève. Une réaction endothermique en absorbe et refroidit le milieu — c'est le principe des poches de froid instantané."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "avancement",
+   "enonce": "Dans un tableau d'avancement, comment évolue la quantité d'un produit ?",
+   "choix": [
+    "Elle diminue selon $-cx$",
+    "Elle augmente selon $+cx$",
+    "Elle reste constante",
+    "Elle vaut toujours $x$"
+   ],
+   "reponse": 1,
+   "explication": "Les **produits apparaissent** : leur quantité augmente de $cx$, avec un signe $+$, où $c$ est le nombre stœchiométrique du produit. Ce sont les **réactifs** qui diminuent, avec un signe $-$. Inverser les deux signes est l'erreur la plus fréquente dans un tableau."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "beer-lambert",
+   "enonce": "Dans la loi de Beer-Lambert $A = \\varepsilon \\ell c$, l'absorbance $A$ est :",
+   "choix": [
+    "exprimée en mol·L⁻¹",
+    "exprimée en cm⁻¹",
+    "sans unité",
+    "exprimée en grammes"
+   ],
+   "reponse": 2,
+   "explication": "L'absorbance est une grandeur **sans unité** : c'est un rapport d'intensités lumineuses. Le produit $\\varepsilon \\times \\ell \\times c$ est donc lui aussi sans dimension, ce qui fixe l'unité du coefficient $\\varepsilon$. Confondre $A$ avec une concentration est le piège de lecture classique."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "suivi-transformation",
+   "enonce": "Quelle méthode permet de suivre une transformation en mesurant l'**absorbance** de la solution ?",
+   "choix": [
+    "La pH-métrie",
+    "La conductimétrie",
+    "La spectrophotométrie",
+    "La distillation"
+   ],
+   "reponse": 2,
+   "explication": "La **spectrophotométrie** mesure l'absorbance, reliée à la concentration par la loi de Beer-Lambert. La conductimétrie mesure la conductivité (si des ions sont présents), la pH-métrie mesure l'acidité. Chaque méthode suit une grandeur différente : il faut la choisir selon l'espèce à doser."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "reactif-limitant",
+   "enonce": "Pour $2\\,\\mathrm{A} + \\mathrm{B} \\rightarrow \\mathrm{C}$, on a $n_\\mathrm{A} = 5$ mol et $n_\\mathrm{B} = 4$ mol. Quel est le réactif limitant ?",
+   "choix": [
+    "$\\mathrm{B}$, car il y en a moins",
+    "$\\mathrm{A}$",
+    "Aucun, c'est stœchiométrique",
+    "$\\mathrm{C}$"
+   ],
+   "reponse": 1,
+   "explication": "On compare $\\dfrac{n_\\mathrm{A}}{2} = 2{,}5$ et $\\dfrac{n_\\mathrm{B}}{1} = 4$. Le minimum est $2{,}5$, atteint pour $\\mathrm{A}$ : c'est le **limitant**, bien qu'il soit plus abondant que $\\mathrm{B}$ en moles. **Il faut toujours diviser par le nombre stœchiométrique** avant de comparer."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "avancement-maximal",
+   "enonce": "Pour $\\mathrm{A} + 2\\,\\mathrm{B} \\rightarrow \\mathrm{C}$ avec $n_\\mathrm{A} = 3$ mol et $n_\\mathrm{B} = 4$ mol, quelle est la valeur de l'avancement maximal $x_{\\max}$ ?",
+   "choix": [
+    "$3$ mol",
+    "$2$ mol",
+    "$4$ mol",
+    "$1$ mol"
+   ],
+   "reponse": 1,
+   "explication": "$x_{\\max} = \\min\\left(\\dfrac{n_\\mathrm{A}}{1}\\,;\\dfrac{n_\\mathrm{B}}{2}\\right) = \\min(3\\,;2) = 2$ mol. C'est $\\mathrm{B}$ qui donne ce minimum : il est le réactif limitant. Prendre $3$ mol reviendrait à oublier de diviser $n_\\mathrm{B}$ par son nombre stœchiométrique $2$."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "titrage",
+   "enonce": "On titre $25{,}0$ mL d'une solution par une solution à $0{,}20$ mol·L⁻¹. L'équivalence est atteinte pour $10{,}0$ mL versés (réaction $1:1$). Quelle est la concentration cherchée ?",
+   "choix": [
+    "$0{,}50$ mol·L⁻¹",
+    "$0{,}080$ mol·L⁻¹",
+    "$0{,}20$ mol·L⁻¹",
+    "$0{,}050$ mol·L⁻¹"
+   ],
+   "reponse": 1,
+   "explication": "$c_\\mathrm{A} = \\dfrac{c_\\mathrm{B}V_{\\mathrm{B},\\text{éq}}}{V_\\mathrm{A}} = \\dfrac{0{,}20 \\times 10{,}0}{25{,}0} = 0{,}080$ mol·L⁻¹. Le piège est d'inverser les volumes au numérateur et au dénominateur, ce qui donnerait $0{,}50$ mol·L⁻¹. Cette relation simple n'est valable que parce que les nombres stœchiométriques valent $1$."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "spectrophotometrie",
+   "enonce": "On divise par $3$ la concentration d'une solution colorée. Que devient son absorbance, à trajet optique constant ?",
+   "choix": [
+    "Elle est inchangée",
+    "Elle est divisée par $3$",
+    "Elle est multipliée par $3$",
+    "Elle est divisée par $9$"
+   ],
+   "reponse": 1,
+   "explication": "$A = \\varepsilon \\ell c$ : l'absorbance est **proportionnelle** à la concentration. Diviser $c$ par $3$ divise $A$ par $3$. Le choix « divisée par $9$ » suppose à tort une dépendance au carré, qui n'existe pas dans la loi de Beer-Lambert."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "melange-stoechiometrique",
+   "enonce": "Pour la réaction $2\\,\\mathrm{A} + 3\\,\\mathrm{B} \\rightarrow \\mathrm{C}$, on introduit $n_\\mathrm{A} = 4$ mol. Quelle quantité de $\\mathrm{B}$ faut-il pour réaliser un mélange **stœchiométrique** ?",
+   "choix": [
+    "$4$ mol",
+    "$6$ mol",
+    "$8$ mol",
+    "$2$ mol"
+   ],
+   "reponse": 1,
+   "explication": "Un mélange est stœchiométrique quand $\\dfrac{n_\\mathrm{A}}{2} = \\dfrac{n_\\mathrm{B}}{3}$, soit $\\dfrac{4}{2} = 2 = \\dfrac{n_\\mathrm{B}}{3}$, d'où $n_\\mathrm{B} = 6$ mol. Le piège est de prendre $n_\\mathrm{B} = n_\\mathrm{A}$ ou de ne pas tenir compte des nombres stœchiométriques : les deux réactifs doivent s'épuiser **simultanément**."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "energie-molaire",
+   "enonce": "Une réaction **absorbe** $3{,}0$ kJ pour $0{,}25$ mol de réactif consommé. Quelle est son énergie molaire, et de quel type est la réaction ?",
+   "choix": [
+    "$0{,}75$ kJ·mol⁻¹, exothermique",
+    "$12$ kJ·mol⁻¹, endothermique",
+    "$3{,}0$ kJ·mol⁻¹, endothermique",
+    "$0{,}083$ kJ·mol⁻¹, exothermique"
+   ],
+   "reponse": 1,
+   "explication": "On rapporte l'énergie à une mole : $\\dfrac{3{,}0}{0{,}25} = 12$ kJ·mol⁻¹. La réaction **absorbe** de l'énergie : elle est **endothermique**. Le piège est de multiplier au lieu de diviser ($0{,}75$), et d'oublier que « absorbe » signifie endothermique, pas exothermique."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "avancement",
+   "enonce": "Pour $2\\,\\mathrm{H_2} + \\mathrm{O_2} \\rightarrow 2\\,\\mathrm{H_2O}$, on part de $n_{\\mathrm{H_2}} = 5$ mol et $n_{\\mathrm{O_2}} = 2$ mol. Quelle quantité d'eau se forme au maximum ?",
+   "choix": [
+    "$5$ mol",
+    "$4$ mol",
+    "$2$ mol",
+    "$2{,}5$ mol"
+   ],
+   "reponse": 1,
+   "explication": "On cherche d'abord le limitant : $\\dfrac{n_{\\mathrm{H_2}}}{2} = 2{,}5$ et $\\dfrac{n_{\\mathrm{O_2}}}{1} = 2$, donc $\\mathrm{O_2}$ limite et $x_{\\max} = 2$ mol. L'eau étant formée avec le nombre stœchiométrique $2$ : $n_{\\mathrm{H_2O}} = 2x_{\\max} = 4$ mol. Le piège est d'oublier le facteur $2$ (on répondrait $2$) ou de prendre $\\mathrm{H_2}$ pour limitant."
   }
  ]
 }

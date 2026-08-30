@@ -18,11 +18,18 @@ import {
 
 test('pointsQuestion suit la table de difficulté', () => {
   assert.equal(pointsQuestion('facile'), 8);
+  assert.equal(pointsQuestion('moyen'), 11);
+  assert.equal(pointsQuestion('difficile'), 14);
   assert.equal(pointsQuestion('application'), 10);
   assert.equal(pointsQuestion('intermediaire'), 12);
   assert.equal(pointsQuestion('approfondissement'), 14);
   assert.equal(pointsQuestion('bac'), 18);
   assert.equal(pointsQuestion('brevet'), 18);
+});
+
+test('les étiquettes de QCM (facile/moyen/difficile) sont ordonnées', () => {
+  assert.ok(pointsQuestion('facile') < pointsQuestion('moyen'));
+  assert.ok(pointsQuestion('moyen') < pointsQuestion('difficile'));
 });
 
 test('pointsQuestion tombe sur la valeur par défaut si difficulté inconnue ou absente', () => {

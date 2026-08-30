@@ -71,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "denominateur-commun",
       "enonce": "Quel est le plus petit dénominateur commun à $\\dfrac{1}{12}$ et $\\dfrac{1}{18}$ ?",
-      "choix": ["$216$", "$30$", "$72$", "$36$"],
+      "choix": [
+        "$216$",
+        "$30$",
+        "$72$",
+        "$36$"
+      ],
       "reponse": 3,
       "explication": "$12 = 2^2 \\times 3$ et $18 = 2 \\times 3^2$ : il faut assez de $2$ pour $12$ et assez de $3$ pour $18$, soit $2^2 \\times 3^2 = 36$. Le choix A est le **produit** $12 \\times 18$ : il marche toujours, mais il oblige à simplifier ensuite. Le choix B **additionne** les dénominateurs, ce qui ne donne pas un multiple commun ($30$ n'est même pas divisible par $12$)."
     },
@@ -80,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "nombres-premiers",
       "enonce": "Lequel de ces nombres n'est **pas** un nombre premier ?",
-      "choix": ["$53$", "$71$", "$83$", "$91$"],
+      "choix": [
+        "$53$",
+        "$71$",
+        "$83$",
+        "$91$"
+      ],
       "reponse": 3,
       "explication": "$91 = 7 \\times 13$. Le piège est de tester seulement $2$, $3$ et $5$ : $91$ est impair, sa somme des chiffres vaut $10$ (pas multiple de $3$) et il ne finit ni par $0$ ni par $5$. Beaucoup s'arrêtent là et le déclarent premier — il faut **continuer avec $7$**, puis $11$, puis $13$."
     },
@@ -103,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "factorisation",
       "enonce": "Un nombre se décompose en $2^2 \\times 3 \\times 7$. Lequel de ces nombres n'est **pas** un de ses diviseurs ?",
-      "choix": ["$14$", "$21$", "$8$", "$6$"],
+      "choix": [
+        "$14$",
+        "$21$",
+        "$8$",
+        "$6$"
+      ],
       "reponse": 2,
       "explication": "Les diviseurs se lisent dans la décomposition : $14 = 2 \\times 7$ ✓, $21 = 3 \\times 7$ ✓, $6 = 2 \\times 3$ ✓. Mais $8 = 2^3$ réclame **trois** facteurs $2$, alors que la décomposition n'en contient que **deux**. Le piège : voir que le nombre est pair et en conclure qu'il est divisible par $8$ — c'est l'exposant du $2$ qui décide."
     },
@@ -126,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "problemes-multiples",
       "enonce": "Deux roues dentées engrenées ont l'une $12$ dents, l'autre $18$ dents. Après combien de dents défilées retrouvent-elles leur position de départ ?",
-      "choix": ["$6$ dents", "$36$ dents", "$216$ dents", "$30$ dents"],
+      "choix": [
+        "$6$ dents",
+        "$36$ dents",
+        "$216$ dents",
+        "$30$ dents"
+      ],
       "reponse": 1,
       "explication": "Il faut un nombre de dents qui soit un multiple **des deux** nombres, et le plus petit : $36$, soit $3$ tours de la petite roue et $2$ tours de la grande. Le choix A donne le plus grand diviseur commun, pas un multiple — c'est la confusion classique. Le choix C, le produit $12 \\times 18 = 216$, est bien une position de départ — mais la sixième, pas la première."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "On sait que $63 = 7 \\times 9$. Quelle affirmation est correcte ?",
+      "choix": [
+        "$63$ est un multiple de $7$",
+        "$7$ est un multiple de $63$",
+        "$63$ est un diviseur de $7$",
+        "$9$ est un multiple de $63$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $63 = 7 \\times 9$, $63$ est un **multiple** de $7$ (et de $9$), et $7$ est un **diviseur** de $63$. Repère anti-confusion : entre entiers positifs, le multiple est le **plus grand**. $7$ ne peut pas être un multiple de $63$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "critere-divisibilite",
+      "enonce": "Par lesquels de ces nombres $2\\,025$ est-il divisible ?",
+      "choix": [
+        "$9$ et $5$",
+        "$2$ et $5$",
+        "$2$ seulement",
+        "$9$ et $2$"
+      ],
+      "reponse": 0,
+      "explication": "$2\\,025$ est impair : **pas** divisible par $2$. Sa somme des chiffres vaut $2+0+2+5 = 9$, multiple de $9$ : divisible par $9$ (et $3$). Il finit par $5$ : divisible par $5$. Donc par $9$ et $5$. Le piège est de croire qu'il est pair."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "nombres-premiers",
+      "enonce": "Lequel de ces nombres est un **nombre premier** ?",
+      "choix": [
+        "$17$",
+        "$1$",
+        "$51$",
+        "$91$"
+      ],
+      "reponse": 0,
+      "explication": "$17$ n'a que deux diviseurs, $1$ et lui-même : il est premier. $1$ n'est **pas** premier (un seul diviseur). $51 = 3 \\times 17$ et $91 = 7 \\times 13$ ne sont pas premiers, même s'ils en ont l'air."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "decomposition",
+      "enonce": "Quelle est la décomposition de $60$ en produit de facteurs **premiers** ?",
+      "choix": [
+        "$2^2 \\times 3 \\times 5$",
+        "$2 \\times 30$",
+        "$2^2 \\times 15$",
+        "$6 \\times 10$"
+      ],
+      "reponse": 0,
+      "explication": "$60 = 2 \\times 2 \\times 3 \\times 5 = 2^2 \\times 3 \\times 5$. Les autres écritures sont des produits corrects **en valeur**, mais incomplets : $15$, $30$, $6$ et $10$ ne sont pas premiers, ils se cassent encore. On ne s'arrête qu'à des facteurs premiers."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "decomposition",
+      "enonce": "Quelle est la décomposition en facteurs premiers de $2\\,025$ ?",
+      "choix": [
+        "$3^4 \\times 5^2$",
+        "$3^2 \\times 5^4$",
+        "$3^4 \\times 5$",
+        "$3^5 \\times 5^2$"
+      ],
+      "reponse": 0,
+      "explication": "$2\\,025 \\div 3 = 675$, $\\div 3 = 225$, $\\div 3 = 75$, $\\div 3 = 25 = 5^2$ : quatre fois $3$ et deux fois $5$, donc $3^4 \\times 5^2$. Contrôle : $81 \\times 25 = 2\\,025$ ✓. Le piège $3^2 \\times 5^4$ échange les exposants."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "simplification",
+      "enonce": "Simplifier la fraction $\\dfrac{63}{14}$.",
+      "choix": [
+        "$\\dfrac{9}{2}$",
+        "$\\dfrac{7}{2}$",
+        "$\\dfrac{9}{7}$",
+        "elle est déjà irréductible"
+      ],
+      "reponse": 0,
+      "explication": "$63 = 7 \\times 9$ et $14 = 7 \\times 2$ : on barre les $7$ et on garde l'**autre** facteur, soit $\\dfrac{9}{2}$. Le piège $\\dfrac{7}{2}$ garde le facteur barré au lieu de ce qui reste. Une fraction simplifiée peut valoir plus de $1$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "simplification",
+      "enonce": "Rendre irréductible la fraction $\\dfrac{84}{126}$.",
+      "choix": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{42}{63}$",
+        "$\\dfrac{14}{21}$",
+        "$\\dfrac{4}{6}$"
+      ],
+      "reponse": 0,
+      "explication": "$84 = 2^2 \\times 3 \\times 7$ et $126 = 2 \\times 3^2 \\times 7$ : facteurs communs $2 \\times 3 \\times 7 = 42$, donc $\\dfrac{84}{126} = \\dfrac{2}{3}$. Les autres réponses sont des étapes intermédiaires **non terminées** : il reste un facteur commun à retirer."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "denominateur-commun",
+      "enonce": "Calculer $\\dfrac{1}{12} + \\dfrac{1}{18}$.",
+      "choix": [
+        "$\\dfrac{5}{36}$",
+        "$\\dfrac{2}{30}$",
+        "$\\dfrac{5}{216}$",
+        "$\\dfrac{2}{36}$"
+      ],
+      "reponse": 0,
+      "explication": "$12 = 2^2 \\times 3$ et $18 = 2 \\times 3^2$ : un dénominateur commun est $2^2 \\times 3^2 = 36$. Alors $\\dfrac{3}{36} + \\dfrac{2}{36} = \\dfrac{5}{36}$. Le piège $\\dfrac{2}{30}$ additionne numérateurs **et** dénominateurs, ce qui est faux."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "diviseurs",
+      "enonce": "Sachant que $84 = 2^2 \\times 3 \\times 7$, lequel de ces nombres n'est **pas** un diviseur de $84$ ?",
+      "choix": [
+        "$8$",
+        "$14$",
+        "$21$",
+        "$6$"
+      ],
+      "reponse": 0,
+      "explication": "Un diviseur se lit dans la décomposition. $6 = 2 \\times 3$ ✓, $14 = 2 \\times 7$ ✓, $21 = 3 \\times 7$ ✓. Mais $8 = 2^3$ exigerait **trois** facteurs $2$, or $84$ n'en contient que **deux** : $8$ n'est pas un diviseur de $84$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "nombres-premiers",
+      "enonce": "Le nombre $91$ est-il premier ?",
+      "choix": [
+        "Non, $91 = 7 \\times 13$",
+        "Oui, car ni $2$, ni $3$, ni $5$ ne le divisent",
+        "Oui, il n'a que deux diviseurs",
+        "Non, car $91$ est divisible par $3$"
+      ],
+      "reponse": 0,
+      "explication": "$91$ n'est divisible ni par $2$, ni par $3$ (somme $10$), ni par $5$ — mais il **faut continuer avec $7$** : $91 = 7 \\times 13$, donc il n'est **pas** premier. Le piège est de s'arrêter après $5$ et de le déclarer premier (proposition 2, l'erreur classique)."
     }
   ]
 }

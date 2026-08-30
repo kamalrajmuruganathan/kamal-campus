@@ -129,6 +129,101 @@
       ],
       "reponse": 0,
       "explication": "On multiplie **d'abord**, on ajoute ou on retire **ensuite** : $3x + 5$ d'un côté, $5x - 7$ de l'autre. Ajouter des parenthèses inverserait l'ordre des opérations et changerait complètement le problème. « Retirer $7$ » donne bien $-7$, pas $+7$. La résolution donne ensuite $12 = 2x$, soit $x = 6$ : on vérifie que $3 \\times 6 + 5 = 23$ et $5 \\times 6 - 7 = 23$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "automatismes",
+      "enonce": "Combien vaut $3x \\times 2x$ ?",
+      "choix": ["$5x$", "$6x$", "$6x^2$", "$5x^2$"],
+      "reponse": 2,
+      "explication": "En **multipliant**, les nombres se multiplient ($3 \\times 2 = 6$) **et** les lettres aussi ($x \\times x = x^2$) : on obtient $6x^2$. Le piège est la confusion avec l'addition : $3x + 2x = 5x$, où le $x$ reste un $x$. Compare toujours les deux opérations avant de répondre."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "traduction",
+      "enonce": "Comment s'écrit « le double du successeur de $x$ » ?",
+      "choix": ["$2x + 1$", "$2(x + 1)$", "$2x$", "$x + 2$"],
+      "reponse": 1,
+      "explication": "Le successeur de $x$ est $x + 1$ ; son double est $2 \\times (x+1) = 2(x+1)$. La parenthèse est **obligatoire** : sans elle, $2x + 1$ désigne le *successeur du double*, ce qui n'est pas la même chose. C'est le piège classique de traduction."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "valeur-expression",
+      "enonce": "Quelle est la valeur de l'expression $5x + 4$ pour $x = -3$ ?",
+      "choix": ["$-11$", "$11$", "$-19$", "$1$"],
+      "reponse": 0,
+      "explication": "On remplace $x$ par $-3$ en respectant les priorités : $5 \\times (-3) + 4 = -15 + 4 = -11$. Le piège est le signe : $5 \\times (-3)$ vaut $-15$, pas $+15$. Le résultat $1$ vient d'un calcul $-15 + 4$ mal signé, et $-19$ d'un $-15 - 4$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "distributivite",
+      "enonce": "Développe $5(2x - 3)$.",
+      "choix": ["$10x - 3$", "$10x - 15$", "$7x - 15$", "$10x + 15$"],
+      "reponse": 1,
+      "explication": "Le facteur $5$ multiplie **les deux termes** de la parenthèse : $5 \\times 2x = 10x$ et $5 \\times (-3) = -15$, donc $10x - 15$. Le piège $10x - 3$ oublie de multiplier le second terme ; le piège $7x - 15$ additionne $5$ et $2$ au lieu de les multiplier."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "factorisation",
+      "enonce": "Factorise $x^2 + 7x$.",
+      "choix": ["$7x(x + 1)$", "$x(x + 7)$", "$x(x + 7x)$", "$x^2(1 + 7)$"],
+      "reponse": 1,
+      "explication": "Le facteur commun est la lettre $x$ : $x^2 = x \\times x$ et $7x = x \\times 7$, donc $x^2 + 7x = x(x + 7)$. Contrôle imparable : redéveloppe, $x \\times x + x \\times 7 = x^2 + 7x$ ✓. Le piège $x(x + 7x)$ n'a pas terminé de sortir le facteur du second terme."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "formules",
+      "enonce": "Pour $k$ entier, quelle expression représente **toujours** un nombre impair ?",
+      "choix": ["$2k$", "$3k$", "$2k + 1$", "$k + 2$"],
+      "reponse": 2,
+      "explication": "$2k$ est le double d'un entier : c'est toujours **pair**. Lui ajouter $1$ donne le nombre impair juste après : $2k + 1$. Pour $k = 0, 1, 2, 3$, on obtient $1, 3, 5, 7$, tous impairs. Le piège $3k$ n'est pas toujours impair ($3 \\times 2 = 6$ est pair)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "equation-premier-degre",
+      "enonce": "Résous $6x + 4 = 22$.",
+      "choix": ["$4{,}33$", "$3$", "$-3$", "$18$"],
+      "reponse": 1,
+      "explication": "On enlève $4$ aux deux membres : $6x = 22 - 4 = 18$, puis on divise par $6$ : $x = \\dfrac{18}{6} = 3$. Vérification : $6 \\times 3 + 4 = 22$ ✓. Le piège $4{,}33$ divise $22$ par $6$ sans enlever d'abord le $4$ ; le piège $18$ s'arrête avant la division."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "mise-en-equation",
+      "enonce": "L'abonnement A coûte $10$ € plus $2$ € par séance ; l'abonnement B coûte $4$ € plus $5$ € par séance. Pour combien de séances les deux abonnements coûtent-ils le même prix ?",
+      "choix": ["$3$", "$2$", "$6$", "$4{,}67$"],
+      "reponse": 1,
+      "explication": "On pose $10 + 2x = 4 + 5x$. On rassemble les $x$ d'un côté : $10 - 4 = 5x - 2x$, soit $6 = 3x$, donc $x = 2$. Vérification : $10 + 2 \\times 2 = 14$ et $4 + 5 \\times 2 = 14$ ✓. Le piège est d'additionner les termes en $x$ ($2x + 5x$) au lieu de les soustraire quand l'un change de membre."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "cas-particuliers",
+      "enonce": "Combien de solutions a l'équation $2x + 3 = 2x + 5$ ?",
+      "choix": ["une seule solution, $x = 1$", "aucune solution", "une infinité de solutions", "$x = 4$"],
+      "reponse": 1,
+      "explication": "En enlevant $2x$ aux deux membres, les $x$ **disparaissent** et il reste $3 = 5$, ce qui est faux : l'équation n'a **aucune solution**. Le piège est de croire qu'une équation a forcément une solution ; ici l'égalité est impossible quel que soit $x$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "demonstration",
+      "enonce": "La somme de deux nombres impairs est-elle paire ou impaire, et pourquoi ?",
+      "choix": [
+        "Paire, car $(2k+1) + (2k'+1) = 2(k + k' + 1)$",
+        "Impaire, car chaque nombre se termine par $+1$",
+        "Paire seulement lorsque $k = k'$",
+        "On ne peut pas le savoir sans connaître les nombres"
+      ],
+      "reponse": 0,
+      "explication": "Deux impairs s'écrivent $2k + 1$ et $2k' + 1$ (deux lettres, car ce sont deux nombres différents). Leur somme vaut $2k + 2k' + 2 = 2(k + k' + 1)$ : c'est le **double** d'un entier, donc un nombre **pair**, et cela pour *tous* les entiers. La factorisation par $2$ est le cœur de la preuve — sans elle, on ne voit rien."
     }
   ]
 }

@@ -124,6 +124,111 @@
       "choix": ["chimique", "cinétique", "thermique", "électrique"],
       "reponse": 1,
       "explication": "Le volant tourne : il stocke de l'énergie **cinétique**, qu'il pourra restituer lors de l'accélération suivante. Sans ce dispositif, cette énergie serait dissipée en chaleur dans les plaquettes — donc perdue."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "formes-energie",
+      "enonce": "Sous quelle forme une batterie stocke-t-elle de l'énergie ?",
+      "choix": ["électrique", "chimique", "thermique", "cinétique"],
+      "reponse": 1,
+      "explication": "Une batterie ou un accumulateur stocke de l'énergie **chimique** (liaisons entre atomes), qu'elle reconvertit en énergie électrique à la décharge. Le condensateur, lui, stocke de l'énergie électrique."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "unites",
+      "enonce": "Le joule (J) est l'unité SI :",
+      "choix": ["de puissance", "d'énergie", "de tension", "de résistance"],
+      "reponse": 1,
+      "explication": "Le **joule** mesure une énergie. La puissance se mesure en watts (W), la tension en volts (V), la résistance en ohms ($\\Omega$). Confondre le joule et le watt est l'erreur la plus fréquente du chapitre."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "puissance-electrique",
+      "enonce": "Quelle relation donne la puissance électrique reçue par un dipôle ?",
+      "choix": [
+        "$P = U \\times I$",
+        "$P = \\dfrac{U}{I}$",
+        "$P = U + I$",
+        "$P = \\dfrac{I}{U}$"
+      ],
+      "reponse": 0,
+      "explication": "$P = U \\times I$ : le produit de la tension par l'intensité. En combinant avec la loi d'Ohm $U = RI$, on retrouve d'ailleurs $P = RI^2$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "calcul-energie",
+      "enonce": "Une facture indique une consommation de $4$ kWh. Combien cela fait-il de joules ?",
+      "choix": [
+        "$1{,}44 \\times 10^{7}$ J",
+        "$4\\,000$ J",
+        "$3{,}6 \\times 10^{6}$ J",
+        "$1{,}44 \\times 10^{4}$ J"
+      ],
+      "reponse": 0,
+      "explication": "$1$ kWh $= 3{,}6 \\times 10^6$ J, donc $4$ kWh $= 4 \\times 3{,}6 \\times 10^6 = 1{,}44 \\times 10^7$ J. Le choix $4\\,000$ J confond le kWh avec un simple millier de joules."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "rendement",
+      "enonce": "Un panneau photovoltaïque reçoit $1\\,000$ W de rayonnement et fournit $180$ W électriques. Quel est son rendement ?",
+      "choix": ["$0{,}18$", "$5{,}6$", "$0{,}82$", "$180$"],
+      "reponse": 0,
+      "explication": "$\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{fournie}}} = \\dfrac{180}{1000} = 0{,}18$, soit $18\\,\\%$ — cohérent avec les $15$ à $22\\,\\%$ typiques. Le choix $0{,}82$ calcule la part perdue, pas le rendement."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "effet-joule",
+      "enonce": "Dans une résistance, on double l'intensité qui la traverse. La puissance dissipée par effet Joule est :",
+      "choix": ["doublée", "multipliée par $4$", "inchangée", "divisée par $2$"],
+      "reponse": 1,
+      "explication": "$P_\\mathrm{J} = RI^2$ dépend du **carré** de l'intensité : doubler $I$ multiplie la puissance par $2^2 = 4$. C'est toute la raison du transport à haute tension, où l'intensité est faible."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "conversion",
+      "enonce": "Un moteur électrique réalise une conversion :",
+      "choix": [
+        "photoélectrique",
+        "électromécanique",
+        "électrochimique",
+        "thermodynamique"
+      ],
+      "reponse": 1,
+      "explication": "Il convertit l'énergie **électrique** en énergie **mécanique** : c'est une conversion électromécanique (comme l'alternateur en sens inverse). Un panneau solaire est photoélectrique, une pile électrochimique."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "effet-joule",
+      "enonce": "Une résistance de $10\\ \\Omega$ est parcourue par une intensité de $3$ A. Quelle est la puissance dissipée par effet Joule ?",
+      "choix": ["$90$ W", "$30$ W", "$300$ W", "$900$ W"],
+      "reponse": 0,
+      "explication": "$P_\\mathrm{J} = RI^2 = 10 \\times 3^2 = 10 \\times 9 = 90$ W. Le choix $30$ W applique par erreur $RI = 10 \\times 3$, en oubliant le carré sur l'intensité."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "chaine-rendement",
+      "enonce": "Une chaîne comporte trois convertisseurs de rendements $0{,}9$, $0{,}9$ et $0{,}5$. Quel est le rendement global ?",
+      "choix": ["$0{,}405$", "$0{,}77$", "$2{,}3$", "$0{,}5$"],
+      "reponse": 0,
+      "explication": "On multiplie : $0{,}9 \\times 0{,}9 \\times 0{,}5 = 0{,}405$, soit environ $41\\,\\%$. Le maillon le plus faible ($0{,}5$) plafonne l'ensemble. En faire la moyenne ($0{,}77$) serait une erreur classique."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "calcul-energie",
+      "enonce": "Un radiateur consomme $1{,}8$ MJ en $30$ minutes. Quelle est sa puissance moyenne ?",
+      "choix": ["$1$ kW", "$60$ kW", "$1\\,000$ kW", "$0{,}5$ kW"],
+      "reponse": 0,
+      "explication": "$P = \\dfrac{E}{\\Delta t} = \\dfrac{1{,}8 \\times 10^6}{1800} = 1000$ W $= 1$ kW (avec $30$ min $= 1800$ s). Oublier de convertir les minutes en secondes donnerait un résultat $60$ fois trop grand."
     }
   ]
 }

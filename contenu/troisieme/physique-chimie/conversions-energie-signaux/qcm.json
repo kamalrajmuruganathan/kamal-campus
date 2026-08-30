@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Pour obtenir des joules, la durée doit être en **secondes** : $t = 2{,}0$ h $= 2{,}0 \\times 3600 = 7200$ s. Alors $E = 60 \\times 7200 = 4{,}32 \\times 10^{5}$ J. Le choix $120$ J multiplie $60 \\times 2$ sans convertir les heures : c'est l'erreur d'unité la plus fréquente."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "convertisseurs",
+      "enonce": "Quelle transformation réalise une cellule photovoltaïque ?",
+      "choix": [
+        "Énergie mécanique → énergie électrique",
+        "Énergie chimique → énergie électrique",
+        "Énergie lumineuse → énergie électrique",
+        "Énergie électrique → énergie lumineuse"
+      ],
+      "reponse": 2,
+      "explication": "Une cellule photovoltaïque transforme la **lumière** (énergie rayonnante) directement en **électricité**. Le piège est de la confondre avec l'alternateur, qui part d'un **mouvement** (énergie mécanique), ou avec une lampe, qui fait l'inverse (électrique → lumineuse)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "energie-puissance-duree",
+      "enonce": "Quelle est l'unité d'énergie dans le système international ?",
+      "choix": [
+        "Le watt (W)",
+        "Le joule (J)",
+        "Le kilowattheure (kWh)",
+        "La seconde (s)"
+      ],
+      "reponse": 1,
+      "explication": "L'énergie se mesure en **joules (J)** dans le système international. Le piège est de choisir le **watt**, qui est l'unité de **puissance** ($1\\ \\text{W} = 1\\ \\text{J/s}$) ; le kilowattheure est bien une énergie, mais c'est l'unité « de facture », pas l'unité SI."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "conservation-bilan",
+      "enonce": "Que dit le principe de conservation de l'énergie ?",
+      "choix": [
+        "L'énergie peut être créée par un convertisseur",
+        "L'énergie ne se crée pas et ne se détruit pas : elle se transforme et se transfère",
+        "L'énergie disparaît peu à peu avec le temps",
+        "L'énergie augmente à chaque conversion"
+      ],
+      "reponse": 1,
+      "explication": "La quantité totale d'énergie se **conserve** : un convertisseur la transforme sans jamais en fabriquer ni en supprimer. Le piège est de croire qu'un appareil « crée » de l'énergie, ou qu'elle « disparaît » : l'énergie dissipée (souvent en chaleur) n'est pas perdue pour l'Univers, seulement pour l'usage voulu."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "rendement",
+      "enonce": "Le rendement d'un appareil peut-il valoir $120\\,\\%$ ?",
+      "choix": [
+        "Oui, si l'appareil est très performant",
+        "Non, c'est impossible : il y a toujours des pertes, donc le rendement est inférieur à $100\\,\\%$",
+        "Oui, uniquement pour un moteur électrique",
+        "Oui, à condition de fonctionner longtemps"
+      ],
+      "reponse": 1,
+      "explication": "Le rendement $\\eta = \\dfrac{E_{\\text{utile}}}{E_{\\text{reçue}}}$ est **toujours inférieur à 1** ($100\\,\\%$), car une part de l'énergie reçue est toujours dissipée. Trouver $\\eta > 100\\,\\%$ reviendrait à créer de l'énergie : c'est le signe qu'on a **inversé la fraction**."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "kilowattheure",
+      "enonce": "À combien de joules correspond $1$ kilowattheure ($1$ kWh) ?",
+      "choix": [
+        "$3{,}6 \\times 10^{6}$ J",
+        "$1000$ J",
+        "$3600$ J",
+        "$3{,}6 \\times 10^{3}$ J"
+      ],
+      "reponse": 0,
+      "explication": "$1\\ \\text{kWh} = 1000\\ \\text{W} \\times 3600\\ \\text{s} = 3{,}6 \\times 10^{6}$ J ($= 3{,}6$ MJ). Le piège est de ne convertir qu'une seule des deux grandeurs : $1000$ J (kW oublié en heures) ou $3600$ J (heure convertie mais pas les kW)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "chaine-energie",
+      "enonce": "Sur une chaîne d'énergie, une partie de l'énergie « fuit » sur le côté à chaque étape. De quelle forme s'agit-il le plus souvent ?",
+      "choix": [
+        "De l'énergie électrique",
+        "De l'énergie lumineuse",
+        "De la chaleur (énergie thermique)",
+        "De l'énergie mécanique"
+      ],
+      "reponse": 2,
+      "explication": "L'énergie perdue est presque toujours dissipée sous forme de **chaleur** (énergie thermique), à cause des frottements. Elle n'est pas détruite (l'énergie se conserve), mais elle part sous une forme **non voulue**, d'où la flèche qui fuit sur le côté."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "telemetrie",
+      "enonce": "Tu cries face à une falaise ($v = 340$ m·s⁻¹ dans l'air). L'écho te revient $\\Delta t = 2{,}0$ s plus tard. À quelle distance se trouve la falaise ?",
+      "choix": [
+        "$680$ m",
+        "$340$ m",
+        "$170$ m",
+        "$1360$ m"
+      ],
+      "reponse": 1,
+      "explication": "Pendant $\\Delta t$, le son fait l'**aller-retour** : il parcourt $v \\times \\Delta t = 340 \\times 2{,}0 = 680$ m au total. La falaise n'est qu'à un seul trajet : $d = \\dfrac{680}{2} = 340$ m. Le piège numéro un est d'oublier le facteur $\\div 2$ et d'annoncer $680$ m."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "annee-lumiere",
+      "enonce": "On observe une étoile située à $100$ années-lumière de la Terre. On la voit telle qu'elle était...",
+      "choix": [
+        "dans $100$ ans",
+        "il y a $100$ ans",
+        "au moment présent",
+        "il y a $100$ secondes"
+      ],
+      "reponse": 1,
+      "explication": "La lumière voyage vite mais **pas instantanément** : à $100$ années-lumière, sa lumière a mis **100 ans** à nous parvenir. On voit donc l'étoile telle qu'elle était il y a $100$ ans. Observer loin, c'est regarder dans le **passé**."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "ressources-renouvelables",
+      "enonce": "Le nucléaire n'émet presque pas de CO₂. Pourquoi dit-on pourtant que l'uranium n'est **pas** une ressource renouvelable ?",
+      "choix": [
+        "Parce qu'il coûte cher à extraire",
+        "Parce que son stock s'épuise et ne se reconstitue pas à l'échelle humaine",
+        "Parce qu'il rejette beaucoup de CO₂ dans l'atmosphère",
+        "Parce qu'il fournit très peu d'énergie"
+      ],
+      "reponse": 1,
+      "explication": "« Renouvelable » signifie « qui ne s'épuise pas à notre échelle » : l'uranium, dont le stock met des temps géologiques à se former, **s'épuise**, il n'est donc pas renouvelable. Le piège est de confondre « renouvelable » et « propre » : une ressource peu polluante en CO₂ peut très bien ne pas être renouvelable."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "energie-puissance-duree",
+      "enonce": "Un appareil transfère une énergie $E = 18\\,000$ J en une durée $t = 60$ s. Quelle est sa puissance ?",
+      "choix": [
+        "$1\\,080\\,000$ W",
+        "$300$ W",
+        "$0{,}0033$ W",
+        "$18\\,060$ W"
+      ],
+      "reponse": 1,
+      "explication": "De $E = P \\times t$ on tire $P = \\dfrac{E}{t} = \\dfrac{18\\,000}{60} = 300$ W. Le piège est de **multiplier** ($18\\,000 \\times 60$) au lieu de diviser, ou d'inverser le calcul ($60 \\div 18\\,000$). Contrôle : $300$ W pendant $60$ s redonnent bien $18\\,000$ J."
     }
   ]
 }

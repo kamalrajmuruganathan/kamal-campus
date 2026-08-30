@@ -149,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "Il faut d'abord **convertir** : $1$ mm $= 10^{-3}$ m. On divise ensuite : $\\dfrac{10^{-3}}{2 \\times 10^{-7}} = 0{,}5 \\times 10^{-3-(-7)} = 0{,}5 \\times 10^{4} = 5 \\times 10^{3}$, soit $5\\,000$ virus. Deux pièges cumulés : oublier la conversion mm $\\to$ m, et laisser $0{,}5 \\times 10^{4}$ (mantisse non renormalisée) — corriger $0{,}5$ en $5$ fait baisser l'exposant de $4$ à $3$. Un **nombre** de virus ne peut pas être négatif ni inférieur à 1, ce qui élimine les exposants négatifs."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "exposant-negatif",
+      "enonce": "Combien vaut $5^{-2}$ ?",
+      "choix": [
+        "$0{,}04$",
+        "$-25$",
+        "$-0{,}04$",
+        "$-10$"
+      ],
+      "reponse": 0,
+      "explication": "$5^{-2} = \\dfrac{1}{5^2} = \\dfrac{1}{25} = 0{,}04$. Le piège central du chapitre : un exposant négatif donne l'**inverse**, pas un nombre négatif. Le résultat $0{,}04$ est positif. $-25$ confond exposant négatif et opposé, $-10$ multiplie la base par l'exposant."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "notation-scientifique",
+      "enonce": "Quelle est la notation scientifique de $4\\,500\\,000$ ?",
+      "choix": [
+        "$4{,}5 \\times 10^{6}$",
+        "$45 \\times 10^{5}$",
+        "$4{,}5 \\times 10^{7}$",
+        "$0{,}45 \\times 10^{7}$"
+      ],
+      "reponse": 0,
+      "explication": "On place la virgule après le premier chiffre non nul ($4{,}5$) et on compte les rangs parcourus : la virgule recule de $6$ rangs, donc $10^{6}$. $45 \\times 10^{5}$ et $0{,}45 \\times 10^{7}$ valent bien $4\\,500\\,000$ mais leur mantisse ne respecte pas $1 \\leqslant a < 10$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "produit-puissances",
+      "enonce": "Écris $3^{2} \\times 3^{4}$ sous la forme d'une seule puissance.",
+      "choix": [
+        "$3^{6}$",
+        "$3^{8}$",
+        "$9^{6}$",
+        "$3^{2}$"
+      ],
+      "reponse": 0,
+      "explication": "Même base, produit : on **additionne** les exposants, $2 + 4 = 6$. Le piège $3^{8}$ vient de multiplier les exposants ; $9^{6}$ multiplie aussi la base (on ne touche **pas** à la base $3$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "quotient-meme-exposant",
+      "enonce": "Combien vaut $\\dfrac{12^{3}}{4^{3}}$ ?",
+      "choix": [
+        "$27$",
+        "$3$",
+        "$9$",
+        "$3^{6}$"
+      ],
+      "reponse": 0,
+      "explication": "Même exposant : $\\dfrac{a^n}{b^n} = \\left(\\dfrac{a}{b}\\right)^n$, donc $\\dfrac{12^{3}}{4^{3}} = \\left(\\dfrac{12}{4}\\right)^{3} = 3^{3} = 27$ — bien plus rapide que $1728 \\div 64$. Le piège est d'oublier de garder l'exposant : $\\dfrac{12}{4} = 3$ n'est que la base, il faut encore l'élever au cube."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "ecriture-decimale",
+      "enonce": "Quelle est l'écriture décimale de $3{,}5 \\times 10^{-4}$ ?",
+      "choix": [
+        "$0{,}00035$",
+        "$0{,}0035$",
+        "$35\\,000$",
+        "$-0{,}00035$"
+      ],
+      "reponse": 0,
+      "explication": "Multiplier par $10^{-4}$ décale la virgule de $4$ rangs vers la **gauche** : $3{,}5 \\to 0{,}00035$. Le piège $0{,}0035$ ne décale que de $3$ rangs (on compte les rangs, pas autre chose) ; $-0{,}00035$ confond exposant négatif et nombre négatif."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "prefixes-unites",
+      "enonce": "Un fichier occupe $5$ Go. Combien cela fait-il d'octets, sachant que giga $= 10^{9}$ ?",
+      "choix": [
+        "$5 \\times 10^{9}$ octets",
+        "$5 \\times 10^{6}$ octets",
+        "$5 \\times 10^{-9}$ octets",
+        "$5 \\times 10^{3}$ octets"
+      ],
+      "reponse": 0,
+      "explication": "Le préfixe giga vaut $10^{9}$, donc $5$ Go $= 5 \\times 10^{9}$ octets. Le piège est de confondre les préfixes : $10^{6}$ est **méga** et $10^{3}$ **kilo**. Un préfixe « grand » comme giga donne un exposant **positif**, jamais $10^{-9}$ (qui est nano)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "reduire-expression",
+      "enonce": "Réduis $\\dfrac{2^{7} \\times 2^{-3}}{2^{2}}$ à une seule puissance de $2$.",
+      "choix": [
+        "$2^{2}$",
+        "$2^{6}$",
+        "$2^{12}$",
+        "$2^{-2}$"
+      ],
+      "reponse": 0,
+      "explication": "On additionne au numérateur ($7 + (-3) = 4$), puis on soustrait le dénominateur ($4 - 2 = 2$), d'où $2^{2}$. Le piège $2^{6}$ oublie le signe du $-3$ ($7 + 3 - ...$) ; $2^{-2}$ soustrait tout au lieu d'additionner le $-3$. On applique $+$ pour un produit et $-$ pour un quotient, sur les exposants."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "base-negative",
+      "enonce": "Combien vaut $(-2)^{-2}$ ?",
+      "choix": [
+        "$\\dfrac{1}{4}$",
+        "$-\\dfrac{1}{4}$",
+        "$-4$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "On applique l'exposant négatif : $(-2)^{-2} = \\dfrac{1}{(-2)^{2}} = \\dfrac{1}{4}$. L'exposant $2$ est **pair**, donc $(-2)^2 = 4$ est positif, et l'inverse aussi. Double piège : l'exposant négatif ne rend pas le résultat négatif, et une base négative élevée à une puissance paire redevient positive. $(-2)^{-3}$, lui, serait négatif ($-\\dfrac{1}{8}$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "La Terre a une masse d'environ $6 \\times 10^{24}$ kg et la Lune $7{,}2 \\times 10^{22}$ kg. Environ combien de fois la Terre est-elle plus lourde que la Lune ?",
+      "choix": [
+        "$\\approx 83$ fois",
+        "$\\approx 830$ fois",
+        "$\\approx 8{,}3$ fois",
+        "$\\approx 0{,}83$ fois"
+      ],
+      "reponse": 0,
+      "explication": "On sépare mantisses et puissances : $\\dfrac{6 \\times 10^{24}}{7{,}2 \\times 10^{22}} = \\dfrac{6}{7{,}2} \\times 10^{24-22} = 0{,}833 \\times 10^{2} = 83{,}3$, soit environ $83$ fois. Le piège est de traiter les exposants sans soigner la mantisse ($0{,}83$ oublie le facteur $10^{2}$, $830$ le compte deux fois)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "problemes-notation-scientifique",
+      "enonce": "Donne la notation scientifique de $\\dfrac{2 \\times 10^{4}}{8 \\times 10^{-3}}$.",
+      "choix": [
+        "$2{,}5 \\times 10^{6}$",
+        "$0{,}25 \\times 10^{7}$",
+        "$2{,}5 \\times 10^{7}$",
+        "$4 \\times 10^{6}$"
+      ],
+      "reponse": 0,
+      "explication": "Séparément : $\\dfrac{2}{8} = 0{,}25$ et $\\dfrac{10^{4}}{10^{-3}} = 10^{4-(-3)} = 10^{7}$, soit $0{,}25 \\times 10^{7}$. Mais $0{,}25$ n'est pas entre $1$ et $10$ : on **renormalise** en $2{,}5 \\times 10^{-1}$, d'où $2{,}5 \\times 10^{6}$. S'arrêter à $0{,}25 \\times 10^{7}$ est le piège de fin d'exercice ; $4 \\times 10^{6}$ divise $8$ par $2$ à l'envers."
     }
   ]
 }

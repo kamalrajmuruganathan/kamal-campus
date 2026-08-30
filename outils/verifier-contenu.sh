@@ -57,7 +57,7 @@ for fiche in "$RACINE"/*/*/*/fiche.md; do
   fi
 
   n=$(jq '.questions | length' "$qcm")
-  [ "$n" -eq 10 ] || signaler "$dossier/qcm.json : $n questions au lieu de 10"
+  { [ "$n" -ge 10 ] && [ "$n" -le 40 ]; } || signaler "$dossier/qcm.json : $n questions (attendu entre 10 et 40)"
   questions=$((questions + n))
 
   mauvais_choix=$(jq '[.questions[] | select((.choix|length) != 4)] | length' "$qcm")
@@ -70,7 +70,8 @@ for fiche in "$RACINE"/*/*/*/fiche.md; do
   [ "$sans_expl" -eq 0 ] || signaler "$dossier/qcm.json : $sans_expl explication(s) vide(s)"
 
   ids=$(jq -c '[.questions[].id] | sort' "$qcm")
-  [ "$ids" = "[1,2,3,4,5,6,7,8,9,10]" ] || signaler "$dossier/qcm.json : ids des questions = $ids"
+  attendus="[$(seq -s, 1 "$n")]"
+  [ "$ids" = "$attendus" ] || signaler "$dossier/qcm.json : ids des questions = $ids (attendu $attendus)"
 
   doublons=$(jq '[.questions[] | select((.choix | unique | length) != (.choix | length))] | length' "$qcm")
   [ "$doublons" -eq 0 ] || signaler "$dossier/qcm.json : $doublons question(s) avec des choix en double"

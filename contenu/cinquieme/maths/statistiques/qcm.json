@@ -119,6 +119,101 @@
    "choix": ["$0{,}07$", "$0{,}28$", "$7\\ \\%$", "$0{,}18$"],
    "reponse": 1,
    "explication": "La somme des effectifs vaut l'effectif total : $8 + 10 + x = 25$, donc $x = 7$. La fréquence est alors $\\dfrac{7}{25} = 0{,}28$, soit $28\\ \\%$. Le piège est de confondre l'**effectif** $7$ avec la **fréquence** : répondre $0{,}07$ ou $7\\ \\%$, c'est recopier l'effectif sans le diviser par le total."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "vocabulaire",
+   "enonce": "Une enquête porte sur $30$ élèves d'une classe. Que représente ce nombre $30$ ?",
+   "choix": ["l'effectif d'une valeur", "l'effectif total", "la fréquence", "la moyenne"],
+   "reponse": 1,
+   "explication": "Le nombre de données recueillies en tout est l'**effectif total**. L'effectif d'une valeur ne concerne qu'une seule modalité (par exemple le nombre d'élèves ayant eu $12$). Le piège est de confondre le total avec un effectif partiel."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "frequences",
+   "enonce": "Sur $25$ personnes, $10$ ont les yeux marron. Quelle est la fréquence, en pourcentage ?",
+   "choix": ["$10\\ \\%$", "$25\\ \\%$", "$40\\ \\%$", "$4\\ \\%$"],
+   "reponse": 2,
+   "explication": "La fréquence vaut $\\dfrac{10}{25} = 0{,}4$, soit $40\\ \\%$. On divise l'effectif par l'effectif total, puis on multiplie par $100$. Répondre $10\\ \\%$ revient à recopier l'effectif sans le rapporter au total."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "controle",
+   "enonce": "Un tableau d'effectifs donne : $4$, $5$, $7$ et $4$. Quel est l'effectif total ?",
+   "choix": ["$16$", "$20$", "$4$", "$7$"],
+   "reponse": 1,
+   "explication": "L'effectif total est la somme des effectifs : $4 + 5 + 7 + 4 = 20$. C'est le contrôle systématique d'un tableau. Le piège $16$ vient d'un oubli d'un des effectifs dans l'addition."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "moyenne",
+   "enonce": "Une série donne : valeur $2$ (effectif $3$), valeur $5$ (effectif $2$). Quelle est la moyenne ?",
+   "choix": ["$3{,}2$", "$3{,}5$", "$7$", "$4$"],
+   "reponse": 0,
+   "explication": "On pondère par les effectifs : $\\dfrac{2 \\times 3 + 5 \\times 2}{3 + 2} = \\dfrac{6 + 10}{5} = \\dfrac{16}{5} = 3{,}2$. Le piège est de faire $\\dfrac{2 + 5}{2} = 3{,}5$, c'est-à-dire ignorer que $2$ apparaît $3$ fois : on divise toujours par l'effectif total."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "diagramme-circulaire",
+   "enonce": "Dans un diagramme circulaire, une valeur a pour fréquence $0{,}25$. Quel angle lui correspond ?",
+   "choix": ["$25°$", "$90°$", "$100°$", "$72°$"],
+   "reponse": 1,
+   "explication": "L'angle vaut fréquence $\\times 360° = 0{,}25 \\times 360 = 90°$. Le piège est de raisonner sur $100$ au lieu de $360$ et de répondre $25°$."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "choix-representation",
+   "enonce": "On veut montrer l'évolution de la température d'une ville heure par heure au cours d'une journée. Quelle représentation est la plus adaptée ?",
+   "choix": [
+    "un diagramme circulaire",
+    "un graphique cartésien",
+    "un tableau d'effectifs",
+    "un diagramme en barres des fréquences"
+   ],
+   "reponse": 1,
+   "explication": "Le **graphique cartésien** est fait pour montrer une **évolution** dans le temps : les points se suivent le long de l'axe des heures. Le diagramme circulaire sert à montrer une répartition, non une évolution."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "frequences",
+   "enonce": "Une valeur a un effectif de $9$ dans une série de $20$ données. Quelle est sa fréquence sous forme décimale ?",
+   "choix": ["$0{,}45$", "$0{,}09$", "$0{,}9$", "$9$"],
+   "reponse": 0,
+   "explication": "$\\dfrac{9}{20} = 0{,}45$. Le piège est de placer l'effectif directement après la virgule ($0{,}09$) sans effectuer la division par l'effectif total."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "diagramme-circulaire",
+   "enonce": "Sur $20$ élèves, $8$ choisissent l'option latin. Quel angle représente cette part sur un diagramme circulaire ?",
+   "choix": ["$144°$", "$8°$", "$40°$", "$160°$"],
+   "reponse": 0,
+   "explication": "La fréquence vaut $\\dfrac{8}{20} = 0{,}4$, donc l'angle est $0{,}4 \\times 360 = 144°$. Le piège est de calculer $\\dfrac{8}{20} \\times 100 = 40$ (le pourcentage) et de l'écrire en degrés : le tour complet vaut $360°$, pas $100°$."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "effectifs-manquants",
+   "enonce": "Une série de $40$ données a trois valeurs d'effectifs $15$, $12$ et $x$. Quel est l'effectif $x$ ?",
+   "choix": ["$13$", "$27$", "$3$", "$40$"],
+   "reponse": 0,
+   "explication": "La somme des effectifs vaut l'effectif total : $15 + 12 + x = 40$, donc $x = 40 - 27 = 13$. Le piège $27$ est la somme des deux effectifs connus, pas le manquant."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "interpretation-moyenne",
+   "enonce": "La moyenne des notes d'un élève est $12$ sur $6$ devoirs. Quelle est la somme de ses notes ?",
+   "choix": ["$2$", "$18$", "$72$", "$6$"],
+   "reponse": 2,
+   "explication": "La moyenne est la somme des valeurs divisée par l'effectif total, donc la somme vaut moyenne $\\times$ effectif $= 12 \\times 6 = 72$. Le piège est de diviser ($12 \\div 6 = 2$) au lieu de multiplier pour retrouver la somme totale."
   }
  ]
 }

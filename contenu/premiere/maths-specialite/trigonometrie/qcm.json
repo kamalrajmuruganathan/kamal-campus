@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "radian",
       "enonce": "À combien de radians correspond un angle de $90°$ ?",
-      "choix": ["$\\pi$", "$\\dfrac{\\pi}{2}$", "$\\dfrac{\\pi}{4}$", "$2\\pi$"],
+      "choix": [
+        "$\\pi$",
+        "$\\dfrac{\\pi}{2}$",
+        "$\\dfrac{\\pi}{4}$",
+        "$2\\pi$"
+      ],
       "reponse": 1,
       "explication": "$\\pi$ radians valent $180°$, donc $90°$ correspond à la moitié : $\\dfrac{\\pi}{2}$. La conversion générale est $\\text{rad} = \\text{deg} \\times \\dfrac{\\pi}{180}$."
     },
@@ -38,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "relation-fondamentale",
       "enonce": "Si $\\cos x = \\dfrac{3}{5}$ et $\\sin x > 0$, que vaut $\\sin x$ ?",
-      "choix": ["$\\dfrac{4}{5}$", "$-\\dfrac{4}{5}$", "$\\dfrac{2}{5}$", "$\\dfrac{16}{25}$"],
+      "choix": [
+        "$\\dfrac{4}{5}$",
+        "$-\\dfrac{4}{5}$",
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{16}{25}$"
+      ],
       "reponse": 0,
       "explication": "$\\cos^2 x + \\sin^2 x = 1$ donne $\\sin^2 x = 1 - \\dfrac{9}{25} = \\dfrac{16}{25}$, donc $\\sin x = \\pm\\dfrac{4}{5}$. La condition $\\sin x > 0$ tranche : $\\dfrac{4}{5}$. Le choix $\\frac{16}{25}$ oublie de prendre la racine."
     },
@@ -61,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "periodicite",
       "enonce": "Que vaut $\\cos\\left(x + 4\\pi\\right)$ ?",
-      "choix": ["$-\\cos x$", "$\\cos x$", "$\\sin x$", "$\\cos x + 4\\pi$"],
+      "choix": [
+        "$-\\cos x$",
+        "$\\cos x$",
+        "$\\sin x$",
+        "$\\cos x + 4\\pi$"
+      ],
       "reponse": 1,
       "explication": "$4\\pi = 2 \\times 2\\pi$ correspond à deux tours complets du cercle : on revient exactement au même point. Donc $\\cos(x + 2k\\pi) = \\cos x$ pour tout entier $k$."
     },
@@ -70,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "angles-associes",
       "enonce": "Que vaut $\\sin(-x)$ ?",
-      "choix": ["$\\sin x$", "$-\\sin x$", "$\\cos x$", "$-\\cos x$"],
+      "choix": [
+        "$\\sin x$",
+        "$-\\sin x$",
+        "$\\cos x$",
+        "$-\\cos x$"
+      ],
       "reponse": 1,
       "explication": "$-x$ correspond au symétrique par rapport à l'axe des abscisses : l'abscisse est conservée, l'ordonnée change de signe. Donc $\\cos(-x) = \\cos x$ (fonction **paire**) et $\\sin(-x) = -\\sin x$ (fonction **impaire**)."
     },
@@ -93,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "encadrement",
       "enonce": "Combien l'équation $\\cos x = 1{,}5$ admet-elle de solutions réelles ?",
-      "choix": ["Une", "Deux", "Aucune", "Une infinité"],
+      "choix": [
+        "Une",
+        "Deux",
+        "Aucune",
+        "Une infinité"
+      ],
       "reponse": 2,
       "explication": "Le point associé est sur le cercle de rayon $1$ : son abscisse est nécessairement comprise entre $-1$ et $1$. Aucun réel n'a un cosinus égal à $1{,}5$. Réflexe : vérifier l'encadrement **avant** de chercher à résoudre."
     },
@@ -124,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "$\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{1}{2}\\right)^2 = \\dfrac{1}{4} + \\dfrac{1}{4} = \\dfrac{1}{2} \\neq 1$ : la relation fondamentale est violée, c'est donc impossible. En $\\frac{\\pi}{4}$, cosinus et sinus sont bien égaux, mais ils valent $\\dfrac{\\sqrt{2}}{2}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "radian",
+      "enonce": "À combien de radians correspond un angle de $60°$ ?",
+      "choix": [
+        "$\\dfrac{\\pi}{3}$",
+        "$\\dfrac{\\pi}{6}$",
+        "$\\dfrac{\\pi}{4}$",
+        "$\\dfrac{2\\pi}{3}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\text{rad} = \\text{deg}\\times\\dfrac{\\pi}{180} = 60\\times\\dfrac{\\pi}{180} = \\dfrac{\\pi}{3}$. Le piège est de confondre avec $\\dfrac{\\pi}{6}$, qui correspond à $30°$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "valeurs-remarquables",
+      "enonce": "Que vaut $\\sin\\left(\\dfrac{\\pi}{6}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{\\sqrt{2}}{2}$",
+        "$0$"
+      ],
+      "reponse": 0,
+      "explication": "$\\sin\\left(\\frac{\\pi}{6}\\right) = \\dfrac{1}{2}$. Piège classique : intervertir avec $\\cos\\left(\\frac{\\pi}{6}\\right) = \\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "encadrement",
+      "enonce": "Parmi ces valeurs, laquelle NE peut PAS être un cosinus d'un réel ?",
+      "choix": [
+        "$-\\dfrac{1}{2}$",
+        "$0$",
+        "$1{,}2$",
+        "$0{,}9$"
+      ],
+      "reponse": 2,
+      "explication": "Le cosinus reste toujours dans l'intervalle $[-1\\,;1]$. La valeur $1{,}2$ dépasse $1$ : impossible. Réflexe : vérifier l'encadrement avant tout."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "radian",
+      "enonce": "À combien de degrés correspond un angle de $\\dfrac{3\\pi}{4}$ radians ?",
+      "choix": [
+        "$120°$",
+        "$135°$",
+        "$150°$",
+        "$45°$"
+      ],
+      "reponse": 1,
+      "explication": "$\\text{deg} = \\text{rad}\\times\\dfrac{180}{\\pi} = \\dfrac{3\\pi}{4}\\times\\dfrac{180}{\\pi} = \\dfrac{3\\times180}{4} = 135°$. Le piège est d'oublier de multiplier par $3$ et de répondre $45°$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "La fonction cosinus est-elle paire ou impaire, et pourquoi ?",
+      "choix": [
+        "Impaire, car $\\cos(-x) = -\\cos x$",
+        "Paire, car $\\cos(-x) = \\cos x$",
+        "Ni paire ni impaire",
+        "Paire, car $\\cos(\\pi-x)=\\cos x$"
+      ],
+      "reponse": 1,
+      "explication": "Le point associé à $-x$ est le symétrique de celui de $x$ par rapport à l'axe des abscisses : l'abscisse (le cosinus) est conservée. Donc $\\cos(-x)=\\cos x$ : cosinus est **paire**. Piège : sinus, lui, est impaire."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "angles-associes",
+      "enonce": "Que vaut $\\sin\\left(\\pi - x\\right)$ ?",
+      "choix": [
+        "$-\\sin x$",
+        "$\\sin x$",
+        "$\\cos x$",
+        "$-\\cos x$"
+      ],
+      "reponse": 1,
+      "explication": "$\\pi - x$ est le symétrique de $x$ par rapport à l'axe des ordonnées : l'ordonnée (le sinus) est conservée, seule l'abscisse change de signe. Donc $\\sin(\\pi-x)=\\sin x$ mais $\\cos(\\pi-x)=-\\cos x$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "relation-fondamentale",
+      "enonce": "Si $\\sin x = \\dfrac{5}{13}$ et $\\cos x < 0$, que vaut $\\cos x$ ?",
+      "choix": [
+        "$\\dfrac{12}{13}$",
+        "$-\\dfrac{12}{13}$",
+        "$-\\dfrac{8}{13}$",
+        "$\\dfrac{144}{169}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\cos^2 x = 1 - \\dfrac{25}{169} = \\dfrac{144}{169}$, donc $\\cos x = \\pm\\dfrac{12}{13}$. La condition $\\cos x < 0$ impose $-\\dfrac{12}{13}$. Piège : oublier le signe négatif ou ne pas prendre la racine."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "angles-associes",
+      "enonce": "Que vaut $\\sin\\left(\\dfrac{7\\pi}{6}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{1}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$-\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\dfrac{7\\pi}{6} = \\pi + \\dfrac{\\pi}{6}$. Or $\\sin(\\pi+x) = -\\sin x$, donc le résultat vaut $-\\sin\\left(\\frac{\\pi}{6}\\right) = -\\dfrac{1}{2}$. Contrôle : le point est dans le troisième quadrant, où l'ordonnée est négative."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "periodicite",
+      "enonce": "Que vaut $\\cos\\left(\\dfrac{13\\pi}{6}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{1}{2}$",
+        "$-\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{\\sqrt{2}}{2}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\dfrac{13\\pi}{6} = \\dfrac{\\pi}{6} + 2\\pi$ : un tour complet ramène au même point. Donc $\\cos\\left(\\frac{13\\pi}{6}\\right)=\\cos\\left(\\frac{\\pi}{6}\\right)=\\dfrac{\\sqrt{3}}{2}$. Piège : oublier de retrancher $2\\pi$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "relation-fondamentale",
+      "enonce": "Un élève affirme que $\\cos x = 0{,}6$ et $\\sin x = 0{,}8$ sont compatibles. A-t-il raison ?",
+      "choix": [
+        "Non, car la somme $0{,}6+0{,}8 \\neq 1$",
+        "Oui, car $0{,}6^2 + 0{,}8^2 = 1$",
+        "Non, car un cosinus ne peut valoir $0{,}6$",
+        "Oui, car $0{,}6 < 0{,}8$"
+      ],
+      "reponse": 1,
+      "explication": "La relation fondamentale porte sur les **carrés** : $0{,}6^2 + 0{,}8^2 = 0{,}36 + 0{,}64 = 1$. C'est donc compatible. Piège : vérifier $\\cos x + \\sin x = 1$ au lieu de $\\cos^2 x + \\sin^2 x = 1$."
     }
   ]
 }

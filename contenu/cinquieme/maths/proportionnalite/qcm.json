@@ -119,6 +119,101 @@
       "choix": ["$24$", "$30$", "$2{,}4$", "$240$"],
       "reponse": 0,
       "explication": "$10\\,\\%$ de $80$ vaut $8$, donc $30\\,\\%$ en vaut trois fois plus : $24$. Passer par $10\\,\\%$ est souvent plus rapide et plus sûr que de multiplier par $0{,}30$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "coefficient",
+      "enonce": "$5$ kg de pommes coûtent $10$ €. Quel est le coefficient de proportionnalité (prix par kilo) ?",
+      "choix": ["$5$", "$2$", "$50$", "$15$"],
+      "reponse": 1,
+      "explication": "On divise le prix par la masse : $10 \\div 5 = 2$. Chaque kilo coûte $2$ €. Le piège est d'**inverser** le coefficient en calculant $5 \\div 10 = 0{,}5$ ou de le confondre avec une des données."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "pourcentage",
+      "enonce": "Combien vaut $50\\,\\%$ de $60$ ?",
+      "choix": ["$30$", "$50$", "$6$", "$120$"],
+      "reponse": 0,
+      "explication": "Prendre $50\\,\\%$, c'est **diviser par $2$** : $60 \\div 2 = 30$. Le piège est de croire que $50\\,\\%$ vaut toujours $50$ : un pourcentage porte sur une base, ici $60$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "coefficient",
+      "enonce": "Le coefficient de proportionnalité entre une masse (kg) et un prix (€) est $4$. Combien coûtent $6$ kg ?",
+      "choix": ["$10$ €", "$24$ €", "$1{,}5$ €", "$46$ €"],
+      "reponse": 1,
+      "explication": "Avec le coefficient, on **multiplie** : $6 \\times 4 = 24$ €. Le piège est d'ajouter ($6 + 4 = 10$) ou de diviser ($6 \\div 4 = 1{,}5$) au lieu de multiplier."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "tableau",
+      "enonce": "Ce tableau est-il proportionnel ? Durée (h) : $2$ ; $3$ — Distance (km) : $90$ ; $120$",
+      "choix": [
+        "Oui, le coefficient est $45$",
+        "Non, les quotients ne sont pas égaux",
+        "Oui, le coefficient est $40$",
+        "Oui, le coefficient est $30$"
+      ],
+      "reponse": 1,
+      "explication": "On compare les quotients : $90 \\div 2 = 45$ mais $120 \\div 3 = 40$. Ils sont **différents**, donc la situation n'est pas proportionnelle. Le piège est de conclure « oui » sans vérifier le second quotient."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "vitesse",
+      "enonce": "Une voiture roule à vitesse constante et parcourt $120$ km en $2$ h. Quelle distance parcourt-elle en $3$ h ?",
+      "choix": ["$150$ km", "$180$ km", "$240$ km", "$60$ km"],
+      "reponse": 1,
+      "explication": "À vitesse constante, la distance est proportionnelle au temps : $120 \\div 2 = 60$ km/h, puis $60 \\times 3 = 180$ km. Le piège est d'ajouter $120 + 60$ sans passer par la vitesse, ou d'oublier que la proportionnalité n'est valable qu'**à vitesse constante**."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "retour-unite",
+      "enonce": "$4$ cahiers identiques coûtent $10$ €. Combien coûtent $10$ cahiers ?",
+      "choix": ["$16$ €", "$25$ €", "$40$ €", "$2{,}50$ €"],
+      "reponse": 1,
+      "explication": "Retour à l'unité : $10 \\div 4 = 2{,}50$ € par cahier, puis $2{,}50 \\times 10 = 25$ €. Le piège $16$ vient d'ajouter $10 + 6$ ; $2{,}50$ est le prix d'**un seul** cahier, pas de dix."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "linearite",
+      "enonce": "Pour $6$ personnes, il faut $450$ g de riz. Quelle quantité pour $3$ personnes ?",
+      "choix": ["$150$ g", "$225$ g", "$900$ g", "$300$ g"],
+      "reponse": 1,
+      "explication": "$3$ est la **moitié** de $6$ : on divise la quantité par $2$, soit $450 \\div 2 = 225$ g. Le piège est de soustraire $450 - 3$ ou de doubler au lieu de diviser de moitié."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "produit-en-croix",
+      "enonce": "$4$ m de tissu coûtent $22$ €. Combien coûtent $10$ m ?",
+      "choix": ["$52$ €", "$55$ €", "$44$ €", "$8{,}80$ €"],
+      "reponse": 1,
+      "explication": "Produit en croix : $x = \\dfrac{10 \\times 22}{4} = \\dfrac{220}{4} = 55$ €. On peut vérifier par le retour à l'unité : $22 \\div 4 = 5{,}50$ € le mètre, puis $5{,}50 \\times 10 = 55$ €. Le piège $8{,}80$ est le prix de $10 \\div 4$… c'est-à-dire une confusion de l'ordre du calcul."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "echelle",
+      "enonce": "Une carte est à l'échelle $\\dfrac{1}{50\\,000}$. Deux villes sont distantes de $4$ cm sur la carte. Quelle est la distance réelle ?",
+      "choix": ["$2$ km", "$20$ km", "$200$ km", "$0{,}2$ km"],
+      "reponse": 0,
+      "explication": "$1$ cm sur la carte vaut $50\\,000$ cm en réalité, donc $4$ cm valent $200\\,000$ cm. Or $200\\,000$ cm $= 2\\,000$ m $= 2$ km. Le piège est d'oublier de **convertir** les cm en km : $200\\,000$ cm n'est pas $200$ km."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "pourcentage",
+      "enonce": "Un article coûtait $80$ €. Il subit une baisse de $25\\,\\%$. Quel est son nouveau prix ?",
+      "choix": ["$55$ €", "$60$ €", "$20$ €", "$75$ €"],
+      "reponse": 1,
+      "explication": "$25\\,\\%$ de $80$, c'est $80 \\div 4 = 20$ € de baisse, donc le nouveau prix est $80 - 20 = 60$ €. Le piège est de répondre $20$ € (le montant de la réduction, pas le prix final) ou de soustraire $25$ directement de $80$."
     }
   ]
 }

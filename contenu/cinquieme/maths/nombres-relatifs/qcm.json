@@ -109,6 +109,101 @@
       "choix": ["$-10{,}5$ °C", "$+1{,}5$ °C", "$-1{,}5$ °C", "$+7{,}5$ °C"],
       "reponse": 2,
       "explication": "Une hausse s'ajoute, une baisse se soustrait : $-6 + 9 - 4{,}5$. D'abord $-6 + 9 = +3$, puis $3 - 4{,}5 = -1{,}5$. Il fait donc $-1{,}5$ °C — on repasse sous zéro. Le piège est de traiter la baisse comme une addition ($+7{,}5$) ou d'oublier que $3 - 4{,}5$ est négatif ($+1{,}5$)."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quel est l'opposé de $+8$ ?",
+      "choix": ["$+8$", "$-8$", "$0$", "$\\dfrac{1}{8}$"],
+      "reponse": 1,
+      "explication": "Deux nombres opposés ont la même distance à zéro mais des signes contraires : l'opposé de $+8$ est $-8$. Le choix $\\dfrac{1}{8}$ est l'**inverse**, une notion différente."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "valeur-absolue",
+      "enonce": "Quelle est la valeur absolue de $+4$ ?",
+      "choix": ["$-4$", "$4$", "$0$", "$8$"],
+      "reponse": 1,
+      "explication": "La valeur absolue est la **distance à zéro** : elle est toujours positive. $+4$ est à $4$ unités de zéro, donc sa valeur absolue vaut $4$ — comme celle de $-4$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "comparaison",
+      "enonce": "Quel nombre est le plus grand : $+3$ ou $-5$ ?",
+      "choix": ["$-5$", "$+3$", "Ils sont égaux", "On ne peut pas comparer"],
+      "reponse": 1,
+      "explication": "Un nombre positif est **toujours** plus grand qu'un nombre négatif : $+3 > -5$. Sur la droite graduée, $+3$ est à droite de zéro et $-5$ à gauche."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "addition-meme-signe",
+      "enonce": "Combien vaut $(-6) + (-2)$ ?",
+      "choix": ["$-8$", "$+8$", "$-4$", "$+4$"],
+      "reponse": 0,
+      "explication": "Même signe : on **additionne** les valeurs absolues ($6 + 2 = 8$) et on **garde** le signe commun, donc $-8$. Appliquer « moins et moins font plus » ici est une erreur : le résultat est bien négatif."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "addition-signes-contraires",
+      "enonce": "Combien vaut $(+3) + (-8)$ ?",
+      "choix": ["$+11$", "$-5$", "$+5$", "$-11$"],
+      "reponse": 1,
+      "explication": "Signes contraires : on **soustrait** les valeurs absolues ($8 - 3 = 5$) et on garde le signe du plus « fort », ici le $-8$. Résultat : $-5$. Image : j'ai $3$ €, je dépense $8$ € — je dois $5$ €."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "soustraction",
+      "enonce": "Combien vaut $(+6) - (+9)$ ?",
+      "choix": ["$+15$", "$-3$", "$+3$", "$-15$"],
+      "reponse": 1,
+      "explication": "Soustraire, c'est ajouter l'opposé : $(+6) - (+9) = (+6) + (-9)$. Signes contraires, on soustrait les valeurs absolues ($9 - 6 = 3$) et on garde le signe du $-9$, donc $-3$. Seul le **deuxième** nombre change de signe."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "soustraction",
+      "enonce": "Combien vaut $(+5) - (-3)$ ?",
+      "choix": ["$+2$", "$+8$", "$-8$", "$-2$"],
+      "reponse": 1,
+      "explication": "Soustraire, c'est ajouter l'opposé : $(+5) - (-3) = (+5) + (+3) = +8$. L'opposé de $-3$ est $+3$ ; les deux signes moins de « $-(-3)$ » se transforment en un plus. Le piège serait de trouver $+2$ en soustrayant $3$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "enchainement",
+      "enonce": "Combien vaut $(-5) + (+8) - (+3) - (-2)$ ?",
+      "choix": ["$+2$", "$-2$", "$+8$", "$-14$"],
+      "reponse": 0,
+      "explication": "On simplifie l'écriture : $-5 + 8 - 3 + 2$ (attention, $-(-2)$ devient $+2$). On regroupe : positifs $8 + 2 = 10$, négatifs $-5 - 3 = -8$. Total : $(+10) + (-8) = +2$. Oublier le changement de signe devant $(-2)$ donnerait $-2$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "comparaison",
+      "enonce": "Range dans l'ordre croissant : $-4$ ; $+1$ ; $-6$ ; $0$.",
+      "choix": [
+        "$-4 < -6 < 0 < +1$",
+        "$-6 < -4 < 0 < +1$",
+        "$0 < -4 < -6 < +1$",
+        "$+1 < 0 < -4 < -6$"
+      ],
+      "reponse": 1,
+      "explication": "Ordre croissant = de gauche à droite sur la droite graduée : $-6$, puis $-4$, puis $0$, puis $+1$. Le choix A place $-6$ après $-4$, l'erreur classique qui consiste à comparer les valeurs absolues chez les négatifs."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "situation-concrete",
+      "enonce": "Un thermomètre passe de $-3$ °C à $+4$ °C. De combien de degrés la température a-t-elle **augmenté** ?",
+      "choix": ["$1$ °C", "$7$ °C", "$-7$ °C", "$-1$ °C"],
+      "reponse": 1,
+      "explication": "L'écart est $(+4) - (-3) = (+4) + (+3) = +7$ °C. On monte bien de $7$ degrés. Le piège est de faire $4 - 3 = 1$ en oubliant que passer sous zéro ajoute des degrés : de $-3$ à $0$ il y a déjà $3$ °C, puis $4$ de plus jusqu'à $+4$."
     }
   ]
 }

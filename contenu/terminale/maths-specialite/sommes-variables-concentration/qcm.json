@@ -149,6 +149,146 @@
       ],
       "reponse": 3,
       "explication": "On impose $\\dfrac{V}{n\\delta^2}\\leqslant\\alpha$, soit $n\\geqslant\\dfrac{V}{\\alpha\\,\\delta^2}=\\dfrac{2}{0{,}05\\times 0{,}1^2}=\\dfrac{2}{0{,}0005}=4000$. Le piège fréquent est d'oublier le carré sur $\\delta$, ce qui donne $400$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "linearite-esperance",
+      "enonce": "On sait que $E(X)=3$ et $E(Y)=-1$. Combien vaut $E(X+Y)$ ?",
+      "choix": [
+        "$-3$",
+        "$2$",
+        "$3$",
+        "On ne peut pas conclure sans l'indépendance"
+      ],
+      "reponse": 1,
+      "explication": "La linéarité $E(X+Y)=E(X)+E(Y)$ est vraie **sans condition** : $3+(-1)=2$. Le piège est d'exiger l'indépendance (nécessaire seulement pour la variance), ou de multiplier les espérances."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "esperance-multiple",
+      "enonce": "On sait que $E(X)=4$. Combien vaut $E(5X)$ ?",
+      "choix": [
+        "$9$",
+        "$100$",
+        "$20$",
+        "$4$"
+      ],
+      "reponse": 2,
+      "explication": "$E(aX)=a\\,E(X)$, donc $E(5X)=5\\times4=20$. Contrairement à la variance, le facteur ne passe **pas** au carré pour l'espérance : $E(5X)$ n'est pas $25\\times4=100$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "variance-multiple",
+      "enonce": "On sait que $V(X)=5$. Combien vaut $V(4X)$ ?",
+      "choix": [
+        "$20$",
+        "$80$",
+        "$40$",
+        "$9$"
+      ],
+      "reponse": 1,
+      "explication": "$V(aX)=a^2\\,V(X)$ : le coefficient passe **au carré**. Donc $V(4X)=4^2\\times5=80$. Le distracteur $20$ vient de l'erreur classique $4\\times5$, en oubliant le carré."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "binomiale",
+      "enonce": "Soit $X$ suivant la loi binomiale $\\mathcal{B}(200\\,;\\,0{,}3)$. Combien vaut son espérance $E(X)$ ?",
+      "choix": [
+        "$42$",
+        "$60$",
+        "$140$",
+        "$0{,}3$"
+      ],
+      "reponse": 1,
+      "explication": "Pour la binomiale, $E(X)=np=200\\times0{,}3=60$. Le distracteur $42$ donne la **variance** $np(1-p)=200\\times0{,}3\\times0{,}7$, et $140$ correspond à $n(1-p)$, pas à l'espérance."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "binomiale",
+      "enonce": "Soit $X$ suivant la loi binomiale $\\mathcal{B}(100\\,;\\,0{,}5)$. Combien vaut son écart type $\\sigma(X)$ ?",
+      "choix": [
+        "$25$",
+        "$50$",
+        "$5$",
+        "$0{,}5$"
+      ],
+      "reponse": 2,
+      "explication": "$V(X)=np(1-p)=100\\times0{,}5\\times0{,}5=25$, donc $\\sigma(X)=\\sqrt{25}=5$. Le distracteur $25$ donne la **variance** et non l'écart type : il faut prendre la racine carrée."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "somme-echantillon",
+      "enonce": "Un échantillon de taille $n=40$ provient d'une loi d'espérance $\\mu=2{,}5$. Combien vaut l'espérance de la somme $S_n=X_1+\\dots+X_n$ ?",
+      "choix": [
+        "$2{,}5$",
+        "$62{,}5$",
+        "$100$",
+        "$40$"
+      ],
+      "reponse": 2,
+      "explication": "$E(S_n)=n\\mu=40\\times2{,}5=100$. Le distracteur $2{,}5$ confond $S_n$ avec la **moyenne** $M_n$ (dont l'espérance est $\\mu$) ; $62{,}5=n/\\mu$ n'a aucun sens ici."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "variance-somme",
+      "enonce": "L'égalité $V(X+Y)=V(X)+V(Y)$ est valable :",
+      "choix": [
+        "toujours, sans aucune condition",
+        "seulement si $X$ et $Y$ sont indépendantes",
+        "seulement si $X$ et $Y$ ont la même loi",
+        "jamais"
+      ],
+      "reponse": 1,
+      "explication": "L'additivité des variances **exige l'indépendance** de $X$ et $Y$, contrairement à l'espérance qui s'ajoute sans condition. Le piège classique est d'appliquer cette règle à n'importe quelles variables."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "bienayme-tchebychev",
+      "enonce": "Une variable $X$ a pour espérance $\\mu=50$ et variance $V(X)=9$. D'après Bienaymé-Tchebychev, par combien est majorée $P(|X-50|\\geqslant 6)$ ?",
+      "choix": [
+        "$1{,}5$",
+        "$0{,}25$",
+        "$0{,}5$",
+        "$0{,}04$"
+      ],
+      "reponse": 1,
+      "explication": "$P(|X-\\mu|\\geqslant\\delta)\\leqslant\\dfrac{V(X)}{\\delta^2}=\\dfrac{9}{6^2}=\\dfrac{9}{36}=0{,}25$. Le distracteur $1{,}5=\\dfrac{9}{6}$ oublie d'élever $\\delta$ au carré au dénominateur."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "concentration",
+      "enonce": "Une loi a une variance $V=5$. On veut $P(|M_n-\\mu|\\geqslant 0{,}5)\\leqslant 0{,}02$. Quelle taille d'échantillon $n$ garantit ce risque via l'inégalité de concentration ?",
+      "choix": [
+        "$500$",
+        "$1000$",
+        "$2000$",
+        "$250$"
+      ],
+      "reponse": 1,
+      "explication": "On impose $\\dfrac{V}{n\\delta^2}\\leqslant\\alpha$, soit $n\\geqslant\\dfrac{V}{\\alpha\\,\\delta^2}=\\dfrac{5}{0{,}02\\times0{,}5^2}=\\dfrac{5}{0{,}005}=1000$. Le piège fréquent est d'oublier le carré sur $\\delta$, ce qui donne $\\dfrac{5}{0{,}01}=500$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "moyenne-echantillon",
+      "enonce": "Un échantillon de taille $n=25$ provient d'une loi de variance $V=100$. Combien vaut la variance de la moyenne $M_n$ ?",
+      "choix": [
+        "$0{,}16$",
+        "$4$",
+        "$100$",
+        "$2$"
+      ],
+      "reponse": 1,
+      "explication": "$V(M_n)=\\dfrac{V}{n}=\\dfrac{100}{25}=4$. Le distracteur $0{,}16=\\dfrac{100}{625}$ divise par $n^2$ au lieu de $n$ ; $2$ confond avec un écart type. On divise la variance par $n$, pas par $n^2$."
     }
   ]
 }

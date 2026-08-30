@@ -159,6 +159,156 @@
       "reponse": 1,
       "explication": "La prothèse compense par amplification : micro → amplificateur → haut-parleur, en montant surtout les fréquences perdues. Le piège est de croire qu'elle « répare » l'oreille : elle compense la perte, elle ne régénère pas les cellules ciliées détruites.",
       "notion_fiche": "7. Compenser une déficience auditive"
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "son-onde",
+      "enonce": "Deux astronautes flottant dans le vide de l'espace ne peuvent pas se parler directement. Pourquoi ?",
+      "choix": [
+        "parce qu'un son a besoin d'un milieu matériel pour se propager",
+        "parce que le son y va trop vite",
+        "parce que le vide absorbe tous les sons",
+        "parce que le son devient un ultrason dans le vide"
+      ],
+      "reponse": 0,
+      "explication": "Un son est une vibration qui se propage de proche en proche dans un milieu **matériel** (air, eau, os). Dans le vide, il n'y a rien à faire vibrer : pas de son. Le piège est de croire que le vide « absorbe » le son : en réalité il ne peut tout simplement pas s'y propager.",
+      "notion_fiche": "1. Le son est une onde"
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "son-onde",
+      "enonce": "Quelle est, en ordre de grandeur, la célérité (vitesse) du son dans l'air ?",
+      "choix": [
+        "$340$ m·s⁻¹",
+        "$3{,}0 \\times 10^{8}$ m·s⁻¹",
+        "$34$ m·s⁻¹",
+        "$3\\ 400$ m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "Le son se propage dans l'air à environ $340$ m·s⁻¹. Le piège est de la confondre avec la vitesse de la lumière ($3{,}0 \\times 10^{8}$ m·s⁻¹), près d'un million de fois plus grande — c'est pourquoi on voit l'éclair bien avant d'entendre le tonnerre.",
+      "notion_fiche": "1. Le son est une onde"
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "hauteur-frequence",
+      "enonce": "On tourne le bouton de volume d'une enceinte vers le haut. Le son devient alors :",
+      "choix": [
+        "plus fort, mais sa hauteur (grave/aigu) ne change pas",
+        "plus aigu",
+        "plus grave",
+        "plus rapide dans l'air"
+      ],
+      "reponse": 0,
+      "explication": "Monter le volume augmente le **niveau sonore** (l'intensité), donc le son devient plus **fort** ; sa hauteur, elle, dépend de la fréquence et reste inchangée. Le piège classique est de confondre « fort » et « aigu » : ce sont deux grandeurs différentes.",
+      "notion_fiche": "2. Fréquence et hauteur d'un son"
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "frequence-periode",
+      "enonce": "Un son a une fréquence $f = 3$ kHz. Combien cela fait-il de hertz ?",
+      "choix": [
+        "$3\\ 000$ Hz",
+        "$300$ Hz",
+        "$0{,}003$ Hz",
+        "$3\\ 000\\ 000$ Hz"
+      ],
+      "reponse": 0,
+      "explication": "$1$ kHz $= 10^{3}$ Hz $= 1\\,000$ Hz, donc $3$ kHz $= 3\\,000$ Hz. Le piège est de se tromper de puissance de 10 : le kilo vaut $\\times 1\\,000$, pas $\\times 100$ ni $\\times 10^{6}$.",
+      "notion_fiche": "2. Fréquence et hauteur d'un son"
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "niveau-intensite",
+      "enonce": "Si l'intensité sonore $I$ d'un son est multipliée par $10$, de combien augmente son niveau $L$ ?",
+      "choix": [
+        "de $10$ dB",
+        "de $3$ dB",
+        "elle est multipliée par $10$",
+        "de $1$ dB"
+      ],
+      "reponse": 0,
+      "explication": "Comme $L = 10\\log(I/I_0)$ et $\\log(10 \\times I) = 1 + \\log(I)$, multiplier $I$ par $10$ ajoute $10 \\times 1 = 10$ dB. Le piège : « +3 dB » correspond à une intensité **doublée** ($\\times 2$), pas décuplée ; et le niveau **s'ajoute** (il n'est pas multiplié).",
+      "notion_fiche": "4. Le niveau d'intensité sonore (en décibels)"
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "frequence-periode",
+      "enonce": "Un son a une période $T = 5$ ms. Quelle est sa fréquence $f$ ?",
+      "choix": [
+        "$200$ Hz",
+        "$5$ Hz",
+        "$0{,}005$ Hz",
+        "$2\\ 000$ Hz"
+      ],
+      "reponse": 0,
+      "explication": "On convertit $T = 5$ ms $= 5 \\times 10^{-3}$ s, puis $f = 1/T = 1/0{,}005 = 200$ Hz. Le piège est d'oublier de convertir les millisecondes en secondes, ou de recopier $5$ comme si c'était la fréquence.",
+      "notion_fiche": "2. Fréquence et hauteur d'un son"
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "calcul-niveau",
+      "enonce": "Un chuchotement a une intensité $I = 10^{-9}$ W·m⁻². Quel est son niveau sonore $L$ ? (On rappelle $I_0 = 10^{-12}$ W·m⁻².)",
+      "choix": [
+        "$30$ dB",
+        "$3$ dB",
+        "$90$ dB",
+        "$9$ dB"
+      ],
+      "reponse": 0,
+      "explication": "$L = 10\\log\\!\\left(\\dfrac{10^{-9}}{10^{-12}}\\right) = 10\\log(10^{3}) = 10 \\times 3 = 30$ dB. Le piège est d'oublier le facteur $10$ (on trouverait $3$, en bels) ou de mal soustraire les exposants ($-9-(-12) = 3$).",
+      "notion_fiche": "4. Le niveau d'intensité sonore (en décibels)"
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "perception-oreille",
+      "enonce": "Dans quelle partie de l'oreille la vibration sonore est-elle convertie en message nerveux ?",
+      "choix": [
+        "l'oreille externe (pavillon, conduit)",
+        "l'oreille moyenne (tympan, osselets)",
+        "l'oreille interne (cochlée et cellules ciliées)",
+        "le nerf auditif seul"
+      ],
+      "reponse": 2,
+      "explication": "C'est l'oreille **interne**, dans la cochlée, où les cellules ciliées transforment la vibration en signal nerveux. Le piège est de confondre les rôles : l'externe **capte**, la moyenne (osselets) **transmet**, l'interne **convertit**.",
+      "notion_fiche": "5. La perception d'un son par l'oreille"
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "risques-auditifs",
+      "enonce": "À $85$ dB, la durée d'exposition « à risque » est de $8$ h. En appliquant la règle « chaque $+3$ dB divise la durée par deux », quelle est la durée à $88$ dB ?",
+      "choix": [
+        "$4$ h",
+        "$16$ h",
+        "$8$ h",
+        "$2$ h"
+      ],
+      "reponse": 0,
+      "explication": "Passer de $85$ à $88$ dB, c'est $+3$ dB (soit une intensité doublée) : la durée tolérable est **divisée par deux**, donc $8/2 = 4$ h. Le piège est de croire que quelques dB de plus ne changent rien, ou d'augmenter la durée au lieu de la réduire.",
+      "notion_fiche": "6. Les risques auditifs : niveau ET durée"
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "perception-oreille",
+      "enonce": "Pourquoi une surdité causée par une exposition répétée à des sons trop forts est-elle définitive ?",
+      "choix": [
+        "parce que les cellules ciliées de la cochlée, une fois détruites, ne se régénèrent pas",
+        "parce que le tympan se perce et ne repousse jamais",
+        "parce que les osselets fondent sous l'effet du bruit",
+        "parce que le nerf auditif se déconnecte du cerveau"
+      ],
+      "reponse": 0,
+      "explication": "Les **cellules ciliées** de la cochlée sont fragiles et **ne se régénèrent pas** : détruites par le bruit, elles le sont définitivement, d'où l'importance de la prévention (limiter niveau et durée). Le piège est d'imaginer une lésion réparable comme un tympan perforé (qui, lui, peut cicatriser).",
+      "notion_fiche": "5. La perception d'un son par l'oreille"
     }
   ]
 }

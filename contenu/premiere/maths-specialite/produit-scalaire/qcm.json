@@ -119,6 +119,101 @@
       "choix": ["$\\dfrac{1}{2}$", "$2$", "$\\dfrac{1}{4}$", "$\\dfrac{6}{7}$"],
       "reponse": 0,
       "explication": "$\\cos\\theta = \\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|} = \\dfrac{6}{4 \\times 3} = \\dfrac{6}{12} = \\dfrac{1}{2}$, soit $\\theta = 60°$. Le choix $2$ est impossible : un cosinus reste toujours entre $-1$ et $1$, c'est un bon contrôle de vraisemblance."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "coordonnees",
+      "enonce": "En base orthonormée, $\\vec{u}\\begin{pmatrix} 1 \\\\ -2 \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 4 \\\\ 3 \\end{pmatrix}$. Que vaut $\\vec{u} \\cdot \\vec{v}$ ?",
+      "choix": ["$-2$", "$2$", "$10$", "$7$"],
+      "reponse": 0,
+      "explication": "$\\vec{u} \\cdot \\vec{v} = xx' + yy' = 1 \\times 4 + (-2) \\times 3 = 4 - 6 = -2$. Piège : oublier le signe de $-2$ dans la seconde coordonnée et calculer $4 + 6 = 10$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "carre-scalaire",
+      "enonce": "Pour un vecteur $\\vec{u}$, que vaut le carré scalaire $\\vec{u} \\cdot \\vec{u}$ ?",
+      "choix": ["$\\|\\vec{u}\\|^2$", "$0$", "$2\\|\\vec{u}\\|$", "$\\|\\vec{u}\\|$"],
+      "reponse": 0,
+      "explication": "Le carré scalaire vaut $\\vec{u} \\cdot \\vec{u} = \\|\\vec{u}\\|^2$ : c'est le carré de la norme. Piège : confondre avec la norme elle-même $\\|\\vec{u}\\|$, qui en est la racine carrée."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "orthogonalite",
+      "enonce": "Deux vecteurs non nuls sont orthogonaux si et seulement si leur produit scalaire vaut :",
+      "choix": ["$0$", "$1$", "un nombre positif", "$-1$"],
+      "reponse": 0,
+      "explication": "Le critère d'orthogonalité est $\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = 0$, car $\\cos\\theta = 0$ pour un angle droit. Piège : croire qu'un produit scalaire nul force l'un des vecteurs à être nul."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "norme",
+      "enonce": "Que vaut la norme du vecteur $\\vec{u}\\begin{pmatrix} 6 \\\\ 8 \\end{pmatrix}$ ?",
+      "choix": ["$10$", "$14$", "$100$", "$\\sqrt{14}$"],
+      "reponse": 0,
+      "explication": "$\\|\\vec{u}\\| = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$. Piège : additionner les coordonnées ($6 + 8 = 14$), ou s'arrêter à $100 = \\|\\vec{u}\\|^2$ sans prendre la racine."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "developpement",
+      "enonce": "Quelle est la bonne écriture de $\\|\\vec{u} - \\vec{v}\\|^2$ ?",
+      "choix": [
+        "$\\|\\vec{u}\\|^2 - 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$",
+        "$\\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2$",
+        "$\\|\\vec{u}\\|^2 - \\|\\vec{v}\\|^2$",
+        "$\\left(\\|\\vec{u}\\| - \\|\\vec{v}\\|\\right)^2$"
+      ],
+      "reponse": 0,
+      "explication": "C'est l'analogue de $(a-b)^2 = a^2 - 2ab + b^2$ : le double produit devient $-2\\,\\vec{u}\\cdot\\vec{v}$. Piège : oublier le facteur $2$, ou garder un $+$ au lieu du $-$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "orthogonalite",
+      "enonce": "Pour quelle valeur de $k$ les vecteurs $\\vec{u}\\begin{pmatrix} 2 \\\\ k \\end{pmatrix}$ et $\\vec{v}\\begin{pmatrix} 3 \\\\ 6 \\end{pmatrix}$ sont-ils orthogonaux ?",
+      "choix": ["$k = -1$", "$k = 1$", "$k = -2$", "$k = 4$"],
+      "reponse": 0,
+      "explication": "Orthogonalité : $\\vec{u} \\cdot \\vec{v} = 0$, soit $2 \\times 3 + k \\times 6 = 6 + 6k = 0$, d'où $k = -1$. Piège : oublier le terme $2 \\times 3$ et écrire $6k = 0$, donc $k = 0$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "signe-angle",
+      "enonce": "Si $\\vec{u} \\cdot \\vec{v} > 0$ avec $\\vec{u}$ et $\\vec{v}$ non nuls, l'angle entre les deux vecteurs est :",
+      "choix": ["aigu", "droit", "obtus", "plat"],
+      "reponse": 0,
+      "explication": "$\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\|\\|\\vec{v}\\|\\cos\\theta$ : les normes étant positives, un produit scalaire positif impose $\\cos\\theta > 0$, donc un angle **aigu** (entre $0$ et $\\frac{\\pi}{2}$). Piège : associer « positif » à « droit »."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "al-kashi",
+      "enonce": "Dans un triangle, $b = 7$, $c = 3$ et $\\widehat{\\mathrm{A}} = 120°$ (donc $\\cos\\widehat{\\mathrm{A}} = -0{,}5$). Que vaut $a^2$ ?",
+      "choix": ["$79$", "$37$", "$58$", "$100$"],
+      "reponse": 0,
+      "explication": "Al-Kashi : $a^2 = b^2 + c^2 - 2bc\\cos\\widehat{\\mathrm{A}} = 49 + 9 - 2 \\times 7 \\times 3 \\times (-0{,}5) = 58 + 21 = 79$. Piège : oublier que $\\cos 120° < 0$ rend le dernier terme **positif** ; en le comptant négatif on obtient $37$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "angle",
+      "enonce": "$\\|\\vec{u}\\| = 5$, $\\|\\vec{v}\\| = 2$ et $\\vec{u} \\cdot \\vec{v} = -5$. Que vaut $\\cos\\theta$ ?",
+      "choix": ["$-\\dfrac{1}{2}$", "$\\dfrac{1}{2}$", "$-5$", "$-\\dfrac{1}{10}$"],
+      "reponse": 0,
+      "explication": "$\\cos\\theta = \\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|} = \\dfrac{-5}{5 \\times 2} = \\dfrac{-5}{10} = -\\dfrac{1}{2}$, soit $\\theta = 120°$. Le signe négatif confirme un angle obtus. Piège : oublier de diviser par le produit des normes et garder $-5$, valeur impossible pour un cosinus."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "developpement",
+      "enonce": "On sait que $\\|\\vec{u}\\| = 3$, $\\|\\vec{v}\\| = 4$ et $\\vec{u} \\cdot \\vec{v} = 5$. Que vaut $\\|\\vec{u} + \\vec{v}\\|^2$ ?",
+      "choix": ["$35$", "$25$", "$49$", "$15$"],
+      "reponse": 0,
+      "explication": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\,\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2 = 9 + 2 \\times 5 + 16 = 35$. Piège : oublier le double produit $2\\,\\vec{u}\\cdot\\vec{v}$ et obtenir $9 + 16 = 25$ (valable seulement si les vecteurs étaient orthogonaux)."
     }
   ]
 }

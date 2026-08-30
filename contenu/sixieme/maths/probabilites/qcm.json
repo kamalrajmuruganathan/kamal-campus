@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "vocabulaire",
       "enonce": "On lance un dé. Comment appelle-t-on « obtenir un nombre pair » ?",
-      "choix": ["une issue", "un événement", "une expérience aléatoire", "une fréquence"],
+      "choix": [
+        "une issue",
+        "un événement",
+        "une expérience aléatoire",
+        "une fréquence"
+      ],
       "reponse": 1,
       "explication": "« Obtenir un nombre pair » regroupe plusieurs résultats ($2$, $4$, $6$) : c'est un **événement**. Une issue serait un seul résultat, comme « obtenir $4$ ». Le piège est de confondre le résultat unique (issue) et la phrase qui en rassemble plusieurs (événement)."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "certain-impossible-possible",
       "enonce": "Avec un dé à six faces (de $1$ à $6$), quel événement est **impossible** ?",
-      "choix": ["obtenir un $6$", "obtenir un nombre pair", "obtenir $7$", "obtenir un nombre plus petit que $7$"],
+      "choix": [
+        "obtenir un $6$",
+        "obtenir un nombre pair",
+        "obtenir $7$",
+        "obtenir un nombre plus petit que $7$"
+      ],
       "reponse": 2,
       "explication": "Le $7$ n'existe pas sur un dé à six faces : l'événement ne peut jamais se produire, sa probabilité est $0$. Attention, « obtenir un nombre plus petit que $7$ » est au contraire **certain** (probabilité $1$) — c'est le piège de la dernière réponse."
     },
@@ -33,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "echelle",
       "enonce": "Parmi ces nombres, lequel **ne peut pas** être une probabilité ?",
-      "choix": ["$0$", "$0{,}5$", "$1$", "$1{,}3$"],
+      "choix": [
+        "$0$",
+        "$0{,}5$",
+        "$1$",
+        "$1{,}3$"
+      ],
       "reponse": 3,
       "explication": "Une probabilité est toujours comprise entre $0$ et $1$. $1{,}3$ dépasse $1$ : impossible. Le piège est de croire qu'on ne peut pas atteindre les bornes : $0$ (événement impossible) et $1$ (événement certain) sont pourtant des probabilités tout à fait valables."
     },
@@ -42,7 +57,12 @@
       "difficulte": "moyen",
       "notion": "chances",
       "enonce": "On lance un dé équilibré. Combien de chances a-t-on d'obtenir un nombre pair ?",
-      "choix": ["$2$ chances sur $6$", "$3$ chances sur $3$", "$3$ chances sur $6$", "$6$ chances sur $3$"],
+      "choix": [
+        "$2$ chances sur $6$",
+        "$3$ chances sur $3$",
+        "$3$ chances sur $6$",
+        "$6$ chances sur $3$"
+      ],
       "reponse": 2,
       "explication": "Les nombres pairs sont $2$, $4$, $6$ : $3$ issues favorables. Le total d'issues est $6$ (les six faces). Donc **$3$ chances sur $6$**. Le piège « $3$ sur $3$ » oublie le vrai total : $b$ est le nombre de faces du dé, pas le nombre de faces paires."
     },
@@ -51,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "total",
       "enonce": "Un sac contient $5$ boules rouges, $3$ vertes et $2$ bleues, toutes identiques au toucher. Quelle est la probabilité de tirer une boule **bleue** ?",
-      "choix": ["$\\dfrac{2}{10}$", "$\\dfrac{2}{8}$", "$\\dfrac{2}{5}$", "$\\dfrac{2}{3}$"],
+      "choix": [
+        "$\\dfrac{2}{10}$",
+        "$\\dfrac{2}{8}$",
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{2}{3}$"
+      ],
       "reponse": 0,
       "explication": "Le total est $5+3+2=10$ boules, et il y a $2$ bleues : $\\dfrac{2}{10}$. Le piège classique est d'oublier une couleur dans le total : $5+3=8$ donne $\\dfrac{2}{8}$, ce qui est faux. Il faut compter **toutes** les boules pour trouver $b$."
     },
@@ -60,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "ecriture-nombre",
       "enonce": "Une roue offre « $1$ chance sur $4$ » de tomber sur le rouge. Quel **nombre** représente cette probabilité ?",
-      "choix": ["$\\dfrac{1}{4}$", "$\\dfrac{4}{1}$", "$4$", "$1-4$"],
+      "choix": [
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{4}{1}$",
+        "$4$",
+        "$1-4$"
+      ],
       "reponse": 0,
       "explication": "« $a$ chances sur $b$ » s'écrit $\\dfrac{a}{b}$, donc « $1$ chance sur $4$ » $=\\dfrac{1}{4}$. Le piège $\\dfrac{4}{1}$ inverse les nombres : on écrit le nombre de chances **au-dessus** du total, jamais l'inverse."
     },
@@ -69,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "trois-ecritures",
       "enonce": "Une probabilité vaut « $1$ chance sur $5$ ». À quel pourcentage cela correspond-il ?",
-      "choix": ["$15\\ \\%$", "$5\\ \\%$", "$50\\ \\%$", "$20\\ \\%$"],
+      "choix": [
+        "$15\\ \\%$",
+        "$5\\ \\%$",
+        "$50\\ \\%$",
+        "$20\\ \\%$"
+      ],
       "reponse": 3,
       "explication": "$\\dfrac{1}{5}=0{,}2=20\\ \\%$, car $1\\div5=0{,}2$. Le piège « $15\\ \\%$ » vient de coller les chiffres $1$ et $5$ ; « $5\\ \\%$ » confond $\\dfrac{1}{5}$ avec $\\dfrac{1}{20}$. Il faut vraiment diviser $1$ par $5$."
     },
@@ -78,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "equiprobabilite",
       "enonce": "Dans quel cas **ne peut-on pas** dire simplement « $a$ chances sur $b$ » ?",
-      "choix": ["un dé équilibré à six faces", "une pièce non truquée", "un sac de boules toutes identiques", "un dé **truqué** qui tombe plus souvent sur le $6$"],
+      "choix": [
+        "un dé équilibré à six faces",
+        "une pièce non truquée",
+        "un sac de boules toutes identiques",
+        "un dé **truqué** qui tombe plus souvent sur le $6$"
+      ],
       "reponse": 3,
       "explication": "La règle « $a$ chances sur $b$ » suppose l'**équiprobabilité** : toutes les issues doivent avoir la même chance. Un dé truqué casse cette égalité, donc la règle ne s'applique plus. Les trois autres cas sont bien équiprobables."
     },
@@ -87,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "pieges",
       "enonce": "On a obtenu cinq « pile » d'affilée avec une pièce équilibrée. Quelle est la probabilité d'obtenir « pile » au lancer suivant ?",
-      "choix": ["plus petite que $\\dfrac{1}{2}$, car « face » est dû", "toujours $\\dfrac{1}{2}$", "plus grande que $\\dfrac{1}{2}$, car « pile » sort souvent", "$0$, c'est devenu impossible"],
+      "choix": [
+        "plus petite que $\\dfrac{1}{2}$, car « face » est dû",
+        "toujours $\\dfrac{1}{2}$",
+        "plus grande que $\\dfrac{1}{2}$, car « pile » sort souvent",
+        "$0$, c'est devenu impossible"
+      ],
       "reponse": 1,
       "explication": "La pièce n'a **pas de mémoire** : chaque lancer repart à zéro, la probabilité de « pile » reste $\\dfrac{1}{2}$. Le piège est de croire qu'un résultat devient « dû » après une série — c'est faux, les lancers sont indépendants les uns des autres."
     },
@@ -96,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "frequence",
       "enonce": "La probabilité d'obtenir un $6$ est $\\dfrac{1}{6}\\approx0{,}17$. On lance le dé $600$ fois. À quoi faut-il s'attendre pour la **fréquence** du $6$ ?",
-      "choix": ["une valeur **proche** de $0{,}17$, sans être forcément égale", "exactement $0{,}17$", "exactement $\\dfrac{1}{2}$", "une valeur proche de $1$"],
+      "choix": [
+        "une valeur **proche** de $0{,}17$, sans être forcément égale",
+        "exactement $0{,}17$",
+        "exactement $\\dfrac{1}{2}$",
+        "une valeur proche de $1$"
+      ],
       "reponse": 0,
       "explication": "Plus on répète l'expérience, plus la fréquence observée se **rapproche** de la probabilité calculée ($0{,}17$) — mais elle n'est presque jamais **exactement** égale. Le piège est de confondre la fréquence, qui se constate après coup, avec la probabilité, qui se calcule à l'avance."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "On lance un dé. Comment appelle-t-on le résultat « obtenir $4$ » ?",
+      "choix": [
+        "un événement",
+        "une issue",
+        "une expérience aléatoire",
+        "une fréquence"
+      ],
+      "reponse": 1,
+      "explication": "« Obtenir $4$ » est un seul résultat possible : c'est une **issue**. Le piège est de dire « événement » : un événement peut regrouper plusieurs issues (comme « obtenir un pair » = $2$, $4$ ou $6$), alors qu'ici il n'y a qu'un seul résultat."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "certain-impossible-possible",
+      "enonce": "Avec un dé à six faces (de $1$ à $6$), quel événement est **certain** ?",
+      "choix": [
+        "obtenir $7$",
+        "obtenir un $6$",
+        "obtenir un nombre entre $1$ et $6$",
+        "obtenir un nombre impair"
+      ],
+      "reponse": 2,
+      "explication": "« Obtenir un nombre entre $1$ et $6$ » se produit à chaque lancer : l'événement est certain, sa probabilité est $1$. Le piège : « obtenir $7$ » est au contraire impossible (probabilité $0$), et obtenir un $6$ ou un impair n'est que **possible**."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "echelle",
+      "enonce": "Un événement dont la probabilité vaut $1$ est un événement :",
+      "choix": [
+        "impossible",
+        "certain",
+        "peu probable",
+        "qui a une chance sur deux"
+      ],
+      "reponse": 1,
+      "explication": "Une probabilité de $1$ signifie que l'événement se produit à coup sûr : il est **certain**. Le piège est d'inverser avec $0$, qui correspond à un événement **impossible**. Les bornes $0$ et $1$ sont bien des probabilités valables."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "chances",
+      "enonce": "On lance un dé équilibré. Combien de chances a-t-on d'obtenir un nombre **supérieur ou égal à $5$** ?",
+      "choix": [
+        "$5$ chances sur $6$",
+        "$1$ chance sur $6$",
+        "$2$ chances sur $6$",
+        "$2$ chances sur $4$"
+      ],
+      "reponse": 2,
+      "explication": "Les nombres supérieurs ou égaux à $5$ sont $5$ et $6$ : $2$ issues favorables, sur un total de $6$ faces, donc **$2$ chances sur $6$**. Le piège « $5$ chances sur $6$ » confond la valeur $5$ écrite dans l'énoncé avec le nombre d'issues favorables."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "ecriture-nombre",
+      "enonce": "Un sac contient $4$ boules rouges et $6$ boules bleues, toutes identiques au toucher. Quelle est la probabilité de tirer une boule **rouge** ?",
+      "choix": [
+        "$\\dfrac{4}{6}$",
+        "$\\dfrac{4}{10}$",
+        "$\\dfrac{6}{10}$",
+        "$\\dfrac{1}{4}$"
+      ],
+      "reponse": 1,
+      "explication": "Le total est $4+6=10$ boules, dont $4$ rouges : $\\dfrac{4}{10}$. Le piège $\\dfrac{4}{6}$ prend le nombre de bleues comme total au lieu de compter **toutes** les boules ; il faut mettre le total ($10$) au dénominateur."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "trois-ecritures",
+      "enonce": "Une probabilité vaut « $1$ chance sur $2$ ». À quel pourcentage cela correspond-il ?",
+      "choix": [
+        "$25\\ \\%$",
+        "$50\\ \\%$",
+        "$12\\ \\%$",
+        "$20\\ \\%$"
+      ],
+      "reponse": 1,
+      "explication": "$\\dfrac{1}{2}=0{,}5=50\\ \\%$, car $1\\div2=0{,}5$. Le piège « $25\\ \\%$ » confond $\\dfrac{1}{2}$ avec $\\dfrac{1}{4}$. Une chance sur deux, c'est bien la moitié, donc $50\\ \\%$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "total",
+      "enonce": "Un sac contient $3$ boules jaunes, $5$ vertes et $2$ rouges, toutes identiques au toucher. Quelle est la probabilité de tirer une boule **jaune** ?",
+      "choix": [
+        "$\\dfrac{3}{7}$",
+        "$\\dfrac{3}{10}$",
+        "$\\dfrac{3}{8}$",
+        "$\\dfrac{3}{5}$"
+      ],
+      "reponse": 1,
+      "explication": "Le total est $3+5+2=10$ boules, dont $3$ jaunes : $\\dfrac{3}{10}$. Le piège $\\dfrac{3}{7}$ oublie une couleur ($5+2=7$) : il faut additionner **toutes** les boules, jaunes comprises, pour trouver le total."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "trois-ecritures",
+      "enonce": "Une roue offre « $1$ chance sur $4$ » de tomber sur le vert. Quelle est l'écriture **décimale** de cette probabilité ?",
+      "choix": [
+        "$0{,}14$",
+        "$0{,}25$",
+        "$0{,}4$",
+        "$0{,}75$"
+      ],
+      "reponse": 1,
+      "explication": "$\\dfrac{1}{4}=0{,}25$, car $1\\div4=0{,}25$. Le piège « $0{,}14$ » colle les chiffres $1$ et $4$, et « $0{,}75$ » donne la probabilité de **ne pas** tomber sur le vert ($\\dfrac{3}{4}$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "pieges",
+      "enonce": "Avec un dé équilibré, on vient d'obtenir trois $6$ de suite. Quelle est la probabilité d'obtenir un $6$ au lancer suivant ?",
+      "choix": [
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{3}{6}$",
+        "plus petite qu'avant, car le $6$ est déjà beaucoup sorti"
+      ],
+      "reponse": 0,
+      "explication": "Le dé n'a **pas de mémoire** : chaque lancer repart à zéro, la probabilité d'un $6$ reste $\\dfrac{1}{6}$. Le piège est de croire qu'un $6$ devient moins probable (ou plus probable) après une série : les lancers sont indépendants."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "frequence",
+      "enonce": "On lance une pièce équilibrée $1000$ fois. À quoi faut-il s'attendre pour la **fréquence** de « pile » ?",
+      "choix": [
+        "une valeur **proche** de $0{,}5$, sans être forcément exactement $0{,}5$",
+        "exactement $0{,}5$",
+        "une valeur proche de $1$",
+        "une valeur proche de $0$"
+      ],
+      "reponse": 0,
+      "explication": "Plus on répète l'expérience, plus la fréquence observée se **rapproche** de la probabilité calculée ($\\dfrac{1}{2}=0{,}5$) — mais elle n'est presque jamais **exactement** égale. Le piège est de confondre la fréquence, qui se constate après coup, avec la probabilité, qui se calcule à l'avance."
     }
   ]
 }

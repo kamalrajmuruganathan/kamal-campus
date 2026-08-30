@@ -29,7 +29,12 @@
       "difficulte": "facile",
       "notion": "derivees-usuelles",
       "enonce": "Quelle est la dérivée de $f(x) = x^2$ ?",
-      "choix": ["$x$", "$2x$", "$x^3$", "$2$"],
+      "choix": [
+        "$x$",
+        "$2x$",
+        "$x^3$",
+        "$2$"
+      ],
       "reponse": 1,
       "explication": "$(x^2)' = 2x$. Plus généralement, $(x^n)' = n\\,x^{n-1}$ : l'exposant descend en facteur et diminue de $1$."
     },
@@ -38,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "derivee-polynome",
       "enonce": "Quelle est la dérivée de $f(x) = 4x^2 - 7x + 3$ ?",
-      "choix": ["$8x - 7$", "$8x - 7 + 3$", "$4x - 7$", "$8x + 3$"],
+      "choix": [
+        "$8x - 7$",
+        "$8x - 7 + 3$",
+        "$4x - 7$",
+        "$8x + 3$"
+      ],
       "reponse": 0,
       "explication": "On dérive terme à terme : $(4x^2)' = 8x$, $(-7x)' = -7$, et la dérivée de la constante $3$ est **nulle**. D'où $f'(x) = 8x - 7$."
     },
@@ -75,7 +85,12 @@
       "difficulte": "moyen",
       "notion": "tangente-horizontale",
       "enonce": "En un extrémum situé à l'intérieur d'un intervalle, la tangente est :",
-      "choix": ["verticale", "horizontale", "oblique", "inexistante"],
+      "choix": [
+        "verticale",
+        "horizontale",
+        "oblique",
+        "inexistante"
+      ],
       "reponse": 1,
       "explication": "En un extrémum, $f'(a) = 0$ : la pente est nulle, donc la tangente est **horizontale**. C'est ce qui permet de repérer les extrémums en résolvant $f'(x) = 0$."
     },
@@ -112,7 +127,12 @@
       "difficulte": "difficile",
       "notion": "produit",
       "enonce": "Quelle est la dérivée de $f(x) = (2x+1)(x-3)$ ?",
-      "choix": ["$2$", "$4x - 5$", "$2x - 3$", "$4x + 1$"],
+      "choix": [
+        "$2$",
+        "$4x - 5$",
+        "$2x - 3$",
+        "$4x + 1$"
+      ],
       "reponse": 1,
       "explication": "Avec $u = 2x+1$, $u' = 2$, $v = x-3$, $v' = 1$ : $f' = u'v + uv' = 2(x-3) + (2x+1) = 4x - 5$. Le choix $2$ applique la formule fausse $(uv)' = u'v'$. On peut vérifier en développant d'abord : $2x^2 - 5x - 3$, dont la dérivée est bien $4x - 5$."
     },
@@ -121,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "nombre-derive",
       "enonce": "Pour $f(x) = x^2$, l'expression $\\dfrac{f(4+h) - f(4)}{h}$ se simplifie en :",
-      "choix": ["$8 + h$", "$16 + h$", "$8h + h^2$", "$4 + h$"],
+      "choix": [
+        "$8 + h$",
+        "$16 + h$",
+        "$8h + h^2$",
+        "$4 + h$"
+      ],
       "reponse": 0,
       "explication": "$(4+h)^2 - 16 = 8h + h^2 = h(8+h)$. En divisant par $h$ (non nul) : $8 + h$. Quand $h$ tend vers $0$, on obtient $f'(4) = 8$. Le choix $8h + h^2$ est l'étape précédente, sans la division."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "derivees-usuelles",
+      "enonce": "Quelle est la dérivée de $f(x) = x^3$ ?",
+      "choix": [
+        "$3x^2$",
+        "$x^2$",
+        "$3x$",
+        "$\\dfrac{x^4}{4}$"
+      ],
+      "reponse": 0,
+      "explication": "$(x^3)' = 3x^2$ : on applique $(x^n)' = n\\,x^{n-1}$, l'exposant descend en facteur et diminue de $1$. Le choix $\\dfrac{x^4}{4}$ est une primitive, pas une dérivée."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "interpretation",
+      "enonce": "Quand le point $\\mathrm{M}$ se rapproche du point $\\mathrm{A}$ sur la courbe, vers quelle position limite tend la sécante $(\\mathrm{AM})$ ?",
+      "choix": [
+        "Vers la tangente à la courbe en $\\mathrm{A}$",
+        "Vers l'axe des abscisses",
+        "Vers une droite verticale",
+        "Vers l'axe des ordonnées"
+      ],
+      "reponse": 0,
+      "explication": "En pivotant, la sécante $(\\mathrm{AM})$ se rapproche d'une position limite : la **tangente** en $\\mathrm{A}$. Son coefficient directeur devient le nombre dérivé $f'(a)$."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "derivees-usuelles",
+      "enonce": "Quelle est la dérivée de la fonction constante $f(x) = 7$ ?",
+      "choix": [
+        "$7$",
+        "$0$",
+        "$1$",
+        "$x$"
+      ],
+      "reponse": 1,
+      "explication": "La dérivée d'une **constante** est **nulle** : $f'(x) = 0$. Une fonction constante ne varie pas, sa pente est donc partout nulle."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "derivee-polynome",
+      "enonce": "Quelle est la dérivée de $f(x) = 3x^3 - x^2 + 5$ ?",
+      "choix": [
+        "$9x^2 - 2x$",
+        "$9x^2 - 2x + 5$",
+        "$3x^2 - 2x$",
+        "$9x^2 - x$"
+      ],
+      "reponse": 0,
+      "explication": "On dérive terme à terme : $(3x^3)' = 9x^2$, $(-x^2)' = -2x$, et la dérivée de la constante $5$ est **nulle**. D'où $f'(x) = 9x^2 - 2x$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "tangente",
+      "enonce": "Soit $f(x) = x^2$. Quelle est l'équation réduite de la tangente en $a = 1$ ?",
+      "choix": [
+        "$y = 2x - 1$",
+        "$y = 2x + 1$",
+        "$y = x - 1$",
+        "$y = 2(x - 1)$"
+      ],
+      "reponse": 0,
+      "explication": "$f(1) = 1$ et $f'(x) = 2x$ donne $f'(1) = 2$. La tangente est $y = f'(a)(x-a) + f(a) = 2(x-1) + 1 = 2x - 1$. Le choix $y = 2(x-1)$ oublie d'ajouter $f(1)$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "signe-derivee",
+      "enonce": "Sur un intervalle, $f'(x) < 0$. Que peut-on dire de $f$ ?",
+      "choix": [
+        "Elle est croissante",
+        "Elle est décroissante",
+        "Elle est constante",
+        "Elle est négative"
+      ],
+      "reponse": 1,
+      "explication": "Une dérivée strictement **négative** sur un intervalle signifie que $f$ y est **décroissante**. Attention à ne pas confondre le signe de $f'$ (les variations) et le signe de $f$ (la position par rapport à l'axe)."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "derivees-usuelles",
+      "enonce": "Quelle est la dérivée de $f(x) = \\dfrac{1}{x}$ ?",
+      "choix": [
+        "$-\\dfrac{1}{x^2}$",
+        "$\\dfrac{1}{x^2}$",
+        "$1$",
+        "$-\\dfrac{2}{x^2}$"
+      ],
+      "reponse": 0,
+      "explication": "La dérivée de $\\dfrac{1}{x}$ est $-\\dfrac{1}{x^2}$ : c'est une dérivée usuelle à connaître. Le piège fréquent est d'oublier le signe **moins**."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "variations",
+      "enonce": "Pour $f(x) = x^2 - 10x + 1$, sur quel intervalle $f$ est-elle croissante ?",
+      "choix": [
+        "$[5\\,;+\\infty[$",
+        "$]-\\infty\\,;5]$",
+        "$]-\\infty\\,;10]$",
+        "$[0\\,;1]$"
+      ],
+      "reponse": 0,
+      "explication": "$f'(x) = 2x - 10$, positive pour $x > 5$. La fonction croît donc sur $[5\\,;+\\infty[$ (et décroît avant). On retrouve l'abscisse du sommet, $-\\dfrac{b}{2a} = 5$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "produit",
+      "enonce": "Quelle est la dérivée de $f(x) = (3x - 1)(x + 2)$ ?",
+      "choix": [
+        "$6x + 5$",
+        "$3$",
+        "$6x - 5$",
+        "$3x + 5$"
+      ],
+      "reponse": 0,
+      "explication": "Avec $u = 3x-1$, $u' = 3$, $v = x+2$, $v' = 1$ : $f' = u'v + uv' = 3(x+2) + (3x-1) = 6x + 5$. Le choix $3$ applique la formule fausse $(uv)' = u'v'$. Vérification en développant : $3x^2 + 5x - 2$, de dérivée $6x + 5$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "quotient",
+      "enonce": "Quelle est la formule de la dérivée d'un quotient $\\dfrac{u}{v}$ ?",
+      "choix": [
+        "$\\dfrac{u'v - uv'}{v^2}$",
+        "$\\dfrac{u'v + uv'}{v^2}$",
+        "$\\dfrac{uv' - u'v}{v^2}$",
+        "$\\dfrac{u'}{v'}$"
+      ],
+      "reponse": 0,
+      "explication": "La formule est $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$. L'ordre du numérateur compte : c'est $u'v - uv'$, pas l'inverse. Le choix $\\dfrac{u'}{v'}$ est l'erreur grossière consistant à dériver haut et bas séparément."
     }
   ]
 }

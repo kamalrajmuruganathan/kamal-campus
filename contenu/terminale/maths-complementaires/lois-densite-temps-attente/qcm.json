@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Moyenne $4$ donne $\\lambda=\\frac14=0{,}25$. « Au plus $4$ min » est $P(X\\leqslant 4)=1-e^{-\\lambda t}=1-e^{-0{,}25\\times 4}=1-e^{-1}$. Le piège A ($e^{-1}$) donne $P(X>4)$, l'événement contraire ; $1-e^{-4}$ prend $\\lambda=1$ au lieu de $0{,}25$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Quelle condition une fonction $f$ doit-elle vérifier pour être une densité de probabilité sur un intervalle $I$ ?",
+      "choix": [
+        "être décroissante et d'aire totale égale à $1$",
+        "être positive et d'aire totale égale à $1$",
+        "être comprise entre $0$ et $1$ en tout point",
+        "être positive et d'aire totale égale à $100$"
+      ],
+      "reponse": 1,
+      "explication": "Une densité est continue, positive, et l'aire totale sous sa courbe vaut $1$ : $\\int_I f = 1$. Le piège « comprise entre $0$ et $1$ » est faux : $f$ peut dépasser $1$ (la densité uniforme sur $[0\\,;0{,}5]$ vaut $2$) ; c'est l'AIRE, pas la hauteur, qui est bornée."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "esperance-exponentielle",
+      "enonce": "$X$ suit une loi exponentielle de paramètre $\\lambda = 0{,}25$. Quelle est son espérance $E(X)$ ?",
+      "choix": [
+        "$4$",
+        "$0{,}25$",
+        "$0{,}0625$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "Pour la loi exponentielle, $E(X) = \\dfrac{1}{\\lambda} = \\dfrac{1}{0{,}25} = 4$. Le piège est de confondre l'espérance avec le paramètre $\\lambda$ lui-même : ce sont des inverses l'un de l'autre."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[2\\,;6]$. Quelle est la valeur de sa densité sur cet intervalle ?",
+      "choix": [
+        "$\\dfrac{1}{4}$",
+        "$4$",
+        "$\\dfrac{1}{6}$",
+        "$\\dfrac{1}{8}$"
+      ],
+      "reponse": 0,
+      "explication": "La densité uniforme est constante et vaut $\\dfrac{1}{b-a} = \\dfrac{1}{6-2} = \\dfrac{1}{4}$. Le piège $\\dfrac{1}{6}$ oublie de soustraire $a = 2$ et divise par $b$ seul."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "esperance-densite",
+      "enonce": "Une variable $X$ a pour densité $f(x) = 2x$ sur $[0\\,;1]$. Que vaut son espérance $E(X)$ ?",
+      "choix": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{1}{2}$",
+        "$1$",
+        "$\\dfrac{1}{3}$"
+      ],
+      "reponse": 0,
+      "explication": "$E(X) = \\displaystyle\\int_0^1 x\\cdot 2x\\,dx = \\int_0^1 2x^{2}\\,dx = \\left[\\dfrac{2x^{3}}{3}\\right]_0^1 = \\dfrac{2}{3}$. Le piège $\\dfrac{1}{2}$ oublie le facteur $x$ de la formule $E(X) = \\int x\\,f(x)\\,dx$ et intègre simplement $f$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[0\\,;20]$. Que vaut $P(X > 15)$ ?",
+      "choix": [
+        "$0{,}25$",
+        "$0{,}75$",
+        "$0{,}15$",
+        "$0{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "Pour la loi uniforme, $P(X > t) = \\dfrac{b-t}{b-a} = \\dfrac{20-15}{20-0} = \\dfrac{5}{20} = 0{,}25$. Le piège $0{,}75$ calcule $P(X < 15)$, l'événement contraire."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "loi-exponentielle",
+      "enonce": "$X$ suit une loi exponentielle de paramètre $\\lambda = 0{,}2$. Comment s'écrit $P(X \\leqslant 10)$ ?",
+      "choix": [
+        "$1 - e^{-2}$",
+        "$e^{-2}$",
+        "$1 - e^{-0{,}2}$",
+        "$e^{-2} - 1$"
+      ],
+      "reponse": 0,
+      "explication": "Pour l'exponentielle, $P(X \\leqslant t) = 1 - e^{-\\lambda t} = 1 - e^{-0{,}2\\times 10} = 1 - e^{-2}$. Le piège $e^{-2}$ est $P(X>10)$, l'événement contraire ; $1 - e^{-0{,}2}$ oublie de multiplier $\\lambda$ par $t$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "loi-a-densite",
+      "enonce": "$X$ suit une loi à densité. Comment se comparent $P(c \\leqslant X \\leqslant d)$ et $P(c < X < d)$ ?",
+      "choix": [
+        "$P(c < X < d)$ est strictement plus petite",
+        "elles sont égales",
+        "$P(c \\leqslant X \\leqslant d)$ dépasse l'autre de $P(X=c) + P(X=d)$ (non nul)",
+        "on ne peut pas les comparer"
+      ],
+      "reponse": 1,
+      "explication": "Comme $P(X=c) = P(X=d) = 0$ pour une loi à densité, passer de $\\leqslant$ à $<$ ne retire aucune probabilité : les deux sont égales. C'est la grande différence avec le discret, où une valeur isolée compte."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "modelisation-temps-attente",
+      "enonce": "La durée de vie d'un composant suit une loi exponentielle de moyenne $50$ h. Quelle est la probabilité qu'il dure plus de $50$ h ?",
+      "choix": [
+        "$e^{-1} \\approx 0{,}37$",
+        "$1 - e^{-1} \\approx 0{,}63$",
+        "$e^{-50}$",
+        "$0{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "Moyenne $50$ donne $\\lambda = \\dfrac{1}{50} = 0{,}02$, puis $P(X > 50) = e^{-0{,}02\\times 50} = e^{-1} \\approx 0{,}37$. Le piège $0{,}5$ croit qu'à la moyenne il reste une chance sur deux, faux pour l'exponentielle : $P(X > E(X)) = e^{-1}$, pas $0{,}5$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "absence-de-memoire",
+      "enonce": "$X$ suit une loi exponentielle de paramètre $\\lambda = 0{,}001$. Une ampoule a déjà brillé $1000$ h. Quelle est la probabilité qu'elle brille encore au moins $500$ h de plus, soit $P_{X>1000}(X > 1500)$ ?",
+      "choix": [
+        "$e^{-0{,}5} \\approx 0{,}61$",
+        "$e^{-1{,}5} \\approx 0{,}22$",
+        "$e^{-1} \\approx 0{,}37$",
+        "$e^{-2{,}5} \\approx 0{,}08$"
+      ],
+      "reponse": 0,
+      "explication": "Par absence de mémoire, $P_{X>1000}(X > 1500) = P(X > 500) = e^{-0{,}001\\times 500} = e^{-0{,}5} \\approx 0{,}61$. Le piège $e^{-1{,}5}$ calcule $P(X>1500)$ sans conditionner : il ignore que l'exponentielle « oublie » les $1000$ h déjà écoulées."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "loi-uniforme",
+      "enonce": "$X$ suit la loi uniforme sur $[10\\,;30]$. Que vaut $P(X \\leqslant 25)$ ?",
+      "choix": [
+        "$0{,}75$",
+        "$0{,}25$",
+        "$0{,}5$",
+        "$0{,}83$"
+      ],
+      "reponse": 0,
+      "explication": "Pour la loi uniforme, $P(X \\leqslant t) = \\dfrac{t-a}{b-a} = \\dfrac{25-10}{30-10} = \\dfrac{15}{20} = 0{,}75$. Le piège $0{,}25$ donne $P(X>25)$ ; $0{,}83 = \\frac{25}{30}$ oublie de soustraire $a = 10$ aux deux termes."
     }
   ]
 }

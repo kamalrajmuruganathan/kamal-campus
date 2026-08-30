@@ -119,6 +119,106 @@
       ],
       "reponse": 1,
       "explication": "On ne peut pas faire la moyenne de deux pourcentages calculés sur des **bases différentes**. S'il y a $300$ élèves en Seconde et $100$ en Première : $\\dfrac{180 + 40}{400} = 55\\,\\%$, et non $50\\,\\%$. Il faut toujours repasser par les effectifs."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "proportion-pourcentage",
+      "enonce": "Dans une classe de $25$ élèves, $15$ sont des filles. Quelle est la proportion de filles, en pourcentage ?",
+      "choix": ["$60\\,\\%$", "$40\\,\\%$", "$15\\,\\%$", "$1{,}67\\,\\%$"],
+      "reponse": 0,
+      "explication": "La proportion est $p = \\dfrac{\\text{partie}}{\\text{total}} = \\dfrac{15}{25} = 0{,}60$, soit $60\\,\\%$. Le choix $40\\,\\%$ est la proportion de garçons ; $15\\,\\%$ confond l'effectif avec un pourcentage."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Quel coefficient multiplicateur correspond à un doublement, c'est-à-dire une hausse de $100\\,\\%$ ?",
+      "choix": ["$2$", "$1{,}00$", "$10$", "$0{,}5$"],
+      "reponse": 0,
+      "explication": "$\\mathrm{CM} = 1 + \\dfrac{100}{100} = 2$ : multiplier par $2$, c'est bien doubler. Le choix $0{,}5$ correspondrait à une baisse de $50\\,\\%$, et $1{,}00$ à une absence d'évolution."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Un article coûte $200$ €. Après une hausse de $10\\,\\%$, quel est son nouveau prix ?",
+      "choix": ["$220$ €", "$210$ €", "$20$ €", "$180$ €"],
+      "reponse": 0,
+      "explication": "On multiplie par le coefficient $1{,}10$ : $200 \\times 1{,}10 = 220$ €. Le choix $210$ € ajoute seulement $10$ € (comme si le taux était en euros) ; $180$ € correspondrait à une baisse."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "taux-evolution",
+      "enonce": "Une quantité passe de $150$ à $120$. Quel est le taux d'évolution ?",
+      "choix": ["$-20\\,\\%$", "$-30\\,\\%$", "$-25\\,\\%$", "$-15\\,\\%$"],
+      "reponse": 0,
+      "explication": "$t = \\dfrac{120 - 150}{150} = \\dfrac{-30}{150} = -0{,}20$, soit $-20\\,\\%$. Le choix $-30\\,\\%$ confond l'écart absolu ($30$) avec le taux ; $-25\\,\\%$ divise par la valeur finale $120$ au lieu de l'initiale $150$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "evolutions-successives",
+      "enonce": "Un stock baisse de $10\\,\\%$ puis de nouveau de $20\\,\\%$. Quel est le taux d'évolution global ?",
+      "choix": ["$-28\\,\\%$", "$-30\\,\\%$", "$-32\\,\\%$", "$-2\\,\\%$"],
+      "reponse": 0,
+      "explication": "On **multiplie** les coefficients : $0{,}90 \\times 0{,}80 = 0{,}72$, soit $-28\\,\\%$. Additionner les taux donnerait $-30\\,\\%$, ce qui est faux : la seconde baisse porte sur un stock déjà réduit."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "evolution-reciproque",
+      "enonce": "Un loyer a augmenté de $25\\,\\%$. De quel pourcentage doit-il baisser pour revenir à sa valeur initiale ?",
+      "choix": ["$-20\\,\\%$", "$-25\\,\\%$", "$-22\\,\\%$", "$-75\\,\\%$"],
+      "reponse": 0,
+      "explication": "Le coefficient réciproque est $\\dfrac{1}{1{,}25} = 0{,}80$, soit $-20\\,\\%$. La baisse nécessaire est plus faible que la hausse initiale car elle s'applique à une base plus grande. Vérification : $100 \\to 125 \\to 125 \\times 0{,}80 = 100$ ✓."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "points-pourcentage",
+      "enonce": "Un taux de participation passe de $40\\,\\%$ à $46\\,\\%$. Quelle affirmation est correcte ?",
+      "choix": [
+        "Il a augmenté de $6$ points de pourcentage",
+        "Il a augmenté de $6\\,\\%$",
+        "Il a été multiplié par $1{,}06$",
+        "Il a augmenté de $46\\,\\%$"
+      ],
+      "reponse": 0,
+      "explication": "La différence de $46 - 40 = 6$ s'exprime en **points de pourcentage**. L'évolution **relative**, elle, vaut $\\dfrac{46-40}{40} = 15\\,\\%$ (et non $6\\,\\%$). Confondre « $6$ points » et « $6\\,\\%$ » est l'erreur classique du chapitre."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "evolution-moyenne",
+      "enonce": "Une grandeur augmente de $33{,}1\\,\\%$ en $3$ ans. Quel est le taux annuel moyen ?",
+      "choix": ["$+10\\,\\%$", "$+11\\,\\%$", "$+11{,}03\\,\\%$", "$+33{,}1\\,\\%$"],
+      "reponse": 0,
+      "explication": "On cherche $\\mathrm{CM}$ tel que $\\mathrm{CM}^3 = 1{,}331$, donc $\\mathrm{CM} = \\sqrt[3]{1{,}331} = 1{,}10$, soit $+10\\,\\%$ par an. Diviser $33{,}1$ par $3$ donnerait environ $11\\,\\%$ — faux, car les évolutions se **composent** (on prend la racine du coefficient, pas la moyenne du taux)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "evolutions-successives",
+      "enonce": "Une action gagne $20\\,\\%$ un jour, puis en perd $20\\,\\%$ le lendemain. Quel est le bilan sur les deux jours ?",
+      "choix": [
+        "Une baisse de $4\\,\\%$",
+        "Un retour à la valeur initiale ($0\\,\\%$)",
+        "Une hausse de $4\\,\\%$",
+        "Une baisse de $40\\,\\%$"
+      ],
+      "reponse": 0,
+      "explication": "$1{,}20 \\times 0{,}80 = 0{,}96$, soit $-4\\,\\%$. Après une hausse suivie d'une baisse de même taux, on ne revient **jamais** au point de départ : le bilan est toujours une légère baisse, car la baisse porte sur une valeur plus élevée."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "base-pourcentage",
+      "enonce": "Le magasin A vend $200$ articles dont $30\\,\\%$ sont défectueux ; le magasin B en vend $800$ dont $10\\,\\%$ sont défectueux. Quel est le pourcentage global d'articles défectueux ?",
+      "choix": ["$14\\,\\%$", "$20\\,\\%$", "$40\\,\\%$", "$13\\,\\%$"],
+      "reponse": 0,
+      "explication": "On repasse par les effectifs : $0{,}30 \\times 200 + 0{,}10 \\times 800 = 60 + 80 = 140$ articles défectueux sur $1000$, soit $\\dfrac{140}{1000} = 14\\,\\%$. Faire la moyenne des taux ($\\frac{30+10}{2} = 20\\,\\%$) est faux : les bases (200 et 800) sont différentes."
     }
   ]
 }

@@ -124,6 +124,116 @@
       ],
       "reponse": 2,
       "explication": "On arrondit à des nombres ronds : $4 \\times 20 = 80$ (la valeur exacte est $83{,}16$). Le piège du choix « environ $24$ » est d'**additionner** au lieu de multiplier. Les choix $8$ et $800$ correspondent à une virgule mal placée : c'est exactement le type d'erreur que l'ordre de grandeur sert à détecter."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "priorites-operatoires",
+      "enonce": "Combien vaut $10 - 2 \\times 3$ ?",
+      "choix": ["$24$", "$4$", "$18$", "$8$"],
+      "reponse": 1,
+      "explication": "La multiplication passe **avant** la soustraction : $2 \\times 3 = 6$, puis $10 - 6 = 4$. Le piège est de calculer de gauche à droite ($10 - 2 = 8$ puis $8 \\times 3 = 24$), ce qui ignore les priorités."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "nommer-un-calcul",
+      "enonce": "Dans le calcul $7 + 4$, comment appelle-t-on les nombres $7$ et $4$ ?",
+      "choix": [
+        "les facteurs",
+        "les termes",
+        "le dividende et le diviseur",
+        "les quotients"
+      ],
+      "reponse": 1,
+      "explication": "$7 + 4$ est une **somme**, et les nombres d'une somme sont ses **termes**. Le mot « facteurs » est réservé aux produits : mêmes nombres, mais le vocabulaire dépend de l'opération."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "criteres-de-divisibilite",
+      "enonce": "Lequel de ces nombres est divisible par $5$ ?",
+      "choix": ["$52$", "$47$", "$85$", "$71$"],
+      "reponse": 2,
+      "explication": "Un nombre est divisible par $5$ quand son **chiffre des unités** est $0$ ou $5$. Seul $85$ finit par $5$. Le critère se lit uniquement sur le dernier chiffre, sans poser la division."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "division-euclidienne",
+      "enonce": "Dans la division euclidienne de $50$ par $7$, quel est le **reste** ?",
+      "choix": ["$1$", "$7$", "$8$", "$2$"],
+      "reponse": 0,
+      "explication": "$50 = 7 \\times 7 + 1$, donc le quotient vaut $7$ et le reste $1$. Contrôle imparable : le reste est toujours **strictement inférieur au diviseur**, donc plus petit que $7$ — ce qui élimine $7$ et $8$. Donner $7$ revient à confondre reste et quotient."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "priorites-operatoires",
+      "enonce": "Combien vaut $24 \\div 4 \\div 2$ ?",
+      "choix": ["$3$", "$12$", "$48$", "$6$"],
+      "reponse": 0,
+      "explication": "Deux divisions ont la **même priorité** : on calcule de **gauche à droite**, soit $(24 \\div 4) \\div 2 = 6 \\div 2 = 3$. Le piège est de commencer par $4 \\div 2 = 2$ pour trouver $12$ : cela reviendrait à écrire $24 \\div (4 \\div 2)$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "criteres-de-divisibilite",
+      "enonce": "Lequel de ces nombres est divisible par $3$ ?",
+      "choix": ["$1\\,024$", "$2\\,451$", "$5\\,003$", "$7\\,001$"],
+      "reponse": 1,
+      "explication": "On additionne les chiffres : $2+4+5+1 = 12$, multiple de $3$, donc $2\\,451$ est divisible par $3$. Les autres donnent $7$, $8$ et $8$, aucun multiple de $3$. Le critère porte sur la **somme des chiffres**, pas sur le dernier chiffre."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "distributivite",
+      "enonce": "Quel calcul astucieux permet d'obtenir $8 \\times 99$ de tête ?",
+      "choix": [
+        "$8 \\times 100 - 8$",
+        "$8 \\times 100 - 1$",
+        "$8 \\times 90 + 9$",
+        "$8 \\times 100 + 8$"
+      ],
+      "reponse": 0,
+      "explication": "On écrit $99 = 100 - 1$ puis on distribue **sur les deux termes** : $8 \\times 100 - 8 \\times 1 = 800 - 8 = 792$. Le piège est de ne retrancher que $1$ ($800 - 1$) au lieu de $8 \\times 1$ : chaque terme de la parenthèse doit être multiplié par $8$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "division-par-un-decimal",
+      "enonce": "Combien vaut $6 \\div 0{,}5$ ?",
+      "choix": ["$3$", "$12$", "$0{,}12$", "$1{,}2$"],
+      "reponse": 1,
+      "explication": "On multiplie **les deux nombres** par $10$ pour rendre le diviseur entier : $6 \\div 0{,}5 = 60 \\div 5 = 12$. Diviser par un nombre **inférieur à $1$ augmente** le résultat : « combien de fois $0{,}5$ tient-il dans $6$ ? » — $12$ fois. Le choix $3$ correspond à $6 \\times 0{,}5$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "programme-de-calcul",
+      "enonce": "« Choisis un nombre, multiplie par $4$, puis ajoute $1$. » Quelle expression traduit ce programme pour un nombre $n$ ?",
+      "choix": [
+        "$(n + 1) \\times 4$",
+        "$n \\times 4 + 1$",
+        "$n \\times (4 + 1)$",
+        "$n + 4 \\times 1$"
+      ],
+      "reponse": 1,
+      "explication": "La multiplication doit se faire en premier, or elle est **déjà prioritaire** : aucune parenthèse n'est nécessaire, on écrit $n \\times 4 + 1$. Le choix $(n+1) \\times 4$ traduit le programme inverse (ajouter d'abord, multiplier ensuite)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "multiples-diviseurs",
+      "enonce": "On sait que $36 = 4 \\times 9$. Quelle affirmation est exacte ?",
+      "choix": [
+        "$4$ est un multiple de $36$",
+        "$36$ est un diviseur de $9$",
+        "$9$ est un diviseur de $36$",
+        "$36$ est un diviseur de $4$"
+      ],
+      "reponse": 2,
+      "explication": "$36$ s'obtient en multipliant $9$ par un entier : $9$ est donc un **diviseur** de $36$, et $36$ est un **multiple** de $9$ (et de $4$). Repère de secours : entre entiers positifs, le diviseur est le **plus petit** des deux nombres."
     }
   ]
 }

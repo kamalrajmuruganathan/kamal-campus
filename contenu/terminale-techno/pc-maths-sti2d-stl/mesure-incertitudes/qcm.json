@@ -149,6 +149,146 @@
    ],
    "reponse": 0,
    "explication": "Valeur : $\\rho = 2{,}50$ g·mL⁻¹. Relatives : $\\dfrac{0{,}5}{50{,}0} = 1{,}0\\,\\%$ et $\\dfrac{0{,}6}{20{,}0} = 3{,}0\\,\\%$ ; composée : $\\sqrt{0{,}010^2 + 0{,}030^2} \\approx 3{,}2\\,\\%$ ; absolue : $u(\\rho) = 2{,}50 \\times 0{,}032 \\approx 0{,}08$ g·mL⁻¹, et valeur au **même rang** (le centième) : $2{,}50$. Les distracteurs : addition simple $1 + 3 = 4\\,\\% \\Rightarrow 0{,}10$ ; valeur arrondie au mauvais rang ($2{,}5$) ; trop de chiffres ($2{,}500 \\pm 0{,}079$)."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "incertitude-relative",
+   "enonce": "L'incertitude relative d'une grandeur $X$ est le quotient $\\dfrac{u(X)}{X}$. Quelle est sa particularité ?",
+   "choix": [
+    "elle s'exprime dans la même unité que $X$",
+    "c'est un nombre sans unité, souvent donné en pourcentage",
+    "elle est toujours supérieure à $1$",
+    "elle ne se calcule que pour une somme"
+   ],
+   "reponse": 1,
+   "explication": "L'incertitude **relative** $u(X)/X$ est un rapport de deux grandeurs de même unité : elle est donc **sans dimension**, et on l'exprime commodément en pourcentage. Le piège est de la confondre avec l'incertitude **absolue** $u(X)$, qui, elle, porte l'unité de $X$. C'est l'incertitude relative qui se propage dans les produits et quotients."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "propagation-somme-difference",
+   "enonce": "Pour une somme $y = a + b$, on donne $u(y) = \\sqrt{u(a)^2 + u(b)^2}$. Avec $u(a) = 0{,}3$ et $u(b) = 0{,}4$ (mêmes unités), que vaut $u(y)$ ?",
+   "choix": [
+    "$0{,}5$",
+    "$0{,}7$",
+    "$0{,}1$",
+    "$0{,}35$"
+   ],
+   "reponse": 0,
+   "explication": "$\\sqrt{0{,}3^2 + 0{,}4^2} = \\sqrt{0{,}09 + 0{,}16} = \\sqrt{0{,}25} = 0{,}5$. Le piège classique est d'**additionner** simplement $0{,}3 + 0{,}4 = 0{,}7$ : la formule contient une racine, le résultat est plus petit que la somme et plus grand que la plus grande des deux incertitudes."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "ecriture-resultat",
+   "enonce": "Sans incertitude fournie, on calcule $v = 2{,}4 \\times 1{,}3$ ; la calculatrice affiche $3{,}12$. Combien de chiffres significatifs faut-il garder dans le résultat ?",
+   "choix": [
+    "$3{,}12$",
+    "$3{,}1$",
+    "$3{,}120$",
+    "$3$"
+   ],
+   "reponse": 1,
+   "explication": "Règle des chiffres significatifs pour un produit : on garde **autant de chiffres significatifs que la donnée qui en a le moins**. Ici $2{,}4$ et $1{,}3$ ont chacune $2$ chiffres significatifs, donc le résultat s'écrit $3{,}1$. Le piège est de recopier l'affichage $3{,}12$ (3 chiffres, trop précis) ou d'ajouter des zéros ($3{,}120$)."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "propagation-produit-quotient",
+   "enonce": "Pour $y = \\dfrac{a}{b}$, on donne $\\dfrac{u(y)}{y} = \\sqrt{\\left(\\dfrac{u(a)}{a}\\right)^2 + \\left(\\dfrac{u(b)}{b}\\right)^2}$. Avec $\\dfrac{u(a)}{a} = 6\\,\\%$ et $\\dfrac{u(b)}{b} = 8\\,\\%$, que vaut $\\dfrac{u(y)}{y}$ ?",
+   "choix": [
+    "$14\\,\\%$",
+    "$10\\,\\%$",
+    "$7\\,\\%$",
+    "$2\\,\\%$"
+   ],
+   "reponse": 1,
+   "explication": "$\\sqrt{0{,}06^2 + 0{,}08^2} = \\sqrt{0{,}0036 + 0{,}0064} = \\sqrt{0{,}01} = 0{,}10$, soit $10\\,\\%$. Le piège est d'**additionner** $6 + 8 = 14\\,\\%$ : la quadrature donne toujours un résultat inférieur à la somme et supérieur au plus grand des deux ($8\\,\\%$)."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "validite-ecart-normalise",
+   "enonce": "On mesure $g = 9{,}86 \\pm 0{,}03$ m·s⁻² ; la référence est $g_{\\text{réf}} = 9{,}81$ m·s⁻². On donne $z = \\dfrac{|g_{\\text{mes}} - g_{\\text{réf}}|}{u(g)}$ et le seuil usuel $2$. Que conclure ?",
+   "choix": [
+    "$z \\approx 1{,}7 \\leqslant 2$ : résultat compatible avec la référence",
+    "$z \\approx 1{,}7 > 2$ : résultat non compatible",
+    "non compatible, car $9{,}86 \\neq 9{,}81$",
+    "$z \\approx 0{,}05$ : résultat compatible"
+   ],
+   "reponse": 0,
+   "explication": "$z = \\dfrac{|9{,}86 - 9{,}81|}{0{,}03} = \\dfrac{0{,}05}{0{,}03} \\approx 1{,}7 \\leqslant 2$ : la mesure est **compatible** avec la référence. Pièges : conclure « non compatible » parce que les deux valeurs diffèrent (sans calculer $z$), ou comparer l'écart **brut** $0{,}05$ au seuil $2$ (qui porte sur $z$, sans unité)."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "propagation-constante",
+   "enonce": "Le périmètre d'un carré est $P = 4c$. On mesure l'arête une fois : $u(c) = 0{,}2$ cm. Sachant que $u(k\\,a) = |k|\\,u(a)$ pour $k$ constante exacte, que vaut $u(P)$ ?",
+   "choix": [
+    "$0{,}2$ cm",
+    "$0{,}8$ cm",
+    "$0{,}4$ cm",
+    "$0{,}05$ cm"
+   ],
+   "reponse": 1,
+   "explication": "$P = 4c$ avec $4$ constante exacte, donc $u(P) = 4 \\times u(c) = 4 \\times 0{,}2 = 0{,}8$ cm. Le piège est d'écrire $P = c + c + c + c$ et d'appliquer la quadrature $\\sqrt{4}\\,u(c) = 2 \\times 0{,}2 = 0{,}4$ cm : c'est la **même** mesure comptée quatre fois, pas quatre mesures indépendantes."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "propagation-puissance",
+   "enonce": "L'aire d'un disque est $A = \\pi r^2$. On donne, pour $y = a^n$ : $\\dfrac{u(y)}{y} = |n|\\,\\dfrac{u(a)}{a}$. Si le rayon est mesuré avec $\\dfrac{u(r)}{r} = 3\\,\\%$, que vaut $\\dfrac{u(A)}{A}$ ?",
+   "choix": [
+    "$3\\,\\%$",
+    "$6\\,\\%$",
+    "$9\\,\\%$",
+    "$1{,}5\\,\\%$"
+   ],
+   "reponse": 1,
+   "explication": "$A = \\pi r^2$ : le facteur $\\pi$ est une constante exacte (incertitude relative nulle) et l'exposant est $n = 2$, donc $\\dfrac{u(A)}{A} = 2 \\times 3\\,\\% = 6\\,\\%$. Pièges : oublier l'exposant ($3\\,\\%$), ou mettre le pourcentage au carré ($3^2 = 9\\,\\%$)."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "propagation-produit-quotient",
+   "enonce": "Aire d'un rectangle $A = L \\times \\ell$, avec $L = 25{,}0 \\pm 0{,}5$ cm et $\\ell = 10{,}0 \\pm 0{,}2$ cm. On donne $\\dfrac{u(A)}{A} = \\sqrt{\\left(\\dfrac{u(L)}{L}\\right)^2 + \\left(\\dfrac{u(\\ell)}{\\ell}\\right)^2}$. Quelle est l'écriture finale correcte ?",
+   "choix": [
+    "$A = 250 \\pm 7$ cm²",
+    "$A = 250 \\pm 10$ cm²",
+    "$A = 250 \\pm 4$ cm²",
+    "$A = 250{,}0 \\pm 7{,}1$ cm²"
+   ],
+   "reponse": 0,
+   "explication": "Valeur : $A = 25{,}0 \\times 10{,}0 = 250$ cm². Relatives : $\\dfrac{0{,}5}{25{,}0} = 2{,}0\\,\\%$ et $\\dfrac{0{,}2}{10{,}0} = 2{,}0\\,\\%$ ; composée : $\\sqrt{0{,}020^2 + 0{,}020^2} \\approx 2{,}8\\,\\%$ ; absolue : $u(A) = 250 \\times 0{,}028 \\approx 7$ cm². Pièges : additionner $2 + 2 = 4\\,\\% \\Rightarrow 10$ cm² ; ou garder $2$ chiffres à l'incertitude ($7{,}1$)."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "methode-propagation",
+   "enonce": "$v = \\dfrac{d}{t}$ avec $d = 100{,}0 \\pm 0{,}5$ m et $t = 12{,}5 \\pm 0{,}1$ s. On donne $\\dfrac{u(v)}{v} = \\sqrt{\\left(\\dfrac{u(d)}{d}\\right)^2 + \\left(\\dfrac{u(t)}{t}\\right)^2}$. Quelle est l'écriture finale correcte ?",
+   "choix": [
+    "$v = 8{,}00 \\pm 0{,}08$ m·s⁻¹",
+    "$v = 8{,}00 \\pm 0{,}10$ m·s⁻¹",
+    "$v = 8{,}0 \\pm 0{,}1$ m·s⁻¹",
+    "$v = 8{,}00 \\pm 0{,}076$ m·s⁻¹"
+   ],
+   "reponse": 0,
+   "explication": "Valeur : $v = \\dfrac{100{,}0}{12{,}5} = 8{,}00$ m·s⁻¹. Relatives : $\\dfrac{0{,}5}{100{,}0} = 0{,}50\\,\\%$ et $\\dfrac{0{,}1}{12{,}5} = 0{,}80\\,\\%$ ; composée : $\\sqrt{0{,}0050^2 + 0{,}0080^2} \\approx 0{,}94\\,\\%$ ; absolue : $u(v) = 8{,}00 \\times 0{,}0094 \\approx 0{,}08$ m·s⁻¹, valeur au **même rang** (le centième) : $8{,}00$. Pièges : addition simple $0{,}5 + 0{,}8 = 1{,}3\\,\\% \\Rightarrow 0{,}10$ ; ou $2$ chiffres à l'incertitude ($0{,}076$)."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "validite-ecart-normalise",
+   "enonce": "Après confrontation à une valeur de référence, on obtient un écart normalisé $z = 3{,}2$ (seuil usuel $2$). Quelle est la conclusion correcte ?",
+   "choix": [
+    "la mesure est nécessairement fausse et doit être jetée",
+    "résultat non compatible : chercher une erreur systématique, une incertitude sous-estimée ou un modèle hors de son domaine",
+    "résultat compatible, car $z$ reste proche de $2$",
+    "il faut recalculer $z$ car un écart normalisé ne dépasse jamais $2$"
+   ],
+   "reponse": 1,
+   "explication": "$z = 3{,}2 > 2$ : le résultat est **non compatible** avec la référence, mais on ne dit **jamais** « la mesure est fausse » tout court. On cherche une cause : erreur systématique non corrigée, incertitude sous-estimée, ou modèle/référence hors de son domaine de validité. $z$ peut parfaitement dépasser $2$ ; c'est justement le signal qu'il faut discuter."
   }
  ]
 }

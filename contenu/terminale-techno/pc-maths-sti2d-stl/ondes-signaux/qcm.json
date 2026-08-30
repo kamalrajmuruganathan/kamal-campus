@@ -149,6 +149,146 @@
    ],
    "reponse": 2,
    "explication": "La **hauteur** ne dépend que de la fréquence du **fondamental**, qui est conservé : la note perçue est la même. Mais le spectre est réduit à une seule raie : le son est devenu **pur**, son **timbre** a changé (il sonne comme un diapason). Le piège est de croire que perdre les harmoniques rend le son plus grave — les harmoniques ne fixent pas la hauteur, ils font le timbre."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "harmoniques",
+   "enonce": "Un signal périodique a pour fréquence de fondamental $f_1 = 200$ Hz. On donne $f_n = n \\times f_1$. Quelle est la fréquence de l'harmonique de rang $3$ ?",
+   "choix": [
+    "$203$ Hz",
+    "$600$ Hz",
+    "$66{,}7$ Hz",
+    "$400$ Hz"
+   ],
+   "reponse": 1,
+   "explication": "$f_3 = 3 \\times f_1 = 3 \\times 200 = 600$ Hz : l'harmonique de rang $n$ est un **multiple** du fondamental. Le piège classique est d'**ajouter** le rang ($200 + 3 = 203$ Hz) au lieu de multiplier ; $400$ Hz serait le rang $2$."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "spectre-amplitude",
+   "enonce": "Comment reconnaît-on, sur son spectre d'amplitude, qu'un son est un son **pur** (signal sinusoïdal) ?",
+   "choix": [
+    "son spectre ne comporte qu'une seule raie",
+    "son spectre comporte plusieurs raies régulièrement espacées",
+    "son spectre est une courbe continue",
+    "son spectre ne comporte aucune raie"
+   ],
+   "reponse": 0,
+   "explication": "Un son pur est sinusoïdal : il n'a qu'**une seule composante**, donc son spectre est une **unique raie**. Plusieurs raies (fondamental + harmoniques) signalent un son **composé**. Le piège est de confondre son pur et son composé : c'est le nombre de raies qui les distingue."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "spectre-amplitude",
+   "enonce": "Un signal a pour fréquence de fondamental $f_1 = 250$ Hz. Quelle est sa période $T$ ?",
+   "choix": [
+    "$4$ ms",
+    "$40$ ms",
+    "$0{,}25$ ms",
+    "$250$ ms"
+   ],
+   "reponse": 0,
+   "explication": "$T = \\dfrac{1}{f_1} = \\dfrac{1}{250} = 4{,}0 \\times 10^{-3}$ s $= 4$ ms. Le piège est de confondre la valeur de la fréquence avec celle de la période ($250$ ms), ou de se tromper dans la conversion s → ms."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "L'intensité acoustique en un point est multipliée par $10$. Sachant que $L = 10\\log(I/I_0)$, comment varie le niveau sonore $L$ ?",
+   "choix": [
+    "il augmente de $10$ dB",
+    "il est multiplié par $10$",
+    "il augmente de $3$ dB",
+    "il augmente de $20$ dB"
+   ],
+   "reponse": 0,
+   "explication": "$I \\to 10\\,I$ donne $L \\to L + 10\\log(10) = L + 10$ dB. Le niveau **s'ajoute**, il ne se multiplie jamais ($\\times 10$ est faux). $+3$ dB correspond à $I \\times 2$, et $+20$ dB à $I \\times 100$."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "ondes-em-transmission",
+   "enonce": "Une lumière laser a pour longueur d'onde dans le vide $\\lambda = 600$ nm. On donne $c = \\lambda f$ avec $c = 3{,}00 \\times 10^{8}$ m·s⁻¹. Quelle est sa fréquence ?",
+   "choix": [
+    "$5{,}0 \\times 10^{14}$ Hz",
+    "$5{,}0 \\times 10^{5}$ Hz",
+    "$1{,}8 \\times 10^{2}$ Hz",
+    "$2{,}0 \\times 10^{-15}$ Hz"
+   ],
+   "reponse": 0,
+   "explication": "On convertit d'abord : $600$ nm $= 6{,}00 \\times 10^{-7}$ m. Puis $f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}00 \\times 10^{8}}{6{,}00 \\times 10^{-7}} = 5{,}0 \\times 10^{14}$ Hz. Les pièges : oublier le préfixe nano ($10^{-9}$), ou calculer $\\lambda/c$ au lieu de $c/\\lambda$ ($2 \\times 10^{-15}$)."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "canal-transmission",
+   "enonce": "La transmission d'un signal par **fibre optique** est un exemple de quel type de propagation ?",
+   "choix": [
+    "propagation libre par ondes hertziennes",
+    "propagation guidée d'une onde lumineuse",
+    "propagation d'une onde sonore dans un solide",
+    "propagation sans onde, par contact électrique direct"
+   ],
+   "reponse": 1,
+   "explication": "Dans une fibre optique, une onde **lumineuse** (souvent infrarouge) est **confinée** dans un guide : c'est une propagation **guidée**. Sa très faible atténuation la réserve aux longues distances. Le piège est de la ranger avec la radio ou le Wi-Fi, qui relèvent de la propagation **libre** par ondes électromagnétiques dans l'air."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Une source sonore isotrope de puissance $P = 1{,}0$ W rayonne dans toutes les directions. On donne $I = \\dfrac{P}{4\\pi d^2}$. Quelle est l'intensité acoustique à $d = 5{,}0$ m ?",
+   "choix": [
+    "$3{,}2 \\times 10^{-3}$ W·m⁻²",
+    "$4{,}0 \\times 10^{-2}$ W·m⁻²",
+    "$1{,}6 \\times 10^{-2}$ W·m⁻²",
+    "$6{,}4 \\times 10^{-3}$ W·m⁻²"
+   ],
+   "reponse": 0,
+   "explication": "$S = 4\\pi d^2 = 4\\pi \\times 5{,}0^2 = 4\\pi \\times 25 \\approx 314$ m², donc $I = \\dfrac{1{,}0}{314} \\approx 3{,}2 \\times 10^{-3}$ W·m⁻². Pièges : oublier le $4\\pi$ ($1{,}0/25 = 4{,}0 \\times 10^{-2}$), oublier de mettre $d$ au carré, ou n'utiliser qu'un demi-espace ($2\\pi d^2$)."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "Une intensité acoustique vaut $I = 4{,}0 \\times 10^{-6}$ W·m⁻². On donne $L = 10\\log(I/I_0)$ avec $I_0 = 1{,}0 \\times 10^{-12}$ W·m⁻² et $\\log 4 \\approx 0{,}60$. Que vaut le niveau sonore ?",
+   "choix": [
+    "$66$ dB",
+    "$60$ dB",
+    "$6{,}6$ dB",
+    "$132$ dB"
+   ],
+   "reponse": 0,
+   "explication": "$\\dfrac{I}{I_0} = \\dfrac{4{,}0 \\times 10^{-6}}{1{,}0 \\times 10^{-12}} = 4{,}0 \\times 10^{6}$, donc $L = 10\\log(4{,}0 \\times 10^{6}) = 10\\,(6 + \\log 4) = 10\\,(6 + 0{,}60) = 66$ dB. Pièges : négliger le facteur $4$ et n'écrire que $60$ dB ; oublier le facteur $10$ ($6{,}6$ dB) ; ou le compter deux fois ($132$ dB)."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "intensite-niveau-sonore",
+   "enonce": "À $d = 3{,}0$ m d'une source isotrope, en champ libre, le niveau sonore vaut $88$ dB. On donne $10\\log 4 \\approx 6{,}0$. Que vaut-il à $6{,}0$ m ?",
+   "choix": [
+    "$82$ dB",
+    "$85$ dB",
+    "$44$ dB",
+    "$86$ dB"
+   ],
+   "reponse": 0,
+   "explication": "La distance double, donc $d^2$ est multiplié par $4$ : l'intensité est **divisée par $4$** et $L$ diminue de $10\\log 4 \\approx 6{,}0$ dB : $88 - 6 = 82$ dB. Pièges : croire que $I$ décroît en $1/d$ ($-3$ dB, soit $85$ dB), diviser directement le niveau par $2$ ($44$ dB), ou n'ôter que $2$ dB."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "canal-transmission",
+   "enonce": "Pour quelle raison principale la **fibre optique** est-elle privilégiée pour transmettre l'information sur de longues distances ?",
+   "choix": [
+    "parce que la lumière s'y propage plus vite que les ondes radio dans l'air",
+    "parce que l'atténuation du signal y est très faible",
+    "parce qu'elle n'exige ni émetteur ni récepteur",
+    "parce qu'elle transmet directement le son sans le convertir"
+   ],
+   "reponse": 1,
+   "explication": "Le critère décisif est l'**atténuation** : dans une fibre optique, l'amplitude du signal décroît très peu au fil de la propagation, ce qui autorise de très longues distances entre répéteurs. Le piège « la lumière va plus vite » est hors sujet : la vitesse n'est pas le critère, et dans la fibre la lumière va d'ailleurs un peu moins vite que dans le vide."
   }
  ]
 }

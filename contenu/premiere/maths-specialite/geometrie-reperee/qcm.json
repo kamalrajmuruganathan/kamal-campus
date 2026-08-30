@@ -134,6 +134,126 @@
       ],
       "reponse": 0,
       "explication": "Le centre est le **milieu** de $[\\mathrm{AB}]$, soit $(3\\,;4)$. Le rayon est la **moitié** du diamètre : $\\mathrm{AB} = \\sqrt{36+64} = 10$, donc $R = 5$ et $R^2 = 25$. L'erreur classique est de prendre $\\mathrm{AB}$ entier comme rayon."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "vecteur-normal",
+      "enonce": "Quel vecteur est normal à la droite d'équation $5x + 2y - 7 = 0$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -2 \\\\ 5 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 5 \\\\ -2 \\end{pmatrix}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour $ax + by + c = 0$, le vecteur normal a pour coordonnées $\\begin{pmatrix} a \\\\ b \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}$. Piège : le choix C, $\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$, est un vecteur **directeur**, orthogonal au normal."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "equation-cercle",
+      "enonce": "Quelle est l'équation du cercle de centre $\\Omega(-2\\,;3)$ et de rayon $2$ ?",
+      "choix": [
+        "$(x+2)^2 + (y-3)^2 = 4$",
+        "$(x-2)^2 + (y+3)^2 = 4$",
+        "$(x+2)^2 + (y-3)^2 = 2$",
+        "$(x-2)^2 + (y+3)^2 = 2$"
+      ],
+      "reponse": 0,
+      "explication": "On **soustrait** les coordonnées du centre : $x - (-2) = x + 2$ et $y - 3$. On met le rayon **au carré** : $R^2 = 4$. D'où $(x+2)^2 + (y-3)^2 = 4$. Pièges : se tromper de signe, ou oublier de carrer le rayon."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "distance",
+      "enonce": "Quelle est la norme du vecteur $\\vec{u}\\begin{pmatrix} 5 \\\\ 12 \\end{pmatrix}$ ?",
+      "choix": ["$13$", "$17$", "$169$", "$\\sqrt{17}$"],
+      "reponse": 0,
+      "explication": "$\\|\\vec{u}\\| = \\sqrt{x^2 + y^2} = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$. Piège : additionner les coordonnées ($5 + 12 = 17$), ou s'arrêter à $169$ sans prendre la racine."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "vecteur-directeur",
+      "enonce": "Quel vecteur est directeur de la droite $3x - y + 2 = 0$ ?",
+      "choix": [
+        "$\\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$",
+        "$\\begin{pmatrix} -1 \\\\ 3 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3 \\\\ 1 \\end{pmatrix}$"
+      ],
+      "reponse": 0,
+      "explication": "Le normal est $\\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$ ; un directeur est $\\begin{pmatrix} -b \\\\ a \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}$. Vérification par produit scalaire : $3 \\times 1 + (-1) \\times 3 = 0$. Piège : donner le vecteur normal lui-même."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "milieu",
+      "enonce": "Quelles sont les coordonnées du milieu de $[\\mathrm{AB}]$ avec $\\mathrm{A}(1\\,;-3)$ et $\\mathrm{B}(5\\,;7)$ ?",
+      "choix": ["$(3\\,;2)$", "$(6\\,;4)$", "$(2\\,;5)$", "$(4\\,;10)$"],
+      "reponse": 0,
+      "explication": "Le milieu est $\\left(\\dfrac{1+5}{2}\\,;\\dfrac{-3+7}{2}\\right) = (3\\,;2)$. Piège : oublier de diviser par $2$ et donner les sommes $(6\\,;4)$, ou faire une différence au lieu d'une moyenne."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "equation-droite",
+      "enonce": "Quelle est l'équation de la droite passant par $\\mathrm{A}(-1\\,;2)$ et de vecteur normal $\\vec{n}\\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}$ ?",
+      "choix": [
+        "$2x - 3y + 8 = 0$",
+        "$2x - 3y - 8 = 0$",
+        "$2x - 3y + 4 = 0$",
+        "$-3x + 2y + 8 = 0$"
+      ],
+      "reponse": 0,
+      "explication": "$a(x-x_\\mathrm{A}) + b(y-y_\\mathrm{A}) = 0$ donne $2(x+1) - 3(y-2) = 0$, soit $2x + 2 - 3y + 6 = 0$, donc $2x - 3y + 8 = 0$. Contrôle : $\\mathrm{A}$ vérifie l'équation, $2(-1) - 3(2) + 8 = -2 - 6 + 8 = 0$ ✓."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "distance",
+      "enonce": "Quelle est la distance entre $\\mathrm{A}(1\\,;2)$ et $\\mathrm{B}(7\\,;10)$ ?",
+      "choix": ["$10$", "$14$", "$100$", "$\\sqrt{14}$"],
+      "reponse": 0,
+      "explication": "$\\mathrm{AB} = \\sqrt{(7-1)^2 + (10-2)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$. Piège : additionner les écarts ($6 + 8 = 14$), ou oublier la racine et donner $100$ (le carré de la distance)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "forme-developpee",
+      "enonce": "Quel est le centre du cercle d'équation $x^2 + y^2 - 2x + 8y + 1 = 0$ ?",
+      "choix": ["$(1\\,;-4)$", "$(-1\\,;4)$", "$(1\\,;4)$", "$(2\\,;-8)$"],
+      "reponse": 0,
+      "explication": "$x^2 - 2x = (x-1)^2 - 1$ et $y^2 + 8y = (y+4)^2 - 16$. L'équation devient $(x-1)^2 + (y+4)^2 - 1 - 16 + 1 = 0$, soit $(x-1)^2 + (y+4)^2 = 16$. Le centre est $(1\\,;-4)$, le rayon $4$. Piège : oublier le changement de signe et lire $(2\\,;-8)$ sur les coefficients."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "forme-developpee",
+      "enonce": "Après regroupement, une équation devient $(x-2)^2 + (y-1)^2 = 0$. Quel est cet ensemble de points ?",
+      "choix": [
+        "le point unique $(2\\,;1)$",
+        "l'ensemble vide",
+        "un cercle de rayon $1$",
+        "un cercle de centre $(2\\,;1)$ et de rayon $2$"
+      ],
+      "reponse": 0,
+      "explication": "Une somme de deux carrés est nulle seulement si **chaque** carré est nul : $x = 2$ et $y = 1$. L'ensemble se réduit au **seul point** $(2\\,;1)$. Piège : conclure « cercle » sans vérifier le second membre — ici $k = 0$ donne un point, pas un cercle."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "cercle-diametre",
+      "enonce": "L'ensemble des points $\\mathrm{M}$ tels que $\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$, avec $\\mathrm{A}(1\\,;0)$ et $\\mathrm{B}(5\\,;0)$, a pour équation :",
+      "choix": [
+        "$(x-3)^2 + y^2 = 4$",
+        "$(x-3)^2 + y^2 = 16$",
+        "$(x-1)^2 + y^2 = 4$",
+        "$(x-5)^2 + y^2 = 4$"
+      ],
+      "reponse": 0,
+      "explication": "$\\overrightarrow{\\mathrm{MA}} \\cdot \\overrightarrow{\\mathrm{MB}} = 0$ caractérise le cercle de **diamètre** $[\\mathrm{AB}]$ : centre au milieu $(3\\,;0)$, rayon $\\dfrac{\\mathrm{AB}}{2} = 2$. D'où $(x-3)^2 + y^2 = 4$. Piège : prendre $\\mathrm{AB} = 4$ comme rayon et écrire $16$ au second membre."
     }
   ]
 }

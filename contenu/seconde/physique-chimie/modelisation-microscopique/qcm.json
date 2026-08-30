@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "notation-atome",
       "enonce": "Dans la notation $^{27}_{13}\\mathrm{Al}$, combien l'atome possède-t-il de protons ?",
-      "choix": ["$27$", "$13$", "$14$", "$40$"],
+      "choix": [
+        "$27$",
+        "$13$",
+        "$14$",
+        "$40$"
+      ],
       "reponse": 1,
       "explication": "$Z = 13$ est le **numéro atomique**, c'est-à-dire le nombre de protons. $A = 27$ est le nombre de **nucléons** (protons + neutrons), donc l'atome a $27 - 13 = 14$ neutrons."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "neutralite",
       "enonce": "Un atome possède $17$ protons. Combien a-t-il d'électrons ?",
-      "choix": ["$17$", "$18$", "$16$", "On ne peut pas savoir"],
+      "choix": [
+        "$17$",
+        "$18$",
+        "$16$",
+        "On ne peut pas savoir"
+      ],
       "reponse": 0,
       "explication": "Un **atome** est électriquement neutre : il a autant d'électrons que de protons, soit $17$. Si le nombre différait, il s'agirait d'un **ion**, pas d'un atome."
     },
@@ -33,7 +43,12 @@
       "difficulte": "moyen",
       "notion": "neutrons",
       "enonce": "Combien de neutrons contient $^{56}_{26}\\mathrm{Fe}$ ?",
-      "choix": ["$26$", "$56$", "$30$", "$82$"],
+      "choix": [
+        "$26$",
+        "$56$",
+        "$30$",
+        "$82$"
+      ],
       "reponse": 2,
       "explication": "Nombre de neutrons $= A - Z = 56 - 26 = 30$. Le choix $82$ additionne au lieu de soustraire — une erreur qui donnerait un noyau bien trop lourd."
     },
@@ -126,9 +141,154 @@
       "difficulte": "difficile",
       "notion": "liaisons",
       "enonce": "Le carbone possède $4$ électrons de valence. Combien de liaisons covalentes forme-t-il ?",
-      "choix": ["$1$", "$2$", "$4$", "$8$"],
+      "choix": [
+        "$1$",
+        "$2$",
+        "$4$",
+        "$8$"
+      ],
       "reponse": 2,
       "explication": "Il lui manque $4$ électrons pour atteindre l'octet, et chaque liaison covalente lui en apporte un : il forme donc **quatre** liaisons. C'est ce qui explique la richesse de la chimie organique."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "notation-atome",
+      "enonce": "Dans la notation $^{16}_{8}\\mathrm{O}$, quel est le nombre de nucléons ?",
+      "choix": [
+        "$8$",
+        "$16$",
+        "$24$",
+        "$2$"
+      ],
+      "reponse": 1,
+      "explication": "$A = 16$ est le **nombre de masse**, c'est-à-dire le nombre de nucléons (protons + neutrons). $Z = 8$ ne compte que les protons ; l'atome a donc $16 - 8 = 8$ neutrons."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "particules",
+      "enonce": "Quelle particule de l'atome porte une charge négative ?",
+      "choix": [
+        "le proton",
+        "le neutron",
+        "l'électron",
+        "le noyau"
+      ],
+      "reponse": 2,
+      "explication": "L'**électron** porte la charge $-e$. Le proton porte $+e$, le neutron est neutre. C'est la perte ou le gain d'électrons qui rend un atome chargé (ion)."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "structure-atome",
+      "enonce": "Où se trouvent les neutrons dans l'atome ?",
+      "choix": [
+        "dans le nuage électronique",
+        "dans le noyau",
+        "autour de l'atome",
+        "les atomes n'ont pas de neutrons"
+      ],
+      "reponse": 1,
+      "explication": "Les neutrons, comme les protons, sont des **nucléons** : ils sont dans le **noyau**. Seuls les électrons occupent le nuage électronique autour du noyau."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "neutrons",
+      "enonce": "Combien de neutrons contient l'atome $^{40}_{19}\\mathrm{K}$ ?",
+      "choix": [
+        "$21$",
+        "$19$",
+        "$40$",
+        "$59$"
+      ],
+      "reponse": 0,
+      "explication": "Nombre de neutrons $= A - Z = 40 - 19 = 21$. Le choix $59$ **additionne** au lieu de soustraire, ce qui donnerait un noyau bien trop lourd."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "configuration",
+      "enonce": "Quelle est la configuration électronique de l'oxygène ($Z = 8$) ?",
+      "choix": [
+        "$1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^4$",
+        "$1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^6$",
+        "$1\\mathrm{s}^2\\,2\\mathrm{s}^6$",
+        "$1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^2$"
+      ],
+      "reponse": 0,
+      "explication": "On remplit dans l'ordre en respectant les capacités ($\\mathrm{s}$ : 2 max, $\\mathrm{p}$ : 6 max). La somme des exposants doit valoir $Z$ : $2+2+4 = 8$ ✓. Le choix $2\\mathrm{s}^6$ dépasse la capacité de la sous-couche s."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "electrons-valence",
+      "enonce": "Le sodium a pour configuration $1\\mathrm{s}^2\\,2\\mathrm{s}^2\\,2\\mathrm{p}^6\\,3\\mathrm{s}^1$. Combien a-t-il d'électrons de valence ?",
+      "choix": [
+        "$1$",
+        "$8$",
+        "$11$",
+        "$3$"
+      ],
+      "reponse": 0,
+      "explication": "Les électrons de valence sont ceux de la **dernière couche occupée**, ici $n = 3$, qui contient seulement $3\\mathrm{s}^1$ : soit **$1$** électron. Le choix $11$ compte tous les électrons de l'atome, pas seulement ceux de valence."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "ions",
+      "enonce": "L'atome de chlore ($3\\mathrm{s}^2\\,3\\mathrm{p}^5$, soit $7$ électrons de valence) gagne un électron. Quel ion obtient-on ?",
+      "choix": [
+        "$\\mathrm{Cl}^+$",
+        "$\\mathrm{Cl}^-$",
+        "$\\mathrm{Cl}^{2-}$",
+        "$\\mathrm{Cl}^{7-}$"
+      ],
+      "reponse": 1,
+      "explication": "Il lui manque **un** électron pour compléter l'octet : il en gagne un et devient $\\mathrm{Cl}^-$. Gagner un électron (charge négative) rend l'ion **négatif**."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "isotopes",
+      "enonce": "Parmi ces couples, lequel est un couple d'**isotopes** ?",
+      "choix": [
+        "$^{14}_{6}\\mathrm{C}$ et $^{14}_{7}\\mathrm{N}$",
+        "$^{35}_{17}\\mathrm{Cl}$ et $^{37}_{17}\\mathrm{Cl}$",
+        "$^{16}_{8}\\mathrm{O}$ et $^{16}_{7}\\mathrm{N}$",
+        "$^{1}_{1}\\mathrm{H}$ et $^{4}_{2}\\mathrm{He}$"
+      ],
+      "reponse": 1,
+      "explication": "Des isotopes ont le **même $Z$** mais des $A$ différents. Seul $^{35}_{17}\\mathrm{Cl}$ et $^{37}_{17}\\mathrm{Cl}$ vérifie cela ($Z = 17$ commun). Les autres couples ont des $Z$ différents : ce sont des éléments distincts."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "octet",
+      "enonce": "Le magnésium possède $2$ électrons de valence. Quel ion forme-t-il selon la règle de l'octet ?",
+      "choix": [
+        "$\\mathrm{Mg}^{2-}$",
+        "$\\mathrm{Mg}^{2+}$",
+        "$\\mathrm{Mg}^{+}$",
+        "$\\mathrm{Mg}^{8+}$"
+      ],
+      "reponse": 1,
+      "explication": "Perdre ses **deux** électrons de valence est plus économique que d'en gagner six : le magnésium forme $\\mathrm{Mg}^{2+}$. Perdre des électrons rend l'ion **positif** — c'est un cation, typique des métaux."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "liaisons",
+      "enonce": "L'azote possède $5$ électrons de valence. Combien de liaisons covalentes forme-t-il ?",
+      "choix": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$5$"
+      ],
+      "reponse": 2,
+      "explication": "Il lui manque $8 - 5 = 3$ électrons pour atteindre l'octet, et chaque liaison covalente lui en apporte un : il forme donc **$3$** liaisons. Les deux électrons de valence restants forment un doublet non liant."
     }
   ]
 }

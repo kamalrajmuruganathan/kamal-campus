@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "À l'équivalence ($1$–$1$) : $C_A = \\dfrac{C_B V_E}{V_A} = \\dfrac{0{,}20 \\times 20{,}0}{25{,}0} = 0{,}16\\ \\mathrm{mol\\cdot L^{-1}}$. Les volumes étant dans la même unité (mL), leur rapport est direct. Le choix $0{,}16\\times 10^{-3}$ vient d'avoir converti un seul volume en litres (facteur $1000$ parasite) ; $0{,}25$ inverse $V_E$ et $V_A$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "acides-bases-ph",
+      "enonce": "Une solution a un $\\mathrm{pH} = 2{,}0$. Quelle est sa concentration en ions oxonium $[\\mathrm{H_3O^+}]$ ?",
+      "choix": [
+        "$1\\times 10^{2}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$1\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$2\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$1\\times 10^{-12}\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 1,
+      "explication": "On inverse la définition du pH : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-2} = 0{,}010\\ \\mathrm{mol\\cdot L^{-1}}$. Le piège est d'oublier le signe moins de l'exposant (ce qui donnerait $10^{2}$, une concentration absurde) ou de recopier la valeur $2$ du pH."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "oxydoreduction-piles",
+      "enonce": "À l'anode d'une pile en fonctionnement (borne $\\ominus$), quel phénomène se produit ?",
+      "choix": [
+        "une réduction",
+        "une oxydation",
+        "une précipitation",
+        "une neutralisation acide-base"
+      ],
+      "reponse": 1,
+      "explication": "À l'**anode** (borne $\\ominus$), le réducteur **cède** des électrons : c'est une **oxydation**. À la cathode (borne $\\oplus$) a lieu la réduction. Moyen mnémotechnique : « anode / oxydation » commencent par une voyelle qu'on peut associer. Le piège est d'inverser anode et cathode."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Une solution est dite **saturée** en un solide ionique lorsque :",
+      "choix": [
+        "il n'y a plus d'eau dans le récipient",
+        "le solide ajouté ne se dissout plus et reste au fond, en équilibre avec la solution",
+        "son pH atteint la valeur $7$",
+        "tous les ions ont disparu de la solution"
+      ],
+      "reponse": 1,
+      "explication": "À saturation, la solution ne peut plus dissoudre de solide : le solide ajouté reste au fond, en **équilibre** avec les ions dissous. La solubilité $s$ est justement la quantité maximale dissoute par litre à cet état. Le piège est de croire que « saturé » signifie « sans eau » ou que le pH intervient : la saturation concerne la dissolution, pas l'acidité."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "acides-bases-ph",
+      "enonce": "Quel est le pH d'une solution d'acide chlorhydrique (acide fort) de concentration apportée $c = 1{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$ ?",
+      "choix": [
+        "$\\mathrm{pH} = 11$",
+        "$\\mathrm{pH} = 3{,}0$",
+        "$\\mathrm{pH} = -3$",
+        "$\\mathrm{pH} = 6$"
+      ],
+      "reponse": 1,
+      "explication": "Un acide fort réagit **totalement** : $[\\mathrm{H_3O^+}] = c = 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$, donc $\\mathrm{pH} = -\\log c = -\\log(10^{-3}) = 3{,}0$. Le piège $\\mathrm{pH} = 6$ vient de vouloir ajouter les concentrations de l'autoprotolyse ; ici c'est inutile. Et $11 = 14 - 3$ confondrait avec une base."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "produit-ionique-eau",
+      "enonce": "À $25\\ \\mathrm{°C}$, une solution a $[\\mathrm{H_3O^+}] = 1{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$. Sachant que $K_e = [\\mathrm{H_3O^+}][\\mathrm{HO^-}] = 1{,}0\\times 10^{-14}$, que vaut $[\\mathrm{HO^-}]$ ?",
+      "choix": [
+        "$1{,}0\\times 10^{-14}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$1{,}0\\times 10^{-9}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$1{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$",
+        "$1{,}0\\times 10^{9}\\ \\mathrm{mol\\cdot L^{-1}}$"
+      ],
+      "reponse": 1,
+      "explication": "$[\\mathrm{HO^-}] = \\dfrac{K_e}{[\\mathrm{H_3O^+}]} = \\dfrac{10^{-14}}{10^{-5}} = 10^{-9}\\ \\mathrm{mol\\cdot L^{-1}}$. On soustrait les exposants : $-14 - (-5) = -9$. Le piège est de se tromper de signe et d'obtenir $10^{9}$, une concentration impossible. Comme $[\\mathrm{HO^-}] < [\\mathrm{H_3O^+}]$, la solution est bien acide."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Une solution de chlorure de sodium contient $[\\mathrm{Na^+}] = [\\mathrm{Cl^-}] = 20\\ \\mathrm{mol\\cdot m^{-3}}$. Avec $\\lambda(\\mathrm{Na^+}) = 5{,}0\\times 10^{-3}$ et $\\lambda(\\mathrm{Cl^-}) = 7{,}6\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$, quelle est la conductivité $\\sigma$ ?",
+      "choix": [
+        "$0{,}15\\ \\mathrm{S\\cdot m^{-1}}$",
+        "$0{,}25\\ \\mathrm{S\\cdot m^{-1}}$",
+        "$0{,}10\\ \\mathrm{S\\cdot m^{-1}}$",
+        "$2{,}5\\ \\mathrm{S\\cdot m^{-1}}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\sigma = \\lambda(\\mathrm{Na^+})[\\mathrm{Na^+}] + \\lambda(\\mathrm{Cl^-})[\\mathrm{Cl^-}] = (5{,}0 + 7{,}6)\\times 10^{-3} \\times 20 = 12{,}6\\times 10^{-3} \\times 20 = 0{,}25\\ \\mathrm{S\\cdot m^{-1}}$. Le piège est de n'additionner qu'un seul ion ($0{,}15$ ou $0{,}10$) : la conductivité est la **somme** des contributions de tous les ions présents."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "acides-bases-ph",
+      "enonce": "Un acide A a une constante $\\mathrm{p}K_a = 4{,}8$ ; un acide B a $\\mathrm{p}K_a = 3{,}2$. Lequel est le plus fort ?",
+      "choix": [
+        "l'acide A ($\\mathrm{p}K_a = 4{,}8$)",
+        "l'acide B ($\\mathrm{p}K_a = 3{,}2$)",
+        "ils ont la même force",
+        "on ne peut pas comparer avec le $\\mathrm{p}K_a$"
+      ],
+      "reponse": 1,
+      "explication": "Plus le $\\mathrm{p}K_a$ est **petit**, plus l'acide est **fort** (car $\\mathrm{p}K_a = -\\log K_a$ : un petit $\\mathrm{p}K_a$ correspond à un grand $K_a$, donc une forte dissociation). Ici B ($3{,}2 < 4{,}8$) est le plus fort. Le piège est de croire « plus grand $\\mathrm{p}K_a$ = plus fort » : c'est l'inverse."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "dosage-acide-base",
+      "enonce": "On dose $V_B = 10{,}0\\ \\mathrm{mL}$ de soude à $C_B = 0{,}10\\ \\mathrm{mol\\cdot L^{-1}}$ par de l'acide chlorhydrique à $C_A = 0{,}050\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$). Quel volume d'acide $V_E$ faut-il verser pour atteindre l'équivalence ?",
+      "choix": [
+        "$5{,}0\\ \\mathrm{mL}$",
+        "$20{,}0\\ \\mathrm{mL}$",
+        "$50{,}0\\ \\mathrm{mL}$",
+        "$2{,}0\\ \\mathrm{mL}$"
+      ],
+      "reponse": 1,
+      "explication": "À l'équivalence, $C_A V_E = C_B V_B$, donc $V_E = \\dfrac{C_B V_B}{C_A} = \\dfrac{0{,}10 \\times 10{,}0}{0{,}050} = 20{,}0\\ \\mathrm{mL}$. C'est logique : l'acide étant deux fois moins concentré que la base, il en faut deux fois plus (le double des $10$ mL). Le piège $5{,}0$ mL inverse le rapport des concentrations."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "dosage-acide-base",
+      "enonce": "À l'équivalence du dosage d'un acide **faible** par une base forte, à $25\\ \\mathrm{°C}$, que peut-on dire du pH ?",
+      "choix": [
+        "il est exactement égal à $7$",
+        "il est inférieur à $7$ (milieu acide)",
+        "il est supérieur à $7$ (milieu basique)",
+        "il est égal à $14$"
+      ],
+      "reponse": 2,
+      "explication": "À l'équivalence d'un acide faible dosé par une base forte, il reste la base conjuguée de l'acide faible en solution, qui rend le milieu **basique** : $\\mathrm{pH} > 7$. Le piège est de généraliser le cas acide fort / base forte (où $\\mathrm{pH} = 7$). Le volume $V_E$, lui, se lit toujours au saut de pH quelle que soit la nature de l'acide."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "On mélange des solutions de sorte que $[\\mathrm{Ag^+}] = 1{,}0\\times 10^{-3}$ et $[\\mathrm{Cl^-}] = 1{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Sachant que $K_s(\\mathrm{AgCl}) = 1{,}8\\times 10^{-10}$, un précipité de $\\mathrm{AgCl}$ se forme-t-il ?",
+      "choix": [
+        "Non, car $Q_r < K_s$",
+        "Oui, un précipité se forme car $Q_r = 1{,}0\\times 10^{-7} > K_s$",
+        "Non, la solution est exactement saturée",
+        "Oui, dès que les deux ions sont présents il y a toujours précipité"
+      ],
+      "reponse": 1,
+      "explication": "On calcule $Q_r = [\\mathrm{Ag^+}][\\mathrm{Cl^-}] = 10^{-3} \\times 10^{-4} = 1{,}0\\times 10^{-7}$. Comme $Q_r = 10^{-7} > K_s = 1{,}8\\times 10^{-10}$, la solution est sursaturée : $\\mathrm{AgCl}$ **précipite**. Le piège est de comparer sans calculer $Q_r$, ou de croire qu'il y a toujours précipité dès que les ions coexistent — c'est faux tant que $Q_r < K_s$."
     }
   ]
 }

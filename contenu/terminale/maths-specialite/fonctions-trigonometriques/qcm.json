@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "On dérive terme à terme : $\\sin'=\\cos$ et $\\cos'=-\\sin$, donc $f'(x)=\\cos(x)-\\sin(x)$. Le piège est de dériver $\\cos$ en $+\\sin$ (choix $\\cos+\\sin$) en oubliant le signe moins."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "parite",
+      "enonce": "La fonction $\\cos$ est-elle paire ou impaire ?",
+      "choix": [
+        "paire",
+        "impaire",
+        "ni paire ni impaire",
+        "périodique de période $\\pi$"
+      ],
+      "reponse": 0,
+      "explication": "$\\cos(-x) = \\cos(x)$ : la fonction $\\cos$ est PAIRE, sa courbe est symétrique par rapport à l'axe des ordonnées. Le piège classique est d'inverser : c'est $\\sin$ qui est impaire, pas $\\cos$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "derivee",
+      "enonce": "Quelle est la dérivée de la fonction $\\sin$ ?",
+      "choix": [
+        "$\\cos x$",
+        "$-\\cos x$",
+        "$-\\sin x$",
+        "$\\sin x$"
+      ],
+      "reponse": 0,
+      "explication": "$\\sin'(x) = \\cos(x)$, sans signe moins. Le signe moins apparaît quand on dérive $\\cos$ : $\\cos'(x) = -\\sin(x)$. Ne pas confondre les deux."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "encadrement",
+      "enonce": "Combien l'équation $\\cos(x) = 3$ a-t-elle de solutions réelles ?",
+      "choix": [
+        "une",
+        "deux",
+        "aucune",
+        "une infinité"
+      ],
+      "reponse": 2,
+      "explication": "Comme $M$ est sur le cercle de rayon $1$, on a toujours $-1 \\leqslant \\cos(x) \\leqslant 1$. La valeur $3$ est hors de cet intervalle : AUCUNE solution. Le piège est de chercher un angle alors que le cosinus ne peut jamais valoir $3$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $f(x) = \\sin(3x)$ ?",
+      "choix": [
+        "$\\cos(3x)$",
+        "$3\\cos(3x)$",
+        "$-3\\cos(3x)$",
+        "$3\\sin(3x)$"
+      ],
+      "reponse": 1,
+      "explication": "C'est une composée $\\sin(ax+b)$ : dérivée $a\\cos(ax+b) = 3\\cos(3x)$, car $u(x) = 3x$ donne $u' = 3$. Le choix $\\cos(3x)$ oublie le facteur $a = 3$, l'erreur type sur $\\sin(ax+b)$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "derivee-composee",
+      "enonce": "Quelle est la dérivée de $f(x) = \\cos(2x - 1)$ ?",
+      "choix": [
+        "$-2\\sin(2x-1)$",
+        "$2\\sin(2x-1)$",
+        "$-\\sin(2x-1)$",
+        "$-2\\cos(2x-1)$"
+      ],
+      "reponse": 0,
+      "explication": "Composée $\\cos(ax+b)$ : dérivée $-a\\sin(ax+b) = -2\\sin(2x-1)$, avec $a = 2$. Deux pièges cumulés ici : oublier le signe moins de $\\cos'$, et oublier le facteur $a = 2$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "derivee",
+      "enonce": "Quelle est la dérivée de $f(x) = 3\\sin(x) - 2\\cos(x)$ ?",
+      "choix": [
+        "$3\\cos x + 2\\sin x$",
+        "$3\\cos x - 2\\sin x$",
+        "$-3\\cos x - 2\\sin x$",
+        "$3\\sin x + 2\\cos x$"
+      ],
+      "reponse": 0,
+      "explication": "On dérive terme à terme : $(3\\sin x)' = 3\\cos x$ et $(-2\\cos x)' = -2 \\times (-\\sin x) = +2\\sin x$. D'où $3\\cos x + 2\\sin x$. Le piège est le double signe moins de $-2\\cos x$, qui redonne un $+2\\sin x$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "periodicite",
+      "enonce": "Que vaut $\\cos\\!\\left(\\dfrac{7\\pi}{3}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$-\\dfrac{1}{2}$",
+        "$1$"
+      ],
+      "reponse": 0,
+      "explication": "On retire un tour : $\\dfrac{7\\pi}{3} = \\dfrac{\\pi}{3} + 2\\pi$, et $\\cos$ est $2\\pi$-périodique, donc $\\cos\\!\\left(\\dfrac{7\\pi}{3}\\right) = \\cos\\!\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$. Le piège est de confondre avec $\\sin\\!\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "equation",
+      "enonce": "Quelles sont les solutions de $\\cos(x) = \\dfrac{1}{2}$ sur $[-\\pi\\,;\\pi]$ ?",
+      "choix": [
+        "$x = \\dfrac{\\pi}{3}$ uniquement",
+        "$x = \\dfrac{\\pi}{3}$ et $x = -\\dfrac{\\pi}{3}$",
+        "$x = \\dfrac{\\pi}{6}$ et $x = -\\dfrac{\\pi}{6}$",
+        "$x = \\dfrac{\\pi}{3}$ et $x = \\dfrac{2\\pi}{3}$"
+      ],
+      "reponse": 1,
+      "explication": "L'angle de référence est $\\dfrac{\\pi}{3}$ car $\\cos\\!\\left(\\dfrac{\\pi}{3}\\right) = \\dfrac{1}{2}$ ; par parité de $\\cos$, $-\\dfrac{\\pi}{3}$ convient aussi. Il y a DEUX solutions : ne garder que $\\dfrac{\\pi}{3}$ en oubliant $-\\dfrac{\\pi}{3}$ est le piège."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "limite",
+      "enonce": "Que vaut $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(x)}{x}$ (en radians) ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "$+\\infty$",
+        "cette limite n'existe pas"
+      ],
+      "reponse": 1,
+      "explication": "C'est la limite fondamentale $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ (elle donne $\\sin'(0) = 1$). Attention : elle n'est vraie qu'en RADIANS ; en degrés, elle ne vaut pas $1$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "parite",
+      "enonce": "En utilisant la parité, que vaut $\\sin\\!\\left(-\\dfrac{\\pi}{3}\\right)$ ?",
+      "choix": [
+        "$\\dfrac{\\sqrt{3}}{2}$",
+        "$-\\dfrac{\\sqrt{3}}{2}$",
+        "$\\dfrac{1}{2}$",
+        "$-\\dfrac{1}{2}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\sin$ est impaire : $\\sin(-x) = -\\sin(x)$, donc $\\sin\\!\\left(-\\dfrac{\\pi}{3}\\right) = -\\sin\\!\\left(\\dfrac{\\pi}{3}\\right) = -\\dfrac{\\sqrt{3}}{2}$. Le piège est de traiter $\\sin$ comme paire (ce qui donnerait $+\\dfrac{\\sqrt{3}}{2}$) ou de confondre avec $\\cos$."
     }
   ]
 }

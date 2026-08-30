@@ -149,6 +149,146 @@
    ],
    "reponse": 1,
    "explication": "Puissance lumineuse reçue : $P_{\\text{reçue}} = E_{\\text{écl}} \\times S = 800 \\times 2{,}0 = 1600$ W, puis $\\eta = \\dfrac{288}{1600} = 0{,}18 = 18\\,\\%$. Les pièges : oublier la surface et diviser par $800$ seulement ($36\\,\\%$), remplacer l'éclairement donné par la valeur standard $1000$ W·m⁻² ($14{,}4\\,\\%$), ou confondre la valeur décimale $0{,}18$ avec un pourcentage ($0{,}18\\,\\%$)."
+  },
+  {
+   "id": 11,
+   "difficulte": "facile",
+   "notion": "regime-sinusoidal",
+   "enonce": "On donne $U = \\dfrac{U_{\\text{max}}}{\\sqrt{2}}$. Une tension sinusoïdale a une valeur efficace $U = 12$ V. Quelle est sa valeur maximale $U_{\\text{max}}$ ?",
+   "choix": [
+    "$8{,}5$ V",
+    "$17$ V",
+    "$24$ V",
+    "$12$ V"
+   ],
+   "reponse": 1,
+   "explication": "On isole $U_{\\text{max}} = U \\times \\sqrt{2} = 12 \\times 1{,}41 \\approx 17$ V. Le piège : **diviser** par $\\sqrt{2}$ au lieu de multiplier ($8{,}5$ V), ou multiplier par $2$ ($24$ V). La valeur maximale est toujours **plus grande** que la valeur efficace."
+  },
+  {
+   "id": 12,
+   "difficulte": "facile",
+   "notion": "flux-thermique",
+   "enonce": "Pour améliorer l'isolation d'un mur, on veut **augmenter** sa résistance thermique $R_{\\text{th}} = \\dfrac{e}{\\lambda \\cdot S}$. Quelle action y parvient ?",
+   "choix": [
+    "augmenter l'épaisseur $e$ de l'isolant",
+    "choisir un matériau de conductivité $\\lambda$ plus grande",
+    "augmenter la surface $S$ de la paroi",
+    "diminuer l'épaisseur $e$ de l'isolant"
+   ],
+   "reponse": 0,
+   "explication": "$R_{\\text{th}} = \\dfrac{e}{\\lambda S}$ : elle **augmente** quand $e$ augmente. Choisir un $\\lambda$ plus grand (meilleur conducteur) ou augmenter $S$ la **diminuent** au contraire, tout comme réduire $e$. Bien isoler, c'est un isolant à faible $\\lambda$, épais."
+  },
+  {
+   "id": 13,
+   "difficulte": "facile",
+   "notion": "piles-accumulateurs",
+   "enonce": "Quelle est la différence essentielle entre une pile et un accumulateur ?",
+   "choix": [
+    "l'accumulateur fournit une tension continue, la pile une tension sinusoïdale",
+    "la réaction chimique est réversible dans l'accumulateur (rechargeable), à sens unique dans la pile",
+    "la pile stocke plus d'énergie qu'un accumulateur de même taille",
+    "l'accumulateur reçoit ses réactifs de l'extérieur en continu"
+   ],
+   "reponse": 1,
+   "explication": "Dans un **accumulateur**, la réaction d'oxydoréduction est **réversible** : on la recharge en imposant un courant inverse. Dans une **pile**, la conversion est à sens unique. Le distracteur « réactifs reçus en continu » décrit la **pile à combustible**, pas l'accumulateur ; les deux fournissent une tension continue."
+  },
+  {
+   "id": 14,
+   "difficulte": "moyen",
+   "notion": "regime-sinusoidal",
+   "enonce": "Dans un circuit, les maxima de l'intensité $i(t)$ arrivent $\\Delta t = 2{,}0$ ms après ceux de la tension $u(t)$. La période vaut $T = 16$ ms. On donne $\\varphi = 2\\pi \\dfrac{\\Delta t}{T}$. Quel est le déphasage $\\varphi$ ?",
+   "choix": [
+    "$\\dfrac{\\pi}{8}$ rad",
+    "$\\dfrac{\\pi}{4}$ rad",
+    "$\\dfrac{\\pi}{2}$ rad",
+    "$8\\pi$ rad"
+   ],
+   "reponse": 1,
+   "explication": "$\\varphi = 2\\pi \\times \\dfrac{2{,}0}{16} = 2\\pi \\times \\dfrac{1}{8} = \\dfrac{\\pi}{4}$ rad. Le piège : oublier le facteur $2$ et écrire $\\pi \\dfrac{\\Delta t}{T} = \\dfrac{\\pi}{8}$, ou inverser le rapport $\\dfrac{T}{\\Delta t}$ ($8\\pi$)."
+  },
+  {
+   "id": 15,
+   "difficulte": "moyen",
+   "notion": "pertes-en-ligne",
+   "enonce": "Une ligne transporte une puissance $P = UI$ fixée. On multiplie la tension de transport $U$ par $5$. Par combien sont divisées les pertes en ligne $P_{\\text{pertes}} = R I^2$ ?",
+   "choix": [
+    "par $5$",
+    "par $10$",
+    "par $25$",
+    "elles ne changent pas"
+   ],
+   "reponse": 2,
+   "explication": "À $P = UI$ fixée, multiplier $U$ par $5$ divise $I$ par $5$. Comme $P_{\\text{pertes}} = R I^2$ dépend du **carré** de l'intensité, elles sont divisées par $5^2 = 25$. Le piège classique : oublier le carré et répondre « par $5$ »."
+  },
+  {
+   "id": 16,
+   "difficulte": "moyen",
+   "notion": "energie-interne",
+   "enonce": "Une résistance chauffante de puissance $P = 500$ W (sans pertes) fournit son énergie à $0{,}50$ kg d'eau pendant $2$ minutes. On donne $\\Delta U = m c \\Delta T$ avec $c_{\\text{eau}} = 4185$ J·kg⁻¹·K⁻¹. De combien s'élève la température de l'eau ?",
+   "choix": [
+    "environ $29\\ ^\\circ$C",
+    "environ $0{,}5\\ ^\\circ$C",
+    "environ $14\\ ^\\circ$C",
+    "environ $287\\ ^\\circ$C"
+   ],
+   "reponse": 0,
+   "explication": "Énergie reçue : $\\Delta U = P \\times \\Delta t = 500 \\times 120 = 60\\,000$ J (avec $\\Delta t$ en **secondes**). Puis $\\Delta T = \\dfrac{\\Delta U}{m c} = \\dfrac{60\\,000}{0{,}50 \\times 4185} \\approx 29$ K, soit $29\\ ^\\circ$C d'élévation. Les pièges : laisser $\\Delta t = 2$ min sans convertir en secondes ($0{,}5\\ ^\\circ$C), oublier de diviser par $m$, ou ajouter $273$."
+  },
+  {
+   "id": 17,
+   "difficulte": "moyen",
+   "notion": "photovoltaique",
+   "enonce": "Un panneau photovoltaïque de rendement $\\eta = 20\\,\\%$ et de surface $S = 1{,}5$ m² reçoit un éclairement $E_{\\text{écl}} = 1000$ W·m⁻². Quelle puissance électrique délivre-t-il ? On donne $\\eta = \\dfrac{P_{\\text{élec}}}{E_{\\text{écl}} \\cdot S}$.",
+   "choix": [
+    "$1500$ W",
+    "$300$ W",
+    "$200$ W",
+    "$7500$ W"
+   ],
+   "reponse": 1,
+   "explication": "Puissance reçue : $P_{\\text{reçue}} = E_{\\text{écl}} \\times S = 1000 \\times 1{,}5 = 1500$ W, puis $P_{\\text{élec}} = \\eta \\times P_{\\text{reçue}} = 0{,}20 \\times 1500 = 300$ W. Les pièges : donner la puissance **reçue** au lieu de l'électrique ($1500$ W), oublier la surface ($0{,}20 \\times 1000 = 200$ W), ou **diviser** par $\\eta$ ($7500$ W)."
+  },
+  {
+   "id": 18,
+   "difficulte": "difficile",
+   "notion": "flux-thermique",
+   "enonce": "Un mur est fait de deux couches en série : du béton de résistance thermique $R_1 = 0{,}10$ K·W⁻¹ et un isolant de $R_2 = 0{,}90$ K·W⁻¹. L'écart de température entre les deux faces du mur est $\\Delta T = 20$ K. On donne $\\Phi = \\dfrac{\\Delta T}{R_{\\text{th}}}$. Quel flux thermique traverse le mur ?",
+   "choix": [
+    "$200$ W",
+    "$20$ W",
+    "$222$ W",
+    "$18$ W"
+   ],
+   "reponse": 1,
+   "explication": "Les résistances thermiques **en série s'ajoutent** : $R_{\\text{th}} = R_1 + R_2 = 0{,}10 + 0{,}90 = 1{,}0$ K·W⁻¹, puis $\\Phi = \\dfrac{20}{1{,}0} = 20$ W. Les pièges : n'utiliser qu'une seule couche ($R = 0{,}10$ donne $200$ W ; $R = 0{,}90$ donne $\\approx 22$ W), ou vouloir « ajouter les flux » comme des résistances en parallèle."
+  },
+  {
+   "id": 19,
+   "difficulte": "difficile",
+   "notion": "piles-accumulateurs",
+   "enonce": "Un accumulateur de capacité $Q = 2{,}5$ Ah débite un courant constant $I = 0{,}50$ A. On donne $Q = I \\cdot \\Delta t$. Pendant combien de temps peut-il théoriquement débiter ?",
+   "choix": [
+    "$1{,}25$ h",
+    "$5{,}0$ h",
+    "$5{,}0$ min",
+    "$0{,}20$ h"
+   ],
+   "reponse": 1,
+   "explication": "$\\Delta t = \\dfrac{Q}{I} = \\dfrac{2{,}5}{0{,}50} = 5{,}0$ h (avec $Q$ en Ah et $I$ en A, on obtient bien des **heures**). Les pièges : **multiplier** $Q \\times I$ ($1{,}25$ h), inverser le rapport $\\dfrac{I}{Q}$ ($0{,}20$ h), ou confondre l'unité et lire « $5$ min »."
+  },
+  {
+   "id": 20,
+   "difficulte": "difficile",
+   "notion": "photon",
+   "enonce": "Deux photons A et B ont pour longueurs d'onde $\\lambda_A = 400$ nm (violet) et $\\lambda_B = 700$ nm (rouge). En utilisant $E = \\dfrac{hc}{\\lambda}$, que peut-on dire de leurs énergies ?",
+   "choix": [
+    "$E_A = E_B$ car ce sont deux photons",
+    "$E_A > E_B$ : le photon violet est le plus énergétique",
+    "$E_B > E_A$ : le photon rouge est le plus énergétique",
+    "on ne peut pas comparer sans connaître leurs fréquences"
+   ],
+   "reponse": 1,
+   "explication": "$E = \\dfrac{hc}{\\lambda}$ : l'énergie est **inversement** proportionnelle à $\\lambda$, donc la plus **petite** longueur d'onde porte la plus grande énergie. $\\lambda_A = 400$ nm $< \\lambda_B = 700$ nm, donc $E_A > E_B$ : le violet est plus énergétique que le rouge. Le piège : croire que « plus grande longueur d'onde = plus d'énergie » ($E_B > E_A$)."
   }
  ]
 }

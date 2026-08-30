@@ -139,6 +139,126 @@
       ],
       "reponse": 1,
       "explication": "Le point moyen $\\mathrm{G}(\\bar x\\,;\\bar y)$ est le centre de gravité du nuage, et toutes les méthodes d'ajustement au programme y font passer la droite. Vérifier ce passage est le contrôle le plus rapide d'un tracé."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "point-moyen",
+      "enonce": "Un nuage est formé des points $(1\\,;3)$, $(3\\,;5)$, $(5\\,;7)$ et $(7\\,;9)$. Quelles sont les coordonnées du point moyen ?",
+      "choix": ["$(4\\,;6)$", "$(6\\,;4)$", "$(4\\,;4)$", "$(16\\,;24)$"],
+      "reponse": 0,
+      "explication": "$\\bar x = \\dfrac{1+3+5+7}{4} = 4$ et $\\bar y = \\dfrac{3+5+7+9}{4} = 6$, donc $\\mathrm{G}(4\\,;6)$. Piège : intervertir $\\bar x$ et $\\bar y$, ou oublier de diviser par l'effectif et donner les sommes $(16\\,;24)$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "correlation-causalite",
+      "enonce": "Deux caractères sont fortement corrélés. Cela prouve-t-il que l'un est la cause de l'autre ?",
+      "choix": [
+        "Oui, toujours",
+        "Non : à elle seule, une corrélation ne prouve jamais une causalité",
+        "Oui, si la corrélation est forte",
+        "Oui, à condition d'avoir un tableau croisé"
+      ],
+      "reponse": 1,
+      "explication": "Une corrélation peut venir d'un lien de cause à effet, d'une cause commune, ou du hasard. Le nuage de points, seul, ne permet **jamais** de trancher. C'est l'erreur de fond que vise tout le chapitre."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "tableau-croise",
+      "enonce": "Pour représenter graphiquement la répartition de **deux caractères qualitatifs**, on peut utiliser :",
+      "choix": [
+        "un nuage de points",
+        "un diagramme en barres ou un diagramme circulaire",
+        "une droite d'ajustement",
+        "uniquement le point moyen"
+      ],
+      "reponse": 1,
+      "explication": "Deux caractères **qualitatifs** se représentent par des diagrammes en barres (groupées ou empilées) ou circulaires. Le nuage de points et la droite d'ajustement concernent des caractères **quantitatifs**."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "tableau-croise",
+      "enonce": "Dans le tableau, $40$ élèves sont « Première et sport », et il y a $220$ sportifs au total. Quelle est la part de Premières **parmi les sportifs** ?",
+      "choix": ["$\\approx 18\\,\\%$", "$40\\,\\%$", "$\\approx 82\\,\\%$", "$10\\,\\%$"],
+      "reponse": 0,
+      "explication": "La base est le total de la **colonne** sport : $\\dfrac{40}{220} \\approx 18\\,\\%$. Piège : prendre $40\\,\\%$ (part de sportifs parmi les Premières, base ligne) ou $\\approx 82\\,\\%$ (part de Secondes parmi les sportifs). Toujours préciser la base."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "extrapolation",
+      "enonce": "On dispose de mesures de $2000$ à $2010$. Estimer une valeur pour $2050$ à partir de l'ajustement s'appelle :",
+      "choix": ["interpoler", "extrapoler", "tracer au jugé", "calculer le point moyen"],
+      "reponse": 1,
+      "explication": "$2050$ est **au-delà** de l'intervalle observé $[2000\\,;2010]$ : c'est une **extrapolation**, risquée car rien ne garantit que la tendance se prolonge. En rester à l'intérieur ($2005$ par exemple) serait interpoler."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "nuage-points",
+      "enonce": "Dans un nuage de points, on constate que lorsque $x$ augmente, $y$ augmente aussi. On décrit ainsi :",
+      "choix": [
+        "la dispersion du nuage",
+        "le sens de la relation (croissant)",
+        "une relation de causalité",
+        "le point moyen"
+      ],
+      "reponse": 1,
+      "explication": "On observe le **sens** de la relation : ici croissant. La forme (alignés ou courbes) et la dispersion (resserrés ou étalés) sont d'autres critères. Attention : un sens croissant n'implique aucune **causalité**."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "correlation-causalite",
+      "enonce": "Combien d'explications possibles peut avoir une corrélation entre deux caractères ?",
+      "choix": [
+        "une seule : la causalité",
+        "deux : causalité ou hasard",
+        "trois : causalité, cause commune, ou hasard",
+        "aucune, c'est toujours une coïncidence"
+      ],
+      "reponse": 2,
+      "explication": "Une corrélation s'explique de **trois** manières : un lien de cause à effet, une cause commune (variable cachée), ou une simple coïncidence. Réduire à la seule causalité est l'erreur classique du chapitre."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "tableau-croise",
+      "enonce": "Le tableau indique $120$ Secondes « sans sport » et $180$ élèves « sans sport » au total. Quelle est la part de Secondes **parmi les non-sportifs** ?",
+      "choix": ["$\\approx 67\\,\\%$", "$40\\,\\%$", "$30\\,\\%$", "$60\\,\\%$"],
+      "reponse": 0,
+      "explication": "La base est le total de la colonne « sans sport » : $\\dfrac{120}{180} \\approx 67\\,\\%$. Piège : rapporter au total général $\\left(\\frac{120}{400} = 30\\,\\%\\right)$ ou aux seules Secondes $\\left(\\frac{120}{300} = 40\\,\\%\\right)$. Chaque base répond à une question différente."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "correlation-causalite",
+      "enonce": "Depuis $1950$, la consommation de fromage et le nombre de brevets déposés augmentent tous deux. Il n'existe aucun lien réel. Comment nomme-t-on cette situation ?",
+      "choix": [
+        "une relation de cause à effet",
+        "une cause commune cachée",
+        "une simple coïncidence de tendances",
+        "une extrapolation"
+      ],
+      "reponse": 2,
+      "explication": "Deux grandeurs qui croissent sur la même période peuvent le faire **par hasard**, sans lien ni cause commune : c'est une coïncidence de tendances. C'est la troisième explication possible d'une corrélation, et un piège fréquent des séries temporelles longues."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "tableau-croise",
+      "enonce": "Un pourcentage issu d'un tableau croisé est annoncé sans préciser sa base. Pourquoi est-ce un problème ?",
+      "choix": [
+        "Parce que le pourcentage est forcément faux",
+        "Parce qu'une même case admet trois pourcentages de sens différents",
+        "Parce qu'un tableau croisé n'admet pas de pourcentage",
+        "Parce qu'il faut toujours partir du total général"
+      ],
+      "reponse": 1,
+      "explication": "Une même case peut être rapportée au total général, au total de sa ligne ou au total de sa colonne : **trois** nombres, trois significations. Sans la base, le pourcentage est ambigu. Piège : croire qu'il faut toujours le total général."
     }
   ]
 }

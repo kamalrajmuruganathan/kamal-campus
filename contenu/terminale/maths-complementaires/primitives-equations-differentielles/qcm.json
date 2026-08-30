@@ -15,7 +15,12 @@
       "difficulte": "facile",
       "notion": "definition",
       "enonce": "Une fonction $F$ est une primitive de $f$ sur un intervalle $I$ lorsque, sur $I$ :",
-      "choix": ["$F'=f$", "$f'=F$", "$F=f'$", "$F\\times f=1$"],
+      "choix": [
+        "$F'=f$",
+        "$f'=F$",
+        "$F=f'$",
+        "$F\\times f=1$"
+      ],
       "reponse": 0,
       "explication": "Une primitive se **dérive** en la fonction de départ : $F'=f$. Le piège classique est de confondre le sens de l'opération et d'écrire $f'=F$ : ça, c'est la dérivation, pas la recherche de primitive."
     },
@@ -24,7 +29,12 @@
       "difficulte": "facile",
       "notion": "primitives-usuelles",
       "enonce": "Sur $\\mathbb{R}$, une primitive de la fonction $x\\mapsto e^{x}$ est :",
-      "choix": ["$e^{x}$", "$xe^{x}$", "$\\dfrac{e^{x}}{x}$", "$e^{x}-1$ uniquement"],
+      "choix": [
+        "$e^{x}$",
+        "$xe^{x}$",
+        "$\\dfrac{e^{x}}{x}$",
+        "$e^{x}-1$ uniquement"
+      ],
       "reponse": 0,
       "explication": "L'exponentielle est sa propre dérivée et sa propre primitive : $(e^x)'=e^x$. Toute primitive est de la forme $e^x+C$ ; $e^x$ (avec $C=0$) en est une. Le distracteur $xe^x$ trahit une confusion avec un produit."
     },
@@ -61,7 +71,12 @@
       "difficulte": "moyen",
       "notion": "linearite",
       "enonce": "Sur $\\mathbb{R}$, une primitive de $x\\mapsto 3x^{2}-4x$ est :",
-      "choix": ["$6x-4$", "$x^{3}-2x^{2}$", "$x^{3}-4x^{2}$", "$3x^{3}-2x^{2}$"],
+      "choix": [
+        "$6x-4$",
+        "$x^{3}-2x^{2}$",
+        "$x^{3}-4x^{2}$",
+        "$3x^{3}-2x^{2}$"
+      ],
       "reponse": 1,
       "explication": "On primitive terme à terme : $3x^2\\mapsto x^3$ et $-4x\\mapsto -2x^2$, d'où $x^3-2x^2$. Le distracteur $6x-4$ est la **dérivée** ; $x^3-4x^2$ oublie de diviser $-4$ par $2$."
     },
@@ -84,7 +99,12 @@
       "difficulte": "difficile",
       "notion": "primitives-usuelles",
       "enonce": "Sur $]0;+\\infty[$, une primitive de $x\\mapsto \\dfrac{1}{x}$ est :",
-      "choix": ["$-\\dfrac{1}{x^{2}}$", "$\\ln x$", "$\\dfrac{x^{0}}{0}$", "$-\\dfrac{1}{x}$"],
+      "choix": [
+        "$-\\dfrac{1}{x^{2}}$",
+        "$\\ln x$",
+        "$\\dfrac{x^{0}}{0}$",
+        "$-\\dfrac{1}{x}$"
+      ],
       "reponse": 1,
       "explication": "Le cas $\\dfrac{1}{x}=x^{-1}$ échappe à la formule des puissances (on aurait $n+1=0$, division interdite) : sa primitive est $\\ln x$. Le distracteur $-\\dfrac{1}{x}$ est la primitive de $\\dfrac{1}{x^2}$, pas de $\\dfrac{1}{x}$."
     },
@@ -93,7 +113,12 @@
       "difficulte": "difficile",
       "notion": "equation-y-prime-ay-plus-b",
       "enonce": "Quelle est la solution particulière constante de $y'=2y+6$ ?",
-      "choix": ["$y=6$", "$y=3$", "$y=2$", "$y=-3$"],
+      "choix": [
+        "$y=6$",
+        "$y=3$",
+        "$y=2$",
+        "$y=-3$"
+      ],
       "reponse": 3,
       "explication": "Une solution constante a $y'=0$, donc $0=2y+6$, soit $y=-3$ (c'est $-\\dfrac{b}{a}$). Le piège du signe : oublier le moins donne $y=3$. On vérifie : $2\\times(-3)+6=0$."
     },
@@ -124,6 +149,146 @@
       ],
       "reponse": 2,
       "explication": "$y'=-y$ correspond à $a=-1$ : les solutions sont $Ce^{-x}$. La condition $y(0)=C=5$ donne $y(x)=5e^{-x}$. Piège : le signe de $a$ ($e^{-x}$ et non $e^{x}$), et la constante multiplie l'exponentielle, elle ne s'ajoute pas (choix 4)."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "primitives-usuelles",
+      "enonce": "Sur $\\mathbb{R}$, une primitive de $x\\mapsto x^{3}$ est :",
+      "choix": [
+        "$3x^{2}$",
+        "$\\dfrac{x^{4}}{4}$",
+        "$\\dfrac{x^{4}}{3}$",
+        "$4x^{3}$"
+      ],
+      "reponse": 1,
+      "explication": "Pour $x^{n}$, une primitive est $\\dfrac{x^{n+1}}{n+1}$ : avec $n=3$, on obtient $\\dfrac{x^{4}}{4}$. Le distracteur $3x^{2}$ est la DÉRIVÉE de $x^{3}$ : c'est la confusion primitive/dérivée à éviter."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "primitives-usuelles",
+      "enonce": "Sur $\\mathbb{R}$, une primitive de la fonction constante $x\\mapsto 5$ est :",
+      "choix": [
+        "$0$",
+        "$5x$",
+        "$\\dfrac{5}{x}$",
+        "$5$"
+      ],
+      "reponse": 1,
+      "explication": "Une primitive de la constante $k$ est $kx$ : ici $5x$, car $(5x)'=5$. Le piège $0$ est la dérivée d'une constante ; on cherche la fonction qui SE DÉRIVE en $5$, pas l'inverse."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "primitives-usuelles",
+      "enonce": "Sur un intervalle ne contenant pas $0$, une primitive de $x\\mapsto \\dfrac{1}{x^{2}}$ est :",
+      "choix": [
+        "$-\\dfrac{1}{x}$",
+        "$\\dfrac{1}{x}$",
+        "$-\\dfrac{2}{x^{3}}$",
+        "$\\ln(x^{2})$"
+      ],
+      "reponse": 0,
+      "explication": "$\\left(-\\dfrac{1}{x}\\right)' = \\dfrac{1}{x^{2}}$, donc $-\\dfrac{1}{x}$ est une primitive. Le distracteur $-\\dfrac{2}{x^{3}}$ est la dérivée de $\\dfrac{1}{x^{2}}$ ; l'oubli du signe moins donne $\\dfrac{1}{x}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "condition-initiale",
+      "enonce": "Quelle est la primitive $F$ de $x\\mapsto 2x$ (sur $\\mathbb{R}$) qui vérifie $F(1)=5$ ?",
+      "choix": [
+        "$x^{2}+4$",
+        "$x^{2}+5$",
+        "$x^{2}+3$",
+        "$x^{2}$"
+      ],
+      "reponse": 0,
+      "explication": "Les primitives sont $F(x)=x^{2}+C$. La condition $F(1)=1+C=5$ donne $C=4$, d'où $F(x)=x^{2}+4$. Le piège $x^{2}+5$ recopie la valeur $5$ dans le $+C$ sans résoudre l'équation."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "equation-y-prime-f",
+      "enonce": "Quelles sont les solutions de l'équation différentielle $y'=e^{x}$ ?",
+      "choix": [
+        "$x\\mapsto e^{x}+C$ avec $C\\in\\mathbb{R}$",
+        "$x\\mapsto Ce^{x}$ avec $C\\in\\mathbb{R}$",
+        "$x\\mapsto e^{x}$ uniquement",
+        "$x\\mapsto \\dfrac{e^{x}}{x}+C$"
+      ],
+      "reponse": 0,
+      "explication": "Résoudre $y'=f$, c'est chercher les primitives de $f$ : celles de $e^{x}$ sont $e^{x}+C$. Le piège $Ce^{x}$ est la solution de $y'=y$, pas de $y'=e^{x}$ : ici la constante s'AJOUTE, elle ne multiplie pas."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Les solutions de $y'=-0{,}5\\,y$ sont $y(x)=Ce^{-0{,}5x}$. Vers quelle valeur tendent-elles quand $x\\to +\\infty$ ?",
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$C$",
+        "$-0{,}5$"
+      ],
+      "reponse": 0,
+      "explication": "Comme $a=-0{,}5<0$, le facteur $e^{-0{,}5x}$ tend vers $0$, donc $y\\to 0$ : c'est l'amortissement. Le piège $C$ confond la valeur en $x=0$ (où $y=C$) avec la limite en $+\\infty$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "linearite",
+      "enonce": "Sur $\\mathbb{R}$, une primitive de $x\\mapsto 6x^{2}+2$ est :",
+      "choix": [
+        "$2x^{3}+2x$",
+        "$2x^{3}+2$",
+        "$12x$",
+        "$6x^{3}+2x$"
+      ],
+      "reponse": 0,
+      "explication": "On primitive terme à terme : $6x^{2}\\mapsto 2x^{3}$ (on divise par $3$) et $2\\mapsto 2x$, d'où $2x^{3}+2x$. Le distracteur $6x^{3}+2x$ oublie de diviser par $3$ ; $12x$ est la dérivée."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "modelisation",
+      "enonce": "Un objet refroidit selon $\\theta'=-0{,}2\\theta+4$. Vers quelle température (valeur limite) tend $\\theta(t)$ quand $t\\to +\\infty$ ?",
+      "choix": [
+        "$20$",
+        "$4$",
+        "$-20$",
+        "$0$"
+      ],
+      "reponse": 0,
+      "explication": "La limite est la solution constante $-\\dfrac{b}{a}=-\\dfrac{4}{-0{,}2}=20$ (la température de la pièce), car $a<0$ éteint l'exponentielle. Le piège de signe donne $-20$ : réinjecter dans $-0{,}2\\theta+4=0$ confirme $\\theta=20$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "condition-initiale",
+      "enonce": "Quelle est la solution de $y'=2y+6$ vérifiant $y(0)=1$ ?",
+      "choix": [
+        "$x\\mapsto 4e^{2x}-3$",
+        "$x\\mapsto e^{2x}-3$",
+        "$x\\mapsto 4e^{2x}+3$",
+        "$x\\mapsto -3e^{2x}+4$"
+      ],
+      "reponse": 0,
+      "explication": "La solution générale est $y(x)=Ce^{2x}-3$ (car $-\\frac{b}{a}=-3$). La condition $y(0)=C-3=1$ donne $C=4$, d'où $y(x)=4e^{2x}-3$. Le piège est d'appliquer la condition initiale avant d'avoir écrit la solution générale complète."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Parmi ces fonctions, laquelle est solution de l'équation différentielle $y'=3y$ ?",
+      "choix": [
+        "$x\\mapsto e^{3x}+2$",
+        "$x\\mapsto 2e^{3x}$",
+        "$x\\mapsto e^{2x}$",
+        "$x\\mapsto 3e^{x}$"
+      ],
+      "reponse": 1,
+      "explication": "$y=2e^{3x}$ donne $y'=6e^{3x}=3y$ : c'est une solution, la constante MULTIPLIE l'exponentielle. En revanche $e^{3x}+2$ donne $y'=3e^{3x}\\neq 3(e^{3x}+2)$ : la constante ajoutée casse l'équation. C'est le piège $Ce^{ax}$ contre $e^{ax}+C$."
     }
   ]
 }

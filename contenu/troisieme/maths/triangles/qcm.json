@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "Le parallélisme t'est **donné** et tu cherches une **longueur** → théorème de Thalès. La réciproque fait l'inverse : elle part des longueurs pour **prouver** le parallélisme. Confondre les deux est l'erreur n°1 du chapitre."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, à quoi est égal le sinus d'un angle aigu ?",
+      "choix": [
+        "$\\dfrac{\\text{opposé}}{\\text{hypoténuse}}$",
+        "$\\dfrac{\\text{adjacent}}{\\text{hypoténuse}}$",
+        "$\\dfrac{\\text{opposé}}{\\text{adjacent}}$",
+        "$\\dfrac{\\text{adjacent}}{\\text{opposé}}$"
+      ],
+      "reponse": 0,
+      "explication": "SOH-CAH-TOA : **SOH** = **S**inus, **O**pposé sur **H**ypoténuse. Le piège classique est de confondre avec le cosinus ($\\frac{\\text{adj}}{\\text{hyp}}$) ou la tangente ($\\frac{\\text{opp}}{\\text{adj}}$)."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, qu'est-ce que l'hypoténuse ?",
+      "choix": [
+        "Le plus court côté du triangle",
+        "Le côté opposé à l'angle droit",
+        "Le côté opposé à l'angle de travail",
+        "Un des deux côtés de l'angle droit"
+      ],
+      "reponse": 1,
+      "explication": "L'hypoténuse est le côté opposé à l'**angle droit** ; elle ne change jamais quel que soit l'angle de travail, et c'est le **plus long** des trois côtés. Le piège est de la confondre avec le côté opposé à l'angle aigu étudié, qui, lui, dépend de l'angle choisi."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "logique",
+      "enonce": "Dans quel type de triangle peut-on appliquer les formules du cosinus, du sinus et de la tangente ?",
+      "choix": [
+        "Un triangle rectangle",
+        "N'importe quel triangle",
+        "Un triangle isocèle",
+        "Un triangle équilatéral"
+      ],
+      "reponse": 0,
+      "explication": "Les lignes trigonométriques ne sont définies que dans un triangle **rectangle**, et pour l'un de ses deux angles **aigus**. Le piège est de vouloir les utiliser dans un triangle quelconque : sans angle droit, les formules n'ont aucun sens. Cherche l'angle droit (ou démontre-le) avant tout."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "choisir-rapport",
+      "enonce": "Dans un triangle rectangle, tu connais les deux côtés de l'angle droit et tu cherches un angle aigu. Quel rapport utilises-tu ?",
+      "choix": [
+        "le cosinus",
+        "le sinus",
+        "la tangente",
+        "le théorème de Pythagore"
+      ],
+      "reponse": 2,
+      "explication": "Les deux côtés de l'angle droit sont, pour l'angle aigu choisi, l'**opposé** et l'**adjacent** : l'hypoténuse n'intervient pas. Pas d'hypoténuse dans l'énoncé → c'est la **tangente** (TOA). Cosinus et sinus feraient apparaitre l'hypoténuse, dont on ne parle pas ici."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "thales",
+      "enonce": "Configuration papillon : $\\mathrm{B}$, $\\mathrm{O}$, $\\mathrm{E}$ alignés et $\\mathrm{C}$, $\\mathrm{O}$, $\\mathrm{D}$ alignés, avec $(\\mathrm{BC})\\parallel(\\mathrm{DE})$. On donne $\\mathrm{OB}=3$, $\\mathrm{OE}=9$ et $\\mathrm{OC}=4$. Combien vaut $\\mathrm{OD}$ ?",
+      "choix": [
+        "$1{,}33$",
+        "$6$",
+        "$7$",
+        "$12$"
+      ],
+      "reponse": 3,
+      "explication": "Thalès (papillon) : $\\frac{\\mathrm{OB}}{\\mathrm{OE}} = \\frac{\\mathrm{OC}}{\\mathrm{OD}}$, soit $\\frac{3}{9} = \\frac{4}{\\mathrm{OD}}$, d'où $\\mathrm{OD} = \\frac{4 \\times 9}{3} = 12$. Le piège est d'**inverser** le rapport et de calculer $\\frac{4 \\times 3}{9} \\approx 1{,}33$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "calculer-longueur",
+      "enonce": "$\\mathrm{ABC}$ rectangle en $\\mathrm{A}$, $\\widehat{\\mathrm{B}} = 60°$ et $\\mathrm{AB} = 4$ cm. Combien vaut $\\mathrm{AC}$ ? (On rappelle $\\tan 60° \\approx 1{,}73$.)",
+      "choix": [
+        "$6{,}9$ cm",
+        "$2{,}3$ cm",
+        "$8$ cm",
+        "$3{,}5$ cm"
+      ],
+      "reponse": 0,
+      "explication": "Pas d'hypoténuse en jeu (on a l'opposé $\\mathrm{AC}$ et l'adjacent $\\mathrm{AB}$) → tangente. $\\tan 60° = \\frac{\\mathrm{AC}}{4}$ donc $\\mathrm{AC} = 4 \\times 1{,}73 \\approx 6{,}9$ cm. Le piège est de **diviser** ($4 \\div 1{,}73 \\approx 2{,}3$) alors que l'inconnue est au numérateur : on multiplie."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "contraposee-thales",
+      "enonce": "Dans $\\mathrm{ABC}$ : $\\mathrm{A}$, $\\mathrm{M}$, $\\mathrm{B}$ alignés et $\\mathrm{A}$, $\\mathrm{N}$, $\\mathrm{C}$ alignés dans le même ordre, avec $\\mathrm{AM}=2$, $\\mathrm{AB}=3$, $\\mathrm{AN}=3$, $\\mathrm{AC}=5$. Que peut-on conclure ?",
+      "choix": [
+        "$(\\mathrm{MN})\\parallel(\\mathrm{BC})$",
+        "$(\\mathrm{MN})$ et $(\\mathrm{BC})$ ne sont pas parallèles",
+        "le triangle $\\mathrm{ABC}$ est rectangle",
+        "on ne peut rien conclure"
+      ],
+      "reponse": 1,
+      "explication": "On calcule séparément : $\\frac{\\mathrm{AM}}{\\mathrm{AB}} = \\frac{2}{3} = \\frac{10}{15}$ et $\\frac{\\mathrm{AN}}{\\mathrm{AC}} = \\frac{3}{5} = \\frac{9}{15}$. Les rapports sont **différents** : par la contraposée de Thalès, les droites ne sont pas parallèles. Le piège est de comparer « à l'œil » ; réduis au même dénominateur."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "calculer-angle",
+      "enonce": "$\\mathrm{ABC}$ rectangle en $\\mathrm{A}$, $\\mathrm{AB}=4$ cm et $\\mathrm{AC}=4$ cm. Quelle est la mesure de $\\widehat{\\mathrm{B}}$ ? (On rappelle $\\tan 45° = 1$.)",
+      "choix": [
+        "$1°$",
+        "$90°$",
+        "$45°$",
+        "$30°$"
+      ],
+      "reponse": 2,
+      "explication": "Par rapport à $\\widehat{\\mathrm{B}}$, on a l'opposé $\\mathrm{AC}$ et l'adjacent $\\mathrm{AB}$ (pas d'hypoténuse) → tangente. $\\tan\\widehat{\\mathrm{B}} = \\frac{4}{4} = 1$, puis on **remonte à l'angle** : $\\widehat{\\mathrm{B}} = \\tan^{-1}(1) = 45°$. Le piège est de rendre $1$ (la valeur du rapport) au lieu d'appliquer $\\tan^{-1}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "pieges",
+      "enonce": "On sait que le cosinus d'un angle aigu vaut $0{,}8$ et on veut la mesure de cet angle. Quel calcul faut-il faire ?",
+      "choix": [
+        "$\\cos^{-1}(0{,}8)$",
+        "$\\dfrac{1}{0{,}8}$",
+        "$\\cos(0{,}8)$",
+        "$0{,}8 \\times 90$"
+      ],
+      "reponse": 0,
+      "explication": "Pour remonter d'un cosinus à un angle, on applique la fonction inverse $\\cos^{-1}$ (touche `SHIFT` puis `cos`). Le piège majeur est de calculer $\\frac{1}{0{,}8} = 1{,}25$ : le « $-1$ » de $\\cos^{-1}$ ne signifie **pas** l'inverse d'un nombre, mais l'opération qui annule le cosinus. Et la calculatrice doit être en mode DEG."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "thales",
+      "enonce": "Dans $\\mathrm{ABC}$ : $\\mathrm{M}\\in[\\mathrm{AB}]$, $\\mathrm{N}\\in[\\mathrm{AC}]$ et $(\\mathrm{MN})\\parallel(\\mathrm{BC})$. On donne $\\mathrm{AM}=4$, $\\mathrm{AB}=10$ et $\\mathrm{AC}=15$. Combien vaut $\\mathrm{NC}$ ?",
+      "choix": [
+        "$6$",
+        "$11$",
+        "$3{,}75$",
+        "$9$"
+      ],
+      "reponse": 3,
+      "explication": "Thalès donne d'abord $\\mathrm{AN}$ : $\\frac{\\mathrm{AM}}{\\mathrm{AB}} = \\frac{\\mathrm{AN}}{\\mathrm{AC}}$, soit $\\frac{4}{10} = \\frac{\\mathrm{AN}}{15}$, d'où $\\mathrm{AN} = 6$. Puis $\\mathrm{NC} = \\mathrm{AC} - \\mathrm{AN} = 15 - 6 = 9$ : la soustraction se fait **sur le segment**, pas dans la fraction. Le piège est de s'arrêter à $\\mathrm{AN}=6$ sans le retrancher."
     }
   ]
 }

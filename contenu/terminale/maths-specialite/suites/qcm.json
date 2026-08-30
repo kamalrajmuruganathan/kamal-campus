@@ -149,6 +149,146 @@
       ],
       "reponse": 0,
       "explication": "La suite minorante $n - 3$ tend vers $+\\infty$. D'après le théorème de comparaison, si $u_n \\geq v_n$ et $v_n \\to +\\infty$, alors $u_n \\to +\\infty$. Une minoration par une suite qui explose suffit : pas besoin de connaître $u_n$ exactement."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "suite-geometrique",
+      "enonce": "Quelle est la limite de la suite définie par $u_n=1{,}05^{\\,n}$ ?",
+      "choix": [
+        "$0$",
+        "$1$",
+        "$+\\infty$",
+        "Elle n'a pas de limite"
+      ],
+      "reponse": 2,
+      "explication": "Pour une suite géométrique $q^n$ avec $q>1$, la limite est $+\\infty$. Ici $q=1{,}05>1$ donc $1{,}05^{\\,n}\\to+\\infty$ : c'est le modèle d'une hausse de $5\\,\\%$ répétée. Le piège est de confondre la raison $q$ (proche de $1$) avec la limite."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "limite-infinie",
+      "enonce": "Quelle est la limite de la suite $u_n=-3n+5$ ?",
+      "choix": [
+        "$5$",
+        "$-\\infty$",
+        "$+\\infty$",
+        "$-3$"
+      ],
+      "reponse": 1,
+      "explication": "Le terme $-3n$ l'emporte et fait descendre la suite sous n'importe quel seuil : $u_n\\to-\\infty$. Le piège est de lire la constante $5$ ou le coefficient $-3$ comme une limite."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "operations-limites",
+      "enonce": "Quelle est la limite de $u_n=n^2+\\dfrac1n$ ?",
+      "choix": [
+        "Forme indéterminée",
+        "$0$",
+        "$+\\infty$",
+        "$1$"
+      ],
+      "reponse": 2,
+      "explication": "Ici $n^2\\to+\\infty$ et $\\dfrac1n\\to0$ : ce n'est **pas** une forme indéterminée (c'est $\\infty+0$), la somme tend vers $+\\infty$. Le piège est de croire que la présence de $\\dfrac1n$ crée une indétermination."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "comparaison",
+      "enonce": "Quelle est la limite de $v_n=n+\\cos n$ ?",
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "Elle n'existe pas car $\\cos n$ oscille",
+        "$1$"
+      ],
+      "reponse": 1,
+      "explication": "Comme $\\cos n\\geqslant -1$, on a $v_n\\geqslant n-1$. Or $n-1\\to+\\infty$, donc par comparaison $v_n\\to+\\infty$. L'oscillation bornée de $\\cos n$ ne change rien : elle est négligeable devant $n$."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "gendarmes",
+      "enonce": "Quelle est la limite de $v_n=\\dfrac{(-1)^n}{n}$ ?",
+      "choix": [
+        "$1$",
+        "$0$",
+        "$-1$",
+        "Elle n'existe pas"
+      ],
+      "reponse": 1,
+      "explication": "On encadre : $-\\dfrac1n\\leqslant\\dfrac{(-1)^n}{n}\\leqslant\\dfrac1n$. Les deux bornes tendent vers $0$, donc par le théorème des gendarmes $v_n\\to0$. L'alternance de signe de $(-1)^n$ est écrasée par le $\\dfrac1n$."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "operations-limites",
+      "enonce": "Parmi ces écritures, laquelle est une **forme indéterminée** ?",
+      "choix": [
+        "$\\infty+\\infty$",
+        "$\\infty\\times\\infty$",
+        "$\\dfrac{\\infty}{\\infty}$",
+        "$0+\\infty$"
+      ],
+      "reponse": 2,
+      "explication": "$\\dfrac{\\infty}{\\infty}$ fait partie des quatre formes indéterminées (avec $\\infty-\\infty$, $0\\times\\infty$ et $\\tfrac00$). Les autres sont déterminées : $\\infty+\\infty=+\\infty$, $\\infty\\times\\infty=+\\infty$, $0+\\infty=+\\infty$."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "convergence",
+      "enonce": "La suite définie par $u_n=(-1)^n$ est :",
+      "choix": [
+        "convergente vers $1$",
+        "divergente : elle n'a pas de limite",
+        "convergente vers $0$",
+        "elle tend vers $+\\infty$"
+      ],
+      "reponse": 1,
+      "explication": "$(-1)^n$ vaut alternativement $1$ et $-1$ : elle n'entre dans aucune fenêtre autour d'une valeur unique, donc elle **n'a pas de limite** et est divergente. Le piège est de croire qu'elle « converge » entre $-1$ et $1$."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "recurrence",
+      "enonce": "Pour démontrer par récurrence que $u_n<3$ pour tout $n$, en quoi consiste l'étape d'hérédité ?",
+      "choix": [
+        "Supposer $u_{k+1}<3$ et en déduire $u_k<3$",
+        "Supposer $u_k<3$ (pour un $k$ fixé) et en déduire $u_{k+1}<3$",
+        "Vérifier seulement que $u_0<3$",
+        "Supposer $u_n<3$ pour tout $n$, puis vérifier"
+      ],
+      "reponse": 1,
+      "explication": "L'hérédité suppose $P(k)$ vraie (hypothèse de récurrence) et en déduit $P(k+1)$. Supposer $P(n)$ « pour tout $n$ » reviendrait à supposer ce qu'on veut démontrer : c'est le raisonnement circulaire qui invalide la preuve."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "suite-geometrique",
+      "enonce": "Quelle est la limite de la suite de terme général $(-0{,}5)^n$ ?",
+      "choix": [
+        "Elle n'a pas de limite (elle change de signe)",
+        "$-\\infty$",
+        "$0$",
+        "$-0{,}5$"
+      ],
+      "reponse": 2,
+      "explication": "Ici $q=-0{,}5$, donc $|q|=0{,}5<1$ : la suite tend vers $0$, même en alternant de signe ($1;-0{,}5;0{,}25;\\dots$ se rapproche de $0$). Le piège est de croire qu'une raison négative empêche la convergence : seul $|q|$ compte tant que $|q|<1$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "convergence-monotone",
+      "enonce": "Une suite $(u_n)$ est décroissante et minorée par $-2$. Que peut-on affirmer ?",
+      "choix": [
+        "Elle tend vers $-\\infty$",
+        "Elle converge vers une limite $\\ell\\geqslant -2$",
+        "Elle converge vers $-2$",
+        "Elle n'a pas nécessairement de limite"
+      ],
+      "reponse": 1,
+      "explication": "Le théorème de la convergence monotone garantit qu'une suite décroissante et minorée **converge**, vers une limite $\\ell\\geqslant -2$. Le minorant $-2$ n'est pas forcément la limite : le théorème donne l'existence, pas la valeur."
     }
   ]
 }

@@ -149,6 +149,146 @@
       ],
       "reponse": 1,
       "explication": "On arrondit d'abord l'incertitude à **1 chiffre significatif** : $0{,}047 \\approx 0{,}05\\ \\mathrm{g}$. Puis la valeur au **même rang** (le centième) : $3{,}29\\ \\mathrm{g}$. D'où $(3{,}29 \\pm 0{,}05)\\ \\mathrm{g}$. Garder $3{,}2914$ affiche des chiffres non significatifs ; $3{,}3$ arrondit trop tôt ; et $0{,}047$ n'est pas arrondie à 1 c.s."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "mesurande",
+      "enonce": "En métrologie, comment appelle-t-on la grandeur que l'on cherche à mesurer (une masse, un volume, une concentration…) ?",
+      "choix": [
+        "le mesurande",
+        "l'incertitude-type",
+        "l'écart-type",
+        "la résolution"
+      ],
+      "reponse": 0,
+      "explication": "La grandeur à mesurer est le **mesurande**. Sa valeur vraie existe mais reste inaccessible. L'incertitude-type et l'écart-type chiffrent le doute, la résolution est une caractéristique de l'instrument : aucune ne désigne la grandeur elle-même."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "erreur-incertitude",
+      "enonce": "Quelle affirmation concernant l'incertitude d'une mesure est correcte ?",
+      "choix": [
+        "elle indique de combien exactement on s'est trompé",
+        "elle estime l'étendue dans laquelle la valeur vraie a de bonnes chances de se trouver",
+        "elle est toujours nulle pour une mesure bien réalisée",
+        "elle est égale à l'erreur de mesure, que l'on connaît toujours"
+      ],
+      "reponse": 1,
+      "explication": "L'incertitude **estime un intervalle** encadrant la valeur vraie ; elle ne dit pas de combien on s'est trompé (l'erreur de mesure, elle, est inconnue). Aucune mesure n'a une incertitude nulle : le résultat est un intervalle, pas un nombre exact."
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "incertitude-type",
+      "enonce": "Quelle est l'unité d'une incertitude-type $u(x)$ ?",
+      "choix": [
+        "elle n'a pas d'unité",
+        "la même unité que la grandeur mesurée",
+        "toujours le pourcentage",
+        "l'inverse de l'unité de la grandeur mesurée"
+      ],
+      "reponse": 1,
+      "explication": "L'incertitude-type $u(x)$ a **la même unité** que la grandeur mesurée : une incertitude sur un volume s'exprime en mL, sur une masse en g. Le pourcentage concerne l'incertitude **relative** $u(x)/x$, qui elle est sans dimension."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "type-a",
+      "enonce": "On mesure cinq fois une masse (en g) : $10{,}2$ ; $10{,}5$ ; $10{,}1$ ; $10{,}4$ ; $10{,}3$. Quelle est la meilleure estimation du mesurande ?",
+      "choix": [
+        "$10{,}3\\ \\mathrm{g}$",
+        "$10{,}5\\ \\mathrm{g}$",
+        "$0{,}4\\ \\mathrm{g}$",
+        "$51{,}5\\ \\mathrm{g}$"
+      ],
+      "reponse": 0,
+      "explication": "La meilleure estimation est la **moyenne** : $\\bar{x} = \\dfrac{10{,}2+10{,}5+10{,}1+10{,}4+10{,}3}{5} = \\dfrac{51{,}5}{5} = 10{,}3\\ \\mathrm{g}$. Prendre la plus grande valeur ($10{,}5$), l'étendue ($0{,}4$) ou la somme ($51{,}5$) sont des confusions classiques."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "type-b",
+      "enonce": "Une fiole jaugée porte l'indication de tolérance $\\pm 0{,}06\\ \\mathrm{mL}$. En prenant $u = \\dfrac{\\text{tolérance}}{\\sqrt{3}}$, quelle est l'incertitude-type ?",
+      "choix": [
+        "$0{,}03\\ \\mathrm{mL}$",
+        "$0{,}06\\ \\mathrm{mL}$",
+        "$0{,}10\\ \\mathrm{mL}$",
+        "$0{,}02\\ \\mathrm{mL}$"
+      ],
+      "reponse": 0,
+      "explication": "La tolérance est déjà une demi-largeur ($\\pm$) : on divise directement par $\\sqrt{3}$. $u = \\dfrac{0{,}06}{\\sqrt{3}} = 0{,}0346 \\approx 0{,}03\\ \\mathrm{mL}$. Le piège $0{,}02\\ \\mathrm{mL}$ vient de couper en deux la tolérance avant de diviser par $\\sqrt{3}$, ce qu'il ne faut pas faire."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "sources-erreurs",
+      "enonce": "Lors de la lecture du bas du ménisque dans une burette, l'expérimentateur se place tantôt un peu au-dessus, tantôt un peu en dessous du trait. Cette source d'erreur est :",
+      "choix": [
+        "systématique",
+        "aléatoire",
+        "impossible à corriger même en répétant",
+        "sans effet sur la mesure"
+      ],
+      "reponse": 1,
+      "explication": "L'écart change de sens de façon imprévisible d'une lecture à l'autre : c'est une erreur **aléatoire**, qui disperse les valeurs autour de la vraie et se réduit en **répétant** la mesure. Une erreur systématique décalerait toujours dans le même sens."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "chiffres-significatifs",
+      "enonce": "Combien de chiffres significatifs comporte la valeur $0{,}0250\\ \\mathrm{mol}$ ?",
+      "choix": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "reponse": 1,
+      "explication": "On compte à partir du premier chiffre non nul : $2$, $5$ et le $0$ final, soit **3** chiffres significatifs. Les zéros de tête ($0{,}0$) ne comptent pas ; le zéro **final** après la virgule, lui, est significatif."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "incertitude-composee",
+      "enonce": "On calcule une longueur totale $L = L_1 + L_2$ avec $L_1 = (25{,}0 \\pm 0{,}3)\\ \\mathrm{cm}$ et $L_2 = (15{,}0 \\pm 0{,}4)\\ \\mathrm{cm}$. Que vaut l'incertitude $u(L)$ ?",
+      "choix": [
+        "$0{,}5\\ \\mathrm{cm}$",
+        "$0{,}7\\ \\mathrm{cm}$",
+        "$0{,}1\\ \\mathrm{cm}$",
+        "$0{,}25\\ \\mathrm{cm}$"
+      ],
+      "reponse": 0,
+      "explication": "Pour une somme, on combine les incertitudes **absolues en quadrature** : $u(L) = \\sqrt{u(L_1)^2 + u(L_2)^2} = \\sqrt{0{,}3^2 + 0{,}4^2} = \\sqrt{0{,}25} = 0{,}5\\ \\mathrm{cm}$. Additionner brutalement ($0{,}7$), soustraire ($0{,}1$) ou oublier la racine ($0{,}25$) sont les erreurs typiques."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "incertitude-composee",
+      "enonce": "Une puissance $P = U \\times I$ est calculée avec $\\dfrac{u(U)}{U} = 3\\ \\%$ et $\\dfrac{u(I)}{I} = 4\\ \\%$. Quelle est l'incertitude relative sur $P$ ?",
+      "choix": [
+        "$5\\ \\%$",
+        "$7\\ \\%$",
+        "$12\\ \\%$",
+        "$1\\ \\%$"
+      ],
+      "reponse": 0,
+      "explication": "Pour un produit, ce sont les incertitudes **relatives** qui se combinent en quadrature : $\\dfrac{u(P)}{P} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5\\ \\%$. Additionner ($7\\ \\%$), multiplier ($12\\ \\%$) ou soustraire ($1\\ \\%$) les pourcentages sont des fautes fréquentes."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "expression-resultat",
+      "enonce": "Un résultat s'écrit $m = (24{,}62 \\pm 0{,}04)\\ \\mathrm{g}$. Que signifie cette écriture ?",
+      "choix": [
+        "la masse vaut exactement $24{,}62\\ \\mathrm{g}$",
+        "la valeur vraie est très probablement comprise entre $24{,}58$ et $24{,}66\\ \\mathrm{g}$",
+        "l'erreur commise vaut exactement $0{,}04\\ \\mathrm{g}$",
+        "la masse est comprise entre $24{,}62$ et $24{,}66\\ \\mathrm{g}$"
+      ],
+      "reponse": 1,
+      "explication": "L'écriture $\\bar{x} \\pm u$ définit un **intervalle** : $24{,}62 - 0{,}04 = 24{,}58$ à $24{,}62 + 0{,}04 = 24{,}66\\ \\mathrm{g}$, où la valeur vraie a de bonnes chances de se trouver. Le doute s'étend des **deux** côtés de la valeur : le piège n°4 n'encadre que vers le haut."
     }
   ]
 }

@@ -159,6 +159,156 @@
       "reponse": 1,
       "explication": "La terre seule ne « bloque » pas le courant : elle l'écoule vers le sol. Ce courant de fuite déséquilibre phase et neutre, et c'est le différentiel qui déclenche. Le piège est de croire que la terre agit seule ; terre et différentiel travaillent ensemble.",
       "notion_fiche": "4. La prise de courant : phase, neutre, terre"
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "intensite-courant",
+      "enonce": "Avec quel appareil, et branché comment, mesure-t-on l'intensité d'un courant électrique ?",
+      "choix": [
+        "un ampèremètre, branché en série",
+        "un voltmètre, branché en dérivation",
+        "un ampèremètre, branché en dérivation",
+        "un oscilloscope, branché en série"
+      ],
+      "reponse": 0,
+      "explication": "L'intensité (débit de charges) se mesure avec un **ampèremètre** branché **en série** dans le circuit. Le piège est de le confondre avec le voltmètre (qui mesure une tension, en dérivation) ou de se tromper de branchement.",
+      "notion_fiche": "2. L'intensité du courant électrique"
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "prise-de-courant",
+      "enonce": "Dans une prise domestique, quel fil est le fil actif, porté à la tension et donc dangereux ?",
+      "choix": [
+        "la phase",
+        "le neutre",
+        "la terre",
+        "aucun des trois"
+      ],
+      "reponse": 0,
+      "explication": "La **phase** (fil rouge ou marron) est le fil actif porté à la tension : c'est lui qui est dangereux. Le neutre est le fil de retour (proche de $0$ V) et la terre ne sert qu'à la sécurité des carcasses.",
+      "notion_fiche": "4. La prise de courant : phase, neutre, terre"
+    },
+    {
+      "id": 13,
+      "difficulte": "facile",
+      "notion": "risques-corps",
+      "enonce": "Pourquoi ne faut-il jamais toucher un appareil électrique avec les mains mouillées ?",
+      "choix": [
+        "parce que l'eau fait chuter la résistance du corps, augmentant l'intensité qui le traverse",
+        "parce que l'eau augmente la résistance du corps et le protège",
+        "parce que l'eau coupe automatiquement le courant",
+        "parce que l'eau transforme le courant en tension continue"
+      ],
+      "reponse": 0,
+      "explication": "La peau mouillée a une **résistance plus faible** : sous une même tension, l'intensité qui traverse le corps **augmente**, donc le danger aussi. Le piège est de croire que l'eau « protège » : c'est l'inverse.",
+      "notion_fiche": "3. Les risques électriques pour le corps"
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "intensite-courant",
+      "enonce": "Un appareil est parcouru par une intensité $I = 0{,}5$ A. Combien cela fait-il de milliampères ?",
+      "choix": [
+        "$500$ mA",
+        "$5$ mA",
+        "$50$ mA",
+        "$0{,}0005$ mA"
+      ],
+      "reponse": 0,
+      "explication": "$1$ A $= 1000$ mA, donc $0{,}5$ A $= 0{,}5 \\times 1000 = 500$ mA. Le piège est de se tromper de puissance de 10 : le milliampère est $1000$ fois plus petit que l'ampère.",
+      "notion_fiche": "2. L'intensité du courant électrique"
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "valeur-efficace",
+      "enonce": "La valeur maximale de la tension du secteur vaut $U_{max} \\approx 325$ V. Que vaut sa valeur minimale $U_{min}$ ?",
+      "choix": [
+        "$-325$ V",
+        "$0$ V",
+        "$+325$ V",
+        "$-230$ V"
+      ],
+      "reponse": 0,
+      "explication": "La sinusoïde du secteur est **symétrique** par rapport à zéro : $U_{min} = -U_{max} = -325$ V. Le piège est de confondre la valeur minimale avec la valeur efficace ($230$ V), qui n'est ni le pic haut ni le pic bas.",
+      "notion_fiche": "1. La tension alternative sinusoïdale"
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "effets-du-courant",
+      "enonce": "Quel effet un courant alternatif d'intensité supérieure ou égale à $100$ mA a-t-il sur le corps humain ?",
+      "choix": [
+        "une fibrillation du cœur, avec risque d'arrêt cardiaque",
+        "un simple picotement sans conséquence",
+        "aucun effet, c'est en dessous du seuil de perception",
+        "un léger réchauffement de la peau uniquement"
+      ],
+      "reponse": 0,
+      "explication": "À partir de $100$ mA, le courant provoque une **fibrillation cardiaque** (le cœur ne bat plus efficacement) : arrêt cardiaque et mort probable. Le picotement, lui, correspond au seuil de perception, autour de $1$ mA seulement.",
+      "notion_fiche": "3. Les risques électriques pour le corps"
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "dispositifs-securite",
+      "enonce": "Un fusible de calibre $16$ A fond dès que l'intensité de la ligne dépasse $16$ A. Que protège-t-il avant tout ?",
+      "choix": [
+        "l'installation, contre les surintensités et le risque d'incendie",
+        "les personnes, contre l'électrisation",
+        "la valeur efficace de la tension",
+        "la mise à la terre de l'appareil"
+      ],
+      "reponse": 0,
+      "explication": "Le fusible (comme le disjoncteur) coupe en cas de **surintensité** : il évite l'échauffement des fils et l'incendie, protégeant surtout l'**installation**. Le piège est de le confondre avec le disjoncteur différentiel, qui, lui, protège les **personnes** contre les fuites de courant.",
+      "notion_fiche": "5. Les dispositifs de sécurité"
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "valeur-efficace",
+      "enonce": "La tension aux bornes d'un appareil a une valeur maximale $U_{max} = 12$ V. Quelle est sa valeur efficace $U$ ? (On prend $\\sqrt{2} \\approx 1{,}41$.)",
+      "choix": [
+        "$U \\approx 8{,}5$ V",
+        "$U \\approx 17$ V",
+        "$U \\approx 12$ V",
+        "$U \\approx 24$ V"
+      ],
+      "reponse": 0,
+      "explication": "On applique $U = \\dfrac{U_{max}}{\\sqrt{2}} = \\dfrac{12}{1{,}41} \\approx 8{,}5$ V. Le piège est de **multiplier** par $\\sqrt{2}$ (on obtiendrait $17$ V) : pour passer du maximum à l'efficace, on **divise**.",
+      "notion_fiche": "1. La tension alternative sinusoïdale"
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "effets-du-courant",
+      "enonce": "À environ $10$ mA, une victime « collée » à un fil ne parvient plus à lâcher prise. Comment nomme-t-on ce phénomène ?",
+      "choix": [
+        "la tétanisation des muscles",
+        "la fibrillation cardiaque",
+        "l'électrocution immédiate",
+        "le seuil de perception"
+      ],
+      "reponse": 0,
+      "explication": "Vers $10$ mA, les muscles se **contractent** et ne se relâchent plus : c'est la **tétanisation**, la main se referme sur le conducteur. Cela prolonge le contact et aggrave l'accident. La fibrillation, plus grave, survient plutôt vers $100$ mA.",
+      "notion_fiche": "3. Les risques électriques pour le corps"
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "dispositifs-securite",
+      "enonce": "Tu branches un four, une bouilloire et un grille-pain sur la même multiprise : l'intensité totale dépasse $16$ A et le disjoncteur de la ligne saute. Que vient-il d'éviter ?",
+      "choix": [
+        "l'échauffement des fils et le risque d'incendie de l'installation",
+        "l'électrocution directe d'une personne",
+        "une chute de la tension efficace en dessous de $230$ V",
+        "une inversion entre la phase et le neutre"
+      ],
+      "reponse": 0,
+      "explication": "Le disjoncteur (ou le fusible) coupe une **surintensité** : sans lui, les fils surchauffent et peuvent provoquer un **incendie**. Il protège l'installation. Le piège est de lui attribuer le rôle du différentiel, qui protège les personnes en détectant une fuite phase ≠ neutre.",
+      "notion_fiche": "5. Les dispositifs de sécurité"
     }
   ]
 }
