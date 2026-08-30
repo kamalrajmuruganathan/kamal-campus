@@ -14,12 +14,29 @@ import {
   niveauPourXp,
 } from '../../lib/progression';
 import { badgesNouveaux } from '../../lib/badges';
+import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
 
 const MAX_HISTORIQUE = 30;
 const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
 
 const ProgressionContexte = createContext(null);
+
+/** Applique un gain d'XP à l'état « jour / série » d'un profil. */
+function calculerSerie(profilBase, points) {
+  return appliquerXpJour(
+    {
+      objectifQuotidien: profilBase.objectifQuotidien,
+      jourCourant: profilBase.jourCourant,
+      xpDuJour: profilBase.xpDuJour,
+      serieJours: profilBase.serieJours,
+      dernierJourValide: profilBase.dernierJourValide,
+      meilleureSerieJours: profilBase.meilleureSerieJours,
+    },
+    points,
+    dateLocale(new Date()),
+  );
+}
 
 export function ProgressionProvider({ children }) {
   const [profil, setProfil] = useState(profilVide());
@@ -90,6 +107,16 @@ export function ProgressionProvider({ children }) {
         ...profil.historique,
       ].slice(0, MAX_HISTORIQUE);
 
+      // Série de jours / objectif quotidien.
+      const s = calculerSerie(suivant, res.points);
+      Object.assign(suivant, {
+        jourCourant: s.jourCourant,
+        xpDuJour: s.xpDuJour,
+        serieJours: s.serieJours,
+        dernierJourValide: s.dernierJourValide,
+        meilleureSerieJours: s.meilleureSerieJours,
+      });
+
       setProfil(suivant);
       sauverProfil(suivant);
 
@@ -100,6 +127,12 @@ export function ProgressionProvider({ children }) {
         niveauApres,
         monteeDeNiveau: niveauApres > niveauAvant,
         badgesGagnes: badgesNouveaux(profil, suivant),
+        serieJour: {
+          atteint: s.objectifAtteintMaintenant,
+          serie: s.serieJours,
+          xpDuJour: s.xpDuJour,
+          objectif: s.objectifQuotidien,
+        },
       };
     },
     [profil],
@@ -139,6 +172,15 @@ export function ProgressionProvider({ children }) {
         ...profil.historique,
       ].slice(0, MAX_HISTORIQUE);
 
+      const s = calculerSerie(suivant, points);
+      Object.assign(suivant, {
+        jourCourant: s.jourCourant,
+        xpDuJour: s.xpDuJour,
+        serieJours: s.serieJours,
+        dernierJourValide: s.dernierJourValide,
+        meilleureSerieJours: s.meilleureSerieJours,
+      });
+
       setProfil(suivant);
       sauverProfil(suivant);
 
@@ -150,6 +192,12 @@ export function ProgressionProvider({ children }) {
         niveauApres,
         monteeDeNiveau: niveauApres > niveauAvant,
         badgesGagnes: badgesNouveaux(profil, suivant),
+        serieJour: {
+          atteint: s.objectifAtteintMaintenant,
+          serie: s.serieJours,
+          xpDuJour: s.xpDuJour,
+          objectif: s.objectifQuotidien,
+        },
       };
     },
     [profil],
@@ -161,9 +209,31 @@ export function ProgressionProvider({ children }) {
     effacerProfil();
   }, []);
 
+  /** Met à jour un ou plusieurs réglages du profil (objectif, prénom, rappel…). */
+  const definirReglages = useCallback((changements) => {
+    setProfil((p) => {
+      const suivant = { ...p, ...changements };
+      sauverProfil(suivant);
+      return suivant;
+    });
+  }, []);
+
+  /** Termine l'onboarding : prénom, niveau par défaut, objectif quotidien. */
+  const terminerOnboarding = useCallback(({ prenom = '', niveau = null, objectif = 50 }) => {
+    definirReglages({
+      onboardingFait: true,
+      prenom: prenom.trim(),
+      niveauParDefaut: niveau,
+      objectifQuotidien: objectif,
+    });
+  }, [definirReglages]);
+
   return (
     <ProgressionContexte.Provider
-      value={{ profil, charge, enregistrerResultat, enregistrerFlashcards, reinitialiser }}
+      value={{
+        profil, charge, enregistrerResultat, enregistrerFlashcards,
+        reinitialiser, definirReglages, terminerOnboarding,
+      }}
     >
       {children}
     </ProgressionContexte.Provider>
@@ -187,6 +257,8 @@ export function useProgression() {
         niveauAvant: 1, niveauApres: 1, monteeDeNiveau: false, badgesGagnes: [],
       }),
       reinitialiser: () => {},
+      definirReglages: () => {},
+      terminerOnboarding: () => {},
     };
   }
   return ctx;

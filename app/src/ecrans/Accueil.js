@@ -15,12 +15,14 @@ import { Carte } from '../composants/communs';
 import { niveaux, parcoursDe, LIBELLES_NIVEAU, LIBELLES_PARCOURS, CHAPITRES } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { niveauPourXp } from '../../lib/progression';
+import { serieAffichee, dateLocale } from '../../lib/serie';
 
 export default function Accueil({ navigation }) {
   const t = theme(useColorScheme() === 'dark');
-  const [niveau, setNiveau] = useState(null);
   const { profil } = useProgression();
+  const [niveau, setNiveau] = useState(profil.niveauParDefaut ?? null);
   const prog = niveauPourXp(profil.xp);
+  const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, dateLocale(new Date()));
 
   const listeNiveaux = niveaux();
   const totalQuestions = CHAPITRES.reduce((s, c) => s + c.nbQuestions, 0);
@@ -29,7 +31,7 @@ export default function Accueil({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['top']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
         <Text style={{ color: t.couleur.texte, fontSize: t.police.titre, fontWeight: '700' }}>
-          Kamal Campus
+          {profil.prenom ? `Salut ${profil.prenom} 👋` : 'Kamal Campus'}
         </Text>
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.normale, marginTop: 4 }}>
           Maths & Physique-Chimie — {CHAPITRES.length} chapitres, {totalQuestions} questions
@@ -84,6 +86,12 @@ export default function Accueil({ navigation }) {
               {profil.xp} XP · encore {prog.xpRestant} pour le niveau {prog.niveau + 1}
             </Text>
           </View>
+          {serie > 0 && (
+            <View style={{ alignItems: 'center', marginLeft: t.espace.s }}>
+              <Text style={{ fontSize: 18 }}>🔥</Text>
+              <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontWeight: '800' }}>{serie}</Text>
+            </View>
+          )}
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande, marginLeft: t.espace.s }}>›</Text>
         </Pressable>
 

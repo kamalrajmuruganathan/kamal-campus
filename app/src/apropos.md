@@ -50,9 +50,11 @@ d'expérience** : plus tu as de bonnes réponses, plus ton **niveau** et ton **r
 montent (de Débutant à Génie). Les questions difficiles rapportent davantage, et un
 sans-faute donne un bonus. Tu décroches aussi des **badges** en atteignant des
 objectifs (première réussite, séries de bonnes réponses, chapitres maîtrisés…).
-L'écran **« Ma progression »** récapitule ton niveau, ton taux de réussite, ta
-meilleure série, tes badges et les chapitres que tu maîtrises. Tout est gardé **sur
-ton téléphone**, sans compte.
+Tu te fixes un **objectif quotidien** (en XP) : chaque jour où tu l'atteins
+prolonge ta **série** 🔥 (jours consécutifs), et un **rappel** peut te prévenir à
+l'heure de ton choix. L'écran **« Ma progression »** récapitule ton niveau, ta
+série, ton taux de réussite, tes badges et les chapitres que tu maîtrises. Tout
+est gardé **sur ton téléphone**, sans compte.
 
 Depuis la liste des chapitres d'un parcours, un **QCM du parcours** mélange les
 questions de tous ses chapitres pour une révision d'ensemble.

@@ -24,6 +24,21 @@ export function profilVide() {
     flashcardsConnues: 0, // nombre de cartes marquées « je savais »
     chapitres: {}, // { [idChapitre]: { titre, meilleurScore, tentatives } }
     historique: [], // [{ date, titre, justes, total, points, matiere }] — récents d'abord
+
+    // Série de jours & objectif quotidien
+    objectifQuotidien: 50, // XP à atteindre chaque jour
+    jourCourant: null, // 'AAAA-MM-JJ' du jour suivi
+    xpDuJour: 0, // XP gagnés aujourd'hui
+    serieJours: 0, // jours consécutifs où l'objectif a été atteint
+    meilleureSerieJours: 0,
+    dernierJourValide: null, // dernier jour où l'objectif a été atteint
+
+    // Onboarding & préférences
+    onboardingFait: false,
+    prenom: '',
+    niveauParDefaut: null, // niveau choisi à l'onboarding (préselection accueil)
+    rappelActif: false,
+    rappelHeure: '18:00', // 'HH:MM'
   };
 }
 

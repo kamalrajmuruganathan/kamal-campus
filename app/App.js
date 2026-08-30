@@ -1,18 +1,19 @@
 /**
  * Kamal Campus — point d'entrée.
  *
- * Navigation par pile : Accueil → Chapitres → Chapitre → QCM, plus un accès
- * direct aux Outils depuis l'accueil.
+ * Au premier lancement, l'onboarding s'affiche (prénom, classe, objectif).
+ * Ensuite : Accueil → Chapitres → Chapitre → QCM, plus les accès directs.
  */
 
-import { useColorScheme } from 'react-native';
+import { View, useColorScheme } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { theme } from './src/theme';
-import { ProgressionProvider } from './src/progression/Contexte';
+import { ProgressionProvider, useProgression } from './src/progression/Contexte';
+import Onboarding from './src/ecrans/Onboarding';
 import Accueil from './src/ecrans/Accueil';
 import Chapitres from './src/ecrans/Chapitres';
 import Chapitre from './src/ecrans/Chapitre';
@@ -29,9 +30,10 @@ import APropos from './src/ecrans/APropos';
 
 const Pile = createNativeStackNavigator();
 
-export default function App() {
+function Navigation() {
   const sombre = useColorScheme() === 'dark';
   const t = theme(sombre);
+  const { profil, charge } = useProgression();
 
   const themeNavigation = {
     ...(sombre ? DarkTheme : DefaultTheme),
@@ -45,53 +47,59 @@ export default function App() {
     },
   };
 
+  // Tant que le profil n'est pas chargé, on affiche un fond neutre (évite de
+  // faire clignoter l'accueil avant de savoir si l'onboarding est à montrer).
+  if (!charge) {
+    return <View style={{ flex: 1, backgroundColor: t.couleur.fond }} />;
+  }
+
+  return (
+    <NavigationContainer theme={themeNavigation}>
+      <StatusBar style={sombre ? 'light' : 'dark'} />
+      <Pile.Navigator
+        initialRouteName={profil.onboardingFait ? 'Accueil' : 'Onboarding'}
+        screenOptions={{
+          headerTitleStyle: { fontSize: 17 },
+          headerBackTitleVisible: false,
+          contentStyle: { backgroundColor: t.couleur.fond },
+        }}
+      >
+        <Pile.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
+        <Pile.Screen name="Accueil" component={Accueil} options={{ headerShown: false }} />
+        <Pile.Screen
+          name="Chapitres"
+          component={Chapitres}
+          options={({ route }) => ({ title: route.params?.titre ?? 'Chapitres' })}
+        />
+        <Pile.Screen
+          name="Chapitre"
+          component={Chapitre}
+          options={({ route }) => ({ title: route.params?.titre ?? 'Chapitre' })}
+        />
+        <Pile.Screen name="Exercices" component={Exercices} options={{ title: 'Exercices' }} />
+        <Pile.Screen name="Flashcards" component={Flashcards} options={{ title: 'Cartes de révision' }} />
+        <Pile.Screen
+          name="Qcm"
+          component={Qcm}
+          options={({ route }) => ({ title: route.params?.titre ?? 'QCM' })}
+        />
+        <Pile.Screen name="Outils" component={Outils} options={{ title: 'Outils de calcul' }} />
+        <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
+        <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
+        <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
+        <Pile.Screen name="Profil" component={Profil} options={{ title: 'Ma progression' }} />
+        <Pile.Screen name="Badges" component={Badges} options={{ title: 'Badges' }} />
+        <Pile.Screen name="APropos" component={APropos} options={{ title: 'À propos' }} />
+      </Pile.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default function App() {
   return (
     <SafeAreaProvider>
       <ProgressionProvider>
-      <NavigationContainer theme={themeNavigation}>
-        <StatusBar style={sombre ? 'light' : 'dark'} />
-        <Pile.Navigator
-          screenOptions={{
-            headerTitleStyle: { fontSize: 17 },
-            headerBackTitleVisible: false,
-            contentStyle: { backgroundColor: t.couleur.fond },
-          }}
-        >
-          <Pile.Screen name="Accueil" component={Accueil} options={{ headerShown: false }} />
-          <Pile.Screen
-            name="Chapitres"
-            component={Chapitres}
-            options={({ route }) => ({ title: route.params?.titre ?? 'Chapitres' })}
-          />
-          <Pile.Screen
-            name="Chapitre"
-            component={Chapitre}
-            options={({ route }) => ({ title: route.params?.titre ?? 'Chapitre' })}
-          />
-          <Pile.Screen
-            name="Exercices"
-            component={Exercices}
-            options={{ title: 'Exercices' }}
-          />
-          <Pile.Screen
-            name="Flashcards"
-            component={Flashcards}
-            options={{ title: 'Cartes de révision' }}
-          />
-          <Pile.Screen
-            name="Qcm"
-            component={Qcm}
-            options={({ route }) => ({ title: route.params?.titre ?? 'QCM' })}
-          />
-          <Pile.Screen name="Outils" component={Outils} options={{ title: 'Outils de calcul' }} />
-          <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
-          <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
-          <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
-          <Pile.Screen name="Profil" component={Profil} options={{ title: 'Ma progression' }} />
-          <Pile.Screen name="Badges" component={Badges} options={{ title: 'Badges' }} />
-          <Pile.Screen name="APropos" component={APropos} options={{ title: 'À propos' }} />
-        </Pile.Navigator>
-      </NavigationContainer>
+        <Navigation />
       </ProgressionProvider>
     </SafeAreaProvider>
   );

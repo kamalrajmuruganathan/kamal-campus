@@ -5,6 +5,7 @@
  * Les points s'obtiennent en réussissant des QCM et des bacs blancs.
  */
 
+import { useState } from 'react';
 import { useColorScheme } from 'react-native';
 import { View, Text, ScrollView, Pressable, Alert, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -12,6 +13,11 @@ import { theme, couleurMatiere } from '../theme';
 import { useProgression } from '../progression/Contexte';
 import { niveauPourXp } from '../../lib/progression';
 import { evaluerBadges } from '../../lib/badges';
+import { serieAffichee, dateLocale } from '../../lib/serie';
+import { activerRappelQuotidien, desactiverRappels } from '../notifications';
+
+const OBJECTIFS = [30, 60, 120, 200];
+const HEURES = ['17:00', '18:00', '19:00', '20:00'];
 
 const LIBELLE_MATIERE = {
   mathematiques: 'Mathématiques',
@@ -47,7 +53,30 @@ function Case({ t, valeur, libelle }) {
 
 export default function Profil({ navigation }) {
   const t = theme(useColorScheme() === 'dark');
-  const { profil, reinitialiser } = useProgression();
+  const { profil, reinitialiser, definirReglages } = useProgression();
+
+  const jour = dateLocale(new Date());
+  const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, jour);
+  const objectif = profil.objectifQuotidien || 50;
+  const xpJour = profil.jourCourant === jour ? profil.xpDuJour : 0;
+  const progJour = objectif > 0 ? Math.min(1, xpJour / objectif) : 0;
+  const [heureChoisie, setHeureChoisie] = useState(profil.rappelHeure || '18:00');
+
+  const activerRappel = async (heure) => {
+    const ok = await activerRappelQuotidien(heure);
+    if (ok) {
+      definirReglages({ rappelActif: true, rappelHeure: heure });
+    } else {
+      Alert.alert(
+        'Rappel non activé',
+        "Les notifications ne sont pas autorisées. Active-les dans les réglages de ton téléphone, ou réessaie depuis une vraie installation de l'app.",
+      );
+    }
+  };
+  const couperRappel = async () => {
+    await desactiverRappels();
+    definirReglages({ rappelActif: false });
+  };
 
   const n = niveauPourXp(profil.xp);
   const tauxGlobal =
@@ -130,6 +159,58 @@ export default function Profil({ navigation }) {
           </Text>
         </View>
 
+        {/* Série + objectif du jour */}
+        <View style={{ flexDirection: 'row', gap: t.espace.m, marginTop: t.espace.m }}>
+          <View style={[st.carteJour, { backgroundColor: t.couleur.surface, alignItems: 'center', justifyContent: 'center' }]}>
+            <Text style={{ fontSize: 26 }}>🔥</Text>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.grande, fontWeight: '800', marginTop: 2 }}>
+              {serie}
+            </Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule }}>
+              jour{serie > 1 ? 's' : ''} de série
+            </Text>
+          </View>
+          <View style={[st.carteJour, { backgroundColor: t.couleur.surface, flex: 1 }]}>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+              Objectif du jour
+            </Text>
+            <View style={[st.piste, { backgroundColor: t.couleur.trait, marginTop: t.espace.m }]}>
+              <View style={{ width: `${Math.round(progJour * 100)}%`, height: '100%', backgroundColor: t.couleur.succes, borderRadius: 3 }} />
+            </View>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 6 }}>
+              {xpJour} / {objectif} XP {progJour >= 1 ? '· atteint ✓' : ''}
+            </Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+              Meilleure série : {profil.meilleureSerieJours || 0} j
+            </Text>
+          </View>
+        </View>
+
+        {/* Choix de l'objectif quotidien */}
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
+          {OBJECTIFS.map((o) => {
+            const actif = objectif === o;
+            return (
+              <Pressable
+                key={o}
+                onPress={() => definirReglages({ objectifQuotidien: o })}
+                style={({ pressed }) => [
+                  st.pilule,
+                  {
+                    backgroundColor: actif ? t.couleur.accent : t.couleur.surface,
+                    borderColor: actif ? t.couleur.accent : t.couleur.trait,
+                    opacity: pressed ? 0.7 : 1,
+                  },
+                ]}
+              >
+                <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+                  {o} XP/j
+                </Text>
+              </Pressable>
+            );
+          })}
+        </View>
+
         {/* Accès aux badges */}
         <Pressable
           onPress={() => navigation.navigate('Badges')}
@@ -156,6 +237,69 @@ export default function Profil({ navigation }) {
           </View>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
         </Pressable>
+
+        {/* Rappel quotidien */}
+        <View
+          style={{
+            marginTop: t.espace.m,
+            padding: t.espace.m,
+            backgroundColor: t.couleur.surface,
+            borderRadius: t.rayon.m,
+          }}
+        >
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+            Rappel quotidien
+          </Text>
+          {profil.rappelActif ? (
+            <>
+              <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 4 }}>
+                Activé chaque jour à {profil.rappelHeure}. On te rappelle de garder ta série. 🔥
+              </Text>
+              <Pressable onPress={couperRappel} style={{ marginTop: t.espace.m }}>
+                <Text style={{ color: t.couleur.erreur, fontSize: t.police.petite, textDecorationLine: 'underline' }}>
+                  Désactiver le rappel
+                </Text>
+              </Pressable>
+            </>
+          ) : (
+            <>
+              <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 4, lineHeight: 18 }}>
+                Reçois une notification pour penser à réviser. À quelle heure ?
+              </Text>
+              <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
+                {HEURES.map((h) => {
+                  const actif = heureChoisie === h;
+                  return (
+                    <Pressable
+                      key={h}
+                      onPress={() => setHeureChoisie(h)}
+                      style={({ pressed }) => [
+                        st.pilule,
+                        {
+                          backgroundColor: actif ? t.couleur.accent : t.couleur.fond,
+                          borderColor: actif ? t.couleur.accent : t.couleur.trait,
+                          opacity: pressed ? 0.7 : 1,
+                        },
+                      ]}
+                    >
+                      <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+                        {h}
+                      </Text>
+                    </Pressable>
+                  );
+                })}
+              </View>
+              <Pressable
+                onPress={() => activerRappel(heureChoisie)}
+                style={({ pressed }) => [st.bouton, { backgroundColor: t.couleur.accent, borderRadius: t.rayon.m, marginTop: t.espace.m, opacity: pressed ? 0.85 : 1 }]}
+              >
+                <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.normale, fontWeight: '650' }}>
+                  Activer le rappel
+                </Text>
+              </Pressable>
+            </>
+          )}
+        </View>
 
         {vierge ? (
           <View
@@ -272,6 +416,8 @@ export default function Profil({ navigation }) {
 const st = StyleSheet.create({
   section: { fontSize: 12, fontWeight: '700', letterSpacing: 0.8, marginTop: 28, marginBottom: 10 },
   badges: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, padding: 14 },
+  carteJour: { borderRadius: 12, padding: 14 },
+  pilule: { paddingHorizontal: 14, paddingVertical: 8, borderRadius: 999, borderWidth: 1 },
   piste: { height: 6, borderRadius: 3, overflow: 'hidden' },
   ligneMatiere: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   ligneHisto: {

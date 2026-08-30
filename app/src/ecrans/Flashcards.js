@@ -104,6 +104,11 @@ export default function Flashcards({ route, navigation }) {
                   Nouveau badge : {bilan.badgesGagnes.map((b) => `${b.icone} ${b.titre}`).join(' · ')}
                 </Text>
               )}
+              {bilan.serieJour?.atteint && (
+                <Text style={{ color: t.couleur.texte, fontSize: t.police.petite, marginTop: 8, fontWeight: '650' }}>
+                  🔥 Objectif du jour atteint ! Série : {bilan.serieJour.serie} jour{bilan.serieJour.serie > 1 ? 's' : ''}.
+                </Text>
+              )}
             </View>
           )}
 

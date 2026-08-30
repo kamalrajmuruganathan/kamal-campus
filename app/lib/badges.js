@@ -46,6 +46,10 @@ export const BADGES = [
 
   { id: 'flash-50', icone: '🃏', titre: 'Cartes en main', desc: 'Réviser 50 cartes connues', cible: 50, valeur: (p) => p.flashcardsConnues || 0 },
 
+  { id: 'serie-3', icone: '🔥', titre: 'Sur sa lancée', desc: 'Objectif atteint 3 jours d’affilée', cible: 3, valeur: (p) => p.meilleureSerieJours || 0 },
+  { id: 'serie-7', icone: '🗓️', titre: 'Une semaine', desc: 'Objectif atteint 7 jours d’affilée', cible: 7, valeur: (p) => p.meilleureSerieJours || 0 },
+  { id: 'serie-30', icone: '🏅', titre: 'Un mois entier', desc: 'Objectif atteint 30 jours d’affilée', cible: 30, valeur: (p) => p.meilleureSerieJours || 0 },
+
   { id: 'deux-matieres', icone: '⚗️', titre: 'Touche-à-tout', desc: 'Gagner des points en maths ET en physique-chimie', cible: 2, valeur: (p, s) => s.matieresEntamees },
 ];
 
