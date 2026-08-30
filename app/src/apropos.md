@@ -12,7 +12,7 @@ sert exactement le contenu de ton programme.
 
 ## En chiffres
 
-- **240 chapitres** — maths et physique-chimie, du **CP à la Terminale**.
+- **265 chapitres** — maths et physique-chimie, du **CP à la Terminale**.
 - **2 080 questions** de QCM et **2 080 exercices** corrigés.
 - **2 326 cartes** de révision (flashcards).
 - **48 chapitres** reliés à un outil de calcul.
@@ -69,7 +69,7 @@ questions de tous ses chapitres pour une révision d'ensemble.
 
 ## Ce qui est couvert
 
-**Primaire** (CP → CM2) : mathématiques.
+**Primaire** (CP → CM2) : mathématiques, programme complet (≈ 11 chapitres par niveau).
 **Collège** (6ᵉ → 3ᵉ) : maths et physique-chimie.
 **Lycée général** : Seconde ; Première (spé maths, enseignement scientifique,
 physique-chimie) ; Terminale (spé maths, maths complémentaires, maths expertes,
