@@ -1,0 +1,196 @@
+/**
+ * Internationalisation de l'interface (i18n).
+ *
+ * On traduit la « coquille » de l'appli — onboarding, accueil, titres d'écran,
+ * réglages. Le CONTENU pédagogique (fiches, QCM, énigmes rédigées) reste en
+ * français, car il suit le programme officiel français.
+ *
+ * La langue est rangée dans le profil (progression). `useLangue()` renvoie une
+ * fonction de traduction `L('cle', params)` qui suit la langue courante.
+ */
+
+import { useProgression } from './progression/Contexte';
+
+export const LANGUES = [
+  { code: 'fr', nom: 'Français', drapeau: '🇫🇷' },
+  { code: 'en', nom: 'English', drapeau: '🇬🇧' },
+  { code: 'es', nom: 'Español', drapeau: '🇪🇸' },
+  { code: 'ar', nom: 'العربية', drapeau: '🇸🇦' },
+];
+
+/** Langues qui s'écrivent de droite à gauche (alignement du texte). */
+export const RTL = new Set(['ar']);
+
+const DICO = {
+  fr: {
+    'app.sousTitre': 'Maths & Physique-Chimie — {n} chapitres, {q} questions',
+    'home.salut': 'Salut {prenom} 👋',
+    'home.progression': 'Ma progression · {rang}',
+    'home.xp': '{xp} XP · encore {r} pour le niveau {niv}',
+    'home.choisisNiveau': 'CHOISIS TON NIVEAU',
+    'home.apropos': 'À propos de Kamal Campus',
+    'card.resolveur.t': '🧮 Résolveur pas à pas',
+    'card.resolveur.s': 'Calculs, fractions, équations — avec les étapes',
+    'card.enigmes.t': '🧩 Énigmes',
+    'card.enigmes.s': 'Suites, grilles, calcul mental, allumettes',
+    'card.formulaires.t': 'Formulaires',
+    'card.formulaires.s': 'L’essentiel à savoir par cœur, par niveau',
+    'card.bacblanc.t': 'Bac blanc / brevet blanc',
+    'card.bacblanc.s': 'QCM de révision, plusieurs chapitres',
+    'card.sujets.t': 'Sujets type bac / brevet',
+    'card.sujets.s': 'Des épreuves entières, corrigées',
+    'card.outils.t': 'Outils de calcul',
+    'card.outils.s': 'Second degré, dérivée, statistiques, chimie…',
+    'onb.langue': 'Choisis ta langue',
+    'onb.bienvenue': 'Bienvenue !',
+    'onb.prenomQ': 'Comment veux-tu qu’on t’appelle ? (facultatif)',
+    'onb.prenom': 'Ton prénom',
+    'onb.classeQ': 'Quelle est ta classe ?',
+    'onb.classeAide': 'L’appli s’ouvrira directement sur ton programme.',
+    'onb.objectifQ': 'Ton objectif quotidien',
+    'onb.objectifAide': 'Combien d’XP veux-tu viser chaque jour ? (modifiable plus tard)',
+    'onb.continuer': 'Continuer',
+    'onb.cestParti': 'C’est parti !',
+    'onb.retour': 'Retour',
+    'nav.chapitres': 'Chapitres',
+    'nav.enigmes': 'Énigmes',
+    'nav.resolveur': 'Résolveur pas à pas',
+    'nav.progression': 'Ma progression',
+    'nav.badges': 'Badges',
+    'nav.apropos': 'À propos',
+    'profil.langue': 'Langue de l’application',
+  },
+  en: {
+    'app.sousTitre': 'Maths & Physics-Chemistry — {n} chapters, {q} questions',
+    'home.salut': 'Hi {prenom} 👋',
+    'home.progression': 'My progress · {rang}',
+    'home.xp': '{xp} XP · {r} more to level {niv}',
+    'home.choisisNiveau': 'CHOOSE YOUR LEVEL',
+    'home.apropos': 'About Kamal Campus',
+    'card.resolveur.t': '🧮 Step-by-step solver',
+    'card.resolveur.s': 'Calculations, fractions, equations — with steps',
+    'card.enigmes.t': '🧩 Puzzles',
+    'card.enigmes.s': 'Sequences, grids, mental maths, matchsticks',
+    'card.formulaires.t': 'Formula sheets',
+    'card.formulaires.s': 'Key facts to know by heart, by level',
+    'card.bacblanc.t': 'Mock exam',
+    'card.bacblanc.s': 'Revision quizzes across chapters',
+    'card.sujets.t': 'Past-paper style topics',
+    'card.sujets.s': 'Full papers, with answers',
+    'card.outils.t': 'Calculation tools',
+    'card.outils.s': 'Quadratics, derivatives, statistics, chemistry…',
+    'onb.langue': 'Choose your language',
+    'onb.bienvenue': 'Welcome!',
+    'onb.prenomQ': 'What should we call you? (optional)',
+    'onb.prenom': 'Your first name',
+    'onb.classeQ': 'What is your class?',
+    'onb.classeAide': 'The app will open straight to your syllabus.',
+    'onb.objectifQ': 'Your daily goal',
+    'onb.objectifAide': 'How many XP per day? (you can change this later)',
+    'onb.continuer': 'Continue',
+    'onb.cestParti': 'Let’s go!',
+    'onb.retour': 'Back',
+    'nav.chapitres': 'Chapters',
+    'nav.enigmes': 'Puzzles',
+    'nav.resolveur': 'Step-by-step solver',
+    'nav.progression': 'My progress',
+    'nav.badges': 'Badges',
+    'nav.apropos': 'About',
+    'profil.langue': 'App language',
+  },
+  es: {
+    'app.sousTitre': 'Mates y Física-Química — {n} capítulos, {q} preguntas',
+    'home.salut': '¡Hola {prenom}! 👋',
+    'home.progression': 'Mi progreso · {rang}',
+    'home.xp': '{xp} XP · faltan {r} para el nivel {niv}',
+    'home.choisisNiveau': 'ELIGE TU NIVEL',
+    'home.apropos': 'Acerca de Kamal Campus',
+    'card.resolveur.t': '🧮 Resolución paso a paso',
+    'card.resolveur.s': 'Cálculos, fracciones, ecuaciones — con pasos',
+    'card.enigmes.t': '🧩 Enigmas',
+    'card.enigmes.s': 'Series, cuadrículas, cálculo mental, cerillas',
+    'card.formulaires.t': 'Formularios',
+    'card.formulaires.s': 'Lo esencial de memoria, por nivel',
+    'card.bacblanc.t': 'Examen de prueba',
+    'card.bacblanc.s': 'Cuestionarios de repaso, varios capítulos',
+    'card.sujets.t': 'Exámenes tipo',
+    'card.sujets.s': 'Pruebas completas, con solución',
+    'card.outils.t': 'Herramientas de cálculo',
+    'card.outils.s': 'Segundo grado, derivada, estadística, química…',
+    'onb.langue': 'Elige tu idioma',
+    'onb.bienvenue': '¡Bienvenido!',
+    'onb.prenomQ': '¿Cómo quieres que te llamemos? (opcional)',
+    'onb.prenom': 'Tu nombre',
+    'onb.classeQ': '¿Cuál es tu curso?',
+    'onb.classeAide': 'La app abrirá directamente tu programa.',
+    'onb.objectifQ': 'Tu objetivo diario',
+    'onb.objectifAide': '¿Cuántos XP al día? (puedes cambiarlo después)',
+    'onb.continuer': 'Continuar',
+    'onb.cestParti': '¡Vamos!',
+    'onb.retour': 'Atrás',
+    'nav.chapitres': 'Capítulos',
+    'nav.enigmes': 'Enigmas',
+    'nav.resolveur': 'Resolución paso a paso',
+    'nav.progression': 'Mi progreso',
+    'nav.badges': 'Insignias',
+    'nav.apropos': 'Acerca de',
+    'profil.langue': 'Idioma de la app',
+  },
+  ar: {
+    'app.sousTitre': 'الرياضيات والفيزياء والكيمياء — {n} فصلًا، {q} سؤالًا',
+    'home.salut': 'مرحبًا {prenom} 👋',
+    'home.progression': 'تقدّمي · {rang}',
+    'home.xp': '{xp} نقطة · باقٍ {r} للمستوى {niv}',
+    'home.choisisNiveau': 'اختر مستواك',
+    'home.apropos': 'حول Kamal Campus',
+    'card.resolveur.t': '🧮 الحل خطوة بخطوة',
+    'card.resolveur.s': 'حسابات، كسور، معادلات — مع الخطوات',
+    'card.enigmes.t': '🧩 ألغاز',
+    'card.enigmes.s': 'متتاليات، شبكات، حساب ذهني، أعواد ثقاب',
+    'card.formulaires.t': 'بطاقات القوانين',
+    'card.formulaires.s': 'الأساسيات التي يجب حفظها، حسب المستوى',
+    'card.bacblanc.t': 'امتحان تجريبي',
+    'card.bacblanc.s': 'اختبارات مراجعة عبر عدّة فصول',
+    'card.sujets.t': 'مواضيع نموذجية',
+    'card.sujets.s': 'امتحانات كاملة مع التصحيح',
+    'card.outils.t': 'أدوات الحساب',
+    'card.outils.s': 'المعادلة التربيعية، المشتقة، الإحصاء، الكيمياء…',
+    'onb.langue': 'اختر لغتك',
+    'onb.bienvenue': 'مرحبًا!',
+    'onb.prenomQ': 'كيف تريد أن نناديك؟ (اختياري)',
+    'onb.prenom': 'اسمك',
+    'onb.classeQ': 'ما هو صفّك؟',
+    'onb.classeAide': 'سيفتح التطبيق مباشرةً على برنامجك.',
+    'onb.objectifQ': 'هدفك اليومي',
+    'onb.objectifAide': 'كم نقطة في اليوم؟ (يمكن تغييرها لاحقًا)',
+    'onb.continuer': 'متابعة',
+    'onb.cestParti': 'هيا بنا!',
+    'onb.retour': 'رجوع',
+    'nav.chapitres': 'الفصول',
+    'nav.enigmes': 'ألغاز',
+    'nav.resolveur': 'الحل خطوة بخطوة',
+    'nav.progression': 'تقدّمي',
+    'nav.badges': 'الأوسمة',
+    'nav.apropos': 'حول',
+    'profil.langue': 'لغة التطبيق',
+  },
+};
+
+/** Traduction brute (hors composant React). */
+export function traduire(langue, cle, params = {}) {
+  const table = DICO[langue] || DICO.fr;
+  let s = table[cle] ?? DICO.fr[cle] ?? cle;
+  for (const [k, v] of Object.entries(params)) s = s.replaceAll(`{${k}}`, v);
+  return s;
+}
+
+/** Hook : renvoie { L, langue, estRTL }. `L('cle', params)` traduit. */
+export function useLangue() {
+  const { profil } = useProgression();
+  const langue = profil?.langue || 'fr';
+  return {
+    langue,
+    estRTL: RTL.has(langue),
+    L: (cle, params) => traduire(langue, cle, params),
+  };
+}

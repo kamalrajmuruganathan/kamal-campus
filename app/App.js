@@ -13,6 +13,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { theme } from './src/theme';
 import { ProgressionProvider, useProgression } from './src/progression/Contexte';
+import { useLangue } from './src/i18n';
 import Onboarding from './src/ecrans/Onboarding';
 import Accueil from './src/ecrans/Accueil';
 import Chapitres from './src/ecrans/Chapitres';
@@ -38,6 +39,7 @@ function Navigation() {
   const sombre = useColorScheme() === 'dark';
   const t = theme(sombre);
   const { profil, charge } = useProgression();
+  const { L } = useLangue();
 
   const themeNavigation = {
     ...(sombre ? DarkTheme : DefaultTheme),
@@ -91,17 +93,17 @@ function Navigation() {
         <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
         <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
         <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
-        <Pile.Screen name="Profil" component={Profil} options={{ title: 'Ma progression' }} />
-        <Pile.Screen name="Badges" component={Badges} options={{ title: 'Badges' }} />
-        <Pile.Screen name="Enigmes" component={Enigmes} options={{ title: 'Énigmes' }} />
+        <Pile.Screen name="Profil" component={Profil} options={{ title: L('nav.progression') }} />
+        <Pile.Screen name="Badges" component={Badges} options={{ title: L('nav.badges') }} />
+        <Pile.Screen name="Enigmes" component={Enigmes} options={{ title: L('nav.enigmes') }} />
         <Pile.Screen
           name="LecteurEnigme"
           component={LecteurEnigme}
-          options={({ route }) => ({ title: route.params?.titre ?? 'Énigme' })}
+          options={({ route }) => ({ title: route.params?.titre ?? L('nav.enigmes') })}
         />
         <Pile.Screen name="LecteurAllumettes" component={LecteurAllumettes} options={{ title: 'Allumettes' }} />
-        <Pile.Screen name="Resolveur" component={Resolveur} options={{ title: 'Résolveur pas à pas' }} />
-        <Pile.Screen name="APropos" component={APropos} options={{ title: 'À propos' }} />
+        <Pile.Screen name="Resolveur" component={Resolveur} options={{ title: L('nav.resolveur') }} />
+        <Pile.Screen name="APropos" component={APropos} options={{ title: L('nav.apropos') }} />
       </Pile.Navigator>
     </NavigationContainer>
   );

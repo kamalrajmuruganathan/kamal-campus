@@ -15,6 +15,7 @@ import { niveauPourXp } from '../../lib/progression';
 import { evaluerBadges } from '../../lib/badges';
 import { serieAffichee, dateLocale } from '../../lib/serie';
 import { activerRappelQuotidien, desactiverRappels } from '../notifications';
+import { LANGUES, useLangue } from '../i18n';
 
 const OBJECTIFS = [30, 60, 120, 200];
 const HEURES = ['17:00', '18:00', '19:00', '20:00'];
@@ -54,6 +55,7 @@ function Case({ t, valeur, libelle }) {
 export default function Profil({ navigation }) {
   const t = theme(useColorScheme() === 'dark');
   const { profil, reinitialiser, definirReglages } = useProgression();
+  const { L } = useLangue();
 
   const jour = dateLocale(new Date());
   const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, jour);
@@ -237,6 +239,32 @@ export default function Profil({ navigation }) {
           </View>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
         </Pressable>
+
+        {/* Langue de l'application */}
+        <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+            {L('profil.langue')}
+          </Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
+            {LANGUES.map((lg) => {
+              const actif = (profil.langue || 'fr') === lg.code;
+              return (
+                <Pressable
+                  key={lg.code}
+                  onPress={() => definirReglages({ langue: lg.code })}
+                  style={({ pressed }) => [
+                    st.pilule,
+                    { backgroundColor: actif ? t.couleur.accent : t.couleur.fond, borderColor: actif ? t.couleur.accent : t.couleur.trait, opacity: pressed ? 0.7 : 1 },
+                  ]}
+                >
+                  <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+                    {lg.drapeau} {lg.nom}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        </View>
 
         {/* Rappel quotidien */}
         <View

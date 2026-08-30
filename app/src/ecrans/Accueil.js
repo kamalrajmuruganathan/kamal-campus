@@ -16,10 +16,12 @@ import { niveaux, parcoursDe, LIBELLES_NIVEAU, LIBELLES_PARCOURS, CHAPITRES } fr
 import { useProgression } from '../progression/Contexte';
 import { niveauPourXp } from '../../lib/progression';
 import { serieAffichee, dateLocale } from '../../lib/serie';
+import { useLangue } from '../i18n';
 
 export default function Accueil({ navigation }) {
   const t = theme(useColorScheme() === 'dark');
   const { profil } = useProgression();
+  const { L } = useLangue();
   const [niveau, setNiveau] = useState(profil.niveauParDefaut ?? null);
   const prog = niveauPourXp(profil.xp);
   const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, dateLocale(new Date()));
@@ -31,10 +33,10 @@ export default function Accueil({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['top']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
         <Text style={{ color: t.couleur.texte, fontSize: t.police.titre, fontWeight: '700' }}>
-          {profil.prenom ? `Salut ${profil.prenom} 👋` : 'Kamal Campus'}
+          {profil.prenom ? L('home.salut', { prenom: profil.prenom }) : 'Kamal Campus'}
         </Text>
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.normale, marginTop: 4 }}>
-          Maths & Physique-Chimie — {CHAPITRES.length} chapitres, {totalQuestions} questions
+          {L('app.sousTitre', { n: CHAPITRES.length, q: totalQuestions })}
         </Text>
 
         {/* Ma progression — niveau et XP, accès direct au profil */}
@@ -70,7 +72,7 @@ export default function Accueil({ navigation }) {
           </View>
           <View style={{ flex: 1 }}>
             <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
-              Ma progression · {prog.titre}
+              {L('home.progression', { rang: prog.titre })}
             </Text>
             <View style={[st.piste, { backgroundColor: t.couleur.trait, marginTop: 6 }]}>
               <View
@@ -83,7 +85,7 @@ export default function Accueil({ navigation }) {
               />
             </View>
             <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 4 }}>
-              {profil.xp} XP · encore {prog.xpRestant} pour le niveau {prog.niveau + 1}
+              {L('home.xp', { xp: profil.xp, r: prog.xpRestant, niv: prog.niveau + 1 })}
             </Text>
           </View>
           {serie > 0 && (
@@ -98,7 +100,7 @@ export default function Accueil({ navigation }) {
         {!niveau ? (
           <>
             <Text style={[st.section, { color: t.couleur.attenue, marginTop: t.espace.xl }]}>
-              CHOISIS TON NIVEAU
+              {L('home.choisisNiveau')}
             </Text>
             {listeNiveaux.map((n) => {
               const nb = CHAPITRES.filter((c) => c.niveau === n).length;
@@ -166,54 +168,48 @@ export default function Accueil({ navigation }) {
         <View style={{ marginTop: t.espace.xl }}>
           <Carte
             t={t}
-            titre="🧮 Résolveur pas à pas"
-            sousTitre="Calculs, fractions, équations — avec les étapes"
-            detail="Saisis, l'appli résout et explique"
+            titre={L('card.resolveur.t')}
+            sousTitre={L('card.resolveur.s')}
             couleur={t.couleur.succes}
             onPress={() => navigation.navigate('Resolveur')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
-            titre="🧩 Énigmes"
-            sousTitre="Suites, grilles, calcul mental, allumettes"
-            detail="Défis de logique, tous niveaux"
+            titre={L('card.enigmes.t')}
+            sousTitre={L('card.enigmes.s')}
             couleur={t.couleur.physique}
             onPress={() => navigation.navigate('Enigmes')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
-            titre="Formulaires"
-            sousTitre="L'essentiel à savoir par cœur, par niveau"
-            detail="Aide-mémoire de révision"
+            titre={L('card.formulaires.t')}
+            sousTitre={L('card.formulaires.s')}
             couleur={t.couleur.accent}
             onPress={() => navigation.navigate('Formulaires')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
-            titre="Bac blanc / brevet blanc"
-            sousTitre="QCM de révision, plusieurs chapitres"
-            detail="Teste où tu en es"
+            titre={L('card.bacblanc.t')}
+            sousTitre={L('card.bacblanc.s')}
             couleur={t.couleur.accent}
             onPress={() => navigation.navigate('BacBlanc')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
-            titre="Sujets type bac / brevet"
-            sousTitre="Des épreuves entières, corrigées"
-            detail="S'entraîner en conditions"
+            titre={L('card.sujets.t')}
+            sousTitre={L('card.sujets.s')}
             couleur={t.couleur.physique}
             onPress={() => navigation.navigate('Sujets')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
-            titre="Outils de calcul"
-            sousTitre="Second degré, dérivée, statistiques, chimie…"
-            detail="Calcul exact, avec le détail des étapes"
+            titre={L('card.outils.t')}
+            sousTitre={L('card.outils.s')}
             couleur={t.couleur.succes}
             onPress={() => navigation.navigate('Outils')}
           />
@@ -230,7 +226,7 @@ export default function Accueil({ navigation }) {
             textDecorationLine: 'underline',
           }}
         >
-          À propos de Kamal Campus
+          {L('home.apropos')}
         </Text>
       </ScrollView>
     </SafeAreaView>

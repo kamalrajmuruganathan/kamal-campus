@@ -37,6 +37,7 @@ export function profilVide() {
     // Onboarding & préférences
     onboardingFait: false,
     prenom: '',
+    langue: 'fr', // langue de l'interface (fr/en/es/ar)
     niveauParDefaut: null, // niveau choisi à l'onboarding (préselection accueil)
     rappelActif: false,
     rappelHeure: '18:00', // 'HH:MM'

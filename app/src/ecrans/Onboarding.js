@@ -1,7 +1,7 @@
 /**
- * Onboarding — au tout premier lancement. En trois étapes : prénom (optionnel),
- * classe, objectif quotidien. On mémorise le tout, puis l'appli s'ouvre sur
- * l'accueil (et pré-sélectionne le niveau choisi).
+ * Onboarding — au tout premier lancement. Quatre étapes : langue, prénom
+ * (optionnel), classe, objectif quotidien. On mémorise le tout, puis l'appli
+ * s'ouvre sur l'accueil (et pré-sélectionne le niveau choisi).
  */
 
 import { useState } from 'react';
@@ -11,17 +11,39 @@ import { theme } from '../theme';
 import { Carte } from '../composants/communs';
 import { useProgression } from '../progression/Contexte';
 import { niveaux, LIBELLES_NIVEAU } from '../contenu-index';
+import { LANGUES, useLangue } from '../i18n';
 
 const OBJECTIFS = [
-  { xp: 30, titre: 'Tranquille', detail: '≈ 1 ou 2 QCM par jour' },
-  { xp: 60, titre: 'Régulier', detail: '≈ 3 QCM par jour' },
+  { xp: 30, titre: 'Tranquille', detail: '≈ 1–2 QCM / jour' },
+  { xp: 60, titre: 'Régulier', detail: '≈ 3 QCM / jour' },
   { xp: 120, titre: 'Sérieux', detail: 'Pour progresser vite' },
   { xp: 200, titre: 'Intense', detail: 'Objectif ambitieux' },
 ];
 
+function Option({ t, actif, onPress, children }) {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [
+        st.option,
+        {
+          backgroundColor: t.couleur.surface,
+          borderColor: actif ? t.couleur.accent : t.couleur.trait,
+          borderWidth: actif ? 2 : 1,
+          borderRadius: t.rayon.m,
+          opacity: pressed ? 0.7 : 1,
+        },
+      ]}
+    >
+      {children}
+    </Pressable>
+  );
+}
+
 export default function Onboarding({ navigation }) {
   const t = theme(useColorScheme() === 'dark');
-  const { terminerOnboarding } = useProgression();
+  const { terminerOnboarding, definirReglages } = useProgression();
+  const { L } = useLangue();
 
   const [etape, setEtape] = useState(0);
   const [prenom, setPrenom] = useState('');
@@ -39,19 +61,32 @@ export default function Onboarding({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['top', 'bottom']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
         <Text style={{ color: t.couleur.accent, fontSize: t.police.petite, fontWeight: '700', letterSpacing: 1 }}>
-          KAMAL CAMPUS · ÉTAPE {etape + 1} / 3
+          KAMAL CAMPUS · {etape + 1} / 4
         </Text>
 
         {etape === 0 && (
           <>
-            <Text style={[st.titre, { color: t.couleur.texte }]}>Bienvenue !</Text>
-            <Text style={[st.sous, { color: t.couleur.attenue }]}>
-              Comment veux-tu qu'on t'appelle ? (facultatif)
-            </Text>
+            <Text style={[st.titre, { color: t.couleur.texte }]}>{L('onb.langue')}</Text>
+            <View style={{ marginTop: t.espace.l }}>
+              {LANGUES.map((lg) => (
+                <Option key={lg.code} t={t} actif={false} onPress={() => { definirReglages({ langue: lg.code }); setEtape(1); }}>
+                  <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne, fontWeight: '600' }}>
+                    {lg.drapeau}  {lg.nom}
+                  </Text>
+                </Option>
+              ))}
+            </View>
+          </>
+        )}
+
+        {etape === 1 && (
+          <>
+            <Text style={[st.titre, { color: t.couleur.texte }]}>{L('onb.bienvenue')}</Text>
+            <Text style={[st.sous, { color: t.couleur.attenue }]}>{L('onb.prenomQ')}</Text>
             <TextInput
               value={prenom}
               onChangeText={setPrenom}
-              placeholder="Ton prénom"
+              placeholder={L('onb.prenom')}
               placeholderTextColor={t.couleur.attenue}
               style={{
                 marginTop: t.espace.l,
@@ -67,101 +102,62 @@ export default function Onboarding({ navigation }) {
           </>
         )}
 
-        {etape === 1 && (
+        {etape === 2 && (
           <>
-            <Text style={[st.titre, { color: t.couleur.texte }]}>Quelle est ta classe ?</Text>
-            <Text style={[st.sous, { color: t.couleur.attenue }]}>
-              L'appli s'ouvrira directement sur ton programme.
-            </Text>
+            <Text style={[st.titre, { color: t.couleur.texte }]}>{L('onb.classeQ')}</Text>
+            <Text style={[st.sous, { color: t.couleur.attenue }]}>{L('onb.classeAide')}</Text>
             <View style={{ marginTop: t.espace.l }}>
               {listeNiveaux.map((n) => (
-                <Pressable
-                  key={n}
-                  onPress={() => setNiveau(n)}
-                  style={({ pressed }) => [
-                    st.option,
-                    {
-                      backgroundColor: t.couleur.surface,
-                      borderColor: niveau === n ? t.couleur.accent : t.couleur.trait,
-                      borderWidth: niveau === n ? 2 : 1,
-                      borderRadius: t.rayon.m,
-                      opacity: pressed ? 0.7 : 1,
-                    },
-                  ]}
-                >
+                <Option key={n} t={t} actif={niveau === n} onPress={() => setNiveau(n)}>
                   <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne, fontWeight: '600' }}>
                     {LIBELLES_NIVEAU[n] ?? n}
                   </Text>
-                </Pressable>
+                </Option>
               ))}
             </View>
           </>
         )}
 
-        {etape === 2 && (
+        {etape === 3 && (
           <>
-            <Text style={[st.titre, { color: t.couleur.texte }]}>Ton objectif quotidien</Text>
-            <Text style={[st.sous, { color: t.couleur.attenue }]}>
-              Combien d'XP veux-tu viser chaque jour ? (modifiable plus tard)
-            </Text>
+            <Text style={[st.titre, { color: t.couleur.texte }]}>{L('onb.objectifQ')}</Text>
+            <Text style={[st.sous, { color: t.couleur.attenue }]}>{L('onb.objectifAide')}</Text>
             <View style={{ marginTop: t.espace.l }}>
               {OBJECTIFS.map((o) => (
-                <Pressable
-                  key={o.xp}
-                  onPress={() => setObjectif(o.xp)}
-                  style={({ pressed }) => [
-                    st.option,
-                    {
-                      backgroundColor: t.couleur.surface,
-                      borderColor: objectif === o.xp ? t.couleur.accent : t.couleur.trait,
-                      borderWidth: objectif === o.xp ? 2 : 1,
-                      borderRadius: t.rayon.m,
-                      opacity: pressed ? 0.7 : 1,
-                    },
-                  ]}
-                >
+                <Option key={o.xp} t={t} actif={objectif === o.xp} onPress={() => setObjectif(o.xp)}>
                   <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne, fontWeight: '600' }}>
                     {o.titre} — {o.xp} XP/jour
                   </Text>
-                  <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 2 }}>
-                    {o.detail}
-                  </Text>
-                </Pressable>
+                  <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite, marginTop: 2 }}>{o.detail}</Text>
+                </Option>
               ))}
             </View>
           </>
         )}
       </ScrollView>
 
-      <View style={{ padding: t.espace.l, flexDirection: 'row', gap: t.espace.m }}>
-        {etape > 0 && (
+      {etape > 0 && (
+        <View style={{ padding: t.espace.l, flexDirection: 'row', gap: t.espace.m }}>
           <Pressable
             onPress={() => setEtape((e) => e - 1)}
             style={({ pressed }) => [st.bouton, { flex: 0.5, backgroundColor: t.couleur.surface, opacity: pressed ? 0.8 : 1 }]}
           >
-            <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne }}>Retour</Text>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne }}>{L('onb.retour')}</Text>
           </Pressable>
-        )}
-        <Pressable
-          onPress={() => {
-            if (etape < 2) setEtape((e) => e + 1);
-            else terminer();
-          }}
-          disabled={etape === 1 && !niveau}
-          style={({ pressed }) => [
-            st.bouton,
-            {
-              flex: 1,
-              backgroundColor: etape === 1 && !niveau ? t.couleur.trait : t.couleur.accent,
-              opacity: pressed ? 0.85 : 1,
-            },
-          ]}
-        >
-          <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '700' }}>
-            {etape < 2 ? 'Continuer' : 'C’est parti !'}
-          </Text>
-        </Pressable>
-      </View>
+          <Pressable
+            onPress={() => { if (etape < 3) setEtape((e) => e + 1); else terminer(); }}
+            disabled={etape === 2 && !niveau}
+            style={({ pressed }) => [
+              st.bouton,
+              { flex: 1, backgroundColor: etape === 2 && !niveau ? t.couleur.trait : t.couleur.accent, opacity: pressed ? 0.85 : 1 },
+            ]}
+          >
+            <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '700' }}>
+              {etape < 3 ? L('onb.continuer') : L('onb.cestParti')}
+            </Text>
+          </Pressable>
+        </View>
+      )}
     </SafeAreaView>
   );
 }
