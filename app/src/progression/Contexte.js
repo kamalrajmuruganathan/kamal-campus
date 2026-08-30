@@ -253,6 +253,17 @@ export function ProgressionProvider({ children }) {
     effacerProfil();
   }, []);
 
+  /** Ajoute ou retire un chapitre des favoris. */
+  const basculerFavori = useCallback((chapId) => {
+    setProfil((p) => {
+      const set = new Set(p.favoris || []);
+      if (set.has(chapId)) set.delete(chapId); else set.add(chapId);
+      const suivant = { ...p, favoris: [...set] };
+      sauverProfil(suivant);
+      return suivant;
+    });
+  }, []);
+
   /** Met à jour un ou plusieurs réglages du profil (objectif, prénom, rappel…). */
   const definirReglages = useCallback((changements) => {
     setProfil((p) => {
@@ -276,7 +287,7 @@ export function ProgressionProvider({ children }) {
     <ProgressionContexte.Provider
       value={{
         profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme,
-        reinitialiser, definirReglages, terminerOnboarding,
+        reinitialiser, definirReglages, terminerOnboarding, basculerFavori,
       }}
     >
       {children}
@@ -307,6 +318,7 @@ export function useProgression() {
       reinitialiser: () => {},
       definirReglages: () => {},
       terminerOnboarding: () => {},
+      basculerFavori: () => {},
     };
   }
   return ctx;

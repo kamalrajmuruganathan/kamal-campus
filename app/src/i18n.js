@@ -59,6 +59,10 @@ const DICO = {
     'nav.badges': 'Badges',
     'nav.apropos': 'À propos',
     'profil.langue': 'Langue de l’application',
+    'nav.recherche': 'Recherche', 'nav.favoris': 'Favoris', 'nav.revision': 'À réviser',
+    'card.recherche.t': '🔎 Rechercher', 'card.recherche.s': 'Trouver un chapitre, un parcours',
+    'card.reviser.t': '🎯 À réviser', 'card.reviser.s': 'Tes chapitres à retravailler',
+    'card.favoris.t': '⭐ Favoris', 'card.favoris.s': 'Tes chapitres marqués',
   },
   en: {
     'app.sousTitre': 'Maths & Physics-Chemistry — {n} chapters, {q} questions',
@@ -97,6 +101,10 @@ const DICO = {
     'nav.badges': 'Badges',
     'nav.apropos': 'About',
     'profil.langue': 'App language',
+    'nav.recherche': 'Search', 'nav.favoris': 'Favourites', 'nav.revision': 'To review',
+    'card.recherche.t': '🔎 Search', 'card.recherche.s': 'Find a chapter or track',
+    'card.reviser.t': '🎯 To review', 'card.reviser.s': 'Chapters to work on',
+    'card.favoris.t': '⭐ Favourites', 'card.favoris.s': 'Your bookmarked chapters',
   },
   es: {
     'app.sousTitre': 'Mates y Física-Química — {n} capítulos, {q} preguntas',
@@ -135,6 +143,10 @@ const DICO = {
     'nav.badges': 'Insignias',
     'nav.apropos': 'Acerca de',
     'profil.langue': 'Idioma de la app',
+    'nav.recherche': 'Buscar', 'nav.favoris': 'Favoritos', 'nav.revision': 'Por repasar',
+    'card.recherche.t': '🔎 Buscar', 'card.recherche.s': 'Encontrar un capítulo',
+    'card.reviser.t': '🎯 Por repasar', 'card.reviser.s': 'Capítulos para reforzar',
+    'card.favoris.t': '⭐ Favoritos', 'card.favoris.s': 'Tus capítulos marcados',
   },
   ar: {
     'app.sousTitre': 'الرياضيات والفيزياء والكيمياء — {n} فصلًا، {q} سؤالًا',
@@ -173,6 +185,10 @@ const DICO = {
     'nav.badges': 'الأوسمة',
     'nav.apropos': 'حول',
     'profil.langue': 'لغة التطبيق',
+    'nav.recherche': 'بحث', 'nav.favoris': 'المفضلة', 'nav.revision': 'للمراجعة',
+    'card.recherche.t': '🔎 بحث', 'card.recherche.s': 'ابحث عن فصل',
+    'card.reviser.t': '🎯 للمراجعة', 'card.reviser.s': 'الفصول التي تحتاج تحسينًا',
+    'card.favoris.t': '⭐ المفضلة', 'card.favoris.s': 'فصولك المحفوظة',
   },
 };
 

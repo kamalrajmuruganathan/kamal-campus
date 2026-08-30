@@ -31,6 +31,9 @@ import Enigmes from './src/ecrans/Enigmes';
 import LecteurEnigme from './src/ecrans/LecteurEnigme';
 import LecteurAllumettes from './src/ecrans/LecteurAllumettes';
 import Resolveur from './src/ecrans/Resolveur';
+import Recherche from './src/ecrans/Recherche';
+import Favoris from './src/ecrans/Favoris';
+import Revision from './src/ecrans/Revision';
 import APropos from './src/ecrans/APropos';
 
 const Pile = createNativeStackNavigator();
@@ -103,6 +106,9 @@ function Navigation() {
         />
         <Pile.Screen name="LecteurAllumettes" component={LecteurAllumettes} options={{ title: 'Allumettes' }} />
         <Pile.Screen name="Resolveur" component={Resolveur} options={{ title: L('nav.resolveur') }} />
+        <Pile.Screen name="Recherche" component={Recherche} options={{ title: L('nav.recherche') }} />
+        <Pile.Screen name="Favoris" component={Favoris} options={{ title: L('nav.favoris') }} />
+        <Pile.Screen name="Revision" component={Revision} options={{ title: L('nav.revision') }} />
         <Pile.Screen name="APropos" component={APropos} options={{ title: L('nav.apropos') }} />
       </Pile.Navigator>
     </NavigationContainer>

@@ -168,6 +168,30 @@ export default function Accueil({ navigation }) {
         <View style={{ marginTop: t.espace.xl }}>
           <Carte
             t={t}
+            titre={L('card.recherche.t')}
+            sousTitre={L('card.recherche.s')}
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('Recherche')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre={L('card.reviser.t')}
+            sousTitre={L('card.reviser.s')}
+            couleur={t.couleur.alerte}
+            onPress={() => navigation.navigate('Revision')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre={L('card.favoris.t')}
+            sousTitre={L('card.favoris.s')}
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('Favoris')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre={L('card.resolveur.t')}
             sousTitre={L('card.resolveur.s')}
             couleur={t.couleur.succes}

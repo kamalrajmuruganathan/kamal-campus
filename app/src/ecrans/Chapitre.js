@@ -11,11 +11,12 @@ import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { chapitreParId } from '../contenu-index';
+import { useProgression } from '../progression/Contexte';
 
 export default function Chapitre({ route, navigation }) {
   const t = theme(useColorScheme() === 'dark');
+  const { profil, basculerFavori } = useProgression();
   const chapitre = chapitreParId(route.params.id);
-  const [onglet, setOnglet] = useState('fiche');
 
   if (!chapitre) {
     return (
@@ -28,10 +29,20 @@ export default function Chapitre({ route, navigation }) {
   }
 
   const accent = couleurMatiere(t, chapitre.matiere);
+  const estFavori = (profil.favoris || []).includes(chapitre.id);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
       <ScrollView contentContainerStyle={{ paddingBottom: t.espace.xxl }}>
+        <Pressable
+          onPress={() => basculerFavori(chapitre.id)}
+          accessibilityRole="button"
+          accessibilityLabel={estFavori ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+          style={{ alignSelf: 'flex-end', paddingHorizontal: t.espace.l, paddingTop: t.espace.m }}
+        >
+          <Text style={{ fontSize: 24 }}>{estFavori ? '⭐' : '☆'}</Text>
+        </Pressable>
+
         {!chapitre.reluPar && (
           <View style={{ padding: t.espace.l, paddingBottom: 0 }}>
             <Bandeau
