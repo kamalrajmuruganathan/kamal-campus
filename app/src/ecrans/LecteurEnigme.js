@@ -8,6 +8,7 @@
 
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { useProgression } from '../progression/Contexte';
@@ -47,7 +48,7 @@ function Grille({ t, grille }) {
 }
 
 export default function LecteurEnigme({ route, navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { enregistrerEnigme } = useProgression();
   const type = route.params?.type ?? 'suite';
   const titreFamille = route.params?.titre ?? 'Énigmes';

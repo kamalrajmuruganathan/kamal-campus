@@ -7,6 +7,7 @@
 
 import { useState } from 'react';
 import { useColorScheme } from 'react-native';
+import { useSombre } from '../useSombre';
 import { View, Text, ScrollView, Pressable, Alert, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
@@ -14,11 +15,16 @@ import { useProgression } from '../progression/Contexte';
 import { niveauPourXp } from '../../lib/progression';
 import { evaluerBadges } from '../../lib/badges';
 import { serieAffichee, dateLocale } from '../../lib/serie';
-import { activerRappelQuotidien, desactiverRappels } from '../notifications';
+import { appliquerNotifications } from '../notifications';
 import { LANGUES, useLangue } from '../i18n';
 
 const OBJECTIFS = [30, 60, 120, 200];
 const HEURES = ['17:00', '18:00', '19:00', '20:00'];
+const THEMES = [
+  { v: 'systeme', l: 'Système' },
+  { v: 'clair', l: '☀️ Clair' },
+  { v: 'sombre', l: '🌙 Sombre' },
+];
 
 const LIBELLE_MATIERE = {
   mathematiques: 'Mathématiques',
@@ -53,7 +59,7 @@ function Case({ t, valeur, libelle }) {
 }
 
 export default function Profil({ navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { profil, reinitialiser, definirReglages } = useProgression();
   const { L } = useLangue();
 
@@ -65,7 +71,8 @@ export default function Profil({ navigation }) {
   const [heureChoisie, setHeureChoisie] = useState(profil.rappelHeure || '18:00');
 
   const activerRappel = async (heure) => {
-    const ok = await activerRappelQuotidien(heure);
+    // On reprogramme tout (rappel + planning) pour ne pas effacer les créneaux.
+    const ok = await appliquerNotifications({ ...profil, rappelActif: true, rappelHeure: heure });
     if (ok) {
       definirReglages({ rappelActif: true, rappelHeure: heure });
     } else {
@@ -76,8 +83,9 @@ export default function Profil({ navigation }) {
     }
   };
   const couperRappel = async () => {
-    await desactiverRappels();
     definirReglages({ rappelActif: false });
+    // Reprogramme sans le rappel quotidien, mais garde les créneaux du planning.
+    await appliquerNotifications({ ...profil, rappelActif: false });
   };
 
   const n = niveauPourXp(profil.xp);
@@ -240,6 +248,37 @@ export default function Profil({ navigation }) {
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
         </Pressable>
 
+        {/* Apparence — thème clair / sombre / système */}
+        <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+            Apparence
+          </Text>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+            « Système » suit le réglage de ton téléphone.
+          </Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
+            {THEMES.map((th) => {
+              const actif = (profil.themePref || 'systeme') === th.v;
+              return (
+                <Pressable
+                  key={th.v}
+                  onPress={() => definirReglages({ themePref: th.v })}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: actif }}
+                  style={({ pressed }) => [
+                    st.pilule,
+                    { backgroundColor: actif ? t.couleur.accent : t.couleur.fond, borderColor: actif ? t.couleur.accent : t.couleur.trait, opacity: pressed ? 0.7 : 1 },
+                  ]}
+                >
+                  <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+                    {th.l}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        </View>
+
         {/* Langue de l'application */}
         <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
           <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
@@ -328,6 +367,35 @@ export default function Profil({ navigation }) {
             </>
           )}
         </View>
+
+        {/* Planning d'étude */}
+        <Pressable
+          onPress={() => navigation.navigate('Planning')}
+          accessibilityRole="button"
+          style={({ pressed }) => [
+            st.badges,
+            {
+              backgroundColor: t.couleur.surface,
+              borderColor: t.couleur.trait,
+              borderRadius: t.rayon.m,
+              marginTop: t.espace.m,
+              opacity: pressed ? 0.7 : 1,
+            },
+          ]}
+        >
+          <Text style={{ fontSize: 20, marginRight: t.espace.m }}>🗓️</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+              Planning d'étude
+            </Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+              {(profil.planning || []).length > 0
+                ? `${profil.planning.length} créneau${profil.planning.length > 1 ? 'x' : ''} · rappels programmés`
+                : 'Programme tes créneaux et reçois un rappel à l’heure'}
+            </Text>
+          </View>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
+        </Pressable>
 
         {vierge ? (
           <View

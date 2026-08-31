@@ -11,6 +11,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
@@ -19,7 +20,7 @@ import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
 export default function Flashcards({ route, navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const chapitre = chapitreParId(route.params.id);
   const cartes = chapitre?.flashcards?.cartes ?? [];
 

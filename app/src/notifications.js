@@ -1,9 +1,12 @@
 /**
- * Rappels quotidiens — notifications locales (hors ligne, sans serveur).
+ * Notifications locales (hors ligne, sans serveur) : rappel quotidien + planning
+ * de révision hebdomadaire.
  *
- * On programme UNE notification répétée chaque jour à l'heure choisie. Tout est
- * défensif : si la permission est refusée ou la brique indisponible (aperçu
- * Expo Go, etc.), les fonctions renvoient simplement false sans casser l'appli.
+ * On gère TOUTES les notifications d'un seul endroit : `appliquerNotifications`
+ * annule tout puis reprogramme (a) le rappel quotidien si actif, (b) un créneau
+ * répété chaque semaine pour chaque entrée du planning. Tout est défensif : si la
+ * permission est refusée ou la brique indisponible (aperçu Expo Go), on renvoie
+ * simplement false sans casser l'appli.
  */
 
 import * as Notifications from 'expo-notifications';
@@ -27,30 +30,80 @@ const MESSAGES = [
   'Un petit QCM pour valider ton objectif du jour ? 💪',
 ];
 
-/**
- * Active (ou reprogramme) le rappel quotidien à l'heure 'HH:MM'.
- * @returns {Promise<boolean>} true si programmé, false sinon (permission, erreur).
- */
-export async function activerRappelQuotidien(heure) {
+/** Notre jour (1 = lundi … 7 = dimanche) → weekday Expo (1 = dimanche … 7 = samedi). */
+function jourVersExpo(jour) {
+  return jour === 7 ? 1 : jour + 1;
+}
+
+/** Demande la permission (si pas déjà accordée). @returns {Promise<boolean>} */
+export async function demanderPermissionNotifs() {
   try {
     const perm = await Notifications.getPermissionsAsync();
-    let statut = perm.status;
-    if (statut !== 'granted') {
-      const demande = await Notifications.requestPermissionsAsync();
-      statut = demande.status;
-    }
-    if (statut !== 'granted') return false;
+    if (perm.status === 'granted') return true;
+    const demande = await Notifications.requestPermissionsAsync();
+    return demande.status === 'granted';
+  } catch {
+    return false;
+  }
+}
 
-    const [h, m] = String(heure).split(':').map(Number);
+/**
+ * (Re)programme toutes les notifications à partir du profil : rappel quotidien
+ * + créneaux du planning. Annule d'abord tout l'existant.
+ * @returns {Promise<boolean>} true si la permission est accordée, false sinon.
+ */
+export async function appliquerNotifications(profil) {
+  try {
+    const permis = await demanderPermissionNotifs();
     await Notifications.cancelAllScheduledNotificationsAsync();
-    await Notifications.scheduleNotificationAsync({
-      content: {
-        title: 'Kamal Campus',
-        body: MESSAGES[Math.floor(Math.random() * MESSAGES.length)],
-      },
-      trigger: { hour: h || 18, minute: m || 0, repeats: true },
-    });
+    if (!permis) return false;
+
+    // Rappel quotidien
+    if (profil.rappelActif) {
+      const [h, m] = String(profil.rappelHeure || '18:00').split(':').map(Number);
+      await Notifications.scheduleNotificationAsync({
+        content: {
+          title: 'Kamal Campus',
+          body: MESSAGES[Math.floor(Math.random() * MESSAGES.length)],
+        },
+        trigger: { hour: h || 18, minute: m || 0, repeats: true },
+      });
+    }
+
+    // Planning de révision — un créneau répété chaque semaine
+    for (const s of profil.planning || []) {
+      const [h, m] = String(s.heure || '17:00').split(':').map(Number);
+      await Notifications.scheduleNotificationAsync({
+        content: {
+          title: `📚 ${s.matiere || 'Révision'}`,
+          body: `C'est l'heure de ${s.matiere || 'réviser'} ! Au travail 💪`,
+        },
+        trigger: {
+          weekday: jourVersExpo(s.jour || 1),
+          hour: h || 17,
+          minute: m || 0,
+          repeats: true,
+        },
+      });
+    }
     return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Resynchronise les notifications au lancement SANS demander la permission :
+ * ne fait rien si la permission n'est pas déjà accordée (évite un pop-up au
+ * démarrage). Utile pour restaurer le planning après un redémarrage de l'OS.
+ */
+export async function resynchroniserSiPermis(profil) {
+  try {
+    const aQuoi = profil.rappelActif || (profil.planning && profil.planning.length > 0);
+    if (!aQuoi) return false;
+    const perm = await Notifications.getPermissionsAsync();
+    if (perm.status !== 'granted') return false;
+    return appliquerNotifications(profil);
   } catch {
     return false;
   }

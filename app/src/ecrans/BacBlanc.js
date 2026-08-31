@@ -5,6 +5,7 @@
  */
 
 import { useColorScheme } from 'react-native';
+import { useSombre } from '../useSombre';
 import { View, Text, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
@@ -12,7 +13,7 @@ import { Carte } from '../composants/communs';
 import { QUIZ, LIBELLES_NIVEAU } from '../contenu-index';
 
 export default function BacBlanc({ navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
 
   if (!QUIZ || QUIZ.length === 0) {
     return (

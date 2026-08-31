@@ -16,6 +16,7 @@ import {
 import { badgesNouveaux } from '../../lib/badges';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
+import { resynchroniserSiPermis } from '../notifications';
 
 const MAX_HISTORIQUE = 30;
 const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
@@ -49,6 +50,9 @@ export function ProgressionProvider({ children }) {
       if (vivant) {
         setProfil(p);
         setCharge(true);
+        // Restaure le planning / rappel après un redémarrage de l'OS (sans
+        // demander de permission : ne fait rien si elle n'est pas déjà accordée).
+        resynchroniserSiPermis(p);
       }
     });
     return () => {
@@ -273,13 +277,14 @@ export function ProgressionProvider({ children }) {
     });
   }, []);
 
-  /** Termine l'onboarding : prénom, niveau par défaut, objectif quotidien. */
-  const terminerOnboarding = useCallback(({ prenom = '', niveau = null, objectif = 50 }) => {
+  /** Termine l'onboarding : prénom, niveau par défaut, objectif quotidien, planning. */
+  const terminerOnboarding = useCallback(({ prenom = '', niveau = null, objectif = 50, planning = [] }) => {
     definirReglages({
       onboardingFait: true,
       prenom: prenom.trim(),
       niveauParDefaut: niveau,
       objectifQuotidien: objectif,
+      planning: Array.isArray(planning) ? planning : [],
     });
   }, [definirReglages]);
 

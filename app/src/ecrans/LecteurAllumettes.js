@@ -8,6 +8,7 @@
 
 import { useMemo, useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { useProgression } from '../progression/Contexte';
@@ -18,7 +19,7 @@ import EquationAllumettes from '../composants/EquationAllumettes';
 const LETTRES = ['A', 'B', 'C', 'D'];
 
 export default function LecteurAllumettes() {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { enregistrerEnigme } = useProgression();
 
   const [tirage, setTirage] = useState(0);

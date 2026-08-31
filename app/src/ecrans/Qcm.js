@@ -12,6 +12,7 @@
 
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
@@ -25,7 +26,7 @@ const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
 const TAILLE_QCM_CHAPITRE = 20;
 
 export default function Qcm({ route, navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   // Deux usages : QCM d'un chapitre (route.params.id) OU QCM de révision / bac
   // blanc dont les questions sont fournies directement (route.params.questions).
   const chapitre = route.params?.questions ? null : chapitreParId(route.params?.id);

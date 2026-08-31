@@ -9,6 +9,7 @@
 
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Bandeau, Etiquette } from '../composants/communs';
@@ -87,7 +88,7 @@ function CarteExercice({ ex, index, t, accent }) {
 }
 
 export default function Exercices({ route }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const chapitre = chapitreParId(route.params.id);
 
   if (!chapitre || !chapitre.exercice || !chapitre.exercice.exercices?.length) {

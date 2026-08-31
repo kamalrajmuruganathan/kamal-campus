@@ -5,6 +5,7 @@
  */
 
 import { useColorScheme } from 'react-native';
+import { useSombre } from '../useSombre';
 import { View, Text, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
@@ -13,7 +14,7 @@ import { useProgression } from '../progression/Contexte';
 import { FAMILLES } from '../../lib/enigmes';
 
 export default function Enigmes({ navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { profil } = useProgression();
 
   return (

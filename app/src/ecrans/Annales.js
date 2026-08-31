@@ -7,6 +7,7 @@
  */
 
 import { useColorScheme } from 'react-native';
+import { useSombre } from '../useSombre';
 import { View, Text, ScrollView, Pressable, Linking, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
@@ -78,7 +79,7 @@ const SOURCES = [
 ];
 
 export default function Annales() {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const ouvrir = (url) => Linking.openURL(url).catch(() => {});
 
   return (

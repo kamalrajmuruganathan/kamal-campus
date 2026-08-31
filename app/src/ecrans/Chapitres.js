@@ -3,6 +3,7 @@
  */
 
 import { View, Text, ScrollView, useColorScheme, useWindowDimensions } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte, Bandeau } from '../composants/communs';
@@ -12,7 +13,7 @@ import { composerQcm, poolQuestions } from '../../lib/quizmix';
 const TAILLE_QCM_PARCOURS = 15;
 
 export default function Chapitres({ route, navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { niveau, parcours, titre } = route.params;
   const liste = chapitresDe(niveau, parcours);
   const { width } = useWindowDimensions();

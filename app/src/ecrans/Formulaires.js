@@ -7,6 +7,7 @@
 
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte, Bandeau } from '../composants/communs';
@@ -14,7 +15,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { FORMULAIRES, LIBELLES_NIVEAU } from '../contenu-index';
 
 export default function Formulaires() {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const [actif, setActif] = useState(null);
 
   if (actif) {

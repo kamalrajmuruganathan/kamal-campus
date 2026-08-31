@@ -5,6 +5,7 @@
  */
 
 import { useColorScheme } from 'react-native';
+import { useSombre } from '../useSombre';
 import { Text, ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
@@ -13,7 +14,7 @@ import { useProgression } from '../progression/Contexte';
 import { chapitreParId, LIBELLES_NIVEAU } from '../contenu-index';
 
 export default function Revision({ navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { profil } = useProgression();
 
   const faibles = Object.entries(profil.chapitres || {})

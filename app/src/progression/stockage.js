@@ -39,9 +39,13 @@ export function profilVide() {
     onboardingFait: false,
     prenom: '',
     langue: 'fr', // langue de l'interface (fr/en/es/ar)
+    themePref: 'systeme', // apparence : 'systeme' | 'clair' | 'sombre'
     niveauParDefaut: null, // niveau choisi à l'onboarding (préselection accueil)
     rappelActif: false,
     rappelHeure: '18:00', // 'HH:MM'
+    // Emploi du temps de révision : créneaux hebdomadaires qui déclenchent une
+    // notification. { id, jour:1..7 (lun..dim), heure:'HH:MM', matiere }
+    planning: [],
   };
 }
 
@@ -56,6 +60,7 @@ function normaliser(brut) {
     chapitres: { ...base.chapitres, ...(brut.chapitres || {}) },
     favoris: Array.isArray(brut.favoris) ? brut.favoris : [],
     historique: Array.isArray(brut.historique) ? brut.historique : [],
+    planning: Array.isArray(brut.planning) ? brut.planning : [],
   };
 }
 

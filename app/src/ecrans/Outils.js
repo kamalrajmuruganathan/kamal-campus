@@ -9,6 +9,7 @@
 
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { Carte } from '../composants/communs';
@@ -271,7 +272,7 @@ const OUTILS = [
 ];
 
 export default function Outils({ route }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
 
   // Outils demandés par un chapitre (via outil.json), s'il y en a.
   const demandes = route?.params?.outils ?? null;

@@ -6,6 +6,7 @@
  */
 
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
@@ -14,7 +15,7 @@ import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
 export default function Chapitre({ route, navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { profil, basculerFavori } = useProgression();
   const chapitre = chapitreParId(route.params.id);
 

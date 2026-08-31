@@ -5,6 +5,7 @@
 
 import { useState, useMemo } from 'react';
 import { View, Text, TextInput, ScrollView, useColorScheme } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte } from '../composants/communs';
@@ -13,7 +14,7 @@ import { CHAPITRES, LIBELLES_NIVEAU, LIBELLES_PARCOURS } from '../contenu-index'
 const sansAccent = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 export default function Recherche({ navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const [q, setQ] = useState('');
 
   const resultats = useMemo(() => {

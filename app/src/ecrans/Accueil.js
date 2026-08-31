@@ -9,6 +9,7 @@
 
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Carte } from '../composants/communs';
@@ -19,7 +20,7 @@ import { serieAffichee, dateLocale } from '../../lib/serie';
 import { useLangue } from '../i18n';
 
 export default function Accueil({ navigation }) {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const { profil } = useProgression();
   const { L } = useLangue();
   const [niveau, setNiveau] = useState(profil.niveauParDefaut ?? null);

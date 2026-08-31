@@ -6,6 +6,7 @@
  */
 
 import { View, useColorScheme } from 'react-native';
+import { useSombre } from './src/useSombre';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
@@ -35,12 +36,13 @@ import Recherche from './src/ecrans/Recherche';
 import Favoris from './src/ecrans/Favoris';
 import Revision from './src/ecrans/Revision';
 import Annales from './src/ecrans/Annales';
+import Planning from './src/ecrans/Planning';
 import APropos from './src/ecrans/APropos';
 
 const Pile = createNativeStackNavigator();
 
 function Navigation() {
-  const sombre = useColorScheme() === 'dark';
+  const sombre = useSombre();
   const t = theme(sombre);
   const { profil, charge } = useProgression();
   const { L } = useLangue();
@@ -111,6 +113,7 @@ function Navigation() {
         <Pile.Screen name="Favoris" component={Favoris} options={{ title: L('nav.favoris') }} />
         <Pile.Screen name="Revision" component={Revision} options={{ title: L('nav.revision') }} />
         <Pile.Screen name="Annales" component={Annales} options={{ title: 'Annales — liens' }} />
+        <Pile.Screen name="Planning" component={Planning} options={{ title: 'Planning d’étude' }} />
         <Pile.Screen name="APropos" component={APropos} options={{ title: L('nav.apropos') }} />
       </Pile.Navigator>
     </NavigationContainer>

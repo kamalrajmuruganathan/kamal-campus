@@ -6,12 +6,15 @@
 
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { Carte } from '../composants/communs';
+import PlanningEditeur from '../composants/PlanningEditeur';
 import { useProgression } from '../progression/Contexte';
 import { niveaux, LIBELLES_NIVEAU } from '../contenu-index';
 import { LANGUES, useLangue } from '../i18n';
+import { appliquerNotifications } from '../notifications';
 
 const OBJECTIFS = [
   { xp: 30, titre: 'Tranquille', detail: '≈ 1–2 QCM / jour' },
@@ -41,19 +44,25 @@ function Option({ t, actif, onPress, children }) {
 }
 
 export default function Onboarding({ navigation }) {
-  const t = theme(useColorScheme() === 'dark');
-  const { terminerOnboarding, definirReglages } = useProgression();
+  const t = theme(useSombre());
+  const { profil, terminerOnboarding, definirReglages } = useProgression();
   const { L } = useLangue();
 
   const [etape, setEtape] = useState(0);
   const [prenom, setPrenom] = useState('');
   const [niveau, setNiveau] = useState(null);
   const [objectif, setObjectif] = useState(60);
+  const [planning, setPlanning] = useState([]);
 
   const listeNiveaux = niveaux();
+  const DERNIERE = 4;
 
-  const terminer = () => {
-    terminerOnboarding({ prenom, niveau, objectif });
+  const terminer = async () => {
+    terminerOnboarding({ prenom, niveau, objectif, planning });
+    if (planning.length > 0) {
+      // Programme les créneaux tout de suite (demande la permission au besoin).
+      await appliquerNotifications({ ...profil, planning });
+    }
     navigation.replace('Accueil');
   };
 
@@ -61,7 +70,7 @@ export default function Onboarding({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['top', 'bottom']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
         <Text style={{ color: t.couleur.accent, fontSize: t.police.petite, fontWeight: '700', letterSpacing: 1 }}>
-          KAMAL CAMPUS · {etape + 1} / 4
+          KAMAL CAMPUS · {etape + 1} / 5
         </Text>
 
         {etape === 0 && (
@@ -134,6 +143,19 @@ export default function Onboarding({ navigation }) {
             </View>
           </>
         )}
+
+        {etape === 4 && (
+          <>
+            <Text style={[st.titre, { color: t.couleur.texte }]}>Ton planning de révision</Text>
+            <Text style={[st.sous, { color: t.couleur.attenue }]}>
+              Choisis des créneaux (ex. Lundi 17:00 Maths) : on t'enverra une notification à
+              l'heure pour te lancer. Facultatif — tu peux passer et le régler plus tard.
+            </Text>
+            <View style={{ marginTop: t.espace.l }}>
+              <PlanningEditeur t={t} planning={planning} onChange={setPlanning} />
+            </View>
+          </>
+        )}
       </ScrollView>
 
       {etape > 0 && (
@@ -145,7 +167,7 @@ export default function Onboarding({ navigation }) {
             <Text style={{ color: t.couleur.texte, fontSize: t.police.moyenne }}>{L('onb.retour')}</Text>
           </Pressable>
           <Pressable
-            onPress={() => { if (etape < 3) setEtape((e) => e + 1); else terminer(); }}
+            onPress={() => { if (etape < DERNIERE) setEtape((e) => e + 1); else terminer(); }}
             disabled={etape === 2 && !niveau}
             style={({ pressed }) => [
               st.bouton,
@@ -153,7 +175,7 @@ export default function Onboarding({ navigation }) {
             ]}
           >
             <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '700' }}>
-              {etape < 3 ? L('onb.continuer') : L('onb.cestParti')}
+              {etape < DERNIERE ? L('onb.continuer') : L('onb.cestParti')}
             </Text>
           </Pressable>
         </View>

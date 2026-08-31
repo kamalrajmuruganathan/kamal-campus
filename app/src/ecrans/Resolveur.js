@@ -8,6 +8,7 @@
 
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { resoudre } from '../../lib/solveur';
@@ -16,7 +17,7 @@ const SYMBOLES = ['x', '(', ')', '^', '×', '÷', '+', '−', '='];
 const EXEMPLES = ['2x + 5 = 13', 'x^2 - 5x + 6 = 0', '3/4 + 5/6', '2×(3+4)^2'];
 
 export default function Resolveur() {
-  const t = theme(useColorScheme() === 'dark');
+  const t = theme(useSombre());
   const [entree, setEntree] = useState('');
   const [res, setRes] = useState(null);
 
