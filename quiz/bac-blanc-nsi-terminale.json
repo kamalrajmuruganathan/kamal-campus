@@ -1,0 +1,120 @@
+{
+  "id": "bac-blanc-nsi-terminale",
+  "titre": "Bac blanc",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Structures de données",
+      "enonce": "Quel est le principe de fonctionnement d'une pile ?",
+      "choix": ["FIFO : premier entré, premier sorti", "LIFO : dernier entré, premier sorti", "Accès aléatoire par indice", "Tri automatique des éléments"],
+      "reponse": 1,
+      "explication": "Une pile suit le principe LIFO (Last In, First Out) : le dernier élément empilé est le premier à être dépilé."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Bases de données SQL",
+      "enonce": "Quelle clause SQL permet de filtrer les lignes d'une requête SELECT ?",
+      "choix": ["ORDER BY", "GROUP BY", "WHERE", "JOIN"],
+      "reponse": 2,
+      "explication": "La clause WHERE sélectionne les lignes qui satisfont une condition. ORDER BY trie, GROUP BY regroupe, JOIN joint des tables."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Une fonction récursive doit obligatoirement comporter :",
+      "choix": ["Une boucle for", "Un cas de base (condition d'arrêt)", "Un tableau global", "Au moins deux paramètres"],
+      "reponse": 1,
+      "explication": "Sans cas de base, une fonction récursive s'appellerait indéfiniment, provoquant un dépassement de la pile d'appels."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Quelle est la complexité en temps, dans le pire des cas, de la recherche dichotomique dans un tableau trié de n éléments ?",
+      "choix": ["O(n)", "O(n²)", "O(log n)", "O(1)"],
+      "reponse": 2,
+      "explication": "La recherche dichotomique divise l'espace de recherche par deux à chaque étape, d'où une complexité logarithmique O(log n)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Programmation orientée objet",
+      "enonce": "En Python, dans la définition d'une méthode d'une classe, le premier paramètre représentant l'objet courant est nommé par convention :",
+      "choix": ["this", "self", "obj", "class"],
+      "reponse": 1,
+      "explication": "En Python, la convention est d'utiliser 'self' pour désigner l'instance sur laquelle la méthode est appelée."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Arbres binaires",
+      "enonce": "Un arbre binaire de recherche contient les valeurs 8 (racine), 3 et 10. Où se trouve la valeur 3 ?",
+      "choix": ["Fils droit de la racine", "Fils gauche de la racine", "Racine", "Il ne peut pas être inséré"],
+      "reponse": 1,
+      "explication": "Dans un ABR, une valeur inférieure à la racine (3 < 8) est placée dans le sous-arbre gauche."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Quel parcours de graphe utilise une file (structure FIFO) ?",
+      "choix": ["Le parcours en profondeur (DFS)", "Le parcours en largeur (BFS)", "Le tri topologique récursif", "Le parcours infixe"],
+      "reponse": 1,
+      "explication": "Le parcours en largeur (BFS) explore les sommets niveau par niveau à l'aide d'une file. Le parcours en profondeur utilise une pile (ou la récursion)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "Réseaux",
+      "enonce": "Quel protocole est utilisé pour le transfert de pages Web de façon sécurisée ?",
+      "choix": ["FTP", "SMTP", "HTTPS", "DNS"],
+      "reponse": 2,
+      "explication": "HTTPS est la version chiffrée de HTTP, utilisée pour transférer des pages Web de manière sécurisée."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Programmation dynamique",
+      "enonce": "La programmation dynamique améliore l'efficacité d'un algorithme récursif principalement en :",
+      "choix": ["Supprimant tous les appels de fonction", "Mémorisant les résultats des sous-problèmes déjà calculés", "Triant les données au préalable", "Utilisant plusieurs processeurs"],
+      "reponse": 1,
+      "explication": "La programmation dynamique (mémoïsation) stocke les résultats des sous-problèmes pour éviter de les recalculer, réduisant fortement le temps d'exécution."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "Dans un système d'exploitation, un processus en attente d'une ressource occupée est dans l'état :",
+      "choix": ["Élu (en exécution)", "Bloqué", "Terminé", "Prêt"],
+      "reponse": 1,
+      "explication": "Un processus qui attend une ressource ou un événement est dans l'état bloqué ; il ne pourra reprendre que lorsque la ressource sera disponible."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Bases de données SQL",
+      "enonce": "Quelle requête SQL renvoie le nombre de lignes de la table Client ?",
+      "choix": ["SELECT SUM(*) FROM Client", "SELECT COUNT(*) FROM Client", "SELECT NUMBER(Client)", "SELECT TOTAL FROM Client"],
+      "reponse": 1,
+      "explication": "La fonction d'agrégation COUNT(*) compte le nombre de lignes d'une table. SUM additionne des valeurs numériques et non des lignes."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 1011 ?",
+      "choix": ["9", "11", "13", "15"],
+      "reponse": 1,
+      "explication": "1011 en binaire = 1×8 + 0×4 + 1×2 + 1×1 = 8 + 2 + 1 = 11."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "2nde-snt-donnees-structurees-exos",
+  "chapitre": "2nde-snt-donnees-structurees",
+  "titre": "Exercices — Les données structurées et leur traitement",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vocabulaire (descripteur, enregistrement)",
+      "enonce": "On dispose d'un fichier CSV de bibliothèque dont la première ligne est : titre;auteur;annee;disponible. Chaque ligne suivante décrit un livre. a) Comment appelle-t-on les mots titre, auteur, annee, disponible ? b) Comment appelle-t-on la ligne décrivant un livre complet ? c) Combien de descripteurs possède chaque livre ?",
+      "corrige": [
+        "La première ligne donne les champs communs à toutes les données : ce sont les descripteurs (ou attributs / colonnes).",
+        "Une ligne qui décrit un objet complet (un livre entier) est un enregistrement (une entrée, une ligne de la table).",
+        "On compte les descripteurs séparés par le point-virgule : titre, auteur, annee, disponible = 4."
+      ],
+      "reponse": "titre/auteur/annee/disponible sont les 4 descripteurs, chaque ligne de livre est un enregistrement."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "format CSV",
+      "enonce": "Voici deux lignes d'un fichier CSV (séparateur virgule) : \"prenom,age,ville\" puis \"Lina,15,Lyon\". a) Donne la valeur du descripteur age pour cet enregistrement. b) Pourquoi un fichier CSV s'ouvre-t-il facilement dans un tableur ? c) Cite un risque si une valeur contient elle-même une virgule (ex : une ville \"Lyon, France\").",
+      "corrige": [
+        "On associe chaque descripteur à la valeur de même position : prenom=Lina, age=15, ville=Lyon. La valeur de age est donc 15.",
+        "Un CSV est un simple texte où chaque ligne est une entrée et les valeurs sont séparées par un caractère (virgule) : le tableur place chaque valeur dans une colonne.",
+        "La virgule interne serait prise pour un séparateur : les colonnes seraient décalées. On la protège avec des guillemets ou un autre séparateur."
+      ],
+      "reponse": "age = 15 ; le CSV se lit en colonnes ; une virgule dans une valeur décale les colonnes si elle n'est pas protégée."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "métadonnée",
+      "enonce": "Une photo prise avec un smartphone contient, en plus de l'image, la date de prise de vue, le modèle d'appareil et les coordonnées GPS du lieu. a) Comment nomme-t-on ces informations qui décrivent la donnée (l'image) ? b) Donne un usage utile de ces informations. c) Donne un risque pour la vie privée.",
+      "corrige": [
+        "Des données qui décrivent une autre donnée sont des métadonnées (ici les métadonnées EXIF de la photo).",
+        "Usage utile : classer/trier automatiquement les photos par date ou par lieu, retrouver où une photo a été prise.",
+        "Risque : en partageant la photo on diffuse sans le vouloir le lieu exact et l'heure (domicile, école), ce qui menace la vie privée."
+      ],
+      "reponse": "Ce sont des métadonnées ; utiles pour trier par date/lieu, mais elles peuvent révéler un lieu privé."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "tri et filtre de données",
+      "enonce": "Table \"eleves\" (nom, moyenne, classe) : Ada 16 2A ; Blaise 9 2B ; Clara 12 2A ; Denis 14 2B. a) Filtre les élèves de la classe 2A. b) Trie toute la table par moyenne décroissante. c) Après un filtre sur \"moyenne ≥ 12\", combien d'enregistrements restent ?",
+      "corrige": [
+        "Filtrer 2A = garder les lignes dont classe vaut 2A : Ada (16) et Clara (12).",
+        "Tri par moyenne décroissante = de la plus grande à la plus petite : Ada 16, Denis 14, Clara 12, Blaise 9.",
+        "moyenne ≥ 12 garde Ada (16), Denis (14), Clara (12) ; Blaise (9) est exclu. Il reste 3 enregistrements."
+      ],
+      "reponse": "2A = Ada et Clara ; ordre décroissant Ada, Denis, Clara, Blaise ; 3 élèves ont une moyenne ≥ 12."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "croisement de tables",
+      "enonce": "Table A \"commandes\" (id_client, produit) : 1 stylo ; 2 cahier ; 1 gomme. Table B \"clients\" (id_client, nom) : 1 Sofia ; 2 Malik. a) Grâce à quel descripteur commun peut-on relier A et B ? b) Écris pour chaque commande le nom du client qui l'a passée. c) Quel intérêt de séparer les infos en deux tables plutôt qu'une seule ?",
+      "corrige": [
+        "Les deux tables partagent le descripteur id_client : c'est la clé qui permet de les croiser.",
+        "On remplace id_client par le nom trouvé dans B : stylo → Sofia (1) ; cahier → Malik (2) ; gomme → Sofia (1).",
+        "Séparer évite de réécrire le nom du client à chaque commande : moins de répétition, moins d'erreurs, mise à jour du nom en un seul endroit."
+      ],
+      "reponse": "On relie par id_client ; stylo=Sofia, cahier=Malik, gomme=Sofia ; deux tables évitent de répéter les informations."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "traitement de données en Python",
+      "enonce": "Une table est représentée par une liste de dictionnaires :\nT = [{'nom':'Ada','note':16}, {'nom':'Blaise','note':9}, {'nom':'Clara','note':12}]\nOn exécute :\ns = 0\nfor e in T:\n    s = s + e['note']\nm = s / len(T)\nadmis = [e['nom'] for e in T if e['note'] >= m]\na) Que vaut s puis m ? b) Que contient la liste admis ? c) Explique en une phrase le rôle de la ligne qui construit admis.",
+      "corrige": [
+        "La boucle additionne les notes : s = 16 + 9 + 12 = 37. len(T) = 3, donc m = 37 / 3 ≈ 12,33.",
+        "admis garde les noms dont la note est ≥ m ≈ 12,33 : Ada (16) oui, Blaise (9) non, Clara (12) non (12 < 12,33). Donc admis = ['Ada'].",
+        "Cette ligne est un filtre : elle parcourt tous les enregistrements et ne conserve que le descripteur nom des élèves dont la note atteint la moyenne."
+      ],
+      "reponse": "s = 37, m ≈ 12,33 ; admis = ['Ada'] ; la dernière ligne filtre et ne garde que les noms au-dessus de la moyenne."
+    }
+  ]
+}

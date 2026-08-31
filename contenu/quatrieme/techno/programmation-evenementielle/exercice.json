@@ -1,0 +1,93 @@
+{
+  "id": "4e-techno-programmation-evenementielle-exos",
+  "chapitre": "4e-techno-programmation-evenementielle",
+  "titre": "Exercices — Programmation événementielle",
+  "voie": "generale",
+  "niveau": "quatrieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Définition d'un événement",
+      "enonce": "Qu'est-ce qu'un événement en programmation ? Donne trois exemples d'événements auxquels un programme peut réagir.",
+      "corrige": [
+        "Un événement est quelque chose qui se produit et auquel le programme peut réagir.",
+        "Exemple 1 : une action de l'utilisateur (un clic, un appui sur une touche).",
+        "Exemple 2 : un signal d'un capteur (bouton pressé, détecteur activé).",
+        "Exemple 3 : un événement du système (le programme démarre, un temps est écoulé, deux objets se touchent)."
+      ],
+      "reponse": "Un événement est un déclencheur auquel le programme réagit : par exemple un clic, un appui sur une touche ou un capteur activé."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Le modèle QUAND … FAIRE",
+      "enonce": "Complète avec le modèle « QUAND … alors FAIRE … » : on veut qu'un lutin avance de 10 pas lorsqu'on appuie sur la flèche droite. Écris le script en langage courant.",
+      "corrige": [
+        "Un script événementiel commence par un bloc-événement (« chapeau ») du type « QUAND … ».",
+        "L'événement ici est : quand la touche flèche droite est pressée.",
+        "L'action est : avancer de 10 pas.",
+        "Script : QUAND la touche flèche droite est pressée → avancer de 10 pas."
+      ],
+      "reponse": "QUAND la touche flèche droite est pressée, alors FAIRE : avancer de 10 pas."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Événement ou action",
+      "enonce": "Dans « quand le lutin est cliqué, jouer un son », indique ce qui est l'événement et ce qui est l'action. Rappelle la différence entre les deux.",
+      "corrige": [
+        "L'événement est le déclencheur : « le lutin est cliqué ».",
+        "L'action est ce que le programme fait ensuite : « jouer un son ».",
+        "L'événement déclenche l'exécution ; l'action est ce qui se produit une fois le bloc déclenché."
+      ],
+      "reponse": "Événement = « le lutin est cliqué » (déclencheur) ; action = « jouer un son » (ce que fait le programme)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Événementiel ≠ séquentiel",
+      "enonce": "Un camarade dit : « Un programme s'exécute toujours du début à la fin dans l'ordre. » A-t-il raison pour la programmation événementielle ? Explique la différence entre un programme séquentiel et un programme événementiel.",
+      "corrige": [
+        "Un programme séquentiel s'exécute du début à la fin, dans l'ordre, sans attendre.",
+        "Un programme événementiel attend : il ne fait rien tant que l'événement prévu ne s'est pas produit.",
+        "Quand l'événement arrive, le programme exécute le bloc correspondant.",
+        "Le camarade décrit seulement le séquentiel : il a tort pour l'événementiel, où l'on attend un déclencheur avant d'agir."
+      ],
+      "reponse": "Il a tort pour l'événementiel : contrairement au séquentiel qui se déroule dans l'ordre sans attendre, l'événementiel attend un événement avant d'exécuter le bloc correspondant."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Variables et conditions",
+      "enonce": "On programme un petit jeu : « Quand le drapeau vert est cliqué → mettre score à 0 ; répéter indéfiniment : si le lutin touche la pièce → ajouter 1 au score. » Trace l'évolution du score si le lutin touche 3 pièces. Explique le rôle de la variable score.",
+      "corrige": [
+        "Au démarrage (drapeau vert), le score est mis à 0.",
+        "La boucle « répéter indéfiniment » surveille sans cesse la condition « toucher la pièce ».",
+        "1re pièce touchée : score passe de 0 à 1. 2e pièce : score passe à 2. 3e pièce : score passe à 3.",
+        "La variable score mémorise une information qui change au cours du jeu (le nombre de pièces prises)."
+      ],
+      "reponse": "Le score évolue 0 → 1 → 2 → 3 ; la variable score sert à mémoriser le nombre de pièces attrapées."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Programmer un objet technique",
+      "enonce": "On programme une carte micro:bit : « QUAND le bouton A est pressé → afficher un cœur » et « QUAND la température dépasse 30 °C → allumer une DEL ». Ces deux scripts peuvent-ils fonctionner en même temps ? Explique. Puis relie ce comportement à la chaîne d'information (acquérir → traiter → communiquer) pour le second script.",
+      "corrige": [
+        "Oui, les deux scripts peuvent guetter des événements en même temps : plusieurs scripts s'exécutent en parallèle en programmation événementielle.",
+        "Le premier attend l'appui sur le bouton A ; le second surveille la température : ils n'attendent pas le même événement.",
+        "Pour le second script, on retrouve la chaîne d'information :",
+        "Acquérir : le capteur de température de la carte mesure la température (événement « dépasse 30 °C »).",
+        "Traiter : le programme teste la condition (température > 30 °C) et décide.",
+        "Communiquer / agir : la carte allume la DEL pour signaler que le seuil est dépassé."
+      ],
+      "reponse": "Oui, les deux scripts fonctionnent en parallèle car ils attendent des événements différents ; le second suit la chaîne d'information : acquérir (capteur de température) → traiter (test > 30 °C) → communiquer (allumer la DEL)."
+    }
+  ]
+}

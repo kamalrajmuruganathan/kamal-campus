@@ -1,0 +1,94 @@
+{
+  "id": "4e-techno-chaine-dinformation-exos",
+  "chapitre": "4e-techno-chaine-dinformation",
+  "titre": "Exercices — La chaîne d'information",
+  "voie": "generale",
+  "niveau": "quatrieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Les trois fonctions",
+      "enonce": "Cite dans l'ordre les trois fonctions de la chaîne d'information et donne, pour chacune, un exemple de composant.",
+      "corrige": [
+        "La chaîne d'information se décrit toujours par trois fonctions : ACQUÉRIR, TRAITER, COMMUNIQUER.",
+        "Acquérir : recueillir l'information → un capteur (ou un bouton, un clavier).",
+        "Traiter : analyser et décider → un microcontrôleur (carte programmable, processeur).",
+        "Communiquer : transmettre l'information → un écran (ou une DEL, un buzzer)."
+      ],
+      "reponse": "ACQUÉRIR (capteur) → TRAITER (microcontrôleur) → COMMUNIQUER (écran ou DEL)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Énergie ou information",
+      "enonce": "Pour chaque composant, indique s'il appartient à la chaîne d'énergie ou à la chaîne d'information : a) un moteur, b) un capteur de température, c) une résistance chauffante, d) un microcontrôleur.",
+      "corrige": [
+        "La chaîne d'énergie fournit la puissance pour agir ; la chaîne d'information acquiert, traite et communique les données.",
+        "a) Moteur : il fait bouger → chaîne d'énergie.",
+        "b) Capteur de température : il mesure et renseigne → chaîne d'information.",
+        "c) Résistance chauffante : elle chauffe (elle agit) → chaîne d'énergie.",
+        "d) Microcontrôleur : il traite l'information et décide → chaîne d'information."
+      ],
+      "reponse": "a) énergie, b) information, c) énergie, d) information."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Signal analogique / numérique",
+      "enonce": "Un thermomètre à aiguille fournit une tension qui varie doucement avec la température. Un capteur de porte envoie seulement « ouvert » (0) ou « fermé » (1). Dis quel signal est analogique et lequel est numérique, en justifiant.",
+      "corrige": [
+        "Un signal analogique varie de façon continue et peut prendre une infinité de valeurs.",
+        "Un signal numérique ne prend que des valeurs discrètes, souvent 0 ou 1.",
+        "La tension du thermomètre varie doucement (une infinité de valeurs) : c'est un signal analogique.",
+        "Le capteur de porte ne donne que 0 ou 1 : c'est un signal numérique."
+      ],
+      "reponse": "Le thermomètre donne un signal analogique (continu) ; le capteur de porte donne un signal numérique (0 ou 1)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Analyser un objet",
+      "enonce": "Une lampe de jardin s'allume automatiquement quand la nuit tombe. Identifie le composant qui réalise chacune des trois fonctions de la chaîne d'information, puis explique le rôle de la chaîne d'énergie dans cet objet.",
+      "corrige": [
+        "Acquérir : le capteur de luminosité (photorésistance) mesure la lumière ambiante.",
+        "Traiter : la carte électronique (microcontrôleur) compare la luminosité à un seuil et décide.",
+        "Communiquer : la carte envoie l'ordre « allumer » à la partie qui commande la lampe.",
+        "La chaîne d'information ne fournit pas assez de puissance pour éclairer : c'est la chaîne d'énergie (pile/secteur → lampe) qui fournit la puissance et allume réellement l'ampoule."
+      ],
+      "reponse": "Acquérir = capteur de luminosité, Traiter = microcontrôleur, Communiquer = ordre vers la lampe ; la chaîne d'énergie alimente et allume l'ampoule."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Schéma fonctionnel",
+      "enonce": "Un digicode ouvre une porte quand on tape le bon code. On donne les blocs suivants dans le désordre : « moteur de la porte », « clavier », « carte à microcontrôleur ». Range-les pour former la chaîne d'information (Acquérir → Traiter → Communiquer) et indique quel bloc n'appartient pas à cette chaîne.",
+      "corrige": [
+        "Acquérir : le clavier reçoit le code tapé par l'utilisateur.",
+        "Traiter : la carte à microcontrôleur vérifie si le code est correct et décide.",
+        "Communiquer : la carte transmet l'ordre d'ouverture à la chaîne d'énergie.",
+        "Le moteur de la porte n'appartient pas à la chaîne d'information : il agit (il ouvre), il fait partie de la chaîne d'énergie."
+      ],
+      "reponse": "Acquérir = clavier, Traiter = microcontrôleur, Communiquer = ordre transmis ; le moteur appartient à la chaîne d'énergie, pas à la chaîne d'information."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Coopération des deux chaînes",
+      "enonce": "Un portail automatique s'ouvre avec une télécommande. Décris le trajet complet de l'information de la télécommande jusqu'au mouvement du portail, en nommant à chaque étape la fonction (acquérir / traiter / communiquer) et la chaîne concernée (information ou énergie). Explique pourquoi le microcontrôleur ne peut pas faire tourner le moteur directement.",
+      "corrige": [
+        "Acquérir (information) : l'antenne de la carte reçoit le signal radio de la télécommande.",
+        "Traiter (information) : le microcontrôleur vérifie que le code reçu est le bon et décide d'ouvrir.",
+        "Communiquer (information) : la carte envoie l'ordre d'ouverture vers la chaîne d'énergie.",
+        "Agir (énergie) : la chaîne d'énergie alimente le moteur qui entraîne le portail.",
+        "Le microcontrôleur ne délivre que de faibles signaux (petite tension, faible courant) : il ne fournit pas la puissance nécessaire. Il donne l'ordre, et c'est la chaîne d'énergie qui exécute et fournit les watts au moteur."
+      ],
+      "reponse": "Antenne (acquérir) → microcontrôleur (traiter) → ordre (communiquer) : chaîne d'information ; puis moteur alimenté : chaîne d'énergie. Le microcontrôleur commande mais ne fournit pas la puissance, d'où le rôle de la chaîne d'énergie."
+    }
+  ]
+}

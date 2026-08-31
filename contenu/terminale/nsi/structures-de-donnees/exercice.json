@@ -1,0 +1,96 @@
+{
+  "id": "tale-nsi-structures-de-donnees-exos",
+  "chapitre": "tale-nsi-structures-de-donnees",
+  "titre": "Exercices — Structures de données (piles, files, listes, arbres)",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "pile (LIFO)",
+      "enonce": "On part d'une pile vide. On effectue empiler(3), empiler(7), empiler(5), depiler(), empiler(9). Donne le contenu de la pile (du fond vers le sommet) et la valeur renvoyée par depiler().",
+      "corrige": [
+        "Une pile est LIFO : le dernier empilé est le premier dépilé.",
+        "Après empiler(3), empiler(7), empiler(5) : la pile est [3, 7, 5] (5 au sommet).",
+        "depiler() retire et renvoie le sommet, c'est-à-dire 5. La pile devient [3, 7].",
+        "empiler(9) ajoute 9 au sommet : la pile est [3, 7, 9]."
+      ],
+      "reponse": "Pile finale [3, 7, 9] (fond -> sommet) ; depiler() a renvoyé 5."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "file (FIFO)",
+      "enonce": "On part d'une file vide. On effectue enfiler(1), enfiler(2), enfiler(3), defiler(), enfiler(4). Donne le contenu de la file (de la tête vers la queue) et la valeur renvoyée par defiler().",
+      "corrige": [
+        "Une file est FIFO : le premier entré est le premier sorti.",
+        "Après enfiler(1), enfiler(2), enfiler(3) : la file est [1, 2, 3] (1 en tête).",
+        "defiler() retire et renvoie la tête, c'est-à-dire 1. La file devient [2, 3].",
+        "enfiler(4) ajoute 4 en queue : la file est [2, 3, 4]."
+      ],
+      "reponse": "File finale [2, 3, 4] (tête -> queue) ; defiler() a renvoyé 1."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "implémentation d'une pile en Python",
+      "enonce": "On implémente une pile avec une liste Python. Complète les méthodes empiler et depiler :\n\nclass Pile:\n    def __init__(self):\n        self.contenu = []\n    def empiler(self, x):\n        ...\n    def depiler(self):\n        ...\n    def est_vide(self):\n        return self.contenu == []",
+      "corrige": [
+        "On choisit la fin de la liste comme sommet de la pile.",
+        "empiler ajoute x à la fin : self.contenu.append(x).",
+        "depiler retire et renvoie le dernier élément : return self.contenu.pop().",
+        "append et pop en fin de liste s'effectuent en temps constant O(1)."
+      ],
+      "reponse": "empiler : self.contenu.append(x) ; depiler : return self.contenu.pop()."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "arbre binaire (vocabulaire)",
+      "enonce": "On considère l'arbre binaire de racine A, dont le fils gauche est B et le fils droit est C ; B a pour fils gauche D et pour fils droit E ; C a un fils droit F. Donne la hauteur de l'arbre, le nombre de feuilles et la liste des feuilles.",
+      "corrige": [
+        "On compte la hauteur en nombre de niveaux d'arêtes depuis la racine : niveau 0 = A, niveau 1 = B, C, niveau 2 = D, E, F.",
+        "La hauteur (plus long chemin racine-feuille en arêtes) vaut 2.",
+        "Une feuille est un noeud sans enfant : D, E n'ont pas d'enfant, F non plus.",
+        "B a deux enfants, C a un enfant, A a deux enfants : ce ne sont pas des feuilles.",
+        "Il y a donc 3 feuilles : D, E, F."
+      ],
+      "reponse": "Hauteur 2 ; 3 feuilles : D, E et F."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "parcours d'arbre binaire",
+      "enonce": "Pour le même arbre (racine A ; A.gauche=B, A.droit=C ; B.gauche=D, B.droit=E ; C.droit=F), donne le parcours infixe (gauche, racine, droite) et le parcours préfixe (racine, gauche, droite).",
+      "corrige": [
+        "Parcours infixe : on visite d'abord tout le sous-arbre gauche, puis la racine, puis le sous-arbre droit.",
+        "Sous-arbre gauche de A (racine B) en infixe : D, B, E. Puis racine A. Puis sous-arbre droit (racine C, sans fils gauche) : C, F.",
+        "Infixe complet : D, B, E, A, C, F.",
+        "Parcours préfixe : racine d'abord, puis gauche, puis droite.",
+        "Préfixe : A, puis (B, D, E), puis (C, F) = A, B, D, E, C, F."
+      ],
+      "reponse": "Infixe : D B E A C F ; préfixe : A B D E C F."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "On insère successivement dans un arbre binaire de recherche vide les clés 8, 3, 10, 1, 6, 14, 4. 1) Dessine (décris) l'arbre obtenu. 2) Donne son parcours infixe et explique ce qu'il produit toujours pour un ABR. 3) Combien de comparaisons pour rechercher la clé 4 ?",
+      "corrige": [
+        "Dans un ABR, à chaque noeud, les clés du sous-arbre gauche sont plus petites et celles du sous-arbre droit plus grandes.",
+        "8 devient la racine. 3 < 8 -> à gauche. 10 > 8 -> à droite. 1 < 8, < 3 -> gauche de 3. 6 < 8, > 3 -> droite de 3.",
+        "14 > 8, > 10 -> droite de 10. 4 < 8, > 3, < 6 -> gauche de 6.",
+        "Arbre : racine 8 ; gauche = 3 (fils 1 et 6, avec 4 à gauche de 6) ; droite = 10 (fils droit 14).",
+        "Parcours infixe : 1, 3, 4, 6, 8, 10, 14 : le parcours infixe d'un ABR donne toujours les clés triées par ordre croissant.",
+        "Recherche de 4 : on compare à 8 (4<8, à gauche), à 3 (4>3, à droite), à 6 (4<6, à gauche), à 4 (trouvé) : 4 comparaisons."
+      ],
+      "reponse": "Racine 8 ; infixe = 1 3 4 6 8 10 14 (clés triées) ; rechercher 4 demande 4 comparaisons (8, 3, 6, 4)."
+    }
+  ]
+}

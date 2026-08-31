@@ -1,0 +1,87 @@
+{
+  "id": "1nsi-types-construits-exos",
+  "chapitre": "1nsi-types-construits",
+  "titre": "Exercices — Les types construits (tuples, listes, dictionnaires)",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "indexation d'une liste",
+      "enonce": "On a la liste : notes = [12, 8, 15, 9, 17]. Que valent notes[0], notes[2] et notes[-1] ?",
+      "corrige": [
+        "En Python, l'indexation commence à 0 : notes[0] est le premier élément, donc 12.",
+        "notes[2] est le troisième élément, donc 15.",
+        "Un indice négatif compte à partir de la fin : notes[-1] est le dernier élément, donc 17."
+      ],
+      "reponse": "notes[0] vaut 12, notes[2] vaut 15 et notes[-1] vaut 17."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "tuple et non-modifiabilité",
+      "enonce": "On écrit : point = (3, 5). Que renvoie point[1] ? Que se passe-t-il si on exécute ensuite point[0] = 9 ?",
+      "corrige": [
+        "point est un tuple ; on accède à ses éléments comme pour une liste : point[1] vaut 5.",
+        "Un tuple est non modifiable (immuable) : on ne peut pas changer un de ses éléments.",
+        "L'instruction point[0] = 9 déclenche une erreur : TypeError: 'tuple' object does not support item assignment."
+      ],
+      "reponse": "point[1] vaut 5 ; l'affectation point[0] = 9 provoque une erreur car un tuple est non modifiable."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "accès dans un dictionnaire",
+      "enonce": "On a : eleve = {\"nom\": \"Diallo\", \"age\": 16, \"classe\": \"1G2\"}. Que renvoie eleve[\"age\"] ? Comment obtenir la liste des clés ?",
+      "corrige": [
+        "Un dictionnaire associe des clés à des valeurs ; on accède à une valeur par sa clé.",
+        "eleve[\"age\"] renvoie la valeur associée à la clé \"age\", soit 16.",
+        "On obtient les clés avec list(eleve.keys()), ce qui donne ['nom', 'age', 'classe']."
+      ],
+      "reponse": "eleve[\"age\"] vaut 16 ; list(eleve.keys()) renvoie ['nom', 'age', 'classe']."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "construction de liste par compréhension",
+      "enonce": "Donne le contenu de la liste construite par : carres = [n*n for n in range(1, 6)]. Explique la trace.",
+      "corrige": [
+        "range(1, 6) parcourt les entiers 1, 2, 3, 4, 5 (la borne 6 est exclue).",
+        "Pour chaque n, on calcule n*n : 1, 4, 9, 16, 25.",
+        "La compréhension collecte ces valeurs dans l'ordre dans une nouvelle liste."
+      ],
+      "reponse": "carres vaut [1, 4, 9, 16, 25]."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "parcours de dictionnaire et comptage",
+      "enonce": "Trace l'exécution de ce code et donne la valeur finale de total :\nstock = {\"stylo\": 12, \"gomme\": 5, \"regle\": 8}\ntotal = 0\nfor article in stock:\n    total = total + stock[article]",
+      "corrige": [
+        "La boucle for parcourt les clés du dictionnaire : 'stylo', 'gomme', 'regle'.",
+        "Pour chaque clé, stock[article] donne la valeur : on ajoute donc successivement 12, 5 puis 8.",
+        "total prend les valeurs 0 → 12 → 17 → 25."
+      ],
+      "reponse": "À la fin, total vaut 25 (la somme des valeurs du dictionnaire)."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "structure imbriquée (liste de dictionnaires)",
+      "enonce": "On a une liste de dictionnaires :\neleves = [\n    {\"nom\": \"Ana\", \"moyenne\": 14},\n    {\"nom\": \"Bilal\", \"moyenne\": 9},\n    {\"nom\": \"Chloe\", \"moyenne\": 16}\n]\nÉcris une expression Python qui renvoie la liste des noms des élèves ayant une moyenne ≥ 10, et donne le résultat.",
+      "corrige": [
+        "Chaque élément de eleves est un dictionnaire ; on accède au nom par e[\"nom\"] et à la moyenne par e[\"moyenne\"].",
+        "On filtre avec une condition dans une compréhension de liste : [e[\"nom\"] for e in eleves if e[\"moyenne\"] >= 10].",
+        "On teste chaque élève : Ana (14 ≥ 10) gardée, Bilal (9 ≥ 10 faux) écartée, Chloe (16 ≥ 10) gardée.",
+        "Il reste donc les noms 'Ana' et 'Chloe'."
+      ],
+      "reponse": "L'expression [e[\"nom\"] for e in eleves if e[\"moyenne\"] >= 10] renvoie ['Ana', 'Chloe']."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "tale-nsi-reseaux-et-routage-exos",
+  "chapitre": "tale-nsi-reseaux-et-routage",
+  "titre": "Exercices — Réseaux et routage",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "adresse IP et masque",
+      "enonce": "Une machine a l'adresse IPv4 192.168.1.37 avec le masque 255.255.255.0. Donne l'adresse du réseau auquel elle appartient et le nombre d'adresses d'hôtes disponibles dans ce réseau.",
+      "corrige": [
+        "Le masque 255.255.255.0 signifie que les trois premiers octets identifient le réseau, le dernier identifie la machine.",
+        "L'adresse réseau s'obtient en mettant à 0 la partie hôte : 192.168.1.0.",
+        "Avec 8 bits pour la partie hôte, il y a 2^8 = 256 adresses au total.",
+        "On retire l'adresse réseau (192.168.1.0) et l'adresse de diffusion (192.168.1.255) : il reste 254 adresses utilisables."
+      ],
+      "reponse": "Réseau 192.168.1.0/24 ; 254 adresses d'hôtes disponibles."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "conversion binaire d'un octet",
+      "enonce": "Convertis l'octet 192 (premier octet d'une adresse privée) en binaire sur 8 bits, puis vérifie ton résultat.",
+      "corrige": [
+        "On décompose 192 avec les puissances de 2 : 128, 64, 32, 16, 8, 4, 2, 1.",
+        "192 = 128 + 64, donc les bits de poids 128 et 64 valent 1, les autres 0.",
+        "Cela donne 1100 0000.",
+        "Vérification : 1x128 + 1x64 = 192. Correct."
+      ],
+      "reponse": "192 s'écrit 11000000 en binaire sur 8 bits."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "débit et temps de transfert",
+      "enonce": "On télécharge un fichier de 30 Mo (mégaoctets) sur une liaison de 20 Mbit/s (mégabits par seconde). En ignorant les pertes, estime la durée du transfert.",
+      "corrige": [
+        "Attention aux unités : le fichier est en octets, le débit en bits. 1 octet = 8 bits.",
+        "Taille en bits : 30 Mo x 8 = 240 Mbit.",
+        "Temps = quantité / débit = 240 Mbit / 20 Mbit/s.",
+        "240 / 20 = 12 secondes."
+      ],
+      "reponse": "Environ 12 secondes (240 Mbit à 20 Mbit/s)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "appartenance à un réseau",
+      "enonce": "Deux machines A = 10.0.5.12 et B = 10.0.6.3 utilisent le masque /24 (255.255.255.0). Peuvent-elles communiquer directement sans routeur ? Justifie.",
+      "corrige": [
+        "Avec un masque /24, l'adresse réseau est donnée par les trois premiers octets.",
+        "Réseau de A : 10.0.5.0. Réseau de B : 10.0.6.0.",
+        "Les adresses réseau diffèrent (10.0.5.0 vs 10.0.6.0) : A et B ne sont pas sur le même réseau.",
+        "Deux machines de réseaux différents ne communiquent pas directement : il faut passer par un routeur (une passerelle)."
+      ],
+      "reponse": "Non : elles sont sur des réseaux différents (10.0.5.0 et 10.0.6.0), un routeur est nécessaire."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "routage par plus court chemin",
+      "enonce": "Un réseau relie des routeurs par des liaisons de coûts : A-B (2), A-C (5), B-C (1), B-D (7), C-D (3). Détermine le chemin de coût minimal de A vers D et son coût total.",
+      "corrige": [
+        "On cherche à minimiser la somme des coûts, comme le fait un protocole à état de liens (type OSPF).",
+        "Chemin A-B-D : 2 + 7 = 9.",
+        "Chemin A-C-D : 5 + 3 = 8.",
+        "Chemin A-B-C-D : 2 + 1 + 3 = 6.",
+        "Le plus petit total est 6, obtenu par A-B-C-D."
+      ],
+      "reponse": "Le chemin de coût minimal est A-B-C-D, pour un coût total de 6."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "table de routage et protocoles",
+      "enonce": "1) Explique la différence entre le protocole RIP (routage à vecteur de distance, métrique = nombre de sauts) et OSPF (état de liens, métrique liée au débit). 2) Sur le réseau A-B (1 saut), B-C (1 saut), A-C direct mais lien très lent (1 saut), quel chemin A->C choisirait RIP, et pourquoi OSPF pourrait-il en préférer un autre ?",
+      "corrige": [
+        "RIP mesure la distance en nombre de sauts (routeurs traversés) et choisit le chemin qui en compte le moins.",
+        "OSPF calcule un coût lié au débit des liens (un lien rapide a un faible coût) et choisit le chemin de coût total minimal, pas forcément le plus court en sauts.",
+        "RIP : A->C en direct compte 1 saut, contre 2 sauts pour A->B->C ; RIP choisit donc le lien direct A-C.",
+        "OSPF : le lien direct A-C est très lent, donc son coût est élevé ; le passage A->B->C par des liens rapides peut avoir un coût total plus faible.",
+        "OSPF privilégierait alors A->B->C bien qu'il compte davantage de sauts, car il tient compte de la qualité des liens."
+      ],
+      "reponse": "RIP compte les sauts (A-C direct), OSPF pondère par le débit et peut préférer A-B-C si le lien direct est lent."
+    }
+  ]
+}

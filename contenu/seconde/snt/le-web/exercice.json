@@ -1,0 +1,86 @@
+{
+  "id": "2nde-snt-le-web-exos",
+  "chapitre": "2nde-snt-le-web",
+  "titre": "Exercices — Le Web",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "structure d'une URL",
+      "enonce": "On donne l'URL : https://www.lycee.fr/snt/web.html . a) Quel est le protocole utilisé ? b) Quel est le nom de domaine ? c) Que désigne la fin /snt/web.html ?",
+      "corrige": [
+        "La partie avant :// indique le protocole : ici https (version sécurisée de HTTP).",
+        "Le nom de domaine est la partie qui identifie le site : www.lycee.fr.",
+        "/snt/web.html est le chemin d'accès à la ressource sur le serveur : le dossier snt et le fichier web.html."
+      ],
+      "reponse": "Protocole https, domaine www.lycee.fr, et /snt/web.html est le chemin vers la page demandée."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "HTML et hyperliens",
+      "enonce": "a) Que signifie le sigle HTML et à quoi sert ce langage ? b) Qu'est-ce qu'un hyperlien ? c) Dans le code <a href=\"page2.html\">Suite</a>, quel texte l'internaute voit-il et vers quoi le lien mène-t-il ?",
+      "corrige": [
+        "HTML = HyperText Markup Language : c'est le langage de balises qui décrit la structure et le contenu d'une page Web.",
+        "Un hyperlien est un lien cliquable qui permet de passer d'une ressource (page, image, fichier) à une autre.",
+        "Le texte affiché est Suite (entre les balises <a>...</a>) et l'attribut href indique la cible : la page page2.html."
+      ],
+      "reponse": "HTML structure les pages Web ; un hyperlien mène d'une page à une autre ; ici on voit 'Suite' et le lien ouvre page2.html."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "navigateur, client et serveur",
+      "enonce": "Pour afficher une page, ton navigateur envoie une demande à un serveur qui répond. a) Comment appelle-t-on le rôle du navigateur dans cet échange ? b) Comment appelle-t-on le rôle de la machine qui héberge et envoie la page ? c) Quel protocole est utilisé pour cet échange de pages Web ?",
+      "corrige": [
+        "Le navigateur, qui demande la ressource, joue le rôle de client.",
+        "La machine qui stocke la page et répond à la demande joue le rôle de serveur.",
+        "Le protocole du Web est HTTP (ou sa version sécurisée HTTPS)."
+      ],
+      "reponse": "Le navigateur est le client, la machine hébergeant la page est le serveur, et l'échange utilise HTTP(S)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "moteur de recherche et indexation",
+      "enonce": "a) Comment un moteur de recherche découvre-t-il les pages du Web ? b) Qu'est-ce que l'index d'un moteur de recherche ? c) Cite un facteur qui influence le classement des résultats.",
+      "corrige": [
+        "Des programmes automatiques appelés robots (crawlers ou araignées) parcourent le Web en suivant les hyperliens de page en page.",
+        "L'index est une immense base de données qui associe des mots-clés aux pages où ils apparaissent, construite à partir de l'exploration ; la recherche se fait dans l'index, pas en direct sur le Web.",
+        "Facteurs de classement : pertinence par rapport aux mots-clés, popularité (nombre et qualité des liens entrants), fraîcheur, réputation du site, adaptation mobile, etc."
+      ],
+      "reponse": "Des robots explorent les liens, remplissent un index de mots-clés, et le classement dépend de la pertinence et de la popularité des pages."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "évaluer une source",
+      "enonce": "Tu trouves un article affirmant qu'un aliment guérit une maladie. Donne trois questions ou vérifications concrètes à te poser avant de le croire ou de le partager.",
+      "corrige": [
+        "Qui est l'auteur et le site : est-ce une source identifiée, sérieuse (institution, presse, expert) ou anonyme / commerciale ?",
+        "L'information est-elle recoupée : d'autres sources fiables et indépendantes disent-elles la même chose ?",
+        "Quelle est la date, et l'article donne-t-il des preuves (études, chiffres, sources citées) ou seulement des affirmations sensationnelles ? Attention aussi au but (vendre, faire le buzz)."
+      ],
+      "reponse": "Vérifier l'auteur et le sérieux du site, recouper avec d'autres sources fiables, et regarder la date et les preuves avancées."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "requête HTTP et échange client-serveur",
+      "enonce": "Une page HTML contient : du texte, deux images et un fichier de style CSS. a) Combien de requêtes HTTP le navigateur envoie-t-il au minimum pour tout afficher ? Détaille. b) Que signifie le code de réponse 404 renvoyé par un serveur ? c) Pourquoi préférer HTTPS à HTTP quand on saisit un mot de passe ?",
+      "corrige": [
+        "Le navigateur demande d'abord le document HTML (1 requête), puis, en le lisant, réclame chaque ressource liée : le fichier CSS (1) et les deux images (2). Total minimum : 1 + 1 + 2 = 4 requêtes HTTP.",
+        "Le code 404 signifie que la ressource demandée est introuvable sur le serveur (Not Found), par exemple une page supprimée ou une adresse erronée.",
+        "HTTPS chiffre les données échangées entre le navigateur et le serveur : un mot de passe circule alors sous forme illisible, alors qu'en HTTP il transiterait en clair et pourrait être intercepté."
+      ],
+      "reponse": "4 requêtes (HTML + CSS + 2 images) ; 404 = ressource introuvable ; HTTPS chiffre les données, donc protège le mot de passe."
+    }
+  ]
+}

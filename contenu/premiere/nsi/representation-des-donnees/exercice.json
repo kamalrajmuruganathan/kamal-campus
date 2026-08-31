@@ -1,0 +1,94 @@
+{
+  "id": "1nsi-representation-des-donnees-exos",
+  "chapitre": "1nsi-representation-des-donnees",
+  "titre": "Exercices — Représentation des données (binaire, entiers, texte)",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "conversion binaire vers décimal",
+      "enonce": "Convertis l'entier naturel écrit en binaire 1011 en base 10.",
+      "corrige": [
+        "On repère le poids de chaque bit, de droite à gauche : 2^0, 2^1, 2^2, 2^3.",
+        "1011 se lit : 1×2^3 + 0×2^2 + 1×2^1 + 1×2^0.",
+        "On calcule : 8 + 0 + 2 + 1 = 11."
+      ],
+      "reponse": "Le nombre binaire 1011 vaut 11 en base 10."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "conversion décimal vers binaire",
+      "enonce": "Écris l'entier 42 en base 2 (sur 8 bits).",
+      "corrige": [
+        "On soustrait les puissances de 2 les plus grandes possibles : 42 = 32 + 8 + 2, soit 2^5 + 2^3 + 2^1.",
+        "On place un 1 aux positions 5, 3 et 1, et un 0 partout ailleurs.",
+        "Sur 8 bits : positions 7 6 5 4 3 2 1 0 → 0 0 1 0 1 0 1 0.",
+        "Vérification : en Python bin(42) renvoie '0b101010'."
+      ],
+      "reponse": "42 s'écrit 00101010 en binaire sur 8 bits (101010 sans les zéros de tête)."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "codage des caractères (ASCII)",
+      "enonce": "Dans la table ASCII, le caractère 'A' a pour code 65 et les lettres majuscules se suivent. Quel est le code ASCII de 'D' ? Que renvoie ord('C') ?",
+      "corrige": [
+        "Les majuscules sont codées consécutivement : 'A'=65, 'B'=66, 'C'=67, 'D'=68.",
+        "'D' est la 4e lettre, donc son code est 65 + 3 = 68.",
+        "En Python, ord('C') donne la position de 'C' dans la table, soit 67 (et chr(67) renvoie 'C')."
+      ],
+      "reponse": "Le code ASCII de 'D' est 68, et ord('C') renvoie 67."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "conversion et écriture hexadécimale",
+      "enonce": "Convertis l'octet binaire 1101 0110 en hexadécimal, puis donne sa valeur en base 10.",
+      "corrige": [
+        "On groupe les bits par paquets de 4 (quartets) : 1101 et 0110.",
+        "1101 = 8+4+1 = 13, ce qui s'écrit D en hexadécimal ; 0110 = 4+2 = 6, ce qui s'écrit 6.",
+        "L'octet vaut donc D6 en hexadécimal.",
+        "En base 10 : D6 = 13×16 + 6 = 208 + 6 = 214 (on retrouve 128+64+16+4+2 = 214).",
+        "En Python : int('11010110', 2) donne 214 et hex(214) donne '0xd6'."
+      ],
+      "reponse": "1101 0110 vaut D6 en hexadécimal, soit 214 en base 10."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "entier relatif en complément à deux",
+      "enonce": "Sur 8 bits, en complément à deux, quel entier relatif représente le motif 1111 1011 ?",
+      "corrige": [
+        "Le bit de poids fort vaut 1 : le nombre est négatif.",
+        "Méthode du complément à deux : on inverse tous les bits de 1111 1011, ce qui donne 0000 0100.",
+        "On ajoute 1 : 0000 0100 + 1 = 0000 0101, qui vaut 5.",
+        "Le nombre de départ est donc l'opposé : -5.",
+        "Vérification : sur 8 bits, la valeur est -128 + 64+32+16+8+0+2+1 = -128 + 123 = -5."
+      ],
+      "reponse": "Le motif 1111 1011 représente l'entier relatif -5 en complément à deux sur 8 bits."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "addition binaire et dépassement de capacité",
+      "enonce": "On additionne deux entiers naturels codés sur 4 bits : 1011 + 0101. Effectue l'addition binaire, puis explique pourquoi le résultat provoque un dépassement de capacité (overflow) si l'on reste sur 4 bits.",
+      "corrige": [
+        "On pose l'addition bit à bit avec les retenues, de droite à gauche.",
+        "Colonne 0 : 1+1 = 10 → on écrit 0, retenue 1. Colonne 1 : 1+0+1(retenue) = 10 → on écrit 0, retenue 1.",
+        "Colonne 2 : 0+1+1(retenue) = 10 → on écrit 0, retenue 1. Colonne 3 : 1+0+1(retenue) = 10 → on écrit 0, retenue 1.",
+        "Résultat brut : 1 0000 (5 bits). En décimal : 1011 = 11 et 0101 = 5, donc 11 + 5 = 16.",
+        "Sur 4 bits on ne peut coder que de 0 à 15 (2^4 − 1). Le résultat 16 nécessite un 5e bit : la retenue finale sort de la capacité.",
+        "Si l'on tronque à 4 bits, il reste 0000, c'est-à-dire 0 au lieu de 16 : c'est le dépassement de capacité."
+      ],
+      "reponse": "1011 + 0101 = 10000, soit 16 : ce nombre dépasse les 4 bits (max 15), d'où un dépassement de capacité."
+    }
+  ]
+}

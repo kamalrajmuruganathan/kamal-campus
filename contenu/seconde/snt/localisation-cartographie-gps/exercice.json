@@ -1,0 +1,86 @@
+{
+  "id": "2nde-snt-localisation-cartographie-gps-exos",
+  "chapitre": "2nde-snt-localisation-cartographie-gps",
+  "titre": "Exercices — Localisation, cartographie et GPS",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "coordonnées géographiques",
+      "enonce": "a) Quelles sont les deux coordonnées géographiques qui permettent de repérer un point sur Terre ? b) Que vaut la latitude à l'équateur ? c) La position (48.85 N, 2.35 E) se situe-t-elle dans l'hémisphère Nord ou Sud ? Justifie.",
+      "corrige": [
+        "On repère un point par sa latitude et sa longitude.",
+        "L'équateur est la latitude de référence : sa latitude vaut 0°.",
+        "La latitude est 48.85 N (Nord) : le point est donc dans l'hémisphère Nord."
+      ],
+      "reponse": "Latitude et longitude ; l'équateur est à 0° de latitude ; (48.85 N, 2.35 E) est dans l'hémisphère Nord."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "principe du GPS",
+      "enonce": "a) Que veut dire le sigle GPS ? b) Grâce à quels objets en orbite fonctionne-t-il ? c) Le récepteur GPS d'un téléphone émet-il un signal vers les satellites, ou reçoit-il seulement ? Explique la conséquence.",
+      "corrige": [
+        "GPS signifie Global Positioning System (système de positionnement global).",
+        "Il fonctionne grâce à des satellites en orbite autour de la Terre, qui émettent en permanence des signaux.",
+        "Le récepteur ne fait que recevoir les signaux des satellites : il ne leur envoie rien. Conséquence : les satellites ne savent pas où est l'utilisateur, c'est l'appareil qui calcule lui-même sa position."
+      ],
+      "reponse": "GPS = Global Positioning System ; il utilise des satellites ; le récepteur écoute seulement et calcule lui-même sa position."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "carte numérique",
+      "enonce": "a) Cite un avantage d'une carte numérique par rapport à une carte papier. b) Qu'est-ce que l'échelle d'une carte ? c) Sur une carte à l'échelle 1/100 000, 1 cm sur la carte représente combien de km sur le terrain ?",
+      "corrige": [
+        "Avantages d'une carte numérique : on peut zoomer, chercher un lieu, calculer un itinéraire, la mettre à jour, superposer des informations (trafic, photos), se géolocaliser dessus.",
+        "L'échelle est le rapport entre une distance mesurée sur la carte et la distance réelle correspondante sur le terrain.",
+        "1/100 000 : 1 cm sur la carte = 100 000 cm réels = 1 000 m = 1 km."
+      ],
+      "reponse": "La carte numérique se zoome et se met à jour ; l'échelle lie carte et réalité ; au 1/100 000, 1 cm vaut 1 km."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "vitesse, distance, temps",
+      "enonce": "Une application GPS indique qu'il reste 45 km à parcourir et estime une vitesse moyenne de 90 km/h. a) Quelle durée de trajet l'application affiche-t-elle ? b) Si un bouchon fait tomber la vitesse moyenne à 30 km/h, quelle est la nouvelle durée ? c) Comment l'application connaît-elle l'existence du bouchon en temps réel ?",
+      "corrige": [
+        "durée = distance / vitesse = 45 / 90 = 0,5 h = 30 minutes.",
+        "À 30 km/h : durée = 45 / 30 = 1,5 h = 1 h 30 min.",
+        "L'application reçoit des données de trafic en temps réel, souvent issues des positions GPS anonymisées des autres utilisateurs (vitesse des véhicules) ou de capteurs routiers ; un ralentissement collectif signale un bouchon."
+      ],
+      "reponse": "30 min à 90 km/h, 1 h 30 à 30 km/h ; le bouchon est détecté grâce aux données de trafic des autres utilisateurs."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "protocole NMEA / données de position",
+      "enonce": "Un récepteur GPS fournit une trame contenant : l'heure, la latitude, la longitude et le nombre de satellites captés. a) Pourquoi indiquer le nombre de satellites captés est-il utile ? b) Pourquoi la position est-elle parfois fausse dans un tunnel ou entre de hauts immeubles ? c) Cite une donnée de mouvement que le GPS peut déduire en comparant deux positions successives.",
+      "corrige": [
+        "Plus le récepteur capte de satellites, plus le calcul de position est fiable et précis ; un nombre trop faible signale une position peu sûre.",
+        "Les signaux des satellites voyagent en ligne directe ; dans un tunnel ils sont bloqués, et entre de hauts immeubles ils rebondissent (multitrajets), ce qui fausse ou empêche le calcul.",
+        "En comparant deux positions successives et le temps écoulé, on déduit la vitesse (et la direction/cap) du déplacement."
+      ],
+      "reponse": "Le nombre de satellites indique la fiabilité ; tunnels et immeubles bloquent ou dévient les signaux ; deux positions successives donnent la vitesse."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "trilatération",
+      "enonce": "Un récepteur mesure sa distance à plusieurs satellites pour se localiser. a) Comment s'appelle cette méthode de localisation par les distances ? b) Avec un seul satellite à distance d connue, sur quelle figure géométrique se trouve le récepteur ? c) Explique pourquoi il faut au moins 3 (voire 4) satellites pour déterminer une position sur Terre.",
+      "corrige": [
+        "La méthode qui calcule une position à partir de plusieurs distances mesurées s'appelle la trilatération.",
+        "Avec un seul satellite, être à la distance d signifie être sur une sphère de rayon d centrée sur ce satellite : le récepteur peut être n'importe où sur cette sphère.",
+        "Deux sphères se coupent selon un cercle, trois sphères se coupent en un point (en pratique deux, dont un aberrant qu'on élimine) : il faut donc au moins 3 satellites pour la position. Un 4e sert à corriger l'horloge du récepteur, car les distances se déduisent du temps de trajet des signaux."
+      ],
+      "reponse": "C'est la trilatération ; avec 1 satellite on est sur une sphère ; il faut au moins 3 satellites pour croiser les distances (4 pour corriger l'horloge)."
+    }
+  ]
+}

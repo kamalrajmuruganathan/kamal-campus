@@ -1,0 +1,89 @@
+{
+  "id": "3e-techno-programmation-et-robotique-exos",
+  "chapitre": "3e-techno-programmation-et-robotique",
+  "titre": "Exercices — Programmation et robotique",
+  "voie": "generale",
+  "niveau": "troisieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Algorithme et programme",
+      "enonce": "Quelle est la différence entre un algorithme et un programme ? Dans quel ordre le robot exécute-t-il les instructions ?",
+      "corrige": [
+        "Un algorithme est une suite ordonnée d'instructions qui permet de résoudre un problème ou d'accomplir une tâche.",
+        "Un programme est l'écriture de cet algorithme dans un langage compris par la machine (Scratch, Python…).",
+        "Le robot exécute les instructions dans l'ordre, l'une après l'autre."
+      ],
+      "reponse": "L'algorithme est la suite d'instructions ; le programme l'écrit dans un langage machine. Le robot exécute les instructions dans l'ordre."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Structures de base",
+      "enonce": "Nomme les trois structures de base d'un programme et explique en une phrase ce que fait chacune.",
+      "corrige": [
+        "La séquence : des instructions exécutées l'une après l'autre, dans l'ordre.",
+        "La boucle (répétition) : on répète des instructions, un nombre de fois connu ou tant qu'une condition est vraie.",
+        "La condition (test) : « si … alors … sinon … » ; l'action dépend d'un test."
+      ],
+      "reponse": "La séquence exécute dans l'ordre, la boucle répète, la condition choisit selon un test (si… alors… sinon…)."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Variable",
+      "enonce": "Qu'est-ce qu'une variable en programmation ? Donne un exemple d'utilisation dans un jeu.",
+      "corrige": [
+        "Une variable est une case mémoire qui porte un nom et retient une valeur.",
+        "Le programme peut lire et modifier cette valeur (l'augmenter, la diminuer, la comparer).",
+        "Exemple dans un jeu : une variable score qui retient le nombre de points du joueur."
+      ],
+      "reponse": "Une variable est une case mémoire nommée qui retient une valeur modifiable, par exemple le score d'un jeu."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Boucle ou condition",
+      "enonce": "Un camarade confond boucle et condition. Explique la différence, puis indique laquelle est utilisée dans chaque cas : a) « répéter 4 fois : avancer » ; b) « si un obstacle est détecté, alors tourner ».",
+      "corrige": [
+        "La boucle répète des instructions ; la condition choisit une action selon un test.",
+        "a) « répéter 4 fois : avancer » répète l'instruction : c'est une boucle.",
+        "b) « si un obstacle est détecté, alors tourner » dépend d'un test : c'est une condition."
+      ],
+      "reponse": "La boucle répète, la condition choisit selon un test. a) est une boucle, b) est une condition."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Robot suiveur de ligne",
+      "enonce": "Un robot doit suivre une ligne noire : « si le capteur voit la ligne, alors avancer ; sinon tourner pour la retrouver », le tout répété en boucle. Relie ce programme à la chaîne d'information (acquérir, traiter, agir) en nommant les composants, puis explique pourquoi l'instruction est répétée en boucle.",
+      "corrige": [
+        "Acquérir : le capteur (de ligne / de lumière) regarde si la ligne noire est présente.",
+        "Traiter : le programme teste la condition « le capteur voit la ligne ? » et décide.",
+        "Agir : les actionneurs (moteurs, roues) font avancer ou tourner le robot.",
+        "L'instruction est répétée en boucle pour surveiller la ligne en permanence : sans répétition, le robot ne réagirait qu'une seule fois et perdrait la ligne."
+      ],
+      "reponse": "Le capteur voit la ligne (acquérir), le programme teste la condition (traiter), les moteurs avancent ou tournent (agir) ; la boucle permet de surveiller la ligne en permanence."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Boucle infinie et débogage",
+      "enonce": "Un élève écrit : « tant que la distance est supérieure à 10 cm : avancer », mais son robot n'avance pas et ne s'arrête jamais dans un cas particulier. Explique ce qu'est une boucle « tant que », pourquoi oublier la condition d'arrêt provoque une boucle infinie, et en quoi consiste le débogage pour corriger ce type d'erreur.",
+      "corrige": [
+        "Une boucle « tant que » répète des instructions tant qu'une condition reste vraie.",
+        "Ici, tant que la distance mesurée est supérieure à 10 cm, le robot avance ; il doit s'arrêter quand la distance devient inférieure ou égale à 10 cm.",
+        "Si la condition d'arrêt n'est jamais atteinte (par exemple si le capteur renvoie toujours une valeur supérieure à 10 cm), la boucle tourne sans fin : c'est une boucle infinie.",
+        "Le débogage consiste à tester le programme, repérer les erreurs (bogues) et les corriger.",
+        "Par exemple, on vérifie que le capteur fonctionne, que le seuil de 10 cm est bien atteignable, et on corrige la condition d'arrêt ; on procède par essais et améliorations successifs."
+      ],
+      "reponse": "Une boucle « tant que » répète tant que la condition est vraie ; sans condition d'arrêt réellement atteinte, elle tourne sans fin (boucle infinie). Le débogage consiste à tester, repérer le bogue et corriger la condition d'arrêt par essais successifs."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "tale-nsi-bases-de-donnees-et-sql-exos",
+  "chapitre": "tale-nsi-bases-de-donnees-et-sql",
+  "titre": "Exercices — Bases de données et SQL",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "clé primaire et schéma",
+      "enonce": "On dispose de la table Eleve(id, nom, prenom, classe). Explique le rôle de l'attribut id comme clé primaire, et dis si deux élèves homonymes (même nom et même prénom) peuvent coexister dans cette table.",
+      "corrige": [
+        "Une clé primaire identifie de façon unique chaque enregistrement (ligne) de la table.",
+        "Elle doit donc être unique (pas deux lignes avec le même id) et non nulle (toujours renseignée).",
+        "Ici id joue ce rôle : chaque élève reçoit un identifiant distinct.",
+        "L'unicité porte sur id, pas sur (nom, prenom) : deux élèves peuvent avoir le même nom et le même prénom tant que leur id diffère."
+      ],
+      "reponse": "id garantit l'unicité de chaque ligne ; oui, deux homonymes peuvent coexister car ils ont des id différents."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "SELECT et WHERE",
+      "enonce": "Sur la table Eleve(id, nom, prenom, classe), écris une requête SQL qui affiche le nom et le prénom de tous les élèves de la classe 'TG1'.",
+      "corrige": [
+        "On sélectionne les colonnes voulues avec SELECT : nom, prenom.",
+        "On indique la table source avec FROM Eleve.",
+        "On filtre les lignes avec WHERE en comparant classe à la chaîne 'TG1'.",
+        "La chaîne est entre apostrophes car c'est une valeur de texte."
+      ],
+      "reponse": "SELECT nom, prenom FROM Eleve WHERE classe = 'TG1' ;"
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "ORDER BY",
+      "enonce": "Toujours sur Eleve(id, nom, prenom, classe), écris une requête qui affiche tous les attributs des élèves, triés par nom dans l'ordre alphabétique croissant.",
+      "corrige": [
+        "SELECT * sélectionne tous les attributs de la table.",
+        "FROM Eleve désigne la table.",
+        "ORDER BY nom trie le résultat selon la colonne nom.",
+        "ASC (croissant) est l'ordre par défaut ; on peut l'écrire explicitement."
+      ],
+      "reponse": "SELECT * FROM Eleve ORDER BY nom ASC ;"
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "agrégation GROUP BY",
+      "enonce": "On ajoute la table Note(id_eleve, matiere, valeur). Écris une requête qui, pour chaque matière, affiche la moyenne des notes, arrondie ou non, sous forme d'une colonne nommée moyenne.",
+      "corrige": [
+        "On veut une valeur par matière : on regroupe les lignes avec GROUP BY matiere.",
+        "La moyenne s'obtient avec la fonction d'agrégation AVG(valeur).",
+        "On renomme la colonne calculée avec AS moyenne.",
+        "On affiche aussi matiere pour savoir à quoi correspond chaque moyenne."
+      ],
+      "reponse": "SELECT matiere, AVG(valeur) AS moyenne FROM Note GROUP BY matiere ;"
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "jointure (clé étrangère)",
+      "enonce": "Note.id_eleve est une clé étrangère qui référence Eleve.id. Écris une requête qui affiche le nom de l'élève et la valeur de chaque note en matière 'NSI'.",
+      "corrige": [
+        "Les données sont dans deux tables : il faut une jointure sur la clé étrangère.",
+        "FROM Eleve JOIN Note ON Eleve.id = Note.id_eleve relie chaque note à son élève.",
+        "On filtre avec WHERE Note.matiere = 'NSI'.",
+        "On sélectionne Eleve.nom et Note.valeur ; on préfixe par la table pour lever toute ambiguïté."
+      ],
+      "reponse": "SELECT Eleve.nom, Note.valeur FROM Eleve JOIN Note ON Eleve.id = Note.id_eleve WHERE Note.matiere = 'NSI' ;"
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "jointure + agrégation + HAVING",
+      "enonce": "À partir de Eleve(id, nom, prenom, classe) et Note(id_eleve, matiere, valeur), écris une requête qui affiche le nom des élèves dont la moyenne générale (toutes matières confondues) est strictement supérieure à 12, avec cette moyenne, triée de la meilleure à la moins bonne.",
+      "corrige": [
+        "On joint les deux tables : FROM Eleve JOIN Note ON Eleve.id = Note.id_eleve.",
+        "On regroupe par élève : GROUP BY Eleve.id, Eleve.nom (on groupe sur la clé, et on peut afficher le nom associé).",
+        "La moyenne par élève est AVG(Note.valeur), renommée moy.",
+        "Un filtre sur un résultat d'agrégation se met dans HAVING (pas WHERE) : HAVING AVG(Note.valeur) > 12.",
+        "On trie du plus grand au plus petit avec ORDER BY moy DESC."
+      ],
+      "reponse": "SELECT Eleve.nom, AVG(Note.valeur) AS moy FROM Eleve JOIN Note ON Eleve.id = Note.id_eleve GROUP BY Eleve.id, Eleve.nom HAVING AVG(Note.valeur) > 12 ORDER BY moy DESC ;"
+    }
+  ]
+}

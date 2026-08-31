@@ -1,0 +1,89 @@
+{
+  "id": "1nsi-interactions-web-client-serveur-exos",
+  "chapitre": "1nsi-interactions-web-client-serveur",
+  "titre": "Exercices — Interactions Web : client et serveur",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "rôles client et serveur",
+      "enonce": "Quand tu ouvres une page web avec ton navigateur, qui joue le rôle du client et qui joue le rôle du serveur ? Dans quel sens va la requête, dans quel sens va la réponse ?",
+      "corrige": [
+        "Le navigateur (sur ton ordinateur ou ton téléphone) est le client : c'est lui qui demande une ressource.",
+        "La machine distante qui héberge le site et renvoie la page est le serveur.",
+        "Le client envoie une requête vers le serveur ; le serveur renvoie une réponse (la page) vers le client."
+      ],
+      "reponse": "Le navigateur est le client, la machine qui héberge le site est le serveur : le client envoie une requête, le serveur renvoie une réponse."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "structure d'une URL",
+      "enonce": "On considère l'URL : https://www.exemple.fr/cours/nsi.html . Identifie le protocole, le nom de domaine et le chemin de la ressource.",
+      "corrige": [
+        "La partie avant :// indique le protocole utilisé : https.",
+        "Après ://, jusqu'au premier /, se trouve le nom de domaine : www.exemple.fr.",
+        "Ce qui suit le domaine est le chemin de la ressource sur le serveur : /cours/nsi.html."
+      ],
+      "reponse": "Protocole : https ; nom de domaine : www.exemple.fr ; chemin de la ressource : /cours/nsi.html."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "méthodes HTTP GET et POST",
+      "enonce": "Un formulaire de connexion demande un mot de passe. Pour envoyer les données, vaut-il mieux utiliser la méthode GET ou POST ? Rappelle où apparaissent les données dans le cas de GET.",
+      "corrige": [
+        "Avec GET, les données du formulaire sont ajoutées à l'URL (après un ?), donc visibles dans la barre d'adresse et l'historique.",
+        "Avec POST, les données sont placées dans le corps de la requête et n'apparaissent pas dans l'URL.",
+        "Pour un mot de passe (donnée sensible), on préfère POST afin de ne pas l'afficher dans l'URL."
+      ],
+      "reponse": "On utilise POST : avec GET les données apparaîtraient dans l'URL, ce qui n'est pas souhaitable pour un mot de passe."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "codes de statut HTTP",
+      "enonce": "Associe chaque code de statut HTTP à sa signification : 200, 404, 403. Que reçoit le navigateur quand la page demandée n'existe pas ?",
+      "corrige": [
+        "Un code commençant par 2xx indique un succès : 200 signifie OK, la ressource a été trouvée et renvoyée.",
+        "Un code 4xx indique une erreur côté client : 404 signifie « ressource non trouvée » (Not Found).",
+        "403 signifie « accès interdit » (Forbidden) : la ressource existe mais l'accès est refusé.",
+        "Quand la page demandée n'existe pas, le serveur renvoie le code 404."
+      ],
+      "reponse": "200 = succès (OK), 404 = ressource non trouvée, 403 = accès interdit ; une page inexistante renvoie 404."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "formulaire HTML et paramètres d'URL",
+      "enonce": "Soit le formulaire :\n<form action=\"/recherche\" method=\"get\">\n  <input name=\"q\" value=\"nsi\">\n  <input name=\"page\" value=\"2\">\n</form>\nÀ quelle URL le navigateur envoie-t-il la requête quand on valide le formulaire ?",
+      "corrige": [
+        "L'attribut action indique la ressource visée : /recherche ; method=\"get\" place les données dans l'URL.",
+        "Chaque champ devient un couple nom=valeur : q=nsi et page=2.",
+        "Les couples sont ajoutés après un ? et séparés par & : /recherche?q=nsi&page=2."
+      ],
+      "reponse": "Le navigateur envoie la requête à l'URL /recherche?q=nsi&page=2."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "déroulement d'un échange requête-réponse",
+      "enonce": "Décris, dans l'ordre, les grandes étapes qui se produisent entre le moment où l'utilisateur tape https://www.exemple.fr/index.html et l'affichage de la page, en précisant le rôle du DNS, de la requête GET et de la réponse HTTP.",
+      "corrige": [
+        "1) Le navigateur (client) doit trouver l'adresse IP du serveur : il interroge le DNS qui traduit le nom de domaine www.exemple.fr en adresse IP.",
+        "2) Le client ouvre une connexion vers cette adresse IP et envoie une requête HTTP : GET /index.html avec l'en-tête indiquant l'hôte visé.",
+        "3) Le serveur traite la requête, retrouve la ressource /index.html et prépare une réponse.",
+        "4) Le serveur renvoie une réponse HTTP contenant un code de statut (par exemple 200 OK) et le contenu HTML de la page.",
+        "5) Le navigateur reçoit le code HTML, puis demande éventuellement les ressources liées (images, feuilles de style, scripts) par de nouvelles requêtes, et affiche la page."
+      ],
+      "reponse": "Le DNS convertit le nom de domaine en adresse IP, le client envoie une requête GET /index.html, le serveur répond (par ex. 200 OK) avec le HTML, puis le navigateur charge les ressources liées et affiche la page."
+    }
+  ]
+}

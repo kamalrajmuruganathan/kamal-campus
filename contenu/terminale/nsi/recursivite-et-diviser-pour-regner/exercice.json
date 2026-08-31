@@ -1,0 +1,102 @@
+{
+  "id": "tale-nsi-recursivite-et-diviser-pour-regner-exos",
+  "chapitre": "tale-nsi-recursivite-et-diviser-pour-regner",
+  "titre": "Exercices — Récursivité et « diviser pour régner »",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "cas de base et cas récursif",
+      "enonce": "On donne la fonction factorielle :\n\ndef fact(n):\n    if n == 0:\n        return 1\n    return n * fact(n-1)\n\nIdentifie le cas de base et le cas récursif, puis calcule fact(3) en détaillant les appels.",
+      "corrige": [
+        "Le cas de base est n == 0 : la fonction renvoie 1 sans se rappeler.",
+        "Le cas récursif est return n * fact(n-1) : la fonction s'appelle sur n-1.",
+        "fact(3) = 3 * fact(2) ; fact(2) = 2 * fact(1) ; fact(1) = 1 * fact(0) ; fact(0) = 1.",
+        "On remonte : fact(1) = 1*1 = 1 ; fact(2) = 2*1 = 2 ; fact(3) = 3*2 = 6."
+      ],
+      "reponse": "Cas de base : n==0 renvoie 1 ; cas récursif : n*fact(n-1) ; fact(3) = 6."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "condition d'arrêt manquante",
+      "enonce": "Explique pourquoi cette fonction ne s'arrête jamais, puis corrige-la pour qu'elle calcule la somme 1+2+...+n :\n\ndef somme(n):\n    return n + somme(n-1)",
+      "corrige": [
+        "Il n'y a aucun cas de base : la fonction s'appelle toujours, avec n qui décroît indéfiniment (0, -1, -2, ...).",
+        "En pratique Python lève une erreur RecursionError (profondeur maximale d'appels dépassée).",
+        "Il faut un cas de base, par exemple n == 0 qui renvoie 0.",
+        "Version corrigée : def somme(n): if n == 0: return 0 ; return n + somme(n-1)."
+      ],
+      "reponse": "Il manque le cas de base ; on ajoute if n == 0: return 0 avant l'appel récursif."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "trace d'une récursivité",
+      "enonce": "Que renvoie compte(3) pour la fonction suivante, et qu'affiche-t-elle ?\n\ndef compte(n):\n    if n == 0:\n        return\n    print(n)\n    compte(n-1)",
+      "corrige": [
+        "compte(3) affiche 3 puis appelle compte(2).",
+        "compte(2) affiche 2 puis appelle compte(1).",
+        "compte(1) affiche 1 puis appelle compte(0).",
+        "compte(0) atteint le cas de base et fait return (valeur None), sans rien afficher.",
+        "La fonction ne contient pas de return de valeur : elle renvoie None."
+      ],
+      "reponse": "Elle affiche 3, 2, 1 (une par ligne) et renvoie None."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "récursivité sur les chaînes",
+      "enonce": "Écris une fonction récursive palindrome(ch) qui renvoie True si la chaîne ch se lit de la même façon dans les deux sens. Précise le(s) cas de base.",
+      "corrige": [
+        "Cas de base : une chaîne de longueur 0 ou 1 est toujours un palindrome, on renvoie True.",
+        "Cas récursif : si le premier et le dernier caractère diffèrent, ce n'est pas un palindrome, on renvoie False.",
+        "Sinon on teste le milieu : palindrome(ch[1:-1]) qui retire le premier et le dernier caractère.",
+        "def palindrome(ch):",
+        "    if len(ch) <= 1:",
+        "        return True",
+        "    if ch[0] != ch[-1]:",
+        "        return False",
+        "    return palindrome(ch[1:-1])"
+      ],
+      "reponse": "On teste ch[0]==ch[-1] puis on récursive sur ch[1:-1], avec cas de base len(ch)<=1 qui renvoie True."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "diviser pour régner (recherche dichotomique)",
+      "enonce": "Complète cette recherche dichotomique récursive dans un tableau trié t, qui renvoie True si x est présent. Trace ensuite dicho(t, 5) pour t = [1, 3, 5, 7, 9].\n\ndef dicho(t, x, g=0, d=None):\n    if d is None:\n        d = len(t) - 1\n    if g > d:\n        return False\n    m = (g + d) // 2\n    if t[m] == x:\n        return True\n    if t[m] < x:\n        return dicho(t, x, m+1, d)\n    return dicho(t, x, g, m-1)",
+      "corrige": [
+        "Le principe 'diviser pour régner' : on compare x à l'élément du milieu et on ne garde qu'une moitié du tableau.",
+        "Départ : g=0, d=4, m=(0+4)//2=2, t[2]=5. On a t[m]==x.",
+        "La condition t[m] == x est vraie dès le premier appel : la fonction renvoie True immédiatement.",
+        "Le cas de base d'échec est g > d : l'intervalle est vide, x est absent, on renvoie False.",
+        "À chaque appel l'intervalle est divisé par 2, d'où une complexité en O(log n)."
+      ],
+      "reponse": "dicho(t, 5) renvoie True (trouvé au milieu dès le premier appel, en O(log n))."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "diviser pour régner et complexité (tri fusion)",
+      "enonce": "Le tri fusion trie une liste en la coupant en deux moitiés, en triant récursivement chacune, puis en fusionnant les deux moitiés triées. 1) Décris le cas de base. 2) Sur [4, 2, 7, 1], montre l'arbre des découpages et le résultat. 3) Justifie la complexité O(n log n).",
+      "corrige": [
+        "Cas de base : une liste de 0 ou 1 élément est déjà triée, on la renvoie telle quelle.",
+        "Découpage de [4,2,7,1] : en [4,2] et [7,1].",
+        "[4,2] -> [4] et [2] ; fusion -> [2,4]. [7,1] -> [7] et [1] ; fusion -> [1,7].",
+        "Fusion finale de [2,4] et [1,7] : on compare les têtes (1<2) -> 1, puis 2, puis 4<7 -> 4, puis 7. Résultat [1,2,4,7].",
+        "Complexité : la profondeur de découpage est log2(n) car on divise la taille par 2 à chaque niveau.",
+        "À chaque niveau, l'ensemble des fusions traite en tout n éléments, soit un coût O(n) par niveau.",
+        "Coût total = nombre de niveaux x coût par niveau = log(n) x n, soit O(n log n)."
+      ],
+      "reponse": "Cas de base : liste de taille <= 1 ; [4,2,7,1] devient [1,2,4,7] ; complexité O(n log n) (log n niveaux, O(n) par niveau)."
+    }
+  ]
+}

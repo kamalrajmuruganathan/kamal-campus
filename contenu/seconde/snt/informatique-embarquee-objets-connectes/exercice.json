@@ -1,0 +1,86 @@
+{
+  "id": "2nde-snt-informatique-embarquee-objets-connectes-exos",
+  "chapitre": "2nde-snt-informatique-embarquee-objets-connectes",
+  "titre": "Exercices — Informatique embarquée et objets connectés",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "définition d'un système embarqué",
+      "enonce": "a) Qu'est-ce qu'un système informatique embarqué ? b) Parmi ces objets, lesquels contiennent un système embarqué : un lave-linge programmable, un marteau, une montre connectée, une chaise, un régulateur de vitesse de voiture ? c) Cite une contrainte forte fréquente pour ce type de système.",
+      "corrige": [
+        "Un système embarqué est un système informatique (processeur + programme) intégré dans un objet pour lui faire réaliser une tâche précise, sans être un ordinateur classique.",
+        "On garde les objets qui embarquent un programme et de l'électronique : lave-linge programmable, montre connectée, régulateur de vitesse. Le marteau et la chaise n'ont pas d'informatique.",
+        "Contraintes fréquentes : faible consommation d'énergie, mémoire et puissance limitées, autonomie, temps de réponse (temps réel), fiabilité."
+      ],
+      "reponse": "C'est un ordinateur dédié intégré dans un objet ; ici lave-linge, montre connectée et régulateur ; contrainte typique : énergie/mémoire limitées."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "capteur / actionneur",
+      "enonce": "Un chauffage connecté mesure la température de la pièce et allume ou éteint le radiateur pour maintenir 20 °C. a) Quel composant mesure la température ? b) Quel composant agit sur le monde physique ? c) Classe : thermomètre, moteur de volet, capteur de lumière, LED — en capteurs ou actionneurs.",
+      "corrige": [
+        "Le composant qui mesure une grandeur physique (ici la température) est un capteur.",
+        "Le composant qui agit sur le monde (allume/éteint le radiateur) est un actionneur.",
+        "Capteurs (mesurent) : thermomètre, capteur de lumière. Actionneurs (agissent) : moteur de volet, LED."
+      ],
+      "reponse": "Le thermomètre est un capteur, le radiateur un actionneur ; capteurs = thermomètre et capteur de lumière, actionneurs = moteur de volet et LED."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "chaîne capteur-traitement-actionneur",
+      "enonce": "Un éclairage automatique de couloir allume la lumière quand il détecte un mouvement la nuit. Reconstitue dans l'ordre les trois étapes de la chaîne : traitement (décision par le programme), actionneur (lampe), capteur (détecteur de mouvement). Puis explique ce que fait l'étape du milieu.",
+      "corrige": [
+        "L'information part du monde réel : le capteur (détecteur de mouvement) mesure d'abord.",
+        "L'ordre est donc : 1) capteur → 2) traitement → 3) actionneur.",
+        "L'étape du milieu (traitement) est le programme du microcontrôleur : il reçoit la mesure, décide selon une règle (s'il fait nuit ET qu'il y a un mouvement) puis commande l'actionneur."
+      ],
+      "reponse": "Ordre : capteur (détecteur) → traitement (programme) → actionneur (lampe) ; le traitement décide d'allumer selon la mesure."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "objet connecté et réseau",
+      "enonce": "Un bracelet de sport mesure les pas et envoie chaque soir les données vers un serveur, consultables sur une application. a) Qu'est-ce qui distingue un objet connecté d'un simple objet embarqué ? b) Cite deux avantages de cette connexion. c) Cite deux risques liés à l'envoi de ces données.",
+      "corrige": [
+        "Un objet connecté est un objet embarqué qui communique en plus avec un réseau (Internet, Bluetooth, Wi-Fi) pour échanger ses données.",
+        "Avantages : suivi et historique sur l'application, mise à jour du logiciel à distance, partage/synchronisation entre appareils.",
+        "Risques : collecte de données personnelles (activité, santé), interception ou piratage des données, dépendance au fabricant/au service en ligne."
+      ],
+      "reponse": "L'objet connecté communique avec un réseau ; avantages : suivi et mises à jour ; risques : vie privée et piratage des données."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "programme d'un microcontrôleur",
+      "enonce": "Sur une carte, une variable temp reçoit la température. Le programme :\nif temp > 25:\n    ventilateur = 'ON'\nelse:\n    ventilateur = 'OFF'\nDonne l'état du ventilateur pour a) temp = 30, b) temp = 25, c) temp = 18. d) Quelle condition faudrait-il écrire pour aussi allumer le ventilateur exactement à 25 °C ?",
+      "corrige": [
+        "temp = 30 : 30 > 25 est vrai → ventilateur = 'ON'.",
+        "temp = 25 : 25 > 25 est faux (strictement supérieur) → ventilateur = 'OFF'. temp = 18 : 18 > 25 faux → 'OFF'.",
+        "Pour inclure 25, on remplace le test strict par un test large : if temp >= 25."
+      ],
+      "reponse": "ON à 30 ; OFF à 25 et à 18 ; utiliser temp >= 25 pour l'allumer aussi à 25 °C."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "autonomie et calcul d'énergie",
+      "enonce": "Un capteur connecté embarque une batterie de 1200 mAh. En veille il consomme 2 mA, mais pendant 1 minute par heure il émet ses données en consommant 100 mA. a) Quelle charge (en mAh) consomme-t-il en 1 heure ? b) Combien d'heures d'autonomie environ ? c) Propose une idée pour prolonger l'autonomie.",
+      "corrige": [
+        "Émission : 100 mA pendant 1 min = 1/60 h, soit 100 × (1/60) ≈ 1,67 mAh. Veille : 59 min à 2 mA = 2 × (59/60) ≈ 1,97 mAh. Total par heure ≈ 1,67 + 1,97 ≈ 3,64 mAh.",
+        "Autonomie ≈ capacité / consommation horaire = 1200 / 3,64 ≈ 330 heures, soit environ 13 à 14 jours.",
+        "Idées : émettre moins souvent (ex. toutes les 2 h), réduire la puissance d'émission, mettre le capteur en sommeil profond entre les mesures, ajouter un petit panneau solaire."
+      ],
+      "reponse": "≈ 3,64 mAh par heure, soit environ 330 heures (≈ 13 jours) ; on prolonge en émettant moins souvent ou en dormant plus."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "4e-techno-modelisation-volumique-exos",
+  "chapitre": "4e-techno-modelisation-volumique",
+  "titre": "Exercices — La modélisation volumique",
+  "voie": "generale",
+  "niveau": "quatrieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Définition et 3D",
+      "enonce": "Qu'est-ce qu'un modèle volumique ? Cite les trois dimensions d'un objet 3D et donne le nom du type de logiciel utilisé pour le créer.",
+      "corrige": [
+        "Un modèle volumique est la représentation en trois dimensions d'un objet réalisée avec un logiciel.",
+        "Les trois dimensions sont la longueur, la largeur et la hauteur.",
+        "Le logiciel est un logiciel de CAO (Conception Assistée par Ordinateur), par exemple Tinkercad ou FreeCAD."
+      ],
+      "reponse": "Un modèle volumique représente un objet en 3D (longueur, largeur, hauteur) avec un logiciel de CAO."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Formes de base",
+      "enonce": "Cite trois formes de base (primitives) utilisées pour construire un volume, puis indique par quelle forme de base on commencerait pour modéliser une canette de boisson.",
+      "corrige": [
+        "Les formes de base sont par exemple le cube (pavé), le cylindre, la sphère, le cône, la pyramide.",
+        "Trois exemples : le cube, le cylindre et la sphère.",
+        "Une canette a une forme de tube rond : on part d'un cylindre."
+      ],
+      "reponse": "Exemples de primitives : cube, cylindre, sphère ; pour une canette on part d'un cylindre."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Les cotes",
+      "enonce": "Une cote indique « 40 mm ». Que représente une cote et quelle est l'unité utilisée ici ? Si on modélise un côté à 40 mm, quelle sera la taille du côté sur l'objet fabriqué ?",
+      "corrige": [
+        "Une cote est une dimension de l'objet, exprimée dans une unité.",
+        "L'unité ici est le millimètre (mm).",
+        "Le modèle est à l'échelle réelle : si on écrit 40 mm, l'objet fabriqué mesurera 40 mm."
+      ],
+      "reponse": "Une cote est une dimension (ici en mm) ; à l'échelle réelle, le côté fabriqué mesurera bien 40 mm."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Opérations de construction",
+      "enonce": "On veut modéliser une rondelle (un disque épais percé d'un trou au centre). Décris les deux étapes en nommant l'opération utilisée pour créer le trou, et explique pourquoi on n'« ajoute » pas un trou.",
+      "corrige": [
+        "Étape 1 : créer un cylindre plein (le disque épais).",
+        "Étape 2 : placer un petit cylindre au centre et le soustraire au grand : cela crée le trou.",
+        "L'opération qui crée le trou est la soustraction (perçage), qui enlève de la matière.",
+        "On n'ajoute pas un trou : un trou est un manque de matière, on l'obtient donc en retirant un volume, pas en en ajoutant un."
+      ],
+      "reponse": "Cylindre plein, puis soustraction d'un petit cylindre central : le trou se crée par soustraction de matière, jamais par ajout."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Extrusion et révolution",
+      "enonce": "Explique la différence entre l'extrusion et la révolution. Pour chacune, propose un objet simple qu'on peut fabriquer avec cette opération à partir d'une forme plane.",
+      "corrige": [
+        "L'extrusion consiste à « tirer » une forme plate (2D) pour lui donner de l'épaisseur et obtenir un volume.",
+        "Exemple d'extrusion : partir d'une étoile plate et l'extruder pour obtenir une plaque en forme d'étoile.",
+        "La révolution consiste à faire tourner un profil autour d'un axe pour créer un volume de rotation.",
+        "Exemple de révolution : faire tourner le profil d'un verre ou d'une bouteille autour de son axe pour obtenir le volume complet."
+      ],
+      "reponse": "L'extrusion tire une forme plane pour l'épaissir (ex. plaque étoilée) ; la révolution fait tourner un profil autour d'un axe (ex. verre, bouteille)."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Chaîne numérique",
+      "enonce": "Un élève a une idée d'objet et veut le fabriquer avec une imprimante 3D. Décris dans l'ordre les étapes de la chaîne numérique, de l'idée jusqu'à l'objet réel, en nommant le format de fichier d'export et le rôle du logiciel qui découpe le modèle en couches. Précise enfin la différence entre « modéliser » et « fabriquer ».",
+      "corrige": [
+        "La chaîne numérique va de l'idée à l'objet : idée → croquis → modèle 3D (CAO) → fichier → fabrication.",
+        "On modélise l'objet en 3D dans un logiciel de CAO, avec des cotes précises.",
+        "On exporte le modèle au format STL, très utilisé pour l'impression 3D.",
+        "Un logiciel appelé trancheur (slicer) découpe le modèle en couches et prépare les instructions pour l'imprimante.",
+        "L'imprimante 3D fabrique l'objet en déposant la matière couche par couche.",
+        "Modéliser, c'est créer le modèle numérique (CAO) ; fabriquer, c'est produire l'objet réel avec la machine. Ce sont deux étapes différentes."
+      ],
+      "reponse": "Idée → croquis → modèle 3D (CAO) → export STL → découpe en couches (slicer) → impression 3D couche par couche. Modéliser crée le modèle numérique ; fabriquer produit l'objet réel."
+    }
+  ]
+}

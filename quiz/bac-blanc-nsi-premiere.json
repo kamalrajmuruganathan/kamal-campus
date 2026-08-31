@@ -1,0 +1,120 @@
+{
+  "id": "bac-blanc-nsi-premiere",
+  "titre": "Bac blanc",
+  "examen": "Bac blanc",
+  "niveau": "premiere",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Représentation binaire",
+      "enonce": "Combien de valeurs différentes peut-on coder sur 8 bits ?",
+      "choix": ["8", "16", "128", "256"],
+      "reponse": 3,
+      "explication": "Avec 8 bits, on peut coder 2^8 = 256 valeurs différentes (de 0 à 255)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Types de base",
+      "enonce": "En Python, quel est le type de la valeur renvoyée par l'expression 7 == 3 ?",
+      "choix": ["int", "str", "bool", "float"],
+      "reponse": 2,
+      "explication": "Une comparaison renvoie un booléen (bool) : ici False, car 7 est différent de 3."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "En Python, comment accède-t-on à la valeur associée à la clé 'age' dans le dictionnaire d = {'nom': 'Léa', 'age': 16} ?",
+      "choix": ["d.age", "d['age']", "d(2)", "d[1]"],
+      "reponse": 1,
+      "explication": "L'accès à une valeur d'un dictionnaire se fait par sa clé entre crochets : d['age'] vaut 16."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "Tables de données",
+      "enonce": "Dans un fichier CSV, la première ligne contient en général :",
+      "choix": ["Les données les plus récentes", "Les descripteurs (noms des colonnes)", "Un mot de passe", "Le nombre total de lignes"],
+      "reponse": 1,
+      "explication": "La première ligne d'un CSV est souvent l'en-tête donnant le nom des descripteurs (colonnes) du tableau."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture décimale de l'entier binaire 110 ?",
+      "choix": ["3", "5", "6", "110"],
+      "reponse": 2,
+      "explication": "110 en binaire = 1×4 + 1×2 + 0×1 = 6."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Que doit vérifier un tableau pour qu'on puisse y appliquer une recherche dichotomique ?",
+      "choix": ["Il doit être trié", "Il ne doit contenir que des nombres pairs", "Il doit avoir une taille paire", "Il doit être vide"],
+      "reponse": 0,
+      "explication": "La recherche dichotomique repose sur l'élimination d'une moitié du tableau à chaque étape : elle exige un tableau trié."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Boucles",
+      "enonce": "Combien de fois le corps de la boucle 'for i in range(3):' est-il exécuté ?",
+      "choix": ["2 fois", "3 fois", "4 fois", "Une infinité"],
+      "reponse": 1,
+      "explication": "range(3) produit les valeurs 0, 1, 2 : la boucle s'exécute donc 3 fois."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "Le Web",
+      "enonce": "Quel langage définit la structure et le contenu d'une page Web ?",
+      "choix": ["Python", "HTML", "SQL", "CSS"],
+      "reponse": 1,
+      "explication": "Le HTML structure le contenu d'une page Web. Le CSS gère la mise en forme, et Python ou SQL ne servent pas à structurer une page."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Fonctions",
+      "enonce": "Que renvoie l'appel f(4) pour la fonction : def f(x): return x * x + 1 ?",
+      "choix": ["9", "16", "17", "8"],
+      "reponse": 2,
+      "explication": "f(4) = 4 × 4 + 1 = 16 + 1 = 17."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Représentation d'un texte",
+      "enonce": "Quel code associe un nombre à chaque caractère afin de représenter du texte en mémoire ?",
+      "choix": ["Le code ASCII", "Le code binaire réfléchi", "Le code-barres", "Le code postal"],
+      "reponse": 0,
+      "explication": "Le code ASCII (et son extension Unicode) associe à chaque caractère un entier permettant de le représenter en machine."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Tables de données",
+      "enonce": "Trier une table d'élèves selon leur moyenne consiste à :",
+      "choix": ["Supprimer les élèves ayant une mauvaise moyenne", "Réordonner les enregistrements selon les valeurs d'un descripteur", "Ajouter une nouvelle colonne", "Fusionner deux tables"],
+      "reponse": 1,
+      "explication": "Trier une table, c'est réordonner ses lignes (enregistrements) selon les valeurs d'un descripteur choisi, ici la moyenne."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Booléens",
+      "enonce": "Quelle est la valeur de l'expression (True and False) or True ?",
+      "choix": ["True", "False", "None", "Erreur"],
+      "reponse": 0,
+      "explication": "(True and False) vaut False, puis False or True vaut True."
+    }
+  ]
+}

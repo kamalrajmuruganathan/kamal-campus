@@ -1,0 +1,86 @@
+{
+  "id": "2nde-snt-internet-exos",
+  "chapitre": "2nde-snt-internet",
+  "titre": "Exercices — Internet",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vocabulaire réseau",
+      "enonce": "a) Qu'est-ce qu'Internet, en une phrase ? b) Quelle différence entre Internet et le Web ? c) Que fait un routeur dans ce réseau ?",
+      "corrige": [
+        "Internet est le réseau mondial qui interconnecte des réseaux d'ordinateurs pour qu'ils échangent des données.",
+        "Internet est l'infrastructure (le réseau physique et ses protocoles) ; le Web est un service qui circule dessus (pages liées consultées avec un navigateur). Le mail, la visio, etc. utilisent aussi Internet sans être le Web.",
+        "Un routeur relie des réseaux et aiguille chaque paquet de données vers la bonne direction pour qu'il atteigne sa destination."
+      ],
+      "reponse": "Internet = réseau mondial de réseaux ; le Web n'en est qu'un service ; le routeur aiguille les paquets."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "adresse IP",
+      "enonce": "On donne l'adresse IPv4 : 192.168.1.10. a) De combien de nombres est-elle composée ? b) Entre quelles valeurs chaque nombre peut-il aller ? c) L'adresse 192.168.1.300 est-elle valide ? Justifie.",
+      "corrige": [
+        "Une adresse IPv4 est formée de 4 nombres séparés par des points (4 octets).",
+        "Chaque nombre est codé sur 1 octet (8 bits), donc va de 0 à 255.",
+        "300 dépasse 255, donc 192.168.1.300 n'est pas une adresse IPv4 valide."
+      ],
+      "reponse": "4 nombres de 0 à 255 ; 192.168.1.300 est invalide car 300 > 255."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "commutation de paquets",
+      "enonce": "Un fichier est découpé pour être envoyé sur Internet. a) Comment appelle-t-on ces morceaux ? b) Deux paquets d'un même message peuvent-ils suivre des chemins différents ? c) À quoi sert le numéro d'ordre porté par chaque paquet ?",
+      "corrige": [
+        "Les données sont découpées en petits blocs appelés paquets.",
+        "Oui : chaque paquet est routé indépendamment et peut emprunter une route différente selon l'état du réseau.",
+        "Le numéro d'ordre permet à la machine réceptrice de remettre les paquets dans le bon ordre pour reconstituer le message, même s'ils arrivent en désordre."
+      ],
+      "reponse": "Ce sont des paquets ; ils peuvent suivre des chemins différents ; le numéro d'ordre sert à les réassembler correctement."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "protocole et DNS",
+      "enonce": "a) Qu'est-ce qu'un protocole de communication ? b) Quel est le rôle du DNS ? c) Quand tu tapes exemple.fr dans le navigateur, quelle information le DNS renvoie-t-il ?",
+      "corrige": [
+        "Un protocole est un ensemble de règles communes que les machines respectent pour se comprendre et échanger (ex. TCP/IP, HTTP).",
+        "Le DNS (Domain Name System) est l'annuaire d'Internet : il traduit un nom de domaine, facile à retenir, en adresse IP, utilisable par les machines.",
+        "Le DNS renvoie l'adresse IP du serveur qui héberge exemple.fr, pour que le navigateur puisse le contacter."
+      ],
+      "reponse": "Un protocole = règles communes ; le DNS traduit un nom de domaine en adresse IP, ici celle du serveur d'exemple.fr."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "calcul de débit",
+      "enonce": "On télécharge un fichier de 30 Mo (mégaoctets) avec une connexion de 24 Mbit/s (mégabits par seconde). a) Convertis 30 Mo en mégabits (1 octet = 8 bits). b) Combien de temps faut-il théoriquement pour le télécharger ? c) Pourquoi le temps réel est-il souvent plus long ?",
+      "corrige": [
+        "30 Mo × 8 = 240 Mbit (car 1 octet = 8 bits).",
+        "temps = taille / débit = 240 Mbit / 24 Mbit/s = 10 secondes.",
+        "En pratique le débit réel est plus faible que le débit annoncé (partage de la ligne, distance, protocole, encombrement du réseau), donc c'est plus long."
+      ],
+      "reponse": "30 Mo = 240 Mbit ; environ 10 s en théorie ; plus long en réalité car le débit réel est inférieur au débit maximal."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "adressage et nombre de machines",
+      "enonce": "a) Une adresse IPv4 est codée sur 32 bits : combien d'adresses différentes cela fait-il (donne la puissance de 2 puis un ordre de grandeur) ? b) Pourquoi ce nombre est-il devenu insuffisant ? c) IPv6 code les adresses sur 128 bits : quel est l'intérêt principal par rapport à IPv4 ?",
+      "corrige": [
+        "Avec 32 bits, on a 2^32 combinaisons, soit environ 4,3 milliards d'adresses.",
+        "Le nombre d'appareils connectés (ordinateurs, téléphones, objets connectés) a dépassé 4,3 milliards : il n'y a plus assez d'adresses IPv4 disponibles.",
+        "IPv6 sur 128 bits offre 2^128 adresses, un nombre gigantesque : de quoi adresser durablement tous les appareils, ce qui résout la pénurie d'adresses."
+      ],
+      "reponse": "2^32 ≈ 4,3 milliards d'adresses IPv4, devenues insuffisantes ; IPv6 (128 bits, 2^128) fournit assez d'adresses pour tous."
+    }
+  ]
+}

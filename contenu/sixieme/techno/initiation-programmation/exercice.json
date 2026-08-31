@@ -1,0 +1,87 @@
+{
+  "id": "6e-techno-initiation-programmation-exos",
+  "chapitre": "6e-techno-initiation-programmation",
+  "titre": "Exercices — Initiation à la programmation",
+  "voie": "generale",
+  "niveau": "sixieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "instruction et ordre",
+      "enonce": "On donne à un robot ces deux instructions : « mets tes chaussures » puis « mets tes chaussettes ». Le résultat est-il correct ? Explique pourquoi l'ordre des instructions est important.",
+      "corrige": [
+        "La machine exécute les instructions exactement dans l'ordre donné.",
+        "Ici elle mettrait les chaussures avant les chaussettes, ce qui est impossible correctement.",
+        "Il faut inverser : d'abord les chaussettes, puis les chaussures."
+      ],
+      "reponse": "Non : l'ordre est mauvais ; il faut « mets tes chaussettes » puis « mets tes chaussures », car la machine suit exactement l'ordre indiqué."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "boucle et condition",
+      "enonce": "Pour chaque phrase, dis s'il s'agit d'une boucle ou d'une condition : (a) « Répéter 4 fois : avance de 100 ». (b) « Si le lutin touche le bord, alors il rebondit ».",
+      "corrige": [
+        "Une boucle sert à répéter des instructions ; une condition (si… alors…) sert à choisir.",
+        "(a) « Répéter 4 fois » répète une action : c'est une boucle.",
+        "(b) « Si… alors… » teste une situation pour choisir : c'est une condition."
+      ],
+      "reponse": "(a) une boucle, (b) une condition."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "boucle pour dessiner",
+      "enonce": "Pour dessiner un carré, on écrit quatre fois « avance de 100 ; tourne de 90° ». Réécris ce programme plus court en utilisant une boucle.",
+      "corrige": [
+        "Un carré a 4 côtés identiques : la même action est répétée 4 fois.",
+        "On regroupe les deux instructions dans une boucle « Répéter 4 fois ».",
+        "Cela rend le programme plus court et plus clair."
+      ],
+      "reponse": "Répéter 4 fois : [ avance de 100 ; tourne de 90° ]."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "trace d'un programme",
+      "enonce": "Un lutin exécute : « Répéter 3 fois : [ avance de 50 ; tourne de 120° ] ». Combien de côtés trace-t-il, et quelle figure obtient-il ?",
+      "corrige": [
+        "La boucle répète 3 fois l'ensemble « avancer puis tourner » : le lutin trace donc 3 côtés.",
+        "Chaque côté mesure 50 et à chaque coin il tourne de 120°.",
+        "Une figure fermée à 3 côtés égaux avec des angles réguliers est un triangle équilatéral."
+      ],
+      "reponse": "Il trace 3 côtés égaux : la figure obtenue est un triangle (équilatéral)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "condition avec capteur",
+      "enonce": "Un robot doit s'arrêter s'il rencontre un obstacle. Écris l'instruction sous la forme « si… alors… » en utilisant son capteur, puis explique quel actionneur est commandé.",
+      "corrige": [
+        "On utilise le capteur d'obstacle pour tester la situation.",
+        "On écrit : « Si le capteur détecte un obstacle, alors le robot s'arrête ».",
+        "L'actionneur commandé est le moteur (on l'arrête)."
+      ],
+      "reponse": "« Si le capteur détecte un obstacle, alors arrêter le moteur » : le programme commande l'actionneur (le moteur)."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "algorithme complet",
+      "enonce": "Écris l'algorithme d'un feu tricolore pour piétons qui répète en boucle : vert 20 s, puis orange 3 s, puis rouge 20 s, et qui, seulement au rouge, allume aussi le petit bonhomme vert « traversez ». Utilise une boucle et une condition.",
+      "corrige": [
+        "On répète toujours la même suite : c'est une boucle infinie « Répéter indéfiniment ».",
+        "Séquence dans la boucle : allumer vert (attendre 20 s), allumer orange (attendre 3 s), allumer rouge (attendre 20 s).",
+        "Condition : « Si le feu voiture est rouge, alors allumer le bonhomme piéton », car les piétons ne traversent qu'au rouge.",
+        "On assemble : Répéter indéfiniment : [ feu vert ; attendre 20 s ; feu orange ; attendre 3 s ; feu rouge ; Si feu = rouge alors bonhomme vert ; attendre 20 s ]."
+      ],
+      "reponse": "Une boucle « Répéter indéfiniment » enchaîne vert (20 s), orange (3 s), rouge (20 s), avec une condition « si feu rouge alors allumer le bonhomme piéton »."
+    }
+  ]
+}

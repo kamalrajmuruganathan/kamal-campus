@@ -1,0 +1,98 @@
+{
+  "id": "tale-nsi-algorithmes-de-graphes-exos",
+  "chapitre": "tale-nsi-algorithmes-de-graphes",
+  "titre": "Exercices — Algorithmes sur les graphes",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vocabulaire et représentation",
+      "enonce": "On considère le graphe non orienté d'arêtes {A-B, A-C, B-C, C-D}. Donne l'ordre (nombre de sommets), le nombre d'arêtes, et le degré de chaque sommet. Le graphe est-il connexe ?",
+      "corrige": [
+        "Les sommets sont A, B, C, D : l'ordre du graphe vaut 4.",
+        "Les arêtes sont A-B, A-C, B-C, C-D : il y a 4 arêtes.",
+        "Le degré compte les arêtes incidentes : deg(A)=2 (B,C), deg(B)=2 (A,C), deg(C)=3 (A,B,D), deg(D)=1 (C).",
+        "Vérification : la somme des degrés 2+2+3+1=8 = 2 x (nombre d'arêtes) = 2 x 4. Cohérent.",
+        "On peut atteindre tout sommet depuis A (A-C-D par exemple), donc le graphe est connexe."
+      ],
+      "reponse": "Ordre 4, 4 arêtes, degrés A=2, B=2, C=3, D=1 ; le graphe est connexe."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "matrice d'adjacence",
+      "enonce": "Un graphe orienté a pour sommets [0,1,2] et pour arcs 0->1, 1->2, 2->0, 0->2. Écris sa matrice d'adjacence M (lignes = départ, colonnes = arrivée), où M[i][j]=1 s'il existe un arc de i vers j.",
+      "corrige": [
+        "On construit une matrice 3x3 remplie de 0.",
+        "Arc 0->1 : M[0][1]=1. Arc 0->2 : M[0][2]=1.",
+        "Arc 1->2 : M[1][2]=1.",
+        "Arc 2->0 : M[2][0]=1.",
+        "Le graphe étant orienté, la matrice n'est pas symétrique."
+      ],
+      "reponse": "M = [[0,1,1],[0,0,1],[1,0,0]]."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "dictionnaire d'adjacence",
+      "enonce": "On représente un graphe non orienté par un dictionnaire d'adjacence en Python :\n\ng = {'A': ['B','C'], 'B': ['A','C'], 'C': ['A','B','D'], 'D': ['C']}\n\nÉcris une fonction voisins(g, s) qui renvoie la liste des voisins de s, et donne le résultat de voisins(g,'C').",
+      "corrige": [
+        "Dans cette représentation, g[s] est déjà la liste des voisins de s.",
+        "def voisins(g, s):",
+        "    return g[s]",
+        "Appel : voisins(g,'C') renvoie la valeur associée à la clé 'C'.",
+        "g['C'] vaut ['A','B','D']."
+      ],
+      "reponse": "voisins(g,'C') renvoie ['A','B','D']."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "parcours en largeur (BFS)",
+      "enonce": "On effectue un parcours en largeur (BFS) du graphe g = {'A':['B','C'], 'B':['A','D'], 'C':['A','D'], 'D':['B','C']} en partant de 'A'. Les voisins sont explorés dans l'ordre des listes. Donne l'ordre de découverte des sommets.",
+      "corrige": [
+        "BFS utilise une file. On enfile A et on le marque visité. File : [A].",
+        "On défile A, on visite ses voisins non marqués B puis C, on les enfile. Découverts : A, B, C. File : [B, C].",
+        "On défile B, ses voisins sont A (déjà visité) et D (nouveau) : on enfile D. Découverts : A, B, C, D. File : [C, D].",
+        "On défile C, ses voisins A et D sont déjà marqués : rien à ajouter. File : [D].",
+        "On défile D, tous ses voisins sont marqués. File vide, parcours terminé."
+      ],
+      "reponse": "Ordre de découverte BFS : A, B, C, D."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "parcours en profondeur (DFS) récursif",
+      "enonce": "Complète et trace ce parcours en profondeur récursif sur le même graphe g = {'A':['B','C'], 'B':['A','D'], 'C':['A','D'], 'D':['B','C']} depuis 'A' :\n\ndef dfs(g, s, vus):\n    vus.append(s)\n    for v in g[s]:\n        if v not in vus:\n            dfs(g, v, vus)\n    return vus\n\nDonne le contenu final de vus pour dfs(g,'A',[]).",
+      "corrige": [
+        "Appel dfs(A) : vus=[A]. Voisins de A : B (non vu) -> on descend.",
+        "Appel dfs(B) : vus=[A,B]. Voisins de B : A (vu), D (non vu) -> on descend.",
+        "Appel dfs(D) : vus=[A,B,D]. Voisins de D : B (vu), C (non vu) -> on descend.",
+        "Appel dfs(C) : vus=[A,B,D,C]. Voisins de C : A (vu), D (vu) -> aucun appel, on remonte.",
+        "On remonte dans D, B puis A : leurs autres voisins sont désormais tous vus."
+      ],
+      "reponse": "vus final = ['A','B','D','C']."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "détection de cycle / plus court chemin",
+      "enonce": "Le graphe non orienté g = {'A':['B','C'], 'B':['A','C'], 'C':['A','B','D'], 'D':['C']} contient-il un cycle ? Justifie. Puis, à l'aide d'un BFS depuis 'A', donne la distance (en nombre d'arêtes) de 'A' à 'D' et un plus court chemin.",
+      "corrige": [
+        "Cycle : A-B-C-A est un chemin qui part de A et revient en A sans réutiliser d'arête (A-B, B-C, C-A). C'est un cycle, donc le graphe en contient un.",
+        "Autre argument : un arbre à 4 sommets aurait 3 arêtes ; ici il y en a 4 (A-B, A-C, B-C, C-D), le surplus d'arête crée forcément un cycle dans un graphe connexe.",
+        "BFS depuis A : niveau 0 = {A}, niveau 1 = voisins de A = {B, C}, niveau 2 = voisins non encore vus de B et C = {D} (via C).",
+        "D apparaît au niveau 2 : la distance de A à D vaut 2 arêtes.",
+        "En mémorisant le prédécesseur (D vient de C, C vient de A), on reconstruit le chemin A -> C -> D."
+      ],
+      "reponse": "Oui, il y a un cycle (A-B-C-A) ; distance(A,D)=2 et un plus court chemin est A-C-D."
+    }
+  ]
+}

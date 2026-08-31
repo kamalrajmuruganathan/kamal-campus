@@ -16,7 +16,7 @@ sert exactement le contenu de ton programme.
 - **2 080 questions** de QCM et **2 080 exercices** corrigés.
 - **2 326 cartes** de révision (flashcards).
 - **48 chapitres** reliés à un outil de calcul.
-- **14 formulaires**, **17 sujets** type bac/brevet, **29 bac blancs & évaluations**.
+- **14 formulaires**, **20 sujets** type bac/brevet, **33 bac blancs & évaluations**.
 
 ---
 

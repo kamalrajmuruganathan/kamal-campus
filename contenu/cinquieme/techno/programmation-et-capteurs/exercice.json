@@ -1,0 +1,88 @@
+{
+  "id": "5e-techno-programmation-et-capteurs-exos",
+  "chapitre": "5e-techno-programmation-et-capteurs",
+  "titre": "Exercices — Programmation et capteurs",
+  "voie": "generale",
+  "niveau": "cinquieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "capteur ou actionneur",
+      "enonce": "Classe ces composants en « capteur » (entrée) ou « actionneur » (sortie) : un moteur, une photorésistance, un buzzer, un bouton-poussoir.",
+      "corrige": [
+        "Un capteur détecte une grandeur (entrée) ; un actionneur produit une action (sortie).",
+        "La photorésistance mesure la lumière et le bouton-poussoir détecte un appui : ce sont des capteurs.",
+        "Le moteur fait tourner et le buzzer sonne : ce sont des actionneurs."
+      ],
+      "reponse": "Capteurs : la photorésistance et le bouton-poussoir ; actionneurs : le moteur et le buzzer."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "logique ou analogique",
+      "enonce": "Dis si l'information est logique (tout ou rien) ou analogique (valeur continue) : (a) un bouton appuyé/relâché ; (b) une température de 19,3 °C ; (c) une luminosité plus ou moins forte.",
+      "corrige": [
+        "Une information logique n'a que deux états (0/1) ; une information analogique varie de façon continue.",
+        "(a) appuyé/relâché = deux états → logique.",
+        "(b) 19,3 °C est une valeur continue → analogique. (c) luminosité plus ou moins forte → analogique."
+      ],
+      "reponse": "(a) logique, (b) analogique, (c) analogique."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "chaîne d'information",
+      "enonce": "Nomme les trois fonctions de la chaîne d'information et donne, pour chacune, un exemple d'élément qui la réalise.",
+      "corrige": [
+        "La chaîne d'information acquiert, traite et communique/agit.",
+        "Acquérir : un capteur (par exemple un capteur de lumière). Traiter : un programme dans un microcontrôleur.",
+        "Communiquer/agir : un actionneur (par exemple une lampe ou un moteur)."
+      ],
+      "reponse": "Acquérir (capteur) → traiter (programme/microcontrôleur) → communiquer-agir (actionneur)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "structure de test",
+      "enonce": "Écris, avec « SI… ALORS… SINON… », le traitement d'un lampadaire automatique : la lampe doit s'allumer quand la luminosité est faible, et s'éteindre sinon.",
+      "corrige": [
+        "On teste l'information venant du capteur de luminosité.",
+        "SI la luminosité est faible (il fait nuit) ALORS allumer la lampe.",
+        "SINON éteindre la lampe."
+      ],
+      "reponse": "SI la luminosité est faible ALORS allumer la lampe, SINON éteindre la lampe."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "boucle et condition",
+      "enonce": "Un portail automatique doit avancer « tant que » le portail n'est pas complètement ouvert. (a) Quelle structure de programmation utilise-t-on ? (b) Écris l'instruction. (c) Le capteur de fin de course est-il une entrée ou une sortie ?",
+      "corrige": [
+        "(a) « Tant que » une condition reste vraie, on répète : c'est une boucle (répétition conditionnelle).",
+        "(b) TANT QUE le portail n'est pas ouvert : faire tourner le moteur d'ouverture.",
+        "(c) Le capteur de fin de course détecte une information : c'est une entrée."
+      ],
+      "reponse": "(a) une boucle « tant que », (b) « TANT QUE le portail n'est pas ouvert : faire tourner le moteur », (c) une entrée (c'est un capteur)."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "algorithme d'arrosage automatique",
+      "enonce": "Écris l'algorithme d'un système d'arrosage qui, en boucle permanente, lit un capteur d'humidité du sol et arrose seulement si le sol est trop sec. Identifie le capteur (entrée), l'actionneur (sortie), le test et la boucle.",
+      "corrige": [
+        "Acquérir : lire le capteur d'humidité du sol (l'entrée).",
+        "Traiter (test) : SI l'humidité est inférieure à un seuil (sol trop sec) ALORS ouvrir la pompe/l'électrovanne, SINON la garder fermée.",
+        "Agir : la pompe (ou l'électrovanne) est l'actionneur (la sortie).",
+        "Boucle : Répéter indéfiniment cette vérification.",
+        "Algorithme : Répéter indéfiniment : [ lire le capteur d'humidité ; SI humidité < seuil ALORS arroser (pompe ON) SINON pompe OFF ]."
+      ],
+      "reponse": "Répéter indéfiniment : lire le capteur d'humidité (entrée), SI le sol est trop sec ALORS mettre la pompe en marche SINON l'arrêter (sortie) ; une boucle entoure un test qui commande l'actionneur."
+    }
+  ]
+}

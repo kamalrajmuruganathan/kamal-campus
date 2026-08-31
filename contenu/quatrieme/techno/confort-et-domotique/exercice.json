@@ -1,0 +1,95 @@
+{
+  "id": "4e-techno-confort-et-domotique-exos",
+  "chapitre": "4e-techno-confort-et-domotique",
+  "titre": "Exercices — Confort et domotique",
+  "voie": "generale",
+  "niveau": "quatrieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Définition",
+      "enonce": "Qu'est-ce que la domotique ? Cite les trois grands besoins auxquels elle répond, avec un exemple pour chacun.",
+      "corrige": [
+        "La domotique est l'ensemble des techniques qui permettent d'automatiser et de contrôler les équipements d'un logement.",
+        "Confort : régler la température ou la lumière automatiquement.",
+        "Sécurité : détecter une intrusion, une fumée ou une fuite d'eau.",
+        "Économie d'énergie : éteindre le chauffage quand une fenêtre est ouverte."
+      ],
+      "reponse": "La domotique automatise un logement pour trois besoins : confort, sécurité et économie d'énergie."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Capteur ou actionneur",
+      "enonce": "Classe chaque élément en capteur ou actionneur : a) une lampe, b) un détecteur de mouvement, c) un moteur de volet, d) un capteur d'humidité.",
+      "corrige": [
+        "Un capteur transforme une grandeur physique en signal (il mesure, il détecte). Un actionneur transforme un signal en action physique.",
+        "a) Lampe : elle éclaire (action) → actionneur.",
+        "b) Détecteur de mouvement : il détecte une présence → capteur.",
+        "c) Moteur de volet : il ouvre ou ferme (action) → actionneur.",
+        "d) Capteur d'humidité : il mesure l'eau dans l'air ou le sol → capteur."
+      ],
+      "reponse": "a) actionneur, b) capteur, c) actionneur, d) capteur."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Chaîne d'un système automatique",
+      "enonce": "Remets dans le bon ordre les trois éléments d'un système domotique automatique : « actionneur », « capteur », « unité de traitement (programme) ». Explique en une phrase le rôle de chacun.",
+      "corrige": [
+        "L'ordre est : capteur → unité de traitement → actionneur (acquérir → traiter → agir).",
+        "Le capteur acquiert l'information (il mesure la grandeur physique).",
+        "L'unité de traitement (carte programmable) décide en comparant à des conditions.",
+        "L'actionneur agit sur le monde réel (éclairer, chauffer, ouvrir)."
+      ],
+      "reponse": "Capteur (mesure) → unité de traitement (décide) → actionneur (agit)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Condition et seuil",
+      "enonce": "On veut qu'une lampe s'allume seulement s'il y a quelqu'un ET s'il fait sombre. Le seuil de nuit est fixé à 100 lux. Écris la condition sous la forme « SI … ALORS … SINON … », puis dis ce qui se passe s'il y a une présence mais que la luminosité mesurée est 300 lux.",
+      "corrige": [
+        "Un seuil est une valeur de référence choisie par le concepteur ; ici 100 lux.",
+        "SI (présence détectée) ET (luminosité < 100 lux) ALORS allumer la lampe SINON éteindre la lampe.",
+        "Avec 300 lux, la condition (luminosité < 100) est fausse : il ne fait pas assez sombre.",
+        "La condition complète est donc fausse : la lampe reste éteinte, même s'il y a une présence."
+      ],
+      "reponse": "SI présence ET luminosité < 100 lux ALORS allumer SINON éteindre ; à 300 lux la lampe reste éteinte."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Boucle ouverte / boucle fermée",
+      "enonce": "Système A : un arrosage se déclenche tous les jours à 20 h. Système B : un thermostat mesure la température de la pièce et coupe le chauffage dès que 19 °C sont atteints. Indique lequel est en boucle ouverte et lequel est en boucle fermée, et explique le rôle du retour d'information.",
+      "corrige": [
+        "Une boucle ouverte agit sans vérifier le résultat ; une boucle fermée (asservie) mesure le résultat et se corrige.",
+        "Système A : l'arrosage se déclenche à heure fixe sans vérifier s'il a plu → boucle ouverte.",
+        "Système B : le thermostat mesure la température obtenue et coupe le chauffage à 19 °C → boucle fermée.",
+        "Le retour d'information est la mesure du résultat par un capteur : elle permet au programme de corriger l'action (couper le chauffage au bon moment), ce qui rend le réglage précis et économe."
+      ],
+      "reponse": "A est en boucle ouverte, B en boucle fermée ; le retour d'information (mesure par capteur) permet au système B de se corriger tout seul."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Concevoir un système domotique",
+      "enonce": "On veut éviter les déperditions de chaleur : le chauffage d'une chambre doit se couper automatiquement quand une fenêtre est ouverte, et se remettre en marche seulement si la température descend en dessous de 18 °C. Liste les capteurs et actionneurs nécessaires, écris l'algorithme avec des conditions, et explique pourquoi ce système répond à la fois au confort et à l'économie d'énergie.",
+      "corrige": [
+        "Capteurs : un capteur d'ouverture sur la fenêtre (ouvert/fermé) et un capteur de température.",
+        "Actionneur : la commande du chauffage (résistance chauffante ou relais de la chaudière).",
+        "Algorithme : SI (fenêtre ouverte) ALORS couper le chauffage ; SINON SI (température < 18 °C) ALORS allumer le chauffage SINON couper le chauffage.",
+        "Économie d'énergie : couper le chauffage quand la fenêtre est ouverte évite de chauffer l'extérieur.",
+        "Confort : le chauffage se rallume dès que la pièce redescend sous 18 °C, ce qui maintient une température agréable sans intervention.",
+        "Le système est asservi (boucle fermée) car le capteur de température vérifie le résultat et permet la correction."
+      ],
+      "reponse": "Capteur d'ouverture + capteur de température, actionneur = chauffage ; SI fenêtre ouverte couper, SINON SI T < 18 °C allumer, SINON couper. Il économise l'énergie (pas de chauffage fenêtre ouverte) tout en gardant le confort (rallumage automatique)."
+    }
+  ]
+}

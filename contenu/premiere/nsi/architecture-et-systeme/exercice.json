@@ -1,0 +1,88 @@
+{
+  "id": "1nsi-architecture-et-systeme-exos",
+  "chapitre": "1nsi-architecture-et-systeme",
+  "titre": "Exercices — Architecture machine et système d'exploitation",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "modèle de von Neumann",
+      "enonce": "Cite les grands composants du modèle d'architecture de von Neumann et indique lequel exécute les calculs.",
+      "corrige": [
+        "Le modèle de von Neumann distingue : l'unité centrale de traitement (le processeur), la mémoire, et les dispositifs d'entrée-sortie, reliés par des bus.",
+        "Le processeur contient l'unité arithmétique et logique (UAL) et l'unité de commande (ou de contrôle).",
+        "C'est l'UAL qui effectue les opérations arithmétiques (additions…) et logiques (ET, OU…)."
+      ],
+      "reponse": "Le modèle comprend le processeur (UAL + unité de commande), la mémoire et les entrées-sorties ; c'est l'UAL qui exécute les calculs."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "rôle des composants du processeur",
+      "enonce": "À quoi servent respectivement l'unité de commande et les registres dans un processeur ?",
+      "corrige": [
+        "L'unité de commande lit les instructions du programme en mémoire, les décode et pilote les autres composants pour les exécuter.",
+        "Les registres sont de très petites mémoires internes au processeur, extrêmement rapides.",
+        "Ils stockent temporairement les données et les résultats intermédiaires manipulés par l'UAL."
+      ],
+      "reponse": "L'unité de commande organise l'exécution des instructions ; les registres stockent très rapidement les données et résultats intermédiaires."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "commandes de base d'un système Unix",
+      "enonce": "Associe chaque commande Unix à son effet : pwd, ls, cd. Laquelle affiche le répertoire courant ?",
+      "corrige": [
+        "pwd (print working directory) affiche le chemin du répertoire courant.",
+        "ls (list) affiche la liste des fichiers et dossiers du répertoire.",
+        "cd (change directory) change de répertoire de travail."
+      ],
+      "reponse": "pwd affiche le répertoire courant, ls liste le contenu, cd change de répertoire : c'est pwd qui affiche le répertoire courant."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "chemins absolus et relatifs",
+      "enonce": "Le répertoire courant est /home/kamal/cours. On veut atteindre le fichier situé en /home/kamal/photos/ile.jpg. Donne le chemin absolu, puis un chemin relatif depuis le répertoire courant.",
+      "corrige": [
+        "Un chemin absolu part de la racine / et décrit tout le trajet : /home/kamal/photos/ile.jpg.",
+        "Un chemin relatif part du répertoire courant /home/kamal/cours. Il faut d'abord remonter d'un cran avec .. pour arriver à /home/kamal.",
+        "Puis on descend dans photos jusqu'au fichier : ../photos/ile.jpg."
+      ],
+      "reponse": "Chemin absolu : /home/kamal/photos/ile.jpg ; chemin relatif depuis /home/kamal/cours : ../photos/ile.jpg."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "exécution d'un petit programme en langage machine (registres)",
+      "enonce": "Un processeur exécute la séquence suivante sur des registres R (assembleur simplifié) :\nR1 ← 4\nR2 ← 7\nR3 ← R1 + R2\nR3 ← R3 + R1\nDonne la valeur de chaque registre après exécution.",
+      "corrige": [
+        "R1 ← 4 : R1 vaut 4. R2 ← 7 : R2 vaut 7.",
+        "R3 ← R1 + R2 : R3 = 4 + 7 = 11.",
+        "R3 ← R3 + R1 : R3 = 11 + 4 = 15 (R1 et R2 ne changent pas)."
+      ],
+      "reponse": "Après exécution : R1 = 4, R2 = 7 et R3 = 15."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "système d'exploitation : processus et droits sur les fichiers",
+      "enonce": "1) Sur un système Unix, on liste un fichier avec ls -l et on lit : -rwxr-xr-- . Explique ce que peuvent faire respectivement le propriétaire, le groupe et les autres. 2) Rappelle ce qu'est un processus pour le système d'exploitation.",
+      "corrige": [
+        "Les droits se lisent par groupes de 3 après le premier caractère : rwx (propriétaire), r-x (groupe), r-- (autres).",
+        "r = lecture, w = écriture, x = exécution ; un tiret signifie que le droit est absent.",
+        "Propriétaire rwx : il peut lire, écrire et exécuter. Groupe r-x : lire et exécuter, mais pas modifier. Autres r-- : seulement lire.",
+        "Un processus est un programme en cours d'exécution : le système d'exploitation lui attribue des ressources (mémoire, temps processeur) et l'identifie par un numéro (PID).",
+        "Le système gère plusieurs processus « en même temps » en partageant le temps du processeur entre eux (ordonnancement)."
+      ],
+      "reponse": "Avec -rwxr-xr-- : le propriétaire peut lire/écrire/exécuter, le groupe lire et exécuter, les autres seulement lire ; un processus est un programme en cours d'exécution auquel le système alloue des ressources et un identifiant (PID)."
+    }
+  ]
+}

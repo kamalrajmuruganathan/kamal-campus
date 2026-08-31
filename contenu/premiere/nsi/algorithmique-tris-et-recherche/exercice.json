@@ -1,0 +1,91 @@
+{
+  "id": "1nsi-algorithmique-tris-et-recherche-exos",
+  "chapitre": "1nsi-algorithmique-tris-et-recherche",
+  "titre": "Exercices — Algorithmique : tris et recherche",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "recherche séquentielle",
+      "enonce": "On cherche la valeur 9 par recherche séquentielle (de gauche à droite) dans la liste [4, 7, 9, 2, 5]. Combien de comparaisons effectue-t-on avant de la trouver ?",
+      "corrige": [
+        "La recherche séquentielle compare la valeur cherchée aux éléments un par un, depuis le début.",
+        "Comparaison 1 : 4 ≠ 9. Comparaison 2 : 7 ≠ 9. Comparaison 3 : 9 = 9, trouvé.",
+        "On s'arrête dès que la valeur est trouvée, à la 3e comparaison."
+      ],
+      "reponse": "On effectue 3 comparaisons pour trouver 9 (elle est à l'indice 2)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "liste triée ou non",
+      "enonce": "On considère la liste [2, 5, 5, 8, 11]. Est-elle triée dans l'ordre croissant ? Justifie la condition qui doit être vraie entre chaque élément et le suivant.",
+      "corrige": [
+        "Une liste est triée en ordre croissant si chaque élément est inférieur ou égal au suivant (relation ⩽, les égalités étant autorisées).",
+        "On vérifie les couples successifs : 2 ⩽ 5, 5 ⩽ 5, 5 ⩽ 8, 8 ⩽ 11 : toutes les conditions sont vraies.",
+        "La liste respecte donc l'ordre croissant."
+      ],
+      "reponse": "Oui, la liste est triée dans l'ordre croissant car chaque élément est inférieur ou égal au suivant."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "recherche du minimum (tri par sélection)",
+      "enonce": "Première étape d'un tri par sélection sur [8, 3, 6, 1, 5] : on cherche le minimum de toute la liste pour le placer en première position. Quel élément est déplacé et que devient le début de la liste ?",
+      "corrige": [
+        "Le tri par sélection cherche le plus petit élément de la partie non triée et l'échange avec le premier élément.",
+        "Le minimum de [8, 3, 6, 1, 5] est 1 (à l'indice 3).",
+        "On échange 1 avec le premier élément 8 : la liste devient [1, 3, 6, 8, 5]."
+      ],
+      "reponse": "Le minimum 1 est placé en tête ; après la première étape la liste devient [1, 3, 6, 8, 5]."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "recherche dichotomique",
+      "enonce": "Dans la liste triée [1, 4, 6, 9, 12, 15, 20] (indices 0 à 6), on cherche la valeur 12 par recherche dichotomique. Détaille les étapes (indices de début, milieu, fin) jusqu'à la trouver.",
+      "corrige": [
+        "Début g=0, fin d=6. Milieu m = (0+6)//2 = 3 → valeur 9. 12 > 9, on cherche à droite : g = m+1 = 4.",
+        "Maintenant g=4, d=6. Milieu m = (4+6)//2 = 5 → valeur 15. 12 < 15, on cherche à gauche : d = m-1 = 4.",
+        "Maintenant g=4, d=4. Milieu m = (4+4)//2 = 4 → valeur 12. 12 = 12, trouvé à l'indice 4.",
+        "Il a suffi de 3 comparaisons au lieu de parcourir toute la liste."
+      ],
+      "reponse": "La recherche dichotomique trouve 12 à l'indice 4 en 3 étapes (milieux successifs aux indices 3, 5 puis 4)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "tri par insertion (trace)",
+      "enonce": "On applique le tri par insertion à la liste [5, 2, 4, 1]. Donne l'état de la liste après chaque insertion (on insère successivement les éléments d'indice 1, 2 puis 3 dans la partie déjà triée à leur gauche).",
+      "corrige": [
+        "Départ : [5, 2, 4, 1], la partie triée est [5].",
+        "Insertion de 2 : 2 < 5, on décale 5 et on place 2 devant → [2, 5, 4, 1].",
+        "Insertion de 4 : 4 < 5 (on décale 5), 4 > 2 (on s'arrête) → [2, 4, 5, 1].",
+        "Insertion de 1 : 1 est plus petit que 5, 4 et 2, on décale tout et on place 1 au début → [1, 2, 4, 5].",
+        "La liste est alors triée."
+      ],
+      "reponse": "États successifs : [2, 5, 4, 1], puis [2, 4, 5, 1], puis [1, 2, 4, 5] (liste triée)."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "coût : recherche séquentielle vs dichotomique",
+      "enonce": "Une liste triée contient 1000 éléments. 1) Dans le pire des cas, combien de comparaisons fait une recherche séquentielle ? 2) Combien d'étapes fait au maximum une recherche dichotomique ? 3) Explique pourquoi la dichotomie exige que la liste soit triée.",
+      "corrige": [
+        "1) La recherche séquentielle, dans le pire des cas, compare la valeur à tous les éléments : jusqu'à 1000 comparaisons.",
+        "2) La dichotomie divise l'intervalle de recherche par 2 à chaque étape. Le nombre d'étapes est de l'ordre de log2(1000).",
+        "Comme 2^9 = 512 < 1000 ⩽ 1024 = 2^10, il faut au plus 10 étapes.",
+        "3) À chaque étape, la dichotomie compare au milieu et élimine une moitié en supposant que « à gauche c'est plus petit, à droite c'est plus grand ».",
+        "Ce raisonnement n'est valable que si la liste est triée ; sur une liste non triée, éliminer une moitié n'a plus de sens et le résultat serait faux."
+      ],
+      "reponse": "Au pire 1000 comparaisons en séquentiel contre environ 10 étapes (log2(1000)) en dichotomique ; la dichotomie n'est correcte que sur une liste triée, car elle élimine une moitié en se fiant à l'ordre des éléments."
+    }
+  ]
+}

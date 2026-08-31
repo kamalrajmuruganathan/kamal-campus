@@ -1,0 +1,95 @@
+{
+  "id": "tale-nsi-programmation-et-complexite-exos",
+  "chapitre": "tale-nsi-programmation-et-complexite",
+  "titre": "Exercices — Programmation, mise au point et complexité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "trace d'exécution",
+      "enonce": "Donne la valeur renvoyée par cette fonction pour mystere(4) :\n\ndef mystere(n):\n    s = 0\n    for i in range(1, n+1):\n        s = s + i\n    return s",
+      "corrige": [
+        "range(1, n+1) avec n=4 parcourt i = 1, 2, 3, 4.",
+        "s démarre à 0, puis s = 0+1 = 1, puis 1+2 = 3, puis 3+3 = 6, puis 6+4 = 10.",
+        "La boucle se termine et on renvoie s.",
+        "La fonction calcule la somme des entiers de 1 à n."
+      ],
+      "reponse": "mystere(4) renvoie 10 (la somme 1+2+3+4)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "jeu de tests / assertions",
+      "enonce": "On veut tester la fonction maximum(t) qui renvoie le plus grand élément d'une liste non vide. Propose trois assertions Python pertinentes couvrant des cas différents.",
+      "corrige": [
+        "Cas d'une liste à un seul élément : le maximum est cet élément. assert maximum([7]) == 7.",
+        "Cas où le maximum est au milieu : assert maximum([3, 9, 5]) == 9.",
+        "Cas avec des valeurs négatives : assert maximum([-4, -1, -8]) == -1.",
+        "Ces tests couvrent taille minimale, position variable du max et valeurs négatives."
+      ],
+      "reponse": "Par exemple assert maximum([7])==7, assert maximum([3,9,5])==9, assert maximum([-4,-1,-8])==-1."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "débogage",
+      "enonce": "Cette fonction doit compter les nombres pairs d'une liste mais renvoie toujours 0. Trouve et corrige le bug :\n\ndef compte_pairs(t):\n    c = 0\n    for x in t:\n        if x % 2 == 1:\n            c = c + 1\n    return c",
+      "corrige": [
+        "Un nombre est pair quand le reste de sa division par 2 est 0, pas 1.",
+        "La condition x % 2 == 1 teste en réalité les nombres impairs.",
+        "Si la liste ne contient que des pairs, aucun ne vérifie la condition, d'où le résultat 0 observé.",
+        "Il faut remplacer la condition par x % 2 == 0."
+      ],
+      "reponse": "Le test doit être if x % 2 == 0 (pair = reste nul), et non == 1."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "complexité d'une boucle",
+      "enonce": "Donne la complexité en temps, en fonction de n = len(t), du nombre d'opérations de comparaison effectuées par cette recherche, dans le pire des cas :\n\ndef recherche(t, x):\n    for i in range(len(t)):\n        if t[i] == x:\n            return i\n    return -1",
+      "corrige": [
+        "Dans le pire des cas, x est absent ou en dernière position : la boucle parcourt tout le tableau.",
+        "Elle effectue alors n comparaisons t[i] == x, une par élément.",
+        "Le nombre d'opérations est proportionnel à n.",
+        "On dit que la complexité est linéaire, notée O(n)."
+      ],
+      "reponse": "Complexité linéaire O(n) dans le pire des cas."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "comparaison de complexités",
+      "enonce": "On dispose d'un tableau trié de taille n. La recherche séquentielle est en O(n) et la recherche dichotomique en O(log n). Pour n = 1 000 000, estime le nombre de comparaisons de chaque méthode dans le pire des cas et conclus.",
+      "corrige": [
+        "Recherche séquentielle : dans le pire des cas elle regarde toutes les cases, soit environ 1 000 000 de comparaisons.",
+        "Recherche dichotomique : elle divise l'intervalle par 2 à chaque étape, le nombre d'étapes est de l'ordre de log2(n).",
+        "log2(1 000 000) est proche de 20 (car 2^20 vaut environ 1 048 576).",
+        "On compare donc environ 1 000 000 contre environ 20 comparaisons.",
+        "La dichotomie est radicalement plus efficace, mais elle exige que le tableau soit trié."
+      ],
+      "reponse": "Environ 1 000 000 comparaisons (séquentielle) contre environ 20 (dichotomique) : la dichotomie est bien plus rapide sur un tableau trié."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "complexité de boucles imbriquées et invariant",
+      "enonce": "1) Donne la complexité de la fonction ci-dessous en fonction de n. 2) Énonce un invariant de boucle qui prouve qu'à la fin, m contient le maximum de t (liste non vide).\n\ndef doublons(t):\n    n = len(t)\n    for i in range(n):\n        for j in range(i+1, n):\n            if t[i] == t[j]:\n                return True\n    return False\n\ndef maxi(t):\n    m = t[0]\n    for i in range(1, len(t)):\n        if t[i] > m:\n            m = t[i]\n    return m",
+      "corrige": [
+        "Pour doublons : la boucle interne effectue environ (n-1)+(n-2)+...+1 = n(n-1)/2 comparaisons dans le pire des cas (aucun doublon).",
+        "Ce nombre est proportionnel à n au carré : la complexité est quadratique, O(n^2).",
+        "Pour maxi : un invariant est 'au début du tour d'indice i, m est égal au maximum des éléments t[0..i-1]'.",
+        "Initialisation : avant la boucle (i=1), m = t[0] est bien le max de t[0..0].",
+        "Conservation : si m est le max de t[0..i-1], après avoir comparé t[i] et remplacé m si t[i]>m, m devient le max de t[0..i].",
+        "Terminaison : quand i atteint len(t), m est le max de t[0..n-1], c'est-à-dire de toute la liste."
+      ],
+      "reponse": "doublons est en O(n^2) ; l'invariant 'm = max(t[0..i-1]) au début du tour i' prouve que maxi renvoie le maximum de la liste."
+    }
+  ]
+}

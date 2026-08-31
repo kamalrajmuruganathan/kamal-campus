@@ -1,0 +1,87 @@
+{
+  "id": "1nsi-traitement-de-donnees-en-tables-exos",
+  "chapitre": "1nsi-traitement-de-donnees-en-tables",
+  "titre": "Exercices — Traitement de données en tables",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "vocabulaire des tables (descripteurs, enregistrements)",
+      "enonce": "On considère une table stockée dans un fichier CSV dont la première ligne est : nom,prenom,age,ville. Combien y a-t-il de descripteurs (colonnes) ? Comment appelle-t-on une ligne de données autre que l'en-tête ?",
+      "corrige": [
+        "La première ligne du CSV donne les descripteurs (aussi appelés champs ou attributs), séparés par des virgules.",
+        "Ici on compte : nom, prenom, age, ville → 4 descripteurs.",
+        "Chaque autre ligne correspond à un enregistrement (une entité décrite par ces descripteurs)."
+      ],
+      "reponse": "Il y a 4 descripteurs ; une ligne de données s'appelle un enregistrement."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "table comme liste de dictionnaires",
+      "enonce": "Une table est représentée par :\ntable = [\n    {\"nom\": \"Ba\", \"age\": 15},\n    {\"nom\": \"Ka\", \"age\": 16},\n    {\"nom\": \"Sy\", \"age\": 15}\n]\nQue renvoie len(table) ? Que renvoie table[1][\"nom\"] ?",
+      "corrige": [
+        "table est une liste dont chaque élément est un enregistrement (dictionnaire).",
+        "len(table) compte le nombre d'enregistrements : il y en a 3.",
+        "table[1] est le deuxième enregistrement {\"nom\": \"Ka\", \"age\": 16} ; table[1][\"nom\"] vaut donc 'Ka'."
+      ],
+      "reponse": "len(table) vaut 3 et table[1][\"nom\"] vaut 'Ka'."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "lecture d'un champ",
+      "enonce": "Avec la table de l'exercice 2, écris une expression qui donne l'âge du premier enregistrement, et une autre qui donne le nom du dernier enregistrement.",
+      "corrige": [
+        "Le premier enregistrement est table[0] ; son âge est table[0][\"age\"], soit 15.",
+        "Le dernier enregistrement est table[-1] ; son nom est table[-1][\"nom\"], soit 'Sy'."
+      ],
+      "reponse": "table[0][\"age\"] vaut 15 et table[-1][\"nom\"] vaut 'Sy'."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "filtrage (sélection d'enregistrements)",
+      "enonce": "Avec la table de l'exercice 2, écris une compréhension de liste qui renvoie les noms des élèves âgés de 15 ans, et donne le résultat.",
+      "corrige": [
+        "On parcourt chaque enregistrement e de la table et on teste la condition e[\"age\"] == 15.",
+        "On garde alors e[\"nom\"] : [e[\"nom\"] for e in table if e[\"age\"] == 15].",
+        "Ba (15) est gardé, Ka (16) écarté, Sy (15) gardé."
+      ],
+      "reponse": "[e[\"nom\"] for e in table if e[\"age\"] == 15] renvoie ['Ba', 'Sy']."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "tri d'une table selon un descripteur",
+      "enonce": "On veut trier la table :\ntable = [\n    {\"nom\": \"Ba\", \"age\": 16},\n    {\"nom\": \"Ka\", \"age\": 15},\n    {\"nom\": \"Sy\", \"age\": 17}\n]\npar âge croissant, avec sorted et une clé. Écris l'instruction et donne l'ordre des noms obtenu.",
+      "corrige": [
+        "sorted trie sans modifier la table de départ ; on précise le critère avec le paramètre key.",
+        "La clé est une fonction qui, pour un enregistrement e, renvoie la valeur à comparer : key = lambda e: e[\"age\"].",
+        "Instruction : sorted(table, key=lambda e: e[\"age\"]).",
+        "Les âges 16, 15, 17 rangés en ordre croissant donnent 15 (Ka), 16 (Ba), 17 (Sy)."
+      ],
+      "reponse": "sorted(table, key=lambda e: e[\"age\"]) range les enregistrements dans l'ordre Ka, Ba, Sy."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "calcul d'agrégat (moyenne d'une colonne)",
+      "enonce": "On dispose de la table :\nnotes = [\n    {\"eleve\": \"A\", \"note\": 12},\n    {\"eleve\": \"B\", \"note\": 8},\n    {\"eleve\": \"C\", \"note\": 16},\n    {\"eleve\": \"D\", \"note\": 14}\n]\nÉcris un code qui calcule la moyenne de la colonne \"note\", puis donne le nombre d'élèves au-dessus de cette moyenne.",
+      "corrige": [
+        "On extrait les notes : valeurs = [e[\"note\"] for e in notes] → [12, 8, 16, 14].",
+        "On calcule la moyenne : moyenne = sum(valeurs) / len(valeurs) = (12+8+16+14)/4 = 50/4 = 12.5.",
+        "On compte les enregistrements dont la note dépasse 12.5 : nb = len([e for e in notes if e[\"note\"] > 12.5]).",
+        "Les notes > 12.5 sont 16 (C) et 14 (D), soit 2 élèves."
+      ],
+      "reponse": "La moyenne de la colonne \"note\" vaut 12.5, et 2 élèves (C et D) sont au-dessus de cette moyenne."
+    }
+  ]
+}

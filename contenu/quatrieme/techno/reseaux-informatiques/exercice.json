@@ -1,0 +1,95 @@
+{
+  "id": "4e-techno-reseaux-informatiques-exos",
+  "chapitre": "4e-techno-reseaux-informatiques",
+  "titre": "Exercices — Les réseaux informatiques",
+  "voie": "generale",
+  "niveau": "quatrieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "LAN et WAN",
+      "enonce": "Donne la signification simple d'un réseau local (LAN) et d'un réseau étendu (WAN). Pour chacun, donne un exemple. À quel type appartient Internet ?",
+      "corrige": [
+        "Un réseau local (LAN) couvre un seul lieu (maison, salle, établissement) : par exemple le réseau du collège.",
+        "Un réseau étendu (WAN) couvre une région, un pays ou le monde : par exemple Internet.",
+        "Internet est un réseau étendu (WAN) ; c'est même un réseau mondial de réseaux."
+      ],
+      "reponse": "LAN = réseau local (ex. le collège), WAN = réseau étendu (ex. Internet) ; Internet est un WAN, réseau mondial de réseaux."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Supports de transmission",
+      "enonce": "Classe ces supports en filaire ou sans fil : a) câble Ethernet (RJ45), b) Wi-Fi, c) fibre optique, d) Bluetooth.",
+      "corrige": [
+        "Un support filaire relie par un câble ; un support sans fil utilise des ondes radio.",
+        "a) Câble Ethernet (RJ45) : filaire.",
+        "b) Wi-Fi : sans fil.",
+        "c) Fibre optique : filaire (lumière dans un fil de verre).",
+        "d) Bluetooth : sans fil."
+      ],
+      "reponse": "a) filaire, b) sans fil, c) filaire, d) sans fil."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Adresse IP",
+      "enonce": "À quoi sert une adresse IP ? Parmi ces écritures, laquelle ressemble à une adresse IP : « 192.168.1.15 » ou « MotDePasse2024 » ? Justifie.",
+      "corrige": [
+        "L'adresse IP est l'adresse unique de chaque appareil sur le réseau ; elle permet de livrer les données au bon endroit, comme une adresse postale.",
+        "« 192.168.1.15 » est une suite de nombres séparés par des points : c'est la forme d'une adresse IP.",
+        "« MotDePasse2024 » est un mot de passe (un code secret de connexion), ce n'est pas une adresse IP.",
+        "Il ne faut pas confondre adresse IP (qui identifie la machine) et mot de passe (qui protège l'accès)."
+      ],
+      "reponse": "L'adresse IP identifie chaque machine pour livrer les données ; c'est « 192.168.1.15 », pas un mot de passe."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Switch ou routeur",
+      "enonce": "Explique la différence entre un switch (commutateur) et un routeur. Dans une maison, lequel relie ta box à Internet en choisissant le chemin des données, et lequel relie plusieurs ordinateurs du même réseau local ?",
+      "corrige": [
+        "Le switch relie plusieurs appareils d'un même réseau local.",
+        "Le routeur relie des réseaux différents et choisit le chemin des données.",
+        "Pour relier le réseau de la maison à Internet en choisissant le chemin : c'est le routeur.",
+        "Pour relier plusieurs ordinateurs du même réseau local : c'est le switch."
+      ],
+      "reponse": "Le switch relie des machines d'un même réseau local ; le routeur relie des réseaux différents et choisit le chemin. Le routeur relie la maison à Internet, le switch relie les ordinateurs locaux."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Client / serveur et paquets",
+      "enonce": "Tu ouvres une page web dans ton navigateur. Explique le modèle client / serveur dans cette situation, puis explique pourquoi on dit que les données ne voyagent pas d'un seul bloc. Que contient un paquet ?",
+      "corrige": [
+        "Le client (ton navigateur) demande une ressource, ici la page web.",
+        "Le serveur répond en envoyant la ressource (la page).",
+        "Les données ne voyagent pas d'un bloc : elles sont découpées en petits morceaux appelés paquets.",
+        "Chaque paquet contient l'adresse de départ, l'adresse d'arrivée et un morceau du message.",
+        "Les paquets sont réassemblés dans l'ordre à l'arrivée pour reconstituer la page."
+      ],
+      "reponse": "Le navigateur (client) demande, le serveur répond ; les données sont découpées en paquets contenant adresse de départ, adresse d'arrivée et un morceau du message, réassemblés à l'arrivée."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Internet, Web et sécurité",
+      "enonce": "Un camarade affirme : « Le Web, c'est Internet, et le Wi-Fi, c'est aussi Internet. » Corrige ces deux affirmations en expliquant précisément chaque terme. Enfin, explique à quoi sert le HTTPS et pourquoi il rassure quand on saisit un mot de passe.",
+      "corrige": [
+        "Internet est le réseau physique mondial : les câbles, les machines, les adresses.",
+        "Le Web (World Wide Web) est seulement un service qui circule sur Internet : les pages reliées par des liens, consultées avec un navigateur. Ce n'est qu'un service parmi d'autres (messagerie, streaming, jeux).",
+        "Le Wi-Fi n'est qu'un moyen sans fil de se relier au réseau local ; sans box/routeur relié au réseau, le Wi-Fi ne donne pas accès à Internet.",
+        "Donc « le Web = Internet » et « le Wi-Fi = Internet » sont faux.",
+        "Le HTTPS est un protocole sécurisé (le « cadenas ») qui chiffre les données échangées avec le site.",
+        "Quand on saisit un mot de passe, le chiffrement empêche un tiers de lire les données transmises : c'est plus sûr."
+      ],
+      "reponse": "Faux : Internet est le réseau mondial ; le Web n'en est qu'un service (les pages) et le Wi-Fi seulement un accès sans fil au réseau local. Le HTTPS chiffre les données, ce qui protège un mot de passe pendant son transfert."
+    }
+  ]
+}

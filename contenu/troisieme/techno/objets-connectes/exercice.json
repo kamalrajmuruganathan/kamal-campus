@@ -1,0 +1,92 @@
+{
+  "id": "3e-techno-objets-connectes-exos",
+  "chapitre": "3e-techno-objets-connectes",
+  "titre": "Exercices — Les objets connectés",
+  "voie": "generale",
+  "niveau": "troisieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Définition et IoT",
+      "enonce": "Qu'est-ce qu'un objet connecté ? Comment appelle-t-on l'ensemble des objets connectés (donne le nom français et le sigle anglais) ?",
+      "corrige": [
+        "Un objet connecté est un objet technique capable d'échanger des informations avec d'autres appareils ou avec Internet, sans intervention permanente de l'humain.",
+        "L'ensemble de ces objets s'appelle l'Internet des objets.",
+        "Le sigle anglais est IoT (Internet of Things)."
+      ],
+      "reponse": "Un objet connecté échange des informations à distance ; l'ensemble forme l'Internet des objets (IoT)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Chaîne d'information",
+      "enonce": "Cite les trois fonctions de la chaîne d'information d'un objet connecté et le composant associé à chacune.",
+      "corrige": [
+        "Acquérir : recueillir une information grâce à un capteur.",
+        "Traiter : décider quoi faire grâce à un programme dans un microcontrôleur.",
+        "Communiquer / restituer : transmettre l'information ou commander une action (par exemple un actionneur ou un module de communication)."
+      ],
+      "reponse": "Acquérir (capteur) → Traiter (microcontrôleur) → Communiquer/agir (actionneur ou module de communication)."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Capteur ou actionneur",
+      "enonce": "Classe chaque élément en capteur ou actionneur : a) un moteur, b) un capteur ultrason (distance), c) une LED, d) un accéléromètre.",
+      "corrige": [
+        "Un capteur mesure une grandeur physique (entrée) ; un actionneur transforme une commande en action (sortie).",
+        "a) Moteur : il tourne (action) → actionneur.",
+        "b) Capteur ultrason : il mesure une distance → capteur.",
+        "c) LED : elle s'allume (action) → actionneur.",
+        "d) Accéléromètre : il mesure le mouvement → capteur."
+      ],
+      "reponse": "a) actionneur, b) capteur, c) actionneur, d) capteur."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Programmé vs connecté",
+      "enonce": "Une lampe programmée s'allume seule quand il fait nuit, mais ne communique avec rien. Une montre envoie ton nombre de pas vers ton smartphone par Bluetooth. Laquelle est un objet connecté ? Explique précisément ce qui fait la différence.",
+      "corrige": [
+        "Tout objet programmé n'est pas forcément connecté.",
+        "Ce qui distingue un objet connecté, c'est sa capacité à communiquer à distance (Wi-Fi, Bluetooth, réseau mobile).",
+        "La lampe est seulement programmée : elle réagit seule mais ne communique pas.",
+        "La montre envoie des données au smartphone par Bluetooth : elle communique à distance, c'est donc un objet connecté."
+      ],
+      "reponse": "La montre est l'objet connecté : elle communique à distance (Bluetooth), alors que la lampe est seulement programmée sans communiquer."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Thermostat connecté",
+      "enonce": "Décris le fonctionnement d'un thermostat connecté en suivant les fonctions acquérir → traiter → agir → communiquer. Précise le rôle du capteur, du microcontrôleur, de l'actionneur et de la liaison sans fil.",
+      "corrige": [
+        "Acquérir : le capteur de température mesure la température de la pièce.",
+        "Traiter : le microcontrôleur compare avec la température souhaitée et décide.",
+        "Agir : s'il fait trop froid, il commande le chauffage (actionneur) qui se met en marche.",
+        "Communiquer : il envoie la température au smartphone de l'utilisateur par le Wi-Fi.",
+        "L'utilisateur peut alors consulter et régler la température à distance."
+      ],
+      "reponse": "Le capteur mesure la température (acquérir), le microcontrôleur décide (traiter), le chauffage se met en marche (agir), et la température est envoyée au smartphone par Wi-Fi (communiquer)."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Chaînes et enjeux",
+      "enonce": "Pour un bracelet connecté qui mesure le rythme cardiaque et l'envoie vers une application, indique quels éléments appartiennent à la chaîne d'information et lesquels à la chaîne d'énergie. Puis explique deux enjeux (sécurité et données personnelles) posés par ce type d'objet.",
+      "corrige": [
+        "Chaîne d'information : le capteur de rythme cardiaque (acquérir), le microcontrôleur qui traite la mesure, le module sans fil qui communique les données.",
+        "Chaîne d'énergie : la batterie qui alimente le bracelet, et l'actionneur éventuel (vibreur, écran) qui agit ; l'actionneur est commandé par la chaîne d'information mais appartient à la chaîne d'énergie.",
+        "Enjeu de sécurité : les données transmises sans fil peuvent être interceptées si elles ne sont pas protégées.",
+        "Enjeu de données personnelles : le rythme cardiaque est une donnée de santé privée ; elle pourrait être utilisée à notre insu, d'où l'importance de protéger et de contrôler ces informations."
+      ],
+      "reponse": "Chaîne d'information : capteur cardiaque, microcontrôleur, module sans fil ; chaîne d'énergie : batterie et actionneur (vibreur/écran). Enjeux : sécurité (données interceptables) et protection des données personnelles de santé."
+    }
+  ]
+}
