@@ -232,6 +232,15 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="📎 Annales officielles"
+            sousTitre="Liens vers les vrais sujets (éduscol, APMEP…)"
+            detail="Sources gratuites, à télécharger"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('Annales')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre={L('card.outils.t')}
             sousTitre={L('card.outils.s')}
             couleur={t.couleur.succes}
