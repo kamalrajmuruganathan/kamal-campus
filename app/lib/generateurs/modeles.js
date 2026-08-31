@@ -465,3 +465,63 @@ export function loiOhm(rand) {
     explication: `Loi d'Ohm : U = R × I = ${R} × ${I} = ${U} V.`,
   }, rand);
 }
+
+/** Puissance électrique P = U × I. */
+export function puissanceUI(rand) {
+  const U = entier(rand, 2, 24);
+  const I = entier(rand, 1, 9);
+  const P = U * I;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'puissance',
+    enonce: `Un appareil sous ${U} V est parcouru par un courant de ${I} A. Quelle est sa puissance ?`,
+    bonne: `${P} W`,
+    distracteurs: [`${U + I} W`, `${U} W`, `${I} W`, `${P + 1} W`, `${P + 2} W`, `${P + U} W`],
+    explication: `P = U × I = ${U} × ${I} = ${P} W.`,
+  }, rand);
+}
+
+/** Moment d'une force M = F × d. */
+export function moment(rand) {
+  const F = entier(rand, 2, 40);
+  const d = entier(rand, 2, 10);
+  const M = F * d;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'moment',
+    enonce: `Une force de ${F} N s'applique à ${d} m de l'axe de rotation. Quel est le moment de cette force ?`,
+    bonne: `${M} N·m`,
+    distracteurs: [`${F + d} N·m`, `${F} N·m`, `${d} N·m`, `${M + 1} N·m`, `${M + 2} N·m`, `${M + F} N·m`],
+    explication: `M = F × d = ${F} × ${d} = ${M} N·m.`,
+  }, rand);
+}
+
+/** Contrainte σ = F / S (traction). */
+export function contrainte(rand) {
+  const sigma = entier(rand, 5, 60);
+  const S = entier(rand, 2, 20);
+  const F = sigma * S;
+  return construireQuestion({
+    difficulte: 'difficile',
+    notion: 'contrainte',
+    enonce: `Une pièce de section ${S} mm² subit une force de traction de ${F} N. Quelle est la contrainte ?`,
+    bonne: `${sigma} N/mm²`,
+    distracteurs: [`${F} N/mm²`, `${S} N/mm²`, `${sigma + 1} N/mm²`, `${sigma + 2} N/mm²`, `${sigma + 5} N/mm²`, `${F + S} N/mm²`],
+    explication: `σ = F ÷ S = ${F} ÷ ${S} = ${sigma} N/mm² (soit ${sigma} MPa).`,
+  }, rand);
+}
+
+/** Rendement η = Pu / Pa × 100. */
+export function rendement(rand) {
+  const eta = choisir(rand, [40, 50, 60, 70, 75, 80, 90]);
+  const Pa = choisir(rand, [100, 200, 300, 400, 500]);
+  const Pu = (eta * Pa) / 100;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'rendement',
+    enonce: `Un système reçoit une puissance de ${Pa} W et en fournit ${Pu} W d'utile. Quel est son rendement ?`,
+    bonne: `${eta} %`,
+    distracteurs: [`${100 - eta} %`, `${Pu} %`, `${eta + 5} %`, `${eta - 5} %`, `${eta + 10} %`, `${Math.round(Pa / Pu * 100)} %`],
+    explication: `η = Pu ÷ Pa × 100 = ${Pu} ÷ ${Pa} × 100 = ${eta} %.`,
+  }, rand);
+}

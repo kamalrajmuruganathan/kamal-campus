@@ -13,6 +13,7 @@ import {
   racineCarreParfait,
   additionSimple, soustractionSimple, multiplicationSimple, complementDix, leDouble,
   masseVolumique, vitesse, loiOhm,
+  puissanceUI, moment, contrainte, rendement,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -92,8 +93,18 @@ export const REGISTRE = {
   // ── Physique-chimie : grandeurs à volonté ──
   '5e-pc-mouvement-vitesse': [vitesse],
   '4e-pc-mouvement-vitesse': [vitesse],
+  '2nde-pc-mouvement-interactions': [vitesse],
+  'tale-spe-pc-decrire-mouvement': [vitesse],
   '3e-pc-masse-volumique': [masseVolumique],
-  '1spe-pc-energie-electrique': [loiOhm],
+  '2nde-pc-description-matiere': [masseVolumique],
+  '1spe-pc-energie-electrique': [loiOhm, puissanceUI],
+
+  // ── Sciences de l'ingénieur : grandeurs à volonté ──
+  '1si-chaine-denergie': [puissanceUI, rendement],
+  '1si-mecanique-des-solides': [moment],
+  '1si-comportement-des-materiaux': [contrainte],
+  'tale-si-energie-dans-les-systemes': [puissanceUI, rendement],
+  'tale-si-resistance-des-structures': [contrainte],
 };
 
 /** Le chapitre a-t-il au moins un générateur ? */

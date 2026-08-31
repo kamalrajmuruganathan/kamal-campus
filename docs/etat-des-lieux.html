@@ -11,7 +11,7 @@
     --good:#1a7f4b; --warn:#b07908; --crit:#c02a2a;
     /* matières */
     --m-maths:#2f6fed; --m-pc:#7d47cf; --m-svt:#1f8a52; --m-sci:#0f9488;
-    --m-techno:#cf7f1e; --m-snt:#d9583a; --m-nsi:#a97b1b;
+    --m-techno:#cf7f1e; --m-snt:#d9583a; --m-nsi:#a97b1b; --m-si:#b5651d; --m-es:#b03e83;
     --shadow:0 1px 2px rgba(16,35,60,.06), 0 8px 24px rgba(16,35,60,.06);
     --radius:16px;
   }
@@ -21,7 +21,7 @@
     --accent:#6aa8ff; --accent-ink:#0b1118;
     --good:#5fd398; --warn:#e8b93b; --crit:#ff8080;
     --m-maths:#5b93ff; --m-pc:#b48cf0; --m-svt:#54c98c; --m-sci:#2bc0b4;
-    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b;
+    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b; --m-si:#e0954a; --m-es:#e17ab5;
     --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
   }}
   :root[data-theme="dark"]{
@@ -30,7 +30,7 @@
     --accent:#6aa8ff; --accent-ink:#0b1118;
     --good:#5fd398; --warn:#e8b93b; --crit:#ff8080;
     --m-maths:#5b93ff; --m-pc:#b48cf0; --m-svt:#54c98c; --m-sci:#2bc0b4;
-    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b;
+    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b; --m-si:#e0954a; --m-es:#e17ab5;
     --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
   }
 
@@ -179,9 +179,9 @@
 
 <div class="wrap">
   <div class="kpis">
-    <div class="kpi fade"><div class="big num">365</div><div class="cap">chapitres</div></div>
-    <div class="kpi k2 fade" style="animation-delay:.05s"><div class="big num">7 300</div><div class="cap">questions de QCM</div></div>
-    <div class="kpi k3 fade" style="animation-delay:.1s"><div class="big num">7</div><div class="cap">matières</div></div>
+    <div class="kpi fade"><div class="big num">383</div><div class="cap">chapitres</div></div>
+    <div class="kpi k2 fade" style="animation-delay:.05s"><div class="big num">7 660</div><div class="cap">questions de QCM</div></div>
+    <div class="kpi k3 fade" style="animation-delay:.1s"><div class="big num">9</div><div class="cap">matières</div></div>
     <div class="kpi k4 fade" style="animation-delay:.15s"><div class="big num">9</div><div class="cap">langues d'interface</div></div>
   </div>
 </div>
@@ -189,19 +189,19 @@
 <section class="wrap">
   <div class="sec-head"><h2>En chiffres</h2><span class="hint">chaque chapitre = cours + exercices + QCM + cartes</span></div>
   <div class="chips">
-    <div class="chip"><div class="n num">365</div><div class="l">chapitres</div></div>
-    <div class="chip"><div class="n num">7 300</div><div class="l">questions QCM</div></div>
-    <div class="chip"><div class="n num">365</div><div class="l">jeux d'exercices corrigés</div></div>
-    <div class="chip"><div class="n num">3 268</div><div class="l">cartes de révision</div></div>
-    <div class="chip"><div class="n num">20</div><div class="l">sujets type bac/brevet</div></div>
-    <div class="chip"><div class="n num">33</div><div class="l">bac blancs & évaluations</div></div>
+    <div class="chip"><div class="n num">383</div><div class="l">chapitres</div></div>
+    <div class="chip"><div class="n num">7 660</div><div class="l">questions QCM</div></div>
+    <div class="chip"><div class="n num">383</div><div class="l">jeux d'exercices corrigés</div></div>
+    <div class="chip"><div class="n num">3 376</div><div class="l">cartes de révision</div></div>
+    <div class="chip"><div class="n num">23</div><div class="l">sujets type bac/brevet</div></div>
+    <div class="chip"><div class="n num">37</div><div class="l">bac blancs & évaluations</div></div>
     <div class="chip"><div class="n num">14</div><div class="l">formulaires</div></div>
     <div class="chip"><div class="n num">∞</div><div class="l">questions générées (calcul)</div></div>
   </div>
 </section>
 
 <section class="wrap">
-  <div class="sec-head"><h2>Répartition par matière</h2><span class="hint">365 chapitres</span></div>
+  <div class="sec-head"><h2>Répartition par matière</h2><span class="hint">383 chapitres · 9 matières</span></div>
   <div class="bars" id="bars"></div>
 </section>
 
@@ -289,6 +289,37 @@
       <div class="label">Progression &amp; badges</div>
     </div>
 
+    <div class="phone">
+      <div class="frame"><div class="notch"></div><div class="screen">
+        <div class="s-sub">Énigmes · Suites logiques · moyen</div>
+        <div class="s-title num" style="text-align:center;letter-spacing:2px;margin:8px 0">5, 10, 20, 40, ?</div>
+        <div class="s-card" style="text-align:center;color:#9aa8b5">Ta réponse</div>
+        <div class="s-row" style="gap:6px">
+          <div class="s-choice" style="text-align:center">1</div><div class="s-choice" style="text-align:center">2</div><div class="s-choice" style="text-align:center">3</div>
+        </div>
+        <div class="s-row" style="gap:6px">
+          <div class="s-choice" style="text-align:center">⌫</div><div class="s-choice" style="text-align:center">0</div>
+          <div class="s-choice" style="text-align:center;background:#12222f;border-color:#6aa8ff;color:#fff">OK</div>
+        </div>
+        <div class="s-sub">💡 Regarde par combien on multiplie à chaque étape.</div>
+        <div class="s-pill" style="margin-top:auto">🔥 Allumettes : 6 + 4 = 4 → déplace 1 allumette</div>
+      </div></div>
+      <div class="label">Énigmes</div>
+    </div>
+
+    <div class="phone">
+      <div class="frame"><div class="notch"></div><div class="screen">
+        <div class="s-sub" style="color:#6aa8ff;font-weight:700;letter-spacing:1px">KAMAL CAMPUS · 1 / 4</div>
+        <div class="s-title">Choisis ta langue</div>
+        <div class="s-card">🇫🇷 &nbsp;Français</div>
+        <div class="s-card">🇬🇧 &nbsp;English</div>
+        <div class="s-card">🇪🇸 &nbsp;Español</div>
+        <div class="s-card">🇮🇹 &nbsp;Italiano</div>
+        <div class="s-card" style="background:#6aa8ff;color:#0b1118;text-align:center;font-weight:800;margin-top:auto">Continuer</div>
+      </div></div>
+      <div class="label">Onboarding · 9 langues</div>
+    </div>
+
   </div>
 </section>
 
@@ -296,7 +327,7 @@
   <div class="sec-head"><h2>Fonctionnalités</h2></div>
   <div class="feat">
     <div class="fcard"><div class="ic">🧮</div><h3>Résolveur pas à pas</h3><p>Calculs, fractions, équations du 1er/2nd degré et opérations posées (retenues, emprunts) — réponses exactes, comme Photomath sans la photo.</p></div>
-    <div class="fcard"><div class="ic">♾️</div><h3>Questions à l'infini</h3><p>Sur les chapitres de calcul (maths &amp; physique), l'appli génère des QCM sans fin, réponse calculée donc juste.</p></div>
+    <div class="fcard"><div class="ic">♾️</div><h3>Questions à l'infini</h3><p>Sur les chapitres de calcul (maths, physique et sciences de l'ingénieur), l'appli génère des QCM sans fin, réponse calculée donc juste.</p></div>
     <div class="fcard"><div class="ic">🧩</div><h3>Énigmes</h3><p>Suites logiques, grilles, calcul mental et énigmes d'allumettes rendues en 7 segments.</p></div>
     <div class="fcard"><div class="ic">🔥</div><h3>Série &amp; objectif</h3><p>XP, niveaux et rangs, objectif quotidien, série de jours, badges et rappels — la régularité récompensée.</p></div>
     <div class="fcard"><div class="ic">🎯</div><h3>Révision ciblée</h3><p>Recherche, favoris et parcours perso qui met en avant tes chapitres les plus fragiles.</p></div>
@@ -339,8 +370,9 @@
 
   // Données
   const MAT=[
-    ['Maths',197,'--m-maths'],['Physique-chimie',68,'--m-pc'],['SVT',37,'--m-svt'],
-    ['Sciences (primaire)',25,'--m-sci'],['Technologie',20,'--m-techno'],['NSI',12,'--m-nsi'],['SNT',6,'--m-snt']
+    ['Maths',192,'--m-maths'],['Physique-chimie',68,'--m-pc'],['SVT',37,'--m-svt'],
+    ['Sciences (primaire)',25,'--m-sci'],['Technologie',20,'--m-techno'],['NSI',12,'--m-nsi'],
+    ['Enseignement scientifique',13,'--m-es'],['Sciences de l’ingénieur',10,'--m-si'],['SNT',6,'--m-snt']
   ];
   const max=Math.max(...MAT.map(m=>m[1]));
   document.getElementById('bars').innerHTML=MAT.map(([n,v,c])=>`
@@ -348,14 +380,14 @@
     <div class="track"><div class="fill" style="width:${Math.round(v/max*100)}%;background:var(${c})"></div></div>
     <div class="val num">${v}</div></div>`).join('');
 
-  const COLS=[['Maths','--m-maths'],['PC','--m-pc'],['SVT','--m-svt'],['Sci.','--m-sci'],['Techno','--m-techno'],['SNT','--m-snt'],['NSI','--m-nsi']];
-  // niveau : [Maths, PC, SVT, Sciences, Techno, SNT, NSI]
+  const COLS=[['Maths','--m-maths'],['PC','--m-pc'],['SVT','--m-svt'],['Sci.','--m-sci'],['Techno','--m-techno'],['SNT','--m-snt'],['NSI','--m-nsi'],['SI','--m-si'],['ES','--m-es']];
+  // niveau : [Maths, PC, SVT, Sciences, Techno, SNT, NSI, SI, ES]
   const ROWS=[
-    ['CP',[11,0,0,5,0,0,0]],['CE1',[11,0,0,5,0,0,0]],['CE2',[11,0,0,5,0,0,0]],
-    ['CM1',[12,0,0,5,0,0,0]],['CM2',[12,0,0,5,0,0,0]],
-    ['6ᵉ',[10,0,5,0,5,0,0]],['5ᵉ',[15,6,5,0,5,0,0]],['4ᵉ',[15,6,5,0,5,0,0]],['3ᵉ',[14,5,5,0,5,0,0]],
-    ['2ᵈᵉ',[10,5,6,0,0,6,0]],['1ʳᵉ',[14,6,5,0,0,0,6]],['1ʳᵉ techno',[11,14,0,0,0,0,0]],
-    ['Tⁿᵃˡᵉ',[27,21,6,0,0,0,6]],['Tⁿᵃˡᵉ techno',[19,10,0,0,0,0,0]]
+    ['CP',[11,0,0,5,0,0,0,0,0]],['CE1',[11,0,0,5,0,0,0,0,0]],['CE2',[11,0,0,5,0,0,0,0,0]],
+    ['CM1',[12,0,0,5,0,0,0,0,0]],['CM2',[12,0,0,5,0,0,0,0,0]],
+    ['6ᵉ',[10,0,5,0,5,0,0,0,0]],['5ᵉ',[15,6,5,0,5,0,0,0,0]],['4ᵉ',[15,6,5,0,5,0,0,0,0]],['3ᵉ',[14,5,5,0,5,0,0,0,0]],
+    ['2ᵈᵉ',[10,5,6,0,0,6,0,0,0]],['1ʳᵉ',[14,6,5,0,0,0,6,5,5]],['1ʳᵉ techno',[11,14,0,0,0,0,0,0,0]],
+    ['Tⁿᵃˡᵉ',[27,16,6,0,0,0,6,5,8]],['Tⁿᵃˡᵉ techno',[19,10,0,0,0,0,0,0,0]]
   ];
   let html='<tr><th class="lvl">Niveau</th>'+COLS.map(c=>`<th>${c[0]}</th>`).join('')+'</tr>';
   for(const [lvl,vals] of ROWS){
