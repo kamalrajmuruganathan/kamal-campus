@@ -17,6 +17,7 @@ import {
   divisionEuclidienne, perimetreRectangle, aireRectangle, aireTriangle,
   fonctionAffine, pythagore, poids, energiePuissanceTemps,
   trigRatio, distanceParcourue, dureeParcours, conversionLongueur, conversionDuree,
+  verbeIrregulierPreterit, verbeIrregulierParticipe, plurielIrregulier, preteritRegulier, actifPassif,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -131,6 +132,14 @@ export const REGISTRE = {
   // ── Conversions d'unités (durées) ──
   '6e-math-durees': [conversionDuree],
   'cm1-math-durees': [conversionDuree],
+
+  // ── Anglais : drills générés (verbes, pluriels, passif) ──
+  '5e-anglais-preterit-simple': [verbeIrregulierPreterit, preteritRegulier],
+  '2nde-anglais-temps-du-passe': [verbeIrregulierPreterit],
+  '4e-anglais-present-perfect': [verbeIrregulierParticipe],
+  '3e-anglais-present-perfect-since-for': [verbeIrregulierParticipe],
+  '6e-anglais-articles-pluriels': [plurielIrregulier],
+  '3e-anglais-voix-passive': [actifPassif],
 
   // ── Physique-chimie : poids & énergie ──
   '4e-pc-interactions-forces': [poids],

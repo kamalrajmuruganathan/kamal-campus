@@ -12,7 +12,7 @@ sert exactement le contenu de ton programme.
 
 ## En chiffres
 
-- **452 chapitres** — maths, physique-chimie, sciences, SVT, techno/SNT/NSI, **sciences de l'ingénieur** et **enseignement scientifique**, du **CP à la Terminale**.
+- **470 chapitres** — maths, physique-chimie, sciences, SVT, techno/SNT/NSI, **sciences de l'ingénieur** et **enseignement scientifique**, du **CP à la Terminale**.
 - **2 080 questions** de QCM et **2 080 exercices** corrigés.
 - **2 326 cartes** de révision (flashcards).
 - **48 chapitres** reliés à un outil de calcul.

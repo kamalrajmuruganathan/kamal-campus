@@ -833,3 +833,162 @@ export function conversionDuree(rand) {
     explication: `1 ${de} = ${f} ${vers}, donc ${val} ${de} = ${val} × ${f} = ${r} ${vers}.`,
   }, rand);
 }
+
+// ── Anglais : drills générés (verbes, pluriels, passif) ──────────────────────
+
+/** Verbes irréguliers : [base, prétérit, participe passé]. */
+const VERBES_IRR = [
+  ['go', 'went', 'gone'], ['see', 'saw', 'seen'], ['take', 'took', 'taken'],
+  ['give', 'gave', 'given'], ['come', 'came', 'come'], ['know', 'knew', 'known'],
+  ['get', 'got', 'got'], ['make', 'made', 'made'], ['find', 'found', 'found'],
+  ['think', 'thought', 'thought'], ['buy', 'bought', 'bought'], ['bring', 'brought', 'brought'],
+  ['teach', 'taught', 'taught'], ['catch', 'caught', 'caught'], ['eat', 'ate', 'eaten'],
+  ['drink', 'drank', 'drunk'], ['drive', 'drove', 'driven'], ['write', 'wrote', 'written'],
+  ['speak', 'spoke', 'spoken'], ['break', 'broke', 'broken'], ['choose', 'chose', 'chosen'],
+  ['begin', 'began', 'begun'], ['sing', 'sang', 'sung'], ['swim', 'swam', 'swum'],
+  ['ride', 'rode', 'ridden'], ['fall', 'fell', 'fallen'], ['fly', 'flew', 'flown'],
+  ['grow', 'grew', 'grown'], ['throw', 'threw', 'thrown'], ['wear', 'wore', 'worn'],
+  ['sell', 'sold', 'sold'], ['tell', 'told', 'told'], ['feel', 'felt', 'felt'],
+  ['keep', 'kept', 'kept'], ['leave', 'left', 'left'], ['lose', 'lost', 'lost'],
+  ['meet', 'met', 'met'], ['pay', 'paid', 'paid'], ['send', 'sent', 'sent'],
+  ['sleep', 'slept', 'slept'], ['spend', 'spent', 'spent'], ['win', 'won', 'won'],
+  ['build', 'built', 'built'], ['hear', 'heard', 'heard'], ['hold', 'held', 'held'],
+  ['stand', 'stood', 'stood'], ['understand', 'understood', 'understood'], ['run', 'ran', 'run'],
+];
+
+/** Prétérit d'un verbe irrégulier. */
+export function verbeIrregulierPreterit(rand) {
+  const [base, pret, pp] = choisir(rand, VERBES_IRR);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'verbes-irreguliers',
+    enonce: `Quel est le prétérit du verbe « ${base} » ?`,
+    bonne: pret,
+    distracteurs: [`${base}ed`, base, pp, `${base}t`, `have ${base}`, `${base}s`],
+    explication: `${base} → prétérit « ${pret} » → participe passé « ${pp} ». Un verbe irrégulier ne prend pas -ed au prétérit.`,
+  }, rand);
+}
+
+/** Participe passé d'un verbe irrégulier. */
+export function verbeIrregulierParticipe(rand) {
+  const [base, pret, pp] = choisir(rand, VERBES_IRR);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'verbes-irreguliers',
+    enonce: `Quel est le participe passé de « ${base} » ? (have + …)`,
+    bonne: pp,
+    distracteurs: [`${base}ed`, base, pret, `${base}en`, `have ${base}`, `${base}s`],
+    explication: `${base} → participe passé « ${pp} » (have ${pp}). Au present perfect et au passif, on emploie le participe passé, pas le prétérit « ${pret} ».`,
+  }, rand);
+}
+
+/** Pluriels irréguliers : [singulier, pluriel, [3 intrus]]. */
+const PLURIELS = [
+  ['man', 'men', ['mans', 'mens', 'man']],
+  ['woman', 'women', ['womans', 'womens', 'woman']],
+  ['child', 'children', ['childs', 'childrens', 'childes']],
+  ['foot', 'feet', ['foots', 'feets', 'footes']],
+  ['tooth', 'teeth', ['tooths', 'teeths', 'toothes']],
+  ['mouse', 'mice', ['mouses', 'mouse', 'mices']],
+  ['person', 'people', ['persons', 'peoples', 'personnes']],
+  ['leaf', 'leaves', ['leafs', 'leafes', 'leave']],
+  ['knife', 'knives', ['knifes', 'knifs', 'knive']],
+  ['wife', 'wives', ['wifes', 'wifs', 'wive']],
+  ['life', 'lives', ['lifes', 'lifs', 'live']],
+  ['city', 'cities', ['citys', 'cityes', 'citie']],
+  ['baby', 'babies', ['babys', 'babyes', 'babie']],
+  ['country', 'countries', ['countrys', 'countryes', 'countrie']],
+  ['box', 'boxes', ['boxs', 'boxies', 'box']],
+  ['watch', 'watches', ['watchs', 'watchies', 'watch']],
+  ['bus', 'buses', ['buss', 'busses', 'busies']],
+  ['tomato', 'tomatoes', ['tomatos', 'tomatoies', 'tomato']],
+  ['sheep', 'sheep', ['sheeps', 'sheepes', 'shept']],
+  ['fish', 'fish', ['fishs', 'fishes', 'fisches']],
+];
+
+/** Pluriel irrégulier d'un nom. */
+export function plurielIrregulier(rand) {
+  const [s, p, w] = choisir(rand, PLURIELS);
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'pluriels',
+    enonce: `Quel est le pluriel de « ${s} » ?`,
+    bonne: p,
+    distracteurs: [...w, `${s}s`, `${s}es`, s],
+    explication: p === s
+      ? `« ${s} » est invariable : le pluriel est identique au singulier.`
+      : `« ${s} » a un pluriel irrégulier : « ${p} » (et non « ${s}s »).`,
+  }, rand);
+}
+
+/** Prétérit régulier (règles d'orthographe) : [base, correct, [3 intrus]]. */
+const REGULIERS = [
+  ['play', 'played', ['plaid', 'playd', 'plaied']],
+  ['watch', 'watched', ['watchd', 'wached', 'watchted']],
+  ['want', 'wanted', ['wantd', 'wantt', 'wanded']],
+  ['live', 'lived', ['liveed', 'livd', 'lifed']],
+  ['stop', 'stopped', ['stoped', 'stopd', 'stopt']],
+  ['study', 'studied', ['studyed', 'studed', 'studdied']],
+  ['travel', 'travelled', ['traveled', 'traveld', 'travled']],
+  ['cook', 'cooked', ['cookd', 'cookt', 'coocked']],
+  ['help', 'helped', ['helpd', 'helpt', 'holped']],
+  ['carry', 'carried', ['carryed', 'carred', 'carrid']],
+  ['try', 'tried', ['tryed', 'tride', 'tryd']],
+  ['arrive', 'arrived', ['arriveed', 'arrivd', 'arrifed']],
+  ['decide', 'decided', ['decideed', 'decidd', 'decded']],
+  ['enjoy', 'enjoyed', ['enjoid', 'enjoyd', 'enjoied']],
+  ['plan', 'planned', ['planed', 'pland', 'plant']],
+  ['clean', 'cleaned', ['cleand', 'cleant', 'clened']],
+  ['open', 'opened', ['opend', 'openned', 'opent']],
+  ['close', 'closed', ['closeed', 'closd', 'clost']],
+  ['start', 'started', ['startd', 'startt', 'sterted']],
+  ['use', 'used', ['useed', 'usd', 'uset']],
+];
+
+/** Prétérit d'un verbe régulier (piège orthographique). */
+export function preteritRegulier(rand) {
+  const [base, correct, w] = choisir(rand, REGULIERS);
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'preterit-regulier',
+    enonce: `Quel est le prétérit du verbe régulier « ${base} » ?`,
+    bonne: correct,
+    distracteurs: [...w, `${base}ed`, base, `${base}d`],
+    explication: `« ${base} » → « ${correct} ». On ajoute -ed, en adaptant l'orthographe (doubler la consonne, y → ied, e muet…).`,
+  }, rand);
+}
+
+/** Phrases pour la voix passive au présent : sujet / verbe / participe / complément. */
+const PASSIF = [
+  ['The chef', 'cooks', 'cooked', 'the meal', 'is'],
+  ['The teacher', 'explains', 'explained', 'the lesson', 'is'],
+  ['Workers', 'build', 'built', 'the houses', 'are'],
+  ['The company', 'sells', 'sold', 'the tickets', 'are', 'the tickets'],
+  ['A famous artist', 'paints', 'painted', 'the picture', 'is'],
+  ['The students', 'clean', 'cleaned', 'the classroom', 'is'],
+  ['The postman', 'delivers', 'delivered', 'the letters', 'are'],
+  ['Millions of people', 'speak', 'spoken', 'English', 'is'],
+];
+
+/** Transformation actif → passif (présent simple). */
+export function actifPassif(rand) {
+  const item = choisir(rand, PASSIF);
+  const [subj, verbS, pp, obj, aux] = item;
+  const objCap = obj.charAt(0).toUpperCase() + obj.slice(1);
+  const subjL = subj.charAt(0).toLowerCase() + subj.slice(1);
+  const bonne = `${objCap} ${aux} ${pp} by ${subjL}.`;
+  return construireQuestion({
+    difficulte: 'difficile',
+    notion: 'voix-passive',
+    enonce: `Mets à la voix passive : « ${subj} ${verbS} ${obj}. »`,
+    bonne,
+    distracteurs: [
+      `${objCap} ${aux} ${verbS} by ${subjL}.`,
+      `${objCap} was ${pp} by ${subjL}.`,
+      `${objCap} ${pp} by ${subjL}.`,
+      `${objCap} ${aux} being ${pp} by ${subjL}.`,
+      `${objCap} ${aux} ${pp.replace(/e?d$/, '')} by ${subjL}.`,
+    ],
+    explication: `Passif = be + participe passé : « ${bonne} » On garde le présent (${aux}) et on emploie le participe passé « ${pp} ».`,
+  }, rand);
+}
