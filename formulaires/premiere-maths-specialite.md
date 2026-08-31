@@ -64,13 +64,21 @@ $$\boxed{\vec{u}\cdot\vec{v} = \|\vec{u}\|\,\|\vec{v}\|\cos\theta} \qquad \boxed
 
 - Cercle trigonométrique : point $\boxed{M(\cos x\,;\sin x)}$. Radians $= \text{degrés}\times\dfrac{\pi}{180}$.
 - $\boxed{\cos^2 x + \sin^2 x = 1}$ ; $\cos(x+2k\pi) = \cos x$, $\sin(x+2k\pi) = \sin x$.
+- Tangente : $\boxed{\tan x = \dfrac{\sin x}{\cos x}}$ (si $\cos x \neq 0$) ; $\tan(x+k\pi)=\tan x$.
 
 | $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ |
 |---|---|---|---|---|---|
 | $\cos x$ | $1$ | $\dfrac{\sqrt3}{2}$ | $\dfrac{\sqrt2}{2}$ | $\dfrac12$ | $0$ |
 | $\sin x$ | $0$ | $\dfrac12$ | $\dfrac{\sqrt2}{2}$ | $\dfrac{\sqrt3}{2}$ | $1$ |
+| $\tan x$ | $0$ | $\dfrac{\sqrt3}{3}$ | $1$ | $\sqrt3$ | $\times$ |
 
-- Angles associés : $\cos(-x)=\cos x$, $\sin(-x)=-\sin x$ ; $\cos(\pi-x)=-\cos x$, $\sin(\pi-x)=\sin x$.
+**Angles associés** (se retrouvent en tournant sur le cercle) :
+
+- Opposé : $\boxed{\cos(-x)=\cos x, \quad \sin(-x)=-\sin x}$
+- Supplémentaire : $\boxed{\cos(\pi-x)=-\cos x, \quad \sin(\pi-x)=\sin x}$
+- Décalé de $\pi$ : $\boxed{\cos(\pi+x)=-\cos x, \quad \sin(\pi+x)=-\sin x}$
+- Complémentaire : $\boxed{\cos\!\left(\tfrac{\pi}{2}-x\right)=\sin x, \quad \sin\!\left(\tfrac{\pi}{2}-x\right)=\cos x}$
+- Décalé de $\tfrac{\pi}{2}$ : $\boxed{\cos\!\left(\tfrac{\pi}{2}+x\right)=-\sin x, \quad \sin\!\left(\tfrac{\pi}{2}+x\right)=\cos x}$
 
 ## Probabilités conditionnelles
 

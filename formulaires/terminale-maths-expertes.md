@@ -40,6 +40,17 @@ Aide-mémoire — option mathématiques expertes de terminale. L'essentiel, par 
 - Euler : $\boxed{\cos\theta=\dfrac{e^{i\theta}+e^{-i\theta}}{2}, \quad \sin\theta=\dfrac{e^{i\theta}-e^{-i\theta}}{2i}}$ ; Moivre : $\boxed{(\cos\theta+i\sin\theta)^n=\cos(n\theta)+i\sin(n\theta)}$.
 - Angle : $\boxed{(\overrightarrow{AB},\overrightarrow{AC})=\arg\!\left(\dfrac{z_C-z_A}{z_B-z_A}\right)}$.
 
+## Formules d'addition et de duplication
+
+Elles se démontrent avec $e^{i(a+b)}=e^{ia}e^{ib}$ (identifier partie réelle et imaginaire).
+
+- Addition : $\boxed{\cos(a\pm b)=\cos a\cos b \mp \sin a\sin b}$
+- $\boxed{\sin(a\pm b)=\sin a\cos b \pm \cos a\sin b}$
+- $\boxed{\tan(a\pm b)=\dfrac{\tan a\pm\tan b}{1\mp\tan a\tan b}}$
+- Duplication : $\boxed{\cos 2a=\cos^2 a-\sin^2 a=2\cos^2 a-1=1-2\sin^2 a}$
+- $\boxed{\sin 2a=2\sin a\cos a} \qquad \boxed{\tan 2a=\dfrac{2\tan a}{1-\tan^2 a}}$
+- Linéarisation (utile pour intégrer) : $\boxed{\cos^2 a=\dfrac{1+\cos 2a}{2} \qquad \sin^2 a=\dfrac{1-\cos 2a}{2}}$
+
 ## Graphes et matrices
 
 - Graphe : $\boxed{\text{ordre}=\text{nb de sommets}, \quad \deg(S)=\text{nb d'arêtes en } S}$ ; $\boxed{\sum_S \deg(S)=2\times\text{nb d'arêtes}}$.
