@@ -185,6 +185,18 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="🗓️ Planning d'étude"
+            sousTitre={
+              (profil.planning || []).length > 0
+                ? `${profil.planning.length} créneau${profil.planning.length > 1 ? 'x' : ''} · rappels programmés`
+                : 'Programme tes créneaux et reçois un rappel à l’heure'
+            }
+            couleur={t.couleur.physique}
+            onPress={() => navigation.navigate('Planning')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre={L('card.favoris.t')}
             sousTitre={L('card.favoris.s')}
             couleur={t.couleur.accent}
