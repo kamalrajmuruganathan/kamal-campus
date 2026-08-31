@@ -14,23 +14,33 @@ import { Bandeau } from '../composants/communs';
 
 const SOURCES = [
   {
-    groupe: 'Toutes matières',
+    groupe: 'Officiel — toutes matières',
     liens: [
-      { nom: 'éduscol', url: 'https://eduscol.education.fr', desc: 'Sujets zéro et exemples officiels, par matière.' },
-      { nom: 'Ministère de l’Éducation nationale', url: 'https://www.education.gouv.fr', desc: 'Textes des épreuves et informations officielles.' },
-      { nom: 'Site de ton académie', url: 'https://www.education.gouv.fr', desc: 'Chaque académie publie des banques de sujets (cherche « annales »).' },
+      { nom: 'éduscol', url: 'https://eduscol.education.fr', desc: 'Le portail pédagogique du ministère : sujets et ressources par matière.' },
+      { nom: 'Sujets zéro & spécimens (éduscol)', url: 'https://eduscol.education.fr', desc: 'Exemples officiels de chaque spécialité — cherche ta matière.' },
+      { nom: 'Ministère de l’Éducation nationale', url: 'https://www.education.gouv.fr', desc: 'Textes des épreuves et calendrier officiel.' },
+      { nom: 'Site de ton académie', url: 'https://www.education.gouv.fr', desc: 'Chaque académie publie ses banques de sujets (cherche « annales »).' },
+    ],
+  },
+  {
+    groupe: 'Portails d’annales gratuits',
+    liens: [
+      { nom: 'sujetdebac.fr', url: 'https://www.sujetdebac.fr', desc: 'Sujets et corrigés gratuits, toutes matières, par année.' },
+      { nom: 'freemaths.fr', url: 'https://www.freemaths.fr', desc: 'Annales corrigées gratuites (maths, physique, SVT, NSI…).' },
     ],
   },
   {
     groupe: 'Mathématiques',
     liens: [
       { nom: 'APMEP — Annales', url: 'https://www.apmep.fr', desc: 'Association des professeurs de maths : annales du bac et du brevet, corrigées.' },
+      { nom: 'freemaths.fr — Maths', url: 'https://www.freemaths.fr', desc: 'Sujets spé maths (Première & Terminale) corrigés.' },
     ],
   },
   {
     groupe: 'Physique-chimie',
     liens: [
-      { nom: 'Labolycee', url: 'https://labolycee.org', desc: 'Annales corrigées de physique-chimie, gratuites.' },
+      { nom: 'Labolycee', url: 'https://labolycee.org', desc: 'La référence : annales corrigées de physique-chimie, gratuites.' },
+      { nom: 'éduscol Physique-chimie', url: 'https://eduscol.education.fr', desc: 'Programmes et sujets officiels.' },
     ],
   },
   {
@@ -41,15 +51,28 @@ const SOURCES = [
     ],
   },
   {
-    groupe: 'NSI · SNT · Sciences de l’ingénieur',
+    groupe: 'NSI (numérique et sciences informatiques)',
     liens: [
-      { nom: 'éduscol NSI / SNT / SI', url: 'https://eduscol.education.fr', desc: 'Sujets zéro et ressources officielles pour le numérique et la techno.' },
+      { nom: 'éduscol NSI', url: 'https://eduscol.education.fr', desc: 'Sujets zéro et ressources officielles de NSI.' },
+      { nom: 'Pixees (Inria)', url: 'https://pixees.fr', desc: 'Ressources et exercices d’informatique (SNT & NSI).' },
+    ],
+  },
+  {
+    groupe: 'Sciences de l’ingénieur',
+    liens: [
+      { nom: 'éduscol Sciences de l’ingénieur', url: 'https://eduscol.education.fr', desc: 'Sujets et ressources officiels de la spécialité SI.' },
     ],
   },
   {
     groupe: 'Enseignement scientifique',
     liens: [
       { nom: 'éduscol — Enseignement scientifique', url: 'https://eduscol.education.fr', desc: 'Exemples et attendus officiels du tronc commun.' },
+    ],
+  },
+  {
+    groupe: 'SNT (Seconde)',
+    liens: [
+      { nom: 'éduscol SNT', url: 'https://eduscol.education.fr', desc: 'Ressources officielles de SNT.' },
     ],
   },
 ];
