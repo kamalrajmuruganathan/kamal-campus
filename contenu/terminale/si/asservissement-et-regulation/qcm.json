@@ -1,0 +1,294 @@
+{
+  "id": "tale-si-asservissement-et-regulation-qcm",
+  "chapitre": "tale-si-asservissement-et-regulation",
+  "titre": "QCM — Asservissement et régulation",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "boucle-fermee",
+      "enonce": "Qu'est-ce qui caractérise un système asservi (boucle fermée) ?",
+      "choix": [
+        "Il fonctionne sans aucun capteur",
+        "Il mesure sa sortie et la compare à la consigne pour corriger",
+        "Il envoie toujours la même commande",
+        "Il n'a pas de correcteur"
+      ],
+      "reponse": 1,
+      "explication": "La boucle fermée repose sur la rétroaction : un capteur mesure la sortie, un comparateur la confronte à la consigne, un correcteur agit. L'erreur classique est de croire qu'un asservissement peut se passer de capteur."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "ecart",
+      "enonce": "Comment définit-on l'écart (erreur) $\\varepsilon$ d'un système asservi ?",
+      "choix": [
+        "mesure $-$ perturbation",
+        "consigne $\\times$ mesure",
+        "consigne $-$ mesure",
+        "consigne $+$ mesure"
+      ],
+      "reponse": 2,
+      "explication": "L'écart est la différence consigne $-$ mesure calculée par le comparateur. C'est lui qui pilote le correcteur ; quand la cible est atteinte, $\\varepsilon = 0$."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "boucle-ouverte",
+      "enonce": "Quel est le principal défaut d'un système en boucle ouverte ?",
+      "choix": [
+        "Il est trop lent",
+        "Il ne peut pas corriger l'effet des perturbations",
+        "Il consomme trop d'énergie",
+        "Il oscille en permanence"
+      ],
+      "reponse": 1,
+      "explication": "Sans mesure de la sortie, la boucle ouverte est incapable de détecter puis de compenser une perturbation. On croit souvent à tort qu'elle « s'adapte » : elle envoie toujours la même commande."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "regulation",
+      "enonce": "Maintenir une pièce à 20 °C malgré les variations extérieures est un exemple de :",
+      "choix": [
+        "Régulation",
+        "Boucle ouverte",
+        "Commande manuelle",
+        "Perturbation"
+      ],
+      "reponse": 0,
+      "explication": "La consigne (20 °C) est constante et le système lutte contre les perturbations : c'est une régulation. Un asservissement, lui, suit une consigne qui varie."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Un système qui doit faire SUIVRE à sa sortie une consigne variable réalise :",
+      "choix": [
+        "Une régulation",
+        "Un asservissement",
+        "Une boucle ouverte",
+        "Une saturation"
+      ],
+      "reponse": 1,
+      "explication": "Suivre une consigne qui change (ex. suivi de trajectoire) est un asservissement. La régulation, elle, maintient une consigne constante."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "capteur",
+      "enonce": "Dans la chaîne de retour d'un système asservi, quel composant fournit la mesure ?",
+      "choix": [
+        "L'actionneur",
+        "Le correcteur",
+        "Le capteur",
+        "Le comparateur"
+      ],
+      "reponse": 2,
+      "explication": "Le capteur transforme la grandeur de sortie en une information utilisable pour la comparaison. Le confondre avec l'actionneur (qui, lui, agit) est une erreur fréquente."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "performances",
+      "enonce": "Quelles sont les trois performances principales d'un asservissement ?",
+      "choix": [
+        "Prix, poids, taille",
+        "Stabilité, précision, rapidité",
+        "Tension, courant, puissance",
+        "Masse, vitesse, énergie"
+      ],
+      "reponse": 1,
+      "explication": "On évalue un asservissement par sa stabilité, sa précision (écart statique) et sa rapidité (temps de réponse). Les autres critères listés ne caractérisent pas l'asservissement."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "comparateur",
+      "enonce": "Quel rôle joue le comparateur dans la boucle ?",
+      "choix": [
+        "Il amplifie la puissance",
+        "Il calcule l'écart entre consigne et mesure",
+        "Il mesure la sortie",
+        "Il alimente l'actionneur"
+      ],
+      "reponse": 1,
+      "explication": "Le comparateur soustrait la mesure à la consigne pour produire l'écart. Il ne fournit pas de puissance : c'est l'actionneur qui agit."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "fonction-de-transfert",
+      "enonce": "Deux blocs de fonctions de transfert $H_1$ et $H_2$ sont placés en série (cascade). La fonction de transfert globale vaut :",
+      "choix": [
+        "$H_1 + H_2$",
+        "$H_1 \\times H_2$",
+        "$\\dfrac{H_1}{H_2}$",
+        "$H_1 - H_2$"
+      ],
+      "reponse": 1,
+      "explication": "Des blocs en cascade se multiplient : la sortie de l'un est l'entrée de l'autre. L'erreur classique est d'additionner (ce qui correspond à des blocs en parallèle qu'on somme)."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "ftbf",
+      "enonce": "Pour une chaîne directe $H$ avec retour unitaire, la fonction de transfert en boucle fermée est :",
+      "choix": [
+        "$\\dfrac{H}{1+H}$",
+        "$\\dfrac{1+H}{H}$",
+        "$H \\times (1+H)$",
+        "$\\dfrac{H}{1-H}$"
+      ],
+      "reponse": 0,
+      "explication": "Avec retour négatif unitaire, $\\text{FTBF} = \\dfrac{H}{1+H}$. Le signe est un $+$ (retour négatif) ; écrire $1-H$ est l'erreur classique."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "calcul-gain",
+      "enonce": "Un système de gain statique $H = 9$ est bouclé avec un retour unitaire. Quel est le gain en boucle fermée ?",
+      "choix": [
+        "$9$",
+        "$10$",
+        "$0{,}9$",
+        "$1{,}9$"
+      ],
+      "reponse": 2,
+      "explication": "$\\dfrac{H}{1+H} = \\dfrac{9}{1+9} = \\dfrac{9}{10} = 0{,}9$. La boucle fermée rapproche le gain de 1 : c'est son effet stabilisant."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "precision",
+      "enonce": "La précision d'un asservissement se juge à partir de :",
+      "choix": [
+        "Son temps de réponse",
+        "Son écart statique (écart en régime permanent)",
+        "Son dépassement maximal",
+        "Sa consommation électrique"
+      ],
+      "reponse": 1,
+      "explication": "La précision est mesurée par l'écart statique : plus il est petit, plus le système est précis (nul = précision parfaite). Le temps de réponse mesure la rapidité, pas la précision."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "rapidite",
+      "enonce": "Le temps de réponse à 5 % correspond à :",
+      "choix": [
+        "Le temps mis pour dépasser la consigne de 5 %",
+        "Le temps au bout duquel la sortie reste à moins de 5 % de sa valeur finale",
+        "Le temps de mesure du capteur",
+        "5 % du temps de fonctionnement total"
+      ],
+      "reponse": 1,
+      "explication": "C'est la durée après laquelle la sortie entre définitivement dans la bande $\\pm 5\\,\\%$ autour de sa valeur finale. Il mesure la rapidité du système."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "correcteur-integral",
+      "enonce": "Quelle action d'un correcteur PID permet d'annuler l'écart statique ?",
+      "choix": [
+        "L'action proportionnelle (P)",
+        "L'action intégrale (I)",
+        "L'action dérivée (D)",
+        "La saturation"
+      ],
+      "reponse": 1,
+      "explication": "L'action intégrale accumule l'écart dans le temps et continue d'agir tant qu'il n'est pas nul : elle supprime l'écart statique. Le P seul laisse subsister un écart."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "correcteur-derive",
+      "enonce": "Quel est le rôle principal de l'action dérivée (D) d'un PID ?",
+      "choix": [
+        "Augmenter le gain statique",
+        "Anticiper et amortir les oscillations (limiter le dépassement)",
+        "Mesurer la sortie",
+        "Supprimer le capteur"
+      ],
+      "reponse": 1,
+      "explication": "L'action dérivée réagit à la vitesse de variation de l'écart : elle anticipe et amortit, ce qui réduit le dépassement. Elle n'agit pas sur le gain statique."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "perturbation",
+      "enonce": "Pour un régulateur de vitesse de voiture, une montée subite de la route est :",
+      "choix": [
+        "La consigne",
+        "La mesure",
+        "Une perturbation",
+        "L'écart"
+      ],
+      "reponse": 2,
+      "explication": "La pente est une grandeur extérieure non désirée qui tend à faire ralentir la voiture : c'est une perturbation. Le système asservi doit la compenser pour tenir la consigne de vitesse."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "depassement",
+      "enonce": "Un dépassement important dans la réponse à un échelon indique surtout :",
+      "choix": [
+        "Une grande précision",
+        "Un système lent",
+        "Un système peu amorti, proche de l'instabilité",
+        "Une absence de capteur"
+      ],
+      "reponse": 2,
+      "explication": "Un fort dépassement signale un système « nerveux », faiblement amorti, dont la stabilité relative est mauvaise. Ce n'est pas un signe de précision."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "calcul-gain",
+      "enonce": "Une chaîne directe est formée de deux blocs en série de gains $2$ et $3$, bouclée par un retour unitaire. Quel est le gain en boucle fermée ?",
+      "choix": [
+        "$5/6$",
+        "$6/7$",
+        "$6$",
+        "$5$"
+      ],
+      "reponse": 1,
+      "explication": "En série, $H = 2 \\times 3 = 6$. Puis $\\text{FTBF} = \\dfrac{H}{1+H} = \\dfrac{6}{1+6} = \\dfrac{6}{7}$. Erreur classique : additionner les gains ($2+3=5$) au lieu de les multiplier."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "compromis",
+      "enonce": "Pourquoi ne peut-on pas augmenter indéfiniment le gain proportionnel pour gagner en rapidité et précision ?",
+      "choix": [
+        "Parce que le capteur tombe en panne",
+        "Parce qu'un gain trop élevé déstabilise le système (oscillations, divergence)",
+        "Parce que la consigne change",
+        "Parce que l'écart devient négatif"
+      ],
+      "reponse": 1,
+      "explication": "Régler un asservissement est un compromis : au-delà d'un certain gain, le système devient instable. Rapidité et stabilité s'opposent ; c'est tout l'enjeu du réglage."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "ftbf",
+      "enonce": "Un asservissement a une chaîne directe $H = 20$ et une chaîne de retour de gain $K = 0{,}5$. Quel est le gain en boucle fermée ?",
+      "choix": [
+        "$\\dfrac{20}{11}$",
+        "$40$",
+        "$\\dfrac{20}{21}$",
+        "$\\dfrac{20}{10{,}5}$"
+      ],
+      "reponse": 0,
+      "explication": "$\\text{FTBF} = \\dfrac{H}{1+HK} = \\dfrac{20}{1 + 20 \\times 0{,}5} = \\dfrac{20}{1+10} = \\dfrac{20}{11}$. Il faut multiplier $H$ par $K$ au dénominateur, pas seulement ajouter $K$."
+    }
+  ]
+}

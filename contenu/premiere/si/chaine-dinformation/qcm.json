@@ -1,0 +1,294 @@
+{
+  "id": "1si-chaine-dinformation-qcm",
+  "chapitre": "1si-chaine-dinformation",
+  "titre": "QCM — La chaîne d'information",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "fonctions",
+      "enonce": "Quelles sont les trois fonctions techniques de la chaîne d'information ?",
+      "choix": [
+        "Alimenter, distribuer, convertir",
+        "Acquérir, traiter, communiquer",
+        "Résister, isoler, protéger",
+        "Entrer, calculer, sortir de l'usine"
+      ],
+      "reponse": 1,
+      "explication": "La chaîne d'information acquiert (capteurs), traite (unité de calcul) puis communique (ordres/données). Alimenter/distribuer/convertir relèvent de la chaîne d'énergie."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "capteur",
+      "enonce": "À quoi sert un capteur ?",
+      "choix": [
+        "À fournir de la puissance au moteur",
+        "À transformer une grandeur physique en signal exploitable",
+        "À stocker de l'énergie",
+        "À transmettre un couple mécanique"
+      ],
+      "reponse": 1,
+      "explication": "Un capteur convertit une grandeur physique (température, position…) en signal, souvent électrique. Il ne fournit pas de puissance : c'est le rôle de la chaîne d'énergie."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "tor",
+      "enonce": "Un capteur Tout Ou Rien (TOR) délivre…",
+      "choix": [
+        "Une valeur qui varie continûment",
+        "Seulement deux états : 0 ou 1",
+        "Une valeur codée sur 8 bits",
+        "Une tension négative"
+      ],
+      "reponse": 1,
+      "explication": "Un capteur TOR n'a que deux états logiques (présence/absence, appuyé/relâché). Un capteur analogique, lui, varie continûment."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "octet",
+      "enonce": "Combien de valeurs différentes code un octet (8 bits) ?",
+      "choix": [
+        "8",
+        "16",
+        "256",
+        "1024"
+      ],
+      "reponse": 2,
+      "explication": "8 bits codent 2⁸ = 256 valeurs (0 à 255). L'erreur fréquente est de répondre 8 (le nombre de bits) au lieu de 2⁸."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "bit",
+      "enonce": "Un bit peut prendre…",
+      "choix": [
+        "N'importe quelle valeur entre 0 et 1",
+        "Deux valeurs : 0 ou 1",
+        "Dix valeurs : 0 à 9",
+        "256 valeurs"
+      ],
+      "reponse": 1,
+      "explication": "Le bit est l'unité binaire élémentaire : 0 ou 1. Le système décimal (0 à 9) n'est pas celui de la machine."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "can",
+      "enonce": "Que fait un convertisseur analogique-numérique (CAN) ?",
+      "choix": [
+        "Il transforme un nombre binaire en tension continue",
+        "Il transforme un signal analogique en valeur numérique",
+        "Il amplifie un courant",
+        "Il stocke de l'énergie"
+      ],
+      "reponse": 1,
+      "explication": "Le CAN numérise un signal analogique (échantillonnage + quantification). L'opération inverse (numérique → analogique) est réalisée par un CNA."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "communication",
+      "enonce": "Le débit d'une transmission s'exprime en…",
+      "choix": [
+        "Newtons",
+        "Bits par seconde (bit/s)",
+        "Watts",
+        "Volts"
+      ],
+      "reponse": 1,
+      "explication": "Le débit mesure combien de bits sont transmis par seconde (bit/s). Le watt est une puissance, le volt une tension, le newton une force."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "role",
+      "enonce": "Quel est le rôle de la chaîne d'information vis-à-vis de la chaîne d'énergie ?",
+      "choix": [
+        "Lui fournir la puissance électrique",
+        "La piloter en envoyant des ordres",
+        "La refroidir",
+        "La lubrifier"
+      ],
+      "reponse": 1,
+      "explication": "La chaîne d'information commande la chaîne d'énergie via des ordres, à partir des consignes et des capteurs. Elle ne fournit pas la puissance."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "niveaux",
+      "enonce": "Combien de niveaux de quantification offre un CAN 12 bits ?",
+      "choix": [
+        "12",
+        "24",
+        "2048",
+        "4096"
+      ],
+      "reponse": 3,
+      "explication": "Le nombre de niveaux vaut 2ⁿ = 2¹² = 4096. On confond souvent avec 2×n (24) ou 2^(n-1) (2048)."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "resolution",
+      "enonce": "Un CAN 8 bits mesure une plage 0–5 V. Quelle est sa résolution (pas de quantification) ?",
+      "choix": [
+        "Environ 19,6 mV",
+        "Environ 625 mV",
+        "Environ 5 mV",
+        "Environ 2,5 V"
+      ],
+      "reponse": 0,
+      "explication": "q = plage / (2ⁿ − 1) = 5 / (256 − 1) = 5/255 ≈ 0,0196 V ≈ 19,6 mV. Oublier le « −1 » donne 5/256 ≈ 19,5 mV (proche), mais la formule correcte utilise 2ⁿ − 1 intervalles."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "echantillonnage",
+      "enonce": "L'échantillonnage d'un signal consiste à…",
+      "choix": [
+        "Arrondir chaque valeur sur des niveaux discrets",
+        "Relever la valeur du signal à intervalles de temps réguliers",
+        "Amplifier le signal",
+        "Filtrer les hautes fréquences uniquement"
+      ],
+      "reponse": 1,
+      "explication": "Échantillonner = prélever des valeurs à intervalles réguliers (fréquence d'échantillonnage). L'arrondi sur des niveaux discrets, c'est la quantification."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "capteur-type",
+      "enonce": "Une thermistance dont la résistance varie continûment avec la température est un capteur…",
+      "choix": [
+        "TOR",
+        "Analogique",
+        "Numérique I²C",
+        "Logique"
+      ],
+      "reponse": 1,
+      "explication": "Sa grandeur de sortie varie continûment : c'est un capteur analogique. Un capteur numérique délivrerait directement une valeur binaire."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "logique",
+      "enonce": "Une machine démarre si « bouton marche » ET « capot fermé ». Quelle fonction logique ?",
+      "choix": [
+        "Un OU logique",
+        "Un ET logique",
+        "Un NON logique",
+        "Un OU exclusif"
+      ],
+      "reponse": 1,
+      "explication": "Les deux conditions doivent être vraies simultanément : c'est un ET logique. Avec un OU, une seule condition suffirait."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "grandeurs",
+      "enonce": "La « sensibilité » d'un capteur désigne…",
+      "choix": [
+        "La plage min–max qu'il peut mesurer",
+        "La variation de sa sortie pour une variation donnée de l'entrée",
+        "Sa masse",
+        "Son prix"
+      ],
+      "reponse": 1,
+      "explication": "La sensibilité relie la variation de sortie à la variation d'entrée. L'étendue de mesure, elle, désigne la plage min–max mesurable."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "codage",
+      "enonce": "Sur combien de bits faut-il coder au minimum pour distinguer 100 positions différentes ?",
+      "choix": [
+        "6 bits",
+        "7 bits",
+        "8 bits",
+        "10 bits"
+      ],
+      "reponse": 1,
+      "explication": "2⁶ = 64 < 100, mais 2⁷ = 128 ≥ 100 : 7 bits suffisent. On cherche le plus petit n tel que 2ⁿ ≥ 100."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "transmission",
+      "enonce": "Dans une transmission série, les bits sont…",
+      "choix": [
+        "Envoyés tous en même temps sur plusieurs fils",
+        "Envoyés l'un après l'autre sur le même fil",
+        "Convertis en énergie mécanique",
+        "Toujours transmis sans fil"
+      ],
+      "reponse": 1,
+      "explication": "En transmission série, les bits circulent successivement sur une même ligne. En parallèle, plusieurs bits partent simultanément sur des fils distincts."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "debit",
+      "enonce": "Une liaison série transmet des trames de 10 bits à un débit de 9600 bit/s. Combien de trames par seconde environ ?",
+      "choix": [
+        "96 trames/s",
+        "960 trames/s",
+        "9600 trames/s",
+        "96000 trames/s"
+      ],
+      "reponse": 1,
+      "explication": "Nombre de trames = débit / bits par trame = 9600 / 10 = 960 trames/s. Diviser le débit par la taille de la trame."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "resolution",
+      "enonce": "Un capteur de position mesure 0 à 300 mm via un CAN 10 bits (1024 niveaux). Quelle est la plus petite variation de position détectable ?",
+      "choix": [
+        "Environ 0,29 mm",
+        "Environ 3 mm",
+        "Environ 30 mm",
+        "Environ 0,03 mm"
+      ],
+      "reponse": 0,
+      "explication": "q = 300 mm / (1024 − 1) = 300 / 1023 ≈ 0,293 mm. C'est la résolution : la plus petite variation distinguable."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "quantification",
+      "enonce": "Pour un même signal 0–5 V, passer d'un CAN 8 bits à 10 bits fait quoi à la résolution q ?",
+      "choix": [
+        "Elle double",
+        "Elle est divisée par environ 4, donc plus fine",
+        "Elle est multipliée par 4",
+        "Elle ne change pas"
+      ],
+      "reponse": 1,
+      "explication": "Le nombre de niveaux passe de 256 à 1024 (×4), donc q ≈ divisée par 4 : la mesure devient environ 4 fois plus précise. Plus de bits = résolution plus fine."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "systeme",
+      "enonce": "Un codeur incrémental délivre 500 impulsions par tour. Combien d'impulsions pour 2,5 tours ?",
+      "choix": [
+        "500",
+        "1000",
+        "1250",
+        "2500"
+      ],
+      "reponse": 2,
+      "explication": "Impulsions = 500 × 2,5 = 1250. Le nombre d'impulsions est proportionnel à l'angle parcouru, ce qui permet de mesurer la position angulaire."
+    }
+  ]
+}

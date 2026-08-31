@@ -1,0 +1,209 @@
+{
+  "id": "tale-si-modelisation-des-mouvements-qcm",
+  "chapitre": "tale-si-modelisation-des-mouvements",
+  "titre": "QCM — Modélisation des mouvements",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "degres-liberte",
+      "enonce": "Combien de degrés de liberté possède un solide libre dans l'espace ?",
+      "choix": ["3", "6", "2", "12"],
+      "reponse": 1,
+      "explication": "3 translations + 3 rotations = 6 degrés de liberté. On oublie souvent les rotations et on répond 3."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "liaison-pivot",
+      "enonce": "Que laisse comme seul mouvement une liaison pivot ?",
+      "choix": ["Une translation", "Une rotation", "Aucun mouvement", "Trois rotations"],
+      "reponse": 1,
+      "explication": "La liaison pivot n'autorise qu'une rotation autour d'un axe (ex. une porte). La glissière, elle, ne laisse qu'une translation."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "cinematique",
+      "enonce": "La vitesse d'un point est mathématiquement :",
+      "choix": [
+        "La dérivée de la position par rapport au temps",
+        "La dérivée de l'accélération",
+        "Le produit de la position par le temps",
+        "L'intégrale de la position"
+      ],
+      "reponse": 0,
+      "explication": "$v = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t}$. L'accélération est ensuite la dérivée de la vitesse : on dérive une fois de plus."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "unites",
+      "enonce": "Quelle est l'unité SI de l'accélération ?",
+      "choix": ["$\\mathrm{m\\cdot s^{-1}}$", "$\\mathrm{m\\cdot s^{-2}}$", "$\\mathrm{m}$", "$\\mathrm{N}$"],
+      "reponse": 1,
+      "explication": "L'accélération est en mètres par seconde au carré. $\\mathrm{m\\cdot s^{-1}}$ est la vitesse ; on les confond souvent."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "mru",
+      "enonce": "Dans un mouvement rectiligne uniforme (MRU), l'accélération est :",
+      "choix": ["Constante et non nulle", "Nulle", "Croissante", "Égale à la vitesse"],
+      "reponse": 1,
+      "explication": "MRU = vitesse constante, donc accélération nulle. Une accélération constante non nulle correspond au MRUV."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "poids",
+      "enonce": "Comment calcule-t-on le poids $P$ d'un objet de masse $m$ ?",
+      "choix": ["$P = m + g$", "$P = m\\,g$", "$P = \\dfrac{m}{g}$", "$P = m\\,a^2$"],
+      "reponse": 1,
+      "explication": "$P = m g$, avec $g \\approx 9{,}81\\ \\mathrm{m\\cdot s^{-2}}$. Le poids est une force (en N), à ne pas confondre avec la masse (en kg)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "encastrement",
+      "enonce": "Une liaison encastrement entre deux pièces :",
+      "choix": [
+        "Laisse une rotation",
+        "Laisse une translation",
+        "Supprime tous les degrés de liberté",
+        "Laisse trois translations"
+      ],
+      "reponse": 2,
+      "explication": "L'encastrement rend les deux pièces solidaires : 0 degré de liberté. C'est la liaison la plus « rigide »."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "pfd",
+      "enonce": "Le principe fondamental de la dynamique s'écrit :",
+      "choix": ["$\\sum \\vec F = m\\,\\vec a$", "$\\sum \\vec F = \\dfrac{m}{\\vec a}$", "$\\sum \\vec F = m + \\vec a$", "$\\vec a = m\\,\\sum \\vec F$"],
+      "reponse": 0,
+      "explication": "La somme des forces égale masse fois accélération : $\\sum \\vec F = m\\,\\vec a$. C'est la relation clé de la dynamique."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "mruv-vitesse",
+      "enonce": "Un chariot part du repos avec $a = 2\\ \\mathrm{m\\cdot s^{-2}}$. Quelle est sa vitesse après $3\\ \\mathrm{s}$ ?",
+      "choix": ["$5\\ \\mathrm{m\\cdot s^{-1}}$", "$6\\ \\mathrm{m\\cdot s^{-1}}$", "$9\\ \\mathrm{m\\cdot s^{-1}}$", "$1{,}5\\ \\mathrm{m\\cdot s^{-1}}$"],
+      "reponse": 1,
+      "explication": "$v = a t + v_0 = 2 \\times 3 + 0 = 6\\ \\mathrm{m\\cdot s^{-1}}$. La valeur 9 correspond à la distance parcourue, pas à la vitesse."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "mruv-distance",
+      "enonce": "Même chariot ($v_0=0$, $a = 2\\ \\mathrm{m\\cdot s^{-2}}$). Quelle distance parcourt-il en $3\\ \\mathrm{s}$ ?",
+      "choix": ["$6\\ \\mathrm{m}$", "$9\\ \\mathrm{m}$", "$18\\ \\mathrm{m}$", "$3\\ \\mathrm{m}$"],
+      "reponse": 1,
+      "explication": "$x = \\tfrac12 a t^2 = \\tfrac12 \\times 2 \\times 3^2 = 9\\ \\mathrm{m}$. Oublier le facteur $\\tfrac12$ donne 18 (erreur classique)."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "rotation-vitesse",
+      "enonce": "Une roue de rayon $R = 0{,}3\\ \\mathrm{m}$ tourne à $\\omega = 10\\ \\mathrm{rad\\cdot s^{-1}}$. Vitesse d'un point de la jante ?",
+      "choix": ["$3\\ \\mathrm{m\\cdot s^{-1}}$", "$30\\ \\mathrm{m\\cdot s^{-1}}$", "$0{,}03\\ \\mathrm{m\\cdot s^{-1}}$", "$10{,}3\\ \\mathrm{m\\cdot s^{-1}}$"],
+      "reponse": 0,
+      "explication": "$v = R\\,\\omega = 0{,}3 \\times 10 = 3\\ \\mathrm{m\\cdot s^{-1}}$. Attention à ne pas additionner $R$ et $\\omega$."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "pfd-calcul",
+      "enonce": "Une force résultante de $20\\ \\mathrm{N}$ agit sur une masse de $5\\ \\mathrm{kg}$. Quelle accélération ?",
+      "choix": ["$100\\ \\mathrm{m\\cdot s^{-2}}$", "$4\\ \\mathrm{m\\cdot s^{-2}}$", "$0{,}25\\ \\mathrm{m\\cdot s^{-2}}$", "$25\\ \\mathrm{m\\cdot s^{-2}}$"],
+      "reponse": 1,
+      "explication": "$a = \\dfrac{F}{m} = \\dfrac{20}{5} = 4\\ \\mathrm{m\\cdot s^{-2}}$. Multiplier $F$ par $m$ (=100) est l'erreur classique : on divise."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "vitesse-angulaire",
+      "enonce": "Quelle est l'unité SI de la vitesse angulaire $\\omega$ ?",
+      "choix": ["$\\mathrm{tr/min}$", "$\\mathrm{rad\\cdot s^{-1}}$", "$\\mathrm{m\\cdot s^{-1}}$", "$\\mathrm{degré}$"],
+      "reponse": 1,
+      "explication": "$\\omega$ s'exprime en radians par seconde. Les tr/min sont une unité usuelle mais non SI, à convertir avant tout calcul."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "equilibre",
+      "enonce": "Un solide est immobile. D'après le PFD, que vaut la somme des forces qui s'exercent sur lui ?",
+      "choix": ["Elle est maximale", "Elle est nulle", "Elle vaut le poids", "Elle vaut $m\\,g$"],
+      "reponse": 1,
+      "explication": "Immobile ⇒ $\\vec a = \\vec 0$ ⇒ $\\sum \\vec F = \\vec 0$ : les forces se compensent (ex. poids et réaction du sol s'annulent)."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "frottements",
+      "enonce": "Une force de frottement s'exerce toujours :",
+      "choix": [
+        "Dans le sens du mouvement",
+        "Dans le sens opposé au mouvement",
+        "Verticalement vers le bas",
+        "Perpendiculairement au mouvement"
+      ],
+      "reponse": 1,
+      "explication": "Le frottement s'oppose toujours au déplacement (ou à sa tendance). Le croire moteur est une idée fausse."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "moment",
+      "enonce": "Le moment d'une force $F$ par rapport à un axe, avec un bras de levier $d$, vaut :",
+      "choix": ["$F + d$", "$F \\times d$", "$\\dfrac{F}{d}$", "$F - d$"],
+      "reponse": 1,
+      "explication": "$\\mathcal{M} = F \\times d$ (en $\\mathrm{N\\cdot m}$). Plus le bras de levier est grand, plus l'effet de rotation est important."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "conversion",
+      "enonce": "Un moteur tourne à $N = 3000\\ \\mathrm{tr/min}$. Quelle est sa vitesse angulaire en rad/s (valeur approchée) ?",
+      "choix": ["$50\\ \\mathrm{rad/s}$", "$314\\ \\mathrm{rad/s}$", "$3000\\ \\mathrm{rad/s}$", "$100\\ \\mathrm{rad/s}$"],
+      "reponse": 1,
+      "explication": "$\\omega = N \\times \\dfrac{2\\pi}{60} = 3000 \\times \\dfrac{2\\pi}{60} = 100\\pi \\approx 314\\ \\mathrm{rad/s}$. Oublier le facteur $2\\pi$ donne 50 (erreur classique)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "mruv-complet",
+      "enonce": "Une voiture roule à $v_0 = 10\\ \\mathrm{m\\cdot s^{-1}}$ et freine à $a = -2\\ \\mathrm{m\\cdot s^{-2}}$. Au bout de combien de temps s'arrête-t-elle ?",
+      "choix": ["$2\\ \\mathrm{s}$", "$5\\ \\mathrm{s}$", "$20\\ \\mathrm{s}$", "$8\\ \\mathrm{s}$"],
+      "reponse": 1,
+      "explication": "Arrêt : $v = 0$. On résout $0 = a t + v_0 = -2t + 10$, d'où $t = 5\\ \\mathrm{s}$. L'accélération est négative car la voiture décélère."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "rotation-vers-lineaire",
+      "enonce": "Sur un treuil de rayon $R = 0{,}2\\ \\mathrm{m}$, l'axe tourne à $\\omega = 5\\ \\mathrm{rad\\cdot s^{-1}}$. À quelle vitesse monte la charge ?",
+      "choix": ["$1\\ \\mathrm{m\\cdot s^{-1}}$", "$25\\ \\mathrm{m\\cdot s^{-1}}$", "$0{,}04\\ \\mathrm{m\\cdot s^{-1}}$", "$5{,}2\\ \\mathrm{m\\cdot s^{-1}}$"],
+      "reponse": 0,
+      "explication": "La vitesse du câble égale la vitesse de la jante : $v = R\\,\\omega = 0{,}2 \\times 5 = 1\\ \\mathrm{m\\cdot s^{-1}}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "pfd-force",
+      "enonce": "Un ascenseur (cabine + charge $800\\ \\mathrm{kg}$) doit accélérer vers le haut à $1\\ \\mathrm{m\\cdot s^{-2}}$ ($g = 9{,}81$). Quelle tension du câble ? (arrondi)",
+      "choix": ["$800\\ \\mathrm{N}$", "$7848\\ \\mathrm{N}$", "$8648\\ \\mathrm{N}$", "$9810\\ \\mathrm{N}$"],
+      "reponse": 2,
+      "explication": "PFD vertical : $T - P = m a$, donc $T = m(g + a) = 800 \\times (9{,}81 + 1) = 800 \\times 10{,}81 \\approx 8648\\ \\mathrm{N}$. Oublier le poids (répondre 800) est l'erreur classique."
+    }
+  ]
+}

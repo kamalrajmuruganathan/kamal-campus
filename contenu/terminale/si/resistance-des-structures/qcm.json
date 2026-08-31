@@ -1,0 +1,209 @@
+{
+  "id": "tale-si-resistance-des-structures-qcm",
+  "chapitre": "tale-si-resistance-des-structures",
+  "titre": "QCM — Résistance des structures",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "traction",
+      "enonce": "Un câble d'ascenseur qui soutient une cabine est sollicité en :",
+      "choix": ["Compression", "Traction", "Torsion", "Cisaillement"],
+      "reponse": 1,
+      "explication": "Le câble est tiré dans le sens de sa longueur : c'est de la traction. La compression, au contraire, tend à raccourcir la pièce."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "compression",
+      "enonce": "Un pilier vertical qui supporte le poids d'un pont travaille en :",
+      "choix": ["Traction", "Flexion", "Compression", "Torsion"],
+      "reponse": 2,
+      "explication": "Le pilier est poussé (écrasé) par la charge : c'est de la compression. S'il est élancé, il risque le flambage."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "flexion",
+      "enonce": "Une étagère qui plie sous le poids des livres subit une sollicitation de :",
+      "choix": ["Flexion", "Traction", "Torsion", "Cisaillement"],
+      "reponse": 0,
+      "explication": "Une charge transversale qui fait plier la pièce est une flexion. C'est le cas typique d'une poutre ou d'une étagère chargée."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "contrainte",
+      "enonce": "La contrainte $\\sigma$ en traction simple se calcule par :",
+      "choix": ["$\\sigma = F \\times S$", "$\\sigma = \\dfrac{F}{S}$", "$\\sigma = \\dfrac{S}{F}$", "$\\sigma = F + S$"],
+      "reponse": 1,
+      "explication": "$\\sigma = \\dfrac{F}{S}$ : l'effort rapporté à la section. Multiplier $F$ par $S$ est l'erreur classique."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "unite-contrainte",
+      "enonce": "Quelle est l'unité d'une contrainte ?",
+      "choix": ["Le newton (N)", "Le pascal (Pa) ou MPa", "Le mètre (m)", "Le joule (J)"],
+      "reponse": 1,
+      "explication": "La contrainte est une force par unité de surface : en pascals ($1\\ \\mathrm{Pa} = 1\\ \\mathrm{N/m^2}$), en pratique en MPa. Le newton seul mesure une force."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "section",
+      "enonce": "À effort constant, si l'on augmente la section d'une pièce, la contrainte :",
+      "choix": ["Augmente", "Diminue", "Ne change pas", "Devient nulle"],
+      "reponse": 1,
+      "explication": "$\\sigma = \\dfrac{F}{S}$ : à $F$ constant, une plus grande section $S$ diminue la contrainte. C'est pourquoi on épaissit une pièce trop sollicitée."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "cisaillement",
+      "enonce": "Un boulon qui tend à être tranché par deux forces opposées travaille en :",
+      "choix": ["Flexion", "Cisaillement", "Traction", "Torsion"],
+      "reponse": 1,
+      "explication": "Deux forces opposées qui tendent à « couper » la pièce provoquent du cisaillement (cas des boulons, goupilles, rivets)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "module-young",
+      "enonce": "Le module de Young $E$ d'un matériau traduit :",
+      "choix": ["Sa masse", "Sa rigidité (résistance à la déformation élastique)", "Sa couleur", "Sa température de fusion"],
+      "reponse": 1,
+      "explication": "Plus $E$ est grand, moins le matériau se déforme sous une contrainte donnée : c'est sa rigidité. L'acier a un $E$ bien plus grand que l'aluminium."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "contrainte-calcul",
+      "enonce": "Un câble de section $S = 20\\ \\mathrm{mm^2}$ supporte $F = 4000\\ \\mathrm{N}$. Quelle est la contrainte ?",
+      "choix": ["$80\\,000\\ \\mathrm{MPa}$", "$200\\ \\mathrm{MPa}$", "$0{,}005\\ \\mathrm{MPa}$", "$4020\\ \\mathrm{MPa}$"],
+      "reponse": 1,
+      "explication": "$\\sigma = \\dfrac{F}{S} = \\dfrac{4000}{20} = 200\\ \\mathrm{N/mm^2} = 200\\ \\mathrm{MPa}$ (car 1 MPa = 1 N/mm²)."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "deformation",
+      "enonce": "L'allongement relatif (déformation) $\\varepsilon$ vaut :",
+      "choix": ["$\\dfrac{\\Delta L}{L_0}$", "$\\Delta L \\times L_0$", "$\\dfrac{L_0}{\\Delta L}$", "$\\Delta L + L_0$"],
+      "reponse": 0,
+      "explication": "$\\varepsilon = \\dfrac{\\Delta L}{L_0}$ : l'allongement rapporté à la longueur initiale. C'est une grandeur sans unité."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "hooke",
+      "enonce": "Dans le domaine élastique, la loi de Hooke relie contrainte et déformation par :",
+      "choix": ["$\\sigma = E + \\varepsilon$", "$\\sigma = E \\times \\varepsilon$", "$\\sigma = \\dfrac{\\varepsilon}{E}$", "$\\varepsilon = E \\times \\sigma$"],
+      "reponse": 1,
+      "explication": "$\\sigma = E\\,\\varepsilon$ : la contrainte est proportionnelle à la déformation, le coefficient étant le module de Young $E$."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "domaine-elastique",
+      "enonce": "Que se passe-t-il pour une pièce sollicitée dans le domaine élastique quand on relâche l'effort ?",
+      "choix": [
+        "Elle reste déformée définitivement",
+        "Elle revient à sa forme initiale",
+        "Elle se rompt",
+        "Elle change de matériau"
+      ],
+      "reponse": 1,
+      "explication": "Domaine élastique = la pièce revient à sa forme d'origine. Au-delà de la limite élastique, la déformation devient permanente (plastique)."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "securite",
+      "enonce": "La contrainte admissible se calcule à partir de la limite élastique $R_e$ et du coefficient de sécurité $s$ par :",
+      "choix": ["$R_e \\times s$", "$\\dfrac{R_e}{s}$", "$R_e + s$", "$\\dfrac{s}{R_e}$"],
+      "reponse": 1,
+      "explication": "$\\sigma_{\\text{admissible}} = \\dfrac{R_e}{s}$ : on divise la limite élastique par le coefficient de sécurité pour garder une marge."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "validation",
+      "enonce": "Une structure est validée si la contrainte réelle $\\sigma$ vérifie :",
+      "choix": [
+        "$\\sigma \\ge R_e$",
+        "$\\sigma \\le \\sigma_{\\text{admissible}}$",
+        "$\\sigma = 0$",
+        "$\\sigma > \\dfrac{R_e}{s}$"
+      ],
+      "reponse": 1,
+      "explication": "Il faut que la contrainte réelle reste inférieure ou égale à la contrainte admissible. Dépasser $\\sigma_{\\text{admissible}}$ rend la pièce non conforme."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "torsion",
+      "enonce": "Un arbre de transmission qui transmet un couple est principalement sollicité en :",
+      "choix": ["Traction", "Torsion", "Flexion", "Compression"],
+      "reponse": 1,
+      "explication": "Transmettre un couple vrille la pièce autour de son axe : c'est de la torsion, sollicitation typique des arbres."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "admissible-calcul",
+      "enonce": "Un acier a $R_e = 300\\ \\mathrm{MPa}$ ; on prend $s = 3$. Quelle est la contrainte admissible ?",
+      "choix": ["$900\\ \\mathrm{MPa}$", "$100\\ \\mathrm{MPa}$", "$303\\ \\mathrm{MPa}$", "$3\\ \\mathrm{MPa}$"],
+      "reponse": 1,
+      "explication": "$\\sigma_{\\text{admissible}} = \\dfrac{R_e}{s} = \\dfrac{300}{3} = 100\\ \\mathrm{MPa}$. Multiplier au lieu de diviser (900) est l'erreur classique."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "validation-calcul",
+      "enonce": "Avec $\\sigma_{\\text{admissible}} = 100\\ \\mathrm{MPa}$, une pièce subit $\\sigma = 120\\ \\mathrm{MPa}$. Que doit faire l'ingénieur ?",
+      "choix": [
+        "Rien, elle est validée",
+        "Augmenter la section (ou changer de matériau) car $\\sigma > \\sigma_{\\text{admissible}}$",
+        "Diminuer la section",
+        "Réduire le coefficient de sécurité à 0"
+      ],
+      "reponse": 1,
+      "explication": "$120 > 100$ : la pièce est refusée. En augmentant la section $S$, on réduit $\\sigma = F/S$ jusqu'à repasser sous la limite admissible."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "section-min",
+      "enonce": "Pour tenir $F = 5000\\ \\mathrm{N}$ avec $\\sigma_{\\text{admissible}} = 100\\ \\mathrm{N/mm^2}$, quelle section minimale faut-il ?",
+      "choix": ["$50\\ \\mathrm{mm^2}$", "$500\\ \\mathrm{mm^2}$", "$0{,}02\\ \\mathrm{mm^2}$", "$5000\\ \\mathrm{mm^2}$"],
+      "reponse": 0,
+      "explication": "$S_{\\min} = \\dfrac{F}{\\sigma_{\\text{adm}}} = \\dfrac{5000}{100} = 50\\ \\mathrm{mm^2}$. On isole $S$ dans $\\sigma = F/S$."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "hooke-calcul",
+      "enonce": "Un acier de module $E = 200\\,000\\ \\mathrm{MPa}$ subit une déformation $\\varepsilon = 0{,}001$. Quelle contrainte ?",
+      "choix": ["$200\\ \\mathrm{MPa}$", "$2000\\ \\mathrm{MPa}$", "$200\\,000\\ \\mathrm{MPa}$", "$0{,}2\\ \\mathrm{MPa}$"],
+      "reponse": 0,
+      "explication": "$\\sigma = E\\,\\varepsilon = 200\\,000 \\times 0{,}001 = 200\\ \\mathrm{MPa}$. Oublier de multiplier par $\\varepsilon$ laisse à tort 200 000."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "allongement",
+      "enonce": "Une barre de $L_0 = 2\\ \\mathrm{m}$ s'allonge de $\\Delta L = 1\\ \\mathrm{mm}$ sous charge. Quelle est sa déformation $\\varepsilon$ ?",
+      "choix": ["$0{,}5$", "$0{,}0005$", "$2$", "$0{,}002$"],
+      "reponse": 1,
+      "explication": "$\\varepsilon = \\dfrac{\\Delta L}{L_0} = \\dfrac{1\\ \\mathrm{mm}}{2000\\ \\mathrm{mm}} = 0{,}0005$. Il faut exprimer $\\Delta L$ et $L_0$ dans la même unité (ici en mm)."
+    }
+  ]
+}

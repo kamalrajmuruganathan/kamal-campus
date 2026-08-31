@@ -1,0 +1,229 @@
+{
+  "id": "tale-si-transmission-de-linformation-qcm",
+  "chapitre": "tale-si-transmission-de-linformation",
+  "titre": "QCM — Transmission de l'information",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "chaine-information",
+      "enonce": "Quelles sont les trois fonctions de la chaîne d'information ?",
+      "choix": [
+        "Alimenter, distribuer, convertir",
+        "Acquérir, traiter, communiquer",
+        "Coder, moduler, filtrer",
+        "Mesurer, chauffer, afficher"
+      ],
+      "reponse": 1,
+      "explication": "La chaîne d'information : acquérir (capteurs), traiter (calculateur), communiquer. « Alimenter, distribuer, convertir » appartient à la chaîne d'énergie."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "acquerir",
+      "enonce": "Quel composant réalise la fonction « acquérir » ?",
+      "choix": ["Le moteur", "Le capteur", "Le relais", "La batterie"],
+      "reponse": 1,
+      "explication": "Le capteur transforme une grandeur physique en signal exploitable. Le moteur, lui, appartient à la chaîne d'énergie (convertir)."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "analogique",
+      "enonce": "Un signal analogique est un signal qui :",
+      "choix": [
+        "Ne prend que deux valeurs",
+        "Varie de façon continue (infinité de valeurs)",
+        "Est codé en binaire",
+        "Ne varie jamais"
+      ],
+      "reponse": 1,
+      "explication": "Analogique = continu, une infinité de valeurs possibles. Le signal binaire à deux valeurs est un signal numérique."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "numerique",
+      "enonce": "Un signal numérique est codé en :",
+      "choix": ["Décimal", "Binaire (0 et 1)", "Analogique", "Volts uniquement"],
+      "reponse": 1,
+      "explication": "Le signal numérique utilise le binaire (0 et 1), ce qui le rend robuste au bruit et facile à traiter par un ordinateur."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "bit",
+      "enonce": "Combien de valeurs différentes peut-on coder avec 1 bit ?",
+      "choix": ["1", "2", "8", "10"],
+      "reponse": 1,
+      "explication": "1 bit code $2^1 = 2$ valeurs (0 ou 1). C'est la brique élémentaire de l'information numérique."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "octet",
+      "enonce": "Combien de bits contient un octet ?",
+      "choix": ["4", "8", "16", "1"],
+      "reponse": 1,
+      "explication": "Un octet = 8 bits, ce qui permet de coder $2^8 = 256$ valeurs (de 0 à 255)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "debit",
+      "enonce": "Le débit binaire se mesure en :",
+      "choix": ["Bits", "Bits par seconde", "Octets", "Hertz uniquement"],
+      "reponse": 1,
+      "explication": "Le débit est une quantité d'information par unité de temps, en bit/s. Les bits seuls mesurent une quantité, pas un débit."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "support",
+      "enonce": "Quel support de transmission est insensible aux parasites électromagnétiques et offre un très haut débit ?",
+      "choix": ["Le câble cuivre", "La fibre optique", "La liaison radio", "La paire torsadée"],
+      "reponse": 1,
+      "explication": "La fibre optique transmet la lumière : très haut débit, faibles pertes et insensibilité aux parasites électromagnétiques."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "nombre-valeurs",
+      "enonce": "Combien de valeurs différentes peut-on coder avec 4 bits ?",
+      "choix": ["4", "8", "16", "32"],
+      "reponse": 2,
+      "explication": "$2^4 = 16$ valeurs (de 0 à 15). Répondre 4 (confusion entre nombre de bits et nombre de valeurs) est l'erreur classique."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "can",
+      "enonce": "La conversion analogique-numérique (CAN) repose sur :",
+      "choix": [
+        "Un échantillonnage puis une quantification",
+        "Une amplification",
+        "Une modulation de fréquence",
+        "Un simple filtrage"
+      ],
+      "reponse": 0,
+      "explication": "On échantillonne (relevés à intervalles réguliers) puis on quantifie (attribution d'une valeur numérique). C'est le principe du CAN."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "resolution",
+      "enonce": "Pour un signal numérique, augmenter le nombre de bits de codage permet :",
+      "choix": [
+        "De diminuer la résolution",
+        "D'augmenter la résolution (finesse)",
+        "De supprimer le bruit à la source",
+        "De réduire le débit nécessaire"
+      ],
+      "reponse": 1,
+      "explication": "Plus de bits ⇒ plus de niveaux ⇒ meilleure résolution. En revanche, cela augmente la quantité de données, donc le débit nécessaire."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "temps-transmission",
+      "enonce": "Un fichier de $2\\ \\mathrm{Mbit}$ est envoyé à $500\\ \\mathrm{kbit/s}$. Quel est le temps de transmission ?",
+      "choix": ["$0{,}25\\ \\mathrm{s}$", "$4\\ \\mathrm{s}$", "$1000\\ \\mathrm{s}$", "$2{,}5\\ \\mathrm{s}$"],
+      "reponse": 1,
+      "explication": "$t = \\dfrac{\\text{bits}}{D} = \\dfrac{2 \\times 10^6}{500 \\times 10^3} = 4\\ \\mathrm{s}$. Inverser le rapport donnerait 0,25 s (erreur classique)."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "bruit",
+      "enonce": "Pourquoi le signal numérique résiste-t-il mieux au bruit que l'analogique ?",
+      "choix": [
+        "Parce qu'il est plus rapide",
+        "Parce qu'il suffit de distinguer 0 et 1 pour régénérer l'information",
+        "Parce qu'il n'utilise pas de câble",
+        "Parce qu'il n'y a jamais de bruit en numérique"
+      ],
+      "reponse": 1,
+      "explication": "Tant que le récepteur distingue le 0 du 1 malgré le bruit, il reconstitue exactement l'information. Le numérique peut ainsi être régénéré, contrairement à l'analogique."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "parite",
+      "enonce": "À quoi sert un bit de parité ?",
+      "choix": [
+        "À augmenter le débit",
+        "À détecter une erreur de transmission",
+        "À alimenter le capteur",
+        "À convertir en analogique"
+      ],
+      "reponse": 1,
+      "explication": "Le bit de parité complète la donnée pour que le nombre de 1 soit pair (ou impair). Si la parité reçue est fausse, une erreur est détectée."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "protocole",
+      "enonce": "Un protocole de communication est :",
+      "choix": [
+        "Un composant électronique",
+        "Un ensemble de règles communes pour que deux systèmes se comprennent",
+        "Un type de capteur",
+        "Une unité de débit"
+      ],
+      "reponse": 1,
+      "explication": "Le protocole définit le format des trames, l'adressage, le contrôle d'erreur : des règles partagées indispensables à l'échange."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "octet-valeurs",
+      "enonce": "Combien de valeurs distinctes un octet (8 bits) permet-il de coder ?",
+      "choix": ["8", "64", "256", "1024"],
+      "reponse": 2,
+      "explication": "$2^8 = 256$ valeurs (de 0 à 255). Confondre 8 bits avec 8 valeurs est l'erreur classique."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "resolution-calcul",
+      "enonce": "Un capteur mesure de 0 à 10 V et code sur 8 bits. Quel est le pas de quantification (plus petit écart mesurable) ?",
+      "choix": ["$1{,}25\\ \\mathrm{V}$", "$0{,}039\\ \\mathrm{V}$", "$0{,}8\\ \\mathrm{V}$", "$10\\ \\mathrm{V}$"],
+      "reponse": 1,
+      "explication": "Pas $= \\dfrac{10}{2^8} = \\dfrac{10}{256} \\approx 0{,}039\\ \\mathrm{V}$ (39 mV). Diviser par 8 au lieu de $2^8$ donnerait 1,25 V (erreur classique)."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "parite-calcul",
+      "enonce": "En parité paire, quel bit de parité ajoute-t-on à la donnée `1011` ?",
+      "choix": ["0", "1", "Aucun", "Deux bits"],
+      "reponse": 1,
+      "explication": "`1011` contient trois 1 (nombre impair). Pour rendre le total pair, le bit de parité vaut 1 : la trame devient `10111` (quatre 1)."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "debit-calcul",
+      "enonce": "Une caméra produit des images de $1\\ \\mathrm{Mo}$ à raison de 25 images par seconde. Quel débit binaire faut-il (1 octet = 8 bits) ?",
+      "choix": ["$25\\ \\mathrm{Mbit/s}$", "$200\\ \\mathrm{Mbit/s}$", "$3{,}125\\ \\mathrm{Mbit/s}$", "$25\\ \\mathrm{Mo/s}$"],
+      "reponse": 1,
+      "explication": "Débit $= 1\\ \\mathrm{Mo} \\times 25 = 25\\ \\mathrm{Mo/s} = 25 \\times 8 = 200\\ \\mathrm{Mbit/s}$. Oublier de convertir les octets en bits (×8) donne 25."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "nombre-bits",
+      "enonce": "On veut coder au moins 1000 niveaux différents. Combien de bits faut-il au minimum ?",
+      "choix": ["8 bits", "9 bits", "10 bits", "1000 bits"],
+      "reponse": 2,
+      "explication": "$2^9 = 512 < 1000$ mais $2^{10} = 1024 \\ge 1000$ : il faut 10 bits. On cherche le plus petit $n$ tel que $2^n \\ge 1000$."
+    }
+  ]
+}

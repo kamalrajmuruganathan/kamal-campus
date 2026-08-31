@@ -65,6 +65,7 @@ const LIBELLES_PARCOURS = {
   'spcl-stl': 'Sciences physiques en laboratoire — STL',
   'enseignement-scientifique': 'Enseignement scientifique',
   'tronc-commun': 'Tronc commun',
+  si: 'Sciences de l’ingénieur',
   sciences: 'Sciences',
   svt: 'SVT',
   techno: 'Technologie',
@@ -75,6 +76,8 @@ const LIBELLES_PARCOURS = {
 const LIBELLES_MATIERE = {
   mathematiques: 'Mathématiques',
   'physique-chimie': 'Physique-chimie',
+  'enseignement-scientifique': 'Enseignement scientifique',
+  si: 'Sciences de l’ingénieur',
   sciences: 'Sciences',
   svt: 'SVT',
   techno: 'Technologie',

@@ -1,0 +1,369 @@
+<title>Kamal Campus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,900&display=swap">
+<style>
+  :root{
+    --bg:#eef2f8; --surface:#ffffff; --surface2:#e7edf6; --raised:#ffffff;
+    --ink:#16232e; --muted:#5c6b7b; --faint:#8493a3; --line:#dde5f0;
+    --accent:#1f6feb; --accent-ink:#ffffff;
+    --good:#1a7f4b; --warn:#b07908; --crit:#c02a2a;
+    /* matières */
+    --m-maths:#2f6fed; --m-pc:#7d47cf; --m-svt:#1f8a52; --m-sci:#0f9488;
+    --m-techno:#cf7f1e; --m-snt:#d9583a; --m-nsi:#a97b1b;
+    --shadow:0 1px 2px rgba(16,35,60,.06), 0 8px 24px rgba(16,35,60,.06);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#0e141b; --surface:#161e27; --surface2:#1b242e; --raised:#1a232d;
+    --ink:#e7edf4; --muted:#9aa8b5; --faint:#748393; --line:#243039;
+    --accent:#6aa8ff; --accent-ink:#0b1118;
+    --good:#5fd398; --warn:#e8b93b; --crit:#ff8080;
+    --m-maths:#5b93ff; --m-pc:#b48cf0; --m-svt:#54c98c; --m-sci:#2bc0b4;
+    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }}
+  :root[data-theme="dark"]{
+    --bg:#0e141b; --surface:#161e27; --surface2:#1b242e; --raised:#1a232d;
+    --ink:#e7edf4; --muted:#9aa8b5; --faint:#748393; --line:#243039;
+    --accent:#6aa8ff; --accent-ink:#0b1118;
+    --good:#5fd398; --warn:#e8b93b; --crit:#ff8080;
+    --m-maths:#5b93ff; --m-pc:#b48cf0; --m-svt:#54c98c; --m-sci:#2bc0b4;
+    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Nunito Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3,.display{font-family:"Baloo 2","Nunito Sans",system-ui,sans-serif;
+    text-wrap:balance;letter-spacing:-.01em;margin:0}
+  .num{font-variant-numeric:tabular-nums lining-nums}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  a{color:var(--accent)}
+
+  /* ---- top bar ---- */
+  .top{display:flex;align-items:center;justify-content:space-between;
+    padding:18px 22px;max-width:1080px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Baloo 2",sans-serif;font-weight:800}
+  .logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:linear-gradient(150deg,var(--m-maths),var(--m-pc));color:#fff;font-weight:800;box-shadow:var(--shadow)}
+  .themeToggle{border:1px solid var(--line);background:var(--surface);color:var(--muted);
+    border-radius:999px;padding:7px 14px;font:inherit;font-weight:700;font-size:.82rem;cursor:pointer}
+  .themeToggle:hover{color:var(--ink)}
+
+  /* ---- hero ---- */
+  .hero{padding:26px 0 8px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;line-height:1.02}
+  .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:60ch;margin:14px 0 0}
+  .stamp{display:inline-flex;gap:8px;align-items:center;margin-top:20px;
+    background:var(--surface);border:1px solid var(--line);border-radius:999px;
+    padding:7px 14px;font-weight:700;font-size:.84rem;color:var(--muted);box-shadow:var(--shadow)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 0 4px color-mix(in srgb,var(--good) 22%,transparent)}
+
+  /* ---- KPI row ---- */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 6px}
+  .kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .kpi .big{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:2.3rem;line-height:1}
+  .kpi .cap{color:var(--muted);font-weight:700;font-size:.82rem;margin-top:6px}
+  .kpi::after{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+  .kpi.k2::after{background:var(--m-pc)} .kpi.k3::after{background:var(--m-svt)} .kpi.k4::after{background:var(--m-techno)}
+
+  section{padding:38px 0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+  .sec-head h2{font-size:1.6rem;font-weight:700}
+  .sec-head .hint{color:var(--faint);font-size:.9rem}
+
+  /* ---- stat chips ---- */
+  .chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+  .chip .n{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:1.5rem}
+  .chip .l{color:var(--muted);font-size:.82rem;font-weight:600}
+
+  /* ---- bars ---- */
+  .bars{display:flex;flex-direction:column;gap:11px}
+  .bar{display:grid;grid-template-columns:120px 1fr 52px;align-items:center;gap:12px}
+  .bar .name{font-weight:700;font-size:.92rem}
+  .bar .track{height:16px;background:var(--surface2);border-radius:999px;overflow:hidden}
+  .bar .fill{height:100%;border-radius:999px;transform-origin:left;animation:grow 1s cubic-bezier(.2,.7,.2,1) both}
+  .bar .val{text-align:right;font-weight:800;font-variant-numeric:tabular-nums;font-size:.92rem}
+  @keyframes grow{from{transform:scaleX(0)}}
+
+  /* ---- coverage matrix ---- */
+  .matrix-scroll{overflow-x:auto}
+  table.matrix{border-collapse:separate;border-spacing:5px;min-width:560px;width:100%}
+  table.matrix th{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:.82rem;color:var(--muted);padding:4px 6px;text-align:center}
+  table.matrix th.lvl{text-align:left}
+  table.matrix td.lvl{font-weight:800;font-size:.9rem;white-space:nowrap;padding-right:8px}
+  .cell{width:100%;height:38px;border-radius:9px;display:grid;place-items:center;
+    font-weight:800;color:#fff;font-variant-numeric:tabular-nums;font-size:.95rem}
+  .cell.empty{background:var(--surface2);color:var(--faint);font-weight:600;opacity:.5}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:.82rem;color:var(--muted);font-weight:600}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+
+  /* ---- phones ---- */
+  .phones{display:flex;gap:20px;overflow-x:auto;padding:6px 2px 16px;scroll-snap-type:x mandatory}
+  .phone{flex:0 0 auto;width:236px;scroll-snap-align:start}
+  .phone .frame{background:#0b1118;border:8px solid #263341;border-radius:30px;padding:10px;
+    box-shadow:var(--shadow);position:relative}
+  .phone .notch{width:78px;height:5px;border-radius:99px;background:#3a4a5a;margin:2px auto 8px}
+  .screen{background:#12181f;border-radius:20px;padding:14px;color:#e6edf3;
+    font-size:.72rem;min-height:398px;display:flex;flex-direction:column;gap:9px;overflow:hidden}
+  .phone .label{text-align:center;margin-top:10px;font-weight:700;color:var(--muted);font-size:.82rem}
+  .s-title{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:1.05rem;color:#fff;line-height:1.1}
+  .s-sub{color:#9aa8b5;font-size:.66rem}
+  .s-card{background:#1a222b;border:1px solid #253039;border-radius:12px;padding:9px 10px}
+  .s-row{display:flex;align-items:center;gap:8px}
+  .s-badge{width:30px;height:30px;border-radius:50%;background:#6aa8ff;color:#0b1118;
+    font-family:"Baloo 2",sans-serif;font-weight:800;display:grid;place-items:center;font-size:.85rem}
+  .s-bar{height:6px;border-radius:99px;background:#253039;overflow:hidden;margin-top:6px}
+  .s-bar>i{display:block;height:100%;background:#6aa8ff;border-radius:99px}
+  .s-flame{margin-left:auto;text-align:center;font-weight:800;color:#fff;font-size:.7rem}
+  .s-opt{display:flex;gap:7px}
+  .s-choice{border:1px solid #253039;border-radius:9px;padding:7px 9px;flex:1}
+  .s-choice.ok{background:#12291f;border-color:#1a7f4b;color:#5fd398}
+  .s-choice.no{background:#2a1518;border-color:#c02a2a;color:#ff8080}
+  .s-step{display:flex;gap:8px;font-size:.68rem}
+  .s-step b{color:#6aa8ff}
+  .s-pill{display:inline-block;background:#222c37;border-radius:99px;padding:3px 9px;font-weight:700;font-size:.62rem}
+  .s-ring{width:56px;height:56px;border-radius:50%;
+    background:conic-gradient(#5fd398 0 72%, #253039 0);display:grid;place-items:center}
+  .s-ring>b{width:42px;height:42px;border-radius:50%;background:#12181f;display:grid;place-items:center;color:#fff;font-family:"Baloo 2",sans-serif;font-weight:800}
+  .s-tag{background:#12291f;color:#5fd398;border-radius:8px;padding:5px 8px;font-weight:700;font-size:.64rem;border-left:3px solid #1a7f4b}
+
+  /* ---- feature cards ---- */
+  .feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px}
+  .fcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .fcard .ic{font-size:1.5rem;line-height:1}
+  .fcard h3{font-size:1.06rem;font-weight:700;margin:10px 0 5px}
+  .fcard p{margin:0;color:var(--muted);font-size:.9rem}
+
+  /* ---- quality strip ---- */
+  .quality{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+  .qitem{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:15px;display:flex;gap:11px;align-items:center;box-shadow:var(--shadow)}
+  .qitem .qic{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good);font-weight:800}
+  .qitem b{display:block;font-family:"Baloo 2",sans-serif;font-size:1.05rem}
+  .qitem span{color:var(--muted);font-size:.8rem;font-weight:600}
+
+  /* ---- callout ---- */
+  .callout{background:color-mix(in srgb,var(--warn) 12%,var(--surface));
+    border:1px solid color-mix(in srgb,var(--warn) 40%,var(--line));
+    border-left:5px solid var(--warn);border-radius:14px;padding:18px 20px}
+  .callout h3{font-size:1.15rem;margin:0 0 6px}
+  .callout p{margin:0;color:var(--ink)}
+
+  footer{border-top:1px solid var(--line);margin-top:20px;padding:26px 0 50px;color:var(--faint);font-size:.85rem}
+
+  .fade{opacity:0;transform:translateY(14px);animation:fade .7s ease forwards}
+  @keyframes fade{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transform:none!important;opacity:1!important}}
+  @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:96px 1fr 46px}}
+</style>
+
+<div class="top">
+  <div class="brand"><span class="logo">K</span> Kamal Campus</div>
+  <button class="themeToggle" id="tg" aria-label="Changer de thème">◐ Thème</button>
+</div>
+
+<header class="wrap hero">
+  <div class="eyebrow fade">État des lieux · révision scolaire</div>
+  <h1 class="fade" style="animation-delay:.05s">Kamal Campus,<br>du CP à la Terminale.</h1>
+  <p class="lead fade" style="animation-delay:.1s">Une application de révision <strong>100 % hors ligne</strong> en maths, physique‑chimie, sciences, SVT et technologie / SNT / NSI. Voici tout ce qui est en place aujourd'hui.</p>
+  <div class="stamp fade" style="animation-delay:.15s"><span class="dot"></span> 350 tests au vert · validation du contenu OK · l'app compile</div>
+</header>
+
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi fade"><div class="big num">365</div><div class="cap">chapitres</div></div>
+    <div class="kpi k2 fade" style="animation-delay:.05s"><div class="big num">7 300</div><div class="cap">questions de QCM</div></div>
+    <div class="kpi k3 fade" style="animation-delay:.1s"><div class="big num">7</div><div class="cap">matières</div></div>
+    <div class="kpi k4 fade" style="animation-delay:.15s"><div class="big num">9</div><div class="cap">langues d'interface</div></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="sec-head"><h2>En chiffres</h2><span class="hint">chaque chapitre = cours + exercices + QCM + cartes</span></div>
+  <div class="chips">
+    <div class="chip"><div class="n num">365</div><div class="l">chapitres</div></div>
+    <div class="chip"><div class="n num">7 300</div><div class="l">questions QCM</div></div>
+    <div class="chip"><div class="n num">365</div><div class="l">jeux d'exercices corrigés</div></div>
+    <div class="chip"><div class="n num">3 268</div><div class="l">cartes de révision</div></div>
+    <div class="chip"><div class="n num">20</div><div class="l">sujets type bac/brevet</div></div>
+    <div class="chip"><div class="n num">33</div><div class="l">bac blancs & évaluations</div></div>
+    <div class="chip"><div class="n num">14</div><div class="l">formulaires</div></div>
+    <div class="chip"><div class="n num">∞</div><div class="l">questions générées (calcul)</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><h2>Répartition par matière</h2><span class="hint">365 chapitres</span></div>
+  <div class="bars" id="bars"></div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><h2>Couverture par niveau</h2><span class="hint">nombre de chapitres · CP → Terminale</span></div>
+  <div class="matrix-scroll"><table class="matrix" id="matrix"></table></div>
+  <div class="legend" id="legend"></div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><h2>Aperçus de l'application</h2><span class="hint">reconstitution des écrans · thème sombre</span></div>
+  <div class="phones">
+
+    <div class="phone">
+      <div class="frame"><div class="notch"></div><div class="screen">
+        <div class="s-title">Salut Kamal 👋</div>
+        <div class="s-sub">Maths &amp; sciences — 365 chapitres, 7 300 questions</div>
+        <div class="s-card s-row">
+          <div class="s-badge">7</div>
+          <div style="flex:1">
+            <div style="font-weight:700;color:#fff">Ma progression · Expert</div>
+            <div class="s-bar"><i style="width:64%"></i></div>
+            <div class="s-sub">1 260 XP · niveau 8 bientôt</div>
+          </div>
+          <div class="s-flame">🔥<br>5</div>
+        </div>
+        <div class="s-card s-row"><span>🧮</span><div><b style="color:#fff">Résolveur pas à pas</b><div class="s-sub">calculs, fractions, équations</div></div></div>
+        <div class="s-card s-row"><span>🧩</span><div><b style="color:#fff">Énigmes</b><div class="s-sub">suites, grilles, allumettes</div></div></div>
+        <div class="s-card s-row"><span>🎯</span><div><b style="color:#fff">À réviser</b><div class="s-sub">tes chapitres fragiles</div></div></div>
+      </div></div>
+      <div class="label">Accueil</div>
+    </div>
+
+    <div class="phone">
+      <div class="frame"><div class="notch"></div><div class="screen">
+        <div class="s-sub">Question 10 / 10 · difficile</div>
+        <div style="color:#fff;font-weight:700">Signe de $g(x) = -x^2+4x-3$ ?</div>
+        <div class="s-opt"><div class="s-choice">A · &lt; 0 partout</div></div>
+        <div class="s-opt"><div class="s-choice ok">B · &gt; 0 sur ]1 ; 3[ ✓</div></div>
+        <div class="s-opt"><div class="s-choice no">C · &gt; 0 partout ✕</div></div>
+        <div style="margin-top:auto"></div>
+        <div class="s-title num">8 / 10</div>
+        <div class="s-sub">80 % de bonnes réponses</div>
+        <div class="s-tag">+80 points · Niveau 8 · 🔥 objectif du jour atteint !</div>
+        <div class="s-sub">Nouveau badge : ⚡ En série</div>
+      </div></div>
+      <div class="label">QCM &amp; résultat</div>
+    </div>
+
+    <div class="phone">
+      <div class="frame"><div class="notch"></div><div class="screen">
+        <div class="s-sub">Résolveur</div>
+        <div class="s-card" style="color:#fff;font-weight:700;text-align:center;font-size:.95rem">2x + 5 = 13</div>
+        <div class="s-tag" style="border-color:#6aa8ff;background:#12222f;color:#e6edf3">Résultat &nbsp; <b style="color:#fff;font-size:1rem">x = 4</b></div>
+        <div class="s-pill">étapes</div>
+        <div class="s-step"><b>1.</b> On isole : 2x = 13 − 5 = 8.</div>
+        <div class="s-step"><b>2.</b> x = 8 ÷ 2 = 4.</div>
+        <div class="s-pill" style="margin-top:4px">opération posée · 47 + 85</div>
+        <div class="s-step"><b>•</b> Unités : 7+5 = 12, je pose 2, je retiens 1.</div>
+        <div class="s-step"><b>•</b> Dizaines : 4+8+1 = 13 → 132.</div>
+      </div></div>
+      <div class="label">Résolveur pas à pas</div>
+    </div>
+
+    <div class="phone">
+      <div class="frame"><div class="notch"></div><div class="screen">
+        <div class="s-sub">Ma progression</div>
+        <div class="s-card s-row">
+          <div class="s-ring"><b>Lv 7</b></div>
+          <div style="flex:1">
+            <div style="font-weight:700;color:#fff">Objectif du jour</div>
+            <div class="s-bar"><i style="width:72%"></i></div>
+            <div class="s-sub">43 / 60 XP · 🔥 série 5 jours</div>
+          </div>
+        </div>
+        <div class="s-row" style="gap:6px;flex-wrap:wrap">
+          <span class="s-pill">🎯 QCM 96%</span><span class="s-pill">✨ 4 sans-faute</span><span class="s-pill">🧠 22 chap.</span>
+        </div>
+        <div class="s-sub" style="margin-top:2px;color:#fff;font-weight:700">Badges 12 / 18</div>
+        <div class="s-row" style="gap:6px;flex-wrap:wrap">
+          <span class="s-pill">🔥</span><span class="s-pill">⚡</span><span class="s-pill">💯</span><span class="s-pill">🏆</span><span class="s-pill">🧩</span><span class="s-pill">⚗️</span>
+        </div>
+        <div class="s-tag" style="margin-top:auto">Rappel quotidien activé à 18:00</div>
+      </div></div>
+      <div class="label">Progression &amp; badges</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><h2>Fonctionnalités</h2></div>
+  <div class="feat">
+    <div class="fcard"><div class="ic">🧮</div><h3>Résolveur pas à pas</h3><p>Calculs, fractions, équations du 1er/2nd degré et opérations posées (retenues, emprunts) — réponses exactes, comme Photomath sans la photo.</p></div>
+    <div class="fcard"><div class="ic">♾️</div><h3>Questions à l'infini</h3><p>Sur les chapitres de calcul (maths &amp; physique), l'appli génère des QCM sans fin, réponse calculée donc juste.</p></div>
+    <div class="fcard"><div class="ic">🧩</div><h3>Énigmes</h3><p>Suites logiques, grilles, calcul mental et énigmes d'allumettes rendues en 7 segments.</p></div>
+    <div class="fcard"><div class="ic">🔥</div><h3>Série &amp; objectif</h3><p>XP, niveaux et rangs, objectif quotidien, série de jours, badges et rappels — la régularité récompensée.</p></div>
+    <div class="fcard"><div class="ic">🎯</div><h3>Révision ciblée</h3><p>Recherche, favoris et parcours perso qui met en avant tes chapitres les plus fragiles.</p></div>
+    <div class="fcard"><div class="ic">🌍</div><h3>9 langues</h3><p>Interface en FR, EN, ES, IT, PT, DE, ZH, AR, TA — choisie à l'onboarding, modifiable à tout moment.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><h2>Qualité &amp; technique</h2></div>
+  <div class="quality">
+    <div class="qitem"><div class="qic">✓</div><div><b class="num">350</b><span>tests automatiques au vert</span></div></div>
+    <div class="qitem"><div class="qic">✓</div><div><b>Hors ligne</b><span>Expo / React Native, LaTeX, thème clair/sombre</span></div></div>
+    <div class="qitem"><div class="qic">✓</div><div><b>Contenu validé</b><span>format &amp; cohérence, contrôle automatique</span></div></div>
+    <div class="qitem"><div class="qic">✓</div><div><b class="num">59</b><span>commits prêts à pousser sur GitHub</span></div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="callout">
+    <h3>⚠️ Le seul vrai point ouvert : la relecture</h3>
+    <p>Tout le contenu est rédigé à partir des <strong>programmes officiels</strong>, vérifié automatiquement (format, cohérence) et recalculé — mais il reste en <strong>brouillon</strong>, pas encore relu par des enseignants. C'est l'étape à prévoir avant une mise en production, en priorité pour les matières pointues du lycée (SVT, NSI).</p>
+  </div>
+</section>
+
+<footer class="wrap">
+  Kamal Campus — état des lieux au 31 août 2026. Maths, physique‑chimie, sciences, SVT et techno/SNT/NSI, du CP à la Terminale. Version de développement.
+</footer>
+
+<script>
+  // Thème (mémorisé si possible, sans casser en navigation privée)
+  const root=document.documentElement, tg=document.getElementById('tg');
+  try{const s=localStorage.getItem('kc-theme'); if(s)root.setAttribute('data-theme',s);}catch(e){}
+  tg.addEventListener('click',()=>{
+    const cur=root.getAttribute('data-theme')
+      || (matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+    const next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('kc-theme',next);}catch(e){}
+  });
+
+  // Données
+  const MAT=[
+    ['Maths',197,'--m-maths'],['Physique-chimie',68,'--m-pc'],['SVT',37,'--m-svt'],
+    ['Sciences (primaire)',25,'--m-sci'],['Technologie',20,'--m-techno'],['NSI',12,'--m-nsi'],['SNT',6,'--m-snt']
+  ];
+  const max=Math.max(...MAT.map(m=>m[1]));
+  document.getElementById('bars').innerHTML=MAT.map(([n,v,c])=>`
+    <div class="bar"><div class="name">${n}</div>
+    <div class="track"><div class="fill" style="width:${Math.round(v/max*100)}%;background:var(${c})"></div></div>
+    <div class="val num">${v}</div></div>`).join('');
+
+  const COLS=[['Maths','--m-maths'],['PC','--m-pc'],['SVT','--m-svt'],['Sci.','--m-sci'],['Techno','--m-techno'],['SNT','--m-snt'],['NSI','--m-nsi']];
+  // niveau : [Maths, PC, SVT, Sciences, Techno, SNT, NSI]
+  const ROWS=[
+    ['CP',[11,0,0,5,0,0,0]],['CE1',[11,0,0,5,0,0,0]],['CE2',[11,0,0,5,0,0,0]],
+    ['CM1',[12,0,0,5,0,0,0]],['CM2',[12,0,0,5,0,0,0]],
+    ['6ᵉ',[10,0,5,0,5,0,0]],['5ᵉ',[15,6,5,0,5,0,0]],['4ᵉ',[15,6,5,0,5,0,0]],['3ᵉ',[14,5,5,0,5,0,0]],
+    ['2ᵈᵉ',[10,5,6,0,0,6,0]],['1ʳᵉ',[14,6,5,0,0,0,6]],['1ʳᵉ techno',[11,14,0,0,0,0,0]],
+    ['Tⁿᵃˡᵉ',[27,21,6,0,0,0,6]],['Tⁿᵃˡᵉ techno',[19,10,0,0,0,0,0]]
+  ];
+  let html='<tr><th class="lvl">Niveau</th>'+COLS.map(c=>`<th>${c[0]}</th>`).join('')+'</tr>';
+  for(const [lvl,vals] of ROWS){
+    html+=`<tr><td class="lvl">${lvl}</td>`+vals.map((v,i)=>
+      v>0?`<td><div class="cell" style="background:var(${COLS[i][1]})">${v}</div></td>`
+         :`<td><div class="cell empty">·</div></td>`).join('')+'</tr>';
+  }
+  document.getElementById('matrix').innerHTML=html;
+  document.getElementById('legend').innerHTML=COLS.map(c=>
+    `<span><i style="background:var(${c[1]})"></i>${c[0]}</span>`).join('');
+</script>

@@ -12,7 +12,7 @@ sert exactement le contenu de ton programme.
 
 ## En chiffres
 
-- **365 chapitres** — maths, physique-chimie, sciences, SVT et **techno / SNT / NSI**, du **CP à la Terminale**.
+- **383 chapitres** — maths, physique-chimie, sciences, SVT, techno/SNT/NSI, **sciences de l'ingénieur** et **enseignement scientifique**, du **CP à la Terminale**.
 - **2 080 questions** de QCM et **2 080 exercices** corrigés.
 - **2 326 cartes** de révision (flashcards).
 - **48 chapitres** reliés à un outil de calcul.
@@ -72,6 +72,7 @@ questions de tous ses chapitres pour une révision d'ensemble.
 **Primaire** (CP → CM2) : mathématiques (programme complet) et **sciences** (Questionner le monde / Sciences et technologie).
 **Collège** (6ᵉ → 3ᵉ) : maths, physique-chimie, SVT et **technologie**.
 **Numérique** : SNT en Seconde, spécialité **NSI** en Première et Terminale.
+**Lycée général** aussi : spécialité **Sciences de l'ingénieur** (1re/Tale) et **Enseignement scientifique** (tronc commun 1re/Tale).
 **Lycée général** : Seconde ; Première (spé maths, enseignement scientifique,
 physique-chimie) ; Terminale (spé maths, maths complémentaires, maths expertes,
 physique-chimie, enseignement scientifique).
