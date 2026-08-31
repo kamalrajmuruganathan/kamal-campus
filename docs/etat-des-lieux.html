@@ -162,13 +162,53 @@
   .fade{opacity:0;transform:translateY(14px);animation:fade .7s ease forwards}
   @keyframes fade{to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transform:none!important;opacity:1!important}}
-  @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:96px 1fr 46px}}
+  @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}.bar{grid-template-columns:96px 1fr 46px}
+    .xprow{grid-template-columns:110px 1fr 40px}}
+
+  /* nav ancrée */
+  .nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .inner{max-width:1080px;margin:0 auto;display:flex;gap:6px;padding:9px 16px;overflow-x:auto}
+  .nav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:.82rem;
+    padding:6px 12px;border-radius:999px;white-space:nowrap}
+  .nav a:hover,.nav a:focus-visible{color:var(--ink);background:var(--surface2)}
+  section[id]{scroll-margin-top:60px}
+
+  /* frise */
+  .tl{position:relative;margin:4px 0 0 6px;padding-left:26px;border-left:2px solid var(--line)}
+  .tl .item{position:relative;padding-bottom:22px}
+  .tl .item::before{content:"";position:absolute;left:-34px;top:3px;width:13px;height:13px;border-radius:50%;
+    background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+  .tl .item.g::before{background:var(--m-svt)} .tl .item.o::before{background:var(--m-techno)}
+  .tl .item.v::before{background:var(--m-pc)}
+  .tl h4{margin:0;font-family:"Baloo 2",sans-serif;font-size:1.04rem}
+  .tl p{margin:3px 0 0;color:var(--muted);font-size:.9rem}
+  .tl .tag{font-size:.7rem;font-weight:800;color:var(--faint);text-transform:uppercase;letter-spacing:.12em}
+
+  /* mini XP */
+  .xp{display:flex;flex-direction:column;gap:9px}
+  .xprow{display:grid;grid-template-columns:160px 1fr 48px;align-items:center;gap:10px}
+  .xprow .nm{font-weight:700;font-size:.88rem}
+  .xprow .tk{height:13px;background:var(--surface2);border-radius:999px;overflow:hidden}
+  .xprow .fl{height:100%;border-radius:999px;transform-origin:left;animation:grow 1s cubic-bezier(.2,.7,.2,1) both}
+  .xprow .vv{text-align:right;font-weight:800;font-variant-numeric:tabular-nums;font-size:.84rem}
+  .note-ex{color:var(--faint);font-size:.8rem;margin:0 0 14px;font-weight:600}
 </style>
 
 <div class="top">
   <div class="brand"><span class="logo">K</span> Kamal Campus</div>
   <button class="themeToggle" id="tg" aria-label="Changer de thème">◐ Thème</button>
 </div>
+
+<nav class="nav"><div class="inner">
+  <a href="#chiffres">Chiffres</a>
+  <a href="#matieres">Matières</a>
+  <a href="#progression">Progression</a>
+  <a href="#couverture">Couverture</a>
+  <a href="#apercus">Aperçus</a>
+  <a href="#fonctions">Fonctions</a>
+  <a href="#frise">Parcours</a>
+</div></nav>
 
 <header class="wrap hero">
   <div class="eyebrow fade">État des lieux · révision scolaire</div>
@@ -186,7 +226,7 @@
   </div>
 </div>
 
-<section class="wrap">
+<section class="wrap" id="chiffres">
   <div class="sec-head"><h2>En chiffres</h2><span class="hint">chaque chapitre = cours + exercices + QCM + cartes</span></div>
   <div class="chips">
     <div class="chip"><div class="n num">383</div><div class="l">chapitres</div></div>
@@ -200,18 +240,24 @@
   </div>
 </section>
 
-<section class="wrap">
+<section class="wrap" id="matieres">
   <div class="sec-head"><h2>Répartition par matière</h2><span class="hint">383 chapitres · 9 matières</span></div>
   <div class="bars" id="bars"></div>
 </section>
 
-<section class="wrap">
+<section class="wrap" id="progression">
+  <div class="sec-head"><h2>Ma progression par matière</h2><span class="hint">profil d'exemple</span></div>
+  <p class="note-ex">Aperçu du suivi : l'XP se gagne en réussissant QCM, exercices et énigmes — ici un profil d'illustration.</p>
+  <div class="xp" id="xp"></div>
+</section>
+
+<section class="wrap" id="couverture">
   <div class="sec-head"><h2>Couverture par niveau</h2><span class="hint">nombre de chapitres · CP → Terminale</span></div>
   <div class="matrix-scroll"><table class="matrix" id="matrix"></table></div>
   <div class="legend" id="legend"></div>
 </section>
 
-<section class="wrap">
+<section class="wrap" id="apercus">
   <div class="sec-head"><h2>Aperçus de l'application</h2><span class="hint">reconstitution des écrans · thème sombre</span></div>
   <div class="phones">
 
@@ -354,7 +400,7 @@
   </div>
 </section>
 
-<section class="wrap">
+<section class="wrap" id="fonctions">
   <div class="sec-head"><h2>Fonctionnalités</h2></div>
   <div class="feat">
     <div class="fcard"><div class="ic">🧮</div><h3>Résolveur pas à pas</h3><p>Calculs, fractions, équations du 1er/2nd degré et opérations posées (retenues, emprunts) — réponses exactes, comme Photomath sans la photo.</p></div>
@@ -373,6 +419,22 @@
     <div class="qitem"><div class="qic">✓</div><div><b>Hors ligne</b><span>Expo / React Native, LaTeX, thème clair/sombre</span></div></div>
     <div class="qitem"><div class="qic">✓</div><div><b>Contenu validé</b><span>format &amp; cohérence, contrôle automatique</span></div></div>
     <div class="qitem"><div class="qic">✓</div><div><b class="num">59</b><span>commits prêts à pousser sur GitHub</span></div></div>
+  </div>
+</section>
+
+<section class="wrap" id="frise">
+  <div class="sec-head"><h2>Ce qu'on a construit</h2><span class="hint">les grandes étapes</span></div>
+  <div class="tl">
+    <div class="item"><span class="tag">Fondations</span><h4>Le socle : maths &amp; physique-chimie, collège → Terminale</h4><p>Cours, QCM, exercices et outils de calcul, à partir des programmes officiels.</p></div>
+    <div class="item g"><span class="tag">Contenu</span><h4>Cartes de révision, formulaires, sujets &amp; bacs blancs</h4><p>Cinq façons d'apprendre par chapitre, plus des épreuves entières corrigées.</p></div>
+    <div class="item o"><span class="tag">Motivation</span><h4>XP, niveaux, série 🔥, badges &amp; rappels</h4><p>Objectif quotidien et régularité récompensée, façon appli d'entraînement.</p></div>
+    <div class="item v"><span class="tag">Outils</span><h4>Résolveur pas à pas &amp; questions générées à l'infini</h4><p>Équations, opérations posées, et QCM calculés sans fin sur les chapitres de calcul.</p></div>
+    <div class="item"><span class="tag">Jeu</span><h4>Énigmes : suites, grilles, calcul mental, allumettes</h4><p>Un coin logique, tous niveaux, qui nourrit la série.</p></div>
+    <div class="item g"><span class="tag">Confort</span><h4>Recherche, favoris, révision ciblée &amp; onboarding</h4><p>Interface en 9 langues, parcours personnalisé sur les chapitres fragiles.</p></div>
+    <div class="item o"><span class="tag">Primaire</span><h4>Extension au CP → CM2</h4><p>Maths (programme complet) et sciences, avec générateur infini sur le calcul.</p></div>
+    <div class="item v"><span class="tag">Sciences</span><h4>SVT du primaire au lycée</h4><p>Collège, Seconde et spécialité, avec sujets et bacs blancs.</p></div>
+    <div class="item"><span class="tag">Numérique</span><h4>Technologie, SNT &amp; spécialité NSI</h4><p>Du collège au lycée, avec code Python/SQL dans les exercices.</p></div>
+    <div class="item g"><span class="tag">Lycée général</span><h4>Sciences de l'ingénieur &amp; Enseignement scientifique</h4><p>Spécialité SI et tronc commun ES, bouclés (exercices + bacs blancs).</p></div>
   </div>
 </section>
 
@@ -429,4 +491,14 @@
   document.getElementById('matrix').innerHTML=html;
   document.getElementById('legend').innerHTML=COLS.map(c=>
     `<span><i style="background:var(${c[1]})"></i>${c[0]}</span>`).join('');
+
+  // Mini-graphe XP par matière (profil d'exemple)
+  const XP=[['Maths',1240,'--m-maths'],['Physique-chimie',560,'--m-pc'],['SVT',320,'--m-svt'],
+    ['Sciences (primaire)',180,'--m-sci'],['Technologie',150,'--m-techno'],['NSI',110,'--m-nsi'],
+    ['Sciences de l’ingénieur',90,'--m-si'],['Enseignement scientifique',70,'--m-es'],['SNT',50,'--m-snt']];
+  const mx=Math.max(...XP.map(x=>x[1]));
+  document.getElementById('xp').innerHTML=XP.map(([n,v,c])=>`
+    <div class="xprow"><div class="nm">${n}</div>
+    <div class="tk"><div class="fl" style="width:${Math.round(v/mx*100)}%;background:var(${c})"></div></div>
+    <div class="vv num">${v}</div></div>`).join('');
 </script>
