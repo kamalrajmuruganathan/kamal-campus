@@ -1,0 +1,89 @@
+{
+  "id": "tale-si-transmission-de-linformation-exos",
+  "chapitre": "tale-si-transmission-de-linformation",
+  "titre": "Exercices — Transmission de l'information",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "signal analogique / numérique",
+      "enonce": "Indique pour chaque signal s'il est analogique ou numérique : (a) la tension continue délivrée par un microphone, (b) une suite de 0 et de 1 sur une liaison USB, (c) l'onde sonore captée dans l'air.",
+      "corrige": [
+        "Un signal analogique varie de façon continue ; un signal numérique ne prend que des valeurs discrètes (0/1).",
+        "(a) Tension du microphone : varie continûment → analogique.",
+        "(b) Suite de 0 et 1 : valeurs discrètes → numérique.",
+        "(c) Onde sonore dans l'air : grandeur continue → analogique."
+      ],
+      "reponse": "(a) analogique, (b) numérique, (c) analogique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "débit binaire",
+      "enonce": "Une liaison transmet un fichier de 2 Mo (mégaoctets) en 16 secondes. Calcule le débit binaire en bits par seconde. (On prend 1 octet = 8 bits et 1 Mo = 1 000 000 octets.)",
+      "corrige": [
+        "Taille en bits : 2 Mo = 2 000 000 octets = 2 000 000 × 8 = 16 000 000 bits.",
+        "Débit : D = quantité de bits / temps = 16 000 000 / 16.",
+        "D = 1 000 000 bits/s = 1 Mbit/s."
+      ],
+      "reponse": "Le débit binaire est de 1 000 000 bits/s, soit 1 Mbit/s."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "temps de transmission",
+      "enonce": "On veut transmettre un fichier de 5 Mo sur une liaison de débit 2 Mbit/s. Calcule le temps de transmission. (1 Mo = 8 Mbit.)",
+      "corrige": [
+        "Taille en bits : 5 Mo = 5 × 8 = 40 Mbit.",
+        "Temps : t = taille / débit = 40 Mbit / 2 Mbit/s.",
+        "t = 20 s."
+      ],
+      "reponse": "Le temps de transmission est de 20 s."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "numérisation d'un son",
+      "enonce": "On numérise un son avec une fréquence d'échantillonnage fe = 44 100 Hz et une résolution de 16 bits par échantillon, en stéréo (2 voies). Calcule le débit binaire brut nécessaire, en kbit/s (arrondi).",
+      "corrige": [
+        "Débit d'une voie : fe × résolution = 44 100 × 16 = 705 600 bits/s.",
+        "Stéréo (2 voies) : 705 600 × 2 = 1 411 200 bits/s.",
+        "Conversion en kbit/s : 1 411 200 / 1000 ≈ 1411 kbit/s."
+      ],
+      "reponse": "Le débit brut est d'environ 1 411 200 bits/s, soit environ 1411 kbit/s."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "atténuation et décibels",
+      "enonce": "Un signal entre dans une fibre optique avec une puissance Pe = 1 mW et ressort avec Ps = 0,01 mW. L'atténuation en décibels vaut A = 10 × log(Pe / Ps). Calcule cette atténuation. (log 100 = 2.)",
+      "corrige": [
+        "Rapport des puissances : Pe / Ps = 1 / 0,01 = 100.",
+        "Atténuation : A = 10 × log(100).",
+        "log(100) = 2, donc A = 10 × 2 = 20.",
+        "L'atténuation est de 20 dB."
+      ],
+      "reponse": "L'atténuation de la liaison est de 20 dB."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "contrôle de parité",
+      "enonce": "Pour fiabiliser une transmission, on ajoute un bit de parité paire à chaque octet de 7 bits de données (le bit de parité rend pair le nombre total de 1). (a) Donne le bit de parité pour la donnée 1010011. (b) À la réception on lit 10100110 : la trame est-elle correcte ? (c) Cette méthode détecte-t-elle une erreur portant sur 2 bits ?",
+      "corrige": [
+        "(a) Données 1010011 : nombre de 1 = 4 (déjà pair). Le bit de parité paire doit maintenir un total pair, il vaut donc 0. Trame émise : 10100110.",
+        "(b) Trame reçue 10100110 : nombre de 1 = 4, c'est pair, la parité est respectée → trame considérée correcte.",
+        "(c) Si 2 bits sont modifiés, la parité redevient identique : le contrôle de parité ne détecte pas les erreurs portant sur un nombre pair de bits.",
+        "La parité simple ne détecte donc que les erreurs sur un nombre impair de bits et ne les corrige pas."
+      ],
+      "reponse": "(a) bit de parité = 0 ; (b) oui, parité paire respectée, trame correcte ; (c) non, une erreur sur 2 bits n'est pas détectée."
+    }
+  ]
+}

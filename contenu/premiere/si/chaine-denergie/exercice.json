@@ -1,0 +1,90 @@
+{
+  "id": "1si-chaine-denergie-exos",
+  "chapitre": "1si-chaine-denergie",
+  "titre": "Exercices — La chaîne d'énergie",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "structure de la chaîne d'énergie",
+      "enonce": "Cite dans l'ordre les quatre fonctions techniques de la chaîne d'énergie, puis associe à chacune un composant parmi : batterie, variateur, moteur, réducteur.",
+      "corrige": [
+        "Les quatre fonctions dans l'ordre : Alimenter → Distribuer → Convertir → Transmettre.",
+        "Alimenter : la batterie (elle stocke et fournit l'énergie).",
+        "Distribuer : le variateur (il module l'énergie envoyée au moteur).",
+        "Convertir : le moteur (électrique vers mécanique).",
+        "Transmettre : le réducteur (il adapte couple et vitesse vers la charge)."
+      ],
+      "reponse": "Alimenter (batterie) → Distribuer (variateur) → Convertir (moteur) → Transmettre (réducteur)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "puissance électrique",
+      "enonce": "Un moteur à courant continu est alimenté sous une tension U = 24 V et absorbe un courant I = 5 A. Calcule la puissance électrique absorbée.",
+      "corrige": [
+        "La puissance électrique absorbée en courant continu vaut P = U × I.",
+        "P = 24 × 5 = 120 W."
+      ],
+      "reponse": "Le moteur absorbe une puissance électrique de 120 W."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "énergie consommée",
+      "enonce": "Ce même moteur (P = 120 W) fonctionne pendant 30 minutes. Calcule l'énergie électrique consommée en joules, puis en wattheures.",
+      "corrige": [
+        "Énergie : E = P × t, avec t en secondes pour obtenir des joules.",
+        "t = 30 min = 30 × 60 = 1800 s.",
+        "E = 120 × 1800 = 216 000 J = 216 kJ.",
+        "En wattheures : t = 0,5 h, donc E = 120 × 0,5 = 60 Wh."
+      ],
+      "reponse": "L'énergie consommée est de 216 000 J, soit 60 Wh."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "rendement",
+      "enonce": "Le moteur précédent absorbe 120 W et fournit sur son arbre une puissance mécanique de 96 W. Calcule son rendement, puis la puissance perdue et indique sous quelle forme elle se dissipe.",
+      "corrige": [
+        "Le rendement est le rapport de la puissance utile (sortie) sur la puissance absorbée (entrée) : η = Pu / Pa.",
+        "η = 96 / 120 = 0,80, soit 80 %.",
+        "Puissance perdue : Pperdue = Pa − Pu = 120 − 96 = 24 W.",
+        "Ces pertes se dissipent principalement sous forme de chaleur (effet Joule dans les enroulements, frottements)."
+      ],
+      "reponse": "Le rendement vaut 0,80 (80 %) ; 24 W sont perdus, essentiellement dissipés en chaleur."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "rendement d'une chaîne",
+      "enonce": "Une chaîne d'énergie comprend un variateur (rendement 0,95), un moteur (rendement 0,80) et un réducteur (rendement 0,90). La puissance entrant dans le variateur est de 500 W. Calcule le rendement global et la puissance disponible en sortie.",
+      "corrige": [
+        "Pour des blocs en série, le rendement global est le produit des rendements : ηglobal = η1 × η2 × η3.",
+        "ηglobal = 0,95 × 0,80 × 0,90 = 0,684, soit environ 68,4 %.",
+        "Puissance de sortie : Psortie = Pentrée × ηglobal = 500 × 0,684 = 342 W."
+      ],
+      "reponse": "Le rendement global est d'environ 0,684 (68,4 %) ; la puissance de sortie est de 342 W."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "dimensionnement énergétique",
+      "enonce": "Un chariot électrique doit lever une charge de masse m = 200 kg à la vitesse verticale v = 0,3 m/s. Le rendement global de sa chaîne d'énergie (moteur + transmission) est de 0,75. On prend g = 9,81 m/s². Calcule la puissance mécanique utile de levage, puis la puissance électrique que doit fournir la batterie.",
+      "corrige": [
+        "Le poids à lever : F = m × g = 200 × 9,81 = 1962 N.",
+        "Puissance mécanique utile (levage à vitesse constante) : Pu = F × v = 1962 × 0,3 = 588,6 W.",
+        "La batterie fournit l'énergie en entrée : Pa = Pu / η = 588,6 / 0,75 = 784,8 W.",
+        "Arrondi : environ 785 W absorbés pour 589 W utiles."
+      ],
+      "reponse": "La puissance utile de levage est d'environ 589 W ; la batterie doit fournir environ 785 W."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "id": "bac-blanc-si-terminale",
+  "titre": "Bac blanc",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de tous les chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Chaîne d'énergie",
+      "enonce": "Dans une chaîne d'énergie, quelle fonction technique est assurée par un moteur électrique ?",
+      "choix": ["ALIMENTER", "DISTRIBUER", "CONVERTIR", "TRANSMETTRE"],
+      "reponse": 2,
+      "explication": "Le moteur convertit l'énergie électrique reçue en énergie mécanique : il assure la fonction CONVERTIR. La batterie ALIMENTE, le variateur DISTRIBUE, le réducteur TRANSMET."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Chaîne d'information",
+      "enonce": "Dans la chaîne d'information, quel est le rôle d'un capteur ?",
+      "choix": ["Communiquer une décision", "Acquérir une grandeur physique", "Traiter l'information", "Fournir de la puissance"],
+      "reponse": 1,
+      "explication": "Le capteur assure la fonction ACQUÉRIR : il mesure une grandeur physique (position, température, présence) et la transforme en signal exploitable par la partie commande."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Statique",
+      "enonce": "Un solide est en équilibre sous l'action de trois forces non parallèles. Ces trois forces sont nécessairement :",
+      "choix": ["Parallèles entre elles", "Concourantes (leurs droites d'action se coupent en un même point) et de somme nulle", "Toutes égales en intensité", "Perpendiculaires deux à deux"],
+      "reponse": 1,
+      "explication": "Pour l'équilibre sous trois forces non parallèles, il faut que leur somme vectorielle soit nulle ET que leurs droites d'action soient concourantes en un même point (moment résultant nul)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Moment d'une force",
+      "enonce": "Une force de 200 N est appliquée perpendiculairement à l'extrémité d'un bras de levier de 0,30 m. Quel est le moment de cette force par rapport à l'axe ?",
+      "choix": ["6 N·m", "60 N·m", "600 N·m", "66,7 N·m"],
+      "reponse": 1,
+      "explication": "Le moment vaut M = F × d = 200 × 0,30 = 60 N·m, la force étant perpendiculaire au bras de levier."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Puissance mécanique",
+      "enonce": "Un moteur développe un couple de 2,0 N·m à une vitesse de rotation de 100 rad·s⁻¹. Quelle est la puissance mécanique fournie ?",
+      "choix": ["50 W", "102 W", "200 W", "628 W"],
+      "reponse": 2,
+      "explication": "La puissance de rotation vaut P = C × ω = 2,0 × 100 = 200 W. On multiplie le couple (N·m) par la vitesse angulaire en rad·s⁻¹."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Rendement",
+      "enonce": "Un système reçoit 500 W et en restitue 400 W d'utile. Quel est son rendement ?",
+      "choix": ["0,80 (80 %)", "1,25 (125 %)", "0,90 (90 %)", "100 W"],
+      "reponse": 0,
+      "explication": "Le rendement est le rapport puissance utile / puissance absorbée : η = 400/500 = 0,80, soit 80 %. Les 100 W restants sont perdus (chaleur, frottements)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "Transmission de mouvement",
+      "enonce": "Quel composant transforme un mouvement de rotation en mouvement de translation rectiligne ?",
+      "choix": ["Un accouplement", "Un système pignon-crémaillère", "Un réducteur à engrenages", "Un embrayage"],
+      "reponse": 1,
+      "explication": "Le système pignon-crémaillère transforme la rotation du pignon en translation de la crémaillère. Un réducteur, lui, ne fait que modifier la vitesse de rotation."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Réducteur",
+      "enonce": "Un réducteur de rapport 1/20 est entraîné par un moteur tournant à 3000 tr·min⁻¹. Quelle est la vitesse de sortie ?",
+      "choix": ["60 000 tr·min⁻¹", "150 tr·min⁻¹", "3000 tr·min⁻¹", "20 tr·min⁻¹"],
+      "reponse": 1,
+      "explication": "Un rapport de réduction 1/20 divise la vitesse par 20 : 3000 / 20 = 150 tr·min⁻¹. En contrepartie, le couple de sortie est multiplié (idéalement) par 20."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Asservissement",
+      "enonce": "Dans un système asservi, quel est le rôle du capteur placé dans la boucle de retour ?",
+      "choix": ["Amplifier la commande", "Mesurer la grandeur de sortie pour la comparer à la consigne", "Fournir l'énergie à l'actionneur", "Filtrer les perturbations mécaniques"],
+      "reponse": 1,
+      "explication": "Le capteur de retour mesure la sortie réelle ; le comparateur calcule l'écart entre cette mesure et la consigne. C'est ce principe de boucle fermée qui permet de corriger les erreurs."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "Asservissement",
+      "enonce": "Dans un asservissement, l'erreur (ou écart) est définie comme :",
+      "choix": ["La somme de la consigne et de la mesure", "La différence entre la consigne et la mesure de sortie", "Le produit de la consigne par le gain", "La dérivée de la sortie"],
+      "reponse": 1,
+      "explication": "L'écart ε = consigne − mesure. Le correcteur agit pour annuler cet écart, ce qui amène la sortie à suivre la consigne."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Énergie électrique",
+      "enonce": "Un moteur alimenté sous 24 V absorbe un courant de 2,5 A. Quelle puissance électrique consomme-t-il ?",
+      "choix": ["9,6 W", "26,5 W", "60 W", "48 W"],
+      "reponse": 2,
+      "explication": "En courant continu, P = U × I = 24 × 2,5 = 60 W."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "Analyse fonctionnelle",
+      "enonce": "Que représente la fonction globale d'un système dans une analyse fonctionnelle (bête à cornes / diagramme SysML) ?",
+      "choix": ["La liste de ses composants électroniques", "Le service rendu à l'utilisateur, la valeur ajoutée sur la matière d'œuvre", "Son coût de fabrication", "Le nombre de ses capteurs"],
+      "reponse": 1,
+      "explication": "La fonction globale exprime le service que le système rend : la valeur ajoutée qu'il apporte à la matière d'œuvre (déplacer, chauffer, informer…), indépendamment des solutions techniques."
+    }
+  ]
+}

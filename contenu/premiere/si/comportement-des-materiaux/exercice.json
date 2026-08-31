@@ -1,0 +1,92 @@
+{
+  "id": "1si-comportement-des-materiaux-exos",
+  "chapitre": "1si-comportement-des-materiaux",
+  "titre": "Exercices — Comportement des matériaux",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "traction et compression",
+      "enonce": "Un câble d'ascenseur supporte une cabine suspendue à son extrémité. La barre d'un vérin pousse un capot. Indique, pour chacun, si la sollicitation est de la traction ou de la compression.",
+      "corrige": [
+        "La traction tend à allonger la pièce (efforts qui l'écartent).",
+        "La compression tend à la raccourcir (efforts qui la rapprochent).",
+        "Le câble d'ascenseur est tiré par la cabine : traction.",
+        "La barre du vérin qui pousse est comprimée : compression."
+      ],
+      "reponse": "Le câble travaille en traction ; la barre du vérin travaille en compression."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "contrainte normale",
+      "enonce": "Une tige métallique de section S = 20 mm² est soumise à un effort de traction F = 1000 N. Calcule la contrainte normale σ, en MPa. (Rappel : 1 MPa = 1 N/mm².)",
+      "corrige": [
+        "La contrainte normale vaut σ = F / S.",
+        "σ = 1000 / 20 = 50 N/mm².",
+        "Or 1 N/mm² = 1 MPa, donc σ = 50 MPa."
+      ],
+      "reponse": "La contrainte normale vaut 50 MPa."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "allongement relatif",
+      "enonce": "Une barre de longueur initiale L0 = 500 mm s'allonge de ΔL = 0,4 mm sous charge. Calcule l'allongement relatif (déformation) ε, puis exprime-le en pourcentage.",
+      "corrige": [
+        "L'allongement relatif est ε = ΔL / L0 (grandeur sans unité).",
+        "ε = 0,4 / 500 = 0,0008.",
+        "En pourcentage : 0,0008 × 100 = 0,08 %."
+      ],
+      "reponse": "L'allongement relatif vaut ε = 0,0008, soit 0,08 %."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "loi de Hooke",
+      "enonce": "Un acier a un module de Young E = 210 000 MPa. Une éprouvette est soumise à une contrainte σ = 105 MPa, dans le domaine élastique. Calcule l'allongement relatif ε, puis l'allongement ΔL si la longueur initiale est L0 = 2 m.",
+      "corrige": [
+        "Dans le domaine élastique, la loi de Hooke donne σ = E × ε, donc ε = σ / E.",
+        "ε = 105 / 210 000 = 0,0005.",
+        "L0 = 2 m = 2000 mm.",
+        "ΔL = ε × L0 = 0,0005 × 2000 = 1 mm."
+      ],
+      "reponse": "L'allongement relatif est ε = 0,0005 ; la barre s'allonge de 1 mm."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "coefficient de sécurité",
+      "enonce": "Une pièce en aluminium a une limite élastique Re = 250 MPa. Le bureau d'études impose un coefficient de sécurité s = 4. Calcule la contrainte admissible Rp (contrainte à ne pas dépasser en service). Si la pièce subit en fonctionnement 70 MPa, la conception est-elle validée ?",
+      "corrige": [
+        "La contrainte admissible : Rp = Re / s.",
+        "Rp = 250 / 4 = 62,5 MPa.",
+        "On compare la contrainte de service à Rp : 70 MPa > 62,5 MPa.",
+        "La contrainte réelle dépasse la contrainte admissible : la conception n'est pas validée."
+      ],
+      "reponse": "La contrainte admissible est de 62,5 MPa ; comme 70 MPa la dépasse, la conception n'est pas validée."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "dimensionnement d'une section",
+      "enonce": "Un tirant en acier doit supporter F = 30 000 N. Le matériau a Re = 300 MPa et l'on impose un coefficient de sécurité s = 3. Détermine la contrainte admissible, puis la section minimale du tirant. Si la section est circulaire, quel diamètre minimal choisir ?",
+      "corrige": [
+        "Contrainte admissible : Rp = Re / s = 300 / 3 = 100 MPa (soit 100 N/mm²).",
+        "Condition de résistance : σ = F / S ≤ Rp, donc S ≥ F / Rp.",
+        "S ≥ 30 000 / 100 = 300 mm².",
+        "Section circulaire : S = π D² / 4, donc D = √(4S / π).",
+        "D = √(4 × 300 / π) = √(1200 / π) = √382 ≈ 19,5 mm.",
+        "On retient un diamètre normalisé au moins égal à 20 mm."
+      ],
+      "reponse": "Il faut une section d'au moins 300 mm², soit un diamètre minimal d'environ 19,5 mm (on retiendra 20 mm)."
+    }
+  ]
+}

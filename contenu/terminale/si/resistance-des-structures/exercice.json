@@ -1,0 +1,89 @@
+{
+  "id": "tale-si-resistance-des-structures-exos",
+  "chapitre": "tale-si-resistance-des-structures",
+  "titre": "Exercices — Résistance des structures",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "types de sollicitations",
+      "enonce": "Associe chaque élément à sa sollicitation principale : (a) un poteau qui soutient un toit, (b) une poutre horizontale chargée en son milieu, (c) l'arbre de transmission qui transmet un couple. Choix : compression, flexion, torsion.",
+      "corrige": [
+        "(a) Poteau chargé verticalement : il est écrasé → compression.",
+        "(b) Poutre horizontale chargée : elle fléchit → flexion.",
+        "(c) Arbre transmettant un couple : il est tordu → torsion."
+      ],
+      "reponse": "(a) compression, (b) flexion, (c) torsion."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "contrainte normale",
+      "enonce": "Un poteau de section carrée 50 mm × 50 mm supporte une charge de compression F = 75 000 N. Calcule la contrainte normale de compression en MPa.",
+      "corrige": [
+        "Section : S = 50 × 50 = 2500 mm².",
+        "Contrainte : σ = F / S = 75 000 / 2500 = 30 N/mm².",
+        "Or 1 N/mm² = 1 MPa, donc σ = 30 MPa."
+      ],
+      "reponse": "La contrainte de compression vaut 30 MPa."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "condition de résistance",
+      "enonce": "Un tirant subit une contrainte de service σ = 85 MPa. Le matériau a une contrainte admissible Rp = 120 MPa. La condition de résistance est-elle vérifiée ?",
+      "corrige": [
+        "La condition de résistance s'écrit σ ≤ Rp.",
+        "On compare : 85 MPa ≤ 120 MPa. La condition est satisfaite.",
+        "Il reste une marge de 120 − 85 = 35 MPa."
+      ],
+      "reponse": "Oui : 85 MPa ≤ 120 MPa, la condition de résistance est vérifiée."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "coefficient de sécurité et dimensionnement",
+      "enonce": "Un câble en acier de limite élastique Re = 400 MPa supporte F = 20 000 N. On impose un coefficient de sécurité s = 5. Calcule la contrainte admissible, puis la section minimale du câble.",
+      "corrige": [
+        "Contrainte admissible : Rp = Re / s = 400 / 5 = 80 MPa (= 80 N/mm²).",
+        "Condition de résistance : σ = F / S ≤ Rp, donc S ≥ F / Rp.",
+        "S ≥ 20 000 / 80 = 250 mm²."
+      ],
+      "reponse": "La contrainte admissible est de 80 MPa ; la section minimale du câble est de 250 mm²."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "moment fléchissant",
+      "enonce": "Une poutre horizontale de longueur L = 4 m repose sur deux appuis à ses extrémités. Une charge ponctuelle F = 6000 N est appliquée au milieu. Calcule les réactions d'appui, puis le moment fléchissant maximal au milieu (Mmax = F·L / 4).",
+      "corrige": [
+        "Par symétrie, chaque appui reprend la moitié de la charge : RA = RB = F / 2 = 6000 / 2 = 3000 N.",
+        "Moment fléchissant maximal au milieu (charge centrée sur appuis simples) : Mmax = F × L / 4.",
+        "Mmax = 6000 × 4 / 4 = 6000 N·m."
+      ],
+      "reponse": "Chaque appui reprend 3000 N ; le moment fléchissant maximal au milieu vaut 6000 N·m."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "flexion et contrainte dans une poutre",
+      "enonce": "La poutre précédente (Mmax = 6000 N·m) a une section rectangulaire de largeur b = 60 mm et de hauteur h = 120 mm. Le module de flexion vaut I/v = b·h² / 6. Calcule ce module, puis la contrainte maximale de flexion σ = Mmax / (I/v). Conclus si le matériau, de contrainte admissible Rp = 150 MPa, convient.",
+      "corrige": [
+        "Module de flexion : I/v = b × h² / 6 = 60 × 120² / 6.",
+        "120² = 14 400 ; 60 × 14 400 = 864 000 ; ÷ 6 = 144 000 mm³.",
+        "Attention aux unités : Mmax = 6000 N·m = 6 000 000 N·mm.",
+        "Contrainte : σ = Mmax / (I/v) = 6 000 000 / 144 000 ≈ 41,7 N/mm² = 41,7 MPa.",
+        "On compare à Rp : 41,7 MPa ≤ 150 MPa.",
+        "La contrainte reste largement sous la limite admissible : le matériau convient."
+      ],
+      "reponse": "Le module de flexion vaut 144 000 mm³ et la contrainte maximale ≈ 41,7 MPa, bien inférieure à 150 MPa : le matériau convient."
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "1si-mecanique-des-solides-exos",
+  "chapitre": "1si-mecanique-des-solides",
+  "titre": "Exercices — Mécanique des solides (statique)",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "poids d'un solide",
+      "enonce": "Un carter a une masse m = 12 kg. Calcule l'intensité de son poids P. On prend g = 9,81 N/kg.",
+      "corrige": [
+        "Le poids est P = m × g.",
+        "P = 12 × 9,81 = 117,72 N.",
+        "Le poids est vertical, dirigé vers le bas."
+      ],
+      "reponse": "Le poids du carter vaut environ 117,7 N (vers le bas)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "équilibre à deux forces",
+      "enonce": "Une lampe de masse m = 2 kg est suspendue immobile à un fil vertical unique. Quelle est l'intensité de la tension du fil ? (g = 9,81 N/kg.)",
+      "corrige": [
+        "Un solide en équilibre soumis à deux forces : ces forces sont opposées (même droite d'action, sens contraires, même intensité).",
+        "Les deux forces sont le poids P (vers le bas) et la tension T (vers le haut).",
+        "Équilibre : T = P = m × g = 2 × 9,81 = 19,62 N."
+      ],
+      "reponse": "La tension du fil vaut 19,62 N, dirigée vers le haut."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "moment d'une force",
+      "enonce": "Sur une clé, on applique une force F = 150 N perpendiculairement au manche, à une distance d = 0,20 m de l'axe de l'écrou. Calcule le moment de cette force par rapport à l'axe.",
+      "corrige": [
+        "Le moment d'une force perpendiculaire au bras de levier : M = F × d.",
+        "M = 150 × 0,20 = 30 N·m."
+      ],
+      "reponse": "Le moment vaut 30 N·m."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "principe des moments (levier)",
+      "enonce": "Une balançoire (levier) est en équilibre autour de son axe central. À gauche, un enfant exerce 250 N à 1,2 m de l'axe. À droite, un enfant est à 1,5 m de l'axe. Quelle force doit-il exercer pour l'équilibre ?",
+      "corrige": [
+        "À l'équilibre, la somme des moments est nulle : moment à gauche = moment à droite.",
+        "Moment à gauche : Mg = 250 × 1,2 = 300 N·m.",
+        "Moment à droite : Md = F × 1,5.",
+        "Égalité : F × 1,5 = 300, donc F = 300 / 1,5 = 200 N."
+      ],
+      "reponse": "L'enfant de droite doit exercer une force de 200 N."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "projection d'une force",
+      "enonce": "Un câble tire une caisse avec une force F = 500 N inclinée de 30° au-dessus de l'horizontale. Calcule les composantes horizontale (Fx) et verticale (Fy) de cette force. (cos 30° ≈ 0,866 ; sin 30° = 0,5.)",
+      "corrige": [
+        "La composante horizontale : Fx = F × cos 30°.",
+        "Fx = 500 × 0,866 = 433 N.",
+        "La composante verticale : Fy = F × sin 30°.",
+        "Fy = 500 × 0,5 = 250 N."
+      ],
+      "reponse": "Fx ≈ 433 N (horizontale) et Fy = 250 N (verticale, vers le haut)."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "équilibre d'une potence",
+      "enonce": "Une potence horizontale est encastrée dans un mur en O. Une charge P = 800 N est suspendue à son extrémité A, située à 0,9 m de O. Un tirant incliné à 40° par rapport à la potence relie A à un point du mur situé au-dessus de O ; sa tension T soutient la charge. En écrivant l'équilibre des moments en O, détermine la tension T dans le tirant. (sin 40° ≈ 0,643.)",
+      "corrige": [
+        "On écrit l'équilibre des moments autour de l'encastrement O (l'action du mur en O n'y produit aucun moment).",
+        "Moment du poids en O : le poids P s'exerce en A, bras de levier horizontal 0,9 m : M(P) = 800 × 0,9 = 720 N·m (sens qui fait descendre A).",
+        "Moment du tirant en O : seule la composante perpendiculaire à la potence agit, soit T × sin 40°, appliquée en A à 0,9 m : M(T) = T × sin 40° × 0,9.",
+        "Équilibre des moments : T × sin 40° × 0,9 = 720.",
+        "T × 0,643 × 0,9 = 720 → T × 0,5787 = 720.",
+        "T = 720 / 0,5787 ≈ 1244 N."
+      ],
+      "reponse": "La tension dans le tirant est d'environ 1244 N."
+    }
+  ]
+}

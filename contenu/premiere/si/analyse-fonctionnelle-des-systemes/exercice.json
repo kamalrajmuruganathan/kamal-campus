@@ -1,0 +1,94 @@
+{
+  "id": "1si-analyse-fonctionnelle-des-systemes-exos",
+  "chapitre": "1si-analyse-fonctionnelle-des-systemes",
+  "titre": "Exercices — Analyse fonctionnelle des systèmes",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "besoin",
+      "enonce": "On étudie un sèche-mains électrique installé dans des sanitaires publics. À l'aide de l'outil « bête à cornes », identifie : à qui le produit rend-il service ? sur quoi agit-il ? dans quel but ?",
+      "corrige": [
+        "À qui rend-il service : à l'utilisateur des sanitaires (la personne qui vient de se laver les mains).",
+        "Sur quoi agit-il : sur les mains de l'utilisateur (plus précisément sur l'eau présente sur les mains).",
+        "Dans quel but : sécher les mains rapidement et sans contact, en évitant le gaspillage de papier."
+      ],
+      "reponse": "Le sèche-mains rend service à l'utilisateur en agissant sur ses mains, dans le but de les sécher rapidement et sans contact."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "fonctions de service",
+      "enonce": "Pour un vélo à assistance électrique, on distingue les fonctions principales (FP) et les fonctions contraintes (FC). Classe les fonctions suivantes en FP ou FC : (a) « Aider le cycliste à avancer », (b) « Résister aux intempéries », (c) « Respecter la réglementation (bridage à 25 km/h) ».",
+      "corrige": [
+        "Une fonction principale (FP) traduit la raison d'être du produit : la relation utile entre l'utilisateur et le milieu sur lequel il agit.",
+        "Une fonction contrainte (FC) traduit une adaptation ou une limitation imposée par un élément du milieu extérieur.",
+        "(a) « Aider le cycliste à avancer » relie l'utilisateur à la route : c'est la FP.",
+        "(b) « Résister aux intempéries » est une contrainte imposée par le milieu climatique : c'est une FC.",
+        "(c) « Respecter la réglementation » est une contrainte imposée par le cadre légal : c'est une FC."
+      ],
+      "reponse": "(a) est la fonction principale (FP) ; (b) et (c) sont des fonctions contraintes (FC)."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "critères et niveaux",
+      "enonce": "Dans un cahier des charges fonctionnel, la fonction « Maintenir la température de la boisson » est caractérisée par le critère « chute de température » avec le niveau « ≤ 8 °C en 6 heures ». Une thermos testée passe de 90 °C à 79 °C en 6 heures. Le critère est-il respecté ?",
+      "corrige": [
+        "Un critère mesure la fonction ; le niveau fixe la valeur à atteindre (ici, une tolérance maximale).",
+        "Chute de température mesurée : 90 − 79 = 11 °C.",
+        "On compare au niveau exigé : 11 °C > 8 °C, la limite est dépassée."
+      ],
+      "reponse": "Non : la chute est de 11 °C alors que le cahier des charges impose au plus 8 °C ; le critère n'est pas respecté."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "diagramme pieuvre",
+      "enonce": "On réalise le diagramme pieuvre d'un distributeur automatique de boissons. Les éléments du milieu extérieur sont : Utilisateur, Boissons, Énergie électrique, Monnaie, Maintenance. Propose une fonction principale reliant deux éléments, puis deux fonctions contraintes reliant le distributeur à un seul élément.",
+      "corrige": [
+        "La fonction principale relie deux éléments du milieu extérieur à travers le produit : FP1 = « Permettre à l'utilisateur d'obtenir une boisson » (relie Utilisateur et Boissons).",
+        "Une fonction contrainte relie le produit à un unique élément du milieu : FC1 = « Être alimenté par l'énergie électrique » (relie à Énergie électrique).",
+        "FC2 = « Encaisser et rendre la monnaie » (relie à Monnaie) ; on pourrait aussi écrire FC3 = « Faciliter la maintenance » (relie à Maintenance).",
+        "Chaque fonction est formulée par un verbe à l'infinitif décrivant l'action attendue."
+      ],
+      "reponse": "FP1 relie Utilisateur et Boissons (« obtenir une boisson ») ; FC1 relie à Énergie électrique et FC2 relie à Monnaie."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "diagramme FAST",
+      "enonce": "Un portail automatique doit assurer la fonction technique « Déplacer le vantail ». Dans un diagramme FAST, on descend de la fonction vers les solutions. Propose la chaîne : fonction technique → fonction technique de niveau inférieur → solution constructive, pour la mise en mouvement du vantail.",
+      "corrige": [
+        "Le FAST décompose une fonction en sous-fonctions techniques, jusqu'aux solutions constructives (composants réels).",
+        "Fonction technique : « Déplacer le vantail ».",
+        "Sous-fonction technique : « Convertir l'énergie électrique en énergie mécanique de translation ».",
+        "Solution constructive : « Motoréducteur entraînant une crémaillère » (ou un vérin, ou un bras articulé).",
+        "On lit le FAST de gauche à droite : « pourquoi ? » vers la gauche, « comment ? » vers la droite."
+      ],
+      "reponse": "« Déplacer le vantail » → « Convertir l'énergie électrique en mouvement de translation » → « Motoréducteur + crémaillère »."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "cahier des charges chiffré",
+      "enonce": "Un cahier des charges impose à un volet roulant motorisé : ouverture complète en au plus 20 s pour une hauteur de 2,4 m. Le moteur retenu enroule le tablier sur un axe de diamètre 40 mm et tourne à 15 tr/min. Vérifie si la contrainte de temps est respectée. (On assimile la vitesse de montée du tablier à la vitesse périphérique de l'axe d'enroulement.)",
+      "corrige": [
+        "Vitesse de rotation en tr/s : 15 tr/min ÷ 60 = 0,25 tr/s.",
+        "Circonférence de l'axe (longueur de tablier enroulée par tour) : π × D = π × 0,040 ≈ 0,1257 m.",
+        "Vitesse de montée du tablier : v = 0,25 × 0,1257 ≈ 0,0314 m/s.",
+        "Temps pour monter 2,4 m : t = 2,4 ÷ 0,0314 ≈ 76 s.",
+        "On compare au niveau exigé : 76 s > 20 s.",
+        "Remarque : le diamètre d'enroulement augmente au fur et à mesure, ce qui accélère un peu la fin de course, mais l'ordre de grandeur reste très supérieur à 20 s."
+      ],
+      "reponse": "Non : le temps d'ouverture est d'environ 76 s, très supérieur aux 20 s exigés ; le cahier des charges n'est pas respecté."
+    }
+  ]
+}

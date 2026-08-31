@@ -1,0 +1,96 @@
+{
+  "id": "tale-si-asservissement-et-regulation-exos",
+  "chapitre": "tale-si-asservissement-et-regulation",
+  "titre": "Exercices — Asservissement et régulation",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "si",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "boucle ouverte / boucle fermée",
+      "enonce": "Un radiateur électrique est piloté de deux façons : (a) l'utilisateur règle manuellement la puissance sans mesurer la température, (b) un thermostat mesure la température de la pièce et coupe le radiateur au bon moment. Indique pour chacun s'il s'agit d'un système en boucle ouverte ou fermée, et pourquoi.",
+      "corrige": [
+        "Un système en boucle fermée mesure sa sortie et la compare à la consigne (retour d'information).",
+        "Un système en boucle ouverte ne mesure pas sa sortie.",
+        "(a) Aucune mesure de la température : boucle ouverte.",
+        "(b) La température est mesurée et utilisée pour agir : boucle fermée (asservissement)."
+      ],
+      "reponse": "(a) est en boucle ouverte, (b) est en boucle fermée car la sortie (température) est mesurée."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "erreur d'un asservissement",
+      "enonce": "Dans un asservissement de position, la consigne est de 90° et le capteur mesure une position réelle de 84°. Calcule l'écart (erreur) et indique ce que fait le comparateur avec cette valeur.",
+      "corrige": [
+        "L'écart (erreur) est la différence entre la consigne et la mesure : ε = consigne − mesure.",
+        "ε = 90 − 84 = 6°.",
+        "Le comparateur calcule cet écart et l'envoie au correcteur, qui agit pour le réduire vers zéro."
+      ],
+      "reponse": "L'écart vaut 6° ; le comparateur transmet cet écart au correcteur pour le réduire."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "constituants d'une boucle",
+      "enonce": "Cite les quatre constituants principaux d'une chaîne d'asservissement, dans l'ordre du signal : comparateur, correcteur, actionneur (procédé), capteur. Indique le rôle du capteur.",
+      "corrige": [
+        "Ordre du signal : comparateur → correcteur → actionneur (procédé) → capteur (retour).",
+        "Le comparateur calcule l'écart consigne − mesure.",
+        "Le correcteur élabore la commande à partir de l'écart.",
+        "L'actionneur agit sur le procédé pour produire la sortie.",
+        "Le capteur mesure la sortie réelle et la renvoie au comparateur : il ferme la boucle."
+      ],
+      "reponse": "L'ordre est comparateur → correcteur → actionneur → capteur ; le capteur mesure la sortie et la renvoie au comparateur pour fermer la boucle."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "gain de boucle et régime permanent",
+      "enonce": "Un moteur a un gain statique K = 0,5 (rad/s par volt). On applique une tension constante U = 8 V en boucle ouverte. Calcule la vitesse en régime permanent. Puis, si la charge fait chuter le gain à 0,45, calcule le nouvel écart de vitesse (en %).",
+      "corrige": [
+        "En régime permanent, sortie = gain × entrée : ω = K × U.",
+        "ω = 0,5 × 8 = 4 rad/s.",
+        "Avec K = 0,45 : ω' = 0,45 × 8 = 3,6 rad/s.",
+        "Écart relatif : (4 − 3,6) / 4 = 0,4 / 4 = 0,10, soit 10 %.",
+        "En boucle ouverte, une variation du gain se répercute directement sur la sortie : c'est la faiblesse de la boucle ouverte."
+      ],
+      "reponse": "La vitesse passe de 4 rad/s à 3,6 rad/s, soit une baisse de 10 % ; en boucle ouverte, la sortie suit la variation du gain."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "fonction de transfert en boucle fermée",
+      "enonce": "Un système a une fonction de transfert directe en régime permanent (gain) A = 100 et un retour unitaire (B = 1). La boucle fermée à retour unitaire a pour gain H = A / (1 + A·B). Calcule H. Que devient H si A tombe à 80 ? Commente la sensibilité.",
+      "corrige": [
+        "Boucle fermée à retour unitaire : H = A / (1 + A).",
+        "Avec A = 100 : H = 100 / (1 + 100) = 100 / 101 ≈ 0,990.",
+        "Avec A = 80 : H = 80 / (1 + 80) = 80 / 81 ≈ 0,988.",
+        "Variation relative de H : (0,990 − 0,988) / 0,990 ≈ 0,2 %, alors que A a varié de 20 %.",
+        "La contre-réaction rend le système peu sensible aux variations du gain direct : c'est l'intérêt de la boucle fermée."
+      ],
+      "reponse": "H ≈ 0,990 puis 0,988 : une variation de 20 % de A ne change H que d'environ 0,2 %, la boucle fermée réduit fortement la sensibilité."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "précision et erreur statique",
+      "enonce": "Un asservissement de vitesse à retour unitaire a un gain de chaîne directe A = 24. Pour une consigne C = 100 (unités de vitesse), la sortie en régime permanent vaut S = A·(C − S). Détermine la sortie S, puis l'erreur statique ε = C − S et exprime-la en pourcentage de la consigne. Que faudrait-il augmenter pour réduire cette erreur ?",
+      "corrige": [
+        "On écrit l'équation de régime permanent : S = A·(C − S).",
+        "S = 24·(100 − S) → S = 2400 − 24S → 25S = 2400.",
+        "S = 2400 / 25 = 96.",
+        "Erreur statique : ε = C − S = 100 − 96 = 4.",
+        "En pourcentage : 4 / 100 = 4 %.",
+        "Pour réduire l'erreur, il faut augmenter le gain A (ou ajouter une action intégrale qui annule l'erreur statique)."
+      ],
+      "reponse": "La sortie vaut 96, l'erreur statique 4 (soit 4 %) ; augmenter le gain (ou ajouter une action intégrale) la réduit."
+    }
+  ]
+}

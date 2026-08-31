@@ -1,0 +1,90 @@
+{
+  "id": "1esc-son-et-musique-exos",
+  "chapitre": "1esc-son-et-musique",
+  "titre": "Exercices — Son et musique",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "enseignement-scientifique",
+  "matiere": "enseignement-scientifique",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "fréquence et période",
+      "enonce": "Un diapason produit un son pur de période T = 2,5 ms. Calcule sa fréquence f. Ce son est-il audible par l'oreille humaine (20 Hz à 20 000 Hz) ?",
+      "corrige": [
+        "On convertit la période en secondes : T = 2,5 ms = 2,5 × 10⁻³ s.",
+        "On applique la relation f = 1/T = 1 / (2,5 × 10⁻³).",
+        "f = 400 Hz.",
+        "400 Hz est bien compris entre 20 Hz et 20 000 Hz : le son est audible."
+      ],
+      "reponse": "La fréquence vaut f = 400 Hz, son audible par l'oreille humaine."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "longueur d'onde",
+      "enonce": "Dans l'air, la vitesse du son est v ≈ 340 m·s⁻¹. Calcule la longueur d'onde λ d'un son de fréquence f = 170 Hz.",
+      "corrige": [
+        "On utilise la relation λ = v / f.",
+        "On remplace : λ = 340 / 170.",
+        "λ = 2,0 m."
+      ],
+      "reponse": "La longueur d'onde vaut λ = 2,0 m."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "hauteur et intensité",
+      "enonce": "On compare deux sons. Le son A a une fréquence de 200 Hz et une grande amplitude ; le son B a une fréquence de 800 Hz et une petite amplitude. Lequel est le plus aigu ? Lequel est le plus fort ? Justifie.",
+      "corrige": [
+        "La hauteur (grave/aigu) dépend de la fréquence : plus f est grande, plus le son est aigu.",
+        "B a la plus grande fréquence (800 Hz > 200 Hz) : B est le plus aigu.",
+        "L'intensité (fort/faible) dépend de l'amplitude : A a la plus grande amplitude : A est le plus fort.",
+        "On voit qu'un son grave peut être fort (A) et un son aigu peut être faible (B) : hauteur et intensité sont indépendantes."
+      ],
+      "reponse": "Le son B (800 Hz) est le plus aigu, le son A (grande amplitude) est le plus fort."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "octave et quinte",
+      "enonce": "Un la de référence a une fréquence de 440 Hz. a) Quelle est la fréquence du la à l'octave supérieure ? b) Quelle est la fréquence de la note située une quinte au-dessus (rapport 3/2) ?",
+      "corrige": [
+        "a) L'octave correspond à un rapport de fréquences égal à 2 : on multiplie par 2.",
+        "f_octave = 440 × 2 = 880 Hz.",
+        "b) La quinte correspond à un rapport 3/2 : on multiplie par 3/2.",
+        "f_quinte = 440 × 3/2 = 660 Hz."
+      ],
+      "reponse": "Le la à l'octave vaut 880 Hz ; la quinte au-dessus vaut 660 Hz."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "gamme de Pythagore",
+      "enonce": "On part d'une note à 300 Hz et on empile deux quintes (rapport 3/2 à chaque fois). a) Quelle fréquence obtient-on ? b) Cette fréquence dépasse l'octave (600 Hz). Ramène-la dans l'octave [300 ; 600[ en divisant par 2.",
+      "corrige": [
+        "a) Première quinte : 300 × 3/2 = 450 Hz. Deuxième quinte : 450 × 3/2 = 675 Hz.",
+        "b) 675 Hz est supérieur à 600 Hz (borne haute de l'octave), on divise par 2 : 675 / 2 = 337,5 Hz.",
+        "337,5 Hz appartient bien à l'intervalle [300 ; 600[ : la note est ramenée dans l'octave de départ."
+      ],
+      "reponse": "Deux quintes donnent 675 Hz, ramenée à 337,5 Hz dans l'octave de départ."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "numérisation d'un son",
+      "enonce": "Un CD audio échantillonne le son à 44 100 échantillons par seconde et code chaque échantillon sur 16 bits (voie mono). a) Combien de niveaux de quantification sont possibles avec 16 bits ? b) Calcule le nombre de bits nécessaires pour 1 seconde de son. c) Convertis ce résultat en kilo-octets (1 octet = 8 bits, 1 ko = 1000 octets).",
+      "corrige": [
+        "a) Avec n bits on dispose de 2ⁿ niveaux : 2¹⁶ = 65 536 niveaux.",
+        "b) Pour 1 s : 44 100 échantillons × 16 bits = 705 600 bits.",
+        "c) On convertit en octets : 705 600 / 8 = 88 200 octets.",
+        "Puis en kilo-octets : 88 200 / 1000 = 88,2 ko pour 1 seconde de son mono."
+      ],
+      "reponse": "16 bits donnent 65 536 niveaux ; 1 s de son mono occupe 705 600 bits, soit 88,2 ko."
+    }
+  ]
+}
