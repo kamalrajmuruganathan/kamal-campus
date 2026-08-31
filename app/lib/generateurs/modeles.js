@@ -702,3 +702,134 @@ export function energiePuissanceTemps(rand) {
     explication: `E = P × t = ${P} × ${t} = ${E} Wh. L'énergie est le produit de la puissance par la durée.`,
   }, rand);
 }
+
+// ── Trigonométrie dans le triangle rectangle (rapports exacts) ────────────────
+
+/**
+ * Rapport trigonométrique (cos, sin ou tan) d'un angle aigu d'un triangle
+ * rectangle. On part d'un triplet pythagoricien entier → tous les rapports sont
+ * des fractions exactes (réduites par fracLatex).
+ */
+export function trigRatio(rand) {
+  const triplets = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29], [9, 40, 41]];
+  const [p, q, h] = choisir(rand, triplets);
+  // On place l'angle aigu Â : côté adjacent `adj`, côté opposé `opp`.
+  const adjEstP = rand() < 0.5;
+  const adj = adjEstP ? p : q;
+  const opp = adjEstP ? q : p;
+  const type = choisir(rand, ['cos', 'sin', 'tan']);
+  let bonne;
+  let formule;
+  let calc;
+  if (type === 'cos') { bonne = fracLatex(adj, h); formule = '\\cos'; calc = `\\dfrac{\\text{adjacent}}{\\text{hypoténuse}} = \\dfrac{${adj}}{${h}}`; }
+  else if (type === 'sin') { bonne = fracLatex(opp, h); formule = '\\sin'; calc = `\\dfrac{\\text{opposé}}{\\text{hypoténuse}} = \\dfrac{${opp}}{${h}}`; }
+  else { bonne = fracLatex(opp, adj); formule = '\\tan'; calc = `\\dfrac{\\text{opposé}}{\\text{adjacent}} = \\dfrac{${opp}}{${adj}}`; }
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'trigonometrie',
+    enonce: `Triangle rectangle : hypoténuse $${h}$, côté adjacent à l'angle $\\widehat{A}$ mesurant $${adj}$, côté opposé mesurant $${opp}$. Que vaut $${formule}\\,\\widehat{A}$ ?`,
+    bonne: `$${bonne}$`,
+    distracteurs: [
+      `$${fracLatex(opp, h)}$`,
+      `$${fracLatex(adj, h)}$`,
+      `$${fracLatex(opp, adj)}$`,
+      `$${fracLatex(adj, opp)}$`,
+      `$${fracLatex(h, adj)}$`,
+      `$${fracLatex(h, opp)}$`,
+    ],
+    explication: `$${formule}\\,\\widehat{A} = ${calc} = ${bonne}$. Rappel : cos = adjacent/hypoténuse, sin = opposé/hypoténuse, tan = opposé/adjacent.`,
+  }, rand);
+}
+
+// ── Vitesse ↔ distance ↔ temps ───────────────────────────────────────────────
+
+/** Distance parcourue : d = v·t. */
+export function distanceParcourue(rand) {
+  const v = entier(rand, 2, 20);
+  const t = entier(rand, 2, 12);
+  const d = v * t;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'vitesse',
+    enonce: `Un mobile se déplace à ${v} m/s pendant ${t} s. Quelle distance parcourt-il ?`,
+    bonne: `${d} m`,
+    distracteurs: [
+      `${v + t} m`,
+      `${v} m`,
+      `${t} m`,
+      `${d + v} m`,
+      `${d - v} m`,
+      `${d + 1} m`,
+      `${d - 1} m`,
+    ],
+    explication: `d = v × t = ${v} × ${t} = ${d} m.`,
+  }, rand);
+}
+
+/** Durée du parcours : t = d / v. */
+export function dureeParcours(rand) {
+  const v = entier(rand, 2, 20);
+  const t = entier(rand, 2, 12);
+  const d = v * t;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'vitesse',
+    enonce: `Un mobile se déplace à ${v} m/s et parcourt ${d} m. Combien de temps met-il ?`,
+    bonne: `${t} s`,
+    distracteurs: [
+      `${d} s`,
+      `${v} s`,
+      `${t + 1} s`,
+      `${t - 1} s`,
+      `${d - v} s`,
+      `${t + 2} s`,
+    ],
+    explication: `t = d ÷ v = ${d} ÷ ${v} = ${t} s.`,
+  }, rand);
+}
+
+// ── Conversions d'unités (résultats entiers) ─────────────────────────────────
+
+/** Conversion de longueur d'une unité vers une plus petite (× puissance de 10). */
+export function conversionLongueur(rand) {
+  const paires = [['km', 'm', 1000], ['m', 'cm', 100], ['cm', 'mm', 10], ['m', 'mm', 1000]];
+  const [de, vers, f] = choisir(rand, paires);
+  const val = entier(rand, 2, 9);
+  const r = val * f;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'conversion',
+    enonce: `Combien de ${vers} y a-t-il dans $${val}$ ${de} ?`,
+    bonne: `${r} ${vers}`,
+    distracteurs: [
+      `${val} ${vers}`,
+      `${val + f} ${vers}`,
+      `${r + val} ${vers}`,
+      `${r - val} ${vers}`,
+      `${val * (f + 1)} ${vers}`,
+    ],
+    explication: `1 ${de} = ${f} ${vers}, donc ${val} ${de} = ${val} × ${f} = ${r} ${vers}.`,
+  }, rand);
+}
+
+/** Conversion de durée (heures, minutes, secondes, jours). */
+export function conversionDuree(rand) {
+  const paires = [['h', 'min', 60], ['min', 's', 60], ['j', 'h', 24]];
+  const [de, vers, f] = choisir(rand, paires);
+  const val = entier(rand, 2, 9);
+  const r = val * f;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'conversion',
+    enonce: `Combien de ${vers} y a-t-il dans $${val}$ ${de} ?`,
+    bonne: `${r} ${vers}`,
+    distracteurs: [
+      `${val} ${vers}`,
+      `${val + f} ${vers}`,
+      `${r + val} ${vers}`,
+      `${r - val} ${vers}`,
+      `${val * (f + 1)} ${vers}`,
+    ],
+    explication: `1 ${de} = ${f} ${vers}, donc ${val} ${de} = ${val} × ${f} = ${r} ${vers}.`,
+  }, rand);
+}

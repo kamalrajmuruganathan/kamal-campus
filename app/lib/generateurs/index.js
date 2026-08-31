@@ -16,6 +16,7 @@ import {
   puissanceUI, moment, contrainte, rendement,
   divisionEuclidienne, perimetreRectangle, aireRectangle, aireTriangle,
   fonctionAffine, pythagore, poids, energiePuissanceTemps,
+  trigRatio, distanceParcourue, dureeParcours, conversionLongueur, conversionDuree,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -93,10 +94,12 @@ export const REGISTRE = {
   'cm2-math-calcul-mental': [additionSimple, soustractionSimple, multiplicationSimple, leDouble],
 
   // ── Physique-chimie : grandeurs à volonté ──
-  '5e-pc-mouvement-vitesse': [vitesse],
-  '4e-pc-mouvement-vitesse': [vitesse],
-  '2nde-pc-mouvement-interactions': [vitesse],
-  'tale-spe-pc-decrire-mouvement': [vitesse],
+  // Mouvement : la relation v ↔ d ↔ t dans les deux sens.
+  '5e-pc-mouvement-vitesse': [vitesse, distanceParcourue, dureeParcours],
+  '4e-pc-mouvement-vitesse': [vitesse, distanceParcourue, dureeParcours],
+  '2nde-pc-mouvement-interactions': [vitesse, distanceParcourue, dureeParcours],
+  '1spe-pc-mouvement-interactions': [vitesse, distanceParcourue, dureeParcours],
+  'tale-spe-pc-decrire-mouvement': [vitesse, distanceParcourue, dureeParcours],
   '3e-pc-masse-volumique': [masseVolumique],
   '2nde-pc-description-matiere': [masseVolumique],
   '1spe-pc-energie-electrique': [loiOhm, puissanceUI],
@@ -118,12 +121,16 @@ export const REGISTRE = {
   'cm1-math-proportionnalite': [proportionnalite],
   'cm2-math-proportionnalite-et-pourcentages': [proportionnalite, pourcentage],
 
-  // ── Collège : géométrie de mesure, fonctions, Pythagore ──
-  '6e-math-longueurs-aires-volumes': [perimetreRectangle, aireRectangle],
+  // ── Collège : géométrie de mesure, fonctions, Pythagore, trigonométrie ──
+  '6e-math-longueurs-aires-volumes': [perimetreRectangle, aireRectangle, conversionLongueur],
   '4e-math-fonctions': [fonctionAffine],
   '3e-math-fonctions': [fonctionAffine],
   '4e-math-triangles': [pythagore],
-  '3e-math-triangles': [pythagore],
+  '3e-math-triangles': [pythagore, trigRatio],
+
+  // ── Conversions d'unités (durées) ──
+  '6e-math-durees': [conversionDuree],
+  'cm1-math-durees': [conversionDuree],
 
   // ── Physique-chimie : poids & énergie ──
   '4e-pc-interactions-forces': [poids],
