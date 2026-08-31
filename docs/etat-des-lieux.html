@@ -214,6 +214,16 @@
   .st.opt{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent)}
   .ritem h4{margin:0 0 4px;font-family:"Baloo 2",sans-serif;font-size:1.02rem}
   .ritem p{margin:0;color:var(--muted);font-size:.88rem}
+
+  /* tableau détaillé */
+  .dtab{border-collapse:collapse;min-width:560px;width:100%;font-variant-numeric:tabular-nums}
+  .dtab th,.dtab td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line);font-size:.92rem}
+  .dtab th{color:var(--muted);font-family:"Baloo 2",sans-serif;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+  .dtab th:first-child,.dtab td:first-child{text-align:left}
+  .dtab td.mm{font-weight:700}
+  .dtab td .dot2{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:9px;vertical-align:middle}
+  .dtab tr.tot td{border-top:2px solid var(--accent);border-bottom:none;font-weight:800;color:var(--ink)}
+  .dtab tbody tr:hover td{background:var(--surface2)}
 </style>
 
 <div class="top">
@@ -226,6 +236,7 @@
   <a href="#matieres">Matières</a>
   <a href="#progression">Progression</a>
   <a href="#couverture">Couverture</a>
+  <a href="#detail">Détail</a>
   <a href="#apercus">Aperçus</a>
   <a href="#fonctions">Fonctions</a>
   <a href="#frise">Parcours</a>
@@ -281,6 +292,12 @@
   <div class="sec-head"><h2>Couverture par niveau</h2><span class="hint">nombre de chapitres · CP → Terminale</span></div>
   <div class="matrix-scroll"><table class="matrix" id="matrix"></table></div>
   <div class="legend" id="legend"></div>
+</section>
+
+<section class="wrap" id="detail">
+  <div class="sec-head"><h2>Détail par matière</h2><span class="hint">chapitres · questions · exercices · sujets · bac blancs</span></div>
+  <div class="matrix-scroll"><table class="dtab" id="detail-table"></table></div>
+  <p class="note-ex" style="margin-top:14px">Le primaire a des évaluations plutôt que des sujets (pas d'examen) ; la techno collège n'a pas d'épreuve type bac.</p>
 </section>
 
 <section class="wrap" id="apercus">
@@ -540,6 +557,25 @@
     <div class="xprow"><div class="nm">${n}</div>
     <div class="tk"><div class="fl" style="width:${Math.round(v/mx*100)}%;background:var(${c})"></div></div>
     <div class="vv num">${v}</div></div>`).join('');
+
+  // Tableau détaillé par matière
+  const DET=[
+    ['Maths',192,'3 840',192,'10','20','--m-maths'],
+    ['Physique-chimie',68,'1 360',68,'10','20','--m-pc'],
+    ['SVT',37,'740',37,'10','20','--m-svt'],
+    ['Sciences (primaire)',25,'500',25,'—','3','--m-sci'],
+    ['Technologie',20,'400',20,'—','1','--m-techno'],
+    ['SNT',6,'120',6,'10','20','--m-snt'],
+    ['NSI',12,'240',12,'10','20','--m-nsi'],
+    ['Sciences de l’ingénieur',10,'200',10,'10','20','--m-si'],
+    ['Enseignement scientifique',13,'260',13,'10','20','--m-es'],
+  ];
+  let dh='<thead><tr><th>Matière</th><th>Chap.</th><th>Questions</th><th>Exercices</th><th>Sujets</th><th>Bac blancs</th></tr></thead><tbody>';
+  for(const [n,c,q,e,s,b,col] of DET){
+    dh+=`<tr><td class="mm"><span class="dot2" style="background:var(${col})"></span>${n}</td><td>${c}</td><td>${q}</td><td>${e}</td><td>${s}</td><td>${b}</td></tr>`;
+  }
+  dh+='<tr class="tot"><td>Total</td><td>383</td><td>7 660</td><td>383</td><td>70</td><td>144</td></tr></tbody>';
+  document.getElementById('detail-table').innerHTML=dh;
 
   // Compteurs animés (chiffres formatés avec espaces des milliers)
   const espaces=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
