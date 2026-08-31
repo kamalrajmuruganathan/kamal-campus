@@ -12,6 +12,7 @@ import {
   nombreDerive, suiteArithmetique, suiteGeometrique, produitScalaire,
   racineCarreParfait,
   additionSimple, soustractionSimple, multiplicationSimple, complementDix, leDouble,
+  masseVolumique, vitesse, loiOhm,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -87,6 +88,12 @@ export const REGISTRE = {
   'ce2-math-calcul-mental': [additionSimple, soustractionSimple, multiplicationSimple, leDouble],
   'cm1-math-multiplication-posee': [multiplicationSimple],
   'cm2-math-calcul-mental': [additionSimple, soustractionSimple, multiplicationSimple, leDouble],
+
+  // ── Physique-chimie : grandeurs à volonté ──
+  '5e-pc-mouvement-vitesse': [vitesse],
+  '4e-pc-mouvement-vitesse': [vitesse],
+  '3e-pc-masse-volumique': [masseVolumique],
+  '1spe-pc-energie-electrique': [loiOhm],
 };
 
 /** Le chapitre a-t-il au moins un générateur ? */

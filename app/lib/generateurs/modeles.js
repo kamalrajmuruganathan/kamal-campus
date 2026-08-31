@@ -418,3 +418,50 @@ export function racineCarreParfait(rand) {
     explication: `$\\sqrt{${N}} = ${k}$ car $${k}^2 = ${N}$. La racine carrée n'est pas la moitié du nombre.`,
   }, rand);
 }
+
+// ── Physique-chimie (grandeurs et formules) ──────────────────────────────────
+
+/** Masse volumique ρ = m / V. */
+export function masseVolumique(rand) {
+  const rho = entier(rand, 1, 10);
+  const V = entier(rand, 2, 12);
+  const m = rho * V;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'masse-volumique',
+    enonce: `Un objet a une masse de ${m} g et un volume de ${V} cm³. Quelle est sa masse volumique ?`,
+    bonne: `${rho} g/cm³`,
+    distracteurs: [`${m} g/cm³`, `${V} g/cm³`, `${rho + 1} g/cm³`, `${rho + 2} g/cm³`, `${m + V} g/cm³`, `${rho + 3} g/cm³`],
+    explication: `ρ = m ÷ V = ${m} ÷ ${V} = ${rho} g/cm³.`,
+  }, rand);
+}
+
+/** Vitesse moyenne v = d / t. */
+export function vitesse(rand) {
+  const v = entier(rand, 2, 20);
+  const t = entier(rand, 2, 10);
+  const d = v * t;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'vitesse',
+    enonce: `Un mobile parcourt ${d} m en ${t} s. Quelle est sa vitesse moyenne ?`,
+    bonne: `${v} m/s`,
+    distracteurs: [`${d} m/s`, `${t} m/s`, `${v + 1} m/s`, `${v + 2} m/s`, `${d + t} m/s`, `${v + 3} m/s`],
+    explication: `v = d ÷ t = ${d} ÷ ${t} = ${v} m/s.`,
+  }, rand);
+}
+
+/** Loi d'Ohm U = R × I. */
+export function loiOhm(rand) {
+  const R = entier(rand, 2, 20);
+  const I = entier(rand, 1, 9);
+  const U = R * I;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'loi-ohm',
+    enonce: `Une résistance de ${R} Ω est traversée par un courant de ${I} A. Quelle est la tension à ses bornes ?`,
+    bonne: `${U} V`,
+    distracteurs: [`${R + I} V`, `${R} V`, `${I} V`, `${U + 1} V`, `${U + 2} V`, `${U + R} V`],
+    explication: `Loi d'Ohm : U = R × I = ${R} × ${I} = ${U} V.`,
+  }, rand);
+}
