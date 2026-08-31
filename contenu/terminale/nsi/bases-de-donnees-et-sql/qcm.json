@@ -1,0 +1,194 @@
+{
+  "id": "tale-nsi-bases-de-donnees-et-sql-qcm",
+  "chapitre": "tale-nsi-bases-de-donnees-et-sql",
+  "titre": "QCM — Bases de données et SQL",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "modele-relationnel",
+      "enonce": "Dans une base de données relationnelle, sous quelle forme sont organisées les données ?",
+      "choix": ["En arbres", "En tables (relations)", "En fichiers texte indépendants", "En pages web"],
+      "reponse": 1,
+      "explication": "Le modèle relationnel organise les données en tables. Parler d'arbres confond avec une autre structure."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Dans une table, une ligne représente :",
+      "choix": ["Un attribut", "Un enregistrement (un objet particulier)", "Le schéma de la table", "Le type d'une colonne"],
+      "reponse": 1,
+      "explication": "Une ligne est un enregistrement : un objet précis. Une colonne, elle, est un attribut."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Dans une table, une colonne correspond à :",
+      "choix": ["Un enregistrement", "Un attribut (une caractéristique)", "Une clé étrangère obligatoirement", "Une ligne de résultat"],
+      "reponse": 1,
+      "explication": "Une colonne est un attribut, avec un domaine (type). La ligne est l'enregistrement."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "select",
+      "enonce": "Quelle clause SQL sert à lire des données ?",
+      "choix": ["INSERT", "SELECT", "UPDATE", "DELETE"],
+      "reponse": 1,
+      "explication": "SELECT interroge (lecture). INSERT, UPDATE et DELETE modifient le contenu."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "cle-primaire",
+      "enonce": "Une clé primaire sert à :",
+      "choix": ["Trier automatiquement la table", "Identifier de façon unique chaque ligne", "Chiffrer les données", "Relier deux colonnes de la même table"],
+      "reponse": 1,
+      "explication": "La clé primaire identifie chaque ligne de manière unique et non nulle. Elle n'a pas pour rôle de trier ni de chiffrer."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "where",
+      "enonce": "Quelle clause filtre les lignes selon une condition ?",
+      "choix": ["FROM", "WHERE", "ORDER BY", "SELECT"],
+      "reponse": 1,
+      "explication": "WHERE exprime la condition de filtrage. ORDER BY trie, FROM désigne la table."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "order-by",
+      "enonce": "Quelle clause trie le résultat d'une requête ?",
+      "choix": ["GROUP BY", "ORDER BY", "WHERE", "JOIN"],
+      "reponse": 1,
+      "explication": "ORDER BY trie le résultat (ASC par défaut, DESC pour décroissant). GROUP BY regroupe, il ne trie pas au sens du résultat final."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "insert",
+      "enonce": "Quelle requête ajoute une nouvelle ligne dans une table ?",
+      "choix": ["INSERT INTO", "SELECT INTO", "ADD ROW", "CREATE VALUE"],
+      "reponse": 0,
+      "explication": "INSERT INTO ... VALUES ajoute une ligne. Les autres formulations n'existent pas en SQL standard."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "cle-etrangere",
+      "enonce": "Une clé étrangère est :",
+      "choix": ["Une clé primaire chiffrée", "Un attribut qui référence la clé primaire d'une autre table", "Une colonne toujours vide", "Une clé venant d'une base d'un autre pays"],
+      "reponse": 1,
+      "explication": "La clé étrangère référence la clé primaire d'une autre table et matérialise le lien entre elles. Elle assure l'intégrité référentielle."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "integrite",
+      "enonce": "Que garantit la contrainte d'intégrité référentielle ?",
+      "choix": ["Que la table est triée", "Qu'on ne peut pas référencer une ligne inexistante dans la table cible", "Que toutes les colonnes sont numériques", "Que la requête s'exécute plus vite"],
+      "reponse": 1,
+      "explication": "L'intégrité référentielle interdit qu'une clé étrangère pointe vers une clé primaire qui n'existe pas, garantissant la cohérence entre tables."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "select-etoile",
+      "enonce": "Que sélectionne la requête `SELECT * FROM livre;` ?",
+      "choix": ["Uniquement la première colonne", "Toutes les colonnes de toutes les lignes de la table livre", "Le nombre de lignes", "Une ligne au hasard"],
+      "reponse": 1,
+      "explication": "L'étoile * désigne toutes les colonnes ; sans WHERE, toutes les lignes sont renvoyées."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "agregation",
+      "enonce": "Quelle fonction d'agrégation compte le nombre de lignes ?",
+      "choix": ["SUM", "COUNT", "AVG", "MAX"],
+      "reponse": 1,
+      "explication": "COUNT compte les lignes. SUM additionne, AVG fait la moyenne, MAX renvoie le maximum."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "condition",
+      "enonce": "Quelle requête renvoie les élèves de la classe 'TG1' nés après 2007 ?",
+      "choix": ["SELECT * FROM eleve WHERE classe = 'TG1' OR annee > 2007;", "SELECT * FROM eleve WHERE classe = 'TG1' AND annee > 2007;", "SELECT * FROM eleve WHERE classe = 'TG1', annee > 2007;", "SELECT eleve WHERE classe = 'TG1' AND annee > 2007;"],
+      "reponse": 1,
+      "explication": "Les deux conditions doivent être vraies : on les relie par AND. Utiliser OR élargirait à tort le résultat."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "jointure",
+      "enonce": "Sur quoi porte typiquement la condition d'une jointure entre deux tables ?",
+      "choix": ["Sur l'égalité entre une clé primaire et la clé étrangère qui la référence", "Sur le nombre de lignes des tables", "Sur les noms des colonnes", "Sur la date de création des tables"],
+      "reponse": 0,
+      "explication": "Une jointure croise deux tables reliées : la condition ON exprime l'égalité clé primaire = clé étrangère."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "update",
+      "enonce": "Quelle requête change la classe de l'élève d'id 42 en 'TG2' ?",
+      "choix": ["UPDATE eleve SET classe = 'TG2';", "UPDATE eleve SET classe = 'TG2' WHERE id = 42;", "INSERT INTO eleve classe = 'TG2' WHERE id = 42;", "SELECT classe = 'TG2' FROM eleve WHERE id = 42;"],
+      "reponse": 1,
+      "explication": "UPDATE ... SET ... WHERE cible la bonne ligne. Sans WHERE (choix 1), tous les élèves changeraient de classe."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "delete-danger",
+      "enonce": "Que fait `DELETE FROM eleve;` (sans clause WHERE) ?",
+      "choix": ["Supprime la table eleve elle-même", "Supprime toutes les lignes de la table", "Ne supprime rien car il manque le WHERE", "Supprime uniquement la première ligne"],
+      "reponse": 1,
+      "explication": "Sans WHERE, DELETE supprime toutes les lignes de la table (mais garde la table). C'est l'erreur classique à éviter."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "group-by",
+      "enonce": "La requête `SELECT classe, COUNT(*) FROM eleve GROUP BY classe;` renvoie :",
+      "choix": ["Le nombre total d'élèves de la table", "Une ligne par classe avec l'effectif de chaque classe", "La liste de tous les élèves triés par classe", "La première classe rencontrée seulement"],
+      "reponse": 1,
+      "explication": "GROUP BY classe forme un groupe par classe, et COUNT(*) donne l'effectif de chacun : une ligne de résultat par classe."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "cle-primaire-contrainte",
+      "enonce": "Pourquoi une insertion peut-elle être refusée à cause de la clé primaire ?",
+      "choix": ["Parce que la valeur de clé primaire proposée existe déjà dans la table", "Parce que la table est triée", "Parce que la clé primaire doit être un texte", "Parce qu'il y a une clause ORDER BY"],
+      "reponse": 0,
+      "explication": "La clé primaire doit rester unique : insérer une ligne avec une valeur de clé déjà présente viole cette contrainte d'unicité."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "jointure-resultat",
+      "enonce": "Table eleve(id, nom) et emprunt(id_eleve, titre). Que renvoie `SELECT eleve.nom, emprunt.titre FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve;` ?",
+      "choix": ["Tous les élèves, même ceux sans emprunt", "Pour chaque emprunt, le nom de l'élève associé et le titre emprunté", "Uniquement les titres, sans les noms", "Le nombre d'emprunts par élève"],
+      "reponse": 1,
+      "explication": "La jointure associe chaque emprunt à l'élève dont l'id correspond, et projette nom + titre. Un élève sans emprunt n'apparaît pas dans une jointure interne."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "lecture-vs-ecriture",
+      "enonce": "Parmi ces requêtes, laquelle ne modifie PAS le contenu de la base ?",
+      "choix": ["UPDATE livre SET dispo = 0 WHERE id = 3;", "DELETE FROM livre WHERE id = 3;", "SELECT titre FROM livre WHERE dispo = 1;", "INSERT INTO livre (id, titre) VALUES (9, 'NSI');"],
+      "reponse": 2,
+      "explication": "SELECT est une lecture : elle interroge sans rien changer. UPDATE, DELETE et INSERT modifient le contenu."
+    }
+  ]
+}

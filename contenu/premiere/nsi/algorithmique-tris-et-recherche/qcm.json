@@ -1,0 +1,274 @@
+{
+  "id": "1nsi-algorithmique-tris-et-recherche-qcm",
+  "chapitre": "1nsi-algorithmique-tris-et-recherche",
+  "titre": "QCM — Algorithmique : tris et recherche",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "algorithme",
+      "enonce": "Qu'est-ce qu'un algorithme ?",
+      "choix": [
+        "Un langage de programmation",
+        "Une suite finie d'étapes qui résout un problème",
+        "Un composant du processeur",
+        "Un type de fichier"
+      ],
+      "reponse": 1,
+      "explication": "Un algorithme est une suite finie et ordonnée d'étapes menant à la résolution d'un problème, indépendamment du langage utilisé."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "recherche-sequentielle",
+      "enonce": "La recherche séquentielle consiste à…",
+      "choix": [
+        "couper le tableau en deux à chaque étape",
+        "parcourir les éléments un à un jusqu'à trouver la valeur",
+        "trier d'abord le tableau",
+        "choisir la plus grande valeur"
+      ],
+      "reponse": 1,
+      "explication": "La recherche séquentielle examine les éléments un par un ; elle fonctionne même sur un tableau non trié."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "dichotomie-condition",
+      "enonce": "Quelle condition est indispensable pour appliquer la recherche dichotomique ?",
+      "choix": [
+        "Le tableau doit être trié",
+        "Le tableau doit être vide",
+        "Le tableau doit contenir des chaînes",
+        "Le tableau doit avoir une taille paire"
+      ],
+      "reponse": 0,
+      "explication": "La dichotomie repose sur la comparaison au milieu : elle exige un tableau trié. Sur un tableau non trié, elle donne un résultat faux."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "tri-selection",
+      "enonce": "Le tri par sélection place à chaque tour…",
+      "choix": [
+        "un élément au hasard",
+        "le plus petit élément restant à sa position définitive",
+        "le dernier élément au début",
+        "deux éléments identiques côte à côte"
+      ],
+      "reponse": 1,
+      "explication": "À chaque tour, le tri par sélection cherche le minimum de la partie non triée et le place à sa position définitive."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "tri-insertion",
+      "enonce": "Le tri par insertion ressemble à…",
+      "choix": [
+        "mélanger un paquet de cartes",
+        "ranger des cartes une à une à leur place dans sa main",
+        "couper un jeu en deux",
+        "compter les cartes"
+      ],
+      "reponse": 1,
+      "explication": "Le tri par insertion insère chaque nouvel élément à sa bonne place parmi ceux déjà triés, comme on trie des cartes en main."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "glouton",
+      "enonce": "Un algorithme glouton fait, à chaque étape…",
+      "choix": [
+        "le choix qui paraît le meilleur sur le moment",
+        "tous les choix possibles en parallèle",
+        "un retour en arrière systématique",
+        "un tri complet du tableau"
+      ],
+      "reponse": 0,
+      "explication": "Un glouton fait à chaque étape le choix localement optimal, sans revenir en arrière."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "resultat-recherche",
+      "enonce": "Dans la fonction de recherche donnée, que renvoie-t-on si la valeur n'est pas trouvée ?",
+      "choix": ["0", "-1", "None obligatoirement", "La taille du tableau"],
+      "reponse": 1,
+      "explication": "Par convention ici, on renvoie -1 pour signaler l'absence de la valeur (un indice valide serait positif ou nul)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "cout",
+      "enonce": "Le coût (nombre d'opérations) de la recherche séquentielle dans le pire cas est…",
+      "choix": [
+        "constant, quelle que soit la taille",
+        "proportionnel à la taille n du tableau",
+        "toujours égal à 1",
+        "proportionnel au carré de n"
+      ],
+      "reponse": 1,
+      "explication": "Dans le pire cas, on parcourt tous les éléments : le coût est linéaire, proportionnel à n."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "dichotomie-cout",
+      "enonce": "Combien d'étapes environ faut-il pour une recherche dichotomique dans 1000 éléments triés ?",
+      "choix": ["Environ 1000", "Environ 500", "Une dizaine", "Une seule"],
+      "reponse": 2,
+      "explication": "En divisant la zone par 2 à chaque étape, une dizaine d'étapes suffisent (2^10 = 1024). Le coût est logarithmique."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "dichotomie-milieu",
+      "enonce": "Dans la dichotomie, si tab[m] < cible, où continue-t-on la recherche ?",
+      "choix": [
+        "dans la moitié gauche (indices avant m)",
+        "dans la moitié droite (indices après m)",
+        "on s'arrête, valeur trouvée",
+        "on recommence depuis le début"
+      ],
+      "reponse": 1,
+      "explication": "Si l'élément du milieu est plus petit que la cible, celle-ci est forcément dans la moitié droite : on pose g = m + 1."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "cout-tri",
+      "enonce": "Les tris par sélection et par insertion ont, dans le pire cas, un coût…",
+      "choix": ["constant", "linéaire", "quadratique", "logarithmique"],
+      "reponse": 2,
+      "explication": "Leur coût est quadratique (proportionnel à n²) : doubler la taille multiplie le temps par environ 4."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "terminaison",
+      "enonce": "Prouver la terminaison d'une boucle while, c'est montrer que…",
+      "choix": [
+        "le résultat est correct",
+        "la boucle s'arrête toujours (une quantité décroît vers une borne)",
+        "la boucle ne s'exécute jamais",
+        "le tableau est trié"
+      ],
+      "reponse": 1,
+      "explication": "La terminaison garantit l'arrêt : on exhibe un variant qui décroît strictement vers une borne. La justesse du résultat, c'est la correction."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "invariant",
+      "enonce": "Un invariant de boucle est une propriété…",
+      "choix": [
+        "vraie seulement au début",
+        "vraie avant et après chaque tour de boucle",
+        "qui change à chaque tour",
+        "sans rapport avec la correction"
+      ],
+      "reponse": 1,
+      "explication": "L'invariant est vrai avant et après chaque itération ; il sert à prouver la correction de l'algorithme."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "glouton-monnaie",
+      "enonce": "Pour rendre 68 centimes avec 50, 20, 10, 5, 2, 1, quelle pièce l'algorithme glouton choisit-il en premier ?",
+      "choix": ["1", "20", "50", "10"],
+      "reponse": 2,
+      "explication": "Le glouton prend d'abord la plus grande pièce ne dépassant pas 68, soit 50. Il reste ensuite 18."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "recherche-vs-dicho",
+      "enonce": "Sur un tableau NON trié, quelle recherche peut-on utiliser correctement ?",
+      "choix": [
+        "Uniquement la dichotomie",
+        "Uniquement la recherche séquentielle",
+        "Les deux indifféremment",
+        "Aucune"
+      ],
+      "reponse": 1,
+      "explication": "La dichotomie exige un tableau trié ; sur un tableau non trié, seule la recherche séquentielle donne un résultat fiable."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "echange",
+      "enonce": "Que fait l'instruction Python tab[i], tab[j] = tab[j], tab[i] ?",
+      "choix": [
+        "Elle supprime deux éléments",
+        "Elle échange les valeurs des cases i et j",
+        "Elle trie tout le tableau",
+        "Elle copie i dans j"
+      ],
+      "reponse": 1,
+      "explication": "Cette affectation multiple échange (permute) le contenu des cases i et j, opération de base des tris."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "glouton-optimal",
+      "enonce": "Quelle affirmation sur les algorithmes gloutons est correcte ?",
+      "choix": [
+        "Ils donnent toujours la solution optimale",
+        "Ils sont rapides mais ne donnent pas toujours la solution optimale",
+        "Ils sont toujours plus lents qu'une recherche exhaustive",
+        "Ils reviennent systématiquement en arrière"
+      ],
+      "reponse": 1,
+      "explication": "Un glouton est rapide et simple, mais selon le problème et les valeurs, son choix local peut ne pas mener à l'optimum global."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "dichotomie-variant",
+      "enonce": "Quelle quantité garantit la terminaison de la boucle while de la dichotomie ?",
+      "choix": [
+        "la valeur cible",
+        "la largeur d - g de la zone de recherche, qui diminue à chaque tour",
+        "le nombre total d'éléments, qui reste constant",
+        "l'indice du milieu m, qui augmente toujours"
+      ],
+      "reponse": 1,
+      "explication": "À chaque tour, on remonte g ou on abaisse d : l'écart d - g diminue strictement et finit par devenir négatif, ce qui arrête la boucle."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "tri-insertion-detail",
+      "enonce": "Dans le tri par insertion, à quoi sert la boucle while tant que tab[j] > valeur ?",
+      "choix": [
+        "à compter les éléments",
+        "à décaler vers la droite les éléments plus grands pour libérer la place de valeur",
+        "à supprimer les doublons",
+        "à inverser tout le tableau"
+      ],
+      "reponse": 1,
+      "explication": "On décale vers la droite tous les éléments triés supérieurs à valeur, jusqu'à trouver le bon emplacement où insérer valeur."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "cout-comparaison",
+      "enonce": "Pourquoi la dichotomie est-elle bien plus rapide que la recherche séquentielle sur un grand tableau trié ?",
+      "choix": [
+        "Parce qu'elle ne compare jamais les éléments",
+        "Parce qu'elle élimine la moitié des éléments restants à chaque étape",
+        "Parce qu'elle trie le tableau plus vite",
+        "Parce qu'elle utilise moins de mémoire seulement"
+      ],
+      "reponse": 1,
+      "explication": "En divisant la zone par deux à chaque comparaison, la dichotomie a un coût logarithmique, très inférieur au coût linéaire de la recherche séquentielle quand n est grand."
+    }
+  ]
+}

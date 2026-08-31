@@ -1,0 +1,19 @@
+{
+  "id": "tale-nsi-reseaux-et-routage-cartes",
+  "chapitre": "tale-nsi-reseaux-et-routage",
+  "titre": "Cartes — Réseaux et routage",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Qu'est-ce que la commutation de paquets et pourquoi rend-elle le réseau robuste ?", "verso": "Le message est découpé en paquets qui voyagent indépendamment, chacun avec l'adresse de destination, puis sont réassemblés. Si un lien tombe, les paquets sont réacheminés par un autre chemin : la communication continue." },
+    { "recto": "À quoi sert une adresse IP et quelle est sa forme en IPv4 ?", "verso": "Elle identifie une machine sur le réseau pour acheminer les paquets (comme une adresse postale). En IPv4 : quatre nombres de 0 à 255 séparés par des points, ex. 192.168.1.10, avec une partie réseau et une partie machine." },
+    { "recto": "Que fait un routeur et à quoi sert sa table de routage ?", "verso": "Un routeur relie plusieurs réseaux et fait passer les paquets de l'un à l'autre. Sa table de routage indique, pour chaque destination, le prochain saut : le voisin vers lequel envoyer le paquet." },
+    { "recto": "Comment modélise-t-on un réseau par un graphe ?", "verso": "Les routeurs sont les sommets, les liens entre eux les arêtes. Router, c'est chercher un chemin dans ce graphe (pondéré quand les liens ont un coût)." },
+    { "recto": "RIP vs OSPF : quel critère de choix de route ?", "verso": "RIP choisit la route avec le moins de sauts (poids 1 par lien). OSPF choisit la route de plus faible coût, le coût dépendant du débit : il privilégie les liens rapides, même avec plus de sauts." },
+    { "recto": "Quelle différence de rôle entre IP et les protocoles de routage (RIP/OSPF) ?", "verso": "IP adresse les machines et achemine les paquets. RIP et OSPF servent aux routeurs à construire et mettre à jour leurs tables de routage (choisir le chemin)." }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "id": "tale-nsi-algorithmes-de-graphes-qcm",
+  "chapitre": "tale-nsi-algorithmes-de-graphes",
+  "titre": "QCM — Algorithmes sur les graphes",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Un graphe est constitué de :",
+      "choix": ["Lignes et colonnes", "Sommets et arêtes", "Clés et valeurs", "Piles et files"],
+      "reponse": 1,
+      "explication": "Un graphe est un ensemble de sommets (objets) reliés par des arêtes (liens). Lignes/colonnes évoque une table, pas un graphe."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "oriente",
+      "enonce": "Dans un graphe orienté, un arc de A vers B signifie :",
+      "choix": ["Qu'il y a forcément aussi un arc de B vers A", "Qu'on peut aller de A vers B, sans garantie du sens inverse", "Que A et B sont identiques", "Que A a un poids supérieur à B"],
+      "reponse": 1,
+      "explication": "Dans un graphe orienté, les liens ont un sens : un arc A vers B n'implique pas l'arc B vers A. C'est une confusion fréquente."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "voisins",
+      "enonce": "Deux sommets reliés par une arête sont dits :",
+      "choix": ["Connexes", "Adjacents (voisins)", "Pondérés", "Racines"],
+      "reponse": 1,
+      "explication": "Deux sommets reliés directement sont adjacents, ou voisins. Connexe qualifie le graphe entier, pas une paire de sommets."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "degre",
+      "enonce": "Le degré d'un sommet est :",
+      "choix": ["Sa distance à la racine", "Son nombre de voisins (arêtes qui y aboutissent)", "Son poids", "Sa position dans le dictionnaire"],
+      "reponse": 1,
+      "explication": "Le degré d'un sommet compte ses voisins. La notion de racine appartient aux arbres, pas aux graphes en général."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "bfs-structure",
+      "enonce": "Quelle structure de données utilise le parcours en largeur (BFS) ?",
+      "choix": ["Une pile", "Une file", "Un arbre binaire de recherche", "Une matrice triée"],
+      "reponse": 1,
+      "explication": "Le BFS utilise une file (FIFO) : on traite les sommets dans l'ordre où on les découvre. La pile, c'est le DFS."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "dfs-structure",
+      "enonce": "Quelle structure est associée au parcours en profondeur (DFS) ?",
+      "choix": ["Une file", "Une pile (souvent via la récursivité)", "Un tableau trié", "Une clé primaire"],
+      "reponse": 1,
+      "explication": "Le DFS s'appuie sur une pile, souvent implicitement grâce à la récursivité (pile d'appels)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "pondere",
+      "enonce": "Un graphe pondéré est un graphe dont :",
+      "choix": ["Les sommets sont numérotés", "Les arêtes portent un poids (distance, coût)", "Tous les sommets ont le même degré", "Il n'y a aucun cycle"],
+      "reponse": 1,
+      "explication": "Dans un graphe pondéré, chaque arête porte un poids (par exemple une distance). Numéroter les sommets ne change pas la nature du graphe."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "connexe",
+      "enonce": "Un graphe est connexe si :",
+      "choix": ["Il possède au moins un cycle", "On peut aller de n'importe quel sommet à n'importe quel autre", "Toutes ses arêtes ont le même poids", "Il a exactement une racine"],
+      "reponse": 1,
+      "explication": "La connexité signifie qu'il existe un chemin entre toute paire de sommets. La présence d'un cycle n'a rien à voir avec la connexité."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "representation",
+      "enonce": "Dans une matrice d'adjacence M, M[i][j] = 1 signifie :",
+      "choix": ["Que le sommet i a le poids 1", "Qu'il existe une arête entre i et j", "Que i et j sont la même case", "Que j est la racine"],
+      "reponse": 1,
+      "explication": "La matrice d'adjacence code par 1 la présence d'une arête (de i vers j), par 0 son absence."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "listes-adjacence",
+      "enonce": "Quel est l'avantage des listes d'adjacence sur la matrice pour un graphe creux (peu d'arêtes) ?",
+      "choix": ["Elles trient les sommets", "Elles occupent moins de mémoire", "Elles interdisent les cycles", "Elles rendent le graphe orienté"],
+      "reponse": 1,
+      "explication": "Les listes d'adjacence ne stockent que les voisins réels : elles sont économes quand il y a peu d'arêtes, là où la matrice réserve de la place pour toutes les paires."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "marquage",
+      "enonce": "Pourquoi marque-t-on les sommets « visités » pendant un parcours ?",
+      "choix": ["Pour trier le graphe", "Pour éviter de traiter un sommet plusieurs fois et boucler à l'infini sur un cycle", "Pour donner un poids aux arêtes", "Pour transformer le graphe en arbre"],
+      "reponse": 1,
+      "explication": "Sans marquage des sommets visités, un cycle ferait revisiter sans fin les mêmes sommets : le parcours ne se terminerait pas."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "bfs-plus-court",
+      "enonce": "Dans un graphe non pondéré, le parcours en largeur permet de trouver :",
+      "choix": ["Le chemin le plus long", "Le plus court chemin en nombre d'arêtes depuis le sommet de départ", "Le sommet de plus haut degré", "Un cycle"],
+      "reponse": 1,
+      "explication": "Le BFS explore par cercles concentriques : le premier moment où il atteint un sommet correspond au plus court chemin en nombre d'arêtes."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "dfs-comportement",
+      "enonce": "Le parcours en profondeur (DFS) :",
+      "choix": ["Traite tous les voisins d'un sommet avant d'aller plus loin", "S'enfonce le plus loin possible avant de revenir en arrière (backtracking)", "Ne visite jamais deux fois le même sommet sans marquage… mais explore en largeur", "Ne fonctionne que sur les graphes pondérés"],
+      "reponse": 1,
+      "explication": "Le DFS descend au maximum le long d'un chemin, puis revient en arrière explorer les autres branches. Traiter tous les voisins d'abord, c'est le BFS."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "cycle",
+      "enonce": "Un cycle dans un graphe est :",
+      "choix": ["Un sommet isolé", "Un chemin qui revient à son point de départ", "Une arête pondérée", "Un graphe non connexe"],
+      "reponse": 1,
+      "explication": "Un cycle est un chemin fermé qui repart de son point de départ. Un sommet isolé n'a pas d'arête, donc pas de cycle."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "modelisation",
+      "enonce": "Un labyrinthe peut se modéliser par un graphe où :",
+      "choix": ["Les murs sont des sommets", "Les cases sont des sommets et les passages des arêtes", "Chaque case est une arête", "Il ne peut y avoir de cycle"],
+      "reponse": 1,
+      "explication": "On modélise le labyrinthe par un graphe : cases = sommets, passages entre cases = arêtes. Chercher la sortie devient un parcours de graphe."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "dictionnaire",
+      "enonce": "Avec g = {'A':['B','C'], 'B':['A'], 'C':['A']}, quels sont les voisins de A ?",
+      "choix": ["Aucun", "B et C", "A seulement", "B, C et A"],
+      "reponse": 1,
+      "explication": "La liste d'adjacence de A est ['B','C'] : ses voisins sont B et C."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "bfs-ordre",
+      "enonce": "Graphe g = {'A':['B','C'], 'B':['D'], 'C':['D'], 'D':[]}. Un BFS depuis A visite les sommets dans quel ordre possible ?",
+      "choix": ["A, B, D, C", "A, B, C, D", "A, D, C, B", "D, C, B, A"],
+      "reponse": 1,
+      "explication": "Le BFS traite A, puis ses voisins B et C (dans l'ordre de la liste), puis D. On obtient A, B, C, D. A, B, D, C serait un DFS."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "dfs-ordre",
+      "enonce": "Même graphe g = {'A':['B','C'], 'B':['D'], 'C':['D'], 'D':[]}. Un DFS récursif depuis A (voisins dans l'ordre de la liste) visite :",
+      "choix": ["A, B, C, D", "A, B, D, C", "A, C, B, D", "A, D, B, C"],
+      "reponse": 1,
+      "explication": "Le DFS descend A -> B -> D (au fond), puis revient et explore C (D déjà vu). D'où A, B, D, C. A, B, C, D serait le BFS."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "bfs-pondere",
+      "enonce": "Pourquoi le BFS simple ne donne-t-il pas le plus court chemin dans un graphe pondéré ?",
+      "choix": ["Parce qu'il boucle à l'infini", "Parce qu'il compte le nombre d'arêtes, pas la somme des poids", "Parce qu'il n'utilise pas de file", "Parce qu'il ne visite qu'un sommet"],
+      "reponse": 1,
+      "explication": "Le BFS mesure la distance en nombre d'arêtes. Avec des poids, un chemin de 2 arêtes légères peut être plus court qu'un chemin d'1 arête lourde : il faut un autre algorithme."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "choix-parcours",
+      "enonce": "On veut savoir en combien d'étapes (arêtes) minimum on relie deux cases d'un labyrinthe non pondéré. Quel parcours choisir ?",
+      "choix": ["Un DFS car il est plus rapide", "Un BFS car il donne le plus court chemin en nombre d'arêtes", "Une recherche dichotomique", "Une jointure SQL"],
+      "reponse": 1,
+      "explication": "Le plus court chemin en nombre d'arêtes, dans un graphe non pondéré, est exactement ce que fournit le BFS."
+    }
+  ]
+}

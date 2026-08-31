@@ -71,5 +71,6 @@ export const theme = (sombre) => (sombre ? SOMBRE : CLAIR);
 export const couleurMatiere = (t, matiere) => {
   if (matiere === 'physique-chimie') return t.couleur.physique;
   if (matiere === 'svt' || matiere === 'sciences') return t.couleur.succes;
+  if (matiere === 'techno' || matiere === 'snt' || matiere === 'nsi') return t.couleur.alerte;
   return t.couleur.maths;
 };

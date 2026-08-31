@@ -1,0 +1,19 @@
+{
+  "id": "tale-nsi-algorithmes-de-graphes-cartes",
+  "chapitre": "tale-nsi-algorithmes-de-graphes",
+  "titre": "Cartes — Algorithmes sur les graphes",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "De quoi est constitué un graphe, et que veut dire orienté vs non orienté ?", "verso": "De sommets (objets) et d'arêtes (liens). Non orienté : le lien vaut dans les deux sens. Orienté : les arcs ont un sens (A vers B n'implique pas B vers A)." },
+    { "recto": "Quelles sont les deux représentations d'un graphe en mémoire ?", "verso": "La matrice d'adjacence (M[i][j]=1 si arête i-j) : test de lien immédiat mais gourmande en mémoire. Les listes d'adjacence (dictionnaire sommet -> voisins) : économes pour un graphe creux." },
+    { "recto": "Parcours en largeur (BFS) : structure et propriété clé ?", "verso": "Il utilise une file (FIFO) et explore par cercles concentriques. Dans un graphe non pondéré, il trouve le plus court chemin en nombre d'arêtes depuis le départ." },
+    { "recto": "Parcours en profondeur (DFS) : principe et structure ?", "verso": "Il s'enfonce le plus loin possible le long d'un chemin puis revient en arrière (backtracking). Il utilise une pile, souvent implicitement via la récursivité." },
+    { "recto": "Pourquoi faut-il marquer les sommets visités lors d'un parcours ?", "verso": "Pour ne pas traiter un sommet deux fois : sans marquage, un cycle ferait boucler le parcours à l'infini." },
+    { "recto": "Pourquoi le BFS ne donne-t-il pas le plus court chemin dans un graphe pondéré ?", "verso": "Le BFS compte le nombre d'arêtes, pas la somme des poids. Avec des poids, il faut un algorithme qui tienne compte des coûts des arêtes." }
+  ]
+}

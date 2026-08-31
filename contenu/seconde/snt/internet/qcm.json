@@ -1,0 +1,294 @@
+{
+  "id": "2nde-snt-internet-qcm",
+  "chapitre": "2nde-snt-internet",
+  "titre": "QCM — Internet",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Qu'est-ce qu'Internet ?",
+      "choix": [
+        "Un site web très visité",
+        "Un navigateur pour consulter des pages",
+        "Un réseau mondial reliant des réseaux d'ordinateurs",
+        "Une entreprise qui possède tous les ordinateurs"
+      ],
+      "reponse": 2,
+      "explication": "Internet est un « réseau de réseaux » qui relie des réseaux du monde entier. Le confondre avec un site ou un navigateur est l'erreur classique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "internet-vs-web",
+      "enonce": "Quelle affirmation est correcte ?",
+      "choix": [
+        "Le Web est un service qui utilise Internet",
+        "Internet est un service qui utilise le Web",
+        "Le Web et Internet sont exactement la même chose",
+        "Le Web fonctionne sans Internet"
+      ],
+      "reponse": 0,
+      "explication": "Le Web (les pages consultées au navigateur) est **un service parmi d'autres** qui fonctionne grâce à Internet. La messagerie est un autre service d'Internet."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "paquets",
+      "enonce": "Comment une information circule-t-elle sur Internet ?",
+      "choix": [
+        "En un seul bloc du départ à l'arrivée",
+        "Uniquement sous forme de son",
+        "Sans jamais être découpée",
+        "Découpée en petits paquets"
+      ],
+      "reponse": 3,
+      "explication": "L'information est découpée en **paquets** : c'est la commutation de paquets. Croire qu'elle voyage d'un seul bloc est l'erreur fréquente."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "adresse-ip",
+      "enonce": "À quoi sert une adresse IP ?",
+      "choix": [
+        "À écrire du texte sur une page",
+        "À identifier et localiser une machine sur le réseau",
+        "À augmenter la vitesse d'un ordinateur",
+        "À protéger un fichier par mot de passe"
+      ],
+      "reponse": 1,
+      "explication": "L'adresse IP identifie une machine sur le réseau afin d'y acheminer les paquets. Elle n'a rien à voir avec la vitesse ou la sécurité d'un fichier."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "dns",
+      "enonce": "Que fait le DNS (Domain Name System) ?",
+      "choix": [
+        "Il découpe les données en paquets",
+        "Il fournit l'électricité aux serveurs",
+        "Il traduit un nom de domaine en adresse IP",
+        "Il crée les pages web"
+      ],
+      "reponse": 2,
+      "explication": "Le DNS est un annuaire qui traduit un nom lisible (ex. `gouv.fr`) en adresse IP. Le découpage en paquets, lui, est le rôle de TCP."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "routeur",
+      "enonce": "Quel matériel dirige les paquets de proche en proche jusqu'à leur destination ?",
+      "choix": [
+        "L'écran",
+        "Le clavier",
+        "L'imprimante",
+        "Le routeur"
+      ],
+      "reponse": 3,
+      "explication": "Le routeur lit l'adresse de destination et transmet le paquet au voisin le plus adapté : c'est le routage."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "fai",
+      "enonce": "Que signifie « FAI » ?",
+      "choix": [
+        "Fournisseur d'Accès à Internet",
+        "Fichier d'Accès Informatique",
+        "Format d'Adresse IP",
+        "Fréquence d'Antenne Interne"
+      ],
+      "reponse": 0,
+      "explication": "Le Fournisseur d'Accès à Internet relie le logement ou le téléphone au reste du réseau (ADSL, fibre, réseau mobile)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "debit",
+      "enonce": "Que mesure le débit d'une connexion ?",
+      "choix": [
+        "Le nombre de sites disponibles",
+        "La quantité de données transmises par seconde",
+        "La taille de l'écran",
+        "Le nombre d'adresses IP dans le monde"
+      ],
+      "reponse": 1,
+      "explication": "Le débit se mesure en bits par seconde (Mbit/s, Gbit/s). Un débit élevé transfère les fichiers plus vite."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "commutation-paquets",
+      "enonce": "Pourquoi le découpage en paquets rend-il Internet robuste ?",
+      "choix": [
+        "Parce que les paquets suivent tous obligatoirement le même chemin",
+        "Parce que les paquets ne se perdent jamais",
+        "Parce qu'un seul routeur suffit pour tout le réseau",
+        "Parce que si une liaison est coupée, les paquets peuvent emprunter un autre chemin"
+      ],
+      "reponse": 3,
+      "explication": "S'il n'existe pas un chemin unique obligatoire, une panne locale n'interrompt pas la communication : les paquets contournent l'obstacle."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "tcp",
+      "enonce": "Quel protocole vérifie que tous les paquets sont bien arrivés et les remet dans l'ordre ?",
+      "choix": [
+        "DNS",
+        "IP",
+        "TCP",
+        "HTML"
+      ],
+      "reponse": 2,
+      "explication": "TCP découpe, contrôle et réordonne les paquets, et redemande ceux qui manquent. IP, lui, gère l'adressage et l'acheminement."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "ip",
+      "enonce": "Quel protocole est responsable de l'adressage des machines et de l'acheminement des paquets ?",
+      "choix": [
+        "TCP",
+        "IP",
+        "HTTP",
+        "SMTP"
+      ],
+      "reponse": 1,
+      "explication": "IP (Internet Protocol) attribue les adresses et achemine les paquets. Ne pas le confondre avec TCP, qui contrôle la remise dans l'ordre."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "paquets-desordre",
+      "enonce": "Que se passe-t-il si des paquets arrivent dans le désordre ?",
+      "choix": [
+        "La machine destinataire les remet dans le bon ordre",
+        "Le message est définitivement perdu",
+        "Internet s'arrête de fonctionner",
+        "Les paquets sont automatiquement supprimés"
+      ],
+      "reponse": 0,
+      "explication": "Grâce à leur numéro, TCP remet les paquets dans l'ordre à l'arrivée. Croire que le désordre détruit le message est une idée fausse."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "nom-de-domaine",
+      "enonce": "Dans l'adresse `www.education.gouv.fr`, que désigne principalement `education.gouv.fr` ?",
+      "choix": [
+        "Un nom de domaine",
+        "Une adresse IP",
+        "Un mot de passe",
+        "Un numéro de paquet"
+      ],
+      "reponse": 0,
+      "explication": "C'est un nom de domaine, lisible par l'humain. Le DNS le traduit en adresse IP, forme numérique compréhensible par les machines."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "supports",
+      "enonce": "Quel support permet de relier les continents entre eux pour Internet ?",
+      "choix": [
+        "Uniquement des satellites",
+        "Uniquement le réseau 4G",
+        "Des fils électriques domestiques",
+        "D'immenses câbles de fibre optique sous-marins"
+      ],
+      "reponse": 3,
+      "explication": "L'essentiel du trafic intercontinental passe par des câbles sous-marins en fibre optique, et non par des satellites ou la 4G."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "ipv4-ipv6",
+      "enonce": "Pourquoi a-t-on créé le protocole IPv6 ?",
+      "choix": [
+        "Pour rendre les pages web plus jolies",
+        "Parce que le nombre d'adresses IPv4 est devenu insuffisant",
+        "Pour supprimer les mots de passe",
+        "Pour remplacer le DNS"
+      ],
+      "reponse": 1,
+      "explication": "IPv4 offre environ 4 milliards d'adresses, désormais trop peu. IPv6 fournit un nombre gigantesque d'adresses supplémentaires."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "histoire",
+      "enonce": "De quel réseau précurseur Internet est-il issu ?",
+      "choix": [
+        "Le Minitel",
+        "Le réseau téléphonique fixe uniquement",
+        "ARPANET",
+        "Le Web"
+      ],
+      "reponse": 2,
+      "explication": "Internet descend d'ARPANET (années 1970), conçu pour résister aux pannes. Le Web, lui, n'apparaît qu'à la fin des années 1980."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "protocole-role",
+      "enonce": "Une machine A envoie un gros fichier à une machine B. Dans quel ordre les protocoles interviennent-ils logiquement ?",
+      "choix": [
+        "IP découpe le fichier, puis TCP l'adresse",
+        "TCP découpe le fichier en paquets, IP les adresse et les achemine, TCP les réordonne à l'arrivée",
+        "Le DNS découpe le fichier, puis TCP l'affiche",
+        "IP réordonne les paquets, puis TCP les supprime"
+      ],
+      "reponse": 1,
+      "explication": "TCP gère le découpage, le contrôle et la remise en ordre ; IP gère l'adressage et l'acheminement. Inverser leurs rôles est l'erreur classique."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "dns-panne",
+      "enonce": "Un serveur DNS tombe en panne mais les machines connaissent déjà l'adresse IP d'un serveur. Que se passe-t-il ?",
+      "choix": [
+        "Aucune machine ne peut plus rien envoyer",
+        "Toutes les adresses IP sont effacées",
+        "On peut encore joindre ce serveur en utilisant directement son adresse IP",
+        "Internet redémarre automatiquement"
+      ],
+      "reponse": 2,
+      "explication": "Le DNS ne fait que traduire les noms en adresses IP. Si l'adresse IP est déjà connue, la communication reste possible sans lui."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "neutralite",
+      "enonce": "Que défend le principe de « neutralité du Net » ?",
+      "choix": [
+        "Réserver le réseau aux grandes entreprises",
+        "Ralentir volontairement certains sites concurrents",
+        "Interdire l'usage des câbles sous-marins",
+        "Acheminer toutes les données sans discrimination selon leur contenu ou leur émetteur"
+      ],
+      "reponse": 3,
+      "explication": "La neutralité du Net veut que les données soient transportées de façon égale, sans favoriser ni bloquer certains contenus."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "environnement",
+      "enonce": "Pourquoi dit-on qu'Internet a un impact environnemental ?",
+      "choix": [
+        "Parce que les serveurs, réseaux et centres de données consomment beaucoup d'énergie",
+        "Parce que les pages web pèsent physiquement très lourd",
+        "Parce qu'Internet ne fonctionne qu'au charbon",
+        "Parce que les adresses IP polluent l'air"
+      ],
+      "reponse": 0,
+      "explication": "Le fonctionnement et le refroidissement des serveurs et data centers demandent beaucoup d'électricité, d'où un coût environnemental réel."
+    }
+  ]
+}

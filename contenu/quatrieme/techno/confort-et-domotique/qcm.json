@@ -1,0 +1,194 @@
+{
+  "id": "4e-techno-confort-et-domotique-qcm",
+  "chapitre": "4e-techno-confort-et-domotique",
+  "titre": "QCM — Confort et domotique",
+  "voie": "generale",
+  "niveau": "quatrieme",
+  "parcours": "techno",
+  "matiere": "techno",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "domotique",
+      "enonce": "Que désigne la domotique ?",
+      "choix": ["L'automatisation et le contrôle des équipements d'un logement", "L'étude des dinosaures", "La fabrication du béton", "Le dessin d'un plan de maison à la main"],
+      "reponse": 0,
+      "explication": "La domotique regroupe les techniques qui automatisent et pilotent les équipements d'une habitation. Le préfixe « domo » vient du latin domus, la maison."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "capteur",
+      "enonce": "À quoi sert un capteur ?",
+      "choix": ["À transformer une grandeur physique en signal électrique", "À produire une action physique", "À stocker de l'électricité", "À afficher un site web"],
+      "reponse": 0,
+      "explication": "Le capteur mesure une grandeur (lumière, température, présence…) et la transforme en signal. L'erreur classique est de le confondre avec l'actionneur, qui lui produit l'action."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "actionneur",
+      "enonce": "Parmi ces éléments, lequel est un actionneur ?",
+      "choix": ["Un moteur qui ouvre un volet", "Un détecteur de mouvement", "Un capteur de température", "Une photorésistance"],
+      "reponse": 0,
+      "explication": "L'actionneur transforme le signal électrique en action physique : le moteur agit. Les trois autres sont des capteurs, qui mesurent."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "besoins",
+      "enonce": "Lequel de ces objectifs N'EST PAS un but courant de la domotique ?",
+      "choix": ["Augmenter le poids des murs", "Améliorer le confort", "Renforcer la sécurité", "Économiser l'énergie"],
+      "reponse": 0,
+      "explication": "La domotique vise le confort, la sécurité et les économies d'énergie. Le poids des murs relève de la structure du bâtiment, pas de la domotique."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "chaîne d'information",
+      "enonce": "Dans quel ordre s'enchaînent les trois éléments d'un système automatique ?",
+      "choix": ["Capteur → unité de traitement → actionneur", "Actionneur → capteur → programme", "Programme → capteur → actionneur", "Actionneur → programme → capteur"],
+      "reponse": 0,
+      "explication": "On acquiert l'information (capteur), on la traite (programme), puis on agit (actionneur). L'ordre est toujours acquérir → traiter → agir."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "détecteur de mouvement",
+      "enonce": "Un détecteur de mouvement infrarouge sert à…",
+      "choix": ["détecter la présence d'une personne", "chauffer une pièce", "mesurer l'humidité du sol", "ouvrir un portail"],
+      "reponse": 0,
+      "explication": "Ce capteur repère la présence ou le déplacement d'une personne. Chauffer et ouvrir un portail sont des actions d'actionneurs, pas de capteurs."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "carte programmable",
+      "enonce": "Qu'est-ce qui contient le programme qui décide des actions ?",
+      "choix": ["La carte programmable (microcontrôleur)", "La lampe", "Le fil électrique", "La prise de courant"],
+      "reponse": 0,
+      "explication": "La carte programmable (Arduino, micro:bit…) contient le programme, lit les capteurs et commande les actionneurs. Elle joue le rôle d'unité de traitement."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Une lampe DEL (LED) dans un système domotique est…",
+      "choix": ["un actionneur", "un capteur", "un programme", "un capteur de lumière"],
+      "reponse": 0,
+      "explication": "La lampe produit une action (éclairer) : c'est un actionneur. À ne pas confondre avec la photorésistance, qui mesure la lumière."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "condition",
+      "enonce": "Que signifie l'instruction « SI luminosité < seuil ALORS allumer la lampe » ?",
+      "choix": ["La lampe s'allume seulement quand il fait assez sombre", "La lampe s'allume seulement en plein jour", "La lampe reste toujours allumée", "La lampe s'éteint quand quelqu'un entre"],
+      "reponse": 0,
+      "explication": "La condition n'est vraie que si la luminosité mesurée est inférieure au seuil, donc quand il fait sombre. Le seuil sert de valeur de référence."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "seuil",
+      "enonce": "Qu'est-ce qu'un « seuil » dans un programme domotique ?",
+      "choix": ["Une valeur de référence choisie pour déclencher une action", "Le nom d'un capteur", "Le fil qui relie deux cartes", "La marque de l'actionneur"],
+      "reponse": 0,
+      "explication": "Le seuil est la valeur limite fixée par le concepteur (ex. 100 lux) à laquelle on compare la mesure pour décider d'agir."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "boucle fermée",
+      "enonce": "Un thermostat qui coupe le chauffage dès que 19 °C sont atteints est un système…",
+      "choix": ["en boucle fermée (asservi)", "en boucle ouverte", "sans capteur", "sans programme"],
+      "reponse": 0,
+      "explication": "Le capteur mesure la température réelle et le système se corrige : il y a un retour d'information, donc une boucle fermée (asservissement)."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "boucle ouverte",
+      "enonce": "Un arrosage qui se déclenche chaque jour à 20 h, même s'il a plu, fonctionne…",
+      "choix": ["en boucle ouverte", "en boucle fermée", "avec un retour d'information", "avec un asservissement"],
+      "reponse": 0,
+      "explication": "Le système agit sans mesurer le résultat (l'humidité du sol) : il n'y a pas de retour d'information, c'est une boucle ouverte."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "retour d'information",
+      "enonce": "Qu'apporte le « retour d'information » dans un système asservi ?",
+      "choix": ["Une mesure du résultat qui permet au système de se corriger", "Une alimentation électrique plus forte", "Un capteur inutile", "Une connexion Internet obligatoire"],
+      "reponse": 0,
+      "explication": "Le retour d'information est la mesure du résultat obtenu (par un capteur) qui permet au programme d'ajuster la commande. Sans lui, pas de correction."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "photorésistance",
+      "enonce": "Quelle grandeur physique une photorésistance permet-elle de mesurer ?",
+      "choix": ["La luminosité", "La température", "La présence d'une personne", "L'humidité du sol"],
+      "reponse": 0,
+      "explication": "La résistance d'une photorésistance varie avec la lumière reçue : elle sert donc de capteur de luminosité."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "communication",
+      "enonce": "Par quel moyen des objets domotiques peuvent-ils communiquer SANS fil ?",
+      "choix": ["Le Wi-Fi ou le Bluetooth", "Un tuyau d'eau", "Une poutre en bois", "Une vis de fixation"],
+      "reponse": 0,
+      "explication": "Les objets connectés échangent des données par ondes radio (Wi-Fi, Bluetooth, Zigbee). Les autres réponses ne transmettent aucune information."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "IoT",
+      "enonce": "Que désigne l'« Internet des objets » (IoT) ?",
+      "choix": ["Des objets du quotidien capables d'échanger des données par un réseau", "Un moteur de recherche pour enfants", "Un type de béton connecté", "Un logiciel de dessin 3D"],
+      "reponse": 0,
+      "explication": "L'Internet des objets regroupe les objets connectés qui communiquent via un réseau. Un objet non communicant n'en fait pas partie."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "conception d'algorithme",
+      "enonce": "On veut n'allumer une lampe QUE si quelqu'un entre ET qu'il fait sombre. Quelle condition convient ?",
+      "choix": ["SI (présence) ET (luminosité < seuil)", "SI (présence) OU (luminosité < seuil)", "SI (absence) ET (luminosité > seuil)", "SI (présence) ET (luminosité > seuil)"],
+      "reponse": 0,
+      "explication": "Il faut les deux conditions à la fois : c'est un ET logique. Avec un OU, la lampe s'allumerait aussi de jour dès qu'on entre."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "diagnostic",
+      "enonce": "Un éclairage automatique reste allumé même en plein jour dès qu'on passe. Quelle est la cause la plus probable ?",
+      "choix": ["Le capteur de luminosité n'est pas pris en compte dans la condition", "Le moteur est cassé", "Il manque une prise de courant", "Le Wi-Fi est trop lent"],
+      "reponse": 0,
+      "explication": "Si la lampe s'allume à toute présence, la condition ne teste que le mouvement et ignore la luminosité : il faut ajouter « ET luminosité < seuil »."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "économie d'énergie",
+      "enonce": "Quel dispositif permet le mieux d'ÉVITER de chauffer inutilement une pièce ?",
+      "choix": ["Couper le chauffage quand un capteur détecte une fenêtre ouverte", "Laisser le chauffage à fond en permanence", "Retirer tous les capteurs", "Augmenter le seuil de température à 30 °C"],
+      "reponse": 0,
+      "explication": "Un capteur d'ouverture qui coupe le chauffage fenêtre ouverte évite de gaspiller l'énergie. Les autres choix augmentent la consommation."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "asservissement",
+      "enonce": "Pourquoi un système en boucle fermée est-il plus précis qu'un système en boucle ouverte ?",
+      "choix": ["Parce qu'il mesure le résultat et corrige la commande en conséquence", "Parce qu'il consomme plus d'électricité", "Parce qu'il n'a pas besoin de programme", "Parce qu'il fonctionne sans capteur"],
+      "reponse": 0,
+      "explication": "La boucle fermée compare en permanence le résultat obtenu à la consigne et ajuste : le retour d'information permet la correction, donc la précision."
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "id": "1nsi-architecture-et-systeme-qcm",
+  "chapitre": "1nsi-architecture-et-systeme",
+  "titre": "QCM — Architecture machine et système d'exploitation",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "von-neumann",
+      "enonce": "Quel modèle décrit l'architecture de la quasi-totalité des ordinateurs ?",
+      "choix": ["Le modèle de Turing", "Le modèle de von Neumann", "Le modèle OSI", "Le modèle client/serveur"],
+      "reponse": 1,
+      "explication": "Le modèle de von Neumann (unité de commande, UAL, mémoire, entrées-sorties) est à la base des ordinateurs actuels."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "ual",
+      "enonce": "Que fait l'unité arithmétique et logique (UAL) ?",
+      "choix": [
+        "Elle stocke les fichiers",
+        "Elle effectue les calculs et opérations logiques",
+        "Elle affiche les images",
+        "Elle gère le réseau"
+      ],
+      "reponse": 1,
+      "explication": "L'UAL (ALU) réalise les opérations arithmétiques (addition…) et logiques (ET, OU…). Le stockage relève de la mémoire."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "cpu",
+      "enonce": "Que signifie le sigle CPU ?",
+      "choix": ["Central Program Unit", "Central Processing Unit", "Control Power Unit", "Computer Personal Unit"],
+      "reponse": 1,
+      "explication": "CPU = Central Processing Unit, le processeur, formé de l'unité de commande et de l'UAL."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "os",
+      "enonce": "Lequel de ces logiciels est un système d'exploitation ?",
+      "choix": ["Firefox", "Linux", "Python", "HTML"],
+      "reponse": 1,
+      "explication": "Linux est un système d'exploitation, comme Windows ou macOS. Firefox est une application, Python un langage, HTML un langage de balisage."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "transistor",
+      "enonce": "Un transistor peut être comparé à…",
+      "choix": ["une mémoire de masse", "un minuscule interrupteur", "un écran", "un câble réseau"],
+      "reponse": 1,
+      "explication": "Un transistor est un interrupteur commandé électriquement (passant/bloqué), qui code un 1 ou un 0."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "commande",
+      "enonce": "Quelle commande liste le contenu d'un dossier sous Linux ?",
+      "choix": ["cd", "ls", "rm", "pwd"],
+      "reponse": 1,
+      "explication": "ls (list) affiche le contenu du dossier. cd change de dossier, pwd affiche le dossier courant, rm supprime."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "porte-logique",
+      "enonce": "Que vaut la sortie de la porte ET (AND) pour les entrées 1 et 0 ?",
+      "choix": ["1", "0", "2", "Indéterminé"],
+      "reponse": 1,
+      "explication": "La porte ET ne renvoie 1 que si les deux entrées valent 1. Ici 1 ET 0 = 0."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "commande",
+      "enonce": "Quelle commande affiche le dossier courant ?",
+      "choix": ["pwd", "cat", "mkdir", "ls"],
+      "reponse": 0,
+      "explication": "pwd (print working directory) affiche le chemin du dossier courant."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "memoire-programme",
+      "enonce": "Quelle est l'idée clé de la mémoire dans le modèle de von Neumann ?",
+      "choix": [
+        "Le programme et les données sont stockés dans deux mémoires séparées",
+        "Le programme et les données sont stockés dans la même mémoire",
+        "La mémoire effectue les calculs",
+        "La mémoire n'est pas nécessaire"
+      ],
+      "reponse": 1,
+      "explication": "L'apport de von Neumann est justement de stocker programme ET données dans une même mémoire."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "cycle",
+      "enonce": "Quel est l'ordre du cycle d'exécution d'une instruction ?",
+      "choix": [
+        "Exécuter, charger, décoder",
+        "Charger, décoder, exécuter",
+        "Décoder, exécuter, charger",
+        "Charger, exécuter, décoder"
+      ],
+      "reponse": 1,
+      "explication": "Le processeur charge l'instruction (fetch), la décode (decode), puis l'exécute (execute), en boucle."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "processus",
+      "enonce": "Qu'est-ce qu'un processus ?",
+      "choix": [
+        "Un fichier stocké sur le disque",
+        "Un programme en cours d'exécution",
+        "Une adresse IP",
+        "Une porte logique"
+      ],
+      "reponse": 1,
+      "explication": "Un processus est un programme en cours d'exécution, géré par l'OS. Un programme au repos n'est qu'un fichier sur le disque."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "os-role",
+      "enonce": "Lequel de ces rôles n'incombe PAS au système d'exploitation ?",
+      "choix": [
+        "Gérer les processus",
+        "Gérer la mémoire",
+        "Concevoir le circuit du processeur",
+        "Gérer les fichiers"
+      ],
+      "reponse": 2,
+      "explication": "L'OS gère processus, mémoire, ressources et fichiers. La conception physique du processeur relève de la fabrication du matériel, pas de l'OS."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "horloge",
+      "enonce": "Que mesure la fréquence d'horloge d'un processeur, exprimée en GHz ?",
+      "choix": [
+        "La quantité de mémoire disponible",
+        "Le nombre de cycles par seconde",
+        "La taille du disque dur",
+        "Le nombre de fichiers ouverts"
+      ],
+      "reponse": 1,
+      "explication": "La fréquence (en GHz) donne le nombre de cycles par seconde : 3 GHz ≈ 3 milliards de cycles/s. Elle ne mesure pas une capacité de stockage."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "bus",
+      "enonce": "À quoi servent les bus dans une architecture de von Neumann ?",
+      "choix": [
+        "À afficher les images",
+        "À transporter données et instructions entre les composants",
+        "À stocker les fichiers de façon permanente",
+        "À alimenter l'écran"
+      ],
+      "reponse": 1,
+      "explication": "Les bus sont les voies de communication qui font circuler données et instructions entre processeur, mémoire et entrées-sorties."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "commande",
+      "enonce": "Quelle commande crée un nouveau dossier ?",
+      "choix": ["mkdir", "cat", "ls", "cd"],
+      "reponse": 0,
+      "explication": "mkdir (make directory) crée un dossier. cat affiche un fichier, cd change de dossier."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "reseau",
+      "enonce": "Sur Internet, à quoi sert une adresse IP ?",
+      "choix": [
+        "À chiffrer les fichiers",
+        "À identifier une machine sur le réseau",
+        "À accélérer le processeur",
+        "À stocker les mots de passe"
+      ],
+      "reponse": 1,
+      "explication": "L'adresse IP identifie une machine sur le réseau pour lui adresser des paquets de données."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "porte-ou",
+      "enonce": "Pour les entrées 0 et 0, quelle porte renvoie 0, et pour 0 et 1 renvoie 1 ?",
+      "choix": ["La porte ET", "La porte OU", "La porte NON", "Aucune"],
+      "reponse": 1,
+      "explication": "La porte OU renvoie 1 dès qu'une entrée vaut 1 : 0 OU 0 = 0, mais 0 OU 1 = 1. La porte ET donnerait 0 dans les deux cas."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "programme-processus",
+      "enonce": "On lance deux fois le même éditeur de texte. Combien de programmes et de processus a-t-on ?",
+      "choix": [
+        "Deux programmes et un processus",
+        "Un programme (le même fichier) et deux processus",
+        "Deux programmes et deux processus",
+        "Un programme et un processus"
+      ],
+      "reponse": 1,
+      "explication": "Il n'y a qu'un programme (un seul fichier sur le disque) mais deux exécutions distinctes, donc deux processus gérés séparément par l'OS."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "soc",
+      "enonce": "Qu'est-ce qu'un système sur puce (SoC), courant dans les smartphones ?",
+      "choix": [
+        "Un disque dur externe",
+        "Une puce regroupant processeur, mémoire et périphériques",
+        "Un système d'exploitation open source",
+        "Un protocole réseau"
+      ],
+      "reponse": 1,
+      "explication": "Un SoC (System on Chip) intègre sur une même puce le processeur, la mémoire et des périphériques, ce qui compacte l'ensemble."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "ordonnancement",
+      "enonce": "Comment plusieurs programmes semblent-ils s'exécuter « en même temps » sur un processeur ?",
+      "choix": [
+        "Le processeur se dédouble physiquement pour chacun",
+        "L'OS répartit rapidement le temps du processeur entre les processus",
+        "Les programmes fusionnent en un seul",
+        "Chaque programme a son propre processeur physique obligatoire"
+      ],
+      "reponse": 1,
+      "explication": "L'OS attribue tour à tour de courtes tranches de temps du processeur aux différents processus (ordonnancement), donnant l'illusion de la simultanéité."
+    }
+  ]
+}

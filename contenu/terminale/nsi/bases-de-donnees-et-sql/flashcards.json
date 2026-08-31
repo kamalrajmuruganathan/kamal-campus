@@ -1,0 +1,19 @@
+{
+  "id": "tale-nsi-bases-de-donnees-et-sql-cartes",
+  "chapitre": "tale-nsi-bases-de-donnees-et-sql",
+  "titre": "Cartes — Bases de données et SQL",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Comment sont organisées les données dans une base relationnelle ?", "verso": "En tables (relations) : chaque ligne est un enregistrement (un objet), chaque colonne un attribut avec un domaine (type de valeurs)." },
+    { "recto": "Clé primaire vs clé étrangère ?", "verso": "La clé primaire identifie de façon unique et non nulle chaque ligne d'une table. La clé étrangère est un attribut qui référence la clé primaire d'une autre table, et assure l'intégrité référentielle." },
+    { "recto": "À quoi servent SELECT, FROM, WHERE, ORDER BY ?", "verso": "SELECT choisit les colonnes, FROM la table source, WHERE filtre les lignes selon une condition, ORDER BY trie le résultat (ASC croissant / DESC décroissant)." },
+    { "recto": "À quoi sert GROUP BY avec une fonction d'agrégation ?", "verso": "GROUP BY regroupe les lignes par valeur d'un attribut, et un agrégat (COUNT, AVG, SUM, MIN, MAX) calcule une valeur par groupe (ex. l'effectif de chaque classe)." },
+    { "recto": "Qu'est-ce qu'une jointure ?", "verso": "Une jointure croise deux tables reliées par une clé, en associant les lignes où clé primaire = clé étrangère (JOIN ... ON ...), pour reconstituer l'information répartie sans dupliquer les données." },
+    { "recto": "Quel est le danger d'un UPDATE ou DELETE sans WHERE ?", "verso": "La requête s'applique à toutes les lignes de la table : DELETE FROM t; vide la table, UPDATE t SET ...; modifie chaque ligne. Toujours cibler avec WHERE." }
+  ]
+}

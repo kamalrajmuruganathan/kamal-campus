@@ -1,0 +1,214 @@
+{
+  "id": "1nsi-representation-des-donnees-qcm",
+  "chapitre": "1nsi-representation-des-donnees",
+  "titre": "QCM — Représentation des données (binaire, entiers, texte)",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "bit-octet",
+      "enonce": "Combien de bits contient un octet ?",
+      "choix": ["4 bits", "8 bits", "16 bits", "1024 bits"],
+      "reponse": 1,
+      "explication": "Par définition, un octet (byte) est un groupe de 8 bits. Confondre octet et bit est l'erreur la plus classique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "conversion-binaire",
+      "enonce": "Quelle est la valeur décimale du nombre binaire 1011 ?",
+      "choix": ["7", "11", "13", "1011"],
+      "reponse": 1,
+      "explication": "1011 = 1×8 + 0×4 + 1×2 + 1×1 = 11. On additionne les puissances de 2 des bits à 1."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "capacite",
+      "enonce": "Combien de valeurs différentes peut-on coder sur 8 bits ?",
+      "choix": ["8", "128", "255", "256"],
+      "reponse": 3,
+      "explication": "Sur 8 bits on code 2^8 = 256 valeurs (de 0 à 255). L'erreur classique est de répondre 255, qui est la plus grande valeur, pas le nombre de valeurs."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "valeur-max",
+      "enonce": "Quel est le plus grand entier naturel codable sur 4 bits ?",
+      "choix": ["8", "15", "16", "4"],
+      "reponse": 1,
+      "explication": "Sur 4 bits : 2^4 = 16 valeurs, de 0 à 15. Le maximum est 2^4 − 1 = 15 (1111 en binaire)."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "hexadecimal",
+      "enonce": "En hexadécimal, que vaut le chiffre F ?",
+      "choix": ["14", "15", "16", "10"],
+      "reponse": 1,
+      "explication": "L'hexadécimal utilise 0-9 puis A=10, B=11, C=12, D=13, E=14, F=15."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "ascii",
+      "enonce": "En Python, que renvoie ord('A') ?",
+      "choix": ["1", "65", "97", "'A'"],
+      "reponse": 1,
+      "explication": "Le code ASCII de 'A' est 65. ord donne le code d'un caractère ; celui de 'a' (minuscule) est 97."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "booleen",
+      "enonce": "Combien de valeurs différentes un booléen peut-il prendre ?",
+      "choix": ["1", "2", "8", "256"],
+      "reponse": 1,
+      "explication": "Un booléen ne prend que deux valeurs : True (1) ou False (0)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "texte-machine",
+      "enonce": "Pourquoi un ordinateur a-t-il besoin d'une table de codage pour le texte ?",
+      "choix": [
+        "Parce qu'il stocke des lettres directement",
+        "Parce qu'il ne stocke que des nombres binaires et doit associer un nombre à chaque caractère",
+        "Parce que le clavier n'a pas assez de touches",
+        "Parce que les langues sont trop nombreuses"
+      ],
+      "reponse": 1,
+      "explication": "La machine ne manipule que des 0 et des 1 : une table (ASCII, Unicode) associe un entier à chaque caractère."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "conversion-decimal",
+      "enonce": "Quelle est l'écriture binaire de 13 ?",
+      "choix": ["1011", "1101", "1110", "10011"],
+      "reponse": 1,
+      "explication": "Divisions successives par 2 : restes 1,0,1,1 lus de bas en haut → 1101. Vérification : 8+4+0+1 = 13."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "hexadecimal",
+      "enonce": "Combien de bits code exactement un chiffre hexadécimal ?",
+      "choix": ["2 bits", "3 bits", "4 bits", "8 bits"],
+      "reponse": 2,
+      "explication": "16 = 2^4, donc un chiffre hexa code 4 bits. Un octet (8 bits) s'écrit ainsi avec 2 chiffres hexa."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "hexadecimal",
+      "enonce": "Quelle est la valeur décimale de A2 en hexadécimal ?",
+      "choix": ["102", "122", "162", "202"],
+      "reponse": 2,
+      "explication": "A2 = 10×16 + 2 = 160 + 2 = 162. Le chiffre A vaut 10 en hexadécimal."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "float",
+      "enonce": "En Python, que renvoie l'expression 0.1 + 0.2 == 0.3 ?",
+      "choix": ["True", "False", "0.3", "Une erreur"],
+      "reponse": 1,
+      "explication": "Les float sont approchés : 0.1 + 0.2 vaut 0.30000000000000004, donc le test renvoie False. On ne teste jamais l'égalité stricte de flottants."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "ascii",
+      "enonce": "Le code ASCII de 'A' est 65. Quel est celui de 'a' ?",
+      "choix": ["66", "90", "97", "64"],
+      "reponse": 2,
+      "explication": "Les minuscules sont décalées de 32 par rapport aux majuscules : 65 + 32 = 97."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "unicode-utf8",
+      "enonce": "Quelle affirmation est correcte à propos d'Unicode et UTF-8 ?",
+      "choix": [
+        "Unicode et UTF-8 sont deux noms du même objet",
+        "Unicode attribue un numéro à chaque caractère, UTF-8 est une façon de coder ces numéros en octets",
+        "UTF-8 attribue les numéros, Unicode les code en octets",
+        "UTF-8 ne peut coder que les caractères ASCII"
+      ],
+      "reponse": 1,
+      "explication": "Unicode est le répertoire de numéros (code points) ; UTF-8 est un encodage de ces numéros en octets, compatible ASCII et utilisant 1 à 4 octets."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "capacite",
+      "enonce": "On veut coder les entiers de 0 à 1000. Combien de bits au minimum faut-il ?",
+      "choix": ["8 bits", "9 bits", "10 bits", "11 bits"],
+      "reponse": 2,
+      "explication": "2^9 = 512 (insuffisant), 2^10 = 1024 ≥ 1001 valeurs nécessaires. Il faut donc 10 bits."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "overflow",
+      "enonce": "Sur 8 bits non signés, on ajoute 1 à la valeur 255. Que se passe-t-il ?",
+      "choix": [
+        "On obtient 256",
+        "Il y a dépassement de capacité, le résultat repasse à 0",
+        "Le nombre de bits augmente automatiquement",
+        "Le programme s'arrête toujours"
+      ],
+      "reponse": 1,
+      "explication": "255 est le maximum sur 8 bits ; 255+1 provoque un dépassement de capacité (overflow) et le résultat repasse à 0."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "complement-a-deux",
+      "enonce": "Sur 8 bits, quelle est l'écriture de −5 en complément à deux ?",
+      "choix": ["1000 0101", "1111 1010", "1111 1011", "0000 1011"],
+      "reponse": 2,
+      "explication": "5 = 0000 0101 ; on inverse les bits → 1111 1010 ; on ajoute 1 → 1111 1011. Le bit de poids fort à 1 indique un nombre négatif."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "complement-a-deux",
+      "enonce": "Quel est l'intervalle des entiers représentables sur 8 bits en complément à deux ?",
+      "choix": ["0 à 255", "−127 à +128", "−128 à +127", "−255 à +255"],
+      "reponse": 2,
+      "explication": "En complément à deux sur 8 bits, un bit sert au signe : on couvre −128 à +127, soit toujours 256 valeurs."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "conversion",
+      "enonce": "Quelle est l'écriture binaire de l'octet dont la valeur hexadécimale est C ? (sur 4 bits)",
+      "choix": ["1010", "1100", "1110", "1001"],
+      "reponse": 1,
+      "explication": "C vaut 12 = 8 + 4 = 1100 en binaire. Chaque chiffre hexa correspond directement à 4 bits."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "float",
+      "enonce": "Pourquoi certains décimaux simples comme 0.1 ne sont-ils pas codés exactement en machine ?",
+      "choix": [
+        "Parce que Python contient un bug",
+        "Parce que la représentation flottante est binaire et sur un nombre fini de bits, ce qui rend 0.1 non exact",
+        "Parce que 0.1 est un nombre irrationnel",
+        "Parce que le processeur arrondit toujours au centième"
+      ],
+      "reponse": 1,
+      "explication": "0.1 n'a pas d'écriture binaire finie ; codé sur un nombre fini de bits (float), il est seulement approché. 0.1 n'est pourtant pas irrationnel : c'est bien la contrainte binaire finie qui est en cause."
+    }
+  ]
+}

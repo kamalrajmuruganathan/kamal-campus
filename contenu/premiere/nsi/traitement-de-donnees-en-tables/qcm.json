@@ -1,0 +1,259 @@
+{
+  "id": "1nsi-traitement-de-donnees-en-tables-qcm",
+  "chapitre": "1nsi-traitement-de-donnees-en-tables",
+  "titre": "QCM — Traitement de données en tables",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "table",
+      "enonce": "En NSI, comment représente-t-on couramment une table en Python ?",
+      "choix": [
+        "Par une chaîne de caractères",
+        "Par une liste de dictionnaires",
+        "Par un seul nombre entier",
+        "Par un tuple de deux éléments"
+      ],
+      "reponse": 1,
+      "explication": "Une table est une liste de dictionnaires : chaque dictionnaire est une ligne, les clés sont les descripteurs (colonnes)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Dans une table, une ligne correspond à…",
+      "choix": ["un descripteur", "un enregistrement", "un séparateur", "un attribut"],
+      "reponse": 1,
+      "explication": "Une ligne est un enregistrement. Les colonnes s'appellent descripteurs ou attributs."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "csv",
+      "enonce": "Que signifie le format CSV ?",
+      "choix": [
+        "Code Source Vérifié",
+        "Comma Separated Values (valeurs séparées par un séparateur)",
+        "Central System Values",
+        "Compressed Storage Version"
+      ],
+      "reponse": 1,
+      "explication": "CSV = Comma Separated Values : un fichier texte où les champs sont séparés par un séparateur (souvent virgule ou point-virgule)."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "csv",
+      "enonce": "Un fichier CSV est avant tout…",
+      "choix": [
+        "un fichier image",
+        "un fichier texte",
+        "un fichier binaire compressé",
+        "un fichier exécutable"
+      ],
+      "reponse": 1,
+      "explication": "Le CSV est un simple fichier texte, lisible par tout tableur ou langage, sans mise en forme."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "descripteur",
+      "enonce": "Dans une table, les descripteurs (colonnes) doivent avoir des noms…",
+      "choix": ["identiques", "uniques", "numériques", "en majuscules"],
+      "reponse": 1,
+      "explication": "Chaque descripteur porte un nom unique dans la table, sinon on ne saurait plus distinguer les colonnes."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "en-tete",
+      "enonce": "Que contient généralement la première ligne d'un fichier CSV ?",
+      "choix": [
+        "La dernière donnée",
+        "Le nom des colonnes (l'en-tête)",
+        "Un mot de passe",
+        "Le nombre de lignes"
+      ],
+      "reponse": 1,
+      "explication": "La première ligne est souvent l'en-tête : elle donne le nom des colonnes (descripteurs)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "acces",
+      "enonce": "Soit ligne = {\"nom\": \"Diallo\", \"age\": 16}. Comment obtenir le nom ?",
+      "choix": ["ligne[0]", "ligne[\"nom\"]", "ligne.nom", "ligne(nom)"],
+      "reponse": 1,
+      "explication": "Une ligne étant un dictionnaire, on accède par la clé : ligne[\"nom\"]."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "selection",
+      "enonce": "Filtrer une table, c'est…",
+      "choix": [
+        "changer l'ordre des colonnes",
+        "ne garder que les lignes vérifiant une condition",
+        "supprimer le fichier",
+        "convertir en image"
+      ],
+      "reponse": 1,
+      "explication": "Filtrer (sélectionner) consiste à ne conserver que les enregistrements satisfaisant une condition."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "csv-type",
+      "enonce": "De quel type sont les valeurs lues depuis un fichier CSV avec csv.DictReader ?",
+      "choix": ["Des entiers", "Des chaînes de caractères", "Des flottants", "Des booléens"],
+      "reponse": 1,
+      "explication": "Toutes les valeurs lues d'un CSV sont des chaînes. Pour calculer, il faut convertir avec int() ou float()."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "comparaison-chaine",
+      "enonce": "En Python, que vaut l'expression \"9\" > \"18\" (comparaison de chaînes) ?",
+      "choix": ["True", "False", "9", "Une erreur"],
+      "reponse": 0,
+      "explication": "Comparées comme des chaînes, le caractère '9' vient après '1' : \"9\" > \"18\" est True, alors que 9 < 18. D'où l'importance de convertir en int avant de comparer des nombres."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "selection",
+      "enonce": "Quelle expression garde les lignes dont la ville est 'Lyon' ?",
+      "choix": [
+        "[l for l in table if l[\"ville\"] == \"Lyon\"]",
+        "[l for l in table if ville == Lyon]",
+        "table[\"ville\" == \"Lyon\"]",
+        "sorted(table, key=\"Lyon\")"
+      ],
+      "reponse": 0,
+      "explication": "On parcourt la table et on garde les lignes vérifiant l[\"ville\"] == \"Lyon\" dans une compréhension de liste."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "tri",
+      "enonce": "Quelle fonction Python trie une table selon un descripteur sans modifier l'originale ?",
+      "choix": ["table.sort()", "sorted(table, key=...)", "order(table)", "filter(table)"],
+      "reponse": 1,
+      "explication": "sorted(table, key=...) renvoie une nouvelle liste triée. La méthode .sort() modifierait la liste en place."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "tri-cle",
+      "enonce": "Que fait sorted(table, key=lambda l: int(l[\"age\"])) ?",
+      "choix": [
+        "Trie les lignes par âge croissant",
+        "Trie les lignes par nom",
+        "Supprime la colonne âge",
+        "Additionne les âges"
+      ],
+      "reponse": 0,
+      "explication": "La clé de tri int(l[\"age\"]) compare les lignes selon l'âge (converti en entier), par ordre croissant par défaut."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "tri-decroissant",
+      "enonce": "Quel argument de sorted permet un tri décroissant ?",
+      "choix": ["desc=True", "reverse=True", "down=True", "order='desc'"],
+      "reponse": 1,
+      "explication": "reverse=True inverse l'ordre : sorted(table, key=..., reverse=True) trie du plus grand au plus petit."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "conversion",
+      "enonce": "Pour calculer l'âge moyen à partir d'une table lue en CSV, il faut d'abord…",
+      "choix": [
+        "trier la table",
+        "convertir les âges en entiers avec int()",
+        "supprimer l'en-tête",
+        "fusionner deux tables"
+      ],
+      "reponse": 1,
+      "explication": "Les âges étant des chaînes, on les convertit en int() avant toute opération arithmétique."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "structure",
+      "enonce": "Soit table une liste de dictionnaires. Que représente table[0] ?",
+      "choix": [
+        "Le nom de la première colonne",
+        "Le premier enregistrement (première ligne)",
+        "Le nombre de lignes",
+        "Le séparateur"
+      ],
+      "reponse": 1,
+      "explication": "table[0] est le premier élément de la liste, donc le premier enregistrement (première ligne de données)."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "fusion",
+      "enonce": "Fusionner deux tables nécessite le plus souvent…",
+      "choix": [
+        "qu'elles aient exactement le même nombre de lignes",
+        "qu'elles partagent un descripteur commun servant à relier les lignes",
+        "qu'elles soient triées à l'identique",
+        "qu'elles soient dans le même fichier"
+      ],
+      "reponse": 1,
+      "explication": "On fusionne en s'appuyant sur un descripteur commun (une clé de liaison) présent dans les deux tables pour associer les lignes correspondantes."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "tri-effet",
+      "enonce": "Après par_age = sorted(table, key=lambda l: int(l[\"age\"])), que devient table ?",
+      "choix": [
+        "table est triée par âge",
+        "table est inchangée : sorted renvoie une nouvelle liste",
+        "table est vidée",
+        "table est convertie en dictionnaire"
+      ],
+      "reponse": 1,
+      "explication": "sorted ne modifie pas son argument : table reste dans son ordre initial, seule par_age est triée."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "csv-separateur",
+      "enonce": "Un fichier européen utilise ';' comme séparateur car la virgule sert de décimale. Que faut-il préciser à la lecture ?",
+      "choix": [
+        "Le nombre de colonnes",
+        "Le séparateur (delimiter) utilisé",
+        "La couleur du texte",
+        "Rien, Python devine toujours"
+      ],
+      "reponse": 1,
+      "explication": "Il faut indiquer le bon séparateur (delimiter=';') sinon chaque ligne est lue comme un seul champ. Python ne le devine pas systématiquement."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "selection-composee",
+      "enonce": "Quelle expression garde les élèves de Lyon âgés d'au moins 17 ans ?",
+      "choix": [
+        "[l for l in table if l[\"ville\"]==\"Lyon\" and int(l[\"age\"])>=17]",
+        "[l for l in table if l[\"ville\"]==\"Lyon\" or l[\"age\"]>=17]",
+        "[l for l in table if l[\"ville\"]==\"Lyon\" and l[\"age\"]>=17]",
+        "[l for l in table if \"Lyon\" >= 17]"
+      ],
+      "reponse": 0,
+      "explication": "Il faut combiner les deux conditions avec and, et convertir l'âge en entier (int(l[\"age\"])>=17), sinon on compare une chaîne à un nombre."
+    }
+  ]
+}

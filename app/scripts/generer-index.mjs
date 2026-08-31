@@ -67,6 +67,9 @@ const LIBELLES_PARCOURS = {
   'tronc-commun': 'Tronc commun',
   sciences: 'Sciences',
   svt: 'SVT',
+  techno: 'Technologie',
+  snt: 'SNT',
+  nsi: 'NSI',
 };
 
 const LIBELLES_MATIERE = {
@@ -74,6 +77,9 @@ const LIBELLES_MATIERE = {
   'physique-chimie': 'Physique-chimie',
   sciences: 'Sciences',
   svt: 'SVT',
+  techno: 'Technologie',
+  snt: 'SNT',
+  nsi: 'NSI',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────

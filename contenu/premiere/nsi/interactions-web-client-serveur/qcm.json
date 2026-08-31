@@ -1,0 +1,259 @@
+{
+  "id": "1nsi-interactions-web-client-serveur-qcm",
+  "chapitre": "1nsi-interactions-web-client-serveur",
+  "titre": "QCM — Interactions Web : client et serveur",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "client-serveur",
+      "enonce": "Sur le Web, quel logiciel joue le rôle de client ?",
+      "choix": ["Le serveur", "Le navigateur", "La base de données", "Le routeur"],
+      "reponse": 1,
+      "explication": "Le navigateur (Chrome, Firefox…) est le client : il envoie les requêtes. Le serveur héberge le site et répond."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "http",
+      "enonce": "Quel protocole régit le dialogue entre navigateur et serveur Web ?",
+      "choix": ["HTTP", "SMTP", "FTP", "USB"],
+      "reponse": 0,
+      "explication": "HTTP (HyperText Transfer Protocol) organise les requêtes et réponses du Web ; sa version chiffrée est HTTPS."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "html",
+      "enonce": "À quoi sert le HTML dans une page Web ?",
+      "choix": [
+        "À définir les couleurs et polices",
+        "À structurer le contenu (titres, paragraphes, liens)",
+        "À rendre la page interactive",
+        "À stocker les mots de passe"
+      ],
+      "reponse": 1,
+      "explication": "Le HTML décrit la structure et le contenu à l'aide de balises. Les couleurs relèvent du CSS, l'interactivité du JavaScript."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "css",
+      "enonce": "Quel langage gère la présentation (couleurs, mise en page) d'une page ?",
+      "choix": ["HTML", "CSS", "Python", "SQL"],
+      "reponse": 1,
+      "explication": "Le CSS (Cascading Style Sheets) décrit l'aspect visuel de la page."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "javascript",
+      "enonce": "Le JavaScript d'une page Web classique s'exécute…",
+      "choix": [
+        "sur le serveur",
+        "dans le navigateur, côté client",
+        "dans la base de données",
+        "sur l'imprimante"
+      ],
+      "reponse": 1,
+      "explication": "Le JavaScript est interprété par le navigateur, côté client, pour rendre la page interactive."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "statut",
+      "enonce": "Que signifie le code de statut HTTP 404 ?",
+      "choix": ["Tout va bien", "Ressource non trouvée", "Accès interdit", "Erreur serveur"],
+      "reponse": 1,
+      "explication": "404 signale que la ressource demandée n'a pas été trouvée sur le serveur."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "url",
+      "enonce": "Que désigne une URL ?",
+      "choix": [
+        "Un langage de programmation",
+        "L'adresse d'une ressource sur le Web",
+        "Un type de fichier image",
+        "Un protocole de messagerie"
+      ],
+      "reponse": 1,
+      "explication": "L'URL (Uniform Resource Locator) est l'adresse permettant de localiser une ressource sur le Web."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "formulaire",
+      "enonce": "À quoi sert une balise <form> ?",
+      "choix": [
+        "À afficher une image",
+        "À permettre à l'utilisateur d'envoyer des données au serveur",
+        "À changer la couleur du texte",
+        "À créer un lien hypertexte"
+      ],
+      "reponse": 1,
+      "explication": "Un formulaire collecte des données saisies par l'utilisateur et les envoie au serveur pour traitement."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "get-post",
+      "enonce": "Quelle méthode HTTP place les paramètres de façon visible dans l'URL ?",
+      "choix": ["POST", "GET", "PUT", "DELETE"],
+      "reponse": 1,
+      "explication": "GET transmet les paramètres dans l'URL (ex. ?id=42). POST les place dans le corps de la requête, non visibles dans l'URL."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "get-post",
+      "enonce": "Pour envoyer un mot de passe via un formulaire, quelle méthode privilégier ?",
+      "choix": ["GET, pour aller plus vite", "POST, pour ne pas exposer le mot de passe dans l'URL", "Aucune méthode", "PATCH"],
+      "reponse": 1,
+      "explication": "POST place les données dans le corps de la requête : le mot de passe n'apparaît pas dans l'URL, contrairement à GET."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "requete-reponse",
+      "enonce": "Dans le modèle client/serveur, qui initie systématiquement l'échange ?",
+      "choix": [
+        "Le serveur envoie la page spontanément",
+        "Le client envoie une requête à laquelle le serveur répond",
+        "La base de données interroge le client",
+        "Les deux en même temps"
+      ],
+      "reponse": 1,
+      "explication": "Le client (navigateur) envoie une requête ; le serveur répond. Le serveur n'envoie rien tant qu'aucune requête n'arrive."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "url-decomposition",
+      "enonce": "Dans https://www.exemple.fr/articles?id=42, que représente 'www.exemple.fr' ?",
+      "choix": ["Le protocole", "Le nom du serveur (domaine)", "Le chemin", "Un paramètre"],
+      "reponse": 1,
+      "explication": "www.exemple.fr est le nom de domaine, c'est-à-dire l'identité du serveur. Le protocole est https, /articles le chemin, id=42 un paramètre."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "formulaire-name",
+      "enonce": "Dans un champ <input name=\"pseudo\">, à quoi sert l'attribut name ?",
+      "choix": [
+        "À afficher un texte à l'écran",
+        "À nommer la donnée transmise au serveur",
+        "À définir la couleur du champ",
+        "À rendre le champ obligatoire"
+      ],
+      "reponse": 1,
+      "explication": "L'attribut name est l'étiquette sous laquelle la valeur saisie est envoyée au serveur."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "https",
+      "enonce": "Quelle est la différence essentielle entre HTTP et HTTPS ?",
+      "choix": [
+        "HTTPS est plus lent mais identique",
+        "HTTPS chiffre les échanges (communication sécurisée)",
+        "HTTP est réservé aux images",
+        "HTTPS ne fonctionne pas avec les formulaires"
+      ],
+      "reponse": 1,
+      "explication": "HTTPS est la version chiffrée d'HTTP : les données échangées sont protégées, ce qui est indispensable pour les mots de passe et paiements."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "roles-langages",
+      "enonce": "Associez correctement : structure, présentation, interactivité.",
+      "choix": [
+        "HTML=présentation, CSS=structure, JS=interactivité",
+        "HTML=structure, CSS=présentation, JS=interactivité",
+        "HTML=interactivité, CSS=structure, JS=présentation",
+        "HTML=structure, CSS=interactivité, JS=présentation"
+      ],
+      "reponse": 1,
+      "explication": "HTML structure le contenu, CSS le met en forme, JavaScript apporte l'interactivité."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "statut",
+      "enonce": "Un code de statut 200 signifie que…",
+      "choix": [
+        "la page est introuvable",
+        "la requête a réussi et la ressource est renvoyée",
+        "l'accès est interdit",
+        "le serveur a planté"
+      ],
+      "reponse": 1,
+      "explication": "200 (OK) indique le succès : le serveur renvoie la ressource demandée."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "securite",
+      "enonce": "Pourquoi ne doit-on jamais se contenter d'une validation des données uniquement en JavaScript (côté client) ?",
+      "choix": [
+        "Parce que JavaScript est trop lent",
+        "Parce que l'utilisateur peut désactiver ou contourner ce code côté client",
+        "Parce que JavaScript ne peut pas lire un formulaire",
+        "Parce que le serveur ne reçoit pas les données"
+      ],
+      "reponse": 1,
+      "explication": "Le code client est visible et modifiable par l'utilisateur : une validation côté client est contournable. La vérification doit toujours être refaite côté serveur."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "get-idempotent",
+      "enonce": "Pour quelle action GET est-il approprié plutôt que POST ?",
+      "choix": [
+        "Supprimer un compte utilisateur",
+        "Consulter (lire) une page de résultats de recherche",
+        "Envoyer un paiement",
+        "Changer un mot de passe"
+      ],
+      "reponse": 1,
+      "explication": "GET convient à la simple consultation d'une ressource sans effet de bord. Les actions qui modifient ou envoient des données sensibles utilisent POST."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "cote-serveur",
+      "enonce": "Quelle tâche se déroule typiquement côté serveur ?",
+      "choix": [
+        "Le survol d'un bouton qui change de couleur",
+        "L'accès à une base de données pour vérifier un identifiant",
+        "L'affichage d'une alerte au clic",
+        "L'application d'une feuille de style CSS"
+      ],
+      "reponse": 1,
+      "explication": "L'accès à la base de données et le traitement des données se font côté serveur. Les effets visuels immédiats (survol, alerte, style) se font côté client."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "formulaire-method",
+      "enonce": "Dans <form action=\"/connexion\" method=\"post\">, que se passe-t-il au clic sur le bouton d'envoi ?",
+      "choix": [
+        "La page est simplement rafraîchie sans rien envoyer",
+        "Les valeurs des champs sont envoyées vers /connexion par une requête POST",
+        "Les champs sont envoyés dans l'URL en clair",
+        "Le formulaire est enregistré sur le disque du client"
+      ],
+      "reponse": 1,
+      "explication": "L'action indique l'adresse de traitement et method=post envoie les valeurs des champs (repérés par leur name) dans le corps d'une requête POST vers /connexion."
+    }
+  ]
+}

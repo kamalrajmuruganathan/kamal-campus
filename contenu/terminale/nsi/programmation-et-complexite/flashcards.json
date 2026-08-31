@@ -1,0 +1,19 @@
+{
+  "id": "tale-nsi-programmation-et-complexite-cartes",
+  "chapitre": "tale-nsi-programmation-et-complexite",
+  "titre": "Cartes — Programmation, mise au point et complexité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "cartes": [
+    { "recto": "Que signifie « spécifier » une fonction, et qu'est-ce qu'une précondition ?", "verso": "Spécifier, c'est décrire ce que la fonction prend en entrée, ce qu'elle renvoie et sous quelles conditions. Une précondition est ce que l'on suppose vrai en entrée (ex. liste non vide). On la documente dans une docstring." },
+    { "recto": "Que prouve un test réussi ? Un test échoué ?", "verso": "Un test réussi prouve seulement que ce cas passe, pas l'absence de tout bug. Un test échoué prouve, lui, la présence d'un bug. D'où l'importance des jeux de tests incluant les cas limites." },
+    { "recto": "Distingue erreur de syntaxe, d'exécution et de logique.", "verso": "Syntaxe : le programme ne s'exécute pas du tout. Exécution : il s'arrête en cours (ex. division par zéro). Logique : il s'exécute mais donne un résultat faux (la plus difficile à repérer)." },
+    { "recto": "Qu'est-ce que la complexité en temps d'un algorithme ?", "verso": "C'est la manière dont son nombre d'opérations augmente avec la taille n des données. On compte un ordre de grandeur (notation grand O), indépendamment de la machine, souvent au pire cas." },
+    { "recto": "Classe ces complexités de la plus efficace à la moins efficace : O(n), O(1), O(n²), O(log n), O(n log n).", "verso": "O(1) < O(log n) < O(n) < O(n log n) < O(n²). Constante, puis logarithmique, linéaire, quasi-linéaire, quadratique." },
+    { "recto": "Recherche séquentielle vs dichotomique : complexité et condition ?", "verso": "Séquentielle : O(n), aucune condition. Dichotomique : O(log n) mais exige un tableau trié. Pour n=1 000 000, environ 20 comparaisons au lieu d'un million." }
+  ]
+}

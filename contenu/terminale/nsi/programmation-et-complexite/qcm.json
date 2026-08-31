@@ -1,0 +1,194 @@
+{
+  "id": "tale-nsi-programmation-et-complexite-qcm",
+  "chapitre": "tale-nsi-programmation-et-complexite",
+  "titre": "QCM — Programmation, mise au point et complexité",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "specification",
+      "enonce": "Spécifier une fonction, c'est décrire :",
+      "choix": ["La couleur de l'éditeur", "Ce qu'elle prend en entrée, ce qu'elle renvoie et ses préconditions", "Le nom du programmeur", "La vitesse du processeur"],
+      "reponse": 1,
+      "explication": "La spécification décrit les entrées, les sorties et les conditions d'utilisation (préconditions) d'une fonction, avant de la coder."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "docstring",
+      "enonce": "Une docstring sert à :",
+      "choix": ["Exécuter le programme plus vite", "Documenter ce que fait une fonction", "Chiffrer le code", "Compter les lignes"],
+      "reponse": 1,
+      "explication": "La docstring documente la fonction (rôle, entrées/sorties). Elle n'a aucun effet sur la vitesse d'exécution."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "assert",
+      "enonce": "Que fait `assert` lorsqu'une condition testée est fausse ?",
+      "choix": ["Rien", "Il lève une erreur signalant le problème", "Il corrige automatiquement le bug", "Il accélère le programme"],
+      "reponse": 1,
+      "explication": "Une assertion fausse lève une erreur ; une assertion vraie ne fait rien. C'est un outil de test simple."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "bug",
+      "enonce": "Un bug est :",
+      "choix": ["Un insecte dans l'ordinateur", "Un écart entre le comportement attendu et le comportement observé", "Une fonction sans nom", "Un test qui réussit"],
+      "reponse": 1,
+      "explication": "Un bug est un écart entre ce que le programme devrait faire et ce qu'il fait réellement."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "complexite-definition",
+      "enonce": "La complexité en temps d'un algorithme évalue :",
+      "choix": ["Sa longueur en lignes de code", "Comment son nombre d'opérations augmente avec la taille des données", "La couleur de sa sortie", "Le prix de l'ordinateur"],
+      "reponse": 1,
+      "explication": "La complexité mesure la croissance du nombre d'opérations en fonction de la taille n des données, indépendamment de la machine."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "O(1)",
+      "enonce": "Accéder à l'élément tab[i] d'un tableau par son indice a une complexité :",
+      "choix": ["O(n)", "O(1) (constante)", "O(n²)", "O(log n)"],
+      "reponse": 1,
+      "explication": "L'accès direct par indice ne dépend pas de la taille du tableau : c'est du temps constant, O(1)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "recherche-sequentielle",
+      "enonce": "La recherche séquentielle (élément par élément) dans un tableau de n éléments a une complexité, au pire cas, de :",
+      "choix": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+      "reponse": 2,
+      "explication": "Au pire, on parcourt tous les éléments : la recherche séquentielle est en O(n)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "types-erreurs",
+      "enonce": "Une erreur de syntaxe :",
+      "choix": ["Fait planter le programme uniquement à la fin", "Empêche le programme de s'exécuter", "Donne un résultat faux mais s'exécute", "N'existe pas en Python"],
+      "reponse": 1,
+      "explication": "Une erreur de syntaxe empêche l'exécution du programme. Un résultat faux malgré une exécution correcte est une erreur de logique."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "cas-limites",
+      "enonce": "Pourquoi tester les « cas limites » (liste vide, premier/dernier élément…) ?",
+      "choix": ["Pour rallonger le code", "Parce que ce sont souvent les cas où se cachent les bugs", "Parce que c'est plus rapide", "Ce n'est pas utile"],
+      "reponse": 1,
+      "explication": "Les cas limites (bornes, entrées particulières) sont ceux où les erreurs se produisent le plus souvent : un bon jeu de tests les inclut."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "test-preuve",
+      "enonce": "Que peut-on conclure d'un jeu de tests entièrement réussi ?",
+      "choix": ["Le programme est certainement sans bug", "Que ces cas passent, sans garantir l'absence de tout bug", "Le programme est le plus rapide possible", "Qu'il n'y a pas de précondition"],
+      "reponse": 1,
+      "explication": "Des tests réussis montrent que les cas testés passent, mais ne prouvent pas l'absence de bugs. Un test échoué, lui, prouve un bug."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "dichotomie-complexite",
+      "enonce": "La recherche dichotomique dans un tableau trié a une complexité de :",
+      "choix": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+      "reponse": 1,
+      "explication": "En divisant la zone par deux à chaque étape, la dichotomie fait de l'ordre de log2(n) comparaisons : O(log n)."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "quadratique",
+      "enonce": "Deux boucles imbriquées parcourant chacune n éléments donnent une complexité de :",
+      "choix": ["O(n)", "O(2n)", "O(n²)", "O(log n)"],
+      "reponse": 2,
+      "explication": "Chaque tour de la boucle externe déclenche n tours de la boucle interne : n × n = n², donc O(n²)."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "pire-cas",
+      "enonce": "Raisonner « au pire cas » signifie considérer :",
+      "choix": ["Le meilleur temps possible", "Le plus grand nombre d'opérations que l'algorithme peut demander", "La moyenne des exécutions", "Le cas où les données sont vides"],
+      "reponse": 1,
+      "explication": "Le pire cas correspond à l'entrée qui maximise le nombre d'opérations. C'est la garantie la plus prudente."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "erreur-logique",
+      "enonce": "Un programme s'exécute sans planter mais renvoie un résultat faux. C'est :",
+      "choix": ["Une erreur de syntaxe", "Une erreur d'exécution", "Une erreur de logique", "Un problème de complexité"],
+      "reponse": 2,
+      "explication": "Quand rien ne plante mais que le résultat est incorrect, il s'agit d'une erreur de logique, la plus difficile à repérer."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "debug-methode",
+      "enonce": "Quelle méthode aide à localiser un bug ?",
+      "choix": ["Supprimer tous les tests", "Afficher des valeurs intermédiaires avec print pour observer l'état", "Augmenter la taille de l'écran", "Changer la couleur du code"],
+      "reponse": 1,
+      "explication": "Afficher des valeurs intermédiaires permet de suivre l'état du programme et de repérer où il dévie du comportement attendu."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "tri-fusion-complexite",
+      "enonce": "Le tri fusion a une complexité de :",
+      "choix": ["O(n²)", "O(n log n)", "O(1)", "O(log n)"],
+      "reponse": 1,
+      "explication": "Le tri fusion découpe (log n niveaux) et fusionne (n par niveau) : sa complexité est O(n log n), bien meilleure que O(n²) pour de grandes données."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "comparaison",
+      "enonce": "Pour n = 1 000 000 éléments triés, pourquoi préférer la dichotomie à la recherche séquentielle ?",
+      "choix": ["Parce qu'elle trie le tableau", "Parce qu'elle fait de l'ordre de 20 comparaisons contre un million au pire cas", "Parce qu'elle utilise moins de mémoire vive", "Parce qu'elle n'a pas besoin d'un tableau trié"],
+      "reponse": 1,
+      "explication": "O(log n) donne environ 20 comparaisons pour un million d'éléments, contre O(n) qui peut en demander un million : l'écart explose quand n grandit."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "precondition-cout",
+      "enonce": "Pourquoi la complexité O(log n) de la dichotomie ne suffit-elle pas à toujours la préférer ?",
+      "choix": ["Parce qu'elle est fausse", "Parce qu'elle exige un tableau trié, et trier a lui-même un coût", "Parce qu'elle ne fonctionne que sur 10 éléments", "Parce qu'elle consomme toute la mémoire"],
+      "reponse": 1,
+      "explication": "La dichotomie suppose un tableau trié : si le tableau ne l'est pas, le coût du tri préalable (souvent O(n log n)) doit entrer dans l'analyse."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "compter-operations",
+      "enonce": "Une boucle `for i in range(n): for j in range(n): ...` exécute le corps intérieur combien de fois ?",
+      "choix": ["n fois", "2n fois", "n² fois", "log n fois"],
+      "reponse": 2,
+      "explication": "Pour chacune des n valeurs de i, la boucle interne fait n tours : au total n × n = n² exécutions, d'où une complexité O(n²)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "complexite-vs-temps",
+      "enonce": "Pourquoi la complexité est-elle plus utile qu'un temps mesuré en secondes pour comparer deux algorithmes ?",
+      "choix": ["Parce que les secondes n'existent pas en informatique", "Parce que le temps dépend de la machine, alors que la complexité décrit la croissance intrinsèque avec n", "Parce que la complexité est toujours plus petite", "Parce qu'on ne peut pas mesurer le temps"],
+      "reponse": 1,
+      "explication": "Un temps en secondes dépend du matériel et des conditions de mesure. La complexité décrit comment le coût grandit avec n, indépendamment de la machine : elle compare les algorithmes eux-mêmes."
+    }
+  ]
+}

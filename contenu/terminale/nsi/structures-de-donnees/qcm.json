@@ -1,0 +1,194 @@
+{
+  "id": "tale-nsi-structures-de-donnees-qcm",
+  "chapitre": "tale-nsi-structures-de-donnees",
+  "titre": "QCM — Structures de données (piles, files, listes, arbres)",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "pile",
+      "enonce": "Une pile fonctionne selon quel principe ?",
+      "choix": ["FIFO (premier entré, premier sorti)", "LIFO (dernier entré, premier sorti)", "Accès aléatoire par indice", "Tri automatique des éléments"],
+      "reponse": 1,
+      "explication": "Une pile est LIFO : le dernier élément empilé est le premier dépilé. L'erreur classique est de la confondre avec la file, qui elle est FIFO."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "file",
+      "enonce": "Une file fonctionne selon quel principe ?",
+      "choix": ["LIFO (dernier entré, premier sorti)", "FIFO (premier entré, premier sorti)", "Aucun ordre garanti", "Ordre alphabétique"],
+      "reponse": 1,
+      "explication": "Une file est FIFO : on enfile d'un côté et on défile de l'autre, comme une file d'attente. La confondre avec la pile (LIFO) est l'erreur fréquente."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "pile-operations",
+      "enonce": "Quelle opération ajoute un élément au sommet d'une pile ?",
+      "choix": ["depiler", "empiler", "defiler", "enfiler"],
+      "reponse": 1,
+      "explication": "empiler ajoute au sommet ; depiler retire le sommet. enfiler/defiler concernent la file, pas la pile."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "type-abstrait",
+      "enonce": "Que définit un type abstrait de données ?",
+      "choix": ["Le code Python exact utilisé", "Les opérations disponibles et leur comportement, sans imposer l'implémentation", "La vitesse du processeur nécessaire", "La taille en octets d'un élément"],
+      "reponse": 1,
+      "explication": "Un type abstrait décrit l'interface (opérations et garanties), indépendamment de l'implémentation. Croire qu'il impose un code précis est le contresens à éviter."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "arbre-vocabulaire",
+      "enonce": "Comment appelle-t-on un nœud d'un arbre qui n'a aucun enfant ?",
+      "choix": ["La racine", "Une feuille", "Un parent", "Une branche"],
+      "reponse": 1,
+      "explication": "Un nœud sans enfant est une feuille. La racine est au contraire le nœud du sommet, sans parent."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "arbre-racine",
+      "enonce": "Combien de racines possède un arbre (non vide) ?",
+      "choix": ["Autant que de feuilles", "Exactement une", "Aucune", "Deux au maximum"],
+      "reponse": 1,
+      "explication": "Un arbre non vide possède exactement une racine : le seul nœud sans parent. Confondre racine et feuille est fréquent."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "arbre-binaire",
+      "enonce": "Dans un arbre binaire, chaque nœud a au plus combien d'enfants ?",
+      "choix": ["1", "2", "3", "Un nombre illimité"],
+      "reponse": 1,
+      "explication": "Un arbre binaire limite chaque nœud à deux enfants (gauche et droite). « Au plus deux » n'oblige pas à en avoir deux."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "pile-usage",
+      "enonce": "Quelle structure gère naturellement le bouton « précédent » (retour arrière) d'un navigateur ?",
+      "choix": ["Une file", "Une pile", "Un arbre binaire de recherche", "Une liste triée"],
+      "reponse": 1,
+      "explication": "Le dernier site visité est le premier auquel on revient : c'est un comportement LIFO, donc une pile."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "pile-sequence",
+      "enonce": "On empile 1 puis 2 puis 3 dans une pile vide, puis on dépile une fois. Quel élément est renvoyé ?",
+      "choix": ["1", "2", "3", "La pile est vide"],
+      "reponse": 2,
+      "explication": "LIFO : le dernier empilé (3) sort en premier. Répondre 1 serait le comportement d'une file, pas d'une pile."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "file-sequence",
+      "enonce": "On enfile 'a' puis 'b' puis 'c' dans une file vide, puis on défile une fois. Quel élément est renvoyé ?",
+      "choix": ["'c'", "'b'", "'a'", "La file est vide"],
+      "reponse": 2,
+      "explication": "FIFO : le premier enfilé ('a') sort en premier. Répondre 'c' confond avec le comportement d'une pile."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "implementation-file",
+      "enonce": "Pourquoi éviter `liste.pop(0)` pour implémenter le défilement d'une file avec une liste Python ?",
+      "choix": ["Cela renvoie une erreur", "Cela retire le mauvais élément", "Cela oblige à décaler tous les autres éléments (coût proportionnel à la taille)", "Cela modifie l'ordre des éléments restants"],
+      "reponse": 2,
+      "explication": "pop(0) retire bien le bon élément, mais tous les suivants doivent être décalés d'un cran, d'où un coût linéaire. On préfère collections.deque."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "liste-chainee",
+      "enonce": "Quel est l'avantage principal d'une liste chaînée par rapport à un tableau ?",
+      "choix": ["Accès immédiat au i-ᵉ élément par son indice", "Insertion ou suppression en tête très rapide", "Occupation mémoire toujours plus faible", "Tri automatique des éléments"],
+      "reponse": 1,
+      "explication": "Insérer/supprimer en tête d'une liste chaînée est immédiat. En revanche l'accès à un indice quelconque est lent : c'est le tableau qui accède directement par indice."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "arbre-profondeur",
+      "enonce": "Dans un arbre, la profondeur de la racine vaut :",
+      "choix": ["0", "1", "La hauteur de l'arbre", "Le nombre de feuilles"],
+      "reponse": 0,
+      "explication": "La profondeur se compte en nombre d'arêtes depuis la racine : la racine est à profondeur 0. La hauteur de l'arbre est la profondeur maximale."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "abr-propriete",
+      "enonce": "Dans un arbre binaire de recherche, pour un nœud donné, les clés du sous-arbre gauche sont :",
+      "choix": ["Toutes supérieures à la clé du nœud", "Toutes inférieures à la clé du nœud", "Rangées dans un ordre quelconque", "Toutes égales à la clé du nœud"],
+      "reponse": 1,
+      "explication": "Propriété de l'ABR : sous-arbre gauche < nœud < sous-arbre droit. Inverser gauche et droite est l'erreur classique."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "pile-appels",
+      "enonce": "La « pile d'appels » d'un programme sert à :",
+      "choix": ["Trier les données du programme", "Mémoriser les appels de fonctions en cours et où revenir", "Stocker les fichiers ouverts", "Accélérer l'affichage"],
+      "reponse": 1,
+      "explication": "Chaque appel de fonction empile un contexte ; quand la fonction se termine, on dépile pour revenir à l'appelant. C'est un usage direct d'une pile (LIFO)."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "file-usage",
+      "enonce": "Quel parcours de graphe s'appuie naturellement sur une file ?",
+      "choix": ["Le parcours en profondeur", "Le parcours en largeur", "Le tri par insertion", "La recherche dichotomique"],
+      "reponse": 1,
+      "explication": "Le parcours en largeur traite les sommets par ordre de découverte : c'est une file (FIFO). Le parcours en profondeur s'appuie plutôt sur une pile."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "pile-simulation",
+      "enonce": "Une pile vide reçoit : empiler(5), empiler(8), depiler(), empiler(2), depiler(), depiler(). Quelle est la suite des valeurs renvoyées par les depiler() ?",
+      "choix": ["8 puis 2 puis 5", "5 puis 8 puis 2", "8 puis 5 puis 2", "2 puis 8 puis 5"],
+      "reponse": 0,
+      "explication": "Après 5,8 le depiler rend 8 ; on empile 2 ; depiler rend 2 ; depiler rend 5. D'où 8, 2, 5. Suivre l'ordre LIFO pas à pas évite l'erreur."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "abr-hauteur",
+      "enonce": "Pourquoi la recherche dans un arbre binaire de recherche peut-elle devenir lente (proche d'un parcours complet) ?",
+      "choix": ["Quand l'arbre contient des doublons", "Quand l'arbre est déséquilibré et ressemble à une longue chaîne", "Quand l'arbre est parfaitement équilibré", "Quand la racine est une feuille"],
+      "reponse": 1,
+      "explication": "L'efficacité de l'ABR vient de sa faible hauteur. Un ABR très déséquilibré (une branche filiforme) a une hauteur proche du nombre de nœuds, et la recherche redevient linéaire."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "abr-insertion",
+      "enonce": "On insère dans un ABR vide les clés dans l'ordre 5, 3, 8, 4. Quel est le parent de la clé 4 ?",
+      "choix": ["5", "3", "8", "4 est la racine"],
+      "reponse": 1,
+      "explication": "5 devient racine ; 3 va à gauche de 5 ; 8 à droite de 5 ; 4 est > 3 donc va à droite de 3. Le parent de 4 est donc 3."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "structure-choix",
+      "enonce": "On doit gérer une collection où l'on ajoute et retire très souvent le dernier élément inséré, sans jamais accéder au milieu. Quelle structure est la plus adaptée ?",
+      "choix": ["Un arbre binaire de recherche", "Une pile", "Une file", "Une liste chaînée triée"],
+      "reponse": 1,
+      "explication": "« Retirer le dernier inséré » décrit exactement le comportement LIFO d'une pile. Choisir la structure d'après les opérations dominantes est le bon réflexe."
+    }
+  ]
+}

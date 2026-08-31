@@ -1,0 +1,194 @@
+{
+  "id": "tale-nsi-reseaux-et-routage-qcm",
+  "chapitre": "tale-nsi-reseaux-et-routage",
+  "titre": "QCM — Réseaux et routage",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "commutation-paquets",
+      "enonce": "Sur Internet, un message est transmis :",
+      "choix": ["D'un seul bloc, sans découpage", "Découpé en paquets qui voyagent indépendamment", "Uniquement par la voix", "Sans aucune adresse"],
+      "reponse": 1,
+      "explication": "La commutation de paquets découpe le message en paquets acheminés séparément. Le croire envoyé d'un bloc est l'erreur classique."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "paquet",
+      "enonce": "Un paquet contient notamment :",
+      "choix": ["Seulement les données, sans adresse", "Les données et l'adresse de destination", "La table de routage complète", "Le mot de passe de la machine"],
+      "reponse": 1,
+      "explication": "Chaque paquet porte son adresse de destination, ce qui permet de l'acheminer indépendamment des autres."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "adresse-ip",
+      "enonce": "À quoi sert une adresse IP ?",
+      "choix": ["À chiffrer les données", "À identifier une machine sur le réseau pour l'acheminement", "À accélérer le processeur", "À compter les paquets"],
+      "reponse": 1,
+      "explication": "L'adresse IP identifie une machine, comme une adresse postale : elle permet d'acheminer les paquets vers la bonne destination."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "ipv4-format",
+      "enonce": "Quelle forme a une adresse IPv4 ?",
+      "choix": ["Une suite de lettres, ex. abcd.efgh", "Quatre nombres de 0 à 255 séparés par des points, ex. 192.168.1.10", "Un seul nombre à 12 chiffres", "Une adresse e-mail"],
+      "reponse": 1,
+      "explication": "Une adresse IPv4 s'écrit en quatre nombres de 0 à 255 séparés par des points. 300.1.1.1 serait invalide car 300 dépasse 255."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "routeur",
+      "enonce": "Le rôle d'un routeur est de :",
+      "choix": ["Stocker les pages web", "Relier des réseaux et faire passer les paquets de l'un à l'autre", "Afficher les images", "Chiffrer les mots de passe"],
+      "reponse": 1,
+      "explication": "Un routeur interconnecte des réseaux et achemine les paquets vers le bon voisin suivant. Il ne stocke pas les pages web."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "saut",
+      "enonce": "Un « saut » (hop) désigne :",
+      "choix": ["Une erreur de transmission", "Le passage d'un paquet d'un routeur au routeur suivant", "Le débit d'un lien", "Le nombre de paquets perdus"],
+      "reponse": 1,
+      "explication": "Un saut est le passage d'un routeur au suivant. Le nombre de sauts mesure la longueur d'une route en routeurs traversés."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "protocole",
+      "enonce": "Un protocole est :",
+      "choix": ["Un type de câble", "Un ensemble de règles/conventions que les machines respectent pour communiquer", "Un ordinateur central", "Une adresse IP particulière"],
+      "reponse": 1,
+      "explication": "Un protocole est un ensemble de conventions communes permettant aux machines de se comprendre."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "table-routage",
+      "enonce": "Une table de routage indique, pour une destination :",
+      "choix": ["Le mot de passe à utiliser", "Vers quel voisin envoyer le paquet (le prochain saut)", "La couleur du câble", "Le nombre total d'utilisateurs"],
+      "reponse": 1,
+      "explication": "La table de routage associe à une destination le prochain saut : le voisin vers lequel transmettre le paquet."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "robustesse",
+      "enonce": "Pourquoi la commutation de paquets rend-elle le réseau robuste ?",
+      "choix": ["Parce que les paquets sont chiffrés", "Parce qu'en cas de panne d'un lien, les paquets sont réacheminés par un autre chemin", "Parce qu'il n'y a qu'un seul chemin possible", "Parce que les paquets ne contiennent pas d'adresse"],
+      "reponse": 1,
+      "explication": "Si un lien tombe, les paquets suivants empruntent une autre route : la communication n'est pas coupée. C'est la robustesse du routage."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "reseau-machine",
+      "enonce": "Une adresse IP se décompose en :",
+      "choix": ["Une partie réseau et une partie machine", "Une partie voix et une partie image", "Une clé primaire et une clé étrangère", "Un recto et un verso"],
+      "reponse": 0,
+      "explication": "L'adresse IP comporte une partie réseau (commune au réseau local) et une partie machine (propre à chaque appareil)."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "graphe-reseau",
+      "enonce": "En modélisant un réseau par un graphe, les routeurs correspondent aux :",
+      "choix": ["Arêtes", "Sommets", "Poids", "Paquets"],
+      "reponse": 1,
+      "explication": "Les routeurs sont les sommets du graphe, les liens entre eux les arêtes. Router revient à chercher un chemin dans ce graphe."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "rip",
+      "enonce": "Le protocole RIP choisit la route qui :",
+      "choix": ["A le plus grand débit", "A le moins de sauts (routeurs traversés)", "Passe par le plus de routeurs", "Est la plus chère"],
+      "reponse": 1,
+      "explication": "RIP minimise le nombre de sauts. Il ignore le débit : une route courte en sauts peut donc être lente."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "ospf",
+      "enonce": "Le protocole OSPF choisit la route de :",
+      "choix": ["Plus grand nombre de sauts", "Plus faible coût, le coût dépendant notamment du débit des liens", "Adresse IP la plus petite", "Nom de routeur le plus court"],
+      "reponse": 1,
+      "explication": "OSPF minimise un coût lié au débit : il privilégie les liens rapides, quitte à emprunter plus de sauts."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "ipv4-invalide",
+      "enonce": "Laquelle de ces adresses IPv4 est invalide ?",
+      "choix": ["10.0.0.1", "192.168.0.254", "172.16.5.9", "192.300.1.1"],
+      "reponse": 3,
+      "explication": "Chaque nombre d'une IPv4 doit être entre 0 et 255 : 300 dépasse 255, donc 192.300.1.1 est invalide."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "chemin-differents",
+      "enonce": "Deux paquets d'un même message peuvent :",
+      "choix": ["Toujours suivre exactement la même route", "Suivre des routes différentes et arriver dans le désordre", "Ne jamais arriver", "Se transformer en un seul paquet"],
+      "reponse": 1,
+      "explication": "Chaque paquet est routé indépendamment : ils peuvent emprunter des chemins différents et arriver dans le désordre, puis être réassemblés."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "role-ip",
+      "enonce": "Quel est le rôle du protocole IP ?",
+      "choix": ["Construire les tables de routage", "Adresser les machines et acheminer les paquets", "Afficher les pages web", "Compter les sauts uniquement"],
+      "reponse": 1,
+      "explication": "IP fournit les adresses et permet l'acheminement des paquets. Construire les tables de routage est le rôle de RIP/OSPF."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "rip-vs-ospf",
+      "enonce": "Un chemin A traverse 2 routeurs par des liens lents ; un chemin B traverse 4 routeurs par des liens très rapides. Que choisit chaque protocole ?",
+      "choix": ["RIP et OSPF choisissent tous deux A", "RIP choisit A (moins de sauts), OSPF peut choisir B (meilleur débit)", "RIP choisit B, OSPF choisit A", "Aucun ne choisit de route"],
+      "reponse": 1,
+      "explication": "RIP compte les sauts et prend A (2 < 4). OSPF évalue le coût selon le débit et peut préférer B, plus rapide malgré plus de sauts."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "graphe-pondere",
+      "enonce": "Pourquoi dit-on qu'OSPF revient à chercher un plus court chemin dans un graphe pondéré ?",
+      "choix": ["Parce que toutes les arêtes ont un poids de 1", "Parce que chaque lien porte un poids lié à son débit et OSPF minimise la somme des poids", "Parce qu'il n'y a pas de poids", "Parce qu'OSPF ignore les liens"],
+      "reponse": 1,
+      "explication": "OSPF affecte un coût (poids) à chaque lien selon son débit ; choisir la meilleure route revient à minimiser la somme des poids : un plus court chemin pondéré."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "rip-graphe",
+      "enonce": "En termes de graphe, comment RIP modélise-t-il le coût des liens ?",
+      "choix": ["Chaque lien a un poids proportionnel au débit", "Chaque lien (saut) compte pour un poids de 1", "Les liens n'ont aucun poids", "Le poids dépend de l'adresse IP"],
+      "reponse": 1,
+      "explication": "RIP compte les sauts : cela revient à donner un poids de 1 à chaque lien et à minimiser le nombre d'arêtes du chemin."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "roles-protocoles",
+      "enonce": "Quelle association rôle/protocole est correcte ?",
+      "choix": ["IP construit les tables de routage ; OSPF adresse les machines", "IP adresse et achemine les paquets ; RIP et OSPF construisent les tables de routage", "RIP affiche les pages web ; IP compte les sauts", "OSPF chiffre les données ; IP trie les paquets"],
+      "reponse": 1,
+      "explication": "IP se charge de l'adressage et de l'acheminement ; RIP et OSPF déterminent les routes en construisant les tables. Confondre ces rôles est l'erreur à éviter."
+    }
+  ]
+}

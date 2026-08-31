@@ -1,0 +1,194 @@
+{
+  "id": "tale-nsi-recursivite-et-diviser-pour-regner-qcm",
+  "chapitre": "tale-nsi-recursivite-et-diviser-pour-regner",
+  "titre": "QCM — Récursivité et « diviser pour régner »",
+  "voie": "generale",
+  "niveau": "terminale",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "Qu'est-ce qu'une fonction récursive ?",
+      "choix": ["Une fonction qui ne renvoie rien", "Une fonction qui s'appelle elle-même", "Une fonction sans paramètre", "Une fonction qui utilise une boucle for"],
+      "reponse": 1,
+      "explication": "Une fonction récursive s'appelle elle-même. Utiliser une boucle, c'est justement l'approche itérative, pas récursive."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "cas-de-base",
+      "enonce": "Le cas de base d'une fonction récursive est :",
+      "choix": ["Le cas le plus compliqué", "Le cas simple résolu sans nouvel appel récursif, qui arrête la récursion", "Le premier paramètre de la fonction", "Le résultat final affiché"],
+      "reponse": 1,
+      "explication": "Le cas de base se résout directement, sans se rappeler : c'est lui qui stoppe la récursion."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "sans-cas-base",
+      "enonce": "Que se passe-t-il si une fonction récursive n'a pas de cas de base atteignable ?",
+      "choix": ["Elle renvoie 0", "Elle s'appelle indéfiniment et finit par saturer la pile (RecursionError)", "Elle s'exécute plus vite", "Elle devient itérative"],
+      "reponse": 1,
+      "explication": "Sans arrêt, les appels s'empilent sans fin jusqu'au dépassement de la profondeur maximale (RecursionError)."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "diviser-pour-regner",
+      "enonce": "Le paradigme « diviser pour régner » se décompose en :",
+      "choix": ["Trier, chercher, afficher", "Diviser, régner, combiner", "Lire, écrire, fermer", "Compter, additionner, moyenner"],
+      "reponse": 1,
+      "explication": "Diviser pour régner = diviser en sous-problèmes, régner (résoudre chacun), combiner les résultats."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "structure-liee",
+      "enonce": "À quelle structure de données la récursivité est-elle intimement liée à l'exécution ?",
+      "choix": ["À une file", "À une pile (la pile d'appels)", "À un arbre binaire de recherche", "À une base de données"],
+      "reponse": 1,
+      "explication": "Les appels récursifs s'empilent puis se dépilent : c'est le rôle de la pile d'appels."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "dichotomie-condition",
+      "enonce": "La recherche dichotomique n'est valide que si le tableau est :",
+      "choix": ["Vide", "Trié", "De taille paire", "Composé d'entiers"],
+      "reponse": 1,
+      "explication": "La dichotomie élimine une moitié à chaque étape en s'appuyant sur l'ordre : elle exige un tableau trié. L'appliquer à un tableau non trié est l'erreur classique."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "recursif-vs-iteratif",
+      "enonce": "Récursivité et itération sont :",
+      "choix": ["Incompatibles", "Équivalentes : ce qui se fait dans un style peut se faire dans l'autre", "La récursivité est toujours plus rapide", "L'itération est réservée aux arbres"],
+      "reponse": 1,
+      "explication": "Les deux styles sont équivalents en résultat. Ni l'un ni l'autre n'est intrinsèquement plus rapide."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "tri-fusion",
+      "enonce": "Le tri fusion est un exemple de :",
+      "choix": ["Recherche séquentielle", "Algorithme « diviser pour régner »", "Parcours de graphe", "Requête SQL"],
+      "reponse": 1,
+      "explication": "Le tri fusion coupe le tableau, trie chaque moitié récursivement, puis fusionne : c'est du diviser pour régner."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "factorielle",
+      "enonce": "Avec `def f(n): return 1 if n==0 else n*f(n-1)`, que renvoie f(3) ?",
+      "choix": ["3", "6", "9", "0"],
+      "reponse": 1,
+      "explication": "f(3) = 3*f(2) = 3*2*f(1) = 3*2*1*f(0) = 3*2*1*1 = 6. C'est la factorielle de 3."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "terminaison",
+      "enonce": "Pour garantir la terminaison d'une récursion, il faut qu'à chaque appel :",
+      "choix": ["L'argument se rapproche strictement du cas de base", "L'argument reste constant", "La fonction affiche un message", "On ajoute un paramètre"],
+      "reponse": 0,
+      "explication": "Si chaque appel se rapproche du cas de base (ex. n -> n-1 vers 0), la récursion s'arrête. Un argument constant boucle indéfiniment."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "dichotomie-etapes",
+      "enonce": "À chaque étape de la recherche dichotomique, la zone de recherche est :",
+      "choix": ["Doublée", "Divisée par deux environ", "Parcourue entièrement", "Triée à nouveau"],
+      "reponse": 1,
+      "explication": "On compare au milieu et on écarte une moitié : la zone restante est divisée par deux à chaque étape, d'où la grande efficacité."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "dichotomie-milieu",
+      "enonce": "Dans une dichotomie sur tab trié, si tab[m] < cible, on poursuit la recherche :",
+      "choix": ["Dans la moitié gauche (g..m-1)", "Dans la moitié droite (m+1..d)", "Sur tout le tableau", "On s'arrête"],
+      "reponse": 1,
+      "explication": "Si l'élément du milieu est trop petit, la cible, si elle existe, est à droite : on garde m+1..d."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "cas-recursif",
+      "enonce": "Dans le cas récursif d'une fonction, on :",
+      "choix": ["Résout le problème sans se rappeler", "Se ramène à un ou plusieurs sous-problèmes plus petits et on combine", "Affiche systématiquement le résultat", "Renvoie toujours None"],
+      "reponse": 1,
+      "explication": "Le cas récursif réduit le problème à des versions plus petites de lui-même, puis combine leurs résultats. Le cas sans rappel, c'est le cas de base."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "tri-fusion-combiner",
+      "enonce": "Dans le tri fusion, en quoi consiste l'étape « combiner » ?",
+      "choix": ["Couper le tableau en deux", "Fusionner deux moitiés déjà triées en une seule liste triée", "Choisir un pivot", "Compter les éléments"],
+      "reponse": 1,
+      "explication": "Après avoir trié chaque moitié, l'étape de combinaison fusionne ces deux listes triées en une seule liste triée."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "avantage-recursivite",
+      "enonce": "Un avantage fréquent de l'écriture récursive est :",
+      "choix": ["De consommer moins de mémoire que l'itération", "D'exprimer clairement un problème lui-même défini récursivement (arbres, diviser pour régner)", "De ne jamais provoquer d'erreur", "De supprimer le besoin d'un cas de base"],
+      "reponse": 1,
+      "explication": "Quand le problème est récursif par nature (arbres, diviser pour régner), le code récursif est plus lisible. Il consomme en revanche la pile d'appels."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "somme-recursive",
+      "enonce": "`def s(n): return 0 if n==0 else n + s(n-1)`. Que calcule s(n) pour n>=0 ?",
+      "choix": ["Le produit 1*2*...*n", "La somme 0+1+2+...+n", "Le nombre n lui-même", "n au carré"],
+      "reponse": 1,
+      "explication": "s ajoute n au résultat de s(n-1), avec s(0)=0 : cela calcule la somme des entiers de 0 à n."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "profondeur-dichotomie",
+      "enonce": "Sur un tableau trié de 1000 éléments, environ combien d'étapes suffisent à une recherche dichotomique dans le pire cas ?",
+      "choix": ["1000", "500", "Une dizaine (l'ordre de log2(1000) ≈ 10)", "1"],
+      "reponse": 2,
+      "explication": "Diviser par deux à chaque étape donne un nombre d'étapes de l'ordre de log2(1000) ≈ 10, bien moins que les 1000 d'une recherche séquentielle."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "trace-recursive",
+      "enonce": "`def m(t): return t[0] if len(t)==1 else max(t[0], m(t[1:]))`. Que renvoie m([3,7,2,5]) ?",
+      "choix": ["3", "7", "5", "17"],
+      "reponse": 1,
+      "explication": "La fonction compare chaque élément au maximum du reste : elle renvoie le plus grand, soit 7. Le cas de base est la liste à un seul élément."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "diviser-vs-recursif",
+      "enonce": "Quelle affirmation est correcte ?",
+      "choix": ["« Diviser pour régner » et « récursivité » sont exactement synonymes", "« Diviser pour régner » est une méthode de conception, souvent mise en œuvre par la récursivité", "La récursivité interdit d'utiliser diviser pour régner", "Diviser pour régner ne s'applique qu'aux bases de données"],
+      "reponse": 1,
+      "explication": "Diviser pour régner est une stratégie de conception d'algorithme ; la récursivité est un mécanisme d'écriture qui la met souvent en œuvre. Les deux ne sont pas synonymes."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "cout-recursion",
+      "enonce": "Pourquoi une récursion très profonde peut-elle échouer là où une boucle réussit ?",
+      "choix": ["Parce que la boucle est toujours fausse", "Parce que chaque appel occupe la pile d'appels, qui a une profondeur maximale", "Parce que la récursion ne renvoie jamais de valeur", "Parce que Python interdit plus de deux appels de fonction"],
+      "reponse": 1,
+      "explication": "Chaque appel récursif empile un contexte ; au-delà de la profondeur maximale, Python lève RecursionError. Une boucle, elle, n'empile pas d'appels."
+    }
+  ]
+}

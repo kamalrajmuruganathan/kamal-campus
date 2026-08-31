@@ -1,0 +1,219 @@
+{
+  "id": "1nsi-types-construits-qcm",
+  "chapitre": "1nsi-types-construits",
+  "titre": "QCM — Les types construits (tuples, listes, dictionnaires)",
+  "voie": "generale",
+  "niveau": "premiere",
+  "parcours": "nsi",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "indexation",
+      "enonce": "En Python, quel est l'indice du premier élément d'une liste ?",
+      "choix": ["0", "1", "-1", "Cela dépend de la liste"],
+      "reponse": 0,
+      "explication": "L'indexation commence toujours à 0 : le premier élément est à l'indice 0. Croire qu'elle commence à 1 est l'erreur la plus fréquente."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "liste",
+      "enonce": "Comment écrit-on une liste en Python ?",
+      "choix": ["Entre parenthèses ()", "Entre crochets []", "Entre accolades {}", "Entre guillemets \"\""],
+      "reponse": 1,
+      "explication": "Une liste s'écrit entre crochets, ex. [12, 15, 9]. Les parenthèses donnent un tuple, les accolades un dictionnaire ou un ensemble."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "tuple",
+      "enonce": "Quelle est la principale propriété d'un tuple ?",
+      "choix": [
+        "Il est modifiable",
+        "Il n'est pas modifiable (immuable)",
+        "Il ne peut contenir que des nombres",
+        "Il n'a pas d'ordre"
+      ],
+      "reponse": 1,
+      "explication": "Un tuple est immuable : on ne peut pas changer ses éléments après sa création. Pour modifier, il faut une liste."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "dictionnaire",
+      "enonce": "Dans un dictionnaire, on accède à une valeur grâce à…",
+      "choix": ["son indice", "sa clé", "sa position dans le fichier", "sa longueur"],
+      "reponse": 1,
+      "explication": "Un dictionnaire associe des clés à des valeurs : l'accès se fait par la clé, ex. eleve['nom'], pas par un indice numérique."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "len",
+      "enonce": "Quelle fonction donne le nombre d'éléments d'une liste ?",
+      "choix": ["size()", "count()", "len()", "length()"],
+      "reponse": 2,
+      "explication": "len(liste) renvoie le nombre d'éléments. Les autres noms n'existent pas comme fonction Python pour cela."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "liste-mutable",
+      "enonce": "Quelle méthode ajoute un élément à la fin d'une liste ?",
+      "choix": ["ajoute()", "append()", "add()", "insert(fin)"],
+      "reponse": 1,
+      "explication": "notes.append(20) ajoute 20 en fin de liste. add() concerne les ensembles, pas les listes."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "acces",
+      "enonce": "Soit notes = [12, 15, 9, 18]. Que vaut notes[2] ?",
+      "choix": ["12", "15", "9", "18"],
+      "reponse": 2,
+      "explication": "L'indice 2 désigne le 3e élément (indices 0,1,2), soit 9."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "choix-type",
+      "enonce": "Pour représenter une fiche élève (nom, âge, classe), quel type est le plus adapté ?",
+      "choix": ["Un dictionnaire", "Un entier", "Une chaîne de caractères", "Un booléen"],
+      "reponse": 0,
+      "explication": "Le dictionnaire associe un nom (clé) à une valeur : idéal pour un enregistrement comme une fiche élève."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "tuple-immuable",
+      "enonce": "Soit point = (3, 5). Que produit l'instruction point[0] = 10 ?",
+      "choix": [
+        "point devient (10, 5)",
+        "Une erreur TypeError car le tuple est immuable",
+        "point devient (10,)",
+        "Rien, l'instruction est ignorée"
+      ],
+      "reponse": 1,
+      "explication": "Un tuple ne peut pas être modifié : la tentative d'affectation lève une TypeError."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "dernier-indice",
+      "enonce": "Une liste contient 4 éléments. Quel est l'indice du dernier ?",
+      "choix": ["4", "3", "5", "-4"],
+      "reponse": 1,
+      "explication": "Avec 4 éléments, les indices vont de 0 à 3 : le dernier indice vaut len − 1 = 3."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "affectation-multiple",
+      "enonce": "Après x, y = (3, 5), que valent x et y ?",
+      "choix": ["x=(3,5), y=None", "x=3, y=5", "x=5, y=3", "Une erreur"],
+      "reponse": 1,
+      "explication": "L'affectation multiple (déballage) distribue les valeurs dans l'ordre : x reçoit 3, y reçoit 5."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "dictionnaire-ajout",
+      "enonce": "Soit eleve = {\"nom\": \"Diallo\"}. Que fait eleve[\"ville\"] = \"Lyon\" ?",
+      "choix": [
+        "Provoque une erreur car la clé n'existe pas",
+        "Ajoute une nouvelle clé 'ville' avec la valeur 'Lyon'",
+        "Remplace la clé 'nom'",
+        "Ne fait rien"
+      ],
+      "reponse": 1,
+      "explication": "Affecter une clé absente l'ajoute au dictionnaire. Si la clé existait déjà, sa valeur serait remplacée."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "compréhension",
+      "enonce": "Que contient la liste [n * n for n in range(4)] ?",
+      "choix": ["[0, 1, 2, 3]", "[1, 4, 9, 16]", "[0, 1, 4, 9]", "[0, 2, 4, 6]"],
+      "reponse": 2,
+      "explication": "range(4) donne 0,1,2,3 ; leurs carrés sont 0,1,4,9. Attention, range s'arrête avant 4."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "matrice",
+      "enonce": "Soit m = [[1, 2, 3], [4, 5, 6]]. Que vaut m[1][2] ?",
+      "choix": ["2", "3", "5", "6"],
+      "reponse": 3,
+      "explication": "m[1] est la deuxième liste [4,5,6] ; son indice 2 vaut 6."
+    },
+    {
+      "id": 15,
+      "difficulte": "moyen",
+      "notion": "parcours",
+      "enonce": "Que parcourt directement la boucle for cle in eleve: sur un dictionnaire ?",
+      "choix": ["Les valeurs", "Les clés", "Les couples (clé, valeur)", "Rien"],
+      "reponse": 1,
+      "explication": "Itérer sur un dictionnaire parcourt ses clés. Pour les couples, on utilise eleve.items()."
+    },
+    {
+      "id": 16,
+      "difficulte": "moyen",
+      "notion": "choix-type",
+      "enonce": "Pour stocker des coordonnées (x, y) qui ne changeront pas, quel type privilégier ?",
+      "choix": ["Un dictionnaire", "Un tuple", "Une chaîne", "Un booléen"],
+      "reponse": 1,
+      "explication": "Un tuple, immuable et ordonné, convient bien à un couple de valeurs fixes comme des coordonnées."
+    },
+    {
+      "id": 17,
+      "difficulte": "difficile",
+      "notion": "cles-uniques",
+      "enonce": "Que vaut d après d = {\"a\": 1, \"b\": 2, \"a\": 3} ?",
+      "choix": [
+        "{'a': 1, 'b': 2, 'a': 3}",
+        "{'a': 3, 'b': 2}",
+        "{'a': 1, 'b': 2}",
+        "Une erreur : clé en double"
+      ],
+      "reponse": 1,
+      "explication": "Les clés sont uniques : la seconde valeur associée à 'a' écrase la première. On obtient {'a': 3, 'b': 2}."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "compréhension-filtre",
+      "enonce": "Que contient [n for n in range(10) if n % 2 == 0] ?",
+      "choix": ["[1, 3, 5, 7, 9]", "[0, 2, 4, 6, 8]", "[0, 2, 4, 6, 8, 10]", "[2, 4, 6, 8]"],
+      "reponse": 1,
+      "explication": "On garde les n de 0 à 9 dont le reste par 2 est nul : 0,2,4,6,8. range(10) exclut 10."
+    },
+    {
+      "id": 19,
+      "difficulte": "difficile",
+      "notion": "cle-immuable",
+      "enonce": "Laquelle de ces valeurs NE peut PAS servir de clé de dictionnaire ?",
+      "choix": ["Une chaîne de caractères", "Un entier", "Un tuple de nombres", "Une liste"],
+      "reponse": 3,
+      "explication": "Une clé doit être immuable. Chaîne, entier et tuple le sont ; une liste étant modifiable, elle ne peut pas être une clé (TypeError)."
+    },
+    {
+      "id": 20,
+      "difficulte": "difficile",
+      "notion": "items",
+      "enonce": "Quelle boucle affiche à la fois les clés et les valeurs d'un dictionnaire d ?",
+      "choix": [
+        "for k in d: print(k)",
+        "for v in d.values(): print(v)",
+        "for k, v in d.items(): print(k, v)",
+        "for k, v in d: print(k, v)"
+      ],
+      "reponse": 2,
+      "explication": "d.items() fournit les couples (clé, valeur), que l'on déballe en k, v. Itérer directement sur d ne donne que les clés."
+    }
+  ]
+}
