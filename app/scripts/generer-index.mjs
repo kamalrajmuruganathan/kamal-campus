@@ -71,6 +71,7 @@ const LIBELLES_PARCOURS = {
   techno: 'Technologie',
   snt: 'SNT',
   nsi: 'NSI',
+  anglais: 'Anglais',
 };
 
 const LIBELLES_MATIERE = {
@@ -83,6 +84,7 @@ const LIBELLES_MATIERE = {
   techno: 'Technologie',
   snt: 'SNT',
   nsi: 'NSI',
+  anglais: 'Anglais',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────

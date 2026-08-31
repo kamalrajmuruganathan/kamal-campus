@@ -11,7 +11,7 @@
     --good:#1a7f4b; --warn:#b07908; --crit:#c02a2a;
     /* matières */
     --m-maths:#2f6fed; --m-pc:#7d47cf; --m-svt:#1f8a52; --m-sci:#0f9488;
-    --m-techno:#cf7f1e; --m-snt:#d9583a; --m-nsi:#a97b1b; --m-si:#b5651d; --m-es:#b03e83;
+    --m-techno:#cf7f1e; --m-snt:#d9583a; --m-nsi:#a97b1b; --m-si:#b5651d; --m-es:#b03e83; --m-anglais:#b8336a;
     --shadow:0 1px 2px rgba(16,35,60,.06), 0 8px 24px rgba(16,35,60,.06);
     --radius:16px;
   }
@@ -21,7 +21,7 @@
     --accent:#6aa8ff; --accent-ink:#0b1118;
     --good:#5fd398; --warn:#e8b93b; --crit:#ff8080;
     --m-maths:#5b93ff; --m-pc:#b48cf0; --m-svt:#54c98c; --m-sci:#2bc0b4;
-    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b; --m-si:#e0954a; --m-es:#e17ab5;
+    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b; --m-si:#e0954a; --m-es:#e17ab5; --m-anglais:#f087b3;
     --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
   }}
   :root[data-theme="dark"]{
@@ -30,7 +30,7 @@
     --accent:#6aa8ff; --accent-ink:#0b1118;
     --good:#5fd398; --warn:#e8b93b; --crit:#ff8080;
     --m-maths:#5b93ff; --m-pc:#b48cf0; --m-svt:#54c98c; --m-sci:#2bc0b4;
-    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b; --m-si:#e0954a; --m-es:#e17ab5;
+    --m-techno:#e6a24e; --m-snt:#f0846a; --m-nsi:#d7b24b; --m-si:#e0954a; --m-es:#e17ab5; --m-anglais:#f087b3;
     --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
   }
 
@@ -256,9 +256,9 @@
 
 <div class="wrap">
   <div class="kpis">
-    <div class="kpi fade"><div class="big num">383</div><div class="cap">chapitres</div></div>
-    <div class="kpi k2 fade" style="animation-delay:.05s"><div class="big num">7 660</div><div class="cap">questions de QCM</div></div>
-    <div class="kpi k3 fade" style="animation-delay:.1s"><div class="big num">9</div><div class="cap">matières</div></div>
+    <div class="kpi fade"><div class="big num">418</div><div class="cap">chapitres</div></div>
+    <div class="kpi k2 fade" style="animation-delay:.05s"><div class="big num">8 360</div><div class="cap">questions de QCM</div></div>
+    <div class="kpi k3 fade" style="animation-delay:.1s"><div class="big num">10</div><div class="cap">matières</div></div>
     <div class="kpi k4 fade" style="animation-delay:.15s"><div class="big num">9</div><div class="cap">langues d'interface</div></div>
   </div>
 </div>
@@ -266,10 +266,10 @@
 <section class="wrap" id="chiffres">
   <div class="sec-head"><h2>En chiffres</h2><span class="hint">chaque chapitre = cours + exercices + QCM + cartes</span></div>
   <div class="chips">
-    <div class="chip"><div class="n num">383</div><div class="l">chapitres</div></div>
-    <div class="chip"><div class="n num">7 660</div><div class="l">questions QCM</div></div>
-    <div class="chip"><div class="n num">383</div><div class="l">jeux d'exercices corrigés</div></div>
-    <div class="chip"><div class="n num">3 376</div><div class="l">cartes de révision</div></div>
+    <div class="chip"><div class="n num">418</div><div class="l">chapitres</div></div>
+    <div class="chip"><div class="n num">8 360</div><div class="l">questions QCM</div></div>
+    <div class="chip"><div class="n num">418</div><div class="l">jeux d'exercices corrigés</div></div>
+    <div class="chip"><div class="n num">3 796</div><div class="l">cartes de révision</div></div>
     <div class="chip"><div class="n num">70</div><div class="l">sujets type bac/brevet</div></div>
     <div class="chip"><div class="n num">144</div><div class="l">bac blancs & évaluations</div></div>
     <div class="chip"><div class="n num">14</div><div class="l">formulaires</div></div>
@@ -278,7 +278,7 @@
 </section>
 
 <section class="wrap" id="matieres">
-  <div class="sec-head"><h2>Répartition par matière</h2><span class="hint">383 chapitres · 9 matières</span></div>
+  <div class="sec-head"><h2>Répartition par matière</h2><span class="hint">418 chapitres · 10 matières</span></div>
   <div class="bars" id="bars"></div>
 </section>
 
@@ -473,6 +473,7 @@
     <div class="fcard"><div class="ic">🎯</div><h3>Révision ciblée</h3><p>Recherche, favoris et parcours perso qui met en avant tes chapitres les plus fragiles.</p></div>
     <div class="fcard"><div class="ic">🌍</div><h3>9 langues</h3><p>Interface en FR, EN, ES, IT, PT, DE, ZH, AR, TA — choisie à l'onboarding, modifiable à tout moment.</p></div>
     <div class="fcard"><div class="ic">📎</div><h3>Annales officielles</h3><p>Une rubrique de liens vers les vrais sujets, gratuits et officiels (éduscol, APMEP, Labolycee…) — l'appli n'en recopie aucun, elle y renvoie.</p></div>
+    <div class="fcard"><div class="ic">🇬🇧</div><h3>Anglais (6ᵉ → Terminale)</h3><p>Première matière littéraire : 35 chapitres de grammaire (temps, modaux, passif, conditionnels…), chacun avec cours en français, exemples anglais, QCM, exercices corrigés et cartes.</p></div>
     <div class="fcard"><div class="ic">🗓️</div><h3>Planning d'étude</h3><p>Dès l'installation, l'élève compose son emploi du temps (ex. lundi 17 h maths, mardi 13 h physique) et reçoit une notification à l'heure, chaque semaine — même hors ligne.</p></div>
     <div class="fcard"><div class="ic">🌗</div><h3>Thème au choix</h3><p>Clair, sombre ou « système » : l'apparence suit le réglage du téléphone ou le choix de l'élève, sur tous les écrans.</p></div>
   </div>
@@ -484,7 +485,7 @@
     <div class="qitem"><div class="qic">✓</div><div><b class="num">350</b><span>tests automatiques au vert</span></div></div>
     <div class="qitem"><div class="qic">✓</div><div><b>Hors ligne</b><span>Expo / React Native, LaTeX, thème clair/sombre</span></div></div>
     <div class="qitem"><div class="qic">✓</div><div><b>Contenu validé</b><span>format &amp; cohérence, contrôle automatique</span></div></div>
-    <div class="qitem"><div class="qic">✓</div><div><b class="num">63</b><span>commits prêts à pousser sur GitHub</span></div></div>
+    <div class="qitem"><div class="qic">✓</div><div><b class="num">64</b><span>commits prêts à pousser sur GitHub</span></div></div>
   </div>
 </section>
 
@@ -502,6 +503,7 @@
     <div class="item"><span class="tag">Numérique</span><h4>Technologie, SNT &amp; spécialité NSI</h4><p>Du collège au lycée, avec code Python/SQL dans les exercices.</p></div>
     <div class="item g"><span class="tag">Lycée général</span><h4>Sciences de l'ingénieur &amp; Enseignement scientifique</h4><p>Spécialité SI et tronc commun ES, bouclés (exercices + bacs blancs).</p></div>
     <div class="item o"><span class="tag">Habitudes</span><h4>Planning d'étude &amp; thème clair/sombre</h4><p>Un emploi du temps de révision qui envoie des rappels chaque semaine, et une apparence au choix de l'élève.</p></div>
+    <div class="item v"><span class="tag">Langues vivantes</span><h4>Ouverture de l'anglais, 6ᵉ → Terminale</h4><p>Première matière hors sciences : 35 chapitres de grammaire (A1 → B2), cours + QCM + exercices + cartes.</p></div>
   </div>
 </section>
 
@@ -544,7 +546,8 @@
   const MAT=[
     ['Maths',192,'--m-maths'],['Physique-chimie',68,'--m-pc'],['SVT',37,'--m-svt'],
     ['Sciences (primaire)',25,'--m-sci'],['Technologie',20,'--m-techno'],['NSI',12,'--m-nsi'],
-    ['Enseignement scientifique',13,'--m-es'],['Sciences de l’ingénieur',10,'--m-si'],['SNT',6,'--m-snt']
+    ['Enseignement scientifique',13,'--m-es'],['Sciences de l’ingénieur',10,'--m-si'],['SNT',6,'--m-snt'],
+    ['Anglais',35,'--m-anglais']
   ];
   const max=Math.max(...MAT.map(m=>m[1]));
   document.getElementById('bars').innerHTML=MAT.map(([n,v,c])=>`
@@ -552,14 +555,14 @@
     <div class="track"><div class="fill" style="width:${Math.round(v/max*100)}%;background:var(${c})"></div></div>
     <div class="val num">${v}</div></div>`).join('');
 
-  const COLS=[['Maths','--m-maths'],['PC','--m-pc'],['SVT','--m-svt'],['Sci.','--m-sci'],['Techno','--m-techno'],['SNT','--m-snt'],['NSI','--m-nsi'],['SI','--m-si'],['ES','--m-es']];
-  // niveau : [Maths, PC, SVT, Sciences, Techno, SNT, NSI, SI, ES]
+  const COLS=[['Maths','--m-maths'],['PC','--m-pc'],['SVT','--m-svt'],['Sci.','--m-sci'],['Techno','--m-techno'],['SNT','--m-snt'],['NSI','--m-nsi'],['SI','--m-si'],['ES','--m-es'],['Ang.','--m-anglais']];
+  // niveau : [Maths, PC, SVT, Sciences, Techno, SNT, NSI, SI, ES, Anglais]
   const ROWS=[
-    ['CP',[11,0,0,5,0,0,0,0,0]],['CE1',[11,0,0,5,0,0,0,0,0]],['CE2',[11,0,0,5,0,0,0,0,0]],
-    ['CM1',[12,0,0,5,0,0,0,0,0]],['CM2',[12,0,0,5,0,0,0,0,0]],
-    ['6ᵉ',[10,0,5,0,5,0,0,0,0]],['5ᵉ',[15,6,5,0,5,0,0,0,0]],['4ᵉ',[15,6,5,0,5,0,0,0,0]],['3ᵉ',[14,5,5,0,5,0,0,0,0]],
-    ['2ᵈᵉ',[10,5,6,0,0,6,0,0,0]],['1ʳᵉ',[14,6,5,0,0,0,6,5,5]],['1ʳᵉ techno',[11,14,0,0,0,0,0,0,0]],
-    ['Tⁿᵃˡᵉ',[27,16,6,0,0,0,6,5,8]],['Tⁿᵃˡᵉ techno',[19,10,0,0,0,0,0,0,0]]
+    ['CP',[11,0,0,5,0,0,0,0,0,0]],['CE1',[11,0,0,5,0,0,0,0,0,0]],['CE2',[11,0,0,5,0,0,0,0,0,0]],
+    ['CM1',[12,0,0,5,0,0,0,0,0,0]],['CM2',[12,0,0,5,0,0,0,0,0,0]],
+    ['6ᵉ',[10,0,5,0,5,0,0,0,0,5]],['5ᵉ',[15,6,5,0,5,0,0,0,0,5]],['4ᵉ',[15,6,5,0,5,0,0,0,0,5]],['3ᵉ',[14,5,5,0,5,0,0,0,0,5]],
+    ['2ᵈᵉ',[10,5,6,0,0,6,0,0,0,5]],['1ʳᵉ',[14,6,5,0,0,0,6,5,5,5]],['1ʳᵉ techno',[11,14,0,0,0,0,0,0,0,0]],
+    ['Tⁿᵃˡᵉ',[27,16,6,0,0,0,6,5,8,5]],['Tⁿᵃˡᵉ techno',[19,10,0,0,0,0,0,0,0,0]]
   ];
   let html='<tr><th class="lvl">Niveau</th>'+COLS.map(c=>`<th>${c[0]}</th>`).join('')+'</tr>';
   for(const [lvl,vals] of ROWS){
@@ -574,7 +577,8 @@
   // Mini-graphe XP par matière (profil d'exemple)
   const XP=[['Maths',1240,'--m-maths'],['Physique-chimie',560,'--m-pc'],['SVT',320,'--m-svt'],
     ['Sciences (primaire)',180,'--m-sci'],['Technologie',150,'--m-techno'],['NSI',110,'--m-nsi'],
-    ['Sciences de l’ingénieur',90,'--m-si'],['Enseignement scientifique',70,'--m-es'],['SNT',50,'--m-snt']];
+    ['Sciences de l’ingénieur',90,'--m-si'],['Enseignement scientifique',70,'--m-es'],['SNT',50,'--m-snt'],
+    ['Anglais',420,'--m-anglais']];
   const mx=Math.max(...XP.map(x=>x[1]));
   document.getElementById('xp').innerHTML=XP.map(([n,v,c])=>`
     <div class="xprow"><div class="nm">${n}</div>
@@ -592,12 +596,13 @@
     ['NSI',12,'240',12,'10','20','--m-nsi'],
     ['Sciences de l’ingénieur',10,'200',10,'10','20','--m-si'],
     ['Enseignement scientifique',13,'260',13,'10','20','--m-es'],
+    ['Anglais',35,'700',35,'—','—','--m-anglais'],
   ];
   let dh='<thead><tr><th>Matière</th><th>Chap.</th><th>Questions</th><th>Exercices</th><th>Sujets</th><th>Bac blancs</th></tr></thead><tbody>';
   for(const [n,c,q,e,s,b,col] of DET){
     dh+=`<tr><td class="mm"><span class="dot2" style="background:var(${col})"></span>${n}</td><td>${c}</td><td>${q}</td><td>${e}</td><td>${s}</td><td>${b}</td></tr>`;
   }
-  dh+='<tr class="tot"><td>Total</td><td>383</td><td>7 660</td><td>383</td><td>70</td><td>144</td></tr></tbody>';
+  dh+='<tr class="tot"><td>Total</td><td>418</td><td>8 360</td><td>418</td><td>70</td><td>144</td></tr></tbody>';
   document.getElementById('detail-table').innerHTML=dh;
 
   // Compteurs animés (chiffres formatés avec espaces des milliers)
@@ -619,8 +624,8 @@
   // Copier le résumé
   const RESUME=[
     'Kamal Campus — état des lieux',
-    '383 chapitres, 7 660 questions, du CP à la Terminale.',
-    '9 matières : maths, physique-chimie, sciences, SVT, technologie/SNT/NSI, sciences de l’ingénieur, enseignement scientifique.',
+    '418 chapitres, 8 360 questions, du CP à la Terminale.',
+    '10 matières : maths, physique-chimie, sciences, SVT, technologie/SNT/NSI, sciences de l’ingénieur, enseignement scientifique, et anglais (6e → Terminale).',
     'Par chapitre : cours + exercices + QCM + cartes. 70 sujets type bac/brevet, 144 bac blancs, 14 formulaires. Une rubrique de liens vers les annales officielles.',
     'Fonctions : résolveur pas à pas, questions générées à l’infini, énigmes, XP/série/badges, recherche & favoris, interface en 9 langues, 100 % hors ligne.',
     'Qualité : 350 tests au vert, contenu validé automatiquement, l’app compile.',
