@@ -1,0 +1,86 @@
+{
+  "id": "cm2-sciences-objets-programmes-et-informatique-exos",
+  "chapitre": "cm2-sciences-objets-programmes-et-informatique",
+  "titre": "Exercices — Objets programmés et informatique",
+  "voie": "primaire",
+  "niveau": "cm2",
+  "parcours": "sciences",
+  "matiere": "sciences",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "objet programmé",
+      "enonce": "Parmi ces objets, entoure ceux qui sont des objets programmés (ils exécutent tout seuls une suite d'actions) : un lave-linge, une cuillère, un feu de circulation, un crayon.",
+      "corrige": [
+        "Un objet programmé exécute tout seul une suite d'instructions enregistrées.",
+        "Le lave-linge enchaîne tout seul remplissage, lavage et essorage : il est programmé. Le feu de circulation change de couleur tout seul à intervalles réguliers : il est programmé.",
+        "La cuillère et le crayon n'exécutent aucune action tout seuls : ce ne sont pas des objets programmés."
+      ],
+      "reponse": "Les objets programmés sont le lave-linge et le feu de circulation."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "vocabulaire",
+      "enonce": "Relie chaque mot à sa définition : algorithme, instruction, programme. Définitions : a) une seule action à réaliser ; b) une suite d'instructions dans l'ordre pour réaliser une tâche ; c) un algorithme écrit dans un langage que la machine comprend.",
+      "corrige": [
+        "Une instruction est une seule action (avance, tourne…) : instruction = a.",
+        "Un algorithme est une suite d'instructions dans l'ordre : algorithme = b.",
+        "Un programme est cet algorithme écrit pour la machine : programme = c."
+      ],
+      "reponse": "instruction = a ; algorithme = b ; programme = c."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "exécution dans l'ordre",
+      "enonce": "Un robot reçoit ce programme pour dessiner : « avance de 3 pas, tourne à droite, avance de 3 pas ». La machine exécute-t-elle les instructions dans l'ordre écrit ou comme elle veut ? Que fait le robot en premier ?",
+      "corrige": [
+        "La machine exécute les instructions dans l'ordre, une par une, exactement comme elles sont écrites : elle ne devine rien.",
+        "La première instruction écrite est « avance de 3 pas ».",
+        "Le robot commence donc par avancer de 3 pas, puis tourne à droite, puis avance encore de 3 pas."
+      ],
+      "reponse": "La machine exécute dans l'ordre écrit ; le robot commence par avancer de 3 pas."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "boucle",
+      "enonce": "Pour dessiner un carré, un robot doit répéter 4 fois : « avance de 5 pas, tourne à droite d'un quart de tour ». Écris ce programme en utilisant une boucle, et explique à quoi sert la boucle.",
+      "corrige": [
+        "Une boucle sert à répéter plusieurs fois les mêmes instructions sans les réécrire à chaque fois.",
+        "On peut écrire : Répéter 4 fois [ avance de 5 pas ; tourne à droite d'un quart de tour ].",
+        "La boucle évite d'écrire huit lignes : elle répète simplement les deux instructions quatre fois pour tracer les quatre côtés du carré."
+      ],
+      "reponse": "Programme : Répéter 4 fois [avance de 5 pas ; tourne à droite d'un quart de tour] ; la boucle sert à répéter les mêmes instructions sans les réécrire."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "capteur et test",
+      "enonce": "Une lampe de jardin s'allume toute seule quand il fait nuit. Explique quel élément mesure qu'il fait nuit et écris la règle sous la forme « si … alors … ».",
+      "corrige": [
+        "Un capteur mesure une information de l'environnement : ici, un capteur de lumière détecte qu'il fait nuit.",
+        "Le programme utilise cette information pour décider d'une action : allumer la lampe.",
+        "On peut écrire la règle sous forme de test : si le capteur détecte qu'il fait nuit, alors la lampe s'allume."
+      ],
+      "reponse": "C'est un capteur de lumière qui mesure qu'il fait nuit ; la règle est : si il fait nuit, alors la lampe s'allume."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "trouver et corriger un bug",
+      "enonce": "Un élève veut faire tracer un triangle (3 côtés) à un robot, mais il a écrit : « Répéter 4 fois [avance de 5 pas ; tourne] ». Le robot ne dessine pas un triangle. Explique où est l'erreur et comment la corriger.",
+      "corrige": [
+        "Un triangle a 3 côtés, donc il faut répéter les instructions 3 fois, pas 4.",
+        "Le programme répète 4 fois : le robot trace 4 côtés, ce qui ne donne pas un triangle. C'est là qu'est l'erreur (le bug).",
+        "Pour corriger, on remplace « Répéter 4 fois » par « Répéter 3 fois » : Répéter 3 fois [avance de 5 pas ; tourne]. Programmer, c'est repérer l'erreur et corriger les instructions."
+      ],
+      "reponse": "L'erreur est le nombre de répétitions : un triangle a 3 côtés, il faut donc écrire « Répéter 3 fois » au lieu de 4."
+    }
+  ]
+}
