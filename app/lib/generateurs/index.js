@@ -14,6 +14,8 @@ import {
   additionSimple, soustractionSimple, multiplicationSimple, complementDix, leDouble,
   masseVolumique, vitesse, loiOhm,
   puissanceUI, moment, contrainte, rendement,
+  divisionEuclidienne, perimetreRectangle, aireRectangle, aireTriangle,
+  fonctionAffine, pythagore, poids, energiePuissanceTemps,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -105,6 +107,33 @@ export const REGISTRE = {
   '1si-comportement-des-materiaux': [contrainte],
   'tale-si-energie-dans-les-systemes': [puissanceUI, rendement],
   'tale-si-resistance-des-structures': [contrainte],
+
+  // ── Primaire : division & géométrie de mesure ──
+  'ce2-math-sens-de-la-division': [divisionEuclidienne],
+  'cm1-math-division-euclidienne': [divisionEuclidienne],
+  'cm2-math-division-posee': [divisionEuclidienne],
+  'ce2-math-perimetre-et-mesures': [perimetreRectangle, aireRectangle],
+  'cm1-math-cercle-triangles-perimetre-aire': [perimetreRectangle, aireRectangle, aireTriangle],
+  'cm2-math-aires-perimetres-volumes': [aireRectangle, perimetreRectangle],
+  'cm1-math-proportionnalite': [proportionnalite],
+  'cm2-math-proportionnalite-et-pourcentages': [proportionnalite, pourcentage],
+
+  // ── Collège : géométrie de mesure, fonctions, Pythagore ──
+  '6e-math-longueurs-aires-volumes': [perimetreRectangle, aireRectangle],
+  '4e-math-fonctions': [fonctionAffine],
+  '3e-math-fonctions': [fonctionAffine],
+  '4e-math-triangles': [pythagore],
+  '3e-math-triangles': [pythagore],
+
+  // ── Physique-chimie : poids & énergie ──
+  '4e-pc-interactions-forces': [poids],
+  '3e-pc-poids-gravitation-forces': [poids],
+  '5e-pc-energie-electricite': [energiePuissanceTemps],
+  '4e-pc-puissance-energie': [energiePuissanceTemps],
+  '3e-pc-conversions-energie-signaux': [energiePuissanceTemps],
+  '1sti2d-energie': [puissanceUI, rendement],
+  'tale-sti2d-pc-energie-electrique-thermique': [puissanceUI, rendement],
+  'tale-esc-production-conversion-energie-electrique': [puissanceUI, rendement],
 };
 
 /** Le chapitre a-t-il au moins un générateur ? */

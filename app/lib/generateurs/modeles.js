@@ -525,3 +525,180 @@ export function rendement(rand) {
     explication: `η = Pu ÷ Pa × 100 = ${Pu} ÷ ${Pa} × 100 = ${eta} %.`,
   }, rand);
 }
+
+// ── Primaire / collège : nombres & géométrie ─────────────────────────────────
+
+/** Division euclidienne : a = b·q + r, avec 0 ≤ r < b. */
+export function divisionEuclidienne(rand) {
+  const b = entier(rand, 2, 9);
+  const q = entier(rand, 2, 12);
+  const r = entier(rand, 0, b - 1);
+  const a = b * q + r;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'division',
+    enonce: `Division euclidienne de $${a}$ par $${b}$ : quel est le quotient et le reste ?`,
+    bonne: `quotient ${q}, reste ${r}`,
+    distracteurs: [
+      `quotient ${q + 1}, reste ${r}`,
+      `quotient ${q}, reste ${(r + 1) % b}`,
+      `quotient ${q - 1}, reste ${r}`,
+      `quotient ${q + 1}, reste ${(r + 1) % b}`,
+      `quotient ${q + 2}, reste ${r}`,
+    ],
+    explication: `On cherche le plus grand multiple de $${b}$ inférieur ou égal à $${a}$ : $${b} \\times ${q} = ${b * q}$, il reste $${a} - ${b * q} = ${r}$. Le reste ($${r}$) doit être plus petit que le diviseur ($${b}$).`,
+  }, rand);
+}
+
+/** Périmètre d'un rectangle : P = 2·(L + l). */
+export function perimetreRectangle(rand) {
+  const L = entier(rand, 4, 20);
+  const l = entier(rand, 2, L);
+  const p = 2 * (L + l);
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'perimetre',
+    enonce: `Un rectangle mesure $${L}$ cm de long et $${l}$ cm de large. Quel est son périmètre ?`,
+    bonne: `$${p}$ cm`,
+    distracteurs: [
+      `$${L + l}$ cm`,
+      `$${p + 2}$ cm`,
+      `$${p - 2}$ cm`,
+      `$${L * l}$ cm`,
+      `$${2 * L + l}$ cm`,
+    ],
+    explication: `Périmètre $= 2 \\times (\\text{longueur} + \\text{largeur}) = 2 \\times (${L} + ${l}) = ${p}$ cm. On fait tout le tour : deux longueurs et deux largeurs.`,
+  }, rand);
+}
+
+/** Aire d'un rectangle : A = L·l. */
+export function aireRectangle(rand) {
+  const L = entier(rand, 4, 20);
+  const l = entier(rand, 2, L);
+  const A = L * l;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'aire',
+    enonce: `Un rectangle mesure $${L}$ cm de long et $${l}$ cm de large. Quelle est son aire ?`,
+    bonne: `$${A}$ cm²`,
+    distracteurs: [
+      `$${2 * (L + l)}$ cm²`,
+      `$${A + L}$ cm²`,
+      `$${A - l}$ cm²`,
+      `$${L + l}$ cm²`,
+      `$${A + 1}$ cm²`,
+      `$${A + 2}$ cm²`,
+    ],
+    explication: `Aire $= \\text{longueur} \\times \\text{largeur} = ${L} \\times ${l} = ${A}$ cm². (Le périmètre $2\\times(${L}+${l})$ mesure le tour, pas la surface.)`,
+  }, rand);
+}
+
+/** Aire d'un triangle : A = (b·h) / 2, hauteur paire pour un résultat entier. */
+export function aireTriangle(rand) {
+  const b = entier(rand, 3, 20);
+  const h = 2 * entier(rand, 2, 10); // hauteur paire → aire entière
+  const A = (b * h) / 2;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'aire',
+    enonce: `Un triangle a une base de $${b}$ cm et une hauteur de $${h}$ cm. Quelle est son aire ?`,
+    bonne: `$${A}$ cm²`,
+    distracteurs: [
+      `$${b * h}$ cm²`,
+      `$${A + b}$ cm²`,
+      `$${b + h}$ cm²`,
+      `$${A + 1}$ cm²`,
+      `$${A + 2}$ cm²`,
+    ],
+    explication: `Aire $= \\dfrac{\\text{base} \\times \\text{hauteur}}{2} = \\dfrac{${b} \\times ${h}}{2} = ${A}$ cm². On n'oublie pas de diviser par 2.`,
+  }, rand);
+}
+
+/** Image par une fonction affine : f(x) = ax + b, calcul de f(x₀). */
+export function fonctionAffine(rand) {
+  const a = choisir(rand, [-5, -4, -3, -2, 2, 3, 4, 5]);
+  const b = entierNonNul(rand, -9, 9);
+  const x0 = entierNonNul(rand, -6, 6);
+  const y = a * x0 + b;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'fonctions',
+    enonce: `Soit $f(x) = ${a}x ${avecSigne(b)}$. Combien vaut $f(${x0})$ ?`,
+    bonne: `$${y}$`,
+    distracteurs: [
+      `$${a * x0}$`,
+      `$${a + b}$`,
+      `$${a * x0 - b}$`,
+      `$${y + 1}$`,
+      `$${y - 1}$`,
+      `$${y + 2}$`,
+    ],
+    explication: `On remplace $x$ par $${x0}$ : $f(${x0}) = ${a} \\times ${x0} ${avecSigne(b)} = ${a * x0} ${avecSigne(b)} = ${y}$.`,
+  }, rand);
+}
+
+/** Hypoténuse d'un triangle rectangle (triplets pythagoriciens entiers). */
+export function pythagore(rand) {
+  const triplets = [
+    [3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 15, 17],
+    [9, 12, 15], [7, 24, 25], [20, 21, 29], [9, 40, 41], [12, 16, 20],
+  ];
+  const [a, b, c] = choisir(rand, triplets);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'pythagore',
+    enonce: `Dans un triangle rectangle, les deux côtés de l'angle droit mesurent $${a}$ et $${b}$. Quelle est la longueur de l'hypoténuse ?`,
+    bonne: `$${c}$`,
+    distracteurs: [
+      `$${a + b}$`,
+      `$${c + 1}$`,
+      `$${c - 1}$`,
+      `$${c + 2}$`,
+      `$${b - a}$`,
+    ],
+    explication: `Théorème de Pythagore : $h^2 = ${a}^2 + ${b}^2 = ${a * a} + ${b * b} = ${a * a + b * b}$, donc $h = \\sqrt{${a * a + b * b}} = ${c}$. (Attention : l'hypoténuse n'est pas $${a}+${b}$.)`,
+  }, rand);
+}
+
+// ── Physique-chimie : grandeurs supplémentaires ──────────────────────────────
+
+/** Poids : P = m·g, avec g = 10 N/kg (valeur donnée dans l'énoncé). */
+export function poids(rand) {
+  const m = entier(rand, 1, 50);
+  const P = m * 10;
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'poids',
+    enonce: `Sur Terre, l'intensité de pesanteur vaut $g = 10$ N/kg. Quel est le poids d'un objet de masse $${m}$ kg ?`,
+    bonne: `${P} N`,
+    distracteurs: [
+      `${m} N`,
+      `${P + 10} N`,
+      `${P - 10} N`,
+      `${m + 10} N`,
+      `${P + 1} N`,
+    ],
+    explication: `P = m × g = ${m} × 10 = ${P} N. Le poids (en newtons) n'est pas la masse (en kilogrammes).`,
+  }, rand);
+}
+
+/** Énergie : E = P·t (puissance en W, durée en h → énergie en Wh). */
+export function energiePuissanceTemps(rand) {
+  const P = 5 * entier(rand, 2, 20); // 10..100 W
+  const t = entier(rand, 2, 8); // heures
+  const E = P * t;
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'energie',
+    enonce: `Un appareil de puissance $${P}$ W fonctionne pendant $${t}$ h. Quelle énergie consomme-t-il ?`,
+    bonne: `${E} Wh`,
+    distracteurs: [
+      `${P + t} Wh`,
+      `${P} Wh`,
+      `${E + P} Wh`,
+      `${E - P} Wh`,
+      `${E + 1} Wh`,
+    ],
+    explication: `E = P × t = ${P} × ${t} = ${E} Wh. L'énergie est le produit de la puissance par la durée.`,
+  }, rand);
+}
