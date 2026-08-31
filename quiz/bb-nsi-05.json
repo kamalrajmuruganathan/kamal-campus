@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-05",
+  "titre": "Bac blanc — NSI (n° 05)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Quel parcours de graphe utilise une pile (ou la récursion) ?",
+      "choix": [
+        "parcours en largeur (BFS)",
+        "parcours en profondeur (DFS)",
+        "le tri fusion",
+        "Dijkstra"
+      ],
+      "reponse": 1,
+      "explication": "Le DFS s'enfonce le plus loin possible avant de revenir : pile ou récursion."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "Arbres",
+      "enonce": "Dans un arbre binaire de recherche (ABR), pour tout nœud, le sous-arbre gauche contient :",
+      "choix": [
+        "des valeurs supérieures",
+        "des valeurs inférieures à celle du nœud",
+        "des valeurs égales",
+        "des feuilles uniquement"
+      ],
+      "reponse": 1,
+      "explication": "Un ABR range à gauche les valeurs plus petites et à droite les plus grandes."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Réseaux",
+      "enonce": "Le routage consiste à :",
+      "choix": [
+        "choisir le chemin des paquets à travers les routeurs jusqu'à la destination",
+        "afficher une page web",
+        "compresser un fichier",
+        "attribuer un nom de domaine"
+      ],
+      "reponse": 0,
+      "explication": "Les routeurs déterminent, saut par saut, le chemin des paquets vers leur destination."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Complexité",
+      "enonce": "Le tri par insertion a, dans le pire des cas, une complexité de :",
+      "choix": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "reponse": 2,
+      "explication": "Sur un tableau trié à l'envers, il effectue de l'ordre de n² comparaisons/décalages."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 110 ?",
+      "choix": [
+        "6",
+        "7",
+        "5",
+        "8"
+      ],
+      "reponse": 0,
+      "explication": "110 en base 2 vaut 6 en décimal."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Que produit ce code ?\n\nL = [x*x for x in range(4)]\nprint(L)",
+      "choix": [
+        "[0, 1, 2, 3]",
+        "[0, 1, 4, 9]",
+        "[1, 4, 9, 16]",
+        "[0, 2, 4, 6]"
+      ],
+      "reponse": 1,
+      "explication": "Compréhension de liste : les carrés de 0,1,2,3 donnent [0, 1, 4, 9]."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "Un processus en attente d'une ressource occupée est dans l'état :",
+      "choix": [
+        "élu (en exécution)",
+        "bloqué",
+        "terminé",
+        "prêt"
+      ],
+      "reponse": 1,
+      "explication": "Un processus attendant une ressource ou un événement est bloqué jusqu'à sa disponibilité."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Algorithmique",
+      "enonce": "Que renvoie ce code pour rechercher 7 ?\n\ndef dicho(T, x):\n    g, d = 0, len(T)-1\n    while g <= d:\n        m = (g + d)//2\n        if T[m] == x: return m\n        if T[m] < x: g = m+1\n        else: d = m-1\n    return -1\nprint(dicho([1,3,5,7,9], 7))",
+      "choix": [
+        "2",
+        "3",
+        "7",
+        "-1"
+      ],
+      "reponse": 1,
+      "explication": "7 est à l'indice 3 dans [1,3,5,7,9] ; la fonction renvoie cet indice."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Structures de données",
+      "enonce": "Quelle structure convient le mieux pour gérer une fonction « annuler » (undo) ?",
+      "choix": [
+        "Une file",
+        "Une pile",
+        "Un dictionnaire",
+        "Un arbre binaire"
+      ],
+      "reponse": 1,
+      "explication": "Les dernières actions doivent être annulées en premier : c'est une pile (LIFO)."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Que vaut d après ce code ?\n\nd = {}\nfor c in 'abba':\n    d[c] = d.get(c, 0) + 1\nprint(d)",
+      "choix": [
+        "{'a': 1, 'b': 1}",
+        "{'a': 2, 'b': 2}",
+        "{'a': 2, 'b': 1}",
+        "{'a': 4, 'b': 4}"
+      ],
+      "reponse": 1,
+      "explication": "get(c,0) donne 0 si absent ; on compte 2 'a' et 2 'b'."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "Quel mot-clé élimine les doublons d'un résultat SELECT ?",
+      "choix": [
+        "UNIQUE",
+        "DISTINCT",
+        "ONLY",
+        "SINGLE"
+      ],
+      "reponse": 1,
+      "explication": "SELECT DISTINCT ne renvoie que des lignes distinctes."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "La méthode « diviser pour régner » consiste à :",
+      "choix": [
+        "résoudre le problème d'un seul coup",
+        "découper le problème en sous-problèmes, les résoudre, puis combiner",
+        "itérer sur toutes les solutions",
+        "mémoriser tous les résultats"
+      ],
+      "reponse": 1,
+      "explication": "On divise en sous-problèmes plus petits, on les résout (souvent récursivement) et on combine les solutions."
+    }
+  ]
+}

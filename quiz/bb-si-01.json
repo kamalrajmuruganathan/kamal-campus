@@ -1,0 +1,180 @@
+{
+  "id": "bb-si-01",
+  "titre": "Bac blanc — Sciences de l'ingénieur (n° 01)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Asservissement",
+      "enonce": "Dans un système asservi, quel est le rôle du capteur placé dans la boucle de retour ?",
+      "choix": [
+        "Fournir l'énergie à l'actionneur",
+        "Mesurer la grandeur de sortie afin de la comparer à la consigne",
+        "Filtrer mécaniquement les vibrations",
+        "Amplifier la commande envoyée à l'actionneur"
+      ],
+      "reponse": 1,
+      "explication": "Le capteur de retour mesure la sortie réelle ; le comparateur calcule l'écart entre cette mesure et la consigne. C'est le principe de la boucle fermée qui permet de corriger les erreurs."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "Asservissement (écart)",
+      "enonce": "Dans un asservissement, comment définit-on l'écart (ou erreur) ?",
+      "choix": [
+        "Le produit de la consigne par le gain",
+        "La somme de la consigne et de la mesure",
+        "La dérivée de la grandeur de sortie",
+        "La différence entre la consigne et la mesure de la sortie"
+      ],
+      "reponse": 3,
+      "explication": "L'écart ε = consigne − mesure. Le correcteur agit pour annuler cet écart, ce qui amène la sortie à suivre la consigne."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Rendement",
+      "enonce": "Un système reçoit une puissance de 500 W et en restitue 375 W d'utile. Quel est son rendement ?",
+      "choix": [
+        "125 W",
+        "1,3333 (133,3333 %)",
+        "0,25 (25 %)",
+        "0,75 (75 %)"
+      ],
+      "reponse": 3,
+      "explication": "Le rendement est le rapport puissance utile / puissance absorbée : η = 375/500 = 0,75 (75 %). Le reste est perdu (chaleur, frottements)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Moment d'une force",
+      "enonce": "Une force de 400 N est appliquée perpendiculairement à l'extrémité d'un bras de levier de 0,8 m. Quel est le moment de cette force par rapport à l'axe ?",
+      "choix": [
+        "320 N·m",
+        "3200 N·m",
+        "500 N·m",
+        "400,8 N·m"
+      ],
+      "reponse": 0,
+      "explication": "Le moment vaut M = F × d = 400 × 0,8 = 320 N·m, la force étant perpendiculaire au bras de levier."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Énergie consommée",
+      "enonce": "Un appareil de puissance 500 W fonctionne pendant 0,5 h. Quelle énergie consomme-t-il ? (1 kWh = 1000 Wh)",
+      "choix": [
+        "1000 kWh",
+        "0,5 kWh",
+        "0,25 kWh",
+        "250 kWh"
+      ],
+      "reponse": 2,
+      "explication": "E = P × t = 500 W × 0,5 h = 250 Wh = 0,25 kWh."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Statique (3 forces)",
+      "enonce": "Un solide est en équilibre sous l'action de trois forces non parallèles. Ces trois forces sont nécessairement :",
+      "choix": [
+        "Perpendiculaires deux à deux",
+        "Concourantes (droites d'action coupant un même point) et de somme vectorielle nulle",
+        "Parallèles entre elles",
+        "Toutes de même intensité"
+      ],
+      "reponse": 1,
+      "explication": "Pour l'équilibre sous trois forces non parallèles, la somme vectorielle doit être nulle ET les droites d'action concourantes en un même point (moment résultant nul)."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "Résistance des matériaux (σ = F/S)",
+      "enonce": "Une pièce de section S = 5 mm² est soumise à un effort de traction F = 4000 N. Quelle est la contrainte normale σ ? (1 N/mm² = 1 MPa)",
+      "choix": [
+        "0,0013 MPa",
+        "800 MPa",
+        "20000 MPa",
+        "400 MPa"
+      ],
+      "reponse": 1,
+      "explication": "La contrainte vaut σ = F/S = 4000 / 5 = 800 MPa (car 1 N/mm² = 1 MPa)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "Analyse fonctionnelle",
+      "enonce": "Que représente la fonction globale d'un système dans une analyse fonctionnelle (bête à cornes / SysML) ?",
+      "choix": [
+        "Le coût de fabrication du système",
+        "Le nombre de capteurs embarqués",
+        "La liste des composants électroniques",
+        "Le service rendu à l'utilisateur : la valeur ajoutée sur la matière d'œuvre"
+      ],
+      "reponse": 3,
+      "explication": "La fonction globale exprime le service rendu : la valeur ajoutée apportée à la matière d'œuvre (déplacer, chauffer, informer…), indépendamment des solutions techniques."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Transmission de mouvement",
+      "enonce": "Quel composant permet de transformer un mouvement de rotation continue en translation rectiligne ?",
+      "choix": [
+        "Système pignon-crémaillère",
+        "Un accouplement rigide",
+        "Un réducteur à engrenages",
+        "Un embrayage à disques"
+      ],
+      "reponse": 0,
+      "explication": "Le système pignon-crémaillère réalise cette transformation de mouvement ; les autres solutions proposées ne conviennent pas à ce besoin."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "Pignon-crémaillère",
+      "enonce": "Un pignon de module m = 1 mm et Z = 18 dents engrène une crémaillère. De quelle distance avance la crémaillère pour un tour complet du pignon ? (avance = π·m·Z)",
+      "choix": [
+        "56,55 mm",
+        "19 mm",
+        "18 mm",
+        "113,1 mm"
+      ],
+      "reponse": 0,
+      "explication": "Pour un tour, l'avance vaut π × m × Z = π × 1 × 18 ≈ 56,55 mm."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Analyse fonctionnelle (FAST)",
+      "enonce": "À quoi sert un diagramme FAST en analyse fonctionnelle ?",
+      "choix": [
+        "Représenter la trajectoire d'un point mobile",
+        "Décomposer une fonction en fonctions techniques puis en solutions constructives",
+        "Mesurer une contrainte mécanique",
+        "Calculer le rendement d'un moteur"
+      ],
+      "reponse": 1,
+      "explication": "Le diagramme FAST décompose une fonction de service en fonctions techniques puis en solutions constructives, en répondant aux questions « pourquoi ? comment ? quand ? »."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Puissance mécanique",
+      "enonce": "Un moteur développe un couple de 1 N·m à une vitesse de rotation de 50 rad·s⁻¹. Quelle est la puissance mécanique fournie ?",
+      "choix": [
+        "100 W",
+        "25 W",
+        "51 W",
+        "50 W"
+      ],
+      "reponse": 3,
+      "explication": "La puissance de rotation vaut P = C × ω = 1 × 50 = 50 W (couple en N·m multiplié par la vitesse angulaire en rad·s⁻¹)."
+    }
+  ]
+}

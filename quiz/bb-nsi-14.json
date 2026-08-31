@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-14",
+  "titre": "Bac blanc — NSI (n° 14)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "difficile",
+      "notion": "Dictionnaires",
+      "enonce": "La fonction de hachage d'une table doit idéalement :",
+      "choix": [
+        "renvoyer toujours la même valeur",
+        "répartir uniformément les clés sur les cases",
+        "trier les clés",
+        "dépendre de l'ordre d'insertion"
+      ],
+      "reponse": 1,
+      "explication": "Une bonne fonction de hachage disperse les clés uniformément pour limiter les collisions."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Bases de données SQL",
+      "enonce": "Quelle commande supprime des lignes d'une table ?",
+      "choix": [
+        "DROP",
+        "DELETE FROM",
+        "REMOVE",
+        "ERASE"
+      ],
+      "reponse": 1,
+      "explication": "DELETE FROM table WHERE ... supprime les lignes ciblées (DROP supprime la table entière)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Un algorithme récursif peut toujours être réécrit :",
+      "choix": [
+        "en une seule ligne",
+        "de façon itérative (avec une boucle et éventuellement une pile)",
+        "sans cas de base",
+        "uniquement en O(1)"
+      ],
+      "reponse": 1,
+      "explication": "Toute récursion peut être transformée en version itérative, au besoin avec une pile explicite."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Dans une matrice d'adjacence M, M[i][j] = 1 signifie :",
+      "choix": [
+        "i et j sont identiques",
+        "il existe une arête/arc de i vers j",
+        "i est la racine",
+        "j est isolé"
+      ],
+      "reponse": 1,
+      "explication": "Un 1 en position (i,j) indique la présence d'une liaison de i vers j."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "Arbres",
+      "enonce": "Les nœuds situés sous un même parent sont dits :",
+      "choix": [
+        "cousins",
+        "frères (fratrie)",
+        "ancêtres",
+        "racines"
+      ],
+      "reponse": 1,
+      "explication": "Des nœuds partageant le même parent sont des frères (fratrie)."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "Réseaux",
+      "enonce": "Un routeur est un équipement qui :",
+      "choix": [
+        "affiche des pages Web",
+        "interconnecte des réseaux et achemine les paquets",
+        "stocke des fichiers",
+        "chiffre les données"
+      ],
+      "reponse": 1,
+      "explication": "Le routeur relie des réseaux différents et transmet les paquets vers la bonne destination."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "Complexité",
+      "enonce": "La notation O(n) décrit :",
+      "choix": [
+        "le temps exact d'exécution",
+        "un majorant asymptotique de la croissance du coût",
+        "la mémoire minimale",
+        "le nombre de lignes"
+      ],
+      "reponse": 1,
+      "explication": "Le « grand O » borne asymptotiquement la croissance du coût, aux constantes près."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture binaire de l'entier décimal 255 ?",
+      "choix": [
+        "11111111",
+        "100000000",
+        "11111110",
+        "111111110"
+      ],
+      "reponse": 0,
+      "explication": "255 = 11111111 en base 2."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nL = [1, 2, 3]\nM = L\nM.append(4)\nprint(len(L))",
+      "choix": [
+        "3",
+        "4",
+        "2",
+        "erreur"
+      ],
+      "reponse": 1,
+      "explication": "M et L référencent la même liste (pas de copie) : l'ajout se voit aussi via L, donc len = 4."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "Sous Linux, la commande cd sert à :",
+      "choix": [
+        "copier un fichier",
+        "changer de répertoire",
+        "supprimer un fichier",
+        "créer un dossier"
+      ],
+      "reponse": 1,
+      "explication": "cd (change directory) déplace le répertoire de travail courant."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Algorithmique",
+      "enonce": "Le tri fusion est plus efficace que le tri par insertion sur de grandes données car :",
+      "choix": [
+        "il ne compare pas les éléments",
+        "il est en O(n log n) au lieu de O(n²)",
+        "il n'utilise pas de mémoire",
+        "il ne fait pas d'échanges"
+      ],
+      "reponse": 1,
+      "explication": "Le tri fusion en O(n log n) surpasse le tri par insertion en O(n²) quand n devient grand."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Structures de données",
+      "enonce": "On implémente une file avec deux piles E et S. Quand on veut défiler et que S est vide, on :",
+      "choix": [
+        "renvoie une erreur",
+        "transfère tous les éléments de E vers S puis dépile S",
+        "vide E entièrement",
+        "échange E et S sans rien dépiler"
+      ],
+      "reponse": 1,
+      "explication": "En transvasant E dans S, l'ordre s'inverse : le sommet de S devient le plus ancien élément (FIFO)."
+    }
+  ]
+}

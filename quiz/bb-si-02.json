@@ -1,0 +1,180 @@
+{
+  "id": "bb-si-02",
+  "titre": "Bac blanc — Sciences de l'ingénieur (n° 02)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Asservissement",
+      "enonce": "Dans un système asservi, quel est le rôle du capteur placé dans la boucle de retour ?",
+      "choix": [
+        "Amplifier la commande envoyée à l'actionneur",
+        "Mesurer la grandeur de sortie afin de la comparer à la consigne",
+        "Fournir l'énergie à l'actionneur",
+        "Filtrer mécaniquement les vibrations"
+      ],
+      "reponse": 1,
+      "explication": "Le capteur de retour mesure la sortie réelle ; le comparateur calcule l'écart entre cette mesure et la consigne. C'est le principe de la boucle fermée qui permet de corriger les erreurs."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "Pignon-crémaillère",
+      "enonce": "Un pignon de module m = 1 mm et Z = 24 dents engrène une crémaillère. De quelle distance avance la crémaillère pour un tour complet du pignon ? (avance = π·m·Z)",
+      "choix": [
+        "24 mm",
+        "150,8 mm",
+        "25 mm",
+        "75,4 mm"
+      ],
+      "reponse": 3,
+      "explication": "Pour un tour, l'avance vaut π × m × Z = π × 1 × 24 ≈ 75,4 mm."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Résistance des matériaux (σ = F/S)",
+      "enonce": "Une pièce de section S = 5 mm² est soumise à un effort de traction F = 8000 N. Quelle est la contrainte normale σ ? (1 N/mm² = 1 MPa)",
+      "choix": [
+        "800 MPa",
+        "0,0006 MPa",
+        "1600 MPa",
+        "40000 MPa"
+      ],
+      "reponse": 2,
+      "explication": "La contrainte vaut σ = F/S = 8000 / 5 = 1600 MPa (car 1 N/mm² = 1 MPa)."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Mouvement (vitesse linéaire)",
+      "enonce": "Un point situé à 0,15 m de l'axe de rotation tourne à la vitesse angulaire ω = 10 rad·s⁻¹. Quelle est sa vitesse linéaire ?",
+      "choix": [
+        "1,5 m·s⁻¹",
+        "3 m·s⁻¹",
+        "66,6667 m·s⁻¹",
+        "10,15 m·s⁻¹"
+      ],
+      "reponse": 0,
+      "explication": "La vitesse linéaire vaut v = R × ω = 0,15 × 10 = 1,5 m·s⁻¹."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Couple moteur",
+      "enonce": "Un moteur fournit une puissance mécanique de 300 W à une vitesse angulaire de 40 rad·s⁻¹. Quel couple développe-t-il ?",
+      "choix": [
+        "15 N·m",
+        "0,1333 N·m",
+        "12000 N·m",
+        "7,5 N·m"
+      ],
+      "reponse": 3,
+      "explication": "À partir de P = C × ω, on isole C = P / ω = 300 / 40 = 7,5 N·m."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Transmission de mouvement",
+      "enonce": "Quel composant permet de transformer un mouvement de rotation continue en translation rectiligne ?",
+      "choix": [
+        "Système pignon-crémaillère",
+        "Un embrayage à disques",
+        "Un accouplement rigide",
+        "Un réducteur à engrenages"
+      ],
+      "reponse": 0,
+      "explication": "Le système pignon-crémaillère réalise cette transformation de mouvement ; les autres solutions proposées ne conviennent pas à ce besoin."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "Capteur",
+      "enonce": "Quel est le rôle d'un capteur dans un système automatisé ?",
+      "choix": [
+        "Traiter l'information selon un algorithme",
+        "Acquérir une grandeur physique et la convertir en signal exploitable",
+        "Communiquer une décision à l'utilisateur",
+        "Fournir de la puissance à l'actionneur"
+      ],
+      "reponse": 1,
+      "explication": "Le capteur assure la fonction ACQUÉRIR : il mesure une grandeur physique (position, température, présence…) et la transforme en signal exploitable par la partie commande."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Asservissement (écart)",
+      "enonce": "Dans un asservissement, comment définit-on l'écart (ou erreur) ?",
+      "choix": [
+        "La dérivée de la grandeur de sortie",
+        "Le produit de la consigne par le gain",
+        "La somme de la consigne et de la mesure",
+        "La différence entre la consigne et la mesure de la sortie"
+      ],
+      "reponse": 3,
+      "explication": "L'écart ε = consigne − mesure. Le correcteur agit pour annuler cet écart, ce qui amène la sortie à suivre la consigne."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "Chaîne d'information",
+      "enonce": "Dans la chaîne d'information, quelle fonction est assurée par un microcontrôleur ?",
+      "choix": [
+        "COMMUNIQUER",
+        "ALIMENTER",
+        "TRAITER",
+        "ACQUÉRIR"
+      ],
+      "reponse": 2,
+      "explication": "Un microcontrôleur exécute l'algorithme et élabore les ordres de commande : il assure la fonction TRAITER."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Rendement",
+      "enonce": "Un système reçoit une puissance de 600 W et en restitue 540 W d'utile. Quel est son rendement ?",
+      "choix": [
+        "60 W",
+        "0,9 (90 %)",
+        "0,1 (10 %)",
+        "1,1111 (111,1111 %)"
+      ],
+      "reponse": 1,
+      "explication": "Le rendement est le rapport puissance utile / puissance absorbée : η = 540/600 = 0,9 (90 %). Le reste est perdu (chaleur, frottements)."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Énergie consommée",
+      "enonce": "Un appareil de puissance 200 W fonctionne pendant 4 h. Quelle énergie consomme-t-il ? (1 kWh = 1000 Wh)",
+      "choix": [
+        "0,8 kWh",
+        "1,6 kWh",
+        "800 kWh",
+        "50 kWh"
+      ],
+      "reponse": 0,
+      "explication": "E = P × t = 200 W × 4 h = 800 Wh = 0,8 kWh."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Statique (3 forces)",
+      "enonce": "Un solide est en équilibre sous l'action de trois forces non parallèles. Ces trois forces sont nécessairement :",
+      "choix": [
+        "Perpendiculaires deux à deux",
+        "Toutes de même intensité",
+        "Concourantes (droites d'action coupant un même point) et de somme vectorielle nulle",
+        "Parallèles entre elles"
+      ],
+      "reponse": 2,
+      "explication": "Pour l'équilibre sous trois forces non parallèles, la somme vectorielle doit être nulle ET les droites d'action concourantes en un même point (moment résultant nul)."
+    }
+  ]
+}

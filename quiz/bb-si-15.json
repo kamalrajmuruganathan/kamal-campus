@@ -1,0 +1,180 @@
+{
+  "id": "bb-si-15",
+  "titre": "Bac blanc — Sciences de l'ingénieur (n° 15)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Asservissement",
+      "enonce": "Dans un système asservi, quel est le rôle du capteur placé dans la boucle de retour ?",
+      "choix": [
+        "Fournir l'énergie à l'actionneur",
+        "Mesurer la grandeur de sortie afin de la comparer à la consigne",
+        "Amplifier la commande envoyée à l'actionneur",
+        "Filtrer mécaniquement les vibrations"
+      ],
+      "reponse": 1,
+      "explication": "Le capteur de retour mesure la sortie réelle ; le comparateur calcule l'écart entre cette mesure et la consigne. C'est le principe de la boucle fermée qui permet de corriger les erreurs."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "Matériaux / RDM",
+      "enonce": "Dans la loi de Hooke σ = E·ε, la grandeur ε représente :",
+      "choix": [
+        "La force appliquée en N",
+        "La contrainte en MPa",
+        "La section en mm²",
+        "La déformation relative (allongement rapporté à la longueur initiale)"
+      ],
+      "reponse": 3,
+      "explication": "ε = ΔL/L₀ est la déformation relative, sans unité ; σ est la contrainte (MPa) et E le module d'Young (MPa)."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Rendement global d'une chaîne",
+      "enonce": "Une chaîne d'énergie comporte deux étages de rendements η₁ = 0,8 et η₂ = 0,7. Quel est le rendement global de la chaîne ?",
+      "choix": [
+        "1,5 (150 %)",
+        "1,12 (112 %)",
+        "0,75 (75 %)",
+        "0,56 (56 %)"
+      ],
+      "reponse": 3,
+      "explication": "Les rendements en série se multiplient : η = η₁ × η₂ = 0,8 × 0,7 = 0,56 (56 %)."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Asservissement (écart)",
+      "enonce": "Dans un asservissement, comment définit-on l'écart (ou erreur) ?",
+      "choix": [
+        "La différence entre la consigne et la mesure de la sortie",
+        "La somme de la consigne et de la mesure",
+        "Le produit de la consigne par le gain",
+        "La dérivée de la grandeur de sortie"
+      ],
+      "reponse": 0,
+      "explication": "L'écart ε = consigne − mesure. Le correcteur agit pour annuler cet écart, ce qui amène la sortie à suivre la consigne."
+    },
+    {
+      "id": 5,
+      "difficulte": "difficile",
+      "notion": "Principe fondamental de la dynamique",
+      "enonce": "Un solide de masse 1200 kg subit une accélération de 2 m·s⁻². Quelle est l'intensité de la résultante des forces qui lui est appliquée ?",
+      "choix": [
+        "600 N",
+        "1200 N",
+        "2400 N",
+        "1202 N"
+      ],
+      "reponse": 2,
+      "explication": "D'après le principe fondamental de la dynamique, F = m × a = 1200 × 2 = 2400 N."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Résistance des matériaux (σ = F/S)",
+      "enonce": "Une pièce de section S = 100 mm² est soumise à un effort de traction F = 4000 N. Quelle est la contrainte normale σ ? (1 N/mm² = 1 MPa)",
+      "choix": [
+        "40 MPa",
+        "20 MPa",
+        "0,025 MPa",
+        "400000 MPa"
+      ],
+      "reponse": 0,
+      "explication": "La contrainte vaut σ = F/S = 4000 / 100 = 40 MPa (car 1 N/mm² = 1 MPa)."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Énergie consommée",
+      "enonce": "Un appareil de puissance 100 W fonctionne pendant 2 h. Quelle énergie consomme-t-il ? (1 kWh = 1000 Wh)",
+      "choix": [
+        "0,2 kWh",
+        "0,4 kWh",
+        "200 kWh",
+        "50 kWh"
+      ],
+      "reponse": 0,
+      "explication": "E = P × t = 100 W × 2 h = 200 Wh = 0,2 kWh."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Analyse fonctionnelle (FAST)",
+      "enonce": "À quoi sert un diagramme FAST en analyse fonctionnelle ?",
+      "choix": [
+        "Mesurer une contrainte mécanique",
+        "Décomposer une fonction en fonctions techniques puis en solutions constructives",
+        "Calculer le rendement d'un moteur",
+        "Représenter la trajectoire d'un point mobile"
+      ],
+      "reponse": 1,
+      "explication": "Le diagramme FAST décompose une fonction de service en fonctions techniques puis en solutions constructives, en répondant aux questions « pourquoi ? comment ? quand ? »."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "Analyse fonctionnelle",
+      "enonce": "Que représente la fonction globale d'un système dans une analyse fonctionnelle (bête à cornes / SysML) ?",
+      "choix": [
+        "Le nombre de capteurs embarqués",
+        "Le service rendu à l'utilisateur : la valeur ajoutée sur la matière d'œuvre",
+        "Le coût de fabrication du système",
+        "La liste des composants électroniques"
+      ],
+      "reponse": 1,
+      "explication": "La fonction globale exprime le service rendu : la valeur ajoutée apportée à la matière d'œuvre (déplacer, chauffer, informer…), indépendamment des solutions techniques."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "Réducteur",
+      "enonce": "Un réducteur de rapport 1/5 est entraîné par un moteur tournant à 3000 tr·min⁻¹. Quelle est la vitesse de sortie ?",
+      "choix": [
+        "15000 tr·min⁻¹",
+        "3000 tr·min⁻¹",
+        "5 tr·min⁻¹",
+        "600 tr·min⁻¹"
+      ],
+      "reponse": 3,
+      "explication": "Un rapport de réduction 1/5 divise la vitesse par 5 : 3000 / 5 = 600 tr·min⁻¹. En contrepartie, le couple de sortie est (idéalement) multiplié par 5."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Transmission de mouvement",
+      "enonce": "Quel composant permet de transformer un mouvement de rotation continue en translation rectiligne ?",
+      "choix": [
+        "Un réducteur à engrenages",
+        "Un accouplement rigide",
+        "Un embrayage à disques",
+        "Système pignon-crémaillère"
+      ],
+      "reponse": 3,
+      "explication": "Le système pignon-crémaillère réalise cette transformation de mouvement ; les autres solutions proposées ne conviennent pas à ce besoin."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Puissance mécanique",
+      "enonce": "Un moteur développe un couple de 0,5 N·m à une vitesse de rotation de 200 rad·s⁻¹. Quelle est la puissance mécanique fournie ?",
+      "choix": [
+        "200 W",
+        "200,5 W",
+        "100 W",
+        "400 W"
+      ],
+      "reponse": 2,
+      "explication": "La puissance de rotation vaut P = C × ω = 0,5 × 200 = 100 W (couple en N·m multiplié par la vitesse angulaire en rad·s⁻¹)."
+    }
+  ]
+}

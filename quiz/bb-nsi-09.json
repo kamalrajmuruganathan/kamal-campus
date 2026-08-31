@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-09",
+  "titre": "Bac blanc — NSI (n° 09)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture binaire de l'entier décimal 13 ?",
+      "choix": [
+        "1101",
+        "1110",
+        "1100",
+        "11010"
+      ],
+      "reponse": 0,
+      "explication": "13 = 1101 en base 2."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nL = [1, 2, 3]\nprint(L * 2)",
+      "choix": [
+        "[2, 4, 6]",
+        "[1, 2, 3, 1, 2, 3]",
+        "[1, 2, 3, 2]",
+        "6"
+      ],
+      "reponse": 1,
+      "explication": "L'opérateur * répète la liste : [1, 2, 3, 1, 2, 3]."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Architecture",
+      "enonce": "Les échanges entre processeur et mémoire transitent par :",
+      "choix": [
+        "le bus",
+        "le cache disque",
+        "l'écran",
+        "le clavier"
+      ],
+      "reponse": 0,
+      "explication": "Les bus (adresses, données, commandes) relient le processeur à la mémoire et aux périphériques."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Algorithmique",
+      "enonce": "Le nombre de comparaisons du tri par sélection sur n éléments est de l'ordre de :",
+      "choix": [
+        "n",
+        "n log n",
+        "n²",
+        "log n"
+      ],
+      "reponse": 2,
+      "explication": "Deux boucles imbriquées comparent de l'ordre de n²/2 paires : O(n²)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Structures de données",
+      "enonce": "En Python, avec une liste utilisée comme pile, quelles méthodes correspondent à empiler/dépiler ?",
+      "choix": [
+        "insert(0,x) / pop(0)",
+        "append(x) / pop()",
+        "add(x) / remove()",
+        "push(x) / shift()"
+      ],
+      "reponse": 1,
+      "explication": "append(x) empile en fin, pop() dépile le dernier : les deux sont en O(1) amorti."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "Dictionnaires",
+      "enonce": "Comment tester si la clé 'k' est présente dans le dictionnaire d ?",
+      "choix": [
+        "'k' in d",
+        "d.has('k')",
+        "d.exists('k')",
+        "find(d, 'k')"
+      ],
+      "reponse": 0,
+      "explication": "L'opérateur in teste l'appartenance d'une clé au dictionnaire."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "Quelle commande modifie des valeurs existantes ?",
+      "choix": [
+        "ALTER",
+        "UPDATE",
+        "MODIFY",
+        "CHANGE"
+      ],
+      "reponse": 1,
+      "explication": "UPDATE ... SET ... WHERE ... met à jour les lignes ciblées."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "La recherche dichotomique récursive dans un tableau trié a une complexité de :",
+      "choix": [
+        "O(n)",
+        "O(log n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "reponse": 1,
+      "explication": "À chaque appel on divise l'intervalle par deux : O(log n)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Graphes",
+      "enonce": "Un cycle dans un graphe est :",
+      "choix": [
+        "un sommet isolé",
+        "un chemin qui revient à son sommet de départ",
+        "une arête pondérée",
+        "un sommet de degré 0"
+      ],
+      "reponse": 1,
+      "explication": "Un cycle est un chemin fermé revenant à son point de départ sans réutiliser d'arête."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Arbres",
+      "enonce": "La recherche d'une valeur dans un ABR équilibré de n nœuds coûte en moyenne :",
+      "choix": [
+        "O(n)",
+        "O(log n)",
+        "O(1)",
+        "O(n²)"
+      ],
+      "reponse": 1,
+      "explication": "À chaque étape on descend d'un niveau ; pour un ABR équilibré la hauteur est en O(log n)."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Réseaux",
+      "enonce": "Le protocole UDP, contrairement à TCP :",
+      "choix": [
+        "chiffre les données",
+        "ne garantit ni la remise ni l'ordre, mais est plus rapide",
+        "résout les noms de domaine",
+        "route les paquets"
+      ],
+      "reponse": 1,
+      "explication": "UDP est sans connexion : pas d'accusé de réception, ni de remise en ordre, mais faible latence."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Complexité",
+      "enonce": "Que vaut la complexité de ce code ?\n\nc = 0\nfor i in range(n):\n    for j in range(n):\n        c += 1",
+      "choix": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(2n)"
+      ],
+      "reponse": 2,
+      "explication": "Deux boucles imbriquées de n itérations : n² opérations, soit O(n²)."
+    }
+  ]
+}

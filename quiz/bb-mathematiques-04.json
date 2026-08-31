@@ -1,0 +1,180 @@
+{
+  "id": "bb-mathematiques-04",
+  "titre": "Bac blanc — Maths (n° 04)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Primitives",
+      "enonce": "Une primitive de $f(x)=2x$ est :",
+      "choix": [
+        "$2$",
+        "$x^2 + C$",
+        "$2x^2+C$",
+        "$x+C$"
+      ],
+      "reponse": 1,
+      "explication": "$(x^2)'=2x$, donc les primitives sont $x^2+C$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Primitives",
+      "enonce": "Une primitive de $f(x)=e^{x}$ est :",
+      "choix": [
+        "$e^{x} + C$",
+        "$xe^{x}$",
+        "$\\dfrac{e^{x}}{2}$",
+        "$e^{x+1}$"
+      ],
+      "reponse": 0,
+      "explication": "$(e^{x})'=e^{x}$ : les primitives sont $e^{x}+C$."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Suites (point fixe)",
+      "enonce": "Pour $u_{n+1}=3u_n-2$, l'unique point fixe $L$ (solution de $L=3L-2$) vaut :",
+      "choix": [
+        "$2$",
+        "$3$",
+        "$1$",
+        "$0$"
+      ],
+      "reponse": 2,
+      "explication": "$L=3L-2\\iff -2L=-2\\iff L=1$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Loi binomiale",
+      "enonce": "$X\\sim\\mathcal{B}(4\\,;\\,0{,}5)$. Que vaut $P(X=4)$ ?",
+      "choix": [
+        "$0{,}5$",
+        "$0{,}25$",
+        "$0{,}125$",
+        "$0{,}0625$"
+      ],
+      "reponse": 3,
+      "explication": "$P(X=4)=0{,}5^4=0{,}0625$."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "Logarithme",
+      "enonce": "Que vaut $\\ln(e^3)$ ?",
+      "choix": [
+        "$3$",
+        "$e^3$",
+        "$1$",
+        "$\\ln 3$"
+      ],
+      "reponse": 0,
+      "explication": "$\\ln(e^3)=3\\ln e=3$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Dérivée composée",
+      "enonce": "Dérivée de $f(x)=(2x+1)^3$ ?",
+      "choix": [
+        "$3(2x+1)^2$",
+        "$6(2x+1)^2$",
+        "$2(2x+1)^2$",
+        "$6(2x+1)$"
+      ],
+      "reponse": 1,
+      "explication": "$(u^3)'=3u'u^2$ avec $u=2x+1$, $u'=2$ : $f'(x)=6(2x+1)^2$."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "Géométrie dans l'espace",
+      "enonce": "Milieu de $A(2;4;0)$ et $B(0;0;2)$ ?",
+      "choix": [
+        "$(2;4;2)$",
+        "$(1;2;2)$",
+        "$(1;2;1)$",
+        "$(2;2;1)$"
+      ],
+      "reponse": 2,
+      "explication": "Milieu $=\\left(\\dfrac{2+0}{2};\\dfrac{4+0}{2};\\dfrac{0+2}{2}\\right)=(1;2;1)$."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Intégrale",
+      "enonce": "Que vaut $\\displaystyle\\int_{-1}^{1} x\\,dx$ ?",
+      "choix": [
+        "$1$",
+        "$2$",
+        "$-1$",
+        "$0$"
+      ],
+      "reponse": 3,
+      "explication": "$\\left[\\dfrac{x^2}{2}\\right]_{-1}^{1}=\\dfrac12-\\dfrac12=0$ (fonction impaire)."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "Exponentielle",
+      "enonce": "Limite $\\displaystyle\\lim_{x\\to-\\infty} e^{x}$ ?",
+      "choix": [
+        "$0$",
+        "$-\\infty$",
+        "$1$",
+        "$+\\infty$"
+      ],
+      "reponse": 0,
+      "explication": "$\\lim_{x\\to-\\infty} e^{x}=0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Probabilités conditionnelles",
+      "enonce": "Si $P(A\\cap B)=0{,}2$ et $P(B)=0{,}5$, que vaut $P_B(A)$ ?",
+      "choix": [
+        "$0{,}1$",
+        "$0{,}4$",
+        "$0{,}25$",
+        "$0{,}7$"
+      ],
+      "reponse": 1,
+      "explication": "$P_B(A)=\\dfrac{P(A\\cap B)}{P(B)}=\\dfrac{0{,}2}{0{,}5}=0{,}4$."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "Suites géométriques",
+      "enonce": "Raison de la suite $u_n=5\\times 3^{\\,n}$ ?",
+      "choix": [
+        "$5$",
+        "$15$",
+        "$3$",
+        "$n$"
+      ],
+      "reponse": 2,
+      "explication": "$u_{n+1}/u_n=3$ : la raison est $q=3$."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "Convexité",
+      "enonce": "La fonction $f(x)=x^2$ est :",
+      "choix": [
+        "concave",
+        "affine",
+        "point d'inflexion en $0$",
+        "convexe"
+      ],
+      "reponse": 3,
+      "explication": "$f''(x)=2>0$ : $f$ est convexe sur $\\mathbb{R}$."
+    }
+  ]
+}

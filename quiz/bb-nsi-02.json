@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-02",
+  "titre": "Bac blanc — NSI (n° 02)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Dictionnaires",
+      "enonce": "Que renvoie ce code ?\n\nd = {'a': 1, 'b': 2}\nprint(d['b'])",
+      "choix": [
+        "1",
+        "2",
+        "'b'",
+        "KeyError"
+      ],
+      "reponse": 1,
+      "explication": "d['b'] renvoie la valeur associée à la clé 'b', c'est-à-dire 2."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Bases de données SQL",
+      "enonce": "Quelle requête compte le nombre de lignes de la table Eleve ?",
+      "choix": [
+        "SELECT SUM(*) FROM Eleve",
+        "SELECT COUNT(*) FROM Eleve",
+        "SELECT NB(Eleve)",
+        "SELECT TOTAL FROM Eleve"
+      ],
+      "reponse": 1,
+      "explication": "COUNT(*) dénombre les lignes ; SUM additionne des valeurs numériques."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Que renvoie f(4) ?\n\ndef f(n):\n    if n == 0:\n        return 1\n    return n * f(n-1)",
+      "choix": [
+        "12",
+        "16",
+        "24",
+        "4"
+      ],
+      "reponse": 2,
+      "explication": "C'est la factorielle : 4! = 4×3×2×1 = 24."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "Graphes",
+      "enonce": "Dans un graphe orienté, une liaison entre deux sommets s'appelle :",
+      "choix": [
+        "une arête",
+        "un arc",
+        "un maillon",
+        "une branche"
+      ],
+      "reponse": 1,
+      "explication": "Une liaison orientée est un arc ; dans un graphe non orienté c'est une arête."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "Arbres",
+      "enonce": "Un nœud sans enfant est appelé :",
+      "choix": [
+        "une racine",
+        "une feuille",
+        "une arête",
+        "un pivot"
+      ],
+      "reponse": 1,
+      "explication": "Une feuille est un nœud terminal, sans enfant."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "Réseaux",
+      "enonce": "Le protocole DNS sert à :",
+      "choix": [
+        "envoyer des courriels",
+        "traduire un nom de domaine en adresse IP",
+        "chiffrer les données",
+        "router les paquets"
+      ],
+      "reponse": 1,
+      "explication": "Le DNS associe un nom de domaine (ex. lycee.fr) à une adresse IP."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "Complexité",
+      "enonce": "La complexité de la recherche séquentielle (parcours) dans un tableau non trié est :",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "reponse": 2,
+      "explication": "Dans le pire cas on parcourt tous les éléments : O(n)."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 11001 ?",
+      "choix": [
+        "25",
+        "26",
+        "24",
+        "27"
+      ],
+      "reponse": 0,
+      "explication": "11001 en base 2 vaut 25 en décimal."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nL = [10, 20, 30, 40]\nprint(L[1])",
+      "choix": [
+        "10",
+        "20",
+        "30",
+        "40"
+      ],
+      "reponse": 1,
+      "explication": "L'indexation commence à 0 : L[1] est le deuxième élément, 20."
+    },
+    {
+      "id": 10,
+      "difficulte": "facile",
+      "notion": "Architecture",
+      "enonce": "Quelle partie du processeur exécute les opérations arithmétiques et logiques ?",
+      "choix": [
+        "l'unité de commande",
+        "l'unité arithmétique et logique (UAL/ALU)",
+        "la mémoire cache",
+        "le bus"
+      ],
+      "reponse": 1,
+      "explication": "L'UAL (ALU) réalise additions, comparaisons et opérations logiques."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "Algorithmique",
+      "enonce": "Le tri par insertion insère chaque nouvel élément :",
+      "choix": [
+        "à la fin du tableau",
+        "à sa bonne place parmi les éléments déjà triés",
+        "au hasard",
+        "à la racine"
+      ],
+      "reponse": 1,
+      "explication": "On construit une partie triée en insérant chaque élément à sa position correcte."
+    },
+    {
+      "id": 12,
+      "difficulte": "facile",
+      "notion": "Structures de données",
+      "enonce": "Quel est le principe d'une file (queue) ?",
+      "choix": [
+        "LIFO : dernier entré, premier sorti",
+        "FIFO : premier entré, premier sorti",
+        "Accès aléatoire",
+        "Double tri"
+      ],
+      "reponse": 1,
+      "explication": "Une file fonctionne en FIFO : le premier élément enfilé est le premier défilé."
+    }
+  ]
+}

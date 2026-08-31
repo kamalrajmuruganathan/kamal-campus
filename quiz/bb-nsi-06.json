@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-06",
+  "titre": "Bac blanc — NSI (n° 06)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "difficile",
+      "notion": "Arbres",
+      "enonce": "On insère 8 (racine), puis 3 dans un ABR. Où va 3 ?",
+      "choix": [
+        "fils droit de 8",
+        "fils gauche de 8",
+        "à la racine",
+        "impossible"
+      ],
+      "reponse": 1,
+      "explication": "3 < 8, donc 3 est placé dans le sous-arbre gauche de la racine."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "Réseaux",
+      "enonce": "Une adresse IPv4 est codée sur :",
+      "choix": [
+        "16 bits",
+        "32 bits",
+        "64 bits",
+        "128 bits"
+      ],
+      "reponse": 1,
+      "explication": "IPv4 utilise 32 bits (quatre octets, ex. 192.168.0.1)."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Complexité",
+      "enonce": "Les meilleurs tris par comparaison atteignent une complexité de :",
+      "choix": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "reponse": 1,
+      "explication": "La borne inférieure des tris par comparaison est O(n log n), atteinte par tri fusion et tri rapide (cas moyen)."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 10000000 ?",
+      "choix": [
+        "128",
+        "129",
+        "127",
+        "130"
+      ],
+      "reponse": 0,
+      "explication": "10000000 en base 2 vaut 128 en décimal."
+    },
+    {
+      "id": 5,
+      "difficulte": "difficile",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nt = (1, 2, 3)\nprint(len(t) + t[0])",
+      "choix": [
+        "3",
+        "4",
+        "6",
+        "1"
+      ],
+      "reponse": 1,
+      "explication": "len(t) = 3 et t[0] = 1, donc 3 + 1 = 4."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "Un interblocage (deadlock) survient quand :",
+      "choix": [
+        "un processus se termine trop vite",
+        "des processus s'attendent mutuellement pour des ressources qu'ils détiennent",
+        "la mémoire est pleine",
+        "le disque est plein"
+      ],
+      "reponse": 1,
+      "explication": "Chaque processus attend une ressource détenue par un autre : aucun ne progresse (deadlock)."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Un invariant de boucle est une propriété :",
+      "choix": [
+        "vraie uniquement à la fin",
+        "vraie avant et après chaque itération",
+        "vraie une fois sur deux",
+        "modifiée à chaque tour"
+      ],
+      "reponse": 1,
+      "explication": "L'invariant reste vrai à chaque tour de boucle et sert à prouver la correction de l'algorithme."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Structures de données",
+      "enonce": "Quelle structure modélise le mieux une file d'attente d'impression ?",
+      "choix": [
+        "Une pile",
+        "Une file",
+        "Un tas",
+        "Un graphe"
+      ],
+      "reponse": 1,
+      "explication": "Les documents sont imprimés dans l'ordre d'arrivée : c'est une file (FIFO)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Quelle contrainte pèse sur les clés d'un dictionnaire Python ?",
+      "choix": [
+        "elles doivent être des entiers",
+        "elles doivent être hachables (immuables)",
+        "elles doivent être triées",
+        "elles doivent être uniques et de type str"
+      ],
+      "reponse": 1,
+      "explication": "Une clé doit être hachable : les objets immuables (int, str, tuple) conviennent, pas les listes."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "Une clé primaire d'une table garantit que :",
+      "choix": [
+        "la colonne est triée",
+        "chaque ligne est identifiée de façon unique",
+        "la valeur est chiffrée",
+        "la colonne accepte NULL"
+      ],
+      "reponse": 1,
+      "explication": "La clé primaire identifie chaque enregistrement de manière unique et non nulle."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Le tri fusion (merge sort) illustre :",
+      "choix": [
+        "la programmation gloutonne",
+        "le paradigme diviser pour régner",
+        "le backtracking",
+        "la programmation dynamique"
+      ],
+      "reponse": 1,
+      "explication": "Le tri fusion découpe le tableau en deux, trie chaque moitié récursivement, puis fusionne."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Graphes",
+      "enonce": "Une matrice d'adjacence pour un graphe de n sommets occupe :",
+      "choix": [
+        "O(n) mémoire",
+        "O(n²) mémoire",
+        "O(log n) mémoire",
+        "O(1) mémoire"
+      ],
+      "reponse": 1,
+      "explication": "La matrice est de taille n×n, soit O(n²), même si le graphe est peu dense."
+    }
+  ]
+}

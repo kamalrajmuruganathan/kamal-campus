@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-10",
+  "titre": "Bac blanc — NSI (n° 10)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Types construits",
+      "enonce": "Un ensemble (set) en Python :",
+      "choix": [
+        "conserve les doublons",
+        "ne contient pas de doublons",
+        "est ordonné et indexé",
+        "est immuable"
+      ],
+      "reponse": 1,
+      "explication": "Un set est une collection non ordonnée d'éléments distincts (sans doublon)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Architecture",
+      "enonce": "Un transistor dans un processeur agit essentiellement comme :",
+      "choix": [
+        "un condensateur",
+        "un interrupteur commandé",
+        "une résistance fixe",
+        "une diode lumineuse"
+      ],
+      "reponse": 1,
+      "explication": "Le transistor fonctionne comme un interrupteur commandé, brique de base des portes logiques."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Prouver la terminaison d'une boucle repose souvent sur :",
+      "choix": [
+        "un invariant",
+        "un variant (quantité entière qui décroît strictement et reste positive)",
+        "un compteur global",
+        "une exception"
+      ],
+      "reponse": 1,
+      "explication": "Un variant de boucle décroît à chaque tour tout en restant ≥ 0, garantissant l'arrêt."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Structures de données",
+      "enonce": "Pour évaluer une expression en notation polonaise inverse (postfixée), on utilise :",
+      "choix": [
+        "une file",
+        "une pile",
+        "un dictionnaire",
+        "un arbre AVL"
+      ],
+      "reponse": 1,
+      "explication": "On empile les opérandes ; à chaque opérateur on dépile deux valeurs et on empile le résultat."
+    },
+    {
+      "id": 5,
+      "difficulte": "difficile",
+      "notion": "Dictionnaires",
+      "enonce": "Que renvoie ce code ?\n\nd = {'a': 1}\nd['a'] += 5\nd['b'] = d.get('b', 0) + 2\nprint(d['a'], d['b'])",
+      "choix": [
+        "1 2",
+        "6 2",
+        "6 0",
+        "1 5"
+      ],
+      "reponse": 1,
+      "explication": "d['a'] passe de 1 à 6 ; d['b'] absent vaut 0 puis 0+2 = 2."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Bases de données SQL",
+      "enonce": "Que renvoie cette requête ?\n\nSELECT COUNT(*) FROM Livre WHERE annee < 2000;",
+      "choix": [
+        "tous les livres",
+        "le nombre de livres publiés avant 2000",
+        "les titres avant 2000",
+        "l'année la plus ancienne"
+      ],
+      "reponse": 1,
+      "explication": "COUNT(*) avec WHERE dénombre uniquement les lignes vérifiant annee < 2000."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Combien d'appels à f (au total) déclenche f(3) ?\n\ndef f(n):\n    if n == 0:\n        return\n    f(n-1)",
+      "choix": [
+        "3",
+        "4",
+        "1",
+        "infini"
+      ],
+      "reponse": 1,
+      "explication": "f(3) appelle f(2), f(1), f(0) : soit 4 appels au total (f(3),f(2),f(1),f(0))."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Graphes",
+      "enonce": "L'algorithme de Dijkstra sert à :",
+      "choix": [
+        "trier les sommets",
+        "trouver les plus courts chemins depuis une source (poids positifs)",
+        "détecter les cycles",
+        "colorer un graphe"
+      ],
+      "reponse": 1,
+      "explication": "Dijkstra calcule les plus courts chemins depuis un sommet source dans un graphe pondéré positivement."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Arbres",
+      "enonce": "Le pire cas d'un ABR dégénéré (valeurs insérées déjà triées) donne une recherche en :",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "reponse": 2,
+      "explication": "Un ABR dégénéré ressemble à une liste chaînée : recherche en O(n)."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Réseaux",
+      "enonce": "La commutation de paquets consiste à :",
+      "choix": [
+        "réserver un circuit dédié pour toute la communication",
+        "découper les données en paquets acheminés indépendamment",
+        "chiffrer chaque octet",
+        "compresser le message"
+      ],
+      "reponse": 1,
+      "explication": "Les données sont fragmentées en paquets routés indépendamment puis réassemblés à l'arrivée."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Complexité",
+      "enonce": "Un algorithme dont on double la taille d'entrée et dont le temps augmente d'une constante est :",
+      "choix": [
+        "O(n)",
+        "O(log n)",
+        "O(n²)",
+        "O(2^n)"
+      ],
+      "reponse": 1,
+      "explication": "Un coût logarithmique n'augmente que d'une constante quand n double : O(log n)."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture binaire de l'entier décimal 26 ?",
+      "choix": [
+        "11010",
+        "11011",
+        "11001",
+        "110100"
+      ],
+      "reponse": 0,
+      "explication": "26 = 11010 en base 2."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-18",
+  "titre": "Bac blanc — NSI (n° 18)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Arbres",
+      "enonce": "Un arbre binaire est dit équilibré lorsque :",
+      "choix": [
+        "toutes ses feuilles ont la même valeur",
+        "les hauteurs des sous-arbres restent proches (écart borné)",
+        "il n'a que des feuilles",
+        "il est trié"
+      ],
+      "reponse": 1,
+      "explication": "L'équilibre borne l'écart de hauteur entre sous-arbres, garantissant une hauteur en O(log n)."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "Réseaux",
+      "enonce": "Le protocole DHCP permet :",
+      "choix": [
+        "de chiffrer une connexion",
+        "d'attribuer automatiquement une adresse IP à une machine du réseau",
+        "de router les paquets",
+        "d'envoyer des mails"
+      ],
+      "reponse": 1,
+      "explication": "DHCP attribue dynamiquement les adresses IP et paramètres réseau aux machines."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Complexité",
+      "enonce": "Fusionner deux listes triées de tailles n et m en une liste triée coûte :",
+      "choix": [
+        "O(1)",
+        "O(n + m)",
+        "O(n × m)",
+        "O((n+m)²)"
+      ],
+      "reponse": 1,
+      "explication": "On parcourt chaque élément une fois lors de la fusion : O(n + m)."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier hexadécimal 1A (base 16) ?",
+      "choix": [
+        "26",
+        "27",
+        "25",
+        "42"
+      ],
+      "reponse": 0,
+      "explication": "1A en base 16 vaut 26 en décimal."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "Types construits",
+      "enonce": "Quelle fonction donne le nombre d'éléments d'une liste L ?",
+      "choix": [
+        "size(L)",
+        "len(L)",
+        "count(L)",
+        "L.length"
+      ],
+      "reponse": 1,
+      "explication": "len(L) renvoie le nombre d'éléments de la liste."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "Sous Linux, la commande rm permet de :",
+      "choix": [
+        "renommer un fichier",
+        "supprimer un fichier",
+        "lister un dossier",
+        "afficher le contenu"
+      ],
+      "reponse": 1,
+      "explication": "rm (remove) supprime un fichier."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "Algorithmique",
+      "enonce": "Que renvoie ce code ?\n\ndef somme_pairs(T):\n    return sum(x for x in T if x % 2 == 0)\nprint(somme_pairs([1, 2, 3, 4, 5, 6]))",
+      "choix": [
+        "9",
+        "12",
+        "21",
+        "6"
+      ],
+      "reponse": 1,
+      "explication": "Les éléments pairs sont 2, 4, 6 ; leur somme vaut 12."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Structures de données",
+      "enonce": "Que renvoie ce code ?\n\np = []\nfor x in [4, 7, 1]:\n    p.append(x)\ns = 0\nwhile p:\n    s += p.pop()\nprint(s)",
+      "choix": [
+        "11",
+        "12",
+        "4",
+        "1"
+      ],
+      "reponse": 1,
+      "explication": "On dépile 1+7+4 = 12 ; l'ordre de dépilement n'affecte pas la somme."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Que vaut inv après ce code ?\n\nd = {'a': 1, 'b': 2}\ninv = {v: k for k, v in d.items()}\nprint(inv[2])",
+      "choix": [
+        "'a'",
+        "'b'",
+        "2",
+        "1"
+      ],
+      "reponse": 1,
+      "explication": "On inverse clés et valeurs : inv = {1:'a', 2:'b'}, donc inv[2] vaut 'b'."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "Bases de données SQL",
+      "enonce": "Que garantit la contrainte d'intégrité référentielle ?",
+      "choix": [
+        "l'unicité des lignes",
+        "qu'une clé étrangère pointe vers une valeur existante de la table référencée",
+        "le tri des colonnes",
+        "le chiffrement des données"
+      ],
+      "reponse": 1,
+      "explication": "L'intégrité référentielle interdit une clé étrangère orpheline (sans clé primaire correspondante)."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Le problème des tours de Hanoï à n disques se résout récursivement en :",
+      "choix": [
+        "n déplacements",
+        "2^n − 1 déplacements",
+        "n² déplacements",
+        "log n déplacements"
+      ],
+      "reponse": 1,
+      "explication": "Le nombre minimal de déplacements est 2^n − 1, obtenu par une résolution récursive."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Le nombre maximal d'arêtes d'un graphe simple non orienté à n sommets est :",
+      "choix": [
+        "n",
+        "n−1",
+        "n(n−1)/2",
+        "n²"
+      ],
+      "reponse": 2,
+      "explication": "Chaque paire de sommets peut être reliée au plus une fois : C(n,2) = n(n−1)/2."
+    }
+  ]
+}

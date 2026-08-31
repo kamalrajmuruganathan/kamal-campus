@@ -1,0 +1,180 @@
+{
+  "id": "bb-mathematiques-01",
+  "titre": "Bac blanc — Maths (n° 01)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Dérivation",
+      "enonce": "Dérivée de $f(x)=x^3-3x+2$ ?",
+      "choix": [
+        "$3x^2+3$",
+        "$x^2-3$",
+        "$3x^2-3$",
+        "$3x^3-3$"
+      ],
+      "reponse": 2,
+      "explication": "On dérive terme à terme : $(x^3)'=3x^2$, $(-3x)'=-3$, $(2)'=0$, d'où $f'(x)=3x^2-3$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Exponentielle",
+      "enonce": "Quelle est la limite $\\displaystyle\\lim_{x\\to+\\infty} e^{-x}$ ?",
+      "choix": [
+        "$+\\infty$",
+        "$0$",
+        "$1$",
+        "$-\\infty$"
+      ],
+      "reponse": 1,
+      "explication": "$e^{-x}=\\dfrac{1}{e^{x}}$ et $e^{x}\\to+\\infty$, donc $e^{-x}\\to 0$."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Logarithme",
+      "enonce": "Solution de l'équation $\\ln(x)=2$ ?",
+      "choix": [
+        "$2e$",
+        "$\\ln 2$",
+        "$e/2$",
+        "$e^2$"
+      ],
+      "reponse": 3,
+      "explication": "$\\ln(x)=2 \\iff x=e^2$ par définition du logarithme népérien."
+    },
+    {
+      "id": 4,
+      "difficulte": "facile",
+      "notion": "Suites géométriques",
+      "enonce": "Suite géométrique de raison $q=0{,}5$ et de premier terme $u_0=8$ : que vaut $u_3$ ?",
+      "choix": [
+        "$1$",
+        "$2$",
+        "$0{,}5$",
+        "$4$"
+      ],
+      "reponse": 0,
+      "explication": "$u_3=u_0\\,q^3=8\\times 0{,}5^3=8\\times\\dfrac18=1$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Probabilités conditionnelles",
+      "enonce": "Si $P(A)=0{,}3$ et $P_A(B)=0{,}5$, que vaut $P(A\\cap B)$ ?",
+      "choix": [
+        "$0{,}8$",
+        "$0{,}3$",
+        "$0{,}15$",
+        "$0{,}6$"
+      ],
+      "reponse": 2,
+      "explication": "$P(A\\cap B)=P(A)\\times P_A(B)=0{,}3\\times 0{,}5=0{,}15$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Loi binomiale",
+      "enonce": "$X$ suit la loi binomiale $\\mathcal{B}(10\\,;\\,0{,}2)$. Que vaut $E(X)$ ?",
+      "choix": [
+        "$0{,}2$",
+        "$2$",
+        "$8$",
+        "$1{,}6$"
+      ],
+      "reponse": 1,
+      "explication": "Pour une loi binomiale, $E(X)=np=10\\times 0{,}2=2$ (la valeur $1{,}6$ est la variance)."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Intégrale",
+      "enonce": "Que vaut $\\displaystyle\\int_0^1 2x\\,dx$ ?",
+      "choix": [
+        "$2$",
+        "$\\frac12$",
+        "$0$",
+        "$1$"
+      ],
+      "reponse": 3,
+      "explication": "Une primitive de $2x$ est $x^2$, donc $\\int_0^1 2x\\,dx=[x^2]_0^1=1-0=1$."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Géométrie dans l'espace",
+      "enonce": "Produit scalaire de $\\vec{u}(1;2;3)$ et $\\vec{v}(2;0;-1)$ ?",
+      "choix": [
+        "$-1$",
+        "$1$",
+        "$5$",
+        "$-3$"
+      ],
+      "reponse": 0,
+      "explication": "$\\vec{u}\\cdot\\vec{v}=1\\times 2+2\\times 0+3\\times(-1)=2+0-3=-1$."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Convexité",
+      "enonce": "La fonction $f(x)=x^3$ admet un point d'inflexion en :",
+      "choix": [
+        "$x=1$",
+        "$x=-1$",
+        "$x=0$",
+        "aucun point"
+      ],
+      "reponse": 2,
+      "explication": "$f''(x)=6x$ s'annule et change de signe en $0$ : point d'inflexion en $x=0$."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Dérivée composée",
+      "enonce": "Dérivée de $g(x)=e^{2x}$ ?",
+      "choix": [
+        "$e^{2x}$",
+        "$2e^{2x}$",
+        "$2e^{x}$",
+        "$e^{2}$"
+      ],
+      "reponse": 1,
+      "explication": "$(e^{u})'=u'e^{u}$ avec $u=2x$, $u'=2$, d'où $g'(x)=2e^{2x}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Dérivée de ln",
+      "enonce": "Dérivée de $h(x)=\\ln(x^2+1)$ ?",
+      "choix": [
+        "$\\dfrac{1}{x^2+1}$",
+        "$\\dfrac{2x}{x^2}$",
+        "$\\dfrac{x}{x^2+1}$",
+        "$\\dfrac{2x}{x^2+1}$"
+      ],
+      "reponse": 3,
+      "explication": "$(\\ln u)'=\\dfrac{u'}{u}$ avec $u=x^2+1$, $u'=2x$, d'où $h'(x)=\\dfrac{2x}{x^2+1}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Suites (limite)",
+      "enonce": "La suite définie par $u_{n+1}=0{,}5\\,u_n+3$ converge vers sa limite $L$. Que vaut $L$ ?",
+      "choix": [
+        "$6$",
+        "$3$",
+        "$0{,}5$",
+        "$12$"
+      ],
+      "reponse": 0,
+      "explication": "À la limite $L=0{,}5L+3$, soit $0{,}5L=3$, donc $L=6$."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "bb-si-05",
+  "titre": "Bac blanc — Sciences de l'ingénieur (n° 05)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Statique (3 forces)",
+      "enonce": "Un solide est en équilibre sous l'action de trois forces non parallèles. Ces trois forces sont nécessairement :",
+      "choix": [
+        "Perpendiculaires deux à deux",
+        "Concourantes (droites d'action coupant un même point) et de somme vectorielle nulle",
+        "Parallèles entre elles",
+        "Toutes de même intensité"
+      ],
+      "reponse": 1,
+      "explication": "Pour l'équilibre sous trois forces non parallèles, la somme vectorielle doit être nulle ET les droites d'action concourantes en un même point (moment résultant nul)."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "Résistance des matériaux (σ = F/S)",
+      "enonce": "Une pièce de section S = 10 mm² est soumise à un effort de traction F = 8000 N. Quelle est la contrainte normale σ ? (1 N/mm² = 1 MPa)",
+      "choix": [
+        "400 MPa",
+        "0,0013 MPa",
+        "80000 MPa",
+        "800 MPa"
+      ],
+      "reponse": 3,
+      "explication": "La contrainte vaut σ = F/S = 8000 / 10 = 800 MPa (car 1 N/mm² = 1 MPa)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Analyse fonctionnelle (FAST)",
+      "enonce": "À quoi sert un diagramme FAST en analyse fonctionnelle ?",
+      "choix": [
+        "Calculer le rendement d'un moteur",
+        "Représenter la trajectoire d'un point mobile",
+        "Décomposer une fonction en fonctions techniques puis en solutions constructives",
+        "Mesurer une contrainte mécanique"
+      ],
+      "reponse": 2,
+      "explication": "Le diagramme FAST décompose une fonction de service en fonctions techniques puis en solutions constructives, en répondant aux questions « pourquoi ? comment ? quand ? »."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Asservissement",
+      "enonce": "Dans un système asservi, quel est le rôle du capteur placé dans la boucle de retour ?",
+      "choix": [
+        "Amplifier la commande envoyée à l'actionneur",
+        "Fournir l'énergie à l'actionneur",
+        "Mesurer la grandeur de sortie afin de la comparer à la consigne",
+        "Filtrer mécaniquement les vibrations"
+      ],
+      "reponse": 2,
+      "explication": "Le capteur de retour mesure la sortie réelle ; le comparateur calcule l'écart entre cette mesure et la consigne. C'est le principe de la boucle fermée qui permet de corriger les erreurs."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Énergie consommée",
+      "enonce": "Un appareil de puissance 1500 W fonctionne pendant 0,5 h. Quelle énergie consomme-t-il ? (1 kWh = 1000 Wh)",
+      "choix": [
+        "750 kWh",
+        "1,5 kWh",
+        "3000 kWh",
+        "0,75 kWh"
+      ],
+      "reponse": 3,
+      "explication": "E = P × t = 1500 W × 0,5 h = 750 Wh = 0,75 kWh."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Transmission de mouvement",
+      "enonce": "Quel composant permet de transformer un mouvement de rotation en translation avec un pas précis ?",
+      "choix": [
+        "Un limiteur de couple",
+        "Un joint de Oldham",
+        "Système vis-écrou",
+        "Un roulement à billes"
+      ],
+      "reponse": 2,
+      "explication": "Le système vis-écrou réalise cette transformation de mouvement ; les autres solutions proposées ne conviennent pas à ce besoin."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Matériaux / RDM",
+      "enonce": "Le module d'Young (module d'élasticité) E caractérise :",
+      "choix": [
+        "Sa masse volumique",
+        "Sa température de fusion",
+        "La rigidité du matériau (rapport contrainte/déformation en zone élastique)",
+        "Sa résistance à la corrosion"
+      ],
+      "reponse": 2,
+      "explication": "Le module d'Young E = σ/ε (loi de Hooke) mesure la rigidité : plus E est grand, moins le matériau se déforme sous une contrainte donnée."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Réducteur",
+      "enonce": "Un réducteur de rapport 1/50 est entraîné par un moteur tournant à 1200 tr·min⁻¹. Quelle est la vitesse de sortie ?",
+      "choix": [
+        "1200 tr·min⁻¹",
+        "60000 tr·min⁻¹",
+        "24 tr·min⁻¹",
+        "50 tr·min⁻¹"
+      ],
+      "reponse": 2,
+      "explication": "Un rapport de réduction 1/50 divise la vitesse par 50 : 1200 / 50 = 24 tr·min⁻¹. En contrepartie, le couple de sortie est (idéalement) multiplié par 50."
+    },
+    {
+      "id": 9,
+      "difficulte": "facile",
+      "notion": "Chaîne d'information",
+      "enonce": "Dans la chaîne d'information, quelle fonction est assurée par un afficheur / voyant ?",
+      "choix": [
+        "TRAITER",
+        "ACQUÉRIR",
+        "ALIMENTER",
+        "COMMUNIQUER"
+      ],
+      "reponse": 3,
+      "explication": "Un afficheur / voyant restitue l'information à l'utilisateur : il assure la fonction COMMUNIQUER."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "Principe fondamental de la dynamique",
+      "enonce": "Un solide de masse 2 kg subit une accélération de 4 m·s⁻². Quelle est l'intensité de la résultante des forces qui lui est appliquée ?",
+      "choix": [
+        "4 N",
+        "8 N",
+        "0,5 N",
+        "6 N"
+      ],
+      "reponse": 1,
+      "explication": "D'après le principe fondamental de la dynamique, F = m × a = 2 × 4 = 8 N."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Rendement global d'une chaîne",
+      "enonce": "Une chaîne d'énergie comporte deux étages de rendements η₁ = 0,8 et η₂ = 0,6. Quel est le rendement global de la chaîne ?",
+      "choix": [
+        "0,96 (96 %)",
+        "1,4 (140 %)",
+        "0,48 (48 %)",
+        "0,7 (70 %)"
+      ],
+      "reponse": 2,
+      "explication": "Les rendements en série se multiplient : η = η₁ × η₂ = 0,8 × 0,6 = 0,48 (48 %)."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Énergie électrique",
+      "enonce": "Un récepteur alimenté sous 24 V absorbe un courant continu de 2 A. Quelle puissance électrique consomme-t-il ?",
+      "choix": [
+        "24 W",
+        "12 W",
+        "26 W",
+        "48 W"
+      ],
+      "reponse": 3,
+      "explication": "En courant continu, P = U × I = 24 × 2 = 48 W."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-17",
+  "titre": "Bac blanc — NSI (n° 17)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "difficile",
+      "notion": "Graphes",
+      "enonce": "Détecter un cycle lors d'un parcours en profondeur se fait en repérant :",
+      "choix": [
+        "un sommet de degré 0",
+        "une arête vers un sommet déjà en cours de visite (dans la pile)",
+        "le sommet le plus profond",
+        "une feuille"
+      ],
+      "reponse": 1,
+      "explication": "Rencontrer un sommet encore ouvert (dans la pile d'appel) signale une arête arrière, donc un cycle."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "Arbres",
+      "enonce": "Une expression arithmétique peut être représentée par un arbre où les feuilles sont :",
+      "choix": [
+        "les opérateurs",
+        "les opérandes (valeurs)",
+        "les parenthèses",
+        "les priorités"
+      ],
+      "reponse": 1,
+      "explication": "Dans un arbre d'expression, les feuilles portent les opérandes et les nœuds internes les opérateurs."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Réseaux",
+      "enonce": "Lorsqu'un lien tombe en panne, un protocole de routage dynamique :",
+      "choix": [
+        "arrête tout le réseau",
+        "recalcule et met à jour les routes pour contourner la panne",
+        "supprime les adresses IP",
+        "chiffre les paquets"
+      ],
+      "reponse": 1,
+      "explication": "Les protocoles dynamiques (RIP, OSPF) actualisent les tables de routage pour trouver un chemin alternatif."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Un algorithme dont le temps ne dépend pas de la taille des données est en :",
+      "choix": [
+        "O(n)",
+        "O(1)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "reponse": 1,
+      "explication": "Un coût constant, indépendant de n, se note O(1)."
+    },
+    {
+      "id": 5,
+      "difficulte": "difficile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier hexadécimal FF (base 16) ?",
+      "choix": [
+        "255",
+        "256",
+        "254",
+        "271"
+      ],
+      "reponse": 0,
+      "explication": "FF en base 16 vaut 255 en décimal."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Que renvoie 'informatique'[0:4] ?",
+      "choix": [
+        "'info'",
+        "'nfor'",
+        "'ormat'",
+        "'form'"
+      ],
+      "reponse": 0,
+      "explication": "La tranche [0:4] d'une chaîne donne les 4 premiers caractères : 'info'."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "Architecture",
+      "enonce": "La négation logique NON (NOT) de l'entrée 1 vaut :",
+      "choix": [
+        "1",
+        "0",
+        "2",
+        "indéterminé"
+      ],
+      "reponse": 1,
+      "explication": "NOT inverse la valeur : NOT 1 = 0."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Un algorithme est dit correct s'il :",
+      "choix": [
+        "s'exécute vite",
+        "renvoie le résultat attendu pour toute entrée valide",
+        "utilise peu de mémoire",
+        "tient en peu de lignes"
+      ],
+      "reponse": 1,
+      "explication": "La correction garantit un résultat conforme à la spécification pour toutes les entrées valides."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Structures de données",
+      "enonce": "Une file circulaire (tampon circulaire) sert surtout à :",
+      "choix": [
+        "trier des données en continu",
+        "réutiliser un tableau de taille fixe sans décaler les éléments",
+        "chiffrer un flux",
+        "compresser une image"
+      ],
+      "reponse": 1,
+      "explication": "Les indices de tête et de queue avancent modulo la taille, évitant tout décalage coûteux."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "Dictionnaires",
+      "enonce": "Quel est l'intérêt principal d'un index (table de hachage) sur une grande collection de données ?",
+      "choix": [
+        "réduire l'espace mémoire",
+        "accélérer la recherche par clé à un temps quasi constant",
+        "trier automatiquement les données",
+        "chiffrer les valeurs"
+      ],
+      "reponse": 1,
+      "explication": "L'index permet des recherches par clé en O(1) moyen au lieu d'un parcours linéaire O(n)."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "Le modèle relationnel organise les données en :",
+      "choix": [
+        "arbres",
+        "tables (relations) de lignes et colonnes",
+        "listes chaînées",
+        "graphes orientés"
+      ],
+      "reponse": 1,
+      "explication": "Une base relationnelle est un ensemble de tables (relations) constituées d'attributs et d'enregistrements."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "La complexité en temps du quicksort dans le pire des cas est :",
+      "choix": [
+        "O(n log n)",
+        "O(n²)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "reponse": 1,
+      "explication": "Avec un pivot mal choisi (tableau déjà trié), les partitions sont déséquilibrées : O(n²)."
+    }
+  ]
+}

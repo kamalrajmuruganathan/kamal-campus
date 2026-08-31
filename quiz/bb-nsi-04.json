@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-04",
+  "titre": "Bac blanc — NSI (n° 04)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Qu'est-ce qui provoque une erreur RecursionError en Python ?",
+      "choix": [
+        "un cas de base atteint trop vite",
+        "l'absence ou le non-atteinte du cas de base",
+        "un return manquant",
+        "une boucle while"
+      ],
+      "reponse": 1,
+      "explication": "Si le cas de base n'est jamais atteint, la profondeur d'appel dépasse la limite : RecursionError."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Quel parcours de graphe utilise une file (FIFO) ?",
+      "choix": [
+        "parcours en profondeur (DFS)",
+        "parcours en largeur (BFS)",
+        "tri topologique",
+        "parcours infixe"
+      ],
+      "reponse": 1,
+      "explication": "Le BFS explore niveau par niveau à l'aide d'une file."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Arbres",
+      "enonce": "La hauteur d'un arbre est :",
+      "choix": [
+        "le nombre de feuilles",
+        "la longueur du plus long chemin de la racine à une feuille",
+        "le nombre de nœuds",
+        "le nombre d'arêtes de la racine"
+      ],
+      "reponse": 1,
+      "explication": "La hauteur mesure le plus long chemin (en arêtes ou niveaux) de la racine à une feuille."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Réseaux",
+      "enonce": "Le protocole IP est responsable :",
+      "choix": [
+        "de l'acheminement (routage) des paquets grâce aux adresses IP",
+        "du chiffrement",
+        "de l'affichage des pages",
+        "de la compression"
+      ],
+      "reponse": 0,
+      "explication": "IP gère l'adressage et l'acheminement des paquets de proche en proche."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Un accès direct à un élément d'un tableau par son indice est en :",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "reponse": 0,
+      "explication": "L'adresse se calcule directement : accès en temps constant O(1)."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 1111 ?",
+      "choix": [
+        "15",
+        "16",
+        "14",
+        "17"
+      ],
+      "reponse": 0,
+      "explication": "1111 en base 2 vaut 15 en décimal."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nL = [5, 3, 8, 1]\nprint(L[-1])",
+      "choix": [
+        "5",
+        "1",
+        "8",
+        "erreur"
+      ],
+      "reponse": 1,
+      "explication": "L'indice −1 désigne le dernier élément : 1."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Architecture",
+      "enonce": "Un système d'exploitation a notamment pour rôle :",
+      "choix": [
+        "compiler les programmes",
+        "gérer les ressources (processeur, mémoire, périphériques)",
+        "chiffrer Internet",
+        "dessiner les circuits"
+      ],
+      "reponse": 1,
+      "explication": "L'OS alloue et arbitre l'accès aux ressources matérielles entre les programmes."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Combien de comparaisons au maximum pour une recherche dichotomique dans 1000 éléments triés ?",
+      "choix": [
+        "environ 1000",
+        "environ 500",
+        "environ 10",
+        "environ 100"
+      ],
+      "reponse": 2,
+      "explication": "log2(1000) ≈ 10 : la dichotomie ne demande qu'une dizaine de comparaisons."
+    },
+    {
+      "id": 10,
+      "difficulte": "facile",
+      "notion": "Structures de données",
+      "enonce": "On enfile 5 puis 8 puis 2 dans une file vide. Quel élément est défilé en premier ?",
+      "choix": [
+        "5",
+        "8",
+        "2",
+        "La file est vide"
+      ],
+      "reponse": 0,
+      "explication": "Le premier enfilé (5) est le premier défilé (FIFO)."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "Dictionnaires",
+      "enonce": "Que renvoie d.keys() pour d = {'x': 10, 'y': 20} ?",
+      "choix": [
+        "les valeurs 10 et 20",
+        "les clés 'x' et 'y'",
+        "les couples clé/valeur",
+        "la taille du dictionnaire"
+      ],
+      "reponse": 1,
+      "explication": "keys() renvoie une vue sur les clés du dictionnaire."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "Que fait cette requête ?\n\nSELECT nom FROM Eleve WHERE moyenne >= 10;",
+      "choix": [
+        "tous les noms",
+        "les noms des élèves ayant une moyenne d'au moins 10",
+        "la moyenne des élèves",
+        "le nombre d'élèves"
+      ],
+      "reponse": 1,
+      "explication": "On projette la colonne nom en restreignant aux lignes où moyenne ≥ 10."
+    }
+  ]
+}

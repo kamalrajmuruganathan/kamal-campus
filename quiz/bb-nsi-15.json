@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-15",
+  "titre": "Bac blanc — NSI (n° 15)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "Que fait AVG(note) dans un SELECT ?",
+      "choix": [
+        "compte les notes",
+        "calcule la moyenne des notes",
+        "renvoie la note maximale",
+        "additionne les notes"
+      ],
+      "reponse": 1,
+      "explication": "AVG est la fonction d'agrégation qui calcule la moyenne d'une colonne numérique."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "Dans le tri rapide (quicksort), l'élément autour duquel on partitionne s'appelle :",
+      "choix": [
+        "le maillon",
+        "le pivot",
+        "la clé",
+        "la racine"
+      ],
+      "reponse": 1,
+      "explication": "Le pivot sert à répartir les éléments plus petits d'un côté et plus grands de l'autre."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Graphes",
+      "enonce": "Le Web peut être modélisé par un graphe où les arcs représentent :",
+      "choix": [
+        "les serveurs",
+        "les liens hypertexte entre pages",
+        "les adresses IP",
+        "les protocoles"
+      ],
+      "reponse": 1,
+      "explication": "Les pages sont les sommets, les liens hypertexte orientés sont les arcs."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Arbres",
+      "enonce": "Insérer une valeur dans un ABR équilibré coûte :",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "reponse": 1,
+      "explication": "On descend jusqu'à la position d'insertion en suivant la hauteur, soit O(log n) si équilibré."
+    },
+    {
+      "id": 5,
+      "difficulte": "difficile",
+      "notion": "Réseaux",
+      "enonce": "L'encapsulation dans le modèle en couches signifie que :",
+      "choix": [
+        "chaque couche ajoute son en-tête aux données de la couche supérieure",
+        "les données sont compressées",
+        "chaque couche chiffre",
+        "les paquets sont triés"
+      ],
+      "reponse": 0,
+      "explication": "Chaque couche encapsule les données de la couche du dessus en y ajoutant son en-tête."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Quelle est la complexité de la recherche du maximum dans une liste non triée de n éléments ?",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "reponse": 2,
+      "explication": "Il faut examiner chaque élément une fois : O(n)."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture binaire de l'entier décimal 64 ?",
+      "choix": [
+        "1000000",
+        "1000001",
+        "111111",
+        "10000000"
+      ],
+      "reponse": 0,
+      "explication": "64 = 1000000 en base 2."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "La fonction range(2, 10, 3) génère :",
+      "choix": [
+        "2, 5, 8",
+        "2, 4, 6, 8",
+        "3, 6, 9",
+        "2, 10, 3"
+      ],
+      "reponse": 0,
+      "explication": "range(début, fin, pas) : 2, 5, 8 (8+3=11 ≥ 10, on s'arrête)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "Dans une arborescence de fichiers, le chemin absolu commence par :",
+      "choix": [
+        "le nom du fichier",
+        "la racine (/ sous Linux)",
+        "le répertoire courant",
+        "un point"
+      ],
+      "reponse": 1,
+      "explication": "Un chemin absolu part de la racine du système de fichiers (/)."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Que renvoie ce code ?\n\ndef compte(T, x):\n    c = 0\n    for e in T:\n        if e == x: c += 1\n    return c\nprint(compte([1, 2, 2, 3, 2], 2))",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "reponse": 2,
+      "explication": "La valeur 2 apparaît trois fois : la fonction renvoie 3."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "Structures de données",
+      "enonce": "La complexité de l'opération « empiler » sur une pile est :",
+      "choix": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "reponse": 0,
+      "explication": "Empiler ajoute un élément au sommet : temps constant O(1)."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Que renvoie ce code ?\n\nd = {1: 'un', 2: 'deux'}\nprint(len(d))",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "'un'"
+      ],
+      "reponse": 1,
+      "explication": "len(d) renvoie le nombre de couples clé:valeur, ici 2."
+    }
+  ]
+}

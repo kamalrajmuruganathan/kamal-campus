@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-08",
+  "titre": "Bac blanc — NSI (n° 08)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Que vaut la complexité de ce code en fonction de n ?\n\ns = 0\nfor i in range(n):\n    s += i",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "reponse": 2,
+      "explication": "Une seule boucle sur n éléments : O(n)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 100101 ?",
+      "choix": [
+        "37",
+        "38",
+        "36",
+        "39"
+      ],
+      "reponse": 0,
+      "explication": "100101 en base 2 vaut 37 en décimal."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nM = [[1, 2], [3, 4]]\nprint(M[1][0])",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": 2,
+      "explication": "M[1] est [3, 4] ; M[1][0] vaut 3 (tableau à deux dimensions)."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Architecture",
+      "enonce": "La mémoire cache sert à :",
+      "choix": [
+        "stocker durablement les fichiers",
+        "accélérer l'accès aux données fréquemment utilisées",
+        "afficher l'image",
+        "router les paquets"
+      ],
+      "reponse": 1,
+      "explication": "Le cache, plus rapide que la RAM, garde les données/instructions les plus utilisées près du processeur."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Que renvoie ce code ?\n\ndef maxi(T):\n    m = T[0]\n    for x in T:\n        if x > m: m = x\n    return m\nprint(maxi([3, 9, 2, 7]))",
+      "choix": [
+        "3",
+        "9",
+        "2",
+        "7"
+      ],
+      "reponse": 1,
+      "explication": "La fonction renvoie le maximum du tableau : 9."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Structures de données",
+      "enonce": "Dans une liste chaînée simple, quelle est la complexité de l'accès au k-ième élément ?",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "reponse": 2,
+      "explication": "Il faut parcourir la chaîne depuis la tête : accès linéaire O(n)."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Une collision dans une table de hachage se produit quand :",
+      "choix": [
+        "deux clés ont la même valeur",
+        "deux clés distinctes ont le même code de hachage",
+        "la table est pleine",
+        "une clé est absente"
+      ],
+      "reponse": 1,
+      "explication": "Une collision survient quand deux clés différentes tombent dans la même case ; on la gère par chaînage ou sondage."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "Quelle commande insère une nouvelle ligne dans une table ?",
+      "choix": [
+        "ADD ROW",
+        "INSERT INTO",
+        "APPEND",
+        "CREATE ROW"
+      ],
+      "reponse": 1,
+      "explication": "INSERT INTO table VALUES(...) ajoute un enregistrement."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Que renvoie somme([2,3,4]) ?\n\ndef somme(L):\n    if L == []:\n        return 0\n    return L[0] + somme(L[1:])",
+      "choix": [
+        "0",
+        "6",
+        "9",
+        "24"
+      ],
+      "reponse": 2,
+      "explication": "Somme récursive : 2+3+4 = 9."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Un graphe est dit connexe si :",
+      "choix": [
+        "il n'a pas de cycle",
+        "il existe un chemin entre toute paire de sommets",
+        "tous les sommets ont le même degré",
+        "il est orienté"
+      ],
+      "reponse": 1,
+      "explication": "La connexité signifie que tout sommet est atteignable depuis n'importe quel autre."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Arbres",
+      "enonce": "Le parcours infixe (gauche-racine-droite) d'un ABR restitue les valeurs :",
+      "choix": [
+        "dans un ordre quelconque",
+        "triées par ordre croissant",
+        "par niveau",
+        "triées par ordre décroissant"
+      ],
+      "reponse": 1,
+      "explication": "Le parcours infixe d'un ABR produit les valeurs en ordre croissant."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Réseaux",
+      "enonce": "Le champ TTL (Time To Live) d'un paquet sert à :",
+      "choix": [
+        "chiffrer le paquet",
+        "éviter qu'un paquet tourne indéfiniment en limitant le nombre de sauts",
+        "compresser les données",
+        "identifier l'application"
+      ],
+      "reponse": 1,
+      "explication": "Le TTL décrémente à chaque routeur ; à zéro le paquet est détruit, évitant les boucles infinies."
+    }
+  ]
+}

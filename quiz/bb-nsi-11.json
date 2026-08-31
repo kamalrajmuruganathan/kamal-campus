@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-11",
+  "titre": "Bac blanc — NSI (n° 11)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "difficile",
+      "notion": "Architecture",
+      "enonce": "La porte logique ET (AND) renvoie 1 seulement si :",
+      "choix": [
+        "au moins une entrée vaut 1",
+        "toutes les entrées valent 1",
+        "les entrées sont différentes",
+        "toutes les entrées valent 0"
+      ],
+      "reponse": 1,
+      "explication": "AND vaut 1 uniquement lorsque toutes ses entrées valent 1."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Algorithmique",
+      "enonce": "La recherche séquentielle parcourt le tableau :",
+      "choix": [
+        "par le milieu",
+        "élément par élément jusqu'à trouver la cible",
+        "en sautant un sur deux",
+        "de la fin au milieu"
+      ],
+      "reponse": 1,
+      "explication": "La recherche séquentielle (linéaire) examine les éléments l'un après l'autre."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Structures de données",
+      "enonce": "Vérifier qu'une expression a ses parenthèses bien équilibrées se fait naturellement avec :",
+      "choix": [
+        "une file",
+        "une pile",
+        "un tableau trié",
+        "une table de hachage"
+      ],
+      "reponse": 1,
+      "explication": "On empile chaque parenthèse ouvrante et on dépile à chaque fermante correspondante."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Un enregistrement (p-uplet nommé) modélisant un élève est souvent représenté par :",
+      "choix": [
+        "un entier",
+        "un dictionnaire {'nom':..., 'age':...}",
+        "une chaîne de caractères",
+        "un booléen"
+      ],
+      "reponse": 1,
+      "explication": "Un dictionnaire associe chaque attribut (champ) à sa valeur : idéal pour un enregistrement."
+    },
+    {
+      "id": 5,
+      "difficulte": "difficile",
+      "notion": "Bases de données SQL",
+      "enonce": "Dans une jointure, la clause reliant deux tables Emprunt et Eleve s'écrit typiquement :",
+      "choix": [
+        "WHERE Emprunt = Eleve",
+        "... JOIN Eleve ON Emprunt.id_eleve = Eleve.id",
+        "MERGE Emprunt, Eleve",
+        "LINK Emprunt TO Eleve"
+      ],
+      "reponse": 1,
+      "explication": "On joint sur l'égalité entre clé étrangère et clé primaire : ON Emprunt.id_eleve = Eleve.id."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "Que renvoie mystere(6, 4) ?\n\ndef mystere(a, b):\n    if b == 0:\n        return a\n    return mystere(b, a % b)",
+      "choix": [
+        "6",
+        "4",
+        "2",
+        "0"
+      ],
+      "reponse": 2,
+      "explication": "C'est l'algorithme d'Euclide (PGCD) : pgcd(6,4)=pgcd(4,2)=pgcd(2,0)=2."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Un arbre est un cas particulier de graphe :",
+      "choix": [
+        "orienté et cyclique",
+        "connexe et sans cycle",
+        "complet",
+        "non connexe"
+      ],
+      "reponse": 1,
+      "explication": "Un arbre est un graphe connexe et acyclique (n sommets, n−1 arêtes)."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Arbres",
+      "enonce": "Le nombre de nœuds au niveau k d'un arbre binaire (racine au niveau 0) est au plus :",
+      "choix": [
+        "k",
+        "2^k",
+        "2k",
+        "k²"
+      ],
+      "reponse": 1,
+      "explication": "Chaque niveau peut doubler le nombre de nœuds : au plus 2^k au niveau k."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Réseaux",
+      "enonce": "Le protocole de routage RIP choisit une route en fonction :",
+      "choix": [
+        "de la bande passante",
+        "du nombre de sauts (routeurs traversés)",
+        "du chiffrement",
+        "de l'heure"
+      ],
+      "reponse": 1,
+      "explication": "RIP est un protocole à vecteur de distance : il minimise le nombre de sauts."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "La complexité d'un algorithme mesure principalement :",
+      "choix": [
+        "la taille du code source",
+        "l'évolution du temps (ou de la mémoire) en fonction de la taille des données",
+        "le nombre de variables",
+        "la vitesse du processeur"
+      ],
+      "reponse": 1,
+      "explication": "La complexité décrit comment le coût évolue avec la taille de l'entrée, indépendamment du matériel."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture binaire de l'entier décimal 42 ?",
+      "choix": [
+        "101010",
+        "101011",
+        "101001",
+        "1010100"
+      ],
+      "reponse": 0,
+      "explication": "42 = 101010 en base 2."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nL = [4, 8, 15, 16, 23, 42]\nprint(L[::2])",
+      "choix": [
+        "[4, 8, 15]",
+        "[4, 15, 23]",
+        "[8, 16, 42]",
+        "[42, 23, 16]"
+      ],
+      "reponse": 1,
+      "explication": "Le pas 2 prend un élément sur deux à partir de l'indice 0 : [4, 15, 23]."
+    }
+  ]
+}

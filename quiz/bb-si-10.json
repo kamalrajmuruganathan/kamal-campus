@@ -1,0 +1,180 @@
+{
+  "id": "bb-si-10",
+  "titre": "Bac blanc — Sciences de l'ingénieur (n° 10)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "si",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "difficile",
+      "notion": "Transmission poulie-courroie",
+      "enonce": "Une poulie menante de diamètre 25 mm tourne à 1000 tr·min⁻¹ et entraîne par courroie une poulie menée de diamètre 60 mm. Quelle est la vitesse de la poulie menée ?",
+      "choix": [
+        "1000 tr·min⁻¹",
+        "2400 tr·min⁻¹",
+        "416,6667 tr·min⁻¹",
+        "833,3333 tr·min⁻¹"
+      ],
+      "reponse": 2,
+      "explication": "Le rapport de transmission donne n₂ = n₁ × d₁/d₂ = 1000 × 25/60 = 416,6667 tr·min⁻¹ (la grande poulie tourne plus lentement)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Analyse fonctionnelle",
+      "enonce": "Que représente la fonction globale d'un système dans une analyse fonctionnelle (bête à cornes / SysML) ?",
+      "choix": [
+        "Le service rendu à l'utilisateur : la valeur ajoutée sur la matière d'œuvre",
+        "La liste des composants électroniques",
+        "Le nombre de capteurs embarqués",
+        "Le coût de fabrication du système"
+      ],
+      "reponse": 0,
+      "explication": "La fonction globale exprime le service rendu : la valeur ajoutée apportée à la matière d'œuvre (déplacer, chauffer, informer…), indépendamment des solutions techniques."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Actionneur",
+      "enonce": "Quel est le rôle d'un actionneur dans un système ?",
+      "choix": [
+        "Stocker l'information numérique",
+        "Comparer la sortie à la consigne",
+        "Convertir l'énergie reçue en action (mouvement, chaleur…) sur la matière d'œuvre",
+        "Mesurer une grandeur physique"
+      ],
+      "reponse": 2,
+      "explication": "L'actionneur (moteur, vérin, résistance…) convertit l'énergie qu'il reçoit en une action physique agissant sur la matière d'œuvre."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Asservissement (écart)",
+      "enonce": "Dans un asservissement, comment définit-on l'écart (ou erreur) ?",
+      "choix": [
+        "Le produit de la consigne par le gain",
+        "La différence entre la consigne et la mesure de la sortie",
+        "La dérivée de la grandeur de sortie",
+        "La somme de la consigne et de la mesure"
+      ],
+      "reponse": 1,
+      "explication": "L'écart ε = consigne − mesure. Le correcteur agit pour annuler cet écart, ce qui amène la sortie à suivre la consigne."
+    },
+    {
+      "id": 5,
+      "difficulte": "facile",
+      "notion": "Capteur",
+      "enonce": "Quel est le rôle d'un capteur dans un système automatisé ?",
+      "choix": [
+        "Communiquer une décision à l'utilisateur",
+        "Traiter l'information selon un algorithme",
+        "Acquérir une grandeur physique et la convertir en signal exploitable",
+        "Fournir de la puissance à l'actionneur"
+      ],
+      "reponse": 2,
+      "explication": "Le capteur assure la fonction ACQUÉRIR : il mesure une grandeur physique (position, température, présence…) et la transforme en signal exploitable par la partie commande."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Puissance mécanique",
+      "enonce": "Un moteur développe un couple de 1,5 N·m à une vitesse de rotation de 300 rad·s⁻¹. Quelle est la puissance mécanique fournie ?",
+      "choix": [
+        "450 W",
+        "900 W",
+        "200 W",
+        "301,5 W"
+      ],
+      "reponse": 0,
+      "explication": "La puissance de rotation vaut P = C × ω = 1,5 × 300 = 450 W (couple en N·m multiplié par la vitesse angulaire en rad·s⁻¹)."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Rendement",
+      "enonce": "Un système reçoit une puissance de 800 W et en restitue 720 W d'utile. Quel est son rendement ?",
+      "choix": [
+        "1,1111 (111,1111 %)",
+        "80 W",
+        "0,9 (90 %)",
+        "0,1 (10 %)"
+      ],
+      "reponse": 2,
+      "explication": "Le rendement est le rapport puissance utile / puissance absorbée : η = 720/800 = 0,9 (90 %). Le reste est perdu (chaleur, frottements)."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Résistance des matériaux (σ = F/S)",
+      "enonce": "Une pièce de section S = 5 mm² est soumise à un effort de traction F = 2000 N. Quelle est la contrainte normale σ ? (1 N/mm² = 1 MPa)",
+      "choix": [
+        "200 MPa",
+        "10000 MPa",
+        "400 MPa",
+        "0,0025 MPa"
+      ],
+      "reponse": 2,
+      "explication": "La contrainte vaut σ = F/S = 2000 / 5 = 400 MPa (car 1 N/mm² = 1 MPa)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Matériaux / RDM",
+      "enonce": "La limite élastique Re d'un matériau correspond :",
+      "choix": [
+        "À la contrainte au-delà de laquelle apparaissent des déformations permanentes",
+        "À sa dureté superficielle",
+        "À sa conductivité thermique",
+        "À la masse maximale supportable"
+      ],
+      "reponse": 0,
+      "explication": "En dessous de Re la déformation est réversible (élastique) ; au-delà, le matériau se déforme de façon permanente (plastique)."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Statique (3 forces)",
+      "enonce": "Un solide est en équilibre sous l'action de trois forces non parallèles. Ces trois forces sont nécessairement :",
+      "choix": [
+        "Perpendiculaires deux à deux",
+        "Parallèles entre elles",
+        "Toutes de même intensité",
+        "Concourantes (droites d'action coupant un même point) et de somme vectorielle nulle"
+      ],
+      "reponse": 3,
+      "explication": "Pour l'équilibre sous trois forces non parallèles, la somme vectorielle doit être nulle ET les droites d'action concourantes en un même point (moment résultant nul)."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Mouvement (vitesse linéaire)",
+      "enonce": "Un point situé à 0,2 m de l'axe de rotation tourne à la vitesse angulaire ω = 20 rad·s⁻¹. Quelle est sa vitesse linéaire ?",
+      "choix": [
+        "100 m·s⁻¹",
+        "4 m·s⁻¹",
+        "8 m·s⁻¹",
+        "20,2 m·s⁻¹"
+      ],
+      "reponse": 1,
+      "explication": "La vitesse linéaire vaut v = R × ω = 0,2 × 20 = 4 m·s⁻¹."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Énergie consommée",
+      "enonce": "Un appareil de puissance 750 W fonctionne pendant 4 h. Quelle énergie consomme-t-il ? (1 kWh = 1000 Wh)",
+      "choix": [
+        "187,5 kWh",
+        "3 kWh",
+        "3000 kWh",
+        "6 kWh"
+      ],
+      "reponse": 1,
+      "explication": "E = P × t = 750 W × 4 h = 3000 Wh = 3 kWh."
+    }
+  ]
+}

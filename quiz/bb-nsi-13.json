@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-13",
+  "titre": "Bac blanc — NSI (n° 13)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Structures de données",
+      "enonce": "Que renvoie ce code ?\n\nfrom collections import deque\nf = deque()\nf.append('a'); f.append('b'); f.append('c')\nprint(f.popleft())",
+      "choix": [
+        "'c'",
+        "'b'",
+        "'a'",
+        "deque vide"
+      ],
+      "reponse": 2,
+      "explication": "popleft() retire l'élément de gauche : le premier enfilé, 'a' (comportement FIFO)."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Dictionnaires",
+      "enonce": "Quelle méthode supprime la clé 'x' d'un dictionnaire d en renvoyant sa valeur ?",
+      "choix": [
+        "d.remove('x')",
+        "d.pop('x')",
+        "d.delete('x')",
+        "d.discard('x')"
+      ],
+      "reponse": 1,
+      "explication": "d.pop('x') retire la clé 'x' et renvoie sa valeur associée."
+    },
+    {
+      "id": 3,
+      "difficulte": "difficile",
+      "notion": "Bases de données SQL",
+      "enonce": "HAVING diffère de WHERE car HAVING :",
+      "choix": [
+        "trie les résultats",
+        "filtre les groupes après agrégation",
+        "est plus rapide",
+        "supprime les doublons"
+      ],
+      "reponse": 1,
+      "explication": "WHERE filtre les lignes avant regroupement ; HAVING filtre les groupes après agrégation."
+    },
+    {
+      "id": 4,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "Que renvoie renv('abc') ?\n\ndef renv(s):\n    if s == '':\n        return ''\n    return renv(s[1:]) + s[0]",
+      "choix": [
+        "'abc'",
+        "'cba'",
+        "'a'",
+        "'bca'"
+      ],
+      "reponse": 1,
+      "explication": "On place le premier caractère en dernier récursivement : la chaîne est inversée -> 'cba'."
+    },
+    {
+      "id": 5,
+      "difficulte": "difficile",
+      "notion": "Graphes",
+      "enonce": "Le BFS depuis un sommet source garantit de trouver :",
+      "choix": [
+        "le plus long chemin",
+        "le plus court chemin en nombre d'arêtes (graphe non pondéré)",
+        "un cycle",
+        "le sommet de degré maximal"
+      ],
+      "reponse": 1,
+      "explication": "Dans un graphe non pondéré, le BFS atteint chaque sommet par un chemin de longueur minimale."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Arbres",
+      "enonce": "Un arbre à n nœuds possède exactement :",
+      "choix": [
+        "n arêtes",
+        "n−1 arêtes",
+        "2n arêtes",
+        "n/2 arêtes"
+      ],
+      "reponse": 1,
+      "explication": "Chaque nœud sauf la racine a une arête vers son parent : n−1 arêtes."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Réseaux",
+      "enonce": "Le protocole SMTP est utilisé pour :",
+      "choix": [
+        "consulter des pages Web",
+        "envoyer des courriers électroniques",
+        "traduire les noms de domaine",
+        "transférer des fichiers"
+      ],
+      "reponse": 1,
+      "explication": "SMTP (Simple Mail Transfer Protocol) sert à l'envoi de courriels."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Parcourir tous les couples d'éléments d'une liste de n éléments coûte :",
+      "choix": [
+        "O(n)",
+        "O(n²)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "reponse": 1,
+      "explication": "Il y a de l'ordre de n²/2 couples : complexité O(n²)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture binaire de l'entier décimal 7 ?",
+      "choix": [
+        "111",
+        "1000",
+        "110",
+        "1110"
+      ],
+      "reponse": 0,
+      "explication": "7 = 111 en base 2."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nt = (7,)\nprint(type(t) == tuple)",
+      "choix": [
+        "False",
+        "True",
+        "7",
+        "erreur"
+      ],
+      "reponse": 1,
+      "explication": "(7,) avec la virgule est un tuple à un élément : le test renvoie True."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "Sous Linux, la commande qui liste le contenu d'un répertoire est :",
+      "choix": [
+        "cd",
+        "ls",
+        "rm",
+        "mkdir"
+      ],
+      "reponse": 1,
+      "explication": "ls affiche la liste des fichiers et dossiers du répertoire courant."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "Échanger le contenu de deux variables a et b en Python se fait par :",
+      "choix": [
+        "a = b; b = a",
+        "a, b = b, a",
+        "swap(a, b)",
+        "a == b"
+      ],
+      "reponse": 1,
+      "explication": "L'affectation multiple a, b = b, a échange les valeurs sans variable temporaire."
+    }
+  ]
+}

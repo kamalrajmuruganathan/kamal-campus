@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-07",
+  "titre": "Bac blanc — NSI (n° 07)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "difficile",
+      "notion": "Réseaux",
+      "enonce": "Une adresse IPv6 est codée sur :",
+      "choix": [
+        "32 bits",
+        "64 bits",
+        "128 bits",
+        "256 bits"
+      ],
+      "reponse": 2,
+      "explication": "IPv6 utilise 128 bits pour élargir considérablement l'espace d'adressage."
+    },
+    {
+      "id": 2,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Quelle complexité est asymptotiquement la plus efficace pour de grandes valeurs de n ?",
+      "choix": [
+        "O(n²)",
+        "O(n log n)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "reponse": 3,
+      "explication": "O(log n) croît le plus lentement des quatre : c'est la plus efficace."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 1111111 ?",
+      "choix": [
+        "127",
+        "128",
+        "126",
+        "129"
+      ],
+      "reponse": 0,
+      "explication": "1111111 en base 2 vaut 127 en décimal."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Comment ajouter la valeur 7 en fin de liste L ?",
+      "choix": [
+        "L.add(7)",
+        "L.append(7)",
+        "L.insert(7)",
+        "L + 7"
+      ],
+      "reponse": 1,
+      "explication": "append(7) ajoute 7 à la fin de la liste."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Systèmes d'exploitation",
+      "enonce": "L'ordonnanceur (scheduler) du système d'exploitation :",
+      "choix": [
+        "compile le code",
+        "choisit quel processus prêt reçoit le processeur",
+        "chiffre les fichiers",
+        "gère le réseau uniquement"
+      ],
+      "reponse": 1,
+      "explication": "L'ordonnanceur répartit le temps processeur entre les processus prêts."
+    },
+    {
+      "id": 6,
+      "difficulte": "difficile",
+      "notion": "Algorithmique",
+      "enonce": "Le tri à bulles compare et échange :",
+      "choix": [
+        "le minimum et le maximum",
+        "des éléments voisins jusqu'à ce qu'aucun échange ne soit nécessaire",
+        "des éléments choisis au hasard",
+        "la racine et les feuilles"
+      ],
+      "reponse": 1,
+      "explication": "Le tri à bulles échange les éléments adjacents mal ordonnés, faisant « remonter » les grands éléments."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Structures de données",
+      "enonce": "Que renvoie le code Python suivant ?\n\np = []\np.append(1); p.append(2); p.append(3)\nprint(p.pop(), p.pop())",
+      "choix": [
+        "1 2",
+        "3 2",
+        "2 3",
+        "3 1"
+      ],
+      "reponse": 1,
+      "explication": "p.pop() retire et renvoie le dernier élément : d'abord 3, puis 2."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Dictionnaires",
+      "enonce": "Pourquoi une liste ne peut-elle pas servir de clé de dictionnaire ?",
+      "choix": [
+        "elle est trop volumineuse",
+        "elle est mutable donc non hachable",
+        "elle contient des doublons",
+        "elle n'a pas de méthode __eq__"
+      ],
+      "reponse": 1,
+      "explication": "Les clés doivent être hachables ; une liste étant mutable, son hash n'est pas défini."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Bases de données SQL",
+      "enonce": "Une clé étrangère sert à :",
+      "choix": [
+        "accélérer les tris",
+        "référencer la clé primaire d'une autre table",
+        "interdire les doublons",
+        "chiffrer une colonne"
+      ],
+      "reponse": 1,
+      "explication": "Une clé étrangère établit un lien référentiel vers la clé primaire d'une autre table."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "Quelle est la complexité en temps du tri fusion sur n éléments ?",
+      "choix": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "reponse": 1,
+      "explication": "log n niveaux de découpage, chacun coûtant O(n) à fusionner : O(n log n)."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Graphes",
+      "enonce": "Une liste d'adjacence est préférable à une matrice d'adjacence quand le graphe est :",
+      "choix": [
+        "complet",
+        "creux (peu d'arêtes)",
+        "non orienté",
+        "pondéré"
+      ],
+      "reponse": 1,
+      "explication": "Pour un graphe creux, la liste d'adjacence économise la mémoire (O(sommets+arêtes))."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Arbres",
+      "enonce": "Un arbre binaire complet de hauteur h contient au maximum :",
+      "choix": [
+        "h nœuds",
+        "2h nœuds",
+        "2^(h+1) − 1 nœuds",
+        "h² nœuds"
+      ],
+      "reponse": 2,
+      "explication": "Un arbre binaire de hauteur h a au plus 2^(h+1) − 1 nœuds (niveaux 0 à h)."
+    }
+  ]
+}

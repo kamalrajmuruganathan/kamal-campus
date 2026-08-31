@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-03",
+  "titre": "Bac blanc — NSI (n° 03)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "Bases de données SQL",
+      "enonce": "Quelle clause trie le résultat d'une requête ?",
+      "choix": [
+        "SORT",
+        "ORDER BY",
+        "GROUP BY",
+        "RANK"
+      ],
+      "reponse": 1,
+      "explication": "ORDER BY trie selon une ou plusieurs colonnes (ASC par défaut)."
+    },
+    {
+      "id": 2,
+      "difficulte": "difficile",
+      "notion": "Récursivité",
+      "enonce": "Que renvoie f(5) ?\n\ndef f(n):\n    if n <= 1:\n        return n\n    return f(n-1) + f(n-2)",
+      "choix": [
+        "3",
+        "5",
+        "8",
+        "13"
+      ],
+      "reponse": 1,
+      "explication": "Suite de Fibonacci : f(5) = 5 (0,1,1,2,3,5)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Le degré d'un sommet dans un graphe non orienté est :",
+      "choix": [
+        "le nombre de sommets voisins reliés à lui",
+        "son numéro",
+        "sa valeur",
+        "la longueur du plus court chemin"
+      ],
+      "reponse": 0,
+      "explication": "Le degré est le nombre d'arêtes incidentes, donc de voisins directs."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Arbres",
+      "enonce": "Dans un arbre binaire, chaque nœud a au plus :",
+      "choix": [
+        "1 enfant",
+        "2 enfants",
+        "3 enfants",
+        "un nombre illimité"
+      ],
+      "reponse": 1,
+      "explication": "Un arbre binaire limite chaque nœud à deux enfants (gauche et droit)."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Réseaux",
+      "enonce": "Dans le modèle TCP/IP, TCP assure :",
+      "choix": [
+        "l'adressage des machines",
+        "un transport fiable, avec accusés de réception et remise en ordre",
+        "le chiffrement",
+        "la résolution de noms"
+      ],
+      "reponse": 1,
+      "explication": "TCP fournit un transport fiable : segmentation, accusés de réception, réémission et remise en ordre."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Complexité",
+      "enonce": "Quelle complexité correspond à deux boucles imbriquées parcourant chacune n éléments ?",
+      "choix": [
+        "O(n)",
+        "O(2n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "reponse": 2,
+      "explication": "n × n itérations donnent une complexité quadratique O(n²)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est la valeur décimale de l'entier binaire non signé 101010 ?",
+      "choix": [
+        "42",
+        "43",
+        "41",
+        "44"
+      ],
+      "reponse": 0,
+      "explication": "101010 en base 2 vaut 42 en décimal."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Que renvoie ce code ?\n\nL = [0, 1, 2, 3, 4, 5]\nprint(L[1:4])",
+      "choix": [
+        "[1, 2, 3, 4]",
+        "[1, 2, 3]",
+        "[0, 1, 2, 3]",
+        "[2, 3, 4]"
+      ],
+      "reponse": 1,
+      "explication": "La tranche [1:4] va de l'indice 1 (inclus) à 4 (exclu) : [1, 2, 3]."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "Architecture",
+      "enonce": "Le rôle de l'unité de commande (contrôle) est :",
+      "choix": [
+        "stocker les données",
+        "séquencer et décoder les instructions",
+        "effectuer les calculs",
+        "afficher l'écran"
+      ],
+      "reponse": 1,
+      "explication": "L'unité de commande lit, décode et pilote l'exécution des instructions."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Algorithmique",
+      "enonce": "La recherche dichotomique ne fonctionne que si le tableau est :",
+      "choix": [
+        "de taille paire",
+        "trié",
+        "rempli d'entiers",
+        "de petite taille"
+      ],
+      "reponse": 1,
+      "explication": "La dichotomie exploite l'ordre du tableau pour éliminer une moitié à chaque comparaison."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "Structures de données",
+      "enonce": "On empile 5 puis 8 puis 2 dans une pile vide. Quel élément est dépilé en premier ?",
+      "choix": [
+        "5",
+        "8",
+        "2",
+        "La pile est vide"
+      ],
+      "reponse": 2,
+      "explication": "Le dernier empilé (2) est le premier dépilé (LIFO)."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Quelle est la complexité moyenne de l'accès à une valeur par sa clé dans un dictionnaire (table de hachage) ?",
+      "choix": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "reponse": 0,
+      "explication": "Grâce à la fonction de hachage, l'accès moyen est en temps constant O(1)."
+    }
+  ]
+}

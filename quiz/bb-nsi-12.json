@@ -1,0 +1,180 @@
+{
+  "id": "bb-nsi-12",
+  "titre": "Bac blanc — NSI (n° 12)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "nsi",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "difficile",
+      "notion": "Algorithmique",
+      "enonce": "Que renvoie ce code ?\n\ndef cherche(T, x):\n    for i in range(len(T)):\n        if T[i] == x: return i\n    return -1\nprint(cherche([4, 8, 15, 16], 15))",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "-1"
+      ],
+      "reponse": 1,
+      "explication": "15 se trouve à l'indice 2 : la fonction renvoie 2."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Structures de données",
+      "enonce": "Quelle opération n'appartient PAS à l'interface classique d'une pile ?",
+      "choix": [
+        "empiler",
+        "dépiler",
+        "pile_vide",
+        "trier"
+      ],
+      "reponse": 3,
+      "explication": "Une pile expose empiler, dépiler et le test de vacuité ; le tri n'en fait pas partie."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "Dictionnaires",
+      "enonce": "Que produit ce code ?\n\ntable = [{'nom':'A','n':12},{'nom':'B','n':8}]\nprint(sum(e['n'] for e in table))",
+      "choix": [
+        "2",
+        "20",
+        "'AB'",
+        "12"
+      ],
+      "reponse": 1,
+      "explication": "On additionne les champs n de chaque enregistrement : 12 + 8 = 20."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Bases de données SQL",
+      "enonce": "À quoi sert GROUP BY ?",
+      "choix": [
+        "trier les lignes",
+        "regrouper les lignes pour appliquer une fonction d'agrégation",
+        "supprimer des lignes",
+        "joindre deux tables"
+      ],
+      "reponse": 1,
+      "explication": "GROUP BY forme des groupes de lignes sur lesquels s'appliquent COUNT, SUM, AVG, etc."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Récursivité",
+      "enonce": "Dans une fonction récursive, chaque appel non terminé occupe :",
+      "choix": [
+        "une case du tas",
+        "un cadre sur la pile d'appels",
+        "un registre du processeur",
+        "une entrée du cache"
+      ],
+      "reponse": 1,
+      "explication": "Chaque appel empile un cadre (contexte) sur la pile d'exécution jusqu'à son retour."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Graphes",
+      "enonce": "Comment modéliser un réseau social (amitiés réciproques) ?",
+      "choix": [
+        "un graphe orienté",
+        "un graphe non orienté",
+        "un arbre binaire",
+        "une pile"
+      ],
+      "reponse": 1,
+      "explication": "Une amitié réciproque est symétrique : arête non orientée entre deux personnes."
+    },
+    {
+      "id": 7,
+      "difficulte": "difficile",
+      "notion": "Arbres",
+      "enonce": "Un parcours en largeur d'un arbre s'appuie sur :",
+      "choix": [
+        "une pile",
+        "une file",
+        "un dictionnaire",
+        "la récursion pure"
+      ],
+      "reponse": 1,
+      "explication": "Le parcours par niveaux utilise une file (FIFO) pour visiter les nœuds dans l'ordre de découverte."
+    },
+    {
+      "id": 8,
+      "difficulte": "difficile",
+      "notion": "Réseaux",
+      "enonce": "Le protocole OSPF détermine les routes selon :",
+      "choix": [
+        "le nombre de sauts uniquement",
+        "un coût lié à l'état des liens (bande passante)",
+        "l'ordre alphabétique",
+        "l'adresse MAC"
+      ],
+      "reponse": 1,
+      "explication": "OSPF est un protocole à état de liens qui calcule les plus courts chemins pondérés (coût des liens)."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Complexité",
+      "enonce": "Un algorithme de complexité O(2^n) est qualifié de :",
+      "choix": [
+        "logarithmique",
+        "exponentiel",
+        "linéaire",
+        "constant"
+      ],
+      "reponse": 1,
+      "explication": "Un coût en 2^n croît exponentiellement : impraticable dès que n est grand."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Représentation des données",
+      "enonce": "Quelle est l'écriture binaire de l'entier décimal 100 ?",
+      "choix": [
+        "1100100",
+        "1100101",
+        "1100011",
+        "11001000"
+      ],
+      "reponse": 0,
+      "explication": "100 = 1100100 en base 2."
+    },
+    {
+      "id": 11,
+      "difficulte": "moyen",
+      "notion": "Types construits",
+      "enonce": "Que renvoie sum([2, 4, 6]) ?",
+      "choix": [
+        "3",
+        "12",
+        "246",
+        "6"
+      ],
+      "reponse": 1,
+      "explication": "sum additionne les éléments : 2+4+6 = 12."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Architecture",
+      "enonce": "La porte logique OU (OR) renvoie 0 seulement si :",
+      "choix": [
+        "au moins une entrée vaut 1",
+        "toutes les entrées valent 0",
+        "les entrées diffèrent",
+        "une seule entrée vaut 1"
+      ],
+      "reponse": 1,
+      "explication": "OR vaut 0 uniquement quand toutes les entrées valent 0."
+    }
+  ]
+}

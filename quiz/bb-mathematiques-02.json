@@ -1,0 +1,180 @@
+{
+  "id": "bb-mathematiques-02",
+  "titre": "Bac blanc — Maths (n° 02)",
+  "examen": "Bac blanc",
+  "niveau": "terminale",
+  "matiere": "mathematiques",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question. Mélange de chapitres.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "moyen",
+      "notion": "Dérivée d'un quotient",
+      "enonce": "Dérivée de $f(x)=\\dfrac{x}{x+1}$ ?",
+      "choix": [
+        "$\\dfrac{-1}{(x+1)^2}$",
+        "$\\dfrac{1}{(x+1)^2}$",
+        "$\\dfrac{1}{x+1}$",
+        "$\\dfrac{2x+1}{(x+1)^2}$"
+      ],
+      "reponse": 1,
+      "explication": "$\\left(\\dfrac uv\\right)'=\\dfrac{u'v-uv'}{v^2}=\\dfrac{(x+1)-x}{(x+1)^2}=\\dfrac{1}{(x+1)^2}$."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "Exponentielle",
+      "enonce": "Solution de $e^{x}=5$ ?",
+      "choix": [
+        "$5$",
+        "$\\log 5$",
+        "$\\dfrac15$",
+        "$\\ln 5$"
+      ],
+      "reponse": 3,
+      "explication": "$e^{x}=5 \\iff x=\\ln 5$."
+    },
+    {
+      "id": 3,
+      "difficulte": "facile",
+      "notion": "Suites arithmétiques",
+      "enonce": "Suite arithmétique $u_n=3+2n$ : que vaut $u_5$ ?",
+      "choix": [
+        "$13$",
+        "$10$",
+        "$16$",
+        "$11$"
+      ],
+      "reponse": 0,
+      "explication": "$u_5=3+2\\times 5=3+10=13$."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "Loi binomiale",
+      "enonce": "$X\\sim\\mathcal{B}(3\\,;\\,0{,}5)$. Que vaut $P(X=0)$ ?",
+      "choix": [
+        "$0{,}5$",
+        "$0{,}375$",
+        "$0{,}125$",
+        "$0{,}25$"
+      ],
+      "reponse": 2,
+      "explication": "$P(X=0)=0{,}5^3=0{,}125$."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "Intégrale",
+      "enonce": "Que vaut $\\displaystyle\\int_1^e \\dfrac{1}{x}\\,dx$ ?",
+      "choix": [
+        "$e$",
+        "$1$",
+        "$e-1$",
+        "$0$"
+      ],
+      "reponse": 1,
+      "explication": "Une primitive de $\\dfrac1x$ est $\\ln x$ : $[\\ln x]_1^e=\\ln e-\\ln 1=1$."
+    },
+    {
+      "id": 6,
+      "difficulte": "moyen",
+      "notion": "Géométrie dans l'espace",
+      "enonce": "Distance de l'origine $O$ au point $A(2;-1;2)$ ?",
+      "choix": [
+        "$5$",
+        "$\\sqrt5$",
+        "$9$",
+        "$3$"
+      ],
+      "reponse": 3,
+      "explication": "$OA=\\sqrt{2^2+(-1)^2+2^2}=\\sqrt{4+1+4}=\\sqrt9=3$."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "Croissances comparées",
+      "enonce": "Limite $\\displaystyle\\lim_{x\\to+\\infty} x\\,e^{-x}$ ?",
+      "choix": [
+        "$0$",
+        "$+\\infty$",
+        "$1$",
+        "$e$"
+      ],
+      "reponse": 0,
+      "explication": "Par croissance comparée, $x e^{-x}=\\dfrac{x}{e^{x}}\\to 0$ en $+\\infty$."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "Dérivée d'un produit",
+      "enonce": "Dérivée de $f(x)=x\\,e^{x}$ ?",
+      "choix": [
+        "$e^{x}$",
+        "$x e^{x}$",
+        "$(1+x)e^{x}$",
+        "$(1-x)e^{x}$"
+      ],
+      "reponse": 2,
+      "explication": "$(uv)'=u'v+uv'=1\\cdot e^{x}+x\\cdot e^{x}=(1+x)e^{x}$."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "Probabilités totales",
+      "enonce": "Avec $P(A)=0{,}4$, $P_A(B)=0{,}5$ et $P_{\\bar A}(B)=0{,}25$, que vaut $P(B)$ ?",
+      "choix": [
+        "$0{,}75$",
+        "$0{,}35$",
+        "$0{,}2$",
+        "$0{,}5$"
+      ],
+      "reponse": 1,
+      "explication": "$P(B)=0{,}4\\times0{,}5+0{,}6\\times0{,}25=0{,}2+0{,}15=0{,}35$."
+    },
+    {
+      "id": 10,
+      "difficulte": "moyen",
+      "notion": "Convexité",
+      "enonce": "La fonction $f(x)=e^{x}$ est :",
+      "choix": [
+        "concave sur $\\mathbb{R}$",
+        "convexe sur $\\mathbb{R}_-$ seulement",
+        "ni convexe ni concave",
+        "convexe sur $\\mathbb{R}$"
+      ],
+      "reponse": 3,
+      "explication": "$f''(x)=e^{x}>0$ sur $\\mathbb{R}$ : $f$ est convexe sur $\\mathbb{R}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "difficile",
+      "notion": "Somme géométrique",
+      "enonce": "Que vaut $\\displaystyle\\sum_{k=0}^{10} 2^k=1+2+4+\\dots+2^{10}$ ?",
+      "choix": [
+        "$2047$",
+        "$1024$",
+        "$2048$",
+        "$1023$"
+      ],
+      "reponse": 0,
+      "explication": "$\\sum_{k=0}^{10}2^k=2^{11}-1=2048-1=2047$."
+    },
+    {
+      "id": 12,
+      "difficulte": "difficile",
+      "notion": "Logarithme (équation)",
+      "enonce": "Solution de $\\ln(x)+\\ln(x-1)=\\ln 6$ (avec $x>1$) ?",
+      "choix": [
+        "$2$",
+        "$-2$",
+        "$3$",
+        "$6$"
+      ],
+      "reponse": 2,
+      "explication": "$x(x-1)=6 \\iff x^2-x-6=0$, racines $3$ et $-2$ ; seule $x=3$ convient ($x>1$)."
+    }
+  ]
+}
