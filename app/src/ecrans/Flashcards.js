@@ -17,7 +17,7 @@ import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
-import { matiereParlante } from '../parole';
+import { matiereParlante, parler } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
@@ -31,11 +31,18 @@ export default function Flashcards({ route, navigation }) {
   const [connues, setConnues] = useState([]); // booléens, une case par carte jugée
   const [fini, setFini] = useState(false);
 
-  const { enregistrerFlashcards } = useProgression();
+  const { enregistrerFlashcards, profil } = useProgression();
   const [bilan, setBilan] = useState(null);
   const dejaEnregistre = useRef(false);
 
   const nbConnues = connues.filter(Boolean).length;
+
+  // Lecture automatique de la face affichée (si activée, pour les langues).
+  useEffect(() => {
+    if (fini || !profil.lectureAutoCartes || !chapitre || !matiereParlante(chapitre.matiere)) return;
+    const carte = cartes[i];
+    if (carte) parler(face === 'recto' ? carte.recto : carte.verso, chapitre.matiere);
+  }, [i, face, fini]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (fini && !dejaEnregistre.current) {

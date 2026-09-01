@@ -41,6 +41,8 @@ export function profilVide() {
     langue: 'fr', // langue de l'interface (fr/en/es/ar)
     themePref: 'systeme', // apparence : 'systeme' | 'clair' | 'sombre'
     vitesseParole: 'normal', // lecture à voix haute : 'lent' | 'normal' | 'rapide'
+    voix: {}, // voix préférée par langue : { 'en-US': id, 'es-ES': id, 'de-DE': id }
+    lectureAutoCartes: false, // lire automatiquement la carte quand on la retourne
     niveauParDefaut: null, // niveau choisi à l'onboarding (préselection accueil)
     rappelActif: false,
     rappelHeure: '18:00', // 'HH:MM'
@@ -62,6 +64,7 @@ function normaliser(brut) {
     favoris: Array.isArray(brut.favoris) ? brut.favoris : [],
     historique: Array.isArray(brut.historique) ? brut.historique : [],
     planning: Array.isArray(brut.planning) ? brut.planning : [],
+    voix: (brut.voix && typeof brut.voix === 'object') ? brut.voix : {},
   };
 }
 

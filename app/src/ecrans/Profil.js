@@ -5,7 +5,7 @@
  * Les points s'obtiennent en réussissant des QCM et des bacs blancs.
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { View, Text, ScrollView, Pressable, Alert, StyleSheet } from 'react-native';
@@ -16,7 +16,14 @@ import { niveauPourXp } from '../../lib/progression';
 import { evaluerBadges } from '../../lib/badges';
 import { serieAffichee, dateLocale } from '../../lib/serie';
 import { appliquerNotifications } from '../notifications';
+import { listerVoix } from '../parole';
 import { LANGUES, useLangue } from '../i18n';
+
+const LANGUES_ORALES = [
+  { code: 'en-US', prefixe: 'en', nom: 'Anglais' },
+  { code: 'es-ES', prefixe: 'es', nom: 'Espagnol' },
+  { code: 'de-DE', prefixe: 'de', nom: 'Allemand' },
+];
 
 const OBJECTIFS = [30, 60, 120, 200];
 const HEURES = ['17:00', '18:00', '19:00', '20:00'];
@@ -74,6 +81,12 @@ export default function Profil({ navigation }) {
   const xpJour = profil.jourCourant === jour ? profil.xpDuJour : 0;
   const progJour = objectif > 0 ? Math.min(1, xpJour / objectif) : 0;
   const [heureChoisie, setHeureChoisie] = useState(profil.rappelHeure || '18:00');
+  const [voixDispo, setVoixDispo] = useState([]);
+  useEffect(() => {
+    let vivant = true;
+    listerVoix().then((v) => { if (vivant) setVoixDispo(v); });
+    return () => { vivant = false; };
+  }, []);
 
   const activerRappel = async (heure) => {
     // On reprogramme tout (rappel + planning) pour ne pas effacer les créneaux.
@@ -313,6 +326,79 @@ export default function Profil({ navigation }) {
               );
             })}
           </View>
+        </View>
+
+        {/* Oral : lecture automatique + choix de voix */}
+        <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+            Oral : voix &amp; lecture auto 🔊
+          </Text>
+
+          {/* Lecture automatique des cartes */}
+          <Pressable
+            onPress={() => definirReglages({ lectureAutoCartes: !profil.lectureAutoCartes })}
+            accessibilityRole="switch"
+            accessibilityState={{ checked: !!profil.lectureAutoCartes }}
+            style={({ pressed }) => [
+              st.pilule,
+              {
+                alignSelf: 'flex-start',
+                marginTop: t.espace.m,
+                backgroundColor: profil.lectureAutoCartes ? t.couleur.accent : t.couleur.fond,
+                borderColor: profil.lectureAutoCartes ? t.couleur.accent : t.couleur.trait,
+                opacity: pressed ? 0.7 : 1,
+              },
+            ]}
+          >
+            <Text style={{ color: profil.lectureAutoCartes ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+              {profil.lectureAutoCartes ? '✓ ' : ''}Lire les cartes automatiquement
+            </Text>
+          </Pressable>
+
+          {/* Choix de la voix, par langue */}
+          {voixDispo.length === 0 ? (
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: t.espace.m, lineHeight: 18 }}>
+              Les voix dépendent de ton téléphone. Ajoute des voix dans les réglages de l'appareil
+              (Accessibilité → Synthèse vocale) pour pouvoir en choisir ici.
+            </Text>
+          ) : (
+            LANGUES_ORALES.map((lg) => {
+              const voix = voixDispo.filter((v) => String(v.language || '').toLowerCase().startsWith(lg.prefixe)).slice(0, 4);
+              if (voix.length === 0) return null;
+              const choisie = (profil.voix || {})[lg.code] || null;
+              const poser = (id) => {
+                const nv = { ...(profil.voix || {}) };
+                if (id) nv[lg.code] = id; else delete nv[lg.code];
+                definirReglages({ voix: nv });
+              };
+              return (
+                <View key={lg.code} style={{ marginTop: t.espace.m }}>
+                  <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.6 }}>
+                    {lg.nom}
+                  </Text>
+                  <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: 6 }}>
+                    {[{ id: null, nom: 'Auto' }, ...voix.map((v) => ({ id: v.identifier, nom: v.name || v.identifier }))].map((opt) => {
+                      const actif = choisie === opt.id;
+                      return (
+                        <Pressable
+                          key={opt.id ?? 'auto'}
+                          onPress={() => poser(opt.id)}
+                          style={({ pressed }) => [
+                            st.pilule,
+                            { backgroundColor: actif ? t.couleur.accent : t.couleur.fond, borderColor: actif ? t.couleur.accent : t.couleur.trait, opacity: pressed ? 0.7 : 1 },
+                          ]}
+                        >
+                          <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.minuscule, fontWeight: '650' }} numberOfLines={1}>
+                            {opt.nom}
+                          </Text>
+                        </Pressable>
+                      );
+                    })}
+                  </View>
+                </View>
+              );
+            })
+          )}
         </View>
 
         {/* Langue de l'application */}

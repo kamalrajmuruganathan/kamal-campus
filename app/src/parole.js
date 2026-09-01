@@ -18,6 +18,24 @@ export function definirVitesseParole(pref) {
   vitesseCourante = VITESSES[pref] ?? VITESSES.normal;
 }
 
+// Voix choisies par langue : { 'en-US': identifiant, 'es-ES': …, 'de-DE': … }.
+let voixChoisies = {};
+
+/** Règle les voix préférées par langue (mapping locale → identifiant). */
+export function definirVoix(mapping) {
+  voixChoisies = mapping && typeof mapping === 'object' ? mapping : {};
+}
+
+/** Liste les voix installées sur l'appareil (asynchrone, défensif). */
+export async function listerVoix() {
+  try {
+    const v = await Speech.getAvailableVoicesAsync();
+    return Array.isArray(v) ? v : [];
+  } catch {
+    return [];
+  }
+}
+
 /** Matière → code de langue BCP-47 pour choisir la bonne voix. */
 export function localeMatiere(matiere) {
   switch (matiere) {
@@ -38,7 +56,10 @@ export function parler(texte, matiere) {
   try {
     if (!texte) return;
     Speech.stop();
-    Speech.speak(String(texte), { language: localeMatiere(matiere), rate: vitesseCourante, pitch: 1.0 });
+    const locale = localeMatiere(matiere);
+    const opts = { language: locale, rate: vitesseCourante, pitch: 1.0 };
+    if (voixChoisies[locale]) opts.voice = voixChoisies[locale];
+    Speech.speak(String(texte), opts);
   } catch {
     // brique indisponible : on ignore silencieusement
   }

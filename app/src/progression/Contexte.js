@@ -17,7 +17,7 @@ import { badgesNouveaux } from '../../lib/badges';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
 import { resynchroniserSiPermis } from '../notifications';
-import { definirVitesseParole } from '../parole';
+import { definirVitesseParole, definirVoix } from '../parole';
 
 const MAX_HISTORIQUE = 30;
 const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
@@ -55,6 +55,7 @@ export function ProgressionProvider({ children }) {
         // demander de permission : ne fait rien si elle n'est pas déjà accordée).
         resynchroniserSiPermis(p);
         definirVitesseParole(p.vitesseParole);
+        definirVoix(p.voix);
       }
     });
     return () => {
@@ -66,6 +67,11 @@ export function ProgressionProvider({ children }) {
   useEffect(() => {
     definirVitesseParole(profil.vitesseParole);
   }, [profil.vitesseParole]);
+
+  // Garde les voix préférées alignées sur la préférence.
+  useEffect(() => {
+    definirVoix(profil.voix);
+  }, [profil.voix]);
 
   /**
    * Enregistre le résultat d'un QCM terminé et met à jour la progression.
