@@ -197,6 +197,22 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="🧠 Révision intelligente"
+            sousTitre="Répétition espacée : les cartes reviennent au bon moment"
+            couleur={t.couleur.succes}
+            onPress={() => navigation.navigate('RevisionSRS')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="⚔️ Duel à deux"
+            sousTitre="Défi sur un même téléphone : qui aura le meilleur score ?"
+            couleur={t.couleur.alerte}
+            onPress={() => navigation.navigate('Duel')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre={L('card.favoris.t')}
             sousTitre={L('card.favoris.s')}
             couleur={t.couleur.accent}

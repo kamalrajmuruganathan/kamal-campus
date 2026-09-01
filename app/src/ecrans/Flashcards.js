@@ -31,7 +31,7 @@ export default function Flashcards({ route, navigation }) {
   const [connues, setConnues] = useState([]); // booléens, une case par carte jugée
   const [fini, setFini] = useState(false);
 
-  const { enregistrerFlashcards, profil } = useProgression();
+  const { enregistrerFlashcards, profil, noterCarteSrs } = useProgression();
   const [bilan, setBilan] = useState(null);
   const dejaEnregistre = useRef(false);
 
@@ -146,6 +146,7 @@ export default function Flashcards({ route, navigation }) {
     const suite = [...connues];
     suite[i] = connue;
     setConnues(suite);
+    if (chapitre) noterCarteSrs(`${chapitre.id}#${i}`, connue); // planifie la carte (SRS)
     if (i + 1 >= cartes.length) {
       setFini(true);
     } else {

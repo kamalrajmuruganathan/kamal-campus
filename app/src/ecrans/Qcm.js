@@ -11,13 +11,15 @@
  */
 
 import { useMemo, useState, useEffect, useRef } from 'react';
-import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { theme } from '../theme';
+import { theme, couleurMatiere } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import BoutonEcouter from '../composants/BoutonEcouter';
+import CarteResultat from '../composants/CarteResultat';
 import { matiereParlante } from '../parole';
+import { partagerVue } from '../partage';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { melanger } from '../../lib/quizmix';
@@ -33,6 +35,7 @@ export default function Qcm({ route, navigation }) {
   // blanc dont les questions sont fournies directement (route.params.questions).
   const chapitre = route.params?.questions ? null : chapitreParId(route.params?.id);
   const matiere = chapitre?.matiere ?? route.params?.matiere ?? null;
+  const carteRef = useRef(null);
 
   // `tirage` s'incrémente à chaque « Recommencer » pour re-piocher au hasard.
   const [tirage, setTirage] = useState(0);
@@ -170,6 +173,34 @@ export default function Qcm({ route, navigation }) {
               </Text>
             </View>
           )}
+
+          {/* Carte de résultats partageable */}
+          <View style={{ alignItems: 'center', marginTop: t.espace.l }}>
+            <CarteResultat
+              ref={carteRef}
+              couleur={couleurMatiere(t, matiere)}
+              titre={route.params?.titre ?? chapitre?.titre ?? 'Quiz'}
+              justes={justes}
+              total={questions.length}
+              pourcent={pourcent}
+              serie={bilan?.serieJour?.serie ?? 0}
+              badge={bilan?.badgesGagnes?.length ? bilan.badgesGagnes[0].titre : null}
+            />
+          </View>
+          <Pressable
+            onPress={async () => {
+              const ok = await partagerVue(carteRef);
+              if (!ok) Alert.alert('Partage indisponible', "Le partage d'image n'est pas disponible ici (essaie depuis une vraie installation de l'app).");
+            }}
+            style={({ pressed }) => [
+              st.bouton,
+              { backgroundColor: couleurMatiere(t, matiere), borderRadius: t.rayon.m, marginTop: t.espace.m, opacity: pressed ? 0.85 : 1 },
+            ]}
+          >
+            <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '700' }}>
+              📸 Partager mon score
+            </Text>
+          </Pressable>
 
           <Pressable
             onPress={() => {

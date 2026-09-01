@@ -71,6 +71,40 @@ export function arreterParole() {
 }
 
 /**
+ * Lit une SÉQUENCE de segments l'un après l'autre (mode podcast). Enchaîne au
+ * segment suivant quand le précédent est terminé.
+ * @param {string[]} segments textes à lire dans l'ordre
+ * @param {string} matiere    pour la langue de la voix
+ * @param {{onIndex?:(i:number)=>void, onFin?:()=>void}} cbs
+ */
+export function parlerSequence(segments, matiere, cbs = {}) {
+  const { onIndex, onFin } = cbs;
+  try {
+    Speech.stop();
+    const locale = localeMatiere(matiere);
+    const liste = (segments || []).filter((s) => s && String(s).trim());
+    let k = 0;
+    const dire = () => {
+      if (k >= liste.length) { if (onFin) onFin(); return; }
+      if (onIndex) onIndex(k);
+      const opts = {
+        language: locale,
+        rate: vitesseCourante,
+        pitch: 1.0,
+        onDone: () => { k += 1; dire(); },
+        onError: () => { k += 1; dire(); },
+      };
+      if (voixChoisies[locale]) opts.voice = voixChoisies[locale];
+      Speech.speak(String(liste[k]), opts);
+    };
+    if (liste.length === 0) { if (onFin) onFin(); return; }
+    dire();
+  } catch {
+    if (onFin) onFin();
+  }
+}
+
+/**
  * Convertit un Markdown de fiche en texte lisible à voix haute :
  * retire l'en-tête YAML, les balises Markdown, les tableaux et le LaTeX.
  */

@@ -67,6 +67,26 @@ export default function Chapitre({ route, navigation }) {
         <VisionneuseFiche markdown={chapitre.fiche} />
 
         <View style={{ paddingHorizontal: t.espace.l }}>
+          <Pressable
+            onPress={() => navigation.navigate('Podcast', { id: chapitre.id, titre: chapitre.titre })}
+            accessibilityRole="button"
+            style={({ pressed }) => [
+              st.bouton,
+              {
+                backgroundColor: t.couleur.surface,
+                borderWidth: 1,
+                borderColor: accent,
+                borderRadius: t.rayon.m,
+                paddingVertical: t.espace.m,
+                marginBottom: t.espace.m,
+                opacity: pressed ? 0.8 : 1,
+              },
+            ]}
+          >
+            <Text style={{ color: accent, fontSize: t.police.moyenne, fontWeight: '650' }}>
+              🎧 Écouter en podcast
+            </Text>
+          </Pressable>
           {chapitre.nbExercices > 0 && (
             <Pressable
               onPress={() => navigation.navigate('Exercices', { id: chapitre.id, titre: chapitre.titre })}

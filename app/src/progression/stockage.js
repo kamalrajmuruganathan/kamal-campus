@@ -49,6 +49,8 @@ export function profilVide() {
     // Emploi du temps de révision : créneaux hebdomadaires qui déclenchent une
     // notification. { id, jour:1..7 (lun..dim), heure:'HH:MM', matiere }
     planning: [],
+    // Répétition espacée : état par carte. { [cle]: { rep, interval, ease, due } }
+    srs: {},
   };
 }
 
@@ -65,6 +67,7 @@ function normaliser(brut) {
     historique: Array.isArray(brut.historique) ? brut.historique : [],
     planning: Array.isArray(brut.planning) ? brut.planning : [],
     voix: (brut.voix && typeof brut.voix === 'object') ? brut.voix : {},
+    srs: (brut.srs && typeof brut.srs === 'object') ? brut.srs : {},
   };
 }
 

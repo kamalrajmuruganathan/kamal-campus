@@ -35,6 +35,9 @@ import Resolveur from './src/ecrans/Resolveur';
 import Recherche from './src/ecrans/Recherche';
 import Favoris from './src/ecrans/Favoris';
 import Revision from './src/ecrans/Revision';
+import RevisionSRS from './src/ecrans/RevisionSRS';
+import Duel from './src/ecrans/Duel';
+import Podcast from './src/ecrans/Podcast';
 import Annales from './src/ecrans/Annales';
 import Planning from './src/ecrans/Planning';
 import APropos from './src/ecrans/APropos';
@@ -112,6 +115,9 @@ function Navigation() {
         <Pile.Screen name="Recherche" component={Recherche} options={{ title: L('nav.recherche') }} />
         <Pile.Screen name="Favoris" component={Favoris} options={{ title: L('nav.favoris') }} />
         <Pile.Screen name="Revision" component={Revision} options={{ title: L('nav.revision') }} />
+        <Pile.Screen name="RevisionSRS" component={RevisionSRS} options={{ title: 'À revoir aujourd’hui' }} />
+        <Pile.Screen name="Duel" component={Duel} options={{ title: 'Duel à deux' }} />
+        <Pile.Screen name="Podcast" component={Podcast} options={{ title: 'Podcast de révision' }} />
         <Pile.Screen name="Annales" component={Annales} options={{ title: 'Annales — liens' }} />
         <Pile.Screen name="Planning" component={Planning} options={{ title: 'Planning d’étude' }} />
         <Pile.Screen name="APropos" component={APropos} options={{ title: L('nav.apropos') }} />

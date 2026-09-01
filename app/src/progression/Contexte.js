@@ -14,6 +14,7 @@ import {
   niveauPourXp,
 } from '../../lib/progression';
 import { badgesNouveaux } from '../../lib/badges';
+import { planifier as planifierSrs } from '../../lib/srs';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
 import { resynchroniserSiPermis } from '../notifications';
@@ -290,6 +291,18 @@ export function ProgressionProvider({ children }) {
     });
   }, []);
 
+  /** Enregistre le jugement d'une carte pour la répétition espacée. */
+  const noterCarteSrs = useCallback((cle, su) => {
+    setProfil((p) => {
+      const jour = dateLocale(new Date());
+      const srs = { ...(p.srs || {}) };
+      srs[cle] = planifierSrs(srs[cle], su, jour);
+      const suivant = { ...p, srs };
+      sauverProfil(suivant);
+      return suivant;
+    });
+  }, []);
+
   /** Termine l'onboarding : prénom, niveau par défaut, objectif quotidien, planning. */
   const terminerOnboarding = useCallback(({ prenom = '', niveau = null, objectif = 50, planning = [] }) => {
     definirReglages({
@@ -305,7 +318,7 @@ export function ProgressionProvider({ children }) {
     <ProgressionContexte.Provider
       value={{
         profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme,
-        reinitialiser, definirReglages, terminerOnboarding, basculerFavori,
+        reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
       }}
     >
       {children}
@@ -337,6 +350,7 @@ export function useProgression() {
       definirReglages: () => {},
       terminerOnboarding: () => {},
       basculerFavori: () => {},
+      noterCarteSrs: () => {},
     };
   }
   return ctx;
