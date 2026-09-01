@@ -40,6 +40,8 @@ const CLAIR = {
     maths: '#1f6feb',
     physique: '#7a3fd4',
     anglais: '#b8336a',
+    espagnol: '#c0392b',
+    allemand: '#3949ab',
   },
 };
 
@@ -64,6 +66,8 @@ const SOMBRE = {
     maths: '#6aa8ff',
     physique: '#b18cf0',
     anglais: '#f087b3',
+    espagnol: '#f0776b',
+    allemand: '#7c8cf0',
   },
 };
 
@@ -76,5 +80,7 @@ export const couleurMatiere = (t, matiere) => {
   if (matiere === 'techno' || matiere === 'snt' || matiere === 'nsi' || matiere === 'si') return t.couleur.alerte;
   if (matiere === 'enseignement-scientifique') return t.couleur.physique;
   if (matiere === 'anglais') return t.couleur.anglais;
+  if (matiere === 'espagnol') return t.couleur.espagnol;
+  if (matiere === 'allemand') return t.couleur.allemand;
   return t.couleur.maths;
 };

@@ -992,3 +992,150 @@ export function actifPassif(rand) {
     explication: `Passif = be + participe passé : « ${bonne} » On garde le présent (${aux}) et on emploie le participe passé « ${pp} ».`,
   }, rand);
 }
+
+// ── Espagnol : drills de conjugaison ─────────────────────────────────────────
+
+const PRONOMS_ES = ['yo', 'tú', 'él/ella', 'nosotros', 'vosotros', 'ellos/ellas'];
+const TERM_PRESENT_ES = {
+  ar: ['o', 'as', 'a', 'amos', 'áis', 'an'],
+  er: ['o', 'es', 'e', 'emos', 'éis', 'en'],
+  ir: ['o', 'es', 'e', 'imos', 'ís', 'en'],
+};
+const TERM_INDEF_ES = {
+  ar: ['é', 'aste', 'ó', 'amos', 'asteis', 'aron'],
+  erir: ['í', 'iste', 'ió', 'imos', 'isteis', 'ieron'],
+};
+const VERBES_REG_ES = [
+  ['hablar', 'habl', 'ar'], ['cantar', 'cant', 'ar'], ['trabajar', 'trabaj', 'ar'],
+  ['estudiar', 'estudi', 'ar'], ['comprar', 'compr', 'ar'], ['comer', 'com', 'er'],
+  ['beber', 'beb', 'er'], ['aprender', 'aprend', 'er'], ['vivir', 'viv', 'ir'],
+  ['escribir', 'escrib', 'ir'], ['abrir', 'abr', 'ir'], ['subir', 'sub', 'ir'],
+];
+
+/** Présent régulier espagnol : conjuguer un verbe à une personne. */
+export function presenteRegularES(rand) {
+  const [inf, stem, grp] = choisir(rand, VERBES_REG_ES);
+  const i = entier(rand, 0, 5);
+  const term = TERM_PRESENT_ES[grp];
+  const bonne = stem + term[i];
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'presente-regular',
+    enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_ES[i]} ».`,
+    bonne,
+    distracteurs: term.filter((_, j) => j !== i).map((t) => stem + t),
+    explication: `${inf} (${grp === 'ar' ? '1er' : grp === 'er' ? '2e' : '3e'} groupe) → ${PRONOMS_ES[i]} ${bonne}. Terminaisons : ${term.join(', ')}.`,
+  }, rand);
+}
+
+const VERBES_IRR_PRES_ES = {
+  ser: ['soy', 'eres', 'es', 'somos', 'sois', 'son'],
+  estar: ['estoy', 'estás', 'está', 'estamos', 'estáis', 'están'],
+  tener: ['tengo', 'tienes', 'tiene', 'tenemos', 'tenéis', 'tienen'],
+  ir: ['voy', 'vas', 'va', 'vamos', 'vais', 'van'],
+  hacer: ['hago', 'haces', 'hace', 'hacemos', 'hacéis', 'hacen'],
+  poder: ['puedo', 'puedes', 'puede', 'podemos', 'podéis', 'pueden'],
+};
+
+/** Présent irrégulier espagnol (ser, estar, tener, ir, hacer, poder). */
+export function verboIrregularPresenteES(rand) {
+  const inf = choisir(rand, Object.keys(VERBES_IRR_PRES_ES));
+  const formes = VERBES_IRR_PRES_ES[inf];
+  const i = entier(rand, 0, 5);
+  const bonne = formes[i];
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'presente-irregular',
+    enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_ES[i]} ».`,
+    bonne,
+    distracteurs: formes.filter((_, j) => j !== i).concat([`${inf.slice(0, -2)}o`, `${inf.slice(0, -2)}e`]),
+    explication: `${inf} est irrégulier : ${PRONOMS_ES.map((p, k) => `${p} ${formes[k]}`).join(', ')}.`,
+  }, rand);
+}
+
+/** Pretérito indefinido régulier espagnol. */
+export function preteritoRegularES(rand) {
+  const [inf, stem, grp] = choisir(rand, VERBES_REG_ES);
+  const term = grp === 'ar' ? TERM_INDEF_ES.ar : TERM_INDEF_ES.erir;
+  const i = entier(rand, 0, 5);
+  const bonne = stem + term[i];
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'preterito-indefinido',
+    enonce: `Conjugue « ${inf} » au pretérito indefinido avec « ${PRONOMS_ES[i]} ».`,
+    bonne,
+    distracteurs: term.filter((_, j) => j !== i).map((t) => stem + t).concat([stem + (grp === 'ar' ? 'ó' : 'ió')]),
+    explication: `${inf} → ${PRONOMS_ES[i]} ${bonne}. Terminaisons de l'indéfini (${grp === 'ar' ? '-ar' : '-er/-ir'}) : ${term.join(', ')}.`,
+  }, rand);
+}
+
+// ── Allemand : drills de conjugaison et de genre ─────────────────────────────
+
+const PRONOMS_DE = ['ich', 'du', 'er/sie/es', 'wir', 'ihr', 'sie/Sie'];
+const TERM_PRESENT_DE = ['e', 'st', 't', 'en', 't', 'en'];
+const VERBES_REG_DE = [
+  ['machen', 'mach'], ['spielen', 'spiel'], ['lernen', 'lern'], ['wohnen', 'wohn'],
+  ['kaufen', 'kauf'], ['fragen', 'frag'], ['sagen', 'sag'], ['hören', 'hör'],
+  ['brauchen', 'brauch'], ['suchen', 'such'],
+];
+
+/** Présent allemand régulier. */
+export function praesensRegularDE(rand) {
+  const [inf, stem] = choisir(rand, VERBES_REG_DE);
+  const i = entier(rand, 0, 5);
+  const bonne = stem + TERM_PRESENT_DE[i];
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'praesens',
+    enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_DE[i]} ».`,
+    bonne,
+    distracteurs: [stem + 'e', stem + 'st', stem + 't', stem + 'en', stem + 'et', inf],
+    explication: `${inf} → ${PRONOMS_DE[i]} ${bonne}. Terminaisons : ich -e, du -st, er/sie/es -t, wir -en, ihr -t, sie/Sie -en.`,
+  }, rand);
+}
+
+const VERBES_IRR_DE = {
+  sein: ['bin', 'bist', 'ist', 'sind', 'seid', 'sind'],
+  haben: ['habe', 'hast', 'hat', 'haben', 'habt', 'haben'],
+  werden: ['werde', 'wirst', 'wird', 'werden', 'werdet', 'werden'],
+  können: ['kann', 'kannst', 'kann', 'können', 'könnt', 'können'],
+  müssen: ['muss', 'musst', 'muss', 'müssen', 'müsst', 'müssen'],
+};
+
+/** Présent des auxiliaires et modaux allemands. */
+export function seinHabenModalDE(rand) {
+  const inf = choisir(rand, Object.keys(VERBES_IRR_DE));
+  const formes = VERBES_IRR_DE[inf];
+  const i = entier(rand, 0, 5);
+  const bonne = formes[i];
+  const uniques = [...new Set(formes)].filter((f) => f !== bonne);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'verbes-irreguliers',
+    enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_DE[i]} ».`,
+    bonne,
+    distracteurs: uniques.concat([inf, formes[0], `${bonne}t`, `${bonne}st`]),
+    explication: `${inf} : ${PRONOMS_DE.map((p, k) => `${p} ${formes[k]}`).join(', ')}.`,
+  }, rand);
+}
+
+const NOMS_GENRE_DE = [
+  ['Mann', 'der'], ['Frau', 'die'], ['Kind', 'das'], ['Tisch', 'der'], ['Tür', 'die'],
+  ['Buch', 'das'], ['Hund', 'der'], ['Katze', 'die'], ['Haus', 'das'], ['Apfel', 'der'],
+  ['Schule', 'die'], ['Auto', 'das'], ['Baum', 'der'], ['Blume', 'die'], ['Wasser', 'das'],
+  ['Tag', 'der'], ['Nacht', 'die'], ['Jahr', 'das'], ['Freund', 'der'], ['Familie', 'die'],
+];
+
+/** Genre : l'article défini (nominatif) d'un nom allemand. */
+export function artikelGenusDE(rand) {
+  const [nom, art] = choisir(rand, NOMS_GENRE_DE);
+  const autres = ['der', 'die', 'das'].filter((a) => a !== art);
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'artikel-genus',
+    enonce: `Quel est l'article défini (nominatif) de « ${nom} » ?`,
+    bonne: art,
+    distracteurs: [...autres, 'dem'],
+    explication: `On dit « ${art} ${nom} ». En allemand, le genre s'apprend avec le nom. (« dem » est le datif, pas le nominatif.)`,
+  }, rand);
+}

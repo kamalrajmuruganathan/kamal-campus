@@ -18,6 +18,8 @@ import {
   fonctionAffine, pythagore, poids, energiePuissanceTemps,
   trigRatio, distanceParcourue, dureeParcours, conversionLongueur, conversionDuree,
   verbeIrregulierPreterit, verbeIrregulierParticipe, plurielIrregulier, preteritRegulier, actifPassif,
+  presenteRegularES, verboIrregularPresenteES, preteritoRegularES,
+  praesensRegularDE, seinHabenModalDE, artikelGenusDE,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -140,6 +142,17 @@ export const REGISTRE = {
   '3e-anglais-present-perfect-since-for': [verbeIrregulierParticipe],
   '6e-anglais-articles-pluriels': [plurielIrregulier],
   '3e-anglais-voix-passive': [actifPassif],
+
+  // ── Espagnol : drills de conjugaison ──
+  '6e-espagnol-presente-regular': [presenteRegularES],
+  '5e-espagnol-presente-irregular': [verboIrregularPresenteES],
+  '4e-espagnol-preterito-indefinido': [preteritoRegularES],
+
+  // ── Allemand : drills de conjugaison et de genre ──
+  '6e-allemand-praesens-regelmaessig': [praesensRegularDE],
+  '6e-allemand-sein-haben': [seinHabenModalDE],
+  '5e-allemand-modalverben': [seinHabenModalDE],
+  '6e-allemand-artikel-genus': [artikelGenusDE],
 
   // ── Physique-chimie : poids & énergie ──
   '4e-pc-interactions-forces': [poids],

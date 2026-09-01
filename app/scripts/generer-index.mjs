@@ -72,6 +72,8 @@ const LIBELLES_PARCOURS = {
   snt: 'SNT',
   nsi: 'NSI',
   anglais: 'Anglais',
+  espagnol: 'Espagnol',
+  allemand: 'Allemand',
 };
 
 const LIBELLES_MATIERE = {
@@ -85,6 +87,8 @@ const LIBELLES_MATIERE = {
   snt: 'SNT',
   nsi: 'NSI',
   anglais: 'Anglais',
+  espagnol: 'Espagnol',
+  allemand: 'Allemand',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────
