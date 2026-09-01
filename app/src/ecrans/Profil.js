@@ -266,6 +266,25 @@ export default function Profil({ navigation }) {
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
         </Pressable>
 
+        {/* Accès aux statistiques */}
+        <Pressable
+          onPress={() => navigation.navigate('Statistiques')}
+          accessibilityRole="button"
+          style={({ pressed }) => [
+            st.badges,
+            { backgroundColor: t.couleur.surface, borderColor: t.couleur.trait, borderRadius: t.rayon.m, marginTop: t.espace.m, opacity: pressed ? 0.7 : 1 },
+          ]}
+        >
+          <Text style={{ fontSize: 20, marginRight: t.espace.m }}>📊</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>Statistiques</Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+              Activité, maîtrise par matière, chapitres à revoir
+            </Text>
+          </View>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande }}>›</Text>
+        </Pressable>
+
         {/* Apparence — thème clair / sombre / système */}
         <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
           <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>

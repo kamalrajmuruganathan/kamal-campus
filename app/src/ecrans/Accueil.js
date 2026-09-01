@@ -16,6 +16,7 @@ import { Carte } from '../composants/communs';
 import { niveaux, parcoursDe, LIBELLES_NIVEAU, LIBELLES_PARCOURS, CHAPITRES } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { niveauPourXp } from '../../lib/progression';
+import { mascotteNiveau } from '../../lib/mascotte';
 import { serieAffichee, dateLocale } from '../../lib/serie';
 import { useLangue } from '../i18n';
 
@@ -25,6 +26,7 @@ export default function Accueil({ navigation }) {
   const { L } = useLangue();
   const [niveau, setNiveau] = useState(profil.niveauParDefaut ?? null);
   const prog = niveauPourXp(profil.xp);
+  const masc = mascotteNiveau(prog.niveau);
   const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, dateLocale(new Date()));
 
   const listeNiveaux = niveaux();
@@ -67,13 +69,11 @@ export default function Accueil({ navigation }) {
               marginRight: t.espace.m,
             }}
           >
-            <Text style={{ color: t.couleur.accentTexte, fontSize: 18, fontWeight: '800' }}>
-              {prog.niveau}
-            </Text>
+            <Text style={{ fontSize: 22 }}>{masc.emoji}</Text>
           </View>
           <View style={{ flex: 1 }}>
             <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
-              {L('home.progression', { rang: prog.titre })}
+              Niveau {prog.niveau} · {masc.nom}
             </Text>
             <View style={[st.piste, { backgroundColor: t.couleur.trait, marginTop: 6 }]}>
               <View
