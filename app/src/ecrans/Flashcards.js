@@ -16,6 +16,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
+import BoutonEcouter from '../composants/BoutonEcouter';
+import { matiereParlante } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
@@ -182,6 +184,11 @@ export default function Flashcards({ route, navigation }) {
             >
               {face === 'recto' ? 'Question' : 'Réponse'}
             </Text>
+            {matiereParlante(chapitre.matiere) && (
+              <View style={{ paddingHorizontal: t.espace.s, marginTop: 6 }}>
+                <BoutonEcouter t={t} matiere={chapitre.matiere} texte={face === 'recto' ? carte.recto : carte.verso} />
+              </View>
+            )}
             <VisionneuseFiche markdown={face === 'recto' ? carte.recto : carte.verso} />
           </ScrollView>
         </Pressable>
