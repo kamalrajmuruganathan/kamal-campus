@@ -40,6 +40,7 @@ export function profilVide() {
     prenom: '',
     langue: 'fr', // langue de l'interface (fr/en/es/ar)
     themePref: 'systeme', // apparence : 'systeme' | 'clair' | 'sombre'
+    vitesseParole: 'normal', // lecture à voix haute : 'lent' | 'normal' | 'rapide'
     niveauParDefaut: null, // niveau choisi à l'onboarding (préselection accueil)
     rappelActif: false,
     rappelHeure: '18:00', // 'HH:MM'

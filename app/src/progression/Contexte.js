@@ -17,6 +17,7 @@ import { badgesNouveaux } from '../../lib/badges';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
 import { resynchroniserSiPermis } from '../notifications';
+import { definirVitesseParole } from '../parole';
 
 const MAX_HISTORIQUE = 30;
 const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
@@ -53,12 +54,18 @@ export function ProgressionProvider({ children }) {
         // Restaure le planning / rappel après un redémarrage de l'OS (sans
         // demander de permission : ne fait rien si elle n'est pas déjà accordée).
         resynchroniserSiPermis(p);
+        definirVitesseParole(p.vitesseParole);
       }
     });
     return () => {
       vivant = false;
     };
   }, []);
+
+  // Garde la vitesse de lecture à voix haute alignée sur la préférence.
+  useEffect(() => {
+    definirVitesseParole(profil.vitesseParole);
+  }, [profil.vitesseParole]);
 
   /**
    * Enregistre le résultat d'un QCM terminé et met à jour la progression.

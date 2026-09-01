@@ -14,6 +14,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Bandeau, Etiquette } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
+import BoutonEcouter from '../composants/BoutonEcouter';
+import { matiereParlante } from '../parole';
 import { chapitreParId } from '../contenu-index';
 
 const LIBELLE_DIFFICULTE = {
@@ -35,7 +37,7 @@ function corrigeMarkdown(ex) {
   return md;
 }
 
-function CarteExercice({ ex, index, t, accent }) {
+function CarteExercice({ ex, index, t, accent, matiere }) {
   const [ouvert, setOuvert] = useState(false);
   const enonce = `**Exercice ${index + 1}.** ${ex.enonce}`;
 
@@ -61,6 +63,12 @@ function CarteExercice({ ex, index, t, accent }) {
       </View>
 
       <VisionneuseFiche markdown={enonce} />
+
+      {matiereParlante(matiere) && (
+        <View style={{ paddingHorizontal: t.espace.m, paddingBottom: t.espace.s }}>
+          <BoutonEcouter t={t} matiere={matiere} texte={ex.enonce} libelle="Écouter l'énoncé" />
+        </View>
+      )}
 
       <Pressable
         onPress={() => setOuvert((v) => !v)}
@@ -131,7 +139,7 @@ export default function Exercices({ route }) {
         </Text>
 
         {exos.map((ex, i) => (
-          <CarteExercice key={ex.id ?? i} ex={ex} index={i} t={t} accent={accent} />
+          <CarteExercice key={ex.id ?? i} ex={ex} index={i} t={t} accent={accent} matiere={chapitre.matiere} />
         ))}
       </ScrollView>
     </SafeAreaView>

@@ -9,6 +9,15 @@
 
 import * as Speech from 'expo-speech';
 
+// Vitesse de lecture courante (pilotée par la préférence du profil).
+const VITESSES = { lent: 0.7, normal: 0.92, rapide: 1.15 };
+let vitesseCourante = VITESSES.normal;
+
+/** Règle la vitesse de lecture ('lent' | 'normal' | 'rapide'). */
+export function definirVitesseParole(pref) {
+  vitesseCourante = VITESSES[pref] ?? VITESSES.normal;
+}
+
 /** Matière → code de langue BCP-47 pour choisir la bonne voix. */
 export function localeMatiere(matiere) {
   switch (matiere) {
@@ -29,7 +38,7 @@ export function parler(texte, matiere) {
   try {
     if (!texte) return;
     Speech.stop();
-    Speech.speak(String(texte), { language: localeMatiere(matiere), rate: 0.92, pitch: 1.0 });
+    Speech.speak(String(texte), { language: localeMatiere(matiere), rate: vitesseCourante, pitch: 1.0 });
   } catch {
     // brique indisponible : on ignore silencieusement
   }

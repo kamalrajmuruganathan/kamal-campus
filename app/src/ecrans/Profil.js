@@ -25,6 +25,11 @@ const THEMES = [
   { v: 'clair', l: '☀️ Clair' },
   { v: 'sombre', l: '🌙 Sombre' },
 ];
+const VITESSES_LECTURE = [
+  { v: 'lent', l: '🐢 Lent' },
+  { v: 'normal', l: 'Normal' },
+  { v: 'rapide', l: '🐇 Rapide' },
+];
 
 const LIBELLE_MATIERE = {
   mathematiques: 'Mathématiques',
@@ -272,6 +277,37 @@ export default function Profil({ navigation }) {
                 >
                   <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
                     {th.l}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        </View>
+
+        {/* Vitesse de lecture à voix haute (synthèse vocale des langues) */}
+        <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+            Vitesse de lecture 🔊
+          </Text>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+            Pour le bouton « Écouter » des langues (cartes, QCM, fiches).
+          </Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.m }}>
+            {VITESSES_LECTURE.map((vi) => {
+              const actif = (profil.vitesseParole || 'normal') === vi.v;
+              return (
+                <Pressable
+                  key={vi.v}
+                  onPress={() => definirReglages({ vitesseParole: vi.v })}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: actif }}
+                  style={({ pressed }) => [
+                    st.pilule,
+                    { backgroundColor: actif ? t.couleur.accent : t.couleur.fond, borderColor: actif ? t.couleur.accent : t.couleur.trait, opacity: pressed ? 0.7 : 1 },
+                  ]}
+                >
+                  <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+                    {vi.l}
                   </Text>
                 </Pressable>
               );
