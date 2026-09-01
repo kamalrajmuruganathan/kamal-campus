@@ -11,6 +11,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { Bandeau } from '../composants/communs';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
+import BoutonEcouter from '../composants/BoutonEcouter';
+import { matiereParlante, texteBrut } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
@@ -53,6 +55,12 @@ export default function Chapitre({ route, navigation }) {
                 'mais compare avec ton cours avant un contrôle.'
               }
             />
+          </View>
+        )}
+
+        {matiereParlante(chapitre.matiere) && (
+          <View style={{ paddingHorizontal: t.espace.l, paddingTop: t.espace.m }}>
+            <BoutonEcouter t={t} matiere={chapitre.matiere} texte={texteBrut(chapitre.fiche)} libelle="Écouter la fiche" />
           </View>
         )}
 

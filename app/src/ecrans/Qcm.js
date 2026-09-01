@@ -16,6 +16,8 @@ import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
+import BoutonEcouter from '../composants/BoutonEcouter';
+import { matiereParlante } from '../parole';
 import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { melanger } from '../../lib/quizmix';
@@ -30,6 +32,7 @@ export default function Qcm({ route, navigation }) {
   // Deux usages : QCM d'un chapitre (route.params.id) OU QCM de révision / bac
   // blanc dont les questions sont fournies directement (route.params.questions).
   const chapitre = route.params?.questions ? null : chapitreParId(route.params?.id);
+  const matiere = chapitre?.matiere ?? route.params?.matiere ?? null;
 
   // `tirage` s'incrémente à chaque « Recommencer » pour re-piocher au hasard.
   const [tirage, setTirage] = useState(0);
@@ -328,6 +331,11 @@ export default function Qcm({ route, navigation }) {
               {juste ? 'Correct' : `Réponse : ${LETTRES[q.reponse]}`}
             </Text>
             <VisionneuseFiche markdown={q.explication} />
+            {matiereParlante(matiere) && (
+              <View style={{ marginTop: t.espace.s }}>
+                <BoutonEcouter t={t} matiere={matiere} texte={q.choix[q.reponse]} libelle="Écouter la réponse" />
+              </View>
+            )}
           </View>
         )}
 

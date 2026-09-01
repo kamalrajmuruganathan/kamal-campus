@@ -39,3 +39,22 @@ export function parler(texte, matiere) {
 export function arreterParole() {
   try { Speech.stop(); } catch { /* ignore */ }
 }
+
+/**
+ * Convertit un Markdown de fiche en texte lisible à voix haute :
+ * retire l'en-tête YAML, les balises Markdown, les tableaux et le LaTeX.
+ */
+export function texteBrut(markdown) {
+  if (!markdown) return '';
+  let s = String(markdown);
+  s = s.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, ''); // en-tête YAML
+  s = s.replace(/```[\s\S]*?```/g, ' ');               // blocs de code
+  s = s.replace(/\$[^$]*\$/g, ' ');                    // LaTeX inline
+  s = s.replace(/!\[[^\]]*\]\([^)]*\)/g, ' ');          // images
+  s = s.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1');        // liens → texte
+  s = s.replace(/^\s*\|.*$/gm, ' ');                    // lignes de tableau
+  s = s.replace(/[#>*_`~]/g, ' ');                       // symboles Markdown
+  s = s.replace(/\r?\n{2,}/g, '. ').replace(/\r?\n/g, ' '); // sauts de ligne
+  s = s.replace(/\s{2,}/g, ' ').trim();
+  return s;
+}
