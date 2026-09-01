@@ -15,6 +15,7 @@ import {
 } from '../../lib/progression';
 import { badgesNouveaux } from '../../lib/badges';
 import { planifier as planifierSrs } from '../../lib/srs';
+import { ajouterXp as ligueAjouterXp } from '../../lib/ligue';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
 import { resynchroniserSiPermis } from '../notifications';
@@ -136,6 +137,8 @@ export function ProgressionProvider({ children }) {
         meilleureSerieJours: s.meilleureSerieJours,
       });
 
+      suivant.ligue = ligueAjouterXp(profil.ligue, res.points, dateLocale(new Date()));
+
       setProfil(suivant);
       sauverProfil(suivant);
 
@@ -200,6 +203,8 @@ export function ProgressionProvider({ children }) {
         meilleureSerieJours: s.meilleureSerieJours,
       });
 
+      suivant.ligue = ligueAjouterXp(profil.ligue, points, dateLocale(new Date()));
+
       setProfil(suivant);
       sauverProfil(suivant);
 
@@ -251,6 +256,8 @@ export function ProgressionProvider({ children }) {
       dernierJourValide: s.dernierJourValide,
       meilleureSerieJours: s.meilleureSerieJours,
     });
+
+    suivant.ligue = ligueAjouterXp(profil.ligue, points, dateLocale(new Date()));
 
     setProfil(suivant);
     sauverProfil(suivant);

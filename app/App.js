@@ -37,6 +37,8 @@ import Favoris from './src/ecrans/Favoris';
 import Revision from './src/ecrans/Revision';
 import RevisionSRS from './src/ecrans/RevisionSRS';
 import Duel from './src/ecrans/Duel';
+import Ligue from './src/ecrans/Ligue';
+import Defi from './src/ecrans/Defi';
 import Podcast from './src/ecrans/Podcast';
 import Annales from './src/ecrans/Annales';
 import Planning from './src/ecrans/Planning';
@@ -117,6 +119,8 @@ function Navigation() {
         <Pile.Screen name="Revision" component={Revision} options={{ title: L('nav.revision') }} />
         <Pile.Screen name="RevisionSRS" component={RevisionSRS} options={{ title: 'À revoir aujourd’hui' }} />
         <Pile.Screen name="Duel" component={Duel} options={{ title: 'Duel à deux' }} />
+        <Pile.Screen name="Ligue" component={Ligue} options={{ title: 'Ligue hebdo' }} />
+        <Pile.Screen name="Defi" component={Defi} options={{ title: 'Défi à distance' }} />
         <Pile.Screen name="Podcast" component={Podcast} options={{ title: 'Podcast de révision' }} />
         <Pile.Screen name="Annales" component={Annales} options={{ title: 'Annales — liens' }} />
         <Pile.Screen name="Planning" component={Planning} options={{ title: 'Planning d’étude' }} />

@@ -51,6 +51,8 @@ export function profilVide() {
     planning: [],
     // Répétition espacée : état par carte. { [cle]: { rep, interval, ease, due } }
     srs: {},
+    // Ligue hebdomadaire : { semaine, xpSemaine, palier, dernier }
+    ligue: {},
   };
 }
 
@@ -68,6 +70,7 @@ function normaliser(brut) {
     planning: Array.isArray(brut.planning) ? brut.planning : [],
     voix: (brut.voix && typeof brut.voix === 'object') ? brut.voix : {},
     srs: (brut.srs && typeof brut.srs === 'object') ? brut.srs : {},
+    ligue: (brut.ligue && typeof brut.ligue === 'object') ? brut.ligue : {},
   };
 }
 

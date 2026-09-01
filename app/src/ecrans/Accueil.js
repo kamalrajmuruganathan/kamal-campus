@@ -213,6 +213,22 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="🏆 Ligue hebdo"
+            sousTitre="Grimpe du Bronze au Diamant en gagnant des XP chaque semaine"
+            couleur={t.couleur.alerte}
+            onPress={() => navigation.navigate('Ligue')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="📲 Défi à distance"
+            sousTitre="Envoie un QR/code à un ami : mêmes questions, comparez vos scores"
+            couleur={t.couleur.physique}
+            onPress={() => navigation.navigate('Defi')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre={L('card.favoris.t')}
             sousTitre={L('card.favoris.s')}
             couleur={t.couleur.accent}
