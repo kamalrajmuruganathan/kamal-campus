@@ -42,6 +42,7 @@ const CLAIR = {
     anglais: '#b8336a',
     espagnol: '#c0392b',
     allemand: '#3949ab',
+    italien: '#1d9bb8',
   },
 };
 
@@ -68,6 +69,7 @@ const SOMBRE = {
     anglais: '#f087b3',
     espagnol: '#f0776b',
     allemand: '#7c8cf0',
+    italien: '#5cc7de',
   },
 };
 
@@ -82,5 +84,6 @@ export const couleurMatiere = (t, matiere) => {
   if (matiere === 'anglais') return t.couleur.anglais;
   if (matiere === 'espagnol') return t.couleur.espagnol;
   if (matiere === 'allemand') return t.couleur.allemand;
+  if (matiere === 'italien') return t.couleur.italien;
   return t.couleur.maths;
 };

@@ -74,6 +74,7 @@ const LIBELLES_PARCOURS = {
   anglais: 'Anglais',
   espagnol: 'Espagnol',
   allemand: 'Allemand',
+  italien: 'Italien',
 };
 
 const LIBELLES_MATIERE = {
@@ -89,6 +90,7 @@ const LIBELLES_MATIERE = {
   anglais: 'Anglais',
   espagnol: 'Espagnol',
   allemand: 'Allemand',
+  italien: 'Italien',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────

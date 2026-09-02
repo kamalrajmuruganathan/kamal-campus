@@ -20,6 +20,7 @@ import {
   verbeIrregulierPreterit, verbeIrregulierParticipe, plurielIrregulier, preteritRegulier, actifPassif,
   presenteRegularES, verboIrregularPresenteES, preteritoRegularES,
   praesensRegularDE, seinHabenModalDE, artikelGenusDE,
+  presenteRegularIT, verbiIrregolariPresenteIT, participioPassatoIT,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -153,6 +154,11 @@ export const REGISTRE = {
   '6e-allemand-sein-haben': [seinHabenModalDE],
   '5e-allemand-modalverben': [seinHabenModalDE],
   '6e-allemand-artikel-genus': [artikelGenusDE],
+
+  // ── Italien : drills de conjugaison ──
+  '6e-italien-presente-regolare': [presenteRegularIT],
+  '5e-italien-presente-irregolare': [verbiIrregolariPresenteIT],
+  '4e-italien-passato-prossimo': [participioPassatoIT],
 
   // ── Physique-chimie : poids & énergie ──
   '4e-pc-interactions-forces': [poids],

@@ -1139,3 +1139,74 @@ export function artikelGenusDE(rand) {
     explication: `On dit « ${art} ${nom} ». En allemand, le genre s'apprend avec le nom. (« dem » est le datif, pas le nominatif.)`,
   }, rand);
 }
+
+// ── Italien : drills de conjugaison ──────────────────────────────────────────
+
+const PRONOMS_IT = ['io', 'tu', 'lui/lei', 'noi', 'voi', 'loro'];
+const TERM_PRESENT_IT = {
+  are: ['o', 'i', 'a', 'iamo', 'ate', 'ano'],
+  ere: ['o', 'i', 'e', 'iamo', 'ete', 'ono'],
+  ire: ['o', 'i', 'e', 'iamo', 'ite', 'ono'],
+};
+const VERBES_REG_IT = [
+  ['parlare', 'parl', 'are'], ['cantare', 'cant', 'are'], ['guardare', 'guard', 'are'],
+  ['lavorare', 'lavor', 'are'], ['comprare', 'compr', 'are'],
+  ['credere', 'cred', 'ere'], ['ricevere', 'ricev', 'ere'], ['vendere', 'vend', 'ere'], ['temere', 'tem', 'ere'],
+  ['dormire', 'dorm', 'ire'], ['partire', 'part', 'ire'], ['aprire', 'apr', 'ire'], ['sentire', 'sent', 'ire'],
+];
+
+/** Présent régulier italien. */
+export function presenteRegularIT(rand) {
+  const [inf, stem, grp] = choisir(rand, VERBES_REG_IT);
+  const term = TERM_PRESENT_IT[grp];
+  const i = entier(rand, 0, 5);
+  const bonne = stem + term[i];
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'presente-regolare',
+    enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_IT[i]} ».`,
+    bonne,
+    distracteurs: term.filter((_, j) => j !== i).map((tt) => stem + tt),
+    explication: `${inf} (${grp}) → ${PRONOMS_IT[i]} ${bonne}. Terminaisons -${grp} : ${term.join(', ')}.`,
+  }, rand);
+}
+
+const VERBES_IRR_PRES_IT = {
+  essere: ['sono', 'sei', 'è', 'siamo', 'siete', 'sono'],
+  avere: ['ho', 'hai', 'ha', 'abbiamo', 'avete', 'hanno'],
+  andare: ['vado', 'vai', 'va', 'andiamo', 'andate', 'vanno'],
+  fare: ['faccio', 'fai', 'fa', 'facciamo', 'fate', 'fanno'],
+  stare: ['sto', 'stai', 'sta', 'stiamo', 'state', 'stanno'],
+  potere: ['posso', 'puoi', 'può', 'possiamo', 'potete', 'possono'],
+};
+
+/** Présent irrégulier italien (essere, avere, andare, fare, stare, potere). */
+export function verbiIrregolariPresenteIT(rand) {
+  const inf = choisir(rand, Object.keys(VERBES_IRR_PRES_IT));
+  const formes = VERBES_IRR_PRES_IT[inf];
+  const i = entier(rand, 0, 5);
+  const bonne = formes[i];
+  const uniques = [...new Set(formes)].filter((f) => f !== bonne);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'presente-irregolare',
+    enonce: `Conjugue « ${inf} » au présent avec « ${PRONOMS_IT[i]} ».`,
+    bonne,
+    distracteurs: uniques.concat([inf, `${inf.slice(0, -1)}o`, `${inf.slice(0, -3)}o`]),
+    explication: `${inf} est irrégulier : ${PRONOMS_IT.map((p, k) => `${p} ${formes[k]}`).join(', ')}.`,
+  }, rand);
+}
+
+/** Participe passé (régulier) italien : -are→-ato, -ere→-uto, -ire→-ito. */
+export function participioPassatoIT(rand) {
+  const [inf, stem, grp] = choisir(rand, VERBES_REG_IT);
+  const bon = grp === 'are' ? `${stem}ato` : (grp === 'ere' ? `${stem}uto` : `${stem}ito`);
+  return construireQuestion({
+    difficulte: 'moyen',
+    notion: 'participio-passato',
+    enonce: `Quel est le participe passé de « ${inf} » ?`,
+    bonne: bon,
+    distracteurs: [`${stem}ato`, `${stem}uto`, `${stem}ito`, `${stem}ando`, `${stem}endo`].filter((x) => x !== bon),
+    explication: `${inf} (${grp}) → participe passé « ${bon} ». -are → -ato, -ere → -uto, -ire → -ito.`,
+  }, rand);
+}
