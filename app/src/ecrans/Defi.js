@@ -4,11 +4,12 @@
  * Chacun obtient un « code résultat » à renvoyer pour se départager.
  */
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, TextInput, StyleSheet, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import QRCode from 'react-native-qrcode-svg';
+import { CameraView, useCameraPermissions } from 'expo-camera';
 import { theme, couleurMatiere } from '../theme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { CHAPITRES, chapitreParId } from '../contenu-index';
@@ -31,6 +32,8 @@ export default function Defi() {
   const [index, setIndex] = useState(0);
   const [choisi, setChoisi] = useState(null);
   const [score, setScore] = useState(0);
+  const [permission, demanderPermission] = useCameraPermissions();
+  const scanLock = useRef(false);
 
   const questions = useMemo(() => {
     if (!defi) return [];
@@ -49,10 +52,27 @@ export default function Defi() {
     setPhase('creer');
   };
 
-  const rejoindre = () => {
-    const d = decoderDefi(saisie);
-    if (!d || !aGenerateur(d.chapId)) { Alert.alert('Code invalide', 'Vérifie le code du défi et réessaie.'); return; }
-    setDefi(d); demarrerJeu();
+  const rejoindre = (code = saisie) => {
+    const d = decoderDefi(code);
+    if (!d || !aGenerateur(d.chapId)) { Alert.alert('Code invalide', 'Vérifie le code du défi et réessaie.'); return false; }
+    setDefi(d); demarrerJeu(); return true;
+  };
+
+  // Ouvre le scanner (demande la permission caméra au besoin).
+  const ouvrirScan = async () => {
+    scanLock.current = false;
+    if (!permission || !permission.granted) {
+      const res = await demanderPermission();
+      if (!res || !res.granted) { Alert.alert('Caméra refusée', 'Autorise la caméra pour scanner, ou colle le code à la main.'); return; }
+    }
+    setPhase('scan');
+  };
+
+  const surScan = ({ data }) => {
+    if (scanLock.current) return;
+    scanLock.current = true;
+    setSaisie(data || '');
+    if (!rejoindre(data || '')) setPhase('coller'); // code non valide → retour à la saisie
   };
 
   const bouton = (label, onPress, bg, txt) => (
@@ -122,10 +142,32 @@ export default function Defi() {
             style={{ borderWidth: 1.5, borderColor: accent, borderRadius: t.rayon.m, padding: t.espace.m, color: t.couleur.texte, marginTop: t.espace.m, fontSize: t.police.moyenne }}
           />
           <View style={{ height: t.espace.m }} />
-          {bouton('Rejoindre', rejoindre, accent, t.couleur.accentTexte)}
+          {bouton('Rejoindre', () => rejoindre(), accent, t.couleur.accentTexte)}
+          <View style={{ height: t.espace.s }} />
+          {bouton('📷 Scanner le QR', ouvrirScan, t.couleur.surface, t.couleur.texte)}
           <View style={{ height: t.espace.s }} />
           {bouton('Retour', () => setPhase('menu'), t.couleur.surface, t.couleur.texte)}
         </ScrollView>
+      </SafeAreaView>
+    );
+  }
+
+  // ── SCANNER le QR d'un défi ───────────────────────────────────────────────────
+  if (phase === 'scan') {
+    return (
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#000' }} edges={['bottom']}>
+        <CameraView
+          style={{ flex: 1 }}
+          facing="back"
+          barcodeScannerSettings={{ barcodeTypes: ['qr'] }}
+          onBarcodeScanned={surScan}
+        />
+        <View style={{ position: 'absolute', top: 0, left: 0, right: 0, padding: t.espace.l }}>
+          <Text style={{ color: '#fff', fontSize: t.police.normale, fontWeight: '700', textAlign: 'center' }}>Vise le QR du défi</Text>
+        </View>
+        <View style={{ position: 'absolute', bottom: t.espace.l, left: t.espace.l, right: t.espace.l }}>
+          {bouton('Annuler', () => setPhase('coller'), t.couleur.surface, t.couleur.texte)}
+        </View>
       </SafeAreaView>
     );
   }
