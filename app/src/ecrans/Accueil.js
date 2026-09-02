@@ -34,6 +34,7 @@ export default function Accueil({ navigation }) {
   const xpJour = profil.jourCourant === jourA ? profil.xpDuJour : 0;
   const activitesJour = (profil.historique || []).filter((h) => String(h.date || '').slice(0, 10) === jourA).length;
   const quetes = quetesDuJour({ objectif: profil.objectifQuotidien || 50, xpJour, activitesJour });
+  const dimanche = new Date().getDay() === 0; // bilan de la semaine mis en avant le dimanche
   const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, dateLocale(new Date()));
 
   const listeNiveaux = niveaux();
@@ -146,6 +147,26 @@ export default function Accueil({ navigation }) {
           ))}
         </View>
 
+        {/* Bilan de la semaine — mis en avant le dimanche */}
+        {dimanche && profil.qcmTermines > 0 && (
+          <Pressable
+            onPress={() => navigation.navigate('RecapHebdo')}
+            accessibilityRole="button"
+            style={({ pressed }) => [{
+              marginTop: t.espace.m, padding: t.espace.m, borderRadius: t.rayon.m,
+              backgroundColor: t.couleur.surface, borderWidth: 1, borderColor: t.couleur.accent,
+              flexDirection: 'row', alignItems: 'center', opacity: pressed ? 0.7 : 1,
+            }]}
+          >
+            <Text style={{ fontSize: 22, marginRight: t.espace.m }}>📅</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: t.couleur.texte, fontWeight: '650', fontSize: t.police.normale }}>Ton bilan de la semaine</Text>
+              <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>XP, jours actifs, progression — c'est dimanche !</Text>
+            </View>
+            <Text style={{ color: t.couleur.accent, fontSize: t.police.grande }}>›</Text>
+          </Pressable>
+        )}
+
         {!niveau ? (
           <>
             <Text style={[st.section, { color: t.couleur.attenue, marginTop: t.espace.xl }]}>
@@ -229,6 +250,14 @@ export default function Accueil({ navigation }) {
             sousTitre={L('card.reviser.s')}
             couleur={t.couleur.alerte}
             onPress={() => navigation.navigate('Revision')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="⏱️ Révision express (2 min)"
+            sousTitre="Un max de questions en 2 minutes chrono — l'XP compte pour ta série"
+            couleur={t.couleur.succes}
+            onPress={() => navigation.navigate('Express')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte
