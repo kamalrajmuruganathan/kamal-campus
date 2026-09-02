@@ -7,7 +7,7 @@
  * scientifique) : l'élève choisit son PARCOURS, pas une filière.
  */
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -18,6 +18,8 @@ import { useProgression } from '../progression/Contexte';
 import { niveauPourXp } from '../../lib/progression';
 import { mascotteNiveau } from '../../lib/mascotte';
 import { serieAffichee, dateLocale } from '../../lib/serie';
+import { quetesDuJour, quetesFaites } from '../../lib/quetes';
+import { prochaineAction } from '../coach';
 import { useLangue } from '../i18n';
 
 export default function Accueil({ navigation }) {
@@ -27,6 +29,11 @@ export default function Accueil({ navigation }) {
   const [niveau, setNiveau] = useState(profil.niveauParDefaut ?? null);
   const prog = niveauPourXp(profil.xp);
   const masc = mascotteNiveau(prog.niveau);
+  const jourA = dateLocale(new Date());
+  const action = useMemo(() => prochaineAction(profil, jourA), [profil, jourA]);
+  const xpJour = profil.jourCourant === jourA ? profil.xpDuJour : 0;
+  const activitesJour = (profil.historique || []).filter((h) => String(h.date || '').slice(0, 10) === jourA).length;
+  const quetes = quetesDuJour({ objectif: profil.objectifQuotidien || 50, xpJour, activitesJour });
   const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, dateLocale(new Date()));
 
   const listeNiveaux = niveaux();
@@ -41,6 +48,28 @@ export default function Accueil({ navigation }) {
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.normale, marginTop: 4 }}>
           {L('app.sousTitre', { n: CHAPITRES.length, q: totalQuestions })}
         </Text>
+
+        {/* Ta prochaine action — une seule action prioritaire, pour réduire les clics */}
+        {action && (
+          <Pressable
+            onPress={() => (action.params ? navigation.navigate(action.ecran, action.params) : navigation.navigate(action.ecran))}
+            accessibilityRole="button"
+            accessibilityLabel={`Ta prochaine action : ${action.titre}`}
+            style={({ pressed }) => [{
+              marginTop: t.espace.l, borderRadius: t.rayon.l, padding: t.espace.l,
+              backgroundColor: t.couleur.accent, opacity: pressed ? 0.9 : 1,
+              flexDirection: 'row', alignItems: 'center', gap: t.espace.m,
+            }]}
+          >
+            <Text style={{ fontSize: 30 }}>{action.icone}</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.minuscule, fontWeight: '800', letterSpacing: 0.5, textTransform: 'uppercase', opacity: 0.85 }}>Ta prochaine action</Text>
+              <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.moyenne, fontWeight: '800', marginTop: 2 }}>{action.titre}</Text>
+              <Text style={{ color: t.couleur.accentTexte, fontSize: t.police.minuscule, opacity: 0.9, marginTop: 1 }}>{action.sousTitre}</Text>
+            </View>
+            <Text style={{ color: t.couleur.accentTexte, fontSize: 22 }}>›</Text>
+          </Pressable>
+        )}
 
         {/* Ma progression — niveau et XP, accès direct au profil */}
         <Pressable
@@ -97,6 +126,25 @@ export default function Accueil({ navigation }) {
           )}
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.grande, marginLeft: t.espace.s }}>›</Text>
         </Pressable>
+
+        {/* Quêtes du jour — objectifs légers, se réinitialisent chaque jour */}
+        <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Text style={{ color: t.couleur.texte, fontWeight: '650', fontSize: t.police.petite }}>Quêtes du jour</Text>
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule }}>{quetesFaites(quetes)} / 3</Text>
+          </View>
+          {quetes.map((q) => (
+            <View key={q.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 8 }}>
+              <Text style={{ fontSize: 15 }}>{q.fait ? '✅' : '⬜'}</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={{ color: q.fait ? t.couleur.attenue : t.couleur.texte, fontSize: t.police.minuscule, textDecorationLine: q.fait ? 'line-through' : 'none' }}>{q.texte}</Text>
+                <View style={{ height: 5, borderRadius: 3, backgroundColor: t.couleur.trait, overflow: 'hidden', marginTop: 3 }}>
+                  <View style={{ width: `${Math.round(q.progres * 100)}%`, height: '100%', backgroundColor: t.couleur.succes }} />
+                </View>
+              </View>
+            </View>
+          ))}
+        </View>
 
         {!niveau ? (
           <>

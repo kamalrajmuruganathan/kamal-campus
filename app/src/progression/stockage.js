@@ -44,6 +44,7 @@ export function profilVide() {
     voix: {}, // voix préférée par langue : { 'en-US': id, 'es-ES': id, 'de-DE': id }
     lectureAutoCartes: false, // lire automatiquement la carte quand on la retourne
     niveauParDefaut: null, // niveau choisi à l'onboarding (préselection accueil)
+    dernierChapitre: null, // { id, titre } — pour « reprendre » sur l'accueil
     rappelActif: false,
     rappelHeure: '18:00', // 'HH:MM'
     // Emploi du temps de révision : créneaux hebdomadaires qui déclenchent une

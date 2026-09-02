@@ -113,6 +113,7 @@ export function ProgressionProvider({ children }) {
           meilleurScore: Math.max(ancien.meilleurScore, res.taux),
           tentatives: ancien.tentatives + 1,
         };
+        suivant.dernierChapitre = { id: chapitreId, titre: titre || ancien.titre };
       }
 
       suivant.historique = [
