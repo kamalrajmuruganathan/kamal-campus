@@ -79,6 +79,9 @@ const LIBELLES_PARCOURS = {
   'hist-geo': 'Histoire-Géo-EMC',
   philosophie: 'Philosophie',
   ses: 'SES',
+  hggsp: 'HGGSP',
+  arts: 'Arts / Histoire des arts',
+  'langues-anciennes': 'Langues anciennes',
 };
 
 const LIBELLES_MATIERE = {
@@ -99,6 +102,9 @@ const LIBELLES_MATIERE = {
   'hist-geo': 'Histoire-Géo-EMC',
   philosophie: 'Philosophie',
   ses: 'SES',
+  hggsp: 'HGGSP',
+  arts: 'Arts / Histoire des arts',
+  'langues-anciennes': 'Langues anciennes',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────

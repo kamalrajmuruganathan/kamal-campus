@@ -47,6 +47,9 @@ const CLAIR = {
     histgeo: '#a15c1e',
     philosophie: '#7b5aa6',
     ses: '#0f8a6a',
+    hggsp: '#396a7a',
+    arts: '#c0399b',
+    lca: '#7d7f34',
   },
 };
 
@@ -78,6 +81,9 @@ const SOMBRE = {
     histgeo: '#d68b4e',
     philosophie: '#b596e0',
     ses: '#35c49e',
+    hggsp: '#6fb0c4',
+    arts: '#e483c8',
+    lca: '#b9bb63',
   },
 };
 
@@ -97,5 +103,8 @@ export const couleurMatiere = (t, matiere) => {
   if (matiere === 'hist-geo') return t.couleur.histgeo;
   if (matiere === 'philosophie') return t.couleur.philosophie;
   if (matiere === 'ses') return t.couleur.ses;
+  if (matiere === 'hggsp') return t.couleur.hggsp;
+  if (matiere === 'arts') return t.couleur.arts;
+  if (matiere === 'langues-anciennes') return t.couleur.lca;
   return t.couleur.maths;
 };
