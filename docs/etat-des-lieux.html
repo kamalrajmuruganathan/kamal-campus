@@ -270,8 +270,8 @@
     <div class="chip"><div class="n num">18 240</div><div class="l">questions QCM</div></div>
     <div class="chip"><div class="n num">912</div><div class="l">jeux d'exercices corrigés</div></div>
     <div class="chip"><div class="n num">9 724</div><div class="l">cartes de révision</div></div>
-    <div class="chip"><div class="n num">136</div><div class="l">sujets type bac/brevet</div></div>
-    <div class="chip"><div class="n num">284</div><div class="l">bac blancs & évaluations</div></div>
+    <div class="chip"><div class="n num">156</div><div class="l">sujets type bac/brevet</div></div>
+    <div class="chip"><div class="n num">324</div><div class="l">bac blancs & évaluations</div></div>
     <div class="chip"><div class="n num">27</div><div class="l">formulaires</div></div>
     <div class="chip"><div class="n num">∞</div><div class="l">questions générées</div></div>
   </div>
@@ -622,14 +622,14 @@
     ['Italien',87,'1 740',87,'10','20','--m-italien'],
     ['Français',69,'1 380',69,'10','20','--m-francais'],
     ['Histoire-Géo-EMC',69,'1 380',69,'10','20','--m-histgeo'],
-    ['Philosophie',20,'400',20,'—','—','--m-philosophie'],
-    ['SES',23,'460',23,'—','—','--m-ses'],
+    ['Philosophie',20,'400',20,'10','20','--m-philosophie'],
+    ['SES',23,'460',23,'10','20','--m-ses'],
   ];
   let dh='<thead><tr><th>Matière</th><th>Chap.</th><th>Questions</th><th>Exercices</th><th>Sujets</th><th>Bac blancs</th></tr></thead><tbody>';
   for(const [n,c,q,e,s,b,col] of DET){
     dh+=`<tr><td class="mm"><span class="dot2" style="background:var(${col})"></span>${n}</td><td>${c}</td><td>${q}</td><td>${e}</td><td>${s}</td><td>${b}</td></tr>`;
   }
-  dh+='<tr class="tot"><td>Total</td><td>912</td><td>18 240</td><td>912</td><td>136</td><td>284</td></tr></tbody>';
+  dh+='<tr class="tot"><td>Total</td><td>912</td><td>18 240</td><td>912</td><td>156</td><td>324</td></tr></tbody>';
   document.getElementById('detail-table').innerHTML=dh;
 
   // Compteurs animés (chiffres formatés avec espaces des milliers)
@@ -653,7 +653,7 @@
     'Kamal Campus — état des lieux',
     '912 chapitres, 18 240 questions, du CP à la Terminale.',
     '17 matières : maths, physique-chimie, sciences, SVT, technologie/SNT/NSI, sciences de l’ingénieur, enseignement scientifique, français, histoire-géographie-EMC, philosophie (Terminale), SES (2ⁿᵈᵉ→Tⁿᵃˡᵉ), et 4 langues vivantes complètes — anglais, espagnol, allemand et italien.',
-    'Par chapitre : cours + exercices + QCM + cartes. 136 sujets type bac/brevet, 284 bac blancs, 27 formulaires. Une rubrique de liens vers les annales officielles.',
+    'Par chapitre : cours + exercices + QCM + cartes. 156 sujets type bac/brevet, 324 bac blancs, 27 formulaires. Une rubrique de liens vers les annales officielles.',
     'Fonctions : résolveur pas à pas, questions générées à l’infini, énigmes, XP/série/badges, recherche & favoris, interface en 9 langues, 100 % hors ligne.',
     'Qualité : 381 tests au vert, contenu validé automatiquement, l’app compile.',
     'À noter : contenu en brouillon, relecture enseignante à prévoir.'
