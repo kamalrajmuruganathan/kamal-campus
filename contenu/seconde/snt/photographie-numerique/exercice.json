@@ -1,0 +1,133 @@
+{
+  "id": "2nde-snt-photographie-numerique-exos",
+  "chapitre": "2nde-snt-photographie-numerique",
+  "titre": "Exercices — La photographie numérique",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Cherche au brouillon avant d'ouvrir le corrigé.",
+  "exercices": [
+    {
+      "id": 1,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire",
+      "enonce": "Définis en une phrase chacun des mots suivants : a) pixel ; b) définition d'une image ; c) résolution.",
+      "corrige": [
+        "Un pixel est le plus petit élément d'une image matricielle : un petit carré portant une seule couleur.",
+        "La définition est le nombre total de pixels de l'image (largeur × hauteur).",
+        "La résolution est la densité de pixels, souvent exprimée en points par pouce (ppp)."
+      ],
+      "reponse": "Pixel = plus petit carré coloré ; définition = nombre total de pixels ; résolution = densité de pixels (ppp)."
+    },
+    {
+      "id": 2,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Une image mesure 1920 pixels de large sur 1080 pixels de haut. Quelle est sa définition (nombre total de pixels) ?",
+      "corrige": [
+        "La définition est le produit de la largeur par la hauteur.",
+        "1920 × 1080 = 2 073 600 pixels (soit environ 2 mégapixels)."
+      ],
+      "reponse": "2 073 600 pixels."
+    },
+    {
+      "id": 3,
+      "difficulte": "application",
+      "notion": "rvb",
+      "enonce": "Donne le code RVB (trois valeurs entre 0 et 255) de : a) le noir ; b) le blanc ; c) le vert vif ; d) le jaune.",
+      "corrige": [
+        "Le noir : aucune lumière, (0, 0, 0).",
+        "Le blanc : toutes les composantes au maximum, (255, 255, 255).",
+        "Le vert vif : seule la composante verte au maximum, (0, 255, 0).",
+        "Le jaune : rouge et vert au maximum, bleu à zéro, (255, 255, 0)."
+      ],
+      "reponse": "Noir (0,0,0) ; blanc (255,255,255) ; vert vif (0,255,0) ; jaune (255,255,0)."
+    },
+    {
+      "id": 4,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Calcule le poids, en octets, d'une image de 1000 × 800 pixels codée en RVB sans compression.",
+      "corrige": [
+        "Chaque pixel pèse 3 octets (un par composante R, V, B).",
+        "poids = largeur × hauteur × 3 = 1000 × 800 × 3.",
+        "poids = 2 400 000 octets (soit environ 2,4 Mo)."
+      ],
+      "reponse": "2 400 000 octets (environ 2,4 Mo)."
+    },
+    {
+      "id": 5,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Une image RVB non compressée pèse 90 000 octets. Sa largeur est de 200 pixels. Quelle est sa hauteur ?",
+      "corrige": [
+        "poids = largeur × hauteur × 3, donc hauteur = poids ÷ (largeur × 3).",
+        "hauteur = 90 000 ÷ (200 × 3) = 90 000 ÷ 600.",
+        "hauteur = 150 pixels."
+      ],
+      "reponse": "150 pixels."
+    },
+    {
+      "id": 6,
+      "difficulte": "application",
+      "notion": "matriciel-vectoriel",
+      "enonce": "Un logo doit pouvoir être imprimé aussi bien sur une carte de visite que sur une grande affiche, sans jamais se pixelliser. Quel type d'image faut-il choisir et pourquoi ?",
+      "corrige": [
+        "Il faut une image vectorielle.",
+        "Elle est décrite par des formes géométriques et des formules, donc on peut l'agrandir autant qu'on veut sans perte de qualité, contrairement à une image matricielle qui se pixellise."
+      ],
+      "reponse": "Une image vectorielle, car elle s'agrandit sans perte de qualité."
+    },
+    {
+      "id": 7,
+      "difficulte": "approfondissement",
+      "notion": "traitement-niveaux-de-gris",
+      "enonce": "Un pixel a pour code RVB (90, 150, 60). Convertis-le en niveau de gris par la méthode de la moyenne, puis donne son nouveau code RVB.",
+      "corrige": [
+        "On calcule la moyenne des trois composantes : (90 + 150 + 60) / 3.",
+        "(90 + 150 + 60) / 3 = 300 / 3 = 100.",
+        "On met cette valeur dans les trois composantes : le pixel devient (100, 100, 100)."
+      ],
+      "reponse": "Gris = 100, donc le pixel devient (100, 100, 100)."
+    },
+    {
+      "id": 8,
+      "difficulte": "approfondissement",
+      "notion": "traitement-luminosite",
+      "enonce": "Pour éclaircir une image, on ajoute 40 à chaque composante de chaque pixel. Que deviennent les pixels a) (10, 200, 100) et b) (230, 250, 20) ? On rappelle qu'une composante ne peut pas dépasser 255.",
+      "corrige": [
+        "On ajoute 40 à chaque composante, sans dépasser 255.",
+        "a) (10+40, 200+40, 100+40) = (50, 240, 140).",
+        "b) (230+40, 250+40, 20+40) : 270 et 290 dépassent 255, on les bloque à 255 → (255, 255, 60)."
+      ],
+      "reponse": "a) (50, 240, 140) ; b) (255, 255, 60)."
+    },
+    {
+      "id": 9,
+      "difficulte": "approfondissement",
+      "notion": "traitement-filtre-negatif",
+      "enonce": "Le filtre « négatif » remplace chaque composante par 255 moins sa valeur. Applique-le au pixel (0, 128, 255).",
+      "corrige": [
+        "On calcule 255 − valeur pour chaque composante.",
+        "R : 255 − 0 = 255 ; V : 255 − 128 = 127 ; B : 255 − 255 = 0.",
+        "Le pixel négatif est (255, 127, 0)."
+      ],
+      "reponse": "(255, 127, 0)."
+    },
+    {
+      "id": 10,
+      "difficulte": "approfondissement",
+      "notion": "exif-compression",
+      "enonce": "a) Cite deux informations que peuvent contenir les métadonnées EXIF d'une photo. b) Explique pourquoi enregistrer une photo au format JPEG réduit son poids, et quel en est l'inconvénient.",
+      "corrige": [
+        "a) Par exemple : la date et l'heure de la prise de vue, le modèle de l'appareil, les réglages (exposition, sensibilité) ou la position GPS.",
+        "b) Le JPEG est une compression avec pertes : il supprime des détails peu visibles pour réduire le poids du fichier.",
+        "L'inconvénient est une baisse de qualité : plus on compresse, plus des défauts (artefacts) peuvent apparaître."
+      ],
+      "reponse": "a) Ex. date/heure et position GPS. b) JPEG compresse avec pertes (supprime des détails) : fichier plus léger mais qualité dégradée."
+    }
+  ]
+}

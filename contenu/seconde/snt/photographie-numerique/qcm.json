@@ -1,0 +1,294 @@
+{
+  "id": "2nde-snt-photographie-numerique-qcm",
+  "chapitre": "2nde-snt-photographie-numerique",
+  "titre": "QCM — La photographie numérique",
+  "voie": "generale",
+  "niveau": "seconde",
+  "parcours": "snt",
+  "matiere": "snt",
+  "statut": "brouillon",
+  "relu_par": null,
+  "consigne": "Une seule réponse correcte par question.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulte": "facile",
+      "notion": "pixel",
+      "enonce": "Qu'est-ce qu'un pixel ?",
+      "choix": [
+        "Un petit carré de l'image portant une seule couleur",
+        "Une unité de mesure de la taille d'un écran en centimètres",
+        "Un fichier contenant plusieurs photos",
+        "Le nom d'un format de compression"
+      ],
+      "reponse": 0,
+      "explication": "Le pixel (picture element) est le plus petit élément d'une image matricielle : un petit carré qui porte une seule couleur."
+    },
+    {
+      "id": 2,
+      "difficulte": "facile",
+      "notion": "definition",
+      "enonce": "La définition d'une image, c'est :",
+      "choix": [
+        "Le nombre de pixels par pouce",
+        "Le nombre total de pixels de l'image",
+        "Le poids du fichier en octets",
+        "Le nombre de couleurs affichables"
+      ],
+      "reponse": 1,
+      "explication": "La définition est le nombre total de pixels de l'image, donné par largeur × hauteur (ex. 1920 × 1080)."
+    },
+    {
+      "id": 3,
+      "difficulte": "moyen",
+      "notion": "definition",
+      "enonce": "Une image mesure 800 pixels de large sur 600 pixels de haut. Combien contient-elle de pixels ?",
+      "choix": [
+        "1 400 pixels",
+        "480 000 pixels",
+        "14 400 pixels",
+        "1 440 000 pixels"
+      ],
+      "reponse": 1,
+      "explication": "On multiplie la largeur par la hauteur : 800 × 600 = 480 000 pixels."
+    },
+    {
+      "id": 4,
+      "difficulte": "moyen",
+      "notion": "resolution",
+      "enonce": "La résolution d'une image se mesure notamment en :",
+      "choix": [
+        "octets",
+        "hertz",
+        "points par pouce (ppp)",
+        "bits par seconde"
+      ],
+      "reponse": 2,
+      "explication": "La résolution mesure la densité de pixels, souvent en points par pouce (ppp, ou dpi). Elle compte surtout pour l'impression."
+    },
+    {
+      "id": 5,
+      "difficulte": "moyen",
+      "notion": "definition-vs-resolution",
+      "enonce": "Quelle affirmation est correcte ?",
+      "choix": [
+        "La définition et la résolution désignent exactement la même chose",
+        "La définition est le nombre de pixels, la résolution est leur densité",
+        "La résolution est le nombre de pixels, la définition est leur densité",
+        "La définition se mesure toujours en ppp"
+      ],
+      "reponse": 1,
+      "explication": "La définition compte le nombre total de pixels ; la résolution indique la densité de pixels (par exemple en ppp). Ce sont deux notions distinctes."
+    },
+    {
+      "id": 6,
+      "difficulte": "facile",
+      "notion": "rvb",
+      "enonce": "Dans le codage RVB, les trois couleurs primaires sont :",
+      "choix": [
+        "Rouge, Jaune, Bleu",
+        "Rouge, Vert, Bleu",
+        "Cyan, Magenta, Jaune",
+        "Rouge, Vert, Noir"
+      ],
+      "reponse": 1,
+      "explication": "RVB signifie Rouge, Vert, Bleu : les trois couleurs primaires de la lumière (synthèse additive)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "rvb",
+      "enonce": "Sur combien de niveaux code-t-on chaque composante (R, V ou B) d'un pixel ?",
+      "choix": [
+        "De 0 à 100",
+        "De 0 à 255",
+        "De 1 à 256",
+        "De -128 à 127"
+      ],
+      "reponse": 1,
+      "explication": "Chaque composante est codée sur 1 octet (8 bits), soit 256 niveaux allant de 0 à 255."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "rvb",
+      "enonce": "Quel code RVB correspond au blanc ?",
+      "choix": [
+        "(0, 0, 0)",
+        "(255, 0, 0)",
+        "(255, 255, 255)",
+        "(128, 128, 128)"
+      ],
+      "reponse": 2,
+      "explication": "En synthèse additive, le blanc s'obtient au maximum des trois composantes : (255, 255, 255). (0, 0, 0) est le noir."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "rvb",
+      "enonce": "Quel code RVB donne un rouge vif (uniquement du rouge) ?",
+      "choix": [
+        "(0, 255, 0)",
+        "(255, 0, 0)",
+        "(0, 0, 255)",
+        "(255, 255, 0)"
+      ],
+      "reponse": 1,
+      "explication": "Un rouge vif n'a que la composante rouge au maximum : (255, 0, 0). (0, 255, 0) est vert et (0, 0, 255) est bleu."
+    },
+    {
+      "id": 10,
+      "difficulte": "facile",
+      "notion": "octets-pixel",
+      "enonce": "Combien d'octets faut-il pour coder la couleur d'un pixel en RVB ?",
+      "choix": [
+        "1 octet",
+        "2 octets",
+        "3 octets",
+        "8 octets"
+      ],
+      "reponse": 2,
+      "explication": "Un octet par composante : 1 pour le rouge, 1 pour le vert, 1 pour le bleu, soit 3 octets par pixel."
+    },
+    {
+      "id": 11,
+      "difficulte": "facile",
+      "notion": "matriciel-vectoriel",
+      "enonce": "Une photographie numérique est une image :",
+      "choix": [
+        "vectorielle",
+        "matricielle",
+        "toujours en noir et blanc",
+        "sans pixels"
+      ],
+      "reponse": 1,
+      "explication": "Une photo est décrite pixel par pixel : c'est une image matricielle (bitmap)."
+    },
+    {
+      "id": 12,
+      "difficulte": "moyen",
+      "notion": "matriciel-vectoriel",
+      "enonce": "Quel type d'image peut être agrandi autant qu'on veut sans perte de qualité ?",
+      "choix": [
+        "L'image matricielle",
+        "L'image vectorielle",
+        "L'image au format JPEG",
+        "Aucune image ne le permet"
+      ],
+      "reponse": 1,
+      "explication": "L'image vectorielle est décrite par des formes géométriques : on peut l'agrandir sans perte. L'image matricielle, elle, se pixellise."
+    },
+    {
+      "id": 13,
+      "difficulte": "moyen",
+      "notion": "matriciel-vectoriel",
+      "enonce": "Que se passe-t-il quand on agrandit fortement une image matricielle ?",
+      "choix": [
+        "Elle reste parfaitement nette",
+        "Elle se pixellise et devient floue",
+        "Elle se transforme en image vectorielle",
+        "Son poids devient nul"
+      ],
+      "reponse": 1,
+      "explication": "Agrandie au-delà de sa définition, une image matricielle laisse apparaître ses pixels (pixellisation) et devient floue."
+    },
+    {
+      "id": 14,
+      "difficulte": "moyen",
+      "notion": "poids",
+      "enonce": "Comment calcule-t-on le poids d'une image matricielle RVB non compressée ?",
+      "choix": [
+        "largeur + hauteur + 3",
+        "largeur × hauteur",
+        "largeur × hauteur × 3 octets",
+        "largeur × hauteur ÷ 3"
+      ],
+      "reponse": 2,
+      "explication": "Chaque pixel pèse 3 octets (RVB), donc poids = largeur × hauteur × 3 octets."
+    },
+    {
+      "id": 15,
+      "difficulte": "difficile",
+      "notion": "poids",
+      "enonce": "Quel est le poids d'une image de 100 × 200 pixels en RVB non compressée ?",
+      "choix": [
+        "20 000 octets",
+        "60 000 octets",
+        "300 octets",
+        "600 octets"
+      ],
+      "reponse": 1,
+      "explication": "poids = 100 × 200 × 3 = 60 000 octets."
+    },
+    {
+      "id": 16,
+      "difficulte": "facile",
+      "notion": "exif",
+      "enonce": "Les métadonnées EXIF d'une photo servent à :",
+      "choix": [
+        "Compresser l'image",
+        "Décrire la photo (date, appareil, réglages, parfois GPS)",
+        "Colorer les pixels",
+        "Transformer l'image en vectoriel"
+      ],
+      "reponse": 1,
+      "explication": "Les métadonnées EXIF sont des données sur la donnée : date et heure, modèle d'appareil, réglages et parfois la position GPS."
+    },
+    {
+      "id": 17,
+      "difficulte": "moyen",
+      "notion": "capteur",
+      "enonce": "Comment appelle-t-on les cellules sensibles à la lumière qui recouvrent le capteur d'un appareil photo ?",
+      "choix": [
+        "des pixels",
+        "des photosites",
+        "des octets",
+        "des filtres"
+      ],
+      "reponse": 1,
+      "explication": "Le capteur est couvert de photosites : chacun mesure la lumière reçue et la convertit en signal électrique, puis en nombres."
+    },
+    {
+      "id": 18,
+      "difficulte": "difficile",
+      "notion": "traitement-niveaux-de-gris",
+      "enonce": "Pour convertir un pixel en niveau de gris par la méthode de la moyenne, on calcule :",
+      "choix": [
+        "R × V × B",
+        "(R + V + B) / 3, valeur mise dans R, V et B",
+        "255 − R",
+        "R + V + B sans limite"
+      ],
+      "reponse": 1,
+      "explication": "On calcule la moyenne (R + V + B) / 3 et on affecte cette même valeur aux trois composantes : un pixel est gris quand R = V = B."
+    },
+    {
+      "id": 19,
+      "difficulte": "moyen",
+      "notion": "traitement-luminosite",
+      "enonce": "Pour éclaircir une image, un algorithme de luminosité :",
+      "choix": [
+        "ajoute une même valeur à R, V et B de chaque pixel",
+        "supprime des pixels au hasard",
+        "remplace chaque composante par 0",
+        "convertit l'image en vectoriel"
+      ],
+      "reponse": 0,
+      "explication": "Augmenter la luminosité revient à ajouter une même valeur aux composantes R, V et B de chaque pixel, en restant entre 0 et 255."
+    },
+    {
+      "id": 20,
+      "difficulte": "moyen",
+      "notion": "compression-jpeg",
+      "enonce": "Que peut-on dire de la compression JPEG ?",
+      "choix": [
+        "C'est une compression sans aucune perte de qualité",
+        "Elle allège le fichier en supprimant des détails peu visibles (avec pertes)",
+        "Elle ne change jamais le poids du fichier",
+        "Elle transforme la photo en image vectorielle"
+      ],
+      "reponse": 1,
+      "explication": "Le JPEG est une compression avec pertes : elle réduit le poids en supprimant des détails peu perceptibles. Le PNG, lui, est sans perte."
+    }
+  ]
+}
