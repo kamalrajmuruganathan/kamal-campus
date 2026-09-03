@@ -75,6 +75,8 @@ const LIBELLES_PARCOURS = {
   espagnol: 'Espagnol',
   allemand: 'Allemand',
   italien: 'Italien',
+  francais: 'Français',
+  'hist-geo': 'Histoire-Géo-EMC',
 };
 
 const LIBELLES_MATIERE = {
@@ -91,6 +93,8 @@ const LIBELLES_MATIERE = {
   espagnol: 'Espagnol',
   allemand: 'Allemand',
   italien: 'Italien',
+  francais: 'Français',
+  'hist-geo': 'Histoire-Géo-EMC',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────

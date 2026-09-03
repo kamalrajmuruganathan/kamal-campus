@@ -21,6 +21,7 @@ import {
   presenteRegularES, verboIrregularPresenteES, preteritoRegularES,
   praesensRegularDE, seinHabenModalDE, artikelGenusDE,
   presenteRegularIT, verbiIrregolariPresenteIT, participioPassatoIT,
+  presentERegulierFR, imparfaitERegulierFR, futurERegulierFR,
 } from './modeles.js';
 
 /** id de chapitre → liste de générateurs qui l'alimentent. */
@@ -159,6 +160,12 @@ export const REGISTRE = {
   '6e-italien-presente-regolare': [presenteRegularIT],
   '5e-italien-presente-irregolare': [verbiIrregolariPresenteIT],
   '4e-italien-passato-prossimo': [participioPassatoIT],
+
+  // ── Français : conjugaison régulière du 1er groupe (drills à volonté) ──
+  'ce2-francais-present-premier-groupe': [presentERegulierFR],
+  '6e-francais-present-indicatif': [presentERegulierFR],
+  'cm1-francais-imparfait': [imparfaitERegulierFR],
+  'cm1-francais-futur-simple': [futurERegulierFR],
 
   // ── Physique-chimie : poids & énergie ──
   '4e-pc-interactions-forces': [poids],

@@ -1210,3 +1210,69 @@ export function participioPassatoIT(rand) {
     explication: `${inf} (${grp}) → participe passé « ${bon} ». -are → -ato, -ere → -uto, -ire → -ito.`,
   }, rand);
 }
+
+// ── Français : conjugaison régulière du 1er groupe (drills à volonté) ─────────
+// Verbes en -er réguliers, à initiale consonne (pas d'élision « j' », pas de
+// modification orthographique du radical : on évite manger/placer/appeler/payer…).
+const PRONOMS_FR = ['je', 'tu', 'il/elle', 'nous', 'vous', 'ils/elles'];
+const VERBES_ER_FR = [
+  'chanter', 'parler', 'donner', 'regarder', 'jouer', 'danser', 'trouver',
+  'penser', 'montrer', 'porter', 'laver', 'fermer', 'chercher', 'marcher',
+  'sauter', 'dessiner', 'rester', 'travailler', 'tomber', 'garder',
+];
+const TERM_PRESENT_ER = ['e', 'es', 'e', 'ons', 'ez', 'ent'];
+const TERM_IMPARFAIT_FR = ['ais', 'ais', 'ait', 'ions', 'iez', 'aient'];
+const TERM_FUTUR_FR = ['ai', 'as', 'a', 'ons', 'ez', 'ont'];
+function radicalER(inf) { return inf.slice(0, -2); }
+
+/** Présent de l'indicatif, verbes réguliers en -er. */
+export function presentERegulierFR(rand) {
+  const inf = choisir(rand, VERBES_ER_FR);
+  const stem = radicalER(inf);
+  const i = entier(rand, 0, 5);
+  const bonne = stem + TERM_PRESENT_ER[i];
+  const distracteurs = TERM_PRESENT_ER.filter((_, j) => j !== i).map((t) => stem + t);
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'present-1er-groupe',
+    enonce: `Conjugue « ${inf} » au présent de l'indicatif avec « ${PRONOMS_FR[i]} ».`,
+    bonne,
+    distracteurs,
+    explication: `${inf} (1er groupe) → ${PRONOMS_FR[i]} ${bonne}. Terminaisons au présent : -e, -es, -e, -ons, -ez, -ent.`,
+  }, rand);
+}
+
+/** Imparfait de l'indicatif, verbes réguliers en -er. */
+export function imparfaitERegulierFR(rand) {
+  const inf = choisir(rand, VERBES_ER_FR);
+  const stem = radicalER(inf);
+  const i = entier(rand, 0, 5);
+  const bonne = stem + TERM_IMPARFAIT_FR[i];
+  const distracteurs = TERM_IMPARFAIT_FR.filter((_, j) => j !== i).map((t) => stem + t)
+    .concat(stem + TERM_PRESENT_ER[i], inf + TERM_FUTUR_FR[i]);
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'imparfait',
+    enonce: `Conjugue « ${inf} » à l'imparfait avec « ${PRONOMS_FR[i]} ».`,
+    bonne,
+    distracteurs,
+    explication: `${inf} → ${PRONOMS_FR[i]} ${bonne}. Terminaisons de l'imparfait : -ais, -ais, -ait, -ions, -iez, -aient.`,
+  }, rand);
+}
+
+/** Futur simple, verbes réguliers en -er (infinitif + terminaison). */
+export function futurERegulierFR(rand) {
+  const inf = choisir(rand, VERBES_ER_FR);
+  const i = entier(rand, 0, 5);
+  const bonne = inf + TERM_FUTUR_FR[i];
+  const distracteurs = TERM_FUTUR_FR.filter((_, j) => j !== i).map((t) => inf + t)
+    .concat(radicalER(inf) + TERM_IMPARFAIT_FR[i]);
+  return construireQuestion({
+    difficulte: 'facile',
+    notion: 'futur-simple',
+    enonce: `Conjugue « ${inf} » au futur simple avec « ${PRONOMS_FR[i]} ».`,
+    bonne,
+    distracteurs,
+    explication: `${inf} → ${PRONOMS_FR[i]} ${bonne}. Au futur simple, on ajoute -ai, -as, -a, -ons, -ez, -ont à l'infinitif.`,
+  }, rand);
+}

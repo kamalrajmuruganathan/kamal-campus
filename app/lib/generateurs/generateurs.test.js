@@ -88,3 +88,31 @@ test('tous les générateurs du registre sont des fonctions', () => {
     for (const g of gens) assert.equal(typeof g, 'function', `${id} : générateur invalide`);
   }
 });
+
+test('français : présent/imparfait/futur — la forme marquée est correcte', () => {
+  const rand = rng(4242);
+  const PRES = { 'je': 'e', 'tu': 'es', 'il/elle': 'e', 'nous': 'ons', 'vous': 'ez', 'ils/elles': 'ent' };
+  const IMP = { 'je': 'ais', 'tu': 'ais', 'il/elle': 'ait', 'nous': 'ions', 'vous': 'iez', 'ils/elles': 'aient' };
+  const FUT = { 'je': 'ai', 'tu': 'as', 'il/elle': 'a', 'nous': 'ons', 'vous': 'ez', 'ils/elles': 'ont' };
+  const lire = (e) => { const m = /« ([a-zéèà]+) ».*« ([^»]+) »/.exec(e); return { inf: m[1], pron: m[2] }; };
+  for (let i = 0; i < 600; i++) {
+    let q = M.presentERegulierFR(rand); let { inf, pron } = lire(q.enonce);
+    assert.equal(q.choix[q.reponse], inf.slice(0, -2) + PRES[pron], `présent ${inf}/${pron}`);
+
+    q = M.imparfaitERegulierFR(rand); ({ inf, pron } = lire(q.enonce));
+    assert.equal(q.choix[q.reponse], inf.slice(0, -2) + IMP[pron], `imparfait ${inf}/${pron}`);
+
+    q = M.futurERegulierFR(rand); ({ inf, pron } = lire(q.enonce));
+    assert.equal(q.choix[q.reponse], inf + FUT[pron], `futur ${inf}/${pron}`);
+  }
+});
+
+test('français : chapitres de conjugaison branchés produisent 20 questions', () => {
+  for (const id of ['ce2-francais-present-premier-groupe', '6e-francais-present-indicatif',
+    'cm1-francais-imparfait', 'cm1-francais-futur-simple']) {
+    assert.equal(aGenerateur(id), true, `${id} doit avoir un générateur`);
+    const qs = genererQuestions(id, 20, rng(11));
+    assert.equal(qs.length, 20, `${id} : 20 questions`);
+    for (const q of qs) { assert.equal(new Set(q.choix).size, 4); assert.ok(q.reponse >= 0 && q.reponse < 4); }
+  }
+});
