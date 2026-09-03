@@ -270,8 +270,8 @@
     <div class="chip"><div class="n num">17 380</div><div class="l">questions QCM</div></div>
     <div class="chip"><div class="n num">869</div><div class="l">jeux d'exercices corrigés</div></div>
     <div class="chip"><div class="n num">9 208</div><div class="l">cartes de révision</div></div>
-    <div class="chip"><div class="n num">130</div><div class="l">sujets type bac/brevet</div></div>
-    <div class="chip"><div class="n num">264</div><div class="l">bac blancs & évaluations</div></div>
+    <div class="chip"><div class="n num">136</div><div class="l">sujets type bac/brevet</div></div>
+    <div class="chip"><div class="n num">284</div><div class="l">bac blancs & évaluations</div></div>
     <div class="chip"><div class="n num">27</div><div class="l">formulaires</div></div>
     <div class="chip"><div class="n num">∞</div><div class="l">questions générées</div></div>
   </div>
@@ -608,7 +608,7 @@
     ['Physique-chimie',68,'1 360',68,'10','20','--m-pc'],
     ['SVT',37,'740',37,'10','20','--m-svt'],
     ['Sciences (primaire)',25,'500',25,'—','3','--m-sci'],
-    ['Technologie',20,'400',20,'—','1','--m-techno'],
+    ['Technologie',20,'400',20,'6','21','--m-techno'],
     ['SNT',6,'120',6,'10','20','--m-snt'],
     ['NSI',12,'240',12,'10','20','--m-nsi'],
     ['Sciences de l’ingénieur',10,'200',10,'10','20','--m-si'],
@@ -624,7 +624,7 @@
   for(const [n,c,q,e,s,b,col] of DET){
     dh+=`<tr><td class="mm"><span class="dot2" style="background:var(${col})"></span>${n}</td><td>${c}</td><td>${q}</td><td>${e}</td><td>${s}</td><td>${b}</td></tr>`;
   }
-  dh+='<tr class="tot"><td>Total</td><td>869</td><td>17 380</td><td>869</td><td>130</td><td>264</td></tr></tbody>';
+  dh+='<tr class="tot"><td>Total</td><td>869</td><td>17 380</td><td>869</td><td>136</td><td>284</td></tr></tbody>';
   document.getElementById('detail-table').innerHTML=dh;
 
   // Compteurs animés (chiffres formatés avec espaces des milliers)
@@ -648,7 +648,7 @@
     'Kamal Campus — état des lieux',
     '869 chapitres, 17 380 questions, du CP à la Terminale.',
     '15 matières : maths, physique-chimie, sciences, SVT, technologie/SNT/NSI, sciences de l’ingénieur, enseignement scientifique, français (CP→1re, bac de français), histoire-géographie-EMC (CP→Terminale), et 4 langues vivantes complètes — anglais, espagnol, allemand et italien.',
-    'Par chapitre : cours + exercices + QCM + cartes. 130 sujets type bac/brevet, 264 bac blancs, 27 formulaires. Une rubrique de liens vers les annales officielles.',
+    'Par chapitre : cours + exercices + QCM + cartes. 136 sujets type bac/brevet, 284 bac blancs, 27 formulaires. Une rubrique de liens vers les annales officielles.',
     'Fonctions : résolveur pas à pas, questions générées à l’infini, énigmes, XP/série/badges, recherche & favoris, interface en 9 langues, 100 % hors ligne.',
     'Qualité : 381 tests au vert, contenu validé automatiquement, l’app compile.',
     'À noter : contenu en brouillon, relecture enseignante à prévoir.'
