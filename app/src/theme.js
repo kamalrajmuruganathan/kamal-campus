@@ -45,6 +45,8 @@ const CLAIR = {
     italien: '#1d9bb8',
     francais: '#9c27b0',
     histgeo: '#a15c1e',
+    philosophie: '#7b5aa6',
+    ses: '#0f8a6a',
   },
 };
 
@@ -74,6 +76,8 @@ const SOMBRE = {
     italien: '#5cc7de',
     francais: '#d17ce0',
     histgeo: '#d68b4e',
+    philosophie: '#b596e0',
+    ses: '#35c49e',
   },
 };
 
@@ -91,5 +95,7 @@ export const couleurMatiere = (t, matiere) => {
   if (matiere === 'italien') return t.couleur.italien;
   if (matiere === 'francais') return t.couleur.francais;
   if (matiere === 'hist-geo') return t.couleur.histgeo;
+  if (matiere === 'philosophie') return t.couleur.philosophie;
+  if (matiere === 'ses') return t.couleur.ses;
   return t.couleur.maths;
 };

@@ -77,6 +77,8 @@ const LIBELLES_PARCOURS = {
   italien: 'Italien',
   francais: 'Français',
   'hist-geo': 'Histoire-Géo-EMC',
+  philosophie: 'Philosophie',
+  ses: 'SES',
 };
 
 const LIBELLES_MATIERE = {
@@ -95,6 +97,8 @@ const LIBELLES_MATIERE = {
   italien: 'Italien',
   francais: 'Français',
   'hist-geo': 'Histoire-Géo-EMC',
+  philosophie: 'Philosophie',
+  ses: 'SES',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────
