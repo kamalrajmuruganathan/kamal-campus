@@ -270,8 +270,8 @@
     <div class="chip"><div class="n num">17 380</div><div class="l">questions QCM</div></div>
     <div class="chip"><div class="n num">869</div><div class="l">jeux d'exercices corrigés</div></div>
     <div class="chip"><div class="n num">9 208</div><div class="l">cartes de révision</div></div>
-    <div class="chip"><div class="n num">110</div><div class="l">sujets type bac/brevet</div></div>
-    <div class="chip"><div class="n num">224</div><div class="l">bac blancs & évaluations</div></div>
+    <div class="chip"><div class="n num">130</div><div class="l">sujets type bac/brevet</div></div>
+    <div class="chip"><div class="n num">264</div><div class="l">bac blancs & évaluations</div></div>
     <div class="chip"><div class="n num">27</div><div class="l">formulaires</div></div>
     <div class="chip"><div class="n num">∞</div><div class="l">questions générées</div></div>
   </div>
@@ -474,7 +474,7 @@
     <div class="fcard"><div class="ic">🌍</div><h3>9 langues</h3><p>Interface en FR, EN, ES, IT, PT, DE, ZH, AR, TA — choisie à l'onboarding, modifiable à tout moment.</p></div>
     <div class="fcard"><div class="ic">📎</div><h3>Annales officielles</h3><p>Une rubrique de liens vers les vrais sujets, gratuits et officiels (éduscol, APMEP, Labolycee…) — l'appli n'en recopie aucun, elle y renvoie.</p></div>
     <div class="fcard"><div class="ic">🌍</div><h3>4 langues à parité (87 ch. chacune)</h3><p>Anglais, espagnol, allemand et italien, du CP à la Terminale : grammaire, vocabulaire, civilisation et phonétique, chacune avec sujets type bac, bacs blancs, formulaires et drills générés.</p></div>
-    <div class="fcard"><div class="ic">📖</div><h3>Français &amp; Histoire-Géo-EMC</h3><p><b>Français</b> du CP à la 1re (le bac de français) : grammaire, conjugaison, orthographe, littérature et méthodes (commentaire, dissertation, oral). <b>Histoire-géographie-EMC</b> du CP à la Terminale : repères, notions et éducation civique. 138 chapitres, formulaires dédiés et conjugaison générée à l'infini.</p></div>
+    <div class="fcard"><div class="ic">📖</div><h3>Français &amp; Histoire-Géo-EMC</h3><p><b>Français</b> du CP à la 1re (le bac de français) : grammaire, conjugaison, orthographe, littérature et méthodes (commentaire, dissertation, oral). <b>Histoire-géographie-EMC</b> du CP à la Terminale : repères, notions et éducation civique. 138 chapitres, avec sujets (brevet, bac de français), bacs blancs, formulaires dédiés et conjugaison générée à l'infini.</p></div>
     <div class="fcard"><div class="ic">🔊</div><h3>Écouter (synthèse vocale)</h3><p>Sur les <b>cartes, QCM, fiches et exercices</b> des langues, un bouton « Écouter » lit dans la bonne langue (voix du téléphone, hors ligne). <b>Vitesse</b> réglable, <b>choix de la voix</b> par langue, et <b>lecture automatique</b> des cartes — le tout dans le profil.</p></div>
     <div class="fcard"><div class="ic">🧠</div><h3>Révision intelligente (SRS)</h3><p>Répétition espacée façon Anki : chaque carte revient au bon moment (J+1, J+3, J+7…) selon si tu l'as sue. Un écran « À revoir aujourd'hui » rassemble le tout — 100 % hors ligne.</p></div>
     <div class="fcard"><div class="ic">⚔️</div><h3>Duel à deux</h3><p>Défi sur un même téléphone : 10 questions générées en alternance, score en direct et gagnant à la fin. Marche sur tous les chapitres à générateur.</p></div>
@@ -617,14 +617,14 @@
     ['Espagnol',87,'1 740',87,'10','20','--m-espagnol'],
     ['Allemand',87,'1 740',87,'10','20','--m-allemand'],
     ['Italien',87,'1 740',87,'10','20','--m-italien'],
-    ['Français',69,'1 380',69,'—','—','--m-francais'],
-    ['Histoire-Géo-EMC',69,'1 380',69,'—','—','--m-histgeo'],
+    ['Français',69,'1 380',69,'10','20','--m-francais'],
+    ['Histoire-Géo-EMC',69,'1 380',69,'10','20','--m-histgeo'],
   ];
   let dh='<thead><tr><th>Matière</th><th>Chap.</th><th>Questions</th><th>Exercices</th><th>Sujets</th><th>Bac blancs</th></tr></thead><tbody>';
   for(const [n,c,q,e,s,b,col] of DET){
     dh+=`<tr><td class="mm"><span class="dot2" style="background:var(${col})"></span>${n}</td><td>${c}</td><td>${q}</td><td>${e}</td><td>${s}</td><td>${b}</td></tr>`;
   }
-  dh+='<tr class="tot"><td>Total</td><td>869</td><td>17 380</td><td>869</td><td>110</td><td>224</td></tr></tbody>';
+  dh+='<tr class="tot"><td>Total</td><td>869</td><td>17 380</td><td>869</td><td>130</td><td>264</td></tr></tbody>';
   document.getElementById('detail-table').innerHTML=dh;
 
   // Compteurs animés (chiffres formatés avec espaces des milliers)
@@ -648,7 +648,7 @@
     'Kamal Campus — état des lieux',
     '869 chapitres, 17 380 questions, du CP à la Terminale.',
     '15 matières : maths, physique-chimie, sciences, SVT, technologie/SNT/NSI, sciences de l’ingénieur, enseignement scientifique, français (CP→1re, bac de français), histoire-géographie-EMC (CP→Terminale), et 4 langues vivantes complètes — anglais, espagnol, allemand et italien.',
-    'Par chapitre : cours + exercices + QCM + cartes. 110 sujets type bac/brevet, 224 bac blancs, 27 formulaires. Une rubrique de liens vers les annales officielles.',
+    'Par chapitre : cours + exercices + QCM + cartes. 130 sujets type bac/brevet, 264 bac blancs, 27 formulaires. Une rubrique de liens vers les annales officielles.',
     'Fonctions : résolveur pas à pas, questions générées à l’infini, énigmes, XP/série/badges, recherche & favoris, interface en 9 langues, 100 % hors ligne.',
     'Qualité : 381 tests au vert, contenu validé automatiquement, l’app compile.',
     'À noter : contenu en brouillon, relecture enseignante à prévoir.'
