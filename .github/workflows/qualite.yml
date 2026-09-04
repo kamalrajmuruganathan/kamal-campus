@@ -1,0 +1,39 @@
+name: Contrôle qualité
+
+# Vérifie automatiquement le contenu à chaque push et pull request :
+#   - structure (outils/verifier-contenu.sh)
+#   - rendu & cohérence (app/scripts/verifier-qualite.mjs)
+#   - modules de logique (tests unitaires)
+# Ces contrôles ne nécessitent aucune dépendance npm : ils tournent en quelques secondes.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  qualite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installer jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Contrôle de structure
+        run: bash outils/verifier-contenu.sh
+
+      - name: Contrôle qualité (rendu & cohérence)
+        run: node app/scripts/verifier-qualite.mjs
+
+      - name: Tests unitaires
+        working-directory: app
+        run: node --test lib/*.test.js lib/**/*.test.js
