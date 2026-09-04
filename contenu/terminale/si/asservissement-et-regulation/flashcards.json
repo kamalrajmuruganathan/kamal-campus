@@ -14,6 +14,12 @@
     { "recto": "Asservissement ou régulation ?", "verso": "Asservissement = suivre une consigne variable. Régulation = maintenir une consigne constante malgré les perturbations." },
     { "recto": "Quelles sont les trois performances d'un asservissement ?", "verso": "Stabilité (converge), précision (écart statique faible), rapidité (temps de réponse à 5 %)." },
     { "recto": "Fonction de transfert en boucle fermée à retour unitaire ?", "verso": "$\\text{FTBF} = \\dfrac{H}{1+H}$. Avec un retour $K$ : $\\dfrac{H}{1+HK}$." },
-    { "recto": "Que font les actions I et D d'un correcteur PID ?", "verso": "L'intégrale (I) annule l'écart statique (précision). La dérivée (D) anticipe et amortit (limite le dépassement)." }
+    { "recto": "Que font les actions I et D d'un correcteur PID ?", "verso": "L'intégrale (I) annule l'écart statique (précision). La dérivée (D) anticipe et amortit (limite le dépassement)." },
+    { "recto": "Qu'est-ce qu'une perturbation ?", "verso": "Une grandeur extérieure non désirée qui éloigne la sortie de la consigne (vent, charge, ouverture d'une porte…)." },
+    { "recto": "Qu'est-ce que la fonction de transfert d'un bloc ?", "verso": "Le rapport de la grandeur de sortie sur la grandeur d'entrée du bloc." },
+    { "recto": "Comment se combinent deux blocs placés en série ?", "verso": "Leurs fonctions de transfert se multiplient : H = H₁ × H₂." },
+    { "recto": "Que mesure le temps de réponse à 5 % ?", "verso": "La rapidité : la durée au bout de laquelle la sortie reste dans une bande de ±5 % autour de sa valeur finale." },
+    { "recto": "Quel est le rôle de l'action proportionnelle (P) d'un correcteur PID ?", "verso": "Fournir une commande proportionnelle à l'écart : elle accélère et réduit l'écart, mais un gain trop fort déstabilise." },
+    { "recto": "Peut-on corriger un système en boucle ouverte ?", "verso": "Non : sans capteur ni mesure de la sortie, aucune correction n'est possible." }
   ]
 }

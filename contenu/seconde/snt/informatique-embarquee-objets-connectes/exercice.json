@@ -81,6 +81,54 @@
         "Idées : émettre moins souvent (ex. toutes les 2 h), réduire la puissance d'émission, mettre le capteur en sommeil profond entre les mesures, ajouter un petit panneau solaire."
       ],
       "reponse": "≈ 3,64 mAh par heure, soit environ 330 heures (≈ 13 jours) ; on prolonge en émettant moins souvent ou en dormant plus."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "exemples de systèmes embarqués",
+      "enonce": "Parmi ces objets, indique lesquels contiennent un système embarqué et justifie : a) un lave-linge programmable, b) un marteau, c) une montre connectée, d) un vélo classique.",
+      "corrige": [
+        "Un système embarqué est un ordinateur intégré à un objet pour le piloter. Le lave-linge programmable en contient un : il gère les programmes, la température et l'essorage.",
+        "Le marteau et le vélo classique n'ont aucune électronique de commande : pas de système embarqué (un vélo à assistance électrique, lui, en aurait un).",
+        "La montre connectée contient un système embarqué (microcontrôleur, capteurs, écran) et communique en plus avec le smartphone."
+      ],
+      "reponse": "Lave-linge programmable et montre connectée : oui ; marteau et vélo classique : non (aucune électronique de commande)."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "capteurs et grandeurs mesurées",
+      "enonce": "Associe chaque capteur à la grandeur qu'il mesure et donne pour chacun un objet du quotidien qui l'utilise : thermistance, photorésistance, accéléromètre.",
+      "corrige": [
+        "Thermistance : mesure la température (sa résistance varie avec la chaleur) ; usage : thermostat, four, réfrigérateur.",
+        "Photorésistance : mesure la lumière (luminosité) ; usage : allumage automatique de l'éclairage public ou de la luminosité d'un écran.",
+        "Accéléromètre : mesure l'accélération et les mouvements ; usage : smartphone (rotation de l'écran), podomètre, airbag."
+      ],
+      "reponse": "Thermistance -> température (thermostat) ; photorésistance -> lumière (éclairage auto) ; accéléromètre -> mouvement (smartphone)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "chaîne d'information et boucle de régulation",
+      "enonce": "Un chauffage connecté maintient une pièce à 20 °C. a) Quel est le capteur, quel est l'actionneur ? b) Décris la boucle : que se passe-t-il si la température mesurée descend à 18 °C ? c) Que fait le système quand 20 °C sont atteints ?",
+      "corrige": [
+        "Le capteur est le thermomètre (sonde de température) ; l'actionneur est le radiateur (ou la chaudière) qui chauffe.",
+        "À 18 °C, la valeur mesurée est inférieure à la consigne (20 °C) : le programme commande l'actionneur pour chauffer.",
+        "À 20 °C, la consigne est atteinte : le système coupe le chauffage, puis continue de surveiller. C'est une boucle capteur -> traitement -> actionneur, répétée en permanence."
+      ],
+      "reponse": "Capteur = thermomètre, actionneur = radiateur ; sous 20 °C il chauffe, à 20 °C il coupe : c'est une boucle de régulation."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "autonomie et calcul d'énergie",
+      "enonce": "Un capteur sur pile consomme en moyenne 5 mA sous 3 V ; la pile stocke 1200 mAh. a) Combien d'heures fonctionne-t-il en continu ? b) Convertis en jours. c) S'il n'est actif qu'une minute toutes les dix minutes (soit 1/10 du temps), combien de jours tient-il alors ?",
+      "corrige": [
+        "Autonomie = capacité / courant = 1200 mAh / 5 mA = 240 heures.",
+        "240 h / 24 = 10 jours de fonctionnement continu.",
+        "En n'étant actif que 1/10 du temps, la consommation moyenne est divisée par 10 : l'autonomie est multipliée par 10, soit environ 100 jours (2400 h)."
+      ],
+      "reponse": "240 h = 10 jours en continu ; en veille 9 minutes sur 10, environ 100 jours."
     }
   ]
 }

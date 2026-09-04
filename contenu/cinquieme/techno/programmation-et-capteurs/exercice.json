@@ -83,6 +83,56 @@
         "Algorithme : Répéter indéfiniment : [ lire le capteur d'humidité ; SI humidité < seuil ALORS arroser (pompe ON) SINON pompe OFF ]."
       ],
       "reponse": "Répéter indéfiniment : lire le capteur d'humidité (entrée), SI le sol est trop sec ALORS mettre la pompe en marche SINON l'arrêter (sortie) ; une boucle entoure un test qui commande l'actionneur."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "associer capteur et grandeur",
+      "enonce": "Associe chaque capteur à la grandeur qu'il mesure ou détecte : (a) photorésistance ; (b) capteur ultrason ; (c) capteur de température ; (d) bouton-poussoir.",
+      "corrige": [
+        "Un capteur détecte une grandeur physique et la transforme en information.",
+        "(a) photorésistance → la luminosité (lumière).",
+        "(b) capteur ultrason → la distance d'un obstacle.",
+        "(c) capteur de température → la chaleur. (d) bouton-poussoir → un appui."
+      ],
+      "reponse": "(a) luminosité, (b) distance, (c) température, (d) appui."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "séquence d'un programme",
+      "enonce": "Un lutin doit dire « bonjour », attendre 2 secondes, puis avancer de 100 pas. Ces instructions forment une séquence. Écris-les dans l'ordre et explique ce qu'est une séquence.",
+      "corrige": [
+        "Une séquence est un enchaînement d'instructions exécutées l'une après l'autre, dans l'ordre.",
+        "Ordre : 1) dire « bonjour » ; 2) attendre 2 secondes ; 3) avancer de 100 pas.",
+        "Le lutin exécute chaque instruction seulement quand la précédente est finie."
+      ],
+      "reponse": "Séquence : dire « bonjour » → attendre 2 s → avancer de 100 pas. Une séquence exécute les instructions les unes après les autres, dans l'ordre."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "répéter n fois ou tant que",
+      "enonce": "Distingue les deux types de boucles : (a) « répéter 4 fois » ; (b) « répéter tant que le bouton n'est pas appuyé ». Explique quand chaque boucle s'arrête.",
+      "corrige": [
+        "Une boucle répète des instructions.",
+        "(a) « répéter 4 fois » : la répétition s'arrête après un nombre de fois connu à l'avance (ici 4).",
+        "(b) « répéter tant que… » : la répétition continue tant qu'une condition reste vraie et s'arrête quand la condition devient fausse (ici quand on appuie sur le bouton)."
+      ],
+      "reponse": "(a) « répéter 4 fois » s'arrête après un nombre de tours connu ; (b) « répéter tant que… » s'arrête quand la condition devient fausse (ici, quand on appuie sur le bouton)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "algorithme d'une porte automatique",
+      "enonce": "Écris l'algorithme d'une porte automatique de magasin qui, en boucle permanente, ouvre la porte quand un capteur de présence détecte quelqu'un, puis la referme sinon. Identifie le capteur (entrée) et l'actionneur (sortie).",
+      "corrige": [
+        "On répète la vérification tout le temps : on utilise une boucle permanente.",
+        "À chaque tour, on teste le capteur avec une condition.",
+        "Algorithme : Répéter indéfiniment : [ acquérir : lire le capteur de présence ; SI une personne est détectée ALORS ouvrir la porte SINON fermer la porte ].",
+        "Le capteur de présence est l'entrée ; le moteur de la porte est l'actionneur (sortie)."
+      ],
+      "reponse": "Répéter indéfiniment : [ lire le capteur de présence ; SI présence ALORS ouvrir la porte SINON fermer la porte ]. Capteur = détecteur de présence (entrée) ; actionneur = moteur de la porte (sortie)."
     }
   ]
 }

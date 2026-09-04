@@ -82,6 +82,55 @@
         "On assemble : Répéter indéfiniment : [ feu vert ; attendre 20 s ; feu orange ; attendre 3 s ; feu rouge ; Si feu = rouge alors bonhomme vert ; attendre 20 s ]."
       ],
       "reponse": "Une boucle « Répéter indéfiniment » enchaîne vert (20 s), orange (3 s), rouge (20 s), avec une condition « si feu rouge alors allumer le bonhomme piéton »."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "séquence et ordre",
+      "enonce": "On veut faire dessiner un trait puis écrire « fini » par un lutin. Ces deux instructions forment une séquence. Explique ce qu'est une séquence et pourquoi l'ordre compte ici.",
+      "corrige": [
+        "Une séquence est un enchaînement d'instructions exécutées les unes après les autres, dans l'ordre.",
+        "Le lutin fait d'abord la première instruction (dessiner le trait), puis la deuxième (écrire « fini »).",
+        "Si on inverse l'ordre, le lutin écrit « fini » avant d'avoir dessiné : le résultat n'est pas le même."
+      ],
+      "reponse": "Une séquence enchaîne les instructions dans l'ordre ; le lutin dessine le trait puis écrit « fini ». Inverser l'ordre changerait le résultat."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "Scratch, lutin et blocs",
+      "enonce": "En cours, on programme avec Scratch. Explique ce qu'est un « lutin » et comment on écrit un programme dans ce logiciel.",
+      "corrige": [
+        "Dans Scratch, on programme en assemblant des blocs d'instructions, comme des pièces de puzzle, sans écrire de texte compliqué.",
+        "Le lutin est le personnage affiché à l'écran qui exécute les blocs.",
+        "Il avance, tourne, dit quelque chose, change de couleur… selon les blocs assemblés."
+      ],
+      "reponse": "Le lutin est le personnage à l'écran qui exécute le programme ; dans Scratch, on écrit le programme en assemblant des blocs d'instructions."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "boucle pour dessiner un triangle",
+      "enonce": "On veut faire dessiner un triangle équilatéral à un lutin. Écris le programme avec une boucle, sachant qu'il faut avancer trois fois et tourner de 120° à chaque fois.",
+      "corrige": [
+        "Un triangle a trois côtés égaux ; on répète donc trois fois « avancer puis tourner ».",
+        "Pour un triangle équilatéral, l'angle de rotation à chaque sommet est de 120°.",
+        "On écrit : Répéter 3 fois : [ avance de 100 ; tourne de 120° ]."
+      ],
+      "reponse": "Répéter 3 fois : [ avance de 100 ; tourne de 120° ]."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "algorithme d'un robot qui évite un obstacle",
+      "enonce": "Écris l'algorithme d'un petit robot qui, en boucle permanente, avance mais s'arrête et tourne dès qu'il rencontre un obstacle grâce à son capteur.",
+      "corrige": [
+        "Le robot répète les mêmes vérifications tout le temps : on utilise une boucle permanente.",
+        "À chaque tour, il teste le capteur avec une condition « si… alors… sinon… ».",
+        "Algorithme : Répéter indéfiniment : [ SI le capteur détecte un obstacle ALORS tourner SINON avancer ].",
+        "Le capteur donne l'information, la condition choisit l'action, et le moteur (actionneur) exécute."
+      ],
+      "reponse": "Répéter indéfiniment : [ SI le capteur détecte un obstacle ALORS tourner SINON avancer ]."
     }
   ]
 }

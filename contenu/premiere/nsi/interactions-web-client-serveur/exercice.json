@@ -84,6 +84,58 @@
         "5) Le navigateur reçoit le code HTML, puis demande éventuellement les ressources liées (images, feuilles de style, scripts) par de nouvelles requêtes, et affiche la page."
       ],
       "reponse": "Le DNS convertit le nom de domaine en adresse IP, le client envoie une requête GET /index.html, le serveur répond (par ex. 200 OK) avec le HTML, puis le navigateur charge les ressources liées et affiche la page."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "structure d'une URL",
+      "enonce": "Décompose l'URL https://www.exemple.fr/articles?id=42 en indiquant le protocole, le nom du serveur, le chemin et les paramètres.",
+      "corrige": [
+        "Le protocole est la partie avant :// , ici https (version chiffrée de HTTP).",
+        "Le nom du serveur (nom de domaine) est www.exemple.fr.",
+        "Le chemin de la ressource est /articles.",
+        "Les paramètres suivent le point d'interrogation : id=42."
+      ],
+      "reponse": "Protocole : https ; serveur : www.exemple.fr ; chemin : /articles ; paramètre : id=42."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "choisir GET ou POST",
+      "enonce": "Un formulaire de connexion demande un pseudo et un mot de passe. Quelle méthode HTTP faut-il utiliser, GET ou POST, et pourquoi ?",
+      "corrige": [
+        "Avec GET, les données sont placées dans l'URL (après le ?), donc visibles.",
+        "Avec POST, les données voyagent dans le corps de la requête, pas dans l'URL.",
+        "Un mot de passe ne doit pas apparaître dans l'URL (historique, partage, journaux).",
+        "On choisit donc POST pour envoyer un mot de passe."
+      ],
+      "reponse": "On utilise POST : les données (dont le mot de passe) sont dans le corps de la requête, pas dans l'URL."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "codes de statut HTTP",
+      "enonce": "Associe à chaque situation le code de statut HTTP renvoyé par le serveur : (a) la page demandée n'existe pas ; (b) la ressource est renvoyée correctement ; (c) l'accès est interdit ; (d) le serveur a planté en traitant la requête.",
+      "corrige": [
+        "(a) Ressource non trouvée : code 404.",
+        "(b) Requête réussie, ressource renvoyée : code 200.",
+        "(c) Accès interdit : code 403.",
+        "(d) Erreur interne du serveur : code 500."
+      ],
+      "reponse": "(a) 404 ; (b) 200 ; (c) 403 ; (d) 500."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "écrire un formulaire HTML",
+      "enonce": "Écris un formulaire HTML qui envoie en POST vers /inscription un champ texte nommé pseudo et un champ email nommé mail, avec un bouton d'envoi.",
+      "corrige": [
+        "On ouvre la balise <form> en précisant action=\"/inscription\" et method=\"post\".",
+        "Chaque champ a un attribut name : c'est sous ce nom que sa valeur est transmise.",
+        "On termine par un bouton de soumission.",
+        "Code : <form action=\"/inscription\" method=\"post\">\\n  <input type=\"text\" name=\"pseudo\">\\n  <input type=\"email\" name=\"mail\">\\n  <button type=\"submit\">Envoyer</button>\\n</form>"
+      ],
+      "reponse": "Un <form action=\"/inscription\" method=\"post\"> contenant <input name=\"pseudo\">, <input type=\"email\" name=\"mail\"> et un <button type=\"submit\">."
     }
   ]
 }

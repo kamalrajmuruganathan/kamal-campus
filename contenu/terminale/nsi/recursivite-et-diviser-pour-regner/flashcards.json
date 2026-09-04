@@ -14,6 +14,12 @@
     { "recto": "Récursivité et itération : quel lien ?", "verso": "Elles sont équivalentes : tout algorithme récursif a une version itérative et réciproquement. La récursivité est souvent plus lisible ; l'itération n'empile pas d'appels." },
     { "recto": "Quelles sont les trois étapes de « diviser pour régner » ?", "verso": "Diviser (découper en sous-problèmes de même nature, plus petits), régner (résoudre chacun, souvent récursivement), combiner (reconstruire la solution globale)." },
     { "recto": "Comment fonctionne la recherche dichotomique et que suppose-t-elle ?", "verso": "Sur un tableau trié, on compare la cible à l'élément du milieu et on écarte la moitié impossible, en recommençant : la zone est divisée par deux à chaque étape. Elle exige un tableau trié." },
-    { "recto": "Explique le principe du tri fusion.", "verso": "On coupe le tableau en deux moitiés, on trie chacune récursivement, puis on fusionne les deux moitiés triées en une seule liste triée (étape « combiner »)." }
+    { "recto": "Explique le principe du tri fusion.", "verso": "On coupe le tableau en deux moitiés, on trie chacune récursivement, puis on fusionne les deux moitiés triées en une seule liste triée (étape « combiner »)." },
+    { "recto": "Qu'est-ce que la pile d'appels et quel est son lien avec la récursivité ?", "verso": "C'est la structure où s'empilent les appels de fonction en attente ; les appels récursifs s'y empilent, puis se dépilent en calculant." },
+    { "recto": "Quelle erreur Python survient si le cas de base n'est jamais atteint ?", "verso": "Une RecursionError : la pile d'appels sature (dépassement de la profondeur maximale de récursion)." },
+    { "recto": "Quel est le cas de base de la fonction factorielle ?", "verso": "factorielle(0) = 1, renvoyé directement sans appel récursif." },
+    { "recto": "Pourquoi préférer parfois l'itération à la récursivité ?", "verso": "Parce qu'elle évite d'empiler des appels, et donc de saturer la pile pour de grandes tailles de données." },
+    { "recto": "« Récursif » signifie-t-il « plus rapide » ?", "verso": "Non : c'est un style d'écriture, pas une garantie d'efficacité." },
+    { "recto": "En quoi le tri fusion illustre-t-il « diviser pour régner » ?", "verso": "On coupe le tableau en deux (diviser), on trie chaque moitié récursivement (régner), puis on fusionne les moitiés triées (combiner)." }
   ]
 }

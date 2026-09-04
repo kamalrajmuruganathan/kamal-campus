@@ -84,6 +84,56 @@
         "La parité simple ne détecte donc que les erreurs sur un nombre impair de bits et ne les corrige pas."
       ],
       "reponse": "(a) bit de parité = 0 ; (b) oui, parité paire respectée, trame correcte ; (c) non, une erreur sur 2 bits n'est pas détectée."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "nombre de valeurs codées",
+      "enonce": "Combien de valeurs différentes peut-on coder avec 8 bits ? Avec 10 bits ?",
+      "corrige": [
+        "Avec n bits, on code 2ⁿ valeurs (de 0 à 2ⁿ − 1).",
+        "Pour 8 bits : 2⁸ = 256 valeurs (de 0 à 255).",
+        "Pour 10 bits : 2¹⁰ = 1024 valeurs."
+      ],
+      "reponse": "256 valeurs avec 8 bits ; 1024 valeurs avec 10 bits."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "temps de transmission",
+      "enonce": "Combien de temps faut-il pour transmettre un fichier de 5 Mbit à un débit de 1 Mbit/s ?",
+      "corrige": [
+        "Le temps est la quantité d'information divisée par le débit : t = nombre de bits / D.",
+        "t = 5 Mbit / 1 Mbit/s.",
+        "t = 5 secondes."
+      ],
+      "reponse": "La transmission dure 5 secondes."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "bit de parité",
+      "enonce": "On utilise une parité paire. Quel bit de parité faut-il ajouter à la donnée 1101 ? Que détecte-t-on à la réception ?",
+      "corrige": [
+        "En parité paire, on complète pour que le nombre total de 1 soit pair.",
+        "La donnée 1101 contient trois 1 (nombre impair).",
+        "On ajoute donc un bit de parité 1 : le mot devient 11011, qui compte quatre 1 (pair).",
+        "Si, à la réception, le nombre de 1 est impair, une erreur de transmission est détectée."
+      ],
+      "reponse": "Le bit de parité vaut 1 (mot 11011) ; une parité fausse à la réception signale une erreur."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "résolution d'un capteur",
+      "enonce": "Un capteur mesure une tension de 0 à 10 V et la numérise sur 8 bits. Quel est le plus petit écart de tension mesurable (le « pas ») ?",
+      "corrige": [
+        "Avec 8 bits, on dispose de 2⁸ = 256 niveaux.",
+        "Le pas est la plage divisée par le nombre de niveaux : 10 V / 256.",
+        "10 / 256 ≈ 0,039 V.",
+        "Soit environ 39 mV. Avec plus de bits, le pas serait plus fin (meilleure résolution)."
+      ],
+      "reponse": "Le pas vaut environ 10 / 256 ≈ 0,039 V, soit 39 mV."
     }
   ]
 }

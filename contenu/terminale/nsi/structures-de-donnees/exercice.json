@@ -91,6 +91,58 @@
         "Recherche de 4 : on compare à 8 (4<8, à gauche), à 3 (4>3, à droite), à 6 (4<6, à gauche), à 4 (trouvé) : 4 comparaisons."
       ],
       "reponse": "Racine 8 ; infixe = 1 3 4 6 8 10 14 (clés triées) ; rechercher 4 demande 4 comparaisons (8, 3, 6, 4)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "pile (LIFO)",
+      "enonce": "Une pile est vide. On empile 3, puis 7, puis 9. On dépile deux fois. Quelles valeurs sont renvoyées, et que reste-t-il dans la pile ?",
+      "corrige": [
+        "Une pile fonctionne en LIFO : dernier entré, premier sorti ; on ajoute et on retire par le sommet.",
+        "Après avoir empilé 3, 7, 9, le sommet est 9.",
+        "Premier dépilement : on retire 9. Deuxième dépilement : on retire 7.",
+        "Il reste 3 dans la pile (c'est le nouveau sommet)."
+      ],
+      "reponse": "Le premier dépilement renvoie 9, le second renvoie 7 ; il reste 3 dans la pile."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "file (FIFO)",
+      "enonce": "Une file est vide. On enfile A, puis B, puis C. On défile deux fois. Quelles valeurs sont renvoyées, et que reste-t-il dans la file ?",
+      "corrige": [
+        "Une file fonctionne en FIFO : premier entré, premier sorti ; on enfile d'un côté et on défile de l'autre.",
+        "Après avoir enfilé A, B, C, le premier de la file est A.",
+        "Premier défilement : A. Deuxième défilement : B.",
+        "Il reste C dans la file."
+      ],
+      "reponse": "Le premier défilement renvoie A, le second renvoie B ; il reste C dans la file."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "vocabulaire d'un arbre",
+      "enonce": "Un arbre a pour racine R ; R a deux enfants A et B ; A a un enfant C (sans enfant). Donne la racine, les feuilles et la hauteur de l'arbre.",
+      "corrige": [
+        "La racine est le nœud sans parent : R.",
+        "Une feuille est un nœud sans enfant : B (sans enfant) et C (sans enfant).",
+        "La hauteur est la plus grande profondeur (nombre d'arêtes depuis la racine).",
+        "Le chemin le plus long est R → A → C, soit 2 arêtes : la hauteur vaut 2."
+      ],
+      "reponse": "Racine : R ; feuilles : B et C ; hauteur : 2."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "On insère les clés 8, puis 3, puis 12, puis 5 dans un arbre binaire de recherche vide. Où se place la clé 5 ? Justifie avec la propriété de l'ABR.",
+      "corrige": [
+        "Dans un ABR, à chaque nœud, les clés du sous-arbre gauche sont inférieures et celles du sous-arbre droit supérieures.",
+        "8 devient la racine. 3 < 8 : à gauche de 8. 12 > 8 : à droite de 8.",
+        "Pour 5 : 5 < 8 → on descend à gauche vers 3 ; 5 > 3 → on descend à droite de 3.",
+        "3 n'a pas encore d'enfant droit : 5 devient l'enfant droit de 3."
+      ],
+      "reponse": "5 devient l'enfant droit du nœud 3 (car 5 < 8 puis 5 > 3)."
     }
   ]
 }

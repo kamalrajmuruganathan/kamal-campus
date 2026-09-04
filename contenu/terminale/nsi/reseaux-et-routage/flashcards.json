@@ -14,6 +14,12 @@
     { "recto": "Que fait un routeur et à quoi sert sa table de routage ?", "verso": "Un routeur relie plusieurs réseaux et fait passer les paquets de l'un à l'autre. Sa table de routage indique, pour chaque destination, le prochain saut : le voisin vers lequel envoyer le paquet." },
     { "recto": "Comment modélise-t-on un réseau par un graphe ?", "verso": "Les routeurs sont les sommets, les liens entre eux les arêtes. Router, c'est chercher un chemin dans ce graphe (pondéré quand les liens ont un coût)." },
     { "recto": "RIP vs OSPF : quel critère de choix de route ?", "verso": "RIP choisit la route avec le moins de sauts (poids 1 par lien). OSPF choisit la route de plus faible coût, le coût dépendant du débit : il privilégie les liens rapides, même avec plus de sauts." },
-    { "recto": "Quelle différence de rôle entre IP et les protocoles de routage (RIP/OSPF) ?", "verso": "IP adresse les machines et achemine les paquets. RIP et OSPF servent aux routeurs à construire et mettre à jour leurs tables de routage (choisir le chemin)." }
+    { "recto": "Quelle différence de rôle entre IP et les protocoles de routage (RIP/OSPF) ?", "verso": "IP adresse les machines et achemine les paquets. RIP et OSPF servent aux routeurs à construire et mettre à jour leurs tables de routage (choisir le chemin)." },
+    { "recto": "Qu'est-ce qu'un paquet ?", "verso": "Un morceau du message découpé, muni de l'adresse de destination, qui voyage indépendamment sur le réseau." },
+    { "recto": "Qu'est-ce qu'un saut (hop) ?", "verso": "Le passage d'un paquet d'un routeur au routeur suivant." },
+    { "recto": "De quoi se compose une adresse IP ?", "verso": "D'une partie réseau (commune à toutes les machines du réseau local) et d'une partie machine (propre à chaque appareil)." },
+    { "recto": "Qu'est-ce qu'un protocole ?", "verso": "Un ensemble de conventions communes que les machines respectent pour se comprendre." },
+    { "recto": "Qu'est-ce que le « prochain saut » dans une table de routage ?", "verso": "Le voisin vers lequel un routeur doit envoyer un paquet pour une destination donnée." },
+    { "recto": "Quelle est la différence de rôle entre IP et TCP ?", "verso": "IP adresse et achemine les paquets ; TCP assure en plus que les données arrivent complètes et dans l'ordre." }
   ]
 }

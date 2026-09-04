@@ -86,6 +86,57 @@
         "Les ARN messagers matures étant différents, ils sont traduits en protéines de séquences différentes."
       ],
       "reponse": "Grâce à l'épissage alternatif, un même gène produit des ARN messagers matures différents selon la cellule, donc plusieurs protéines distinctes : un gène ne code pas forcément une seule protéine."
+    },
+    {
+      "id": 7,
+      "difficulte": "moyen",
+      "notion": "transcription d'un brin",
+      "enonce": "Un brin transcrit d'ADN porte la séquence A-T-G-C. Donne la séquence de l'ARN messager obtenu par transcription, en respectant la complémentarité.",
+      "corrige": [
+        "Lors de la transcription, l'ARN polymérase respecte la complémentarité des bases ; dans l'ARN, la thymine (T) est remplacée par l'uracile (U).",
+        "En face du brin transcrit : A → U, T → A, G → C, C → G.",
+        "La séquence de l'ARN messager est donc : U-A-C-G."
+      ],
+      "reponse": "L'ARN messager est U-A-C-G (A→U, T→A, G→C, C→G ; l'ARN contient U à la place de T)."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "codon et nombre d'acides aminés",
+      "enonce": "Un ARN messager comporte 30 nucléotides codants. En expliquant ce qu'est un codon, indique combien d'acides aminés au maximum peut compter la protéine correspondante.",
+      "corrige": [
+        "Un codon est un groupe de trois nucléotides successifs de l'ARN messager ; chaque codon désigne un acide aminé (ou un signal d'arrêt).",
+        "30 nucléotides forment 30 ÷ 3 = 10 codons.",
+        "Chaque codon codant correspond à un acide aminé : la protéine peut compter jusqu'à 10 acides aminés (un codon-stop ne code aucun acide aminé)."
+      ],
+      "reponse": "Un codon = 3 nucléotides = 1 acide aminé. 30 nucléotides → 10 codons → au plus 10 acides aminés."
+    },
+    {
+      "id": 9,
+      "difficulte": "difficile",
+      "notion": "code redondant mais non ambigu",
+      "enonce": "Le code génétique est dit « redondant » (dégénéré) mais « non ambigu ». Explique précisément ces deux propriétés et pourquoi elles ne se contredisent pas.",
+      "corrige": [
+        "Redondant (dégénéré) signifie que plusieurs codons différents peuvent coder le même acide aminé : il y a 64 codons pour seulement 20 acides aminés.",
+        "Non ambigu signifie qu'un codon donné code toujours le même acide aminé : un codon a une seule signification.",
+        "Il n'y a pas de contradiction : plusieurs codons peuvent coder un même acide aminé (redondance), mais jamais un codon ne code plusieurs acides aminés (ce qui serait l'ambiguïté).",
+        "L'ambiguïté n'existe donc pas dans le code génétique."
+      ],
+      "reponse": "Redondant : plusieurs codons pour un même acide aminé. Non ambigu : un codon code toujours le même acide aminé. Aucun codon ne code plusieurs acides aminés, donc pas de contradiction."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "de la mutation au phénotype",
+      "enonce": "Une mutation remplace un nucléotide dans un gène. Explique comment ce changement peut modifier la protéine produite, puis le phénotype, en suivant la chaîne « gène → ARN messager → protéine → fonction ».",
+      "corrige": [
+        "La mutation change la séquence du gène, donc celle de l'ARN messager obtenu par transcription.",
+        "Un codon modifié peut désigner un acide aminé différent : la séquence de la protéine change.",
+        "Or la séquence d'acides aminés détermine le repliement de la protéine, donc sa forme et sa fonction.",
+        "Une protéine de forme modifiée peut être moins active, voire inactive : le phénotype peut alors être modifié.",
+        "Remarque : grâce à la redondance du code, certaines mutations ne changent pas l'acide aminé (mutation silencieuse), et le phénotype reste inchangé."
+      ],
+      "reponse": "La mutation change la séquence du gène → de l'ARN messager → parfois un acide aminé de la protéine → sa forme et sa fonction → le phénotype. Certaines mutations restent toutefois silencieuses (code redondant)."
     }
   ]
 }

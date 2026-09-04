@@ -82,6 +82,57 @@
         "Soit environ 4,9 kW consommés pour environ 2,9 kW utiles."
       ],
       "reponse": "Énergie utile ≈ 58 860 J, puissance utile ≈ 2943 W, puissance absorbée ≈ 4905 W (soit 4,9 kW)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "énergie et puissance",
+      "enonce": "Un moteur de puissance P = 500 W fonctionne pendant t = 2 h. Calcule l'énergie consommée en wattheures, puis en joules.",
+      "corrige": [
+        "L'énergie est E = P × t.",
+        "En gardant t en heures : E = 500 × 2 = 1000 Wh = 1 kWh.",
+        "Pour l'obtenir en joules, on prend t en secondes : t = 2 × 3600 = 7200 s.",
+        "E = 500 × 7200 = 3 600 000 J = 3,6 MJ (on retrouve 1 kWh = 3,6 MJ)."
+      ],
+      "reponse": "E = 1000 Wh = 1 kWh, soit 3,6 MJ."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "puissance en rotation",
+      "enonce": "Un moteur fournit un couple C = 5 N·m à une vitesse angulaire ω = 200 rad/s. Calcule la puissance mécanique.",
+      "corrige": [
+        "En rotation, la puissance est P = C × ω (ω en rad/s).",
+        "P = 5 × 200.",
+        "P = 1000 W = 1 kW."
+      ],
+      "reponse": "La puissance vaut 1000 W (1 kW)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "énergie cinétique",
+      "enonce": "Un chariot de masse m = 4 kg se déplace à la vitesse v = 5 m/s. Calcule son énergie cinétique.",
+      "corrige": [
+        "L'énergie cinétique en translation est Ec = (1/2) × m × v².",
+        "Ec = 0,5 × 4 × 5².",
+        "Ec = 0,5 × 4 × 25.",
+        "Ec = 50 J."
+      ],
+      "reponse": "L'énergie cinétique vaut 50 J."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "bilan et rendement d'une chaîne",
+      "enonce": "Une chaîne comporte un moteur (η₁ = 0,85) et un réducteur (η₂ = 0,90). La puissance utile en sortie doit être de 153 W. Calcule le rendement global, puis la puissance que doit absorber la chaîne.",
+      "corrige": [
+        "Les rendements en série se multiplient : η = η₁ × η₂ = 0,85 × 0,90 = 0,765.",
+        "Le rendement relie l'utile à l'absorbé : P_absorbée = P_utile / η.",
+        "P_absorbée = 153 / 0,765.",
+        "P_absorbée = 200 W (les 47 W manquants sont perdus, surtout en chaleur)."
+      ],
+      "reponse": "Rendement global 0,765 ; la chaîne doit absorber 153 / 0,765 = 200 W."
     }
   ]
 }

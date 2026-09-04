@@ -88,6 +88,58 @@
         "Conversion en octets : 1 octet = 8 bits, donc 1200 / 8 = 150 octets/s."
       ],
       "reponse": "La période d'échantillonnage est de 10 ms ; le débit est de 1200 bits/s, soit 150 octets/s."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "capteur TOR ou analogique",
+      "enonce": "Classe chacun de ces capteurs en TOR (Tout Ou Rien) ou analogique : (a) un bouton-poussoir ; (b) une thermistance (mesure de température) ; (c) un détecteur de fin de course.",
+      "corrige": [
+        "Un capteur TOR n'a que deux états (0 ou 1) ; un capteur analogique varie continûment.",
+        "(a) Le bouton-poussoir est appuyé ou non : deux états → TOR.",
+        "(b) La thermistance varie continûment avec la température → analogique.",
+        "(c) Le détecteur de fin de course est atteint ou non : deux états → TOR."
+      ],
+      "reponse": "(a) TOR ; (b) analogique ; (c) TOR."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "nombre de niveaux d'un CAN",
+      "enonce": "Combien de niveaux distincts peut coder un convertisseur analogique-numérique (CAN) de 8 bits ? Et un CAN de 12 bits ?",
+      "corrige": [
+        "Avec n bits, un CAN code 2ⁿ niveaux.",
+        "Pour 8 bits : 2⁸ = 256 niveaux.",
+        "Pour 12 bits : 2¹² = 4096 niveaux.",
+        "Plus le nombre de bits est grand, plus la résolution est fine."
+      ],
+      "reponse": "256 niveaux pour 8 bits ; 4096 niveaux pour 12 bits."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "résolution d'un CAN",
+      "enonce": "Un CAN de 10 bits numérise une tension comprise entre 0 et 5 V. Calcule le pas de quantification (la résolution).",
+      "corrige": [
+        "Avec 10 bits, on dispose de 2¹⁰ = 1024 niveaux, soit 1024 − 1 = 1023 intervalles.",
+        "La résolution est la plage divisée par le nombre d'intervalles : q = 5 / (1024 − 1).",
+        "q = 5 / 1023 ≈ 0,00489 V.",
+        "Soit environ 4,89 mV."
+      ],
+      "reponse": "La résolution vaut q = 5 / 1023 ≈ 4,89 mV."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "logique combinatoire",
+      "enonce": "Un système démarre si S = marche ET (NON arret). Donne la valeur de S pour les quatre combinaisons possibles de (marche, arret).",
+      "corrige": [
+        "On calcule d'abord NON arret, puis le ET avec marche.",
+        "marche=0, arret=0 : NON arret = 1 ; S = 0 ET 1 = 0.",
+        "marche=0, arret=1 : S = 0 ET 0 = 0. marche=1, arret=0 : S = 1 ET 1 = 1.",
+        "marche=1, arret=1 : NON arret = 0 ; S = 1 ET 0 = 0."
+      ],
+      "reponse": "S vaut 1 uniquement pour (marche=1, arret=0) ; sinon S vaut 0."
     }
   ]
 }

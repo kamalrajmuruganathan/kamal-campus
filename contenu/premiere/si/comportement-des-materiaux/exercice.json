@@ -87,6 +87,57 @@
         "On retient un diamètre normalisé au moins égal à 20 mm."
       ],
       "reponse": "Il faut une section d'au moins 300 mm², soit un diamètre minimal d'environ 19,5 mm (on retiendra 20 mm)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "contrainte normale",
+      "enonce": "Une barre de section S = 10 mm² subit un effort de traction F = 2000 N. Calcule la contrainte σ en MPa.",
+      "corrige": [
+        "La contrainte est σ = F / S.",
+        "σ = 2000 / 10 = 200 N/mm².",
+        "Or 1 MPa = 1 N/mm².",
+        "Donc σ = 200 MPa."
+      ],
+      "reponse": "La contrainte vaut σ = 200 MPa."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "allongement relatif",
+      "enonce": "Une barre de longueur initiale L₀ = 1,5 m s'allonge de ΔL = 0,6 mm sous charge. Calcule la déformation relative ε.",
+      "corrige": [
+        "La déformation relative est ε = ΔL / L₀, sans unité (mêmes unités en haut et en bas).",
+        "On convertit : L₀ = 1,5 m = 1500 mm.",
+        "ε = 0,6 / 1500.",
+        "ε = 0,0004, soit 0,04 %."
+      ],
+      "reponse": "La déformation relative vaut ε = 0,0004 (0,04 %)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "loi de Hooke",
+      "enonce": "Un acier de module de Young E = 210 000 MPa subit une déformation ε = 0,0005 dans le domaine élastique. Calcule la contrainte σ.",
+      "corrige": [
+        "Dans le domaine élastique, la loi de Hooke donne σ = E × ε.",
+        "σ = 210 000 × 0,0005.",
+        "σ = 105 MPa."
+      ],
+      "reponse": "La contrainte vaut σ = 105 MPa."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "dimensionnement d'une section",
+      "enonce": "Un acier a une limite élastique R_e = 250 MPa. On prend un coefficient de sécurité s = 2,5. Une pièce doit reprendre F = 8000 N en traction. Quelle est la section minimale nécessaire ?",
+      "corrige": [
+        "On calcule d'abord la contrainte admissible : R_pe = R_e / s = 250 / 2,5 = 100 MPa = 100 N/mm².",
+        "La condition de résistance impose σ = F / S ≤ R_pe.",
+        "La section minimale vaut S_min = F / R_pe = 8000 / 100.",
+        "S_min = 80 mm²."
+      ],
+      "reponse": "Il faut une section d'au moins 80 mm² (R_pe = 100 MPa, S_min = 8000 / 100)."
     }
   ]
 }

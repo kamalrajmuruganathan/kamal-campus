@@ -81,6 +81,54 @@
         "Deux sphères se coupent selon un cercle, trois sphères se coupent en un point (en pratique deux, dont un aberrant qu'on élimine) : il faut donc au moins 3 satellites pour la position. Un 4e sert à corriger l'horloge du récepteur, car les distances se déduisent du temps de trajet des signaux."
       ],
       "reponse": "C'est la trilatération ; avec 1 satellite on est sur une sphère ; il faut au moins 3 satellites pour croiser les distances (4 pour corriger l'horloge)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "latitude et longitude",
+      "enonce": "On donne la position de Paris : latitude 48,85° Nord, longitude 2,35° Est. a) Que mesure la latitude ? b) Que mesure la longitude ? c) Quelle est la latitude d'un point situé sur l'équateur ?",
+      "corrige": [
+        "La latitude mesure la position Nord-Sud, en degrés, par rapport à l'équateur (de 0° à 90° vers chaque pôle).",
+        "La longitude mesure la position Est-Ouest, en degrés, par rapport au méridien de Greenwich (de 0° à 180°).",
+        "Sur l'équateur, la latitude vaut 0° : l'équateur est le parallèle de référence."
+      ],
+      "reponse": "Latitude = position Nord-Sud (par rapport à l'équateur) ; longitude = Est-Ouest (par rapport à Greenwich) ; équateur : 0° de latitude."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "vitesse moyenne à partir de positions",
+      "enonce": "Un GPS enregistre qu'un cycliste parcourt 12 km en 30 minutes. a) Calcule sa vitesse moyenne en km/h. b) À cette vitesse, quelle distance parcourt-il en 1 h 15 ? c) Comment le GPS estime-t-il cette vitesse à partir des positions ?",
+      "corrige": [
+        "Vitesse = distance / temps = 12 km / 0,5 h = 24 km/h.",
+        "En 1 h 15 = 1,25 h : distance = 24 × 1,25 = 30 km.",
+        "Le récepteur calcule la distance parcourue entre deux positions successives et la divise par le temps écoulé entre ces relevés."
+      ],
+      "reponse": "24 km/h ; 30 km en 1 h 15 ; le GPS divise la distance entre deux points par le temps écoulé."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "satellites et synchronisation",
+      "enonce": "Le GPS repose sur des satellites et des horloges très précises. a) Pourquoi les satellites émettent-ils l'heure exacte ? b) Comment le récepteur en déduit-il sa distance à un satellite ? c) Pourquoi faut-il au moins 4 satellites (et non 3) ?",
+      "corrige": [
+        "Chaque satellite émet en continu sa position et l'heure d'émission, d'après une horloge atomique très précise.",
+        "Le récepteur mesure le temps mis par le signal pour arriver et le multiplie par la vitesse des ondes (environ 300 000 km/s) : distance = vitesse × durée.",
+        "Trois satellites suffiraient pour la position (trilatération), mais un quatrième sert à corriger l'horloge du récepteur, bien moins précise que celles des satellites."
+      ],
+      "reponse": "Les satellites émettent l'heure exacte ; distance = vitesse × durée du signal ; le 4e satellite corrige l'horloge du récepteur."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "trilatération",
+      "enonce": "Un récepteur mesure sa distance à trois satellites. a) Que représente géométriquement « être à distance d d'un satellite » dans l'espace ? b) Combien de sphères faut-il croiser pour fixer un point ? c) Pourquoi parle-t-on de trilatération et non de triangulation ?",
+      "corrige": [
+        "Être à une distance d d'un satellite place le récepteur sur une sphère de rayon d centrée sur ce satellite.",
+        "L'intersection de trois sphères se réduit en pratique à un point (à un point aberrant près, écarté car hors de la Terre) : trois mesures de distance suffisent.",
+        "On mesure des distances (et non des angles) : croiser des distances s'appelle trilatération, tandis que la triangulation utilise des angles."
+      ],
+      "reponse": "Chaque distance = une sphère ; trois sphères se croisent en un point ; on mesure des distances -> trilatération (pas triangulation)."
     }
   ]
 }

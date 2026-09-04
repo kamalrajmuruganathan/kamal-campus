@@ -90,6 +90,58 @@
         "Terminaison : quand i atteint len(t), m est le max de t[0..n-1], c'est-à-dire de toute la liste."
       ],
       "reponse": "doublons est en O(n^2) ; l'invariant 'm = max(t[0..i-1]) au début du tour i' prouve que maxi renvoie le maximum de la liste."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "complexité d'une boucle simple",
+      "enonce": "Quelle est la complexité en temps, en fonction de n, de la boucle suivante : for i in range(n): print(i) ? Justifie.",
+      "corrige": [
+        "La boucle exécute une opération (print) à chaque tour.",
+        "Elle fait n tours pour i allant de 0 à n-1.",
+        "Le nombre d'opérations est donc proportionnel à n.",
+        "La complexité est linéaire, notée O(n)."
+      ],
+      "reponse": "La complexité est O(n) (linéaire) : n tours, une opération par tour."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "assertions et jeu de tests",
+      "enonce": "Une fonction maximum(a, b) doit renvoyer le plus grand des deux nombres. Écris deux assertions qui vérifient un cas où a > b et un cas d'égalité.",
+      "corrige": [
+        "Une assertion vérifie que le résultat obtenu est celui attendu ; si c'est faux, elle lève une erreur.",
+        "Cas a > b : assert maximum(7, 3) == 7.",
+        "Cas d'égalité : assert maximum(4, 4) == 4.",
+        "Un bon jeu de tests inclut aussi des cas limites (nombres égaux, négatifs…)."
+      ],
+      "reponse": "assert maximum(7, 3) == 7 et assert maximum(4, 4) == 4."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "complexité de boucles imbriquées",
+      "enonce": "Quelle est la complexité de deux boucles imbriquées allant chacune de 0 à n-1 ? Combien d'itérations de la boucle interne pour n = 5 ?",
+      "corrige": [
+        "La boucle externe fait n tours ; pour chaque tour, la boucle interne fait n tours.",
+        "Le nombre total d'itérations internes est n × n = n².",
+        "La complexité est quadratique, O(n²).",
+        "Pour n = 5 : 5 × 5 = 25 itérations."
+      ],
+      "reponse": "Complexité O(n²) ; pour n = 5, cela fait 25 itérations."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "comparer des complexités",
+      "enonce": "On cherche une valeur dans un tableau trié de n = 1000 éléments. Estime le nombre de comparaisons pour la recherche séquentielle et pour la recherche dichotomique, et conclus.",
+      "corrige": [
+        "Recherche séquentielle : O(n), soit jusqu'à environ 1000 comparaisons dans le pire cas.",
+        "Recherche dichotomique : O(log₂ n) ; log₂(1000) ≈ 10, soit une dizaine de comparaisons.",
+        "L'écart est énorme et grandit avec n.",
+        "Sur un tableau trié, on préfère donc la dichotomique."
+      ],
+      "reponse": "≈ 1000 comparaisons en séquentiel contre ≈ 10 en dichotomique : la dichotomique est bien plus efficace."
     }
   ]
 }

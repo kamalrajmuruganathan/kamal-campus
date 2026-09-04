@@ -93,6 +93,57 @@
         "En mémorisant le prédécesseur (D vient de C, C vient de A), on reconstruit le chemin A -> C -> D."
       ],
       "reponse": "Oui, il y a un cycle (A-B-C-A) ; distance(A,D)=2 et un plus court chemin est A-C-D."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "degré d'un sommet",
+      "enonce": "Un graphe non orienté est donné par g = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\"], \"C\": [\"A\", \"D\"], \"D\": [\"B\", \"C\"]}. Quel est le degré du sommet A ? du sommet D ?",
+      "corrige": [
+        "Le degré d'un sommet est son nombre de voisins.",
+        "A a pour voisins B et C : degré 2.",
+        "D a pour voisins B et C : degré 2."
+      ],
+      "reponse": "A et D ont chacun un degré de 2."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "matrice d'adjacence",
+      "enonce": "Un graphe orienté a les sommets 0, 1, 2 et les arcs 0→1, 1→2 et 0→2. Donne sa matrice d'adjacence M (M[i][j] = 1 s'il existe un arc de i vers j).",
+      "corrige": [
+        "On construit un tableau 3×3 rempli de 0, et on met 1 pour chaque arc.",
+        "Arc 0→1 : M[0][1] = 1. Arc 0→2 : M[0][2] = 1. Arc 1→2 : M[1][2] = 1.",
+        "Ligne 0 : [0, 1, 1] ; ligne 1 : [0, 0, 1] ; ligne 2 : [0, 0, 0].",
+        "La matrice n'est pas symétrique car le graphe est orienté."
+      ],
+      "reponse": "M = [[0, 1, 1], [0, 0, 1], [0, 0, 0]]."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "parcours en largeur (BFS)",
+      "enonce": "Avec g = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\"], \"C\": [\"A\", \"D\"], \"D\": [\"B\", \"C\"]}, donne l'ordre de visite d'un parcours en largeur partant de A (on suit l'ordre des voisins donné).",
+      "corrige": [
+        "Le BFS utilise une file. On enfile A et on le marque vu.",
+        "On défile A, on visite ses voisins B puis C (enfilés et marqués). Ordre : A.",
+        "On défile B : son voisin non vu est D (enfilé). Ordre : A, B.",
+        "On défile C : ses voisins A et D sont déjà vus. Ordre : A, B, C. Puis on défile D. Ordre final : A, B, C, D."
+      ],
+      "reponse": "L'ordre de visite est A, B, C, D."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "plus court chemin (BFS) et cycles",
+      "enonce": "Dans un graphe non pondéré, on veut le plus court chemin (en nombre d'arêtes) de A à D pour g = {\"A\": [\"B\", \"C\"], \"B\": [\"D\"], \"C\": [\"D\"], \"D\": []}. Quel parcours utiliser, quelle est la longueur du plus court chemin, et pourquoi faut-il marquer les sommets visités ?",
+      "corrige": [
+        "Pour un plus court chemin en nombre d'arêtes dans un graphe non pondéré, on utilise le parcours en largeur (BFS).",
+        "Depuis A on atteint B et C (1 arête), puis D à partir de B ou C (2 arêtes).",
+        "Le plus court chemin de A à D a donc une longueur de 2 arêtes (par exemple A → B → D).",
+        "Marquer les sommets visités évite de retraiter un sommet : sur un graphe comportant un cycle, l'oubli ferait tourner le parcours indéfiniment."
+      ],
+      "reponse": "On utilise un BFS : le plus court chemin A→D vaut 2 arêtes ; marquer les visités empêche les boucles infinies sur les cycles."
     }
   ]
 }

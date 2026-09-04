@@ -83,6 +83,59 @@
         "Le système gère plusieurs processus « en même temps » en partageant le temps du processeur entre eux (ordonnancement)."
       ],
       "reponse": "Avec -rwxr-xr-- : le propriétaire peut lire/écrire/exécuter, le groupe lire et exécuter, les autres seulement lire ; un processus est un programme en cours d'exécution auquel le système alloue des ressources et un identifiant (PID)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "portes logiques",
+      "enonce": "Donne le résultat de chacune de ces opérations logiques : NON 1 ; 1 ET 0 ; 1 OU 0 ; 0 OU 0.",
+      "corrige": [
+        "NON inverse l'entrée : NON 1 = 0.",
+        "ET vaut 1 seulement si les deux entrées valent 1 : 1 ET 0 = 0.",
+        "OU vaut 1 si au moins une entrée vaut 1 : 1 OU 0 = 1.",
+        "OU avec deux entrées à 0 : 0 OU 0 = 0."
+      ],
+      "reponse": "NON 1 = 0 ; 1 ET 0 = 0 ; 1 OU 0 = 1 ; 0 OU 0 = 0."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "horloge et fréquence",
+      "enonce": "Un processeur est cadencé par une horloge de fréquence 2 GHz. Combien de cycles exécute-t-il en 1 seconde ? Et en 1 milliseconde ?",
+      "corrige": [
+        "La fréquence donne le nombre de cycles par seconde. 2 GHz = 2 × 10⁹ Hz.",
+        "En 1 seconde : 2 × 10⁹ = 2 milliards de cycles.",
+        "1 milliseconde = 0,001 s, donc 2 × 10⁹ × 0,001 = 2 × 10⁶ cycles.",
+        "En 1 ms le processeur exécute donc 2 millions de cycles."
+      ],
+      "reponse": "2 milliards de cycles en 1 s ; 2 millions de cycles en 1 ms."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "commandes du terminal",
+      "enonce": "Donne la commande Linux à taper pour : (a) afficher le dossier courant ; (b) lister le contenu d'un dossier ; (c) créer un dossier nommé tp ; (d) afficher le contenu du fichier notes.txt.",
+      "corrige": [
+        "(a) pwd affiche le chemin du dossier courant.",
+        "(b) ls liste le contenu du dossier.",
+        "(c) mkdir tp crée un dossier nommé tp.",
+        "(d) cat notes.txt affiche le contenu du fichier."
+      ],
+      "reponse": "(a) pwd ; (b) ls ; (c) mkdir tp ; (d) cat notes.txt."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "table de vérité d'une expression logique",
+      "enonce": "Un moteur démarre si la variable S = marche ET (NON arret) vaut 1. Donne la valeur de S pour les quatre combinaisons de (marche, arret).",
+      "corrige": [
+        "On calcule NON arret puis le ET avec marche.",
+        "marche=0, arret=0 : NON arret = 1 ; S = 0 ET 1 = 0.",
+        "marche=0, arret=1 : NON arret = 0 ; S = 0 ET 0 = 0.",
+        "marche=1, arret=0 : NON arret = 1 ; S = 1 ET 1 = 1.",
+        "marche=1, arret=1 : NON arret = 0 ; S = 1 ET 0 = 0."
+      ],
+      "reponse": "S vaut 1 uniquement pour (marche=1, arret=0) ; S vaut 0 dans les trois autres cas."
     }
   ]
 }

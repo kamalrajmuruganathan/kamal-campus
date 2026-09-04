@@ -82,6 +82,57 @@
         "Les notes > 12.5 sont 16 (C) et 14 (D), soit 2 élèves."
       ],
       "reponse": "La moyenne de la colonne \"note\" vaut 12.5, et 2 élèves (C et D) sont au-dessus de cette moyenne."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "accès à un enregistrement",
+      "enonce": "On a la table : table = [ {\"nom\": \"Diallo\", \"ville\": \"Lyon\"}, {\"nom\": \"Nguyen\", \"ville\": \"Paris\"} ]. Que renvoie table[1][\"nom\"] ?",
+      "corrige": [
+        "table[1] est le deuxième enregistrement (les indices commencent à 0) : {\"nom\": \"Nguyen\", \"ville\": \"Paris\"}.",
+        "On accède ensuite à la valeur associée à la clé \"nom\" dans ce dictionnaire.",
+        "table[1][\"nom\"] vaut donc \"Nguyen\"."
+      ],
+      "reponse": "table[1][\"nom\"] renvoie \"Nguyen\"."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "filtrer des lignes",
+      "enonce": "La table est une liste de dictionnaires ayant les clés \"nom\" et \"ville\". Écris une compréhension de liste qui renvoie les lignes dont la ville est \"Paris\".",
+      "corrige": [
+        "On parcourt chaque ligne de la table avec une compréhension de liste.",
+        "On garde la ligne si sa valeur \"ville\" est égale à \"Paris\".",
+        "Code : parisiens = [ligne for ligne in table if ligne[\"ville\"] == \"Paris\"].",
+        "Le résultat est une nouvelle table (liste de dictionnaires) contenant uniquement les Parisiens."
+      ],
+      "reponse": "parisiens = [ligne for ligne in table if ligne[\"ville\"] == \"Paris\"]."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "trier une table",
+      "enonce": "Une table a une colonne \"age\" (valeurs lues d'un CSV, donc des chaînes). Écris l'instruction qui la trie par âge décroissant.",
+      "corrige": [
+        "Les valeurs \"age\" sont des chaînes : il faut les convertir en int pour comparer numériquement.",
+        "On utilise sorted avec une clé qui convertit l'âge et reverse=True pour l'ordre décroissant.",
+        "Code : par_age = sorted(table, key=lambda ligne: int(ligne[\"age\"]), reverse=True).",
+        "sorted renvoie une nouvelle liste triée sans modifier la table d'origine."
+      ],
+      "reponse": "par_age = sorted(table, key=lambda ligne: int(ligne[\"age\"]), reverse=True)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "calculer une moyenne à partir d'un CSV",
+      "enonce": "Une table chargée depuis un CSV a une colonne \"age\" : table = [ {\"age\": \"16\"}, {\"age\": \"17\"}, {\"age\": \"15\"} ]. Écris le code qui calcule l'âge moyen et donne le résultat.",
+      "corrige": [
+        "Les âges sont des chaînes : il faut les convertir avec int avant de calculer.",
+        "On construit la liste des âges convertis : ages = [int(ligne[\"age\"]) for ligne in table].",
+        "L'âge moyen est sum(ages) / len(ages).",
+        "Ici sum = 16 + 17 + 15 = 48 et len = 3, donc 48 / 3 = 16.0."
+      ],
+      "reponse": "ages = [int(ligne[\"age\"]) for ligne in table] puis sum(ages)/len(ages) = 48/3 = 16.0."
     }
   ]
 }

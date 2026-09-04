@@ -82,6 +82,54 @@
         "Il reste donc les noms 'Ana' et 'Chloe'."
       ],
       "reponse": "L'expression [e[\"nom\"] for e in eleves if e[\"moyenne\"] >= 10] renvoie ['Ana', 'Chloe']."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "longueur et tranchage d'une liste",
+      "enonce": "On a notes = [12, 8, 15, 9, 17]. Que valent len(notes) et notes[1:3] ?",
+      "corrige": [
+        "len(notes) donne le nombre d'éléments de la liste : il y en a 5.",
+        "Le tranchage notes[1:3] renvoie une nouvelle liste avec les éléments d'indices 1 et 2 (la borne 3 est exclue).",
+        "notes[1] vaut 8 et notes[2] vaut 15, donc notes[1:3] vaut [8, 15]."
+      ],
+      "reponse": "len(notes) vaut 5 et notes[1:3] vaut [8, 15]."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "modifier une liste",
+      "enonce": "On a panier = [\"pomme\", \"pain\"]. On exécute panier.append(\"lait\") puis panier.append(\"oeuf\"). Que vaut panier ?",
+      "corrige": [
+        "append ajoute un élément à la fin de la liste.",
+        "Après panier.append(\"lait\") : [\"pomme\", \"pain\", \"lait\"].",
+        "Après panier.append(\"oeuf\") : [\"pomme\", \"pain\", \"lait\", \"oeuf\"]."
+      ],
+      "reponse": "panier vaut [\"pomme\", \"pain\", \"lait\", \"oeuf\"]."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "ajouter et modifier dans un dictionnaire",
+      "enonce": "On a stock = {\"stylo\": 12, \"gomme\": 5}. On exécute stock[\"regle\"] = 8 puis stock[\"gomme\"] = 3. Que vaut stock ?",
+      "corrige": [
+        "stock[\"regle\"] = 8 ajoute une nouvelle clé \"regle\" (elle n'existait pas) avec la valeur 8.",
+        "stock[\"gomme\"] = 3 remplace la valeur associée à la clé \"gomme\" (qui existe déjà).",
+        "Le dictionnaire final contient les trois clés."
+      ],
+      "reponse": "stock vaut {\"stylo\": 12, \"gomme\": 3, \"regle\": 8}."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "compréhension construisant un dictionnaire",
+      "enonce": "Donne le contenu du dictionnaire construit par : carres = {n: n*n for n in range(1, 5)}.",
+      "corrige": [
+        "range(1, 5) parcourt 1, 2, 3, 4 (la borne 5 est exclue).",
+        "Pour chaque n, la clé est n et la valeur est n*n.",
+        "On obtient les couples 1:1, 2:4, 3:9, 4:16."
+      ],
+      "reponse": "carres vaut {1: 1, 2: 4, 3: 9, 4: 16}."
     }
   ]
 }

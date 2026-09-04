@@ -9,16 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Définition : $b \\mid a$ (« $b$ divise $a$ ») ?", "verso": "$b \\mid a \\iff \\exists\\, k\\in\\mathbb{Z},\\ a = bk$." },
-    { "recto": "Énoncé de la **division euclidienne** de $a$ par $b\\neq 0$ ?", "verso": "Il existe un unique couple $(q,r)$ tel que $a = bq + r$ avec $0 \\leqslant r < |b|$." },
-    { "recto": "Définition d'une **congruence** $a \\equiv b \\ [n]$ ?", "verso": "$a \\equiv b\\ [n] \\iff n \\mid (a-b)$, c.-à-d. $a$ et $b$ ont le même reste modulo $n$." },
-    { "recto": "Compatibilité des congruences avec les puissances ?", "verso": "Si $a\\equiv b\\ [n]$, alors $a^k \\equiv b^k\\ [n]$ pour tout $k\\geqslant 1$ (idem somme et produit)." },
-    { "recto": "Principe de l'**algorithme d'Euclide** pour le PGCD ?", "verso": "$\\mathrm{pgcd}(a,b) = \\mathrm{pgcd}(b,r)$ où $r$ est le reste de $a$ par $b$ ; le PGCD est le **dernier reste non nul**." },
-    { "recto": "Énoncé du **théorème de Bézout** ?", "verso": "$\\mathrm{pgcd}(a,b)=1 \\iff \\exists\\,(u,v)\\in\\mathbb{Z}^2,\\ au+bv=1$." },
-    { "recto": "Énoncé du **théorème de Gauss** ?", "verso": "Si $a \\mid bc$ et $\\mathrm{pgcd}(a,b)=1$, alors $a \\mid c$." },
-    { "recto": "Énoncé du **petit théorème de Fermat** ?", "verso": "Si $p$ est premier et $p \\nmid a$, alors $a^{p-1} \\equiv 1\\ [p]$." },
-    { "recto": "Test de primalité : jusqu'où tester les diviseurs de $n$ ?", "verso": "Jusqu'à $\\sqrt{n}$ : si aucun premier $\\leqslant \\sqrt{n}$ ne divise $n$, alors $n$ est premier." },
-    { "recto": "Condition d'existence de solutions de $ax+by=c$ ?", "verso": "L'équation a des solutions $\\iff \\mathrm{pgcd}(a,b) \\mid c$." },
-    { "recto": "Peut-on toujours « simplifier » une congruence par un facteur commun ?", "verso": "Non : $ac \\equiv bc\\ [n]$ n'entraîne $a\\equiv b\\ [n]$ que si $\\mathrm{pgcd}(c,n)=1$." }
+    {
+      "recto": "Définition : $b \\mid a$ (« $b$ divise $a$ ») ?",
+      "verso": "$b \\mid a \\iff \\exists\\, k\\in\\mathbb{Z},\\ a = bk$."
+    },
+    {
+      "recto": "Énoncé de la **division euclidienne** de $a$ par $b\\neq 0$ ?",
+      "verso": "Il existe un unique couple $(q,r)$ tel que $a = bq + r$ avec $0 \\leqslant r < |b|$."
+    },
+    {
+      "recto": "Définition d'une **congruence** $a \\equiv b \\ [n]$ ?",
+      "verso": "$a \\equiv b\\ [n] \\iff n \\mid (a-b)$, c.-à-d. $a$ et $b$ ont le même reste modulo $n$."
+    },
+    {
+      "recto": "Compatibilité des congruences avec les puissances ?",
+      "verso": "Si $a\\equiv b\\ [n]$, alors $a^k \\equiv b^k\\ [n]$ pour tout $k\\geqslant 1$ (idem somme et produit)."
+    },
+    {
+      "recto": "Principe de l'**algorithme d'Euclide** pour le PGCD ?",
+      "verso": "$\\mathrm{pgcd}(a,b) = \\mathrm{pgcd}(b,r)$ où $r$ est le reste de $a$ par $b$ ; le PGCD est le **dernier reste non nul**."
+    },
+    {
+      "recto": "Énoncé du **théorème de Bézout** ?",
+      "verso": "$\\mathrm{pgcd}(a,b)=1 \\iff \\exists\\,(u,v)\\in\\mathbb{Z}^2,\\ au+bv=1$."
+    },
+    {
+      "recto": "Énoncé du **théorème de Gauss** ?",
+      "verso": "Si $a \\mid bc$ et $\\mathrm{pgcd}(a,b)=1$, alors $a \\mid c$."
+    },
+    {
+      "recto": "Énoncé du **petit théorème de Fermat** ?",
+      "verso": "Si $p$ est premier et $p \\nmid a$, alors $a^{p-1} \\equiv 1\\ [p]$."
+    },
+    {
+      "recto": "Test de primalité : jusqu'où tester les diviseurs de $n$ ?",
+      "verso": "Jusqu'à $\\sqrt{n}$ : si aucun premier $\\leqslant \\sqrt{n}$ ne divise $n$, alors $n$ est premier."
+    },
+    {
+      "recto": "Condition d'existence de solutions de $ax+by=c$ ?",
+      "verso": "L'équation a des solutions $\\iff \\mathrm{pgcd}(a,b) \\mid c$."
+    },
+    {
+      "recto": "Peut-on toujours « simplifier » une congruence par un facteur commun ?",
+      "verso": "Non : $ac \\equiv bc\\ [n]$ n'entraîne $a\\equiv b\\ [n]$ que si $\\mathrm{pgcd}(c,n)=1$."
+    },
+    {
+      "recto": "Que dit le theoreme fondamental de l'arithmetique ?",
+      "verso": "Tout entier n superieur ou egal a 2 se decompose, de maniere unique a l'ordre des facteurs pres, en produit de nombres premiers."
+    }
   ]
 }

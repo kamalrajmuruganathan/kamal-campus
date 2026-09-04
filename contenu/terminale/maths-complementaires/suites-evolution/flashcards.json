@@ -9,15 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Comment est définie une suite **par récurrence** ?", "verso": "Par son premier terme (ex. $u_0$) et une relation $u_{n+1}=f(u_n)$ : chaque terme se calcule à partir du précédent." },
-    { "recto": "Terme général d'une suite **géométrique** de raison $q$ ?", "verso": "$u_n = u_0 \\times q^n$." },
-    { "recto": "Limite de $q^n$ selon la valeur de $q$ ?", "verso": "$q>1$ : $\\to +\\infty$ · $-1<q<1$ : $\\to 0$ · $q=1$ : $=1$ · $q\\leqslant -1$ : **pas de limite**." },
-    { "recto": "Qu'est-ce qu'une suite **arithmético-géométrique** ?", "verso": "Une suite vérifiant $u_{n+1}=a\\,u_n + b$ (avec $a\\neq 0,1$)." },
-    { "recto": "Valeur du **point fixe** $\\ell$ de $u_{n+1}=a\\,u_n+b$ ?", "verso": "$\\ell = \\dfrac{b}{1-a}$ (solution de $\\ell = a\\ell + b$)." },
-    { "recto": "Comment fabrique-t-on le terme général d'une suite arithmético-géométrique ?", "verso": "On pose $v_n = u_n - \\ell$, qui est **géométrique de raison $a$** ; alors $u_n = (u_0-\\ell)a^n + \\ell$." },
-    { "recto": "Limite d'une suite arithmético-géométrique quand $|a|<1$ ?", "verso": "$u_n \\to \\ell$ (la suite se stabilise sur son point fixe)." },
-    { "recto": "Coefficient multiplicateur associé à un taux d'évolution $t$ (en %) ?", "verso": "$q = 1 + \\dfrac{t}{100}$ (une baisse de $20\\%$ donne $\\times 0{,}8$)." },
-    { "recto": "Une évolution en pourcentage **avec apport fixe** se modélise par… ?", "verso": "Une suite **arithmético-géométrique** $u_{n+1} = a\\,u_n + b$." },
-    { "recto": "La limite d'une suite dit-elle à quel rang un seuil est franchi ?", "verso": "Non : la limite dit *vers quoi* on tend ; le franchissement d'un seuil se calcule terme à terme." }
+    {
+      "recto": "Comment est définie une suite **par récurrence** ?",
+      "verso": "Par son premier terme (ex. $u_0$) et une relation $u_{n+1}=f(u_n)$ : chaque terme se calcule à partir du précédent."
+    },
+    {
+      "recto": "Terme général d'une suite **géométrique** de raison $q$ ?",
+      "verso": "$u_n = u_0 \\times q^n$."
+    },
+    {
+      "recto": "Limite de $q^n$ selon la valeur de $q$ ?",
+      "verso": "$q>1$ : $\\to +\\infty$ · $-1<q<1$ : $\\to 0$ · $q=1$ : $=1$ · $q\\leqslant -1$ : **pas de limite**."
+    },
+    {
+      "recto": "Qu'est-ce qu'une suite **arithmético-géométrique** ?",
+      "verso": "Une suite vérifiant $u_{n+1}=a\\,u_n + b$ (avec $a\\neq 0,1$)."
+    },
+    {
+      "recto": "Valeur du **point fixe** $\\ell$ de $u_{n+1}=a\\,u_n+b$ ?",
+      "verso": "$\\ell = \\dfrac{b}{1-a}$ (solution de $\\ell = a\\ell + b$)."
+    },
+    {
+      "recto": "Comment fabrique-t-on le terme général d'une suite arithmético-géométrique ?",
+      "verso": "On pose $v_n = u_n - \\ell$, qui est **géométrique de raison $a$** ; alors $u_n = (u_0-\\ell)a^n + \\ell$."
+    },
+    {
+      "recto": "Limite d'une suite arithmético-géométrique quand $|a|<1$ ?",
+      "verso": "$u_n \\to \\ell$ (la suite se stabilise sur son point fixe)."
+    },
+    {
+      "recto": "Coefficient multiplicateur associé à un taux d'évolution $t$ (en %) ?",
+      "verso": "$q = 1 + \\dfrac{t}{100}$ (une baisse de $20\\%$ donne $\\times 0{,}8$)."
+    },
+    {
+      "recto": "Une évolution en pourcentage **avec apport fixe** se modélise par… ?",
+      "verso": "Une suite **arithmético-géométrique** $u_{n+1} = a\\,u_n + b$."
+    },
+    {
+      "recto": "La limite d'une suite dit-elle à quel rang un seuil est franchi ?",
+      "verso": "Non : la limite dit *vers quoi* on tend ; le franchissement d'un seuil se calcule terme à terme."
+    },
+    {
+      "recto": "Quelle est la somme 1 + q + q^2 + ... + q^n pour q different de 1 ?",
+      "verso": "(1 - q^(n+1)) / (1 - q). Plus generalement, somme des termes = premier terme fois (1 - q^(nombre de termes)) / (1 - q)."
+    },
+    {
+      "recto": "Comment cumule-t-on deux evolutions successives de coefficients multiplicateurs q1 puis q2 ?",
+      "verso": "On multiplie les coefficients : coefficient global = q1 fois q2. Les pourcentages ne s'additionnent pas (ex : +10% puis -10% donne 1,1 fois 0,9 = 0,99, soit -1%)."
+    }
   ]
 }

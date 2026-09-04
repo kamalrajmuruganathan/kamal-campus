@@ -9,16 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Pour $f$ continue et **positive** sur $[a\\,;b]$, que représente $\\displaystyle\\int_a^b f(x)\\,dx$ ?", "verso": "L'**aire**, en unités d'aire, du domaine sous la courbe de $f$, entre l'axe des abscisses et les droites $x=a$ et $x=b$." },
-    { "recto": "Comment calcule-t-on $\\displaystyle\\int_a^b f(x)\\,dx$ avec une primitive $F$ de $f$ ?", "verso": "$\\displaystyle\\int_a^b f(x)\\,dx = \\big[F(x)\\big]_a^b = F(b) - F(a)$." },
-    { "recto": "Quelle est la primitive $F_a(x)=\\displaystyle\\int_a^x f(t)\\,dt$ ?", "verso": "C'est **la primitive de $f$ qui s'annule en $a$** (car $F_a(a)=0$)." },
-    { "recto": "Que valent $\\displaystyle\\int_a^a f$ et $\\displaystyle\\int_b^a f$ ?", "verso": "$\\displaystyle\\int_a^a f = 0$ et $\\displaystyle\\int_b^a f = -\\int_a^b f$ (échanger les bornes change le signe)." },
-    { "recto": "Énonce la **linéarité** de l'intégrale.", "verso": "$\\displaystyle\\int_a^b (kf+g) = k\\int_a^b f + \\int_a^b g$." },
-    { "recto": "Propriété de **comparaison** : si $f \\leqslant g$ sur $[a\\,;b]$ (avec $a\\leqslant b$) ?", "verso": "$\\displaystyle\\int_a^b f(x)\\,dx \\leqslant \\int_a^b g(x)\\,dx$." },
-    { "recto": "Formule de la **valeur moyenne** de $f$ sur $[a\\,;b]$ ?", "verso": "$\\mu = \\dfrac{1}{b-a}\\displaystyle\\int_a^b f(x)\\,dx$." },
-    { "recto": "Si $f \\leqslant 0$ sur $[a\\,;b]$, quelle est l'**aire** du domaine ?", "verso": "$\\mathcal{A} = -\\displaystyle\\int_a^b f(x)\\,dx$ (une aire est toujours positive, l'intégrale est négative)." },
-    { "recto": "Aire comprise entre deux courbes, $f$ au-dessus de $g$ sur $[a\\,;b]$ ?", "verso": "$\\mathcal{A} = \\displaystyle\\int_a^b \\big(f(x)-g(x)\\big)\\,dx$." },
-    { "recto": "La lettre d'intégration a-t-elle une importance ? $\\displaystyle\\int_a^b f(x)\\,dx$ vs $\\int_a^b f(t)\\,dt$ ?", "verso": "Non : la variable est **muette**, les deux désignent le même nombre." },
-    { "recto": "Piège : $F(a)-F(b)$ ou $F(b)-F(a)$ ?", "verso": "$\\displaystyle\\int_a^b f = F(b)-F(a)$. Écrire $F(a)-F(b)$ donne l'**opposé** du bon résultat." }
+    {
+      "recto": "Pour $f$ continue et **positive** sur $[a\\,;b]$, que représente $\\displaystyle\\int_a^b f(x)\\,dx$ ?",
+      "verso": "L'**aire**, en unités d'aire, du domaine sous la courbe de $f$, entre l'axe des abscisses et les droites $x=a$ et $x=b$."
+    },
+    {
+      "recto": "Comment calcule-t-on $\\displaystyle\\int_a^b f(x)\\,dx$ avec une primitive $F$ de $f$ ?",
+      "verso": "$\\displaystyle\\int_a^b f(x)\\,dx = \\big[F(x)\\big]_a^b = F(b) - F(a)$."
+    },
+    {
+      "recto": "Quelle est la primitive $F_a(x)=\\displaystyle\\int_a^x f(t)\\,dt$ ?",
+      "verso": "C'est **la primitive de $f$ qui s'annule en $a$** (car $F_a(a)=0$)."
+    },
+    {
+      "recto": "Que valent $\\displaystyle\\int_a^a f$ et $\\displaystyle\\int_b^a f$ ?",
+      "verso": "$\\displaystyle\\int_a^a f = 0$ et $\\displaystyle\\int_b^a f = -\\int_a^b f$ (échanger les bornes change le signe)."
+    },
+    {
+      "recto": "Énonce la **linéarité** de l'intégrale.",
+      "verso": "$\\displaystyle\\int_a^b (kf+g) = k\\int_a^b f + \\int_a^b g$."
+    },
+    {
+      "recto": "Propriété de **comparaison** : si $f \\leqslant g$ sur $[a\\,;b]$ (avec $a\\leqslant b$) ?",
+      "verso": "$\\displaystyle\\int_a^b f(x)\\,dx \\leqslant \\int_a^b g(x)\\,dx$."
+    },
+    {
+      "recto": "Formule de la **valeur moyenne** de $f$ sur $[a\\,;b]$ ?",
+      "verso": "$\\mu = \\dfrac{1}{b-a}\\displaystyle\\int_a^b f(x)\\,dx$."
+    },
+    {
+      "recto": "Si $f \\leqslant 0$ sur $[a\\,;b]$, quelle est l'**aire** du domaine ?",
+      "verso": "$\\mathcal{A} = -\\displaystyle\\int_a^b f(x)\\,dx$ (une aire est toujours positive, l'intégrale est négative)."
+    },
+    {
+      "recto": "Aire comprise entre deux courbes, $f$ au-dessus de $g$ sur $[a\\,;b]$ ?",
+      "verso": "$\\mathcal{A} = \\displaystyle\\int_a^b \\big(f(x)-g(x)\\big)\\,dx$."
+    },
+    {
+      "recto": "La lettre d'intégration a-t-elle une importance ? $\\displaystyle\\int_a^b f(x)\\,dx$ vs $\\int_a^b f(t)\\,dt$ ?",
+      "verso": "Non : la variable est **muette**, les deux désignent le même nombre."
+    },
+    {
+      "recto": "Piège : $F(a)-F(b)$ ou $F(b)-F(a)$ ?",
+      "verso": "$\\displaystyle\\int_a^b f = F(b)-F(a)$. Écrire $F(a)-F(b)$ donne l'**opposé** du bon résultat."
+    },
+    {
+      "recto": "Que dit la relation de Chasles pour l'integrale ?",
+      "verso": "Pour a, b, c dans un intervalle : integrale de a a c de f = (integrale de a a b de f) + (integrale de b a c de f). Elle permet de decouper une integrale en morceaux."
+    }
   ]
 }

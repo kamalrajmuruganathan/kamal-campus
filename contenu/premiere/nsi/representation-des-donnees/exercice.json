@@ -89,6 +89,57 @@
         "Si l'on tronque à 4 bits, il reste 0000, c'est-à-dire 0 au lieu de 16 : c'est le dépassement de capacité."
       ],
       "reponse": "1011 + 0101 = 10000, soit 16 : ce nombre dépasse les 4 bits (max 15), d'où un dépassement de capacité."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "conversion binaire vers décimal",
+      "enonce": "Convertis en décimal les nombres binaires 1010 et 110.",
+      "corrige": [
+        "On additionne les puissances de 2 correspondant aux bits à 1.",
+        "1010 = 1×8 + 0×4 + 1×2 + 0×1 = 8 + 2 = 10.",
+        "110 = 1×4 + 1×2 + 0×1 = 4 + 2 = 6."
+      ],
+      "reponse": "1010₂ = 10 et 110₂ = 6."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "conversion décimal vers binaire",
+      "enonce": "Convertis 25 en binaire par la méthode des divisions successives par 2.",
+      "corrige": [
+        "25 / 2 = 12 reste 1 ; 12 / 2 = 6 reste 0 ; 6 / 2 = 3 reste 0.",
+        "3 / 2 = 1 reste 1 ; 1 / 2 = 0 reste 1.",
+        "On lit les restes de bas en haut : 11001.",
+        "Vérification : 16 + 8 + 1 = 25."
+      ],
+      "reponse": "25 s'écrit 11001 en binaire."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "hexadécimal",
+      "enonce": "Convertis l'octet 11111010 en hexadécimal, puis convertis 0x2C en décimal.",
+      "corrige": [
+        "Un chiffre hexadécimal code 4 bits. On sépare l'octet : 1111 et 1010.",
+        "1111 = 15 = F ; 1010 = 10 = A. Donc 11111010 = FA en hexadécimal.",
+        "0x2C : 2×16 + C(=12) = 32 + 12 = 44.",
+        "Donc 0x2C = 44 en décimal."
+      ],
+      "reponse": "11111010₂ = FA₁₆ et 0x2C = 44."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "complément à deux",
+      "enonce": "Code le nombre −12 sur 8 bits en complément à deux.",
+      "corrige": [
+        "On code d'abord 12 sur 8 bits : 12 = 8 + 4 = 00001100.",
+        "On inverse tous les bits : 11110011.",
+        "On ajoute 1 : 11110011 + 1 = 11110100.",
+        "Le bit de poids fort vaut 1 : le nombre est bien négatif."
+      ],
+      "reponse": "−12 s'écrit 11110100 sur 8 bits en complément à deux."
     }
   ]
 }

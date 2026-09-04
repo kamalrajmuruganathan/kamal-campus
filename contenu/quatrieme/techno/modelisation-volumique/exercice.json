@@ -86,6 +86,57 @@
         "Modéliser, c'est créer le modèle numérique (CAO) ; fabriquer, c'est produire l'objet réel avec la machine. Ce sont deux étapes différentes."
       ],
       "reponse": "Idée → croquis → modèle 3D (CAO) → export STL → découpe en couches (slicer) → impression 3D couche par couche. Modéliser crée le modèle numérique ; fabriquer produit l'objet réel."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "le logiciel de CAO",
+      "enonce": "Que signifie l'abréviation CAO ? Cite un exemple de logiciel utilisé pour modéliser un objet en 3D.",
+      "corrige": [
+        "CAO signifie Conception Assistée par Ordinateur.",
+        "On l'utilise pour créer des modèles volumiques (en 3D) sur un ordinateur.",
+        "Exemples de logiciels : Tinkercad, SketchUp, FreeCAD, SolidWorks."
+      ],
+      "reponse": "CAO = Conception Assistée par Ordinateur ; par exemple Tinkercad (ou SketchUp, FreeCAD, SolidWorks)."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "2D et 3D",
+      "enonce": "Explique la différence entre un croquis sur papier et un modèle volumique fait en CAO. Cite les dimensions de chacun.",
+      "corrige": [
+        "Un croquis sur papier est en 2D : il n'a que la longueur et la largeur.",
+        "Un modèle volumique est en 3D : il ajoute la troisième dimension (hauteur/profondeur).",
+        "De plus, le modèle 3D possède des cotes exactes que l'ordinateur connaît, et on peut le tourner, le mesurer, le couper : ce n'est pas une simple image."
+      ],
+      "reponse": "Le croquis papier est en 2D (longueur, largeur) ; le modèle volumique est en 3D (longueur, largeur, hauteur), avec des cotes exactes, et peut être tourné et mesuré."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "opérations pour un porte-clé",
+      "enonce": "On veut modéliser un porte-clé : une plaque rectangulaire percée d'un trou pour l'anneau. (a) De quelle forme de base part-on ? (b) Quelle opération crée le trou ? (c) Le trou s'ajoute-t-il ou s'enlève-t-il ?",
+      "corrige": [
+        "On part d'une forme de base puis on la transforme par des opérations.",
+        "(a) On part d'un pavé (cube aplati) obtenu par extrusion d'un rectangle.",
+        "(b) On crée le trou par soustraction : on enlève un petit cylindre à l'endroit voulu.",
+        "(c) Le trou ne s'ajoute pas : il se crée en enlevant de la matière (soustraction)."
+      ],
+      "reponse": "(a) un pavé (rectangle extrudé) ; (b) la soustraction ; (c) le trou s'enlève : on retire de la matière."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "modéliser un support de téléphone",
+      "enonce": "On modélise un support de téléphone : une base plate, un dossier incliné pour poser le téléphone, et une fente pour le câble. Décris les formes de base et les opérations (extrusion, union, soustraction) que tu utiliserais.",
+      "corrige": [
+        "On combine des formes de base par des opérations.",
+        "La base plate et le dossier incliné : deux pavés obtenus par extrusion de rectangles, le dossier étant incliné.",
+        "On réunit la base et le dossier par une union (assemblage) pour former une seule pièce.",
+        "On crée la fente du câble par soustraction : on enlève un petit volume à l'endroit voulu.",
+        "On vérifie enfin les cotes (en mm) avant d'exporter le fichier pour l'imprimante 3D."
+      ],
+      "reponse": "Base et dossier = deux pavés par extrusion ; on les réunit par une union, puis on crée la fente du câble par soustraction ; on vérifie les cotes en mm avant l'export."
     }
   ]
 }

@@ -88,6 +88,57 @@
         "On trie du plus grand au plus petit avec ORDER BY moy DESC."
       ],
       "reponse": "SELECT Eleve.nom, AVG(Note.valeur) AS moy FROM Eleve JOIN Note ON Eleve.id = Note.id_eleve GROUP BY Eleve.id, Eleve.nom HAVING AVG(Note.valeur) > 12 ORDER BY moy DESC ;"
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "écrire un SELECT simple",
+      "enonce": "La table eleve possède les colonnes id, nom, classe. Écris la requête SQL qui affiche le nom de tous les élèves.",
+      "corrige": [
+        "SELECT indique les colonnes voulues, FROM la table source.",
+        "On veut uniquement la colonne nom, de la table eleve.",
+        "La requête est : SELECT nom FROM eleve ;"
+      ],
+      "reponse": "SELECT nom FROM eleve ;"
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "SELECT avec WHERE et ORDER BY",
+      "enonce": "Écris la requête qui affiche le nom et la classe des élèves de la classe 'TG1', triés par nom croissant.",
+      "corrige": [
+        "On sélectionne les colonnes nom et classe dans la table eleve.",
+        "WHERE filtre les lignes : classe = 'TG1'.",
+        "ORDER BY nom trie le résultat par nom (croissant par défaut).",
+        "Requête : SELECT nom, classe FROM eleve WHERE classe = 'TG1' ORDER BY nom ;"
+      ],
+      "reponse": "SELECT nom, classe FROM eleve WHERE classe = 'TG1' ORDER BY nom ;"
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "INSERT puis UPDATE",
+      "enonce": "Écris la requête qui ajoute dans eleve l'élève (id 42, nom 'Diallo', classe 'TG1'), puis celle qui change ensuite sa classe en 'TG2'.",
+      "corrige": [
+        "INSERT INTO ajoute une ligne en précisant les colonnes et les valeurs.",
+        "INSERT INTO eleve (id, nom, classe) VALUES (42, 'Diallo', 'TG1') ;",
+        "UPDATE modifie des lignes existantes, avec un WHERE pour cibler la bonne ligne.",
+        "UPDATE eleve SET classe = 'TG2' WHERE id = 42 ; (sans WHERE, toutes les lignes seraient modifiées)."
+      ],
+      "reponse": "INSERT INTO eleve (id, nom, classe) VALUES (42, 'Diallo', 'TG1') ; puis UPDATE eleve SET classe = 'TG2' WHERE id = 42 ;"
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "jointure et agrégation",
+      "enonce": "Deux tables : eleve(id, nom) et emprunt(id_eleve, date_emprunt), où id_eleve est une clé étrangère vers eleve.id. Écris la requête qui donne, pour chaque élève, son nom et son nombre d'emprunts.",
+      "corrige": [
+        "On joint les deux tables sur l'égalité clé primaire = clé étrangère : eleve.id = emprunt.id_eleve.",
+        "On compte les emprunts par élève avec COUNT et GROUP BY.",
+        "On regroupe par élève (eleve.id, eleve.nom).",
+        "Requête : SELECT eleve.nom, COUNT(*) AS nb FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve GROUP BY eleve.id, eleve.nom ;"
+      ],
+      "reponse": "SELECT eleve.nom, COUNT(*) AS nb FROM eleve JOIN emprunt ON eleve.id = emprunt.id_eleve GROUP BY eleve.id, eleve.nom ;"
     }
   ]
 }

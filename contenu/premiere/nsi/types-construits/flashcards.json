@@ -14,6 +14,12 @@
     { "recto": "Qu'est-ce qu'un dictionnaire et comment y accède-t-on ?", "verso": "Il associe des clés à des valeurs, ex. {\"nom\": \"Diallo\"}. On accède par la clé : eleve[\"nom\"]." },
     { "recto": "Quelles contraintes pèsent sur les clés d'un dictionnaire ?", "verso": "Elles sont uniques et immuables (chaîne, nombre, tuple). Une liste ne peut pas être une clé." },
     { "recto": "Comment ajoute-t-on un élément en fin de liste ?", "verso": "Avec append : notes.append(20)." },
-    { "recto": "Comment parcourt-on les couples (clé, valeur) d'un dictionnaire d ?", "verso": "for k, v in d.items(): … . Itérer sur d directement ne donne que les clés." }
+    { "recto": "Comment parcourt-on les couples (clé, valeur) d'un dictionnaire d ?", "verso": "for k, v in d.items(): … . Itérer sur d directement ne donne que les clés." },
+    { "recto": "Comment obtenir le nombre d'éléments d'une liste ?", "verso": "Avec la fonction len : len(liste)." },
+    { "recto": "Que renvoie le tranchage (slicing) liste[1:3] ?", "verso": "Une nouvelle liste contenant les éléments d'indices 1 et 2 (la borne de droite, 3, est exclue)." },
+    { "recto": "Comment ajouter ou modifier une valeur dans un dictionnaire ?", "verso": "Avec d[cle] = valeur : cela crée la clé si elle est absente, sinon remplace sa valeur." },
+    { "recto": "Comment tester la présence d'une clé dans un dictionnaire ?", "verso": "Avec l'opérateur in : \"nom\" in eleve renvoie True ou False." },
+    { "recto": "Qu'est-ce qu'une compréhension de liste ?", "verso": "Une écriture concise pour construire une liste, par exemple [n*n for n in range(5)]." },
+    { "recto": "Peut-on utiliser une liste comme clé de dictionnaire ?", "verso": "Non : une clé doit être immuable (chaîne, nombre, tuple) ; une liste, modifiable, est interdite." }
   ]
 }

@@ -14,6 +14,12 @@
     { "recto": "À quoi servent SELECT, FROM, WHERE, ORDER BY ?", "verso": "SELECT choisit les colonnes, FROM la table source, WHERE filtre les lignes selon une condition, ORDER BY trie le résultat (ASC croissant / DESC décroissant)." },
     { "recto": "À quoi sert GROUP BY avec une fonction d'agrégation ?", "verso": "GROUP BY regroupe les lignes par valeur d'un attribut, et un agrégat (COUNT, AVG, SUM, MIN, MAX) calcule une valeur par groupe (ex. l'effectif de chaque classe)." },
     { "recto": "Qu'est-ce qu'une jointure ?", "verso": "Une jointure croise deux tables reliées par une clé, en associant les lignes où clé primaire = clé étrangère (JOIN ... ON ...), pour reconstituer l'information répartie sans dupliquer les données." },
-    { "recto": "Quel est le danger d'un UPDATE ou DELETE sans WHERE ?", "verso": "La requête s'applique à toutes les lignes de la table : DELETE FROM t; vide la table, UPDATE t SET ...; modifie chaque ligne. Toujours cibler avec WHERE." }
+    { "recto": "Quel est le danger d'un UPDATE ou DELETE sans WHERE ?", "verso": "La requête s'applique à toutes les lignes de la table : DELETE FROM t; vide la table, UPDATE t SET ...; modifie chaque ligne. Toujours cibler avec WHERE." },
+    { "recto": "Que renvoie SELECT * FROM eleve ; ?", "verso": "Toutes les colonnes de toutes les lignes de la table eleve (l'étoile désigne toutes les colonnes)." },
+    { "recto": "Cite quatre fonctions d'agrégation SQL.", "verso": "COUNT (compter), SUM (somme), AVG (moyenne), MIN et MAX (minimum, maximum)." },
+    { "recto": "Qu'est-ce que l'intégrité référentielle ?", "verso": "La contrainte selon laquelle une clé étrangère ne peut référencer que la clé primaire d'une ligne existante ; elle garantit la cohérence entre les tables." },
+    { "recto": "Quelles requêtes ajoutent, modifient et suppriment des lignes ?", "verso": "INSERT INTO (ajout), UPDATE ... SET ... WHERE (modification), DELETE FROM ... WHERE (suppression)." },
+    { "recto": "Que fait ORDER BY ... DESC ?", "verso": "Il trie le résultat en ordre décroissant (ASC, croissant, est appliqué par défaut)." },
+    { "recto": "Qu'est-ce que le schéma d'une table ?", "verso": "Son nom et la liste de ses attributs avec leur type (domaine), par exemple eleve(id ENTIER, nom TEXTE, classe TEXTE)." }
   ]
 }

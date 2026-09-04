@@ -81,6 +81,54 @@
         "Cette ligne est un filtre : elle parcourt tous les enregistrements et ne conserve que le descripteur nom des élèves dont la note atteint la moyenne."
       ],
       "reponse": "s = 37, m ≈ 12,33 ; admis = ['Ada'] ; la dernière ligne filtre et ne garde que les noms au-dessus de la moyenne."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "types de données",
+      "enonce": "Dans une table \"produits\", on stocke pour chaque article : le nom, le prix en euros, la quantité en stock et la disponibilité (oui/non). a) Donne le type le plus adapté pour chacun de ces quatre descripteurs. b) Peut-on calculer une moyenne sur le descripteur nom ? c) Pourquoi vaut-il mieux stocker le prix comme nombre plutôt que comme texte ?",
+      "corrige": [
+        "nom = texte (chaîne de caractères) ; prix = nombre décimal ; quantité = nombre entier ; disponibilité = booléen (vrai/faux).",
+        "Non : nom contient du texte, on ne peut pas en faire une moyenne. On ne calcule que sur des données numériques.",
+        "Un prix stocké comme texte ne permet ni tri numérique correct ni calcul (somme, moyenne) ; en nombre, le tableur peut trier et calculer directement."
+      ],
+      "reponse": "nom=texte, prix=décimal, quantité=entier, disponibilité=booléen ; pas de moyenne sur du texte ; le nombre permet tri et calculs."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "recherche et calcul dans une table",
+      "enonce": "Table \"ventes\" (jour, montant en euros) : Lun 120 ; Mar 80 ; Mer 150 ; Jeu 50. a) Quel est le montant total de la semaine ? b) Quel est le montant moyen par jour ? c) Quel jour a réalisé le maximum ?",
+      "corrige": [
+        "Total = somme des montants : 120 + 80 + 150 + 50 = 400 €.",
+        "Moyenne = total / nombre de jours = 400 / 4 = 100 €.",
+        "Le maximum est la plus grande valeur : 150 €, atteint le mercredi (Mer)."
+      ],
+      "reponse": "Total 400 €, moyenne 100 €/jour, maximum le mercredi (150 €)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "formats ouverts et données ouvertes (open data)",
+      "enonce": "Une commune publie en \"open data\" un fichier des horaires de bus au format CSV, librement réutilisable. a) Que signifie \"données ouvertes\" (open data) ? b) Pourquoi choisir un format ouvert comme le CSV plutôt qu'un format propriétaire ? c) Cite un service utile qu'une application peut construire à partir de ces données.",
+      "corrige": [
+        "Les données ouvertes sont des données publiées librement, gratuitement et réutilisables par tous, souvent par des organismes publics.",
+        "Un format ouvert (CSV) est lisible par n'importe quel logiciel, sans dépendre d'un éditeur ; un format propriétaire peut exiger un logiciel payant et freiner la réutilisation.",
+        "Par exemple une application d'itinéraires qui affiche les prochains passages de bus à un arrêt."
+      ],
+      "reponse": "Open data = données publiques libres et réutilisables ; le CSV est lisible partout ; on peut créer une appli d'horaires/itinéraires."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "traitement de données en Python",
+      "enonce": "Une table est représentée par une liste de dictionnaires :\nT = [{'ville':'Lyon','pluie':12}, {'ville':'Nice','pluie':3}, {'ville':'Brest','pluie':21}, {'ville':'Paris','pluie':9}]\nOn exécute :\ntotal = 0\nfor e in T:\n    total = total + e['pluie']\nseuil = total / len(T)\npluvieux = [e['ville'] for e in T if e['pluie'] > seuil]\na) Que vaut total puis seuil ? b) Que contient la liste pluvieux ? c) Explique en une phrase le rôle de la dernière ligne.",
+      "corrige": [
+        "La boucle additionne les valeurs de pluie : total = 12 + 3 + 21 + 9 = 45. len(T) = 4, donc seuil = 45 / 4 = 11,25.",
+        "pluvieux garde les villes dont pluie > 11,25 : Lyon (12) oui, Nice (3) non, Brest (21) oui, Paris (9) non. Donc pluvieux = ['Lyon', 'Brest'].",
+        "Cette ligne est un filtre : elle parcourt tous les enregistrements et ne conserve que le descripteur ville des lignes dont la pluie dépasse la moyenne."
+      ],
+      "reponse": "total = 45, seuil = 11,25 ; pluvieux = ['Lyon', 'Brest'] ; la dernière ligne filtre les villes au-dessus de la moyenne."
     }
   ]
 }

@@ -14,6 +14,12 @@
     { "recto": "Combien de bits code un chiffre hexadécimal, et un octet en hexa ?", "verso": "1 chiffre hexa = 4 bits ; 1 octet = 2 chiffres hexa (16 = 2^4)." },
     { "recto": "Comment coder −x sur 8 bits en complément à deux ?", "verso": "On inverse tous les bits de x puis on ajoute 1. Sur 8 bits : de −128 à +127." },
     { "recto": "Pourquoi ne teste-t-on jamais l'égalité stricte entre deux float ?", "verso": "Les réels sont approchés en machine : 0.1 + 0.2 ≠ 0.3. On compare l'écart à une petite tolérance." },
-    { "recto": "Quelle différence entre ASCII, Unicode et UTF-8 ?", "verso": "ASCII : 7 bits, 128 caractères. Unicode : un numéro pour tout caractère. UTF-8 : encodage d'Unicode en octets (1 à 4), compatible ASCII." }
+    { "recto": "Quelle différence entre ASCII, Unicode et UTF-8 ?", "verso": "ASCII : 7 bits, 128 caractères. Unicode : un numéro pour tout caractère. UTF-8 : encodage d'Unicode en octets (1 à 4), compatible ASCII." },
+    { "recto": "Qu'est-ce qu'un bit et un octet ?", "verso": "Un bit vaut 0 ou 1 ; un octet est un groupe de 8 bits, qui code 2⁸ = 256 valeurs." },
+    { "recto": "Comment convertir un binaire en décimal ?", "verso": "On additionne les puissances de 2 correspondant aux bits qui valent 1." },
+    { "recto": "Sur 8 bits en complément à deux, quel est l'intervalle des entiers représentables ?", "verso": "De −128 à +127." },
+    { "recto": "Qu'est-ce qu'un dépassement de capacité (overflow) ?", "verso": "Un résultat qui dépasse la plus grande valeur codable sur le nombre de bits fixé, ce qui donne un résultat faux (ex. 255 + 1 → 0 sur 8 bits non signés)." },
+    { "recto": "Combien vaut le code ASCII de 'A' et de 'a' ?", "verso": "'A' vaut 65 et 'a' vaut 97 ; majuscules et minuscules sont décalées de 32." },
+    { "recto": "Que renvoient ord('A') et chr(97) en Python ?", "verso": "ord('A') renvoie 65 et chr(97) renvoie 'a'." }
   ]
 }

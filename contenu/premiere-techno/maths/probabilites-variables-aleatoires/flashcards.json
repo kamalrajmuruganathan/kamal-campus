@@ -9,16 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Qu'est-ce qu'une épreuve de Bernoulli ?", "verso": "Une expérience à deux issues : succès (probabilité $p$) et échec (probabilité $1-p$)." },
-    { "recto": "Sur un arbre, comment calcule-t-on la probabilité d'un chemin ?", "verso": "On multiplie les probabilités des branches parcourues le long du chemin." },
-    { "recto": "Comment obtient-on la probabilité d'un événement réalisé par plusieurs chemins ?", "verso": "On additionne les probabilités des chemins qui le réalisent." },
-    { "recto": "Probabilité d'obtenir exactement $k$ succès sur $n$ épreuves ?", "verso": "$(\\text{nombre de chemins}) \\times p^k(1-p)^{n-k}$." },
-    { "recto": "Quelle est l'erreur type dans une répétition d'épreuves ?", "verso": "Oublier de multiplier par le nombre de chemins qui réalisent l'événement." },
-    { "recto": "Quelle différence entre $\\{X=a\\}$ et $P(X=a)$ ?", "verso": "$\\{X=a\\}$ est un événement ; $P(X=a)$ est un nombre entre $0$ et $1$." },
-    { "recto": "Quel contrôle systématique sur une loi de probabilité ?", "verso": "La somme des probabilités doit valoir $1$ : $\\sum p_i = 1$." },
-    { "recto": "Quelle est la formule de l'espérance $E(X)$ ?", "verso": "$E(X) = x_1p_1 + \\cdots + x_np_n = \\sum x_i p_i$." },
-    { "recto": "Comment interpréter l'espérance ?", "verso": "Le gain moyen à long terme sur un grand nombre de répétitions, pas une prévision pour une partie." },
-    { "recto": "Quand un jeu est-il équitable ?", "verso": "Quand $E(X) = 0$. ($>0$ favorable, $<0$ défavorable au joueur.)" },
-    { "recto": "Quelle est l'espérance d'une loi de Bernoulli de paramètre $p$ ?", "verso": "$E(X) = p$." }
+    {
+      "recto": "Qu'est-ce qu'une épreuve de Bernoulli ?",
+      "verso": "Une expérience à deux issues : succès (probabilité $p$) et échec (probabilité $1-p$)."
+    },
+    {
+      "recto": "Sur un arbre, comment calcule-t-on la probabilité d'un chemin ?",
+      "verso": "On multiplie les probabilités des branches parcourues le long du chemin."
+    },
+    {
+      "recto": "Comment obtient-on la probabilité d'un événement réalisé par plusieurs chemins ?",
+      "verso": "On additionne les probabilités des chemins qui le réalisent."
+    },
+    {
+      "recto": "Probabilité d'obtenir exactement $k$ succès sur $n$ épreuves ?",
+      "verso": "$(\\text{nombre de chemins}) \\times p^k(1-p)^{n-k}$."
+    },
+    {
+      "recto": "Quelle est l'erreur type dans une répétition d'épreuves ?",
+      "verso": "Oublier de multiplier par le nombre de chemins qui réalisent l'événement."
+    },
+    {
+      "recto": "Quelle différence entre $\\{X=a\\}$ et $P(X=a)$ ?",
+      "verso": "$\\{X=a\\}$ est un événement ; $P(X=a)$ est un nombre entre $0$ et $1$."
+    },
+    {
+      "recto": "Quel contrôle systématique sur une loi de probabilité ?",
+      "verso": "La somme des probabilités doit valoir $1$ : $\\sum p_i = 1$."
+    },
+    {
+      "recto": "Quelle est la formule de l'espérance $E(X)$ ?",
+      "verso": "$E(X) = x_1p_1 + \\cdots + x_np_n = \\sum x_i p_i$."
+    },
+    {
+      "recto": "Comment interpréter l'espérance ?",
+      "verso": "Le gain moyen à long terme sur un grand nombre de répétitions, pas une prévision pour une partie."
+    },
+    {
+      "recto": "Quand un jeu est-il équitable ?",
+      "verso": "Quand $E(X) = 0$. ($>0$ favorable, $<0$ défavorable au joueur.)"
+    },
+    {
+      "recto": "Quelle est l'espérance d'une loi de Bernoulli de paramètre $p$ ?",
+      "verso": "$E(X) = p$."
+    },
+    {
+      "recto": "Comment calcule-t-on la probabilite de l'evenement contraire de A ?",
+      "verso": "P(non A) = 1 - P(A). Tres utile pour un evenement du type << au moins un >>."
+    }
   ]
 }

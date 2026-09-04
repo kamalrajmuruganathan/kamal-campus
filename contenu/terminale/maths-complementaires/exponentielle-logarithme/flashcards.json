@@ -9,16 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Relation algébrique fondamentale de l'exponentielle ?", "verso": "$\\mathrm{e}^{a+b} = \\mathrm{e}^a \\times \\mathrm{e}^b$ (et $\\mathrm{e}^{-a}=\\frac{1}{\\mathrm{e}^a}$, $(\\mathrm{e}^a)^n=\\mathrm{e}^{na}$)." },
-    { "recto": "Définition du logarithme népérien : $\\ln x = y \\iff\\ ?$", "verso": "$\\ln x = y \\iff x = \\mathrm{e}^y$, avec $x>0$. Domaine de $\\ln$ : $]0\\,;+\\infty[$." },
-    { "recto": "Que valent $\\ln(\\mathrm{e}^x)$ et $\\mathrm{e}^{\\ln x}$ ?", "verso": "$\\ln(\\mathrm{e}^x)=x$ (pour tout réel) et $\\mathrm{e}^{\\ln x}=x$ (pour $x>0$) : fonctions réciproques." },
-    { "recto": "Valeurs clés : $\\ln 1$ et $\\ln \\mathrm{e}$ ?", "verso": "$\\ln 1 = 0$ et $\\ln \\mathrm{e} = 1$." },
-    { "recto": "Logarithme d'un **produit** et d'un **quotient** ?", "verso": "$\\ln(ab)=\\ln a + \\ln b$ et $\\ln\\!\\left(\\frac ab\\right)=\\ln a - \\ln b$ (pour $a,b>0$)." },
-    { "recto": "Logarithme d'une **puissance** $\\ln(a^n)$ ?", "verso": "$\\ln(a^n) = n\\ln a$ (l'exposant descend devant le $\\ln$)." },
-    { "recto": "Dérivées de $\\ln x$ et de $\\ln(u)$ ?", "verso": "$(\\ln x)' = \\dfrac{1}{x}$ et $\\big(\\ln(u)\\big)' = \\dfrac{u'}{u}$ (pour $u>0$)." },
-    { "recto": "Limites de $\\ln x$ en $0^+$ et en $+\\infty$ ?", "verso": "$\\displaystyle\\lim_{x\\to 0^+}\\ln x = -\\infty$ et $\\displaystyle\\lim_{x\\to +\\infty}\\ln x = +\\infty$." },
-    { "recto": "Croissances comparées : $\\dfrac{\\mathrm{e}^x}{x^n}$ et $\\dfrac{\\ln x}{x^n}$ en $+\\infty$ ?", "verso": "$\\dfrac{\\mathrm{e}^x}{x^n}\\to +\\infty$ et $\\dfrac{\\ln x}{x^n}\\to 0$ : l'exponentielle bat la puissance, qui bat le logarithme." },
-    { "recto": "Existe-t-il une formule pour $\\ln(a+b)$ ?", "verso": "Non ! $\\ln(a+b) \\neq \\ln a + \\ln b$. Le $\\ln$ ne rentre que dans produits, quotients et puissances." },
-    { "recto": "Que se passe-t-il quand on divise une inéquation par $\\ln q$ avec $0<q<1$ ?", "verso": "$\\ln q < 0$, donc l'inégalité **change de sens** (piège des problèmes de décroissance)." }
+    {
+      "recto": "Relation algébrique fondamentale de l'exponentielle ?",
+      "verso": "$\\mathrm{e}^{a+b} = \\mathrm{e}^a \\times \\mathrm{e}^b$ (et $\\mathrm{e}^{-a}=\\frac{1}{\\mathrm{e}^a}$, $(\\mathrm{e}^a)^n=\\mathrm{e}^{na}$)."
+    },
+    {
+      "recto": "Définition du logarithme népérien : $\\ln x = y \\iff\\ ?$",
+      "verso": "$\\ln x = y \\iff x = \\mathrm{e}^y$, avec $x>0$. Domaine de $\\ln$ : $]0\\,;+\\infty[$."
+    },
+    {
+      "recto": "Que valent $\\ln(\\mathrm{e}^x)$ et $\\mathrm{e}^{\\ln x}$ ?",
+      "verso": "$\\ln(\\mathrm{e}^x)=x$ (pour tout réel) et $\\mathrm{e}^{\\ln x}=x$ (pour $x>0$) : fonctions réciproques."
+    },
+    {
+      "recto": "Valeurs clés : $\\ln 1$ et $\\ln \\mathrm{e}$ ?",
+      "verso": "$\\ln 1 = 0$ et $\\ln \\mathrm{e} = 1$."
+    },
+    {
+      "recto": "Logarithme d'un **produit** et d'un **quotient** ?",
+      "verso": "$\\ln(ab)=\\ln a + \\ln b$ et $\\ln\\!\\left(\\frac ab\\right)=\\ln a - \\ln b$ (pour $a,b>0$)."
+    },
+    {
+      "recto": "Logarithme d'une **puissance** $\\ln(a^n)$ ?",
+      "verso": "$\\ln(a^n) = n\\ln a$ (l'exposant descend devant le $\\ln$)."
+    },
+    {
+      "recto": "Dérivées de $\\ln x$ et de $\\ln(u)$ ?",
+      "verso": "$(\\ln x)' = \\dfrac{1}{x}$ et $\\big(\\ln(u)\\big)' = \\dfrac{u'}{u}$ (pour $u>0$)."
+    },
+    {
+      "recto": "Limites de $\\ln x$ en $0^+$ et en $+\\infty$ ?",
+      "verso": "$\\displaystyle\\lim_{x\\to 0^+}\\ln x = -\\infty$ et $\\displaystyle\\lim_{x\\to +\\infty}\\ln x = +\\infty$."
+    },
+    {
+      "recto": "Croissances comparées : $\\dfrac{\\mathrm{e}^x}{x^n}$ et $\\dfrac{\\ln x}{x^n}$ en $+\\infty$ ?",
+      "verso": "$\\dfrac{\\mathrm{e}^x}{x^n}\\to +\\infty$ et $\\dfrac{\\ln x}{x^n}\\to 0$ : l'exponentielle bat la puissance, qui bat le logarithme."
+    },
+    {
+      "recto": "Existe-t-il une formule pour $\\ln(a+b)$ ?",
+      "verso": "Non ! $\\ln(a+b) \\neq \\ln a + \\ln b$. Le $\\ln$ ne rentre que dans produits, quotients et puissances."
+    },
+    {
+      "recto": "Que se passe-t-il quand on divise une inéquation par $\\ln q$ avec $0<q<1$ ?",
+      "verso": "$\\ln q < 0$, donc l'inégalité **change de sens** (piège des problèmes de décroissance)."
+    },
+    {
+      "recto": "Comment resout-on e^x = k (avec k > 0) et ln(x) = k ?",
+      "verso": "e^x = k donne x = ln(k) ; ln(x) = k donne x = e^k. Si k <= 0, l'equation e^x = k n'a aucune solution."
+    }
   ]
 }

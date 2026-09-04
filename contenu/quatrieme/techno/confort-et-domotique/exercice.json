@@ -90,6 +90,59 @@
         "Le système est asservi (boucle fermée) car le capteur de température vérifie le résultat et permet la correction."
       ],
       "reponse": "Capteur d'ouverture + capteur de température, actionneur = chauffage ; SI fenêtre ouverte couper, SINON SI T < 18 °C allumer, SINON couper. Il économise l'énergie (pas de chauffage fenêtre ouverte) tout en gardant le confort (rallumage automatique)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "reconnaître les capteurs domotiques",
+      "enonce": "Associe chaque capteur à ce qu'il mesure ou détecte : (a) thermistance ; (b) photorésistance ; (c) détecteur infrarouge ; (d) capteur d'humidité.",
+      "corrige": [
+        "Un capteur transforme une grandeur physique en signal électrique.",
+        "(a) thermistance → la chaleur (température). (b) photorésistance → la lumière (luminosité).",
+        "(c) détecteur infrarouge → la présence d'une personne (mouvement).",
+        "(d) capteur d'humidité → la quantité d'eau dans l'air ou le sol."
+      ],
+      "reponse": "(a) température, (b) luminosité, (c) présence/mouvement, (d) humidité."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "connecté n'est pas automatique",
+      "enonce": "Un camarade dit : « Comme je commande ma lampe depuis mon téléphone, c'est de l'automatisme. » A-t-il raison ? Explique la différence entre « connecté » et « automatique ».",
+      "corrige": [
+        "Commander un appareil à distance, ce n'est pas de l'automatisme.",
+        "L'automatisme, c'est quand le système réagit tout seul à son environnement, sans que l'on décide chaque action.",
+        "Commander sa lampe depuis son téléphone, c'est une commande à distance (connectée), mais c'est l'utilisateur qui décide.",
+        "Il aurait automatisme si, par exemple, la lampe s'allumait seule à la détection d'une présence."
+      ],
+      "reponse": "Non : commander à distance depuis son téléphone est une commande connectée, mais l'utilisateur décide. L'automatisme, c'est quand le système réagit seul (par exemple à un capteur)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "le thermostat et le retour d'information",
+      "enonce": "Un thermostat maintient une pièce à 19 °C. Explique comment il utilise un retour d'information (boucle fermée) pour rester précis, et ce qui se passerait sans capteur.",
+      "corrige": [
+        "En boucle fermée, un capteur mesure le résultat et le système se corrige tout seul.",
+        "Le capteur mesure la température de la pièce ; le programme la compare à la consigne (19 °C).",
+        "S'il fait moins de 19 °C, il chauffe ; dès que 19 °C est atteint, il coupe le chauffage : c'est le retour d'information.",
+        "Sans capteur, le système ne saurait pas la température atteinte : il ne pourrait pas se corriger (ce ne serait plus un asservissement)."
+      ],
+      "reponse": "Le capteur mesure la température, le programme la compare à 19 °C et coupe le chauffage dès que la consigne est atteinte (retour d'information). Sans capteur, pas de correction possible : ce n'est plus un asservissement."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "concevoir un volet automatique",
+      "enonce": "On veut un volet roulant qui se ferme tout seul à la tombée de la nuit. (a) Quel capteur utiliser ? (b) Écris la condition avec un seuil. (c) Quel actionneur agit ? (d) Est-ce un système en boucle ouverte ou fermée ?",
+      "corrige": [
+        "On suit la chaîne capteur → programme → actionneur.",
+        "(a) Un capteur de luminosité (photorésistance) mesure la lumière.",
+        "(b) SI (luminosité < seuil, par exemple 50 lux) ALORS fermer le volet, SINON ne rien faire (ou l'ouvrir le matin).",
+        "(c) L'actionneur est le moteur du volet roulant.",
+        "(d) Sans capteur qui vérifie le résultat (volet bien fermé), c'est un système en boucle ouverte."
+      ],
+      "reponse": "(a) capteur de luminosité ; (b) SI luminosité < seuil ALORS fermer le volet ; (c) le moteur du volet ; (d) boucle ouverte (il ne vérifie pas le résultat)."
     }
   ]
 }

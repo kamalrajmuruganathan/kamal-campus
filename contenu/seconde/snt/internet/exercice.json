@@ -81,6 +81,54 @@
         "IPv6 sur 128 bits offre 2^128 adresses, un nombre gigantesque : de quoi adresser durablement tous les appareils, ce qui résout la pénurie d'adresses."
       ],
       "reponse": "2^32 ≈ 4,3 milliards d'adresses IPv4, devenues insuffisantes ; IPv6 (128 bits, 2^128) fournit assez d'adresses pour tous."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "matériel du réseau (box, routeur, FAI)",
+      "enonce": "Chez toi, plusieurs appareils se connectent à Internet via une box. a) Quel rôle joue la box (routeur) ? b) Qu'est-ce qu'un FAI ? c) Cite deux supports possibles pour transporter les données jusqu'à ta box.",
+      "corrige": [
+        "La box fait office de routeur : elle relie ton réseau local à Internet et dirige les paquets entre tes appareils et l'extérieur.",
+        "Un FAI (fournisseur d'accès à Internet) est l'entreprise qui te raccorde à Internet (Orange, Free, SFR, etc.).",
+        "Les données peuvent voyager par câble (fibre optique, cuivre ADSL) ou sans fil (réseau mobile 4G/5G, satellite)."
+      ],
+      "reponse": "La box (routeur) relie le réseau local à Internet ; le FAI fournit l'accès ; supports : fibre, cuivre, ondes (4G/5G)."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "protocoles TCP et IP",
+      "enonce": "On envoie un message par Internet. a) À quoi sert le protocole IP ? b) À quoi sert le protocole TCP ? c) Pourquoi dit-on qu'ils travaillent ensemble (TCP/IP) ?",
+      "corrige": [
+        "IP (Internet Protocol) attribue une adresse à chaque machine et achemine chaque paquet vers la bonne destination.",
+        "TCP (Transmission Control Protocol) découpe le message en paquets, les numérote, vérifie qu'ils arrivent tous et les remet dans l'ordre, en redemandant ceux qui manquent.",
+        "IP transporte les paquets sans garantie ; TCP contrôle la fiabilité au-dessus. Ensemble (TCP/IP), ils assurent un acheminement complet et fiable."
+      ],
+      "reponse": "IP adresse et achemine les paquets ; TCP les découpe, ordonne et fiabilise ; ensemble ils garantissent l'échange."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "routage et chemin des paquets",
+      "enonce": "Deux paquets d'un même message partent de Lyon vers un serveur à New York. a) Empruntent-ils forcément le même chemin ? b) Que fait un routeur à chaque étape ? c) Que se passe-t-il pour les paquets si un routeur tombe en panne sur la route ?",
+      "corrige": [
+        "Non : chaque paquet est routé indépendamment ; ils peuvent suivre des chemins différents et arriver dans le désordre (TCP les réordonne).",
+        "À chaque étape, le routeur lit l'adresse IP de destination et transmet le paquet au routeur suivant le plus adapté vers cette destination.",
+        "Les routeurs contournent la panne en choisissant une autre route : c'est ce qui rend Internet robuste (réseau maillé et décentralisé)."
+      ],
+      "reponse": "Chemins possiblement différents ; chaque routeur relaie selon l'IP de destination ; en cas de panne, la route est contournée."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "calcul de débit et temps de transfert",
+      "enonce": "On télécharge un fichier de 900 Mo (mégaoctets) avec une connexion de 100 Mb/s (mégabits par seconde). a) Convertis 900 Mo en mégabits (1 octet = 8 bits). b) Calcule le temps de téléchargement théorique. c) Pourquoi le temps réel est-il souvent plus long ?",
+      "corrige": [
+        "900 Mo × 8 = 7200 mégabits (Mb).",
+        "Temps = quantité / débit = 7200 Mb / 100 Mb/s = 72 secondes.",
+        "En pratique, le débit réel est inférieur au débit annoncé (partage de la ligne, encombrement, distance, protocoles) : le temps dépasse la valeur théorique."
+      ],
+      "reponse": "900 Mo = 7200 Mb ; 7200 / 100 = 72 s en théorie ; plus long en réalité car le débit effectif est inférieur."
     }
   ]
 }

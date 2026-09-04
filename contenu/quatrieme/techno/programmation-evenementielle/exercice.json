@@ -88,6 +88,57 @@
         "Communiquer / agir : la carte allume la DEL pour signaler que le seuil est dépassé."
       ],
       "reponse": "Oui, les deux scripts fonctionnent en parallèle car ils attendent des événements différents ; le second suit la chaîne d'information : acquérir (capteur de température) → traiter (test > 30 °C) → communiquer (allumer la DEL)."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "associer bloc-événement et déclencheur",
+      "enonce": "Associe chaque bloc-événement de Scratch à ce qui le déclenche : (a) « quand le drapeau vert est cliqué » ; (b) « quand la touche espace est pressée » ; (c) « quand ce lutin est cliqué ».",
+      "corrige": [
+        "Un bloc-événement (« chapeau ») déclenche un script quand l'événement prévu se produit.",
+        "(a) « quand le drapeau vert est cliqué » → au démarrage du programme.",
+        "(b) « quand la touche espace est pressée » → quand on appuie sur cette touche.",
+        "(c) « quand ce lutin est cliqué » → quand on clique sur le lutin."
+      ],
+      "reponse": "(a) au démarrage du programme, (b) quand on appuie sur la touche espace, (c) quand on clique sur le lutin."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "les messages entre scripts",
+      "enonce": "Dans un jeu Scratch, un script contient « envoyer le message perdu » et un autre « quand je reçois perdu ». Explique à quoi sert la diffusion de messages entre scripts.",
+      "corrige": [
+        "La diffusion permet à une partie du programme de prévenir une autre.",
+        "Un script envoie un message ; un ou plusieurs autres scripts qui attendent « quand je reçois ce message » se déclenchent.",
+        "Cela fait communiquer plusieurs parties du programme : ici, quand un lutin envoie « perdu », un autre peut afficher « Game Over » et arrêter le jeu."
+      ],
+      "reponse": "La diffusion fait communiquer les scripts : un script envoie un message, un autre le reçoit et réagit (par exemple afficher « Game Over »)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "script événementiel avec variable et boucle",
+      "enonce": "On veut : au démarrage, mettre le score à 0 ; puis, à chaque fois que le lutin touche une pièce, ajouter 1 au score. Écris ce comportement avec des blocs-événements, une variable et une boucle.",
+      "corrige": [
+        "On commence par un bloc-événement de démarrage.",
+        "Quand le drapeau vert est cliqué → mettre score à 0.",
+        "Puis : répéter indéfiniment : [ SI le lutin touche la pièce ALORS ajouter 1 au score ].",
+        "La variable « score » mémorise la valeur ; la boucle vérifie en permanence ; la condition détecte le contact."
+      ],
+      "reponse": "Quand le drapeau vert est cliqué → mettre score à 0 ; répéter indéfiniment : [ SI le lutin touche la pièce ALORS ajouter 1 au score ]."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "concevoir plusieurs scripts en parallèle",
+      "enonce": "On programme un petit jeu où le personnage se déplace et où le jeu s'arrête quand le temps est écoulé. Propose deux scripts qui s'exécutent en parallèle : l'un pour le déplacement, l'autre pour la fin du jeu. Explique pourquoi ils peuvent tourner en même temps.",
+      "corrige": [
+        "En programmation événementielle, plusieurs scripts peuvent guetter des événements en même temps.",
+        "Script 1 (déplacement) : QUAND la touche → est pressée → avancer de 10 pas (et de même pour les autres flèches).",
+        "Script 2 (fin du jeu) : QUAND le drapeau vert est cliqué → attendre 30 secondes → dire « Fin » → stop tout.",
+        "Les deux scripts commencent chacun par un bloc-événement et réagissent indépendamment : ils s'exécutent donc en parallèle."
+      ],
+      "reponse": "Script 1 : QUAND la touche → est pressée → avancer. Script 2 : QUAND le drapeau vert est cliqué → attendre 30 s → dire « Fin » → arrêter. Chacun a son bloc-événement, donc ils tournent en parallèle."
     }
   ]
 }

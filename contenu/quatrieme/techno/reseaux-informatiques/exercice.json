@@ -90,6 +90,57 @@
         "Quand on saisit un mot de passe, le chiffrement empêche un tiers de lire les données transmises : c'est plus sûr."
       ],
       "reponse": "Faux : Internet est le réseau mondial ; le Web n'en est qu'un service (les pages) et le Wi-Fi seulement un accès sans fil au réseau local. Le HTTPS chiffre les données, ce qui protège un mot de passe pendant son transfert."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "équipements d'interconnexion",
+      "enonce": "Associe chaque équipement à son rôle : (a) le switch ; (b) le routeur ; (c) le serveur.",
+      "corrige": [
+        "Chaque équipement a un rôle précis dans un réseau.",
+        "(a) le switch (commutateur) relie plusieurs appareils d'un même réseau local.",
+        "(b) le routeur relie des réseaux différents et choisit le chemin des données.",
+        "(c) le serveur est une machine puissante qui fournit un service (fichiers, sites, messagerie)."
+      ],
+      "reponse": "(a) le switch relie les appareils d'un même réseau local ; (b) le routeur relie des réseaux différents et choisit le chemin ; (c) le serveur fournit un service."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "les protocoles",
+      "enonce": "Qu'est-ce qu'un protocole de communication ? Donne deux exemples de protocoles et dis pourquoi deux machines ne pourraient pas dialoguer sans protocole commun.",
+      "corrige": [
+        "Un protocole est un ensemble de règles communes que les machines respectent pour se comprendre.",
+        "Exemples : HTTP/HTTPS (pages web), IP (adressage), TCP/IP (envoi et réassemblage des paquets).",
+        "Sans protocole commun, chaque machine « parlerait » à sa façon : elles ne pourraient pas se comprendre, comme deux personnes sans langue commune."
+      ],
+      "reponse": "Un protocole est un ensemble de règles communes de communication (par exemple HTTP/HTTPS, IP). Sans protocole commun, deux machines ne peuvent pas se comprendre."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "filaire ou sans fil",
+      "enonce": "Classe ces liaisons en filaire ou sans fil et donne un avantage de chaque type : la fibre optique, le Wi-Fi, le câble Ethernet, la 4G/5G.",
+      "corrige": [
+        "Une liaison filaire passe par un câble ; une liaison sans fil utilise des ondes radio.",
+        "Filaire : la fibre optique et le câble Ethernet (RJ45). Avantage : liaison rapide et stable.",
+        "Sans fil : le Wi-Fi et la 4G/5G. Avantage : pas de câble, on peut se déplacer.",
+        "La fibre optique est particulièrement rapide car la donnée voyage sous forme de lumière."
+      ],
+      "reponse": "Filaire : fibre optique, câble Ethernet (rapide et stable). Sans fil : Wi-Fi, 4G/5G (mobilité, pas de câble)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "trajet d'une page web entre deux machines",
+      "enonce": "Tu demandes une page web. (a) Comment le message est-il découpé pour voyager ? (b) Qu'est-ce qui permet à chaque morceau d'arriver au bon endroit ? (c) Quel équipement choisit le chemin entre les réseaux ? (d) Qui « demande » et qui « répond » ?",
+      "corrige": [
+        "(a) Les données sont découpées en paquets ; chaque paquet voyage séparément puis les paquets sont réassemblés à l'arrivée.",
+        "(b) Chaque paquet porte l'adresse IP de départ et l'adresse IP d'arrivée : c'est ce qui permet de le livrer au bon appareil.",
+        "(c) Le routeur choisit le chemin des données entre les réseaux.",
+        "(d) Le client (ton navigateur) demande la page ; le serveur répond en l'envoyant."
+      ],
+      "reponse": "(a) en paquets réassemblés à l'arrivée ; (b) l'adresse IP de départ et d'arrivée sur chaque paquet ; (c) le routeur ; (d) le client demande, le serveur répond."
     }
   ]
 }

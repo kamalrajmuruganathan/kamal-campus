@@ -85,6 +85,54 @@
         "Puis en kilo-octets : 88 200 / 1000 = 88,2 ko pour 1 seconde de son mono."
       ],
       "reponse": "16 bits donnent 65 536 niveaux ; 1 s de son mono occupe 705 600 bits, soit 88,2 ko."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "fréquence et période",
+      "enonce": "Un diapason vibre avec une période T = 0,004 s (soit 4 ms). a) Rappelle la relation entre fréquence et période. b) Calcule sa fréquence. c) Cette note (environ 250 Hz) est-elle grave ou aiguë par rapport à un son de 2000 Hz ?",
+      "corrige": [
+        "La fréquence est l'inverse de la période : f = 1 / T (f en hertz, T en secondes).",
+        "f = 1 / 0,004 = 250 Hz.",
+        "Plus la fréquence est basse, plus le son est grave : 250 Hz est bien plus grave que 2000 Hz."
+      ],
+      "reponse": "f = 1/T = 1/0,004 = 250 Hz ; c'est un son grave par rapport à 2000 Hz."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "longueur d'onde et vitesse du son",
+      "enonce": "Le son se propage dans l'air à environ 340 m/s. Un son a une fréquence de 170 Hz. a) Rappelle la relation entre longueur d'onde, vitesse et fréquence. b) Calcule la longueur d'onde. c) Le son se propage-t-il dans le vide ?",
+      "corrige": [
+        "Longueur d'onde = vitesse / fréquence, soit lambda = v / f.",
+        "lambda = 340 / 170 = 2 m.",
+        "Non : le son est une onde mécanique, il a besoin d'un milieu matériel (air, eau, solide) pour se propager ; dans le vide, il ne se propage pas."
+      ],
+      "reponse": "lambda = v/f = 340/170 = 2 m ; le son ne se propage pas dans le vide (onde mécanique)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "octave et rapport de fréquences",
+      "enonce": "Un la a une fréquence de 440 Hz. a) Quel rapport de fréquences correspond à une octave ? b) Quelle est la fréquence du la une octave au-dessus ? et une octave en dessous ? c) Deux notes séparées d'une octave sont-elles perçues comme proches ?",
+      "corrige": [
+        "Monter d'une octave revient à multiplier la fréquence par 2 (rapport 2/1).",
+        "Une octave au-dessus : 440 × 2 = 880 Hz. Une octave en dessous : 440 / 2 = 220 Hz.",
+        "Oui : deux notes séparées d'une octave portent le même nom (la) et sont perçues comme très proches, presque « la même » note plus haute ou plus basse."
+      ],
+      "reponse": "Octave = ×2 ; au-dessus 880 Hz, en dessous 220 Hz ; ces la se ressemblent fortement (même nom)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "numérisation d'un son (échantillonnage)",
+      "enonce": "On numérise un son en relevant sa valeur 44 100 fois par seconde, chaque valeur étant codée sur 16 bits, en stéréo (2 voies). a) Nomme les deux étapes de la numérisation. b) Combien de bits par seconde pour une voie ? c) Estime la taille (en Mo) d'un extrait de 60 s en stéréo (1 octet = 8 bits).",
+      "corrige": [
+        "Les deux étapes sont l'échantillonnage (relever la valeur du signal à intervalles réguliers) et la quantification (arrondir chaque valeur sur un nombre fixe de bits).",
+        "Une voie : 44 100 échantillons/s × 16 bits = 705 600 bits par seconde.",
+        "Deux voies : 705 600 × 2 = 1 411 200 bits/s. Sur 60 s : 1 411 200 × 60 = 84 672 000 bits, soit ÷ 8 = 10 584 000 octets, environ 10,6 Mo (soit à peu près 10 Mo)."
+      ],
+      "reponse": "Échantillonnage + quantification ; 705 600 bits/s par voie ; environ 10,6 Mo pour 60 s en stéréo (non compressé)."
     }
   ]
 }

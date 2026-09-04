@@ -9,11 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Comment repère-t-on un lieu sur la Terre ?", "verso": "Par la latitude (depuis l'équateur) et la longitude (depuis le méridien de Greenwich). Le couple désigne un point unique." },
-    { "recto": "Comment le GPS calcule-t-il une position ?", "verso": "Le récepteur mesure sa distance à au moins quatre satellites (via le temps de trajet des signaux), puis en déduit sa position par trilatération." },
-    { "recto": "Le récepteur GPS envoie-t-il votre position aux satellites ?", "verso": "Non : il ne fait que recevoir. Seul, le GPS n'émet rien ; c'est l'application (via Internet) qui peut transmettre la position." },
-    { "recto": "Qu'est-ce qu'un GNSS ? Cite des exemples.", "verso": "Un système de géolocalisation par satellites : GPS (États-Unis), Galileo (Europe), GLONASS (Russie), Beidou (Chine)." },
-    { "recto": "Comment calcule-t-on un itinéraire sur une carte ?", "verso": "On cherche le plus court/rapide chemin dans un graphe : carrefours = sommets, routes = arêtes pondérées par la distance ou le temps." },
-    { "recto": "Quel enjeu pose la géolocalisation ?", "verso": "La vie privée : suivre les déplacements, ou publier des photos géolocalisées, peut révéler domicile, école et habitudes. Limiter les autorisations." }
+    {
+      "recto": "Comment repère-t-on un lieu sur la Terre ?",
+      "verso": "Par la latitude (depuis l'équateur) et la longitude (depuis le méridien de Greenwich). Le couple désigne un point unique."
+    },
+    {
+      "recto": "Comment le GPS calcule-t-il une position ?",
+      "verso": "Le récepteur mesure sa distance à au moins quatre satellites (via le temps de trajet des signaux), puis en déduit sa position par trilatération."
+    },
+    {
+      "recto": "Le récepteur GPS envoie-t-il votre position aux satellites ?",
+      "verso": "Non : il ne fait que recevoir. Seul, le GPS n'émet rien ; c'est l'application (via Internet) qui peut transmettre la position."
+    },
+    {
+      "recto": "Qu'est-ce qu'un GNSS ? Cite des exemples.",
+      "verso": "Un système de géolocalisation par satellites : GPS (États-Unis), Galileo (Europe), GLONASS (Russie), Beidou (Chine)."
+    },
+    {
+      "recto": "Comment calcule-t-on un itinéraire sur une carte ?",
+      "verso": "On cherche le plus court/rapide chemin dans un graphe : carrefours = sommets, routes = arêtes pondérées par la distance ou le temps."
+    },
+    {
+      "recto": "Quel enjeu pose la géolocalisation ?",
+      "verso": "La vie privée : suivre les déplacements, ou publier des photos géolocalisées, peut révéler domicile, école et habitudes. Limiter les autorisations."
+    },
+    {
+      "recto": "Que sont la latitude et la longitude ?",
+      "verso": "Latitude = position Nord-Sud par rapport à l'équateur (0°) ; longitude = position Est-Ouest par rapport au méridien de Greenwich (0°). Ensemble elles repèrent tout point du globe."
+    },
+    {
+      "recto": "Combien de satellites faut-il pour se localiser, et pourquoi 4 ?",
+      "verso": "Trois suffisent en théorie (trilatération) ; un quatrième corrige l'horloge du récepteur, moins précise que les horloges atomiques des satellites."
+    },
+    {
+      "recto": "Comment le récepteur calcule-t-il sa distance à un satellite ?",
+      "verso": "Il mesure le temps de trajet du signal et le multiplie par la vitesse des ondes (environ 300 000 km/s) : distance = vitesse × durée."
+    },
+    {
+      "recto": "Qu'est-ce que la trilatération ?",
+      "verso": "Se placer à l'intersection de plusieurs sphères de distances connues autour des satellites. On croise des distances, pas des angles (ce serait la triangulation)."
+    },
+    {
+      "recto": "Comment un logiciel calcule-t-il un itinéraire ?",
+      "verso": "Il modélise la carte en graphe (intersections = sommets, routes = arêtes avec une durée ou une distance) et cherche le plus court chemin, par exemple avec l'algorithme de Dijkstra."
+    },
+    {
+      "recto": "Qu'est-ce qu'une carte numérique organisée en couches ?",
+      "verso": "Une carte affichée par un logiciel, faite de couches superposées (routes, relief, points d'intérêt, trafic) que l'on peut activer, zoomer et interroger."
+    }
   ]
 }

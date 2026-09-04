@@ -89,6 +89,56 @@
         "OSPF privilégierait alors A->B->C bien qu'il compte davantage de sauts, car il tient compte de la qualité des liens."
       ],
       "reponse": "RIP compte les sauts (A-C direct), OSPF pondère par le débit et peut préférer A-B-C si le lien direct est lent."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "adresse IPv4 valide",
+      "enonce": "Parmi ces adresses, lesquelles sont des adresses IPv4 valides : 192.168.1.10 ; 256.1.1.1 ; 10.0.0.255 ? Justifie.",
+      "corrige": [
+        "Une adresse IPv4 est composée de quatre nombres compris entre 0 et 255, séparés par des points.",
+        "192.168.1.10 : chaque nombre est entre 0 et 255 → valide.",
+        "256.1.1.1 : 256 dépasse 255 → invalide.",
+        "10.0.0.255 : chaque nombre est entre 0 et 255 (255 est autorisé) → valide."
+      ],
+      "reponse": "192.168.1.10 et 10.0.0.255 sont valides ; 256.1.1.1 ne l'est pas (256 > 255)."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "conversion d'un octet en binaire",
+      "enonce": "Convertis en binaire sur 8 bits les deux premiers octets de l'adresse 192.168.x.x, c'est-à-dire 192 et 168.",
+      "corrige": [
+        "192 = 128 + 64 = 11000000.",
+        "168 = 128 + 32 + 8 = 10101000.",
+        "Chaque octet tient sur 8 bits."
+      ],
+      "reponse": "192 = 11000000 et 168 = 10101000."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "débit et temps de transfert",
+      "enonce": "Combien de temps faut-il pour transférer un fichier de 10 Mbit à un débit de 2 Mbit/s ?",
+      "corrige": [
+        "Le temps de transfert est la quantité d'information divisée par le débit.",
+        "t = 10 Mbit / 2 Mbit/s.",
+        "t = 5 secondes."
+      ],
+      "reponse": "Le transfert prend 5 secondes."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "choisir une route : RIP ou OSPF",
+      "enonce": "Pour aller de A à B, deux routes existent : la route 1 traverse 2 routeurs mais des liens lents ; la route 2 traverse 3 routeurs mais des liens rapides (coût total plus faible). Quelle route choisit RIP ? Quelle route choisit OSPF ?",
+      "corrige": [
+        "RIP choisit la route ayant le moins de sauts (routeurs traversés).",
+        "La route 1 a 2 sauts, la route 2 en a 3 : RIP choisit la route 1.",
+        "OSPF choisit la route de plus faible coût (lié au débit des liens).",
+        "La route 2 a un coût plus faible (liens rapides) : OSPF choisit la route 2."
+      ],
+      "reponse": "RIP choisit la route 1 (moins de sauts) ; OSPF choisit la route 2 (coût plus faible, liens rapides)."
     }
   ]
 }

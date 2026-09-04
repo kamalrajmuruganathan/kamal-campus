@@ -86,6 +86,58 @@
         "Ce raisonnement n'est valable que si la liste est triée ; sur une liste non triée, éliminer une moitié n'a plus de sens et le résultat serait faux."
       ],
       "reponse": "Au pire 1000 comparaisons en séquentiel contre environ 10 étapes (log2(1000)) en dichotomique ; la dichotomie n'est correcte que sur une liste triée, car elle élimine une moitié en se fiant à l'ordre des éléments."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "coût de la recherche séquentielle",
+      "enonce": "Un tableau contient 200 valeurs, non triées. Combien de comparaisons fait au maximum la recherche séquentielle pour trouver une valeur ? Et si la valeur cherchée est absente ?",
+      "corrige": [
+        "La recherche séquentielle examine les éléments un à un jusqu'à trouver la valeur ou atteindre la fin.",
+        "Dans le pire des cas (valeur en dernière position), elle fait 200 comparaisons.",
+        "Si la valeur est absente, il faut parcourir tout le tableau : 200 comparaisons aussi.",
+        "Le coût est donc proportionnel à la taille n du tableau : coût linéaire."
+      ],
+      "reponse": "Au maximum 200 comparaisons ; si la valeur est absente, on parcourt tout le tableau, soit 200 comparaisons."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "tri par sélection (première étape)",
+      "enonce": "On applique le tri par sélection au tableau tab = [5, 2, 8, 1, 9]. Décris le premier tour de boucle et donne l'état du tableau après cette première étape.",
+      "corrige": [
+        "Le tri par sélection cherche le plus petit élément de la partie non triée et le place au début.",
+        "Au premier tour, on parcourt tout le tableau : le minimum est 1, situé à l'indice 3.",
+        "On échange tab[0] (valeur 5) avec tab[3] (valeur 1).",
+        "Après l'échange, le tableau devient [1, 2, 8, 5, 9] : le 1 est à sa place définitive."
+      ],
+      "reponse": "Le minimum 1 (indice 3) est échangé avec tab[0] : le tableau devient [1, 2, 8, 5, 9]."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "recherche dichotomique (trace)",
+      "enonce": "On cherche la valeur 20 par dichotomie dans le tableau trié tab = [3, 7, 11, 15, 20, 25, 31] (indices 0 à 6). Donne la trace (valeurs de g, d, m) et l'indice renvoyé.",
+      "corrige": [
+        "Départ : g = 0, d = 6. Milieu m = (0+6)//2 = 3, tab[3] = 15. Comme 15 < 20, on garde la moitié droite : g = 4.",
+        "Ensuite g = 4, d = 6. Milieu m = (4+6)//2 = 5, tab[5] = 25. Comme 25 > 20, on garde la moitié gauche : d = 4.",
+        "Enfin g = 4, d = 4. Milieu m = 4, tab[4] = 20 : trouvé, on renvoie l'indice 4.",
+        "La recherche a demandé seulement 3 étapes."
+      ],
+      "reponse": "La dichotomie trouve 20 à l'indice 4 en 3 étapes (m = 3, puis 5, puis 4)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "algorithme glouton (rendu de monnaie)",
+      "enonce": "On rend 87 centimes avec des pièces de 50, 20, 10, 5, 2 et 1 centime, par l'algorithme glouton. Détaille les choix et donne le nombre de pièces utilisées.",
+      "corrige": [
+        "Le glouton choisit à chaque étape la plus grande pièce ne dépassant pas ce qu'il reste à rendre.",
+        "50 → reste 37 ; 20 → reste 17 ; 10 → reste 7 ; 5 → reste 2 ; 2 → reste 0.",
+        "Pièces utilisées : 50, 20, 10, 5, 2, soit 5 pièces.",
+        "Avec ce jeu de pièces (système français), le glouton donne ici la solution optimale."
+      ],
+      "reponse": "50 + 20 + 10 + 5 + 2 = 87 : 5 pièces au total."
     }
   ]
 }

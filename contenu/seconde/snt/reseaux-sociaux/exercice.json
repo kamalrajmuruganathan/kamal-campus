@@ -81,6 +81,54 @@
         "La croissance est exponentielle (×3 à chaque étape) : une information, vraie ou fausse, peut atteindre un très grand nombre de personnes en très peu de temps, d'où la difficulté d'arrêter une rumeur une fois lancée."
       ],
       "reponse": "27 nouvelles personnes à la vague 3, 40 au total après 3 vagues ; la propagation est exponentielle et donc très rapide."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "traces et données personnelles",
+      "enonce": "Sur un réseau social, chaque action laisse des traces. a) Cite trois exemples de traces laissées en utilisant l'application. b) Qui peut exploiter ces traces ? c) Donne un bon réflexe pour limiter sa trace.",
+      "corrige": [
+        "Exemples : les publications et photos postées, les mentions « j'aime » et commentaires, les pages suivies, la position, l'heure et la durée des connexions.",
+        "La plateforme (pour cibler la publicité), des annonceurs, parfois des tiers en cas de fuite, et toute personne voyant un profil public.",
+        "Bon réflexe : régler la confidentialité en « privé », réfléchir avant de publier, limiter les informations personnelles et la géolocalisation."
+      ],
+      "reponse": "Traces : publications, likes, abonnements, position/horaires ; exploitées par la plateforme et les annonceurs ; limiter via la confidentialité."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "degré et distance dans un graphe",
+      "enonce": "Dans un petit réseau : Ana est amie avec Bilal et Chloé ; Bilal est ami avec Chloé et Driss. a) Donne le degré d'Ana et celui de Bilal. b) Quelle est la distance (nombre de liens) entre Ana et Driss ? c) Que représente concrètement cette distance ?",
+      "corrige": [
+        "Le degré = nombre d'amis directs. Ana : Bilal et Chloé -> degré 2. Bilal : Ana, Chloé et Driss -> degré 3.",
+        "Ana n'est pas amie directement avec Driss ; le plus court chemin est Ana-Bilal-Driss, soit 2 liens : la distance vaut 2.",
+        "Cette distance est le nombre minimal de liens à suivre : ici Driss est « l'ami d'un ami » d'Ana."
+      ],
+      "reponse": "Degré d'Ana = 2, de Bilal = 3 ; distance Ana-Driss = 2 (ami d'un ami)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "algorithme de recommandation et bulle de filtre",
+      "enonce": "Une plateforme choisit automatiquement les contenus affichés. a) Sur quoi se base l'algorithme de recommandation ? b) Qu'est-ce qu'une bulle de filtre ? c) Cite un risque pour l'information.",
+      "corrige": [
+        "Il se base sur l'historique de l'utilisateur (vidéos vues, likes, temps passé) et sur les comportements d'utilisateurs semblables, pour maximiser l'engagement.",
+        "Une bulle de filtre est l'enfermement dans des contenus qui confortent nos opinions : on ne voit plus que ce qui nous ressemble.",
+        "Risque : appauvrissement du point de vue, diffusion de fausses informations, polarisation et difficulté à confronter des idées différentes."
+      ],
+      "reponse": "L'algorithme se base sur nos usages pour maximiser l'engagement ; la bulle de filtre enferme dans nos opinions et favorise la désinformation."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "diffusion virale et croissance exponentielle",
+      "enonce": "Une rumeur est partagée par 1 personne, qui la transmet à 3 autres, chacune la retransmettant à 3 autres, et ainsi de suite à chaque « vague ». a) Combien de personnes reçoivent la rumeur à la 3e vague ? b) Combien au total après 3 vagues ? c) Comment qualifie-t-on ce type de croissance ?",
+      "corrige": [
+        "Vague 1 : 3 personnes ; vague 2 : 3 × 3 = 9 ; vague 3 : 9 × 3 = 27 personnes reçoivent la rumeur.",
+        "Total = 1 (émetteur initial) + 3 + 9 + 27 = 40 personnes touchées après 3 vagues.",
+        "À chaque étape le nombre est multiplié par 3 : c'est une croissance exponentielle (très rapide), typique de la viralité."
+      ],
+      "reponse": "27 à la 3e vague ; 40 personnes au total ; croissance exponentielle (× 3 à chaque vague)."
     }
   ]
 }

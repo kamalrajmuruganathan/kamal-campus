@@ -14,6 +14,12 @@
     { "recto": "Quelles sont les opérations de base d'une pile ?", "verso": "empiler(x) ajoute au sommet, depiler() retire et renvoie le sommet, est_vide() teste si elle est vide (parfois sommet() pour lire sans retirer)." },
     { "recto": "Tableau ou liste chaînée : quel compromis ?", "verso": "Tableau : accès immédiat à un indice, mais insertion/suppression au milieu coûteuse. Liste chaînée : insertion/suppression en tête immédiate, mais accès à un indice lent (parcours)." },
     { "recto": "Vocabulaire d'un arbre : racine, feuille, profondeur, hauteur ?", "verso": "Racine = unique nœud sans parent ; feuille = nœud sans enfant ; profondeur d'un nœud = nombre d'arêtes depuis la racine (racine = 0) ; hauteur de l'arbre = profondeur maximale." },
-    { "recto": "Qu'est-ce qu'un arbre binaire de recherche (ABR) ?", "verso": "Un arbre binaire (au plus 2 enfants par nœud) où, pour chaque nœud, sous-arbre gauche < clé du nœud < sous-arbre droit. Cette propriété permet une recherche rapide, comme une dichotomie." }
+    { "recto": "Qu'est-ce qu'un arbre binaire de recherche (ABR) ?", "verso": "Un arbre binaire (au plus 2 enfants par nœud) où, pour chaque nœud, sous-arbre gauche < clé du nœud < sous-arbre droit. Cette propriété permet une recherche rapide, comme une dichotomie." },
+    { "recto": "Que signifie l'encapsulation pour une structure de données ?", "verso": "On programme contre l'interface (les opérations garanties), sans dépendre de la façon dont la structure est implémentée." },
+    { "recto": "Pourquoi éviter list.pop(0) pour réaliser une file ?", "verso": "Parce que pop(0) retire en tête mais oblige à décaler tous les éléments (coût proportionnel à la taille) ; on préfère collections.deque." },
+    { "recto": "Cite deux usages typiques d'une pile.", "verso": "La pile d'appels d'un programme récursif, le bouton « précédent » d'un navigateur, l'évaluation d'expressions." },
+    { "recto": "Cite un usage typique d'une file.", "verso": "Le parcours en largeur d'un graphe, la gestion de tâches, les tampons (buffers)." },
+    { "recto": "Qu'est-ce qu'un arbre binaire ?", "verso": "Un arbre où chaque nœud a au plus deux enfants (un gauche et un droit)." },
+    { "recto": "Comment représenter un nœud d'arbre binaire en Python ?", "verso": "Par une classe avec une valeur et deux références gauche et droite (None quand l'enfant est absent)." }
   ]
 }

@@ -89,6 +89,57 @@
         "Le microcontrôleur ne délivre que de faibles signaux (petite tension, faible courant) : il ne fournit pas la puissance nécessaire. Il donne l'ordre, et c'est la chaîne d'énergie qui exécute et fournit les watts au moteur."
       ],
       "reponse": "Antenne (acquérir) → microcontrôleur (traiter) → ordre (communiquer) : chaîne d'information ; puis moteur alimenté : chaîne d'énergie. Le microcontrôleur commande mais ne fournit pas la puissance, d'où le rôle de la chaîne d'énergie."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "le bit et le binaire",
+      "enonce": "Dans un objet numérique, l'information est codée en binaire. (a) Quelles sont les deux valeurs possibles d'un signal numérique ? (b) Comment appelle-t-on un de ces chiffres ?",
+      "corrige": [
+        "Un signal numérique ne prend que des valeurs discrètes, le plus souvent 0 ou 1 (courant absent / présent).",
+        "(a) Les deux valeurs possibles sont 0 et 1.",
+        "(b) Chacun de ces chiffres binaires s'appelle un bit."
+      ],
+      "reponse": "(a) 0 ou 1. (b) Un bit."
+    },
+    {
+      "id": 8,
+      "difficulte": "facile",
+      "notion": "composant et fonction",
+      "enonce": "Associe chaque composant à la fonction de la chaîne d'information qu'il réalise (acquérir, traiter, communiquer) : (a) un microcontrôleur ; (b) un capteur ; (c) un écran.",
+      "corrige": [
+        "Acquérir = recueillir l'information ; traiter = analyser et décider ; communiquer = transmettre.",
+        "(a) le microcontrôleur analyse et décide : il traite.",
+        "(b) le capteur recueille l'information : il acquiert.",
+        "(c) l'écran transmet l'information à l'utilisateur : il communique."
+      ],
+      "reponse": "(a) traiter, (b) acquérir, (c) communiquer."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "analyser une barrière de parking",
+      "enonce": "À l'entrée d'un parking, une barrière se lève quand un capteur détecte un ticket valide. Identifie les trois fonctions de la chaîne d'information et le composant qui réalise chacune.",
+      "corrige": [
+        "On retrouve toujours : acquérir → traiter → communiquer.",
+        "Acquérir : le lecteur de ticket (capteur) lit le ticket.",
+        "Traiter : la carte électronique vérifie si le ticket est valide et décide.",
+        "Communiquer : elle envoie l'ordre à la chaîne d'énergie qui alimente le moteur de la barrière (et un voyant peut s'allumer)."
+      ],
+      "reponse": "Acquérir : le lecteur de ticket ; traiter : la carte électronique qui vérifie et décide ; communiquer : l'ordre envoyé (voyant, puis moteur via la chaîne d'énergie)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "concevoir la chaîne d'un détecteur de fumée",
+      "enonce": "On veut un détecteur de fumée qui sonne dès qu'il y a de la fumée. (a) Propose un schéma en blocs avec les trois fonctions et un composant pour chacune. (b) Rappelle pourquoi la sirène n'appartient pas à la chaîne d'information mais est commandée par elle.",
+      "corrige": [
+        "(a) Acquérir : le capteur de fumée détecte la fumée.",
+        "Traiter : le microcontrôleur analyse l'information et décide de déclencher l'alarme.",
+        "Communiquer : il commande la sirène (buzzer) et, éventuellement, envoie un message.",
+        "(b) La sirène produit une action (du son) : elle appartient à la chaîne d'énergie. La chaîne d'information ne fournit pas la puissance ; elle donne l'ordre, la chaîne d'énergie exécute."
+      ],
+      "reponse": "(a) Capteur de fumée (acquérir) → microcontrôleur (traiter) → sirène/buzzer (communiquer/agir). (b) La sirène agit : elle relève de la chaîne d'énergie, mais elle est commandée par la chaîne d'information."
     }
   ]
 }

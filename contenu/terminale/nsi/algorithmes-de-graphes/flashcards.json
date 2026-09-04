@@ -14,6 +14,12 @@
     { "recto": "Parcours en largeur (BFS) : structure et propriété clé ?", "verso": "Il utilise une file (FIFO) et explore par cercles concentriques. Dans un graphe non pondéré, il trouve le plus court chemin en nombre d'arêtes depuis le départ." },
     { "recto": "Parcours en profondeur (DFS) : principe et structure ?", "verso": "Il s'enfonce le plus loin possible le long d'un chemin puis revient en arrière (backtracking). Il utilise une pile, souvent implicitement via la récursivité." },
     { "recto": "Pourquoi faut-il marquer les sommets visités lors d'un parcours ?", "verso": "Pour ne pas traiter un sommet deux fois : sans marquage, un cycle ferait boucler le parcours à l'infini." },
-    { "recto": "Pourquoi le BFS ne donne-t-il pas le plus court chemin dans un graphe pondéré ?", "verso": "Le BFS compte le nombre d'arêtes, pas la somme des poids. Avec des poids, il faut un algorithme qui tienne compte des coûts des arêtes." }
+    { "recto": "Pourquoi le BFS ne donne-t-il pas le plus court chemin dans un graphe pondéré ?", "verso": "Le BFS compte le nombre d'arêtes, pas la somme des poids. Avec des poids, il faut un algorithme qui tienne compte des coûts des arêtes." },
+    { "recto": "Qu'est-ce que le degré d'un sommet ?", "verso": "Son nombre de voisins, c'est-à-dire le nombre d'arêtes qui y aboutissent." },
+    { "recto": "Qu'est-ce qu'un graphe connexe ?", "verso": "Un graphe dans lequel on peut aller de n'importe quel sommet à n'importe quel autre." },
+    { "recto": "Qu'est-ce qu'un cycle dans un graphe ?", "verso": "Un chemin qui revient à son sommet de départ." },
+    { "recto": "Qu'est-ce qu'un chemin dans un graphe ?", "verso": "Une suite de sommets reliés de proche en proche par des arêtes." },
+    { "recto": "Qu'est-ce qu'un graphe pondéré ?", "verso": "Un graphe dont les arêtes portent un poids (une distance, un coût)." },
+    { "recto": "Comment stocke-t-on un graphe par listes d'adjacence en Python ?", "verso": "Avec un dictionnaire associant à chaque sommet la liste de ses voisins." }
   ]
 }

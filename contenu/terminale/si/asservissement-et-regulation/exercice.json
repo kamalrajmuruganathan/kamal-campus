@@ -91,6 +91,58 @@
         "Pour réduire l'erreur, il faut augmenter le gain A (ou ajouter une action intégrale qui annule l'erreur statique)."
       ],
       "reponse": "La sortie vaut 96, l'erreur statique 4 (soit 4 %) ; augmenter le gain (ou ajouter une action intégrale) la réduit."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "calcul de l'écart",
+      "enonce": "Un thermostat a pour consigne 20 °C. Le capteur mesure une température de 17 °C. Calcule l'écart ε et indique le rôle de ce signal.",
+      "corrige": [
+        "L'écart est ε = consigne − mesure.",
+        "ε = 20 − 17 = 3 °C.",
+        "Cet écart (positif) est envoyé au correcteur, qui commande alors le chauffage.",
+        "Quand la consigne sera atteinte, ε deviendra nul."
+      ],
+      "reponse": "ε = 20 − 17 = 3 °C ; c'est ce signal qui pilote le correcteur pour réduire l'écart."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "fonction de transfert en boucle fermée",
+      "enonce": "Un système a une chaîne directe de gain statique H = 9 et un retour unitaire. Calcule le gain de l'ensemble en boucle fermée.",
+      "corrige": [
+        "Avec un retour unitaire, la fonction de transfert en boucle fermée est H / (1 + H).",
+        "FTBF = 9 / (1 + 9).",
+        "FTBF = 9 / 10 = 0,9.",
+        "La boucle fermée « écrase » le gain vers 1 : c'est son effet stabilisant."
+      ],
+      "reponse": "Le gain en boucle fermée vaut 9 / (1 + 9) = 0,9."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "constituants d'une boucle",
+      "enonce": "Dans un régulateur de vitesse de voiture, associe chaque élément à sa fonction : (a) le capteur de vitesse ; (b) le calculateur qui compare et corrige ; (c) le moteur.",
+      "corrige": [
+        "(a) Le capteur de vitesse mesure la sortie (la vitesse réelle) et la renvoie à l'entrée : c'est la chaîne de retour.",
+        "(b) Le calculateur compare la consigne à la mesure (comparateur) et élabore la commande : c'est le comparateur + correcteur.",
+        "(c) Le moteur exécute la commande et agit sur la vitesse : c'est l'actionneur.",
+        "L'ensemble forme une boucle fermée (asservissement)."
+      ],
+      "reponse": "(a) capteur (chaîne de retour) ; (b) comparateur + correcteur ; (c) actionneur (moteur)."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "blocs en série et boucle fermée",
+      "enonce": "Deux blocs de la chaîne directe ont pour gains H₁ = 2 et H₂ = 3, placés en série, avec un retour unitaire. Calcule le gain de la chaîne directe, puis le gain en boucle fermée.",
+      "corrige": [
+        "Deux blocs en série se multiplient : H = H₁ × H₂ = 2 × 3 = 6.",
+        "Avec un retour unitaire, FTBF = H / (1 + H).",
+        "FTBF = 6 / (1 + 6) = 6 / 7.",
+        "FTBF ≈ 0,857."
+      ],
+      "reponse": "Chaîne directe H = 6 ; en boucle fermée, gain = 6 / 7 ≈ 0,857."
     }
   ]
 }

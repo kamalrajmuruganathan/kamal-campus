@@ -87,6 +87,55 @@
         "Enjeu de données personnelles : le rythme cardiaque est une donnée de santé privée ; elle pourrait être utilisée à notre insu, d'où l'importance de protéger et de contrôler ces informations."
       ],
       "reponse": "Chaîne d'information : capteur cardiaque, microcontrôleur, module sans fil ; chaîne d'énergie : batterie et actionneur (vibreur/écran). Enjeux : sécurité (données interceptables) et protection des données personnelles de santé."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "le microcontrôleur",
+      "enonce": "Quel est le rôle du microcontrôleur dans un objet connecté ? Pourquoi dit-on que c'est le « cerveau » de l'objet ?",
+      "corrige": [
+        "Le microcontrôleur est un petit ordinateur intégré à l'objet.",
+        "Il exécute un programme qui traite les informations reçues des capteurs et décide des actions.",
+        "On l'appelle le « cerveau » car c'est lui qui traite l'information et prend les décisions."
+      ],
+      "reponse": "Le microcontrôleur exécute le programme qui traite les informations des capteurs et décide des actions : c'est le « cerveau » de l'objet."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "communiquer sans fil",
+      "enonce": "Ce qui rend un objet « connecté », c'est sa capacité à communiquer à distance. (a) Cite deux technologies sans fil utilisées. (b) Où sont souvent envoyées les données ? (c) Comment l'utilisateur peut-il les consulter ?",
+      "corrige": [
+        "(a) Par exemple le Wi-Fi et le Bluetooth (aussi la téléphonie mobile).",
+        "(b) Les données sont souvent envoyées vers un serveur ou un service en ligne (le « cloud »).",
+        "(c) L'utilisateur peut les consulter sur un smartphone ou un ordinateur, parfois pour régler l'objet à distance."
+      ],
+      "reponse": "(a) Wi-Fi et Bluetooth ; (b) vers un serveur / le cloud ; (c) sur un smartphone ou un ordinateur."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "analyser une montre connectée",
+      "enonce": "Une montre connectée mesure le nombre de pas et l'affiche, puis l'envoie au smartphone. Identifie les trois fonctions de la chaîne d'information (acquérir, traiter, communiquer) et l'élément qui réalise chacune.",
+      "corrige": [
+        "On retrouve la chaîne d'information : acquérir → traiter → communiquer.",
+        "Acquérir : un capteur (accéléromètre) mesure les mouvements pour compter les pas.",
+        "Traiter : le microcontrôleur calcule le nombre de pas grâce à son programme.",
+        "Communiquer : l'écran affiche le résultat et le Wi-Fi/Bluetooth l'envoie au smartphone."
+      ],
+      "reponse": "Acquérir : l'accéléromètre (capteur) ; traiter : le microcontrôleur qui compte les pas ; communiquer : l'écran et la liaison sans fil vers le smartphone."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "chaînes et enjeux d'une caméra connectée",
+      "enonce": "On étudie une caméra de surveillance connectée. (a) À quelle chaîne appartient le capteur d'image, à quelle chaîne le moteur qui oriente la caméra ? (b) Comment communique-t-elle ? (c) Cite un intérêt et un risque pour la vie privée.",
+      "corrige": [
+        "(a) Le capteur d'image acquiert l'information : il appartient à la chaîne d'information. Le moteur qui oriente la caméra produit une action : il appartient à la chaîne d'énergie (mais il est commandé par la chaîne d'information).",
+        "(b) Elle communique par une liaison sans fil (Wi-Fi ou réseau mobile), souvent vers un serveur/cloud consultable sur smartphone.",
+        "(c) Intérêt : la surveillance et la sécurité du logement à distance. Risque : les images (données personnelles) peuvent être interceptées ou utilisées à notre insu."
+      ],
+      "reponse": "(a) Le capteur d'image → chaîne d'information ; le moteur → chaîne d'énergie (commandé par l'information). (b) par Wi-Fi/réseau mobile vers un serveur. (c) intérêt : surveillance à distance ; risque : atteinte à la vie privée (images interceptées)."
     }
   ]
 }

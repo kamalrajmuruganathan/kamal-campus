@@ -88,6 +88,54 @@
         "Les protocoles (règles communes) permettent aux machines très différentes de se comprendre."
       ],
       "reponse": "Client (navigateur) → le DNS donne l'adresse IP du serveur → demande HTTP/HTTPS au serveur → le serveur renvoie la page en paquets (TCP/IP) → réassemblage et affichage."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "le réseau local (LAN)",
+      "enonce": "Qu'est-ce qu'un réseau local (LAN) ? Donne un exemple de la vie courante.",
+      "corrige": [
+        "Un réseau local (LAN) relie des appareils situés dans un même lieu.",
+        "Ce lieu peut être une maison, une salle ou un établissement.",
+        "Exemple : le réseau du collège, ou la box à la maison qui relie les appareils du foyer."
+      ],
+      "reponse": "Un réseau local (LAN) relie des appareils d'un même lieu ; par exemple le réseau du collège ou la box à la maison."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "le protocole TCP/IP",
+      "enonce": "Sur Internet, les machines utilisent le protocole TCP/IP. (a) Qu'est-ce qu'un protocole ? (b) Que gère TCP/IP ? (c) Quel protocole le Web utilise-t-il en plus ?",
+      "corrige": [
+        "(a) Un protocole est un ensemble de règles communes de communication que les machines respectent.",
+        "(b) TCP/IP gère l'envoi des données en paquets et leur réassemblage à l'arrivée.",
+        "(c) Le Web utilise le protocole HTTP (ou HTTPS, sa version sécurisée)."
+      ],
+      "reponse": "(a) des règles communes de communication ; (b) l'envoi et le réassemblage des paquets ; (c) HTTP (ou HTTPS)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "sécurité des échanges",
+      "enonce": "Sur un réseau, il faut protéger ses échanges. Cite trois moyens de se protéger et explique ce qu'apporte le HTTPS.",
+      "corrige": [
+        "On protège un réseau et ses échanges de plusieurs façons.",
+        "Trois moyens : un mot de passe solide, une connexion sécurisée en HTTPS, un pare-feu et un antivirus.",
+        "Le HTTPS chiffre les données (le « cadenas ») pour qu'un tiers ne puisse pas les lire pendant leur transport."
+      ],
+      "reponse": "Par exemple : mots de passe solides, connexions HTTPS, pare-feu/antivirus. Le HTTPS chiffre les données pour qu'un tiers ne puisse pas les lire."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "corriger des idées fausses sur Internet",
+      "enonce": "Un camarade affirme : « Internet et le Web, c'est pareil », « un nom de domaine est l'adresse réelle de la machine » et « les données voyagent d'un seul bloc ». Corrige chacune de ces trois affirmations.",
+      "corrige": [
+        "1) Internet est le réseau mondial (câbles, machines, adresses) ; le Web (les pages consultées dans un navigateur) n'est qu'un des services qui circulent sur Internet.",
+        "2) Le nom de domaine (par exemple college.fr) est plus facile à retenir, mais l'adresse réelle est l'adresse IP ; le DNS traduit le nom de domaine en adresse IP.",
+        "3) Les données ne voyagent pas d'un seul bloc : elles sont découpées en paquets qui voyagent séparément puis sont réassemblés à l'arrivée."
+      ],
+      "reponse": "1) Faux : le Web n'est qu'un service d'Internet. 2) Faux : l'adresse réelle est l'adresse IP, le DNS traduit le nom de domaine en IP. 3) Faux : les données voyagent en paquets réassemblés à l'arrivée."
     }
   ]
 }

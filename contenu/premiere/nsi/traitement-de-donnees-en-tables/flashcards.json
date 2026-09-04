@@ -14,6 +14,12 @@
     { "recto": "De quel type sont les valeurs lues depuis un CSV ?", "verso": "Des chaînes de caractères. Il faut les convertir avec int() ou float() avant de calculer ou de comparer des nombres." },
     { "recto": "Comment sélectionner (filtrer) des lignes d'une table ?", "verso": "Par une compréhension avec condition : [l for l in table if condition(l)]." },
     { "recto": "Comment trier une table selon un descripteur ?", "verso": "sorted(table, key=lambda l: l[\"champ\"]) ; ajouter reverse=True pour décroissant. sorted renvoie une nouvelle table." },
-    { "recto": "Sur quoi repose la fusion de deux tables ?", "verso": "Sur un descripteur commun aux deux tables, utilisé pour relier les lignes correspondantes." }
+    { "recto": "Sur quoi repose la fusion de deux tables ?", "verso": "Sur un descripteur commun aux deux tables, utilisé pour relier les lignes correspondantes." },
+    { "recto": "Qu'est-ce qu'un descripteur (ou attribut) d'une table ?", "verso": "Le nom d'une colonne, unique dans la table ; c'est une clé des dictionnaires qui représentent les lignes." },
+    { "recto": "Qu'est-ce qu'un enregistrement ?", "verso": "Une ligne de la table, représentée en Python par un dictionnaire." },
+    { "recto": "Pourquoi convertir les valeurs lues d'un CSV avant de calculer ?", "verso": "Parce qu'elles sont lues comme des chaînes : \"9\" > \"18\" est vrai en comparaison de chaînes, alors que 9 < 18 numériquement." },
+    { "recto": "Que fait csv.DictReader ?", "verso": "Il lit un fichier CSV et construit un dictionnaire par ligne, en utilisant l'en-tête comme clés." },
+    { "recto": "sorted modifie-t-il la table d'origine ?", "verso": "Non : il renvoie une nouvelle liste triée ; la table d'origine reste inchangée." },
+    { "recto": "Que fait le paramètre reverse=True de sorted ?", "verso": "Il trie le résultat en ordre décroissant (l'ordre est croissant par défaut)." }
   ]
 }

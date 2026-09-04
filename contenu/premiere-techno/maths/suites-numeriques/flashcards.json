@@ -9,16 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Différence entre définition explicite et par récurrence ?", "verso": "Explicite $u_n = f(n)$ (calcul direct) ; récurrence $u_{n+1}=f(u_n)$ + premier terme (passer par tous les termes)." },
-    { "recto": "Quelle est la relation de récurrence d'une suite arithmétique ?", "verso": "$u_{n+1} = u_n + r$ : on ajoute toujours la raison $r$." },
-    { "recto": "Quel est le terme général d'une suite arithmétique ?", "verso": "$u_n = u_0 + n\\,r$ (ou $u_p + (n-p)r$)." },
-    { "recto": "Quelle est la relation de récurrence d'une suite géométrique ?", "verso": "$u_{n+1} = q \\times u_n$ : on multiplie toujours par la raison $q$." },
-    { "recto": "Quel est le terme général d'une suite géométrique ?", "verso": "$u_n = u_0 \\times q^{\\,n}$." },
-    { "recto": "Comment reconnaître arithmétique vs géométrique dans une liste ?", "verso": "Différences $u_{n+1}-u_n$ constantes → arithmétique ; quotients $\\frac{u_{n+1}}{u_n}$ constants → géométrique." },
-    { "recto": "À quelle raison correspond une évolution de $t\\,\\%$ répétée ?", "verso": "Suite géométrique de raison $q = 1 + \\dfrac{t}{100}$." },
-    { "recto": "Quelle raison pour une baisse de $15\\,\\%$ ?", "verso": "$q = 0{,}85$ (jamais $-0{,}15$)." },
-    { "recto": "Sens de variation d'une suite arithmétique selon $r$ ?", "verso": "$r>0$ croissante, $r=0$ constante, $r<0$ décroissante." },
-    { "recto": "Quel modèle pour « augmente de 5 % par mois » ?", "verso": "Géométrique, $q = 1{,}05$ (un pourcentage → géométrique ; une quantité fixe → arithmétique)." },
-    { "recto": "Comment représente-t-on graphiquement une suite ?", "verso": "Par un nuage de points $(n;u_n)$, jamais une courbe continue." }
+    {
+      "recto": "Différence entre définition explicite et par récurrence ?",
+      "verso": "Explicite $u_n = f(n)$ (calcul direct) ; récurrence $u_{n+1}=f(u_n)$ + premier terme (passer par tous les termes)."
+    },
+    {
+      "recto": "Quelle est la relation de récurrence d'une suite arithmétique ?",
+      "verso": "$u_{n+1} = u_n + r$ : on ajoute toujours la raison $r$."
+    },
+    {
+      "recto": "Quel est le terme général d'une suite arithmétique ?",
+      "verso": "$u_n = u_0 + n\\,r$ (ou $u_p + (n-p)r$)."
+    },
+    {
+      "recto": "Quelle est la relation de récurrence d'une suite géométrique ?",
+      "verso": "$u_{n+1} = q \\times u_n$ : on multiplie toujours par la raison $q$."
+    },
+    {
+      "recto": "Quel est le terme général d'une suite géométrique ?",
+      "verso": "$u_n = u_0 \\times q^{\\,n}$."
+    },
+    {
+      "recto": "Comment reconnaître arithmétique vs géométrique dans une liste ?",
+      "verso": "Différences $u_{n+1}-u_n$ constantes → arithmétique ; quotients $\\frac{u_{n+1}}{u_n}$ constants → géométrique."
+    },
+    {
+      "recto": "À quelle raison correspond une évolution de $t\\,\\%$ répétée ?",
+      "verso": "Suite géométrique de raison $q = 1 + \\dfrac{t}{100}$."
+    },
+    {
+      "recto": "Quelle raison pour une baisse de $15\\,\\%$ ?",
+      "verso": "$q = 0{,}85$ (jamais $-0{,}15$)."
+    },
+    {
+      "recto": "Sens de variation d'une suite arithmétique selon $r$ ?",
+      "verso": "$r>0$ croissante, $r=0$ constante, $r<0$ décroissante."
+    },
+    {
+      "recto": "Quel modèle pour « augmente de 5 % par mois » ?",
+      "verso": "Géométrique, $q = 1{,}05$ (un pourcentage → géométrique ; une quantité fixe → arithmétique)."
+    },
+    {
+      "recto": "Comment représente-t-on graphiquement une suite ?",
+      "verso": "Par un nuage de points $(n;u_n)$, jamais une courbe continue."
+    },
+    {
+      "recto": "Sens de variation d'une suite geometrique de premier terme positif selon la raison q (q > 0) ?",
+      "verso": "Pour u_0 > 0 : q > 1 la suite est croissante ; q = 1 elle est constante ; 0 < q < 1 elle est decroissante."
+    }
   ]
 }

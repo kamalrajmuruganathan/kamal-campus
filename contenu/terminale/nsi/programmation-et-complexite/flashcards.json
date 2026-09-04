@@ -14,6 +14,12 @@
     { "recto": "Distingue erreur de syntaxe, d'exécution et de logique.", "verso": "Syntaxe : le programme ne s'exécute pas du tout. Exécution : il s'arrête en cours (ex. division par zéro). Logique : il s'exécute mais donne un résultat faux (la plus difficile à repérer)." },
     { "recto": "Qu'est-ce que la complexité en temps d'un algorithme ?", "verso": "C'est la manière dont son nombre d'opérations augmente avec la taille n des données. On compte un ordre de grandeur (notation grand O), indépendamment de la machine, souvent au pire cas." },
     { "recto": "Classe ces complexités de la plus efficace à la moins efficace : O(n), O(1), O(n²), O(log n), O(n log n).", "verso": "O(1) < O(log n) < O(n) < O(n log n) < O(n²). Constante, puis logarithmique, linéaire, quasi-linéaire, quadratique." },
-    { "recto": "Recherche séquentielle vs dichotomique : complexité et condition ?", "verso": "Séquentielle : O(n), aucune condition. Dichotomique : O(log n) mais exige un tableau trié. Pour n=1 000 000, environ 20 comparaisons au lieu d'un million." }
+    { "recto": "Recherche séquentielle vs dichotomique : complexité et condition ?", "verso": "Séquentielle : O(n), aucune condition. Dichotomique : O(log n) mais exige un tableau trié. Pour n=1 000 000, environ 20 comparaisons au lieu d'un million." },
+    { "recto": "Qu'est-ce qu'une docstring ?", "verso": "Une chaîne de documentation placée en tête d'une fonction, qui décrit ce qu'elle fait, ses entrées/sorties et ses préconditions." },
+    { "recto": "À quoi sert l'instruction assert ?", "verso": "À vérifier une condition attendue : si elle est fausse, une erreur est levée, signalant un bug ; si elle est vraie, rien ne se passe." },
+    { "recto": "Que signifie une complexité O(1) ?", "verso": "Que le nombre d'opérations ne dépend pas de la taille n des données (temps constant), par exemple accéder à tab[i]." },
+    { "recto": "Que signifie une complexité O(n²) ?", "verso": "Que le nombre d'opérations croît comme le carré de n, typiquement avec deux boucles imbriquées sur les données." },
+    { "recto": "Sur quel cas raisonne-t-on principalement en complexité ?", "verso": "Sur le pire cas : le plus grand nombre d'opérations possible." },
+    { "recto": "Qu'est-ce qu'un cas limite dans un jeu de tests ?", "verso": "Un cas particulier aux bornes (liste vide, valeur nulle, premier ou dernier élément), souvent source de bugs." }
   ]
 }

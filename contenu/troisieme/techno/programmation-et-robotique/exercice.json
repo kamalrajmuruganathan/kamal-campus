@@ -84,6 +84,55 @@
         "Par exemple, on vérifie que le capteur fonctionne, que le seuil de 10 cm est bien atteignable, et on corrige la condition d'arrêt ; on procède par essais et améliorations successifs."
       ],
       "reponse": "Une boucle « tant que » répète tant que la condition est vraie ; sans condition d'arrêt réellement atteinte, elle tourne sans fin (boucle infinie). Le débogage consiste à tester, repérer le bogue et corriger la condition d'arrêt par essais successifs."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "la séquence",
+      "enonce": "Un robot doit exécuter dans l'ordre : avancer de 30 cm, tourner à droite, puis avancer de 30 cm. Comment appelle-t-on cet enchaînement et pourquoi l'ordre est-il important ?",
+      "corrige": [
+        "Un enchaînement d'instructions exécutées l'une après l'autre, dans l'ordre, s'appelle une séquence.",
+        "Le robot exécute chaque instruction quand la précédente est terminée.",
+        "L'ordre est important : si on inverse les instructions, le robot ne suivra pas le même trajet."
+      ],
+      "reponse": "C'est une séquence ; l'ordre est important car le robot exécute les instructions dans l'ordre : l'inverser change le trajet."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "les événements",
+      "enonce": "Beaucoup de programmes réagissent à des événements. (a) Qu'est-ce qu'un événement ? (b) Donne deux exemples d'événements qui peuvent déclencher un programme.",
+      "corrige": [
+        "(a) Un événement est quelque chose qui se produit et auquel le programme réagit ; le programme attend l'événement puis exécute les instructions associées.",
+        "(b) Par exemple : « quand le drapeau vert est cliqué », « quand une touche est pressée », « quand le capteur est activé »."
+      ],
+      "reponse": "(a) Un événement est un déclencheur que le programme attend pour exécuter des instructions. (b) Par exemple « quand le drapeau vert est cliqué » ou « quand une touche est pressée »."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "décomposer un problème",
+      "enonce": "Pour programmer une tâche compliquée, on la décompose en tâches plus simples et on crée des blocs (fonctions) réutilisables. Explique l'intérêt de cette méthode.",
+      "corrige": [
+        "Décomposer un problème, c'est le découper en sous-tâches plus simples à programmer.",
+        "On peut créer des blocs (ou fonctions) que l'on réutilise plusieurs fois.",
+        "Cela rend le programme plus clair et plus court, et plus facile à corriger."
+      ],
+      "reponse": "Décomposer en sous-tâches et créer des blocs réutilisables rend le programme plus clair, plus court et plus facile à corriger."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "programmer un robot qui évite les obstacles",
+      "enonce": "Un robot doit avancer et éviter les obstacles grâce à un capteur de distance. Écris l'algorithme (boucle, condition, capteur, actionneurs) et explique comment éviter une boucle infinie non voulue.",
+      "corrige": [
+        "Le robot répète en boucle la même vérification : on utilise une boucle.",
+        "À chaque tour, il teste la distance mesurée par le capteur avec une condition.",
+        "Algorithme : Répéter indéfiniment : [ SI la distance mesurée < 10 cm ALORS tourner (moteurs) SINON avancer (moteurs) ].",
+        "Le capteur de distance acquiert l'information, la condition décide, les moteurs (actionneurs) agissent.",
+        "Une boucle « répéter indéfiniment » est voulue ici. Le danger de boucle infinie non voulue vient d'un « tant que » sans condition d'arrêt : il faut toujours prévoir une condition qui finit par devenir fausse."
+      ],
+      "reponse": "Répéter indéfiniment : [ SI distance < 10 cm ALORS tourner SINON avancer ] ; capteur de distance = entrée, moteurs = sortie. Pour éviter une boucle infinie non voulue, une boucle « tant que » doit avoir une condition d'arrêt qui finira par devenir fausse."
     }
   ]
 }

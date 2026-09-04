@@ -84,6 +84,56 @@
         "La contrainte reste largement sous la limite admissible : le matériau convient."
       ],
       "reponse": "Le module de flexion vaut 144 000 mm³ et la contrainte maximale ≈ 41,7 MPa, bien inférieure à 150 MPa : le matériau convient."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "contrainte normale",
+      "enonce": "Une pièce de section S = 30 mm² supporte un effort de traction F = 6000 N. Calcule la contrainte σ en MPa.",
+      "corrige": [
+        "La contrainte en traction est σ = F / S.",
+        "σ = 6000 / 30 = 200 N/mm².",
+        "Or 1 MPa = 1 N/mm², donc σ = 200 MPa."
+      ],
+      "reponse": "La contrainte vaut σ = 200 MPa."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "condition de résistance",
+      "enonce": "La contrainte admissible d'un acier est σ_adm = 100 MPa. Une pièce subit σ = 90 MPa, une autre σ = 130 MPa. Lesquelles sont validées ?",
+      "corrige": [
+        "Une pièce est validée si sa contrainte réelle respecte σ ≤ σ_adm.",
+        "Première pièce : 90 MPa ≤ 100 MPa → validée.",
+        "Deuxième pièce : 130 MPa > 100 MPa → refusée (il faut augmenter la section).",
+        "La condition de résistance protège la pièce contre la déformation permanente."
+      ],
+      "reponse": "La pièce à 90 MPa est validée ; celle à 130 MPa est refusée (130 > 100)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "coefficient de sécurité",
+      "enonce": "Un acier a une limite élastique R_e = 360 MPa. On choisit un coefficient de sécurité s = 3. Calcule la contrainte admissible.",
+      "corrige": [
+        "La contrainte admissible est σ_adm = R_e / s.",
+        "σ_adm = 360 / 3.",
+        "σ_adm = 120 MPa."
+      ],
+      "reponse": "La contrainte admissible vaut 120 MPa."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "dimensionnement de la section minimale",
+      "enonce": "Une pièce en traction doit reprendre F = 9000 N. La contrainte admissible du matériau est σ_adm = 150 MPa. Calcule la section minimale nécessaire.",
+      "corrige": [
+        "La condition de résistance impose σ = F / S ≤ σ_adm.",
+        "La section minimale vaut S_min = F / σ_adm.",
+        "σ_adm = 150 MPa = 150 N/mm², donc S_min = 9000 / 150.",
+        "S_min = 60 mm²."
+      ],
+      "reponse": "Il faut une section d'au moins 60 mm² (S_min = 9000 / 150)."
     }
   ]
 }

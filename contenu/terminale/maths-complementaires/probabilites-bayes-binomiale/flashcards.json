@@ -9,16 +9,53 @@
   "statut": "brouillon",
   "relu_par": null,
   "cartes": [
-    { "recto": "Définition de la **probabilité conditionnelle** $P_A(B)$ ?", "verso": "$P_A(B) = \\dfrac{P(A \\cap B)}{P(A)}$, pour $P(A)\\neq 0$." },
-    { "recto": "Probabilité d'une **intersection** $P(A\\cap B)$ ?", "verso": "$P(A \\cap B) = P(A) \\times P_A(B)$." },
-    { "recto": "Que signifie « $A$ et $B$ **indépendants** » ?", "verso": "$P_A(B) = P(B)$, soit $P(A\\cap B) = P(A)\\times P(B)$." },
-    { "recto": "Formule des **probabilités totales** avec la partition $A/\\overline{A}$ ?", "verso": "$P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B)$." },
-    { "recto": "Énonce la **formule de Bayes** $P_B(A)$ ?", "verso": "$P_B(A) = \\dfrac{P(A)\\,P_A(B)}{P(B)}$, où $P(B)$ se calcule par les probabilités totales." },
-    { "recto": "Loi de **Bernoulli** de paramètre $p$ : valeurs et espérance ?", "verso": "$P(X=1)=p$, $P(X=0)=1-p$, et $E(X)=p$." },
-    { "recto": "Trois conditions d'un **schéma de Bernoulli** ?", "verso": "$n$ épreuves à deux issues, **indépendantes**, de même probabilité de succès $p$." },
-    { "recto": "Expression de $P(X=k)$ pour $X\\sim B(n,p)$ ?", "verso": "$P(X=k) = \\dbinom{n}{k}\\,p^k\\,(1-p)^{n-k}$." },
-    { "recto": "**Espérance** de la loi binomiale $B(n,p)$ ?", "verso": "$E(X) = np$." },
-    { "recto": "Probabilité d'« au moins un succès » avec $X\\sim B(n,p)$ ?", "verso": "$P(X\\geqslant 1) = 1 - (1-p)^n$." },
-    { "recto": "Erreur reine à éviter avec les conditionnelles ?", "verso": "Inverser le conditionnement : $P_A(B) \\neq P_B(A)$ (c'est ce que Bayes corrige)." }
+    {
+      "recto": "Définition de la **probabilité conditionnelle** $P_A(B)$ ?",
+      "verso": "$P_A(B) = \\dfrac{P(A \\cap B)}{P(A)}$, pour $P(A)\\neq 0$."
+    },
+    {
+      "recto": "Probabilité d'une **intersection** $P(A\\cap B)$ ?",
+      "verso": "$P(A \\cap B) = P(A) \\times P_A(B)$."
+    },
+    {
+      "recto": "Que signifie « $A$ et $B$ **indépendants** » ?",
+      "verso": "$P_A(B) = P(B)$, soit $P(A\\cap B) = P(A)\\times P(B)$."
+    },
+    {
+      "recto": "Formule des **probabilités totales** avec la partition $A/\\overline{A}$ ?",
+      "verso": "$P(B) = P(A)\\,P_A(B) + P(\\overline{A})\\,P_{\\overline{A}}(B)$."
+    },
+    {
+      "recto": "Énonce la **formule de Bayes** $P_B(A)$ ?",
+      "verso": "$P_B(A) = \\dfrac{P(A)\\,P_A(B)}{P(B)}$, où $P(B)$ se calcule par les probabilités totales."
+    },
+    {
+      "recto": "Loi de **Bernoulli** de paramètre $p$ : valeurs et espérance ?",
+      "verso": "$P(X=1)=p$, $P(X=0)=1-p$, et $E(X)=p$."
+    },
+    {
+      "recto": "Trois conditions d'un **schéma de Bernoulli** ?",
+      "verso": "$n$ épreuves à deux issues, **indépendantes**, de même probabilité de succès $p$."
+    },
+    {
+      "recto": "Expression de $P(X=k)$ pour $X\\sim B(n,p)$ ?",
+      "verso": "$P(X=k) = \\dbinom{n}{k}\\,p^k\\,(1-p)^{n-k}$."
+    },
+    {
+      "recto": "**Espérance** de la loi binomiale $B(n,p)$ ?",
+      "verso": "$E(X) = np$."
+    },
+    {
+      "recto": "Probabilité d'« au moins un succès » avec $X\\sim B(n,p)$ ?",
+      "verso": "$P(X\\geqslant 1) = 1 - (1-p)^n$."
+    },
+    {
+      "recto": "Erreur reine à éviter avec les conditionnelles ?",
+      "verso": "Inverser le conditionnement : $P_A(B) \\neq P_B(A)$ (c'est ce que Bayes corrige)."
+    },
+    {
+      "recto": "Variance et ecart-type de la loi binomiale B(n, p) ?",
+      "verso": "V(X) = n p (1 - p) et ecart-type sigma(X) = racine de (n p (1 - p))."
+    }
   ]
 }

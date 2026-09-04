@@ -85,6 +85,57 @@
         "Arrondi : environ 785 W absorbés pour 589 W utiles."
       ],
       "reponse": "La puissance utile de levage est d'environ 589 W ; la batterie doit fournir environ 785 W."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "puissance mécanique en translation",
+      "enonce": "Un tapis roulant déplace un colis en exerçant une force F = 200 N à la vitesse v = 1,5 m/s. Calcule la puissance mécanique transmise.",
+      "corrige": [
+        "En translation, la puissance est P = F × v.",
+        "P = 200 × 1,5.",
+        "P = 300 W."
+      ],
+      "reponse": "La puissance mécanique vaut 300 W."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "énergie consommée",
+      "enonce": "Un moteur reçoit une puissance électrique P = 36 W. Quelle énergie consomme-t-il en 5 minutes ? Donne le résultat en joules.",
+      "corrige": [
+        "L'énergie est E = P × t, avec t en secondes.",
+        "5 minutes = 5 × 60 = 300 s.",
+        "E = 36 × 300 = 10 800 J.",
+        "Soit environ 10,8 kJ."
+      ],
+      "reponse": "L'énergie consommée vaut 10 800 J (10,8 kJ)."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "rendement d'une chaîne",
+      "enonce": "Une chaîne d'énergie comporte un moteur de rendement η₁ = 0,85 suivi d'un réducteur de rendement η₂ = 0,90. Calcule le rendement global.",
+      "corrige": [
+        "Les rendements en série se multiplient : η_global = η₁ × η₂.",
+        "η_global = 0,85 × 0,90.",
+        "η_global = 0,765, soit 76,5 %.",
+        "Il est bien inférieur à chacun des rendements de départ."
+      ],
+      "reponse": "Le rendement global vaut 0,765, soit 76,5 %."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "dimensionnement énergétique",
+      "enonce": "Un système doit fournir une puissance utile de 60 W. Le rendement global de sa chaîne d'énergie est de 0,75. Quelle puissance doit fournir la source ?",
+      "corrige": [
+        "Le rendement relie l'utile à l'absorbé : η = P_utile / P_absorbée.",
+        "Donc P_absorbée = P_utile / η.",
+        "P_absorbée = 60 / 0,75.",
+        "P_absorbée = 80 W : la source doit fournir 80 W (20 W seront perdus)."
+      ],
+      "reponse": "La source doit fournir 80 W (P_absorbée = 60 / 0,75)."
     }
   ]
 }

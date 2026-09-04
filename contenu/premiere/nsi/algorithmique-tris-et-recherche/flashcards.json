@@ -14,6 +14,12 @@
     { "recto": "Tri par sélection vs tri par insertion ?", "verso": "Sélection : placer à chaque tour le minimum restant. Insertion : insérer chaque élément à sa place parmi les précédents. Coût quadratique pour les deux." },
     { "recto": "Que sont la terminaison et la correction d'un algorithme ?", "verso": "Terminaison : l'algorithme s'arrête (un variant décroît vers une borne). Correction : il donne le bon résultat (via un invariant de boucle)." },
     { "recto": "Qu'est-ce qu'un algorithme glouton ?", "verso": "Il construit la solution étape par étape en faisant le choix localement optimal, sans retour en arrière. Rapide, mais pas toujours optimal." },
-    { "recto": "Sur le rendu de monnaie, que fait le glouton ?", "verso": "À chaque étape, il choisit la plus grande pièce ne dépassant pas la somme restant à rendre." }
+    { "recto": "Sur le rendu de monnaie, que fait le glouton ?", "verso": "À chaque étape, il choisit la plus grande pièce ne dépassant pas la somme restant à rendre." },
+    { "recto": "Que veut dire un coût « linéaire » et un coût « logarithmique » ?", "verso": "Linéaire : le nombre d'opérations est proportionnel à n. Logarithmique : il croît comme log₂(n), car on divise la zone par 2 à chaque étape (dichotomie)." },
+    { "recto": "Pourquoi la dichotomie exige-t-elle un tableau trié ?", "verso": "Parce qu'elle élimine une moitié selon la comparaison à l'élément du milieu ; sur un tableau non trié, on ne sait pas dans quelle moitié se trouve la valeur." },
+    { "recto": "Qu'est-ce qu'un invariant de boucle ?", "verso": "Une propriété vraie avant et après chaque tour de boucle ; elle sert à prouver la correction de l'algorithme." },
+    { "recto": "Qu'est-ce qu'un variant de boucle ?", "verso": "Une quantité (souvent entière) qui décroît strictement à chaque tour vers une borne, ce qui prouve la terminaison d'une boucle while." },
+    { "recto": "Dans le tri par sélection, que fait-on à chaque tour ?", "verso": "On cherche le plus petit élément de la partie non triée et on le place à sa position définitive par un échange." },
+    { "recto": "Un algorithme glouton donne-t-il toujours la solution optimale ?", "verso": "Non : il est rapide (choix localement optimal) mais peut échouer selon le problème ou le jeu de valeurs." }
   ]
 }

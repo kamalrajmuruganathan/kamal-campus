@@ -81,6 +81,54 @@
         "HTTPS chiffre les données échangées entre le navigateur et le serveur : un mot de passe circule alors sous forme illisible, alors qu'en HTTP il transiterait en clair et pourrait être intercepté."
       ],
       "reponse": "4 requêtes (HTML + CSS + 2 images) ; 404 = ressource introuvable ; HTTPS chiffre les données, donc protège le mot de passe."
+    },
+    {
+      "id": 7,
+      "difficulte": "facile",
+      "notion": "hyperlien et hypertexte",
+      "enonce": "Sur une page Web, un mot souligné en bleu mène à une autre page. a) Comment appelle-t-on ce lien ? b) Quelle balise HTML sert à le créer ? c) Qu'appelle-t-on l'hypertexte ?",
+      "corrige": [
+        "C'est un hyperlien (lien hypertexte) : en cliquant, on ouvre la ressource pointée.",
+        "En HTML, on utilise la balise <a> (ancre) avec l'attribut href qui donne l'adresse (URL) de destination.",
+        "L'hypertexte est un ensemble de documents reliés par des liens que l'on peut suivre librement : c'est le principe même du Web."
+      ],
+      "reponse": "Un hyperlien, créé par la balise <a href=...> ; l'hypertexte relie les documents par des liens."
+    },
+    {
+      "id": 8,
+      "difficulte": "moyen",
+      "notion": "structure d'une page HTML",
+      "enonce": "On veut une page avec un titre principal et un paragraphe. a) Quelle balise pour le titre de niveau 1 ? b) Quelle balise pour un paragraphe ? c) À quoi sert le CSS, distinct du HTML ?",
+      "corrige": [
+        "Le titre de niveau 1 s'écrit avec la balise <h1>...</h1>.",
+        "Un paragraphe s'écrit avec la balise <p>...</p>.",
+        "Le HTML décrit la structure et le contenu de la page ; le CSS décrit la mise en forme (couleurs, polices, disposition). On sépare ainsi le fond de la forme."
+      ],
+      "reponse": "<h1> pour le titre, <p> pour le paragraphe ; le HTML structure, le CSS met en forme."
+    },
+    {
+      "id": 9,
+      "difficulte": "moyen",
+      "notion": "moteur de recherche : indexation et pertinence",
+      "enonce": "Un moteur de recherche renvoie des milliers de résultats en une fraction de seconde. a) Comment le moteur connaît-il autant de pages ? b) Qu'est-ce qu'un robot d'indexation ? c) Sur quels critères classe-t-il les résultats ?",
+      "corrige": [
+        "Il a exploré le Web à l'avance et construit un index (une immense table associant des mots aux pages) : il cherche dans son index, pas dans le Web en direct.",
+        "Un robot d'indexation (crawler) est un programme qui parcourt automatiquement les pages en suivant les liens, pour les ajouter à l'index.",
+        "Il classe selon la pertinence (mots présents, popularité et liens reçus, fraîcheur...), parfois mêlée à de la publicité : les premiers résultats ne sont pas les plus « vrais »."
+      ],
+      "reponse": "Le moteur cherche dans un index construit par des robots ; le classement dépend de la pertinence et de la popularité, pas de la vérité."
+    },
+    {
+      "id": 10,
+      "difficulte": "difficile",
+      "notion": "requête HTTP et code de réponse",
+      "enonce": "Un navigateur demande la page d'un site. a) Quel type de requête HTTP envoie-t-il pour lire une page ? b) Que signifient les codes de réponse 200 et 404 ? c) Que garantit la version HTTPS par rapport à HTTP ?",
+      "corrige": [
+        "Pour lire une page, le navigateur envoie une requête GET au serveur, qui renvoie la ressource demandée.",
+        "200 signifie « OK » : la page a été trouvée et envoyée. 404 signifie « page non trouvée » : l'adresse ne correspond à aucune ressource.",
+        "HTTPS chiffre les échanges entre le navigateur et le serveur (grâce à TLS) : on ne peut ni lire ni modifier les données en transit, ce qui protège mots de passe et informations."
+      ],
+      "reponse": "GET pour lire ; 200 = trouvée, 404 = introuvable ; HTTPS chiffre l'échange (confidentialité et intégrité)."
     }
   ]
 }
