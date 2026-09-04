@@ -82,6 +82,7 @@ const LIBELLES_PARCOURS = {
   hggsp: 'HGGSP',
   arts: 'Arts / Histoire des arts',
   'langues-anciennes': 'Langues anciennes',
+  'grand-oral': 'Grand oral',
 };
 
 const LIBELLES_MATIERE = {
@@ -105,6 +106,7 @@ const LIBELLES_MATIERE = {
   hggsp: 'HGGSP',
   arts: 'Arts / Histoire des arts',
   'langues-anciennes': 'Langues anciennes',
+  'grand-oral': 'Grand oral',
 };
 
 // ─────────────────────────── lecture de l'en-tête ───────────────────────────

@@ -50,6 +50,7 @@ const CLAIR = {
     hggsp: '#396a7a',
     arts: '#c0399b',
     lca: '#7d7f34',
+    grandoral: '#0e8f9e',
   },
 };
 
@@ -84,6 +85,7 @@ const SOMBRE = {
     hggsp: '#6fb0c4',
     arts: '#e483c8',
     lca: '#b9bb63',
+    grandoral: '#45c4d4',
   },
 };
 
@@ -106,5 +108,6 @@ export const couleurMatiere = (t, matiere) => {
   if (matiere === 'hggsp') return t.couleur.hggsp;
   if (matiere === 'arts') return t.couleur.arts;
   if (matiere === 'langues-anciennes') return t.couleur.lca;
+  if (matiere === 'grand-oral') return t.couleur.grandoral;
   return t.couleur.maths;
 };
