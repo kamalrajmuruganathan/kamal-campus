@@ -14,7 +14,7 @@
       "id": 1,
       "difficulte": "application",
       "notion": "capacite-thermique",
-      "enonce": "On chauffe une casserole contenant $m = 0{,}30$ kg d'eau, de la température initiale $\\theta_i = 18\\ \\text{°C}$ jusqu'à $\\theta_f = 100\\ \\text{°C}$. L'eau est incompressible et n'échange pas de travail : $\\Delta U = Q = m\\,c\\,\\Delta T$, avec $c = 4{,}18 \\times 10^{3}$ J·kg⁻¹·K⁻¹. Calculer l'énergie thermique $Q$ à apporter à l'eau.",
+      "enonce": "On chauffe une casserole contenant $m = 0{,}30$ kg d'eau, de la température initiale $\\theta_i = 18\\ \\text{°C}$ jusqu'à $\\theta_f = 100\\ \\text{°C}$. L'eau est incompressible et n'échange pas de travail : $\\Delta U = Q = m\\,c\\,\\Delta T$, avec $c = 4{,}18 \\times 10^{3}$ $\\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$. Calculer l'énergie thermique $Q$ à apporter à l'eau.",
       "corrige": [
         "On calcule d'abord l'écart de température : $\\Delta T = \\theta_f - \\theta_i = 100 - 18 = 82\\ \\text{°C}$. Un **écart** de température se transpose tel quel en kelvins : $\\Delta T = 82$ K (on n'ajoute pas $273{,}15$ à un écart).",
         "L'eau étant incompressible et sans travail échangé, le premier principe se réduit à $\\Delta U = Q = m\\,c\\,\\Delta T$.",
@@ -40,7 +40,7 @@
       "id": 3,
       "difficulte": "intermediaire",
       "notion": "resistance-thermique",
-      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}025$ K·W⁻¹ sépare l'intérieur d'une maison ($19\\ \\text{°C}$) de l'extérieur ($-1\\ \\text{°C}$). 1) Calculer le flux thermique $\\varphi$ qui traverse le mur ($\\varphi = \\dfrac{\\Delta T}{R_{th}}$). 2) En déduire l'énergie thermique $Q$ perdue à travers ce mur en une heure.",
+      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}025$ $\\mathrm{K\\cdot W^{-1}}$ sépare l'intérieur d'une maison ($19\\ \\text{°C}$) de l'extérieur ($-1\\ \\text{°C}$). 1) Calculer le flux thermique $\\varphi$ qui traverse le mur ($\\varphi = \\dfrac{\\Delta T}{R_{th}}$). 2) En déduire l'énergie thermique $Q$ perdue à travers ce mur en une heure.",
       "corrige": [
         "1) L'écart de température entre les deux faces est $\\Delta T = 19 - (-1) = 20\\ \\text{°C} = 20$ K.",
         "Flux thermique : $\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{20}{0{,}025} = 8{,}0 \\times 10^{2}$ W. Le mur laisse fuir $800$ W.",
@@ -66,7 +66,7 @@
       "id": 5,
       "difficulte": "approfondissement",
       "notion": "capacite-thermique",
-      "enonce": "Un chauffe-eau doit porter $m = 50$ kg d'eau de $15\\ \\text{°C}$ à $55\\ \\text{°C}$ ($c = 4{,}18 \\times 10^{3}$ J·kg⁻¹·K⁻¹). 1) Calculer l'énergie thermique $Q$ nécessaire. 2) Le chauffe-eau développe une puissance (flux) constante $P = 2{,}0$ kW, entièrement transmise à l'eau. Calculer la durée $\\Delta t$ du chauffage. Donner le résultat en minutes.",
+      "enonce": "Un chauffe-eau doit porter $m = 50$ kg d'eau de $15\\ \\text{°C}$ à $55\\ \\text{°C}$ ($c = 4{,}18 \\times 10^{3}$ $\\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$). 1) Calculer l'énergie thermique $Q$ nécessaire. 2) Le chauffe-eau développe une puissance (flux) constante $P = 2{,}0$ kW, entièrement transmise à l'eau. Calculer la durée $\\Delta t$ du chauffage. Donner le résultat en minutes.",
       "corrige": [
         "1) L'écart de température vaut $\\Delta T = 55 - 15 = 40\\ \\text{°C} = 40$ K. Pour l'eau incompressible sans travail : $Q = m\\,c\\,\\Delta T = 50 \\times 4{,}18\\times10^{3} \\times 40 = 8{,}36\\times10^{6}$ J.",
         "Soit $Q \\approx 8{,}4 \\times 10^{6}$ J (environ $8{,}4$ MJ).",
@@ -94,7 +94,7 @@
       "id": 7,
       "difficulte": "application",
       "notion": "loi-newton-refroidissement",
-      "enonce": "Une canalisation d'eau chaude, dont la surface est à la température $T = 60\\ \\text{°C}$, traverse une pièce à $T_{\\text{ext}} = 20\\ \\text{°C}$. Elle échange avec l'air selon la loi de Newton du refroidissement : $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$, avec un coefficient d'échange $h = 8{,}0$ W·m⁻²·K⁻¹ et une surface d'échange $S = 0{,}25\\ \\text{m}^2$. Calculer le flux thermique $\\varphi$ perdu par la canalisation.",
+      "enonce": "Une canalisation d'eau chaude, dont la surface est à la température $T = 60\\ \\text{°C}$, traverse une pièce à $T_{\\text{ext}} = 20\\ \\text{°C}$. Elle échange avec l'air selon la loi de Newton du refroidissement : $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$, avec un coefficient d'échange $h = 8{,}0$ $\\mathrm{W\\cdot m^{-2}\\cdot K^{-1}}$ et une surface d'échange $S = 0{,}25\\ \\text{m}^2$. Calculer le flux thermique $\\varphi$ perdu par la canalisation.",
       "corrige": [
         "On calcule d'abord l'écart de température entre la surface et l'air : $T - T_{\\text{ext}} = 60 - 20 = 40\\ \\text{°C} = 40$ K (un **écart** de température se transpose tel quel en kelvins).",
         "On applique la loi de Newton : $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$, toutes les grandeurs étant déjà dans les bonnes unités.",
@@ -120,7 +120,7 @@
       "id": 9,
       "difficulte": "approfondissement",
       "notion": "resistance-thermique",
-      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}020$ K·W⁻¹ sépare l'intérieur d'un logement maintenu à $20\\ \\text{°C}$ de l'extérieur à $6\\ \\text{°C}$. 1) Calculer le flux thermique $\\varphi$ perdu à travers le mur. 2) En déduire l'énergie thermique perdue $Q$ pendant une journée entière (24 h), en joules puis en kWh. 3) Sachant que l'électricité de chauffage coûte $0{,}20$ € par kWh, estimer le coût journalier de ces pertes à travers ce seul mur.",
+      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}020$ $\\mathrm{K\\cdot W^{-1}}$ sépare l'intérieur d'un logement maintenu à $20\\ \\text{°C}$ de l'extérieur à $6\\ \\text{°C}$. 1) Calculer le flux thermique $\\varphi$ perdu à travers le mur. 2) En déduire l'énergie thermique perdue $Q$ pendant une journée entière (24 h), en joules puis en kWh. 3) Sachant que l'électricité de chauffage coûte $0{,}20$ € par kWh, estimer le coût journalier de ces pertes à travers ce seul mur.",
       "corrige": [
         "1) L'écart de température entre les deux faces vaut $\\Delta T = 20 - 6 = 14\\ \\text{°C} = 14$ K. Le flux est $\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{14}{0{,}020} = 7{,}0\\times10^{2}$ W. Le mur laisse fuir $700$ W.",
         "2) L'énergie est le flux multiplié par la durée : $Q = \\varphi \\times \\Delta t$, avec $\\Delta t = 24$ h $= 24 \\times 3600 = 8{,}64\\times10^{4}$ s.",
@@ -133,7 +133,7 @@
       "id": 10,
       "difficulte": "bac",
       "notion": "synthese",
-      "enonce": "**Confort thermique d'un séjour en hiver.** Dans un chalet, un séjour est chauffé par un plancher chauffant à eau. Une nuit d'hiver, la température extérieure est $\\theta_{\\text{ext}} = 0\\ \\text{°C}$ et l'on souhaite maintenir l'intérieur à $\\theta_{\\text{int}} = 20\\ \\text{°C}$. Données : capacité thermique massique de l'eau $c = 4{,}18 \\times 10^{3}$ J·kg⁻¹·K⁻¹ ; l'eau est incompressible et n'échange pas de travail. \\n\\n1. Pour mettre en route le plancher, une chaudière porte $m = 80$ kg d'eau de $20\\ \\text{°C}$ à $45\\ \\text{°C}$. Calculer l'énergie thermique $Q$ à fournir à cette eau. \\n2. La chaudière développe une puissance constante $P = 2{,}5$ kW, entièrement transmise à l'eau. Déterminer la durée $\\Delta t$ nécessaire pour atteindre $45\\ \\text{°C}$. Exprimer le résultat en minutes. \\n3. Une fois le séjour à $20\\ \\text{°C}$, il perd de la chaleur vers l'extérieur à travers ses parois, de résistance thermique globale $R_{th} = 0{,}020$ K·W⁻¹. Calculer le flux thermique $\\varphi_{\\text{pertes}}$ perdu par le séjour. \\n4. La chaudière fournit en régime permanent une puissance de $2{,}5$ kW. Ce chauffage suffit-il à compenser les pertes calculées à la question 3 ? Justifier par un bilan d'énergie. \\n5. Au milieu de la nuit, on éteint le chauffage. En invoquant la loi de Newton du refroidissement, décrire qualitativement comment évolue la température du séjour au cours du temps.",
+      "enonce": "**Confort thermique d'un séjour en hiver.** Dans un chalet, un séjour est chauffé par un plancher chauffant à eau. Une nuit d'hiver, la température extérieure est $\\theta_{\\text{ext}} = 0\\ \\text{°C}$ et l'on souhaite maintenir l'intérieur à $\\theta_{\\text{int}} = 20\\ \\text{°C}$. Données : capacité thermique massique de l'eau $c = 4{,}18 \\times 10^{3}$ $\\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$ ; l'eau est incompressible et n'échange pas de travail. \\n\\n1. Pour mettre en route le plancher, une chaudière porte $m = 80$ kg d'eau de $20\\ \\text{°C}$ à $45\\ \\text{°C}$. Calculer l'énergie thermique $Q$ à fournir à cette eau. \\n2. La chaudière développe une puissance constante $P = 2{,}5$ kW, entièrement transmise à l'eau. Déterminer la durée $\\Delta t$ nécessaire pour atteindre $45\\ \\text{°C}$. Exprimer le résultat en minutes. \\n3. Une fois le séjour à $20\\ \\text{°C}$, il perd de la chaleur vers l'extérieur à travers ses parois, de résistance thermique globale $R_{th} = 0{,}020$ $\\mathrm{K\\cdot W^{-1}}$. Calculer le flux thermique $\\varphi_{\\text{pertes}}$ perdu par le séjour. \\n4. La chaudière fournit en régime permanent une puissance de $2{,}5$ kW. Ce chauffage suffit-il à compenser les pertes calculées à la question 3 ? Justifier par un bilan d'énergie. \\n5. Au milieu de la nuit, on éteint le chauffage. En invoquant la loi de Newton du refroidissement, décrire qualitativement comment évolue la température du séjour au cours du temps.",
       "corrige": [
         "1. L'eau est incompressible et n'échange pas de travail, donc $\\Delta U = Q = m\\,c\\,\\Delta T$. L'écart vaut $\\Delta T = 45 - 20 = 25\\ \\text{°C} = 25$ K. Application : $Q = 80 \\times 4{,}18\\times10^{3} \\times 25 = 8{,}36\\times10^{6}$ J, soit $Q \\approx 8{,}4\\times10^{6}$ J (environ $8{,}4$ MJ).",
         "2. La puissance relie énergie et durée : $P = \\dfrac{Q}{\\Delta t}$, donc $\\Delta t = \\dfrac{Q}{P}$. Avec $P = 2{,}5$ kW $= 2{,}5\\times10^{3}$ W : $\\Delta t = \\dfrac{8{,}36\\times10^{6}}{2{,}5\\times10^{3}} = 3{,}34\\times10^{3}$ s. Conversion : $\\Delta t = \\dfrac{3340}{60} \\approx 56$ min.",
