@@ -132,6 +132,15 @@ hr { border: 0; border-top: 1px solid var(--trait); margin: 2em 0; }
 ul, ol { padding-left: 1.4em; margin: 0 0 1em; }
 li { margin-bottom: .4em; }
 a { color: var(--accent); }
+/* Schémas : images SVG sur fond « papier », lisibles en thème clair comme
+   sombre. On borne la largeur et on centre. */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.3em auto;
+  border-radius: 8px;
+}
 /* Formules : on autorise le défilement horizontal plutôt que le débordement */
 .katex-display {
   margin: 1.1em 0; padding: 4px 0;

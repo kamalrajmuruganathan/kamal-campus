@@ -24,6 +24,18 @@ const md = new MarkdownIt({
   breaks: false,
 });
 
+// Les schémas des fiches sont des images SVG encodées en data-URI. Par défaut,
+// markdown-it n'autorise que les data-URI gif/png/jpeg/webp et laisserait le
+// SVG en texte brut. On étend donc la validation au SVG (les schémas sont
+// générés par notre outillage, pas saisis par un élève) sans rien autoriser
+// d'autre : javascript:, file:, etc. restent bloqués par la règle d'origine.
+const validerLienDefaut = md.validateLink.bind(md);
+md.validateLink = (url) => {
+  const s = String(url).trim().toLowerCase();
+  if (s.indexOf('data:image/svg+xml') === 0) return true;
+  return validerLienDefaut(url);
+};
+
 /** Retire l'en-tête YAML et les commentaires HTML. */
 export function nettoyerFiche(markdown) {
   return String(markdown ?? '')

@@ -12,7 +12,8 @@
     "ios": "npm run preparer && expo start --ios",
     "test": "node --test lib/*.test.js lib/**/*.test.js",
     "qualite": "node scripts/verifier-qualite.mjs",
-    "relecture": "node scripts/etat-relecture.mjs"
+    "relecture": "node scripts/etat-relecture.mjs",
+    "schemas": "node ../outils/generer-schemas.mjs"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
