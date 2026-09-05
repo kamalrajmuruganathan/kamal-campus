@@ -3,6 +3,7 @@
  * les badges obtenus sont mis en avant, les autres montrent leur avancement.
  */
 
+import { useTheme } from '../useTheme';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
@@ -12,7 +13,7 @@ import { useProgression } from '../progression/Contexte';
 import { evaluerBadges } from '../../lib/badges';
 
 export default function Badges() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil } = useProgression();
   const badges = evaluerBadges(profil);
   const obtenus = badges.filter((b) => b.obtenu).length;

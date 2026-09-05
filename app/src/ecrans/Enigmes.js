@@ -4,6 +4,7 @@
  * Chaque énigme résolue rapporte de l'XP et nourrit la série.
  */
 
+import { useTheme } from '../useTheme';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { View, Text, ScrollView } from 'react-native';
@@ -14,7 +15,7 @@ import { useProgression } from '../progression/Contexte';
 import { FAMILLES } from '../../lib/enigmes';
 
 export default function Enigmes({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil } = useProgression();
 
   return (

@@ -6,6 +6,7 @@
  * l'élève télécharge lui-même. Ouvrir un lien demande une connexion Internet.
  */
 
+import { useTheme } from '../useTheme';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { View, Text, ScrollView, Pressable, Linking, StyleSheet } from 'react-native';
@@ -79,7 +80,7 @@ const SOURCES = [
 ];
 
 export default function Annales() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const ouvrir = (url) => Linking.openURL(url).catch(() => {});
 
   return (

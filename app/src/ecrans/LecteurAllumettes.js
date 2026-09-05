@@ -6,6 +6,7 @@
  * bonne réponse rapporte de l'XP (et nourrit la série).
  */
 
+import { useTheme } from '../useTheme';
 import { useMemo, useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -19,7 +20,7 @@ import EquationAllumettes from '../composants/EquationAllumettes';
 const LETTRES = ['A', 'B', 'C', 'D'];
 
 export default function LecteurAllumettes() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { enregistrerEnigme } = useProgression();
 
   const [tirage, setTirage] = useState(0);

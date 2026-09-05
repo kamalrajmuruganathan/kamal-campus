@@ -4,6 +4,7 @@
  * Chacun obtient un « code résultat » à renvoyer pour se départager.
  */
 
+import { useTheme } from '../useTheme';
 import { useMemo, useState, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, TextInput, StyleSheet, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -22,7 +23,7 @@ const N = 10;
 const LETTRES = ['A', 'B', 'C', 'D'];
 
 export default function Defi() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const [phase, setPhase] = useState('menu'); // menu | creer | coller | jeu | fin
   const [defi, setDefi] = useState(null); // { chapId, graine, n }
   const [saisie, setSaisie] = useState('');

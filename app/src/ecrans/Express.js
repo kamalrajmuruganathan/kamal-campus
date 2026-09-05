@@ -4,6 +4,7 @@
  * quêtes, stats en profitent). Rapide à lancer depuis l'accueil.
  */
 
+import { useTheme } from '../useTheme';
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -29,7 +30,7 @@ function construirePool() {
 }
 
 export default function Express({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { enregistrerResultat } = useProgression();
 
   const [phase, setPhase] = useState('menu'); // menu | jeu | fin

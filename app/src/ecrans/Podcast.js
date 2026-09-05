@@ -7,6 +7,7 @@
  * les réglages du profil.
  */
 
+import { useTheme } from '../useTheme';
 import { useEffect, useMemo, useState } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -16,7 +17,7 @@ import { chapitreParId } from '../contenu-index';
 import { parlerSequence, arreterParole, texteBrut } from '../parole';
 
 export default function Podcast({ route }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const chapitre = chapitreParId(route.params.id);
 
   // Construit la playlist : cours + cartes (recto/verso).

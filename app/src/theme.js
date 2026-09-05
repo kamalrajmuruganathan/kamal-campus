@@ -89,7 +89,41 @@ const SOMBRE = {
   },
 };
 
-export const theme = (sombre) => (sombre ? SOMBRE : CLAIR);
+// ── Accessibilité : échelle de police et contraste renforcé ──────────────────
+// Facteurs d'agrandissement du texte selon la préférence de l'élève.
+const ECHELLE_TEXTE = { normale: 1, grande: 1.18, 'tres-grande': 1.36 };
+
+function policeEchelle(base, facteur) {
+  const out = {};
+  for (const k of Object.keys(base)) out[k] = Math.round(base[k] * facteur);
+  return out;
+}
+
+// Surcharges de couleurs pour le mode « contraste renforcé » (texte plus noir /
+// plus blanc, traits plus marqués, accent plus soutenu) — pour la basse vision.
+const CONTRASTE = {
+  clair: { texte: '#000000', attenue: '#33414e', trait: '#8b98a6', accent: '#0b4fc0' },
+  sombre: { texte: '#ffffff', attenue: '#d4dee7', trait: '#5c6d7b', accent: '#9cc4ff' },
+};
+
+/**
+ * Jetons de style effectifs.
+ * @param {boolean} sombre  thème sombre ?
+ * @param {{taille?:string, contraste?:boolean}} [reglages]  préférences d'accessibilité.
+ *   `taille` ∈ {normale, grande, tres-grande} ; `contraste` = contraste renforcé.
+ * Rétrocompatible : `theme(sombre)` sans réglages renvoie le thème de base.
+ */
+export const theme = (sombre, reglages = {}) => {
+  const base = sombre ? SOMBRE : CLAIR;
+  const facteur = ECHELLE_TEXTE[reglages.taille] || 1;
+  const contraste = !!reglages.contraste;
+  if (facteur === 1 && !contraste) return base;
+  return {
+    ...base,
+    police: facteur === 1 ? base.police : policeEchelle(base.police, facteur),
+    couleur: contraste ? { ...base.couleur, ...(sombre ? CONTRASTE.sombre : CONTRASTE.clair) } : base.couleur,
+  };
+};
 
 /** Couleur associée à une matière, pour distinguer les parcours d'un coup d'œil. */
 export const couleurMatiere = (t, matiere) => {

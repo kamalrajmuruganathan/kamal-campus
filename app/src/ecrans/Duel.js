@@ -7,6 +7,7 @@
  * ou, à défaut, de sa banque de QCM.
  */
 
+import { useTheme } from '../useTheme';
 import { useMemo, useState } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -21,7 +22,7 @@ const N = 10;
 const LETTRES = ['A', 'B', 'C', 'D'];
 
 export default function Duel({ route, navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
 
   // Chapitre fourni, sinon on en tire un au hasard parmi ceux à générateur.
   const chapitre = useMemo(() => {

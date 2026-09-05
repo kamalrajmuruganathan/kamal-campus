@@ -5,6 +5,7 @@
  * (Markdown + LaTeX) rendu comme une fiche.
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -15,7 +16,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { FORMULAIRES, LIBELLES_NIVEAU } from '../contenu-index';
 
 export default function Formulaires() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const [actif, setActif] = useState(null);
 
   if (actif) {

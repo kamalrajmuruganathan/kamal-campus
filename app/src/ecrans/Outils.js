@@ -7,6 +7,7 @@
  * calculatrice.
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -272,7 +273,7 @@ const OUTILS = [
 ];
 
 export default function Outils({ route }) {
-  const t = theme(useSombre());
+  const t = useTheme();
 
   // Outils demandés par un chapitre (via outil.json), s'il y en a.
   const demandes = route?.params?.outils ?? null;

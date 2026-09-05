@@ -3,6 +3,7 @@
  * ou son niveau, toutes classes confondues (comme un moteur de recherche).
  */
 
+import { useTheme } from '../useTheme';
 import { useState, useMemo } from 'react';
 import { View, Text, TextInput, ScrollView, useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -14,7 +15,7 @@ import { CHAPITRES, LIBELLES_NIVEAU, LIBELLES_PARCOURS } from '../contenu-index'
 const sansAccent = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 export default function Recherche({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const [q, setQ] = useState('');
 
   const resultats = useMemo(() => {

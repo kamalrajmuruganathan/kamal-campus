@@ -7,6 +7,7 @@
  * scientifique) : l'élève choisit son PARCOURS, pas une filière.
  */
 
+import { useTheme } from '../useTheme';
 import { useState, useMemo } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -23,7 +24,7 @@ import { prochaineAction } from '../coach';
 import { useLangue } from '../i18n';
 
 export default function Accueil({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil } = useProgression();
   const { L } = useLangue();
   const [niveau, setNiveau] = useState(profil.niveauParDefaut ?? null);

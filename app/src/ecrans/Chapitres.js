@@ -2,6 +2,7 @@
  * Liste des chapitres d'un parcours.
  */
 
+import { useTheme } from '../useTheme';
 import { View, Text, ScrollView, Pressable, useColorScheme, useWindowDimensions } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -14,7 +15,7 @@ import { composerQcm, poolQuestions } from '../../lib/quizmix';
 const TAILLE_QCM_PARCOURS = 15;
 
 export default function Chapitres({ route, navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { niveau, parcours, titre } = route.params;
   const liste = chapitresDe(niveau, parcours);
   const { width } = useWindowDimensions();

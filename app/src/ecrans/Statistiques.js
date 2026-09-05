@@ -4,6 +4,7 @@
  * progression déjà stockée sur l'appareil.
  */
 
+import { useTheme } from '../useTheme';
 import { useMemo } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -26,7 +27,7 @@ function Kpi({ t, valeur, libelle }) {
 }
 
 export default function Statistiques({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil } = useProgression();
   const jour = dateLocale(new Date());
 

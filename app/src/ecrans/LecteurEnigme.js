@@ -6,6 +6,7 @@
  * suivante. Chaque réussite rapporte de l'XP (et nourrit la série).
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -48,7 +49,7 @@ function Grille({ t, grille }) {
 }
 
 export default function LecteurEnigme({ route, navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { enregistrerEnigme } = useProgression();
   const type = route.params?.type ?? 'suite';
   const titreFamille = route.params?.titre ?? 'Énigmes';

@@ -10,6 +10,7 @@
  * que les fiches.
  */
 
+import { useTheme } from '../useTheme';
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -30,7 +31,7 @@ const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
 const TAILLE_QCM_CHAPITRE = 20;
 
 export default function Qcm({ route, navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   // Deux usages : QCM d'un chapitre (route.params.id) OU QCM de révision / bac
   // blanc dont les questions sont fournies directement (route.params.questions).
   const chapitre = route.params?.questions ? null : chapitreParId(route.params?.id);

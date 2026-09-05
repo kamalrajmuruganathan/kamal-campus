@@ -40,6 +40,8 @@ export function profilVide() {
     prenom: '',
     langue: 'fr', // langue de l'interface (fr/en/es/ar)
     themePref: 'systeme', // apparence : 'systeme' | 'clair' | 'sombre'
+    tailleTexte: 'normale', // accessibilité : 'normale' | 'grande' | 'tres-grande'
+    contrasteFort: false, // accessibilité : contraste renforcé (basse vision)
     vitesseParole: 'normal', // lecture à voix haute : 'lent' | 'normal' | 'rapide'
     voix: {}, // voix préférée par langue : { 'en-US': id, 'es-ES': id, 'de-DE': id }
     lectureAutoCartes: false, // lire automatiquement la carte quand on la retourne

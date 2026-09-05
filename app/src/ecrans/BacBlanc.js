@@ -4,6 +4,7 @@
  * QCM habituel (correction immédiate, score, notions à revoir).
  */
 
+import { useTheme } from '../useTheme';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { View, Text, ScrollView } from 'react-native';
@@ -13,7 +14,7 @@ import { Carte } from '../composants/communs';
 import { QUIZ, LIBELLES_NIVEAU } from '../contenu-index';
 
 export default function BacBlanc({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
 
   if (!QUIZ || QUIZ.length === 0) {
     return (

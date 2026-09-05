@@ -4,6 +4,7 @@
  * s'ouvre sur l'accueil (et pré-sélectionne le niveau choisi).
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -44,7 +45,7 @@ function Option({ t, actif, onPress, children }) {
 }
 
 export default function Onboarding({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil, terminerOnboarding, definirReglages } = useProgression();
   const { L } = useLangue();
 

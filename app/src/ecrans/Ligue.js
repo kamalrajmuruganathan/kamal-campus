@@ -7,6 +7,7 @@
  * à l'autre (promotion / relégation) est résolu automatiquement.
  */
 
+import { useTheme } from '../useTheme';
 import { useEffect, useMemo } from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -21,7 +22,7 @@ const COULEURS = ['#a97142', '#9aa7b4', '#e0a72e', '#37c2b6', '#6aa8ff']; // bro
 const EMOJIS = ['🥉', '🥈', '🥇', '💠', '💎'];
 
 export default function Ligue() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil, definirReglages } = useProgression();
   const jour = dateLocale(new Date());
 

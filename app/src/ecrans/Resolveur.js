@@ -6,6 +6,7 @@
  * en moins (elle exigerait un service en ligne payant).
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, TextInput, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -17,7 +18,7 @@ const SYMBOLES = ['x', '(', ')', '^', '×', '÷', '+', '−', '='];
 const EXEMPLES = ['2x + 5 = 13', 'x^2 - 5x + 6 = 0', '3/4 + 5/6', '2×(3+4)^2'];
 
 export default function Resolveur() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const [entree, setEntree] = useState('');
   const [res, setRes] = useState(null);
 

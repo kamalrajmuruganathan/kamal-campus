@@ -5,6 +5,7 @@
  * déclare un outil (outil.json), et il ouvre l'écran Outils sur ce ou ces outils.
  */
 
+import { useTheme } from '../useTheme';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -17,7 +18,7 @@ import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
 export default function Chapitre({ route, navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil, basculerFavori } = useProgression();
   const chapitre = chapitreParId(route.params.id);
 

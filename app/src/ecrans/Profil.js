@@ -5,6 +5,7 @@
  * Les points s'obtiennent en réussissant des QCM et des bacs blancs.
  */
 
+import { useTheme } from '../useTheme';
 import { useState, useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -31,6 +32,15 @@ const THEMES = [
   { v: 'systeme', l: 'Système' },
   { v: 'clair', l: '☀️ Clair' },
   { v: 'sombre', l: '🌙 Sombre' },
+];
+const TAILLES_TEXTE = [
+  { v: 'normale', l: 'Normal' },
+  { v: 'grande', l: 'Grand' },
+  { v: 'tres-grande', l: 'Très grand' },
+];
+const CONTRASTES = [
+  { v: false, l: 'Standard' },
+  { v: true, l: '◑ Renforcé' },
 ];
 const VITESSES_LECTURE = [
   { v: 'lent', l: '🐢 Lent' },
@@ -71,7 +81,7 @@ function Case({ t, valeur, libelle }) {
 }
 
 export default function Profil({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil, reinitialiser, definirReglages } = useProgression();
   const { L } = useLangue();
 
@@ -326,6 +336,66 @@ export default function Profil({ navigation }) {
                 >
                   <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
                     {th.l}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        </View>
+
+        {/* Accessibilité — taille du texte et contraste renforcé */}
+        <View style={{ marginTop: t.espace.m, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>
+            Accessibilité
+          </Text>
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+            Confort de lecture — s'applique à toute l'application.
+          </Text>
+
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, fontWeight: '650', marginTop: t.espace.m }}>
+            TAILLE DU TEXTE
+          </Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.s }}>
+            {TAILLES_TEXTE.map((o) => {
+              const actif = (profil.tailleTexte || 'normale') === o.v;
+              return (
+                <Pressable
+                  key={o.v}
+                  onPress={() => definirReglages({ tailleTexte: o.v })}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: actif }}
+                  style={({ pressed }) => [
+                    st.pilule,
+                    { backgroundColor: actif ? t.couleur.accent : t.couleur.fond, borderColor: actif ? t.couleur.accent : t.couleur.trait, opacity: pressed ? 0.7 : 1 },
+                  ]}
+                >
+                  <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+                    {o.l}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, fontWeight: '650', marginTop: t.espace.m }}>
+            CONTRASTE
+          </Text>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: t.espace.s, marginTop: t.espace.s }}>
+            {CONTRASTES.map((o) => {
+              const actif = !!profil.contrasteFort === o.v;
+              return (
+                <Pressable
+                  key={String(o.v)}
+                  onPress={() => definirReglages({ contrasteFort: o.v })}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: actif }}
+                  style={({ pressed }) => [
+                    st.pilule,
+                    { backgroundColor: actif ? t.couleur.accent : t.couleur.fond, borderColor: actif ? t.couleur.accent : t.couleur.trait, opacity: pressed ? 0.7 : 1 },
+                  ]}
+                >
+                  <Text style={{ color: actif ? t.couleur.accentTexte : t.couleur.texte, fontSize: t.police.petite, fontWeight: '650' }}>
+                    {o.l}
                   </Text>
                 </Pressable>
               );

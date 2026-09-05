@@ -6,6 +6,7 @@
  * pas seulement un exercice.
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -16,7 +17,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { SUJETS, LIBELLES_NIVEAU } from '../contenu-index';
 
 export default function Sujets() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const [actif, setActif] = useState(null);
 
   if (actif) {

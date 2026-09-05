@@ -7,6 +7,7 @@
  * à chaque changement.
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, ScrollView, Alert } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -18,7 +19,7 @@ import { useProgression } from '../progression/Contexte';
 import { appliquerNotifications } from '../notifications';
 
 export default function Planning() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil, definirReglages } = useProgression();
   const [avert, setAvert] = useState(false);
 

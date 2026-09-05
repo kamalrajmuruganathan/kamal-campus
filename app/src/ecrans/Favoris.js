@@ -2,6 +2,7 @@
  * Favoris — les chapitres marqués d'une étoile, pour les retrouver vite.
  */
 
+import { useTheme } from '../useTheme';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { Text, ScrollView, View } from 'react-native';
@@ -12,7 +13,7 @@ import { useProgression } from '../progression/Contexte';
 import { chapitreParId, LIBELLES_NIVEAU, LIBELLES_PARCOURS } from '../contenu-index';
 
 export default function Favoris({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil } = useProgression();
 
   const chapitres = (profil.favoris || []).map(chapitreParId).filter(Boolean);

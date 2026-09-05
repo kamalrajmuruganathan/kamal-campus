@@ -4,6 +4,7 @@
  * fragile au moins fragile : de quoi cibler ses révisions comme sur Kartable.
  */
 
+import { useTheme } from '../useTheme';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { Text, ScrollView, View } from 'react-native';
@@ -14,7 +15,7 @@ import { useProgression } from '../progression/Contexte';
 import { chapitreParId, LIBELLES_NIVEAU } from '../contenu-index';
 
 export default function Revision({ navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil } = useProgression();
 
   const faibles = Object.entries(profil.chapitres || {})

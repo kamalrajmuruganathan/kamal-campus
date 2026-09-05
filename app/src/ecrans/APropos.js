@@ -4,6 +4,7 @@
  * src/apropos.md et est rendu comme une fiche (Markdown).
  */
 
+import { useTheme } from '../useTheme';
 import { useColorScheme } from 'react-native';
 import { useSombre } from '../useSombre';
 import { ScrollView } from 'react-native';
@@ -13,7 +14,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import apropos from '../apropos.md';
 
 export default function APropos() {
-  const t = theme(useSombre());
+  const t = useTheme();
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['bottom']}>
       <ScrollView contentContainerStyle={{ paddingBottom: t.espace.xxl }}>

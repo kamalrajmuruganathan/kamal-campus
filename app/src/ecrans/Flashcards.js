@@ -9,6 +9,7 @@
  * Le recto et le verso sont rendus en Markdown + LaTeX (VisionneuseFiche).
  */
 
+import { useTheme } from '../useTheme';
 import { useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -22,7 +23,7 @@ import { chapitreParId } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 
 export default function Flashcards({ route, navigation }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const chapitre = chapitreParId(route.params.id);
   const cartes = chapitre?.flashcards?.cartes ?? [];
 

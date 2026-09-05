@@ -4,6 +4,7 @@
  * stockées ; rien de nouveau à saisir.
  */
 
+import { useTheme } from '../useTheme';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -25,7 +26,7 @@ function Kpi({ t, valeur, libelle, couleur }) {
 }
 
 export default function RecapHebdo() {
-  const t = theme(useSombre());
+  const t = useTheme();
   const { profil } = useProgression();
   const jour = dateLocale(new Date());
   const semaine = debutSemaine(jour);

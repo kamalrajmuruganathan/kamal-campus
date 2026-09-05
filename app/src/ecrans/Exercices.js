@@ -7,6 +7,7 @@
  * l'élève ne l'a pas demandé : chercher d'abord, vérifier ensuite.
  */
 
+import { useTheme } from '../useTheme';
 import { useState } from 'react';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
@@ -96,7 +97,7 @@ function CarteExercice({ ex, index, t, accent, matiere }) {
 }
 
 export default function Exercices({ route }) {
-  const t = theme(useSombre());
+  const t = useTheme();
   const chapitre = chapitreParId(route.params.id);
 
   if (!chapitre || !chapitre.exercice || !chapitre.exercice.exercices?.length) {
