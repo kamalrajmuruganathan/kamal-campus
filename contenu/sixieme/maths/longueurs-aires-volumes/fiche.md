@@ -17,6 +17,10 @@ relu_par: null
 
 # Longueurs, aires et volumes
 
+<!-- schema:auto -->
+![Aire et périmètre d’un rectangle : aire = longueur × largeur ; périmètre = 2 × (longueur + largeur).](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDAgMjUwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSxTZWdvZSBVSSxSb2JvdG8sc2Fucy1zZXJpZiI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQ0MCIgaGVpZ2h0PSIyNTAiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB4PSI5MCIgeT0iNDAiIHdpZHRoPSIyMzAiIGhlaWdodD0iMTIwIiBmaWxsPSIjMWY2ZmViIiBmaWxsLW9wYWNpdHk9IjAuMDgiIHN0cm9rZT0iIzE2MjMyZSIgc3Ryb2tlLXdpZHRoPSIyLjQiLz48dGV4dCB4PSIyMDUiIHk9IjE4NCIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2MwMmEyYSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zdHlsZT0iaXRhbGljIj5MPC90ZXh0Pjx0ZXh0IHg9Ijc0IiB5PSIxMDUiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxYTdmNGIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc3R5bGU9Iml0YWxpYyI+bDwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMjIyIiBmb250LXNpemU9IjE1IiBmaWxsPSIjMTYyMzJlIj5Qw6lyaW3DqHRyZSA9IDIgw5cgKEwgKyBsKTwvdGV4dD48dGV4dCB4PSI5MCIgeT0iMjQ2IiBmb250LXNpemU9IjE1IiBmaWxsPSIjMTYyMzJlIj5BaXJlID0gTCDDlyBsPC90ZXh0Pjwvc3ZnPg==)
+
+
 > Trois questions, trois grandeurs différentes. **Quelle longueur** pour faire le tour ?
 > C'est le **périmètre**. **Combien de place** occupe la surface ? C'est l'**aire**.
 > **Combien ça remplit** ? C'est le **volume**. Ne jamais les confondre : c'est la clé de

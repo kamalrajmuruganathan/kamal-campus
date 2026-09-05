@@ -349,6 +349,131 @@ export function chaineAlimentaire({ maillons = ['Herbe', 'Criquet', 'Grenouille'
   return enveloppe(W, H, corps);
 }
 
+/** Rectangle : aire = L × l et périmètre = 2 × (L + l). */
+export function rectangleAirePerimetre({ L = 'L', l = 'l' } = {}) {
+  const W = 440;
+  const H = 250;
+  const x = 90;
+  const y = 40;
+  const rw = 230;
+  const rh = 120;
+  const corps =
+    `<rect x="${x}" y="${y}" width="${rw}" height="${rh}" fill="${BLEU}" fill-opacity="0.08" stroke="${ENCRE}" stroke-width="2.4"/>` +
+    // longueur (en bas)
+    `<text x="${x + rw / 2}" y="${y + rh + 24}" font-size="16" fill="${ROUGE}" text-anchor="middle" font-style="italic">${L}</text>` +
+    // largeur (à gauche)
+    `<text x="${x - 16}" y="${y + rh / 2 + 5}" font-size="16" fill="${VERT}" text-anchor="middle" font-style="italic">${l}</text>` +
+    // formules
+    `<text x="${x}" y="${y + rh + 62}" font-size="15" fill="${ENCRE}">Périmètre = 2 × (${L} + ${l})</text>` +
+    `<text x="${x}" y="${y + rh + 86}" font-size="15" fill="${ENCRE}">Aire = ${L} × ${l}</text>`;
+  return enveloppe(W, H, corps);
+}
+
+// ── Physique : forces et matière ─────────────────────────────────────────────
+
+/** Poids : vecteur force vertical, vers le bas, appliqué au centre de gravité. */
+export function poids() {
+  const W = 360;
+  const H = 260;
+  const sol = 210;
+  const bx = 130;
+  const by = 120;
+  const bw = 100;
+  const bh = 70;
+  const G = { x: bx + bw / 2, y: by + bh / 2 };
+  const finFleche = sol - 8; // s'arrête juste au-dessus du sol
+  const corps =
+    // sol
+    `<line x1="40" y1="${sol}" x2="320" y2="${sol}" stroke="${AXE}" stroke-width="2"/>` +
+    // hachures du sol
+    Array.from({ length: 8 }, (_, i) => `<line x1="${52 + i * 34}" y1="${sol}" x2="${44 + i * 34}" y2="${sol + 12}" stroke="${AXE}" stroke-width="1.2"/>`).join('') +
+    // objet
+    `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" rx="6" fill="${BLEU}" fill-opacity="0.10" stroke="${ENCRE}" stroke-width="2"/>` +
+    // centre de gravité
+    `<circle cx="${G.x}" cy="${G.y}" r="3.5" fill="${ENCRE}"/>` +
+    `<text x="${G.x + 8}" y="${G.y - 6}" font-size="13" fill="${ENCRE}">G</text>` +
+    // vecteur poids (vers le bas)
+    `<line x1="${G.x}" y1="${G.y}" x2="${G.x}" y2="${finFleche}" stroke="${ROUGE}" stroke-width="2.8"/>` +
+    `<path d="M ${G.x} ${finFleche + 4} l -6 -12 h 12 z" fill="${ROUGE}"/>` +
+    `<text x="${G.x + 12}" y="${(G.y + finFleche) / 2 + 4}" font-size="16" fill="${ROUGE}" font-style="italic">P</text>` +
+    `<text x="${G.x + 24}" y="${(G.y + finFleche) / 2 + 4}" font-size="13" fill="${ROUGE}">(poids)</text>` +
+    // rappel : direction verticale, sens vers le bas
+    `<text x="180" y="${sol + 34}" font-size="12" fill="${ATTENUE}" text-anchor="middle">vertical, vers le bas, appliqué en G</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Modèle de l'atome : noyau central et électrons sur des couches. */
+export function atome() {
+  const W = 360;
+  const H = 300;
+  const cx = 180;
+  const cy = 150;
+  const couches = [55, 95];
+  const electrons = [
+    [0, 180], // couche 1 : 2 électrons
+    [40, 130, 250], // couche 2 : 3 électrons (schématique)
+  ];
+  let corps = '';
+  couches.forEach((r, ci) => {
+    corps += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${ATTENUE}" stroke-width="1.3" stroke-dasharray="4 4"/>`;
+    for (const deg of electrons[ci]) {
+      const a = (deg * Math.PI) / 180;
+      const ex = cx + r * Math.cos(a);
+      const ey = cy + r * Math.sin(a);
+      corps += `<circle cx="${nb(ex)}" cy="${nb(ey)}" r="6" fill="${BLEU}"/>`;
+    }
+  });
+  corps +=
+    // noyau
+    `<circle cx="${cx}" cy="${cy}" r="24" fill="${ROUGE}" fill-opacity="0.15" stroke="${ROUGE}" stroke-width="2"/>` +
+    `<text x="${cx}" y="${cy + 5}" font-size="14" fill="${ROUGE}" text-anchor="middle">noyau</text>` +
+    // légendes
+    `<text x="${cx}" y="${cy + couches[1] + 30}" font-size="13" fill="${BLEU}" text-anchor="middle">● électrons</text>` +
+    `<text x="${cx}" y="${cy + couches[1] + 50}" font-size="12" fill="${ATTENUE}" text-anchor="middle">noyau : protons (+) et neutrons</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Cycle de l'eau : évaporation → condensation → précipitation → ruissellement. */
+export function cycleEau() {
+  const W = 400;
+  const H = 320;
+  const cx = 200;
+  const cy = 160;
+  const R = 108;
+  const etapes = ['Évaporation', 'Condensation', 'Précipitation', 'Ruissellement'];
+  // positions aux 4 points cardinaux (haut, droite, bas, gauche)
+  const angles = [-90, 0, 90, 180];
+  const pts = angles.map((d) => {
+    const a = (d * Math.PI) / 180;
+    return { x: cx + R * Math.cos(a), y: cy + R * Math.sin(a) };
+  });
+  let corps = '';
+  // flèches d'arc entre étapes (sens horaire)
+  for (let i = 0; i < 4; i += 1) {
+    const p = pts[i];
+    const q = pts[(i + 1) % 4];
+    // point de contrôle : légèrement à l'extérieur pour un arc courbe
+    const mx = (p.x + q.x) / 2;
+    const my = (p.y + q.y) / 2;
+    const ox = cx + (mx - cx) * 1.35;
+    const oy = cy + (my - cy) * 1.35;
+    corps += `<path d="M ${nb(p.x)} ${nb(p.y)} Q ${nb(ox)} ${nb(oy)} ${nb(q.x)} ${nb(q.y)}" fill="none" stroke="${BLEU}" stroke-width="2" marker-end=""/>`;
+    // flèche à l'extrémité q
+    const ang = Math.atan2(q.y - oy, q.x - ox);
+    const a1 = ang + 2.6;
+    const a2 = ang - 2.6;
+    corps += `<path d="M ${nb(q.x)} ${nb(q.y)} L ${nb(q.x + 10 * Math.cos(a1))} ${nb(q.y + 10 * Math.sin(a1))} L ${nb(q.x + 10 * Math.cos(a2))} ${nb(q.y + 10 * Math.sin(a2))} z" fill="${BLEU}"/>`;
+  }
+  // pastilles d'étapes
+  etapes.forEach((e, i) => {
+    const p = pts[i];
+    corps +=
+      `<rect x="${nb(p.x - 62)}" y="${nb(p.y - 16)}" width="124" height="32" rx="16" fill="${VERT}" fill-opacity="0.12" stroke="${VERT}" stroke-width="1.6"/>` +
+      `<text x="${nb(p.x)}" y="${nb(p.y + 5)}" font-size="14" fill="${ENCRE}" text-anchor="middle">${e}</text>`;
+  });
+  return enveloppe(W, H, corps);
+}
+
 /** Registre : identifiant de schéma → fonction génératrice. */
 export const SCHEMAS = {
   'triangle-rectangle': triangleRectangle,
@@ -361,6 +486,10 @@ export const SCHEMAS = {
   'lentille-convergente': lentilleConvergente,
   'circuit-electrique': circuitElectrique,
   'chaine-alimentaire': chaineAlimentaire,
+  'rectangle-aire-perimetre': rectangleAirePerimetre,
+  poids,
+  atome,
+  'cycle-eau': cycleEau,
 };
 
 /** Encode un SVG en data-URI base64 utilisable en syntaxe image Markdown. */

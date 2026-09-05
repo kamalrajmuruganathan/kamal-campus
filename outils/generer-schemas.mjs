@@ -54,6 +54,15 @@ function choisirSchema(cle, corps = '', matiere = '') {
     if (t(/\bonde|\bsignal|sonore|sinusoid/)) {
       return { id: 'onde-sinusoidale', params: {}, legende: 'Onde sinusoïdale : A est l’amplitude, λ la longueur d’onde (distance entre deux crêtes).' };
     }
+    if (t(/etats-de-l|cycle de l.?eau|etats de l.?eau/)) {
+      return { id: 'cycle-eau', params: {}, legende: 'Le cycle de l’eau : évaporation, condensation, précipitation, ruissellement.' };
+    }
+    if (t(/\bpoids|gravitation|\bforces?\b|newton/)) {
+      return { id: 'poids', params: {}, legende: 'Le poids : force verticale, dirigée vers le bas, appliquée au centre de gravité G.' };
+    }
+    if (t(/atome|organisation-matiere|description-matiere/)) {
+      return { id: 'atome', params: {}, legende: 'Modèle de l’atome : un noyau (protons et neutrons) autour duquel se répartissent les électrons.' };
+    }
     return null;
   }
 
@@ -65,6 +74,9 @@ function choisirSchema(cle, corps = '', matiere = '') {
   }
   if (t(/thales|theoreme de thales/)) {
     return { id: 'thales', params: {}, legende: 'Configuration de Thalès : (MN) parallèle à (BC).' };
+  }
+  if (t(/perimetre|\baire|longueurs-aires|aires-perimetres|aire-perimetre/) && !t(/integral/)) {
+    return { id: 'rectangle-aire-perimetre', params: {}, legende: 'Aire et périmètre d’un rectangle : aire = longueur × largeur ; périmètre = 2 × (longueur + largeur).' };
   }
   if (t(/trigonom|cosinus|sinus|tangente/)) {
     return { id: 'cercle-trigo', params: {}, legende: 'Cercle trigonométrique : cosinus sur l’axe des abscisses, sinus sur l’axe des ordonnées.' };

@@ -72,3 +72,33 @@ test('chaîne alimentaire : autant de flèches que de maillons − 1', () => {
   const fleches = (svg.match(/<path d="M [^"]*z" fill/g) || []).length;
   assert.equal(fleches, maillons.length - 1, 'une flèche entre chaque maillon');
 });
+
+test('rectangle : formules aire et périmètre présentes', () => {
+  const svg = SCHEMAS['rectangle-aire-perimetre']();
+  assert.ok(svg.includes('Aire'), 'doit afficher la formule de l’aire');
+  assert.ok(svg.includes('Périmètre'), 'doit afficher la formule du périmètre');
+  assert.ok(svg.includes('<rect'), 'doit dessiner un rectangle');
+});
+
+test('poids : vecteur (ligne + pointe) et étiquette', () => {
+  const svg = SCHEMAS.poids();
+  assert.ok(svg.includes('poids'), 'doit étiqueter le poids');
+  assert.ok(svg.includes('>G<'), 'doit repérer le centre de gravité G');
+});
+
+test('atome : noyau et électrons', () => {
+  const svg = SCHEMAS.atome();
+  assert.ok(svg.includes('noyau'), 'doit annoter le noyau');
+  assert.ok(svg.includes('électrons'), 'doit annoter les électrons');
+  // au moins deux couches (cercles en pointillés)
+  assert.ok((svg.match(/stroke-dasharray/g) || []).length >= 2, 'au moins deux couches');
+});
+
+test('cycle de l’eau : quatre étapes et quatre flèches', () => {
+  const svg = SCHEMAS['cycle-eau']();
+  for (const e of ['Évaporation', 'Condensation', 'Précipitation', 'Ruissellement']) {
+    assert.ok(svg.includes(e), `doit contenir l’étape ${e}`);
+  }
+  // quatre arcs (un Q par flèche)
+  assert.equal((svg.match(/ Q /g) || []).length, 4, 'quatre arcs de liaison');
+});
