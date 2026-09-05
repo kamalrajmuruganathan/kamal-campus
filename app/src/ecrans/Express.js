@@ -14,6 +14,7 @@ import VisionneuseFiche from '../composants/VisionneuseFiche';
 import { CHAPITRES } from '../contenu-index';
 import { useProgression } from '../progression/Contexte';
 import { aGenerateur, genererQuestions } from '../../lib/generateurs';
+import { formaterChrono } from '../../lib/examen';
 
 const DUREE = 120; // secondes
 const LETTRES = ['A', 'B', 'C', 'D'];
@@ -105,7 +106,6 @@ export default function Express({ navigation }) {
   const q = pool[index];
   if (!q) { terminer(); return <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} />; }
   const repondu = choisi !== null;
-  const mm = Math.floor(temps / 60); const ss = String(temps % 60).padStart(2, '0');
   const presque = temps <= 15;
 
   const valider = (i) => {
@@ -123,7 +123,7 @@ export default function Express({ navigation }) {
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <Text style={{ color: t.couleur.attenue, fontSize: t.police.petite }}>Q{index + 1}</Text>
-          <Text style={{ color: presque ? t.couleur.erreur : t.couleur.texte, fontSize: t.police.grande, fontWeight: '800', fontVariant: ['tabular-nums'] }}>{mm}:{ss}</Text>
+          <Text style={{ color: presque ? t.couleur.erreur : t.couleur.texte, fontSize: t.police.grande, fontWeight: '800', fontVariant: ['tabular-nums'] }}>{formaterChrono(temps)}</Text>
         </View>
         <View style={{ height: 6, borderRadius: 3, backgroundColor: t.couleur.trait, overflow: 'hidden', marginTop: 6 }}>
           <View style={{ width: `${(temps / DUREE) * 100}%`, height: '100%', backgroundColor: presque ? t.couleur.erreur : t.couleur.accent }} />
