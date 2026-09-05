@@ -36,9 +36,29 @@ const norm = (s) =>
  * Règles ordonnées de la plus spécifique à la plus générale ; renvoie
  * { id, params, legende } ou null.
  */
-function choisirSchema(cle, corps = '') {
+function choisirSchema(cle, corps = '', matiere = '') {
   const t = (re) => re.test(cle);
   const compte = (re) => (corps.match(re) || []).length;
+
+  // — Physique-chimie & sciences —
+  if (matiere === 'physique-chimie' || matiere === 'sciences') {
+    if (t(/chaine alimentaire|chaines alimentaires|chaine-alimentaire/)) {
+      return { id: 'chaine-alimentaire', params: {}, legende: 'Chaîne alimentaire : chaque flèche signifie « est mangé par ».' };
+    }
+    if (t(/lentille|lunette/)) {
+      return { id: 'lentille-convergente', params: {}, legende: 'Lentille convergente : objet placé à 2F, image réelle inversée à 2F′.' };
+    }
+    if (t(/\bcircuit/)) {
+      return { id: 'circuit-electrique', params: {}, legende: 'Circuit électrique en série : générateur (pile), interrupteur et lampe.' };
+    }
+    if (t(/\bonde|\bsignal|sonore|sinusoid/)) {
+      return { id: 'onde-sinusoidale', params: {}, legende: 'Onde sinusoïdale : A est l’amplitude, λ la longueur d’onde (distance entre deux crêtes).' };
+    }
+    return null;
+  }
+
+  // — Mathématiques —
+  if (matiere !== 'mathematiques') return null;
 
   if (t(/pythagore/)) {
     return { id: 'triangle-rectangle', params: {}, legende: 'Triangle rectangle : le côté opposé à l’angle droit est l’hypoténuse.' };
@@ -131,10 +151,11 @@ let deja = 0;
 
 for (const f of fiches) {
   const md = readFileSync(f.fiche, 'utf8');
-  if (matiereFiche(md) !== 'mathematiques') continue;
+  const matiere = matiereFiche(md);
+  if (!['mathematiques', 'physique-chimie', 'sciences'].includes(matiere)) continue;
   const titre = titreFiche(md);
   const cle = norm(f.chap + ' ' + titre);
-  const choix = choisirSchema(cle, md);
+  const choix = choisirSchema(cle, md, matiere);
   if (!choix) continue;
   if (!SCHEMAS[choix.id]) continue;
 

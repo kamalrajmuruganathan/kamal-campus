@@ -45,3 +45,30 @@ test('triangle rectangle : marque d’angle droit présente', () => {
   // la marque d'angle droit est un petit chemin en L (path fill=none)
   assert.ok(svg.includes('<path'), 'doit contenir la marque d’angle droit');
 });
+
+test('onde sinusoïdale : amplitude A et longueur d’onde λ annotées', () => {
+  const svg = SCHEMAS['onde-sinusoidale']();
+  assert.ok(svg.includes('>A<'), 'doit annoter l’amplitude A');
+  assert.ok(svg.includes('λ'), 'doit annoter la longueur d’onde λ');
+});
+
+test('lentille convergente : les trois rayons et les foyers sont tracés', () => {
+  const svg = SCHEMAS['lentille-convergente']();
+  const rayons = (svg.match(/<polyline|<line/g) || []).length;
+  assert.ok(rayons >= 3, 'au moins trois tracés de rayons');
+  assert.ok(svg.includes('>F<') && svg.includes("F'"), 'doit repérer F et F’');
+});
+
+test('circuit électrique : pile, interrupteur et lampe étiquetés', () => {
+  const svg = SCHEMAS['circuit-electrique']();
+  for (const mot of ['pile', 'interrupteur', 'lampe']) {
+    assert.ok(svg.includes(mot), `doit étiqueter « ${mot} »`);
+  }
+});
+
+test('chaîne alimentaire : autant de flèches que de maillons − 1', () => {
+  const maillons = ['Herbe', 'Lapin', 'Renard'];
+  const svg = SCHEMAS['chaine-alimentaire']({ maillons });
+  const fleches = (svg.match(/<path d="M [^"]*z" fill/g) || []).length;
+  assert.equal(fleches, maillons.length - 1, 'une flèche entre chaque maillon');
+});

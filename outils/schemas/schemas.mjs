@@ -210,6 +210,145 @@ export function repereCoordonnees({ x = 3, y = 2 } = {}) {
   return enveloppe(r.W, r.H, r.grille + corps);
 }
 
+// ── Physique ─────────────────────────────────────────────────────────────────
+
+/** Onde sinusoïdale : amplitude et longueur d'onde (ou période) repérées. */
+export function ondeSinusoidale({ lambda = 'λ' } = {}) {
+  const W = 440;
+  const H = 240;
+  const axe = 120;
+  const A = 62; // amplitude en pixels
+  const x0 = 30;
+  const x1 = 410;
+  const L = 150; // longueur d'onde en pixels
+  let d = '';
+  for (let x = x0; x <= x1; x += 2) {
+    const y = axe - A * Math.sin((2 * Math.PI * (x - x0)) / L);
+    d += `${x === x0 ? 'M' : 'L'} ${x} ${nb(y)} `;
+  }
+  // crêtes pour repérer λ (première et deuxième crête : à L/4 et L/4 + L)
+  const c1 = x0 + L / 4;
+  const c2 = c1 + L;
+  const corps =
+    `<line x1="${x0}" y1="${axe}" x2="${x1}" y2="${axe}" stroke="${AXE}" stroke-width="1.6"/>` +
+    `<path d="M ${x0} ${axe} l -0 0" />` +
+    `<path d="${d.trim()}" fill="none" stroke="${BLEU}" stroke-width="2.8"/>` +
+    // amplitude (de l'axe à la crête)
+    `<line x1="${nb(c1)}" y1="${axe}" x2="${nb(c1)}" y2="${axe - A}" stroke="${VERT}" stroke-width="1.6" stroke-dasharray="5 4"/>` +
+    `<text x="${nb(c1) + 8}" y="${axe - A / 2}" font-size="15" fill="${VERT}">A</text>` +
+    // longueur d'onde (entre deux crêtes)
+    `<line x1="${nb(c1)}" y1="${axe - A - 14}" x2="${nb(c2)}" y2="${axe - A - 14}" stroke="${ROUGE}" stroke-width="1.6"/>` +
+    `<line x1="${nb(c1)}" y1="${axe - A - 20}" x2="${nb(c1)}" y2="${axe - A - 8}" stroke="${ROUGE}" stroke-width="1.6"/>` +
+    `<line x1="${nb(c2)}" y1="${axe - A - 20}" x2="${nb(c2)}" y2="${axe - A - 8}" stroke="${ROUGE}" stroke-width="1.6"/>` +
+    `<text x="${nb((c1 + c2) / 2)}" y="${axe - A - 20}" font-size="15" fill="${ROUGE}" text-anchor="middle" font-style="italic">${lambda}</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Lentille convergente : objet à 2F, image réelle inversée à 2F' (3 rayons). */
+export function lentilleConvergente() {
+  const W = 440;
+  const H = 240;
+  const cx = 210;
+  const axe = 120;
+  const f = 70;
+  const h = 70;
+  const O = { x: cx, y: axe };
+  const B = { x: cx - 2 * f, y: axe - h }; // sommet de l'objet
+  const Bp = { x: cx + 2 * f, y: axe + h }; // sommet de l'image (inversée)
+  const F = { x: cx - f, y: axe };
+  const Fp = { x: cx + f, y: axe };
+  const fleche = (x1, y1, x2, y2, coul) =>
+    `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${coul}" stroke-width="2.6"/>` +
+    `<path d="M ${x2} ${y2} l ${x2 === x1 ? -4 : 0} ${y2 > y1 ? -8 : 8} l ${x2 === x1 ? 8 : 0} 0 z" fill="${coul}"/>`;
+  const corps =
+    // axe optique
+    `<line x1="20" y1="${axe}" x2="420" y2="${axe}" stroke="${AXE}" stroke-width="1.4"/>` +
+    // lentille (trait vertical à double flèche)
+    `<line x1="${cx}" y1="40" x2="${cx}" y2="200" stroke="${ENCRE}" stroke-width="2"/>` +
+    `<path d="M ${cx} 40 l -5 9 h 10 z" fill="${ENCRE}"/>` +
+    `<path d="M ${cx} 200 l -5 -9 h 10 z" fill="${ENCRE}"/>` +
+    // foyers et centre
+    `<circle cx="${F.x}" cy="${F.y}" r="3" fill="${ENCRE}"/><text x="${F.x}" y="${axe + 18}" font-size="13" fill="${ENCRE}" text-anchor="middle">F</text>` +
+    `<circle cx="${Fp.x}" cy="${Fp.y}" r="3" fill="${ENCRE}"/><text x="${Fp.x}" y="${axe + 18}" font-size="13" fill="${ENCRE}" text-anchor="middle">F'</text>` +
+    `<text x="${O.x + 4}" y="${axe + 18}" font-size="13" fill="${ATTENUE}">O</text>` +
+    // rayons
+    // 1 : parallèle à l'axe puis passe par F'
+    `<polyline points="${B.x},${B.y} ${cx},${B.y} ${Bp.x},${Bp.y}" fill="none" stroke="${BLEU}" stroke-width="1.6"/>` +
+    // 2 : par le centre optique, non dévié
+    `<line x1="${B.x}" y1="${B.y}" x2="${Bp.x}" y2="${Bp.y}" stroke="${VERT}" stroke-width="1.6"/>` +
+    // 3 : par F puis parallèle à l'axe
+    `<polyline points="${B.x},${B.y} ${cx},${axe + h} ${Bp.x},${Bp.y}" fill="none" stroke="${ROUGE}" stroke-width="1.6"/>` +
+    // objet (droit) et image (inversée)
+    fleche(B.x, axe, B.x, B.y, ENCRE) +
+    `<text x="${B.x - 12}" y="${B.y + 4}" font-size="14" fill="${ENCRE}">B</text>` +
+    fleche(Bp.x, axe, Bp.x, Bp.y, ATTENUE) +
+    `<text x="${Bp.x + 6}" y="${Bp.y}" font-size="14" fill="${ATTENUE}">B'</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Circuit électrique en série : générateur, interrupteur, lampe (composants intercalés). */
+export function circuitElectrique() {
+  const W = 460;
+  const H = 260;
+  const Lx = 70; // côté gauche
+  const Rx = 390; // côté droit
+  const Ty = 60; // haut
+  const By = 210; // bas
+  const cyLampe = (Ty + By) / 2; // 135
+  const w = (x1, y1, x2, y2) => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${ENCRE}" stroke-width="2.4"/>`;
+  const corps =
+    // — côté gauche : pile intercalée —
+    w(Lx, Ty, Lx, 118) +
+    `<line x1="${Lx - 13}" y1="122" x2="${Lx + 13}" y2="122" stroke="${ENCRE}" stroke-width="2"/>` + // borne + (long)
+    `<line x1="${Lx - 7}" y1="134" x2="${Lx + 7}" y2="134" stroke="${ENCRE}" stroke-width="5"/>` + // borne − (court/épais)
+    w(Lx, 138, Lx, By) +
+    `<text x="${Lx - 20}" y="132" font-size="13" fill="${ATTENUE}" text-anchor="end">pile</text>` +
+    // — bas —
+    w(Lx, By, Rx, By) +
+    // — côté droit : lampe intercalée —
+    w(Rx, By, Rx, cyLampe + 20) +
+    `<circle cx="${Rx}" cy="${cyLampe}" r="20" fill="none" stroke="${ROUGE}" stroke-width="2.4"/>` +
+    `<line x1="${Rx - 14}" y1="${cyLampe - 14}" x2="${Rx + 14}" y2="${cyLampe + 14}" stroke="${ROUGE}" stroke-width="2"/>` +
+    `<line x1="${Rx - 14}" y1="${cyLampe + 14}" x2="${Rx + 14}" y2="${cyLampe - 14}" stroke="${ROUGE}" stroke-width="2"/>` +
+    w(Rx, cyLampe - 20, Rx, Ty) +
+    `<text x="${Rx + 26}" y="${cyLampe + 4}" font-size="13" fill="${ROUGE}">lampe</text>` +
+    // — haut : interrupteur intercalé (ouvert) —
+    w(Rx, Ty, 250, Ty) +
+    `<circle cx="250" cy="${Ty}" r="2.8" fill="${ENCRE}"/>` +
+    `<circle cx="180" cy="${Ty}" r="2.8" fill="${ENCRE}"/>` +
+    `<line x1="250" y1="${Ty}" x2="186" y2="${Ty - 22}" stroke="${ENCRE}" stroke-width="2.4"/>` + // lame ouverte
+    w(180, Ty, Lx, Ty) +
+    `<text x="215" y="26" font-size="13" fill="${ATTENUE}" text-anchor="middle">interrupteur</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Chaîne alimentaire : maillons reliés par « est mangé par ». */
+export function chaineAlimentaire({ maillons = ['Herbe', 'Criquet', 'Grenouille', 'Serpent'] } = {}) {
+  const W = 460;
+  const H = 150;
+  const n = maillons.length;
+  const bw = 92;
+  const bh = 46;
+  const gap = (W - 20 - n * bw) / (n - 1);
+  const y = 60;
+  let corps = '';
+  maillons.forEach((m, i) => {
+    const x = 10 + i * (bw + gap);
+    corps +=
+      `<rect x="${nb(x)}" y="${y}" width="${bw}" height="${bh}" rx="8" fill="${BLEU}" fill-opacity="0.10" stroke="${BLEU}" stroke-width="1.8"/>` +
+      `<text x="${nb(x + bw / 2)}" y="${y + bh / 2 + 5}" font-size="15" fill="${ENCRE}" text-anchor="middle">${m}</text>`;
+    if (i < n - 1) {
+      const xa = x + bw + 4;
+      const xb = x + bw + gap - 4;
+      corps +=
+        `<line x1="${nb(xa)}" y1="${y + bh / 2}" x2="${nb(xb)}" y2="${y + bh / 2}" stroke="${VERT}" stroke-width="2.2"/>` +
+        `<path d="M ${nb(xb)} ${y + bh / 2} l -9 -5 v 10 z" fill="${VERT}"/>`;
+    }
+  });
+  corps += `<text x="${W / 2}" y="${y + bh + 34}" font-size="13" fill="${VERT}" text-anchor="middle" font-style="italic">→ « est mangé par »</text>`;
+  return enveloppe(W, H, corps);
+}
+
 /** Registre : identifiant de schéma → fonction génératrice. */
 export const SCHEMAS = {
   'triangle-rectangle': triangleRectangle,
@@ -218,6 +357,10 @@ export const SCHEMAS = {
   'cercle-trigo': cercleTrigo,
   thales,
   'repere-coordonnees': repereCoordonnees,
+  'onde-sinusoidale': ondeSinusoidale,
+  'lentille-convergente': lentilleConvergente,
+  'circuit-electrique': circuitElectrique,
+  'chaine-alimentaire': chaineAlimentaire,
 };
 
 /** Encode un SVG en data-URI base64 utilisable en syntaxe image Markdown. */
