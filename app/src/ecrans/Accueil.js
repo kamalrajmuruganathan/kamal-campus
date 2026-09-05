@@ -347,6 +347,14 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="📝 Mode examen"
+            sousTitre="Passe un bac blanc en conditions réelles : chrono, sans correction, note à la fin"
+            couleur={t.couleur.erreur}
+            onPress={() => navigation.navigate('ModeExamen')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre={L('card.sujets.t')}
             sousTitre={L('card.sujets.s')}
             couleur={t.couleur.physique}
