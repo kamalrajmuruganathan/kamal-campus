@@ -563,6 +563,94 @@ export function droiteGraduee({ min = -5, max = 5, points = [-3, 2] } = {}) {
   return enveloppe(W, H, corps);
 }
 
+/** Molécule d'eau H₂O : un atome d'oxygène et deux d'hydrogène (forme coudée). */
+export function moleculeEau() {
+  const W = 360;
+  const H = 250;
+  const O = { x: 180, y: 150 };
+  const rO = 34;
+  const rH = 22;
+  const d = 78; // longueur de liaison
+  // angle H–O–H ≈ 104,5°, molécule ouverte vers le haut
+  const demi = (104.5 / 2) * (Math.PI / 180);
+  const H1 = { x: O.x - d * Math.sin(demi), y: O.y - d * Math.cos(demi) };
+  const H2 = { x: O.x + d * Math.sin(demi), y: O.y - d * Math.cos(demi) };
+  const corps =
+    // liaisons
+    `<line x1="${O.x}" y1="${O.y}" x2="${nb(H1.x)}" y2="${nb(H1.y)}" stroke="${ENCRE}" stroke-width="5"/>` +
+    `<line x1="${O.x}" y1="${O.y}" x2="${nb(H2.x)}" y2="${nb(H2.y)}" stroke="${ENCRE}" stroke-width="5"/>` +
+    // atomes
+    `<circle cx="${O.x}" cy="${O.y}" r="${rO}" fill="${ROUGE}" fill-opacity="0.85"/>` +
+    `<text x="${O.x}" y="${O.y + 6}" font-size="20" fill="#fff" text-anchor="middle" font-weight="700">O</text>` +
+    `<circle cx="${nb(H1.x)}" cy="${nb(H1.y)}" r="${rH}" fill="${BLEU}" fill-opacity="0.9"/>` +
+    `<text x="${nb(H1.x)}" y="${nb(H1.y) + 5}" font-size="16" fill="#fff" text-anchor="middle" font-weight="700">H</text>` +
+    `<circle cx="${nb(H2.x)}" cy="${nb(H2.y)}" r="${rH}" fill="${BLEU}" fill-opacity="0.9"/>` +
+    `<text x="${nb(H2.x)}" y="${nb(H2.y) + 5}" font-size="16" fill="#fff" text-anchor="middle" font-weight="700">H</text>` +
+    // légende
+    `<text x="${W / 2}" y="${H - 30}" font-size="19" fill="${ENCRE}" text-anchor="middle" font-weight="700">H₂O</text>` +
+    `<text x="${W / 2}" y="${H - 12}" font-size="12.5" fill="${ATTENUE}" text-anchor="middle">2 atomes d’hydrogène (H) + 1 d’oxygène (O)</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Appareil digestif : le trajet des aliments, en étapes reliées. */
+export function appareilDigestif({ etapes = ['Bouche', 'Œsophage', 'Estomac', 'Intestin grêle', 'Gros intestin'] } = {}) {
+  const W = 300;
+  const H = 60 + etapes.length * 56;
+  const cx = W / 2;
+  const bw = 190;
+  const bh = 36;
+  let corps = '';
+  etapes.forEach((e, i) => {
+    const y = 30 + i * 56;
+    corps +=
+      `<rect x="${cx - bw / 2}" y="${y}" width="${bw}" height="${bh}" rx="8" fill="${BLEU}" fill-opacity="0.10" stroke="${BLEU}" stroke-width="1.8"/>` +
+      `<text x="${cx}" y="${y + bh / 2 + 5}" font-size="15" fill="${ENCRE}" text-anchor="middle">${e}</text>`;
+    if (i < etapes.length - 1) {
+      const y1 = y + bh + 4;
+      const y2 = y + 56 - 4;
+      corps +=
+        `<line x1="${cx}" y1="${y1}" x2="${cx}" y2="${y2}" stroke="${VERT}" stroke-width="2.4"/>` +
+        `<path d="M ${cx} ${y2} l -5 -9 h 10 z" fill="${VERT}"/>`;
+    }
+  });
+  return enveloppe(W, H, corps);
+}
+
+/** Système solaire (schématique) : le Soleil et les planètes intérieures. */
+export function systemeSolaire() {
+  const W = 440;
+  const H = 300;
+  const sun = { x: 40, y: H / 2 };
+  // angleDeg : petit angle (proche de l'horizontale) pour rester dans le cadre ;
+  // labelDessus : place le nom au-dessus (sinon dessous) pour éviter les collisions.
+  const planetes = [
+    { nom: 'Mercure', r: 88, taille: 4, coul: ATTENUE, angleDeg: 22, labelDessus: false },
+    { nom: 'Vénus', r: 150, taille: 6, coul: '#c8922e', angleDeg: -15, labelDessus: true },
+    { nom: 'Terre', r: 212, taille: 7, coul: BLEU, angleDeg: 13, labelDessus: false },
+    { nom: 'Mars', r: 280, taille: 5, coul: ROUGE, angleDeg: -11, labelDessus: true },
+  ];
+  let corps = '';
+  // orbites centrées sur le Soleil (visibles en arcs sur la droite)
+  for (const p of planetes) {
+    corps += `<circle cx="${sun.x}" cy="${sun.y}" r="${p.r}" fill="none" stroke="${GRILLE}" stroke-width="1.3"/>`;
+  }
+  // Soleil
+  corps +=
+    `<circle cx="${sun.x}" cy="${sun.y}" r="30" fill="#f0a91e"/>` +
+    `<text x="${sun.x + 4}" y="${sun.y + 48}" font-size="13" fill="${ATTENUE}" text-anchor="middle">Soleil</text>`;
+  planetes.forEach((p) => {
+    const ang = p.angleDeg * (Math.PI / 180);
+    const px = sun.x + p.r * Math.cos(ang);
+    const py = sun.y + p.r * Math.sin(ang);
+    const ly = p.labelDessus ? py - p.taille - 8 : py + p.taille + 16;
+    corps +=
+      `<circle cx="${nb(px)}" cy="${nb(py)}" r="${p.taille}" fill="${p.coul}"/>` +
+      `<text x="${nb(px)}" y="${nb(ly)}" font-size="12.5" fill="${p.nom === 'Terre' ? BLEU : ENCRE}" text-anchor="middle" font-weight="${p.nom === 'Terre' ? '700' : '400'}">${p.nom}</text>`;
+  });
+  corps += `<text x="${W - 12}" y="${H - 12}" font-size="11.5" fill="${ATTENUE}" text-anchor="end">Les 4 planètes les plus proches du Soleil (schéma non à l’échelle)</text>`;
+  return enveloppe(W, H, corps);
+}
+
 /** Registre : identifiant de schéma → fonction génératrice. */
 export const SCHEMAS = {
   'triangle-rectangle': triangleRectangle,
@@ -582,6 +670,9 @@ export const SCHEMAS = {
   'pave-droit': paveDroit,
   angle,
   'droite-graduee': droiteGraduee,
+  'molecule-eau': moleculeEau,
+  'appareil-digestif': appareilDigestif,
+  'systeme-solaire': systemeSolaire,
 };
 
 /** Encode un SVG en data-URI base64 utilisable en syntaxe image Markdown. */

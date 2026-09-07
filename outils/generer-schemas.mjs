@@ -40,10 +40,19 @@ function choisirSchema(cle, corps = '', matiere = '') {
   const t = (re) => re.test(cle);
   const compte = (re) => (corps.match(re) || []).length;
 
-  // — Physique-chimie & sciences —
-  if (matiere === 'physique-chimie' || matiere === 'sciences') {
+  // — Physique-chimie, sciences & SVT —
+  if (matiere === 'physique-chimie' || matiere === 'sciences' || matiere === 'svt') {
     if (t(/chaine alimentaire|chaines alimentaires|chaine-alimentaire/)) {
       return { id: 'chaine-alimentaire', params: {}, legende: 'Chaîne alimentaire : chaque flèche signifie « est mangé par ».' };
+    }
+    if (t(/digest|nutrition/)) {
+      return { id: 'appareil-digestif', params: {}, legende: 'Le trajet des aliments dans l’appareil digestif, de la bouche au gros intestin.' };
+    }
+    if (t(/systeme-solaire|systeme solaire|terre.{0,8}soleil|soleil.{0,8}lune/)) {
+      return { id: 'systeme-solaire', params: {}, legende: 'Le Soleil et les planètes les plus proches (schéma non à l’échelle).' };
+    }
+    if (t(/corps-purs|biomolecules/)) {
+      return { id: 'molecule-eau', params: {}, legende: 'La molécule d’eau : deux atomes d’hydrogène liés à un atome d’oxygène (H₂O).' };
     }
     if (t(/lentille|lunette/)) {
       return { id: 'lentille-convergente', params: {}, legende: 'Lentille convergente : objet placé à 2F, image réelle inversée à 2F′.' };
@@ -173,7 +182,7 @@ let deja = 0;
 for (const f of fiches) {
   const md = readFileSync(f.fiche, 'utf8');
   const matiere = matiereFiche(md);
-  if (!['mathematiques', 'physique-chimie', 'sciences'].includes(matiere)) continue;
+  if (!['mathematiques', 'physique-chimie', 'sciences', 'svt'].includes(matiere)) continue;
   const titre = titreFiche(md);
   const cle = norm(f.chap + ' ' + titre);
   const choix = choisirSchema(cle, md, matiere);

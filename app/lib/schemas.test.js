@@ -121,3 +121,28 @@ test('droite graduée : le zéro et des valeurs signées', () => {
   assert.ok(svg.includes('+2') || svg.includes('+1'), 'doit afficher des valeurs positives signées');
   assert.ok(svg.includes('-3') || svg.includes('-5'), 'doit afficher des valeurs négatives');
 });
+
+test('molécule d’eau : un O, deux H et la formule H₂O', () => {
+  const svg = SCHEMAS['molecule-eau']();
+  assert.ok(svg.includes('>O<'), 'doit contenir l’atome O');
+  assert.equal((svg.match(/>H</g) || []).length, 2, 'doit contenir deux atomes H');
+  assert.ok(svg.includes('H₂O'), 'doit afficher la formule');
+});
+
+test('appareil digestif : les cinq étapes du trajet', () => {
+  const svg = SCHEMAS['appareil-digestif']();
+  for (const e of ['Bouche', 'Œsophage', 'Estomac', 'Intestin grêle', 'Gros intestin']) {
+    assert.ok(svg.includes(e), `doit contenir l’étape ${e}`);
+  }
+});
+
+test('système solaire : Soleil et planètes dans l’ordre', () => {
+  const svg = SCHEMAS['systeme-solaire']();
+  const ordre = ['Soleil', 'Mercure', 'Vénus', 'Terre', 'Mars'];
+  var pos = -1;
+  for (const nom of ordre) {
+    const i = svg.indexOf('>' + nom + '<');
+    assert.ok(i > pos, `${nom} doit apparaître, dans l’ordre depuis le Soleil`);
+    pos = i;
+  }
+});
