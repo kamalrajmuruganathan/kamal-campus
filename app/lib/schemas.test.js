@@ -102,3 +102,22 @@ test('cycle de l’eau : quatre étapes et quatre flèches', () => {
   // quatre arcs (un Q par flèche)
   assert.equal((svg.match(/ Q /g) || []).length, 4, 'quatre arcs de liaison');
 });
+
+test('pavé droit : formule du volume et arêtes cachées', () => {
+  const svg = SCHEMAS['pave-droit']();
+  assert.ok(svg.includes('Volume'), 'doit afficher la formule du volume');
+  assert.ok(svg.includes('stroke-dasharray'), 'doit dessiner des arêtes cachées en pointillés');
+});
+
+test('angle : sommet O et deux demi-droites', () => {
+  const svg = SCHEMAS.angle();
+  assert.ok(svg.includes('>O<'), 'doit repérer le sommet O');
+  assert.ok((svg.match(/<line/g) || []).length >= 2, 'au moins deux demi-droites');
+});
+
+test('droite graduée : le zéro et des valeurs signées', () => {
+  const svg = SCHEMAS['droite-graduee']();
+  assert.ok(svg.includes('>0<'), 'doit marquer le zéro');
+  assert.ok(svg.includes('+2') || svg.includes('+1'), 'doit afficher des valeurs positives signées');
+  assert.ok(svg.includes('-3') || svg.includes('-5'), 'doit afficher des valeurs négatives');
+});

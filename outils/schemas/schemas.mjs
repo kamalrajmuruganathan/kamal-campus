@@ -474,6 +474,95 @@ export function cycleEau() {
   return enveloppe(W, H, corps);
 }
 
+/** Pavé droit en perspective cavalière : volume = L × l × h. */
+export function paveDroit({ L = 'L', l = 'l', h = 'h' } = {}) {
+  const W = 440;
+  const H = 295;
+  // face avant
+  const x = 70;
+  const y = 110;
+  const fw = 200;
+  const fh = 110;
+  // décalage de fuite (perspective cavalière ~ 30°, rapport 0,5)
+  const dx = 70;
+  const dy = -55;
+  const A = { x, y: y + fh }; // avant bas gauche
+  const B = { x: x + fw, y: y + fh }; // avant bas droit
+  const C = { x: x + fw, y }; // avant haut droit
+  const D = { x, y }; // avant haut gauche
+  const A2 = { x: A.x + dx, y: A.y + dy };
+  const B2 = { x: B.x + dx, y: B.y + dy };
+  const C2 = { x: C.x + dx, y: C.y + dy };
+  const D2 = { x: D.x + dx, y: D.y + dy };
+  const seg = (p, q, dash) => `<line x1="${nb(p.x)}" y1="${nb(p.y)}" x2="${nb(q.x)}" y2="${nb(q.y)}" stroke="${ENCRE}" stroke-width="2" ${dash ? 'stroke-dasharray="5 4" opacity="0.55"' : ''}/>`;
+  const corps =
+    // arêtes cachées (depuis A2)
+    seg(A2, B2, true) + seg(A2, D2, true) + seg(A2, A, true) +
+    // face arrière visible
+    seg(B2, C2) + seg(C2, D2) +
+    // face avant
+    seg(A, B) + seg(B, C) + seg(C, D) + seg(D, A) +
+    // fuyantes visibles
+    seg(B, B2) + seg(C, C2) + seg(D, D2) +
+    // étiquettes des dimensions
+    `<text x="${nb((A.x + B.x) / 2)}" y="${nb(A.y + 19)}" font-size="15" fill="${ROUGE}" text-anchor="middle" font-style="italic">${L}</text>` +
+    `<text x="${nb(B.x + 12)}" y="${nb((B.y + C.y) / 2 + 4)}" font-size="15" fill="${VERT}" font-style="italic">${h}</text>` +
+    `<text x="${nb((B.x + B2.x) / 2 + 6)}" y="${nb((B.y + B2.y) / 2 + 2)}" font-size="15" fill="${BLEU}" font-style="italic">${l}</text>` +
+    `<text x="${x}" y="${H - 18}" font-size="15" fill="${ENCRE}">Volume = ${L} × ${l} × ${h}</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Angle : deux demi-droites de même origine et un arc. */
+export function angle({ deg = 52 } = {}) {
+  const W = 400;
+  const H = 250;
+  const O = { x: 90, y: 200 };
+  const len = 250;
+  const lenB = 175; // plus courte pour rester dans le cadre
+  const a = (deg * Math.PI) / 180;
+  const A = { x: O.x + len, y: O.y }; // demi-droite horizontale
+  const B = { x: O.x + lenB * Math.cos(a), y: O.y - lenB * Math.sin(a) };
+  const r = 46;
+  const corps =
+    `<line x1="${O.x}" y1="${O.y}" x2="${A.x}" y2="${A.y}" stroke="${ENCRE}" stroke-width="2.4"/>` +
+    `<line x1="${O.x}" y1="${O.y}" x2="${nb(B.x)}" y2="${nb(B.y)}" stroke="${ENCRE}" stroke-width="2.4"/>` +
+    // arc de l'angle
+    `<path d="M ${O.x + r} ${O.y} A ${r} ${r} 0 0 0 ${nb(O.x + r * Math.cos(a))} ${nb(O.y - r * Math.sin(a))}" fill="none" stroke="${ROUGE}" stroke-width="2.2"/>` +
+    // points
+    `<circle cx="${O.x}" cy="${O.y}" r="3.5" fill="${ENCRE}"/>` +
+    `<text x="${O.x - 14}" y="${O.y + 6}" font-size="16" fill="${ENCRE}">O</text>` +
+    `<text x="${A.x - 6}" y="${A.y + 20}" font-size="15" fill="${ATTENUE}">A</text>` +
+    `<text x="${nb(B.x) + 6}" y="${nb(B.y) - 4}" font-size="15" fill="${ATTENUE}">B</text>` +
+    `<text x="${O.x + r + 14}" y="${O.y - 16}" font-size="15" fill="${ROUGE}">angle ÂOB</text>`;
+  return enveloppe(W, H, corps);
+}
+
+/** Droite graduée des nombres relatifs (négatifs, zéro, positifs). */
+export function droiteGraduee({ min = -5, max = 5, points = [-3, 2] } = {}) {
+  const W = 440;
+  const H = 150;
+  const y = 80;
+  const marge = 30;
+  const ox = (v) => marge + ((v - min) / (max - min)) * (W - 2 * marge);
+  let corps =
+    `<line x1="${marge - 10}" y1="${y}" x2="${W - marge + 10}" y2="${y}" stroke="${ENCRE}" stroke-width="2"/>` +
+    `<path d="M ${W - marge + 10} ${y} l -9 -5 v 10 z" fill="${ENCRE}"/>` +
+    `<path d="M ${marge - 10} ${y} l 9 -5 v 10 z" fill="${ENCRE}"/>`;
+  for (let v = min; v <= max; v += 1) {
+    const x = ox(v);
+    const grand = v === 0;
+    corps += `<line x1="${nb(x)}" y1="${y - (grand ? 10 : 6)}" x2="${nb(x)}" y2="${y + (grand ? 10 : 6)}" stroke="${grand ? ENCRE : AXE}" stroke-width="${grand ? 2.4 : 1.4}"/>`;
+    corps += `<text x="${nb(x)}" y="${y + 26}" font-size="13" fill="${grand ? ENCRE : ATTENUE}" text-anchor="middle" font-variant-numeric="tabular-nums">${v > 0 ? '+' + v : v}</text>`;
+  }
+  const couls = [ROUGE, BLEU, VERT];
+  points.forEach((p, i) => {
+    const x = ox(p);
+    corps += `<circle cx="${nb(x)}" cy="${y}" r="5.5" fill="${couls[i % couls.length]}"/>`;
+    corps += `<text x="${nb(x)}" y="${y - 16}" font-size="14" fill="${couls[i % couls.length]}" text-anchor="middle" font-variant-numeric="tabular-nums">${p > 0 ? '+' + p : p}</text>`;
+  });
+  return enveloppe(W, H, corps);
+}
+
 /** Registre : identifiant de schéma → fonction génératrice. */
 export const SCHEMAS = {
   'triangle-rectangle': triangleRectangle,
@@ -490,6 +579,9 @@ export const SCHEMAS = {
   poids,
   atome,
   'cycle-eau': cycleEau,
+  'pave-droit': paveDroit,
+  angle,
+  'droite-graduee': droiteGraduee,
 };
 
 /** Encode un SVG en data-URI base64 utilisable en syntaxe image Markdown. */

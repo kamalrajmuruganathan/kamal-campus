@@ -78,6 +78,15 @@ function choisirSchema(cle, corps = '', matiere = '') {
   if (t(/perimetre|\baire|longueurs-aires|aires-perimetres|aire-perimetre/) && !t(/integral/)) {
     return { id: 'rectangle-aire-perimetre', params: {}, legende: 'Aire et périmètre d’un rectangle : aire = longueur × largeur ; périmètre = 2 × (longueur + largeur).' };
   }
+  if (t(/\bsolide|representation-espace|patron/)) {
+    return { id: 'pave-droit', params: {}, legende: 'Pavé droit en perspective : volume = longueur × largeur × hauteur.' };
+  }
+  if (t(/\bangle/)) {
+    return { id: 'angle', params: {}, legende: 'Un angle est formé par deux demi-droites de même origine (le sommet).' };
+  }
+  if (t(/relatif/)) {
+    return { id: 'droite-graduee', params: {}, legende: 'Droite graduée : les nombres négatifs à gauche de 0, les positifs à droite.' };
+  }
   if (t(/trigonom|cosinus|sinus|tangente/)) {
     return { id: 'cercle-trigo', params: {}, legende: 'Cercle trigonométrique : cosinus sur l’axe des abscisses, sinus sur l’axe des ordonnées.' };
   }
