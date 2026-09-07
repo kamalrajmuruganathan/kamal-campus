@@ -17,6 +17,7 @@ import { badgesNouveaux } from '../../lib/badges';
 import { planifier as planifierSrs } from '../../lib/srs';
 import { ajouterXp as ligueAjouterXp } from '../../lib/ligue';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
+import { majErreurs } from '../../lib/erreurs';
 import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
 import { resynchroniserSiPermis } from '../notifications';
 import { definirVitesseParole, definirVoix } from '../parole';
@@ -139,6 +140,10 @@ export function ProgressionProvider({ children }) {
       });
 
       suivant.ligue = ligueAjouterXp(profil.ligue, res.points, dateLocale(new Date()));
+
+      // Révision des erreurs : les questions ratées entrent en réserve,
+      // les réussies en sortent (voir lib/erreurs).
+      suivant.erreurs = majErreurs(profil.erreurs || [], questions, reponses, matiere);
 
       setProfil(suivant);
       sauverProfil(suivant);

@@ -56,6 +56,9 @@ export function profilVide() {
     srs: {},
     // Ligue hebdomadaire : { semaine, xpSemaine, palier, dernier }
     ligue: {},
+    // Révision des erreurs : réserve des questions ratées, à refaire.
+    // [{ cle, matiere, question }] — les plus récentes en fin de liste.
+    erreurs: [],
   };
 }
 

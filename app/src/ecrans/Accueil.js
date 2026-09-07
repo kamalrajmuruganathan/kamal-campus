@@ -263,6 +263,18 @@ export default function Accueil({ navigation }) {
           <View style={{ height: t.espace.m }} />
           <Carte
             t={t}
+            titre="🎯 Réviser mes erreurs"
+            sousTitre={
+              (profil.erreurs || []).length > 0
+                ? `${profil.erreurs.length} question${profil.erreurs.length > 1 ? 's' : ''} ratée${profil.erreurs.length > 1 ? 's' : ''} à retravailler`
+                : 'Les questions que tu rates reviennent ici pour les refaire'
+            }
+            couleur={t.couleur.erreur}
+            onPress={() => navigation.navigate('ModeErreurs')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
             titre="🗓️ Planning d'étude"
             sousTitre={
               (profil.planning || []).length > 0
