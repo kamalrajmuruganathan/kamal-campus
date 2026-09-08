@@ -45,7 +45,7 @@ export function nettoyerFiche(markdown) {
 }
 
 export default function VisionneuseFiche({ markdown, style }) {
-  const [hauteur, setHauteur] = useState(600);
+  const [hauteur, setHauteur] = useState(64);
   const [pret, setPret] = useState(false);
 
   const html = useMemo(() => {
@@ -67,7 +67,7 @@ export default function VisionneuseFiche({ markdown, style }) {
           try {
             const msg = JSON.parse(e.nativeEvent.data);
             if (msg.type === 'hauteur' && msg.valeur > 0) {
-              setHauteur(msg.valeur + 24);
+              setHauteur(msg.valeur + 6);
               setPret(true);
             }
           } catch {

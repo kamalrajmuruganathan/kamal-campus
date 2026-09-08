@@ -90,7 +90,7 @@ const STYLE_APP = `
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 18px 16px 64px;
+  padding: 10px 14px 12px;
   background: var(--fond);
   color: var(--texte);
   font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -173,17 +173,29 @@ const gabarit = `<!doctype html>
       throwOnError: false,
     });
   }
-  // Signale la hauteur du document à React Native, pour dimensionner la WebView.
+  // Signale la hauteur du CONTENU à React Native, pour dimensionner la WebView.
+  // On mesure le bloc #contenu (pas documentElement, qui renvoie la hauteur de
+  // la WebView elle-même quand le contenu est court) et on ajoute les marges du
+  // body. On re-signale après le rendu des formules (les polices KaTeX peuvent
+  // recharger et modifier la hauteur).
+  function hauteurContenu() {
+    var c = document.getElementById('contenu');
+    var s = getComputedStyle(document.body);
+    var marges = (parseFloat(s.paddingTop) || 0) + (parseFloat(s.paddingBottom) || 0);
+    var h = c ? c.getBoundingClientRect().height : document.body.scrollHeight;
+    return Math.ceil(h + marges);
+  }
   function signalerHauteur() {
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(JSON.stringify({
         type: 'hauteur',
-        valeur: document.documentElement.scrollHeight,
+        valeur: hauteurContenu(),
       }));
     }
   }
   window.addEventListener('load', signalerHauteur);
-  setTimeout(signalerHauteur, 300);
+  setTimeout(signalerHauteur, 120);
+  setTimeout(signalerHauteur, 500);
 </script>
 </body></html>`;
 
