@@ -1,23 +1,9 @@
 name: Déployer Kamal Campus (site + appli web)
 
-# Republie automatiquement le site vitrine ET la version web de l'appli
-# à chaque push. À placer dans le dépôt de l'appli, à : .github/workflows/deploy-pages.yml
-#
-# AVANT LE PREMIER RUN, dans GitHub :
-#   Settings → Pages → Build and deployment → Source = "GitHub Actions"
-#
-# ⚠️ Adapte 2 choses plus bas :
-#   1) la branche (ligne "branches:") — mets celle que tu déploies.
-#   2) "working-directory: app" — le dossier qui contient app.json / package.json d'Expo.
-#      (Si Expo est à la racine du dépôt, remplace "app" par "." partout.)
-#
-# ⚠️ Et dans app.json, règle le chemin de base pour un sous-dossier :
-#   "expo": { "experiments": { "baseUrl": "/NOM-DU-DEPOT/app" } }
-
 on:
   push:
-    branches: [ upgrade-sdk57 ]        # ← remplace par ta branche si besoin (ex. upgrade-sdk57)
-  workflow_dispatch:           # permet aussi de lancer à la main depuis l'onglet Actions
+    branches: [ upgrade-sdk57 ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -40,27 +26,31 @@ jobs:
         with:
           node-version: 20
 
-      - name: Installer les dépendances
+      - name: Installer les dépendances (appli)
         working-directory: app
-        run: npm ci || npm install    # npm ci si tu as un package-lock.json, sinon npm install
+        continue-on-error: true
+        run: npm ci || npm install
 
-      - name: Exporter la version web
+      - name: Exporter la version web (appli)
         working-directory: app
+        continue-on-error: true
         run: npx expo export --platform web
-        # → produit le dossier app/dist/
 
-      - name: Assembler le site (vitrine + appli)
+      - name: Assembler le site (vitrine + appli si dispo)
         run: |
           set -e
-          mkdir -p site/app
-          # -- la vitrine à la racine (toutes les pages html : accueil, confidentialité, parité) --
+          mkdir -p site
           cp web-vitrine/*.html site/
-          # -- l'appli web dans /app --
-          cp -r app/dist/* site/app/
-          # -- .nojekyll : sinon GitHub Pages ignore les dossiers _expo/ (écran blanc) --
           touch site/.nojekyll
-          touch site/app/.nojekyll
-          echo "Contenu assemblé :" && find site -maxdepth 2 -type d
+          if [ -d app/dist ] && [ -n "$(ls -A app/dist 2>/dev/null)" ]; then
+            mkdir -p site/app
+            cp -r app/dist/* site/app/
+            touch site/app/.nojekyll
+            echo "Vitrine + appli web assemblees."
+          else
+            echo "Appli web pas encore exportee -> vitrine seule (normal en Phase A)."
+          fi
+          echo "Contenu du site :" && find site -maxdepth 2 -type f | sort
 
       - name: Préparer l'artefact Pages
         uses: actions/upload-pages-artifact@v3
