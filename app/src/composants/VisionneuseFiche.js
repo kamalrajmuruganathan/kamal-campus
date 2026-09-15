@@ -50,7 +50,7 @@ export default function VisionneuseFiche({ markdown, style }) {
 
   const html = useMemo(() => {
     const corps = md.render(nettoyerFiche(markdown));
-    return GABARIT_HTML.replace('__HTML__', JSON.stringify(corps));
+    return GABARIT_HTML.replace('__HTML__', () => JSON.stringify(corps));
   }, [markdown]);
 
   return (
