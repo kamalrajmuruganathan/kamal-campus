@@ -1,0 +1,79 @@
+name: Déployer Kamal Campus (site + appli web)
+
+# Republie automatiquement le site vitrine ET la version web de l'appli
+# à chaque push. À placer dans le dépôt de l'appli, à : .github/workflows/deploy-pages.yml
+#
+# AVANT LE PREMIER RUN, dans GitHub :
+#   Settings → Pages → Build and deployment → Source = "GitHub Actions"
+#
+# ⚠️ Adapte 2 choses plus bas :
+#   1) la branche (ligne "branches:") — mets celle que tu déploies.
+#   2) "working-directory: app" — le dossier qui contient app.json / package.json d'Expo.
+#      (Si Expo est à la racine du dépôt, remplace "app" par "." partout.)
+#
+# ⚠️ Et dans app.json, règle le chemin de base pour un sous-dossier :
+#   "expo": { "experiments": { "baseUrl": "/NOM-DU-DEPOT/app" } }
+
+on:
+  push:
+    branches: [ upgrade-sdk57 ]        # ← remplace par ta branche si besoin (ex. upgrade-sdk57)
+  workflow_dispatch:           # permet aussi de lancer à la main depuis l'onglet Actions
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Installer les dépendances
+        working-directory: app
+        run: npm ci || npm install    # npm ci si tu as un package-lock.json, sinon npm install
+
+      - name: Exporter la version web
+        working-directory: app
+        run: npx expo export --platform web
+        # → produit le dossier app/dist/
+
+      - name: Assembler le site (vitrine + appli)
+        run: |
+          set -e
+          mkdir -p site/app
+          # -- la vitrine à la racine (toutes les pages html : accueil, confidentialité, parité) --
+          cp web-vitrine/*.html site/
+          # -- l'appli web dans /app --
+          cp -r app/dist/* site/app/
+          # -- .nojekyll : sinon GitHub Pages ignore les dossiers _expo/ (écran blanc) --
+          touch site/.nojekyll
+          touch site/app/.nojekyll
+          echo "Contenu assemblé :" && find site -maxdepth 2 -type d
+
+      - name: Préparer l'artefact Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publier sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
