@@ -18,7 +18,8 @@ import { planifier as planifierSrs } from '../../lib/srs';
 import { ajouterXp as ligueAjouterXp } from '../../lib/ligue';
 import { appliquerXpJour, dateLocale } from '../../lib/serie';
 import { majErreurs } from '../../lib/erreurs';
-import { chargerProfil, sauverProfil, effacerProfil, profilVide } from './stockage';
+import { chargerProfil, sauverProfil, effacerProfil, profilVide, synchroniser, definirUtilisateur } from './stockage';
+import { useAuth } from '../cloud/AuthContexte';
 import { resynchroniserSiPermis } from '../notifications';
 import { definirVitesseParole, definirVoix } from '../parole';
 
@@ -47,10 +48,14 @@ function calculerSerie(profilBase, points) {
 export function ProgressionProvider({ children }) {
   const [profil, setProfil] = useState(profilVide());
   const [charge, setCharge] = useState(false);
+  const { utilisateur } = useAuth();
+  const idUtilisateur = utilisateur?.id ?? null;
 
   useEffect(() => {
     let vivant = true;
-    chargerProfil().then((p) => {
+    definirUtilisateur(idUtilisateur);
+    // Charge le local PUIS fusionne avec le cloud (aucune perte de progression).
+    synchroniser().then((p) => {
       if (vivant) {
         setProfil(p);
         setCharge(true);
@@ -64,7 +69,7 @@ export function ProgressionProvider({ children }) {
     return () => {
       vivant = false;
     };
-  }, []);
+  }, [idUtilisateur]);
 
   // Garde la vitesse de lecture à voix haute alignée sur la préférence.
   useEffect(() => {

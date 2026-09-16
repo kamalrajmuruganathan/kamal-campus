@@ -1,13 +1,33 @@
 /**
- * Persistance de la progression sur l'appareil (hors ligne, sans compte).
+ * Persistance de la progression : locale (hors ligne) + synchro cloud (Supabase).
  *
- * On stocke un seul objet JSON dans AsyncStorage. Toute la lecture/écriture
- * passe par ici : les écrans ne touchent jamais au stockage directement.
+ * Modèle « offline-first » :
+ *  - toute écriture va d'abord en local (source de vérité de la session) ;
+ *  - puis, si un utilisateur est connecté, elle est poussée vers le cloud
+ *    (avec un léger délai anti-spam) ;
+ *  - à la connexion, `synchroniser()` tire le cloud et le FUSIONNE avec le local
+ *    (aucune perte), puis renvoie le profil fusionné.
+ *
+ * La clé locale est propre à chaque compte : `.../v1/<userId>`.
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { supabase } from '../cloud/supabase';
+import { fusionnerProfils } from '../cloud/fusion';
 
-const CLE = 'kamal-campus/progression/v1';
+const PREFIXE = 'kamal-campus/progression/v1';
+
+let utilisateurCourant = null; // userId de Supabase, ou null (invité)
+let minuteurPush = null;
+
+/** Définit l'utilisateur actif (appelé au démarrage du provider). */
+export function definirUtilisateur(userId) {
+  utilisateurCourant = userId || null;
+}
+
+function cle() {
+  return utilisateurCourant ? `${PREFIXE}/${utilisateurCourant}` : PREFIXE;
+}
 
 /** Profil vierge — la forme de référence de toutes les données de progression. */
 export function profilVide() {
@@ -49,15 +69,9 @@ export function profilVide() {
     dernierChapitre: null, // { id, titre } — pour « reprendre » sur l'accueil
     rappelActif: false,
     rappelHeure: '18:00', // 'HH:MM'
-    // Emploi du temps de révision : créneaux hebdomadaires qui déclenchent une
-    // notification. { id, jour:1..7 (lun..dim), heure:'HH:MM', matiere }
     planning: [],
-    // Répétition espacée : état par carte. { [cle]: { rep, interval, ease, due } }
     srs: {},
-    // Ligue hebdomadaire : { semaine, xpSemaine, palier, dernier }
     ligue: {},
-    // Révision des erreurs : réserve des questions ratées, à refaire.
-    // [{ cle, matiere, question }] — les plus récentes en fin de liste.
     erreurs: [],
   };
 }
@@ -80,10 +94,10 @@ function normaliser(brut) {
   };
 }
 
-/** Charge le profil ; renvoie un profil vierge si rien n'est stocké ou en cas d'erreur. */
+/** Charge le profil LOCAL ; renvoie un profil vierge si rien ou erreur. */
 export async function chargerProfil() {
   try {
-    const texte = await AsyncStorage.getItem(CLE);
+    const texte = await AsyncStorage.getItem(cle());
     if (!texte) return profilVide();
     return normaliser(JSON.parse(texte));
   } catch {
@@ -91,20 +105,79 @@ export async function chargerProfil() {
   }
 }
 
-/** Enregistre le profil. Les erreurs d'écriture sont avalées (mode hors ligne, best-effort). */
-export async function sauverProfil(profil) {
+async function sauverLocal(profil) {
   try {
-    await AsyncStorage.setItem(CLE, JSON.stringify(profil));
+    await AsyncStorage.setItem(cle(), JSON.stringify(profil));
   } catch {
     // Pas d'espace / stockage indisponible : on ne casse pas l'appli pour ça.
   }
 }
 
-/** Efface toute la progression (bouton « réinitialiser »). */
+/** Pousse le profil vers le cloud (silencieux si hors ligne ou non connecté). */
+async function pousserCloud(profil) {
+  if (!utilisateurCourant) return;
+  try {
+    await supabase.from('profils').upsert({ user_id: utilisateurCourant, data: profil });
+  } catch {
+    // Hors ligne : le prochain enregistrement réessaiera. Le local reste la référence.
+  }
+}
+
+/** Programme un envoi cloud différé (anti-spam : ~1,5 s après la dernière écriture). */
+function planifierPushCloud(profil) {
+  if (!utilisateurCourant) return;
+  if (minuteurPush) clearTimeout(minuteurPush);
+  minuteurPush = setTimeout(() => {
+    minuteurPush = null;
+    pousserCloud(profil);
+  }, 1500);
+}
+
+/** Enregistre le profil : local immédiat + push cloud différé. */
+export async function sauverProfil(profil) {
+  await sauverLocal(profil);
+  planifierPushCloud(profil);
+}
+
+/** Lit le profil stocké dans le cloud pour l'utilisateur courant (ou null). */
+async function tirerCloud() {
+  if (!utilisateurCourant) return null;
+  try {
+    const { data, error } = await supabase
+      .from('profils')
+      .select('data')
+      .eq('user_id', utilisateurCourant)
+      .maybeSingle();
+    if (error || !data) return null;
+    return normaliser(data.data);
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Synchronise à la connexion : fusionne local + cloud (aucune perte),
+ * sauvegarde le résultat en local et le repousse au cloud. Renvoie le profil final.
+ */
+export async function synchroniser() {
+  const local = await chargerProfil();
+  const cloud = await tirerCloud();
+  if (!cloud) {
+    pousserCloud(local);
+    return local;
+  }
+  const fusionne = fusionnerProfils(local, cloud);
+  await sauverLocal(fusionne);
+  pousserCloud(fusionne);
+  return fusionne;
+}
+
+/** Efface toute la progression (bouton « réinitialiser ») — local + cloud. */
 export async function effacerProfil() {
   try {
-    await AsyncStorage.removeItem(CLE);
+    await AsyncStorage.removeItem(cle());
   } catch {
     // idem
   }
+  pousserCloud(profilVide());
 }
