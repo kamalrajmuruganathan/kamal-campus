@@ -14,8 +14,10 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { theme } from './src/theme';
 import { ProgressionProvider, useProgression } from './src/progression/Contexte';
+import { AuthProvider, useAuth } from './src/cloud/AuthContexte';
 import { useLangue } from './src/i18n';
 import Onboarding from './src/ecrans/Onboarding';
+import Connexion from './src/ecrans/Connexion';
 import Accueil from './src/ecrans/Accueil';
 import Chapitres from './src/ecrans/Chapitres';
 import Chapitre from './src/ecrans/Chapitre';
@@ -140,12 +142,27 @@ function Navigation() {
   );
 }
 
+function PortailAuth() {
+  const { session, chargement } = useAuth();
+  if (chargement) {
+    return <View style={{ flex: 1 }} />;
+  }
+  if (!session) {
+    return <Connexion />;
+  }
+  return (
+    <ProgressionProvider>
+      <Navigation />
+    </ProgressionProvider>
+  );
+}
+
 export default function App() {
   return (
     <SafeAreaProvider>
-      <ProgressionProvider>
-        <Navigation />
-      </ProgressionProvider>
+      <AuthProvider>
+        <PortailAuth />
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }
