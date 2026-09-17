@@ -2,9 +2,10 @@
 # Publie la version actuelle de upgrade-sdk57 sur le site (via main -> Netlify)
 set -e
 
-# Refuse de publier s'il reste des changements non commités
-if [ -n "$(git status --porcelain)" ]; then
-  echo "⚠️  Tu as des changements non enregistres."
+# Refuse de publier seulement s'il y a des modifs SUIVIES non enregistrees
+# (les fichiers non suivis / non commites sont ignores)
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  echo "⚠️  Tu as des modifications non enregistrees."
   echo "    Fais d'abord :  git add -A && git commit -m \"ton message\""
   exit 1
 fi
