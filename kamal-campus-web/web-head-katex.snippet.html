@@ -1,0 +1,22 @@
+<!--
+  À COLLER dans le <head> du template web d'Expo.
+
+  Pour l'obtenir (dans le dossier de l'appli, une seule fois) :
+      npx expo customize web/index.html
+  Cela crée web/index.html. Ouvre-le et colle les lignes ci-dessous dans <head>.
+
+  Ce CSS affiche correctement les formules KaTeX de tes fiches sur le web.
+  (Le CSS suffit si tes fiches contiennent déjà le HTML des formules pré-rendu,
+   ce qui est le cas de ton pipeline .md. Si jamais les formules sont générées
+   côté client, décommente aussi la ligne du script katex.min.js.)
+-->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+      integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+      crossorigin="anonymous">
+
+<!-- Décommente SEULEMENT si les formules sont rendues côté client :
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+        integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+        crossorigin="anonymous"></script>
+-->

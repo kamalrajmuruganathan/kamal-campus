@@ -5,7 +5,7 @@
  * Ensuite : Accueil → Chapitres → Chapitre → QCM, plus les accès directs.
  */
 
-import { View, useColorScheme } from 'react-native';
+import { View, Text, useColorScheme } from 'react-native';
 import { useSombre } from './src/useSombre';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -50,6 +50,7 @@ import Podcast from './src/ecrans/Podcast';
 import Annales from './src/ecrans/Annales';
 import Planning from './src/ecrans/Planning';
 import APropos from './src/ecrans/APropos';
+import Amis from './src/ecrans/Amis';
 
 const Pile = createNativeStackNavigator();
 
@@ -111,7 +112,16 @@ function Navigation() {
         <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
         <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
         <Pile.Screen name="BacBlanc" component={BacBlanc} options={{ title: 'Bac blanc / brevet blanc' }} />
-        <Pile.Screen name="Profil" component={Profil} options={{ title: L('nav.progression') }} />
+        <Pile.Screen
+          name="Profil"
+          component={Profil}
+          options={({ navigation }) => ({
+            title: L('nav.progression'),
+            headerRight: () => (
+              <Text onPress={() => navigation.navigate('Amis')} style={{ fontSize: 20, paddingHorizontal: 4 }}>👥</Text>
+            ),
+          })}
+        />
         <Pile.Screen name="Badges" component={Badges} options={{ title: L('nav.badges') }} />
         <Pile.Screen name="Enigmes" component={Enigmes} options={{ title: L('nav.enigmes') }} />
         <Pile.Screen
@@ -137,6 +147,7 @@ function Navigation() {
         <Pile.Screen name="Annales" component={Annales} options={{ title: 'Annales — liens' }} />
         <Pile.Screen name="Planning" component={Planning} options={{ title: 'Planning d’étude' }} />
         <Pile.Screen name="APropos" component={APropos} options={{ title: L('nav.apropos') }} />
+        <Pile.Screen name="Amis" component={Amis} options={{ title: 'Amis' }} />
       </Pile.Navigator>
     </NavigationContainer>
   );
