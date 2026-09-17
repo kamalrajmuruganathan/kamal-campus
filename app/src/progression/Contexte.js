@@ -54,20 +54,30 @@ export function ProgressionProvider({ children }) {
   useEffect(() => {
     let vivant = true;
     definirUtilisateur(idUtilisateur);
-    // Charge le local PUIS fusionne avec le cloud (aucune perte de progression).
-    synchroniser().then((p) => {
-      if (vivant) {
-        setProfil(p);
-        setCharge(true);
-        // Restaure le planning / rappel après un redémarrage de l'OS (sans
-        // demander de permission : ne fait rien si elle n'est pas déjà accordée).
-        resynchroniserSiPermis(p);
-        definirVitesseParole(p.vitesseParole);
-        definirVoix(p.voix);
-      }
-    });
+
+    const appliquer = (p) => {
+      if (!vivant || !p) return;
+      setProfil(p);
+      setCharge(true);
+      // Restaure le planning / rappel après un redémarrage de l'OS (sans
+      // demander de permission : ne fait rien si elle n'est pas déjà accordée).
+      resynchroniserSiPermis(p);
+      definirVitesseParole(p.vitesseParole);
+      definirVoix(p.voix);
+    };
+
+    // Filet anti-page-blanche : si la synchro cloud traine (reseau lent/coupe),
+    // on affiche quand meme l'appli avec le profil local au bout de 8 s.
+    const secours = setTimeout(() => { chargerProfil().then(appliquer); }, 8000);
+
+    synchroniser()
+      .then(appliquer)
+      .catch(() => { chargerProfil().then(appliquer); })
+      .finally(() => clearTimeout(secours));
+
     return () => {
       vivant = false;
+      clearTimeout(secours);
     };
   }, [idUtilisateur]);
 
