@@ -13,6 +13,7 @@ import { View, Text, ScrollView, Pressable, Alert, StyleSheet } from 'react-nati
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme, couleurMatiere } from '../theme';
 import { useProgression } from '../progression/Contexte';
+import { useAuth } from '../cloud/AuthContexte';
 import { niveauPourXp } from '../../lib/progression';
 import { evaluerBadges } from '../../lib/badges';
 import { serieAffichee, dateLocale } from '../../lib/serie';
@@ -83,6 +84,7 @@ function Case({ t, valeur, libelle }) {
 export default function Profil({ navigation }) {
   const t = useTheme();
   const { profil, reinitialiser, definirReglages } = useProgression();
+  const { seDeconnecter, utilisateur } = useAuth();
   const { L } = useLangue();
 
   const jour = dateLocale(new Date());
@@ -132,6 +134,17 @@ export default function Profil({ navigation }) {
   const maxMatiere = matieres.reduce((m, [, v]) => Math.max(m, v), 0);
 
   const vierge = profil.qcmTermines === 0;
+
+  const demanderDeconnexion = () => {
+    Alert.alert(
+      'Se déconnecter ?',
+      'Tu pourras te reconnecter quand tu veux. Ta progression reste synchronisée sur ton compte.',
+      [
+        { text: 'Annuler', style: 'cancel' },
+        { text: 'Se déconnecter', style: 'destructive', onPress: () => seDeconnecter() },
+      ],
+    );
+  };
 
   const demanderReset = () => {
     Alert.alert(
@@ -732,6 +745,28 @@ export default function Profil({ navigation }) {
             </Pressable>
           </>
         )}
+        {/* Compte connecté */}
+        <View style={{ marginTop: t.espace.xl, padding: t.espace.m, backgroundColor: t.couleur.surface, borderRadius: t.rayon.m }}>
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>Compte</Text>
+          {utilisateur?.email ? (
+            <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 2 }}>
+              Connecté : {utilisateur.email}
+            </Text>
+          ) : null}
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: 6, lineHeight: 18 }}>
+            Ta progression est synchronisée sur ce compte, sur tous tes appareils.
+          </Text>
+          <Pressable
+            onPress={demanderDeconnexion}
+            accessibilityRole="button"
+            style={({ pressed }) => [
+              st.bouton,
+              { backgroundColor: t.couleur.fond, borderWidth: 1, borderColor: t.couleur.trait, borderRadius: t.rayon.m, marginTop: t.espace.m, opacity: pressed ? 0.7 : 1 },
+            ]}
+          >
+            <Text style={{ color: t.couleur.texte, fontSize: t.police.normale, fontWeight: '650' }}>Se déconnecter</Text>
+          </Pressable>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
