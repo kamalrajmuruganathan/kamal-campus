@@ -139,19 +139,25 @@ export async function sauverProfil(profil) {
   planifierPushCloud(profil);
 }
 
-/** Lit le profil stocké dans le cloud pour l'utilisateur courant (ou null). */
+/**
+ * Lit le profil cloud de l'utilisateur courant. Statut explicite :
+ *  - { statut: 'ok', profil }  : une ligne existe
+ *  - { statut: 'vide' }        : aucune ligne (vraiment premier acces)
+ *  - { statut: 'echec' }       : lecture impossible (reseau/erreur) -> NE PAS ecraser
+ */
 async function tirerCloud() {
-  if (!utilisateurCourant) return null;
+  if (!utilisateurCourant) return { statut: 'echec' };
   try {
     const { data, error } = await supabase
       .from('profils')
       .select('data')
       .eq('user_id', utilisateurCourant)
       .maybeSingle();
-    if (error || !data) return null;
-    return normaliser(data.data);
+    if (error) return { statut: 'echec' };
+    if (!data) return { statut: 'vide' };
+    return { statut: 'ok', profil: normaliser(data.data) };
   } catch {
-    return null;
+    return { statut: 'echec' };
   }
 }
 
@@ -161,12 +167,17 @@ async function tirerCloud() {
  */
 export async function synchroniser() {
   const local = await chargerProfil();
-  const cloud = await tirerCloud();
-  if (!cloud) {
+  const res = await tirerCloud();
+  if (res.statut === 'echec') {
+    // Lecture cloud impossible : on NE touche PAS au cloud (jamais d'ecrasement
+    // par un profil vide). Le local reste la reference, on reessaiera plus tard.
+    return local;
+  }
+  if (res.statut === 'vide') {
     pousserCloud(local);
     return local;
   }
-  const fusionne = fusionnerProfils(local, cloud);
+  const fusionne = fusionnerProfils(local, res.profil);
   await sauverLocal(fusionne);
   pousserCloud(fusionne);
   return fusionne;
