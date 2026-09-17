@@ -4,7 +4,7 @@
  * en dur pour rester lisible en clair comme en sombre.
  */
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   View, Text, TextInput, Pressable, ActivityIndicator,
   useColorScheme, KeyboardAvoidingView, Platform, ScrollView,
@@ -37,6 +37,7 @@ export default function Connexion() {
   const [enCours, setEnCours] = useState(false);
   const [erreur, setErreur] = useState('');
   const [info, setInfo] = useState('');
+  const refMdp = useRef(null);
 
   const inscription = mode === 'inscription';
 
@@ -99,16 +100,21 @@ export default function Connexion() {
               autoCapitalize="none"
               autoCorrect={false}
               keyboardType="email-address"
+              returnKeyType="next"
+              onSubmitEditing={() => { if (refMdp.current) refMdp.current.focus(); }}
               style={{ borderWidth: 1, borderColor: c.trait, borderRadius: 10, padding: 12, color: c.encre, fontSize: 16, marginBottom: 14 }}
             />
 
             <Text style={{ fontSize: 12, fontWeight: '700', color: c.doux, marginBottom: 6 }}>MOT DE PASSE</Text>
             <TextInput
+              ref={refMdp}
               value={mdp}
               onChangeText={setMdp}
               placeholder="6 caractères minimum"
               placeholderTextColor={c.doux}
               secureTextEntry
+              returnKeyType="go"
+              onSubmitEditing={valider}
               style={{ borderWidth: 1, borderColor: c.trait, borderRadius: 10, padding: 12, color: c.encre, fontSize: 16 }}
             />
 
