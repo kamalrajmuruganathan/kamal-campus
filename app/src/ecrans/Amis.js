@@ -7,7 +7,7 @@ import {
   repondreDemande, supprimerAmi, listerAmis, listerDemandesRecues,
 } from '../cloud/social';
 
-export default function Amis() {
+export default function Amis({ navigation }) {
   const sombre = useSombre();
   const C = theme(sombre).couleur;
 
@@ -112,9 +112,9 @@ export default function Amis() {
         {amis.length === 0 ? (
           <Text style={{ color: C.texte, opacity: 0.6, fontSize: 13 }}>Pas encore d'amis. Cherche un pseudo ci-dessus pour envoyer une demande.</Text>
         ) : amis.map((a) => (
-          <Pressable key={a.amitieId} onLongPress={() => confirmerSuppr(a)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 }}>
+          <Pressable key={a.amitieId} onPress={() => navigation.navigate('Discussion', { amiId: a.ami.id, pseudo: a.ami.pseudo })} onLongPress={() => confirmerSuppr(a)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 10 }}>
             <Text style={{ color: C.texte, fontSize: 15 }}>{a.ami.avatar ?? '🎓'} {a.ami.pseudo}</Text>
-            <Text style={{ color: C.texte, opacity: 0.5, fontSize: 12 }}>appui long = retirer</Text>
+            <Text style={{ color: C.accent, fontSize: 13, fontWeight: '700' }}>Discuter ›</Text>
           </Pressable>
         ))}
       </View>

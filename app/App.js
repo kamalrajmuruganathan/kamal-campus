@@ -1,8 +1,5 @@
 /**
  * Kamal Campus — point d'entrée.
- *
- * Au premier lancement, l'onboarding s'affiche (prénom, classe, objectif).
- * Ensuite : Accueil → Chapitres → Chapitre → QCM, plus les accès directs.
  */
 
 import { View, Text, useColorScheme } from 'react-native';
@@ -51,6 +48,7 @@ import Annales from './src/ecrans/Annales';
 import Planning from './src/ecrans/Planning';
 import APropos from './src/ecrans/APropos';
 import Amis from './src/ecrans/Amis';
+import Discussion from './src/ecrans/Discussion';
 
 const Pile = createNativeStackNavigator();
 
@@ -72,8 +70,6 @@ function Navigation() {
     },
   };
 
-  // Tant que le profil n'est pas chargé, on affiche un fond neutre (évite de
-  // faire clignoter l'accueil avant de savoir si l'onboarding est à montrer).
   if (!charge) {
     return <View style={{ flex: 1, backgroundColor: t.couleur.fond }} />;
   }
@@ -91,23 +87,11 @@ function Navigation() {
       >
         <Pile.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
         <Pile.Screen name="Accueil" component={Accueil} options={{ headerShown: false }} />
-        <Pile.Screen
-          name="Chapitres"
-          component={Chapitres}
-          options={({ route }) => ({ title: route.params?.titre ?? 'Chapitres' })}
-        />
-        <Pile.Screen
-          name="Chapitre"
-          component={Chapitre}
-          options={({ route }) => ({ title: route.params?.titre ?? 'Chapitre' })}
-        />
+        <Pile.Screen name="Chapitres" component={Chapitres} options={({ route }) => ({ title: route.params?.titre ?? 'Chapitres' })} />
+        <Pile.Screen name="Chapitre" component={Chapitre} options={({ route }) => ({ title: route.params?.titre ?? 'Chapitre' })} />
         <Pile.Screen name="Exercices" component={Exercices} options={{ title: 'Exercices' }} />
         <Pile.Screen name="Flashcards" component={Flashcards} options={{ title: 'Cartes de révision' }} />
-        <Pile.Screen
-          name="Qcm"
-          component={Qcm}
-          options={({ route }) => ({ title: route.params?.titre ?? 'QCM' })}
-        />
+        <Pile.Screen name="Qcm" component={Qcm} options={({ route }) => ({ title: route.params?.titre ?? 'QCM' })} />
         <Pile.Screen name="Outils" component={Outils} options={{ title: 'Outils de calcul' }} />
         <Pile.Screen name="Formulaires" component={Formulaires} options={{ title: 'Formulaires' }} />
         <Pile.Screen name="Sujets" component={Sujets} options={{ title: 'Sujets type bac / brevet' }} />
@@ -124,11 +108,7 @@ function Navigation() {
         />
         <Pile.Screen name="Badges" component={Badges} options={{ title: L('nav.badges') }} />
         <Pile.Screen name="Enigmes" component={Enigmes} options={{ title: L('nav.enigmes') }} />
-        <Pile.Screen
-          name="LecteurEnigme"
-          component={LecteurEnigme}
-          options={({ route }) => ({ title: route.params?.titre ?? L('nav.enigmes') })}
-        />
+        <Pile.Screen name="LecteurEnigme" component={LecteurEnigme} options={({ route }) => ({ title: route.params?.titre ?? L('nav.enigmes') })} />
         <Pile.Screen name="LecteurAllumettes" component={LecteurAllumettes} options={{ title: 'Allumettes' }} />
         <Pile.Screen name="Resolveur" component={Resolveur} options={{ title: L('nav.resolveur') }} />
         <Pile.Screen name="Recherche" component={Recherche} options={{ title: L('nav.recherche') }} />
@@ -148,6 +128,7 @@ function Navigation() {
         <Pile.Screen name="Planning" component={Planning} options={{ title: 'Planning d’étude' }} />
         <Pile.Screen name="APropos" component={APropos} options={{ title: L('nav.apropos') }} />
         <Pile.Screen name="Amis" component={Amis} options={{ title: 'Amis' }} />
+        <Pile.Screen name="Discussion" component={Discussion} options={({ route }) => ({ title: route.params?.pseudo ?? 'Discussion' })} />
       </Pile.Navigator>
     </NavigationContainer>
   );
