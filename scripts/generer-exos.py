@@ -232,11 +232,102 @@ def gen_calcul_litteral():
     return [exo(i+1,*t) for i,t in enumerate(E)]
 
 # ---------------- REGISTRE ----------------
+# ---------------- PROPORTIONNALITE (3e) ----------------
+def gen_proportionnalite():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    for (a,b,c) in [(3,12,5),(4,10,6),(2,7,9),(5,8,4),(6,15,2),(3,5,8),(7,14,3),(4,9,5),(2,11,6),(5,6,7),(8,12,3),(3,7,10),(4,6,9),(2,9,7)]:
+        x=b*c/a
+        add("application","quatrieme-proportionnelle",
+            f"Dans un tableau de proportionnalité, {a} correspond à {b}. À quoi correspond {c} ?",
+            [f"Produit en croix : valeur $= \\dfrac{{{b} \\times {c}}}{{{a}}} = {fr(x)}$."], f"${fr(x)}$")
+    for (p,q) in [(20,80),(15,200),(25,64),(30,50),(12,150),(40,35),(5,240),(75,16),(60,45),(8,125),(50,86),(35,120)]:
+        v=p*q/100
+        add("application","pourcentage", f"Calculer {p}% de {q}.",
+            [f"${p}\\% \\text{{ de }} {q} = \\dfrac{{{p}}}{{100}} \\times {q} = {fr(v)}$."], f"${fr(v)}$")
+    for (p,q,sens) in [(10,50,"aug"),(20,80,"red"),(15,200,"aug"),(30,120,"red"),(5,60,"aug"),(25,40,"red"),(8,250,"aug"),(40,90,"red")]:
+        coef = 1+(p/100 if sens=="aug" else -p/100); v=q*coef
+        mot=f"augmente de {p}%" if sens=="aug" else f"diminue de {p}%"; op="+" if sens=="aug" else "-"
+        add("intermediaire","pourcentage-evolution",
+            f"Un article coûte {q} €. Son prix {mot}. Quel est le nouveau prix ?",
+            [f"Coefficient multiplicateur : $1 {op} \\dfrac{{{p}}}{{100}} = {fr(coef,2)}$.",
+             f"Nouveau prix $= {q} \\times {fr(coef,2)} = {fr(v)}$ €."], f"${fr(v)}$ €")
+    for (e,d) in [(100,3),(200,5),(50,8),(500,2),(25,12),(1000,4),(150,6),(2000,3)]:
+        reel=e*d
+        add("approfondissement","echelle",
+            f"Sur une carte à l'échelle $\\dfrac{{1}}{{{e}}}$, une distance mesure {d} cm. Quelle est la distance réelle (en cm) ?",
+            [f"La réalité est {e} fois plus grande : ${d} \\times {e} = {reel}$ cm."], f"${reel}$ cm")
+    for (dist,temps) in [(120,2),(150,3),(90,2),(200,4),(60,1),(180,3),(75,3),(240,4)]:
+        v=dist/temps
+        add("intermediaire","vitesse-moyenne",
+            f"Un véhicule parcourt {dist} km en {temps} h. Calculer sa vitesse moyenne.",
+            [f"$v = \\dfrac{{\\text{{distance}}}}{{\\text{{temps}}}} = \\dfrac{{{dist}}}{{{temps}}} = {fr(v)}$ km/h."], f"${fr(v)}$ km/h")
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+# ---------------- RACINE CARREE (3e) ----------------
+def gen_racine_carree():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    for n in [16,25,49,81,100,144,169,196,225,64,121,256,4,9,36,400]:
+        r=math.isqrt(n)
+        add("application","calcul-racine", f"Calculer $\\sqrt{{{n}}}$.", [f"$\\sqrt{{{n}}} = {r}$ car ${r}^2 = {n}$."], f"${r}$")
+    for n in [8,12,18,20,50,32,27,48,72,45,75,98,28,44,52,63]:
+        a,b=simplifie_racine(n)
+        add("intermediaire","simplifier-racine", f"Écrire $\\sqrt{{{n}}}$ sous la forme $a\\sqrt{{b}}$.",
+            [f"$\\sqrt{{{n}}} = \\sqrt{{{a*a} \\times {b}}} = {a}\\sqrt{{{b}}}$."], f"${a}\\sqrt{{{b}}}$")
+    for (a,b) in [(2,8),(3,12),(5,5),(2,18),(6,6),(2,32),(5,20),(3,27)]:
+        p=a*b; r=math.isqrt(p)
+        rep=f"${r}$" if r*r==p else f"$\\sqrt{{{p}}}$"
+        tail=(f" = {r}$." if r*r==p else "$.")
+        add("intermediaire","produit-racines", f"Calculer $\\sqrt{{{a}}} \\times \\sqrt{{{b}}}$.",
+            [f"$\\sqrt{{{a}}} \\times \\sqrt{{{b}}} = \\sqrt{{{a} \\times {b}}} = \\sqrt{{{p}}}$"+tail], rep)
+    for n in [10,20,30,45,60,75,90,110,135,150]:
+        r=math.isqrt(n)
+        add("approfondissement","encadrer-racine", f"Encadrer $\\sqrt{{{n}}}$ entre deux entiers consécutifs.",
+            [f"${r}^2 = {r*r}$ et ${r+1}^2 = {(r+1)**2}$, or ${r*r} < {n} < {(r+1)**2}$.",
+             f"Donc ${r} < \\sqrt{{{n}}} < {r+1}$."], f"${r} < \\sqrt{{{n}}} < {r+1}$")
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+# ---------------- STATISTIQUES (3e) ----------------
+def gen_statistiques():
+    from statistics import median
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    series=[[4,7,9,12,8],[10,15,12,18,20],[3,5,5,8,9,10],[6,6,7,9,13],[11,14,9,16,10],
+            [2,4,4,6,8,12],[13,15,17,11,19],[5,8,8,10,14],[7,9,12,12,15,17],[20,22,18,25,15],
+            [1,3,4,6,6],[8,10,12,14,16],[9,11,13,7,10],[4,4,7,9,11,13]]
+    for s in series[:14]:
+        m=sum(s)/len(s)
+        add("application","moyenne", f"Calculer la moyenne de : {', '.join(map(str,s))}.",
+            [f"Moyenne $= \\dfrac{{{'+'.join(map(str,s))}}}{{{len(s)}}} = \\dfrac{{{sum(s)}}}{{{len(s)}}} = {fr(m)}$."], f"${fr(m)}$")
+    for s in series[:14]:
+        ss=sorted(s); med=median(ss)
+        add("intermediaire","mediane", f"Déterminer la médiane de : {', '.join(map(str,s))}.",
+            [f"Série ordonnée : {', '.join(map(str,ss))}.", f"Médiane $= {fr(med)}$."], f"${fr(med)}$")
+    for s in series[:14]:
+        et=max(s)-min(s)
+        add("application","etendue", f"Calculer l'étendue de : {', '.join(map(str,s))}.",
+            [f"Étendue $= {max(s)} - {min(s)} = {et}$."], f"${et}$")
+    pond=[([12,14,16],[1,2,1]),([8,10,15],[2,1,2]),([10,12],[3,1]),([9,13,17],[1,1,2]),([11,15,7],[2,2,1]),([6,14],[1,3]),([5,10,20],[2,1,1]),([8,12,16],[1,1,1])]
+    for (notes,coefs) in pond[:8]:
+        num=sum(n*c for n,c in zip(notes,coefs)); den=sum(coefs); m=num/den
+        prod='+'.join(f'{n}\\times {c}' for n,c in zip(notes,coefs))
+        add("approfondissement","moyenne-ponderee",
+            f"Moyenne pondérée des notes {', '.join(map(str,notes))} de coefficients {', '.join(map(str,coefs))} ?",
+            [f"Moyenne $= \\dfrac{{{prod}}}{{{'+'.join(map(str,coefs))}}} = \\dfrac{{{num}}}{{{den}}} = {fr(m)}$."], f"${fr(m)}$")
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
 REGISTRE = {
     ("troisieme","triangles"): gen_triangles,
     ("troisieme","puissances"): gen_puissances,
     ("troisieme","nombres-rationnels"): gen_rationnels,
     ("troisieme","calcul-litteral"): gen_calcul_litteral,
+    ("troisieme","proportionnalite"): gen_proportionnalite,
+    ("troisieme","racine-carree"): gen_racine_carree,
+    ("troisieme","statistiques"): gen_statistiques,
 }
 
 def traiter(racine="contenu"):

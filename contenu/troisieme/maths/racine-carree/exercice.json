@@ -13,124 +13,512 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "equation-x2-a",
-      "enonce": "Résous l'équation $x^2 = 81$.",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{16}$.",
       "corrige": [
-        "On cherche tous les nombres dont le carré vaut $81$. Comme $81 > 0$, l'équation a deux solutions opposées : $x = \\sqrt{81}$ ou $x = -\\sqrt{81}$.",
-        "Or $9^2 = 81$, donc $\\sqrt{81} = 9$.",
-        "Les solutions sont donc $9$ et $-9$. On vérifie : $9^2 = 81$ ✓ et $(-9)^2 = 81$ ✓. ⚠️ Ne garder que $9$ reviendrait à oublier la moitié des solutions."
+        "$\\sqrt{16} = 4$ car $4^2 = 16$."
       ],
-      "reponse": "$x = 9$ ou $x = -9$."
+      "reponse": "$4$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "valeur-exacte",
-      "enonce": "Résous l'équation $x^2 = 13$ et donne les valeurs exactes des solutions.",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{25}$.",
       "corrige": [
-        "$13 > 0$ : l'équation a deux solutions opposées, $x = \\sqrt{13}$ ou $x = -\\sqrt{13}$.",
-        "$13$ n'est pas un carré parfait : il est compris entre $3^2 = 9$ et $4^2 = 16$. On ne peut donc pas remplacer $\\sqrt{13}$ par un entier.",
-        "La valeur exacte s'écrit avec le radical : on laisse $\\sqrt{13}$ et $-\\sqrt{13}$. Une écriture décimale serait seulement approchée, et n'est pas demandée ici."
+        "$\\sqrt{25} = 5$ car $5^2 = 25$."
       ],
-      "reponse": "$x = \\sqrt{13}$ ou $x = -\\sqrt{13}$."
+      "reponse": "$5$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "se-ramener-forme-x2",
-      "enonce": "Résous l'équation $5x^2 = 45$.",
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{49}$.",
       "corrige": [
-        "L'équation n'est pas encore de la forme $x^2 = a$ : il faut d'abord isoler $x^2$. On divise les deux membres par $5$.",
-        "$\\dfrac{5x^2}{5} = \\dfrac{45}{5}$, soit $x^2 = 9$.",
-        "$9 > 0$ : deux solutions opposées, $x = \\sqrt{9} = 3$ ou $x = -3$. ⚠️ On divise par $5$ d'abord : la réponse n'est pas $\\sqrt{45}$."
+        "$\\sqrt{49} = 7$ car $7^2 = 49$."
       ],
-      "reponse": "$x = 3$ ou $x = -3$."
+      "reponse": "$7$"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "cas-particuliers",
-      "enonce": "Pour chacune de ces équations, indique le nombre de solutions puis donne-les : (a) $x^2 = 144$ ; (b) $x^2 = 0$ ; (c) $x^2 = -9$.",
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{81}$.",
       "corrige": [
-        "(a) $144 > 0$ : deux solutions opposées. Comme $12^2 = 144$, ce sont $12$ et $-12$.",
-        "(b) $x^2 = 0$ : le seul nombre dont le carré est nul est $0$. Une seule solution, $x = 0$ — on n'écrit pas « $0$ et $-0$ », c'est le même nombre.",
-        "(c) $x^2 = -9$ : un carré n'est jamais négatif, donc aucun nombre ne convient. Aucune solution ; on l'écrit par une phrase, pas par une case vide."
+        "$\\sqrt{81} = 9$ car $9^2 = 81$."
       ],
-      "reponse": "(a) deux solutions : $12$ et $-12$ ; (b) une seule solution : $0$ ; (c) aucune solution."
+      "reponse": "$9$"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "problemes",
-      "enonce": "Un carré a une aire de $169\\ \\text{cm}^2$. Quelle est la longueur exacte de son côté ?",
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{100}$.",
       "corrige": [
-        "On note $c$ la longueur du côté, en cm. L'aire d'un carré est $c^2$, donc l'énoncé se traduit par $c^2 = 169$.",
-        "$169 > 0$ : l'équation $c^2 = 169$ a deux solutions, $c = \\sqrt{169} = 13$ ou $c = -13$, car $13^2 = 169$.",
-        "Une longueur ne peut pas être négative : on écarte $-13$ et on garde $c = 13$. On l'écrit dans la rédaction (« $-13$ n'est pas une longueur »), pour montrer qu'on n'a pas oublié la seconde solution mais qu'on l'a écartée."
+        "$\\sqrt{100} = 10$ car $10^2 = 100$."
       ],
-      "reponse": "Le côté mesure $13$ cm."
+      "reponse": "$10$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "pourquoi-deux-solutions",
-      "enonce": "On veut résoudre $x^2 = 10$ en passant par une factorisation. 1) Écris $10$ sous la forme d'un carré. 2) Factorise $x^2 - 10$ comme une différence de deux carrés. 3) Conclus sur les solutions.",
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{144}$.",
       "corrige": [
-        "1) $10 = (\\sqrt{10})^2$, puisque $\\sqrt{10}$ est le nombre positif dont le carré vaut $10$.",
-        "2) L'équation $x^2 = 10$ s'écrit $x^2 - 10 = 0$, c'est-à-dire $x^2 - (\\sqrt{10})^2 = 0$. On reconnait $a^2 - b^2 = (a - b)(a + b)$ avec $a = x$ et $b = \\sqrt{10}$ : $(x - \\sqrt{10})(x + \\sqrt{10}) = 0$.",
-        "3) Un produit est nul si et seulement si l'un de ses facteurs est nul : $x - \\sqrt{10} = 0$ ou $x + \\sqrt{10} = 0$, donc $x = \\sqrt{10}$ ou $x = -\\sqrt{10}$. La factorisation prouve qu'il y a exactement ces deux solutions, et aucune autre."
+        "$\\sqrt{144} = 12$ car $12^2 = 144$."
       ],
-      "reponse": "$x = \\sqrt{10}$ ou $x = -\\sqrt{10}$."
+      "reponse": "$12$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "equation-x2-a",
-      "enonce": "Résous l'équation $x^2 = 121$.",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{169}$.",
       "corrige": [
-        "$121 > 0$ : l'équation admet deux solutions opposées, $x = \\sqrt{121}$ ou $x = -\\sqrt{121}$.",
-        "Or $11^2 = 121$, donc $\\sqrt{121} = 11$.",
-        "Les solutions sont $11$ et $-11$. On vérifie : $11^2 = 121$ ✓ et $(-11)^2 = 121$ ✓. ⚠️ N'écrire que $11$ ferait perdre la moitié des solutions."
+        "$\\sqrt{169} = 13$ car $13^2 = 169$."
       ],
-      "reponse": "$x = 11$ ou $x = -11$."
+      "reponse": "$13$"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "se-ramener-forme-x2",
-      "enonce": "Résous l'équation $2x^2 - 7 = 43$.",
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{196}$.",
       "corrige": [
-        "L'équation n'est pas de la forme $x^2 = a$ : il faut isoler $x^2$. On ajoute d'abord $7$ aux deux membres : $2x^2 = 43 + 7 = 50$.",
-        "On divise ensuite les deux membres par $2$ : $x^2 = \\dfrac{50}{2} = 25$.",
-        "$25 > 0$ : deux solutions opposées, $x = \\sqrt{25} = 5$ ou $x = -5$, car $5^2 = 25$. ⚠️ On transpose le $-7$ puis on divise par $2$ avant de prendre la racine : la réponse n'est pas $\\sqrt{50}$ ni $\\sqrt{43}$."
+        "$\\sqrt{196} = 14$ car $14^2 = 196$."
       ],
-      "reponse": "$x = 5$ ou $x = -5$."
+      "reponse": "$14$"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "nombre-de-solutions",
-      "enonce": "Selon la valeur du nombre $a$, discute le nombre de solutions de l'équation $x^2 = a$. Applique ensuite ton raisonnement aux trois cas $x^2 = 7$, $x^2 = 0$ et $x^2 = -3$.",
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{225}$.",
       "corrige": [
-        "Tout dépend du signe de $a$. Si $a > 0$, l'équation a deux solutions opposées, $x = \\sqrt{a}$ et $x = -\\sqrt{a}$ ; si $a = 0$, elle a une seule solution, $x = 0$ ; si $a < 0$, elle n'a aucune solution, car un carré n'est jamais négatif.",
-        "Cas $x^2 = 7$ : ici $a = 7 > 0$, donc deux solutions opposées. $7$ n'est pas un carré parfait, on garde les valeurs exactes $x = \\sqrt{7}$ ou $x = -\\sqrt{7}$.",
-        "Cas $x^2 = 0$ : ici $a = 0$, une seule solution $x = 0$ (on n'écrit pas « $0$ et $-0$ »).",
-        "Cas $x^2 = -3$ : ici $a = -3 < 0$, aucune solution ; on l'écrit par une phrase, pas par une case vide."
+        "$\\sqrt{225} = 15$ car $15^2 = 225$."
       ],
-      "reponse": "$a > 0$ : deux solutions opposées ; $a = 0$ : une seule ($0$) ; $a < 0$ : aucune. Donc $x^2 = 7 \\Rightarrow \\sqrt{7}$ et $-\\sqrt{7}$ ; $x^2 = 0 \\Rightarrow 0$ ; $x^2 = -3 \\Rightarrow$ aucune solution."
+      "reponse": "$15$"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "probleme-pythagore",
-      "enonce": "Marc aménage une terrasse carrée et y tend des câbles. On raisonne avec des valeurs exactes, sauf mention contraire. 1. La terrasse est un carré d'aire $196\\ \\text{m}^2$. Quelle est la longueur exacte de son côté ? 2. Marc tend un câble le long d'une diagonale de la terrasse. À l'aide du théorème de Pythagore, donne la longueur exacte de cette diagonale. 3. Contre un côté, il dresse un mât vertical de $8$ m ; un hauban relie le sommet du mât à un piquet planté à $6$ m du pied du mât. Quelle est la longueur du hauban ? 4. Marc envisage une seconde terrasse carrée dont le côté mesurerait exactement $\\sqrt{200}$ m. Quelle serait alors son aire ?",
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{64}$.",
       "corrige": [
-        "1. On note $c$ le côté (en m). L'aire d'un carré est $c^2$, donc $c^2 = 196$. Comme $196 > 0$, on a $c = \\sqrt{196} = 14$ ou $c = -14$, car $14^2 = 196$. Une longueur n'est pas négative : on écarte $-14$ et on garde $c = 14$. Le côté mesure $14$ m.",
-        "2. La diagonale $d$ est l'hypoténuse d'un triangle rectangle isocèle dont les deux côtés de l'angle droit sont deux côtés de la terrasse, chacun de $14$ m. Par Pythagore : $d^2 = 14^2 + 14^2 = 196 + 196 = 392$. Donc $d = \\sqrt{392}$ ou $d = -\\sqrt{392}$ ; une longueur est positive, donc $d = \\sqrt{392}$ m (soit environ $19{,}8$ m).",
-        "3. Le mât ($8$ m), le sol jusqu'au piquet ($6$ m) et le hauban forment un triangle rectangle, le hauban $h$ étant l'hypoténuse. Par Pythagore : $h^2 = 8^2 + 6^2 = 64 + 36 = 100$. Donc $h = \\sqrt{100} = 10$ m (on écarte $-10$, qui n'est pas une longueur).",
-        "4. Si le côté vaut $\\sqrt{200}$ m, l'aire est le carré du côté : $(\\sqrt{200})^2 = 200$, car $(\\sqrt{a})^2 = a$ pour $a \\geqslant 0$. L'aire serait donc de $200\\ \\text{m}^2$."
+        "$\\sqrt{64} = 8$ car $8^2 = 64$."
       ],
-      "reponse": "1. Côté $= 14$ m. 2. Diagonale $= \\sqrt{392}$ m $\\approx 19{,}8$ m. 3. Hauban $= 10$ m. 4. Aire $= 200\\ \\text{m}^2$."
+      "reponse": "$8$"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{121}$.",
+      "corrige": [
+        "$\\sqrt{121} = 11$ car $11^2 = 121$."
+      ],
+      "reponse": "$11$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{256}$.",
+      "corrige": [
+        "$\\sqrt{256} = 16$ car $16^2 = 256$."
+      ],
+      "reponse": "$16$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{4}$.",
+      "corrige": [
+        "$\\sqrt{4} = 2$ car $2^2 = 4$."
+      ],
+      "reponse": "$2$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{9}$.",
+      "corrige": [
+        "$\\sqrt{9} = 3$ car $3^2 = 9$."
+      ],
+      "reponse": "$3$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{36}$.",
+      "corrige": [
+        "$\\sqrt{36} = 6$ car $6^2 = 36$."
+      ],
+      "reponse": "$6$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "calcul-racine",
+      "enonce": "Calculer $\\sqrt{400}$.",
+      "corrige": [
+        "$\\sqrt{400} = 20$ car $20^2 = 400$."
+      ],
+      "reponse": "$20$"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{8}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{8} = \\sqrt{4 \\times 2} = 2\\sqrt{2}$."
+      ],
+      "reponse": "$2\\sqrt{2}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{12}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{12} = \\sqrt{4 \\times 3} = 2\\sqrt{3}$."
+      ],
+      "reponse": "$2\\sqrt{3}$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{18}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$."
+      ],
+      "reponse": "$3\\sqrt{2}$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{20}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{20} = \\sqrt{4 \\times 5} = 2\\sqrt{5}$."
+      ],
+      "reponse": "$2\\sqrt{5}$"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{50}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$."
+      ],
+      "reponse": "$5\\sqrt{2}$"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{32}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{32} = \\sqrt{16 \\times 2} = 4\\sqrt{2}$."
+      ],
+      "reponse": "$4\\sqrt{2}$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{27}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{27} = \\sqrt{9 \\times 3} = 3\\sqrt{3}$."
+      ],
+      "reponse": "$3\\sqrt{3}$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{48}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{48} = \\sqrt{16 \\times 3} = 4\\sqrt{3}$."
+      ],
+      "reponse": "$4\\sqrt{3}$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{72}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$."
+      ],
+      "reponse": "$6\\sqrt{2}$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{45}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{45} = \\sqrt{9 \\times 5} = 3\\sqrt{5}$."
+      ],
+      "reponse": "$3\\sqrt{5}$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{75}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{75} = \\sqrt{25 \\times 3} = 5\\sqrt{3}$."
+      ],
+      "reponse": "$5\\sqrt{3}$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{98}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{98} = \\sqrt{49 \\times 2} = 7\\sqrt{2}$."
+      ],
+      "reponse": "$7\\sqrt{2}$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{28}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{28} = \\sqrt{4 \\times 7} = 2\\sqrt{7}$."
+      ],
+      "reponse": "$2\\sqrt{7}$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{44}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{44} = \\sqrt{4 \\times 11} = 2\\sqrt{11}$."
+      ],
+      "reponse": "$2\\sqrt{11}$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{52}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{52} = \\sqrt{4 \\times 13} = 2\\sqrt{13}$."
+      ],
+      "reponse": "$2\\sqrt{13}$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "simplifier-racine",
+      "enonce": "Écrire $\\sqrt{63}$ sous la forme $a\\sqrt{b}$.",
+      "corrige": [
+        "$\\sqrt{63} = \\sqrt{9 \\times 7} = 3\\sqrt{7}$."
+      ],
+      "reponse": "$3\\sqrt{7}$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{2} \\times \\sqrt{8}$.",
+      "corrige": [
+        "$\\sqrt{2} \\times \\sqrt{8} = \\sqrt{2 \\times 8} = \\sqrt{16}$ = 4$."
+      ],
+      "reponse": "$4$"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{3} \\times \\sqrt{12}$.",
+      "corrige": [
+        "$\\sqrt{3} \\times \\sqrt{12} = \\sqrt{3 \\times 12} = \\sqrt{36}$ = 6$."
+      ],
+      "reponse": "$6$"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{5} \\times \\sqrt{5}$.",
+      "corrige": [
+        "$\\sqrt{5} \\times \\sqrt{5} = \\sqrt{5 \\times 5} = \\sqrt{25}$ = 5$."
+      ],
+      "reponse": "$5$"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{2} \\times \\sqrt{18}$.",
+      "corrige": [
+        "$\\sqrt{2} \\times \\sqrt{18} = \\sqrt{2 \\times 18} = \\sqrt{36}$ = 6$."
+      ],
+      "reponse": "$6$"
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{6} \\times \\sqrt{6}$.",
+      "corrige": [
+        "$\\sqrt{6} \\times \\sqrt{6} = \\sqrt{6 \\times 6} = \\sqrt{36}$ = 6$."
+      ],
+      "reponse": "$6$"
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{2} \\times \\sqrt{32}$.",
+      "corrige": [
+        "$\\sqrt{2} \\times \\sqrt{32} = \\sqrt{2 \\times 32} = \\sqrt{64}$ = 8$."
+      ],
+      "reponse": "$8$"
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{5} \\times \\sqrt{20}$.",
+      "corrige": [
+        "$\\sqrt{5} \\times \\sqrt{20} = \\sqrt{5 \\times 20} = \\sqrt{100}$ = 10$."
+      ],
+      "reponse": "$10$"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "produit-racines",
+      "enonce": "Calculer $\\sqrt{3} \\times \\sqrt{27}$.",
+      "corrige": [
+        "$\\sqrt{3} \\times \\sqrt{27} = \\sqrt{3 \\times 27} = \\sqrt{81}$ = 9$."
+      ],
+      "reponse": "$9$"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{10}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$3^2 = 9$ et $4^2 = 16$, or $9 < 10 < 16$.",
+        "Donc $3 < \\sqrt{10} < 4$."
+      ],
+      "reponse": "$3 < \\sqrt{10} < 4$"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{20}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$4^2 = 16$ et $5^2 = 25$, or $16 < 20 < 25$.",
+        "Donc $4 < \\sqrt{20} < 5$."
+      ],
+      "reponse": "$4 < \\sqrt{20} < 5$"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{30}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$5^2 = 25$ et $6^2 = 36$, or $25 < 30 < 36$.",
+        "Donc $5 < \\sqrt{30} < 6$."
+      ],
+      "reponse": "$5 < \\sqrt{30} < 6$"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{45}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$6^2 = 36$ et $7^2 = 49$, or $36 < 45 < 49$.",
+        "Donc $6 < \\sqrt{45} < 7$."
+      ],
+      "reponse": "$6 < \\sqrt{45} < 7$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{60}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$7^2 = 49$ et $8^2 = 64$, or $49 < 60 < 64$.",
+        "Donc $7 < \\sqrt{60} < 8$."
+      ],
+      "reponse": "$7 < \\sqrt{60} < 8$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{75}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$8^2 = 64$ et $9^2 = 81$, or $64 < 75 < 81$.",
+        "Donc $8 < \\sqrt{75} < 9$."
+      ],
+      "reponse": "$8 < \\sqrt{75} < 9$"
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{90}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$9^2 = 81$ et $10^2 = 100$, or $81 < 90 < 100$.",
+        "Donc $9 < \\sqrt{90} < 10$."
+      ],
+      "reponse": "$9 < \\sqrt{90} < 10$"
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{110}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$10^2 = 100$ et $11^2 = 121$, or $100 < 110 < 121$.",
+        "Donc $10 < \\sqrt{110} < 11$."
+      ],
+      "reponse": "$10 < \\sqrt{110} < 11$"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{135}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$11^2 = 121$ et $12^2 = 144$, or $121 < 135 < 144$.",
+        "Donc $11 < \\sqrt{135} < 12$."
+      ],
+      "reponse": "$11 < \\sqrt{135} < 12$"
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "encadrer-racine",
+      "enonce": "Encadrer $\\sqrt{150}$ entre deux entiers consécutifs.",
+      "corrige": [
+        "$12^2 = 144$ et $13^2 = 169$, or $144 < 150 < 169$.",
+        "Donc $12 < \\sqrt{150} < 13$."
+      ],
+      "reponse": "$12 < \\sqrt{150} < 13$"
     }
   ]
 }
