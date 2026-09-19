@@ -13,134 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "relation-addition",
-      "enonce": "On donne $P(A) = 0{,}5$, $P(B) = 0{,}4$ et $P(A \\cap B) = 0{,}2$. Calcule $P(A \\cup B)$.",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir 6 ?",
       "corrige": [
-        "On part de la relation d'addition, écrite pour trouver la réunion : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-        "On remplace les trois valeurs connues : $P(A \\cup B) = 0{,}5 + 0{,}4 - 0{,}2$.",
-        "On calcule : $0{,}5 + 0{,}4 = 0{,}9$, puis $0{,}9 - 0{,}2 = 0{,}7$.",
-        "Contrôle : $0{,}7 \\geqslant 0{,}5$ et $0{,}7 \\geqslant 0{,}4$ (la réunion contient chaque évènement) et $0{,}7 \\leqslant 1$. La réponse est vraisemblable."
+        "$P = \\dfrac{1}{6} = \\dfrac{1}{6}$."
       ],
-      "reponse": "$P(A \\cup B) = 0{,}7$."
+      "reponse": "$\\dfrac{1}{6}$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "methode-relation",
-      "enonce": "On donne $P(A) = 0{,}7$, $P(B) = 0{,}6$ et $P(A \\cup B) = 0{,}9$. Calcule $P(A \\cap B)$.",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir un nombre pair ?",
       "corrige": [
-        "On repart de la forme où tout est additionné : $P(A \\cup B) + P(A \\cap B) = P(A) + P(B)$.",
-        "On isole l'intersection en faisant passer $P(A \\cup B)$ de l'autre côté : $P(A \\cap B) = P(A) + P(B) - P(A \\cup B)$.",
-        "On remplace : $P(A \\cap B) = 0{,}7 + 0{,}6 - 0{,}9 = 1{,}3 - 0{,}9 = 0{,}4$.",
-        "Contrôle : $0{,}4 \\leqslant 0{,}7$ et $0{,}4 \\leqslant 0{,}6$ (l'intersection est contenue dans chaque évènement). C'est cohérent."
+        "$P = \\dfrac{3}{6} = \\dfrac{1}{2}$."
       ],
-      "reponse": "$P(A \\cap B) = 0{,}4$."
+      "reponse": "$\\dfrac{1}{2}$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "methode-relation",
-      "enonce": "Dans une classe de $28$ élèves, $15$ jouent au football en club, $13$ font de la natation, et $6$ pratiquent les deux. On tire un élève au hasard. Quelle est la probabilité qu'il pratique **au moins une** des deux activités ? Et la probabilité qu'il n'en pratique **aucune** ?",
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir un multiple de 3 ?",
       "corrige": [
-        "On nomme $F$ : « l'élève joue au football » et $N$ : « l'élève fait de la natation ». Alors $P(F) = \\dfrac{15}{28}$, $P(N) = \\dfrac{13}{28}$ et $P(F \\cap N) = \\dfrac{6}{28}$.",
-        "« Au moins une des deux » correspond à la réunion : $P(F \\cup N) = P(F) + P(N) - P(F \\cap N) = \\dfrac{15}{28} + \\dfrac{13}{28} - \\dfrac{6}{28} = \\dfrac{22}{28} = \\dfrac{11}{14}$.",
-        "« N'en pratiquer aucune » est l'évènement contraire de « au moins une » : $P(\\overline{F \\cup N}) = 1 - P(F \\cup N) = 1 - \\dfrac{11}{14} = \\dfrac{3}{14}$.",
-        "Contrôle par les effectifs : $15 + 13 - 6 = 22$ élèves concernés, donc $28 - 22 = 6$ élèves ne font ni l'un ni l'autre, soit $\\dfrac{6}{28} = \\dfrac{3}{14}$ ✓."
+        "$P = \\dfrac{2}{6} = \\dfrac{1}{3}$."
       ],
-      "reponse": "$P(\\text{au moins une}) = \\dfrac{11}{14}$ et $P(\\text{aucune}) = \\dfrac{3}{14}$."
+      "reponse": "$\\dfrac{1}{3}$"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "relation-addition",
-      "enonce": "On lance un dé équilibré à six faces. On considère $A$ : « obtenir un multiple de $3$ » et $B$ : « obtenir un nombre strictement supérieur à $4$ ». En passant par la relation d'addition, calcule $P(A \\cup B)$, puis vérifie ton résultat en énumérant les issues.",
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir au moins 5 ?",
       "corrige": [
-        "On liste les issues : $A = \\{3 \\,;\\, 6\\}$ donc $P(A) = \\dfrac{2}{6}$, et $B = \\{5 \\,;\\, 6\\}$ donc $P(B) = \\dfrac{2}{6}$.",
-        "L'intersection est l'issue commune : $A \\cap B = \\{6\\}$, donc $P(A \\cap B) = \\dfrac{1}{6}$.",
-        "On applique la relation : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\dfrac{2}{6} + \\dfrac{2}{6} - \\dfrac{1}{6} = \\dfrac{3}{6} = \\dfrac{1}{2}$.",
-        "Vérification par énumération : $A \\cup B = \\{3 \\,;\\, 5 \\,;\\, 6\\}$, soit $3$ issues favorables sur $6$, donc $\\dfrac{3}{6} = \\dfrac{1}{2}$ ✓. On ne pouvait pas additionner directement $\\dfrac{2}{6} + \\dfrac{2}{6}$ car le $6$ est commun aux deux."
+        "$P = \\dfrac{2}{6} = \\dfrac{1}{3}$."
       ],
-      "reponse": "$P(A \\cup B) = \\dfrac{1}{2}$."
+      "reponse": "$\\dfrac{1}{3}$"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "controle-vraisemblance",
-      "enonce": "On sait seulement que $P(A) = 0{,}5$ et $P(B) = 0{,}3$, mais on ne connaît pas $P(A \\cap B)$. Entre quelles valeurs la probabilité $P(A \\cup B)$ peut-elle varier ? Précise le cas correspondant à chaque borne.",
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir 1 ?",
       "corrige": [
-        "D'après la relation, $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0{,}8 - P(A \\cap B)$ : la réunion est d'autant plus grande que l'intersection est petite.",
-        "L'intersection est contenue dans chaque évènement, donc $P(A \\cap B) \\leqslant P(A)$ et $P(A \\cap B) \\leqslant P(B)$ : ici $P(A \\cap B) \\leqslant 0{,}3$. Et une probabilité est toujours $\\geqslant 0$, donc $0 \\leqslant P(A \\cap B) \\leqslant 0{,}3$.",
-        "Valeur maximale de la réunion : quand $P(A \\cap B) = 0$ (aucune issue commune, $A \\cap B = \\varnothing$), $P(A \\cup B) = 0{,}8 - 0 = 0{,}8$.",
-        "Valeur minimale de la réunion : quand $P(A \\cap B) = 0{,}3$ (c'est-à-dire $B$ entièrement contenu dans $A$), $P(A \\cup B) = 0{,}8 - 0{,}3 = 0{,}5$.",
-        "Contrôle : dans les deux cas $P(A \\cup B) \\geqslant P(A) = 0{,}5$ et $\\leqslant 1$, ce qui est cohérent."
+        "$P = \\dfrac{1}{6} = \\dfrac{1}{6}$."
       ],
-      "reponse": "$0{,}5 \\leqslant P(A \\cup B) \\leqslant 0{,}8$ ($0{,}8$ si $A \\cap B = \\varnothing$, $0{,}5$ si $B \\subset A$)."
+      "reponse": "$\\dfrac{1}{6}$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "erreur-dalembert",
-      "enonce": "On lance deux fois de suite une pièce équilibrée. On note $A$ : « obtenir pile au premier lancer » et $B$ : « obtenir pile au second lancer ». En utilisant la relation d'addition, calcule $P(A \\cup B)$, la probabilité d'obtenir **au moins un pile**. Un camarade affirme trouver $\\dfrac{2}{3}$ : explique son erreur.",
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir un nombre supérieur à 4 ?",
       "corrige": [
-        "Chaque lancer donne pile avec la probabilité $\\dfrac{1}{2}$ : $P(A) = \\dfrac{1}{2}$ et $P(B) = \\dfrac{1}{2}$.",
-        "L'intersection $A \\cap B$ est « pile aux deux lancers » : en listant les couples $\\Omega = \\{(P\\,;P) \\,;\\, (P\\,;F) \\,;\\, (F\\,;P) \\,;\\, (F\\,;F)\\}$, une seule issue convient, donc $P(A \\cap B) = \\dfrac{1}{4}$ (obtenue **en comptant**, pas en multipliant).",
-        "On applique la relation : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\dfrac{1}{2} + \\dfrac{1}{2} - \\dfrac{1}{4} = \\dfrac{4}{4} - \\dfrac{1}{4} = \\dfrac{3}{4}$.",
-        "L'erreur du camarade ($\\dfrac{2}{3}$) est celle de D'Alembert : il ne compte que trois cas (« $P$ », « $F$ puis $P$ », « $F$ puis $F$ ») en croyant qu'ils ont la même chance. Or le cas « $P$ » regroupe à lui seul deux issues $(P\\,;P)$ et $(P\\,;F)$ : les trois cas ne sont pas équiprobables, donc on ne peut pas écrire $\\dfrac{2}{3}$."
+        "$P = \\dfrac{2}{6} = \\dfrac{1}{3}$."
       ],
-      "reponse": "$P(A \\cup B) = \\dfrac{3}{4}$ (et non $\\dfrac{2}{3}$ : les trois cas de D'Alembert ne sont pas équiprobables)."
+      "reponse": "$\\dfrac{1}{3}$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "relation-addition",
-      "enonce": "Dans un sondage, $P(T) = 0{,}55$ est la probabilité qu'une personne aime le thé, $P(C) = 0{,}45$ celle qu'elle aime le café, et $P(T \\cap C) = 0{,}25$ celle qu'elle aime **les deux**. On interroge une personne au hasard : calcule la probabilité qu'elle aime **au moins l'une** des deux boissons.",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir un nombre impair ?",
       "corrige": [
-        "« Au moins l'une » se traduit par la réunion $T \\cup C$. On écrit la relation d'addition sous la forme qui donne la réunion : $P(T \\cup C) = P(T) + P(C) - P(T \\cap C)$.",
-        "On remplace les trois valeurs : $P(T \\cup C) = 0{,}55 + 0{,}45 - 0{,}25$.",
-        "On calcule : $0{,}55 + 0{,}45 = 1$, puis $1 - 0{,}25 = 0{,}75$.",
-        "Contrôle : $0{,}75 \\geqslant 0{,}55$ et $0{,}75 \\geqslant 0{,}45$ (la réunion contient chaque évènement) et $0{,}75 \\leqslant 1$. La réponse est vraisemblable."
+        "$P = \\dfrac{3}{6} = \\dfrac{1}{2}$."
       ],
-      "reponse": "$P(T \\cup C) = 0{,}75$."
+      "reponse": "$\\dfrac{1}{2}$"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "methode-relation",
-      "enonce": "On tire une carte au hasard dans un jeu de $32$ cartes (il contient $4$ rois et $8$ cœurs). On note $R$ : « obtenir un roi » et $C$ : « obtenir un cœur ». Calcule d'abord $P(R \\cup C)$, puis la probabilité de n'obtenir **ni** un roi **ni** un cœur.",
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "On lance un dé équilibré à 6 faces. Probabilité de obtenir un diviseur de 6 ?",
       "corrige": [
-        "On repère les probabilités : $P(R) = \\dfrac{4}{32}$, $P(C) = \\dfrac{8}{32}$, et l'intersection est la seule carte à la fois roi et cœur, le roi de cœur, donc $P(R \\cap C) = \\dfrac{1}{32}$.",
-        "Première étape — la réunion : $P(R \\cup C) = P(R) + P(C) - P(R \\cap C) = \\dfrac{4}{32} + \\dfrac{8}{32} - \\dfrac{1}{32} = \\dfrac{11}{32}$.",
-        "Seconde étape — « ni roi ni cœur » est l'évènement contraire de « roi ou cœur » : $P(\\overline{R \\cup C}) = 1 - P(R \\cup C) = 1 - \\dfrac{11}{32} = \\dfrac{21}{32}$.",
-        "Contrôle par les effectifs : $4 + 8 - 1 = 11$ cartes sont un roi ou un cœur, donc $32 - 11 = 21$ cartes ne sont ni l'un ni l'autre, soit $\\dfrac{21}{32}$ ✓."
+        "$P = \\dfrac{4}{6} = \\dfrac{2}{3}$."
       ],
-      "reponse": "$P(R \\cup C) = \\dfrac{11}{32}$ et $P(\\overline{R \\cup C}) = \\dfrac{21}{32}$."
+      "reponse": "$\\dfrac{2}{3}$"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "controle-vraisemblance",
-      "enonce": "On sait que $P(A) = 0{,}7$ et $P(B) = 0{,}6$, sans connaître $P(A \\cap B)$. Un camarade affirme que $A$ et $B$ pourraient être incompatibles, c'est-à-dire $A \\cap B = \\varnothing$. Montre que c'est impossible, puis détermine la **plus petite** valeur possible de $P(A \\cap B)$.",
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 5 boules dont 3 rouges. Probabilité de tirer une rouge ?",
       "corrige": [
-        "Si $A$ et $B$ étaient incompatibles, on aurait $P(A \\cap B) = 0$, donc $P(A \\cup B) = P(A) + P(B) = 0{,}7 + 0{,}6 = 1{,}3$. Or une probabilité ne peut pas dépasser $1$ : c'est impossible. Les deux évènements se chevauchent forcément.",
-        "Cherchons jusqu'où l'intersection peut être petite. D'après la relation, $P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = 1{,}3 - P(A \\cup B)$ : l'intersection est d'autant plus petite que la réunion est grande.",
-        "La réunion est une probabilité, donc $P(A \\cup B) \\leqslant 1$. La valeur $P(A \\cap B) = 1{,}3 - P(A \\cup B)$ est donc minimale quand $P(A \\cup B)$ est maximale, c'est-à-dire égale à $1$ : $P(A \\cap B) = 1{,}3 - 1 = 0{,}3$.",
-        "Contrôle : $0{,}3 \\leqslant 0{,}7$ et $0{,}3 \\leqslant 0{,}6$ (l'intersection est bien contenue dans chaque évènement). La plus petite valeur possible est donc $0{,}3$, et jamais $0$."
+        "$P = \\dfrac{3}{5} = \\dfrac{3}{5}$."
       ],
-      "reponse": "$A$ et $B$ ne peuvent pas être incompatibles ; la plus petite valeur possible est $P(A \\cap B) = 0{,}3$ (atteinte lorsque $A \\cup B = \\Omega$)."
+      "reponse": "$\\dfrac{3}{5}$"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "methode-relation",
-      "enonce": "À une kermesse, un stand propose de faire tourner une roue équilibrée partagée en $6$ secteurs identiques numérotés de $1$ à $6$.\n\n**Partie A — un tour de roue.** On note $A$ : « obtenir un nombre pair » et $B$ : « obtenir un nombre supérieur ou égal à $5$ ».\n\n1. Donne $P(A)$, $P(B)$, puis $P(A \\cap B)$ en listant les issues.\n2. Calcule $P(A \\cup B)$ à l'aide de la relation d'addition.\n3. Le joueur gagne un lot s'il obtient un nombre pair **ou** un nombre supérieur ou égal à $5$. Quelle est la probabilité qu'il ne gagne **rien** ?\n\n**Partie B — deux tours de roue.** On fait maintenant tourner la roue **deux fois de suite**. On note $C$ : « obtenir un $6$ au premier tour » et $D$ : « obtenir un $6$ au second tour ».\n\n4. Calcule $P(C \\cup D)$, la probabilité d'obtenir **au moins un** $6$, et explique pourquoi on ne peut pas simplement additionner $P(C)$ et $P(D)$.\n5. Déduis-en la probabilité de n'obtenir **aucun** $6$ sur les deux tours.",
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 10 boules dont 4 rouges. Probabilité de tirer une rouge ?",
       "corrige": [
-        "1. Sur les six secteurs, les nombres pairs sont $\\{2 \\,;\\, 4 \\,;\\, 6\\}$, donc $P(A) = \\dfrac{3}{6} = \\dfrac{1}{2}$. Les nombres supérieurs ou égaux à $5$ sont $\\{5 \\,;\\, 6\\}$, donc $P(B) = \\dfrac{2}{6} = \\dfrac{1}{3}$. La seule issue à la fois paire et $\\geqslant 5$ est le $6$, donc $A \\cap B = \\{6\\}$ et $P(A \\cap B) = \\dfrac{1}{6}$.",
-        "2. On applique la relation : $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\dfrac{3}{6} + \\dfrac{2}{6} - \\dfrac{1}{6} = \\dfrac{4}{6} = \\dfrac{2}{3}$.",
-        "3. « Ne rien gagner » est le contraire de « pair ou $\\geqslant 5$ » : $P(\\overline{A \\cup B}) = 1 - P(A \\cup B) = 1 - \\dfrac{2}{3} = \\dfrac{1}{3}$. Vérification directe : les issues perdantes sont $\\{1 \\,;\\, 3\\}$, soit $\\dfrac{2}{6} = \\dfrac{1}{3}$ ✓.",
-        "4. Chaque tour donne un $6$ avec la probabilité $\\dfrac{1}{6}$, donc $P(C) = \\dfrac{1}{6}$ et $P(D) = \\dfrac{1}{6}$. L'intersection $C \\cap D$ est « un $6$ aux deux tours », c'est-à-dire le seul couple $(6 \\,;\\, 6)$ parmi les $36$ couples possibles, donc $P(C \\cap D) = \\dfrac{1}{36}$ (obtenue **en comptant** les couples, pas en multipliant). La relation donne $P(C \\cup D) = P(C) + P(D) - P(C \\cap D) = \\dfrac{6}{36} + \\dfrac{6}{36} - \\dfrac{1}{36} = \\dfrac{11}{36}$. On ne peut pas additionner directement $\\dfrac{1}{6} + \\dfrac{1}{6}$ car le couple $(6 \\,;\\, 6)$ appartient aux deux évènements et serait compté deux fois.",
-        "5. « Aucun $6$ » est le contraire de « au moins un $6$ » : $P(\\overline{C \\cup D}) = 1 - P(C \\cup D) = 1 - \\dfrac{11}{36} = \\dfrac{25}{36}$."
+        "$P = \\dfrac{4}{10} = \\dfrac{2}{5}$."
       ],
-      "reponse": "Partie A : $P(A) = \\dfrac{1}{2}$, $P(B) = \\dfrac{1}{3}$, $P(A \\cap B) = \\dfrac{1}{6}$, $P(A \\cup B) = \\dfrac{2}{3}$, et $P(\\text{ne rien gagner}) = \\dfrac{1}{3}$. Partie B : $P(\\text{au moins un } 6) = \\dfrac{11}{36}$ et $P(\\text{aucun } 6) = \\dfrac{25}{36}$."
+      "reponse": "$\\dfrac{2}{5}$"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 10 boules dont 5 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{5}{10} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 10 boules dont 2 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{2}{10} = \\dfrac{1}{5}$."
+      ],
+      "reponse": "$\\dfrac{1}{5}$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 10 boules dont 7 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{7}{10} = \\dfrac{7}{10}$."
+      ],
+      "reponse": "$\\dfrac{7}{10}$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 5 boules dont 1 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{1}{5} = \\dfrac{1}{5}$."
+      ],
+      "reponse": "$\\dfrac{1}{5}$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 10 boules dont 6 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{6}{10} = \\dfrac{3}{5}$."
+      ],
+      "reponse": "$\\dfrac{3}{5}$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 8 boules dont 3 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{3}{8} = \\dfrac{3}{8}$."
+      ],
+      "reponse": "$\\dfrac{3}{8}$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 12 boules dont 9 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{9}{12} = \\dfrac{3}{4}$."
+      ],
+      "reponse": "$\\dfrac{3}{4}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 6 boules dont 4 rouges. Probabilité de tirer une rouge ?",
+      "corrige": [
+        "$P = \\dfrac{4}{6} = \\dfrac{2}{3}$."
+      ],
+      "reponse": "$\\dfrac{2}{3}$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{3}{10}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{3}{10} = \\dfrac{7}{10}$."
+      ],
+      "reponse": "$\\dfrac{7}{10}$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{2}{5}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{2}{5} = \\dfrac{3}{5}$."
+      ],
+      "reponse": "$\\dfrac{3}{5}$"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{7}{10}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{7}{10} = \\dfrac{3}{10}$."
+      ],
+      "reponse": "$\\dfrac{3}{10}$"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{1}{4}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{1}{4} = \\dfrac{3}{4}$."
+      ],
+      "reponse": "$\\dfrac{3}{4}$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{5}{8}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{5}{8} = \\dfrac{3}{8}$."
+      ],
+      "reponse": "$\\dfrac{3}{8}$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{4}{9}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{4}{9} = \\dfrac{5}{9}$."
+      ],
+      "reponse": "$\\dfrac{5}{9}$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{6}{10}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{6}{10} = \\dfrac{2}{5}$."
+      ],
+      "reponse": "$\\dfrac{2}{5}$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{3}{7}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{3}{7} = \\dfrac{4}{7}$."
+      ],
+      "reponse": "$\\dfrac{4}{7}$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{2}{9}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{2}{9} = \\dfrac{7}{9}$."
+      ],
+      "reponse": "$\\dfrac{7}{9}$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-complementaire",
+      "enonce": "La probabilité d'un événement est $\\dfrac{5}{12}$. Probabilité qu'il ne se réalise pas ?",
+      "corrige": [
+        "$P(\\overline{A}) = 1 - \\dfrac{5}{12} = \\dfrac{7}{12}$."
+      ],
+      "reponse": "$\\dfrac{7}{12}$"
+    },
+    {
+      "id": 29,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un roi ?",
+      "corrige": [
+        "$P = \\dfrac{4}{32} = \\dfrac{1}{8}$."
+      ],
+      "reponse": "$\\dfrac{1}{8}$"
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un cœur ?",
+      "corrige": [
+        "$P = \\dfrac{8}{32} = \\dfrac{1}{4}$."
+      ],
+      "reponse": "$\\dfrac{1}{4}$"
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir l'as de pique ?",
+      "corrige": [
+        "$P = \\dfrac{1}{32} = \\dfrac{1}{32}$."
+      ],
+      "reponse": "$\\dfrac{1}{32}$"
+    },
+    {
+      "id": 32,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir une figure ?",
+      "corrige": [
+        "$P = \\dfrac{12}{32} = \\dfrac{3}{8}$."
+      ],
+      "reponse": "$\\dfrac{3}{8}$"
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un carreau ?",
+      "corrige": [
+        "$P = \\dfrac{8}{32} = \\dfrac{1}{4}$."
+      ],
+      "reponse": "$\\dfrac{1}{4}$"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un rouge ?",
+      "corrige": [
+        "$P = \\dfrac{16}{32} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$"
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir le 7 de trèfle ?",
+      "corrige": [
+        "$P = \\dfrac{1}{32} = \\dfrac{1}{32}$."
+      ],
+      "reponse": "$\\dfrac{1}{32}$"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un as ?",
+      "corrige": [
+        "$P = \\dfrac{4}{32} = \\dfrac{1}{8}$."
+      ],
+      "reponse": "$\\dfrac{1}{8}$"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir une dame ?",
+      "corrige": [
+        "$P = \\dfrac{4}{32} = \\dfrac{1}{8}$."
+      ],
+      "reponse": "$\\dfrac{1}{8}$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un pique ?",
+      "corrige": [
+        "$P = \\dfrac{8}{32} = \\dfrac{1}{4}$."
+      ],
+      "reponse": "$\\dfrac{1}{4}$"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un noir ?",
+      "corrige": [
+        "$P = \\dfrac{16}{32} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$"
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un valet ?",
+      "corrige": [
+        "$P = \\dfrac{4}{32} = \\dfrac{1}{8}$."
+      ],
+      "reponse": "$\\dfrac{1}{8}$"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir le roi de cœur ?",
+      "corrige": [
+        "$P = \\dfrac{1}{32} = \\dfrac{1}{32}$."
+      ],
+      "reponse": "$\\dfrac{1}{32}$"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "probabilite-simple",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir un cœur ou un carreau ?",
+      "corrige": [
+        "$P = \\dfrac{16}{32} = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}$"
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 4 jetons dont 1 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{1}{4} = \\dfrac{1}{4}$."
+      ],
+      "reponse": "$\\dfrac{1}{4}$"
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 5 jetons dont 2 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{2}{5} = \\dfrac{2}{5}$."
+      ],
+      "reponse": "$\\dfrac{2}{5}$"
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 7 jetons dont 3 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{3}{7} = \\dfrac{3}{7}$."
+      ],
+      "reponse": "$\\dfrac{3}{7}$"
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 3 jetons dont 1 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{1}{3} = \\dfrac{1}{3}$."
+      ],
+      "reponse": "$\\dfrac{1}{3}$"
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 9 jetons dont 2 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{2}{9} = \\dfrac{2}{9}$."
+      ],
+      "reponse": "$\\dfrac{2}{9}$"
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 8 jetons dont 3 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{3}{8} = \\dfrac{3}{8}$."
+      ],
+      "reponse": "$\\dfrac{3}{8}$"
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 6 jetons dont 1 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{1}{6} = \\dfrac{1}{6}$."
+      ],
+      "reponse": "$\\dfrac{1}{6}$"
+    },
+    {
+      "id": 50,
+      "difficulte": "intermediaire",
+      "notion": "probabilite-simple",
+      "enonce": "Une urne contient 12 jetons dont 5 gagnants. Probabilité d'en tirer un gagnant ?",
+      "corrige": [
+        "$P = \\dfrac{5}{12} = \\dfrac{5}{12}$."
+      ],
+      "reponse": "$\\dfrac{5}{12}$"
     }
   ]
 }

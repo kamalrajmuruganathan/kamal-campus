@@ -13,136 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "somme-chasles",
-      "enonce": "Simplifie chaque somme à l'aide de la relation de Chasles.\n\na) $\\overrightarrow{RS} + \\overrightarrow{ST}$\n\nb) $\\overrightarrow{MN} + \\overrightarrow{NP} + \\overrightarrow{PQ}$\n\nc) $\\overrightarrow{KL} + \\overrightarrow{LK}$",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(2\\,;\\,3)$ et $\\mathrm{B}(6\\,;\\,7)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "Rappel de la relation de Chasles : quand l'extrémité du premier vecteur est l'origine du second, ce point commun disparaît.",
-        "a) L'extrémité de $\\overrightarrow{RS}$ est $S$, qui est aussi l'origine de $\\overrightarrow{ST}$ : $S$ disparaît, donc $\\overrightarrow{RS} + \\overrightarrow{ST} = \\overrightarrow{RT}$.",
-        "b) On applique Chasles deux fois : $\\overrightarrow{MN} + \\overrightarrow{NP} = \\overrightarrow{MP}$ ($N$ disparaît), puis $\\overrightarrow{MP} + \\overrightarrow{PQ} = \\overrightarrow{MQ}$ ($P$ disparaît).",
-        "c) $\\overrightarrow{KL} + \\overrightarrow{LK} = \\overrightarrow{KK} = \\vec{0}$ : on part de $K$ et on y revient, l'aller-retour vaut le vecteur nul."
+        "$\\vec{\\mathrm{AB}}(6-(2)\\,;\\,7-(3)) = (4\\,;\\,4)$."
       ],
-      "reponse": "a) $\\overrightarrow{RT}$  ·  b) $\\overrightarrow{MQ}$  ·  c) $\\vec{0}$."
+      "reponse": "$\\vec{\\mathrm{AB}}(4\\,;\\,4)$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "egalite-vecteurs",
-      "enonce": "$MNPQ$ est un parallélogramme, ses sommets étant nommés dans cet ordre.\n\na) Écris les deux égalités de vecteurs qui traduisent ses côtés opposés.\n\nb) Que vaut $\\overrightarrow{MM}$ ?\n\nc) Quel est le vecteur opposé de $\\overrightarrow{MN}$ ?",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(1\\,;\\,2)$ et $\\mathrm{B}(5\\,;\\,10)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "Dans le parallélogramme $MNPQ$, on parcourt le contour $M \\to N \\to P \\to Q \\to M$. Les côtés opposés sont donc $[MN]$ et $[PQ]$ d'une part, $[NP]$ et $[QM]$ d'autre part.",
-        "a) Deux côtés opposés d'un parallélogramme donnent une égalité de vecteurs (même direction, même sens, même longueur) : $\\overrightarrow{MN} = \\overrightarrow{QP}$ et $\\overrightarrow{NP} = \\overrightarrow{MQ}$.",
-        "On fait bien attention au sens : $\\overrightarrow{MN} = \\overrightarrow{QP}$ (et non $\\overrightarrow{PQ}$), car les deux flèches doivent aller dans le même sens.",
-        "b) $\\overrightarrow{MM} = \\vec{0}$ : l'origine et l'extrémité sont confondues, c'est le vecteur nul.",
-        "c) L'opposé de $\\overrightarrow{MN}$ a la même direction et la même longueur mais le sens contraire : c'est $\\overrightarrow{NM}$."
+        "$\\vec{\\mathrm{AB}}(5-(1)\\,;\\,10-(2)) = (4\\,;\\,8)$."
       ],
-      "reponse": "a) $\\overrightarrow{MN} = \\overrightarrow{QP}$ et $\\overrightarrow{NP} = \\overrightarrow{MQ}$  ·  b) $\\overrightarrow{MM} = \\vec{0}$  ·  c) $\\overrightarrow{NM}$."
+      "reponse": "$\\vec{\\mathrm{AB}}(4\\,;\\,8)$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "egalite-vecteurs",
-      "enonce": "Léa sait que $\\overrightarrow{AB} = \\overrightarrow{CD}$, les points $A$, $B$ et $C$ n'étant pas alignés. Elle écrit aussitôt : « donc $ABCD$ est un parallélogramme ». A-t-elle raison ? Sinon, corrige son affirmation et justifie.",
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(-2\\,;\\,1)$ et $\\mathrm{B}(4\\,;\\,9)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "La propriété exacte du cours est : $\\overrightarrow{AB} = \\overrightarrow{CD} \\iff ABDC$ est un parallélogramme, en parcourant le contour $A \\to B \\to D \\to C \\to A$.",
-        "Léa a écrit $ABCD$ au lieu de $ABDC$ : c'est le piège le plus fréquent du chapitre. Le quadrilatère $ABCD$ obtenu en reliant les points dans cet ordre est en réalité **croisé**, ce n'est pas un parallélogramme.",
-        "Le réflexe de contrôle : $\\overrightarrow{AB}$ et $\\overrightarrow{CD}$ sont les deux flèches, donc $[AB]$ et $[CD]$ doivent être des côtés **opposés**. Dans $ABDC$, les diagonales sont $[AD]$ et $[BC]$ — si on tombe sur $[AC]$ et $[BD]$, c'est qu'on s'est trompé de figure.",
-        "Léa a donc tort sur l'ordre des lettres. La bonne conclusion est : $ABDC$ est un parallélogramme."
+        "$\\vec{\\mathrm{AB}}(4-(-2)\\,;\\,9-(1)) = (6\\,;\\,8)$."
       ],
-      "reponse": "Non : le parallélogramme est $ABDC$ (et non $ABCD$, qui serait croisé)."
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "somme-chasles",
-      "enonce": "Simplifie le plus possible la somme $\\overrightarrow{AC} + \\overrightarrow{DB} + \\overrightarrow{CD}$.",
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(0\\,;\\,0)$ et $\\mathrm{B}(6\\,;\\,8)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "Telle qu'elle est écrite, on ne peut pas appliquer Chasles directement : l'extrémité de $\\overrightarrow{AC}$ est $C$, mais le vecteur suivant est $\\overrightarrow{DB}$, qui part de $D$. Pas de point commun tout de suite.",
-        "Une somme de vecteurs ne dépend pas de l'ordre : on peut réorganiser pour faire apparaître les points communs. On place $\\overrightarrow{CD}$ juste après $\\overrightarrow{AC}$ : $\\overrightarrow{AC} + \\overrightarrow{CD} + \\overrightarrow{DB}$.",
-        "$\\overrightarrow{AC} + \\overrightarrow{CD} = \\overrightarrow{AD}$ (le point $C$ disparaît).",
-        "Puis $\\overrightarrow{AD} + \\overrightarrow{DB} = \\overrightarrow{AB}$ (le point $D$ disparaît)."
+        "$\\vec{\\mathrm{AB}}(6-(0)\\,;\\,8-(0)) = (6\\,;\\,8)$."
       ],
-      "reponse": "$\\overrightarrow{AC} + \\overrightarrow{DB} + \\overrightarrow{CD} = \\overrightarrow{AB}$."
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "lien-parallelogramme",
-      "enonce": "$ABCD$ est un quadrilatère. On note $I$ le milieu de la diagonale $[AC]$, et on suppose que $I$ est aussi le milieu de la diagonale $[BD]$.\n\n1) Justifie que $\\overrightarrow{AI} = \\overrightarrow{IC}$ et $\\overrightarrow{DI} = \\overrightarrow{IB}$.\n\n2) À l'aide de la relation de Chasles, démontre que $\\overrightarrow{AB} = \\overrightarrow{DC}$.\n\n3) Conclus : quelle est la nature de $ABCD$ ?",
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(3\\,;\\,-1)$ et $\\mathrm{B}(9\\,;\\,7)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "1) $I$ est le milieu de $[AC]$ : le déplacement de $A$ à $I$ est le même que de $I$ à $C$, donc $\\overrightarrow{AI} = \\overrightarrow{IC}$. De même, $I$ milieu de $[BD]$ donne $\\overrightarrow{DI} = \\overrightarrow{IB}$.",
-        "2) On décompose $\\overrightarrow{AB}$ en passant par $I$ (Chasles) : $\\overrightarrow{AB} = \\overrightarrow{AI} + \\overrightarrow{IB}$.",
-        "On décompose de même $\\overrightarrow{DC}$ en passant par $I$ : $\\overrightarrow{DC} = \\overrightarrow{DI} + \\overrightarrow{IC}$.",
-        "Or $\\overrightarrow{AI} = \\overrightarrow{IC}$ et $\\overrightarrow{IB} = \\overrightarrow{DI}$ d'après la question 1. En remplaçant : $\\overrightarrow{DC} = \\overrightarrow{DI} + \\overrightarrow{IC} = \\overrightarrow{IB} + \\overrightarrow{AI} = \\overrightarrow{AI} + \\overrightarrow{IB} = \\overrightarrow{AB}$.",
-        "3) On a $\\overrightarrow{AB} = \\overrightarrow{DC}$. La propriété du cours donne alors : $\\overrightarrow{AB} = \\overrightarrow{DC} \\iff ABCD$ est un parallélogramme. Attention à l'ordre : ici le second vecteur est $\\overrightarrow{DC}$ (et non $\\overrightarrow{CD}$), donc c'est bien $ABCD$ qui est un parallélogramme.",
-        "On retrouve ainsi une propriété connue de 5e : un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme."
+        "$\\vec{\\mathrm{AB}}(9-(3)\\,;\\,7-(-1)) = (6\\,;\\,8)$."
       ],
-      "reponse": "$\\overrightarrow{AB} = \\overrightarrow{DC}$, donc $ABCD$ est un parallélogramme."
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "somme-chasles",
-      "enonce": "$A$, $B$, $C$ et $D$ sont quatre points quelconques du plan. Démontre l'égalité $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$.",
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(-4\\,;\\,2)$ et $\\mathrm{B}(2\\,;\\,10)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "On part du membre de gauche et on introduit un point intermédiaire dans chaque vecteur, grâce à la relation de Chasles.",
-        "Dans $\\overrightarrow{AB}$, on passe par $D$ : $\\overrightarrow{AB} = \\overrightarrow{AD} + \\overrightarrow{DB}$.",
-        "Dans $\\overrightarrow{CD}$, on passe par $B$ : $\\overrightarrow{CD} = \\overrightarrow{CB} + \\overrightarrow{BD}$.",
-        "On additionne : $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{DB} + \\overrightarrow{CB} + \\overrightarrow{BD}$.",
-        "Or $\\overrightarrow{DB} + \\overrightarrow{BD} = \\overrightarrow{DD} = \\vec{0}$ (un aller-retour). Il reste $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$, ce qu'il fallait démontrer."
+        "$\\vec{\\mathrm{AB}}(2-(-4)\\,;\\,10-(2)) = (6\\,;\\,8)$."
       ],
-      "reponse": "En décomposant par Chasles, les vecteurs $\\overrightarrow{DB}$ et $\\overrightarrow{BD}$ s'annulent : $\\overrightarrow{AB} + \\overrightarrow{CD} = \\overrightarrow{AD} + \\overrightarrow{CB}$."
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "somme-chasles",
-      "enonce": "Donne à chaque fois le résultat le plus simple.\n\na) $\\overrightarrow{PR} + \\overrightarrow{RP}$\n\nb) l'opposé du vecteur $\\overrightarrow{UV}$\n\nc) $\\overrightarrow{GH} + \\overrightarrow{HK} + \\overrightarrow{KG}$",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(1\\,;\\,1)$ et $\\mathrm{B}(7\\,;\\,9)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "a) On fait l'aller de $P$ à $R$, puis le retour de $R$ à $P$ : on revient au point de départ. Par Chasles, $\\overrightarrow{PR} + \\overrightarrow{RP} = \\overrightarrow{PP} = \\vec{0}$.",
-        "b) L'opposé d'un vecteur garde la même direction et la même longueur, mais change de sens : on échange l'origine et l'extrémité. L'opposé de $\\overrightarrow{UV}$ est donc $\\overrightarrow{VU}$.",
-        "c) On applique Chasles de proche en proche : $\\overrightarrow{GH} + \\overrightarrow{HK} = \\overrightarrow{GK}$ ($H$ disparaît), puis $\\overrightarrow{GK} + \\overrightarrow{KG} = \\overrightarrow{GG} = \\vec{0}$. La somme parcourt un circuit fermé $G \\to H \\to K \\to G$ : elle vaut le vecteur nul."
+        "$\\vec{\\mathrm{AB}}(7-(1)\\,;\\,9-(1)) = (6\\,;\\,8)$."
       ],
-      "reponse": "a) $\\vec{0}$  ·  b) $\\overrightarrow{VU}$  ·  c) $\\vec{0}$."
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "egalite-vecteurs",
-      "enonce": "La translation de vecteur $\\overrightarrow{AB}$ transforme le point $M$ en $N$ et le point $P$ en $Q$ (les points $M$, $N$ et $P$ n'étant pas alignés).\n\na) Que peut-on dire des vecteurs $\\overrightarrow{MN}$, $\\overrightarrow{PQ}$ et $\\overrightarrow{AB}$ ?\n\nb) Déduis-en la nature du quadrilatère $MNQP$.",
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(2\\,;\\,-3)$ et $\\mathrm{B}(8\\,;\\,5)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "a) Par définition d'une translation, l'image d'un point fournit un vecteur égal au vecteur de la translation. Comme $N$ est l'image de $M$, on a $\\overrightarrow{MN} = \\overrightarrow{AB}$ ; comme $Q$ est l'image de $P$, on a $\\overrightarrow{PQ} = \\overrightarrow{AB}$.",
-        "Deux vecteurs égaux à un même troisième sont égaux entre eux : $\\overrightarrow{MN} = \\overrightarrow{PQ}$.",
-        "b) On applique la propriété du cours en soignant l'ordre des lettres : $\\overrightarrow{MN} = \\overrightarrow{PQ} \\iff MNQP$ est un parallélogramme (on parcourt le contour $M \\to N \\to Q \\to P \\to M$).",
-        "Ce n'est pas $MNPQ$ (qui serait croisé) : les deux flèches $\\overrightarrow{MN}$ et $\\overrightarrow{PQ}$ sont des côtés opposés, et les diagonales de $MNQP$ sont $[MQ]$ et $[NP]$."
+        "$\\vec{\\mathrm{AB}}(8-(2)\\,;\\,5-(-3)) = (6\\,;\\,8)$."
       ],
-      "reponse": "a) $\\overrightarrow{MN} = \\overrightarrow{PQ} = \\overrightarrow{AB}$  ·  b) $MNQP$ est un parallélogramme."
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "somme-chasles",
-      "enonce": "$A$, $B$, $C$ et $D$ sont quatre points du plan tels que $\\overrightarrow{AB} = \\overrightarrow{CD}$. En utilisant la relation de Chasles, démontre que l'on a aussi $\\overrightarrow{AC} = \\overrightarrow{BD}$.",
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(-1\\,;\\,4)$ et $\\mathrm{B}(5\\,;\\,12)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "On exprime chacun des deux vecteurs à comparer en passant par un même point intermédiaire, grâce à la relation de Chasles.",
-        "Pour $\\overrightarrow{AC}$, on passe par $B$ : $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC}$.",
-        "Pour $\\overrightarrow{BD}$, on passe par $C$ : $\\overrightarrow{BD} = \\overrightarrow{BC} + \\overrightarrow{CD}$.",
-        "Or l'énoncé donne $\\overrightarrow{AB} = \\overrightarrow{CD}$. En remplaçant dans la première décomposition : $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{CD} + \\overrightarrow{BC} = \\overrightarrow{BC} + \\overrightarrow{CD} = \\overrightarrow{BD}$.",
-        "On retrouve la remarque du cours : le parallélogramme $ABDC$ donne deux égalités de vecteurs, $\\overrightarrow{AB} = \\overrightarrow{CD}$ et $\\overrightarrow{AC} = \\overrightarrow{BD}$, une par paire de côtés opposés."
+        "$\\vec{\\mathrm{AB}}(5-(-1)\\,;\\,12-(4)) = (6\\,;\\,8)$."
       ],
-      "reponse": "En décomposant par Chasles, $\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{CD} + \\overrightarrow{BC} = \\overrightarrow{BD}$."
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "lien-parallelogramme",
-      "enonce": "Maëlle programme un robot qui se déplace sur un quadrillage en enchaînant des translations : chaque déplacement est une translation, décrite par son vecteur. Le robot part d'un point $A$.\n\n1. Le robot effectue d'abord la translation de vecteur $\\overrightarrow{AB}$ et arrive en $B$, puis la translation de vecteur $\\overrightarrow{BC}$ et arrive en $C$. Écris en un seul vecteur le déplacement total qui mène directement de $A$ à $C$.\n\n2. Maëlle place ensuite un point $D$ tel que $\\overrightarrow{AD} = \\overrightarrow{BC}$. Démontre que $ABCD$ est un parallélogramme.\n\n3. Vérifie l'égalité $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AC}$. Que signifie-t-elle pour les deux trajets qui mènent de $A$ à $C$ ?\n\n4. Une fois arrivé en $C$, quel unique déplacement (donné par son vecteur) ramène le robot en $A$ ? Que vaut alors la somme $\\overrightarrow{AC} + \\overrightarrow{CA}$ ?",
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(0\\,;\\,5)$ et $\\mathrm{B}(8\\,;\\,11)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
       "corrige": [
-        "1. L'extrémité du premier déplacement, $B$, est l'origine du second : la relation de Chasles s'applique et $B$ disparaît. On obtient $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$. Le robot aurait donc pu rejoindre $C$ en un seul déplacement, la translation de vecteur $\\overrightarrow{AC}$.",
-        "2. On a $\\overrightarrow{AD} = \\overrightarrow{BC}$, autrement dit $\\overrightarrow{BC} = \\overrightarrow{AD}$. La propriété du cours donne $\\overrightarrow{BC} = \\overrightarrow{AD} \\iff BCDA$ est un parallélogramme (contour $B \\to C \\to D \\to A \\to B$). Or $BCDA$ et $ABCD$ désignent le même quadrilatère, simplement décrit en partant d'un autre sommet : $ABCD$ est donc un parallélogramme, dont $[AD]$ et $[BC]$ sont deux côtés opposés égaux et parallèles.",
-        "3. Puisque $ABCD$ est un parallélogramme, les vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{AD}$ partent du même point $A$ : c'est la règle de la somme de deux vecteurs de même origine, $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AC}$. On peut aussi le retrouver par Chasles, car $\\overrightarrow{AD} = \\overrightarrow{BC}$ : $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$. Concrètement, les deux trajets « $A \\to B \\to C$ » et « $A \\to D \\to C$ » aboutissent au même point $C$.",
-        "4. Le déplacement de retour a la même direction et la même longueur que $\\overrightarrow{AC}$, mais le sens contraire : c'est son opposé, $\\overrightarrow{CA}$. En enchaînant l'aller et le retour, le robot revient à son point de départ : $\\overrightarrow{AC} + \\overrightarrow{CA} = \\overrightarrow{AA} = \\vec{0}$."
+        "$\\vec{\\mathrm{AB}}(8-(0)\\,;\\,11-(5)) = (8\\,;\\,6)$."
       ],
-      "reponse": "1. $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$.  ·  2. $ABCD$ est un parallélogramme.  ·  3. $\\overrightarrow{AB} + \\overrightarrow{AD} = \\overrightarrow{AC}$ : les deux trajets aboutissent en $C$.  ·  4. Le retour est $\\overrightarrow{CA}$, et $\\overrightarrow{AC} + \\overrightarrow{CA} = \\vec{0}$."
+      "reponse": "$\\vec{\\mathrm{AB}}(8\\,;\\,6)$"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(3\\,;\\,3)$ et $\\mathrm{B}(15\\,;\\,8)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
+      "corrige": [
+        "$\\vec{\\mathrm{AB}}(15-(3)\\,;\\,8-(3)) = (12\\,;\\,5)$."
+      ],
+      "reponse": "$\\vec{\\mathrm{AB}}(12\\,;\\,5)$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(-2\\,;\\,-2)$ et $\\mathrm{B}(4\\,;\\,6)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
+      "corrige": [
+        "$\\vec{\\mathrm{AB}}(4-(-2)\\,;\\,6-(-2)) = (6\\,;\\,8)$."
+      ],
+      "reponse": "$\\vec{\\mathrm{AB}}(6\\,;\\,8)$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(5\\,;\\,1)$ et $\\mathrm{B}(2\\,;\\,6)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
+      "corrige": [
+        "$\\vec{\\mathrm{AB}}(2-(5)\\,;\\,6-(1)) = (-3\\,;\\,5)$."
+      ],
+      "reponse": "$\\vec{\\mathrm{AB}}(-3\\,;\\,5)$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$\\mathrm{A}(-3\\,;\\,2)$ et $\\mathrm{B}(1\\,;\\,-4)$. Calculer les coordonnées du vecteur $\\vec{\\mathrm{AB}}$.",
+      "corrige": [
+        "$\\vec{\\mathrm{AB}}(1-(-3)\\,;\\,-4-(2)) = (4\\,;\\,-6)$."
+      ],
+      "reponse": "$\\vec{\\mathrm{AB}}(4\\,;\\,-6)$"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(2\\,;\\,3)$ par le vecteur $\\vec{u}(4\\,;\\,1)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(2+(4)\\,;\\,3+(1)) = (6\\,;\\,4)$."
+      ],
+      "reponse": "$\\mathrm{M'}(6\\,;\\,4)$"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(1\\,;\\,-2)$ par le vecteur $\\vec{u}(3\\,;\\,5)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(1+(3)\\,;\\,-2+(5)) = (4\\,;\\,3)$."
+      ],
+      "reponse": "$\\mathrm{M'}(4\\,;\\,3)$"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(0\\,;\\,0)$ par le vecteur $\\vec{u}(-2\\,;\\,4)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(0+(-2)\\,;\\,0+(4)) = (-2\\,;\\,4)$."
+      ],
+      "reponse": "$\\mathrm{M'}(-2\\,;\\,4)$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(5\\,;\\,1)$ par le vecteur $\\vec{u}(2\\,;\\,-3)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(5+(2)\\,;\\,1+(-3)) = (7\\,;\\,-2)$."
+      ],
+      "reponse": "$\\mathrm{M'}(7\\,;\\,-2)$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(-1\\,;\\,2)$ par le vecteur $\\vec{u}(6\\,;\\,2)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(-1+(6)\\,;\\,2+(2)) = (5\\,;\\,4)$."
+      ],
+      "reponse": "$\\mathrm{M'}(5\\,;\\,4)$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(3\\,;\\,3)$ par le vecteur $\\vec{u}(1\\,;\\,-4)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(3+(1)\\,;\\,3+(-4)) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$\\mathrm{M'}(4\\,;\\,-1)$"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(2\\,;\\,-1)$ par le vecteur $\\vec{u}(-3\\,;\\,5)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(2+(-3)\\,;\\,-1+(5)) = (-1\\,;\\,4)$."
+      ],
+      "reponse": "$\\mathrm{M'}(-1\\,;\\,4)$"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(4\\,;\\,0)$ par le vecteur $\\vec{u}(2\\,;\\,7)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(4+(2)\\,;\\,0+(7)) = (6\\,;\\,7)$."
+      ],
+      "reponse": "$\\mathrm{M'}(6\\,;\\,7)$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(-2\\,;\\,-2)$ par le vecteur $\\vec{u}(5\\,;\\,3)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(-2+(5)\\,;\\,-2+(3)) = (3\\,;\\,1)$."
+      ],
+      "reponse": "$\\mathrm{M'}(3\\,;\\,1)$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(1\\,;\\,5)$ par le vecteur $\\vec{u}(-4\\,;\\,-2)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(1+(-4)\\,;\\,5+(-2)) = (-3\\,;\\,3)$."
+      ],
+      "reponse": "$\\mathrm{M'}(-3\\,;\\,3)$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(6\\,;\\,2)$ par le vecteur $\\vec{u}(3\\,;\\,3)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(6+(3)\\,;\\,2+(3)) = (9\\,;\\,5)$."
+      ],
+      "reponse": "$\\mathrm{M'}(9\\,;\\,5)$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "On translate le point $\\mathrm{M}(0\\,;\\,4)$ par le vecteur $\\vec{u}(7\\,;\\,-1)$. Coordonnées de l'image $\\mathrm{M'}$ ?",
+      "corrige": [
+        "$\\mathrm{M'}(0+(7)\\,;\\,4+(-1)) = (7\\,;\\,3)$."
+      ],
+      "reponse": "$\\mathrm{M'}(7\\,;\\,3)$"
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(2\\,;\\,3)$ et $\\vec{v}(1\\,;\\,2)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(2+1\\,;\\,3+2) = (3\\,;\\,5)$."
+      ],
+      "reponse": "$(3\\,;\\,5)$"
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(4\\,;\\,1)$ et $\\vec{v}(0\\,;\\,0)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(4+0\\,;\\,1+0) = (4\\,;\\,1)$."
+      ],
+      "reponse": "$(4\\,;\\,1)$"
+    },
+    {
+      "id": 29,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,4)$ et $\\vec{v}(2\\,;\\,-1)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+2\\,;\\,4+-1) = (5\\,;\\,3)$."
+      ],
+      "reponse": "$(5\\,;\\,3)$"
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,3)$ et $\\vec{v}(-2\\,;\\,1)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+-2\\,;\\,3+1) = (1\\,;\\,4)$."
+      ],
+      "reponse": "$(1\\,;\\,4)$"
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,4)$ et $\\vec{v}(3\\,;\\,3)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+3\\,;\\,4+3) = (6\\,;\\,7)$."
+      ],
+      "reponse": "$(6\\,;\\,7)$"
+    },
+    {
+      "id": 32,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,4)$ et $\\vec{v}(1\\,;\\,-2)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+1\\,;\\,4+-2) = (4\\,;\\,2)$."
+      ],
+      "reponse": "$(4\\,;\\,2)$"
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,6)$ et $\\vec{v}(-1\\,;\\,0)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+-1\\,;\\,6+0) = (2\\,;\\,6)$."
+      ],
+      "reponse": "$(2\\,;\\,6)$"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,3)$ et $\\vec{v}(5\\,;\\,1)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+5\\,;\\,3+1) = (8\\,;\\,4)$."
+      ],
+      "reponse": "$(8\\,;\\,4)$"
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,5)$ et $\\vec{v}(0\\,;\\,3)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+0\\,;\\,5+3) = (3\\,;\\,8)$."
+      ],
+      "reponse": "$(3\\,;\\,8)$"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(5\\,;\\,3)$ et $\\vec{v}(2\\,;\\,2)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(5+2\\,;\\,3+2) = (7\\,;\\,5)$."
+      ],
+      "reponse": "$(7\\,;\\,5)$"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(3\\,;\\,4)$ et $\\vec{v}(-3\\,;\\,-1)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(3+-3\\,;\\,4+-1) = (0\\,;\\,3)$."
+      ],
+      "reponse": "$(0\\,;\\,3)$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "somme-vecteurs",
+      "enonce": "$\\vec{u}(2\\,;\\,3)$ et $\\vec{v}(4\\,;\\,-2)$. Calculer les coordonnées de $\\vec{u}+\\vec{v}$.",
+      "corrige": [
+        "On additionne coordonnée par coordonnée : $\\vec{u}+\\vec{v}(2+4\\,;\\,3+-2) = (6\\,;\\,1)$."
+      ],
+      "reponse": "$(6\\,;\\,1)$"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(1\\,;\\,3)$, $\\mathrm{B}(5\\,;\\,2)$ ?",
+      "corrige": [
+        "$(5-1\\,;\\,2-3) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(2\\,;\\,4)$, $\\mathrm{B}(6\\,;\\,3)$ ?",
+      "corrige": [
+        "$(6-2\\,;\\,3-4) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(3\\,;\\,5)$, $\\mathrm{B}(7\\,;\\,4)$ ?",
+      "corrige": [
+        "$(7-3\\,;\\,4-5) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(4\\,;\\,6)$, $\\mathrm{B}(8\\,;\\,5)$ ?",
+      "corrige": [
+        "$(8-4\\,;\\,5-6) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(5\\,;\\,7)$, $\\mathrm{B}(9\\,;\\,6)$ ?",
+      "corrige": [
+        "$(9-5\\,;\\,6-7) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(6\\,;\\,8)$, $\\mathrm{B}(10\\,;\\,7)$ ?",
+      "corrige": [
+        "$(10-6\\,;\\,7-8) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(7\\,;\\,9)$, $\\mathrm{B}(11\\,;\\,8)$ ?",
+      "corrige": [
+        "$(11-7\\,;\\,8-9) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(8\\,;\\,10)$, $\\mathrm{B}(12\\,;\\,9)$ ?",
+      "corrige": [
+        "$(12-8\\,;\\,9-10) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(9\\,;\\,11)$, $\\mathrm{B}(13\\,;\\,10)$ ?",
+      "corrige": [
+        "$(13-9\\,;\\,10-11) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(10\\,;\\,12)$, $\\mathrm{B}(14\\,;\\,11)$ ?",
+      "corrige": [
+        "$(14-10\\,;\\,11-12) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(11\\,;\\,13)$, $\\mathrm{B}(15\\,;\\,12)$ ?",
+      "corrige": [
+        "$(15-11\\,;\\,12-13) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "coordonnees-vecteur",
+      "enonce": "Coordonnées de $\\vec{\\mathrm{AB}}$ : $\\mathrm{A}(12\\,;\\,14)$, $\\mathrm{B}(16\\,;\\,13)$ ?",
+      "corrige": [
+        "$(16-12\\,;\\,13-14) = (4\\,;\\,-1)$."
+      ],
+      "reponse": "$(4\\,;\\,-1)$"
     }
   ]
 }

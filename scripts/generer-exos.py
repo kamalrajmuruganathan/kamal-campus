@@ -320,6 +320,168 @@ def gen_statistiques():
     E=E[:50]
     return [exo(i+1,*t) for i,t in enumerate(E)]
 
+# ---------------- FONCTIONS (3e) ----------------
+def gen_fonctions():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    aff=[(2,3,4),(3,-1,5),(-2,7,3),(4,0,6),(1,5,-2),(5,-2,3),(-3,4,2),(2,-5,7),(6,1,-1),(-1,8,5),(3,2,0),(2,4,-3),(4,3,2),(-2,9,4),(3,-4,6),(5,1,2),(2,6,-4),(-4,5,1),(3,7,3),(2,-2,8)]
+    for (a,b,x0) in aff:
+        y=a*x0+b; sb='+' if b>=0 else '-'
+        add("application","image", f"Soit $f(x) = {poly_latex([(a,1),(b,0)])}$. Calculer $f({x0})$.",
+            [f"$f({x0}) = {a}\\times({x0}) {sb} {abs(b)} = {y}$."], f"$f({x0}) = {y}$")
+    ant=[(2,3,11),(3,-1,8),(4,1,13),(5,2,17),(2,-3,7),(3,6,15),(-2,5,1),(4,-2,10),(2,7,3),(6,0,18),(3,1,10),(5,-2,13)]
+    for (a,b,y0) in ant:
+        x=Fraction(y0-b,a); sb='-' if b>=0 else '+'
+        add("intermediaire","antecedent", f"Soit $f(x) = {poly_latex([(a,1),(b,0)])}$. Déterminer l'antécédent de {y0}.",
+            [f"On résout ${poly_latex([(a,1),(b,0)])} = {y0}$.",f"$x = \\dfrac{{{y0} {sb} {abs(b)}}}{{{a}}} = {frac_latex(x)}$."], f"$x = {frac_latex(x)}$")
+    lin=[(4,12),(5,20),(3,21),(6,18),(2,14),(7,35),(4,10),(5,15)]
+    for (x0,y0) in lin:
+        a=Fraction(y0,x0)
+        add("application","fonction-lineaire", f"$f$ est linéaire et $f({x0}) = {y0}$. Déterminer son coefficient.",
+            [f"$f(x)=ax$ donc $a = \\dfrac{{{y0}}}{{{x0}}} = {frac_latex(a)}$."], f"$a = {frac_latex(a)}$")
+    for (a,x0) in [(3,5),(4,2),(2,9),(5,3),(6,4),(2,7),(3,8),(4,6),(5,5),(2,11)]:
+        add("application","fonction-lineaire", f"Soit $f(x) = {a}x$. Calculer $f({x0})$.",
+            [f"$f({x0}) = {a}\\times {x0} = {a*x0}$."], f"$f({x0}) = {a*x0}$")
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+# ---------------- MULTIPLES / DIVISEURS (3e) ----------------
+def gen_multiples_diviseurs():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    for (a,b) in [(24,36),(48,60),(30,45),(56,42),(72,54),(100,60),(84,36),(90,120),(45,75),(64,48),(27,36),(50,80),(66,44),(81,54)]:
+        g=math.gcd(a,b)
+        add("intermediaire","pgcd", f"Calculer le PGCD de {a} et {b}.",
+            [f"Par l'algorithme d'Euclide (ou décomposition), $\\mathrm{{PGCD}}({a},{b}) = {g}$."], f"${g}$")
+    for (a,b) in [(24,36),(30,45),(48,60),(56,42),(72,54),(90,120),(45,75),(64,48),(27,36),(50,80),(66,44),(84,36)]:
+        f=Fraction(a,b); g=math.gcd(a,b)
+        add("application","fraction-irreductible", f"Rendre irréductible : $\\dfrac{{{a}}}{{{b}}}$.",
+            [f"On divise par le PGCD $= {g}$ : $\\dfrac{{{a}}}{{{b}}} = {frac_latex(f)}$."], f"${frac_latex(f)}$")
+    tests=[(126,3),(85,5),(324,9),(238,2),(475,5),(153,3),(112,2),(945,9),(370,5),(639,3),(284,4),(510,10)]
+    for (N,d) in tests:
+        ok = (N % d == 0)
+        add("application","divisibilite", f"Le nombre {N} est-il divisible par {d} ? Justifier.",
+            [f"On applique le critère de divisibilité par {d}.", ("Oui." if ok else "Non.")+f" En effet ${N} = {d} \\times {N//d}$." if ok else f"Non : {N} n'est pas un multiple de {d} (reste {N%d})."],
+            "Oui" if ok else "Non")
+    _i=2
+    while len(E)<50:
+        _a,_b=6*_i,4*_i+2; _g=math.gcd(_a,_b)
+        add("intermediaire","pgcd",f"Calculer le PGCD de {_a} et {_b}.",[f"$\\mathrm{{PGCD}}({_a},{_b}) = {_g}$."],f"${_g}$")
+        _i+=1
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+# ---------------- PROBABILITES (3e) ----------------
+def gen_probabilites():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    de=[("obtenir 6",1),("obtenir un nombre pair",3),("obtenir un multiple de 3",2),("obtenir au moins 5",2),("obtenir 1",1),("obtenir un nombre supérieur à 4",2),("obtenir un nombre impair",3),("obtenir un diviseur de 6",4)]
+    for (evt,fav) in de:
+        f=Fraction(fav,6)
+        add("application","probabilite-simple", f"On lance un dé équilibré à 6 faces. Probabilité de {evt} ?",
+            [f"$P = \\dfrac{{{fav}}}{{6}} = {frac_latex(f)}$."], f"${frac_latex(f)}$")
+    urnes=[(3,5),(4,10),(5,10),(2,10),(7,10),(1,5),(6,10),(3,8),(9,12),(4,6)]
+    for (fav,tot) in urnes:
+        f=Fraction(fav,tot)
+        add("application","probabilite-simple", f"Une urne contient {tot} boules dont {fav} rouges. Probabilité de tirer une rouge ?",
+            [f"$P = \\dfrac{{{fav}}}{{{tot}}} = {frac_latex(f)}$."], f"${frac_latex(f)}$")
+    for (fav,tot) in [(3,10),(2,5),(7,10),(1,4),(5,8),(4,9),(6,10),(3,7),(2,9),(5,12)]:
+        f=Fraction(fav,tot); comp=1-f
+        add("intermediaire","probabilite-complementaire", f"La probabilité d'un événement est $\\dfrac{{{fav}}}{{{tot}}}$. Probabilité qu'il ne se réalise pas ?",
+            [f"$P(\\overline{{A}}) = 1 - \\dfrac{{{fav}}}{{{tot}}} = {frac_latex(comp)}$."], f"${frac_latex(comp)}$")
+    cartes=[("un roi",4),("un cœur",8),("l'as de pique",1),("une figure",12),("un carreau",8),("un rouge",16),("le 7 de trèfle",1),("un as",4),("une dame",4),("un pique",8),("un noir",16),("un valet",4),("le roi de cœur",1),("un cœur ou un carreau",16)]
+    for (evt,fav) in cartes:
+        f=Fraction(fav,32)
+        add("approfondissement","probabilite-simple", f"On tire une carte au hasard dans un jeu de 32 cartes. Probabilité d'obtenir {evt} ?",
+            [f"$P = \\dfrac{{{fav}}}{{32}} = {frac_latex(f)}$."], f"${frac_latex(f)}$")
+    for (_f,_t) in [(1,4),(2,5),(3,7),(1,3),(2,9),(3,8),(1,6),(5,12),(2,7),(3,10),(1,5),(4,9)]:
+        if len(E)>=50: break
+        _fr=Fraction(_f,_t)
+        add("intermediaire","probabilite-simple",f"Une urne contient {_t} jetons dont {_f} gagnants. Probabilité d'en tirer un gagnant ?",[f"$P = \\dfrac{{{_f}}}{{{_t}}} = {frac_latex(_fr)}$."],f"${frac_latex(_fr)}$")
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+# ---------------- REPERAGE (3e) ----------------
+def gen_reperage():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    pts=[((2,3),(6,7)),((1,2),(5,10)),((-2,1),(4,9)),((0,0),(6,8)),((3,-1),(9,7)),((-4,2),(2,10)),((1,1),(7,9)),((2,-3),(8,5)),((-1,4),(5,12)),((0,5),(8,11)),((3,3),(15,8)),((-2,-2),(4,6))]
+    for ((xa,ya),(xb,yb)) in pts[:8]:
+        mx=Fraction(xa+xb,2); my=Fraction(ya+yb,2)
+        add("application","milieu", f"$\\mathrm{{A}}({xa}\\,;\\,{ya})$ et $\\mathrm{{B}}({xb}\\,;\\,{yb})$. Calculer les coordonnées du milieu $\\mathrm{{I}}$ de $[\\mathrm{{AB}}]$.",
+            [f"$\\mathrm{{I}}\\left(\\dfrac{{{xa}+{xb}}}{{2}}\\,;\\,\\dfrac{{{ya}+{yb}}}{{2}}\\right) = ({frac_latex(mx)}\\,;\\,{frac_latex(my)})$."], f"$\\mathrm{{I}}({frac_latex(mx)}\\,;\\,{frac_latex(my)})$")
+    dist=[((0,0),(3,4)),((1,1),(4,5)),((2,3),(5,7)),((-1,2),(2,6)),((0,0),(6,8)),((1,2),(9,17)) if False else ((1,2),(13,14)),((-2,1),(3,13)),((0,5),(12,10)),((2,2),(14,9)),((-3,0),(2,12)),((1,-1),(9,5)),((0,0),(5,12))]
+    for ((xa,ya),(xb,yb)) in dist[:12]:
+        n=(xb-xa)**2+(yb-ya)**2; r=math.isqrt(n)
+        rep=f"$\\mathrm{{AB}} = {r}$" if r*r==n else f"$\\mathrm{{AB}} = \\sqrt{{{n}}}$"
+        tail=f" = {r}$." if r*r==n else "$."
+        add("intermediaire","distance", f"$\\mathrm{{A}}({xa}\\,;\\,{ya})$ et $\\mathrm{{B}}({xb}\\,;\\,{yb})$. Calculer la distance $\\mathrm{{AB}}$.",
+            [f"$\\mathrm{{AB}} = \\sqrt{{({xb}-({xa}))^2 + ({yb}-({ya}))^2}} = \\sqrt{{{ (xb-xa)**2 } + { (yb-ya)**2 }}} = \\sqrt{{{n}}}$"+tail], rep)
+    # coordonnees lecture (symbolique simple)
+    for ((xa,ya),(xb,yb)) in pts[:14]:
+        mx=Fraction(xa+xb,2); my=Fraction(ya+yb,2)
+        add("application","milieu", f"Calculer le milieu de $[\\mathrm{{CD}}]$ avec $\\mathrm{{C}}({xa}\\,;\\,{ya})$ et $\\mathrm{{D}}({xb}\\,;\\,{yb})$.",
+            [f"Milieu $= \\left(\\dfrac{{{xa}+{xb}}}{{2}}\\,;\\,\\dfrac{{{ya}+{yb}}}{{2}}\\right) = ({frac_latex(mx)}\\,;\\,{frac_latex(my)})$."], f"$({frac_latex(mx)}\\,;\\,{frac_latex(my)})$")
+    _i=1
+    while len(E)<50:
+        _xa,_ya,_xb,_yb=_i,_i+1,_i+5,_i+3
+        _mx=Fraction(_xa+_xb,2);_my=Fraction(_ya+_yb,2)
+        add("application","milieu",f"Milieu de $[\\mathrm{{AB}}]$ : $\\mathrm{{A}}({_xa}\\,;\\,{_ya})$, $\\mathrm{{B}}({_xb}\\,;\\,{_yb})$ ?",[f"$= ({frac_latex(_mx)}\\,;\\,{frac_latex(_my)})$."],f"$({frac_latex(_mx)}\\,;\\,{frac_latex(_my)})$")
+        _i+=1
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+# ---------------- TRANSLATIONS / VECTEURS (3e) ----------------
+def gen_translations_vecteurs():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    pts=[((2,3),(6,7)),((1,2),(5,10)),((-2,1),(4,9)),((0,0),(6,8)),((3,-1),(9,7)),((-4,2),(2,10)),((1,1),(7,9)),((2,-3),(8,5)),((-1,4),(5,12)),((0,5),(8,11)),((3,3),(15,8)),((-2,-2),(4,6)),((5,1),(2,6)),((-3,2),(1,-4))]
+    for ((xa,ya),(xb,yb)) in pts[:14]:
+        add("application","coordonnees-vecteur", f"$\\mathrm{{A}}({xa}\\,;\\,{ya})$ et $\\mathrm{{B}}({xb}\\,;\\,{yb})$. Calculer les coordonnées du vecteur $\\vec{{\\mathrm{{AB}}}}$.",
+            [f"$\\vec{{\\mathrm{{AB}}}}({xb}-({xa})\\,;\\,{yb}-({ya})) = ({xb-xa}\\,;\\,{yb-ya})$."], f"$\\vec{{\\mathrm{{AB}}}}({xb-xa}\\,;\\,{yb-ya})$")
+    for ((mx,my),(ux,uy)) in [((2,3),(4,1)),((1,-2),(3,5)),((0,0),(-2,4)),((5,1),(2,-3)),((-1,2),(6,2)),((3,3),(1,-4)),((2,-1),(-3,5)),((4,0),(2,7)),((-2,-2),(5,3)),((1,5),(-4,-2)),((6,2),(3,3)),((0,4),(7,-1))]:
+        add("intermediaire","translation", f"On translate le point $\\mathrm{{M}}({mx}\\,;\\,{my})$ par le vecteur $\\vec{{u}}({ux}\\,;\\,{uy})$. Coordonnées de l'image $\\mathrm{{M'}}$ ?",
+            [f"$\\mathrm{{M'}}({mx}+({ux})\\,;\\,{my}+({uy})) = ({mx+ux}\\,;\\,{my+uy})$."], f"$\\mathrm{{M'}}({mx+ux}\\,;\\,{my+uy})$")
+    for ((ax,ay),(bx,by)) in [((1,2),(3,5)),((0,0),(4,1)),((2,-1),(5,3)),((-2,1),(1,4)),((3,3),(6,7)),((1,-2),(4,2)),((-1,0),(2,6)),((5,1),(8,4)),((0,3),(3,8)),((2,2),(7,5)),((-3,-1),(0,3)),((4,-2),(6,1))]:
+        ux,uy=bx-ax,by-ay
+        add("approfondissement","somme-vecteurs", f"$\\vec{{u}}({ux}\\,;\\,{uy})$ et $\\vec{{v}}({ax}\\,;\\,{ay})$. Calculer les coordonnées de $\\vec{{u}}+\\vec{{v}}$.",
+            [f"On additionne coordonnée par coordonnée : $\\vec{{u}}+\\vec{{v}}({ux}+{ax}\\,;\\,{uy}+{ay}) = ({ux+ax}\\,;\\,{uy+ay})$."], f"$({ux+ax}\\,;\\,{uy+ay})$")
+    _i=1
+    while len(E)<50:
+        _xa,_ya,_xb,_yb=_i,_i+2,_i+4,_i+1
+        add("application","coordonnees-vecteur",f"Coordonnées de $\\vec{{\\mathrm{{AB}}}}$ : $\\mathrm{{A}}({_xa}\\,;\\,{_ya})$, $\\mathrm{{B}}({_xb}\\,;\\,{_yb})$ ?",[f"$({_xb}-{_xa}\\,;\\,{_yb}-{_ya}) = ({_xb-_xa}\\,;\\,{_yb-_ya})$."],f"$({_xb-_xa}\\,;\\,{_yb-_ya})$")
+        _i+=1
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+# ---------------- REPRESENTATION DANS L'ESPACE (3e) ----------------
+def gen_representation_espace():
+    E=[]
+    def add(diff,notion,en,co,rep): E.append((diff,notion,en,co,rep))
+    for (L,l,h) in [(3,4,5),(2,6,7),(5,5,2),(4,3,6),(10,2,3),(8,5,2),(6,6,6),(7,2,4),(9,3,2),(4,4,10),(5,8,3),(2,2,9)]:
+        v=L*l*h
+        add("application","volume-pave", f"Calculer le volume d'un pavé droit de dimensions {L} cm, {l} cm et {h} cm.",
+            [f"$V = L \\times l \\times h = {L} \\times {l} \\times {h} = {v}$ cm³."], f"${v}$ cm³")
+    for (r,h) in [(2,5),(3,4),(5,10),(1,7),(4,3),(2,9),(6,2),(3,8),(5,6),(2,12)]:
+        v=r*r*h
+        add("intermediaire","volume-cylindre", f"Calculer le volume d'un cylindre de rayon {r} cm et de hauteur {h} cm (en fonction de $\\pi$, puis arrondi au dixième).",
+            [f"$V = \\pi r^2 h = \\pi \\times {r}^2 \\times {h} = {v}\\pi \\approx {fr(math.pi*v,1)}$ cm³."], f"${v}\\pi \\approx {fr(math.pi*v,1)}$ cm³")
+    for (cote,h) in [(3,6),(4,9),(5,12),(2,9),(6,5),(4,6),(3,10),(5,9),(2,15),(6,4)]:
+        base=cote*cote; v=Fraction(base*h,3)
+        add("approfondissement","volume-pyramide", f"Calculer le volume d'une pyramide à base carrée de côté {cote} cm et de hauteur {h} cm.",
+            [f"$V = \\dfrac{{1}}{{3}} \\times \\text{{aire base}} \\times h = \\dfrac{{1}}{{3}} \\times {base} \\times {h} = {fr(float(v),2)}$ cm³."], f"${fr(float(v),2)}$ cm³")
+    for (r,) in [(3,),(2,),(6,),(1,),(9,),(5,),(4,),(12,),(10,),(8,)]:
+        v=Fraction(4,3)*r**3
+        add("approfondissement","volume-boule", f"Calculer le volume d'une boule de rayon {r} cm (en fonction de $\\pi$, puis arrondi au dixième).",
+            [f"$V = \\dfrac{{4}}{{3}}\\pi r^3 = \\dfrac{{4}}{{3}}\\pi \\times {r}^3 = {frac_latex(v)}\\pi \\approx {fr(float(v)*math.pi,1)}$ cm³."], f"${frac_latex(v)}\\pi \\approx {fr(float(v)*math.pi,1)}$ cm³")
+    _i=2
+    while len(E)<50:
+        _L,_l,_h=_i,_i+1,_i+3; _v=_L*_l*_h
+        add("application","volume-pave",f"Volume d'un pavé droit de {_L} cm x {_l} cm x {_h} cm ?",[f"$V = {_L}\\times{_l}\\times{_h} = {_v}$ cm³."],f"${_v}$ cm³")
+        _i+=1
+    E=E[:50]
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
 REGISTRE = {
     ("troisieme","triangles"): gen_triangles,
     ("troisieme","puissances"): gen_puissances,
@@ -328,6 +490,12 @@ REGISTRE = {
     ("troisieme","proportionnalite"): gen_proportionnalite,
     ("troisieme","racine-carree"): gen_racine_carree,
     ("troisieme","statistiques"): gen_statistiques,
+    ("troisieme","fonctions"): gen_fonctions,
+    ("troisieme","multiples-diviseurs"): gen_multiples_diviseurs,
+    ("troisieme","probabilites"): gen_probabilites,
+    ("troisieme","reperage"): gen_reperage,
+    ("troisieme","translations-vecteurs"): gen_translations_vecteurs,
+    ("troisieme","representation-espace"): gen_representation_espace,
 }
 
 def traiter(racine="contenu"):
