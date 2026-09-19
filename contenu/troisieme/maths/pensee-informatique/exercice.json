@@ -13,136 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "boucle-conditionnelle",
-      "enonce": "L'utilisateur saisit $5$. Déroule ce programme dans un tableau de suivi, avec une colonne pour le test, puis donne ce qu'il affiche.\n\n```\ndemander un nombre et le mettre dans n\nmettre 0 dans somme\ntant que n > 0 faire\n    mettre somme + n dans somme\n    mettre n − 1 dans n\nfin tant que\nafficher somme\n```",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 0$ puis répète 4 fois « $x$ prend la valeur $x + 3$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "Avant la boucle : `n` vaut $5$ et `somme` vaut $0$. Le test se lit **avant** chaque tour.",
-        "Tour 1 : $5 > 0$ est **vrai** → `somme` $= 0 + 5 = 5$, puis `n` $= 5 - 1 = 4$.",
-        "Tour 2 : $4 > 0$ vrai → `somme` $= 5 + 4 = 9$, `n` $= 3$. Tour 3 : $3 > 0$ vrai → `somme` $= 9 + 3 = 12$, `n` $= 2$.",
-        "Tour 4 : $2 > 0$ vrai → `somme` $= 12 + 2 = 14$, `n` $= 1$. Tour 5 : $1 > 0$ vrai → `somme` $= 14 + 1 = 15$, `n` $= 0$.",
-        "Test suivant : $0 > 0$ est **faux** → on sort de la boucle. `somme` vaut $15$ : le programme a calculé $5 + 4 + 3 + 2 + 1$."
+        "On ajoute 3 à chaque étape (4 fois) : $x = 0 + 4\\times 3 = 12$."
       ],
-      "reponse": "Il affiche $15$."
+      "reponse": "$x = 12$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "conditions-composees",
-      "enonce": "Écris la condition informatique qui est vraie **exactement** lorsqu'un entier `n` a deux chiffres, c'est-à-dire lorsqu'il est compris entre $10$ et $99$, bornes comprises.",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 0$ puis répète 3 fois « $x$ prend la valeur $x + 5$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "La machine ne compare que **deux nombres à la fois** : un encadrement se coupe donc toujours en deux conditions simples.",
-        "« au moins $10$ » s'écrit `n ≥ 10` ; « au plus $99$ » s'écrit `n ≤ 99`.",
-        "Les deux doivent être vraies **en même temps**, on les relie donc par `et`.",
-        "Avec `ou` on se tromperait : `n ≥ 10 ou n ≤ 99` serait vraie pour **tous** les nombres (par exemple $500$ vérifie déjà `≥ 10`, et un seul « vrai » suffit)."
+        "On ajoute 5 à chaque étape (3 fois) : $x = 0 + 3\\times 5 = 15$."
       ],
-      "reponse": "`n ≥ 10 et n ≤ 99`."
+      "reponse": "$x = 15$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "terminaison",
-      "enonce": "Ce programme devrait afficher la somme $1 + 2 + \\dots + 10$, mais il ne s'arrête jamais. Explique pourquoi, corrige-le, puis donne ce qu'il affiche une fois corrigé.\n\n```\nmettre 0 dans somme\nmettre 1 dans i\ntant que i ≤ 10 faire\n    mettre somme + i dans somme\nfin tant que\nafficher somme\n```",
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 2$ puis répète 2 fois « $x$ prend la valeur $x + 4$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "La variable testée est `i`. Or le bloc ne la modifie jamais : `i` reste égale à $1$, donc `i ≤ 10` est vraie à **chaque** test et la boucle tourne à l'infini.",
-        "C'est la 2ᵉ des trois questions de la terminaison : *le bloc modifie-t-il ce qui est testé ?* Ici, non. Il faut faire progresser `i` en ajoutant `mettre i + 1 dans i` **dans** le bloc.",
-        "Programme corrigé :\n\n```\nmettre 0 dans somme\nmettre 1 dans i\ntant que i ≤ 10 faire\n    mettre somme + i dans somme\n    mettre i + 1 dans i\nfin tant que\nafficher somme\n```",
-        "En déroulant, `somme` prend les valeurs $1, 3, 6, 10, 15, 21, 28, 36, 45, 55$ pendant que `i` passe de $1$ à $11$. Au test $11 ≤ 10$ (faux), on sort : il affiche $55$."
+        "On ajoute 4 à chaque étape (2 fois) : $x = 2 + 2\\times 4 = 10$."
       ],
-      "reponse": "Il manque `mettre i + 1 dans i` dans le bloc ; une fois corrigé, le programme affiche $55$."
+      "reponse": "$x = 10$"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "variables",
-      "enonce": "`a` vaut $7$ et `b` vaut $2$. En utilisant une variable temporaire `t`, écris les trois lignes qui échangent les valeurs de `a` et `b`, puis déroule-les pour vérifier qu'à la fin `a` vaut $2$ et `b` vaut $7$.",
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 1$ puis répète 5 fois « $x$ prend la valeur $x + 2$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "On ne peut pas écrire `mettre b dans a` puis `mettre a dans b` : la première ligne écrase le $7$, qui serait alors perdu. On met d'abord `a` à l'abri dans `t`.",
-        "Les trois lignes :\n\n```\nmettre a dans t\nmettre b dans a\nmettre t dans b\n```",
-        "Déroulé : `mettre a dans t` → `t` vaut $7$ (`a`$=7$, `b`$=2$). `mettre b dans a` → `a` vaut $2$ (`t`$=7$, `b`$=2$). `mettre t dans b` → `b` vaut $7$.",
-        "À la fin, `a` vaut $2$ et `b` vaut $7$ : l'échange réussit parce que `t` a conservé l'ancien $7$ que la deuxième ligne avait écrasé."
+        "On ajoute 2 à chaque étape (5 fois) : $x = 1 + 5\\times 2 = 11$."
       ],
-      "reponse": "`mettre a dans t`, puis `mettre b dans a`, puis `mettre t dans b` ; à la fin `a` vaut $2$ et `b` vaut $7$."
+      "reponse": "$x = 11$"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "ecrire-programme",
-      "enonce": "Un livret d'épargne contient $50$ €. Chaque mois, on y ajoute $15$ €. Écris un programme qui affiche le nombre de mois nécessaires pour que le solde **atteigne ou dépasse** $200$ €. On utilisera une boucle `tant que`, et on précisera ce que le programme affiche.",
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 10$ puis répète 3 fois « $x$ prend la valeur $x - 2$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "Entrée : aucune saisie, les valeurs sont fixées ; sortie : le nombre de mois. Le nombre de tours n'est **pas** connu d'avance → boucle `tant que`.",
-        "Condition d'arrêt : on veut s'arrêter quand le solde atteint $200$, donc on continue **tant que** `solde < 200`. On initialise `solde` à $50$ et un compteur `mois` à $0$.",
-        "Programme :\n\n```\nmettre 50 dans solde\nmettre 0 dans mois\ntant que solde < 200 faire\n    mettre solde + 15 dans solde\n    mettre mois + 1 dans mois\nfin tant que\nafficher mois\n```",
-        "Terminaison : `solde` augmente de $15$ à chaque tour, donc il finit par dépasser $200$ et la condition devient fausse — la boucle s'arrête.",
-        "Déroulé : après $9$ tours, `solde` $= 50 + 9 \\times 15 = 185$ et $185 < 200$ est vrai, on fait un tour de plus ; après $10$ tours, `solde` $= 200$ et `mois` $= 10$. Cas limite : au test $200 < 200$ (faux) on sort, et le `<` a bien fait compter ce dernier mois où le solde atteint exactement $200$."
+        "On retire 2 à chaque étape (3 fois) : $x = 10 - 3\\times 2 = 4$."
       ],
-      "reponse": "$10$ mois (voir le programme dans le corrigé)."
+      "reponse": "$x = 4$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "structurer-programme",
-      "enonce": "Un caissier saisit le prix des articles un par un ; il tape $0$ pour indiquer qu'il a terminé. Écris un programme **structuré** (préparation, traitement, conclusion) qui affiche le nombre d'articles dont le prix dépasse $50$ €. Le $0$ final ne doit pas être compté comme un article. Vérifie-le sur les saisies $80$, $30$, $60$, $0$.",
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 0$ puis répète 2 fois « $x$ prend la valeur $x + 7$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "Le nombre d'articles n'est pas connu d'avance : c'est le $0$ qui arrête la saisie → boucle `tant que`, et non `répéter n fois`.",
-        "**Préparation** : on lit un premier prix et on initialise le compteur `chers` à $0$. **Traitement** : tant que `prix ≠ 0`, on teste `prix > 50` (un `si` **imbriqué** dans la boucle) et, si oui, on ajoute $1$ au compteur, puis on **redemande** un prix. **Conclusion** : après la boucle, on affiche le compteur.",
-        "Programme :\n\n```\ndemander un prix et le mettre dans prix\nmettre 0 dans chers\ntant que prix ≠ 0 faire\n    si prix > 50 alors\n        mettre chers + 1 dans chers\n    fin si\n    demander un prix et le mettre dans prix\nfin tant que\nafficher chers\n```",
-        "Deux points de structure : le premier `demander` est **avant** la boucle (sinon la condition testerait une variable non initialisée), et le second est **à la fin du bloc**, ce qui fait avancer la boucle vers son arrêt. Le test `prix ≠ 0` est ici sûr car `prix` prend exactement la valeur tapée : il ne peut pas « enjamber » le $0$.",
-        "Vérification sur $80, 30, 60, 0$ : $80 > 50$ → `chers` $= 1$ ; $30 > 50$ faux ; $60 > 50$ → `chers` $= 2$ ; puis $0 ≠ 0$ est faux, on sort sans compter le $0$. Il affiche $2$."
+        "On ajoute 7 à chaque étape (2 fois) : $x = 0 + 2\\times 7 = 14$."
       ],
-      "reponse": "Voir le programme structuré dans le corrigé ; sur $80, 30, 60, 0$ il affiche $2$."
+      "reponse": "$x = 14$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "conditions-composees",
-      "enonce": "Dans un musée, l'entrée est **gratuite** pour les moins de $6$ ans **et** pour les $65$ ans ou plus. Écris la condition informatique `gratuit`, portant sur la variable `age`, qui est vraie **exactement** dans ces deux cas.",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 5$ puis répète 4 fois « $x$ prend la valeur $x + 3$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "On découpe la phrase en deux conditions simples : « moins de $6$ ans » s'écrit `age < 6` ; « $65$ ans ou plus » s'écrit `age ≥ 65`.",
-        "Le « et » de la phrase **énumère deux catégories** de visiteurs : il suffit d'appartenir à **l'une** d'elles pour entrer gratuitement. Le lien logique est donc `ou`, pas `et`.",
-        "Test sur les bornes : à $5$ ans, `age < 6` est vraie → gratuit ✓ ; à $70$ ans, `age ≥ 65` est vraie → gratuit ✓ ; à $30$ ans, les deux sont fausses → payant ✓.",
-        "Avec `et` on écrirait `age < 6 et age ≥ 65` : aucun âge n'est à la fois inférieur à $6$ et supérieur à $65$, donc la condition serait vraie pour **personne**."
+        "On ajoute 3 à chaque étape (4 fois) : $x = 5 + 4\\times 3 = 17$."
       ],
-      "reponse": "`age < 6 ou age ≥ 65`."
+      "reponse": "$x = 17$"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "boucle-conditionnelle",
-      "enonce": "On exécute ce programme. Déroule-le dans un tableau de suivi avec une colonne pour le test, puis donne ce qu'il affiche. Attention à la dernière valeur.\n\n```\nmettre 3 dans n\ntant que n < 100 faire\n    mettre n * 2 dans n\nfin tant que\nafficher n\n```",
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "Un programme démarre avec $x = 0$ puis répète 10 fois « $x$ prend la valeur $x + 1$ ». Valeur finale de $x$ ?",
       "corrige": [
-        "Avant la boucle, `n` vaut $3$. Le test `n < 100` se lit **avant** chaque tour, et le bloc double `n`.",
-        "Déroulé : $3 \\rightarrow 6 \\rightarrow 12 \\rightarrow 24 \\rightarrow 48 \\rightarrow 96 \\rightarrow 192$.",
-        "Au sixième test, $96 < 100$ est **encore vrai** : on fait donc un tour de plus et `n` devient $192$.",
-        "Test suivant : $192 < 100$ est **faux**, on sort. Le piège est là : on affiche la première valeur qui **ne vérifie plus** la condition, soit $192$ — et non $96$, la dernière qui la vérifiait."
+        "On ajoute 1 à chaque étape (10 fois) : $x = 0 + 10\\times 1 = 10$."
       ],
-      "reponse": "Il affiche $192$ (et non $96$)."
+      "reponse": "$x = 10$"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "terminaison",
-      "enonce": "Ce programme part de $n = 20$ et devrait s'arrêter en atteignant $0$, mais il ne s'arrête jamais. Explique précisément pourquoi, corrige-le en changeant **uniquement la condition**, puis donne alors ce qu'il affiche.\n\n```\nmettre 20 dans n\ntant que n ≠ 0 faire\n    mettre n − 3 dans n\nfin tant que\nafficher n\n```",
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 5 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
       "corrige": [
-        "La variable testée `n` est bien initialisée et le bloc la modifie bien : `n` prend les valeurs $20, 17, 14, 11, 8, 5, 2, -1, -4, \\dots$",
-        "Mais `n` **enjambe** le $0$ : elle passe de $2$ à $-1$ sans jamais valoir exactement $0$. La condition `n ≠ 0` reste donc vraie à chaque test et la boucle tourne à l'infini. C'est la fragilité d'un test d'égalité (`≠`) sur une variable qui avance de $3$ en $3$.",
-        "On remplace le test par une **inégalité**, qui « pardonne » ce dépassement : `tant que n > 0 faire`. La boucle s'arrête alors dès que `n` devient négatif ou nul.",
-        "Avec `n > 0` : à partir de $2$, le test $2 > 0$ est vrai → `n` devient $-1$ ; puis $-1 > 0$ est faux, on sort. Le programme affiche $-1$."
+        "$s = 1+2+\\dots+5 = \\dfrac{5\\times 6}{2} = 15$."
       ],
-      "reponse": "Le test `≠` saute la valeur $0$ ; en écrivant `tant que n > 0`, le programme s'arrête et affiche $-1$."
+      "reponse": "$s = 15$"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "conditions-composees",
-      "enonce": "**La borne automatique d'un parc d'attractions.** Un parc installe une borne qui gère les entrées. Le tarif dépend de l'âge : l'entrée est **gratuite** pour les moins de $4$ ans et pour les $75$ ans ou plus ; sinon elle coûte $18$ € (plein tarif). On étudie le programme de cette borne, en réutilisant les notions de la fiche.\n\n**1.** Écris la condition `gratuit`, portant sur `age`, vraie exactement quand l'entrée est gratuite.\n\n**2.** En déduis la condition `payant`, vraie exactement quand l'entrée est au plein tarif. Vérifie-la aux âges $3$, $4$, $74$ et $75$.\n\n**3.** Un groupe dispose de $100$ €. La borne fait payer une entrée à $18$ € **tant qu'il reste assez d'argent**. Écris un programme structuré (préparation · traitement · conclusion) qui affiche le nombre d'entrées payées.\n\n**4.** Déroule ton programme : combien d'entrées sont payées, et quelle somme reste-t-il ?\n\n**5.** On refait tourner le programme avec un budget de seulement $17$ €. Combien d'entrées sont payées ? Quelle notion de la boucle `tant que` ce cas illustre-t-il ?",
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 10 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
       "corrige": [
-        "1. « moins de $4$ ans » s'écrit `age < 4`, « $75$ ans ou plus » s'écrit `age ≥ 75`. Ce sont deux catégories, reliées par `ou` : `gratuit` = `age < 4 ou age ≥ 75`.",
-        "2. Une entrée est payante exactement quand elle **n'est pas** gratuite, c'est-à-dire quand `age` n'est ni petit ni grand : il faut `age ≥ 4` **et** `age < 75` **en même temps**, donc `payant` = `age ≥ 4 et age < 75`. Vérification : $3$ → payant faux (gratuit) ; $4$ → $4 ≥ 4$ et $4 < 75$ vrais → payant ✓ ; $74$ → payant ✓ ; $75$ → $75 < 75$ faux → payant faux (gratuit). Les deux bornes tombent du bon côté.",
-        "3. Le nombre d'entrées n'est pas connu d'avance (il dépend du budget) → boucle `tant que`. **Préparation** : on fixe le budget et on initialise le compteur à $0$. **Traitement** : tant qu'il reste au moins $18$ €, on retire $18$ € et on compte une entrée. **Conclusion** : on affiche le compteur.\n\n```\nmettre 100 dans budget\nmettre 0 dans entrees\ntant que budget ≥ 18 faire\n    mettre budget − 18 dans budget\n    mettre entrees + 1 dans entrees\nfin tant que\nafficher entrees\n```",
-        "4. Déroulé du budget : $100 \\rightarrow 82 \\rightarrow 64 \\rightarrow 46 \\rightarrow 28 \\rightarrow 10$, et `entrees` passe de $0$ à $5$. Au test suivant, $10 ≥ 18$ est **faux** : on sort. Le programme affiche $5$, et il reste $10$ € (avec lesquels on ne peut plus payer d'entrée). La boucle s'arrête forcément car le budget **diminue** de $18$ à chaque tour et finit sous $18$ : c'est la terminaison.",
-        "5. Avec un budget de $17$ €, le tout premier test $17 ≥ 18$ est **faux** : le bloc n'est **jamais** exécuté et le programme affiche $0$. C'est le cas « **zéro tour** » : une boucle `tant que` peut ne s'exécuter aucune fois, car le test a lieu **avant** le premier tour."
+        "$s = 1+2+\\dots+10 = \\dfrac{10\\times 11}{2} = 55$."
       ],
-      "reponse": "1. `age < 4 ou age ≥ 75`. 2. `age ≥ 4 et age < 75`. 3-4. Le programme affiche $5$ entrées, reste $10$ €. 5. $0$ entrée : c'est le cas « zéro tour » (le test précède le premier tour)."
+      "reponse": "$s = 55$"
+    },
+    {
+      "id": 11,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 4 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
+      "corrige": [
+        "$s = 1+2+\\dots+4 = \\dfrac{4\\times 5}{2} = 10$."
+      ],
+      "reponse": "$s = 10$"
+    },
+    {
+      "id": 12,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 6 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
+      "corrige": [
+        "$s = 1+2+\\dots+6 = \\dfrac{6\\times 7}{2} = 21$."
+      ],
+      "reponse": "$s = 21$"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 8 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
+      "corrige": [
+        "$s = 1+2+\\dots+8 = \\dfrac{8\\times 9}{2} = 36$."
+      ],
+      "reponse": "$s = 36$"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 3 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
+      "corrige": [
+        "$s = 1+2+\\dots+3 = \\dfrac{3\\times 4}{2} = 6$."
+      ],
+      "reponse": "$s = 6$"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 7 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
+      "corrige": [
+        "$s = 1+2+\\dots+7 = \\dfrac{7\\times 8}{2} = 28$."
+      ],
+      "reponse": "$s = 28$"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "$s = 0$, puis pour $i$ de 1 à 12 : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
+      "corrige": [
+        "$s = 1+2+\\dots+12 = \\dfrac{12\\times 13}{2} = 78$."
+      ],
+      "reponse": "$s = 78$"
+    },
+    {
+      "id": 17,
+      "difficulte": "approfondissement",
+      "notion": "algorithme",
+      "enonce": "$x = 1$, puis 4 fois « $x$ prend $x \\times 2$ ». Valeur finale de $x$ ?",
+      "corrige": [
+        "$x = 1 \\times 2^4 = 16$."
+      ],
+      "reponse": "$x = 16$"
+    },
+    {
+      "id": 18,
+      "difficulte": "approfondissement",
+      "notion": "algorithme",
+      "enonce": "$x = 1$, puis 3 fois « $x$ prend $x \\times 3$ ». Valeur finale de $x$ ?",
+      "corrige": [
+        "$x = 1 \\times 3^3 = 27$."
+      ],
+      "reponse": "$x = 27$"
+    },
+    {
+      "id": 19,
+      "difficulte": "approfondissement",
+      "notion": "algorithme",
+      "enonce": "$x = 2$, puis 3 fois « $x$ prend $x \\times 2$ ». Valeur finale de $x$ ?",
+      "corrige": [
+        "$x = 2 \\times 2^3 = 16$."
+      ],
+      "reponse": "$x = 16$"
+    },
+    {
+      "id": 20,
+      "difficulte": "approfondissement",
+      "notion": "algorithme",
+      "enonce": "$x = 1$, puis 2 fois « $x$ prend $x \\times 5$ ». Valeur finale de $x$ ?",
+      "corrige": [
+        "$x = 1 \\times 5^2 = 25$."
+      ],
+      "reponse": "$x = 25$"
+    },
+    {
+      "id": 21,
+      "difficulte": "approfondissement",
+      "notion": "algorithme",
+      "enonce": "$x = 1$, puis 6 fois « $x$ prend $x \\times 2$ ». Valeur finale de $x$ ?",
+      "corrige": [
+        "$x = 1 \\times 2^6 = 64$."
+      ],
+      "reponse": "$x = 64$"
+    },
+    {
+      "id": 22,
+      "difficulte": "approfondissement",
+      "notion": "algorithme",
+      "enonce": "$x = 3$, puis 3 fois « $x$ prend $x \\times 2$ ». Valeur finale de $x$ ?",
+      "corrige": [
+        "$x = 3 \\times 2^3 = 24$."
+      ],
+      "reponse": "$x = 24$"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+1$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 1 = 3$."
+      ],
+      "reponse": "$x = 3$"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+2$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 2 = 6$."
+      ],
+      "reponse": "$x = 6$"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+3$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 3 = 9$."
+      ],
+      "reponse": "$x = 9$"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+4$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 4 = 12$."
+      ],
+      "reponse": "$x = 12$"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+5$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 5 = 15$."
+      ],
+      "reponse": "$x = 15$"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+6$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 6 = 18$."
+      ],
+      "reponse": "$x = 18$"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+7$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 7 = 21$."
+      ],
+      "reponse": "$x = 21$"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+8$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 8 = 24$."
+      ],
+      "reponse": "$x = 24$"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+9$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 9 = 27$."
+      ],
+      "reponse": "$x = 27$"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+10$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 10 = 30$."
+      ],
+      "reponse": "$x = 30$"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+11$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 11 = 33$."
+      ],
+      "reponse": "$x = 33$"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+12$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 12 = 36$."
+      ],
+      "reponse": "$x = 36$"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+13$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 13 = 39$."
+      ],
+      "reponse": "$x = 39$"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+14$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 14 = 42$."
+      ],
+      "reponse": "$x = 42$"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+15$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 15 = 45$."
+      ],
+      "reponse": "$x = 45$"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+16$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 16 = 48$."
+      ],
+      "reponse": "$x = 48$"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+17$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 17 = 51$."
+      ],
+      "reponse": "$x = 51$"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+18$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 18 = 54$."
+      ],
+      "reponse": "$x = 54$"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+19$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 19 = 57$."
+      ],
+      "reponse": "$x = 57$"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+20$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 20 = 60$."
+      ],
+      "reponse": "$x = 60$"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+21$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 21 = 63$."
+      ],
+      "reponse": "$x = 63$"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+22$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 22 = 66$."
+      ],
+      "reponse": "$x = 66$"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+23$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 23 = 69$."
+      ],
+      "reponse": "$x = 69$"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+24$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 24 = 72$."
+      ],
+      "reponse": "$x = 72$"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+25$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 25 = 75$."
+      ],
+      "reponse": "$x = 75$"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+26$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 26 = 78$."
+      ],
+      "reponse": "$x = 78$"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+27$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 27 = 81$."
+      ],
+      "reponse": "$x = 81$"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "$x=0$, on répète 3 fois « $x$ prend $x+28$ ». Valeur finale ?",
+      "corrige": [
+        "$x = 3\\times 28 = 84$."
+      ],
+      "reponse": "$x = 84$"
     }
   ]
 }

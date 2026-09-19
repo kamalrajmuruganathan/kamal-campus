@@ -482,6 +482,124 @@ def gen_representation_espace():
     E=E[:50]
     return [exo(i+1,*t) for i,t in enumerate(E)]
 
+# ================= PHYSIQUE-CHIMIE 3e + pensee informatique =================
+def gen_masse_volumique():
+    E=[]
+    def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    for (m,V) in [(200,100),(300,50),(540,200),(78,10),(150,60),(920,1000),(240,30),(500,250),(64,8),(360,40),(105,50),(720,90)]:
+        rho=m/V
+        add("application","masse-volumique", f"Un objet a une masse de {m} g et un volume de {V} cm³. Calculer sa masse volumique.",
+            [f"$\\rho = \\dfrac{{m}}{{V}} = \\dfrac{{{m}}}{{{V}}} = {fr(rho,2)}$ g/cm³."], f"${fr(rho,2)}$ g/cm³")
+    for (rho,V) in [(2.7,10),(1.0,50),(7.8,5),(0.9,20),(11.3,2),(2.5,8),(1.2,100),(8.9,3)]:
+        m=rho*V
+        add("intermediaire","masse-volumique", f"Un matériau a une masse volumique de {fr(rho,2)} g/cm³. Masse d'un volume de {V} cm³ ?",
+            [f"$m = \\rho \\times V = {fr(rho,2)} \\times {V} = {fr(m,2)}$ g."], f"${fr(m,2)}$ g")
+    for (m,rho) in [(54,2.7),(100,1.0),(78,7.8),(45,0.9),(50,2.5),(89,8.9),(113,11.3),(24,1.2)]:
+        V=m/rho
+        add("approfondissement","masse-volumique", f"Un objet de masse {m} g a une masse volumique de {fr(rho,2)} g/cm³. Calculer son volume.",
+            [f"$V = \\dfrac{{m}}{{\\rho}} = \\dfrac{{{m}}}{{{fr(rho,2)}}} = {fr(V,2)}$ cm³."], f"${fr(V,2)}$ cm³")
+    _i=1
+    while len(E)<50:
+        _m=50+10*_i; _V=5*_i; _r=_m/_V
+        add("application","masse-volumique", f"Masse {_m} g, volume {_V} cm³. Masse volumique ?", [f"$\\rho = \\dfrac{{{_m}}}{{{_V}}} = {fr(_r,2)}$ g/cm³."], f"${fr(_r,2)}$ g/cm³"); _i+=1
+    E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def gen_poids_forces():
+    E=[]; g=10
+    def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    for m in [2,5,0.5,10,3,7,0.2,15,1.5,8,20,4]:
+        P=m*g
+        add("application","poids-masse", f"Calculer le poids d'un objet de masse {fr(m,2)} kg (on prend $g = 10$ N/kg).",
+            [f"$P = m \\times g = {fr(m,2)} \\times 10 = {fr(P,1)}$ N."], f"${fr(P,1)}$ N")
+    for P in [20,50,100,5,80,30,150,12]:
+        m=P/g
+        add("intermediaire","poids-masse", f"Un objet a un poids de {P} N. Calculer sa masse (on prend $g = 10$ N/kg).",
+            [f"$m = \\dfrac{{P}}{{g}} = \\dfrac{{{P}}}{{10}} = {fr(m,2)}$ kg."], f"${fr(m,2)}$ kg")
+    _i=1
+    while len(E)<50:
+        _P=_i*10
+        add("application","poids-masse", f"Poids d'une masse de {_i} kg ($g=10$ N/kg) ?", [f"$P = {_i}\\times 10 = {_P}$ N."], f"${_P}$ N"); _i+=1
+    E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def gen_conversions_energie():
+    E=[]
+    def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    for (P,t) in [(60,2),(100,3),(1500,1),(2000,4),(40,5),(75,8),(1200,2),(500,6)]:
+        En=P*t
+        add("application","energie", f"Un appareil de puissance {P} W fonctionne {t} h. Énergie consommée (en Wh) ?",
+            [f"$E = P \\times t = {P} \\times {t} = {En}$ Wh."], f"${En}$ Wh")
+    for Wh in [2000,3500,1200,800,5400,4500,600,7200]:
+        add("application","conversion", f"Convertir {Wh} Wh en kWh.",
+            [f"$1\\ \\text{{kWh}} = 1000\\ \\text{{Wh}}$ donc ${Wh}\\ \\text{{Wh}} = {fr(Wh/1000,2)}$ kWh."], f"${fr(Wh/1000,2)}$ kWh")
+    for kWh in [1,2,0.5,3,1.5,10,0.2,4]:
+        J=kWh*3.6e6
+        add("approfondissement","conversion", f"Convertir {fr(kWh,2)} kWh en joules.",
+            [f"$1\\ \\text{{kWh}} = 3{{,}}6\\times 10^6\\ \\text{{J}}$ donc $= {fr(J,0)}$ J."], f"${fr(J,0)}$ J")
+    _i=1
+    while len(E)<50:
+        _P=50*_i; _E=_P*2
+        add("application","energie", f"Appareil de {_P} W pendant 2 h : énergie (Wh) ?", [f"$E = {_P}\\times 2 = {_E}$ Wh."], f"${_E}$ Wh"); _i+=1
+    E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def gen_atomes_ions():
+    E=[]
+    def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    atomes=[("carbone",6,12),("oxygène",8,16),("azote",7,14),("hydrogène",1,1),("sodium",11,23),("chlore",17,35),("fer",26,56),("aluminium",13,27),("hélium",2,4),("calcium",20,40),("soufre",16,32),("magnésium",12,24)]
+    for (nom,Z,A) in atomes:
+        add("application","structure-atome", f"L'atome de {nom} a un numéro atomique $Z = {Z}$. Combien possède-t-il d'électrons ?",
+            [f"Un atome est électriquement neutre : électrons = protons = $Z = {Z}$."], f"${Z}$ électrons")
+    for (nom,Z,A) in atomes:
+        add("intermediaire","structure-atome", f"L'atome de {nom} a $Z = {Z}$ et un nombre de masse $A = {A}$. Nombre de neutrons ?",
+            [f"Neutrons $= A - Z = {A} - {Z} = {A-Z}$."], f"${A-Z}$ neutrons")
+    ions=[("sodium Na⁺",1,"perdu"),("chlorure Cl⁻",1,"gagné"),("calcium Ca²⁺",2,"perdu"),("oxyde O²⁻",2,"gagné"),("aluminium Al³⁺",3,"perdu"),("magnésium Mg²⁺",2,"perdu"),("fluorure F⁻",1,"gagné"),("potassium K⁺",1,"perdu")]
+    for (ion,n,sens) in ions:
+        signe=f"{'+' if sens=='perdu' else '-'}{n if n>1 else ''}"
+        add("approfondissement","ions", f"L'ion {ion} se forme quand l'atome a {sens} {n} électron(s). Quelle est sa charge électrique ?",
+            [f"Perdre un électron → charge +, en gagner → charge −. Charge de l'ion : ${signe}$."], f"${signe}$")
+    _i=0
+    while len(E)<50:
+        nom,Z,A=atomes[_i%len(atomes)]
+        add("application","structure-atome", f"Combien de protons dans le noyau de l'atome de {nom} ($Z={Z}$) ?", [f"Protons $= Z = {Z}$."], f"${Z}$ protons"); _i+=1
+    E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def gen_transformations_chimiques():
+    E=[]
+    def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    for (mr,mp1) in [(10,4),(25,10),(50,32),(18,8),(40,15),(12,5),(64,36),(30,22),(100,44),(9,4),(56,20),(80,53)]:
+        mp2=mr-mp1
+        add("application","conservation-masse", f"La masse totale des réactifs est {mr} g. Un produit a une masse de {mp1} g. Masse de l'autre produit ?",
+            [f"La masse se conserve : produits = réactifs = {mr} g.",f"$= {mr} - {mp1} = {mp2}$ g."], f"${mp2}$ g")
+    for (m1,m2) in [(12,32),(23,35),(4,32),(56,16),(27,48),(24,16),(40,71),(14,48)]:
+        tot=m1+m2
+        add("intermediaire","conservation-masse", f"Deux réactifs de {m1} g et {m2} g réagissent totalement. Masse totale des produits ?",
+            [f"Conservation de la masse : $= {m1} + {m2} = {tot}$ g."], f"${tot}$ g")
+    _i=1
+    while len(E)<50:
+        _mr=20*_i; _mp1=7*_i; _mp2=_mr-_mp1
+        add("application","conservation-masse", f"Réactifs : {_mr} g, un produit : {_mp1} g. Masse de l'autre produit ?", [f"$= {_mr} - {_mp1} = {_mp2}$ g."], f"${_mp2}$ g"); _i+=1
+    E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def gen_pensee_informatique():
+    E=[]
+    def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    for (x0,a,n) in [(0,3,4),(0,5,3),(2,4,2),(1,2,5),(10,-2,3),(0,7,2),(5,3,4),(0,1,10)]:
+        r=x0+a*n; sg='+' if a>=0 else '-'; op="ajoute" if a>=0 else "retire"
+        add("application","algorithme", f"Un programme démarre avec $x = {x0}$ puis répète {n} fois « $x$ prend la valeur $x {sg} {abs(a)}$ ». Valeur finale de $x$ ?",
+            [f"On {op} {abs(a)} à chaque étape ({n} fois) : $x = {x0} {sg} {n}\\times {abs(a)} = {r}$."], f"$x = {r}$")
+    for n in [5,10,4,6,8,3,7,12]:
+        s=n*(n+1)//2
+        add("intermediaire","algorithme", f"$s = 0$, puis pour $i$ de 1 à {n} : « $s$ prend $s + i$ ». Valeur finale de $s$ ?",
+            [f"$s = 1+2+\\dots+{n} = \\dfrac{{{n}\\times {n+1}}}{{2}} = {s}$."], f"$s = {s}$")
+    for (x0,a,n) in [(1,2,4),(1,3,3),(2,2,3),(1,5,2),(1,2,6),(3,2,3)]:
+        r=x0*(a**n)
+        add("approfondissement","algorithme", f"$x = {x0}$, puis {n} fois « $x$ prend $x \\times {a}$ ». Valeur finale de $x$ ?",
+            [f"$x = {x0} \\times {a}^{n} = {r}$."], f"$x = {r}$")
+    _i=1
+    while len(E)<50:
+        _r=3*_i
+        add("application","algorithme", f"$x=0$, on répète 3 fois « $x$ prend $x+{_i}$ ». Valeur finale ?", [f"$x = 3\\times {_i} = {_r}$."], f"$x = {_r}$"); _i+=1
+    E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
+
 REGISTRE = {
     ("troisieme","triangles"): gen_triangles,
     ("troisieme","puissances"): gen_puissances,
@@ -496,7 +614,31 @@ REGISTRE = {
     ("troisieme","reperage"): gen_reperage,
     ("troisieme","translations-vecteurs"): gen_translations_vecteurs,
     ("troisieme","representation-espace"): gen_representation_espace,
+    ("troisieme","pensee-informatique"): gen_pensee_informatique,
+    ("troisieme","masse-volumique"): gen_masse_volumique,
+    ("troisieme","poids-gravitation-forces"): gen_poids_forces,
+    ("troisieme","conversions-energie-signaux"): gen_conversions_energie,
+    ("troisieme","atomes-ions-ph"): gen_atomes_ions,
+    ("troisieme","transformations-chimiques"): gen_transformations_chimiques,
 }
+
+# Regles multi-niveaux (notions communes) : (niveaux, mots-cles slug, generateur)
+REGLES = [
+    ({"quatrieme","troisieme"}, ["proportion","pourcentage"], gen_proportionnalite),
+    ({"quatrieme","troisieme"}, ["statistique"], gen_statistiques),
+    ({"quatrieme","troisieme"}, ["puissance"], gen_puissances),
+    ({"quatrieme","troisieme"}, ["rationnel","fraction"], gen_rationnels),
+    ({"cinquieme","quatrieme","troisieme"}, ["masse-volumique","densite"], gen_masse_volumique),
+    ({"quatrieme","troisieme"}, ["poids","gravitation"], gen_poids_forces),
+]
+
+def choisir(niveau, slug):
+    g = REGISTRE.get((niveau, slug))
+    if g: return g
+    for niveaux, motscles, gen in REGLES:
+        if niveau in niveaux and any(k in slug for k in motscles):
+            return gen
+    return None
 
 def traiter(racine="contenu"):
     faits, ignores = [], []
@@ -504,7 +646,7 @@ def traiter(racine="contenu"):
         if not os.path.isdir(chemin): continue
         parts = chemin.split(os.sep)
         niveau, matiere, slug = parts[-3], parts[-2], parts[-1]
-        gen = REGISTRE.get((niveau, slug))
+        gen = choisir(niveau, slug)
         fexo = os.path.join(chemin,"exercice.json")
         if gen is None:
             ignores.append(f"{niveau}/{matiere}/{slug}"); continue

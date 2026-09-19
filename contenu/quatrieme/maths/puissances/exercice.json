@@ -13,133 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "produit-meme-base",
-      "enonce": "Écris chaque produit sous la forme d'une seule puissance.\n\n**a)** $7^4 \\times 7^3$\n\n**b)** $5 \\times 5^6$",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^3$.",
       "corrige": [
-        "**a)** Les deux puissances ont la **même base** $7$ : on garde la base et on **additionne** les exposants.",
-        "$7^4 \\times 7^3 = 7^{4+3} = 7^7$.",
-        "**b)** Un nombre seul est une puissance d'exposant $1$ : $5 = 5^1$.",
-        "Même base $5$, on additionne les exposants : $5^1 \\times 5^6 = 5^{1+6} = 5^7$."
+        "$2^3 = 2 \\times 2 \\times 2 = 8$."
       ],
-      "reponse": "**a)** $7^7$  **b)** $5^7$."
+      "reponse": "$8$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "puissances-de-10",
-      "enonce": "**a)** Donne la valeur de $10^5$.\n\n**b)** Écris $7\\,200$ sous la forme $a \\times 10^n$, où $a$ est un nombre décimal et $n$ un entier.",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^5$.",
       "corrige": [
-        "**a)** Pour une puissance de 10, l'exposant donne le **nombre de zéros** : $10^5$ s'écrit $1$ suivi de cinq zéros.",
-        "$10^5 = 100\\,000$.",
-        "**b)** On part du chiffre significatif $7{,}2$ et on cherche par combien de rangs décaler la virgule pour retrouver $7\\,200$ : trois rangs vers la droite, donc un facteur $10^3$.",
-        "$7\\,200 = 7{,}2 \\times 10^3$. Contrôle : $7{,}2 \\times 1\\,000 = 7\\,200$."
+        "$2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$."
       ],
-      "reponse": "**a)** $10^5 = 100\\,000$  **b)** $7\\,200 = 7{,}2 \\times 10^3$."
+      "reponse": "$32$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "produit-meme-exposant",
-      "enonce": "Calcule $2^5 \\times 5^5$ en utilisant une règle du cours, puis donne sa valeur.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 3^3$.",
       "corrige": [
-        "Les deux puissances ont ici le **même exposant** $5$, mais des bases différentes : on garde l'exposant et on **multiplie les bases**.",
-        "$2^5 \\times 5^5 = (2 \\times 5)^5 = 10^5$.",
-        "Enfin, $10^5 = 100\\,000$ ($1$ suivi de cinq zéros).",
-        "C'est bien plus rapide que de calculer $32 \\times 3\\,125$ séparément."
+        "$3^3 = 3 \\times 3 \\times 3 = 27$."
       ],
-      "reponse": "$2^5 \\times 5^5 = 10^5 = 100\\,000$."
+      "reponse": "$27$"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "problemes",
-      "enonce": "Calcule $200 \\times 3\\,000$ en passant par les puissances de 10, sans poser la multiplication.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 3^4$.",
       "corrige": [
-        "On sépare chaque nombre en un chiffre simple et une puissance de 10 : $200 = 2 \\times 10^2$ et $3\\,000 = 3 \\times 10^3$.",
-        "On regroupe les nombres simples d'un côté et les puissances de 10 de l'autre : $(2 \\times 3) \\times (10^2 \\times 10^3)$.",
-        "Sur les puissances de 10, même base, on additionne les exposants : $10^2 \\times 10^3 = 10^5$.",
-        "Il reste $6 \\times 10^5 = 600\\,000$."
+        "$3^4 = 3 \\times 3 \\times 3 \\times 3 = 81$."
       ],
-      "reponse": "$200 \\times 3\\,000 = 6 \\times 10^5 = 600\\,000$."
+      "reponse": "$81$"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "problemes",
-      "enonce": "Une culture contient $20$ bactéries. Leur nombre est **multiplié par $3$** chaque heure. Combien de bactéries la culture contient-elle au bout de $4$ heures ?",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 5^3$.",
       "corrige": [
-        "Multiplier par $3$ à chaque heure pendant $4$ heures, c'est multiplier $4$ fois de suite par $3$, soit multiplier par $3^4$.",
-        "On calcule cette puissance : $3^4 = 3 \\times 3 \\times 3 \\times 3 = 81$.",
-        "On applique ce facteur à l'effectif de départ : $20 \\times 3^4 = 20 \\times 81$.",
-        "$20 \\times 81 = 1\\,620$ bactéries. (Une répétition de produits donne une **puissance**, et non un simple produit par $4$ ou par $12$.)"
+        "$5^3 = 5 \\times 5 \\times 5 = 125$."
       ],
-      "reponse": "$20 \\times 3^4 = 1\\,620$ bactéries."
+      "reponse": "$125$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "produit-meme-base",
-      "enonce": "On considère le produit $2^3 \\times 5^3 \\times 10^2$.\n\n**a)** Écris-le sous la forme d'une seule puissance de 10.\n\n**b)** Donne alors sa valeur.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 4^3$.",
       "corrige": [
-        "**a)** On commence par $2^3 \\times 5^3$ : même exposant $3$, on multiplie les bases, $(2 \\times 5)^3 = 10^3$.",
-        "Le produit devient $10^3 \\times 10^2$ : cette fois même base $10$, on additionne les exposants, $10^{3+2} = 10^5$.",
-        "Donc $2^3 \\times 5^3 \\times 10^2 = 10^5$.",
-        "**b)** $10^5 = 100\\,000$ ($1$ suivi de cinq zéros)."
+        "$4^3 = 4 \\times 4 \\times 4 = 64$."
       ],
-      "reponse": "**a)** $10^5$  **b)** $100\\,000$."
+      "reponse": "$64$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "base-negative",
-      "enonce": "**a)** Calcule $(-3)^3$.\n\n**b)** Calcule $(-5)^2$, puis $-5^2$. Ces deux écritures donnent-elles le même résultat ?",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^6$.",
       "corrige": [
-        "**a)** L'exposant $3$ demande **trois facteurs** $(-3)$ : $(-3)^3 = (-3) \\times (-3) \\times (-3)$.",
-        "On multiplie deux à deux : $(-3) \\times (-3) = 9$, puis $9 \\times (-3) = -27$. Exposant **impair** → résultat **négatif**.",
-        "**b)** Dans $(-5)^2$, les parenthèses élèvent le nombre $-5$ tout entier au carré : $(-5) \\times (-5) = 25$ (exposant **pair** → positif).",
-        "Dans $-5^2$, la puissance porte **seulement sur le $5$** : on calcule $5^2 = 25$, et le signe $-$ reste devant, d'où $-5^2 = -25$. Les deux écritures **ne donnent donc pas** le même résultat."
+        "$2^6 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 64$."
       ],
-      "reponse": "**a)** $(-3)^3 = -27$  **b)** $(-5)^2 = 25$ mais $-5^2 = -25$ : résultats différents."
+      "reponse": "$64$"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "priorites",
-      "enonce": "Calcule en respectant les priorités opératoires.\n\n**a)** $2 + 5 \\times 10^2$\n\n**b)** $3 \\times 2^4$",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 6^2$.",
       "corrige": [
-        "Ordre des priorités : **parenthèses → puissances → $\\times$ et $\\div$ → $+$ et $-$**. La puissance passe donc avant la multiplication et l'addition.",
-        "**a)** On calcule d'abord la puissance : $10^2 = 100$. Puis la multiplication : $5 \\times 100 = 500$. Enfin l'addition : $2 + 500 = 502$.",
-        "**b)** On calcule d'abord la puissance : $2^4 = 16$. Puis la multiplication : $3 \\times 16 = 48$.",
-        "Piège à éviter en **b)** : ne pas faire $(3 \\times 2)^4 = 6^4$ — la puissance porte sur $2$, pas sur $3 \\times 2$."
+        "$6^2 = 6 \\times 6 = 36$."
       ],
-      "reponse": "**a)** $502$  **b)** $48$."
+      "reponse": "$36$"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "problemes",
-      "enonce": "Une feuille de papier a une épaisseur de $0{,}1$ mm. On la plie en deux plusieurs fois de suite ; **chaque pli double l'épaisseur** du paquet. Quelle est l'épaisseur, en millimètres, après $8$ plis ?",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 10^4$.",
       "corrige": [
-        "Doubler l'épaisseur à chaque pli, c'est la multiplier par $2$. Faire $8$ plis, c'est multiplier $8$ fois de suite par $2$, donc multiplier par $2^8$ (et non par $2 \\times 8 = 16$).",
-        "On calcule la puissance : $2^8 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 256$.",
-        "On applique ce facteur à l'épaisseur de départ : $0{,}1 \\times 2^8 = 0{,}1 \\times 256$.",
-        "$0{,}1 \\times 256 = 25{,}6$ mm. Une répétition de doublements donne bien une **puissance** de $2$."
+        "$10^4 = 10 \\times 10 \\times 10 \\times 10 = 10000$."
       ],
-      "reponse": "$0{,}1 \\times 2^8 = 25{,}6$ mm."
+      "reponse": "$10000$"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "problemes",
-      "enonce": "Une courte vidéo est mise en ligne. Le jour de sa publication (appelé **jour 0**), elle est vue par $6$ personnes. Ensuite, **chaque jour, le nombre de vues du jour est multiplié par $5$** par rapport à la veille.\n\n**1.** Combien de vues la vidéo obtient-elle le **jour 4** ? Exprime d'abord le résultat à l'aide d'une puissance, puis donne sa valeur.\n\n**2.** Le même jour, une deuxième vidéo obtient $2^4 \\times 5^4$ vues. Écris ce nombre sous la forme d'une seule puissance de $10$, puis donne sa valeur.\n\n**3.** Une plateforme annonce $30 \\times 10^4$ vues au total sur un mois. Donne ce nombre en écriture chiffrée habituelle, puis sous la forme $a \\times 10^n$ avec $a$ compris entre $1$ et $10$.\n\n**4.** Sur une dernière vidéo, le nombre de vues vaut $200 \\times 40\\,000$. Calcule-le en passant par les puissances de $10$, sans poser la multiplication.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 7^2$.",
       "corrige": [
-        "**1.** Du jour 0 au jour 4, on multiplie $4$ fois de suite par $5$, donc par $5^4$. On calcule : $5^4 = 5 \\times 5 \\times 5 \\times 5 = 625$. En partant de $6$ vues : $6 \\times 5^4 = 6 \\times 625 = 3\\,750$ vues.",
-        "**2.** Les deux puissances ont le **même exposant** $4$ : on garde l'exposant et on multiplie les bases, $2^4 \\times 5^4 = (2 \\times 5)^4 = 10^4$. Puis $10^4 = 10\\,000$ ($1$ suivi de quatre zéros).",
-        "**3.** $30 \\times 10^4$ : multiplier par $10^4$ décale de quatre rangs, $30 \\times 10\\,000 = 300\\,000$. Pour l'écriture $a \\times 10^n$ avec $1 \\leqslant a < 10$, on part de $3$ et on décale la virgule de cinq rangs : $300\\,000 = 3 \\times 10^5$.",
-        "**4.** On sépare chaque nombre : $200 = 2 \\times 10^2$ et $40\\,000 = 4 \\times 10^4$. On regroupe : $(2 \\times 4) \\times (10^2 \\times 10^4)$. Sur les puissances de $10$, même base, on additionne les exposants : $10^2 \\times 10^4 = 10^6$. Il reste $8 \\times 10^6 = 8\\,000\\,000$.",
-        "Chaque question réutilise une notion du cours : répétition d'un produit → puissance (1), règle du même exposant (2), écriture avec un facteur puissance de 10 (3), règle de la même base sur les puissances de 10 (4)."
+        "$7^2 = 7 \\times 7 = 49$."
       ],
-      "reponse": "**1.** $6 \\times 5^4 = 3\\,750$ vues.  **2.** $2^4 \\times 5^4 = 10^4 = 10\\,000$.  **3.** $30 \\times 10^4 = 300\\,000 = 3 \\times 10^5$.  **4.** $200 \\times 40\\,000 = 8 \\times 10^6 = 8\\,000\\,000$."
+      "reponse": "$49$"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^4$.",
+      "corrige": [
+        "$2^4 = 2 \\times 2 \\times 2 \\times 2 = 16$."
+      ],
+      "reponse": "$16$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 3^5$.",
+      "corrige": [
+        "$3^5 = 3 \\times 3 \\times 3 \\times 3 \\times 3 = 243$."
+      ],
+      "reponse": "$243$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 5^2$.",
+      "corrige": [
+        "$5^2 = 5 \\times 5 = 25$."
+      ],
+      "reponse": "$25$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 9^2$.",
+      "corrige": [
+        "$9^2 = 9 \\times 9 = 81$."
+      ],
+      "reponse": "$81$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^7$.",
+      "corrige": [
+        "$2^7 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 128$."
+      ],
+      "reponse": "$128$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 4^4$.",
+      "corrige": [
+        "$4^4 = 4 \\times 4 \\times 4 \\times 4 = 256$."
+      ],
+      "reponse": "$256$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 2^3 \\times 2^4$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $2^3 \\times 2^4 = 2^{3+4} = 2^{7}$."
+      ],
+      "reponse": "$2^{7}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 3^2 \\times 3^5$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $3^2 \\times 3^5 = 3^{2+5} = 3^{7}$."
+      ],
+      "reponse": "$3^{7}$"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 5^2 \\times 5^3$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $5^2 \\times 5^3 = 5^{2+3} = 5^{5}$."
+      ],
+      "reponse": "$5^{5}$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 2^7 \\times 2^2$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $2^7 \\times 2^2 = 2^{7+2} = 2^{9}$."
+      ],
+      "reponse": "$2^{9}$"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 10^3 \\times 10^5$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $10^3 \\times 10^5 = 10^{3+5} = 10^{8}$."
+      ],
+      "reponse": "$10^{8}$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 4^2 \\times 4^3$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $4^2 \\times 4^3 = 4^{2+3} = 4^{5}$."
+      ],
+      "reponse": "$4^{5}$"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 7^2 \\times 7^3$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $7^2 \\times 7^3 = 7^{2+3} = 7^{5}$."
+      ],
+      "reponse": "$7^{5}$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{2^7}{2^3}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{2^7}{2^3} = 2^{7-3} = 2^{4}$."
+      ],
+      "reponse": "$2^{4}$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{3^6}{3^2}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{3^6}{3^2} = 3^{6-2} = 3^{4}$."
+      ],
+      "reponse": "$3^{4}$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{5^5}{5^2}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{5^5}{5^2} = 5^{5-2} = 5^{3}$."
+      ],
+      "reponse": "$5^{3}$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{10^8}{10^3}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{10^8}{10^3} = 10^{8-3} = 10^{5}$."
+      ],
+      "reponse": "$10^{5}$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{2^9}{2^4}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{2^9}{2^4} = 2^{9-4} = 2^{5}$."
+      ],
+      "reponse": "$2^{5}$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{7^4}{7^1}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{7^4}{7^1} = 7^{4-1} = 7^{3}$."
+      ],
+      "reponse": "$7^{3}$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(2^3\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(2^3\\right)^2 = 2^{3\\times2} = 2^{6}$."
+      ],
+      "reponse": "$2^{6}$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(3^2\\right)^3$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(3^2\\right)^3 = 3^{2\\times3} = 3^{6}$."
+      ],
+      "reponse": "$3^{6}$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(5^2\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(5^2\\right)^2 = 5^{2\\times2} = 5^{4}$."
+      ],
+      "reponse": "$5^{4}$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(10^4\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(10^4\\right)^2 = 10^{4\\times2} = 10^{8}$."
+      ],
+      "reponse": "$10^{8}$"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(2^5\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(2^5\\right)^2 = 2^{5\\times2} = 2^{10}$."
+      ],
+      "reponse": "$2^{10}$"
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 2^{-3}$.",
+      "corrige": [
+        "$ 2^{-3} = \\dfrac{1}{2^3} = \\dfrac{1}{8}$."
+      ],
+      "reponse": "$\\dfrac{1}{8}$"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 5^{-2}$.",
+      "corrige": [
+        "$ 5^{-2} = \\dfrac{1}{5^2} = \\dfrac{1}{25}$."
+      ],
+      "reponse": "$\\dfrac{1}{25}$"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 10^{-3}$.",
+      "corrige": [
+        "$ 10^{-3} = \\dfrac{1}{10^3} = \\dfrac{1}{1000}$."
+      ],
+      "reponse": "$\\dfrac{1}{1000}$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 3^{-2}$.",
+      "corrige": [
+        "$ 3^{-2} = \\dfrac{1}{3^2} = \\dfrac{1}{9}$."
+      ],
+      "reponse": "$\\dfrac{1}{9}$"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 4^{-2}$.",
+      "corrige": [
+        "$ 4^{-2} = \\dfrac{1}{4^2} = \\dfrac{1}{16}$."
+      ],
+      "reponse": "$\\dfrac{1}{16}$"
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 3200 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $3,2 \\times 10^{3}$."
+      ],
+      "reponse": "$3,2 \\times 10^{3}$"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 45000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $4,5 \\times 10^{4}$."
+      ],
+      "reponse": "$4,5 \\times 10^{4}$"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 120000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $1,2 \\times 10^{5}$."
+      ],
+      "reponse": "$1,2 \\times 10^{5}$"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 6500 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $6,5 \\times 10^{3}$."
+      ],
+      "reponse": "$6,5 \\times 10^{3}$"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 78000000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $7,8 \\times 10^{7}$."
+      ],
+      "reponse": "$7,8 \\times 10^{7}$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 920 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $9,2 \\times 10^{2}$."
+      ],
+      "reponse": "$9,2 \\times 10^{2}$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 150000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $1,5 \\times 10^{5}$."
+      ],
+      "reponse": "$1,5 \\times 10^{5}$"
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Une bactérie double toutes les heures. Partant de 1, combien après 10 h ? (donner $2^{10}$)",
+      "corrige": [
+        "$2^{10} = 1024$."
+      ],
+      "reponse": "$1024$"
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Calculer $ 10^6$ (un million).",
+      "corrige": [
+        "$10^6 = 1\\,000\\,000$."
+      ],
+      "reponse": "$1000000$"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Simplifier $\\dfrac{2^{10}}{2^{7}}$.",
+      "corrige": [
+        "$= 2^{10-7} = 2^3 = 8$."
+      ],
+      "reponse": "$8$"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Calculer $(3^2)^2$.",
+      "corrige": [
+        "$= 3^{2\\times 2} = 3^4 = 81$."
+      ],
+      "reponse": "$81$"
     }
   ]
 }
