@@ -622,21 +622,49 @@ REGISTRE = {
     ("troisieme","transformations-chimiques"): gen_transformations_chimiques,
 }
 
+def gen_puissance_energie():
+    E=[]
+    def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    for (U,I) in [(230,2),(12,3),(230,0.5),(6,2),(24,5),(230,1),(9,3),(48,2),(230,4),(5,2),(15,3),(230,10)]:
+        P=U*I
+        add("application","puissance-electrique", f"Un appareil est traversé par une intensité de {fr(I,2)} A sous une tension de {U} V. Calculer sa puissance électrique.",
+            [f"$P = U \\times I = {U} \\times {fr(I,2)} = {fr(P,1)}$ W."], f"${fr(P,1)}$ W")
+    for (P,t) in [(60,2),(100,3),(1500,1),(2000,4),(40,5),(1200,2),(500,6),(75,8)]:
+        En=P*t
+        add("intermediaire","energie", f"Un appareil de puissance {P} W fonctionne pendant {t} h. Énergie consommée (en Wh) ?",
+            [f"$E = P \\times t = {P} \\times {t} = {En}$ Wh."], f"${En}$ Wh")
+    for Wh in [2000,3500,1200,800,5400,4500,600,7200]:
+        add("application","conversion", f"Convertir {Wh} Wh en kWh.",
+            [f"$1\\ \\text{{kWh}} = 1000\\ \\text{{Wh}}$ donc $= {fr(Wh/1000,2)}$ kWh."], f"${fr(Wh/1000,2)}$ kWh")
+    for (P,U) in [(1150,230),(60,12),(2300,230),(120,24),(46,230),(36,12),(690,230),(100,20)]:
+        I=P/U
+        add("approfondissement","puissance-electrique", f"Un appareil de puissance {P} W fonctionne sous une tension de {U} V. Calculer l'intensité du courant.",
+            [f"$I = \\dfrac{{P}}{{U}} = \\dfrac{{{P}}}{{{U}}} = {fr(I,2)}$ A."], f"${fr(I,2)}$ A")
+    _i=1
+    while len(E)<50:
+        _P=230*_i
+        add("application","puissance-electrique", f"$U=230$ V, $I={_i}$ A : puissance électrique ?", [f"$P = 230\\times{_i} = {_P}$ W."], f"${_P}$ W")
+        _i+=1
+    E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
+
+
 # Regles multi-niveaux (notions communes) : (niveaux, mots-cles slug, generateur)
 REGLES = [
-    ({"quatrieme","troisieme"}, ["proportion","pourcentage"], gen_proportionnalite),
-    ({"quatrieme","troisieme"}, ["statistique"], gen_statistiques),
-    ({"quatrieme","troisieme"}, ["puissance"], gen_puissances),
-    ({"quatrieme","troisieme"}, ["rationnel","fraction"], gen_rationnels),
-    ({"cinquieme","quatrieme","troisieme"}, ["masse-volumique","densite"], gen_masse_volumique),
-    ({"quatrieme","troisieme"}, ["poids","gravitation"], gen_poids_forces),
+    # (niveaux, matiere, mots-cles slug, generateur)
+    ({"quatrieme","troisieme"}, "maths", ["proportion","pourcentage"], gen_proportionnalite),
+    ({"quatrieme","troisieme"}, "maths", ["statistique"], gen_statistiques),
+    ({"quatrieme","troisieme"}, "maths", ["puissance"], gen_puissances),
+    ({"quatrieme","troisieme"}, "maths", ["rationnel","fraction"], gen_rationnels),
+    ({"cinquieme","quatrieme","troisieme"}, "physique-chimie", ["masse-volumique","densite"], gen_masse_volumique),
+    ({"quatrieme","troisieme"}, "physique-chimie", ["poids","gravitation"], gen_poids_forces),
+    ({"quatrieme","troisieme"}, "physique-chimie", ["puissance","energie","electri"], gen_puissance_energie),
 ]
 
-def choisir(niveau, slug):
+def choisir(niveau, matiere, slug):
     g = REGISTRE.get((niveau, slug))
     if g: return g
-    for niveaux, motscles, gen in REGLES:
-        if niveau in niveaux and any(k in slug for k in motscles):
+    for niveaux, mat, motscles, gen in REGLES:
+        if niveau in niveaux and matiere == mat and any(k in slug for k in motscles):
             return gen
     return None
 
@@ -646,7 +674,7 @@ def traiter(racine="contenu"):
         if not os.path.isdir(chemin): continue
         parts = chemin.split(os.sep)
         niveau, matiere, slug = parts[-3], parts[-2], parts[-1]
-        gen = choisir(niveau, slug)
+        gen = choisir(niveau, matiere, slug)
         fexo = os.path.join(chemin,"exercice.json")
         if gen is None:
             ignores.append(f"{niveau}/{matiere}/{slug}"); continue
