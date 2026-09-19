@@ -12,121 +12,503 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
-      "notion": "division qui tombe juste",
-      "enonce": "On partage 20 billes entre 4 enfants, en parts égales. Combien chacun en reçoit-il, et reste-t-il des billes ?",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $2$ par $2$.",
       "corrige": [
-        "On cherche dans la table de 4 : 4 × 5 = 20.",
-        "20 ÷ 4 = 5, et il ne reste rien (reste 0).",
-        "Chaque enfant reçoit 5 billes."
+        "$2 = 2 \\times 1 + 0$ (avec $0 < 2$)."
       ],
-      "reponse": "Chaque enfant reçoit 5 billes, il ne reste aucune bille."
+      "reponse": "quotient 1, reste 0"
     },
     {
       "id": 2,
-      "difficulte": "facile",
-      "notion": "quotient et reste",
-      "enonce": "On partage 27 bonbons entre 4 enfants. Combien chacun en reçoit-il ? Combien en reste-t-il ?",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $32$ par $5$.",
       "corrige": [
-        "Dans la table de 4, on cherche le plus grand résultat qui ne dépasse pas 27 : 4 × 6 = 24 (4 × 7 = 28 est trop grand).",
-        "Le quotient est 6.",
-        "Le reste est 27 − 24 = 3. On vérifie : 3 < 4, c'est correct."
+        "$32 = 5 \\times 6 + 2$ (avec $2 < 5$)."
       ],
-      "reponse": "Chaque enfant reçoit 6 bonbons, et il en reste 3."
+      "reponse": "quotient 6, reste 2"
     },
     {
       "id": 3,
-      "difficulte": "facile",
-      "notion": "règle du reste",
-      "enonce": "Pour une division par 5, un élève trouve un reste de 6. Est-ce possible ? Explique.",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $94$ par $8$.",
       "corrige": [
-        "La règle : le reste doit toujours être plus petit que le diviseur.",
-        "Ici le diviseur est 5, or 6 est plus grand que 5.",
-        "C'est impossible : on pouvait encore donner une part de plus, le quotient était trop petit."
+        "$94 = 8 \\times 11 + 6$ (avec $6 < 8$)."
       ],
-      "reponse": "Non, c'est impossible : le reste (6) doit être plus petit que le diviseur (5)."
+      "reponse": "quotient 11, reste 6"
     },
     {
       "id": 4,
-      "difficulte": "moyen",
-      "notion": "poser une division",
-      "enonce": "Calcule 86 ÷ 5 et donne le quotient et le reste.",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $186$ par $11$.",
       "corrige": [
-        "Dans 8, combien de fois 5 ? 1 fois (5 × 1 = 5). 8 − 5 = 3.",
-        "On abaisse le 6 : cela fait 36. Dans 36, combien de fois 5 ? 7 fois (5 × 7 = 35). 36 − 35 = 1.",
-        "Quotient 17, reste 1. Vérification : 5 × 17 + 1 = 85 + 1 = 86."
+        "$186 = 11 \\times 16 + 10$ (avec $10 < 11$)."
       ],
-      "reponse": "86 ÷ 5 donne un quotient de 17 et un reste de 1 (86 = 5 × 17 + 1)."
+      "reponse": "quotient 16, reste 10"
     },
     {
       "id": 5,
-      "difficulte": "moyen",
-      "notion": "problème de partage",
-      "enonce": "Une maîtresse range 50 images dans des pochettes de 6 images. Combien de pochettes remplit-elle complètement, et combien d'images restent en trop ?",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $294$ par $14$.",
       "corrige": [
-        "On cherche dans la table de 6 : 6 × 8 = 48 (6 × 9 = 54 est trop grand).",
-        "Le quotient est 8, le reste est 50 − 48 = 2. On vérifie : 2 < 6.",
-        "Elle remplit 8 pochettes et il reste 2 images."
+        "$294 = 14 \\times 21 + 0$ (avec $0 < 14$)."
       ],
-      "reponse": "Elle remplit 8 pochettes complètes et il reste 2 images."
+      "reponse": "quotient 21, reste 0"
     },
     {
       "id": 6,
-      "difficulte": "difficile",
-      "notion": "division à deux chiffres au quotient",
-      "enonce": "On partage 95 bonbons entre 7 enfants, en parts égales. Combien chacun en reçoit-il ? Combien en reste-t-il ? Vérifie ton résultat.",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $18$ par $17$.",
       "corrige": [
-        "Dans 9, combien de fois 7 ? 1 fois (7 × 1 = 7). 9 − 7 = 2.",
-        "On abaisse le 5 : cela fait 25. Dans 25, combien de fois 7 ? 3 fois (7 × 3 = 21). 25 − 21 = 4.",
-        "Quotient 13, reste 4 (et 4 < 7).",
-        "Vérification : 7 × 13 + 4 = 91 + 4 = 95."
+        "$18 = 17 \\times 1 + 1$ (avec $1 < 17$)."
       ],
-      "reponse": "Chaque enfant reçoit 13 bonbons, et il en reste 4."
+      "reponse": "quotient 1, reste 1"
     },
     {
       "id": 7,
-      "difficulte": "decouverte",
-      "notion": "lien multiplication",
-      "enonce": "Combien de fois 6 tient-il dans 42 ? Écris la division.",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $122$ par $20$.",
       "corrige": [
-        "Je cherche le nombre qui multiplié par 6 donne 42 : c'est 7 (6 × 7 = 42).",
-        "42 ÷ 6 = 7, reste 0."
+        "$122 = 20 \\times 6 + 2$ (avec $2 < 20$)."
       ],
-      "reponse": "42 ÷ 6 = 7, reste 0."
+      "reponse": "quotient 6, reste 2"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "poser une division",
-      "enonce": "Calcule 74 ÷ 3 et donne le quotient et le reste.",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $34$ par $3$.",
       "corrige": [
-        "3 × 24 = 72, et 3 × 25 = 75 (trop grand).",
-        "74 = 3 × 24 + 2, donc quotient 24 et reste 2."
+        "$34 = 3 \\times 11 + 1$ (avec $1 < 3$)."
       ],
-      "reponse": "74 ÷ 3 : quotient 24, reste 2."
+      "reponse": "quotient 11, reste 1"
     },
     {
       "id": 9,
       "difficulte": "application",
-      "notion": "problème de partage",
-      "enonce": "Un boulanger range 100 pains dans des sacs de 8 pains. Combien de sacs remplit-il complètement, et combien de pains restent ?",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $98$ par $6$.",
       "corrige": [
-        "Je divise 100 par 8 : 8 × 12 = 96, et 8 × 13 = 104 (trop grand).",
-        "100 = 8 × 12 + 4, donc 12 sacs pleins et 4 pains restants."
+        "$98 = 6 \\times 16 + 2$ (avec $2 < 6$)."
       ],
-      "reponse": "12 sacs pleins, il reste 4 pains."
+      "reponse": "quotient 16, reste 2"
     },
     {
       "id": 10,
-      "difficulte": "approfondissement",
-      "notion": "division et vérification",
-      "enonce": "Calcule 250 ÷ 4, donne le quotient et le reste, puis vérifie.",
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $189$ par $9$.",
       "corrige": [
-        "4 × 62 = 248, et 4 × 63 = 252 (trop grand).",
-        "250 = 4 × 62 + 2 : quotient 62, reste 2.",
-        "Vérification : 4 × 62 + 2 = 248 + 2 = 250."
+        "$189 = 9 \\times 21 + 0$ (avec $0 < 9$)."
       ],
-      "reponse": "250 ÷ 4 : quotient 62, reste 2 (vérifié : 4 × 62 + 2 = 250)."
+      "reponse": "quotient 21, reste 0"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $22$ par $12$.",
+      "corrige": [
+        "$22 = 12 \\times 1 + 10$ (avec $10 < 12$)."
+      ],
+      "reponse": "quotient 1, reste 10"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $92$ par $15$.",
+      "corrige": [
+        "$92 = 15 \\times 6 + 2$ (avec $2 < 15$)."
+      ],
+      "reponse": "quotient 6, reste 2"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $210$ par $18$.",
+      "corrige": [
+        "$210 = 18 \\times 11 + 12$ (avec $12 < 18$)."
+      ],
+      "reponse": "quotient 11, reste 12"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $343$ par $21$.",
+      "corrige": [
+        "$343 = 21 \\times 16 + 7$ (avec $7 < 21$)."
+      ],
+      "reponse": "quotient 16, reste 7"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $86$ par $4$.",
+      "corrige": [
+        "$86 = 4 \\times 21 + 2$ (avec $2 < 4$)."
+      ],
+      "reponse": "quotient 21, reste 2"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $7$ par $7$.",
+      "corrige": [
+        "$7 = 7 \\times 1 + 0$ (avec $0 < 7$)."
+      ],
+      "reponse": "quotient 1, reste 0"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $62$ par $10$.",
+      "corrige": [
+        "$62 = 10 \\times 6 + 2$ (avec $2 < 10$)."
+      ],
+      "reponse": "quotient 6, reste 2"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $145$ par $13$.",
+      "corrige": [
+        "$145 = 13 \\times 11 + 2$ (avec $2 < 13$)."
+      ],
+      "reponse": "quotient 11, reste 2"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $270$ par $16$.",
+      "corrige": [
+        "$270 = 16 \\times 16 + 14$ (avec $14 < 16$)."
+      ],
+      "reponse": "quotient 16, reste 14"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $399$ par $19$.",
+      "corrige": [
+        "$399 = 19 \\times 21 + 0$ (avec $0 < 19$)."
+      ],
+      "reponse": "quotient 21, reste 0"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $2$ par $2$.",
+      "corrige": [
+        "$2 = 2 \\times 1 + 0$ (avec $0 < 2$)."
+      ],
+      "reponse": "quotient 1, reste 0"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $32$ par $5$.",
+      "corrige": [
+        "$32 = 5 \\times 6 + 2$ (avec $2 < 5$)."
+      ],
+      "reponse": "quotient 6, reste 2"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $90$ par $8$.",
+      "corrige": [
+        "$90 = 8 \\times 11 + 2$ (avec $2 < 8$)."
+      ],
+      "reponse": "quotient 11, reste 2"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $183$ par $11$.",
+      "corrige": [
+        "$183 = 11 \\times 16 + 7$ (avec $7 < 11$)."
+      ],
+      "reponse": "quotient 16, reste 7"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $294$ par $14$.",
+      "corrige": [
+        "$294 = 14 \\times 21 + 0$ (avec $0 < 14$)."
+      ],
+      "reponse": "quotient 21, reste 0"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $22$ par $17$.",
+      "corrige": [
+        "$22 = 17 \\times 1 + 5$ (avec $5 < 17$)."
+      ],
+      "reponse": "quotient 1, reste 5"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $122$ par $20$.",
+      "corrige": [
+        "$122 = 20 \\times 6 + 2$ (avec $2 < 20$)."
+      ],
+      "reponse": "quotient 6, reste 2"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $33$ par $3$.",
+      "corrige": [
+        "$33 = 3 \\times 11 + 0$ (avec $0 < 3$)."
+      ],
+      "reponse": "quotient 11, reste 0"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $100$ par $6$.",
+      "corrige": [
+        "$100 = 6 \\times 16 + 4$ (avec $4 < 6$)."
+      ],
+      "reponse": "quotient 16, reste 4"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $194$ par $9$.",
+      "corrige": [
+        "$194 = 9 \\times 21 + 5$ (avec $5 < 9$)."
+      ],
+      "reponse": "quotient 21, reste 5"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $18$ par $12$.",
+      "corrige": [
+        "$18 = 12 \\times 1 + 6$ (avec $6 < 12$)."
+      ],
+      "reponse": "quotient 1, reste 6"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $97$ par $15$.",
+      "corrige": [
+        "$97 = 15 \\times 6 + 7$ (avec $7 < 15$)."
+      ],
+      "reponse": "quotient 6, reste 7"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $206$ par $18$.",
+      "corrige": [
+        "$206 = 18 \\times 11 + 8$ (avec $8 < 18$)."
+      ],
+      "reponse": "quotient 11, reste 8"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $336$ par $21$.",
+      "corrige": [
+        "$336 = 21 \\times 16 + 0$ (avec $0 < 21$)."
+      ],
+      "reponse": "quotient 16, reste 0"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $86$ par $4$.",
+      "corrige": [
+        "$86 = 4 \\times 21 + 2$ (avec $2 < 4$)."
+      ],
+      "reponse": "quotient 21, reste 2"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $7$ par $7$.",
+      "corrige": [
+        "$7 = 7 \\times 1 + 0$ (avec $0 < 7$)."
+      ],
+      "reponse": "quotient 1, reste 0"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $62$ par $10$.",
+      "corrige": [
+        "$62 = 10 \\times 6 + 2$ (avec $2 < 10$)."
+      ],
+      "reponse": "quotient 6, reste 2"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $155$ par $13$.",
+      "corrige": [
+        "$155 = 13 \\times 11 + 12$ (avec $12 < 13$)."
+      ],
+      "reponse": "quotient 11, reste 12"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $266$ par $16$.",
+      "corrige": [
+        "$266 = 16 \\times 16 + 10$ (avec $10 < 16$)."
+      ],
+      "reponse": "quotient 16, reste 10"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $406$ par $19$.",
+      "corrige": [
+        "$406 = 19 \\times 21 + 7$ (avec $7 < 19$)."
+      ],
+      "reponse": "quotient 21, reste 7"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $2$ par $2$.",
+      "corrige": [
+        "$2 = 2 \\times 1 + 0$ (avec $0 < 2$)."
+      ],
+      "reponse": "quotient 1, reste 0"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $32$ par $5$.",
+      "corrige": [
+        "$32 = 5 \\times 6 + 2$ (avec $2 < 5$)."
+      ],
+      "reponse": "quotient 6, reste 2"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $94$ par $8$.",
+      "corrige": [
+        "$94 = 8 \\times 11 + 6$ (avec $6 < 8$)."
+      ],
+      "reponse": "quotient 11, reste 6"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $180$ par $11$.",
+      "corrige": [
+        "$180 = 11 \\times 16 + 4$ (avec $4 < 11$)."
+      ],
+      "reponse": "quotient 16, reste 4"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $294$ par $14$.",
+      "corrige": [
+        "$294 = 14 \\times 21 + 0$ (avec $0 < 14$)."
+      ],
+      "reponse": "quotient 21, reste 0"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $26$ par $17$.",
+      "corrige": [
+        "$26 = 17 \\times 1 + 9$ (avec $9 < 17$)."
+      ],
+      "reponse": "quotient 1, reste 9"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $122$ par $20$.",
+      "corrige": [
+        "$122 = 20 \\times 6 + 2$ (avec $2 < 20$)."
+      ],
+      "reponse": "quotient 6, reste 2"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $35$ par $3$.",
+      "corrige": [
+        "$35 = 3 \\times 11 + 2$ (avec $2 < 3$)."
+      ],
+      "reponse": "quotient 11, reste 2"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $96$ par $6$.",
+      "corrige": [
+        "$96 = 6 \\times 16 + 0$ (avec $0 < 6$)."
+      ],
+      "reponse": "quotient 16, reste 0"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "division",
+      "enonce": "Effectue la division euclidienne de $190$ par $9$.",
+      "corrige": [
+        "$190 = 9 \\times 21 + 1$ (avec $1 < 9$)."
+      ],
+      "reponse": "quotient 21, reste 1"
     }
   ]
 }

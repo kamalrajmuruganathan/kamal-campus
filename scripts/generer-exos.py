@@ -600,6 +600,133 @@ def gen_pensee_informatique():
         add("application","algorithme", f"$x=0$, on répète 3 fois « $x$ prend $x+{_i}$ ». Valeur finale ?", [f"$x = 3\\times {_i} = {_r}$."], f"$x = {_r}$"); _i+=1
     E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
 
+# ============ Générateurs primaire / collège (calcul, déterministes) ============
+def _additions(op_max):
+    E=[]
+    for k in range(50):
+        a=(k*7)%op_max+1; b=(k*11+3)%op_max+1
+        E.append(("application","addition", f"Pose et calcule : ${a} + {b}$", [f"${a} + {b} = {a+b}$."], f"${a+b}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _soustractions(op_max):
+    E=[]
+    for k in range(50):
+        b=(k*5)%(op_max//2+1)+1; a=b+((k*7)%(op_max//2+1))+1
+        E.append(("application","soustraction", f"Pose et calcule : ${a} - {b}$", [f"${a} - {b} = {a-b}$."], f"${a-b}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _multiplications(a_max,b_max):
+    E=[]
+    for k in range(50):
+        a=(k*7)%a_max+2; b=(k*3)%b_max+2
+        E.append(("application","multiplication", f"Pose et calcule : ${a} \\times {b}$", [f"${a} \\times {b} = {a*b}$."], f"${a*b}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _divisions(diviseur_max):
+    E=[]
+    for k in range(50):
+        d=(k*3)%diviseur_max+2; q=(k*5)%25+1; r=(k*7)%d
+        n=d*q+r
+        E.append(("application","division", f"Effectue la division euclidienne de ${n}$ par ${d}$.", [f"${n} = {d} \\times {q} + {r}$ (avec ${r} < {d}$)."], f"quotient {q}, reste {r}"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _tables():
+    E=[]
+    for k in range(50):
+        a=(k%9)+2; b=((k//4)%9)+2
+        E.append(("application","tables", f"Combien font ${a} \\times {b}$ ?", [f"${a} \\times {b} = {a*b}$."], f"${a*b}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _calcul_mental(mx):
+    E=[]
+    for k in range(50):
+        a=(k*7)%mx+1; b=(k*3)%(mx//2+1)+1; op=k%3
+        if op==0: q=f"{a} + {b}"; r=a+b
+        elif op==1: q=f"{a+b} - {b}"; r=a
+        else: x=(k%12)+2; y=(k%9)+2; q=f"{x} \\times {y}"; r=x*y
+        E.append(("application","calcul-mental", f"Calcule mentalement : ${q}$", [f"${q} = {r}$."], f"${r}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _nombres_compare(mx):
+    E=[]
+    for k in range(50):
+        a=(k*7)%mx+1; b=(k*11+3)%mx+1
+        s=">" if a>b else ("<" if a<b else "=")
+        E.append(("application","comparer", f"Compare ${a}$ et ${b}$ (écris $<$, $>$ ou $=$).", [f"${a} {s} {b}$."], f"${s}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _grands_nombres():
+    E=[]; nums=[3456,12789,90210,45678,100234,7654,560123,9087,234567,80456,671000,45090,308745,120500,4560,78901,650000,13245,900001,55555]
+    for k in range(25):
+        n=nums[k%len(nums)]; base=[10,100,1000][k%3]; nom={10:"dizaine",100:"centaine",1000:"millier"}[base]
+        arr=round(n/base)*base
+        E.append(("application","arrondir", f"Arrondir ${n}$ à la {nom} la plus proche.", [f"${n} \\approx {arr}$."], f"${arr}$"))
+    for k in range(25):
+        a=nums[k%len(nums)]; b=nums[(k+3)%len(nums)]; s=">" if a>b else ("<" if a<b else "=")
+        E.append(("application","comparer", f"Compare ${a}$ et ${b}$.", [f"${a} {s} {b}$."], f"${s}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _decimaux_ops():
+    E=[]
+    for k in range(50):
+        a=round(((k*7)%80+1)/10,1); b=round(((k*3)%60+1)/10,1); op=k%3
+        if op==0: r=round(a+b,2); q=f"{fr(a,1)} + {fr(b,1)}"
+        elif op==1: aa,bb=max(a,b),min(a,b); r=round(aa-bb,2); q=f"{fr(aa,1)} - {fr(bb,1)}"
+        else: c=(k%9)+2; r=round(a*c,2); q=f"{fr(a,1)} \\times {c}"
+        E.append(("application","decimaux", f"Calcule : ${q}$", [f"${q} = {fr(r,2)}$."], f"${fr(r,2)}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _perimetre_aire():
+    E=[]
+    for k in range(25):
+        L=(k*3)%20+2; l=(k*2)%14+2
+        E.append(("application","perimetre", f"Un rectangle mesure ${L}$ cm de long et ${l}$ cm de large. Calcule son périmètre.", [f"$P = 2 \\times ({L} + {l}) = {2*(L+l)}$ cm."], f"${2*(L+l)}$ cm"))
+    for k in range(25):
+        L=(k*3)%20+2; l=(k*2)%14+2
+        E.append(("application","aire", f"Un rectangle mesure ${L}$ cm sur ${l}$ cm. Calcule son aire.", [f"$A = {L} \\times {l} = {L*l}$ cm²."], f"${L*l}$ cm²"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _durees():
+    E=[]
+    for k in range(50):
+        h=(k%5)+1; m=(k*7)%60; add=(k*11)%50+10; tot=h*60+m+add; H=tot//60; M=tot%60
+        E.append(("application","durees", f"Un film commence à ${h}$ h ${m:02d}$ et dure ${add}$ min. À quelle heure se termine-t-il ?", [f"${h}$ h ${m:02d}$ $+ {add}$ min $= {H}$ h ${M:02d}$."], f"${H}$ h ${M:02d}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _fractions_qty():
+    E=[]
+    for k in range(50):
+        d=[2,3,4,5,6,10][k%6]; n=1+(k%(d-1)); q=d*((k%9)+2); val=q*n//d
+        E.append(("application","fractions", f"Calcule les $\\dfrac{{{n}}}{{{d}}}$ de ${q}$.", [f"${q} \\div {d} = {q//d}$, puis $\\times {n} = {val}$."], f"${val}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _moities_doubles():
+    E=[]
+    for k in range(25):
+        n=2*((k*3)%40+1)
+        E.append(("application","moitie", f"Quelle est la moitié de ${n}$ ?", [f"${n} \\div 2 = {n//2}$."], f"${n//2}$"))
+    for k in range(25):
+        n=(k*3)%50+1
+        E.append(("application","double", f"Quel est le double de ${n}$ ?", [f"${n} \\times 2 = {2*n}$."], f"${2*n}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _problemes(mx):
+    E=[]; noms=["billes","bonbons","images","euros","livres","crayons","pommes","autocollants"]
+    for k in range(50):
+        a=(k*7)%mx+2; b=(k*3)%(mx//2+1)+1; obj=noms[k%len(noms)]; typ=k%3
+        if typ==0: r=a+b; q=f"Léa a {a} {obj} et en reçoit {b}. Combien en a-t-elle en tout ?"; c=f"${a} + {b} = {r}$."
+        elif typ==1: r=a; q=f"Tom avait {a+b} {obj}, il en donne {b}. Combien lui en reste-t-il ?"; c=f"${a+b} - {b} = {r}$."
+        else: cc=(k%9)+2; r=a*cc; q=f"Il y a {cc} paquets de {a} {obj}. Combien de {obj} en tout ?"; c=f"${cc} \\times {a} = {r}$."
+        E.append(("probleme","problemes", q, [c], f"${r}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
+def _proportionnalite_simple():
+    E=[]
+    for k in range(50):
+        pu=(k%9)+2; n=(k%7)+2; m=(k%6)+3; Pn=pu*n; Pm=pu*m
+        E.append(("application","proportionnalite", f"{n} objets identiques coûtent ${Pn}$ €. Combien coûtent ${m}$ de ces objets ?", [f"Prix d'un objet : ${Pn} \\div {n} = {pu}$ €. Puis ${m} \\times {pu} = {Pm}$ €."], f"${Pm}$ €"))
+    return [exo(i+1,*t) for i,t in enumerate(E)]
+
 REGISTRE = {
     ("troisieme","triangles"): gen_triangles,
     ("troisieme","puissances"): gen_puissances,
@@ -667,6 +794,52 @@ def choisir(niveau, matiere, slug):
         if niveau in niveaux and matiere == mat and any(k in slug for k in motscles):
             return gen
     return None
+
+REGISTRE.update({
+    ("cp","addition"): lambda: _additions(10),
+    ("cp","soustraction"): lambda: _soustractions(20),
+    ("cp","calcul-mental"): lambda: _calcul_mental(20),
+    ("cp","comparer-ranger"): lambda: _nombres_compare(20),
+    ("cp","nombres-jusqu-a-20"): lambda: _nombres_compare(20),
+    ("cp","problemes"): lambda: _problemes(20),
+    ("ce1","addition-posee"): lambda: _additions(1000),
+    ("ce1","soustraction-posee"): lambda: _soustractions(1000),
+    ("ce1","calcul-mental"): lambda: _calcul_mental(100),
+    ("ce1","tables-de-multiplication"): _tables,
+    ("ce1","moities-et-doubles"): _moities_doubles,
+    ("ce1","nombres-jusqu-a-1000"): lambda: _nombres_compare(1000),
+    ("ce1","problemes"): lambda: _problemes(100),
+    ("ce2","calcul-mental"): lambda: _calcul_mental(1000),
+    ("ce2","fractions-simples"): _fractions_qty,
+    ("ce2","multiplication-posee"): lambda: _multiplications(90,9),
+    ("ce2","nombres-jusqu-a-10000"): lambda: _nombres_compare(10000),
+    ("ce2","perimetre-et-mesures"): _perimetre_aire,
+    ("ce2","problemes"): lambda: _problemes(1000),
+    ("ce2","sens-de-la-division"): lambda: _divisions(9),
+    ("cm1","cercle-triangles-perimetre-aire"): _perimetre_aire,
+    ("cm1","division-euclidienne"): lambda: _divisions(20),
+    ("cm1","durees"): _durees,
+    ("cm1","fractions"): _fractions_qty,
+    ("cm1","grands-nombres"): _grands_nombres,
+    ("cm1","multiplication-posee"): lambda: _multiplications(900,90),
+    ("cm1","nombres-decimaux"): _decimaux_ops,
+    ("cm1","operations-decimaux"): _decimaux_ops,
+    ("cm1","proportionnalite"): _proportionnalite_simple,
+    ("cm2","aires-perimetres-volumes"): _perimetre_aire,
+    ("cm2","calcul-mental"): lambda: _calcul_mental(10000),
+    ("cm2","division-posee"): lambda: _divisions(90),
+    ("cm2","fractions-et-operations"): _fractions_qty,
+    ("cm2","grands-nombres"): _grands_nombres,
+    ("cm2","operations-sur-les-decimaux"): _decimaux_ops,
+    ("cm2","problemes"): lambda: _problemes(10000),
+    ("cm2","proportionnalite-et-pourcentages"): _proportionnalite_simple,
+    ("sixieme","fractions"): _fractions_qty,
+    ("sixieme","longueurs-aires-volumes"): _perimetre_aire,
+    ("sixieme","nombres-entiers-decimaux"): _decimaux_ops,
+    ("sixieme","proportionnalite"): _proportionnalite_simple,
+    ("sixieme","durees"): _durees,
+    ("sixieme","initiation-algebre"): _calcul_mental_alg if False else (lambda: _calcul_mental(50)),
+})
 
 def traiter(racine="contenu"):
     faits, ignores = [], []
