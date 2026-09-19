@@ -108,18 +108,18 @@ def g5_fractions():
     prod = [(2,3,4,5),(1,2,3,7),(3,4,2,5),(2,7,1,3),(5,6,2,5),(3,8,4,9),(1,5,5,6),(2,9,3,4)]
     for (a,b,c,d) in prod:
         f = Fraction(a,b)*Fraction(c,d)
-        add("intermediaire","produit", f"Calculer $\\dfrac{{{a}}}{{{b}}} \\times \dfrac{{{ac}}}{{{d}}}$.",
+        add("intermediaire","produit", f"Calculer $\\dfrac{{{a}}}{{{b}}} \\times \\dfrac{{{c}}}{{{d}}}$.",
             [f"On multiplie haut et bas : $\\dfrac{{{a} \\times {c}}}{{{b} \\times {d}}} = {frac_latex(f)}$."], f"${frac_latex(f)}$")
     somM = [(1,2,1,4),(1,3,1,6),(2,3,1,6),(1,2,1,3),(3,4,1,8),(2,5,1,10),(1,2,2,5),(1,4,3,8)]
     for (a,b,c,d) in somM:
         f = Fraction(a,b)+Fraction(c,d)
         L = (b*d)//math.gcd(b,d)
-        add("approfondissement","somme-denominateurs-multiples", f"Calculer $\\dfrac{{{a}}}{{{b}}} + \dfrac{{{ac}}}{{{d}}}$.",
+        add("approfondissement","somme-denominateurs-multiples", f"Calculer $\\dfrac{{{a}}}{{{b}}} + \\dfrac{{{c}}}{{{d}}}$.",
             [f"On reduit au meme denominateur ${L}$ puis on additionne : $= {frac_latex(f)}$."], f"${frac_latex(f)}$")
     _i = 2
     while len(E) < 50:
         f = Fraction(_i, 2*_i+1) + Fraction(1, 2*_i+1)
-        add("application","somme-meme-denominateur", f"Calculer $\\dfrac{{{_i}}}{{{2*_i+1}}} + \dfrac{{{1}}{{{2*_i+1}}}$.",
+        add("application","somme-meme-denominateur", f"Calculer $\\dfrac{{{_i}}}{{{2*_i+1}}} + \\dfrac{{1}}{{{2*_i+1}}}$.",
             [f"$\\dfrac{{{_i}+1}}{{{2*_i+1}}} = {frac_latex(f)}$."], f"${frac_latex(f)}$")
         _i += 1
     return _fin(E)
