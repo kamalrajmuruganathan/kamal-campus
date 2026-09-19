@@ -862,6 +862,12 @@ def traiter(racine="contenu"):
     print(f"Total rempli : {len(faits)}  |  ignorés (pas encore de générateur) : {len(ignores)}")
     return faits, ignores
 
+try:
+    import gen_extra
+    REGISTRE.update(gen_extra.EXTRA)
+except Exception as _e:
+    print("[gen_extra non charge]", _e)
+
 if __name__ == "__main__":
     import sys
     traiter(sys.argv[1] if len(sys.argv)>1 else "contenu")
