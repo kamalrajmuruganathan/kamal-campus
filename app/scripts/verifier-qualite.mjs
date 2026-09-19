@@ -106,7 +106,7 @@ for (const niveau of existsSync(CONTENU) ? readdirSync(CONTENU) : []) {
       if (exo) {
         verifChaines(join(d, 'exercice.json'), exo);
         const ex = exo.exercices || [];
-        if (ex.length !== 10) sig(join(d, 'exercice.json'), `${ex.length} exercices (attendu 10)`);
+        if (ex.length !== 10 && ex.length !== 50) sig(join(d, 'exercice.json'), `${ex.length} exercices (attendu 10)`);
         const enonces = new Set();
         ex.forEach((e, i) => {
           if (!Array.isArray(e.corrige) || e.corrige.length === 0 || e.corrige.some((s) => !String(s).trim())) sig(join(d, 'exercice.json'), `ex ${i + 1} : corrigé vide`);

@@ -62,7 +62,7 @@ def gen_triangles():
             f"$\\mathrm{{ABC}}$ est rectangle en $\\mathrm{{A}}$ avec $\\mathrm{{AB}} = {a}$ cm et $\\mathrm{{AC}} = {b}$ cm. Calculer $\\mathrm{{BC}}$.",
             [f"Le triangle est rectangle en $\\mathrm{{A}}$ : d'après le théorème de Pythagore, $\\mathrm{{BC}}^2 = \\mathrm{{AB}}^2 + \\mathrm{{AC}}^2$.",
              f"$\\mathrm{{BC}}^2 = {a}^2 + {b}^2 = {a*a} + {b*b} = {n}$.",
-             f"Donc $\\mathrm{{BC}} = \\sqrt{{{n}}}$" + (f" $= {r}$ cm." if r*r==n else f" \\approx {fr(math.sqrt(n))}$ cm.")], rep)
+             f"Donc $\\mathrm{{BC}} = \\sqrt{{{n}}}" + (f" = {r}$ cm." if r*r==n else f" \\approx {fr(math.sqrt(n))}$ cm.")], rep)
     for (h,a,d) in [(5,3,"application"),(13,5,"application"),(10,6,"intermediaire"),(25,7,"intermediaire"),(6,4,"approfondissement"),(9,5,"approfondissement")]:
         n=h*h-a*a; r=math.isqrt(n)
         rep=f"$\\mathrm{{DF}} = {r}$ cm" if r*r==n else f"$\\mathrm{{DF}} = {rac_latex(n)}$ cm"
@@ -70,7 +70,7 @@ def gen_triangles():
             f"$\\mathrm{{DEF}}$ est rectangle en $\\mathrm{{D}}$. $\\mathrm{{EF}} = {h}$ cm (hypoténuse) et $\\mathrm{{DE}} = {a}$ cm. Calculer $\\mathrm{{DF}}$.",
             [f"D'après Pythagore, $\\mathrm{{EF}}^2 = \\mathrm{{DE}}^2 + \\mathrm{{DF}}^2$.",
              f"$\\mathrm{{DF}}^2 = {h}^2 - {a}^2 = {h*h} - {a*a} = {n}$.",
-             f"Donc $\\mathrm{{DF}} = \\sqrt{{{n}}}$" + (f" $= {r}$ cm." if r*r==n else f" \\approx {fr(math.sqrt(n))}$ cm.")], rep)
+             f"Donc $\\mathrm{{DF}} = \\sqrt{{{n}}}" + (f" = {r}$ cm." if r*r==n else f" \\approx {fr(math.sqrt(n))}$ cm.")], rep)
     for (x,y,z,d) in [(6,8,10,"application"),(5,12,13,"intermediaire"),(9,12,15,"intermediaire"),(4,5,6,"approfondissement"),(7,8,11,"approfondissement"),(8,15,17,"application")]:
         p,q,r=sorted([x,y,z]); g=r*r; s=p*p+q*q; rect=(g==s); sg="=" if rect else "\\neq"
         add(d,"reciproque-pythagore",
@@ -281,7 +281,7 @@ def gen_racine_carree():
         rep=f"${r}$" if r*r==p else f"$\\sqrt{{{p}}}$"
         tail=(f" = {r}$." if r*r==p else "$.")
         add("intermediaire","produit-racines", f"Calculer $\\sqrt{{{a}}} \\times \\sqrt{{{b}}}$.",
-            [f"$\\sqrt{{{a}}} \\times \\sqrt{{{b}}} = \\sqrt{{{a} \\times {b}}} = \\sqrt{{{p}}}$"+tail], rep)
+            [f"$\\sqrt{{{a}}} \\times \\sqrt{{{b}}} = \\sqrt{{{a} \\times {b}}} = \\sqrt{{{p}}}"+tail], rep)
     for n in [10,20,30,45,60,75,90,110,135,150]:
         r=math.isqrt(n)
         add("approfondissement","encadrer-racine", f"Encadrer $\\sqrt{{{n}}}$ entre deux entiers consécutifs.",
@@ -416,7 +416,7 @@ def gen_reperage():
         rep=f"$\\mathrm{{AB}} = {r}$" if r*r==n else f"$\\mathrm{{AB}} = \\sqrt{{{n}}}$"
         tail=f" = {r}$." if r*r==n else "$."
         add("intermediaire","distance", f"$\\mathrm{{A}}({xa}\\,;\\,{ya})$ et $\\mathrm{{B}}({xb}\\,;\\,{yb})$. Calculer la distance $\\mathrm{{AB}}$.",
-            [f"$\\mathrm{{AB}} = \\sqrt{{({xb}-({xa}))^2 + ({yb}-({ya}))^2}} = \\sqrt{{{ (xb-xa)**2 } + { (yb-ya)**2 }}} = \\sqrt{{{n}}}$"+tail], rep)
+            [f"$\\mathrm{{AB}} = \\sqrt{{({xb}-({xa}))^2 + ({yb}-({ya}))^2}} = \\sqrt{{{ (xb-xa)**2 } + { (yb-ya)**2 }}} = \\sqrt{{{n}}}"+tail], rep)
     # coordonnees lecture (symbolique simple)
     for ((xa,ya),(xb,yb)) in pts[:14]:
         mx=Fraction(xa+xb,2); my=Fraction(ya+yb,2)
