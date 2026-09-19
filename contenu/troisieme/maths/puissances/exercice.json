@@ -13,127 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "exposant-negatif",
-      "enonce": "Écris $3^{-2}$ puis $10^{-4}$ sous forme d'une fraction, puis donne leur écriture décimale.",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^3$.",
       "corrige": [
-        "Un exposant négatif signifie **inverse** : pour $a \\neq 0$, $a^{-n} = \\dfrac{1}{a^{\\,n}}$.",
-        "$3^{-2} = \\dfrac{1}{3^{2}} = \\dfrac{1}{9}$. C'est un nombre **positif** : l'exposant est négatif, pas le résultat.",
-        "$10^{-4} = \\dfrac{1}{10^{4}} = \\dfrac{1}{10\\,000}$. Le $1$ se place au $4^\\text{e}$ rang après la virgule : $0{,}0001$."
+        "$2^3 = 2 \\times 2 \\times 2 = 8$."
       ],
-      "reponse": "$3^{-2} = \\dfrac{1}{9}$ ; $10^{-4} = \\dfrac{1}{10\\,000} = 0{,}0001$."
+      "reponse": "$8$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "division-puissances",
-      "enonce": "Écris $\\dfrac{7^{3}}{7^{5}}$ sous la forme d'une seule puissance de $7$, puis donne sa valeur sous forme de fraction.",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^5$.",
       "corrige": [
-        "Même base : on **soustrait** les exposants, $\\dfrac{a^m}{a^n} = a^{\\,m-n}$.",
-        "$\\dfrac{7^{3}}{7^{5}} = 7^{\\,3-5} = 7^{-2}$. On divise par plus grand, donc l'exposant devient négatif : c'est normal.",
-        "On repasse à l'inverse : $7^{-2} = \\dfrac{1}{7^{2}} = \\dfrac{1}{49}$."
+        "$2^5 = 2 \\times 2 \\times 2 \\times 2 \\times 2 = 32$."
       ],
-      "reponse": "$\\dfrac{7^{3}}{7^{5}} = 7^{-2} = \\dfrac{1}{49}$."
+      "reponse": "$32$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "notation-scientifique",
-      "enonce": "Donne la notation scientifique de $58\\,000$, puis celle de $0{,}0032$.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 3^3$.",
       "corrige": [
-        "La notation scientifique s'écrit $a \\times 10^{\\,n}$ avec $1 \\leqslant a < 10$ : un seul chiffre non nul avant la virgule.",
-        "Pour $58\\,000$ : on place la virgule après le $5$, soit $a = 5{,}8$. La virgule a reculé de **4 rangs** et le nombre est grand, donc $n = 4$ : $58\\,000 = 5{,}8 \\times 10^{4}$.",
-        "Pour $0{,}0032$ : on place la virgule après le $3$, soit $a = 3{,}2$. La virgule a avancé de **3 rangs** (on compte les rangs, pas les zéros) et le nombre est petit, donc $n = -3$ : $0{,}0032 = 3{,}2 \\times 10^{-3}$.",
-        "Vérification : $5{,}8 \\times 10^{4} = 58\\,000$ et $3{,}2 \\times 10^{-3} = 0{,}0032$."
+        "$3^3 = 3 \\times 3 \\times 3 = 27$."
       ],
-      "reponse": "$58\\,000 = 5{,}8 \\times 10^{4}$ ; $0{,}0032 = 3{,}2 \\times 10^{-3}$."
+      "reponse": "$27$"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "reduction-puissances",
-      "enonce": "Réduis $\\dfrac{3^{7} \\times 3^{-2}}{3^{6}}$ à une seule puissance de $3$, puis donne sa valeur.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 3^4$.",
       "corrige": [
-        "On traite d'abord le **produit du numérateur** : même base, on additionne les exposants, $3^{7} \\times 3^{-2} = 3^{\\,7+(-2)} = 3^{5}$.",
-        "L'expression devient $\\dfrac{3^{5}}{3^{6}}$ : même base, on soustrait, $3^{\\,5-6} = 3^{-1}$.",
-        "L'exposant final est négatif : on repasse à l'inverse, $3^{-1} = \\dfrac{1}{3}$."
+        "$3^4 = 3 \\times 3 \\times 3 \\times 3 = 81$."
       ],
-      "reponse": "$\\dfrac{3^{7} \\times 3^{-2}}{3^{6}} = 3^{-1} = \\dfrac{1}{3}$."
+      "reponse": "$81$"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "problemes-notation-scientifique",
-      "enonce": "La lumière se déplace à $3 \\times 10^{8}$ m/s. La distance entre la Terre et le Soleil est d'environ $1{,}5 \\times 10^{11}$ m. Combien de temps met la lumière du Soleil pour nous parvenir ? Donne le résultat en notation scientifique, puis en secondes.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 5^3$.",
       "corrige": [
-        "Le temps est la distance divisée par la vitesse : $t = \\dfrac{d}{v} = \\dfrac{1{,}5 \\times 10^{11}}{3 \\times 10^{8}}$.",
-        "On sépare les mantisses et les puissances de 10 : $t = \\dfrac{1{,}5}{3} \\times 10^{\\,11-8} = 0{,}5 \\times 10^{3}$.",
-        "Il faut **renormaliser** : $0{,}5$ n'est pas entre $1$ et $10$. On écrit $0{,}5 = 5 \\times 10^{-1}$, donc $t = 5 \\times 10^{-1} \\times 10^{3} = 5 \\times 10^{2}$ s.",
-        "Écriture décimale : $5 \\times 10^{2} = 500$ s, soit un peu plus de $8$ minutes. L'ordre de grandeur est plausible."
+        "$5^3 = 5 \\times 5 \\times 5 = 125$."
       ],
-      "reponse": "$t = 5 \\times 10^{2}$ s $= 500$ s (environ $8$ min $20$ s)."
+      "reponse": "$125$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "problemes-notation-scientifique",
-      "enonce": "Un ordinateur effectue $4 \\times 10^{9}$ opérations par seconde. Combien d'opérations réalise-t-il en $6 \\times 10^{3}$ secondes ? Donne le résultat en notation scientifique.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 4^3$.",
       "corrige": [
-        "Le nombre d'opérations est le produit : $N = (4 \\times 10^{9}) \\times (6 \\times 10^{3})$.",
-        "On sépare mantisses et puissances de 10 : $N = (4 \\times 6) \\times (10^{9} \\times 10^{3}) = 24 \\times 10^{\\,9+3} = 24 \\times 10^{12}$. On **multiplie** les mantisses, on n'additionne pas.",
-        "Il faut **renormaliser** : $24$ n'est pas entre $1$ et $10$. On écrit $24 = 2{,}4 \\times 10^{1}$, donc $N = 2{,}4 \\times 10^{1} \\times 10^{12} = 2{,}4 \\times 10^{13}$.",
-        "Vérification de l'ordre de grandeur : $2{,}4 \\times 10^{13}$, soit $24$ mille milliards d'opérations — cohérent pour près de deux heures de calcul."
+        "$4^3 = 4 \\times 4 \\times 4 = 64$."
       ],
-      "reponse": "$N = 2{,}4 \\times 10^{13}$ opérations."
+      "reponse": "$64$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "notation-scientifique",
-      "enonce": "Le diamètre d'un globule rouge est d'environ $0{,}0000075$ m. Écris cette mesure en notation scientifique. Écris aussi le nombre $6\\,200\\,000$ en notation scientifique.",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^6$.",
       "corrige": [
-        "Rappel : la notation scientifique s'écrit $a \\times 10^{\\,n}$ avec $1 \\leqslant a < 10$, c'est-à-dire un seul chiffre non nul avant la virgule.",
-        "Pour $0{,}0000075$ : on place la virgule juste après le premier chiffre non nul, soit $a = 7{,}5$. La virgule a avancé de **6 rangs** (on compte les rangs, pas les zéros) et le nombre est petit, donc $n = -6$ : $0{,}0000075 = 7{,}5 \\times 10^{-6}$.",
-        "Pour $6\\,200\\,000$ : on place la virgule juste après le $6$, soit $a = 6{,}2$. La virgule a reculé de **6 rangs** et le nombre est grand, donc $n = 6$ : $6\\,200\\,000 = 6{,}2 \\times 10^{6}$."
+        "$2^6 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 64$."
       ],
-      "reponse": "$0{,}0000075 = 7{,}5 \\times 10^{-6}$ ; $6\\,200\\,000 = 6{,}2 \\times 10^{6}$."
+      "reponse": "$64$"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "notation-scientifique",
-      "enonce": "Écris le quotient $\\dfrac{2 \\times 10^{-4}}{8 \\times 10^{3}}$ en notation scientifique.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 6^2$.",
       "corrige": [
-        "On sépare les mantisses et les puissances de 10 : $\\dfrac{2 \\times 10^{-4}}{8 \\times 10^{3}} = \\dfrac{2}{8} \\times 10^{\\,-4-3} = 0{,}25 \\times 10^{-7}$. Attention au signe des exposants : $-4 - 3 = -7$.",
-        "Il faut **renormaliser** : $0{,}25$ n'est pas compris entre $1$ et $10$. On écrit $0{,}25 = 2{,}5 \\times 10^{-1}$, donc $0{,}25 \\times 10^{-7} = 2{,}5 \\times 10^{-1} \\times 10^{-7} = 2{,}5 \\times 10^{-8}$.",
-        "Contrôle de l'ordre de grandeur : $2{,}5 \\times 10^{-8}$ est un très petit nombre positif, ce qui est cohérent puisqu'on divise un petit numérateur par un nombre bien plus grand."
+        "$6^2 = 6 \\times 6 = 36$."
       ],
-      "reponse": "$\\dfrac{2 \\times 10^{-4}}{8 \\times 10^{3}} = 2{,}5 \\times 10^{-8}$."
+      "reponse": "$36$"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "problemes-notation-scientifique",
-      "enonce": "La masse de la Terre est d'environ $6 \\times 10^{24}$ kg et celle de la Lune d'environ $7{,}4 \\times 10^{22}$ kg. Combien de fois la Terre est-elle plus lourde que la Lune ? Donne une valeur approchée du résultat, puis son ordre de grandeur.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 10^4$.",
       "corrige": [
-        "« Combien de fois plus lourde » se traduit par un **quotient** : $\\dfrac{m_{\\text{Terre}}}{m_{\\text{Lune}}} = \\dfrac{6 \\times 10^{24}}{7{,}4 \\times 10^{22}}$.",
-        "On sépare mantisses et puissances de 10 : $\\dfrac{6}{7{,}4} \\times 10^{\\,24-22} = 0{,}81 \\times 10^{2}$, car $6 \\div 7{,}4 \\approx 0{,}81$.",
-        "On **renormalise** : $0{,}81 \\times 10^{2} = 8{,}1 \\times 10^{-1} \\times 10^{2} = 8{,}1 \\times 10^{1} = 81$. La Terre est donc environ **81 fois** plus lourde que la Lune.",
-        "Ordre de grandeur : le résultat est proche de $10^{2}$, soit quelques dizaines. Contrôle de bon sens : les exposants $24$ et $22$ diffèrent de $2$, donc le rapport est de l'ordre de $10^{2}$ — cohérent."
+        "$10^4 = 10 \\times 10 \\times 10 \\times 10 = 10000$."
       ],
-      "reponse": "$\\dfrac{6 \\times 10^{24}}{7{,}4 \\times 10^{22}} \\approx 8{,}1 \\times 10^{1} = 81$ : la Terre est environ $81$ fois plus lourde que la Lune (ordre de grandeur $10^{2}$)."
+      "reponse": "$10000$"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "problemes-notation-scientifique",
-      "enonce": "**Optique et télécommunications.** Un laboratoire étudie une onde de lumière rouge de longueur d'onde $\\lambda = 6 \\times 10^{-7}$ m. La lumière se propage dans le vide à la vitesse $c = 3 \\times 10^{8}$ m/s.\n\n1. Exprime $\\lambda$ en nanomètres, sachant que $1$ nm $= 10^{-9}$ m.\n2. En une seconde, la lumière parcourt $c$ mètres. Combien de longueurs d'onde $\\lambda$ tiennent dans cette distance ? Donne le résultat en notation scientifique. (Ce nombre est la fréquence de l'onde, exprimée en hertz.)\n3. Ce laboratoire communique avec un satellite géostationnaire situé à une altitude de $3{,}6 \\times 10^{7}$ m. Quelle durée met un signal lumineux pour monter du sol jusqu'au satellite ? Donne le résultat en secondes.\n4. Cette durée est-elle négligeable devant $1$ seconde ? Justifie à l'aide de l'ordre de grandeur.",
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 7^2$.",
       "corrige": [
-        "1. Convertir en nanomètres revient à diviser par $10^{-9}$ : $\\lambda = \\dfrac{6 \\times 10^{-7}}{10^{-9}} = 6 \\times 10^{\\,-7-(-9)} = 6 \\times 10^{2} = 600$. Donc $\\lambda = 600$ nm. (Soustraire $-9$ revient à ajouter $9$ : $-7 + 9 = 2$.)",
-        "2. Le nombre de longueurs d'onde est $\\dfrac{c}{\\lambda} = \\dfrac{3 \\times 10^{8}}{6 \\times 10^{-7}} = \\dfrac{3}{6} \\times 10^{\\,8-(-7)} = 0{,}5 \\times 10^{15}$. On **renormalise** : $0{,}5 \\times 10^{15} = 5 \\times 10^{-1} \\times 10^{15} = 5 \\times 10^{14}$. La fréquence vaut donc $5 \\times 10^{14}$ Hz.",
-        "3. La durée est $t = \\dfrac{d}{c} = \\dfrac{3{,}6 \\times 10^{7}}{3 \\times 10^{8}} = \\dfrac{3{,}6}{3} \\times 10^{\\,7-8} = 1{,}2 \\times 10^{-1}$ s, soit $0{,}12$ s.",
-        "4. On compare $t = 1{,}2 \\times 10^{-1}$ s à $1$ s $= 1 \\times 10^{0}$ s. Les exposants ne diffèrent que de $1$ : la durée est seulement environ dix fois plus petite qu'une seconde. Elle **n'est pas négligeable** devant $1$ s — elle en représente à peu près un dixième."
+        "$7^2 = 7 \\times 7 = 49$."
       ],
-      "reponse": "1. $\\lambda = 600$ nm. 2. Fréquence $= 5 \\times 10^{14}$ Hz. 3. $t = 1{,}2 \\times 10^{-1}$ s $= 0{,}12$ s. 4. Non négligeable : un seul ordre de grandeur sous $1$ s (environ un dixième de seconde)."
+      "reponse": "$49$"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^4$.",
+      "corrige": [
+        "$2^4 = 2 \\times 2 \\times 2 \\times 2 = 16$."
+      ],
+      "reponse": "$16$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 3^5$.",
+      "corrige": [
+        "$3^5 = 3 \\times 3 \\times 3 \\times 3 \\times 3 = 243$."
+      ],
+      "reponse": "$243$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 5^2$.",
+      "corrige": [
+        "$5^2 = 5 \\times 5 = 25$."
+      ],
+      "reponse": "$25$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 9^2$.",
+      "corrige": [
+        "$9^2 = 9 \\times 9 = 81$."
+      ],
+      "reponse": "$81$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 2^7$.",
+      "corrige": [
+        "$2^7 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 128$."
+      ],
+      "reponse": "$128$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Calculer $ 4^4$.",
+      "corrige": [
+        "$4^4 = 4 \\times 4 \\times 4 \\times 4 = 256$."
+      ],
+      "reponse": "$256$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 2^3 \\times 2^4$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $2^3 \\times 2^4 = 2^{3+4} = 2^{7}$."
+      ],
+      "reponse": "$2^{7}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 3^2 \\times 3^5$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $3^2 \\times 3^5 = 3^{2+5} = 3^{7}$."
+      ],
+      "reponse": "$3^{7}$"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 5^2 \\times 5^3$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $5^2 \\times 5^3 = 5^{2+3} = 5^{5}$."
+      ],
+      "reponse": "$5^{5}$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 2^7 \\times 2^2$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $2^7 \\times 2^2 = 2^{7+2} = 2^{9}$."
+      ],
+      "reponse": "$2^{9}$"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 10^3 \\times 10^5$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $10^3 \\times 10^5 = 10^{3+5} = 10^{8}$."
+      ],
+      "reponse": "$10^{8}$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 4^2 \\times 4^3$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $4^2 \\times 4^3 = 4^{2+3} = 4^{5}$."
+      ],
+      "reponse": "$4^{5}$"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $ 7^2 \\times 7^3$.",
+      "corrige": [
+        "Même base : on additionne les exposants. $7^2 \\times 7^3 = 7^{2+3} = 7^{5}$."
+      ],
+      "reponse": "$7^{5}$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{2^7}{2^3}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{2^7}{2^3} = 2^{7-3} = 2^{4}$."
+      ],
+      "reponse": "$2^{4}$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{3^6}{3^2}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{3^6}{3^2} = 3^{6-2} = 3^{4}$."
+      ],
+      "reponse": "$3^{4}$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{5^5}{5^2}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{5^5}{5^2} = 5^{5-2} = 5^{3}$."
+      ],
+      "reponse": "$5^{3}$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{10^8}{10^3}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{10^8}{10^3} = 10^{8-3} = 10^{5}$."
+      ],
+      "reponse": "$10^{5}$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{2^9}{2^4}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{2^9}{2^4} = 2^{9-4} = 2^{5}$."
+      ],
+      "reponse": "$2^{5}$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\dfrac{7^4}{7^1}$.",
+      "corrige": [
+        "Même base : on soustrait les exposants. $\\dfrac{7^4}{7^1} = 7^{4-1} = 7^{3}$."
+      ],
+      "reponse": "$7^{3}$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(2^3\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(2^3\\right)^2 = 2^{3\\times2} = 2^{6}$."
+      ],
+      "reponse": "$2^{6}$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(3^2\\right)^3$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(3^2\\right)^3 = 3^{2\\times3} = 3^{6}$."
+      ],
+      "reponse": "$3^{6}$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(5^2\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(5^2\\right)^2 = 5^{2\\times2} = 5^{4}$."
+      ],
+      "reponse": "$5^{4}$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(10^4\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(10^4\\right)^2 = 10^{4\\times2} = 10^{8}$."
+      ],
+      "reponse": "$10^{8}$"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "puissances",
+      "enonce": "Écrire sous la forme d'une seule puissance : $\\left(2^5\\right)^2$.",
+      "corrige": [
+        "Puissance d'une puissance : on multiplie les exposants. $\\left(2^5\\right)^2 = 2^{5\\times2} = 2^{10}$."
+      ],
+      "reponse": "$2^{10}$"
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 2^{-3}$.",
+      "corrige": [
+        "$ 2^{-3} = \\dfrac{1}{2^3} = \\dfrac{1}{8}$."
+      ],
+      "reponse": "$\\dfrac{1}{8}$"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 5^{-2}$.",
+      "corrige": [
+        "$ 5^{-2} = \\dfrac{1}{5^2} = \\dfrac{1}{25}$."
+      ],
+      "reponse": "$\\dfrac{1}{25}$"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 10^{-3}$.",
+      "corrige": [
+        "$ 10^{-3} = \\dfrac{1}{10^3} = \\dfrac{1}{1000}$."
+      ],
+      "reponse": "$\\dfrac{1}{1000}$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 3^{-2}$.",
+      "corrige": [
+        "$ 3^{-2} = \\dfrac{1}{3^2} = \\dfrac{1}{9}$."
+      ],
+      "reponse": "$\\dfrac{1}{9}$"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire sous forme de fraction : $ 4^{-2}$.",
+      "corrige": [
+        "$ 4^{-2} = \\dfrac{1}{4^2} = \\dfrac{1}{16}$."
+      ],
+      "reponse": "$\\dfrac{1}{16}$"
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 3200 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $3,2 \\times 10^{3}$."
+      ],
+      "reponse": "$3,2 \\times 10^{3}$"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 45000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $4,5 \\times 10^{4}$."
+      ],
+      "reponse": "$4,5 \\times 10^{4}$"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 120000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $1,2 \\times 10^{5}$."
+      ],
+      "reponse": "$1,2 \\times 10^{5}$"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 6500 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $6,5 \\times 10^{3}$."
+      ],
+      "reponse": "$6,5 \\times 10^{3}$"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 78000000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $7,8 \\times 10^{7}$."
+      ],
+      "reponse": "$7,8 \\times 10^{7}$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 920 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $9,2 \\times 10^{2}$."
+      ],
+      "reponse": "$9,2 \\times 10^{2}$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "puissances",
+      "enonce": "Écrire 150000 en notation scientifique.",
+      "corrige": [
+        "On place la virgule après le premier chiffre : $1,5 \\times 10^{5}$."
+      ],
+      "reponse": "$1,5 \\times 10^{5}$"
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Une bactérie double toutes les heures. Partant de 1, combien après 10 h ? (donner $2^{10}$)",
+      "corrige": [
+        "$2^{10} = 1024$."
+      ],
+      "reponse": "$1024$"
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Calculer $ 10^6$ (un million).",
+      "corrige": [
+        "$10^6 = 1\\,000\\,000$."
+      ],
+      "reponse": "$1000000$"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Simplifier $\\dfrac{2^{10}}{2^{7}}$.",
+      "corrige": [
+        "$= 2^{10-7} = 2^3 = 8$."
+      ],
+      "reponse": "$8$"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "puissances",
+      "enonce": "Calculer $(3^2)^2$.",
+      "corrige": [
+        "$= 3^{2\\times 2} = 3^4 = 81$."
+      ],
+      "reponse": "$81$"
     }
   ]
 }

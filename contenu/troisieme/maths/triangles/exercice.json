@@ -13,133 +13,575 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "theoreme-thales",
-      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{M}$ est un point de $[\\mathrm{AB}]$ et $\\mathrm{N}$ un point de $[\\mathrm{AC}]$ tels que $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 4$ cm, $\\mathrm{AB} = 10$ cm et $\\mathrm{AC} = 15$ cm. Calculer $\\mathrm{AN}$.",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ avec $\\mathrm{AB} = 3$ cm et $\\mathrm{AC} = 4$ cm. Calculer $\\mathrm{BC}$.",
       "corrige": [
-        "On est dans la configuration des triangles emboités : deux droites sécantes en $\\mathrm{A}$ coupées par les parallèles $(\\mathrm{MN})$ et $(\\mathrm{BC})$. Le théorème de Thalès s'applique (le parallélisme est donné).",
-        "On écrit la chaine des rapports depuis le sommet $\\mathrm{A}$, avec les lettres : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{\\mathrm{MN}}{\\mathrm{BC}}$.",
-        "On garde les deux rapports qui contiennent l'inconnue $\\mathrm{AN}$ et trois longueurs connues : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$, soit $\\dfrac{4}{10} = \\dfrac{\\mathrm{AN}}{15}$.",
-        "Produit en croix : $\\mathrm{AN} = \\dfrac{4 \\times 15}{10} = \\dfrac{60}{10} = 6$ cm."
+        "Le triangle est rectangle en $\\mathrm{A}$ : d'après le théorème de Pythagore, $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
+        "$\\mathrm{BC}^2 = 3^2 + 4^2 = 9 + 16 = 25$.",
+        "Donc $\\mathrm{BC} = \\sqrt{25}$ $= 5$ cm."
       ],
-      "reponse": "$\\mathrm{AN} = 6$ cm."
+      "reponse": "$\\mathrm{BC} = 5$ cm"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "calculer-longueur",
-      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$. On sait que $\\widehat{\\mathrm{B}} = 40°$ et que l'hypoténuse $\\mathrm{BC} = 9$ cm. Calculer la longueur $\\mathrm{AC}$, arrondie au dixième de cm.",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ avec $\\mathrm{AB} = 6$ cm et $\\mathrm{AC} = 8$ cm. Calculer $\\mathrm{BC}$.",
       "corrige": [
-        "On repère l'angle droit en $\\mathrm{A}$, puis l'angle de travail $\\widehat{\\mathrm{B}}$. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est le côté opposé (il lui fait face) et $[\\mathrm{BC}]$ l'hypoténuse.",
-        "Les deux côtés en jeu sont l'opposé et l'hypoténuse : c'est le sinus (SOH). $\\sin \\widehat{\\mathrm{B}} = \\dfrac{\\text{opposé}}{\\text{hypoténuse}} = \\dfrac{\\mathrm{AC}}{\\mathrm{BC}}$.",
-        "On remplace : $\\sin 40° = \\dfrac{\\mathrm{AC}}{9}$. L'inconnue est au numérateur, donc on multiplie : $\\mathrm{AC} = 9 \\times \\sin 40°$.",
-        "À la calculatrice en mode DEG : $\\mathrm{AC} = 9 \\times \\sin 40° \\approx 5{,}8$ cm."
+        "Le triangle est rectangle en $\\mathrm{A}$ : d'après le théorème de Pythagore, $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
+        "$\\mathrm{BC}^2 = 6^2 + 8^2 = 36 + 64 = 100$.",
+        "Donc $\\mathrm{BC} = \\sqrt{100}$ $= 10$ cm."
       ],
-      "reponse": "$\\mathrm{AC} \\approx 5{,}8$ cm."
+      "reponse": "$\\mathrm{BC} = 10$ cm"
     },
     {
       "id": 3,
       "difficulte": "intermediaire",
-      "notion": "theoreme-thales",
-      "enonce": "Les droites $(\\mathrm{BE})$ et $(\\mathrm{CD})$ se coupent en $\\mathrm{O}$, avec $\\mathrm{B}$, $\\mathrm{O}$, $\\mathrm{E}$ alignés et $\\mathrm{C}$, $\\mathrm{O}$, $\\mathrm{D}$ alignés, les points étant de part et d'autre de $\\mathrm{O}$. On sait que $(\\mathrm{BC}) \\parallel (\\mathrm{DE})$, $\\mathrm{OB} = 3$ cm, $\\mathrm{OE} = 4{,}5$ cm et $\\mathrm{OC} = 6$ cm. Calculer $\\mathrm{OD}$.",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ avec $\\mathrm{AB} = 5$ cm et $\\mathrm{AC} = 12$ cm. Calculer $\\mathrm{BC}$.",
       "corrige": [
-        "C'est la configuration dite du papillon : deux sécantes en $\\mathrm{O}$, les points de part et d'autre, et les deux parallèles $(\\mathrm{BC})$ et $(\\mathrm{DE})$. Le théorème de Thalès s'applique.",
-        "Depuis le sommet commun $\\mathrm{O}$ : $\\dfrac{\\mathrm{OB}}{\\mathrm{OE}} = \\dfrac{\\mathrm{OC}}{\\mathrm{OD}} = \\dfrac{\\mathrm{BC}}{\\mathrm{DE}}$.",
-        "On garde les deux rapports qui contiennent l'inconnue $\\mathrm{OD}$ : $\\dfrac{\\mathrm{OB}}{\\mathrm{OE}} = \\dfrac{\\mathrm{OC}}{\\mathrm{OD}}$, soit $\\dfrac{3}{4{,}5} = \\dfrac{6}{\\mathrm{OD}}$.",
-        "Produit en croix : $\\mathrm{OD} = \\dfrac{6 \\times 4{,}5}{3} = \\dfrac{27}{3} = 9$ cm."
+        "Le triangle est rectangle en $\\mathrm{A}$ : d'après le théorème de Pythagore, $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
+        "$\\mathrm{BC}^2 = 5^2 + 12^2 = 25 + 144 = 169$.",
+        "Donc $\\mathrm{BC} = \\sqrt{169}$ $= 13$ cm."
       ],
-      "reponse": "$\\mathrm{OD} = 9$ cm."
+      "reponse": "$\\mathrm{BC} = 13$ cm"
     },
     {
       "id": 4,
       "difficulte": "intermediaire",
-      "notion": "calculer-angle",
-      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 7$ cm et $\\mathrm{AC} = 4$ cm. Calculer la mesure de l'angle $\\widehat{\\mathrm{B}}$, arrondie au degré.",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ avec $\\mathrm{AB} = 8$ cm et $\\mathrm{AC} = 15$ cm. Calculer $\\mathrm{BC}$.",
       "corrige": [
-        "On connait deux longueurs et on cherche un angle : il faudra une fonction inverse. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est l'opposé et $[\\mathrm{AB}]$ l'adjacent.",
-        "L'énoncé ne parle pas de l'hypoténuse $[\\mathrm{BC}]$ : les deux côtés en jeu sont l'opposé et l'adjacent, c'est donc la tangente (TOA). $\\tan \\widehat{\\mathrm{B}} = \\dfrac{\\text{opposé}}{\\text{adjacent}} = \\dfrac{\\mathrm{AC}}{\\mathrm{AB}} = \\dfrac{4}{7}$.",
-        "On remonte à l'angle avec la fonction inverse (SHIFT tan sur la calculatrice) : $\\widehat{\\mathrm{B}} = \\tan^{-1}\\!\\left(\\dfrac{4}{7}\\right)$.",
-        "À la calculatrice en mode DEG : $\\widehat{\\mathrm{B}} \\approx 30°$."
+        "Le triangle est rectangle en $\\mathrm{A}$ : d'après le théorème de Pythagore, $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
+        "$\\mathrm{BC}^2 = 8^2 + 15^2 = 64 + 225 = 289$.",
+        "Donc $\\mathrm{BC} = \\sqrt{289}$ $= 17$ cm."
       ],
-      "reponse": "$\\widehat{\\mathrm{B}} \\approx 30°$."
+      "reponse": "$\\mathrm{BC} = 17$ cm"
     },
     {
       "id": 5,
       "difficulte": "approfondissement",
-      "notion": "reciproque-thales",
-      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{M}$ est un point de $[\\mathrm{AB}]$ et $\\mathrm{N}$ un point de $[\\mathrm{AC}]$. On donne $\\mathrm{AM} = 4$ cm, $\\mathrm{AB} = 6$ cm, $\\mathrm{AN} = 6$ cm et $\\mathrm{AC} = 9$ cm. 1. Démontrer que $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. 2. En déduire $\\mathrm{MN}$, sachant que $\\mathrm{BC} = 7{,}5$ cm.",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ avec $\\mathrm{AB} = 2$ cm et $\\mathrm{AC} = 3$ cm. Calculer $\\mathrm{BC}$.",
       "corrige": [
-        "Question 1. On ne sait pas encore que les droites sont parallèles : on ne peut donc pas partir d'une égalité de rapports. On calcule chaque rapport séparément, puis on compare (méthode de la réciproque de Thalès).",
-        "D'un côté $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{4}{6} = \\dfrac{2}{3}$ ; de l'autre $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{6}{9} = \\dfrac{2}{3}$.",
-        "Les deux rapports sont égaux, et les points sont dans le même ordre sur les deux droites ($\\mathrm{A}$, $\\mathrm{M}$, $\\mathrm{B}$ et $\\mathrm{A}$, $\\mathrm{N}$, $\\mathrm{C}$). D'après la réciproque de Thalès, $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$.",
-        "Question 2. Le parallélisme est maintenant établi : on a le droit d'utiliser le rapport $\\dfrac{\\mathrm{MN}}{\\mathrm{BC}}$ (qui était interdit à la question 1). Théorème de Thalès : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{MN}}{\\mathrm{BC}}$, soit $\\dfrac{2}{3} = \\dfrac{\\mathrm{MN}}{7{,}5}$.",
-        "Produit en croix : $\\mathrm{MN} = \\dfrac{2 \\times 7{,}5}{3} = \\dfrac{15}{3} = 5$ cm."
+        "Le triangle est rectangle en $\\mathrm{A}$ : d'après le théorème de Pythagore, $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
+        "$\\mathrm{BC}^2 = 2^2 + 3^2 = 4 + 9 = 13$.",
+        "Donc $\\mathrm{BC} = \\sqrt{13}$ \\approx 3,61$ cm."
       ],
-      "reponse": "$(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, et $\\mathrm{MN} = 5$ cm."
+      "reponse": "$\\mathrm{BC} = \\sqrt{13} = \\sqrt{13} \\approx 3,61$ cm"
     },
     {
       "id": 6,
       "difficulte": "approfondissement",
-      "notion": "trigonometrie",
-      "enonce": "Une rampe d'accès est modélisée par le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$ : $[\\mathrm{AB}]$ est le sol horizontal, $[\\mathrm{AC}]$ la hauteur verticale et $[\\mathrm{BC}]$ la rampe elle-même. On mesure $\\mathrm{AC} = 2$ m et $\\mathrm{AB} = 8$ m. 1. Calculer l'angle $\\widehat{\\mathrm{B}}$ que la rampe fait avec le sol, arrondi au degré. 2. Calculer la longueur $\\mathrm{BC}$ de la rampe, arrondie au dixième de mètre.",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ avec $\\mathrm{AB} = 4$ cm et $\\mathrm{AC} = 7$ cm. Calculer $\\mathrm{BC}$.",
       "corrige": [
-        "Question 1. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est l'opposé et $[\\mathrm{AB}]$ l'adjacent ; l'hypoténuse $[\\mathrm{BC}]$ n'est pas donnée.",
-        "On connait deux longueurs et on cherche l'angle : opposé et adjacent, donc tangente, puis fonction inverse. $\\tan \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AC}}{\\mathrm{AB}} = \\dfrac{2}{8} = 0{,}25$, donc $\\widehat{\\mathrm{B}} = \\tan^{-1}(0{,}25) \\approx 14°$.",
-        "Question 2. On cherche maintenant l'hypoténuse $\\mathrm{BC}$. Avec l'adjacent $\\mathrm{AB}$ (connu) et l'hypoténuse : c'est le cosinus. $\\cos \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AB}}{\\mathrm{BC}}$, donc l'inconnue est au dénominateur : $\\mathrm{BC} = \\dfrac{\\mathrm{AB}}{\\cos \\widehat{\\mathrm{B}}} = \\dfrac{8}{\\cos \\widehat{\\mathrm{B}}}$.",
-        "En gardant la valeur non arrondie de $\\widehat{\\mathrm{B}}$ en mémoire (pour ne pas arrondir trop tôt) : $\\mathrm{BC} \\approx 8{,}2$ m. Contrôle : l'hypoténuse est bien le plus long des trois côtés ($8{,}2 > 8$)."
+        "Le triangle est rectangle en $\\mathrm{A}$ : d'après le théorème de Pythagore, $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
+        "$\\mathrm{BC}^2 = 4^2 + 7^2 = 16 + 49 = 65$.",
+        "Donc $\\mathrm{BC} = \\sqrt{65}$ \\approx 8,06$ cm."
       ],
-      "reponse": "$\\widehat{\\mathrm{B}} \\approx 14°$ et $\\mathrm{BC} \\approx 8{,}2$ m."
+      "reponse": "$\\mathrm{BC} = \\sqrt{65} = \\sqrt{65} \\approx 8,06$ cm"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "trigonometrie",
-      "enonce": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$. On donne $\\widehat{\\mathrm{B}} = 55°$ et l'hypoténuse $\\mathrm{BC} = 12$ cm. Calculer la longueur $\\mathrm{AB}$, arrondie au dixième de cm.",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{D}$. $\\mathrm{EF} = 5$ cm (hypoténuse) et $\\mathrm{DE} = 3$ cm. Calculer $\\mathrm{DF}$.",
       "corrige": [
-        "On repère l'angle droit en $\\mathrm{A}$, puis l'angle de travail $\\widehat{\\mathrm{B}}$. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AB}]$ est le côté adjacent (il touche l'angle sans être l'hypoténuse) et $[\\mathrm{BC}]$ l'hypoténuse.",
-        "Les deux côtés en jeu sont l'adjacent et l'hypoténuse : c'est le cosinus (CAH). $\\cos \\widehat{\\mathrm{B}} = \\dfrac{\\text{adjacent}}{\\text{hypoténuse}} = \\dfrac{\\mathrm{AB}}{\\mathrm{BC}}$.",
-        "On remplace : $\\cos 55° = \\dfrac{\\mathrm{AB}}{12}$. L'inconnue est au numérateur, donc on multiplie : $\\mathrm{AB} = 12 \\times \\cos 55°$.",
-        "À la calculatrice en mode DEG : $\\mathrm{AB} = 12 \\times \\cos 55° \\approx 6{,}9$ cm. Contrôle : l'adjacent $6{,}9$ est bien plus court que l'hypoténuse $12$."
+        "D'après Pythagore, $\\mathrm{EF}^2 = \\mathrm{DE}^2 + \\mathrm{DF}^2$.",
+        "$\\mathrm{DF}^2 = 5^2 - 3^2 = 25 - 9 = 16$.",
+        "Donc $\\mathrm{DF} = \\sqrt{16}$ $= 4$ cm."
       ],
-      "reponse": "$\\mathrm{AB} \\approx 6{,}9$ cm."
+      "reponse": "$\\mathrm{DF} = 4$ cm"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "trigonometrie",
-      "enonce": "Une échelle de $4$ m est appuyée contre un mur vertical ; elle fait un angle de $70°$ avec le sol horizontal. On modélise la situation par le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$ : $\\mathrm{A}$ est le pied du mur, $[\\mathrm{AB}]$ le sol, $[\\mathrm{AC}]$ le mur et $[\\mathrm{BC}] = 4$ m l'échelle, avec $\\widehat{\\mathrm{B}} = 70°$. 1. À quelle hauteur $\\mathrm{AC}$ l'échelle touche-t-elle le mur, au dixième de mètre ? 2. À quelle distance $\\mathrm{AB}$ du mur se trouve le pied de l'échelle, au dixième de mètre ?",
+      "difficulte": "application",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{D}$. $\\mathrm{EF} = 13$ cm (hypoténuse) et $\\mathrm{DE} = 5$ cm. Calculer $\\mathrm{DF}$.",
       "corrige": [
-        "Question 1. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est le côté opposé (il lui fait face) et $[\\mathrm{BC}]$ l'hypoténuse. Opposé et hypoténuse : c'est le sinus (SOH).",
-        "$\\sin \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AC}}{\\mathrm{BC}}$, soit $\\sin 70° = \\dfrac{\\mathrm{AC}}{4}$. L'inconnue est au numérateur : $\\mathrm{AC} = 4 \\times \\sin 70° \\approx 3{,}8$ m.",
-        "Question 2. On cherche $[\\mathrm{AB}]$, l'adjacent à $\\widehat{\\mathrm{B}}$, avec l'hypoténuse $[\\mathrm{BC}]$ : c'est le cosinus (CAH). $\\cos \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AB}}{\\mathrm{BC}}$, soit $\\cos 70° = \\dfrac{\\mathrm{AB}}{4}$.",
-        "L'inconnue est au numérateur : $\\mathrm{AB} = 4 \\times \\cos 70° \\approx 1{,}4$ m. Contrôle : les deux côtés $3{,}8$ et $1{,}4$ sont bien plus courts que l'échelle $4$ m."
+        "D'après Pythagore, $\\mathrm{EF}^2 = \\mathrm{DE}^2 + \\mathrm{DF}^2$.",
+        "$\\mathrm{DF}^2 = 13^2 - 5^2 = 169 - 25 = 144$.",
+        "Donc $\\mathrm{DF} = \\sqrt{144}$ $= 12$ cm."
       ],
-      "reponse": "$\\mathrm{AC} \\approx 3{,}8$ m et $\\mathrm{AB} \\approx 1{,}4$ m."
+      "reponse": "$\\mathrm{DF} = 12$ cm"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "contraposee-thales",
-      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{M}$ est un point de $[\\mathrm{AB}]$ et $\\mathrm{N}$ un point de $[\\mathrm{AC}]$, placés dans l'ordre $\\mathrm{A}$, $\\mathrm{M}$, $\\mathrm{B}$ et $\\mathrm{A}$, $\\mathrm{N}$, $\\mathrm{C}$. On donne $\\mathrm{AM} = 3$ cm, $\\mathrm{AB} = 5$ cm, $\\mathrm{AN} = 4$ cm et $\\mathrm{AC} = 7$ cm. Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ? Justifier.",
+      "difficulte": "intermediaire",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{D}$. $\\mathrm{EF} = 10$ cm (hypoténuse) et $\\mathrm{DE} = 6$ cm. Calculer $\\mathrm{DF}$.",
       "corrige": [
-        "On veut trancher le parallélisme à partir des longueurs : c'est le domaine de la réciproque et de la contraposée de Thalès. On n'a donc pas le droit de supposer l'égalité des rapports ; on calcule chacun de son côté, puis on compare.",
-        "D'un côté $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{3}{5}$ ; de l'autre $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{4}{7}$.",
-        "Pour comparer sans se fier à l'œil, on réduit au même dénominateur ($5 \\times 7 = 35$) : $\\dfrac{3}{5} = \\dfrac{21}{35}$ et $\\dfrac{4}{7} = \\dfrac{20}{35}$.",
-        "Les deux rapports sont différents ($\\dfrac{21}{35} \\neq \\dfrac{20}{35}$). D'après la contraposée du théorème de Thalès, les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ ne sont pas parallèles."
+        "D'après Pythagore, $\\mathrm{EF}^2 = \\mathrm{DE}^2 + \\mathrm{DF}^2$.",
+        "$\\mathrm{DF}^2 = 10^2 - 6^2 = 100 - 36 = 64$.",
+        "Donc $\\mathrm{DF} = \\sqrt{64}$ $= 8$ cm."
       ],
-      "reponse": "Non : $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{21}{35} \\neq \\dfrac{20}{35} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$, donc d'après la contraposée de Thalès $(\\mathrm{MN})$ et $(\\mathrm{BC})$ ne sont pas parallèles."
+      "reponse": "$\\mathrm{DF} = 8$ cm"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "thales-trigonometrie",
-      "enonce": "Un charpentier étudie une ferme de toit modélisée par le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$. $[\\mathrm{AB}]$ est la base horizontale, $[\\mathrm{AC}]$ la hauteur verticale et $[\\mathrm{BC}]$ le rampant (le chevron incliné qui monte de la base jusqu'au faîte). On donne $\\mathrm{AB} = 6$ m et $\\mathrm{AC} = 2{,}5$ m. 1. Calculer la longueur $\\mathrm{BC}$ du chevron. 2. Calculer la mesure de l'angle $\\widehat{\\mathrm{B}}$ que le chevron fait avec la base, arrondie au degré. 3. Pour renforcer la structure, on pose une jambe de force verticale $[\\mathrm{MN}]$ : $\\mathrm{M}$ est sur $[\\mathrm{AB}]$ avec $\\mathrm{BM} = 2{,}4$ m, $\\mathrm{N}$ est sur le chevron $[\\mathrm{BC}]$, et $(\\mathrm{MN}) \\parallel (\\mathrm{AC})$. Calculer la hauteur $\\mathrm{MN}$ de cette jambe de force. 4. Calculer la longueur $\\mathrm{BN}$, du bas du chevron jusqu'à la jambe de force.",
+      "difficulte": "intermediaire",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{D}$. $\\mathrm{EF} = 25$ cm (hypoténuse) et $\\mathrm{DE} = 7$ cm. Calculer $\\mathrm{DF}$.",
       "corrige": [
-        "1. Le triangle $\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ et on connait les deux côtés de l'angle droit : on applique l'égalité de Pythagore. $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2 = 6^2 + 2{,}5^2 = 36 + 6{,}25 = 42{,}25$, donc $\\mathrm{BC} = \\sqrt{42{,}25} = 6{,}5$ m.",
-        "2. On connait deux longueurs et on cherche l'angle $\\widehat{\\mathrm{B}}$. Par rapport à $\\widehat{\\mathrm{B}}$, $[\\mathrm{AC}]$ est l'opposé et $[\\mathrm{AB}]$ l'adjacent (l'hypoténuse n'intervient pas) : c'est la tangente (TOA). $\\tan \\widehat{\\mathrm{B}} = \\dfrac{\\mathrm{AC}}{\\mathrm{AB}} = \\dfrac{2{,}5}{6} \\approx 0{,}417$, puis avec la fonction inverse $\\widehat{\\mathrm{B}} = \\tan^{-1}(0{,}417) \\approx 23°$.",
-        "3. Les droites $(\\mathrm{BA})$ et $(\\mathrm{BC})$ sont sécantes en $\\mathrm{B}$ et coupées par les parallèles $(\\mathrm{MN})$ et $(\\mathrm{AC})$ : c'est la configuration des triangles emboités de sommet $\\mathrm{B}$. Le théorème de Thalès donne $\\dfrac{\\mathrm{BM}}{\\mathrm{BA}} = \\dfrac{\\mathrm{BN}}{\\mathrm{BC}} = \\dfrac{\\mathrm{MN}}{\\mathrm{AC}}$. Avec les rapports contenant $\\mathrm{MN}$ : $\\dfrac{2{,}4}{6} = \\dfrac{\\mathrm{MN}}{2{,}5}$, d'où $\\mathrm{MN} = \\dfrac{2{,}4 \\times 2{,}5}{6} = \\dfrac{6}{6} = 1$ m.",
-        "4. On reprend la chaine de Thalès avec les rapports contenant $\\mathrm{BN}$ : $\\dfrac{\\mathrm{BM}}{\\mathrm{BA}} = \\dfrac{\\mathrm{BN}}{\\mathrm{BC}}$, soit $\\dfrac{2{,}4}{6} = \\dfrac{\\mathrm{BN}}{6{,}5}$. Produit en croix : $\\mathrm{BN} = \\dfrac{2{,}4 \\times 6{,}5}{6} = \\dfrac{15{,}6}{6} = 2{,}6$ m."
+        "D'après Pythagore, $\\mathrm{EF}^2 = \\mathrm{DE}^2 + \\mathrm{DF}^2$.",
+        "$\\mathrm{DF}^2 = 25^2 - 7^2 = 625 - 49 = 576$.",
+        "Donc $\\mathrm{DF} = \\sqrt{576}$ $= 24$ cm."
       ],
-      "reponse": "1. $\\mathrm{BC} = 6{,}5$ m. 2. $\\widehat{\\mathrm{B}} \\approx 23°$. 3. $\\mathrm{MN} = 1$ m. 4. $\\mathrm{BN} = 2{,}6$ m."
+      "reponse": "$\\mathrm{DF} = 24$ cm"
+    },
+    {
+      "id": 11,
+      "difficulte": "approfondissement",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{D}$. $\\mathrm{EF} = 6$ cm (hypoténuse) et $\\mathrm{DE} = 4$ cm. Calculer $\\mathrm{DF}$.",
+      "corrige": [
+        "D'après Pythagore, $\\mathrm{EF}^2 = \\mathrm{DE}^2 + \\mathrm{DF}^2$.",
+        "$\\mathrm{DF}^2 = 6^2 - 4^2 = 36 - 16 = 20$.",
+        "Donc $\\mathrm{DF} = \\sqrt{20}$ \\approx 4,47$ cm."
+      ],
+      "reponse": "$\\mathrm{DF} = \\sqrt{20} = 2\\sqrt{5} \\approx 4,47$ cm"
+    },
+    {
+      "id": 12,
+      "difficulte": "approfondissement",
+      "notion": "theoreme-pythagore",
+      "enonce": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{D}$. $\\mathrm{EF} = 9$ cm (hypoténuse) et $\\mathrm{DE} = 5$ cm. Calculer $\\mathrm{DF}$.",
+      "corrige": [
+        "D'après Pythagore, $\\mathrm{EF}^2 = \\mathrm{DE}^2 + \\mathrm{DF}^2$.",
+        "$\\mathrm{DF}^2 = 9^2 - 5^2 = 81 - 25 = 56$.",
+        "Donc $\\mathrm{DF} = \\sqrt{56}$ \\approx 7,48$ cm."
+      ],
+      "reponse": "$\\mathrm{DF} = \\sqrt{56} = 2\\sqrt{14} \\approx 7,48$ cm"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "reciproque-pythagore",
+      "enonce": "Un triangle a pour côtés 6 cm, 8 cm et 10 cm. Est-il rectangle ? Justifier.",
+      "corrige": [
+        "Le plus grand côté mesure 10 cm. On calcule $10^2 = 100$ et $6^2 + 8^2 = 100$.",
+        "On compare : $100 = 100$.",
+        "Égalité vérifiée : d'après la réciproque de Pythagore, le triangle est rectangle."
+      ],
+      "reponse": "Oui, il est rectangle."
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "reciproque-pythagore",
+      "enonce": "Un triangle a pour côtés 5 cm, 12 cm et 13 cm. Est-il rectangle ? Justifier.",
+      "corrige": [
+        "Le plus grand côté mesure 13 cm. On calcule $13^2 = 169$ et $5^2 + 12^2 = 169$.",
+        "On compare : $169 = 169$.",
+        "Égalité vérifiée : d'après la réciproque de Pythagore, le triangle est rectangle."
+      ],
+      "reponse": "Oui, il est rectangle."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "reciproque-pythagore",
+      "enonce": "Un triangle a pour côtés 9 cm, 12 cm et 15 cm. Est-il rectangle ? Justifier.",
+      "corrige": [
+        "Le plus grand côté mesure 15 cm. On calcule $15^2 = 225$ et $9^2 + 12^2 = 225$.",
+        "On compare : $225 = 225$.",
+        "Égalité vérifiée : d'après la réciproque de Pythagore, le triangle est rectangle."
+      ],
+      "reponse": "Oui, il est rectangle."
+    },
+    {
+      "id": 16,
+      "difficulte": "approfondissement",
+      "notion": "reciproque-pythagore",
+      "enonce": "Un triangle a pour côtés 4 cm, 5 cm et 6 cm. Est-il rectangle ? Justifier.",
+      "corrige": [
+        "Le plus grand côté mesure 6 cm. On calcule $6^2 = 36$ et $4^2 + 5^2 = 41$.",
+        "On compare : $36 \\neq 41$.",
+        "Pas d'égalité : le triangle n'est pas rectangle."
+      ],
+      "reponse": "Non, il n'est pas rectangle."
+    },
+    {
+      "id": 17,
+      "difficulte": "approfondissement",
+      "notion": "reciproque-pythagore",
+      "enonce": "Un triangle a pour côtés 7 cm, 8 cm et 11 cm. Est-il rectangle ? Justifier.",
+      "corrige": [
+        "Le plus grand côté mesure 11 cm. On calcule $11^2 = 121$ et $7^2 + 8^2 = 113$.",
+        "On compare : $121 \\neq 113$.",
+        "Pas d'égalité : le triangle n'est pas rectangle."
+      ],
+      "reponse": "Non, il n'est pas rectangle."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "reciproque-pythagore",
+      "enonce": "Un triangle a pour côtés 8 cm, 15 cm et 17 cm. Est-il rectangle ? Justifier.",
+      "corrige": [
+        "Le plus grand côté mesure 17 cm. On calcule $17^2 = 289$ et $8^2 + 15^2 = 289$.",
+        "On compare : $289 = 289$.",
+        "Égalité vérifiée : d'après la réciproque de Pythagore, le triangle est rectangle."
+      ],
+      "reponse": "Oui, il est rectangle."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "theoreme-thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M} \\in [\\mathrm{AB}]$, $\\mathrm{N} \\in [\\mathrm{AC}]$ et $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 4$, $\\mathrm{AB} = 10$, $\\mathrm{AC} = 15$ (cm). Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "Comme $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, le théorème de Thalès donne $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$.",
+        "$\\dfrac{4}{10} = \\dfrac{\\mathrm{AN}}{15}$, donc $\\mathrm{AN} = \\dfrac{4 \\times 15}{10} = 6$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 6$ cm"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "theoreme-thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M} \\in [\\mathrm{AB}]$, $\\mathrm{N} \\in [\\mathrm{AC}]$ et $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 3$, $\\mathrm{AB} = 9$, $\\mathrm{AC} = 12$ (cm). Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "Comme $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, le théorème de Thalès donne $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$.",
+        "$\\dfrac{3}{9} = \\dfrac{\\mathrm{AN}}{12}$, donc $\\mathrm{AN} = \\dfrac{3 \\times 12}{9} = 4$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 4$ cm"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "theoreme-thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M} \\in [\\mathrm{AB}]$, $\\mathrm{N} \\in [\\mathrm{AC}]$ et $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 5$, $\\mathrm{AB} = 15$, $\\mathrm{AC} = 9$ (cm). Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "Comme $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, le théorème de Thalès donne $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$.",
+        "$\\dfrac{5}{15} = \\dfrac{\\mathrm{AN}}{9}$, donc $\\mathrm{AN} = \\dfrac{5 \\times 9}{15} = 3$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 3$ cm"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "theoreme-thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M} \\in [\\mathrm{AB}]$, $\\mathrm{N} \\in [\\mathrm{AC}]$ et $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 6$, $\\mathrm{AB} = 8$, $\\mathrm{AC} = 12$ (cm). Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "Comme $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, le théorème de Thalès donne $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$.",
+        "$\\dfrac{6}{8} = \\dfrac{\\mathrm{AN}}{12}$, donc $\\mathrm{AN} = \\dfrac{6 \\times 12}{8} = 9$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 9$ cm"
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "theoreme-thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M} \\in [\\mathrm{AB}]$, $\\mathrm{N} \\in [\\mathrm{AC}]$ et $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 4$, $\\mathrm{AB} = 6$, $\\mathrm{AC} = 9$ (cm). Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "Comme $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, le théorème de Thalès donne $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$.",
+        "$\\dfrac{4}{6} = \\dfrac{\\mathrm{AN}}{9}$, donc $\\mathrm{AN} = \\dfrac{4 \\times 9}{6} = 6$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 6$ cm"
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "theoreme-thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M} \\in [\\mathrm{AB}]$, $\\mathrm{N} \\in [\\mathrm{AC}]$ et $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 2$, $\\mathrm{AB} = 5$, $\\mathrm{AC} = 20$ (cm). Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "Comme $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, le théorème de Thalès donne $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$.",
+        "$\\dfrac{2}{5} = \\dfrac{\\mathrm{AN}}{20}$, donc $\\mathrm{AN} = \\dfrac{2 \\times 20}{5} = 8$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 8$ cm"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "theoreme-thales",
+      "enonce": "Dans $\\mathrm{ABC}$, $\\mathrm{M} \\in [\\mathrm{AB}]$, $\\mathrm{N} \\in [\\mathrm{AC}]$ et $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$. On donne $\\mathrm{AM} = 6$, $\\mathrm{AB} = 10$, $\\mathrm{AC} = 25$ (cm). Calculer $\\mathrm{AN}$.",
+      "corrige": [
+        "Comme $(\\mathrm{MN}) \\parallel (\\mathrm{BC})$, le théorème de Thalès donne $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{\\mathrm{AN}}{\\mathrm{AC}}$.",
+        "$\\dfrac{6}{10} = \\dfrac{\\mathrm{AN}}{25}$, donc $\\mathrm{AN} = \\dfrac{6 \\times 25}{10} = 15$ cm."
+      ],
+      "reponse": "$\\mathrm{AN} = 15$ cm"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "reciproque-thales",
+      "enonce": "$\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$ sont alignés dans le même ordre. $\\mathrm{AM} = 3$, $\\mathrm{AB} = 9$, $\\mathrm{AN} = 4$, $\\mathrm{AC} = 12$ (cm). Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ?",
+      "corrige": [
+        "On compare $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{3}{9} = \\dfrac{1}{3}$ et $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{4}{12} = \\dfrac{1}{3}$.",
+        "$\\dfrac{1}{3} = \\dfrac{1}{3}$.",
+        "Rapports égaux et même ordre : d'après la réciproque de Thalès, les droites sont parallèles."
+      ],
+      "reponse": "Oui, parallèles."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "reciproque-thales",
+      "enonce": "$\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$ sont alignés dans le même ordre. $\\mathrm{AM} = 4$, $\\mathrm{AB} = 10$, $\\mathrm{AN} = 6$, $\\mathrm{AC} = 15$ (cm). Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ?",
+      "corrige": [
+        "On compare $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{4}{10} = \\dfrac{2}{5}$ et $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{6}{15} = \\dfrac{2}{5}$.",
+        "$\\dfrac{2}{5} = \\dfrac{2}{5}$.",
+        "Rapports égaux et même ordre : d'après la réciproque de Thalès, les droites sont parallèles."
+      ],
+      "reponse": "Oui, parallèles."
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "reciproque-thales",
+      "enonce": "$\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$ sont alignés dans le même ordre. $\\mathrm{AM} = 2$, $\\mathrm{AB} = 6$, $\\mathrm{AN} = 3$, $\\mathrm{AC} = 8$ (cm). Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ?",
+      "corrige": [
+        "On compare $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{2}{6} = \\dfrac{1}{3}$ et $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{3}{8} = \\dfrac{3}{8}$.",
+        "$\\dfrac{1}{3} \\neq \\dfrac{3}{8}$.",
+        "Rapports différents : les droites ne sont pas parallèles."
+      ],
+      "reponse": "Non, pas parallèles."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "reciproque-thales",
+      "enonce": "$\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$ sont alignés dans le même ordre. $\\mathrm{AM} = 5$, $\\mathrm{AB} = 8$, $\\mathrm{AN} = 10$, $\\mathrm{AC} = 16$ (cm). Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ?",
+      "corrige": [
+        "On compare $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{5}{8} = \\dfrac{5}{8}$ et $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{10}{16} = \\dfrac{5}{8}$.",
+        "$\\dfrac{5}{8} = \\dfrac{5}{8}$.",
+        "Rapports égaux et même ordre : d'après la réciproque de Thalès, les droites sont parallèles."
+      ],
+      "reponse": "Oui, parallèles."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "reciproque-thales",
+      "enonce": "$\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$ sont alignés dans le même ordre. $\\mathrm{AM} = 3$, $\\mathrm{AB} = 7$, $\\mathrm{AN} = 5$, $\\mathrm{AC} = 11$ (cm). Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ?",
+      "corrige": [
+        "On compare $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{3}{7} = \\dfrac{3}{7}$ et $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{5}{11} = \\dfrac{5}{11}$.",
+        "$\\dfrac{3}{7} \\neq \\dfrac{5}{11}$.",
+        "Rapports différents : les droites ne sont pas parallèles."
+      ],
+      "reponse": "Non, pas parallèles."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "reciproque-thales",
+      "enonce": "$\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$ sont alignés dans le même ordre. $\\mathrm{AM} = 4$, $\\mathrm{AB} = 6$, $\\mathrm{AN} = 6$, $\\mathrm{AC} = 9$ (cm). Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ?",
+      "corrige": [
+        "On compare $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{4}{6} = \\dfrac{2}{3}$ et $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{6}{9} = \\dfrac{2}{3}$.",
+        "$\\dfrac{2}{3} = \\dfrac{2}{3}$.",
+        "Rapports égaux et même ordre : d'après la réciproque de Thalès, les droites sont parallèles."
+      ],
+      "reponse": "Oui, parallèles."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "reciproque-thales",
+      "enonce": "$\\mathrm{A},\\mathrm{M},\\mathrm{B}$ et $\\mathrm{A},\\mathrm{N},\\mathrm{C}$ sont alignés dans le même ordre. $\\mathrm{AM} = 2$, $\\mathrm{AB} = 5$, $\\mathrm{AN} = 4$, $\\mathrm{AC} = 10$ (cm). Les droites $(\\mathrm{MN})$ et $(\\mathrm{BC})$ sont-elles parallèles ?",
+      "corrige": [
+        "On compare $\\dfrac{\\mathrm{AM}}{\\mathrm{AB}} = \\dfrac{2}{5} = \\dfrac{2}{5}$ et $\\dfrac{\\mathrm{AN}}{\\mathrm{AC}} = \\dfrac{4}{10} = \\dfrac{2}{5}$.",
+        "$\\dfrac{2}{5} = \\dfrac{2}{5}$.",
+        "Rapports égaux et même ordre : d'après la réciproque de Thalès, les droites sont parallèles."
+      ],
+      "reponse": "Oui, parallèles."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $30^\\circ$ et l'hypoténuse mesure 10 cm. Calculer le côté adjacent (arrondir au dixième).",
+      "corrige": [
+        "On utilise $\\cos(30^\\circ) = \\dfrac{\\text{adjacent}}{\\text{hypoténuse}}$.",
+        "Longueur $= 10\\times\\cos(30^\\circ) \\approx 8,7$ cm."
+      ],
+      "reponse": "$\\approx 8,7$ cm"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $40^\\circ$ et l'hypoténuse mesure 12 cm. Calculer le côté opposé (arrondir au dixième).",
+      "corrige": [
+        "On utilise $\\sin(40^\\circ) = \\dfrac{\\text{opposé}}{\\text{hypoténuse}}$.",
+        "Longueur $= 12\\times\\sin(40^\\circ) \\approx 7,7$ cm."
+      ],
+      "reponse": "$\\approx 7,7$ cm"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $55^\\circ$ et le côté adjacent mesure 8 cm. Calculer le côté opposé (arrondir au dixième).",
+      "corrige": [
+        "On utilise $\\tan(55^\\circ) = \\dfrac{\\text{opposé}}{\\text{adjacent}}$.",
+        "Longueur $= 8\\times\\tan(55^\\circ) \\approx 11,4$ cm."
+      ],
+      "reponse": "$\\approx 11,4$ cm"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $25^\\circ$ et l'hypoténuse mesure 15 cm. Calculer le côté adjacent (arrondir au dixième).",
+      "corrige": [
+        "On utilise $\\cos(25^\\circ) = \\dfrac{\\text{adjacent}}{\\text{hypoténuse}}$.",
+        "Longueur $= 15\\times\\cos(25^\\circ) \\approx 13,6$ cm."
+      ],
+      "reponse": "$\\approx 13,6$ cm"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $60^\\circ$ et le côté adjacent mesure 6 cm. Calculer le côté opposé (arrondir au dixième).",
+      "corrige": [
+        "On utilise $\\tan(60^\\circ) = \\dfrac{\\text{opposé}}{\\text{adjacent}}$.",
+        "Longueur $= 6\\times\\tan(60^\\circ) \\approx 10,4$ cm."
+      ],
+      "reponse": "$\\approx 10,4$ cm"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $35^\\circ$ et l'hypoténuse mesure 9 cm. Calculer le côté opposé (arrondir au dixième).",
+      "corrige": [
+        "On utilise $\\sin(35^\\circ) = \\dfrac{\\text{opposé}}{\\text{hypoténuse}}$.",
+        "Longueur $= 9\\times\\sin(35^\\circ) \\approx 5,2$ cm."
+      ],
+      "reponse": "$\\approx 5,2$ cm"
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, un angle aigu mesure $50^\\circ$ et le côté adjacent mesure 7 cm. Calculer le côté opposé (arrondir au dixième).",
+      "corrige": [
+        "On utilise $\\tan(50^\\circ) = \\dfrac{\\text{opposé}}{\\text{adjacent}}$.",
+        "Longueur $= 7\\times\\tan(50^\\circ) \\approx 8,3$ cm."
+      ],
+      "reponse": "$\\approx 8,3$ cm"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, le côté opposé d'un angle aigu mesure 3 cm et l'hypoténuse mesure 5 cm. Calculer cet angle (arrondir au degré).",
+      "corrige": [
+        "$\\sin(\\widehat{x}) = \\dfrac{\\text{opposé}}{\\text{hypoténuse}} = \\dfrac{3}{5}$.",
+        "$\\widehat{x} = \\sin^{-1}\\left(\\dfrac{3}{5}\\right) \\approx 37^\\circ$."
+      ],
+      "reponse": "$\\approx 37^\\circ$"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, le côté adjacent d'un angle aigu mesure 4 cm et l'hypoténuse mesure 5 cm. Calculer cet angle (arrondir au degré).",
+      "corrige": [
+        "$\\cos(\\widehat{x}) = \\dfrac{\\text{adjacent}}{\\text{hypoténuse}} = \\dfrac{4}{5}$.",
+        "$\\widehat{x} = \\cos^{-1}\\left(\\dfrac{4}{5}\\right) \\approx 37^\\circ$."
+      ],
+      "reponse": "$\\approx 37^\\circ$"
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, le côté opposé d'un angle aigu mesure 3 cm et le côté adjacent mesure 4 cm. Calculer cet angle (arrondir au degré).",
+      "corrige": [
+        "$\\tan(\\widehat{x}) = \\dfrac{\\text{opposé}}{\\text{adjacent}} = \\dfrac{3}{4}$.",
+        "$\\widehat{x} = \\tan^{-1}\\left(\\dfrac{3}{4}\\right) \\approx 37^\\circ$."
+      ],
+      "reponse": "$\\approx 37^\\circ$"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, le côté opposé d'un angle aigu mesure 6 cm et l'hypoténuse mesure 10 cm. Calculer cet angle (arrondir au degré).",
+      "corrige": [
+        "$\\sin(\\widehat{x}) = \\dfrac{\\text{opposé}}{\\text{hypoténuse}} = \\dfrac{6}{10}$.",
+        "$\\widehat{x} = \\sin^{-1}\\left(\\dfrac{6}{10}\\right) \\approx 37^\\circ$."
+      ],
+      "reponse": "$\\approx 37^\\circ$"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "trigonometrie",
+      "enonce": "Dans un triangle rectangle, le côté adjacent d'un angle aigu mesure 5 cm et l'hypoténuse mesure 8 cm. Calculer cet angle (arrondir au degré).",
+      "corrige": [
+        "$\\cos(\\widehat{x}) = \\dfrac{\\text{adjacent}}{\\text{hypoténuse}} = \\dfrac{5}{8}$.",
+        "$\\widehat{x} = \\cos^{-1}\\left(\\dfrac{5}{8}\\right) \\approx 51^\\circ$."
+      ],
+      "reponse": "$\\approx 51^\\circ$"
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "theoreme-pythagore",
+      "enonce": "Une échelle de 2,5 m est appuyée contre un mur, pied à 1,5 m du mur. À quelle hauteur touche-t-elle le mur ?",
+      "corrige": [
+        "$2,5^2 = 1,5^2 + h^2$ (Pythagore).",
+        "$h^2 = 6,25 - 2,25 = 4$, donc $h = 2$ m."
+      ],
+      "reponse": "$h = 2$ m"
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "theoreme-thales",
+      "enonce": "Un piquet de 2 m projette une ombre de 3 m ; au même instant un arbre projette 12 m d'ombre. Hauteur de l'arbre (Thalès) ?",
+      "corrige": [
+        "$\\dfrac{2}{3} = \\dfrac{H}{12}$.",
+        "$H = \\dfrac{2\\times 12}{3} = 8$ m."
+      ],
+      "reponse": "$H = 8$ m"
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "theoreme-pythagore",
+      "enonce": "Un rectangle mesure 9 cm sur 12 cm. Longueur de la diagonale ?",
+      "corrige": [
+        "$d^2 = 9^2 + 12^2 = 225$.",
+        "$d = \\sqrt{225} = 15$ cm."
+      ],
+      "reponse": "$d = 15$ cm"
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "theoreme-pythagore",
+      "enonce": "Un bateau parcourt 12 km vers l'est puis 5 km vers le nord. Distance au départ (à vol d'oiseau) ?",
+      "corrige": [
+        "$d^2 = 12^2 + 5^2 = 169$.",
+        "$d = 13$ km."
+      ],
+      "reponse": "$d = 13$ km"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "trigonometrie",
+      "enonce": "Un toit fait un angle de $30^\\circ$ avec l'horizontale ; sa base mesure 6 m. Hauteur du toit (au dixième) ?",
+      "corrige": [
+        "$\\tan(30^\\circ) = \\dfrac{h}{6}$, donc $h = 6\\times\\tan(30^\\circ) \\approx 3,5$ m."
+      ],
+      "reponse": "$\\approx 3,5$ m"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "trigonometrie",
+      "enonce": "Une rampe de 5 m s'élève à 3 m de hauteur. Angle avec le sol (au degré) ?",
+      "corrige": [
+        "$\\sin(\\widehat{x}) = \\dfrac{3}{5}$, donc $\\widehat{x} \\approx 37^\\circ$."
+      ],
+      "reponse": "$\\approx 37^\\circ$"
     }
   ]
 }

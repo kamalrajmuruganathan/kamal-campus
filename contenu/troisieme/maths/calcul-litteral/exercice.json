@@ -13,129 +13,536 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "double-distributivite",
-      "enonce": "Développe et réduis les deux expressions suivantes : $A = (2x+3)(x-4)$ et $B = (3x-1)(2x+5)$.",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 3(2x + 5)$.",
       "corrige": [
-        "Pour $A$, chaque terme de la première parenthèse multiplie chaque terme de la seconde : **quatre** produits. $A = 2x \\times x + 2x \\times (-4) + 3 \\times x + 3 \\times (-4)$.",
-        "$A = 2x^2 - 8x + 3x - 12$. On réduit les termes en $x$ : $-8x + 3x = -5x$. Donc $A = 2x^2 - 5x - 12$.",
-        "Pour $B$, de même : $B = 3x \\times 2x + 3x \\times 5 + (-1) \\times 2x + (-1) \\times 5 = 6x^2 + 15x - 2x - 5$.",
-        "On réduit : $15x - 2x = 13x$. Donc $B = 6x^2 + 13x - 5$."
+        "On distribue : $ 3\\times 2x + 3\\times 5 = 6x + 15$."
       ],
-      "reponse": "$A = 2x^2 - 5x - 12$ et $B = 6x^2 + 13x - 5$."
+      "reponse": "$ 6x + 15$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "identites-remarquables",
-      "enonce": "Développe en utilisant une identité remarquable : $C = (x+5)^2$, $D = (3x-2)^2$, $E = (x-6)(x+6)$.",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 4(x + 3)$.",
       "corrige": [
-        "$C$ est un carré d'une somme : $(a+b)^2 = a^2 + 2ab + b^2$ avec $a = x$ et $b = 5$. Le double produit vaut $2 \\times x \\times 5 = 10x$. Donc $C = x^2 + 10x + 25$.",
-        "$D$ est un carré d'une différence : $(a-b)^2 = a^2 - 2ab + b^2$ avec $a = 3x$ et $b = 2$. Attention, $a^2 = (3x)^2 = 9x^2$ et non $3x^2$. Le double produit vaut $2 \\times 3x \\times 2 = 12x$, soustrait, et $b^2 = +4$. Donc $D = 9x^2 - 12x + 4$.",
-        "$E$ est une différence de deux carrés : $(a-b)(a+b) = a^2 - b^2$ avec $a = x$ et $b = 6$. Le double produit disparaît. Donc $E = x^2 - 36$."
+        "On distribue : $ 4\\times 1x + 4\\times 3 = 4x + 12$."
       ],
-      "reponse": "$C = x^2 + 10x + 25$, $D = 9x^2 - 12x + 4$, $E = x^2 - 36$."
+      "reponse": "$ 4x + 12$"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "sens-de-lecture",
-      "enonce": "Factorise chaque expression en reconnaissant une identité remarquable : $F = x^2 + 12x + 36$, $G = x^2 - 8x + 16$, $H = 49x^2 - 16$.",
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 5(3x + 2)$.",
       "corrige": [
-        "$F$ a **trois** termes : deux carrés ($x^2$ et $36 = 6^2$) et un terme du milieu positif. Je teste le double produit : $2 \\times x \\times 6 = 12x$, c'est bien le terme central. C'est donc $(a+b)^2$ avec $a = x$, $b = 6$ : $F = (x+6)^2$.",
-        "$G$ a aussi trois termes, avec $x^2$ et $16 = 4^2$, mais le terme du milieu est **négatif**. Le double produit $2 \\times x \\times 4 = 8x$ correspond, avec le signe $-$ : c'est $(a-b)^2$. Donc $G = (x-4)^2$.",
-        "$H$ a **deux** termes et c'est une **différence** : identité $a^2 - b^2 = (a-b)(a+b)$. J'écris chaque terme comme un carré : $49x^2 = (7x)^2$ et $16 = 4^2$. Donc $H = (7x-4)(7x+4)$.",
-        "Contrôle : je redéveloppe $(x+6)^2 = x^2 + 12x + 36$ ✓, ce qui confirme $F$ ; même réflexe pour $G$ et $H$."
+        "On distribue : $ 5\\times 3x + 5\\times 2 = 15x + 10$."
       ],
-      "reponse": "$F = (x+6)^2$, $G = (x-4)^2$, $H = (7x-4)(7x+4)$."
+      "reponse": "$ 15x + 10$"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "facteur-commun",
-      "enonce": "Factorise en mettant en évidence le facteur commun apparent : $K = (x+3)(2x-1) + (x+3)(x+5)$, puis $L = (3x+2)(x-4) - (3x+2)(x-9)$.",
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 2(7x + 4)$.",
       "corrige": [
-        "Dans $K$, le facteur $(x+3)$ est présent dans les deux termes : on le met en facteur. $K = (x+3)\\big[(2x-1) + (x+5)\\big]$.",
-        "On réduit le crochet : $(2x-1) + (x+5) = 3x + 4$. Donc $K = (x+3)(3x+4)$.",
-        "Dans $L$, le facteur commun est $(3x+2)$, mais attention au signe $-$ devant la seconde parenthèse, qui change **les deux** signes : $L = (3x+2)\\big[(x-4) - (x-9)\\big]$.",
-        "On réduit le crochet : $(x-4) - (x-9) = x - 4 - x + 9 = 5$. Donc $L = (3x+2) \\times 5 = 5(3x+2)$."
+        "On distribue : $ 2\\times 7x + 2\\times 4 = 14x + 8$."
       ],
-      "reponse": "$K = (x+3)(3x+4)$ et $L = 5(3x+2)$."
+      "reponse": "$ 14x + 8$"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "produit-nul",
-      "enonce": "Résous les deux équations dans $\\mathbb{R}$ : $(2x+1)(x-4) = 0$, puis $16x^2 - 9 = 0$.",
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 6(2x + 1)$.",
       "corrige": [
-        "La première équation est déjà un **produit** égal à $0$ : un produit est nul si et seulement si l'un de ses facteurs est nul. Donc $2x + 1 = 0$ **ou** $x - 4 = 0$.",
-        "$2x + 1 = 0$ donne $x = -\\dfrac{1}{2}$ ; $x - 4 = 0$ donne $x = 4$. La première équation a deux solutions : $-\\dfrac{1}{2}$ et $4$.",
-        "La seconde, $16x^2 - 9 = 0$, n'est pas un produit : à gauche, c'est une **somme** (différence). Il faut d'abord factoriser. C'est une différence de deux carrés : $16x^2 = (4x)^2$ et $9 = 3^2$, donc $16x^2 - 9 = (4x-3)(4x+3)$.",
-        "L'équation devient $(4x-3)(4x+3) = 0$, donc $4x - 3 = 0$ **ou** $4x + 3 = 0$, c'est-à-dire $x = \\dfrac{3}{4}$ **ou** $x = -\\dfrac{3}{4}$."
+        "On distribue : $ 6\\times 2x + 6\\times 1 = 12x + 6$."
       ],
-      "reponse": "Première équation : $x = -\\dfrac{1}{2}$ ou $x = 4$. Seconde équation : $x = \\dfrac{3}{4}$ ou $x = -\\dfrac{3}{4}$."
+      "reponse": "$ 12x + 6$"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "identites-remarquables",
-      "enonce": "Sur son brouillon, Léa a écrit $(a+b)^2 = a^2 + b^2$. 1) Montre avec $a = 3$ et $b = 4$ que cette égalité est fausse. 2) Développe correctement $(a+b)^2$ et indique le terme que Léa a oublié. 3) En utilisant le bon développement, démontre que pour tout nombre $x$, $(x+3)^2 - (x-3)^2 = 12x$.",
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 3(5x + 7)$.",
       "corrige": [
-        "1) Pour $a = 3$ et $b = 4$ : d'un côté $(a+b)^2 = (3+4)^2 = 7^2 = 49$ ; de l'autre $a^2 + b^2 = 3^2 + 4^2 = 9 + 16 = 25$. Comme $49 \\neq 25$, l'égalité de Léa est fausse.",
-        "2) La bonne identité est $(a+b)^2 = a^2 + 2ab + b^2$. Léa a oublié le **double produit** $2ab$. Ici $2ab = 2 \\times 3 \\times 4 = 24$, et l'on retrouve bien $25 + 24 = 49$ ✓.",
-        "3) On développe chaque carré : $(x+3)^2 = x^2 + 2 \\times x \\times 3 + 9 = x^2 + 6x + 9$, et $(x-3)^2 = x^2 - 6x + 9$.",
-        "On soustrait, en changeant tous les signes de la seconde parenthèse : $(x^2 + 6x + 9) - (x^2 - 6x + 9) = x^2 + 6x + 9 - x^2 + 6x - 9 = 12x$. L'égalité est donc vraie pour tout $x$."
+        "On distribue : $ 3\\times 5x + 3\\times 7 = 15x + 21$."
       ],
-      "reponse": "1) $(3+4)^2 = 49 \\neq 25 = 3^2 + 4^2$. 2) Terme oublié : le double produit $2ab$, donc $(a+b)^2 = a^2 + 2ab + b^2$. 3) $(x+3)^2 - (x-3)^2 = 12x$ pour tout $x$."
+      "reponse": "$ 15x + 21$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "identites-remarquables",
-      "enonce": "Développe à l'aide d'une identité remarquable : $P = (4x+1)^2$ et $Q = (5-2x)(5+2x)$.",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 7(x + 2)$.",
       "corrige": [
-        "$P$ est le carré d'une somme : $(a+b)^2 = a^2 + 2ab + b^2$ avec $a = 4x$ et $b = 1$. Attention, $a^2 = (4x)^2 = 16x^2$. Le double produit vaut $2 \\times 4x \\times 1 = 8x$. Donc $P = 16x^2 + 8x + 1$.",
-        "$Q$ est une différence de deux carrés, écrite dans l'autre ordre : $(a-b)(a+b) = a^2 - b^2$ avec $a = 5$ et $b = 2x$. Le double produit disparaît. Donc $Q = 5^2 - (2x)^2 = 25 - 4x^2$."
+        "On distribue : $ 7\\times 1x + 7\\times 2 = 7x + 14$."
       ],
-      "reponse": "$P = 16x^2 + 8x + 1$ et $Q = 25 - 4x^2$."
+      "reponse": "$ 7x + 14$"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "developper-reduire",
-      "enonce": "Développe, réduis et écris le plus simplement possible : $R = (x+2)^2 - (x-3)(x+1)$.",
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 2(4x + 9)$.",
       "corrige": [
-        "Première étape : développer chaque morceau séparément. Le carré : $(x+2)^2 = x^2 + 2 \\times x \\times 2 + 4 = x^2 + 4x + 4$. Le produit : $(x-3)(x+1) = x^2 + x - 3x - 3 = x^2 - 2x - 3$.",
-        "Seconde étape : soustraire. Le signe $-$ devant la seconde parenthèse change **tous** ses signes : $R = (x^2 + 4x + 4) - (x^2 - 2x - 3) = x^2 + 4x + 4 - x^2 + 2x + 3$.",
-        "On réduit : les $x^2$ s'annulent, $4x + 2x = 6x$ et $4 + 3 = 7$. Donc $R = 6x + 7$."
+        "On distribue : $ 2\\times 4x + 2\\times 9 = 8x + 18$."
       ],
-      "reponse": "$R = 6x + 7$."
+      "reponse": "$ 8x + 18$"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "factoriser-produit-nul",
-      "enonce": "On considère l'expression $S = (2x+1)^2 - 9$. 1) Factorise $S$. 2) Résous l'équation $(2x+1)^2 - 9 = 0$.",
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 2(3x + 1)$.",
       "corrige": [
-        "1) $S$ est une **différence de deux carrés** : $9 = 3^2$, donc $S = (2x+1)^2 - 3^2$. Avec l'identité $a^2 - b^2 = (a-b)(a+b)$ où $a = 2x+1$ et $b = 3$ : $S = \\big[(2x+1) - 3\\big]\\big[(2x+1) + 3\\big] = (2x-2)(2x+4)$.",
-        "On peut encore factoriser chaque parenthèse par $2$ : $2x - 2 = 2(x-1)$ et $2x + 4 = 2(x+2)$. Donc $S = 4(x-1)(x+2)$.",
-        "2) L'équation $S = 0$ s'écrit $4(x-1)(x+2) = 0$. Le facteur $4$ n'est jamais nul, donc c'est un **produit nul** : $x - 1 = 0$ **ou** $x + 2 = 0$.",
-        "On obtient $x = 1$ **ou** $x = -2$. Contrôle avec $x = 1$ : $(2 \\times 1 + 1)^2 - 9 = 3^2 - 9 = 0$ ✓."
+        "On distribue : $ 2\\times 3x + 2\\times 1 = 6x + 2$."
       ],
-      "reponse": "1) $S = 4(x-1)(x+2)$. 2) $x = 1$ ou $x = -2$."
+      "reponse": "$ 6x + 2$"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "identites-remarquables",
-      "enonce": "Un terrain **carré** a un côté de longueur $x$ mètres, où $x$ est un nombre positif. On étudie plusieurs façons de le modifier.\\n\\n1. Exprime en fonction de $x$ l'aire $\\mathcal{A}$ du terrain carré (en m²).\\n2. On transforme le terrain en **rectangle** : on allonge un côté de $3$ m et on raccourcit le côté perpendiculaire de $3$ m. Exprime l'aire $\\mathcal{B}$ du rectangle sous forme d'un produit, puis développe-la à l'aide d'une identité remarquable.\\n3. Démontre que, quelle que soit la valeur de $x$, l'aire du rectangle est inférieure de $9$ m² à celle du carré.\\n4. On préfère finalement agrandir le terrain en un **carré** de côté $(x+3)$ m. Développe l'aire $\\mathcal{C} = (x+3)^2$, puis calcule-la pour $x = 12$.\\n5. Résous l'équation $\\mathcal{B} = 0$, c'est-à-dire $x^2 - 9 = 0$. Parmi les solutions trouvées, laquelle a un sens pour la longueur d'un côté ? Justifie.",
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 5(2x + 4)$.",
       "corrige": [
-        "1. Un carré de côté $x$ a pour aire $\\mathcal{A} = x \\times x = x^2$ (en m²).",
-        "2. Un côté devient $(x+3)$ m, le côté perpendiculaire devient $(x-3)$ m. L'aire du rectangle est le produit des deux : $\\mathcal{B} = (x+3)(x-3)$. C'est une différence de deux carrés, $(a-b)(a+b) = a^2 - b^2$ avec $a = x$ et $b = 3$ : $\\mathcal{B} = x^2 - 9$ (en m²).",
-        "3. On compare les deux aires : $\\mathcal{A} - \\mathcal{B} = x^2 - (x^2 - 9) = x^2 - x^2 + 9 = 9$. Cette différence vaut $9$ pour **toute** valeur de $x$ (le $x^2$ a disparu). Le rectangle a donc toujours une aire inférieure de $9$ m² à celle du carré.",
-        "4. $\\mathcal{C} = (x+3)^2$ est le carré d'une somme : $(x+3)^2 = x^2 + 2 \\times x \\times 3 + 3^2 = x^2 + 6x + 9$ (en m²). Pour $x = 12$ : le plus simple est $\\mathcal{C} = (12+3)^2 = 15^2 = 225$ ; on retrouve bien $144 + 72 + 9 = 225$ m².",
-        "5. $x^2 - 9 = 0$ se factorise en $(x-3)(x+3) = 0$, d'où, par la règle du produit nul, $x = 3$ **ou** $x = -3$. Une longueur est un nombre positif : seule $x = 3$ a un sens. (Pour $x = 3$, le côté raccourci $x - 3$ vaut $0$ : le rectangle est aplati, son aire est bien nulle.)"
+        "On distribue : $ 5\\times 2x + 5\\times 4 = 10x + 20$."
       ],
-      "reponse": "1) $\\mathcal{A} = x^2$. 2) $\\mathcal{B} = (x+3)(x-3) = x^2 - 9$. 3) $\\mathcal{A} - \\mathcal{B} = 9$ m², indépendant de $x$. 4) $\\mathcal{C} = x^2 + 6x + 9$, et $\\mathcal{C} = 225$ m² pour $x = 12$. 5) $x = 3$ ou $x = -3$ ; seule $x = 3$ convient car une longueur est positive."
+      "reponse": "$ 10x + 20$"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 3(7x + 2)$.",
+      "corrige": [
+        "On distribue : $ 3\\times 7x + 3\\times 2 = 21x + 6$."
+      ],
+      "reponse": "$ 21x + 6$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 4(x + 5)$.",
+      "corrige": [
+        "On distribue : $ 4\\times 1x + 4\\times 5 = 4x + 20$."
+      ],
+      "reponse": "$ 4x + 20$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 6(3x + 1)$.",
+      "corrige": [
+        "On distribue : $ 6\\times 3x + 6\\times 1 = 18x + 6$."
+      ],
+      "reponse": "$ 18x + 6$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 2(9x + 2)$.",
+      "corrige": [
+        "On distribue : $ 2\\times 9x + 2\\times 2 = 18x + 4$."
+      ],
+      "reponse": "$ 18x + 4$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 3(2x + 8)$.",
+      "corrige": [
+        "On distribue : $ 3\\times 2x + 3\\times 8 = 6x + 24$."
+      ],
+      "reponse": "$ 6x + 24$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $ 5(4x + 3)$.",
+      "corrige": [
+        "On distribue : $ 5\\times 4x + 5\\times 3 = 20x + 15$."
+      ],
+      "reponse": "$ 20x + 15$"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(x + 2)(x + 3)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= x^2 + 5x + 6$."
+      ],
+      "reponse": "$ x^2 + 5x + 6$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(2x + 1)(x + 4)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= 2x^2 + 9x + 4$."
+      ],
+      "reponse": "$ 2x^2 + 9x + 4$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(x - 3)(2x + 1)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= 2x^2 - 5x - 3$."
+      ],
+      "reponse": "$ 2x^2 - 5x - 3$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(3x + 1)(x - 2)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= 3x^2 - 5x - 2$."
+      ],
+      "reponse": "$ 3x^2 - 5x - 2$"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(x + 5)(x - 5)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= x^2 - 25$."
+      ],
+      "reponse": "$ x^2 - 25$"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(2x + 3)(3x + 1)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= 6x^2 + 11x + 3$."
+      ],
+      "reponse": "$ 6x^2 + 11x + 3$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(x - 1)(x - 4)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= x^2 - 5x + 4$."
+      ],
+      "reponse": "$ x^2 - 5x + 4$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "developpement",
+      "enonce": "Développer et réduire : $(2x - 1)(2x + 1)$.",
+      "corrige": [
+        "On applique la double distributivité, puis on réduit les termes semblables.",
+        "$= 4x^2 - 1$."
+      ],
+      "reponse": "$ 4x^2 - 1$"
+    },
+    {
+      "id": 25,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(x + 3)^2$.",
+      "corrige": [
+        "$(u+v)^2 = u^2 + 2uv + v^2$.",
+        "$= 1x^2 + 6x + 9 = x^2 + 6x + 9$."
+      ],
+      "reponse": "$ x^2 + 6x + 9$"
+    },
+    {
+      "id": 26,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(x + 5)^2$.",
+      "corrige": [
+        "$(u+v)^2 = u^2 + 2uv + v^2$.",
+        "$= 1x^2 + 10x + 25 = x^2 + 10x + 25$."
+      ],
+      "reponse": "$ x^2 + 10x + 25$"
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(2x + 1)^2$.",
+      "corrige": [
+        "$(u+v)^2 = u^2 + 2uv + v^2$.",
+        "$= 4x^2 + 4x + 1 = 4x^2 + 4x + 1$."
+      ],
+      "reponse": "$ 4x^2 + 4x + 1$"
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(x + 7)^2$.",
+      "corrige": [
+        "$(u+v)^2 = u^2 + 2uv + v^2$.",
+        "$= 1x^2 + 14x + 49 = x^2 + 14x + 49$."
+      ],
+      "reponse": "$ x^2 + 14x + 49$"
+    },
+    {
+      "id": 29,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(3x + 2)^2$.",
+      "corrige": [
+        "$(u+v)^2 = u^2 + 2uv + v^2$.",
+        "$= 9x^2 + 12x + 4 = 9x^2 + 12x + 4$."
+      ],
+      "reponse": "$ 9x^2 + 12x + 4$"
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(x + 4)^2$.",
+      "corrige": [
+        "$(u+v)^2 = u^2 + 2uv + v^2$.",
+        "$= 1x^2 + 8x + 16 = x^2 + 8x + 16$."
+      ],
+      "reponse": "$ x^2 + 8x + 16$"
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(x + 2)(x - 2)$.",
+      "corrige": [
+        "$(u+v)(u-v) = u^2 - v^2$.",
+        "$= 1x^2 - 4 = x^2 - 4$."
+      ],
+      "reponse": "$ x^2 - 4$"
+    },
+    {
+      "id": 32,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(x + 4)(x - 4)$.",
+      "corrige": [
+        "$(u+v)(u-v) = u^2 - v^2$.",
+        "$= 1x^2 - 16 = x^2 - 16$."
+      ],
+      "reponse": "$ x^2 - 16$"
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(2x + 3)(2x - 3)$.",
+      "corrige": [
+        "$(u+v)(u-v) = u^2 - v^2$.",
+        "$= 4x^2 - 9 = 4x^2 - 9$."
+      ],
+      "reponse": "$ 4x^2 - 9$"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(x + 6)(x - 6)$.",
+      "corrige": [
+        "$(u+v)(u-v) = u^2 - v^2$.",
+        "$= 1x^2 - 36 = x^2 - 36$."
+      ],
+      "reponse": "$ x^2 - 36$"
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "identites-remarquables",
+      "enonce": "Développer avec une identité remarquable : $(3x + 1)(3x - 1)$.",
+      "corrige": [
+        "$(u+v)(u-v) = u^2 - v^2$.",
+        "$= 9x^2 - 1 = 9x^2 - 1$."
+      ],
+      "reponse": "$ 9x^2 - 1$"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 6x + 10$.",
+      "corrige": [
+        "Le facteur commun est 2.",
+        "$= 2(3x + 5)$."
+      ],
+      "reponse": "$ 2(3x + 5)$"
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 6x + 3$.",
+      "corrige": [
+        "Le facteur commun est 3.",
+        "$= 3(2x + 1)$."
+      ],
+      "reponse": "$ 3(2x + 1)$"
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 5x + 10$.",
+      "corrige": [
+        "Le facteur commun est 5.",
+        "$= 5(x + 2)$."
+      ],
+      "reponse": "$ 5(x + 2)$"
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 12x + 8$.",
+      "corrige": [
+        "Le facteur commun est 4.",
+        "$= 4(3x + 2)$."
+      ],
+      "reponse": "$ 4(3x + 2)$"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 6x + 24$.",
+      "corrige": [
+        "Le facteur commun est 6.",
+        "$= 6(x + 4)$."
+      ],
+      "reponse": "$ 6(x + 4)$"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 14x + 21$.",
+      "corrige": [
+        "Le facteur commun est 7.",
+        "$= 7(2x + 3)$."
+      ],
+      "reponse": "$ 7(2x + 3)$"
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 10x + 14$.",
+      "corrige": [
+        "Le facteur commun est 2.",
+        "$= 2(5x + 7)$."
+      ],
+      "reponse": "$ 2(5x + 7)$"
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 12x + 3$.",
+      "corrige": [
+        "Le facteur commun est 3.",
+        "$= 3(4x + 1)$."
+      ],
+      "reponse": "$ 3(4x + 1)$"
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 4x + 6$.",
+      "corrige": [
+        "Le facteur commun est 2.",
+        "$= 2(2x + 3)$."
+      ],
+      "reponse": "$ 2(2x + 3)$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 3x^2 + 5x$.",
+      "corrige": [
+        "On met $x$ en facteur.",
+        "$= x(3x + 5)$."
+      ],
+      "reponse": "$ x(3x + 5)$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 2x^2 + 7x$.",
+      "corrige": [
+        "On met $x$ en facteur.",
+        "$= x(2x + 7)$."
+      ],
+      "reponse": "$ x(2x + 7)$"
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 4x^2 + x$.",
+      "corrige": [
+        "On met $x$ en facteur.",
+        "$= x(4x + 1)$."
+      ],
+      "reponse": "$ x(4x + 1)$"
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 5x^2 + 2x$.",
+      "corrige": [
+        "On met $x$ en facteur.",
+        "$= x(5x + 2)$."
+      ],
+      "reponse": "$ x(5x + 2)$"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ x^2 + 6x$.",
+      "corrige": [
+        "On met $x$ en facteur.",
+        "$= x(x + 6)$."
+      ],
+      "reponse": "$ x(x + 6)$"
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "factorisation",
+      "enonce": "Factoriser : $ 2x^2 + 3x$.",
+      "corrige": [
+        "On met $x$ en facteur.",
+        "$= x(2x + 3)$."
+      ],
+      "reponse": "$ x(2x + 3)$"
     }
   ]
 }
