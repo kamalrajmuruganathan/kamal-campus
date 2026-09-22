@@ -13,136 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "operateurs-comparaison",
-      "enonce": "Traduis chacune de ces phrases en une **condition**, en utilisant la variable indiquée et l'un des six symboles `=`, `≠`, `<`, `>`, `≤`, `≥`.\n\na) « Il y a **au moins** 18 élèves présents » (variable `e`).\nb) « Le prix **ne dépasse pas** 25 euros » (variable `prix`).\nc) « L'âge est **strictement inférieur** à 12 ans » (variable `age`).\nd) « La note **atteint** la moyenne de 10 » (variable `note`).",
+      "notion": "programme",
+      "enonce": "Programme : choisir 3, multiplier par 2, ajouter 5. Quel resultat ?",
       "corrige": [
-        "Pour chaque phrase, on repère les deux quantités comparées, le sens de l'inégalité, puis on se demande **si le cas d'égalité compte**.",
-        "a) « au moins 18 » veut dire 18 ou plus : le cas d'égalité est compris, donc $\\geqslant$. On écrit `e ≥ 18`.",
-        "b) « ne dépasse pas 25 » veut dire au plus 25, donc 25 ou moins, égalité comprise : `prix ≤ 25`.",
-        "c) « strictement inférieur à 12 » : le mot *strictement* exclut l'égalité, donc `age < 12`.",
-        "d) « atteint 10 » veut dire arriver à 10 ou plus : l'égalité est comprise, donc `note ≥ 10`."
+        "$ 3 \\times 2 + 5 = 6 + 5 = 11 $."
       ],
-      "reponse": "a) `e ≥ 18` · b) `prix ≤ 25` · c) `age < 12` · d) `note ≥ 10`."
+      "reponse": "$ 11 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "manipuler-variable",
-      "enonce": "Fais le **tableau de suivi** de ce programme (une colonne par variable), puis indique ce qu'il affiche.\n\n```\nmettre 4 dans a\nmettre 10 dans b\nmettre b − a dans a\nmettre a + b dans b\nafficher a\nafficher b\n```",
+      "notion": "programme",
+      "enonce": "Programme : choisir 4, multiplier par 3, ajouter 1. Quel resultat ?",
       "corrige": [
-        "Après les deux premières lignes : `a` vaut $4$ et `b` vaut $10$.",
-        "`mettre b − a dans a` : la machine **calcule d'abord** $b - a = 10 - 4 = 6$, puis range ce résultat dans `a`. L'ancienne valeur $4$ est écrasée : `a` vaut $6$, `b` vaut toujours $10$.",
-        "`mettre a + b dans b` : on calcule $a + b = 6 + 10 = 16$ avec les valeurs actuelles, puis on range dans `b` : `b` vaut $16$, `a` vaut toujours $6$.",
-        "Tableau de suivi : $(a,b)$ passe de $(4,10)$ à $(6,10)$ puis à $(6,16)$.",
-        "Les deux affichages donnent donc `a` = $6$ puis `b` = $16$."
+        "$ 4 \\times 3 + 1 = 12 + 1 = 13 $."
       ],
-      "reponse": "Le programme affiche $6$ puis $16$."
+      "reponse": "$ 13 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "instruction-conditionnelle",
-      "enonce": "Une salle de cinéma affiche « tarif réduit » quand l'âge du spectateur est **au plus 12 ans**, et « tarif plein » dans les autres cas.\n\na) Écris l'instruction conditionnelle correspondante, avec la variable `age` et la convention de la fiche (`si … alors … sinon … fin si`).\nb) Que s'affiche-t-il pour `age` = 12 ? pour `age` = 15 ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 5, multiplier par 2, ajouter 4. Quel resultat ?",
       "corrige": [
-        "a) « au plus 12 ans » veut dire 12 ou moins, égalité comprise : la condition est `age ≤ 12`. Il y a une action dans les deux cas, donc on utilise un `sinon` :",
-        "```\nsi age ≤ 12 alors\n    afficher « tarif réduit »\nsinon\n    afficher « tarif plein »\nfin si\n```",
-        "b) Pour `age` = 12 : $12 \\leqslant 12$ est **vrai** (l'égalité est comprise), on part dans `alors` et le programme affiche « tarif réduit ».",
-        "Pour `age` = 15 : $15 \\leqslant 12$ est **faux**, on part dans `sinon` et le programme affiche « tarif plein »."
+        "$ 5 \\times 2 + 4 = 10 + 4 = 14 $."
       ],
-      "reponse": "Programme `si age ≤ 12 alors afficher « tarif réduit » sinon afficher « tarif plein » fin si` ; il affiche « tarif réduit » pour 12 ans et « tarif plein » pour 15 ans."
+      "reponse": "$ 14 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "suivi-variable",
-      "enonce": "Ce programme demande un nombre `n`. Donne ce qu'il affiche pour la saisie $n = 100$, puis pour la saisie $n = 200$, en justifiant chaque étape.\n\n```\nmettre 0 dans r\ndemander un nombre et le mettre dans n\nsi n > 100 alors\n    mettre 5 dans r\nfin si\nmettre r + 1 dans r\nafficher r\n```",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 2, multiplier par 6, ajouter 3. Quel resultat ?",
       "corrige": [
-        "Saisie $n = 100$ : après les deux premières lignes, `r` vaut $0$ et `n` vaut $100$.",
-        "Test `100 > 100` : c'est **faux** (100 n'est pas strictement supérieur à 100), le bloc décalé est **sauté**, `r` reste à $0$.",
-        "`mettre r + 1 dans r` est écrit **après `fin si`** : il s'exécute quoi qu'il arrive, donc $r = 0 + 1 = 1$. Le programme affiche $1$.",
-        "Saisie $n = 200$ : cette fois `200 > 100` est **vrai**, le bloc s'exécute et met $5$ dans `r`.",
-        "Puis `mettre r + 1 dans r` donne $r = 5 + 1 = 6$. Le programme affiche $6$."
+        "$ 2 \\times 6 + 3 = 12 + 3 = 15 $."
       ],
-      "reponse": "Pour $n = 100$ il affiche $1$ ; pour $n = 200$ il affiche $6$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "ecrire-programme",
-      "enonce": "Un site marchand offre la livraison gratuite dès que le montant du panier **atteint 50 euros** ; en dessous, la livraison coûte 5 euros. On veut un programme qui demande le montant `m` du panier, puis affiche « livraison gratuite » ou « livraison : 5 euros ».\n\n1) Repère l'entrée et la sortie du programme.\n2) Écris le programme.\n3) Teste-le à la main pour `m` = 30, `m` = 60, et le cas frontière `m` = 50.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 7, multiplier par 1, ajouter 2. Quel resultat ?",
       "corrige": [
-        "1) Entrée : le montant `m` (à demander). Sortie : un message affiché.",
-        "2) « atteint 50 » comprend l'égalité, donc la condition est `m ≥ 50`. Deux messages possibles, donc un `sinon` :",
-        "```\ndemander un nombre et le mettre dans m\nsi m ≥ 50 alors\n    afficher « livraison gratuite »\nsinon\n    afficher « livraison : 5 euros »\nfin si\n```",
-        "3) `m` = 30 : $30 \\geqslant 50$ est faux → « livraison : 5 euros ». `m` = 60 : $60 \\geqslant 50$ est vrai → « livraison gratuite ».",
-        "Cas frontière `m` = 50 : $50 \\geqslant 50$ est **vrai** (égalité comprise) → « livraison gratuite ». C'est bien ce qu'on veut, puisque la gratuité s'applique **dès** 50 euros. Avec `m > 50`, le panier de 50 euros paierait la livraison à tort."
+        "$ 7 \\times 1 + 2 = 7 + 2 = 9 $."
       ],
-      "reponse": "Programme `si m ≥ 50 alors afficher « livraison gratuite » sinon afficher « livraison : 5 euros » fin si` ; il affiche « livraison : 5 euros » pour 30, « livraison gratuite » pour 60 et pour 50."
+      "reponse": "$ 9 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "modifier-programme",
-      "enonce": "À une fête foraine, un manège est autorisé aux personnes qui mesurent **au moins 140 cm** (la taille en cm est rangée dans la variable `taille`). Un élève a écrit :\n\n```\nsi taille > 140 alors\n    afficher « accès autorisé »\nsinon\n    afficher « accès refusé »\nfin si\n```\n\nCe programme se trompe pour une **seule** taille.\n\na) Pour quelle taille se trompe-t-il, et que devrait-il afficher ?\nb) Corrige le programme par la modification **minimale**.\nc) Explique en une phrase pourquoi c'est l'**opérateur** qui est en cause.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 6, multiplier par 2, ajouter 3. Quel resultat ?",
       "corrige": [
-        "La condition attendue traduit « au moins 140 » : 140 ou plus, égalité comprise, donc `taille ≥ 140`.",
-        "a) Le seul cas faux est `taille` = 140 exactement : `140 > 140` est **faux**, donc le programme part dans `sinon` et affiche « accès refusé ». Or 140 cm est autorisé (au moins 140), il devrait afficher « accès autorisé ».",
-        "b) Il suffit de remplacer `>` par `≥` :",
-        "```\nsi taille ≥ 140 alors\n    afficher « accès autorisé »\nsinon\n    afficher « accès refusé »\nfin si\n```",
-        "c) Un seul exemple faux, situé **pile sur la frontière** (140) : c'est la signature d'un opérateur trop strict. Le nombre 140 et les deux messages sont corrects ; seul le `>`, qui exclut l'égalité, devait devenir `≥`."
+        "$ 6 \\times 2 + 3 = 12 + 3 = 15 $."
       ],
-      "reponse": "Il se trompe pour `taille` = 140 (« accès refusé » au lieu de « accès autorisé ») ; on corrige en écrivant `si taille ≥ 140 alors`."
+      "reponse": "$ 15 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "compteur",
-      "enonce": "Fais le **tableau de suivi** de ce programme (une ligne par tour de boucle), puis indique ce qu'il affiche.\n\n```\nmettre 20 dans stock\nrépéter 3 fois\n    mettre stock − 6 dans stock\nfin répéter\nafficher stock\n```",
+      "notion": "programme",
+      "enonce": "Programme : choisir 4, multiplier par 4, ajouter 4. Quel resultat ?",
       "corrige": [
-        "`mettre 20 dans stock` : au départ, `stock` vaut $20$. La boucle répète **3 fois** la ligne décalée `mettre stock − 6 dans stock`, qui **retire** $6$ à chaque tour (la machine calcule d'abord `stock − 6`, puis range le résultat).",
-        "Tour 1 : $20 - 6 = 14$, donc `stock` vaut $14$. Tour 2 : $14 - 6 = 8$. Tour 3 : $8 - 6 = 2$.",
-        "Tableau de suivi : `stock` passe de $20$ à $14$, puis $8$, puis $2$. Après le `fin répéter`, `afficher stock` donne la valeur finale."
+        "$ 4 \\times 4 + 4 = 16 + 4 = 20 $."
       ],
-      "reponse": "Le programme affiche $2$."
+      "reponse": "$ 20 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "suivi-variable",
-      "enonce": "Ce programme enchaîne une **boucle** puis une **instruction conditionnelle**. Donne, en justifiant chaque étape, ce qu'il affiche.\n\n```\nmettre 0 dans t\nrépéter 5 fois\n    mettre t + 2 dans t\nfin répéter\nsi t ≥ 10 alors\n    afficher « objectif atteint »\nsinon\n    afficher « continue »\nfin si\n```",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 8, multiplier par 2, ajouter 1. Quel resultat ?",
       "corrige": [
-        "**Étape 1 — la boucle.** `t` part de $0$ et gagne $2$ à chaque tour, sur $5$ tours : $2$, puis $4$, $6$, $8$, $10$. Après le `fin répéter`, `t` vaut donc $10$.",
-        "**Étape 2 — le test.** On évalue la condition avec cette valeur : $10 \\geqslant 10$ est **vrai**, car l'égalité est comprise dans $\\geqslant$.",
-        "La condition étant vraie, le programme part dans la branche `alors` et affiche « objectif atteint » ; la branche `sinon` n'est pas exécutée."
+        "$ 8 \\times 2 + 1 = 16 + 1 = 17 $."
       ],
-      "reponse": "Après la boucle `t` vaut $10$, donc le programme affiche « objectif atteint »."
+      "reponse": "$ 17 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "raisonnement",
-      "enonce": "On considère ce programme, où l'utilisateur saisit un nombre `n`.\n\n```\ndemander un nombre et le mettre dans n\nmettre n + 3 dans n\nsi n ≥ 10 alors\n    afficher « ok »\nsinon\n    afficher « trop petit »\nfin si\n```\n\na) Que s'affiche-t-il pour la saisie `n` = 4 ? pour `n` = 7 ?\nb) Détermine **toutes** les saisies pour lesquelles le programme affiche « ok ». Justifie.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 3, multiplier par 5, ajouter 2. Quel resultat ?",
       "corrige": [
-        "Attention à l'ordre : la ligne `mettre n + 3 dans n` s'exécute **avant** le test, donc la condition porte sur la valeur **après** l'ajout de $3$, et non sur la saisie.",
-        "a) Saisie $4$ : après `mettre n + 3 dans n`, `n` vaut $4 + 3 = 7$. Test $7 \\geqslant 10$ : **faux** → « trop petit ». Saisie $7$ : `n` devient $7 + 3 = 10$ ; $10 \\geqslant 10$ est **vrai** → « ok ».",
-        "b) Le programme affiche « ok » exactement quand la valeur testée vérifie `n + 3 ≥ 10`, c'est-à-dire quand la saisie de départ vaut **au moins** $7$ (car $7 + 3 = 10$ est la plus petite valeur qui atteint $10$).",
-        "Vérification par la frontière : la saisie $6$ donne $9 < 10$ → « trop petit », tandis que $7$ donne $10 \\geqslant 10$ → « ok ». La frontière est donc bien à $7$, inclus."
+        "$ 3 \\times 5 + 2 = 15 + 2 = 17 $."
       ],
-      "reponse": "a) « trop petit » pour $4$, « ok » pour $7$. b) Le programme affiche « ok » pour toutes les saisies supérieures ou égales à $7$."
+      "reponse": "$ 17 $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "boucle-condition",
-      "enonce": "Nadia économise pour s'acheter un jeu. Sa tirelire est vide au départ. Pendant **6 semaines**, elle y ajoute **5 €** chaque semaine. À la fin, un programme lui dit si elle peut acheter le jeu, qui coûte **28 €**.\n\n```\nmettre 0 dans cagnotte\nrépéter 6 fois\n    mettre cagnotte + 5 dans cagnotte\nfin répéter\nsi cagnotte ≥ 28 alors\n    afficher « achat possible »\nsinon\n    afficher « pas encore »\nfin si\n```\n\n1. Quelle est la valeur de `cagnotte` après la boucle ?\n2. Qu'affiche le programme ?\n3. Le jeu passe à **32 €**. Quelle modification **minimale** faut-il faire, et qu'affiche alors le programme (le montant épargné ne change pas) ?\n4. Toujours au prix de 32 €, combien de semaines d'épargne faudrait-il **au total** pour que l'achat devienne possible ?\n5. Explique en une phrase pourquoi la ligne `mettre 0 dans cagnotte`, placée avant la boucle, est indispensable.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 9, multiplier par 1, ajouter 3. Quel resultat ?",
       "corrige": [
-        "1. `cagnotte` part de $0$ et gagne $5$ à chaque tour, sur $6$ tours : $5$, $10$, $15$, $20$, $25$, $30$. Après le `fin répéter`, `cagnotte` vaut $30$ (soit $6 \\times 5 = 30$ €).",
-        "2. On teste $30 \\geqslant 28$ : c'est **vrai**, donc le programme part dans `alors` et affiche « achat possible ».",
-        "3. Seul le **nombre** de la condition change : on remplace `28` par `32`, ce qui donne `si cagnotte ≥ 32 alors`. La cagnotte vaut toujours $30$, et $30 \\geqslant 32$ est **faux** : le programme affiche « pas encore ».",
-        "4. Avec $5$ € par semaine, il faut atteindre au moins $32$ €. En $6$ semaines on a $30$ € (insuffisant) ; en $7$ semaines, $7 \\times 5 = 35$ € : comme $35 \\geqslant 32$, il faut **7 semaines** au total.",
-        "5. Cette ligne **initialise** le compteur : sans elle, la machine ne saurait pas de quelle valeur partir avant d'ajouter les $5$ €, et le total serait imprévisible."
+        "$ 9 \\times 1 + 3 = 9 + 3 = 12 $."
       ],
-      "reponse": "`cagnotte` = $30$ € et le programme affiche « achat possible » ; au prix de $32$ € on remplace `28` par `32` et il affiche « pas encore » ; il faudrait alors $7$ semaines d'épargne. La ligne `mettre 0 dans cagnotte` sert à initialiser le compteur."
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 5, multiplier par 3, ajouter 2. Quel resultat ?",
+      "corrige": [
+        "$ 5 \\times 3 + 2 = 15 + 2 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : choisir 2, multiplier par 7, ajouter 4. Quel resultat ?",
+      "corrige": [
+        "$ 2 \\times 7 + 4 = 14 + 4 = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 10, diviser par 3, ajouter 2. Resultat ?",
+      "corrige": [
+        "$ 10 \\div 3 + 2 = 3 + 2 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 20, diviser par 5, ajouter 4. Resultat ?",
+      "corrige": [
+        "$ 20 \\div 5 + 4 = 4 + 4 = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 15, diviser par 3, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 15 \\div 3 + 1 = 5 + 1 = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 24, diviser par 6, ajouter 3. Resultat ?",
+      "corrige": [
+        "$ 24 \\div 6 + 3 = 4 + 3 = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 30, diviser par 5, ajouter 5. Resultat ?",
+      "corrige": [
+        "$ 30 \\div 5 + 5 = 6 + 5 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 18, diviser par 2, ajouter 7. Resultat ?",
+      "corrige": [
+        "$ 18 \\div 2 + 7 = 9 + 7 = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 40, diviser par 8, ajouter 2. Resultat ?",
+      "corrige": [
+        "$ 40 \\div 8 + 2 = 5 + 2 = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : choisir 12, diviser par 4, ajouter 6. Resultat ?",
+      "corrige": [
+        "$ 12 \\div 4 + 6 = 3 + 6 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 1 et on ajoute 2 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 3 \\times 2 = 1 + 6 = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 0 et on ajoute 3 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 3 \\times 3 = 0 + 9 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 2 et on ajoute 5 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 3 \\times 5 = 2 + 15 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 1 et on ajoute 4 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 3 \\times 4 = 1 + 12 = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 3 et on ajoute 2 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 3 \\times 2 = 3 + 6 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 0 et on ajoute 6 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 3 \\times 6 = 0 + 18 = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 2 et on ajoute 3 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 3 \\times 3 = 2 + 9 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 1 et on ajoute 7 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 3 \\times 7 = 1 + 21 = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 4 et on ajoute 2 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 4 + 3 \\times 2 = 4 + 6 = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 0 et on ajoute 5 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 3 \\times 5 = 0 + 15 = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 3 et on ajoute 4 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 3 \\times 4 = 3 + 12 = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "suite-boucle",
+      "enonce": "On part de 2 et on ajoute 2 trois fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 3 \\times 2 = 2 + 6 = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 3, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 3 \\times 2 + 1 = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 4, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 4 \\times 2 + 1 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 5, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 5 \\times 2 + 1 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 6, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 6 \\times 2 + 1 = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 7, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 7 \\times 2 + 1 = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 8, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 8 \\times 2 + 1 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 9, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 9 \\times 2 + 1 = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 10, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 10 \\times 2 + 1 = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 11, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 11 \\times 2 + 1 = 23 $."
+      ],
+      "reponse": "$ 23 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 12, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 12 \\times 2 + 1 = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 13, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 13 \\times 2 + 1 = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 14, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 14 \\times 2 + 1 = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 15, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 15 \\times 2 + 1 = 31 $."
+      ],
+      "reponse": "$ 31 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 16, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 16 \\times 2 + 1 = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 17, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 17 \\times 2 + 1 = 35 $."
+      ],
+      "reponse": "$ 35 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 18, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 18 \\times 2 + 1 = 37 $."
+      ],
+      "reponse": "$ 37 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 19, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 19 \\times 2 + 1 = 39 $."
+      ],
+      "reponse": "$ 39 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Choisir 20, multiplier par 2, ajouter 1. Resultat ?",
+      "corrige": [
+        "$ 20 \\times 2 + 1 = 41 $."
+      ],
+      "reponse": "$ 41 $"
     }
   ]
 }

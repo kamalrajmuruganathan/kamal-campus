@@ -13,130 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "transformations",
-      "enonce": "Calculer sans calculatrice. (a) $\\log(10\\,000)$, $\\log(0{,}001)$ et $\\log(10^7)$. (b) En utilisant $\\log 2 \\approx 0{,}301$, donner une valeur approchée de $\\log 20$, $\\log 8$ et $\\log 5$.",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{0}) $.",
       "corrige": [
-        "(a) Le log compte les puissances de $10$ : $10\\,000 = 10^4$ donc $\\log(10\\,000) = 4$ ; $0{,}001 = 10^{-3}$ donc $\\log(0{,}001) = -3$ ; et directement $\\log(10^7) = 7$.",
-        "(b) $\\log 20 = \\log(2 \\times 10) = \\log 2 + \\log 10 \\approx 0{,}301 + 1 = 1{,}301$.",
-        "$\\log 8 = \\log(2^3) = 3\\log 2 \\approx 3 \\times 0{,}301 = 0{,}903$.",
-        "$\\log 5 = \\log\\dfrac{10}{2} = \\log 10 - \\log 2 \\approx 1 - 0{,}301 = 0{,}699$. L'astuce : quand tu ne connais pas le log d'un nombre, décompose-le en produit, quotient ou puissance de nombres dont tu connais le log."
+        "$ \\log(10^{0}) = 0 $."
       ],
-      "reponse": "(a) $4$ ; $-3$ ; $7$. (b) $\\log 20 \\approx 1{,}301$ ; $\\log 8 \\approx 0{,}903$ ; $\\log 5 \\approx 0{,}699$."
+      "reponse": "$ 0 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "resolution-equations",
-      "enonce": "Résoudre chaque équation (valeur exacte puis arrondi au centième). (a) $10^x = 450$. (b) $2^x = 30$. (c) $5^x = -2$.",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{1}) $.",
       "corrige": [
-        "(a) Par définition du logarithme décimal, la solution de $10^x = 450$ est $x = \\log 450 \\approx 2{,}65$. Contrôle de cohérence : $100 < 450 < 1000$, donc $2 < x < 3$. ✓",
-        "(b) Les deux membres sont strictement positifs : on prend le log. $\\log(2^x) = \\log 30$, soit $x\\log 2 = \\log 30$ (l'exposant descend), d'où $x = \\dfrac{\\log 30}{\\log 2} \\approx \\dfrac{1{,}477}{0{,}301} \\approx 4{,}91$. Contrôle : $2^4 = 16 < 30 < 32 = 2^5$, donc $4 < x < 5$. ✓",
-        "(c) Une exponentielle est strictement positive : $5^x > 0$ pour tout $x$, donc $5^x = -2$ n'a **aucune solution**. Surtout ne pas écrire $\\log(-2)$, qui n'existe pas."
+        "$ \\log(10^{1}) = 1 $."
       ],
-      "reponse": "(a) $x = \\log 450 \\approx 2{,}65$ ; (b) $x = \\dfrac{\\log 30}{\\log 2} \\approx 4{,}91$ ; (c) aucune solution."
+      "reponse": "$ 1 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "resolution-equations",
-      "enonce": "Un capital de $8\\,000$ € est placé à $2{,}5\\,\\%$ par an (intérêts composés). On note $C(x) = 8000 \\times 1{,}025^x$ le capital au bout de $x$ années. (a) Traduire « le capital a doublé » par une équation d'inconnue $x$, puis la résoudre. (b) Au bout de combien d'années entières le capital a-t-il effectivement doublé ? Justifier par un encadrement. (c) Même question pour un triplement du capital.",
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{2}) $.",
       "corrige": [
-        "(a) Le capital a doublé lorsque $C(x) = 16\\,000$, c'est-à-dire $8000 \\times 1{,}025^x = 16000$, soit $1{,}025^x = 2$. On prend le log : $x \\log 1{,}025 = \\log 2$, d'où $x = \\dfrac{\\log 2}{\\log 1{,}025} \\approx \\dfrac{0{,}30103}{0{,}01072} \\approx 28{,}1$.",
-        "(b) $x \\approx 28{,}1$ n'est pas entier : on encadre. $1{,}025^{28} \\approx 1{,}996 < 2$ (pas encore doublé au bout de $28$ ans) et $1{,}025^{29} \\approx 2{,}046 > 2$. Le capital a donc doublé au bout de $29$ années entières : on arrondit à l'année **supérieure**, pas au plus proche.",
-        "(c) Triplement : $1{,}025^x = 3$, donc $x = \\dfrac{\\log 3}{\\log 1{,}025} \\approx \\dfrac{0{,}47712}{0{,}01072} \\approx 44{,}5$. Encadrement : $1{,}025^{44} \\approx 2{,}96 < 3 < 1{,}025^{45} \\approx 3{,}04$ : le capital a triplé au bout de $45$ années entières. Remarque : tripler ne prend pas $1{,}5$ fois le temps de doubler — les durées suivent les logs ($\\log 3 \\neq 1{,}5\\log 2$), pas la proportionnalité."
+        "$ \\log(10^{2}) = 2 $."
       ],
-      "reponse": "(a) $1{,}025^x = 2$, soit $x = \\dfrac{\\log 2}{\\log 1{,}025} \\approx 28{,}1$ ; (b) au bout de $29$ ans ; (c) $x \\approx 44{,}5$, soit au bout de $45$ ans."
+      "reponse": "$ 2 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "contextes",
-      "enonce": "En chimie, le pH d'une solution est $\\text{pH} = -\\log c$, où $c = [\\mathrm{H_3O^+}]$ est la concentration en ions oxonium (en mol/L). (a) Calculer le pH d'une solution de concentration $c = 5 \\times 10^{-3}$ mol/L (arrondir au dixième), en utilisant $\\log 5 \\approx 0{,}699$. (b) Une eau de pluie a un pH de $4{,}2$. Calculer sa concentration en ions oxonium (arrondir à $10^{-6}$ près). (c) Montrer que si la concentration est multipliée par $10$, le pH diminue exactement de $1$.",
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{3}) $.",
       "corrige": [
-        "(a) $\\text{pH} = -\\log(5 \\times 10^{-3}) = -(\\log 5 + \\log 10^{-3}) = -(\\log 5 - 3) = 3 - \\log 5 \\approx 3 - 0{,}699 = 2{,}301$, soit un pH d'environ $2{,}3$ (solution très acide).",
-        "(b) $\\text{pH} = 4{,}2$ signifie $-\\log c = 4{,}2$, donc $\\log c = -4{,}2$ : par définition du log, $c = 10^{-4{,}2}$. À la calculatrice : $c \\approx 6{,}3 \\times 10^{-5}$ mol/L (en effet $10^{-4{,}2} = 10^{0{,}8} \\times 10^{-5}$ et $10^{0{,}8} \\approx 6{,}31$).",
-        "(c) Pour une concentration $10c$ : $-\\log(10c) = -(\\log 10 + \\log c) = -1 - \\log c = \\text{pH} - 1$. La propriété $\\log(ab) = \\log a + \\log b$ transforme la multiplication par $10$ en diminution de $1$ unité de pH : c'est pour cela que l'échelle de pH est dite logarithmique."
+        "$ \\log(10^{3}) = 3 $."
       ],
-      "reponse": "(a) $\\text{pH} = 3 - \\log 5 \\approx 2{,}3$ ; (b) $c = 10^{-4{,}2} \\approx 6{,}3 \\times 10^{-5}$ mol/L ; (c) $-\\log(10c) = \\text{pH} - 1$ par $\\log(10c) = 1 + \\log c$."
+      "reponse": "$ 3 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "contextes",
-      "enonce": "Le niveau sonore, en décibels, d'un son d'intensité $I$ (en W/m²) est $L = 10\\log\\dfrac{I}{I_0}$, avec $I_0 = 10^{-12}$ W/m². (a) Calculer le niveau sonore d'une conversation d'intensité $I = 10^{-5}$ W/m². (b) Montrer que si l'intensité double, le niveau sonore augmente d'environ $3$ dB, quelle que soit l'intensité de départ. (c) Un concert atteint $85$ dB. Calculer l'intensité sonore correspondante. (d) Combien de fois l'intensité d'un son de $100$ dB est-elle plus grande que celle d'un son de $60$ dB ?",
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{4}) $.",
       "corrige": [
-        "(a) $\\dfrac{I}{I_0} = \\dfrac{10^{-5}}{10^{-12}} = 10^{7}$, donc $L = 10\\log(10^{7}) = 10 \\times 7 = 70$ dB.",
-        "(b) Pour une intensité $2I$ : $L' = 10\\log\\dfrac{2I}{I_0} = 10\\left(\\log 2 + \\log\\dfrac{I}{I_0}\\right) = 10\\log 2 + L \\approx L + 3{,}0$. Le terme $10\\log 2 \\approx 3{,}01$ ne dépend pas de $I$ : doubler l'intensité ajoute toujours environ $3$ dB — c'est la propriété $\\log(ab) = \\log a + \\log b$.",
-        "(c) $85 = 10\\log\\dfrac{I}{I_0}$ donne $\\log\\dfrac{I}{I_0} = 8{,}5$, donc par définition du log $\\dfrac{I}{I_0} = 10^{8{,}5}$, puis $I = 10^{-12} \\times 10^{8{,}5} = 10^{-3{,}5} \\approx 3{,}2 \\times 10^{-4}$ W/m².",
-        "(d) L'écart est de $100 - 60 = 40$ dB, soit $10\\log\\dfrac{I_{100}}{I_{60}} = 40$, donc $\\log\\dfrac{I_{100}}{I_{60}} = 4$ et $\\dfrac{I_{100}}{I_{60}} = 10^4$ : l'intensité est $10\\,000$ fois plus grande. Le piège : les décibels s'ajoutent quand les intensités se multiplient — $40$ dB d'écart, ce n'est pas « $40$ fois plus fort »."
+        "$ \\log(10^{4}) = 4 $."
       ],
-      "reponse": "(a) $70$ dB ; (b) $L' = L + 10\\log 2 \\approx L + 3$ dB ; (c) $I = 10^{-3{,}5} \\approx 3{,}2 \\times 10^{-4}$ W/m² ; (d) $10^4 = 10\\,000$ fois."
+      "reponse": "$ 4 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "resolution-equations",
-      "enonce": "Trois situations, une même équation. (a) Un véhicule perd $18\\,\\%$ de sa valeur chaque année. Au bout de combien d'années entières sa valeur passe-t-elle sous la moitié du prix d'achat ? (b) Quel taux annuel constant $t$ (en %) permet à un capital de doubler en exactement $10$ ans ? (Arrondir au dixième ; on pourra utiliser l'exposant $1/n$ du chapitre sur les exponentielles.) (c) Une culture contient $500$ bactéries et leur nombre double chaque heure : $N(x) = 500 \\times 2^x$. Au bout de combien de temps dépasse-t-elle le million de bactéries ? (On utilisera $\\log 2 \\approx 0{,}30103$.)",
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{5}) $.",
       "corrige": [
-        "(a) La valeur est multipliée par $0{,}82$ chaque année : elle vaut la moitié quand $0{,}82^x = 0{,}5$, soit $x = \\dfrac{\\log 0{,}5}{\\log 0{,}82} \\approx \\dfrac{-0{,}301}{-0{,}0862} \\approx 3{,}49$. Les deux logs sont négatifs (nombres entre $0$ et $1$), le quotient est bien positif. Encadrement : $0{,}82^3 \\approx 0{,}551 > 0{,}5$ et $0{,}82^4 \\approx 0{,}452 < 0{,}5$ : la valeur passe sous la moitié au bout de $4$ années entières.",
-        "(b) Avec un coefficient annuel $a$, le capital est multiplié par $a^{10}$ en $10$ ans : on veut $a^{10} = 2$, donc $a = 2^{1/10} \\approx 1{,}0718$ (exposant $1/n$ du chapitre exponentielles). D'où $t = (a - 1) \\times 100 \\approx 7{,}2\\,\\%$ par an. Vérification par le log : $\\log a = \\dfrac{\\log 2}{10} \\approx 0{,}0301$, et $10^{0{,}0301} \\approx 1{,}072$. ✓ Ce n'est pas $100/10 = 10\\,\\%$ : la composition des intérêts fait le travail plus vite.",
-        "(c) On cherche $x$ tel que $500 \\times 2^x > 10^6$, soit $2^x > 2000$. On résout l'équation associée $2^x = 2000$ : $x = \\dfrac{\\log 2000}{\\log 2} = \\dfrac{\\log 2 + \\log 1000}{\\log 2} = \\dfrac{0{,}30103 + 3}{0{,}30103} \\approx 10{,}97$ (transformation : $2000 = 2 \\times 10^3$).",
-        "Comme $x \\mapsto 2^x$ est strictement croissante, la population dépasse le million après $x \\approx 10{,}97$ h, soit au bout d'environ $11$ heures (à l'heure entière : $N(10) = 512\\,000 < 10^6$ et $N(11) = 1\\,024\\,000 > 10^6$)."
+        "$ \\log(10^{5}) = 5 $."
       ],
-      "reponse": "(a) au bout de $4$ ans ($x \\approx 3{,}49$) ; (b) $a = 2^{1/10} \\approx 1{,}0718$, soit $t \\approx 7{,}2\\,\\%$ par an ; (c) $x = \\dfrac{\\log 2000}{\\log 2} \\approx 10{,}97$, soit environ $11$ h."
+      "reponse": "$ 5 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "transformations",
-      "enonce": "Transformer les expressions suivantes. On donne $\\log 2 \\approx 0{,}301$ et $\\log 3 \\approx 0{,}477$. (a) Exprimer à l'aide de $\\log 2$ et $\\log 3$, puis donner une valeur approchée : $\\log 6$, $\\log\\dfrac{9}{2}$ et $\\log 24$. (b) Regrouper en un seul logarithme et simplifier si possible : $2\\log 3 + \\log 2$ et $\\log 40 - \\log 4$.",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{6}) $.",
       "corrige": [
-        "(a) $\\log 6 = \\log(2 \\times 3) = \\log 2 + \\log 3 \\approx 0{,}301 + 0{,}477 = 0{,}778$.",
-        "$\\log\\dfrac{9}{2} = \\log 9 - \\log 2 = \\log(3^2) - \\log 2 = 2\\log 3 - \\log 2 \\approx 0{,}954 - 0{,}301 = 0{,}653$.",
-        "$\\log 24 = \\log(2^3 \\times 3) = 3\\log 2 + \\log 3 \\approx 0{,}903 + 0{,}477 = 1{,}380$. Le réflexe : décomposer le nombre en produit, quotient ou puissance de $2$, $3$ et $10$, dont on connaît le log.",
-        "(b) $2\\log 3 + \\log 2 = \\log(3^2) + \\log 2 = \\log 9 + \\log 2 = \\log(9 \\times 2) = \\log 18 \\approx 1{,}255$.",
-        "$\\log 40 - \\log 4 = \\log\\dfrac{40}{4} = \\log 10 = 1$. Ici la simplification est exacte, sans valeur approchée : une somme (ou différence) de logs peut rentrer dans un seul log."
+        "$ \\log(10^{6}) = 6 $."
       ],
-      "reponse": "(a) $\\log 6 \\approx 0{,}778$ ; $\\log\\dfrac{9}{2} = 2\\log 3 - \\log 2 \\approx 0{,}653$ ; $\\log 24 = 3\\log 2 + \\log 3 \\approx 1{,}380$. (b) $2\\log 3 + \\log 2 = \\log 18 \\approx 1{,}255$ ; $\\log 40 - \\log 4 = \\log 10 = 1$."
+      "reponse": "$ 6 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "contextes",
-      "enonce": "La magnitude d'un séisme sur l'échelle de Richter est $M = \\log\\dfrac{A}{A_0}$, où $A$ est l'amplitude maximale enregistrée et $A_0$ une amplitude de référence. (a) Un séisme a une amplitude $A = 3 \\times 10^6\\,A_0$. Calculer sa magnitude (arrondir au dixième ; on prend $\\log 3 \\approx 0{,}477$). (b) Le séisme de Kobe (1995) a atteint la magnitude $7{,}3$ et celui de L'Aquila (2009) la magnitude $6{,}3$. Combien de fois l'amplitude du séisme de Kobe est-elle plus grande que celle de L'Aquila ?",
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{-1}) $.",
       "corrige": [
-        "(a) $M = \\log\\dfrac{A}{A_0} = \\log(3 \\times 10^6) = \\log 3 + \\log(10^6) = \\log 3 + 6 \\approx 0{,}477 + 6 = 6{,}477$, soit une magnitude d'environ $6{,}5$.",
-        "(b) Notons $A_1$ et $A_2$ les amplitudes de Kobe et de L'Aquila. On a $\\log\\dfrac{A_1}{A_0} = 7{,}3$ et $\\log\\dfrac{A_2}{A_0} = 6{,}3$. En soustrayant et en utilisant $\\log\\dfrac{A_1}{A_0} - \\log\\dfrac{A_2}{A_0} = \\log\\dfrac{A_1}{A_2}$, on obtient $\\log\\dfrac{A_1}{A_2} = 7{,}3 - 6{,}3 = 1$.",
-        "Par définition du logarithme, $\\log\\dfrac{A_1}{A_2} = 1$ équivaut à $\\dfrac{A_1}{A_2} = 10^1 = 10$ : l'amplitude du séisme de Kobe est $10$ fois plus grande. Le piège classique : $1$ point d'écart de magnitude, ce n'est pas « un peu plus fort », c'est une amplitude multipliée par $10$."
+        "$ \\log(10^{-1}) = -1 $."
       ],
-      "reponse": "(a) $M = \\log 3 + 6 \\approx 6{,}5$ ; (b) $\\dfrac{A_1}{A_2} = 10^{7{,}3 - 6{,}3} = 10^1 = 10$ fois plus grande."
+      "reponse": "$ -1 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "resolution-equations",
-      "enonce": "Deux placements sont proposés. Le placement A part de $10\\,000$ € à $3\\,\\%$ par an ; sa valeur au bout de $x$ années est $A(x) = 10\\,000 \\times 1{,}03^x$. Le placement B part de $12\\,000$ € à $1{,}5\\,\\%$ par an : $B(x) = 12\\,000 \\times 1{,}015^x$. (a) Au bout de combien d'années entières le placement A dépasse-t-il le placement B ? (b) Vérifier la réponse en comparant $A(x)$ et $B(x)$ à cette année-là et à la précédente.",
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{-2}) $.",
       "corrige": [
-        "(a) On cherche $x$ tel que $A(x) > B(x)$, soit $10\\,000 \\times 1{,}03^x > 12\\,000 \\times 1{,}015^x$. On regroupe les puissances d'un même côté : $\\dfrac{1{,}03^x}{1{,}015^x} > \\dfrac{12\\,000}{10\\,000}$, c'est-à-dire $\\left(\\dfrac{1{,}03}{1{,}015}\\right)^x > 1{,}2$.",
-        "Le coefficient vaut $\\dfrac{1{,}03}{1{,}015} \\approx 1{,}01478 > 1$. On résout l'équation associée $1{,}01478^x = 1{,}2$ en prenant le log : $x = \\dfrac{\\log 1{,}2}{\\log 1{,}01478} \\approx \\dfrac{0{,}07918}{0{,}006371} \\approx 12{,}43$.",
-        "Comme la fonction $x \\mapsto 1{,}01478^x$ est strictement croissante (base $> 1$), l'inégalité $\\left(\\dfrac{1{,}03}{1{,}015}\\right)^x > 1{,}2$ est vraie à partir de $x \\approx 12{,}43$ : le placement A dépasse le placement B au bout de $13$ années entières.",
-        "(b) Vérification : $A(12) = 10\\,000 \\times 1{,}03^{12} \\approx 14\\,258$ € et $B(12) = 12\\,000 \\times 1{,}015^{12} \\approx 14\\,347$ € : à $12$ ans, B est encore devant. À $13$ ans, $A(13) \\approx 14\\,685$ € et $B(13) \\approx 14\\,562$ € : A est passé devant. La réponse « $13$ ans » est bien confirmée."
+        "$ \\log(10^{-2}) = -2 $."
       ],
-      "reponse": "(a) $\\left(\\dfrac{1{,}03}{1{,}015}\\right)^x > 1{,}2$, soit $x > \\dfrac{\\log 1{,}2}{\\log 1{,}01478} \\approx 12{,}43$ : A dépasse B au bout de $13$ ans. (b) $A(12) \\approx 14\\,258 < B(12) \\approx 14\\,347$ et $A(13) \\approx 14\\,685 > B(13) \\approx 14\\,562$."
+      "reponse": "$ -2 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "contextes",
-      "enonce": "PROBLÈME. Après une injection, la quantité de médicament présente dans le sang d'un patient, en milligrammes, au bout de $x$ heures, est modélisée par $Q(x) = 240 \\times 0{,}8^{x}$. On donne $\\log 2 \\approx 0{,}30103$. 1. Calculer la quantité de médicament au bout de $3$ heures (arrondir au dixième de mg). 2. Quel pourcentage du médicament présent est éliminé chaque heure ? Interpréter le coefficient $0{,}8$. 3. Résoudre l'équation $Q(x) = 120$ et interpréter le résultat (valeur exacte puis arrondi au dixième d'heure). 4. Le médicament n'est plus actif dès que la quantité passe sous $30$ mg. Déterminer au bout de combien d'heures entières il cesse d'être actif. 5. On double la dose injectée : $Q_2(x) = 480 \\times 0{,}8^{x}$. Montrer que le médicament ne reste actif qu'environ $3$ heures de plus, et relier ce résultat à la question 3.",
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{-3}) $.",
       "corrige": [
-        "1. $Q(3) = 240 \\times 0{,}8^{3} = 240 \\times 0{,}512 = 122{,}88$, soit environ $122{,}9$ mg.",
-        "2. D'une heure à la suivante, la quantité est multipliée par $0{,}8$ : il en reste $80\\,\\%$, donc $20\\,\\%$ du médicament présent est éliminé chaque heure. Le coefficient $0{,}8 = 1 - 0{,}20$ traduit une baisse de $20\\,\\%$ par heure.",
-        "3. $Q(x) = 120$ s'écrit $240 \\times 0{,}8^{x} = 120$, soit $0{,}8^{x} = 0{,}5$. On prend le log : $x = \\dfrac{\\log 0{,}5}{\\log 0{,}8}$. Or $\\log 0{,}5 = -\\log 2 \\approx -0{,}30103$ et $\\log 0{,}8 = \\log\\dfrac{8}{10} = 3\\log 2 - 1 \\approx -0{,}09691$, d'où $x = \\dfrac{-0{,}30103}{-0{,}09691} \\approx 3{,}1$ h. C'est le temps de demi-vie : au bout d'environ $3{,}1$ heures, il ne reste que la moitié de la dose initiale.",
-        "4. On cherche le plus petit entier $x$ tel que $Q(x) < 30$, soit $240 \\times 0{,}8^{x} < 30$, c'est-à-dire $0{,}8^{x} < 0{,}125 = \\dfrac{1}{8}$. On résout $0{,}8^{x} = \\dfrac{1}{8}$ : $x = \\dfrac{\\log(1/8)}{\\log 0{,}8} = \\dfrac{-3\\log 2}{3\\log 2 - 1} \\approx \\dfrac{-0{,}90309}{-0{,}09691} \\approx 9{,}32$. La fonction étant décroissante, on encadre : $Q(9) = 240 \\times 0{,}8^{9} \\approx 32{,}2$ mg $> 30$ et $Q(10) = 240 \\times 0{,}8^{10} \\approx 25{,}8$ mg $< 30$. Le médicament cesse donc d'être actif au bout de $10$ heures.",
-        "5. Avec la dose double, le seuil de $30$ mg est atteint quand $480 \\times 0{,}8^{x} = 30$, soit $0{,}8^{x} = \\dfrac{30}{480} = \\dfrac{1}{16}$, d'où $x = \\dfrac{\\log(1/16)}{\\log 0{,}8} = \\dfrac{-4\\log 2}{3\\log 2 - 1} \\approx \\dfrac{-1{,}20412}{-0{,}09691} \\approx 12{,}43$ h, contre $\\approx 9{,}32$ h avec la dose simple. L'écart est $12{,}43 - 9{,}32 \\approx 3{,}1$ h : doubler la dose ne fait gagner qu'une demi-vie (le temps trouvé à la question 3), car passer du seuil $\\dfrac{1}{16}$ au seuil $\\dfrac{1}{8}$ revient à multiplier la quantité par $2$."
+        "$ \\log(10^{-3}) = -3 $."
       ],
-      "reponse": "1. $Q(3) = 122{,}88 \\approx 122{,}9$ mg. 2. $20\\,\\%$ éliminés par heure (coefficient $0{,}8$). 3. $x = \\dfrac{\\log 0{,}5}{\\log 0{,}8} \\approx 3{,}1$ h (demi-vie). 4. au bout de $10$ heures ($Q(9) \\approx 32{,}2 > 30 > Q(10) \\approx 25{,}8$). 5. seuil atteint vers $12{,}4$ h au lieu de $9{,}3$ h, soit $\\approx 3{,}1$ h de plus : doubler la dose ne gagne qu'une demi-vie."
+      "reponse": "$ -3 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{7}) $.",
+      "corrige": [
+        "$ \\log(10^{7}) = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "Calculer $ \\log(10^{8}) $.",
+      "corrige": [
+        "$ \\log(10^{8}) = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(1) $.",
+      "corrige": [
+        "$ 1 = 10^{0} $ donc $ \\log(1) = 0 $."
+      ],
+      "reponse": "$ 0 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(10) $.",
+      "corrige": [
+        "$ 10 = 10^{1} $ donc $ \\log(10) = 1 $."
+      ],
+      "reponse": "$ 1 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(100) $.",
+      "corrige": [
+        "$ 100 = 10^{2} $ donc $ \\log(100) = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(1000) $.",
+      "corrige": [
+        "$ 1000 = 10^{3} $ donc $ \\log(1000) = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(10000) $.",
+      "corrige": [
+        "$ 10000 = 10^{4} $ donc $ \\log(10000) = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(100000) $.",
+      "corrige": [
+        "$ 100000 = 10^{5} $ donc $ \\log(100000) = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(1000000) $.",
+      "corrige": [
+        "$ 1000000 = 10^{6} $ donc $ \\log(1000000) = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(0,1) $.",
+      "corrige": [
+        "$ 0,1 = 10^{-1} $ donc $ \\log(0,1) = -1 $."
+      ],
+      "reponse": "$ -1 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(0,01) $.",
+      "corrige": [
+        "$ 0,01 = 10^{-2} $ donc $ \\log(0,01) = -2 $."
+      ],
+      "reponse": "$ -2 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "log-nombre",
+      "enonce": "Calculer $ \\log(0,001) $.",
+      "corrige": [
+        "$ 0,001 = 10^{-3} $ donc $ \\log(0,001) = -3 $."
+      ],
+      "reponse": "$ -3 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{1}) $ ?",
+      "corrige": [
+        "$ = 1 $."
+      ],
+      "reponse": "$ 1 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{2}) $ ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{3}) $ ?",
+      "corrige": [
+        "$ = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{4}) $ ?",
+      "corrige": [
+        "$ = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{5}) $ ?",
+      "corrige": [
+        "$ = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{6}) $ ?",
+      "corrige": [
+        "$ = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{7}) $ ?",
+      "corrige": [
+        "$ = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{8}) $ ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{9}) $ ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{10}) $ ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{11}) $ ?",
+      "corrige": [
+        "$ = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{12}) $ ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{13}) $ ?",
+      "corrige": [
+        "$ = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{14}) $ ?",
+      "corrige": [
+        "$ = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{15}) $ ?",
+      "corrige": [
+        "$ = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{16}) $ ?",
+      "corrige": [
+        "$ = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{17}) $ ?",
+      "corrige": [
+        "$ = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{18}) $ ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{19}) $ ?",
+      "corrige": [
+        "$ = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{20}) $ ?",
+      "corrige": [
+        "$ = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{21}) $ ?",
+      "corrige": [
+        "$ = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{22}) $ ?",
+      "corrige": [
+        "$ = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{23}) $ ?",
+      "corrige": [
+        "$ = 23 $."
+      ],
+      "reponse": "$ 23 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{24}) $ ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{25}) $ ?",
+      "corrige": [
+        "$ = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{26}) $ ?",
+      "corrige": [
+        "$ = 26 $."
+      ],
+      "reponse": "$ 26 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{27}) $ ?",
+      "corrige": [
+        "$ = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "log-puissance",
+      "enonce": "$ \\log(10^{28}) $ ?",
+      "corrige": [
+        "$ = 28 $."
+      ],
+      "reponse": "$ 28 $"
     }
   ]
 }

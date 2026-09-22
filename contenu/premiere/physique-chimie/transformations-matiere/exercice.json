@@ -13,134 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "concentration",
-      "enonce": "On dissout $n = 0{,}20$ mol de glucose dans de l'eau, puis on complète jusqu'à obtenir $V = 250$ mL de solution. Calculer la concentration en quantité de matière $c$ de la solution. Attention à l'unité de volume.",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de l'eau H2O : 18 g/mol. Quantite de matiere dans 18 g ?",
       "corrige": [
-        "La concentration en quantité de matière est $c = \\dfrac{n}{V}$, où $V$ doit être exprimé en litres (L) pour obtenir une concentration en mol·L⁻¹.",
-        "On convertit le volume : $V = 250$ mL $= 250 \\times 10^{-3}$ L $= 0{,}250$ L.",
-        "On applique la formule : $c = \\dfrac{0{,}20}{0{,}250} = 0{,}80$ mol·L⁻¹.",
-        "Oublier de convertir les mL en L aurait donné un résultat $1000$ fois trop petit."
+        "$ n = \\dfrac{m}{M} = \\dfrac{18}{18} = 1 $ mol."
       ],
-      "reponse": "$c = 0{,}80$ mol·L⁻¹."
+      "reponse": "$ 1 $ mol"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "avancement",
-      "enonce": "Le fer et le soufre réagissent selon $\\mathrm{Fe} + \\mathrm{S} \\rightarrow \\mathrm{FeS}$. On introduit initialement $n_\\mathrm{Fe} = 0{,}40$ mol et $n_\\mathrm{S} = 0{,}40$ mol. Exprimer les quantités de matière à l'avancement $x$, puis déterminer l'avancement maximal $x_{\\max}$.",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de l'eau H2O : 18 g/mol. Quantite de matiere dans 36 g ?",
       "corrige": [
-        "Tous les nombres stœchiométriques valent $1$. À l'avancement $x$ : les réactifs diminuent, $n_\\mathrm{Fe} = 0{,}40 - x$ et $n_\\mathrm{S} = 0{,}40 - x$ ; le produit augmente, $n_\\mathrm{FeS} = x$.",
-        "L'avancement maximal est atteint lorsqu'un réactif s'annule : $0{,}40 - x = 0$ donne $x = 0{,}40$ pour le fer comme pour le soufre.",
-        "Les deux réactifs s'épuisent simultanément : le mélange est stœchiométrique et $x_{\\max} = 0{,}40$ mol."
+        "$ n = \\dfrac{m}{M} = \\dfrac{36}{18} = 2 $ mol."
       ],
-      "reponse": "$n_\\mathrm{Fe} = n_\\mathrm{S} = 0{,}40 - x$, $n_\\mathrm{FeS} = x$, et $x_{\\max} = 0{,}40$ mol (mélange stœchiométrique)."
+      "reponse": "$ 2 $ mol"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "reactif-limitant",
-      "enonce": "L'aluminium réagit avec le dichlore selon $2\\,\\mathrm{Al} + 3\\,\\mathrm{Cl_2} \\rightarrow 2\\,\\mathrm{AlCl_3}$. On part de $n_\\mathrm{Al} = 0{,}60$ mol et $n_{\\mathrm{Cl_2}} = 0{,}60$ mol. Déterminer le réactif limitant, l'avancement maximal, puis la quantité de $\\mathrm{AlCl_3}$ formée.",
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le dioxyde de carbone CO2 : 44 g/mol. Quantite de matiere dans 44 g ?",
       "corrige": [
-        "On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{Al}$, $\\dfrac{0{,}60}{2} = 0{,}30$ ; pour $\\mathrm{Cl_2}$, $\\dfrac{0{,}60}{3} = 0{,}20$.",
-        "Le plus petit rapport est $0{,}20$, obtenu pour $\\mathrm{Cl_2}$ : c'est le réactif limitant, bien que sa quantité en moles soit égale à celle de l'aluminium.",
-        "L'avancement maximal annule le limitant : $n_{\\mathrm{Cl_2}} - 3x = 0$ donne $x_{\\max} = \\dfrac{0{,}60}{3} = 0{,}20$ mol.",
-        "$\\mathrm{AlCl_3}$ est un produit de nombre stœchiométrique $2$ : $n_{\\mathrm{AlCl_3}} = 2\\,x_{\\max} = 2 \\times 0{,}20 = 0{,}40$ mol."
+        "$ n = \\dfrac{m}{M} = \\dfrac{44}{44} = 1 $ mol."
       ],
-      "reponse": "$\\mathrm{Cl_2}$ est limitant, $x_{\\max} = 0{,}20$ mol et $n_{\\mathrm{AlCl_3}} = 0{,}40$ mol."
+      "reponse": "$ 1 $ mol"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "beer-lambert",
-      "enonce": "Pour doser une espèce colorée par spectrophotométrie, on prépare une solution étalon de concentration $c_0 = 2{,}0 \\times 10^{-3}$ mol·L⁻¹ dont l'absorbance mesurée est $A_0 = 0{,}40$. Une solution de concentration inconnue, mesurée dans la même cuve, donne $A = 0{,}30$. Déterminer sa concentration $c$.",
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le dioxyde de carbone CO2 : 44 g/mol. Quantite de matiere dans 88 g ?",
       "corrige": [
-        "D'après la loi de Beer-Lambert $A = \\varepsilon \\times \\ell \\times c$, l'absorbance est proportionnelle à la concentration : le rapport $\\dfrac{A}{c}$ est constant tant que $\\varepsilon$ et $\\ell$ ne changent pas.",
-        "On détermine le coefficient de proportionnalité avec l'étalon : $\\dfrac{A_0}{c_0} = \\dfrac{0{,}40}{2{,}0 \\times 10^{-3}} = 200$ L·mol⁻¹.",
-        "On en déduit la concentration inconnue : $c = \\dfrac{A}{200} = \\dfrac{0{,}30}{200} = 1{,}5 \\times 10^{-3}$ mol·L⁻¹.",
-        "Vérification par proportionnalité directe : $c = \\dfrac{A}{A_0} \\times c_0 = \\dfrac{0{,}30}{0{,}40} \\times 2{,}0 \\times 10^{-3} = 1{,}5 \\times 10^{-3}$ mol·L⁻¹."
+        "$ n = \\dfrac{m}{M} = \\dfrac{88}{44} = 2 $ mol."
       ],
-      "reponse": "$c = 1{,}5 \\times 10^{-3}$ mol·L⁻¹."
+      "reponse": "$ 2 $ mol"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "titrage",
-      "enonce": "On titre un volume $V_\\mathrm{A} = 20{,}0$ mL d'une solution d'une espèce $\\mathrm{A}$ de concentration inconnue par une solution titrante de $\\mathrm{B}$ de concentration $c_\\mathrm{B} = 0{,}050$ mol·L⁻¹. La réaction $\\mathrm{A} + \\mathrm{B} \\rightarrow$ produits se fait mole à mole. L'équivalence est repérée pour $V_\\mathrm{B} = 16{,}0$ mL versés.\n1) Déterminer la concentration $c_\\mathrm{A}$.\n2) En déduire la quantité de matière de $\\mathrm{A}$ contenue dans un flacon de $500$ mL de cette solution.",
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le dioxygene O2 : 32 g/mol. Quantite de matiere dans 32 g ?",
       "corrige": [
-        "Les nombres stœchiométriques valent tous les deux $1$ : à l'équivalence, la relation $c_\\mathrm{A} V_\\mathrm{A} = c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}$ s'applique.",
-        "On isole l'inconnue : $c_\\mathrm{A} = \\dfrac{c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}}{V_\\mathrm{A}} = \\dfrac{0{,}050 \\times 16{,}0}{20{,}0} = 0{,}040$ mol·L⁻¹. Les deux volumes étant en mL, leur rapport ne dépend pas de l'unité, aucune conversion n'est nécessaire ici.",
-        "Pour la quantité de matière dans $500$ mL, on utilise $n = c_\\mathrm{A} \\times V$, avec $V$ en litres : $V = 500$ mL $= 0{,}500$ L.",
-        "$n = 0{,}040 \\times 0{,}500 = 0{,}020$ mol."
+        "$ n = \\dfrac{m}{M} = \\dfrac{32}{32} = 1 $ mol."
       ],
-      "reponse": "$c_\\mathrm{A} = 0{,}040$ mol·L⁻¹ et $n = 0{,}020$ mol dans $500$ mL."
+      "reponse": "$ 1 $ mol"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "reactif-limitant",
-      "enonce": "On fait brûler $m = 2{,}4$ g de magnésium dans $n_{\\mathrm{O_2}} = 0{,}060$ mol de dioxygène selon $2\\,\\mathrm{Mg} + \\mathrm{O_2} \\rightarrow 2\\,\\mathrm{MgO}$. Données : $M(\\mathrm{Mg}) = 24$ g·mol⁻¹, $M(\\mathrm{MgO}) = 40$ g·mol⁻¹.\n1) Calculer la quantité de matière de magnésium.\n2) Identifier le réactif limitant.\n3) En déduire la masse de $\\mathrm{MgO}$ formée.",
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le dioxygene O2 : 32 g/mol. Quantite de matiere dans 64 g ?",
       "corrige": [
-        "Quantité de matière de magnésium : $n_\\mathrm{Mg} = \\dfrac{m}{M(\\mathrm{Mg})} = \\dfrac{2{,}4}{24} = 0{,}10$ mol.",
-        "On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{Mg}$, $\\dfrac{0{,}10}{2} = 0{,}050$ ; pour $\\mathrm{O_2}$, $\\dfrac{0{,}060}{1} = 0{,}060$. Le minimum est $0{,}050$, donc $\\mathrm{Mg}$ est le réactif limitant.",
-        "L'avancement maximal annule le limitant : $n_\\mathrm{Mg} - 2x = 0$ donne $x_{\\max} = \\dfrac{0{,}10}{2} = 0{,}050$ mol.",
-        "$\\mathrm{MgO}$ a pour nombre stœchiométrique $2$ : $n_{\\mathrm{MgO}} = 2\\,x_{\\max} = 0{,}10$ mol.",
-        "On revient à une masse : $m_{\\mathrm{MgO}} = n_{\\mathrm{MgO}} \\times M(\\mathrm{MgO}) = 0{,}10 \\times 40 = 4{,}0$ g."
+        "$ n = \\dfrac{m}{M} = \\dfrac{64}{32} = 2 $ mol."
       ],
-      "reponse": "$n_\\mathrm{Mg} = 0{,}10$ mol, $\\mathrm{Mg}$ est limitant, et $m_{\\mathrm{MgO}} = 4{,}0$ g."
+      "reponse": "$ 2 $ mol"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "avancement",
-      "enonce": "Le zinc réagit avec l'acide chlorhydrique selon $\\mathrm{Zn} + 2\\,\\mathrm{HCl} \\rightarrow \\mathrm{ZnCl_2} + \\mathrm{H_2}$. On introduit $n_\\mathrm{Zn} = 0{,}10$ mol de zinc et $n_\\mathrm{HCl} = 0{,}30$ mol de chlorure d'hydrogène. Dresser le tableau d'avancement, déterminer le réactif limitant et l'avancement maximal $x_{\\max}$, puis la quantité de dihydrogène formée.",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le carbone C : 12 g/mol. Quantite de matiere dans 12 g ?",
       "corrige": [
-        "À l'avancement $x$, les réactifs diminuent (avec leur nombre stœchiométrique) et les produits augmentent : $n_\\mathrm{Zn} = 0{,}10 - x$, $n_\\mathrm{HCl} = 0{,}30 - 2x$, $n_{\\mathrm{ZnCl_2}} = x$ et $n_{\\mathrm{H_2}} = x$.",
-        "On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{Zn}$, $\\dfrac{0{,}10}{1} = 0{,}10$ ; pour $\\mathrm{HCl}$, $\\dfrac{0{,}30}{2} = 0{,}15$. Le plus petit est $0{,}10$ : le zinc est le réactif limitant.",
-        "L'avancement maximal annule le limitant : $0{,}10 - x = 0$ donne $x_{\\max} = 0{,}10$ mol.",
-        "Le dihydrogène est un produit de nombre stœchiométrique $1$ : $n_{\\mathrm{H_2}} = x_{\\max} = 0{,}10$ mol (il reste $0{,}30 - 2\\times 0{,}10 = 0{,}10$ mol de $\\mathrm{HCl}$ non consommé)."
+        "$ n = \\dfrac{m}{M} = \\dfrac{12}{12} = 1 $ mol."
       ],
-      "reponse": "$\\mathrm{Zn}$ est limitant, $x_{\\max} = 0{,}10$ mol et $n_{\\mathrm{H_2}} = 0{,}10$ mol."
+      "reponse": "$ 1 $ mol"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "titrage",
-      "enonce": "Pour déterminer la concentration d'une solution commerciale $\\mathrm{S_0}$, on en prépare d'abord une solution fille $\\mathrm{S}$ en la diluant $10$ fois. On titre ensuite $V_\\mathrm{A} = 20{,}0$ mL de la solution fille $\\mathrm{S}$ par une solution titrante $\\mathrm{B}$ de concentration $c_\\mathrm{B} = 0{,}020$ mol·L⁻¹. La réaction $\\mathrm{A} + \\mathrm{B} \\rightarrow$ produits se fait mole à mole et l'équivalence est atteinte pour $V_{\\mathrm{B},\\text{éq}} = 15{,}0$ mL. 1) Déterminer la concentration $c_\\mathrm{A}$ de la solution fille. 2) En déduire la concentration $c_0$ de la solution commerciale $\\mathrm{S_0}$.",
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le carbone C : 12 g/mol. Quantite de matiere dans 24 g ?",
       "corrige": [
-        "1. Les nombres stœchiométriques valent $1$ : à l'équivalence, $c_\\mathrm{A} V_\\mathrm{A} = c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}$, d'où $c_\\mathrm{A} = \\dfrac{c_\\mathrm{B} V_{\\mathrm{B},\\text{éq}}}{V_\\mathrm{A}} = \\dfrac{0{,}020 \\times 15{,}0}{20{,}0} = 0{,}015$ mol·L⁻¹ (le rapport des volumes est indépendant de l'unité).",
-        "2. La solution fille a été obtenue par une dilution de facteur $10$ : une dilution divise la concentration par le facteur de dilution, donc $c_0 = 10 \\times c_\\mathrm{A}$.",
-        "On applique : $c_0 = 10 \\times 0{,}015 = 0{,}15$ mol·L⁻¹."
+        "$ n = \\dfrac{m}{M} = \\dfrac{24}{12} = 2 $ mol."
       ],
-      "reponse": "$c_\\mathrm{A} = 0{,}015$ mol·L⁻¹ et $c_0 = 0{,}15$ mol·L⁻¹."
+      "reponse": "$ 2 $ mol"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "reactif-limitant",
-      "enonce": "On mélange $V_1 = 50{,}0$ mL d'une solution de nitrate d'argent de concentration $c_1 = 0{,}10$ mol·L⁻¹ avec $V_2 = 100{,}0$ mL d'une solution de chlorure de sodium de concentration $c_2 = 0{,}040$ mol·L⁻¹. Il se forme un précipité de chlorure d'argent selon $\\mathrm{Ag^+} + \\mathrm{Cl^-} \\rightarrow \\mathrm{AgCl}\\,(s)$. Données : $M(\\mathrm{AgCl}) = 143{,}5$ g·mol⁻¹. 1) Calculer les quantités initiales d'ions $\\mathrm{Ag^+}$ et $\\mathrm{Cl^-}$. 2) Identifier le réactif limitant et calculer la masse de précipité formé. 3) Déterminer la concentration de l'ion en excès dans le mélange final.",
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le fer Fe : 56 g/mol. Quantite de matiere dans 56 g ?",
       "corrige": [
-        "1. On utilise $n = c \\times V$ avec les volumes en litres : $n(\\mathrm{Ag^+}) = 0{,}10 \\times 0{,}0500 = 5{,}0 \\times 10^{-3}$ mol et $n(\\mathrm{Cl^-}) = 0{,}040 \\times 0{,}1000 = 4{,}0 \\times 10^{-3}$ mol.",
-        "2. La réaction est mole à mole : on compare directement les quantités. $n(\\mathrm{Cl^-}) = 4{,}0 \\times 10^{-3}$ mol $< n(\\mathrm{Ag^+}) = 5{,}0 \\times 10^{-3}$ mol, donc $\\mathrm{Cl^-}$ est le réactif limitant et $x_{\\max} = 4{,}0 \\times 10^{-3}$ mol.",
-        "La quantité de précipité vaut $n(\\mathrm{AgCl}) = x_{\\max} = 4{,}0 \\times 10^{-3}$ mol, soit une masse $m = n \\times M = 4{,}0 \\times 10^{-3} \\times 143{,}5 = 0{,}57$ g.",
-        "3. L'ion argent est en excès : il en reste $n = 5{,}0 \\times 10^{-3} - 4{,}0 \\times 10^{-3} = 1{,}0 \\times 10^{-3}$ mol. Le volume total du mélange est $V = V_1 + V_2 = 150{,}0$ mL $= 0{,}150$ L.",
-        "La concentration résiduelle en ion argent est $[\\mathrm{Ag^+}] = \\dfrac{1{,}0 \\times 10^{-3}}{0{,}150} = 6{,}7 \\times 10^{-3}$ mol·L⁻¹."
+        "$ n = \\dfrac{m}{M} = \\dfrac{56}{56} = 1 $ mol."
       ],
-      "reponse": "$\\mathrm{Cl^-}$ est limitant, $m(\\mathrm{AgCl}) = 0{,}57$ g et $[\\mathrm{Ag^+}]$ restant $= 6{,}7 \\times 10^{-3}$ mol·L⁻¹."
+      "reponse": "$ 1 $ mol"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "titrage",
-      "enonce": "Un pharmacien vérifie la teneur en diiode $\\mathrm{I_2}$ d'un antiseptique. Le diiode, de couleur brune en solution, est dosé par une solution de thiosulfate de sodium selon la réaction totale $\\mathrm{I_2} + 2\\,\\mathrm{S_2O_3^{2-}} \\rightarrow 2\\,\\mathrm{I^-} + \\mathrm{S_4O_6^{2-}}$. On titre une prise d'essai de $V = 10{,}0$ mL d'antiseptique par une solution de thiosulfate de concentration $c = 0{,}10$ mol·L⁻¹ ; l'équivalence, repérée par la disparition de la teinte brune, est atteinte pour $V_{\\text{éq}} = 12{,}0$ mL. Donnée : $M(\\mathrm{I_2}) = 254$ g·mol⁻¹.\n1) Justifier qu'on puisse repérer l'équivalence à l'œil nu.\n2) Donner la relation entre les quantités de $\\mathrm{I_2}$ et de $\\mathrm{S_2O_3^{2-}}$ à l'équivalence.\n3) Calculer la quantité de matière de diiode contenue dans la prise d'essai.\n4) En déduire la concentration $c(\\mathrm{I_2})$ de l'antiseptique.\n5) Calculer la masse de diiode présente dans la prise d'essai.\n6) Dans un essai préliminaire, on avait mélangé $6{,}0 \\times 10^{-4}$ mol de diiode et $1{,}0 \\times 10^{-3}$ mol d'ions thiosulfate. Déterminer le réactif limitant et l'avancement maximal.",
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le fer Fe : 56 g/mol. Quantite de matiere dans 112 g ?",
       "corrige": [
-        "1. Le diiode $\\mathrm{I_2}$ est brun tandis que les ions $\\mathrm{I^-}$ et $\\mathrm{S_4O_6^{2-}}$ formés sont incolores. Tant qu'il reste du diiode, la solution est colorée ; la teinte brune disparaît exactement lorsque tout le diiode a réagi, c'est-à-dire à l'équivalence : le changement de couleur sert d'indicateur naturel.",
-        "2. À l'équivalence, les réactifs sont introduits dans les proportions stœchiométriques : $\\dfrac{n(\\mathrm{I_2})}{1} = \\dfrac{n(\\mathrm{S_2O_3^{2-}})_{\\text{versé}}}{2}$, soit $n(\\mathrm{I_2}) = \\dfrac{n(\\mathrm{S_2O_3^{2-}})_{\\text{éq}}}{2}$. Attention : le coefficient $2$ interdit d'écrire simplement $cV = c'V'$.",
-        "3. La quantité de thiosulfate versé à l'équivalence est $n(\\mathrm{S_2O_3^{2-}})_{\\text{éq}} = c \\times V_{\\text{éq}} = 0{,}10 \\times 12{,}0 \\times 10^{-3} = 1{,}2 \\times 10^{-3}$ mol. On en déduit $n(\\mathrm{I_2}) = \\dfrac{1{,}2 \\times 10^{-3}}{2} = 6{,}0 \\times 10^{-4}$ mol.",
-        "4. La concentration en diiode est $c(\\mathrm{I_2}) = \\dfrac{n(\\mathrm{I_2})}{V} = \\dfrac{6{,}0 \\times 10^{-4}}{10{,}0 \\times 10^{-3}} = 6{,}0 \\times 10^{-2}$ mol·L⁻¹.",
-        "5. La masse de diiode dans la prise d'essai vaut $m = n(\\mathrm{I_2}) \\times M(\\mathrm{I_2}) = 6{,}0 \\times 10^{-4} \\times 254 = 0{,}15$ g.",
-        "6. On compare les rapports $\\dfrac{n_i}{\\text{coeff}_i}$ : pour $\\mathrm{I_2}$, $\\dfrac{6{,}0 \\times 10^{-4}}{1} = 6{,}0 \\times 10^{-4}$ ; pour $\\mathrm{S_2O_3^{2-}}$, $\\dfrac{1{,}0 \\times 10^{-3}}{2} = 5{,}0 \\times 10^{-4}$. Le plus petit est $5{,}0 \\times 10^{-4}$ : le thiosulfate est limitant. L'avancement maximal annule le limitant : $1{,}0 \\times 10^{-3} - 2x = 0$ donne $x_{\\max} = 5{,}0 \\times 10^{-4}$ mol."
+        "$ n = \\dfrac{m}{M} = \\dfrac{112}{56} = 2 $ mol."
       ],
-      "reponse": "$n(\\mathrm{I_2}) = 6{,}0 \\times 10^{-4}$ mol, $c(\\mathrm{I_2}) = 6{,}0 \\times 10^{-2}$ mol·L⁻¹ et $m = 0{,}15$ g ; dans l'essai préliminaire, le thiosulfate est limitant et $x_{\\max} = 5{,}0 \\times 10^{-4}$ mol."
+      "reponse": "$ 2 $ mol"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le cuivre Cu : 64 g/mol. Quantite de matiere dans 64 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{64}{64} = 1 $ mol."
+      ],
+      "reponse": "$ 1 $ mol"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le cuivre Cu : 64 g/mol. Quantite de matiere dans 128 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{128}{64} = 2 $ mol."
+      ],
+      "reponse": "$ 2 $ mol"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le sodium Na : 23 g/mol. Quantite de matiere dans 23 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{23}{23} = 1 $ mol."
+      ],
+      "reponse": "$ 1 $ mol"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le sodium Na : 23 g/mol. Quantite de matiere dans 46 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{46}{23} = 2 $ mol."
+      ],
+      "reponse": "$ 2 $ mol"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le chlorure de sodium NaCl : 58 g/mol. Quantite de matiere dans 58 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{58}{58} = 1 $ mol."
+      ],
+      "reponse": "$ 1 $ mol"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le chlorure de sodium NaCl : 58 g/mol. Quantite de matiere dans 116 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{116}{58} = 2 $ mol."
+      ],
+      "reponse": "$ 2 $ mol"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le glucose : 180 g/mol. Quantite de matiere dans 180 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{180}{180} = 1 $ mol."
+      ],
+      "reponse": "$ 1 $ mol"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le glucose : 180 g/mol. Quantite de matiere dans 360 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{360}{180} = 2 $ mol."
+      ],
+      "reponse": "$ 2 $ mol"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le methane CH4 : 16 g/mol. Quantite de matiere dans 16 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{16}{16} = 1 $ mol."
+      ],
+      "reponse": "$ 1 $ mol"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "Masse molaire de le methane CH4 : 16 g/mol. Quantite de matiere dans 32 g ?",
+      "corrige": [
+        "$ n = \\dfrac{m}{M} = \\dfrac{32}{16} = 2 $ mol."
+      ],
+      "reponse": "$ 2 $ mol"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 18 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 1 $ mol."
+      ],
+      "reponse": "$ 1 $ mol"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 36 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 2 $ mol."
+      ],
+      "reponse": "$ 2 $ mol"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 54 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 3 $ mol."
+      ],
+      "reponse": "$ 3 $ mol"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 72 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 4 $ mol."
+      ],
+      "reponse": "$ 4 $ mol"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 90 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 5 $ mol."
+      ],
+      "reponse": "$ 5 $ mol"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 108 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 6 $ mol."
+      ],
+      "reponse": "$ 6 $ mol"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 126 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 7 $ mol."
+      ],
+      "reponse": "$ 7 $ mol"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 144 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 8 $ mol."
+      ],
+      "reponse": "$ 8 $ mol"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 162 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 9 $ mol."
+      ],
+      "reponse": "$ 9 $ mol"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 180 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 10 $ mol."
+      ],
+      "reponse": "$ 10 $ mol"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 198 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 11 $ mol."
+      ],
+      "reponse": "$ 11 $ mol"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 216 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 12 $ mol."
+      ],
+      "reponse": "$ 12 $ mol"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 234 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 13 $ mol."
+      ],
+      "reponse": "$ 13 $ mol"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 252 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 14 $ mol."
+      ],
+      "reponse": "$ 14 $ mol"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 270 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 15 $ mol."
+      ],
+      "reponse": "$ 15 $ mol"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 288 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 16 $ mol."
+      ],
+      "reponse": "$ 16 $ mol"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 306 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 17 $ mol."
+      ],
+      "reponse": "$ 17 $ mol"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 324 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 18 $ mol."
+      ],
+      "reponse": "$ 18 $ mol"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 342 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 19 $ mol."
+      ],
+      "reponse": "$ 19 $ mol"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 360 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 20 $ mol."
+      ],
+      "reponse": "$ 20 $ mol"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 378 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 21 $ mol."
+      ],
+      "reponse": "$ 21 $ mol"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 396 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 22 $ mol."
+      ],
+      "reponse": "$ 22 $ mol"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 414 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 23 $ mol."
+      ],
+      "reponse": "$ 23 $ mol"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 432 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 24 $ mol."
+      ],
+      "reponse": "$ 24 $ mol"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 450 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 25 $ mol."
+      ],
+      "reponse": "$ 25 $ mol"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 468 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 26 $ mol."
+      ],
+      "reponse": "$ 26 $ mol"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 486 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 27 $ mol."
+      ],
+      "reponse": "$ 27 $ mol"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 504 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 28 $ mol."
+      ],
+      "reponse": "$ 28 $ mol"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 522 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 29 $ mol."
+      ],
+      "reponse": "$ 29 $ mol"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "quantite-matiere",
+      "enonce": "M = 18 g/mol, masse 540 g : quantite de matiere ?",
+      "corrige": [
+        "$ = 30 $ mol."
+      ],
+      "reponse": "$ 30 $ mol"
     }
   ]
 }

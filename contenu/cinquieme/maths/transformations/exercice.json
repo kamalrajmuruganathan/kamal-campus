@@ -13,136 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "symetrie-axiale",
-      "enonce": "Sur un quadrillage muni d'un repère, on place le point $M(2\\,;\\,3)$. L'axe $(d)$ est l'axe des abscisses (la droite horizontale qui passe par l'origine). Construis le symétrique $M'$ de $M$ par rapport à $(d)$ et donne ses coordonnées.",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(3;5) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "L'axe $(d)$ est horizontal. Pour une symétrie axiale, on compte les carreaux qui séparent le point de l'axe, puis on reporte le même nombre de l'autre côté, sur la même colonne.",
-        "Le point $M(2\\,;\\,3)$ est situé $3$ carreaux **au-dessus** de l'axe des abscisses.",
-        "Son symétrique $M'$ est donc $3$ carreaux **en dessous** de l'axe, sur la même verticale : on reste sur la colonne d'abscisse $2$.",
-        "On lit $M'(2\\,;\\,-3)$. Vérification : $(d)$ coupe bien $[MM']$ en son milieu $(2\\,;\\,0)$ et perpendiculairement."
+        "On change le signe de l'ordonnee : $ (3;-5) $."
       ],
-      "reponse": "$M'(2\\,;\\,-3)$."
+      "reponse": "$ (3;-5) $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "demi-tour-definition",
-      "enonce": "Dans un repère, on considère le point $M(3\\,;\\,-2)$ et le centre $O(0\\,;\\,0)$ (l'origine). Construis l'image $M'$ de $M$ par le demi-tour de centre $O$ et donne ses coordonnées.",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(2;7) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Par le demi-tour de centre $O$, l'image $M'$ est le point tel que $O$ soit le **milieu** de $[MM']$. Sur quadrillage, on continue au-delà de $O$ le même déplacement que celui qui va de $M$ à $O$.",
-        "De $M(3\\,;\\,-2)$ jusqu'à $O$ : on se déplace de $3$ carreaux vers la gauche et de $2$ carreaux vers le haut.",
-        "On continue le même déplacement à partir de $O$ : encore $3$ carreaux vers la gauche et $2$ carreaux vers le haut. On arrive en $(-3\\,;\\,2)$.",
-        "Vérification : le milieu de $[MM']$ a pour coordonnées $\\left(\\dfrac{3+(-3)}{2}\\,;\\,\\dfrac{-2+2}{2}\\right) = (0\\,;\\,0) = O$."
+        "On change le signe de l'ordonnee : $ (2;-7) $."
       ],
-      "reponse": "$M'(-3\\,;\\,2)$."
+      "reponse": "$ (2;-7) $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "construction",
-      "enonce": "Dans un repère, on donne le segment $[AB]$ avec $A(3\\,;\\,2)$ et $B(4\\,;\\,4)$, et le centre $O(1\\,;\\,1)$. Construis l'image $[A'B']$ de $[AB]$ par le demi-tour de centre $O$, donne les coordonnées de $A'$ et $B'$, puis indique, sans mesurer, la longueur $A'B'$ sachant que $AB = 5$ cm et la position de $(A'B')$ par rapport à $(AB)$.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(4;1) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "L'image d'un segment par un demi-tour s'obtient en construisant les images des deux extrémités, puis en les reliant. Pour chaque point, $O$ doit être le milieu du segment qui joint le point à son image : on continue au-delà de $O$ le déplacement du point vers $O$.",
-        "De $A(3\\,;\\,2)$ à $O(1\\,;\\,1)$ : $2$ carreaux à gauche et $1$ vers le bas. On continue : encore $2$ à gauche et $1$ vers le bas depuis $O$, ce qui donne $A'(-1\\,;\\,0)$.",
-        "De $B(4\\,;\\,4)$ à $O(1\\,;\\,1)$ : $3$ carreaux à gauche et $3$ vers le bas. On continue de même depuis $O$ : $B'(-2\\,;\\,-2)$.",
-        "Le demi-tour **conserve les longueurs**, donc $A'B' = AB = 5$ cm, sans aucune mesure.",
-        "De plus, l'image d'une droite par un demi-tour lui est **parallèle** : donc $(A'B')$ est parallèle à $(AB)$."
+        "On change le signe de l'ordonnee : $ (4;-1) $."
       ],
-      "reponse": "$A'(-1\\,;\\,0)$ et $B'(-2\\,;\\,-2)$ ; $A'B' = 5$ cm et $(A'B') \\parallel (AB)$."
+      "reponse": "$ (4;-1) $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "symetrie-axiale",
-      "enonce": "Dans un repère, l'axe $(d)$ est la diagonale du quadrillage qui passe par l'origine et par les points $(1\\,;\\,1)$, $(2\\,;\\,2)$, $(3\\,;\\,3)$. On place le point $A(3\\,;\\,1)$. Construis son symétrique $A'$ par rapport à $(d)$ (c'est le cas « en diagonale ») et donne ses coordonnées.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(6;2) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "L'axe est en diagonale. On se déplace depuis $A$ **perpendiculairement** à l'axe, c'est-à-dire selon l'autre diagonale (un pas vers le haut et un pas vers la gauche à chaque fois), jusqu'à atteindre l'axe.",
-        "De $A(3\\,;\\,1)$, un pas en diagonale ($1$ à gauche, $1$ en haut) mène au point $(2\\,;\\,2)$, qui est **sur** l'axe $(d)$ : $A$ est donc à $1$ carreau diagonal de l'axe.",
-        "On reporte le même déplacement de l'autre côté du point $(2\\,;\\,2)$ : encore $1$ à gauche et $1$ en haut, ce qui donne $A'(1\\,;\\,3)$.",
-        "Vérification : le milieu de $[AA']$ est $\\left(\\dfrac{3+1}{2}\\,;\\,\\dfrac{1+3}{2}\\right) = (2\\,;\\,2)$, qui appartient à $(d)$, et $[AA']$ est bien perpendiculaire à $(d)$. L'axe est donc la médiatrice de $[AA']$."
+        "On change le signe de l'ordonnee : $ (6;-2) $."
       ],
-      "reponse": "$A'(1\\,;\\,3)$."
+      "reponse": "$ (6;-2) $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "parallelogramme",
-      "enonce": "$ABCD$ est un parallélogramme. Ses diagonales $[AC]$ et $[BD]$ se coupent en un point $I$. On rappelle que, dans un parallélogramme, les diagonales se coupent en leur milieu. Démontre que le demi-tour de centre $I$ transforme le parallélogramme $ABCD$ en lui-même.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(1;3) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Par définition du demi-tour de centre $I$, l'image d'un point $M$ est le point $M'$ tel que $I$ soit le milieu de $[MM']$.",
-        "Comme les diagonales du parallélogramme se coupent en leur milieu, $I$ est le milieu de $[AC]$. Donc l'image de $A$ par le demi-tour de centre $I$ est $C$, et l'image de $C$ est $A$.",
-        "De même, $I$ est le milieu de $[BD]$ : l'image de $B$ est $D$, et l'image de $D$ est $B$.",
-        "Le demi-tour échange donc les sommets deux à deux ($A \\leftrightarrow C$ et $B \\leftrightarrow D$) : l'ensemble des quatre sommets est envoyé sur lui-même, et les côtés sur les côtés.",
-        "Conclusion : le demi-tour de centre $I$ transforme $ABCD$ en $ABCD$. Le point $I$ est un centre de symétrie du parallélogramme."
+        "On change le signe de l'ordonnee : $ (1;-3) $."
       ],
-      "reponse": "Le demi-tour de centre $I$ échange $A$ avec $C$ et $B$ avec $D$ : il transforme $ABCD$ en lui-même, donc $I$ est centre de symétrie de la figure."
+      "reponse": "$ (1;-3) $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "proprietes-demi-tour",
-      "enonce": "Un triangle $ABC$ est rectangle en $A$, avec $AB = 6$ cm, $AC = 8$ cm et $BC = 10$ cm. On note $A'B'C'$ son image par le demi-tour de centre $O$ (un point quelconque du plan). Sans faire de figure, réponds en justifiant chaque fois par une propriété du demi-tour : (a) quelle est la nature du triangle $A'B'C'$ ? (b) quelles sont les longueurs $A'B'$, $A'C'$ et $B'C'$ ? (c) quelle est l'aire du triangle $A'B'C'$ ? (d) quelle est la position de la droite $(A'B')$ par rapport à $(AB)$ ?",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(5;5) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "(a) Le demi-tour **conserve les mesures d'angles**. L'angle droit en $A$ a pour image un angle droit en $A'$ : le triangle $A'B'C'$ est donc lui aussi rectangle, en $A'$.",
-        "(b) Le demi-tour **conserve les longueurs**. Donc $A'B' = AB = 6$ cm, $A'C' = AC = 8$ cm et $B'C' = BC = 10$ cm.",
-        "(c) Le demi-tour **conserve les aires**. L'aire de $ABC$, triangle rectangle en $A$, vaut $\\dfrac{AB \\times AC}{2} = \\dfrac{6 \\times 8}{2} = 24$ cm². L'aire de $A'B'C'$ est donc aussi $24$ cm².",
-        "(d) L'image d'une droite par un demi-tour lui est **parallèle**. Donc $(A'B')$ est parallèle à $(AB)$."
+        "On change le signe de l'ordonnee : $ (5;-5) $."
       ],
-      "reponse": "(a) rectangle en $A'$ ; (b) $A'B' = 6$ cm, $A'C' = 8$ cm, $B'C' = 10$ cm ; (c) aire $= 24$ cm² ; (d) $(A'B') \\parallel (AB)$."
+      "reponse": "$ (5;-5) $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "symetrie-axiale",
-      "enonce": "Dans un repère tracé sur quadrillage, l'axe $(d)$ est la droite **verticale** qui passe par l'origine (l'axe des ordonnées). On place le point $P(4\\,;\\,2)$. Construis le symétrique $P'$ de $P$ par rapport à $(d)$ et donne ses coordonnées.",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(2;8) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "L'axe $(d)$ est vertical. Pour une symétrie axiale sur quadrillage, on compte les carreaux qui séparent le point de l'axe, puis on reporte le même nombre de l'autre côté, sur la même ligne.",
-        "Le point $P(4\\,;\\,2)$ est situé $4$ carreaux **à droite** de l'axe des ordonnées.",
-        "Son symétrique $P'$ est donc $4$ carreaux **à gauche** de l'axe, sur la même horizontale : on reste sur la ligne d'ordonnée $2$.",
-        "On lit $P'(-4\\,;\\,2)$. Vérification : $(d)$ coupe bien $[PP']$ en son milieu $(0\\,;\\,2)$ et perpendiculairement."
+        "On change le signe de l'ordonnee : $ (2;-8) $."
       ],
-      "reponse": "$P'(-4\\,;\\,2)$."
+      "reponse": "$ (2;-8) $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "demi-tour-definition",
-      "enonce": "Dans un repère, on sait que le point $M(5\\,;\\,3)$ a pour image $M'(-1\\,;\\,-1)$ par un demi-tour de centre $O$. **1.** Détermine les coordonnées du centre $O$. **2.** À l'aide de ce centre, détermine les coordonnées de l'image $N'$ du point $N(2\\,;\\,4)$ par ce même demi-tour.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(7;4) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "**1.** Par le demi-tour de centre $O$, l'image $M'$ vérifie que $O$ est le **milieu** de $[MM']$. On calcule donc les coordonnées du milieu de $[MM']$ : $O\\left(\\dfrac{5+(-1)}{2}\\,;\\,\\dfrac{3+(-1)}{2}\\right) = (2\\,;\\,1)$.",
-        "**2.** Le centre $O(2\\,;\\,1)$ doit aussi être le milieu de $[NN']$. En partant de $N(2\\,;\\,4)$ : pour aller de $N$ à $O$, on descend de $3$ carreaux (l'abscisse ne change pas). On continue le même déplacement au-delà de $O$ : encore $3$ carreaux vers le bas.",
-        "On obtient $N'(2\\,;\\,-2)$. Vérification : le milieu de $[NN']$ est $\\left(\\dfrac{2+2}{2}\\,;\\,\\dfrac{4+(-2)}{2}\\right) = (2\\,;\\,1) = O$."
+        "On change le signe de l'ordonnee : $ (7;-4) $."
       ],
-      "reponse": "$O(2\\,;\\,1)$ ; $N'(2\\,;\\,-2)$."
+      "reponse": "$ (7;-4) $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "parallelogramme",
-      "enonce": "$ABC$ est un triangle. On appelle $O$ le milieu du côté $[BC]$, puis on construit le point $A'$, image de $A$ par le demi-tour de centre $O$. Démontre que le quadrilatère $ABA'C$ est un parallélogramme.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(3;2) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Par définition du demi-tour de centre $O$, l'image $A'$ de $A$ est le point tel que $O$ soit le **milieu** de $[AA']$.",
-        "Par ailleurs, l'énoncé pose que $O$ est le **milieu** de $[BC]$.",
-        "Dans le quadrilatère $ABA'C$ (sommets pris dans cet ordre), les diagonales sont $[AA']$ et $[BC]$. Or ces deux segments ont le **même milieu** $O$.",
-        "On utilise la propriété caractéristique du parallélogramme : un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme.",
-        "Conclusion : les diagonales $[AA']$ et $[BC]$ de $ABA'C$ se coupent en leur milieu $O$, donc $ABA'C$ est un parallélogramme."
+        "On change le signe de l'ordonnee : $ (3;-2) $."
       ],
-      "reponse": "Les diagonales $[AA']$ et $[BC]$ ont le même milieu $O$ ; un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme, donc $ABA'C$ en est un."
+      "reponse": "$ (3;-2) $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "synthese",
-      "enonce": "Léa décore un carreau de faïence. Sur du papier quadrillé muni d'un repère, elle dessine d'abord un petit motif triangulaire $T$ de sommets $A(1\\,;\\,1)$, $B(3\\,;\\,1)$ et $C(1\\,;\\,2)$, où une unité représente $1$ cm. Pour composer sa rosace, elle va combiner deux transformations.\\n\\n**1.** Léa applique au motif $T$ la symétrie axiale d'axe des ordonnées (l'axe vertical). Donne les coordonnées des sommets $A_1$, $B_1$, $C_1$ de l'image $T_1$.\\n**2.** Elle applique ensuite au motif $T$ de départ le demi-tour de centre $O(0\\,;\\,0)$. Donne les coordonnées des sommets $A_2$, $B_2$, $C_2$ de l'image $T_2$.\\n**3.** Le côté $[AB]$ mesure $2$ cm. Sans mesurer, donne la longueur $A_2B_2$ et justifie.\\n**4.** Le triangle $T$ est rectangle en $A$. Quelle est la nature du triangle $T_2$ ? Justifie.\\n**5.** Quelle est la position de la droite $(A_2B_2)$ par rapport à la droite $(AB)$ ?\\n**6.** Léa remarque que $T_1$ semble « retourné » comme dans un miroir, mais pas $T_2$. Laquelle des deux transformations conserve le sens de lecture du motif ?",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(8;6) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "1. La symétrie d'axe des ordonnées change une abscisse en son opposé et garde l'ordonnée : chaque point $(x\\,;\\,y)$ devient $(-x\\,;\\,y)$. On reporte, pour chaque sommet, le même nombre de carreaux de l'autre côté de l'axe vertical. On obtient $A_1(-1\\,;\\,1)$, $B_1(-3\\,;\\,1)$ et $C_1(-1\\,;\\,2)$.",
-        "2. Pour le demi-tour de centre $O(0\\,;\\,0)$, le centre $O$ est le milieu de chaque segment joignant un point à son image : chaque point $(x\\,;\\,y)$ devient $(-x\\,;\\,-y)$. On obtient $A_2(-1\\,;\\,-1)$, $B_2(-3\\,;\\,-1)$ et $C_2(-1\\,;\\,-2)$.",
-        "3. Le demi-tour **conserve les longueurs**. Donc $A_2B_2 = AB = 2$ cm, sans aucune mesure.",
-        "4. Le demi-tour **conserve les mesures d'angles** : l'angle droit en $A$ a pour image un angle droit en $A_2$. Le triangle $T_2$ est donc rectangle en $A_2$.",
-        "5. L'image d'une droite par un demi-tour lui est **parallèle**. Donc $(A_2B_2)$ est parallèle à $(AB)$.",
-        "6. La symétrie axiale **retourne** la figure (effet miroir) : c'est $T_1$. Le demi-tour, lui, **conserve le sens** de lecture : c'est donc le demi-tour qui conserve le sens, ce qui explique que $T_2$ ne paraît pas retourné."
+        "On change le signe de l'ordonnee : $ (8;-6) $."
       ],
-      "reponse": "1. $A_1(-1\\,;\\,1)$, $B_1(-3\\,;\\,1)$, $C_1(-1\\,;\\,2)$. 2. $A_2(-1\\,;\\,-1)$, $B_2(-3\\,;\\,-1)$, $C_2(-1\\,;\\,-2)$. 3. $A_2B_2 = 2$ cm (longueurs conservées). 4. rectangle en $A_2$ (angles conservés). 5. $(A_2B_2) \\parallel (AB)$. 6. le demi-tour conserve le sens ; la symétrie axiale retourne la figure."
+      "reponse": "$ (8;-6) $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(4;9) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "On change le signe de l'ordonnee : $ (4;-9) $."
+      ],
+      "reponse": "$ (4;-9) $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(5;1) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "On change le signe de l'ordonnee : $ (5;-1) $."
+      ],
+      "reponse": "$ (5;-1) $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(3;5) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-3;5) $."
+      ],
+      "reponse": "$ (-3;5) $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(2;7) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-2;7) $."
+      ],
+      "reponse": "$ (-2;7) $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(4;1) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-4;1) $."
+      ],
+      "reponse": "$ (-4;1) $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(6;2) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-6;2) $."
+      ],
+      "reponse": "$ (-6;2) $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(1;3) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-1;3) $."
+      ],
+      "reponse": "$ (-1;3) $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(5;5) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-5;5) $."
+      ],
+      "reponse": "$ (-5;5) $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(2;8) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-2;8) $."
+      ],
+      "reponse": "$ (-2;8) $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(7;4) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-7;4) $."
+      ],
+      "reponse": "$ (-7;4) $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(3;2) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-3;2) $."
+      ],
+      "reponse": "$ (-3;2) $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(8;6) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-8;6) $."
+      ],
+      "reponse": "$ (-8;6) $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(4;9) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-4;9) $."
+      ],
+      "reponse": "$ (-4;9) $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(5;1) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-5;1) $."
+      ],
+      "reponse": "$ (-5;1) $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(2;3) $ par la translation qui ajoute $ (4;1) $ ?",
+      "corrige": [
+        "$ (2+4 ; 3+1) = (6 ; 4) $."
+      ],
+      "reponse": "$ (6 ; 4) $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(1;5) $ par la translation qui ajoute $ (2;3) $ ?",
+      "corrige": [
+        "$ (1+2 ; 5+3) = (3 ; 8) $."
+      ],
+      "reponse": "$ (3 ; 8) $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(3;2) $ par la translation qui ajoute $ (5;4) $ ?",
+      "corrige": [
+        "$ (3+5 ; 2+4) = (8 ; 6) $."
+      ],
+      "reponse": "$ (8 ; 6) $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(0;0) $ par la translation qui ajoute $ (6;2) $ ?",
+      "corrige": [
+        "$ (0+6 ; 0+2) = (6 ; 2) $."
+      ],
+      "reponse": "$ (6 ; 2) $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(4;1) $ par la translation qui ajoute $ (2;5) $ ?",
+      "corrige": [
+        "$ (4+2 ; 1+5) = (6 ; 6) $."
+      ],
+      "reponse": "$ (6 ; 6) $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(2;2) $ par la translation qui ajoute $ (3;3) $ ?",
+      "corrige": [
+        "$ (2+3 ; 2+3) = (5 ; 5) $."
+      ],
+      "reponse": "$ (5 ; 5) $"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(5;0) $ par la translation qui ajoute $ (1;4) $ ?",
+      "corrige": [
+        "$ (5+1 ; 0+4) = (6 ; 4) $."
+      ],
+      "reponse": "$ (6 ; 4) $"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(1;6) $ par la translation qui ajoute $ (4;2) $ ?",
+      "corrige": [
+        "$ (1+4 ; 6+2) = (5 ; 8) $."
+      ],
+      "reponse": "$ (5 ; 8) $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(1;3) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (1;-3) $."
+      ],
+      "reponse": "$ (1;-3) $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(2;4) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (2;-4) $."
+      ],
+      "reponse": "$ (2;-4) $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(3;5) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (3;-5) $."
+      ],
+      "reponse": "$ (3;-5) $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(4;6) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (4;-6) $."
+      ],
+      "reponse": "$ (4;-6) $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(5;7) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (5;-7) $."
+      ],
+      "reponse": "$ (5;-7) $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(6;8) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (6;-8) $."
+      ],
+      "reponse": "$ (6;-8) $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(7;9) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (7;-9) $."
+      ],
+      "reponse": "$ (7;-9) $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(8;10) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (8;-10) $."
+      ],
+      "reponse": "$ (8;-10) $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(9;11) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (9;-11) $."
+      ],
+      "reponse": "$ (9;-11) $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(10;12) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (10;-12) $."
+      ],
+      "reponse": "$ (10;-12) $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(11;13) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (11;-13) $."
+      ],
+      "reponse": "$ (11;-13) $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(12;14) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (12;-14) $."
+      ],
+      "reponse": "$ (12;-14) $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(13;15) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (13;-15) $."
+      ],
+      "reponse": "$ (13;-15) $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(14;16) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (14;-16) $."
+      ],
+      "reponse": "$ (14;-16) $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(15;17) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (15;-17) $."
+      ],
+      "reponse": "$ (15;-17) $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(16;18) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (16;-18) $."
+      ],
+      "reponse": "$ (16;-18) $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(17;19) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (17;-19) $."
+      ],
+      "reponse": "$ (17;-19) $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(18;20) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (18;-20) $."
+      ],
+      "reponse": "$ (18;-20) $"
     }
   ]
 }

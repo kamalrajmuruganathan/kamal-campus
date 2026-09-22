@@ -13,134 +13,514 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "fonction-derivee",
-      "enonce": "Calculer la fonction dérivée de $f(x) = 3x^3 - 2x^2 + 5x - 1$.",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 1x^2 + 2x + 3 $. Calculer $ f'(2) $.",
       "corrige": [
-        "On dérive terme à terme. D'après le tableau des dérivées usuelles : $(x^3)' = 3x^2$, $(x^2)' = 2x$, $(x)' = 1$ et la dérivée d'une constante est $0$.",
-        "$(3x^3)' = 3 \\times 3x^2 = 9x^2$, car $(k\\,u)' = k\\,u'$.",
-        "$(-2x^2)' = -2 \\times 2x = -4x$, et $(5x)' = 5$, et $(-1)' = 0$.",
-        "En additionnant : $f'(x) = 9x^2 - 4x + 5$."
+        "$ f'(x) = 2x + 2 $.",
+        "$ f'(2) = 2\\times 2 + 2 = 6 $."
       ],
-      "reponse": "$f'(x) = 9x^2 - 4x + 5$."
+      "reponse": "$ f'(2) = 6 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "tangente",
-      "enonce": "Soit $f(x) = x^2 - 3x$. Déterminer l'équation réduite de la tangente à la courbe de $f$ au point d'abscisse $a = 2$.",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 2x^2 + 3x + 1 $. Calculer $ f'(1) $.",
       "corrige": [
-        "La formule est $y = f'(a)(x - a) + f(a)$. Il faut donc calculer $f(2)$ et $f'(2)$.",
-        "$f(2) = 2^2 - 3 \\times 2 = 4 - 6 = -2$ : c'est l'ordonnée du point de contact.",
-        "$f'(x) = 2x - 3$, donc $f'(2) = 2 \\times 2 - 3 = 1$ : c'est la pente de la tangente.",
-        "On remplace : $y = 1 \\times (x - 2) + (-2) = x - 2 - 2 = x - 4$."
+        "$ f'(x) = 4x + 3 $.",
+        "$ f'(1) = 4\\times 1 + 3 = 7 $."
       ],
-      "reponse": "$y = x - 4$."
+      "reponse": "$ f'(1) = 7 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "variations",
-      "enonce": "Soit $f(x) = x^2 - 4x + 1$ définie sur $\\mathbb{R}$. Calculer $f'(x)$, étudier son signe, puis dresser le tableau de variations de $f$.",
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 3x^2 + 1x + 4 $. Calculer $ f'(0) $.",
       "corrige": [
-        "$f'(x) = 2x - 4$.",
-        "On étudie le signe de $f'$ : $2x - 4 > 0 \\iff x > 2$, et $2x - 4 < 0 \\iff x < 2$. La dérivée s'annule en $x = 2$ en changeant de signe.",
-        "Donc $f$ est décroissante sur $]-\\infty\\,;2]$ (où $f' < 0$) puis croissante sur $[2\\,;+\\infty[$ (où $f' > 0$).",
-        "On calcule l'image au point remarquable : $f(2) = 2^2 - 4 \\times 2 + 1 = 4 - 8 + 1 = -3$. La fonction admet donc un minimum égal à $-3$, atteint en $x = 2$."
+        "$ f'(x) = 6x + 1 $.",
+        "$ f'(0) = 6\\times 0 + 1 = 1 $."
       ],
-      "reponse": "$f'(x) = 2x - 4$ ; $f$ décroissante sur $]-\\infty\\,;2]$, croissante sur $[2\\,;+\\infty[$, minimum $-3$ en $x = 2$."
+      "reponse": "$ f'(0) = 1 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "produit",
-      "enonce": "Calculer la dérivée de $f(x) = (3x - 1)(x^2 + 2)$ à l'aide de la formule de dérivation d'un produit.",
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 1x^2 + 5x + 2 $. Calculer $ f'(3) $.",
       "corrige": [
-        "On pose $u = 3x - 1$ et $v = x^2 + 2$, donc $u' = 3$ et $v' = 2x$.",
-        "La formule du produit est $(uv)' = u'v + uv'$ (attention : ce n'est pas $u'v'$).",
-        "$f'(x) = 3 \\times (x^2 + 2) + (3x - 1) \\times 2x = 3x^2 + 6 + 6x^2 - 2x$.",
-        "On réduit : $f'(x) = 9x^2 - 2x + 6$."
+        "$ f'(x) = 2x + 5 $.",
+        "$ f'(3) = 2\\times 3 + 5 = 11 $."
       ],
-      "reponse": "$f'(x) = 9x^2 - 2x + 6$."
+      "reponse": "$ f'(3) = 11 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "nombre-derive",
-      "enonce": "En revenant à la définition du nombre dérivé comme limite du taux de variation, démontrer que pour $f(x) = x^2$ et pour tout réel $a$, on a $f'(a) = 2a$.",
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 2x^2 + 1x + 6 $. Calculer $ f'(2) $.",
       "corrige": [
-        "Le taux de variation entre $a$ et $a + h$ est $\\dfrac{f(a+h) - f(a)}{h} = \\dfrac{(a+h)^2 - a^2}{h}$.",
-        "On développe le numérateur : $(a+h)^2 - a^2 = a^2 + 2ah + h^2 - a^2 = 2ah + h^2$.",
-        "Pour $h \\neq 0$, on simplifie : $\\dfrac{2ah + h^2}{h} = \\dfrac{h(2a + h)}{h} = 2a + h$.",
-        "Quand $h$ tend vers $0$, l'expression $2a + h$ tend vers $2a$. Par définition, $f'(a) = 2a$. On retrouve bien la dérivée usuelle $(x^2)' = 2x$."
+        "$ f'(x) = 4x + 1 $.",
+        "$ f'(2) = 4\\times 2 + 1 = 9 $."
       ],
-      "reponse": "$f'(a) = 2a$."
+      "reponse": "$ f'(2) = 9 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "extremum",
-      "enonce": "Une entreprise réalise un bénéfice, en milliers d'euros, modélisé par $B(x) = -x^3 + 12x$ pour $x \\in [0\\,;4]$, où $x$ est la quantité produite (en milliers d'unités). Déterminer la quantité $x$ qui rend le bénéfice maximal, et la valeur de ce bénéfice.",
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 4x^2 + 2x + 1 $. Calculer $ f'(1) $.",
       "corrige": [
-        "On calcule la dérivée : $B'(x) = -3x^2 + 12$.",
-        "On cherche où elle s'annule : $-3x^2 + 12 = 0 \\iff x^2 = 4 \\iff x = 2$ (on garde $x = 2$ car $x$ appartient à $[0\\,;4]$).",
-        "On étudie le signe de $B'$ sur $[0\\,;4]$ : pour $0 \\le x < 2$, $x^2 < 4$ donc $B'(x) > 0$ (bénéfice croissant) ; pour $2 < x \\le 4$, $x^2 > 4$ donc $B'(x) < 0$ (bénéfice décroissant).",
-        "La dérivée change de signe en passant du positif au négatif : $B$ admet donc un maximum en $x = 2$.",
-        "On calcule l'image : $B(2) = -2^3 + 12 \\times 2 = -8 + 24 = 16$. Le bénéfice maximal est de $16$ milliers d'euros, soit $16\\,000$ €, pour $x = 2$ (2000 unités)."
+        "$ f'(x) = 8x + 2 $.",
+        "$ f'(1) = 8\\times 1 + 2 = 10 $."
       ],
-      "reponse": "Bénéfice maximal de $16$ milliers d'euros, atteint pour $x = 2$."
+      "reponse": "$ f'(1) = 10 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "quotient",
-      "enonce": "Calculer la dérivée de $f(x) = \\dfrac{2x - 1}{x + 2}$ sur $]-2\\,;+\\infty[$ à l'aide de la formule de dérivation d'un quotient.",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 1x^2 + 3x + 5 $. Calculer $ f'(4) $.",
       "corrige": [
-        "On pose $u = 2x - 1$ et $v = x + 2$, donc $u' = 2$ et $v' = 1$.",
-        "La formule du quotient est $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$, en respectant l'ordre au numérateur ($u'v$ puis $-uv'$).",
-        "Au numérateur : $u'v - uv' = 2(x + 2) - (2x - 1) \\times 1 = 2x + 4 - 2x + 1 = 5$.",
-        "Donc $f'(x) = \\dfrac{5}{(x + 2)^2}$. Ce nombre est toujours strictement positif : $f$ est croissante sur $]-2\\,;+\\infty[$."
+        "$ f'(x) = 2x + 3 $.",
+        "$ f'(4) = 2\\times 4 + 3 = 11 $."
       ],
-      "reponse": "$f'(x) = \\dfrac{5}{(x + 2)^2}$."
+      "reponse": "$ f'(4) = 11 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "tangente",
-      "enonce": "Soit $f(x) = x^2 - 5x + 6$. Déterminer l'abscisse du point de la courbe de $f$ en lequel la tangente a pour coefficient directeur $3$, puis donner l'équation réduite de cette tangente.",
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 3x^2 + 2x + 2 $. Calculer $ f'(2) $.",
       "corrige": [
-        "Le coefficient directeur de la tangente au point d'abscisse $a$ est $f'(a)$. On calcule d'abord $f'(x) = 2x - 5$.",
-        "On cherche $a$ tel que $f'(a) = 3$ : $2a - 5 = 3 \\iff 2a = 8 \\iff a = 4$.",
-        "On calcule l'ordonnée du point de contact : $f(4) = 4^2 - 5 \\times 4 + 6 = 16 - 20 + 6 = 2$.",
-        "On applique $y = f'(a)(x - a) + f(a)$ avec $a = 4$, $f'(4) = 3$ et $f(4) = 2$ : $y = 3(x - 4) + 2 = 3x - 10$."
+        "$ f'(x) = 6x + 2 $.",
+        "$ f'(2) = 6\\times 2 + 2 = 14 $."
       ],
-      "reponse": "En $a = 4$ ; tangente $y = 3x - 10$."
+      "reponse": "$ f'(2) = 14 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "variations",
-      "enonce": "Soit $f(x) = x^3 - 3x^2 - 9x + 5$ définie sur $\\mathbb{R}$. Calculer $f'(x)$, étudier son signe, puis dresser le tableau de variations de $f$ en précisant la nature et la valeur des extrémums.",
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 2x^2 + 5x + 1 $. Calculer $ f'(3) $.",
       "corrige": [
-        "On dérive terme à terme : $f'(x) = 3x^2 - 6x - 9$.",
-        "On factorise pour étudier le signe : $f'(x) = 3(x^2 - 2x - 3) = 3(x - 3)(x + 1)$. La dérivée s'annule en $x = -1$ et en $x = 3$.",
-        "Signe de $f'$ (trinôme de coefficient dominant positif) : $f'(x) > 0$ sur $]-\\infty\\,;-1[$ et sur $]3\\,;+\\infty[$, et $f'(x) < 0$ sur $]-1\\,;3[$.",
-        "Donc $f$ est croissante sur $]-\\infty\\,;-1]$, décroissante sur $[-1\\,;3]$, puis croissante sur $[3\\,;+\\infty[$.",
-        "Images aux points remarquables : $f(-1) = -1 - 3 + 9 + 5 = 10$ et $f(3) = 27 - 27 - 27 + 5 = -22$. Comme $f'$ passe du $+$ au $-$ en $-1$, $f$ y admet un maximum local égal à $10$ ; comme $f'$ passe du $-$ au $+$ en $3$, $f$ y admet un minimum local égal à $-22$."
+        "$ f'(x) = 4x + 5 $.",
+        "$ f'(3) = 4\\times 3 + 5 = 17 $."
       ],
-      "reponse": "$f'(x) = 3(x - 3)(x + 1)$ ; croissante sur $]-\\infty\\,;-1]$, décroissante sur $[-1\\,;3]$, croissante sur $[3\\,;+\\infty[$ ; maximum local $10$ en $x = -1$, minimum local $-22$ en $x = 3$."
+      "reponse": "$ f'(3) = 17 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "optimisation",
-      "enonce": "Un atelier fabrique des pièces. On note $x$ le nombre de centaines de pièces produites, avec $x \\in [0\\,;6]$. Le bénéfice, en milliers d'euros, est modélisé par $B(x) = x^3 - 9x^2 + 24x$. Répondre aux questions suivantes.\\n1. En revenant à la définition du nombre dérivé (limite du taux de variation), calculer $B'(2)$.\\n2. Déterminer l'équation réduite de la tangente à la courbe de $B$ au point d'abscisse $1$.\\n3. Calculer $B'(x)$, étudier son signe sur $[0\\,;6]$ et dresser le tableau de variations de $B$.\\n4. En déduire la production qui rend le bénéfice maximal sur $[0\\,;6]$ et la valeur de ce bénéfice maximal.",
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 1x^2 + 1x + 1 $. Calculer $ f'(5) $.",
       "corrige": [
-        "1. On forme le taux de variation entre $2$ et $2 + h$. On développe $B(2 + h) = (2 + h)^3 - 9(2 + h)^2 + 24(2 + h)$. Or $(2+h)^3 = 8 + 12h + 6h^2 + h^3$ et $(2+h)^2 = 4 + 4h + h^2$, donc $B(2+h) = 8 + 12h + 6h^2 + h^3 - 36 - 36h - 9h^2 + 48 + 24h = 20 - 3h^2 + h^3$. Comme $B(2) = 8 - 36 + 48 = 20$, le taux vaut $\\dfrac{B(2+h) - B(2)}{h} = \\dfrac{-3h^2 + h^3}{h} = -3h + h^2$. Quand $h$ tend vers $0$, cette expression tend vers $0$ : $B'(2) = 0$.",
-        "2. La tangente en $a = 1$ a pour équation $y = B'(1)(x - 1) + B(1)$. La fonction dérivée est $B'(x) = 3x^2 - 18x + 24$, d'où $B'(1) = 3 - 18 + 24 = 9$, et $B(1) = 1 - 9 + 24 = 16$. On obtient $y = 9(x - 1) + 16 = 9x + 7$.",
-        "3. On factorise la dérivée : $B'(x) = 3x^2 - 18x + 24 = 3(x^2 - 6x + 8) = 3(x - 2)(x - 4)$. Elle s'annule en $x = 2$ et $x = 4$. Sur $[0\\,;6]$ : $B'(x) > 0$ sur $[0\\,;2[$, $B'(x) < 0$ sur $]2\\,;4[$, $B'(x) > 0$ sur $]4\\,;6]$. Donc $B$ est croissante sur $[0\\,;2]$, décroissante sur $[2\\,;4]$, puis croissante sur $[4\\,;6]$. Valeurs utiles : $B(0) = 0$, $B(2) = 20$ (maximum local), $B(4) = 64 - 144 + 96 = 16$ (minimum local), $B(6) = 216 - 324 + 144 = 36$.",
-        "4. Sur un intervalle fermé, le maximum est atteint soit en un maximum local, soit à une borne. On compare le maximum local $B(2) = 20$ et la valeur au bord $B(6) = 36$. La plus grande est $B(6) = 36$. Le bénéfice est donc maximal pour $x = 6$, c'est-à-dire $600$ pièces, et vaut $36$ milliers d'euros, soit $36\\,000$ €. (Attention : le maximum n'est pas le maximum local $x = 2$, mais bien la borne $x = 6$.)"
+        "$ f'(x) = 2x + 1 $.",
+        "$ f'(5) = 2\\times 5 + 1 = 11 $."
       ],
-      "reponse": "1. $B'(2) = 0$. 2. Tangente $y = 9x + 7$. 3. $B$ croissante sur $[0\\,;2]$, décroissante sur $[2\\,;4]$, croissante sur $[4\\,;6]$ (max local $20$ en $2$, min local $16$ en $4$). 4. Bénéfice maximal de $36$ milliers d'euros pour $x = 6$ (600 pièces)."
+      "reponse": "$ f'(5) = 11 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 5x^2 + 2x + 3 $. Calculer $ f'(1) $.",
+      "corrige": [
+        "$ f'(x) = 10x + 2 $.",
+        "$ f'(1) = 10\\times 1 + 2 = 12 $."
+      ],
+      "reponse": "$ f'(1) = 12 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Soit $ f(x) = 2x^2 + 4x + 6 $. Calculer $ f'(0) $.",
+      "corrige": [
+        "$ f'(x) = 4x + 4 $.",
+        "$ f'(0) = 4\\times 0 + 4 = 4 $."
+      ],
+      "reponse": "$ f'(0) = 4 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 1x^2 + 2x + 3 $.",
+      "corrige": [
+        "$ f'(x) = 2x + 2 $."
+      ],
+      "reponse": "$ f'(x) = 2x + 2 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 2x^2 + 3x + 1 $.",
+      "corrige": [
+        "$ f'(x) = 4x + 3 $."
+      ],
+      "reponse": "$ f'(x) = 4x + 3 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 3x^2 + 1x + 4 $.",
+      "corrige": [
+        "$ f'(x) = 6x + 1 $."
+      ],
+      "reponse": "$ f'(x) = 6x + 1 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 1x^2 + 5x + 2 $.",
+      "corrige": [
+        "$ f'(x) = 2x + 5 $."
+      ],
+      "reponse": "$ f'(x) = 2x + 5 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 2x^2 + 1x + 6 $.",
+      "corrige": [
+        "$ f'(x) = 4x + 1 $."
+      ],
+      "reponse": "$ f'(x) = 4x + 1 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 4x^2 + 2x + 1 $.",
+      "corrige": [
+        "$ f'(x) = 8x + 2 $."
+      ],
+      "reponse": "$ f'(x) = 8x + 2 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 1x^2 + 3x + 5 $.",
+      "corrige": [
+        "$ f'(x) = 2x + 3 $."
+      ],
+      "reponse": "$ f'(x) = 2x + 3 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 3x^2 + 2x + 2 $.",
+      "corrige": [
+        "$ f'(x) = 6x + 2 $."
+      ],
+      "reponse": "$ f'(x) = 6x + 2 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 2x^2 + 5x + 1 $.",
+      "corrige": [
+        "$ f'(x) = 4x + 5 $."
+      ],
+      "reponse": "$ f'(x) = 4x + 5 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "fonction-derivee",
+      "enonce": "Donner la derivee de $ f(x) = 5x^2 + 2x + 3 $.",
+      "corrige": [
+        "$ f'(x) = 10x + 2 $."
+      ],
+      "reponse": "$ f'(x) = 10x + 2 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 1x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=2x+1 $, $ f'(2)=5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 2x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=4x+1 $, $ f'(2)=9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 3x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=6x+1 $, $ f'(2)=13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 4x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=8x+1 $, $ f'(2)=17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 5x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=10x+1 $, $ f'(2)=21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 6x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=12x+1 $, $ f'(2)=25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 7x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=14x+1 $, $ f'(2)=29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 8x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=16x+1 $, $ f'(2)=33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 9x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=18x+1 $, $ f'(2)=37 $."
+      ],
+      "reponse": "$ 37 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 10x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=20x+1 $, $ f'(2)=41 $."
+      ],
+      "reponse": "$ 41 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 11x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=22x+1 $, $ f'(2)=45 $."
+      ],
+      "reponse": "$ 45 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 12x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=24x+1 $, $ f'(2)=49 $."
+      ],
+      "reponse": "$ 49 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 13x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=26x+1 $, $ f'(2)=53 $."
+      ],
+      "reponse": "$ 53 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 14x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=28x+1 $, $ f'(2)=57 $."
+      ],
+      "reponse": "$ 57 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 15x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=30x+1 $, $ f'(2)=61 $."
+      ],
+      "reponse": "$ 61 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 16x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=32x+1 $, $ f'(2)=65 $."
+      ],
+      "reponse": "$ 65 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 17x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=34x+1 $, $ f'(2)=69 $."
+      ],
+      "reponse": "$ 69 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 18x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=36x+1 $, $ f'(2)=73 $."
+      ],
+      "reponse": "$ 73 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 19x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=38x+1 $, $ f'(2)=77 $."
+      ],
+      "reponse": "$ 77 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 20x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=40x+1 $, $ f'(2)=81 $."
+      ],
+      "reponse": "$ 81 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 21x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=42x+1 $, $ f'(2)=85 $."
+      ],
+      "reponse": "$ 85 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 22x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=44x+1 $, $ f'(2)=89 $."
+      ],
+      "reponse": "$ 89 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 23x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=46x+1 $, $ f'(2)=93 $."
+      ],
+      "reponse": "$ 93 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 24x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=48x+1 $, $ f'(2)=97 $."
+      ],
+      "reponse": "$ 97 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 25x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=50x+1 $, $ f'(2)=101 $."
+      ],
+      "reponse": "$ 101 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 26x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=52x+1 $, $ f'(2)=105 $."
+      ],
+      "reponse": "$ 105 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 27x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=54x+1 $, $ f'(2)=109 $."
+      ],
+      "reponse": "$ 109 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "$ f(x) = 28x^2 + x $, calculer $ f'(2) $.",
+      "corrige": [
+        "$ f'(x)=56x+1 $, $ f'(2)=113 $."
+      ],
+      "reponse": "$ 113 $"
     }
   ]
 }

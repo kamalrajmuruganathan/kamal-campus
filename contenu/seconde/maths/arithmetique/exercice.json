@@ -13,137 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "multiple-diviseur",
-      "enonce": "Montrer que $138$ est un multiple de $6$. On précisera la valeur de l'entier $k$ tel que $138 = 6k$.",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 24 et 36.",
       "corrige": [
-        "Par définition, $138$ est un multiple de $6$ s'il existe un entier $k$ tel que $138 = 6k$.",
-        "On effectue $138 = 6 \\times 23$.",
-        "Le nombre $k = 23$ est bien un entier : la définition est vérifiée.",
-        "On peut aussi le dire dans l'autre sens : $6$ est un diviseur de $138$."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(24,36) = 12 $."
       ],
-      "reponse": "$138 = 6 \\times 23$ avec $23$ entier, donc $138$ est un multiple de $6$."
+      "reponse": "$ 12 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "fraction-irreductible",
-      "enonce": "Mettre la fraction $\\dfrac{60}{144}$ sous forme irréductible.",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 48 et 60.",
       "corrige": [
-        "Numérateur et dénominateur sont pairs : $\\dfrac{60}{144} = \\dfrac{30}{72}$.",
-        "Ils sont encore pairs : $\\dfrac{30}{72} = \\dfrac{15}{36}$.",
-        "Ils sont tous deux divisibles par $3$ : $\\dfrac{15}{36} = \\dfrac{5}{12}$.",
-        "$5$ et $12$ n'ont plus aucun diviseur commun autre que $1$ : la fraction est irréductible."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(48,60) = 12 $."
       ],
-      "reponse": "$\\dfrac{60}{144} = \\dfrac{5}{12}$."
+      "reponse": "$ 12 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "ecriture-algebrique",
-      "enonce": "Montrer que la somme d'un nombre pair et d'un nombre impair est toujours impaire.",
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 30 et 45.",
       "corrige": [
-        "On pose l'écriture algébrique de chaque nombre : un pair $a = 2k$ et un impair $b = 2k'+1$, avec $k$ et $k'$ entiers.",
-        "On calcule leur somme : $a + b = 2k + 2k' + 1$.",
-        "On factorise par $2$ ce qui peut l'être : $a + b = 2(k + k') + 1$.",
-        "Comme $k + k'$ est un entier, $a+b$ est de la forme $2 \\times (\\text{entier}) + 1$ : la somme est donc impaire."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(30,45) = 15 $."
       ],
-      "reponse": "$a + b = 2(k+k')+1$ : la somme d'un pair et d'un impair est impaire."
+      "reponse": "$ 15 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "contre-exemple",
-      "enonce": "Un élève affirme : « Tout nombre pair est un multiple de $4$. » Cette affirmation est-elle vraie ? Justifier.",
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 56 et 42.",
       "corrige": [
-        "L'affirmation est universelle (« tout nombre pair ») : pour la réfuter, un seul contre-exemple suffit.",
-        "Le nombre $6$ est pair, car $6 = 2 \\times 3$.",
-        "Or $6$ n'est pas un multiple de $4$ : il n'existe aucun entier $k$ tel que $6 = 4k$ (on aurait $k = 1{,}5$, qui n'est pas entier).",
-        "Le nombre $6$ contredit donc l'affirmation, qui est fausse."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(56,42) = 14 $."
       ],
-      "reponse": "Affirmation fausse : $6$ est pair mais n'est pas un multiple de $4$."
+      "reponse": "$ 14 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "demonstration",
-      "enonce": "On considère deux multiples de $6$. 1) Démontrer que leur somme est toujours un multiple de $6$. 2) Cette somme est-elle toujours un multiple de $12$ ? Justifier.",
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 72 et 54.",
       "corrige": [
-        "1) On pose deux multiples de $6$ avec deux lettres distinctes : $m = 6k$ et $n = 6k'$, avec $k$ et $k'$ entiers.",
-        "On calcule : $m + n = 6k + 6k' = 6(k + k')$.",
-        "Comme $k + k'$ est un entier, $m+n$ est un multiple de $6$.",
-        "2) Un seul contre-exemple suffit pour répondre « non ». Prenons $m = 6$ et $n = 12$, deux multiples de $6$.",
-        "Leur somme vaut $m + n = 18$. Or $18$ n'est pas un multiple de $12$ (car $18 = 12 \\times 1{,}5$, et $1{,}5$ n'est pas entier).",
-        "Donc la somme de deux multiples de $6$ n'est pas toujours un multiple de $12$."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(72,54) = 18 $."
       ],
-      "reponse": "1) $m+n = 6(k+k')$ : c'est un multiple de $6$. 2) Non : $6 + 12 = 18$ n'est pas multiple de $12$."
+      "reponse": "$ 18 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "demonstration-exigible",
-      "enonce": "Soit $n$ un entier. 1) Montrer que si $n$ est pair, alors $n^2$ est un multiple de $4$. 2) Montrer que si $n$ est impair, alors $n^2$ est de la forme $4k+1$ (et n'est donc jamais un multiple de $4$).",
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 100 et 60.",
       "corrige": [
-        "1) Si $n$ est pair, on l'écrit $n = 2k$ avec $k$ entier.",
-        "Alors $n^2 = (2k)^2 = 4k^2 = 4 \\times k^2$. Comme $k^2$ est un entier, $n^2$ est un multiple de $4$.",
-        "2) Si $n$ est impair, on l'écrit $n = 2k+1$ avec $k$ entier.",
-        "On développe sans oublier le double produit : $n^2 = (2k+1)^2 = 4k^2 + 4k + 1$.",
-        "On factorise par $4$ les deux premiers termes : $n^2 = 4(k^2 + k) + 1$.",
-        "$k^2 + k$ est un entier, donc $n^2$ s'écrit $4 \\times (\\text{entier}) + 1$ : c'est un nombre de la forme $4k'+1$, qui laisse un reste $1$ et n'est donc pas un multiple de $4$."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(100,60) = 20 $."
       ],
-      "reponse": "1) $n^2 = 4k^2$, multiple de $4$. 2) $n^2 = 4(k^2+k)+1$, de la forme $4k'+1$ : jamais multiple de $4$."
+      "reponse": "$ 20 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "plus-grand-multiple",
-      "enonce": "Déterminer le plus grand multiple de $8$ inférieur ou égal à $70$.",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 84 et 36.",
       "corrige": [
-        "On applique l'algorithme du cours : on part de $8$ et on ajoute $8$ tant qu'on ne dépasse pas $70$.",
-        "On liste les multiples de $8$ : $8,\\ 16,\\ 24,\\ 32,\\ 40,\\ 48,\\ 56,\\ 64$.",
-        "Le multiple suivant serait $64 + 8 = 72$, or $72 > 70$ : on s'arrête.",
-        "Le dernier multiple obtenu sans dépasser $70$ est donc $64 = 8 \\times 8$."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(84,36) = 12 $."
       ],
-      "reponse": "Le plus grand multiple de $8$ inférieur ou égal à $70$ est $64$ (car $64 = 8 \\times 8$ et $72 > 70$)."
+      "reponse": "$ 12 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "ecriture-algebrique",
-      "enonce": "Montrer que le produit de deux nombres impairs est toujours impair.",
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 90 et 120.",
       "corrige": [
-        "On pose l'écriture algébrique de chaque nombre, avec deux lettres distinctes : $a = 2k+1$ et $b = 2k'+1$, où $k$ et $k'$ sont des entiers.",
-        "On calcule le produit : $a \\times b = (2k+1)(2k'+1) = 4kk' + 2k + 2k' + 1$.",
-        "On factorise par $2$ ce qui peut l'être : $a \\times b = 2(2kk' + k + k') + 1$.",
-        "Comme $2kk' + k + k'$ est un entier, $a \\times b$ est de la forme $2 \\times (\\text{entier}) + 1$ : le produit est donc impair."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(90,120) = 30 $."
       ],
-      "reponse": "$a \\times b = 2(2kk'+k+k')+1$ : le produit de deux nombres impairs est impair."
+      "reponse": "$ 30 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "demonstration",
-      "enonce": "Soit $n$ un entier. Démontrer que la somme de trois entiers consécutifs est toujours un multiple de $3$.",
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 45 et 75.",
       "corrige": [
-        "On écrit trois entiers consécutifs à partir de $n$ : ce sont $n$, $n+1$ et $n+2$.",
-        "On calcule leur somme : $n + (n+1) + (n+2) = 3n + 3$.",
-        "On factorise par $3$ : $3n + 3 = 3(n + 1)$.",
-        "Comme $n + 1$ est un entier, la somme s'écrit $3 \\times (\\text{entier})$ : c'est donc un multiple de $3$."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(45,75) = 15 $."
       ],
-      "reponse": "$n + (n+1) + (n+2) = 3(n+1)$ : la somme de trois entiers consécutifs est toujours un multiple de $3$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "probleme-synthese",
-      "enonce": "Un animateur prépare un jeu de société avec des jetons. **Partie A.** Il dispose de $90$ jetons. 1) Montrer que $90$ est un multiple de $5$, en précisant l'entier $k$ tel que $90 = 5k$. Le nombre $90$ est-il aussi un multiple de $4$ ? Justifier. 2) Il souhaite aligner les $90$ jetons en rangées de même longueur, sans qu'aucun jeton ne reste seul. Parmi des rangées de $6$, de $7$ ou de $8$ jetons, lesquelles sont possibles ? Justifier chaque cas par une division. 3) Le nombre $90$ est-il un nombre premier ? Justifier, puis donner son plus petit diviseur premier. **Partie B.** L'animateur ajoute un jeton : il en a maintenant $91$. 4) Sachant que $90$ est pair, montrer que $91$ est impair. 5) Le nombre $91$ est-il premier ? Justifier.",
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 64 et 48.",
       "corrige": [
-        "1. On cherche un entier $k$ tel que $90 = 5k$ : on a $90 = 5 \\times 18$, et $18$ est un entier, donc $90$ est bien un multiple de $5$ (avec $k = 18$). En revanche $90$ n'est pas un multiple de $4$ : la division donne $90 = 4 \\times 22 + 2$, le reste vaut $2 \\neq 0$, donc aucun entier $k$ ne vérifie $90 = 4k$.",
-        "2. On teste chaque taille de rangée en regardant si la division tombe juste (reste $0$). Rangées de $6$ : $90 = 6 \\times 15$, reste $0$ — c'est possible ($15$ rangées). Rangées de $7$ : $90 = 7 \\times 12 + 6$, reste $6 \\neq 0$ — impossible. Rangées de $8$ : $90 = 8 \\times 11 + 2$, reste $2 \\neq 0$ — impossible. Seules les rangées de $6$ jetons conviennent.",
-        "3. Un nombre premier a exactement deux diviseurs : $1$ et lui-même. Or $90 = 2 \\times 45$, donc $2$ est un diviseur de $90$ différent de $1$ et de $90$ : le nombre $90$ n'est pas premier. Comme $90$ est pair, il est divisible par $2$, et $2$ est son plus petit diviseur premier.",
-        "4. On sait que $90$ est pair, donc $90 = 2k$ avec $k = 45$ entier. Alors $91 = 90 + 1 = 2 \\times 45 + 1$, qui est de la forme $2k + 1$ avec $k$ entier : le nombre $91$ est donc impair.",
-        "5. On cherche un diviseur de $91$ autre que $1$ et $91$. On teste les petits entiers : $91$ n'est ni pair, ni multiple de $3$ (car $9+1 = 10$ n'est pas multiple de $3$), ni multiple de $5$ (il ne finit ni par $0$ ni par $5$). En essayant $7$ : $91 = 7 \\times 13$. Donc $91$ admet les diviseurs $7$ et $13$ en plus de $1$ et $91$ : il n'est pas premier."
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(64,48) = 16 $."
       ],
-      "reponse": "1) $90 = 5 \\times 18$ (multiple de $5$) ; $90$ n'est pas multiple de $4$ (reste $2$). 2) Seules les rangées de $6$ conviennent ($90 = 6 \\times 15$) ; $7$ et $8$ donnent un reste. 3) $90$ n'est pas premier ($90 = 2 \\times 45$), son plus petit diviseur premier est $2$. 4) $91 = 2 \\times 45 + 1$ est impair. 5) $91$ n'est pas premier car $91 = 7 \\times 13$."
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 27 et 36.",
+      "corrige": [
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(27,36) = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "Calculer le PGCD de 50 et 80.",
+      "corrige": [
+        "Par l'algorithme d'Euclide, $ \\mathrm{PGCD}(50,80) = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "126 est-il divisible par 3 ?",
+      "corrige": [
+        "Oui, car 126 $ = 3 \\times 42 $."
+      ],
+      "reponse": "Oui"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "85 est-il divisible par 5 ?",
+      "corrige": [
+        "Oui, car 85 $ = 5 \\times 17 $."
+      ],
+      "reponse": "Oui"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "324 est-il divisible par 9 ?",
+      "corrige": [
+        "Oui, car 324 $ = 9 \\times 36 $."
+      ],
+      "reponse": "Oui"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "100 est-il divisible par 3 ?",
+      "corrige": [
+        "Non, car 100 $ = 3 \\times 33 + 1 $."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "85 est-il divisible par 2 ?",
+      "corrige": [
+        "Non, car 85 $ = 2 \\times 42 + 1 $."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "91 est-il divisible par 5 ?",
+      "corrige": [
+        "Non, car 91 $ = 5 \\times 18 + 1 $."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "153 est-il divisible par 3 ?",
+      "corrige": [
+        "Oui, car 153 $ = 3 \\times 51 $."
+      ],
+      "reponse": "Oui"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "112 est-il divisible par 2 ?",
+      "corrige": [
+        "Oui, car 112 $ = 2 \\times 56 $."
+      ],
+      "reponse": "Oui"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "50 est-il divisible par 4 ?",
+      "corrige": [
+        "Non, car 50 $ = 4 \\times 12 + 2 $."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "945 est-il divisible par 9 ?",
+      "corrige": [
+        "Oui, car 945 $ = 9 \\times 105 $."
+      ],
+      "reponse": "Oui"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "370 est-il divisible par 3 ?",
+      "corrige": [
+        "Non, car 370 $ = 3 \\times 123 + 1 $."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "639 est-il divisible par 2 ?",
+      "corrige": [
+        "Non, car 639 $ = 2 \\times 319 + 1 $."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 12 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 12 = 2 \\times 2 \\times 3 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 3 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 18 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 18 = 2 \\times 3 \\times 3 $."
+      ],
+      "reponse": "$ 2 \\times 3 \\times 3 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 24 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 24 = 2 \\times 2 \\times 2 \\times 3 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 2 \\times 3 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 36 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 36 = 2 \\times 2 \\times 3 \\times 3 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 3 \\times 3 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 48 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 48 = 2 \\times 2 \\times 2 \\times 2 \\times 3 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 2 \\times 2 \\times 3 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 60 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 60 = 2 \\times 2 \\times 3 \\times 5 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 3 \\times 5 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 72 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 72 = 2 \\times 2 \\times 2 \\times 3 \\times 3 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 2 \\times 3 \\times 3 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 100 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 100 = 2 \\times 2 \\times 5 \\times 5 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 5 \\times 5 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 84 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 84 = 2 \\times 2 \\times 3 \\times 7 $."
+      ],
+      "reponse": "$ 2 \\times 2 \\times 3 \\times 7 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "decomposition",
+      "enonce": "Decomposer 90 en produit de facteurs premiers.",
+      "corrige": [
+        "$ 90 = 2 \\times 3 \\times 3 \\times 5 $."
+      ],
+      "reponse": "$ 2 \\times 3 \\times 3 \\times 5 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 12 et 8 ?",
+      "corrige": [
+        "$ = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 18 et 12 ?",
+      "corrige": [
+        "$ = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 24 et 16 ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 30 et 20 ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 36 et 24 ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 42 et 28 ?",
+      "corrige": [
+        "$ = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 48 et 32 ?",
+      "corrige": [
+        "$ = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 54 et 36 ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 60 et 40 ?",
+      "corrige": [
+        "$ = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 66 et 44 ?",
+      "corrige": [
+        "$ = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 72 et 48 ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 78 et 52 ?",
+      "corrige": [
+        "$ = 26 $."
+      ],
+      "reponse": "$ 26 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 84 et 56 ?",
+      "corrige": [
+        "$ = 28 $."
+      ],
+      "reponse": "$ 28 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 90 et 60 ?",
+      "corrige": [
+        "$ = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 96 et 64 ?",
+      "corrige": [
+        "$ = 32 $."
+      ],
+      "reponse": "$ 32 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "pgcd",
+      "enonce": "PGCD de 102 et 68 ?",
+      "corrige": [
+        "$ = 34 $."
+      ],
+      "reponse": "$ 34 $"
     }
   ]
 }

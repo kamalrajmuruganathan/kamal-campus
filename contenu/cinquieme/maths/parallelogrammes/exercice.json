@@ -13,132 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "proprietes",
-      "enonce": "$ABCD$ est un parallélogramme tel que $AB = 6$ cm, $BC = 4{,}5$ cm et $\\widehat{A} = 70°$. Sans rien mesurer, donner les longueurs $CD$ et $AD$, puis les mesures des angles $\\widehat{C}$ et $\\widehat{B}$.",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 5 cm et hauteur 3 cm ?",
       "corrige": [
-        "Dans un parallélogramme, les côtés opposés ont deux à deux la même longueur (propriété). Or $[AB]$ et $[CD]$ sont opposés, ainsi que $[BC]$ et $[AD]$.",
-        "Donc $CD = AB = 6$ cm et $AD = BC = 4{,}5$ cm.",
-        "Les angles opposés d'un parallélogramme sont égaux : $\\widehat{C} = \\widehat{A} = 70°$.",
-        "Les angles consécutifs sont supplémentaires : $\\widehat{A} + \\widehat{B} = 180°$, donc $\\widehat{B} = 180° - 70° = 110°$."
+        "$ A = b\\times h = 5\\times 3 = 15 $ cm²."
       ],
-      "reponse": "$CD = 6$ cm, $AD = 4{,}5$ cm, $\\widehat{C} = 70°$ et $\\widehat{B} = 110°$."
+      "reponse": "$ 15 $ cm²"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "aire",
-      "enonce": "Un parallélogramme a une base de $12$ cm et une hauteur (relative à cette base) de $4{,}5$ cm. Son côté oblique mesure $5$ cm. Calculer son aire.",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 6 cm et hauteur 4 cm ?",
       "corrige": [
-        "L'aire d'un parallélogramme vaut base $\\times$ hauteur, où la hauteur est la distance perpendiculaire entre la base et le côté opposé.",
-        "Le côté oblique ($5$ cm) n'intervient pas dans le calcul : il ne sert qu'à piéger. On n'utilise que la base et la hauteur.",
-        "$\\mathcal{A} = 12 \\times 4{,}5 = 54$ cm²."
+        "$ A = b\\times h = 6\\times 4 = 24 $ cm²."
       ],
-      "reponse": "$\\mathcal{A} = 54$ cm²."
+      "reponse": "$ 24 $ cm²"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "diagonales",
-      "enonce": "Les diagonales d'un quadrilatère $EFGH$ se coupent en leur milieu. On constate de plus qu'elles ont la même longueur, mais qu'elles ne sont pas perpendiculaires. Quelle est la nature précise de $EFGH$ ? Justifier.",
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 8 cm et hauteur 2 cm ?",
       "corrige": [
-        "Les diagonales se coupent en leur milieu : c'est la propriété caractéristique du parallélogramme, donc $EFGH$ est déjà un parallélogramme.",
-        "On examine la condition en plus. Des diagonales qui se coupent en leur milieu ET ont la même longueur caractérisent un rectangle.",
-        "Les diagonales ne sont pas perpendiculaires : ce n'est donc ni un losange, ni un carré (qui exigeraient la perpendicularité).",
-        "La seule condition ajoutée est l'égalité des longueurs : $EFGH$ est un rectangle."
+        "$ A = b\\times h = 8\\times 2 = 16 $ cm²."
       ],
-      "reponse": "$EFGH$ est un rectangle."
+      "reponse": "$ 16 $ cm²"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "caracteristique",
-      "enonce": "On étudie un quadrilatère $ABCD$ (sommets dans cet ordre). Pour chacune des deux affirmations, dire si elle permet de conclure que $ABCD$ est un parallélogramme. (a) « $AB = CD$ », où $[AB]$ et $[CD]$ sont opposés. (b) « $AB = CD$ et $BC = AD$ ».",
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 7 cm et hauteur 5 cm ?",
       "corrige": [
-        "(a) On ne connaît qu'une seule paire de côtés opposés de même longueur. Ce n'est pas une propriété caractéristique : un trapèze isocèle a deux côtés opposés égaux sans être un parallélogramme.",
-        "Donc l'affirmation (a) ne permet pas de conclure.",
-        "(b) Cette fois, les deux paires de côtés opposés sont de même longueur. C'est une propriété caractéristique : si les côtés opposés d'un quadrilatère ont deux à deux la même longueur, alors c'est un parallélogramme.",
-        "Donc l'affirmation (b) permet de conclure que $ABCD$ est un parallélogramme."
+        "$ A = b\\times h = 7\\times 5 = 35 $ cm²."
       ],
-      "reponse": "(a) non : une seule paire de côtés égaux ne suffit pas. (b) oui : c'est une propriété caractéristique."
+      "reponse": "$ 35 $ cm²"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "demonstration",
-      "enonce": "$ABCD$ est un quadrilatère (sommets dans cet ordre) tel que $(AB) \\parallel (CD)$ et $AB = CD$. Rédiger une démonstration complète, en trois temps (« je sais que… », « or… », « donc… »), établissant que $ABCD$ est un parallélogramme.",
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 10 cm et hauteur 4 cm ?",
       "corrige": [
-        "Je sais que : dans le quadrilatère $ABCD$, les côtés $[AB]$ et $[CD]$ sont opposés ; ils sont parallèles ($(AB) \\parallel (CD)$) et de même longueur ($AB = CD$).",
-        "Or : si un quadrilatère a deux côtés opposés à la fois parallèles ET de même longueur, alors c'est un parallélogramme (propriété caractéristique).",
-        "Donc : $ABCD$ est un parallélogramme.",
-        "C'est le « or » — l'énoncé de la propriété — qui transforme le constat en démonstration. Ici une seule paire de côtés suffit, à condition de vérifier les deux conditions : parallèles ET de même longueur."
+        "$ A = b\\times h = 10\\times 4 = 40 $ cm²."
       ],
-      "reponse": "$ABCD$ est un parallélogramme, d'après la propriété caractéristique « deux côtés opposés parallèles et de même longueur »."
+      "reponse": "$ 40 $ cm²"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "aire",
-      "enonce": "Un jardin a la forme d'un L : c'est un grand rectangle de $8$ m sur $5$ m auquel on a retiré, dans un coin, un rectangle de $3$ m sur $2$ m. 1) Calculer l'aire du jardin en m². 2) Convertir cette aire en cm².",
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 9 cm et hauteur 6 cm ?",
       "corrige": [
-        "Méthode : on encadre par le grand rectangle et on retranche le morceau manquant.",
-        "Aire du grand rectangle : $8 \\times 5 = 40$ m².",
-        "Aire du rectangle retiré : $3 \\times 2 = 6$ m².",
-        "Aire du jardin : $40 - 6 = 34$ m².",
-        "Conversion : $1$ m² $= 10\\,000$ cm² (on multiplie par $100$ à chaque rang, pas par $10$), donc $34$ m² $= 34 \\times 10\\,000 = 340\\,000$ cm²."
+        "$ A = b\\times h = 9\\times 6 = 54 $ cm²."
       ],
-      "reponse": "Aire $= 34$ m² $= 340\\,000$ cm²."
+      "reponse": "$ 54 $ cm²"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "particuliers",
-      "enonce": "Les diagonales d'un quadrilatère $MNPQ$ se coupent en leur milieu, ont la même longueur et sont perpendiculaires. Quelle est la nature précise de $MNPQ$ ? Justifier.",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 12 cm et hauteur 3 cm ?",
       "corrige": [
-        "Les diagonales se coupent en leur milieu : c'est la propriété caractéristique du parallélogramme, donc $MNPQ$ est déjà un parallélogramme.",
-        "Elles ont de plus la même longueur : des diagonales qui se coupent en leur milieu ET de même longueur caractérisent un rectangle.",
-        "Elles sont de plus perpendiculaires : des diagonales qui se coupent en leur milieu ET perpendiculaires caractérisent un losange.",
-        "$MNPQ$ est donc à la fois un rectangle et un losange : c'est un carré."
+        "$ A = b\\times h = 12\\times 3 = 36 $ cm²."
       ],
-      "reponse": "$MNPQ$ est un carré."
+      "reponse": "$ 36 $ cm²"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "aire",
-      "enonce": "Un vitrail est composé de losanges identiques. Chaque losange a des diagonales de $12$ cm et $9$ cm. 1) Calculer l'aire d'un losange. 2) Le vitrail compte $20$ losanges ; calculer l'aire totale de verre coloré, en cm² puis en dm².",
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 4 cm et hauteur 4 cm ?",
       "corrige": [
-        "1) L'aire d'un losange se calcule à partir de ses diagonales : $\\mathcal{A} = \\dfrac{D \\times d}{2}$, où $D$ et $d$ sont les longueurs des deux diagonales.",
-        "$\\mathcal{A} = \\dfrac{12 \\times 9}{2} = \\dfrac{108}{2} = 54$ cm².",
-        "2) Pour $20$ losanges identiques : $54 \\times 20 = 1\\,080$ cm².",
-        "Conversion en dm² : $1$ dm² $= 100$ cm² (on divise par $100$ à chaque rang, pas par $10$), donc $1\\,080$ cm² $= 1\\,080 \\div 100 = 10{,}8$ dm²."
+        "$ A = b\\times h = 4\\times 4 = 16 $ cm²."
       ],
-      "reponse": "Un losange : $54$ cm². Total : $1\\,080$ cm² $= 10{,}8$ dm²."
+      "reponse": "$ 16 $ cm²"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "demonstration",
-      "enonce": "$ABCD$ est un quadrilatère (sommets dans cet ordre) dont les diagonales $[AC]$ et $[BD]$ se coupent en un point $O$. On sait que $O$ est le milieu de $[AC]$ et le milieu de $[BD]$, et que $AC = BD$. Démontrer, en deux temps, d'abord que $ABCD$ est un parallélogramme, puis qu'il s'agit d'un rectangle.",
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 15 cm et hauteur 5 cm ?",
       "corrige": [
-        "Premier temps. Je sais que : $O$ est le milieu de $[AC]$ et de $[BD]$, c'est-à-dire que les diagonales de $ABCD$ se coupent en leur milieu. Or : si les diagonales d'un quadrilatère se coupent en leur milieu, alors ce quadrilatère est un parallélogramme (propriété caractéristique). Donc : $ABCD$ est un parallélogramme.",
-        "Second temps. Je sais que, de plus, $AC = BD$ : les deux diagonales ont la même longueur. Or : si un parallélogramme a ses diagonales de même longueur, alors c'est un rectangle (propriété caractéristique). Donc : $ABCD$ est un rectangle.",
-        "On a bien utilisé deux propriétés caractéristiques successives : la première donne le parallélogramme (grâce aux milieux), la seconde précise sa nature (grâce à l'égalité des longueurs). Attention, on ne sait rien sur la perpendicularité des diagonales : rien ne permet d'affirmer que c'est un carré."
+        "$ A = b\\times h = 15\\times 5 = 75 $ cm²."
       ],
-      "reponse": "$ABCD$ est un rectangle : ses diagonales se coupent en leur milieu (parallélogramme) et sont de même longueur (rectangle)."
+      "reponse": "$ 75 $ cm²"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "synthese",
-      "enonce": "Maxime aménage un coin de son jardin. Il crée d'abord un massif de fleurs, puis le décore avec des dalles et l'entoure d'un cadre. On étudie chaque élément.\n\n1. Le massif a la forme d'un parallélogramme de base $8$ m et de hauteur $3$ m ; son côté oblique mesure $3{,}5$ m. Calculer l'aire du massif.\n2. Convertir cette aire en cm².\n3. Les dalles sont des quadrilatères dont les diagonales se coupent en leur milieu, sont perpendiculaires, mais n'ont pas la même longueur. Quelle est la nature exacte d'une dalle ? Justifier.\n4. Sur une dalle, les diagonales mesurent $20$ cm et $15$ cm. Calculer l'aire de cette dalle.\n5. Maxime borde le massif d'un cadre dont les diagonales se coupent en leur milieu et ont la même longueur, sans être perpendiculaires. Quelle est la nature exacte du cadre ?",
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 11 cm et hauteur 7 cm ?",
       "corrige": [
-        "1. L'aire d'un parallélogramme vaut base $\\times$ hauteur. Le côté oblique ($3{,}5$ m) ne sert pas : ce n'est pas la hauteur. $\\mathcal{A} = 8 \\times 3 = 24$ m².",
-        "2. Conversion : $1$ m² $= 10\\,000$ cm² (on multiplie par $100$ à chaque rang, pas par $10$). Donc $24$ m² $= 24 \\times 10\\,000 = 240\\,000$ cm².",
-        "3. Les diagonales se coupent en leur milieu : la dalle est un parallélogramme. Elles sont de plus perpendiculaires : des diagonales qui se coupent en leur milieu ET perpendiculaires caractérisent un losange. Comme elles n'ont pas la même longueur, ce n'est ni un rectangle, ni un carré : la dalle est un losange.",
-        "4. L'aire d'un losange se calcule avec ses diagonales : $\\mathcal{A} = \\dfrac{D \\times d}{2} = \\dfrac{20 \\times 15}{2} = \\dfrac{300}{2} = 150$ cm².",
-        "5. Les diagonales du cadre se coupent en leur milieu (parallélogramme) et ont la même longueur : c'est un rectangle. Comme elles ne sont pas perpendiculaires, ce n'est pas un carré : le cadre est un rectangle."
+        "$ A = b\\times h = 11\\times 7 = 77 $ cm²."
       ],
-      "reponse": "1. et 2. : massif d'aire $24$ m² $= 240\\,000$ cm². 3. et 4. : la dalle est un losange, d'aire $150$ cm². 5. : le cadre est un rectangle."
+      "reponse": "$ 77 $ cm²"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 20 cm et hauteur 6 cm ?",
+      "corrige": [
+        "$ A = b\\times h = 20\\times 6 = 120 $ cm²."
+      ],
+      "reponse": "$ 120 $ cm²"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme de base 14 cm et hauteur 5 cm ?",
+      "corrige": [
+        "$ A = b\\times h = 14\\times 5 = 70 $ cm²."
+      ],
+      "reponse": "$ 70 $ cm²"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 5 cm et 3 cm ?",
+      "corrige": [
+        "$ P = 2\\times(5+3) = 16 $ cm."
+      ],
+      "reponse": "$ 16 $ cm"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 6 cm et 4 cm ?",
+      "corrige": [
+        "$ P = 2\\times(6+4) = 20 $ cm."
+      ],
+      "reponse": "$ 20 $ cm"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 8 cm et 2 cm ?",
+      "corrige": [
+        "$ P = 2\\times(8+2) = 20 $ cm."
+      ],
+      "reponse": "$ 20 $ cm"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 7 cm et 5 cm ?",
+      "corrige": [
+        "$ P = 2\\times(7+5) = 24 $ cm."
+      ],
+      "reponse": "$ 24 $ cm"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 10 cm et 4 cm ?",
+      "corrige": [
+        "$ P = 2\\times(10+4) = 28 $ cm."
+      ],
+      "reponse": "$ 28 $ cm"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 9 cm et 6 cm ?",
+      "corrige": [
+        "$ P = 2\\times(9+6) = 30 $ cm."
+      ],
+      "reponse": "$ 30 $ cm"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 12 cm et 3 cm ?",
+      "corrige": [
+        "$ P = 2\\times(12+3) = 30 $ cm."
+      ],
+      "reponse": "$ 30 $ cm"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 15 cm et 5 cm ?",
+      "corrige": [
+        "$ P = 2\\times(15+5) = 40 $ cm."
+      ],
+      "reponse": "$ 40 $ cm"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 11 cm et 7 cm ?",
+      "corrige": [
+        "$ P = 2\\times(11+7) = 36 $ cm."
+      ],
+      "reponse": "$ 36 $ cm"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "perimetre",
+      "enonce": "Perimetre d'un parallelogramme de cotes 20 cm et 10 cm ?",
+      "corrige": [
+        "$ P = 2\\times(20+10) = 60 $ cm."
+      ],
+      "reponse": "$ 60 $ cm"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $60^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 60 = 120^\\circ $."
+      ],
+      "reponse": "$120^\\circ$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $70^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 70 = 110^\\circ $."
+      ],
+      "reponse": "$110^\\circ$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $45^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 45 = 135^\\circ $."
+      ],
+      "reponse": "$135^\\circ$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $110^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 110 = 70^\\circ $."
+      ],
+      "reponse": "$70^\\circ$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $80^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 80 = 100^\\circ $."
+      ],
+      "reponse": "$100^\\circ$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $120^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 120 = 60^\\circ $."
+      ],
+      "reponse": "$60^\\circ$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $55^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 55 = 125^\\circ $."
+      ],
+      "reponse": "$125^\\circ$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $100^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 100 = 80^\\circ $."
+      ],
+      "reponse": "$80^\\circ$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $65^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 65 = 115^\\circ $."
+      ],
+      "reponse": "$115^\\circ$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $95^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 95 = 85^\\circ $."
+      ],
+      "reponse": "$85^\\circ$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $40^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 40 = 140^\\circ $."
+      ],
+      "reponse": "$140^\\circ$"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "angles",
+      "enonce": "Dans un parallelogramme, un angle vaut $135^\\circ$. Combien vaut l'angle consecutif ?",
+      "corrige": [
+        "Deux angles consecutifs sont supplementaires : $ 180 - 135 = 45^\\circ $."
+      ],
+      "reponse": "$45^\\circ$"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 3 cm, hauteur 4 cm ?",
+      "corrige": [
+        "$ = 12 $ cm²."
+      ],
+      "reponse": "$ 12 $ cm²"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 4 cm, hauteur 5 cm ?",
+      "corrige": [
+        "$ = 20 $ cm²."
+      ],
+      "reponse": "$ 20 $ cm²"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 5 cm, hauteur 6 cm ?",
+      "corrige": [
+        "$ = 30 $ cm²."
+      ],
+      "reponse": "$ 30 $ cm²"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 6 cm, hauteur 7 cm ?",
+      "corrige": [
+        "$ = 42 $ cm²."
+      ],
+      "reponse": "$ 42 $ cm²"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 7 cm, hauteur 8 cm ?",
+      "corrige": [
+        "$ = 56 $ cm²."
+      ],
+      "reponse": "$ 56 $ cm²"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 8 cm, hauteur 9 cm ?",
+      "corrige": [
+        "$ = 72 $ cm²."
+      ],
+      "reponse": "$ 72 $ cm²"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 9 cm, hauteur 10 cm ?",
+      "corrige": [
+        "$ = 90 $ cm²."
+      ],
+      "reponse": "$ 90 $ cm²"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 10 cm, hauteur 11 cm ?",
+      "corrige": [
+        "$ = 110 $ cm²."
+      ],
+      "reponse": "$ 110 $ cm²"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 11 cm, hauteur 12 cm ?",
+      "corrige": [
+        "$ = 132 $ cm²."
+      ],
+      "reponse": "$ 132 $ cm²"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 12 cm, hauteur 13 cm ?",
+      "corrige": [
+        "$ = 156 $ cm²."
+      ],
+      "reponse": "$ 156 $ cm²"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 13 cm, hauteur 14 cm ?",
+      "corrige": [
+        "$ = 182 $ cm²."
+      ],
+      "reponse": "$ 182 $ cm²"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 14 cm, hauteur 15 cm ?",
+      "corrige": [
+        "$ = 210 $ cm²."
+      ],
+      "reponse": "$ 210 $ cm²"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 15 cm, hauteur 16 cm ?",
+      "corrige": [
+        "$ = 240 $ cm²."
+      ],
+      "reponse": "$ 240 $ cm²"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 16 cm, hauteur 17 cm ?",
+      "corrige": [
+        "$ = 272 $ cm²."
+      ],
+      "reponse": "$ 272 $ cm²"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 17 cm, hauteur 18 cm ?",
+      "corrige": [
+        "$ = 306 $ cm²."
+      ],
+      "reponse": "$ 306 $ cm²"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "aire-parallelogramme",
+      "enonce": "Aire d'un parallelogramme base 18 cm, hauteur 19 cm ?",
+      "corrige": [
+        "$ = 342 $ cm²."
+      ],
+      "reponse": "$ 342 $ cm²"
     }
   ]
 }

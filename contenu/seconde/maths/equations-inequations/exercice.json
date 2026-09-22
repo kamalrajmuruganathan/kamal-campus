@@ -13,131 +13,522 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "premier-degre",
-      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $7x - 4 = 3x + 8$.",
+      "notion": "equation",
+      "enonce": "Resoudre $ 2x + 3 = 11 $.",
       "corrige": [
-        "On rassemble les termes en $x$ à gauche et les nombres à droite en effectuant la même opération des deux côtés. On soustrait $3x$ : $7x - 3x - 4 = 8$, soit $4x - 4 = 8$.",
-        "On ajoute $4$ des deux côtés : $4x = 12$.",
-        "On divise par $4$ (nombre positif, aucune précaution de signe) : $x = \\dfrac{12}{4} = 3$.",
-        "Vérification : $7 \\times 3 - 4 = 17$ et $3 \\times 3 + 8 = 17$. Les deux membres sont bien égaux."
+        "$ 2x = 11 - 3 = 8 $.",
+        "$ x = \\dfrac{8}{2} = 4 $."
       ],
-      "reponse": "$S = \\{3\\}$."
+      "reponse": "$ x = 4 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "inequation-signe",
-      "enonce": "Résoudre l'inéquation $-4x + 5 \\geqslant 17$ et donner l'ensemble des solutions sous forme d'intervalle.",
+      "notion": "equation",
+      "enonce": "Resoudre $ 3x + -1 = 8 $.",
       "corrige": [
-        "On isole le terme en $x$ en soustrayant $5$ des deux côtés (opération qui ne change pas le sens) : $-4x \\geqslant 12$.",
-        "On divise par $-4$. Comme on divise par un nombre **négatif**, le sens de l'inégalité **s'inverse** : $x \\leqslant \\dfrac{12}{-4}$, soit $x \\leqslant -3$.",
-        "On écrit l'ensemble des solutions sous forme d'intervalle : la borne $-3$ est incluse (inégalité large)."
+        "$ 3x = 8 + 1 = 9 $.",
+        "$ x = \\dfrac{9}{3} = 3 $."
       ],
-      "reponse": "$S = \\left]-\\infty\\,;-3\\right]$."
+      "reponse": "$ x = 3 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "produit-nul",
-      "enonce": "Résoudre l'équation $(x-1)(x+2) = (x-1)(2x+5)$.",
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 4x + 1 = 13 $.",
       "corrige": [
-        "On ne divise surtout pas par $(x-1)$ : cette quantité peut être nulle. On ramène tout dans le membre de gauche pour obtenir $\\ldots = 0$ : $(x-1)(x+2) - (x-1)(2x+5) = 0$.",
-        "Le facteur $(x-1)$ est commun aux deux termes : on le met en facteur. $(x-1)\\big[(x+2) - (2x+5)\\big] = 0$.",
-        "On réduit le crochet : $(x+2) - (2x+5) = x + 2 - 2x - 5 = -x - 3$. L'équation devient $(x-1)(-x-3) = 0$.",
-        "Règle du produit nul : $x - 1 = 0$ ou $-x - 3 = 0$, soit $x = 1$ ou $x = -3$."
+        "$ 4x = 13 - 1 = 12 $.",
+        "$ x = \\dfrac{12}{4} = 3 $."
       ],
-      "reponse": "$S = \\{-3\\,;\\,1\\}$."
+      "reponse": "$ x = 3 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "quotient",
-      "enonce": "Résoudre l'équation $\\dfrac{2x - 6}{x + 1} = 0$.",
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 5x + 2 = 17 $.",
       "corrige": [
-        "On commence par la valeur interdite : le dénominateur doit être non nul. $x + 1 = 0$ donne $x = -1$ ; la valeur $x = -1$ est donc **interdite**.",
-        "Un quotient est nul quand son numérateur est nul (le dénominateur ne l'étant pas). On résout $2x - 6 = 0$.",
-        "$2x = 6$, donc $x = 3$.",
-        "La valeur $3$ est différente de la valeur interdite $-1$ : elle est donc acceptable."
+        "$ 5x = 17 - 2 = 15 $.",
+        "$ x = \\dfrac{15}{5} = 3 $."
       ],
-      "reponse": "$S = \\{3\\}$."
+      "reponse": "$ x = 3 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "tableau-signes",
-      "enonce": "Résoudre l'inéquation $\\dfrac{x - 1}{x + 2} \\leqslant 0$ et donner l'ensemble des solutions sous forme d'intervalle.",
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 2x + -3 = 7 $.",
       "corrige": [
-        "Valeur interdite : le dénominateur s'annule en $x = -2$, valeur à exclure (double barre dans le tableau, crochet ouvert dans le résultat).",
-        "Signe de chaque facteur affine : $x - 1$ s'annule en $1$ et est du signe de son coefficient $a = 1 > 0$ après $1$ (donc négatif avant, positif après). $x + 2$ s'annule en $-2$ et est positif après $-2$.",
-        "On dresse le tableau de signes du quotient sur $\\mathbb{R}$ : sur $\\left]-\\infty\\,;-2\\right[$ les deux facteurs sont négatifs, le quotient est positif ; sur $\\left]-2\\,;1\\right[$ le numérateur est négatif et le dénominateur positif, le quotient est négatif ; sur $\\left]1\\,;+\\infty\\right[$ le quotient est positif.",
-        "On cherche où le quotient est négatif ou nul. Il est négatif sur $\\left]-2\\,;1\\right[$ et nul en $x = 1$ (numérateur nul, valeur acceptable). En $-2$ le quotient n'est pas défini : borne exclue."
+        "$ 2x = 7 + 3 = 10 $.",
+        "$ x = \\dfrac{10}{2} = 5 $."
       ],
-      "reponse": "$S = \\left]-2\\,;1\\right]$."
+      "reponse": "$ x = 5 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "methode",
-      "enonce": "Un club de sport propose deux formules pour $n$ séances. Formule A : $5$ € par séance. Formule B : un abonnement de $30$ € puis $2$ € par séance. À partir de combien de séances la formule B revient-elle strictement moins chère que la formule A ?",
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 3x + 6 = 15 $.",
       "corrige": [
-        "On exprime chaque coût en fonction du nombre de séances $n$ (entier positif) : formule A coûte $5n$ euros, formule B coûte $30 + 2n$ euros.",
-        "« B strictement moins chère que A » se traduit par l'inéquation $30 + 2n < 5n$.",
-        "On ramène les termes en $n$ d'un même côté en soustrayant $2n$ (le sens ne change pas) : $30 < 3n$.",
-        "On divise par $3$, nombre **positif** : le sens est conservé, $10 < n$, soit $n > 10$.",
-        "Comme $n$ est un nombre entier de séances, la première valeur qui convient est $n = 11$."
+        "$ 3x = 15 - 6 = 9 $.",
+        "$ x = \\dfrac{9}{3} = 3 $."
       ],
-      "reponse": "La formule B devient strictement plus avantageuse à partir de $11$ séances ($n > 10$)."
+      "reponse": "$ x = 3 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "premier-degre",
-      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $3(x - 2) + 4 = 5x - 6$.",
+      "notion": "equation",
+      "enonce": "Resoudre $ -2x + 5 = 1 $.",
       "corrige": [
-        "On développe le membre de gauche : $3(x - 2) + 4 = 3x - 6 + 4 = 3x - 2$. L'équation devient $3x - 2 = 5x - 6$.",
-        "On rassemble les termes en $x$ d'un même côté en soustrayant $3x$ des deux côtés (opération qui ne change rien au sens de l'égalité) : $-2 = 2x - 6$.",
-        "On ajoute $6$ des deux côtés : $4 = 2x$, puis on divise par $2$ (nombre positif) : $x = 2$.",
-        "Vérification : $3(2 - 2) + 4 = 4$ et $5 \\times 2 - 6 = 4$. Les deux membres sont bien égaux."
+        "$ -2x = 1 - 5 = -4 $.",
+        "$ x = \\dfrac{-4}{-2} = 2 $."
       ],
-      "reponse": "$S = \\{2\\}$."
+      "reponse": "$ x = 2 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "produit-nul",
-      "enonce": "Résoudre l'équation $(2x + 1)^2 - (x - 3)^2 = 0$.",
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 4x + -2 = 10 $.",
       "corrige": [
-        "On reconnaît une différence de deux carrés $A^2 - B^2 = (A - B)(A + B)$, avec $A = 2x + 1$ et $B = x - 3$. On factorise plutôt que de tout développer.",
-        "On calcule chaque facteur : $A - B = (2x + 1) - (x - 3) = 2x + 1 - x + 3 = x + 4$ et $A + B = (2x + 1) + (x - 3) = 3x - 2$. L'équation s'écrit donc $(x + 4)(3x - 2) = 0$.",
-        "Règle du produit nul : $x + 4 = 0$ ou $3x - 2 = 0$, soit $x = -4$ ou $x = \\dfrac{2}{3}$."
+        "$ 4x = 10 + 2 = 12 $.",
+        "$ x = \\dfrac{12}{4} = 3 $."
       ],
-      "reponse": "$S = \\left\\{-4\\,;\\,\\dfrac{2}{3}\\right\\}$."
+      "reponse": "$ x = 3 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "tableau-signes",
-      "enonce": "Résoudre l'inéquation $(2x - 1)(3 - x) \\geqslant 0$ à l'aide d'un tableau de signes, et donner l'ensemble des solutions sous forme d'intervalle.",
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 6x + 0 = 18 $.",
       "corrige": [
-        "On étudie le signe de chaque facteur affine. $2x - 1$ s'annule en $x = \\dfrac{1}{2}$ ; son coefficient $a = 2 > 0$, il est donc négatif avant $\\dfrac{1}{2}$ et positif après.",
-        "$3 - x = -x + 3$ s'annule en $x = 3$ ; son coefficient $a = -1 < 0$, il est donc positif avant $3$ et négatif après.",
-        "On dresse le tableau de signes du produit. Sur $\\left]-\\infty\\,;\\dfrac{1}{2}\\right[$ : $(-)\\times(+) = -$. Sur $\\left]\\dfrac{1}{2}\\,;3\\right[$ : $(+)\\times(+) = +$. Sur $\\left]3\\,;+\\infty\\right[$ : $(+)\\times(-) = -$.",
-        "On cherche où le produit est positif ou nul. Il est positif entre les deux racines, et nul en $\\dfrac{1}{2}$ et en $3$ ; les bornes sont incluses car l'inégalité est large."
+        "$ 6x = 18 - 0 = 18 $.",
+        "$ x = \\dfrac{18}{6} = 3 $."
       ],
-      "reponse": "$S = \\left[\\dfrac{1}{2}\\,;3\\right]$."
+      "reponse": "$ x = 3 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "methode",
-      "enonce": "Un maraîcher clôture une parcelle rectangulaire. La longueur mesure $4$ mètres de plus que la largeur. On note $x$ la largeur, exprimée en mètres, avec $x > 0$.\n\n1. Exprimer, en fonction de $x$, le périmètre $P(x)$ et l'aire $A(x)$ de la parcelle.\n2. Le maraîcher utilise exactement $36$ mètres de clôture. Déterminer la valeur de $x$, puis les dimensions de la parcelle.\n3. Il souhaite obtenir une aire de $32$ m$^2$. Montrer que cela revient à résoudre $x^2 + 4x - 32 = 0$, puis résoudre cette équation.\n4. Déterminer les largeurs $x$ pour lesquelles l'aire de la parcelle est strictement supérieure à $45$ m$^2$.",
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 3x + 1 = 10 $.",
       "corrige": [
-        "1. La largeur est $x$ et la longueur $x + 4$. Le périmètre est $P(x) = 2\\big(x + (x + 4)\\big) = 2(2x + 4) = 4x + 8$. L'aire est $A(x) = x(x + 4) = x^2 + 4x$ (en m$^2$).",
-        "2. Utiliser exactement $36$ m de clôture signifie $P(x) = 36$, soit $4x + 8 = 36$. On obtient $4x = 28$, donc $x = 7$. La largeur vaut $7$ m et la longueur $7 + 4 = 11$ m.",
-        "3. Une aire de $32$ m$^2$ se traduit par $A(x) = 32$, soit $x^2 + 4x = 32$, c'est-à-dire $x^2 + 4x - 32 = 0$. On factorise en cherchant deux nombres de produit $-32$ et de somme $4$ : ce sont $8$ et $-4$, d'où $x^2 + 4x - 32 = (x + 8)(x - 4)$. La règle du produit nul donne $x = -8$ ou $x = 4$. Comme $x > 0$, seule $x = 4$ convient : la largeur est $4$ m et la longueur $8$ m.",
-        "4. « Aire strictement supérieure à $45$ m$^2$ » s'écrit $A(x) > 45$, soit $x^2 + 4x - 45 > 0$. On factorise : deux nombres de produit $-45$ et de somme $4$ sont $9$ et $-5$, donc $x^2 + 4x - 45 = (x + 9)(x - 5)$. On dresse le tableau de signes : $x + 9$ est positif pour tout $x > 0$, et $x - 5$ est négatif avant $5$, positif après. Le produit est donc strictement positif pour $x > 5$. En tenant compte de la contrainte $x > 0$, l'aire dépasse $45$ m$^2$ lorsque $x > 5$."
+        "$ 3x = 10 - 1 = 9 $.",
+        "$ x = \\dfrac{9}{3} = 3 $."
       ],
-      "reponse": "1. $P(x) = 4x + 8$ et $A(x) = x^2 + 4x$. 2. $x = 7$ : parcelle de $7$ m sur $11$ m. 3. $x = 4$ : parcelle de $4$ m sur $8$ m. 4. L'aire dépasse $45$ m$^2$ pour $x > 5$, soit $S = \\left]5\\,;+\\infty\\right[$."
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 5x + -2 = 13 $.",
+      "corrige": [
+        "$ 5x = 13 + 2 = 15 $.",
+        "$ x = \\dfrac{15}{5} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 2x + 7 = 3 $.",
+      "corrige": [
+        "$ 2x = 3 - 7 = -4 $.",
+        "$ x = \\dfrac{-4}{2} = -2 $."
+      ],
+      "reponse": "$ x = -2 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 3x + 2 = 1x + 10 $.",
+      "corrige": [
+        "$ 3x - 1x = 10 - 2 $ soit $ 2x = 8 $.",
+        "$ x = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 5x + 1 = 2x + 13 $.",
+      "corrige": [
+        "$ 5x - 2x = 13 - 1 $ soit $ 3x = 12 $.",
+        "$ x = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 4x + 3 = 2x + 9 $.",
+      "corrige": [
+        "$ 4x - 2x = 9 - 3 $ soit $ 2x = 6 $.",
+        "$ x = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 6x + 2 = 3x + 14 $.",
+      "corrige": [
+        "$ 6x - 3x = 14 - 2 $ soit $ 3x = 12 $.",
+        "$ x = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 2x + 7 = 1x + 10 $.",
+      "corrige": [
+        "$ 2x - 1x = 10 - 7 $ soit $ 1x = 3 $.",
+        "$ x = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 5x + 4 = 3x + 12 $.",
+      "corrige": [
+        "$ 5x - 3x = 12 - 4 $ soit $ 2x = 8 $.",
+        "$ x = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 4x + 5 = 2x + 11 $.",
+      "corrige": [
+        "$ 4x - 2x = 11 - 5 $ soit $ 2x = 6 $.",
+        "$ x = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Resoudre $ 7x + 1 = 3x + 17 $.",
+      "corrige": [
+        "$ 7x - 3x = 17 - 1 $ soit $ 4x = 16 $.",
+        "$ x = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 3x = 12 $.",
+      "corrige": [
+        "$ x = \\dfrac{12}{3} = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 5x = 20 $.",
+      "corrige": [
+        "$ x = \\dfrac{20}{5} = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 4x = 24 $.",
+      "corrige": [
+        "$ x = \\dfrac{24}{4} = 6 $."
+      ],
+      "reponse": "$ x = 6 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 2x = 14 $.",
+      "corrige": [
+        "$ x = \\dfrac{14}{2} = 7 $."
+      ],
+      "reponse": "$ x = 7 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 6x = 18 $.",
+      "corrige": [
+        "$ x = \\dfrac{18}{6} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 7x = 28 $.",
+      "corrige": [
+        "$ x = \\dfrac{28}{7} = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 3x = 21 $.",
+      "corrige": [
+        "$ x = \\dfrac{21}{3} = 7 $."
+      ],
+      "reponse": "$ x = 7 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "equation-produit",
+      "enonce": "Resoudre $ 8x = 40 $.",
+      "corrige": [
+        "$ x = \\dfrac{40}{8} = 5 $."
+      ],
+      "reponse": "$ x = 5 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 2x = 4 $.",
+      "corrige": [
+        "$ x = 2 $."
+      ],
+      "reponse": "$ x = 2 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 3x = 9 $.",
+      "corrige": [
+        "$ x = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 4x = 16 $.",
+      "corrige": [
+        "$ x = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 5x = 25 $.",
+      "corrige": [
+        "$ x = 5 $."
+      ],
+      "reponse": "$ x = 5 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 6x = 36 $.",
+      "corrige": [
+        "$ x = 6 $."
+      ],
+      "reponse": "$ x = 6 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 7x = 49 $.",
+      "corrige": [
+        "$ x = 7 $."
+      ],
+      "reponse": "$ x = 7 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 8x = 64 $.",
+      "corrige": [
+        "$ x = 8 $."
+      ],
+      "reponse": "$ x = 8 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 9x = 81 $.",
+      "corrige": [
+        "$ x = 9 $."
+      ],
+      "reponse": "$ x = 9 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 10x = 100 $.",
+      "corrige": [
+        "$ x = 10 $."
+      ],
+      "reponse": "$ x = 10 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 11x = 121 $.",
+      "corrige": [
+        "$ x = 11 $."
+      ],
+      "reponse": "$ x = 11 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 12x = 144 $.",
+      "corrige": [
+        "$ x = 12 $."
+      ],
+      "reponse": "$ x = 12 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 13x = 169 $.",
+      "corrige": [
+        "$ x = 13 $."
+      ],
+      "reponse": "$ x = 13 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 14x = 196 $.",
+      "corrige": [
+        "$ x = 14 $."
+      ],
+      "reponse": "$ x = 14 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 15x = 225 $.",
+      "corrige": [
+        "$ x = 15 $."
+      ],
+      "reponse": "$ x = 15 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 16x = 256 $.",
+      "corrige": [
+        "$ x = 16 $."
+      ],
+      "reponse": "$ x = 16 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 17x = 289 $.",
+      "corrige": [
+        "$ x = 17 $."
+      ],
+      "reponse": "$ x = 17 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 18x = 324 $.",
+      "corrige": [
+        "$ x = 18 $."
+      ],
+      "reponse": "$ x = 18 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 19x = 361 $.",
+      "corrige": [
+        "$ x = 19 $."
+      ],
+      "reponse": "$ x = 19 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 20x = 400 $.",
+      "corrige": [
+        "$ x = 20 $."
+      ],
+      "reponse": "$ x = 20 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 21x = 441 $.",
+      "corrige": [
+        "$ x = 21 $."
+      ],
+      "reponse": "$ x = 21 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 22x = 484 $.",
+      "corrige": [
+        "$ x = 22 $."
+      ],
+      "reponse": "$ x = 22 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Resoudre $ 23x = 529 $.",
+      "corrige": [
+        "$ x = 23 $."
+      ],
+      "reponse": "$ x = 23 $"
     }
   ]
 }

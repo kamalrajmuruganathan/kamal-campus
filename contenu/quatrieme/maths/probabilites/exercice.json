@@ -13,130 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "evenement",
-      "enonce": "On tire au hasard une carte parmi dix cartes numérotées de $1$ à $10$. On considère l'événement $A$ : « obtenir un multiple de $3$ ». Écris l'univers $\\Omega$ et l'événement $A$ entre accolades, puis calcule $P(A)$.",
+      "notion": "proba-de",
+      "enonce": "On lance un de a 6 faces. Probabilite d'obtenir un 6 ?",
       "corrige": [
-        "L'univers rassemble toutes les issues : $\\Omega = \\{1 \\,;\\, 2 \\,;\\, 3 \\,;\\, 4 \\,;\\, 5 \\,;\\, 6 \\,;\\, 7 \\,;\\, 8 \\,;\\, 9 \\,;\\, 10\\}$, soit $10$ issues.",
-        "L'événement $A$ est la partie de $\\Omega$ formée des multiples de $3$ : $A = \\{3 \\,;\\, 6 \\,;\\, 9\\}$, soit $3$ issues.",
-        "Les tirages sont équiprobables, donc $P(A) = \\dfrac{\\text{nombre d'issues de } A}{\\text{nombre d'issues de } \\Omega} = \\dfrac{3}{10}$."
+        "$ P = \\dfrac{1}{6} = \\dfrac{1}{6} $."
       ],
-      "reponse": "$A = \\{3 \\,;\\, 6 \\,;\\, 9\\}$ et $P(A) = \\dfrac{3}{10}$."
+      "reponse": "$ \\dfrac{1}{6} $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "evenement-contraire",
-      "enonce": "Un sac contient $20$ boules indiscernables au toucher, dont $7$ rouges. On en tire une au hasard et on note $R$ l'événement « obtenir une boule rouge ». Calcule $P(R)$, puis $P(\\overline{R})$.",
+      "notion": "proba-de",
+      "enonce": "On lance un de a 6 faces. Probabilite d'obtenir un nombre pair ?",
       "corrige": [
-        "Les $20$ tirages sont équiprobables et $7$ boules sont rouges, donc $P(R) = \\dfrac{7}{20}$.",
-        "L'événement contraire $\\overline{R}$ signifie « ne pas obtenir de rouge ». On utilise la relation $P(\\overline{R}) = 1 - P(R)$.",
-        "$P(\\overline{R}) = 1 - \\dfrac{7}{20} = \\dfrac{20}{20} - \\dfrac{7}{20} = \\dfrac{13}{20}$."
+        "$ P = \\dfrac{3}{6} = \\dfrac{1}{2} $."
       ],
-      "reponse": "$P(R) = \\dfrac{7}{20}$ et $P(\\overline{R}) = \\dfrac{13}{20}$."
+      "reponse": "$ \\dfrac{1}{2} $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "reunion",
-      "enonce": "On tire au hasard un jeton parmi douze jetons numérotés de $1$ à $12$. On pose $A$ : « obtenir un multiple de $3$ » et $B$ : « obtenir un nombre pair ». Détermine $A \\cap B$ et $A \\cup B$ en listant leurs issues, puis calcule $P(A \\cap B)$ et $P(A \\cup B)$.",
+      "difficulte": "application",
+      "notion": "proba-de",
+      "enonce": "On lance un de a 6 faces. Probabilite d'obtenir un multiple de 3 ?",
       "corrige": [
-        "On écrit d'abord chaque événement : $A = \\{3 \\,;\\, 6 \\,;\\, 9 \\,;\\, 12\\}$ et $B = \\{2 \\,;\\, 4 \\,;\\, 6 \\,;\\, 8 \\,;\\, 10 \\,;\\, 12\\}$.",
-        "$A \\cap B$ ne garde que les issues présentes dans les deux : $A \\cap B = \\{6 \\,;\\, 12\\}$, soit $2$ issues. Donc $P(A \\cap B) = \\dfrac{2}{12} = \\dfrac{1}{6}$.",
-        "$A \\cup B$ rassemble les issues de $A$ ou de $B$, sans écrire deux fois le $6$ ni le $12$ : $A \\cup B = \\{2 \\,;\\, 3 \\,;\\, 4 \\,;\\, 6 \\,;\\, 8 \\,;\\, 9 \\,;\\, 10 \\,;\\, 12\\}$, soit $8$ issues. Donc $P(A \\cup B) = \\dfrac{8}{12} = \\dfrac{2}{3}$."
+        "$ P = \\dfrac{2}{6} = \\dfrac{1}{3} $."
       ],
-      "reponse": "$A \\cap B = \\{6 \\,;\\, 12\\}$ avec $P(A \\cap B) = \\dfrac{1}{6}$ ; $A \\cup B = \\{2 \\,;\\, 3 \\,;\\, 4 \\,;\\, 6 \\,;\\, 8 \\,;\\, 9 \\,;\\, 10 \\,;\\, 12\\}$ avec $P(A \\cup B) = \\dfrac{2}{3}$."
+      "reponse": "$ \\dfrac{1}{3} $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "deux-epreuves",
-      "enonce": "Un sac contient trois jetons numérotés $1$, $2$ et $3$. On tire un jeton, on note son numéro, on le remet, puis on tire un second jeton. Une issue est le couple des deux numéros. Énumère toutes les issues de $\\Omega$, puis calcule la probabilité que la somme des deux numéros soit égale à $4$.",
+      "difficulte": "application",
+      "notion": "proba-de",
+      "enonce": "On lance un de a 6 faces. Probabilite d'obtenir au moins 5 ?",
       "corrige": [
-        "Chacun des $3$ résultats du premier tirage se combine avec chacun des $3$ résultats du second : l'univers compte $3 \\times 3 = 9$ couples équiprobables.",
-        "$\\Omega = \\{(1\\,;1) \\,;\\, (1\\,;2) \\,;\\, (1\\,;3) \\,;\\, (2\\,;1) \\,;\\, (2\\,;2) \\,;\\, (2\\,;3) \\,;\\, (3\\,;1) \\,;\\, (3\\,;2) \\,;\\, (3\\,;3)\\}$.",
-        "On repère les couples dont la somme vaut $4$ : $(1\\,;3)$, $(2\\,;2)$ et $(3\\,;1)$, soit $3$ issues favorables.",
-        "Donc $P(\\text{somme} = 4) = \\dfrac{3}{9} = \\dfrac{1}{3}$."
+        "$ P = \\dfrac{2}{6} = \\dfrac{1}{3} $."
       ],
-      "reponse": "$\\Omega$ compte $9$ issues et $P(\\text{somme} = 4) = \\dfrac{3}{9} = \\dfrac{1}{3}$."
+      "reponse": "$ \\dfrac{1}{3} $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "evenement-contraire",
-      "enonce": "On lance trois fois de suite une pièce équilibrée. Chaque lancer donne pile ($P$) ou face ($F$), et une issue est un triplet de résultats. Quelle est la probabilité d'obtenir **au moins un** pile ? On passera par l'événement contraire.",
+      "difficulte": "application",
+      "notion": "proba-de",
+      "enonce": "On lance un de a 6 faces. Probabilite d'obtenir un 1 ou un 2 ?",
       "corrige": [
-        "Chaque lancer a $2$ résultats possibles, donc l'univers compte $2 \\times 2 \\times 2 = 8$ triplets équiprobables.",
-        "Le contraire de « au moins un pile » est « aucun pile », c'est-à-dire « que des faces ». Une seule issue le réalise : $(F\\,;F\\,;F)$.",
-        "Donc $P(\\text{aucun pile}) = \\dfrac{1}{8}$.",
-        "On retranche ce contraire à $1$ : $P(\\text{au moins un pile}) = 1 - \\dfrac{1}{8} = \\dfrac{7}{8}$."
+        "$ P = \\dfrac{2}{6} = \\dfrac{1}{3} $."
       ],
-      "reponse": "$P(\\text{au moins un pile}) = 1 - \\dfrac{1}{8} = \\dfrac{7}{8}$."
+      "reponse": "$ \\dfrac{1}{3} $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "evenement-contraire",
-      "enonce": "Dans un jeu, on lance deux dés équilibrés à six faces et on additionne les deux résultats. On gagne lorsque la somme est **supérieure ou égale à $10$**. a) À l'aide du tableau des sommes de deux dés, calcule la probabilité de gagner. b) Déduis-en la probabilité de perdre.",
+      "difficulte": "application",
+      "notion": "proba-de",
+      "enonce": "On lance un de a 6 faces. Probabilite d'obtenir un nombre impair ?",
       "corrige": [
-        "a) L'univers compte $6 \\times 6 = 36$ issues équiprobables : chaque case du tableau des sommes est une issue.",
-        "Les sommes supérieures ou égales à $10$ sont $10$, $11$ et $12$. Dans le tableau, $10$ apparaît $3$ fois, $11$ apparaît $2$ fois et $12$ apparaît $1$ fois, soit $3 + 2 + 1 = 6$ issues favorables.",
-        "Donc $P(\\text{gagner}) = \\dfrac{6}{36} = \\dfrac{1}{6}$.",
-        "b) « Perdre » (somme inférieure ou égale à $9$) est l'événement contraire de « gagner ». Donc $P(\\text{perdre}) = 1 - P(\\text{gagner}) = 1 - \\dfrac{1}{6} = \\dfrac{5}{6}$."
+        "$ P = \\dfrac{3}{6} = \\dfrac{1}{2} $."
       ],
-      "reponse": "a) $P(\\text{gagner}) = \\dfrac{6}{36} = \\dfrac{1}{6}$ ; b) $P(\\text{perdre}) = \\dfrac{5}{6}$."
+      "reponse": "$ \\dfrac{1}{2} $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "evenement-contraire",
-      "enonce": "Une roue de loterie équilibrée est partagée en neuf secteurs identiques numérotés de $1$ à $9$. On la fait tourner une fois et on note $R$ l'événement « obtenir un multiple de $3$ ». Écris $R$ entre accolades, calcule $P(R)$, puis $P(\\overline{R})$.",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 10 boules dont 3 rouges. Probabilite de tirer une rouge ?",
       "corrige": [
-        "Les neuf secteurs étant identiques, la roue s'arrête sur chacun avec la même chance : l'univers $\\Omega = \\{1 \\,;\\, 2 \\,;\\, 3 \\,;\\, 4 \\,;\\, 5 \\,;\\, 6 \\,;\\, 7 \\,;\\, 8 \\,;\\, 9\\}$ compte $9$ issues équiprobables.",
-        "L'événement $R$ rassemble les multiples de $3$ : $R = \\{3 \\,;\\, 6 \\,;\\, 9\\}$, soit $3$ issues. Donc $P(R) = \\dfrac{3}{9} = \\dfrac{1}{3}$.",
-        "Le contraire $\\overline{R}$ (« ne pas obtenir de multiple de $3$ ») se calcule avec $P(\\overline{R}) = 1 - P(R) = 1 - \\dfrac{1}{3} = \\dfrac{2}{3}$."
+        "$ P = \\dfrac{3}{10} = \\dfrac{3}{10} $."
       ],
-      "reponse": "$R = \\{3 \\,;\\, 6 \\,;\\, 9\\}$, $P(R) = \\dfrac{1}{3}$ et $P(\\overline{R}) = \\dfrac{2}{3}$."
+      "reponse": "$ \\dfrac{3}{10} $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "reunion",
-      "enonce": "Dans un jeu de $32$ cartes (les valeurs $7$, $8$, $9$, $10$, valet, dame, roi et as, dans chacune des quatre couleurs), on tire une carte au hasard. On pose $C$ : « obtenir un cœur » et $F$ : « obtenir une figure » (valet, dame ou roi). Calcule $P(C \\cup F)$.",
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 10 boules dont 4 rouges. Probabilite de tirer une rouge ?",
       "corrige": [
-        "Les $32$ cartes sont équiprobables. L'événement $C$ regroupe les $8$ cœurs, donc $C$ compte $8$ issues. Les figures sont le valet, la dame et le roi de chaque couleur, soit $3 \\times 4 = 12$ cartes : $F$ compte $12$ issues.",
-        "Trois cartes sont à la fois cœur et figure : le valet, la dame et le roi de cœur. Donc $C \\cap F$ compte $3$ issues.",
-        "On ne peut pas additionner $8 + 12$, car cela compterait deux fois ces $3$ cartes communes. Le nombre d'issues de $C \\cup F$ est $8 + 12 - 3 = 17$.",
-        "Donc $P(C \\cup F) = \\dfrac{17}{32}$."
+        "$ P = \\dfrac{4}{10} = \\dfrac{2}{5} $."
       ],
-      "reponse": "$C \\cup F$ compte $17$ cartes, donc $P(C \\cup F) = \\dfrac{17}{32}$."
+      "reponse": "$ \\dfrac{2}{5} $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "evenement-contraire",
-      "enonce": "On lance deux dés équilibrés à six faces. Quelle est la probabilité d'obtenir **au moins un** multiple de $3$ (c'est-à-dire au moins un $3$ ou un $6$) sur les deux dés ? On passera par l'événement contraire.",
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 5 boules dont 2 rouges. Probabilite de tirer une rouge ?",
       "corrige": [
-        "Chaque dé a $6$ résultats possibles, donc l'univers compte $6 \\times 6 = 36$ couples équiprobables.",
-        "Le contraire de « au moins un multiple de $3$ » est « aucun multiple de $3$ », c'est-à-dire un résultat pris parmi $\\{1 \\,;\\, 2 \\,;\\, 4 \\,;\\, 5\\}$ sur chaque dé, soit $4$ possibilités par dé.",
-        "Il y a donc $4 \\times 4 = 16$ couples sans aucun multiple de $3$, d'où $P(\\text{aucun multiple de } 3) = \\dfrac{16}{36} = \\dfrac{4}{9}$.",
-        "On retranche à $1$ : $P(\\text{au moins un multiple de } 3) = 1 - \\dfrac{4}{9} = \\dfrac{5}{9}$."
+        "$ P = \\dfrac{2}{5} = \\dfrac{2}{5} $."
       ],
-      "reponse": "$P(\\text{au moins un multiple de } 3) = 1 - \\dfrac{16}{36} = \\dfrac{5}{9}$."
+      "reponse": "$ \\dfrac{2}{5} $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "synthese",
-      "enonce": "À la fête du collège, le stand « Roue & Dés » propose un jeu en deux temps. **La roue** est équilibrée et partagée en vingt secteurs identiques numérotés de $1$ à $20$ ; on la fait d'abord tourner une fois. **Les dés** : si le joueur a gagné à la roue, il lance ensuite deux dés équilibrés à six faces et additionne les deux résultats.\n\n1. Écris l'univers de la roue et donne son nombre d'issues.\n2. On gagne à la roue lorsque le numéro obtenu est un multiple de $4$. Écris l'événement $G$ « gagner à la roue » et calcule $P(G)$.\n3. Calcule la probabilité de **ne pas** gagner à la roue.\n4. On note $H$ : « obtenir un multiple de $4$ **et** un numéro supérieur ou égal à $12$ ». Liste les issues de $H$ et calcule $P(H)$.\n5. Un joueur a gagné à la roue et lance les deux dés. À l'aide du tableau des sommes de deux dés, calcule la probabilité que la somme obtenue soit égale à $8$.\n6. Le lot maximal est remis si la somme des deux dés est **supérieure ou égale à $11$**. Calcule cette probabilité.",
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 10 boules dont 7 rouges. Probabilite de tirer une rouge ?",
       "corrige": [
-        "1. Les vingt secteurs sont identiques, donc équiprobables : $\\Omega = \\{1 \\,;\\, 2 \\,;\\, 3 \\,;\\, \\dots \\,;\\, 20\\}$, soit $20$ issues.",
-        "2. Les multiples de $4$ entre $1$ et $20$ sont $G = \\{4 \\,;\\, 8 \\,;\\, 12 \\,;\\, 16 \\,;\\, 20\\}$, soit $5$ issues. Donc $P(G) = \\dfrac{5}{20} = \\dfrac{1}{4}$.",
-        "3. « Ne pas gagner » est le contraire de $G$ : $P(\\overline{G}) = 1 - P(G) = 1 - \\dfrac{1}{4} = \\dfrac{3}{4}$.",
-        "4. On garde dans $G$ les numéros supérieurs ou égaux à $12$ : $H = \\{12 \\,;\\, 16 \\,;\\, 20\\}$, soit $3$ issues. Donc $P(H) = \\dfrac{3}{20}$.",
-        "5. Avec deux dés, l'univers compte $6 \\times 6 = 36$ issues équiprobables. Dans le tableau des sommes, la somme $8$ apparaît $5$ fois : $(2\\,;6)$, $(3\\,;5)$, $(4\\,;4)$, $(5\\,;3)$ et $(6\\,;2)$. Donc $P(\\text{somme} = 8) = \\dfrac{5}{36}$.",
-        "6. Les sommes supérieures ou égales à $11$ sont $11$ (qui apparaît $2$ fois) et $12$ (qui apparaît $1$ fois), soit $2 + 1 = 3$ issues favorables. Donc $P(\\text{somme} \\ge 11) = \\dfrac{3}{36} = \\dfrac{1}{12}$."
+        "$ P = \\dfrac{7}{10} = \\dfrac{7}{10} $."
       ],
-      "reponse": "1. $\\Omega$ compte $20$ issues. 2. $G = \\{4 \\,;\\, 8 \\,;\\, 12 \\,;\\, 16 \\,;\\, 20\\}$, $P(G) = \\dfrac{1}{4}$. 3. $P(\\overline{G}) = \\dfrac{3}{4}$. 4. $H = \\{12 \\,;\\, 16 \\,;\\, 20\\}$, $P(H) = \\dfrac{3}{20}$. 5. $P(\\text{somme} = 8) = \\dfrac{5}{36}$. 6. $P(\\text{somme} \\ge 11) = \\dfrac{1}{12}$."
+      "reponse": "$ \\dfrac{7}{10} $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 4 boules dont 1 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{1}{4} = \\dfrac{1}{4} $."
+      ],
+      "reponse": "$ \\dfrac{1}{4} $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 8 boules dont 5 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{5}{8} = \\dfrac{5}{8} $."
+      ],
+      "reponse": "$ \\dfrac{5}{8} $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 10 boules dont 6 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{6}{10} = \\dfrac{3}{5} $."
+      ],
+      "reponse": "$ \\dfrac{3}{5} $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 7 boules dont 3 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{3}{7} = \\dfrac{3}{7} $."
+      ],
+      "reponse": "$ \\dfrac{3}{7} $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 12 boules dont 9 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{9}{12} = \\dfrac{3}{4} $."
+      ],
+      "reponse": "$ \\dfrac{3}{4} $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 9 boules dont 2 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{2}{9} = \\dfrac{2}{9} $."
+      ],
+      "reponse": "$ \\dfrac{2}{9} $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 6 boules dont 5 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{5}{6} = \\dfrac{5}{6} $."
+      ],
+      "reponse": "$ \\dfrac{5}{6} $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne contient 15 boules dont 4 rouges. Probabilite de tirer une rouge ?",
+      "corrige": [
+        "$ P = \\dfrac{4}{15} = \\dfrac{4}{15} $."
+      ],
+      "reponse": "$ \\dfrac{4}{15} $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{3}{10} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{3}{10} = \\dfrac{7}{10} $."
+      ],
+      "reponse": "$ \\dfrac{7}{10} $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{2}{5} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{2}{5} = \\dfrac{3}{5} $."
+      ],
+      "reponse": "$ \\dfrac{3}{5} $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{7}{10} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{7}{10} = \\dfrac{3}{10} $."
+      ],
+      "reponse": "$ \\dfrac{3}{10} $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{1}{4} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{1}{4} = \\dfrac{3}{4} $."
+      ],
+      "reponse": "$ \\dfrac{3}{4} $"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{5}{8} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{5}{8} = \\dfrac{3}{8} $."
+      ],
+      "reponse": "$ \\dfrac{3}{8} $"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{4}{9} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{4}{9} = \\dfrac{5}{9} $."
+      ],
+      "reponse": "$ \\dfrac{5}{9} $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{6}{11} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{6}{11} = \\dfrac{5}{11} $."
+      ],
+      "reponse": "$ \\dfrac{5}{11} $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{3}{8} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{3}{8} = \\dfrac{5}{8} $."
+      ],
+      "reponse": "$ \\dfrac{5}{8} $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{2}{7} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{2}{7} = \\dfrac{5}{7} $."
+      ],
+      "reponse": "$ \\dfrac{5}{7} $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "La probabilite d'un evenement vaut $ \\dfrac{5}{12} $. Probabilite du contraire ?",
+      "corrige": [
+        "$ 1 - \\dfrac{5}{12} = \\dfrac{7}{12} $."
+      ],
+      "reponse": "$ \\dfrac{7}{12} $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 4 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{4} $."
+      ],
+      "reponse": "$ \\dfrac{1}{4} $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 5 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{5} $."
+      ],
+      "reponse": "$ \\dfrac{1}{5} $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 6 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{6} $."
+      ],
+      "reponse": "$ \\dfrac{1}{6} $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 7 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{7} $."
+      ],
+      "reponse": "$ \\dfrac{1}{7} $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 8 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{8} $."
+      ],
+      "reponse": "$ \\dfrac{1}{8} $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 9 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{9} $."
+      ],
+      "reponse": "$ \\dfrac{1}{9} $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 10 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{10} $."
+      ],
+      "reponse": "$ \\dfrac{1}{10} $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 11 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{11} $."
+      ],
+      "reponse": "$ \\dfrac{1}{11} $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 12 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{12} $."
+      ],
+      "reponse": "$ \\dfrac{1}{12} $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 13 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{13} $."
+      ],
+      "reponse": "$ \\dfrac{1}{13} $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 14 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{14} $."
+      ],
+      "reponse": "$ \\dfrac{1}{14} $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 15 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{15} $."
+      ],
+      "reponse": "$ \\dfrac{1}{15} $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 16 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{16} $."
+      ],
+      "reponse": "$ \\dfrac{1}{16} $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 17 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{17} $."
+      ],
+      "reponse": "$ \\dfrac{1}{17} $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 18 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{18} $."
+      ],
+      "reponse": "$ \\dfrac{1}{18} $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 19 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{19} $."
+      ],
+      "reponse": "$ \\dfrac{1}{19} $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 20 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{20} $."
+      ],
+      "reponse": "$ \\dfrac{1}{20} $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 21 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{21} $."
+      ],
+      "reponse": "$ \\dfrac{1}{21} $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 22 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{22} $."
+      ],
+      "reponse": "$ \\dfrac{1}{22} $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 23 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{23} $."
+      ],
+      "reponse": "$ \\dfrac{1}{23} $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 24 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{24} $."
+      ],
+      "reponse": "$ \\dfrac{1}{24} $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Une urne a 25 jetons dont 1 gagnant. Probabilite de gagner ?",
+      "corrige": [
+        "$ = \\dfrac{1}{25} $."
+      ],
+      "reponse": "$ \\dfrac{1}{25} $"
     }
   ]
 }

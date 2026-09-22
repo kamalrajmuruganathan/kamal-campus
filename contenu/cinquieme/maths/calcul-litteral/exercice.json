@@ -13,133 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "reduction",
-      "enonce": "Réduire l'expression $7x + 4 - 2x + 3$.",
+      "notion": "distribution",
+      "enonce": "Developper $ 3(2x + 5) $.",
       "corrige": [
-        "On regroupe ce qui est de même nature. D'un côté les termes en $x$, de l'autre les nombres seuls.",
-        "Termes en $x$ : $7x - 2x = 5x$.",
-        "Nombres seuls : $4 + 3 = 7$.",
-        "On rassemble : $7x + 4 - 2x + 3 = 5x + 7$. Les deux termes restants sont de natures différentes, on ne peut pas aller plus loin."
+        "$ 3(2x + 5) = 6x + 15 $."
       ],
-      "reponse": "$5x + 7$."
+      "reponse": "$ 6x + 15 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "developpement",
-      "enonce": "Développer $5(2x - 3)$.",
+      "notion": "distribution",
+      "enonce": "Developper $ 4(1x + 3) $.",
       "corrige": [
-        "On applique la distributivité $k(a - b) = ka - kb$ : le $5$ multiplie chacun des deux termes de la parenthèse.",
-        "$5 \\times 2x = 10x$.",
-        "$5 \\times 3 = 15$, et le signe $-$ est conservé.",
-        "Donc $5(2x - 3) = 10x - 15$."
+        "$ 4(1x + 3) = 4x + 12 $."
       ],
-      "reponse": "$10x - 15$."
+      "reponse": "$ 4x + 12 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "developpement-reduction",
-      "enonce": "Développer puis réduire l'expression $2(x + 3) + 4x$.",
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 2(5x + 7) $.",
       "corrige": [
-        "Première étape : développer la parenthèse. $2(x + 3) = 2 \\times x + 2 \\times 3 = 2x + 6$.",
-        "On réécrit l'expression entière : $2x + 6 + 4x$.",
-        "Deuxième étape : réduire. On regroupe les termes en $x$ : $2x + 4x = 6x$. Le nombre $6$ reste seul.",
-        "Donc $2(x + 3) + 4x = 6x + 6$."
+        "$ 2(5x + 7) = 10x + 14 $."
       ],
-      "reponse": "$6x + 6$."
+      "reponse": "$ 10x + 14 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "test-egalite",
-      "enonce": "L'égalité $4x - 1 = 2x + 5$ est-elle vraie pour $x = 3$ ?",
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 5(3x + 2) $.",
       "corrige": [
-        "Pour tester une égalité, on remplace la lettre par sa valeur et on calcule chaque membre séparément.",
-        "Membre de gauche : $4 \\times 3 - 1 = 12 - 1 = 11$.",
-        "Membre de droite : $2 \\times 3 + 5 = 6 + 5 = 11$.",
-        "Les deux membres valent $11$ : ils sont égaux. L'égalité est donc vraie pour cette valeur $x = 3$."
+        "$ 5(3x + 2) = 15x + 10 $."
       ],
-      "reponse": "Oui, l'égalité est vraie pour $x = 3$ (chaque membre vaut $11$)."
+      "reponse": "$ 15x + 10 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "modelisation",
-      "enonce": "Un rectangle a une longueur de $x$ centimètres. Sa largeur mesure $3$ cm de moins que sa longueur. Exprimer le périmètre du rectangle en fonction de $x$, puis réduire l'expression obtenue.",
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 6(2x + 1) $.",
       "corrige": [
-        "La largeur vaut $3$ cm de moins que la longueur $x$, donc elle s'écrit $x - 3$.",
-        "Le périmètre d'un rectangle est $2 \\times (\\text{longueur} + \\text{largeur})$, soit ici $P = 2 \\times \\big(x + (x - 3)\\big)$.",
-        "Dans la parenthèse, on réduit d'abord : $x + x - 3 = 2x - 3$. Il reste $P = 2(2x - 3)$.",
-        "On développe : $2(2x - 3) = 2 \\times 2x - 2 \\times 3 = 4x - 6$."
+        "$ 6(2x + 1) = 12x + 6 $."
       ],
-      "reponse": "$P = 4x - 6$ (en cm)."
+      "reponse": "$ 12x + 6 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "demonstration",
-      "enonce": "Démontrer que, quel que soit le nombre entier choisi, son produit par un nombre pair est toujours un nombre pair.",
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 3(4x + 6) $.",
       "corrige": [
-        "On veut une preuve valable pour tous les nombres à la fois : on utilise donc des lettres, et non des exemples.",
-        "Notons $n$ l'entier choisi. Un nombre pair s'écrit $2k$, avec $k$ entier.",
-        "Le produit s'écrit alors $n \\times 2k = 2 \\times (n \\times k) = 2(nk)$.",
-        "Comme $n$ et $k$ sont des entiers, $nk$ est un entier. Le produit est donc un multiple de $2$ : il est pair. $\\blacksquare$"
+        "$ 3(4x + 6) = 12x + 18 $."
       ],
-      "reponse": "$n \\times 2k = 2(nk)$ est un multiple de $2$, donc pair : la propriété est vraie pour tout entier $n$."
+      "reponse": "$ 12x + 18 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "factorisation",
-      "enonce": "Factoriser l'expression $8x + 12$.",
+      "notion": "distribution",
+      "enonce": "Developper $ 7(2x + 3) $.",
       "corrige": [
-        "Factoriser, c'est transformer une somme en produit en mettant en évidence un facteur commun aux deux termes.",
-        "On cherche le plus grand nombre qui divise à la fois $8$ et $12$ : c'est $4$.",
-        "On réécrit chaque terme avec ce facteur : $8x = 4 \\times 2x$ et $12 = 4 \\times 3$.",
-        "On met le $4$ en facteur : $8x + 12 = 4(2x + 3)$. Contrôle : en redéveloppant, $4 \\times 2x + 4 \\times 3 = 8x + 12$, on retrouve l'expression de départ."
+        "$ 7(2x + 3) = 14x + 21 $."
       ],
-      "reponse": "$8x + 12 = 4(2x + 3)$."
+      "reponse": "$ 14x + 21 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "developpement-reduction",
-      "enonce": "Développer puis réduire l'expression $-2(x - 4) + 5x$.",
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 2(8x + 5) $.",
       "corrige": [
-        "Première étape : développer la parenthèse. Le $-2$ multiplie chacun des deux termes, signes compris : $-2 \\times x = -2x$ et $-2 \\times (-4) = +8$. Donc $-2(x - 4) = -2x + 8$.",
-        "On réécrit l'expression entière : $-2x + 8 + 5x$.",
-        "Deuxième étape : réduire. On regroupe les termes en $x$ : $-2x + 5x = 3x$. Le nombre $8$ reste seul.",
-        "Donc $-2(x - 4) + 5x = 3x + 8$."
+        "$ 2(8x + 5) = 16x + 10 $."
       ],
-      "reponse": "$3x + 8$."
+      "reponse": "$ 16x + 10 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "demonstration",
-      "enonce": "Démontrer que la somme de trois nombres entiers consécutifs est toujours un multiple de $3$.",
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 4(3x + 9) $.",
       "corrige": [
-        "On veut une preuve valable pour tous les cas : on utilise donc des lettres, pas des exemples.",
-        "Notons $n$ le plus petit des trois entiers. Les trois entiers consécutifs s'écrivent alors $n$, $n + 1$ et $n + 2$.",
-        "Leur somme vaut $n + (n + 1) + (n + 2)$. On réduit : $n + n + n + 1 + 2 = 3n + 3$.",
-        "On factorise par $3$ : $3n + 3 = 3(n + 1)$. Comme $n + 1$ est un entier, la somme est un multiple de $3$. $\\blacksquare$"
+        "$ 4(3x + 9) = 12x + 36 $."
       ],
-      "reponse": "$n + (n+1) + (n+2) = 3n + 3 = 3(n+1)$ est un multiple de $3$ pour tout entier $n$."
+      "reponse": "$ 12x + 36 $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "synthese",
-      "enonce": "Un maraîcher aménage un potager rectangulaire. Sa longueur mesure $x$ mètres et sa largeur mesure $2$ mètres de moins que la longueur.\\n\\n1. Exprimer la largeur du potager en fonction de $x$.\\n2. Montrer que le périmètre $P$ du potager, en mètres, peut s'écrire $P = 4x - 4$.\\n3. Factoriser l'expression $4x - 4$.\\n4. Le maraîcher possède exactement $28$ mètres de grillage. Il affirme qu'une longueur de $x = 8$ m clôture parfaitement son potager, sans reste. A-t-il raison ?\\n5. Exprimer l'aire $A$ du potager en fonction de $x$, puis développer cette expression.",
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 5(2x + 4) $.",
       "corrige": [
-        "1. La largeur mesure $2$ m de moins que la longueur $x$, donc elle s'écrit $x - 2$ (en mètres).",
-        "2. Le périmètre d'un rectangle vaut $2 \\times (\\text{longueur} + \\text{largeur})$, soit $P = 2\\big(x + (x - 2)\\big)$. Dans la parenthèse on réduit : $x + x - 2 = 2x - 2$, d'où $P = 2(2x - 2)$. On développe : $2 \\times 2x - 2 \\times 2 = 4x - 4$. On a bien $P = 4x - 4$.",
-        "3. Les deux termes de $4x - 4$ ont pour facteur commun $4$ : $4x = 4 \\times x$ et $4 = 4 \\times 1$. Donc $4x - 4 = 4(x - 1)$.",
-        "4. On teste l'égalité $4x - 4 = 28$ pour $x = 8$. Membre de gauche : $4 \\times 8 - 4 = 32 - 4 = 28$. Membre de droite : $28$. Les deux membres sont égaux : le périmètre vaut exactement $28$ m, le maraîcher a donc raison.",
-        "5. L'aire d'un rectangle est le produit longueur $\\times$ largeur : $A = x(x - 2)$. On développe en multipliant chaque terme de la parenthèse par $x$ : $x \\times x - x \\times 2 = x^2 - 2x$. Donc $A = x^2 - 2x$ (en mètres carrés)."
+        "$ 5(2x + 4) = 10x + 20 $."
       ],
-      "reponse": "1. Largeur $= x - 2$. 2. $P = 4x - 4$. 3. $4x - 4 = 4(x - 1)$. 4. Oui : pour $x = 8$, $P = 28$ m. 5. $A = x(x - 2) = x^2 - 2x$ (en m²)."
+      "reponse": "$ 10x + 20 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 3(5x + 8) $.",
+      "corrige": [
+        "$ 3(5x + 8) = 15x + 24 $."
+      ],
+      "reponse": "$ 15x + 24 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 6(1x + 7) $.",
+      "corrige": [
+        "$ 6(1x + 7) = 6x + 42 $."
+      ],
+      "reponse": "$ 6x + 42 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 2x + 3 $ pour $ x = 4 $.",
+      "corrige": [
+        "$ 2\\times 4 + 3 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 3x + 1 $ pour $ x = 5 $.",
+      "corrige": [
+        "$ 3\\times 5 + 1 = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 5x + 2 $ pour $ x = 2 $.",
+      "corrige": [
+        "$ 5\\times 2 + 2 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 4x + 3 $ pour $ x = 3 $.",
+      "corrige": [
+        "$ 4\\times 3 + 3 = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 2x + 7 $ pour $ x = 6 $.",
+      "corrige": [
+        "$ 2\\times 6 + 7 = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 6x + 1 $ pour $ x = 2 $.",
+      "corrige": [
+        "$ 6\\times 2 + 1 = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 3x + 4 $ pour $ x = 5 $.",
+      "corrige": [
+        "$ 3\\times 5 + 4 = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 2x + 5 $ pour $ x = 10 $.",
+      "corrige": [
+        "$ 2\\times 10 + 5 = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 4x + 2 $ pour $ x = 4 $.",
+      "corrige": [
+        "$ 4\\times 4 + 2 = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "substitution",
+      "enonce": "Calculer $ 5x + 1 $ pour $ x = 3 $.",
+      "corrige": [
+        "$ 5\\times 3 + 1 = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 3x + 5 + 2x $.",
+      "corrige": [
+        "$ = 5x + 5 $."
+      ],
+      "reponse": "$ 5x + 5 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 4x + 2 + 7x $.",
+      "corrige": [
+        "$ = 11x + 2 $."
+      ],
+      "reponse": "$ 11x + 2 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 6x + 1 + 3x $.",
+      "corrige": [
+        "$ = 9x + 1 $."
+      ],
+      "reponse": "$ 9x + 1 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 2x + 8 + 4x $.",
+      "corrige": [
+        "$ = 6x + 8 $."
+      ],
+      "reponse": "$ 6x + 8 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 5x + 3 + 6x $.",
+      "corrige": [
+        "$ = 11x + 3 $."
+      ],
+      "reponse": "$ 11x + 3 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 7x + 2 + 1x $.",
+      "corrige": [
+        "$ = 8x + 2 $."
+      ],
+      "reponse": "$ 8x + 2 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 3x + 9 + 5x $.",
+      "corrige": [
+        "$ = 8x + 9 $."
+      ],
+      "reponse": "$ 8x + 9 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "reduire",
+      "enonce": "Reduire $ 4x + 4 + 8x $.",
+      "corrige": [
+        "$ = 12x + 4 $."
+      ],
+      "reponse": "$ 12x + 4 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 2(x + 3) $.",
+      "corrige": [
+        "$ = 2x + 6 $."
+      ],
+      "reponse": "$ 2x + 6 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 3(x + 4) $.",
+      "corrige": [
+        "$ = 3x + 12 $."
+      ],
+      "reponse": "$ 3x + 12 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 4(x + 5) $.",
+      "corrige": [
+        "$ = 4x + 20 $."
+      ],
+      "reponse": "$ 4x + 20 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 5(x + 6) $.",
+      "corrige": [
+        "$ = 5x + 30 $."
+      ],
+      "reponse": "$ 5x + 30 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 6(x + 7) $.",
+      "corrige": [
+        "$ = 6x + 42 $."
+      ],
+      "reponse": "$ 6x + 42 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 7(x + 8) $.",
+      "corrige": [
+        "$ = 7x + 56 $."
+      ],
+      "reponse": "$ 7x + 56 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 8(x + 9) $.",
+      "corrige": [
+        "$ = 8x + 72 $."
+      ],
+      "reponse": "$ 8x + 72 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 9(x + 10) $.",
+      "corrige": [
+        "$ = 9x + 90 $."
+      ],
+      "reponse": "$ 9x + 90 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 10(x + 11) $.",
+      "corrige": [
+        "$ = 10x + 110 $."
+      ],
+      "reponse": "$ 10x + 110 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 11(x + 12) $.",
+      "corrige": [
+        "$ = 11x + 132 $."
+      ],
+      "reponse": "$ 11x + 132 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 12(x + 13) $.",
+      "corrige": [
+        "$ = 12x + 156 $."
+      ],
+      "reponse": "$ 12x + 156 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 13(x + 14) $.",
+      "corrige": [
+        "$ = 13x + 182 $."
+      ],
+      "reponse": "$ 13x + 182 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 14(x + 15) $.",
+      "corrige": [
+        "$ = 14x + 210 $."
+      ],
+      "reponse": "$ 14x + 210 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 15(x + 16) $.",
+      "corrige": [
+        "$ = 15x + 240 $."
+      ],
+      "reponse": "$ 15x + 240 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 16(x + 17) $.",
+      "corrige": [
+        "$ = 16x + 272 $."
+      ],
+      "reponse": "$ 16x + 272 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 17(x + 18) $.",
+      "corrige": [
+        "$ = 17x + 306 $."
+      ],
+      "reponse": "$ 17x + 306 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 18(x + 19) $.",
+      "corrige": [
+        "$ = 18x + 342 $."
+      ],
+      "reponse": "$ 18x + 342 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 19(x + 20) $.",
+      "corrige": [
+        "$ = 19x + 380 $."
+      ],
+      "reponse": "$ 19x + 380 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 20(x + 21) $.",
+      "corrige": [
+        "$ = 20x + 420 $."
+      ],
+      "reponse": "$ 20x + 420 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "distribution",
+      "enonce": "Developper $ 21(x + 22) $.",
+      "corrige": [
+        "$ = 21x + 462 $."
+      ],
+      "reponse": "$ 21x + 462 $"
     }
   ]
 }

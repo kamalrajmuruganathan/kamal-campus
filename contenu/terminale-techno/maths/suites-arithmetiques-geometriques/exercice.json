@@ -13,128 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "moyennes",
-      "enonce": "(a) Calculer la moyenne arithmétique puis la moyenne géométrique de $9$ et $16$. (b) Déterminer le nombre $x$ tel que $9$ ; $x$ ; $16$ soient, dans cet ordre, trois termes consécutifs d'une suite arithmétique. Préciser la raison. (c) Même question pour une suite géométrique à termes positifs.",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 2 $, raison $ r = 3 $. Calculer $ u_{5} $.",
       "corrige": [
-        "(a) Moyenne arithmétique : $m = \\dfrac{9 + 16}{2} = \\dfrac{25}{2} = 12{,}5$. Moyenne géométrique (les deux nombres sont positifs) : $g = \\sqrt{9 \\times 16} = \\sqrt{144} = 12$.",
-        "(b) $9$ ; $x$ ; $16$ sont des termes consécutifs d'une suite arithmétique lorsque le terme du milieu est la moyenne arithmétique de ses voisins : $x = \\dfrac{9+16}{2} = 12{,}5$. La raison est $r = 12{,}5 - 9 = 3{,}5$, et on vérifie $16 - 12{,}5 = 3{,}5$ : le même pas des deux côtés.",
-        "(c) Pour une suite géométrique à termes positifs, le terme du milieu est la moyenne géométrique : $x = \\sqrt{9 \\times 16} = 12$. La raison est $q = \\dfrac{12}{9} = \\dfrac{4}{3}$, et on vérifie $12 \\times \\dfrac{4}{3} = 16$. Remarque : les deux valeurs de $x$ sont différentes ($12{,}5$ et $12$) — les deux moyennes ne coïncident pas."
+        "$ u_n = u_0 + n\\times r = 2 + 5\\times 3 = 17 $."
       ],
-      "reponse": "(a) $12{,}5$ et $12$ ; (b) $x = 12{,}5$, raison $r = 3{,}5$ ; (c) $x = 12$, raison $q = \\dfrac{4}{3}$."
+      "reponse": "$ u_{5} = 17 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "terme-de-rang-n",
-      "enonce": "$(u_n)$ est une suite arithmétique telle que $u_3 = 26$ et $u_8 = 51$. (a) Déterminer la raison $r$. (b) Calculer $u_0$ et exprimer $u_n$ en fonction de $n$. (c) Calculer $u_{20}$.",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 5 $, raison $ r = 4 $. Calculer $ u_{4} $.",
       "corrige": [
-        "(a) De $u_3$ à $u_8$, on ajoute $8 - 3 = 5$ fois la raison : $u_8 = u_3 + 5r$, donc $51 = 26 + 5r$, d'où $r = \\dfrac{51 - 26}{5} = 5$. Attention à compter $5$ pas, et non $6$.",
-        "(b) On redescend de $u_3$ à $u_0$ en retirant $3$ fois la raison : $u_0 = u_3 - 3r = 26 - 15 = 11$. Le terme général est donc $u_n = u_0 + n\\,r = 11 + 5n$.",
-        "(c) $u_{20} = 11 + 5 \\times 20 = 11 + 100 = 111$. Vérification rapide avec la formule depuis le rang $8$ : $u_{20} = u_8 + (20-8) \\times 5 = 51 + 60 = 111$. ✓"
+        "$ u_n = u_0 + n\\times r = 5 + 4\\times 4 = 21 $."
       ],
-      "reponse": "(a) $r = 5$ ; (b) $u_0 = 11$ et $u_n = 11 + 5n$ ; (c) $u_{20} = 111$."
+      "reponse": "$ u_{4} = 21 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "trois-termes-consecutifs",
-      "enonce": "Pour chacune des listes suivantes, prouver que les trois nombres sont — ou ne sont pas — des termes consécutifs d'une suite arithmétique, puis d'une suite géométrique. Préciser la raison quand elle existe. (a) $12$ ; $18$ ; $27$. (b) $6$ ; $15$ ; $24$. (c) $8$ ; $12$ ; $20$.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 1 $, raison $ r = 2 $. Calculer $ u_{10} $.",
       "corrige": [
-        "(a) Arithmétique ? $18 - 12 = 6$ et $27 - 18 = 9$ : différences inégales, donc non. Géométrique ? On teste $b^2 = ac$ : $18^2 = 324$ et $12 \\times 27 = 324$. Égalité : $12$ ; $18$ ; $27$ sont des termes consécutifs d'une suite géométrique de raison $q = \\dfrac{18}{12} = 1{,}5$.",
-        "(b) Arithmétique ? On teste $2b = a + c$ : $2 \\times 15 = 30$ et $6 + 24 = 30$. Égalité : ce sont des termes consécutifs d'une suite arithmétique de raison $r = 15 - 6 = 9$. Géométrique ? $15^2 = 225$ mais $6 \\times 24 = 144$ : non.",
-        "(c) Arithmétique ? $12 - 8 = 4$ et $20 - 12 = 8$ : non. Géométrique ? $12^2 = 144$ mais $8 \\times 20 = 160$ : non. Les nombres $8$ ; $12$ ; $20$ ne sont termes consécutifs d'aucun des deux modèles.",
-        "Bilan de méthode : on calcule **séparément** les deux membres de la condition ($2b$ contre $a+c$, ou $b^2$ contre $ac$) et on conclut par l'égalité ou la différence — c'est la rédaction attendue au bac."
+        "$ u_n = u_0 + n\\times r = 1 + 10\\times 2 = 21 $."
       ],
-      "reponse": "(a) géométrique de raison $q = 1{,}5$ (pas arithmétique) ; (b) arithmétique de raison $r = 9$ (pas géométrique) ; (c) ni l'un ni l'autre."
+      "reponse": "$ u_{10} = 21 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "somme-arithmetique",
-      "enonce": "Un amphithéâtre compte $15$ rangées. La première rangée comporte $20$ places, et chaque rangée suivante comporte $4$ places de plus que la précédente. (a) Justifier que le nombre de places de la rangée $n$ est le terme d'une suite arithmétique dont on précisera le premier terme et la raison. (b) Combien de places compte la dernière rangée ? (c) Quelle est la capacité totale de l'amphithéâtre ?",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 10 $, raison $ r = -2 $. Calculer $ u_{6} $.",
       "corrige": [
-        "(a) On note $u_n$ le nombre de places de la rangée $n$ (pour $n$ allant de $1$ à $15$). Chaque rangée a $4$ places de plus que la précédente : $u_{n+1} = u_n + 4$. C'est une suite arithmétique de premier terme $u_1 = 20$ et de raison $r = 4$.",
-        "(b) De la rangée $1$ à la rangée $15$, on ajoute $15 - 1 = 14$ fois la raison : $u_{15} = u_1 + 14 \\times 4 = 20 + 56 = 76$ places.",
-        "(c) La capacité totale est la **somme** des $15$ termes : $S = \\text{nombre de termes} \\times \\dfrac{\\text{premier} + \\text{dernier}}{2} = 15 \\times \\dfrac{20 + 76}{2} = 15 \\times 48 = 720$ places. Ordre de grandeur cohérent : $15$ rangées d'environ $48$ places en moyenne."
+        "$ u_n = u_0 + n\\times r = 10 + 6\\times -2 = -2 $."
       ],
-      "reponse": "(a) suite arithmétique, $u_1 = 20$, $r = 4$ ; (b) $76$ places ; (c) $720$ places au total."
+      "reponse": "$ u_{6} = -2 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "situation-de-somme",
-      "enonce": "Une entreprise produit $8\\,000$ pièces en 2027. Sa production augmente de $6\\,\\%$ chaque année. On note $u_n$ la production de l'année $2027 + n$, donc $u_0 = 8000$. (a) Justifier la nature de la suite $(u_n)$ et préciser sa raison. (b) Calculer la production prévue en 2032 (arrondir à la pièce). (c) Calculer la production totale cumulée de 2027 à 2032 incluses (arrondir à la pièce). (d) Expliquer pourquoi les questions (b) et (c) ne se traitent pas avec la même formule.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 0 $, raison $ r = 5 $. Calculer $ u_{7} $.",
       "corrige": [
-        "(a) Chaque année, la production est multipliée par $1 + \\dfrac{6}{100} = 1{,}06$ : $u_{n+1} = 1{,}06\\,u_n$. La suite $(u_n)$ est géométrique de premier terme $u_0 = 8000$ et de raison $q = 1{,}06$ (termes strictement positifs).",
-        "(b) 2032 correspond à $n = 2032 - 2027 = 5$. Production : $u_5 = 8000 \\times 1{,}06^5 \\approx 8000 \\times 1{,}3382 \\approx 10\\,706$ pièces.",
-        "(c) De 2027 à 2032 incluses, il y a $6$ années, donc $6$ termes ($u_0$ à $u_5$) — c'est le point à ne pas rater. Total : $S = u_0 \\times \\dfrac{1 - q^6}{1 - q} = 8000 \\times \\dfrac{1 - 1{,}06^6}{1 - 1{,}06} = 8000 \\times \\dfrac{1{,}06^6 - 1}{0{,}06} \\approx 8000 \\times 6{,}9753 \\approx 55\\,803$ pièces.",
-        "(d) La question (b) porte sur la production d'**une seule** année : c'est un **terme** de la suite, donné par le terme général $u_0 \\times q^n$. La question (c) porte sur le **cumul** de plusieurs années (« totale », « de 2027 à 2032 ») : c'est une **somme** de termes, donnée par la formule de somme. Reconnaître une situation de somme, c'est repérer ces mots : total, cumulé, en tout."
+        "$ u_n = u_0 + n\\times r = 0 + 7\\times 5 = 35 $."
       ],
-      "reponse": "(a) géométrique, $u_0 = 8000$, $q = 1{,}06$ ; (b) $u_5 \\approx 10\\,706$ pièces ; (c) $S \\approx 55\\,803$ pièces ; (d) (b) est un terme, (c) est une somme de $6$ termes."
+      "reponse": "$ u_{7} = 35 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "situation-de-somme",
-      "enonce": "Pour un même poste, deux contrats sont proposés. Contrat A : salaire annuel de $20\\,000$ € la première année, puis augmentation de $800$ € chaque année. Contrat B : salaire annuel de $20\\,000$ € la première année, puis augmentation de $3\\,\\%$ chaque année. On note $a_n$ et $b_n$ les salaires de l'année de rang $n$ (première année : $n = 0$). (a) Donner la nature de chaque suite et exprimer $a_n$ et $b_n$ en fonction de $n$. (b) Comparer les salaires de la $6^{\\text{e}}$ année (arrondir à l'euro). (c) Comparer le total perçu sur les $6$ premières années (arrondir à l'euro). (d) Que conseiller à un salarié qui compte rester $6$ ans ?",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 3 $, raison $ r = 3 $. Calculer $ u_{8} $.",
       "corrige": [
-        "(a) Contrat A : on ajoute $800$ € chaque année, suite **arithmétique** de premier terme $20\\,000$ et de raison $r = 800$ : $a_n = 20000 + 800n$. Contrat B : le salaire est multiplié par $1{,}03$ chaque année, suite **géométrique** de premier terme $20\\,000$ et de raison $q = 1{,}03$ : $b_n = 20000 \\times 1{,}03^n$.",
-        "(b) La $6^{\\text{e}}$ année correspond au rang $n = 5$ (la première est $n = 0$). Contrat A : $a_5 = 20000 + 800 \\times 5 = 24\\,000$ €. Contrat B : $b_5 = 20000 \\times 1{,}03^5 \\approx 20000 \\times 1{,}1593 \\approx 23\\,185$ €. La $6^{\\text{e}}$ année, le contrat A rapporte environ $815$ € de plus.",
-        "(c) « Total perçu sur les 6 premières années » : c'est une **somme** de $6$ termes ($n = 0$ à $5$). Contrat A (somme arithmétique) : $S_A = 6 \\times \\dfrac{a_0 + a_5}{2} = 6 \\times \\dfrac{20000 + 24000}{2} = 6 \\times 22000 = 132\\,000$ €. Contrat B (somme géométrique) : $S_B = 20000 \\times \\dfrac{1 - 1{,}03^6}{1 - 1{,}03} = 20000 \\times \\dfrac{1{,}03^6 - 1}{0{,}03} \\approx 20000 \\times 6{,}4684 \\approx 129\\,368$ €.",
-        "(d) Sur $6$ ans, le contrat A est plus avantageux : environ $132\\,000 - 129\\,368 = 2\\,632$ € de plus au total. Une hausse de $3\\,\\%$ de $20\\,000$ € ne vaut que $600$ € la première année, contre $800$ € pour le contrat A : la croissance géométrique met du temps à rattraper. À très long terme, en revanche, elle finit toujours par dépasser la croissance arithmétique (ici, le salaire B ne dépasse le salaire A qu'au-delà de la $20^{\\text{e}}$ année)."
+        "$ u_n = u_0 + n\\times r = 3 + 8\\times 3 = 27 $."
       ],
-      "reponse": "(a) $a_n = 20000 + 800n$ (arithmétique) ; $b_n = 20000 \\times 1{,}03^n$ (géométrique) ; (b) $a_5 = 24\\,000$ € contre $b_5 \\approx 23\\,185$ € ; (c) $S_A = 132\\,000$ € contre $S_B \\approx 129\\,368$ € ; (d) contrat A sur $6$ ans."
+      "reponse": "$ u_{8} = 27 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "terme-de-rang-n",
-      "enonce": "On place $2\\,000$ € sur un compte rémunéré à intérêts composés de $3\\,\\%$ par an. On note $u_n$ le capital disponible au bout de $n$ années, avec $u_0 = 2000$. (a) Justifier que $(u_n)$ est une suite géométrique et préciser sa raison. (b) Calculer $u_1$ et $u_2$. (c) Exprimer $u_n$ en fonction de $n$, puis calculer le capital au bout de $8$ ans (arrondir au centime).",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 7 $, raison $ r = 2 $. Calculer $ u_{5} $.",
       "corrige": [
-        "(a) Chaque année, le capital est multiplié par $1 + \\dfrac{3}{100} = 1{,}03$ : $u_{n+1} = 1{,}03\\,u_n$. La suite $(u_n)$ est donc géométrique de premier terme $u_0 = 2000$ et de raison $q = 1{,}03$ (termes strictement positifs).",
-        "(b) $u_1 = 2000 \\times 1{,}03 = 2\\,060$ € ; $u_2 = u_1 \\times 1{,}03 = 2060 \\times 1{,}03 = 2\\,121{,}80$ €.",
-        "(c) Le terme général est $u_n = u_0 \\times q^n = 2000 \\times 1{,}03^n$. Au bout de $8$ ans : $u_8 = 2000 \\times 1{,}03^8 \\approx 2000 \\times 1{,}266770 \\approx 2\\,533{,}54$ €. Ordre de grandeur cohérent : un peu plus de $500$ € d'intérêts en $8$ ans."
+        "$ u_n = u_0 + n\\times r = 7 + 5\\times 2 = 17 $."
       ],
-      "reponse": "(a) géométrique, $q = 1{,}03$ ; (b) $u_1 = 2\\,060$ € et $u_2 = 2\\,121{,}80$ € ; (c) $u_n = 2000 \\times 1{,}03^n$ et $u_8 \\approx 2\\,533{,}54$ €."
+      "reponse": "$ u_{5} = 17 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "terme-de-rang-n",
-      "enonce": "$(u_n)$ est une suite géométrique à termes strictement positifs telle que $u_2 = 18$ et $u_5 = 486$. (a) Déterminer la raison $q$. (b) Calculer $u_0$ et exprimer $u_n$ en fonction de $n$. (c) Calculer $u_7$.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 4 $, raison $ r = 6 $. Calculer $ u_{3} $.",
       "corrige": [
-        "(a) De $u_2$ à $u_5$, on multiplie $5 - 2 = 3$ fois par la raison : $u_5 = u_2 \\times q^3$, donc $q^3 = \\dfrac{486}{18} = 27$, d'où $q = \\sqrt[3]{27} = 3$ (raison positive). Attention à compter $3$ pas, et non $4$.",
-        "(b) On redescend de $u_2$ à $u_0$ en divisant $2$ fois par la raison : $u_0 = \\dfrac{u_2}{q^2} = \\dfrac{18}{9} = 2$. Le terme général est donc $u_n = u_0 \\times q^n = 2 \\times 3^n$. Vérification : $u_2 = 2 \\times 3^2 = 18$ ✓ et $u_5 = 2 \\times 3^5 = 486$ ✓.",
-        "(c) $u_7 = 2 \\times 3^7 = 2 \\times 2187 = 4\\,374$."
+        "$ u_n = u_0 + n\\times r = 4 + 3\\times 6 = 22 $."
       ],
-      "reponse": "(a) $q = 3$ ; (b) $u_0 = 2$ et $u_n = 2 \\times 3^n$ ; (c) $u_7 = 4\\,374$."
+      "reponse": "$ u_{3} = 22 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "terme-de-rang-n",
-      "enonce": "Une machine-outil achetée $24\\,000$ € perd $20\\,\\%$ de sa valeur chaque année. On note $v_n$ sa valeur au bout de $n$ années, avec $v_0 = 24\\,000$. (a) Justifier que $(v_n)$ est une suite géométrique et préciser sa raison. (b) Calculer la valeur de la machine au bout de $5$ ans (arrondir à l'euro). (c) À partir de quelle année la valeur de la machine devient-elle inférieure à la moitié de son prix d'achat, soit $12\\,000$ € ? (d) Cette valeur peut-elle finir par devenir nulle ? Justifier.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 1 $, raison $ r = 10 $. Calculer $ u_{9} $.",
       "corrige": [
-        "(a) Perdre $20\\,\\%$, c'est multiplier par $1 - \\dfrac{20}{100} = 0{,}80$ chaque année : $v_{n+1} = 0{,}80\\,v_n$. La suite $(v_n)$ est géométrique de premier terme $v_0 = 24\\,000$ et de raison $q = 0{,}80$ (attention : une baisse de $20\\,\\%$ donne $q = 0{,}80$, jamais $q = -0{,}20$). Les termes restent strictement positifs.",
-        "(b) $v_5 = 24\\,000 \\times 0{,}80^5 = 24\\,000 \\times 0{,}32768 \\approx 7\\,864$ €.",
-        "(c) On compare les valeurs successives à $12\\,000$ € : $v_3 = 24\\,000 \\times 0{,}80^3 = 24\\,000 \\times 0{,}512 = 12\\,288$ € (encore au-dessus) ; $v_4 = 24\\,000 \\times 0{,}80^4 = 24\\,000 \\times 0{,}4096 = 9\\,830{,}40$ € (en dessous). C'est donc à partir de la $4^{\\text{e}}$ année ($n = 4$) que la valeur passe sous les $12\\,000$ €.",
-        "(d) Non. Comme $q = 0{,}80 > 0$ et $v_0 > 0$, tous les termes $v_n = 24\\,000 \\times 0{,}80^n$ sont strictement positifs : la valeur se rapproche indéfiniment de $0$ sans jamais l'atteindre. Une suite géométrique à termes positifs ne s'annule jamais."
+        "$ u_n = u_0 + n\\times r = 1 + 9\\times 10 = 91 $."
       ],
-      "reponse": "(a) géométrique, $q = 0{,}80$ ; (b) $v_5 \\approx 7\\,864$ € ; (c) à partir de la $4^{\\text{e}}$ année ($v_4 \\approx 9\\,830$ €) ; (d) non, tous les termes restent strictement positifs."
+      "reponse": "$ u_{9} = 91 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "situation-de-somme",
-      "enonce": "Une PME réalise un chiffre d'affaires (CA) de $50\\,000$ € en 2026, année prise comme rang $0$. Pour prévoir son activité, elle étudie deux modèles de croissance. Modèle A : le CA augmente de $8\\,000$ € chaque année. Modèle B : le CA augmente de $12\\,\\%$ chaque année. On note $a_n$ le CA de l'année $2026 + n$ selon le modèle A, et $b_n$ selon le modèle B. 1. Préciser la nature de la suite $(a_n)$, exprimer $a_n$ en fonction de $n$, puis calculer le CA prévu en 2030 selon le modèle A. 2. Préciser la nature de la suite $(b_n)$, exprimer $b_n$ en fonction de $n$, puis calculer le CA prévu en 2030 selon le modèle B (arrondir à l'euro). 3. Selon quel modèle le CA de 2030 est-il le plus élevé ? 4. Calculer, pour chaque modèle, le CA cumulé de 2026 à 2033 incluses (arrondir à l'euro). 5. Un troisième modèle C prévoit un CA de $50\\,000$ € en 2026 et de $72\\,000$ € en 2028. Déterminer le CA de 2027 pour que ces trois valeurs soient, dans cet ordre, trois termes consécutifs d'une suite géométrique, et préciser le taux d'évolution annuel correspondant.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 20 $, raison $ r = -3 $. Calculer $ u_{5} $.",
       "corrige": [
-        "1. Le modèle A ajoute $8\\,000$ € chaque année : $(a_n)$ est arithmétique de premier terme $a_0 = 50\\,000$ et de raison $r = 8\\,000$, donc $a_n = 50\\,000 + 8\\,000\\,n$. L'année 2030 correspond à $n = 2030 - 2026 = 4$ : $a_4 = 50\\,000 + 8\\,000 \\times 4 = 82\\,000$ €.",
-        "2. Le modèle B multiplie le CA par $1 + \\dfrac{12}{100} = 1{,}12$ chaque année : $(b_n)$ est géométrique de premier terme $b_0 = 50\\,000$ et de raison $q = 1{,}12$, donc $b_n = 50\\,000 \\times 1{,}12^n$. Pour 2030 ($n = 4$) : $b_4 = 50\\,000 \\times 1{,}12^4 \\approx 50\\,000 \\times 1{,}573519 \\approx 78\\,676$ €.",
-        "3. On compare $a_4 = 82\\,000$ € et $b_4 \\approx 78\\,676$ € : en 2030, le CA est plus élevé avec le modèle A (environ $3\\,324$ € de plus). La croissance de $12\\,\\%$ n'a pas encore rattrapé le gain fixe de $8\\,000$ €.",
-        "4. « CA cumulé de 2026 à 2033 incluses » : c'est une somme portant sur $2033 - 2026 + 1 = 8$ années, soit les termes de rang $0$ à $7$. Modèle A (somme arithmétique) : le dernier terme est $a_7 = 50\\,000 + 8\\,000 \\times 7 = 106\\,000$ €, donc $S_A = 8 \\times \\dfrac{a_0 + a_7}{2} = 8 \\times \\dfrac{50\\,000 + 106\\,000}{2} = 8 \\times 78\\,000 = 624\\,000$ €. Modèle B (somme géométrique de $8$ termes) : $S_B = b_0 \\times \\dfrac{1 - q^8}{1 - q} = 50\\,000 \\times \\dfrac{1{,}12^8 - 1}{1{,}12 - 1} = 50\\,000 \\times \\dfrac{2{,}475963 - 1}{0{,}12} \\approx 50\\,000 \\times 12{,}2997 \\approx 614\\,985$ €. Sur $8$ ans, le modèle A cumule un peu plus (environ $9\\,000$ € de plus).",
-        "5. On cherche le CA $x$ de 2027 tel que $50\\,000$ ; $x$ ; $72\\,000$ soient trois termes consécutifs d'une suite géométrique : le terme du milieu est la moyenne géométrique de ses voisins, donc $x = \\sqrt{50\\,000 \\times 72\\,000} = \\sqrt{3\\,600\\,000\\,000} = 60\\,000$ €. La raison est $q = \\dfrac{60\\,000}{50\\,000} = 1{,}2$, ce qui correspond à un taux d'évolution annuel de $+20\\,\\%$ (et l'on vérifie $60\\,000 \\times 1{,}2 = 72\\,000$ ✓)."
+        "$ u_n = u_0 + n\\times r = 20 + 5\\times -3 = 5 $."
       ],
-      "reponse": "1. $(a_n)$ arithmétique, $a_n = 50\\,000 + 8\\,000n$, $a_4 = 82\\,000$ € ; 2. $(b_n)$ géométrique, $b_n = 50\\,000 \\times 1{,}12^n$, $b_4 \\approx 78\\,676$ € ; 3. modèle A en 2030 ; 4. $S_A = 624\\,000$ € contre $S_B \\approx 614\\,985$ € ; 5. CA 2027 $= 60\\,000$ € (moyenne géométrique), soit $+20\\,\\%$ par an."
+      "reponse": "$ u_{5} = 5 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 2 $, raison $ r = 7 $. Calculer $ u_{4} $.",
+      "corrige": [
+        "$ u_n = u_0 + n\\times r = 2 + 4\\times 7 = 30 $."
+      ],
+      "reponse": "$ u_{4} = 30 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 6 $, raison $ r = 1 $. Calculer $ u_{12} $.",
+      "corrige": [
+        "$ u_n = u_0 + n\\times r = 6 + 12\\times 1 = 18 $."
+      ],
+      "reponse": "$ u_{12} = 18 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 2 $. Calculer $ u_{4} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 2^4 = 16 $."
+      ],
+      "reponse": "$ u_{4} = 16 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 3 $, raison $ q = 2 $. Calculer $ u_{3} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 3\\times 2^3 = 24 $."
+      ],
+      "reponse": "$ u_{3} = 24 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 3 $. Calculer $ u_{3} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 3^3 = 27 $."
+      ],
+      "reponse": "$ u_{3} = 27 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 5 $, raison $ q = 2 $. Calculer $ u_{3} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 5\\times 2^3 = 40 $."
+      ],
+      "reponse": "$ u_{3} = 40 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 2 $, raison $ q = 3 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 2\\times 3^2 = 18 $."
+      ],
+      "reponse": "$ u_{2} = 18 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 2 $. Calculer $ u_{6} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 2^6 = 64 $."
+      ],
+      "reponse": "$ u_{6} = 64 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 4 $, raison $ q = 2 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 4\\times 2^2 = 16 $."
+      ],
+      "reponse": "$ u_{2} = 16 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 5 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 5^2 = 25 $."
+      ],
+      "reponse": "$ u_{2} = 25 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 2 $, raison $ q = 2 $. Calculer $ u_{5} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 2\\times 2^5 = 64 $."
+      ],
+      "reponse": "$ u_{5} = 64 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 3 $, raison $ q = 3 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 3\\times 3^2 = 27 $."
+      ],
+      "reponse": "$ u_{2} = 27 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=1 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=2 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=3 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=4 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=5 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=6 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=7 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=8 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=9 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=10 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=11 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=12 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=13 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=14 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=15 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=16 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=17 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 23 $."
+      ],
+      "reponse": "$ 23 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=18 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=19 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=20 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 26 $."
+      ],
+      "reponse": "$ 26 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=21 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=22 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 28 $."
+      ],
+      "reponse": "$ 28 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=23 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=24 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=25 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 31 $."
+      ],
+      "reponse": "$ 31 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=26 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 32 $."
+      ],
+      "reponse": "$ 32 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=27 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=28 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 34 $."
+      ],
+      "reponse": "$ 34 $"
     }
   ]
 }

@@ -13,133 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "droite-graduee-relatifs",
-      "enonce": "Sur une droite graduée, deux traits portent les nombres $-6$ et $-4$ ; ils sont séparés par $4$ intervalles égaux. Quelle est l'abscisse du point situé $3$ graduations à droite de $-6$ ?",
+      "notion": "milieu",
+      "enonce": "$ A(2;3) $ et $ B(6;7) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "Je cherche d'abord ce que vaut une graduation : l'écart entre $-6$ et $-4$ est de $2$, et il y a $4$ intervalles, donc une graduation vaut $\\dfrac{2}{4} = 0{,}5$.",
-        "De quel côté ? À droite de $-6$, on se rapproche de $0$ : le nombre augmente, j'ajoute.",
-        "$3$ graduations valent $3 \\times 0{,}5 = 1{,}5$, donc l'abscisse est $-6 + 1{,}5 = -4{,}5$.",
-        "Contrôle : $-4{,}5$ est bien situé entre $-6$ et $-4$. ✓"
+        "$ x_I = \\dfrac{2+6}{2} = 4 $ et $ y_I = \\dfrac{3+7}{2} = 5 $."
       ],
-      "reponse": "L'abscisse cherchée est $-4{,}5$."
+      "reponse": "$ (4 ; 5) $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "coordonnees-plan",
-      "enonce": "Dans un repère orthogonal d'origine $O$, décris précisément comment placer les points $M(-2\\,;5)$ et $P(4\\,;-3)$ à partir de $O$, puis indique où se trouve chacun par rapport à l'origine (en haut/en bas, à gauche/à droite).",
+      "notion": "milieu",
+      "enonce": "$ A(1;2) $ et $ B(5;10) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "Rappel : le premier nombre est l'abscisse (on se déplace horizontalement), le second est l'ordonnée (on se déplace verticalement). On part toujours de $O$.",
-        "Pour $M(-2\\,;5)$ : l'abscisse $-2$ est négative, donc $2$ vers la gauche ; l'ordonnée $5$ est positive, donc $5$ vers le haut. $M$ est en haut à gauche.",
-        "Pour $P(4\\,;-3)$ : l'abscisse $4$ est positive, donc $4$ vers la droite ; l'ordonnée $-3$ est négative, donc $3$ vers le bas. $P$ est en bas à droite.",
-        "Les deux points portent les chiffres $2$, $3$, $4$, $5$ mais sont dans des régions opposées : c'est l'ordre et le signe qui décident, pas les chiffres."
+        "$ x_I = \\dfrac{1+5}{2} = 3 $ et $ y_I = \\dfrac{2+10}{2} = 6 $."
       ],
-      "reponse": "$M$ : $2$ à gauche puis $5$ en haut (en haut à gauche). $P$ : $4$ à droite puis $3$ en bas (en bas à droite)."
+      "reponse": "$ (3 ; 6) $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "droite-graduee-relatifs",
-      "enonce": "Sur une droite graduée d'unité $1$, chaque unité est partagée en $5$ parts égales. Un point $A$ est situé $7$ graduations à gauche de l'origine $O$. Donne l'abscisse de $A$ sous forme de fraction, puis vérifie ta réponse en l'encadrant par deux entiers consécutifs.",
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(-2;1) $ et $ B(4;9) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "Une unité est partagée en $5$, donc une graduation vaut $\\dfrac{1}{5}$.",
-        "$A$ est à gauche de $0$ : son abscisse est négative. $7$ graduations à gauche donnent $-7 \\times \\dfrac{1}{5} = -\\dfrac{7}{5}$.",
-        "Contrôle par encadrement : $-\\dfrac{7}{5} = -1{,}4$, donc $-2 < -\\dfrac{7}{5} < -1$. $A$ est entre $-2$ et $-1$.",
-        "C'est cohérent : $7$ graduations à gauche, c'est plus d'une unité mais moins de deux, donc entre $-2$ et $-1$. ✓"
+        "$ x_I = \\dfrac{-2+4}{2} = 1 $ et $ y_I = \\dfrac{1+9}{2} = 5 $."
       ],
-      "reponse": "$A$ a pour abscisse $-\\dfrac{7}{5}$ (soit $-1{,}4$), entre $-2$ et $-1$."
+      "reponse": "$ (1 ; 5) $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "graphique-fonction",
-      "enonce": "Un service de location de vélos facture $4$ € d'inscription, puis $3$ € par heure d'utilisation. On note $p$ le prix payé (en €) en fonction de la durée $t$ (en heures). 1) Exprime $p$ en fonction de $t$. 2) Construis un tableau de valeurs pour $t = 0$, $1$, $2$, $3$. 3) Donne les coordonnées des points à placer, la durée en abscisse. 4) Cette situation est-elle une situation de proportionnalité ? Justifie.",
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(0;0) $ et $ B(6;8) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "1) On paie $4$ € fixes, puis $3$ € pour chaque heure : $p = 4 + 3 \\times t$.",
-        "2) Tableau : pour $t=0$, $p = 4$ ; pour $t=1$, $p = 7$ ; pour $t=2$, $p = 10$ ; pour $t=3$, $p = 13$.",
-        "3) La durée est en abscisse et le prix en ordonnée : on place $(0\\,;4)$, $(1\\,;7)$, $(2\\,;10)$, $(3\\,;13)$.",
-        "4) Non : à $t = 0$ on paie déjà $4$ €, donc la représentation ne passe pas par l'origine. De plus $10$ (à $2$ h) n'est pas le double de $7$ (à $1$ h) : le prix n'est pas proportionnel à la durée."
+        "$ x_I = \\dfrac{0+6}{2} = 3 $ et $ y_I = \\dfrac{0+8}{2} = 4 $."
       ],
-      "reponse": "$p = 4 + 3t$ ; points $(0\\,;4)$, $(1\\,;7)$, $(2\\,;10)$, $(3\\,;13)$ ; ce n'est pas une proportionnalité (la représentation ne passe pas par l'origine)."
+      "reponse": "$ (3 ; 4) $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "graphique-fonction",
-      "enonce": "Une chambre froide est réglée à $-6$ °C. On coupe le système de refroidissement : la température $T$ (en °C) monte alors de $3$ °C par heure. On note $t$ le temps écoulé (en heures). 1) Exprime $T$ en fonction de $t$. 2) Fais un tableau de valeurs pour $t = 0$, $1$, $2$, $3$, $4$. 3) Entre quelles valeurs l'axe vertical doit-il s'étendre, et quelle graduation choisir ? 4) Au bout de combien de temps la température devient-elle positive ?",
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(3;-1) $ et $ B(9;7) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "1) On part de $-6$ °C et on ajoute $3$ °C par heure : $T = -6 + 3 \\times t$.",
-        "2) Tableau : $t=0 \\to T=-6$ ; $t=1 \\to T=-3$ ; $t=2 \\to T=0$ ; $t=3 \\to T=3$ ; $t=4 \\to T=6$.",
-        "3) Les valeurs vont de $-6$ à $6$ : l'axe vertical doit descendre jusqu'à $-6$ et monter jusqu'à $6$. On le gradue de $3$ en $3$ (ou de $2$ en $2$) pour que les points ne soient pas écrasés ; les premiers points, négatifs, sont sous l'axe horizontal.",
-        "4) On cherche quand $T$ dépasse $0$ : $-6 + 3t > 0$ donne $3t > 6$, soit $t > 2$. À $t = 2$ h la température vaut exactement $0$ °C (le point est sur l'axe horizontal), et elle devient positive après $2$ h."
+        "$ x_I = \\dfrac{3+9}{2} = 6 $ et $ y_I = \\dfrac{-1+7}{2} = 3 $."
       ],
-      "reponse": "$T = -6 + 3t$ ; valeurs $-6$, $-3$, $0$, $3$, $6$ ; la température atteint $0$ °C à $t = 2$ h et devient positive au-delà."
+      "reponse": "$ (6 ; 3) $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "cas-particuliers",
-      "enonce": "Dans un repère orthogonal, l'axe horizontal est gradué de $2$ en $2$ et l'axe vertical de $5$ en $5$. On repère trois points : $A$ est $3$ graduations à droite et $2$ graduations au-dessus de l'origine ; $B$ est $1$ graduation à gauche et $3$ graduations en dessous de l'origine ; $C$ est sur l'axe horizontal, $4$ graduations à droite de l'origine. 1) Donne les coordonnées de $A$, $B$ et $C$. 2) Explique pourquoi on ne peut pas compter les graduations comme si chacune valait $1$.",
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(-4;2) $ et $ B(2;10) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "Chaque axe se lit avec sa propre unité : horizontalement une graduation vaut $2$, verticalement une graduation vaut $5$.",
-        "$A$ : $3$ graduations à droite $\\to 3 \\times 2 = 6$ ; $2$ graduations au-dessus $\\to 2 \\times 5 = 10$. Donc $A(6\\,;10)$.",
-        "$B$ : $1$ graduation à gauche $\\to -1 \\times 2 = -2$ ; $3$ graduations en dessous $\\to -3 \\times 5 = -15$. Donc $B(-2\\,;-15)$.",
-        "$C$ : il est sur l'axe horizontal, donc son ordonnée est nulle ; $4$ graduations à droite $\\to 4 \\times 2 = 8$. Donc $C(8\\,;0)$.",
-        "2) « Orthogonal » signifie que les axes sont perpendiculaires, pas qu'ils ont la même unité. Ici une graduation vaut $2$ sur un axe et $5$ sur l'autre : compter comme si chacune valait $1$ donnerait $A(3\\,;2)$, $B(-1\\,;-3)$, $C(4\\,;0)$, tous faux. Il faut recalculer la valeur d'une graduation sur chaque axe."
+        "$ x_I = \\dfrac{-4+2}{2} = -1 $ et $ y_I = \\dfrac{2+10}{2} = 6 $."
       ],
-      "reponse": "$A(6\\,;10)$, $B(-2\\,;-15)$, $C(8\\,;0)$ ; chaque axe a sa propre unité (orthogonal ne veut pas dire même unité sur les deux axes)."
+      "reponse": "$ (-1 ; 6) $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "coordonnees-plan",
-      "enonce": "Dans un repère orthogonal d'unité $1$ sur chaque axe, on atteint un point $R$ à partir de l'origine $O$ en se déplaçant d'abord de $5$ vers la gauche, puis de $2$ vers le bas. Donne les coordonnées de $R$ et indique dans quelle région du plan il se trouve.",
+      "notion": "milieu",
+      "enonce": "$ A(1;1) $ et $ B(7;9) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "Un déplacement horizontal vers la gauche donne une abscisse négative : ici $x = -5$.",
-        "Un déplacement vertical vers le bas donne une ordonnée négative : ici $y = -2$.",
-        "On écrit l'abscisse d'abord, puis l'ordonnée : $R(-5\\,;-2)$.",
-        "Comme $x < 0$ et $y < 0$, le point est en bas à gauche de l'origine."
+        "$ x_I = \\dfrac{1+7}{2} = 4 $ et $ y_I = \\dfrac{1+9}{2} = 5 $."
       ],
-      "reponse": "$R(-5\\,;-2)$, situé en bas à gauche de l'origine."
+      "reponse": "$ (4 ; 5) $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "droite-graduee-relatifs",
-      "enonce": "Sur une droite graduée, deux traits portent les nombres $-20$ et $-8$ ; ils sont séparés par $4$ intervalles égaux. 1) Quelle est la valeur d'une graduation ? 2) Quelle est l'abscisse du point situé $5$ graduations à gauche de $-8$ ?",
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(2;-3) $ et $ B(8;5) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "1) L'écart entre $-20$ et $-8$ vaut $-8 - (-20) = 12$, réparti sur $4$ intervalles : une graduation vaut $\\dfrac{12}{4} = 3$.",
-        "2) À gauche de $-8$, on s'éloigne de zéro, donc le nombre diminue : $5$ graduations valent $5 \\times 3 = 15$, et l'abscisse est $-8 - 15 = -23$.",
-        "Contrôle : $-23$ est bien plus petit que $-20$, ce qui est cohérent avec un point situé à gauche de $-8$ et même de $-20$. ✓"
+        "$ x_I = \\dfrac{2+8}{2} = 5 $ et $ y_I = \\dfrac{-3+5}{2} = 1 $."
       ],
-      "reponse": "Une graduation vaut $3$ ; l'abscisse cherchée est $-23$."
+      "reponse": "$ (5 ; 1) $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "graphique-fonction",
-      "enonce": "Une bougie mesure $20$ cm et se consume régulièrement de $4$ cm par heure. On note $h$ sa hauteur (en cm) en fonction du temps $t$ (en heures). 1) Exprime $h$ en fonction de $t$. 2) Construis un tableau de valeurs pour $t = 0$, $1$, $2$, $3$, $4$, $5$. 3) Au bout de combien de temps la bougie est-elle entièrement consumée ? 4) Cette situation est-elle une situation de proportionnalité ? Justifie.",
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(-1;4) $ et $ B(5;11) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "1) On part de $20$ cm et on retire $4$ cm par heure : $h = 20 - 4 \\times t$.",
-        "2) Tableau : $t=0 \\to h=20$ ; $t=1 \\to h=16$ ; $t=2 \\to h=12$ ; $t=3 \\to h=8$ ; $t=4 \\to h=4$ ; $t=5 \\to h=0$.",
-        "3) La bougie est finie quand $h = 0$ : $20 - 4t = 0$ donne $4t = 20$, soit $t = 5$. Elle est entièrement consumée au bout de $5$ h (au-delà, la formule n'a plus de sens : la hauteur ne devient pas négative).",
-        "4) Non : quand $t$ passe de $1$ à $2$ (le double), $h$ passe de $16$ à $12$, qui n'est pas la moitié de $16$. La hauteur diminue au lieu d'augmenter avec le temps : ce n'est pas une situation de proportionnalité."
+        "$ x_I = \\dfrac{-1+5}{2} = 2 $ et $ y_I = \\dfrac{4+11}{2} = \\dfrac{15}{2} $."
       ],
-      "reponse": "$h = 20 - 4t$ ; hauteurs $20$, $16$, $12$, $8$, $4$, $0$ ; bougie consumée à $t = 5$ h ; ce n'est pas une proportionnalité."
+      "reponse": "$ (2 ; \\dfrac{15}{2}) $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "synthese",
-      "enonce": "Une course d'orientation est organisée dans un parc. Sur la carte, un repère orthogonal a pour origine $O$ l'accueil. Sur l'axe horizontal (direction Est), une graduation représente $20$ m ; sur l'axe vertical (direction Nord), une graduation représente $50$ m. Les distances sont données en mètres.\\n1. La balise $A$ s'atteint depuis l'accueil en allant de $3$ graduations vers l'Est puis $2$ graduations vers le Nord. Donne les coordonnées de $A$.\\n2. La balise $B$ a pour coordonnées $(-40\\,;150)$. Décris le trajet depuis $O$ pour l'atteindre, en graduations puis en mètres.\\n3. La balise $C$ est sur l'axe Est (l'axe horizontal), à $4$ graduations à l'Est de $O$. Donne ses coordonnées.\\n4. Un sentier est modélisé par une droite graduée dont $O$ est le $0$. Deux poteaux y portent les nombres $-100$ et $-40$, séparés par $3$ intervalles égaux. Quelle distance représente une graduation, et quelle est l'abscisse du poteau situé $2$ graduations à gauche de $-100$ ?\\n5. L'inscription coûte $5$ € plus $2$ € par balise validée. On note $p$ le prix payé (en €) selon le nombre $n$ de balises. Exprime $p$ en fonction de $n$, puis donne le point à placer pour $n = 4$ (nombre de balises en abscisse). S'agit-il d'une proportionnalité ?",
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(0;5) $ et $ B(8;11) $. Coordonnees du milieu de $ [AB] $ ?",
       "corrige": [
-        "1. Chaque axe a sa propre unité. Vers l'Est : $3 \\times 20 = 60$ m, donc $x = 60$. Vers le Nord : $2 \\times 50 = 100$ m, donc $y = 100$. On obtient $A(60\\,;100)$.",
-        "2. L'abscisse $-40$ correspond à $\\dfrac{-40}{20} = -2$ graduations, soit $2$ graduations vers l'Ouest (gauche). L'ordonnée $150$ correspond à $\\dfrac{150}{50} = 3$ graduations vers le Nord (haut). Trajet : $2$ graduations à l'Ouest ($40$ m) puis $3$ graduations au Nord ($150$ m).",
-        "3. $C$ est sur l'axe horizontal, donc son ordonnée est nulle : $y = 0$. À l'Est : $4 \\times 20 = 80$ m. Donc $C(80\\,;0)$.",
-        "4. L'écart entre $-100$ et $-40$ vaut $-40 - (-100) = 60$, réparti sur $3$ intervalles : une graduation vaut $\\dfrac{60}{3} = 20$ m. À gauche de $-100$ le nombre diminue : $-100 - 2 \\times 20 = -140$.",
-        "5. On paie $5$ € fixes plus $2$ € par balise : $p = 5 + 2 \\times n$. Pour $n = 4$ : $p = 5 + 8 = 13$, donc le point est $(4\\,;13)$. Ce n'est pas une proportionnalité : à $n = 0$ on paie déjà $5$ €, la représentation ne passe pas par l'origine."
+        "$ x_I = \\dfrac{0+8}{2} = 4 $ et $ y_I = \\dfrac{5+11}{2} = 8 $."
       ],
-      "reponse": "1. $A(60\\,;100)$. 2. $B$ : $2$ graduations à l'Ouest ($40$ m) puis $3$ au Nord ($150$ m). 3. $C(80\\,;0)$. 4. Une graduation vaut $20$ m ; abscisse $-140$. 5. $p = 5 + 2n$, point $(4\\,;13)$, pas de proportionnalité."
+      "reponse": "$ (4 ; 8) $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(3;3) $ et $ B(15;9) $. Coordonnees du milieu de $ [AB] $ ?",
+      "corrige": [
+        "$ x_I = \\dfrac{3+15}{2} = 9 $ et $ y_I = \\dfrac{3+9}{2} = 6 $."
+      ],
+      "reponse": "$ (9 ; 6) $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(-2;-2) $ et $ B(4;6) $. Coordonnees du milieu de $ [AB] $ ?",
+      "corrige": [
+        "$ x_I = \\dfrac{-2+4}{2} = 1 $ et $ y_I = \\dfrac{-2+6}{2} = 2 $."
+      ],
+      "reponse": "$ (1 ; 2) $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(1;0) $ et $ B(7;8) $. Coordonnees du milieu de $ [AB] $ ?",
+      "corrige": [
+        "$ x_I = \\dfrac{1+7}{2} = 4 $ et $ y_I = \\dfrac{0+8}{2} = 4 $."
+      ],
+      "reponse": "$ (4 ; 4) $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "$ A(2;2) $ et $ B(10;6) $. Coordonnees du milieu de $ [AB] $ ?",
+      "corrige": [
+        "$ x_I = \\dfrac{2+10}{2} = 6 $ et $ y_I = \\dfrac{2+6}{2} = 4 $."
+      ],
+      "reponse": "$ (6 ; 4) $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(2;3) $ et $ B(6;7) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (4 ; 4) $."
+      ],
+      "reponse": "$ (4 ; 4) $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(1;2) $ et $ B(5;10) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (4 ; 8) $."
+      ],
+      "reponse": "$ (4 ; 8) $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(-2;1) $ et $ B(4;9) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 8) $."
+      ],
+      "reponse": "$ (6 ; 8) $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(0;0) $ et $ B(6;8) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 8) $."
+      ],
+      "reponse": "$ (6 ; 8) $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(3;-1) $ et $ B(9;7) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 8) $."
+      ],
+      "reponse": "$ (6 ; 8) $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(-4;2) $ et $ B(2;10) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 8) $."
+      ],
+      "reponse": "$ (6 ; 8) $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(1;1) $ et $ B(7;9) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 8) $."
+      ],
+      "reponse": "$ (6 ; 8) $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(2;-3) $ et $ B(8;5) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 8) $."
+      ],
+      "reponse": "$ (6 ; 8) $"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(-1;4) $ et $ B(5;11) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 7) $."
+      ],
+      "reponse": "$ (6 ; 7) $"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(0;5) $ et $ B(8;11) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (8 ; 6) $."
+      ],
+      "reponse": "$ (8 ; 6) $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(3;3) $ et $ B(15;9) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (12 ; 6) $."
+      ],
+      "reponse": "$ (12 ; 6) $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "coordonnees-vecteur",
+      "enonce": "$ A(-2;-2) $ et $ B(4;6) $. Coordonnees du vecteur $ \\vec{AB} $ ?",
+      "corrige": [
+        "$ \\vec{AB}(x_B - x_A ; y_B - y_A) = (6 ; 8) $."
+      ],
+      "reponse": "$ (6 ; 8) $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(1;2) $, $ B(6;4) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{7}{2} ; 3) $."
+      ],
+      "reponse": "$ (\\dfrac{7}{2} ; 3) $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(2;3) $, $ B(7;5) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{9}{2} ; 4) $."
+      ],
+      "reponse": "$ (\\dfrac{9}{2} ; 4) $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(3;4) $, $ B(8;6) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{11}{2} ; 5) $."
+      ],
+      "reponse": "$ (\\dfrac{11}{2} ; 5) $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(4;5) $, $ B(9;7) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{13}{2} ; 6) $."
+      ],
+      "reponse": "$ (\\dfrac{13}{2} ; 6) $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(5;6) $, $ B(10;8) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{15}{2} ; 7) $."
+      ],
+      "reponse": "$ (\\dfrac{15}{2} ; 7) $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(6;7) $, $ B(11;9) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{17}{2} ; 8) $."
+      ],
+      "reponse": "$ (\\dfrac{17}{2} ; 8) $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(7;8) $, $ B(12;10) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{19}{2} ; 9) $."
+      ],
+      "reponse": "$ (\\dfrac{19}{2} ; 9) $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(8;9) $, $ B(13;11) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{21}{2} ; 10) $."
+      ],
+      "reponse": "$ (\\dfrac{21}{2} ; 10) $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(9;10) $, $ B(14;12) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{23}{2} ; 11) $."
+      ],
+      "reponse": "$ (\\dfrac{23}{2} ; 11) $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(10;11) $, $ B(15;13) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{25}{2} ; 12) $."
+      ],
+      "reponse": "$ (\\dfrac{25}{2} ; 12) $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(11;12) $, $ B(16;14) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{27}{2} ; 13) $."
+      ],
+      "reponse": "$ (\\dfrac{27}{2} ; 13) $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(12;13) $, $ B(17;15) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{29}{2} ; 14) $."
+      ],
+      "reponse": "$ (\\dfrac{29}{2} ; 14) $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(13;14) $, $ B(18;16) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{31}{2} ; 15) $."
+      ],
+      "reponse": "$ (\\dfrac{31}{2} ; 15) $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(14;15) $, $ B(19;17) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{33}{2} ; 16) $."
+      ],
+      "reponse": "$ (\\dfrac{33}{2} ; 16) $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(15;16) $, $ B(20;18) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{35}{2} ; 17) $."
+      ],
+      "reponse": "$ (\\dfrac{35}{2} ; 17) $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(16;17) $, $ B(21;19) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{37}{2} ; 18) $."
+      ],
+      "reponse": "$ (\\dfrac{37}{2} ; 18) $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(17;18) $, $ B(22;20) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{39}{2} ; 19) $."
+      ],
+      "reponse": "$ (\\dfrac{39}{2} ; 19) $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(18;19) $, $ B(23;21) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{41}{2} ; 20) $."
+      ],
+      "reponse": "$ (\\dfrac{41}{2} ; 20) $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(19;20) $, $ B(24;22) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{43}{2} ; 21) $."
+      ],
+      "reponse": "$ (\\dfrac{43}{2} ; 21) $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(20;21) $, $ B(25;23) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{45}{2} ; 22) $."
+      ],
+      "reponse": "$ (\\dfrac{45}{2} ; 22) $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(21;22) $, $ B(26;24) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{47}{2} ; 23) $."
+      ],
+      "reponse": "$ (\\dfrac{47}{2} ; 23) $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(22;23) $, $ B(27;25) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{49}{2} ; 24) $."
+      ],
+      "reponse": "$ (\\dfrac{49}{2} ; 24) $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(23;24) $, $ B(28;26) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{51}{2} ; 25) $."
+      ],
+      "reponse": "$ (\\dfrac{51}{2} ; 25) $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "milieu",
+      "enonce": "Milieu de $ [AB] $ : $ A(24;25) $, $ B(29;27) $ ?",
+      "corrige": [
+        "$ = (\\dfrac{53}{2} ; 26) $."
+      ],
+      "reponse": "$ (\\dfrac{53}{2} ; 26) $"
     }
   ]
 }

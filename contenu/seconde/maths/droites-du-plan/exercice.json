@@ -14,127 +14,511 @@
       "id": 1,
       "difficulte": "application",
       "notion": "coefficient-directeur",
-      "enonce": "Calculer le coefficient directeur de la droite passant par les points $\\mathrm{A}(-1\\,;4)$ et $\\mathrm{B}(3\\,;-4)$.",
+      "enonce": "Droite passant par $ A(0;1) $ et $ B(2;7) $. Coefficient directeur ?",
       "corrige": [
-        "Les deux points ont des abscisses différentes ($-1 \\neq 3$) : le coefficient directeur existe et vaut $m = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}}$.",
-        "On remplace : $m = \\dfrac{-4 - 4}{3 - (-1)} = \\dfrac{-8}{4}$.",
-        "Donc $m = -2$. Le coefficient est négatif : la droite descend."
+        "$ m = \\dfrac{7-1}{2-0} = 3 $."
       ],
-      "reponse": "$m = -2$."
+      "reponse": "$ m = 3 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "vecteur-directeur",
-      "enonce": "Donner un vecteur directeur de la droite d'équation cartésienne $-x + 4y - 8 = 0$.",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(1;2) $ et $ B(3;8) $. Coefficient directeur ?",
       "corrige": [
-        "L'équation est de la forme $ax + by + c = 0$ avec $a = -1$, $b = 4$ et $c = -8$.",
-        "Pour une équation cartésienne, un vecteur directeur est $\\vec{u}\\begin{pmatrix} -b \\\\ a \\end{pmatrix}$.",
-        "On remplace : $\\vec{u}\\begin{pmatrix} -4 \\\\ -1 \\end{pmatrix}$. Tout vecteur non nul colinéaire à celui-ci convient aussi."
+        "$ m = \\dfrac{8-2}{3-1} = 3 $."
       ],
-      "reponse": "$\\vec{u}\\begin{pmatrix} -4 \\\\ -1 \\end{pmatrix}$ (ou tout vecteur colinéaire)."
+      "reponse": "$ m = 3 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "equation-par-deux-points",
-      "enonce": "Déterminer l'équation réduite de la droite passant par $\\mathrm{A}(2\\,;1)$ et $\\mathrm{B}(5\\,;7)$.",
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(0;0) $ et $ B(4;12) $. Coefficient directeur ?",
       "corrige": [
-        "On cherche l'équation sous la forme $y = mx + p$. On calcule d'abord le coefficient directeur : $m = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}} = \\dfrac{7 - 1}{5 - 2} = \\dfrac{6}{3} = 2$.",
-        "L'équation est donc $y = 2x + p$. On trouve $p$ en remplaçant par les coordonnées de $\\mathrm{A}$ : $1 = 2 \\times 2 + p$, soit $1 = 4 + p$, donc $p = -3$.",
-        "On vérifie avec $\\mathrm{B}$ : $2 \\times 5 - 3 = 10 - 3 = 7$ ✓."
+        "$ m = \\dfrac{12-0}{4-0} = 3 $."
       ],
-      "reponse": "$y = 2x - 3$."
+      "reponse": "$ m = 3 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "intersection",
-      "enonce": "Déterminer les coordonnées du point d'intersection de la droite $d : y = 4x - 3$ et de la droite verticale $d' : x = 2$.",
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(1;1) $ et $ B(4;7) $. Coefficient directeur ?",
       "corrige": [
-        "La droite $d'$ impose que tous ses points ont pour abscisse $x = 2$ : le point d'intersection a donc pour abscisse $x = 2$.",
-        "On reporte $x = 2$ dans l'équation de $d$ : $y = 4 \\times 2 - 3 = 8 - 3 = 5$.",
-        "Le point d'intersection a pour coordonnées $(2\\,;5)$."
+        "$ m = \\dfrac{7-1}{4-1} = 2 $."
       ],
-      "reponse": "Le point d'intersection est $(2\\,;5)$."
+      "reponse": "$ m = 2 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "parallelisme",
-      "enonce": "On considère les droites $d : 3x - 2y + 1 = 0$ et $d_m : 6x + my - 4 = 0$, où $m$ est un réel. Déterminer la valeur de $m$ pour laquelle $d$ et $d_m$ sont parallèles, puis préciser si elles sont strictement parallèles ou confondues.",
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(2;3) $ et $ B(5;9) $. Coefficient directeur ?",
       "corrige": [
-        "Pour $d$ : $a = 3$, $b = -2$. Pour $d_m$ : $a' = 6$, $b' = m$. Deux droites en forme cartésienne sont parallèles si et seulement si $ab' - a'b = 0$.",
-        "On calcule : $ab' - a'b = 3 \\times m - 6 \\times (-2) = 3m + 12$. On résout $3m + 12 = 0 \\iff m = -4$.",
-        "Pour $m = -4$, l'équation de $d_m$ est $6x - 4y - 4 = 0$. En divisant tout par $2$ : $3x - 2y - 2 = 0$.",
-        "On compare à $d : 3x - 2y + 1 = 0$ : mêmes coefficients de $x$ et $y$ mais constantes différentes ($-2 \\neq 1$). Les droites sont donc strictement parallèles."
+        "$ m = \\dfrac{9-3}{5-2} = 2 $."
       ],
-      "reponse": "Pour $m = -4$ ; les droites sont alors strictement parallèles."
+      "reponse": "$ m = 2 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "systeme",
-      "enonce": "Dans un cinéma, une famille paie $2$ places adulte et $3$ places enfant pour $31$ €, une autre paie $3$ places adulte et $2$ places enfant pour $34$ €. On note $a$ le prix d'une place adulte et $e$ celui d'une place enfant. Écrire un système traduisant la situation, le résoudre, et interpréter géométriquement.",
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(0;5) $ et $ B(2;1) $. Coefficient directeur ?",
       "corrige": [
-        "La situation se traduit par le système $\\begin{cases} 2a + 3e = 31 \\\\ 3a + 2e = 34 \\end{cases}$.",
-        "On élimine $a$ par combinaison linéaire : on multiplie la première équation par $3$ et la seconde par $2$, ce qui donne $\\begin{cases} 6a + 9e = 93 \\\\ 6a + 4e = 68 \\end{cases}$.",
-        "En soustrayant la seconde de la première : $5e = 25$, donc $e = 5$.",
-        "On reporte dans $2a + 3e = 31$ : $2a + 15 = 31$, soit $2a = 16$ et $a = 8$. Vérification dans la seconde équation : $3 \\times 8 + 2 \\times 5 = 24 + 10 = 34$ ✓.",
-        "Géométriquement, chaque équation est celle d'une droite ; le système ayant une solution unique, les deux droites sont sécantes et se coupent au point $(8\\,;5)$."
+        "$ m = \\dfrac{1-5}{2-0} = -2 $."
       ],
-      "reponse": "Une place adulte coûte $8$ € et une place enfant $5$ € ; les droites associées sont sécantes en $(8\\,;5)$."
+      "reponse": "$ m = -2 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "equation-reduite",
-      "enonce": "La droite $d$ a pour coefficient directeur $m = 3$ et passe par le point $\\mathrm{A}(-1\\,;2)$. Déterminer son équation réduite.",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(1;4) $ et $ B(3;10) $. Coefficient directeur ?",
       "corrige": [
-        "Comme le coefficient directeur est connu, l'équation réduite est de la forme $y = 3x + p$ ; il reste à déterminer $p$.",
-        "Le point $\\mathrm{A}(-1\\,;2)$ appartient à $d$, donc ses coordonnées vérifient l'équation : $2 = 3 \\times (-1) + p$, soit $2 = -3 + p$, d'où $p = 5$.",
-        "On vérifie avec $\\mathrm{A}$ : $3 \\times (-1) + 5 = -3 + 5 = 2$ ✓. L'équation réduite est $y = 3x + 5$."
+        "$ m = \\dfrac{10-4}{3-1} = 3 $."
       ],
-      "reponse": "$y = 3x + 5$."
+      "reponse": "$ m = 3 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "equation-cartesienne",
-      "enonce": "Soit la droite $d$ d'équation cartésienne $4x - 2y + 6 = 0$. Déterminer son équation réduite, puis en déduire son coefficient directeur et son ordonnée à l'origine.",
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(-1;2) $ et $ B(2;11) $. Coefficient directeur ?",
       "corrige": [
-        "On isole $y$. À partir de $4x - 2y + 6 = 0$, on écrit $-2y = -4x - 6$.",
-        "On divise chaque terme par $-2$ : $y = \\dfrac{-4x}{-2} + \\dfrac{-6}{-2} = 2x + 3$.",
-        "L'équation réduite est donc $y = 2x + 3$ : le coefficient directeur est $m = 2$ et l'ordonnée à l'origine est $p = 3$."
+        "$ m = \\dfrac{11-2}{2--1} = 3 $."
       ],
-      "reponse": "$y = 2x + 3$, avec $m = 2$ et $p = 3$."
+      "reponse": "$ m = 3 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "alignement",
-      "enonce": "On donne les points $\\mathrm{A}(-2\\,;-3)$, $\\mathrm{B}(1\\,;3)$ et $\\mathrm{C}(4\\,;9)$. Démontrer que ces trois points sont alignés.",
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(0;2) $ et $ B(5;17) $. Coefficient directeur ?",
       "corrige": [
-        "Trois points sont alignés lorsque les droites $(\\mathrm{AB})$ et $(\\mathrm{AC})$ ont le même coefficient directeur (elles partagent alors le point $\\mathrm{A}$ et une même direction).",
-        "Coefficient directeur de $(\\mathrm{AB})$ : $m_{\\mathrm{AB}} = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}} = \\dfrac{3 - (-3)}{1 - (-2)} = \\dfrac{6}{3} = 2$.",
-        "Coefficient directeur de $(\\mathrm{AC})$ : $m_{\\mathrm{AC}} = \\dfrac{y_\\mathrm{C} - y_\\mathrm{A}}{x_\\mathrm{C} - x_\\mathrm{A}} = \\dfrac{9 - (-3)}{4 - (-2)} = \\dfrac{12}{6} = 2$.",
-        "Les deux coefficients directeurs sont égaux et les droites passent toutes deux par $\\mathrm{A}$ : $(\\mathrm{AB})$ et $(\\mathrm{AC})$ sont confondues. Les points $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{C}$ sont donc alignés."
+        "$ m = \\dfrac{17-2}{5-0} = 3 $."
       ],
-      "reponse": "$m_{\\mathrm{AB}} = m_{\\mathrm{AC}} = 2$ : les points $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{C}$ sont alignés."
+      "reponse": "$ m = 3 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "synthese",
-      "enonce": "Sur le plan d'un parc, muni d'un repère orthonormé d'unité $100$ m, les allées sont rectilignes. On repère les points $\\mathrm{A}(-1\\,;-1)$, $\\mathrm{B}(2\\,;5)$, $\\mathrm{C}(0\\,;-2)$ et $\\mathrm{D}(3\\,;4)$. L'allée principale est la droite $(\\mathrm{AB})$, une deuxième allée est la droite $(\\mathrm{CD})$, et une troisième allée $\\Delta$ a pour équation $y = -x + 10$. 1. Déterminer l'équation réduite de l'allée $(\\mathrm{AB})$. 2. Calculer le coefficient directeur de l'allée $(\\mathrm{CD})$ et démontrer que les allées $(\\mathrm{AB})$ et $(\\mathrm{CD})$ sont parallèles. 3. Une fontaine est située à l'intersection de l'allée principale $(\\mathrm{AB})$ et de l'allée $\\Delta$. Déterminer ses coordonnées. 4. L'entrée du parc est le point $\\mathrm{E}(4\\,;9)$. Montrer que $\\mathrm{E}$ appartient à l'allée principale $(\\mathrm{AB})$. 5. Les allées $(\\mathrm{CD})$ et $\\Delta$ se coupent-elles ? Justifier, puis déterminer le point de croisement.",
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(1;0) $ et $ B(4;9) $. Coefficient directeur ?",
       "corrige": [
-        "1. On cherche $(\\mathrm{AB})$ sous la forme $y = mx + p$. Coefficient directeur : $m = \\dfrac{y_\\mathrm{B} - y_\\mathrm{A}}{x_\\mathrm{B} - x_\\mathrm{A}} = \\dfrac{5 - (-1)}{2 - (-1)} = \\dfrac{6}{3} = 2$. On détermine $p$ avec $\\mathrm{A}(-1\\,;-1)$ : $-1 = 2 \\times (-1) + p$, soit $-1 = -2 + p$, d'où $p = 1$. L'équation réduite de $(\\mathrm{AB})$ est $y = 2x + 1$ (vérification avec $\\mathrm{B}$ : $2 \\times 2 + 1 = 5$ ✓).",
-        "2. Coefficient directeur de $(\\mathrm{CD})$ : $m' = \\dfrac{y_\\mathrm{D} - y_\\mathrm{C}}{x_\\mathrm{D} - x_\\mathrm{C}} = \\dfrac{4 - (-2)}{3 - 0} = \\dfrac{6}{3} = 2$. On trouve $m' = 2 = m$ : les deux droites ont le même coefficient directeur, donc les allées $(\\mathrm{AB})$ et $(\\mathrm{CD})$ sont parallèles.",
-        "3. La fontaine est le point d'intersection de $(\\mathrm{AB}) : y = 2x + 1$ et de $\\Delta : y = -x + 10$. On résout $2x + 1 = -x + 10$, soit $3x = 9$, donc $x = 3$ ; puis $y = 2 \\times 3 + 1 = 7$. Les coordonnées de la fontaine sont $(3\\,;7)$, soit un point situé à $300$ m et $700$ m des axes.",
-        "4. Le point $\\mathrm{E}(4\\,;9)$ appartient à $(\\mathrm{AB})$ si ses coordonnées vérifient $y = 2x + 1$. On calcule $2 \\times 4 + 1 = 9$, qui est bien égal à l'ordonnée de $\\mathrm{E}$. Donc $\\mathrm{E}$ appartient à l'allée principale $(\\mathrm{AB})$.",
-        "5. L'allée $(\\mathrm{CD})$ a pour équation réduite $y = 2x + p'$ avec $\\mathrm{C}(0\\,;-2)$, d'où $p' = -2$ : $y = 2x - 2$. Son coefficient directeur est $2$, celui de $\\Delta$ est $-1$ ; comme $2 \\neq -1$, les deux allées ne sont pas parallèles : elles se coupent en un unique point. On résout $2x - 2 = -x + 10$, soit $3x = 12$, donc $x = 4$ ; puis $y = 2 \\times 4 - 2 = 6$. Le point de croisement est $(4\\,;6)$."
+        "$ m = \\dfrac{9-0}{4-1} = 3 $."
       ],
-      "reponse": "1. $(\\mathrm{AB}) : y = 2x + 1$. 2. $(\\mathrm{CD})$ a pour coefficient directeur $2$, égal à celui de $(\\mathrm{AB})$ : les deux allées sont parallèles. 3. Fontaine en $(3\\,;7)$. 4. $2 \\times 4 + 1 = 9$ : $\\mathrm{E}$ est bien sur $(\\mathrm{AB})$. 5. Coefficients directeurs $2$ et $-1$ différents : $(\\mathrm{CD})$ et $\\Delta$ sont sécantes en $(4\\,;6)$."
+      "reponse": "$ m = 3 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(2;1) $ et $ B(6;9) $. Coefficient directeur ?",
+      "corrige": [
+        "$ m = \\dfrac{9-1}{6-2} = 2 $."
+      ],
+      "reponse": "$ m = 2 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Droite passant par $ A(0;3) $ et $ B(3;3) $. Coefficient directeur ?",
+      "corrige": [
+        "$ m = \\dfrac{3-3}{3-0} = 0 $."
+      ],
+      "reponse": "$ m = 0 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 2 passant par $ (1;5) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 2x + p $ avec $ p = 5 - 2\\times1 = 3 $.",
+        "$ y = 2x + 3 $."
+      ],
+      "reponse": "$ y = 2x + 3 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 3 passant par $ (0;2) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 3x + p $ avec $ p = 2 - 3\\times0 = 2 $.",
+        "$ y = 3x + 2 $."
+      ],
+      "reponse": "$ y = 3x + 2 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur -1 passant par $ (2;4) $. Equation reduite ?",
+      "corrige": [
+        "$ y = -1x + p $ avec $ p = 4 - -1\\times2 = 6 $.",
+        "$ y = -1x + 6 $."
+      ],
+      "reponse": "$ y = -1x + 6 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 4 passant par $ (1;6) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 4x + p $ avec $ p = 6 - 4\\times1 = 2 $.",
+        "$ y = 4x + 2 $."
+      ],
+      "reponse": "$ y = 4x + 2 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 2 passant par $ (3;1) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 2x + p $ avec $ p = 1 - 2\\times3 = -5 $.",
+        "$ y = 2x - 5 $."
+      ],
+      "reponse": "$ y = 2x - 5 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 5 passant par $ (0;3) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 5x + p $ avec $ p = 3 - 5\\times0 = 3 $.",
+        "$ y = 5x + 3 $."
+      ],
+      "reponse": "$ y = 5x + 3 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur -2 passant par $ (1;7) $. Equation reduite ?",
+      "corrige": [
+        "$ y = -2x + p $ avec $ p = 7 - -2\\times1 = 9 $.",
+        "$ y = -2x + 9 $."
+      ],
+      "reponse": "$ y = -2x + 9 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 3 passant par $ (2;2) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 3x + p $ avec $ p = 2 - 3\\times2 = -4 $.",
+        "$ y = 3x - 4 $."
+      ],
+      "reponse": "$ y = 3x - 4 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 1 passant par $ (4;5) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 1x + p $ avec $ p = 5 - 1\\times4 = 1 $.",
+        "$ y = 1x + 1 $."
+      ],
+      "reponse": "$ y = 1x + 1 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "equation-reduite",
+      "enonce": "Droite de coefficient directeur 2 passant par $ (0;0) $. Equation reduite ?",
+      "corrige": [
+        "$ y = 2x + p $ avec $ p = 0 - 2\\times0 = 0 $.",
+        "$ y = 2x + 0 $."
+      ],
+      "reponse": "$ y = 2x + 0 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;1) $ et $ (2;5) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;2) $ et $ (2;6) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;3) $ et $ (2;7) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;4) $ et $ (2;8) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;5) $ et $ (2;9) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;6) $ et $ (2;10) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;7) $ et $ (2;11) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;8) $ et $ (2;12) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;9) $ et $ (2;13) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;10) $ et $ (2;14) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;11) $ et $ (2;15) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;12) $ et $ (2;16) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;13) $ et $ (2;17) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;14) $ et $ (2;18) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;15) $ et $ (2;19) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;16) $ et $ (2;20) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;17) $ et $ (2;21) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;18) $ et $ (2;22) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;19) $ et $ (2;23) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;20) $ et $ (2;24) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;21) $ et $ (2;25) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;22) $ et $ (2;26) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;23) $ et $ (2;27) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;24) $ et $ (2;28) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;25) $ et $ (2;29) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;26) $ et $ (2;30) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;27) $ et $ (2;31) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "coefficient-directeur",
+      "enonce": "Par $ (0;28) $ et $ (2;32) $ : coefficient directeur ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
     }
   ]
 }

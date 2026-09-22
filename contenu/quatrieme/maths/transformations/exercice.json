@@ -13,126 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "construction",
-      "enonce": "Sur un quadrillage muni d'un repère, on considère la translation qui transforme le point $A(1\\,;\\,2)$ en $A'(6\\,;\\,4)$. Détermine les coordonnées de l'image $M'$ du point $M(-2\\,;\\,3)$.",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(3;5) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Je lis d'abord le déplacement modèle, de $A$ vers $A'$ : l'abscisse passe de $1$ à $6$, soit $+5$ (5 carreaux vers la droite) ; l'ordonnée passe de $2$ à $4$, soit $+2$ (2 carreaux vers le haut).",
-        "Dans une translation, tous les points font exactement le même trajet : je refais donc $+5$ sur l'abscisse et $+2$ sur l'ordonnée à partir de $M$.",
-        "$M'$ a pour abscisse $-2 + 5 = 3$ et pour ordonnée $3 + 2 = 5$."
+        "On change le signe de l'ordonnee : $ (3;-5) $."
       ],
-      "reponse": "$M'(3\\,;\\,5)$."
+      "reponse": "$ (3;-5) $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "conservation",
-      "enonce": "Un triangle $ABC$ a pour côtés $AB = 5{,}2$ cm, $BC = 4{,}8$ cm, $CA = 3{,}5$ cm, et un angle $\\widehat{BAC} = 63°$. On appelle $A'B'C'$ son image par une translation. Sans faire aucune mesure, donne les longueurs $A'B'$, $B'C'$, $C'A'$ et la mesure de l'angle $\\widehat{B'A'C'}$.",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(2;7) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "La translation conserve les longueurs : chaque côté image a la même longueur que le côté de départ. Donc $A'B' = AB = 5{,}2$ cm, $B'C' = BC = 4{,}8$ cm et $C'A' = CA = 3{,}5$ cm.",
-        "La translation conserve aussi les mesures d'angles : l'angle image a la même mesure que l'angle de départ. Donc $\\widehat{B'A'C'} = \\widehat{BAC} = 63°$.",
-        "Rien n'est à recalculer : la figure a seulement glissé, elle n'a été ni agrandie ni déformée."
+        "On change le signe de l'ordonnee : $ (2;-7) $."
       ],
-      "reponse": "$A'B' = 5{,}2$ cm, $B'C' = 4{,}8$ cm, $C'A' = 3{,}5$ cm et $\\widehat{B'A'C'} = 63°$."
+      "reponse": "$ (2;-7) $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "invariants",
-      "enonce": "Une translation $t$ transforme le point $A(0\\,;\\,0)$ en $A'(3\\,;\\,1)$. On applique $t$ au point $M(2\\,;\\,5)$ : on obtient $M'$. On applique ensuite $t$ à $M'$ : on obtient $M''$. Détermine les coordonnées de $M'$ et de $M''$, puis vérifie que $M'$ est le milieu de $[MM'']$.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(4;1) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Le déplacement modèle, de $A$ vers $A'$, est $+3$ sur l'abscisse et $+1$ sur l'ordonnée.",
-        "Première application, à $M(2\\,;\\,5)$ : $M'(2+3\\,;\\,5+1) = M'(5\\,;\\,6)$.",
-        "Deuxième application, à $M'(5\\,;\\,6)$ : $M''(5+3\\,;\\,6+1) = M''(8\\,;\\,7)$.",
-        "Milieu de $[MM'']$ : abscisse $\\dfrac{2+8}{2} = 5$, ordonnée $\\dfrac{5+7}{2} = 6$, soit le point $(5\\,;\\,6)$, qui est bien $M'$.",
-        "C'est logique : refaire deux fois la même translation fait glisser deux fois plus loin, donc $M'$ tombe au milieu du trajet total."
+        "On change le signe de l'ordonnee : $ (4;-1) $."
       ],
-      "reponse": "$M'(5\\,;\\,6)$, $M''(8\\,;\\,7)$ ; $M'$ est bien le milieu de $[MM'']$."
+      "reponse": "$ (4;-1) $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "reconnaitre-la-transformation",
-      "enonce": "Deux quadrilatères $ABCD$ et $A'B'C'D'$ sont superposables et se lisent dans le même sens (aucun n'est retourné). On trace les segments $[AA']$, $[BB']$, $[CC']$ et $[DD']$ : ils mesurent tous $4$ cm, sont parallèles entre eux et orientés dans le même sens. Quelle transformation envoie $ABCD$ sur $A'B'C'D'$ ? Justifie en écartant la symétrie axiale, puis le demi-tour.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(6;2) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Étape 1 — la symétrie axiale est écartée : un miroir retourne la figure (la droite devient gauche). Or ici les deux quadrilatères se lisent dans le même sens, donc ce n'est pas une symétrie axiale.",
-        "Étape 2 — le demi-tour est écarté : pour un demi-tour, les segments $[AA']$, $[BB']$, $[CC']$, $[DD']$ se couperaient tous en un même point (leur milieu commun, le centre). Ici ils sont parallèles entre eux : ils ne se coupent pas, ce n'est donc pas un demi-tour.",
-        "Étape 3 — il reste la translation, et le critère colle : chaque sommet a fait le même trajet (même direction, même sens, même longueur $4$ cm). C'est exactement la signature d'un glissement."
+        "On change le signe de l'ordonnee : $ (6;-2) $."
       ],
-      "reponse": "C'est une translation."
+      "reponse": "$ (6;-2) $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "conservation",
-      "enonce": "On applique une translation à toute une figure. Une droite $(d_1)$ est parallèle à la direction de la translation ; une droite $(d_2)$ est perpendiculaire à $(d_1)$. On note $(d_1')$ et $(d_2')$ leurs images.\\na) Quelle est l'image $(d_1')$ de $(d_1)$ ?\\nb) Que peut-on dire de $(d_1')$ et $(d_2')$ l'une par rapport à l'autre ?\\nc) Où se situe $(d_2')$ par rapport à $(d_2)$ ?",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(1;3) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "a) $(d_1)$ est parallèle à la direction de la translation : ses points glissent le long d'elle, mais la droite entière ne change pas de place. Son image est donc elle-même : $(d_1') = (d_1)$.",
-        "b) La translation conserve les mesures d'angles : deux droites perpendiculaires ont pour images deux droites perpendiculaires. Comme $(d_1) \\perp (d_2)$, on a $(d_1') \\perp (d_2')$.",
-        "c) L'image d'une droite par une translation lui est parallèle : donc $(d_2') $ est parallèle à $(d_2)$. Mais $(d_2)$ n'est pas parallèle à la direction du glissement (elle lui est perpendiculaire), donc $(d_2')$ n'est pas confondue avec $(d_2)$ : elle s'est décalée à côté, en restant parallèle."
+        "On change le signe de l'ordonnee : $ (1;-3) $."
       ],
-      "reponse": "a) $(d_1') = (d_1)$ ; b) $(d_1') \\perp (d_2')$ ; c) $(d_2')$ est parallèle à $(d_2)$, mais distincte (décalée à côté)."
+      "reponse": "$ (1;-3) $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "effet",
-      "enonce": "Pour fabriquer un pavage, on répète un motif carré de côté $2$ cm en le faisant glisser à chaque fois de $2$ cm vers la droite : chaque copie est l'image de la précédente par cette même translation horizontale. Le motif de départ a un sommet placé à l'abscisse $0$, une aire de $4$ cm² et des angles de $90°$ à chaque coin.\\na) À quelle abscisse se retrouve ce sommet après $5$ translations successives ?\\nb) Quelle est l'aire d'une copie ? La mesure de ses angles ?\\nc) Une copie est-elle retournée ou tournée par rapport au motif de départ ? Qu'est-ce que cela explique pour le pavage ?",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(5;5) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "a) Chaque translation décale de $2$ cm vers la droite. Cinq translations successives décalent donc de $5 \\times 2 = 10$ cm. Le sommet passe de l'abscisse $0$ à l'abscisse $0 + 10 = 10$.",
-        "b) La translation conserve les aires et les mesures d'angles : chaque copie a donc la même aire, $4$ cm², et les mêmes angles, $90°$ à chaque coin. Rien n'est déformé.",
-        "c) La translation ne retourne pas la figure (contrairement au miroir de la symétrie axiale) et ne la fait pas tourner : chaque copie se lit dans le même sens que le motif de départ, elle est simplement décalée. C'est précisément ce glissement identique et répété qui donne au pavage sa régularité, capable de continuer sans fin."
+        "On change le signe de l'ordonnee : $ (5;-5) $."
       ],
-      "reponse": "a) à l'abscisse $10$ ; b) aire $4$ cm² et angles de $90°$ (conservés) ; c) ni retournée ni tournée, seulement glissée : d'où la régularité du pavage."
+      "reponse": "$ (5;-5) $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "construction",
-      "enonce": "Sur l'écran quadrillé d'un jeu vidéo muni d'un repère, tout le décor glisse d'un même mouvement : un personnage passe de $P(2\\,;\\,1)$ à $P'(6\\,;\\,4)$. Un coffre au trésor est placé en $T(-3\\,;\\,4)$. Détermine les coordonnées de sa position $T'$ après ce glissement.",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(2;8) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Je lis le déplacement modèle, de $P$ vers $P'$ : l'abscisse passe de $2$ à $6$, soit $+4$ ; l'ordonnée passe de $1$ à $4$, soit $+3$.",
-        "Dans une translation, tout le décor fait le même trajet : j'applique donc $+4$ à l'abscisse et $+3$ à l'ordonnée du coffre.",
-        "$T'$ a pour abscisse $-3 + 4 = 1$ et pour ordonnée $4 + 3 = 7$."
+        "On change le signe de l'ordonnee : $ (2;-8) $."
       ],
-      "reponse": "$T'(1\\,;\\,7)$."
+      "reponse": "$ (2;-8) $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "construction",
-      "enonce": "Une translation transforme $R(1\\,;\\,1)$ en $R'(4\\,;\\,-1)$. On considère le segment $[MN]$ avec $M(0\\,;\\,3)$ et $N(6\\,;\\,3)$, et son image $[M'N']$.\\na) Détermine les coordonnées de $M'$ et de $N'$.\\nb) Sachant que $MN = 6$ cm, donne la longueur $M'N'$ sans calculer de distance.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(7;4) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "Je commence par lire le déplacement modèle, de $R$ vers $R'$ : l'abscisse passe de $1$ à $4$, soit $+3$ ; l'ordonnée passe de $1$ à $-1$, soit $-2$.",
-        "a) J'applique ce même déplacement $(+3\\,;\\,-2)$ à chaque extrémité : $M'(0+3\\,;\\,3-2) = M'(3\\,;\\,1)$ et $N'(6+3\\,;\\,3-2) = N'(9\\,;\\,1)$.",
-        "b) La translation conserve les longueurs : le segment a seulement glissé, il n'a pas changé de taille. Donc $M'N' = MN = 6$ cm, sans aucun calcul de distance."
+        "On change le signe de l'ordonnee : $ (7;-4) $."
       ],
-      "reponse": "a) $M'(3\\,;\\,1)$ et $N'(9\\,;\\,1)$ ; b) $M'N' = 6$ cm (longueur conservée)."
+      "reponse": "$ (7;-4) $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "reconnaitre-la-transformation",
-      "enonce": "On donne trois points et leurs images : $A(1\\,;\\,1) \\to A'(4\\,;\\,2)$, $B(3\\,;\\,5) \\to B'(6\\,;\\,6)$ et $C(-2\\,;\\,0) \\to C'(1\\,;\\,1)$.\\na) Ces trois couples correspondent-ils à une seule et même translation ? Justifie.\\nb) Cette transformation retourne-t-elle la figure ?\\nc) Peut-il s'agir d'un demi-tour ? Justifie sans faire de figure.",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(3;2) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "a) Je calcule le déplacement de chaque point vers son image. De $A$ à $A'$ : $+3$ sur l'abscisse, $+1$ sur l'ordonnée. De $B$ à $B'$ : $+3$ et $+1$. De $C$ à $C'$ : $-2 \\to 1$ soit $+3$, et $0 \\to 1$ soit $+1$. Les trois déplacements sont identiques : c'est bien une seule translation, de déplacement $(+3\\,;\\,+1)$.",
-        "b) Non : une translation ne retourne jamais la figure (c'est le miroir de la symétrie axiale qui le fait). La figure image se lit dans le même sens.",
-        "c) Non. Pour un demi-tour, les segments $[AA']$, $[BB']$, $[CC']$ auraient tous le même milieu (le centre). Or le milieu de $[AA']$ est $\\left(\\dfrac{1+4}{2}\\,;\\,\\dfrac{1+2}{2}\\right) = (2{,}5\\,;\\,1{,}5)$, tandis que celui de $[BB']$ est $\\left(\\dfrac{3+6}{2}\\,;\\,\\dfrac{5+6}{2}\\right) = (4{,}5\\,;\\,5{,}5)$ : ces milieux sont différents, il n'y a pas de centre commun. Ce n'est donc pas un demi-tour."
+        "On change le signe de l'ordonnee : $ (3;-2) $."
       ],
-      "reponse": "a) Oui, une même translation de déplacement $(+3\\,;\\,+1)$ ; b) non, la figure n'est pas retournée ; c) non, les milieux des $[MM']$ diffèrent, il n'y a pas de centre commun."
+      "reponse": "$ (3;-2) $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "effet",
-      "enonce": "Pour décorer un mur, un artisan reproduit un motif en le faisant glisser plusieurs fois : chaque motif est l'image du précédent par une même translation. Dans un repère (unité : le décimètre), le premier motif est le triangle $T_1$ de sommets $A(0\\,;\\,0)$, $B(2\\,;\\,0)$ et $C(0\\,;\\,3)$. Le glissement modèle transforme $A(0\\,;\\,0)$ en $A'(3\\,;\\,1)$. On note $T_2$ l'image de $T_1$, $T_3$ l'image de $T_2$, et ainsi de suite.\\n1. Détermine les coordonnées des trois sommets $A_2$, $B_2$, $C_2$ du motif $T_2$.\\n2. Le triangle $T_1$ est rectangle en $A$ et a une aire de $3$ dm². Sans calcul, donne la mesure de l'angle en $A_2$ et l'aire de $T_2$, en justifiant.\\n3. Le sommet $A$ part de l'abscisse $0$. À quelle abscisse se retrouve-t-il dans le motif $T_5$ ?\\n4. Un point du mur reste-t-il fixe quand on passe d'un motif au suivant ? Justifie.\\n5. En regardant deux motifs voisins, à quoi reconnaît-on qu'il s'agit d'une translation et non d'un demi-tour ?",
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(8;6) $ par rapport a l'axe des abscisses ?",
       "corrige": [
-        "1. Le déplacement modèle, de $A(0\\,;\\,0)$ vers $A'(3\\,;\\,1)$, est $+3$ sur l'abscisse et $+1$ sur l'ordonnée. Je l'applique à chaque sommet de $T_1$ : $A_2(0+3\\,;\\,0+1) = A_2(3\\,;\\,1)$, $B_2(2+3\\,;\\,0+1) = B_2(5\\,;\\,1)$ et $C_2(0+3\\,;\\,3+1) = C_2(3\\,;\\,4)$.",
-        "2. La translation conserve les mesures d'angles et les aires : le motif a seulement glissé, il n'a été ni déformé ni agrandi. L'angle en $A_2$ vaut donc $90°$ (le triangle image est rectangle en $A_2$) et l'aire de $T_2$ vaut $3$ dm².",
-        "3. Chaque passage à un motif suivant décale l'abscisse de $+3$. De $T_1$ à $T_5$, il y a $4$ passages ($T_1 \\to T_2 \\to T_3 \\to T_4 \\to T_5$), soit un décalage total de $4 \\times 3 = 12$. L'abscisse passe donc de $0$ à $0 + 12 = 12$.",
-        "4. Non : une translation dont le glissement n'est pas nul n'a aucun point invariant. Tous les points du mur glissent de la même façon, aucun n'est épargné.",
-        "5. On trace les segments qui relient un point d'un motif à son image dans le motif voisin. S'ils sont parallèles, de même sens et de même longueur, c'est une translation ; pour un demi-tour, ils se couperaient tous en un même point (leur milieu commun, le centre). Ici les motifs glissent tous dans la même direction : c'est bien une translation."
+        "On change le signe de l'ordonnee : $ (8;-6) $."
       ],
-      "reponse": "1. $A_2(3\\,;\\,1)$, $B_2(5\\,;\\,1)$, $C_2(3\\,;\\,4)$ ; 2. angle droit ($90°$) en $A_2$ et aire $3$ dm² (angles et aires conservés) ; 3. abscisse $12$ ; 4. aucun point fixe ; 5. les segments $[MM']$ sont parallèles, de même sens et de même longueur (et non concourants) : c'est une translation."
+      "reponse": "$ (8;-6) $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(4;9) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "On change le signe de l'ordonnee : $ (4;-9) $."
+      ],
+      "reponse": "$ (4;-9) $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(5;1) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "On change le signe de l'ordonnee : $ (5;-1) $."
+      ],
+      "reponse": "$ (5;-1) $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(3;5) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-3;5) $."
+      ],
+      "reponse": "$ (-3;5) $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(2;7) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-2;7) $."
+      ],
+      "reponse": "$ (-2;7) $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(4;1) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-4;1) $."
+      ],
+      "reponse": "$ (-4;1) $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(6;2) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-6;2) $."
+      ],
+      "reponse": "$ (-6;2) $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(1;3) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-1;3) $."
+      ],
+      "reponse": "$ (-1;3) $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(5;5) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-5;5) $."
+      ],
+      "reponse": "$ (-5;5) $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(2;8) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-2;8) $."
+      ],
+      "reponse": "$ (-2;8) $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(7;4) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-7;4) $."
+      ],
+      "reponse": "$ (-7;4) $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(3;2) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-3;2) $."
+      ],
+      "reponse": "$ (-3;2) $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(8;6) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-8;6) $."
+      ],
+      "reponse": "$ (-8;6) $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(4;9) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-4;9) $."
+      ],
+      "reponse": "$ (-4;9) $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "symetrie-ordonnees",
+      "enonce": "Symetrique de $ A(5;1) $ par rapport a l'axe des ordonnees ?",
+      "corrige": [
+        "On change le signe de l'abscisse : $ (-5;1) $."
+      ],
+      "reponse": "$ (-5;1) $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(2;3) $ par la translation qui ajoute $ (4;1) $ ?",
+      "corrige": [
+        "$ (2+4 ; 3+1) = (6 ; 4) $."
+      ],
+      "reponse": "$ (6 ; 4) $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(1;5) $ par la translation qui ajoute $ (2;3) $ ?",
+      "corrige": [
+        "$ (1+2 ; 5+3) = (3 ; 8) $."
+      ],
+      "reponse": "$ (3 ; 8) $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(3;2) $ par la translation qui ajoute $ (5;4) $ ?",
+      "corrige": [
+        "$ (3+5 ; 2+4) = (8 ; 6) $."
+      ],
+      "reponse": "$ (8 ; 6) $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(0;0) $ par la translation qui ajoute $ (6;2) $ ?",
+      "corrige": [
+        "$ (0+6 ; 0+2) = (6 ; 2) $."
+      ],
+      "reponse": "$ (6 ; 2) $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(4;1) $ par la translation qui ajoute $ (2;5) $ ?",
+      "corrige": [
+        "$ (4+2 ; 1+5) = (6 ; 6) $."
+      ],
+      "reponse": "$ (6 ; 6) $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(2;2) $ par la translation qui ajoute $ (3;3) $ ?",
+      "corrige": [
+        "$ (2+3 ; 2+3) = (5 ; 5) $."
+      ],
+      "reponse": "$ (5 ; 5) $"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(5;0) $ par la translation qui ajoute $ (1;4) $ ?",
+      "corrige": [
+        "$ (5+1 ; 0+4) = (6 ; 4) $."
+      ],
+      "reponse": "$ (6 ; 4) $"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "translation",
+      "enonce": "Image de $ A(1;6) $ par la translation qui ajoute $ (4;2) $ ?",
+      "corrige": [
+        "$ (1+4 ; 6+2) = (5 ; 8) $."
+      ],
+      "reponse": "$ (5 ; 8) $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(1;3) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (1;-3) $."
+      ],
+      "reponse": "$ (1;-3) $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(2;4) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (2;-4) $."
+      ],
+      "reponse": "$ (2;-4) $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(3;5) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (3;-5) $."
+      ],
+      "reponse": "$ (3;-5) $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(4;6) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (4;-6) $."
+      ],
+      "reponse": "$ (4;-6) $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(5;7) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (5;-7) $."
+      ],
+      "reponse": "$ (5;-7) $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(6;8) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (6;-8) $."
+      ],
+      "reponse": "$ (6;-8) $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(7;9) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (7;-9) $."
+      ],
+      "reponse": "$ (7;-9) $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(8;10) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (8;-10) $."
+      ],
+      "reponse": "$ (8;-10) $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(9;11) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (9;-11) $."
+      ],
+      "reponse": "$ (9;-11) $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(10;12) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (10;-12) $."
+      ],
+      "reponse": "$ (10;-12) $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(11;13) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (11;-13) $."
+      ],
+      "reponse": "$ (11;-13) $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(12;14) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (12;-14) $."
+      ],
+      "reponse": "$ (12;-14) $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(13;15) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (13;-15) $."
+      ],
+      "reponse": "$ (13;-15) $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(14;16) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (14;-16) $."
+      ],
+      "reponse": "$ (14;-16) $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(15;17) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (15;-17) $."
+      ],
+      "reponse": "$ (15;-17) $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(16;18) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (16;-18) $."
+      ],
+      "reponse": "$ (16;-18) $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(17;19) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (17;-19) $."
+      ],
+      "reponse": "$ (17;-19) $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "symetrie-abscisses",
+      "enonce": "Symetrique de $ A(18;20) $ par rapport a l'axe des abscisses ?",
+      "corrige": [
+        "$ (18;-20) $."
+      ],
+      "reponse": "$ (18;-20) $"
     }
   ]
 }

@@ -13,128 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "variables-affectation",
-      "enonce": "On exécute le programme suivant :\n```python\na = 5\nb = 2\na = a + b\nb = a - b\n```\n(a) Dérouler le programme ligne par ligne dans un tableau donnant les valeurs de `a` et `b` après chaque ligne. (b) Donner les valeurs finales de `a` et `b`. (c) Que se passerait-il si on échangeait les lignes 3 et 4 ?",
+      "notion": "programme",
+      "enonce": "Programme : prendre 3, multiplier par 2, ajouter 5. Resultat ?",
       "corrige": [
-        "(a) Déroulé ligne par ligne. Après `a = 5` : $a = 5$. Après `b = 2` : $a = 5$, $b = 2$. Après `a = a + b` : on calcule $5 + 2 = 7$ avec les valeurs **actuelles**, puis on écrase `a` : $a = 7$, $b = 2$. Après `b = a - b` : on calcule $7 - 2 = 5$ avec la **nouvelle** valeur de `a` : $a = 7$, $b = 5$.",
-        "(b) À la fin, `a` vaut $7$ et `b` vaut $5$. Point clé : à la ligne 4, c'est la valeur de `a` **déjà mise à jour** ($7$) qui sert au calcul, pas l'ancienne ($5$) — les lignes s'exécutent dans l'ordre et chaque affectation écrase.",
-        "(c) En exécutant d'abord `b = a - b`, on aurait $b = 5 - 2 = 3$, puis `a = a + b` donnerait $a = 5 + 3 = 8$ : les valeurs finales seraient $a = 8$, $b = 3$. L'ordre des affectations change le résultat."
+        "$ 3 \\times 2 + 5 = 11 $."
       ],
-      "reponse": "(b) $a = 7$ et $b = 5$ ; (c) l'ordre inversé donnerait $a = 8$ et $b = 3$ : l'ordre des lignes compte."
+      "reponse": "$ 11 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "fonctions",
-      "enonce": "Un abonnement coûte $150$ € la première année (rang $n = 0$), puis augmente de $20$ € chaque année : le prix l'année de rang $n$ est $u_n = 150 + 20n$ (suite arithmétique). (a) Écrire une fonction Python `prix(n)` qui renvoie $u_n$. (b) Que renvoie `prix(12)` ? (c) Un camarade a écrit la fonction avec `print(150 + 20 * n)` au lieu du `return`. Expliquer pourquoi l'instruction `total = prix(3) + prix(4)` ne fonctionne alors plus.",
+      "notion": "programme",
+      "enonce": "Programme : prendre 4, multiplier par 3, ajouter 1. Resultat ?",
       "corrige": [
-        "(a) On traduit le terme général $u_n = 150 + 20n$ :\n```python\ndef prix(n):\n    return 150 + 20 * n\n```\nLe `def` définit la fonction, le `return` renvoie le résultat du calcul.",
-        "(b) `prix(12)` remplace `n` par $12$ : la fonction renvoie $150 + 20 \\times 12 = 150 + 240 = 390$. L'abonnement coûte $390$ € l'année de rang $12$, c'est-à-dire la $13^{\\text{e}}$ année.",
-        "(c) `print` **affiche** le nombre à l'écran mais ne le **renvoie** pas : la fonction ne fournit aucune valeur utilisable. `prix(3)` et `prix(4)` afficheraient bien $210$ et $230$, mais l'addition `prix(3) + prix(4)` échouerait, car il n'y a rien à additionner. Pour réutiliser un résultat dans un calcul, il faut `return`."
+        "$ 4 \\times 3 + 1 = 13 $."
       ],
-      "reponse": "(a) `def prix(n): return 150 + 20 * n` ; (b) $390$ € ; (c) `print` affiche sans renvoyer : sans `return`, le résultat n'est pas réutilisable dans un calcul."
+      "reponse": "$ 13 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "generation-listes",
-      "enonce": "Un capital de $500$ € est placé à $2\\,\\%$ par an : sa valeur après $n$ années est $u_n = 500 \\times 1{,}02^n$ (suite géométrique). (a) Écrire un programme qui construit, par ajouts successifs, la liste `valeurs` des termes $u_0$ à $u_7$ inclus. (b) Justifier le choix de la borne du `range`. (c) Que valent `valeurs[0]` et `valeurs[7]` (arrondir au centime) ? (d) Quelle instruction donne le nombre d'éléments de la liste ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 5, multiplier par 2, ajouter 4. Resultat ?",
       "corrige": [
-        "(a) On part de la liste vide et on remplit dans une boucle :\n```python\nvaleurs = []\nfor n in range(8):\n    valeurs.append(500 * 1.02 ** n)\n```\nÀ chaque tour, `append` ajoute le terme $u_n$ à la fin de la liste. En Python, la puissance s'écrit `**` et le séparateur décimal est le point.",
-        "(b) De $u_0$ à $u_7$ inclus, il y a $8$ termes. Or `range(8)` produit exactement les $8$ entiers $0, 1, \\ldots, 7$ (la borne $8$ est exclue). Écrire `range(7)` s'arrêterait à $n = 6$ et ferait perdre $u_7$.",
-        "(c) `valeurs[0]` est le premier élément (indice $0$) : $u_0 = 500 \\times 1{,}02^0 = 500$ €. `valeurs[7]` est le dernier : $u_7 = 500 \\times 1{,}02^7 \\approx 500 \\times 1{,}14869 \\approx 574{,}34$ €.",
-        "(d) `len(valeurs)`, qui vaut ici $8$. Attention : le dernier indice est `len(valeurs) - 1 = 7`, et `valeurs[8]` provoquerait une erreur."
+        "$ 5 \\times 2 + 4 = 14 $."
       ],
-      "reponse": "(a) boucle `for n in range(8)` avec `valeurs.append(500 * 1.02 ** n)` ; (b) $8$ termes de $u_0$ à $u_7$, et `range(8)` produit $0$ à $7$ ; (c) `valeurs[0]` $= 500$ et `valeurs[7]` $\\approx 574{,}34$ ; (d) `len(valeurs)` $= 8$."
+      "reponse": "$ 14 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "parcours-listes",
-      "enonce": "Pour calculer la moyenne d'une liste de notes, un élève a écrit :\n```python\ndef moyenne(L):\n    for x in L:\n        total = 0\n        total = total + x\n    return total / len(L)\n```\n(a) Tester ce programme à la main sur `moyenne([14, 8, 11, 15])` : que renvoie-t-il ? (b) Identifier l'erreur et corriger le programme. (c) Vérifier que la version corrigée renvoie bien la moyenne de la liste.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 2, multiplier par 6, ajouter 3. Resultat ?",
       "corrige": [
-        "(a) Déroulé : à **chaque** tour de boucle, `total = 0` remet l'accumulateur à zéro avant d'ajouter l'élément. Après le tour sur $14$ : `total` $= 14$ ; sur $8$ : `total` $= 8$ ; sur $11$ : `total` $= 11$ ; sur $15$ : `total` $= 15$. La fonction renvoie $\\dfrac{15}{4} = 3{,}75$ — qui n'est pas la moyenne.",
-        "(b) L'erreur : l'initialisation `total = 0` est placée **dans** la boucle, alors qu'un accumulateur doit être initialisé **avant**. Version corrigée :\n```python\ndef moyenne(L):\n    total = 0\n    for x in L:\n        total = total + x\n    return total / len(L)\n```\n(Le `return` reste après la boucle, aligné avec le `for`.)",
-        "(c) Avec la version corrigée, `total` vaut successivement $0$, $14$, $22$, $33$, $48$, et la fonction renvoie $\\dfrac{48}{4} = 12$. C'est bien la moyenne $\\bar{x} = \\dfrac{14 + 8 + 11 + 15}{4} = 12$."
+        "$ 2 \\times 6 + 3 = 15 $."
       ],
-      "reponse": "(a) $3{,}75$, car `total` est remis à zéro à chaque tour ; (b) déplacer `total = 0` avant la boucle ; (c) la version corrigée renvoie $12$, la vraie moyenne."
+      "reponse": "$ 15 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "selection-donnees",
-      "enonce": "Une boutique relève ses ventes hebdomadaires (en articles) : `ventes = [120, 80, 150, 95, 105]`. On veut la liste des semaines « fortes », celles dont les ventes dépassent **strictement** la moyenne. (a) Calculer la moyenne de la liste (à la main ou en s'appuyant sur une fonction `moyenne`). (b) Écrire une fonction `fortes(L)` qui renvoie la liste des valeurs de `L` strictement supérieures à la moyenne de `L`. (c) Que renvoie `fortes(ventes)` ? (d) Une valeur exactement égale à la moyenne serait-elle retenue ? Justifier.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 7, multiplier par 1, ajouter 2. Resultat ?",
       "corrige": [
-        "(a) Moyenne : $\\bar{x} = \\dfrac{120 + 80 + 150 + 95 + 105}{5} = \\dfrac{550}{5} = 110$ articles.",
-        "(b) On calcule d'abord la moyenne, puis on filtre par le schéma « liste vide → parcours → `if` → `append` » :\n```python\ndef fortes(L):\n    total = 0\n    for x in L:\n        total = total + x\n    m = total / len(L)\n    resultat = []\n    for x in L:\n        if x > m:\n            resultat.append(x)\n    return resultat\n```\nDeux parcours sont nécessaires : le premier pour connaître la moyenne, le second pour sélectionner — on ne peut pas filtrer selon un seuil qu'on n'a pas encore calculé.",
-        "(c) Avec $m = 110$ : $120 > 110$ (gardé), $80$ (non), $150 > 110$ (gardé), $95$ (non), $105$ (non). La fonction renvoie `[120, 150]`, dans l'ordre de la liste de départ, qui n'est pas modifiée.",
-        "(d) Non : la condition `x > m` est **stricte**, donc une valeur égale à $110$ rendrait la condition fausse et serait rejetée. Pour la retenir, il faudrait écrire `x >= m`. Toujours préciser si le seuil est strict ou large — c'est un choix de l'énoncé, pas du hasard."
+        "$ 7 \\times 1 + 2 = 9 $."
       ],
-      "reponse": "(a) moyenne $= 110$ ; (b) fonction en deux parcours : accumulateur pour la moyenne, puis filtre `if x > m` avec `append` ; (c) `[120, 150]` ; (d) non, le seuil `>` est strict, il faudrait `>=`."
+      "reponse": "$ 9 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "selection-donnees",
-      "enonce": "Un matériel acheté $2\\,000$ € perd $15\\,\\%$ de sa valeur chaque année. On note $u_n$ sa valeur après $n$ années. (a) Justifier que $(u_n)$ est géométrique et préciser sa raison. (b) On exécute :\n```python\nannees = []\nfor n in range(10):\n    if 2000 * 0.85 ** n < 1000:\n        annees.append(n)\n```\nDécrire en une phrase ce que contient la liste `annees`. (c) Calculer $u_4$ et $u_5$ (arrondir au centime) et en déduire la liste `annees` renvoyée. (d) Modifier le programme pour qu'il compte **combien** d'années parmi les rangs $0$ à $9$ ont une valeur encore supérieure ou égale à $1\\,000$ €.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 6, multiplier par 2, ajouter 3. Resultat ?",
       "corrige": [
-        "(a) Perdre $15\\,\\%$, c'est multiplier par $1 - \\dfrac{15}{100} = 0{,}85$ chaque année : $u_{n+1} = 0{,}85\\,u_n$. La suite est géométrique de premier terme $u_0 = 2000$ et de raison $q = 0{,}85$ (termes strictement positifs). D'où $u_n = 2000 \\times 0{,}85^n$, la formule qui figure dans le test du programme.",
-        "(b) Le programme parcourt les rangs $n$ de $0$ à $9$ et sélectionne, avec `append`, ceux pour lesquels la valeur du matériel est strictement inférieure à $1\\,000$ € : `annees` contient donc les **rangs** (et non les valeurs) des années où le matériel vaut moins de $1\\,000$ €.",
-        "(c) $u_4 = 2000 \\times 0{,}85^4 = 2000 \\times 0{,}52200625 \\approx 1044{,}01$ € : c'est $\\geqslant 1000$, la condition est fausse, $4$ n'est pas ajouté. $u_5 = 2000 \\times 0{,}85^5 \\approx 887{,}41$ € : c'est $< 1000$, la condition devient vraie. Comme la suite est décroissante (raison $0{,}85 < 1$), elle le reste ensuite : `annees` vaut `[5, 6, 7, 8, 9]`.",
-        "(d) On remplace la liste par un **compteur**, initialisé avant la boucle, et on retourne la condition :\n```python\nc = 0\nfor n in range(10):\n    if 2000 * 0.85 ** n >= 1000:\n        c = c + 1\n```\n`c` vaut $5$ (les rangs $0$ à $4$). Garder des valeurs → `append` ; les compter → `c = c + 1`. On vérifie la cohérence : $5$ rangs retenus $+$ $5$ rangs de la question (c) $= 10 =$ nombre de tours de boucle."
+        "$ 6 \\times 2 + 3 = 15 $."
       ],
-      "reponse": "(a) géométrique, $u_0 = 2000$, $q = 0{,}85$ ; (b) les rangs des années où la valeur est $< 1000$ € ; (c) $u_4 \\approx 1044{,}01$, $u_5 \\approx 887{,}41$, donc `annees = [5, 6, 7, 8, 9]` ; (d) compteur `c = c + 1` sous la condition `>= 1000`, qui donne $c = 5$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "fonctions",
-      "enonce": "Une course de taxi coûte $2{,}50$ € de prise en charge (montant fixe payé dès la montée), plus $1{,}20$ € par kilomètre parcouru. Le prix d'une course de $d$ kilomètres est donc $p(d) = 2{,}50 + 1{,}20\\,d$. (a) Écrire une fonction Python `prix(d)` qui renvoie le prix d'une course de `d` kilomètres. (b) Que renvoie `prix(10)` ? (c) Que renvoie `prix(0)`, et à quoi correspond ce montant ?",
+      "notion": "programme",
+      "enonce": "Programme : prendre 4, multiplier par 4, ajouter 4. Resultat ?",
       "corrige": [
-        "(a) On traduit directement l'expression $p(d) = 2{,}50 + 1{,}20\\,d$, en écrivant les décimaux avec un **point** :\n```python\ndef prix(d):\n    return 2.5 + 1.2 * d\n```\nLe `def` définit la fonction et le `return` renvoie le résultat, réutilisable dans un calcul.",
-        "(b) `prix(10)` remplace `d` par $10$ : la fonction renvoie $2{,}50 + 1{,}20 \\times 10 = 2{,}50 + 12 = 14{,}50$. Une course de $10$ km coûte $14{,}50$ €.",
-        "(c) `prix(0)` renvoie $2{,}50 + 1{,}20 \\times 0 = 2{,}50$. C'est le prix d'une course de $0$ km : la seule **prise en charge**, payée même sans distance parcourue."
+        "$ 4 \\times 4 + 4 = 20 $."
       ],
-      "reponse": "(a) `def prix(d): return 2.5 + 1.2 * d` ; (b) $14{,}50$ € ; (c) $2{,}50$ €, la prise en charge (partie fixe)."
+      "reponse": "$ 20 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "generation-parcours-listes",
-      "enonce": "Les recettes d'un site valent $100$ € le premier mois (rang $n = 0$) et augmentent de $10\\,\\%$ chaque mois : la recette du mois de rang $n$ est $u_n = 100 \\times 1{,}1^n$ (suite géométrique). (a) Écrire un programme qui construit, par ajouts successifs, la liste `recettes` des recettes des $5$ premiers mois (rangs $0$ à $4$). (b) Écrire une fonction `total(L)` qui renvoie la somme des éléments d'une liste `L`. (c) En déduire la recette totale des $5$ premiers mois (arrondir au centime).",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 8, multiplier par 2, ajouter 1. Resultat ?",
       "corrige": [
-        "(a) On part de la liste vide et on remplit dans une boucle. Les $5$ premiers mois sont les rangs $0$ à $4$, soit $5$ valeurs : `range(5)` produit exactement $0, 1, 2, 3, 4$.\n```python\nrecettes = []\nfor n in range(5):\n    recettes.append(100 * 1.1 ** n)\n# recettes vaut [100.0, 110.0, 121.0, 133.1, 146.41]\n```",
-        "(b) Une somme se calcule avec un **accumulateur** initialisé **avant** la boucle, puis mis à jour à chaque tour ; le `return` est placé **après** la boucle :\n```python\ndef total(L):\n    s = 0\n    for x in L:\n        s = s + x\n    return s\n```",
-        "(c) L'appel `total(recettes)` additionne $100 + 110 + 121 + 133{,}1 + 146{,}41 = 610{,}51$. La recette totale des $5$ premiers mois est donc environ $610{,}51$ €."
+        "$ 8 \\times 2 + 1 = 17 $."
       ],
-      "reponse": "(a) `for n in range(5)` avec `recettes.append(100 * 1.1 ** n)` → `[100, 110, 121, 133.1, 146.41]` ; (b) accumulateur `s = 0` puis `s = s + x`, `return` après la boucle ; (c) total $\\approx 610{,}51$ €."
+      "reponse": "$ 17 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "selection-donnees",
-      "enonce": "Les notes obtenues par un élève à ses huit devoirs de l'année sont `notes = [7, 13, 15, 6, 11, 18, 9, 14]`. On considère qu'un devoir est **réussi** si la note est **supérieure ou égale à $10$**. (a) Écrire une fonction `reussis(L)` qui renvoie la liste des notes de `L` supérieures ou égales à $10$. (b) Que renvoie `reussis(notes)` ? (c) Écrire une fonction `taux(L)` qui renvoie le pourcentage de devoirs réussis dans `L`. (d) Calculer `taux(notes)`. Pourquoi une note de $10$ pile est-elle comptée comme réussie ici ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 3, multiplier par 5, ajouter 2. Resultat ?",
       "corrige": [
-        "(a) On applique le schéma « liste vide → parcours → `if` condition → `append` », avec une condition **au sens large** ($\\geqslant$) :\n```python\ndef reussis(L):\n    resultat = []\n    for x in L:\n        if x >= 10:\n            resultat.append(x)\n    return resultat\n```\nLa liste de départ n'est pas modifiée ; seules les notes qui vérifient la condition sont ajoutées.",
-        "(b) On teste chaque note : $7$ (non), $13$ (oui), $15$ (oui), $6$ (non), $11$ (oui), $18$ (oui), $9$ (non), $14$ (oui). La fonction renvoie `[13, 15, 11, 18, 14]`, dans l'ordre de la liste de départ.",
-        "(c) Le pourcentage est le nombre de réussis rapporté au nombre total, multiplié par $100$. On peut réutiliser la fonction précédente :\n```python\ndef taux(L):\n    return len(reussis(L)) / len(L) * 100\n```\n`len(reussis(L))` compte les notes retenues et `len(L)` le total.",
-        "(d) Il y a $5$ devoirs réussis sur $8$, soit $\\dfrac{5}{8} \\times 100 = 62{,}5$. `taux(notes)` renvoie $62{,}5$ (%). Une note de $10$ pile serait comptée réussie car la condition `x >= 10` est **au sens large** : elle est vraie pour $x = 10$. Avec `x > 10` (strict), un $10$ serait au contraire rejeté."
+        "$ 3 \\times 5 + 2 = 17 $."
       ],
-      "reponse": "(a) filtre `if x >= 10` avec `append` ; (b) `[13, 15, 11, 18, 14]` ; (c) `len(reussis(L)) / len(L) * 100` ; (d) $62{,}5\\,\\%$ ; un $10$ est retenu car le seuil `>=` est au sens large."
+      "reponse": "$ 17 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "variables-fonctions-listes-selection",
-      "enonce": "Une plateforme de streaming compte $500$ abonnés en janvier (mois de rang $n = 0$) et prévoit une hausse de $8\\,\\%$ chaque mois. On note $u_n$ le nombre d'abonnés prévu le mois de rang $n$, avec $u_n = 500 \\times 1{,}08^n$.\n\n1. On exécute le programme suivant :\n```python\nu = 500\nu = u * 1.08\nu = u * 1.08\n```\nDérouler ce programme ligne par ligne et donner la valeur finale de `u`. À quel terme de la suite correspond-elle ?\n\n2. Écrire une fonction Python `abonnes(n)` qui renvoie $u_n$. Que renvoient `abonnes(0)` et `abonnes(6)` (arrondir à l'unité près pour ce dernier) ?\n\n3. Écrire un programme qui construit, par ajouts successifs, la liste `prev` des effectifs prévus pour les $12$ premiers mois (rangs $0$ à $11$). Justifier la borne du `range`, puis donner `prev[0]` et `prev[11]` (arrondi au centième).\n\n4. On exécute :\n```python\ndepasse = []\nfor n in range(12):\n    if 500 * 1.08 ** n > 1000:\n        depasse.append(n)\n```\nQue contient la liste `depasse` ? On justifiera en comparant $u_9$ et $u_{10}$ au seuil de $1\\,000$ abonnés.\n\n5. Modifier le programme de la question 4 pour compter, à l'aide d'un compteur, le nombre de mois (rangs $0$ à $11$) où l'effectif prévu reste **inférieur ou égal** à $1\\,000$ abonnés. Vérifier la cohérence avec la question 4.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 9, multiplier par 1, ajouter 3. Resultat ?",
       "corrige": [
-        "1. Déroulé ligne par ligne. Après `u = 500` : $u = 500$. Après `u = u * 1.08` : on calcule $500 \\times 1{,}08 = 540$ puis on écrase, $u = 540$. Après le second `u = u * 1.08` : $540 \\times 1{,}08 = 583{,}2$, donc $u = 583{,}2$. L'affectation `u = u * 1.08` traduit la relation de récurrence $u_{n+1} = 1{,}08\\,u_n$ d'une suite géométrique de raison $1{,}08$. La valeur finale $583{,}2$ correspond à $u_2 = 500 \\times 1{,}08^2$ (deux multiplications par $1{,}08$).",
-        "2. On traduit le terme général $u_n = 500 \\times 1{,}08^n$ :\n```python\ndef abonnes(n):\n    return 500 * 1.08 ** n\n```\n`abonnes(0)` renvoie $500 \\times 1{,}08^0 = 500 \\times 1 = 500$ (les $500$ abonnés de départ). `abonnes(6)` renvoie $500 \\times 1{,}08^6 \\approx 500 \\times 1{,}58687 \\approx 793{,}44$, soit environ $793$ abonnés.",
-        "3. Pour les rangs $0$ à $11$ inclus, il y a $12$ termes ; or `range(12)` produit exactement les entiers $0, 1, \\ldots, 11$ (la borne $12$ est exclue).\n```python\nprev = []\nfor n in range(12):\n    prev.append(500 * 1.08 ** n)\n```\n`prev[0]` est le premier élément : $u_0 = 500$. `prev[11]` est le dernier (indice $\\texttt{len(prev)} - 1 = 11$) : $u_{11} = 500 \\times 1{,}08^{11} \\approx 1165{,}82$ abonnés.",
-        "4. Le programme parcourt les rangs $n$ de $0$ à $11$ et sélectionne, avec `append`, ceux dont l'effectif dépasse **strictement** $1\\,000$ : `depasse` contient donc les **rangs** des mois où le nombre d'abonnés prévu dépasse $1\\,000$. On compare au seuil : $u_9 = 500 \\times 1{,}08^9 \\approx 999{,}50 < 1000$ (rang $9$ **non** retenu, l'effectif est juste sous le seuil), tandis que $u_{10} = 500 \\times 1{,}08^{10} \\approx 1079{,}46 > 1000$ (rang $10$ retenu). La suite étant croissante (raison $1{,}08 > 1$), tous les rangs suivants dépassent aussi le seuil. Ainsi `depasse` vaut `[10, 11]` : le seuil de $1\\,000$ abonnés est franchi à partir du mois de rang $10$.",
-        "5. On remplace la liste par un **compteur** initialisé avant la boucle, et on retourne la condition (au sens large) :\n```python\nc = 0\nfor n in range(12):\n    if 500 * 1.08 ** n <= 1000:\n        c = c + 1\n```\n`c` vaut $10$ : ce sont les rangs $0$ à $9$ (l'effectif reste $\\leqslant 1000$ jusqu'à $u_9 \\approx 999{,}50$). Cohérence avec la question 4 : $10$ mois sous le seuil $+$ $2$ mois au-dessus (rangs $10$ et $11$) $= 12$, le nombre total de mois examinés. Garder les rangs → `append` ; les compter → `c = c + 1`."
+        "$ 9 \\times 1 + 3 = 12 $."
       ],
-      "reponse": "1. $u = 583{,}2 = u_2$ ; 2. `def abonnes(n): return 500 * 1.08 ** n`, `abonnes(0)` $= 500$, `abonnes(6)` $\\approx 793$ ; 3. `range(12)` pour $12$ termes, `prev[0]` $= 500$, `prev[11]` $\\approx 1165{,}82$ ; 4. `depasse = [10, 11]` (car $u_9 \\approx 999{,}50 < 1000 < u_{10} \\approx 1079{,}46$) ; 5. compteur `c = 10` mois avec effectif $\\leqslant 1000$, et $10 + 2 = 12$."
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 5, multiplier par 3, ajouter 2. Resultat ?",
+      "corrige": [
+        "$ 5 \\times 3 + 2 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 2, multiplier par 7, ajouter 4. Resultat ?",
+      "corrige": [
+        "$ 2 \\times 7 + 4 = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 2 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 3 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 3 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 5 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 5 = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 4 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 4 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 3, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 4\\times 2 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 6 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 6 = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 3 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 3 = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 7 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 7 = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 4, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 4 + 4\\times 2 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 5 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 5 = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 3, on ajoute 4 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 4\\times 4 = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 2 = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 20, diviser par 4. Resultat ?",
+      "corrige": [
+        "$ 20 \\div 4 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 30, diviser par 5. Resultat ?",
+      "corrige": [
+        "$ 30 \\div 5 = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 18, diviser par 3. Resultat ?",
+      "corrige": [
+        "$ 18 \\div 3 = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 24, diviser par 6. Resultat ?",
+      "corrige": [
+        "$ 24 \\div 6 = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 40, diviser par 8. Resultat ?",
+      "corrige": [
+        "$ 40 \\div 8 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 15, diviser par 3. Resultat ?",
+      "corrige": [
+        "$ 15 \\div 3 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 36, diviser par 9. Resultat ?",
+      "corrige": [
+        "$ 36 \\div 9 = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 50, diviser par 10. Resultat ?",
+      "corrige": [
+        "$ 50 \\div 10 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 3, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 4, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 5, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 6, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 7, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 8, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 9, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 10, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 11, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 12, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 36 $."
+      ],
+      "reponse": "$ 36 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 13, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 39 $."
+      ],
+      "reponse": "$ 39 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 14, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 42 $."
+      ],
+      "reponse": "$ 42 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 15, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 45 $."
+      ],
+      "reponse": "$ 45 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 16, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 48 $."
+      ],
+      "reponse": "$ 48 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 17, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 51 $."
+      ],
+      "reponse": "$ 51 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 18, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 54 $."
+      ],
+      "reponse": "$ 54 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 19, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 57 $."
+      ],
+      "reponse": "$ 57 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 20, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 60 $."
+      ],
+      "reponse": "$ 60 $"
     }
   ]
 }
