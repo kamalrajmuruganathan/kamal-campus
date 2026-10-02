@@ -1,7 +1,9 @@
 /**
- * Défi à distance — sans serveur. On crée un défi (chapitre + graine), partagé
- * par QR ou par un court code. L'ami rejoue la MÊME graine → mêmes questions.
- * Chacun obtient un « code résultat » à renvoyer pour se départager.
+ * Défi à distance. Deux modes :
+ *   1) SANS compte — par QR / code court (offline, graine partagée, échange de
+ *      codes résultat). C'est le mode historique, fidèle au « sans connexion ».
+ *   2) AVEC compte — « Défier un ami » : envoie le défi à un ami de ta liste,
+ *      comparaison automatique + notif temps réel (écran Defis, via Supabase).
  */
 
 import { useTheme } from '../useTheme';
@@ -22,7 +24,7 @@ import {
 const N = 10;
 const LETTRES = ['A', 'B', 'C', 'D'];
 
-export default function Defi() {
+export default function Defi({ navigation }) {
   const t = useTheme();
   const [phase, setPhase] = useState('menu'); // menu | creer | coller | jeu | fin
   const [defi, setDefi] = useState(null); // { chapId, graine, n }
@@ -96,6 +98,15 @@ export default function Defi() {
           {bouton('➕ Créer un défi', creer, accent, t.couleur.accentTexte)}
           <View style={{ height: t.espace.s }} />
           {bouton('🔑 Rejoindre avec un code', () => setPhase('coller'), t.couleur.surface, t.couleur.texte)}
+
+          {/* ── Mode « avec compte » : défier un ami (Supabase) ── */}
+          <View style={{ height: t.espace.l }} />
+          <View style={{ height: 1, backgroundColor: t.couleur.trait }} />
+          <Text style={{ color: t.couleur.attenue, fontSize: t.police.minuscule, marginTop: t.espace.l, marginBottom: t.espace.s, lineHeight: 18 }}>
+            Ou, si vous avez tous les deux un compte : envoie le défi directement à un ami,
+            la comparaison se fait toute seule.
+          </Text>
+          {bouton('👥 Défier un ami', () => navigation.navigate('Defis'), t.couleur.surface, t.couleur.texte)}
         </ScrollView>
       </SafeAreaView>
     );
