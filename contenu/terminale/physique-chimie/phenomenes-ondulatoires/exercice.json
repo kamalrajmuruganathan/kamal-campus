@@ -13,133 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "intensite-niveau-sonore",
-      "enonce": "Dans une rue passante, un sonomètre mesure une intensité sonore $I = 2{,}0 \\times 10^{-5}\\ \\text{W·m}^{-2}$. On donne l'intensité de référence $I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$. Calculer le niveau d'intensité sonore $L$ en décibels. (On prendra $\\log 2 \\approx 0{,}30$.)",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 2 m et une frequence 3 Hz. Celerite ?",
       "corrige": [
-        "On applique la définition du niveau sonore : $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$.",
-        "On calcule le rapport, sans unité : $\\dfrac{I}{I_0} = \\dfrac{2{,}0 \\times 10^{-5}}{1{,}0 \\times 10^{-12}} = 2{,}0 \\times 10^{7}$.",
-        "On utilise $\\log(2{,}0 \\times 10^{7}) = \\log 2 + \\log 10^{7} = 0{,}30 + 7 = 7{,}3$.",
-        "D'où $L = 10 \\times 7{,}3 = 73$ dB."
+        "$ v = \\lambda\\times f = 2\\times 3 = 6 $ m/s."
       ],
-      "reponse": "$L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right) \\approx 73$ dB."
+      "reponse": "$ 6 $ m/s"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "diffraction",
-      "enonce": "Un faisceau laser de longueur d'onde $\\lambda = 633$ nm traverse une fente fine de largeur $a = 80\\ \\mu\\text{m}$. Calculer le demi-angle de diffraction $\\theta = \\dfrac{\\lambda}{a}$, en radians.",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 5 m et une frequence 2 Hz. Celerite ?",
       "corrige": [
-        "On convertit d'abord les deux longueurs dans la **même unité**, le mètre : $\\lambda = 633\\ \\text{nm} = 6{,}33 \\times 10^{-7}$ m et $a = 80\\ \\mu\\text{m} = 80 \\times 10^{-6}\\ \\text{m} = 8{,}0 \\times 10^{-5}$ m.",
-        "On applique $\\theta = \\dfrac{\\lambda}{a} = \\dfrac{6{,}33 \\times 10^{-7}}{8{,}0 \\times 10^{-5}}$.",
-        "On calcule : $\\theta = 0{,}79 \\times 10^{-2} = 7{,}9 \\times 10^{-3}$ rad.",
-        "L'angle est bien petit (quelques millièmes de radian) et sans unité de longueur : le résultat est cohérent."
+        "$ v = \\lambda\\times f = 5\\times 2 = 10 $ m/s."
       ],
-      "reponse": "$\\theta = \\dfrac{\\lambda}{a} \\approx 7{,}9 \\times 10^{-3}$ rad."
+      "reponse": "$ 10 $ m/s"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "interferences",
-      "enonce": "Deux sources ponctuelles $S_1$ et $S_2$, synchrones et de même fréquence, émettent dans l'eau des ondes de longueur d'onde $\\lambda = 1{,}5$ cm. En un point M, on mesure $d_1 = S_1M = 6{,}0$ cm et $d_2 = S_2M = 15{,}0$ cm. 1) Calculer la différence de marche $\\delta$ en M. 2) En déduire la nature de l'interférence (constructive ou destructive).",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 4 m et une frequence 10 Hz. Celerite ?",
       "corrige": [
-        "La différence de marche est $\\delta = d_2 - d_1 = 15{,}0 - 6{,}0 = 9{,}0$ cm.",
-        "On compare $\\delta$ à $\\lambda$ : $\\dfrac{\\delta}{\\lambda} = \\dfrac{9{,}0}{1{,}5} = 6{,}0$.",
-        "Le rapport est un **entier** ($k = 6$), donc $\\delta = 6\\lambda = k\\lambda$ : la condition d'interférence **constructive** est vérifiée.",
-        "En M, les deux ondes arrivent en phase, leurs amplitudes s'ajoutent : l'amplitude y est maximale."
+        "$ v = \\lambda\\times f = 4\\times 10 = 40 $ m/s."
       ],
-      "reponse": "$\\delta = 9{,}0$ cm $= 6\\lambda$ : interférence **constructive** (amplitude maximale en M)."
+      "reponse": "$ 40 $ m/s"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "effet-doppler",
-      "enonce": "Un diapason électronique fixé sur un chariot émet un son de fréquence $f_E = 440$ Hz. Le chariot se dirige vers un microphone fixe à la vitesse $v = 30\\ \\text{m·s}^{-1}$. La célérité du son dans l'air vaut $c = 340\\ \\text{m·s}^{-1}$. 1) La fréquence perçue sera-t-elle plus grande ou plus petite que $f_E$ ? 2) Calculer la fréquence perçue $f_R$, puis le décalage Doppler $\\Delta f = f_R - f_E$.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 3 m et une frequence 5 Hz. Celerite ?",
       "corrige": [
-        "La source se **rapproche** du microphone : les fronts d'onde se resserrent devant elle, donc la fréquence perçue est **plus grande** que la fréquence émise (son plus aigu).",
-        "On utilise la formule du rapprochement : $f_R = f_E\\,\\dfrac{c}{c - v} = 440 \\times \\dfrac{340}{340 - 30} = 440 \\times \\dfrac{340}{310}$.",
-        "On calcule : $\\dfrac{340}{310} = 1{,}097$, donc $f_R = 440 \\times 1{,}097 \\approx 483$ Hz.",
-        "Le décalage Doppler vaut $\\Delta f = f_R - f_E = 483 - 440 = +43$ Hz (positif, ce qui confirme le rapprochement)."
+        "$ v = \\lambda\\times f = 3\\times 5 = 15 $ m/s."
       ],
-      "reponse": "$f_R = f_E\\,\\dfrac{c}{c-v} \\approx 483$ Hz, soit $\\Delta f \\approx +43$ Hz (son plus aigu)."
+      "reponse": "$ 15 $ m/s"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "intensite-niveau-sonore",
-      "enonce": "Dans un atelier, une machine seule produit un niveau sonore $L_1 = 70$ dB en un point donné. On met en marche $5$ machines identiques et indépendantes. Les intensités sonores s'additionnent. 1) Quelle est l'intensité totale $I_5$ en fonction de l'intensité $I_1$ d'une machine ? 2) Calculer le niveau sonore total $L_5$. (On prendra $\\log 5 \\approx 0{,}70$.)",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 6 m et une frequence 2 Hz. Celerite ?",
       "corrige": [
-        "Les $5$ machines étant identiques et leurs intensités s'additionnant, l'intensité totale est $I_5 = 5\\,I_1$.",
-        "Le niveau total est $L_5 = 10\\log\\!\\left(\\dfrac{I_5}{I_0}\\right) = 10\\log\\!\\left(\\dfrac{5\\,I_1}{I_0}\\right)$.",
-        "On sépare le logarithme : $L_5 = 10\\log 5 + 10\\log\\!\\left(\\dfrac{I_1}{I_0}\\right) = 10\\log 5 + L_1$.",
-        "Application numérique : $L_5 = 10 \\times 0{,}70 + 70 = 7{,}0 + 70 = 77$ dB. Passer de $1$ à $5$ machines n'ajoute que $7$ dB, pas $\\times 5$ le niveau."
+        "$ v = \\lambda\\times f = 6\\times 2 = 12 $ m/s."
       ],
-      "reponse": "$I_5 = 5\\,I_1$ et $L_5 = L_1 + 10\\log 5 \\approx 77$ dB."
+      "reponse": "$ 12 $ m/s"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "diffraction",
-      "enonce": "On veut mesurer la largeur $a$ d'une fente. On l'éclaire avec un laser de longueur d'onde $\\lambda = 633$ nm et on place un écran à la distance $D = 2{,}5$ m. La tache centrale de diffraction a une largeur totale mesurée $\\ell = 3{,}2$ cm. On rappelle que $\\ell = \\dfrac{2\\lambda D}{a}$. Déterminer la largeur $a$ de la fente, en millimètres.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 10 m et une frequence 4 Hz. Celerite ?",
       "corrige": [
-        "On part de $\\ell = \\dfrac{2\\lambda D}{a}$ et on isole $a$ : $a = \\dfrac{2\\lambda D}{\\ell}$.",
-        "On convertit tout en unités SI (mètres) : $\\lambda = 6{,}33 \\times 10^{-7}$ m, $D = 2{,}5$ m, $\\ell = 3{,}2\\ \\text{cm} = 3{,}2 \\times 10^{-2}$ m.",
-        "On calcule le numérateur : $2\\lambda D = 2 \\times 6{,}33 \\times 10^{-7} \\times 2{,}5 = 3{,}17 \\times 10^{-6}\\ \\text{m}^{2}$.",
-        "D'où $a = \\dfrac{3{,}17 \\times 10^{-6}}{3{,}2 \\times 10^{-2}} = 9{,}9 \\times 10^{-5}$ m, soit $a \\approx 0{,}10$ mm."
+        "$ v = \\lambda\\times f = 10\\times 4 = 40 $ m/s."
       ],
-      "reponse": "$a = \\dfrac{2\\lambda D}{\\ell} \\approx 9{,}9 \\times 10^{-5}$ m $\\approx 0{,}10$ mm."
+      "reponse": "$ 40 $ m/s"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "effet-doppler",
-      "enonce": "Une voiture de police roule en **s'éloignant** d'un piéton immobile. Sa sirène émet un son de fréquence $f_E = 680$ Hz. La voiture roule à $v = 20\\ \\text{m·s}^{-1}$ et la célérité du son dans l'air vaut $c = 340\\ \\text{m·s}^{-1}$. Calculer la fréquence $f_R$ perçue par le piéton, puis le décalage Doppler $\\Delta f = f_R - f_E$.",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 1 m et une frequence 50 Hz. Celerite ?",
       "corrige": [
-        "La source s'**éloigne** de l'observateur : les fronts d'onde se dilatent derrière elle, la fréquence perçue est **plus petite** que la fréquence émise (son plus grave). On utilise donc la formule de l'éloignement : $f_R = f_E\\,\\dfrac{c}{c + v}$.",
-        "Application numérique : $f_R = 680 \\times \\dfrac{340}{340 + 20} = 680 \\times \\dfrac{340}{360}$.",
-        "On calcule : $\\dfrac{340}{360} = 0{,}944$, donc $f_R = 680 \\times 0{,}944 \\approx 642$ Hz.",
-        "Le décalage Doppler vaut $\\Delta f = f_R - f_E = 642 - 680 = -38$ Hz : négatif, ce qui confirme l'éloignement."
+        "$ v = \\lambda\\times f = 1\\times 50 = 50 $ m/s."
       ],
-      "reponse": "$f_R = f_E\\,\\dfrac{c}{c+v} \\approx 642$ Hz, soit $\\Delta f \\approx -38$ Hz (son plus grave)."
+      "reponse": "$ 50 $ m/s"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "diffraction",
-      "enonce": "Un laser vert de longueur d'onde $\\lambda = 532$ nm éclaire une fente de largeur $a = 0{,}12$ mm. On observe la figure de diffraction sur un écran situé à $D = 3{,}0$ m de la fente. 1) Calculer le demi-angle de diffraction $\\theta = \\dfrac{\\lambda}{a}$. 2) En déduire la largeur totale $\\ell = \\dfrac{2\\lambda D}{a}$ de la tache centrale, en centimètres.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 8 m et une frequence 3 Hz. Celerite ?",
       "corrige": [
-        "1) On convertit dans la même unité (le mètre) : $\\lambda = 532\\ \\text{nm} = 5{,}32 \\times 10^{-7}$ m et $a = 0{,}12\\ \\text{mm} = 1{,}2 \\times 10^{-4}$ m.",
-        "On applique $\\theta = \\dfrac{\\lambda}{a} = \\dfrac{5{,}32 \\times 10^{-7}}{1{,}2 \\times 10^{-4}} \\approx 4{,}4 \\times 10^{-3}$ rad.",
-        "2) La largeur de la tache centrale vaut $\\ell = \\dfrac{2\\lambda D}{a} = 2 D \\theta = 2 \\times 3{,}0 \\times 4{,}4 \\times 10^{-3}$.",
-        "On calcule : $\\ell = 2{,}7 \\times 10^{-2}$ m, soit $\\ell \\approx 2{,}7$ cm."
+        "$ v = \\lambda\\times f = 8\\times 3 = 24 $ m/s."
       ],
-      "reponse": "$\\theta \\approx 4{,}4 \\times 10^{-3}$ rad et $\\ell = \\dfrac{2\\lambda D}{a} \\approx 2{,}7$ cm."
+      "reponse": "$ 24 $ m/s"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "effet-doppler",
-      "enonce": "En astronomie, on observe la raie H$\\alpha$ de l'hydrogène. Émise au repos à $\\lambda_E = 656{,}3$ nm, elle est reçue depuis une galaxie lointaine à $\\lambda_R = 662{,}9$ nm. On donne la célérité de la lumière $c = 3{,}00 \\times 10^{8}\\ \\text{m·s}^{-1}$. 1) La galaxie s'approche-t-elle ou s'éloigne-t-elle de la Terre ? Justifier. 2) À partir de la relation Doppler $f_R = f_E\\,\\dfrac{c}{c+v}$ (éloignement), établir l'expression de la vitesse $v$ en fonction de $\\lambda_E$, $\\lambda_R$ et $c$. 3) Calculer $v$.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 2 m et une frequence 20 Hz. Celerite ?",
       "corrige": [
-        "1) La longueur d'onde reçue est **plus grande** que celle émise ($\\lambda_R > \\lambda_E$) : la lumière est décalée vers le rouge (les grandes longueurs d'onde). Une longueur d'onde plus grande correspond à une fréquence plus petite, signe d'un **éloignement** : la galaxie s'éloigne de la Terre.",
-        "2) En éloignement, $f_R = f_E\\,\\dfrac{c}{c+v}$. En passant aux longueurs d'onde ($\\lambda = c/f$), on a $\\dfrac{c}{\\lambda_R} = \\dfrac{c}{\\lambda_E}\\cdot\\dfrac{c}{c+v}$, soit $\\lambda_R = \\lambda_E\\,\\dfrac{c+v}{c}$.",
-        "On isole $v$ : $\\dfrac{\\lambda_R}{\\lambda_E} = \\dfrac{c+v}{c} = 1 + \\dfrac{v}{c}$, d'où $v = c\\,\\dfrac{\\lambda_R - \\lambda_E}{\\lambda_E}$.",
-        "3) Application numérique : $\\lambda_R - \\lambda_E = 662{,}9 - 656{,}3 = 6{,}6$ nm, donc $v = 3{,}00 \\times 10^{8} \\times \\dfrac{6{,}6}{656{,}3} \\approx 3{,}0 \\times 10^{6}\\ \\text{m·s}^{-1}$ (environ $1\\%$ de $c$)."
+        "$ v = \\lambda\\times f = 2\\times 20 = 40 $ m/s."
       ],
-      "reponse": "$\\lambda_R > \\lambda_E$ : la galaxie s'éloigne ; $v = c\\,\\dfrac{\\lambda_R - \\lambda_E}{\\lambda_E} \\approx 3{,}0 \\times 10^{6}\\ \\text{m·s}^{-1}$."
+      "reponse": "$ 40 $ m/s"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "phenomenes-ondulatoires",
-      "enonce": "**Un festival en plein air.** On étudie plusieurs phénomènes ondulatoires observés lors d'un concert. Données : célérité du son dans l'air $c = 340\\ \\text{m·s}^{-1}$ ; intensité sonore de référence $I_0 = 1{,}0 \\times 10^{-12}\\ \\text{W·m}^{-2}$ ; on prendra $10\\log 2 \\approx 3{,}0$ dB. 1. À la place d'un spectateur, une **seule** enceinte délivre une intensité sonore $I_1 = 1{,}0 \\times 10^{-2}\\ \\text{W·m}^{-2}$. Calculer le niveau d'intensité sonore $L_1$ correspondant. 2. On met en marche une **seconde** enceinte identique, à côté de la première : les intensités s'additionnent. Sans nouveau calcul de logarithme, en déduire le niveau sonore total $L_2$. 3. Les deux enceintes, synchrones, émettent un son de fréquence $f = 170$ Hz. Un spectateur M est à $d_1 = 8{,}0$ m de la première et $d_2 = 11{,}0$ m de la seconde. Calculer la longueur d'onde $\\lambda$, puis la différence de marche $\\delta$ en M, et préciser la nature de l'interférence. 4. Un spectacle laser utilise un laser de longueur d'onde $\\lambda' = 650$ nm qui traverse une fente de largeur $a = 0{,}20$ mm. Calculer le demi-angle de diffraction $\\theta = \\dfrac{\\lambda'}{a}$. 5. Une ambulance passe près du festival, sirène allumée ($f_E = 700$ Hz), en se rapprochant d'un spectateur immobile à $v = 25\\ \\text{m·s}^{-1}$. Calculer la fréquence $f_R$ perçue et le décalage Doppler $\\Delta f$.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 5 m et une frequence 6 Hz. Celerite ?",
       "corrige": [
-        "1. Le niveau d'une enceinte : $L_1 = 10\\log\\!\\left(\\dfrac{I_1}{I_0}\\right) = 10\\log\\!\\left(\\dfrac{1{,}0 \\times 10^{-2}}{1{,}0 \\times 10^{-12}}\\right) = 10\\log(10^{10}) = 10 \\times 10 = 100$ dB.",
-        "2. Deux enceintes identiques : l'intensité double ($I_2 = 2\\,I_1$). Or doubler l'intensité ajoute $10\\log 2 \\approx 3{,}0$ dB au niveau. Donc $L_2 = L_1 + 3{,}0 = 103$ dB : le niveau ne double pas, il ne gagne que $3$ dB.",
-        "3. La longueur d'onde vaut $\\lambda = \\dfrac{c}{f} = \\dfrac{340}{170} = 2{,}0$ m. La différence de marche est $\\delta = d_2 - d_1 = 11{,}0 - 8{,}0 = 3{,}0$ m. On compare : $\\dfrac{\\delta}{\\lambda} = \\dfrac{3{,}0}{2{,}0} = 1{,}5 = \\left(1 + \\tfrac{1}{2}\\right)$. C'est un **demi-entier** : l'interférence est **destructive** (amplitude minimale, le son est atténué en M).",
-        "4. On convertit : $\\lambda' = 650\\ \\text{nm} = 6{,}5 \\times 10^{-7}$ m et $a = 0{,}20\\ \\text{mm} = 2{,}0 \\times 10^{-4}$ m. D'où $\\theta = \\dfrac{\\lambda'}{a} = \\dfrac{6{,}5 \\times 10^{-7}}{2{,}0 \\times 10^{-4}} = 3{,}3 \\times 10^{-3}$ rad.",
-        "5. La source se rapproche : $f_R = f_E\\,\\dfrac{c}{c - v} = 700 \\times \\dfrac{340}{340 - 25} = 700 \\times \\dfrac{340}{315} \\approx 756$ Hz. Le décalage vaut $\\Delta f = f_R - f_E = 756 - 700 = +56$ Hz (son plus aigu)."
+        "$ v = \\lambda\\times f = 5\\times 6 = 30 $ m/s."
       ],
-      "reponse": "1. $L_1 = 100$ dB ; 2. $L_2 = 103$ dB ; 3. $\\lambda = 2{,}0$ m, $\\delta = 3{,}0$ m $= 1{,}5\\,\\lambda$ → interférence **destructive** ; 4. $\\theta \\approx 3{,}3 \\times 10^{-3}$ rad ; 5. $f_R \\approx 756$ Hz, $\\Delta f \\approx +56$ Hz."
+      "reponse": "$ 30 $ m/s"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 7 m et une frequence 2 Hz. Celerite ?",
+      "corrige": [
+        "$ v = \\lambda\\times f = 7\\times 2 = 14 $ m/s."
+      ],
+      "reponse": "$ 14 $ m/s"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 4 m et une frequence 25 Hz. Celerite ?",
+      "corrige": [
+        "$ v = \\lambda\\times f = 4\\times 25 = 100 $ m/s."
+      ],
+      "reponse": "$ 100 $ m/s"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 2 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{2} = \\dfrac{1}{2} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $ s"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 4 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{4} = \\dfrac{1}{4} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{4} $ s"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 5 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{5} = \\dfrac{1}{5} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{5} $ s"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 10 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{10} = \\dfrac{1}{10} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{10} $ s"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 20 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{20} = \\dfrac{1}{20} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{20} $ s"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 25 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{25} = \\dfrac{1}{25} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{25} $ s"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 50 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{50} = \\dfrac{1}{50} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{50} $ s"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 100 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{100} = \\dfrac{1}{100} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{100} $ s"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 8 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{8} = \\dfrac{1}{8} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{8} $ s"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 40 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{40} = \\dfrac{1}{40} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{40} $ s"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 1 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 3 $ m/s."
+      ],
+      "reponse": "$ 3 $ m/s"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 2 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 6 $ m/s."
+      ],
+      "reponse": "$ 6 $ m/s"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 3 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 9 $ m/s."
+      ],
+      "reponse": "$ 9 $ m/s"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 4 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 12 $ m/s."
+      ],
+      "reponse": "$ 12 $ m/s"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 5 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 15 $ m/s."
+      ],
+      "reponse": "$ 15 $ m/s"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 6 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 18 $ m/s."
+      ],
+      "reponse": "$ 18 $ m/s"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 7 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 21 $ m/s."
+      ],
+      "reponse": "$ 21 $ m/s"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 8 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 24 $ m/s."
+      ],
+      "reponse": "$ 24 $ m/s"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 9 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 27 $ m/s."
+      ],
+      "reponse": "$ 27 $ m/s"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 10 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 30 $ m/s."
+      ],
+      "reponse": "$ 30 $ m/s"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 11 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 33 $ m/s."
+      ],
+      "reponse": "$ 33 $ m/s"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 12 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 36 $ m/s."
+      ],
+      "reponse": "$ 36 $ m/s"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 13 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 39 $ m/s."
+      ],
+      "reponse": "$ 39 $ m/s"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 14 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 42 $ m/s."
+      ],
+      "reponse": "$ 42 $ m/s"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 15 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 45 $ m/s."
+      ],
+      "reponse": "$ 45 $ m/s"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 16 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 48 $ m/s."
+      ],
+      "reponse": "$ 48 $ m/s"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 17 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 51 $ m/s."
+      ],
+      "reponse": "$ 51 $ m/s"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 18 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 54 $ m/s."
+      ],
+      "reponse": "$ 54 $ m/s"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 19 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 57 $ m/s."
+      ],
+      "reponse": "$ 57 $ m/s"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 20 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 60 $ m/s."
+      ],
+      "reponse": "$ 60 $ m/s"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 21 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 63 $ m/s."
+      ],
+      "reponse": "$ 63 $ m/s"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 22 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 66 $ m/s."
+      ],
+      "reponse": "$ 66 $ m/s"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 23 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 69 $ m/s."
+      ],
+      "reponse": "$ 69 $ m/s"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 24 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 72 $ m/s."
+      ],
+      "reponse": "$ 72 $ m/s"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 25 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 75 $ m/s."
+      ],
+      "reponse": "$ 75 $ m/s"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 26 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 78 $ m/s."
+      ],
+      "reponse": "$ 78 $ m/s"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 27 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 81 $ m/s."
+      ],
+      "reponse": "$ 81 $ m/s"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 28 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 84 $ m/s."
+      ],
+      "reponse": "$ 84 $ m/s"
     }
   ]
 }

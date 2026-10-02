@@ -13,130 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "definition",
-      "enonce": "Calcule sans calculatrice : $\\sqrt{81}$, $\\sqrt{100}$ et $\\sqrt{144}$.",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{16} $.",
       "corrige": [
-        "$\\sqrt{a}$ est le nombre **positif** dont le carré vaut $a$ : pour chaque nombre, on cherche donc le carré parfait correspondant dans la table.",
-        "$\\sqrt{81} = 9$, car $9$ est positif et $9^2 = 81$.",
-        "$\\sqrt{100} = 10$, car $10^2 = 100$.",
-        "$\\sqrt{144} = 12$, car $12^2 = 144$."
+        "$ \\sqrt{16} = 4 $ car $ 4^2 = 16 $."
       ],
-      "reponse": "$\\sqrt{81} = 9$, $\\sqrt{100} = 10$ et $\\sqrt{144} = 12$."
+      "reponse": "$ 4 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "proprietes",
-      "enonce": "Calcule $\\sqrt{6^2}$ puis $\\left(\\sqrt{15}\\right)^2$.",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{25} $.",
       "corrige": [
-        "Pour $\\sqrt{6^2}$, on calcule d'abord sous le radical : $6^2 = 36$, puis $\\sqrt{36} = 6$. Comme $6$ est positif, la racine annule le carré : $\\sqrt{6^2} = 6$.",
-        "Pour $\\left(\\sqrt{15}\\right)^2$, on utilise que $\\sqrt{15}$ est justement le nombre dont le carré vaut $15$ : élever $\\sqrt{15}$ au carré redonne donc $15$.",
-        "Inutile de chercher une valeur décimale de $\\sqrt{15}$ : le carré la fait disparaitre."
+        "$ \\sqrt{25} = 5 $ car $ 5^2 = 25 $."
       ],
-      "reponse": "$\\sqrt{6^2} = 6$ et $\\left(\\sqrt{15}\\right)^2 = 15$."
+      "reponse": "$ 5 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "condition-existence",
-      "enonce": "Parmi les écritures $\\sqrt{16}$, $\\sqrt{-25}$, $\\sqrt{0}$ et $\\sqrt{-1}$, indique celles qui ont un sens, puis calcule leur valeur.",
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{49} $.",
       "corrige": [
-        "Une racine carrée $\\sqrt{a}$ n'existe que si le radicande $a$ est positif ou nul. On regarde donc d'abord le signe de chaque nombre placé sous le radical.",
-        "$\\sqrt{-25}$ et $\\sqrt{-1}$ n'ont **pas** de sens : aucun nombre multiplié par lui-même ne donne un résultat négatif.",
-        "$\\sqrt{16}$ et $\\sqrt{0}$ existent car $16 \\geqslant 0$ et $0 \\geqslant 0$.",
-        "On les calcule : $\\sqrt{16} = 4$ (car $4^2 = 16$) et $\\sqrt{0} = 0$."
+        "$ \\sqrt{49} = 7 $ car $ 7^2 = 49 $."
       ],
-      "reponse": "Seules $\\sqrt{16} = 4$ et $\\sqrt{0} = 0$ existent ; $\\sqrt{-25}$ et $\\sqrt{-1}$ n'ont pas de sens."
+      "reponse": "$ 7 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "encadrement",
-      "enonce": "Encadre $\\sqrt{75}$ par deux entiers consécutifs.",
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{81} $.",
       "corrige": [
-        "On cherche les deux carrés parfaits qui entourent $75$ dans la table : $64$ et $81$.",
-        "On écrit l'encadrement : $64 < 75 < 81$.",
-        "La racine carrée respecte l'ordre, donc $\\sqrt{64} < \\sqrt{75} < \\sqrt{81}$.",
-        "Or $\\sqrt{64} = 8$ et $\\sqrt{81} = 9$, d'où $8 < \\sqrt{75} < 9$."
+        "$ \\sqrt{81} = 9 $ car $ 9^2 = 81 $."
       ],
-      "reponse": "$8 < \\sqrt{75} < 9$."
+      "reponse": "$ 9 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "lien-geometrique",
-      "enonce": "Un carré a une aire de $40\\ \\text{cm}^2$. Donne la valeur exacte de la longueur de son côté, puis encadre cette longueur par deux entiers consécutifs.",
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{100} $.",
       "corrige": [
-        "L'aire d'un carré de côté $c$ vaut $c^2$. Pour remonter de l'aire au côté, on prend la racine carrée : $c = \\sqrt{40}\\ \\text{cm}$.",
-        "$40$ n'est pas un carré parfait : $\\sqrt{40}$ ne tombe pas juste, la valeur exacte du côté est donc $\\sqrt{40}\\ \\text{cm}$, telle quelle.",
-        "Pour l'encadrer, on repère les carrés parfaits qui entourent $40$ : $36 < 40 < 49$.",
-        "En prenant la racine de chaque membre : $\\sqrt{36} < \\sqrt{40} < \\sqrt{49}$, soit $6 < c < 7$."
+        "$ \\sqrt{100} = 10 $ car $ 10^2 = 100 $."
       ],
-      "reponse": "Le côté vaut $\\sqrt{40}\\ \\text{cm}$, compris entre $6$ et $7\\ \\text{cm}$."
+      "reponse": "$ 10 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "proprietes",
-      "enonce": "Range dans l'ordre croissant, sans calculatrice : $\\sqrt{30}$, $6$ et $\\sqrt{40}$.",
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{144} $.",
       "corrige": [
-        "L'astuce est d'écrire les trois nombres sous la même forme. L'entier $6$ s'écrit $6 = \\sqrt{36}$, car $6^2 = 36$.",
-        "Il suffit alors de comparer les nombres sous les radicaux : $30$, $36$ et $40$.",
-        "On les range : $30 < 36 < 40$.",
-        "La racine carrée respecte l'ordre, donc $\\sqrt{30} < \\sqrt{36} < \\sqrt{40}$, c'est-à-dire $\\sqrt{30} < 6 < \\sqrt{40}$."
+        "$ \\sqrt{144} = 12 $ car $ 12^2 = 144 $."
       ],
-      "reponse": "$\\sqrt{30} < 6 < \\sqrt{40}$."
+      "reponse": "$ 12 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "definition",
-      "enonce": "Calcule sans calculatrice : $\\sqrt{25}$, $\\sqrt{121}$ et $\\sqrt{4}$.",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{169} $.",
       "corrige": [
-        "$\\sqrt{a}$ est le nombre **positif** dont le carré vaut $a$ : on cherche dans la table des carrés parfaits le nombre qui convient.",
-        "$\\sqrt{25} = 5$, car $5$ est positif et $5^2 = 25$.",
-        "$\\sqrt{121} = 11$, car $11^2 = 121$.",
-        "$\\sqrt{4} = 2$, car $2^2 = 4$."
+        "$ \\sqrt{169} = 13 $ car $ 13^2 = 169 $."
       ],
-      "reponse": "$\\sqrt{25} = 5$, $\\sqrt{121} = 11$ et $\\sqrt{4} = 2$."
+      "reponse": "$ 13 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "encadrement",
-      "enonce": "Un entier $n$ vérifie $10 < \\sqrt{n} < 11$. Quelles valeurs entières $n$ peut-il prendre ?",
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{196} $.",
       "corrige": [
-        "Attention au piège : ce n'est pas $n$ qui est compris entre $10$ et $11$, mais sa **racine**. Pour retrouver $n$, on élève chaque membre de l'encadrement au carré.",
-        "La fonction racine respecte l'ordre, donc élever au carré aussi : $10 < \\sqrt{n} < 11$ donne $10^2 < n < 11^2$, soit $100 < n < 121$.",
-        "Les inégalités sont strictes : $n$ ne peut valoir ni $100$ ni $121$. Il prend donc toutes les valeurs entières de $101$ à $120$."
+        "$ \\sqrt{196} = 14 $ car $ 14^2 = 196 $."
       ],
-      "reponse": "$n$ est un entier de $101$ à $120$ (soit $100 < n < 121$)."
+      "reponse": "$ 14 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "proprietes",
-      "enonce": "Range dans l'ordre croissant, sans calculatrice : $7$, $\\sqrt{50}$, $\\sqrt{60}$ et $8$.",
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{225} $.",
       "corrige": [
-        "L'idée est d'écrire les quatre nombres sous la même forme, celle d'une racine. Les deux entiers deviennent : $7 = \\sqrt{49}$ (car $7^2 = 49$) et $8 = \\sqrt{64}$ (car $8^2 = 64$).",
-        "Il reste à comparer les nombres placés sous les radicaux : $49$, $50$, $60$ et $64$.",
-        "On les range : $49 < 50 < 60 < 64$.",
-        "La racine carrée respecte l'ordre, donc $\\sqrt{49} < \\sqrt{50} < \\sqrt{60} < \\sqrt{64}$, c'est-à-dire $7 < \\sqrt{50} < \\sqrt{60} < 8$."
+        "$ \\sqrt{225} = 15 $ car $ 15^2 = 225 $."
       ],
-      "reponse": "$7 < \\sqrt{50} < \\sqrt{60} < 8$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "lien-geometrique",
-      "enonce": "Léa aménage une terrasse **carrée** dans son jardin et dispose de $90\\ \\text{m}^2$ de dalles.\\n\\n1. Elle veut d'abord utiliser toutes ses dalles pour une terrasse carrée d'aire $90\\ \\text{m}^2$. Donne la valeur **exacte** de la longueur de son côté.\\n2. Encadre cette longueur par deux entiers consécutifs.\\n3. Son voisin affirme : « une terrasse carrée d'aire $90\\ \\text{m}^2$ a un côté de $45\\ \\text{m}$ ». A-t-il raison ? Explique son erreur.\\n4. Finalement, Léa préfère une terrasse carrée de côté $9\\ \\text{m}$. Quelle est son aire ? Lui reste-t-il des dalles ?",
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{64} $.",
       "corrige": [
-        "1. L'aire d'un carré de côté $c$ vaut $c^2$. Pour remonter de l'aire au côté, on prend la racine carrée : $c = \\sqrt{90}\\ \\text{m}$. Comme $90$ n'est pas un carré parfait, cette écriture $\\sqrt{90}\\ \\text{m}$ **est** la valeur exacte, on la garde telle quelle.",
-        "2. On repère les carrés parfaits qui entourent $90$ : $81 < 90 < 100$. En prenant la racine de chaque membre : $\\sqrt{81} < \\sqrt{90} < \\sqrt{100}$, soit $9 < \\sqrt{90} < 10$. Le côté mesure donc entre $9$ et $10\\ \\text{m}$.",
-        "3. Le voisin a tort : il a divisé l'aire par $2$, alors que la racine carrée n'est **pas** une moitié. On le vérifie : $45^2 = 2025$, très loin de $90$. Le vrai côté, $\\sqrt{90}$, est compris entre $9$ et $10\\ \\text{m}$ d'après la question 2.",
-        "4. Pour une terrasse carrée de côté $9\\ \\text{m}$, l'aire vaut $9^2 = 81\\ \\text{m}^2$. Léa avait $90\\ \\text{m}^2$ de dalles : il lui en reste $90 - 81 = 9\\ \\text{m}^2$."
+        "$ \\sqrt{64} = 8 $ car $ 8^2 = 64 $."
       ],
-      "reponse": "1. côté $= \\sqrt{90}\\ \\text{m}$ (valeur exacte). 2. $9 < \\sqrt{90} < 10$. 3. Non, le voisin confond racine carrée et moitié ($45^2 = 2025 \\neq 90$). 4. aire $= 81\\ \\text{m}^2$, il reste $9\\ \\text{m}^2$ de dalles."
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{121} $.",
+      "corrige": [
+        "$ \\sqrt{121} = 11 $ car $ 11^2 = 121 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{256} $.",
+      "corrige": [
+        "$ \\sqrt{256} = 16 $ car $ 16^2 = 256 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{4} $.",
+      "corrige": [
+        "$ \\sqrt{4} = 2 $ car $ 2^2 = 4 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{9} $.",
+      "corrige": [
+        "$ \\sqrt{9} = 3 $ car $ 3^2 = 9 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{36} $.",
+      "corrige": [
+        "$ \\sqrt{36} = 6 $ car $ 6^2 = 36 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "racine-exacte",
+      "enonce": "Calculer $ \\sqrt{400} $.",
+      "corrige": [
+        "$ \\sqrt{400} = 20 $ car $ 20^2 = 400 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{8} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{8} = 2\\sqrt{2} $."
+      ],
+      "reponse": "$ 2\\sqrt{2} $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{12} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{12} = 2\\sqrt{3} $."
+      ],
+      "reponse": "$ 2\\sqrt{3} $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{18} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{18} = 3\\sqrt{2} $."
+      ],
+      "reponse": "$ 3\\sqrt{2} $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{20} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{20} = 2\\sqrt{5} $."
+      ],
+      "reponse": "$ 2\\sqrt{5} $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{50} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{50} = 5\\sqrt{2} $."
+      ],
+      "reponse": "$ 5\\sqrt{2} $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{32} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{32} = 4\\sqrt{2} $."
+      ],
+      "reponse": "$ 4\\sqrt{2} $"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{27} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{27} = 3\\sqrt{3} $."
+      ],
+      "reponse": "$ 3\\sqrt{3} $"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{48} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{48} = 4\\sqrt{3} $."
+      ],
+      "reponse": "$ 4\\sqrt{3} $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{72} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{72} = 6\\sqrt{2} $."
+      ],
+      "reponse": "$ 6\\sqrt{2} $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "simplifier",
+      "enonce": "Ecrire $ \\sqrt{45} $ sous la forme $ a\\sqrt{b} $.",
+      "corrige": [
+        "$ \\sqrt{45} = 3\\sqrt{5} $."
+      ],
+      "reponse": "$ 3\\sqrt{5} $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 3^2 $.",
+      "corrige": [
+        "$ 3^2 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 4^2 $.",
+      "corrige": [
+        "$ 4^2 = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 5^2 $.",
+      "corrige": [
+        "$ 5^2 = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 6^2 $.",
+      "corrige": [
+        "$ 6^2 = 36 $."
+      ],
+      "reponse": "$ 36 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 7^2 $.",
+      "corrige": [
+        "$ 7^2 = 49 $."
+      ],
+      "reponse": "$ 49 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 8^2 $.",
+      "corrige": [
+        "$ 8^2 = 64 $."
+      ],
+      "reponse": "$ 64 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 9^2 $.",
+      "corrige": [
+        "$ 9^2 = 81 $."
+      ],
+      "reponse": "$ 81 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 10^2 $.",
+      "corrige": [
+        "$ 10^2 = 100 $."
+      ],
+      "reponse": "$ 100 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 11^2 $.",
+      "corrige": [
+        "$ 11^2 = 121 $."
+      ],
+      "reponse": "$ 121 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 12^2 $.",
+      "corrige": [
+        "$ 12^2 = 144 $."
+      ],
+      "reponse": "$ 144 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 13^2 $.",
+      "corrige": [
+        "$ = 169 $."
+      ],
+      "reponse": "$ 169 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 14^2 $.",
+      "corrige": [
+        "$ = 196 $."
+      ],
+      "reponse": "$ 196 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 15^2 $.",
+      "corrige": [
+        "$ = 225 $."
+      ],
+      "reponse": "$ 225 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 16^2 $.",
+      "corrige": [
+        "$ = 256 $."
+      ],
+      "reponse": "$ 256 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 17^2 $.",
+      "corrige": [
+        "$ = 289 $."
+      ],
+      "reponse": "$ 289 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 18^2 $.",
+      "corrige": [
+        "$ = 324 $."
+      ],
+      "reponse": "$ 324 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 19^2 $.",
+      "corrige": [
+        "$ = 361 $."
+      ],
+      "reponse": "$ 361 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 20^2 $.",
+      "corrige": [
+        "$ = 400 $."
+      ],
+      "reponse": "$ 400 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 21^2 $.",
+      "corrige": [
+        "$ = 441 $."
+      ],
+      "reponse": "$ 441 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 22^2 $.",
+      "corrige": [
+        "$ = 484 $."
+      ],
+      "reponse": "$ 484 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 23^2 $.",
+      "corrige": [
+        "$ = 529 $."
+      ],
+      "reponse": "$ 529 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 24^2 $.",
+      "corrige": [
+        "$ = 576 $."
+      ],
+      "reponse": "$ 576 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 25^2 $.",
+      "corrige": [
+        "$ = 625 $."
+      ],
+      "reponse": "$ 625 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "carre",
+      "enonce": "Calculer $ 26^2 $.",
+      "corrige": [
+        "$ = 676 $."
+      ],
+      "reponse": "$ 676 $"
     }
   ]
 }

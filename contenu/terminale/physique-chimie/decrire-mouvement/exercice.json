@@ -13,134 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "vecteur-vitesse",
-      "enonce": "Dans un repère $(\\mathrm{O}, \\vec{\\imath}, \\vec{\\jmath})$, un mobile a pour équations horaires $x(t) = 3t$ et $y(t) = 4t$ (positions en mètres, $t$ en secondes). 1) Déterminer les coordonnées du vecteur vitesse $\\vec{v}$. 2) Calculer sa norme $v$. 3) Que peut-on dire de ce mouvement ?",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 100 m en 5 s. Vitesse moyenne ?",
       "corrige": [
-        "Le vecteur vitesse s'obtient en dérivant chaque coordonnée de la position par rapport au temps : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 3$ $\\mathrm{m\\cdot s^{-1}}$ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = 4$ $\\mathrm{m\\cdot s^{-1}}$.",
-        "Ces deux coordonnées sont **constantes** : $\\vec{v} = 3\\,\\vec{\\imath} + 4\\,\\vec{\\jmath}$ ne dépend pas du temps.",
-        "Norme : $v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5{,}0$ $\\mathrm{m\\cdot s^{-1}}$.",
-        "Le vecteur vitesse étant constant en norme ET en direction, l'accélération est nulle : c'est un mouvement **rectiligne uniforme**."
+        "$ v = \\dfrac{100}{5} = 20 $ m/s."
       ],
-      "reponse": "$\\vec{v} = 3\\,\\vec{\\imath} + 4\\,\\vec{\\jmath}$ ($\\mathrm{m\\cdot s^{-1}}$), $v = 5{,}0$ $\\mathrm{m\\cdot s^{-1}}$ ; mouvement rectiligne uniforme ($\\vec{a} = \\vec{0}$)."
+      "reponse": "$ 20 $ m/s"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "frenet",
-      "enonce": "Une bille décrit un cercle de rayon $R = 2{,}0$ m à vitesse constante $v = 4{,}0$ $\\mathrm{m\\cdot s^{-1}}$. 1) Justifier que son accélération n'est pas nulle. 2) Calculer la norme de son accélération et préciser sa direction et son sens.",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 120 m en 4 s. Vitesse moyenne ?",
       "corrige": [
-        "La valeur de la vitesse est constante, mais sa **direction** change en permanence puisque la trajectoire est un cercle. Le vecteur $\\vec{v}$ varie, donc $\\vec{a} \\neq \\vec{0}$.",
-        "Le mouvement est circulaire uniforme : la composante tangentielle $a_t = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t}$ est nulle, il ne reste que la composante normale $a_n = \\dfrac{v^2}{R}$.",
-        "Application numérique : $a = a_n = \\dfrac{v^2}{R} = \\dfrac{(4{,}0)^2}{2{,}0} = \\dfrac{16}{2{,}0} = 8{,}0$ $\\mathrm{m\\cdot s^{-2}}$.",
-        "Cette accélération est portée par le vecteur normal $\\vec{u_n}$ : elle est dirigée vers le **centre** du cercle (centripète)."
+        "$ v = \\dfrac{120}{4} = 30 $ m/s."
       ],
-      "reponse": "$a = \\dfrac{v^2}{R} = 8{,}0$ $\\mathrm{m\\cdot s^{-2}}$, dirigée vers le centre du cercle (accélération centripète)."
+      "reponse": "$ 30 $ m/s"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "methode",
-      "enonce": "Un mobile a pour équations horaires $x(t) = t^2 - 4t$ et $y(t) = 3t$ (unités SI). 1) Déterminer les vecteurs vitesse $\\vec{v}(t)$ et accélération $\\vec{a}(t)$. 2) À quel instant la coordonnée $v_x$ de la vitesse s'annule-t-elle ? 3) L'accélération dépend-elle du temps ?",
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 90 m en 3 s. Vitesse moyenne ?",
       "corrige": [
-        "Vitesse (dérivée première de chaque coordonnée) : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 2t - 4$ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = 3$. Donc $\\vec{v}(t) = (2t - 4)\\,\\vec{\\imath} + 3\\,\\vec{\\jmath}$ ($\\mathrm{m\\cdot s^{-1}}$).",
-        "Accélération (dérivée de la vitesse) : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 2$ et $a_y = \\dfrac{\\mathrm{d}v_y}{\\mathrm{d}t} = 0$. Donc $\\vec{a} = 2\\,\\vec{\\imath}$ ($\\mathrm{m\\cdot s^{-2}}$).",
-        "$v_x = 0 \\iff 2t - 4 = 0 \\iff t = 2{,}0$ s.",
-        "Les coordonnées de $\\vec{a}$ sont des constantes : l'accélération **ne dépend pas du temps**, elle est uniforme et vaut $2{,}0$ $\\mathrm{m\\cdot s^{-2}}$ selon $\\vec{\\imath}$."
+        "$ v = \\dfrac{90}{3} = 30 $ m/s."
       ],
-      "reponse": "$\\vec{v}(t) = (2t-4)\\,\\vec{\\imath} + 3\\,\\vec{\\jmath}$, $\\vec{a} = 2\\,\\vec{\\imath}$ (constante) ; $v_x$ s'annule à $t = 2{,}0$ s."
+      "reponse": "$ 30 $ m/s"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "caracteriser-mouvement",
-      "enonce": "Un point situé sur le bord d'un disque tourne à vitesse constante. Le rayon de sa trajectoire est $R = 0{,}30$ m et il effectue un tour complet en une période $T = 0{,}50$ s. 1) Calculer la valeur $v$ de sa vitesse. 2) En déduire la norme de son accélération. On donne $\\pi \\approx 3{,}14$.",
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 200 m en 8 s. Vitesse moyenne ?",
       "corrige": [
-        "En un tour, le point parcourt le périmètre du cercle $2\\pi R$ pendant la durée $T$. Sa vitesse (constante) vaut donc $v = \\dfrac{2\\pi R}{T}$.",
-        "Application numérique : $v = \\dfrac{2 \\times 3{,}14 \\times 0{,}30}{0{,}50} = \\dfrac{1{,}88}{0{,}50} = 3{,}8$ $\\mathrm{m\\cdot s^{-1}}$.",
-        "Le mouvement est circulaire uniforme : $a = \\dfrac{v^2}{R} = \\dfrac{(3{,}8)^2}{0{,}30} = \\dfrac{14{,}2}{0{,}30}$.",
-        "Soit $a \\approx 47$ $\\mathrm{m\\cdot s^{-2}}$, dirigée vers le centre du disque (accélération centripète)."
+        "$ v = \\dfrac{200}{8} = 25 $ m/s."
       ],
-      "reponse": "$v = \\dfrac{2\\pi R}{T} = 3{,}8$ $\\mathrm{m\\cdot s^{-1}}$ ; $a = \\dfrac{v^2}{R} \\approx 47$ $\\mathrm{m\\cdot s^{-2}}$ (centripète)."
+      "reponse": "$ 25 $ m/s"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "caracteriser-mouvement",
-      "enonce": "Un chariot part du repos et se déplace en ligne droite selon l'axe $(\\mathrm{O}, \\vec{\\imath})$. Son équation horaire est $x(t) = 1{,}5\\,t^2$ (position en mètres, $t$ en secondes) ; on a $y(t) = 0$. 1) Déterminer $\\vec{v}(t)$ et $\\vec{a}(t)$. 2) Caractériser le mouvement. 3) Calculer la vitesse et la distance parcourue à $t = 4{,}0$ s.",
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 60 m en 2 s. Vitesse moyenne ?",
       "corrige": [
-        "Vitesse : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 3{,}0\\,t$ et $v_y = 0$, soit $\\vec{v}(t) = 3{,}0\\,t\\,\\vec{\\imath}$ ($\\mathrm{m\\cdot s^{-1}}$). Accélération : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 3{,}0$ et $a_y = 0$, soit $\\vec{a} = 3{,}0\\,\\vec{\\imath}$ ($\\mathrm{m\\cdot s^{-2}}$).",
-        "La trajectoire est une droite (l'axe $\\vec{\\imath}$) et l'accélération est **constante, colinéaire à $\\vec{v}$** et de même sens : le mouvement est **rectiligne uniformément accéléré**. La valeur de la vitesse augmente régulièrement.",
-        "À $t = 4{,}0$ s : $v_x = 3{,}0 \\times 4{,}0 = 12$ $\\mathrm{m\\cdot s^{-1}}$, soit $v = 12$ $\\mathrm{m\\cdot s^{-1}}$.",
-        "Distance parcourue depuis le départ (en $x=0$ à $t=0$) : $x(4{,}0) = 1{,}5 \\times (4{,}0)^2 = 1{,}5 \\times 16 = 24$ m."
+        "$ v = \\dfrac{60}{2} = 30 $ m/s."
       ],
-      "reponse": "$\\vec{v}(t) = 3{,}0\\,t\\,\\vec{\\imath}$, $\\vec{a} = 3{,}0\\,\\vec{\\imath}$ ($\\mathrm{m\\cdot s^{-2}}$) : mouvement rectiligne uniformément accéléré ; à $t = 4{,}0$ s, $v = 12$ $\\mathrm{m\\cdot s^{-1}}$ et $x = 24$ m."
+      "reponse": "$ 30 $ m/s"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "frenet",
-      "enonce": "Une voiture aborde un virage circulaire de rayon $R = 20$ m. À un instant donné, sa vitesse vaut $v = 10$ $\\mathrm{m\\cdot s^{-1}}$ et le conducteur accélère : la valeur de la vitesse augmente au taux $\\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 2{,}0$ $\\mathrm{m\\cdot s^{-2}}$. 1) Calculer les composantes tangentielle $a_t$ et normale $a_n$ de l'accélération dans le repère de Frenet. 2) En déduire la norme de $\\vec{a}$. Le mouvement est-il circulaire uniforme ?",
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 150 m en 3 s. Vitesse moyenne ?",
       "corrige": [
-        "Composante tangentielle : elle traduit la variation de la **valeur** de la vitesse, $a_t = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 2{,}0$ $\\mathrm{m\\cdot s^{-2}}$ (portée par $\\vec{u_t}$).",
-        "Composante normale : elle traduit le changement de direction, $a_n = \\dfrac{v^2}{R} = \\dfrac{10^2}{20} = \\dfrac{100}{20} = 5{,}0$ $\\mathrm{m\\cdot s^{-2}}$ (portée par $\\vec{u_n}$, vers le centre).",
-        "Ces deux composantes sont perpendiculaires : $a = \\sqrt{a_t^2 + a_n^2} = \\sqrt{(2{,}0)^2 + (5{,}0)^2} = \\sqrt{4{,}0 + 25} = \\sqrt{29} \\approx 5{,}4$ $\\mathrm{m\\cdot s^{-2}}$.",
-        "La composante tangentielle est non nulle (la valeur de la vitesse change), donc le mouvement n'est **pas** circulaire uniforme : il est circulaire **accéléré**."
+        "$ v = \\dfrac{150}{3} = 50 $ m/s."
       ],
-      "reponse": "$a_t = 2{,}0$ $\\mathrm{m\\cdot s^{-2}}$, $a_n = \\dfrac{v^2}{R} = 5{,}0$ $\\mathrm{m\\cdot s^{-2}}$, $a = \\sqrt{a_t^2 + a_n^2} \\approx 5{,}4$ $\\mathrm{m\\cdot s^{-2}}$ ; le mouvement n'est pas uniforme (car $a_t \\neq 0$)."
+      "reponse": "$ 50 $ m/s"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "vecteur-vitesse",
-      "enonce": "Une bille est lâchée depuis un chariot qui roule. Dans le repère $(\\mathrm{O}, \\vec{\\imath}, \\vec{\\jmath})$, avec $\\vec{\\jmath}$ dirigé vers le haut, ses équations horaires sont $x(t) = 8{,}0\\,t$ et $y(t) = -5{,}0\\,t^2$ (unités SI). 1) Déterminer les vecteurs vitesse $\\vec{v}(t)$ et accélération $\\vec{a}(t)$. 2) Calculer la valeur de la vitesse à $t = 2{,}0$ s.",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 240 m en 6 s. Vitesse moyenne ?",
       "corrige": [
-        "Vitesse (dérivée de chaque coordonnée de la position) : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 8{,}0$ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = -10\\,t$. Donc $\\vec{v}(t) = 8{,}0\\,\\vec{\\imath} - 10\\,t\\,\\vec{\\jmath}$ ($\\mathrm{m\\cdot s^{-1}}$).",
-        "Accélération (dérivée de la vitesse) : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 0$ et $a_y = \\dfrac{\\mathrm{d}v_y}{\\mathrm{d}t} = -10$. Donc $\\vec{a} = -10\\,\\vec{\\jmath}$ ($\\mathrm{m\\cdot s^{-2}}$) : accélération constante, dirigée vers le bas.",
-        "À $t = 2{,}0$ s : $v_x = 8{,}0$ $\\mathrm{m\\cdot s^{-1}}$ et $v_y = -10 \\times 2{,}0 = -20$ $\\mathrm{m\\cdot s^{-1}}$.",
-        "Norme : $v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{(8{,}0)^2 + (-20)^2} = \\sqrt{64 + 400} = \\sqrt{464} \\approx 22$ $\\mathrm{m\\cdot s^{-1}}$."
+        "$ v = \\dfrac{240}{6} = 40 $ m/s."
       ],
-      "reponse": "$\\vec{v}(t) = 8{,}0\\,\\vec{\\imath} - 10\\,t\\,\\vec{\\jmath}$, $\\vec{a} = -10\\,\\vec{\\jmath}$ ($\\mathrm{m\\cdot s^{-2}}$, constante) ; à $t = 2{,}0$ s, $v = \\sqrt{464} \\approx 22$ $\\mathrm{m\\cdot s^{-1}}$."
+      "reponse": "$ 40 $ m/s"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "caracteriser-mouvement",
-      "enonce": "Un point situé à l'extrémité d'une pale de ventilateur décrit un cercle de rayon $R = 0{,}12$ m. Le ventilateur tourne à la fréquence $f = 25$ tours par seconde, à vitesse constante. 1) Déterminer la période $T$ du mouvement. 2) Calculer la valeur $v$ de la vitesse du point. 3) En déduire la norme de son accélération et préciser sa direction. On prend $\\pi \\approx 3{,}14$.",
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 80 m en 4 s. Vitesse moyenne ?",
       "corrige": [
-        "La période est la durée d'un tour : $T = \\dfrac{1}{f} = \\dfrac{1}{25} = 0{,}040$ s.",
-        "En un tour, le point parcourt le périmètre $2\\pi R$ pendant $T$, donc $v = \\dfrac{2\\pi R}{T} = \\dfrac{2 \\times 3{,}14 \\times 0{,}12}{0{,}040} = \\dfrac{0{,}754}{0{,}040} \\approx 19$ $\\mathrm{m\\cdot s^{-1}}$.",
-        "Le mouvement est circulaire uniforme (vitesse constante en valeur) : l'accélération se réduit à sa composante normale $a = \\dfrac{v^2}{R} = \\dfrac{(18{,}8)^2}{0{,}12} = \\dfrac{354}{0{,}12}$.",
-        "Soit $a \\approx 3{,}0 \\times 10^3$ $\\mathrm{m\\cdot s^{-2}}$, dirigée vers le centre du cercle (accélération centripète)."
+        "$ v = \\dfrac{80}{4} = 20 $ m/s."
       ],
-      "reponse": "$T = \\dfrac{1}{f} = 0{,}040$ s ; $v = \\dfrac{2\\pi R}{T} \\approx 19$ $\\mathrm{m\\cdot s^{-1}}$ ; $a = \\dfrac{v^2}{R} \\approx 3{,}0 \\times 10^3$ $\\mathrm{m\\cdot s^{-2}}$ (centripète)."
+      "reponse": "$ 20 $ m/s"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "caracteriser-mouvement",
-      "enonce": "Un mobile a pour équations horaires $x(t) = 2t$ et $y(t) = t^3 - 3t$ (unités SI, $t \\geq 0$). 1) Déterminer les vecteurs vitesse $\\vec{v}(t)$ et accélération $\\vec{a}(t)$. 2) À quel instant le vecteur accélération est-il nul ? 3) Ce mouvement est-il l'un des trois mouvements types du cours (rectiligne uniforme, rectiligne uniformément accéléré, circulaire uniforme) ? Justifier.",
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 45 m en 3 s. Vitesse moyenne ?",
       "corrige": [
-        "Vitesse : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 2$ et $v_y = \\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = 3t^2 - 3$. Donc $\\vec{v}(t) = 2\\,\\vec{\\imath} + (3t^2 - 3)\\,\\vec{\\jmath}$ ($\\mathrm{m\\cdot s^{-1}}$).",
-        "Accélération : $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 0$ et $a_y = \\dfrac{\\mathrm{d}v_y}{\\mathrm{d}t} = 6t$. Donc $\\vec{a}(t) = 6t\\,\\vec{\\jmath}$ ($\\mathrm{m\\cdot s^{-2}}$).",
-        "$\\vec{a} = \\vec{0} \\iff 6t = 0 \\iff t = 0$ s : l'accélération n'est nulle qu'à l'instant initial, et non nulle ensuite.",
-        "Les coordonnées de $\\vec{a}$ dépendent du temps (via le terme $6t$) : l'accélération n'est pas constante. Le mouvement n'est donc ni rectiligne uniforme ($\\vec{a} \\neq \\vec{0}$), ni rectiligne uniformément accéléré ($\\vec{a}$ non constant). En éliminant $t$ ($t = x/2$), la trajectoire a pour équation $y = \\left(\\dfrac{x}{2}\\right)^3 - 3\\dfrac{x}{2}$ : ce n'est pas un cercle, donc pas circulaire uniforme non plus. Ce mouvement n'entre dans aucun des trois cas types."
+        "$ v = \\dfrac{45}{3} = 15 $ m/s."
       ],
-      "reponse": "$\\vec{v}(t) = 2\\,\\vec{\\imath} + (3t^2 - 3)\\,\\vec{\\jmath}$, $\\vec{a}(t) = 6t\\,\\vec{\\jmath}$ ; $\\vec{a} = \\vec{0}$ seulement à $t = 0$ s ; l'accélération variant avec le temps, le mouvement n'est aucun des trois types du cours."
+      "reponse": "$ 15 $ m/s"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "caracteriser-mouvement",
-      "enonce": "Essai d'une voiture sur un circuit. On étudie le mouvement dans le référentiel terrestre. **Phase 1 — ligne droite.** Partant de l'arrêt, la voiture roule en ligne droite selon l'axe $(\\mathrm{O}, \\vec{\\imath})$ ; son équation horaire est $x(t) = 2{,}5\\,t^2$ (position en mètres, $t$ en secondes), avec $y(t) = 0$. **Phase 2 — virage.** Plus loin, la voiture aborde un virage circulaire de rayon $R = 80$ m qu'elle parcourt à vitesse constante $v = 20$ $\\mathrm{m\\cdot s^{-1}}$. On donne $g = 9{,}8$ $\\mathrm{m\\cdot s^{-2}}$. 1) Pour la phase 1, déterminer les vecteurs $\\vec{v}(t)$ et $\\vec{a}(t)$, puis caractériser le mouvement. 2) Calculer la valeur de la vitesse à $t = 8{,}0$ s et l'exprimer en $\\mathrm{km\\cdot h^{-1}}$. 3) Quelle distance la voiture a-t-elle parcourue au bout de ces $8{,}0$ s ? 4) Pour la phase 2, justifier que l'accélération n'est pas nulle bien que la valeur de la vitesse soit constante. 5) Calculer la norme de l'accélération dans le virage et préciser sa direction et son sens. 6) Comparer cette accélération à $g$ et commenter.",
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 300 m en 5 s. Vitesse moyenne ?",
       "corrige": [
-        "1. Phase 1 : $v_x = \\dfrac{\\mathrm{d}x}{\\mathrm{d}t} = 5{,}0\\,t$ et $v_y = 0$, soit $\\vec{v}(t) = 5{,}0\\,t\\,\\vec{\\imath}$ ($\\mathrm{m\\cdot s^{-1}}$). Puis $a_x = \\dfrac{\\mathrm{d}v_x}{\\mathrm{d}t} = 5{,}0$ et $a_y = 0$, soit $\\vec{a} = 5{,}0\\,\\vec{\\imath}$ ($\\mathrm{m\\cdot s^{-2}}$). La trajectoire est une droite et $\\vec{a}$ est constant, colinéaire à $\\vec{v}$ et de même sens : le mouvement est **rectiligne uniformément accéléré**.",
-        "2. À $t = 8{,}0$ s : $v = v_x = 5{,}0 \\times 8{,}0 = 40$ $\\mathrm{m\\cdot s^{-1}}$. En $\\mathrm{km\\cdot h^{-1}}$ : $v = 40 \\times 3{,}6 = 144$ $\\mathrm{km\\cdot h^{-1}}$.",
-        "3. Distance parcourue depuis le départ (en $x = 0$ à $t = 0$) : $x(8{,}0) = 2{,}5 \\times (8{,}0)^2 = 2{,}5 \\times 64 = 160$ m.",
-        "4. Phase 2 : dans le virage, la **valeur** de la vitesse est constante, mais sa **direction** change en permanence (trajectoire courbe). Le vecteur $\\vec{v}$ varie donc, ce qui impose $\\vec{a} \\neq \\vec{0}$.",
-        "5. Le mouvement étant circulaire uniforme, la composante tangentielle est nulle et il ne reste que la composante normale : $a = \\dfrac{v^2}{R} = \\dfrac{20^2}{80} = \\dfrac{400}{80} = 5{,}0$ $\\mathrm{m\\cdot s^{-2}}$. Elle est portée par $\\vec{u_n}$, dirigée vers le **centre** du virage (accélération centripète).",
-        "6. On compare : $\\dfrac{a}{g} = \\dfrac{5{,}0}{9{,}8} \\approx 0{,}51$. L'accélération dans le virage vaut environ la moitié de $g$ : elle est loin d'être négligeable et explique la sensation d'être « plaqué » vers l'extérieur du virage."
+        "$ v = \\dfrac{300}{5} = 60 $ m/s."
       ],
-      "reponse": "Phase 1 : $\\vec{v}(t) = 5{,}0\\,t\\,\\vec{\\imath}$, $\\vec{a} = 5{,}0\\,\\vec{\\imath}$ $\\mathrm{m\\cdot s^{-2}}$ (rectiligne uniformément accéléré) ; à $t = 8{,}0$ s, $v = 40$ $\\mathrm{m\\cdot s^{-1}}$ $= 144$ $\\mathrm{km\\cdot h^{-1}}$ et $x = 160$ m. Phase 2 : $\\vec{a} \\neq \\vec{0}$ car la direction de $\\vec{v}$ change ; $a = \\dfrac{v^2}{R} = 5{,}0$ $\\mathrm{m\\cdot s^{-2}}$ (centripète), soit environ $0{,}5\\,g$."
+      "reponse": "$ 60 $ m/s"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 70 m en 2 s. Vitesse moyenne ?",
+      "corrige": [
+        "$ v = \\dfrac{70}{2} = 35 $ m/s."
+      ],
+      "reponse": "$ 35 $ m/s"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "Un mobile parcourt 180 m en 9 s. Vitesse moyenne ?",
+      "corrige": [
+        "$ v = \\dfrac{180}{9} = 20 $ m/s."
+      ],
+      "reponse": "$ 20 $ m/s"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 20 m/s en 4 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{20}{4} = 5 $ m/s²."
+      ],
+      "reponse": "$ 5 $ m/s²"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 30 m/s en 5 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{30}{5} = 6 $ m/s²."
+      ],
+      "reponse": "$ 6 $ m/s²"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 12 m/s en 3 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{12}{3} = 4 $ m/s²."
+      ],
+      "reponse": "$ 4 $ m/s²"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 40 m/s en 8 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{40}{8} = 5 $ m/s²."
+      ],
+      "reponse": "$ 5 $ m/s²"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 15 m/s en 3 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{15}{3} = 5 $ m/s²."
+      ],
+      "reponse": "$ 5 $ m/s²"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 50 m/s en 10 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{50}{10} = 5 $ m/s²."
+      ],
+      "reponse": "$ 5 $ m/s²"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 18 m/s en 6 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{18}{6} = 3 $ m/s²."
+      ],
+      "reponse": "$ 3 $ m/s²"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 24 m/s en 4 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{24}{4} = 6 $ m/s²."
+      ],
+      "reponse": "$ 6 $ m/s²"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 9 m/s en 3 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{9}{3} = 3 $ m/s²."
+      ],
+      "reponse": "$ 3 $ m/s²"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "acceleration",
+      "enonce": "La vitesse varie de 60 m/s en 12 s. Acceleration moyenne ?",
+      "corrige": [
+        "$ a = \\dfrac{\\Delta v}{\\Delta t} = \\dfrac{60}{12} = 5 $ m/s²."
+      ],
+      "reponse": "$ 5 $ m/s²"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "50 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 10 $ m/s."
+      ],
+      "reponse": "$ 10 $ m/s"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "100 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 20 $ m/s."
+      ],
+      "reponse": "$ 20 $ m/s"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "150 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 30 $ m/s."
+      ],
+      "reponse": "$ 30 $ m/s"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "200 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 40 $ m/s."
+      ],
+      "reponse": "$ 40 $ m/s"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "250 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 50 $ m/s."
+      ],
+      "reponse": "$ 50 $ m/s"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "300 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 60 $ m/s."
+      ],
+      "reponse": "$ 60 $ m/s"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "350 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 70 $ m/s."
+      ],
+      "reponse": "$ 70 $ m/s"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "400 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 80 $ m/s."
+      ],
+      "reponse": "$ 80 $ m/s"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "450 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 90 $ m/s."
+      ],
+      "reponse": "$ 90 $ m/s"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "500 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 100 $ m/s."
+      ],
+      "reponse": "$ 100 $ m/s"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "550 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 110 $ m/s."
+      ],
+      "reponse": "$ 110 $ m/s"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "600 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 120 $ m/s."
+      ],
+      "reponse": "$ 120 $ m/s"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "650 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 130 $ m/s."
+      ],
+      "reponse": "$ 130 $ m/s"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "700 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 140 $ m/s."
+      ],
+      "reponse": "$ 140 $ m/s"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "750 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 150 $ m/s."
+      ],
+      "reponse": "$ 150 $ m/s"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "800 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 160 $ m/s."
+      ],
+      "reponse": "$ 160 $ m/s"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "850 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 170 $ m/s."
+      ],
+      "reponse": "$ 170 $ m/s"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "900 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 180 $ m/s."
+      ],
+      "reponse": "$ 180 $ m/s"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "950 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 190 $ m/s."
+      ],
+      "reponse": "$ 190 $ m/s"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1000 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 200 $ m/s."
+      ],
+      "reponse": "$ 200 $ m/s"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1050 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 210 $ m/s."
+      ],
+      "reponse": "$ 210 $ m/s"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1100 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 220 $ m/s."
+      ],
+      "reponse": "$ 220 $ m/s"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1150 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 230 $ m/s."
+      ],
+      "reponse": "$ 230 $ m/s"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1200 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 240 $ m/s."
+      ],
+      "reponse": "$ 240 $ m/s"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1250 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 250 $ m/s."
+      ],
+      "reponse": "$ 250 $ m/s"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1300 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 260 $ m/s."
+      ],
+      "reponse": "$ 260 $ m/s"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1350 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 270 $ m/s."
+      ],
+      "reponse": "$ 270 $ m/s"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "vitesse",
+      "enonce": "1400 m en 5 s : vitesse ?",
+      "corrige": [
+        "$ = 280 $ m/s."
+      ],
+      "reponse": "$ 280 $ m/s"
     }
   ]
 }

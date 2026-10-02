@@ -14,128 +14,501 @@
       "id": 1,
       "difficulte": "application",
       "notion": "esperance",
-      "enonce": "À une kermesse, une partie de roue coûte $2$ €. La roue rapporte $0$ € avec la probabilité $0{,}7$, $5$ € avec la probabilité $0{,}2$ et $10$ € avec la probabilité $0{,}1$. On note $X$ le gain algébrique d'un joueur (somme reçue moins la mise). (a) Donner la loi de probabilité de $X$ dans un tableau et vérifier qu'il s'agit bien d'une loi de probabilité. (b) Calculer $E(X)$. (c) Interpréter le résultat : ce jeu est-il favorable au joueur, défavorable, ou équitable ?",
+      "enonce": "$ X $ suit $ B(10;\\dfrac{1}{2}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Le joueur paie $2$ € puis reçoit $0$, $5$ ou $10$ € : le gain algébrique vaut $0 - 2 = -2$, $5 - 2 = 3$ ou $10 - 2 = 8$. Loi de $X$ : $P(X = -2) = 0{,}7$ ; $P(X = 3) = 0{,}2$ ; $P(X = 8) = 0{,}1$. Contrôle : $0{,}7 + 0{,}2 + 0{,}1 = 1$, c'est bien une loi de probabilité.",
-        "(b) $E(X) = (-2) \\times 0{,}7 + 3 \\times 0{,}2 + 8 \\times 0{,}1 = -1{,}4 + 0{,}6 + 0{,}8 = 0$. Attention à bien pondérer chaque valeur par sa probabilité : la moyenne simple des trois valeurs n'aurait aucun sens ici.",
-        "(c) $E(X) = 0$ : le jeu est équitable. Sur un grand nombre de parties, le joueur ne gagne ni ne perd d'argent en moyenne. Cela ne dit rien d'une partie donnée : à chaque partie, il perd $2$ €, gagne $3$ € ou gagne $8$ €, jamais $0$ €."
+        "$ E(X) = 10\\times \\dfrac{1}{2} = 5 $."
       ],
-      "reponse": "(a) $P(X=-2) = 0{,}7$ ; $P(X=3) = 0{,}2$ ; $P(X=8) = 0{,}1$ ; (b) $E(X) = 0$ ; (c) jeu équitable."
+      "reponse": "$ 5 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "triangle-de-pascal",
-      "enonce": "(a) Construire le triangle de Pascal jusqu'à la ligne $n = 6$ en rappelant la règle de construction. (b) En déduire les valeurs de $\\dbinom{6}{2}$ et $\\dbinom{6}{4}$. Que remarque-t-on ? (c) Sans écrire la ligne $7$, calculer $\\dbinom{7}{3}$ à l'aide de la règle de construction.",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(20;\\dfrac{1}{4}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Règle : chaque ligne commence et finit par $1$, et chaque autre nombre est la somme des deux nombres situés au-dessus de lui. Lignes $0$ à $6$ : $1$ ; $1\\ 1$ ; $1\\ 2\\ 1$ ; $1\\ 3\\ 3\\ 1$ ; $1\\ 4\\ 6\\ 4\\ 1$ ; $1\\ 5\\ 10\\ 10\\ 5\\ 1$ ; $1\\ 6\\ 15\\ 20\\ 15\\ 6\\ 1$.",
-        "(b) Sur la ligne $6$, en numérotant les colonnes à partir de $0$ : $\\dbinom{6}{2} = 15$ (troisième nombre) et $\\dbinom{6}{4} = 15$ (cinquième nombre). On remarque que $\\dbinom{6}{2} = \\dbinom{6}{4}$ : c'est la symétrie du triangle, $\\dbinom{n}{k} = \\dbinom{n}{n-k}$ — chaque ligne se lit pareil dans les deux sens.",
-        "(c) $\\dbinom{7}{3} = \\dbinom{6}{2} + \\dbinom{6}{3} = 15 + 20 = 35$ : chaque nombre de la ligne $7$ est la somme des deux nombres de la ligne $6$ situés au-dessus de lui."
+        "$ E(X) = 20\\times \\dfrac{1}{4} = 5 $."
       ],
-      "reponse": "(b) $\\dbinom{6}{2} = \\dbinom{6}{4} = 15$ (symétrie du triangle) ; (c) $\\dbinom{7}{3} = 15 + 20 = 35$."
+      "reponse": "$ 5 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "loi-binomiale",
-      "enonce": "Dans la production d'une usine, $4\\,\\%$ des pièces présentent un défaut. On prélève $10$ pièces au hasard ; la production est suffisamment importante pour assimiler ce prélèvement à $10$ tirages indépendants. On note $X$ le nombre de pièces défectueuses du prélèvement. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Interpréter l'événement $\\{X = 0\\}$ par une phrase, puis calculer sa probabilité arrondie au millième. (c) Calculer $P(X = 1)$, arrondie au millième.",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(12;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Prélever une pièce est une épreuve de Bernoulli : succès « la pièce est défectueuse » de probabilité $p = 0{,}04$, échec sinon. Cette épreuve est répétée $n = 10$ fois de façon identique et indépendante (production assez grande), et $X$ compte le nombre de succès. Donc $X \\sim B(10\\,;\\ 0{,}04)$.",
-        "(b) $\\{X = 0\\}$ : « aucune des $10$ pièces prélevées n'est défectueuse ». Un seul chemin (que des échecs) : $P(X = 0) = (1 - 0{,}04)^{10} = 0{,}96^{10} \\approx 0{,}665$. Le coefficient $\\dbinom{10}{0} = 1$ ne change rien ici.",
-        "(c) $P(X = 1) = \\dbinom{10}{1} \\times 0{,}04^1 \\times 0{,}96^{9}$ avec $\\dbinom{10}{1} = 10$ (un seul succès, dix positions possibles). $P(X = 1) = 10 \\times 0{,}04 \\times 0{,}96^9 \\approx 10 \\times 0{,}04 \\times 0{,}6925 \\approx 0{,}277$. Vérification de cohérence : les exposants $1$ et $9$ somment bien à $n = 10$."
+        "$ E(X) = 12\\times \\dfrac{1}{3} = 4 $."
       ],
-      "reponse": "(a) $X \\sim B(10\\,;\\ 0{,}04)$ ; (b) $P(X = 0) = 0{,}96^{10} \\approx 0{,}665$ ; (c) $P(X = 1) \\approx 0{,}277$."
+      "reponse": "$ 4 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "calculer-p-x-k",
-      "enonce": "Une basketteuse réussit chacun de ses lancers francs avec la probabilité $0{,}6$, ses lancers étant supposés indépendants. Lors d'un entraînement, elle tente une série de $5$ lancers. On note $X$ le nombre de lancers réussis. (a) Justifier que $X \\sim B(5\\,;\\ 0{,}6)$. (b) Lire $\\dbinom{5}{3}$ dans le triangle de Pascal en précisant la ligne et la colonne utilisées. (c) Calculer $P(X = 3)$ (valeur exacte). (d) Calculer $E(X)$ et interpréter le résultat.",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(8;\\dfrac{1}{2}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Chaque lancer est une épreuve de Bernoulli (succès « lancer réussi », $p = 0{,}6$), répétée $n = 5$ fois de façon indépendante, et $X$ compte les succès : $X \\sim B(5\\,;\\ 0{,}6)$.",
-        "(b) Ligne $5$ du triangle : $1$, $5$, $10$, $10$, $5$, $1$. En numérotant les colonnes à partir de $0$, la colonne $3$ donne $\\dbinom{5}{3} = 10$ (le quatrième nombre de la ligne, pas le troisième).",
-        "(c) $P(X = 3) = \\dbinom{5}{3} \\times 0{,}6^3 \\times 0{,}4^2 = 10 \\times 0{,}216 \\times 0{,}16 = 0{,}3456$. Sans le coefficient $10$, on n'aurait que la probabilité d'un seul ordre de réussites/échecs parmi les dix possibles.",
-        "(d) $E(X) = np = 5 \\times 0{,}6 = 3$ : sur un grand nombre de séries de $5$ lancers, la basketteuse réussit en moyenne $3$ lancers par série. C'est une moyenne, pas une certitude : à une série donnée, elle peut réussir de $0$ à $5$ lancers."
+        "$ E(X) = 8\\times \\dfrac{1}{2} = 4 $."
       ],
-      "reponse": "(b) $\\dbinom{5}{3} = 10$ ; (c) $P(X = 3) = 0{,}3456$ ; (d) $E(X) = 3$ lancers réussis en moyenne par série."
+      "reponse": "$ 4 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
+      "difficulte": "application",
       "notion": "esperance",
-      "enonce": "Une association organise un jeu pour financer un projet. Le joueur paie $t$ euros la partie ($t > 0$), puis fait tourner une roue qui rapporte $10$ € avec la probabilité $0{,}1$, $2$ € avec la probabilité $0{,}3$ et rien sinon. On note $X$ le gain algébrique du joueur. (a) Pour $t = 2$, donner la loi de $X$ et calculer $E(X)$. (b) Interpréter ce résultat du point de vue de l'association, puis estimer sa recette moyenne pour $500$ parties jouées. (c) Déterminer la valeur de $t$ rendant le jeu équitable.",
+      "enonce": "$ X $ suit $ B(15;\\dfrac{1}{5}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Pour $t = 2$, le gain algébrique vaut $10 - 2 = 8$ (probabilité $0{,}1$), $2 - 2 = 0$ (probabilité $0{,}3$) ou $0 - 2 = -2$ (probabilité $1 - 0{,}1 - 0{,}3 = 0{,}6$). $E(X) = 8 \\times 0{,}1 + 0 \\times 0{,}3 + (-2) \\times 0{,}6 = 0{,}8 + 0 - 1{,}2 = -0{,}4$.",
-        "(b) Le joueur perd en moyenne $0{,}40$ € par partie, donc l'association gagne en moyenne $0{,}40$ € par partie. Pour $500$ parties, la recette moyenne est d'environ $500 \\times 0{,}40 = 200$ €. C'est une estimation en moyenne : la recette réelle fluctue autour de cette valeur.",
-        "(c) Pour un prix $t$ quelconque, les valeurs de $X$ sont $10 - t$, $2 - t$ et $-t$, d'où $E(X) = (10 - t) \\times 0{,}1 + (2 - t) \\times 0{,}3 + (-t) \\times 0{,}6 = 1 + 0{,}6 - t = 1{,}6 - t$. Le jeu est équitable quand $E(X) = 0$, soit $t = 1{,}60$ €. Cohérence : pour $t = 2 > 1{,}60$, on retrouve bien une espérance négative pour le joueur."
+        "$ E(X) = 15\\times \\dfrac{1}{5} = 3 $."
       ],
-      "reponse": "(a) $E(X) = -0{,}4$ ; (b) recette moyenne $\\approx 200$ € pour $500$ parties ; (c) $t = 1{,}60$ €."
+      "reponse": "$ 3 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "calculer-p-x-k",
-      "enonce": "Un QCM comporte $6$ questions ; chaque question offre $4$ réponses dont une seule est correcte. Un élève n'a pas appris son cours et répond entièrement au hasard, question après question. On note $X$ le nombre de bonnes réponses. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Calculer la probabilité que l'élève obtienne un sans-faute, en valeur exacte puis arrondie au dix-millième. (c) Calculer $P(X = 2)$, arrondie au millième (on donne $\\dbinom{6}{2} = 15$). (d) Calculer $E(X)$. Le QCM est réussi à partir de $3$ bonnes réponses : commenter la stratégie « répondre au hasard ».",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(6;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Chaque question est une épreuve de Bernoulli : succès « la réponse est correcte », de probabilité $p = \\dfrac{1}{4} = 0{,}25$ (une bonne réponse sur quatre, choisie au hasard). L'épreuve est répétée $n = 6$ fois de façon indépendante (les réponses aux différentes questions ne s'influencent pas), et $X$ compte les succès : $X \\sim B(6\\,;\\ 0{,}25)$.",
-        "(b) Le sans-faute est $\\{X = 6\\}$ : un seul chemin, que des succès. $P(X = 6) = 0{,}25^6 = \\left(\\dfrac{1}{4}\\right)^6 = \\dfrac{1}{4096} \\approx 0{,}0002$. Autant dire quasiment impossible.",
-        "(c) $P(X = 2) = \\dbinom{6}{2} \\times 0{,}25^2 \\times 0{,}75^4 = 15 \\times 0{,}0625 \\times 0{,}31640625 \\approx 0{,}297$. Les exposants $2$ et $4$ somment bien à $6$, et le coefficient $15$ compte les $15$ façons de placer les $2$ bonnes réponses parmi les $6$ questions.",
-        "(d) $E(X) = np = 6 \\times 0{,}25 = 1{,}5$ : en répondant au hasard, un élève obtient en moyenne $1{,}5$ bonne réponse sur $6$. La moyenne est nettement sous le seuil de réussite de $3$ bonnes réponses : répondre au hasard est une mauvaise stratégie — apprendre son cours reste la seule option raisonnable."
+        "$ E(X) = 6\\times \\dfrac{1}{3} = 2 $."
       ],
-      "reponse": "(a) $X \\sim B(6\\,;\\ 0{,}25)$ ; (b) $P(X = 6) = \\dfrac{1}{4096} \\approx 0{,}0002$ ; (c) $P(X = 2) \\approx 0{,}297$ ; (d) $E(X) = 1{,}5 < 3$ : le hasard ne suffit pas."
+      "reponse": "$ 2 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "calculer-p-x-k",
-      "enonce": "Un maraîcher sème $6$ graines issues d'un même sachet ; d'après le fournisseur, chaque graine germe avec la probabilité $0{,}8$, indépendamment des autres. On note $X$ le nombre de graines qui germent. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Calculer la probabilité que les $6$ graines germent (valeur exacte, puis arrondie au millième). (c) Calculer la probabilité qu'aucune graine ne germe (valeur exacte).",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(30;\\dfrac{1}{6}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Semer une graine est une épreuve de Bernoulli : succès « la graine germe » de probabilité $p = 0{,}8$, échec sinon. Cette épreuve est répétée $n = 6$ fois de façon identique et indépendante, et $X$ compte le nombre de succès : $X \\sim B(6\\,;\\ 0{,}8)$.",
-        "(b) « Les $6$ graines germent » est l'événement $\\{X = 6\\}$ : un seul chemin (que des succès), donc $\\dbinom{6}{6} = 1$ et $P(X = 6) = 0{,}8^6 = 0{,}262144 \\approx 0{,}262$.",
-        "(c) « Aucune graine ne germe » est l'événement $\\{X = 0\\}$ : un seul chemin (que des échecs), donc $P(X = 0) = (1 - 0{,}8)^6 = 0{,}2^6 = 0{,}000064$. C'est quasiment impossible : avec un taux de germination de $80\\,\\%$, il serait très étonnant qu'aucune des six graines ne lève."
+        "$ E(X) = 30\\times \\dfrac{1}{6} = 5 $."
       ],
-      "reponse": "(a) $X \\sim B(6\\,;\\ 0{,}8)$ ; (b) $P(X = 6) = 0{,}8^6 \\approx 0{,}262$ ; (c) $P(X = 0) = 0{,}2^6 = 0{,}000064$."
+      "reponse": "$ 5 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
+      "difficulte": "application",
       "notion": "esperance",
-      "enonce": "Une association vend $500$ billets de tombola à $2$ € l'unité. Un billet gagne le gros lot de $300$ €, cinq billets gagnent chacun $20$ € et tous les autres billets ne gagnent rien. Une personne achète un billet ; on note $X$ son gain algébrique (montant reçu moins le prix du billet). (a) Donner la loi de probabilité de $X$ et vérifier qu'il s'agit bien d'une loi de probabilité. (b) Calculer $E(X)$ et l'interpréter pour l'acheteur. (c) En déduire le bénéfice moyen de l'association si les $500$ billets sont vendus.",
+      "enonce": "$ X $ suit $ B(24;\\dfrac{1}{4}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Sur les $500$ billets : $1$ rapporte $300 - 2 = 298$ € (probabilité $\\dfrac{1}{500} = 0{,}002$), $5$ rapportent $20 - 2 = 18$ € (probabilité $\\dfrac{5}{500} = 0{,}01$) et les $494$ restants rapportent $0 - 2 = -2$ € (probabilité $\\dfrac{494}{500} = 0{,}988$). Contrôle : $0{,}002 + 0{,}01 + 0{,}988 = 1$, c'est bien une loi de probabilité.",
-        "(b) $E(X) = 298 \\times 0{,}002 + 18 \\times 0{,}01 + (-2) \\times 0{,}988 = 0{,}596 + 0{,}18 - 1{,}976 = -1{,}2$. Sur un grand nombre de billets achetés, l'acheteur perd en moyenne $1{,}20$ € par billet : le jeu lui est défavorable, ce qui est normal pour une tombola destinée à financer l'association.",
-        "(c) Ce que le joueur perd en moyenne, l'association le gagne : environ $1{,}20$ € par billet, soit $500 \\times 1{,}20 = 600$ € pour les $500$ billets. Vérification directe : recette $500 \\times 2 = 1000$ €, lots distribués $300 + 5 \\times 20 = 400$ €, bénéfice $1000 - 400 = 600$ €. ✓"
+        "$ E(X) = 24\\times \\dfrac{1}{4} = 6 $."
       ],
-      "reponse": "(a) $P(X = 298) = 0{,}002$ ; $P(X = 18) = 0{,}01$ ; $P(X = -2) = 0{,}988$ ; (b) $E(X) = -1{,}2$ € ; (c) bénéfice moyen de l'association $\\approx 600$ €."
+      "reponse": "$ 6 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "loi-binomiale",
-      "enonce": "Un atelier possède $5$ machines identiques fonctionnant indépendamment les unes des autres. Un jour donné, chaque machine tombe en panne avec la probabilité $0{,}1$. On note $X$ le nombre de machines en panne ce jour-là. (a) Justifier que $X$ suit une loi binomiale dont on précisera les paramètres. (b) Calculer la probabilité qu'aucune machine ne tombe en panne (arrondie au millième). (c) En déduire la probabilité qu'au moins une machine tombe en panne. Le chef d'atelier affirme : « il y a moins d'une chance sur trois qu'au moins une machine tombe en panne un jour donné ». A-t-il raison ? (d) Calculer $E(X)$ et l'interpréter.",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(9;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "(a) Pour une machine, « tomber en panne ce jour-là » est une épreuve de Bernoulli de paramètre $p = 0{,}1$. Les $5$ machines sont identiques et indépendantes, et $X$ compte le nombre de pannes (les succès) : $X \\sim B(5\\,;\\ 0{,}1)$.",
-        "(b) « Aucune panne » est l'événement $\\{X = 0\\}$ : $P(X = 0) = (1 - 0{,}1)^5 = 0{,}9^5 = 0{,}59049 \\approx 0{,}590$.",
-        "(c) « Au moins une machine tombe en panne » est l'événement contraire de « aucune panne » : $P(X \\geq 1) = 1 - P(X = 0) = 1 - 0{,}59049 = 0{,}40951 \\approx 0{,}410$. Or $\\dfrac{1}{3} \\approx 0{,}333$ et $0{,}410 > 0{,}333$ : il y a en réalité plus d'une chance sur trois qu'au moins une machine tombe en panne. Le chef d'atelier a donc tort.",
-        "(d) $E(X) = np = 5 \\times 0{,}1 = 0{,}5$ : sur un grand nombre de jours, on compte en moyenne $0{,}5$ machine en panne par jour, soit environ une panne tous les deux jours. $0{,}5$ n'est pas une valeur possible de $X$ : c'est une moyenne, pas un résultat certain."
+        "$ E(X) = 9\\times \\dfrac{1}{3} = 3 $."
       ],
-      "reponse": "(a) $X \\sim B(5\\,;\\ 0{,}1)$ ; (b) $P(X = 0) = 0{,}9^5 \\approx 0{,}590$ ; (c) $P(X \\geq 1) \\approx 0{,}410 > \\frac{1}{3}$, le chef a tort ; (d) $E(X) = 0{,}5$."
+      "reponse": "$ 3 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "loi-binomiale",
-      "enonce": "**Problème.** Un artisan fabrique des jouets en bois qu'il vend par lots de $6$. Chaque jouet présente un défaut avec la probabilité $0{,}05$, indépendamment des autres. Avant la vente, il contrôle les $6$ jouets d'un lot ; on note $X$ le nombre de jouets défectueux du lot.\n\n**Partie A — étude du nombre de défauts.**\n1. Justifier que $X$ suit la loi binomiale $B(6\\,;\\ 0{,}05)$.\n2. Rappeler la ligne $6$ du triangle de Pascal, puis en déduire $\\dbinom{6}{0}$, $\\dbinom{6}{1}$ et $\\dbinom{6}{2}$.\n3. Calculer $P(X = 0)$ puis $P(X = 1)$, arrondies au millième.\n4. En déduire la probabilité qu'un lot contienne au moins $2$ jouets défectueux, arrondie au millième.\n5. Calculer $E(X)$ et interpréter.\n\n**Partie B — bénéfice de l'artisan.**\nL'artisan tire de chaque lot un bénéfice $G$ (en euros) qui dépend du nombre de défauts : si le lot n'a aucun défaut, $G = 40$ ; s'il a exactement un défaut, $G = 25$ ; s'il a deux défauts ou plus, le lot est mis au rebut et $G = -10$.\n6. Donner la loi de probabilité de $G$ (on utilisera les probabilités arrondies de la Partie A).\n7. Calculer $E(G)$ et interpréter le résultat pour l'artisan.",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(50;\\dfrac{1}{5}) $. Calculer $ E(X) = np $.",
       "corrige": [
-        "1. Contrôler un jouet est une épreuve de Bernoulli : succès « le jouet est défectueux » de probabilité $p = 0{,}05$, échec sinon. L'épreuve est répétée $n = 6$ fois de façon identique et indépendante, et $X$ compte les succès : $X \\sim B(6\\,;\\ 0{,}05)$.",
-        "2. La ligne $6$ du triangle de Pascal est $1\\ 6\\ 15\\ 20\\ 15\\ 6\\ 1$. En numérotant les colonnes à partir de $0$ : $\\dbinom{6}{0} = 1$, $\\dbinom{6}{1} = 6$ et $\\dbinom{6}{2} = 15$.",
-        "3. $P(X = 0) = \\dbinom{6}{0} \\times 0{,}05^0 \\times 0{,}95^6 = 0{,}95^6 \\approx 0{,}735$. $P(X = 1) = \\dbinom{6}{1} \\times 0{,}05^1 \\times 0{,}95^5 = 6 \\times 0{,}05 \\times 0{,}95^5 \\approx 6 \\times 0{,}05 \\times 0{,}7738 \\approx 0{,}232$. Les exposants somment bien à $6$ dans chaque cas.",
-        "4. « Au moins $2$ défauts » est l'événement contraire de « $0$ ou $1$ défaut » : $P(X \\geq 2) = 1 - P(X = 0) - P(X = 1) \\approx 1 - 0{,}735 - 0{,}232 = 0{,}033$.",
-        "5. $E(X) = np = 6 \\times 0{,}05 = 0{,}3$ : sur un grand nombre de lots, un lot contient en moyenne $0{,}3$ jouet défectueux. C'est une moyenne, pas une valeur possible de $X$.",
-        "6. $G$ vaut $40$ quand $X = 0$ (probabilité $\\approx 0{,}735$), $25$ quand $X = 1$ (probabilité $\\approx 0{,}232$) et $-10$ quand $X \\geq 2$ (probabilité $\\approx 0{,}033$). Contrôle : $0{,}735 + 0{,}232 + 0{,}033 = 1$. ✓",
-        "7. $E(G) = 40 \\times 0{,}735 + 25 \\times 0{,}232 + (-10) \\times 0{,}033 = 29{,}4 + 5{,}8 - 0{,}33 = 34{,}87$. Sur un grand nombre de lots, l'artisan dégage un bénéfice moyen d'environ $34{,}87$ € par lot. Le risque de rebut (environ $3{,}3\\,\\%$ des lots) pèse peu : l'activité est nettement rentable en moyenne."
+        "$ E(X) = 50\\times \\dfrac{1}{5} = 10 $."
       ],
-      "reponse": "Partie A : $X \\sim B(6\\,;\\ 0{,}05)$ ; $P(X = 0) \\approx 0{,}735$ ; $P(X = 1) \\approx 0{,}232$ ; $P(X \\geq 2) \\approx 0{,}033$ ; $E(X) = 0{,}3$. Partie B : $E(G) \\approx 34{,}87$ € de bénéfice moyen par lot."
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(16;\\dfrac{1}{2}) $. Calculer $ E(X) = np $.",
+      "corrige": [
+        "$ E(X) = 16\\times \\dfrac{1}{2} = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ X $ suit $ B(21;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
+      "corrige": [
+        "$ E(X) = 21\\times \\dfrac{1}{3} = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(10;\\dfrac{1}{2}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 10\\times \\dfrac{1}{2}\\times \\dfrac{1}{2} = \\dfrac{5}{2} $."
+      ],
+      "reponse": "$ \\dfrac{5}{2} $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(20;\\dfrac{1}{4}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 20\\times \\dfrac{1}{4}\\times \\dfrac{3}{4} = \\dfrac{15}{4} $."
+      ],
+      "reponse": "$ \\dfrac{15}{4} $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(12;\\dfrac{1}{3}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 12\\times \\dfrac{1}{3}\\times \\dfrac{2}{3} = \\dfrac{8}{3} $."
+      ],
+      "reponse": "$ \\dfrac{8}{3} $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(8;\\dfrac{1}{4}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 8\\times \\dfrac{1}{4}\\times \\dfrac{3}{4} = \\dfrac{3}{2} $."
+      ],
+      "reponse": "$ \\dfrac{3}{2} $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(6;\\dfrac{1}{3}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 6\\times \\dfrac{1}{3}\\times \\dfrac{2}{3} = \\dfrac{4}{3} $."
+      ],
+      "reponse": "$ \\dfrac{4}{3} $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(16;\\dfrac{1}{2}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 16\\times \\dfrac{1}{2}\\times \\dfrac{1}{2} = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(9;\\dfrac{1}{3}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 9\\times \\dfrac{1}{3}\\times \\dfrac{2}{3} = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(15;\\dfrac{1}{5}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 15\\times \\dfrac{1}{5}\\times \\dfrac{4}{5} = \\dfrac{12}{5} $."
+      ],
+      "reponse": "$ \\dfrac{12}{5} $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(24;\\dfrac{1}{4}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 24\\times \\dfrac{1}{4}\\times \\dfrac{3}{4} = \\dfrac{9}{2} $."
+      ],
+      "reponse": "$ \\dfrac{9}{2} $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "$ X $ suit $ B(30;\\dfrac{1}{6}) $. Calculer $ V(X) = np(1-p) $.",
+      "corrige": [
+        "$ V(X) = 30\\times \\dfrac{1}{6}\\times \\dfrac{5}{6} = \\dfrac{25}{6} $."
+      ],
+      "reponse": "$ \\dfrac{25}{6} $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(2;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 1 $."
+      ],
+      "reponse": "$ 1 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(3;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{3}{2} $."
+      ],
+      "reponse": "$ \\dfrac{3}{2} $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(4;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(5;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{5}{2} $."
+      ],
+      "reponse": "$ \\dfrac{5}{2} $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(6;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(7;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{7}{2} $."
+      ],
+      "reponse": "$ \\dfrac{7}{2} $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(8;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(9;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{9}{2} $."
+      ],
+      "reponse": "$ \\dfrac{9}{2} $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(10;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(11;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{11}{2} $."
+      ],
+      "reponse": "$ \\dfrac{11}{2} $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(12;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(13;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{13}{2} $."
+      ],
+      "reponse": "$ \\dfrac{13}{2} $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(14;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(15;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{15}{2} $."
+      ],
+      "reponse": "$ \\dfrac{15}{2} $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(16;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(17;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{17}{2} $."
+      ],
+      "reponse": "$ \\dfrac{17}{2} $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(18;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(19;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{19}{2} $."
+      ],
+      "reponse": "$ \\dfrac{19}{2} $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(20;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(21;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{21}{2} $."
+      ],
+      "reponse": "$ \\dfrac{21}{2} $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(22;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(23;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{23}{2} $."
+      ],
+      "reponse": "$ \\dfrac{23}{2} $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(24;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(25;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{25}{2} $."
+      ],
+      "reponse": "$ \\dfrac{25}{2} $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(26;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(27;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{27}{2} $."
+      ],
+      "reponse": "$ \\dfrac{27}{2} $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(28;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$ B(29;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "corrige": [
+        "$ = \\dfrac{29}{2} $."
+      ],
+      "reponse": "$ \\dfrac{29}{2} $"
     }
   ]
 }

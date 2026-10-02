@@ -13,128 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "definition",
-      "enonce": "Une salle de sport compte $200$ clients. $120$ ont un abonnement annuel (événement $A$), $80$ utilisent l'appli mobile ($M$) et $60$ cumulent les deux. On choisit un client au hasard. (a) Calculer $P(A)$, $P(M)$ et $P(A \\cap M)$. (b) Calculer $P_A(M)$ et interpréter le résultat par une phrase. (c) Calculer $P_M(A)$. Les deux probabilités conditionnelles sont-elles égales ?",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{4} $ et $ P(B) = \\dfrac{1}{2} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) Sur les $200$ clients : $P(A) = \\dfrac{120}{200} = 0{,}6$ ; $P(M) = \\dfrac{80}{200} = 0{,}4$ ; $P(A \\cap M) = \\dfrac{60}{200} = 0{,}3$ (les $60$ clients qui cumulent les deux).",
-        "(b) $P_A(M) = \\dfrac{P(A \\cap M)}{P(A)} = \\dfrac{0{,}3}{0{,}6} = 0{,}5$. Vérification sur les effectifs : parmi les $120$ abonnés, $60$ utilisent l'appli, soit $\\dfrac{60}{120} = 0{,}5$. Interprétation : la moitié des abonnés annuels utilisent l'appli mobile.",
-        "(c) $P_M(A) = \\dfrac{P(A \\cap M)}{P(M)} = \\dfrac{0{,}3}{0{,}4} = 0{,}75$ : trois utilisateurs de l'appli sur quatre sont abonnés à l'année. On constate que $P_M(A) = 0{,}75 \\neq P_A(M) = 0{,}5$ : changer l'ensemble de référence (les abonnés ou les utilisateurs de l'appli) change le dénominateur, donc la valeur."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{2} $."
       ],
-      "reponse": "(a) $P(A) = 0{,}6$ ; $P(M) = 0{,}4$ ; $P(A \\cap M) = 0{,}3$ ; (b) $P_A(M) = 0{,}5$ ; (c) $P_M(A) = 0{,}75 \\neq P_A(M)$."
+      "reponse": "$ \\dfrac{1}{2} $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "arbre-pondere",
-      "enonce": "Une entreprise de vente reçoit $70\\,\\%$ de ses commandes en ligne ($L$) et $30\\,\\%$ en magasin. $10\\,\\%$ des commandes en ligne sont retournées ($R$), contre $4\\,\\%$ des commandes en magasin. (a) Traduire les données de l'énoncé en notations de probabilités, puis construire l'arbre pondéré. (b) Calculer la probabilité qu'une commande soit passée en ligne et retournée. (c) Calculer la probabilité qu'une commande soit retournée.",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{6} $ et $ P(B) = \\dfrac{1}{3} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) L'énoncé donne $P(L) = 0{,}7$ et $P(\\bar{L}) = 0{,}3$ (premier niveau de l'arbre), puis deux conditionnelles (deuxième niveau) : « $10\\,\\%$ des commandes en ligne » se traduit par $P_L(R) = 0{,}1$, et « $4\\,\\%$ des commandes en magasin » par $P_{\\bar{L}}(R) = 0{,}04$. Sur l'arbre, on complète chaque nœud pour que la somme des branches fasse $1$ : $P_L(\\bar{R}) = 0{,}9$ et $P_{\\bar{L}}(\\bar{R}) = 0{,}96$.",
-        "(b) « En ligne ET retournée » est le chemin $L \\to R$ : on multiplie le long du chemin, $P(L \\cap R) = P(L) \\times P_L(R) = 0{,}7 \\times 0{,}1 = 0{,}07$. Attention : ce $7\\,\\%$ (part de toutes les commandes) n'est pas le $10\\,\\%$ de l'énoncé, qui ne portait que sur les commandes en ligne.",
-        "(c) $R$ est réalisé par deux chemins ($L \\to R$ et $\\bar{L} \\to R$) ; on additionne : $P(R) = P(L \\cap R) + P(\\bar{L} \\cap R) = 0{,}07 + 0{,}3 \\times 0{,}04 = 0{,}07 + 0{,}012 = 0{,}082$. Au total, $8{,}2\\,\\%$ des commandes sont retournées — une valeur entre $4\\,\\%$ et $10\\,\\%$, cohérente."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{2} $."
       ],
-      "reponse": "(a) $P(L) = 0{,}7$ ; $P_L(R) = 0{,}1$ ; $P_{\\bar{L}}(R) = 0{,}04$ ; (b) $P(L \\cap R) = 0{,}07$ ; (c) $P(R) = 0{,}082$."
+      "reponse": "$ \\dfrac{1}{2} $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "probabilites-totales",
-      "enonce": "Un atelier fabrique des pièces avec deux machines. La machine $M_1$ assure $65\\,\\%$ de la production, la machine $M_2$ le reste. $3\\,\\%$ des pièces de $M_1$ et $8\\,\\%$ des pièces de $M_2$ sont défectueuses ($D$). On prélève une pièce au hasard dans la production. (a) Construire l'arbre pondéré. (b) Montrer que $P(D) = 0{,}0475$. (c) La pièce prélevée est défectueuse. Quelle est la probabilité qu'elle provienne de la machine $M_2$ ? Arrondir au millième. (d) Comparer ce résultat à la part de production de $M_2$ et commenter.",
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{10} $ et $ P(B) = \\dfrac{2}{5} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) Premier niveau : $P(M_1) = 0{,}65$ et $P(M_2) = 1 - 0{,}65 = 0{,}35$ (les deux machines forment une partition de la production). Deuxième niveau : $P_{M_1}(D) = 0{,}03$, $P_{M_1}(\\bar{D}) = 0{,}97$, $P_{M_2}(D) = 0{,}08$, $P_{M_2}(\\bar{D}) = 0{,}92$.",
-        "(b) Formule des probabilités totales pour la partition $\\{M_1, M_2\\}$ : $P(D) = P(M_1) \\times P_{M_1}(D) + P(M_2) \\times P_{M_2}(D) = 0{,}65 \\times 0{,}03 + 0{,}35 \\times 0{,}08 = 0{,}0195 + 0{,}028 = 0{,}0475$.",
-        "(c) On renverse la condition avec la définition : $P_D(M_2) = \\dfrac{P(M_2 \\cap D)}{P(D)} = \\dfrac{0{,}028}{0{,}0475} \\approx 0{,}589$. Le numérateur est un chemin de l'arbre, le dénominateur est la somme des chemins menant à $D$.",
-        "(d) $M_2$ ne produit que $35\\,\\%$ des pièces, mais elle est à l'origine d'environ $59\\,\\%$ des pièces défectueuses : son taux de défaut ($8\\,\\%$) est bien plus élevé que celui de $M_1$ ($3\\,\\%$). Attention à ne pas confondre $P_D(M_2) \\approx 0{,}589$ avec $P_{M_2}(D) = 0{,}08$ : ce sont deux questions différentes."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{4} $."
       ],
-      "reponse": "(b) $P(D) = 0{,}0475$ ; (c) $P_D(M_2) \\approx 0{,}589$ ; (d) $M_2$ cause $\\approx 59\\,\\%$ des défauts avec $35\\,\\%$ de la production."
+      "reponse": "$ \\dfrac{1}{4} $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "traduire-enonce",
-      "enonce": "Un cinéma interroge les $500$ spectateurs d'une soirée. $300$ possèdent la carte de fidélité ($C$) ; $180$ ont acheté des confiseries ($S$) ; $120$ spectateurs ont la carte et ont acheté des confiseries. (a) Recopier et compléter le tableau croisé des effectifs (lignes : $C$, $\\bar{C}$ ; colonnes : $S$, $\\bar{S}$). (b) On choisit un spectateur au hasard. Calculer $P(C \\cap S)$, puis $P_C(S)$ et $P_S(C)$ (donner des valeurs exactes). (c) Chacune des trois phrases suivantes correspond à l'un des trois nombres calculés — associer : « $40\\,\\%$ des porteurs de carte achètent des confiseries » ; « $24\\,\\%$ des spectateurs ont la carte et des confiseries » ; « deux acheteurs de confiseries sur trois ont la carte ».",
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{3}{10} $ et $ P(B) = \\dfrac{3}{5} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) On part des totaux : ligne $C$ : $120$ dans $C \\cap S$, donc $300 - 120 = 180$ dans $C \\cap \\bar{S}$. Colonne $S$ : $180 - 120 = 60$ dans $\\bar{C} \\cap S$. Il reste $\\bar{C} \\cap \\bar{S} = 500 - (120 + 180 + 60) = 140$. Contrôle : ligne $\\bar{C}$ : $60 + 140 = 200 = 500 - 300$. ✓",
-        "(b) $P(C \\cap S) = \\dfrac{120}{500} = 0{,}24$. Pour les conditionnelles, on divise par l'effectif de la condition, pas par $500$ : $P_C(S) = \\dfrac{120}{300} = 0{,}4$ et $P_S(C) = \\dfrac{120}{180} = \\dfrac{2}{3}$.",
-        "(c) « $40\\,\\%$ des porteurs de carte… » : la référence est les porteurs de carte, c'est $P_C(S) = 0{,}4$. « $24\\,\\%$ des spectateurs ont la carte et… » : la référence est tous les spectateurs, c'est $P(C \\cap S) = 0{,}24$. « deux acheteurs de confiseries sur trois ont la carte » : la référence est les acheteurs de confiseries, c'est $P_S(C) = \\dfrac{2}{3}$. Trois phrases, trois ensembles de référence, trois nombres différents — c'est tout l'enjeu du chapitre."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{2} $."
       ],
-      "reponse": "(a) $C \\cap \\bar{S} = 180$ ; $\\bar{C} \\cap S = 60$ ; $\\bar{C} \\cap \\bar{S} = 140$ ; (b) $P(C \\cap S) = 0{,}24$ ; $P_C(S) = 0{,}4$ ; $P_S(C) = \\dfrac{2}{3}$ ; (c) $P_C(S)$, puis $P(C \\cap S)$, puis $P_S(C)$."
+      "reponse": "$ \\dfrac{1}{2} $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "inverser-la-condition",
-      "enonce": "Une maladie touche $2\\,\\%$ d'une population ($M$). Un laboratoire propose un test de dépistage : il est positif ($T$) pour $90\\,\\%$ des personnes malades, et négatif pour $95\\,\\%$ des personnes saines. Une personne de la population est testée. (a) Construire l'arbre pondéré (arrondir les probabilités des chemins au millième si besoin). (b) Calculer $P(T)$. (c) La personne est testée positive : calculer la probabilité qu'elle soit réellement malade, arrondie au centième. (d) Le slogan « test fiable à $90\\,\\%$ » laisse penser qu'un résultat positif signifie « malade à $90\\,\\%$ ». Expliquer pourquoi c'est faux ici.",
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{8} $ et $ P(B) = \\dfrac{1}{4} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) Premier niveau : $P(M) = 0{,}02$ et $P(\\bar{M}) = 0{,}98$. Deuxième niveau : $P_M(T) = 0{,}9$ donc $P_M(\\bar{T}) = 0{,}1$ ; « négatif pour $95\\,\\%$ des sains » donne $P_{\\bar{M}}(\\bar{T}) = 0{,}95$ donc $P_{\\bar{M}}(T) = 0{,}05$ (somme des branches d'un nœud $= 1$).",
-        "(b) Probabilités totales avec la partition $\\{M, \\bar{M}\\}$ : $P(T) = P(M) \\times P_M(T) + P(\\bar{M}) \\times P_{\\bar{M}}(T) = 0{,}02 \\times 0{,}9 + 0{,}98 \\times 0{,}05 = 0{,}018 + 0{,}049 = 0{,}067$.",
-        "(c) $P_T(M) = \\dfrac{P(M \\cap T)}{P(T)} = \\dfrac{0{,}018}{0{,}067} \\approx 0{,}27$. Environ $27\\,\\%$ seulement des personnes positives sont malades.",
-        "(d) Le $90\\,\\%$ du slogan est $P_M(T)$ : la probabilité d'être positif quand on est malade. La question du patient est l'inverse : $P_T(M)$, la probabilité d'être malade quand on est positif — et elle ne vaut que $0{,}27$. La maladie étant rare ($2\\,\\%$), les positifs proviennent surtout des $98\\,\\%$ de personnes saines : les faux positifs ($0{,}049$) dépassent les vrais positifs ($0{,}018$). Confondre $P_M(T)$ et $P_T(M)$, c'est le piège n°1 des probabilités conditionnelles."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{2} $."
       ],
-      "reponse": "(b) $P(T) = 0{,}067$ ; (c) $P_T(M) \\approx 0{,}27$ ; (d) $0{,}9 = P_M(T)$ alors que la question porte sur $P_T(M) \\approx 0{,}27$ : les deux conditionnelles n'ont pas le même sens."
+      "reponse": "$ \\dfrac{1}{2} $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "probabilites-totales",
-      "enonce": "Une usine d'embouteillage utilise trois lignes de production : la ligne $A$ produit $50\\,\\%$ des bouteilles, la ligne $B$ en produit $30\\,\\%$ et la ligne $C$ les $20\\,\\%$ restants. Les taux de bouteilles non conformes ($N$) sont de $1\\,\\%$ pour $A$, $2\\,\\%$ pour $B$ et $4\\,\\%$ pour $C$. On prélève une bouteille au hasard dans la production. (a) Justifier que $A$, $B$, $C$ forment une partition de l'univers et écrire la formule des probabilités totales pour $N$. (b) Calculer $P(N)$. (c) La bouteille prélevée est non conforme. Calculer $P_N(A)$, $P_N(B)$ et $P_N(C)$ (valeurs exactes en fractions, puis arrondies au millième). (d) Le responsable qualité affirme : « la ligne $C$ est la première source de non-conformité, alors qu'elle est la plus petite ligne ». A-t-il raison ?",
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{2}{9} $ et $ P(B) = \\dfrac{1}{3} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) Chaque bouteille sort d'une et une seule des trois lignes : $A$, $B$ et $C$ sont deux à deux incompatibles et leur réunion couvre toute la production — c'est une partition de l'univers. La formule des probabilités totales s'écrit donc : $P(N) = P(A)\\,P_A(N) + P(B)\\,P_B(N) + P(C)\\,P_C(N)$ — trois chemins, un par ligne, à ne pas tronquer à deux.",
-        "(b) $P(N) = 0{,}5 \\times 0{,}01 + 0{,}3 \\times 0{,}02 + 0{,}2 \\times 0{,}04 = 0{,}005 + 0{,}006 + 0{,}008 = 0{,}019$. Au total, $1{,}9\\,\\%$ des bouteilles sont non conformes.",
-        "(c) On renverse la condition, ligne par ligne : $P_N(A) = \\dfrac{P(A \\cap N)}{P(N)} = \\dfrac{0{,}005}{0{,}019} = \\dfrac{5}{19} \\approx 0{,}263$ ; $P_N(B) = \\dfrac{0{,}006}{0{,}019} = \\dfrac{6}{19} \\approx 0{,}316$ ; $P_N(C) = \\dfrac{0{,}008}{0{,}019} = \\dfrac{8}{19} \\approx 0{,}421$. Contrôle : $\\dfrac{5}{19} + \\dfrac{6}{19} + \\dfrac{8}{19} = 1$. ✓",
-        "(d) Oui : sachant qu'une bouteille est non conforme, la ligne $C$ est la plus probable ($\\approx 42\\,\\%$ des non-conformités), devant $B$ ($\\approx 32\\,\\%$) et $A$ ($\\approx 26\\,\\%$), alors que $C$ n'assure que $20\\,\\%$ de la production. Son taux de défaut ($4\\,\\%$, soit quatre fois celui de $A$) l'emporte sur sa petite part de production. Nuance : « première source » signifie $P_N(C)$ maximal — cela ne veut pas dire que $C$ produit majoritairement du non-conforme ($P_C(N) = 0{,}04$ seulement)."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{2}{3} $."
       ],
-      "reponse": "(b) $P(N) = 0{,}019$ ; (c) $P_N(A) = \\dfrac{5}{19} \\approx 0{,}263$ ; $P_N(B) = \\dfrac{6}{19} \\approx 0{,}316$ ; $P_N(C) = \\dfrac{8}{19} \\approx 0{,}421$ ; (d) oui, la ligne $C$ concentre $\\approx 42\\,\\%$ des non-conformités."
+      "reponse": "$ \\dfrac{2}{3} $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "definition",
-      "enonce": "Sur une plateforme de streaming, $40\\,\\%$ des abonnés ont souscrit l'offre famille ($F$). Parmi les abonnés à l'offre famille, $60\\,\\%$ regardent des programmes jeunesse chaque semaine ($J$). (a) Traduire les deux données de l'énoncé en notations de probabilités. (b) Calculer $P(F \\cap J)$. (c) On sait par ailleurs que, sur l'ensemble des abonnés, $30\\,\\%$ regardent des programmes jeunesse chaque semaine, c'est-à-dire $P(J) = 0{,}3$. Calculer $P_J(F)$ et interpréter le résultat par une phrase.",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{5} $ et $ P(B) = \\dfrac{1}{2} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) « $40\\,\\%$ des abonnés ont l'offre famille » porte sur tous les abonnés : c'est une probabilité simple, $P(F) = 0{,}4$. « Parmi les abonnés à l'offre famille, $60\\,\\%$ regardent la jeunesse » restreint l'univers aux abonnés famille : c'est une conditionnelle, $P_F(J) = 0{,}6$.",
-        "(b) « Avoir l'offre famille ET regarder la jeunesse » s'obtient par la formule du produit : $P(F \\cap J) = P(F) \\times P_F(J) = 0{,}4 \\times 0{,}6 = 0{,}24$. Ainsi $24\\,\\%$ de l'ensemble des abonnés sont dans les deux catégories à la fois.",
-        "(c) On renverse la condition avec la définition : $P_J(F) = \\dfrac{P(F \\cap J)}{P(J)} = \\dfrac{0{,}24}{0{,}3} = 0{,}8$. Interprétation : parmi les abonnés qui regardent des programmes jeunesse, $80\\,\\%$ ont l'offre famille. Attention : $P_J(F) = 0{,}8 \\neq P_F(J) = 0{,}6$, les deux conditionnelles n'ont pas le même ensemble de référence."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{2}{5} $."
       ],
-      "reponse": "(a) $P(F) = 0{,}4$ ; $P_F(J) = 0{,}6$ ; (b) $P(F \\cap J) = 0{,}24$ ; (c) $P_J(F) = 0{,}8$."
+      "reponse": "$ \\dfrac{2}{5} $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "arbre-pondere",
-      "enonce": "Une entreprise reçoit des candidatures par deux voies : $60\\,\\%$ arrivent via un site d'emploi ($S$) et le reste par cooptation (un salarié recommande un candidat). Un candidat passant par le site d'emploi obtient un entretien ($E$) dans $25\\,\\%$ des cas ; un candidat coopté en obtient un dans $50\\,\\%$ des cas. On choisit une candidature au hasard. (a) Traduire les données et construire l'arbre pondéré. (b) Calculer la probabilité qu'une candidature vienne d'une cooptation et débouche sur un entretien. (c) Calculer la probabilité qu'une candidature débouche sur un entretien.",
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{3}{8} $ et $ P(B) = \\dfrac{3}{4} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) Premier niveau (partition de l'origine) : $P(S) = 0{,}6$ et $P(\\bar{S}) = 0{,}4$. Deuxième niveau (conditionnelles) : $P_S(E) = 0{,}25$ donc $P_S(\\bar{E}) = 0{,}75$ ; $P_{\\bar{S}}(E) = 0{,}5$ donc $P_{\\bar{S}}(\\bar{E}) = 0{,}5$. On vérifie que les branches de chaque nœud somment à $1$.",
-        "(b) « Cooptation ET entretien » est le chemin $\\bar{S} \\to E$ : on multiplie le long du chemin, $P(\\bar{S} \\cap E) = P(\\bar{S}) \\times P_{\\bar{S}}(E) = 0{,}4 \\times 0{,}5 = 0{,}2$.",
-        "(c) $E$ est atteint par deux chemins ; on additionne (formule des probabilités totales) : $P(E) = P(S \\cap E) + P(\\bar{S} \\cap E) = 0{,}6 \\times 0{,}25 + 0{,}2 = 0{,}15 + 0{,}2 = 0{,}35$. Au total, $35\\,\\%$ des candidatures débouchent sur un entretien."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{2} $."
       ],
-      "reponse": "(a) $P(S) = 0{,}6$ ; $P_S(E) = 0{,}25$ ; $P_{\\bar{S}}(E) = 0{,}5$ ; (b) $P(\\bar{S} \\cap E) = 0{,}2$ ; (c) $P(E) = 0{,}35$."
+      "reponse": "$ \\dfrac{1}{2} $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "inverser-la-condition",
-      "enonce": "Un fournisseur d'accès à internet a deux types d'abonnés : $40\\,\\%$ sont en fibre ($F$) et $60\\,\\%$ en ADSL. Le mois dernier, $5\\,\\%$ des abonnés fibre ont subi une panne ($P$). Le service technique constate que, sur l'ensemble des abonnés, $8\\,\\%$ ont subi une panne, soit $P(P) = 0{,}08$, mais a perdu le taux de panne des abonnés ADSL. (a) Écrire la formule des probabilités totales pour $P$ en laissant $P_{\\bar{F}}(P)$ comme inconnue. (b) En déduire $P_{\\bar{F}}(P)$, le taux de panne des abonnés ADSL. (c) Un abonné a subi une panne. Calculer la probabilité qu'il soit en fibre, arrondie au millième. (d) Comparer $P_{\\bar{F}}(P)$ et $P_P(F)$ : que représentent ces deux nombres ?",
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{12} $ et $ P(B) = \\dfrac{1}{3} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "(a) $F$ et $\\bar{F}$ (ADSL) forment une partition. La formule des probabilités totales donne $P(P) = P(F) \\times P_F(P) + P(\\bar{F}) \\times P_{\\bar{F}}(P)$, soit $0{,}08 = 0{,}4 \\times 0{,}05 + 0{,}6 \\times P_{\\bar{F}}(P)$.",
-        "(b) On isole l'inconnue : $0{,}08 = 0{,}02 + 0{,}6 \\times P_{\\bar{F}}(P)$, donc $0{,}6 \\times P_{\\bar{F}}(P) = 0{,}06$ et $P_{\\bar{F}}(P) = \\dfrac{0{,}06}{0{,}6} = 0{,}1$. Le taux de panne des abonnés ADSL est de $10\\,\\%$.",
-        "(c) On renverse la condition : $P_P(F) = \\dfrac{P(F \\cap P)}{P(P)} = \\dfrac{0{,}4 \\times 0{,}05}{0{,}08} = \\dfrac{0{,}02}{0{,}08} = 0{,}25$. Parmi les abonnés ayant subi une panne, $25\\,\\%$ sont en fibre.",
-        "(d) $P_{\\bar{F}}(P) = 0{,}1$ est le taux de panne parmi les abonnés ADSL (référence : les abonnés ADSL). $P_P(F) = 0{,}25$ est la proportion d'abonnés fibre parmi ceux qui ont eu une panne (référence : les abonnés en panne). Deux ensembles de référence différents, deux nombres différents : ils ne se comparent pas directement et ne doivent pas être confondus."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{4} $."
       ],
-      "reponse": "(b) $P_{\\bar{F}}(P) = 0{,}1$ (soit $10\\,\\%$) ; (c) $P_P(F) = 0{,}25$ ; (d) $P_{\\bar{F}}(P)$ = taux de panne chez les ADSL, $P_P(F)$ = part de fibre parmi les abonnés en panne."
+      "reponse": "$ \\dfrac{1}{4} $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "probabilites-totales",
-      "enonce": "Une entreprise assemble des trottinettes électriques et s'approvisionne en batteries auprès de deux fournisseurs. Le fournisseur $X$ livre $70\\,\\%$ des batteries et le fournisseur $Y$ les $30\\,\\%$ restants. D'après les contrôles, $3\\,\\%$ des batteries livrées par $X$ présentent un défaut ($D$), contre $6\\,\\%$ des batteries livrées par $Y$. On prélève une batterie au hasard dans le stock. Les résultats seront arrondis au millième si nécessaire. 1. Traduire les données de l'énoncé en notations de probabilités, puis construire l'arbre pondéré de la situation. 2. Calculer la probabilité que la batterie prélevée provienne du fournisseur $Y$ et présente un défaut. 3. Montrer que la probabilité qu'une batterie prélevée présente un défaut est $P(D) = 0{,}039$. 4. Calculer la probabilité qu'une batterie prélevée ne présente aucun défaut. 5. Le service qualité met de côté toutes les batteries défectueuses. Une batterie est défectueuse : calculer la probabilité qu'elle provienne du fournisseur $X$, arrondie au millième, puis comparer ce résultat à la part de $X$ dans l'approvisionnement.",
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{5}{12} $ et $ P(B) = \\dfrac{5}{6} $. Calculer $ P_B(A) $.",
       "corrige": [
-        "1. « $X$ livre $70\\,\\%$ des batteries » et « $Y$ les $30\\,\\%$ restants » donnent le premier niveau : $P(X) = 0{,}7$ et $P(Y) = 0{,}3$ ($\\{X, Y\\}$ est une partition du stock). « $3\\,\\%$ des batteries de $X$ sont défectueuses » et « $6\\,\\%$ de celles de $Y$ » sont des conditionnelles (deuxième niveau) : $P_X(D) = 0{,}03$ et $P_Y(D) = 0{,}06$. On complète chaque nœud pour que la somme fasse $1$ : $P_X(\\bar{D}) = 0{,}97$ et $P_Y(\\bar{D}) = 0{,}94$.",
-        "2. « Provenir de $Y$ ET être défectueuse » est le chemin $Y \\to D$ : formule du produit, $P(Y \\cap D) = P(Y) \\times P_Y(D) = 0{,}3 \\times 0{,}06 = 0{,}018$.",
-        "3. La partition $\\{X, Y\\}$ donne, par la formule des probabilités totales : $P(D) = P(X) \\times P_X(D) + P(Y) \\times P_Y(D) = 0{,}7 \\times 0{,}03 + 0{,}3 \\times 0{,}06 = 0{,}021 + 0{,}018 = 0{,}039$. On a bien $P(D) = 0{,}039$, soit $3{,}9\\,\\%$ de batteries défectueuses en tout.",
-        "4. « Aucun défaut » est l'événement contraire de $D$ : $P(\\bar{D}) = 1 - P(D) = 1 - 0{,}039 = 0{,}961$. Environ $96{,}1\\,\\%$ des batteries sont sans défaut.",
-        "5. On renverse la condition avec la définition : $P_D(X) = \\dfrac{P(X \\cap D)}{P(D)} = \\dfrac{0{,}7 \\times 0{,}03}{0{,}039} = \\dfrac{0{,}021}{0{,}039} = \\dfrac{21}{39} = \\dfrac{7}{13} \\approx 0{,}538$. Ainsi, parmi les batteries défectueuses, environ $53{,}8\\,\\%$ viennent de $X$. C'est un peu moins que la part de $X$ dans l'approvisionnement ($70\\,\\%$) : bien que $X$ fournisse la majorité des batteries, son taux de défaut plus faible ($3\\,\\%$ contre $6\\,\\%$ pour $Y$) fait que $Y$ est surreprésenté parmi les défectueuses ($P_D(Y) = \\dfrac{6}{13} \\approx 0{,}462$, soit $46{,}2\\,\\%$ pour seulement $30\\,\\%$ de l'approvisionnement)."
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{1}{2} $."
       ],
-      "reponse": "2. $P(Y \\cap D) = 0{,}018$ ; 3. $P(D) = 0{,}039$ ; 4. $P(\\bar{D}) = 0{,}961$ ; 5. $P_D(X) = \\dfrac{7}{13} \\approx 0{,}538$, soit un peu moins que les $70\\,\\%$ de $X$ dans l'approvisionnement (car $Y$ a un taux de défaut deux fois plus élevé)."
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{4} $ et $ P(B) = \\dfrac{2}{3} $. Calculer $ P_B(A) $.",
+      "corrige": [
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{3}{8} $."
+      ],
+      "reponse": "$ \\dfrac{3}{8} $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B) = \\dfrac{1}{3} $ et $ P(B) = \\dfrac{1}{2} $. Calculer $ P_B(A) $.",
+      "corrige": [
+        "$ P_B(A) = \\dfrac{P(A\\cap B)}{P(B)} = \\dfrac{2}{3} $."
+      ],
+      "reponse": "$ \\dfrac{2}{3} $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{4} $, $ P(B)=\\dfrac{1}{2} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{6} $, $ P(B)=\\dfrac{1}{3} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{8} $, $ P(B)=\\dfrac{1}{4} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{10} $, $ P(B)=\\dfrac{1}{5} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{12} $, $ P(B)=\\dfrac{1}{6} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{14} $, $ P(B)=\\dfrac{1}{7} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{16} $, $ P(B)=\\dfrac{1}{8} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{18} $, $ P(B)=\\dfrac{1}{9} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{20} $, $ P(B)=\\dfrac{1}{10} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{22} $, $ P(B)=\\dfrac{1}{11} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{24} $, $ P(B)=\\dfrac{1}{12} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{26} $, $ P(B)=\\dfrac{1}{13} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{28} $, $ P(B)=\\dfrac{1}{14} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{30} $, $ P(B)=\\dfrac{1}{15} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{32} $, $ P(B)=\\dfrac{1}{16} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{34} $, $ P(B)=\\dfrac{1}{17} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{36} $, $ P(B)=\\dfrac{1}{18} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{38} $, $ P(B)=\\dfrac{1}{19} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{40} $, $ P(B)=\\dfrac{1}{20} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{42} $, $ P(B)=\\dfrac{1}{21} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{44} $, $ P(B)=\\dfrac{1}{22} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{46} $, $ P(B)=\\dfrac{1}{23} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{48} $, $ P(B)=\\dfrac{1}{24} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{50} $, $ P(B)=\\dfrac{1}{25} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{52} $, $ P(B)=\\dfrac{1}{26} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{54} $, $ P(B)=\\dfrac{1}{27} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{56} $, $ P(B)=\\dfrac{1}{28} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{58} $, $ P(B)=\\dfrac{1}{29} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{60} $, $ P(B)=\\dfrac{1}{30} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{62} $, $ P(B)=\\dfrac{1}{31} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{64} $, $ P(B)=\\dfrac{1}{32} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{66} $, $ P(B)=\\dfrac{1}{33} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{68} $, $ P(B)=\\dfrac{1}{34} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{70} $, $ P(B)=\\dfrac{1}{35} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{72} $, $ P(B)=\\dfrac{1}{36} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{74} $, $ P(B)=\\dfrac{1}{37} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{76} $, $ P(B)=\\dfrac{1}{38} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "$ P(A\\cap B)=\\dfrac{1}{78} $, $ P(B)=\\dfrac{1}{39} $ : $ P_B(A) $ ?",
+      "corrige": [
+        "$ = \\dfrac{1}{2} $."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $"
     }
   ]
 }

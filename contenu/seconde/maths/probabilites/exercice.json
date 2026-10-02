@@ -13,130 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "equiprobabilite",
-      "enonce": "On tire une carte au hasard dans un jeu bien mélangé de $32$ cartes, qui compte $4$ rois. Quelle est la probabilité d'obtenir un roi ?",
+      "notion": "proba-cartes",
+      "enonce": "Jeu de 52 cartes. Probabilite de tirer un roi ?",
       "corrige": [
-        "Le jeu est **bien mélangé** : les $32$ tirages sont équiprobables, on peut donc utiliser la formule favorables sur possibles.",
-        "Issues favorables : les $4$ rois. Issues possibles : les $32$ cartes.",
-        "$P(\\text{roi}) = \\dfrac{4}{32} = \\dfrac{1}{8}$."
+        "$ P = \\dfrac{4}{52} = \\dfrac{1}{13} $."
       ],
-      "reponse": "$P(\\text{roi}) = \\dfrac{1}{8}$."
+      "reponse": "$ \\dfrac{1}{13} $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "loi-probabilite",
-      "enonce": "Une roue de loterie est partagée en trois secteurs de tailles différentes : rouge, bleu et vert. Elle n'est donc **pas** équilibrée. On sait que $P(\\text{rouge}) = 0{,}4$ et $P(\\text{bleu}) = 0{,}35$. Quelle est la probabilité que la roue s'arrête sur le vert ?",
+      "notion": "proba-cartes",
+      "enonce": "Jeu de 52 cartes. Probabilite de tirer un coeur ?",
       "corrige": [
-        "La somme des probabilités de toutes les issues d'une loi de probabilité vaut $1$.",
-        "Il n'y a que trois issues, donc $P(\\text{rouge}) + P(\\text{bleu}) + P(\\text{vert}) = 1$.",
-        "$P(\\text{vert}) = 1 - 0{,}4 - 0{,}35 = 0{,}25$.",
-        "Remarque : les secteurs n'ayant pas la même taille, on ne pouvait **pas** utiliser favorables sur possibles ; c'est la somme égale à $1$ qui permet de conclure."
+        "$ P = \\dfrac{13}{52} = \\dfrac{1}{4} $."
       ],
-      "reponse": "$P(\\text{vert}) = 0{,}25$."
+      "reponse": "$ \\dfrac{1}{4} $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "union",
-      "enonce": "Dans une classe, on interroge chaque élève sur les langues qu'il étudie. On choisit un élève au hasard et on note $\\mathrm{A}$ : « il étudie l'anglais » et $\\mathrm{E}$ : « il étudie l'espagnol ». On sait que $P(\\mathrm{A}) = 0{,}7$, $P(\\mathrm{E}) = 0{,}4$ et $P(\\mathrm{A} \\cap \\mathrm{E}) = 0{,}25$. Calculer la probabilité qu'il étudie au moins une de ces deux langues, puis celle qu'il n'en étudie aucune.",
+      "difficulte": "application",
+      "notion": "proba-cartes",
+      "enonce": "Jeu de 52 cartes. Probabilite de tirer un as ?",
       "corrige": [
-        "« Au moins une des deux langues », c'est l'événement $\\mathrm{A} \\cup \\mathrm{E}$. On applique la formule d'inclusion-exclusion.",
-        "$P(\\mathrm{A} \\cup \\mathrm{E}) = P(\\mathrm{A}) + P(\\mathrm{E}) - P(\\mathrm{A} \\cap \\mathrm{E}) = 0{,}7 + 0{,}4 - 0{,}25 = 0{,}85$.",
-        "« N'étudier aucune langue » est l'événement contraire de $\\mathrm{A} \\cup \\mathrm{E}$.",
-        "$P\\left(\\overline{\\mathrm{A} \\cup \\mathrm{E}}\\right) = 1 - 0{,}85 = 0{,}15$."
+        "$ P = \\dfrac{4}{52} = \\dfrac{1}{13} $."
       ],
-      "reponse": "$P(\\mathrm{A} \\cup \\mathrm{E}) = 0{,}85$ et « aucune langue » $= 0{,}15$."
+      "reponse": "$ \\dfrac{1}{13} $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "denombrement",
-      "enonce": "On lance deux dés équilibrés et discernables. Quelle est la probabilité d'obtenir **au moins un** $6$ ?",
+      "difficulte": "application",
+      "notion": "proba-cartes",
+      "enonce": "Jeu de 52 cartes. Probabilite de tirer une figure ?",
       "corrige": [
-        "Il y a $6 \\times 6 = 36$ issues équiprobables. « Au moins un $6$ » se calcule plus vite par le contraire : « aucun $6$ ».",
-        "Pour n'avoir aucun $6$, chaque dé doit donner une valeur parmi $1, 2, 3, 4, 5$, soit $5$ possibilités : $5 \\times 5 = 25$ issues sans $6$.",
-        "$P(\\text{aucun } 6) = \\dfrac{25}{36}$.",
-        "Donc $P(\\text{au moins un } 6) = 1 - \\dfrac{25}{36} = \\dfrac{11}{36}$."
+        "$ P = \\dfrac{12}{52} = \\dfrac{3}{13} $."
       ],
-      "reponse": "$P(\\text{au moins un } 6) = \\dfrac{11}{36}$."
+      "reponse": "$ \\dfrac{3}{13} $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "incompatibles",
-      "enonce": "On tire une carte au hasard dans un jeu bien mélangé de $32$ cartes ($4$ couleurs — cœur, carreau, trèfle, pique — et $8$ hauteurs par couleur, dont un roi). On note $\\mathrm{A}$ : « la carte est un roi », $\\mathrm{B}$ : « la carte est une dame » et $\\mathrm{C}$ : « la carte est un cœur ».\\n\\n1. Les événements $\\mathrm{A}$ et $\\mathrm{B}$ sont-ils incompatibles ? Calculer $P(\\mathrm{A} \\cup \\mathrm{B})$.\\n2. Les événements $\\mathrm{A}$ et $\\mathrm{C}$ sont-ils incompatibles ? Calculer $P(\\mathrm{A} \\cup \\mathrm{C})$.",
+      "difficulte": "application",
+      "notion": "proba-cartes",
+      "enonce": "Jeu de 52 cartes. Probabilite de tirer un carreau ?",
       "corrige": [
-        "Une même carte ne peut pas être à la fois un roi et une dame : $\\mathrm{A} \\cap \\mathrm{B} = \\varnothing$, donc $\\mathrm{A}$ et $\\mathrm{B}$ sont **incompatibles**.",
-        "Il y a $4$ rois et $4$ dames, donc $P(\\mathrm{A}) = \\dfrac{4}{32} = \\dfrac{1}{8}$ et $P(\\mathrm{B}) = \\dfrac{4}{32} = \\dfrac{1}{8}$. Comme ils sont incompatibles, l'addition suffit : $P(\\mathrm{A} \\cup \\mathrm{B}) = \\dfrac{1}{8} + \\dfrac{1}{8} = \\dfrac{1}{4}$.",
-        "Le roi de cœur est à la fois un roi et un cœur : $\\mathrm{A} \\cap \\mathrm{C} = \\{\\text{roi de cœur}\\} \\neq \\varnothing$, donc $\\mathrm{A}$ et $\\mathrm{C}$ ne sont **pas** incompatibles.",
-        "Ici $P(\\mathrm{C}) = \\dfrac{8}{32}$ (les $8$ cœurs) et $P(\\mathrm{A} \\cap \\mathrm{C}) = \\dfrac{1}{32}$. Il faut retrancher l'intersection : $P(\\mathrm{A} \\cup \\mathrm{C}) = \\dfrac{4}{32} + \\dfrac{8}{32} - \\dfrac{1}{32} = \\dfrac{11}{32}$."
+        "$ P = \\dfrac{13}{52} = \\dfrac{1}{4} $."
       ],
-      "reponse": "$\\mathrm{A}$ et $\\mathrm{B}$ incompatibles, $P(\\mathrm{A} \\cup \\mathrm{B}) = \\dfrac{1}{4}$ ; $\\mathrm{A}$ et $\\mathrm{C}$ non incompatibles, $P(\\mathrm{A} \\cup \\mathrm{C}) = \\dfrac{11}{32}$."
+      "reponse": "$ \\dfrac{1}{4} $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "equiprobabilite",
-      "enonce": "Une urne contient $4$ boules rouges et $6$ boules noires, indiscernables au toucher. On souhaite ajouter des boules rouges (identiques aux autres) pour que la probabilité de tirer une rouge devienne égale à $\\dfrac{1}{2}$. Combien faut-il en ajouter ?",
+      "difficulte": "application",
+      "notion": "proba-cartes",
+      "enonce": "Jeu de 52 cartes. Probabilite de tirer un roi rouge ?",
       "corrige": [
-        "On note $x$ le nombre de boules rouges ajoutées. Il y a alors $4 + x$ rouges et $10 + x$ boules en tout.",
-        "Les boules étant indiscernables, les tirages sont équiprobables : $P(\\text{rouge}) = \\dfrac{4 + x}{10 + x}$.",
-        "On résout $\\dfrac{4 + x}{10 + x} = \\dfrac{1}{2}$, soit $2(4 + x) = 10 + x$, c'est-à-dire $8 + 2x = 10 + x$, donc $x = 2$.",
-        "Vérification : avec $2$ rouges ajoutées, on a $6$ rouges sur $12$ boules, et $\\dfrac{6}{12} = \\dfrac{1}{2}$. ✓"
+        "$ P = \\dfrac{2}{52} = \\dfrac{1}{26} $."
       ],
-      "reponse": "Il faut ajouter $2$ boules rouges."
+      "reponse": "$ \\dfrac{1}{26} $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "contraire",
-      "enonce": "Un sac contient $20$ jetons numérotés de $1$ à $20$, indiscernables au toucher. On en tire un au hasard. Quelle est la probabilité que le numéro tiré ne soit **pas** un multiple de $5$ ?",
+      "notion": "proba-urne",
+      "enonce": "Urne de 10 boules dont 3 gagnantes. Probabilite de gagner ?",
       "corrige": [
-        "Les jetons sont indiscernables : les $20$ tirages sont équiprobables. On note $\\mathrm{M}$ : « le numéro est un multiple de $5$ ». On cherche $P\\left(\\overline{\\mathrm{M}}\\right)$.",
-        "Les multiples de $5$ entre $1$ et $20$ sont $5, 10, 15, 20$, soit $4$ issues favorables à $\\mathrm{M}$ : $P(\\mathrm{M}) = \\dfrac{4}{20} = \\dfrac{1}{5}$.",
-        "Par l'événement contraire : $P\\left(\\overline{\\mathrm{M}}\\right) = 1 - \\dfrac{1}{5} = \\dfrac{4}{5}$."
+        "$ P = \\dfrac{3}{10} = \\dfrac{3}{10} $."
       ],
-      "reponse": "$P(\\text{pas un multiple de } 5) = \\dfrac{4}{5}$."
+      "reponse": "$ \\dfrac{3}{10} $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "denombrement",
-      "enonce": "On lance une pièce équilibrée (côtés Pile et Face), puis un dé équilibré à six faces. Quelle est la probabilité d'obtenir **Pile et un numéro strictement supérieur à $4$** ?",
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 10 boules dont 4 gagnantes. Probabilite de gagner ?",
       "corrige": [
-        "L'expérience a deux étapes ; on la représente par un arbre. La pièce donne $2$ résultats et le dé $6$, soit $2 \\times 6 = 12$ issues équiprobables.",
-        "L'événement demandé impose Pile à la première étape et un numéro parmi $\\{5, 6\\}$ à la seconde, soit $1 \\times 2 = 2$ issues favorables : $(\\text{Pile}, 5)$ et $(\\text{Pile}, 6)$.",
-        "$P(\\text{Pile et numéro} > 4) = \\dfrac{2}{12} = \\dfrac{1}{6}$."
+        "$ P = \\dfrac{4}{10} = \\dfrac{2}{5} $."
       ],
-      "reponse": "$P(\\text{Pile et numéro} > 4) = \\dfrac{1}{6}$."
+      "reponse": "$ \\dfrac{2}{5} $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "union",
-      "enonce": "Dans une classe de $30$ élèves, $18$ pratiquent un sport, $12$ jouent d'un instrument de musique et $7$ font les deux. On choisit un élève au hasard et on note $\\mathrm{S}$ : « il pratique un sport » et $\\mathrm{M}$ : « il joue d'un instrument ».\\n\\n1. Calculer $P(\\mathrm{S} \\cup \\mathrm{M})$, la probabilité qu'il pratique au moins une des deux activités.\\n2. En déduire la probabilité qu'il ne pratique aucune des deux.\\n3. Quelle est la probabilité qu'il pratique **exactement une** des deux activités ?",
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 5 boules dont 2 gagnantes. Probabilite de gagner ?",
       "corrige": [
-        "Les $30$ élèves sont choisis au hasard, donc équiprobables. On a $P(\\mathrm{S}) = \\dfrac{18}{30}$, $P(\\mathrm{M}) = \\dfrac{12}{30}$ et $P(\\mathrm{S} \\cap \\mathrm{M}) = \\dfrac{7}{30}$.",
-        "1. Par l'inclusion-exclusion : $P(\\mathrm{S} \\cup \\mathrm{M}) = \\dfrac{18}{30} + \\dfrac{12}{30} - \\dfrac{7}{30} = \\dfrac{23}{30}$.",
-        "2. « Aucune des deux » est le contraire de $\\mathrm{S} \\cup \\mathrm{M}$ : $P\\left(\\overline{\\mathrm{S} \\cup \\mathrm{M}}\\right) = 1 - \\dfrac{23}{30} = \\dfrac{7}{30}$.",
-        "3. « Exactement une » exclut les $7$ élèves qui font les deux : on retire l'intersection de la réunion, soit $\\dfrac{23}{30} - \\dfrac{7}{30} = \\dfrac{16}{30} = \\dfrac{8}{15}$. (On peut vérifier : $11$ font uniquement du sport et $5$ uniquement de la musique, soit $16$ élèves.)"
+        "$ P = \\dfrac{2}{5} = \\dfrac{2}{5} $."
       ],
-      "reponse": "$P(\\mathrm{S} \\cup \\mathrm{M}) = \\dfrac{23}{30}$ ; aucune $= \\dfrac{7}{30}$ ; exactement une $= \\dfrac{8}{15}$."
+      "reponse": "$ \\dfrac{2}{5} $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "synthese",
-      "enonce": "Un club sportif compte $400$ membres. Chaque membre est soit un homme, soit une femme, et possède soit une licence **compétition**, soit une licence **loisir**. On dispose des données partielles suivantes : le club compte $240$ femmes ; $150$ membres au total ont une licence compétition ; parmi les femmes, $90$ ont une licence compétition.\\n\\n1. Recopier et compléter le tableau à double entrée des effectifs (lignes : femmes, hommes ; colonnes : compétition, loisir ; avec les totaux).\\n2. On choisit un membre au hasard. On note $\\mathrm{F}$ : « le membre est une femme » et $\\mathrm{C}$ : « le membre a une licence compétition ». Calculer $P(\\mathrm{F})$ et $P(\\mathrm{C})$.\\n3. Calculer $P(\\mathrm{F} \\cap \\mathrm{C})$ puis $P(\\mathrm{F} \\cup \\mathrm{C})$. Interpréter $P(\\mathrm{F} \\cup \\mathrm{C})$ par une phrase.\\n4. En déduire la probabilité que le membre choisi soit un homme ayant une licence loisir.\\n5. On interroge maintenant au hasard deux membres l'un après l'autre, en notant à chaque fois le type de licence (C : compétition, L : loisir). Le premier membre interrogé est réintégré au club avant le second tirage, de sorte que les deux tirages sont indépendants et équiprobables. Construire un arbre pondéré et calculer la probabilité que les **deux** aient une licence compétition, puis la probabilité qu'**au moins un** des deux ait une licence compétition.",
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 10 boules dont 7 gagnantes. Probabilite de gagner ?",
       "corrige": [
-        "1. Le club compte $400$ membres dont $240$ femmes, donc $400 - 240 = 160$ hommes. Il y a $150$ licences compétition, donc $400 - 150 = 250$ licences loisir. Parmi les femmes, $90$ sont en compétition, donc $240 - 90 = 150$ femmes en loisir. Il reste $150 - 90 = 60$ hommes en compétition et $160 - 60 = 100$ hommes en loisir. Tableau : femmes $= 90$ compétition, $150$ loisir ($240$) ; hommes $= 60$ compétition, $100$ loisir ($160$) ; totaux $= 150$ compétition, $250$ loisir ($400$).",
-        "2. Le membre est choisi au hasard parmi $400$ : équiprobabilité. $P(\\mathrm{F}) = \\dfrac{240}{400} = \\dfrac{3}{5} = 0{,}6$ et $P(\\mathrm{C}) = \\dfrac{150}{400} = \\dfrac{3}{8} = 0{,}375$.",
-        "3. $P(\\mathrm{F} \\cap \\mathrm{C}) = \\dfrac{90}{400} = \\dfrac{9}{40} = 0{,}225$. Par l'inclusion-exclusion : $P(\\mathrm{F} \\cup \\mathrm{C}) = 0{,}6 + 0{,}375 - 0{,}225 = 0{,}75$. Interprétation : il y a $75\\,\\%$ de chances que le membre choisi soit une femme **ou** possède une licence compétition (ou les deux).",
-        "4. « Homme ayant une licence loisir » est exactement le contraire de $\\mathrm{F} \\cup \\mathrm{C}$ (ni femme, ni compétition). Donc $P = 1 - 0{,}75 = 0{,}25$. On le retrouve dans le tableau : $\\dfrac{100}{400} = 0{,}25$. ✓",
-        "5. À chaque tirage, $P(\\mathrm{C}) = \\dfrac{150}{400} = \\dfrac{3}{8}$ et $P(\\mathrm{L}) = \\dfrac{250}{400} = \\dfrac{5}{8}$. L'arbre a deux niveaux (premier membre : C ou L ; second membre : C ou L), chaque branche étant pondérée par ces valeurs car les tirages sont indépendants. « Les deux en compétition » suit la branche C puis C : $P = \\dfrac{3}{8} \\times \\dfrac{3}{8} = \\dfrac{9}{64}$. « Au moins un en compétition » se calcule par le contraire « aucun en compétition » (branche L puis L) : $P = 1 - \\dfrac{5}{8} \\times \\dfrac{5}{8} = 1 - \\dfrac{25}{64} = \\dfrac{39}{64}$."
+        "$ P = \\dfrac{7}{10} = \\dfrac{7}{10} $."
       ],
-      "reponse": "Tableau : femmes $90$/$150$, hommes $60$/$100$. $P(\\mathrm{F}) = 0{,}6$, $P(\\mathrm{C}) = 0{,}375$, $P(\\mathrm{F} \\cap \\mathrm{C}) = 0{,}225$, $P(\\mathrm{F} \\cup \\mathrm{C}) = 0{,}75$ ; homme-loisir $= 0{,}25$. Deux en compétition $= \\dfrac{9}{64}$ ; au moins un $= \\dfrac{39}{64}$."
+      "reponse": "$ \\dfrac{7}{10} $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 4 boules dont 1 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{1}{4} = \\dfrac{1}{4} $."
+      ],
+      "reponse": "$ \\dfrac{1}{4} $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 8 boules dont 5 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{5}{8} = \\dfrac{5}{8} $."
+      ],
+      "reponse": "$ \\dfrac{5}{8} $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 10 boules dont 6 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{6}{10} = \\dfrac{3}{5} $."
+      ],
+      "reponse": "$ \\dfrac{3}{5} $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 7 boules dont 3 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{3}{7} = \\dfrac{3}{7} $."
+      ],
+      "reponse": "$ \\dfrac{3}{7} $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 12 boules dont 9 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{9}{12} = \\dfrac{3}{4} $."
+      ],
+      "reponse": "$ \\dfrac{3}{4} $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 9 boules dont 2 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{2}{9} = \\dfrac{2}{9} $."
+      ],
+      "reponse": "$ \\dfrac{2}{9} $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 6 boules dont 5 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{5}{6} = \\dfrac{5}{6} $."
+      ],
+      "reponse": "$ \\dfrac{5}{6} $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 15 boules dont 4 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{4}{15} = \\dfrac{4}{15} $."
+      ],
+      "reponse": "$ \\dfrac{4}{15} $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 6 boules dont 1 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{1}{6} = \\dfrac{1}{6} $."
+      ],
+      "reponse": "$ \\dfrac{1}{6} $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 15 boules dont 7 gagnantes. Probabilite de gagner ?",
+      "corrige": [
+        "$ P = \\dfrac{7}{15} = \\dfrac{7}{15} $."
+      ],
+      "reponse": "$ \\dfrac{7}{15} $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{3}{10} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{3}{10} = \\dfrac{7}{10} $."
+      ],
+      "reponse": "$ \\dfrac{7}{10} $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{2}{5} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{2}{5} = \\dfrac{3}{5} $."
+      ],
+      "reponse": "$ \\dfrac{3}{5} $"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{7}{10} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{7}{10} = \\dfrac{3}{10} $."
+      ],
+      "reponse": "$ \\dfrac{3}{10} $"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{1}{4} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{1}{4} = \\dfrac{3}{4} $."
+      ],
+      "reponse": "$ \\dfrac{3}{4} $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{5}{8} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{5}{8} = \\dfrac{3}{8} $."
+      ],
+      "reponse": "$ \\dfrac{3}{8} $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{4}{9} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{4}{9} = \\dfrac{5}{9} $."
+      ],
+      "reponse": "$ \\dfrac{5}{9} $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{6}{11} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{6}{11} = \\dfrac{5}{11} $."
+      ],
+      "reponse": "$ \\dfrac{5}{11} $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{3}{8} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{3}{8} = \\dfrac{5}{8} $."
+      ],
+      "reponse": "$ \\dfrac{5}{8} $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{2}{7} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{2}{7} = \\dfrac{5}{7} $."
+      ],
+      "reponse": "$ \\dfrac{5}{7} $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$ P(A) = \\dfrac{5}{12} $. Calculer $ P(\\overline{A}) $.",
+      "corrige": [
+        "$ P(\\overline{A}) = 1 - \\dfrac{5}{12} = \\dfrac{7}{12} $."
+      ],
+      "reponse": "$ \\dfrac{7}{12} $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 5 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{5} $."
+      ],
+      "reponse": "$ \\dfrac{2}{5} $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 6 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{3} $."
+      ],
+      "reponse": "$ \\dfrac{1}{3} $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 7 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{7} $."
+      ],
+      "reponse": "$ \\dfrac{2}{7} $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 8 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{4} $."
+      ],
+      "reponse": "$ \\dfrac{1}{4} $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 9 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{9} $."
+      ],
+      "reponse": "$ \\dfrac{2}{9} $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 10 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{5} $."
+      ],
+      "reponse": "$ \\dfrac{1}{5} $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 11 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{11} $."
+      ],
+      "reponse": "$ \\dfrac{2}{11} $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 12 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{6} $."
+      ],
+      "reponse": "$ \\dfrac{1}{6} $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 13 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{13} $."
+      ],
+      "reponse": "$ \\dfrac{2}{13} $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 14 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{7} $."
+      ],
+      "reponse": "$ \\dfrac{1}{7} $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 15 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{15} $."
+      ],
+      "reponse": "$ \\dfrac{2}{15} $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 16 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{8} $."
+      ],
+      "reponse": "$ \\dfrac{1}{8} $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 17 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{17} $."
+      ],
+      "reponse": "$ \\dfrac{2}{17} $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 18 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{9} $."
+      ],
+      "reponse": "$ \\dfrac{1}{9} $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 19 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{19} $."
+      ],
+      "reponse": "$ \\dfrac{2}{19} $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 20 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{10} $."
+      ],
+      "reponse": "$ \\dfrac{1}{10} $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 21 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{21} $."
+      ],
+      "reponse": "$ \\dfrac{2}{21} $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 22 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{11} $."
+      ],
+      "reponse": "$ \\dfrac{1}{11} $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 23 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{2}{23} $."
+      ],
+      "reponse": "$ \\dfrac{2}{23} $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "proba-urne",
+      "enonce": "Urne de 24 boules dont 2 gagnantes. Probabilite ?",
+      "corrige": [
+        "$ = \\dfrac{1}{12} $."
+      ],
+      "reponse": "$ \\dfrac{1}{12} $"
     }
   ]
 }

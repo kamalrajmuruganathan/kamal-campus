@@ -13,135 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "volume-pyramide",
-      "enonce": "Une pyramide a une base carrée de $3$ cm de côté et une hauteur de $7$ cm. Calcule son volume.",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 2 cm, 3 cm et 4 cm ?",
       "corrige": [
-        "La base est un carré de $3$ cm de côté, donc son aire est $\\mathcal{A}_{\\text{base}} = 3 \\times 3 = 9 \\text{ cm}^2$.",
-        "Le volume d'une pyramide est $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3}$, où $h$ est la hauteur du solide.",
-        "On remplace : $V = \\dfrac{9 \\times 7}{3} = \\dfrac{63}{3} = 21 \\text{ cm}^3$.",
-        "On n'oublie pas de diviser par $3$ et d'écrire l'unité en $\\text{cm}^3$ (un volume)."
+        "$ V = 2 \\times 3 \\times 4 = 24 $ cm³."
       ],
-      "reponse": "$V = 21 \\text{ cm}^3$."
+      "reponse": "$ 24 $ cm³"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "volume-cone",
-      "enonce": "Un cône de révolution a un rayon de base de $3$ cm et une hauteur de $10$ cm. Calcule son volume. On prend $\\pi \\approx 3{,}14$.",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 5 cm, 2 cm et 3 cm ?",
       "corrige": [
-        "La base est un disque de rayon $r = 3$ cm, donc son aire est $\\mathcal{A}_{\\text{base}} = \\pi r^2 \\approx 3{,}14 \\times 3^2 = 3{,}14 \\times 9 = 28{,}26 \\text{ cm}^2$.",
-        "Le volume d'un cône est $V = \\dfrac{\\pi r^2 \\times h}{3} = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3}$.",
-        "On remplace : $V \\approx \\dfrac{28{,}26 \\times 10}{3} = \\dfrac{282{,}6}{3} = 94{,}2 \\text{ cm}^3$.",
-        "Attention : la base utilise l'aire $\\pi r^2$, pas le périmètre $2\\pi r$."
+        "$ V = 5 \\times 2 \\times 3 = 30 $ cm³."
       ],
-      "reponse": "$V \\approx 94{,}2 \\text{ cm}^3$."
+      "reponse": "$ 30 $ cm³"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "cone-revolution",
-      "enonce": "On fait tourner un triangle rectangle dont les côtés de l'angle droit mesurent $6$ cm et $8$ cm autour du côté de $6$ cm. Calcule le volume du cône obtenu. On prend $\\pi \\approx 3{,}14$.",
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 4 cm, 4 cm et 2 cm ?",
       "corrige": [
-        "Le côté autour duquel on tourne devient la hauteur du cône : $h = 6$ cm. L'autre côté de l'angle droit balaie le disque de base, c'est donc le rayon : $r = 8$ cm.",
-        "Aire de la base : $\\mathcal{A}_{\\text{base}} = \\pi r^2 \\approx 3{,}14 \\times 8^2 = 3{,}14 \\times 64 = 200{,}96 \\text{ cm}^2$.",
-        "Volume : $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3} \\approx \\dfrac{200{,}96 \\times 6}{3} = 200{,}96 \\times 2 = 401{,}92 \\text{ cm}^3$.",
-        "Piège : si on échangeait rayon et hauteur ($r=6$, $h=8$), on trouverait un autre volume. C'est bien le côté fixe qui donne la hauteur."
+        "$ V = 4 \\times 4 \\times 2 = 32 $ cm³."
       ],
-      "reponse": "$V \\approx 401{,}92 \\text{ cm}^3$."
+      "reponse": "$ 32 $ cm³"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "unites-capacite",
-      "enonce": "Un verre en forme de cône a un rayon de $10$ cm et une hauteur de $15$ cm. Quelle est sa capacité, en litres ? On prend $\\pi \\approx 3{,}14$.",
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 6 cm, 3 cm et 2 cm ?",
       "corrige": [
-        "Aire de la base : $\\mathcal{A}_{\\text{base}} = \\pi r^2 \\approx 3{,}14 \\times 10^2 = 3{,}14 \\times 100 = 314 \\text{ cm}^2$.",
-        "Volume : $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3} \\approx \\dfrac{314 \\times 15}{3} = 314 \\times 5 = 1570 \\text{ cm}^3$.",
-        "Conversion en litres : $1 \\text{ L} = 1 \\text{ dm}^3 = 1000 \\text{ cm}^3$, donc on divise par $1000$.",
-        "$1570 \\text{ cm}^3 = \\dfrac{1570}{1000} = 1{,}57 \\text{ L}$. On divise par $1000$, jamais par $10$ ni par $100$."
+        "$ V = 6 \\times 3 \\times 2 = 36 $ cm³."
       ],
-      "reponse": "$V \\approx 1570 \\text{ cm}^3 = 1{,}57 \\text{ L}$."
+      "reponse": "$ 36 $ cm³"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "hauteur-piege",
-      "enonce": "Une pyramide régulière a une base carrée de $8$ cm de côté. La hauteur de chacune de ses faces latérales mesure $5$ cm. Calcule le volume de la pyramide. (Indication : la hauteur d'une face n'est pas la hauteur de la pyramide.)",
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 5 cm, 5 cm et 2 cm ?",
       "corrige": [
-        "La hauteur d'une face part du sommet et tombe au milieu d'un côté de la base. Comme la pyramide est régulière, le pied de la hauteur du solide est au centre du carré.",
-        "Du centre du carré jusqu'au milieu d'un côté, la distance vaut la moitié du côté : $\\dfrac{8}{2} = 4$ cm.",
-        "Ces trois longueurs forment un triangle rectangle : la hauteur $h$ de la pyramide, le segment de $4$ cm, et la hauteur de face de $5$ cm qui en est l'hypoténuse. Par le théorème de Pythagore : $h^2 = 5^2 - 4^2 = 25 - 16 = 9$, donc $h = 3$ cm.",
-        "Aire de la base : $\\mathcal{A}_{\\text{base}} = 8 \\times 8 = 64 \\text{ cm}^2$, puis $V = \\dfrac{64 \\times 3}{3} = 64 \\text{ cm}^3$.",
-        "Utiliser $5$ cm au lieu de $3$ cm pour la hauteur donnerait $\\dfrac{64 \\times 5}{3} \\approx 106{,}7 \\text{ cm}^3$ : faux."
+        "$ V = 5 \\times 5 \\times 2 = 50 $ cm³."
       ],
-      "reponse": "$h = 3 \\text{ cm}$ et $V = 64 \\text{ cm}^3$."
+      "reponse": "$ 50 $ cm³"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "volume-pyramide",
-      "enonce": "Une pyramide a une base carrée et une hauteur de $6$ cm. Son volume est de $200 \\text{ cm}^3$. Quelle est l'aire de sa base ? Quelle est la longueur du côté de ce carré ?",
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 7 cm, 2 cm et 2 cm ?",
       "corrige": [
-        "On part de la formule $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3}$, où l'inconnue est $\\mathcal{A}_{\\text{base}}$.",
-        "On remplace les valeurs connues : $200 = \\dfrac{\\mathcal{A}_{\\text{base}} \\times 6}{3} = \\mathcal{A}_{\\text{base}} \\times 2$.",
-        "Donc $\\mathcal{A}_{\\text{base}} = \\dfrac{200}{2} = 100 \\text{ cm}^2$.",
-        "La base est un carré, donc son aire est côté au carré : $\\text{côté}^2 = 100$, d'où $\\text{côté} = \\sqrt{100} = 10 \\text{ cm}$."
+        "$ V = 7 \\times 2 \\times 2 = 28 $ cm³."
       ],
-      "reponse": "$\\mathcal{A}_{\\text{base}} = 100 \\text{ cm}^2$ et le côté mesure $10 \\text{ cm}$."
+      "reponse": "$ 28 $ cm³"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "volume-pyramide",
-      "enonce": "Une pyramide a une base rectangulaire de $5$ cm sur $4$ cm et une hauteur de $9$ cm. Calcule son volume.",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 8 cm, 3 cm et 1 cm ?",
       "corrige": [
-        "La base est un rectangle, donc son aire est $\\mathcal{A}_{\\text{base}} = L \\times \\ell = 5 \\times 4 = 20 \\text{ cm}^2$.",
-        "Le volume d'une pyramide est $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3}$, où $h$ est la hauteur du solide.",
-        "On remplace : $V = \\dfrac{20 \\times 9}{3} = \\dfrac{180}{3} = 60 \\text{ cm}^3$.",
-        "On divise bien par $3$ (solide pointu) et on écrit l'unité en $\\text{cm}^3$."
+        "$ V = 8 \\times 3 \\times 1 = 24 $ cm³."
       ],
-      "reponse": "$V = 60 \\text{ cm}^3$."
+      "reponse": "$ 24 $ cm³"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "unites-capacite",
-      "enonce": "On fait tourner un triangle rectangle dont les côtés de l'angle droit mesurent $9$ cm et $12$ cm autour du côté de $12$ cm. Quelle est, en litres, la capacité du cône obtenu ? On prend $\\pi \\approx 3{,}14$.",
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 4 cm, 5 cm et 3 cm ?",
       "corrige": [
-        "Le côté fixe donne la hauteur : $h = 12$ cm. L'autre côté de l'angle droit balaie le disque de base, c'est le rayon : $r = 9$ cm.",
-        "Aire de la base : $\\mathcal{A}_{\\text{base}} = \\pi r^2 \\approx 3{,}14 \\times 9^2 = 3{,}14 \\times 81 = 254{,}34 \\text{ cm}^2$.",
-        "Volume : $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3} \\approx \\dfrac{254{,}34 \\times 12}{3} = 254{,}34 \\times 4 = 1017{,}36 \\text{ cm}^3$.",
-        "Conversion : $1 \\text{ L} = 1000 \\text{ cm}^3$, donc on divise par $1000$ : $1017{,}36 \\text{ cm}^3 \\approx 1{,}02 \\text{ L}$."
+        "$ V = 4 \\times 5 \\times 3 = 60 $ cm³."
       ],
-      "reponse": "$V \\approx 1017{,}36 \\text{ cm}^3 \\approx 1{,}02 \\text{ L}$."
+      "reponse": "$ 60 $ cm³"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "volume-cone",
-      "enonce": "Un cône de révolution a une hauteur de $6$ cm et un volume de $100{,}48 \\text{ cm}^3$. Calcule le rayon de sa base. On prend $\\pi \\approx 3{,}14$.",
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 6 cm, 2 cm et 5 cm ?",
       "corrige": [
-        "On part de la formule $V = \\dfrac{\\pi r^2 \\times h}{3}$, où l'inconnue est le rayon $r$.",
-        "On remplace les valeurs connues : $100{,}48 = \\dfrac{3{,}14 \\times r^2 \\times 6}{3} = 3{,}14 \\times r^2 \\times 2 = 6{,}28 \\times r^2$.",
-        "On isole $r^2$ : $r^2 = \\dfrac{100{,}48}{6{,}28} = 16$.",
-        "Le rayon est une longueur positive, donc $r = \\sqrt{16} = 4 \\text{ cm}$.",
-        "Vérification : $\\dfrac{3{,}14 \\times 4^2 \\times 6}{3} = \\dfrac{3{,}14 \\times 16 \\times 6}{3} = \\dfrac{301{,}44}{3} = 100{,}48 \\text{ cm}^3$ : c'est bien le volume donné."
+        "$ V = 6 \\times 2 \\times 5 = 60 $ cm³."
       ],
-      "reponse": "$r = 4 \\text{ cm}$."
+      "reponse": "$ 60 $ cm³"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "cone-revolution",
-      "enonce": "Un fabricant produit des gobelets en carton en forme de cône de révolution. L'ouverture est un disque de rayon $6$ cm et la hauteur du gobelet est de $8$ cm. On prend $\\pi \\approx 3{,}14$.\\n\\n1. Calcule l'aire du disque d'ouverture du gobelet.\\n2. Calcule le volume du gobelet, en $\\text{cm}^3$.\\n3. Donne la capacité du gobelet en millilitres (mL).\\n4. Pour tracer le patron, on a besoin de la longueur $g$ du segment qui va du sommet du cône jusqu'au bord de l'ouverture. Calcule $g$ à l'aide du théorème de Pythagore.\\n5. La surface latérale déroulée est un secteur de disque dont l'arc a pour longueur le périmètre du disque de base. Calcule la longueur de cet arc.",
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 10 cm, 2 cm et 3 cm ?",
       "corrige": [
-        "1. Le disque d'ouverture a pour rayon $r = 6$ cm. Son aire est $\\mathcal{A}_{\\text{base}} = \\pi r^2 \\approx 3{,}14 \\times 6^2 = 3{,}14 \\times 36 = 113{,}04 \\text{ cm}^2$.",
-        "2. Le volume du cône est $V = \\dfrac{\\mathcal{A}_{\\text{base}} \\times h}{3} \\approx \\dfrac{113{,}04 \\times 8}{3} = \\dfrac{904{,}32}{3} = 301{,}44 \\text{ cm}^3$.",
-        "3. Comme $1 \\text{ mL} = 1 \\text{ cm}^3$, la capacité vaut directement $301{,}44 \\text{ mL}$.",
-        "4. La hauteur ($8$ cm) et le rayon ($6$ cm) forment les deux côtés de l'angle droit d'un triangle rectangle dont $g$ est l'hypoténuse. Par Pythagore : $g^2 = 6^2 + 8^2 = 36 + 64 = 100$, donc $g = \\sqrt{100} = 10 \\text{ cm}$.",
-        "5. L'arc a pour longueur le périmètre du disque de base : $2\\pi r \\approx 2 \\times 3{,}14 \\times 6 = 37{,}68 \\text{ cm}$ (on utilise ici le périmètre $2\\pi r$, et non l'aire $\\pi r^2$)."
+        "$ V = 10 \\times 2 \\times 3 = 60 $ cm³."
       ],
-      "reponse": "$\\mathcal{A}_{\\text{base}} \\approx 113{,}04 \\text{ cm}^2$ ; $V \\approx 301{,}44 \\text{ cm}^3 = 301{,}44 \\text{ mL}$ ; $g = 10 \\text{ cm}$ ; arc $\\approx 37{,}68 \\text{ cm}$."
+      "reponse": "$ 60 $ cm³"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 3 cm, 3 cm et 5 cm ?",
+      "corrige": [
+        "$ V = 3 \\times 3 \\times 5 = 45 $ cm³."
+      ],
+      "reponse": "$ 45 $ cm³"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "volume-pave",
+      "enonce": "Volume d'un pave droit de dimensions 9 cm, 2 cm et 2 cm ?",
+      "corrige": [
+        "$ V = 9 \\times 2 \\times 2 = 36 $ cm³."
+      ],
+      "reponse": "$ 36 $ cm³"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 2 cm ?",
+      "corrige": [
+        "$ V = 2^3 = 8 $ cm³."
+      ],
+      "reponse": "$ 8 $ cm³"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 3 cm ?",
+      "corrige": [
+        "$ V = 3^3 = 27 $ cm³."
+      ],
+      "reponse": "$ 27 $ cm³"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 4 cm ?",
+      "corrige": [
+        "$ V = 4^3 = 64 $ cm³."
+      ],
+      "reponse": "$ 64 $ cm³"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 5 cm ?",
+      "corrige": [
+        "$ V = 5^3 = 125 $ cm³."
+      ],
+      "reponse": "$ 125 $ cm³"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 6 cm ?",
+      "corrige": [
+        "$ V = 6^3 = 216 $ cm³."
+      ],
+      "reponse": "$ 216 $ cm³"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 7 cm ?",
+      "corrige": [
+        "$ V = 7^3 = 343 $ cm³."
+      ],
+      "reponse": "$ 343 $ cm³"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 8 cm ?",
+      "corrige": [
+        "$ V = 8^3 = 512 $ cm³."
+      ],
+      "reponse": "$ 512 $ cm³"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 10 cm ?",
+      "corrige": [
+        "$ V = 10^3 = 1000 $ cm³."
+      ],
+      "reponse": "$ 1000 $ cm³"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 9 cm ?",
+      "corrige": [
+        "$ V = 9^3 = 729 $ cm³."
+      ],
+      "reponse": "$ 729 $ cm³"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 1 cm ?",
+      "corrige": [
+        "$ V = 1^3 = 1 $ cm³."
+      ],
+      "reponse": "$ 1 $ cm³"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 11 cm ?",
+      "corrige": [
+        "$ V = 11^3 = 1331 $ cm³."
+      ],
+      "reponse": "$ 1331 $ cm³"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 12 cm ?",
+      "corrige": [
+        "$ V = 12^3 = 1728 $ cm³."
+      ],
+      "reponse": "$ 1728 $ cm³"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de faces possede un cube ?",
+      "corrige": [
+        "Un cube possede $6$ faces."
+      ],
+      "reponse": "$6$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de aretes possede un cube ?",
+      "corrige": [
+        "Un cube possede $12$ aretes."
+      ],
+      "reponse": "$12$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de sommets possede un cube ?",
+      "corrige": [
+        "Un cube possede $8$ sommets."
+      ],
+      "reponse": "$8$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de faces possede un pave droit ?",
+      "corrige": [
+        "Un pave droit possede $6$ faces."
+      ],
+      "reponse": "$6$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de aretes possede un pave droit ?",
+      "corrige": [
+        "Un pave droit possede $12$ aretes."
+      ],
+      "reponse": "$12$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de sommets possede un pave droit ?",
+      "corrige": [
+        "Un pave droit possede $8$ sommets."
+      ],
+      "reponse": "$8$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de faces possede une pyramide a base carree ?",
+      "corrige": [
+        "Une pyramide a base carree possede $5$ faces."
+      ],
+      "reponse": "$5$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de sommets possede une pyramide a base carree ?",
+      "corrige": [
+        "Une pyramide a base carree possede $5$ sommets."
+      ],
+      "reponse": "$5$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de faces possede un prisme droit a base triangulaire ?",
+      "corrige": [
+        "Un prisme droit a base triangulaire possede $5$ faces."
+      ],
+      "reponse": "$5$"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "denombrer",
+      "enonce": "Combien de aretes possede un prisme droit a base triangulaire ?",
+      "corrige": [
+        "Un prisme droit a base triangulaire possede $9$ aretes."
+      ],
+      "reponse": "$9$"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 2 cm ?",
+      "corrige": [
+        "$ 2^3 = 8 $ cm³."
+      ],
+      "reponse": "$ 8 $ cm³"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 3 cm ?",
+      "corrige": [
+        "$ 3^3 = 27 $ cm³."
+      ],
+      "reponse": "$ 27 $ cm³"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 4 cm ?",
+      "corrige": [
+        "$ 4^3 = 64 $ cm³."
+      ],
+      "reponse": "$ 64 $ cm³"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 5 cm ?",
+      "corrige": [
+        "$ 5^3 = 125 $ cm³."
+      ],
+      "reponse": "$ 125 $ cm³"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 6 cm ?",
+      "corrige": [
+        "$ 6^3 = 216 $ cm³."
+      ],
+      "reponse": "$ 216 $ cm³"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 7 cm ?",
+      "corrige": [
+        "$ 7^3 = 343 $ cm³."
+      ],
+      "reponse": "$ 343 $ cm³"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 8 cm ?",
+      "corrige": [
+        "$ 8^3 = 512 $ cm³."
+      ],
+      "reponse": "$ 512 $ cm³"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 9 cm ?",
+      "corrige": [
+        "$ 9^3 = 729 $ cm³."
+      ],
+      "reponse": "$ 729 $ cm³"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 10 cm ?",
+      "corrige": [
+        "$ 10^3 = 1000 $ cm³."
+      ],
+      "reponse": "$ 1000 $ cm³"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 11 cm ?",
+      "corrige": [
+        "$ 11^3 = 1331 $ cm³."
+      ],
+      "reponse": "$ 1331 $ cm³"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 12 cm ?",
+      "corrige": [
+        "$ 12^3 = 1728 $ cm³."
+      ],
+      "reponse": "$ 1728 $ cm³"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 13 cm ?",
+      "corrige": [
+        "$ 13^3 = 2197 $ cm³."
+      ],
+      "reponse": "$ 2197 $ cm³"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 14 cm ?",
+      "corrige": [
+        "$ 14^3 = 2744 $ cm³."
+      ],
+      "reponse": "$ 2744 $ cm³"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 15 cm ?",
+      "corrige": [
+        "$ 15^3 = 3375 $ cm³."
+      ],
+      "reponse": "$ 3375 $ cm³"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 16 cm ?",
+      "corrige": [
+        "$ 16^3 = 4096 $ cm³."
+      ],
+      "reponse": "$ 4096 $ cm³"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "volume-cube",
+      "enonce": "Volume d'un cube d'arete 17 cm ?",
+      "corrige": [
+        "$ 17^3 = 4913 $ cm³."
+      ],
+      "reponse": "$ 4913 $ cm³"
     }
   ]
 }

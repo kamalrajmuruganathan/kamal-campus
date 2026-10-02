@@ -13,135 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "lumiere",
-      "enonce": "La lumière du Soleil met $8$ min $20$ s pour atteindre la Terre. Sachant que $c = 3{,}00 \\times 10^{8}$ $\\mathrm{m\\cdot s^{-1}}$, calcule la distance Terre-Soleil.",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 2 m et une frequence 3 Hz. Celerite ?",
       "corrige": [
-        "On convertit la durée en secondes : $\\Delta t = 8 \\times 60 + 20 = 500$ s.",
-        "On applique la relation $d = c \\times \\Delta t$.",
-        "$d = 3{,}00 \\times 10^{8} \\times 500 = 1{,}50 \\times 10^{11}$ m.",
-        "Contrôle des unités : $\\mathrm{m\\cdot s^{-1}}$ $\\times$ s donne bien des mètres."
+        "$ v = \\lambda\\times f = 2\\times 3 = 6 $ m/s."
       ],
-      "reponse": "$d = 1{,}50 \\times 10^{11}$ m (soit environ $150$ millions de km)."
+      "reponse": "$ 6 $ m/s"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "loi-ohm",
-      "enonce": "Aux bornes d'une résistance, on mesure une tension $U = 6{,}0$ V alors qu'elle est traversée par une intensité $I = 0{,}25$ A. Détermine la valeur de sa résistance $R$.",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 5 m et une frequence 2 Hz. Celerite ?",
       "corrige": [
-        "La loi d'Ohm s'écrit $U = R \\times I$.",
-        "On isole $R$ : $R = \\dfrac{U}{I}$.",
-        "$R = \\dfrac{6{,}0}{0{,}25} = 24$ Ω.",
-        "Contrôle des unités : des volts divisés par des ampères donnent des ohms."
+        "$ v = \\lambda\\times f = 5\\times 2 = 10 $ m/s."
       ],
-      "reponse": "$R = 24$ Ω."
+      "reponse": "$ 10 $ m/s"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "frequence",
-      "enonce": "Pour se repérer, une chauve-souris émet un son de fréquence $f = 40$ kHz. Calcule sa période $T$, puis indique si ce son est audible par l'oreille humaine (domaine audible : $20$ Hz à $20\\,000$ Hz).",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 4 m et une frequence 10 Hz. Celerite ?",
       "corrige": [
-        "On convertit la fréquence en hertz : $f = 40$ kHz $= 40\\,000$ Hz.",
-        "La période se calcule par $T = \\dfrac{1}{f} = \\dfrac{1}{40\\,000} = 2{,}5 \\times 10^{-5}$ s (soit $25$ µs).",
-        "On compare la fréquence au domaine audible : $40\\,000$ Hz $> 20\\,000$ Hz.",
-        "La fréquence dépasse la limite supérieure : c'est un ultrason, donc inaudible pour l'oreille humaine."
+        "$ v = \\lambda\\times f = 4\\times 10 = 40 $ m/s."
       ],
-      "reponse": "$T = 2{,}5 \\times 10^{-5}$ s ; le son n'est pas audible (ultrason)."
+      "reponse": "$ 40 $ m/s"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "refraction",
-      "enonce": "Un rayon lumineux passe de l'air (indice $n_1 = 1{,}00$) vers un bloc de verre. L'angle d'incidence vaut $i_1 = 45°$ et l'angle de réfraction mesuré vaut $i_2 = 28°$. On donne $\\sin 45° = 0{,}707$ et $\\sin 28° = 0{,}469$. Détermine l'indice de réfraction $n_2$ du verre.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 3 m et une frequence 5 Hz. Celerite ?",
       "corrige": [
-        "On écrit la loi de Snell-Descartes : $n_1 \\sin i_1 = n_2 \\sin i_2$ (angles mesurés par rapport à la normale).",
-        "On isole $n_2$ : $n_2 = \\dfrac{n_1 \\sin i_1}{\\sin i_2}$.",
-        "$n_2 = \\dfrac{1{,}00 \\times 0{,}707}{0{,}469} = 1{,}51$.",
-        "Vérification de cohérence : l'indice est sans unité et $n_2 \\geqslant 1$, ce qui est bien le cas."
+        "$ v = \\lambda\\times f = 3\\times 5 = 15 $ m/s."
       ],
-      "reponse": "$n_2 \\approx 1{,}51$."
+      "reponse": "$ 15 $ m/s"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "circuits",
-      "enonce": "On monte en série un générateur de tension $U = 12$ V et deux résistances $R_1 = 30$ Ω et $R_2 = 90$ Ω. Détermine l'intensité $I$ du courant dans le circuit, puis les tensions $U_1$ et $U_2$ aux bornes de chaque résistance.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 6 m et une frequence 2 Hz. Celerite ?",
       "corrige": [
-        "En série, l'intensité est identique partout et les tensions s'additionnent : $U = U_1 + U_2$.",
-        "Avec la loi d'Ohm, $U_1 = R_1 I$ et $U_2 = R_2 I$, donc $U = (R_1 + R_2)\\,I$.",
-        "On isole $I$ : $I = \\dfrac{U}{R_1 + R_2} = \\dfrac{12}{30 + 90} = \\dfrac{12}{120} = 0{,}10$ A.",
-        "On calcule chaque tension : $U_1 = R_1 I = 30 \\times 0{,}10 = 3{,}0$ V et $U_2 = R_2 I = 90 \\times 0{,}10 = 9{,}0$ V.",
-        "Vérification : $U_1 + U_2 = 3{,}0 + 9{,}0 = 12$ V, ce qui redonne bien la tension du générateur."
+        "$ v = \\lambda\\times f = 6\\times 2 = 12 $ m/s."
       ],
-      "reponse": "$I = 0{,}10$ A, $U_1 = 3{,}0$ V et $U_2 = 9{,}0$ V."
+      "reponse": "$ 12 $ m/s"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "annee-lumiere",
-      "enonce": "L'année-lumière (a.l.) est la distance parcourue par la lumière en un an. On prend une année de $365{,}25$ jours et $c = 3{,}00 \\times 10^{8}$ $\\mathrm{m\\cdot s^{-1}}$. Calcule la valeur d'une année-lumière en mètres, puis en déduis la distance, en mètres, d'une étoile située à $4{,}0$ a.l.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 10 m et une frequence 4 Hz. Celerite ?",
       "corrige": [
-        "On convertit une année en secondes : $\\Delta t = 365{,}25 \\times 24 \\times 3600 = 3{,}16 \\times 10^{7}$ s.",
-        "Une année-lumière est une distance : $1\\ \\text{a.l.} = c \\times \\Delta t = 3{,}00 \\times 10^{8} \\times 3{,}16 \\times 10^{7} \\approx 9{,}47 \\times 10^{15}$ m.",
-        "Attention : l'année-lumière est bien une distance (en mètres), et non une durée.",
-        "Pour l'étoile à $4{,}0$ a.l. : $d = 4{,}0 \\times 9{,}47 \\times 10^{15} \\approx 3{,}8 \\times 10^{16}$ m."
+        "$ v = \\lambda\\times f = 10\\times 4 = 40 $ m/s."
       ],
-      "reponse": "$1\\ \\text{a.l.} \\approx 9{,}47 \\times 10^{15}$ m, donc l'étoile est à $d \\approx 3{,}8 \\times 10^{16}$ m."
+      "reponse": "$ 40 $ m/s"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "vergence",
-      "enonce": "Une loupe est une lentille convergente de distance focale $f' = 25$ cm. Calcule sa vergence $C$ et exprime-la en dioptries (δ).",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 1 m et une frequence 50 Hz. Celerite ?",
       "corrige": [
-        "La vergence est reliée à la distance focale par $C = \\dfrac{1}{f'}$, avec $f'$ exprimée en mètres.",
-        "On convertit d'abord la distance focale en mètres : $f' = 25$ cm $= 0{,}25$ m (étape à ne pas oublier).",
-        "$C = \\dfrac{1}{f'} = \\dfrac{1}{0{,}25} = 4{,}0$ δ.",
-        "Contrôle des unités : l'inverse d'une longueur en mètres donne bien des dioptries."
+        "$ v = \\lambda\\times f = 1\\times 50 = 50 $ m/s."
       ],
-      "reponse": "$C = 4{,}0$ δ."
+      "reponse": "$ 50 $ m/s"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "son",
-      "enonce": "Debout face à une falaise, un randonneur pousse un cri. Il perçoit son écho $1{,}5$ s plus tard. La vitesse du son dans l'air vaut $v = 340$ $\\mathrm{m\\cdot s^{-1}}$. À quelle distance $d$ se trouve-t-il de la falaise ?",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 8 m et une frequence 3 Hz. Celerite ?",
       "corrige": [
-        "Pendant la durée mesurée, le son fait un aller-retour : il parcourt la distance $d$ jusqu'à la falaise, puis revient, soit une longueur totale $2d$.",
-        "On relie distance et durée : $2d = v \\times \\Delta t$.",
-        "On isole $d$ : $d = \\dfrac{v \\times \\Delta t}{2} = \\dfrac{340 \\times 1{,}5}{2} = \\dfrac{510}{2} = 255$ m.",
-        "Contrôle des unités : $\\mathrm{m\\cdot s^{-1}}$ $\\times$ s donne des mètres ; le facteur $2$ traduit bien l'aller-retour."
+        "$ v = \\lambda\\times f = 8\\times 3 = 24 $ m/s."
       ],
-      "reponse": "$d = 255$ m (soit environ $2{,}6 \\times 10^{2}$ m)."
+      "reponse": "$ 24 $ m/s"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "circuits",
-      "enonce": "On branche en dérivation, aux bornes d'un générateur de tension $U = 6{,}0$ V, deux résistances $R_1 = 100$ Ω et $R_2 = 200$ Ω. Détermine la tension aux bornes de chaque résistance, les intensités $I_1$ et $I_2$ qui les traversent, puis l'intensité totale $I$ débitée par le générateur.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 2 m et une frequence 20 Hz. Celerite ?",
       "corrige": [
-        "En dérivation, la tension est identique aux bornes de chaque branche : $U_1 = U_2 = U = 6{,}0$ V.",
-        "On applique la loi d'Ohm dans chaque branche. Branche 1 : $I_1 = \\dfrac{U}{R_1} = \\dfrac{6{,}0}{100} = 0{,}060$ A.",
-        "Branche 2 : $I_2 = \\dfrac{U}{R_2} = \\dfrac{6{,}0}{200} = 0{,}030$ A.",
-        "En dérivation, les intensités s'additionnent : $I = I_1 + I_2 = 0{,}060 + 0{,}030 = 0{,}090$ A.",
-        "Vérification de cohérence : la branche de plus faible résistance ($R_1$) est bien parcourue par l'intensité la plus grande."
+        "$ v = \\lambda\\times f = 2\\times 20 = 40 $ m/s."
       ],
-      "reponse": "$U_1 = U_2 = 6{,}0$ V, $I_1 = 0{,}060$ A, $I_2 = 0{,}030$ A et $I = 0{,}090$ A."
+      "reponse": "$ 40 $ m/s"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "ondes-signaux",
-      "enonce": "**Un orage sur la côte.** Depuis la plage, Léa observe un orage au-dessus de la mer. Munie d'un chronomètre, elle mesure les signaux qui lui parviennent. On donne la vitesse de la lumière dans le vide $c = 3{,}00 \\times 10^{8}$ $\\mathrm{m\\cdot s^{-1}}$, la vitesse du son dans l'air $v = 340$ $\\mathrm{m\\cdot s^{-1}}$, l'indice de l'air $n_1 = 1{,}00$ et l'indice de l'eau de mer $n_2 = 1{,}33$. On donne aussi $\\sin 40° = 0{,}643$ et $\\arcsin(0{,}483) \\approx 29°$.\\n\\n1. Léa voit l'éclair, puis entend le tonnerre $6{,}0$ s plus tard. Sachant que l'éclair est distant d'environ $2$ km, estime la durée mise par la lumière pour lui parvenir et justifie qu'on la considère comme quasi instantanée devant celle du son.\\n2. En négligeant la durée de propagation de la lumière, calcule la distance $d$ séparant Léa de l'impact de la foudre.\\n3. Un rayon lumineux de l'éclair atteint la surface de la mer avec un angle d'incidence $i_1 = 40°$ par rapport à la normale. Calcule l'angle de réfraction $i_2$ du rayon dans l'eau.\\n4. Un enregistreur capte le tonnerre : le signal sonore a une période $T = 5{,}0$ ms. Calcule sa fréquence $f$ et indique si ce son est audible (domaine : $20$ Hz à $20\\,000$ Hz).\\n5. Une photorésistance placée sur la station de Léa détecte l'éclair. Éclairée, elle présente une résistance $R = 2{,}0$ kΩ et la tension à ses bornes vaut $U = 5{,}0$ V. Calcule l'intensité $I$ du courant qui la traverse.",
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 5 m et une frequence 6 Hz. Celerite ?",
       "corrige": [
-        "1. La lumière parcourt les $2$ km en $\\Delta t_{\\text{lum}} = \\dfrac{d}{c} = \\dfrac{2{,}0 \\times 10^{3}}{3{,}00 \\times 10^{8}} \\approx 6{,}7 \\times 10^{-6}$ s, soit quelques microsecondes. C'est environ un million de fois plus court que les $6{,}0$ s du son : on peut donc considérer que l'éclair est vu quasi instantanément et que le retard mesuré est celui du son.",
-        "2. En négligeant le temps de la lumière, le retard de $6{,}0$ s est le temps de propagation du son : $d = v \\times \\Delta t = 340 \\times 6{,}0 = 2{,}0 \\times 10^{3}$ m, soit environ $2{,}0$ km (cohérent avec l'énoncé).",
-        "3. Loi de Snell-Descartes (angles mesurés par rapport à la normale) : $n_1 \\sin i_1 = n_2 \\sin i_2$, d'où $\\sin i_2 = \\dfrac{n_1 \\sin i_1}{n_2} = \\dfrac{1{,}00 \\times 0{,}643}{1{,}33} = 0{,}483$. Donc $i_2 = \\arcsin(0{,}483) \\approx 29°$. Le rayon se rapproche de la normale en entrant dans le milieu plus réfringent, ce qui est cohérent.",
-        "4. On convertit la période : $T = 5{,}0$ ms $= 5{,}0 \\times 10^{-3}$ s. La fréquence vaut $f = \\dfrac{1}{T} = \\dfrac{1}{5{,}0 \\times 10^{-3}} = 200$ Hz. Comme $20 < 200 < 20\\,000$, ce son est bien audible par l'oreille humaine.",
-        "5. Loi d'Ohm : $U = R \\times I$, donc $I = \\dfrac{U}{R}$. On convertit $R = 2{,}0$ kΩ $= 2{,}0 \\times 10^{3}$ Ω, puis $I = \\dfrac{5{,}0}{2{,}0 \\times 10^{3}} = 2{,}5 \\times 10^{-3}$ A $= 2{,}5$ mA. Contrôle des unités : des volts divisés par des ohms donnent des ampères."
+        "$ v = \\lambda\\times f = 5\\times 6 = 30 $ m/s."
       ],
-      "reponse": "1. $\\Delta t_{\\text{lum}} \\approx 6{,}7 \\times 10^{-6}$ s, négligeable devant $6{,}0$ s. 2. $d = 2{,}0 \\times 10^{3}$ m. 3. $i_2 \\approx 29°$. 4. $f = 200$ Hz, son audible. 5. $I = 2{,}5 \\times 10^{-3}$ A $= 2{,}5$ mA."
+      "reponse": "$ 30 $ m/s"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 7 m et une frequence 2 Hz. Celerite ?",
+      "corrige": [
+        "$ v = \\lambda\\times f = 7\\times 2 = 14 $ m/s."
+      ],
+      "reponse": "$ 14 $ m/s"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "Une onde a une longueur d'onde 4 m et une frequence 25 Hz. Celerite ?",
+      "corrige": [
+        "$ v = \\lambda\\times f = 4\\times 25 = 100 $ m/s."
+      ],
+      "reponse": "$ 100 $ m/s"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 2 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{2} = \\dfrac{1}{2} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{2} $ s"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 4 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{4} = \\dfrac{1}{4} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{4} $ s"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 5 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{5} = \\dfrac{1}{5} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{5} $ s"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 10 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{10} = \\dfrac{1}{10} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{10} $ s"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 20 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{20} = \\dfrac{1}{20} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{20} $ s"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 25 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{25} = \\dfrac{1}{25} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{25} $ s"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 50 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{50} = \\dfrac{1}{50} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{50} $ s"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 100 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{100} = \\dfrac{1}{100} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{100} $ s"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 8 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{8} = \\dfrac{1}{8} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{8} $ s"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "periode",
+      "enonce": "Une onde a une frequence de 40 Hz. Periode ?",
+      "corrige": [
+        "$ T = \\dfrac{1}{f} = \\dfrac{1}{40} = \\dfrac{1}{40} $ s."
+      ],
+      "reponse": "$ \\dfrac{1}{40} $ s"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 1 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 3 $ m/s."
+      ],
+      "reponse": "$ 3 $ m/s"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 2 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 6 $ m/s."
+      ],
+      "reponse": "$ 6 $ m/s"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 3 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 9 $ m/s."
+      ],
+      "reponse": "$ 9 $ m/s"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 4 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 12 $ m/s."
+      ],
+      "reponse": "$ 12 $ m/s"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 5 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 15 $ m/s."
+      ],
+      "reponse": "$ 15 $ m/s"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 6 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 18 $ m/s."
+      ],
+      "reponse": "$ 18 $ m/s"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 7 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 21 $ m/s."
+      ],
+      "reponse": "$ 21 $ m/s"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 8 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 24 $ m/s."
+      ],
+      "reponse": "$ 24 $ m/s"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 9 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 27 $ m/s."
+      ],
+      "reponse": "$ 27 $ m/s"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 10 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 30 $ m/s."
+      ],
+      "reponse": "$ 30 $ m/s"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 11 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 33 $ m/s."
+      ],
+      "reponse": "$ 33 $ m/s"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 12 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 36 $ m/s."
+      ],
+      "reponse": "$ 36 $ m/s"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 13 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 39 $ m/s."
+      ],
+      "reponse": "$ 39 $ m/s"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 14 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 42 $ m/s."
+      ],
+      "reponse": "$ 42 $ m/s"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 15 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 45 $ m/s."
+      ],
+      "reponse": "$ 45 $ m/s"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 16 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 48 $ m/s."
+      ],
+      "reponse": "$ 48 $ m/s"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 17 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 51 $ m/s."
+      ],
+      "reponse": "$ 51 $ m/s"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 18 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 54 $ m/s."
+      ],
+      "reponse": "$ 54 $ m/s"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 19 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 57 $ m/s."
+      ],
+      "reponse": "$ 57 $ m/s"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 20 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 60 $ m/s."
+      ],
+      "reponse": "$ 60 $ m/s"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 21 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 63 $ m/s."
+      ],
+      "reponse": "$ 63 $ m/s"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 22 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 66 $ m/s."
+      ],
+      "reponse": "$ 66 $ m/s"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 23 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 69 $ m/s."
+      ],
+      "reponse": "$ 69 $ m/s"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 24 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 72 $ m/s."
+      ],
+      "reponse": "$ 72 $ m/s"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 25 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 75 $ m/s."
+      ],
+      "reponse": "$ 75 $ m/s"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 26 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 78 $ m/s."
+      ],
+      "reponse": "$ 78 $ m/s"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 27 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 81 $ m/s."
+      ],
+      "reponse": "$ 81 $ m/s"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "celerite",
+      "enonce": "$ \\lambda = 28 $ m, $ f = 3 $ Hz : celerite ?",
+      "corrige": [
+        "$ = 84 $ m/s."
+      ],
+      "reponse": "$ 84 $ m/s"
     }
   ]
 }

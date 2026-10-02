@@ -13,130 +13,524 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "pythagore",
-      "enonce": "$\\mathrm{ABC}$ est un triangle rectangle en $\\mathrm{A}$, avec $\\mathrm{AB} = 9$ cm et $\\mathrm{AC} = 12$ cm. Calcule la longueur de l'hypoténuse $\\mathrm{BC}$.",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=3 $ cm et $ AC=4 $ cm. Calculer $ BC $.",
       "corrige": [
-        "L'angle droit est en $\\mathrm{A}$ : l'hypoténuse est le côté opposé, c'est-à-dire $[\\mathrm{BC}]$. On cherche une longueur à partir de l'angle droit, c'est donc le **théorème de Pythagore**.",
-        "D'après le théorème de Pythagore dans le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{A}$ : $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
-        "On remplace : $\\mathrm{BC}^2 = 9^2 + 12^2 = 81 + 144 = 225$.",
-        "L'hypoténuse est seule dans la formule, on prend la racine carrée : $\\mathrm{BC} = \\sqrt{225} = 15$. Sans oublier l'unité."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 3^2 + 4^2 = 25 $.",
+        "$ BC = \\sqrt{25} = 5 $ cm."
       ],
-      "reponse": "$\\mathrm{BC} = 15$ cm."
+      "reponse": "$ 5 $ cm"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "droite-des-milieux",
-      "enonce": "Dans le triangle $\\mathrm{ABC}$, $\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$ et $\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$. On sait que $\\mathrm{BC} = 11$ cm. Calcule $\\mathrm{IJ}$.",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=6 $ cm et $ AC=8 $ cm. Calculer $ BC $.",
       "corrige": [
-        "$\\mathrm{I}$ et $\\mathrm{J}$ sont les milieux de deux côtés du triangle, $[\\mathrm{AB}]$ et $[\\mathrm{AC}]$. On peut donc utiliser le théorème de la droite des milieux sur la **longueur**.",
-        "Ce théorème dit que le segment qui joint les milieux de deux côtés mesure la moitié du troisième côté : $\\mathrm{IJ} = \\dfrac{\\mathrm{BC}}{2}$.",
-        "On remplace : $\\mathrm{IJ} = \\dfrac{11}{2} = 5{,}5$."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 6^2 + 8^2 = 100 $.",
+        "$ BC = \\sqrt{100} = 10 $ cm."
       ],
-      "reponse": "$\\mathrm{IJ} = 5{,}5$ cm."
+      "reponse": "$ 10 $ cm"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "pythagore",
-      "enonce": "$\\mathrm{ABC}$ est un triangle rectangle en $\\mathrm{B}$, avec $\\mathrm{AC} = 17$ cm et $\\mathrm{AB} = 8$ cm. Calcule la longueur $\\mathrm{BC}$.",
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=5 $ cm et $ AC=12 $ cm. Calculer $ BC $.",
       "corrige": [
-        "Attention à l'hypoténuse : l'angle droit est en $\\mathrm{B}$, donc l'hypoténuse est le côté opposé $[\\mathrm{AC}]$ (et non $[\\mathrm{BC}]$).",
-        "D'après le théorème de Pythagore dans le triangle $\\mathrm{ABC}$ rectangle en $\\mathrm{B}$ : $\\mathrm{AC}^2 = \\mathrm{AB}^2 + \\mathrm{BC}^2$.",
-        "L'inconnue $\\mathrm{BC}$ est un côté de l'angle droit : elle n'est pas seule, on **isole** son carré en soustrayant. $\\mathrm{BC}^2 = \\mathrm{AC}^2 - \\mathrm{AB}^2 = 17^2 - 8^2 = 289 - 64 = 225$.",
-        "On prend la racine carrée : $\\mathrm{BC} = \\sqrt{225} = 15$. On vérifie le bon sens : $15$ cm est bien plus court que l'hypoténuse $17$ cm."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 5^2 + 12^2 = 169 $.",
+        "$ BC = \\sqrt{169} = 13 $ cm."
       ],
-      "reponse": "$\\mathrm{BC} = 15$ cm."
+      "reponse": "$ 13 $ cm"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "reciproque",
-      "enonce": "Un triangle $\\mathrm{DEF}$ a pour côtés $\\mathrm{DE} = 5$ cm, $\\mathrm{EF} = 12$ cm et $\\mathrm{DF} = 13$ cm. Démontre que ce triangle est rectangle et précise en quel sommet.",
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=8 $ cm et $ AC=15 $ cm. Calculer $ BC $.",
       "corrige": [
-        "On connaît les trois longueurs et on cherche à prouver un angle droit : c'est la **réciproque** du théorème de Pythagore. On ne sait pas encore que l'égalité est vraie, on calcule donc les deux membres **séparément**.",
-        "Le plus grand côté est $[\\mathrm{DF}]$ ($13$ cm) : c'est lui qui jouerait le rôle de l'hypoténuse. D'un côté : $\\mathrm{DF}^2 = 13^2 = 169$.",
-        "De l'autre côté, avec les deux autres côtés : $\\mathrm{DE}^2 + \\mathrm{EF}^2 = 5^2 + 12^2 = 25 + 144 = 169$.",
-        "Les deux résultats sont égaux ($169 = 169$), donc d'après la réciproque du théorème de Pythagore le triangle est rectangle. L'angle droit est au sommet opposé au plus grand côté $[\\mathrm{DF}]$, c'est-à-dire en $\\mathrm{E}$."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 8^2 + 15^2 = 289 $.",
+        "$ BC = \\sqrt{289} = 17 $ cm."
       ],
-      "reponse": "$\\mathrm{DEF}$ est rectangle en $\\mathrm{E}$."
+      "reponse": "$ 17 $ cm"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "contraposee",
-      "enonce": "Un menuisier a découpé une pièce triangulaire $\\mathrm{MNP}$ et veut vérifier qu'elle possède bien un angle droit. Il mesure $\\mathrm{MN} = 8$ cm, $\\mathrm{NP} = 9$ cm et $\\mathrm{MP} = 12$ cm. La pièce a-t-elle un angle droit ? Justifie.",
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=9 $ cm et $ AC=12 $ cm. Calculer $ BC $.",
       "corrige": [
-        "On connaît les trois longueurs et on veut savoir s'il y a un angle droit : c'est un travail sur la réciproque et sa **contraposée**. On calcule les deux membres séparément, puis on compare.",
-        "Le plus grand côté est $[\\mathrm{MP}]$ ($12$ cm) : si un angle droit existait, il serait opposé à ce côté. D'un côté : $\\mathrm{MP}^2 = 12^2 = 144$.",
-        "De l'autre côté : $\\mathrm{MN}^2 + \\mathrm{NP}^2 = 8^2 + 9^2 = 64 + 81 = 145$.",
-        "Les deux résultats sont différents ($144 \\neq 145$), donc d'après la **contraposée** du théorème de Pythagore le triangle n'est pas rectangle au sommet opposé au plus grand côté. Comme un éventuel angle droit ne pourrait être qu'à ce sommet, la pièce n'a aucun angle droit — même si les nombres sont très proches."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 9^2 + 12^2 = 225 $.",
+        "$ BC = \\sqrt{225} = 15 $ cm."
       ],
-      "reponse": "Non : $144 \\neq 145$, la pièce $\\mathrm{MNP}$ n'est pas rectangle."
+      "reponse": "$ 15 $ cm"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "droite-des-milieux",
-      "enonce": "$\\mathrm{ABC}$ est un triangle. $\\mathrm{I}$ est le milieu de $[\\mathrm{AB}]$. La parallèle à $(\\mathrm{BC})$ passant par $\\mathrm{I}$ coupe $[\\mathrm{AC}]$ en $\\mathrm{J}$. On donne $\\mathrm{AC} = 14$ cm et $\\mathrm{BC} = 10$ cm.\\n1. Démontre que $\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$, puis donne $\\mathrm{AJ}$.\\n2. Calcule ensuite $\\mathrm{IJ}$.",
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=7 $ cm et $ AC=24 $ cm. Calculer $ BC $.",
       "corrige": [
-        "1. On sait que $\\mathrm{I}$ est le milieu d'un côté ($[\\mathrm{AB}]$) et que la droite $(\\mathrm{IJ})$ est parallèle à un deuxième côté ($(\\mathrm{BC})$). C'est exactement l'hypothèse du théorème de la droite des milieux qui **prouve un milieu**.",
-        "D'après ce théorème, la droite coupe le troisième côté $[\\mathrm{AC}]$ en son milieu : $\\mathrm{J}$ est donc le milieu de $[\\mathrm{AC}]$.",
-        "Comme $\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$ : $\\mathrm{AJ} = \\dfrac{\\mathrm{AC}}{2} = \\dfrac{14}{2} = 7$ cm.",
-        "2. Maintenant $\\mathrm{I}$ et $\\mathrm{J}$ sont les milieux de deux côtés, $[\\mathrm{AB}]$ et $[\\mathrm{AC}]$. Le théorème de la droite des milieux sur la longueur donne $\\mathrm{IJ} = \\dfrac{\\mathrm{BC}}{2} = \\dfrac{10}{2} = 5$ cm."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 7^2 + 24^2 = 625 $.",
+        "$ BC = \\sqrt{625} = 25 $ cm."
       ],
-      "reponse": "$\\mathrm{J}$ est le milieu de $[\\mathrm{AC}]$, $\\mathrm{AJ} = 7$ cm et $\\mathrm{IJ} = 5$ cm."
+      "reponse": "$ 25 $ cm"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "cercle-circonscrit",
-      "enonce": "Le triangle $\\mathrm{GHK}$ est rectangle en $\\mathrm{G}$ et son hypoténuse mesure $\\mathrm{HK} = 26$ cm. On veut tracer son cercle circonscrit. Où se situe le centre $\\mathrm{O}$ de ce cercle et quel est son rayon ?",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=20 $ cm et $ AC=21 $ cm. Calculer $ BC $.",
       "corrige": [
-        "Le triangle est rectangle : d'après le cours, le centre du cercle circonscrit d'un triangle rectangle est le **milieu de l'hypoténuse**. Il faut donc d'abord repérer l'hypoténuse.",
-        "L'angle droit est en $\\mathrm{G}$ : l'hypoténuse est le côté opposé $[\\mathrm{HK}]$. Le centre $\\mathrm{O}$ est donc le milieu de $[\\mathrm{HK}]$.",
-        "L'hypoténuse est un diamètre du cercle, donc le rayon vaut la moitié : $r = \\dfrac{\\mathrm{HK}}{2} = \\dfrac{26}{2} = 13$ cm."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 20^2 + 21^2 = 841 $.",
+        "$ BC = \\sqrt{841} = 29 $ cm."
       ],
-      "reponse": "$\\mathrm{O}$ est le milieu de $[\\mathrm{HK}]$ et le rayon vaut $13$ cm."
+      "reponse": "$ 29 $ cm"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "pythagore",
-      "enonce": "$\\mathrm{ABC}$ est un triangle rectangle en $\\mathrm{A}$ avec $\\mathrm{AB} = 10$ cm et $\\mathrm{AC} = 24$ cm.\\n1. Calcule la longueur de l'hypoténuse $\\mathrm{BC}$.\\n2. Déduis-en le rayon du cercle circonscrit au triangle $\\mathrm{ABC}$.",
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=9 $ cm et $ AC=40 $ cm. Calculer $ BC $.",
       "corrige": [
-        "1. L'angle droit est en $\\mathrm{A}$, l'hypoténuse est donc $[\\mathrm{BC}]$. D'après le théorème de Pythagore : $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
-        "On remplace : $\\mathrm{BC}^2 = 10^2 + 24^2 = 100 + 576 = 676$, donc $\\mathrm{BC} = \\sqrt{676} = 26$ cm.",
-        "2. Le triangle est rectangle, donc l'hypoténuse $[\\mathrm{BC}]$ est un diamètre de son cercle circonscrit. Le rayon en est la moitié : $r = \\dfrac{\\mathrm{BC}}{2} = \\dfrac{26}{2} = 13$ cm."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 9^2 + 40^2 = 1681 $.",
+        "$ BC = \\sqrt{1681} = 41 $ cm."
       ],
-      "reponse": "$\\mathrm{BC} = 26$ cm et le rayon du cercle circonscrit vaut $13$ cm."
+      "reponse": "$ 41 $ cm"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "cercle-circonscrit",
-      "enonce": "Un cercle a pour diamètre $[\\mathrm{BC}]$ avec $\\mathrm{BC} = 20$ cm. Un point $\\mathrm{A}$ est placé sur ce cercle, et on mesure $\\mathrm{AB} = 12$ cm.\\n1. Démontre que le triangle $\\mathrm{ABC}$ est rectangle et précise en quel sommet.\\n2. Calcule la longueur $\\mathrm{AC}$.",
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=12 $ cm et $ AC=16 $ cm. Calculer $ BC $.",
       "corrige": [
-        "1. Le triangle $\\mathrm{ABC}$ est inscrit dans le cercle et l'un de ses côtés, $[\\mathrm{BC}]$, est un **diamètre**. D'après le cours, un tel triangle est rectangle, l'angle droit étant au sommet opposé au diamètre.",
-        "Le sommet opposé au diamètre $[\\mathrm{BC}]$ est $\\mathrm{A}$ : le triangle $\\mathrm{ABC}$ est donc rectangle en $\\mathrm{A}$.",
-        "2. L'angle droit étant maintenant établi, on peut appliquer le théorème de Pythagore. L'hypoténuse est $[\\mathrm{BC}]$ : $\\mathrm{BC}^2 = \\mathrm{AB}^2 + \\mathrm{AC}^2$.",
-        "L'inconnue $\\mathrm{AC}$ est un côté de l'angle droit, on isole son carré par soustraction : $\\mathrm{AC}^2 = \\mathrm{BC}^2 - \\mathrm{AB}^2 = 20^2 - 12^2 = 400 - 144 = 256$, donc $\\mathrm{AC} = \\sqrt{256} = 16$ cm."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 12^2 + 16^2 = 400 $.",
+        "$ BC = \\sqrt{400} = 20 $ cm."
       ],
-      "reponse": "$\\mathrm{ABC}$ est rectangle en $\\mathrm{A}$ et $\\mathrm{AC} = 16$ cm."
+      "reponse": "$ 20 $ cm"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "pythagore",
-      "enonce": "Un artisan fabrique des portails rectangulaires. Chaque portail $\\mathrm{ABCD}$ est renforcé par une barre diagonale $[\\mathrm{AC}]$, et l'artisan doit vérifier que le portail est bien « d'équerre », c'est-à-dire que l'angle au sommet $\\mathrm{B}$ est droit.\\n1. Un premier portail est correctement monté : sa largeur est $\\mathrm{AB} = 1{,}2$ m, sa hauteur $\\mathrm{BC} = 1{,}6$ m et l'angle en $\\mathrm{B}$ est droit. Calcule la longueur de la barre diagonale $[\\mathrm{AC}]$.\\n2. Un deuxième portail arrive sans plan. L'artisan mesure $\\mathrm{AB} = 1{,}2$ m, $\\mathrm{BC} = 1{,}6$ m et la diagonale $\\mathrm{AC} = 2$ m. Démontre que ce portail est bien d'équerre en $\\mathrm{B}$.\\n3. Un troisième portail, ancien, mesure $\\mathrm{AB} = 1{,}2$ m, $\\mathrm{BC} = 1{,}6$ m et $\\mathrm{AC} = 2{,}1$ m. Est-il encore d'équerre en $\\mathrm{B}$ ? Justifie.\\n4. Explique en une phrase pourquoi cette méthode par la mesure des trois longueurs est plus pratique qu'une équerre pour contrôler un grand portail.",
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=10 $ cm et $ AC=24 $ cm. Calculer $ BC $.",
       "corrige": [
-        "1. Le portail est d'équerre : l'angle en $\\mathrm{B}$ est droit et l'hypoténuse du triangle $\\mathrm{ABC}$ est $[\\mathrm{AC}]$. D'après le théorème de Pythagore : $\\mathrm{AC}^2 = \\mathrm{AB}^2 + \\mathrm{BC}^2 = 1{,}2^2 + 1{,}6^2 = 1{,}44 + 2{,}56 = 4$, donc $\\mathrm{AC} = \\sqrt{4} = 2$ m.",
-        "2. On connaît ici les trois longueurs et on veut prouver l'angle droit : c'est la **réciproque**. On calcule les deux membres séparément. Le plus grand côté est $[\\mathrm{AC}]$ : d'un côté $\\mathrm{AC}^2 = 2^2 = 4$.",
-        "De l'autre côté : $\\mathrm{AB}^2 + \\mathrm{BC}^2 = 1{,}2^2 + 1{,}6^2 = 1{,}44 + 2{,}56 = 4$. Les deux résultats sont égaux ($4 = 4$), donc d'après la réciproque du théorème de Pythagore le triangle est rectangle en $\\mathrm{B}$ : le portail est bien d'équerre.",
-        "3. Mêmes calculs séparés avec la nouvelle diagonale. Le plus grand côté reste $[\\mathrm{AC}]$ : $\\mathrm{AC}^2 = 2{,}1^2 = 4{,}41$, alors que $\\mathrm{AB}^2 + \\mathrm{BC}^2 = 1{,}44 + 2{,}56 = 4$. Les deux diffèrent ($4{,}41 \\neq 4$), donc d'après la **contraposée** l'angle en $\\mathrm{B}$ n'est pas droit : le portail s'est déformé, il n'est plus d'équerre.",
-        "4. Mesurer trois longueurs au mètre ruban est plus fiable que poser une équerre, forcément petite, dans un grand angle : la réciproque de Pythagore transforme trois mesures de longueur en une preuve d'angle droit, valable même sur un portail de grande taille."
+        "D'apres le theoreme de Pythagore : $ BC^2 = 10^2 + 24^2 = 676 $.",
+        "$ BC = \\sqrt{676} = 26 $ cm."
       ],
-      "reponse": "1. $\\mathrm{AC} = 2$ m. 2. $4 = 4$ : le portail est rectangle en $\\mathrm{B}$ (réciproque). 3. $4{,}41 \\neq 4$ : il n'est plus d'équerre (contraposée). 4. Trois mesures de longueur suffisent à garantir l'angle droit."
+      "reponse": "$ 26 $ cm"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=15 $ cm et $ AC=20 $ cm. Calculer $ BC $.",
+      "corrige": [
+        "D'apres le theoreme de Pythagore : $ BC^2 = 15^2 + 20^2 = 625 $.",
+        "$ BC = \\sqrt{625} = 25 $ cm."
+      ],
+      "reponse": "$ 25 $ cm"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle en A avec $ AB=8 $ cm et $ AC=6 $ cm. Calculer $ BC $.",
+      "corrige": [
+        "D'apres le theoreme de Pythagore : $ BC^2 = 8^2 + 6^2 = 100 $.",
+        "$ BC = \\sqrt{100} = 10 $ cm."
+      ],
+      "reponse": "$ 10 $ cm"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=5 $ cm et $ AB=3 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 5^2 - 3^2 = 16 $.",
+        "$ AC = \\sqrt{16} = 4 $ cm."
+      ],
+      "reponse": "$ 4 $ cm"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=13 $ cm et $ AB=5 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 13^2 - 5^2 = 144 $.",
+        "$ AC = \\sqrt{144} = 12 $ cm."
+      ],
+      "reponse": "$ 12 $ cm"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=10 $ cm et $ AB=6 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 10^2 - 6^2 = 64 $.",
+        "$ AC = \\sqrt{64} = 8 $ cm."
+      ],
+      "reponse": "$ 8 $ cm"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=25 $ cm et $ AB=7 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 25^2 - 7^2 = 576 $.",
+        "$ AC = \\sqrt{576} = 24 $ cm."
+      ],
+      "reponse": "$ 24 $ cm"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=17 $ cm et $ AB=8 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 17^2 - 8^2 = 225 $.",
+        "$ AC = \\sqrt{225} = 15 $ cm."
+      ],
+      "reponse": "$ 15 $ cm"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=15 $ cm et $ AB=9 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 15^2 - 9^2 = 144 $.",
+        "$ AC = \\sqrt{144} = 12 $ cm."
+      ],
+      "reponse": "$ 12 $ cm"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=20 $ cm et $ AB=12 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 20^2 - 12^2 = 256 $.",
+        "$ AC = \\sqrt{256} = 16 $ cm."
+      ],
+      "reponse": "$ 16 $ cm"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=26 $ cm et $ AB=10 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 26^2 - 10^2 = 576 $.",
+        "$ AC = \\sqrt{576} = 24 $ cm."
+      ],
+      "reponse": "$ 24 $ cm"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=29 $ cm et $ AB=20 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 29^2 - 20^2 = 441 $.",
+        "$ AC = \\sqrt{441} = 21 $ cm."
+      ],
+      "reponse": "$ 21 $ cm"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "pythagore-cote",
+      "enonce": "Triangle rectangle en A, hypotenuse $ BC=37 $ cm et $ AB=12 $ cm. Calculer $ AC $.",
+      "corrige": [
+        "$ AC^2 = 37^2 - 12^2 = 1225 $.",
+        "$ AC = \\sqrt{1225} = 35 $ cm."
+      ],
+      "reponse": "$ 35 $ cm"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 3 cm et 4 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{25} = 5 $ cm."
+      ],
+      "reponse": "$ 5 $ cm"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 4 cm et 5 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{41} \\approx 6,4 $ cm."
+      ],
+      "reponse": "$ \\sqrt{41} \\approx 6,4 $ cm"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 5 cm et 6 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{61} \\approx 7,81 $ cm."
+      ],
+      "reponse": "$ \\sqrt{61} \\approx 7,81 $ cm"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 6 cm et 7 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{85} \\approx 9,22 $ cm."
+      ],
+      "reponse": "$ \\sqrt{85} \\approx 9,22 $ cm"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 7 cm et 8 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{113} \\approx 10,63 $ cm."
+      ],
+      "reponse": "$ \\sqrt{113} \\approx 10,63 $ cm"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 8 cm et 9 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{145} \\approx 12,04 $ cm."
+      ],
+      "reponse": "$ \\sqrt{145} \\approx 12,04 $ cm"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 9 cm et 10 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{181} \\approx 13,45 $ cm."
+      ],
+      "reponse": "$ \\sqrt{181} \\approx 13,45 $ cm"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 10 cm et 11 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{221} \\approx 14,87 $ cm."
+      ],
+      "reponse": "$ \\sqrt{221} \\approx 14,87 $ cm"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 11 cm et 12 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{265} \\approx 16,28 $ cm."
+      ],
+      "reponse": "$ \\sqrt{265} \\approx 16,28 $ cm"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 12 cm et 13 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{313} \\approx 17,69 $ cm."
+      ],
+      "reponse": "$ \\sqrt{313} \\approx 17,69 $ cm"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 13 cm et 14 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{365} \\approx 19,1 $ cm."
+      ],
+      "reponse": "$ \\sqrt{365} \\approx 19,1 $ cm"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 14 cm et 15 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{421} \\approx 20,52 $ cm."
+      ],
+      "reponse": "$ \\sqrt{421} \\approx 20,52 $ cm"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 15 cm et 16 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{481} \\approx 21,93 $ cm."
+      ],
+      "reponse": "$ \\sqrt{481} \\approx 21,93 $ cm"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 16 cm et 17 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{545} \\approx 23,35 $ cm."
+      ],
+      "reponse": "$ \\sqrt{545} \\approx 23,35 $ cm"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 17 cm et 18 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{613} \\approx 24,76 $ cm."
+      ],
+      "reponse": "$ \\sqrt{613} \\approx 24,76 $ cm"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 18 cm et 19 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{685} \\approx 26,17 $ cm."
+      ],
+      "reponse": "$ \\sqrt{685} \\approx 26,17 $ cm"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 19 cm et 20 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{761} \\approx 27,59 $ cm."
+      ],
+      "reponse": "$ \\sqrt{761} \\approx 27,59 $ cm"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 20 cm et 21 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{841} = 29 $ cm."
+      ],
+      "reponse": "$ 29 $ cm"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 21 cm et 22 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{925} \\approx 30,41 $ cm."
+      ],
+      "reponse": "$ \\sqrt{925} \\approx 30,41 $ cm"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 22 cm et 23 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1013} \\approx 31,83 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1013} \\approx 31,83 $ cm"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 23 cm et 24 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1105} \\approx 33,24 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1105} \\approx 33,24 $ cm"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 24 cm et 25 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1201} \\approx 34,66 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1201} \\approx 34,66 $ cm"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 25 cm et 26 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1301} \\approx 36,07 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1301} \\approx 36,07 $ cm"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 26 cm et 27 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1405} \\approx 37,48 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1405} \\approx 37,48 $ cm"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 27 cm et 28 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1513} \\approx 38,9 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1513} \\approx 38,9 $ cm"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 28 cm et 29 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1625} \\approx 40,31 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1625} \\approx 40,31 $ cm"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 29 cm et 30 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1741} \\approx 41,73 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1741} \\approx 41,73 $ cm"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "pythagore-hypotenuse",
+      "enonce": "Triangle rectangle, cotes de l'angle droit 30 cm et 31 cm. Hypotenuse ?",
+      "corrige": [
+        "$ BC = \\sqrt{1861} \\approx 43,14 $ cm."
+      ],
+      "reponse": "$ \\sqrt{1861} \\approx 43,14 $ cm"
     }
   ]
 }

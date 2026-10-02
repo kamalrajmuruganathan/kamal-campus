@@ -13,132 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "taux-variation",
-      "enonce": "Soit $f(x) = x^2 - 3x$. Calculer le taux de variation de $f$ entre $a = 1$ et $b = 4$.",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 1x^2 + 2x + 3 $. Calculer $ f(2) $.",
       "corrige": [
-        "On calcule d'abord les deux images : $f(1) = 1^2 - 3\\times 1 = 1 - 3 = -2$ et $f(4) = 4^2 - 3\\times 4 = 16 - 12 = 4$.",
-        "On applique la formule du taux de variation : $\\tau = \\dfrac{f(b) - f(a)}{b - a} = \\dfrac{f(4) - f(1)}{4 - 1}$.",
-        "$\\tau = \\dfrac{4 - (-2)}{4 - 1} = \\dfrac{6}{3} = 2$.",
-        "Entre $1$ et $4$, la fonction augmente en moyenne de $2$ par unité de $x$."
+        "$ f(2) = 1\\times 2^2 + 2\\times 2 + 3 = 11 $."
       ],
-      "reponse": "$\\tau = 2$."
+      "reponse": "$ f(2) = 11 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "sommet",
-      "enonce": "Soit $f(x) = 2x^2 - 8x + 3$. Déterminer l'allure de la parabole, l'abscisse $\\alpha$ de son sommet, puis les coordonnées du sommet.",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 2x^2 + 3x + 1 $. Calculer $ f(1) $.",
       "corrige": [
-        "On repère $a = 2$, $b = -8$, $c = 3$. Comme $a = 2 > 0$, la parabole est tournée vers le haut : son sommet est un minimum.",
-        "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-8}{2\\times 2} = \\dfrac{8}{4} = 2$.",
-        "On calcule l'ordonnée du sommet : $f(2) = 2\\times 2^2 - 8\\times 2 + 3 = 8 - 16 + 3 = -5$.",
-        "Le sommet est donc le point $\\mathrm{S}(2\\,;-5)$."
+        "$ f(1) = 2\\times 1^2 + 3\\times 1 + 1 = 6 $."
       ],
-      "reponse": "Parabole tournée vers le haut, sommet $\\mathrm{S}(2\\,;-5)$ (un minimum)."
+      "reponse": "$ f(1) = 6 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "variations",
-      "enonce": "Soit $f(x) = -x^2 + 6x - 1$. Déterminer les variations de $f$ sur $\\mathbb{R}$ et dresser son tableau de variations.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 3x^2 + 1x + 4 $. Calculer $ f(2) $.",
       "corrige": [
-        "On identifie $a = -1$, $b = 6$. Comme $a = -1 < 0$, la parabole est tournée vers le bas : le sommet est un maximum.",
-        "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{6}{2\\times(-1)} = -\\dfrac{6}{-2} = 3$, et $f(3) = -3^2 + 6\\times 3 - 1 = -9 + 18 - 1 = 8$.",
-        "Comme la parabole est tournée vers le bas, $f$ est croissante sur $]-\\infty\\,;3]$ puis décroissante sur $[3\\,;+\\infty[$.",
-        "Tableau de variations : $f$ monte jusqu'à la valeur maximale $8$ atteinte en $x = 3$, puis redescend."
+        "$ f(2) = 3\\times 2^2 + 1\\times 2 + 4 = 18 $."
       ],
-      "reponse": "$f$ croissante sur $]-\\infty\\,;3]$, décroissante sur $[3\\,;+\\infty[$, maximum $f(3) = 8$."
+      "reponse": "$ f(2) = 18 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "racines",
-      "enonce": "Soit $f(x) = x^2 - 5x + 4$. Vérifier que $1$ et $4$ sont les racines de $f$, puis en déduire l'abscisse du sommet de la parabole.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 1x^2 + 5x + 2 $. Calculer $ f(3) $.",
       "corrige": [
-        "On calcule $f(1) = 1^2 - 5\\times 1 + 4 = 1 - 5 + 4 = 0$ : donc $1$ est une racine.",
-        "On calcule $f(4) = 4^2 - 5\\times 4 + 4 = 16 - 20 + 4 = 0$ : donc $4$ est aussi une racine. La parabole coupe l'axe des abscisses en $x = 1$ et $x = 4$.",
-        "Les deux racines ont la même image ($0$) : par symétrie, le sommet est à mi-chemin entre elles, donc $\\alpha = \\dfrac{1 + 4}{2} = \\dfrac{5}{2} = 2{,}5$.",
-        "On peut contrôler avec la formule : $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-5}{2\\times 1} = \\dfrac{5}{2} = 2{,}5$, ce qui confirme le résultat."
+        "$ f(3) = 1\\times 3^2 + 5\\times 3 + 2 = 26 $."
       ],
-      "reponse": "$1$ et $4$ sont bien racines ; l'abscisse du sommet est $\\alpha = 2{,}5$."
+      "reponse": "$ f(3) = 26 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "modelisation",
-      "enonce": "Une balle est lancée vers le haut. Sa hauteur, en mètres, $t$ secondes après le lancer, est donnée par $h(t) = -5t^2 + 20t$ (pour $t \\geq 0$). Déterminer à quel instant la balle atteint sa hauteur maximale, cette hauteur, puis l'instant où elle retombe au sol.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 2x^2 + 1x + 6 $. Calculer $ f(2) $.",
       "corrige": [
-        "$h$ est un polynôme du second degré avec $a = -5 < 0$ : la parabole est tournée vers le bas, elle admet donc un maximum au sommet.",
-        "L'instant de hauteur maximale est $t = -\\dfrac{b}{2a} = -\\dfrac{20}{2\\times(-5)} = -\\dfrac{20}{-10} = 2$ secondes.",
-        "La hauteur maximale vaut $h(2) = -5\\times 2^2 + 20\\times 2 = -20 + 40 = 20$ mètres.",
-        "La balle est au sol quand $h(t) = 0$ : on factorise $-5t^2 + 20t = -5t(t - 4) = 0$, d'où $t = 0$ (le lancer) ou $t = 4$. Elle retombe donc au bout de $4$ secondes."
+        "$ f(2) = 2\\times 2^2 + 1\\times 2 + 6 = 16 $."
       ],
-      "reponse": "Hauteur maximale de $20$ m atteinte à $t = 2$ s ; retour au sol à $t = 4$ s."
+      "reponse": "$ f(2) = 16 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "variations",
-      "enonce": "On veut démontrer, à l'aide du taux de variation, que la fonction $f(x) = x^2$ est croissante sur $[0\\,;+\\infty[$. Soient $a$ et $b$ deux réels tels que $0 \\leq a < b$. Calculer le taux de variation de $f$ entre $a$ et $b$, en déduire son signe, puis conclure.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 1x^2 + 2x + 1 $. Calculer $ f(4) $.",
       "corrige": [
-        "Le taux de variation entre $a$ et $b$ est $\\tau = \\dfrac{f(b) - f(a)}{b - a} = \\dfrac{b^2 - a^2}{b - a}$.",
-        "On factorise le numérateur avec l'identité $b^2 - a^2 = (b - a)(b + a)$, ce qui donne $\\tau = \\dfrac{(b - a)(b + a)}{b - a} = b + a$ (on peut simplifier car $b \\neq a$).",
-        "Comme $a \\geq 0$ et $b > 0$, la somme $a + b$ est strictement positive : le taux de variation est donc toujours positif sur $[0\\,;+\\infty[$.",
-        "D'après le théorème reliant le signe du taux de variation au sens de variation, $f$ est croissante sur l'intervalle $[0\\,;+\\infty[$."
+        "$ f(4) = 1\\times 4^2 + 2\\times 4 + 1 = 25 $."
       ],
-      "reponse": "$\\tau = a + b > 0$, donc $f$ est croissante sur $[0\\,;+\\infty[$."
+      "reponse": "$ f(4) = 25 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "taux-variation",
-      "enonce": "Soit $f(x) = -2x^2 + x$. Calculer le taux de variation de $f$ entre $a = -1$ et $b = 2$, puis préciser si, en moyenne, $f$ monte ou descend sur cet intervalle.",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 2x^2 + 2x + 2 $. Calculer $ f(1) $.",
       "corrige": [
-        "On calcule les deux images : $f(-1) = -2\\times(-1)^2 + (-1) = -2 - 1 = -3$ et $f(2) = -2\\times 2^2 + 2 = -8 + 2 = -6$.",
-        "On applique la formule : $\\tau = \\dfrac{f(b) - f(a)}{b - a} = \\dfrac{f(2) - f(-1)}{2 - (-1)} = \\dfrac{-6 - (-3)}{2 + 1}$.",
-        "$\\tau = \\dfrac{-3}{3} = -1$.",
-        "Le taux de variation est négatif : en moyenne, $f$ descend de $1$ par unité de $x$ sur l'intervalle $[-1\\,;2]$."
+        "$ f(1) = 2\\times 1^2 + 2\\times 1 + 2 = 6 $."
       ],
-      "reponse": "$\\tau = -1$ : $f$ décroît en moyenne sur $[-1\\,;2]$."
+      "reponse": "$ f(1) = 6 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "symetrie",
-      "enonce": "Soit $f(x) = 2x^2 + 4x - 6$. Déterminer l'abscisse $\\alpha$ du sommet de la parabole, puis, en utilisant la symétrie, trouver un réel différent de $0$ qui a la même image que $0$.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 3x^2 + 1x + 1 $. Calculer $ f(2) $.",
       "corrige": [
-        "On identifie $a = 2$ et $b = 4$. L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{4}{2\\times 2} = -\\dfrac{4}{4} = -1$. L'axe de symétrie de la parabole est donc la droite $x = -1$.",
-        "Deux réels symétriques par rapport à $\\alpha = -1$ ont la même image. Le symétrique de $0$ par rapport à $-1$ est le réel $x'$ tel que $-1$ soit le milieu de $0$ et $x'$ : $\\dfrac{0 + x'}{2} = -1$, d'où $x' = -2$.",
-        "On vérifie que $0$ et $-2$ ont bien la même image : $f(0) = -6$ et $f(-2) = 2\\times(-2)^2 + 4\\times(-2) - 6 = 8 - 8 - 6 = -6$. Les deux valeurs coïncident."
+        "$ f(2) = 3\\times 2^2 + 1\\times 2 + 1 = 15 $."
       ],
-      "reponse": "$\\alpha = -1$ ; le réel $-2$ a la même image que $0$ (à savoir $-6$)."
+      "reponse": "$ f(2) = 15 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "racines",
-      "enonce": "On considère la fonction $f(x) = x^2 - 4x + m$, où $m$ est un nombre réel. Sans utiliser de discriminant, déterminer les valeurs de $m$ pour lesquelles la parabole représentant $f$ ne coupe pas l'axe des abscisses (c'est-à-dire $f$ n'a aucune racine).",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 1x^2 + 4x + 3 $. Calculer $ f(3) $.",
       "corrige": [
-        "Ici $a = 1 > 0$ : la parabole est tournée vers le haut, son sommet est un minimum. Elle ne coupe pas l'axe des abscisses lorsque ce minimum est strictement au-dessus de l'axe, c'est-à-dire lorsque l'ordonnée du sommet est strictement positive.",
-        "L'abscisse du sommet est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{-4}{2\\times 1} = 2$, et son ordonnée est $f(2) = 2^2 - 4\\times 2 + m = 4 - 8 + m = m - 4$.",
-        "La condition « aucune racine » s'écrit donc $f(2) > 0$, soit $m - 4 > 0$, c'est-à-dire $m > 4$.",
-        "Conclusion : pour $m > 4$, le point le plus bas de la parabole est déjà au-dessus de l'axe des abscisses, donc $f$ n'a aucune racine. (Pour $m = 4$ elle en a une, pour $m < 4$ elle en a deux.)"
+        "$ f(3) = 1\\times 3^2 + 4\\times 3 + 3 = 24 $."
       ],
-      "reponse": "La parabole ne coupe pas l'axe des abscisses pour $m > 4$."
+      "reponse": "$ f(3) = 24 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "modelisation",
-      "enonce": "Une station de ski fixe le prix $x$ (en euros) de son forfait journalier. Une étude montre que le bénéfice quotidien, exprimé en centaines d'euros, est modélisé par la fonction $B(x) = -x^2 + 70x - 1000$, pour $x$ compris entre $0$ et $70$. On appelle $\\mathcal{C}$ la courbe représentant $B$.\\n\\n1. Calculer $B(20)$ et $B(50)$. Interpréter ces deux résultats dans le contexte.\\n2. Calculer le taux de variation de $B$ entre $x = 20$ et $x = 35$, puis l'interpréter.\\n3. Déterminer le prix du forfait qui rend le bénéfice maximal, et donner ce bénéfice maximal en euros.\\n4. Dresser le tableau de variations de $B$ sur l'intervalle $[0\\,;70]$.\\n5. Sachant que $B(x) = -(x - 20)(x - 50)$, déterminer les prix pour lesquels le bénéfice est strictement positif.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 2x^2 + 3x + 5 $. Calculer $ f(1) $.",
       "corrige": [
-        "1. $B(20) = -20^2 + 70\\times 20 - 1000 = -400 + 1400 - 1000 = 0$ et $B(50) = -50^2 + 70\\times 50 - 1000 = -2500 + 3500 - 1000 = 0$. Pour un forfait à $20$ € comme à $50$ €, le bénéfice est nul : ce sont les deux prix pour lesquels la station rentre tout juste dans ses frais.",
-        "2. On a déjà $B(20) = 0$, et $B(35) = -35^2 + 70\\times 35 - 1000 = -1225 + 2450 - 1000 = 225$. Le taux de variation est $\\tau = \\dfrac{B(35) - B(20)}{35 - 20} = \\dfrac{225 - 0}{15} = 15$. Entre les prix $20$ € et $35$ €, le bénéfice augmente en moyenne de $15$ centaines d'euros (soit $1\\,500$ €) par euro ajouté au prix du forfait.",
-        "3. Comme $a = -1 < 0$, la parabole est tournée vers le bas : $B$ admet un maximum au sommet. Son abscisse est $\\alpha = -\\dfrac{b}{2a} = -\\dfrac{70}{2\\times(-1)} = 35$. Le bénéfice maximal est $B(35) = 225$ centaines d'euros, soit $22\\,500$ €, atteint pour un forfait à $35$ €.",
-        "4. Puisque le sommet est un maximum atteint en $x = 35$, $B$ est croissante sur $[0\\,;35]$ puis décroissante sur $[35\\,;70]$. Le tableau de variations montre donc une montée de $B(0) = -1000$ jusqu'au maximum $B(35) = 225$, suivie d'une descente jusqu'à $B(70) = -70^2 + 70\\times 70 - 1000 = -1000$.",
-        "5. À partir de $B(x) = -(x - 20)(x - 50)$, le bénéfice est strictement positif quand $-(x-20)(x-50) > 0$, donc quand $(x-20)(x-50) < 0$ : c'est le cas lorsque $x$ est compris strictement entre les deux racines. Le bénéfice est donc strictement positif pour un prix de forfait tel que $20 < x < 50$."
+        "$ f(1) = 2\\times 1^2 + 3\\times 1 + 5 = 10 $."
       ],
-      "reponse": "1. $B(20) = B(50) = 0$ (bénéfice nul). 2. $\\tau = 15$ centaines d'euros par euro. 3. Bénéfice maximal $22\\,500$ € pour un forfait à $35$ €. 4. Croissante sur $[0\\,;35]$, décroissante sur $[35\\,;70]$. 5. Bénéfice strictement positif pour $20 < x < 50$."
+      "reponse": "$ f(1) = 10 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 1x^2 + 1x + 4 $. Calculer $ f(5) $.",
+      "corrige": [
+        "$ f(5) = 1\\times 5^2 + 1\\times 5 + 4 = 34 $."
+      ],
+      "reponse": "$ f(5) = 34 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 2x^2 + 5x + 1 $. Calculer $ f(2) $.",
+      "corrige": [
+        "$ f(2) = 2\\times 2^2 + 5\\times 2 + 1 = 19 $."
+      ],
+      "reponse": "$ f(2) = 19 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 2x + 3 $. Calculer $ f(4) $.",
+      "corrige": [
+        "$ f(4) = 2\\times 4 + 3 = 11 $."
+      ],
+      "reponse": "$ f(4) = 11 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 3x + 1 $. Calculer $ f(5) $.",
+      "corrige": [
+        "$ f(5) = 3\\times 5 + 1 = 16 $."
+      ],
+      "reponse": "$ f(5) = 16 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 5x + 2 $. Calculer $ f(2) $.",
+      "corrige": [
+        "$ f(2) = 5\\times 2 + 2 = 12 $."
+      ],
+      "reponse": "$ f(2) = 12 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 4x + 3 $. Calculer $ f(3) $.",
+      "corrige": [
+        "$ f(3) = 4\\times 3 + 3 = 15 $."
+      ],
+      "reponse": "$ f(3) = 15 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 2x + 7 $. Calculer $ f(6) $.",
+      "corrige": [
+        "$ f(6) = 2\\times 6 + 7 = 19 $."
+      ],
+      "reponse": "$ f(6) = 19 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 6x + 1 $. Calculer $ f(2) $.",
+      "corrige": [
+        "$ f(2) = 6\\times 2 + 1 = 13 $."
+      ],
+      "reponse": "$ f(2) = 13 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 3x + 4 $. Calculer $ f(5) $.",
+      "corrige": [
+        "$ f(5) = 3\\times 5 + 4 = 19 $."
+      ],
+      "reponse": "$ f(5) = 19 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 2x + 5 $. Calculer $ f(10) $.",
+      "corrige": [
+        "$ f(10) = 2\\times 10 + 5 = 25 $."
+      ],
+      "reponse": "$ f(10) = 25 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 4x + 2 $. Calculer $ f(4) $.",
+      "corrige": [
+        "$ f(4) = 4\\times 4 + 2 = 18 $."
+      ],
+      "reponse": "$ f(4) = 18 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "image-affine",
+      "enonce": "Soit $ f(x) = 5x + 1 $. Calculer $ f(3) $.",
+      "corrige": [
+        "$ f(3) = 5\\times 3 + 1 = 16 $."
+      ],
+      "reponse": "$ f(3) = 16 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(1) $.",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(2) $.",
+      "corrige": [
+        "$ = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(4) $.",
+      "corrige": [
+        "$ = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(5) $.",
+      "corrige": [
+        "$ = 26 $."
+      ],
+      "reponse": "$ 26 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(6) $.",
+      "corrige": [
+        "$ = 37 $."
+      ],
+      "reponse": "$ 37 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(7) $.",
+      "corrige": [
+        "$ = 50 $."
+      ],
+      "reponse": "$ 50 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(8) $.",
+      "corrige": [
+        "$ = 65 $."
+      ],
+      "reponse": "$ 65 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(9) $.",
+      "corrige": [
+        "$ = 82 $."
+      ],
+      "reponse": "$ 82 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(10) $.",
+      "corrige": [
+        "$ = 101 $."
+      ],
+      "reponse": "$ 101 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(11) $.",
+      "corrige": [
+        "$ = 122 $."
+      ],
+      "reponse": "$ 122 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(12) $.",
+      "corrige": [
+        "$ = 145 $."
+      ],
+      "reponse": "$ 145 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(13) $.",
+      "corrige": [
+        "$ = 170 $."
+      ],
+      "reponse": "$ 170 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(14) $.",
+      "corrige": [
+        "$ = 197 $."
+      ],
+      "reponse": "$ 197 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(15) $.",
+      "corrige": [
+        "$ = 226 $."
+      ],
+      "reponse": "$ 226 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(16) $.",
+      "corrige": [
+        "$ = 257 $."
+      ],
+      "reponse": "$ 257 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(17) $.",
+      "corrige": [
+        "$ = 290 $."
+      ],
+      "reponse": "$ 290 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(18) $.",
+      "corrige": [
+        "$ = 325 $."
+      ],
+      "reponse": "$ 325 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(19) $.",
+      "corrige": [
+        "$ = 362 $."
+      ],
+      "reponse": "$ 362 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(20) $.",
+      "corrige": [
+        "$ = 401 $."
+      ],
+      "reponse": "$ 401 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(21) $.",
+      "corrige": [
+        "$ = 442 $."
+      ],
+      "reponse": "$ 442 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(22) $.",
+      "corrige": [
+        "$ = 485 $."
+      ],
+      "reponse": "$ 485 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(23) $.",
+      "corrige": [
+        "$ = 530 $."
+      ],
+      "reponse": "$ 530 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(24) $.",
+      "corrige": [
+        "$ = 577 $."
+      ],
+      "reponse": "$ 577 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(25) $.",
+      "corrige": [
+        "$ = 626 $."
+      ],
+      "reponse": "$ 626 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(26) $.",
+      "corrige": [
+        "$ = 677 $."
+      ],
+      "reponse": "$ 677 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(27) $.",
+      "corrige": [
+        "$ = 730 $."
+      ],
+      "reponse": "$ 730 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=x^2+1 $, calculer $ f(28) $.",
+      "corrige": [
+        "$ = 785 $."
+      ],
+      "reponse": "$ 785 $"
     }
   ]
 }

@@ -13,135 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "arithmetique",
-      "enonce": "Une suite arithmétique $(u_n)$ a pour premier terme $u_0 = 7$ et pour raison $r = 4$. Calculer $u_1$, $u_2$, puis $u_{12}$.",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 2 $, raison $ r = 3 $. Calculer $ u_{5} $.",
       "corrige": [
-        "La relation de récurrence est $u_{n+1} = u_n + r$ : on ajoute $4$ pour passer d'un terme au suivant.",
-        "$u_1 = u_0 + 4 = 7 + 4 = 11$, puis $u_2 = u_1 + 4 = 11 + 4 = 15$.",
-        "Pour $u_{12}$, on évite les douze étapes en utilisant le terme général $u_n = u_0 + n\\,r$.",
-        "$u_{12} = 7 + 12 \\times 4 = 7 + 48 = 55$."
+        "$ u_n = u_0 + n\\times r = 2 + 5\\times 3 = 17 $."
       ],
-      "reponse": "$u_1 = 11$, $u_2 = 15$ et $u_{12} = 55$."
+      "reponse": "$ u_{5} = 17 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "geometrique",
-      "enonce": "Une suite géométrique $(v_n)$ a pour premier terme $v_0 = 5$ et pour raison $q = 2$. Calculer $v_1$, $v_2$, puis $v_6$.",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 5 $, raison $ r = 4 $. Calculer $ u_{4} $.",
       "corrige": [
-        "La relation de récurrence est $v_{n+1} = q \\times v_n$ : on multiplie par $2$ pour passer d'un terme au suivant.",
-        "$v_1 = 5 \\times 2 = 10$, puis $v_2 = 10 \\times 2 = 20$.",
-        "Pour $v_6$, on utilise le terme général $v_n = v_0 \\times q^{\\,n}$.",
-        "$v_6 = 5 \\times 2^{6} = 5 \\times 64 = 320$."
+        "$ u_n = u_0 + n\\times r = 5 + 4\\times 4 = 21 $."
       ],
-      "reponse": "$v_1 = 10$, $v_2 = 20$ et $v_6 = 320$."
+      "reponse": "$ u_{4} = 21 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "reconnaissance",
-      "enonce": "On observe les premiers termes d'une suite : $250$, $200$, $160$, $128$. Déterminer sa nature, sa raison, puis calculer le terme suivant.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 1 $, raison $ r = 2 $. Calculer $ u_{10} $.",
       "corrige": [
-        "On teste d'abord les différences : $200 - 250 = -50$, puis $160 - 200 = -40$. Elles ne sont pas constantes : la suite n'est pas arithmétique.",
-        "On teste alors les quotients : $\\dfrac{200}{250} = 0{,}8$, $\\dfrac{160}{200} = 0{,}8$, $\\dfrac{128}{160} = 0{,}8$. Ils sont constants.",
-        "La suite est donc géométrique de raison $q = 0{,}8$ (ce qui correspond à une baisse répétée de $20\\,\\%$).",
-        "Le terme suivant s'obtient en multipliant par $0{,}8$ : $128 \\times 0{,}8 = 102{,}4$."
+        "$ u_n = u_0 + n\\times r = 1 + 10\\times 2 = 21 $."
       ],
-      "reponse": "Suite géométrique de raison $q = 0{,}8$ ; le terme suivant vaut $102{,}4$."
+      "reponse": "$ u_{10} = 21 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "indice-depart",
-      "enonce": "Une suite arithmétique de raison $r = -3$ a pour premier terme $u_1 = 40$ (le premier terme est d'indice $1$). Déterminer le terme général $u_n$, puis calculer $u_{10}$.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 10 $, raison $ r = -2 $. Calculer $ u_{6} $.",
       "corrige": [
-        "Le premier terme est d'indice $1$ : on utilise la formule $u_n = u_p + (n - p)\\,r$ avec $p = 1$.",
-        "$u_n = u_1 + (n - 1)\\,r = 40 + (n - 1)\\times(-3)$.",
-        "En développant : $u_n = 40 - 3(n-1) = 40 - 3n + 3 = 43 - 3n$.",
-        "Pour $n = 10$ : $u_{10} = 43 - 3\\times 10 = 43 - 30 = 13$."
+        "$ u_n = u_0 + n\\times r = 10 + 6\\times -2 = -2 $."
       ],
-      "reponse": "$u_n = 43 - 3n$ et $u_{10} = 13$."
+      "reponse": "$ u_{6} = -2 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "capital",
-      "enonce": "Un capital de $8\\,000$ € est placé sur un compte rémunéré à $3\\,\\%$ par an. On note $C_n$ le capital au bout de $n$ années. Justifier que $(C_n)$ est géométrique, donner l'expression de $C_n$, puis calculer le capital au bout de $5$ ans (arrondi à l'euro).",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 0 $, raison $ r = 5 $. Calculer $ u_{7} $.",
       "corrige": [
-        "Chaque année, le capital est multiplié par le même coefficient car il augmente d'un pourcentage constant : la suite $(C_n)$ est géométrique.",
-        "La raison est $q = 1 + \\dfrac{t}{100} = 1 + \\dfrac{3}{100} = 1{,}03$, et le premier terme est $C_0 = 8000$.",
-        "Le terme général est $C_n = C_0 \\times q^{\\,n} = 8000 \\times 1{,}03^{\\,n}$.",
-        "Au bout de $5$ ans : $C_5 = 8000 \\times 1{,}03^{5} \\approx 8000 \\times 1{,}159274 \\approx 9274$ €."
+        "$ u_n = u_0 + n\\times r = 0 + 7\\times 5 = 35 $."
       ],
-      "reponse": "$(C_n)$ est géométrique de raison $1{,}03$, $C_n = 8000 \\times 1{,}03^{\\,n}$ et $C_5 \\approx 9274$ €."
+      "reponse": "$ u_{7} = 35 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "modelisation",
-      "enonce": "Deux salles de sport proposent un abonnement. Chez A, on paie $200$ € la première année, puis $30$ € de plus chaque année. Chez B, on paie $150$ € la première année, puis le tarif augmente de $10\\,\\%$ chaque année. On note $a_n$ et $b_n$ les tarifs de la $n$-ième année ($n \\geq 1$, année $1$ = premier terme). Préciser la nature de chaque suite, puis comparer $a_4$ et $b_4$.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 3 $, raison $ r = 3 $. Calculer $ u_{8} $.",
       "corrige": [
-        "Chez A, on ajoute chaque année la quantité fixe $30$ € : $(a_n)$ est arithmétique de raison $r = 30$, avec $a_1 = 200$.",
-        "Chez B, on multiplie chaque année par le même coefficient (hausse de $10\\,\\%$) : $(b_n)$ est géométrique de raison $q = 1{,}10$, avec $b_1 = 150$.",
-        "Comme le premier terme est d'indice $1$ : $a_n = a_1 + (n-1)\\,r$, donc $a_4 = 200 + 3\\times 30 = 290$ €.",
-        "De même $b_n = b_1 \\times q^{\\,n-1}$, donc $b_4 = 150 \\times 1{,}10^{3} = 150 \\times 1{,}331 = 199{,}65$ €.",
-        "On compare : $199{,}65 < 290$, donc la quatrième année l'abonnement B est moins cher que l'abonnement A."
+        "$ u_n = u_0 + n\\times r = 3 + 8\\times 3 = 27 $."
       ],
-      "reponse": "$(a_n)$ arithmétique ($r = 30$), $(b_n)$ géométrique ($q = 1{,}10$) ; $a_4 = 290$ € et $b_4 = 199{,}65$ € : B est le moins cher la 4e année."
+      "reponse": "$ u_{8} = 27 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "geometrique",
-      "enonce": "Le nombre de nénuphars à la surface d'un étang est multiplié par $1{,}5$ chaque semaine. Au départ, on compte $64$ nénuphars. On note $b_n$ le nombre de nénuphars au bout de $n$ semaines. Donner l'expression de $b_n$, calculer $b_1$ et $b_2$, puis le nombre de nénuphars au bout de $4$ semaines.",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 7 $, raison $ r = 2 $. Calculer $ u_{5} $.",
       "corrige": [
-        "Le nombre est multiplié chaque semaine par le même coefficient $1{,}5$ : la suite $(b_n)$ est géométrique de raison $q = 1{,}5$, de premier terme $b_0 = 64$.",
-        "Le terme général est $b_n = b_0 \\times q^{\\,n} = 64 \\times 1{,}5^{\\,n}$.",
-        "$b_1 = 64 \\times 1{,}5 = 96$, puis $b_2 = 96 \\times 1{,}5 = 144$.",
-        "Au bout de $4$ semaines : $b_4 = 64 \\times 1{,}5^{4} = 64 \\times 5{,}0625 = 324$ nénuphars."
+        "$ u_n = u_0 + n\\times r = 7 + 5\\times 2 = 17 $."
       ],
-      "reponse": "$b_n = 64 \\times 1{,}5^{\\,n}$ ; $b_1 = 96$, $b_2 = 144$ et $b_4 = 324$ nénuphars."
+      "reponse": "$ u_{5} = 17 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "arithmetique",
-      "enonce": "Une suite arithmétique $(u_n)$ vérifie $u_2 = 17$ et $u_5 = 32$. Déterminer sa raison $r$ et son premier terme $u_0$, puis calculer $u_{20}$.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 4 $, raison $ r = 6 $. Calculer $ u_{3} $.",
       "corrige": [
-        "Entre le rang $2$ et le rang $5$, on ajoute la raison $3$ fois : $u_5 = u_2 + 3r$, donc $32 = 17 + 3r$.",
-        "On en tire $3r = 32 - 17 = 15$, soit $r = 5$.",
-        "Comme $u_2 = u_0 + 2r$, on a $17 = u_0 + 2\\times 5 = u_0 + 10$, donc $u_0 = 7$.",
-        "Avec le terme général $u_n = u_0 + n\\,r = 7 + 5n$, on obtient $u_{20} = 7 + 5\\times 20 = 107$."
+        "$ u_n = u_0 + n\\times r = 4 + 3\\times 6 = 22 $."
       ],
-      "reponse": "$r = 5$, $u_0 = 7$ (soit $u_n = 7 + 5n$) et $u_{20} = 107$."
+      "reponse": "$ u_{3} = 22 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "seuil",
-      "enonce": "La production annuelle d'une usine est de $5\\,000$ pièces la première année, puis diminue de $6\\,\\%$ chaque année. On note $P_n$ la production au bout de $n$ années ($P_0 = 5\\,000$). Justifier que $(P_n)$ est géométrique, donner son expression, puis déterminer à partir de quelle année la production passe pour la première fois sous le seuil de $3\\,500$ pièces.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 1 $, raison $ r = 10 $. Calculer $ u_{9} $.",
       "corrige": [
-        "La production baisse chaque année d'un pourcentage constant, donc elle est multipliée par le même coefficient : $(P_n)$ est géométrique de raison $q = 1 - \\dfrac{6}{100} = 0{,}94$, avec $P_0 = 5000$.",
-        "Le terme général est $P_n = 5000 \\times 0{,}94^{\\,n}$.",
-        "On calcule les termes de proche en proche : $P_4 \\approx 3904$, $P_5 \\approx 3670$, encore au-dessus de $3500$.",
-        "$P_6 = 5000 \\times 0{,}94^{6} \\approx 3449$, qui est inférieur à $3500$ pour la première fois.",
-        "C'est donc au bout de $6$ années que la production passe sous le seuil de $3\\,500$ pièces."
+        "$ u_n = u_0 + n\\times r = 1 + 9\\times 10 = 91 $."
       ],
-      "reponse": "$(P_n)$ est géométrique de raison $0{,}94$, $P_n = 5000 \\times 0{,}94^{\\,n}$ ; la production passe sous $3\\,500$ pièces au bout de $6$ ans ($P_6 \\approx 3449$)."
+      "reponse": "$ u_{9} = 91 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "probleme",
-      "enonce": "Une association reçoit chaque année un don de deux mécènes. Le mécène A verse $800$ € la première année (année $1$), puis augmente son don de $150$ € chaque année. Le mécène B verse $500$ € la première année, puis augmente son don de $20\\,\\%$ chaque année. On note $a_n$ le don du mécène A et $b_n$ le don du mécène B lors de la $n$-ième année ($n \\geq 1$, l'année $1$ correspond au premier terme). 1. Préciser la nature de chacune des suites $(a_n)$ et $(b_n)$, ainsi que son premier terme et sa raison. 2. Donner l'expression de $a_n$ en fonction de $n$, puis calculer $a_2$, $a_3$ et $a_4$. 3. Donner l'expression de $b_n$ en fonction de $n$, puis calculer $b_2$, $b_3$ et $b_4$. 4. Calculer le don total de chaque mécène sur les $4$ premières années. 5. Montrer qu'à partir d'une certaine année, le don annuel de B dépasse celui de A, et déterminer la première année où cela se produit.",
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 20 $, raison $ r = -3 $. Calculer $ u_{5} $.",
       "corrige": [
-        "1. Le mécène A ajoute chaque année la quantité fixe $150$ € : $(a_n)$ est arithmétique de raison $r = 150$, de premier terme $a_1 = 800$. Le mécène B augmente d'un pourcentage constant ($+20\\,\\%$), donc multiplie par le même coefficient : $(b_n)$ est géométrique de raison $q = 1{,}20$, de premier terme $b_1 = 500$.",
-        "2. Le premier terme étant d'indice $1$ : $a_n = a_1 + (n-1)\\,r = 800 + (n-1)\\times 150 = 650 + 150n$. On obtient $a_2 = 950$ €, $a_3 = 1100$ € et $a_4 = 1250$ €.",
-        "3. De même $b_n = b_1 \\times q^{\\,n-1} = 500 \\times 1{,}20^{\\,n-1}$. On obtient $b_2 = 500 \\times 1{,}2 = 600$ €, $b_3 = 720$ € et $b_4 = 864$ €.",
-        "4. Don total de A sur $4$ ans : $a_1 + a_2 + a_3 + a_4 = 800 + 950 + 1100 + 1250 = 4100$ €. Don total de B sur $4$ ans : $b_1 + b_2 + b_3 + b_4 = 500 + 600 + 720 + 864 = 2684$ €. Sur ces $4$ premières années, A donne davantage.",
-        "5. On compare les dons annuels année après année. $a_5 = 1400$ et $b_5 = 500 \\times 1{,}2^{4} \\approx 1037$ ; $a_8 = 1850$ et $b_8 \\approx 1792$ (B encore en dessous) ; $a_9 = 2000$ et $b_9 = 500 \\times 1{,}2^{8} \\approx 2150$. Comme la croissance de B est géométrique, elle finit toujours par l'emporter sur la croissance arithmétique de A : le don de B dépasse pour la première fois celui de A lors de l'année $9$."
+        "$ u_n = u_0 + n\\times r = 20 + 5\\times -3 = 5 $."
       ],
-      "reponse": "$(a_n)$ arithmétique ($a_1 = 800$, $r = 150$, $a_n = 650 + 150n$) ; $(b_n)$ géométrique ($b_1 = 500$, $q = 1{,}20$, $b_n = 500 \\times 1{,}2^{\\,n-1}$). Dons sur $4$ ans : A $= 4100$ €, B $= 2684$ €. Le don de B dépasse celui de A à partir de l'année $9$."
+      "reponse": "$ u_{5} = 5 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 2 $, raison $ r = 7 $. Calculer $ u_{4} $.",
+      "corrige": [
+        "$ u_n = u_0 + n\\times r = 2 + 4\\times 7 = 30 $."
+      ],
+      "reponse": "$ u_{4} = 30 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "Suite arithmetique : $ u_0 = 6 $, raison $ r = 1 $. Calculer $ u_{12} $.",
+      "corrige": [
+        "$ u_n = u_0 + n\\times r = 6 + 12\\times 1 = 18 $."
+      ],
+      "reponse": "$ u_{12} = 18 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 2 $. Calculer $ u_{4} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 2^4 = 16 $."
+      ],
+      "reponse": "$ u_{4} = 16 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 3 $, raison $ q = 2 $. Calculer $ u_{3} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 3\\times 2^3 = 24 $."
+      ],
+      "reponse": "$ u_{3} = 24 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 3 $. Calculer $ u_{3} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 3^3 = 27 $."
+      ],
+      "reponse": "$ u_{3} = 27 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 5 $, raison $ q = 2 $. Calculer $ u_{3} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 5\\times 2^3 = 40 $."
+      ],
+      "reponse": "$ u_{3} = 40 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 2 $, raison $ q = 3 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 2\\times 3^2 = 18 $."
+      ],
+      "reponse": "$ u_{2} = 18 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 2 $. Calculer $ u_{6} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 2^6 = 64 $."
+      ],
+      "reponse": "$ u_{6} = 64 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 4 $, raison $ q = 2 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 4\\times 2^2 = 16 $."
+      ],
+      "reponse": "$ u_{2} = 16 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 1 $, raison $ q = 5 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 1\\times 5^2 = 25 $."
+      ],
+      "reponse": "$ u_{2} = 25 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 2 $, raison $ q = 2 $. Calculer $ u_{5} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 2\\times 2^5 = 64 $."
+      ],
+      "reponse": "$ u_{5} = 64 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "suite-geometrique",
+      "enonce": "Suite geometrique : $ u_0 = 3 $, raison $ q = 3 $. Calculer $ u_{2} $.",
+      "corrige": [
+        "$ u_n = u_0\\times q^n = 3\\times 3^2 = 27 $."
+      ],
+      "reponse": "$ u_{2} = 27 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=1 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=2 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=3 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=4 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=5 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=6 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=7 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=8 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=9 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=10 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=11 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=12 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=13 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=14 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=15 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=16 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=17 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 23 $."
+      ],
+      "reponse": "$ 23 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=18 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=19 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=20 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 26 $."
+      ],
+      "reponse": "$ 26 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=21 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=22 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 28 $."
+      ],
+      "reponse": "$ 28 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=23 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=24 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=25 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 31 $."
+      ],
+      "reponse": "$ 31 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=26 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 32 $."
+      ],
+      "reponse": "$ 32 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=27 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "suite-arithmetique",
+      "enonce": "$ u_0=28 $, $ r=2 $ : $ u_3 $ ?",
+      "corrige": [
+        "$ = 34 $."
+      ],
+      "reponse": "$ 34 $"
     }
   ]
 }

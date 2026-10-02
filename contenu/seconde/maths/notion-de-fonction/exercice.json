@@ -14,131 +14,511 @@
       "id": 1,
       "difficulte": "application",
       "notion": "image",
-      "enonce": "Soit $f$ la fonction définie par $f(x) = x^2 - 2x$. Calcule l'image de $-2$ et l'image de $3$ par $f$.",
+      "enonce": "Soit $ f(x) = 2x + 3 $. Calculer $ f(4) $.",
       "corrige": [
-        "L'image d'un nombre s'obtient en remplaçant $x$ par ce nombre dans l'expression de $f(x)$.",
-        "Image de $-2$ : $f(-2) = (-2)^2 - 2\\times(-2) = 4 - (-4) = 4 + 4 = 8$.",
-        "Image de $3$ : $f(3) = 3^2 - 2\\times 3 = 9 - 6 = 3$.",
-        "Attention au signe : $-2\\times(-2)$ vaut $+4$, on ajoute donc $4$ et on ne le soustrait pas."
+        "$ f(4) = 2 \\times 4 + 3 = 11 $."
       ],
-      "reponse": "L'image de $-2$ est $8$ ; l'image de $3$ est $3$."
+      "reponse": "$ f(4) = 11 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "ensemble-definition",
-      "enonce": "Détermine l'ensemble de définition de la fonction $g$ définie par $g(x) = \\dfrac{6}{2x - 8}$.",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 3x - 1 $. Calculer $ f(5) $.",
       "corrige": [
-        "Le seul interdit ici est la division par zéro : le dénominateur doit être non nul.",
-        "On cherche la valeur interdite en résolvant $2x - 8 = 0$, soit $2x = 8$, donc $x = 4$.",
-        "Toutes les autres valeurs sont autorisées : on retire $4$ à l'ensemble des réels."
+        "$ f(5) = 3 \\times 5 - 1 = 14 $."
       ],
-      "reponse": "$D_g = \\mathbb{R} \\setminus \\{4\\}$, c'est-à-dire $]-\\infty\\,;4[\\ \\cup\\ ]4\\,;+\\infty[$."
+      "reponse": "$ f(5) = 14 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "antecedent",
-      "enonce": "Soit $f$ définie sur $\\mathbb{R}$ par $f(x) = x^2 - 1$. Détermine tous les antécédents de $15$ par $f$, puis explique pourquoi $-5$ n'a aucun antécédent.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = -2x + 7 $. Calculer $ f(3) $.",
       "corrige": [
-        "Chercher les antécédents de $15$, c'est résoudre l'équation $f(x) = 15$, soit $x^2 - 1 = 15$.",
-        "On isole $x^2$ : $x^2 = 15 + 1 = 16$.",
-        "Un nombre dont le carré vaut $16$ est $4$ ou $-4$ : il y a donc deux antécédents, $-4$ et $4$.",
-        "Pour $-5$ : il faudrait $x^2 - 1 = -5$, soit $x^2 = -4$. Or un carré est toujours positif ou nul : aucune valeur de $x$ ne convient, donc $-5$ n'a aucun antécédent."
+        "$ f(3) = -2 \\times 3 + 7 = 1 $."
       ],
-      "reponse": "Les antécédents de $15$ sont $-4$ et $4$ ; $-5$ n'a aucun antécédent car un carré ne peut pas être négatif."
+      "reponse": "$ f(3) = 1 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "lecture-graphique",
-      "enonce": "Une fonction $f$ est donnée par le tableau de valeurs suivant.\n\n| $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |\n|---|---|---|---|---|---|---|\n| $f(x)$ | $5$ | $0$ | $-3$ | $-4$ | $-3$ | $0$ |\n\n1. Quelle est l'image de $1$ par $f$ ? 2. Quels sont les antécédents de $0$ ?",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 4x + 0 $. Calculer $ f(6) $.",
       "corrige": [
-        "1. L'image de $1$ se lit dans la colonne où $x = 1$ : on descend jusqu'à la ligne $f(x)$ et on lit $-4$. Donc $f(1) = -4$.",
-        "2. Chercher les antécédents de $0$, c'est repérer toutes les colonnes où la ligne $f(x)$ affiche $0$.",
-        "La valeur $0$ apparaît deux fois : pour $x = -1$ et pour $x = 3$.",
-        "Un même nombre ($0$) peut donc avoir plusieurs antécédents : ici $-1$ et $3$."
+        "$ f(6) = 4 \\times 6 + 0 = 24 $."
       ],
-      "reponse": "$f(1) = -4$ ; les antécédents de $0$ sont $-1$ et $3$."
+      "reponse": "$ f(6) = 24 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "variations",
-      "enonce": "Une fonction $f$ est définie sur $[-3\\,;5]$. Elle est décroissante sur $[-3\\,;1]$ puis croissante sur $[1\\,;5]$. On sait que $f(-3) = 4$, $f(1) = -2$ et $f(5) = 7$.\n\n1. Donne le minimum de $f$ sur $[-3\\,;5]$ et la valeur de $x$ où il est atteint. 2. Donne le maximum de $f$ sur $[-3\\,;5]$. 3. Compare $f(-1)$ et $f(0)$ en justifiant.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 1x + 5 $. Calculer $ f(2) $.",
       "corrige": [
-        "1. $f$ décroît jusqu'à $x = 1$ puis croît : la plus petite valeur est atteinte au « creux », en $x = 1$. Le minimum vaut donc $f(1) = -2$, atteint en $x = 1$.",
-        "2. Le maximum est atteint à l'une des deux bornes. On compare les valeurs aux extrémités : $f(-3) = 4$ et $f(5) = 7$. La plus grande est $7$ : le maximum vaut $7$, atteint en $x = 5$.",
-        "3. Les nombres $-1$ et $0$ appartiennent tous les deux à $[-3\\,;1]$, où $f$ est décroissante. Une fonction décroissante inverse l'ordre : comme $-1 < 0$, on a $f(-1) > f(0)$.",
-        "On ne confond pas le minimum (la valeur $-2$) avec l'abscisse où il est atteint ($x = 1$)."
+        "$ f(2) = 1 \\times 2 + 5 = 7 $."
       ],
-      "reponse": "Minimum $-2$ atteint en $x = 1$ ; maximum $7$ (en $x = 5$) ; $f(-1) > f(0)$ car $f$ est décroissante sur $[-3\\,;1]$."
+      "reponse": "$ f(2) = 7 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "tableau-signes",
-      "enonce": "On lance une balle. Sa hauteur au-dessus du sol, en mètres, au temps $t$ (en secondes) est donnée par une fonction $h$. La balle part du sol : $h(0) = 0$. Elle monte jusqu'à une hauteur maximale de $20$ m atteinte à $t = 2$, puis redescend et retouche le sol à $t = 4$ ($h(4) = 0$). Après cela, on n'étudie plus le mouvement.\n\n1. Quel est l'ensemble de définition de $h$ ? 2. Quelle est la hauteur maximale et à quel instant est-elle atteinte ? 3. Dresse le tableau de signes de $h$ sur son ensemble de définition et précise quand la balle est en l'air ($h(t) > 0$).",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 5x - 2 $. Calculer $ f(3) $.",
       "corrige": [
-        "1. On étudie le mouvement du départ ($t = 0$) jusqu'au retour au sol ($t = 4$) : l'ensemble de définition est $D = [0\\,;4]$.",
-        "2. La hauteur maximale est la plus grande valeur de $h(t)$ : c'est le maximum, égal à $20$ m, atteint en $t = 2$. La valeur $20$ est la hauteur ; $2$ est l'instant où elle est atteinte.",
-        "3. La balle est au sol quand $h(t) = 0$, c'est-à-dire en $t = 0$ et $t = 4$. Entre ces deux instants elle est au-dessus du sol, donc $h(t) > 0$ sur $]0\\,;4[$.",
-        "Tableau de signes de $h$ sur $[0\\,;4]$ : $h(0) = 0$, puis $h(t) > 0$ pour tout $t$ de $]0\\,;4[$, puis $h(4) = 0$. La balle est donc en l'air pendant tout l'intervalle $]0\\,;4[$."
+        "$ f(3) = 5 \\times 3 - 2 = 13 $."
       ],
-      "reponse": "$D = [0\\,;4]$ ; hauteur maximale $20$ m en $t = 2$ ; $h(t) > 0$ sur $]0\\,;4[$ (nulle en $t = 0$ et $t = 4$)."
+      "reponse": "$ f(3) = 13 $"
     },
     {
       "id": 7,
       "difficulte": "application",
       "notion": "image",
-      "enonce": "Soit $f$ la fonction affine définie sur $\\mathbb{R}$ par $f(x) = -3x + 5$. Calcule l'image de $0$, de $4$ et de $-2$ par $f$.",
+      "enonce": "Soit $ f(x) = -3x + 4 $. Calculer $ f(2) $.",
       "corrige": [
-        "L'image d'un nombre s'obtient en remplaçant $x$ par ce nombre dans l'expression $f(x) = -3x + 5$.",
-        "Image de $0$ : $f(0) = -3\\times 0 + 5 = 0 + 5 = 5$.",
-        "Image de $4$ : $f(4) = -3\\times 4 + 5 = -12 + 5 = -7$.",
-        "Image de $-2$ : $f(-2) = -3\\times(-2) + 5 = 6 + 5 = 11$. Attention au signe : $-3\\times(-2)$ vaut $+6$."
+        "$ f(2) = -3 \\times 2 + 4 = -2 $."
       ],
-      "reponse": "$f(0) = 5$, $f(4) = -7$ et $f(-2) = 11$."
+      "reponse": "$ f(2) = -2 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "representations",
-      "enonce": "On considère le programme de calcul suivant : « Choisir un nombre, le multiplier par $4$, puis retrancher $7$ au résultat. » On note $f$ la fonction qui, à un nombre $x$, associe le résultat du programme.\n\n1. Exprime $f(x)$ en fonction de $x$. 2. Calcule l'image de $3$, puis détermine l'antécédent de $5$ par $f$.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 2x - 5 $. Calculer $ f(7) $.",
       "corrige": [
-        "1. On traduit le programme étape par étape : multiplier $x$ par $4$ donne $4x$, puis retrancher $7$ donne $4x - 7$. Donc $f(x) = 4x - 7$.",
-        "2. Image de $3$ : on remplace $x$ par $3$ dans l'expression : $f(3) = 4\\times 3 - 7 = 12 - 7 = 5$.",
-        "Antécédent de $5$ : on cherche $x$ tel que $f(x) = 5$, soit $4x - 7 = 5$.",
-        "On isole $x$ : $4x = 5 + 7 = 12$, donc $x = \\dfrac{12}{4} = 3$. L'antécédent de $5$ est $3$."
+        "$ f(7) = 2 \\times 7 - 5 = 9 $."
       ],
-      "reponse": "$f(x) = 4x - 7$ ; l'image de $3$ est $5$ et l'antécédent de $5$ est $3$."
+      "reponse": "$ f(7) = 9 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "ensemble-definition",
-      "enonce": "Détermine l'ensemble de définition de la fonction $f$ définie par $f(x) = \\dfrac{\\sqrt{x - 1}}{x - 4}$.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 6x + 1 $. Calculer $ f(1) $.",
       "corrige": [
-        "Deux interdits doivent être respectés en même temps : la quantité sous la racine doit être positive ou nulle, et le dénominateur doit être non nul.",
-        "Condition de la racine : $x - 1 \\geqslant 0$, soit $x \\geqslant 1$. Cela donne l'intervalle $[1\\,;+\\infty[$.",
-        "Condition du dénominateur : $x - 4 \\neq 0$, soit $x \\neq 4$.",
-        "On ne garde que les nombres qui vérifient les deux conditions : ceux de $[1\\,;+\\infty[$ en retirant $4$."
+        "$ f(1) = 6 \\times 1 + 1 = 7 $."
       ],
-      "reponse": "$D_f = [1\\,;4[\\ \\cup\\ ]4\\,;+\\infty[$."
+      "reponse": "$ f(1) = 7 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "synthese",
-      "enonce": "Un artisan fabrique et vend des lampes. Lorsqu'il en vend $x$ (avec $x$ compris entre $0$ et $60$), son bénéfice, en euros, est donné par une fonction $B$ définie sur $[0\\,;60]$. On dispose du tableau de valeurs suivant.\n\n| $x$ | $0$ | $10$ | $20$ | $30$ | $40$ | $50$ | $60$ |\n|---|---|---|---|---|---|---|---|\n| $B(x)$ | $-400$ | $100$ | $500$ | $600$ | $500$ | $100$ | $-400$ |\n\nOn sait de plus que $B$ est croissante sur $[0\\,;30]$ puis décroissante sur $[30\\,;60]$, et que $B$ ne s'annule qu'en $x = 8$ et en $x = 52$.\n\n1. Que représente concrètement $B(20)$ et quelle est sa valeur ? 2. Résous l'équation $B(x) = 500$ à l'aide du tableau et interprète le résultat. 3. Détermine le bénéfice maximal de l'artisan et le nombre de lampes correspondant. 4. Dresse le tableau de signes de $B$ sur $[0\\,;60]$ et précise pour combien de lampes vendues l'activité est rentable. 5. Sans calcul, compare $B(15)$ et $B(25)$ en justifiant.",
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 3x + 2 $. Calculer $ f(4) $.",
       "corrige": [
-        "1. $B(20)$ est le bénéfice, en euros, réalisé lorsque l'artisan vend $20$ lampes. Le tableau donne $B(20) = 500$ : vendre $20$ lampes rapporte un bénéfice de $500$ €.",
-        "2. Résoudre $B(x) = 500$ revient à chercher les antécédents de $500$. Dans le tableau, la valeur $500$ apparaît deux fois : pour $x = 20$ et pour $x = 40$. Les solutions sont donc $x = 20$ et $x = 40$ : deux quantités de lampes différentes procurent le même bénéfice de $500$ €.",
-        "3. Le bénéfice maximal est le maximum de $B$. Comme $B$ croît sur $[0\\,;30]$ puis décroît sur $[30\\,;60]$, ce maximum est atteint au sommet, en $x = 30$, et vaut $B(30) = 600$. Le bénéfice maximal est donc $600$ €, obtenu pour $30$ lampes vendues.",
-        "4. $B$ s'annule en $x = 8$ et $x = 52$. Sur $[0\\,;8[$, $B(0) = -400 < 0$ donc $B$ est négative ; sur $]8\\,;52[$, $B(20) = 500 > 0$ donc $B$ est positive ; sur $]52\\,;60]$, $B(60) = -400 < 0$ donc $B$ est négative. Tableau de signes : $B$ négative sur $[0\\,;8[$, nulle en $8$, positive sur $]8\\,;52[$, nulle en $52$, négative sur $]52\\,;60]$. L'activité est rentable quand $B(x) > 0$, c'est-à-dire pour un nombre de lampes strictement compris entre $8$ et $52$.",
-        "5. Les nombres $15$ et $25$ appartiennent tous deux à $[0\\,;30]$, intervalle sur lequel $B$ est croissante. Une fonction croissante conserve l'ordre : comme $15 < 25$, on a $B(15) < B(25)$."
+        "$ f(4) = 3 \\times 4 + 2 = 14 $."
       ],
-      "reponse": "$B(20) = 500$ € (bénéfice pour $20$ lampes) ; $B(x) = 500$ pour $x = 20$ et $x = 40$ ; bénéfice maximal $600$ € pour $30$ lampes ; activité rentable pour $x \\in\\ ]8\\,;52[$ ; $B(15) < B(25)$ car $B$ est croissante sur $[0\\,;30]$."
+      "reponse": "$ f(4) = 14 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = 2x + 4 $. Calculer $ f(3) $.",
+      "corrige": [
+        "$ f(3) = 2 \\times 3 + 4 = 10 $."
+      ],
+      "reponse": "$ f(3) = 10 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "Soit $ f(x) = -1x + 8 $. Calculer $ f(5) $.",
+      "corrige": [
+        "$ f(5) = -1 \\times 5 + 8 = 3 $."
+      ],
+      "reponse": "$ f(5) = 3 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 2x + 3 $. Determiner l'antecedent de 11.",
+      "corrige": [
+        "On resout $ 2x + 3 = 11 $.",
+        "$ x = \\dfrac{11 - 3}{2} = 4 $."
+      ],
+      "reponse": "$ x = 4 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 3x + -1 $. Determiner l'antecedent de 8.",
+      "corrige": [
+        "On resout $ 3x + -1 = 8 $.",
+        "$ x = \\dfrac{8 + 1}{3} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 4x + 1 $. Determiner l'antecedent de 13.",
+      "corrige": [
+        "On resout $ 4x + 1 = 13 $.",
+        "$ x = \\dfrac{13 - 1}{4} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 5x + 2 $. Determiner l'antecedent de 17.",
+      "corrige": [
+        "On resout $ 5x + 2 = 17 $.",
+        "$ x = \\dfrac{17 - 2}{5} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 2x + -3 $. Determiner l'antecedent de 7.",
+      "corrige": [
+        "On resout $ 2x + -3 = 7 $.",
+        "$ x = \\dfrac{7 + 3}{2} = 5 $."
+      ],
+      "reponse": "$ x = 5 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 3x + 6 $. Determiner l'antecedent de 15.",
+      "corrige": [
+        "On resout $ 3x + 6 = 15 $.",
+        "$ x = \\dfrac{15 - 6}{3} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 4x + -2 $. Determiner l'antecedent de 10.",
+      "corrige": [
+        "On resout $ 4x + -2 = 10 $.",
+        "$ x = \\dfrac{10 + 2}{4} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 6x + 0 $. Determiner l'antecedent de 18.",
+      "corrige": [
+        "On resout $ 6x + 0 = 18 $.",
+        "$ x = \\dfrac{18 - 0}{6} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 3x + 1 $. Determiner l'antecedent de 10.",
+      "corrige": [
+        "On resout $ 3x + 1 = 10 $.",
+        "$ x = \\dfrac{10 - 1}{3} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "antecedent",
+      "enonce": "Soit $ f(x) = 5x + -2 $. Determiner l'antecedent de 13.",
+      "corrige": [
+        "On resout $ 5x + -2 = 13 $.",
+        "$ x = \\dfrac{13 + 2}{5} = 3 $."
+      ],
+      "reponse": "$ x = 3 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 1 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 1 = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 2 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 2 = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 3 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 3 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 4 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 4 = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 5 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 5 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 6 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 6 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 7 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 7 = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 8 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 8 = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 9 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 9 = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 10 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 10 = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 11 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 11 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 12 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 12 = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 13 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 13 = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 14 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 14 = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 15 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 15 = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 16 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 16 = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 17 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 17 = 23 $."
+      ],
+      "reponse": "$ 23 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 18 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 18 = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 19 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 19 = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 20 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 20 = 26 $."
+      ],
+      "reponse": "$ 26 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 21 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 21 = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 22 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 22 = 28 $."
+      ],
+      "reponse": "$ 28 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 23 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 23 = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 24 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 24 = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 25 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 25 = 31 $."
+      ],
+      "reponse": "$ 31 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 26 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 26 = 32 $."
+      ],
+      "reponse": "$ 32 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 27 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 27 = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "image",
+      "enonce": "$ f(x)=2x + 28 $, calculer $ f(3) $.",
+      "corrige": [
+        "$ = 6 + 28 = 34 $."
+      ],
+      "reponse": "$ 34 $"
     }
   ]
 }

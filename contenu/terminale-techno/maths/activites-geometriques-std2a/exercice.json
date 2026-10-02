@@ -13,126 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "sections-planes",
-      "enonce": "Un cône de révolution (à deux nappes) a pour demi-angle au sommet $\\alpha = 30°$. On le coupe par quatre plans, aucun ne passant par le sommet. Donner la nature de chaque section. (a) Un plan perpendiculaire à l'axe, situé à $6$ cm du sommet (le long de l'axe) : préciser aussi le rayon de la section, arrondi au millimètre. (b) Un plan faisant un angle de $50°$ avec l'axe. (c) Un plan faisant un angle de $30°$ avec l'axe. (d) Un plan faisant un angle de $10°$ avec l'axe.",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 5 cm x 3 cm ?",
       "corrige": [
-        "(a) Le plan est perpendiculaire à l'axe ($\\beta = 90°$) : la section est un **cercle**. Vu de profil, le cône devient un triangle rectangle : à la distance $d = 6$ cm du sommet, le rayon vaut $r = d \\times \\tan \\alpha = 6 \\tan 30° = 2\\sqrt{3} \\approx 3{,}5$ cm.",
-        "(b) On compare l'angle plan–axe au demi-angle au sommet : $\\alpha = 30° < \\beta = 50° < 90°$. Le plan est incliné mais coupe toutes les génératrices d'une même nappe : la section est une **ellipse** (courbe fermée).",
-        "(c) Ici $\\beta = \\alpha = 30°$ : le plan est parallèle à une génératrice et une seule. C'est le cas frontière : la section est une **parabole** (courbe ouverte, une branche).",
-        "(d) Ici $\\beta = 10° < \\alpha = 30°$ : le plan est plus « redressé » que les génératrices, il coupe les **deux nappes**. La section est une **hyperbole** à deux branches, une sur chaque nappe."
+        "$ 5\\times 3 = 15 $ cm²."
       ],
-      "reponse": "(a) cercle de rayon $2\\sqrt{3} \\approx 3{,}5$ cm ; (b) ellipse ; (c) parabole ; (d) hyperbole."
+      "reponse": "$ 15 $ cm²"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "tangente",
-      "enonce": "Sur une épure, un cercle de centre $O$ et de rayon $6$ cm représente la section d'une pièce cylindrique. Un point $A$ du plan vérifie $OA = 10$ cm. Une droite passant par $A$ est tangente au cercle en un point $T$. (a) Rappeler la propriété de la tangente au cercle en $T$. (b) En déduire la nature du triangle $OTA$. (c) Calculer la longueur $AT$.",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 6 cm x 4 cm ?",
       "corrige": [
-        "(a) La tangente au cercle en $T$ est la droite qui touche le cercle en $T$ sans le traverser : elle est **perpendiculaire en $T$ au rayon $[OT]$**.",
-        "(b) La droite $(AT)$ est tangente en $T$, donc $(AT) \\perp (OT)$ : le triangle $OTA$ est **rectangle en $T$**.",
-        "(c) On applique le théorème de Pythagore dans $OTA$ rectangle en $T$ : $OA^2 = OT^2 + AT^2$, donc $AT^2 = OA^2 - OT^2 = 10^2 - 6^2 = 100 - 36 = 64$, d'où $AT = \\sqrt{64} = 8$ cm. La tangente transforme le problème de cercle en triangle rectangle — c'est tout son intérêt en géométrie de tracé."
+        "$ 6\\times 4 = 24 $ cm²."
       ],
-      "reponse": "(a) tangente $\\perp$ rayon $[OT]$ ; (b) triangle rectangle en $T$ ; (c) $AT = 8$ cm."
+      "reponse": "$ 24 $ cm²"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "perspective-centrale",
-      "enonce": "Tu dessines en perspective centrale une voie ferrée rectiligne vue de face : les deux rails sont horizontaux, parallèles entre eux et perpendiculaires au plan du tableau ; les traverses sont horizontales et parallèles au tableau, régulièrement espacées dans la réalité. (a) Que deviennent les images des deux rails sur le dessin ? Justifier par une propriété du cours et préciser où se situe leur point de concours. (b) Que deviennent les images des traverses ? Justifier. (c) Les images des traverses sont-elles régulièrement espacées sur le dessin ? Expliquer.",
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 8 cm x 2 cm ?",
       "corrige": [
-        "(a) Les rails sont des droites parallèles entre elles et **non parallèles au tableau** (ils s'enfoncent dans la profondeur). D'après la règle des points de fuite, leurs images sont des droites **concourantes en un point de fuite**. Comme ils sont horizontaux et perpendiculaires au tableau, ce point est le **point de fuite principal**, situé sur la **ligne d'horizon**, face à l'œil : sur le dessin, les deux rails « se rejoignent » à l'horizon.",
-        "(b) Les traverses sont des droites **frontales** (parallèles au tableau). Or une frontale garde sa direction : chaque traverse a pour image un segment **horizontal**, et toutes les images restent **parallèles entre elles**. Elles ne fuient vers aucun point.",
-        "(c) Non. La perspective centrale conserve l'alignement, mais **pas les longueurs ni les rapports** : l'égalité des espacements réels n'est pas conservée. Plus une traverse est éloignée de l'observateur, plus son image est proche de la ligne d'horizon et resserrée contre la précédente : les images sont de plus en plus rapprochées en montant vers l'horizon. Dessiner des espacements réguliers est précisément l'erreur qui « écrase » la profondeur."
+        "$ 8\\times 2 = 16 $ cm²."
       ],
-      "reponse": "(a) deux droites concourantes au point de fuite principal, sur la ligne d'horizon ; (b) des segments horizontaux parallèles entre eux (frontales) ; (c) non : espacements de plus en plus resserrés vers l'horizon, car la perspective ne conserve ni longueurs ni rapports."
+      "reponse": "$ 16 $ cm²"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "tangente",
-      "enonce": "Pour le design d'un miroir, tu dois tracer une ellipse de grand axe $12$ cm et de petit axe $7$ cm. (a) Donner les dimensions du rectangle encadrant de cette ellipse et expliquer son rôle dans le tracé. (b) En combien de points l'ellipse touche-t-elle ce rectangle ? Préciser lesquels, et ce que sont les côtés du rectangle pour l'ellipse. (c) Ton premier tracé à main levée donne une courbe légèrement « en œuf », plus pointue à droite qu'à gauche. Expliquer pourquoi ce tracé est géométriquement faux.",
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 7 cm x 5 cm ?",
       "corrige": [
-        "(a) Le rectangle encadrant a pour dimensions le grand axe par le petit axe : $12 \\text{ cm} \\times 7 \\text{ cm}$. On le trace en premier, avec ses deux médianes (les futurs axes de l'ellipse, sécants au centre) : c'est le gabarit qui contrôle l'encombrement et la symétrie de la courbe.",
-        "(b) L'ellipse touche le rectangle en exactement **4 points : ses 4 sommets**, situés aux milieux des côtés du rectangle (extrémités du grand axe et du petit axe). En chacun de ces sommets, le côté du rectangle **touche l'ellipse sans la traverser** : les 4 côtés du rectangle sont les **tangentes** à l'ellipse en ses sommets — tangentes parallèles aux axes.",
-        "(c) Une ellipse possède **deux axes de symétrie** : le grand axe et le petit axe. Ses deux moitiés gauche et droite sont donc superposables : elle ne peut pas être plus pointue d'un côté que de l'autre. La forme « d'œuf » n'a qu'un seul axe de symétrie, ce n'est pas une ellipse : le tracé doit être repris en s'appuyant sur les 4 sommets et les 4 tangentes du rectangle encadrant."
+        "$ 7\\times 5 = 35 $ cm²."
       ],
-      "reponse": "(a) rectangle de $12 \\times 7$ cm, gabarit du tracé ; (b) 4 points de contact, les 4 sommets ; les côtés sont les tangentes en ces sommets ; (c) l'ellipse a deux axes de symétrie, l'« œuf » n'en a qu'un : le tracé est à reprendre."
+      "reponse": "$ 35 $ cm²"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "sections-planes",
-      "enonce": "Une applique murale en forme de cône diffuse la lumière vers le haut et vers le bas : le faisceau lumineux forme un cône de révolution à deux nappes, de sommet $S$ situé à quelques centimètres du mur, d'axe horizontal **parallèle au mur**, et de demi-angle au sommet $\\alpha = 35°$. Le mur est un plan vertical parallèle à l'axe du cône. (a) Donner l'angle $\\beta$ entre le mur et l'axe du cône, puis la nature de la courbe lumineuse dessinée sur le mur. Justifier. (b) Décrire précisément la figure obtenue sur le mur (nombre de branches, position, éléments de symétrie, asymptotes). (c) On incline maintenant l'applique de sorte que le mur devienne parallèle à une génératrice du cône (et une seule). Quelle courbe apparaît sur le mur ? (d) Expliquer pourquoi, quelle que soit l'inclinaison, on ne verra jamais une courbe fermée (ellipse ou cercle) entière sur le mur avec cette applique proche du mur.",
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 10 cm x 4 cm ?",
       "corrige": [
-        "(a) Le mur est parallèle à l'axe : l'angle entre le plan du mur et l'axe vaut $\\beta = 0°$. Comme $\\beta = 0° < \\alpha = 35°$, le plan est plus redressé que les génératrices et coupe les **deux nappes** du cône : la courbe est une **hyperbole**.",
-        "(b) On voit **deux branches** : une tache lumineuse au-dessus de l'applique, une au-dessous, séparées par une zone sombre à hauteur de l'applique. La figure admet un **centre de symétrie** (le point du mur le plus proche du sommet $S$) et un axe de symétrie vertical ; chaque branche a un **sommet** (le point de la branche le plus proche de ce centre). Les branches se rapprochent indéfiniment de deux droites sécantes, les **asymptotes** — les directions des bords du faisceau — sans jamais les atteindre : loin de l'applique, les bords de la tache paraissent presque rectilignes.",
-        "(c) Si le mur devient parallèle à **une seule** génératrice, on est dans le cas frontière $\\beta = \\alpha$ : la courbe est une **parabole**. Une seule nappe éclaire alors le mur en une courbe ouverte en U ; l'autre nappe n'y découpe plus de courbe.",
-        "(d) Pour obtenir un cercle ou une ellipse, il faudrait un plan coupant **toutes** les génératrices d'une même nappe ($\\alpha < \\beta \\le 90°$), donc un mur fortement incliné par rapport à l'axe — face au faisceau, comme l'est un plafond pour un spot vertical. Un mur vertical restant parallèle (ou presque) à l'axe horizontal du cône donne $\\beta < \\alpha$ : on reste dans le cas hyperbole. C'est pour cela que toutes les appliques murales de ce type dessinent des « ailes » hyperboliques, jamais un ovale fermé."
+        "$ 10\\times 4 = 40 $ cm²."
       ],
-      "reponse": "(a) $\\beta = 0° < \\alpha$ : hyperbole ; (b) deux branches symétriques haut/bas, un centre, deux sommets, deux asymptotes jamais touchées ; (c) une parabole ; (d) il faudrait $\\beta > \\alpha$, impossible avec un mur quasi parallèle à l'axe : le cas fermé (ellipse/cercle) est hors d'atteinte."
+      "reponse": "$ 40 $ cm²"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "perspective-centrale",
-      "enonce": "Tu dessines en perspective centrale (frontale) la façade latérale d'un bâtiment : dans la réalité, c'est un rectangle vertical $ABCD$ dont les côtés $[AB]$ et $[DC]$ sont verticaux et les côtés $[AD]$ et $[BC]$ horizontaux, perpendiculaires au tableau. Sur ton dessin, la façade est représentée par un quadrilatère $abcd$. (a) Que peut-on dire des images $[ab]$ et $[dc]$ des deux côtés verticaux ? Justifier. (b) Où se coupent les droites $(ad)$ et $(bc)$ ? Justifier. (c) Le cahier des charges impose une porte située exactement au milieu de la façade. Explique, étape par étape, la construction géométrique qui permet de placer l'axe vertical de cette porte sur le dessin, et justifie pourquoi elle est correcte. (d) Pourquoi serait-il faux de placer cet axe au milieu, mesuré à la règle, du dessin de la façade ?",
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 9 cm x 6 cm ?",
       "corrige": [
-        "(a) Les côtés $[AB]$ et $[DC]$ sont verticaux, donc **parallèles au tableau** (qui est un plan vertical) : ce sont des frontales. Une frontale garde sa direction et deux frontales parallèles restent parallèles : $[ab]$ et $[dc]$ sont donc deux segments **verticaux et parallèles** sur le dessin.",
-        "(b) Les droites $(AD)$ et $(BC)$ sont horizontales, parallèles entre elles et **perpendiculaires au tableau** : leurs images $(ad)$ et $(bc)$ sont concourantes au **point de fuite principal** $F$, situé sur la **ligne d'horizon**, face à l'œil. Sur le dessin, les deux bords horizontaux de la façade « fuient » vers $F$.",
-        "(c) Construction : 1) tracer les deux diagonales $[ac]$ et $[bd]$ du quadrilatère $abcd$ ; 2) noter $i$ leur point d'intersection ; 3) tracer la **verticale** passant par $i$ : c'est l'axe de la porte. Justification : dans la réalité, les diagonales du rectangle $ABCD$ se coupent au centre $I$ de la façade. La perspective conserve l'**alignement** et les **intersections** : l'image de $I$ est donc l'intersection des images des diagonales, c'est-à-dire $i$. L'axe vertical de la porte passe par le centre de la façade ; c'est une droite verticale, donc frontale, dont l'image est la verticale passant par $i$.",
-        "(d) Parce que la perspective centrale **ne conserve ni les longueurs ni les milieux** : la moitié de la façade la plus éloignée de l'observateur occupe moins de place sur le dessin que la moitié proche. Le milieu mesuré à la règle sur $[ad]$ n'est donc pas l'image du milieu réel : la porte serait décalée vers le côté éloigné. Seule la construction par les diagonales, qui ne repose que sur des propriétés conservées (alignement, intersection), donne la position exacte."
+        "$ 9\\times 6 = 54 $ cm²."
       ],
-      "reponse": "(a) $[ab]$ et $[dc]$ verticaux et parallèles (frontales) ; (b) au point de fuite principal $F$, sur la ligne d'horizon ; (c) intersection $i$ des diagonales de $abcd$, puis verticale par $i$ — correcte car la perspective conserve alignements et intersections ; (d) les milieux ne sont pas conservés : le milieu « à la règle » est faux."
+      "reponse": "$ 54 $ cm²"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "sections-planes",
-      "enonce": "Un abat-jour est modélisé par un cône de révolution. Le fabricant indique un **angle au sommet** (angle complet, entre deux génératrices diamétralement opposées) de $80°$. (a) En déduire le demi-angle au sommet $\\alpha$. (b) On coupe ce cône par un plan perpendiculaire à l'axe, à $9$ cm du sommet (le long de l'axe) : calculer le rayon de la section circulaire, arrondi au millimètre. (c) On coupe maintenant le cône (deux nappes) par un plan ne passant pas par le sommet et faisant un angle de $30°$ avec l'axe : donner la nature de la section.",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 12 cm x 3 cm ?",
       "corrige": [
-        "(a) L'angle au sommet complet vaut $2\\alpha$ (deux fois l'angle entre l'axe et une génératrice). Ici $2\\alpha = 80°$, donc le demi-angle au sommet est $\\alpha = 40°$. La classification des sections se fait toujours avec le demi-angle $\\alpha$, jamais avec l'angle complet : c'est un piège de conversion classique.",
-        "(b) Vu de profil, le cône donne un triangle rectangle : à la distance $d = 9$ cm du sommet, le rayon vaut $r = d \\times \\tan \\alpha = 9 \\tan 40° \\approx 9 \\times 0{,}839 \\approx 7{,}6$ cm.",
-        "(c) On compare l'angle plan–axe $\\beta = 30°$ au demi-angle au sommet $\\alpha = 40°$ : $\\beta = 30° < \\alpha = 40°$. Le plan est plus « redressé » que les génératrices et coupe les **deux nappes** : la section est une **hyperbole** (deux branches, une sur chaque nappe)."
+        "$ 12\\times 3 = 36 $ cm²."
       ],
-      "reponse": "(a) $\\alpha = 40°$ ; (b) $r = 9\\tan 40° \\approx 7{,}6$ cm ; (c) hyperbole."
+      "reponse": "$ 36 $ cm²"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "tangente",
-      "enonce": "Pour un objet décoratif, une roue circulaire de centre $O$ et de rayon $8$ cm est reliée à un point fixe $A$ par deux tiges rectilignes, chacune **tangente** à la roue (aux points de contact $T$ et $T'$). On mesure $AT = 15$ cm. (a) Justifier que le triangle $OTA$ est rectangle et calculer la distance $OA$. (b) Calculer une valeur approchée, au degré près, de l'angle $\\widehat{TAT'}$ formé par les deux tiges.",
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 4 cm x 4 cm ?",
       "corrige": [
-        "(a) La tige $(AT)$ est tangente à la roue en $T$, donc perpendiculaire au rayon $[OT]$ : le triangle $OTA$ est **rectangle en $T$**. Par le théorème de Pythagore, $OA^2 = OT^2 + AT^2 = 8^2 + 15^2 = 64 + 225 = 289$, donc $OA = \\sqrt{289} = 17$ cm.",
-        "(b) La figure est symétrique par rapport à la droite $(OA)$ : celle-ci partage l'angle $\\widehat{TAT'}$ en deux angles égaux, $\\widehat{TAO} = \\widehat{T'AO} = \\tfrac{1}{2}\\widehat{TAT'}$. Dans le triangle $OTA$ rectangle en $T$, le côté $[OT]$ est opposé à l'angle $\\widehat{TAO}$ et $[OA]$ est l'hypoténuse : $\\sin \\widehat{TAO} = \\dfrac{OT}{OA} = \\dfrac{8}{17} \\approx 0{,}471$, d'où $\\widehat{TAO} \\approx 28{,}1°$. Ainsi $\\widehat{TAT'} \\approx 2 \\times 28{,}1° \\approx 56°$."
+        "$ 4\\times 4 = 16 $ cm²."
       ],
-      "reponse": "(a) $OTA$ rectangle en $T$, $OA = 17$ cm ; (b) $\\widehat{TAT'} \\approx 56°$."
+      "reponse": "$ 16 $ cm²"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "perspective-et-coniques",
-      "enonce": "Une roue de vélo, assimilée à un cercle, roule sur un sol horizontal rectiligne : le sol est **tangent** au cercle au point de contact $C$. On représente la scène en perspective centrale, la roue étant vue de biais (ni de face, ni exactement de profil). (a) Quelle est la nature de l'image de la roue sur le tableau ? Justifier en évoquant le cône des rayons visuels issus de l'œil. (b) Sur le dessin, quelle est la position de l'image du sol par rapport à l'image de la roue ? Justifier à l'aide d'un invariant de la perspective centrale. (c) Un élève dessine la roue comme un ovale « en œuf », plus pointu du côté qui s'enfonce dans la profondeur, et affirme : « c'est normal, le côté éloigné est plus petit ». Donner les deux raisons pour lesquelles ce tracé est faux.",
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 15 cm x 5 cm ?",
       "corrige": [
-        "(a) Les rayons visuels issus de l'œil $O$ et s'appuyant sur le cercle de la roue forment un **cône** de sommet $O$. Le tableau ne passe pas par $O$ : il coupe ce cône, donc l'image est une **section plane de cône**, c'est-à-dire une **conique**. La roue étant vue de biais, l'image est une courbe fermée : c'est une **ellipse** (une vue exactement de face donnerait un cercle, une vue de profil un segment).",
-        "(b) La perspective centrale **conserve le contact** : l'image d'une droite tangente à une courbe est tangente à l'image de cette courbe. Le sol étant tangent au cercle en $C$, son image — une droite, car l'alignement est conservé — est **tangente à l'ellipse** au point image de $C$. La roue « pose » donc sur le sol dans le dessin comme dans la réalité, en un seul point de contact.",
-        "(c) Deux raisons. 1) Une ellipse possède **deux axes de symétrie** : ses deux moitiés, de part et d'autre de chaque axe, sont superposables ; elle ne peut donc pas être plus pointue d'un côté que de l'autre. La forme « en œuf » n'a qu'un seul axe de symétrie : ce n'est pas une conique, donc pas une image possible du cercle. 2) L'argument « le côté éloigné est plus petit » est mal traduit : le raccourcissement de la profondeur ne crée pas de pointe, il fait seulement que le **centre de l'ellipse image n'est pas l'image du centre du cercle** (les milieux ne sont pas conservés). La courbe, elle, reste une ellipse exacte à deux axes."
+        "$ 15\\times 5 = 75 $ cm²."
       ],
-      "reponse": "(a) une ellipse (section, par le tableau, du cône des rayons visuels) ; (b) l'image du sol est tangente à l'ellipse au point image de $C$, car la perspective conserve le contact ; (c) l'ellipse a deux axes de symétrie (l'« œuf » un seul) et le raccourcissement déplace le centre sans créer de pointe."
+      "reponse": "$ 75 $ cm²"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "synthese",
-      "enonce": "**Problème.** Un studio de design conçoit une lampe de bureau. On étudie successivement l'abat-jour, un arceau de protection et le dessin de la lampe en perspective. On rappelle que le demi-angle au sommet d'un cône de révolution est l'angle entre son axe et une génératrice.\\n\\n**Partie A — L'abat-jour.** L'abat-jour est modélisé par un cône de révolution de sommet $S$ et de demi-angle au sommet $\\alpha = 25°$.\\n1. La base circulaire de l'abat-jour est la section du cône par un plan perpendiculaire à l'axe, situé à $d = 20$ cm du sommet (le long de l'axe). Calculer le rayon $r$ de cette base, arrondi au millimètre.\\n2. Pour un effet lumineux, on coupe ce même cône par un plan ne passant pas par le sommet et faisant un angle $\\beta = 60°$ avec l'axe. Déterminer la nature de la section obtenue, en justifiant.\\n\\n**Partie B — L'arceau de protection.** Un arceau circulaire de centre $O$ et de rayon $8$ cm entoure l'ampoule. Une tige rectiligne, fixée à la structure en un point $A$ tel que $OA = 17$ cm, est tangente à l'arceau en un point $T$.\\n3. Calculer la longueur $AT$ de la portion de tige comprise entre $A$ et le point de contact $T$.\\n\\n**Partie C — Le dessin en perspective.** La lampe est posée sur une table ; le contour du socle est un disque de centre $\\Omega$ et de rayon $9$ cm. On dessine la scène en perspective centrale, le socle étant vu de biais.\\n4. Quelle est la nature de l'image du contour du socle sur le tableau ? Justifier en évoquant le cône des rayons visuels.\\n5. Le plateau de la table est, dans la réalité, un rectangle $ABCD$ ; son image en perspective est le quadrilatère $abcd$. On veut graver un motif exactement au centre du plateau. Décrire la construction géométrique qui place l'image de ce centre sur le dessin, et expliquer pourquoi placer le motif au milieu « mesuré à la règle » de $abcd$ serait faux.",
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 11 cm x 7 cm ?",
       "corrige": [
-        "1. Vu de profil, le cône devient un triangle rectangle : à la distance $d = 20$ cm du sommet, le rayon de la section perpendiculaire à l'axe vaut $r = d \\times \\tan \\alpha = 20 \\tan 25° \\approx 20 \\times 0{,}466 \\approx 9{,}3$ cm.",
-        "2. On compare l'angle plan–axe $\\beta = 60°$ au demi-angle au sommet $\\alpha = 25°$ : on a $\\alpha = 25° < \\beta = 60° < 90°$. Le plan est incliné mais coupe toutes les génératrices d'une même nappe : la section est une **ellipse** (courbe fermée).",
-        "3. La tige $(AT)$ est tangente à l'arceau en $T$, donc perpendiculaire au rayon $[OT]$ : le triangle $OTA$ est rectangle en $T$. Par le théorème de Pythagore, $AT^2 = OA^2 - OT^2 = 17^2 - 8^2 = 289 - 64 = 225$, d'où $AT = \\sqrt{225} = 15$ cm.",
-        "4. Les rayons visuels issus de l'œil et s'appuyant sur le cercle du socle forment un cône de sommet l'œil ; le tableau, qui ne passe pas par ce sommet, coupe ce cône : l'image est une **conique**. Le socle étant vu de biais, cette conique est une courbe fermée : c'est une **ellipse**.",
-        "5. Construction : tracer les deux diagonales $[ac]$ et $[bd]$ du quadrilatère $abcd$ ; elles se coupent en un point $i$, image du centre du plateau, où l'on grave le motif. Justification : dans la réalité, les diagonales du rectangle $ABCD$ se coupent en son centre ; la perspective centrale conserve l'**alignement** et les **intersections**, donc l'image du centre est l'intersection des images des diagonales, c'est-à-dire $i$. Placer le motif au milieu « mesuré à la règle » de $abcd$ serait faux car la perspective **ne conserve ni les longueurs ni les milieux** : la moitié du plateau la plus éloignée de l'observateur occupe moins de place sur le dessin, si bien que le milieu mesuré n'est pas l'image du centre réel."
+        "$ 11\\times 7 = 77 $ cm²."
       ],
-      "reponse": "1. $r = 20\\tan 25° \\approx 9{,}3$ cm ; 2. ellipse (car $\\alpha < \\beta < 90°$) ; 3. $AT = 15$ cm ; 4. une ellipse (image du cercle du socle par la perspective) ; 5. centre = intersection $i$ des diagonales de $abcd$ ; le milieu « à la règle » est faux car ni longueurs ni milieux ne sont conservés."
+      "reponse": "$ 77 $ cm²"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 20 cm x 10 cm ?",
+      "corrige": [
+        "$ 20\\times 10 = 200 $ cm²."
+      ],
+      "reponse": "$ 200 $ cm²"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "aire-rectangle",
+      "enonce": "Aire d'un rectangle 6 cm x 6 cm ?",
+      "corrige": [
+        "$ 6\\times 6 = 36 $ cm²."
+      ],
+      "reponse": "$ 36 $ cm²"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 3 cm ?",
+      "corrige": [
+        "$ 3^2 = 9 $ cm²."
+      ],
+      "reponse": "$ 9 $ cm²"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 4 cm ?",
+      "corrige": [
+        "$ 4^2 = 16 $ cm²."
+      ],
+      "reponse": "$ 16 $ cm²"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 5 cm ?",
+      "corrige": [
+        "$ 5^2 = 25 $ cm²."
+      ],
+      "reponse": "$ 25 $ cm²"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 6 cm ?",
+      "corrige": [
+        "$ 6^2 = 36 $ cm²."
+      ],
+      "reponse": "$ 36 $ cm²"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 7 cm ?",
+      "corrige": [
+        "$ 7^2 = 49 $ cm²."
+      ],
+      "reponse": "$ 49 $ cm²"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 8 cm ?",
+      "corrige": [
+        "$ 8^2 = 64 $ cm²."
+      ],
+      "reponse": "$ 64 $ cm²"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 2 cm ?",
+      "corrige": [
+        "$ 2^2 = 4 $ cm²."
+      ],
+      "reponse": "$ 4 $ cm²"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 10 cm ?",
+      "corrige": [
+        "$ 10^2 = 100 $ cm²."
+      ],
+      "reponse": "$ 100 $ cm²"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 9 cm ?",
+      "corrige": [
+        "$ 9^2 = 81 $ cm²."
+      ],
+      "reponse": "$ 81 $ cm²"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 12 cm ?",
+      "corrige": [
+        "$ 12^2 = 144 $ cm²."
+      ],
+      "reponse": "$ 144 $ cm²"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 6 cm et hauteur 4 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{6\\times 4}{2} = 12 $ cm²."
+      ],
+      "reponse": "$ 12 $ cm²"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 8 cm et hauteur 3 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{8\\times 3}{2} = 12 $ cm²."
+      ],
+      "reponse": "$ 12 $ cm²"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 10 cm et hauteur 5 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{10\\times 5}{2} = 25 $ cm²."
+      ],
+      "reponse": "$ 25 $ cm²"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 12 cm et hauteur 6 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{12\\times 6}{2} = 36 $ cm²."
+      ],
+      "reponse": "$ 36 $ cm²"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 5 cm et hauteur 4 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{5\\times 4}{2} = 10 $ cm²."
+      ],
+      "reponse": "$ 10 $ cm²"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 7 cm et hauteur 2 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{7\\times 2}{2} = 7 $ cm²."
+      ],
+      "reponse": "$ 7 $ cm²"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 9 cm et hauteur 6 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{9\\times 6}{2} = 27 $ cm²."
+      ],
+      "reponse": "$ 27 $ cm²"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "aire-triangle",
+      "enonce": "Aire d'un triangle de base 14 cm et hauteur 4 cm ?",
+      "corrige": [
+        "$ A = \\dfrac{b\\times h}{2} = \\dfrac{14\\times 4}{2} = 28 $ cm²."
+      ],
+      "reponse": "$ 28 $ cm²"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 2 cm ?",
+      "corrige": [
+        "$ = 4 $ cm²."
+      ],
+      "reponse": "$ 4 $ cm²"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 3 cm ?",
+      "corrige": [
+        "$ = 9 $ cm²."
+      ],
+      "reponse": "$ 9 $ cm²"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 4 cm ?",
+      "corrige": [
+        "$ = 16 $ cm²."
+      ],
+      "reponse": "$ 16 $ cm²"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 5 cm ?",
+      "corrige": [
+        "$ = 25 $ cm²."
+      ],
+      "reponse": "$ 25 $ cm²"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 6 cm ?",
+      "corrige": [
+        "$ = 36 $ cm²."
+      ],
+      "reponse": "$ 36 $ cm²"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 7 cm ?",
+      "corrige": [
+        "$ = 49 $ cm²."
+      ],
+      "reponse": "$ 49 $ cm²"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 8 cm ?",
+      "corrige": [
+        "$ = 64 $ cm²."
+      ],
+      "reponse": "$ 64 $ cm²"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 9 cm ?",
+      "corrige": [
+        "$ = 81 $ cm²."
+      ],
+      "reponse": "$ 81 $ cm²"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 10 cm ?",
+      "corrige": [
+        "$ = 100 $ cm²."
+      ],
+      "reponse": "$ 100 $ cm²"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 11 cm ?",
+      "corrige": [
+        "$ = 121 $ cm²."
+      ],
+      "reponse": "$ 121 $ cm²"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 12 cm ?",
+      "corrige": [
+        "$ = 144 $ cm²."
+      ],
+      "reponse": "$ 144 $ cm²"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 13 cm ?",
+      "corrige": [
+        "$ = 169 $ cm²."
+      ],
+      "reponse": "$ 169 $ cm²"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 14 cm ?",
+      "corrige": [
+        "$ = 196 $ cm²."
+      ],
+      "reponse": "$ 196 $ cm²"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 15 cm ?",
+      "corrige": [
+        "$ = 225 $ cm²."
+      ],
+      "reponse": "$ 225 $ cm²"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 16 cm ?",
+      "corrige": [
+        "$ = 256 $ cm²."
+      ],
+      "reponse": "$ 256 $ cm²"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 17 cm ?",
+      "corrige": [
+        "$ = 289 $ cm²."
+      ],
+      "reponse": "$ 289 $ cm²"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 18 cm ?",
+      "corrige": [
+        "$ = 324 $ cm²."
+      ],
+      "reponse": "$ 324 $ cm²"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 19 cm ?",
+      "corrige": [
+        "$ = 361 $ cm²."
+      ],
+      "reponse": "$ 361 $ cm²"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 20 cm ?",
+      "corrige": [
+        "$ = 400 $ cm²."
+      ],
+      "reponse": "$ 400 $ cm²"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "aire-carre",
+      "enonce": "Aire d'un carre de cote 21 cm ?",
+      "corrige": [
+        "$ = 441 $ cm²."
+      ],
+      "reponse": "$ 441 $ cm²"
     }
   ]
 }

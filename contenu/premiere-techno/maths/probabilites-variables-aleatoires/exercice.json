@@ -13,137 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "loi-probabilite",
-      "enonce": "Une variable aléatoire $X$ prend les valeurs $1$, $2$, $3$ et $4$. On sait que $P(X=1)=0{,}3$, $P(X=2)=0{,}25$ et $P(X=3)=0{,}15$. Déterminer $P(X=4)$.",
+      "notion": "esperance",
+      "enonce": "X prend les valeurs 0, 1, 2 avec les probabilites respectives $\\dfrac{1}{2}, \\dfrac{1}{3}, \\dfrac{1}{6}$. Calculer $ E(X) $.",
       "corrige": [
-        "La somme des probabilités d'une loi de probabilité vaut toujours $1$ : $\\sum p_i = 1$.",
-        "On additionne d'abord les probabilités connues : $0{,}3 + 0{,}25 + 0{,}15 = 0{,}7$.",
-        "La probabilité manquante complète cette somme à $1$ : $P(X=4) = 1 - 0{,}7 = 0{,}3$."
+        "$ E(X) = 0\\times \\dfrac{1}{2} + 1\\times \\dfrac{1}{3} + 2\\times \\dfrac{1}{6} = \\dfrac{2}{3} $."
       ],
-      "reponse": "$P(X=4) = 0{,}3$."
+      "reponse": "$ E(X) = \\dfrac{2}{3} $"
     },
     {
       "id": 2,
       "difficulte": "application",
       "notion": "esperance",
-      "enonce": "La loi de probabilité de $X$ est donnée par le tableau suivant. Calculer l'espérance $E(X)$.\n\n| $x_i$ | $-1$ | $0$ | $2$ | $5$ |\n|---|---|---|---|---|\n| $P(X=x_i)$ | $0{,}2$ | $0{,}3$ | $0{,}4$ | $0{,}1$ |",
+      "enonce": "X prend les valeurs 1, 2, 3 avec les probabilites respectives $\\dfrac{1}{2}, \\dfrac{1}{4}, \\dfrac{1}{4}$. Calculer $ E(X) $.",
       "corrige": [
-        "On vérifie d'abord que $\\sum p_i = 0{,}2 + 0{,}3 + 0{,}4 + 0{,}1 = 1$ : la loi est correcte.",
-        "L'espérance est la moyenne des valeurs pondérée par les probabilités : $E(X) = \\sum x_i p_i$.",
-        "$E(X) = (-1)\\times 0{,}2 + 0\\times 0{,}3 + 2\\times 0{,}4 + 5\\times 0{,}1$.",
-        "$E(X) = -0{,}2 + 0 + 0{,}8 + 0{,}5 = 1{,}1$."
+        "$ E(X) = 1\\times \\dfrac{1}{2} + 2\\times \\dfrac{1}{4} + 3\\times \\dfrac{1}{4} = \\dfrac{7}{4} $."
       ],
-      "reponse": "$E(X) = 1{,}1$."
+      "reponse": "$ E(X) = \\dfrac{7}{4} $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "repetition",
-      "enonce": "On répète $3$ fois, de façon identique et indépendante, une épreuve de Bernoulli dont le succès a pour probabilité $p = 0{,}2$. Quelle est la probabilité d'obtenir exactement $2$ succès ?",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "X prend les valeurs 0, 10, 20 avec les probabilites respectives $\\dfrac{1}{2}, \\dfrac{1}{4}, \\dfrac{1}{4}$. Calculer $ E(X) $.",
       "corrige": [
-        "On dresse l'arbre des $3$ répétitions et on repère les chemins qui contiennent exactement $2$ succès (S) et $1$ échec (É).",
-        "Trois chemins conviennent : SSÉ, SÉS et ÉSS.",
-        "Chacun a la même probabilité, produit des branches parcourues : $0{,}2 \\times 0{,}2 \\times 0{,}8 = 0{,}032$.",
-        "On multiplie par le nombre de chemins : $P = 3 \\times 0{,}032 = 0{,}096$."
+        "$ E(X) = 0\\times \\dfrac{1}{2} + 10\\times \\dfrac{1}{4} + 20\\times \\dfrac{1}{4} = \\dfrac{15}{2} $."
       ],
-      "reponse": "$P = 0{,}096$."
+      "reponse": "$ E(X) = \\dfrac{15}{2} $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "gain-algebrique",
-      "enonce": "À une loterie, un billet coûte $2$ €. Il rapporte le gros lot de $20$ € avec la probabilité $0{,}05$, un petit lot de $5$ € avec la probabilité $0{,}2$, et rien dans les autres cas. On note $X$ le gain algébrique d'un joueur. Établir la loi de $X$, calculer $E(X)$ et dire si le jeu est équitable.",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "X prend les valeurs 2, 4, 6 avec les probabilites respectives $\\dfrac{1}{3}, \\dfrac{1}{3}, \\dfrac{1}{3}$. Calculer $ E(X) $.",
       "corrige": [
-        "Le gain algébrique tient compte de la mise de $2$ € : on la retranche à chaque rapport.",
-        "Gros lot : $X = 20 - 2 = 18$ avec probabilité $0{,}05$. Petit lot : $X = 5 - 2 = 3$ avec probabilité $0{,}2$. Rien : $X = -2$ avec probabilité $1 - 0{,}05 - 0{,}2 = 0{,}75$.",
-        "On calcule l'espérance : $E(X) = 18 \\times 0{,}05 + 3 \\times 0{,}2 + (-2) \\times 0{,}75$.",
-        "$E(X) = 0{,}9 + 0{,}6 - 1{,}5 = 0$.",
-        "Comme $E(X) = 0$, le jeu est équitable : à long terme, le joueur ne gagne ni ne perd en moyenne."
+        "$ E(X) = 2\\times \\dfrac{1}{3} + 4\\times \\dfrac{1}{3} + 6\\times \\dfrac{1}{3} = 4 $."
       ],
-      "reponse": "$E(X) = 0$ : le jeu est équitable."
+      "reponse": "$ E(X) = 4 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
+      "difficulte": "application",
       "notion": "esperance",
-      "enonce": "Un jeu consiste à miser $m$ euros. On gagne alors $15$ € avec la probabilité $0{,}2$, et rien avec la probabilité $0{,}8$. On note $X$ le gain algébrique. Pour quelle valeur de la mise $m$ le jeu est-il équitable ?",
+      "enonce": "X prend les valeurs 0, 5 avec les probabilites respectives $\\dfrac{2}{3}, \\dfrac{1}{3}$. Calculer $ E(X) $.",
       "corrige": [
-        "Le gain algébrique retranche la mise $m$ dans chaque cas : $X = 15 - m$ avec probabilité $0{,}2$, et $X = -m$ avec probabilité $0{,}8$.",
-        "On exprime l'espérance en fonction de $m$ : $E(X) = 0{,}2\\,(15 - m) + 0{,}8\\,(-m)$.",
-        "On développe : $E(X) = 3 - 0{,}2m - 0{,}8m = 3 - m$.",
-        "Le jeu est équitable lorsque $E(X) = 0$, c'est-à-dire $3 - m = 0$, donc $m = 3$."
+        "$ E(X) = 0\\times \\dfrac{2}{3} + 5\\times \\dfrac{1}{3} = \\dfrac{5}{3} $."
       ],
-      "reponse": "Le jeu est équitable pour une mise $m = 3$ €."
+      "reponse": "$ E(X) = \\dfrac{5}{3} $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "loi-probabilite",
-      "enonce": "Une machine produit des pièces dont $10\\,\\%$ sont défectueuses. On prélève $2$ pièces au hasard, de façon indépendante. On note $X$ le nombre de pièces défectueuses parmi les $2$ prélevées.\n\n1. Donner la loi de probabilité de $X$.\n2. Vérifier que la somme des probabilités vaut $1$, puis calculer $E(X)$ et interpréter le résultat.",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "X prend les valeurs 1, 3, 5 avec les probabilites respectives $\\dfrac{1}{6}, \\dfrac{1}{2}, \\dfrac{1}{3}$. Calculer $ E(X) $.",
       "corrige": [
-        "On répète $2$ fois une épreuve de Bernoulli : « défectueuse » (probabilité $0{,}1$) ou « conforme » (probabilité $0{,}9$). $X$ peut valoir $0$, $1$ ou $2$.",
-        "$X = 0$ : un seul chemin (les deux conformes), $P(X=0) = 0{,}9 \\times 0{,}9 = 0{,}81$.",
-        "$X = 1$ : deux chemins (défectueuse puis conforme, ou l'inverse), $P(X=1) = 2 \\times 0{,}1 \\times 0{,}9 = 0{,}18$.",
-        "$X = 2$ : un seul chemin (les deux défectueuses), $P(X=2) = 0{,}1 \\times 0{,}1 = 0{,}01$.",
-        "Vérification : $0{,}81 + 0{,}18 + 0{,}01 = 1$, la loi est correcte.",
-        "Espérance : $E(X) = 0 \\times 0{,}81 + 1 \\times 0{,}18 + 2 \\times 0{,}01 = 0{,}18 + 0{,}02 = 0{,}2$.",
-        "Interprétation : sur un grand nombre de prélèvements de $2$ pièces, on compte en moyenne $0{,}2$ pièce défectueuse par prélèvement."
+        "$ E(X) = 1\\times \\dfrac{1}{6} + 3\\times \\dfrac{1}{2} + 5\\times \\dfrac{1}{3} = \\dfrac{10}{3} $."
       ],
-      "reponse": "$P(X=0)=0{,}81$, $P(X=1)=0{,}18$, $P(X=2)=0{,}01$ ; $E(X) = 0{,}2$."
+      "reponse": "$ E(X) = \\dfrac{10}{3} $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "loi-bernoulli",
-      "enonce": "Un footballeur tire un penalty : il marque avec la probabilité $0{,}75$, sinon il rate. On note $X$ la variable aléatoire qui vaut $1$ si le penalty est marqué et $0$ sinon. Reconnaître la loi suivie par $X$ et calculer son espérance $E(X)$.",
+      "notion": "esperance",
+      "enonce": "X prend les valeurs 10, 20, 30 avec les probabilites respectives $\\dfrac{1}{5}, \\dfrac{2}{5}, \\dfrac{2}{5}$. Calculer $ E(X) $.",
       "corrige": [
-        "L'expérience n'a que deux issues (marqué ou raté) et $X$ ne prend que les valeurs $0$ et $1$ : $X$ suit une loi de Bernoulli de paramètre $p = 0{,}75$.",
-        "La loi de $X$ est donc : $P(X=1) = 0{,}75$ (marqué) et $P(X=0) = 1 - 0{,}75 = 0{,}25$ (raté).",
-        "Pour une loi de Bernoulli, l'espérance est égale au paramètre : $E(X) = 0 \\times 0{,}25 + 1 \\times 0{,}75 = p = 0{,}75$."
+        "$ E(X) = 10\\times \\dfrac{1}{5} + 20\\times \\dfrac{2}{5} + 30\\times \\dfrac{2}{5} = 22 $."
       ],
-      "reponse": "$X$ suit une loi de Bernoulli de paramètre $p = 0{,}75$ et $E(X) = 0{,}75$."
+      "reponse": "$ E(X) = 22 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "repetition",
-      "enonce": "Un vendeur reçoit $3$ clients successifs. Chaque client, indépendamment des autres, réalise un achat avec la probabilité $0{,}4$. Quelle est la probabilité qu'au moins un des $3$ clients réalise un achat ?",
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "X prend les valeurs 0, 1 avec les probabilites respectives $\\dfrac{3}{4}, \\dfrac{1}{4}$. Calculer $ E(X) $.",
       "corrige": [
-        "On répète $3$ fois une épreuve de Bernoulli : « achat » (probabilité $0{,}4$) ou « pas d'achat » (probabilité $0{,}6$).",
-        "L'événement contraire de « au moins un achat » est « aucun achat », plus simple à calculer : un seul chemin (les trois clients n'achètent pas).",
-        "$P(\\text{aucun achat}) = 0{,}6 \\times 0{,}6 \\times 0{,}6 = 0{,}6^3 = 0{,}216$.",
-        "On passe à l'événement cherché par le complémentaire : $P(\\text{au moins un achat}) = 1 - 0{,}216 = 0{,}784$."
+        "$ E(X) = 0\\times \\dfrac{3}{4} + 1\\times \\dfrac{1}{4} = \\dfrac{1}{4} $."
       ],
-      "reponse": "$P(\\text{au moins un achat}) = 0{,}784$."
+      "reponse": "$ E(X) = \\dfrac{1}{4} $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "gain-algebrique",
-      "enonce": "Un jeu consiste à miser $5$ €. Le jeu rapporte alors $30$ € avec une probabilité $p$, et rien avec la probabilité $1 - p$. On note $X$ le gain algébrique du joueur. Pour quelle valeur de $p$ le jeu rapporte-t-il en moyenne $1$ € par partie au joueur ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(10;\\dfrac{1}{2}) $. Esperance ?",
       "corrige": [
-        "Le gain algébrique retranche la mise de $5$ € dans chaque cas : $X = 30 - 5 = 25$ avec probabilité $p$, et $X = -5$ avec probabilité $1 - p$.",
-        "On exprime l'espérance en fonction de $p$ : $E(X) = 25\\,p + (-5)(1 - p)$.",
-        "On développe : $E(X) = 25p - 5 + 5p = 30p - 5$.",
-        "Le joueur gagne en moyenne $1$ € par partie lorsque $E(X) = 1$, soit $30p - 5 = 1$, d'où $30p = 6$ et $p = 0{,}2$."
+        "$ E(X) = n\\times p = 10\\times \\dfrac{1}{2} = 5 $."
       ],
-      "reponse": "Le jeu rapporte en moyenne $1$ € par partie pour $p = 0{,}2$."
+      "reponse": "$ 5 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "repetition-esperance",
-      "enonce": "Dans une fête foraine, un stand propose le jeu suivant. Le joueur lance $3$ fléchettes sur une cible. À chaque lancer, indépendamment des autres, il atteint la cible (« succès ») avec la probabilité $0{,}6$. On note $Y$ le nombre de fléchettes ayant atteint la cible parmi les $3$ lancers.\n\n1. Justifier que la situation est une répétition d'épreuves de Bernoulli et préciser le paramètre $p$ et le nombre $n$ de répétitions.\n2. Calculer la probabilité d'atteindre la cible exactement $2$ fois.\n3. Calculer la probabilité d'atteindre la cible au moins une fois.\n4. Établir la loi de probabilité de $Y$, vérifier que la somme des probabilités vaut $1$, puis calculer et interpréter $E(Y)$.\n5. Pour jouer, le joueur mise $2$ €. Il remporte $8$ € s'il réalise $3$ succès, et rien sinon. On note $X$ le gain algébrique du joueur. Calculer $E(X)$ et dire si le jeu est favorable au joueur.",
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(20;\\dfrac{1}{4}) $. Esperance ?",
       "corrige": [
-        "1. Chaque lancer n'a que deux issues, « succès » (probabilité $0{,}6$) ou « échec » (probabilité $0{,}4$), et les lancers sont identiques et indépendants. On répète donc $n = 3$ fois une épreuve de Bernoulli de paramètre $p = 0{,}6$.",
-        "2. Les chemins à exactement $2$ succès et $1$ échec sont au nombre de $3$ (SSÉ, SÉS, ÉSS). Chacun vaut $0{,}6 \\times 0{,}6 \\times 0{,}4 = 0{,}144$. Donc $P(Y=2) = 3 \\times 0{,}144 = 0{,}432$.",
-        "3. On passe par l'événement contraire « aucun succès », un seul chemin : $P(Y=0) = 0{,}4^3 = 0{,}064$. Ainsi $P(Y \\geq 1) = 1 - 0{,}064 = 0{,}936$.",
-        "4. On complète la loi. $P(Y=1) = 3 \\times 0{,}6 \\times 0{,}4^2 = 3 \\times 0{,}096 = 0{,}288$ et $P(Y=3) = 0{,}6^3 = 0{,}216$. La loi est : $P(Y=0)=0{,}064$, $P(Y=1)=0{,}288$, $P(Y=2)=0{,}432$, $P(Y=3)=0{,}216$. Vérification : $0{,}064 + 0{,}288 + 0{,}432 + 0{,}216 = 1$.",
-        "4. (suite) Espérance : $E(Y) = 0\\times 0{,}064 + 1\\times 0{,}288 + 2\\times 0{,}432 + 3\\times 0{,}216 = 0{,}288 + 0{,}864 + 0{,}648 = 1{,}8$. Interprétation : sur un grand nombre de parties, le joueur atteint en moyenne $1{,}8$ fois la cible par série de $3$ lancers.",
-        "5. Le gain algébrique retranche la mise de $2$ €. Le joueur gagne seulement avec $3$ succès : $X = 8 - 2 = 6$ avec probabilité $P(Y=3) = 0{,}216$, et $X = -2$ sinon, avec probabilité $1 - 0{,}216 = 0{,}784$.",
-        "5. (suite) $E(X) = 6 \\times 0{,}216 + (-2) \\times 0{,}784 = 1{,}296 - 1{,}568 = -0{,}272$. Comme $E(X) < 0$, le jeu est défavorable au joueur : à long terme, il perd en moyenne environ $0{,}27$ € par partie."
+        "$ E(X) = n\\times p = 20\\times \\dfrac{1}{4} = 5 $."
       ],
-      "reponse": "$P(Y=2)=0{,}432$ ; $P(Y \\geq 1)=0{,}936$ ; loi : $0{,}064$, $0{,}288$, $0{,}432$, $0{,}216$ avec $E(Y)=1{,}8$ ; $E(X) = -0{,}272$ €, jeu défavorable au joueur."
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(12;\\dfrac{1}{3}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 12\\times \\dfrac{1}{3} = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(8;\\dfrac{1}{2}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 8\\times \\dfrac{1}{2} = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(15;\\dfrac{1}{5}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 15\\times \\dfrac{1}{5} = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(6;\\dfrac{1}{3}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 6\\times \\dfrac{1}{3} = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(30;\\dfrac{1}{6}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 30\\times \\dfrac{1}{6} = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(24;\\dfrac{1}{4}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 24\\times \\dfrac{1}{4} = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(9;\\dfrac{2}{3}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 9\\times \\dfrac{2}{3} = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$ X $ suit une loi binomiale $ B(50;\\dfrac{1}{5}) $. Esperance ?",
+      "corrige": [
+        "$ E(X) = n\\times p = 50\\times \\dfrac{1}{5} = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(2;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 1 $."
+      ],
+      "reponse": "$ 1 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(3;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{3}{2} $."
+      ],
+      "reponse": "$ \\dfrac{3}{2} $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(4;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(5;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{5}{2} $."
+      ],
+      "reponse": "$ \\dfrac{5}{2} $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(6;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(7;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{7}{2} $."
+      ],
+      "reponse": "$ \\dfrac{7}{2} $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(8;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(9;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{9}{2} $."
+      ],
+      "reponse": "$ \\dfrac{9}{2} $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(10;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(11;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{11}{2} $."
+      ],
+      "reponse": "$ \\dfrac{11}{2} $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(12;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(13;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{13}{2} $."
+      ],
+      "reponse": "$ \\dfrac{13}{2} $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(14;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(15;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{15}{2} $."
+      ],
+      "reponse": "$ \\dfrac{15}{2} $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(16;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(17;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{17}{2} $."
+      ],
+      "reponse": "$ \\dfrac{17}{2} $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(18;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(19;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{19}{2} $."
+      ],
+      "reponse": "$ \\dfrac{19}{2} $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(20;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(21;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{21}{2} $."
+      ],
+      "reponse": "$ \\dfrac{21}{2} $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(22;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(23;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{23}{2} $."
+      ],
+      "reponse": "$ \\dfrac{23}{2} $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(24;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(25;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{25}{2} $."
+      ],
+      "reponse": "$ \\dfrac{25}{2} $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(26;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(27;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{27}{2} $."
+      ],
+      "reponse": "$ \\dfrac{27}{2} $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(28;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(29;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{29}{2} $."
+      ],
+      "reponse": "$ \\dfrac{29}{2} $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(30;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(31;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{31}{2} $."
+      ],
+      "reponse": "$ \\dfrac{31}{2} $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(32;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = 16 $."
+      ],
+      "reponse": "$ 16 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "$ B(33;\\tfrac{1}{2}) $ : esperance ?",
+      "corrige": [
+        "$ = \\dfrac{33}{2} $."
+      ],
+      "reponse": "$ \\dfrac{33}{2} $"
     }
   ]
 }

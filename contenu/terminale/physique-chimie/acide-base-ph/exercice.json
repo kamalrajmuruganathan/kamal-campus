@@ -13,124 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "ph-definition",
-      "enonce": "Une solution d'acide chlorhydrique a une concentration en ions oxonium $[\\mathrm{H_3O^+}] = 2{,}0 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$. Déterminer son pH. (On donne $\\log 2 \\approx 0{,}30$.)",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-1} $ mol/L. Calculer le pH.",
       "corrige": [
-        "On applique la définition du pH avec $[\\mathrm{H_3O^+}]$ exprimée en $\\mathrm{mol \\cdot L^{-1}}$ : $\\mathrm{pH} = -\\log\\left(\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}\\right) = -\\log[\\mathrm{H_3O^+}]$.",
-        "$\\mathrm{pH} = -\\log(2{,}0 \\times 10^{-3}) = -(\\log 2 + \\log 10^{-3}) = -(0{,}30 - 3)$.",
-        "$\\mathrm{pH} = 3 - 0{,}30 = 2{,}70$, soit $\\mathrm{pH} = 2{,}7$. Comme $\\mathrm{pH} < 7$, la solution est bien acide."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-1}) = 1 $."
       ],
-      "reponse": "$\\mathrm{pH} = -\\log(2{,}0\\times10^{-3}) = 2{,}7$."
+      "reponse": "$ pH = 1 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "ph-inverse",
-      "enonce": "Une eau de pluie a un pH mesuré de $3{,}7$. Déterminer la concentration en ions oxonium $[\\mathrm{H_3O^+}]$ de cette eau. (On donne $10^{0{,}3} \\approx 2{,}0$.)",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-2} $ mol/L. Calculer le pH.",
       "corrige": [
-        "On utilise la relation inverse : $[\\mathrm{H_3O^+}] = c^\\circ \\times 10^{-\\mathrm{pH}} = 10^{-\\mathrm{pH}}\\ \\mathrm{mol \\cdot L^{-1}}$.",
-        "$[\\mathrm{H_3O^+}] = 10^{-3{,}7}\\ \\mathrm{mol \\cdot L^{-1}}$. On écrit $-3{,}7 = 0{,}3 - 4$, donc $10^{-3{,}7} = 10^{0{,}3} \\times 10^{-4} = 2{,}0 \\times 10^{-4}$.",
-        "$[\\mathrm{H_3O^+}] = 2{,}0 \\times 10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$ (résultat en notation scientifique, 2 chiffres significatifs)."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-2}) = 2 $."
       ],
-      "reponse": "$[\\mathrm{H_3O^+}] = 10^{-3{,}7} = 2{,}0 \\times 10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$."
+      "reponse": "$ pH = 2 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "reaction-acide-base",
-      "enonce": "On mélange de l'acide éthanoïque $\\mathrm{CH_3COOH}$ et de l'ammoniac $\\mathrm{NH_3}$ en solution. Les couples mis en jeu sont $\\mathrm{CH_3COOH / CH_3COO^-}$ et $\\mathrm{NH_4^+ / NH_3}$. 1) Écrire les deux demi-équations acido-basiques. 2) En déduire l'équation de la réaction acide-base. 3) Identifier l'espèce qui joue le rôle d'acide et celle qui joue le rôle de base.",
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-3} $ mol/L. Calculer le pH.",
       "corrige": [
-        "Demi-équations des deux couples : $\\mathrm{CH_3COOH = CH_3COO^- + H^+}$ et $\\mathrm{NH_4^+ = NH_3 + H^+}$.",
-        "L'acide éthanoïque **cède** son proton, l'ammoniac le **capte**. On écrit la première demi-équation dans le sens de la perte de $\\mathrm{H^+}$ et la seconde dans le sens du gain, puis on additionne pour que $\\mathrm{H^+}$ s'élimine : $\\mathrm{CH_3COOH + NH_3 \\longrightarrow CH_3COO^- + NH_4^+}$.",
-        "Rôles : $\\mathrm{CH_3COOH}$ est l'**acide** (il cède $\\mathrm{H^+}$), $\\mathrm{NH_3}$ est la **base** (elle capte $\\mathrm{H^+}$). Le transfert se fait de l'acide vers la base."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-3}) = 3 $."
       ],
-      "reponse": "$\\mathrm{CH_3COOH + NH_3 \\longrightarrow CH_3COO^- + NH_4^+}$ ; acide : $\\mathrm{CH_3COOH}$, base : $\\mathrm{NH_3}$."
+      "reponse": "$ pH = 3 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "espece-amphotere",
-      "enonce": "L'ion hydrogénocarbonate $\\mathrm{HCO_3^-}$ intervient dans les couples $\\mathrm{CO_2,H_2O / HCO_3^-}$ et $\\mathrm{HCO_3^- / CO_3^{2-}}$. 1) Montrer que $\\mathrm{HCO_3^-}$ est une espèce amphotère. 2) Écrire l'équation de la réaction où $\\mathrm{HCO_3^-}$ joue le rôle d'acide avec l'eau, et celle où il joue le rôle de base avec l'eau.",
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-4} $ mol/L. Calculer le pH.",
       "corrige": [
-        "$\\mathrm{HCO_3^-}$ est la **base** du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$ (il peut capter un $\\mathrm{H^+}$ pour redonner $\\mathrm{CO_2,H_2O}$) et l'**acide** du couple $\\mathrm{HCO_3^- / CO_3^{2-}}$ (il peut céder un $\\mathrm{H^+}$ pour donner $\\mathrm{CO_3^{2-}}$). Étant l'acide d'un couple ET la base d'un autre, il est **amphotère**.",
-        "En acide, avec l'eau comme base (couple $\\mathrm{H_3O^+/H_2O}$) : $\\mathrm{HCO_3^- + H_2O \\longrightarrow CO_3^{2-} + H_3O^+}$.",
-        "En base, avec l'eau comme acide (couple $\\mathrm{H_2O/OH^-}$) : $\\mathrm{HCO_3^- + H_2O \\longrightarrow CO_2,H_2O + OH^-}$."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-4}) = 4 $."
       ],
-      "reponse": "$\\mathrm{HCO_3^-}$ est acide dans $\\mathrm{HCO_3^-/CO_3^{2-}}$ et base dans $\\mathrm{CO_2,H_2O/HCO_3^-}$, donc amphotère ; réactions : $\\mathrm{HCO_3^- + H_2O \\to CO_3^{2-} + H_3O^+}$ et $\\mathrm{HCO_3^- + H_2O \\to CO_2,H_2O + OH^-}$."
+      "reponse": "$ pH = 4 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "ph-echelle",
-      "enonce": "Une solution acide a un pH initial de $2{,}0$. On la dilue en versant $1{,}0\\ \\mathrm{mL}$ de cette solution dans une fiole que l'on complète à $100\\ \\mathrm{mL}$ avec de l'eau distillée. On admet que $[\\mathrm{H_3O^+}]$ est divisée par le même facteur que la dilution. 1) Déterminer le facteur de dilution. 2) Calculer $[\\mathrm{H_3O^+}]$ avant et après dilution. 3) En déduire le pH final et l'écart de pH.",
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-5} $ mol/L. Calculer le pH.",
       "corrige": [
-        "Facteur de dilution : $F = \\dfrac{V_{\\text{finale}}}{V_{\\text{prélevé}}} = \\dfrac{100\\ \\mathrm{mL}}{1{,}0\\ \\mathrm{mL}} = 100$ (bien convertir : les deux volumes sont dans la même unité, le rapport est sans dimension).",
-        "Avant dilution : $[\\mathrm{H_3O^+}]_i = 10^{-2{,}0} = 1{,}0\\times10^{-2}\\ \\mathrm{mol \\cdot L^{-1}}$. Après dilution, la concentration est divisée par $100$ : $[\\mathrm{H_3O^+}]_f = \\dfrac{1{,}0\\times10^{-2}}{100} = 1{,}0\\times10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$.",
-        "pH final : $\\mathrm{pH}_f = -\\log(1{,}0\\times10^{-4}) = 4{,}0$. L'écart est $\\Delta\\mathrm{pH} = 4{,}0 - 2{,}0 = 2{,}0$ : diluer $100 = 10^{2}$ fois fait monter le pH de $2$ unités. Une dilution rend une solution acide **moins** acide."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-5}) = 5 $."
       ],
-      "reponse": "$F = 100$ ; $[\\mathrm{H_3O^+}]$ passe de $1{,}0\\times10^{-2}$ à $1{,}0\\times10^{-4}\\ \\mathrm{mol \\cdot L^{-1}}$ ; $\\mathrm{pH}_f = 4{,}0$, soit $\\Delta\\mathrm{pH} = +2{,}0$."
+      "reponse": "$ pH = 5 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "ph-inverse",
-      "enonce": "Sous l'effet du $\\mathrm{CO_2}$ atmosphérique, le pH moyen des océans de surface est passé de $8{,}2$ (ère préindustrielle) à $8{,}1$ aujourd'hui. 1) Calculer $[\\mathrm{H_3O^+}]$ pour chacun de ces deux pH. 2) En déduire de quel pourcentage la concentration en ions oxonium a augmenté. (On donne $10^{-0{,}2}\\approx0{,}63$ et $10^{-0{,}1}\\approx0{,}79$.)",
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-6} $ mol/L. Calculer le pH.",
       "corrige": [
-        "pH préindustriel : $[\\mathrm{H_3O^+}]_1 = 10^{-8{,}2} = 10^{-0{,}2}\\times10^{-8} = 0{,}63\\times10^{-8} = 6{,}3\\times10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$.",
-        "pH actuel : $[\\mathrm{H_3O^+}]_2 = 10^{-8{,}1} = 10^{-0{,}1}\\times10^{-8} = 0{,}79\\times10^{-8} = 7{,}9\\times10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$.",
-        "Rapport des concentrations : $\\dfrac{[\\mathrm{H_3O^+}]_2}{[\\mathrm{H_3O^+}]_1} = \\dfrac{7{,}9\\times10^{-9}}{6{,}3\\times10^{-9}} = 1{,}26 = 10^{0{,}1}$. La concentration a donc augmenté d'environ $26\\ \\%$.",
-        "Interprétation : une baisse de seulement $0{,}1$ unité de pH correspond à $+26\\ \\%$ d'ions oxonium, car l'échelle de pH est **logarithmique** — d'où la gravité de l'acidification des océans."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-6}) = 6 $."
       ],
-      "reponse": "$[\\mathrm{H_3O^+}]_1 = 6{,}3\\times10^{-9}$ et $[\\mathrm{H_3O^+}]_2 = 7{,}9\\times10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$ ; hausse d'environ $26\\ \\%$ ($10^{0{,}1}$)."
+      "reponse": "$ pH = 6 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "couple-acide-base",
-      "enonce": "Pour chacune des espèces suivantes, écrire le couple acide-base auquel elle appartient (en précisant l'acide et la base conjuguée), puis la demi-équation acido-basique correspondante. a) L'acide benzoïque $\\mathrm{C_6H_5COOH}$, un conservateur alimentaire. b) La méthylamine $\\mathrm{CH_3NH_2}$, responsable de l'odeur du poisson avarié.",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-7} $ mol/L. Calculer le pH.",
       "corrige": [
-        "a) L'acide benzoïque est un acide carboxylique : il **cède** le proton porté par son groupe $\\mathrm{-COOH}$. Sa base conjuguée est l'ion benzoate $\\mathrm{C_6H_5COO^-}$ (on a retiré un H et la charge est passée de $0$ à $-1$). Le couple est $\\mathrm{C_6H_5COOH / C_6H_5COO^-}$, de demi-équation $\\mathrm{C_6H_5COOH = C_6H_5COO^- + H^+}$.",
-        "b) La méthylamine est une amine : l'azote porte un doublet non liant, elle **capte** un proton. Son acide conjugué est l'ion méthylammonium $\\mathrm{CH_3NH_3^+}$ (on a ajouté un H et la charge est passée de $0$ à $+1$). Le couple est $\\mathrm{CH_3NH_3^+ / CH_3NH_2}$, de demi-équation $\\mathrm{CH_3NH_3^+ = CH_3NH_2 + H^+}$."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-7}) = 7 $."
       ],
-      "reponse": "Couple $\\mathrm{C_6H_5COOH / C_6H_5COO^-}$, demi-équation $\\mathrm{C_6H_5COOH = C_6H_5COO^- + H^+}$ ; couple $\\mathrm{CH_3NH_3^+ / CH_3NH_2}$, demi-équation $\\mathrm{CH_3NH_3^+ = CH_3NH_2 + H^+}$."
+      "reponse": "$ pH = 7 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "ph-definition",
-      "enonce": "Un soda contient des ions oxonium à la concentration $[\\mathrm{H_3O^+}] = 2{,}5 \\times 10^{-3}\\ \\mathrm{mol \\cdot L^{-1}}$. 1) Calculer le pH du soda et préciser si la solution est acide, neutre ou basique. 2) Sachant que l'eau pure neutre à 25 °C a $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$, déterminer combien de fois le soda est plus concentré en ions oxonium que l'eau pure. (On donne $\\log 2{,}5 \\approx 0{,}40$.)",
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-8} $ mol/L. Calculer le pH.",
       "corrige": [
-        "1) On applique la définition avec $[\\mathrm{H_3O^+}]$ en $\\mathrm{mol \\cdot L^{-1}}$ : $\\mathrm{pH} = -\\log(2{,}5 \\times 10^{-3}) = -(\\log 2{,}5 - 3) = 3 - 0{,}40 = 2{,}6$. Comme $\\mathrm{pH} = 2{,}6 < 7$, la solution est **acide**.",
-        "2) On compare les deux concentrations par leur rapport : $\\dfrac{[\\mathrm{H_3O^+}]_{\\text{soda}}}{[\\mathrm{H_3O^+}]_{\\text{eau}}} = \\dfrac{2{,}5 \\times 10^{-3}}{1{,}0 \\times 10^{-7}} = 2{,}5 \\times 10^{4}$.",
-        "Le soda est donc $2{,}5 \\times 10^{4}$ fois (soit $25\\,000$ fois) plus concentré en ions oxonium que l'eau pure. Cet écart énorme pour seulement $4{,}4$ unités de pH illustre le caractère **logarithmique** de l'échelle."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-8}) = 8 $."
       ],
-      "reponse": "$\\mathrm{pH} = 2{,}6$ (solution acide) ; le soda est $2{,}5 \\times 10^{4}$ fois plus concentré en $\\mathrm{H_3O^+}$ que l'eau pure."
+      "reponse": "$ pH = 8 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "reaction-acide-base",
-      "enonce": "On introduit de l'acide méthanoïque $\\mathrm{HCOOH}$ dans une solution aqueuse d'ammoniac $\\mathrm{NH_3}$. Les couples mis en jeu sont $\\mathrm{HCOOH / HCOO^-}$ et $\\mathrm{NH_4^+ / NH_3}$. 1) Écrire l'équation de la réaction acide-base et identifier l'acide et la base. 2) Après réaction, on mesure un pH de $8{,}5$. Le milieu est-il acide, neutre ou basique ? Justifier. 3) Calculer la concentration en ions oxonium $[\\mathrm{H_3O^+}]$ correspondante. (On donne $10^{-0{,}5} \\approx 0{,}32$.)",
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-9} $ mol/L. Calculer le pH.",
       "corrige": [
-        "1) L'acide méthanoïque **cède** son proton, l'ammoniac le **capte**. On écrit la demi-équation de $\\mathrm{HCOOH}$ dans le sens de la perte de $\\mathrm{H^+}$ et celle de $\\mathrm{NH_3}$ dans le sens du gain, puis on additionne pour que $\\mathrm{H^+}$ disparaisse : $\\mathrm{HCOOH + NH_3 \\longrightarrow HCOO^- + NH_4^+}$. L'**acide** est $\\mathrm{HCOOH}$, la **base** est $\\mathrm{NH_3}$.",
-        "2) Le pH mesuré vaut $8{,}5$, ce qui est $> 7$ : le milieu est **basique**.",
-        "3) On utilise la relation inverse : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-8{,}5}\\ \\mathrm{mol \\cdot L^{-1}}$. On écrit $-8{,}5 = -0{,}5 - 8$, donc $10^{-8{,}5} = 10^{-0{,}5} \\times 10^{-8} = 0{,}32 \\times 10^{-8} = 3{,}2 \\times 10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$. On a bien $[\\mathrm{H_3O^+}] < 1{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$, ce qui confirme le caractère basique."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-9}) = 9 $."
       ],
-      "reponse": "$\\mathrm{HCOOH + NH_3 \\longrightarrow HCOO^- + NH_4^+}$ (acide $\\mathrm{HCOOH}$, base $\\mathrm{NH_3}$) ; pH $= 8{,}5 > 7$ donc milieu basique ; $[\\mathrm{H_3O^+}] = 3{,}2 \\times 10^{-9}\\ \\mathrm{mol \\cdot L^{-1}}$."
+      "reponse": "$ pH = 9 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "acide-base-ph",
-      "enonce": "**Le dioxyde de carbone dissous dans une eau minérale gazeuse.** Dans une eau gazeuse, le dioxyde de carbone dissous forme l'acide carbonique, noté $\\mathrm{CO_2,H_2O}$. Cette espèce intervient dans les couples $\\mathrm{CO_2,H_2O / HCO_3^-}$ et $\\mathrm{HCO_3^- / CO_3^{2-}}$. Un pH-mètre indique, pour une bouteille fraîchement ouverte, $\\mathrm{pH} = 5{,}0$. Données : $\\log 2 \\approx 0{,}30$ ; $10^{0{,}3} \\approx 2{,}0$. 1) Écrire la demi-équation acido-basique du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$ et préciser lequel est l'acide, lequel est la base. 2) Dans l'eau gazeuse, l'acide carbonique réagit avec l'eau, celle-ci jouant le rôle de base (couple $\\mathrm{H_3O^+ / H_2O}$). Écrire l'équation de cette réaction acide-base et identifier l'acide et la base. 3) Montrer que l'ion hydrogénocarbonate $\\mathrm{HCO_3^-}$ est une espèce amphotère. 4) À partir du pH mesuré, calculer la concentration en ions oxonium $[\\mathrm{H_3O^+}]$ de l'eau gazeuse et vérifier que la solution est bien acide. 5) On laisse la bouteille ouverte : le $\\mathrm{CO_2}$ s'échappe peu à peu et le pH remonte à $6{,}7$. Calculer la nouvelle concentration $[\\mathrm{H_3O^+}]$, puis déterminer par quel facteur la concentration en ions oxonium a été divisée entre l'ouverture et cet instant.",
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-10} $ mol/L. Calculer le pH.",
       "corrige": [
-        "1. Dans le couple $\\mathrm{CO_2,H_2O / HCO_3^-}$, l'acide est celui qui possède le proton à céder : c'est $\\mathrm{CO_2,H_2O}$ ; sa base conjuguée est $\\mathrm{HCO_3^-}$. La demi-équation s'écrit $\\mathrm{CO_2,H_2O = HCO_3^- + H^+}$.",
-        "2. L'acide carbonique cède son proton, l'eau (base du couple $\\mathrm{H_3O^+/H_2O}$) le capte. En additionnant les deux demi-équations de façon à éliminer $\\mathrm{H^+}$ : $\\mathrm{CO_2,H_2O + H_2O \\longrightarrow HCO_3^- + H_3O^+}$. L'**acide** est $\\mathrm{CO_2,H_2O}$, la **base** est $\\mathrm{H_2O}$.",
-        "3. $\\mathrm{HCO_3^-}$ est la **base** du couple $\\mathrm{CO_2,H_2O / HCO_3^-}$ (il peut capter un $\\mathrm{H^+}$ pour redonner $\\mathrm{CO_2,H_2O}$) et l'**acide** du couple $\\mathrm{HCO_3^- / CO_3^{2-}}$ (il peut céder un $\\mathrm{H^+}$ pour donner $\\mathrm{CO_3^{2-}}$). Étant l'acide d'un couple ET la base d'un autre, il est **amphotère**.",
-        "4. Relation inverse : $[\\mathrm{H_3O^+}] = 10^{-\\mathrm{pH}} = 10^{-5{,}0} = 1{,}0 \\times 10^{-5}\\ \\mathrm{mol \\cdot L^{-1}}$. Comme $\\mathrm{pH} = 5{,}0 < 7$ (et $[\\mathrm{H_3O^+}] > 1{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$), la solution est bien **acide** : c'est le $\\mathrm{CO_2}$ dissous qui acidifie l'eau gazeuse.",
-        "5. À $\\mathrm{pH} = 6{,}7$ : $[\\mathrm{H_3O^+}]' = 10^{-6{,}7}\\ \\mathrm{mol \\cdot L^{-1}}$. On écrit $-6{,}7 = 0{,}3 - 7$, donc $10^{-6{,}7} = 10^{0{,}3} \\times 10^{-7} = 2{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$. Le facteur de division est $\\dfrac{[\\mathrm{H_3O^+}]}{[\\mathrm{H_3O^+}]'} = \\dfrac{1{,}0 \\times 10^{-5}}{2{,}0 \\times 10^{-7}} = 50$. La concentration en ions oxonium a été divisée par $50$ : en s'échappant, le $\\mathrm{CO_2}$ rend l'eau nettement moins acide."
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-10}) = 10 $."
       ],
-      "reponse": "1. $\\mathrm{CO_2,H_2O = HCO_3^- + H^+}$ (acide $\\mathrm{CO_2,H_2O}$, base $\\mathrm{HCO_3^-}$). 2. $\\mathrm{CO_2,H_2O + H_2O \\longrightarrow HCO_3^- + H_3O^+}$ (acide $\\mathrm{CO_2,H_2O}$, base $\\mathrm{H_2O}$). 3. $\\mathrm{HCO_3^-}$ est base dans $\\mathrm{CO_2,H_2O/HCO_3^-}$ et acide dans $\\mathrm{HCO_3^-/CO_3^{2-}}$, donc amphotère. 4. $[\\mathrm{H_3O^+}] = 1{,}0 \\times 10^{-5}\\ \\mathrm{mol \\cdot L^{-1}}$, solution acide. 5. $[\\mathrm{H_3O^+}]' = 2{,}0 \\times 10^{-7}\\ \\mathrm{mol \\cdot L^{-1}}$, concentration divisée par $50$."
+      "reponse": "$ pH = 10 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-11} $ mol/L. Calculer le pH.",
+      "corrige": [
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-11}) = 11 $."
+      ],
+      "reponse": "$ pH = 11 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "Une solution a une concentration $ [H_3O^+] = 10^{-12} $ mol/L. Calculer le pH.",
+      "corrige": [
+        "$ pH = -\\log[H_3O^+] = -\\log(10^{-12}) = 12 $."
+      ],
+      "reponse": "$ pH = 12 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 1. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-1} $ mol/L."
+      ],
+      "reponse": "$ 10^{-1} $ mol/L"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 2. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-2} $ mol/L."
+      ],
+      "reponse": "$ 10^{-2} $ mol/L"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 3. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-3} $ mol/L."
+      ],
+      "reponse": "$ 10^{-3} $ mol/L"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 4. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-4} $ mol/L."
+      ],
+      "reponse": "$ 10^{-4} $ mol/L"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 5. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-5} $ mol/L."
+      ],
+      "reponse": "$ 10^{-5} $ mol/L"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 6. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-6} $ mol/L."
+      ],
+      "reponse": "$ 10^{-6} $ mol/L"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 2. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-2} $ mol/L."
+      ],
+      "reponse": "$ 10^{-2} $ mol/L"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 3. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-3} $ mol/L."
+      ],
+      "reponse": "$ 10^{-3} $ mol/L"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 4. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-4} $ mol/L."
+      ],
+      "reponse": "$ 10^{-4} $ mol/L"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "concentration-ph",
+      "enonce": "Une solution a un pH de 5. Concentration $ [H_3O^+] $ ?",
+      "corrige": [
+        "$ [H_3O^+] = 10^{-pH} = 10^{-5} $ mol/L."
+      ],
+      "reponse": "$ 10^{-5} $ mol/L"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-2} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-3} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-4} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-5} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-6} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-7} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-8} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-9} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-10} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-11} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-12} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-13} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-1} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 1 $."
+      ],
+      "reponse": "$ 1 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-2} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-3} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-4} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-5} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-6} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-7} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 7 $."
+      ],
+      "reponse": "$ 7 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-8} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-9} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-10} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-11} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-12} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-13} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 13 $."
+      ],
+      "reponse": "$ 13 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-1} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 1 $."
+      ],
+      "reponse": "$ 1 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-2} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "ph-concentration",
+      "enonce": "$ [H_3O^+]=10^{-3} $ mol/L : pH ?",
+      "corrige": [
+        "$ = 3 $."
+      ],
+      "reponse": "$ 3 $"
     }
   ]
 }

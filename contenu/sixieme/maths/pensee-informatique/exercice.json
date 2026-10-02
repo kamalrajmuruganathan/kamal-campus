@@ -13,136 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "sequence",
-      "enonce": "On exécute le programme de calcul suivant, une ligne à la fois :\n\n```\nchoisir 6\najouter 4\nmultiplier par 3\nafficher\n```\n\nQu'affiche le programme ?",
+      "notion": "programme",
+      "enonce": "Programme : prendre 3, multiplier par 2, ajouter 5. Resultat ?",
       "corrige": [
-        "On déroule la séquence de haut en bas, sans tout calculer d'un coup : chaque instruction part du résultat de la précédente.",
-        "On part de l'entrée : $6$.",
-        "$6 \\xrightarrow{+4} 10$, puis $10 \\xrightarrow{\\times 3} 30$.",
-        "L'instruction $\\texttt{afficher}$ montre le dernier résultat obtenu, c'est-à-dire $30$."
+        "$ 3 \\times 2 + 5 = 11 $."
       ],
-      "reponse": "Le programme affiche $30$."
+      "reponse": "$ 11 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "chemin",
-      "enonce": "Un robot part d'une case sur un quadrillage. On veut qu'il aille tout droit sur $4$ cases, puis qu'il tourne à gauche et fasse encore $2$ cases. Écris la séquence d'instructions à donner au robot (avec $\\texttt{avancer}$, $\\texttt{tourner à gauche}$, $\\texttt{tourner à droite}$).",
+      "notion": "programme",
+      "enonce": "Programme : prendre 4, multiplier par 3, ajouter 1. Resultat ?",
       "corrige": [
-        "On décrit le trajet en petites étapes, chacune assez simple pour être une seule instruction.",
-        "« Aller tout droit sur $4$ cases » : $\\texttt{avancer de 4 cases}$.",
-        "« Tourner à gauche » : $\\texttt{tourner à gauche}$.",
-        "« Faire encore $2$ cases » : $\\texttt{avancer de 2 cases}$.",
-        "On range ces instructions dans l'ordre, l'une sous l'autre."
+        "$ 4 \\times 3 + 1 = 13 $."
       ],
-      "reponse": "```\navancer de 4 cases\ntourner à gauche\navancer de 2 cases\n```"
+      "reponse": "$ 13 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "sequence",
-      "enonce": "Deux programmes partent tous les deux de $\\texttt{choisir 10}$.\n\n```\nProgramme A            Programme B\nchoisir 10             choisir 10\najouter 5              multiplier par 2\nmultiplier par 2       ajouter 5\nafficher               afficher\n```\n\nQu'affiche chaque programme ? Que remarques-tu ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 5, multiplier par 2, ajouter 4. Resultat ?",
       "corrige": [
-        "On déroule le Programme A pas à pas : $10 \\xrightarrow{+5} 15 \\xrightarrow{\\times 2} 30$. A affiche $30$.",
-        "On déroule le Programme B pas à pas : $10 \\xrightarrow{\\times 2} 20 \\xrightarrow{+5} 25$. B affiche $25$.",
-        "Les deux programmes utilisent les mêmes instructions ($\\texttt{ajouter 5}$ et $\\texttt{multiplier par 2}$), mais rangées dans un ordre différent.",
-        "Ils n'affichent pas la même chose : changer l'ordre des instructions change le résultat."
+        "$ 5 \\times 2 + 4 = 14 $."
       ],
-      "reponse": "A affiche $30$, B affiche $25$ : mêmes instructions, ordre différent, résultat différent."
+      "reponse": "$ 14 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "repetition",
-      "enonce": "Un robot exécute :\n\n```\nrépéter 4 fois\n    avancer de 30\n    tourner de 90°\nfin répéter\n```\n\n1) Combien d'instructions sont réellement exécutées en tout ? 2) Quelle figure le robot trace-t-il ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 2, multiplier par 6, ajouter 3. Resultat ?",
       "corrige": [
-        "Seules les instructions décalées vers la droite sont dans la répétition : ici $\\texttt{avancer de 30}$ et $\\texttt{tourner de 90°}$, soit $2$ instructions par tour.",
-        "Le bloc est refait $4$ fois : nombre d'instructions exécutées $= 4 \\times 2 = 8$.",
-        "À chaque tour, le robot trace un segment de $30$ puis tourne d'un quart de tour ($90°$). Il fait donc $4$ côtés égaux séparés par $4$ angles droits.",
-        "Quatre côtés de même longueur et quatre angles droits : c'est un carré de côté $30$."
+        "$ 2 \\times 6 + 3 = 15 $."
       ],
-      "reponse": "$8$ instructions sont exécutées ; le robot trace un carré de côté $30$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "chemin",
-      "enonce": "On veut qu'un robot trace un rectangle de longueur $60$ et de largeur $40$, en tournant à chaque coin de $90°$. Écris d'abord la séquence complète des déplacements, puis récris-la plus court en utilisant une répétition.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 7, multiplier par 1, ajouter 2. Resultat ?",
       "corrige": [
-        "Un rectangle a $4$ côtés : deux longueurs de $60$ et deux largeurs de $40$, avec un angle droit ($90°$) à chaque coin. On alterne donc longueur, virage, largeur, virage.",
-        "Séquence complète :\n```\navancer de 60\ntourner de 90°\navancer de 40\ntourner de 90°\navancer de 60\ntourner de 90°\navancer de 40\ntourner de 90°\n```",
-        "On remarque qu'un même motif de $4$ instructions ($\\texttt{avancer de 60}$, $\\texttt{tourner de 90°}$, $\\texttt{avancer de 40}$, $\\texttt{tourner de 90°}$) revient exactement $2$ fois à l'identique.",
-        "On l'écrit plus court avec une répétition de $2$ fois ce bloc.",
-        "Vérification : $2$ tours $\\times 4$ instructions $= 8$ instructions, comme dans la séquence complète."
+        "$ 7 \\times 1 + 2 = 9 $."
       ],
-      "reponse": "```\nrépéter 2 fois\n    avancer de 60\n    tourner de 90°\n    avancer de 40\n    tourner de 90°\nfin répéter\n```"
+      "reponse": "$ 9 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "entrees-sorties",
-      "enonce": "Un programme demande de choisir un nombre, puis exécute :\n\n```\nchoisir un nombre\najouter 3\nmultiplier par 2\nafficher\n```\n\nLa sortie affichée est $20$. Quelle était l'entrée, c'est-à-dire le nombre choisi au départ ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 6, multiplier par 2, ajouter 3. Resultat ?",
       "corrige": [
-        "L'entrée est le nombre choisi au départ, la sortie est le nombre affiché à la fin ($20$). Pour retrouver l'entrée, on remonte la séquence à l'envers, en annulant chaque instruction.",
-        "La dernière instruction avant l'affichage est $\\texttt{multiplier par 2}$. Pour l'annuler, on divise la sortie par $2$ : $20 \\div 2 = 10$.",
-        "L'instruction précédente est $\\texttt{ajouter 3}$. Pour l'annuler, on retire $3$ : $10 - 3 = 7$.",
-        "Vérification en déroulant dans le bon sens : $7 \\xrightarrow{+3} 10 \\xrightarrow{\\times 2} 20$. On retrouve bien la sortie $20$."
+        "$ 6 \\times 2 + 3 = 15 $."
       ],
-      "reponse": "L'entrée était $7$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "sequence",
-      "enonce": "On exécute ce programme de calcul, une ligne à la fois :\n\n```\nchoisir 7\nmultiplier par 4\nretirer 6\nafficher\n```\n\nQu'affiche le programme ?",
+      "notion": "programme",
+      "enonce": "Programme : prendre 4, multiplier par 4, ajouter 4. Resultat ?",
       "corrige": [
-        "On déroule la séquence de haut en bas : chaque instruction part du résultat de la précédente, jamais tout d'un coup.",
-        "On part de l'entrée : $7$.",
-        "$7 \\xrightarrow{\\times 4} 28$, puis $28 \\xrightarrow{-6} 22$.",
-        "L'instruction $\\texttt{afficher}$ montre le dernier résultat obtenu, soit $22$."
+        "$ 4 \\times 4 + 4 = 20 $."
       ],
-      "reponse": "Le programme affiche $22$."
+      "reponse": "$ 20 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "repetition",
-      "enonce": "Un robot exécute le programme suivant :\n\n```\navancer de 10\nrépéter 3 fois\n    avancer de 20\n    tourner à droite\nfin répéter\n```\n\n1) Combien d'instructions sont réellement exécutées en tout ? 2) L'instruction $\\texttt{avancer de 10}$ est-elle répétée ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 8, multiplier par 2, ajouter 1. Resultat ?",
       "corrige": [
-        "On repère ce qui est décalé vers la droite : seules $\\texttt{avancer de 20}$ et $\\texttt{tourner à droite}$ sont dans le bloc $\\texttt{répéter}$, soit $2$ instructions par tour.",
-        "Le bloc est refait $3$ fois : $3 \\times 2 = 6$ instructions pour la répétition.",
-        "L'instruction $\\texttt{avancer de 10}$ est écrite avant le bloc et n'est pas décalée : elle est exécutée une seule fois, au tout début, et n'est donc pas répétée.",
-        "Nombre total d'instructions exécutées : $1 + 6 = 7$."
+        "$ 8 \\times 2 + 1 = 17 $."
       ],
-      "reponse": "$7$ instructions sont exécutées ; $\\texttt{avancer de 10}$ n'est pas répétée (elle est exécutée une seule fois)."
+      "reponse": "$ 17 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "entrees-sorties",
-      "enonce": "Un programme demande de choisir un nombre, puis exécute :\n\n```\nchoisir un nombre\nmultiplier par 2\najouter 6\nmultiplier par 2\nafficher\n```\n\nLa sortie affichée est $32$. Quel nombre avait été choisi au départ ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 3, multiplier par 5, ajouter 2. Resultat ?",
       "corrige": [
-        "La sortie est le nombre affiché ($32$) et l'entrée est le nombre choisi. Pour retrouver l'entrée, on remonte la séquence à l'envers en annulant chaque instruction.",
-        "Dernière instruction : $\\texttt{multiplier par 2}$. On l'annule en divisant : $32 \\div 2 = 16$.",
-        "Instruction précédente : $\\texttt{ajouter 6}$. On l'annule en retirant : $16 - 6 = 10$.",
-        "Instruction précédente : $\\texttt{multiplier par 2}$. On l'annule en divisant : $10 \\div 2 = 5$.",
-        "Vérification dans le bon sens : $5 \\xrightarrow{\\times 2} 10 \\xrightarrow{+6} 16 \\xrightarrow{\\times 2} 32$. On retrouve bien la sortie."
+        "$ 3 \\times 5 + 2 = 17 $."
       ],
-      "reponse": "Le nombre choisi était $5$."
+      "reponse": "$ 17 $"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "sequence",
-      "enonce": "Le robot **Milo** se déplace sur un quadrillage et suit les programmes qu'on lui écrit. On étudie une sortie de Milo dans le jardin.\n\n**1.** Milo part de sa base et exécute :\n```\navancer de 2 cases\ntourner à droite\navancer de 3 cases\n```\nSans dessiner, dis combien de cases Milo a parcourues en tout.\n\n**2.** Pour faire le tour d'un massif carré, on écrit à Milo :\n```\nrépéter 4 fois\n    avancer de 5\n    tourner de 90°\nfin répéter\n```\nCombien d'instructions Milo exécute-t-il réellement ?\n\n**3.** Milo doit maintenant aller tout droit sur $6$ cases, tourner à gauche, puis avancer de $1$ case. Écris la séquence d'instructions.\n\n**4.** À la fin, Milo calcule son score à partir du nombre de feuilles ramassées :\n```\nchoisir le nombre de feuilles\nmultiplier par 10\najouter 5\nafficher\n```\nMilo a ramassé $4$ feuilles. Quel score affiche-t-il ?\n\n**5.** Un autre jour, le même programme de score affiche $85$. Combien de feuilles Milo avait-il ramassées ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 9, multiplier par 1, ajouter 3. Resultat ?",
       "corrige": [
-        "1. On additionne les cases parcourues par les instructions $\\texttt{avancer}$ : $2$ cases, puis $3$ cases. L'instruction $\\texttt{tourner à droite}$ ne fait avancer d'aucune case. Total : $2 + 3 = 5$ cases.",
-        "2. Seules les instructions décalées vers la droite sont répétées : $\\texttt{avancer de 5}$ et $\\texttt{tourner de 90°}$, soit $2$ instructions par tour. Le bloc est refait $4$ fois : $4 \\times 2 = 8$ instructions exécutées.",
-        "3. On traduit chaque étape en une seule instruction, rangées dans l'ordre :\n```\navancer de 6 cases\ntourner à gauche\navancer de 1 case\n```",
-        "4. On déroule le programme de calcul pas à pas, en partant de l'entrée $4$ : $4 \\xrightarrow{\\times 10} 40 \\xrightarrow{+5} 45$. Milo affiche $45$.",
-        "5. On connaît la sortie ($85$) et on cherche l'entrée : on remonte en annulant chaque instruction. On annule $\\texttt{ajouter 5}$ : $85 - 5 = 80$. On annule $\\texttt{multiplier par 10}$ : $80 \\div 10 = 8$. Vérification : $8 \\xrightarrow{\\times 10} 80 \\xrightarrow{+5} 85$."
+        "$ 9 \\times 1 + 3 = 12 $."
       ],
-      "reponse": "1. $5$ cases. 2. $8$ instructions. 3. $\\texttt{avancer de 6 cases}$, $\\texttt{tourner à gauche}$, $\\texttt{avancer de 1 case}$. 4. score $45$. 5. $8$ feuilles."
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 5, multiplier par 3, ajouter 2. Resultat ?",
+      "corrige": [
+        "$ 5 \\times 3 + 2 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 2, multiplier par 7, ajouter 4. Resultat ?",
+      "corrige": [
+        "$ 2 \\times 7 + 4 = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 2 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 3 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 3 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 5 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 5 = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 4 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 4 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 3, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 4\\times 2 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 6 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 6 = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 3 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 3 = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 7 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 7 = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 4, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 4 + 4\\times 2 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 5 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 5 = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 3, on ajoute 4 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 4\\times 4 = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 2 = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 20, diviser par 4. Resultat ?",
+      "corrige": [
+        "$ 20 \\div 4 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 30, diviser par 5. Resultat ?",
+      "corrige": [
+        "$ 30 \\div 5 = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 18, diviser par 3. Resultat ?",
+      "corrige": [
+        "$ 18 \\div 3 = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 24, diviser par 6. Resultat ?",
+      "corrige": [
+        "$ 24 \\div 6 = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 40, diviser par 8. Resultat ?",
+      "corrige": [
+        "$ 40 \\div 8 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 15, diviser par 3. Resultat ?",
+      "corrige": [
+        "$ 15 \\div 3 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 36, diviser par 9. Resultat ?",
+      "corrige": [
+        "$ 36 \\div 9 = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 50, diviser par 10. Resultat ?",
+      "corrige": [
+        "$ 50 \\div 10 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 3, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 4, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 5, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 6, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 7, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 8, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 9, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 10, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 11, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 12, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 36 $."
+      ],
+      "reponse": "$ 36 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 13, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 39 $."
+      ],
+      "reponse": "$ 39 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 14, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 42 $."
+      ],
+      "reponse": "$ 42 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 15, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 45 $."
+      ],
+      "reponse": "$ 45 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 16, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 48 $."
+      ],
+      "reponse": "$ 48 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 17, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 51 $."
+      ],
+      "reponse": "$ 51 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 18, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 54 $."
+      ],
+      "reponse": "$ 54 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 19, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 57 $."
+      ],
+      "reponse": "$ 57 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 20, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 60 $."
+      ],
+      "reponse": "$ 60 $"
     }
   ]
 }

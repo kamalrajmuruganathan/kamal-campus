@@ -13,139 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "affectation",
-      "enonce": "On exécute le programme suivant. Que valent `a` et `b` à la fin ?\n```python\na = 3\nb = 5\na = b\nb = a\n```",
+      "notion": "programme",
+      "enonce": "Programme : prendre 3, multiplier par 2, ajouter 5. Resultat ?",
       "corrige": [
-        "Rappel : `=` est une **affectation**, pas une égalité. Chaque ligne range une valeur dans une variable, dans l'ordre.",
-        "Après `a = 3` puis `b = 5` : `a` vaut $3$ et `b` vaut $5$.",
-        "`a = b` range dans `a` la valeur actuelle de `b`, c'est-à-dire $5$ : maintenant `a` vaut $5$ (l'ancienne valeur $3$ est perdue).",
-        "`b = a` range dans `b` la valeur actuelle de `a`, c'est-à-dire $5$ : `b` vaut toujours $5$.",
-        "Les deux variables valent donc $5$ : on n'a **pas** échangé les valeurs, on a écrasé $3$."
+        "$ 3 \\times 2 + 5 = 11 $."
       ],
-      "reponse": "`a` vaut $5$ et `b` vaut $5$."
+      "reponse": "$ 11 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "range",
-      "enonce": "Qu'affiche ce programme, ligne par ligne ?\n```python\nfor i in range(3, 7):\n    print(2 * i)\n```",
+      "notion": "programme",
+      "enonce": "Programme : prendre 4, multiplier par 3, ajouter 1. Resultat ?",
       "corrige": [
-        "On repère d'abord les valeurs prises par `i`. `range(3, 7)` part de $3$ et s'arrête **avant** $7$ : `i` prend les valeurs $3, 4, 5, 6$.",
-        "À chaque tour, le programme affiche $2 \\times i$.",
-        "Pour $i = 3$ : $6$ ; pour $i = 4$ : $8$ ; pour $i = 5$ : $10$ ; pour $i = 6$ : $12$.",
-        "La boucle fait donc $4$ tours et affiche $4$ lignes."
+        "$ 4 \\times 3 + 1 = 13 $."
       ],
-      "reponse": "Le programme affiche, sur quatre lignes : $6$, puis $8$, puis $10$, puis $12$."
+      "reponse": "$ 13 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "while",
-      "enonce": "Que valent `S` et `n` à la fin de ce programme ?\n```python\nS = 0\nn = 1\nwhile S < 10:\n    S = S + n\n    n = n + 1\n```",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 5, multiplier par 2, ajouter 4. Resultat ?",
       "corrige": [
-        "On suit l'exécution tour par tour : à chaque tour, on **teste d'abord** la condition `S < 10`, puis, si elle est vraie, on exécute les deux affectations.",
-        "Départ : `S` = $0$, `n` = $1$.",
-        "Tour 1 : $0 < 10$ vrai, donc `S` = $0 + 1 = 1$ puis `n` = $2$.",
-        "Tour 2 : $1 < 10$ vrai, donc `S` = $1 + 2 = 3$ puis `n` = $3$.",
-        "Tour 3 : $3 < 10$ vrai, donc `S` = $3 + 3 = 6$ puis `n` = $4$.",
-        "Tour 4 : $6 < 10$ vrai, donc `S` = $6 + 4 = 10$ puis `n` = $5$.",
-        "Tour suivant : $10 < 10$ est **faux**, la boucle s'arrête. Les dernières valeurs rangées sont conservées."
+        "$ 5 \\times 2 + 4 = 14 $."
       ],
-      "reponse": "À la fin, `S` vaut $10$ et `n` vaut $5$."
+      "reponse": "$ 14 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "conditionnelle",
-      "enonce": "Voici un programme qui utilise la valeur d'une variable `x`. Qu'affiche-t-il pour $x = -3$, pour $x = 0$, puis pour $x = 7$ ?\n```python\nif x > 0 and x < 10:\n    print(\"A\")\nelif x <= 0:\n    print(\"B\")\nelse:\n    print(\"C\")\n```",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 2, multiplier par 6, ajouter 3. Resultat ?",
       "corrige": [
-        "On rappelle qu'on teste les conditions **dans l'ordre** : dès qu'une est vraie, on affiche et on saute le reste.",
-        "Pour $x = -3$ : `x > 0 and x < 10` demande que les deux soient vraies ; or $-3 > 0$ est faux, donc la première condition est fausse. On passe au `elif` : $-3 \\le 0$ est vrai, donc on affiche `B`.",
-        "Pour $x = 0$ : $0 > 0$ est faux, donc la première condition est fausse. Le `elif` : $0 \\le 0$ est vrai, donc on affiche `B`.",
-        "Pour $x = 7$ : $7 > 0$ est vrai **et** $7 < 10$ est vrai, donc la première condition est vraie : on affiche `A` (le `else` n'est jamais atteint ici)."
+        "$ 2 \\times 6 + 3 = 15 $."
       ],
-      "reponse": "$x = -3 \\to$ `B` ; $x = 0 \\to$ `B` ; $x = 7 \\to$ `A`."
+      "reponse": "$ 15 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "balayage",
-      "enonce": "On cherche une valeur approchée de la solution positive de $x^2 = 3$ par **balayage**, en avançant de $0{,}1$ en $0{,}1$. Compléter la boucle `while` ci-dessous, puis donner la valeur affichée et l'encadrement de $\\sqrt{3}$ qu'elle fournit.\n```python\nx = 0\nwhile ... :\n    x = x + 0.1\nprint(x)\n```",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 7, multiplier par 1, ajouter 2. Resultat ?",
       "corrige": [
-        "Tant que $x^2$ est encore trop petit, on continue d'avancer : la condition d'arrêt est « $x^2$ atteint $3$ ». On écrit donc la condition de poursuite `x**2 < 3` (attention : le séparateur décimal est le **point**, on écrit `0.1`).",
-        "La boucle avance `x` par pas de $0{,}1$ et s'arrête au premier `x` dont le carré atteint ou dépasse $3$.",
-        "En traçant : $x = 1{,}7$ donne $x^2 = 2{,}89 < 3$ (on continue) ; $x = 1{,}8$ donne $x^2 = 3{,}24 \\ge 3$ (on s'arrête).",
-        "La boucle s'arrête donc à $x = 1{,}8$, valeur affichée. Juste avant, $x$ valait $1{,}7$.",
-        "On en déduit l'encadrement $1{,}7 < \\sqrt{3} < 1{,}8$ : $1{,}8$ est une valeur approchée par excès au dixième."
+        "$ 7 \\times 1 + 2 = 9 $."
       ],
-      "reponse": "Condition : `while x**2 < 3:`. Le programme affiche $1{,}8$, d'où $1{,}7 < \\sqrt{3} < 1{,}8$."
+      "reponse": "$ 9 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "fonction",
-      "enonce": "Écrire une fonction `somme(n)` qui **renvoie** la somme des entiers de $1$ à $n$, c'est-à-dire $1 + 2 + \\ldots + n$, à l'aide d'une boucle `for`. Que renvoie alors `somme(100)` ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 6, multiplier par 2, ajouter 3. Resultat ?",
       "corrige": [
-        "On définit la fonction avec `def` et son paramètre `n`. À l'intérieur, il faut une variable d'accumulation, **initialisée à $0$ avant la boucle** : `S = 0`.",
-        "Pour additionner tous les entiers de $1$ à $n$, on parcourt `range(1, n + 1)` : la borne supérieure étant exclue, il faut écrire `n + 1` pour atteindre $n$.",
-        "À chaque tour on ajoute `i` à `S` (`S = S + i`), puis on **renvoie** le résultat avec `return` (et non `print`, car on veut une valeur réutilisable). Le programme est :\n```python\ndef somme(n):\n    S = 0\n    for i in range(1, n + 1):\n        S = S + i\n    return S\n```",
-        "Pour `somme(100)`, on additionne tous les entiers de $1$ à $100$. Cette somme vaut $\\dfrac{100 \\times 101}{2} = 5050$ (résultat vu dans la fiche)."
+        "$ 6 \\times 2 + 3 = 15 $."
       ],
-      "reponse": "La fonction renvoie la somme $1 + 2 + \\ldots + n$ ; `somme(100)` renvoie $5050$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "boucle-for",
-      "enonce": "Qu'affiche ce programme ?\n```python\nP = 1\nfor k in range(1, 5):\n    P = P * k\nprint(P)\n```",
+      "notion": "programme",
+      "enonce": "Programme : prendre 4, multiplier par 4, ajouter 4. Resultat ?",
       "corrige": [
-        "On repère les valeurs prises par `k`. `range(1, 5)` part de $1$ et s'arrête **avant** $5$ : `k` prend les valeurs $1, 2, 3, 4$.",
-        "Ici `P` est une variable d'accumulation par **produit** : elle est initialisée à $1$ (et non à $0$, sinon tout produit resterait nul). À chaque tour, on multiplie `P` par `k`.",
-        "On suit l'exécution : départ `P` = $1$ ; tour $k = 1$ : `P` = $1 \\times 1 = 1$ ; tour $k = 2$ : `P` = $1 \\times 2 = 2$ ; tour $k = 3$ : `P` = $2 \\times 3 = 6$ ; tour $k = 4$ : `P` = $6 \\times 4 = 24$.",
-        "Le `print` est **hors** de la boucle (il n'est pas indenté) : il n'affiche qu'une seule fois, à la fin, la valeur finale de `P`."
+        "$ 4 \\times 4 + 4 = 20 $."
       ],
-      "reponse": "Le programme affiche $24$ (c'est le produit $1 \\times 2 \\times 3 \\times 4$)."
+      "reponse": "$ 20 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "fonction",
-      "enonce": "Écrire une fonction `valeur_absolue(x)` qui **renvoie** la valeur absolue de `x` sans utiliser la fonction `abs`, en s'appuyant sur une instruction conditionnelle. Que renvoient alors `valeur_absolue(-4)` et `valeur_absolue(5)` ?",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 8, multiplier par 2, ajouter 1. Resultat ?",
       "corrige": [
-        "La valeur absolue vaut $-x$ quand $x$ est négatif, et $x$ sinon. On traduit ce raisonnement par un `if ... else` à l'intérieur de la fonction.",
-        "On utilise `return` (et non `print`) pour **renvoyer** une valeur réutilisable dans un calcul. Le programme est :\n```python\ndef valeur_absolue(x):\n    if x < 0:\n        return -x\n    else:\n        return x\n```",
-        "Pour `valeur_absolue(-4)` : $-4 < 0$ est vrai, on exécute `return -x`, soit `return -(-4)` $= 4$.",
-        "Pour `valeur_absolue(5)` : $5 < 0$ est faux, on passe au `else`, on exécute `return x`, soit $5$."
+        "$ 8 \\times 2 + 1 = 17 $."
       ],
-      "reponse": "`valeur_absolue(-4)` renvoie $4$ et `valeur_absolue(5)` renvoie $5$."
+      "reponse": "$ 17 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "while",
-      "enonce": "On considère la fonction suivante.\n```python\ndef mystere(N):\n    n = 0\n    p = 1\n    while p < N:\n        p = p * 2\n        n = n + 1\n    return n\n```\n**(a)** Que renvoie `mystere(1000)` ? **(b)** Décrire en une phrase ce que calcule cette fonction pour un entier `N` strictement positif.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 3, multiplier par 5, ajouter 2. Resultat ?",
       "corrige": [
-        "**(a)** On suit l'exécution en notant, à chaque tour, les valeurs de `p` et `n` après les deux affectations. Départ : `p` = $1$, `n` = $0$. La condition testée est `p < 1000`.",
-        "Tours successifs : `p` prend les valeurs $2$ (`n`=1), $4$ (2), $8$ (3), $16$ (4), $32$ (5), $64$ (6), $128$ (7), $256$ (8), $512$ (9), puis $1024$ (`n`=10).",
-        "À ce dernier tour `p` = $1024$, donc `p < 1000` devient **faux** : la boucle s'arrête et la fonction renvoie `n` = $10$. On remarque que `p` vaut toujours une puissance de $2$ : après le tour numéro `n`, on a $p = 2^n$.",
-        "**(b)** La boucle continue tant que $2^n < N$ et s'arrête dès que $2^n \\ge N$. La fonction renvoie donc le **plus petit entier $n$ tel que $2^n \\ge N$**. La boucle se termine bien car `p` double à chaque tour et finit par dépasser `N`.",
-        "Vérification pour $N = 1000$ : $2^9 = 512 < 1000$ mais $2^{10} = 1024 \\ge 1000$, d'où $n = 10$, ce qui confirme le (a)."
+        "$ 3 \\times 5 + 2 = 17 $."
       ],
-      "reponse": "**(a)** `mystere(1000)` renvoie $10$. **(b)** La fonction renvoie le plus petit entier $n$ tel que $2^n \\ge N$."
+      "reponse": "$ 17 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "synthese",
-      "enonce": "Léa place un capital de $500$ € sur un livret qui rapporte $3\\%$ d'intérêts composés par an : chaque année, le capital est **multiplié par $1{,}03$**. On note $C_n$ le capital (en euros) après $n$ années, avec $C_0 = 500$.\n\n1. En Python, la variable `C` contient le capital d'une année donnée. Écrire l'affectation qui fait passer `C` au capital de l'année suivante.\n2. Recopier et compléter le programme ci-dessous pour qu'il calcule le capital après $5$ ans.\n```python\nC = 500\nfor annee in range(...):\n    C = ...\nprint(C)\n```\n3. Écrire une fonction `capital(n)` qui **renvoie** le capital après `n` années.\n4. Léa veut savoir au bout de combien d'années son capital dépasse $600$ €. Écrire une boucle `while` qui calcule et affiche ce nombre d'années.\n5. Donner, en justifiant par le calcul, le capital après $5$ ans (arrondi au centime) et le nombre d'années trouvé à la question 4.",
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 9, multiplier par 1, ajouter 3. Resultat ?",
       "corrige": [
-        "1. Gagner $3\\%$ revient à multiplier par $1{,}03$. L'affectation est `C = C * 1.03` (le séparateur décimal est le **point**, jamais la virgule). On lit l'ancien capital, on le multiplie par $1{,}03$, on range le résultat dans `C`.",
-        "2. Il faut répéter cette mise à jour **une fois par année**, donc $5$ tours : `range(5)` convient (il produit $0, 1, 2, 3, 4$, soit exactement $5$ valeurs). Le programme complété :\n```python\nC = 500\nfor annee in range(5):\n    C = C * 1.03\nprint(C)\n```",
-        "3. On définit la fonction avec `def`, on initialise le capital à $500$ **avant** la boucle, on applique $n$ fois la mise à jour, puis on **renvoie** le résultat avec `return` (et non `print`, car on veut une valeur réutilisable) :\n```python\ndef capital(n):\n    C = 500\n    for annee in range(n):\n        C = C * 1.03\n    return C\n```",
-        "4. On ne connaît pas d'avance le nombre de tours : on utilise un `while` piloté par la condition « tant que le capital n'a pas dépassé $600$ ». On compte les années dans une variable `n` :\n```python\nC = 500\nn = 0\nwhile C <= 600:\n    C = C * 1.03\n    n = n + 1\nprint(n)\n```\nLa condition finit par devenir fausse car le capital augmente à chaque tour : la boucle n'est pas infinie.",
-        "5. Après $5$ ans : $C_5 = 500 \\times 1{,}03^5$. Or $1{,}03^5 \\approx 1{,}159274$, donc $C_5 \\approx 579{,}64$ €. Pour la question 4, on poursuit : $C_6 = 500 \\times 1{,}03^6 \\approx 597{,}03$ € (encore $\\le 600$), puis $C_7 = 500 \\times 1{,}03^7 \\approx 614{,}94$ € ($> 600$). La boucle s'arrête donc à $n = 7$."
+        "$ 9 \\times 1 + 3 = 12 $."
       ],
-      "reponse": "Après $5$ ans, le capital vaut environ $579{,}64$ € ; il dépasse $600$ € au bout de $7$ ans."
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 5, multiplier par 3, ajouter 2. Resultat ?",
+      "corrige": [
+        "$ 5 \\times 3 + 2 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Programme : prendre 2, multiplier par 7, ajouter 4. Resultat ?",
+      "corrige": [
+        "$ 2 \\times 7 + 4 = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 2 = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 3 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 3 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 5 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 5 = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 4 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 4 = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 3, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 4\\times 2 = 11 $."
+      ],
+      "reponse": "$ 11 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 6 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 6 = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 3 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 3 = 14 $."
+      ],
+      "reponse": "$ 14 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 1, on ajoute 7 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 1 + 4\\times 7 = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 4, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 4 + 4\\times 2 = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 0, on ajoute 5 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 0 + 4\\times 5 = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 3, on ajoute 4 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 3 + 4\\times 4 = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "On part de 2, on ajoute 2 quatre fois. Valeur finale ?",
+      "corrige": [
+        "$ 2 + 4\\times 2 = 10 $."
+      ],
+      "reponse": "$ 10 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 20, diviser par 4. Resultat ?",
+      "corrige": [
+        "$ 20 \\div 4 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 30, diviser par 5. Resultat ?",
+      "corrige": [
+        "$ 30 \\div 5 = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 18, diviser par 3. Resultat ?",
+      "corrige": [
+        "$ 18 \\div 3 = 6 $."
+      ],
+      "reponse": "$ 6 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 24, diviser par 6. Resultat ?",
+      "corrige": [
+        "$ 24 \\div 6 = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 40, diviser par 8. Resultat ?",
+      "corrige": [
+        "$ 40 \\div 8 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 15, diviser par 3. Resultat ?",
+      "corrige": [
+        "$ 15 \\div 3 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 36, diviser par 9. Resultat ?",
+      "corrige": [
+        "$ 36 \\div 9 = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "programme",
+      "enonce": "Programme : prendre 50, diviser par 10. Resultat ?",
+      "corrige": [
+        "$ 50 \\div 10 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 3, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 9 $."
+      ],
+      "reponse": "$ 9 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 4, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 12 $."
+      ],
+      "reponse": "$ 12 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 5, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 6, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 7, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 8, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 9, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 10, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 11, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 12, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 36 $."
+      ],
+      "reponse": "$ 36 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 13, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 39 $."
+      ],
+      "reponse": "$ 39 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 14, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 42 $."
+      ],
+      "reponse": "$ 42 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 15, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 45 $."
+      ],
+      "reponse": "$ 45 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 16, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 48 $."
+      ],
+      "reponse": "$ 48 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 17, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 51 $."
+      ],
+      "reponse": "$ 51 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 18, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 54 $."
+      ],
+      "reponse": "$ 54 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 19, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 57 $."
+      ],
+      "reponse": "$ 57 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "programme",
+      "enonce": "Prendre 20, multiplier par 3. Resultat ?",
+      "corrige": [
+        "$ = 60 $."
+      ],
+      "reponse": "$ 60 $"
     }
   ]
 }

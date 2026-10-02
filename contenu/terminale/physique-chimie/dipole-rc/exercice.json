@@ -13,134 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "condensateur",
-      "enonce": "Un condensateur de capacité $C = 10\\ \\mu\\text{F}$ est chargé sous une tension constante $u = 12$ V. Calculer la charge $q$ stockée sur son armature, en coulombs puis en microcoulombs.",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 2 $ k\\Omega, $ C = 3 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "La charge est proportionnelle à la tension : $q = C \\times u$.",
-        "On convertit d'abord la capacité en farads : $C = 10\\ \\mu\\text{F} = 10 \\times 10^{-6}\\ \\text{F} = 1{,}0 \\times 10^{-5}\\ \\text{F}$.",
-        "Application numérique : $q = 1{,}0 \\times 10^{-5} \\times 12 = 1{,}2 \\times 10^{-4}$ C.",
-        "Soit, en microcoulombs, $q = 1{,}2 \\times 10^{-4}\\ \\text{C} = 120\\ \\mu\\text{C}$. Oublier de convertir les $\\mu$F donnerait un résultat un million de fois trop grand."
+        "$ \\tau = R\\times C = 2\\times 3 = 6 $ ms."
       ],
-      "reponse": "$q = C\\,u = 1{,}2 \\times 10^{-4}$ C, soit $120\\ \\mu$C."
+      "reponse": "$ 6 $ ms"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "temps-caracteristique",
-      "enonce": "Un circuit RC série est constitué d'un résistor $R = 20\\ \\text{k}\\Omega$ et d'un condensateur $C = 0{,}50\\ \\mu\\text{F}$. Calculer la constante de temps $\\tau$ du circuit, en secondes puis en millisecondes.",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 1 $ k\\Omega, $ C = 10 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "La constante de temps d'un dipôle RC vaut $\\tau = R \\times C$.",
-        "On convertit les deux grandeurs en unités SI : $R = 20\\ \\text{k}\\Omega = 2{,}0 \\times 10^{4}\\ \\Omega$ et $C = 0{,}50\\ \\mu\\text{F} = 0{,}50 \\times 10^{-6}\\ \\text{F} = 5{,}0 \\times 10^{-7}\\ \\text{F}$.",
-        "Application numérique : $\\tau = 2{,}0 \\times 10^{4} \\times 5{,}0 \\times 10^{-7} = 1{,}0 \\times 10^{-2}$ s.",
-        "Soit $\\tau = 1{,}0 \\times 10^{-2}\\ \\text{s} = 10$ ms."
+        "$ \\tau = R\\times C = 1\\times 10 = 10 $ ms."
       ],
-      "reponse": "$\\tau = RC = 1{,}0 \\times 10^{-2}$ s, soit $10$ ms."
+      "reponse": "$ 10 $ ms"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "circuit-rc",
-      "enonce": "Un condensateur initialement déchargé se charge dans un circuit RC série de f.é.m. $E = 5{,}0$ V, avec $R = 1{,}0\\ \\text{k}\\Omega$ et $C = 2{,}0\\ \\mu\\text{F}$. La tension aux bornes du condensateur suit $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$. 1) Calculer $\\tau$. 2) En déduire la tension $u_C$ à $t = \\tau$, puis à $t = 5\\tau$. (On prend $e^{-1} \\approx 0{,}37$ et $e^{-5} \\approx 0{,}0067$.)",
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 5 $ k\\Omega, $ C = 2 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "Constante de temps : $\\tau = RC = 1{,}0 \\times 10^{3} \\times 2{,}0 \\times 10^{-6} = 2{,}0 \\times 10^{-3}$ s $= 2{,}0$ ms.",
-        "À $t = \\tau$ : $u_C(\\tau) = E(1 - e^{-1}) = 5{,}0 \\times (1 - 0{,}37) = 5{,}0 \\times 0{,}63 = 3{,}2$ V, soit environ $63\\,\\%$ de $E$.",
-        "À $t = 5\\tau$ : $u_C(5\\tau) = E(1 - e^{-5}) = 5{,}0 \\times (1 - 0{,}0067) = 5{,}0 \\times 0{,}993 \\approx 5{,}0$ V, soit plus de $99\\,\\%$ de $E$.",
-        "On considère donc le régime permanent (condensateur chargé sous $E$) atteint au bout de $5\\tau = 10$ ms."
+        "$ \\tau = R\\times C = 5\\times 2 = 10 $ ms."
       ],
-      "reponse": "$\\tau = 2{,}0$ ms ; $u_C(\\tau) \\approx 3{,}2$ V ($63\\,\\%$ de $E$) et $u_C(5\\tau) \\approx 5{,}0$ V (régime permanent)."
+      "reponse": "$ 10 $ ms"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "circuit-rc",
-      "enonce": "Un condensateur $C = 4{,}7\\ \\mu\\text{F}$, préalablement chargé sous $E = 9{,}0$ V, est fermé à $t = 0$ sur un résistor seul $R = 3{,}3\\ \\text{k}\\Omega$. Sa tension suit alors $u_C(t) = E\\,e^{-t/\\tau}$. 1) Calculer $\\tau$. 2) Donner la tension $u_C$ à $t = \\tau$. 3) Estimer la durée au bout de laquelle le condensateur est pratiquement déchargé. (On prend $e^{-1} \\approx 0{,}37$.)",
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 4 $ k\\Omega, $ C = 5 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "Constante de temps : $\\tau = RC = 3{,}3 \\times 10^{3} \\times 4{,}7 \\times 10^{-6} = 1{,}55 \\times 10^{-2}$ s $\\approx 16$ ms.",
-        "À $t = \\tau$, en décharge : $u_C(\\tau) = E\\,e^{-1} = 9{,}0 \\times 0{,}37 = 3{,}3$ V, soit $37\\,\\%$ de $E$ (la tension a chuté, elle ne monte pas).",
-        "On considère la décharge terminée au bout de $5\\tau$ (moins de $1\\,\\%$ de $E$).",
-        "Numériquement : $5\\tau = 5 \\times 1{,}55 \\times 10^{-2} \\approx 7{,}8 \\times 10^{-2}$ s, soit environ $78$ ms."
+        "$ \\tau = R\\times C = 4\\times 5 = 20 $ ms."
       ],
-      "reponse": "$\\tau \\approx 16$ ms ; $u_C(\\tau) = 3{,}3$ V ($37\\,\\%$ de $E$) ; condensateur pratiquement déchargé au bout de $5\\tau \\approx 78$ ms."
+      "reponse": "$ 20 $ ms"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "circuit-rc",
-      "enonce": "On étudie la charge d'un condensateur de capacité $C$ à travers un résistor $R$, alimentés par un générateur de f.é.m. $E$ (convention récepteur, $u_C(0) = 0$). 1) Établir l'équation différentielle vérifiée par $u_C$ à partir de la loi des mailles. 2) Vérifier que $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$, avec $\\tau = RC$, est bien solution et satisfait la condition initiale. 3) En déduire l'expression de l'intensité $i(t)$ dans le circuit.",
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 10 $ k\\Omega, $ C = 1 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "Loi des mailles : $E = u_R + u_C$. Avec $u_R = R\\,i$ et $i = C\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t}$, on a $u_R = RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t}$, d'où l'équation différentielle $RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$.",
-        "On dérive la solution proposée : $\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} = E \\times \\dfrac{1}{\\tau}\\,e^{-t/\\tau} = \\dfrac{E}{RC}\\,e^{-t/\\tau}$ (car $\\tau = RC$).",
-        "On reporte dans l'équation : $RC \\times \\dfrac{E}{RC}\\,e^{-t/\\tau} + E\\left(1 - e^{-t/\\tau}\\right) = E\\,e^{-t/\\tau} + E - E\\,e^{-t/\\tau} = E$. L'égalité est vérifiée pour tout $t$.",
-        "Condition initiale : $u_C(0) = E(1 - e^{0}) = E(1 - 1) = 0$, conforme au condensateur déchargé au départ. La fonction est donc bien LA solution.",
-        "Courant : $i(t) = C\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} = C \\times \\dfrac{E}{RC}\\,e^{-t/\\tau} = \\dfrac{E}{R}\\,e^{-t/\\tau}$. Il part de $i_0 = \\dfrac{E}{R}$ (maximal) et décroît vers $0$."
+        "$ \\tau = R\\times C = 10\\times 1 = 10 $ ms."
       ],
-      "reponse": "Équation : $RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$ ; la fonction $u_C(t) = E(1 - e^{-t/\\tau})$ la vérifie avec $u_C(0)=0$ ; et $i(t) = \\dfrac{E}{R}\\,e^{-t/\\tau}$."
+      "reponse": "$ 10 $ ms"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "temps-caracteristique",
-      "enonce": "Dans un capteur capacitif, un condensateur de capacité inconnue $C$ se décharge à travers un résistor $R = 6{,}0\\ \\text{k}\\Omega$. Sur l'enregistrement, la tension part de $E = 8{,}0$ V et l'on mesure qu'elle atteint $0{,}37\\,E$ au bout de $12$ ms. 1) Que vaut la constante de temps $\\tau$ ? Justifier. 2) En déduire la capacité $C$. 3) Le diélectrique du capteur absorbe de l'humidité, ce qui fait augmenter $C$. Comment évolue $\\tau$ ?",
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 3 $ k\\Omega, $ C = 4 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "En décharge, $u_C(t) = E\\,e^{-t/\\tau}$ : à $t = \\tau$, $u_C = E\\,e^{-1} = 0{,}37\\,E$. L'instant où la tension vaut $37\\,\\%$ de $E$ est donc, par définition, $t = \\tau$. Ici $\\tau = 12$ ms $= 1{,}2 \\times 10^{-2}$ s.",
-        "Comme $\\tau = RC$, on isole la capacité : $C = \\dfrac{\\tau}{R}$.",
-        "Application numérique : $C = \\dfrac{1{,}2 \\times 10^{-2}}{6{,}0 \\times 10^{3}} = 2{,}0 \\times 10^{-6}$ F $= 2{,}0\\ \\mu$F.",
-        "Si $C$ augmente à $R$ fixé, alors $\\tau = RC$ augmente aussi : la décharge devient plus lente. C'est cette variation de $\\tau$ que le capteur mesure et convertit en taux d'humidité."
+        "$ \\tau = R\\times C = 3\\times 4 = 12 $ ms."
       ],
-      "reponse": "$\\tau = 12$ ms (instant où $u_C = 0{,}37\\,E$) ; $C = \\dfrac{\\tau}{R} = 2{,}0\\ \\mu$F ; si $C$ augmente, $\\tau$ augmente (décharge plus lente)."
+      "reponse": "$ 12 $ ms"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "condensateur",
-      "enonce": "Aux bornes d'un condensateur de capacité $C = 220\\ \\text{nF}$, la tension augmente de façon uniforme de $0$ à $10$ V pendant une durée de $5{,}0$ ms. Calculer l'intensité $i$ du courant qui traverse le condensateur pendant cette phase.",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 2 $ k\\Omega, $ C = 20 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "Le courant dans un condensateur est lié à la vitesse de variation de la tension : $i = C\\,\\dfrac{\\mathrm{d}u}{\\mathrm{d}t}$.",
-        "La tension variant de façon uniforme, sa dérivée est constante et vaut la pente : $\\dfrac{\\mathrm{d}u}{\\mathrm{d}t} = \\dfrac{\\Delta u}{\\Delta t} = \\dfrac{10}{5{,}0 \\times 10^{-3}} = 2{,}0 \\times 10^{3}\\ \\text{V·s}^{-1}$.",
-        "On convertit la capacité en farads : $C = 220\\ \\text{nF} = 220 \\times 10^{-9}\\ \\text{F} = 2{,}20 \\times 10^{-7}\\ \\text{F}$.",
-        "Application numérique : $i = C\\,\\dfrac{\\mathrm{d}u}{\\mathrm{d}t} = 2{,}20 \\times 10^{-7} \\times 2{,}0 \\times 10^{3} = 4{,}4 \\times 10^{-4}$ A, soit $i = 0{,}44$ mA. Le courant est constant tant que la tension monte à vitesse constante."
+        "$ \\tau = R\\times C = 2\\times 20 = 40 $ ms."
       ],
-      "reponse": "$i = C\\,\\dfrac{\\mathrm{d}u}{\\mathrm{d}t} = 4{,}4 \\times 10^{-4}$ A, soit $0{,}44$ mA."
+      "reponse": "$ 40 $ ms"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "circuit-rc",
-      "enonce": "Un condensateur $C = 100\\ \\mu\\text{F}$, initialement déchargé, se charge dans un circuit RC série de f.é.m. $E = 6{,}0$ V et de résistor $R = 1{,}5\\ \\text{k}\\Omega$. 1) Calculer l'intensité $i_0$ du courant à l'instant $t = 0$, juste après la fermeture de l'interrupteur. 2) Calculer la charge $q_\\infty$ finalement emmagasinée par le condensateur en régime permanent.",
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 6 $ k\\Omega, $ C = 2 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "À $t = 0$ le condensateur est vide : $u_C(0) = 0$. La loi des mailles $E = u_R + u_C$ donne alors $u_R = E$, et le condensateur se comporte comme un simple fil.",
-        "Le courant initial est donc maximal : $i_0 = \\dfrac{E}{R} = \\dfrac{6{,}0}{1{,}5 \\times 10^{3}} = 4{,}0 \\times 10^{-3}$ A $= 4{,}0$ mA.",
-        "En régime permanent, $u_C$ ne varie plus : $i = C\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} = 0$, donc $u_R = R\\,i = 0$ et $u_C = E = 6{,}0$ V.",
-        "La charge finale vaut $q_\\infty = C \\times u_C = 100 \\times 10^{-6} \\times 6{,}0 = 6{,}0 \\times 10^{-4}$ C, soit $0{,}60$ mC."
+        "$ \\tau = R\\times C = 6\\times 2 = 12 $ ms."
       ],
-      "reponse": "$i_0 = \\dfrac{E}{R} = 4{,}0$ mA ; $q_\\infty = C\\,E = 6{,}0 \\times 10^{-4}$ C, soit $0{,}60$ mC."
+      "reponse": "$ 12 $ ms"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "temps-caracteristique",
-      "enonce": "Lors de la décharge d'un condensateur dans un résistor $R = 3{,}3\\ \\text{k}\\Omega$, on enregistre la tension à ses bornes. Elle part de $u_C(0) = E = 10{,}0$ V et l'on mesure $u_C = 2{,}5$ V à l'instant $t_1 = 8{,}0$ ms. 1) À partir de l'expression $u_C(t) = E\\,e^{-t/\\tau}$, déterminer la constante de temps $\\tau$. 2) En déduire la capacité $C$ du condensateur. (On donne $\\ln 4 \\approx 1{,}39$.)",
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 1 $ k\\Omega, $ C = 47 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "En décharge, $u_C(t) = E\\,e^{-t/\\tau}$. À $t_1$ : $\\dfrac{u_C(t_1)}{E} = e^{-t_1/\\tau}$, soit $\\dfrac{2{,}5}{10{,}0} = 0{,}25 = e^{-t_1/\\tau}$.",
-        "On prend le logarithme népérien : $-\\dfrac{t_1}{\\tau} = \\ln(0{,}25) = -\\ln 4 \\approx -1{,}39$, d'où $\\tau = \\dfrac{t_1}{\\ln 4} = \\dfrac{8{,}0 \\times 10^{-3}}{1{,}39}$.",
-        "Application numérique : $\\tau \\approx 5{,}8 \\times 10^{-3}$ s $= 5{,}8$ ms.",
-        "Comme $\\tau = RC$, on isole $C = \\dfrac{\\tau}{R} = \\dfrac{5{,}8 \\times 10^{-3}}{3{,}3 \\times 10^{3}} \\approx 1{,}7 \\times 10^{-6}$ F, soit $C \\approx 1{,}7\\ \\mu$F."
+        "$ \\tau = R\\times C = 1\\times 47 = 47 $ ms."
       ],
-      "reponse": "$\\tau = \\dfrac{t_1}{\\ln 4} \\approx 5{,}8$ ms ; $C = \\dfrac{\\tau}{R} \\approx 1{,}7\\ \\mu$F."
+      "reponse": "$ 47 $ ms"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "circuit-rc",
-      "enonce": "**Le flash d'un appareil photo.** Un flash stocke de l'énergie dans un condensateur avant de la restituer très rapidement au tube à éclats. Pendant la phase de recharge, le condensateur de capacité $C = 150\\ \\mu\\text{F}$, initialement déchargé, est chargé à travers un résistor $R = 20\\ \\text{k}\\Omega$ par un générateur de f.é.m. $E = 300$ V (convention récepteur). On rappelle que l'énergie stockée par un condensateur vaut $E_e = \\tfrac{1}{2}\\,C\\,u_C^{\\,2}$.\\n1. Calculer la charge $q$ emmagasinée par le condensateur lorsqu'il est complètement chargé ($u_C = E$).\\n2. Établir l'équation différentielle vérifiée par $u_C(t)$ pendant la charge, puis donner sa solution compte tenu de la condition initiale $u_C(0) = 0$.\\n3. Calculer la constante de temps $\\tau$ du circuit de charge. En déduire la durée nécessaire pour que le flash soit « prêt », c'est-à-dire pour que $u_C$ atteigne $95\\,\\%$ de $E$.\\n4. Calculer l'énergie $E_e$ stockée dans le condensateur à pleine charge.\\n5. L'éclair est produit en déchargeant le condensateur dans le tube, de résistance $r = 5{,}0\\ \\Omega$. Calculer la nouvelle constante de temps $\\tau'$ de la décharge et commenter la durée de l'éclair par rapport à celle de la recharge.",
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 8 $ k\\Omega, $ C = 5 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
       "corrige": [
-        "1. La charge à pleine charge vaut $q = C \\times E = 150 \\times 10^{-6} \\times 300 = 4{,}5 \\times 10^{-2}$ C, soit $45$ mC.",
-        "2. Loi des mailles pendant la charge : $E = u_R + u_C$, avec $u_R = R\\,i$ et $i = C\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t}$. En substituant, $RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$. Avec la condition initiale $u_C(0) = 0$, la solution est $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$ où $\\tau = RC$.",
-        "3. $\\tau = RC = 20 \\times 10^{3} \\times 150 \\times 10^{-6} = 3{,}0$ s. La tension atteint $95\\,\\%$ de $E$ au bout de $3\\tau$ (repère du cours), soit une durée $t = 3\\tau = 3 \\times 3{,}0 = 9{,}0$ s : c'est le temps d'attente entre deux photos au flash.",
-        "4. Énergie stockée à pleine charge ($u_C = E = 300$ V) : $E_e = \\tfrac{1}{2}\\,C\\,E^{2} = \\tfrac{1}{2} \\times 150 \\times 10^{-6} \\times 300^{2} = \\tfrac{1}{2} \\times 150 \\times 10^{-6} \\times 9{,}0 \\times 10^{4} = 6{,}75$ J, soit environ $6{,}8$ J.",
-        "5. Constante de temps de la décharge : $\\tau' = r\\,C = 5{,}0 \\times 150 \\times 10^{-6} = 7{,}5 \\times 10^{-4}$ s $= 0{,}75$ ms. La décharge (l'éclair) est donc environ $\\dfrac{\\tau}{\\tau'} = \\dfrac{3{,}0}{7{,}5 \\times 10^{-4}} = 4{,}0 \\times 10^{3}$ fois plus rapide que la recharge : l'énergie accumulée lentement pendant plusieurs secondes est libérée en une fraction de milliseconde, ce qui produit un éclair bref et intense."
+        "$ \\tau = R\\times C = 8\\times 5 = 40 $ ms."
       ],
-      "reponse": "$q = C\\,E = 45$ mC ; équation $RC\\,\\dfrac{\\mathrm{d}u_C}{\\mathrm{d}t} + u_C = E$ de solution $u_C(t) = E(1 - e^{-t/\\tau})$ ; $\\tau = 3{,}0$ s et flash prêt à $3\\tau = 9{,}0$ s ; énergie stockée $E_e = \\tfrac{1}{2}CE^2 \\approx 6{,}8$ J ; décharge $\\tau' = rC = 0{,}75$ ms, soit un éclair environ $4000$ fois plus rapide que la recharge."
+      "reponse": "$ 40 $ ms"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 2 $ k\\Omega, $ C = 10 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
+      "corrige": [
+        "$ \\tau = R\\times C = 2\\times 10 = 20 $ ms."
+      ],
+      "reponse": "$ 20 $ ms"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "Circuit RC : $ R = 5 $ k\\Omega, $ C = 6 $ \\mu F. Constante de temps $ \\tau = RC $ (en ms) ?",
+      "corrige": [
+        "$ \\tau = R\\times C = 5\\times 6 = 30 $ ms."
+      ],
+      "reponse": "$ 30 $ ms"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=1 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 3 $ ms."
+      ],
+      "reponse": "$ 3 $ ms"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=2 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 6 $ ms."
+      ],
+      "reponse": "$ 6 $ ms"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=3 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 9 $ ms."
+      ],
+      "reponse": "$ 9 $ ms"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=4 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 12 $ ms."
+      ],
+      "reponse": "$ 12 $ ms"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=5 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 15 $ ms."
+      ],
+      "reponse": "$ 15 $ ms"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=6 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 18 $ ms."
+      ],
+      "reponse": "$ 18 $ ms"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=7 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 21 $ ms."
+      ],
+      "reponse": "$ 21 $ ms"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=8 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 24 $ ms."
+      ],
+      "reponse": "$ 24 $ ms"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=9 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 27 $ ms."
+      ],
+      "reponse": "$ 27 $ ms"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=10 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 30 $ ms."
+      ],
+      "reponse": "$ 30 $ ms"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=11 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 33 $ ms."
+      ],
+      "reponse": "$ 33 $ ms"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=12 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 36 $ ms."
+      ],
+      "reponse": "$ 36 $ ms"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=13 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 39 $ ms."
+      ],
+      "reponse": "$ 39 $ ms"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=14 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 42 $ ms."
+      ],
+      "reponse": "$ 42 $ ms"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=15 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 45 $ ms."
+      ],
+      "reponse": "$ 45 $ ms"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=16 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 48 $ ms."
+      ],
+      "reponse": "$ 48 $ ms"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=17 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 51 $ ms."
+      ],
+      "reponse": "$ 51 $ ms"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=18 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 54 $ ms."
+      ],
+      "reponse": "$ 54 $ ms"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=19 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 57 $ ms."
+      ],
+      "reponse": "$ 57 $ ms"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=20 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 60 $ ms."
+      ],
+      "reponse": "$ 60 $ ms"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=21 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 63 $ ms."
+      ],
+      "reponse": "$ 63 $ ms"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=22 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 66 $ ms."
+      ],
+      "reponse": "$ 66 $ ms"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=23 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 69 $ ms."
+      ],
+      "reponse": "$ 69 $ ms"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=24 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 72 $ ms."
+      ],
+      "reponse": "$ 72 $ ms"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=25 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 75 $ ms."
+      ],
+      "reponse": "$ 75 $ ms"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=26 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 78 $ ms."
+      ],
+      "reponse": "$ 78 $ ms"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=27 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 81 $ ms."
+      ],
+      "reponse": "$ 81 $ ms"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=28 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 84 $ ms."
+      ],
+      "reponse": "$ 84 $ ms"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=29 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 87 $ ms."
+      ],
+      "reponse": "$ 87 $ ms"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=30 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 90 $ ms."
+      ],
+      "reponse": "$ 90 $ ms"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=31 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 93 $ ms."
+      ],
+      "reponse": "$ 93 $ ms"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=32 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 96 $ ms."
+      ],
+      "reponse": "$ 96 $ ms"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=33 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 99 $ ms."
+      ],
+      "reponse": "$ 99 $ ms"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=34 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 102 $ ms."
+      ],
+      "reponse": "$ 102 $ ms"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=35 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 105 $ ms."
+      ],
+      "reponse": "$ 105 $ ms"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=36 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 108 $ ms."
+      ],
+      "reponse": "$ 108 $ ms"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=37 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 111 $ ms."
+      ],
+      "reponse": "$ 111 $ ms"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "constante-temps",
+      "enonce": "$ R=38 $ k\\Omega, $ C=3 $ \\mu F : $ \\tau $ ?",
+      "corrige": [
+        "$ = 114 $ ms."
+      ],
+      "reponse": "$ 114 $ ms"
     }
   ]
 }

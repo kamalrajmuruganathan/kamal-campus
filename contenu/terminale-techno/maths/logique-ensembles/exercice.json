@@ -13,129 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "reunion-intersection-complementaire",
-      "enonce": "On considère l'ensemble $E = \\{1\\,;2\\,;3\\,;4\\,;5\\,;6\\,;7\\,;8\\}$ (les faces d'un dé à 8 faces), $A = \\{2\\,;4\\,;6\\,;8\\}$ (les numéros pairs) et $B = \\{1\\,;2\\,;3\\,;4\\}$ (les numéros inférieurs ou égaux à 4). Déterminer $A \\cap B$, $A \\cup B$ et $\\bar{A}$ (le complémentaire de $A$ dans $E$).",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 10 $, $ |B| = 8 $, $ |A\\cap B| = 3 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "$A \\cap B$ contient les éléments qui sont dans $A$ **et** dans $B$, c'est-à-dire les numéros à la fois pairs et inférieurs ou égaux à 4 : $A \\cap B = \\{2\\,;4\\}$.",
-        "$A \\cup B$ contient les éléments qui sont dans $A$ **ou** dans $B$, chacun écrit une seule fois : $A \\cup B = \\{1\\,;2\\,;3\\,;4\\,;6\\,;8\\}$. Attention, $2$ et $4$ appartiennent aux deux ensembles mais ne sont comptés qu'une fois.",
-        "$\\bar{A}$ contient les éléments de $E$ qui ne sont **pas** dans $A$, c'est-à-dire les numéros impairs : $\\bar{A} = \\{1\\,;3\\,;5\\,;7\\}$."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 10 + 8 - 3 = 15 $."
       ],
-      "reponse": "$A \\cap B = \\{2\\,;4\\}$ ; $A \\cup B = \\{1\\,;2\\,;3\\,;4\\,;6\\,;8\\}$ ; $\\bar{A} = \\{1\\,;3\\,;5\\,;7\\}$."
+      "reponse": "$ 15 $"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "appartenance-inclusion",
-      "enonce": "Soit $E = \\{0\\,;1\\,;2\\,;3\\,;4\\,;5\\}$. Pour chacune des écritures suivantes, dire si elle est correcte ou incorrecte, et corriger celles qui sont incorrectes : (a) $3 \\in E$ ; (b) $\\{1\\,;2\\} \\in E$ ; (c) $7 \\in E$ ; (d) $\\{0\\,;5\\} \\subset E$.",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 12 $, $ |B| = 15 $, $ |A\\cap B| = 5 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "(a) Correcte : $3$ est un élément de $E$, le symbole $\\in$ relie bien un élément à un ensemble.",
-        "(b) Incorrecte : $\\{1\\,;2\\}$ est un **ensemble**, pas un élément de $E$. Entre deux ensembles, on utilise l'inclusion : la bonne écriture est $\\{1\\,;2\\} \\subset E$, vraie car $1$ et $2$ appartiennent tous les deux à $E$.",
-        "(c) Incorrecte : $7$ ne figure pas dans la liste des éléments de $E$. La bonne écriture est $7 \\notin E$.",
-        "(d) Correcte : $\\{0\\,;5\\}$ est un ensemble dont tous les éléments ($0$ et $5$) appartiennent à $E$, donc il est inclus dans $E$."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 12 + 15 - 5 = 22 $."
       ],
-      "reponse": "(a) correcte ; (b) incorrecte, écrire $\\{1\\,;2\\} \\subset E$ ; (c) incorrecte, écrire $7 \\notin E$ ; (d) correcte."
+      "reponse": "$ 22 $"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "couple-produit-cartesien",
-      "enonce": "Pour créer un badge d'accès, un lycée attribue à chaque élève un code formé d'une lettre choisie dans $L = \\{\\mathrm{A}\\,;\\mathrm{B}\\,;\\mathrm{C}\\}$ suivie d'un chiffre choisi dans $C = \\{1\\,;2\\,;3\\,;4\\}$. (a) Écrire trois éléments différents du produit cartésien $L \\times C$. (b) Combien de codes différents le lycée peut-il créer ? (c) Les codes $(\\mathrm{A}\\,;2)$ et $(2\\,;\\mathrm{A})$ désignent-ils le même badge ?",
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 20 $, $ |B| = 10 $, $ |A\\cap B| = 4 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "(a) Un élément de $L \\times C$ est un **couple** (lettre ; chiffre), par exemple $(\\mathrm{A}\\,;1)$, $(\\mathrm{B}\\,;3)$ et $(\\mathrm{C}\\,;4)$.",
-        "(b) Chaque lettre ($3$ possibilités) se combine avec chaque chiffre ($4$ possibilités). Le produit cartésien $L \\times C$ compte donc $3 \\times 4 = 12$ couples : le lycée peut créer $12$ codes. On peut le vérifier avec un tableau à double entrée de 3 lignes et 4 colonnes.",
-        "(c) Non. Dans un couple, **l'ordre compte** : $(\\mathrm{A}\\,;2)$ commence par une lettre, conformément au format demandé, tandis que $(2\\,;\\mathrm{A})$ commence par un chiffre. Ce n'est d'ailleurs même pas un élément de $L \\times C$ : $(2\\,;\\mathrm{A})$ appartient à $C \\times L$."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 20 + 10 - 4 = 26 $."
       ],
-      "reponse": "(a) Par exemple $(\\mathrm{A}\\,;1)$, $(\\mathrm{B}\\,;3)$, $(\\mathrm{C}\\,;4)$ ; (b) $3 \\times 4 = 12$ codes ; (c) non, l'ordre compte dans un couple."
+      "reponse": "$ 26 $"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "connecteurs-et-ou",
-      "enonce": "Une agence de location retient les annonces d'appartements qui vérifient : « le loyer est inférieur ou égal à $700$ € **et** la surface est supérieure ou égale à $30$ m$^2$ ». Quatre annonces sont proposées : A ($650$ €, $35$ m$^2$), B ($680$ €, $25$ m$^2$), C ($750$ €, $40$ m$^2$), D ($720$ €, $28$ m$^2$). (a) Quelles annonces sont retenues ? (b) Mêmes questions si l'agence remplace « et » par « ou ». (c) Une annonce écartée par le critère « ou » pouvait-elle être retenue par le critère « et » ?",
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 7 $, $ |B| = 9 $, $ |A\\cap B| = 2 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "(a) Avec « et », il faut vérifier les **deux** conditions. A : $650 \\leq 700$ vrai et $35 \\geq 30$ vrai, retenue. B : loyer correct mais $25 < 30$, écartée. C : $750 > 700$, écartée. D : $720 > 700$ et $28 < 30$, écartée. Seule l'annonce A est retenue.",
-        "(b) Avec « ou », il suffit qu'**au moins une** condition soit vraie. A : les deux vraies, retenue (le « ou » mathématique est inclusif). B : loyer correct, retenue. C : surface correcte, retenue. D : aucune des deux conditions n'est vraie ($720 > 700$ et $28 < 30$), écartée. Annonces retenues : A, B et C.",
-        "(c) Non, c'est impossible. Une annonce qui vérifie « loyer $\\leq 700$ **et** surface $\\geq 30$ » vérifie en particulier au moins une des deux conditions, donc elle vérifie aussi le « ou ». En langage d'ensembles : $A \\cap B \\subset A \\cup B$ — le critère « et » est plus exigeant que le critère « ou »."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 7 + 9 - 2 = 14 $."
       ],
-      "reponse": "(a) Seule A ; (b) A, B et C ; (c) non : tout ce qui vérifie le « et » vérifie aussi le « ou » ($A \\cap B \\subset A \\cup B$)."
+      "reponse": "$ 14 $"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "contre-exemple",
-      "enonce": "Trois affirmations portent sur les réels ou les entiers. (a) « Pour tout réel $x$, $(x+1)^2 = x^2 + 2x + 1$. » (b) « Pour tout réel $x$, $\\sqrt{x^2} = x$. » (c) « Pour tout entier naturel $n$, $2n \\geq n + 1$. » Pour chacune, dire si elle est vraie ou fausse. Si elle est fausse, donner un contre-exemple ; si elle est vraie, la démontrer.",
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 30 $, $ |B| = 25 $, $ |A\\cap B| = 10 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "(a) Vraie. On développe pour un $x$ **quelconque** : $(x+1)^2 = (x+1)(x+1) = x^2 + x + x + 1 = x^2 + 2x + 1$. C'est une identité — un raisonnement général, pas une liste d'exemples.",
-        "(b) Fausse. Contre-exemple : $x = -2$. Alors $x^2 = 4$ et $\\sqrt{4} = 2$, donc $\\sqrt{x^2} = 2 \\neq -2 = x$. Un seul contre-exemple suffit à conclure. (L'affirmation ne devient vraie que si on la restreint aux $x \\geq 0$.)",
-        "(c) Fausse. Contre-exemple : $n = 0$. Alors $2n = 0$ et $n + 1 = 1$, donc $2n < n + 1$. Le piège : l'inégalité est vraie pour tous les entiers $n \\geq 1$, et tester $n = 1, 2, 3\\ldots$ pouvait faire croire qu'elle était toujours vraie. C'est bien pour cela que des exemples ne démontrent jamais un « pour tout » : il fallait penser au cas $n = 0$."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 30 + 25 - 10 = 45 $."
       ],
-      "reponse": "(a) vraie (développement valable pour tout $x$) ; (b) fausse, contre-exemple $x = -2$ ; (c) fausse, contre-exemple $n = 0$."
+      "reponse": "$ 45 $"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "condition-necessaire-suffisante",
-      "enonce": "On considère la proposition $P_1$ : « si un quadrilatère est un carré, alors ses diagonales ont la même longueur ». (a) Énoncer la réciproque de $P_1$. (b) La proposition $P_1$ est admise vraie ; sa réciproque est-elle vraie ? Justifier à l'aide d'un contre-exemple. (c) Recopier et compléter avec « nécessaire » ou « suffisante » : « être un carré est une condition … pour avoir des diagonales de même longueur » ; « avoir des diagonales de même longueur est une condition … pour être un carré ».",
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 6 $, $ |B| = 8 $, $ |A\\cap B| = 1 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "(a) La réciproque s'obtient en échangeant l'hypothèse et la conclusion : « si un quadrilatère a des diagonales de même longueur, alors c'est un carré ».",
-        "(b) La réciproque est **fausse**. Contre-exemple : un rectangle de longueur $6$ et de largeur $3$ n'est pas un carré, et pourtant ses deux diagonales ont la même longueur. Avoir des diagonales égales ne suffit donc pas à être un carré.",
-        "(c) Dans $P_1$ (vraie), l'hypothèse « être un carré » est une condition **suffisante** : il suffit d'être un carré pour avoir des diagonales égales. La conclusion « diagonales de même longueur » est une condition **nécessaire** : tout carré l'exige forcément. Mais comme la réciproque est fausse, elle n'est pas suffisante — c'est exactement ce que montre le rectangle du (b).",
-        "Bilan de méthode : proposition vraie + réciproque fausse = pas d'équivalence. On ne peut pas remplacer « carré » par « diagonales égales » dans un raisonnement."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 6 + 8 - 1 = 13 $."
       ],
-      "reponse": "(a) « Si un quadrilatère a des diagonales de même longueur, alors c'est un carré » ; (b) fausse, contre-exemple : un rectangle non carré ; (c) « être un carré » est suffisante, « avoir des diagonales de même longueur » est nécessaire."
+      "reponse": "$ 13 $"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "reunion-intersection-complementaire",
-      "enonce": "On travaille dans $E = \\mathbb{R}$. On donne les intervalles $A = [-2\\,;3[$ et $B = ]1\\,;5]$. Déterminer $A \\cap B$, $A \\cup B$ et $\\bar{A}$ (le complémentaire de $A$ dans $\\mathbb{R}$).",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 14 $, $ |B| = 11 $, $ |A\\cap B| = 6 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "$A \\cap B$ rassemble les réels qui appartiennent à $A$ **et** à $B$, c'est-à-dire ceux qui vérifient à la fois $-2 \\leq x < 3$ et $1 < x \\leq 5$. Les deux conditions sont satisfaites pour $1 < x < 3$, donc $A \\cap B = ]1\\,;3[$.",
-        "$A \\cup B$ rassemble les réels qui appartiennent à $A$ **ou** à $B$. $A$ couvre $[-2\\,;3[$ et $B$ couvre $]1\\,;5]$ : les deux intervalles se chevauchent sur $]1\\,;3[$, si bien que leur réunion est d'un seul tenant. La borne $-2$ est prise (fermée dans $A$) et la borne $5$ aussi (fermée dans $B$), donc $A \\cup B = [-2\\,;5]$.",
-        "$\\bar{A}$ rassemble les réels de $\\mathbb{R}$ qui ne sont **pas** dans $A = [-2\\,;3[$, c'est-à-dire ceux qui vérifient $x < -2$ ou $x \\geq 3$ : $\\bar{A} = ]-\\infty\\,;-2[ \\,\\cup\\, [3\\,;+\\infty[$. Attention aux bornes : $-2 \\in A$ donc $-2 \\notin \\bar{A}$ ; $3 \\notin A$ donc $3 \\in \\bar{A}$."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 14 + 11 - 6 = 19 $."
       ],
-      "reponse": "$A \\cap B = ]1\\,;3[$ ; $A \\cup B = [-2\\,;5]$ ; $\\bar{A} = ]-\\infty\\,;-2[ \\cup [3\\,;+\\infty[$."
+      "reponse": "$ 19 $"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "statut-egalite",
-      "enonce": "Pour chacune des égalités suivantes, préciser son statut — **identité** (vraie pour toutes les valeurs), **équation** (vraie seulement pour certaines valeurs) ou **définition / affectation** — puis, s'il s'agit d'une équation, la résoudre. (a) $5(x - 2) = 5x - 10$. (b) $x^2 = 16$. (c) $f(x) = 3x - 7$. (d) en Python, l'instruction `c = c + 1`.",
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 18 $, $ |B| = 12 $, $ |A\\cap B| = 7 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "(a) **Identité.** En développant pour un $x$ quelconque : $5(x - 2) = 5x - 10$ ; c'est la distributivité, vraie pour **toute** valeur de $x$. Il n'y a rien à résoudre.",
-        "(b) **Équation.** L'égalité $x^2 = 16$ n'est vraie que pour certaines valeurs : les nombres dont le carré vaut $16$. On trouve $x = 4$ ou $x = -4$ — ne pas oublier la solution négative.",
-        "(c) **Définition.** On **pose** le nom $f$ pour la fonction qui à $x$ associe $3x - 7$ ; on ne démontre ni ne résout rien.",
-        "(d) **Affectation.** En Python, `c = c + 1` ne se lit pas comme une équation (qui serait absurde) : elle **remplace** la valeur de $c$ par l'ancienne augmentée de $1$. Le signe `=` y signifie « reçoit la valeur »."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 18 + 12 - 7 = 23 $."
       ],
-      "reponse": "(a) identité ; (b) équation, $x = 4$ ou $x = -4$ ; (c) définition d'une fonction ; (d) affectation Python."
+      "reponse": "$ 23 $"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "reciproque-condition-necessaire-suffisante",
-      "enonce": "On considère la proposition $P$ : « si un entier naturel $n$ se termine par $0$, alors $n$ est divisible par $5$ ». (a) Justifier que $P$ est vraie. (b) Énoncer la réciproque de $P$ et déterminer si elle est vraie, à l'aide d'un contre-exemple. (c) Compléter par « nécessaire » ou « suffisante » : « se terminer par $0$ est une condition … pour être divisible par $5$ » ; « être divisible par $5$ est une condition … pour se terminer par $0$ ». (d) Les propositions « $n$ se termine par $0$ » et « $n$ est divisible par $5$ » sont-elles équivalentes ?",
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 9 $, $ |B| = 13 $, $ |A\\cap B| = 4 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "(a) Un entier qui se termine par $0$ s'écrit $n = 10k$ pour un certain entier $k$, soit $n = 5 \\times (2k)$ : c'est un multiple de $5$. Ce raisonnement vaut pour **tout** tel entier, donc $P$ est vraie.",
-        "(b) La réciproque échange hypothèse et conclusion : « si $n$ est divisible par $5$, alors $n$ se termine par $0$ ». Elle est **fausse** : contre-exemple $n = 15$, qui est divisible par $5$ mais se termine par $5$ et non par $0$.",
-        "(c) Dans $P$ (vraie), l'hypothèse « se terminer par $0$ » est une condition **suffisante** pour « être divisible par $5$ » ; la conclusion « être divisible par $5$ » est une condition **nécessaire** pour « se terminer par $0$ » — tout entier finissant par $0$ est forcément divisible par $5$.",
-        "(d) **Non.** Il y aurait équivalence seulement si $P$ **et** sa réciproque étaient vraies. Or la réciproque est fausse (contre-exemple $15$) : les deux propositions ne sont donc pas équivalentes."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 9 + 13 - 4 = 18 $."
       ],
-      "reponse": "(a) $n = 10k = 5 \\times (2k)$, donc vraie ; (b) réciproque « si divisible par $5$ alors se termine par $0$ », fausse, contre-exemple $15$ ; (c) suffisante, puis nécessaire ; (d) non, pas d'équivalence."
+      "reponse": "$ 18 $"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "synthese-ensembles-logique",
-      "enonce": "Dans une classe de dix élèves numérotés de $1$ à $10$, on note $E = \\{1\\,;2\\,;3\\,;4\\,;5\\,;6\\,;7\\,;8\\,;9\\,;10\\}$. Deux clubs sont proposés le mercredi. Le club robotique réunit les élèves $R = \\{1\\,;3\\,;4\\,;7\\,;9\\}$ et le club journal réunit les élèves $J = \\{3\\,;4\\,;5\\,;9\\,;10\\}$. 1. Déterminer $R \\cap J$ et interpréter cet ensemble par une phrase. 2. Déterminer $R \\cup J$ ; combien d'élèves participent à au moins un club ? 3. Déterminer $\\overline{R \\cup J}$, le complémentaire de $R \\cup J$ dans $E$, et dire ce qu'il représente. 4. Pour désigner les représentants, on forme un binôme $(r\\,;j)$ où $r$ est un élève du club robotique et $j$ un élève du club journal. Combien de binômes $(r\\,;j)$ peut-on former en tout ? 5. On considère la proposition : « si un élève est inscrit au club robotique, alors il est inscrit au club journal ». Est-elle vraie pour cette classe ? Justifier. 6. Énoncer la réciproque de la proposition du 5. et dire si elle est vraie pour cette classe. Que peut-on en conclure sur les ensembles $R$ et $J$ ?",
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 22 $, $ |B| = 16 $, $ |A\\cap B| = 8 $. Calculer $ |A\\cup B| $.",
       "corrige": [
-        "1. $R \\cap J$ contient les élèves présents dans **les deux** clubs : $R \\cap J = \\{3\\,;4\\,;9\\}$. Ce sont les trois élèves inscrits à la fois à la robotique et au journal.",
-        "2. $R \\cup J$ contient les élèves inscrits à **au moins un** club, chacun compté une seule fois : $R \\cup J = \\{1\\,;3\\,;4\\,;5\\,;7\\,;9\\,;10\\}$. Cet ensemble compte $7$ éléments, donc $7$ élèves participent à au moins un club.",
-        "3. $\\overline{R \\cup J}$ contient les élèves de $E$ qui ne sont dans **aucun** club : on retire de $E$ les $7$ élèves précédents, il reste $\\overline{R \\cup J} = \\{2\\,;6\\,;8\\}$. Ces $3$ élèves ne participent à aucun des deux clubs.",
-        "4. Un binôme $(r\\,;j)$ est un **couple** dont le premier élément est dans $R$ ($5$ choix) et le second dans $J$ ($5$ choix) : c'est un élément du produit cartésien $R \\times J$, qui en compte $5 \\times 5 = 25$. On peut donc former $25$ binômes. (L'ordre compte : $(r\\,;j)$ désigne d'abord le représentant robotique, puis celui du journal.)",
-        "5. La proposition est **fausse** pour cette classe. Contre-exemple : l'élève $1$ est inscrit au club robotique ($1 \\in R$) mais pas au club journal ($1 \\notin J$). Un seul contre-exemple suffit à réfuter la proposition.",
-        "6. La réciproque échange hypothèse et conclusion : « si un élève est inscrit au club journal, alors il est inscrit au club robotique ». Elle est également **fausse** : l'élève $5$ vérifie $5 \\in J$ mais $5 \\notin R$. Comme aucune des deux implications n'est vraie, on n'a ni $R \\subset J$ ni $J \\subset R$ : aucun des deux clubs n'est inclus dans l'autre."
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 22 + 16 - 8 = 30 $."
       ],
-      "reponse": "1. $R \\cap J = \\{3\\,;4\\,;9\\}$ ; 2. $R \\cup J = \\{1\\,;3\\,;4\\,;5\\,;7\\,;9\\,;10\\}$, soit $7$ élèves ; 3. $\\overline{R \\cup J} = \\{2\\,;6\\,;8\\}$, les $3$ élèves sans club ; 4. $5 \\times 5 = 25$ binômes ; 5. fausse (élève $1 \\in R$, $\\notin J$) ; 6. réciproque fausse aussi (élève $5 \\in J$, $\\notin R$), donc ni $R \\subset J$ ni $J \\subset R$."
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 11 $, $ |B| = 7 $, $ |A\\cap B| = 3 $. Calculer $ |A\\cup B| $.",
+      "corrige": [
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 11 + 7 - 3 = 15 $."
+      ],
+      "reponse": "$ 15 $"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A| = 25 $, $ |B| = 20 $, $ |A\\cap B| = 12 $. Calculer $ |A\\cup B| $.",
+      "corrige": [
+        "$ |A\\cup B| = |A| + |B| - |A\\cap B| = 25 + 20 - 12 = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=10 $, $ |B|=8 $, $ |A\\cup B|=15 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 10+8-15 = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=12 $, $ |B|=9 $, $ |A\\cup B|=18 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 12+9-18 = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=20 $, $ |B|=14 $, $ |A\\cup B|=30 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 20+14-30 = 4 $."
+      ],
+      "reponse": "$ 4 $"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=7 $, $ |B|=6 $, $ |A\\cup B|=11 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 7+6-11 = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=15 $, $ |B|=10 $, $ |A\\cup B|=20 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 15+10-20 = 5 $."
+      ],
+      "reponse": "$ 5 $"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=9 $, $ |B|=8 $, $ |A\\cup B|=14 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 9+8-14 = 3 $."
+      ],
+      "reponse": "$ 3 $"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=25 $, $ |B|=18 $, $ |A\\cup B|=35 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 25+18-35 = 8 $."
+      ],
+      "reponse": "$ 8 $"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "cardinal-inter",
+      "enonce": "$ |A|=6 $, $ |B|=5 $, $ |A\\cup B|=9 $. Calculer $ |A\\cap B| $.",
+      "corrige": [
+        "$ |A\\cap B| = 6+5-9 = 2 $."
+      ],
+      "reponse": "$ 2 $"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=11 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 17 $."
+      ],
+      "reponse": "$ 17 $"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=12 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 18 $."
+      ],
+      "reponse": "$ 18 $"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=13 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 19 $."
+      ],
+      "reponse": "$ 19 $"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=14 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 20 $."
+      ],
+      "reponse": "$ 20 $"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=15 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 21 $."
+      ],
+      "reponse": "$ 21 $"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=16 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 22 $."
+      ],
+      "reponse": "$ 22 $"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=17 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 23 $."
+      ],
+      "reponse": "$ 23 $"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=18 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 24 $."
+      ],
+      "reponse": "$ 24 $"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=19 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 25 $."
+      ],
+      "reponse": "$ 25 $"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=20 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 26 $."
+      ],
+      "reponse": "$ 26 $"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=21 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 27 $."
+      ],
+      "reponse": "$ 27 $"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=22 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 28 $."
+      ],
+      "reponse": "$ 28 $"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=23 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 29 $."
+      ],
+      "reponse": "$ 29 $"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=24 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 30 $."
+      ],
+      "reponse": "$ 30 $"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=25 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 31 $."
+      ],
+      "reponse": "$ 31 $"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=26 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 32 $."
+      ],
+      "reponse": "$ 32 $"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=27 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 33 $."
+      ],
+      "reponse": "$ 33 $"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=28 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 34 $."
+      ],
+      "reponse": "$ 34 $"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=29 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 35 $."
+      ],
+      "reponse": "$ 35 $"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=30 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 36 $."
+      ],
+      "reponse": "$ 36 $"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=31 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 37 $."
+      ],
+      "reponse": "$ 37 $"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=32 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 38 $."
+      ],
+      "reponse": "$ 38 $"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=33 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 39 $."
+      ],
+      "reponse": "$ 39 $"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=34 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 40 $."
+      ],
+      "reponse": "$ 40 $"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=35 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 41 $."
+      ],
+      "reponse": "$ 41 $"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=36 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 42 $."
+      ],
+      "reponse": "$ 42 $"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=37 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 43 $."
+      ],
+      "reponse": "$ 43 $"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=38 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 44 $."
+      ],
+      "reponse": "$ 44 $"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=39 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 45 $."
+      ],
+      "reponse": "$ 45 $"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "cardinal-union",
+      "enonce": "$ |A|=40 $, $ |B|=8 $, $ |A\\cap B|=2 $ : $ |A\\cup B| $ ?",
+      "corrige": [
+        "$ = 46 $."
+      ],
+      "reponse": "$ 46 $"
     }
   ]
 }

@@ -13,135 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "capacite-thermique",
-      "enonce": "On chauffe une casserole contenant $m = 0{,}30$ kg d'eau, de la température initiale $\\theta_i = 18\\ \\text{°C}$ jusqu'à $\\theta_f = 100\\ \\text{°C}$. L'eau est incompressible et n'échange pas de travail : $\\Delta U = Q = m\\,c\\,\\Delta T$, avec $c = 4{,}18 \\times 10^{3}$ $\\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$. Calculer l'énergie thermique $Q$ à apporter à l'eau.",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 1 kg d'eau de 10 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "On calcule d'abord l'écart de température : $\\Delta T = \\theta_f - \\theta_i = 100 - 18 = 82\\ \\text{°C}$. Un **écart** de température se transpose tel quel en kelvins : $\\Delta T = 82$ K (on n'ajoute pas $273{,}15$ à un écart).",
-        "L'eau étant incompressible et sans travail échangé, le premier principe se réduit à $\\Delta U = Q = m\\,c\\,\\Delta T$.",
-        "Application numérique : $Q = 0{,}30 \\times 4{,}18\\times10^{3} \\times 82 = 1{,}03\\times10^{5}$ J.",
-        "Soit $Q \\approx 1{,}0 \\times 10^{5}$ J, c'est-à-dire environ $103$ kJ à fournir à l'eau."
+        "$ Q = m c \\Delta T = 1\\times 4180\\times 10 = 41800 $ J."
       ],
-      "reponse": "$Q = m\\,c\\,\\Delta T = 0{,}30 \\times 4{,}18\\times10^{3} \\times 82 \\approx 1{,}0 \\times 10^{5}$ J (soit $\\approx 103$ kJ)."
+      "reponse": "$ 41800 $ J"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "flux-thermique",
-      "enonce": "Un radiateur électrique fournit une énergie thermique $Q = 9{,}0 \\times 10^{5}$ J en une durée $\\Delta t = 30$ min. Calculer le flux thermique $\\varphi$ délivré par ce radiateur, en watts.",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 2 kg d'eau de 5 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "Le flux thermique est défini par $\\varphi = \\dfrac{Q}{\\Delta t}$ ; il s'exprime en watts, donc la durée doit être en **secondes**.",
-        "Conversion : $\\Delta t = 30\\ \\text{min} = 30 \\times 60 = 1800$ s.",
-        "Application numérique : $\\varphi = \\dfrac{9{,}0\\times10^{5}}{1800} = 5{,}0 \\times 10^{2}$ W.",
-        "Le radiateur délivre donc un flux de $500$ W. Oublier de convertir les minutes en secondes donnerait un résultat $60$ fois trop grand."
+        "$ Q = m c \\Delta T = 2\\times 4180\\times 5 = 41800 $ J."
       ],
-      "reponse": "$\\varphi = \\dfrac{Q}{\\Delta t} = \\dfrac{9{,}0\\times10^{5}}{1800} = 5{,}0 \\times 10^{2}$ W (soit $500$ W)."
+      "reponse": "$ 41800 $ J"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "resistance-thermique",
-      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}025$ $\\mathrm{K\\cdot W^{-1}}$ sépare l'intérieur d'une maison ($19\\ \\text{°C}$) de l'extérieur ($-1\\ \\text{°C}$). 1) Calculer le flux thermique $\\varphi$ qui traverse le mur ($\\varphi = \\dfrac{\\Delta T}{R_{th}}$). 2) En déduire l'énergie thermique $Q$ perdue à travers ce mur en une heure.",
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 0,5 kg d'eau de 20 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "1) L'écart de température entre les deux faces est $\\Delta T = 19 - (-1) = 20\\ \\text{°C} = 20$ K.",
-        "Flux thermique : $\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{20}{0{,}025} = 8{,}0 \\times 10^{2}$ W. Le mur laisse fuir $800$ W.",
-        "2) L'énergie est le flux multiplié par la durée : $Q = \\varphi \\times \\Delta t$, avec $\\Delta t = 1$ h $= 3600$ s.",
-        "$Q = 800 \\times 3600 = 2{,}88\\times10^{6}$ J $\\approx 2{,}9 \\times 10^{6}$ J. Le flux (W) est une puissance ; il faut le multiplier par une durée pour obtenir une énergie (J)."
+        "$ Q = m c \\Delta T = 0,5\\times 4180\\times 20 = 41800 $ J."
       ],
-      "reponse": "$\\varphi = \\dfrac{20}{0{,}025} = 8{,}0\\times10^{2}$ W ; $Q = \\varphi\\,\\Delta t = 800 \\times 3600 \\approx 2{,}9\\times10^{6}$ J en une heure."
+      "reponse": "$ 41800 $ J"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "premier-principe",
-      "enonce": "Au cours d'une transformation, un système reçoit de l'extérieur un transfert thermique $Q = +1{,}5 \\times 10^{3}$ J et fournit à l'extérieur un travail de $400$ J. 1) Donner la valeur algébrique du travail $W$ reçu par le système. 2) En déduire la variation d'énergie interne $\\Delta U$ à l'aide du premier principe.",
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 1 kg d'eau de 50 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "1) On se place du point de vue du système. Le système **fournit** (cède) un travail de $400$ J : il en perd, donc la valeur algébrique du travail reçu est **négative** : $W = -400$ J.",
-        "Le transfert thermique, lui, est **reçu** : $Q = +1{,}5\\times10^{3}$ J $= +1500$ J.",
-        "2) Premier principe : $\\Delta U = Q + W = 1500 + (-400) = 1100$ J.",
-        "$\\Delta U = +1{,}1\\times10^{3}$ J : l'énergie interne augmente. Le piège est de sommer $1500 + 400$ en oubliant que le travail fourni compte **négativement**."
+        "$ Q = m c \\Delta T = 1\\times 4180\\times 50 = 209000 $ J."
       ],
-      "reponse": "$W = -400$ J, donc $\\Delta U = Q + W = 1500 - 400 = +1{,}1\\times10^{3}$ J."
+      "reponse": "$ 209000 $ J"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "capacite-thermique",
-      "enonce": "Un chauffe-eau doit porter $m = 50$ kg d'eau de $15\\ \\text{°C}$ à $55\\ \\text{°C}$ ($c = 4{,}18 \\times 10^{3}$ $\\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$). 1) Calculer l'énergie thermique $Q$ nécessaire. 2) Le chauffe-eau développe une puissance (flux) constante $P = 2{,}0$ kW, entièrement transmise à l'eau. Calculer la durée $\\Delta t$ du chauffage. Donner le résultat en minutes.",
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 3 kg d'eau de 10 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "1) L'écart de température vaut $\\Delta T = 55 - 15 = 40\\ \\text{°C} = 40$ K. Pour l'eau incompressible sans travail : $Q = m\\,c\\,\\Delta T = 50 \\times 4{,}18\\times10^{3} \\times 40 = 8{,}36\\times10^{6}$ J.",
-        "Soit $Q \\approx 8{,}4 \\times 10^{6}$ J (environ $8{,}4$ MJ).",
-        "2) La puissance relie l'énergie et la durée : $P = \\dfrac{Q}{\\Delta t}$, donc $\\Delta t = \\dfrac{Q}{P}$. Il faut $P$ en watts : $P = 2{,}0$ kW $= 2{,}0\\times10^{3}$ W.",
-        "$\\Delta t = \\dfrac{8{,}36\\times10^{6}}{2{,}0\\times10^{3}} = 4{,}18\\times10^{3}$ s.",
-        "Conversion en minutes : $\\Delta t = \\dfrac{4180}{60} \\approx 70$ min. Le chauffage dure un peu plus d'une heure."
+        "$ Q = m c \\Delta T = 3\\times 4180\\times 10 = 125400 $ J."
       ],
-      "reponse": "$Q = m\\,c\\,\\Delta T \\approx 8{,}4\\times10^{6}$ J ; $\\Delta t = \\dfrac{Q}{P} = \\dfrac{8{,}36\\times10^{6}}{2{,}0\\times10^{3}} \\approx 4{,}2\\times10^{3}$ s, soit environ $70$ min."
+      "reponse": "$ 125400 $ J"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "sens-spontane",
-      "enonce": "Dans un calorimètre (parois isolantes, aucun échange avec l'extérieur), on mélange $m_1 = 0{,}20$ kg d'eau chaude à $\\theta_1 = 80\\ \\text{°C}$ avec $m_2 = 0{,}30$ kg d'eau froide à $\\theta_2 = 20\\ \\text{°C}$. La capacité thermique massique $c$ de l'eau est la même dans les deux cas. 1) Prévoir le sens du transfert thermique. 2) En écrivant que l'énergie totale se conserve, déterminer la température finale $\\theta_f$ à l'équilibre.",
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 2 kg d'eau de 20 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "1) Le transfert se fait spontanément du **chaud vers le froid** : l'eau à $80\\ \\text{°C}$ cède de l'énergie ($Q_1 < 0$) à l'eau à $20\\ \\text{°C}$ qui en reçoit ($Q_2 > 0$), jusqu'à une température commune $\\theta_f$.",
-        "L'ensemble étant isolé, aucune énergie ne sort : la somme des transferts est nulle, $Q_1 + Q_2 = 0$, soit $m_1\\,c\\,(\\theta_f - \\theta_1) + m_2\\,c\\,(\\theta_f - \\theta_2) = 0$.",
-        "$c$ se simplifie (même liquide) : $m_1(\\theta_f - \\theta_1) + m_2(\\theta_f - \\theta_2) = 0$. On isole $\\theta_f$ : $\\theta_f = \\dfrac{m_1\\,\\theta_1 + m_2\\,\\theta_2}{m_1 + m_2}$.",
-        "Application numérique : $\\theta_f = \\dfrac{0{,}20 \\times 80 + 0{,}30 \\times 20}{0{,}20 + 0{,}30} = \\dfrac{16 + 6}{0{,}50} = \\dfrac{22}{0{,}50} = 44\\ \\text{°C}$.",
-        "Vérification du signe : $\\theta_f = 44\\ \\text{°C}$ est bien **entre** $20$ et $80\\ \\text{°C}$, et plus proche de $20\\ \\text{°C}$ car il y a davantage d'eau froide. Cohérent."
+        "$ Q = m c \\Delta T = 2\\times 4180\\times 20 = 167200 $ J."
       ],
-      "reponse": "Transfert du chaud vers le froid ; $\\theta_f = \\dfrac{m_1\\theta_1 + m_2\\theta_2}{m_1 + m_2} = \\dfrac{16 + 6}{0{,}50} = 44\\ \\text{°C}$."
+      "reponse": "$ 167200 $ J"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "loi-newton-refroidissement",
-      "enonce": "Une canalisation d'eau chaude, dont la surface est à la température $T = 60\\ \\text{°C}$, traverse une pièce à $T_{\\text{ext}} = 20\\ \\text{°C}$. Elle échange avec l'air selon la loi de Newton du refroidissement : $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$, avec un coefficient d'échange $h = 8{,}0$ $\\mathrm{W\\cdot m^{-2}\\cdot K^{-1}}$ et une surface d'échange $S = 0{,}25\\ \\text{m}^2$. Calculer le flux thermique $\\varphi$ perdu par la canalisation.",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 0,5 kg d'eau de 40 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "On calcule d'abord l'écart de température entre la surface et l'air : $T - T_{\\text{ext}} = 60 - 20 = 40\\ \\text{°C} = 40$ K (un **écart** de température se transpose tel quel en kelvins).",
-        "On applique la loi de Newton : $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$, toutes les grandeurs étant déjà dans les bonnes unités.",
-        "Application numérique : $\\varphi = 8{,}0 \\times 0{,}25 \\times 40 = 80$ W.",
-        "La canalisation perd donc un flux thermique de $\\varphi = 80$ W vers la pièce. Plus $T$ s'approcherait de $T_{\\text{ext}}$, plus ce flux diminuerait."
+        "$ Q = m c \\Delta T = 0,5\\times 4180\\times 40 = 83600 $ J."
       ],
-      "reponse": "$\\varphi = h\\,S\\,(T - T_{\\text{ext}}) = 8{,}0 \\times 0{,}25 \\times 40 = 80$ W."
+      "reponse": "$ 83600 $ J"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "premier-principe",
-      "enonce": "Un gaz enfermé dans un cylindre reçoit de l'extérieur un transfert thermique $Q = +2{,}0 \\times 10^{3}$ J. Au cours de la transformation, sa variation d'énergie interne mesurée vaut $\\Delta U = +1{,}2 \\times 10^{3}$ J. 1) À l'aide du premier principe, calculer la valeur algébrique du travail $W$ échangé. 2) Le gaz a-t-il reçu ou fourni ce travail ? Interpréter.",
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 1 kg d'eau de 30 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "1) Le premier principe s'écrit $\\Delta U = Q + W$. On en tire le travail : $W = \\Delta U - Q$.",
-        "Application numérique : $W = 1{,}2\\times10^{3} - 2{,}0\\times10^{3} = -0{,}8\\times10^{3} = -8{,}0\\times10^{2}$ J.",
-        "2) La valeur algébrique du travail reçu est **négative** ($W < 0$) : cela signifie que le gaz **cède** du travail à l'extérieur. Il en fournit $800$ J (typiquement en poussant un piston lors de sa détente).",
-        "Cohérence : le gaz reçoit $2000$ J de chaleur mais son énergie interne n'augmente que de $1200$ J ; les $800$ J manquants sont exactement le travail qu'il a fourni au milieu extérieur."
+        "$ Q = m c \\Delta T = 1\\times 4180\\times 30 = 125400 $ J."
       ],
-      "reponse": "$W = \\Delta U - Q = 1{,}2\\times10^{3} - 2{,}0\\times10^{3} = -8{,}0\\times10^{2}$ J : le gaz **fournit** $800$ J de travail à l'extérieur."
+      "reponse": "$ 125400 $ J"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "resistance-thermique",
-      "enonce": "Un mur de résistance thermique $R_{th} = 0{,}020$ $\\mathrm{K\\cdot W^{-1}}$ sépare l'intérieur d'un logement maintenu à $20\\ \\text{°C}$ de l'extérieur à $6\\ \\text{°C}$. 1) Calculer le flux thermique $\\varphi$ perdu à travers le mur. 2) En déduire l'énergie thermique perdue $Q$ pendant une journée entière (24 h), en joules puis en kWh. 3) Sachant que l'électricité de chauffage coûte $0{,}20$ € par kWh, estimer le coût journalier de ces pertes à travers ce seul mur.",
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 4 kg d'eau de 5 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "1) L'écart de température entre les deux faces vaut $\\Delta T = 20 - 6 = 14\\ \\text{°C} = 14$ K. Le flux est $\\varphi = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{14}{0{,}020} = 7{,}0\\times10^{2}$ W. Le mur laisse fuir $700$ W.",
-        "2) L'énergie est le flux multiplié par la durée : $Q = \\varphi \\times \\Delta t$, avec $\\Delta t = 24$ h $= 24 \\times 3600 = 8{,}64\\times10^{4}$ s.",
-        "$Q = 700 \\times 8{,}64\\times10^{4} = 6{,}05\\times10^{7}$ J. Pour convertir en kWh, on peut aussi raisonner directement : $\\varphi = 0{,}70$ kW pendant $24$ h, soit $Q = 0{,}70 \\times 24 = 16{,}8$ kWh (on retrouve bien $16{,}8\\ \\text{kWh} = 16{,}8 \\times 3{,}6\\times10^{6}\\ \\text{J} \\approx 6{,}0\\times10^{7}$ J).",
-        "3) Coût $= 16{,}8\\ \\text{kWh} \\times 0{,}20\\ \\text{€/kWh} = 3{,}4$ €. Ces pertes coûtent environ $3{,}4$ € par jour pour ce seul mur : mieux isoler (augmenter $R_{th}$) réduirait proportionnellement le flux, l'énergie et donc la facture."
+        "$ Q = m c \\Delta T = 4\\times 4180\\times 5 = 83600 $ J."
       ],
-      "reponse": "$\\varphi = \\dfrac{14}{0{,}020} = 7{,}0\\times10^{2}$ W ; $Q = \\varphi\\,\\Delta t = 700 \\times 8{,}64\\times10^{4} \\approx 6{,}0\\times10^{7}$ J $= 16{,}8$ kWh, soit un coût d'environ $3{,}4$ € par jour."
+      "reponse": "$ 83600 $ J"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "synthese",
-      "enonce": "**Confort thermique d'un séjour en hiver.** Dans un chalet, un séjour est chauffé par un plancher chauffant à eau. Une nuit d'hiver, la température extérieure est $\\theta_{\\text{ext}} = 0\\ \\text{°C}$ et l'on souhaite maintenir l'intérieur à $\\theta_{\\text{int}} = 20\\ \\text{°C}$. Données : capacité thermique massique de l'eau $c = 4{,}18 \\times 10^{3}$ $\\mathrm{J\\cdot kg^{-1}\\cdot K^{-1}}$ ; l'eau est incompressible et n'échange pas de travail. \\n\\n1. Pour mettre en route le plancher, une chaudière porte $m = 80$ kg d'eau de $20\\ \\text{°C}$ à $45\\ \\text{°C}$. Calculer l'énergie thermique $Q$ à fournir à cette eau. \\n2. La chaudière développe une puissance constante $P = 2{,}5$ kW, entièrement transmise à l'eau. Déterminer la durée $\\Delta t$ nécessaire pour atteindre $45\\ \\text{°C}$. Exprimer le résultat en minutes. \\n3. Une fois le séjour à $20\\ \\text{°C}$, il perd de la chaleur vers l'extérieur à travers ses parois, de résistance thermique globale $R_{th} = 0{,}020$ $\\mathrm{K\\cdot W^{-1}}$. Calculer le flux thermique $\\varphi_{\\text{pertes}}$ perdu par le séjour. \\n4. La chaudière fournit en régime permanent une puissance de $2{,}5$ kW. Ce chauffage suffit-il à compenser les pertes calculées à la question 3 ? Justifier par un bilan d'énergie. \\n5. Au milieu de la nuit, on éteint le chauffage. En invoquant la loi de Newton du refroidissement, décrire qualitativement comment évolue la température du séjour au cours du temps.",
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 2 kg d'eau de 15 °C (c = 4180 J/(kg.°C)) ?",
       "corrige": [
-        "1. L'eau est incompressible et n'échange pas de travail, donc $\\Delta U = Q = m\\,c\\,\\Delta T$. L'écart vaut $\\Delta T = 45 - 20 = 25\\ \\text{°C} = 25$ K. Application : $Q = 80 \\times 4{,}18\\times10^{3} \\times 25 = 8{,}36\\times10^{6}$ J, soit $Q \\approx 8{,}4\\times10^{6}$ J (environ $8{,}4$ MJ).",
-        "2. La puissance relie énergie et durée : $P = \\dfrac{Q}{\\Delta t}$, donc $\\Delta t = \\dfrac{Q}{P}$. Avec $P = 2{,}5$ kW $= 2{,}5\\times10^{3}$ W : $\\Delta t = \\dfrac{8{,}36\\times10^{6}}{2{,}5\\times10^{3}} = 3{,}34\\times10^{3}$ s. Conversion : $\\Delta t = \\dfrac{3340}{60} \\approx 56$ min.",
-        "3. L'écart entre intérieur et extérieur est $\\Delta T = 20 - 0 = 20\\ \\text{°C} = 20$ K. Le flux perdu est $\\varphi_{\\text{pertes}} = \\dfrac{\\Delta T}{R_{th}} = \\dfrac{20}{0{,}020} = 1{,}0\\times10^{3}$ W, soit $1{,}0$ kW.",
-        "4. Bilan : la chaudière apporte $2{,}5$ kW, les parois évacuent $1{,}0$ kW. Comme $2{,}5\\ \\text{kW} > 1{,}0\\ \\text{kW}$, la puissance fournie dépasse les pertes : le chauffage suffit largement à compenser les pertes et à maintenir (voire élever) la température du séjour. L'excédent disponible est $2{,}5 - 1{,}0 = 1{,}5$ kW.",
-        "5. Chauffage éteint, le séjour se refroidit. D'après la loi de Newton, $\\varphi = h\\,S\\,(T - T_{\\text{ext}})$ : le flux de pertes est proportionnel à l'écart $T - T_{\\text{ext}}$. Au début, l'écart est grand ($20$ K), donc le refroidissement est rapide ; à mesure que $T$ diminue, l'écart se réduit et le refroidissement ralentit. La température décroît de façon **exponentielle** vers $\\theta_{\\text{ext}} = 0\\ \\text{°C}$, sans jamais descendre en dessous."
+        "$ Q = m c \\Delta T = 2\\times 4180\\times 15 = 125400 $ J."
       ],
-      "reponse": "1. $Q = m\\,c\\,\\Delta T = 80 \\times 4{,}18\\times10^{3} \\times 25 \\approx 8{,}4\\times10^{6}$ J. 2. $\\Delta t = \\dfrac{Q}{P} = \\dfrac{8{,}36\\times10^{6}}{2{,}5\\times10^{3}} \\approx 3{,}3\\times10^{3}$ s $\\approx 56$ min. 3. $\\varphi_{\\text{pertes}} = \\dfrac{20}{0{,}020} = 1{,}0\\times10^{3}$ W. 4. Oui : $2{,}5$ kW $> 1{,}0$ kW, la chaudière compense les pertes (excédent $1{,}5$ kW). 5. Refroidissement exponentiel vers $0\\ \\text{°C}$, rapide puis de plus en plus lent (loi de Newton)."
+      "reponse": "$ 125400 $ J"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 1 kg d'eau de 100 °C (c = 4180 J/(kg.°C)) ?",
+      "corrige": [
+        "$ Q = m c \\Delta T = 1\\times 4180\\times 100 = 418000 $ J."
+      ],
+      "reponse": "$ 418000 $ J"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "Chaleur pour chauffer 0,5 kg d'eau de 10 °C (c = 4180 J/(kg.°C)) ?",
+      "corrige": [
+        "$ Q = m c \\Delta T = 0,5\\times 4180\\times 10 = 20900 $ J."
+      ],
+      "reponse": "$ 20900 $ J"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 5 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 20900 $ J."
+      ],
+      "reponse": "$ 20900 $ J"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 10 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 41800 $ J."
+      ],
+      "reponse": "$ 41800 $ J"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 15 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 62700 $ J."
+      ],
+      "reponse": "$ 62700 $ J"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 20 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 83600 $ J."
+      ],
+      "reponse": "$ 83600 $ J"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 25 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 104500 $ J."
+      ],
+      "reponse": "$ 104500 $ J"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 30 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 125400 $ J."
+      ],
+      "reponse": "$ 125400 $ J"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 35 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 146300 $ J."
+      ],
+      "reponse": "$ 146300 $ J"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 40 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 167200 $ J."
+      ],
+      "reponse": "$ 167200 $ J"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 45 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 188100 $ J."
+      ],
+      "reponse": "$ 188100 $ J"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 50 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 209000 $ J."
+      ],
+      "reponse": "$ 209000 $ J"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 55 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 229900 $ J."
+      ],
+      "reponse": "$ 229900 $ J"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 60 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 250800 $ J."
+      ],
+      "reponse": "$ 250800 $ J"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 65 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 271700 $ J."
+      ],
+      "reponse": "$ 271700 $ J"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 70 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 292600 $ J."
+      ],
+      "reponse": "$ 292600 $ J"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 75 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 313500 $ J."
+      ],
+      "reponse": "$ 313500 $ J"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 80 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 334400 $ J."
+      ],
+      "reponse": "$ 334400 $ J"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 85 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 355300 $ J."
+      ],
+      "reponse": "$ 355300 $ J"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 90 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 376200 $ J."
+      ],
+      "reponse": "$ 376200 $ J"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 95 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 397100 $ J."
+      ],
+      "reponse": "$ 397100 $ J"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 100 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 418000 $ J."
+      ],
+      "reponse": "$ 418000 $ J"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 105 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 438900 $ J."
+      ],
+      "reponse": "$ 438900 $ J"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 110 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 459800 $ J."
+      ],
+      "reponse": "$ 459800 $ J"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 115 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 480700 $ J."
+      ],
+      "reponse": "$ 480700 $ J"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 120 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 501600 $ J."
+      ],
+      "reponse": "$ 501600 $ J"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 125 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 522500 $ J."
+      ],
+      "reponse": "$ 522500 $ J"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 130 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 543400 $ J."
+      ],
+      "reponse": "$ 543400 $ J"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 135 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 564300 $ J."
+      ],
+      "reponse": "$ 564300 $ J"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 140 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 585200 $ J."
+      ],
+      "reponse": "$ 585200 $ J"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 145 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 606100 $ J."
+      ],
+      "reponse": "$ 606100 $ J"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 150 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 627000 $ J."
+      ],
+      "reponse": "$ 627000 $ J"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 155 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 647900 $ J."
+      ],
+      "reponse": "$ 647900 $ J"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 160 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 668800 $ J."
+      ],
+      "reponse": "$ 668800 $ J"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 165 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 689700 $ J."
+      ],
+      "reponse": "$ 689700 $ J"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 170 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 710600 $ J."
+      ],
+      "reponse": "$ 710600 $ J"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 175 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 731500 $ J."
+      ],
+      "reponse": "$ 731500 $ J"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 180 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 752400 $ J."
+      ],
+      "reponse": "$ 752400 $ J"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 185 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 773300 $ J."
+      ],
+      "reponse": "$ 773300 $ J"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "chaleur",
+      "enonce": "1 kg d'eau, $ \\Delta T = 190 $ °C : chaleur ?",
+      "corrige": [
+        "$ = 794200 $ J."
+      ],
+      "reponse": "$ 794200 $ J"
     }
   ]
 }

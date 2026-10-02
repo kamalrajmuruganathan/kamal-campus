@@ -13,132 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "equation-etat",
-      "enonce": "Un récipient rigide de volume $V = 2{,}0$ L contient $n = 0{,}50$ mol de gaz parfait à la température $\\theta = 20$ °C. Calculer la pression $P$ du gaz.",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 2 $ bar, $ V_1 = 3 $ L, $ P_2 = 1 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "On isole la pression dans l'équation d'état : $P = \\dfrac{nRT}{V}$.",
-        "On convertit chaque grandeur en unités SI : $T = 20 + 273 = 293$ K et $V = 2{,}0$ L $= 2{,}0 \\times 10^{-3}$ $\\mathrm{m^{3}}$.",
-        "Application numérique : $P = \\dfrac{0{,}50 \\times 8{,}314 \\times 293}{2{,}0 \\times 10^{-3}} \\approx 6{,}1 \\times 10^{5}$ Pa."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{2\\times 3}{1} = 6 $ L."
       ],
-      "reponse": "$P = \\dfrac{nRT}{V} \\approx 6{,}1 \\times 10^{5}$ Pa (soit environ $6{,}1$ bar)."
+      "reponse": "$ 6 $ L"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "equation-etat",
-      "enonce": "Quel volume $V$ occupe $n = 1{,}0$ mol de gaz parfait à la température $\\theta = 20$ °C sous la pression atmosphérique $P = 1{,}013 \\times 10^{5}$ Pa ? Exprimer le résultat en $\\mathrm{m^{3}}$ puis en litres.",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 4 $ bar, $ V_1 = 5 $ L, $ P_2 = 2 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "On isole le volume : $V = \\dfrac{nRT}{P}$ (la pression est au dénominateur).",
-        "On convertit la température : $T = 20 + 273{,}15 = 293{,}15$ K. La pression est déjà en pascals.",
-        "Application numérique : $V = \\dfrac{1{,}0 \\times 8{,}314 \\times 293{,}15}{1{,}013 \\times 10^{5}} \\approx 2{,}41 \\times 10^{-2}$ $\\mathrm{m^{3}}$.",
-        "Conversion en litres : $2{,}41 \\times 10^{-2}$ $\\mathrm{m^{3}}$ $= 24{,}1$ L. C'est le volume molaire d'un gaz parfait à $20$ °C sous pression atmosphérique."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{4\\times 5}{2} = 10 $ L."
       ],
-      "reponse": "$V = \\dfrac{nRT}{P} \\approx 2{,}41 \\times 10^{-2}$ $\\mathrm{m^{3}}$, soit $24{,}1$ L."
+      "reponse": "$ 10 $ L"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "grandeurs-macroscopiques",
-      "enonce": "Le dioxygène $\\mathrm{O_2}$ a pour masse molaire $M = 32$ $\\mathrm{g\\cdot mol^{-1}}$. En le considérant comme un gaz parfait, calculer sa masse volumique $\\rho$ à $\\theta = 25$ °C sous $P = 1{,}0 \\times 10^{5}$ Pa. On rappelle $\\rho = \\dfrac{m}{V}$ et $m = nM$.",
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 1 $ bar, $ V_1 = 10 $ L, $ P_2 = 5 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "On combine $\\rho = \\dfrac{m}{V} = \\dfrac{nM}{V}$ avec l'équation d'état $V = \\dfrac{nRT}{P}$. En remplaçant, le $n$ se simplifie : $\\rho = \\dfrac{nM}{\\frac{nRT}{P}} = \\dfrac{PM}{RT}$.",
-        "On convertit en unités SI : $M = 32$ $\\mathrm{g\\cdot mol^{-1}}$ $= 32 \\times 10^{-3}$ $\\mathrm{kg\\cdot mol^{-1}}$ et $T = 25 + 273 = 298$ K.",
-        "Application numérique : $\\rho = \\dfrac{1{,}0 \\times 10^{5} \\times 32 \\times 10^{-3}}{8{,}314 \\times 298} \\approx 1{,}3$ $\\mathrm{kg\\cdot m^{-3}}$.",
-        "Cette valeur, de l'ordre de $1$ $\\mathrm{kg\\cdot m^{-3}}$, est bien mille fois plus faible que celle d'un liquide : c'est cohérent pour un gaz."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{1\\times 10}{5} = 2 $ L."
       ],
-      "reponse": "$\\rho = \\dfrac{PM}{RT} \\approx 1{,}3$ $\\mathrm{kg\\cdot m^{-3}}$."
+      "reponse": "$ 2 $ L"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "equation-etat",
-      "enonce": "Un pneu de volume supposé constant est gonflé à la pression $P_1 = 2{,}0$ bar lorsque sa température est $\\theta_1 = 15$ °C. Après un long trajet, l'air du pneu atteint $\\theta_2 = 45$ °C. Calculer la nouvelle pression $P_2$ (le pneu est considéré indéformable et la quantité d'air constante).",
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 3 $ bar, $ V_1 = 4 $ L, $ P_2 = 6 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "La quantité de matière et le volume sont constants : entre les deux états, $\\dfrac{P_1 V_1}{T_1} = \\dfrac{P_2 V_2}{T_2}$ se simplifie, avec $V_1 = V_2$, en $\\dfrac{P_1}{T_1} = \\dfrac{P_2}{T_2}$.",
-        "On convertit les températures en kelvins (indispensable, même dans un rapport) : $T_1 = 15 + 273 = 288$ K et $T_2 = 45 + 273 = 318$ K.",
-        "On isole $P_2 = P_1 \\times \\dfrac{T_2}{T_1} = 2{,}0 \\times \\dfrac{318}{288} \\approx 2{,}2$ bar.",
-        "Comme on calcule un rapport de pressions, on peut garder les bars : $P_2$ reste en bar. Un pneu qui chauffe voit donc sa pression augmenter."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{3\\times 4}{6} = 2 $ L."
       ],
-      "reponse": "$P_2 = P_1 \\dfrac{T_2}{T_1} \\approx 2{,}2$ bar."
+      "reponse": "$ 2 $ L"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "limites",
-      "enonce": "Une bouteille rigide de volume $V = 10$ L contient du dihydrogène $\\mathrm{H_2}$ ($M = 2{,}0$ $\\mathrm{g\\cdot mol^{-1}}$) sous $P = 200$ bar à $\\theta = 20$ °C. 1) En supposant le gaz parfait, calculer la quantité de matière $n$ puis la masse $m$ de dihydrogène. 2) Commenter la validité du modèle dans ces conditions.",
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 5 $ bar, $ V_1 = 2 $ L, $ P_2 = 1 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "On convertit tout en unités SI : $V = 10$ L $= 1{,}0 \\times 10^{-2}$ $\\mathrm{m^{3}}$, $P = 200$ bar $= 2{,}0 \\times 10^{7}$ Pa, $T = 20 + 273 = 293$ K.",
-        "On isole la quantité de matière : $n = \\dfrac{PV}{RT} = \\dfrac{2{,}0 \\times 10^{7} \\times 1{,}0 \\times 10^{-2}}{8{,}314 \\times 293} \\approx 82$ mol.",
-        "Masse correspondante : $m = nM = 82 \\times 2{,}0 = 1{,}6 \\times 10^{2}$ g, soit environ $0{,}16$ kg.",
-        "Commentaire : à $200$ bar, la pression est très élevée ; le volume propre des molécules n'est plus négligeable devant le volume disponible. Le modèle du gaz parfait ne donne ici qu'une valeur approchée : un modèle de gaz réel serait plus fidèle."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{5\\times 2}{1} = 10 $ L."
       ],
-      "reponse": "$n = \\dfrac{PV}{RT} \\approx 82$ mol et $m = nM \\approx 1{,}6 \\times 10^{2}$ g. À $200$ bar (haute pression), le modèle du gaz parfait atteint ses limites."
+      "reponse": "$ 10 $ L"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "equation-etat",
-      "enonce": "Une bulle d'air se détache du fond d'un lac, où règnent la pression $P_1 = 3{,}0$ bar et la température $\\theta_1 = 8$ °C ; son volume y vaut $V_1 = 2{,}0$ mL. Elle remonte jusqu'à la surface, où $P_2 = 1{,}0$ bar et $\\theta_2 = 20$ °C. En assimilant l'air à un gaz parfait et en négligeant tout échange de matière, calculer le volume $V_2$ de la bulle à la surface.",
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 2 $ bar, $ V_1 = 6 $ L, $ P_2 = 4 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "La quantité de matière d'air dans la bulle est constante : on applique la relation entre deux états, $\\dfrac{P_1 V_1}{T_1} = \\dfrac{P_2 V_2}{T_2}$.",
-        "On convertit les températures en kelvins : $T_1 = 8 + 273 = 281$ K et $T_2 = 20 + 273 = 293$ K.",
-        "On isole $V_2 = V_1 \\times \\dfrac{P_1}{P_2} \\times \\dfrac{T_2}{T_1} = 2{,}0 \\times \\dfrac{3{,}0}{1{,}0} \\times \\dfrac{293}{281} \\approx 6{,}3$ mL.",
-        "Comme on n'utilise que des rapports ($P_1/P_2$ et $T_2/T_1$), les unités de $P$ (bar) et de $V$ (mL) se conservent : seules les températures doivent impérativement être en kelvins. La bulle grossit en remontant, surtout à cause de la chute de pression."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{2\\times 6}{4} = 3 $ L."
       ],
-      "reponse": "$V_2 = V_1 \\dfrac{P_1}{P_2}\\dfrac{T_2}{T_1} \\approx 6{,}3$ mL : la bulle grossit en remontant."
+      "reponse": "$ 3 $ L"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "equation-etat",
-      "enonce": "Un petit flacon rigide de volume $V = 0{,}50$ L contient de l'hélium, assimilé à un gaz parfait, sous la pression $P = 1{,}2$ bar à la température $\\theta = 22$ °C. Calculer la quantité de matière $n$ d'hélium contenue dans le flacon.",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 10 $ bar, $ V_1 = 1 $ L, $ P_2 = 2 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "On isole la quantité de matière dans l'équation d'état : $n = \\dfrac{PV}{RT}$.",
-        "On convertit chaque grandeur en unités SI : $V = 0{,}50$ L $= 5{,}0 \\times 10^{-4}$ $\\mathrm{m^{3}}$, $P = 1{,}2$ bar $= 1{,}2 \\times 10^{5}$ Pa et $T = 22 + 273 = 295$ K.",
-        "Application numérique : $n = \\dfrac{1{,}2 \\times 10^{5} \\times 5{,}0 \\times 10^{-4}}{8{,}314 \\times 295} \\approx 2{,}4 \\times 10^{-2}$ mol."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{10\\times 1}{2} = 5 $ L."
       ],
-      "reponse": "$n = \\dfrac{PV}{RT} \\approx 2{,}4 \\times 10^{-2}$ mol."
+      "reponse": "$ 5 $ L"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "equation-etat",
-      "enonce": "Un récipient rigide de volume $V = 3{,}0$ L contient une masse $m = 8{,}8$ g de dioxyde de carbone $\\mathrm{CO_2}$ ($M = 44$ $\\mathrm{g\\cdot mol^{-1}}$), assimilé à un gaz parfait, à la température $\\theta = 25$ °C. Calculer la pression $P$ régnant dans le récipient.",
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 6 $ bar, $ V_1 = 2 $ L, $ P_2 = 3 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "Première étape — la quantité de matière : $n = \\dfrac{m}{M} = \\dfrac{8{,}8}{44} = 0{,}20$ mol.",
-        "Seconde étape — l'équation d'état, où l'on isole la pression : $P = \\dfrac{nRT}{V}$.",
-        "On convertit en unités SI : $V = 3{,}0$ L $= 3{,}0 \\times 10^{-3}$ $\\mathrm{m^{3}}$ et $T = 25 + 273 = 298$ K.",
-        "Application numérique : $P = \\dfrac{0{,}20 \\times 8{,}314 \\times 298}{3{,}0 \\times 10^{-3}} \\approx 1{,}7 \\times 10^{5}$ Pa (soit environ $1{,}7$ bar)."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{6\\times 2}{3} = 4 $ L."
       ],
-      "reponse": "$n = \\dfrac{m}{M} = 0{,}20$ mol, puis $P = \\dfrac{nRT}{V} \\approx 1{,}7 \\times 10^{5}$ Pa."
+      "reponse": "$ 4 $ L"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "grandeurs-macroscopiques",
-      "enonce": "En laboratoire, on mesure la masse volumique d'un gaz pur inconnu, assimilé à un gaz parfait : $\\rho = 1{,}17$ $\\mathrm{kg\\cdot m^{-3}}$ à $\\theta = 15$ °C sous $P = 1{,}0 \\times 10^{5}$ Pa. 1) Établir l'expression de la masse molaire $M$ du gaz en fonction de $\\rho$, $P$, $R$ et $T$. 2) Calculer $M$ et identifier le gaz parmi : diazote $\\mathrm{N_2}$ ($28$ $\\mathrm{g\\cdot mol^{-1}}$), dioxygène $\\mathrm{O_2}$ ($32$ $\\mathrm{g\\cdot mol^{-1}}$), dioxyde de carbone $\\mathrm{CO_2}$ ($44$ $\\mathrm{g\\cdot mol^{-1}}$).",
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 4 $ bar, $ V_1 = 3 $ L, $ P_2 = 2 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "1) On part de $\\rho = \\dfrac{m}{V} = \\dfrac{nM}{V}$ et de l'équation d'état $PV = nRT$, soit $\\dfrac{n}{V} = \\dfrac{P}{RT}$. En combinant : $\\rho = \\dfrac{P M}{R T}$, d'où on isole $M = \\dfrac{\\rho R T}{P}$.",
-        "2) On convertit la température : $T = 15 + 273 = 288$ K (la pression et la masse volumique sont déjà en unités SI).",
-        "Application numérique : $M = \\dfrac{1{,}17 \\times 8{,}314 \\times 288}{1{,}0 \\times 10^{5}} \\approx 2{,}80 \\times 10^{-2}$ $\\mathrm{kg\\cdot mol^{-1}}$, soit $M \\approx 28$ $\\mathrm{g\\cdot mol^{-1}}$.",
-        "Cette valeur correspond au diazote $\\mathrm{N_2}$ ($28$ $\\mathrm{g\\cdot mol^{-1}}$) : c'est donc lui. Le dioxygène ($32$) et le dioxyde de carbone ($44$) donneraient une masse volumique nettement plus grande dans les mêmes conditions."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{4\\times 3}{2} = 6 $ L."
       ],
-      "reponse": "$M = \\dfrac{\\rho R T}{P} \\approx 28$ $\\mathrm{g\\cdot mol^{-1}}$ : le gaz est le diazote $\\mathrm{N_2}$."
+      "reponse": "$ 6 $ L"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "equation-etat",
-      "enonce": "Une bouteille de plongée rigide, de volume $V = 12$ L, est remplie d'air (assimilé à un gaz parfait, de masse molaire moyenne $M = 29$ $\\mathrm{g\\cdot mol^{-1}}$) sous la pression $P_1 = 200$ bar à la température $\\theta_1 = 20$ °C. On prendra $R = 8{,}314$ $\\mathrm{J\\cdot K^{-1}\\cdot mol^{-1}}$.\n\n1. Convertir le volume $V$, la pression $P_1$ et la température $\\theta_1$ en unités du Système international.\n2. Calculer la quantité de matière $n$ d'air enfermée dans la bouteille.\n3. En déduire la masse $m$ d'air comprimé dans la bouteille.\n4. Oubliée en plein soleil, la bouteille (indéformable, donc à volume et quantité de matière constants) voit sa température monter à $\\theta_2 = 50$ °C. Calculer la nouvelle pression $P_2$.\n5. Interpréter, à l'échelle microscopique, cette variation de pression.\n6. La bouteille est remplie sous $200$ bar : le modèle du gaz parfait est-il ici pleinement justifié ? Justifier.",
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 1 $ bar, $ V_1 = 20 $ L, $ P_2 = 4 $ bar. Calculer $ V_2 $.",
       "corrige": [
-        "1. Conversions en unités SI : $V = 12$ L $= 1{,}2 \\times 10^{-2}$ $\\mathrm{m^{3}}$ ; $P_1 = 200$ bar $= 2{,}0 \\times 10^{7}$ Pa ; $T_1 = \\theta_1 + 273 = 20 + 273 = 293$ K.",
-        "2. On isole la quantité de matière dans l'équation d'état : $n = \\dfrac{P_1 V}{R T_1} = \\dfrac{2{,}0 \\times 10^{7} \\times 1{,}2 \\times 10^{-2}}{8{,}314 \\times 293} \\approx 99$ mol.",
-        "3. Masse d'air correspondante : $m = nM = 99 \\times 29 \\approx 2{,}9 \\times 10^{3}$ g, soit environ $2{,}9$ kg d'air comprimé.",
-        "4. Le volume et la quantité de matière sont constants ; entre les deux états, $\\dfrac{P_1 V}{T_1} = \\dfrac{P_2 V}{T_2}$ se simplifie en $\\dfrac{P_1}{T_1} = \\dfrac{P_2}{T_2}$. Avec $T_2 = 50 + 273 = 323$ K : $P_2 = P_1 \\times \\dfrac{T_2}{T_1} = 200 \\times \\dfrac{323}{293} \\approx 2{,}2 \\times 10^{2}$ bar (le rapport de températures autorise à garder les bars).",
-        "5. À l'échelle microscopique, chauffer le gaz augmente l'agitation thermique : les particules vont plus vite et heurtent les parois plus violemment et plus fréquemment. À volume constant, ce surcroît de chocs par unité de surface se traduit par une pression plus élevée.",
-        "6. Sous $200$ bar, la pression est très élevée : le volume propre des molécules n'est plus négligeable devant le volume disponible et les hypothèses du gaz parfait sont mises en défaut. Le modèle ne fournit donc qu'une valeur approchée ; un modèle de gaz réel décrirait plus fidèlement l'air ainsi comprimé."
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{1\\times 20}{4} = 5 $ L."
       ],
-      "reponse": "$n = \\dfrac{P_1 V}{R T_1} \\approx 99$ mol ; $m = nM \\approx 2{,}9$ kg ; $P_2 = P_1 \\dfrac{T_2}{T_1} \\approx 2{,}2 \\times 10^{2}$ bar. La hausse de pression traduit l'agitation thermique accrue ; mais à $200$ bar (haute pression), le modèle du gaz parfait atteint ses limites."
+      "reponse": "$ 5 $ L"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 8 $ bar, $ V_1 = 2 $ L, $ P_2 = 4 $ bar. Calculer $ V_2 $.",
+      "corrige": [
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{8\\times 2}{4} = 4 $ L."
+      ],
+      "reponse": "$ 4 $ L"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "A temperature constante : $ P_1 V_1 = P_2 V_2 $, avec $ P_1 = 3 $ bar, $ V_1 = 10 $ L, $ P_2 = 5 $ bar. Calculer $ V_2 $.",
+      "corrige": [
+        "$ V_2 = \\dfrac{P_1 V_1}{P_2} = \\dfrac{3\\times 10}{5} = 6 $ L."
+      ],
+      "reponse": "$ 6 $ L"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "charles",
+      "enonce": "A pression constante : $ \\dfrac{V_1}{T_1} = \\dfrac{V_2}{T_2} $, avec $ V_1 = 2 $ L, $ T_1 = 300 $ K, $ T_2 = 600 $ K. Calculer $ V_2 $.",
+      "corrige": [
+        "$ V_2 = \\dfrac{V_1 T_2}{T_1} = 4 $ L."
+      ],
+      "reponse": "$ 4 $ L"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "charles",
+      "enonce": "A pression constante : $ \\dfrac{V_1}{T_1} = \\dfrac{V_2}{T_2} $, avec $ V_1 = 3 $ L, $ T_1 = 200 $ K, $ T_2 = 400 $ K. Calculer $ V_2 $.",
+      "corrige": [
+        "$ V_2 = \\dfrac{V_1 T_2}{T_1} = 6 $ L."
+      ],
+      "reponse": "$ 6 $ L"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "charles",
+      "enonce": "A pression constante : $ \\dfrac{V_1}{T_1} = \\dfrac{V_2}{T_2} $, avec $ V_1 = 1 $ L, $ T_1 = 250 $ K, $ T_2 = 500 $ K. Calculer $ V_2 $.",
+      "corrige": [
+        "$ V_2 = \\dfrac{V_1 T_2}{T_1} = 2 $ L."
+      ],
+      "reponse": "$ 2 $ L"
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "charles",
+      "enonce": "A pression constante : $ \\dfrac{V_1}{T_1} = \\dfrac{V_2}{T_2} $, avec $ V_1 = 4 $ L, $ T_1 = 100 $ K, $ T_2 = 300 $ K. Calculer $ V_2 $.",
+      "corrige": [
+        "$ V_2 = \\dfrac{V_1 T_2}{T_1} = 12 $ L."
+      ],
+      "reponse": "$ 12 $ L"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "charles",
+      "enonce": "A pression constante : $ \\dfrac{V_1}{T_1} = \\dfrac{V_2}{T_2} $, avec $ V_1 = 5 $ L, $ T_1 = 300 $ K, $ T_2 = 150 $ K. Calculer $ V_2 $.",
+      "corrige": [
+        "$ V_2 = \\dfrac{V_1 T_2}{T_1} = \\dfrac{5}{2} $ L."
+      ],
+      "reponse": "$ \\dfrac{5}{2} $ L"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=1 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 2 $ L."
+      ],
+      "reponse": "$ 2 $ L"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=2 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 4 $ L."
+      ],
+      "reponse": "$ 4 $ L"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=3 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 6 $ L."
+      ],
+      "reponse": "$ 6 $ L"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=4 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 8 $ L."
+      ],
+      "reponse": "$ 8 $ L"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=5 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 10 $ L."
+      ],
+      "reponse": "$ 10 $ L"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=6 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 12 $ L."
+      ],
+      "reponse": "$ 12 $ L"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=7 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 14 $ L."
+      ],
+      "reponse": "$ 14 $ L"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=8 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 16 $ L."
+      ],
+      "reponse": "$ 16 $ L"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=9 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 18 $ L."
+      ],
+      "reponse": "$ 18 $ L"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=10 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 20 $ L."
+      ],
+      "reponse": "$ 20 $ L"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=11 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 22 $ L."
+      ],
+      "reponse": "$ 22 $ L"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=12 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 24 $ L."
+      ],
+      "reponse": "$ 24 $ L"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=13 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 26 $ L."
+      ],
+      "reponse": "$ 26 $ L"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=14 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 28 $ L."
+      ],
+      "reponse": "$ 28 $ L"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=15 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 30 $ L."
+      ],
+      "reponse": "$ 30 $ L"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=16 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 32 $ L."
+      ],
+      "reponse": "$ 32 $ L"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=17 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 34 $ L."
+      ],
+      "reponse": "$ 34 $ L"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=18 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 36 $ L."
+      ],
+      "reponse": "$ 36 $ L"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=19 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 38 $ L."
+      ],
+      "reponse": "$ 38 $ L"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=20 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 40 $ L."
+      ],
+      "reponse": "$ 40 $ L"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=21 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 42 $ L."
+      ],
+      "reponse": "$ 42 $ L"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=22 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 44 $ L."
+      ],
+      "reponse": "$ 44 $ L"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=23 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 46 $ L."
+      ],
+      "reponse": "$ 46 $ L"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=24 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 48 $ L."
+      ],
+      "reponse": "$ 48 $ L"
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=25 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 50 $ L."
+      ],
+      "reponse": "$ 50 $ L"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=26 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 52 $ L."
+      ],
+      "reponse": "$ 52 $ L"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=27 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 54 $ L."
+      ],
+      "reponse": "$ 54 $ L"
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=28 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 56 $ L."
+      ],
+      "reponse": "$ 56 $ L"
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=29 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 58 $ L."
+      ],
+      "reponse": "$ 58 $ L"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=30 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 60 $ L."
+      ],
+      "reponse": "$ 60 $ L"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=31 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 62 $ L."
+      ],
+      "reponse": "$ 62 $ L"
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=32 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 64 $ L."
+      ],
+      "reponse": "$ 64 $ L"
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "boyle-mariotte",
+      "enonce": "$ P_1=2 $, $ V_1=33 $, $ P_2=1 $ : $ V_2 $ ?",
+      "corrige": [
+        "$ = 66 $ L."
+      ],
+      "reponse": "$ 66 $ L"
     }
   ]
 }
