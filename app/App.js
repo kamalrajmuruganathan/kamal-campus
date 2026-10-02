@@ -38,6 +38,7 @@ import RevisionSRS from './src/ecrans/RevisionSRS';
 import Duel from './src/ecrans/Duel';
 import Ligue from './src/ecrans/Ligue';
 import Defi from './src/ecrans/Defi';
+import Defis from './src/ecrans/Defis';
 import Statistiques from './src/ecrans/Statistiques';
 import RecapHebdo from './src/ecrans/RecapHebdo';
 import Express from './src/ecrans/Express';
@@ -118,6 +119,7 @@ function Navigation() {
         <Pile.Screen name="Duel" component={Duel} options={{ title: 'Duel à deux' }} />
         <Pile.Screen name="Ligue" component={Ligue} options={{ title: 'Ligue hebdo' }} />
         <Pile.Screen name="Defi" component={Defi} options={{ title: 'Défi à distance' }} />
+        <Pile.Screen name="Defis" component={Defis} options={{ title: 'Défier un ami' }} />
         <Pile.Screen name="Statistiques" component={Statistiques} options={{ title: 'Statistiques' }} />
         <Pile.Screen name="RecapHebdo" component={RecapHebdo} options={{ title: 'Bilan de la semaine' }} />
         <Pile.Screen name="Express" component={Express} options={{ title: 'Révision express' }} />
