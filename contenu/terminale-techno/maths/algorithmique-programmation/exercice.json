@@ -13,502 +13,568 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 3, multiplier par 2, ajouter 5. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les lignes suivantes, dans l'ordre :\n```python\nu = 5\nr = 3\nu = u + r\nu = u + r\n```\nDonner la valeur finale de chaque variable.",
       "corrige": [
-        "$ 3 \\times 2 + 5 = 11 $."
+        "L'affectation se lit de droite à gauche : on calcule, puis on range ; l'ancienne valeur est écrasée.",
+        "Après `u = 5` : `u` = $5$.",
+        "Après `r = 3` : `u` = $5$, `r` = $3$.",
+        "Après `u = u + r` : `u` = $8$, `r` = $3$.",
+        "Après `u = u + r` : `u` = $11$, `r` = $3$."
       ],
-      "reponse": "$ 11 $"
+      "reponse": "`u` = $11$ ; `r` = $3$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 4, multiplier par 3, ajouter 1. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les lignes suivantes, dans l'ordre :\n```python\na = 4\nb = a + 1\na = 2 * b\nb = a - b\n```\nDonner la valeur finale de chaque variable.",
       "corrige": [
-        "$ 4 \\times 3 + 1 = 13 $."
+        "L'affectation se lit de droite à gauche : on calcule, puis on range ; l'ancienne valeur est écrasée.",
+        "Après `a = 4` : `a` = $4$.",
+        "Après `b = a + 1` : `a` = $4$, `b` = $5$.",
+        "Après `a = 2 * b` : `a` = $10$, `b` = $5$.",
+        "Après `b = a - b` : `a` = $10$, `b` = $5$."
       ],
-      "reponse": "$ 13 $"
+      "reponse": "`a` = $10$ ; `b` = $5$"
     },
     {
       "id": 3,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 5, multiplier par 2, ajouter 4. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les lignes suivantes, dans l'ordre :\n```python\np = 100\np = p * 2\np = p - 50\n```\nDonner la valeur finale de chaque variable.",
       "corrige": [
-        "$ 5 \\times 2 + 4 = 14 $."
+        "L'affectation se lit de droite à gauche : on calcule, puis on range ; l'ancienne valeur est écrasée.",
+        "Après `p = 100` : `p` = $100$.",
+        "Après `p = p * 2` : `p` = $200$.",
+        "Après `p = p - 50` : `p` = $150$."
       ],
-      "reponse": "$ 14 $"
+      "reponse": "`p` = $150$"
     },
     {
       "id": 4,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 2, multiplier par 6, ajouter 3. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les lignes suivantes, dans l'ordre :\n```python\nx = 7\ny = x == 7\nz = x == 8\n```\nDonner la valeur finale de chaque variable.",
       "corrige": [
-        "$ 2 \\times 6 + 3 = 15 $."
+        "L'affectation se lit de droite à gauche : on calcule, puis on range ; l'ancienne valeur est écrasée.",
+        "Après `x = 7` : `x` = $7$.",
+        "Après `y = x == 7` : `x` = $7$, `y` = `True`.",
+        "Après `z = x == 8` : `x` = $7$, `y` = `True`, `z` = `False`."
       ],
-      "reponse": "$ 15 $"
+      "reponse": "`x` = $7$ ; `y` = `True` ; `z` = `False`"
     },
     {
       "id": 5,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 7, multiplier par 1, ajouter 2. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les lignes suivantes, dans l'ordre :\n```python\nn = 3\nn = n ** 2\nn = n + n\n```\nDonner la valeur finale de chaque variable.",
       "corrige": [
-        "$ 7 \\times 1 + 2 = 9 $."
+        "L'affectation se lit de droite à gauche : on calcule, puis on range ; l'ancienne valeur est écrasée.",
+        "Après `n = 3` : `n` = $3$.",
+        "Après `n = n ** 2` : `n` = $9$.",
+        "Après `n = n + n` : `n` = $18$."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "`n` = $18$"
     },
     {
       "id": 6,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 6, multiplier par 2, ajouter 3. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les lignes suivantes, dans l'ordre :\n```python\na = 2\nb = 9\nc = a\na = b\nb = c\n```\nDonner la valeur finale de chaque variable.",
       "corrige": [
-        "$ 6 \\times 2 + 3 = 15 $."
+        "L'affectation se lit de droite à gauche : on calcule, puis on range ; l'ancienne valeur est écrasée.",
+        "Après `a = 2` : `a` = $2$.",
+        "Après `b = 9` : `a` = $2$, `b` = $9$.",
+        "Après `c = a` : `a` = $2$, `b` = $9$.",
+        "Après `a = b` : `a` = $9$, `b` = $9$.",
+        "Après `b = c` : `a` = $9$, `b` = $2$."
       ],
-      "reponse": "$ 15 $"
+      "reponse": "`a` = $9$ ; `b` = $2$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 4, multiplier par 4, ajouter 4. Résultat ?",
+      "notion": "affectation",
+      "enonce": "Quelle est la différence entre `x = 7` et `x == 7` en Python ?",
       "corrige": [
-        "$ 4 \\times 4 + 4 = 20 $."
+        "`x = 7` est une affectation : la variable `x` reçoit la valeur 7.",
+        "`x == 7` est une comparaison : elle vaut `True` si `x` vaut 7, `False` sinon."
       ],
-      "reponse": "$ 20 $"
+      "reponse": "`=` affecte, `==` compare"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 8, multiplier par 2, ajouter 1. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit la fonction :\n```python\ndef terme(n):\n    return 5 + 3 * n\n```\nQue renvoie `terme(4)` ?",
       "corrige": [
-        "$ 8 \\times 2 + 1 = 17 $."
+        "`def` définit la fonction ; l'appel remplace le paramètre par la valeur donnée, `return` renvoie le résultat.",
+        "`terme(4)` renvoie $17$."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "$17$"
     },
     {
       "id": 9,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 3, multiplier par 5, ajouter 2. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit la fonction :\n```python\ndef terme(n):\n    return 5 + 3 * n\n```\nQue renvoie `terme(10)` ?",
       "corrige": [
-        "$ 3 \\times 5 + 2 = 17 $."
+        "`def` définit la fonction ; l'appel remplace le paramètre par la valeur donnée, `return` renvoie le résultat.",
+        "`terme(10)` renvoie $35$."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "$35$"
     },
     {
       "id": 10,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 9, multiplier par 1, ajouter 3. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit la fonction :\n```python\ndef v(n):\n    return 200 * 2 ** n\n```\nQue renvoie `v(3)` ?",
       "corrige": [
-        "$ 9 \\times 1 + 3 = 12 $."
+        "`def` définit la fonction ; l'appel remplace le paramètre par la valeur donnée, `return` renvoie le résultat.",
+        "`v(3)` renvoie $1\\,600$."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "$1\\,600$"
     },
     {
       "id": 11,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 5, multiplier par 3, ajouter 2. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit la fonction :\n```python\ndef cout(q):\n    return 50 + 12 * q\n```\nQue renvoie `cout(15)` ?",
       "corrige": [
-        "$ 5 \\times 3 + 2 = 17 $."
+        "`def` définit la fonction ; l'appel remplace le paramètre par la valeur donnée, `return` renvoie le résultat.",
+        "`cout(15)` renvoie $230$."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "$230$"
     },
     {
       "id": 12,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 2, multiplier par 7, ajouter 4. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit la fonction :\n```python\ndef f(x):\n    if x < 0:\n        return 0\n    return x * x\n```\nQue renvoie `f(-4) + f(3)` ?",
       "corrige": [
-        "$ 2 \\times 7 + 4 = 18 $."
+        "`def` définit la fonction ; l'appel remplace le paramètre par la valeur donnée, `return` renvoie le résultat.",
+        "`f(-4) + f(3)` renvoie $9$."
       ],
-      "reponse": "$ 18 $"
+      "reponse": "$9$"
     },
     {
       "id": 13,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 1, on ajoute 2 quatre fois. Valeur finale ?",
+      "notion": "fonction",
+      "enonce": "On définit la fonction :\n```python\ndef u(n):\n    return 1000 - 75 * n\n```\nQue renvoie `u(8)` ?",
       "corrige": [
-        "$ 1 + 4\\times 2 = 9 $."
+        "`def` définit la fonction ; l'appel remplace le paramètre par la valeur donnée, `return` renvoie le résultat.",
+        "`u(8)` renvoie $400$."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "$400$"
     },
     {
       "id": 14,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 0, on ajoute 3 quatre fois. Valeur finale ?",
+      "notion": "liste-indices",
+      "enonce": "On définit `notes = [12, 15, 8, 17, 9]`. Que vaut `notes[0]` ?",
       "corrige": [
-        "$ 0 + 4\\times 3 = 12 $."
+        "Les indices commencent à 0 : `notes[0]` est le premier élément, `notes[len(notes) - 1]` le dernier.",
+        "`notes[0]` vaut $12$."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "$12$"
     },
     {
       "id": 15,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 2, on ajoute 5 quatre fois. Valeur finale ?",
+      "notion": "liste-indices",
+      "enonce": "On définit `notes = [12, 15, 8, 17, 9]`. Que vaut `notes[3]` ?",
       "corrige": [
-        "$ 2 + 4\\times 5 = 22 $."
+        "Les indices commencent à 0 : `notes[0]` est le premier élément, `notes[len(notes) - 1]` le dernier.",
+        "`notes[3]` vaut $17$."
       ],
-      "reponse": "$ 22 $"
+      "reponse": "$17$"
     },
     {
       "id": 16,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 1, on ajoute 4 quatre fois. Valeur finale ?",
+      "notion": "liste-indices",
+      "enonce": "On définit `notes = [12, 15, 8, 17, 9]`. Que vaut `len(notes)` ?",
       "corrige": [
-        "$ 1 + 4\\times 4 = 17 $."
+        "Les indices commencent à 0 : `notes[0]` est le premier élément, `notes[len(notes) - 1]` le dernier.",
+        "`len(notes)` vaut $5$."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "$5$"
     },
     {
       "id": 17,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 3, on ajoute 2 quatre fois. Valeur finale ?",
+      "notion": "liste-indices",
+      "enonce": "On définit `notes = [12, 15, 8, 17, 9]`. Que vaut `notes[len(notes) - 1]` ?",
       "corrige": [
-        "$ 3 + 4\\times 2 = 11 $."
+        "Les indices commencent à 0 : `notes[0]` est le premier élément, `notes[len(notes) - 1]` le dernier.",
+        "`notes[len(notes) - 1]` vaut $9$."
       ],
-      "reponse": "$ 11 $"
+      "reponse": "$9$"
     },
     {
       "id": 18,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 0, on ajoute 6 quatre fois. Valeur finale ?",
+      "notion": "liste-indices",
+      "enonce": "On définit `notes = [12, 15, 8, 17, 9]`. Que vaut `notes[1] + notes[2]` ?",
       "corrige": [
-        "$ 0 + 4\\times 6 = 24 $."
+        "Les indices commencent à 0 : `notes[0]` est le premier élément, `notes[len(notes) - 1]` le dernier.",
+        "`notes[1] + notes[2]` vaut $23$."
       ],
-      "reponse": "$ 24 $"
+      "reponse": "$23$"
     },
     {
       "id": 19,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 2, on ajoute 3 quatre fois. Valeur finale ?",
+      "notion": "liste-indices",
+      "enonce": "On définit `notes = [12, 15, 8, 17, 9]`. Que vaut `notes[4] - notes[0]` ?",
       "corrige": [
-        "$ 2 + 4\\times 3 = 14 $."
+        "Les indices commencent à 0 : `notes[0]` est le premier élément, `notes[len(notes) - 1]` le dernier.",
+        "`notes[4] - notes[0]` vaut $-3$."
       ],
-      "reponse": "$ 14 $"
+      "reponse": "$-3$"
     },
     {
       "id": 20,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 1, on ajoute 7 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "fonction",
+      "enonce": "On remplace `return 2 * x` par `print(2 * x)` dans une fonction `double`. Peut-on encore écrire `y = double(3) + 1` ?",
       "corrige": [
-        "$ 1 + 4\\times 7 = 29 $."
+        "`print` affiche la valeur mais ne la renvoie pas : la fonction ne renvoie rien d'utilisable.",
+        "Le calcul `double(3) + 1` provoque une erreur : il faut `return`."
       ],
-      "reponse": "$ 29 $"
+      "reponse": "Non : sans `return`, la fonction ne renvoie rien"
     },
     {
       "id": 21,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 4, on ajoute 2 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "liste-indices",
+      "enonce": "On définit `notes = [12, 15, 8, 17, 9]`. Que se passe-t-il si on demande `notes[5]` ?",
       "corrige": [
-        "$ 4 + 4\\times 2 = 12 $."
+        "La liste a 5 éléments, d'indices 0 à 4.",
+        "L'indice 5 n'existe pas : Python affiche une erreur (indice hors de la liste)."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "Une erreur : l'indice 5 n'existe pas"
     },
     {
       "id": 22,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 0, on ajoute 5 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "liste-append",
+      "enonce": "On exécute le programme :\n```python\nL = []\nfor n in range(5):\n    L.append(2 * n)\n```\nQuel est le contenu final de la liste `L` ?",
       "corrige": [
-        "$ 0 + 4\\times 5 = 20 $."
+        "`append(x)` ajoute `x` à la fin de la liste, à chaque tour de boucle.",
+        "À la fin, `L` = `[0, 2, 4, 6, 8]` (5 éléments)."
       ],
-      "reponse": "$ 20 $"
+      "reponse": "`[0, 2, 4, 6, 8]`"
     },
     {
       "id": 23,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 3, on ajoute 4 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "liste-append",
+      "enonce": "On exécute le programme :\n```python\nL = []\nfor n in range(1, 6):\n    L.append(n * n)\n```\nQuel est le contenu final de la liste `L` ?",
       "corrige": [
-        "$ 3 + 4\\times 4 = 19 $."
+        "`append(x)` ajoute `x` à la fin de la liste, à chaque tour de boucle.",
+        "À la fin, `L` = `[1, 4, 9, 16, 25]` (5 éléments)."
       ],
-      "reponse": "$ 19 $"
+      "reponse": "`[1, 4, 9, 16, 25]`"
     },
     {
       "id": 24,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 2, on ajoute 2 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "liste-append",
+      "enonce": "On exécute le programme :\n```python\nL = []\nu = 3\nfor n in range(4):\n    L.append(u)\n    u = u + 5\n```\nQuel est le contenu final de la liste `L` ?",
       "corrige": [
-        "$ 2 + 4\\times 2 = 10 $."
+        "`append(x)` ajoute `x` à la fin de la liste, à chaque tour de boucle.",
+        "À la fin, `L` = `[3, 8, 13, 18]` (4 éléments)."
       ],
-      "reponse": "$ 10 $"
+      "reponse": "`[3, 8, 13, 18]`"
     },
     {
       "id": 25,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 20, diviser par 4. Résultat ?",
+      "notion": "liste-append",
+      "enonce": "On exécute le programme :\n```python\nL = []\nu = 1\nfor n in range(6):\n    L.append(u)\n    u = 2 * u\n```\nQuel est le contenu final de la liste `L` ?",
       "corrige": [
-        "$ 20 \\div 4 = 5 $."
+        "`append(x)` ajoute `x` à la fin de la liste, à chaque tour de boucle.",
+        "À la fin, `L` = `[1, 2, 4, 8, 16, 32]` (6 éléments)."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "`[1, 2, 4, 8, 16, 32]`"
     },
     {
       "id": 26,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 30, diviser par 5. Résultat ?",
+      "notion": "liste-append",
+      "enonce": "On exécute le programme :\n```python\nL = [10]\nfor k in range(3):\n    L.append(L[len(L) - 1] - 4)\n```\nQuel est le contenu final de la liste `L` ?",
       "corrige": [
-        "$ 30 \\div 5 = 6 $."
+        "`append(x)` ajoute `x` à la fin de la liste, à chaque tour de boucle.",
+        "À la fin, `L` = `[10, 6, 2, -2]` (4 éléments)."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "`[10, 6, 2, -2]`"
     },
     {
       "id": 27,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 18, diviser par 3. Résultat ?",
+      "notion": "liste-append",
+      "enonce": "On exécute le programme :\n```python\nL = []\nfor n in range(2, 12, 3):\n    L.append(n)\n```\nQuel est le contenu final de la liste `L` ?",
       "corrige": [
-        "$ 18 \\div 3 = 6 $."
+        "`append(x)` ajoute `x` à la fin de la liste, à chaque tour de boucle.",
+        "À la fin, `L` = `[2, 5, 8, 11]` (4 éléments)."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "`[2, 5, 8, 11]`"
     },
     {
       "id": 28,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 24, diviser par 6. Résultat ?",
+      "notion": "liste-append",
+      "enonce": "On exécute le programme :\n```python\nL = []\nfor n in range(4):\n    L.append(100 + 10 * n)\n```\nQuel est le contenu final de la liste `L` ?",
       "corrige": [
-        "$ 24 \\div 6 = 4 $."
+        "`append(x)` ajoute `x` à la fin de la liste, à chaque tour de boucle.",
+        "À la fin, `L` = `[100, 110, 120, 130]` (4 éléments)."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "`[100, 110, 120, 130]`"
     },
     {
       "id": 29,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 40, diviser par 8. Résultat ?",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [12, 15, 8, 17]\ntotal = 0\nfor x in L:\n    total = total + x\n```\nQue vaut `total` à la fin ?",
       "corrige": [
-        "$ 40 \\div 8 = 5 $."
+        "On additionne tous les éléments.",
+        "À la fin, `total` = $52$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "`total` = $52$"
     },
     {
       "id": 30,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 15, diviser par 3. Résultat ?",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [3, 9, 2, 9, 5]\nmaxi = L[0]\nfor x in L:\n    if x > maxi:\n        maxi = x\n```\nQue vaut `maxi` à la fin ?",
       "corrige": [
-        "$ 15 \\div 3 = 5 $."
+        "On garde la plus grande valeur rencontrée.",
+        "À la fin, `maxi` = $9$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "`maxi` = $9$"
     },
     {
       "id": 31,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 36, diviser par 9. Résultat ?",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [14, 9, 11, 16]\ntotal = 0\nfor x in L:\n    total = total + x\nm = total / len(L)\n```\nQue vaut `m` à la fin ?",
       "corrige": [
-        "$ 36 \\div 9 = 4 $."
+        "On calcule la somme puis on divise par le nombre d'éléments.",
+        "À la fin, `m` = $12{,}5$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "`m` = $12{,}5$"
     },
     {
       "id": 32,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 50, diviser par 10. Résultat ?",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [4, 7, 1, 8, 2]\nmini = L[0]\nfor x in L:\n    if x < mini:\n        mini = x\n```\nQue vaut `mini` à la fin ?",
       "corrige": [
-        "$ 50 \\div 10 = 5 $."
+        "On garde la plus petite valeur rencontrée.",
+        "À la fin, `mini` = $1$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "`mini` = $1$"
     },
     {
       "id": 33,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 3, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [2, 3, 4]\np = 1\nfor x in L:\n    p = p * x\n```\nQue vaut `p` à la fin ?",
       "corrige": [
-        "$ = 9 $."
+        "On multiplie tous les éléments (accumulateur initialisé à 1).",
+        "À la fin, `p` = $24$."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "`p` = $24$"
     },
     {
       "id": 34,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 4, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [5, 8, 2, 6]\ns = 0\nfor i in range(len(L)):\n    s = s + i * L[i]\n```\nQue vaut `s` à la fin ?",
       "corrige": [
-        "$ = 12 $."
+        "On parcourt par les indices : on ajoute `i * L[i]`.",
+        "À la fin, `s` = $30$."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "`s` = $30$"
     },
     {
       "id": 35,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 5, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [6, 1, 9, 4]\nc = 0\nfor x in L:\n    c = c + 1\n```\nQue vaut `c` à la fin ?",
       "corrige": [
-        "$ = 15 $."
+        "On compte les éléments : c'est la longueur de la liste.",
+        "À la fin, `c` = $4$."
       ],
-      "reponse": "$ 15 $"
+      "reponse": "`c` = $4$"
     },
     {
       "id": 36,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 6, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "parcours",
+      "enonce": "On exécute le programme :\n```python\nL = [12, 15, 8, 17]\nfor x in L:\n    total = 0\n    total = total + x\n```\nQue vaut `total` à la fin ?",
       "corrige": [
-        "$ = 18 $."
+        "Attention : `total = 0` est DANS la boucle, il est remis à zéro à chaque tour.",
+        "À la fin, `total` = $17$."
       ],
-      "reponse": "$ 18 $"
+      "reponse": "`total` = $17$"
     },
     {
       "id": 37,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 7, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "selection",
+      "enonce": "On exécute le programme :\n```python\nnotes = [12, 15, 8, 17, 9]\nbonnes = []\nfor note in notes:\n    if note >= 10:\n        bonnes.append(note)\n```\nQue contient `bonnes` à la fin ?",
       "corrige": [
-        "$ = 21 $."
+        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "À la fin, `bonnes` = `[12, 15, 17]`."
       ],
-      "reponse": "$ 21 $"
+      "reponse": "`[12, 15, 17]`"
     },
     {
       "id": 38,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 8, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "selection",
+      "enonce": "On exécute le programme :\n```python\nL = [4, 11, 7, 15, 9, 20]\nG = []\nfor x in L:\n    if x > 10:\n        G.append(x)\n```\nQue contient `G` à la fin ?",
       "corrige": [
-        "$ = 24 $."
+        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "À la fin, `G` = `[11, 15, 20]`."
       ],
-      "reponse": "$ 24 $"
+      "reponse": "`[11, 15, 20]`"
     },
     {
       "id": 39,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 9, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "selection",
+      "enonce": "On exécute le programme :\n```python\nL = [3, 8, 6, 5, 12, 1]\nP = []\nfor x in L:\n    if x % 2 == 0:\n        P.append(x)\n```\nQue contient `P` à la fin ?",
       "corrige": [
-        "$ = 27 $."
+        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "À la fin, `P` = `[8, 6, 12]`."
       ],
-      "reponse": "$ 27 $"
+      "reponse": "`[8, 6, 12]`"
     },
     {
       "id": 40,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 10, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "selection",
+      "enonce": "On exécute le programme :\n```python\nT = [18, 25, 31, 22, 27, 30]\nchauds = []\nfor t in T:\n    if t >= 25:\n        chauds.append(t)\n```\nQue contient `chauds` à la fin ?",
       "corrige": [
-        "$ = 30 $."
+        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "À la fin, `chauds` = `[25, 31, 27, 30]`."
       ],
-      "reponse": "$ 30 $"
+      "reponse": "`[25, 31, 27, 30]`"
     },
     {
       "id": 41,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 11, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "selection",
+      "enonce": "On exécute le programme :\n```python\nL = [10, 10, 9, 11, 10]\nc = 0\nfor x in L:\n    if x == 10:\n        c = c + 1\n```\nQue contient `c` à la fin ?",
       "corrige": [
-        "$ = 33 $."
+        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "À la fin, `c` = $3$."
       ],
-      "reponse": "$ 33 $"
+      "reponse": "$3$"
     },
     {
       "id": 42,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 12, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "selection",
+      "enonce": "On exécute le programme :\n```python\nrangs = []\nfor n in range(8):\n    if 50 * 2 ** n > 1000:\n        rangs.append(n)\n```\nQue contient `rangs` à la fin ?",
       "corrige": [
-        "$ = 36 $."
+        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "À la fin, `rangs` = `[5, 6, 7]`."
       ],
-      "reponse": "$ 36 $"
+      "reponse": "`[5, 6, 7]`"
     },
     {
       "id": 43,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 13, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "selection",
+      "enonce": "On exécute le programme :\n```python\nL = [-3, 5, -1, 0, 8, -6]\nN = []\nfor x in L:\n    if x < 0:\n        N.append(x)\n```\nQue contient `N` à la fin ?",
       "corrige": [
-        "$ = 39 $."
+        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "À la fin, `N` = `[-3, -1, -6]`."
       ],
-      "reponse": "$ 39 $"
+      "reponse": "`[-3, -1, -6]`"
     },
     {
       "id": 44,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 14, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Les températures maximales d'une semaine sont relevées dans une liste. On veut le nombre de jours où il a fait au moins 30 °C.\n```python\nT = [27, 31, 33, 29, 30, 26, 32]\nc = 0\nfor t in T:\n    if t >= 30:\n        c = c + 1\n```\nQuelle est la valeur de `c` à la fin ?",
       "corrige": [
-        "$ = 42 $."
+        "On exécute le programme ligne par ligne, en suivant la valeur des variables.",
+        "À la fin, `c` = $4$ jours à 30 °C ou plus."
       ],
-      "reponse": "$ 42 $"
+      "reponse": "$4$ jours à 30 °C ou plus"
     },
     {
       "id": 45,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 15, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Une production vaut 8 000 pièces la première année et augmente de 600 pièces par an. On cherche au bout de combien d'années elle dépassera 11 000 pièces.\n```python\nu = 8000\nn = 0\nwhile u <= 11000:\n    u = u + 600\n    n = n + 1\n```\nQuelle est la valeur de `n` à la fin ?",
       "corrige": [
-        "$ = 45 $."
+        "On exécute le programme ligne par ligne, en suivant la valeur des variables.",
+        "À la fin, `n` = $6$ ans."
       ],
-      "reponse": "$ 45 $"
+      "reponse": "$6$ ans"
     },
     {
       "id": 46,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 16, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Un capital de 1 000 € double tous les 10 ans. On construit la liste des valeurs tous les 10 ans pendant 40 ans.\n```python\nC = []\nv = 1000\nfor k in range(5):\n    C.append(v)\n    v = 2 * v\n```\nQuelle est la valeur de `C` à la fin ?",
       "corrige": [
-        "$ = 48 $."
+        "On exécute le programme ligne par ligne, en suivant la valeur des variables.",
+        "À la fin, `C` = `[1000, 2000, 4000, 8000, 16000]` (valeurs en euros)."
       ],
-      "reponse": "$ 48 $"
+      "reponse": "`[1000, 2000, 4000, 8000, 16000]`"
     },
     {
       "id": 47,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 17, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "On a relevé les dépenses d'un mois (en euros). On calcule le total des dépenses supérieures à 50 €.\n```python\nD = [35, 120, 48, 75, 60, 12]\ns = 0\nfor d in D:\n    if d > 50:\n        s = s + d\n```\nQuelle est la valeur de `s` à la fin ?",
       "corrige": [
-        "$ = 51 $."
+        "On exécute le programme ligne par ligne, en suivant la valeur des variables.",
+        "À la fin, `s` = $255$ euros."
       ],
-      "reponse": "$ 51 $"
+      "reponse": "$255$ euros"
     },
     {
       "id": 48,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 18, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Une liste contient les nombres de visiteurs d'un musée sur 6 jours. On calcule la fréquentation moyenne.\n```python\nV = [320, 410, 280, 500, 390, 440]\ns = 0\nfor v in V:\n    s = s + v\nm = s / len(V)\n```\nQuelle est la valeur de `m` à la fin ?",
       "corrige": [
-        "$ = 54 $."
+        "On exécute le programme ligne par ligne, en suivant la valeur des variables.",
+        "À la fin, `m` = $390$ visiteurs par jour."
       ],
-      "reponse": "$ 54 $"
+      "reponse": "$390$ visiteurs par jour"
     },
     {
       "id": 49,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 19, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "On veut la liste des termes $u_0$ à $u_5$ de la suite arithmétique de premier terme 7 et de raison 4.\n```python\ndef u(n):\n    return 7 + 4 * n\n\nL = []\nfor n in range(6):\n    L.append(u(n))\n```\nQuelle est la valeur de `L` à la fin ?",
       "corrige": [
-        "$ = 57 $."
+        "On exécute le programme ligne par ligne, en suivant la valeur des variables.",
+        "À la fin, `L` = `[7, 11, 15, 19, 23, 27]`."
       ],
-      "reponse": "$ 57 $"
+      "reponse": "`[7, 11, 15, 19, 23, 27]`"
     },
     {
       "id": 50,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 20, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Une épargne commence à 200 € ; on ajoute 30 € chaque mois. On construit la liste des mois (numérotés à partir de 0) où l'épargne est d'au moins 300 €, parmi les 6 premiers mois.\n```python\nmois = []\nfor n in range(6):\n    if 200 + 30 * n >= 300:\n        mois.append(n)\n```\nQuelle est la valeur de `mois` à la fin ?",
       "corrige": [
-        "$ = 60 $."
+        "On exécute le programme ligne par ligne, en suivant la valeur des variables.",
+        "À la fin, `mois` = `[4, 5]`."
       ],
-      "reponse": "$ 60 $"
+      "reponse": "`[4, 5]`"
     }
   ]
 }

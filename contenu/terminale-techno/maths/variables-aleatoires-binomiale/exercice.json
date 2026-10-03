@@ -14,501 +14,575 @@
       "id": 1,
       "difficulte": "application",
       "notion": "esperance",
-      "enonce": "$ X $ suit $ B(10;\\dfrac{1}{2}) $. Calculer $ E(X) = np $.",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|ccc} x_i & -2 & 1 & 5 \\\\ \\hline P(X = x_i) & 0{,}5 & 0{,}3 & 0{,}2 \\end{array}$. Calculer $E(X)$.",
       "corrige": [
-        "$ E(X) = 10\\times \\dfrac{1}{2} = 5 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = (-2) \\times 0{,}5 + 1 \\times 0{,}3 + 5 \\times 0{,}2 = 0{,}3$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$E(X) = 0{,}3$"
     },
     {
       "id": 2,
       "difficulte": "application",
       "notion": "esperance",
-      "enonce": "$ X $ suit $ B(20;\\dfrac{1}{4}) $. Calculer $ E(X) = np $.",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|ccc} x_i & 0 & 10 & 50 \\\\ \\hline P(X = x_i) & 0{,}7 & 0{,}25 & 0{,}05 \\end{array}$. Calculer $E(X)$.",
       "corrige": [
-        "$ E(X) = 20\\times \\dfrac{1}{4} = 5 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 0 \\times 0{,}7 + 10 \\times 0{,}25 + 50 \\times 0{,}05 = 5$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$E(X) = 5$"
     },
     {
       "id": 3,
       "difficulte": "application",
       "notion": "esperance",
-      "enonce": "$ X $ suit $ B(12;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|cccc} x_i & 1 & 2 & 3 & 4 \\\\ \\hline P(X = x_i) & 0{,}1 & 0{,}3 & 0{,}4 & 0{,}2 \\end{array}$. Calculer $E(X)$.",
       "corrige": [
-        "$ E(X) = 12\\times \\dfrac{1}{3} = 4 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 1 \\times 0{,}1 + 2 \\times 0{,}3 + 3 \\times 0{,}4 + 4 \\times 0{,}2 = 2{,}7$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "$E(X) = 2{,}7$"
     },
     {
       "id": 4,
       "difficulte": "application",
       "notion": "esperance",
-      "enonce": "$ X $ suit $ B(8;\\dfrac{1}{2}) $. Calculer $ E(X) = np $.",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|ccc} x_i & -5 & 0 & 20 \\\\ \\hline P(X = x_i) & 0{,}6 & 0{,}3 & 0{,}1 \\end{array}$. Calculer $E(X)$.",
       "corrige": [
-        "$ E(X) = 8\\times \\dfrac{1}{2} = 4 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = (-5) \\times 0{,}6 + 0 \\times 0{,}3 + 20 \\times 0{,}1 = -1$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "$E(X) = -1$"
     },
     {
       "id": 5,
       "difficulte": "application",
       "notion": "esperance",
-      "enonce": "$ X $ suit $ B(15;\\dfrac{1}{5}) $. Calculer $ E(X) = np $.",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|ccc} x_i & 2 & 4 & 6 \\\\ \\hline P(X = x_i) & \\dfrac{1}{3} & \\dfrac{1}{3} & \\dfrac{1}{3} \\end{array}$. Calculer $E(X)$.",
       "corrige": [
-        "$ E(X) = 15\\times \\dfrac{1}{5} = 3 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 2 \\times \\dfrac{1}{3} + 4 \\times \\dfrac{1}{3} + 6 \\times \\dfrac{1}{3} = 4$."
       ],
-      "reponse": "$ 3 $"
+      "reponse": "$E(X) = 4$"
     },
     {
       "id": 6,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ X $ suit $ B(6;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{4}{2}$.",
       "corrige": [
-        "$ E(X) = 6\\times \\dfrac{1}{3} = 2 $."
+        "On lit la ligne $n = 4$, colonne $k = 2$ (la numérotation commence à 0).",
+        "Avec la relation $\\dbinom{4}{2} = \\dbinom{3}{1} + \\dbinom{3}{2} = 3 + 3$.",
+        "$\\dbinom{4}{2} = 6$."
       ],
-      "reponse": "$ 2 $"
+      "reponse": "$6$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ X $ suit $ B(30;\\dfrac{1}{6}) $. Calculer $ E(X) = np $.",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{5}{2}$.",
       "corrige": [
-        "$ E(X) = 30\\times \\dfrac{1}{6} = 5 $."
+        "On lit la ligne $n = 5$, colonne $k = 2$ (la numérotation commence à 0).",
+        "Avec la relation $\\dbinom{5}{2} = \\dbinom{4}{1} + \\dbinom{4}{2} = 4 + 6$.",
+        "$\\dbinom{5}{2} = 10$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$10$"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ X $ suit $ B(24;\\dfrac{1}{4}) $. Calculer $ E(X) = np $.",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{6}{3}$.",
       "corrige": [
-        "$ E(X) = 24\\times \\dfrac{1}{4} = 6 $."
+        "On lit la ligne $n = 6$, colonne $k = 3$ (la numérotation commence à 0).",
+        "Avec la relation $\\dbinom{6}{3} = \\dbinom{5}{2} + \\dbinom{5}{3} = 10 + 10$.",
+        "$\\dbinom{6}{3} = 20$."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "$20$"
     },
     {
       "id": 9,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ X $ suit $ B(9;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{7}{2}$.",
       "corrige": [
-        "$ E(X) = 9\\times \\dfrac{1}{3} = 3 $."
+        "On lit la ligne $n = 7$, colonne $k = 2$ (la numérotation commence à 0).",
+        "Avec la relation $\\dbinom{7}{2} = \\dbinom{6}{1} + \\dbinom{6}{2} = 6 + 15$.",
+        "$\\dbinom{7}{2} = 21$."
       ],
-      "reponse": "$ 3 $"
+      "reponse": "$21$"
     },
     {
       "id": 10,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ X $ suit $ B(50;\\dfrac{1}{5}) $. Calculer $ E(X) = np $.",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{8}{3}$.",
       "corrige": [
-        "$ E(X) = 50\\times \\dfrac{1}{5} = 10 $."
+        "On lit la ligne $n = 8$, colonne $k = 3$ (la numérotation commence à 0).",
+        "Avec la relation $\\dbinom{8}{3} = \\dbinom{7}{2} + \\dbinom{7}{3} = 21 + 35$.",
+        "$\\dbinom{8}{3} = 56$."
       ],
-      "reponse": "$ 10 $"
+      "reponse": "$56$"
     },
     {
       "id": 11,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ X $ suit $ B(16;\\dfrac{1}{2}) $. Calculer $ E(X) = np $.",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{6}{1}$.",
       "corrige": [
-        "$ E(X) = 16\\times \\dfrac{1}{2} = 8 $."
+        "On lit la ligne $n = 6$, colonne $k = 1$ (la numérotation commence à 0).",
+        "$\\dbinom{6}{1} = 6$ : le succès peut être à l'une des $6$ places.",
+        "$\\dbinom{6}{1} = 6$."
       ],
-      "reponse": "$ 8 $"
+      "reponse": "$6$"
     },
     {
       "id": 12,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ X $ suit $ B(21;\\dfrac{1}{3}) $. Calculer $ E(X) = np $.",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{8}{6}$.",
       "corrige": [
-        "$ E(X) = 21\\times \\dfrac{1}{3} = 7 $."
+        "On lit la ligne $n = 8$, colonne $k = 6$ (la numérotation commence à 0).",
+        "Par symétrie, $\\dbinom{8}{6} = \\dbinom{8}{2}$.",
+        "$\\dbinom{8}{6} = 28$."
       ],
-      "reponse": "$ 7 $"
+      "reponse": "$28$"
     },
     {
       "id": 13,
-      "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(10;\\dfrac{1}{2}) $. Calculer $ V(X) = np(1-p) $.",
+      "difficulte": "application",
+      "notion": "coefficient-binomial",
+      "enonce": "À l'aide du triangle de Pascal, calculer $\\dbinom{7}{7}$.",
       "corrige": [
-        "$ V(X) = 10\\times \\dfrac{1}{2}\\times \\dfrac{1}{2} = \\dfrac{5}{2} $."
+        "On lit la ligne $n = 7$, colonne $k = 7$ (la numérotation commence à 0).",
+        "$\\dbinom{7}{7} = 1$ : un seul chemin ne comporte que des succès.",
+        "$\\dbinom{7}{7} = 1$."
       ],
-      "reponse": "$ \\dfrac{5}{2} $"
+      "reponse": "$1$"
     },
     {
       "id": 14,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(20;\\dfrac{1}{4}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "esperance",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|ccc} x_i & 0 & 1 & 2 \\\\ \\hline P(X = x_i) & 0{,}25 & p & 0{,}25 \\end{array}$. Calculer $p$, puis $E(X)$.",
       "corrige": [
-        "$ V(X) = 20\\times \\dfrac{1}{4}\\times \\dfrac{3}{4} = \\dfrac{15}{4} $."
+        "La somme des probabilités vaut $1$ : $p = 0{,}5$.",
+        "$E(X) = 0 \\times 0{,}25 + 1 \\times 0{,}5 + 2 \\times 0{,}25 = 1$."
       ],
-      "reponse": "$ \\dfrac{15}{4} $"
+      "reponse": "$p = 0{,}5$ ; $E(X) = 1$"
     },
     {
       "id": 15,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(12;\\dfrac{1}{3}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "esperance",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|ccc} x_i & -3 & 2 & 8 \\\\ \\hline P(X = x_i) & p & 0{,}5 & 0{,}1 \\end{array}$. Calculer $p$, puis $E(X)$.",
       "corrige": [
-        "$ V(X) = 12\\times \\dfrac{1}{3}\\times \\dfrac{2}{3} = \\dfrac{8}{3} $."
+        "La somme des probabilités vaut $1$ : $p = 0{,}4$.",
+        "$E(X) = (-3) \\times 0{,}4 + 2 \\times 0{,}5 + 8 \\times 0{,}1 = 0{,}6$."
       ],
-      "reponse": "$ \\dfrac{8}{3} $"
+      "reponse": "$p = 0{,}4$ ; $E(X) = 0{,}6$"
     },
     {
       "id": 16,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(8;\\dfrac{1}{4}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "esperance",
+      "enonce": "La loi de probabilité de $X$ est $\\begin{array}{c|ccc} x_i & 5 & 10 & 20 \\\\ \\hline P(X = x_i) & 0{,}5 & 0{,}3 & p \\end{array}$. Calculer $p$, puis $E(X)$.",
       "corrige": [
-        "$ V(X) = 8\\times \\dfrac{1}{4}\\times \\dfrac{3}{4} = \\dfrac{3}{2} $."
+        "La somme des probabilités vaut $1$ : $p = 0{,}2$.",
+        "$E(X) = 5 \\times 0{,}5 + 10 \\times 0{,}3 + 20 \\times 0{,}2 = 9{,}5$."
       ],
-      "reponse": "$ \\dfrac{3}{2} $"
+      "reponse": "$p = 0{,}2$ ; $E(X) = 9{,}5$"
     },
     {
       "id": 17,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(6;\\dfrac{1}{3}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "jeu-equitable",
+      "enonce": "L'espérance du gain algébrique d'un jeu vaut $-0{,}40$ €. Interpréter.",
       "corrige": [
-        "$ V(X) = 6\\times \\dfrac{1}{3}\\times \\dfrac{2}{3} = \\dfrac{4}{3} $."
+        "Sur un grand nombre de parties, le joueur perd en moyenne $0{,}40$ € par partie.",
+        "Le jeu est défavorable au joueur ; ce n'est pas une prévision pour une seule partie."
       ],
-      "reponse": "$ \\dfrac{4}{3} $"
+      "reponse": "Jeu défavorable : perte moyenne de $0{,}40$ € par partie"
     },
     {
       "id": 18,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(16;\\dfrac{1}{2}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "jeu-equitable",
+      "enonce": "Vrai ou faux : pour calculer $E(X)$, on fait la moyenne simple des valeurs prises par $X$.",
       "corrige": [
-        "$ V(X) = 16\\times \\dfrac{1}{2}\\times \\dfrac{1}{2} = 4 $."
+        "Faux : chaque valeur doit être pondérée par sa probabilité.",
+        "$E(X) = x_1p_1 + x_2p_2 + \\cdots + x_np_n$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "Faux"
     },
     {
       "id": 19,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(9;\\dfrac{1}{3}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "reconnaitre-binomiale",
+      "enonce": "On lance 10 fois un dé équilibré et $X$ compte le nombre de 6 obtenus. $X$ suit-elle une loi binomiale ?",
       "corrige": [
-        "$ V(X) = 9\\times \\dfrac{1}{3}\\times \\dfrac{2}{3} = 2 $."
+        "Même épreuve de Bernoulli (succès : « obtenir 6 », $p = \\dfrac{1}{6}$), répétée 10 fois de façon indépendante ; $X$ compte les succès."
       ],
-      "reponse": "$ 2 $"
+      "reponse": "Oui : $X \\sim B\\left(10\\,;\\dfrac{1}{6}\\right)$"
     },
     {
       "id": 20,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(15;\\dfrac{1}{5}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "reconnaitre-binomiale",
+      "enonce": "Une urne contient 3 boules rouges et 2 vertes. On tire successivement 3 boules sans remise ; $X$ compte les boules rouges. Est-ce une loi binomiale ?",
       "corrige": [
-        "$ V(X) = 15\\times \\dfrac{1}{5}\\times \\dfrac{4}{5} = \\dfrac{12}{5} $."
+        "Sans remise dans un petit lot, la probabilité change à chaque tirage : les épreuves ne sont pas indépendantes."
       ],
-      "reponse": "$ \\dfrac{12}{5} $"
+      "reponse": "Non"
     },
     {
       "id": 21,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(24;\\dfrac{1}{4}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "reconnaitre-binomiale",
+      "enonce": "On lance une pièce jusqu'à obtenir pile ; $X$ est le nombre de lancers. Est-ce une loi binomiale ?",
       "corrige": [
-        "$ V(X) = 24\\times \\dfrac{1}{4}\\times \\dfrac{3}{4} = \\dfrac{9}{2} $."
+        "Le nombre d'épreuves n'est pas fixé à l'avance : ce n'est pas une loi binomiale."
       ],
-      "reponse": "$ \\dfrac{9}{2} $"
+      "reponse": "Non"
     },
     {
       "id": 22,
       "difficulte": "intermediaire",
-      "notion": "variance",
-      "enonce": "$ X $ suit $ B(30;\\dfrac{1}{6}) $. Calculer $ V(X) = np(1-p) $.",
+      "notion": "reconnaitre-binomiale",
+      "enonce": "Une machine produit des pièces défectueuses avec une probabilité de $0{,}03$. On prélève 50 pièces (assimilé à des tirages avec remise) ; $X$ compte les pièces défectueuses. Quelle est la loi de $X$ ?",
       "corrige": [
-        "$ V(X) = 30\\times \\dfrac{1}{6}\\times \\dfrac{5}{6} = \\dfrac{25}{6} $."
+        "50 épreuves de Bernoulli identiques et indépendantes, succès « pièce défectueuse » de probabilité $0{,}03$."
       ],
-      "reponse": "$ \\dfrac{25}{6} $"
+      "reponse": "$X \\sim B(50\\,;0{,}03)$"
     },
     {
       "id": 23,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(2;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "reconnaitre-binomiale",
+      "enonce": "$X \\sim B(8\\,;0{,}4)$. Traduire par une phrase l'événement $\\{X = 3\\}$.",
       "corrige": [
-        "$ = 1 $."
+        "$\\{X = k\\}$ signifie « obtenir exactement $k$ succès au cours des $n$ épreuves »."
       ],
-      "reponse": "$ 1 $"
+      "reponse": "Obtenir exactement 3 succès sur les 8 épreuves"
     },
     {
       "id": 24,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(3;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(4\\,;0{,}5)$. Calculer $P(X = 2)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = \\dfrac{3}{2} $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{4}{2} = 6$ (triangle de Pascal).",
+        "$P(X = 2) = 6 \\times 0{,}5^{2} \\times 0{,}5^{2} = 0{,}375$."
       ],
-      "reponse": "$ \\dfrac{3}{2} $"
+      "reponse": "$P(X = 2) = 0{,}375$"
     },
     {
       "id": 25,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(4;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(5\\,;0{,}3)$. Calculer $P(X = 2)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = 2 $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{5}{2} = 10$ (triangle de Pascal).",
+        "$P(X = 2) = 10 \\times 0{,}3^{2} \\times 0{,}7^{3} \\approx 0{,}309$."
       ],
-      "reponse": "$ 2 $"
+      "reponse": "$P(X = 2) \\approx 0{,}309$"
     },
     {
       "id": 26,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(5;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(6\\,;\\dfrac{1}{6})$. Calculer $P(X = 1)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = \\dfrac{5}{2} $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{6}{1} = 6$ (triangle de Pascal).",
+        "$P(X = 1) = 6 \\times \\left(\\dfrac{1}{6}\\right)^{1} \\times \\left(\\dfrac{5}{6}\\right)^{5} \\approx 0{,}402$."
       ],
-      "reponse": "$ \\dfrac{5}{2} $"
+      "reponse": "$P(X = 1) \\approx 0{,}402$"
     },
     {
       "id": 27,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(6;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(3\\,;0{,}8)$. Calculer $P(X = 2)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = 3 $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{3}{2} = 3$ (triangle de Pascal).",
+        "$P(X = 2) = 3 \\times 0{,}8^{2} \\times 0{,}2^{1} = 0{,}384$."
       ],
-      "reponse": "$ 3 $"
+      "reponse": "$P(X = 2) = 0{,}384$"
     },
     {
       "id": 28,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(7;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(8\\,;0{,}1)$. Calculer $P(X = 0)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = \\dfrac{7}{2} $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{8}{0} = 1$ (triangle de Pascal).",
+        "$P(X = 0) = 1 \\times 0{,}1^{0} \\times 0{,}9^{8} \\approx 0{,}430$."
       ],
-      "reponse": "$ \\dfrac{7}{2} $"
+      "reponse": "$P(X = 0) \\approx 0{,}430$"
     },
     {
       "id": 29,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(8;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(5\\,;0{,}6)$. Calculer $P(X = 4)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = 4 $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{5}{4} = 5$ (triangle de Pascal).",
+        "$P(X = 4) = 5 \\times 0{,}6^{4} \\times 0{,}4^{1} \\approx 0{,}259$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "$P(X = 4) \\approx 0{,}259$"
     },
     {
       "id": 30,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(9;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(7\\,;0{,}5)$. Calculer $P(X = 3)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = \\dfrac{9}{2} $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{7}{3} = 35$ (triangle de Pascal).",
+        "$P(X = 3) = 35 \\times 0{,}5^{3} \\times 0{,}5^{4} \\approx 0{,}273$."
       ],
-      "reponse": "$ \\dfrac{9}{2} $"
+      "reponse": "$P(X = 3) \\approx 0{,}273$"
     },
     {
       "id": 31,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(10;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(4\\,;0{,}25)$. Calculer $P(X = 1)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = 5 $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{4}{1} = 4$ (triangle de Pascal).",
+        "$P(X = 1) = 4 \\times 0{,}25^{1} \\times 0{,}75^{3} \\approx 0{,}422$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$P(X = 1) \\approx 0{,}422$"
     },
     {
       "id": 32,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(11;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(6\\,;0{,}4)$. Calculer $P(X = 3)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = \\dfrac{11}{2} $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{6}{3} = 20$ (triangle de Pascal).",
+        "$P(X = 3) = 20 \\times 0{,}4^{3} \\times 0{,}6^{3} \\approx 0{,}276$."
       ],
-      "reponse": "$ \\dfrac{11}{2} $"
+      "reponse": "$P(X = 3) \\approx 0{,}276$"
     },
     {
       "id": 33,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(12;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "intermediaire",
+      "notion": "probabilite-binomiale",
+      "enonce": "$X$ suit la loi binomiale $B(8\\,;0{,}9)$. Calculer $P(X = 7)$ (valeur exacte si possible, sinon arrondie au millième).",
       "corrige": [
-        "$ = 6 $."
+        "$P(X = k) = \\dbinom{n}{k} p^k (1 - p)^{n - k}$.",
+        "$\\dbinom{8}{7} = 8$ (triangle de Pascal).",
+        "$P(X = 7) = 8 \\times 0{,}9^{7} \\times 0{,}1^{1} \\approx 0{,}383$."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "$P(X = 7) \\approx 0{,}383$"
     },
     {
       "id": 34,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(13;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "jeu-equitable",
+      "enonce": "On mise $2$ € et on lance un dé équilibré ; on reçoit $G$ € si on obtient 6, rien sinon. Pour quelle valeur de $G$ le jeu est-il équitable ?",
       "corrige": [
-        "$ = \\dfrac{13}{2} $."
+        "Gain algébrique : $G - 2$ avec la probabilité $\\dfrac{1}{6}$, et $-2$ avec la probabilité $\\dfrac{5}{6}$.",
+        "$E = (G - 2) \\times \\dfrac{1}{6} - 2 \\times \\dfrac{5}{6} = \\dfrac{1}{6}G - 2$.",
+        "$E = 0 \\iff G = \\dfrac{2}{\\dfrac{1}{6}} = 12$."
       ],
-      "reponse": "$ \\dfrac{13}{2} $"
+      "reponse": "$G = 12$ €"
     },
     {
       "id": 35,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(14;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "jeu-equitable",
+      "enonce": "On mise $1$ € et on tire une carte dans un jeu de 32 cartes ; on reçoit $G$ € si c'est un cœur, rien sinon. Pour quelle valeur de $G$ le jeu est-il équitable ?",
       "corrige": [
-        "$ = 7 $."
+        "Gain algébrique : $G - 1$ avec la probabilité $0{,}25$, et $-1$ avec la probabilité $0{,}75$.",
+        "$E = (G - 1) \\times 0{,}25 - 1 \\times 0{,}75 = 0{,}25G - 1$.",
+        "$E = 0 \\iff G = \\dfrac{1}{0{,}25} = 4$."
       ],
-      "reponse": "$ 7 $"
+      "reponse": "$G = 4$ €"
     },
     {
       "id": 36,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(15;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "jeu-equitable",
+      "enonce": "On mise $5$ € ; une roue fait gagner $G$ € avec une probabilité de $0{,}1$, rien sinon. Pour quelle valeur de $G$ le jeu est-il équitable ?",
       "corrige": [
-        "$ = \\dfrac{15}{2} $."
+        "Gain algébrique : $G - 5$ avec la probabilité $0{,}1$, et $-5$ avec la probabilité $0{,}9$.",
+        "$E = (G - 5) \\times 0{,}1 - 5 \\times 0{,}9 = 0{,}1G - 5$.",
+        "$E = 0 \\iff G = \\dfrac{5}{0{,}1} = 50$."
       ],
-      "reponse": "$ \\dfrac{15}{2} $"
+      "reponse": "$G = 50$ €"
     },
     {
       "id": 37,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(16;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "jeu-equitable",
+      "enonce": "On mise $3$ € et on lance une pièce équilibrée ; on reçoit $G$ € si on obtient pile, rien sinon. Pour quelle valeur de $G$ le jeu est-il équitable ?",
       "corrige": [
-        "$ = 8 $."
+        "Gain algébrique : $G - 3$ avec la probabilité $0{,}5$, et $-3$ avec la probabilité $0{,}5$.",
+        "$E = (G - 3) \\times 0{,}5 - 3 \\times 0{,}5 = 0{,}5G - 3$.",
+        "$E = 0 \\iff G = \\dfrac{3}{0{,}5} = 6$."
       ],
-      "reponse": "$ 8 $"
+      "reponse": "$G = 6$ €"
     },
     {
       "id": 38,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(17;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "$X \\sim B(5\\,;0{,}1)$. Calculer $P(X = 0)$ (arrondi au millième si besoin).",
       "corrige": [
-        "$ = \\dfrac{17}{2} $."
+        "Aucun succès : un seul chemin, uniquement des échecs.",
+        "$P(X = 0) = (1 - p)^{n} = 0{,}9^{5} \\approx 0{,}590$."
       ],
-      "reponse": "$ \\dfrac{17}{2} $"
+      "reponse": "$P(X = 0) \\approx 0{,}590$"
     },
     {
       "id": 39,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(18;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "$X \\sim B(4\\,;0{,}9)$. Calculer $P(X = 4)$ (arrondi au millième si besoin).",
       "corrige": [
-        "$ = 9 $."
+        "Que des succès : un seul chemin.",
+        "$P(X = 4) = p^{n} = 0{,}9^{4} \\approx 0{,}656$."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "$P(X = 4) \\approx 0{,}656$"
     },
     {
       "id": 40,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(19;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "$X \\sim B(10\\,;0{,}5)$. Calculer $P(X \\geqslant 1)$ (arrondi au millième).",
       "corrige": [
-        "$ = \\dfrac{19}{2} $."
+        "$\\{X \\geqslant 1\\}$ est l'événement contraire de $\\{X = 0\\}$.",
+        "$P(X \\geqslant 1) = 1 - 0{,}5^{10} \\approx 0{,}999$."
       ],
-      "reponse": "$ \\dfrac{19}{2} $"
+      "reponse": "$P(X \\geqslant 1) \\approx 0{,}999$"
     },
     {
       "id": 41,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(20;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "$X \\sim B(6\\,;\\dfrac{1}{6})$. Calculer $P(X \\geqslant 1)$ (arrondi au millième).",
       "corrige": [
-        "$ = 10 $."
+        "$\\{X \\geqslant 1\\}$ est l'événement contraire de $\\{X = 0\\}$.",
+        "$P(X \\geqslant 1) = 1 - \\left(\\dfrac{5}{6}\\right)^{6} \\approx 0{,}665$."
       ],
-      "reponse": "$ 10 $"
+      "reponse": "$P(X \\geqslant 1) \\approx 0{,}665$"
     },
     {
       "id": 42,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(21;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "$X \\sim B(3\\,;0{,}7)$. Calculer $P(X = 3)$ (arrondi au millième si besoin).",
       "corrige": [
-        "$ = \\dfrac{21}{2} $."
+        "Que des succès : un seul chemin.",
+        "$P(X = 3) = p^{n} = 0{,}7^{3} = 0{,}343$."
       ],
-      "reponse": "$ \\dfrac{21}{2} $"
+      "reponse": "$P(X = 3) = 0{,}343$"
     },
     {
       "id": 43,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(22;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "approfondissement",
+      "notion": "cas-particuliers",
+      "enonce": "$X \\sim B(8\\,;0{,}05)$. Calculer $P(X = 0)$ (arrondi au millième si besoin).",
       "corrige": [
-        "$ = 11 $."
+        "Aucun succès : un seul chemin, uniquement des échecs.",
+        "$P(X = 0) = (1 - p)^{n} = 0{,}95^{8} \\approx 0{,}663$."
       ],
-      "reponse": "$ 11 $"
+      "reponse": "$P(X = 0) \\approx 0{,}663$"
     },
     {
       "id": 44,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(23;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "Un QCM de 20 questions à 4 choix, réponses au hasard : $X$ compte les bonnes réponses. Calculer et interpréter l'espérance de $X$.",
       "corrige": [
-        "$ = \\dfrac{23}{2} $."
+        "$X$ suit la loi binomiale $B(20\\,;0{,}25)$.",
+        "$E(X) = np = 20 \\times 0{,}25 = 5$.",
+        "Sur un grand nombre de répétitions de l'expérience, le nombre moyen de succès est $5$."
       ],
-      "reponse": "$ \\dfrac{23}{2} $"
+      "reponse": "$E(X) = 5$"
     },
     {
       "id": 45,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(24;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "Sur 50 pièces prélevées, $X$ compte les pièces défectueuses (probabilité $0{,}03$ chacune). Calculer et interpréter l'espérance de $X$.",
       "corrige": [
-        "$ = 12 $."
+        "$X$ suit la loi binomiale $B(50\\,;0{,}03)$.",
+        "$E(X) = np = 50 \\times 0{,}03 = 1{,}5$.",
+        "Sur un grand nombre de répétitions de l'expérience, le nombre moyen de succès est $1{,}5$."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "$E(X) = 1{,}5$"
     },
     {
       "id": 46,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(25;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "On lance 120 fois un dé équilibré ; $X$ compte les 6. Calculer et interpréter l'espérance de $X$.",
       "corrige": [
-        "$ = \\dfrac{25}{2} $."
+        "$X$ suit la loi binomiale $B(120\\,;\\dfrac{1}{6})$.",
+        "$E(X) = np = 120 \\times \\dfrac{1}{6} = 20$.",
+        "Sur un grand nombre de répétitions de l'expérience, le nombre moyen de succès est $20$."
       ],
-      "reponse": "$ \\dfrac{25}{2} $"
+      "reponse": "$E(X) = 20$"
     },
     {
       "id": 47,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(26;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "On interroge 200 personnes au hasard ; chacune vote pour A avec une probabilité de $0{,}45$, et $X$ compte les votes pour A. Calculer et interpréter l'espérance de $X$.",
       "corrige": [
-        "$ = 13 $."
+        "$X$ suit la loi binomiale $B(200\\,;0{,}45)$.",
+        "$E(X) = np = 200 \\times 0{,}45 = 90$.",
+        "Sur un grand nombre de répétitions de l'expérience, le nombre moyen de succès est $90$."
       ],
-      "reponse": "$ 13 $"
+      "reponse": "$E(X) = 90$"
     },
     {
       "id": 48,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(27;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "Un basketteur tire 30 lancers francs, réussis chacun avec une probabilité de $0{,}8$ ; $X$ compte les lancers réussis. Calculer et interpréter l'espérance de $X$.",
       "corrige": [
-        "$ = \\dfrac{27}{2} $."
+        "$X$ suit la loi binomiale $B(30\\,;0{,}8)$.",
+        "$E(X) = np = 30 \\times 0{,}8 = 24$.",
+        "Sur un grand nombre de répétitions de l'expérience, le nombre moyen de succès est $24$."
       ],
-      "reponse": "$ \\dfrac{27}{2} $"
+      "reponse": "$E(X) = 24$"
     },
     {
       "id": 49,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(28;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "Chaque jour de l'année, la probabilité qu'un bus soit en retard est $0{,}2$, indépendamment des autres jours ; $X$ compte les jours de retard sur 365 jours. Calculer et interpréter l'espérance de $X$.",
       "corrige": [
-        "$ = 14 $."
+        "$X$ suit la loi binomiale $B(365\\,;0{,}2)$.",
+        "$E(X) = np = 365 \\times 0{,}2 = 73$.",
+        "Sur un grand nombre de répétitions de l'expérience, le nombre moyen de succès est $73$."
       ],
-      "reponse": "$ 14 $"
+      "reponse": "$E(X) = 73$"
     },
     {
       "id": 50,
-      "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "$ B(29;\\tfrac{1}{2}) $ : $ E(X) $ ?",
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "On lance 16 fois une pièce équilibrée ; $X$ compte les piles. Calculer et interpréter l'espérance de $X$.",
       "corrige": [
-        "$ = \\dfrac{29}{2} $."
+        "$X$ suit la loi binomiale $B(16\\,;0{,}5)$.",
+        "$E(X) = np = 16 \\times 0{,}5 = 8$.",
+        "Sur un grand nombre de répétitions de l'expérience, le nombre moyen de succès est $8$."
       ],
-      "reponse": "$ \\dfrac{29}{2} $"
+      "reponse": "$E(X) = 8$"
     }
   ]
 }

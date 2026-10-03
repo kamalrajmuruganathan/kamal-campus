@@ -13,502 +13,597 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $2$ par $2$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $9515$ par $7$.",
       "corrige": [
-        "$2 = 2 \\times 1 + 0$ (avec $0 < 2$)."
+        "Dans $9$, combien de fois $7$ ? $1$ fois ($7 \\times 1 = 7$), il reste $2$.",
+        "J'abaisse le $5$ : dans $25$, combien de fois $7$ ? $3$ fois ($7 \\times 3 = 21$), il reste $4$.",
+        "J'abaisse le $1$ : dans $41$, combien de fois $7$ ? $5$ fois ($7 \\times 5 = 35$), il reste $6$.",
+        "J'abaisse le $5$ : dans $65$, combien de fois $7$ ? $9$ fois ($7 \\times 9 = 63$), il reste $2$.",
+        "Donc $9515 = 7 \\times 1359 + 2$."
       ],
-      "reponse": "quotient 1, reste 0"
+      "reponse": "quotient $1359$, reste $2$"
     },
     {
       "id": 2,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $32$ par $5$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $8858$ par $42$.",
       "corrige": [
-        "$32 = 5 \\times 6 + 2$ (avec $2 < 5$)."
+        "Dans $88$, combien de fois $42$ ? $2$ fois ($42 \\times 2 = 84$), il reste $4$.",
+        "J'abaisse le $5$ : dans $45$, combien de fois $42$ ? $1$ fois ($42 \\times 1 = 42$), il reste $3$.",
+        "J'abaisse le $8$ : dans $38$, combien de fois $42$ ? $0$ fois ($42 \\times 0 = 0$), il reste $38$.",
+        "Preuve : $42 \\times 210 + 38 = 8858$ et $38 < 42$."
       ],
-      "reponse": "quotient 6, reste 2"
+      "reponse": "quotient $210$, reste $38$"
     },
     {
       "id": 3,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $94$ par $8$.",
+      "difficulte": "approfondissement",
+      "notion": "zero-au-quotient",
+      "enonce": "Pose et effectue la division de $2760$ par $6$. Attention au zéro dans le quotient !",
       "corrige": [
-        "$94 = 8 \\times 11 + 6$ (avec $6 < 8$)."
+        "Dans $27$, combien de fois $6$ ? $4$ fois ($6 \\times 4 = 24$), il reste $3$.",
+        "J'abaisse le $6$ : dans $36$, combien de fois $6$ ? $6$ fois ($6 \\times 6 = 36$), il reste $0$.",
+        "J'abaisse le $0$ : dans $0$, combien de fois $6$ ? $0$ fois ($6 \\times 0 = 0$), il reste $0$.",
+        "Quand le nombre obtenu est plus petit que $6$, on écrit $0$ au quotient.",
+        "Donc $2760 = 6 \\times 460 + 0$."
       ],
-      "reponse": "quotient 11, reste 6"
+      "reponse": "quotient $460$, reste $0$"
     },
     {
       "id": 4,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $186$ par $11$.",
+      "difficulte": "intermediaire",
+      "notion": "estimer-le-quotient",
+      "enonce": "Sans poser la division, combien de chiffres aura le quotient de $5291$ par $19$ ?",
       "corrige": [
-        "$186 = 11 \\times 16 + 10$ (avec $10 < 11$)."
+        "$19 \\times 100 = 1900$ et $19 \\times 1000 = 19\\,000$.",
+        "$1900 \\leq 5291 < 19\\,000$ : le quotient est entre $100$ et $1000$."
       ],
-      "reponse": "quotient 16, reste 10"
+      "reponse": "3 chiffres"
     },
     {
       "id": 5,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $294$ par $14$.",
+      "difficulte": "approfondissement",
+      "notion": "preuve",
+      "enonce": "Fais la preuve : la division de $4079$ par $34$ donne-t-elle $117$, reste $33$ ?",
       "corrige": [
-        "$294 = 14 \\times 21 + 0$ (avec $0 < 14$)."
+        "$34 \\times 117 + 33 = 4011$, ce n'est pas $4079$.",
+        "Bonne réponse : $4079 = 34 \\times 119 + 33$."
       ],
-      "reponse": "quotient 21, reste 0"
+      "reponse": "Non : quotient $119$, reste $33$"
     },
     {
       "id": 6,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $18$ par $17$.",
+      "difficulte": "approfondissement",
+      "notion": "quotient-decimal",
+      "enonce": "Calcule le quotient décimal exact de $7 \\div 4$.",
       "corrige": [
-        "$18 = 17 \\times 1 + 1$ (avec $1 < 17$)."
+        "$7 = 4 \\times 1 + 3$ : on écrit $1$ puis une virgule, et on continue en ajoutant des zéros au reste.",
+        "Vérification : $4 \\times 1{,}75 = 7$."
       ],
-      "reponse": "quotient 1, reste 1"
+      "reponse": "$1{,}75$"
     },
     {
       "id": 7,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $122$ par $20$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "Un livre a 288 pages. Inès veut le lire en 16 jours en lisant le même nombre de pages chaque jour. Combien de pages par jour ?",
       "corrige": [
-        "$122 = 20 \\times 6 + 2$ (avec $2 < 20$)."
+        "$288 \\div 16 = 18$."
       ],
-      "reponse": "quotient 6, reste 2"
+      "reponse": "$18$ pages"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $256$ par $23$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $2008$ par $3$.",
       "corrige": [
-        "$256 = 23 \\times 11 + 3$ (avec $3 < 23$)."
+        "Dans $20$, combien de fois $3$ ? $6$ fois ($3 \\times 6 = 18$), il reste $2$.",
+        "J'abaisse le $0$ : dans $20$, combien de fois $3$ ? $6$ fois ($3 \\times 6 = 18$), il reste $2$.",
+        "J'abaisse le $8$ : dans $28$, combien de fois $3$ ? $9$ fois ($3 \\times 9 = 27$), il reste $1$.",
+        "Donc $2008 = 3 \\times 669 + 1$."
       ],
-      "reponse": "quotient 11, reste 3"
+      "reponse": "quotient $669$, reste $1$"
     },
     {
       "id": 9,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $420$ par $26$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $9691$ par $39$.",
       "corrige": [
-        "$420 = 26 \\times 16 + 4$ (avec $4 < 26$)."
+        "Dans $96$, combien de fois $39$ ? $2$ fois ($39 \\times 2 = 78$), il reste $18$.",
+        "J'abaisse le $9$ : dans $189$, combien de fois $39$ ? $4$ fois ($39 \\times 4 = 156$), il reste $33$.",
+        "J'abaisse le $1$ : dans $331$, combien de fois $39$ ? $8$ fois ($39 \\times 8 = 312$), il reste $19$.",
+        "Preuve : $39 \\times 248 + 19 = 9691$ et $19 < 39$."
       ],
-      "reponse": "quotient 16, reste 4"
+      "reponse": "quotient $248$, reste $19$"
     },
     {
       "id": 10,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $614$ par $29$.",
+      "difficulte": "approfondissement",
+      "notion": "zero-au-quotient",
+      "enonce": "Pose et effectue la division de $412$ par $4$. Attention au zéro dans le quotient !",
       "corrige": [
-        "$614 = 29 \\times 21 + 5$ (avec $5 < 29$)."
+        "Dans $4$, combien de fois $4$ ? $1$ fois ($4 \\times 1 = 4$), il reste $0$.",
+        "J'abaisse le $1$ : dans $1$, combien de fois $4$ ? $0$ fois ($4 \\times 0 = 0$), il reste $1$.",
+        "J'abaisse le $2$ : dans $12$, combien de fois $4$ ? $3$ fois ($4 \\times 3 = 12$), il reste $0$.",
+        "Quand le nombre obtenu est plus petit que $4$, on écrit $0$ au quotient.",
+        "Donc $412 = 4 \\times 103 + 0$."
       ],
-      "reponse": "quotient 21, reste 5"
+      "reponse": "quotient $103$, reste $0$"
     },
     {
       "id": 11,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $38$ par $32$.",
+      "difficulte": "intermediaire",
+      "notion": "estimer-le-quotient",
+      "enonce": "Sans poser la division, combien de chiffres aura le quotient de $9202$ par $20$ ?",
       "corrige": [
-        "$38 = 32 \\times 1 + 6$ (avec $6 < 32$)."
+        "$20 \\times 100 = 2000$ et $20 \\times 1000 = 20\\,000$.",
+        "$2000 \\leq 9202 < 20\\,000$ : le quotient est entre $100$ et $1000$."
       ],
-      "reponse": "quotient 1, reste 6"
+      "reponse": "3 chiffres"
     },
     {
       "id": 12,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $217$ par $35$.",
+      "difficulte": "approfondissement",
+      "notion": "preuve",
+      "enonce": "Paul trouve que $1180 \\div 12$ donne $97$, reste $16$. Sa preuve $12 \\times 97 + 16 = 1180$ est juste. A-t-il raison ?",
       "corrige": [
-        "$217 = 35 \\times 6 + 7$ (avec $7 < 35$)."
+        "L'égalité est vraie, mais le reste $16$ n'est pas plus petit que $12$ : on peut encore faire un groupe.",
+        "Correction : quotient $98$, reste $4$."
       ],
-      "reponse": "quotient 6, reste 7"
+      "reponse": "Non : quotient $98$, reste $4$"
     },
     {
       "id": 13,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $426$ par $38$.",
+      "difficulte": "approfondissement",
+      "notion": "quotient-decimal",
+      "enonce": "Calcule le quotient décimal exact de $9 \\div 2$.",
       "corrige": [
-        "$426 = 38 \\times 11 + 8$ (avec $8 < 38$)."
+        "$9 = 2 \\times 4 + 1$ : on écrit $4$ puis une virgule, et on continue en ajoutant des zéros au reste.",
+        "Vérification : $2 \\times 4{,}5 = 9$."
       ],
-      "reponse": "quotient 11, reste 8"
+      "reponse": "$4{,}5$"
     },
     {
       "id": 14,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $665$ par $41$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "Un livre a 208 pages. Inès veut le lire en 13 jours en lisant le même nombre de pages chaque jour. Combien de pages par jour ?",
       "corrige": [
-        "$665 = 41 \\times 16 + 9$ (avec $9 < 41$)."
+        "$208 \\div 13 = 16$."
       ],
-      "reponse": "quotient 16, reste 9"
+      "reponse": "$16$ pages"
     },
     {
       "id": 15,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $934$ par $44$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $7144$ par $3$.",
       "corrige": [
-        "$934 = 44 \\times 21 + 10$ (avec $10 < 44$)."
+        "Dans $7$, combien de fois $3$ ? $2$ fois ($3 \\times 2 = 6$), il reste $1$.",
+        "J'abaisse le $1$ : dans $11$, combien de fois $3$ ? $3$ fois ($3 \\times 3 = 9$), il reste $2$.",
+        "J'abaisse le $4$ : dans $24$, combien de fois $3$ ? $8$ fois ($3 \\times 8 = 24$), il reste $0$.",
+        "J'abaisse le $4$ : dans $4$, combien de fois $3$ ? $1$ fois ($3 \\times 1 = 3$), il reste $1$.",
+        "Donc $7144 = 3 \\times 2381 + 1$."
       ],
-      "reponse": "quotient 21, reste 10"
+      "reponse": "quotient $2381$, reste $1$"
     },
     {
       "id": 16,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $58$ par $47$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $1725$ par $17$.",
       "corrige": [
-        "$58 = 47 \\times 1 + 11$ (avec $11 < 47$)."
+        "Dans $17$, combien de fois $17$ ? $1$ fois ($17 \\times 1 = 17$), il reste $0$.",
+        "J'abaisse le $2$ : dans $2$, combien de fois $17$ ? $0$ fois ($17 \\times 0 = 0$), il reste $2$.",
+        "J'abaisse le $5$ : dans $25$, combien de fois $17$ ? $1$ fois ($17 \\times 1 = 17$), il reste $8$.",
+        "Preuve : $17 \\times 101 + 8 = 1725$ et $8 < 17$."
       ],
-      "reponse": "quotient 1, reste 11"
+      "reponse": "quotient $101$, reste $8$"
     },
     {
       "id": 17,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $312$ par $50$.",
+      "difficulte": "approfondissement",
+      "notion": "zero-au-quotient",
+      "enonce": "Pose et effectue la division de $1838$ par $9$. Attention au zéro dans le quotient !",
       "corrige": [
-        "$312 = 50 \\times 6 + 12$ (avec $12 < 50$)."
+        "Dans $18$, combien de fois $9$ ? $2$ fois ($9 \\times 2 = 18$), il reste $0$.",
+        "J'abaisse le $3$ : dans $3$, combien de fois $9$ ? $0$ fois ($9 \\times 0 = 0$), il reste $3$.",
+        "J'abaisse le $8$ : dans $38$, combien de fois $9$ ? $4$ fois ($9 \\times 4 = 36$), il reste $2$.",
+        "Quand le nombre obtenu est plus petit que $9$, on écrit $0$ au quotient.",
+        "Donc $1838 = 9 \\times 204 + 2$."
       ],
-      "reponse": "quotient 6, reste 12"
+      "reponse": "quotient $204$, reste $2$"
     },
     {
       "id": 18,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $596$ par $53$.",
+      "difficulte": "intermediaire",
+      "notion": "estimer-le-quotient",
+      "enonce": "Sans poser la division, combien de chiffres aura le quotient de $2472$ par $26$ ?",
       "corrige": [
-        "$596 = 53 \\times 11 + 13$ (avec $13 < 53$)."
+        "$26 \\times 10 = 260$ et $26 \\times 100 = 2600$.",
+        "$260 \\leq 2472 < 2600$ : le quotient est entre $10$ et $100$."
       ],
-      "reponse": "quotient 11, reste 13"
+      "reponse": "2 chiffres"
     },
     {
       "id": 19,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $910$ par $56$.",
+      "difficulte": "intermediaire",
+      "notion": "preuve",
+      "enonce": "Dans une division, le diviseur est $34$, le quotient $45$ et le reste $27$. Quel est le dividende ?",
       "corrige": [
-        "$910 = 56 \\times 16 + 14$ (avec $14 < 56$)."
+        "Dividende $= 34 \\times 45 + 27 = 1530 + 27 = 1557$."
       ],
-      "reponse": "quotient 16, reste 14"
+      "reponse": "$1557$"
     },
     {
       "id": 20,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $1254$ par $59$.",
+      "difficulte": "approfondissement",
+      "notion": "quotient-decimal",
+      "enonce": "Calcule le quotient décimal exact de $13 \\div 5$.",
       "corrige": [
-        "$1254 = 59 \\times 21 + 15$ (avec $15 < 59$)."
+        "$13 = 5 \\times 2 + 3$ : on écrit $2$ puis une virgule, et on continue en ajoutant des zéros au reste.",
+        "Vérification : $5 \\times 2{,}6 = 13$."
       ],
-      "reponse": "quotient 21, reste 15"
+      "reponse": "$2{,}6$"
     },
     {
       "id": 21,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $78$ par $62$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "Une sortie coûte 756 € pour une classe de 21 élèves. Combien chaque élève doit-il payer ?",
       "corrige": [
-        "$78 = 62 \\times 1 + 16$ (avec $16 < 62$)."
+        "$756 \\div 21 = 36$."
       ],
-      "reponse": "quotient 1, reste 16"
+      "reponse": "$36$ €"
     },
     {
       "id": 22,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $407$ par $65$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $9366$ par $7$.",
       "corrige": [
-        "$407 = 65 \\times 6 + 17$ (avec $17 < 65$)."
+        "Dans $9$, combien de fois $7$ ? $1$ fois ($7 \\times 1 = 7$), il reste $2$.",
+        "J'abaisse le $3$ : dans $23$, combien de fois $7$ ? $3$ fois ($7 \\times 3 = 21$), il reste $2$.",
+        "J'abaisse le $6$ : dans $26$, combien de fois $7$ ? $3$ fois ($7 \\times 3 = 21$), il reste $5$.",
+        "J'abaisse le $6$ : dans $56$, combien de fois $7$ ? $8$ fois ($7 \\times 8 = 56$), il reste $0$.",
+        "Donc $9366 = 7 \\times 1338 + 0$."
       ],
-      "reponse": "quotient 6, reste 17"
+      "reponse": "quotient $1338$, reste $0$"
     },
     {
       "id": 23,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $766$ par $68$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $6731$ par $27$.",
       "corrige": [
-        "$766 = 68 \\times 11 + 18$ (avec $18 < 68$)."
+        "Dans $67$, combien de fois $27$ ? $2$ fois ($27 \\times 2 = 54$), il reste $13$.",
+        "J'abaisse le $3$ : dans $133$, combien de fois $27$ ? $4$ fois ($27 \\times 4 = 108$), il reste $25$.",
+        "J'abaisse le $1$ : dans $251$, combien de fois $27$ ? $9$ fois ($27 \\times 9 = 243$), il reste $8$.",
+        "Preuve : $27 \\times 249 + 8 = 6731$ et $8 < 27$."
       ],
-      "reponse": "quotient 11, reste 18"
+      "reponse": "quotient $249$, reste $8$"
     },
     {
       "id": 24,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $1155$ par $71$.",
+      "difficulte": "approfondissement",
+      "notion": "zero-au-quotient",
+      "enonce": "Pose et effectue la division de $982$ par $9$. Attention au zéro dans le quotient !",
       "corrige": [
-        "$1155 = 71 \\times 16 + 19$ (avec $19 < 71$)."
+        "Dans $9$, combien de fois $9$ ? $1$ fois ($9 \\times 1 = 9$), il reste $0$.",
+        "J'abaisse le $8$ : dans $8$, combien de fois $9$ ? $0$ fois ($9 \\times 0 = 0$), il reste $8$.",
+        "J'abaisse le $2$ : dans $82$, combien de fois $9$ ? $9$ fois ($9 \\times 9 = 81$), il reste $1$.",
+        "Quand le nombre obtenu est plus petit que $9$, on écrit $0$ au quotient.",
+        "Donc $982 = 9 \\times 109 + 1$."
       ],
-      "reponse": "quotient 16, reste 19"
+      "reponse": "quotient $109$, reste $1$"
     },
     {
       "id": 25,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $1574$ par $74$.",
+      "difficulte": "intermediaire",
+      "notion": "estimer-le-quotient",
+      "enonce": "Sans poser la division, combien de chiffres aura le quotient de $6677$ par $36$ ?",
       "corrige": [
-        "$1574 = 74 \\times 21 + 20$ (avec $20 < 74$)."
+        "$36 \\times 100 = 3600$ et $36 \\times 1000 = 36\\,000$.",
+        "$3600 \\leq 6677 < 36\\,000$ : le quotient est entre $100$ et $1000$."
       ],
-      "reponse": "quotient 21, reste 20"
+      "reponse": "3 chiffres"
     },
     {
       "id": 26,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $98$ par $77$.",
+      "difficulte": "approfondissement",
+      "notion": "preuve",
+      "enonce": "Paul trouve que $3911 \\div 28$ donne $138$, reste $47$. Sa preuve $28 \\times 138 + 47 = 3911$ est juste. A-t-il raison ?",
       "corrige": [
-        "$98 = 77 \\times 1 + 21$ (avec $21 < 77$)."
+        "L'égalité est vraie, mais le reste $47$ n'est pas plus petit que $28$ : on peut encore faire un groupe.",
+        "Correction : quotient $139$, reste $19$."
       ],
-      "reponse": "quotient 1, reste 21"
+      "reponse": "Non : quotient $139$, reste $19$"
     },
     {
       "id": 27,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $502$ par $80$.",
+      "difficulte": "approfondissement",
+      "notion": "quotient-decimal",
+      "enonce": "Calcule le quotient décimal exact de $21 \\div 4$.",
       "corrige": [
-        "$502 = 80 \\times 6 + 22$ (avec $22 < 80$)."
+        "$21 = 4 \\times 5 + 1$ : on écrit $5$ puis une virgule, et on continue en ajoutant des zéros au reste.",
+        "Vérification : $4 \\times 5{,}25 = 21$."
       ],
-      "reponse": "quotient 6, reste 22"
+      "reponse": "$5{,}25$"
     },
     {
       "id": 28,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $936$ par $83$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "Une usine range 846 yaourts par paquets de 15. Combien de paquets complets obtient-elle ? Combien de yaourts restent ?",
       "corrige": [
-        "$936 = 83 \\times 11 + 23$ (avec $23 < 83$)."
+        "$846 = 15 \\times 56 + 6$."
       ],
-      "reponse": "quotient 11, reste 23"
+      "reponse": "$56$ paquets, $6$ yaourts restants"
     },
     {
       "id": 29,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $1400$ par $86$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $4876$ par $9$.",
       "corrige": [
-        "$1400 = 86 \\times 16 + 24$ (avec $24 < 86$)."
+        "Dans $48$, combien de fois $9$ ? $5$ fois ($9 \\times 5 = 45$), il reste $3$.",
+        "J'abaisse le $7$ : dans $37$, combien de fois $9$ ? $4$ fois ($9 \\times 4 = 36$), il reste $1$.",
+        "J'abaisse le $6$ : dans $16$, combien de fois $9$ ? $1$ fois ($9 \\times 1 = 9$), il reste $7$.",
+        "Donc $4876 = 9 \\times 541 + 7$."
       ],
-      "reponse": "quotient 16, reste 24"
+      "reponse": "quotient $541$, reste $7$"
     },
     {
       "id": 30,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $1894$ par $89$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $7077$ par $22$.",
       "corrige": [
-        "$1894 = 89 \\times 21 + 25$ (avec $25 < 89$)."
+        "Dans $70$, combien de fois $22$ ? $3$ fois ($22 \\times 3 = 66$), il reste $4$.",
+        "J'abaisse le $7$ : dans $47$, combien de fois $22$ ? $2$ fois ($22 \\times 2 = 44$), il reste $3$.",
+        "J'abaisse le $7$ : dans $37$, combien de fois $22$ ? $1$ fois ($22 \\times 1 = 22$), il reste $15$.",
+        "Preuve : $22 \\times 321 + 15 = 7077$ et $15 < 22$."
       ],
-      "reponse": "quotient 21, reste 25"
+      "reponse": "quotient $321$, reste $15$"
     },
     {
       "id": 31,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $88$ par $8$.",
+      "difficulte": "approfondissement",
+      "notion": "zero-au-quotient",
+      "enonce": "Pose et effectue la division de $429$ par $4$. Attention au zéro dans le quotient !",
       "corrige": [
-        "$88 = 8 \\times 11 + 0$ (avec $0 < 8$)."
+        "Dans $4$, combien de fois $4$ ? $1$ fois ($4 \\times 1 = 4$), il reste $0$.",
+        "J'abaisse le $2$ : dans $2$, combien de fois $4$ ? $0$ fois ($4 \\times 0 = 0$), il reste $2$.",
+        "J'abaisse le $9$ : dans $29$, combien de fois $4$ ? $7$ fois ($4 \\times 7 = 28$), il reste $1$.",
+        "Quand le nombre obtenu est plus petit que $4$, on écrit $0$ au quotient.",
+        "Donc $429 = 4 \\times 107 + 1$."
       ],
-      "reponse": "quotient 11, reste 0"
+      "reponse": "quotient $107$, reste $1$"
     },
     {
       "id": 32,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $176$ par $11$.",
+      "difficulte": "intermediaire",
+      "notion": "estimer-le-quotient",
+      "enonce": "Sans poser la division, combien de chiffres aura le quotient de $4842$ par $18$ ?",
       "corrige": [
-        "$176 = 11 \\times 16 + 0$ (avec $0 < 11$)."
+        "$18 \\times 100 = 1800$ et $18 \\times 1000 = 18\\,000$.",
+        "$1800 \\leq 4842 < 18\\,000$ : le quotient est entre $100$ et $1000$."
       ],
-      "reponse": "quotient 16, reste 0"
+      "reponse": "3 chiffres"
     },
     {
       "id": 33,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $24$ par $17$.",
+      "difficulte": "intermediaire",
+      "notion": "preuve",
+      "enonce": "Dans une division, le diviseur est $23$, le quotient $54$ et le reste $18$. Quel est le dividende ?",
       "corrige": [
-        "$24 = 17 \\times 1 + 7$ (avec $7 < 17$)."
+        "Dividende $= 23 \\times 54 + 18 = 1242 + 18 = 1260$."
       ],
-      "reponse": "quotient 1, reste 7"
+      "reponse": "$1260$"
     },
     {
       "id": 34,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $132$ par $20$.",
+      "difficulte": "approfondissement",
+      "notion": "quotient-decimal",
+      "enonce": "Calcule le quotient décimal exact de $45 \\div 6$.",
       "corrige": [
-        "$132 = 20 \\times 6 + 12$ (avec $12 < 20$)."
+        "$45 = 6 \\times 7 + 3$ : on écrit $7$ puis une virgule, et on continue en ajoutant des zéros au reste.",
+        "Vérification : $6 \\times 7{,}5 = 45$."
       ],
-      "reponse": "quotient 6, reste 12"
+      "reponse": "$7{,}5$"
     },
     {
       "id": 35,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $259$ par $23$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "Une sortie coûte 546 € pour une classe de 26 élèves. Combien chaque élève doit-il payer ?",
       "corrige": [
-        "$259 = 23 \\times 11 + 6$ (avec $6 < 23$)."
+        "$546 \\div 26 = 21$."
       ],
-      "reponse": "quotient 11, reste 6"
+      "reponse": "$21$ €"
     },
     {
       "id": 36,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $422$ par $26$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $7138$ par $9$.",
       "corrige": [
-        "$422 = 26 \\times 16 + 6$ (avec $6 < 26$)."
+        "Dans $71$, combien de fois $9$ ? $7$ fois ($9 \\times 7 = 63$), il reste $8$.",
+        "J'abaisse le $3$ : dans $83$, combien de fois $9$ ? $9$ fois ($9 \\times 9 = 81$), il reste $2$.",
+        "J'abaisse le $8$ : dans $28$, combien de fois $9$ ? $3$ fois ($9 \\times 3 = 27$), il reste $1$.",
+        "Donc $7138 = 9 \\times 793 + 1$."
       ],
-      "reponse": "quotient 16, reste 6"
+      "reponse": "quotient $793$, reste $1$"
     },
     {
       "id": 37,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $621$ par $29$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $3796$ par $47$.",
       "corrige": [
-        "$621 = 29 \\times 21 + 12$ (avec $12 < 29$)."
+        "Dans $379$, combien de fois $47$ ? $8$ fois ($47 \\times 8 = 376$), il reste $3$.",
+        "J'abaisse le $6$ : dans $36$, combien de fois $47$ ? $0$ fois ($47 \\times 0 = 0$), il reste $36$.",
+        "Preuve : $47 \\times 80 + 36 = 3796$ et $36 < 47$."
       ],
-      "reponse": "quotient 21, reste 12"
+      "reponse": "quotient $80$, reste $36$"
     },
     {
       "id": 38,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $56$ par $32$.",
+      "difficulte": "approfondissement",
+      "notion": "zero-au-quotient",
+      "enonce": "Pose et effectue la division de $543$ par $5$. Attention au zéro dans le quotient !",
       "corrige": [
-        "$56 = 32 \\times 1 + 24$ (avec $24 < 32$)."
+        "Dans $5$, combien de fois $5$ ? $1$ fois ($5 \\times 1 = 5$), il reste $0$.",
+        "J'abaisse le $4$ : dans $4$, combien de fois $5$ ? $0$ fois ($5 \\times 0 = 0$), il reste $4$.",
+        "J'abaisse le $3$ : dans $43$, combien de fois $5$ ? $8$ fois ($5 \\times 8 = 40$), il reste $3$.",
+        "Quand le nombre obtenu est plus petit que $5$, on écrit $0$ au quotient.",
+        "Donc $543 = 5 \\times 108 + 3$."
       ],
-      "reponse": "quotient 1, reste 24"
+      "reponse": "quotient $108$, reste $3$"
     },
     {
       "id": 39,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $446$ par $38$.",
+      "difficulte": "intermediaire",
+      "notion": "estimer-le-quotient",
+      "enonce": "Sans poser la division, combien de chiffres aura le quotient de $4454$ par $16$ ?",
       "corrige": [
-        "$446 = 38 \\times 11 + 28$ (avec $28 < 38$)."
+        "$16 \\times 100 = 1600$ et $16 \\times 1000 = 16\\,000$.",
+        "$1600 \\leq 4454 < 16\\,000$ : le quotient est entre $100$ et $1000$."
       ],
-      "reponse": "quotient 11, reste 28"
+      "reponse": "3 chiffres"
     },
     {
       "id": 40,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $670$ par $41$.",
+      "difficulte": "intermediaire",
+      "notion": "preuve",
+      "enonce": "Dans une division, le diviseur est $6$, le quotient $136$ et le reste $0$. Quel est le dividende ?",
       "corrige": [
-        "$670 = 41 \\times 16 + 14$ (avec $14 < 41$)."
+        "Dividende $= 6 \\times 136 + 0 = 816 + 0 = 816$."
       ],
-      "reponse": "quotient 16, reste 14"
+      "reponse": "$816$"
     },
     {
       "id": 41,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $924$ par $44$.",
+      "difficulte": "approfondissement",
+      "notion": "quotient-decimal",
+      "enonce": "Calcule le quotient décimal exact de $19 \\div 4$.",
       "corrige": [
-        "$924 = 44 \\times 21 + 0$ (avec $0 < 44$)."
+        "$19 = 4 \\times 4 + 3$ : on écrit $4$ puis une virgule, et on continue en ajoutant des zéros au reste.",
+        "Vérification : $4 \\times 4{,}75 = 19$."
       ],
-      "reponse": "quotient 21, reste 0"
+      "reponse": "$4{,}75$"
     },
     {
       "id": 42,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $80$ par $47$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "669 personnes doivent voyager en car. Chaque car a 52 places. Combien de cars faut-il au minimum ?",
       "corrige": [
-        "$80 = 47 \\times 1 + 33$ (avec $33 < 47$)."
+        "$669 = 52 \\times 12 + 45$.",
+        "Les 45 personnes restantes ont besoin d'un car de plus : $13$."
       ],
-      "reponse": "quotient 1, reste 33"
+      "reponse": "$13$ cars"
     },
     {
       "id": 43,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $322$ par $50$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $7686$ par $3$.",
       "corrige": [
-        "$322 = 50 \\times 6 + 22$ (avec $22 < 50$)."
+        "Dans $7$, combien de fois $3$ ? $2$ fois ($3 \\times 2 = 6$), il reste $1$.",
+        "J'abaisse le $6$ : dans $16$, combien de fois $3$ ? $5$ fois ($3 \\times 5 = 15$), il reste $1$.",
+        "J'abaisse le $8$ : dans $18$, combien de fois $3$ ? $6$ fois ($3 \\times 6 = 18$), il reste $0$.",
+        "J'abaisse le $6$ : dans $6$, combien de fois $3$ ? $2$ fois ($3 \\times 2 = 6$), il reste $0$.",
+        "Donc $7686 = 3 \\times 2562 + 0$."
       ],
-      "reponse": "quotient 6, reste 22"
+      "reponse": "quotient $2562$, reste $0$"
     },
     {
       "id": 44,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $594$ par $53$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $6060$ par $20$.",
       "corrige": [
-        "$594 = 53 \\times 11 + 11$ (avec $11 < 53$)."
+        "Dans $60$, combien de fois $20$ ? $3$ fois ($20 \\times 3 = 60$), il reste $0$.",
+        "J'abaisse le $6$ : dans $6$, combien de fois $20$ ? $0$ fois ($20 \\times 0 = 0$), il reste $6$.",
+        "J'abaisse le $0$ : dans $60$, combien de fois $20$ ? $3$ fois ($20 \\times 3 = 60$), il reste $0$.",
+        "Preuve : $20 \\times 303 + 0 = 6060$ et $0 < 20$."
       ],
-      "reponse": "quotient 11, reste 11"
+      "reponse": "quotient $303$, reste $0$"
     },
     {
       "id": 45,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $896$ par $56$.",
+      "difficulte": "approfondissement",
+      "notion": "preuve",
+      "enonce": "Paul trouve que $491 \\div 8$ donne $60$, reste $11$. Sa preuve $8 \\times 60 + 11 = 491$ est juste. A-t-il raison ?",
       "corrige": [
-        "$896 = 56 \\times 16 + 0$ (avec $0 < 56$)."
+        "L'égalité est vraie, mais le reste $11$ n'est pas plus petit que $8$ : on peut encore faire un groupe.",
+        "Correction : quotient $61$, reste $3$."
       ],
-      "reponse": "quotient 16, reste 0"
+      "reponse": "Non : quotient $61$, reste $3$"
     },
     {
       "id": 46,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $1287$ par $59$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "Un livre a 513 pages. Inès veut le lire en 27 jours en lisant le même nombre de pages chaque jour. Combien de pages par jour ?",
       "corrige": [
-        "$1287 = 59 \\times 21 + 48$ (avec $48 < 59$)."
+        "$513 \\div 27 = 19$."
       ],
-      "reponse": "quotient 21, reste 48"
+      "reponse": "$19$ pages"
     },
     {
       "id": 47,
       "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $102$ par $62$.",
+      "notion": "diviseur-a-un-chiffre",
+      "enonce": "Pose et effectue la division euclidienne de $1780$ par $7$.",
       "corrige": [
-        "$102 = 62 \\times 1 + 40$ (avec $40 < 62$)."
+        "Dans $17$, combien de fois $7$ ? $2$ fois ($7 \\times 2 = 14$), il reste $3$.",
+        "J'abaisse le $8$ : dans $38$, combien de fois $7$ ? $5$ fois ($7 \\times 5 = 35$), il reste $3$.",
+        "J'abaisse le $0$ : dans $30$, combien de fois $7$ ? $4$ fois ($7 \\times 4 = 28$), il reste $2$.",
+        "Donc $1780 = 7 \\times 254 + 2$."
       ],
-      "reponse": "quotient 1, reste 40"
+      "reponse": "quotient $254$, reste $2$"
     },
     {
       "id": 48,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $422$ par $65$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $8317$ par $39$.",
       "corrige": [
-        "$422 = 65 \\times 6 + 32$ (avec $32 < 65$)."
+        "Dans $83$, combien de fois $39$ ? $2$ fois ($39 \\times 2 = 78$), il reste $5$.",
+        "J'abaisse le $1$ : dans $51$, combien de fois $39$ ? $1$ fois ($39 \\times 1 = 39$), il reste $12$.",
+        "J'abaisse le $7$ : dans $127$, combien de fois $39$ ? $3$ fois ($39 \\times 3 = 117$), il reste $10$.",
+        "Preuve : $39 \\times 213 + 10 = 8317$ et $10 < 39$."
       ],
-      "reponse": "quotient 6, reste 32"
+      "reponse": "quotient $213$, reste $10$"
     },
     {
       "id": 49,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $772$ par $68$.",
+      "difficulte": "probleme",
+      "notion": "problemes",
+      "enonce": "471 personnes doivent voyager en car. Chaque car a 52 places. Combien de cars faut-il au minimum ?",
       "corrige": [
-        "$772 = 68 \\times 11 + 24$ (avec $24 < 68$)."
+        "$471 = 52 \\times 9 + 3$.",
+        "Les 3 personnes restantes ont besoin d'un car de plus : $10$."
       ],
-      "reponse": "quotient 11, reste 24"
+      "reponse": "$10$ cars"
     },
     {
       "id": 50,
-      "difficulte": "application",
-      "notion": "division",
-      "enonce": "Effectue la division euclidienne de $1152$ par $71$.",
+      "difficulte": "intermediaire",
+      "notion": "diviseur-a-deux-chiffres",
+      "enonce": "Pose et effectue la division euclidienne de $2653$ par $36$.",
       "corrige": [
-        "$1152 = 71 \\times 16 + 16$ (avec $16 < 71$)."
+        "Dans $265$, combien de fois $36$ ? $7$ fois ($36 \\times 7 = 252$), il reste $13$.",
+        "J'abaisse le $3$ : dans $133$, combien de fois $36$ ? $3$ fois ($36 \\times 3 = 108$), il reste $25$.",
+        "Preuve : $36 \\times 73 + 25 = 2653$ et $25 < 36$."
       ],
-      "reponse": "quotient 16, reste 16"
+      "reponse": "quotient $73$, reste $25$"
     }
   ]
 }

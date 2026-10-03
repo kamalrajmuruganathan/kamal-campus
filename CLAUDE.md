@@ -123,3 +123,10 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
   `setJeu`, que React peut exécuter deux fois → risque de défi créé en double. Désormais `jeuRef` + verrou `envoiRef`.
 - Correctif `Alert.alert` web testé dans Chromium (message simple, confirmation OK / Annuler) : OK.
 - Tests Défis / Amis avec 2 comptes : **en attente** (à faire par Kamal sur le site en ligne).
+- **Exercices enrichis (03/10, non publiés)** : 162 chapitres maths/PC réécrits par lots dans
+  `scripts/gen_enrichi_{a,b1,b2,c1,c2,d,e,f}.py` (chargés en dernier par `generer-exos.py`, ils remplacent
+  les anciens générateurs). Chaque chapitre : 50 exos, ≥ 6 notions, ≤ 15 par notion, ≥ 3 difficultés.
+  Avant d'intégrer un générateur : `python3 scripts/verifier_gen.py scripts/<fichier>.py` (0 problème exigé).
+  Formules : `node outils/verifier-katex.cjs` (0 erreur sur ~119 000 formules).
+- Points pédagogiques à faire valider par Kamal : voir le message de synthèse de la session du 03/10
+  (notions retirées car hors fiche, constantes K données, prix du kWh 0,25 €, dérivée du quotient en 1re techno…).

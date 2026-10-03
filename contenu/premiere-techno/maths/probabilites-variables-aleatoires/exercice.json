@@ -13,502 +13,590 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 0, 1, 2 avec les probabilités respectives $\\dfrac{1}{2}, \\dfrac{1}{3}, \\dfrac{1}{6}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "Un archer atteint la cible avec une probabilité de $0{,}7$. Il tire trois flèches ; les tirs sont indépendants. On note S l'événement « la flèche atteint la cible » et É l'événement contraire. Calculer la probabilité du chemin S S É de l'arbre.",
       "corrige": [
-        "$ E(X) = 0\\times \\dfrac{1}{2} + 1\\times \\dfrac{1}{3} + 2\\times \\dfrac{1}{6} = \\dfrac{2}{3} $."
+        "$P(\\mathrm{S}) = 0{,}7$ et $P(\\text{É}) = 1 - 0{,}7 = 0{,}3$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}7 \\times 0{,}7 \\times 0{,}3 = 0{,}147$."
       ],
-      "reponse": "$ E(X) = \\dfrac{2}{3} $"
+      "reponse": "$0{,}147$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 1, 2, 3 avec les probabilités respectives $\\dfrac{1}{2}, \\dfrac{1}{4}, \\dfrac{1}{4}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "Dans une usine, une pièce est défectueuse avec une probabilité de $0{,}1$. On prélève trois pièces ; les prélèvements sont assimilés à des tirages indépendants. On note S l'événement « la pièce est défectueuse » et É l'événement contraire. Calculer la probabilité du chemin É É S de l'arbre.",
       "corrige": [
-        "$ E(X) = 1\\times \\dfrac{1}{2} + 2\\times \\dfrac{1}{4} + 3\\times \\dfrac{1}{4} = \\dfrac{7}{4} $."
+        "$P(\\mathrm{S}) = 0{,}1$ et $P(\\text{É}) = 1 - 0{,}1 = 0{,}9$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}9 \\times 0{,}9 \\times 0{,}1 = 0{,}081$."
       ],
-      "reponse": "$ E(X) = \\dfrac{7}{4} $"
+      "reponse": "$0{,}081$"
     },
     {
       "id": 3,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 0, 10, 20 avec les probabilités respectives $\\dfrac{1}{2}, \\dfrac{1}{4}, \\dfrac{1}{4}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "Une graine germe avec une probabilité de $0{,}8$. On sème deux graines, qui germent indépendamment les unes des autres. On note S l'événement « la graine germe » et É l'événement contraire. Calculer la probabilité du chemin S É de l'arbre.",
       "corrige": [
-        "$ E(X) = 0\\times \\dfrac{1}{2} + 10\\times \\dfrac{1}{4} + 20\\times \\dfrac{1}{4} = \\dfrac{15}{2} $."
+        "$P(\\mathrm{S}) = 0{,}8$ et $P(\\text{É}) = 1 - 0{,}8 = 0{,}2$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}8 \\times 0{,}2 = 0{,}16$."
       ],
-      "reponse": "$ E(X) = \\dfrac{15}{2} $"
+      "reponse": "$0{,}16$"
     },
     {
       "id": 4,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 2, 4, 6 avec les probabilités respectives $\\dfrac{1}{3}, \\dfrac{1}{3}, \\dfrac{1}{3}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "Un joueur de basket réussit un lancer franc avec une probabilité de $0{,}6$. Il tente trois lancers francs indépendants. On note S l'événement « le lancer est réussi » et É l'événement contraire. Calculer la probabilité du chemin S É S de l'arbre.",
       "corrige": [
-        "$ E(X) = 2\\times \\dfrac{1}{3} + 4\\times \\dfrac{1}{3} + 6\\times \\dfrac{1}{3} = 4 $."
+        "$P(\\mathrm{S}) = 0{,}6$ et $P(\\text{É}) = 1 - 0{,}6 = 0{,}4$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}6 \\times 0{,}4 \\times 0{,}6 = 0{,}144$."
       ],
-      "reponse": "$ E(X) = 4 $"
+      "reponse": "$0{,}144$"
     },
     {
       "id": 5,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 0, 5 avec les probabilités respectives $\\dfrac{2}{3}, \\dfrac{1}{3}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "À un carrefour, le feu est vert à l'arrivée d'un cycliste avec une probabilité de $0{,}4$. Il passe à ce carrefour deux jours de suite (situations indépendantes). On note S l'événement « le feu est vert » et É l'événement contraire. Calculer la probabilité du chemin É É de l'arbre.",
       "corrige": [
-        "$ E(X) = 0\\times \\dfrac{2}{3} + 5\\times \\dfrac{1}{3} = \\dfrac{5}{3} $."
+        "$P(\\mathrm{S}) = 0{,}4$ et $P(\\text{É}) = 1 - 0{,}4 = 0{,}6$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}6 \\times 0{,}6 = 0{,}36$."
       ],
-      "reponse": "$ E(X) = \\dfrac{5}{3} $"
+      "reponse": "$0{,}36$"
     },
     {
       "id": 6,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 1, 3, 5 avec les probabilités respectives $\\dfrac{1}{6}, \\dfrac{1}{2}, \\dfrac{1}{3}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "Un élève répond au hasard à des questions d'un QCM ; chaque question a 4 réponses dont une seule est juste, donc il répond juste avec une probabilité de $0{,}25$. Il répond à trois questions. On note S l'événement « la réponse est juste » et É l'événement contraire. Calculer la probabilité du chemin É S É de l'arbre.",
       "corrige": [
-        "$ E(X) = 1\\times \\dfrac{1}{6} + 3\\times \\dfrac{1}{2} + 5\\times \\dfrac{1}{3} = \\dfrac{10}{3} $."
+        "$P(\\mathrm{S}) = 0{,}25$ et $P(\\text{É}) = 1 - 0{,}25 = 0{,}75$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}75 \\times 0{,}25 \\times 0{,}75 = 0{,}140625$."
       ],
-      "reponse": "$ E(X) = \\dfrac{10}{3} $"
+      "reponse": "$0{,}140625$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 10, 20, 30 avec les probabilités respectives $\\dfrac{1}{5}, \\dfrac{2}{5}, \\dfrac{2}{5}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "Un archer atteint la cible avec une probabilité de $0{,}7$. Il tire deux flèches ; les tirs sont indépendants. On note S l'événement « la flèche atteint la cible » et É l'événement contraire. Calculer la probabilité du chemin S S de l'arbre.",
       "corrige": [
-        "$ E(X) = 10\\times \\dfrac{1}{5} + 20\\times \\dfrac{2}{5} + 30\\times \\dfrac{2}{5} = 22 $."
+        "$P(\\mathrm{S}) = 0{,}7$ et $P(\\text{É}) = 1 - 0{,}7 = 0{,}3$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}7 \\times 0{,}7 = 0{,}49$."
       ],
-      "reponse": "$ E(X) = 22 $"
+      "reponse": "$0{,}49$"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "esperance",
-      "enonce": "X prend les valeurs 0, 1 avec les probabilités respectives $\\dfrac{3}{4}, \\dfrac{1}{4}$. Calculer $ E(X) $.",
+      "notion": "arbre-chemin",
+      "enonce": "Une graine germe avec une probabilité de $0{,}8$. On sème trois graines, qui germent indépendamment les unes des autres. On note S l'événement « la graine germe » et É l'événement contraire. Calculer la probabilité du chemin S S S de l'arbre.",
       "corrige": [
-        "$ E(X) = 0\\times \\dfrac{3}{4} + 1\\times \\dfrac{1}{4} = \\dfrac{1}{4} $."
+        "$P(\\mathrm{S}) = 0{,}8$ et $P(\\text{É}) = 1 - 0{,}8 = 0{,}2$.",
+        "On multiplie les probabilités le long du chemin.",
+        "$0{,}8 \\times 0{,}8 \\times 0{,}8 = 0{,}512$."
       ],
-      "reponse": "$ E(X) = \\dfrac{1}{4} $"
+      "reponse": "$0{,}512$"
     },
     {
       "id": 9,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(10;\\dfrac{1}{2}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-probabilite",
+      "enonce": "La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{array}{c|ccc} x_i & 0 & 1 & 2 \\\\ \\hline P(X = x_i) & 0{,}2 & p & 0{,}3 \\end{array}$. Calculer $p = P(X = 1)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 10\\times \\dfrac{1}{2} = 5 $."
+        "La somme des probabilités vaut $1$.",
+        "$p = 1 - (0{,}2 + 0{,}3) = 0{,}5$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$p = 0{,}5$"
     },
     {
       "id": 10,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(20;\\dfrac{1}{4}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-probabilite",
+      "enonce": "La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{array}{c|ccc} x_i & -2 & 0 & 5 \\\\ \\hline P(X = x_i) & 0{,}5 & 0{,}3 & p \\end{array}$. Calculer $p = P(X = 5)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 20\\times \\dfrac{1}{4} = 5 $."
+        "La somme des probabilités vaut $1$.",
+        "$p = 1 - (0{,}5 + 0{,}3) = 0{,}2$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$p = 0{,}2$"
     },
     {
       "id": 11,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(12;\\dfrac{1}{3}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-probabilite",
+      "enonce": "La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{array}{c|cccc} x_i & 1 & 2 & 3 & 4 \\\\ \\hline P(X = x_i) & 0{,}1 & 0{,}4 & p & 0{,}2 \\end{array}$. Calculer $p = P(X = 3)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 12\\times \\dfrac{1}{3} = 4 $."
+        "La somme des probabilités vaut $1$.",
+        "$p = 1 - (0{,}1 + 0{,}4 + 0{,}2) = 0{,}3$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "$p = 0{,}3$"
     },
     {
       "id": 12,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(8;\\dfrac{1}{2}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-probabilite",
+      "enonce": "La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{array}{c|ccc} x_i & -5 & 2 & 10 \\\\ \\hline P(X = x_i) & p & 0{,}6 & 0{,}05 \\end{array}$. Calculer $p = P(X = -5)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 8\\times \\dfrac{1}{2} = 4 $."
+        "La somme des probabilités vaut $1$.",
+        "$p = 1 - (0{,}6 + 0{,}05) = 0{,}35$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "$p = 0{,}35$"
     },
     {
       "id": 13,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(15;\\dfrac{1}{5}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-probabilite",
+      "enonce": "La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{array}{c|cccc} x_i & 0 & 10 & 50 & 100 \\\\ \\hline P(X = x_i) & 0{,}7 & 0{,}2 & p & 0{,}02 \\end{array}$. Calculer $p = P(X = 50)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 15\\times \\dfrac{1}{5} = 3 $."
+        "La somme des probabilités vaut $1$.",
+        "$p = 1 - (0{,}7 + 0{,}2 + 0{,}02) = 0{,}08$."
       ],
-      "reponse": "$ 3 $"
+      "reponse": "$p = 0{,}08$"
     },
     {
       "id": 14,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(6;\\dfrac{1}{3}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-probabilite",
+      "enonce": "La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{array}{c|cc} x_i & -1 & 3 \\\\ \\hline P(X = x_i) & 0{,}65 & p \\end{array}$. Calculer $p = P(X = 3)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 6\\times \\dfrac{1}{3} = 2 $."
+        "La somme des probabilités vaut $1$.",
+        "$p = 1 - (0{,}65) = 0{,}35$."
       ],
-      "reponse": "$ 2 $"
+      "reponse": "$p = 0{,}35$"
     },
     {
       "id": 15,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(30;\\dfrac{1}{6}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-probabilite",
+      "enonce": "La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{array}{c|ccc} x_i & 2 & 4 & 6 \\\\ \\hline P(X = x_i) & 0{,}25 & 0{,}25 & p \\end{array}$. Calculer $p = P(X = 6)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 30\\times \\dfrac{1}{6} = 5 $."
+        "La somme des probabilités vaut $1$.",
+        "$p = 1 - (0{,}25 + 0{,}25) = 0{,}5$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$p = 0{,}5$"
     },
     {
       "id": 16,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(24;\\dfrac{1}{4}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-bernoulli",
+      "enonce": "Un composant électronique tombe en panne dans l'année avec une probabilité de $0{,}03$. On note $X$ la variable qui vaut $1$ s'il tombe en panne et $0$ sinon. Quelle est la loi de $X$ ? Calculer $E(X)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 24\\times \\dfrac{1}{4} = 6 $."
+        "$X$ ne prend que les valeurs $0$ et $1$ : $X$ suit la loi de Bernoulli de paramètre $p = 0{,}03$.",
+        "Pour une loi de Bernoulli, $E(X) = p = 0{,}03$."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "Loi de Bernoulli de paramètre $0{,}03$ ; $E(X) = 0{,}03$"
     },
     {
       "id": 17,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(9;\\dfrac{2}{3}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-bernoulli",
+      "enonce": "$X$ suit la loi de Bernoulli de paramètre $p = 0{,}35$. Donner $P(X = 0)$, $P(X = 1)$ et $E(X)$.",
       "corrige": [
-        "$ E(X) = n\\times p = 9\\times \\dfrac{2}{3} = 6 $."
+        "$P(X = 1) = p = 0{,}35$ et $P(X = 0) = 1 - p = 0{,}65$.",
+        "$E(X) = 0 \\times 0{,}65 + 1 \\times 0{,}35 = 0{,}35$."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "$P(X = 0) = 0{,}65$ ; $P(X = 1) = 0{,}35$ ; $E(X) = 0{,}35$"
     },
     {
       "id": 18,
-      "difficulte": "intermediaire",
-      "notion": "esperance-binomiale",
-      "enonce": "$ X $ suit une loi binomiale $ B(50;\\dfrac{1}{5}) $. Espérance ?",
+      "difficulte": "application",
+      "notion": "loi-de-bernoulli",
+      "enonce": "Démontrer que l'espérance d'une variable $X$ suivant la loi de Bernoulli de paramètre $p$ vaut $p$.",
       "corrige": [
-        "$ E(X) = n\\times p = 50\\times \\dfrac{1}{5} = 10 $."
+        "$X$ prend la valeur $0$ avec la probabilité $1 - p$ et la valeur $1$ avec la probabilité $p$.",
+        "$E(X) = 0 \\times (1 - p) + 1 \\times p = p$."
       ],
-      "reponse": "$ 10 $"
+      "reponse": "$E(X) = p$"
     },
     {
       "id": 19,
       "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(2;\\tfrac{1}{2}) $ : espérance ?",
+      "notion": "loi-de-bernoulli",
+      "enonce": "Une variable $X$ prend les valeurs $1$, $2$ et $3$. Suit-elle une loi de Bernoulli ?",
       "corrige": [
-        "$ = 1 $."
+        "Une loi de Bernoulli ne prend que deux valeurs : $0$ (échec) et $1$ (succès).",
+        "$X$ prend trois valeurs : ce n'est pas une loi de Bernoulli."
       ],
-      "reponse": "$ 1 $"
+      "reponse": "Non"
     },
     {
       "id": 20,
       "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(3;\\tfrac{1}{2}) $ : espérance ?",
+      "notion": "loi-de-bernoulli",
+      "enonce": "On lance une fois un dé équilibré ; $X$ vaut $1$ si on obtient un multiple de 3 et $0$ sinon. Donner le paramètre de cette loi de Bernoulli et interpréter l'événement $\\{X = 1\\}$.",
       "corrige": [
-        "$ = \\dfrac{3}{2} $."
+        "Les multiples de 3 sont 3 et 6 : $p = \\dfrac{2}{6} = \\dfrac{1}{3}$.",
+        "$\\{X = 1\\}$ est l'événement « obtenir 3 ou 6 »."
       ],
-      "reponse": "$ \\dfrac{3}{2} $"
+      "reponse": "$p = \\dfrac{1}{3}$ ; $\\{X = 1\\}$ : « obtenir 3 ou 6 »"
     },
     {
       "id": 21,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(4;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Un archer atteint la cible avec une probabilité de $0{,}7$. Il tire trois flèches ; les tirs sont indépendants. Calculer la probabilité d'obtenir exactement 2 flèches dans la cible.",
       "corrige": [
-        "$ = 2 $."
+        "Chemins qui conviennent : SSÉ, SÉS, ÉSS.",
+        "Chaque chemin a pour probabilité $0{,}7^{2} \\times 0{,}3^{1} = 0{,}147$.",
+        "$P = 3 \\times 0{,}147 = 0{,}441$."
       ],
-      "reponse": "$ 2 $"
+      "reponse": "$0{,}441$"
     },
     {
       "id": 22,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(5;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Dans une usine, une pièce est défectueuse avec une probabilité de $0{,}1$. On prélève trois pièces ; les prélèvements sont assimilés à des tirages indépendants. Calculer la probabilité d'obtenir exactement 1 pièce défectueuse.",
       "corrige": [
-        "$ = \\dfrac{5}{2} $."
+        "Chemins qui conviennent : SÉÉ, ÉSÉ, ÉÉS.",
+        "Chaque chemin a pour probabilité $0{,}1^{1} \\times 0{,}9^{2} = 0{,}081$.",
+        "$P = 3 \\times 0{,}081 = 0{,}243$."
       ],
-      "reponse": "$ \\dfrac{5}{2} $"
+      "reponse": "$0{,}243$"
     },
     {
       "id": 23,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(6;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Une graine germe avec une probabilité de $0{,}8$. On sème deux graines, qui germent indépendamment les unes des autres. Calculer la probabilité d'obtenir exactement 1 graine qui germe.",
       "corrige": [
-        "$ = 3 $."
+        "Chemins qui conviennent : SÉ, ÉS.",
+        "Chaque chemin a pour probabilité $0{,}8^{1} \\times 0{,}2^{1} = 0{,}16$.",
+        "$P = 2 \\times 0{,}16 = 0{,}32$."
       ],
-      "reponse": "$ 3 $"
+      "reponse": "$0{,}32$"
     },
     {
       "id": 24,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(7;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Un joueur de basket réussit un lancer franc avec une probabilité de $0{,}6$. Il tente trois lancers francs indépendants. Calculer la probabilité d'obtenir exactement 1 lancer réussi.",
       "corrige": [
-        "$ = \\dfrac{7}{2} $."
+        "Chemins qui conviennent : SÉÉ, ÉSÉ, ÉÉS.",
+        "Chaque chemin a pour probabilité $0{,}6^{1} \\times 0{,}4^{2} = 0{,}096$.",
+        "$P = 3 \\times 0{,}096 = 0{,}288$."
       ],
-      "reponse": "$ \\dfrac{7}{2} $"
+      "reponse": "$0{,}288$"
     },
     {
       "id": 25,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(8;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "À un carrefour, le feu est vert à l'arrivée d'un cycliste avec une probabilité de $0{,}4$. Il passe à ce carrefour trois jours de suite (situations indépendantes). Calculer la probabilité d'obtenir exactement 2 feux verts.",
       "corrige": [
-        "$ = 4 $."
+        "Chemins qui conviennent : SSÉ, SÉS, ÉSS.",
+        "Chaque chemin a pour probabilité $0{,}4^{2} \\times 0{,}6^{1} = 0{,}096$.",
+        "$P = 3 \\times 0{,}096 = 0{,}288$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "$0{,}288$"
     },
     {
       "id": 26,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(9;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Un élève répond au hasard à des questions d'un QCM ; chaque question a 4 réponses dont une seule est juste, donc il répond juste avec une probabilité de $0{,}25$. Il répond à deux questions. Calculer la probabilité d'obtenir exactement 1 réponse juste.",
       "corrige": [
-        "$ = \\dfrac{9}{2} $."
+        "Chemins qui conviennent : SÉ, ÉS.",
+        "Chaque chemin a pour probabilité $0{,}25^{1} \\times 0{,}75^{1} = 0{,}1875$.",
+        "$P = 2 \\times 0{,}1875 = 0{,}375$."
       ],
-      "reponse": "$ \\dfrac{9}{2} $"
+      "reponse": "$0{,}375$"
     },
     {
       "id": 27,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(10;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Dans une usine, une pièce est défectueuse avec une probabilité de $0{,}1$. On prélève quatre pièces ; les prélèvements sont assimilés à des tirages indépendants. Calculer la probabilité d'obtenir exactement 1 pièce défectueuse.",
       "corrige": [
-        "$ = 5 $."
+        "Il y a 4 chemins (le succès peut être à l'une des 4 places).",
+        "Chaque chemin a pour probabilité $0{,}1^{1} \\times 0{,}9^{3} = 0{,}0729$.",
+        "$P = 4 \\times 0{,}0729 = 0{,}2916$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$0{,}2916$"
     },
     {
       "id": 28,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(11;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Un joueur de basket réussit un lancer franc avec une probabilité de $0{,}6$. Il tente deux lancers francs indépendants. Calculer la probabilité d'obtenir exactement 2 lancers réussis.",
       "corrige": [
-        "$ = \\dfrac{11}{2} $."
+        "Chemins qui conviennent : SS.",
+        "Chaque chemin a pour probabilité $0{,}6^{2} \\times 0{,}4^{0} = 0{,}36$.",
+        "$P = 1 \\times 0{,}36 = 0{,}36$."
       ],
-      "reponse": "$ \\dfrac{11}{2} $"
+      "reponse": "$0{,}36$"
     },
     {
       "id": 29,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(12;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "exactement-k-succes",
+      "enonce": "Une graine germe avec une probabilité de $0{,}8$. On sème trois graines, qui germent indépendamment les unes des autres. Calculer la probabilité qu'aucune graine ne germe.",
       "corrige": [
-        "$ = 6 $."
+        "Chemins qui conviennent : ÉÉÉ.",
+        "Chaque chemin a pour probabilité $0{,}8^{0} \\times 0{,}2^{3} = 0{,}008$.",
+        "$P = 1 \\times 0{,}008 = 0{,}008$."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "$0{,}008$"
     },
     {
       "id": 30,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(13;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|ccc} x_i & 0 & 1 & 2 \\\\ \\hline P(X = x_i) & 0{,}25 & 0{,}5 & 0{,}25 \\end{array}$",
       "corrige": [
-        "$ = \\dfrac{13}{2} $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 0 \\times 0{,}25 + 1 \\times 0{,}5 + 2 \\times 0{,}25$.",
+        "$E(X) = 1$."
       ],
-      "reponse": "$ \\dfrac{13}{2} $"
+      "reponse": "$E(X) = 1$"
     },
     {
       "id": 31,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(14;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|cccc} x_i & 1 & 2 & 3 & 4 \\\\ \\hline P(X = x_i) & 0{,}1 & 0{,}2 & 0{,}3 & 0{,}4 \\end{array}$",
       "corrige": [
-        "$ = 7 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 1 \\times 0{,}1 + 2 \\times 0{,}2 + 3 \\times 0{,}3 + 4 \\times 0{,}4$.",
+        "$E(X) = 3$."
       ],
-      "reponse": "$ 7 $"
+      "reponse": "$E(X) = 3$"
     },
     {
       "id": 32,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(15;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|ccc} x_i & -3 & 1 & 4 \\\\ \\hline P(X = x_i) & 0{,}2 & 0{,}5 & 0{,}3 \\end{array}$",
       "corrige": [
-        "$ = \\dfrac{15}{2} $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = (-3) \\times 0{,}2 + 1 \\times 0{,}5 + 4 \\times 0{,}3$.",
+        "$E(X) = 1{,}1$."
       ],
-      "reponse": "$ \\dfrac{15}{2} $"
+      "reponse": "$E(X) = 1{,}1$"
     },
     {
       "id": 33,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(16;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|ccc} x_i & 0 & 5 & 20 \\\\ \\hline P(X = x_i) & 0{,}6 & 0{,}3 & 0{,}1 \\end{array}$",
       "corrige": [
-        "$ = 8 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 0 \\times 0{,}6 + 5 \\times 0{,}3 + 20 \\times 0{,}1$.",
+        "$E(X) = 3{,}5$."
       ],
-      "reponse": "$ 8 $"
+      "reponse": "$E(X) = 3{,}5$"
     },
     {
       "id": 34,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(17;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|ccc} x_i & 10 & 20 & 30 \\\\ \\hline P(X = x_i) & 0{,}5 & 0{,}3 & 0{,}2 \\end{array}$",
       "corrige": [
-        "$ = \\dfrac{17}{2} $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 10 \\times 0{,}5 + 20 \\times 0{,}3 + 30 \\times 0{,}2$.",
+        "$E(X) = 17$."
       ],
-      "reponse": "$ \\dfrac{17}{2} $"
+      "reponse": "$E(X) = 17$"
     },
     {
       "id": 35,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(18;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|ccc} x_i & -10 & 0 & 25 \\\\ \\hline P(X = x_i) & 0{,}5 & 0{,}25 & 0{,}25 \\end{array}$",
       "corrige": [
-        "$ = 9 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = (-10) \\times 0{,}5 + 0 \\times 0{,}25 + 25 \\times 0{,}25$.",
+        "$E(X) = 1{,}25$."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "$E(X) = 1{,}25$"
     },
     {
       "id": 36,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(19;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|cccc} x_i & 2 & 3 & 5 & 8 \\\\ \\hline P(X = x_i) & 0{,}2 & 0{,}2 & 0{,}2 & 0{,}4 \\end{array}$",
       "corrige": [
-        "$ = \\dfrac{19}{2} $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 2 \\times 0{,}2 + 3 \\times 0{,}2 + 5 \\times 0{,}2 + 8 \\times 0{,}4$.",
+        "$E(X) = 5{,}2$."
       ],
-      "reponse": "$ \\dfrac{19}{2} $"
+      "reponse": "$E(X) = 5{,}2$"
     },
     {
       "id": 37,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(20;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Calculer l'espérance de la variable aléatoire $X$ dont la loi est : $\\begin{array}{c|cccc} x_i & 0 & 1 & 2 & 3 \\\\ \\hline P(X = x_i) & 0{,}125 & 0{,}375 & 0{,}375 & 0{,}125 \\end{array}$",
       "corrige": [
-        "$ = 10 $."
+        "On vérifie que la somme des probabilités vaut $1$.",
+        "$E(X) = 0 \\times 0{,}125 + 1 \\times 0{,}375 + 2 \\times 0{,}375 + 3 \\times 0{,}125$.",
+        "$E(X) = 1{,}5$."
       ],
-      "reponse": "$ 10 $"
+      "reponse": "$E(X) = 1{,}5$"
     },
     {
       "id": 38,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(21;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "approfondissement",
+      "notion": "au-moins-un",
+      "enonce": "Un archer atteint la cible avec une probabilité de $0{,}7$. Il tire trois flèches ; les tirs sont indépendants. Calculer la probabilité d'obtenir au moins une fois l'événement « la flèche atteint la cible ».",
       "corrige": [
-        "$ = \\dfrac{21}{2} $."
+        "L'événement contraire de « au moins un succès » est « aucun succès » : un seul chemin, É…É.",
+        "$P(\\text{aucun}) = 0{,}3^{3} = 0{,}027$.",
+        "$P(\\text{au moins un}) = 1 - 0{,}027 = 0{,}973$."
       ],
-      "reponse": "$ \\dfrac{21}{2} $"
+      "reponse": "$0{,}973$"
     },
     {
       "id": 39,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(22;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "approfondissement",
+      "notion": "au-moins-un",
+      "enonce": "Dans une usine, une pièce est défectueuse avec une probabilité de $0{,}1$. On prélève trois pièces ; les prélèvements sont assimilés à des tirages indépendants. Calculer la probabilité d'obtenir au moins une fois l'événement « la pièce est défectueuse ».",
       "corrige": [
-        "$ = 11 $."
+        "L'événement contraire de « au moins un succès » est « aucun succès » : un seul chemin, É…É.",
+        "$P(\\text{aucun}) = 0{,}9^{3} = 0{,}729$.",
+        "$P(\\text{au moins un}) = 1 - 0{,}729 = 0{,}271$."
       ],
-      "reponse": "$ 11 $"
+      "reponse": "$0{,}271$"
     },
     {
       "id": 40,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(23;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "approfondissement",
+      "notion": "au-moins-un",
+      "enonce": "Un élève répond au hasard à des questions d'un QCM ; chaque question a 4 réponses dont une seule est juste, donc il répond juste avec une probabilité de $0{,}25$. Il répond à deux questions. Calculer la probabilité d'obtenir au moins une fois l'événement « la réponse est juste ».",
       "corrige": [
-        "$ = \\dfrac{23}{2} $."
+        "L'événement contraire de « au moins un succès » est « aucun succès » : un seul chemin, É…É.",
+        "$P(\\text{aucun}) = 0{,}75^{2} = 0{,}5625$.",
+        "$P(\\text{au moins un}) = 1 - 0{,}5625 = 0{,}4375$."
       ],
-      "reponse": "$ \\dfrac{23}{2} $"
+      "reponse": "$0{,}4375$"
     },
     {
       "id": 41,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(24;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "approfondissement",
+      "notion": "au-moins-un",
+      "enonce": "À un carrefour, le feu est vert à l'arrivée d'un cycliste avec une probabilité de $0{,}4$. Il passe à ce carrefour trois jours de suite (situations indépendantes). Calculer la probabilité d'obtenir au moins une fois l'événement « le feu est vert ».",
       "corrige": [
-        "$ = 12 $."
+        "L'événement contraire de « au moins un succès » est « aucun succès » : un seul chemin, É…É.",
+        "$P(\\text{aucun}) = 0{,}6^{3} = 0{,}216$.",
+        "$P(\\text{au moins un}) = 1 - 0{,}216 = 0{,}784$."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "$0{,}784$"
     },
     {
       "id": 42,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(25;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "approfondissement",
+      "notion": "au-moins-un",
+      "enonce": "Dans une usine, une pièce est défectueuse avec une probabilité de $0{,}1$. On prélève deux pièces ; les prélèvements sont assimilés à des tirages indépendants. Calculer la probabilité d'obtenir au moins une fois l'événement « la pièce est défectueuse ».",
       "corrige": [
-        "$ = \\dfrac{25}{2} $."
+        "L'événement contraire de « au moins un succès » est « aucun succès » : un seul chemin, É…É.",
+        "$P(\\text{aucun}) = 0{,}9^{2} = 0{,}81$.",
+        "$P(\\text{au moins un}) = 1 - 0{,}81 = 0{,}19$."
       ],
-      "reponse": "$ \\dfrac{25}{2} $"
+      "reponse": "$0{,}19$"
     },
     {
       "id": 43,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(26;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "approfondissement",
+      "notion": "au-moins-un",
+      "enonce": "Un élève répond au hasard à des questions d'un QCM ; chaque question a 4 réponses dont une seule est juste, donc il répond juste avec une probabilité de $0{,}25$. Il répond à trois questions. Calculer la probabilité d'obtenir au moins une fois l'événement « la réponse est juste ».",
       "corrige": [
-        "$ = 13 $."
+        "L'événement contraire de « au moins un succès » est « aucun succès » : un seul chemin, É…É.",
+        "$P(\\text{aucun}) = 0{,}75^{3} = 0{,}421875$.",
+        "$P(\\text{au moins un}) = 1 - 0{,}421875 = 0{,}578125$."
       ],
-      "reponse": "$ 13 $"
+      "reponse": "$0{,}578125$"
     },
     {
       "id": 44,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(27;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "probleme",
+      "notion": "gain-algebrique",
+      "enonce": "On lance un dé équilibré à 6 faces. La partie coûte $2$ € ; on reçoit $10$ € si l'on obtient 6, rien sinon. On note $X$ le gain algébrique (gain moins mise). Calculer $E(X)$ et dire si le jeu est favorable, équitable ou défavorable au joueur.",
       "corrige": [
-        "$ = \\dfrac{27}{2} $."
+        "Valeurs de $X$ : $8$ (probabilité $\\dfrac{1}{6}$), $-2$ (probabilité $\\dfrac{5}{6}$).",
+        "$E(X) = 8 \\times \\dfrac{1}{6} + (-2) \\times \\dfrac{5}{6} = -\\dfrac{1}{3} \\approx -0{,}33$.",
+        "Le jeu est défavorable au joueur : en moyenne, le joueur perd environ 0,33 € par partie."
       ],
-      "reponse": "$ \\dfrac{27}{2} $"
+      "reponse": "$E(X) = -\\dfrac{1}{3} \\approx -0{,}33$ ; jeu défavorable au joueur"
     },
     {
       "id": 45,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(28;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "probleme",
+      "notion": "gain-algebrique",
+      "enonce": "Une tombola vend $100$ billets à $2$ € : un billet gagne un lot de $50$ €, cinq billets gagnent $10$ €, les autres rien. On achète un billet. On note $X$ le gain algébrique (gain moins mise). Calculer $E(X)$ et dire si le jeu est favorable, équitable ou défavorable au joueur.",
       "corrige": [
-        "$ = 14 $."
+        "Valeurs de $X$ : $48$ (probabilité $0{,}01$), $8$ (probabilité $0{,}05$), $-2$ (probabilité $0{,}94$).",
+        "$E(X) = 48 \\times 0{,}01 + 8 \\times 0{,}05 + (-2) \\times 0{,}94 = -1$.",
+        "Le jeu est défavorable au joueur : en moyenne, le joueur perd 1 € par partie."
       ],
-      "reponse": "$ 14 $"
+      "reponse": "$E(X) = -1$ ; jeu défavorable au joueur"
     },
     {
       "id": 46,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(29;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "probleme",
+      "notion": "gain-algebrique",
+      "enonce": "Une roue est partagée en secteurs : on gagne $5$ € avec une probabilité de $0{,}2$, $2$ € avec une probabilité de $0{,}3$, rien sinon. La partie coûte $1{,}50$ €. On note $X$ le gain algébrique (gain moins mise). Calculer $E(X)$ et dire si le jeu est favorable, équitable ou défavorable au joueur.",
       "corrige": [
-        "$ = \\dfrac{29}{2} $."
+        "Valeurs de $X$ : $3{,}5$ (probabilité $0{,}2$), $0{,}5$ (probabilité $0{,}3$), $-1{,}5$ (probabilité $0{,}5$).",
+        "$E(X) = 3{,}5 \\times 0{,}2 + 0{,}5 \\times 0{,}3 + (-1{,}5) \\times 0{,}5 = 0{,}1$.",
+        "Le jeu est favorable au joueur."
       ],
-      "reponse": "$ \\dfrac{29}{2} $"
+      "reponse": "$E(X) = 0{,}1$ ; jeu favorable au joueur"
     },
     {
       "id": 47,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(30;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "probleme",
+      "notion": "gain-algebrique",
+      "enonce": "On tire une carte au hasard dans un jeu de 32 cartes. La partie coûte $1$ € ; on reçoit $8$ € pour un as, rien sinon. On note $X$ le gain algébrique (gain moins mise). Calculer $E(X)$ et dire si le jeu est favorable, équitable ou défavorable au joueur.",
       "corrige": [
-        "$ = 15 $."
+        "Valeurs de $X$ : $7$ (probabilité $0{,}125$), $-1$ (probabilité $0{,}875$).",
+        "$E(X) = 7 \\times 0{,}125 + (-1) \\times 0{,}875 = 0$.",
+        "Le jeu est équitable."
       ],
-      "reponse": "$ 15 $"
+      "reponse": "$E(X) = 0$ ; jeu équitable"
     },
     {
       "id": 48,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(31;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "probleme",
+      "notion": "gain-algebrique",
+      "enonce": "On lance deux pièces équilibrées. La partie coûte $3$ € ; on reçoit $8$ € pour deux piles, $2$ € pour un seul pile, rien sinon. On note $X$ le gain algébrique (gain moins mise). Calculer $E(X)$ et dire si le jeu est favorable, équitable ou défavorable au joueur.",
       "corrige": [
-        "$ = \\dfrac{31}{2} $."
+        "Valeurs de $X$ : $5$ (probabilité $0{,}25$), $-1$ (probabilité $0{,}5$), $-3$ (probabilité $0{,}25$).",
+        "$E(X) = 5 \\times 0{,}25 + (-1) \\times 0{,}5 + (-3) \\times 0{,}25 = 0$.",
+        "Le jeu est équitable."
       ],
-      "reponse": "$ \\dfrac{31}{2} $"
+      "reponse": "$E(X) = 0$ ; jeu équitable"
     },
     {
       "id": 49,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(32;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "probleme",
+      "notion": "gain-algebrique",
+      "enonce": "Un jeu de grattage coûte $5$ € : on gagne $100$ € avec une probabilité de $0{,}01$, $20$ € avec une probabilité de $0{,}1$, rien sinon. On note $X$ le gain algébrique (gain moins mise). Calculer $E(X)$ et dire si le jeu est favorable, équitable ou défavorable au joueur.",
       "corrige": [
-        "$ = 16 $."
+        "Valeurs de $X$ : $95$ (probabilité $0{,}01$), $15$ (probabilité $0{,}1$), $-5$ (probabilité $0{,}89$).",
+        "$E(X) = 95 \\times 0{,}01 + 15 \\times 0{,}1 + (-5) \\times 0{,}89 = -2$.",
+        "Le jeu est défavorable au joueur : en moyenne, le joueur perd 2 € par partie."
       ],
-      "reponse": "$ 16 $"
+      "reponse": "$E(X) = -2$ ; jeu défavorable au joueur"
     },
     {
       "id": 50,
-      "difficulte": "application",
-      "notion": "esperance-binomiale",
-      "enonce": "$ B(33;\\tfrac{1}{2}) $ : espérance ?",
+      "difficulte": "probleme",
+      "notion": "gain-algebrique",
+      "enonce": "On lance un dé équilibré à 6 faces. La partie coûte $1$ € ; on reçoit $3$ € si le résultat est 5 ou 6, rien sinon. On note $X$ le gain algébrique (gain moins mise). Calculer $E(X)$ et dire si le jeu est favorable, équitable ou défavorable au joueur.",
       "corrige": [
-        "$ = \\dfrac{33}{2} $."
+        "Valeurs de $X$ : $2$ (probabilité $\\dfrac{1}{3}$), $-1$ (probabilité $\\dfrac{2}{3}$).",
+        "$E(X) = 2 \\times \\dfrac{1}{3} + (-1) \\times \\dfrac{2}{3} = 0$.",
+        "Le jeu est équitable."
       ],
-      "reponse": "$ \\dfrac{33}{2} $"
+      "reponse": "$E(X) = 0$ ; jeu équitable"
     }
   ]
 }
