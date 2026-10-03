@@ -339,7 +339,7 @@ def gen_fonctions():
         a=Fraction(y0,x0)
         add("application","fonction-lineaire", f"$f$ est linéaire et $f({x0}) = {y0}$. Déterminer son coefficient.",
             [f"$f(x)=ax$ donc $a = \\dfrac{{{y0}}}{{{x0}}} = {frac_latex(a)}$."], f"$a = {frac_latex(a)}$")
-    for (a,x0) in [(3,5),(4,2),(2,9),(5,3),(6,4),(2,7),(3,8),(4,6),(5,5),(2,11)]:
+    for (a,x0) in [(3,5),(4,2),(2,9),(5,3),(6,4),(2,7),(3,8),(4,7),(5,5),(2,11)]:
         add("application","fonction-lineaire", f"Soit $f(x) = {a}x$. Calculer $f({x0})$.",
             [f"$f({x0}) = {a}\\times {x0} = {a*x0}$."], f"$f({x0}) = {a*x0}$")
     E=E[:50]
@@ -612,114 +612,129 @@ def gen_pensee_informatique():
     E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
 
 # ============ Générateurs primaire / collège (calcul, déterministes) ============
+def _uniques(E, n=50):
+    """Garde les n premiers énoncés distincts (les formules en k bouclent vite)."""
+    vus=set(); out=[]
+    for t in E:
+        if t[2] in vus: continue
+        vus.add(t[2]); out.append(t)
+        if len(out)==n: break
+    assert len(out)==n, f"pas assez d'énoncés distincts ({len(out)})"
+    return out
 def _additions(op_max):
     E=[]
-    for k in range(50):
-        a=(k*7)%op_max+1; b=(k*11+3)%op_max+1
+    for k in range(2000):
+        a=(k*7)%op_max+1; b=(k*11+3+k//op_max)%op_max+1
         E.append(("application","addition", f"Pose et calcule : ${a} + {b}$", [f"${a} + {b} = {a+b}$."], f"${a+b}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _soustractions(op_max):
     E=[]
-    for k in range(50):
-        b=(k*5)%(op_max//2+1)+1; a=b+((k*7)%(op_max//2+1))+1
+    for k in range(2000):
+        h=op_max//2+1; b=(k*5)%h+1; a=b+((k*7+k//h)%h)+1
         E.append(("application","soustraction", f"Pose et calcule : ${a} - {b}$", [f"${a} - {b} = {a-b}$."], f"${a-b}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _multiplications(a_max,b_max):
     E=[]
-    for k in range(50):
+    for k in range(2000):
         a=(k*7)%a_max+2; b=(k*3)%b_max+2
         E.append(("application","multiplication", f"Pose et calcule : ${a} \\times {b}$", [f"${a} \\times {b} = {a*b}$."], f"${a*b}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _divisions(diviseur_max):
     E=[]
-    for k in range(50):
+    for k in range(2000):
         d=(k*3)%diviseur_max+2; q=(k*5)%25+1; r=(k*7)%d
         n=d*q+r
         E.append(("application","division", f"Effectue la division euclidienne de ${n}$ par ${d}$.", [f"${n} = {d} \\times {q} + {r}$ (avec ${r} < {d}$)."], f"quotient {q}, reste {r}"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _tables():
     E=[]
-    for k in range(50):
-        a=(k%9)+2; b=((k//4)%9)+2
+    for k in range(2000):
+        a=(k%9)+2; b=((k*5+k//9)%9)+2
         E.append(("application","tables", f"Combien font ${a} \\times {b}$ ?", [f"${a} \\times {b} = {a*b}$."], f"${a*b}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _calcul_mental(mx):
     E=[]
-    for k in range(50):
+    for k in range(2000):
         a=(k*7)%mx+1; b=(k*3)%(mx//2+1)+1; op=k%3
         if op==0: q=f"{a} + {b}"; r=a+b
         elif op==1: q=f"{a+b} - {b}"; r=a
         else: x=(k%12)+2; y=(k%9)+2; q=f"{x} \\times {y}"; r=x*y
         E.append(("application","calcul-mental", f"Calcule mentalement : ${q}$", [f"${q} = {r}$."], f"${r}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _nombres_compare(mx):
     E=[]
-    for k in range(50):
-        a=(k*7)%mx+1; b=(k*11+3)%mx+1
+    for k in range(2000):
+        a=(k*7)%mx+1; b=(k*11+3+k//mx)%mx+1
         s=">" if a>b else ("<" if a<b else "=")
         E.append(("application","comparer", f"Compare ${a}$ et ${b}$ (écris $<$, $>$ ou $=$).", [f"${a} {s} {b}$."], f"${s}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _grands_nombres():
+    def m(x): return f"{x:,}".replace(",", "\\,") if x>=10000 else str(x)
     E=[]; nums=[3456,12789,90210,45678,100234,7654,560123,9087,234567,80456,671000,45090,308745,120500,4560,78901,650000,13245,900001,55555]
-    for k in range(25):
-        n=nums[k%len(nums)]; base=[10,100,1000][k%3]; nom={10:"dizaine",100:"centaine",1000:"millier"}[base]
-        arr=round(n/base)*base
-        E.append(("application","arrondir", f"Arrondir ${n}$ à la {nom} la plus proche.", [f"${n} \\approx {arr}$."], f"${arr}$"))
-    for k in range(25):
-        a=nums[k%len(nums)]; b=nums[(k+3)%len(nums)]; s=">" if a>b else ("<" if a<b else "=")
-        E.append(("application","comparer", f"Compare ${a}$ et ${b}$.", [f"${a} {s} {b}$."], f"${s}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    for k in range(2000):
+        n=nums[k%len(nums)]; base=[10,100,1000][k%3]; nom={10:"à la dizaine la plus proche",100:"à la centaine la plus proche",1000:"au millier le plus proche"}[base]
+        arr=(n+base//2)//base*base  # arrondi scolaire : 5 → au-dessus
+        E.append(("application","arrondir", f"Arrondir ${m(n)}$ {nom}.", [f"${m(n)} \\approx {m(arr)}$."], f"${m(arr)}$"))
+    E1=_uniques(E,25); E=[]
+    for k in range(2000):
+        a=nums[k%len(nums)]; b=nums[(k+3+k//len(nums))%len(nums)]
+        if a==b: continue
+        s=">" if a>b else ("<" if a<b else "=")
+        E.append(("application","comparer", f"Compare ${m(a)}$ et ${m(b)}$.", [f"${m(a)} {s} {m(b)}$."], f"${s}$"))
+    return [exo(i+1,*t) for i,t in enumerate(E1+_uniques(E,25))]
 
 def _decimaux_ops():
     E=[]
-    for k in range(50):
+    for k in range(2000):
         a=round(((k*7)%80+1)/10,1); b=round(((k*3)%60+1)/10,1); op=k%3
         if op==0: r=round(a+b,2); q=f"{fr(a,1)} + {fr(b,1)}"
         elif op==1: aa,bb=max(a,b),min(a,b); r=round(aa-bb,2); q=f"{fr(aa,1)} - {fr(bb,1)}"
         else: c=(k%9)+2; r=round(a*c,2); q=f"{fr(a,1)} \\times {c}"
         E.append(("application","decimaux", f"Calcule : ${q}$", [f"${q} = {fr(r,2)}$."], f"${fr(r,2)}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _perimetre_aire():
     E=[]
-    for k in range(25):
+    for k in range(2000):
         L=(k*3)%20+2; l=(k*2)%14+2
         E.append(("application","perimetre", f"Un rectangle mesure ${L}$ cm de long et ${l}$ cm de large. Calcule son périmètre.", [f"$P = 2 \\times ({L} + {l}) = {2*(L+l)}$ cm."], f"${2*(L+l)}$ cm"))
-    for k in range(25):
+    E1=_uniques(E,25); E=[]
+    for k in range(2000):
         L=(k*3)%20+2; l=(k*2)%14+2
         E.append(("application","aire", f"Un rectangle mesure ${L}$ cm sur ${l}$ cm. Calcule son aire.", [f"$A = {L} \\times {l} = {L*l}$ cm²."], f"${L*l}$ cm²"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(E1+_uniques(E,25))]
 
 def _durees():
     E=[]
-    for k in range(50):
+    for k in range(2000):
         h=(k%5)+1; m=(k*7)%60; add=(k*11)%50+10; tot=h*60+m+add; H=tot//60; M=tot%60
         E.append(("application","durees", f"Un film commence à ${h}$ h ${m:02d}$ et dure ${add}$ min. À quelle heure se termine-t-il ?", [f"${h}$ h ${m:02d}$ $+ {add}$ min $= {H}$ h ${M:02d}$."], f"${H}$ h ${M:02d}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
-def _fractions_qty():
+def _fractions_qty(decal=0):
     E=[]
-    for k in range(50):
-        d=[2,3,4,5,6,10][k%6]; n=1+(k%(d-1)); q=d*((k%9)+2); val=q*n//d
+    for k in range(2000):
+        j=k+decal; d=[2,3,4,5,6,10][j%6]; n=1+((j+j//6)%(d-1)); q=d*(((j+j//6)%9)+2); val=q*n//d
         E.append(("application","fractions", f"Calcule les $\\dfrac{{{n}}}{{{d}}}$ de ${q}$.", [f"${q} \\div {d} = {q//d}$, puis $\\times {n} = {val}$."], f"${val}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(_uniques(E))]
 
 def _moities_doubles():
     E=[]
-    for k in range(25):
+    for k in range(2000):
         n=2*((k*3)%40+1)
         E.append(("application","moitie", f"Quelle est la moitié de ${n}$ ?", [f"${n} \\div 2 = {n//2}$."], f"${n//2}$"))
-    for k in range(25):
+    E1=_uniques(E,25); E=[]
+    for k in range(2000):
         n=(k*3)%50+1
         E.append(("application","double", f"Quel est le double de ${n}$ ?", [f"${n} \\times 2 = {2*n}$."], f"${2*n}$"))
-    return [exo(i+1,*t) for i,t in enumerate(E)]
+    return [exo(i+1,*t) for i,t in enumerate(E1+_uniques(E,25))]
 
 def _problemes(mx):
     E=[]; noms=["billes","bonbons","images","euros","livres","crayons","pommes","autocollants"]
@@ -821,7 +836,7 @@ REGISTRE.update({
     ("ce1","nombres-jusqu-a-1000"): lambda: _nombres_compare(1000),
     ("ce1","problemes"): lambda: _problemes(100),
     ("ce2","calcul-mental"): lambda: _calcul_mental(1000),
-    ("ce2","fractions-simples"): _fractions_qty,
+    ("ce2","fractions-simples"): lambda: _fractions_qty(0),
     ("ce2","multiplication-posee"): lambda: _multiplications(90,9),
     ("ce2","nombres-jusqu-a-10000"): lambda: _nombres_compare(10000),
     ("ce2","perimetre-et-mesures"): _perimetre_aire,
@@ -830,7 +845,7 @@ REGISTRE.update({
     ("cm1","cercle-triangles-perimetre-aire"): _perimetre_aire,
     ("cm1","division-euclidienne"): lambda: _divisions(20),
     ("cm1","durees"): _durees,
-    ("cm1","fractions"): _fractions_qty,
+    ("cm1","fractions"): lambda: _fractions_qty(50),
     ("cm1","grands-nombres"): _grands_nombres,
     ("cm1","multiplication-posee"): lambda: _multiplications(900,90),
     ("cm1","nombres-decimaux"): _decimaux_ops,
@@ -839,12 +854,12 @@ REGISTRE.update({
     ("cm2","aires-perimetres-volumes"): _perimetre_aire,
     ("cm2","calcul-mental"): lambda: _calcul_mental(10000),
     ("cm2","division-posee"): lambda: _divisions(90),
-    ("cm2","fractions-et-operations"): _fractions_qty,
+    ("cm2","fractions-et-operations"): lambda: _fractions_qty(100),
     ("cm2","grands-nombres"): _grands_nombres,
     ("cm2","operations-sur-les-decimaux"): _decimaux_ops,
     ("cm2","problemes"): lambda: _problemes(10000),
     ("cm2","proportionnalite-et-pourcentages"): _proportionnalite_simple,
-    ("sixieme","fractions"): _fractions_qty,
+    ("sixieme","fractions"): lambda: _fractions_qty(150),
     ("sixieme","longueurs-aires-volumes"): _perimetre_aire,
     ("sixieme","nombres-entiers-decimaux"): _decimaux_ops,
     ("sixieme","proportionnalite"): _proportionnalite_simple,

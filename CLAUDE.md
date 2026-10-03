@@ -111,5 +111,6 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
   élisions « d'euros », « d'obtenir »… corrigées.
 - Accents corrigés dans Amis.js, Discussion.js, cloud/social.js (messages visibles sur le web).
 - Les 8 écrans à `Alert.alert` utilisent 0 ou 2 boutons (dont un `cancel`) : compatibles avec le correctif web.
-- Reste : ≈ 315 doublons d'énoncés dans 20 chapitres de primaire/collège générés par `generer-exos.py`
-  (CP addition/soustraction, fractions CE2→6e, tables…).
+- **0 doublon d'énoncé sur tout le site** : les générateurs primaire de `generer-exos.py` passent par
+  `_uniques()` (50 énoncés distincts, sinon erreur) ; fractions décalées par niveau (CE2, CM1, CM2, 6e
+  n'ont plus les mêmes exos) ; arrondis scolaires (120 500 → 121 000) et espaces des milliers.
