@@ -61,10 +61,31 @@ export async function chercherParPseudo(q) {
 
 export async function envoyerDemande(destinataireId) {
   const id = await moiId();
-  const { error } = await supabase.from('amities').insert({ demandeur: id, destinataire: destinataireId, statut: 'en_attente' });
-  if (error) {
-    if (error.code === '23505') throw new Error('Demande déjà envoyée.');
-    throw error;
+  const inserer = () => supabase.from('amities').insert({ demandeur: id, destinataire: destinataireId, statut: 'en_attente' });
+  const { error } = await inserer();
+  if (!error) return;
+  if (error.code !== '23505') throw error;
+  // Un lien existe déjà entre nous deux (dans un sens ou dans l'autre) : on explique lequel.
+  const { data: liens, error: e2 } = await supabase.from('amities')
+    .select('id, demandeur, statut')
+    .or(`and(demandeur.eq.${id},destinataire.eq.${destinataireId}),and(demandeur.eq.${destinataireId},destinataire.eq.${id})`);
+  if (e2) throw e2;
+  const lien = (liens ?? [])[0];
+  if (!lien) throw new Error('Demande déjà envoyée.');
+  if (lien.statut === 'acceptee') throw new Error('Vous êtes déjà amis.');
+  if (lien.statut === 'en_attente') {
+    throw new Error(lien.demandeur === id
+      ? 'Demande déjà envoyée.'
+      : 'Cette personne t’a déjà envoyé une demande : accepte-la dans « Demandes reçues ».');
+  }
+  // Ancienne demande refusée : on l'efface, puis on la renvoie.
+  const { error: e3 } = await supabase.from('amities').delete().eq('id', lien.id);
+  if (e3) throw e3;
+  const { error: e4 } = await inserer();
+  if (e4) {
+    // Si l'ancienne demande n'a pas pu être effacée (droits Supabase), l'insertion bute encore dessus.
+    if (e4.code === '23505') throw new Error('Ta demande précédente a été refusée : impossible d’en renvoyer une pour le moment.');
+    throw e4;
   }
 }
 

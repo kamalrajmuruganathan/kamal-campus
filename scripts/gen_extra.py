@@ -3054,19 +3054,26 @@ def r_premier_principe():
 def r_titrages():
     E = []
     def add(d, n, e, c, r): E.append((d, n, e, c, r))
-    intro = "Titrage d'une solution A par une solution B, réaction support $ A + B \\to $ produits."
-    for (cB, VE, VA) in [(0.100,12.0,10.0),(0.050,15.0,20.0),(0.020,18.0,10.0),(0.100,8.5,10.0),(0.010,25.0,20.0),(0.200,10.0,20.0),
+    # Couples réels de stœchiométrie 1:1 (titré A, titrant B, équation support).
+    COUPLES = [("d'acide chlorhydrique", "d'hydroxyde de sodium", "\\mathrm{H_3O^+ + HO^- \\to 2\\,H_2O}"),
+               ("d'acide éthanoïque", "d'hydroxyde de sodium", "\\mathrm{CH_3COOH + HO^- \\to CH_3COO^- + H_2O}"),
+               ("d'hydroxyde de sodium", "d'acide chlorhydrique", "\\mathrm{HO^- + H_3O^+ \\to 2\\,H_2O}"),
+               ("d'ammoniac", "d'acide chlorhydrique", "\\mathrm{NH_3 + H_3O^+ \\to NH_4^+ + H_2O}")]
+    def intro(k):
+        a_, b_, eq = COUPLES[k % len(COUPLES)]
+        return f"On titre une solution {a_} (notée A) par une solution {b_} (notée B). Réaction support : $ {eq} $."
+    for k, (cB, VE, VA) in enumerate([(0.100,12.0,10.0),(0.050,15.0,20.0),(0.020,18.0,10.0),(0.100,8.5,10.0),(0.010,25.0,20.0),(0.200,10.0,20.0),
                          (0.050,9.6,10.0),(0.100,14.2,20.0),(0.020,12.5,25.0),(0.150,10.0,15.0),(0.050,16.0,20.0),(0.100,21.0,20.0),
-                         (0.100,17.4,20.0),(0.050,11.0,10.0),(0.020,9.0,10.0),(0.100,19.0,10.0),(0.010,15.0,10.0),(0.200,7.0,10.0)]:
+                         (0.100,17.4,20.0),(0.050,11.0,10.0),(0.020,9.0,10.0),(0.100,19.0,10.0),(0.010,15.0,10.0),(0.200,7.0,10.0)]):
         cA = _D(str(cB)) * _D(str(VE)) / _D(str(VA))
         add("application", "concentration",
-            f"{intro} On titre $ V_A = {_nb(VA, nd=1)} $ mL de A par B à $ c_B = {_nb(cB, nd=3)} $ mol/L. Équivalence pour $ V_E = {_nb(VE, nd=1)} $ mL. Calculer $ c_A $.",
+            f"{intro(k)} Volume de A titré : $ V_A = {_nb(VA, nd=1)} $ mL ; concentration de B : $ c_B = {_nb(cB, nd=3)} $ mol/L. Équivalence pour $ V_E = {_nb(VE, nd=1)} $ mL. Calculer $ c_A $.",
             [f"À l'équivalence : $ c_A V_A = c_B V_E $, donc $ c_A = \\dfrac{{c_B V_E}}{{V_A}} = \\dfrac{{{_nb(cB, nd=3)}\\times {_nb(VE, nd=1)}}}{{{_nb(VA, nd=1)}}} = {_nb(cA, sig=3)} $ mol/L."],
             f"$ c_A = {_nb(cA, sig=3)} $ mol/L")
-    for (cA, VA, cB) in [(0.10,10,0.10),(0.050,20,0.10),(0.080,10,0.10),(0.12,20,0.20),(0.025,20,0.050),(0.060,25,0.10),(0.040,10,0.020),(0.15,10,0.10)]:
+    for k, (cA, VA, cB) in enumerate([(0.10,10,0.10),(0.050,20,0.10),(0.080,10,0.10),(0.12,20,0.20),(0.025,20,0.050),(0.060,25,0.10),(0.040,10,0.020),(0.15,10,0.10)], start=1):
         VE = _D(str(cA)) * VA / _D(str(cB))
         add("intermediaire", "volume-equivalence",
-            f"{intro} $ c_A = {_nb(cA, nd=3)} $ mol/L, $ V_A = {_nb(VA, nd=1)} $ mL, $ c_B = {_nb(cB, nd=3)} $ mol/L. Volume versé à l'équivalence $ V_E $ ?",
+            f"{intro(k)} $ c_A = {_nb(cA, nd=3)} $ mol/L, $ V_A = {_nb(VA, nd=1)} $ mL, $ c_B = {_nb(cB, nd=3)} $ mol/L. Volume versé à l'équivalence $ V_E $ ?",
             [f"$ V_E = \\dfrac{{c_A V_A}}{{c_B}} = \\dfrac{{{_nb(cA, nd=3)}\\times {_nb(VA, nd=1)}}}{{{_nb(cB, nd=3)}}} = {_nb(VE, nd=1)} $ mL."],
             f"$ V_E = {_nb(VE, nd=1)} $ mL")
     for (cB, VE) in [(0.100,12.0),(0.050,18.0),(0.020,15.0),(0.200,9.5),(0.010,22.0),(0.10,7.5)]:
@@ -3129,7 +3136,9 @@ def r_dipole_rc():
         v, u = _unite_t(tau)
         add("application", "constante-temps",
             f"Circuit RC avec $ R = {lr(R, ur)} $ et $ C = {lc(C, uc)} $. Calculer la constante de temps $ \\tau $.",
-            [f"$ \\tau = R\\,C $ en unités SI : $ \\tau = {_nb(_D(str(R))*UR[ur])}\\times {_sci(_D(str(C))*UC[uc], 2)} = {v} $ {u}."],
+            [f"$ \\tau = R\\,C $ en unités SI : $ \\tau = {_nb(_D(str(R))*UR[ur])}\\times {_sci(_D(str(C))*UC[uc], 2)} = {v} $ {u}."
+             if u == "s" else
+             f"$ \\tau = R\\,C $ en unités SI : $ \\tau = {_nb(_D(str(R))*UR[ur])}\\times {_sci(_D(str(C))*UC[uc], 2)} = {_sci(tau, 3)} $ s, soit $ {v} $ {u}."],
             f"$ \\tau = {v} $ {u}")
     for (tau_s, R, ur, rep) in [("1",10,"kΩ","100\\ \\mu\\mathrm{F}"),("0.047",4.7,"kΩ","10\\ \\mu\\mathrm{F}"),("0.5",5,"kΩ","100\\ \\mu\\mathrm{F}"),
                                 ("0.002",1,"kΩ","2\\ \\mu\\mathrm{F}"),("0.022",100,"Ω","220\\ \\mu\\mathrm{F}"),("0.01",100,"kΩ","100\\ \\mathrm{nF}")]:
