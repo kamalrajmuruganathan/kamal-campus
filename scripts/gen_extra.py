@@ -3841,3 +3841,112 @@ def _acc_wrap(fn):
     return g
 
 EXTRA = {k: _acc_wrap(f) for k, f in EXTRA.items()}
+
+# ---------------------------------------------------------------- CP : SE REPÉRER SUR UN QUADRILLAGE
+# Écrit directement en français accentué : pas de passage par _acc_wrap.
+_QD_COL = "ABCDE"
+_QD_DIR = {"→": (1, 0, "à droite"), "←": (-1, 0, "à gauche"),
+           "↑": (0, 1, "en haut"), "↓": (0, -1, "en bas")}
+_QD_GRILLE = ("Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) "
+              "et les lignes sont 1, 2, 3, 4, 5 (de bas en haut).")
+
+def _qd_case(c, l):
+    return f"{_QD_COL[c]}{l}"
+
+def _qd_nb(n):
+    return "une case" if n == 1 else f"{n} cases"
+
+def _qd_de(n):
+    return "d'une case" if n == 1 else f"de {n} cases"
+
+def _qd_groupes(fleches):
+    g = []
+    for f in fleches:
+        if g and g[-1][0] == f: g[-1][1] += 1
+        else: g.append([f, 1])
+    return g
+
+def _qd_mots(fleches):
+    return ", puis ".join(f"{_qd_nb(n)} {_QD_DIR[f][2]}" for f, n in _qd_groupes(fleches))
+
+def _qd_suivre(c, l, fleches):
+    etapes = []
+    for f in fleches:
+        dc, dl, _ = _QD_DIR[f]
+        c, l = c + dc, l + dl
+        assert 0 <= c < 5 and 1 <= l <= 5, "trajet hors du quadrillage"
+        etapes.append(_qd_case(c, l))
+    return c, l, etapes
+
+def r_quadrillage_cp():
+    T1 = []; T2 = []; T3 = []; T4 = []; T5 = []; T6 = []
+    # 1) Un seul déplacement d'une case
+    for c, l, f in [(1, 2, "→"), (2, 3, "←"), (0, 1, "↑"), (3, 4, "↓"), (4, 2, "←"), (2, 1, "↑"),
+                    (1, 5, "↓"), (3, 3, "→"), (0, 4, "→"), (4, 5, "↓"), (2, 2, "↑"), (3, 1, "←")]:
+        c2, l2, _ = _qd_suivre(c, l, f)
+        T1.append(("application", "reperer-une-case",
+                   f"{_QD_GRILLE} Le pion est sur la case {_qd_case(c, l)}. Il avance d'une case {_QD_DIR[f][2]}. "
+                   "Sur quelle case arrive-t-il ?",
+                   [f"Le pion part de {_qd_case(c, l)}.",
+                    ("Il change de colonne et reste sur la même ligne." if f in "→←"
+                     else "Il change de ligne et reste dans la même colonne."),
+                    f"Il arrive sur la case {_qd_case(c2, l2)}."],
+                   f"La case {_qd_case(c2, l2)}."))
+    # 2) Lire un code de flèches
+    for code in ["→→↑", "↑↑←", "↓→→", "←←←↓", "↑→↑", "→→→↑↑", "↓↓←", "←↑↑↑", "→↓↓", "↑↑→→"]:
+        T2.append(("application", "coder-un-deplacement",
+                   f"Que veut dire le chemin {' '.join(code)} ?",
+                   ["→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+                    f"On lit les flèches dans l'ordre : {_qd_mots(code)}."],
+                   f"{_qd_mots(code)[0].upper()}{_qd_mots(code)[1:]}."))
+    # 3) Écrire un déplacement avec des flèches
+    for code in ["→→↓", "↑↑↑", "←↑", "↓↓→", "→→→←", "↑←←"]:
+        mots = _qd_mots(code)
+        T3.append(("application", "fleche",
+                   f"Écris avec des flèches le déplacement : {mots}.",
+                   [f"{_qd_nb(n)[0].upper()}{_qd_nb(n)[1:]} {_QD_DIR[f][2]} s'écrit {' '.join([f] * n)}."
+                    for f, n in _qd_groupes(code)],
+                   " ".join(code)))
+    # 4) Suivre un trajet et trouver la case d'arrivée
+    for c, l, code in [(0, 1, "→→↑"), (1, 1, "↑↑→"), (4, 5, "←↓↓"), (2, 3, "→↑↑"), (0, 5, "↓↓→→"),
+                       (3, 2, "←←↑"), (1, 4, "→→→↓"), (4, 1, "↑←↑←"), (2, 5, "↓←↓"), (0, 3, "→↓→↑")]:
+        c2, l2, etapes = _qd_suivre(c, l, code)
+        T4.append(("intermediaire", "suivre-un-trajet",
+                   f"{_QD_GRILLE} Un robot part de la case {_qd_case(c, l)} et suit le chemin {' '.join(code)}. "
+                   "Sur quelle case arrive-t-il ?",
+                   [f"On part de {_qd_case(c, l)} et on suit les flèches une par une : {', puis '.join(etapes)}.",
+                    f"Le robot arrive sur la case {_qd_case(c2, l2)}."],
+                   f"La case {_qd_case(c2, l2)}."))
+    # 5) Compter les cases d'un trajet
+    for a, b, d1, d2 in [(2, 3, "à droite", "en haut"), (4, 1, "à gauche", "en bas"), (3, 3, "en haut", "à droite"),
+                         (1, 4, "en bas", "à gauche"), (5, 2, "à droite", "en bas"), (2, 2, "à gauche", "en haut")]:
+        T5.append(("application", "compter-des-cases",
+                   f"Une fourmi avance {_qd_de(a)} {d1}, puis {_qd_de(b)} {d2}. "
+                   "Combien de cases a-t-elle parcourues en tout ?",
+                   [f"Elle fait {a} case{'s' if a > 1 else ''}, puis {b} case{'s' if b > 1 else ''}.",
+                    f"{a} + {b} = {a + b}."],
+                   f"{a + b} cases."))
+    # 6) Trouver le chemin le plus court entre deux cases
+    for c, l, c2, l2 in [(0, 1, 2, 3), (1, 2, 4, 2), (3, 5, 1, 4), (2, 1, 2, 4), (4, 4, 1, 1), (0, 5, 3, 2)]:
+        dc, dl = c2 - c, l2 - l
+        parts = []
+        if dc: parts.append(f"{_qd_nb(abs(dc))} {'à droite' if dc > 0 else 'à gauche'}")
+        if dl: parts.append(f"{_qd_nb(abs(dl))} {'en haut' if dl > 0 else 'en bas'}")
+        rep = " et ".join(parts)
+        if not dc: rep += ", sans aller ni à droite ni à gauche"
+        if not dl: rep += ", sans aller ni en haut ni en bas"
+        T6.append(("approfondissement", "chemin",
+                   f"{_QD_GRILLE} Un lapin est sur la case {_qd_case(c, l)} et veut aller sur la case {_qd_case(c2, l2)} "
+                   "par le chemin le plus court. De combien de cases doit-il aller à droite ou à gauche, "
+                   "et de combien en haut ou en bas ?",
+                   [f"Colonnes : de {_QD_COL[c]} à {_QD_COL[c2]}, "
+                    + (f"il doit se déplacer {_qd_de(abs(dc))} {'à droite' if dc > 0 else 'à gauche'}." if dc
+                       else "c'est la même colonne, il ne va ni à droite ni à gauche."),
+                    f"Lignes : de {l} à {l2}, "
+                    + (f"il doit se déplacer {_qd_de(abs(dl))} {'en haut' if dl > 0 else 'en bas'}." if dl
+                       else "c'est la même ligne, il ne va ni en haut ni en bas.")],
+                   f"{rep[0].upper()}{rep[1:]}."))
+    E = _entrelacer(T1, T2, T4, T3, T5, T6)
+    return _fin(_uniq(E))
+
+EXTRA[("cp", "se-reperer-et-quadrillage")] = r_quadrillage_cp

@@ -58,7 +58,7 @@ export default function Discussion({ route }) {
     <KeyboardAvoidingView style={{ flex: 1, backgroundColor: C.fond }} behavior={Platform.OS === 'ios' ? 'padding' : undefined} keyboardVerticalOffset={90}>
       <ScrollView ref={scrollRef} style={{ flex: 1 }} contentContainerStyle={{ padding: 16 }}>
         {messages.length === 0 ? (
-          <Text style={{ color: C.texte, opacity: 0.5, textAlign: 'center', marginTop: 24 }}>Dis bonjour a {pseudo} 👋</Text>
+          <Text style={{ color: C.texte, opacity: 0.5, textAlign: 'center', marginTop: 24 }}>Dis bonjour à {pseudo} 👋</Text>
         ) : messages.map((m) => {
           const amoi = m.expediteur === moi;
           return (
@@ -69,7 +69,7 @@ export default function Discussion({ route }) {
         })}
       </ScrollView>
       <View style={{ flexDirection: 'row', gap: 8, padding: 10, borderTopWidth: 1, borderTopColor: C.trait }}>
-        <TextInput value={texte} onChangeText={setTexte} placeholder={`Message a ${pseudo}...`} placeholderTextColor={sombre ? '#888' : '#aaa'} style={{ flex: 1, borderColor: C.trait, borderWidth: 1, borderRadius: 20, paddingHorizontal: 14, paddingVertical: 10, color: C.texte }} onSubmitEditing={envoyer} returnKeyType="send" />
+        <TextInput value={texte} onChangeText={setTexte} placeholder={`Message à ${pseudo}...`} placeholderTextColor={sombre ? '#888' : '#aaa'} style={{ flex: 1, borderColor: C.trait, borderWidth: 1, borderRadius: 20, paddingHorizontal: 14, paddingVertical: 10, color: C.texte }} onSubmitEditing={envoyer} returnKeyType="send" />
         <Pressable onPress={envoyer} style={{ backgroundColor: C.accent, borderRadius: 20, paddingHorizontal: 18, justifyContent: 'center' }}><Text style={{ color: '#fff', fontWeight: '700' }}>Envoyer</Text></Pressable>
       </View>
     </KeyboardAvoidingView>

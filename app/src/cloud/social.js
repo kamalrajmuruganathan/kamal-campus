@@ -33,16 +33,16 @@ export async function assurerProfilPublic() {
     if (!error) return data;
     if (error.code !== '23505') throw error; // 23505 = pseudo deja pris -> on reessaie
   }
-  throw new Error('Impossible de creer un pseudo unique, reessaie.');
+  throw new Error('Impossible de créer un pseudo unique, réessaie.');
 }
 
 export async function definirPseudo(pseudo) {
   const id = await moiId();
   const propre = pseudo.trim();
-  if (propre.length < 3) throw new Error('Le pseudo doit faire au moins 3 caracteres.');
+  if (propre.length < 3) throw new Error('Le pseudo doit faire au moins 3 caractères.');
   const { data, error } = await supabase.from('profils_publics').update({ pseudo: propre }).eq('id', id).select().maybeSingle();
   if (error) {
-    if (error.code === '23505') throw new Error('Ce pseudo est deja pris.');
+    if (error.code === '23505') throw new Error('Ce pseudo est déjà pris.');
     throw error;
   }
   return data;
@@ -63,7 +63,7 @@ export async function envoyerDemande(destinataireId) {
   const id = await moiId();
   const { error } = await supabase.from('amities').insert({ demandeur: id, destinataire: destinataireId, statut: 'en_attente' });
   if (error) {
-    if (error.code === '23505') throw new Error('Demande deja envoyee.');
+    if (error.code === '23505') throw new Error('Demande déjà envoyée.');
     throw error;
   }
 }

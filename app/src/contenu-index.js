@@ -11485,7 +11485,7 @@ export const CHAPITRES = [
     statut: "brouillon",
     reluPar: null,
     nbQuestions: 20,
-    nbExercices: 10,
+    nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
     fiche: fiche34,

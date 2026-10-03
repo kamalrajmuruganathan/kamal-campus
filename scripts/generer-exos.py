@@ -378,7 +378,7 @@ def gen_probabilites():
     de=[("obtenir 6",1),("obtenir un nombre pair",3),("obtenir un multiple de 3",2),("obtenir au moins 5",2),("obtenir 1",1),("obtenir un nombre supérieur à 4",2),("obtenir un nombre impair",3),("obtenir un diviseur de 6",4)]
     for (evt,fav) in de:
         f=Fraction(fav,6)
-        add("application","probabilite-simple", f"On lance un dé équilibré à 6 faces. Probabilité de {evt} ?",
+        add("application","probabilite-simple", f"On lance un dé équilibré à 6 faces. Probabilité {'d' + chr(39) if evt[0] in 'aeiouéh' else 'de '}{evt} ?",
             [f"$P = \\dfrac{{{fav}}}{{6}} = {frac_latex(f)}$."], f"${frac_latex(f)}$")
     urnes=[(3,5),(4,10),(5,10),(2,10),(7,10),(1,5),(6,10),(3,8),(9,12),(4,6)]
     for (fav,tot) in urnes:
@@ -544,22 +544,33 @@ def gen_conversions_energie():
 def gen_atomes_ions():
     E=[]
     def add(d,n,e,c,r): E.append((d,n,e,c,r))
+    def de(nom): return ("d'" if nom[0] in "aeiouéèêh" else "de ") + nom
+    def pl(n,mot): return f"${n}$ {mot}" + ("s" if n>1 else "")
+    def el(n): return "un électron" if n==1 else f"{n} électrons"
     atomes=[("carbone",6,12),("oxygène",8,16),("azote",7,14),("hydrogène",1,1),("sodium",11,23),("chlore",17,35),("fer",26,56),("aluminium",13,27),("hélium",2,4),("calcium",20,40),("soufre",16,32),("magnésium",12,24)]
     for (nom,Z,A) in atomes:
-        add("application","structure-atome", f"L'atome de {nom} a un numéro atomique $Z = {Z}$. Combien possède-t-il d'électrons ?",
-            [f"Un atome est électriquement neutre : électrons = protons = $Z = {Z}$."], f"${Z}$ électrons")
+        add("application","structure-atome", f"L'atome {de(nom)} a un numéro atomique $Z = {Z}$. Combien possède-t-il d'électrons ?",
+            [f"Un atome est électriquement neutre : électrons = protons = $Z = {Z}$."], pl(Z,"électron"))
     for (nom,Z,A) in atomes:
-        add("intermediaire","structure-atome", f"L'atome de {nom} a $Z = {Z}$ et un nombre de masse $A = {A}$. Nombre de neutrons ?",
-            [f"Neutrons $= A - Z = {A} - {Z} = {A-Z}$."], f"${A-Z}$ neutrons")
+        add("intermediaire","structure-atome", f"L'atome {de(nom)} a $Z = {Z}$ et un nombre de masse $A = {A}$. Nombre de neutrons ?",
+            [f"Neutrons $= A - Z = {A} - {Z} = {A-Z}$."], pl(A-Z,"neutron"))
     ions=[("sodium Na⁺",1,"perdu"),("chlorure Cl⁻",1,"gagné"),("calcium Ca²⁺",2,"perdu"),("oxyde O²⁻",2,"gagné"),("aluminium Al³⁺",3,"perdu"),("magnésium Mg²⁺",2,"perdu"),("fluorure F⁻",1,"gagné"),("potassium K⁺",1,"perdu")]
     for (ion,n,sens) in ions:
         signe=f"{'+' if sens=='perdu' else '-'}{n if n>1 else ''}"
-        add("approfondissement","ions", f"L'ion {ion} se forme quand l'atome a {sens} {n} électron(s). Quelle est sa charge électrique ?",
+        add("approfondissement","ions", f"L'ion {ion} se forme quand l'atome a {sens} {el(n)}. Quelle est sa charge électrique ?",
             [f"Perdre un électron → charge +, en gagner → charge −. Charge de l'ion : ${signe}$."], f"${signe}$")
-    _i=0
-    while len(E)<50:
-        nom,Z,A=atomes[_i%len(atomes)]
-        add("application","structure-atome", f"Combien de protons dans le noyau de l'atome de {nom} ($Z={Z}$) ?", [f"Protons $= Z = {Z}$."], f"${Z}$ protons"); _i+=1
+    for (nom,Z,A) in atomes:
+        add("application","structure-atome", f"Combien de protons y a-t-il dans le noyau de l'atome {de(nom)} ($Z={Z}$) ?", [f"Protons $= Z = {Z}$."], pl(Z,"proton"))
+    # pH de solutions courantes (valeurs approchées réalistes)
+    for (sol,ph,nature,expl) in [("Le jus de citron","2","acide","il est inférieur à 7"),
+                                 ("Le vinaigre","3","acide","il est inférieur à 7"),
+                                 ("L'eau pure (à 25 °C)","7","neutre","il est égal à 7"),
+                                 ("L'eau savonneuse","10","basique","il est supérieur à 7"),
+                                 ("L'eau de Javel","12","basique","il est supérieur à 7"),
+                                 ("Le café","5","acide","il est inférieur à 7")]:
+        add("application","ph", f"{sol} a un pH proche de {ph}. Cette solution est-elle acide, neutre ou basique ?",
+            [f"Le pH vaut environ {ph} : {expl}.", "pH < 7 : acide ; pH = 7 : neutre ; pH > 7 : basique."],
+            f"Solution {nature}")
     E=E[:50]; return [exo(i+1,*t) for i,t in enumerate(E)]
 
 def gen_transformations_chimiques():
@@ -716,7 +727,7 @@ def _problemes(mx):
         a=(k*7)%mx+2; b=(k*3)%(mx//2+1)+1; obj=noms[k%len(noms)]; typ=k%3
         if typ==0: r=a+b; q=f"Léa a {a} {obj} et en reçoit {b}. Combien en a-t-elle en tout ?"; c=f"${a} + {b} = {r}$."
         elif typ==1: r=a; q=f"Tom avait {a+b} {obj}, il en donne {b}. Combien lui en reste-t-il ?"; c=f"${a+b} - {b} = {r}$."
-        else: cc=(k%9)+2; r=a*cc; q=f"Il y a {cc} paquets de {a} {obj}. Combien de {obj} en tout ?"; c=f"${cc} \\times {a} = {r}$."
+        else: cc=(k%9)+2; r=a*cc; q=f"Il y a {cc} paquets de {a} {obj}. Combien {'d' + chr(39) if obj[0] in 'aeiouéh' else 'de '}{obj} en tout ?"; c=f"${cc} \\times {a} = {r}$."
         E.append(("probleme","problemes", q, [c], f"${r}$"))
     return [exo(i+1,*t) for i,t in enumerate(E)]
 

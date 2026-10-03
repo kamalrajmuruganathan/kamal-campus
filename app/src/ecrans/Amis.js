@@ -36,7 +36,7 @@ export default function Amis({ navigation }) {
   }, [rafraichir]);
 
   async function enregistrerPseudo() {
-    try { setOccupe(true); const p = await definirPseudo(pseudoEdit); setPseudoEdit(p.pseudo); Alert.alert('OK', 'Pseudo enregistre.'); }
+    try { setOccupe(true); const p = await definirPseudo(pseudoEdit); setPseudoEdit(p.pseudo); Alert.alert('OK', 'Pseudo enregistré.'); }
     catch (e) { Alert.alert('Pseudo', e.message ?? 'Impossible.'); }
     finally { setOccupe(false); }
   }
@@ -45,12 +45,12 @@ export default function Amis({ navigation }) {
     catch (e) { Alert.alert('Recherche', e.message ?? 'Erreur.'); }
   }
   async function ajouter(p) {
-    try { await envoyerDemande(p.id); Alert.alert('OK', `Demande envoyee a ${p.pseudo}.`); setResultats((prev) => prev.filter((x) => x.id !== p.id)); }
+    try { await envoyerDemande(p.id); Alert.alert('OK', `Demande envoyée à ${p.pseudo}.`); setResultats((prev) => prev.filter((x) => x.id !== p.id)); }
     catch (e) { Alert.alert('Demande', e.message ?? 'Impossible.'); }
   }
   async function repondre(amitieId, accepter) {
     try { await repondreDemande(amitieId, accepter); await rafraichir(); }
-    catch (e) { Alert.alert('Reponse', e.message ?? 'Impossible.'); }
+    catch (e) { Alert.alert('Réponse', e.message ?? 'Impossible.'); }
   }
   function confirmerSuppr(a) {
     Alert.alert('Retirer cet ami ?', a.ami.pseudo, [
@@ -94,7 +94,7 @@ export default function Amis({ navigation }) {
 
       {demandes.length > 0 && (
         <View style={carte}>
-          <Text style={titre}>Demandes recues ({demandes.length})</Text>
+          <Text style={titre}>Demandes reçues ({demandes.length})</Text>
           {demandes.map((d) => (
             <View key={d.amitieId} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 }}>
               <Text style={{ color: C.texte, fontSize: 15 }}>{d.de.avatar ?? '🎓'} {d.de.pseudo}</Text>

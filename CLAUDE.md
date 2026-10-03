@@ -102,3 +102,14 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
 - Exos : Terminale > Titrages, Dipôle RC, Premier principe ; 5e > Masse volumique ;
   4e > Propagation du signal ; Terminale > Cinétique chimique (texte entièrement accentué).
 
+
+## 10. État au 03/10/2026 (session Claude Code)
+- Étapes 1 à 5 du § 7 **faites** et poussées sur `upgrade-sdk57` (pas encore publiées sur `main`).
+- Paquet v7 appliqué ; générateur ajouté pour `cp/se-reperer-et-quadrillage` (fin de `gen_extra.py`,
+  `r_quadrillage_cp`) → plus aucun chapitre maths/PC sans générateur.
+- `generer-exos.py` : 3e atomes-ions-pH réécrit (élisions, 0 doublon, 6 questions de pH),
+  élisions « d'euros », « d'obtenir »… corrigées.
+- Accents corrigés dans Amis.js, Discussion.js, cloud/social.js (messages visibles sur le web).
+- Les 8 écrans à `Alert.alert` utilisent 0 ou 2 boutons (dont un `cancel`) : compatibles avec le correctif web.
+- Reste : ≈ 315 doublons d'énoncés dans 20 chapitres de primaire/collège générés par `generer-exos.py`
+  (CP addition/soustraction, fractions CE2→6e, tables…).

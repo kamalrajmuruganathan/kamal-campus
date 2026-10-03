@@ -12,113 +12,564 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
-      "notion": "gauche-droite",
-      "enonce": "Un pion est sur une case. Il avance d'une case vers la droite. Puis il avance encore d'une case vers la droite. Combien de cases a-t-il avancées en tout ?",
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case B2. Il avance d'une case à droite. Sur quelle case arrive-t-il ?",
       "corrige": [
-        "Il a fait un pas vers la droite, puis un autre pas vers la droite.",
-        "1 + 1 = 2 cases."
+        "Le pion part de B2.",
+        "Il change de colonne et reste sur la même ligne.",
+        "Il arrive sur la case C2."
       ],
-      "reponse": "Le pion a avancé de 2 cases."
+      "reponse": "La case C2."
     },
     {
       "id": 2,
-      "difficulte": "facile",
-      "notion": "ligne-colonne",
-      "enonce": "Sur un quadrillage, les lignes sont numérotées et les colonnes ont des lettres. Une croix est dans la colonne B et la ligne 2. Comment note-t-on sa case ?",
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin → → ↑ ?",
       "corrige": [
-        "On donne d'abord la colonne, puis la ligne.",
-        "La colonne est B et la ligne est 2 : c'est la case B2."
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : 2 cases à droite, puis une case en haut."
       ],
-      "reponse": "La croix est dans la case B2."
+      "reponse": "2 cases à droite, puis une case en haut."
     },
     {
       "id": 3,
-      "difficulte": "facile",
-      "notion": "compter-des-cases",
-      "enonce": "Un escargot part de la case de départ et doit atteindre une case située 3 cases plus loin à droite. Combien de cases doit-il traverser ?",
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case A1 et suit le chemin → → ↑. Sur quelle case arrive-t-il ?",
       "corrige": [
-        "On compte les cases une par une vers la droite.",
-        "1, 2, 3 : il y a 3 cases."
+        "On part de A1 et on suit les flèches une par une : B1, puis C1, puis C2.",
+        "Le robot arrive sur la case C2."
       ],
-      "reponse": "L'escargot doit avancer de 3 cases."
+      "reponse": "La case C2."
     },
     {
       "id": 4,
-      "difficulte": "moyen",
-      "notion": "deplacement",
-      "enonce": "Un robot avance de 2 cases vers la droite, puis de 1 case vers le haut. Combien de cases a-t-il parcourues en tout ?",
+      "difficulte": "application",
+      "notion": "fleche",
+      "enonce": "Écris avec des flèches le déplacement : 2 cases à droite, puis une case en bas.",
       "corrige": [
-        "Il fait d'abord 2 cases, puis 1 case.",
-        "2 + 1 = 3."
+        "2 cases à droite s'écrit → →.",
+        "Une case en bas s'écrit ↓."
       ],
-      "reponse": "Le robot a parcouru 3 cases."
+      "reponse": "→ → ↓"
     },
     {
       "id": 5,
-      "difficulte": "moyen",
-      "notion": "reperer-une-case",
-      "enonce": "Sur un quadrillage, une étoile se trouve dans la colonne 4 et sur la ligne 3. Dans quelle colonne et quelle ligne se trouve-t-elle ?",
+      "difficulte": "application",
+      "notion": "compter-des-cases",
+      "enonce": "Une fourmi avance de 2 cases à droite, puis de 3 cases en haut. Combien de cases a-t-elle parcourues en tout ?",
       "corrige": [
-        "On lit la colonne : c'est la 4e colonne.",
-        "On lit la ligne : c'est la 3e ligne."
+        "Elle fait 2 cases, puis 3 cases.",
+        "2 + 3 = 5."
       ],
-      "reponse": "L'étoile est dans la colonne 4, ligne 3."
+      "reponse": "5 cases."
     },
     {
       "id": 6,
-      "difficulte": "difficile",
-      "notion": "suivre-un-trajet",
-      "enonce": "Une fourmi part d'une case, avance de 3 cases vers la droite, puis de 2 cases vers le bas. Combien de cases a-t-elle parcourues en tout pour arriver ?",
+      "difficulte": "approfondissement",
+      "notion": "chemin",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un lapin est sur la case A1 et veut aller sur la case C3 par le chemin le plus court. De combien de cases doit-il aller à droite ou à gauche, et de combien en haut ou en bas ?",
       "corrige": [
-        "Elle fait d'abord 3 cases vers la droite.",
-        "Puis 2 cases vers le bas : 3 + 2 = 5."
+        "Colonnes : de A à C, il doit se déplacer de 2 cases à droite.",
+        "Lignes : de 1 à 3, il doit se déplacer de 2 cases en haut."
       ],
-      "reponse": "La fourmi a parcouru 5 cases."
+      "reponse": "2 cases à droite et 2 cases en haut."
     },
     {
       "id": 7,
-      "difficulte": "decouverte",
-      "notion": "fleche",
-      "enonce": "Que veut dire la flèche → sur un quadrillage ?",
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case C3. Il avance d'une case à gauche. Sur quelle case arrive-t-il ?",
       "corrige": [
-        "La flèche → indique un déplacement.",
-        "Elle veut dire : une case vers la droite."
+        "Le pion part de C3.",
+        "Il change de colonne et reste sur la même ligne.",
+        "Il arrive sur la case B3."
       ],
-      "reponse": "Elle veut dire une case à droite."
+      "reponse": "La case B3."
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "chemin",
-      "enonce": "Un pion suit le chemin → → →. De combien de cases avance-t-il vers la droite ?",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin ↑ ↑ ← ?",
       "corrige": [
-        "Chaque flèche → vaut une case à droite.",
-        "Il y a 3 flèches : 3 cases."
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : 2 cases en haut, puis une case à gauche."
       ],
-      "reponse": "Il avance de 3 cases vers la droite."
+      "reponse": "2 cases en haut, puis une case à gauche."
     },
     {
       "id": 9,
-      "difficulte": "application",
-      "notion": "coder-un-deplacement",
-      "enonce": "Un jeton descend de 4 cases vers le bas. Quelle flèche répète-t-on, et combien de fois ?",
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case B1 et suit le chemin ↑ ↑ →. Sur quelle case arrive-t-il ?",
       "corrige": [
-        "Descendre, c'est aller vers le bas : la flèche ↓.",
-        "Pour 4 cases, on la répète 4 fois."
+        "On part de B1 et on suit les flèches une par une : B2, puis B3, puis C3.",
+        "Le robot arrive sur la case C3."
       ],
-      "reponse": "On répète la flèche ↓ quatre fois."
+      "reponse": "La case C3."
     },
     {
       "id": 10,
-      "difficulte": "approfondissement",
-      "notion": "suivre-un-trajet",
-      "enonce": "Un pion avance de 3 cases à droite, 1 case en haut, puis 2 cases à gauche. Combien de cases a-t-il parcourues en tout ?",
+      "difficulte": "application",
+      "notion": "fleche",
+      "enonce": "Écris avec des flèches le déplacement : 3 cases en haut.",
       "corrige": [
-        "On ajoute toutes les cases parcourues.",
-        "3 + 1 + 2 = 6."
+        "3 cases en haut s'écrit ↑ ↑ ↑."
       ],
-      "reponse": "Le pion a parcouru 6 cases."
+      "reponse": "↑ ↑ ↑"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "compter-des-cases",
+      "enonce": "Une fourmi avance de 4 cases à gauche, puis d'une case en bas. Combien de cases a-t-elle parcourues en tout ?",
+      "corrige": [
+        "Elle fait 4 cases, puis 1 case.",
+        "4 + 1 = 5."
+      ],
+      "reponse": "5 cases."
+    },
+    {
+      "id": 12,
+      "difficulte": "approfondissement",
+      "notion": "chemin",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un lapin est sur la case B2 et veut aller sur la case E2 par le chemin le plus court. De combien de cases doit-il aller à droite ou à gauche, et de combien en haut ou en bas ?",
+      "corrige": [
+        "Colonnes : de B à E, il doit se déplacer de 3 cases à droite.",
+        "Lignes : de 2 à 2, c'est la même ligne, il ne va ni en haut ni en bas."
+      ],
+      "reponse": "3 cases à droite, sans aller ni en haut ni en bas."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case A1. Il avance d'une case en haut. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de A1.",
+        "Il change de ligne et reste dans la même colonne.",
+        "Il arrive sur la case A2."
+      ],
+      "reponse": "La case A2."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin ↓ → → ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : une case en bas, puis 2 cases à droite."
+      ],
+      "reponse": "Une case en bas, puis 2 cases à droite."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case E5 et suit le chemin ← ↓ ↓. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de E5 et on suit les flèches une par une : D5, puis D4, puis D3.",
+        "Le robot arrive sur la case D3."
+      ],
+      "reponse": "La case D3."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "fleche",
+      "enonce": "Écris avec des flèches le déplacement : une case à gauche, puis une case en haut.",
+      "corrige": [
+        "Une case à gauche s'écrit ←.",
+        "Une case en haut s'écrit ↑."
+      ],
+      "reponse": "← ↑"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "compter-des-cases",
+      "enonce": "Une fourmi avance de 3 cases en haut, puis de 3 cases à droite. Combien de cases a-t-elle parcourues en tout ?",
+      "corrige": [
+        "Elle fait 3 cases, puis 3 cases.",
+        "3 + 3 = 6."
+      ],
+      "reponse": "6 cases."
+    },
+    {
+      "id": 18,
+      "difficulte": "approfondissement",
+      "notion": "chemin",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un lapin est sur la case D5 et veut aller sur la case B4 par le chemin le plus court. De combien de cases doit-il aller à droite ou à gauche, et de combien en haut ou en bas ?",
+      "corrige": [
+        "Colonnes : de D à B, il doit se déplacer de 2 cases à gauche.",
+        "Lignes : de 5 à 4, il doit se déplacer d'une case en bas."
+      ],
+      "reponse": "2 cases à gauche et une case en bas."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case D4. Il avance d'une case en bas. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de D4.",
+        "Il change de ligne et reste dans la même colonne.",
+        "Il arrive sur la case D3."
+      ],
+      "reponse": "La case D3."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin ← ← ← ↓ ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : 3 cases à gauche, puis une case en bas."
+      ],
+      "reponse": "3 cases à gauche, puis une case en bas."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case C3 et suit le chemin → ↑ ↑. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de C3 et on suit les flèches une par une : D3, puis D4, puis D5.",
+        "Le robot arrive sur la case D5."
+      ],
+      "reponse": "La case D5."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "fleche",
+      "enonce": "Écris avec des flèches le déplacement : 2 cases en bas, puis une case à droite.",
+      "corrige": [
+        "2 cases en bas s'écrit ↓ ↓.",
+        "Une case à droite s'écrit →."
+      ],
+      "reponse": "↓ ↓ →"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "compter-des-cases",
+      "enonce": "Une fourmi avance d'une case en bas, puis de 4 cases à gauche. Combien de cases a-t-elle parcourues en tout ?",
+      "corrige": [
+        "Elle fait 1 case, puis 4 cases.",
+        "1 + 4 = 5."
+      ],
+      "reponse": "5 cases."
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "chemin",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un lapin est sur la case C1 et veut aller sur la case C4 par le chemin le plus court. De combien de cases doit-il aller à droite ou à gauche, et de combien en haut ou en bas ?",
+      "corrige": [
+        "Colonnes : de C à C, c'est la même colonne, il ne va ni à droite ni à gauche.",
+        "Lignes : de 1 à 4, il doit se déplacer de 3 cases en haut."
+      ],
+      "reponse": "3 cases en haut, sans aller ni à droite ni à gauche."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case E2. Il avance d'une case à gauche. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de E2.",
+        "Il change de colonne et reste sur la même ligne.",
+        "Il arrive sur la case D2."
+      ],
+      "reponse": "La case D2."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin ↑ → ↑ ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : une case en haut, puis une case à droite, puis une case en haut."
+      ],
+      "reponse": "Une case en haut, puis une case à droite, puis une case en haut."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case A5 et suit le chemin ↓ ↓ → →. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de A5 et on suit les flèches une par une : A4, puis A3, puis B3, puis C3.",
+        "Le robot arrive sur la case C3."
+      ],
+      "reponse": "La case C3."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "fleche",
+      "enonce": "Écris avec des flèches le déplacement : 3 cases à droite, puis une case à gauche.",
+      "corrige": [
+        "3 cases à droite s'écrit → → →.",
+        "Une case à gauche s'écrit ←."
+      ],
+      "reponse": "→ → → ←"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "compter-des-cases",
+      "enonce": "Une fourmi avance de 5 cases à droite, puis de 2 cases en bas. Combien de cases a-t-elle parcourues en tout ?",
+      "corrige": [
+        "Elle fait 5 cases, puis 2 cases.",
+        "5 + 2 = 7."
+      ],
+      "reponse": "7 cases."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "chemin",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un lapin est sur la case E4 et veut aller sur la case B1 par le chemin le plus court. De combien de cases doit-il aller à droite ou à gauche, et de combien en haut ou en bas ?",
+      "corrige": [
+        "Colonnes : de E à B, il doit se déplacer de 3 cases à gauche.",
+        "Lignes : de 4 à 1, il doit se déplacer de 3 cases en bas."
+      ],
+      "reponse": "3 cases à gauche et 3 cases en bas."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case C1. Il avance d'une case en haut. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de C1.",
+        "Il change de ligne et reste dans la même colonne.",
+        "Il arrive sur la case C2."
+      ],
+      "reponse": "La case C2."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin → → → ↑ ↑ ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : 3 cases à droite, puis 2 cases en haut."
+      ],
+      "reponse": "3 cases à droite, puis 2 cases en haut."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case D2 et suit le chemin ← ← ↑. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de D2 et on suit les flèches une par une : C2, puis B2, puis B3.",
+        "Le robot arrive sur la case B3."
+      ],
+      "reponse": "La case B3."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "fleche",
+      "enonce": "Écris avec des flèches le déplacement : une case en haut, puis 2 cases à gauche.",
+      "corrige": [
+        "Une case en haut s'écrit ↑.",
+        "2 cases à gauche s'écrit ← ←."
+      ],
+      "reponse": "↑ ← ←"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "compter-des-cases",
+      "enonce": "Une fourmi avance de 2 cases à gauche, puis de 2 cases en haut. Combien de cases a-t-elle parcourues en tout ?",
+      "corrige": [
+        "Elle fait 2 cases, puis 2 cases.",
+        "2 + 2 = 4."
+      ],
+      "reponse": "4 cases."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "chemin",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un lapin est sur la case A5 et veut aller sur la case D2 par le chemin le plus court. De combien de cases doit-il aller à droite ou à gauche, et de combien en haut ou en bas ?",
+      "corrige": [
+        "Colonnes : de A à D, il doit se déplacer de 3 cases à droite.",
+        "Lignes : de 5 à 2, il doit se déplacer de 3 cases en bas."
+      ],
+      "reponse": "3 cases à droite et 3 cases en bas."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case B5. Il avance d'une case en bas. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de B5.",
+        "Il change de ligne et reste dans la même colonne.",
+        "Il arrive sur la case B4."
+      ],
+      "reponse": "La case B4."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin ↓ ↓ ← ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : 2 cases en bas, puis une case à gauche."
+      ],
+      "reponse": "2 cases en bas, puis une case à gauche."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case B4 et suit le chemin → → → ↓. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de B4 et on suit les flèches une par une : C4, puis D4, puis E4, puis E3.",
+        "Le robot arrive sur la case E3."
+      ],
+      "reponse": "La case E3."
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case D3. Il avance d'une case à droite. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de D3.",
+        "Il change de colonne et reste sur la même ligne.",
+        "Il arrive sur la case E3."
+      ],
+      "reponse": "La case E3."
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin ← ↑ ↑ ↑ ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : une case à gauche, puis 3 cases en haut."
+      ],
+      "reponse": "Une case à gauche, puis 3 cases en haut."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case E1 et suit le chemin ↑ ← ↑ ←. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de E1 et on suit les flèches une par une : E2, puis D2, puis D3, puis C3.",
+        "Le robot arrive sur la case C3."
+      ],
+      "reponse": "La case C3."
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case A4. Il avance d'une case à droite. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de A4.",
+        "Il change de colonne et reste sur la même ligne.",
+        "Il arrive sur la case B4."
+      ],
+      "reponse": "La case B4."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin → ↓ ↓ ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : une case à droite, puis 2 cases en bas."
+      ],
+      "reponse": "Une case à droite, puis 2 cases en bas."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case C5 et suit le chemin ↓ ← ↓. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de C5 et on suit les flèches une par une : C4, puis B4, puis B3.",
+        "Le robot arrive sur la case B3."
+      ],
+      "reponse": "La case B3."
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case E5. Il avance d'une case en bas. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de E5.",
+        "Il change de ligne et reste dans la même colonne.",
+        "Il arrive sur la case E4."
+      ],
+      "reponse": "La case E4."
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "coder-un-deplacement",
+      "enonce": "Que veut dire le chemin ↑ ↑ → → ?",
+      "corrige": [
+        "→ veut dire une case à droite, ← une case à gauche, ↑ une case en haut, ↓ une case en bas.",
+        "On lit les flèches dans l'ordre : 2 cases en haut, puis 2 cases à droite."
+      ],
+      "reponse": "2 cases en haut, puis 2 cases à droite."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "suivre-un-trajet",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Un robot part de la case A3 et suit le chemin → ↓ → ↑. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "On part de A3 et on suit les flèches une par une : B3, puis B2, puis C2, puis C3.",
+        "Le robot arrive sur la case C3."
+      ],
+      "reponse": "La case C3."
+    },
+    {
+      "id": 49,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case C2. Il avance d'une case en haut. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de C2.",
+        "Il change de ligne et reste dans la même colonne.",
+        "Il arrive sur la case C3."
+      ],
+      "reponse": "La case C3."
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "reperer-une-case",
+      "enonce": "Sur le quadrillage, les colonnes sont A, B, C, D, E (de gauche à droite) et les lignes sont 1, 2, 3, 4, 5 (de bas en haut). Le pion est sur la case D1. Il avance d'une case à gauche. Sur quelle case arrive-t-il ?",
+      "corrige": [
+        "Le pion part de D1.",
+        "Il change de colonne et reste sur la même ligne.",
+        "Il arrive sur la case C1."
+      ],
+      "reponse": "La case C1."
     }
   ]
 }
