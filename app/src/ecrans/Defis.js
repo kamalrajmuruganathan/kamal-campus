@@ -5,7 +5,7 @@
  * Les enonces/choix contiennent du LaTeX -> rendus par VisionneuseFiche.
  */
 import { useEffect, useState, useCallback, useMemo } from 'react';
-import { View, Text, TextInput, Pressable, ScrollView, ActivityIndicator, Modal, Alert } from 'react-native';
+import { View, Text, TextInput, Pressable, ScrollView, ActivityIndicator, Modal, Alert, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../useTheme';
 import VisionneuseFiche from '../composants/VisionneuseFiche';
@@ -16,6 +16,20 @@ import {
 import { construireQuestions, chapitresJouables, titreChapitre, NB_QUESTIONS_DEFI } from '../defisContenu';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
+const WEB = Platform.OS === 'web';
+
+// Sur le web, Alert.alert de React Native ne fait rien : on passe par le navigateur.
+function avertir(titre, message) {
+  if (WEB) window.alert(message ? `${titre}\n\n${message}` : titre);
+  else Alert.alert(titre, message);
+}
+function confirmer(titre, message, libelleOk, action) {
+  if (WEB) { if (window.confirm(`${titre}\n\n${message}`)) action(); return; }
+  Alert.alert(titre, message, [
+    { text: 'Annuler', style: 'cancel' },
+    { text: libelleOk, style: 'destructive', onPress: action },
+  ]);
+}
 
 // Melange les options d'une question pour l'affichage (garde la bonne reponse).
 function prepareAffichage(questions) {
@@ -54,7 +68,7 @@ export default function Defis({ navigation }) {
         setAmis(bruts.map((a) => ({ id: a.ami.id, nom: a.ami.pseudo, avatar: a.ami.avatar ?? '🎓' })));
         await rafraichir();
         off = ecouterDefis(id, () => { rafraichir(); });
-      } catch (e) { Alert.alert('Oups', e.message ?? 'Erreur de chargement.'); }
+      } catch (e) { avertir('Oups', e.message ?? 'Erreur de chargement.'); }
       finally { setChargement(false); }
     })();
     return () => { if (off) off(); };
@@ -87,7 +101,7 @@ export default function Defis({ navigation }) {
   //  mode 'creer'    : raw = questions fraiches (a stocker) ; amiId defini
   //  mode 'repondre' : raw = defi.questions (les memes) ; defiId defini
   function demarrer({ mode, chapId, raw, defiId, amiId }) {
-    if (!raw || !raw.length) { Alert.alert('Chapitre', 'Aucune question disponible pour ce chapitre.'); return; }
+    if (!raw || !raw.length) { avertir('Chapitre', 'Aucune question disponible pour ce chapitre.'); return; }
     setJeu({
       phase: 'question', mode, chapId, defiId, amiId,
       raw, questions: prepareAffichage(raw),
@@ -124,14 +138,13 @@ export default function Defis({ navigation }) {
         setJeu((s) => s && { ...s, phase: 'fait', resultat: { mode: 'repondre', defi: maj } });
       }
       await rafraichir();
-    } catch (e) { Alert.alert('Erreur', e.message ?? 'Envoi impossible.'); setJeu(null); }
+    } catch (e) { avertir('Erreur', e.message ?? 'Envoi impossible.'); setJeu(null); }
   }
 
   function confirmerRefus(d) {
-    Alert.alert('Refuser ce défi ?', `De ${nomDe(resultats(d).advId)}`, [
-      { text: 'Annuler', style: 'cancel' },
-      { text: 'Refuser', style: 'destructive', onPress: async () => { try { await refuserDefi(d.id); await rafraichir(); } catch (e) { Alert.alert('Erreur', e.message ?? ''); } } },
-    ]);
+    confirmer('Refuser ce défi ?', `De ${nomDe(resultats(d).advId)}`, 'Refuser', async () => {
+      try { await refuserDefi(d.id); await rafraichir(); } catch (e) { avertir('Erreur', e.message ?? ''); }
+    });
   }
 
   // --- Styles ---
@@ -149,7 +162,7 @@ export default function Defis({ navigation }) {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: C.fond }} edges={['bottom']}>
-      <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: 96 }}>
+      <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: WEB ? 144 : 96 }}>
         <Text style={{ color: C.texte, fontSize: t.police.titre, fontWeight: '700' }}>Défis</Text>
         <Text style={{ color: C.attenue, fontSize: t.police.normale, marginTop: 2 }}>Provoque tes amis sur un chapitre 💪</Text>
 
@@ -207,7 +220,7 @@ export default function Defis({ navigation }) {
         })}
       </ScrollView>
 
-      <Pressable onPress={() => setNouveau(true)} style={{ position: 'absolute', left: t.espace.l, right: t.espace.l, bottom: t.espace.l, backgroundColor: C.accent, borderRadius: 30, paddingVertical: 14, alignItems: 'center' }}>
+      <Pressable onPress={() => setNouveau(true)} style={{ position: 'absolute', left: t.espace.l, right: t.espace.l, bottom: WEB ? 64 : t.espace.l, backgroundColor: C.accent, borderRadius: 30, paddingVertical: 14, alignItems: 'center' }}>
         <Text style={{ color: C.accentTexte, fontWeight: '700', fontSize: t.police.moyenne }}>＋ Nouveau défi</Text>
       </Pressable>
 

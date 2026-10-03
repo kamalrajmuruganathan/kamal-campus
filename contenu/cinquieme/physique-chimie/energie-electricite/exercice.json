@@ -13,126 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "energie-joule",
-      "enonce": "Sur l'emballage d'une barre de céréales, on lit qu'elle apporte une énergie de $5\\ \\text{kJ}$. 1) Rappelle l'unité de base de l'énergie et son symbole. 2) Convertis cette énergie en joules.",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Un circuit électrique fermé permet le passage du courant.",
       "corrige": [
-        "L'énergie se mesure en **joules**, de symbole $\\text{J}$. Le kilojoule ($\\text{kJ}$) en est un multiple.",
-        "Le préfixe **kilo** signifie $\\times 1\\,000$. Donc $5\\ \\text{kJ} = 5 \\times 1\\,000\\ \\text{J}$.",
-        "On obtient $5\\ \\text{kJ} = 5\\,000\\ \\text{J}$."
+        "Le courant circule dans une boucle fermée."
       ],
-      "reponse": "$5\\ \\text{kJ} = 5\\,000\\ \\text{J}$ (l'unité de base est le joule, symbole $\\text{J}$)."
+      "reponse": "Vrai"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "circuit-ouvert-ferme",
-      "enonce": "On dispose d'une pile, d'une lampe, de fils et d'un interrupteur, montés en une seule boucle. 1) Que se passe-t-il pour la lampe quand l'interrupteur est fermé ? 2) Et quand il est ouvert ? 3) Explique en une phrase le rôle de l'interrupteur.",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Dans un circuit ouvert, le courant ne circule pas.",
       "corrige": [
-        "Interrupteur **fermé** : la boucle est complète, le courant circule, donc la lampe **brille**.",
-        "Interrupteur **ouvert** : la boucle est coupée, le courant ne peut plus circuler, donc la lampe reste **éteinte**.",
-        "L'interrupteur permet d'**ouvrir ou de fermer** le circuit à volonté, donc de commander le passage du courant sans débrancher les fils."
+        "La boucle est interrompue."
       ],
-      "reponse": "Fermé → la lampe brille (circuit fermé, courant qui circule) ; ouvert → la lampe est éteinte (circuit coupé). L'interrupteur commande le passage du courant."
+      "reponse": "Vrai"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "serie-derivation",
-      "enonce": "Deux guirlandes A et B contiennent chacune plusieurs ampoules. Dans la guirlande A, quand une seule ampoule grille, **toute** la guirlande s'éteint. Dans la guirlande B, quand une ampoule grille, **toutes les autres restent allumées**. 1) Quel est le montage de A ? Celui de B ? 2) Justifie à partir du nombre de boucles.",
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Une lampe brille lorsqu'elle est traversée par un courant électrique.",
       "corrige": [
-        "Dans la guirlande **A**, une ampoule grillée éteint tout : il n'y a donc qu'une **seule boucle**, c'est un montage en **série**. Couper un point coupe toute la boucle.",
-        "Dans la guirlande **B**, les autres restent allumées : chaque ampoule est sur sa **propre branche**, c'est un montage en **dérivation**. La branche d'une ampoule grillée est coupée, mais les autres branches forment encore des boucles complètes.",
-        "Conclusion : A est en série (une boucle unique), B est en dérivation (plusieurs branches indépendantes)."
+        "Le courant provoque son éclairage."
       ],
-      "reponse": "A est montée en **série** (une seule boucle : une ampoule grillée coupe tout) ; B est montée en **dérivation** (branches séparées : les autres restent allumées)."
+      "reponse": "Vrai"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "tension-volt",
-      "enonce": "Un élève veut mesurer la tension aux bornes d'une lampe ET l'intensité qui la traverse. Il possède un voltmètre et un ampèremètre. 1) Quel appareil pour la tension ? Comment le brancher ? 2) Quel appareil pour l'intensité ? Comment le brancher ? 3) Donne l'unité mesurée par chacun.",
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Un interrupteur ouvert coupe le courant.",
       "corrige": [
-        "Pour la **tension**, on utilise le **voltmètre**. On le branche **en dérivation**, c'est-à-dire directement aux **bornes** de la lampe (en parallèle).",
-        "Pour l'**intensité**, on utilise l'**ampèremètre**. On le branche **en série**, dans la boucle, pour que le courant de la lampe le **traverse**.",
-        "Le voltmètre mesure une tension en **volts** ($\\text{V}$) ; l'ampèremètre mesure une intensité en **ampères** ($\\text{A}$)."
+        "Il interrompt la boucle du circuit."
       ],
-      "reponse": "Tension → **voltmètre en dérivation** aux bornes de la lampe, en volts (V). Intensité → **ampèremètre en série** dans la boucle, en ampères (A)."
+      "reponse": "Vrai"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "tension-volt",
-      "enonce": "Une pile de $4{,}5\\ \\text{V}$ alimente deux lampes identiques $\\text{L}_1$ et $\\text{L}_2$ branchées **en série**. En série, la tension du générateur se **répartit** entre les dipôles (les tensions aux bornes des lampes s'**ajoutent** pour redonner celle de la pile). 1) Écris la relation entre la tension de la pile et les tensions $U_1$ et $U_2$ des deux lampes. 2) Les lampes étant identiques, calcule $U_1$ et $U_2$.",
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Les métaux sont de bons conducteurs électriques.",
       "corrige": [
-        "En série, les tensions des dipôles **s'ajoutent** et redonnent la tension du générateur : $U_{\\text{pile}} = U_1 + U_2$, soit $4{,}5 = U_1 + U_2$.",
-        "Les deux lampes sont **identiques**, donc elles reçoivent la **même** tension : $U_1 = U_2$.",
-        "On partage donc la tension de la pile en deux parts égales : $U_1 = U_2 = \\dfrac{4{,}5}{2} = 2{,}25\\ \\text{V}$.",
-        "Vérification : $2{,}25 + 2{,}25 = 4{,}5\\ \\text{V}$, on retrouve bien la tension de la pile."
+        "Ils laissent passer le courant."
       ],
-      "reponse": "$U_{\\text{pile}} = U_1 + U_2 = 4{,}5\\ \\text{V}$, et comme les lampes sont identiques, $U_1 = U_2 = 2{,}25\\ \\text{V}$."
+      "reponse": "Vrai"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "securite",
-      "enonce": "Un enfant plante un fil métallique reliant directement les deux bornes ($+$ et $-$) d'une pile, sans aucun récepteur dans le circuit. Au bout de quelques secondes, le fil devient brûlant. 1) Comment appelle-t-on cette situation ? 2) Explique pourquoi le fil chauffe autant. 3) Quel composant, dans une installation domestique, sert justement à couper le courant dans ce cas ?",
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le plastique est un isolant électrique.",
       "corrige": [
-        "Relier directement les deux bornes d'un générateur par un fil sans récepteur s'appelle un **court-circuit**.",
-        "Sans récepteur pour recevoir l'énergie, l'intensité du courant devient **très grande** dans le fil. Toute cette énergie est transférée au fil, qui **s'échauffe** fortement : c'est ce qui le rend brûlant, avec un risque de brûlure et d'incendie.",
-        "Dans une maison, le **fusible** (ou le **disjoncteur**) détecte cette intensité trop élevée et **coupe automatiquement** le courant pour protéger l'installation."
+        "Il ne laisse pas passer le courant."
       ],
-      "reponse": "C'est un **court-circuit** : l'intensité devient très grande et le fil chauffe fortement (risque d'incendie). Le **fusible** ou le **disjoncteur** coupe alors automatiquement le courant."
+      "reponse": "Vrai"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "intensite-ampere",
-      "enonce": "Le phare avant d'un vélo électrique est traversé par un courant d'intensité $I = 0{,}45\\ \\text{A}$. 1) Comment s'appelle la grandeur mesurée, quel est son symbole et son unité ? 2) Avec quel appareil la mesure-t-on, et comment le branche-t-on dans le circuit ? 3) Exprime cette intensité en milliampères ($\\text{mA}$).",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Dans un circuit en série, les composants sont branchés les uns à la suite des autres.",
       "corrige": [
-        "La grandeur mesurée est l'**intensité** du courant, de symbole $I$. Son unité est l'**ampère**, de symbole $\\text{A}$.",
-        "On la mesure avec un **ampèremètre**, branché **en série** dans la boucle : le courant du phare doit le **traverser** pour être mesuré.",
-        "Conversion : $1\\ \\text{A} = 1\\,000\\ \\text{mA}$, donc $I = 0{,}45\\ \\text{A} = 0{,}45 \\times 1\\,000 = 450\\ \\text{mA}$."
+        "Ils forment une seule boucle."
       ],
-      "reponse": "C'est l'**intensité** $I$, en **ampères** ($\\text{A}$), mesurée à l'**ampèremètre** branché **en série**. On a $I = 0{,}45\\ \\text{A} = 450\\ \\text{mA}$."
+      "reponse": "Vrai"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "intensite-ampere",
-      "enonce": "Dans un circuit, trois lampes identiques sont branchées **en série** avec une pile. Un ampèremètre placé juste après la pile indique une intensité $I = 0{,}12\\ \\text{A}$. 1) Quelle est l'intensité du courant qui traverse la deuxième lampe ? Justifie à l'aide de la règle de l'intensité en série. 2) Exprime cette intensité en milliampères.",
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Dans un circuit en série de deux lampes, dévisser une lampe éteint l'autre.",
       "corrige": [
-        "En **série**, il n'y a qu'une seule boucle : l'intensité du courant est la **même partout** dans le circuit. Le courant qui traverse la deuxième lampe est donc identique à celui mesuré après la pile.",
-        "L'intensité dans la deuxième lampe vaut donc aussi $I = 0{,}12\\ \\text{A}$.",
-        "Conversion : $1\\ \\text{A} = 1\\,000\\ \\text{mA}$, donc $0{,}12\\ \\text{A} = 0{,}12 \\times 1\\,000 = 120\\ \\text{mA}$."
+        "La boucle unique est coupée."
       ],
-      "reponse": "En série l'intensité est la **même partout** : la deuxième lampe est traversée par $I = 0{,}12\\ \\text{A} = 120\\ \\text{mA}$."
+      "reponse": "Vrai"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "energie-joule",
-      "enonce": "La batterie d'une trottinette électrique stocke une énergie de $0{,}5\\ \\text{MJ}$. 1) Convertis cette énergie en joules. 2) Quand la trottinette roule, cette énergie est transférée : cite le mode de transfert vers le moteur, puis ce que devient l'énergie une fois la trottinette lancée (donne deux formes). 3) Une fois la batterie vide, peut-on dire que l'énergie a « disparu » ? Justifie avec l'idée de conservation.",
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Dans un circuit en dérivation, chaque lampe est sur sa propre boucle.",
       "corrige": [
-        "Le préfixe **méga** signifie $\\times 1\\,000\\,000$ : $0{,}5\\ \\text{MJ} = 0{,}5 \\times 1\\,000\\,000 = 500\\,000\\ \\text{J}$.",
-        "De la batterie vers le moteur, le transfert d'énergie se fait par voie **électrique** (par les fils). Une fois la trottinette lancée, cette énergie se retrouve surtout sous forme d'énergie de **mouvement** (mécanique) et, à cause des frottements et de l'échauffement des composants, sous forme de **chaleur** (énergie thermique).",
-        "Non, l'énergie n'a pas disparu : **elle n'est jamais créée ni détruite**, seulement **transférée** puis stockée ailleurs. L'énergie de la batterie a été transférée au mouvement puis dissipée dans l'air et les pièces sous forme de chaleur : le total se conserve."
+        "Les branches sont indépendantes."
       ],
-      "reponse": "$0{,}5\\ \\text{MJ} = 500\\,000\\ \\text{J}$. Transfert **électrique** batterie → moteur, puis énergie de **mouvement** et de **chaleur**. L'énergie n'a pas disparu : elle est **conservée**, seulement transférée ailleurs."
+      "reponse": "Vrai"
     },
     {
       "id": 10,
-      "difficulte": "probleme",
-      "notion": "circuit-tension-intensite",
-      "enonce": "Léa réalise un circuit pour éclairer une maquette. Elle dispose d'une pile de $6\\ \\text{V}$, de trois lampes **identiques**, d'un interrupteur, de fils de connexion, d'un voltmètre et d'un ampèremètre. Elle commence par brancher les trois lampes **en série** avec la pile et l'interrupteur, en une seule boucle.\\n\\n1. Quand elle **ferme** l'interrupteur, les lampes s'allument ; quand elle l'**ouvre**, elles s'éteignent. Explique ces deux observations avec les mots « circuit fermé » et « circuit ouvert ».\\n2. En cours d'utilisation, une des trois lampes grille. Que deviennent les deux autres ? Justifie par le nombre de boucles du montage en série.\\n3. La tension de la pile se **répartit** entre les trois lampes identiques. Quelle tension $U$ mesure-t-on aux bornes de **chaque** lampe ? Avec quel appareil et quel branchement la mesure-t-on ?\\n4. Léa insère un ampèremètre en série et lit $I = 0{,}10\\ \\text{A}$. Quelle est l'intensité qui traverse chacune des trois lampes ? Exprime-la aussi en milliampères.\\n5. Léa refait tout le montage **en dérivation** (chaque lampe sur sa propre branche). Cette fois, une lampe grille : que deviennent les deux autres ? Explique la différence avec la série.\\n6. Tentée de « voir des étincelles », Léa veut relier directement les deux bornes de la pile par un simple fil, sans lampe. Pourquoi est-ce dangereux, et comment appelle-t-on cette situation ?",
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Dans un circuit en dérivation, dévisser une lampe n'éteint pas forcément l'autre.",
       "corrige": [
-        "1. Interrupteur **fermé** : la boucle est complète, c'est un **circuit fermé**, le courant circule et les lampes brillent. Interrupteur **ouvert** : la boucle est coupée, c'est un **circuit ouvert**, plus aucun courant ne circule et les lampes s'éteignent.",
-        "2. En **série**, il n'y a qu'**une seule boucle**. Si une lampe grille, elle coupe cette unique boucle : le courant ne passe plus nulle part, donc les **deux autres lampes s'éteignent** elles aussi.",
-        "3. En série, les tensions aux bornes des dipôles s'**ajoutent** pour redonner celle de la pile : $U_{\\text{pile}} = U + U + U = 3\\,U$. Comme les trois lampes sont identiques, $3\\,U = 6\\ \\text{V}$, donc $U = \\dfrac{6}{3} = 2\\ \\text{V}$ aux bornes de chaque lampe. On mesure cette tension avec un **voltmètre** branché **en dérivation**, aux bornes de la lampe.",
-        "4. En série, l'intensité est la **même partout** dans la boucle : chacune des trois lampes est traversée par la même intensité que celle lue à l'ampèremètre, soit $I = 0{,}10\\ \\text{A}$. En milliampères : $0{,}10\\ \\text{A} = 0{,}10 \\times 1\\,000 = 100\\ \\text{mA}$.",
-        "5. En **dérivation**, chaque lampe est sur sa **propre branche**, qui forme sa propre boucle avec la pile. Si une lampe grille, seule sa branche est coupée : les **deux autres restent allumées**. C'est la différence avec la série, où couper un point éteint tout.",
-        "6. Relier directement les deux bornes de la pile par un fil sans récepteur est un **court-circuit** : l'intensité devient **très grande**, le fil chauffe très fortement, ce qui peut causer une brûlure ou un **incendie** et détériorer la pile. Il ne faut jamais le faire."
+        "Les autres boucles restent fermées."
       ],
-      "reponse": "1. Fermé → courant qui circule (lampes allumées) ; ouvert → circuit coupé (lampes éteintes). 2. En série, une lampe grillée éteint les deux autres (boucle unique). 3. $U = 6/3 = 2\\ \\text{V}$ par lampe, mesurée au **voltmètre en dérivation**. 4. Intensité identique partout : $I = 0{,}10\\ \\text{A} = 100\\ \\text{mA}$ (ampèremètre en série). 5. En dérivation, les deux autres **restent allumées** (branches séparées). 6. C'est un **court-circuit** : très grande intensité, fil brûlant, risque d'incendie."
+      "reponse": "Vrai"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Une pile est un réservoir d'énergie.",
+      "corrige": [
+        "Elle fournit l'énergie au circuit."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? L'énergie ne se crée pas et ne disparaît pas : elle se convertit d'une forme à une autre.",
+      "corrige": [
+        "C'est la conservation de l'énergie."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Une lampe convertit de l'énergie électrique en lumière et en chaleur.",
+      "corrige": [
+        "Une partie est perdue en chaleur."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Un moteur électrique convertit de l'énergie électrique en mouvement.",
+      "corrige": [
+        "Il produit de l'énergie de mouvement."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le vent est une source d'énergie renouvelable.",
+      "corrige": [
+        "L'énergie éolienne se renouvelle."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le pétrole est une source d'énergie non renouvelable.",
+      "corrige": [
+        "C'est une énergie fossile."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Un court-circuit peut faire surchauffer les fils et provoquer un incendie.",
+      "corrige": [
+        "Il fait circuler un courant très intense."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le corps humain conduit l'électricité, ce qui rend le courant dangereux.",
+      "corrige": [
+        "D'où le risque d'électrocution."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Un panneau solaire convertit l'énergie de la lumière en électricité.",
+      "corrige": [
+        "C'est une conversion photovoltaïque."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Éteindre les appareils inutilisés permet d'économiser de l'énergie.",
+      "corrige": [
+        "On évite une consommation inutile."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Il faut une source comme une pile pour faire circuler un courant.",
+      "corrige": [
+        "Sans générateur, pas de courant."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Les fils de connexion sont souvent en cuivre car c'est un bon conducteur.",
+      "corrige": [
+        "Le cuivre conduit très bien le courant."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Une DEL (LED) ne s'allume que si elle est branchée dans le bon sens.",
+      "corrige": [
+        "Elle ne laisse passer le courant que dans un sens."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? L'unité de la tension électrique est le volt.",
+      "corrige": [
+        "On la note V."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? L'unité de l'intensité du courant est l'ampère.",
+      "corrige": [
+        "On la note A."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Un circuit ouvert laisse passer le courant.",
+      "corrige": [
+        "Faux : il faut un circuit fermé pour que le courant circule."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le bois sec est un bon conducteur électrique.",
+      "corrige": [
+        "Faux : c'est un isolant."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Dans un circuit en série, dévisser une lampe laisse l'autre allumée.",
+      "corrige": [
+        "Faux : tout s'éteint car il n'y a qu'une seule boucle."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? L'énergie peut être créée à partir de rien.",
+      "corrige": [
+        "Faux : elle se convertit, elle ne se crée pas."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le charbon est une énergie renouvelable.",
+      "corrige": [
+        "Faux : c'est une énergie fossile non renouvelable."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? On peut toucher un fil dénudé sous tension sans danger.",
+      "corrige": [
+        "Faux : risque d'électrocution."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Une pile fournit de l'énergie indéfiniment.",
+      "corrige": [
+        "Faux : elle s'épuise avec le temps."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le cuivre est un isolant.",
+      "corrige": [
+        "Faux : c'est un métal, bon conducteur."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Un court-circuit est sans danger.",
+      "corrige": [
+        "Faux : il peut provoquer une surchauffe et un incendie."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "energie et electricite",
+      "enonce": "Vrai ou faux ? Le Soleil est une source d'énergie non renouvelable.",
+      "corrige": [
+        "Faux : l'énergie solaire est renouvelable."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Comment appelle-t-on un matériau qui laisse passer le courant ?",
+      "corrige": [
+        "Ex. : les métaux."
+      ],
+      "reponse": "un conducteur"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Comment appelle-t-on un matériau qui ne laisse pas passer le courant ?",
+      "corrige": [
+        "Ex. : le plastique."
+      ],
+      "reponse": "un isolant"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Comment nomme-t-on un circuit où les composants se suivent sur une seule boucle ?",
+      "corrige": [
+        "Une seule boucle unique."
+      ],
+      "reponse": "un circuit en série"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Comment nomme-t-on un circuit où les lampes sont sur des boucles séparées ?",
+      "corrige": [
+        "Branches indépendantes."
+      ],
+      "reponse": "un circuit en dérivation"
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Quel composant permet d'ouvrir ou de fermer un circuit ?",
+      "corrige": [
+        "Il commande le passage du courant."
+      ],
+      "reponse": "un interrupteur"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Cite une énergie renouvelable.",
+      "corrige": [
+        "Elle se renouvelle naturellement."
+      ],
+      "reponse": "l'énergie solaire, éolienne ou hydraulique"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Cite une énergie fossile.",
+      "corrige": [
+        "Elle est non renouvelable."
+      ],
+      "reponse": "le pétrole, le charbon ou le gaz naturel"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "En quoi une lampe convertit-elle l'énergie électrique ?",
+      "corrige": [
+        "Une partie est perdue en chaleur."
+      ],
+      "reponse": "en lumière et en chaleur"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "En quoi un moteur convertit-il l'énergie électrique ?",
+      "corrige": [
+        "Il fait tourner un axe."
+      ],
+      "reponse": "en mouvement (énergie mécanique)"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Que devient le courant si le circuit est ouvert ?",
+      "corrige": [
+        "La boucle est interrompue."
+      ],
+      "reponse": "il ne circule pas"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Comment appelle-t-on un contact direct entre les bornes provoquant un très fort courant ?",
+      "corrige": [
+        "Il peut faire surchauffer les fils."
+      ],
+      "reponse": "un court-circuit"
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Quel appareil convertit la lumière du Soleil en électricité ?",
+      "corrige": [
+        "Conversion de la lumière en courant."
+      ],
+      "reponse": "un panneau solaire (photovoltaïque)"
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "L'énergie se conserve-t-elle ou se crée-t-elle ?",
+      "corrige": [
+        "Elle ne se crée pas."
+      ],
+      "reponse": "elle se conserve (se convertit)"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Le plastique est-il conducteur ou isolant ?",
+      "corrige": [
+        "Il ne laisse pas passer le courant."
+      ],
+      "reponse": "isolant"
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "energie et electricite",
+      "enonce": "Le fer est-il conducteur ou isolant ?",
+      "corrige": [
+        "C'est un métal."
+      ],
+      "reponse": "conducteur"
     }
   ]
 }

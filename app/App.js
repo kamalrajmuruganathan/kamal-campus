@@ -2,7 +2,7 @@
  * Kamal Campus — point d'entrée.
  */
 
-import { View, Text, useColorScheme } from 'react-native';
+import { View, Text, useColorScheme, Alert, Platform } from 'react-native';
 import { useSombre } from './src/useSombre';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -50,6 +50,35 @@ import Planning from './src/ecrans/Planning';
 import APropos from './src/ecrans/APropos';
 import Amis from './src/ecrans/Amis';
 import Discussion from './src/ecrans/Discussion';
+
+// Sur le web, Alert.alert de React Native ne fait rien (fonction vide de react-native-web) :
+// les confirmations et messages d'erreur de toute l'appli passaient inaperçus.
+// On les redirige vers les boîtes de dialogue du navigateur.
+if (Platform.OS === 'web' && typeof window !== 'undefined') {
+  Alert.alert = (titre, message, boutons) => {
+    const texte = [titre, message].filter(Boolean).join('\n\n');
+    const liste = Array.isArray(boutons) ? boutons : [];
+    if (liste.length <= 1) {
+      window.alert(texte);
+      liste[0]?.onPress?.();
+      return;
+    }
+    const annuler = liste.find((b) => b.style === 'cancel') ?? liste[0];
+    const actions = liste.filter((b) => b !== annuler);
+    if (actions.length === 1) {
+      if (window.confirm(texte)) actions[0].onPress?.();
+      else annuler.onPress?.();
+      return;
+    }
+    const choix = window.prompt(
+      texte + '\n\n' + actions.map((b, i) => `${i + 1}. ${b.text}`).join('\n') + '\n\nTape le numéro de ton choix :',
+      '1',
+    );
+    const i = parseInt(choix, 10) - 1;
+    if (choix !== null && actions[i]) actions[i].onPress?.();
+    else annuler.onPress?.();
+  };
+}
 
 const Pile = createNativeStackNavigator();
 

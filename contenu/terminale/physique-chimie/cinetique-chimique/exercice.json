@@ -13,130 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "vitesse-disparition-apparition",
-      "enonce": "On suit la disparition d'un réactif $R$ en traçant $[R] = f(t)$. La tangente à la courbe à la date $t = 0$ part du point $[R]_0 = 0{,}20$ $\\mathrm{mol\\cdot L^{-1}}$ et coupe l'axe des temps à $t = 100$ s. 1) Déterminer la vitesse volumique de disparition initiale $v_{\\text{disp}}(0)$. 2) Expliquer, sans calcul, pourquoi cette vitesse diminue au cours du temps.",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La cinétique chimique étudie l'évolution d'une transformation au cours du temps.",
       "corrige": [
-        "La vitesse de disparition à un instant donné est l'**opposé du coefficient directeur de la tangente** à la courbe $[R] = f(t)$ à cette date : $v_{\\text{disp}} = -\\dfrac{\\mathrm{d}[R]}{\\mathrm{d}t}$.",
-        "Coefficient directeur de la tangente à $t = 0$ : $\\dfrac{0 - 0{,}20}{100 - 0} = -2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$.",
-        "La vitesse est l'opposé de cette pente : $v_{\\text{disp}}(0) = 2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$. Le piège serait d'annoncer la valeur $0{,}20$ (un point de la courbe) au lieu d'une **pente**.",
-        "2) La concentration en réactif est un **facteur cinétique** : au fur et à mesure que $R$ est consommé, $[R]$ diminue, les chocs efficaces se raréfient, donc la vitesse baisse. Elle est maximale au début et tend vers zéro en fin de réaction."
+        "Elle s'intéresse à la durée et à la vitesse."
       ],
-      "reponse": "$v_{\\text{disp}}(0) = 2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$ ; la vitesse diminue car $[R]$, facteur cinétique, décroît au cours du temps."
+      "reponse": "Vrai"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "loi-ordre-1",
-      "enonce": "Un réactif $R$ suit une loi de vitesse d'ordre 1, de constante de vitesse $k = 0{,}030$ $\\mathrm{s^{-1}}$. 1) Calculer son temps de demi-réaction $t_{1/2}$. 2) Au bout de combien de temps la concentration a-t-elle été divisée par quatre ?",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Une augmentation de la température accélère en général une réaction chimique.",
       "corrige": [
-        "Pour une loi d'ordre 1, le temps de demi-réaction vaut $t_{1/2} = \\dfrac{\\ln 2}{k}$ et ne dépend que de $k$.",
-        "Application numérique : $t_{1/2} = \\dfrac{0{,}693}{0{,}030} \\approx 23$ s. (Vérifie l'unité : $\\ln 2$ est sans dimension, $k$ est en $\\mathrm{s^{-1}}$, donc $t_{1/2}$ est bien en s.)",
-        "2) Diviser $[R]_0$ par quatre, c'est enchaîner **deux** divisions par deux : il faut deux temps de demi-réaction successifs. Comme $t_{1/2}$ est constant pour l'ordre 1, la durée cherchée est $2 \\times t_{1/2} = 2 \\times 23 = 46$ s."
+        "La température est un facteur cinétique."
       ],
-      "reponse": "$t_{1/2} = \\dfrac{\\ln 2}{k} \\approx 23$ s ; la concentration est divisée par quatre au bout de $2\\,t_{1/2} \\approx 46$ s."
+      "reponse": "Vrai"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "temps-demi-reaction",
-      "enonce": "Le suivi d'une transformation donne les mesures suivantes pour le réactif $R$ :\n\n| $t$ (s) | 0 | 25 | 50 | 75 |\n|---|---|---|---|---|\n| $[R]$ ($\\mathrm{mol\\cdot L^{-1}}$) | 0,60 | 0,30 | 0,15 | 0,075 |\n\n1) Déterminer plusieurs temps de demi-réaction successifs. 2) Que peut-on en conclure sur l'ordre de la réaction ? 3) En déduire la constante de vitesse $k$.",
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Une augmentation de la concentration des réactifs accélère en général une réaction.",
       "corrige": [
-        "Un temps de demi-réaction est la durée nécessaire pour que $[R]$ soit divisée par deux. De $[R]_0 = 0{,}60$ à $0{,}30$ $\\mathrm{mol\\cdot L^{-1}}$ : $t_{1/2} = 25 - 0 = 25$ s.",
-        "De $0{,}30$ à $0{,}15$ $\\mathrm{mol\\cdot L^{-1}}$ : durée $= 50 - 25 = 25$ s. De $0{,}15$ à $0{,}075$ $\\mathrm{mol\\cdot L^{-1}}$ : durée $= 75 - 50 = 25$ s. Les demi-vies successives sont **toutes égales** à $25$ s.",
-        "2) Des temps de demi-réaction successifs constants, indépendants de la concentration, sont la **signature d'une loi d'ordre 1**.",
-        "3) Pour l'ordre 1, $t_{1/2} = \\dfrac{\\ln 2}{k}$, donc $k = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{25} \\approx 2{,}8 \\times 10^{-2}$ $\\mathrm{s^{-1}}$."
+        "La concentration est un facteur cinétique."
       ],
-      "reponse": "$t_{1/2} = 25$ s constant → réaction d'ordre 1, avec $k = \\dfrac{\\ln 2}{t_{1/2}} \\approx 2{,}8 \\times 10^{-2}$ $\\mathrm{s^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "loi-ordre-1",
-      "enonce": "Un réactif $R$ suit une loi d'ordre 1 de constante $k = 0{,}010$ $\\mathrm{s^{-1}}$. Sa concentration initiale est $[R]_0 = 0{,}50$ $\\mathrm{mol\\cdot L^{-1}}$. 1) Écrire l'expression de $[R](t)$. 2) Calculer $[R]$ à la date $t = 60$ s. 3) Calculer le temps de demi-réaction $t_{1/2}$.",
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un catalyseur accélère une réaction sans être consommé globalement.",
       "corrige": [
-        "1) La solution de l'équation différentielle $\\dfrac{\\mathrm{d}[R]}{\\mathrm{d}t} = -k[R]$ est une décroissance exponentielle : $[R](t) = [R]_0\\, e^{-kt} = 0{,}50\\, e^{-0{,}010\\,t}$ (avec $[R]$ en $\\mathrm{mol\\cdot L^{-1}}$ et $t$ en s).",
-        "2) À $t = 60$ s : $kt = 0{,}010 \\times 60 = 0{,}60$, donc $[R](60) = 0{,}50 \\times e^{-0{,}60} = 0{,}50 \\times 0{,}549 \\approx 0{,}27$ $\\mathrm{mol\\cdot L^{-1}}$.",
-        "3) Temps de demi-réaction : $t_{1/2} = \\dfrac{\\ln 2}{k} = \\dfrac{0{,}693}{0{,}010} \\approx 69$ s. (On vérifie la cohérence : à $t = 60$ s, un peu avant $t_{1/2}$, il reste un peu plus de la moitié de $0{,}50$, ce qui colle avec $0{,}27$ $\\mathrm{mol\\cdot L^{-1}}$.)"
+        "Il est régénéré en fin de réaction."
       ],
-      "reponse": "$[R](t) = 0{,}50\\, e^{-0{,}010\\,t}$ ; $[R](60) \\approx 0{,}27$ $\\mathrm{mol\\cdot L^{-1}}$ ; $t_{1/2} = \\dfrac{\\ln 2}{k} \\approx 69$ s."
+      "reponse": "Vrai"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "loi-ordre-1",
-      "enonce": "On veut tester si la disparition de $R$ suit une loi d'ordre 1. Les mesures sont :\n\n| $t$ (s) | 0 | 50 | 100 | 150 |\n|---|---|---|---|---|\n| $[R]$ ($\\mathrm{mol\\cdot L^{-1}}$) | 0,100 | 0,061 | 0,037 | 0,022 |\n\n1) Compléter par les valeurs de $\\ln[R]$ et montrer que le tracé de $\\ln[R] = f(t)$ est une droite. 2) En déduire la constante de vitesse $k$. 3) Calculer $t_{1/2}$. 4) Prévoir $[R]$ à la date $t = 200$ s.",
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un catalyseur n'apparaît pas dans l'équation bilan de la réaction.",
       "corrige": [
-        "1) On calcule $\\ln[R]$ pour chaque mesure : $\\ln(0{,}100) = -2{,}30$ ; $\\ln(0{,}061) = -2{,}80$ ; $\\ln(0{,}037) = -3{,}30$ ; $\\ln(0{,}022) = -3{,}82$. Entre deux mesures espacées de $50$ s, $\\ln[R]$ baisse à chaque fois d'environ $0{,}50$ : les points sont **alignés**, donc $\\ln[R] = f(t)$ est une droite. La réaction est bien d'**ordre 1**.",
-        "2) Pour l'ordre 1, $\\ln[R] = \\ln[R]_0 - k\\,t$ : la pente de la droite vaut $-k$. Pente $= \\dfrac{-2{,}80 - (-2{,}30)}{50 - 0} = \\dfrac{-0{,}50}{50} = -1{,}0 \\times 10^{-2}$ $\\mathrm{s^{-1}}$, donc $k = 1{,}0 \\times 10^{-2}$ $\\mathrm{s^{-1}}$ (la constante de vitesse est toujours positive).",
-        "3) Temps de demi-réaction : $t_{1/2} = \\dfrac{\\ln 2}{k} = \\dfrac{0{,}693}{1{,}0 \\times 10^{-2}} \\approx 69$ s.",
-        "4) On utilise $[R](t) = [R]_0\\, e^{-kt}$ avec $t = 200$ s : $kt = 1{,}0 \\times 10^{-2} \\times 200 = 2{,}0$, donc $[R](200) = 0{,}100 \\times e^{-2{,}0} = 0{,}100 \\times 0{,}135 \\approx 1{,}4 \\times 10^{-2}$ $\\mathrm{mol\\cdot L^{-1}}$."
+        "Il n'est pas un réactif consomme."
       ],
-      "reponse": "$\\ln[R] = f(t)$ est une droite (ordre 1) de pente $-k = -1{,}0 \\times 10^{-2}$ $\\mathrm{s^{-1}}$, d'où $k = 1{,}0 \\times 10^{-2}$ $\\mathrm{s^{-1}}$, $t_{1/2} \\approx 69$ s et $[R](200) \\approx 1{,}4 \\times 10^{-2}$ $\\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "catalyse-catalyseur",
-      "enonce": "La décomposition de l'eau oxygénée, $2\\,\\text{H}_2\\text{O}_2 \\rightarrow 2\\,\\text{H}_2\\text{O} + \\text{O}_2$, est lente. En présence d'ions $\\text{Fe}^{3+}$, elle devient rapide et la disparition de $\\text{H}_2\\text{O}_2$ suit une loi d'ordre 1. On mesure alors un temps de demi-réaction $t_{1/2} = 60$ s, à partir de $[\\text{H}_2\\text{O}_2]_0 = 0{,}40$ $\\mathrm{mol\\cdot L^{-1}}$. 1) Quel est le rôle des ions $\\text{Fe}^{3+}$ ? De quel type de catalyse s'agit-il ? 2) Déterminer la constante de vitesse $k$. 3) Au bout de combien de temps la concentration vaut-elle $0{,}050$ $\\mathrm{mol\\cdot L^{-1}}$ ? 4) Sans les ions $\\text{Fe}^{3+}$, la concentration finale en $\\text{O}_2$ formé serait-elle différente ?",
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Le temps de demi-réaction est la durée au bout de laquelle l'avancement atteint la moitié de sa valeur finale.",
       "corrige": [
-        "1) Les ions $\\text{Fe}^{3+}$ **accélèrent** la transformation sans figurer dans l'équation de bilan : ils sont consommés puis régénérés, donc jouent le rôle de **catalyseur**. Réactifs et catalyseur sont tous en solution aqueuse (même phase) : c'est une catalyse **homogène**.",
-        "2) La réaction est d'ordre 1, donc $t_{1/2} = \\dfrac{\\ln 2}{k}$, d'où $k = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{60} \\approx 1{,}2 \\times 10^{-2}$ $\\mathrm{s^{-1}}$.",
-        "3) Passer de $0{,}40$ à $0{,}050$ $\\mathrm{mol\\cdot L^{-1}}$, c'est diviser la concentration par $8 = 2^3$, soit **trois** divisions par deux successives : $0{,}40 \\to 0{,}20 \\to 0{,}10 \\to 0{,}050$ $\\mathrm{mol\\cdot L^{-1}}$. La durée est donc $3 \\times t_{1/2} = 3 \\times 60 = 180$ s.",
-        "4) Non. Un catalyseur change la **vitesse**, pas l'**état final** : il fait arriver plus vite au même point. Sans $\\text{Fe}^{3+}$, la réaction serait beaucoup plus lente (durée bien plus longue), mais la même quantité de $\\text{H}_2\\text{O}_2$ se décomposerait au total, donnant **la même quantité finale de $\\text{O}_2$**."
+        "Définition du temps de demi-réaction."
       ],
-      "reponse": "$\\text{Fe}^{3+}$ = catalyseur (catalyse homogène) ; $k = \\dfrac{\\ln 2}{t_{1/2}} \\approx 1{,}2 \\times 10^{-2}$ $\\mathrm{s^{-1}}$ ; $[\\text{H}_2\\text{O}_2] = 0{,}050$ $\\mathrm{mol\\cdot L^{-1}}$ au bout de $3\\,t_{1/2} = 180$ s ; sans catalyseur, la quantité finale de $\\text{O}_2$ est inchangée (seule la durée change)."
+      "reponse": "Vrai"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "vitesse-disparition-apparition",
-      "enonce": "Au cours d'une transformation, on suit l'apparition d'un produit $P$ en traçant $[P] = f(t)$. La tangente à la courbe à la date $t = 0$ part de l'origine $[P] = 0$ et passe par le point de coordonnées $(60$ s $;\\ 0{,}12$ $\\mathrm{mol\\cdot L^{-1}})$. 1) Déterminer la vitesse volumique d'apparition initiale $v_{\\text{app}}(0)$. 2) Exprimer cette vitesse en $\\mathrm{mol\\cdot L^{-1}\\cdot min^{-1}}$.",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La vitesse d'une réaction diminue généralement au cours du temps.",
       "corrige": [
-        "1) La vitesse d'apparition d'un produit est la variation de sa concentration par unité de temps, soit **le coefficient directeur de la tangente** à la courbe $[P] = f(t)$ : $v_{\\text{app}}(P) = +\\dfrac{\\mathrm{d}[P]}{\\mathrm{d}t}$. Ici $[P]$ augmente, la dérivée est positive : pas de signe « − ».",
-        "Coefficient directeur de la tangente à $t = 0$ : $\\dfrac{0{,}12 - 0}{60 - 0} = 2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$. Donc $v_{\\text{app}}(0) = 2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$.",
-        "2) Pour convertir en minutes, on multiplie par $60$ $\\mathrm{s\\cdot min^{-1}}$ : $v_{\\text{app}}(0) = 2{,}0 \\times 10^{-3} \\times 60 = 0{,}12$ $\\mathrm{mol\\cdot L^{-1}\\cdot min^{-1}}$. (Une vitesse par minute est numériquement plus grande qu'une vitesse par seconde, ce qui est cohérent.)"
+        "Les réactifs s'épuisent progressivement."
       ],
-      "reponse": "$v_{\\text{app}}(0) = 2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$, soit $0{,}12$ $\\mathrm{mol\\cdot L^{-1}\\cdot min^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "loi-ordre-1",
-      "enonce": "La disparition d'un réactif $R$ suit une loi de vitesse d'ordre 1. Sa concentration initiale est $[R]_0 = 0{,}60$ $\\mathrm{mol\\cdot L^{-1}}$ et, à la date $t = 90$ s, on mesure $[R] = 0{,}20$ $\\mathrm{mol\\cdot L^{-1}}$. 1) Déterminer la constante de vitesse $k$. 2) En déduire le temps de demi-réaction $t_{1/2}$.",
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Augmenter la surface de contact d'un réactif solide accélère la réaction.",
       "corrige": [
-        "1) Pour une loi d'ordre 1, $[R](t) = [R]_0\\, e^{-kt}$. On isole l'exponentielle : $\\dfrac{[R]}{[R]_0} = e^{-kt}$, soit $\\dfrac{0{,}20}{0{,}60} = \\dfrac{1}{3} = e^{-k \\times 90}$.",
-        "On passe au logarithme : $-k \\times 90 = \\ln\\!\\left(\\dfrac{1}{3}\\right) = -\\ln 3 = -1{,}10$. Donc $k = \\dfrac{1{,}10}{90} \\approx 1{,}2 \\times 10^{-2}$ $\\mathrm{s^{-1}}$.",
-        "2) Le temps de demi-réaction d'un ordre 1 vaut $t_{1/2} = \\dfrac{\\ln 2}{k} = \\dfrac{0{,}693}{1{,}2 \\times 10^{-2}} \\approx 57$ s. (Cohérence : à $t = 90$ s $> t_{1/2}$, il reste moins de la moitié de $[R]_0$, ce que confirme $0{,}20 < 0{,}30$ $\\mathrm{mol\\cdot L^{-1}}$.)"
+        "Plus de contact entre réactifs."
       ],
-      "reponse": "$k = \\dfrac{\\ln 3}{90} \\approx 1{,}2 \\times 10^{-2}$ $\\mathrm{s^{-1}}$ ; $t_{1/2} = \\dfrac{\\ln 2}{k} \\approx 57$ s."
+      "reponse": "Vrai"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "loi-ordre-1",
-      "enonce": "On étudie une même transformation d'ordre 1 à deux températures. À $\\theta_1 = 20$ °C, on mesure un temps de demi-réaction $t_{1/2,1} = 240$ s ; à $\\theta_2 = 40$ °C, $t_{1/2,2} = 60$ s. 1) Calculer les constantes de vitesse $k_1$ et $k_2$. 2) Par quel facteur la constante de vitesse est-elle multipliée quand on passe de 20 à 40 °C ? 3) Quel facteur cinétique est ici en jeu et le résultat est-il cohérent ? 4) À 40 °C, en partant de $[R]_0 = 0{,}50$ $\\mathrm{mol\\cdot L^{-1}}$, quelle concentration reste-t-il au bout de 3 min ?",
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un catalyseur abaisse l'énergie d'activation de la réaction.",
       "corrige": [
-        "1) Pour un ordre 1, $t_{1/2} = \\dfrac{\\ln 2}{k}$, donc $k = \\dfrac{\\ln 2}{t_{1/2}}$. À 20 °C : $k_1 = \\dfrac{0{,}693}{240} \\approx 2{,}9 \\times 10^{-3}$ $\\mathrm{s^{-1}}$. À 40 °C : $k_2 = \\dfrac{0{,}693}{60} \\approx 1{,}2 \\times 10^{-2}$ $\\mathrm{s^{-1}}$.",
-        "2) Le rapport des constantes vaut $\\dfrac{k_2}{k_1} = \\dfrac{t_{1/2,1}}{t_{1/2,2}} = \\dfrac{240}{60} = 4$. La constante de vitesse est **multipliée par 4** entre 20 et 40 °C.",
-        "3) Le facteur cinétique en jeu est la **température** : plus elle est élevée, plus les chocs entre entités sont fréquents et énergétiques, donc plus la transformation est rapide. Ici $k$ augmente (et $t_{1/2}$ diminue) avec la température : c'est bien cohérent.",
-        "4) À 40 °C, $t_{1/2,2} = 60$ s et $3$ min $= 180$ s $= 3 \\times t_{1/2,2}$ : la concentration est divisée par $2^3 = 8$. On obtient $[R] = \\dfrac{0{,}50}{8} \\approx 6{,}3 \\times 10^{-2}$ $\\mathrm{mol\\cdot L^{-1}}$."
+        "Il facilite le passage de la réaction."
       ],
-      "reponse": "$k_1 \\approx 2{,}9 \\times 10^{-3}$ $\\mathrm{s^{-1}}$ et $k_2 \\approx 1{,}2 \\times 10^{-2}$ $\\mathrm{s^{-1}}$ ; $k$ est multipliée par 4 (facteur température, cohérent) ; après 3 min à 40 °C, $[R] = [R]_0/8 \\approx 6{,}3 \\times 10^{-2}$ $\\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "suivi-temporel-loi-ordre-1",
-      "enonce": "**Suivi spectrophotométrique d'une décoloration.** Une espèce colorée $B$ se décompose lentement en solution aqueuse. On suit sa disparition en mesurant, à la longueur d'onde $\\lambda = 500$ nm, l'absorbance $A$ de la solution, proportionnelle à sa concentration selon la loi de Beer-Lambert $A = \\varepsilon\\,\\ell\\,[B]$, avec ici $\\varepsilon\\,\\ell = 4{,}0 \\times 10^{2}$ $\\mathrm{L\\cdot mol^{-1}}$. Les mesures donnent :\n\n| $t$ (s) | 0 | 150 | 300 | 450 | 600 |\n|---|---|---|---|---|---|\n| $A$ | 0,80 | 0,40 | 0,20 | 0,10 | 0,05 |\n\n1) Justifier qu'un suivi cinétique dans le temps est ici possible. 2) À l'aide de la loi de Beer-Lambert, calculer la concentration $[B]$ à chaque date et donner la concentration initiale $[B]_0$. 3) Déterminer plusieurs temps de demi-réaction successifs et en déduire que la disparition de $B$ est d'ordre 1. 4) Calculer la constante de vitesse $k$. 5) Déterminer la vitesse volumique de disparition de $B$ à l'instant initial. 6) On refait l'expérience à une température plus élevée. Indiquer, en justifiant, l'effet sur $k$, sur $t_{1/2}$ et sur la quantité finale de $B$ décomposée.",
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La trempe, un refroidissement brutal, permet de bloquer une réaction pour l'analyser.",
       "corrige": [
-        "1) La transformation est **lente** : son évolution s'étale sur plusieurs centaines de secondes (l'absorbance diminue progressivement de $0{,}80$ à $0{,}05$). On peut donc en suivre le déroulement dans le temps, ce qu'autorise justement une étude cinétique (une réaction rapide, quasi instantanée, ne le permettrait pas).",
-        "2) La loi de Beer-Lambert donne $[B] = \\dfrac{A}{\\varepsilon\\,\\ell} = \\dfrac{A}{4{,}0 \\times 10^{2}}$ (en $\\mathrm{mol\\cdot L^{-1}}$). On obtient : à $t = 0$, $[B]_0 = \\dfrac{0{,}80}{400} = 2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}}$ ; puis $1{,}0 \\times 10^{-3}$ ($t=150$ s), $5{,}0 \\times 10^{-4}$ ($t=300$ s), $2{,}5 \\times 10^{-4}$ ($t=450$ s) et $1{,}25 \\times 10^{-4}$ $\\mathrm{mol\\cdot L^{-1}}$ ($t=600$ s). Comme $[B]$ est proportionnelle à $A$, on peut d'ailleurs raisonner directement sur $A$.",
-        "3) Un temps de demi-réaction est la durée au bout de laquelle $[B]$ (donc $A$) est divisée par deux. De $A = 0{,}80$ à $0{,}40$ : $t_{1/2} = 150 - 0 = 150$ s. De $0{,}40$ à $0{,}20$ : $300 - 150 = 150$ s. De $0{,}20$ à $0{,}10$ : $450 - 300 = 150$ s. Les temps de demi-réaction successifs sont **tous égaux** ($150$ s), indépendamment de la concentration : c'est la **signature d'une loi d'ordre 1**.",
-        "4) Pour un ordre 1, $t_{1/2} = \\dfrac{\\ln 2}{k}$, d'où $k = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{150} \\approx 4{,}6 \\times 10^{-3}$ $\\mathrm{s^{-1}}$.",
-        "5) Pour un ordre 1, la vitesse volumique de disparition s'écrit $v_{\\text{disp}}(B) = k\\,[B]$. À l'instant initial : $v_{\\text{disp}}(0) = k\\,[B]_0 = 4{,}6 \\times 10^{-3} \\times 2{,}0 \\times 10^{-3} \\approx 9{,}2 \\times 10^{-6}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$. C'est la vitesse maximale ; elle décroît ensuite avec $[B]$.",
-        "6) La température est un **facteur cinétique** : en l'augmentant, la transformation est plus rapide, donc $k$ **augmente** et $t_{1/2} = \\ln 2/k$ **diminue**. En revanche la température ne change pas l'**état final** : la même quantité de $B$ finit par se décomposer, seulement plus vite."
+        "Elle fige l'état du système."
       ],
-      "reponse": "$[B]_0 = 2{,}0 \\times 10^{-3}$ $\\mathrm{mol\\cdot L^{-1}}$ ; $t_{1/2} = 150$ s constant → ordre 1, avec $k = \\dfrac{\\ln 2}{t_{1/2}} \\approx 4{,}6 \\times 10^{-3}$ $\\mathrm{s^{-1}}$ ; $v_{\\text{disp}}(0) = k[B]_0 \\approx 9{,}2 \\times 10^{-6}$ $\\mathrm{mol\\cdot L^{-1}\\cdot s^{-1}}$ ; à température plus élevée $k$ augmente, $t_{1/2}$ diminue, mais la quantité finale de $B$ décomposée est inchangée."
+      "reponse": "Vrai"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La spectrophotométrie peut suivre une réaction si une espèce est colorée.",
+      "corrige": [
+        "L'absorbance est reliée à la concentration."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La conductimétrie peut suivre une réaction faisant intervenir des ions.",
+      "corrige": [
+        "La conductivité dépend des ions présents."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un mécanisme réactionnel est une suite d'actes élémentaires.",
+      "corrige": [
+        "La réaction se décompose en étapes."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un intermédiaire réactionnel est formé puis consommé au cours du mécanisme.",
+      "corrige": [
+        "Il n'apparaît pas dans le bilan."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La catalyse est homogène si le catalyseur et les réactifs sont dans la même phase.",
+      "corrige": [
+        "Même état physique."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La catalyse est hétérogène si le catalyseur n'est pas dans la même phase que les réactifs.",
+      "corrige": [
+        "Ex. : catalyseur solide, réactifs gazeux."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La catalyse enzymatique fait intervenir des enzymes comme catalyseurs biologiques.",
+      "corrige": [
+        "Les enzymes sont des catalyseurs du vivant."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Deux facteurs cinétiques classiques sont la température et la concentration.",
+      "corrige": [
+        "Ils modifient la vitesse."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? À la fin de la réaction, la vitesse s'annule lorsque le réactif limitant est épuisé.",
+      "corrige": [
+        "Plus de réactif, plus de réaction."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un catalyseur ne modifie pas le sens spontané d'évolution du système.",
+      "corrige": [
+        "Il agit sur la vitesse, pas sur le sens."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Une réaction lente peut durer de plusieurs secondes à plusieurs heures.",
+      "corrige": [
+        "À l'échelle de l'observation humaine."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Le suivi d'une réaction peut se faire par titrages successifs d'échantillons prélevés.",
+      "corrige": [
+        "On mesure l'avancement à différents instants."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Certains catalyseurs sont sélectifs et favorisent une réaction plutôt qu'une autre.",
+      "corrige": [
+        "La sélectivité oriente la transformation."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La spectrophotométrie mesure l'absorbance, reliée à la concentration.",
+      "corrige": [
+        "Loi de proportionnalité en solution diluée."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Le platine peut servir de catalyseur en catalyse hétérogène.",
+      "corrige": [
+        "Catalyseur solide."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un catalyseur est consommé par la réaction.",
+      "corrige": [
+        "Faux : il est régénéré, non consommé globalement."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Baisser la température accélère une réaction.",
+      "corrige": [
+        "Faux : cela la ralentit en général."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un catalyseur modifie les quantités finales de produits.",
+      "corrige": [
+        "Faux : il change la vitesse, pas l'état final."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La vitesse de réaction augmente au cours du temps.",
+      "corrige": [
+        "Faux : elle diminue en général, car les réactifs sont consommes."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un catalyseur augmente l'énergie d'activation.",
+      "corrige": [
+        "Faux : il l'abaisse."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Diminuer la concentration des réactifs accélère la réaction.",
+      "corrige": [
+        "Faux : cela la ralentit en général."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La cinétique étudie seulement l'état final d'une réaction.",
+      "corrige": [
+        "Faux : elle étudie l'évolution au cours du temps."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Broyer un solide en poudre ralentit la réaction.",
+      "corrige": [
+        "Faux : cela augmente la surface de contact, donc accélère."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? Un intermédiaire réactionnel apparaît dans l'équation de bilan.",
+      "corrige": [
+        "Faux : il est formé puis consommé, il n'y figure pas."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "cinetique chimique",
+      "enonce": "Vrai ou faux ? La catalyse enzymatique n'utilise que des métaux.",
+      "corrige": [
+        "Faux : elle utilise des enzymes, des catalyseurs biologiques."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment appelle-t-on une grandeur qui modifie la vitesse d'une réaction ?",
+      "corrige": [
+        "Ex. : température, concentration."
+      ],
+      "reponse": "un facteur cinétique"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Cite deux facteurs cinétiques.",
+      "corrige": [
+        "Ils modifient la vitesse."
+      ],
+      "reponse": "la température et la concentration"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment appelle-t-on une espèce qui accélère une réaction sans être consommée ?",
+      "corrige": [
+        "Il est régénéré."
+      ],
+      "reponse": "un catalyseur"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment nomme-t-on la durée au bout de laquelle l'avancement vaut la moitié de sa valeur finale ?",
+      "corrige": [
+        "Note souvent t un demi."
+      ],
+      "reponse": "le temps de demi-réaction"
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Quelle technique de suivi convient à une espèce colorée ?",
+      "corrige": [
+        "Mesure de l'absorbance."
+      ],
+      "reponse": "la spectrophotométrie"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Quelle technique de suivi convient à une réaction impliquant des ions ?",
+      "corrige": [
+        "Mesure de la conductivité."
+      ],
+      "reponse": "la conductimétrie"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment appelle-t-on le refroidissement brutal qui stoppe une réaction ?",
+      "corrige": [
+        "Elle fige le système."
+      ],
+      "reponse": "la trempe"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment nomme-t-on une catalyse ou catalyseur et réactifs sont dans la même phase ?",
+      "corrige": [
+        "Même état physique."
+      ],
+      "reponse": "une catalyse homogène"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment nomme-t-on une catalyse où ils sont dans des phases différentes ?",
+      "corrige": [
+        "Ex. : solide et gaz."
+      ],
+      "reponse": "une catalyse hétérogène"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment nomme-t-on les catalyseurs biologiques ?",
+      "corrige": [
+        "Catalyseurs du vivant."
+      ],
+      "reponse": "les enzymes"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment appelle-t-on une espèce formée puis consommée dans un mécanisme ?",
+      "corrige": [
+        "Absent du bilan."
+      ],
+      "reponse": "un intermédiaire réactionnel"
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment évolue en général la vitesse d'une réaction au cours du temps ?",
+      "corrige": [
+        "Les réactifs s'épuisent."
+      ],
+      "reponse": "elle diminue"
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Sur quelle grandeur énergétique agit un catalyseur ?",
+      "corrige": [
+        "Il facilite la réaction."
+      ],
+      "reponse": "l'énergie d'activation (il l'abaisse)"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Comment appelle-t-on la suite des actes élémentaires d'une réaction ?",
+      "corrige": [
+        "La réaction se décompose en étapes."
+      ],
+      "reponse": "le mécanisme réactionnel"
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "cinetique chimique",
+      "enonce": "Augmenter la température a quel effet sur la vitesse ?",
+      "corrige": [
+        "La température est un facteur cinétique."
+      ],
+      "reponse": "elle augmente"
     }
   ]
 }

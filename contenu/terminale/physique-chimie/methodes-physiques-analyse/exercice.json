@@ -13,133 +13,502 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "absorbance-et-loi-de-beer-lambert",
-      "enonce": "Une espèce colorée a, à sa longueur d'onde d'absorption maximale, un coefficient d'absorption molaire $\\varepsilon = 3{,}5 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. On mesure l'absorbance d'une solution de concentration $c = 1{,}5 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ dans une cuve d'épaisseur $\\ell = 1{,}0\\ \\mathrm{cm}$. Calculer l'absorbance $A$ de cette solution.",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La spectrophotométrie UV-visible mesure l'absorbance d'une solution.",
       "corrige": [
-        "On applique directement la loi de Beer-Lambert : $A = \\varepsilon \\cdot \\ell \\cdot c$. Les unités de $\\varepsilon$ ($\\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$), $\\ell$ ($\\mathrm{cm}$) et $c$ ($\\mathrm{mol\\cdot L^{-1}}$) sont cohérentes : leur produit est un nombre pur.",
-        "Application numérique : $A = 3{,}5 \\times 10^{3} \\times 1{,}0 \\times 1{,}5 \\times 10^{-4}$.",
-        "On regroupe les puissances de $10$ : $10^{3} \\times 10^{-4} = 10^{-1}$, et $3{,}5 \\times 1{,}5 = 5{,}25$, d'où $A = 5{,}25 \\times 10^{-1} = 0{,}53$ (à deux chiffres significatifs).",
-        "L'absorbance est un nombre **sans unité** : on n'écrit surtout pas de $\\mathrm{mol\\cdot L^{-1}}$ derrière."
+        "Grandeur reliée à la concentration."
       ],
-      "reponse": "$A = \\varepsilon\\ell c = 0{,}53$ (sans unité)."
+      "reponse": "Vrai"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "spectroscopies-uv-visible-et-infrarouge",
-      "enonce": "Sur le spectre IR d'un composé, une bande d'absorption **forte et fine** apparaît au nombre d'onde $\\sigma = 1720\\ \\mathrm{cm^{-1}}$. 1) Calculer la longueur d'onde $\\lambda$ correspondante, en micromètres. 2) À l'aide de la table des groupes caractéristiques, à quel type de liaison cette bande peut-elle être attribuée ?",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? D'après la loi de Beer-Lambert, l'absorbance est proportionnelle à la concentration en solution diluée.",
       "corrige": [
-        "1) Le nombre d'onde et la longueur d'onde sont liés par $\\sigma = \\dfrac{1}{\\lambda}$, donc $\\lambda = \\dfrac{1}{\\sigma}$.",
-        "$\\lambda = \\dfrac{1}{1720\\ \\mathrm{cm^{-1}}} = 5{,}81 \\times 10^{-4}\\ \\mathrm{cm}$.",
-        "Conversion en micromètres : $5{,}81 \\times 10^{-4}\\ \\mathrm{cm} = 5{,}81 \\times 10^{-6}\\ \\mathrm{m} = 5{,}8\\ \\mathrm{\\mu m}$ (car $1\\ \\mathrm{cm} = 10^{-2}\\ \\mathrm{m}$ et $1\\ \\mathrm{\\mu m} = 10^{-6}\\ \\mathrm{m}$).",
-        "2) Une bande forte et fine vers $1650\\text{-}1750\\ \\mathrm{cm^{-1}}$ correspond à une liaison $\\mathrm{C\\!=\\!O}$ (groupe carbonyle)."
+        "A est proportionnelle à c."
       ],
-      "reponse": "$\\lambda = 1/\\sigma = 5{,}8\\ \\mathrm{\\mu m}$ ; la bande est attribuée à la liaison $\\mathrm{C\\!=\\!O}$ (carbonyle)."
+      "reponse": "Vrai"
     },
     {
       "id": 3,
-      "difficulte": "intermediaire",
-      "notion": "absorbance-et-loi-de-beer-lambert",
-      "enonce": "Pour doser une espèce colorée, on trace une courbe d'étalonnage $A = f(c)$, droite passant par l'origine. Elle passe par le point de coordonnées $c = 2{,}0 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ et $A = 0{,}80$. 1) Déterminer le coefficient directeur $k$ de la droite. 2) Une solution inconnue de la même espèce, mesurée dans la même cuve, donne $A_x = 0{,}50$. En déduire sa concentration $c_x$.",
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? L'absorbance est une grandeur sans unité.",
       "corrige": [
-        "1) La droite passe par l'origine, donc $A = k\\,c$ avec $k = \\dfrac{A}{c}$. Avec le point donné : $k = \\dfrac{0{,}80}{2{,}0 \\times 10^{-4}} = 4{,}0 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}}$.",
-        "2) Pour l'inconnue, on **divise** l'absorbance par la pente : $c_x = \\dfrac{A_x}{k}$.",
-        "$c_x = \\dfrac{0{,}50}{4{,}0 \\times 10^{3}} = 1{,}25 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}} \\approx 1{,}3 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
-        "Vérification de cohérence : $A_x = 0{,}50 < 0{,}80$, donc $c_x < 2{,}0\\times10^{-4}$ : le résultat est bien plus petit, la proportionnalité est respectée."
+        "C'est un nombre sans dimension."
       ],
-      "reponse": "$k = 4{,}0 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}}$ ; $c_x = A_x/k = 1{,}3 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 4,
-      "difficulte": "intermediaire",
-      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
-      "enonce": "On dispose d'une solution de chlorure de potassium $(\\mathrm{K^+ + Cl^-})$ de concentration $c = 1{,}0 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. Données : $\\lambda_{\\mathrm{K^+}} = 7{,}4 \\times 10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. Calculer la conductivité $\\sigma$ de la solution avec la loi de Kohlrausch.",
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Une solution colorée absorbe la lumière dans le domaine visible.",
       "corrige": [
-        "Étape clé : convertir la concentration dans l'unité de la loi de Kohlrausch. $c = 1{,}0 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}} = 1{,}0 \\times 10^{-2} \\times 10^{3} = 10\\ \\mathrm{mol\\cdot m^{-3}}$.",
-        "La dissolution donne $[\\mathrm{K^+}] = [\\mathrm{Cl^-}] = c = 10\\ \\mathrm{mol\\cdot m^{-3}}$ (un ion de chaque par unité formulaire).",
-        "Loi de Kohlrausch : $\\sigma = \\lambda_{\\mathrm{K^+}}[\\mathrm{K^+}] + \\lambda_{\\mathrm{Cl^-}}[\\mathrm{Cl^-}] = (7{,}4 + 7{,}6) \\times 10^{-3} \\times 10$.",
-        "$\\sigma = 15{,}0 \\times 10^{-3} \\times 10 = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$. Contrôle d'unité : $\\mathrm{S\\cdot m^{2}\\cdot mol^{-1}} \\times \\mathrm{mol\\cdot m^{-3}} = \\mathrm{S\\cdot m^{-1}}$."
+        "D'où sa couleur."
       ],
-      "reponse": "$\\sigma = (\\lambda_{\\mathrm{K^+}}+\\lambda_{\\mathrm{Cl^-}})\\,c = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$ (après conversion $c = 10\\ \\mathrm{mol\\cdot m^{-3}}$)."
+      "reponse": "Vrai"
     },
     {
       "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
-      "enonce": "On veut déterminer la concentration d'une solution de chlorure de sodium $(\\mathrm{Na^+ + Cl^-})$. Une cellule conductimétrique de constante $k_{\\text{cell}} = 1{,}0\\ \\mathrm{m}$ (telle que $G = k_{\\text{cell}}\\,\\sigma$) plongée dans la solution mesure une conductance $G = 0{,}20\\ \\mathrm{S}$. Données : $\\lambda_{\\mathrm{Na^+}} = 5{,}0 \\times 10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. 1) Calculer la conductivité $\\sigma$. 2) En déduire la concentration $c$, en $\\mathrm{mol\\cdot m^{-3}}$ puis en $\\mathrm{mol\\cdot L^{-1}}$.",
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La couleur perçue d'une solution est complémentaire de la couleur absorbée.",
       "corrige": [
-        "1) De $G = k_{\\text{cell}}\\,\\sigma$ on tire $\\sigma = \\dfrac{G}{k_{\\text{cell}}} = \\dfrac{0{,}20}{1{,}0} = 0{,}20\\ \\mathrm{S\\cdot m^{-1}}$.",
-        "2) Kohlrausch pour $\\mathrm{NaCl}$, avec $[\\mathrm{Na^+}] = [\\mathrm{Cl^-}] = c$ : $\\sigma = (\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}})\\,c$, donc $c = \\dfrac{\\sigma}{\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}}}$.",
-        "$\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}} = (5{,}0 + 7{,}6) \\times 10^{-3} = 12{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. Ainsi $c = \\dfrac{0{,}20}{12{,}6 \\times 10^{-3}} = 15{,}9\\ \\mathrm{mol\\cdot m^{-3}}$.",
-        "Conversion finale vers l'unité usuelle : $c = 15{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 15{,}9 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}} = 1{,}6 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ (on divise par $10^{3}$ pour repasser en $\\mathrm{mol\\cdot L^{-1}}$)."
+        "Règle des couleurs complémentaires."
       ],
-      "reponse": "$\\sigma = G/k_{\\text{cell}} = 0{,}20\\ \\mathrm{S\\cdot m^{-1}}$ ; $c = 15{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 1{,}6 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "absorbance-et-loi-de-beer-lambert",
-      "enonce": "On cherche la concentration $c_0$ d'une solution mère colorée. On en prélève $V_1 = 5{,}0\\ \\mathrm{mL}$ que l'on complète avec de l'eau distillée jusqu'à $V_2 = 100\\ \\mathrm{mL}$ pour obtenir une solution fille. L'absorbance de la solution fille, mesurée dans une cuve de $1{,}0\\ \\mathrm{cm}$, vaut $A = 0{,}60$. La courbe d'étalonnage de l'espèce, tracée dans la même cuve, a pour équation $A = 4{,}0 \\times 10^{3}\\,c$ ($c$ en $\\mathrm{mol\\cdot L^{-1}}$). 1) Déterminer la concentration $c_1$ de la solution fille. 2) En déduire la concentration $c_0$ de la solution mère.",
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? On règle le blanc, la référence, avec le solvant avant une mesure d'absorbance.",
       "corrige": [
-        "1) On dose la solution fille avec la droite d'étalonnage : $c_1 = \\dfrac{A}{k} = \\dfrac{0{,}60}{4{,}0 \\times 10^{3}} = 1{,}5 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
-        "2) La dilution conserve la quantité de matière prélevée : $c_0 \\times V_1 = c_1 \\times V_2$, donc $c_0 = c_1 \\times \\dfrac{V_2}{V_1}$.",
-        "Le facteur de dilution est $\\dfrac{V_2}{V_1} = \\dfrac{100}{5{,}0} = 20$ (les deux volumes sont en $\\mathrm{mL}$, le rapport est sans unité : pas besoin de convertir ici).",
-        "$c_0 = 1{,}5 \\times 10^{-4} \\times 20 = 3{,}0 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. La solution mère est bien **plus concentrée** que la fille (facteur $20$), ce qui est cohérent avec une dilution."
+        "Pour soustraire l'absorption du solvant."
       ],
-      "reponse": "$c_1 = A/k = 1{,}5 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_0 = c_1 \\times V_2/V_1 = 3{,}0 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
-      "enonce": "Un conductimètre applique une tension $U = 2{,}0\\ \\mathrm{V}$ aux bornes d'une cellule plongée dans une solution ionique ; il mesure un courant d'intensité $I = 0{,}050\\ \\mathrm{A}$. 1) Calculer la conductance $G$ de la portion de solution. 2) La constante de la cellule vaut $k_{\\text{cell}} = 0{,}80\\ \\mathrm{m}$ (telle que $G = k_{\\text{cell}}\\,\\sigma$). En déduire la conductivité $\\sigma$ de la solution.",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Une courbe d'étalonnage relie l'absorbance à la concentration.",
       "corrige": [
-        "1) La conductance est le rapport de l'intensité à la tension : $G = \\dfrac{I}{U} = \\dfrac{0{,}050}{2{,}0} = 0{,}025\\ \\mathrm{S} = 2{,}5 \\times 10^{-2}\\ \\mathrm{S}$. L'unité est le siemens ($\\mathrm{S}$).",
-        "2) On isole la conductivité dans $G = k_{\\text{cell}}\\,\\sigma$ : $\\sigma = \\dfrac{G}{k_{\\text{cell}}}$.",
-        "$\\sigma = \\dfrac{0{,}025}{0{,}80} = 3{,}1 \\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$. Contrôle d'unité : $\\dfrac{\\mathrm{S}}{\\mathrm{m}} = \\mathrm{S\\cdot m^{-1}}$, c'est bien l'unité d'une conductivité.",
-        "Attention à ne pas confondre les deux grandeurs : $G$ (en $\\mathrm{S}$) dépend de la cellule, $\\sigma$ (en $\\mathrm{S\\cdot m^{-1}}$) ne dépend que de la solution."
+        "Elle sert au dosage."
       ],
-      "reponse": "$G = I/U = 2{,}5 \\times 10^{-2}\\ \\mathrm{S}$ ; $\\sigma = G/k_{\\text{cell}} = 3{,}1 \\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "absorbance-et-loi-de-beer-lambert",
-      "enonce": "Le spectre UV-visible d'une solution colorée présente, à sa longueur d'onde d'absorption maximale, une absorbance $A = 0{,}84$. La mesure est réalisée dans une cuve d'épaisseur $\\ell = 2{,}0\\ \\mathrm{cm}$. À cette longueur d'onde, le coefficient d'absorption molaire de l'espèce vaut $\\varepsilon = 6{,}0 \\times 10^{3}\\ \\mathrm{L\\cdot mol^{-1}\\cdot cm^{-1}}$. 1) Déterminer la concentration $c$ de la solution. 2) Sans nouvelle mesure, prévoir l'absorbance $A'$ que l'on lirait, dans la même cuve, après avoir dilué cette solution deux fois (facteur $2$).",
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La spectroscopie infrarouge identifie les groupes caractéristiques par leurs bandes d'absorption.",
       "corrige": [
-        "1) On part de la loi de Beer-Lambert $A = \\varepsilon\\,\\ell\\,c$ et on isole la concentration : $c = \\dfrac{A}{\\varepsilon\\,\\ell}$. Attention : ici $\\ell = 2{,}0\\ \\mathrm{cm}$, il ne faut pas l'oublier au dénominateur.",
-        "$c = \\dfrac{0{,}84}{6{,}0 \\times 10^{3} \\times 2{,}0} = \\dfrac{0{,}84}{1{,}2 \\times 10^{4}} = 7{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
-        "2) L'absorbance est proportionnelle à la concentration ($A = k\\,c$ à cuve et longueur d'onde fixées). Diviser la concentration par $2$ divise donc l'absorbance par $2$.",
-        "$A' = \\dfrac{A}{2} = \\dfrac{0{,}84}{2} = 0{,}42$. C'est bien un nombre sans unité, et il reste dans le domaine de validité ($A' \\lesssim 1$)."
+        "Chaque liaison a une signature."
       ],
-      "reponse": "$c = A/(\\varepsilon\\ell) = 7{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$ ; après dilution par $2$, $A' = A/2 = 0{,}42$."
+      "reponse": "Vrai"
     },
     {
       "id": 9,
-      "difficulte": "approfondissement",
-      "notion": "conductance-conductivite-et-loi-de-kohlrausch",
-      "enonce": "Avant de doser une solution, on doit étalonner la cellule conductimétrique. Étape 1 : plongée dans une solution étalon de conductivité connue $\\sigma_{\\text{ref}} = 0{,}25\\ \\mathrm{S\\cdot m^{-1}}$, la cellule donne une conductance $G_{\\text{ref}} = 0{,}20\\ \\mathrm{S}$. Étape 2 : la même cellule, plongée dans une solution de chlorure de sodium $(\\mathrm{Na^+ + Cl^-})$ de concentration inconnue, donne $G = 0{,}12\\ \\mathrm{S}$. Données : $\\lambda_{\\mathrm{Na^+}} = 5{,}0 \\times 10^{-3}$ et $\\lambda_{\\mathrm{Cl^-}} = 7{,}6 \\times 10^{-3}\\ \\mathrm{S\\cdot m^{2}\\cdot mol^{-1}}$. 1) Déterminer la constante $k_{\\text{cell}}$ de la cellule. 2) Calculer la conductivité $\\sigma$ de la solution de $\\mathrm{NaCl}$. 3) En déduire sa concentration $c$, en $\\mathrm{mol\\cdot L^{-1}}$.",
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? En infrarouge, une bande large vers 3200 à 3600 cm-1 traduit une liaison O-H.",
       "corrige": [
-        "1) La constante de cellule relie conductance et conductivité par $G = k_{\\text{cell}}\\,\\sigma$. Avec la solution étalon : $k_{\\text{cell}} = \\dfrac{G_{\\text{ref}}}{\\sigma_{\\text{ref}}} = \\dfrac{0{,}20}{0{,}25} = 0{,}80\\ \\mathrm{m}$.",
-        "2) On applique la même constante à la solution inconnue : $\\sigma = \\dfrac{G}{k_{\\text{cell}}} = \\dfrac{0{,}12}{0{,}80} = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$.",
-        "3) Loi de Kohlrausch pour $\\mathrm{NaCl}$, avec $[\\mathrm{Na^+}] = [\\mathrm{Cl^-}] = c$ : $\\sigma = (\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}})\\,c$, d'où $c = \\dfrac{\\sigma}{\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}}} = \\dfrac{0{,}15}{(5{,}0 + 7{,}6) \\times 10^{-3}} = \\dfrac{0{,}15}{12{,}6 \\times 10^{-3}} = 11{,}9\\ \\mathrm{mol\\cdot m^{-3}}$.",
-        "Conversion vers l'unité usuelle : $c = 11{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 11{,}9 \\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}} = 1{,}2 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ (on divise par $10^{3}$)."
+        "Signature de l'hydroxyle."
       ],
-      "reponse": "$k_{\\text{cell}} = G_{\\text{ref}}/\\sigma_{\\text{ref}} = 0{,}80\\ \\mathrm{m}$ ; $\\sigma = G/k_{\\text{cell}} = 0{,}15\\ \\mathrm{S\\cdot m^{-1}}$ ; $c = 11{,}9\\ \\mathrm{mol\\cdot m^{-3}} = 1{,}2 \\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      "reponse": "Vrai"
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "absorbance-et-loi-de-beer-lambert",
-      "enonce": "**Dosage d'un colorant bleu dans un sirop de menthe.** Le colorant bleu patenté (E131) donne au sirop de menthe sa teinte : mélangé au colorant jaune, il fait paraître le sirop vert. On souhaite déterminer la concentration en E131 d'un sirop du commerce par spectrophotométrie. Le spectre UV-visible du E131 présente un maximum d'absorption à $\\lambda_{\\max} = 640\\ \\mathrm{nm}$. On trace, à cette longueur d'onde et dans une cuve de $\\ell = 1{,}0\\ \\mathrm{cm}$, une courbe d'étalonnage à partir de solutions de concentrations connues : elle est linéaire et passe par le point $\\left(c = 5{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}\\ ;\\ A = 0{,}60\\right)$. On prélève ensuite $V_1 = 10{,}0\\ \\mathrm{mL}$ de sirop que l'on complète à $V_2 = 100{,}0\\ \\mathrm{mL}$ avec de l'eau distillée ; l'absorbance de cette solution diluée, mesurée dans la même cuve à $640\\ \\mathrm{nm}$, vaut $A_{\\text{d}} = 0{,}72$. Donnée : masse molaire du E131, $M = 5{,}83 \\times 10^{2}\\ \\mathrm{g\\cdot mol^{-1}}$. 1) Le E131 est bleu. Justifier que l'on choisisse de mesurer l'absorbance vers $640\\ \\mathrm{nm}$. 2) Déterminer le coefficient directeur $k$ de la courbe d'étalonnage. 3) Vérifier que la mesure $A_{\\text{d}} = 0{,}72$ est exploitable avec la loi de Beer-Lambert, puis calculer la concentration $c_{\\text{d}}$ de la solution diluée. 4) En déduire la concentration $c_{\\text{sirop}}$ du sirop, en $\\mathrm{mol\\cdot L^{-1}}$. 5) En déduire la concentration en masse $c_m$ du colorant dans le sirop, en $\\mathrm{g\\cdot L^{-1}}$.",
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? En infrarouge, une bande intense vers 1700 cm-1 traduit une liaison C=O.",
       "corrige": [
-        "1. Une espèce colorée apparaît de la couleur **complémentaire** de celle qu'elle absorbe. Le E131 est **bleu** : il absorbe donc dans la zone complémentaire, l'orange-rouge, ce qui correspond bien à $\\lambda_{\\max} \\approx 640\\ \\mathrm{nm}$. On dose toujours à $\\lambda_{\\max}$ : l'absorbance y est maximale, donc la mesure est la plus sensible et la plus précise.",
-        "2. La courbe passe par l'origine (Beer-Lambert) : $A = k\\,c$, donc $k = \\dfrac{A}{c} = \\dfrac{0{,}60}{5{,}0 \\times 10^{-5}} = 1{,}2 \\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}}$.",
-        "3. La loi de Beer-Lambert n'est valable que pour une solution diluée, soit $A \\lesssim 1$. Ici $A_{\\text{d}} = 0{,}72 < 1$ : la mesure est exploitable (c'est d'ailleurs pour cela qu'on a dilué le sirop, trop concentré pour être mesuré directement). On dose alors avec la droite : $c_{\\text{d}} = \\dfrac{A_{\\text{d}}}{k} = \\dfrac{0{,}72}{1{,}2 \\times 10^{4}} = 6{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
-        "4. La dilution conserve la quantité de matière prélevée : $c_{\\text{sirop}} \\times V_1 = c_{\\text{d}} \\times V_2$, donc $c_{\\text{sirop}} = c_{\\text{d}} \\times \\dfrac{V_2}{V_1}$. Le facteur de dilution vaut $\\dfrac{V_2}{V_1} = \\dfrac{100{,}0}{10{,}0} = 10$ (rapport de deux volumes en $\\mathrm{mL}$ : sans unité). D'où $c_{\\text{sirop}} = 6{,}0 \\times 10^{-5} \\times 10 = 6{,}0 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
-        "5. On passe de la concentration molaire à la concentration en masse par $c_m = c_{\\text{sirop}} \\times M = 6{,}0 \\times 10^{-4} \\times 5{,}83 \\times 10^{2}$. Numériquement : $6{,}0 \\times 5{,}83 = 35{,}0$ et $10^{-4} \\times 10^{2} = 10^{-2}$, d'où $c_m = 35{,}0 \\times 10^{-2} = 0{,}35\\ \\mathrm{g\\cdot L^{-1}}$. Contrôle d'unité : $\\mathrm{mol\\cdot L^{-1}} \\times \\mathrm{g\\cdot mol^{-1}} = \\mathrm{g\\cdot L^{-1}}$."
+        "Signature du carbonyle."
       ],
-      "reponse": "On mesure à $640\\ \\mathrm{nm}$ car le E131 bleu absorbe sa couleur complémentaire (orange-rouge) et l'on dose à $\\lambda_{\\max}$. $k = 1{,}2 \\times 10^{4}\\ \\mathrm{L\\cdot mol^{-1}}$ ; $c_{\\text{d}} = A_{\\text{d}}/k = 6{,}0 \\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_{\\text{sirop}} = c_{\\text{d}} \\times V_2/V_1 = 6{,}0 \\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $c_m = c_{\\text{sirop}} \\times M = 0{,}35\\ \\mathrm{g\\cdot L^{-1}}$."
+      "reponse": "Vrai"
+    },
+    {
+      "id": 11,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La spectroscopie RMN du proton renseigne sur l'environnement des atomes d'hydrogène.",
+      "corrige": [
+        "Elle sonde les protons."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? En RMN, le nombre de signaux indique le nombre de groupes de protons équivalents.",
+      "corrige": [
+        "Chaque groupe donne un signal."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La courbe d'intégration en RMN est proportionnelle au nombre de protons de chaque signal.",
+      "corrige": [
+        "Elle donne les proportions de protons."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La multiplicité d'un signal RMN, selon la règle des n+1, renseigne sur les protons voisins.",
+      "corrige": [
+        "Le nombre de pics dépend des voisins."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Un singulet correspond à des protons sans voisin selon la règle n+1.",
+      "corrige": [
+        "Aucun proton voisin."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La spectrophotométrie permet de doser une espèce colorée.",
+      "corrige": [
+        "Via une courbe d'étalonnage."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Les méthodes spectroscopiques sont en général non destructives pour l'échantillon.",
+      "corrige": [
+        "L'échantillon n'est pas détruit."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? En infrarouge, l'axe des abscisses est gradué en nombre d'onde (cm-1).",
+      "corrige": [
+        "Unité caractéristique de l'IR."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Le coefficient d'absorption molaire dépend de l'espèce et de la longueur d'onde.",
+      "corrige": [
+        "Il intervient dans la loi de Beer-Lambert."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? On choisit la longueur d'onde de travail au maximum d'absorption pour plus de précision.",
+      "corrige": [
+        "La sensibilité y est maximale."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La spectrophotométrie peut suivre l'évolution temporelle d'une réaction colorée.",
+      "corrige": [
+        "Suivi cinétique par absorbance."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Deux protons équivalents donnent un seul signal en RMN.",
+      "corrige": [
+        "Même environnement chimique."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Le déplacement chimique en RMN se mesure en ppm.",
+      "corrige": [
+        "Unité du déplacement chimique."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Une espèce incolore n'absorbe pas dans le visible.",
+      "corrige": [
+        "Elle peut absorber dans l'UV."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La spectroscopie IR et la RMN aident à déterminer la structure d'une molécule.",
+      "corrige": [
+        "Elles se complètent."
+      ],
+      "reponse": "Vrai"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? L'absorbance possède une unité, par exemple le volt.",
+      "corrige": [
+        "Faux : l'absorbance est sans unité."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? Selon Beer-Lambert, l'absorbance est inversement proportionnelle à la concentration.",
+      "corrige": [
+        "Faux : elle lui est proportionnelle."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La RMN du proton étudie les atomes de carbone.",
+      "corrige": [
+        "Faux : elle étudie les atomes d'hydrogène."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La spectroscopie infrarouge permet de déterminer la masse molaire.",
+      "corrige": [
+        "Faux : elle identifie des groupes et des liaisons."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La couleur d'une solution est identique à la couleur qu'elle absorbe.",
+      "corrige": [
+        "Faux : c'est la couleur complémentaire."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? On règle le blanc avec la solution la plus concentrée.",
+      "corrige": [
+        "Faux : on règle le blanc avec le solvant."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? En RMN, un singulet indique des protons ayant plusieurs voisins.",
+      "corrige": [
+        "Faux : un singulet indique l'absence de voisins."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La bande vers 1700 cm-1 correspond à une liaison O-H.",
+      "corrige": [
+        "Faux : elle correspond à C=O ; O-H est vers 3200 à 3600 cm-1."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La courbe d'étalonnage relie l'absorbance au temps.",
+      "corrige": [
+        "Faux : elle la relie à la concentration."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Vrai ou faux ? La RMN mesure la couleur d'une solution.",
+      "corrige": [
+        "Faux : elle sonde l'environnement des protons."
+      ],
+      "reponse": "Faux"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Quelle grandeur mesure la spectrophotométrie UV-visible ?",
+      "corrige": [
+        "Reliée à la concentration."
+      ],
+      "reponse": "l'absorbance"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Quelle loi relie l'absorbance à la concentration ?",
+      "corrige": [
+        "A proportionnelle à c."
+      ],
+      "reponse": "la loi de Beer-Lambert"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "L'absorbance a-t-elle une unité ?",
+      "corrige": [
+        "Grandeur sans dimension."
+      ],
+      "reponse": "non"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Quelle spectroscopie identifie les groupes par des bandes d'absorption ?",
+      "corrige": [
+        "Signatures des liaisons."
+      ],
+      "reponse": "la spectroscopie infrarouge (IR)"
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Quelle spectroscopie sonde l'environnement des atomes d'hydrogène ?",
+      "corrige": [
+        "Elle étudie les protons."
+      ],
+      "reponse": "la RMN du proton"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Que règle-t-on avec le solvant avant une mesure d'absorbance ?",
+      "corrige": [
+        "Pour soustraire le solvant."
+      ],
+      "reponse": "le blanc (la référence)"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Comment appelle-t-on la droite reliant absorbance et concentration ?",
+      "corrige": [
+        "Utile au dosage."
+      ],
+      "reponse": "la courbe d'étalonnage"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "À quelle liaison correspond une bande IR large vers 3200 à 3600 cm-1 ?",
+      "corrige": [
+        "Signature de l'hydroxyle."
+      ],
+      "reponse": "la liaison O-H"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "À quelle liaison correspond une bande IR intense vers 1700 cm-1 ?",
+      "corrige": [
+        "Signature du carbonyle."
+      ],
+      "reponse": "la liaison C=O"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "En RMN, à quoi est proportionnelle la courbe d'intégration ?",
+      "corrige": [
+        "Elle donne les proportions."
+      ],
+      "reponse": "au nombre de protons du signal"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Quelle règle donne la multiplicité d'un signal RMN ?",
+      "corrige": [
+        "n = nombre de protons voisins."
+      ],
+      "reponse": "la règle des (n+1)"
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "Que traduit un singulet en RMN selon la règle n+1 ?",
+      "corrige": [
+        "Un seul pic."
+      ],
+      "reponse": "l'absence de protons voisins"
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "La couleur perçue d'une solution est complémentaire de quelle couleur ?",
+      "corrige": [
+        "Règle des complémentaires."
+      ],
+      "reponse": "de la couleur absorbée"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "En infrarouge, en quelle grandeur est gradué l'axe des abscisses ?",
+      "corrige": [
+        "Unité de l'IR."
+      ],
+      "reponse": "le nombre d'onde (cm-1)"
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "methodes physiques d'analyse",
+      "enonce": "En quelle unité se mesure le déplacement chimique en RMN ?",
+      "corrige": [
+        "Partie par million."
+      ],
+      "reponse": "en ppm"
     }
   ]
 }
