@@ -104,7 +104,9 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
 
 
 ## 10. État au 03/10/2026 (session Claude Code)
-- Étapes 1 à 5 du § 7 **faites** et poussées sur `upgrade-sdk57` (pas encore publiées sur `main`).
+- Étapes 1 à 5 du § 7 **faites et publiées** (main `3b8cbe6`, CI verte). Relecture faite après publication :
+  Titrages, Dipôle RC, Premier principe, CP quadrillage, CM1 grands nombres justes ; 5e masse volumique
+  corrigée sur `upgrade-sdk57` (« de l'aluminium », « échantillon », « a une masse de » au lieu de « pèse »).
 - Paquet v7 appliqué ; générateur ajouté pour `cp/se-reperer-et-quadrillage` (fin de `gen_extra.py`,
   `r_quadrillage_cp`) → plus aucun chapitre maths/PC sans générateur.
 - `generer-exos.py` : 3e atomes-ions-pH réécrit (élisions, 0 doublon, 6 questions de pH),

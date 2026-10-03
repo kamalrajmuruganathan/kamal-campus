@@ -3228,11 +3228,12 @@ def r_proba_cond():
 
 # ---------------------------------------------------------------- 5e : masse volumique (valeurs réelles)
 def r_masse_volumique():
+    def _de(nom): return ("de l'" if nom[0] in "aeiouéh" else "du ") + nom
     E = []
     def add(d, n, e, c, r): E.append((d, n, e, c, r))
     for (obj, V, m) in [("Un cube d'aluminium",10,27),("Une pièce de fer",20,158),("Un bloc de cuivre",10,89),("Un lingot d'or",5,"96.5"),
-                        ("Un plomb de pêche",10,113),("Un volume d'huile",100,92),("Un volume d'eau",250,250),("Une médaille en argent",4,42),
-                        ("Un glaçon",50,46),("Un volume d'éthanol",100,79)]:
+                        ("Un plomb de pêche",10,113),("Un échantillon d'huile",100,92),("Un échantillon d'eau",250,250),("Une médaille en argent",4,42),
+                        ("Un glaçon",50,46),("Un échantillon d'éthanol",100,79)]:
         rho = _D(str(m)) / V
         add("application", "masse-volumique",
             f"{obj} a un volume de ${V}$ cm³ et une masse de ${_nb(m)}$ g. Quelle est sa masse volumique ?",
@@ -3260,15 +3261,15 @@ def r_masse_volumique():
         rho = _D(m) / V
         add("probleme", "identification",
             f"Un objet métallique a une masse de ${m}$ g et un volume de ${V}$ cm³. Avec le tableau ({tab}), de quel métal s'agit-il ?",
-            [f"$ \\rho = \\dfrac{{{m}}}{{{V}}} = {_nb(rho)} $ g/cm³ : c'est la masse volumique du {nom}."], f"du {nom}")
+            [f"$ \\rho = \\dfrac{{{m}}}{{{V}}} = {_nb(rho)} $ g/cm³ : c'est la masse volumique {_de(nom)}."], _de(nom))
     for (q, c, r) in [("Combien de cm³ y a-t-il dans 1 L ?", "$ 1 $ L $ = 1 $ dm³ $ = 1\\,000 $ cm³.", "$ 1\\,000 $ cm³"),
                       ("À combien de cm³ correspond 1 mL ?", "$ 1 $ mL $ = 1 $ cm³.", "$ 1 $ cm³"),
                       ("Quelle est la masse de 1 L d'eau ?", "$ 1\\,000 $ cm³ $ \\times 1 $ g/cm³ $ = 1\\,000 $ g.", "$ 1 $ kg"),
                       ("Combien de cm³ y a-t-il dans 2,5 L ?", "$ 2{,}5\\times 1\\,000 = 2\\,500 $ cm³.", "$ 2\\,500 $ cm³"),
-                      ("Quelle est la masse de 1 m³ d'eau ?", "$ 1 $ m³ $ = 1\\,000 $ L et 1 L d'eau pèse 1 kg.", "$ 1\\,000 $ kg"),
+                      ("Quelle est la masse de 1 m³ d'eau ?", "$ 1 $ m³ $ = 1\\,000 $ L et 1 L d'eau a une masse de 1 kg.", "$ 1\\,000 $ kg"),
                       ("Combien de litres y a-t-il dans 1 dm³ ?", "$ 1 $ dm³ $ = 1 $ L.", "$ 1 $ L"),
                       ("Convertir 1 g/cm³ en kg/m³.", "$ 1 $ g/cm³ $ = \\dfrac{0{,}001\\ \\text{kg}}{0{,}000\\,001\\ \\text{m}^3} = 1\\,000 $ kg/m³.", "$ 1\\,000 $ kg/m³"),
-                      ("Quelle est la masse de 250 mL d'eau ?", "$ 250 $ mL $ = 250 $ cm³ et $ 1 $ cm³ d'eau pèse $ 1 $ g.", "$ 250 $ g")]:
+                      ("Quelle est la masse de 250 mL d'eau ?", "$ 250 $ mL $ = 250 $ cm³ et $ 1 $ cm³ d'eau a une masse de $ 1 $ g.", "$ 250 $ g")]:
         add("application", "conversions", q, [c], r)
     for (q, c, r) in [("Deux clous en fer, l'un petit, l'autre gros, ont-ils la même masse volumique ?", "La masse volumique dépend du matériau, pas de la taille de l'objet.", "oui"),
                       ("Avec quel instrument mesure-t-on une masse ?", "On utilise une balance.", "une balance"),
