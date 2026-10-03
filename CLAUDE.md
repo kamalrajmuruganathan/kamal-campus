@@ -15,7 +15,10 @@ Contexte de reprise (discussion Cowork du 03/10/2026). À lire en entier avant d
 ## 2. Règles absolues
 1. **Exactitude** : ne jamais inventer une réponse ou une valeur fausse. Appli scolaire → le
    **français doit être correct** (accents, élisions, accords) et les valeurs physiquement réalistes.
-2. **Crédits Netlify** (il en reste environ 44) : **1 commit publié = 1 build**. Regrouper les changements.
+2. **Crédits Netlify ÉPUISÉS (mail du 03/10/2026, 15:20)** : les déploiements de production sont **en pause
+   jusqu'au 16/10/2026** (ou abonnement payant). Le site reste en ligne avec le dernier build réussi.
+   → **Ne plus pousser sur `main`** d'ici là : tout s'accumule sur `upgrade-sdk57`, publication groupée après le 16/10.
+   (Le compteur « ≈ 44 » était faux : un build coûte plus d'un crédit.) **1 commit publié = 1 build**.
    **Ne jamais pousser sur `main`, ne jamais lancer `publier.sh`, ne jamais créer de PR** sans l'accord
    explicite de Kamal (les deploy previews peuvent consommer des crédits).
 3. **Sécurité** : ne jamais afficher ni committer la clé Supabase `sb_secret_…` (la clé publishable et
@@ -116,3 +119,7 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
 - **0 doublon d'énoncé sur tout le site** : les générateurs primaire de `generer-exos.py` passent par
   `_uniques()` (50 énoncés distincts, sinon erreur) ; fractions décalées par niveau (CE2, CM1, CM2, 6e
   n'ont plus les mêmes exos) ; arrondis scolaires (120 500 → 121 000) et espaces des milliers.
+- Défis : bug corrigé sur `upgrade-sdk57` (non publié) — l'envoi du résultat se faisait dans un « updater »
+  `setJeu`, que React peut exécuter deux fois → risque de défi créé en double. Désormais `jeuRef` + verrou `envoiRef`.
+- Correctif `Alert.alert` web testé dans Chromium (message simple, confirmation OK / Annuler) : OK.
+- Tests Défis / Amis avec 2 comptes : **en attente** (à faire par Kamal sur le site en ligne).
