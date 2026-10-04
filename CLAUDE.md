@@ -144,3 +144,7 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
 - **04/10/2026 : passage à GitHub Pages réussi.** Dépôt rendu public, Pages activé (Source : GitHub Actions),
   fusion PR #1 `upgrade-sdk57` → `main` (b402d83), CI verte, déploiement OK. Pas de limite de crédits.
   Claude ne peut pas pousser sur `main` lui-même (bloqué par la sécurité) : c'est Kamal qui fusionne.
+- **Netlify → redirection** (préparé le 04/10, sur `upgrade-sdk57`) : `netlify.toml` redirige tout
+  (`/*` → GitHub Pages, 301) avec un build de quelques secondes (`scripts/build-redirection-netlify.sh`).
+  S'activera au premier build Netlify après le 16/10 (crédits revenus). Ensuite, Kamal peut couper les builds
+  Netlify (Site configuration → Build & deploy → Stop builds) : la redirection reste en ligne.

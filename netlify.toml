@@ -1,6 +1,14 @@
+# Le site est désormais publié sur GitHub Pages (depuis le 04/10/2026).
+# Netlify ne fait plus que rediriger les anciennes adresses vers la nouvelle,
+# avec un build très court (pas d'installation npm) pour consommer le moins de crédits possible.
+# L'ancien build complet reste disponible : scripts/build-netlify.sh.
 [build]
-  command = "bash scripts/build-netlify.sh"
+  command = "bash scripts/build-redirection-netlify.sh"
   publish = "site"
 
-[build.environment]
-  NODE_VERSION = "20"
+# /app/...  ->  https://kamalrajmuruganathan.github.io/kamal-campus/app/...
+[[redirects]]
+  from = "/*"
+  to = "https://kamalrajmuruganathan.github.io/kamal-campus/:splat"
+  status = 301
+  force = true
