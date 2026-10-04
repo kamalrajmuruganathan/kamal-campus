@@ -1927,7 +1927,7 @@ def gen_T_equilibre():
     # --- quotient de réaction : expressions (6) + valeurs (3)
     for (R, P), rem in [(AC, "L'eau est le solvant : elle n'apparaît pas."), (NH, "L'eau est le solvant : elle n'apparaît pas."),
                         (AGCL, "Le solide n'apparaît pas."), (CUAG, "Les solides (cuivre et argent) n'apparaissent pas ; le coefficient 2 devient un exposant."),
-                        (FESCN, "Produit au numérateur, réactifs au dénominateur."), (PBI, "Le solide n'apparaît pas ; le coefficient 2 de $\\mathrm{I^-}$ devient un carré.")]:
+                        (FESCN, "Tous les nombres stœchiométriques valent 1 : pas d'exposant."), (PBI, "Le solide n'apparaît pas ; le coefficient 2 de $\\mathrm{I^-}$ devient un carré.")]:
         L.add("application", "quotient-reaction", f"Écrire l'expression du quotient de réaction associé à l'équation ${_eq_txt(R, P)}$.",
               ["Produits au numérateur, réactifs au dénominateur, chacun élevé à la puissance de son nombre stœchiométrique.", rem],
               f"$Q_r = {_qr_expr(R, P)}$")

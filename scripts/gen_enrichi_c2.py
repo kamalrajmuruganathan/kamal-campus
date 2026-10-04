@@ -1399,10 +1399,12 @@ def g4_reperage():
              f"On se déplace de {hx}, puis de {hy}."],
             f"{hx}, puis {hy}")
     for x, y in [(2, -5), (-6, 1), (-3, -3), (0, -4)]:
-        dx = "on ne se déplace pas horizontalement" if x == 0 else f"on va de {abs(x)} unité{'s' if abs(x) >= 2 else ''} vers la {'droite' if x > 0 else 'gauche'}"
+        dx = f"on va de {abs(x)} unité{'s' if abs(x) >= 2 else ''} vers la {'droite' if x > 0 else 'gauche'}"
         dy = f"de {abs(y)} vers le {'haut' if y > 0 else 'bas'}"
+        trajet = (f"on va de {abs(y)} unités vers le {'haut' if y > 0 else 'bas'}, sans se déplacer horizontalement" if x == 0
+                  else f"{dx}, puis {dy}")
         add("application", "placer-point",
-            f"En partant de l'origine, {dx}, puis {dy}. Quelles sont les coordonnées du point atteint ?",
+            f"En partant de l'origine, {trajet}. Quelles sont les coordonnées du point atteint ?",
             ["Vers la droite ou le haut : positif ; vers la gauche ou le bas : négatif.", f"Le point a pour coordonnées ${pt(x, y)}$."],
             f"${pt(x, y)}$")
     # -- signes et position (8)
@@ -1738,7 +1740,7 @@ def g4_transformations():
         "la translation de 4 carreaux vers la droite et 3 vers le haut ; 5 carreaux")
     add("probleme", "probleme-translation", "Une figure est déplacée de 6 cm vers la droite par une translation, puis de 6 cm vers la gauche par une autre translation. Où se trouve-t-elle ?",
         ["La seconde translation est la translation inverse de la première."], "à sa position de départ")
-    add("probleme", "probleme-translation", "Un motif d'aire 8 cm² est reproduit 10 fois par translation, sans chevauchement. Quelle est l'aire totale des 11 motifs ?",
+    add("probleme", "probleme-translation", "Un motif d'aire 8 cm² est reproduit 10 fois par translation, sans chevauchement : avec le motif de départ, on obtient 11 motifs. Quelle est l'aire totale de ces 11 motifs ?",
         ["Une translation conserve les aires : chaque motif a une aire de 8 cm².", "$11 \\times 8 = 88$ cm²."], "$88$ cm²")
     return _fin(E)
 
@@ -1882,8 +1884,8 @@ def g4_triangles():
         "car $3^2 + 4^2 = 5^2$ (réciproque de Pythagore)")
     d = arr(math.sqrt(2 * 2 + F("1.5") ** 2), 2)
     add("probleme", "probleme-pythagore",
-        "Une rampe d'accès monte de 1,5 m sur une distance horizontale de 2 m. Quelle est la longueur de la rampe ?",
-        ["La rampe est l'hypoténuse d'un triangle rectangle de côtés 2 m et 1,5 m.", f"$L^2 = 2^2 + 1{{,}}5^2 = 4 + 2{{,}}25 = 6{{,}}25$, donc $L = \\sqrt{{6{{,}}25}} = {nb(d, 2)}$ m."],
+        "La glissière rectiligne d'un toboggan descend de 1,5 m sur une distance horizontale de 2 m. Quelle est la longueur de la glissière ?",
+        ["La glissière est l'hypoténuse d'un triangle rectangle de côtés 2 m et 1,5 m.", f"$L^2 = 2^2 + 1{{,}}5^2 = 4 + 2{{,}}25 = 6{{,}}25$, donc $L = \\sqrt{{6{{,}}25}} = {nb(d, 2)}$ m."],
         f"${nb(d, 2)}$ m")
     return _fin(E)
 
