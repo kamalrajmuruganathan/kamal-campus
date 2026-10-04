@@ -45,11 +45,11 @@ déclaration d'indépendance de 1776.
 - The **White House** : la résidence du président, à **Washington, D.C.**
 - The **bald eagle** : l'aigle, oiseau symbole du pays.
 - **Uncle Sam** : le personnage qui représente le gouvernement américain.
-- The monnaie est le **dollar ($)**. La langue est l'**English**.
+- La monnaie est le **dollar** (`$`). La langue principale est l'anglais (**English**).
 
 ## À retenir
 - **USA** = *the United States of America*, **50 states**.
 - Capitale : **Washington, D.C.** ; plus grande ville : **New York**.
 - Drapeau : **the Stars and Stripes** (50 étoiles, 13 bandes).
 - Fête nationale : **Independence Day**, le **4th of July**.
-- Monnaie : le **dollar ($)**.
+- Monnaie : le **dollar** (`$`).

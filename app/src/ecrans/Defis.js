@@ -4,7 +4,7 @@
  * creation) ; meilleur score gagne, a egalite le plus rapide l'emporte.
  * Les enonces/choix contiennent du LaTeX -> rendus par VisionneuseFiche.
  */
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
 import { View, Text, TextInput, Pressable, ScrollView, ActivityIndicator, Modal, Alert, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../useTheme';
@@ -51,6 +51,10 @@ export default function Defis({ navigation }) {
   const [onglet, setOnglet] = useState('jouer');
   const [nouveau, setNouveau] = useState(false);
   const [jeu, setJeu] = useState(null);
+  // Partie en cours, lisible hors rendu, et verrou d'envoi : le résultat ne part qu'une fois.
+  const jeuRef = useRef(null);
+  const envoiRef = useRef(false);
+  useEffect(() => { jeuRef.current = jeu; }, [jeu]);
 
   const mapAmi = useMemo(() => new Map(amis.map((a) => [a.id, a])), [amis]);
   const nomDe = useCallback((id) => mapAmi.get(id)?.nom ?? 'Joueur', [mapAmi]);
@@ -102,6 +106,7 @@ export default function Defis({ navigation }) {
   //  mode 'repondre' : raw = defi.questions (les memes) ; defiId defini
   function demarrer({ mode, chapId, raw, defiId, amiId }) {
     if (!raw || !raw.length) { avertir('Chapitre', 'Aucune question disponible pour ce chapitre.'); return; }
+    envoiRef.current = false;
     setJeu({
       phase: 'question', mode, chapId, defiId, amiId,
       raw, questions: prepareAffichage(raw),
@@ -117,12 +122,13 @@ export default function Defis({ navigation }) {
       return { ...j, choisi: iOpt, score: j.score + (bon ? 1 : 0) };
     });
     setTimeout(() => {
-      setJeu((j) => {
-        if (!j) return j;
-        if (j.idx + 1 < j.questions.length) return { ...j, idx: j.idx + 1, choisi: null };
-        finaliser(j);
-        return j;
-      });
+      // Pas d'appel réseau dans un « updater » de setJeu : React peut l'exécuter deux fois.
+      const j = jeuRef.current;
+      if (!j) return;
+      if (j.idx + 1 < j.questions.length) { setJeu((s) => s && { ...s, idx: s.idx + 1, choisi: null }); return; }
+      if (envoiRef.current) return;
+      envoiRef.current = true;
+      finaliser(j);
     }, 800);
   }
 

@@ -70,7 +70,7 @@
       "id": 5,
       "difficulte": "approfondissement",
       "notion": "codage-rvb",
-      "enonce": "Une image numérique en couleurs vraies mesure $800$ pixels de large sur $600$ de haut. Chaque pixel est codé en RVB sur $3$ octets (un octet, soit $8$ bits, par canal). \\n(a) Combien de couleurs différentes ce codage permet-il par pixel ? \\n(b) Quelle est la taille du fichier (non compressé), en octets puis en méga-octets, avec la convention $1\\ \\mathrm{Mo} = 10^{6}\\ \\mathrm{octets}$ ?",
+      "enonce": "Une image numérique en couleurs vraies mesure $800$ pixels de large sur $600$ de haut. Chaque pixel est codé en RVB sur $3$ octets (un octet, soit $8$ bits, par canal). \n(a) Combien de couleurs différentes ce codage permet-il par pixel ? \n(b) Quelle est la taille du fichier (non compressé), en octets puis en méga-octets, avec la convention $1\\ \\mathrm{Mo} = 10^{6}\\ \\mathrm{octets}$ ?",
       "corrige": [
         "(a) Chaque canal a $2^8 = 256$ valeurs (0 à 255) ; les trois canaux sont indépendants.",
         "Nombre de couleurs : $256 \\times 256 \\times 256 = 256^3 = 16\\,777\\,216$, soit environ $16{,}7$ millions.",
@@ -84,7 +84,7 @@
       "id": 6,
       "difficulte": "approfondissement",
       "notion": "couleur-objet",
-      "enonce": "Dans une salle de labo, on éclaire une pomme **verte** avec une lampe qui n'émet que de la lumière **magenta** (Rouge + Bleu). \\n(a) De quelle couleur apparaît la pomme ? Justifie. \\n(b) On remplace la lampe par une lampe blanche et on regarde la pomme à travers un filtre **jaune**. De quelle couleur la voit-on alors ?",
+      "enonce": "Dans une salle de labo, on éclaire une pomme **verte** avec une lampe qui n'émet que de la lumière **magenta** (Rouge + Bleu). \n(a) De quelle couleur apparaît la pomme ? Justifie. \n(b) On remplace la lampe par une lampe blanche et on regarde la pomme à travers un filtre **jaune**. De quelle couleur la voit-on alors ?",
       "corrige": [
         "Données : un objet **vert** diffuse le vert et absorbe le rouge et le bleu. La lumière magenta = Rouge + Bleu (elle ne contient pas de vert).",
         "(a) La pomme absorbe le rouge et le bleu (les seules couleurs présentes) et n'a pas de vert à diffuser : elle ne renvoie aucune lumière. Elle apparaît **noire**.",
@@ -112,7 +112,7 @@
       "id": 8,
       "difficulte": "intermediaire",
       "notion": "spectre-longueur-onde",
-      "enonce": "Une diode électroluminescente (DEL) émet une lumière de longueur d'onde $\\lambda = 470\\ \\mathrm{nm}$. \\n(a) Exprime cette longueur d'onde en mètres, en écriture scientifique (rappel : $1\\ \\mathrm{nm} = 10^{-9}\\ \\mathrm{m}$). \\n(b) Cette radiation appartient-elle au domaine visible ($\\approx 400$ à $800\\ \\mathrm{nm}$) ? À quelle couleur correspond-elle approximativement ?",
+      "enonce": "Une diode électroluminescente (DEL) émet une lumière de longueur d'onde $\\lambda = 470\\ \\mathrm{nm}$. \n(a) Exprime cette longueur d'onde en mètres, en écriture scientifique (rappel : $1\\ \\mathrm{nm} = 10^{-9}\\ \\mathrm{m}$). \n(b) Cette radiation appartient-elle au domaine visible ($\\approx 400$ à $800\\ \\mathrm{nm}$) ? À quelle couleur correspond-elle approximativement ?",
       "corrige": [
         "(a) On convertit les nanomètres en mètres : $\\lambda = 470\\ \\mathrm{nm} = 470 \\times 10^{-9}\\ \\mathrm{m}$.",
         "En écriture scientifique : $470 \\times 10^{-9} = 4{,}70 \\times 10^{-7}\\ \\mathrm{m}$.",
@@ -125,7 +125,7 @@
       "id": 9,
       "difficulte": "approfondissement",
       "notion": "synthese-additive-couleur-objet",
-      "enonce": "Sur une scène de théâtre, on superpose un projecteur **rouge** et un projecteur **vert** dirigés vers le même endroit. Cette lumière éclaire deux costumes posés côte à côte : l'un est **jaune**, l'autre est **bleu**. \\n(a) De quelle couleur est la lumière produite par les deux projecteurs ? \\n(b) De quelle couleur apparaît le costume jaune ? \\n(c) De quelle couleur apparaît le costume bleu ? Justifie chaque réponse.",
+      "enonce": "Sur une scène de théâtre, on superpose un projecteur **rouge** et un projecteur **vert** dirigés vers le même endroit. Cette lumière éclaire deux costumes posés côte à côte : l'un est **jaune**, l'autre est **bleu**. \n(a) De quelle couleur est la lumière produite par les deux projecteurs ? \n(b) De quelle couleur apparaît le costume jaune ? \n(c) De quelle couleur apparaît le costume bleu ? Justifie chaque réponse.",
       "corrige": [
         "(a) Superposer deux lumières relève de la synthèse **additive** : Rouge + Vert donne du **jaune**. La scène est donc baignée d'une lumière jaune (= Rouge + Vert, sans bleu).",
         "(b) Un costume **jaune** diffuse le rouge et le vert et absorbe le bleu. La lumière incidente (Rouge + Vert) ne contient que des couleurs qu'il diffuse : il renvoie tout, il apparaît **jaune**.",
@@ -137,7 +137,7 @@
       "id": 10,
       "difficulte": "bac",
       "notion": "synthese-additive-soustractive-codage-couleur-objet",
-      "enonce": "**Un logo pour l'écran et pour l'affiche.** Léa conçoit un logo représentant un **soleil jaune** sur un **fond cyan**. Elle veut d'abord l'afficher sur un site web (écran), puis l'imprimer sur une affiche. On rappelle qu'un écran mélange des lumières et qu'une imprimante superpose des encres sur du papier blanc. \\n\\n1. Sur l'**écran**, chaque pixel est fait de trois sous-pixels Rouge, Vert et Bleu. Quels sous-pixels faut-il allumer pour obtenir le **jaune** du soleil ? pour obtenir le **cyan** du fond ? De quel type de synthèse s'agit-il ? \\n2. Dans le fichier, le jaune vif est codé $(255,\\ 255,\\ 0)$ et le cyan $(0,\\ 255,\\ 255)$. Donne le code **hexadécimal** `#RRVVBB` de chacune de ces deux couleurs. \\n3. Chaque canal est codé sur un octet ($8$ bits). Combien de niveaux différents cela fait-il par canal, et combien de couleurs différentes au total ? \\n4. Pour l'**affiche** imprimée, quelle(s) encre(s) parmi Cyan, Magenta, Jaune faut-il pour obtenir le soleil jaune ? le fond cyan ? De quel type de synthèse s'agit-il cette fois ? \\n5. On éclaire l'affiche terminée avec une lampe qui n'émet que de la lumière **bleue**. De quelle couleur apparaissent alors le soleil (jaune sur l'affiche) et le fond (cyan) ?",
+      "enonce": "**Un logo pour l'écran et pour l'affiche.** Léa conçoit un logo représentant un **soleil jaune** sur un **fond cyan**. Elle veut d'abord l'afficher sur un site web (écran), puis l'imprimer sur une affiche. On rappelle qu'un écran mélange des lumières et qu'une imprimante superpose des encres sur du papier blanc. \n\n1. Sur l'**écran**, chaque pixel est fait de trois sous-pixels Rouge, Vert et Bleu. Quels sous-pixels faut-il allumer pour obtenir le **jaune** du soleil ? pour obtenir le **cyan** du fond ? De quel type de synthèse s'agit-il ? \n2. Dans le fichier, le jaune vif est codé $(255,\\ 255,\\ 0)$ et le cyan $(0,\\ 255,\\ 255)$. Donne le code **hexadécimal** `#RRVVBB` de chacune de ces deux couleurs. \n3. Chaque canal est codé sur un octet ($8$ bits). Combien de niveaux différents cela fait-il par canal, et combien de couleurs différentes au total ? \n4. Pour l'**affiche** imprimée, quelle(s) encre(s) parmi Cyan, Magenta, Jaune faut-il pour obtenir le soleil jaune ? le fond cyan ? De quel type de synthèse s'agit-il cette fois ? \n5. On éclaire l'affiche terminée avec une lampe qui n'émet que de la lumière **bleue**. De quelle couleur apparaissent alors le soleil (jaune sur l'affiche) et le fond (cyan) ?",
       "corrige": [
         "1. Un écran superpose des lumières : c'est de la synthèse **additive** (primaires R, V, B ; on part du noir). Le **jaune** s'obtient par Rouge + Vert (sous-pixels R et V allumés, B éteint). Le **cyan** s'obtient par Vert + Bleu (sous-pixels V et B allumés, R éteint).",
         "2. On convertit chaque canal en hexadécimal ($255 = 15\\times16+15 = \\mathrm{FF}$ ; $0 = \\mathrm{00}$). Jaune $(255,255,0) \\rightarrow$ `#FFFF00`. Cyan $(0,255,255) \\rightarrow$ `#00FFFF`.",

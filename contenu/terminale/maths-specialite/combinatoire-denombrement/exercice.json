@@ -63,7 +63,7 @@
     {
       "id": 5,
       "difficulte": "approfondissement",
-      "notion": "combinaison",
+      "notion": "coefficient-binomial",
       "enonce": "On cherche un entier $n \\geqslant 2$ tel que le nombre de façons de choisir $2$ éléments parmi $n$ (sans ordre) soit égal à $45$. Autrement dit, résoudre $\\binom{n}{2} = 45$. Déterminer $n$.",
       "corrige": [
         "On traduit avec la formule de la combinaison : $\\binom{n}{2} = \\dfrac{n(n-1)}{2}$.",
@@ -101,7 +101,7 @@
     {
       "id": 8,
       "difficulte": "intermediaire",
-      "notion": "combinaison",
+      "notion": "principe-multiplicatif",
       "enonce": "Un jury de $5$ personnes doit être composé de $3$ enseignants choisis parmi $7$ et de $2$ professionnels choisis parmi $5$. Combien de jurys différents peut-on constituer ?",
       "corrige": [
         "La constitution se fait en deux étapes successives (choisir les enseignants **et** choisir les professionnels) : on multipliera les résultats (principe multiplicatif).",
@@ -114,7 +114,7 @@
     {
       "id": 9,
       "difficulte": "approfondissement",
-      "notion": "combinaison",
+      "notion": "complementaire",
       "enonce": "Dans une classe de $30$ élèves comptant $12$ filles et $18$ garçons, on choisit au hasard une équipe de $5$ élèves (sans ordre). Combien de ces équipes comportent au moins une fille ?",
       "corrige": [
         "On passe par le complémentaire : (équipes avec au moins une fille) = (toutes les équipes) − (équipes sans aucune fille, donc uniquement des garçons).",
@@ -126,8 +126,8 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "combinaison",
+      "difficulte": "probleme",
+      "notion": "probabilite",
       "enonce": "Une association compte $15$ membres : $9$ femmes et $6$ hommes. Pour former son bureau, on tire au sort $4$ membres parmi les $15$, chaque tirage de $4$ personnes étant équiprobable. 1) Combien de bureaux de $4$ personnes peut-on former ? 2) Combien de ces bureaux sont composés uniquement de femmes ? 3) Combien comportent exactement $2$ femmes et $2$ hommes ? 4) On tire un bureau au hasard : quelle est la probabilité qu'il comporte exactement $2$ femmes et $2$ hommes ? 5) Quelle est la probabilité que le bureau comporte au moins une femme ?",
       "corrige": [
         "1. Un bureau est un sous-ensemble de $4$ membres parmi $15$, sans ordre : c'est une combinaison $\\binom{15}{4}$. $\\binom{15}{4} = \\dfrac{15 \\times 14 \\times 13 \\times 12}{4!} = \\dfrac{32\\,760}{24} = 1365$. Il y a donc $1365$ bureaux possibles.",

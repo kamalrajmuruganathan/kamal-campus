@@ -894,6 +894,17 @@ try:
 except Exception as _e:
     print("[gen_extra non charge]", _e)
 
+# Générateurs enrichis (≥ 4 notions par chapitre), un fichier par lot : gen_enrichi_*.py.
+# Chargés en dernier : ils remplacent les générateurs plus simples des mêmes chapitres.
+import glob as _glob, importlib as _importlib
+for _f in sorted(_glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "gen_enrichi_*.py"))):
+    try:
+        _m = _importlib.import_module(os.path.basename(_f)[:-3])
+        REGISTRE.update(_m.EXTRA)
+    except Exception as _e:
+        print(f"[{os.path.basename(_f)} non chargé]", _e)
+
 if __name__ == "__main__":
     import sys
     traiter(sys.argv[1] if len(sys.argv)>1 else "contenu")
+

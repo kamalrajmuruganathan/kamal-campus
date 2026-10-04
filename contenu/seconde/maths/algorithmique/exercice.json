@@ -13,502 +13,595 @@
     {
       "id": 1,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 3, multiplier par 2, ajouter 5. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les instructions suivantes :\n```python\na = 4\nb = a + 1\na = 2 * b\n```\nQue valent les variables à la fin ?",
       "corrige": [
-        "$ 3 \\times 2 + 5 = 11 $."
+        "Le signe `=` est une affectation : on calcule à droite, puis on range le résultat à gauche.",
+        "Après `a = 4` : `a` = $4$.",
+        "Après `b = a + 1` : `a` = $4$, `b` = $5$.",
+        "Après `a = 2 * b` : `a` = $10$, `b` = $5$."
       ],
-      "reponse": "$ 11 $"
+      "reponse": "`a` = $10$ ; `b` = $5$"
     },
     {
       "id": 2,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 4, multiplier par 3, ajouter 1. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les instructions suivantes :\n```python\nx = 7\nx = x - 2\nx = x * 3\n```\nQue valent les variables à la fin ?",
       "corrige": [
-        "$ 4 \\times 3 + 1 = 13 $."
+        "Le signe `=` est une affectation : on calcule à droite, puis on range le résultat à gauche.",
+        "Après `x = 7` : `x` = $7$.",
+        "Après `x = x - 2` : `x` = $5$.",
+        "Après `x = x * 3` : `x` = $15$."
       ],
-      "reponse": "$ 13 $"
+      "reponse": "`x` = $15$"
     },
     {
       "id": 3,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 5, multiplier par 2, ajouter 4. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les instructions suivantes :\n```python\na = 3\nb = 5\na = b\nb = a\n```\nQue valent les variables à la fin ?",
       "corrige": [
-        "$ 5 \\times 2 + 4 = 14 $."
+        "Le signe `=` est une affectation : on calcule à droite, puis on range le résultat à gauche.",
+        "Après `a = 3` : `a` = $3$.",
+        "Après `b = 5` : `a` = $3$, `b` = $5$.",
+        "Après `a = b` : `a` = $5$, `b` = $5$.",
+        "Après `b = a` : `a` = $5$, `b` = $5$."
       ],
-      "reponse": "$ 14 $"
+      "reponse": "`a` = $5$ ; `b` = $5$"
     },
     {
       "id": 4,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 2, multiplier par 6, ajouter 3. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les instructions suivantes :\n```python\na = 3\nb = 5\nc = a\na = b\nb = c\n```\nQue valent les variables à la fin ?",
       "corrige": [
-        "$ 2 \\times 6 + 3 = 15 $."
+        "Le signe `=` est une affectation : on calcule à droite, puis on range le résultat à gauche.",
+        "Après `a = 3` : `a` = $3$.",
+        "Après `b = 5` : `a` = $3$, `b` = $5$.",
+        "Après `c = a` : `a` = $3$, `b` = $5$, `c` = $3$.",
+        "Après `a = b` : `a` = $5$, `b` = $5$, `c` = $3$.",
+        "Après `b = c` : `a` = $5$, `b` = $3$, `c` = $3$."
       ],
-      "reponse": "$ 15 $"
+      "reponse": "`a` = $5$ ; `b` = $3$ ; `c` = $3$"
     },
     {
       "id": 5,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 7, multiplier par 1, ajouter 2. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les instructions suivantes :\n```python\nn = 10\nn = n * n - 1\nn = n + 1\n```\nQue valent les variables à la fin ?",
       "corrige": [
-        "$ 7 \\times 1 + 2 = 9 $."
+        "Le signe `=` est une affectation : on calcule à droite, puis on range le résultat à gauche.",
+        "Après `n = 10` : `n` = $10$.",
+        "Après `n = n * n - 1` : `n` = $99$.",
+        "Après `n = n + 1` : `n` = $100$."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "`n` = $100$"
     },
     {
       "id": 6,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 6, multiplier par 2, ajouter 3. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les instructions suivantes :\n```python\nx = 2\ny = x ** 3\nx = y - x\n```\nQue valent les variables à la fin ?",
       "corrige": [
-        "$ 6 \\times 2 + 3 = 15 $."
+        "Le signe `=` est une affectation : on calcule à droite, puis on range le résultat à gauche.",
+        "Après `x = 2` : `x` = $2$.",
+        "Après `y = x ** 3` : `x` = $2$, `y` = $8$.",
+        "Après `x = y - x` : `x` = $6$, `y` = $8$."
       ],
-      "reponse": "$ 15 $"
+      "reponse": "`x` = $6$ ; `y` = $8$"
     },
     {
       "id": 7,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 4, multiplier par 4, ajouter 4. Résultat ?",
+      "notion": "affectation",
+      "enonce": "On exécute les instructions suivantes :\n```python\nm = \"bon\"\nm = m + \"jour\"\n```\nQue valent les variables à la fin ?",
       "corrige": [
-        "$ 4 \\times 4 + 4 = 20 $."
+        "Le signe `=` est une affectation : on calcule à droite, puis on range le résultat à gauche.",
+        "Après `m = \"bon\"` : `m` = `\"bon\"`.",
+        "Après `m = m + \"jour\"` : `m` = `\"bonjour\"`."
       ],
-      "reponse": "$ 20 $"
+      "reponse": "`m` = `\"bonjour\"`"
     },
     {
       "id": 8,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 8, multiplier par 2, ajouter 1. Résultat ?",
+      "notion": "affectation",
+      "enonce": "Après l'instruction\n```python\nx = 7 / 2\n```\nquel est le type de la variable `x` et quelle est sa valeur ?",
       "corrige": [
-        "$ 8 \\times 2 + 1 = 17 $."
+        "La division `/` donne toujours un nombre décimal (type `float`).",
+        "`x` vaut $3{,}5$."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "Type `float`, `x` = $3{,}5$"
     },
     {
       "id": 9,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 3, multiplier par 5, ajouter 2. Résultat ?",
+      "notion": "condition",
+      "enonce": "On considère la fonction suivante :\n```python\ndef tarif(age):\n    if age < 12:\n        return 6\n    elif age < 26:\n        return 9\n    else:\n        return 14\n```\nQue renvoient `tarif(8)`, `tarif(12)`, `tarif(40)` ?",
       "corrige": [
-        "$ 3 \\times 5 + 2 = 17 $."
+        "On teste les conditions dans l'ordre : la première qui est vraie décide du résultat.",
+        "`tarif(8)` renvoie $6$.",
+        "`tarif(12)` renvoie $9$.",
+        "`tarif(40)` renvoie $14$."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "$6$ ; $9$ ; $14$"
     },
     {
       "id": 10,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 9, multiplier par 1, ajouter 3. Résultat ?",
+      "notion": "condition",
+      "enonce": "On considère la fonction suivante :\n```python\ndef g(x):\n    if x < 0:\n        return -x\n    else:\n        return x\n```\nQue renvoient `g(-7)`, `g(0)`, `g(4)` ?",
       "corrige": [
-        "$ 9 \\times 1 + 3 = 12 $."
+        "On teste les conditions dans l'ordre : la première qui est vraie décide du résultat.",
+        "`g(-7)` renvoie $7$.",
+        "`g(0)` renvoie $0$.",
+        "`g(4)` renvoie $4$."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "$7$ ; $0$ ; $4$"
     },
     {
       "id": 11,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 5, multiplier par 3, ajouter 2. Résultat ?",
+      "notion": "condition",
+      "enonce": "On considère la fonction suivante :\n```python\ndef test(n):\n    if n % 2 == 0:\n        return \"pair\"\n    else:\n        return \"impair\"\n```\nQue renvoient `test(14)`, `test(7)`, `test(0)` ?",
       "corrige": [
-        "$ 5 \\times 3 + 2 = 17 $."
+        "On teste les conditions dans l'ordre : la première qui est vraie décide du résultat.",
+        "`test(14)` renvoie `\"pair\"`.",
+        "`test(7)` renvoie `\"impair\"`.",
+        "`test(0)` renvoie `\"pair\"`."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "`\"pair\"` ; `\"impair\"` ; `\"pair\"`"
     },
     {
       "id": 12,
       "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Programme : prendre 2, multiplier par 7, ajouter 4. Résultat ?",
+      "notion": "range",
+      "enonce": "Quelles valeurs la variable `i` prend-elle dans la boucle `for i in range(6):` ? Combien de tours la boucle fait-elle ?",
       "corrige": [
-        "$ 2 \\times 7 + 4 = 18 $."
+        "`range(a, b, p)` part de `a`, avance de `p` et s'arrête AVANT d'atteindre `b` (par défaut `a = 0` et `p = 1`).",
+        "Valeurs : 0, 1, 2, 3, 4, 5."
       ],
-      "reponse": "$ 18 $"
+      "reponse": "0, 1, 2, 3, 4, 5 ; 6 tours"
     },
     {
       "id": 13,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 1, on ajoute 2 quatre fois. Valeur finale ?",
+      "notion": "range",
+      "enonce": "Quelles valeurs la variable `i` prend-elle dans la boucle `for i in range(2, 7):` ? Combien de tours la boucle fait-elle ?",
       "corrige": [
-        "$ 1 + 4\\times 2 = 9 $."
+        "`range(a, b, p)` part de `a`, avance de `p` et s'arrête AVANT d'atteindre `b` (par défaut `a = 0` et `p = 1`).",
+        "Valeurs : 2, 3, 4, 5, 6."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "2, 3, 4, 5, 6 ; 5 tours"
     },
     {
       "id": 14,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 0, on ajoute 3 quatre fois. Valeur finale ?",
+      "notion": "range",
+      "enonce": "Quelles valeurs la variable `i` prend-elle dans la boucle `for i in range(1, 10, 2):` ? Combien de tours la boucle fait-elle ?",
       "corrige": [
-        "$ 0 + 4\\times 3 = 12 $."
+        "`range(a, b, p)` part de `a`, avance de `p` et s'arrête AVANT d'atteindre `b` (par défaut `a = 0` et `p = 1`).",
+        "Valeurs : 1, 3, 5, 7, 9."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "1, 3, 5, 7, 9 ; 5 tours"
     },
     {
       "id": 15,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 2, on ajoute 5 quatre fois. Valeur finale ?",
+      "notion": "range",
+      "enonce": "Quelles valeurs la variable `i` prend-elle dans la boucle `for i in range(10, 0, -3):` ? Combien de tours la boucle fait-elle ?",
       "corrige": [
-        "$ 2 + 4\\times 5 = 22 $."
+        "`range(a, b, p)` part de `a`, avance de `p` et s'arrête AVANT d'atteindre `b` (par défaut `a = 0` et `p = 1`).",
+        "Valeurs : 10, 7, 4, 1."
       ],
-      "reponse": "$ 22 $"
+      "reponse": "10, 7, 4, 1 ; 4 tours"
     },
     {
       "id": 16,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 1, on ajoute 4 quatre fois. Valeur finale ?",
+      "notion": "range",
+      "enonce": "Quelles valeurs la variable `i` prend-elle dans la boucle `for i in range(0, 20, 5):` ? Combien de tours la boucle fait-elle ?",
       "corrige": [
-        "$ 1 + 4\\times 4 = 17 $."
+        "`range(a, b, p)` part de `a`, avance de `p` et s'arrête AVANT d'atteindre `b` (par défaut `a = 0` et `p = 1`).",
+        "Valeurs : 0, 5, 10, 15."
       ],
-      "reponse": "$ 17 $"
+      "reponse": "0, 5, 10, 15 ; 4 tours"
     },
     {
       "id": 17,
       "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 3, on ajoute 2 quatre fois. Valeur finale ?",
+      "notion": "range",
+      "enonce": "Quelles valeurs la variable `i` prend-elle dans la boucle `for i in range(3):` ? Combien de tours la boucle fait-elle ?",
       "corrige": [
-        "$ 3 + 4\\times 2 = 11 $."
+        "`range(a, b, p)` part de `a`, avance de `p` et s'arrête AVANT d'atteindre `b` (par défaut `a = 0` et `p = 1`).",
+        "Valeurs : 0, 1, 2."
       ],
-      "reponse": "$ 11 $"
+      "reponse": "0, 1, 2 ; 3 tours"
     },
     {
       "id": 18,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 0, on ajoute 6 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "On considère la fonction suivante :\n```python\ndef f(x):\n    if x > 10:\n        return 2 * x\n    elif x == 10:\n        return 0\n    else:\n        return x + 5\n```\nQue renvoient `f(3)`, `f(10)`, `f(12)` ?",
       "corrige": [
-        "$ 0 + 4\\times 6 = 24 $."
+        "On teste les conditions dans l'ordre : la première qui est vraie décide du résultat.",
+        "`f(3)` renvoie $8$.",
+        "`f(10)` renvoie $0$.",
+        "`f(12)` renvoie $24$."
       ],
-      "reponse": "$ 24 $"
+      "reponse": "$8$ ; $0$ ; $24$"
     },
     {
       "id": 19,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 2, on ajoute 3 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "On considère la fonction suivante :\n```python\ndef mention(note):\n    if note >= 16:\n        return \"TB\"\n    elif note >= 14:\n        return \"B\"\n    elif note >= 12:\n        return \"AB\"\n    else:\n        return \"aucune\"\n```\nQue renvoient `mention(15)`, `mention(12)`, `mention(9)` ?",
       "corrige": [
-        "$ 2 + 4\\times 3 = 14 $."
+        "On teste les conditions dans l'ordre : la première qui est vraie décide du résultat.",
+        "`mention(15)` renvoie `\"B\"`.",
+        "`mention(12)` renvoie `\"AB\"`.",
+        "`mention(9)` renvoie `\"aucune\"`."
       ],
-      "reponse": "$ 14 $"
+      "reponse": "`\"B\"` ; `\"AB\"` ; `\"aucune\"`"
     },
     {
       "id": 20,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 1, on ajoute 7 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "On considère la fonction suivante :\n```python\ndef plus_grand(a, b):\n    if a > b:\n        return a\n    else:\n        return b\n```\nQue renvoient `plus_grand(3, 8)`, `plus_grand(-2, -5)`, `plus_grand(4, 4)` ?",
       "corrige": [
-        "$ 1 + 4\\times 7 = 29 $."
+        "On teste les conditions dans l'ordre : la première qui est vraie décide du résultat.",
+        "`plus_grand(3, 8)` renvoie $8$.",
+        "`plus_grand(-2, -5)` renvoie $-2$.",
+        "`plus_grand(4, 4)` renvoie $4$."
       ],
-      "reponse": "$ 29 $"
+      "reponse": "$8$ ; $-2$ ; $4$"
     },
     {
       "id": 21,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 4, on ajoute 2 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "On considère la fonction suivante :\n```python\ndef h(x):\n    if x >= 0 and x <= 5:\n        return 1\n    else:\n        return 0\n```\nQue renvoient `h(3)`, `h(5)`, `h(6)` ?",
       "corrige": [
-        "$ 4 + 4\\times 2 = 12 $."
+        "On teste les conditions dans l'ordre : la première qui est vraie décide du résultat.",
+        "`h(3)` renvoie $1$.",
+        "`h(5)` renvoie $1$.",
+        "`h(6)` renvoie $0$."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "$1$ ; $1$ ; $0$"
     },
     {
       "id": 22,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 0, on ajoute 5 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nS = 0\nfor i in range(1, 11):\n    S = S + i\n```\nQue vaut `S` à la fin ?",
       "corrige": [
-        "$ 0 + 4\\times 5 = 20 $."
+        "On ajoute à `S` les entiers de 1 à 10.",
+        "À la fin, `S` = $55$."
       ],
-      "reponse": "$ 20 $"
+      "reponse": "`S` = $55$"
     },
     {
       "id": 23,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 3, on ajoute 4 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nP = 1\nfor i in range(1, 6):\n    P = P * i\n```\nQue vaut `P` à la fin ?",
       "corrige": [
-        "$ 3 + 4\\times 4 = 19 $."
+        "On multiplie `P` par 1, 2, 3, 4 puis 5.",
+        "À la fin, `P` = $120$."
       ],
-      "reponse": "$ 19 $"
+      "reponse": "`P` = $120$"
     },
     {
       "id": 24,
-      "difficulte": "application",
-      "notion": "boucle",
-      "enonce": "On part de 2, on ajoute 2 quatre fois. Valeur finale ?",
+      "difficulte": "intermediaire",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nx = 3\nfor i in range(4):\n    x = 2 * x\n```\nQue vaut `x` à la fin ?",
       "corrige": [
-        "$ 2 + 4\\times 2 = 10 $."
+        "La boucle fait 4 tours ; à chaque tour, `x` est doublé.",
+        "À la fin, `x` = $48$."
       ],
-      "reponse": "$ 10 $"
+      "reponse": "`x` = $48$"
     },
     {
       "id": 25,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 20, diviser par 4. Résultat ?",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nS = 0\nfor i in range(5):\n    S = S + 2 * i\n```\nQue vaut `S` à la fin ?",
       "corrige": [
-        "$ 20 \\div 4 = 5 $."
+        "`i` prend les valeurs 0, 1, 2, 3, 4 ; on ajoute leurs doubles.",
+        "À la fin, `S` = $20$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "`S` = $20$"
     },
     {
       "id": 26,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 30, diviser par 5. Résultat ?",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nc = 0\nfor i in range(1, 21):\n    if i % 3 == 0:\n        c = c + 1\n```\nQue vaut `c` à la fin ?",
       "corrige": [
-        "$ 30 \\div 5 = 6 $."
+        "On compte les multiples de 3 entre 1 et 20.",
+        "À la fin, `c` = $6$."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "`c` = $6$"
     },
     {
       "id": 27,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 18, diviser par 3. Résultat ?",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nu = 100\nfor k in range(3):\n    u = u - 15\n```\nQue vaut `u` à la fin ?",
       "corrige": [
-        "$ 18 \\div 3 = 6 $."
+        "La boucle fait 3 tours ; on retire 15 à chaque tour.",
+        "À la fin, `u` = $55$."
       ],
-      "reponse": "$ 6 $"
+      "reponse": "`u` = $55$"
     },
     {
       "id": 28,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 24, diviser par 6. Résultat ?",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nS = 0\nfor i in range(1, 101):\n    S = S + i\n```\nQue vaut `S` à la fin ?",
       "corrige": [
-        "$ 24 \\div 6 = 4 $."
+        "On ajoute les entiers de 1 à 100 (attention : `range(1, 101)` s'arrête à 100).",
+        "À la fin, `S` = $5\\,050$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "`S` = $5\\,050$"
     },
     {
       "id": 29,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 40, diviser par 8. Résultat ?",
+      "notion": "boucle-for",
+      "enonce": "On exécute le programme :\n```python\nS = 0\nfor i in range(1, 5):\n    S = S + i * i\n```\nQue vaut `S` à la fin ?",
       "corrige": [
-        "$ 40 \\div 8 = 5 $."
+        "On ajoute les carrés de 1, 2, 3 et 4.",
+        "À la fin, `S` = $30$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "`S` = $30$"
     },
     {
       "id": 30,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 15, diviser par 3. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef f(x):\n    return 3 * x ** 2 - 2\n```\nQue vaut `f(4)` ?",
       "corrige": [
-        "$ 15 \\div 3 = 5 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`f(4)` vaut $46$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$46$"
     },
     {
       "id": 31,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 36, diviser par 9. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef f(x):\n    return 2 * x + 1\n\ndef g(x):\n    return x * x\n```\nQue vaut `g(f(3))` ?",
       "corrige": [
-        "$ 36 \\div 9 = 4 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`g(f(3))` vaut $49$."
       ],
-      "reponse": "$ 4 $"
+      "reponse": "$49$"
     },
     {
       "id": 32,
       "difficulte": "intermediaire",
-      "notion": "programme",
-      "enonce": "Programme : prendre 50, diviser par 10. Résultat ?",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef aire(L, l):\n    return L * l\n```\nQue vaut `aire(7, 4) + aire(2, 3)` ?",
       "corrige": [
-        "$ 50 \\div 10 = 5 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`aire(7, 4) + aire(2, 3)` vaut $34$."
       ],
-      "reponse": "$ 5 $"
+      "reponse": "$34$"
     },
     {
       "id": 33,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 3, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef f(x):\n    return 2 * x + 1\n\ndef g(x):\n    return x * x\n```\nQue vaut `f(g(3))` ?",
       "corrige": [
-        "$ = 9 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`f(g(3))` vaut $19$."
       ],
-      "reponse": "$ 9 $"
+      "reponse": "$19$"
     },
     {
       "id": 34,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 4, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef moyenne(a, b, c):\n    return (a + b + c) / 3\n```\nQue vaut `moyenne(12, 15, 9)` ?",
       "corrige": [
-        "$ = 12 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`moyenne(12, 15, 9)` vaut $12$. Attention : la division `/` donne toujours un `float`, donc Python affiche ce résultat avec une partie décimale nulle."
       ],
-      "reponse": "$ 12 $"
+      "reponse": "$12$"
     },
     {
       "id": 35,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 5, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef h(n):\n    S = 0\n    for i in range(n + 1):\n        S = S + i\n    return S\n```\nQue vaut `h(6)` ?",
       "corrige": [
-        "$ = 15 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`h(6)` vaut $21$."
       ],
-      "reponse": "$ 15 $"
+      "reponse": "$21$"
     },
     {
       "id": 36,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 6, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef cube(x):\n    return x ** 3\n```\nQue vaut `cube(2) + cube(-1)` ?",
       "corrige": [
-        "$ = 18 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`cube(2) + cube(-1)` vaut $7$."
       ],
-      "reponse": "$ 18 $"
+      "reponse": "$7$"
     },
     {
       "id": 37,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 7, multiplier par 3. Résultat ?",
+      "difficulte": "intermediaire",
+      "notion": "fonction",
+      "enonce": "On définit :\n```python\ndef p(x):\n    if x > 0:\n        return x\n    return 0\n```\nQue vaut `p(-3) + p(5)` ?",
       "corrige": [
-        "$ = 21 $."
+        "`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
+        "`p(-3) + p(5)` vaut $5$."
       ],
-      "reponse": "$ 21 $"
+      "reponse": "$5$"
     },
     {
       "id": 38,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 8, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "boucle-while",
+      "enonce": "On exécute le programme :\n```python\nn = 0\nwhile 2 ** n < 1000:\n    n = n + 1\n```\nQue vaut `n` à la fin ?",
       "corrige": [
-        "$ = 24 $."
+        "On cherche le plus petit entier `n` tel que $2^n \\geqslant 1\\,000$.",
+        "La boucle s'arrête dès que la condition devient fausse.",
+        "À la fin, `n` = $10$."
       ],
-      "reponse": "$ 24 $"
+      "reponse": "`n` = $10$"
     },
     {
       "id": 39,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 9, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "boucle-while",
+      "enonce": "On exécute le programme :\n```python\nn = 0\nwhile 3 ** n <= 500:\n    n = n + 1\n```\nQue vaut `n` à la fin ?",
       "corrige": [
-        "$ = 27 $."
+        "On cherche le plus petit entier `n` tel que $3^n > 500$.",
+        "La boucle s'arrête dès que la condition devient fausse.",
+        "À la fin, `n` = $6$."
       ],
-      "reponse": "$ 27 $"
+      "reponse": "`n` = $6$"
     },
     {
       "id": 40,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 10, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "boucle-while",
+      "enonce": "On exécute le programme :\n```python\nx = 1\nk = 0\nwhile x < 100:\n    x = x * 3\n    k = k + 1\n```\nQue vaut `k` à la fin ?",
       "corrige": [
-        "$ = 30 $."
+        "On multiplie `x` par 3 jusqu'à atteindre au moins 100 ; `k` compte les tours.",
+        "La boucle s'arrête dès que la condition devient fausse.",
+        "À la fin, `k` = $5$."
       ],
-      "reponse": "$ 30 $"
+      "reponse": "`k` = $5$"
     },
     {
       "id": 41,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 11, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "boucle-while",
+      "enonce": "On exécute le programme :\n```python\nS = 0\nn = 0\nwhile S <= 50:\n    n = n + 1\n    S = S + n\n```\nQue vaut `n` à la fin ?",
       "corrige": [
-        "$ = 33 $."
+        "On ajoute 1, 2, 3… jusqu'à ce que la somme dépasse 50.",
+        "La boucle s'arrête dès que la condition devient fausse.",
+        "À la fin, `n` = $10$."
       ],
-      "reponse": "$ 33 $"
+      "reponse": "`n` = $10$"
     },
     {
       "id": 42,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 12, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "boucle-while",
+      "enonce": "On exécute le programme :\n```python\nu = 1000\nn = 0\nwhile u > 100:\n    u = u / 2\n    n = n + 1\n```\nQue vaut `n` à la fin ?",
       "corrige": [
-        "$ = 36 $."
+        "On divise `u` par 2 jusqu'à ce qu'il devienne inférieur ou égal à 100.",
+        "La boucle s'arrête dès que la condition devient fausse.",
+        "À la fin, `n` = $4$."
       ],
-      "reponse": "$ 36 $"
+      "reponse": "`n` = $4$"
     },
     {
       "id": 43,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 13, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "boucle-while",
+      "enonce": "On exécute le programme :\n```python\nx = 0\nwhile x * x < 50:\n    x = x + 1\n```\nQue vaut `x` à la fin ?",
       "corrige": [
-        "$ = 39 $."
+        "Balayage : on cherche le premier entier `x` tel que $x^2 \\geqslant 50$.",
+        "La boucle s'arrête dès que la condition devient fausse.",
+        "À la fin, `x` = $8$."
       ],
-      "reponse": "$ 39 $"
+      "reponse": "`x` = $8$"
     },
     {
       "id": 44,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 14, multiplier par 3. Résultat ?",
+      "difficulte": "approfondissement",
+      "notion": "boucle-while",
+      "enonce": "On exécute le programme :\n```python\na = 50\nwhile a >= 7:\n    a = a - 7\n```\nQue vaut `a` à la fin ?",
       "corrige": [
-        "$ = 42 $."
+        "On retire 7 tant que c'est possible : c'est le reste de la division de 50 par 7.",
+        "La boucle s'arrête dès que la condition devient fausse.",
+        "À la fin, `a` = $1$."
       ],
-      "reponse": "$ 42 $"
+      "reponse": "`a` = $1$"
     },
     {
       "id": 45,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 15, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Léa a 50 € d'économies et ajoute 15 € chaque semaine. Le programme suivant calcule le nombre de semaines nécessaires pour atteindre au moins 200 € :\n```python\ns = 50\nn = 0\nwhile s < 200:\n    s = s + 15\n    n = n + 1\n```\nQuelle valeur de `n` obtient-on ? Interpréter.",
       "corrige": [
-        "$ = 45 $."
+        "Tant que l'épargne `s` est inférieure à 200, on ajoute 15 et on compte une semaine de plus.",
+        "On obtient `n` = $10$.",
+        "Léa atteint 200 € au bout de 10 semaines."
       ],
-      "reponse": "$ 45 $"
+      "reponse": "`n` = $10$ : Léa atteint 200 € au bout de 10 semaines."
     },
     {
       "id": 46,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 16, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Une population de bactéries compte 500 individus et double toutes les heures. Le programme calcule le nombre d'heures pour dépasser 100 000 bactéries :\n```python\nb = 500\nh = 0\nwhile b <= 100000:\n    b = 2 * b\n    h = h + 1\n```\nQuelle valeur de `h` obtient-on ? Interpréter.",
       "corrige": [
-        "$ = 48 $."
+        "À chaque tour, la population double et on compte une heure de plus ; on s'arrête dès que `b` dépasse 100 000.",
+        "On obtient `h` = $8$.",
+        "Il faut 8 heures pour dépasser 100 000 bactéries."
       ],
-      "reponse": "$ 48 $"
+      "reponse": "`h` = $8$ : il faut 8 heures pour dépasser 100 000 bactéries."
     },
     {
       "id": 47,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 17, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Un parking coûte 3 € la première heure puis 2 € par heure supplémentaire. On programme :\n```python\ndef prix(h):\n    if h <= 1:\n        return 3\n    else:\n        return 3 + 2 * (h - 1)\n\np = prix(5)\n```\nQuelle valeur de `p` obtient-on ? Interpréter.",
       "corrige": [
-        "$ = 51 $."
+        "Pour 5 heures, la condition `h <= 1` est fausse : on calcule `3 + 2 * (5 - 1)`.",
+        "On obtient `p` = $11$.",
+        "Stationner 5 heures coûte 11 €."
       ],
-      "reponse": "$ 51 $"
+      "reponse": "`p` = $11$ : stationner 5 heures coûte 11 €."
     },
     {
       "id": 48,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 18, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Une classe a obtenu les notes suivantes. Le programme compte les notes supérieures ou égales à 10 :\n```python\nnotes = [12, 8, 15, 9, 18, 10, 7, 14]\nc = 0\nfor x in notes:\n    if x >= 10:\n        c = c + 1\n```\nQuelle valeur de `c` obtient-on ? Interpréter.",
       "corrige": [
-        "$ = 54 $."
+        "On parcourt la liste ; le compteur augmente pour 12, 15, 18, 10 et 14 (le 10 compte car la condition est `>=`).",
+        "On obtient `c` = $5$.",
+        "5 élèves ont au moins 10."
       ],
-      "reponse": "$ 54 $"
+      "reponse": "`c` = $5$ : 5 élèves ont au moins 10."
     },
     {
       "id": 49,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 19, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Un réservoir contient 2 000 L d'eau ; il perd 150 L par jour. Le programme calcule le nombre de jours avant qu'il contienne moins de 500 L :\n```python\nv = 2000\nj = 0\nwhile v >= 500:\n    v = v - 150\n    j = j + 1\n```\nQuelle valeur de `j` obtient-on ? Interpréter.",
       "corrige": [
-        "$ = 57 $."
+        "Tant que le volume est d'au moins 500 L, on retire 150 L et on compte un jour.",
+        "On obtient `j` = $11$.",
+        "Le réservoir contient moins de 500 L au bout de 11 jours."
       ],
-      "reponse": "$ 57 $"
+      "reponse": "`j` = $11$ : le réservoir contient moins de 500 L au bout de 11 jours."
     },
     {
       "id": 50,
-      "difficulte": "application",
-      "notion": "programme",
-      "enonce": "Prendre 20, multiplier par 3. Résultat ?",
+      "difficulte": "probleme",
+      "notion": "probleme-algorithme",
+      "enonce": "Une pyramide de cubes a 1 cube au sommet, 2 cubes à l'étage suivant, 3 à l'étage d'après, etc. Le programme cherche le nombre d'étages pour lequel on utilise plus de 1 000 cubes :\n```python\nS = 0\nn = 0\nwhile S <= 1000:\n    n = n + 1\n    S = S + n\n```\nQuelle valeur de `n` obtient-on ? Interpréter.",
       "corrige": [
-        "$ = 60 $."
+        "On ajoute un étage de `n` cubes tant que le total `S` ne dépasse pas 1 000.",
+        "On obtient `n` = $45$.",
+        "Il faut 45 étages pour utiliser plus de 1 000 cubes."
       ],
-      "reponse": "$ 60 $"
+      "reponse": "`n` = $45$ : il faut 45 étages pour utiliser plus de 1 000 cubes."
     }
   ]
 }

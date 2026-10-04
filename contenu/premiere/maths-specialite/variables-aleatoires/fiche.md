@@ -208,7 +208,7 @@ $$\boxed{\frac{2\sigma}{\sqrt{n}}}$$
    variance négative, ce qui est impossible — c'est d'ailleurs un bon signal d'alerte.
 2. **Oublier de vérifier que $\sum p_i = 1$.** C'est le contrôle le plus rapide et le plus
    rentable.
-3. **Confondre $\{X = a\}$ et $P(X = a\)$** : un événement et un nombre.
+3. **Confondre $\{X = a\}$ et $P(X = a)$** : un événement et un nombre.
 4. **Confondre variance et écart-type** dans la conclusion : l'écart-type est la racine, et
    c'est lui qui s'exprime dans l'unité de $X$.
 5. **Oublier le signe négatif des pertes** dans un calcul de gain algébrique — une mise
