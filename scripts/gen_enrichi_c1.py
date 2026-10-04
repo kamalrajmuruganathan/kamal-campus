@@ -1670,7 +1670,7 @@ def g5_transformations():
         (I, "$ABC$ est un triangle rectangle en $A$. Quelle est la nature de son image par un demi-tour ?",
          "Les angles sont conservés : l'angle droit reste un angle droit.", "Un triangle rectangle en $A'$"),
         (I, "Par un demi-tour, $(AB)$ a pour image $(A'B')$. Quelle est la position de $(A'B')$ par rapport à $(AB)$ ?",
-         "L'image d'une droite par un demi-tour est une droite parallèle.", "Elles sont parallèles"),
+         "L'image d'une droite par un demi-tour est une droite parallèle (elle est confondue avec $(AB)$ si $(AB)$ passe par le centre).", "Elles sont parallèles"),
         (PB, "Un carré $ABCD$ a un côté de $4$ cm. On construit son image par un demi-tour. Donne le périmètre et l'aire de l'image.",
          [f"Longueurs conservées : périmètre $ 4 \\times 4 = 16 $ cm.", f"Aire conservée : $ 4 \\times 4 = 16 $ cm²."], "$16$ cm et $16$ cm²"),
     ]
@@ -1781,7 +1781,7 @@ def g5_triangles_angles():
     E(PB, "inegalite-triangulaire", "Un triangle a deux côtés de $5$ cm et $8$ cm. Le troisième côté mesure un nombre entier de centimètres et c'est le plus long. Quelle est sa plus grande longueur possible ?",
       ["Le plus grand côté doit être strictement plus petit que $ 5 + 8 = 13 $ cm.", "Le plus grand entier possible est donc $12$ cm."], "$12$ cm")
     E(PB, "inegalite-triangulaire", "Trois villes $A$, $B$ et $C$ sont reliées par des routes droites : de $A$ à $B$ il y a $40$ km et de $B$ à $C$ $25$ km. La distance à vol d'oiseau de $A$ à $C$ peut-elle être de $70$ km ?",
-      [f"Dans le triangle $ABC$, $AC$ doit être plus petit que $ 40 + 25 = {40+25} $ km.", "$70 > 65$ : c'est impossible."], "Non")
+      [f"La distance $AC$ ne peut pas dépasser $ AB + BC = 40 + 25 = {40+25} $ km (elle lui est égale seulement si $B$ est sur le segment $[AC]$).", "$70 > 65$ : c'est impossible."], "Non")
     return E.fin()
 
 
