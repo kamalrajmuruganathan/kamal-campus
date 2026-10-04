@@ -4,10 +4,12 @@ Contexte de reprise (discussion Cowork du 03/10/2026). À lire en entier avant d
 
 ## 1. Le projet
 - **Kamal Campus** : application de révision scolaire (CP → Terminale), Expo / React Native,
-  publiée sur le web via Netlify : https://kamal-campus.netlify.app
+  publiée sur **GitHub Pages** depuis le 04/10/2026 : https://kamalrajmuruganathan.github.io/kamal-campus/
+  (appli : …/kamal-campus/app/). L'ancien site Netlify (https://kamal-campus.netlify.app) n'est plus mis à jour.
 - 956 chapitres, 21 matières. Dépôt `kamalrajmuruganathan/kamal-campus`.
-- Branche de travail : **`upgrade-sdk57`**. La publication se fait avec `bash scripts/publier.sh`
-  (fusion vers `main` → build Netlify).
+- Branche de travail : **`upgrade-sdk57`**. Publier = fusionner `upgrade-sdk57` dans `main`
+  (`bash scripts/publier.sh`, ou sur github.com : Compare `main...upgrade-sdk57` → Pull request → Merge).
+  Le workflow `.github/workflows/pages.yml` construit et publie alors le site (≈ 3 min). Dépôt **public**.
 - Backend : Supabase (Postgres + RLS + RPC `security definer` + Realtime).
 - L'utilisateur (Kamal) code dans un Codespace (VS Code web) et souvent depuis son téléphone.
   Il n'est pas développeur de métier : explications simples, étapes numérotées, en français.
@@ -139,3 +141,6 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
   https://kamalrajmuruganathan.github.io/kamal-campus/). Testé localement. **Bloquant** : le dépôt est privé →
   Pages exige un dépôt public (gratuit) ou GitHub Pro. Ensuite : Settings → Pages → Source « GitHub Actions »,
   et ajouter l'URL dans Supabase (Authentication → URL Configuration → Redirect URLs).
+- **04/10/2026 : passage à GitHub Pages réussi.** Dépôt rendu public, Pages activé (Source : GitHub Actions),
+  fusion PR #1 `upgrade-sdk57` → `main` (b402d83), CI verte, déploiement OK. Pas de limite de crédits.
+  Claude ne peut pas pousser sur `main` lui-même (bloqué par la sécurité) : c'est Kamal qui fusionne.
