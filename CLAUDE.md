@@ -130,3 +130,12 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
   Formules : `node outils/verifier-katex.cjs` (0 erreur sur ~119 000 formules).
 - Points pédagogiques à faire valider par Kamal : voir le message de synthèse de la session du 03/10
   (notions retirées car hors fiche, constantes K données, prix du kWh 0,25 €, dérivée du quotient en 1re techno…).
+- **Autres matières (04/10, non publiées)** : 97 chapitres à 10 exos rééquilibrés (≥ 4 notions, ≤ 4 par notion) ;
+  vérificateur `python3 scripts/verifier_json.py <niveau/matiere/slug>`. Relecture approfondie des 8 100 exos
+  maths/PC : 0 erreur de calcul, 146 corrections de fond. Philosophie : accents rétablis (fiches, QCM, exos,
+  flashcards) + attributions corrigées (« conquis, construit, constaté » = Bourdieu et al. ; adage scolastique ≠ Hume).
+  218 « \n » littéraux remplacés par de vrais retours à la ligne (29 fichiers).
+- **GitHub Pages** : `.github/workflows/pages.yml` (publie à chaque push sur `main`, adresse
+  https://kamalrajmuruganathan.github.io/kamal-campus/). Testé localement. **Bloquant** : le dépôt est privé →
+  Pages exige un dépôt public (gratuit) ou GitHub Pro. Ensuite : Settings → Pages → Source « GitHub Actions »,
+  et ajouter l'URL dans Supabase (Authentication → URL Configuration → Redirect URLs).
