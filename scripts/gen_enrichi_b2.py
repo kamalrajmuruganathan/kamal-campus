@@ -387,9 +387,10 @@ def gen_cm2_graphiques():
         titre = ["Œufs ramassés à la ferme", "Kilomètres parcourus à vélo par Hugo", "Pages lues par Jade",
                  "Spectateurs au cinéma du village", "Arbres plantés par la commune", "Colis livrés",
                  "Courriels reçus par la mairie"][i]
+        unite = ["œufs", "km", "pages", "spectateurs", "arbres", "colis", "courriels"][i]
         add("application" if k < 5 else "intermediaire", "total", tab(titre, noms, v) + " Calcule le total.",
             ["On additionne toutes les valeurs : $" + " + ".join(str(x) for x in v) + f" = {sum(v)}$."],
-            f"${sum(v)}$")
+            f"${sum(v)}$ {unite}")
     # écart (7)
     for i in range(7):
         v = serie(4, 3, 30)
@@ -438,7 +439,7 @@ def gen_cm2_graphiques():
         g = serie(3, 2, 15)
         f_ = serie(3, 2, 15)
         sp = rng.sample(["football", "natation", "danse", "basket", "judo", "tennis"], 3)
-        base = ("Sport préféré dans une classe. Garçons : " + ", ".join(f"{s} {x}" for s, x in zip(sp, g)) +
+        base = ("Sport préféré des élèves de CM1 et de CM2 d'une école. Garçons : " + ", ".join(f"{s} {x}" for s, x in zip(sp, g)) +
                 ". Filles : " + ", ".join(f"{s} {x}" for s, x in zip(sp, f_)) + ".")
         q = i % 3
         j = rng.randrange(3)
@@ -446,10 +447,10 @@ def gen_cm2_graphiques():
             add("application", "double-entree", base + f" Combien d'élèves en tout préfèrent {ART[sp[j]]} ?",
                 [f"On additionne garçons et filles : ${g[j]} + {f_[j]} = {g[j] + f_[j]}$."], f"${g[j] + f_[j]}$ élèves")
         elif q == 1:
-            add("intermediaire", "double-entree", base + " Combien y a-t-il de filles dans la classe ?",
+            add("intermediaire", "double-entree", base + " Combien de filles ont répondu ?",
                 ["On additionne la ligne des filles : $" + " + ".join(map(str, f_)) + f" = {sum(f_)}$."], f"${sum(f_)}$ filles")
         else:
-            add("intermediaire", "double-entree", base + " Combien y a-t-il d'élèves dans la classe ?",
+            add("intermediaire", "double-entree", base + " Combien d'élèves ont répondu en tout ?",
                 [f"Garçons : $" + " + ".join(map(str, g)) + f" = {sum(g)}$.", "Filles : $" + " + ".join(map(str, f_)) + f" = {sum(f_)}$.",
                  f"Total : ${sum(g)} + {sum(f_)} = {sum(g) + sum(f_)}$."], f"${sum(g) + sum(f_)}$ élèves")
     # diagramme en bâtons (5)
@@ -641,7 +642,7 @@ def gen_cm2_problemes():
             rep = f"${q}$ boîtes pleines, reste ${r}$"
             diff = "intermediaire"
         elif typ == "sup":
-            c.append(f"Il reste {r} : il faut un {u if u == 'minibus' else 'voyage'} de plus pour eux, soit ${q} + 1 = {q + 1}$.")
+            c.append(f"Il reste {r} : il faut un {u if u == 'minibus' else 'voyage'} de plus pour {'ces ' + str(r) + ' personnes' if u == 'minibus' else 'ces ' + str(r) + ' chaises'}, soit ${q} + 1 = {q + 1}$.")
             rep = f"${q + 1}$ {u}"
             diff = "approfondissement"
         else:
@@ -660,7 +661,7 @@ def gen_cm2_problemes():
         ("Un cinéma vend {a} places à {b} € et {c} places à {d} €. Quelle est la recette ?", (125, 9, 48, 6)),
         ("Une boulangerie fait {a} plaques de {b} croissants. Elle en vend {c} le matin. Combien en reste-t-il ?", (12, 24, 230, None)),
         ("Un car de {a} places fait {b} allers-retours ; il est plein à chaque trajet (aller et retour). Combien de passagers a-t-il transportés ?", (55, 3, None, None)),
-        ("Trois amis achètent un jeu à {a} € et une boisson à {b} € chacun. Ils partagent la dépense totale en parts égales. Combien paie chacun ?", (36, 2, None, None)),
+        ("Trois amis achètent ensemble un jeu à {a} €, et chacun prend une boisson à {b} €. Ils partagent la dépense totale en parts égales. Combien paie chacun ?", (36, 2, None, None)),
     ]
     for k, (t, v) in enumerate(etapes):
         if "cahiers" in t:
@@ -778,14 +779,16 @@ def gen_cm2_proportionnalite():
     for s_, r, c in situ:
         add("application", "reconnaitre", f"Ces deux grandeurs sont-elles proportionnelles ? {s_}", [c], r)
     # passage à l'unité (8)
-    pu = [(4, 12, 6, "cahiers", "€"), (5, 15, 8, "baguettes", "€"), (3, 21, 7, "kg de cerises", "€"), (6, 9, 10, "yaourts", "€"),
-          (4, 5, 9, "stylos", "€"), (8, 20, 3, "billets de bus", "€"), (5, 35, 12, "places de cinéma", "€"), (3, 4.5, 8, "croissants", "€")]
+    pu = [(4, 12, 6, "cahiers", "un cahier"), (5, 15, 8, "sandwichs", "un sandwich"), (3, 21, 7, "kg de cerises", "un kilogramme"),
+          (6, 9, 10, "briques de jus", "une brique"),
+          (4, 5, 9, "stylos", "un stylo"), (8, 20, 3, "billets de bus", "un billet"), (5, 35, 12, "places de cinéma", "une place"),
+          (3, 4.5, 8, "croissants", "un croissant")]
     for a, p, b, u, unit in pu:
         un = _dec(p) / a
         r = un * b
         add("application" if un == un.to_integral_value() else "intermediaire", "passage-unite",
             f"{a} {u} coûtent {eur(p)} €. Combien coûtent {b} {u} ?",
-            [f"Prix d'un seul : ${eurm(p)} \\div {a} = {eurm(un)}$ €.", f"Prix de {b} : ${b} \\times {eurm(un)} = {eurm(r)}$ €."],
+            [f"Prix {de(unit)} : ${eurm(p)} \\div {a} = {eurm(un)}$ €.", f"Prix de {b} {u} : ${b} \\times {eurm(un)} = {eurm(r)}$ €."],
             f"${eurm(r)}$ €")
     # linéarité (7)
     lin = [("3 litres de jus servent 6 personnes. Combien de litres faut-il pour 12 personnes ?", 3, 6, 12, "L"),
@@ -1001,14 +1004,15 @@ def gen_cm2_symetrie():
         add("application" if fig.split(" ")[1] in ("carré", "rectangle", "cercle") else "intermediaire", "axes-figures",
             f"Combien d'axes de symétrie possède {fig} ?", [c], n if n == "une infinité" else f"${n}$")
     # lettres (8)
-    lettres_ = [("A", "un axe vertical"), ("B", "un axe horizontal"), ("H", "deux axes : un vertical et un horizontal"),
-                ("T", "un axe vertical"), ("E", "un axe horizontal"), ("X", "deux axes : un vertical et un horizontal"),
+    lettres_ = [("A", "un axe vertical"), ("B", "un axe horizontal"), ("H", "deux axes, un vertical et un horizontal"),
+                ("T", "un axe vertical"), ("E", "un axe horizontal"), ("X", "deux axes, un vertical et un horizontal"),
                 ("F", "aucun axe"), ("N", "aucun axe")]
     for L, r in lettres_:
         c = {"aucun axe": f"Aucun pliage de la lettre {L} ne superpose les deux moitiés : elle n'a aucun axe de symétrie."}.get(
-            r, f"En pliant la lettre {L} le long de cet axe, les deux moitiés se superposent : {r}.")
+            r, (f"En pliant la lettre {L} le long de chacun de ces axes, les deux moitiés se superposent : {r}." if r.startswith("deux")
+                else f"En pliant la lettre {L} le long de cet axe, les deux moitiés se superposent : {r}."))
         add("application" if r != "aucun axe" else "intermediaire", "lettres",
-            f"La lettre {L} (écrite en majuscule d'imprimerie) a-t-elle un axe de symétrie ? Si oui, lequel ?", [c], r)
+            f"La lettre {L} (écrite en majuscule d'imprimerie) a-t-elle un axe de symétrie ? Si oui, lequel ou lesquels ?", [c], r)
     # quadrillage : distances (10)
     q = [(3, "à gauche", "à droite", "vertical"), (5, "au-dessus", "au-dessous", "horizontal"), (2, "à droite", "à gauche", "vertical"),
          (7, "au-dessous", "au-dessus", "horizontal"), (4, "à gauche", "à droite", "vertical")]
@@ -1192,8 +1196,8 @@ def gen_6_configurations():
 
 
 # ================================================================ 6e : DURÉES
-CTX_DUREE = ["Un trajet en car", "Un cours de natation", "Un match de handball", "Un voyage en train", "Un atelier de cuisine",
-             "Un spectacle de danse", "Un trajet en voiture", "Un tournoi d'échecs", "Un pique-nique"]
+CTX_DUREE = ["Un trajet en car", "Un après-midi au zoo", "Un repas de famille", "Un voyage en train", "Un atelier de cuisine",
+             "Un cours de natation", "Un trajet en voiture", "Un atelier de lecture", "Un goûter d'anniversaire"]
 def gen_6_durees():
     rng = random.Random(6202)
     E = []
@@ -1287,7 +1291,7 @@ def gen_6_durees():
         add(d, "annees-siecles", e, c, r)
     # problèmes (6)
     add("probleme", "probleme-durees",
-        "Léa part de chez elle à 7 h 50. Le bus dure 25 min, puis elle marche 10 min. À quelle heure arrive-t-elle ?",
+        "Léa part de chez elle à 7 h 50. Le trajet en bus dure 25 min, puis elle marche 10 min. À quelle heure arrive-t-elle ?",
         ["7 h 50 + 25 min : $50 + 25 = 75 = 60 + 15$, donc 8 h 15.", "8 h 15 + 10 min = 8 h 25."], "8 h 25")
     add("probleme", "probleme-durees",
         "Un film de 1 h 45 min commence à 20 h 30. Avant le film, il y a 20 min de publicités. À quelle heure se termine le film ?",
@@ -1302,7 +1306,7 @@ def gen_6_durees():
     add("probleme", "probleme-durees",
         "Un train part à 9 h 40 et arrive à 13 h 15. Il s'arrête 20 min dans une gare. Combien de temps a-t-il roulé ?",
         ["Durée totale : de 9 h 40 à 10 h 00 : 20 min ; de 10 h 00 à 13 h 15 : 3 h 15 min. Total : 3 h 35 min.",
-         "Temps de roulage : 3 h 35 min − 20 min = 3 h 15 min."], "3 h 15 min")
+         "Temps passé à rouler : 3 h 35 min − 20 min = 3 h 15 min."], "3 h 15 min")
     add("probleme", "probleme-durees",
         "Un gâteau doit cuire trois quarts d'heure. Jade le met au four à 16 h 25. À quelle heure doit-elle le sortir ?",
         ["Trois quarts d'heure = 45 min.", "16 h 25 + 45 min : $25 + 45 = 70$ min $= 1$ h 10 min, donc 17 h 10."], "17 h 10")
@@ -1420,7 +1424,7 @@ def gen_6_gestion_donnees():
             ("Moyen de transport des élèves", ["à pied", "en bus", "en voiture", "à vélo"]),
             ("Animaux de compagnie des élèves", ["chiens", "chats", "poissons", "lapins"]),
             ("Fruits vendus au marché (en kg)", ["pommes", "poires", "oranges", "bananes"]),
-            ("Votes pour le délégué", ["Inès", "Hugo", "Sarah", "Noah"]),
+            ("Votes pour la mascotte du collège", ["renard", "hibou", "ours", "dauphin"]),
             ("Sport pratiqué en club", ["football", "danse", "judo", "natation"])]
     for i, (t, cs) in enumerate(cats):
         v = serie(4, 3, 25)
@@ -1474,7 +1478,7 @@ def gen_6_gestion_donnees():
     circ = [(28, "la moitié", 2), (40, "le quart", 4), (36, "le tiers", 3), (60, "la moitié", 2), (32, "le quart", 4), (45, "le tiers", 3)]
     for tot, part, d_ in circ:
         add("intermediaire" if d_ != 3 else "approfondissement", "diagramme-circulaire",
-            f"Un diagramme circulaire représente les {tot} élèves d'une classe. La part « cantine » occupe {part} du disque. Combien d'élèves mangent à la cantine ?",
+            f"Un diagramme circulaire représente les réponses de {tot} élèves. La part « cantine » occupe {part} du disque. Combien d'élèves mangent à la cantine ?",
             ["Le disque entier représente le total.", f"{_cap(part)} de {tot} : ${tot} \\div {d_} = {tot // d_}$."], f"${tot // d_}$ élèves")
     # courbe (7)
     for i in range(7):
@@ -1816,7 +1820,7 @@ def gen_6_nombres():
         suiv = ["dixièmes", "centièmes", "millièmes"][nd]
         ch = int((d_ * 10 ** (nd + 1)).to_integral_value(rounding=ROUND_FLOOR)) % 10
         add("intermediaire" if nd else "application", "arrondir", f"Arrondis ${nm(d_)}$ {nom}.",
-            [f"On regarde le chiffre des {suiv} : c'est ${ch}$, {'supérieur ou égal à 5 : on arrondit au-dessus' if ch >= 5 else 'inférieur à 5 : on garde le chiffre précédent'}.",
+            [f"On regarde le chiffre des {suiv} : c'est ${ch}$, {'supérieur ou égal à 5 : on arrondit au-dessus' if ch >= 5 else 'inférieur à 5 : on arrondit en dessous (on garde ' + ['les unités', 'le chiffre des dixièmes', 'le chiffre des centièmes'][nd] + ' sans le changer)'}.",
              f"${nm(d_)} \\approx {nm(r, nd)}$" + (f", soit ${nm(r)}$." if nm(r) != nm(r, nd) else ".")], f"${nm(r, nd)}$")
     # pourcentage (7)
     for p in (35, 7, 50, 85):

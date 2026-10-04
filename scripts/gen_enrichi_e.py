@@ -467,7 +467,7 @@ def gen_5e_energie_electricite():
          ["L'eau conduit le courant électrique.", "Le courant du secteur (230 V) pourrait traverser le corps."], "application"),
         ("Qu'appelle-t-on un court-circuit ?",
          "Relier directement les deux bornes d'un générateur par un fil, sans récepteur",
-         ["Il passe alors une très grande intensité.", "Le fil chauffe fortement : risque d'incendie."], "intermediaire"),
+         ["C'est relier directement les deux bornes d'un générateur par un fil, sans récepteur.", "Il passe alors une très grande intensité : le fil chauffe fortement, risque d'incendie."], "intermediaire"),
         ("Quel est le rôle d'un disjoncteur dans une maison ?",
          "Couper automatiquement le courant si l'intensité devient trop grande",
          ["C'est un organe de sécurité : il ne faut jamais le neutraliser."], "intermediaire"),
@@ -540,6 +540,15 @@ def gen_5e_mouvement():
         "rectiligne dans le train, curviligne pour le quai")
 
     # -- comparer des vitesses (10)
+    def _defini(nom):
+        """« un cycliste » -> « Le cycliste » (réponse : article défini)."""
+        n = nom[0].upper() + nom[1:]
+        if n.startswith("Une "):
+            return "La " + n[4:]
+        if n.startswith("Un "):
+            return "Le " + n[3:]
+        return n
+
     same_t = [("Un cycliste", 300, "un piéton", 80, "1 minute"),
               ("Un coureur", 250, "un marcheur", 90, "1 minute"),
               ("Une voiture en ville", 800, "un vélo", 300, "1 minute"),
@@ -549,8 +558,8 @@ def gen_5e_mouvement():
         add("application", "comparer-vitesses",
             f"En {du}, {a[0].lower() + a[1:]} parcourt {t(da)} m et {b} parcourt {t(db)} m. Lequel va le plus vite ?",
             ["À durée égale, va plus vite celui qui parcourt la plus grande distance.",
-             f"${nb(da)} > {nb(db)}$ : {rap[0].lower() + rap[1:]} va plus vite."],
-            rap[0].upper() + rap[1:])
+             f"${nb(da)} > {nb(db)}$ : {_defini(rap).lower()[:1] + _defini(rap)[1:]} va plus vite."],
+            _defini(rap))
     same_d = [("Un sprinteur", 11, "un marcheur", 75, "100 m"),
               ("Lina", 52, "Tom", 47, "200 m"),
               ("Un cheval au galop", 80, "un cycliste", 150, "1 km"),
@@ -560,8 +569,8 @@ def gen_5e_mouvement():
         add("intermediaire", "comparer-vitesses",
             f"Pour parcourir {di}, {a[0].lower() + a[1:] if a not in ('Lina',) else a} met {ta} s et {b} met {tb} s. Qui va le plus vite ?",
             ["À distance égale, va plus vite celui qui met le moins de temps.",
-             f"${min(ta, tb)}$ s $< {max(ta, tb)}$ s : {rap if rap in ('Lina', 'Tom') else rap[0].lower() + rap[1:]} va plus vite."],
-            rap)
+             f"${min(ta, tb)}$ s $< {max(ta, tb)}$ s : {rap if rap in ('Lina', 'Tom') else _defini(rap)[0].lower() + _defini(rap)[1:]} va plus vite."],
+            _defini(rap))
     for (da, ta, db, tb) in ((400, 2, 250, 1), (900, 3, 1000, 4)):
         # ramener à la même durée : multiplier la distance de celui qui a la plus courte durée
         k = ta // tb if ta % tb == 0 else None
@@ -637,10 +646,10 @@ def gen_5e_mouvement():
          ["Par rapport à la Terre, le Soleil semble bouger.", "En réalité, c'est la Terre qui tourne sur elle-même et autour du Soleil."], "approfondissement"),
         ("Vrai ou faux ? La trajectoire d'un objet ne dépend pas de l'observateur.", "Faux",
          ["La trajectoire dépend du référentiel (exemple de la balle lâchée dans un train)."], "approfondissement"),
-        ("Vrai ou faux ? Un objet immobile n'a pas de trajectoire.", "Vrai",
+        ("Vrai ou faux ? La trajectoire d'un objet immobile se réduit à un seul point.", "Vrai",
          ["La trajectoire est l'ensemble des positions occupées ; un objet immobile n'occupe qu'une seule position."], "intermediaire"),
-        ("Vrai ou faux ? Un virage de route est une trajectoire circulaire.", "Faux",
-         ["Un virage n'est pas un cercle parfait : c'est une trajectoire curviligne."], "intermediaire"),
+        ("Vrai ou faux ? Dans un virage, la trajectoire d'une voiture est toujours circulaire.", "Faux",
+         ["Un virage n'est en général pas un arc de cercle parfait : la trajectoire est curviligne."], "intermediaire"),
         ("Pour comparer la vitesse de deux élèves, Jules dit : « Léo a couru 500 m, Zoé a couru 30 s, donc Léo va plus vite. » Pourquoi ce raisonnement est-il faux ?",
          "On ne compare pas une distance et une durée : il faut la même durée ou la même distance",
          ["500 m est une distance et 30 s une durée : ce ne sont pas les mêmes grandeurs.",
@@ -712,7 +721,10 @@ def gen_5e_transformation():
          "une combustion (transformation chimique)", "application"),
     ]
     for e, r, d in sg:
-        add(d, "signes", e, ["Ce signe trahit souvent l'apparition de nouvelles espèces chimiques."], r)
+        c = (["La cire brûle dans le dioxygène de l'air : c'est une combustion.",
+              "De nouvelles espèces (dioxyde de carbone, eau) se forment : transformation chimique."]
+             if "bougie" in e else ["Ce signe trahit souvent l'apparition de nouvelles espèces chimiques."])
+        add(d, "signes", e, c, r)
     add("intermediaire", "signes",
         "De l'eau qui bout fait des bulles. Est-ce la preuve d'une transformation chimique ?",
         ["Non : les bulles sont de la vapeur d'eau, c'est toujours de l'eau.", "Un signe n'est qu'un indice, pas une preuve."],
@@ -848,7 +860,7 @@ def gen_4e_interactions():
         ("Tu pousses horizontalement une caisse vers la droite avec ta main, avec une force de 40 N. Donne la direction et le sens de cette force.",
          "direction horizontale, sens vers la droite",
          ["La direction est la droite d'action : horizontale.", "Le sens précise de quel côté : vers la droite."], "intermediaire"),
-        ("Tu pousses horizontalement une caisse vers la droite avec ta main, avec une force de 40 N. Quel est le point d'application et la valeur de cette force ?",
+        ("Tu pousses horizontalement une caisse vers la droite avec ta main, avec une force de 40 N. Quels sont le point d'application et la valeur de cette force ?",
          "point d'application : là où ta main touche la caisse ; valeur : 40 N",
          ["Le point d'application est l'endroit où la force s'exerce : le contact main-caisse.", "La valeur est 40 N."], "intermediaire"),
         ("Une corde verticale tient un seau immobile. Quelle est la direction de la force exercée par la corde, et son sens ?",
@@ -935,11 +947,11 @@ def gen_4e_interactions():
         ("On casse un aimant droit en deux morceaux. Qu'obtient-on ?", "deux aimants, chacun avec un pôle Nord et un pôle Sud",
          ["On ne peut pas séparer les deux pôles : chaque morceau devient un aimant complet."], "intermediaire"),
         ("Un aimant attire-t-il une canette en aluminium ?", "Non",
-         ["Un aimant n'attire que le fer, l'acier et le nickel.", "L'aluminium n'est pas attiré."], "intermediaire"),
+         ["Un aimant attire le fer, l'acier, le nickel et le cobalt, mais pas les autres métaux courants.", "L'aluminium n'est pas attiré."], "intermediaire"),
         ("Parmi ces objets, lesquels sont attirés par un aimant : un clou en fer, une pièce en cuivre, une règle en plastique, une boîte de conserve en acier ?",
          "le clou en fer et la boîte de conserve en acier",
-         ["Seuls le fer, l'acier et le nickel sont attirés.", "Le cuivre et le plastique ne le sont pas."], "intermediaire"),
-        ("Vrai ou faux ? Un aimant peut repousser un clou en fer.", "Faux",
+         ["Seuls le fer, l'acier, le nickel et le cobalt sont attirés.", "Le cuivre et le plastique ne le sont pas."], "intermediaire"),
+        ("Vrai ou faux ? Un aimant peut repousser un clou en fer non aimanté.", "Faux",
          ["Entre un aimant et un clou, il n'y a qu'attraction.", "La répulsion n'existe qu'entre deux aimants."], "approfondissement"),
         ("Au centre de tri, on veut séparer les canettes en acier des canettes en aluminium. Propose une méthode simple.",
          "Utiliser un gros aimant : il attire l'acier mais pas l'aluminium",
@@ -958,7 +970,7 @@ def gen_4e_interactions():
         ("On approche un aimant d'une boussole. Que fait l'aiguille ? Pourquoi ?",
          "Elle se détourne du Nord et suit l'aimant",
          ["L'action de l'aimant tout proche est bien plus forte que celle, lointaine, de la Terre."], "approfondissement"),
-        ("Un randonneur pose sa boussole sur un gros rocher riche en fer, juste à côté de sa gourde métallique. Pourquoi peut-il se tromper de direction ?",
+        ("Un randonneur pose sa boussole sur un gros rocher riche en fer, juste à côté de son couteau en acier. Pourquoi peut-il se tromper de direction ?",
          "Les objets en fer proches perturbent l'aiguille, qui n'indique plus le Nord",
          ["Une boussole doit être utilisée loin des aimants et des objets en fer.", "Sinon, l'aiguille est déviée."], "probleme"),
     ]
@@ -1095,9 +1107,10 @@ def gen_4e_mouvement():
          ["$d$ en mètres et $t$ en secondes donnent $v$ en m/s."], "application"),
         ("Un trajet de 30 km dure 30 min, avec un arrêt à un feu rouge. La vitesse moyenne vaut 60 km/h. La voiture a-t-elle roulé tout le temps à 60 km/h ?",
          "Non", ["La vitesse moyenne lisse tout le trajet.", "La voiture a pu s'arrêter (0 km/h) puis rouler plus vite que 60 km/h."], "approfondissement"),
-        ("Pourquoi une vitesse en m/s est-elle toujours plus petite que la même vitesse exprimée en km/h ?",
-         "Car on divise par 3,6 : en une seconde on parcourt bien moins de distance qu'en une heure",
-         ["$1$ m/s $= 3{,}6$ km/h : la valeur en m/s est 3,6 fois plus petite."], "approfondissement"),
+        ("Pourquoi le nombre qui exprime une vitesse en m/s est-il toujours plus petit que celui qui l'exprime en km/h ?",
+         "Car $1$ m/s $= 3{,}6$ km/h : la valeur en m/s est $3{,}6$ fois plus petite",
+         ["En $1$ h $= 3\\,600$ s, à $1$ m/s, on parcourt $3\\,600$ m, soit $3{,}6$ km.",
+          "$1$ m/s $= \\dfrac{3\\,600 \\text{ m}}{1 \\text{ h}} = 3{,}6$ km/h : on divise par $3{,}6$ pour passer des km/h aux m/s."], "approfondissement"),
         ("Zoé trouve qu'une voiture à 72 km/h roule à 259,2 m/s. Quelle erreur a-t-elle faite ? Donne le bon résultat.",
          "Elle a multiplié au lieu de diviser : $72$ km/h $= 20$ m/s",
          ["De km/h vers m/s, on divise par $3{,}6$.", "$72 \\div 3{,}6 = 20$ m/s."], "probleme"),
@@ -1506,8 +1519,8 @@ def gen_4e_conservation():
         "On brûle 1,2 kg de carbone, qui consomment 3,2 kg de dioxygène. Quelle masse de dioxyde de carbone se forme ? Donne le résultat en kg, puis en g.",
         ["$m = 1{,}2 + 3{,}2 = 4{,}4$ kg.", "$4{,}4$ kg $= 4\\,400$ g."], "$4{,}4$ kg, soit $4\\,400$ g")
     add("approfondissement", "conservation-masse",
-        "On fait réagir 500 g de fer avec 0,3 kg de soufre ; tout réagit. Quelle masse de sulfure de fer obtient-on ?",
-        ["Même unité avant d'additionner : $0{,}3$ kg $= 300$ g.", "$m = 500 + 300 = 800$ g."], "$800$ g")
+        "On fait réagir 700 g de fer avec 0,4 kg de soufre ; tout réagit. Quelle masse de sulfure de fer obtient-on ?",
+        ["Même unité avant d'additionner : $0{,}4$ kg $= 400$ g.", "$m = 700 + 400 = 1\\,100$ g, soit $1{,}1$ kg."], "$1\\,100$ g")
 
     # -- système ouvert (6)
     for (m1, m2) in ((152.4, 151.8), (210.0, 208.7), (98.6, 97.9)):
@@ -1650,7 +1663,7 @@ def gen_3e_atomes_ions():
         add("intermediaire", "ions",
             f"L'atome {de(_NOMS_EL[sym])} ({pl(z, 'proton')}) a {verbe} {pl(abs(q), 'électron')}. Écris la formule de l'ion obtenu et donne son nombre d'électrons.",
             [f"L'atome avait {pl(z, 'électron')} ; il en a {verbe} {abs(q)}.",
-             f"Il lui reste ${z} {'-' if q > 0 else '+'} {abs(q)} = {ne}$ électrons : charge {'positive' if q > 0 else 'négative'}, c'est un {typ}.",
+             f"{'Il lui reste' if q > 0 else 'Il possède alors'} ${z} {'-' if q > 0 else '+'} {abs(q)} = {ne}$ électrons : charge {'positive' if q > 0 else 'négative'}, c'est un {typ}.",
              f"Formule : ${_ion_tex(sym, q)}$."],
             f"${_ion_tex(sym, q)}$ ; {pl(ne, 'électron')}")
     for sym, q in (("Zn", 2), ("S", -2)):
@@ -1759,14 +1772,19 @@ def gen_3e_conversions():
 
     # -- convertisseurs (6)
     cv = [
-        ("Quelle conversion d'énergie réalise un alternateur ?", "mécanique → électrique"),
-        ("Quelle conversion d'énergie réalise une cellule photovoltaïque ?", "lumineuse → électrique"),
-        ("Quelle conversion d'énergie réalise une lampe ? (énergie utile)", "électrique → lumineuse"),
-        ("Quelle conversion d'énergie réalise le moteur électrique d'un ventilateur ? (énergie utile)", "électrique → mécanique"),
-        ("Dans une éolienne, quel convertisseur transforme le mouvement des pales en électricité ?", "l'alternateur"),
+        ("Quelle conversion d'énergie réalise un alternateur ?", "mécanique → électrique",
+         "L'alternateur reçoit l'énergie mécanique de son axe qui tourne et fournit de l'énergie électrique."),
+        ("Quelle conversion d'énergie réalise une cellule photovoltaïque ?", "lumineuse → électrique",
+         "La cellule reçoit la lumière du Soleil et fournit de l'énergie électrique."),
+        ("Quelle conversion d'énergie réalise une lampe ? (énergie utile)", "électrique → lumineuse",
+         "La lampe reçoit de l'énergie électrique ; l'énergie utile est la lumière (le reste est perdu en chaleur)."),
+        ("Quelle conversion d'énergie réalise le moteur électrique d'un ventilateur ? (énergie utile)", "électrique → mécanique",
+         "Le moteur reçoit de l'énergie électrique ; l'énergie utile est le mouvement des pales."),
+        ("Dans une éolienne, quel convertisseur transforme le mouvement des pales en électricité ?", "l'alternateur",
+         "Le vent fait tourner les pales ; l'alternateur convertit cette énergie mécanique en énergie électrique."),
     ]
-    for e, r in cv:
-        add("application", "convertisseurs", e, ["Un convertisseur transforme l'énergie d'une forme à une autre, sans en créer."], r)
+    for e, r, expl in cv:
+        add("application", "convertisseurs", e, [expl, "Un convertisseur transforme l'énergie d'une forme à une autre, sans en créer."], r)
     add("intermediaire", "convertisseurs",
         "Vrai ou faux ? Une cellule photovoltaïque fabrique de l'énergie.",
         ["Faux : elle convertit l'énergie lumineuse reçue en énergie électrique.", "Un convertisseur ne crée jamais d'énergie."], "Faux")
@@ -1822,8 +1840,8 @@ def gen_3e_conversions():
         j = k * 3.6e6
         add("intermediaire", "conversion-kwh-joule",
             f"Convertis {t(k)} kWh en joules (écriture scientifique).",
-            ["$1$ kWh $= 3{,}6 \\times 10^{6}$ J.", f"${nb(k)} \\times 3{{,}}6 \\times 10^{{6}} = {sci(j, 2)}$ J."],
-            f"${sci(j, 2)}$ J")
+            ["$1$ kWh $= 3{,}6 \\times 10^{6}$ J.", f"${nb(k)} \\times 3{{,}}6 \\times 10^{{6}} = {sci(j, 3 if round(j / 10 ** (math.floor(math.log10(j)) - 2)) % 10 else 2)}$ J."],
+            f"${sci(j, 3 if round(j / 10 ** (math.floor(math.log10(j)) - 2)) % 10 else 2)}$ J")
     add("approfondissement", "conversion-kwh-joule",
         "Montre que 1 kWh $= 3{,}6 \\times 10^{6}$ J.",
         ["$1$ kWh $= 1\\,000$ W $\\times 3\\,600$ s.", "$= 3\\,600\\,000$ J $= 3{,}6 \\times 10^{6}$ J."],
@@ -1856,8 +1874,8 @@ def gen_3e_conversions():
         "Impossible : il a inversé la fraction")
 
     # -- télémétrie (9)
-    tl = [("Un sonar de bateau", "ultrason", 1500, 0.2, "dans l'eau de mer"), ("Un sonar", "ultrason", 1500, 1.2, "dans l'eau de mer"),
-          ("Un sonar de chalutier", "ultrason", 1500, 4, "dans l'eau de mer"),
+    tl = [("L'écho du sonar d'un bateau", "ultrason", 1500, 0.2, "dans l'eau de mer"), ("L'écho d'un sonar", "ultrason", 1500, 1.2, "dans l'eau de mer"),
+          ("L'écho du sonar d'un chalutier", "ultrason", 1500, 4, "dans l'eau de mer"),
           ("Tu cries face à une falaise ; l'écho", "son", 340, 2, "dans l'air"),
           ("Un randonneur crie face à une paroi ; l'écho", "son", 340, 0.5, "dans l'air")]
     for qui, onde, v, dt, milieu in tl:
@@ -2075,7 +2093,7 @@ def gen_3e_poids():
     G = 9.8
     # -- calcul du poids (8)
     for m, qui in ((5.0, "un sac"), (60, "un élève"), (0.5, "un ballon de basket"), (1.2, "une bouteille d'eau pleine"),
-                   (80, "un astronaute équipé"), (12, "un cartable bien rempli")):
+                   (80, "un adulte"), (8, "un cartable bien rempli")):
         P = m * G
         add("application", "calcul-poids",
             f"Sur Terre ($g = 9{{,}}8$ N/kg), calcule le poids d'{qui} de masse {t(m)} kg.",
@@ -2151,7 +2169,7 @@ def gen_3e_poids():
         ["Direction : la verticale du lieu.", "Sens : vers le bas (vers le centre de la Terre)."], "verticale, vers le bas")
     add("application", "caracteristiques-poids",
         "Quel est le point d'application du poids d'un objet ?",
-        ["Le poids s'applique au centre de l'objet."], "le centre de l'objet")
+        ["Le poids s'applique au centre de gravité de l'objet (son centre, pour un objet homogène et symétrique)."], "le centre de gravité de l'objet")
     for m, ech in ((2.0, 10), (5.0, 20)):
         P = m * G
         L = P / ech
@@ -2298,18 +2316,30 @@ def gen_3e_transformations():
 
     # -- combustions et tests (8)
     ct = [
-        ("Quel réactif est appelé « comburant » dans une combustion ?", "le dioxygène", "application"),
-        ("Comment met-on en évidence le dioxyde de carbone ?", "il trouble l'eau de chaux", "application"),
-        ("Comment met-on en évidence la présence d'eau ?", "le sulfate de cuivre anhydre (blanc) devient bleu", "application"),
-        ("Quels sont les produits de la combustion complète du méthane ?", "du dioxyde de carbone et de l'eau", "application"),
-        ("Quel gaz dangereux se forme lors d'une combustion incomplète, quand le dioxygène manque ?", "le monoxyde de carbone $\\mathrm{CO}$, toxique et inodore", "intermediaire"),
-        ("Pourquoi ne faut-il jamais utiliser un chauffage à combustion dans une pièce mal aérée ?", "risque de combustion incomplète et d'intoxication au monoxyde de carbone", "approfondissement"),
-        ("On recouvre d'un bocal une bougie allumée, puis on verse de l'eau de chaux dans le bocal : elle se trouble. Qu'en conclut-on ?", "la combustion a produit du dioxyde de carbone", "intermediaire"),
+        ("Quel réactif est appelé « comburant » dans une combustion ?", "le dioxygène", "application",
+         ["Une combustion a besoin d'un combustible (ce qui brûle) et d'un comburant.", "Le comburant est le dioxygène, apporté par l'air."]),
+        ("Comment met-on en évidence le dioxyde de carbone ?", "il trouble l'eau de chaux", "application",
+         ["Test du dioxyde de carbone : l'eau de chaux, limpide au départ, se trouble (devient blanchâtre)."]),
+        ("Comment met-on en évidence la présence d'eau ?", "le sulfate de cuivre anhydre (blanc) devient bleu", "application",
+         ["Test de l'eau : le sulfate de cuivre anhydre, blanc, devient bleu au contact de l'eau."]),
+        ("Quels sont les produits de la combustion complète du méthane ?", "du dioxyde de carbone et de l'eau", "application",
+         ["$\\mathrm{CH_4} + 2\\,\\mathrm{O_2} \\longrightarrow \\mathrm{CO_2} + 2\\,\\mathrm{H_2O}$.",
+          "Le carbone du méthane donne du dioxyde de carbone, l'hydrogène donne de l'eau."]),
+        ("Quel gaz dangereux se forme lors d'une combustion incomplète, quand le dioxygène manque ?", "le monoxyde de carbone $\\mathrm{CO}$, toxique et inodore", "intermediaire",
+         ["Quand le dioxygène manque, le carbone n'est pas entièrement transformé en $\\mathrm{CO_2}$.",
+          "Il se forme du monoxyde de carbone $\\mathrm{CO}$ (et des fumées noires de carbone)."]),
+        ("Pourquoi ne faut-il jamais utiliser un chauffage à combustion dans une pièce mal aérée ?", "risque de combustion incomplète et d'intoxication au monoxyde de carbone", "approfondissement",
+         ["Dans une pièce mal aérée, le dioxygène s'épuise : la combustion devient incomplète.",
+          "Elle produit du monoxyde de carbone, gaz toxique et inodore, donc indétectable sans détecteur."]),
+        ("On recouvre d'un bocal une bougie allumée, puis on verse de l'eau de chaux dans le bocal : elle se trouble. Qu'en conclut-on ?", "la combustion a produit du dioxyde de carbone", "intermediaire",
+         ["L'eau de chaux qui se trouble est le test du dioxyde de carbone.", "Ce gaz est un produit de la combustion de la bougie."]),
         ("Le butane d'un réchaud de camping contient les éléments carbone et hydrogène. Quels produits sa combustion complète donne-t-elle ? Comment les identifier ?",
-         "dioxyde de carbone (eau de chaux troublée) et eau (sulfate de cuivre anhydre qui bleuit)", "probleme"),
+         "dioxyde de carbone (eau de chaux troublée) et eau (sulfate de cuivre anhydre qui bleuit)", "probleme",
+         ["Les éléments se conservent : le carbone donne du dioxyde de carbone, l'hydrogène donne de l'eau.",
+          "Tests : l'eau de chaux se trouble ($\\mathrm{CO_2}$) ; le sulfate de cuivre anhydre bleuit (eau)."]),
     ]
-    for e, r, d in ct:
-        add(d, "combustions-tests", e, ["Combustion = combustible + comburant (dioxygène)."], r)
+    for e, r, d, c in ct:
+        add(d, "combustions-tests", e, c, r)
 
     # -- acide et métal (5)
     add("application", "acide-metal",
