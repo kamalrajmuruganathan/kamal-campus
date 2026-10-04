@@ -86,11 +86,11 @@
         "L'affectation se lit de droite à gauche : on calcule, puis on range ; l'ancienne valeur est écrasée.",
         "Après `a = 2` : `a` = $2$.",
         "Après `b = 9` : `a` = $2$, `b` = $9$.",
-        "Après `c = a` : `a` = $2$, `b` = $9$.",
-        "Après `a = b` : `a` = $9$, `b` = $9$.",
-        "Après `b = c` : `a` = $9$, `b` = $2$."
+        "Après `c = a` : `a` = $2$, `b` = $9$, `c` = $2$.",
+        "Après `a = b` : `a` = $9$, `b` = $9$, `c` = $2$.",
+        "Après `b = c` : `a` = $9$, `b` = $2$, `c` = $2$."
       ],
-      "reponse": "`a` = $9$ ; `b` = $2$"
+      "reponse": "`a` = $9$ ; `b` = $2$ ; `c` = $2$"
     },
     {
       "id": 7,
@@ -428,7 +428,7 @@
       "notion": "selection",
       "enonce": "On exécute le programme :\n```python\nnotes = [12, 15, 8, 17, 9]\nbonnes = []\nfor note in notes:\n    if note >= 10:\n        bonnes.append(note)\n```\nQue contient `bonnes` à la fin ?",
       "corrige": [
-        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "On parcourt la liste et on ne garde que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
         "À la fin, `bonnes` = `[12, 15, 17]`."
       ],
       "reponse": "`[12, 15, 17]`"
@@ -439,7 +439,7 @@
       "notion": "selection",
       "enonce": "On exécute le programme :\n```python\nL = [4, 11, 7, 15, 9, 20]\nG = []\nfor x in L:\n    if x > 10:\n        G.append(x)\n```\nQue contient `G` à la fin ?",
       "corrige": [
-        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "On parcourt la liste et on ne garde que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
         "À la fin, `G` = `[11, 15, 20]`."
       ],
       "reponse": "`[11, 15, 20]`"
@@ -450,7 +450,7 @@
       "notion": "selection",
       "enonce": "On exécute le programme :\n```python\nL = [3, 8, 6, 5, 12, 1]\nP = []\nfor x in L:\n    if x % 2 == 0:\n        P.append(x)\n```\nQue contient `P` à la fin ?",
       "corrige": [
-        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "On parcourt la liste et on ne garde que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
         "À la fin, `P` = `[8, 6, 12]`."
       ],
       "reponse": "`[8, 6, 12]`"
@@ -461,7 +461,7 @@
       "notion": "selection",
       "enonce": "On exécute le programme :\n```python\nT = [18, 25, 31, 22, 27, 30]\nchauds = []\nfor t in T:\n    if t >= 25:\n        chauds.append(t)\n```\nQue contient `chauds` à la fin ?",
       "corrige": [
-        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "On parcourt la liste et on ne garde que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
         "À la fin, `chauds` = `[25, 31, 27, 30]`."
       ],
       "reponse": "`[25, 31, 27, 30]`"
@@ -470,9 +470,9 @@
       "id": 41,
       "difficulte": "approfondissement",
       "notion": "selection",
-      "enonce": "On exécute le programme :\n```python\nL = [10, 10, 9, 11, 10]\nc = 0\nfor x in L:\n    if x == 10:\n        c = c + 1\n```\nQue contient `c` à la fin ?",
+      "enonce": "On exécute le programme :\n```python\nL = [10, 10, 9, 11, 10]\nc = 0\nfor x in L:\n    if x == 10:\n        c = c + 1\n```\nQue vaut `c` à la fin ?",
       "corrige": [
-        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "On parcourt la liste et on compte les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
         "À la fin, `c` = $3$."
       ],
       "reponse": "$3$"
@@ -483,7 +483,7 @@
       "notion": "selection",
       "enonce": "On exécute le programme :\n```python\nrangs = []\nfor n in range(8):\n    if 50 * 2 ** n > 1000:\n        rangs.append(n)\n```\nQue contient `rangs` à la fin ?",
       "corrige": [
-        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "On parcourt les valeurs de `n` données par `range(8)` et on ne garde que celles qui rendent la condition vraie.",
         "À la fin, `rangs` = `[5, 6, 7]`."
       ],
       "reponse": "`[5, 6, 7]`"
@@ -494,7 +494,7 @@
       "notion": "selection",
       "enonce": "On exécute le programme :\n```python\nL = [-3, 5, -1, 0, 8, -6]\nN = []\nfor x in L:\n    if x < 0:\n        N.append(x)\n```\nQue contient `N` à la fin ?",
       "corrige": [
-        "On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+        "On parcourt la liste et on ne garde que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
         "À la fin, `N` = `[-3, -1, -6]`."
       ],
       "reponse": "`[-3, -1, -6]`"
