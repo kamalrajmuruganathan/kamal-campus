@@ -87,6 +87,17 @@ def num(f):
     return fl(f)
 
 
+def eur(x):
+    """Montant en euros : deux décimales s'il n'est pas entier (11,50)."""
+    f = F(x)
+    if f.denominator == 1:
+        return num(f)
+    r = nb(f, 2)
+    if "{,}" in r and len(r.split("{,}")[1]) == 1:
+        r += "0"
+    return r
+
+
 def par(x):
     """Nombre entre parenthèses s'il est négatif (dans une formule)."""
     s = num(x)
@@ -247,7 +258,7 @@ def g4_calcul_litteral():
         fk = ("" if k == 1 else str(k)) + "x"
         add("approfondissement", "factoriser",
             f"Factorise $E = {e}$.",
-            [f"Chaque terme contient le facteur ${fk}$ (car $x^2 = x \\times x$).",
+            [f"Chaque terme contient le facteur ${fk}$ : $" + (f"x^2 = x \\times x$ et ${num(abs(b))}x = x \\times {num(abs(b))}$." if k == 1 else f"{k}x^2 = {fk} \\times x$ et ${num(abs(k * b))}x = {fk} \\times {num(abs(b))}$."),
              f"$E = {fk}({lin(1, b)})$."],
             f"$E = {fk}({lin(1, b)})$")
     # -- équations (9)
@@ -358,6 +369,7 @@ def _prog_lin(steps):
     for op, k in steps:
         k = F(k)
         avant = lin(a, b)
+        b_avant = b
         if op == "+":
             b += k
         elif op == "-":
@@ -368,6 +380,8 @@ def _prog_lin(steps):
             a, b = a / k, b / k
         if op in "*/" and b != 0 and avant != "x":
             lignes.append(f"$({avant}) {_OPTEX[op]} {par(k)} = {lin(a, b)}$")
+        elif op in "+-" and b_avant != 0:
+            lignes.append(f"${avant} {_OPTEX[op]} {par(k)} = {lin(a, b)}$")
         else:
             lignes.append(f"${lin(a, b)}$")
     return a, b, lignes
@@ -443,8 +457,8 @@ def g4_fonctions():
         r = F(f(F(val)))
         add("intermediaire" if "c + 2" not in fo else "approfondissement", "formule",
             f"{ctx} Écris une formule donnant {gr} en fonction {var}, puis calcule sa valeur pour ${sym} = {num(val)}$.",
-            [f"Formule : ${fo}$.", f"Pour ${sym} = {num(val)}$ : on trouve ${num(r)}$ {u}."],
-            f"${fo.split(' = ')[0]} = {fo.split(' = ')[-1]}$ ; ${num(r)}$ {u}")
+            [f"Formule : ${fo}$.", f"Pour ${sym} = {num(val)}$ : on trouve ${eur(r) if u == '€' else num(r)}$ {u}."],
+            f"${fo.split(' = ')[0]} = {fo.split(' = ')[-1]}$ ; ${eur(r) if u == '€' else num(r)}$ {u}")
     # -- tableau et graphique (8)
     pts = [("p = 3 + 2d", lambda v: 3 + 2 * v, "d", "p", 4, 11),
            ("y = 3x - 1", lambda v: 3 * v - 1, "x", "y", 5, 14),
@@ -455,7 +469,7 @@ def g4_fonctions():
         r = F(f(F(a)))
         ok = r == b
         add("intermediaire", "tableau-graphique",
-            f"On représente ${fo}$ par un graphique ($ {xv} $ en abscisse, ${yv}$ en ordonnée). Le point de coordonnées $({num(a)}\\,;{num(b)})$ est-il sur ce graphique ?",
+            f"On représente ${fo}$ par un graphique (${xv}$ en abscisse, ${yv}$ en ordonnée). Le point de coordonnées $({num(a)}\\,;{num(b)})$ est-il sur ce graphique ?",
             [f"Pour ${xv} = {num(a)}$ : ${yv} = {num(r)}$.",
              ("C'est bien l'ordonnée du point : il est sur le graphique." if ok
               else f"Le point devrait avoir pour ordonnée ${num(r)}$, pas ${num(b)}$ : il n'est pas sur le graphique.")],
@@ -1052,7 +1066,7 @@ def g4_probabilites():
             [f"Il y a ${n}$ boules en tout, dont ${k}$ {coul[c]}s : situation d'équiprobabilité.",
              f"$P = {_pfrac(k, n)}$."],
             f"${fl(F(k, n))}$")
-    sacs = [(20, "un multiple de 5", lambda k: k % 5 == 0), (20, "un nombre supérieur à 15", lambda k: k > 15),
+    sacs = [(20, "un multiple de 5", lambda k: k % 5 == 0), (20, "un nombre strictement supérieur à 15", lambda k: k > 15),
             (30, "un multiple de 6", lambda k: k % 6 == 0), (12, "un diviseur de 12", lambda k: 12 % k == 0),
             (50, "un nombre qui se termine par 7", lambda k: k % 10 == 7)]
     for n, txt, p in sacs:
@@ -1244,7 +1258,7 @@ def g4_puissances():
         [f"En 3 h, soit 180 min, il y a $180 \\div 20 = {n}$ divisions.", f"Nombre de bactéries : $2^{{{n}}} = {2 ** n}$."],
         f"$2^{{{n}}} = {2 ** n}$ bactéries")
     add("probleme", "probleme-puissances",
-        "Sur l'échiquier de Sissa, on pose 1 grain sur la 1re case, 2 sur la 2e, 4 sur la 3e, et on double à chaque case. Combien de grains sur la 11e case ?",
+        "Sur l'échiquier de Sissa, on pose 1 grain sur la 1re case, 2 sur la 2e, 4 sur la 3e, et on double à chaque case. Combien y a-t-il de grains sur la 11e case ?",
         ["Sur la case numéro $n$, il y a $2^{n-1}$ grains.", f"11e case : $2^{{10}} = {nb(2 ** 10)}$ grains."],
         f"$2^{{10}} = {nb(2 ** 10)}$ grains")
     e = F("0.1") * 2 ** 7
@@ -1385,7 +1399,7 @@ def g4_reperage():
              f"On se déplace de {hx}, puis de {hy}."],
             f"{hx}, puis {hy}")
     for x, y in [(2, -5), (-6, 1), (-3, -3), (0, -4)]:
-        dx = "on ne bouge pas horizontalement" if x == 0 else f"on va de {abs(x)} unité{'s' if abs(x) >= 2 else ''} vers la {'droite' if x > 0 else 'gauche'}"
+        dx = "on ne se déplace pas horizontalement" if x == 0 else f"on va de {abs(x)} unité{'s' if abs(x) >= 2 else ''} vers la {'droite' if x > 0 else 'gauche'}"
         dy = f"de {abs(y)} vers le {'haut' if y > 0 else 'bas'}"
         add("application", "placer-point",
             f"En partant de l'origine, {dx}, puis {dy}. Quelles sont les coordonnées du point atteint ?",
@@ -1642,7 +1656,7 @@ def g4_transformations():
     for i, (A, B, C) in enumerate(cas):
         dx, dy = B[0] - A[0], B[1] - A[1]
         Cp = (C[0] + dx, C[1] + dy)
-        intro = (f"Sur un quadrillage, on repère chaque nœud par sa colonne (numérotées de gauche à droite) et sa ligne (numérotées de bas en haut). $A$ est en colonne {A[0]}, ligne {A[1]} ; "
+        intro = (f"Sur un quadrillage, on repère chaque nœud par sa colonne et sa ligne (colonnes numérotées de gauche à droite, lignes numérotées de bas en haut). $A$ est en colonne {A[0]}, ligne {A[1]} ; "
                  f"$B$ est en colonne {B[0]}, ligne {B[1]}.")
         add("application", "quadrillage",
             intro + f" Où se trouve l'image du nœud $C$ (colonne {C[0]}, ligne {C[1]}) par la translation qui transforme $A$ en $B$ ?",
@@ -2027,7 +2041,7 @@ def g3_calcul_litteral():
         ["$(100 - 1)^2 = 100^2 - 2 \\times 100 \\times 1 + 1^2$.", f"$= 10\\,000 - 200 + 1 = {nb(99 ** 2)}$."], f"${nb(99 ** 2)}$")
     add("intermediaire", "demonstration", "Calcule $103 \\times 97$ sans calculatrice.",
         ["$103 \\times 97 = (100 + 3)(100 - 3) = 100^2 - 3^2$.", f"$= 10\\,000 - 9 = {nb(103 * 97)}$."], f"${nb(103 * 97)}$")
-    add("probleme", "demonstration", "Un carré a un côté de $x + 4$ cm. On retire un carré de côté $x$ cm. Exprime l'aire restante en fonction de $x$, puis calcule-la pour $x = 6$.",
+    add("probleme", "demonstration", "Un carré a un côté de $(x + 4)$ cm. On retire un carré de côté $x$ cm. Exprime l'aire restante en fonction de $x$, puis calcule-la pour $x = 6$.",
         ["Aire restante : $(x + 4)^2 - x^2 = x^2 + 8x + 16 - x^2 = 8x + 16$.", f"Pour $x = 6$ : $8 \\times 6 + 16 = {8 * 6 + 16}$ cm²."],
         f"$8x + 16$ ; ${8 * 6 + 16}$ cm²")
     return _fin(E)
@@ -2092,8 +2106,8 @@ def g3_fonctions():
              f"$f(80) = {num(c)} \\times 80 = {num(c * 80)}$ €."],
             f"$f(x) = {num(c)}x$ ; ${num(c * 80)}$ €")
     add("application", "lineaire", "Des pommes coûtent 3,50 € le kilo. On note $f(x)$ le prix de $x$ kg. Donne $f(x)$ et calcule le prix de 2,4 kg.",
-        ["Le prix est proportionnel à la masse : $f(x) = 3{,}5x$ (fonction linéaire).", f"$f(2{{,}}4) = 3{{,}}5 \\times 2{{,}}4 = {num(F('3.5') * F('2.4'))}$ €."],
-        f"$f(x) = 3{{,}}5x$ ; ${num(F('3.5') * F('2.4'))}$ €")
+        ["Le prix est proportionnel à la masse : $f(x) = 3{,}5x$ (fonction linéaire).", f"$f(2{{,}}4) = 3{{,}}5 \\times 2{{,}}4 = {eur(F('3.5') * F('2.4'))}$ €."],
+        f"$f(x) = 3{{,}}5x$ ; ${eur(F('3.5') * F('2.4'))}$ €")
     add("application", "lineaire", "Vrai ou faux : la représentation graphique d'une fonction linéaire est une droite qui passe par l'origine du repère.",
         ["$f(x) = ax$ donne $f(0) = 0$ : le point $(0\\,;0)$ est sur la droite."], "Vrai")
     # -- coefficients d'une fonction affine (8)
@@ -2144,8 +2158,8 @@ def g3_fonctions():
     LA = lambda d: 50 + F("0.2") * d
     LB = lambda d: F("0.45") * d
     add("probleme", "probleme-fonctions", "Location de voiture : formule A, 50 € plus 0,20 € par km ; formule B, 0,45 € par km. Calcule le prix de chaque formule pour 150 km.",
-        ["$A(d) = 50 + 0{,}2d$ (affine) et $B(d) = 0{,}45d$ (linéaire).", f"$A(150) = {num(LA(150))}$ € et $B(150) = {num(LB(150))}$ €."],
-        f"$A$ : ${num(LA(150))}$ € ; $B$ : ${num(LB(150))}$ €")
+        ["$A(d) = 50 + 0{,}2d$ (affine) et $B(d) = 0{,}45d$ (linéaire).", f"$A(150) = {num(LA(150))}$ € et $B(150) = {eur(LB(150))}$ €."],
+        f"$A$ : ${num(LA(150))}$ € ; $B$ : ${eur(LB(150))}$ €")
     d = F(50) / (F("0.45") - F("0.2"))
     add("probleme", "probleme-fonctions", "Location de voiture : formule A, 50 € plus 0,20 € par km ; formule B, 0,45 € par km. Pour quelle distance les deux formules coûtent-elles le même prix ?",
         ["On résout $50 + 0{,}2d = 0{,}45d$.", f"$0{{,}}25d = 50$, donc $d = {num(d)}$ km."], f"${num(d)}$ km")
@@ -2991,7 +3005,7 @@ def g3_reperage():
             f"Soit $f(x) = {lin(a, b)}$. Donne les coordonnées des points où sa droite coupe les deux axes.",
             [f"Axe des ordonnées : $x = 0$, $f(0) = {num(b)}$ : point $(0\\,;{num(b)})$.",
              f"Axe des abscisses : on résout ${lin(a, b)} = 0$, d'où $x = {num(x0)}$ : point $({num(x0)}\\,;0)$."],
-            f"$(0\\,;{num(b)})$ et $({num(x0)}\\,;0)$" if b != 0 else "les deux axes en l'origine $(0\\,;0)$")
+            f"$(0\\,;{num(b)})$ et $({num(x0)}\\,;0)$" if b != 0 else "la droite coupe les deux axes à l'origine $(0\\,;0)$")
     return _fin(E)
 
 

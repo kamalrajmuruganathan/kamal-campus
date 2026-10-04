@@ -26,17 +26,17 @@ def _grouper(s, sep):
 
 
 def m(n):
-    """Entier pour une formule : 12\\,500 (espaces dès 10 000)."""
+    """Entier pour une formule : 12\\,500 (espaces dès 1 000)."""
     s = str(abs(n))
-    if abs(n) >= 10000:
+    if abs(n) >= 1000:
         s = _grouper(s, "\\,")
     return ("-" if n < 0 else "") + s
 
 
 def tx(n):
-    """Entier hors formule : 12 500 (espace insécable dès 10 000)."""
+    """Entier hors formule : 12 500 (espace insécable dès 1 000)."""
     s = str(abs(n))
-    if abs(n) >= 10000:
+    if abs(n) >= 1000:
         s = _grouper(s, " ")
     return ("-" if n < 0 else "") + s
 
@@ -55,7 +55,7 @@ def _dec(x, places, sep, grp):
     n = abs(n)
     ent, fra = divmod(n, 10 ** p)
     se = str(ent)
-    if ent >= 10000:
+    if ent >= 1000:
         se = _grouper(se, grp)
     if p == 0:
         return signe + se
@@ -907,7 +907,7 @@ def gen_cm1_grands_nombres():
               [" + ".join(f"${m(a * b)}$" for a, b in parts) + f" $= {m(n)}$ (attention aux zéros des rangs vides)."],
               f"${m(n)}$")
     n = 6 * 100000 + 45 * 1000 + 30
-    L.add("approfondissement", "decomposer", "Calcule $6 \\times 100\\,000 + 45 \\times 1000 + 30$.",
+    L.add("approfondissement", "decomposer", "Calcule $6 \\times 100\\,000 + 45 \\times 1\\,000 + 30$.",
           [f"$600\\,000 + 45\\,000 + 30 = {m(n)}$."], f"${m(n)}$")
     # 5. comparer / ranger
     for (a, b) in [(45090, 45900), (198765, 201003), (99999, 100000), (560321, 560312)]:
@@ -1124,7 +1124,9 @@ def gen_cm1_nombres_decimaux():
         termes = [str(u)] + ([fl(d, 10)] if d else []) + ([fl(c, 100)] if c else [])
         L.add("intermediaire", "decomposer", f"Écris sous la forme d'un nombre à virgule : ${' + '.join(termes)}$.",
               [f"{u} {'unité' if u <= 1 else 'unités'}, {d} {'dixième' if d <= 1 else 'dixièmes'} et {c} {'centième' if c <= 1 else 'centièmes'} : "
-               + ("on écrit un zéro au rang vide." if 0 in (d, c) else "chaque chiffre à son rang.")],
+               + ("on écrit un zéro au rang vide des dixièmes." if d == 0 and c else
+                  "pas de centièmes : rien à écrire après le chiffre des dixièmes." if c == 0 else
+                  "chaque chiffre à son rang.")],
               f"${ld(x)}$")
     for x in [F(1274, 100), F(305, 100), F(4706, 100)]:
         ent = int(x)
@@ -1306,18 +1308,18 @@ def gen_cm1_proportionnalite():
     objets = [("cahiers", "cahier"), ("stylos", "stylo"), ("places de cinéma", "place"), ("kilos de pommes", "kilo"),
               ("bouteilles de jus", "bouteille"), ("tickets de bus", "ticket")]
 
+    prix = {"cahier": (1, 4), "stylo": (1, 3), "place": (5, 9), "kilo": (2, 4), "bouteille": (1, 3), "ticket": (1, 2)}
+
     def f_unite(r):
         pl_, sg = r.choice(objets)
-        u = r.randint(2, 9)
         n1, n2 = r.sample(range(2, 10), 2)
-        if sg == "stylo" or sg == "ticket":
-            u = r.randint(1, 3)
+        u = r.randint(*prix[sg])
         return ("application", f"{n1} {pl_} coûtent {n1 * u} €. Combien coûtent {n2} {pl_} ?",
                 [f"Prix d'un seul {sg} : ${n1 * u} \\div {n1} = {u}$ €." if sg not in ("place", "bouteille") else
                  f"Prix d'une seule {sg} : ${n1 * u} \\div {n1} = {u}$ €.",
                  f"Pour {n2} : ${n2} \\times {u} = {n2 * u}$ €."], f"${n2 * u}$ €")
     L.remplir("passer-par-l-unite", 10, f_unite, rng)
-    for (n1, p1, k, mot) in [(4, 5, 2, "double"), (3, 7, 3, "triple"), (6, 9, Fraction(1, 2), "moitié"),
+    for (n1, p1, k, mot) in [(4, 5, 2, "double"), (3, 4, 3, "triple"), (6, 9, Fraction(1, 2), "moitié"),
                              (5, 8, 4, "quadruple"), (10, 15, Fraction(1, 5), "cinquième")]:
         n2 = n1 * k
         p2 = p1 * k
@@ -1513,7 +1515,7 @@ def gen_cm1_symetrie():
           "Sur un quadrillage, la moitié d'un dessin de cœur occupe 13 carreaux. On trace l'autre moitié par symétrie. Combien de carreaux occupe le cœur entier ?",
           ["Le symétrique occupe autant de carreaux que la moitié de départ.", f"$2 \\times 13 = {2 * 13}$."], f"${2 * 13}$ carreaux")
     L.add("probleme", "completer-une-figure",
-          "Un triangle rectangle a un côté de l'angle droit de 4 cm posé sur l'axe ; l'autre côté de l'angle droit mesure 3 cm. On trace son symétrique. Quelle figure obtient-on, et combien mesure le côté opposé au sommet situé sur l'axe ?",
+          "Un triangle rectangle a un côté de l'angle droit de 4 cm posé sur l'axe ; l'autre côté de l'angle droit mesure 3 cm. On trace son symétrique. Quelle figure obtient-on, et combien mesure le côté formé par les deux côtés de 3 cm mis bout à bout ?",
           ["Les deux triangles se touchent le long de l'axe ; les deux côtés de 3 cm s'alignent pour former un seul côté.",
            f"Ce côté mesure $3 + 3 = {3 + 3}$ cm, et les deux autres côtés sont égaux (symétriques) : le triangle est isocèle."],
           f"un triangle isocèle, côté de ${3 + 3}$ cm")
@@ -1530,7 +1532,7 @@ JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi"]
 def gen_cm1_tableaux():
     L = Lot()
     rng = random.Random(1907)
-    themes = [("livres empruntés à la bibliothèque", "livres"), ("gâteaux vendus à la kermesse", "gâteaux"),
+    themes = [("livres empruntés à la bibliothèque", "livres"), ("gâteaux vendus à la boulangerie", "gâteaux"),
               ("élèves inscrits à l'étude", "élèves"), ("visiteurs du musée (en dizaines)", "dizaines de visiteurs")]
 
     def serie(r, n=5, lo=3, hi=40):
@@ -1710,15 +1712,15 @@ def gen_cm2_aires_volumes():
         V = lo * la * h
         L.add("probleme", "contenance",
               f"Un aquarium a la forme d'un pavé droit de {lo} cm sur {la} cm et {h} cm de haut. Combien de litres d'eau peut-il contenir ?",
-              [f"$V = {lo} \\times {la} \\times {h} = {m(V)}$ cm³.", f"$1$ L $= 1$ dm³ $= 1000$ cm³, donc ${m(V)} \\div 1000 = {m(V // 1000)}$ L."],
+              [f"$V = {lo} \\times {la} \\times {h} = {m(V)}$ cm³.", f"$1$ L $= 1$ dm³ $= 1\\,000$ cm³, donc ${m(V)} \\div 1\\,000 = {m(V // 1000)}$ L."],
               f"${m(V // 1000)}$ L")
     L.add("application", "contenance", "Combien de litres contient un cube d'un décimètre d'arête ?", ["$1$ dm³ $= 1$ L."], "$1$ L")
     L.add("intermediaire", "contenance", "Combien de centimètres cubes y a-t-il dans 1 L ?",
-          ["$1$ L $= 1$ dm³, et un cube d'un décimètre (10 cm) d'arête contient $10 \\times 10 \\times 10 = 1000$ cm³."], "$1000$ cm³")
+          ["$1$ L $= 1$ dm³, et un cube d'un décimètre (10 cm) d'arête contient $10 \\times 10 \\times 10 = 1\\,000$ cm³."], "$1\\,000$ cm³")
     L.add("approfondissement", "contenance", "Une bouteille contient 75 cL. Combien cela fait-il de centimètres cubes ?",
-          ["$1$ L $= 100$ cL $= 1000$ cm³, donc $1$ cL $= 10$ cm³.", f"$75 \\times 10 = {750}$."], "$750$ cm³")
-    L.add("intermediaire", "contenance", "Une brique de jus a un volume de 1500 cm³. Combien de litres de jus peut-elle contenir ?",
-          [f"$1500 \\div 1000 = {ld(F(1500, 1000))}$."], f"${ld(F(3, 2))}$ L")
+          ["$1$ L $= 100$ cL $= 1\\,000$ cm³, donc $1$ cL $= 10$ cm³.", f"$75 \\times 10 = {750}$."], "$750$ cm³")
+    L.add("intermediaire", "contenance", "Une brique de jus a un volume de 1\u00a0500 cm³. Combien de litres de jus peut-elle contenir ?",
+          [f"$1\\,500 \\div 1\\,000 = {ld(F(1500, 1000))}$."], f"${ld(F(3, 2))}$ L")
     # 6. périmètre ou aire ?
     for (r1, r2) in [((6, 4), (8, 2)), ((7, 3), (5, 5)), ((9, 1), (6, 4)), ((12, 2), (8, 6))]:
         p1, p2 = 2 * sum(r1), 2 * sum(r2)
@@ -1756,7 +1758,7 @@ def gen_cm2_aires_volumes():
           [f"$3$ cubes en longueur, $2$ en largeur, $1$ en hauteur : $3 \\times 2 \\times 1 = {6}$."], f"${6}$ cubes")
     L.add("probleme", "problemes",
           "Une piscine a la forme d'un pavé droit de 10 m de long, 5 m de large et 2 m de profondeur. Quel est son volume ? Combien de litres d'eau faut-il pour la remplir ?",
-          [f"$V = 10 \\times 5 \\times 2 = {100}$ m³.", f"$1$ m³ $= 1000$ L, donc ${100} \\times 1000 = {m(100 * 1000)}$ L."],
+          [f"$V = 10 \\times 5 \\times 2 = {100}$ m³.", f"$1$ m³ $= 1\\,000$ L, donc ${100} \\times 1\\,000 = {m(100 * 1000)}$ L."],
           f"${100}$ m³, soit ${m(100000)}$ L")
     L.add("probleme", "problemes",
           "Combien de boîtes de 20 cm sur 10 cm sur 5 cm peut-on ranger dans un carton de 40 cm sur 30 cm sur 20 cm, en les posant toutes dans le même sens ?",
@@ -1845,7 +1847,7 @@ def gen_cm2_calcul_mental():
     for x in [60, 35, 72, 18]:
         L.add("application", "complements", f"Quel est le complément à $100$ de ${x}$ ?", [f"${x} + {100 - x} = 100$."], f"${100 - x}$")
     for x in [450, 725, 380]:
-        L.add("intermediaire", "complements", f"Quel est le complément à $1000$ de ${x}$ ?", [f"${x} + {1000 - x} = 1000$."], f"${1000 - x}$")
+        L.add("intermediaire", "complements", f"Quel est le complément à $1\\,000$ de ${x}$ ?", [f"${x} + {1000 - x} = 1\\,000$."], f"${1000 - x}$")
     for x in [F(36, 10), F(72, 10)]:
         L.add("approfondissement", "complements", f"Combien faut-il ajouter à ${ld(x)}$ pour obtenir $10$ ?",
               [f"${ld(x)} + {ld(10 - x)} = 10$."], f"${ld(10 - x)}$")
@@ -1887,7 +1889,7 @@ def gen_cm2_calcul_mental():
             d1, d2 = a // 10 * 10, a % 10
             corr = f"${a} \\times {b} = ({d1} \\times {b}) + ({d2} \\times {b}) = {d1 * b} + {d2 * b} = {a * b}$."
         L.add("approfondissement", "decomposer", f"Calcule mentalement ${a} \\times {b}$ en décomposant un des nombres.", [corr], f"${a * b}$")
-    pbs = [("Léa paie un livre de 63 € avec un billet de 100 €. Combien lui rend-on ?", "On cherche le complément de 63 à 100 : $63 + 37 = 100$.", "$37$ €"),
+    pbs = [("Léa paie un jeu de société à 63 € avec un billet de 100 €. Combien lui rend-on ?", "On cherche le complément de 63 à 100 : $63 + 37 = 100$.", "$37$ €"),
            ("Un vélo coûte 199 € et un casque 49 €. Quel est le prix total ?", "$199 + 49 = 200 + 50 - 2 = 248$.", "$248$ €"),
            ("8 places de concert coûtent 25 € chacune. Quel est le prix total ?", "$8 \\times 25 = 8 \\times 100 \\div 4 = 800 \\div 4 = 200$.", "$200$ €"),
            ("Une école achète 49 dictionnaires à 9 € l'un. Quel est le prix total ?",
@@ -2096,7 +2098,7 @@ def gen_cm2_fractions():
     pbs.append((f"Dans une classe de 28 élèves, les ${fl(3, 7)}$ sont des filles. Combien y a-t-il de garçons ?",
                 [f"Filles : $28 \\div 7 \\times 3 = {28 // 7 * 3}$.", f"Garçons : $28 - {28 // 7 * 3} = {28 - 28 // 7 * 3}$."],
                 f"${28 - 28 // 7 * 3}$ garçons"))
-    pbs.append((f"Un pot de peinture de 5 L est utilisé aux ${fl(3, 10)}$. Combien de litres a-t-on utilisés ?",
+    pbs.append((f"On utilise les ${fl(3, 10)}$ d'un pot de peinture de 5 L. Combien de litres a-t-on utilisés ?",
                 [f"Un dixième de 5 L : $5 \\div 10 = 0{{,}}5$ L.", f"Trois dixièmes : $3 \\times 0{{,}}5 = {ld(F(15, 10))}$ L."], f"${ld(F(15, 10))}$ L"))
     for (en, c, r) in pbs:
         L.add("probleme", "problemes", en, c, r)

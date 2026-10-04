@@ -416,13 +416,14 @@ def gen_1_energie_electrique():
         ncs = min(len(x.replace(".", "").lstrip("0")) for x in (U, I))   # chiffres significatifs des données
         L.add("application", "puissance",
               f"Sous une tension de ${vex(U, 'V')}$, {app} est traversé{e} par un courant d'intensité ${vex(I, 'A')}$. Calculer la puissance électrique reçue.",
-              [f"$P = U \\times I = {ex(U)} \\times {ex(I)} = {ex(round(P, 6))}\\ \\mathrm{{W}}$, soit ${val(P, 'W', ncs)}$ avec {ncs} chiffres significatifs."],
-              f"$P \\approx {val(P, 'W', ncs)}$")
-    for app, P, U in [("un four de 3,0 kW", 3000, 230), ("un radiateur de 1 500 W", 1500, 230), ("un ordinateur portable de 65 W", 65, 19.5)]:
+              [f"$P = U \\times I = {ex(U)} \\times {ex(I)} = {ex(round(P, 6))}\\ \\mathrm{{W}}$"
+               + ("." if ex(round(P, 6)) == num(P, ncs) else f", soit ${sci(P, ncs) if P >= 10 ** ncs else num(P, ncs)}\\ \\mathrm{{W}}$ avec {ncs} chiffres significatifs (comme les données).")],
+              f"$P \\approx {sci(P, ncs) if P >= 10 ** ncs else num(P, ncs)}\\ \\mathrm{{W}}$")
+    for app, P, U, ncs in [("un four de 3,0 kW", 3000, 230, 2), ("un radiateur de 1 500 W", 1500, 230, 3), ("un ordinateur portable de 65 W", 65, 19.5, 2)]:
         I = P / U
         L.add("intermediaire", "puissance",
               f"Quelle est l'intensité du courant qui traverse {app} alimenté sous ${vex(U, 'V')}$ ?",
-              [f"$I = \\dfrac{{P}}{{U}} = \\dfrac{{{ex(P)}}}{{{ex(U)}}} = {val(I, 'A')}$."], f"$I \\approx {val(I, 'A')}$")
+              [f"$I = \\dfrac{{P}}{{U}} = \\dfrac{{{ex(P)}}}{{{ex(U)}}} \\approx {val(I, 'A', ncs)}$."], f"$I \\approx {val(I, 'A', ncs)}$")
     # --- énergie (9)
     prix = 0.25
     for app, P, hs in [("un radiateur de 1 500 W", 1500, "3.0"), ("un four de 2 500 W", 2500, "0.75")]:
@@ -773,7 +774,7 @@ def gen_1_mouvement_interactions():
     L.add("application", "variation-vitesse", "Un cycliste roule en ligne droite ; sa vitesse passe de $5{,}0\\ \\mathrm{m\\cdot s^{-1}}$ à $5{,}6\\ \\mathrm{m\\cdot s^{-1}}$. Quel est le sens de la somme des forces qui s'exercent sur lui ?",
           ["$\\Delta v = 5{,}6 - 5{,}0 = +0{,}6\\ \\mathrm{m\\cdot s^{-1}}$ : $\\Delta\\vec v$ est dans le sens du mouvement.", "$\\sum\\vec F$ a la même direction et le même sens que $\\Delta\\vec v$."],
           "Dans le sens du mouvement")
-    L.add("intermediaire", "variation-vitesse", "Une balle lancée verticalement vers le haut passe de $6{,}0\\ \\mathrm{m\\cdot s^{-1}}$ à $5{,}6\\ \\mathrm{m\\cdot s^{-1}}$ (vers le haut) entre deux images. Quelle est la direction et le sens de $\\Delta\\vec v$, puis de $\\sum\\vec F$ ?",
+    L.add("intermediaire", "variation-vitesse", "Une balle lancée verticalement vers le haut passe de $6{,}0\\ \\mathrm{m\\cdot s^{-1}}$ à $5{,}6\\ \\mathrm{m\\cdot s^{-1}}$ (vers le haut) entre deux images. Quels sont la direction et le sens de $\\Delta\\vec v$, puis de $\\sum\\vec F$ ?",
           ["La vitesse vers le haut diminue : $\\Delta\\vec v$ est vertical, dirigé vers le bas, de valeur $0{,}4\\ \\mathrm{m\\cdot s^{-1}}$.", "$\\sum\\vec F$ est verticale vers le bas : c'est le poids (frottements négligés)."],
           "Verticaux, vers le bas")
     dv = math.hypot(0, 0.40)
@@ -825,7 +826,7 @@ def gen_1_mouvement_interactions():
         P = float(m) * G
         L.add("application", "bilan-forces", ctx + f" Faire le bilan des forces et calculer la valeur de {quoi}." + GTXT,
               [f"Deux forces : le poids $\\vec P$ (vertical, vers le bas) et {quoi} (verticale, vers le haut).",
-               f"Le mouvement est rectiligne uniforme (ou repos) : les forces se compensent, donc la valeur cherchée vaut $P = mg = {ex(m)} \\times 9{{,}}81 = {val(P, 'N')}$."],
+               f"Le système est immobile ou en mouvement rectiligne uniforme : d'après le principe d'inertie, les forces se compensent, donc la valeur cherchée vaut $P = mg = {ex(m)} \\times 9{{,}}81 = {val(P, 'N')}$."],
               f"${val(P, 'N')}$")
     L.add("intermediaire", "bilan-forces", "Un objet est soumis à deux forces perpendiculaires de $30\\ \\mathrm{N}$ et de $40\\ \\mathrm{N}$. Calculer la valeur de leur somme. Le vecteur vitesse peut-il rester constant ?",
           ["$\\left\\lVert\\sum\\vec F\\right\\rVert = \\sqrt{30^2 + 40^2} = 50\\ \\mathrm{N}$.", "La somme n'est pas nulle : le vecteur vitesse varie."], "$50\\ \\mathrm{N}$ ; non")
@@ -897,7 +898,7 @@ def gen_1_ondes_signaux():
           [f"$\\tau = \\dfrac{{d}}{{v}} = \\dfrac{{120}}{{6{{,}}0}} = {val(t, 's', 2)}$."], f"$\\tau = {val(t, 's', 2)}$")
     tP, tS = 120 / 6.0, 120 / 3.5
     L.add("probleme", "retard", "Les ondes P ($6{,}0\\ \\mathrm{km\\cdot s^{-1}}$) et S ($3{,}5\\ \\mathrm{km\\cdot s^{-1}}$) d'un séisme parcourent $120\\ \\mathrm{km}$. Calculer le décalage entre leurs arrivées.",
-          [f"$\\tau_P = \\dfrac{{120}}{{6{{,}}0}} = {val(tP, 's', 2)}$ ; $\\tau_S = \\dfrac{{120}}{{3{{,}}5}} = {val(tS, 's')}$.", f"Décalage : ${val(tS - tP, 's')}$ ; c'est lui qui permet de localiser l'épicentre."],
+          [f"$\\tau_P = \\dfrac{{120}}{{6{{,}}0}} = {val(tP, 's', 2)}$ ; $\\tau_S = \\dfrac{{120}}{{3{{,}}5}} = {val(tS, 's')}$.", f"Décalage : ${val(tS - tP, 's')}$ ; c'est ce décalage qui permet d'estimer la distance de la station à l'épicentre."],
           f"$\\approx {val(tS - tP, 's')}$")
     d = 340 * 3.0
     L.add("application", "retard", "On entend le tonnerre $3{,}0\\ \\mathrm{s}$ après avoir vu l'éclair. Le son se propage à $340\\ \\mathrm{m\\cdot s^{-1}}$ ; la lumière arrive quasi instantanément. À quelle distance est tombée la foudre ?",
@@ -1017,13 +1018,13 @@ def _equation(reac, prod):
 def gen_1_transformations_matiere():
     L = _Lot()
     # --- quantité de matière (7)
-    for ctx, m, M, quoi in [("$9{,}0\\ \\mathrm{g}$ d'eau ($M = 18{,}0\\ \\mathrm{g\\cdot mol^{-1}}$)", 9.0, 18.0, "eau"),
-                            ("$5{,}85\\ \\mathrm{g}$ de chlorure de sodium ($M = 58{,}5\\ \\mathrm{g\\cdot mol^{-1}}$)", 5.85, 58.5, ""),
-                            ("$1{,}27\\ \\mathrm{g}$ de cuivre ($M = 63{,}5\\ \\mathrm{g\\cdot mol^{-1}}$)", 1.27, 63.5, ""),
-                            ("$20{,}0\\ \\mathrm{g}$ de saccharose ($M = 342\\ \\mathrm{g\\cdot mol^{-1}}$)", 20.0, 342, "")]:
+    for ctx, m, M, quoi in [("$9{,}00\\ \\mathrm{g}$ d'eau ($M = 18{,}0\\ \\mathrm{g\\cdot mol^{-1}}$)", 9.0, 18.0, "9.00"),
+                            ("$5{,}85\\ \\mathrm{g}$ de chlorure de sodium ($M = 58{,}5\\ \\mathrm{g\\cdot mol^{-1}}$)", 5.85, 58.5, "5.85"),
+                            ("$1{,}27\\ \\mathrm{g}$ de cuivre ($M = 63{,}5\\ \\mathrm{g\\cdot mol^{-1}}$)", 1.27, 63.5, "1.27"),
+                            ("$20{,}0\\ \\mathrm{g}$ de saccharose ($M = 342\\ \\mathrm{g\\cdot mol^{-1}}$)", 20.0, 342, "20.0")]:
         n = m / M
         L.add("application", "quantite-matiere", f"Calculer la quantité de matière contenue dans {ctx}.",
-              [f"$n = \\dfrac{{m}}{{M}} = {val(n, 'mol')}$."], f"$n \\approx {val(n, 'mol')}$")
+              [f"$n = \\dfrac{{m}}{{M}} = \\dfrac{{{ex(quoi)}}}{{{ex(str(M) if M != 342 else '342')}}} = {val(n, 'mol')}$."], f"$n \\approx {val(n, 'mol')}$")
     for V, c in [("100", "0.20"), ("250", "5.0e-2")]:
         n = float(V) / 1000 * float(c)
         ct = ex(c) if "e" not in c else sci(float(c), 2)

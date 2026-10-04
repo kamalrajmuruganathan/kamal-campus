@@ -576,9 +576,10 @@ def gen_cp_dizaines_unites():
             return ("intermediaire", "vrai-ou-faux",
                     f"Vrai ou faux : dans {n}, le chiffre des unités est {d}.",
                     [f"Le chiffre des unités est à droite : c'est {u}."], "Vrai" if d == u else "Faux")
+        c = r.choice([d, u])
         return ("intermediaire", "vrai-ou-faux",
-                f"Vrai ou faux : dans {n}, le chiffre des dizaines est {d}.",
-                [f"Le chiffre des dizaines est à gauche : c'est {d}."], "Vrai")
+                f"Vrai ou faux : dans {n}, le chiffre des dizaines est {c}.",
+                [f"Le chiffre des dizaines est à gauche : c'est {d}."], "Vrai" if c == d else "Faux")
 
     return assemble(105, [(decomp, 10), (comp, 9), (additive, 8), (vf, 7), (valeur, 8), (paquets, 8)])
 

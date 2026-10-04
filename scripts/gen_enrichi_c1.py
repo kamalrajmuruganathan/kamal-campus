@@ -1076,8 +1076,10 @@ def g5_probabilites():
           f"On lance $60$ fois un dé. Effectifs des faces $1$ à $6$ : " + " ; ".join(f"${x}$" for x in eff)
           + f". Calcule la fréquence d'apparition de la face ${face}$ (arrondie au centième) et compare-la à la probabilité $\\dfrac{{1}}{{6}} \\approx 0{{,}}17$.",
           [f"Fréquence : $ \\dfrac{{{e}}}{{60}} " + ("=" if (q * 100).denominator == 1 else "\\approx") + f" {nb(q, 2)} $.",
-           "Les fréquences observées s'écartent un peu de la probabilité : c'est normal sur seulement $60$ lancers."],
-          f"$ {nb(q, 2)} $" if (q * 100).denominator == 1 else f"$ \\approx {nb(q, 2)} $")
+           f"${nb(q, 2)} " + (">" if q > F(1, 6) else "<") + " 0{,}17$ : la fréquence est un peu " + ("plus grande" if q > F(1, 6) else "plus petite")
+           + " que la probabilité. Cet écart est normal sur seulement $60$ lancers."],
+          (f"$ {nb(q, 2)} $" if (q * 100).denominator == 1 else f"$ \\approx {nb(q, 2)} $")
+          + (", un peu plus que la probabilité" if q > F(1, 6) else ", un peu moins que la probabilité"))
     E(PB, "frequence", "Une pièce est lancée $200$ fois et tombe $94$ fois sur « pile ». Quelle est la fréquence de « pile » ? Est-ce surprenant ?",
       [f"$ \\dfrac{{94}}{{200}} = {nb(F(94, 200))} $.", "C'est proche de la probabilité $0{,}5$ : rien de surprenant."],
       f"$ {nb(F(94, 200))} $ ; non, c'est proche de $0{{,}}5$")
@@ -1248,7 +1250,7 @@ def g5_puissances():
         b, e = map(int, ecr.split("^"))
         assert b ** e == n
         E(A, "ecrire-puissance", f"Écris ${nb(n)}$ sous la forme d'une puissance d'exposant ${e}$.", cmt, f"$ {ecr} $")
-    E(I, "ecrire-puissance", "Écris $64$ sous la forme d'une puissance $2$, puis d'une puissance $3$.",
+    E(I, "ecrire-puissance", "Écris $64$ sous la forme d'une puissance d'exposant $2$, puis d'une puissance d'exposant $3$.",
       ["$ 64 = 8 \\times 8 = 8^2 $.", "$ 64 = 4 \\times 4 \\times 4 = 4^3 $."], "$ 8^2 $ et $ 4^3 $")
     E(I, "ecrire-puissance", "Le nombre $50$ est-il le carré d'un nombre entier ?",
       "$ 7^2 = 49 $ et $ 8^2 = 64 $ : $50$ est entre les deux, ce n'est pas un carré d'entier.", "Non")
@@ -1420,8 +1422,9 @@ def g5_representation_espace():
       f"$S = 6$, $A = 9$, $F = 5$ : $ 6 - 9 + 5 = {6-9+5} $.", "$ 6 - 9 + 5 = 2 $ ✓")
     r, h = 5, 12
     E(P, "solides", f"Le patron d'un cylindre de rayon ${r}$ cm et de hauteur ${h}$ cm contient un rectangle. Quelles sont ses dimensions ? (Prends $\\pi \\approx 3{{,}}14$.)",
-      ["La largeur du rectangle est le périmètre du disque de base : $2\\pi r$.", f"$ 2 \\times 3{{,}}14 \\times {r} = {nb(2*PI*r)} $ cm."],
-      f"${h}$ cm sur ${nb(2*PI*r)}$ cm")
+      [f"Un côté du rectangle est la hauteur (${h}$ cm) ; l'autre est la longueur du cercle de base : $2\\pi r$.",
+       f"$ 2 \\pi \\times {r} \\approx 2 \\times 3{{,}}14 \\times {r} = {nb(2*PI*r)} $ cm."],
+      f"${h}$ cm sur environ ${nb(2*PI*r)}$ cm")
     E(I, "solides", "Un bloc de $6$ carrés disposés en $2 \\times 3$ peut-il être le patron d'un cube ?",
       "Non : il contient un bloc de $2 \\times 2$ carrés, et un tel bloc n'est jamais dans un patron de cube (deux faces se superposeraient au pliage).", "Non")
     # --- volume pavé et cube (8)
@@ -1555,9 +1558,9 @@ def g5_statistiques():
     # --- diagramme circulaire (8)
     for vals, effs, nom in [(["Foot", "Danse", "Judo", "Natation"], [8, 5, 4, 7], "Sport pratiqué"),
                             (["Bus", "Vélo", "À pied", "Voiture"], [12, 3, 9, 6], "Moyen de transport"),
-                            (["Chat", "Chien", "Poisson", "Aucun"], [6, 9, 3, 18], "Animal préféré")]:
+                            (["Chat", "Chien", "Poisson", "Aucun"], [4, 6, 2, 12], "Animal de compagnie")]:
         n = sum(effs)
-        for idx in ([0, 1] if nom != "Animal préféré" else [3]):
+        for idx in ([0, 1] if nom != "Animal de compagnie" else [3]):
             ang = F(effs[idx] * 360, n)
             assert ang.denominator == 1
             E(I, "diagramme-circulaire",

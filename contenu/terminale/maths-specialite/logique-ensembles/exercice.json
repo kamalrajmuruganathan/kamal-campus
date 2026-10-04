@@ -13,6 +13,44 @@
     {
       "id": 1,
       "difficulte": "application",
+      "notion": "ensembles",
+      "enonce": "On considère $A = \\{0, 2, 4, 6\\}$, $B = \\{\\, n \\in \\mathbb{N} \\mid n \\text{ est pair} \\,\\}$ et $C = \\{0, 2\\}$. Compléter avec le symbole qui convient ($\\in$, $\\notin$ ou $\\subset$) : (a) $4 \\ldots A$ ; (b) $3 \\ldots A$ ; (c) $C \\ldots A$ ; (d) $A \\ldots B$ ; (e) $\\varnothing \\ldots C$.",
+      "corrige": [
+        "$\\in$ relie un élément à un ensemble ; $\\subset$ relie deux ensembles.",
+        "(a) $4$ est un élément de $A$ : $4 \\in A$. (b) $3$ n'est pas dans la liste : $3 \\notin A$.",
+        "(c) $0$ et $2$ sont dans $A$ : $C \\subset A$. (d) $0, 2, 4, 6$ sont des entiers naturels pairs : $A \\subset B$.",
+        "(e) L'ensemble vide est inclus dans tout ensemble : $\\varnothing \\subset C$."
+      ],
+      "reponse": "(a) $4 \\in A$ ; (b) $3 \\notin A$ ; (c) $C \\subset A$ ; (d) $A \\subset B$ ; (e) $\\varnothing \\subset C$."
+    },
+    {
+      "id": 2,
+      "difficulte": "application",
+      "notion": "quantificateurs",
+      "enonce": "Dire si chaque proposition est vraie ou fausse, en justifiant : (a) $\\forall x \\in \\mathbb{R},\\ x^2 \\geqslant 0$ ; (b) $\\exists x \\in \\mathbb{R},\\ x^2 = -1$ ; (c) $\\forall n \\in \\mathbb{N},\\ n \\geqslant 1$ ; (d) $\\exists n \\in \\mathbb{N},\\ n^2 = 2n$.",
+      "corrige": [
+        "(a) Vraie : le carré d'un réel est toujours positif ou nul.",
+        "(b) Fausse : aucun réel n'a un carré négatif.",
+        "(c) Fausse : $n = 0$ est un contre-exemple, car $0 \\in \\mathbb{N}$ et $0 < 1$.",
+        "(d) Vraie : pour $n = 2$, $n^2 = 4 = 2n$ (un seul exemple suffit pour « il existe »)."
+      ],
+      "reponse": "(a) vraie ; (b) fausse ; (c) fausse ; (d) vraie."
+    },
+    {
+      "id": 3,
+      "difficulte": "application",
+      "notion": "connecteurs",
+      "enonce": "Pour un réel $x$, on pose $P : x > 1$ et $Q : x < 3$. Donner la valeur de vérité de « $P$ et $Q$ », « $P$ ou $Q$ » et « $P \\Rightarrow Q$ » pour $x = 2$, puis pour $x = 5$.",
+      "corrige": [
+        "Pour $x = 2$ : $P$ et $Q$ sont vraies. Donc « $P$ et $Q$ » est vraie, « $P$ ou $Q$ » est vraie (le « ou » est inclusif) et $P \\Rightarrow Q$ est vraie.",
+        "Pour $x = 5$ : $P$ est vraie et $Q$ est fausse. Donc « $P$ et $Q$ » est fausse, « $P$ ou $Q$ » est vraie.",
+        "$P \\Rightarrow Q$ est fausse : c'est le seul cas où une implication est fausse ($P$ vraie et $Q$ fausse)."
+      ],
+      "reponse": "Pour $x = 2$ : vraie, vraie, vraie. Pour $x = 5$ : fausse, vraie, fausse."
+    },
+    {
+      "id": 4,
+      "difficulte": "application",
       "notion": "negation",
       "enonce": "Écrire la négation de chacune des propositions suivantes :\n\n(a) $P : \\forall x \\in \\mathbb{R},\\ x^2 + 1 > 0$ ;\n\n(b) $Q : \\exists n \\in \\mathbb{N},\\ 2n = 7$ ;\n\n(c) $R : \\forall x \\in \\mathbb{R},\\ (x > 0 \\text{ et } x < 1)$.",
       "corrige": [
@@ -24,7 +62,7 @@
       "reponse": "(a) $\\exists x \\in \\mathbb{R},\\ x^2 + 1 \\leqslant 0$ ; (b) $\\forall n \\in \\mathbb{N},\\ 2n \\neq 7$ ; (c) $\\exists x \\in \\mathbb{R},\\ (x \\leqslant 0 \\text{ ou } x \\geqslant 1)$."
     },
     {
-      "id": 2,
+      "id": 5,
       "difficulte": "application",
       "notion": "implication",
       "enonce": "On considère l'implication vraie, valable pour tout réel $x$ : « si $x = 3$, alors $x^2 = 9$ ». Écrire sa réciproque et sa contraposée, et préciser pour chacune si elle est vraie ou fausse.",
@@ -37,9 +75,9 @@
       "reponse": "Réciproque « $x^2 = 9 \\Rightarrow x = 3$ » : fausse (contre-exemple $x = -3$). Contraposée « $x^2 \\neq 9 \\Rightarrow x \\neq 3$ » : vraie."
     },
     {
-      "id": 3,
+      "id": 6,
       "difficulte": "intermediaire",
-      "notion": "raisonnements",
+      "notion": "raisonnement-cas",
       "enonce": "Démontrer, par disjonction de cas, que pour tout entier $n \\in \\mathbb{Z}$, le nombre $3n^2 + n$ est pair.",
       "corrige": [
         "Tout entier est soit pair, soit impair : ces deux cas couvrent tout $\\mathbb{Z}$.",
@@ -50,9 +88,9 @@
       "reponse": "$3n^2 + n$ est pair pour tout $n \\in \\mathbb{Z}$ : il s'écrit $2(6k^2+k)$ si $n=2k$, et $2(6k^2+7k+2)$ si $n=2k+1$."
     },
     {
-      "id": 4,
+      "id": 7,
       "difficulte": "intermediaire",
-      "notion": "raisonnements",
+      "notion": "raisonnement-contraposee",
       "enonce": "Soit $n$ un entier. Démontrer, en raisonnant par contraposée, la proposition : « si $n^2 + 1$ est pair, alors $n$ est impair ».",
       "corrige": [
         "On pose $P : n^2 + 1$ est pair et $Q : n$ est impair. On veut $P \\Rightarrow Q$.",
@@ -63,62 +101,21 @@
       "reponse": "Vrai. Par contraposée : si $n = 2k$ est pair, $n^2 + 1 = 2(2k^2) + 1$ est impair ; l'implication de départ est donc établie."
     },
     {
-      "id": 5,
-      "difficulte": "approfondissement",
-      "notion": "raisonnements",
-      "enonce": "Démontrer par l'absurde qu'il n'existe pas de plus petit réel strictement positif, c'est-à-dire qu'il n'existe aucun réel $a > 0$ tel que $a \\leqslant x$ pour tout réel $x > 0$.",
-      "corrige": [
-        "Raisonnement par l'absurde : on suppose la négation de ce que l'on veut montrer, puis on cherche une contradiction.",
-        "Supposons qu'il existe un plus petit réel strictement positif, noté $a$ : on a $a > 0$ et $a \\leqslant x$ pour tout réel $x > 0$.",
-        "Posons $b = \\dfrac{a}{2}$. Comme $a > 0$, on a $b > 0$ : $b$ est bien un réel strictement positif.",
-        "Or $b = \\dfrac{a}{2} < a$ (puisque $a > 0$). On a donc exhibé un réel strictement positif strictement plus petit que $a$, ce qui contredit le fait que $a$ soit le plus petit.",
-        "La supposition mène à une contradiction : elle est absurde. Il n'existe donc pas de plus petit réel strictement positif."
-      ],
-      "reponse": "Un tel plus petit réel $a > 0$ ne peut exister : $\\dfrac{a}{2}$ serait strictement positif et strictement plus petit que $a$, d'où la contradiction."
-    },
-    {
-      "id": 6,
-      "difficulte": "approfondissement",
-      "notion": "raisonnements",
-      "enonce": "On veut établir la propriété $\\mathcal{P}(n) : 2^n > n$ pour tout entier $n \\in \\mathbb{N}$.\n\n1. Vérifier $\\mathcal{P}(n)$ pour $n = 0,\\ 1,\\ 2,\\ 3$.\n\n2. Ces quatre vérifications suffisent-elles à prouver que $\\mathcal{P}(n)$ est vraie pour tout $n \\in \\mathbb{N}$ ? Justifier.\n\n3. Quel mode de raisonnement permet de démontrer une propriété dépendant d'un entier $n$ « de proche en proche », et dans quel chapitre est-il développé ?",
-      "corrige": [
-        "1. $2^0 = 1 > 0$ ; $2^1 = 2 > 1$ ; $2^2 = 4 > 2$ ; $2^3 = 8 > 3$. La propriété est vraie pour $n = 0, 1, 2, 3$.",
-        "2. Non. Vérifier un énoncé « pour tout $n$ » sur un nombre fini de valeurs ne le démontre pas : un « $\\forall n$ » n'est jamais prouvé par des exemples (c'est l'un des pièges du cours). Il resterait une infinité d'entiers non testés.",
-        "3. Le raisonnement adapté est le raisonnement par récurrence : initialisation, hérédité $\\mathcal{P}(n) \\Rightarrow \\mathcal{P}(n+1)$, puis conclusion. Il n'est pas développé dans ce chapitre : il est prérequis et traité en détail dans le chapitre « Suites », auquel il faut se reporter.",
-        "Ici, $\\mathcal{P}(0)$ jouerait le rôle de l'initialisation ; la démonstration complète de l'hérédité relève du chapitre « Suites »."
-      ],
-      "reponse": "1. Vraie pour $n = 0,1,2,3$. 2. Non : un nombre fini d'exemples ne prouve jamais un « pour tout ». 3. Le raisonnement par récurrence, développé dans le chapitre « Suites »."
-    },
-    {
-      "id": 7,
-      "difficulte": "application",
-      "notion": "negation",
-      "enonce": "Écrire la négation de chacune des propositions suivantes :\n\n(a) $A : \\forall x \\in \\mathbb{R},\\ \\exists n \\in \\mathbb{N},\\ n > x$ ;\n\n(b) $B : \\forall x \\in \\mathbb{R},\\ (x \\geqslant 2 \\Rightarrow x^2 \\geqslant 4)$ ;\n\n(c) $C : \\exists x \\in \\mathbb{R},\\ (x \\leqslant -1 \\text{ ou } x \\geqslant 1)$.",
-      "corrige": [
-        "On nie de la gauche vers la droite : chaque $\\forall$ devient $\\exists$, chaque $\\exists$ devient $\\forall$, puis on nie l'intérieur.",
-        "(a) L'intérieur $n > x$ se nie en $n \\leqslant x$. En échangeant les deux quantificateurs dans l'ordre : $\\text{non}\\,A : \\exists x \\in \\mathbb{R},\\ \\forall n \\in \\mathbb{N},\\ n \\leqslant x$.",
-        "(b) La négation d'une implication $P \\Rightarrow Q$ est $P \\text{ et } \\text{non } Q$ (jamais une autre implication). Ici $P : x \\geqslant 2$ et $Q : x^2 \\geqslant 4$, donc $\\text{non } Q : x^2 < 4$. Le $\\forall$ devient $\\exists$ : $\\text{non}\\,B : \\exists x \\in \\mathbb{R},\\ (x \\geqslant 2 \\text{ et } x^2 < 4)$.",
-        "(c) L'intérieur est une disjonction ; par De Morgan, $\\text{non}\\,(A \\text{ ou } B) = (\\text{non } A) \\text{ et } (\\text{non } B)$. La négation de « $x \\leqslant -1$ ou $x \\geqslant 1$ » est « $x > -1$ et $x < 1$ ». Le $\\exists$ devient $\\forall$ : $\\text{non}\\,C : \\forall x \\in \\mathbb{R},\\ (x > -1 \\text{ et } x < 1)$."
-      ],
-      "reponse": "(a) $\\exists x \\in \\mathbb{R},\\ \\forall n \\in \\mathbb{N},\\ n \\leqslant x$ ; (b) $\\exists x \\in \\mathbb{R},\\ (x \\geqslant 2 \\text{ et } x^2 < 4)$ ; (c) $\\forall x \\in \\mathbb{R},\\ (x > -1 \\text{ et } x < 1)$."
-    },
-    {
       "id": 8,
-      "difficulte": "intermediaire",
-      "notion": "raisonnements",
-      "enonce": "Démontrer, par disjonction de cas, que pour tout entier $n \\in \\mathbb{Z}$, le carré $n^2$ est de la forme $4k$ ou $4k + 1$ avec $k \\in \\mathbb{Z}$ (autrement dit : un carré n'est jamais de la forme $4k + 2$ ni $4k + 3$).",
+      "difficulte": "approfondissement",
+      "notion": "quantificateurs",
+      "enonce": "L'ordre des quantificateurs : dire si chaque proposition est vraie ou fausse. (a) $\\forall n \\in \\mathbb{N},\\ \\exists m \\in \\mathbb{N},\\ m > n$ ; (b) $\\exists m \\in \\mathbb{N},\\ \\forall n \\in \\mathbb{N},\\ m > n$.",
       "corrige": [
-        "Tout entier est soit pair, soit impair : ces deux cas recouvrent tout $\\mathbb{Z}$.",
-        "Cas 1 — $n$ pair : on écrit $n = 2p$. Alors $n^2 = 4p^2 = 4k$ avec $k = p^2 \\in \\mathbb{Z}$. Le carré est de la forme $4k$.",
-        "Cas 2 — $n$ impair : on écrit $n = 2p + 1$. Alors $n^2 = 4p^2 + 4p + 1 = 4(p^2 + p) + 1 = 4k + 1$ avec $k = p^2 + p \\in \\mathbb{Z}$. Le carré est de la forme $4k + 1$.",
-        "Les deux cas couvrent tous les entiers : $n^2$ est toujours de la forme $4k$ ou $4k + 1$. En particulier, aucun carré parfait n'est de la forme $4k + 2$ ou $4k + 3$."
+        "(a) Pour chaque $n$, on peut choisir $m = n + 1$, qui vérifie $m > n$ : la proposition est vraie.",
+        "(b) Sa négation est $\\forall m \\in \\mathbb{N},\\ \\exists n \\in \\mathbb{N},\\ m \\leqslant n$. Elle est vraie : pour chaque $m$, on prend $n = m$.",
+        "Donc (b) est fausse : aucun entier naturel n'est strictement plus grand que tous les entiers naturels (il ne l'est pas de lui-même)."
       ],
-      "reponse": "$n^2 = 4p^2$ (forme $4k$) si $n = 2p$, et $n^2 = 4(p^2 + p) + 1$ (forme $4k + 1$) si $n = 2p + 1$. Un carré n'est donc jamais de la forme $4k + 2$ ni $4k + 3$."
+      "reponse": "(a) vraie ; (b) fausse."
     },
     {
       "id": 9,
       "difficulte": "approfondissement",
-      "notion": "raisonnements",
+      "notion": "raisonnement-absurde",
       "enonce": "Soit $r$ un nombre rationnel et $x$ un nombre irrationnel.\n\n1. Démontrer, par l'absurde, que la somme $r + x$ est irrationnelle.\n\n2. En déduire que $1 + \\sqrt{2}$ est irrationnel (on admet que $\\sqrt{2}$ est irrationnel).",
       "corrige": [
         "1. Raisonnement par l'absurde : on suppose que $r + x$ est rationnel et on cherche une contradiction.",
@@ -130,9 +127,9 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
-      "notion": "raisonnements",
-      "enonce": "Ce problème mobilise plusieurs modes de raisonnement du chapitre. On étudie des propriétés de parité, l'irrationalité, et une inégalité dépendant d'un entier.\n\nPour tout entier naturel $n$, on considère la proposition $A : \\forall n \\in \\mathbb{N},\\ (n \\geqslant 3 \\Rightarrow 2^n > 2n)$.\n\n1. Écrire la négation de la proposition $A$.\n\n2. Démontrer, par disjonction de cas, que pour tout entier $n \\in \\mathbb{Z}$, le nombre $n^2 + 3n$ est pair.\n\n3. Démontrer, en raisonnant par contraposée, l'implication : « si $5n + 2$ est pair, alors $n$ est pair » (où $n$ est un entier).\n\n4. Démontrer, par l'absurde, que $\\sqrt{3}$ est irrationnel. On admettra que, pour un entier $p$, si $3$ divise $p^2$ alors $3$ divise $p$.\n\n5. On revient à la proposition $A$. Quel mode de raisonnement permet d'établir que « $2^n > 2n$ » pour tout $n \\geqslant 3$ ? Vérifier l'étape d'initialisation, et préciser où l'hérédité est traitée. La proposition $A$ est-elle vraie ou fausse ?",
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Ce problème mobilise plusieurs modes de raisonnement du chapitre. On étudie des propriétés de parité, l'irrationalité, et une inégalité dépendant d'un entier.\n\nOn considère la proposition $A : \\forall n \\in \\mathbb{N},\\ (n \\geqslant 3 \\Rightarrow 2^n > 2n)$.\n\n1. Écrire la négation de la proposition $A$.\n\n2. Démontrer, par disjonction de cas, que pour tout entier $n \\in \\mathbb{Z}$, le nombre $n^2 + 3n$ est pair.\n\n3. Démontrer, en raisonnant par contraposée, l'implication : « si $5n + 2$ est pair, alors $n$ est pair » (où $n$ est un entier).\n\n4. Démontrer, par l'absurde, que $\\sqrt{3}$ est irrationnel. On admettra que, pour un entier $p$, si $3$ divise $p^2$ alors $3$ divise $p$.\n\n5. On revient à la proposition $A$. Quel mode de raisonnement permet d'établir que « $2^n > 2n$ » pour tout $n \\geqslant 3$ ? Vérifier l'étape d'initialisation, et préciser où l'hérédité est traitée. La proposition $A$ est-elle vraie ou fausse ?",
       "corrige": [
         "1. On nie l'implication intérieure : $\\text{non}\\,(P \\Rightarrow Q) = P \\text{ et } \\text{non } Q$, avec $P : n \\geqslant 3$ et $Q : 2^n > 2n$, donc $\\text{non } Q : 2^n \\leqslant 2n$. Le $\\forall$ devient $\\exists$ : $\\text{non}\\,A : \\exists n \\in \\mathbb{N},\\ (n \\geqslant 3 \\text{ et } 2^n \\leqslant 2n)$.",
         "2. Disjonction de cas. Cas 1 — $n$ pair, $n = 2p$ : $n^2 + 3n = 4p^2 + 6p = 2(2p^2 + 3p)$, pair. Cas 2 — $n$ impair, $n = 2p + 1$ : $n^2 = 4p^2 + 4p + 1$ et $3n = 6p + 3$, donc $n^2 + 3n = 4p^2 + 10p + 4 = 2(2p^2 + 5p + 2)$, pair. Les deux cas couvrent $\\mathbb{Z}$ : $n^2 + 3n$ est pair pour tout $n$.",
