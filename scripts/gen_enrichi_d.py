@@ -323,7 +323,7 @@ def g1t_derivation():
                   [f"$B'(q) = {affine(-2 * a, b, 'q')}$, qui s'annule en $q = {fx(q0)}$.",
                    f"$B'$ est positive avant ${fx(q0)}$ et négative après : $B$ croît puis décroît.",
                    f"$B({fx(q0)}) = {nb(int(B0))}$."],
-                  f"Pour $q = {fx(q0)}$ ; bénéfice maximal ${nb(int(B0))}$ €"))
+                  f"Pour $q = {fx(q0)}$, soit ${nb(q0 * 100)}$ objets ; bénéfice maximal ${nb(int(B0))}$ €"))
     E.append(("probleme", "probleme",
               "Une bille lâchée sans vitesse parcourt $d(t) = 4{,}9t^2$ mètres en $t$ secondes. La vitesse instantanée est $d'(t)$, en m/s. Calculer la vitesse à $t = 2$ s.",
               ["$d'(t) = 9{,}8t$.", "$d'(2) = 19{,}6$ m/s."], "$19{,}6$ m/s"))
@@ -527,7 +527,9 @@ def g1t_probas():
         E.append(("application", "loi-de-probabilite",
                   f"La loi de probabilité d'une variable aléatoire $X$ est donnée par le tableau $\\begin{{array}}{{c|{'c' * len(vals)}}} x_i & {tab} \\\\ \\hline P(X = x_i) & {tp} \\end{{array}}$. Calculer $p = P(X = {vals[j]})$.",
                   ["La somme des probabilités vaut $1$.",
-                   f"$p = 1 - ({' + '.join(fx(x) for x in probs if x is not None)}) = {fx(manq)}$."],
+                   (f"$p = 1 - ({' + '.join(fx(x) for x in probs if x is not None)}) = {fx(manq)}$."
+                    if sum(1 for x in probs if x is not None) > 1
+                    else f"$p = 1 - {fx(next(x for x in probs if x is not None))} = {fx(manq)}$.")],
                   f"$p = {fx(manq)}$"))
     # e) espérance
     for vals, probs in [([0, 1, 2], [F(1, 4), F(1, 2), F(1, 4)]), ([1, 2, 3, 4], [F(1, 10), F(1, 5), F(3, 10), F(2, 5)]),
@@ -625,22 +627,22 @@ def g1t_stats2():
                    f"$\\mathrm{{G}}{pt(mx, my)}$."],
                   f"$\\mathrm{{G}}{pt(mx, my)}$"))
     # b) utiliser un ajustement
-    A = [("$y = 1{,}75x + 6{,}25$, où $x$ est le nombre d'heures de révision et $y$ la note sur 20", F(7, 4), F(25, 4), "x", 3, "la note obtenue après 3 heures de révision"),
-         ("$y = 4{,}2x - 36$, où $x$ est la température (en °C) et $y$ le nombre de glaces vendues", F(21, 5), -36, "x", 24, "le nombre de glaces vendues un jour à 24 °C"),
-         ("$y = 4{,}1x + 47{,}5$, où $x$ est le rang de l'année et $y$ le chiffre d'affaires (en milliers d'euros)", F(41, 10), F(95, 2), "x", 7, "le chiffre d'affaires de l'année de rang 7"),
-         ("$y = -1{,}6x + 20$, où $x$ est l'âge d'une voiture (en années) et $y$ son prix (en milliers d'euros)", F(-8, 5), 20, "x", 4, "le prix d'une voiture de 4 ans"),
-         ("$y = 1{,}1x + 6$, où $x$ est la durée d'un trajet (en min) et $y$ son prix (en €)", F(11, 10), 6, "x", 18, "le prix d'un trajet de 18 minutes"),
+    A = [("$y = 1{,}7x + 6{,}4$, où $x$ est le nombre d'heures de révision et $y$ la note sur 20", F(17, 10), F(32, 5), "x", 3, "la note obtenue après 3 heures de révision"),
+         ("$y = 4{,}03x - 32{,}65$, où $x$ est la température (en °C) et $y$ le nombre de glaces vendues", F(403, 100), F(-653, 20), "x", 24, "le nombre de glaces vendues un jour à 24 °C"),
+         ("$y = 4{,}2x + 47{,}4$, où $x$ est le rang de l'année et $y$ le chiffre d'affaires (en milliers d'euros)", F(21, 5), F(237, 5), "x", 7, "le chiffre d'affaires de l'année de rang 7"),
+         ("$y = -1{,}58x + 20{,}02$, où $x$ est l'âge d'une voiture (en années) et $y$ son prix (en milliers d'euros)", F(-79, 50), F(1001, 50), "x", 4, "le prix d'une voiture de 4 ans"),
+         ("$y = 1{,}1x + 5{,}8$, où $x$ est la durée d'un trajet (en min) et $y$ son prix (en €)", F(11, 10), F(29, 5), "x", 18, "le prix d'un trajet de 18 minutes"),
          ("$y = -0{,}75x + 30{,}2$, où $x$ est le nombre de semaines d'entraînement et $y$ le temps (en min) sur 5 km", F(-3, 4), F(151, 5), "x", 5, "le temps sur 5 km après 5 semaines")]
     for txt, a, b, _, x0, quoi in A:
         y0 = a * x0 + b
         E.append(("intermediaire", "ajustement-estimation",
                   f"Un ajustement affine par la méthode des moindres carrés donne {txt}. Estimer {quoi}.",
                   [f"On remplace $x$ par ${x0}$ : $y = {fx(a)} \\times {x0} {sg(b)}$.", f"$y = {fx(y0)}$."],
-                  f"$y \\approx {fx(y0)}$"))
+                  f"$y \\approx {fx(y0)}$" + (f", soit environ ${nb(arr(y0, 0))}$ glaces" if "glaces" in quoi else "")))
     for txt, a, b, _, y0, quoi in [
-            ("$y = 1{,}75x + 6{,}25$, où $x$ est le nombre d'heures de révision et $y$ la note sur 20", F(7, 4), F(25, 4), "x", 13, "le nombre d'heures de révision nécessaires pour obtenir 13 sur 20"),
-            ("$y = 1{,}1x + 6$, où $x$ est la durée d'un trajet en taxi (en min) et $y$ son prix (en €)", F(11, 10), 6, "x", 39, "la durée d'un trajet facturé 39 €"),
-            ("$y = -1{,}6x + 20$, où $x$ est l'âge d'une voiture (en années) et $y$ son prix (en milliers d'euros)", F(-8, 5), 20, "x", 12, "l'âge d'une voiture vendue 12 milliers d'euros")]:
+            ("$y = 1{,}7x + 6{,}4$, où $x$ est le nombre d'heures de révision et $y$ la note sur 20", F(17, 10), F(32, 5), "x", 13, "le nombre d'heures de révision nécessaires pour obtenir 13 sur 20"),
+            ("$y = 1{,}1x + 5{,}8$, où $x$ est la durée d'un trajet en taxi (en min) et $y$ son prix (en €)", F(11, 10), F(29, 5), "x", 39, "la durée d'un trajet facturé 39 €"),
+            ("$y = -1{,}58x + 20{,}02$, où $x$ est l'âge d'une voiture (en années) et $y$ son prix (en milliers d'euros)", F(-79, 50), F(1001, 50), "x", 12, "l'âge d'une voiture vendue 12 milliers d'euros")]:
         x0 = (y0 - b) / a
         E.append(("intermediaire", "ajustement-estimation",
                   f"Un ajustement affine donne {txt}. Estimer {quoi}.",
@@ -832,7 +834,7 @@ def g1t_suites():
                   [f"Un pourcentage répété : suite géométrique de raison $q = {fx(q)}$.",
                    f"$u_{{{n}}} = {nb(cap)} \\times {fx(q)}^{{{n}}} \\approx {nb(val, 2, True)}$."],
                   f"Environ ${nb(val, 2, True)}$ €"))
-    for s0, r, n, quoi in [(1500, 50, 12, "Un salarié gagne $1\\,500$ € par mois en janvier ; son salaire augmente de $50$ € chaque mois. Quel est son salaire en décembre (douzième mois) ?"),
+    for s0, r, n, quoi in [(1500, 50, 12, "Une épargnante dispose de $1\\,500$ € en janvier ; elle ajoute $50$ € à son épargne chaque mois. De combien dispose-t-elle en décembre (douzième mois) ?"),
                            (25000, -1200, 8, "Un lac contient $25\\,000$ poissons au départ ; on estime qu'il en perd $1\\,200$ par an. Combien en restera-t-il au bout de 8 ans ?")]:
         val = s0 + (n - 1) * r if "décembre" in quoi else s0 + n * r
         rang = n - 1 if "décembre" in quoi else n
@@ -981,7 +983,9 @@ def g2_algo():
         E.append(("intermediaire", "fonction",
                   "On définit :" + bloc(code) + f"Que vaut `{appel}` ?",
                   ["`return` renvoie la valeur calculée ; on évalue d'abord les appels les plus intérieurs.",
-                   f"`{appel}` vaut {_py(env['RES'])}."],
+                   f"`{appel}` vaut {_py(env['RES'])}."
+                   + (" Attention : la division `/` donne toujours un `float`, donc Python affiche ce résultat avec une partie décimale nulle."
+                      if isinstance(env["RES"], float) and env["RES"].is_integer() else "")],
                   _py(env["RES"])))
     # g) problèmes
     P = [("Léa a 50 € d'économies et ajoute 15 € chaque semaine. Le programme suivant calcule le nombre de semaines nécessaires pour atteindre au moins 200 € :",
@@ -1014,7 +1018,8 @@ def g2_algo():
         E.append(("probleme", "probleme-algorithme",
                   ctx + bloc(code) + f"Quelle valeur de `{var}` obtient-on ? Interpréter.",
                   [expl, f"On obtient `{var}` = {_py(v)}.", interp.format(v=tx(v))],
-                  f"`{var}` = {_py(v)} : " + _minuscule(interp.format(v=tx(v)))))
+                  f"`{var}` = {_py(v)} : " + (interp.format(v=tx(v)) if interp.startswith("Léa")
+                                               else _minuscule(interp.format(v=tx(v))))))
     return _fin(E)
 
 
@@ -1372,7 +1377,8 @@ def g2_equations():
         E.append(("application", "equation-produit",
                   f"Résoudre l'équation ${f1}({affine(c, d)}) = 0$.",
                   ["Un produit est nul si et seulement si l'un de ses facteurs est nul.",
-                   f"${affine(a, b)} = 0 \\iff x = {fx(r1)}$ ; ${affine(c, d)} = 0 \\iff x = {fx(r2)}$."],
+                   (f"${affine(a, b)} = 0 \\iff x = {fx(r1)}$" if b != 0 else f"Le facteur ${affine(a, b)}$ est nul pour $x = 0$")
+                   + f" ; ${affine(c, d)} = 0 \\iff x = {fx(r2)}$."],
                   f"$S = \\{{{fx(min(r1, r2))}\\,;{fx(max(r1, r2))}\\}}$"))
     for k in (4, -6):
         E.append(("intermediaire", "equation-produit",
@@ -1566,7 +1572,7 @@ def g2_reference():
          ("x^2 = 7", "Deux solutions opposées.", "$S = \\{-\\sqrt{7}\\,;\\sqrt{7}\\}$"),
          ("\\dfrac{1}{x} = 4", "On a $x \\neq 0$ et $x = \\dfrac{1}{4}$.", "$S = \\{0{,}25\\}$"),
          ("\\dfrac{1}{x} = -\\dfrac{2}{3}", "On a $x \\neq 0$ et $x = -\\dfrac{3}{2}$.", "$S = \\{-1{,}5\\}$"),
-         ("\\sqrt{x} = 6", "La racine est croissante ; $x = 6^2$.", "$S = \\{36\\}$"),
+         ("\\sqrt{x} = 6", "Pour $x \\geqslant 0$ : $\\sqrt{x} = 6 \\iff x = 6^2 = 36$.", "$S = \\{36\\}$"),
          ("\\sqrt{x} = -2", "Une racine carrée est toujours positive ou nulle : aucune solution.", "$S = \\varnothing$")]
     for eq, c, r in Q:
         E.append(("intermediaire", "equation-reference", f"Résoudre dans $\\mathbb{{R}}$ l'équation ${eq}$.", [c], r))
@@ -1767,7 +1773,10 @@ def g2_probas():
          ("On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer une figure (valet, dame ou roi) ?", "Il y a $3 \\times 4 = 12$ figures.", F(12, 32)),
          ("On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer un as rouge ?", "Il y a 2 as rouges (cœur et carreau).", F(2, 32))]
     for e, c, p in D:
-        E.append(("application", "des-et-cartes", e, ["Le dé ou le jeu est équilibré : situation d'équiprobabilité.", c], f"${fl(p)}$"))
+        E.append(("application", "des-et-cartes", e,
+                  ["Le dé est équilibré : ses faces ont la même probabilité d'apparaître (équiprobabilité)." if " dé " in e
+                   else "La carte est tirée au hasard : les 32 cartes ont la même probabilité d'être tirées (équiprobabilité).", c],
+                  f"${fl(p)}$"))
     # c) événement contraire
     for pa, ctx in [(F(3, 10), "il pleuve demain"), (F(7, 100), "un composant soit défectueux"), (F(5, 8), "un client achète un dessert"),
                     (F(45, 100), "un élève vienne en bus"), (F(1, 6), "on obtienne 6 avec un dé"), (F(2, 9), "une graine ne germe pas"),
@@ -1952,7 +1961,7 @@ def g2_stats():
     # f) linéarité de la moyenne
     for m, a, b, ctx, u in [(11, 1, 2, "On ajoute 2 points à toutes les notes d'un devoir dont la moyenne était 11.", ""),
                             (F(124, 10), F(11, 10), 0, "Toutes les notes, de moyenne 12,4, sont multipliées par 1,1.", ""),
-                            (1500, F(102, 100), 0, "Tous les salaires d'une entreprise, de moyenne 1 500 €, augmentent de 2 %.", " €"),
+                            (2000, F(102, 100), 0, "Tous les salaires d'une entreprise, de moyenne 2 000 €, augmentent de 2 %.", " €"),
                             (20, F(9, 5), 32, "Des températures ont une moyenne de 20 °C. On les convertit en degrés Fahrenheit par $y = 1{,}8x + 32$.", " °F"),
                             (35, 1, -5, "Les prix d'un rayon, de moyenne 35 €, baissent tous de 5 €.", " €"),
                             (14, F(1, 2), 1, "Toutes les valeurs d'une série de moyenne 14 sont transformées par $y = 0{,}5x + 1$.", "")]:
@@ -1974,7 +1983,7 @@ def g2_stats():
          ("Les températures d'une semaine sont $12$, $14$, $13$, $15$, $11$, $14$ et $32$ °C (une erreur de capteur). Comparer moyenne et médiane.",
           ["Moyenne : $\\dfrac{111}{7} \\approx 15{,}9$ °C.", "Médiane : série rangée $11, 12, 13, 14, 14, 15, 32$, donc $14$ °C.",
            "La valeur aberrante fausse la moyenne mais pas la médiane."], "Moyenne $\\approx 15{,}9$ °C ; médiane $14$ °C"),
-         ("Dans un lycée, 120 élèves de seconde dont 70 filles ; 45 filles font du sport. Quel pourcentage des filles fait du sport ?",
+         ("Dans un lycée, il y a 120 élèves de seconde, dont 70 filles ; 45 de ces filles font du sport. Quel pourcentage des filles fait du sport ?",
           ["On calcule par rapport au total des filles (et non au total des élèves).", "$\\dfrac{45}{70} \\approx 0{,}643$, soit environ $64{,}3\\,\\%$."], "Environ $64{,}3\\,\\%$"),
          ("Une série de 5 valeurs a pour moyenne $8$. On ajoute la valeur $20$. Quelle est la nouvelle moyenne ?",
           ["Somme initiale : $5 \\times 8 = 40$ ; nouvelle somme $60$.", "Nouvelle moyenne : $\\dfrac{60}{6} = 10$."], "$10$"),
@@ -2041,7 +2050,7 @@ def g2_vecteurs():
     for (a, b), (c, d) in [((2, 3), (4, -1)), ((-3, 5), (3, -5)), ((0, 7), (-2, -4)), ((F(3, 2), -2), (F(1, 2), 6)), ((-6, -1), (2, 8))]:
         E.append(("application", "somme",
                   f"On donne $\\vec{{u}}{vec(a, b)}$ et $\\vec{{v}}{vec(c, d)}$. Calculer les coordonnées de $\\vec{{u}} + \\vec{{v}}$.",
-                  ["On additionne composante par composante.", f"$\\vec{{u}} + \\vec{{v}}{vec(F(a) + c, F(b) + d)}$."],
+                  ["On additionne composante par composante.", f"$\\vec{{u}} + \\vec{{v}}$ a pour coordonnées ${vec(F(a) + c, F(b) + d)}$."],
                   f"$\\vec{{u}} + \\vec{{v}} = {vec(F(a) + c, F(b) + d)}$"))
     # c) combinaisons
     for (a, b), (c, d), k, l in [((1, 2), (3, -1), 2, 3), ((4, -2), (1, 5), 3, -2), ((-2, 0), (2, 3), -1, 2), ((5, 1), (-1, 4), F(1, 2), 1), ((0, 3), (2, -2), 4, -3)]:
@@ -2248,7 +2257,7 @@ def gt_algo():
          ("p = 100\np = p * 2\np = p - 50", ["p"]),
          ("x = 7\ny = x == 7\nz = x == 8", ["x", "y", "z"]),
          ("n = 3\nn = n ** 2\nn = n + n", ["n"]),
-         ("a = 2\nb = 9\nc = a\na = b\nb = c", ["a", "b"])]
+         ("a = 2\nb = 9\nc = a\na = b\nb = c", ["a", "b", "c"])]
     for code, noms in A:
         env, _ = executer(code)
         E.append(("application", "affectation",
@@ -2327,9 +2336,14 @@ def gt_algo():
           ("L = [-3, 5, -1, 0, 8, -6]\nN = []\nfor x in L:\n    if x < 0:\n        N.append(x)", "N")]
     for code, var in Se:
         env, _ = executer(code)
+        liste = isinstance(env[var], list)
         E.append(("approfondissement", "selection",
-                  "On exécute le programme :" + bloc(code) + f"Que contient `{var}` à la fin ?",
-                  ["On parcourt la liste et on ne garde (ou on ne compte) que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée.",
+                  "On exécute le programme :" + bloc(code) + (f"Que contient `{var}` à la fin ?" if liste else f"Que vaut `{var}` à la fin ?"),
+                  [("On parcourt les valeurs de `n` données par `range(8)` et on ne garde que celles qui rendent la condition vraie."
+                    if "range" in code else
+                    "On parcourt la liste et on ne garde que les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée."
+                    if liste else
+                    "On parcourt la liste et on compte les valeurs qui rendent la condition vraie ; la liste de départ n'est pas modifiée."),
                    f"À la fin, `{var}` = {_py(env[var])}."],
                   _py(env[var])))
     # g) problèmes
@@ -2470,7 +2484,7 @@ def gt_exponentielles():
     E = []
     # a) propriétés algébriques
     A = [("2^x \\times 2^3", "2^{x+3}", "$a^x \\times a^y = a^{x+y}$."),
-         ("\\dfrac{3^{x+2}}{3^x}", "9", "$\\dfrac{a^{x+2}}{a^x} = a^{x+2-x} = 3^2 = 9$ : le quotient ne dépend pas de $x$."),
+         ("\\dfrac{3^{x+2}}{3^x}", "9", "$\\dfrac{a^{x+2}}{a^x} = a^{x+2-x} = a^2$, donc $\\dfrac{3^{x+2}}{3^x} = 3^2 = 9$ : le quotient ne dépend pas de $x$."),
          ("\\left(5^x\\right)^3", "5^{3x}", "$\\left(a^x\\right)^n = a^{nx}$."),
          ("1{,}05^x \\times 1{,}05", "1{,}05^{x+1}", "$a^x \\times a^1 = a^{x+1}$."),
          ("\\dfrac{4^{2x}}{4^{x}}", "4^{x}", "$\\dfrac{a^{2x}}{a^x} = a^{2x - x} = a^x$."),
@@ -2488,7 +2502,7 @@ def gt_exponentielles():
         E.append(("application", "sens-de-variation",
                   f"Déterminer le sens de variation de la fonction $f(x) = {fk}{fx(a)}^x$ sur $\\mathbb{{R}}$.",
                   [f"La base ${fx(a)}$ est {'supérieure à 1' if a > 1 else 'comprise entre 0 et 1'} : $x \\mapsto {fx(a)}^x$ est {base}.",
-                   (f"$k = {fx(k)} > 0$ ne change pas le sens de variation." if k > 0 else f"$k = {fx(k)} < 0$ inverse le sens de variation.") if k != 1 else "Ici $k = 1$."],
+                   (f"$k = {fx(k)} > 0$ ne change pas le sens de variation." if k > 0 else f"$k = {fx(k)} < 0$ inverse le sens de variation.") if k != 1 else "Aucun coefficient ne multiplie la puissance : $f$ a le même sens de variation."],
                   f"$f$ est {sens} sur $\\mathbb{{R}}$"))
     # c) calculs de puissances
     C = [("4^{1/2}", "2", "$4^{1/2} = \\sqrt{4} = 2$."), ("8^{1/3}", "2", "$2^3 = 8$, donc $8^{1/3} = 2$."),
@@ -2584,7 +2598,7 @@ def gt_log():
                   f"${expr} \\approx {nb(val, 3)}$"))
     # c) regrouper
     R = [("\\log 50 + \\log 2", "\\log 100 = 2", "2"), ("3\\log 2 - \\log 4", "\\log\\dfrac{8}{4} = \\log 2", "\\log 2"),
-         ("\\log 25 + \\log 4", "\\log 100 = 2", "2"), ("\\log 5000 - \\log 5", "\\log 1\\,000 = 3", "3"),
+         ("\\log 25 + \\log 4", "\\log 100 = 2", "2"), ("\\log 5\\,000 - \\log 5", "\\log 1\\,000 = 3", "3"),
          ("2\\log 5 + 2\\log 2", "\\log(25 \\times 4) = \\log 100 = 2", "2"), ("\\log 0{,}2 + \\log 5", "\\log 1 = 0", "0")]
     for e, c, r in R:
         E.append(("intermediaire", "regrouper", f"Écrire ${e}$ sous la forme la plus simple possible, sans calculatrice.",
@@ -2768,7 +2782,7 @@ def gt_stats2():
         if kind == "log":
             z = lg(float(y))
             E.append(("application", "nouvelle-variable", f"On pose $z = \\log(y)$. Calculer $z$ pour $y = {nb(y)}$ (arrondir au centième).",
-                      [f"$z = \\log({nb(y)}) \\approx {nb(z, 4)}$."], f"$z \\approx {nb(z, 2)}$"))
+                      [f"$z = \\log({nb(y)}) \\approx {nb(z, 4)}$."], f"$z \\approx {nb(z, 2, True)}$"))
         elif kind == "inv":
             z = 1 / F(y)
             E.append(("application", "nouvelle-variable", f"On pose $z = \\dfrac{{1}}{{y}}$. Calculer $z$ pour $y = {fx(y)}$.",
@@ -2829,7 +2843,7 @@ def gt_stats2():
             r = f"$y = \\dfrac{{1}}{{{affine(a, b)}}}$ ; $y = {fxa(y, 3)}$"
         else:
             y = math.sqrt(float(z))
-            e = f"On a posé $z = y^2$ (avec $y > 0$) et obtenu $z = {affine(a, b)}$. Exprimer $y$ en fonction de $x$, puis calculer $y$ pour $x = {x}$ (arrondir au centième)."
+            e = f"On a posé $z = y^2$ (avec $y > 0$) et obtenu $z = {affine(a, b)}$. Exprimer $y$ en fonction de $x$, puis calculer $y$ pour $x = {x}$" + (" (arrondir au centième)." if _eq(y, 2) != "=" else ".")
             c = ["$z = y^2$ et $y > 0$, donc $y = \\sqrt{z}$.", f"$y = \\sqrt{{{affine(a, b)}}}$.", f"Pour $x = {x}$ : $z = {fx(z)}$, donc $y = \\sqrt{{{fx(z)}}} {_eq(y, 2)} {nb(y, 2)}$."]
             r = f"$y = \\sqrt{{{affine(a, b)}}}$ ; $y {_eq(y, 2)} {nb(y, 2)}$"
         E.append(("intermediaire", "autres-changements", e, c, r))
@@ -3080,7 +3094,7 @@ def gt_binomiale():
         c = math.comb(n, k)
         P = c * p ** k * (1 - p) ** (n - k)
         E.append(("intermediaire", "probabilite-binomiale",
-                  f"$X$ suit la loi binomiale $B({n}\\,;{fx(p)})$. Calculer $P(X = {k})$ (valeur exacte si possible, sinon arrondie au millième).",
+                  f"$X$ suit la loi binomiale $B({n}\\,;{fx(p)})$. Calculer $P(X = {k})$ (arrondir au millième si nécessaire).",
                   [f"$P(X = k) = \\dbinom{{n}}{{k}} p^k (1 - p)^{{n - k}}$.",
                    f"$\\dbinom{{{n}}}{{{k}}} = {c}$ (triangle de Pascal).",
                    f"$P(X = {k}) = {c} \\times {pw(p)}^{{{k}}} \\times {pw(1 - p)}^{{{n - k}}} {_p3(P)}$."],
