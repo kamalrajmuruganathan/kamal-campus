@@ -2486,7 +2486,7 @@ def gen_T_lunette_photons():
           f"$N \\approx {sci(N, 2)}$ photons par seconde")
     E = HP * 2.45e9
     L.add("approfondissement", "energie-photon", "Un four à micro-ondes émet à $2{,}45\\ \\mathrm{GHz}$. Calculer l'énergie d'un photon micro-onde et la comparer à celle d'un photon visible (environ $2\\ \\mathrm{eV}$)." + PDATA,
-          [f"$E = h\\nu = 6{{,}}63\\times 10^{{-34}} \\times 2{{,}}45\\times 10^{{9}} = {val(E, 'J')}$, soit ${val(E / EV, 'eV')}$.", "C'est environ cent mille fois moins qu'un photon visible."],
+          [f"$E = h\\nu = 6{{,}}63\\times 10^{{-34}} \\times 2{{,}}45\\times 10^{{9}} = {val(E, 'J')}$, soit ${val(E / EV, 'eV')}$.", f"Rapport : $\\dfrac{{2}}{{{num(E / EV)}}} \\approx {sci(2 / (E / EV), 1)}$ : c'est environ deux cent mille fois moins qu'un photon visible."],
           f"$E \\approx {val(E / EV, 'eV')}$")
     E = HP * CC / 0.10e-9
     L.add("approfondissement", "energie-photon", "En radiographie médicale, on utilise des rayons X de longueur d'onde voisine de $0{,}10\\ \\mathrm{nm}$. Calculer l'énergie d'un photon X en eV et la comparer à celle d'un photon visible (environ $2\\ \\mathrm{eV}$)." + PDATA,
@@ -2732,7 +2732,7 @@ def gen_T_ondes():
         th = lam / a
         l_ = 2 * D * th
         L.add("intermediaire", "diffraction", ctx + " Calculer le demi-angle de diffraction $\\theta$ puis la largeur $\\ell$ de la tache centrale.",
-              [f"$\\theta = \\dfrac{{\\lambda}}{{a}} = \\dfrac{{{sci(lam)}}}{{{sci(a, 2)}}} = {val(th, 'rad', 2)}$.", f"$\\ell = 2D\\theta = 2 \\times {ex(D)} \\times {sci(th, 2)} = {val(l_, 'm', 2)}$, soit ${num(l_ * 100, 2)}\\ \\mathrm{{cm}}$."],
+              [f"$\\theta = \\dfrac{{\\lambda}}{{a}} = \\dfrac{{{sci(lam)}}}{{{sci(a, 2)}}} = {val(th, 'rad', 2)}$.", f"$\\ell = 2D\\theta = \\dfrac{{2\\lambda D}}{{a}} = \\dfrac{{2 \\times {sci(lam)} \\times {ex(D)}}}{{{sci(a, 2)}}} = {val(l_, 'm', 2)}$, soit ${num(l_ * 100, 2)}\\ \\mathrm{{cm}}$."],
               f"$\\theta \\approx {val(th, 'rad', 2)}$ ; $\\ell \\approx {num(l_ * 100, 2)}\\ \\mathrm{{cm}}$")
     a = 2 * 633e-9 * 2.0 / 0.040
     L.add("probleme", "diffraction", "Pour mesurer l'épaisseur d'un cheveu, on l'éclaire avec un laser ($\\lambda = 633\\ \\mathrm{nm}$) : la tache centrale de diffraction mesure $4{,}0\\ \\mathrm{cm}$ sur un écran à $2{,}0\\ \\mathrm{m}$. Calculer le diamètre du cheveu (il diffracte comme une fente de même largeur).",
