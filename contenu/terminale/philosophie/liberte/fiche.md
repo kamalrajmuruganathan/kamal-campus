@@ -1,6 +1,6 @@
 ---
 id: tale-philo-liberte
-titre: "La liberte"
+titre: "La liberté"
 voie: generale
 niveau: terminale
 parcours: philosophie
@@ -14,29 +14,29 @@ statut: brouillon
 relu_par: null
 ---
 
-# La liberte
+# La liberté
 
-> Etre libre, est-ce faire ce que l'on veut ? Sommes-nous vraiment libres, ou nos choix sont-ils determines par des causes qui nous echappent ? La liberte est-elle un fait, ou une conquete ?
+> Être libre, est-ce faire ce que l'on veut ? Sommes-nous vraiment libres, ou nos choix sont-ils déterminés par des causes qui nous échappent ? La liberté est-elle un fait, ou une conquête ?
 
-## 1. Distinguer liberte, libre arbitre et liberation
-La **liberte** peut designer l'absence de contrainte exterieure (liberte d'action), le **libre arbitre** (le pouvoir de choisir entre plusieurs possibles), ou encore une **liberte interieure** (maitrise de soi). Il faut distinguer le **determinisme** (tout a une cause) du **fatalisme** (les evenements arriveraient quoi qu'on fasse). Le determinisme ne nie pas necessairement l'action ; le fatalisme, si.
+## 1. Distinguer liberté, libre arbitre et libération
+La **liberté** peut désigner l'absence de contrainte extérieure (liberté d'action), le **libre arbitre** (le pouvoir de choisir entre plusieurs possibles), ou encore une **liberté intérieure** (maîtrise de soi). Il faut distinguer le **déterminisme** (tout a une cause) du **fatalisme** (les événements arriveraient quoi qu'on fasse). Le déterminisme ne nie pas nécessairement l'action ; le fatalisme, si.
 
-## 2. La liberte comme libre arbitre : Descartes
-Pour **Descartes**, la volonte est infinie, et le libre arbitre est ce qui nous rend semblables a Dieu. Mais il distingue des degres : la **liberte d'indifference** (choisir sans raison, au hasard) est le plus bas degre de la liberte ; la vraie liberte consiste a se determiner d'apres le vrai et le bien clairement percus.
+## 2. La liberté comme libre arbitre : Descartes
+Pour **Descartes**, la volonté est infinie, et le libre arbitre est ce qui nous rend semblables à Dieu. Mais il distingue des degrés : la **liberté d'indifférence** (choisir sans raison, au hasard) est le plus bas degré de la liberté ; la vraie liberté consiste à se déterminer d'après le vrai et le bien clairement perçus.
 
-## 3. La liberte contestee : Spinoza et le determinisme
-**Spinoza** nie le libre arbitre : nous nous croyons libres parce que nous avons conscience de nos desirs, mais nous ignorons les causes qui les determinent. La liberte n'est pas l'absence de cause, mais la **necessite comprise** : est libre ce qui agit selon la seule necessite de sa nature. Le determinisme affirme que tout evenement a une cause ; il s'oppose a l'idee d'un choix sans cause.
+## 3. La liberté contestée : Spinoza et le déterminisme
+**Spinoza** nie le libre arbitre : nous nous croyons libres parce que nous avons conscience de nos désirs, mais nous ignorons les causes qui les déterminent. La liberté n'est pas l'absence de cause, mais la **nécessité comprise** : est libre ce qui agit selon la seule nécessité de sa nature. Le déterminisme affirme que tout événement a une cause ; il s'oppose à l'idée d'un choix sans cause.
 
-## 4. La liberte comme autonomie et comme condition : Kant, Sartre, Rousseau
-Pour **Kant**, etre libre, c'est etre **autonome** : obeir a la loi qu'on se donne soi-meme, par opposition a l'**heteronomie** (obeir a ses penchants). Pour **Sartre**, "l'existence precede l'essence" : l'homme n'a pas de nature qui le determine, il se fait par ses choix ; il est "condamne a etre libre" et pleinement responsable (*L'existentialisme est un humanisme*). **Rousseau** distingue liberte naturelle et liberte civile, et affirme qu'obeir a la loi qu'on s'est prescrite est la liberte.
+## 4. La liberté comme autonomie et comme condition : Kant, Sartre, Rousseau
+Pour **Kant**, être libre, c'est être **autonome** : obéir à la loi qu'on se donne soi-même, par opposition à l'**hétéronomie** (obéir à ses penchants). Pour **Sartre**, "l'existence précède l'essence" : l'homme n'a pas de nature qui le détermine, il se fait par ses choix ; il est "condamné à être libre" et pleinement responsable (*L'existentialisme est un humanisme*). **Rousseau** distingue liberté naturelle et liberté civile, et affirme qu'obéir à la loi qu'on s'est prescrite est la liberté.
 
-## 5. Les erreurs a eviter
-- Confondre determinisme et fatalisme : le premier n'interdit pas d'agir, le second si.
-- Confondre liberte et absence de toute regle : pour Kant, la liberte est l'autonomie (se donner sa loi).
-- Croire que Spinoza supprime toute liberte : il la redefinit comme necessite comprise.
+## 5. Les erreurs à éviter
+- Confondre déterminisme et fatalisme : le premier n'interdit pas d'agir, le second si.
+- Confondre liberté et absence de toute règle : pour Kant, la liberté est l'autonomie (se donner sa loi).
+- Croire que Spinoza supprime toute liberté : il la redéfinit comme nécessité comprise.
 
-## A retenir
-- Distinguer liberte d'action, libre arbitre et liberte interieure ; determinisme vs fatalisme.
-- Descartes : le libre arbitre ; la liberte d'indifference est le plus bas degre.
-- Spinoza : pas de libre arbitre ; nous ignorons les causes qui nous determinent.
-- Sartre : l'existence precede l'essence, l'homme est condamne a etre libre ; Kant : liberte = autonomie.
+## À retenir
+- Distinguer liberté d'action, libre arbitre et liberté intérieure ; déterminisme vs fatalisme.
+- Descartes : le libre arbitre ; la liberté d'indifférence est le plus bas degré.
+- Spinoza : pas de libre arbitre ; nous ignorons les causes qui nous déterminent.
+- Sartre : l'existence précède l'essence, l'homme est condamné à être libre ; Kant : liberté = autonomie.

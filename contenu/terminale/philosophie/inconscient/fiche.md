@@ -9,34 +9,34 @@ programme: "Programme de philosophie — terminale"
 duree_lecture_min: 15
 prerequis:
   - La conscience
-  - La liberte
+  - La liberté
 statut: brouillon
 relu_par: null
 ---
 
 # L'inconscient
 
-> Sommes-nous transparents a nous-memes ? Freud soutient qu'une part de notre vie psychique nous echappe : l'inconscient. Cette hypothese remet en cause la maitrise du sujet sur lui-meme, et fait l'objet de vifs debats.
+> Sommes-nous transparents à nous-mêmes ? Freud soutient qu'une part de notre vie psychique nous échappe : l'inconscient. Cette hypothèse remet en cause la maîtrise du sujet sur lui-même, et fait l'objet de vifs débats.
 
-## 1. Le probleme : le sujet est-il maitre de lui-meme ?
-La tradition cartesienne identifie le psychisme a la conscience : rien en moi ne m'echapperait. Or nos reves, nos oublis, nos lapsus semblent obeir a des mecanismes que nous ne maitrisons pas. **Freud** parle d'une troisieme "blessure narcissique" infligee a l'homme : apres Copernic (la Terre n'est pas le centre) et Darwin (l'homme est un animal), la psychanalyse montre que "le moi n'est pas maitre dans sa propre maison".
+## 1. Le problème : le sujet est-il maître de lui-même ?
+La tradition cartésienne identifie le psychisme à la conscience : rien en moi ne m'échapperait. Or nos rêves, nos oublis, nos lapsus semblent obéir à des mécanismes que nous ne maîtrisons pas. **Freud** parle d'une troisième "blessure narcissique" infligée à l'homme : après Copernic (la Terre n'est pas le centre) et Darwin (l'homme est un animal), la psychanalyse montre que "le moi n'est pas maître dans sa propre maison".
 
-## 2. L'hypothese de l'inconscient : Freud
-Avant Freud, **Leibniz** avait deja parle de "petites perceptions" non conscientes. Mais c'est **Freud** qui fait de l'inconscient une hypothese scientifique, appuyee sur des faits : reves, actes manques, lapsus, symptomes nevrotiques. La **premiere topique** distingue conscient, preconscient et inconscient. La **seconde topique** distingue trois instances : le **ca** (les pulsions), le **surmoi** (les interdits interiorises) et le **moi** (qui arbitre). Le **refoulement** rejette hors de la conscience des representations penibles, qui reviennent de facon deguisee.
+## 2. L'hypothèse de l'inconscient : Freud
+Avant Freud, **Leibniz** avait déjà parlé de "petites perceptions" non conscientes. Mais c'est **Freud** qui fait de l'inconscient une hypothèse scientifique, appuyée sur des faits : rêves, actes manqués, lapsus, symptômes névrotiques. La **première topique** distingue conscient, préconscient et inconscient. La **seconde topique** distingue trois instances : le **ça** (les pulsions), le **surmoi** (les interdits intériorisés) et le **moi** (qui arbitre). Le **refoulement** rejette hors de la conscience des représentations pénibles, qui reviennent de façon déguisée.
 
-## 3. La cle des symptomes : rever, se tromper, oublier
-Pour Freud, le reve est la "voie royale" vers l'inconscient : il realise, de facon deguisee, un desir refoule (*L'Interpretation du reve*). L'acte manque (oublier un nom, une cle) et le lapsus revelent aussi un desir inavoue. Le symptome nevrotique a un sens : il exprime un conflit psychique.
+## 3. La clé des symptômes : rêver, se tromper, oublier
+Pour Freud, le rêve est la "voie royale" vers l'inconscient : il réalise, de façon déguisée, un désir refoulé (*L'Interprétation du rêve*). L'acte manqué (oublier un nom, une clé) et le lapsus révèlent aussi un désir inavoué. Le symptôme névrotique a un sens : il exprime un conflit psychique.
 
 ## 4. Les critiques de l'inconscient
-Tous n'acceptent pas cette hypothese. **Alain** juge l'inconscient dangereux : il risque de dedouaner l'homme de sa responsabilite. **Sartre** refuse l'inconscient freudien : selon lui, la conscience se ment a elle-meme par **mauvaise foi**, sans qu'une instance separee soit necessaire ; l'homme reste responsable.
+Tous n'acceptent pas cette hypothèse. **Alain** juge l'inconscient dangereux : il risque de dédouaner l'homme de sa responsabilité. **Sartre** refuse l'inconscient freudien : selon lui, la conscience se ment à elle-même par **mauvaise foi**, sans qu'une instance séparée soit nécessaire ; l'homme reste responsable.
 
-## 5. Les erreurs a eviter
-- Confondre l'inconscient psychique (refoule) et le simple non-conscient (fonctions du corps, digestion).
-- Croire que l'inconscient supprime toute responsabilite : c'est justement l'objection de ses critiques.
-- Attribuer a Freud l'invention du mot 'inconscient' : l'idee est plus ancienne (Leibniz) ; Freud en fait une theorie.
+## 5. Les erreurs à éviter
+- Confondre l'inconscient psychique (refoulé) et le simple non-conscient (fonctions du corps, digestion).
+- Croire que l'inconscient supprime toute responsabilité : c'est justement l'objection de ses critiques.
+- Attribuer à Freud l'invention du mot 'inconscient' : l'idée est plus ancienne (Leibniz) ; Freud en fait une théorie.
 
-## A retenir
-- Freud : l'inconscient est une hypothese fondee sur les reves, actes manques, lapsus, symptomes.
-- Premiere topique : conscient / preconscient / inconscient ; seconde topique : ca / moi / surmoi.
-- Le refoulement chasse hors de la conscience des representations qui reviennent deguisees.
+## À retenir
+- Freud : l'inconscient est une hypothèse fondée sur les rêves, actes manqués, lapsus, symptômes.
+- Première topique : conscient / préconscient / inconscient ; seconde topique : ça / moi / surmoi.
+- Le refoulement chasse hors de la conscience des représentations qui reviennent déguisées.
 - Sartre critique l'inconscient et lui oppose la mauvaise foi.

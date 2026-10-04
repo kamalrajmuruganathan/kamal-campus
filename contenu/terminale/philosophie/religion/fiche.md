@@ -16,34 +16,34 @@ relu_par: null
 
 # La religion
 
-> La religion relie l'homme au sacre et pose la question de la foi, de sa difference avec le savoir, et de son rapport a la raison, a la morale et a la societe. En philosophie, on ne tranche pas la verite d'une religion : on analyse le phenomene religieux.
+> La religion relie l'homme au sacré et pose la question de la foi, de sa différence avec le savoir, et de son rapport à la raison, à la morale et à la société. En philosophie, on ne tranche pas la vérité d'une religion : on analyse le phénomène religieux.
 
-## 1. Definir la religion
-- **Etymologie** : deux racines sont proposees. *Religare* (relier) : la religion relie les hommes entre eux et a Dieu. *Relegere* (recueillir, observer scrupuleusement) : la religion est observance attentive des rites.
-- **Le sacre et le profane** : la religion distingue un domaine sacre (separe, interdit, venere) d'un domaine profane (ordinaire). Emile Durkheim, sociologue, definit la religion par cette distinction et y voit un fait social.
-- **Croyance et foi** : croire, c'est tenir pour vrai sans preuve suffisante ; la foi religieuse est une adhesion qui engage la personne, distincte du savoir demontre.
+## 1. Définir la religion
+- **Étymologie** : deux racines sont proposées. *Religare* (relier) : la religion relie les hommes entre eux et à Dieu. *Relegere* (recueillir, observer scrupuleusement) : la religion est observance attentive des rites.
+- **Le sacré et le profane** : la religion distingue un domaine sacré (séparé, interdit, vénéré) d'un domaine profane (ordinaire). Émile Durkheim, sociologue, définit la religion par cette distinction et y voit un fait social.
+- **Croyance et foi** : croire, c'est tenir pour vrai sans preuve suffisante ; la foi religieuse est une adhésion qui engage la personne, distincte du savoir démontré.
 
 ## 2. Foi et raison
-Plusieurs rapports ont ete penses :
-- **Accord** : la foi peut chercher a se comprendre par la raison. Thomas d'Aquin distingue les verites accessibles a la raison naturelle et les verites revelees, sans les opposer.
-- **Separation** : Pascal distingue l'ordre de la raison et l'ordre du coeur ; son « pari » propose de parier sur l'existence de Dieu, non de la demontrer. Kant montre que l'existence de Dieu ne peut etre ni prouvee ni refutee par la raison theorique ; il en fait un postulat de la raison pratique (morale).
-- **Critique** : les preuves classiques de l'existence de Dieu (preuve ontologique de saint Anselme, preuves cosmologiques) sont examinees et discutees. Kant refute la valeur demonstrative de la preuve ontologique.
+Plusieurs rapports ont été pensés :
+- **Accord** : la foi peut chercher à se comprendre par la raison. Thomas d'Aquin distingue les vérités accessibles à la raison naturelle et les vérités révélées, sans les opposer.
+- **Séparation** : Pascal distingue l'ordre de la raison et l'ordre du cœur ; son « pari » propose de parier sur l'existence de Dieu, non de la démontrer. Kant montre que l'existence de Dieu ne peut être ni prouvée ni réfutée par la raison théorique ; il en fait un postulat de la raison pratique (morale).
+- **Critique** : les preuves classiques de l'existence de Dieu (preuve ontologique de saint Anselme, preuves cosmologiques) sont examinées et discutées. Kant réfute la valeur démonstrative de la preuve ontologique.
 
 ## 3. Les critiques philosophiques de la religion
-La philosophie a developpe des lectures critiques du fait religieux (a exposer sans les tenir pour des verites definitives) :
-- **Illusion et projection** : Feuerbach soutient que l'homme projette en Dieu sa propre essence idealisee. Freud analyse la religion comme une illusion qui repond au desir de protection (« l'avenir d'une illusion »).
-- **Fait social** : Durkheim voit dans le divin une representation de la societe elle-meme, qui se venere a travers ses symboles.
-- **Critique et emancipation** : Marx parle de la religion comme « opium du peuple », consolation qui detourne de la transformation des conditions reelles.
-- **Defense** : d'autres penseurs soulignent la dimension morale, spirituelle et communautaire de la religion. Bergson distingue religion « statique » (close) et religion « dynamique » (ouverte, mystique).
+La philosophie a développé des lectures critiques du fait religieux (à exposer sans les tenir pour des vérités définitives) :
+- **Illusion et projection** : Feuerbach soutient que l'homme projette en Dieu sa propre essence idéalisée. Freud analyse la religion comme une illusion qui répond au désir de protection (« l'avenir d'une illusion »).
+- **Fait social** : Durkheim voit dans le divin une représentation de la société elle-même, qui se vénère à travers ses symboles.
+- **Critique et émancipation** : Marx parle de la religion comme « opium du peuple », consolation qui détourne de la transformation des conditions réelles.
+- **Défense** : d'autres penseurs soulignent la dimension morale, spirituelle et communautaire de la religion. Bergson distingue religion « statique » (close) et religion « dynamique » (ouverte, mystique).
 
-## 4. Les erreurs a eviter
-- Ne pas confondre **croire** (tenir pour vrai sans preuve) et **savoir** (etre en mesure de prouver).
-- Ne pas confondre **foi** (adhesion personnelle) et **superstition** (croyance en des liens de cause a effet illusoires).
-- Ne pas transformer un cours de philosophie en apologie ou en refutation d'une religion : la philosophie **analyse** le fait religieux, elle ne le tranche pas.
-- Ne pas attribuer a Kant une preuve de Dieu : Kant refuse les preuves theoriques et fait de Dieu un postulat de la raison pratique.
+## 4. Les erreurs à éviter
+- Ne pas confondre **croire** (tenir pour vrai sans preuve) et **savoir** (être en mesure de prouver).
+- Ne pas confondre **foi** (adhésion personnelle) et **superstition** (croyance en des liens de cause à effet illusoires).
+- Ne pas transformer un cours de philosophie en apologie ou en réfutation d'une religion : la philosophie **analyse** le fait religieux, elle ne le tranche pas.
+- Ne pas attribuer à Kant une preuve de Dieu : Kant refuse les preuves théoriques et fait de Dieu un postulat de la raison pratique.
 
-## A retenir
-- La religion articule le sacre et le profane, la croyance, la foi et le rite.
-- Foi et raison peuvent etre pensees comme en accord (Thomas d'Aquin), separees (Pascal, Kant) ou en tension.
-- Kant refuse les preuves theoriques de Dieu et en fait un postulat de la raison pratique.
+## À retenir
+- La religion articule le sacré et le profane, la croyance, la foi et le rite.
+- Foi et raison peuvent être pensées comme en accord (Thomas d'Aquin), séparées (Pascal, Kant) ou en tension.
+- Kant refuse les preuves théoriques de Dieu et en fait un postulat de la raison pratique.
 - Les critiques (Feuerbach, Freud, Durkheim, Marx) analysent la religion comme projection, illusion, fait social ou consolation ; on les expose sans trancher.

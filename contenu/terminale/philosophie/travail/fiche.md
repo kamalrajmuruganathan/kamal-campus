@@ -9,39 +9,39 @@ programme: "Programme de philosophie — terminale"
 duree_lecture_min: 15
 prerequis:
   - La technique
-  - La liberte
+  - La liberté
 statut: brouillon
 relu_par: null
 ---
 
 # Le travail
 
-> Le travail transforme la nature et, avec elle, l'homme lui-meme. Malediction ou source de dignite ? Simple moyen de survie ou activite par laquelle l'homme s'humanise ?
+> Le travail transforme la nature et, avec elle, l'homme lui-même. Malédiction ou source de dignité ? Simple moyen de survie ou activité par laquelle l'homme s'humanise ?
 
-## 1. Definir le travail
-- **Le travail** est l'activite par laquelle l'homme transforme la nature pour satisfaire ses besoins, en general de maniere contrainte et penible. L'etymologie souvent citee renvoie au latin *tripalium*, instrument de contrainte, soulignant l'aspect penible du travail.
-- **Travail et oeuvre** : Hannah Arendt distingue le **travail** (labor, lie a la survie biologique, cyclique, consommé), l'**oeuvre** (work, fabrication d'objets durables) et l'**action** (vie politique). Le travail produit du perissable, l'oeuvre un monde durable.
-- **Le travail humain se distingue de l'activite animale** : Marx souligne que l'abeille fait des alveoles mais que l'architecte concoit d'abord son ouvrage dans sa tete ; le travail humain est prealablement pense.
+## 1. Définir le travail
+- **Le travail** est l'activité par laquelle l'homme transforme la nature pour satisfaire ses besoins, en général de manière contrainte et pénible. L'étymologie souvent citée renvoie au latin *tripalium*, instrument de contrainte, soulignant l'aspect pénible du travail.
+- **Travail et œuvre** : Hannah Arendt distingue le **travail** (labor, lié à la survie biologique, cyclique, consommé), l'**œuvre** (work, fabrication d'objets durables) et l'**action** (vie politique). Le travail produit du périssable, l'œuvre un monde durable.
+- **Le travail humain se distingue de l'activité animale** : Marx souligne que l'abeille fait des alvéoles mais que l'architecte conçoit d'abord son ouvrage dans sa tête ; le travail humain est préalablement pensé.
 
 ## 2. Le travail comme humanisation
-- **Se faire soi-meme en transformant la nature** : pour Hegel, l'homme se realise et se reconnait dans le produit de son travail ; le travail est formateur. Dans la dialectique du maitre et de l'esclave, c'est l'esclave qui, par le travail, transforme le monde et accede a une forme d'independance.
-- **Le travail et le lien social** : le travail insere dans une division du travail (Adam Smith, Durkheim) et cree de l'interdependance.
-- **Valeur et dignite** : de nombreuses traditions font du travail une source de valeur et de dignite ; d'autres, comme certains Anciens (Aristote), reservaient les activites libres (contemplation, politique) aux hommes libres et deleguaient le travail aux esclaves.
+- **Se faire soi-même en transformant la nature** : pour Hegel, l'homme se réalise et se reconnaît dans le produit de son travail ; le travail est formateur. Dans la dialectique du maître et de l'esclave, c'est l'esclave qui, par le travail, transforme le monde et accède à une forme d'indépendance.
+- **Le travail et le lien social** : le travail insère dans une division du travail (Adam Smith, Durkheim) et crée de l'interdépendance.
+- **Valeur et dignité** : de nombreuses traditions font du travail une source de valeur et de dignité ; d'autres, comme certains Anciens (Aristote), réservaient les activités libres (contemplation, politique) aux hommes libres et déléguaient le travail aux esclaves.
 
 ## 3. Aliénation et critique
-- **L'alienation** : Marx analyse le travail dans le systeme capitaliste comme aliene : l'ouvrier ne possede pas le produit de son travail, se depossede de lui-meme et est reduit a une marchandise. Le travail devient exterieur au travailleur.
-- **La division du travail** peut appauvrir le geste (parcellisation, repetition), comme le decrit deja Adam Smith a propos de la manufacture.
-- **Travail, loisir et liberte** : faut-il travailler moins pour vivre plus, ou le travail est-il une condition de l'accomplissement ? Le debat oppose ceux qui voient le travail comme aliénation a ceux qui y voient une realisation de soi.
+- **L'aliénation** : Marx analyse le travail dans le système capitaliste comme aliéné : l'ouvrier ne possède pas le produit de son travail, se dépossède de lui-même et est réduit à une marchandise. Le travail devient extérieur au travailleur.
+- **La division du travail** peut appauvrir le geste (parcellisation, répétition), comme le décrit déjà Adam Smith à propos de la manufacture.
+- **Travail, loisir et liberté** : faut-il travailler moins pour vivre plus, ou le travail est-il une condition de l'accomplissement ? Le débat oppose ceux qui voient le travail comme aliénation à ceux qui y voient une réalisation de soi.
 - **La technique et l'automatisation** transforment le travail et posent la question de sa place future dans l'existence humaine.
 
-## 4. Les erreurs a eviter
-- Ne pas confondre le **travail** (labor, survie) et l'**oeuvre** (work, objet durable) au sens d'Arendt.
-- Ne pas reduire l'alienation a la fatigue : chez Marx, c'est la dépossession du travailleur par rapport a son produit et a lui-meme.
-- Ne pas croire que tous les philosophes valorisent le travail : les Anciens le devalorisaient souvent au profit des activites libres.
-- Ne pas confondre **travail** (activite transformatrice, souvent contrainte) et **jeu** ou **loisir** (activites libres).
+## 4. Les erreurs à éviter
+- Ne pas confondre le **travail** (labor, survie) et l'**œuvre** (work, objet durable) au sens d'Arendt.
+- Ne pas réduire l'aliénation à la fatigue : chez Marx, c'est la dépossession du travailleur par rapport à son produit et à lui-même.
+- Ne pas croire que tous les philosophes valorisent le travail : les Anciens le dévalorisaient souvent au profit des activités libres.
+- Ne pas confondre **travail** (activité transformatrice, souvent contrainte) et **jeu** ou **loisir** (activités libres).
 
-## A retenir
+## À retenir
 - Le travail transforme la nature et humanise l'homme (Hegel : le travail est formateur).
-- Marx : le travail humain est prealablement pense (l'architecte vs l'abeille) ; dans le capitalisme, il peut etre aliene.
-- Arendt distingue travail (labor), oeuvre (work) et action.
-- L'alienation designe la dépossession du travailleur par rapport a son produit et a lui-meme (Marx).
+- Marx : le travail humain est préalablement pensé (l'architecte vs l'abeille) ; dans le capitalisme, il peut être aliéné.
+- Arendt distingue travail (labor), œuvre (work) et action.
+- L'aliénation désigne la dépossession du travailleur par rapport à son produit et à lui-même (Marx).

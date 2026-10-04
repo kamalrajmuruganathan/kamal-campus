@@ -16,32 +16,32 @@ relu_par: null
 
 # La technique
 
-> La technique est l'ensemble des moyens et procedes que l'homme invente pour transformer la nature et satisfaire ses besoins. Simple outil ou puissance qui transforme l'homme lui-meme et son rapport au monde ?
+> La technique est l'ensemble des moyens et procédés que l'homme invente pour transformer la nature et satisfaire ses besoins. Simple outil ou puissance qui transforme l'homme lui-même et son rapport au monde ?
 
-## 1. Definir la technique
-- **La technique** designe les procedes efficaces et transmissibles pour produire un resultat ; la **technologie** est l'etude ou le discours (logos) sur la technique. On distingue aussi la technique de l'**art** au sens moderne (creation esthetique), meme si le grec *tekhne* recouvrait les deux (savoir-faire).
-- **L'homme, animal technique** : depourvu de moyens naturels de defense, l'homme compense par l'outil. Le mythe de Promethee (rapporte par Platon dans le *Protagoras*) illustre cette idee : l'homme recoit le feu et les arts techniques faute d'attributs naturels.
-- **Rapport a la science** : la technique n'est pas une simple application de la science ; historiquement, des techniques ont precede les theories qui les expliquent.
+## 1. Définir la technique
+- **La technique** désigne les procédés efficaces et transmissibles pour produire un résultat ; la **technologie** est l'étude ou le discours (logos) sur la technique. On distingue aussi la technique de l'**art** au sens moderne (création esthétique), même si le grec *tekhnè* recouvrait les deux (savoir-faire).
+- **L'homme, animal technique** : dépourvu de moyens naturels de défense, l'homme compense par l'outil. Le mythe de Prométhée (rapporté par Platon dans le *Protagoras*) illustre cette idée : l'homme reçoit le feu et les arts techniques faute d'attributs naturels.
+- **Rapport à la science** : la technique n'est pas une simple application de la science ; historiquement, des techniques ont précédé les théories qui les expliquent.
 
-## 2. La technique et la maitrise de la nature
-- **Le projet moderne** : Descartes formule l'ideal de l'homme « comme maitre et possesseur de la nature » grace a la science et a la technique. La technique devient l'instrument d'une maitrise croissante du monde.
-- **Travail et instrument** : chez Marx, l'outil prolonge la main ; la machine transforme le rapport au travail et peut deposseder l'ouvrier de son savoir-faire.
-- **Bergson** : l'intelligence humaine est essentiellement « faculte de fabriquer des outils » ; il nomme l'homme *homo faber* plutot qu'*homo sapiens*.
+## 2. La technique et la maîtrise de la nature
+- **Le projet moderne** : Descartes formule l'idéal de l'homme « comme maître et possesseur de la nature » grâce à la science et à la technique. La technique devient l'instrument d'une maîtrise croissante du monde.
+- **Travail et instrument** : chez Marx, l'outil prolonge la main ; la machine transforme le rapport au travail et peut déposséder l'ouvrier de son savoir-faire.
+- **Bergson** : l'intelligence humaine est essentiellement « faculté de fabriquer des outils » ; il nomme l'homme *homo faber* plutôt qu'*homo sapiens*.
 
 ## 3. Les questions critiques
-- **La technique nous echappe-t-elle ?** Heidegger interroge « l'essence de la technique » moderne : elle n'est pas neutre, elle transforme notre rapport a l'etre et tend a considerer la nature comme un simple « fonds » disponible.
-- **Responsabilite** : Hans Jonas, dans « Le principe responsabilite », soutient que la puissance technique moderne nous impose une responsabilite nouvelle envers les generations futures et la nature.
-- **Aliénation ou liberation ?** La technique peut liberer du travail penible ou, au contraire, asservir ; le progres technique n'est pas automatiquement un progres moral. Rousseau doute deja que le progres des arts et des sciences ameliore les moeurs.
-- **Neutralite en question** : un outil est-il moralement neutre, tout dependant de l'usage, ou la technique oriente-t-elle deja nos fins ? Le debat reste ouvert.
+- **La technique nous échappe-t-elle ?** Heidegger interroge « l'essence de la technique » moderne : elle n'est pas neutre, elle transforme notre rapport à l'être et tend à considérer la nature comme un simple « fonds » disponible.
+- **Responsabilité** : Hans Jonas, dans « Le principe responsabilité », soutient que la puissance technique moderne nous impose une responsabilité nouvelle envers les générations futures et la nature.
+- **Aliénation ou libération ?** La technique peut libérer du travail pénible ou, au contraire, asservir ; le progrès technique n'est pas automatiquement un progrès moral. Rousseau doute déjà que le progrès des arts et des sciences améliore les mœurs.
+- **Neutralité en question** : un outil est-il moralement neutre, tout dépendant de l'usage, ou la technique oriente-t-elle déjà nos fins ? Le débat reste ouvert.
 
-## 4. Les erreurs a eviter
-- Ne pas confondre **technique** (moyens efficaces) et **science** (connaissance theorique) : elles sont liees mais distinctes.
-- Ne pas reduire la technique a une simple application de la science : des techniques la precedent.
+## 4. Les erreurs à éviter
+- Ne pas confondre **technique** (moyens efficaces) et **science** (connaissance théorique) : elles sont liées mais distinctes.
+- Ne pas réduire la technique à une simple application de la science : des techniques la précédent.
 - Ne pas confondre *homo faber* (l'homme qui fabrique, Bergson) et *homo sapiens* (l'homme qui sait).
-- Ne pas attribuer a Descartes une critique de la technique : Descartes en fait l'ideal de maitrise de la nature.
+- Ne pas attribuer à Descartes une critique de la technique : Descartes en fait l'idéal de maîtrise de la nature.
 
-## A retenir
-- La technique est l'ensemble des procedes efficaces et transmissibles pour transformer la nature.
-- Le mythe de Promethee (Platon) et l'idee d'homo faber (Bergson) font de l'homme un animal technique.
-- Descartes formule l'ideal de l'homme « maitre et possesseur de la nature ».
-- Heidegger et Jonas interrogent la technique moderne : elle n'est pas neutre et engage une responsabilite nouvelle.
+## À retenir
+- La technique est l'ensemble des procédés efficaces et transmissibles pour transformer la nature.
+- Le mythe de Prométhée (Platon) et l'idée d'homo faber (Bergson) font de l'homme un animal technique.
+- Descartes formule l'idéal de l'homme « maître et possesseur de la nature ».
+- Heidegger et Jonas interrogent la technique moderne : elle n'est pas neutre et engage une responsabilité nouvelle.
