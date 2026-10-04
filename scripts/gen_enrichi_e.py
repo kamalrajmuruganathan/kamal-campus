@@ -2450,12 +2450,12 @@ def gen_2de_description():
 
     # -- quantité de matière n = m/M (7)
     for m, f, nom in ((9.0, "H2O", "d'eau"), (11.0, "CO2", "de dioxyde de carbone"), (90.0, "C6H12O6", "de glucose"),
-                      (23.0, "C2H6O", "d'éthanol"), (5.85, "NaCl", "de chlorure de sodium (solide ionique)")):
+                      (23.0, "C2H6O", "d'éthanol"), (5.85, "NaCl", "de chlorure de sodium, solide ionique")):
         M = masse_molaire(f)
         n = m / M
         add("intermediaire", "quantite-matiere",
-            f"Calculer la quantité de matière contenue dans {t(m, 2 if m < 10 and m != 9.0 else 1, True)} g {nom} (${tex_formule(f)}$, M = {t(M, 1, True)} g·mol⁻¹).",
-            [f"$n = \\dfrac{{m}}{{M}} = \\dfrac{{{nb(m, 2 if m < 10 and m != 9.0 else 1, True)}}}{{{nb(M, 1, True)}}} = {cs(n)}$ mol."],
+            f"Calculer la quantité de matière contenue dans {t(m, 2 if m < 10 else 1, True)} g {nom} (${tex_formule(f)}$, M = {t(M, 1, True)} g·mol⁻¹).",
+            [f"$n = \\dfrac{{m}}{{M}} = \\dfrac{{{nb(m, 2 if m < 10 else 1, True)}}}{{{nb(M, 1, True)}}} = {cs(n)}$ mol."],
             f"${cs(n)}$ mol")
     for n, f, nom in ((0.250, "H2O", "d'eau"), (2.00, "CH4", "de méthane")):
         M = masse_molaire(f)
@@ -2741,7 +2741,10 @@ def gen_2de_mouvement():
         ("Quel référentiel choisir pour étudier le mouvement de la Lune autour de la Terre ?", "le référentiel géocentrique"),
     ]
     for e, r in rf:
-        add("application", "referentiel", e, ["Le référentiel se choisit selon l'objet étudié et l'objet de référence."], r)
+        expl = {"le référentiel terrestre": "Le mouvement est étudié par rapport au sol : on choisit le référentiel terrestre (lié à la surface de la Terre).",
+                "le référentiel géocentrique": "Le mouvement se fait autour de la Terre : on choisit le référentiel géocentrique (lié au centre de la Terre et à des étoiles lointaines).",
+                "le référentiel héliocentrique": "Le mouvement se fait autour du Soleil : on choisit le référentiel héliocentrique (lié au centre du Soleil et à des étoiles lointaines)."}[r]
+        add("application", "referentiel", e, [expl], r)
     add("intermediaire", "referentiel",
         "Un passager est assis dans un train qui roule. Décrire son mouvement dans le référentiel du train, puis dans le référentiel terrestre.",
         ["Dans le référentiel du train, sa position ne change pas : il est immobile.", "Dans le référentiel terrestre, il se déplace avec le train."],
@@ -2755,7 +2758,7 @@ def gen_2de_mouvement():
     dm = [
         ("Dans le référentiel terrestre, une balle lâchée sans vitesse tombe verticalement de plus en plus vite. Décrire son mouvement.", "rectiligne accéléré"),
         ("Dans le référentiel terrestre, un ascenseur monte à vitesse constante. Décrire son mouvement.", "rectiligne uniforme"),
-        ("Dans le référentiel terrestre, un point de la pale d'une éolienne qui tourne régulièrement. Décrire son mouvement.", "circulaire uniforme"),
+        ("Dans le référentiel terrestre, on étudie un point de la pale d'une éolienne qui tourne régulièrement. Décrire son mouvement.", "circulaire uniforme"),
         ("Dans le référentiel terrestre, un skieur freine en ligne droite jusqu'à l'arrêt. Décrire son mouvement.", "rectiligne décéléré"),
         ("Dans le référentiel géocentrique, un satellite géostationnaire décrit un cercle à vitesse constante. Décrire son mouvement.", "circulaire uniforme"),
     ]
@@ -2772,7 +2775,7 @@ def gen_2de_mouvement():
         "direction tangente à la trajectoire, sens du mouvement, valeur $v$")
 
     # -- vitesse moyenne (8)
-    vm = [(100, 9.58, "Un sprinteur (record du monde du 100 m)"), (42195, 7200, "Une marathonienne"),
+    vm = [(100, 9.58, "Un sprinteur (record du monde du 100 m)"), (42195, 9000, "Une marathonienne"),
           (1500, 300, "Un cycliste"), (400, 47.0, "Un athlète")]
     for d, dt, qui in vm:
         v = d / dt
@@ -2865,7 +2868,8 @@ def gen_2de_mouvement():
     # -- principe d'inertie (8)
     pi = [
         ("Énoncer le principe d'inertie.", "Si les forces se compensent (ou s'il n'y en a pas), le corps est immobile ou en mouvement rectiligne uniforme, et réciproquement",
-         ["Il s'applique dans un référentiel galiléen (le référentiel terrestre pour les mouvements courants)."], "application"),
+         ["Tout corps persévère dans son état de repos ou de mouvement rectiligne uniforme si les forces qui s'exercent sur lui se compensent (ou s'il n'en subit aucune).",
+          "Il s'applique dans un référentiel galiléen (le référentiel terrestre pour les mouvements courants)."], "application"),
         ("Un parachutiste descend verticalement à vitesse constante. Les forces qui s'exercent sur lui se compensent-elles ?", "Oui",
          ["Mouvement rectiligne uniforme : d'après le principe d'inertie, les forces se compensent.", "Son poids est compensé par les frottements de l'air."], "intermediaire"),
         ("Une voiture prend un virage à vitesse constante. Les forces qui s'exercent sur elle se compensent-elles ?", "Non",

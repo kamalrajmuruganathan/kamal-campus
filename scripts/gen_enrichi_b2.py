@@ -1820,7 +1820,7 @@ def gen_6_nombres():
         suiv = ["dixièmes", "centièmes", "millièmes"][nd]
         ch = int((d_ * 10 ** (nd + 1)).to_integral_value(rounding=ROUND_FLOOR)) % 10
         add("intermediaire" if nd else "application", "arrondir", f"Arrondis ${nm(d_)}$ {nom}.",
-            [f"On regarde le chiffre des {suiv} : c'est ${ch}$, {'supérieur ou égal à 5 : on arrondit au-dessus' if ch >= 5 else 'inférieur à 5 : on arrondit en dessous (on garde ' + ['les unités', 'le chiffre des dixièmes', 'le chiffre des centièmes'][nd] + ' sans le changer)'}.",
+            [f"On regarde le chiffre des {suiv} : c'est ${ch}$, {'supérieur ou égal à 5 : on arrondit au-dessus' if ch >= 5 else 'inférieur à 5 : on arrondit en dessous (on garde ' + ['le chiffre des unités', 'le chiffre des dixièmes', 'le chiffre des centièmes'][nd] + ' sans le changer)'}.",
              f"${nm(d_)} \\approx {nm(r, nd)}$" + (f", soit ${nm(r)}$." if nm(r) != nm(r, nd) else ".")], f"${nm(r, nd)}$")
     # pourcentage (7)
     for p in (35, 7, 50, 85):
@@ -2166,7 +2166,7 @@ def gen_6_proportionnalite():
     fpm = [("4 places de cinéma coûtent 24 €. Combien coûtent 8 places ?", 24, 2, "×", "€"),
            ("3 kg de pommes coûtent 7,50 €. Combien coûtent 9 kg ?", Decimal("7.5"), 3, "×", "€"),
            ("Pour 12 crêpes, il faut 300 g de farine. Combien pour 4 crêpes ?", 300, 3, "÷", "g"),
-           ("6 cahiers pèsent 1 800 g. Combien pèsent 3 cahiers ?", 1800, 2, "÷", "g"),
+           ("6 cahiers identiques ont une masse de 1 800 g. Quelle est la masse de 3 cahiers ?", 1800, 2, "÷", "g"),
            ("Un robinet remplit 9 L en 2 min. Combien en 8 min ?", 9, 4, "×", "L"),
            ("20 m de tissu coûtent 150 €. Combien coûtent 5 m ?", 150, 4, "÷", "€"),
            ("Une voiture consomme 5 L pour 100 km. Combien pour 500 km ?", 5, 5, "×", "L")]
@@ -2191,14 +2191,14 @@ def gen_6_proportionnalite():
              f"${eurm(pa_)} + {eurm(pb_)} = {eurm(pa_ + pb_)}$ {u}." if u == "€" else f"${pa} + {pb} = {pa + pb}$ m²."],
             f"${eurm(pa_ + pb_)}$ €" if u == "€" else f"${pa + pb}$ m²")
     # retour à l'unité (8)
-    ru = [(5, 15, 7, "crayons", "€"), (4, 10, 6, "jus de fruits", "€"), (6, 3, 10, "œufs", "€"), (3, 840, 5, "paquets de farine", "g"),
-          (6, 270, 4, "yaourts", "g"), (7, 21, 10, "tickets", "€"), (12, 6, 5, "cartes postales", "€"), (9, 108, 4, "pots de miel", "€")]
+    ru = [(5, 15, 7, "carnets", "€"), (4, 10, 6, "jus de fruits", "€"), (6, 3, 10, "œufs", "€"), (3, 840, 5, "paquets de biscuits", "g"),
+          (6, 750, 4, "yaourts", "g"), (7, 21, 10, "tickets", "€"), (12, 6, 5, "cartes postales", "€"), (9, 108, 4, "pots de miel", "€")]
     for a, p, b, obj, u in ru:
         un = Fraction(p, a)
         r = un * b
         if u == "€":
             e = f"{a} {obj} coûtent {p} €. Combien coûtent {b} {obj} ?"
-            c = [f"Retour à l'unité : ${p} \\div {a} = {eurm(_dec(un))}$ € pour un seul.", f"${b} \\times {eurm(_dec(un))} = {eurm(_dec(r))}$ €."]
+            c = [f"Retour à l'unité : ${p} \\div {a} = {eurm(_dec(un))}$ € pour {'une seule' if obj == 'cartes postales' else 'un seul'}.", f"${b} \\times {eurm(_dec(un))} = {eurm(_dec(r))}$ €."]
             rep = f"${eurm(_dec(r))}$ €"
         else:
             e = f"{a} {obj} identiques ont une masse de {p} g. Quelle est la masse de {b} {obj} ?"

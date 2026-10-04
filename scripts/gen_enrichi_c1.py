@@ -394,7 +394,7 @@ def g5_fonctions():
          "Axe horizontal : la grandeur de départ ; axe vertical : celle qui en dépend.", "L'axe horizontal"),
         (A, "Dans le tableau du périmètre d'un carré, la colonne « côté $3$ cm, périmètre $12$ cm » donne quel point du graphique ?",
          "Abscisse d'abord (valeur du haut), ordonnée ensuite (valeur du bas).", "$(3\\,;12)$"),
-        (I, "Peut-on dire que la taille d'un élève est déterminée en fonction de son âge ?",
+        (I, "La taille d'un élève est-elle déterminée par son âge seul ?",
          "Deux élèves de $12$ ans n'ont pas forcément la même taille : à un âge correspondent plusieurs tailles possibles.",
          "Non"),
         (I, "On représente le prix de $n$ cahiers en fonction de $n$. Doit-on relier les points ?",
@@ -404,8 +404,8 @@ def g5_fonctions():
          "Une température à $10$ h $30$ a un sens : les valeurs intermédiaires existent, on relie.", "Oui"),
         (PB, "Sur un graphique, on lit $16$ °C à $10$ h, $24$ °C à $14$ h et $18$ °C à $18$ h. Décris l'évolution de la température entre $10$ h et $18$ h.",
          ["De $10$ h à $14$ h, la température passe de $16$ °C à $24$ °C : elle augmente.",
-          "Elle atteint son maximum, $24$ °C, à $14$ h, puis redescend à $18$ °C à $18$ h."],
-         "Elle augmente jusqu'à $14$ h (maximum $24$ °C), puis elle diminue"),
+          "Parmi ces relevés, la plus haute valeur est $24$ °C, à $14$ h ; ensuite la température redescend à $18$ °C à $18$ h."],
+         "Elle augmente de $10$ h à $14$ h (jusqu'à $24$ °C), puis elle diminue"),
     ]
     for d, e, c, r in voc:
         E(d, "vocabulaire-graphique", e, c, r)
@@ -502,7 +502,7 @@ def g5_fractions():
     # --- fraction d'un nombre (8)
     for a, b, n in [(3, 4, 20), (2, 5, 35), (5, 6, 42), (7, 8, 64)]:
         E(A, "fraction-d-un-nombre", f"Calcule $ {fb(a, b)} $ de ${n}$.",
-          [f"Prendre $ {fb(a, b)} $ de ${n}$, c'est multiplier : on divise d'abord par ${b}$, puis on multiplie par ${a}$.",
+          [f"Prendre $ {fb(a, b)} $ de ${n}$, c'est calculer $ {fb(a, b)} \\times {n} $ : on divise d'abord par ${b}$, puis on multiplie par ${a}$.",
            f"$ {n} \\div {b} = {n//b} $, puis $ {n//b} \\times {a} = {n//b*a} $."],
           f"$ {n//b*a} $")
     pbs = [
@@ -614,7 +614,7 @@ def g5_nombres_relatifs():
       [f"$ 5 - (-12) = 5 + 12 = {5+12} $."], f"${5+12}$ °C")
     E(PB, "probleme", "Un sous-marin est à $-250$ m et un hélicoptère vole juste au-dessus, à $300$ m d'altitude. Quelle distance verticale les sépare ?",
       [f"$ 300 - (-250) = 300 + 250 = {300+250} $."], f"${300+250}$ m")
-    E(PB, "probleme", "Au lever du jour il fait $-3$ °C. La température baisse de $5$ °C, puis monte de $9$ °C. Quelle température fait-il à la fin ?",
+    E(PB, "probleme", "Au lever du jour, il fait $-3$ °C. La température baisse de $5$ °C, puis monte de $9$ °C. Quelle température fait-il à la fin ?",
       [f"$ -3 - 5 + 9 = -8 + 9 = {-3-5+9} $."], f"${-3-5+9}$ °C")
     return E.fin()
 
@@ -626,8 +626,8 @@ def g5_operations():
     pri = [
         ("3 + 4 \\times 5", 3 + 4 * 5, "La multiplication passe avant l'addition : $ 3 + 20 = 23 $."),
         ("(3 + 4) \\times 5", (3 + 4) * 5, "Les parenthèses d'abord : $ 7 \\times 5 = 35 $."),
-        ("20 - 8 - 5", 20 - 8 - 5, "Même priorité : de gauche à droite, $ 12 - 5 = 7 $."),
-        ("36 \\div 6 \\div 3", 36 // 6 // 3, "Même priorité : de gauche à droite, $ 6 \\div 3 = 2 $."),
+        ("20 - 8 - 5", 20 - 8 - 5, "Même priorité : on calcule de gauche à droite, $ 20 - 8 = 12 $ puis $ 12 - 5 = 7 $."),
+        ("36 \\div 6 \\div 3", 36 // 6 // 3, "Même priorité : on calcule de gauche à droite, $ 36 \\div 6 = 6 $ puis $ 6 \\div 3 = 2 $."),
         ("50 - 6 \\times 7", 50 - 6 * 7, "La multiplication d'abord : $ 50 - 42 = 8 $."),
         ("7 \\times 8 - 4 \\times 9", 7 * 8 - 4 * 9, "Les deux produits d'abord : $ 56 - 36 = 20 $."),
         ("45 + 30 \\div 5", 45 + 30 // 5, "La division d'abord : $ 45 + 6 = 51 $."),
@@ -679,7 +679,7 @@ def g5_operations():
         ("Dans $ 7 \\times 4 $, comment s'appellent les nombres $7$ et $4$ ?",
          "Les nombres d'un produit sont des facteurs (les termes, c'est pour une somme ou une différence).", "Des facteurs"),
         ("$ 21 = 3 \\times 7 $. Complète : « $21$ est un … de $3$ » et « $3$ est un … de $21$ ».",
-         "Le multiple est le plus grand, le diviseur le plus petit.", "Multiple ; diviseur"),
+         "Comme $ 21 = 3 \\times 7 $, $21$ est dans la table de $3$ : c'est un multiple de $3$, et $3$ est un diviseur de $21$.", "Multiple ; diviseur"),
         ("L'expression $ 12 - 2 \\times 5 $ est-elle une différence ou un produit ?",
          "On calcule d'abord $ 2 \\times 5 $, la dernière opération est la soustraction.", "Une différence"),
         ("Un nombre divisible par $3$ est-il toujours divisible par $9$ ?",

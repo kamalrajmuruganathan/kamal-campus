@@ -218,7 +218,7 @@ def gen_1_chimie_organique():
     # --- familles (7)
     fam = [
         ("CH_3-CH_2-CH_2-OH", "alcool", "groupe hydroxyle $-\\mathrm{OH}$"),
-        ("CH_3-CH_2-CHO", "aldéhyde", "groupe carbonyle en bout de chaîne : le carbone du $\\mathrm{C=O}$ porte un atome d'hydrogène ($-\\mathrm{CHO}$)"),
+        ("CH_3-CH_2-CHO", "aldéhyde", "groupe carbonyle en bout de chaîne (le carbone du $\\mathrm{C=O}$ porte un atome d'hydrogène, $-\\mathrm{CHO}$)"),
         ("CH_3-CO-CH_2-CH_3", "cétone", "groupe carbonyle entre deux atomes de carbone ($-\\mathrm{CO}-$)"),
         ("CH_3-CH_2-COOH", "acide carboxylique", "groupe carboxyle $-\\mathrm{COOH}$"),
         ("CH_3-CHOH-CH_2-CH_3", "alcool", "groupe hydroxyle $-\\mathrm{OH}$ porté par le deuxième carbone"),
@@ -352,7 +352,7 @@ def gen_1_chimie_organique():
           "Une cartouche de camping contient $190\\ \\mathrm{g}$ de butane $\\mathrm{C_4H_{10}}$ ($M = 58{,}0\\ \\mathrm{g\\cdot mol^{-1}}$). Calculer la masse de dioxyde de carbone ($M = 44{,}0\\ \\mathrm{g\\cdot mol^{-1}}$) rejetée par sa combustion complète : $2\\,\\mathrm{C_4H_{10}} + 13\\,\\mathrm{O_2} \\longrightarrow 8\\,\\mathrm{CO_2} + 10\\,\\mathrm{H_2O}$.",
           [f"$n(\\mathrm{{C_4H_{{10}}}}) = \\dfrac{{190}}{{58{{,}}0}} = {val(n_but, 'mol')}$.",
            f"D'après l'équation, $n(\\mathrm{{CO_2}}) = 4 \\times n(\\mathrm{{C_4H_{{10}}}}) = {val(4 * n_but, 'mol')}$.",
-           f"$m = n \\times M = {num(4 * n_but)} \\times 44{{,}}0 = {val(4 * n_but * 44.0, 'g')}$."],
+           f"$m = n \\times M = {num(4 * n_but)} \\times 44{{,}}0 \\approx {val(4 * n_but * 44.0, 'g')}$ (calcul fait avec la valeur non arrondie de $n$)."],
           f"$m(\\mathrm{{CO_2}}) \\approx {val(4 * n_but * 44.0, 'g')}$")
     # --- énergie de liaison (6)
     EL = {"C-H": 413, "C-C": 348, "C-O": 358, "O-H": 463, "O=O": 498, "C=O": 799, "H-H": 436}
@@ -413,9 +413,11 @@ def gen_1_energie_electrique():
     for app, e, U, I in [("une bouilloire", "e", "230", "8.70"), ("un chargeur de téléphone", "", "5.0", "2.0"), ("une lampe à LED", "e", "230", "0.035"),
                          ("un sèche-cheveux", "", "230", "7.4"), ("le moteur d'une trottinette électrique", "", "36", "9.5")]:
         P = float(U) * float(I)
+        ncs = min(len(x.replace(".", "").lstrip("0")) for x in (U, I))   # chiffres significatifs des données
         L.add("application", "puissance",
               f"Sous une tension de ${vex(U, 'V')}$, {app} est traversé{e} par un courant d'intensité ${vex(I, 'A')}$. Calculer la puissance électrique reçue.",
-              [f"$P = U \\times I = {ex(U)} \\times {ex(I)} = {val(P, 'W')}$."], f"$P \\approx {val(P, 'W')}$")
+              [f"$P = U \\times I = {ex(U)} \\times {ex(I)} = {ex(round(P, 6))}\\ \\mathrm{{W}}$, soit ${val(P, 'W', ncs)}$ avec {ncs} chiffres significatifs."],
+              f"$P \\approx {val(P, 'W', ncs)}$")
     for app, P, U in [("un four de 3,0 kW", 3000, 230), ("un radiateur de 1 500 W", 1500, 230), ("un ordinateur portable de 65 W", 65, 19.5)]:
         I = P / U
         L.add("intermediaire", "puissance",
@@ -465,11 +467,11 @@ def gen_1_energie_electrique():
     for nom, E0s, rs, Is in [("Une pile plate", "4.5", "1.5", "0.20"), ("Une pile AA", "1.5", "0.30", "0.50"),
                              ("Une batterie de voiture", "12.6", "0.020", "150"), ("Une batterie de voiture", "12.6", "0.020", "10")]:
         E0, r, I = float(E0s), float(rs), float(Is)
-        U = E0 - r * I
+        U = float(Decimal(repr(round(E0 - r * I, 10))).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))   # même nombre de décimales que E
         ctx = " (démarrage du moteur)" if I == 150 else (" (phares allumés)" if I == 10 else "")
         L.add("application" if I < 10 else "intermediaire", "generateur-reel",
               f"{nom} a une force électromotrice $E = {vex(E0s, 'V')}$ et une résistance interne $r = {vex(rs, OHM)}$. Calculer la tension à ses bornes quand elle débite $I = {vex(Is, 'A')}${ctx}.",
-              [f"$U = E - rI = {ex(E0s)} - {ex(rs)} \\times {ex(Is)} = {val(U, 'V')}$."], f"$U \\approx {val(U, 'V')}$")
+              [f"$U = E - rI = {ex(E0s)} - {ex(rs)} \\times {ex(Is)} \\approx {vex(f'{U:.1f}', 'V')}$ (arrondi au dixième, comme $E$)."], f"$U \\approx {vex(f'{U:.1f}', 'V')}$")
     L.add("intermediaire", "generateur-reel", "Une pile de force électromotrice $E = 9{,}0\\ \\mathrm{V}$ délivre une tension $U = 8{,}4\\ \\mathrm{V}$ quand elle débite $I = 0{,}30\\ \\mathrm{A}$. Calculer sa résistance interne.",
           ["$U = E - rI$ donc $r = \\dfrac{E - U}{I}$.", f"$r = \\dfrac{{9{{,}}0 - 8{{,}}4}}{{0{{,}}30}} = {val((9.0 - 8.4) / 0.30, OHM, 2)}$."], f"$r = {val((9.0 - 8.4) / 0.30, OHM, 2)}$")
     L.add("intermediaire", "generateur-reel", "Un générateur de résistance interne $r = 0{,}50\\ \\Omega$ délivre $U = 5{,}7\\ \\mathrm{V}$ lorsqu'il débite $0{,}60\\ \\mathrm{A}$. Calculer sa force électromotrice.",
@@ -479,9 +481,9 @@ def gen_1_energie_electrique():
           "$I_{cc} = 3{,}0\\ \\mathrm{A}$")
     E0, r, I = 4.5, 1.5, 0.30
     L.add("approfondissement", "generateur-reel", "Une pile ($E = 4{,}5\\ \\mathrm{V}$, $r = 1{,}5\\ \\Omega$) débite $I = 0{,}30\\ \\mathrm{A}$. Établir le bilan de puissance : puissance totale $E\\,I$, puissance délivrée au circuit $U\\,I$, puissance dissipée $rI^2$.",
-          [f"$EI = 4{{,}}5 \\times 0{{,}}30 = {val(E0 * I, 'W')}$.", f"$U = 4{{,}}5 - 1{{,}}5 \\times 0{{,}}30 = {val(E0 - r * I, 'V')}$ ; $UI = {val((E0 - r * I) * I, 'W')}$.",
+          [f"$EI = 4{{,}}5 \\times 0{{,}}30 = {val(E0 * I, 'W')}$.", f"$U = 4{{,}}5 - 1{{,}}5 \\times 0{{,}}30 = {val(E0 - r * I, 'V')}$ ; $UI = {val((E0 - r * I) * I, 'W', 4)}$.",
            f"$rI^2 = 1{{,}}5 \\times 0{{,}}30^2 = {val(r * I * I, 'W')}$ ; on vérifie $EI = UI + rI^2$."],
-          f"${val(E0 * I, 'W')} = {val((E0 - r * I) * I, 'W')} + {val(r * I * I, 'W')}$")
+          f"${val(E0 * I, 'W')} = {val((E0 - r * I) * I, 'W', 4)} + {val(r * I * I, 'W')}$")
     # --- effet Joule (8)
     for ctx, e, R, I in [("Une résistance chauffante", "e", 26, 8.8), ("Un câble de rallonge", "", 0.15, 16)]:
         L.add("application", "effet-joule", f"{ctx} de résistance $R = {vex(R, OHM)}$ est parcouru{e} par un courant $I = {vex(I, 'A')}$. Calculer la puissance dissipée par effet Joule.",

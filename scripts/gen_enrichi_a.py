@@ -270,7 +270,7 @@ def gen_cp_addition():
         a = r.randint(max(1, s - 10), s - 1); b = s - a
         return ("intermediaire", "nombre-manquant",
                 f"Trouve le nombre qui manque : {F(f'{a} + {LD} = {s}')}.",
-                [f"On avance de {a} jusqu'à {s} : cela fait {b} pas.", F(f"{a} + {b} = {s}") + "."], F(b))
+                [f"On compte à partir de {a} jusqu'à {s} : cela fait {b} pas.", F(f"{a} + {b} = {s}") + "."], F(b))
 
     def doubles_compl(r):
         if r.random() < 0.5:
@@ -645,8 +645,8 @@ def gen_cp_formes():
              ["Elle a 2 côtés longs et 2 côtés courts."], "un rectangle"),
             ("application", "formes-autour-de-nous", "Une assiette, vue de dessus, a la forme de quelle figure ?",
              ["Elle est toute ronde."], "un cercle"),
-            ("application", "formes-autour-de-nous", "Une part de tarte a souvent la forme de quelle figure ?",
-             ["Elle a 3 coins, comme un triangle."], "un triangle"),
+            ("application", "formes-autour-de-nous", "Une équerre a la forme de quelle figure ?",
+             ["Elle a 3 côtés et 3 coins, comme un triangle."], "un triangle"),
             ("application", "formes-autour-de-nous", "Une feuille de cahier a la forme de quelle figure ?",
              ["2 côtés longs et 2 côtés courts."], "un rectangle"),
             ("application", "formes-autour-de-nous", "Une pièce de monnaie a la forme de quelle figure ?",
@@ -679,8 +679,8 @@ def gen_cp_formes():
              ["La boule est toute ronde : elle roule dans tous les sens."], "Vrai"),
             ("approfondissement", "vrai-ou-faux", "Vrai ou faux : un triangle a plus de coins qu'un carré.",
              ["Le triangle a 3 coins, le carré en a 4.", F("3 < 4") + "."], "Faux"),
-            ("approfondissement", "vrai-ou-faux", "Vrai ou faux : on peut dessiner un cube à plat comme un carré.",
-             ["Le cube est un solide : on le tient dans la main. Le carré est une forme plate."], "Faux"),
+            ("approfondissement", "vrai-ou-faux", "Vrai ou faux : un cube est une forme plate, comme le carré.",
+             ["Le cube est un solide : on le tient dans la main. Le carré, lui, est une forme plate."], "Faux"),
             ("approfondissement", "vrai-ou-faux", "Vrai ou faux : un cercle a des côtés droits.",
              ["Le cercle est tout rond : il n'a aucun côté droit."], "Faux"),
         ])
@@ -757,7 +757,7 @@ def gen_cp_temps():
         if k == 0:
             return ("application", "lire-l-heure",
                     f"La petite aiguille est sur le {h} et la grande aiguille est sur le 12. Quelle heure est-il ?",
-                    ["La grande aiguille sur le 12 : c'est une heure pile.",
+                    [f"La grande aiguille est sur le 12 : il est {h} heure{'s' if h > 1 else ''} pile.",
                      f"La petite aiguille montre l'heure : {h}."], f"{h} heure{'s' if h > 1 else ''}")
         if k == 1:
             return ("application", "lire-l-heure",
@@ -765,7 +765,7 @@ def gen_cp_temps():
                     ["La petite aiguille montre les heures."], f"sur le {h}")
         return ("application", "lire-l-heure",
                 f"Il est {h} heure{'s' if h > 1 else ''} pile. Sur quel nombre est la grande aiguille ?",
-                ["À une heure pile, la grande aiguille (celle des minutes) est sur le 12."], "sur le 12")
+                [f"Quand il est {h} heure{'s' if h > 1 else ''} pile, la grande aiguille (celle des minutes) est sur le 12."], "sur le 12")
 
     def moments(r):
         return r.choice([
@@ -838,7 +838,7 @@ _LONG = [("un crayon", 15), ("une gomme", 4), ("un stylo", 14), ("une règle", 2
          ("une fourchette", 19), ("une carte à jouer", 9), ("un ruban", 12), ("une brosse à dents", 18),
          ("une paille", 21), ("un taille-crayon", 5)]
 _LOURD = [("un melon", "une cerise"), ("un livre", "une feuille"), ("une pastèque", "une pomme"),
-          ("un cartable", "un crayon"), ("une brique", "une plume"), ("un chien", "un chat"),
+          ("un cartable", "un crayon"), ("une brique", "une plume"), ("un ballon de basket", "une balle de ping-pong"),
           ("une bouteille d'eau pleine", "une bouteille vide"), ("un caillou", "une feuille d'arbre"),
           ("une citrouille", "une tomate"), ("un dictionnaire", "un cahier"),
           ("une orange", "une noisette"), ("un ananas", "une fraise")]
@@ -921,7 +921,7 @@ def gen_cp_longueurs_masses():
             g, p = max(l1, l2), min(l1, l2)
             go, po = (o1, o2) if l1 > l2 else (o2, o1)
             return ("intermediaire", "mesurer",
-                    f"Avec la règle, {o1} mesure {l1} cm et {o2} mesure {l2} cm. "
+                    f"{o1.capitalize()} mesure {l1} cm et {o2} mesure {l2} cm. "
                     f"Combien de centimètres {defini(go)} a-t-{('il' if go.startswith('un ') else 'elle')} de plus {que(defini(po))} ?",
                     ["On cherche l'écart : on soustrait.", F(f"{g} - {p} = {g - p}") + "."], f"{g - p} cm")
         if l1 + l2 > 40:
@@ -970,7 +970,7 @@ def gen_cp_longueurs_masses():
              "Vrai ou faux : si une balance reste droite, les deux objets ont la même masse.",
              ["Vrai : c'est l'équilibre."], "Vrai"),
             ("approfondissement", "vrai-ou-faux",
-             "Vrai ou faux : un crayon de 9 cubes est plus long qu'un crayon de 12 cubes.",
+             "Vrai ou faux : un crayon long de 9 cubes est plus long qu'un crayon long de 12 cubes.",
              [F("9 < 12") + " : il est plus court."], "Faux"),
         ])
 
@@ -1208,7 +1208,8 @@ def gen_ce1_addition_posee():
         opts = sorted([e - 20, e, e + 20])
         return ("approfondissement", "ordre-de-grandeur",
                 f"Sans poser l'opération, {F(f'{a} + {b}')} est-il proche de {opts[0]}, de {opts[1]} ou de {opts[2]} ?",
-                [f"{a} est proche de {_arr10(a)} et {b} est proche de {_arr10(b)}.",
+                [" et ".join(f"{x} est déjà un nombre rond" if x % 10 == 0 else f"{x} est proche de {_arr10(x)}"
+                             for x in (a, b)) + ".",
                  F(f"{_arr10(a)} + {_arr10(b)} = {e}") + ".",
                  "Le calcul exact donne " + F(f"{a} + {b} = {a + b}") + "."], F(e))
 
@@ -1418,10 +1419,10 @@ def gen_ce1_figures_planes():
              ["C'est le cercle."], "un cercle"),
             ("intermediaire", "reconnaitre", "Je suis une figure à 3 sommets avec un angle droit. Quelle sorte de figure suis-je ?",
              ["3 sommets : c'est un triangle (ici, avec un angle droit)."], "un triangle"),
-            ("intermediaire", "reconnaitre", "Quelle figure a 4 sommets mais pas tous ses côtés égaux ?",
+            ("intermediaire", "reconnaitre", "Quelle figure a 4 angles droits mais pas tous ses côtés égaux ?",
              ["Le rectangle : 2 côtés longs et 2 côtés courts."], "le rectangle"),
-            ("intermediaire", "reconnaitre", "Quelle figure a autant de côtés que de sommets, et en a 3 ?",
-             ["Le triangle a 3 côtés et 3 sommets."], "le triangle"),
+            ("intermediaire", "reconnaitre", "Quelle figure a exactement 3 sommets ?",
+             ["Le triangle a 3 sommets (et 3 côtés)."], "le triangle"),
             ("intermediaire", "reconnaitre", "Quelle figure n'a aucun sommet ?",
              ["Le cercle est tout rond : aucun sommet."], "le cercle"),
         ])
@@ -1432,7 +1433,7 @@ def gen_ce1_figures_planes():
              ["On utilise l'équerre (ou le coin d'une feuille)."], "l'équerre"),
             ("intermediaire", "angle-droit", "Un triangle a-t-il toujours un angle droit ?",
              ["Non : certains triangles ont un angle droit, d'autres n'en ont pas."], "Non"),
-            ("intermediaire", "angle-droit", "Quel objet de la classe a des coins qui forment des angles droits : une feuille ou une assiette ronde ?",
+            ("intermediaire", "angle-droit", "Quel objet a des coins qui forment des angles droits : une feuille ou une assiette ronde ?",
              ["Les coins d'une feuille sont des angles droits ; l'assiette ronde n'a pas de coin."], "une feuille"),
             ("intermediaire", "angle-droit", "Peut-on être sûr qu'un angle est droit juste en le regardant ?",
              ["Non : on le vérifie avec l'équerre."], "Non, on vérifie avec l'équerre."),
@@ -1571,13 +1572,13 @@ def gen_ce1_mesures_monnaie():
                  ["La petite aiguille montre les heures."], "la petite aiguille"),
             ])
         if k == 2:
-            h = r.randint(8, 16); d = r.randint(1, 3)
+            h = r.randint(10, 17); d = r.randint(1, 3)
             return ("intermediaire", "le-temps",
                     f"Un film commence à {h} h et dure {d} h. À quelle heure se termine-t-il ?",
                     [F(f"{h} + {d} = {h + d}") + "."], f"à {h + d} h")
         h = r.randint(8, 11); m = r.choice([15, 30, 45])
         return ("intermediaire", "le-temps",
-                f"Il est {h} h. La récréation commence dans {m} minutes. À quelle heure commence-t-elle ?",
+                f"Il est {h} h. La séance de sport commence dans {m} minutes. À quelle heure commence-t-elle ?",
                 [f"{h} h et {m} min."], f"à {h} h {m}")
 
     def somme(r):
@@ -1904,7 +1905,7 @@ def _solides_communs(niveau_diff_app="application"):
              ["C'est le cylindre."], "le cylindre"),
             ("intermediaire", "devinettes", "J'ai une seule face plate, ronde, et une pointe. Qui suis-je ?",
              ["C'est le cône."], "le cône"),
-            ("intermediaire", "devinettes", "Mes faces sont des triangles qui se rejoignent en une pointe, posés sur un carré. Qui suis-je ?",
+            ("intermediaire", "devinettes", "Ma base est un carré et mes autres faces sont des triangles qui se rejoignent en une pointe. Qui suis-je ?",
              ["C'est la pyramide à base carrée."], "la pyramide"),
             ("intermediaire", "devinettes", "J'ai 5 faces et 5 sommets. Qui suis-je ?",
              ["La pyramide à base carrée a 5 faces (1 carré et 4 triangles) et 5 sommets."], "la pyramide à base carrée"),
@@ -2067,7 +2068,7 @@ def gen_ce1_symetrie_quadrillage():
             ("application", "axes-des-figures", "Combien d'axes de symétrie a un rectangle (qui n'est pas un carré) ?",
              ["2 axes, par le milieu des côtés. Les diagonales ne sont pas des axes."], F(2)),
             ("application", "axes-des-figures", "Combien d'axes de symétrie a un papillon ?",
-             ["Un seul, au milieu, de la tête à la queue."], F(1)),
+             ["Un seul, vertical, au milieu du corps, entre les deux ailes."], F(1)),
             ("application", "axes-des-figures", "Combien d'axes de symétrie a un cœur dessiné ?",
              ["Un seul, vertical, au milieu."], F(1)),
             ("application", "axes-des-figures", "Combien d'axes de symétrie a un cercle ?",
@@ -2176,9 +2177,11 @@ def gen_ce1_tables():
             return ("probleme", "probleme-multiplication",
                     f"Une voiture a 4 roues. Combien de roues ont {n} voitures ?",
                     [F(f"{n} \\times 4 = {4 * n}") + "."], f"{4 * n} roues")
-        n = r.randint(2, 10); p = r.choice([2, 5, 10])
+        n = r.randint(2, 10)
+        p, obj, objs = r.choice([(2, "Un cahier", "cahiers"), (5, "Une boîte de feutres", "boîtes de feutres"),
+                                 (10, "Un livre", "livres")])
         return ("probleme", "probleme-multiplication",
-                f"Un cahier coûte {p} €. Combien coûtent {n} cahiers ?",
+                f"{obj} coûte {p} €. Combien coûtent {n} {objs} ?",
                 [F(f"{n} \\times {p} = {n * p}") + "."], f"{n * p} €")
 
     return assemble(211, [(faciles, 10), (reiteree, 7), (t34, 8), (suites, 5), (manquant, 7), (cours, 6), (prob, 7)])
@@ -2446,7 +2449,7 @@ def gen_ce2_fractions():
             ("approfondissement", "comparer-des-fractions", f"Vrai ou faux : {F(frac(1, 4))} est plus grand que {F(frac(1, 2))}.",
              ["Un quart est plus petit qu'un demi : on a coupé en plus de parts."], "Faux"),
             ("approfondissement", "comparer-des-fractions", f"Vrai ou faux : {F(frac(3, 4))} est plus grand que {F(frac(1, 2))}.",
-             [f"{F(frac(1, 2))} = {F(frac(2, 4))}, et 3 quarts, c'est plus que 2 quarts."], "Vrai"),
+             [F(frac(1, 2) + " = " + frac(2, 4)) + ", et 3 quarts, c'est plus que 2 quarts."], "Vrai"),
         ])
 
     def tout(r):
@@ -2463,8 +2466,8 @@ def gen_ce2_fractions():
              ["Il reste 1 part sur 4."], F(frac(1, 4))),
             ("approfondissement", "le-tout", f"Une tarte est coupée en 3 parts égales. On en a mangé {F(frac(1, 3))}. Quelle fraction reste-t-il ?",
              ["Il reste 2 parts sur 3."], F(frac(2, 3))),
-            ("approfondissement", "le-tout", "Sur une bande partagée en 4 parts égales, quelle fraction est au milieu ?",
-             [f"Le milieu, c'est {F(frac(2, 4))}, soit {F(frac(1, 2))}."], F(frac(2, 4)) + " (soit " + F(frac(1, 2)) + ")"),
+            ("approfondissement", "le-tout", "Une bande est partagée en 4 parts égales. On en colorie 2. Quelle fraction de la bande est coloriée ?",
+             [f"2 parts sur 4 : c'est {F(frac(2, 4))}, soit la moitié de la bande, {F(frac(1, 2))}."], F(frac(2, 4)) + " (soit " + F(frac(1, 2)) + ")"),
         ])
 
     def plusieurs(r):
@@ -2568,9 +2571,9 @@ def gen_ce2_multiplication_posee():
                     f"Un car transporte {p} élèves. Combien d'élèves transportent {n} cars pleins ?",
                     corrige_multiplication(p, n), f"{nt(n * p)} élèves")
         if k == 1:
-            n = r.randint(3, 8); p = r.randint(15, 125)
+            n = r.randint(3, 8); p = r.randint(45, 125)
             return ("probleme", "probleme-multiplication",
-                    f"Un vélo coûte {p} €. Une école en achète {n}. Combien paie-t-elle ?",
+                    f"Une trottinette coûte {p} €. Une école en achète {n}. Combien paie-t-elle ?",
                     corrige_multiplication(p, n), f"{nt(n * p)} €")
         n = r.randint(3, 9); p = r.choice([24, 25, 30, 36, 48, 50, 60])
         return ("probleme", "probleme-multiplication",
@@ -2777,7 +2780,7 @@ def gen_ce2_perimetre_mesures():
                     [F(f"{c} {X} 4 = {4 * c}") + "."], f"{4 * c} cm")
         a = r.choice([10, 15, 20]); b = r.choice([10, 15, 20])
         return ("probleme", "probleme-durees",
-                f"La récréation du matin dure {a} minutes et celle de l'après-midi {b} minutes. Combien de minutes de récréation en tout ?",
+                f"La récréation du matin dure {a} minutes et celle de l'après-midi {b} minutes. Combien de minutes de récréation y a-t-il en tout ?",
                 [F(f"{a} + {b} = {a + b}") + "."], f"{a + b} minutes" + (" (soit 1 heure)" if a + b == 60 else ""))
 
     return assemble(306, [(conv, 9), (carre, 7), (masses_durees, 7), (rect, 8), (poly, 7), (manquant, 5), (prob, 7)])
@@ -2922,10 +2925,10 @@ def gen_ce2_division():
             if rr == 0:
                 return None
             return ("probleme", "probleme-division",
-                    f"{n} élèves vont au musée. Chaque minibus a {k} places. Combien de minibus faut-il au minimum ?",
-                    [F(f"{k} {X} {qq} = {k * qq}") + f" : {qq} minibus pleins, et il reste {_pl(rr, 'élève')}.",
-                     f"Il faut un minibus de plus pour {'cet élève' if rr == 1 else 'ces élèves'} : " + F(f"{qq} + 1 = {qq + 1}") + "."],
-                    f"{qq + 1} minibus")
+                    f"{n} élèves mangent à la cantine. Chaque table a {k} places. Combien de tables faut-il au minimum ?",
+                    [F(f"{k} {X} {qq} = {k * qq}") + f" : {_pl(qq, 'table')} pleine{'s' if qq > 1 else ''}, et il reste {_pl(rr, 'élève')}.",
+                     f"Il faut une table de plus pour {'cet élève' if rr == 1 else 'ces élèves'} : " + F(f"{qq} + 1 = {qq + 1}") + "."],
+                    f"{qq + 1} tables")
         if t == 1:
             k = 6; n = r.randint(20, 58); qq, rr = divmod(n, k)
             return ("probleme", "probleme-division",
