@@ -999,7 +999,7 @@ def gen_cm1_multiplication():
         if c == 1:
             corr = [f"Multiplier par ${m(b)}$, c'est ajouter {lettres(z)} {pl(z, 'zéro', 'zéros')} à droite."]
         else:
-            corr = [f"${a} \\times {c} = {a * c}$, puis on ajoute {lettres(z)} {pl(z, 'zéro', 'zéros')}."]
+            corr = [f"${a} \\times {c} = {m(a * c)}$, puis on ajoute {lettres(z)} {pl(z, 'zéro', 'zéros')}."]
         L.add("application", "multiplier-par-10-100", f"Calcule : ${a} \\times {m(b)}$.", corr, f"${m(a * b)}$")
 
     def f_deux(r):
@@ -1031,7 +1031,7 @@ def gen_cm1_multiplication():
         L.add("intermediaire", "trouver-l-erreur",
               f"Sami a posé ${a} \\times {b}$ et a trouvé ${faux}$. Quelle erreur a-t-il faite ? Quel est le bon résultat ?",
               [f"Il a additionné ${a} \\times {u} = {a * u}$ et ${a} \\times {d} = {a * d}$ sans le zéro de décalage.",
-               f"Il fallait : ${a * u} + {a * d * 10} = {m(a * b)}$."],
+               f"Il fallait : ${m(a * u)} + {m(a * d * 10)} = {m(a * b)}$."],
               f"oubli du zéro de décalage ; ${a} \\times {b} = {m(a * b)}$")
     L.add("intermediaire", "trouver-l-erreur", f"Inès écrit : $45 \\times 30 = {45 * 3}$. A-t-elle raison ?",
           [f"$45 \\times 3 = {45 * 3}$, mais il faut ensuite ajouter un zéro (on multiplie par 3 dizaines)."],
@@ -1104,7 +1104,7 @@ def gen_cm1_nombres_decimaux():
         nom = "dixièmes" if p == 1 else "centièmes"
         L.add("intermediaire", "virgule-vers-fraction",
               f"Écris ${ld(x)}$ sous la forme d'une fraction décimale.",
-              [f"Le dernier chiffre est celui des {nom} : ${ld(x)}$, c'est ${num}$ {nom}."], f"${fl(num, den)}$")
+              [f"Le dernier chiffre est celui des {nom} : ${ld(x)}$, c'est ${m(num)}$ {nom}."], f"${fl(num, den)}$")
     # 3. valeur d'un chiffre
     RG = [("dizaines", 1), ("unités", 0), ("dixièmes", -1), ("centièmes", -2)]
 
@@ -1125,7 +1125,7 @@ def gen_cm1_nombres_decimaux():
         L.add("intermediaire", "decomposer", f"Écris sous la forme d'un nombre à virgule : ${' + '.join(termes)}$.",
               [f"{u} {'unité' if u <= 1 else 'unités'}, {d} {'dixième' if d <= 1 else 'dixièmes'} et {c} {'centième' if c <= 1 else 'centièmes'} : "
                + ("on écrit un zéro au rang vide des dixièmes." if d == 0 and c else
-                  "pas de centièmes : rien à écrire après le chiffre des dixièmes." if c == 0 else
+                  "il n'y a rien à écrire après le chiffre des dixièmes." if c == 0 else
                   "chaque chiffre à son rang.")],
               f"${ld(x)}$")
     for x in [F(1274, 100), F(305, 100), F(4706, 100)]:
