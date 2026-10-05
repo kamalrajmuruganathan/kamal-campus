@@ -45,7 +45,7 @@ On utilise **haben** pour la possession et pour dire son âge (comme en françai
 | ich | habe | Ich **habe** Zeit. | J'ai le temps. |
 | du | hast | Du **hast** Recht. | Tu as raison. |
 | er / sie / es | hat | Sie **hat** Hunger. | Elle a faim. |
-| wir | haben | Wir **haben** Ferien. | Nous avons vacances. |
+| wir | haben | Wir **haben** Ferien. | Nous sommes en vacances (mot à mot : nous avons vacances). |
 | ihr | habt | Ihr **habt** Glück. | Vous avez de la chance. |
 | sie / Sie | haben | Sie **haben** ein Auto. | Ils ont une voiture. |
 
