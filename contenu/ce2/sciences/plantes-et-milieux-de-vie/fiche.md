@@ -36,7 +36,7 @@ Une plante à fleurs a plusieurs parties :
 ## De la graine à la plante
 
 Pour **germer** et pousser, une graine a besoin d'**eau**, de **chaleur** et
-d'**air**. La petite plante qui sort de la graine s'appelle une **germe** ou
+d'**air**. La petite plante qui sort de la graine s'appelle un **germe** ou
 plantule. Ensuite, pour grandir, la plante a aussi besoin de **lumière**.
 
 De la graine à la plante adulte qui refait des graines : c'est le **cycle de
