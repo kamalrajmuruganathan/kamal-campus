@@ -104,7 +104,7 @@
         "$3000 + 0{,}02n$"
       ],
       "reponse": 1,
-      "explication": "Un taux annuel constant donne une suite **géométrique** : $u_n = u_0 \\times q^n$ avec $q = 1{,}02$. Le choix A décrirait un ajout fixe de $2$ € par an, le choix C ferait fondre le capital à $2\\,\\%$ de sa valeur chaque année."
+      "explication": "Un taux annuel constant donne une suite **géométrique** : $u_n = u_0 \\times q^n$ avec $q = 1{,}02$. Le choix $3000 + 2n$ décrirait un ajout fixe de $2$ € par an, le choix $3000 \\times 0{,}02^n$ ferait fondre le capital à $2\\,\\%$ de sa valeur chaque année."
     },
     {
       "id": 10,
@@ -150,7 +150,7 @@
       "enonce": "Une suite arithmétique a $u_0 = 7$ et $r = 4$. Que vaut $u_5$ ?",
       "choix": ["$27$", "$23$", "$28$", "$20$"],
       "reponse": 0,
-      "explication": "$u_n = u_0 + nr = 7 + 5 \\times 4 = 27$. Le choix $23$ oublie le premier terme ($u_0$ mal pris en compte), le choix $28$ vient d'un décalage d'indice ($7 + 6 \\times ...$)."
+      "explication": "$u_n = u_0 + nr = 7 + 5 \\times 4 = 27$. Le choix $23$ vient d'un décalage d'indice ($7 + 4 \\times 4$), le choix $20$ oublie le premier terme ($5 \\times 4$) et le choix $28$ multiplie $u_0$ par $r$ ($7 \\times 4$)."
     },
     {
       "id": 14,
@@ -223,7 +223,7 @@
       "enonce": "Une suite géométrique de premier terme $u_0 = 800$ vérifie $u_3 = 100$. Quelle est sa raison $q$ (positive) ?",
       "choix": ["$0{,}5$", "$0{,}25$", "$2$", "$-0{,}5$"],
       "reponse": 0,
-      "explication": "$u_3 = u_0 \\times q^3$ donne $q^3 = \\dfrac{100}{800} = 0{,}125$, donc $q = 0{,}5$. Vérification : $800 \\to 400 \\to 200 \\to 100$. Le choix $0{,}25$ suppose à tort deux étapes au lieu de trois."
+      "explication": "$u_3 = u_0 \\times q^3$ donne $q^3 = \\dfrac{100}{800} = 0{,}125$, donc $q = 0{,}5$. Vérification : $800 \\to 400 \\to 200 \\to 100$. Le choix $0{,}25$ donnerait $800 \\to 200 \\to 50 \\to 12{,}5$, et non $100$."
     }
   ]
 }
