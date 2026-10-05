@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Une culture de bactéries est étudiée en laboratoire. Le nombre de bactéries, exprimé en milliers, à l'instant $t$ (en heures, avec $t \\geq 0$) est modélisé par $N(t) = 3\\,\\mathrm{e}^{0{,}5t}$.\n\n1. Déterminer le nombre de bactéries à l'instant initial.\n2. Calculer le rapport $\\dfrac{N(t+2)}{N(t)}$ et interpréter le résultat.\n3. Calculer $N'(t)$ et en déduire le sens de variation de $N$ sur $[0\\,;\\,+\\infty[$.\n4. Résoudre l'équation $N(t) = 3\\,\\mathrm{e}^{2}$ et interpréter le résultat.\n5. On pose, pour tout entier $n \\geq 0$, $v_n = N(n)$. Montrer que la suite $(v_n)$ est géométrique et préciser sa raison et son premier terme.",
       "corrige": [
@@ -137,6 +137,467 @@
         "5. Pour tout entier $n \\geq 0$, $v_n = N(n) = 3\\,\\mathrm{e}^{0{,}5n}$. Alors $\\dfrac{v_{n+1}}{v_n} = \\dfrac{3\\,\\mathrm{e}^{0{,}5(n+1)}}{3\\,\\mathrm{e}^{0{,}5n}} = \\mathrm{e}^{0{,}5}$, quotient constant indépendant de $n$ : $(v_n)$ est géométrique de raison $\\mathrm{e}^{0{,}5}$ et de premier terme $v_0 = 3$."
       ],
       "reponse": "1. $N(0) = 3$ milliers de bactéries. 2. Rapport constant $\\mathrm{e}$ : population multipliée par $\\mathrm{e}$ toutes les $2$ h. 3. $N'(t) = 1{,}5\\,\\mathrm{e}^{0{,}5t} > 0$, donc $N$ est croissante. 4. $t = 4$ heures. 5. $(v_n)$ est géométrique de raison $\\mathrm{e}^{0{,}5}$ et de premier terme $v_0 = 3$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "proprietes-algebriques",
+      "enonce": "Écrire chaque nombre sous la forme d'une seule puissance de $\\mathrm{e}$ : $\\mathrm{e}^2 \\times \\mathrm{e}^3$ ; $\\dfrac{\\mathrm{e}^7}{\\mathrm{e}^3}$ ; $\\left(\\mathrm{e}^2\\right)^3$.",
+      "corrige": [
+        "Produit : $\\mathrm{e}^{a} \\times \\mathrm{e}^{b} = \\mathrm{e}^{a+b}$, donc $\\mathrm{e}^2 \\times \\mathrm{e}^3 = \\mathrm{e}^5$.",
+        "Quotient : $\\dfrac{\\mathrm{e}^a}{\\mathrm{e}^b} = \\mathrm{e}^{a-b}$, donc $\\dfrac{\\mathrm{e}^7}{\\mathrm{e}^3} = \\mathrm{e}^4$.",
+        "Puissance : $\\left(\\mathrm{e}^a\\right)^n = \\mathrm{e}^{na}$, donc $\\left(\\mathrm{e}^2\\right)^3 = \\mathrm{e}^6$."
+      ],
+      "reponse": "$\\mathrm{e}^5$ ; $\\mathrm{e}^4$ ; $\\mathrm{e}^6$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\mathrm{e}^{x} = 1$.",
+      "corrige": [
+        "On sait que $\\mathrm{e}^0 = 1$, donc l'équation s'écrit $\\mathrm{e}^{x} = \\mathrm{e}^{0}$.",
+        "Comme $\\mathrm{e}^a = \\mathrm{e}^b \\iff a = b$, on obtient $x = 0$."
+      ],
+      "reponse": "$S = \\{0\\}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "derivee",
+      "enonce": "Donner la dérivée sur $\\mathbb{R}$ de $f(x) = \\mathrm{e}^{5x}$ et de $g(x) = \\mathrm{e}^{-x}$.",
+      "corrige": [
+        "On utilise $\\left(\\mathrm{e}^{ax+b}\\right)' = a\\,\\mathrm{e}^{ax+b}$.",
+        "Pour $f$ : $a = 5$, donc $f'(x) = 5\\,\\mathrm{e}^{5x}$. Pour $g$ : $a = -1$, donc $g'(x) = -\\mathrm{e}^{-x}$."
+      ],
+      "reponse": "$f'(x) = 5\\,\\mathrm{e}^{5x}$ ; $g'(x) = -\\mathrm{e}^{-x}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "signe",
+      "enonce": "Quel est le signe de $f(x) = -3\\,\\mathrm{e}^{x}$ sur $\\mathbb{R}$ ? Justifier.",
+      "corrige": [
+        "Pour tout réel $x$, $\\mathrm{e}^{x} > 0$.",
+        "On multiplie par $-3 < 0$ : $-3\\,\\mathrm{e}^{x} < 0$."
+      ],
+      "reponse": "$f(x) < 0$ pour tout réel $x$."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Rappeler les deux conditions qui définissent la fonction exponentielle, puis donner les valeurs de $\\exp(0)$ et de $\\exp'(0)$.",
+      "corrige": [
+        "$\\exp$ est l'unique fonction dérivable sur $\\mathbb{R}$ telle que $\\exp' = \\exp$ et $\\exp(0) = 1$.",
+        "Donc $\\exp(0) = 1$, et $\\exp'(0) = \\exp(0) = 1$."
+      ],
+      "reponse": "$\\exp' = \\exp$ et $\\exp(0) = 1$ ; $\\exp(0) = 1$ et $\\exp'(0) = 1$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier, pour tout réel $x$, l'expression $A = \\mathrm{e}^{2x} \\times \\mathrm{e}^{-x+1}$.",
+      "corrige": [
+        "On additionne les exposants : $2x + (-x + 1) = x + 1$.",
+        "Donc $A = \\mathrm{e}^{x+1}$."
+      ],
+      "reponse": "$A = \\mathrm{e}^{x+1}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier, pour tout réel $x$, l'expression $B = \\left(\\mathrm{e}^{x}\\right)^2 \\times \\mathrm{e}^{-3x}$.",
+      "corrige": [
+        "$\\left(\\mathrm{e}^{x}\\right)^2 = \\mathrm{e}^{2x}$.",
+        "$\\mathrm{e}^{2x} \\times \\mathrm{e}^{-3x} = \\mathrm{e}^{2x - 3x} = \\mathrm{e}^{-x}$."
+      ],
+      "reponse": "$B = \\mathrm{e}^{-x}$, soit $\\dfrac{1}{\\mathrm{e}^x}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\mathrm{e}^{3x+1} = \\mathrm{e}^{x-5}$.",
+      "corrige": [
+        "$\\mathrm{e}^a = \\mathrm{e}^b \\iff a = b$, donc l'équation équivaut à $3x + 1 = x - 5$.",
+        "$2x = -6$, soit $x = -3$."
+      ],
+      "reponse": "$S = \\{-3\\}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ les équations $\\mathrm{e}^{x} = -2$ et $\\mathrm{e}^{2x-1} = 0$.",
+      "corrige": [
+        "Pour tout réel $X$, $\\mathrm{e}^{X} > 0$.",
+        "Un nombre strictement positif ne peut être égal ni à $-2$ ni à $0$.",
+        "Les deux équations n'ont donc aucune solution."
+      ],
+      "reponse": "Aucune solution pour les deux équations : $S = \\varnothing$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $\\mathrm{e}^{2x} > \\mathrm{e}^{x+3}$.",
+      "corrige": [
+        "La fonction exponentielle est strictement croissante : $\\mathrm{e}^a > \\mathrm{e}^b \\iff a > b$.",
+        "L'inéquation équivaut à $2x > x + 3$, soit $x > 3$."
+      ],
+      "reponse": "$S = \\,]3\\,;+\\infty[$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $\\mathrm{e}^{-x} \\leqslant 1$.",
+      "corrige": [
+        "$1 = \\mathrm{e}^0$, et comme $\\exp$ est strictement croissante, l'inéquation équivaut à $-x \\leqslant 0$.",
+        "En multipliant par $-1$ (on change le sens) : $x \\geqslant 0$."
+      ],
+      "reponse": "$S = [0\\,;+\\infty[$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Déterminer la dérivée de $f(x) = 3\\,\\mathrm{e}^{2x} - 4x$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$\\left(\\mathrm{e}^{2x}\\right)' = 2\\,\\mathrm{e}^{2x}$, donc $\\left(3\\,\\mathrm{e}^{2x}\\right)' = 6\\,\\mathrm{e}^{2x}$.",
+        "$(-4x)' = -4$.",
+        "$f'(x) = 6\\,\\mathrm{e}^{2x} - 4$."
+      ],
+      "reponse": "$f'(x) = 6\\,\\mathrm{e}^{2x} - 4$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Déterminer la dérivée de $f(x) = \\mathrm{e}^{x^2}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f$ est de la forme $\\mathrm{e}^{u}$ avec $u(x) = x^2$, donc $u'(x) = 2x$.",
+        "$\\left(\\mathrm{e}^{u}\\right)' = u'\\,\\mathrm{e}^{u}$, donc $f'(x) = 2x\\,\\mathrm{e}^{x^2}$."
+      ],
+      "reponse": "$f'(x) = 2x\\,\\mathrm{e}^{x^2}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Un élève écrit : « si $f(x) = \\mathrm{e}^{4x-1}$, alors $f'(x) = \\mathrm{e}^{4x-1}$ ». Corriger son erreur.",
+      "corrige": [
+        "L'élève a oublié le facteur $a$ : $\\left(\\mathrm{e}^{ax+b}\\right)' = a\\,\\mathrm{e}^{ax+b}$.",
+        "Ici $a = 4$, donc $f'(x) = 4\\,\\mathrm{e}^{4x-1}$."
+      ],
+      "reponse": "$f'(x) = 4\\,\\mathrm{e}^{4x-1}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $f(x) = (x + 5)\\,\\mathrm{e}^{-x}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$\\mathrm{e}^{-x} > 0$ pour tout $x$ : ce facteur ne change pas le signe, on peut l'écarter.",
+        "$f(x)$ a donc le signe de $x + 5$, qui s'annule en $-5$."
+      ],
+      "reponse": "$f(x) < 0$ sur $]-\\infty\\,;-5[$, $f(-5) = 0$, $f(x) > 0$ sur $]-5\\,;+\\infty[$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "tangente",
+      "enonce": "Déterminer l'équation de la tangente à la courbe de la fonction exponentielle au point d'abscisse $1$.",
+      "corrige": [
+        "$\\exp(1) = \\mathrm{e}$ et $\\exp'(1) = \\mathrm{e}^1 = \\mathrm{e}$.",
+        "$y = \\mathrm{e}(x - 1) + \\mathrm{e} = \\mathrm{e}\\,x$."
+      ],
+      "reponse": "$y = \\mathrm{e}\\,x$ (elle passe par l'origine)."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "lien-suites",
+      "enonce": "Soit $(u_n)$ la suite définie pour tout entier naturel $n$ par $u_n = \\mathrm{e}^{0{,}5n}$. Montrer qu'elle est géométrique, préciser sa raison et son sens de variation.",
+      "corrige": [
+        "$\\dfrac{u_{n+1}}{u_n} = \\dfrac{\\mathrm{e}^{0{,}5(n+1)}}{\\mathrm{e}^{0{,}5n}} = \\mathrm{e}^{0{,}5}$ : la suite est géométrique de raison $q = \\mathrm{e}^{0{,}5}$, de premier terme $u_0 = 1$.",
+        "Comme $0{,}5 > 0$, $\\mathrm{e}^{0{,}5} > \\mathrm{e}^0 = 1$ et $u_0 > 0$ : la suite est croissante."
+      ],
+      "reponse": "Géométrique de raison $\\mathrm{e}^{0{,}5} > 1$, de premier terme $1$ : croissante."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "lien-suites",
+      "enonce": "Soit $(v_n)$ définie pour tout entier naturel $n$ par $v_n = 3\\,\\mathrm{e}^{-2n}$. Donner son premier terme, sa raison et son sens de variation.",
+      "corrige": [
+        "$v_0 = 3\\,\\mathrm{e}^0 = 3$.",
+        "$\\dfrac{v_{n+1}}{v_n} = \\dfrac{3\\,\\mathrm{e}^{-2n-2}}{3\\,\\mathrm{e}^{-2n}} = \\mathrm{e}^{-2}$ : suite géométrique de raison $\\mathrm{e}^{-2}$.",
+        "$0 < \\mathrm{e}^{-2} < 1$ (car $-2 < 0$) et $v_0 > 0$ : la suite est décroissante."
+      ],
+      "reponse": "$v_0 = 3$, raison $\\mathrm{e}^{-2}$ ; suite décroissante."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Démontrer que, pour tout réel $x$, $\\left(\\mathrm{e}^{x} + \\mathrm{e}^{-x}\\right)^2 = \\mathrm{e}^{2x} + 2 + \\mathrm{e}^{-2x}$.",
+      "corrige": [
+        "On développe avec $(a + b)^2 = a^2 + 2ab + b^2$.",
+        "$\\left(\\mathrm{e}^{x}\\right)^2 = \\mathrm{e}^{2x}$, $\\left(\\mathrm{e}^{-x}\\right)^2 = \\mathrm{e}^{-2x}$ et $2\\,\\mathrm{e}^{x}\\,\\mathrm{e}^{-x} = 2\\,\\mathrm{e}^{0} = 2$.",
+        "On obtient bien $\\mathrm{e}^{2x} + 2 + \\mathrm{e}^{-2x}$."
+      ],
+      "reponse": "L'égalité est vraie pour tout réel $x$ (le double produit vaut $2\\,\\mathrm{e}^0 = 2$)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Un élève affirme : « pour tous réels $a$ et $b$, $\\mathrm{e}^{a+b} = \\mathrm{e}^a + \\mathrm{e}^b$ ». Montrer qu'il a tort à l'aide d'un contre-exemple, puis rétablir la bonne formule.",
+      "corrige": [
+        "On prend $a = b = 0$ : $\\mathrm{e}^{0+0} = \\mathrm{e}^0 = 1$.",
+        "Mais $\\mathrm{e}^0 + \\mathrm{e}^0 = 1 + 1 = 2 \\neq 1$ : l'affirmation est fausse.",
+        "La bonne formule transforme la somme en produit : $\\mathrm{e}^{a+b} = \\mathrm{e}^a \\times \\mathrm{e}^b$."
+      ],
+      "reponse": "Faux (avec $a = b = 0$ : $1 \\neq 2$). La formule correcte est $\\mathrm{e}^{a+b} = \\mathrm{e}^a \\times \\mathrm{e}^b$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Démontrer que, pour tout réel $x$, $\\dfrac{\\mathrm{e}^{2x} - 1}{\\mathrm{e}^{x}} = \\mathrm{e}^{x} - \\mathrm{e}^{-x}$.",
+      "corrige": [
+        "On sépare la fraction : $\\dfrac{\\mathrm{e}^{2x}}{\\mathrm{e}^{x}} - \\dfrac{1}{\\mathrm{e}^{x}}$.",
+        "$\\dfrac{\\mathrm{e}^{2x}}{\\mathrm{e}^{x}} = \\mathrm{e}^{2x - x} = \\mathrm{e}^{x}$ et $\\dfrac{1}{\\mathrm{e}^{x}} = \\mathrm{e}^{-x}$.",
+        "D'où $\\dfrac{\\mathrm{e}^{2x} - 1}{\\mathrm{e}^{x}} = \\mathrm{e}^{x} - \\mathrm{e}^{-x}$."
+      ],
+      "reponse": "L'égalité est vraie pour tout réel $x$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\mathrm{e}^{x^2 + x} = \\mathrm{e}$.",
+      "corrige": [
+        "$\\mathrm{e} = \\mathrm{e}^1$, donc l'équation équivaut à $x^2 + x = 1$, soit $x^2 + x - 1 = 0$.",
+        "Discriminant : $\\Delta = 1^2 - 4 \\times 1 \\times (-1) = 5 > 0$.",
+        "Deux solutions : $x = \\dfrac{-1 - \\sqrt{5}}{2}$ et $x = \\dfrac{-1 + \\sqrt{5}}{2}$."
+      ],
+      "reponse": "$S = \\left\\{\\dfrac{-1 - \\sqrt{5}}{2}\\,;\\dfrac{-1 + \\sqrt{5}}{2}\\right\\}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\mathrm{e}^{2x} \\times \\mathrm{e}^{x} = \\mathrm{e}^{6}$.",
+      "corrige": [
+        "Le membre de gauche vaut $\\mathrm{e}^{2x + x} = \\mathrm{e}^{3x}$.",
+        "$\\mathrm{e}^{3x} = \\mathrm{e}^{6} \\iff 3x = 6 \\iff x = 2$."
+      ],
+      "reponse": "$S = \\{2\\}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $\\mathrm{e}^{x^2} < \\mathrm{e}^{4}$.",
+      "corrige": [
+        "Par stricte croissance de $\\exp$, l'inéquation équivaut à $x^2 < 4$.",
+        "$x^2 - 4 = (x - 2)(x + 2) < 0$ entre les racines $-2$ et $2$."
+      ],
+      "reponse": "$S = \\,]-2\\,;2[$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "derivee",
+      "enonce": "Déterminer la dérivée de $f(x) = x^2\\,\\mathrm{e}^{x}$ sur $\\mathbb{R}$ et l'écrire sous forme factorisée.",
+      "corrige": [
+        "Formule du produit avec $u = x^2$, $u' = 2x$, $v = v' = \\mathrm{e}^{x}$.",
+        "$f'(x) = 2x\\,\\mathrm{e}^{x} + x^2\\,\\mathrm{e}^{x} = (x^2 + 2x)\\,\\mathrm{e}^{x}$.",
+        "$f'(x) = x(x + 2)\\,\\mathrm{e}^{x}$."
+      ],
+      "reponse": "$f'(x) = x(x + 2)\\,\\mathrm{e}^{x}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "derivee",
+      "enonce": "Déterminer la dérivée de $f(x) = \\dfrac{\\mathrm{e}^{x}}{\\mathrm{e}^{x} + 1}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Le dénominateur $\\mathrm{e}^{x} + 1$ ne s'annule jamais (il est supérieur à $1$). Formule du quotient avec $u = \\mathrm{e}^{x}$ et $v = \\mathrm{e}^{x} + 1$ : $u' = v' = \\mathrm{e}^{x}$.",
+        "$f'(x) = \\dfrac{\\mathrm{e}^{x}(\\mathrm{e}^{x} + 1) - \\mathrm{e}^{x} \\times \\mathrm{e}^{x}}{(\\mathrm{e}^{x} + 1)^2}$.",
+        "Le numérateur se réduit à $\\mathrm{e}^{x}$, donc $f'(x) = \\dfrac{\\mathrm{e}^{x}}{(\\mathrm{e}^{x} + 1)^2}$."
+      ],
+      "reponse": "$f'(x) = \\dfrac{\\mathrm{e}^{x}}{(\\mathrm{e}^{x} + 1)^2}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $f(x) = (1 - 2x)\\,\\mathrm{e}^{x^2}$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$\\mathrm{e}^{x^2} > 0$ pour tout $x$ : $f(x)$ a le signe de $1 - 2x$.",
+        "$1 - 2x > 0 \\iff x < \\dfrac{1}{2}$."
+      ],
+      "reponse": "$f(x) > 0$ sur $\\left]-\\infty\\,;\\dfrac{1}{2}\\right[$, $f\\left(\\dfrac{1}{2}\\right) = 0$, $f(x) < 0$ sur $\\left]\\dfrac{1}{2}\\,;+\\infty\\right[$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Déterminer l'équation de la tangente à la courbe de $f(x) = \\mathrm{e}^{-x}$ au point d'abscisse $0$.",
+      "corrige": [
+        "$f(0) = \\mathrm{e}^0 = 1$ ; $f'(x) = -\\mathrm{e}^{-x}$, donc $f'(0) = -1$.",
+        "$y = -1 \\times (x - 0) + 1 = -x + 1$."
+      ],
+      "reponse": "$y = -x + 1$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Déterminer l'équation de la tangente à la courbe de $f(x) = x\\,\\mathrm{e}^{x}$ au point d'abscisse $0$.",
+      "corrige": [
+        "$f(0) = 0 \\times \\mathrm{e}^0 = 0$.",
+        "$f'(x) = \\mathrm{e}^{x} + x\\,\\mathrm{e}^{x} = (1 + x)\\,\\mathrm{e}^{x}$, donc $f'(0) = 1$.",
+        "$y = 1 \\times (x - 0) + 0 = x$."
+      ],
+      "reponse": "$y = x$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "etude-fonction",
+      "enonce": "Soit $f(x) = \\mathrm{e}^{-x} + x$ sur $\\mathbb{R}$. Calculer $f'(x)$, étudier son signe et en déduire le minimum de $f$.",
+      "corrige": [
+        "$f'(x) = -\\mathrm{e}^{-x} + 1$.",
+        "$f'(x) \\geqslant 0 \\iff \\mathrm{e}^{-x} \\leqslant 1 = \\mathrm{e}^{0} \\iff -x \\leqslant 0 \\iff x \\geqslant 0$.",
+        "$f$ est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$ : son minimum est $f(0) = 1 + 0 = 1$."
+      ],
+      "reponse": "$f'(x) = 1 - \\mathrm{e}^{-x}$ ; minimum $f(0) = 1$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "equation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $\\mathrm{e}^{2x} - (\\mathrm{e} + 1)\\,\\mathrm{e}^{x} + \\mathrm{e} = 0$. On pourra poser $X = \\mathrm{e}^{x}$.",
+      "corrige": [
+        "Avec $X = \\mathrm{e}^{x}$, on a $\\mathrm{e}^{2x} = X^2$ et l'équation devient $X^2 - (\\mathrm{e} + 1)X + \\mathrm{e} = 0$.",
+        "On vérifie que $X = 1$ est racine : $1 - \\mathrm{e} - 1 + \\mathrm{e} = 0$. Le produit des racines vaut $\\mathrm{e}$, donc l'autre racine est $X = \\mathrm{e}$.",
+        "$\\mathrm{e}^{x} = 1 \\iff x = 0$ et $\\mathrm{e}^{x} = \\mathrm{e} \\iff x = 1$."
+      ],
+      "reponse": "$S = \\{0\\,;1\\}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "inequation",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $\\mathrm{e}^{x^2 - x} \\geqslant \\mathrm{e}^{2}$.",
+      "corrige": [
+        "Par stricte croissance de $\\exp$, l'inéquation équivaut à $x^2 - x - 2 \\geqslant 0$.",
+        "$\\Delta = 1 + 8 = 9$ : racines $x = \\dfrac{1 - 3}{2} = -1$ et $x = \\dfrac{1 + 3}{2} = 2$, donc $x^2 - x - 2 = (x + 1)(x - 2)$.",
+        "Ce trinôme (coefficient $1 > 0$) est positif ou nul à l'extérieur des racines."
+      ],
+      "reponse": "$S = \\,]-\\infty\\,;-1] \\cup [2\\,;+\\infty[$."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "signe",
+      "enonce": "Étudier le signe de $f(x) = \\mathrm{e}^{2x} - \\mathrm{e}^{x}$ sur $\\mathbb{R}$. On pourra factoriser par $\\mathrm{e}^{x}$.",
+      "corrige": [
+        "$f(x) = \\mathrm{e}^{x}\\left(\\mathrm{e}^{x} - 1\\right)$ et $\\mathrm{e}^{x} > 0$ : $f(x)$ a le signe de $\\mathrm{e}^{x} - 1$.",
+        "$\\mathrm{e}^{x} - 1 > 0 \\iff \\mathrm{e}^{x} > \\mathrm{e}^{0} \\iff x > 0$ (stricte croissance de $\\exp$).",
+        "De même $\\mathrm{e}^{x} - 1 < 0 \\iff x < 0$, et $f(0) = 0$."
+      ],
+      "reponse": "$f(x) < 0$ sur $]-\\infty\\,;0[$, $f(0) = 0$, $f(x) > 0$ sur $]0\\,;+\\infty[$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "tangente",
+      "enonce": "On note $T_a$ la tangente à la courbe de $\\exp$ au point d'abscisse $a$. Démontrer que $T_a$ passe par l'origine du repère si et seulement si $a = 1$.",
+      "corrige": [
+        "$T_a$ a pour équation $y = \\mathrm{e}^{a}(x - a) + \\mathrm{e}^{a}$.",
+        "Elle passe par $O(0\\,;0)$ si et seulement si $0 = \\mathrm{e}^{a}(0 - a) + \\mathrm{e}^{a} = \\mathrm{e}^{a}(1 - a)$.",
+        "Comme $\\mathrm{e}^{a} \\neq 0$, cela équivaut à $1 - a = 0$, c'est-à-dire $a = 1$."
+      ],
+      "reponse": "$T_a$ passe par l'origine si et seulement si $a = 1$ ; c'est la droite $y = \\mathrm{e}\\,x$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "definition",
+      "enonce": "Soit $h(x) = \\mathrm{e}^{x} \\times \\mathrm{e}^{-x}$. Calculer $h'(x)$ avec la formule du produit, puis en déduire que $\\mathrm{e}^{-x} = \\dfrac{1}{\\mathrm{e}^{x}}$ pour tout réel $x$.",
+      "corrige": [
+        "$h'(x) = \\mathrm{e}^{x} \\times \\mathrm{e}^{-x} + \\mathrm{e}^{x} \\times \\left(-\\mathrm{e}^{-x}\\right) = 0$.",
+        "$h$ a une dérivée nulle sur $\\mathbb{R}$ : elle est constante, égale à $h(0) = \\mathrm{e}^0 \\times \\mathrm{e}^0 = 1$.",
+        "Donc $\\mathrm{e}^{x} \\times \\mathrm{e}^{-x} = 1$, d'où $\\mathrm{e}^{-x} = \\dfrac{1}{\\mathrm{e}^{x}}$ ($\\mathrm{e}^{x}$ n'est jamais nul)."
+      ],
+      "reponse": "$h'(x) = 0$, $h$ est constante égale à $1$, donc $\\mathrm{e}^{-x} = \\dfrac{1}{\\mathrm{e}^{x}}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "lien-suites",
+      "enonce": "Le nombre d'abonnés à une chaîne est modélisé par $P_n = 1\\,000\\,\\mathrm{e}^{0{,}1n}$, où $n$ est le nombre d'années. Sachant que $\\mathrm{e}^{0{,}1} \\approx 1{,}105$, de quel pourcentage environ le nombre d'abonnés augmente-t-il chaque année ?",
+      "corrige": [
+        "$\\dfrac{P_{n+1}}{P_n} = \\mathrm{e}^{0{,}1}$ : la suite est géométrique de raison $\\mathrm{e}^{0{,}1} \\approx 1{,}105$.",
+        "Multiplier par $1{,}105$ revient à augmenter de $10{,}5\\,\\%$."
+      ],
+      "reponse": "Environ $10{,}5\\,\\%$ par an."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "etude-fonction",
+      "enonce": "Soit $f(x) = (1 - x)\\,\\mathrm{e}^{x}$ sur $\\mathbb{R}$. Montrer que $f'(x) = -x\\,\\mathrm{e}^{x}$, puis dresser le tableau de variations de $f$ et donner son extrémum.",
+      "corrige": [
+        "Produit avec $u = 1 - x$, $u' = -1$, $v = v' = \\mathrm{e}^{x}$ : $f'(x) = -\\mathrm{e}^{x} + (1 - x)\\,\\mathrm{e}^{x} = -x\\,\\mathrm{e}^{x}$.",
+        "$\\mathrm{e}^{x} > 0$, donc $f'(x)$ a le signe de $-x$ : positif sur $]-\\infty\\,;0]$, négatif sur $[0\\,;+\\infty[$.",
+        "$f$ est croissante puis décroissante : maximum $f(0) = 1$."
+      ],
+      "reponse": "$f$ croît sur $]-\\infty\\,;0]$, décroît sur $[0\\,;+\\infty[$ ; maximum $f(0) = 1$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "etude-fonction",
+      "enonce": "Démontrer que, pour tout réel $x$, $\\mathrm{e}^{x} \\geqslant x + 1$. On pourra étudier $g(x) = \\mathrm{e}^{x} - x - 1$.",
+      "corrige": [
+        "$g'(x) = \\mathrm{e}^{x} - 1$, positif si et seulement si $x \\geqslant 0$.",
+        "$g$ est décroissante sur $]-\\infty\\,;0]$ et croissante sur $[0\\,;+\\infty[$ : son minimum est $g(0) = 1 - 0 - 1 = 0$.",
+        "Donc $g(x) \\geqslant 0$, c'est-à-dire $\\mathrm{e}^{x} \\geqslant x + 1$ : la courbe de $\\exp$ est au-dessus de sa tangente en $0$."
+      ],
+      "reponse": "$g$ a pour minimum $g(0) = 0$, donc $\\mathrm{e}^{x} \\geqslant x + 1$ pour tout réel $x$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "La concentration d'un médicament dans le sang est $C(t) = 5t\\,\\mathrm{e}^{-0{,}5t}$ (en mg/L, $t$ en heures, $t \\geqslant 0$). Montrer que $C'(t) = 2{,}5(2 - t)\\,\\mathrm{e}^{-0{,}5t}$, puis déterminer l'instant où la concentration est maximale et cette concentration (arrondie au centième).",
+      "corrige": [
+        "$C'(t) = 5\\,\\mathrm{e}^{-0{,}5t} + 5t \\times \\left(-0{,}5\\,\\mathrm{e}^{-0{,}5t}\\right) = (5 - 2{,}5t)\\,\\mathrm{e}^{-0{,}5t} = 2{,}5(2 - t)\\,\\mathrm{e}^{-0{,}5t}$.",
+        "L'exponentielle est positive : $C'(t)$ a le signe de $2 - t$, positif sur $[0\\,;2]$ et négatif ensuite.",
+        "$C$ est maximale en $t = 2$ : $C(2) = 10\\,\\mathrm{e}^{-1} \\approx 3{,}68$ mg/L."
+      ],
+      "reponse": "Au bout de $2$ heures ; $C(2) = 10\\,\\mathrm{e}^{-1} \\approx 3{,}68$ mg/L."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "La température d'un café, en °C, est $T(t) = 20 + 70\\,\\mathrm{e}^{-0{,}1t}$ ($t$ en minutes). Calculer $T(0)$, étudier le sens de variation de $T$, puis donner la température au bout de $10$ minutes, arrondie au dixième ($\\mathrm{e}^{-1} \\approx 0{,}3679$).",
+      "corrige": [
+        "$T(0) = 20 + 70 \\times 1 = 90$ °C.",
+        "$T'(t) = 70 \\times (-0{,}1)\\,\\mathrm{e}^{-0{,}1t} = -7\\,\\mathrm{e}^{-0{,}1t} < 0$ : le café refroidit constamment.",
+        "$T(10) = 20 + 70\\,\\mathrm{e}^{-1} \\approx 20 + 25{,}75 = 45{,}75$, soit environ $45{,}8$ °C."
+      ],
+      "reponse": "$T(0) = 90$ °C ; $T$ est décroissante ; $T(10) \\approx 45{,}8$ °C."
     }
   ]
 }

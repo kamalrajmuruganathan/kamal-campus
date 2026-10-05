@@ -135,7 +135,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "jeu-equitable",
       "enonce": "À une fête foraine, un stand propose le jeu suivant. Pour jouer, on paie une mise de $5$ €, puis on fait tourner une roue équilibrée partagée en $8$ secteurs identiques : $1$ secteur « JACKPOT » fait gagner $20$ €, $3$ secteurs font gagner $5$ €, et les $4$ secteurs restants ne font rien gagner. On note $G$ la somme gagnée grâce à la roue (sans tenir compte de la mise), et $X = G - 5$ le gain algébrique du joueur (ce qu'il gagne à la roue, diminué de sa mise).\n\n1. Déterminer la loi de probabilité de $G$.\n2. Calculer l'espérance $E(G)$.\n3. En déduire $E(X)$. Le jeu est-il favorable au joueur ?\n4. Calculer la variance $V(G)$, puis l'écart-type $\\sigma(G)$ arrondi au centième.\n5. L'organisateur souhaite rendre le jeu équitable en modifiant uniquement la mise. Quelle mise $m$ doit-il fixer ?\n6. Au cours d'une journée, $400$ personnes tentent leur chance (mise inchangée à $5$ €). Quel bénéfice moyen l'organisateur peut-il espérer réaliser sur cette journée ?",
       "corrige": [
@@ -147,6 +147,463 @@
         "6. Pour chaque partie, l'organisateur encaisse la mise de $5$ € et reverse en moyenne $E(G) = 4{,}375$ €. Son bénéfice moyen par partie est donc $5 - 4{,}375 = 0{,}625$ € (c'est l'opposé de $E(X)$). Pour $400$ parties : $400 \\times 0{,}625 = 250$ €."
       ],
       "reponse": "Loi de $G$ : $P(G=20)=0{,}125$, $P(G=5)=0{,}375$, $P(G=0)=0{,}5$. $E(G) = 4{,}375$ € et $E(X) = -0{,}625$ € : le jeu est défavorable au joueur. $V(G) = 40{,}234375$ et $\\sigma(G) \\approx 6{,}34$ €. Mise équitable : $m = 4{,}375$ €. Bénéfice moyen de l'organisateur sur $400$ parties : $250$ €."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "notation-evenement",
+      "enonce": "On lance deux dés équilibrés à six faces et on note $X$ la somme obtenue. Décrire l'événement $\\{X = 2\\}$ et calculer $P(X = 2)$.",
+      "corrige": [
+        "$\\{X = 2\\}$ est l'événement « obtenir $1$ avec chacun des deux dés » : seul le couple $(1\\,;1)$ convient.",
+        "Il y a $36$ couples équiprobables, donc $P(X = 2) = \\dfrac{1}{36}$."
+      ],
+      "reponse": "$\\{X = 2\\}$ : « obtenir un double $1$ » ; $P(X = 2) = \\dfrac{1}{36}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "notation-evenement",
+      "enonce": "$X$ prend les valeurs $1$, $2$, $3$, $4$ avec les probabilités respectives $0{,}1$ ; $0{,}3$ ; $0{,}4$ ; $0{,}2$. Calculer $P(X \\leqslant 2)$ et $P(X > 2)$.",
+      "corrige": [
+        "$P(X \\leqslant 2) = P(X = 1) + P(X = 2) = 0{,}1 + 0{,}3 = 0{,}4$.",
+        "$\\{X > 2\\}$ est l'événement contraire de $\\{X \\leqslant 2\\}$ : $P(X > 2) = 1 - 0{,}4 = 0{,}6$."
+      ],
+      "reponse": "$P(X \\leqslant 2) = 0{,}4$ et $P(X > 2) = 0{,}6$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "loi",
+      "enonce": "Le tableau suivant peut-il être la loi de probabilité d'une variable aléatoire ? Valeurs $0$, $1$, $2$ ; probabilités $0{,}2$ ; $0{,}5$ ; $0{,}4$.",
+      "corrige": [
+        "Somme des probabilités : $0{,}2 + 0{,}5 + 0{,}4 = 1{,}1$.",
+        "Elle doit valoir exactement $1$."
+      ],
+      "reponse": "Non, car la somme des probabilités vaut $1{,}1 \\neq 1$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "esperance",
+      "enonce": "$X$ vaut $10$ avec une probabilité de $0{,}3$ et $0$ sinon. Calculer $E(X)$.",
+      "corrige": [
+        "$E(X) = 10 \\times 0{,}3 + 0 \\times 0{,}7$."
+      ],
+      "reponse": "$E(X) = 3$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "notation-evenement",
+      "enonce": "Un élève écrit : « $P(X = 3)$ est l'événement “obtenir 3” ». Expliquer ce qui ne va pas.",
+      "corrige": [
+        "$\\{X = 3\\}$ est un événement : « $X$ prend la valeur $3$ ».",
+        "$P(X = 3)$ est un nombre : la probabilité de cet événement, compris entre $0$ et $1$.",
+        "L'élève confond l'événement (avec accolades) et sa probabilité (un nombre)."
+      ],
+      "reponse": "$P(X = 3)$ est un nombre ; l'événement s'écrit $\\{X = 3\\}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "notation-evenement",
+      "enonce": "On lance trois fois une pièce et on note $X$ le nombre de « Pile » obtenus. Décrire les issues qui réalisent $\\{X = 0\\}$, puis exprimer $\\{X \\geqslant 1\\}$ à l'aide d'un événement contraire.",
+      "corrige": [
+        "$\\{X = 0\\}$ : aucun pile, c'est-à-dire l'issue « Face, Face, Face ».",
+        "$\\{X \\geqslant 1\\}$ (au moins un pile) est l'événement contraire de $\\{X = 0\\}$."
+      ],
+      "reponse": "$\\{X = 0\\} = \\{\\text{FFF}\\}$ ; $\\{X \\geqslant 1\\} = \\overline{\\{X = 0\\}}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "loi",
+      "enonce": "$X$ prend les valeurs $1$, $2$, $3$, $4$ avec les probabilités respectives $0{,}1$ ; $a$ ; $0{,}3$ ; $2a$. Déterminer $a$.",
+      "corrige": [
+        "La somme des probabilités vaut $1$ : $0{,}1 + a + 0{,}3 + 2a = 1$.",
+        "$3a = 0{,}6$, donc $a = 0{,}2$ (et $2a = 0{,}4$)."
+      ],
+      "reponse": "$a = 0{,}2$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "loi",
+      "enonce": "On lance un dé équilibré à six faces. On gagne $3$ € si le résultat est $5$ ou $6$, et on perd $1$ € sinon. On note $X$ le gain algébrique. Donner la loi de $X$.",
+      "corrige": [
+        "$X$ prend deux valeurs : $3$ et $-1$.",
+        "$P(X = 3) = \\dfrac{2}{6} = \\dfrac{1}{3}$ et $P(X = -1) = \\dfrac{4}{6} = \\dfrac{2}{3}$.",
+        "Contrôle : $\\dfrac{1}{3} + \\dfrac{2}{3} = 1$."
+      ],
+      "reponse": "$P(X = 3) = \\dfrac{1}{3}$ et $P(X = -1) = \\dfrac{2}{3}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "loi",
+      "enonce": "On lance un dé équilibré à six faces. $X$ vaut $1$ si le résultat est un nombre premier, $0$ sinon. Donner la loi de $X$.",
+      "corrige": [
+        "Les résultats premiers sont $2$, $3$ et $5$ ($1$ n'est pas premier).",
+        "$P(X = 1) = \\dfrac{3}{6} = \\dfrac{1}{2}$ et $P(X = 0) = \\dfrac{1}{2}$."
+      ],
+      "reponse": "$P(X = 0) = P(X = 1) = \\dfrac{1}{2}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "$X$ prend les valeurs $-1$, $2$ et $4$ avec les probabilités respectives $0{,}5$ ; $0{,}3$ ; $0{,}2$. Calculer $E(X)$.",
+      "corrige": [
+        "$E(X) = (-1) \\times 0{,}5 + 2 \\times 0{,}3 + 4 \\times 0{,}2$.",
+        "$E(X) = -0{,}5 + 0{,}6 + 0{,}8 = 0{,}9$."
+      ],
+      "reponse": "$E(X) = 0{,}9$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "esperance",
+      "enonce": "On lance un dé équilibré à six faces et on note $X$ le résultat. Calculer $E(X)$ et interpréter.",
+      "corrige": [
+        "$E(X) = \\dfrac{1 + 2 + 3 + 4 + 5 + 6}{6} = \\dfrac{21}{6} = 3{,}5$.",
+        "Sur un grand nombre de lancers, la moyenne des résultats se rapproche de $3{,}5$, même si cette valeur n'est jamais obtenue."
+      ],
+      "reponse": "$E(X) = 3{,}5$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "variance",
+      "enonce": "$X$ prend les valeurs $0$ et $2$, chacune avec la probabilité $0{,}5$. Calculer $E(X)$, $V(X)$ et $\\sigma(X)$.",
+      "corrige": [
+        "$E(X) = 0 \\times 0{,}5 + 2 \\times 0{,}5 = 1$ et $E(X^2) = 0 + 4 \\times 0{,}5 = 2$.",
+        "$V(X) = E(X^2) - \\left(E(X)\\right)^2 = 2 - 1 = 1$, donc $\\sigma(X) = 1$."
+      ],
+      "reponse": "$E(X) = 1$ ; $V(X) = 1$ ; $\\sigma(X) = 1$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "variance",
+      "enonce": "$X$ prend les valeurs $-1$, $2$ et $4$ avec les probabilités respectives $0{,}5$ ; $0{,}3$ ; $0{,}2$ (on a $E(X) = 0{,}9$). Calculer $V(X)$ puis $\\sigma(X)$ arrondi au centième.",
+      "corrige": [
+        "$E(X^2) = 1 \\times 0{,}5 + 4 \\times 0{,}3 + 16 \\times 0{,}2 = 0{,}5 + 1{,}2 + 3{,}2 = 4{,}9$.",
+        "$V(X) = 4{,}9 - 0{,}9^2 = 4{,}9 - 0{,}81 = 4{,}09$.",
+        "$\\sigma(X) = \\sqrt{4{,}09} \\approx 2{,}02$."
+      ],
+      "reponse": "$V(X) = 4{,}09$ et $\\sigma(X) \\approx 2{,}02$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "jeu-equitable",
+      "enonce": "On mise $1$ € et on lance un dé équilibré. Si on obtient $6$, on reçoit $5$ € ; sinon on ne reçoit rien. On note $X$ le gain algébrique. Calculer $E(X)$. Le jeu est-il équitable ?",
+      "corrige": [
+        "Si on obtient $6$ : $X = 5 - 1 = 4$, avec la probabilité $\\dfrac{1}{6}$. Sinon : $X = -1$, avec la probabilité $\\dfrac{5}{6}$.",
+        "$E(X) = 4 \\times \\dfrac{1}{6} - 1 \\times \\dfrac{5}{6} = -\\dfrac{1}{6} \\approx -0{,}17$ €."
+      ],
+      "reponse": "$E(X) = -\\dfrac{1}{6}$ € : le jeu est défavorable au joueur (non équitable)."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "jeu-equitable",
+      "enonce": "On lance une pièce équilibrée : pile, on gagne $3$ € ; face, on perd $2$ €. Ce jeu est-il favorable au joueur ?",
+      "corrige": [
+        "Le gain $X$ vaut $3$ ou $-2$, avec la probabilité $0{,}5$ chacun.",
+        "$E(X) = 3 \\times 0{,}5 - 2 \\times 0{,}5 = 0{,}5 > 0$."
+      ],
+      "reponse": "Oui, $E(X) = 0{,}5$ € : le jeu est favorable au joueur."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "linearite-esperance",
+      "enonce": "On sait que $E(X) = 4$. Calculer $E(3X + 2)$ et $E(-X + 1)$.",
+      "corrige": [
+        "$E(aX + b) = aE(X) + b$.",
+        "$E(3X + 2) = 3 \\times 4 + 2 = 14$ et $E(-X + 1) = -4 + 1 = -3$."
+      ],
+      "reponse": "$14$ et $-3$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "linearite-esperance",
+      "enonce": "Un vendeur vend en moyenne $2{,}3$ appareils par jour. Il gagne $150$ € par appareil vendu et paie $100$ € de frais fixes par jour. On note $X$ le nombre d'appareils vendus et $Y = 150X - 100$ son bénéfice journalier. Calculer $E(Y)$.",
+      "corrige": [
+        "$E(X) = 2{,}3$.",
+        "$E(Y) = 150 \\times 2{,}3 - 100 = 345 - 100 = 245$."
+      ],
+      "reponse": "$E(Y) = 245$ €."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "echantillonnage",
+      "enonce": "On simule $1\\,000$ lancers d'un dé équilibré ($\\mu = 3{,}5$ et $\\sigma \\approx 1{,}71$) et on obtient une moyenne $m = 3{,}48$. Calculer $\\dfrac{2\\sigma}{\\sqrt{n}}$ au millième. Le résultat de la simulation est-il surprenant ?",
+      "corrige": [
+        "$\\dfrac{2\\sigma}{\\sqrt{n}} \\approx \\dfrac{2 \\times 1{,}71}{\\sqrt{1\\,000}} \\approx 0{,}108$.",
+        "$\\lvert m - \\mu \\rvert = \\lvert 3{,}48 - 3{,}5 \\rvert = 0{,}02$, bien inférieur à $0{,}108$."
+      ],
+      "reponse": "$\\dfrac{2\\sigma}{\\sqrt{n}} \\approx 0{,}108$ ; l'écart observé ($0{,}02$) est tout à fait normal."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "echantillonnage",
+      "enonce": "Vrai ou faux ? a) L'espérance $\\mu$ change à chaque simulation. b) La moyenne $m$ d'un échantillon change d'une simulation à l'autre. c) Plus $n$ est grand, plus $m$ est en général proche de $\\mu$.",
+      "corrige": [
+        "a) Faux : $\\mu$ est un nombre fixe, déterminé par la loi de $X$.",
+        "b) Vrai : $m$ dépend des tirages, elle est aléatoire.",
+        "c) Vrai : l'écart typique $\\dfrac{2\\sigma}{\\sqrt{n}}$ diminue quand $n$ augmente."
+      ],
+      "reponse": "a) Faux ; b) Vrai ; c) Vrai."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "loi",
+      "enonce": "Une urne contient $3$ boules rouges et $2$ vertes. On tire successivement deux boules sans remise. On note $X$ le nombre de boules vertes obtenues. Déterminer la loi de $X$.",
+      "corrige": [
+        "$P(X = 0) = \\dfrac{3}{5} \\times \\dfrac{2}{4} = \\dfrac{3}{10}$ et $P(X = 2) = \\dfrac{2}{5} \\times \\dfrac{1}{4} = \\dfrac{1}{10}$.",
+        "$P(X = 1) = \\dfrac{3}{5} \\times \\dfrac{2}{4} + \\dfrac{2}{5} \\times \\dfrac{3}{4} = \\dfrac{6}{20} + \\dfrac{6}{20} = \\dfrac{6}{10}$.",
+        "Contrôle : $0{,}3 + 0{,}6 + 0{,}1 = 1$."
+      ],
+      "reponse": "$P(X = 0) = 0{,}3$ ; $P(X = 1) = 0{,}6$ ; $P(X = 2) = 0{,}1$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "loi",
+      "enonce": "On lance deux fois un dé équilibré à quatre faces numérotées de $1$ à $4$. On note $X$ la somme des deux résultats. Donner la loi de $X$.",
+      "corrige": [
+        "Il y a $4 \\times 4 = 16$ couples équiprobables ; $X$ prend les valeurs de $2$ à $8$.",
+        "Nombre de couples : somme $2$ : $1$ ; $3$ : $2$ ; $4$ : $3$ ; $5$ : $4$ ; $6$ : $3$ ; $7$ : $2$ ; $8$ : $1$.",
+        "On divise chaque effectif par $16$ ; contrôle : $1 + 2 + 3 + 4 + 3 + 2 + 1 = 16$."
+      ],
+      "reponse": "$P(X = 2) = P(X = 8) = \\dfrac{1}{16}$ ; $P(X = 3) = P(X = 7) = \\dfrac{2}{16}$ ; $P(X = 4) = P(X = 6) = \\dfrac{3}{16}$ ; $P(X = 5) = \\dfrac{4}{16}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Avec deux lancers d'un dé équilibré à quatre faces, la somme $X$ a pour loi : $P(X = 2) = P(X = 8) = \\dfrac{1}{16}$, $P(X = 3) = P(X = 7) = \\dfrac{2}{16}$, $P(X = 4) = P(X = 6) = \\dfrac{3}{16}$, $P(X = 5) = \\dfrac{4}{16}$. Calculer $E(X)$.",
+      "corrige": [
+        "$E(X) = \\dfrac{2 \\times 1 + 3 \\times 2 + 4 \\times 3 + 5 \\times 4 + 6 \\times 3 + 7 \\times 2 + 8 \\times 1}{16}$.",
+        "$E(X) = \\dfrac{2 + 6 + 12 + 20 + 18 + 14 + 8}{16} = \\dfrac{80}{16} = 5$.",
+        "On pouvait le prévoir : la loi est symétrique autour de $5$."
+      ],
+      "reponse": "$E(X) = 5$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "On tire sans remise deux boules d'une urne contenant $3$ rouges et $2$ vertes ; le nombre $X$ de vertes vérifie $P(X = 0) = 0{,}3$, $P(X = 1) = 0{,}6$, $P(X = 2) = 0{,}1$. Calculer $E(X)$.",
+      "corrige": [
+        "$E(X) = 0 \\times 0{,}3 + 1 \\times 0{,}6 + 2 \\times 0{,}1 = 0{,}8$.",
+        "En moyenne, on obtient $0{,}8$ boule verte par tirage de deux boules."
+      ],
+      "reponse": "$E(X) = 0{,}8$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "esperance",
+      "enonce": "Le nombre $X$ de clients entrant dans une petite boutique en une minute suit la loi : $P(X = 0) = 0{,}1$ ; $P(X = 1) = 0{,}2$ ; $P(X = 2) = 0{,}3$ ; $P(X = 3) = 0{,}3$ ; $P(X = 4) = 0{,}1$. Calculer $E(X)$ et en déduire le nombre moyen de clients attendus en une heure.",
+      "corrige": [
+        "$E(X) = 0 + 0{,}2 + 0{,}6 + 0{,}9 + 0{,}4 = 2{,}1$ clients par minute en moyenne.",
+        "Sur $60$ minutes : $60 \\times 2{,}1 = 126$ clients en moyenne."
+      ],
+      "reponse": "$E(X) = 2{,}1$ ; environ $126$ clients par heure."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "On lance un dé équilibré à six faces ; $X$ est le résultat, et $E(X) = 3{,}5$. Calculer $V(X)$ sous forme de fraction, puis $\\sigma(X)$ arrondi au centième.",
+      "corrige": [
+        "$E(X^2) = \\dfrac{1 + 4 + 9 + 16 + 25 + 36}{6} = \\dfrac{91}{6}$.",
+        "$V(X) = \\dfrac{91}{6} - \\left(\\dfrac{7}{2}\\right)^2 = \\dfrac{182 - 147}{12} = \\dfrac{35}{12}$.",
+        "$\\sigma(X) = \\sqrt{\\dfrac{35}{12}} \\approx 1{,}71$."
+      ],
+      "reponse": "$V(X) = \\dfrac{35}{12}$ et $\\sigma(X) \\approx 1{,}71$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "Pour une variable aléatoire $X$, on a $E(X) = 3$ et $E(X^2) = 13$. Un élève écrit : « $V(X) = 3^2 - 13 = -4$ ». Trouver l'erreur et corriger.",
+      "corrige": [
+        "Une variance est toujours positive ou nulle : $-4$ est impossible.",
+        "L'élève a inversé la formule de König-Huygens : $V(X) = E(X^2) - \\left(E(X)\\right)^2$.",
+        "$V(X) = 13 - 9 = 4$ et $\\sigma(X) = 2$."
+      ],
+      "reponse": "$V(X) = 4$ (et $\\sigma(X) = 2$)."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "variance",
+      "enonce": "Jeu A : on gagne $4$ € ou $6$ € avec la même probabilité. Jeu B : on gagne $0$ € ou $10$ € avec la même probabilité. Comparer les espérances et les écarts-types des gains. Quel jeu est le plus risqué ?",
+      "corrige": [
+        "Espérances : $E(A) = \\dfrac{4 + 6}{2} = 5$ et $E(B) = \\dfrac{0 + 10}{2} = 5$.",
+        "Variances : $V(A) = \\dfrac{16 + 36}{2} - 25 = 1$ et $V(B) = \\dfrac{0 + 100}{2} - 25 = 25$, donc $\\sigma(A) = 1$ et $\\sigma(B) = 5$.",
+        "Même gain moyen, mais B est beaucoup plus dispersé : il est plus risqué."
+      ],
+      "reponse": "Même espérance $5$ € ; $\\sigma(A) = 1$, $\\sigma(B) = 5$ : le jeu B est plus risqué."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "jeu-equitable",
+      "enonce": "On mise $2$ € pour tirer un ticket ; un ticket sur dix est gagnant et rapporte $a$ euros (la mise n'est pas rendue). Quelle valeur de $a$ rend le jeu équitable ?",
+      "corrige": [
+        "Gain algébrique : $a - 2$ avec la probabilité $0{,}1$, $-2$ avec la probabilité $0{,}9$.",
+        "$E(X) = 0{,}1(a - 2) - 2 \\times 0{,}9 = 0{,}1a - 2$.",
+        "Équitable $\\iff E(X) = 0 \\iff a = 20$."
+      ],
+      "reponse": "$a = 20$ €."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "jeu-equitable",
+      "enonce": "Une tombola vend $200$ tickets à $2$ € : $1$ ticket gagne $100$ €, $4$ tickets gagnent $20$ € et $10$ tickets gagnent $5$ €. On achète un ticket ; $X$ est le gain algébrique. Donner la loi de $X$ et calculer $E(X)$.",
+      "corrige": [
+        "$X = 98$ ($p = \\dfrac{1}{200}$), $X = 18$ ($p = \\dfrac{4}{200}$), $X = 3$ ($p = \\dfrac{10}{200}$), $X = -2$ ($p = \\dfrac{185}{200}$).",
+        "$E(X) = \\dfrac{98 + 4 \\times 18 + 10 \\times 3 - 185 \\times 2}{200} = \\dfrac{98 + 72 + 30 - 370}{200} = \\dfrac{-170}{200}$.",
+        "$E(X) = -0{,}85$ € : en moyenne, l'acheteur perd $0{,}85$ € par ticket."
+      ],
+      "reponse": "$E(X) = -0{,}85$ €."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "linearite-esperance",
+      "enonce": "La température $C$ (en °C) d'une ville à midi en juin a pour espérance $20$ °C. En degrés Fahrenheit, la température est $F = 1{,}8C + 32$. Quelle est l'espérance de $F$ ?",
+      "corrige": [
+        "Par linéarité : $E(F) = 1{,}8\\,E(C) + 32$.",
+        "$E(F) = 1{,}8 \\times 20 + 32 = 36 + 32 = 68$."
+      ],
+      "reponse": "$E(F) = 68$ °F."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "linearite-esperance",
+      "enonce": "$X$ est une variable aléatoire d'espérance $E(X) = 5$. On pose $Y = X - 5$. Calculer $E(Y)$ et interpréter.",
+      "corrige": [
+        "$E(Y) = E(X) - 5 = 0$.",
+        "$Y$ mesure l'écart entre $X$ et sa moyenne : en moyenne, ces écarts se compensent."
+      ],
+      "reponse": "$E(Y) = 0$ : la variable $Y$ est centrée."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "echantillonnage",
+      "enonce": "Pour une variable aléatoire d'écart-type $\\sigma = 2$, calculer $\\dfrac{2\\sigma}{\\sqrt{n}}$ pour $n = 100$ puis pour $n = 400$. Commenter.",
+      "corrige": [
+        "$n = 100$ : $\\dfrac{4}{\\sqrt{100}} = \\dfrac{4}{10} = 0{,}4$.",
+        "$n = 400$ : $\\dfrac{4}{\\sqrt{400}} = \\dfrac{4}{20} = 0{,}2$.",
+        "Avec $4$ fois plus de tirages, l'écart typique est divisé par $2$ seulement."
+      ],
+      "reponse": "$0{,}4$ puis $0{,}2$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "echantillonnage",
+      "enonce": "Par combien faut-il multiplier la taille $n$ d'un échantillon pour diviser par $3$ l'écart typique $\\dfrac{2\\sigma}{\\sqrt{n}}$ entre la moyenne observée et l'espérance ?",
+      "corrige": [
+        "Si on remplace $n$ par $kn$, l'écart est divisé par $\\sqrt{k}$.",
+        "On veut $\\sqrt{k} = 3$, donc $k = 9$."
+      ],
+      "reponse": "Par $9$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "esperance",
+      "enonce": "$X$ prend les valeurs $1$, $2$ et $x$ avec les probabilités respectives $0{,}5$ ; $0{,}3$ ; $0{,}2$. Déterminer $x$ pour que $E(X) = 2{,}1$.",
+      "corrige": [
+        "$E(X) = 1 \\times 0{,}5 + 2 \\times 0{,}3 + 0{,}2x = 1{,}1 + 0{,}2x$.",
+        "$1{,}1 + 0{,}2x = 2{,}1 \\iff 0{,}2x = 1 \\iff x = 5$."
+      ],
+      "reponse": "$x = 5$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "variance",
+      "enonce": "$X$ prend les valeurs $1$, $3$ et $5$ avec les probabilités respectives $0{,}2$ ; $0{,}6$ ; $0{,}2$. Calculer $E(X)$, puis $V(X)$ avec la définition $V(X) = \\sum p_i\\left(x_i - E(X)\\right)^2$. Arrondir $\\sigma(X)$ au centième.",
+      "corrige": [
+        "$E(X) = 0{,}2 + 1{,}8 + 1 = 3$.",
+        "$V(X) = 0{,}2 \\times (1 - 3)^2 + 0{,}6 \\times (3 - 3)^2 + 0{,}2 \\times (5 - 3)^2 = 0{,}8 + 0 + 0{,}8 = 1{,}6$.",
+        "$\\sigma(X) = \\sqrt{1{,}6} \\approx 1{,}26$."
+      ],
+      "reponse": "$E(X) = 3$ ; $V(X) = 1{,}6$ ; $\\sigma(X) \\approx 1{,}26$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "jeu-equitable",
+      "enonce": "On lance un dé équilibré. Si le résultat est pair, on gagne autant d'euros que le résultat ; s'il est impair, on perd $3$ €. 1) Calculer l'espérance du gain. 2) Quelle perte $L$ (au lieu de $3$ €) rendrait le jeu équitable ?",
+      "corrige": [
+        "1) $E(X) = \\dfrac{2 + 4 + 6}{6} - 3 \\times \\dfrac{1}{2} = 2 - 1{,}5 = 0{,}5$ €.",
+        "2) Avec une perte $L$ : $E(X) = 2 - \\dfrac{L}{2}$.",
+        "$2 - \\dfrac{L}{2} = 0 \\iff L = 4$."
+      ],
+      "reponse": "1) $0{,}5$ € ; 2) $L = 4$ €."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "linearite-esperance",
+      "enonce": "Le gain d'un jeu est $Y = 2X - 3$, où $X$ est le nombre de points obtenus. On sait que $E(Y) = 1$. Calculer $E(X)$.",
+      "corrige": [
+        "$E(Y) = 2E(X) - 3$.",
+        "$2E(X) - 3 = 1 \\iff 2E(X) = 4 \\iff E(X) = 2$."
+      ],
+      "reponse": "$E(X) = 2$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "echantillonnage",
+      "enonce": "Une variable aléatoire a pour espérance $\\mu = 10$ et pour écart-type $\\sigma = 3$. Deux élèves simulent chacun un échantillon de taille $n = 100$ et trouvent $m_1 = 10{,}3$ et $m_2 = 11{,}5$. L'un des résultats est-il suspect ?",
+      "corrige": [
+        "$\\dfrac{2\\sigma}{\\sqrt{n}} = \\dfrac{6}{10} = 0{,}6$.",
+        "$\\lvert m_1 - \\mu \\rvert = 0{,}3 \\leqslant 0{,}6$ : résultat habituel.",
+        "$\\lvert m_2 - \\mu \\rvert = 1{,}5 > 0{,}6$ : un tel écart est rare, ce résultat est suspect (erreur possible dans la simulation)."
+      ],
+      "reponse": "$m_2 = 11{,}5$ est suspect ; $m_1 = 10{,}3$ est normal."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "jeu-equitable",
+      "enonce": "Pour jouer, on paie $1$ € puis on tire sans remise deux boules d'une urne contenant $3$ rouges et $2$ vertes ; on reçoit $3$ € par boule verte tirée. Le nombre $X$ de vertes vérifie $E(X) = 0{,}8$. Exprimer le gain algébrique $G$ en fonction de $X$, puis calculer $E(G)$.",
+      "corrige": [
+        "On reçoit $3X$ euros et on a payé $1$ € : $G = 3X - 1$.",
+        "Par linéarité de l'espérance : $E(G) = 3E(X) - 1 = 3 \\times 0{,}8 - 1 = 1{,}4$.",
+        "$E(G) > 0$ : le jeu est favorable au joueur (l'organisateur perd de l'argent en moyenne)."
+      ],
+      "reponse": "$G = 3X - 1$ ; $E(G) = 1{,}4$ €."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "echantillonnage",
+      "enonce": "On considère la fonction Python : « def esperance(valeurs, probas): s = 0 ; for i in range(len(valeurs)): s = s + valeurs[i] * probas[i] ; return s ». Que renvoie esperance([0, 1, 2], [0.5, 0.3, 0.2]) ? Comment modifier la fonction pour obtenir $E(X^2)$ ?",
+      "corrige": [
+        "La boucle calcule $0 \\times 0{,}5 + 1 \\times 0{,}3 + 2 \\times 0{,}2 = 0{,}7$ : c'est $\\sum x_i p_i = E(X)$.",
+        "Pour $E(X^2)$, on remplace valeurs[i] par son carré dans la somme : on additionne les produits $x_i^2\\,p_i$.",
+        "On peut alors obtenir la variance par König-Huygens : $E(X^2) - \\left(E(X)\\right)^2$."
+      ],
+      "reponse": "Elle renvoie $0{,}7$ ; pour $E(X^2)$, on remplace valeurs[i] par son carré."
     }
   ]
 }

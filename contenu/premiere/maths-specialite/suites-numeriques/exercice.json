@@ -125,7 +125,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "modele",
       "enonce": "Une entreprise propose à une nouvelle recrue deux contrats de salaire annuel, à partir de l'année $2026$. On note $u_n$ (offre A) et $v_n$ (offre B) le salaire, en euros, de l'année $2026 + n$ (l'année $2026$ correspond donc à $n = 0$).\n\n• Offre A : un salaire de $24\\,000$ € la première année, augmenté de $800$ € chaque année.\n• Offre B : un salaire de $22\\,000$ € la première année, augmenté de $4\\,\\%$ chaque année.\n\n1) Justifier que $(u_n)$ est arithmétique, préciser sa raison et donner $u_n$ en fonction de $n$. 2) Justifier que $(v_n)$ est géométrique, préciser sa raison et donner $v_n$ en fonction de $n$. 3) Comparer les salaires proposés par les deux offres pour la $4^{\\text{e}}$ année. 4) Donner le sens de variation de chacune des deux suites. 5) Calculer le montant total perçu avec chaque offre sur les $5$ premières années (de $n = 0$ à $n = 4$) et indiquer l'offre la plus avantageuse à court terme.",
       "corrige": [
@@ -138,6 +138,459 @@
         "Sur les $5$ premières années, l'offre A rapporte environ $128\\,000$ € contre environ $119\\,159$ € pour l'offre B : l'offre A est la plus avantageuse à court terme."
       ],
       "reponse": "$u_n = 24\\,000 + 800\\,n$ (arithmétique, $r = 800$) ; $v_n = 22\\,000 \\times 1{,}04^{\\,n}$ (géométrique, $q = 1{,}04$). La $4^{\\text{e}}$ année : $u_3 = 26\\,400$ € $>$ $v_3 \\approx 24\\,747$ €. Les deux suites sont croissantes. Total sur $5$ ans : $128\\,000$ € (A) contre $\\approx 119\\,159$ € (B), donc l'offre A est la plus avantageuse à court terme."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "modes-generation",
+      "enonce": "Soit $(u_n)$ définie pour tout entier naturel $n$ par $u_n = n^2 - 1$. Calculer $u_0$, $u_1$ et $u_5$.",
+      "corrige": [
+        "La suite est donnée sous forme explicite : on remplace $n$ par sa valeur.",
+        "$u_0 = 0 - 1 = -1$ ; $u_1 = 1 - 1 = 0$ ; $u_5 = 25 - 1 = 24$."
+      ],
+      "reponse": "$u_0 = -1$, $u_1 = 0$, $u_5 = 24$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "modes-generation",
+      "enonce": "Soit $(u_n)$ définie par $u_0 = 2$ et, pour tout entier naturel $n$, $u_{n+1} = 3u_n - 1$. Calculer $u_1$, $u_2$ et $u_3$.",
+      "corrige": [
+        "Relation de récurrence : chaque terme se calcule à partir du précédent.",
+        "$u_1 = 3 \\times 2 - 1 = 5$ ; $u_2 = 3 \\times 5 - 1 = 14$ ; $u_3 = 3 \\times 14 - 1 = 41$."
+      ],
+      "reponse": "$u_1 = 5$, $u_2 = 14$, $u_3 = 41$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "arithmetique",
+      "enonce": "La suite $3\\,;\\ 7\\,;\\ 11\\,;\\ 15\\,;\\ \\ldots$ semble-t-elle arithmétique ? Si oui, donner sa raison et le terme suivant.",
+      "corrige": [
+        "$7 - 3 = 4$, $11 - 7 = 4$, $15 - 11 = 4$ : la différence entre deux termes consécutifs est constante.",
+        "Raison $r = 4$ ; terme suivant : $15 + 4 = 19$."
+      ],
+      "reponse": "Oui, de raison $4$ ; terme suivant $19$."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "geometrique",
+      "enonce": "La suite $2\\,;\\ 6\\,;\\ 18\\,;\\ 54\\,;\\ \\ldots$ semble-t-elle géométrique ? Si oui, donner sa raison et le terme suivant.",
+      "corrige": [
+        "$\\dfrac{6}{2} = 3$, $\\dfrac{18}{6} = 3$, $\\dfrac{54}{18} = 3$ : le quotient est constant.",
+        "Raison $q = 3$ ; terme suivant : $54 \\times 3 = 162$."
+      ],
+      "reponse": "Oui, de raison $3$ ; terme suivant $162$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "modes-generation",
+      "enonce": "Soit $(u_n)$ définie pour tout entier naturel $n$ par $u_n = \\dfrac{2n + 1}{n + 1}$. Calculer $u_0$ et $u_3$.",
+      "corrige": [
+        "$u_0 = \\dfrac{0 + 1}{0 + 1} = 1$.",
+        "$u_3 = \\dfrac{2 \\times 3 + 1}{3 + 1} = \\dfrac{7}{4}$."
+      ],
+      "reponse": "$u_0 = 1$ et $u_3 = \\dfrac{7}{4}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "modes-generation",
+      "enonce": "Soit $u_n = 2n + 5$ pour tout entier naturel $n$. Exprimer $u_{n+1}$ en fonction de $n$, puis calculer $u_{n+1} - u_n$. Que peut-on en conclure ?",
+      "corrige": [
+        "On remplace $n$ par $n + 1$ : $u_{n+1} = 2(n + 1) + 5 = 2n + 7$.",
+        "$u_{n+1} - u_n = 2n + 7 - (2n + 5) = 2$.",
+        "La différence est constante : $(u_n)$ est arithmétique de raison $2$."
+      ],
+      "reponse": "$u_{n+1} = 2n + 7$ ; $u_{n+1} - u_n = 2$ : suite arithmétique de raison $2$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "algorithme",
+      "enonce": "On considère la fonction Python suivante : « def suite(n): u = 5 ; for i in range(n): u = u + 4 ; return u ». Que renvoie suite(3) ? Quelle suite cette fonction calcule-t-elle ?",
+      "corrige": [
+        "La boucle est répétée $3$ fois : $u$ prend successivement les valeurs $9$, $13$, $17$.",
+        "La fonction calcule le terme $u_n$ de la suite définie par $u_0 = 5$ et $u_{n+1} = u_n + 4$.",
+        "C'est une suite arithmétique de raison $4$ : $u_n = 5 + 4n$."
+      ],
+      "reponse": "suite(3) renvoie $17$ ; c'est la suite arithmétique $u_n = 5 + 4n$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "motif",
+      "enonce": "On aligne des carrés faits d'allumettes, chaque carré partageant un côté avec le précédent. Il faut $4$ allumettes pour $1$ carré, $7$ pour $2$ carrés, $10$ pour $3$ carrés. Exprimer le nombre $u_n$ d'allumettes pour $n$ carrés, puis calculer $u_{20}$.",
+      "corrige": [
+        "Chaque nouveau carré demande $3$ allumettes de plus : la suite est arithmétique de raison $3$, avec $u_1 = 4$.",
+        "$u_n = u_1 + (n - 1) \\times 3 = 4 + 3n - 3 = 3n + 1$.",
+        "$u_{20} = 3 \\times 20 + 1 = 61$."
+      ],
+      "reponse": "$u_n = 3n + 1$ ; $u_{20} = 61$ allumettes."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "arithmetique",
+      "enonce": "Soit $(u_n)_{n \\geqslant 1}$ la suite arithmétique de premier terme $u_1 = 4$ et de raison $3$. Donner $u_n$ en fonction de $n$, puis calculer $u_{20}$.",
+      "corrige": [
+        "La suite commence au rang $1$ : $u_n = u_1 + (n - 1)r = 4 + 3(n - 1) = 3n + 1$.",
+        "$u_{20} = 3 \\times 20 + 1 = 61$."
+      ],
+      "reponse": "$u_n = 3n + 1$ ; $u_{20} = 61$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "arithmetique",
+      "enonce": "Une suite arithmétique $(u_n)$ vérifie $u_5 = 17$ et $u_{12} = 38$. Déterminer sa raison et $u_0$.",
+      "corrige": [
+        "$u_{12} = u_5 + (12 - 5)r$, donc $38 = 17 + 7r$ et $r = \\dfrac{21}{7} = 3$.",
+        "$u_5 = u_0 + 5r$, donc $u_0 = 17 - 15 = 2$."
+      ],
+      "reponse": "$r = 3$ et $u_0 = 2$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "geometrique",
+      "enonce": "Soit $(v_n)$ la suite géométrique de premier terme $v_0 = 64$ et de raison $\\dfrac{1}{2}$. Calculer $v_6$.",
+      "corrige": [
+        "$v_n = v_0 \\times q^n$, donc $v_6 = 64 \\times \\left(\\dfrac{1}{2}\\right)^6 = \\dfrac{64}{64}$."
+      ],
+      "reponse": "$v_6 = 1$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "geometrique",
+      "enonce": "Soit $(v_n)_{n \\geqslant 1}$ la suite géométrique de premier terme $v_1 = 3$ et de raison $2$. Donner $v_n$ en fonction de $n$, puis calculer $v_{10}$.",
+      "corrige": [
+        "La suite commence au rang $1$ : $v_n = v_1 \\times q^{n-1} = 3 \\times 2^{n-1}$.",
+        "$v_{10} = 3 \\times 2^9 = 3 \\times 512 = 1\\,536$."
+      ],
+      "reponse": "$v_n = 3 \\times 2^{n-1}$ ; $v_{10} = 1\\,536$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "nature",
+      "enonce": "La suite $1\\,;\\ 4\\,;\\ 9\\,;\\ 16\\,;\\ \\ldots$ des carrés est-elle arithmétique ? géométrique ?",
+      "corrige": [
+        "Différences : $3$, $5$, $7$ : elles ne sont pas constantes, donc la suite n'est pas arithmétique.",
+        "Quotients : $4$ puis $\\dfrac{9}{4}$ : ils ne sont pas constants, donc la suite n'est pas géométrique."
+      ],
+      "reponse": "Ni arithmétique, ni géométrique."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "sens-variation",
+      "enonce": "Donner sans calcul le sens de variation de chacune des suites : $u_n = -3n + 10$ ; $v_n = 2 \\times 1{,}5^n$ ; $w_n = 5 \\times 0{,}9^n$.",
+      "corrige": [
+        "$(u_n)$ est arithmétique de raison $-3 < 0$ : décroissante.",
+        "$(v_n)$ est géométrique de raison $1{,}5 > 1$ avec $v_0 = 2 > 0$ : croissante.",
+        "$(w_n)$ est géométrique de raison $0{,}9 \\in \\,]0\\,;1[$ avec $w_0 = 5 > 0$ : décroissante."
+      ],
+      "reponse": "$(u_n)$ décroissante ; $(v_n)$ croissante ; $(w_n)$ décroissante."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "somme-entiers",
+      "enonce": "Calculer $1 + 2 + 3 + \\cdots + 50$.",
+      "corrige": [
+        "$1 + 2 + \\cdots + n = \\dfrac{n(n + 1)}{2}$ avec $n = 50$.",
+        "$\\dfrac{50 \\times 51}{2} = 1\\,275$."
+      ],
+      "reponse": "$1\\,275$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "somme-geometrique",
+      "enonce": "Calculer $1 + 2 + 2^2 + \\cdots + 2^9$.",
+      "corrige": [
+        "Avec $q = 2$ et $n = 9$ : $\\dfrac{1 - 2^{10}}{1 - 2} = \\dfrac{1 - 1\\,024}{-1}$.",
+        "Il y a bien $10$ termes, de $2^0$ à $2^9$."
+      ],
+      "reponse": "$1\\,023$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "somme-geometrique",
+      "enonce": "Calculer $1 + 3 + 9 + 27 + 81 + 243$.",
+      "corrige": [
+        "C'est $1 + 3 + \\cdots + 3^5$ : $6$ termes, raison $3$.",
+        "$\\dfrac{1 - 3^6}{1 - 3} = \\dfrac{1 - 729}{-2} = 364$."
+      ],
+      "reponse": "$364$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "taux-evolution",
+      "enonce": "Donner la raison de la suite géométrique associée à une hausse de $4\\,\\%$ par an, puis à une baisse de $15\\,\\%$ par an.",
+      "corrige": [
+        "Une évolution de $t\\,\\%$ correspond à $q = 1 + \\dfrac{t}{100}$.",
+        "Hausse de $4\\,\\%$ : $q = 1{,}04$. Baisse de $15\\,\\%$ : $t = -15$, donc $q = 0{,}85$."
+      ],
+      "reponse": "$1{,}04$ et $0{,}85$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "taux-evolution",
+      "enonce": "Un smartphone vaut $800$ € neuf. Sa valeur baisse de $12\\,\\%$ par an. Quelle est sa valeur au bout de $3$ ans ? Arrondir au centime.",
+      "corrige": [
+        "La valeur est multipliée chaque année par $1 - 0{,}12 = 0{,}88$.",
+        "Au bout de $3$ ans : $800 \\times 0{,}88^3 = 800 \\times 0{,}681472 \\approx 545{,}18$ €."
+      ],
+      "reponse": "Environ $545{,}18$ €."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "limite-intuitive",
+      "enonce": "Soit $u_n = \\dfrac{1}{n} + 2$ pour $n \\geqslant 1$. Calculer $u_1$, $u_{10}$, $u_{1\\,000}$, puis conjecturer le comportement de $u_n$ quand $n$ devient très grand.",
+      "corrige": [
+        "$u_1 = 3$, $u_{10} = 2{,}1$, $u_{1\\,000} = 2{,}001$.",
+        "$\\dfrac{1}{n}$ se rapproche de $0$, donc $u_n$ se rapproche de $2$."
+      ],
+      "reponse": "Les termes se rapprochent de $2$ (limite finie $2$)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "modes-generation",
+      "enonce": "Soit $(u_n)$ définie par $u_0 = 0$ et $u_{n+1} = u_n + 2n + 1$. Calculer $u_1$, $u_2$, $u_3$, $u_4$, puis conjecturer une forme explicite de $u_n$.",
+      "corrige": [
+        "$u_1 = 0 + 0 + 1 = 1$ ; $u_2 = 1 + 2 + 1 = 4$ ; $u_3 = 4 + 4 + 1 = 9$ ; $u_4 = 9 + 6 + 1 = 16$.",
+        "On reconnaît les carrés $0^2$, $1^2$, $2^2$, $3^2$, $4^2$.",
+        "Conjecture : $u_n = n^2$ (on le vérifie : $(n + 1)^2 = n^2 + 2n + 1$)."
+      ],
+      "reponse": "$1$, $4$, $9$, $16$ ; conjecture $u_n = n^2$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "On considère la fonction Python suivante : « def suite(n): u = 1000 ; for i in range(n): u = 0.9 * u ; return u ». Calculer suite(2), puis donner la nature de la suite calculée et sa forme explicite.",
+      "corrige": [
+        "Deux passages dans la boucle : $1\\,000 \\times 0{,}9 = 900$, puis $900 \\times 0{,}9 = 810$.",
+        "La fonction calcule $u_n$ avec $u_0 = 1\\,000$ et $u_{n+1} = 0{,}9\\,u_n$ : suite géométrique de raison $0{,}9$."
+      ],
+      "reponse": "suite(2) renvoie $810$ ; $u_n = 1\\,000 \\times 0{,}9^n$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "On veut le plus petit entier $n$ tel que $2^n > 1\\,000$. Écrire en français le principe d'une boucle « tant que » qui le trouve, puis donner ce rang.",
+      "corrige": [
+        "On part de $n = 0$ et $u = 1$ ; tant que $u \\leqslant 1\\,000$, on multiplie $u$ par $2$ et on ajoute $1$ à $n$.",
+        "À la sortie de la boucle, $n$ est le rang cherché.",
+        "$2^9 = 512 \\leqslant 1\\,000$ et $2^{10} = 1\\,024 > 1\\,000$."
+      ],
+      "reponse": "$n = 10$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "motif",
+      "enonce": "On dispose des points en triangle : $1$ point sur la première ligne, $2$ sur la deuxième, $3$ sur la troisième, etc. Combien de points faut-il pour un triangle de $10$ lignes ?",
+      "corrige": [
+        "Le nombre de points est $1 + 2 + \\cdots + 10$.",
+        "$1 + 2 + \\cdots + n = \\dfrac{n(n + 1)}{2}$, donc $\\dfrac{10 \\times 11}{2} = 55$."
+      ],
+      "reponse": "$55$ points."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "arithmetique",
+      "enonce": "Soit $u_n = 5 - 2n$ pour tout entier naturel $n$. Démontrer que $(u_n)$ est arithmétique et donner son sens de variation.",
+      "corrige": [
+        "$u_{n+1} - u_n = 5 - 2(n + 1) - (5 - 2n) = -2$.",
+        "La différence est constante : suite arithmétique de raison $-2$ et de premier terme $u_0 = 5$.",
+        "La raison est négative : la suite est décroissante."
+      ],
+      "reponse": "Arithmétique de raison $-2$ ; décroissante."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "arithmetique",
+      "enonce": "Pour la suite arithmétique de premier terme $u_1 = 10$ et de raison $2$, un élève écrit « $u_n = 10 + 2n$ ». Vérifier avec $u_1$ et corriger.",
+      "corrige": [
+        "Avec sa formule, $u_1 = 10 + 2 = 12$, alors que $u_1 = 10$ : la formule est fausse.",
+        "La suite commence au rang $1$ : $u_n = u_1 + (n - 1)r = 10 + 2(n - 1) = 2n + 8$."
+      ],
+      "reponse": "$u_n = 2n + 8$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "geometrique",
+      "enonce": "Soit $v_n = 5 \\times 3^n$ pour tout entier naturel $n$. Démontrer que $(v_n)$ est géométrique et préciser son premier terme et sa raison.",
+      "corrige": [
+        "Pour tout $n$, $v_n > 0$ et $\\dfrac{v_{n+1}}{v_n} = \\dfrac{5 \\times 3^{n+1}}{5 \\times 3^n} = 3$.",
+        "Le quotient est constant : $(v_n)$ est géométrique de raison $3$, de premier terme $v_0 = 5$."
+      ],
+      "reponse": "Géométrique, $v_0 = 5$, raison $3$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "geometrique",
+      "enonce": "Soit $w_n = 2^n + 1$. Calculer $w_0$, $w_1$, $w_2$ et montrer que $(w_n)$ n'est pas géométrique.",
+      "corrige": [
+        "$w_0 = 2$, $w_1 = 3$, $w_2 = 5$.",
+        "$\\dfrac{w_1}{w_0} = \\dfrac{3}{2}$ et $\\dfrac{w_2}{w_1} = \\dfrac{5}{3}$.",
+        "Ces quotients sont différents : la suite n'est pas géométrique."
+      ],
+      "reponse": "$2$, $3$, $5$ ; $\\dfrac{3}{2} \\neq \\dfrac{5}{3}$, donc $(w_n)$ n'est pas géométrique."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "nature",
+      "enonce": "Donner la nature de chacune des suites suivantes : $a_n = 4n - 1$ ; $b_n = 4 \\times 2^n$ ; $c_n = n^2 + 1$.",
+      "corrige": [
+        "$a_{n+1} - a_n = 4$ : $(a_n)$ est arithmétique de raison $4$.",
+        "$\\dfrac{b_{n+1}}{b_n} = 2$ : $(b_n)$ est géométrique de raison $2$.",
+        "$c_0 = 1$, $c_1 = 2$, $c_2 = 5$ : différences $1$ et $3$, quotients $2$ et $\\dfrac{5}{2}$ : ni l'une ni l'autre."
+      ],
+      "reponse": "$(a_n)$ arithmétique ; $(b_n)$ géométrique ; $(c_n)$ ni l'une ni l'autre."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "sens-variation",
+      "enonce": "Soit $v_n = (-2)^n$. Calculer $v_0$, $v_1$, $v_2$, $v_3$. La suite est-elle croissante ? décroissante ?",
+      "corrige": [
+        "$v_0 = 1$, $v_1 = -2$, $v_2 = 4$, $v_3 = -8$.",
+        "$v_1 < v_0$ mais $v_2 > v_1$ : les termes alternent de signe.",
+        "La raison $q = -2$ est négative : la suite n'est pas monotone."
+      ],
+      "reponse": "Ni croissante, ni décroissante."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "somme-entiers",
+      "enonce": "Calculer $S = 5 + 8 + 11 + \\cdots + 62$.",
+      "corrige": [
+        "Les termes s'écrivent $5 + 3k$ pour $k$ allant de $0$ à $19$ (car $5 + 3 \\times 19 = 62$) : il y a $20$ termes.",
+        "$S = 20 \\times 5 + 3(0 + 1 + \\cdots + 19) = 100 + 3 \\times \\dfrac{19 \\times 20}{2} = 100 + 570$."
+      ],
+      "reponse": "$S = 670$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "somme-entiers",
+      "enonce": "Calculer la somme des nombres pairs de $2$ à $200$.",
+      "corrige": [
+        "$2 + 4 + \\cdots + 200 = 2(1 + 2 + \\cdots + 100)$.",
+        "$= 2 \\times \\dfrac{100 \\times 101}{2} = 10\\,100$."
+      ],
+      "reponse": "$10\\,100$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "somme-geometrique",
+      "enonce": "Calculer la valeur exacte de $1 + 0{,}5 + 0{,}5^2 + \\cdots + 0{,}5^9$, puis en donner une valeur approchée au millième.",
+      "corrige": [
+        "$\\dfrac{1 - 0{,}5^{10}}{1 - 0{,}5} = 2\\left(1 - \\dfrac{1}{1\\,024}\\right) = 2 - \\dfrac{1}{512} = \\dfrac{1\\,023}{512}$.",
+        "$\\dfrac{1\\,023}{512} \\approx 1{,}998$."
+      ],
+      "reponse": "$\\dfrac{1\\,023}{512} \\approx 1{,}998$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "taux-evolution",
+      "enonce": "Une ville compte $50\\,000$ habitants en 2026 et sa population augmente de $2\\,\\%$ par an. On note $u_n$ la population en $2026 + n$. Exprimer $u_n$ en fonction de $n$ et estimer la population en 2036.",
+      "corrige": [
+        "$(u_n)$ est géométrique de raison $1{,}02$ et de premier terme $u_0 = 50\\,000$ : $u_n = 50\\,000 \\times 1{,}02^n$.",
+        "2036 correspond à $n = 10$ : $u_{10} = 50\\,000 \\times 1{,}02^{10} \\approx 60\\,949{,}7$."
+      ],
+      "reponse": "$u_n = 50\\,000 \\times 1{,}02^n$ ; environ $60\\,950$ habitants en 2036."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "limite-intuitive",
+      "enonce": "Décrire le comportement, quand $n$ devient très grand, de $v_n = 3 \\times 0{,}8^n$ et de $w_n = 0{,}5 \\times 1{,}1^n$.",
+      "corrige": [
+        "$(v_n)$ est géométrique de raison $0{,}8 \\in \\,]0\\,;1[$ avec $v_0 > 0$ : les termes tendent vers $0$.",
+        "$(w_n)$ est géométrique de raison $1{,}1 > 1$ avec $w_0 > 0$ : les termes tendent vers $+\\infty$, même si le premier terme est petit."
+      ],
+      "reponse": "$v_n$ tend vers $0$ ; $w_n$ tend vers $+\\infty$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "limite-intuitive",
+      "enonce": "Pour chacune des suites $a_n = 5 - \\dfrac{1}{n^2}$ ($n \\geqslant 1$), $b_n = (-1)^n$ et $c_n = n^2 + 1$, dire si elle semble avoir une limite finie, une limite infinie ou pas de limite.",
+      "corrige": [
+        "$\\dfrac{1}{n^2}$ se rapproche de $0$ : $a_n$ se rapproche de $5$.",
+        "$b_n$ vaut alternativement $1$ et $-1$ : pas de limite.",
+        "$c_n$ dépasse toute valeur : limite $+\\infty$."
+      ],
+      "reponse": "$(a_n)$ : limite $5$ ; $(b_n)$ : pas de limite ; $(c_n)$ : $+\\infty$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "sens-variation",
+      "enonce": "Soit $u_n = n^2 - 4n$. Calculer $u_{n+1} - u_n$ et en déduire le sens de variation de $(u_n)$.",
+      "corrige": [
+        "$u_{n+1} - u_n = (n + 1)^2 - 4(n + 1) - n^2 + 4n = 2n + 1 - 4 = 2n - 3$.",
+        "$2n - 3 < 0$ pour $n = 0$ et $n = 1$ ; $2n - 3 > 0$ pour $n \\geqslant 2$.",
+        "La suite décroît de $u_0 = 0$ à $u_2 = -4$, puis elle est croissante à partir du rang $2$."
+      ],
+      "reponse": "$u_{n+1} - u_n = 2n - 3$ : décroissante jusqu'au rang $2$, croissante ensuite."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "somme-geometrique",
+      "enonce": "Calculer $S = 3 + 6 + 12 + \\cdots + 384$.",
+      "corrige": [
+        "Les termes sont $3 \\times 2^k$ ; $384 = 3 \\times 128 = 3 \\times 2^7$, donc $k$ va de $0$ à $7$ ($8$ termes).",
+        "$S = 3(1 + 2 + \\cdots + 2^7) = 3 \\times \\dfrac{1 - 2^8}{1 - 2} = 3 \\times 255$."
+      ],
+      "reponse": "$S = 765$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "taux-evolution",
+      "enonce": "On place $1\\,000$ € pendant $5$ ans. Placement A : les intérêts de $30$ € sont ajoutés chaque année (intérêts simples). Placement B : le capital augmente de $3\\,\\%$ par an (intérêts composés). Quelle est la nature de chaque suite ? Comparer les capitaux au bout de $5$ ans.",
+      "corrige": [
+        "A : on ajoute $30$ € par an, suite arithmétique : $a_5 = 1\\,000 + 5 \\times 30 = 1\\,150$ €.",
+        "B : on multiplie par $1{,}03$ chaque année, suite géométrique : $b_5 = 1\\,000 \\times 1{,}03^5 \\approx 1\\,159{,}27$ €.",
+        "Les intérêts composés rapportent davantage, car les intérêts produisent eux-mêmes des intérêts."
+      ],
+      "reponse": "A arithmétique ($1\\,150$ €) ; B géométrique (environ $1\\,159{,}27$ €) : B rapporte plus."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "modele",
+      "enonce": "Une forêt compte $5\\,000$ arbres. Chaque année, on coupe $10\\,\\%$ des arbres puis on en plante $300$. On note $u_n$ le nombre d'arbres au bout de $n$ années ($u_0 = 5\\,000$). 1) Justifier que $u_{n+1} = 0{,}9\\,u_n + 300$ et calculer $u_1$, $u_2$. 2) On pose $v_n = u_n - 3\\,000$ : montrer que $(v_n)$ est géométrique. 3) En déduire $u_n$ en fonction de $n$ et le comportement de $u_n$ à long terme.",
+      "corrige": [
+        "1) Couper $10\\,\\%$ revient à multiplier par $0{,}9$, puis on ajoute $300$. $u_1 = 4\\,500 + 300 = 4\\,800$ et $u_2 = 4\\,320 + 300 = 4\\,620$.",
+        "2) $v_{n+1} = u_{n+1} - 3\\,000 = 0{,}9\\,u_n - 2\\,700 = 0{,}9(u_n - 3\\,000) = 0{,}9\\,v_n$ : géométrique de raison $0{,}9$, avec $v_0 = 2\\,000$.",
+        "3) $v_n = 2\\,000 \\times 0{,}9^n$, donc $u_n = 3\\,000 + 2\\,000 \\times 0{,}9^n$. Comme $0{,}9^n$ tend vers $0$, $u_n$ se rapproche de $3\\,000$ arbres."
+      ],
+      "reponse": "$u_1 = 4\\,800$, $u_2 = 4\\,620$ ; $u_n = 3\\,000 + 2\\,000 \\times 0{,}9^n$, qui se rapproche de $3\\,000$."
     }
   ]
 }
