@@ -137,7 +137,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "methode-fxk",
       "enonce": "Une entreprise produit et vend une quantité $x$ (en tonnes) d'un produit, avec $x \\in [0\\,;6]$. Son bénéfice, exprimé en milliers d'euros, est modélisé par la fonction $B$ définie sur $[0\\,;6]$ par $B(x) = -x^3 + 3x^2 + 9x - 5$.\n\n1. Justifier que $B$ est continue et dérivable sur $[0\\,;6]$.\n2. Calculer $B'(x)$, étudier son signe sur $[0\\,;6]$ et dresser le tableau de variations de $B$ (on calculera $B(0)$, $B(3)$ et $B(6)$).\n3. Montrer que l'équation $B(x) = 0$ admet exactement deux solutions $\\alpha$ et $\\beta$ sur $[0\\,;6]$, avec $0 < \\alpha < 3 < \\beta < 6$.\n4. Par balayage au pas $0{,}1$, donner un encadrement de $\\alpha$ d'amplitude $0{,}1$.\n5. En déduire les quantités de produit pour lesquelles l'entreprise est bénéficiaire.",
       "corrige": [
@@ -148,6 +148,466 @@
         "5. Sur $[0\\,;6]$, $B$ est négative avant $\\alpha$, positive entre $\\alpha$ et $\\beta$ (puisqu'elle croît jusqu'au maximum $B(3) = 22 > 0$ puis décroît), et de nouveau négative après $\\beta$. L'entreprise est donc bénéficiaire ($B(x) > 0$) lorsque la quantité produite vérifie $\\alpha < x < \\beta$, soit approximativement pour $x$ compris entre $0{,}45$ tonne et $\\beta$ tonnes."
       ],
       "reponse": "1. $B$ polynôme, donc continue et dérivable sur $[0\\,;6]$. 2. $B'(x) = -3(x-3)(x+1)$ : $B$ croît sur $[0\\,;3]$ (max $B(3) = 22$) puis décroît sur $[3\\,;6]$, avec $B(0) = -5$ et $B(6) = -59$. 3. Deux solutions $\\alpha \\in\\,]0\\,;3[$ et $\\beta \\in\\,]3\\,;6[$ à $B(x) = 0$. 4. $0{,}4 < \\alpha < 0{,}5$. 5. L'entreprise est bénéficiaire pour $\\alpha < x < \\beta$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "continuite",
+      "enonce": "Justifier que la fonction $f$ définie sur $[0\\,;+\\infty[$ par $f(x)=\\sqrt{x}+x^2$ est continue sur $[0\\,;+\\infty[$.",
+      "corrige": [
+        "La fonction racine carrée est continue sur $[0\\,;+\\infty[$ et $x\\mapsto x^2$ est continue sur $\\mathbb{R}$.",
+        "Une somme de fonctions continues est continue : $f$ est continue sur $[0\\,;+\\infty[$."
+      ],
+      "reponse": "$f$ est continue sur $[0\\,;+\\infty[$ (somme de fonctions continues)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "continuite",
+      "enonce": "Justifier que la fonction $g$ définie par $g(x)=\\ln x+3x$ est continue sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$\\ln$ est continue sur $]0\\,;+\\infty[$ et $x\\mapsto 3x$ est continue sur $\\mathbb{R}$.",
+        "Leur somme $g$ est donc continue sur $]0\\,;+\\infty[$."
+      ],
+      "reponse": "$g$ est continue sur $]0\\,;+\\infty[$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "Sur quels intervalles la fonction $h$ définie par $h(x)=\\dfrac{x^2+1}{x-3}$ est-elle continue ? Justifier.",
+      "corrige": [
+        "$h$ est un quotient de deux polynômes, continus sur $\\mathbb{R}$.",
+        "Le dénominateur s'annule pour $x=3$ : $h$ n'est pas définie en $3$.",
+        "$h$ est donc continue sur $]-\\infty\\,;3[$ et sur $]3\\,;+\\infty[$."
+      ],
+      "reponse": "Sur $]-\\infty\\,;3[$ et sur $]3\\,;+\\infty[$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "Vrai ou faux ? « Si $\\displaystyle\\lim_{x\\to 2} f(x)=5$ et $f(2)=5$, alors $f$ est continue en $2$. »",
+      "corrige": [
+        "Par définition, $f$ est continue en $a$ lorsque $\\displaystyle\\lim_{x\\to a} f(x)=f(a)$.",
+        "Ici la limite en $2$ vaut $5$, qui est exactement $f(2)$."
+      ],
+      "reponse": "Vrai."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "Justifier que la fonction $k$ définie par $k(x)=e^{-x^2}$ est continue sur $\\mathbb{R}$.",
+      "corrige": [
+        "$x\\mapsto -x^2$ est un polynôme, continu sur $\\mathbb{R}$, et $\\exp$ est continue sur $\\mathbb{R}$.",
+        "La composée de fonctions continues est continue : $k$ est continue sur $\\mathbb{R}$."
+      ],
+      "reponse": "$k$ est continue sur $\\mathbb{R}$ (composée de fonctions continues)."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "derivable-continue",
+      "enonce": "Justifier en une phrase que $f(x)=x^4-2x$ est continue sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f$ est un polynôme, donc dérivable sur $\\mathbb{R}$.",
+        "Toute fonction dérivable sur un intervalle y est continue."
+      ],
+      "reponse": "$f$ est dérivable, donc continue, sur $\\mathbb{R}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "derivable-continue",
+      "enonce": "Vrai ou faux ? « Toute fonction continue sur $\\mathbb{R}$ est dérivable sur $\\mathbb{R}$. » Justifier par un contre-exemple si nécessaire.",
+      "corrige": [
+        "C'est la réciproque de « dérivable implique continue », et elle est fausse.",
+        "Contre-exemple : $x\\mapsto |x|$ est continue sur $\\mathbb{R}$ mais n'est pas dérivable en $0$ (point anguleux)."
+      ],
+      "reponse": "Faux : $|x|$ est continue en $0$ mais pas dérivable en $0$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "derivable-continue",
+      "enonce": "Soit $f(x)=|x-2|$. La fonction $f$ est-elle continue en $2$ ? Est-elle dérivable en $2$ ?",
+      "corrige": [
+        "$f$ est la composée de $x\\mapsto x-2$ et de la valeur absolue, toutes deux continues : $f$ est continue en $2$ (et $f(2)=0$).",
+        "Sa courbe est celle de $|x|$ décalée de $2$ vers la droite : elle présente un point anguleux en $2$.",
+        "$f$ n'est donc pas dérivable en $2$."
+      ],
+      "reponse": "Continue en $2$, mais pas dérivable en $2$."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "derivable-continue",
+      "enonce": "On sait que $f$ est dérivable en $1$ et que $f(1)=4$. Que vaut $\\displaystyle\\lim_{x\\to 1} f(x)$ ? Justifier.",
+      "corrige": [
+        "Une fonction dérivable en $1$ est continue en $1$.",
+        "Donc $\\displaystyle\\lim_{x\\to 1} f(x)=f(1)=4$."
+      ],
+      "reponse": "$4$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "discontinuite",
+      "enonce": "On note $E(x)=\\lfloor x\\rfloor$ la partie entière de $x$. Donner $E(2{,}5)$, $E(2)$ et $E(1{,}9)$, puis expliquer pourquoi $E$ n'est pas continue en $2$.",
+      "corrige": [
+        "$E(2{,}5)=2$, $E(2)=2$ et $E(1{,}9)=1$.",
+        "Pour $x$ proche de $2$ et $x<2$, $E(x)=1$ : la limite à gauche en $2$ vaut $1$, alors que $E(2)=2$.",
+        "La courbe fait un saut en $2$ : $E$ n'est pas continue en $2$."
+      ],
+      "reponse": "$2$, $2$ et $1$ ; saut de $1$ à $2$ en $x=2$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "discontinuite",
+      "enonce": "Soit $f$ définie par $f(x)=x+1$ si $x<1$ et $f(x)=3$ si $x\\geqslant 1$. La fonction $f$ est-elle continue en $1$ ?",
+      "corrige": [
+        "Quand $x$ tend vers $1$ par valeurs inférieures, $f(x)=x+1$ tend vers $2$.",
+        "Or $f(1)=3\\neq 2$ : la courbe fait un saut en $1$."
+      ],
+      "reponse": "Non, $f$ n'est pas continue en $1$."
+    },
+    {
+      "id": 22,
+      "difficulte": "approfondissement",
+      "notion": "discontinuite",
+      "enonce": "Soit $a$ un réel et $f$ définie par $f(x)=x^2$ si $x<2$ et $f(x)=x+a$ si $x\\geqslant 2$. Déterminer $a$ pour que $f$ soit continue en $2$.",
+      "corrige": [
+        "À gauche de $2$, $f(x)=x^2$ tend vers $4$.",
+        "$f(2)=2+a$. Pour la continuité, il faut $2+a=4$, soit $a=2$.",
+        "Avec $a=2$, $f(x)=x+2$ pour $x\\geqslant 2$ tend aussi vers $4$ à droite : $f$ est continue en $2$."
+      ],
+      "reponse": "$a=2$"
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "discontinuite",
+      "enonce": "Avec la partie entière $E(x)=\\lfloor x\\rfloor$ sur $[0\\,;2]$, on a $E(0)=0$ et $E(2)=2$. L'équation $E(x)=0{,}5$ a-t-elle une solution ? Pourquoi cela ne contredit-il pas le TVI ?",
+      "corrige": [
+        "$E$ ne prend que des valeurs entières ($0$, $1$ ou $2$ sur $[0\\,;2]$) : $E(x)=0{,}5$ n'a aucune solution.",
+        "Le TVI exige la continuité ; $E$ n'est pas continue (sauts en $1$ et en $2$). L'hypothèse n'est pas vérifiée, le théorème ne s'applique pas."
+      ],
+      "reponse": "Aucune solution ; pas de contradiction car $E$ n'est pas continue."
+    },
+    {
+      "id": 24,
+      "difficulte": "decouverte",
+      "notion": "tvi",
+      "enonce": "Soit $f(x)=x^2-3$, continue sur $[1\\,;2]$. Calculer $f(1)$ et $f(2)$, puis justifier que $f$ s'annule au moins une fois sur $[1\\,;2]$.",
+      "corrige": [
+        "$f(1)=-2$ et $f(2)=1$ : ces valeurs sont de signes contraires.",
+        "$f$ est continue (polynôme) : d'après le TVI, elle s'annule au moins une fois sur $[1\\,;2]$."
+      ],
+      "reponse": "$f(1)=-2$, $f(2)=1$ : au moins une solution de $f(x)=0$ dans $[1\\,;2]$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "tvi",
+      "enonce": "Soit $f(x)=e^{x}-3$. Montrer que l'équation $f(x)=0$ admet au moins une solution dans $[1\\,;2]$.",
+      "corrige": [
+        "$f$ est continue sur $[1\\,;2]$ (somme de fonctions continues).",
+        "$f(1)=e-3\\approx -0{,}28<0$ et $f(2)=e^{2}-3\\approx 4{,}39>0$.",
+        "$0$ est compris entre $f(1)$ et $f(2)$ : par le TVI, il existe $c\\in[1\\,;2]$ tel que $f(c)=0$."
+      ],
+      "reponse": "Au moins une solution dans $[1\\,;2]$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "tvi",
+      "enonce": "Une fonction $f$ est continue sur $[0\\,;4]$, avec $f(0)=5$ et $f(4)=-1$. L'équation $f(x)=2$ a-t-elle au moins une solution dans $[0\\,;4]$ ? Peut-on affirmer qu'elle en a une seule ?",
+      "corrige": [
+        "$f$ est continue et $2$ est compris entre $f(4)=-1$ et $f(0)=5$ : par le TVI, il existe au moins une solution.",
+        "On ne sait rien sur la monotonie de $f$ : on ne peut pas conclure à l'unicité."
+      ],
+      "reponse": "Au moins une solution ; l'unicité ne peut pas être affirmée."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "tvi",
+      "enonce": "Un élève écrit : « $f(x)=\\dfrac{1}{x}$ vérifie $f(-1)=-1$ et $f(1)=1$, donc d'après le TVI l'équation $f(x)=0$ a une solution dans $[-1\\,;1]$. » Expliquer l'erreur.",
+      "corrige": [
+        "$f$ n'est pas définie en $0$, donc pas continue sur $[-1\\,;1]$ : l'hypothèse de continuité du TVI n'est pas vérifiée.",
+        "D'ailleurs $\\dfrac{1}{x}$ ne s'annule jamais : l'équation n'a aucune solution."
+      ],
+      "reponse": "Le TVI ne s'applique pas : $f$ n'est pas continue sur $[-1\\,;1]$ (et $f(x)=0$ n'a pas de solution)."
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "tvi",
+      "enonce": "Soit $f(x)=x^2$ sur $[-2\\,;2]$. On a $f(-2)=f(2)=4$. Le TVI permet-il de dire si l'équation $f(x)=1$ a des solutions ? Résoudre ensuite cette équation.",
+      "corrige": [
+        "$1$ n'est pas compris entre $f(-2)=4$ et $f(2)=4$ : l'hypothèse du TVI n'est pas vérifiée, le théorème ne dit rien.",
+        "Pourtant, $x^2=1$ a deux solutions dans $[-2\\,;2]$ : $x=-1$ et $x=1$."
+      ],
+      "reponse": "Le TVI ne permet pas de conclure ; les solutions sont $-1$ et $1$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "cas-strictement-monotone",
+      "enonce": "Soit $f(x)=2x^3+x$ sur $[0\\,;2]$. Montrer que l'équation $f(x)=5$ admet une unique solution dans $[0\\,;2]$.",
+      "corrige": [
+        "$f$ est un polynôme, donc continue sur $[0\\,;2]$.",
+        "$f'(x)=6x^2+1>0$ : $f$ est strictement croissante sur $[0\\,;2]$.",
+        "$f(0)=0$ et $f(2)=18$ ; $5$ est compris entre $0$ et $18$. Par le TVI (cas strictement monotone), la solution existe et est unique."
+      ],
+      "reponse": "Une unique solution dans $[0\\,;2]$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "cas-strictement-monotone",
+      "enonce": "Soit $f(x)=\\ln x+x$ sur $[1\\,;e]$. Montrer que l'équation $f(x)=2$ admet une unique solution dans $[1\\,;e]$.",
+      "corrige": [
+        "$f$ est continue sur $[1\\,;e]$ (somme de fonctions continues).",
+        "$f'(x)=\\dfrac{1}{x}+1>0$ : $f$ est strictement croissante.",
+        "$f(1)=1$ et $f(e)=1+e\\approx 3{,}72$ ; $2$ est compris entre ces valeurs, d'où une unique solution."
+      ],
+      "reponse": "Une unique solution dans $[1\\,;e]$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "cas-strictement-monotone",
+      "enonce": "Le tableau de variations d'une fonction $f$ indique une seule flèche montante, de $f(0)=-3$ à $f(4)=5$. Combien l'équation $f(x)=0$ a-t-elle de solutions dans $[0\\,;4]$ ? Et l'équation $f(x)=6$ ?",
+      "corrige": [
+        "La flèche signifie que $f$ est continue et strictement croissante sur $[0\\,;4]$.",
+        "$0$ est compris entre $-3$ et $5$ : une unique solution de $f(x)=0$.",
+        "Pour tout $x$ de $[0\\,;4]$, $f(x)\\leqslant f(4)=5<6$ : l'équation $f(x)=6$ n'a aucune solution."
+      ],
+      "reponse": "$f(x)=0$ : une solution ; $f(x)=6$ : aucune."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "cas-strictement-monotone",
+      "enonce": "Soit $f(x)=-x^3-x+4$ sur $[0\\,;2]$. Montrer que $f$ s'annule une seule fois sur $[0\\,;2]$.",
+      "corrige": [
+        "$f$ est un polynôme, donc continue.",
+        "$f'(x)=-3x^2-1<0$ : $f$ est strictement décroissante sur $[0\\,;2]$.",
+        "$f(0)=4>0$ et $f(2)=-8-2+4=-6<0$ : $0$ est compris entre ces valeurs, donc $f$ s'annule une unique fois."
+      ],
+      "reponse": "$f(x)=0$ a une unique solution dans $[0\\,;2]$."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "cas-strictement-monotone",
+      "enonce": "Un élève affirme : « $f(x)=x^3-3x+1$ est continue sur $[-2\\,;2]$, $f(-2)=-1$ et $f(2)=3$, donc $f(x)=0$ a une unique solution dans $[-2\\,;2]$. » Qu'est-ce qui manque ? Que se passe-t-il réellement ?",
+      "corrige": [
+        "Le TVI donne seulement l'existence ; pour l'unicité, il faut la stricte monotonie.",
+        "Or $f'(x)=3x^2-3=3(x-1)(x+1)$ change de signe : $f$ croît sur $[-2\\,;-1]$, décroît sur $[-1\\,;1]$, croît sur $[1\\,;2]$.",
+        "Avec $f(-2)=-1$, $f(-1)=3$, $f(1)=-1$ et $f(2)=3$, chaque morceau contient une solution : il y en a trois."
+      ],
+      "reponse": "Il manque la stricte monotonie ; l'équation a en fait $3$ solutions dans $[-2\\,;2]$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "intervalle-infini",
+      "enonce": "Soit $f(x)=e^{x}+x$ sur $\\mathbb{R}$. Montrer que l'équation $f(x)=0$ admet une unique solution réelle.",
+      "corrige": [
+        "$f$ est continue sur $\\mathbb{R}$ et $f'(x)=e^{x}+1>0$ : $f$ est strictement croissante.",
+        "$\\displaystyle\\lim_{x\\to-\\infty} f(x)=-\\infty$ (car $e^{x}\\to 0$) et $\\displaystyle\\lim_{x\\to+\\infty} f(x)=+\\infty$.",
+        "$0$ est compris entre ces limites : une unique solution réelle."
+      ],
+      "reponse": "Une unique solution réelle."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "intervalle-infini",
+      "enonce": "Soit $g(x)=\\ln x+2x$ sur $]0\\,;+\\infty[$. Montrer que l'équation $g(x)=0$ admet une unique solution sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$g$ est continue et $g'(x)=\\dfrac{1}{x}+2>0$ : $g$ est strictement croissante sur $]0\\,;+\\infty[$.",
+        "$\\displaystyle\\lim_{x\\to 0^+} g(x)=-\\infty$ et $\\displaystyle\\lim_{x\\to+\\infty} g(x)=+\\infty$.",
+        "$0$ est compris entre ces limites : une unique solution."
+      ],
+      "reponse": "Une unique solution sur $]0\\,;+\\infty[$."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "intervalle-infini",
+      "enonce": "Soit $f(x)=e^{-x}$ sur $]0\\,;+\\infty[$, strictement décroissante, avec $\\displaystyle\\lim_{x\\to 0^+} f(x)=1$ et $\\displaystyle\\lim_{x\\to+\\infty} f(x)=0$. L'équation $f(x)=1$ a-t-elle une solution dans $]0\\,;+\\infty[$ ? Et $f(x)=0{,}5$ ?",
+      "corrige": [
+        "$f$ est strictement décroissante sur $]0\\,;+\\infty[$ : pour $x>0$, $0<f(x)<1$. Les limites $1$ et $0$ ne sont pas atteintes.",
+        "Donc $f(x)=1$ n'a pas de solution dans $]0\\,;+\\infty[$ (elle est atteinte seulement en $x=0$, exclu).",
+        "$0{,}5$ est strictement compris entre $0$ et $1$ : une unique solution (c'est $x=\\ln 2$)."
+      ],
+      "reponse": "$f(x)=1$ : aucune solution ; $f(x)=0{,}5$ : une unique solution ($\\ln 2$)."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "intervalle-infini",
+      "enonce": "Montrer que l'équation $e^{x}=3-x$ admet une unique solution réelle $\\alpha$, puis justifier que $0<\\alpha<1$.",
+      "corrige": [
+        "L'équation équivaut à $g(x)=0$ avec $g(x)=e^{x}+x-3$, continue sur $\\mathbb{R}$.",
+        "$g'(x)=e^{x}+1>0$ ; $\\displaystyle\\lim_{-\\infty} g=-\\infty$ et $\\displaystyle\\lim_{+\\infty} g=+\\infty$ : une unique solution $\\alpha$.",
+        "$g(0)=-2<0$ et $g(1)=e-2>0$ : $g$ change de signe sur $]0\\,;1[$, donc $0<\\alpha<1$."
+      ],
+      "reponse": "Une unique solution $\\alpha$, avec $0<\\alpha<1$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "encadrement",
+      "enonce": "On sait que l'équation $x^2-3=0$ a une unique solution $\\alpha$ dans $[1\\,;2]$. On calcule $f(1{,}7)=-0{,}11$ et $f(1{,}8)=0{,}24$ pour $f(x)=x^2-3$. En déduire un encadrement de $\\alpha$ d'amplitude $0{,}1$.",
+      "corrige": [
+        "$f$ change de signe entre $1{,}7$ et $1{,}8$ : la solution se trouve entre ces deux nombres."
+      ],
+      "reponse": "$1{,}7<\\alpha<1{,}8$"
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "encadrement",
+      "enonce": "Soit $f(x)=x^3-x-1$, avec $f(1)=-1$ et $f(2)=5$ ; l'équation $f(x)=0$ a une unique solution $\\alpha$ dans $[1\\,;2]$. Effectuer deux étapes de dichotomie et donner l'encadrement obtenu.",
+      "corrige": [
+        "Étape 1 : $m=1{,}5$ ; $f(1{,}5)=0{,}875>0$, signe contraire de $f(1)$ : on garde $[1\\,;1{,}5]$.",
+        "Étape 2 : $m=1{,}25$ ; $f(1{,}25)\\approx -0{,}30<0$, même signe que $f(1)$ : on garde $[1{,}25\\,;1{,}5]$."
+      ],
+      "reponse": "$1{,}25<\\alpha<1{,}5$"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "encadrement",
+      "enonce": "On applique la dichotomie à partir d'un intervalle de longueur $1$. Combien d'étapes faut-il au minimum pour obtenir un encadrement d'amplitude inférieure ou égale à $0{,}01$ ?",
+      "corrige": [
+        "Après $n$ étapes, la longueur vaut $\\dfrac{1}{2^n}$. Il faut $\\dfrac{1}{2^n}\\leqslant 0{,}01$, soit $2^n\\geqslant 100$.",
+        "$2^6=64<100$ et $2^7=128\\geqslant 100$ : il faut $7$ étapes."
+      ],
+      "reponse": "$7$ étapes"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "encadrement",
+      "enonce": "Après un balayage de pas $0{,}1$, un élève obtient $0{,}6<\\alpha<0{,}7$ et conclut : « $\\alpha=0{,}65$ ». Corriger sa conclusion.",
+      "corrige": [
+        "Le balayage fournit seulement un encadrement : on sait que $\\alpha$ est entre $0{,}6$ et $0{,}7$, pas sa valeur exacte.",
+        "Écrire $\\alpha=0{,}65$ est faux ; on peut seulement écrire $0{,}6<\\alpha<0{,}7$ (ou affiner avec un pas plus petit)."
+      ],
+      "reponse": "On ne peut écrire que $0{,}6<\\alpha<0{,}7$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "encadrement",
+      "enonce": "Soit $f(x)=e^{x}+x-2$, strictement croissante, qui s'annule en un unique réel $\\alpha$. On donne : $f(0{,}4)\\approx -0{,}108$, $f(0{,}5)\\approx 0{,}149$, $f(0{,}44)\\approx -0{,}007$ et $f(0{,}45)\\approx 0{,}018$. Donner un encadrement de $\\alpha$ d'amplitude $0{,}1$, puis d'amplitude $0{,}01$.",
+      "corrige": [
+        "$f(0{,}4)<0<f(0{,}5)$ : $0{,}4<\\alpha<0{,}5$.",
+        "$f(0{,}44)<0<f(0{,}45)$ : $0{,}44<\\alpha<0{,}45$."
+      ],
+      "reponse": "$0{,}4<\\alpha<0{,}5$ puis $0{,}44<\\alpha<0{,}45$"
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "decoupage",
+      "enonce": "Soit $f(x)=x^2-4x+1$ sur $[0\\,;5]$. Dresser les variations de $f$ et en déduire le nombre de solutions de $f(x)=0$ dans $[0\\,;5]$.",
+      "corrige": [
+        "$f'(x)=2x-4$ : $f$ décroît sur $[0\\,;2]$ et croît sur $[2\\,;5]$, avec $f(0)=1$, $f(2)=-3$, $f(5)=6$.",
+        "Sur $[0\\,;2]$ : $0$ est entre $1$ et $-3$, une solution. Sur $[2\\,;5]$ : $0$ est entre $-3$ et $6$, une solution."
+      ],
+      "reponse": "$2$ solutions"
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "decoupage",
+      "enonce": "Une fonction $f$ continue est strictement croissante sur $[-3\\,;0]$, de $f(-3)=1$ à $f(0)=4$, puis strictement décroissante sur $[0\\,;5]$, jusqu'à $f(5)=-2$. Donner le nombre de solutions de $f(x)=2$, puis de $f(x)=0$, dans $[-3\\,;5]$.",
+      "corrige": [
+        "$f(x)=2$ : sur $[-3\\,;0]$, $2\\in[1\\,;4]$, une solution ; sur $[0\\,;5]$, $2\\in[-2\\,;4]$, une solution. Total : $2$.",
+        "$f(x)=0$ : sur $[-3\\,;0]$, $f(x)\\geqslant 1$, aucune solution ; sur $[0\\,;5]$, $0\\in[-2\\,;4]$, une solution. Total : $1$."
+      ],
+      "reponse": "$f(x)=2$ : $2$ solutions ; $f(x)=0$ : $1$ solution."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "decoupage",
+      "enonce": "Soit $f(x)=x^3-12x$ sur $[-3\\,;3]$. Déterminer le nombre de solutions de l'équation $f(x)=10$ dans $[-3\\,;3]$.",
+      "corrige": [
+        "$f'(x)=3x^2-12=3(x-2)(x+2)$ : $f$ croît sur $[-3\\,;-2]$, décroît sur $[-2\\,;2]$, croît sur $[2\\,;3]$.",
+        "$f(-3)=9$, $f(-2)=16$, $f(2)=-16$, $f(3)=-9$.",
+        "$10\\in[9\\,;16]$ : une solution sur $[-3\\,;-2]$ ; $10\\in[-16\\,;16]$ : une solution sur $[-2\\,;2]$ ; sur $[2\\,;3]$, $f(x)\\leqslant -9$ : aucune."
+      ],
+      "reponse": "$2$ solutions"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "decoupage",
+      "enonce": "Soit $f(x)=x^4-2x^2$ sur $[-2\\,;2]$. Combien l'équation $f(x)=-0{,}5$ a-t-elle de solutions dans $[-2\\,;2]$ ?",
+      "corrige": [
+        "$f'(x)=4x^3-4x=4x(x-1)(x+1)$ : $f$ décroît sur $[-2\\,;-1]$, croît sur $[-1\\,;0]$, décroît sur $[0\\,;1]$, croît sur $[1\\,;2]$.",
+        "$f(-2)=8$, $f(-1)=-1$, $f(0)=0$, $f(1)=-1$, $f(2)=8$.",
+        "$-0{,}5$ est compris entre les valeurs aux bornes de chacun des quatre morceaux : une solution par morceau."
+      ],
+      "reponse": "$4$ solutions"
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f(x)=x^3+x-3$ sur $\\mathbb{R}$. Montrer que $f(x)=0$ admet une unique solution $\\alpha$, puis l'encadrer à $0{,}1$ près sachant que $f(1{,}2)=-0{,}072$ et $f(1{,}3)=0{,}497$.",
+      "corrige": [
+        "$f$ est continue (polynôme) et $f'(x)=3x^2+1>0$ : $f$ est strictement croissante sur $\\mathbb{R}$.",
+        "$\\displaystyle\\lim_{-\\infty} f=-\\infty$ et $\\displaystyle\\lim_{+\\infty} f=+\\infty$ : une unique solution $\\alpha$.",
+        "$f(1{,}2)<0<f(1{,}3)$, donc $1{,}2<\\alpha<1{,}3$."
+      ],
+      "reponse": "Unique solution $\\alpha$, avec $1{,}2<\\alpha<1{,}3$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f(x)=2\\ln x+x$ sur $[1\\,;4]$. Montrer que $f(x)=4$ admet une unique solution $\\alpha$ dans $[1\\,;4]$. Avec $f(2{,}3)\\approx 3{,}97$ et $f(2{,}4)\\approx 4{,}15$, encadrer $\\alpha$.",
+      "corrige": [
+        "$f$ est continue sur $[1\\,;4]$ et $f'(x)=\\dfrac{2}{x}+1>0$ : $f$ est strictement croissante.",
+        "$f(1)=1$ et $f(4)=2\\ln 4+4\\approx 6{,}77$ : $4$ est compris entre ces valeurs, d'où une unique solution.",
+        "$f(2{,}3)<4<f(2{,}4)$, donc $2{,}3<\\alpha<2{,}4$."
+      ],
+      "reponse": "Unique solution, avec $2{,}3<\\alpha<2{,}4$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "methode-fxk",
+      "enonce": "Le volume d'eau d'un bassin, en $\\text{m}^3$, est modélisé par $V(t)=-t^3+6t^2+15$ pour $t\\in[0\\,;6]$ ($t$ en heures). 1. Étudier les variations de $V$. 2. Montrer que l'équation $V(t)=40$ a exactement deux solutions dans $[0\\,;6]$. 3. Vérifier que l'une d'elles vaut $5$. 4. Encadrer l'autre, notée $\\beta$, à $0{,}1$ près sachant que $V(2{,}7)\\approx 39{,}06$ et $V(2{,}8)\\approx 40{,}09$.",
+      "corrige": [
+        "1. $V'(t)=-3t^2+12t=3t(4-t)$ : $V$ croît sur $[0\\,;4]$ et décroît sur $[4\\,;6]$ ; $V(0)=15$, $V(4)=47$, $V(6)=15$.",
+        "2. $V$ est continue. Sur $[0\\,;4]$, strictement croissante de $15$ à $47$ : une solution. Sur $[4\\,;6]$, strictement décroissante de $47$ à $15$ : une solution. Total : deux.",
+        "3. $V(5)=-125+150+15=40$.",
+        "4. $V(2{,}7)<40<V(2{,}8)$ avec $V$ croissante sur $[0\\,;4]$ : $2{,}7<\\beta<2{,}8$."
+      ],
+      "reponse": "1. Croissante sur $[0\\,;4]$, décroissante sur $[4\\,;6]$. 2. Deux solutions. 3. $V(5)=40$. 4. $2{,}7<\\beta<2{,}8$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f(x)=x^3-3x+1$ sur $[0\\,;1]$. 1. Montrer que $f$ est strictement décroissante sur $[0\\,;1]$. 2. En déduire que $f(x)=0$ admet une unique solution $\\alpha$ dans $[0\\,;1]$. 3. Sachant que $f(0{,}3)\\approx 0{,}127$ et $f(0{,}4)\\approx -0{,}136$, encadrer $\\alpha$.",
+      "corrige": [
+        "1. $f'(x)=3x^2-3=3(x-1)(x+1)$ est strictement négative sur $[0\\,;1[$ (et nulle en $1$) : $f$ est strictement décroissante sur $[0\\,;1]$.",
+        "2. $f$ est continue, $f(0)=1>0$ et $f(1)=-1<0$ : par le TVI dans le cas strictement monotone, une unique solution $\\alpha$.",
+        "3. $f(0{,}3)>0>f(0{,}4)$ : $0{,}3<\\alpha<0{,}4$."
+      ],
+      "reponse": "Unique solution $\\alpha$ avec $0{,}3<\\alpha<0{,}4$."
     }
   ]
 }

@@ -133,7 +133,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Une entreprise fabrique des clés USB dans deux ateliers. L'atelier $A$ produit $60\\,\\%$ des clés, dont $5\\,\\%$ sont défectueuses ; l'atelier $B$ produit les $40\\,\\%$ restants, dont $10\\,\\%$ sont défectueuses. On prélève une clé au hasard dans la production et on note $D$ l'événement « la clé est défectueuse ». **1.** Représenter la situation par un arbre pondéré. **2.** Calculer la probabilité qu'une clé prélevée au hasard soit défectueuse, $P(D)$. **3.** Une clé prélevée est défectueuse ; montrer que la probabilité qu'elle provienne de l'atelier $B$ est $\\dfrac{4}{7}$, puis en donner une valeur approchée au centième. **4.** On prélève maintenant, au hasard dans la production, un lot de $10$ clés. La production est suffisamment grande pour que ces prélèvements soient assimilés à des tirages indépendants. On note $Y$ le nombre de clés défectueuses dans le lot. Justifier que $Y \\sim B(10\\,;\\,0{,}07)$. **5.** Calculer la probabilité qu'au moins une clé du lot soit défectueuse (arrondie au millième), puis donner le nombre moyen de clés défectueuses attendu dans un lot.",
       "corrige": [
@@ -144,6 +144,434 @@
         "**5.** « Au moins une défectueuse » est le contraire de « aucune » : $P(Y \\geqslant 1) = 1 - P(Y = 0)$, avec $P(Y = 0) = (1 - p)^{10} = 0{,}93^{10} \\approx 0{,}484$. Donc $P(Y \\geqslant 1) = 1 - 0{,}93^{10} \\approx 1 - 0{,}484 = 0{,}516$. Le nombre moyen de clés défectueuses est l'espérance $E(Y) = np = 10 \\times 0{,}07 = 0{,}7$."
       ],
       "reponse": "$P(D) = 0{,}07$ ; $P_D(B) = \\dfrac{4}{7} \\approx 0{,}57$ ; $Y \\sim B(10\\,;\\,0{,}07)$ ; $P(Y \\geqslant 1) = 1 - 0{,}93^{10} \\approx 0{,}516$ ; $E(Y) = 0{,}7$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "conditionnelle",
+      "enonce": "On sait que $P(A)=0{,}5$ et $P(A\\cap B)=0{,}2$. Calculer $P_A(B)$.",
+      "corrige": [
+        "$P_A(B)=\\dfrac{P(A\\cap B)}{P(A)}=\\dfrac{0{,}2}{0{,}5}=0{,}4$."
+      ],
+      "reponse": "$P_A(B)=0{,}4$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "Dans un lycée de $800$ élèves, $320$ sont demi-pensionnaires et, parmi eux, $96$ pratiquent un sport en club. On choisit au hasard un demi-pensionnaire. Probabilité qu'il pratique un sport en club ?",
+      "corrige": [
+        "On se restreint aux $320$ demi-pensionnaires : $\\dfrac{96}{320}=0{,}3$."
+      ],
+      "reponse": "$0{,}3$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "On lance un dé équilibré à six faces. Sachant que le résultat est pair, quelle est la probabilité d'avoir obtenu $6$ ?",
+      "corrige": [
+        "$A$ : « pair » $=\\{2\\,;4\\,;6\\}$, $P(A)=\\dfrac{1}{2}$ ; $A\\cap B=\\{6\\}$, de probabilité $\\dfrac{1}{6}$.",
+        "$P_A(B)=\\dfrac{1/6}{1/2}=\\dfrac{1}{3}$."
+      ],
+      "reponse": "$\\dfrac{1}{3}$"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "conditionnelle",
+      "enonce": "Dans un tableau, on lit : $P(M)=0{,}1$, $P_M(T)=0{,}9$. Un élève en déduit $P_T(M)=0{,}9$. Expliquer son erreur.",
+      "corrige": [
+        "$P_M(T)$ est la probabilité d'être positif sachant qu'on est malade ; $P_T(M)$ est la probabilité d'être malade sachant qu'on est positif.",
+        "Ces deux probabilités ne sont pas égales en général : pour obtenir $P_T(M)$, il faut la formule de Bayes, donc connaître aussi $P_{\\overline{M}}(T)$."
+      ],
+      "reponse": "Il a inversé le conditionnement : $P_T(M)\\neq P_M(T)$."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "intersection-arbre",
+      "enonce": "Dans un arbre pondéré, la branche $A$ porte $0{,}3$ et la branche $B$ issue de $A$ porte $0{,}6$. Calculer $P(A\\cap B)$.",
+      "corrige": [
+        "Le long d'un chemin, on multiplie : $P(A\\cap B)=P(A)\\times P_A(B)=0{,}3\\times 0{,}6=0{,}18$."
+      ],
+      "reponse": "$0{,}18$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "intersection-arbre",
+      "enonce": "Dans un arbre, les deux branches issues de la racine portent $A$ : $0{,}35$ et $\\overline{A}$ : ? ; les branches issues de $A$ portent $B$ : $0{,}8$ et $\\overline{B}$ : ?. Compléter les probabilités manquantes.",
+      "corrige": [
+        "Les branches issues d'un même nœud se somment à $1$.",
+        "$P(\\overline{A})=1-0{,}35=0{,}65$ et $P_A(\\overline{B})=1-0{,}8=0{,}2$."
+      ],
+      "reponse": "$0{,}65$ et $0{,}2$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "intersection-arbre",
+      "enonce": "Une urne contient $6$ boules dont $2$ rouges. On tire deux boules successivement sans remise. Probabilité d'obtenir deux boules rouges ?",
+      "corrige": [
+        "$P(R_1)=\\dfrac{2}{6}=\\dfrac{1}{3}$ ; après une rouge, il reste $1$ rouge sur $5$ : $P_{R_1}(R_2)=\\dfrac{1}{5}$.",
+        "$P(R_1\\cap R_2)=\\dfrac{1}{3}\\times\\dfrac{1}{5}=\\dfrac{1}{15}$."
+      ],
+      "reponse": "$\\dfrac{1}{15}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "intersection-arbre",
+      "enonce": "$40\\,\\%$ des clients d'un magasin ont la carte de fidélité ; parmi eux, $75\\,\\%$ achètent un produit en promotion. Quelle proportion des clients a la carte et achète un produit en promotion ?",
+      "corrige": [
+        "$P(C\\cap P)=P(C)\\times P_C(P)=0{,}4\\times 0{,}75=0{,}3$."
+      ],
+      "reponse": "$30\\,\\%$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "intersection-arbre",
+      "enonce": "On sait que $P(A\\cap B)=0{,}12$ et $P_A(B)=0{,}4$. Calculer $P(A)$.",
+      "corrige": [
+        "$P(A\\cap B)=P(A)\\times P_A(B)$, donc $P(A)=\\dfrac{0{,}12}{0{,}4}=0{,}3$."
+      ],
+      "reponse": "$P(A)=0{,}3$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "independance",
+      "enonce": "$P(A)=0{,}5$, $P(B)=0{,}4$ et $P(A\\cap B)=0{,}2$. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "corrige": [
+        "$P(A)\\times P(B)=0{,}5\\times 0{,}4=0{,}2=P(A\\cap B)$."
+      ],
+      "reponse": "Oui, ils sont indépendants."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "independance",
+      "enonce": "$A$ et $B$ sont indépendants, avec $P(A)=0{,}3$ et $P(B)=0{,}7$. Calculer $P(A\\cap B)$ et $P_A(B)$.",
+      "corrige": [
+        "Indépendance : $P(A\\cap B)=0{,}3\\times 0{,}7=0{,}21$.",
+        "$P_A(B)=P(B)=0{,}7$."
+      ],
+      "reponse": "$P(A\\cap B)=0{,}21$ ; $P_A(B)=0{,}7$"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "independance",
+      "enonce": "On tire une carte d'un jeu de $32$ cartes. $A$ : « la carte est un cœur » ; $B$ : « la carte est un roi ». $A$ et $B$ sont-ils indépendants ?",
+      "corrige": [
+        "$P(A)=\\dfrac{8}{32}=\\dfrac{1}{4}$, $P(B)=\\dfrac{4}{32}=\\dfrac{1}{8}$ ; $A\\cap B$ = « roi de cœur », $P(A\\cap B)=\\dfrac{1}{32}$.",
+        "$P(A)\\times P(B)=\\dfrac{1}{32}=P(A\\cap B)$ : indépendants."
+      ],
+      "reponse": "Oui, ils sont indépendants."
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "independance",
+      "enonce": "Un élève affirme : « $A$ et $B$ sont incompatibles, donc indépendants. » On a $P(A)=0{,}3$, $P(B)=0{,}5$ et $A\\cap B=\\varnothing$. A-t-il raison ?",
+      "corrige": [
+        "Incompatibles : $P(A\\cap B)=0$.",
+        "Or $P(A)\\times P(B)=0{,}15\\neq 0$ : $A$ et $B$ ne sont pas indépendants. Si $A$ se produit, $B$ devient impossible."
+      ],
+      "reponse": "Non : incompatibles, mais pas indépendants."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "probabilites-totales",
+      "enonce": "$P(A)=0{,}6$, $P_A(B)=0{,}5$ et $P_{\\overline{A}}(B)=0{,}2$. Calculer $P(B)$.",
+      "corrige": [
+        "$P(B)=P(A)P_A(B)+P(\\overline{A})P_{\\overline{A}}(B)$.",
+        "$=0{,}6\\times 0{,}5+0{,}4\\times 0{,}2=0{,}3+0{,}08=0{,}38$."
+      ],
+      "reponse": "$P(B)=0{,}38$"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "probabilites-totales",
+      "enonce": "Un élève prend le bus $80\\,\\%$ du temps et le vélo sinon. En bus, il est en retard $10\\,\\%$ des fois ; à vélo, $5\\,\\%$ des fois. Probabilité qu'il soit en retard un jour donné ?",
+      "corrige": [
+        "$P(R)=0{,}8\\times 0{,}1+0{,}2\\times 0{,}05=0{,}08+0{,}01=0{,}09$."
+      ],
+      "reponse": "$0{,}09$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "Trois fournisseurs livrent un magasin : $F_1$ ($50\\,\\%$ des produits, $1\\,\\%$ défectueux), $F_2$ ($30\\,\\%$, $2\\,\\%$ défectueux), $F_3$ ($20\\,\\%$, $4\\,\\%$ défectueux). Probabilité qu'un produit pris au hasard soit défectueux ?",
+      "corrige": [
+        "$F_1$, $F_2$, $F_3$ forment une partition.",
+        "$P(D)=0{,}5\\times 0{,}01+0{,}3\\times 0{,}02+0{,}2\\times 0{,}04=0{,}005+0{,}006+0{,}008=0{,}019$."
+      ],
+      "reponse": "$0{,}019$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "On sait que $P(A)=0{,}4$, $P_A(B)=0{,}3$ et $P(B)=0{,}36$. Déterminer $P_{\\overline{A}}(B)$.",
+      "corrige": [
+        "$P(B)=0{,}4\\times 0{,}3+0{,}6\\times P_{\\overline{A}}(B)=0{,}12+0{,}6\\,P_{\\overline{A}}(B)$.",
+        "$0{,}36=0{,}12+0{,}6\\,P_{\\overline{A}}(B)$, donc $P_{\\overline{A}}(B)=\\dfrac{0{,}24}{0{,}6}=0{,}4$."
+      ],
+      "reponse": "$P_{\\overline{A}}(B)=0{,}4$"
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "Une urne $U_1$ contient $3$ boules blanches et $2$ noires ; une urne $U_2$ contient $1$ blanche et $4$ noires. On lance une pièce équilibrée : Pile, on tire dans $U_1$ ; Face, dans $U_2$. Probabilité de tirer une boule blanche ?",
+      "corrige": [
+        "$P(B)=\\dfrac{1}{2}\\times\\dfrac{3}{5}+\\dfrac{1}{2}\\times\\dfrac{1}{5}=\\dfrac{3}{10}+\\dfrac{1}{10}=\\dfrac{2}{5}$."
+      ],
+      "reponse": "$\\dfrac{2}{5}=0{,}4$"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "bayes",
+      "enonce": "$P(A)=0{,}6$, $P_A(B)=0{,}5$ et $P(B)=0{,}38$. Calculer $P_B(A)$ (arrondi au centième).",
+      "corrige": [
+        "$P_B(A)=\\dfrac{P(A)P_A(B)}{P(B)}=\\dfrac{0{,}3}{0{,}38}\\approx 0{,}79$."
+      ],
+      "reponse": "$\\approx 0{,}79$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "bayes",
+      "enonce": "Un élève prend le bus $80\\,\\%$ du temps (en retard $10\\,\\%$ des fois) et le vélo sinon (en retard $5\\,\\%$ des fois). Un jour, il est en retard : probabilité qu'il ait pris le bus ?",
+      "corrige": [
+        "$P(R)=0{,}09$ (probabilités totales).",
+        "$P_R(\\text{bus})=\\dfrac{0{,}8\\times 0{,}1}{0{,}09}=\\dfrac{0{,}08}{0{,}09}=\\dfrac{8}{9}\\approx 0{,}89$."
+      ],
+      "reponse": "$\\dfrac{8}{9}\\approx 0{,}89$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "bayes",
+      "enonce": "Avec les trois fournisseurs ($F_1$ : $50\\,\\%$ et $1\\,\\%$ de défauts ; $F_2$ : $30\\,\\%$ et $2\\,\\%$ ; $F_3$ : $20\\,\\%$ et $4\\,\\%$), un produit est défectueux. Probabilité qu'il vienne de $F_3$ (au centième) ?",
+      "corrige": [
+        "$P(D)=0{,}019$.",
+        "$P_D(F_3)=\\dfrac{0{,}2\\times 0{,}04}{0{,}019}=\\dfrac{0{,}008}{0{,}019}\\approx 0{,}42$."
+      ],
+      "reponse": "$\\approx 0{,}42$"
+    },
+    {
+      "id": 32,
+      "difficulte": "approfondissement",
+      "notion": "bayes",
+      "enonce": "L'urne $U_1$ contient $3$ boules blanches et $2$ noires, l'urne $U_2$ contient $1$ blanche et $4$ noires. On choisit une urne à pile ou face, puis on y tire une boule : elle est blanche. Probabilité qu'elle vienne de $U_1$ ?",
+      "corrige": [
+        "$P(B)=\\dfrac{2}{5}$.",
+        "$P_B(U_1)=\\dfrac{\\frac{1}{2}\\times\\frac{3}{5}}{\\frac{2}{5}}=\\dfrac{3/10}{4/10}=\\dfrac{3}{4}$."
+      ],
+      "reponse": "$\\dfrac{3}{4}$"
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "bayes",
+      "enonce": "Une maladie touche $10\\,\\%$ d'une population. Un test est positif chez $90\\,\\%$ des malades et chez $5\\,\\%$ des personnes saines. Calculer la probabilité qu'une personne positive soit malade (au centième), puis comparer avec l'exemple de la fiche (maladie à $2\\,\\%$).",
+      "corrige": [
+        "$P(T)=0{,}1\\times 0{,}9+0{,}9\\times 0{,}05=0{,}09+0{,}045=0{,}135$.",
+        "$P_T(M)=\\dfrac{0{,}09}{0{,}135}=\\dfrac{2}{3}\\approx 0{,}67$.",
+        "Plus la maladie est fréquente, moins les faux positifs pèsent : ici, malgré un test un peu moins fiable, on obtient une valeur comparable à celle de la fiche ($\\approx 0{,}66$)."
+      ],
+      "reponse": "$P_T(M)=\\dfrac{2}{3}\\approx 0{,}67$"
+    },
+    {
+      "id": 34,
+      "difficulte": "decouverte",
+      "notion": "schema-bernoulli",
+      "enonce": "On lance un dé équilibré et on s'intéresse à l'événement « obtenir un nombre supérieur ou égal à $5$ ». Est-ce une épreuve de Bernoulli ? Donner son paramètre.",
+      "corrige": [
+        "Deux issues : succès « $5$ ou $6$ », échec sinon.",
+        "$p=\\dfrac{2}{6}=\\dfrac{1}{3}$."
+      ],
+      "reponse": "Oui, de paramètre $p=\\dfrac{1}{3}$"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "schema-bernoulli",
+      "enonce": "Un QCM a $10$ questions indépendantes, chacune avec $4$ réponses dont une seule juste. Un élève répond au hasard. Justifier que le nombre de bonnes réponses suit une loi binomiale et donner ses paramètres.",
+      "corrige": [
+        "Chaque question est une épreuve à deux issues (juste ou faux), de même probabilité de succès $\\dfrac{1}{4}$, et les réponses sont indépendantes.",
+        "On répète $10$ fois : schéma de Bernoulli, et $X\\sim B(10\\,;0{,}25)$."
+      ],
+      "reponse": "$X\\sim B(10\\,;0{,}25)$"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "schema-bernoulli",
+      "enonce": "On tire successivement et sans remise $3$ boules dans une urne de $10$ boules dont $4$ rouges, et l'on compte les rouges. Peut-on utiliser la loi binomiale ?",
+      "corrige": [
+        "Sans remise, la composition de l'urne change après chaque tirage : la probabilité de tirer une rouge n'est pas la même à chaque épreuve, et les tirages ne sont pas indépendants.",
+        "Ce n'est pas un schéma de Bernoulli."
+      ],
+      "reponse": "Non (tirage sans remise)."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "schema-bernoulli",
+      "enonce": "Dans un schéma de Bernoulli avec $n=5$ et $p=0{,}2$, quelle est la probabilité du chemin « succès, échec, échec, succès, échec » ?",
+      "corrige": [
+        "On multiplie les branches : $0{,}2\\times 0{,}8\\times 0{,}8\\times 0{,}2\\times 0{,}8=0{,}2^{2}\\times 0{,}8^{3}$.",
+        "$=0{,}04\\times 0{,}512=0{,}02048$."
+      ],
+      "reponse": "$0{,}2^{2}\\times 0{,}8^{3}=0{,}02048$"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "loi-binomiale",
+      "enonce": "$X\\sim B(3\\,;0{,}5)$. Calculer $P(X=0)$, $P(X=1)$, $P(X=2)$ et $P(X=3)$.",
+      "corrige": [
+        "$P(X=k)=\\dbinom{3}{k}\\times 0{,}5^{3}=\\dbinom{3}{k}\\times\\dfrac{1}{8}$, avec $\\dbinom{3}{0}=1$, $\\dbinom{3}{1}=3$, $\\dbinom{3}{2}=3$, $\\dbinom{3}{3}=1$."
+      ],
+      "reponse": "$\\dfrac{1}{8}$, $\\dfrac{3}{8}$, $\\dfrac{3}{8}$, $\\dfrac{1}{8}$"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "loi-binomiale",
+      "enonce": "$X\\sim B(10\\,;0{,}25)$ (QCM répondu au hasard). Calculer $P(X=0)$ (au millième).",
+      "corrige": [
+        "$P(X=0)=0{,}75^{10}\\approx 0{,}056$."
+      ],
+      "reponse": "$\\approx 0{,}056$"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "$X\\sim B(8\\,;0{,}3)$. Calculer $P(X=2)$ (au millième). On donne $\\dbinom{8}{2}=28$.",
+      "corrige": [
+        "$P(X=2)=28\\times 0{,}3^{2}\\times 0{,}7^{6}$.",
+        "$\\approx 0{,}296$."
+      ],
+      "reponse": "$\\approx 0{,}296$"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "Un élève calcule, pour $X\\sim B(4\\,;0{,}5)$, « $P(X=2)=0{,}5^{2}\\times 0{,}5^{2}=0{,}0625$ ». Qu'a-t-il oublié ? Corriger.",
+      "corrige": [
+        "Il n'a compté qu'un seul chemin : il manque le coefficient $\\dbinom{4}{2}=6$.",
+        "$P(X=2)=6\\times 0{,}0625=0{,}375$."
+      ],
+      "reponse": "$P(X=2)=0{,}375$"
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "loi-binomiale",
+      "enonce": "$X\\sim B(5\\,;0{,}4)$. Calculer $P(X\\leqslant 1)$ (au millième).",
+      "corrige": [
+        "$P(X\\leqslant 1)=P(X=0)+P(X=1)=0{,}6^{5}+5\\times 0{,}4\\times 0{,}6^{4}$.",
+        "$=0{,}07776+0{,}25920\\approx 0{,}337$."
+      ],
+      "reponse": "$\\approx 0{,}337$"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "loi-binomiale",
+      "enonce": "$X\\sim B(6\\,;0{,}5)$. Calculer $P(2\\leqslant X\\leqslant 4)$ sous forme de fraction.",
+      "corrige": [
+        "$P(X=k)=\\dbinom{6}{k}\\times\\dfrac{1}{64}$, avec $\\dbinom{6}{2}=15$, $\\dbinom{6}{3}=20$, $\\dbinom{6}{4}=15$.",
+        "$P(2\\leqslant X\\leqslant 4)=\\dfrac{15+20+15}{64}=\\dfrac{50}{64}=\\dfrac{25}{32}$."
+      ],
+      "reponse": "$\\dfrac{25}{32}$"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "complementaire",
+      "enonce": "$X\\sim B(10\\,;0{,}1)$. Calculer la probabilité d'au moins un succès (au millième).",
+      "corrige": [
+        "$P(X\\geqslant 1)=1-P(X=0)=1-0{,}9^{10}$.",
+        "$\\approx 0{,}651$."
+      ],
+      "reponse": "$\\approx 0{,}651$"
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "$X\\sim B(5\\,;0{,}4)$ et $P(X\\leqslant 1)\\approx 0{,}337$. En déduire $P(X\\geqslant 2)$.",
+      "corrige": [
+        "$P(X\\geqslant 2)=1-P(X\\leqslant 1)\\approx 1-0{,}337=0{,}663$."
+      ],
+      "reponse": "$\\approx 0{,}663$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "complementaire",
+      "enonce": "Une pièce est défectueuse avec la probabilité $0{,}02$. Combien faut-il en prélever, au minimum, pour que la probabilité d'avoir au moins une pièce défectueuse dépasse $0{,}5$ ?",
+      "corrige": [
+        "Avec $n$ pièces : $P(X\\geqslant 1)=1-0{,}98^{n}>0{,}5\\iff 0{,}98^{n}<0{,}5$.",
+        "À la calculatrice : $0{,}98^{34}\\approx 0{,}503$ et $0{,}98^{35}\\approx 0{,}493$."
+      ],
+      "reponse": "$n=35$"
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "complementaire",
+      "enonce": "Un élève écrit, pour $X\\sim B(n\\,;p)$ : « $P(X\\geqslant 3)=1-P(X\\leqslant 3)$ ». Corriger.",
+      "corrige": [
+        "Le contraire de « $X\\geqslant 3$ » est « $X\\leqslant 2$ », pas « $X\\leqslant 3$ » (sinon on retire aussi $P(X=3)$)."
+      ],
+      "reponse": "$P(X\\geqslant 3)=1-P(X\\leqslant 2)$"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "esperance-binomiale",
+      "enonce": "Un QCM de $20$ questions comporte $4$ réponses par question, dont une seule juste. Combien de bonnes réponses un élève qui répond au hasard obtient-il en moyenne ?",
+      "corrige": [
+        "$X\\sim B(20\\,;0{,}25)$ et $E(X)=np=20\\times 0{,}25=5$."
+      ],
+      "reponse": "$5$ bonnes réponses en moyenne"
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "esperance-binomiale",
+      "enonce": "$X\\sim B(n\\,;0{,}05)$ et $E(X)=6$. Déterminer $n$.",
+      "corrige": [
+        "$E(X)=n\\times 0{,}05=6$, donc $n=\\dfrac{6}{0{,}05}=120$."
+      ],
+      "reponse": "$n=120$"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "esperance-binomiale",
+      "enonce": "Une compagnie aérienne sait que chaque passager ayant réservé se présente avec la probabilité $0{,}9$, indépendamment des autres. Pour un vol, $50$ billets sont vendus. 1. Quelle loi suit le nombre $X$ de passagers présents ? 2. Combien de passagers sont attendus en moyenne ? 3. Calculer la probabilité que tous les passagers se présentent (au millième). 4. L'avion a $48$ places : calculer la probabilité qu'il y ait trop de passagers.",
+      "corrige": [
+        "1. $X\\sim B(50\\,;0{,}9)$.",
+        "2. $E(X)=50\\times 0{,}9=45$.",
+        "3. $P(X=50)=0{,}9^{50}\\approx 0{,}005$.",
+        "4. Trop de passagers : $X\\geqslant 49$. $P(X=49)=50\\times 0{,}9^{49}\\times 0{,}1\\approx 0{,}029$, donc $P(X\\geqslant 49)\\approx 0{,}034$."
+      ],
+      "reponse": "1. $B(50\\,;0{,}9)$. 2. $45$. 3. $\\approx 0{,}005$. 4. $\\approx 0{,}034$"
     }
   ]
 }

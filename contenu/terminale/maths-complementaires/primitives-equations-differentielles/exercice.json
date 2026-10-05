@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "modelisation",
       "enonce": "Un lac contient initialement $50$ tonnes d'un polluant. Grâce à un dispositif de traitement, la masse de polluant $Q(t)$ (en tonnes), où $t$ désigne le temps en semaines, est modélisée par la fonction $Q$ solution de l'équation différentielle $Q'(t) = -0{,}4\\,Q(t) + 2$ avec la condition initiale $Q(0) = 50$.\n\n1. Justifier que, si la masse de polluant était constante, elle vaudrait $5$ tonnes.\n2. Résoudre l'équation différentielle $Q' = -0{,}4\\,Q + 2$ (solutions générales).\n3. Déterminer l'expression de $Q(t)$ correspondant à cette situation.\n4. Étudier le sens de variation de $Q$ et sa limite en $+\\infty$, puis interpréter dans le contexte.\n5. Un second rejet apporte un polluant secondaire à un débit $r(t) = 0{,}6\\,t$ (en tonnes par semaine). Déterminer la masse cumulée $R(t)$ rejetée depuis $t = 0$, c'est-à-dire la primitive de $r$ vérifiant $R(0) = 0$, puis calculer $R(5)$.",
       "corrige": [
@@ -140,6 +140,443 @@
         "5. On cherche une primitive de $r(t) = 0{,}6\\,t$. Une primitive de $t$ est $\\dfrac{t^{2}}{2}$, donc $R(t) = 0{,}6\\times\\dfrac{t^{2}}{2} + C = 0{,}3\\,t^{2} + C$. La condition $R(0) = 0$ donne $C = 0$, d'où $R(t) = 0{,}3\\,t^{2}$. Enfin $R(5) = 0{,}3\\times 5^{2} = 0{,}3\\times 25 = 7{,}5$ tonnes."
       ],
       "reponse": "1. $5$ tonnes. 2. $Q(t) = Ke^{-0{,}4t} + 5$, $K\\in\\mathbb{R}$. 3. $Q(t) = 45e^{-0{,}4t} + 5$. 4. $Q$ strictement décroissante, $\\lim_{t\\to+\\infty} Q(t) = 5$ tonnes (seuil incompressible). 5. $R(t) = 0{,}3\\,t^{2}$ et $R(5) = 7{,}5$ tonnes."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition-primitive",
+      "enonce": "Vérifier que $F(x)=x^{3}+x$ est une primitive de $f(x)=3x^{2}+1$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "On dérive $F$ : $F'(x)=3x^{2}+1$.",
+        "On retrouve $f(x)$ : $F$ est bien une primitive de $f$."
+      ],
+      "reponse": "Oui, car $F'=f$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition-primitive",
+      "enonce": "Parmi $F_1(x)=x^{2}+5$, $F_2(x)=2$ et $F_3(x)=x^{2}-\\pi$, lesquelles sont des primitives de $f(x)=2x$ ?",
+      "corrige": [
+        "$F_1'(x)=2x$ et $F_3'(x)=2x$ : ce sont des primitives de $f$.",
+        "$F_2'(x)=0\\neq 2x$ : $F_2$ n'en est pas une (c'est $f'$)."
+      ],
+      "reponse": "$F_1$ et $F_3$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "definition-primitive",
+      "enonce": "$F$ et $G$ sont deux primitives d'une même fonction $f$ sur $\\mathbb{R}$, avec $F(0)=3$ et $G(0)=-1$. Exprimer $G$ en fonction de $F$.",
+      "corrige": [
+        "Deux primitives d'une même fonction diffèrent d'une constante : $G=F+k$.",
+        "En $0$ : $-1=3+k$, donc $k=-4$."
+      ],
+      "reponse": "$G(x)=F(x)-4$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "definition-primitive",
+      "enonce": "Un élève affirme : « une primitive de $\\dfrac{1}{\\sqrt{x}}$ est $-\\dfrac{1}{2x\\sqrt{x}}$ ». Vérifier en dérivant et corriger.",
+      "corrige": [
+        "$-\\dfrac{1}{2x\\sqrt{x}}$ est la dérivée de $\\dfrac{1}{\\sqrt{x}}$, pas une primitive : l'élève a dérivé au lieu de chercher une primitive.",
+        "Une primitive est $2\\sqrt{x}$ car $(2\\sqrt{x})'=\\dfrac{2}{2\\sqrt{x}}=\\dfrac{1}{\\sqrt{x}}$."
+      ],
+      "reponse": "Une primitive est $2\\sqrt{x}$ sur $]0\\,;+\\infty[$."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "definition-primitive",
+      "enonce": "Montrer que $F(x)=x\\ln x-x$ est une primitive de $f(x)=\\ln x$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$(x\\ln x)'=\\ln x+x\\times\\dfrac{1}{x}=\\ln x+1$ (dérivée d'un produit).",
+        "Donc $F'(x)=\\ln x+1-1=\\ln x=f(x)$."
+      ],
+      "reponse": "$F'(x)=\\ln x$ : $F$ est une primitive de $\\ln$."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "primitives-usuelles",
+      "enonce": "Donner une primitive de chacune des fonctions : $f_1(x)=x^{5}$, $f_2(x)=7$, $f_3(x)=e^{x}$.",
+      "corrige": [
+        "$x^{n}$ a pour primitive $\\dfrac{x^{n+1}}{n+1}$ : pour $n=5$, $\\dfrac{x^{6}}{6}$.",
+        "$7$ a pour primitive $7x$ ; $e^{x}$ a pour primitive $e^{x}$."
+      ],
+      "reponse": "$\\dfrac{x^{6}}{6}$ ; $7x$ ; $e^{x}$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "primitives-usuelles",
+      "enonce": "Donner une primitive de $f(x)=\\dfrac{1}{x^{2}}$ sur $]0\\,;+\\infty[$ et vérifier en dérivant.",
+      "corrige": [
+        "D'après le tableau, une primitive est $-\\dfrac{1}{x}$.",
+        "$\\left(-\\dfrac{1}{x}\\right)'=\\dfrac{1}{x^{2}}$ ✓."
+      ],
+      "reponse": "$F(x)=-\\dfrac{1}{x}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "primitives-usuelles",
+      "enonce": "Donner une primitive de $f(x)=\\dfrac{3}{x}$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "Une primitive de $\\dfrac{1}{x}$ est $\\ln x$ ; un facteur constant se conserve."
+      ],
+      "reponse": "$F(x)=3\\ln x$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "primitives-usuelles",
+      "enonce": "Un élève applique la formule des puissances à $f(x)=\\dfrac{1}{x}=x^{-1}$ et écrit $F(x)=\\dfrac{x^{0}}{0}$. Expliquer l'erreur et donner la bonne primitive.",
+      "corrige": [
+        "La formule $\\dfrac{x^{n+1}}{n+1}$ exige $n+1\\neq 0$ : ici on diviserait par $0$.",
+        "$\\dfrac{1}{x}$ est le cas à part : sa primitive sur $]0\\,;+\\infty[$ est $\\ln x$."
+      ],
+      "reponse": "$F(x)=\\ln x$ sur $]0\\,;+\\infty[$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "primitives-usuelles",
+      "enonce": "Compléter : une primitive de $x^{3}$ est $\\ldots$ ; une primitive de $\\dfrac{1}{\\sqrt{x}}$ est $\\ldots$ ; une primitive de $\\dfrac{1}{x^{2}}$ est $\\ldots$",
+      "corrige": [
+        "$\\dfrac{x^{4}}{4}$, $2\\sqrt{x}$ et $-\\dfrac{1}{x}$ : on vérifie chaque réponse en dérivant."
+      ],
+      "reponse": "$\\dfrac{x^{4}}{4}$ ; $2\\sqrt{x}$ ; $-\\dfrac{1}{x}$"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "primitives-usuelles",
+      "enonce": "Vrai ou faux ? « $e^{x}+10$ est une primitive de $e^{x}$ sur $\\mathbb{R}$. »",
+      "corrige": [
+        "$(e^{x}+10)'=e^{x}$ : c'est bien une primitive (toutes les primitives sont $e^{x}+C$)."
+      ],
+      "reponse": "Vrai."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "linearite",
+      "enonce": "Déterminer toutes les primitives de $f(x)=5x^{4}-3x^{2}+2$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Terme à terme : $x^{5}$, $-x^{3}$, $2x$.",
+        "On ajoute une seule constante."
+      ],
+      "reponse": "$F(x)=x^{5}-x^{3}+2x+C$, $C\\in\\mathbb{R}$"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "linearite",
+      "enonce": "Déterminer une primitive de $f(x)=2x^{2}-3x+4$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "Primitive de $2x^{2}$ : $\\dfrac{2x^{3}}{3}$ ; de $-3x$ : $-\\dfrac{3x^{2}}{2}$ ; de $4$ : $4x$."
+      ],
+      "reponse": "$F(x)=\\dfrac{2x^{3}}{3}-\\dfrac{3x^{2}}{2}+4x$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "linearite",
+      "enonce": "Déterminer toutes les primitives de $f(x)=\\dfrac{4}{x}+\\dfrac{2}{x^{2}}$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "Primitive de $\\dfrac{4}{x}$ : $4\\ln x$ ; de $\\dfrac{2}{x^{2}}$ : $2\\times\\left(-\\dfrac{1}{x}\\right)=-\\dfrac{2}{x}$."
+      ],
+      "reponse": "$F(x)=4\\ln x-\\dfrac{2}{x}+C$"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "linearite",
+      "enonce": "Déterminer une primitive de $f(x)=\\dfrac{3}{\\sqrt{x}}+e^{x}$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "Primitive de $\\dfrac{3}{\\sqrt{x}}$ : $3\\times 2\\sqrt{x}=6\\sqrt{x}$ ; de $e^{x}$ : $e^{x}$."
+      ],
+      "reponse": "$F(x)=6\\sqrt{x}+e^{x}$"
+    },
+    {
+      "id": 26,
+      "difficulte": "approfondissement",
+      "notion": "linearite",
+      "enonce": "Déterminer une primitive de $f(x)=x(x+1)$ sur $\\mathbb{R}$. (Attention : il n'y a pas de formule pour un produit.)",
+      "corrige": [
+        "On développe d'abord : $f(x)=x^{2}+x$.",
+        "Une primitive est $\\dfrac{x^{3}}{3}+\\dfrac{x^{2}}{2}$ (et non le produit de primitives)."
+      ],
+      "reponse": "$F(x)=\\dfrac{x^{3}}{3}+\\dfrac{x^{2}}{2}$"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x)=2x+3$ sur $\\mathbb{R}$ telle que $F(0)=-2$.",
+      "corrige": [
+        "$F(x)=x^{2}+3x+C$.",
+        "$F(0)=C=-2$."
+      ],
+      "reponse": "$F(x)=x^{2}+3x-2$"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x)=e^{x}$ sur $\\mathbb{R}$ telle que $F(0)=3$.",
+      "corrige": [
+        "$F(x)=e^{x}+C$.",
+        "$F(0)=1+C=3$, donc $C=2$."
+      ],
+      "reponse": "$F(x)=e^{x}+2$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x)=\\dfrac{1}{x}+1$ sur $]0\\,;+\\infty[$ telle que $F(1)=2$.",
+      "corrige": [
+        "$F(x)=\\ln x+x+C$.",
+        "$F(1)=0+1+C=2$, donc $C=1$."
+      ],
+      "reponse": "$F(x)=\\ln x+x+1$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x)=x^{3}-1$ sur $\\mathbb{R}$ dont la courbe passe par le point $A(1\\,;0)$.",
+      "corrige": [
+        "$F(x)=\\dfrac{x^{4}}{4}-x+C$.",
+        "$F(1)=\\dfrac{1}{4}-1+C=0$, donc $C=\\dfrac{3}{4}$."
+      ],
+      "reponse": "$F(x)=\\dfrac{x^{4}}{4}-x+\\dfrac{3}{4}$"
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x)=\\dfrac{1}{\\sqrt{x}}$ sur $]0\\,;+\\infty[$ qui s'annule en $4$.",
+      "corrige": [
+        "$F(x)=2\\sqrt{x}+C$.",
+        "$F(4)=2\\times 2+C=0$, donc $C=-4$."
+      ],
+      "reponse": "$F(x)=2\\sqrt{x}-4$"
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "equation-y-prime-f",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $y'=3x^{2}-4$.",
+      "corrige": [
+        "Les solutions de $y'=f$ sont les primitives de $f$.",
+        "$y(x)=x^{3}-4x+C$."
+      ],
+      "reponse": "$y(x)=x^{3}-4x+C$, $C\\in\\mathbb{R}$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-f",
+      "enonce": "Résoudre sur $]0\\,;+\\infty[$ l'équation $y'=\\dfrac{2}{x}$, puis donner la solution qui vérifie $y(e)=5$.",
+      "corrige": [
+        "$y(x)=2\\ln x+C$.",
+        "$y(e)=2+C=5$, donc $C=3$."
+      ],
+      "reponse": "$y(x)=2\\ln x+3$"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-f",
+      "enonce": "La vitesse d'un mobile (en m/s) est $v(t)=4t+1$ ; sa position $x(t)$ (en m) vérifie $x'(t)=v(t)$ et $x(0)=2$. Déterminer $x(t)$ et la position à $t=3$ s.",
+      "corrige": [
+        "$x(t)$ est une primitive de $v$ : $x(t)=2t^{2}+t+C$.",
+        "$x(0)=C=2$, donc $x(t)=2t^{2}+t+2$, et $x(3)=18+3+2=23$ m."
+      ],
+      "reponse": "$x(t)=2t^{2}+t+2$ ; $x(3)=23$ m"
+    },
+    {
+      "id": 35,
+      "difficulte": "decouverte",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Résoudre l'équation différentielle $y'=-2y$.",
+      "corrige": [
+        "Les solutions de $y'=ay$ sont $Ce^{ax}$ ; ici $a=-2$."
+      ],
+      "reponse": "$y(x)=Ce^{-2x}$, $C\\in\\mathbb{R}$"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Résoudre l'équation $y'=0{,}5y$ puis déterminer la solution telle que $y(0)=4$.",
+      "corrige": [
+        "$y(x)=Ce^{0{,}5x}$.",
+        "$y(0)=C=4$."
+      ],
+      "reponse": "$y(x)=4e^{0{,}5x}$"
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Un élève propose $y(x)=e^{3x}+C$ comme solutions de $y'=3y$. Vérifier et corriger.",
+      "corrige": [
+        "Si $y=e^{3x}+C$, alors $y'=3e^{3x}$ et $3y=3e^{3x}+3C$ : égalité seulement si $C=0$.",
+        "La constante doit multiplier l'exponentielle : $y(x)=Ce^{3x}$."
+      ],
+      "reponse": "$y(x)=Ce^{3x}$, $C\\in\\mathbb{R}$"
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Déterminer la fonction $y$ solution de $y'=4y$ telle que $y(0)=3$, puis décrire son allure.",
+      "corrige": [
+        "$y(x)=Ce^{4x}$ et $y(0)=C=3$.",
+        "$a=4>0$ et $C>0$ : croissance exponentielle, courbe au-dessus de l'axe."
+      ],
+      "reponse": "$y(x)=3e^{4x}$, croissante"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Une fonction $y$ vérifie $y'=-y$ et $y(0)=-5$. Déterminer $y$ et sa limite en $+\\infty$.",
+      "corrige": [
+        "$y(x)=Ce^{-x}$ avec $C=y(0)=-5$.",
+        "$e^{-x}\\to 0$ quand $x\\to+\\infty$ : $y(x)\\to 0$ (par valeurs négatives)."
+      ],
+      "reponse": "$y(x)=-5e^{-x}$ ; limite $0$"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Déterminer la solution constante de l'équation $y'=3y+6$.",
+      "corrige": [
+        "Une solution constante a une dérivée nulle : $0=3y+6$.",
+        "$y=-2$ (c'est bien $-\\dfrac{b}{a}=-\\dfrac{6}{3}$)."
+      ],
+      "reponse": "$y=-2$"
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Résoudre l'équation différentielle $y'=-y+5$.",
+      "corrige": [
+        "Solution constante : $0=-y+5$, donc $y=5$.",
+        "Solutions générales : $y(x)=Ce^{-x}+5$."
+      ],
+      "reponse": "$y(x)=Ce^{-x}+5$, $C\\in\\mathbb{R}$"
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Résoudre $y'=3y+6$ et trouver la solution vérifiant $y(0)=-4$.",
+      "corrige": [
+        "$y(x)=Ce^{3x}-2$.",
+        "$y(0)=C-2=-4$, donc $C=-2$."
+      ],
+      "reponse": "$y(x)=-2e^{3x}-2$"
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Résoudre $y'=-0{,}5y+4$ ; préciser la limite des solutions en $+\\infty$.",
+      "corrige": [
+        "Solution constante : $0=-0{,}5y+4$, d'où $y=8$.",
+        "$y(x)=Ce^{-0{,}5x}+8$ ; comme $-0{,}5<0$, $e^{-0{,}5x}\\to 0$ : toutes les solutions tendent vers $8$."
+      ],
+      "reponse": "$y(x)=Ce^{-0{,}5x}+8$ ; limite $8$"
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Un élève résout $y'=2y-3$ et écrit $y(x)=Ce^{2x}-\\dfrac{3}{2}$. Vérifier en réinjectant et corriger si besoin.",
+      "corrige": [
+        "Ici $a=2$, $b=-3$ : la solution constante est $-\\dfrac{b}{a}=\\dfrac{3}{2}$. Test : $y=-\\dfrac{3}{2}$ donne $2y-3=-6\\neq 0$, l'élève s'est trompé de signe.",
+        "Correction : $y(x)=Ce^{2x}+\\dfrac{3}{2}$ ; vérification : $2\\times\\dfrac{3}{2}-3=0$ ✓."
+      ],
+      "reponse": "$y(x)=Ce^{2x}+\\dfrac{3}{2}$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Déterminer la solution de $y'=-4y+8$ vérifiant $y(0)=9$, puis vérifier qu'elle est bien solution.",
+      "corrige": [
+        "Solution constante $2$ ; $y(x)=Ce^{-4x}+2$ et $y(0)=C+2=9$, donc $C=7$.",
+        "Vérification : $y'=-28e^{-4x}$ et $-4y+8=-28e^{-4x}-8+8=-28e^{-4x}$ ✓."
+      ],
+      "reponse": "$y(x)=7e^{-4x}+2$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Déterminer la solution de $y'=-y+5$ vérifiant $y(1)=8$.",
+      "corrige": [
+        "$y(x)=Ce^{-x}+5$.",
+        "$y(1)=Ce^{-1}+5=8$, donc $Ce^{-1}=3$, soit $C=3e$.",
+        "$y(x)=3e\\,e^{-x}+5=3e^{1-x}+5$."
+      ],
+      "reponse": "$y(x)=3e^{1-x}+5$"
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "modelisation",
+      "enonce": "Une population de bactéries $N(t)$ vérifie $N'=0{,}03N$ ($t$ en heures) et $N(0)=500$. Exprimer $N(t)$ et calculer $N(10)$ (arrondi à l'unité).",
+      "corrige": [
+        "$N(t)=500e^{0{,}03t}$.",
+        "$N(10)=500e^{0{,}3}\\approx 675$."
+      ],
+      "reponse": "$N(t)=500e^{0{,}03t}$ ; $N(10)\\approx 675$"
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Un gâteau sort du four à $180$ °C dans une cuisine à $20$ °C. Sa température vérifie $\\theta'=-0{,}1(\\theta-20)$, $t$ en minutes. 1. Écrire l'équation sous la forme $\\theta'=a\\theta+b$. 2. Déterminer $\\theta(t)$. 3. Vers quelle température tend-il ?",
+      "corrige": [
+        "1. $\\theta'=-0{,}1\\theta+2$.",
+        "2. Solution constante $20$ ; $\\theta(t)=Ce^{-0{,}1t}+20$ et $\\theta(0)=C+20=180$, donc $C=160$.",
+        "3. $e^{-0{,}1t}\\to 0$ : la température tend vers $20$ °C, celle de la cuisine."
+      ],
+      "reponse": "$\\theta(t)=160e^{-0{,}1t}+20$ ; limite $20$ °C"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "Un verre d'eau à $20$ °C est placé dans un réfrigérateur à $4$ °C. Sa température vérifie $\\theta'=-0{,}02\\theta+0{,}08$ ($t$ en minutes). Déterminer $\\theta(t)$ et la température au bout d'une heure (au dixième).",
+      "corrige": [
+        "Solution constante : $0=-0{,}02\\theta+0{,}08$, d'où $\\theta=4$.",
+        "$\\theta(t)=Ce^{-0{,}02t}+4$ ; $\\theta(0)=C+4=20$ donc $C=16$.",
+        "Une heure, c'est $t=60$ : $\\theta(60)=16e^{-1{,}2}+4\\approx 8{,}8$ °C."
+      ],
+      "reponse": "$\\theta(t)=16e^{-0{,}02t}+4$ ; $\\theta(60)\\approx 8{,}8$ °C"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "Un réservoir se remplit : le volume $V(t)$ (en litres, $t$ en minutes) vérifie $V'=-0{,}2V+200$ et $V(0)=0$. 1. Déterminer $V(t)$. 2. Quel volume limite le réservoir approche-t-il ? 3. Au bout de combien de temps le volume dépasse-t-il $900$ L ? (valeur exacte puis arrondie à la minute)",
+      "corrige": [
+        "1. Solution constante : $0=-0{,}2V+200$, d'où $V=1000$. $V(t)=Ce^{-0{,}2t}+1000$ et $V(0)=C+1000=0$ : $V(t)=1000-1000e^{-0{,}2t}$.",
+        "2. $e^{-0{,}2t}\\to 0$ : le volume tend vers $1000$ L.",
+        "3. $1000-1000e^{-0{,}2t}>900\\iff e^{-0{,}2t}<0{,}1\\iff -0{,}2t<\\ln 0{,}1\\iff t>5\\ln 10\\approx 11{,}5$ min, soit environ $12$ min."
+      ],
+      "reponse": "1. $V(t)=1000-1000e^{-0{,}2t}$. 2. $1000$ L. 3. $t>5\\ln 10$, environ $12$ min."
     }
   ]
 }

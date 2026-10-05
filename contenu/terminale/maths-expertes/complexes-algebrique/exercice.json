@@ -134,7 +134,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "second-degre",
       "enonce": "On considère le polynôme $P(z) = z^{3} - 6z^{2} + 13z - 10$, défini pour tout complexe $z$.\n1. Vérifier que $2$ est une solution de l'équation $P(z) = 0$.\n2. Déterminer les réels $a$, $b$, $c$ tels que, pour tout $z$, $P(z) = (z - 2)(az^{2} + bz + c)$.\n3. Résoudre dans $\\mathbb{C}$ l'équation $P(z) = 0$.\n4. On note $z_B$ et $z_C$ les deux solutions non réelles. Montrer qu'elles sont conjuguées, puis calculer $z_B + z_C$ et $z_B \\times z_C$ ; vérifier ces valeurs à l'aide des relations somme-produit du second degré.\n5. Écrire sous forme algébrique l'inverse $\\dfrac{1}{z_B}$ de la solution $z_B = 2 + i$.",
       "corrige": [
@@ -145,6 +145,429 @@
         "5. $\\dfrac{1}{z_B} = \\dfrac{1}{2+i} = \\dfrac{\\overline{2+i}}{(2+i)(2-i)} = \\dfrac{2-i}{2^{2}+1^{2}} = \\dfrac{2-i}{5} = \\dfrac{2}{5} - \\dfrac{1}{5}i$."
       ],
       "reponse": "$2$ est racine ; $P(z) = (z-2)(z^{2}-4z+5)$ avec $a=1$, $b=-4$, $c=5$ ; $S = \\{2\\,;\\,2+i\\,;\\,2-i\\}$ ; $z_B = 2+i$ et $z_C = 2-i$ sont conjuguées, de somme $4$ et de produit $5$ ; enfin $\\dfrac{1}{z_B} = \\dfrac{2}{5} - \\dfrac{1}{5}i$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "forme-algebrique",
+      "enonce": "Donner la partie réelle et la partie imaginaire de $z_1=-4+7i$, $z_2=-3i$ et $z_3=\\sqrt{2}$.",
+      "corrige": [
+        "Pour $z=a+ib$, $\\operatorname{Re}(z)=a$ et $\\operatorname{Im}(z)=b$ (un réel).",
+        "$z_2=0+(-3)i$ ; $z_3=\\sqrt{2}+0i$."
+      ],
+      "reponse": "$z_1$ : $-4$ et $7$ ; $z_2$ : $0$ et $-3$ ; $z_3$ : $\\sqrt{2}$ et $0$"
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "forme-algebrique",
+      "enonce": "Parmi $5$, $2i$, $1+i$, $0$, $-\\pi i$, lesquels sont réels ? imaginaires purs ?",
+      "corrige": [
+        "Réel : partie imaginaire nulle. Imaginaire pur : partie réelle nulle.",
+        "$0$ est à la fois réel et imaginaire pur ; $1+i$ n'est ni l'un ni l'autre."
+      ],
+      "reponse": "Réels : $5$ et $0$ ; imaginaires purs : $2i$, $-\\pi i$ et $0$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "forme-algebrique",
+      "enonce": "Un élève écrit : « pour $z=3+5i$, $\\operatorname{Im}(z)=5i$ ». Corriger.",
+      "corrige": [
+        "La partie imaginaire est le réel qui multiplie $i$."
+      ],
+      "reponse": "$\\operatorname{Im}(z)=5$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "forme-algebrique",
+      "enonce": "Déterminer les réels $x$ et $y$ tels que $(2x-1)+(y+3)i=5-2i$.",
+      "corrige": [
+        "Deux complexes sont égaux si et seulement si ils ont mêmes parties réelle et imaginaire.",
+        "$2x-1=5$ et $y+3=-2$."
+      ],
+      "reponse": "$x=3$ et $y=-5$"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "forme-algebrique",
+      "enonce": "Pour quelle(s) valeur(s) du réel $m$ le complexe $z=(m^{2}-4)+(m+2)i$ est-il imaginaire pur ? réel ?",
+      "corrige": [
+        "Imaginaire pur : $m^{2}-4=0$, soit $m=2$ ou $m=-2$.",
+        "Réel : $m+2=0$, soit $m=-2$ (et alors $z=0$)."
+      ],
+      "reponse": "Imaginaire pur pour $m=\\pm 2$ ; réel pour $m=-2$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Écrire sous forme algébrique $(3-2i)(4+i)$.",
+      "corrige": [
+        "$12+3i-8i-2i^{2}=12-5i+2$."
+      ],
+      "reponse": "$14-5i$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Écrire sous forme algébrique $(1-i)^{2}$ et $(2+i)(2-i)$.",
+      "corrige": [
+        "$(1-i)^{2}=1-2i+i^{2}=-2i$.",
+        "$(2+i)(2-i)=4-i^{2}=5$."
+      ],
+      "reponse": "$-2i$ et $5$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "operations",
+      "enonce": "Écrire sous forme algébrique $3i(2-5i)$.",
+      "corrige": [
+        "$6i-15i^{2}=6i+15$."
+      ],
+      "reponse": "$15+6i$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Un élève calcule $(2i)(3i)=6i^{2}=6$. Corriger.",
+      "corrige": [
+        "$i^{2}=-1$, donc $6i^{2}=-6$."
+      ],
+      "reponse": "$(2i)(3i)=-6$"
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "operations",
+      "enonce": "Factoriser $x^{2}+9$ dans $\\mathbb{C}$.",
+      "corrige": [
+        "$x^{2}+9=x^{2}-(3i)^{2}=(x-3i)(x+3i)$."
+      ],
+      "reponse": "$(x-3i)(x+3i)$"
+    },
+    {
+      "id": 21,
+      "difficulte": "decouverte",
+      "notion": "puissances-i",
+      "enonce": "Calculer $i^{3}$, $i^{4}$, $i^{10}$.",
+      "corrige": [
+        "$i^{3}=i^{2}\\times i=-i$ ; $i^{4}=1$ ; $i^{10}=i^{8}\\times i^{2}=-1$."
+      ],
+      "reponse": "$-i$ ; $1$ ; $-1$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "puissances-i",
+      "enonce": "Calculer $i^{2026}$ et $i^{33}$.",
+      "corrige": [
+        "$2026=4\\times 506+2$ : $i^{2026}=i^{2}=-1$.",
+        "$33=4\\times 8+1$ : $i^{33}=i$."
+      ],
+      "reponse": "$i^{2026}=-1$ ; $i^{33}=i$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "puissances-i",
+      "enonce": "Calculer $S=1+i+i^{2}+i^{3}$, puis $1+i+i^{2}+\\dots+i^{11}$.",
+      "corrige": [
+        "$S=1+i-1-i=0$.",
+        "La somme jusqu'à $i^{11}$ regroupe trois blocs de quatre termes consécutifs, chacun égal à $i^{4k}S=0$."
+      ],
+      "reponse": "$0$ et $0$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "puissances-i",
+      "enonce": "Pour quels entiers naturels $n$ a-t-on $i^{n}=-i$ ?",
+      "corrige": [
+        "Les puissances de $i$ sont périodiques de période $4$ et $i^{3}=-i$."
+      ],
+      "reponse": "Pour $n\\equiv 3$ modulo $4$ ($n=3,\\ 7,\\ 11,\\ \\dots$)"
+    },
+    {
+      "id": 25,
+      "difficulte": "decouverte",
+      "notion": "conjugue",
+      "enonce": "Donner le conjugué de $4-7i$, de $-2i$ et de $5$.",
+      "corrige": [
+        "On change le signe de la partie imaginaire."
+      ],
+      "reponse": "$4+7i$ ; $2i$ ; $5$"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "conjugue",
+      "enonce": "Calculer $z\\overline{z}$ pour $z=4-i$.",
+      "corrige": [
+        "$z\\overline{z}=a^{2}+b^{2}=16+1$."
+      ],
+      "reponse": "$17$"
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "conjugue",
+      "enonce": "Soit $z=3+2i$. Calculer $z+\\overline{z}$ et $z-\\overline{z}$ et vérifier les formules de la fiche.",
+      "corrige": [
+        "$z+\\overline{z}=6=2\\operatorname{Re}(z)$.",
+        "$z-\\overline{z}=4i=2i\\operatorname{Im}(z)$."
+      ],
+      "reponse": "$6$ et $4i$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "conjugue",
+      "enonce": "Calculer $\\overline{(1+2i)(3-i)}$ de deux façons.",
+      "corrige": [
+        "En développant d'abord : $(1+2i)(3-i)=3-i+6i+2=5+5i$, de conjugué $5-5i$.",
+        "En conjuguant d'abord : $(1-2i)(3+i)=3+i-6i+2=5-5i$."
+      ],
+      "reponse": "$5-5i$"
+    },
+    {
+      "id": 29,
+      "difficulte": "approfondissement",
+      "notion": "conjugue",
+      "enonce": "Soit $z$ un complexe. Montrer que $Z=z+\\overline{z}+z\\overline{z}$ est un réel.",
+      "corrige": [
+        "$\\overline{Z}=\\overline{z}+z+\\overline{z}z=Z$.",
+        "Un complexe égal à son conjugué est réel."
+      ],
+      "reponse": "$\\overline{Z}=Z$, donc $Z$ est réel."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "inverse-quotient",
+      "enonce": "Écrire sous forme algébrique $\\dfrac{1}{3-4i}$.",
+      "corrige": [
+        "$\\dfrac{3+4i}{(3-4i)(3+4i)}=\\dfrac{3+4i}{25}$."
+      ],
+      "reponse": "$\\dfrac{3}{25}+\\dfrac{4}{25}i$"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "inverse-quotient",
+      "enonce": "Écrire sous forme algébrique $\\dfrac{1}{i}$.",
+      "corrige": [
+        "$\\dfrac{1}{i}=\\dfrac{-i}{i\\times(-i)}=\\dfrac{-i}{1}$."
+      ],
+      "reponse": "$-i$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "inverse-quotient",
+      "enonce": "Écrire sous forme algébrique $\\dfrac{5+5i}{1+2i}$.",
+      "corrige": [
+        "$\\dfrac{(5+5i)(1-2i)}{1+4}=\\dfrac{5-10i+5i+10}{5}=\\dfrac{15-5i}{5}$."
+      ],
+      "reponse": "$3-i$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "inverse-quotient",
+      "enonce": "Écrire sous forme algébrique $\\dfrac{1+i}{1-i}$.",
+      "corrige": [
+        "$\\dfrac{(1+i)(1+i)}{(1-i)(1+i)}=\\dfrac{2i}{2}$."
+      ],
+      "reponse": "$i$"
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "inverse-quotient",
+      "enonce": "Un élève, pour calculer $\\dfrac{7+i}{1+2i}$, multiplie numérateur et dénominateur par $7-i$. Pourquoi cela n'aboutit-il pas ? Faire le calcul correctement.",
+      "corrige": [
+        "Il faut multiplier par le conjugué du dénominateur, $1-2i$, pour rendre le dénominateur réel.",
+        "$\\dfrac{(7+i)(1-2i)}{5}=\\dfrac{7-14i+i+2}{5}=\\dfrac{9-13i}{5}$."
+      ],
+      "reponse": "$\\dfrac{9}{5}-\\dfrac{13}{5}i$"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "equation-az-b",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $iz=3+4i$.",
+      "corrige": [
+        "$z=\\dfrac{3+4i}{i}=(3+4i)\\times(-i)=-3i+4$."
+      ],
+      "reponse": "$z=4-3i$"
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "equation-az-b",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $(2-i)z=5$.",
+      "corrige": [
+        "$z=\\dfrac{5}{2-i}=\\dfrac{5(2+i)}{5}$."
+      ],
+      "reponse": "$z=2+i$"
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "equation-az-b",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $(1+i)z+2=1+6i$.",
+      "corrige": [
+        "$(1+i)z=-1+6i$, donc $z=\\dfrac{(-1+6i)(1-i)}{2}=\\dfrac{-1+i+6i+6}{2}=\\dfrac{5+7i}{2}$."
+      ],
+      "reponse": "$z=\\dfrac{5}{2}+\\dfrac{7}{2}i$"
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "equation-az-b",
+      "enonce": "Résoudre le système $z+z'=4$ et $z-z'=2i$ d'inconnues complexes $z$ et $z'$.",
+      "corrige": [
+        "En additionnant : $2z=4+2i$, donc $z=2+i$.",
+        "Puis $z'=4-z=2-i$."
+      ],
+      "reponse": "$z=2+i$ et $z'=2-i$"
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "equations-z-zbarre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z-2\\overline{z}=-3+6i$.",
+      "corrige": [
+        "On pose $z=x+iy$ : $x+iy-2x+2iy=-x+3iy$.",
+        "$-x=-3$ et $3y=6$, donc $x=3$ et $y=2$."
+      ],
+      "reponse": "$z=3+2i$"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "equations-z-zbarre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z+i\\overline{z}=2+2i$ (on pourra poser $z=x+iy$).",
+      "corrige": [
+        "$x+iy+i(x-iy)=x+y+i(x+y)$.",
+        "On obtient $x+y=2$ deux fois : infinité de solutions, $z=x+(2-x)i$ avec $x$ réel."
+      ],
+      "reponse": "Les $z=x+(2-x)i$, $x\\in\\mathbb{R}$"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "equations-z-zbarre",
+      "enonce": "Déterminer les complexes $z$ tels que $z\\overline{z}=25$ et $\\operatorname{Re}(z)=3$.",
+      "corrige": [
+        "$z=3+iy$ et $z\\overline{z}=9+y^{2}=25$, donc $y^{2}=16$.",
+        "$y=4$ ou $y=-4$."
+      ],
+      "reponse": "$z=3+4i$ ou $z=3-4i$"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "equations-z-zbarre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z^{2}+\\overline{z}^{2}=0$ en posant $z=x+iy$.",
+      "corrige": [
+        "$z^{2}=x^{2}-y^{2}+2ixy$ et $\\overline{z}^{2}=x^{2}-y^{2}-2ixy$ : la somme vaut $2(x^{2}-y^{2})$.",
+        "$x^{2}=y^{2}\\iff y=x$ ou $y=-x$."
+      ],
+      "reponse": "Les $z=x+ix$ et $z=x-ix$, $x\\in\\mathbb{R}$"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "second-degre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z^{2}+9=0$.",
+      "corrige": [
+        "$z^{2}=-9=(3i)^{2}$."
+      ],
+      "reponse": "$S=\\{3i\\,;-3i\\}$"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "second-degre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z^{2}-4z+13=0$.",
+      "corrige": [
+        "$\\Delta=16-52=-36<0$, $\\sqrt{-\\Delta}=6$.",
+        "$z=\\dfrac{4\\pm 6i}{2}=2\\pm 3i$."
+      ],
+      "reponse": "$S=\\{2+3i\\,;2-3i\\}$"
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "second-degre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $z^{2}+z+1=0$.",
+      "corrige": [
+        "$\\Delta=1-4=-3$, $\\sqrt{-\\Delta}=\\sqrt{3}$.",
+        "$z=\\dfrac{-1\\pm i\\sqrt{3}}{2}$."
+      ],
+      "reponse": "$S=\\left\\{-\\dfrac{1}{2}+\\dfrac{\\sqrt{3}}{2}i\\,;-\\dfrac{1}{2}-\\dfrac{\\sqrt{3}}{2}i\\right\\}$"
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "second-degre",
+      "enonce": "Résoudre dans $\\mathbb{C}$ l'équation $2z^{2}-2z+1=0$ et vérifier avec la somme et le produit des racines.",
+      "corrige": [
+        "$\\Delta=4-8=-4$ : $z=\\dfrac{2\\pm 2i}{4}=\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$.",
+        "Somme : $1=-\\dfrac{-2}{2}$ ✔ ; produit : $\\dfrac{1}{4}+\\dfrac{1}{4}=\\dfrac{1}{2}=\\dfrac{c}{a}$ ✔."
+      ],
+      "reponse": "$S=\\left\\{\\dfrac{1}{2}+\\dfrac{1}{2}i\\,;\\dfrac{1}{2}-\\dfrac{1}{2}i\\right\\}$"
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "second-degre",
+      "enonce": "Déterminer une équation du second degré à coefficients réels dont $3-i$ est solution.",
+      "corrige": [
+        "Les racines sont conjuguées : l'autre est $3+i$.",
+        "Somme $6$, produit $9+1=10$ : $z^{2}-6z+10=0$."
+      ],
+      "reponse": "$z^{2}-6z+10=0$"
+    },
+    {
+      "id": 48,
+      "difficulte": "application",
+      "notion": "binome",
+      "enonce": "Développer $(1+i)^{3}$.",
+      "corrige": [
+        "$(1+i)^{3}=1+3i+3i^{2}+i^{3}=1+3i-3-i$."
+      ],
+      "reponse": "$-2+2i$"
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "binome",
+      "enonce": "Calculer $(1-i)^{2}$, puis en déduire $(1-i)^{4}$ et $(1+i)^{8}$.",
+      "corrige": [
+        "$(1-i)^{2}=-2i$, donc $(1-i)^{4}=(-2i)^{2}=-4$.",
+        "$(1+i)^{2}=2i$, donc $(1+i)^{8}=(2i)^{4}=16i^{4}=16$."
+      ],
+      "reponse": "$(1-i)^{4}=-4$ ; $(1+i)^{8}=16$"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "binome",
+      "enonce": "1. Développer $(2+i)^{3}$ avec la formule du binôme. 2. En déduire une solution de l'équation $z^{3}=2+11i$. 3. Vérifier que $\\overline{z}$, avec $z=2+i$, est solution de $z^{3}=2-11i$.",
+      "corrige": [
+        "1. $(2+i)^{3}=8+3\\times 4\\times i+3\\times 2\\times i^{2}+i^{3}=8+12i-6-i=2+11i$.",
+        "2. $z=2+i$ est donc solution.",
+        "3. $\\overline{z}^{3}=\\overline{z^{3}}=\\overline{2+11i}=2-11i$ (le conjugué traverse les puissances)."
+      ],
+      "reponse": "1. $2+11i$. 2. $z=2+i$. 3. $\\overline{z}=2-i$ vérifie $\\overline{z}^{3}=2-11i$."
     }
   ]
 }

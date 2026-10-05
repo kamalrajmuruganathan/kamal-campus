@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "modelisation",
       "enonce": "Une plateforme de streaming compte $20\\,000$ abonnés en janvier 2025. Une étude montre que, chaque mois, la plateforme perd $15\\%$ de ses abonnés (résiliations) mais en gagne $4\\,500$ nouveaux grâce à sa publicité. On note $u_n$ le nombre d'abonnés $n$ mois après janvier 2025, de sorte que $u_0 = 20\\,000$. 1. Justifier que, pour tout entier $n \\geq 0$, $u_{n+1} = 0{,}85\\,u_n + 4\\,500$, puis calculer $u_1$ (le nombre d'abonnés en février 2025). 2. On pose $v_n = u_n - 30\\,000$. Montrer que $(v_n)$ est géométrique ; préciser sa raison et son premier terme $v_0$. 3. Exprimer $v_n$, puis $u_n$, en fonction de $n$. 4. Étudier le sens de variation de $(u_n)$, déterminer sa limite et interpréter le résultat. 5. Déterminer, par le calcul, le premier mois à partir duquel la plateforme dépassera $27\\,000$ abonnés.",
       "corrige": [
@@ -134,6 +134,442 @@
         "5. On cherche le premier $n$ tel que $u_n > 27\\,000$, soit $-10\\,000 \\times 0{,}85^{\\,n} + 30\\,000 > 27\\,000$, c'est-à-dire $0{,}85^{\\,n} < 0{,}3$. En calculant les termes : $u_7 = -10\\,000 \\times 0{,}85^{\\,7} + 30\\,000 \\approx 26\\,794 < 27\\,000$, tandis que $u_8 = -10\\,000 \\times 0{,}85^{\\,8} + 30\\,000 \\approx 27\\,275 > 27\\,000$. C'est donc au rang $n = 8$, soit en septembre 2025 (janvier 2025 correspondant au rang $0$), que la plateforme dépasse pour la première fois $27\\,000$ abonnés."
       ],
       "reponse": "1. $u_{n+1} = 0{,}85\\,u_n + 4\\,500$ et $u_1 = 21\\,500$ ; 2. $(v_n)$ géométrique de raison $0{,}85$, $v_0 = -10\\,000$ ; 3. $u_n = -10\\,000 \\times 0{,}85^{\\,n} + 30\\,000$ ; 4. suite croissante, $u_n \\to 30\\,000$ abonnés ; 5. dès le rang $n = 8$ (septembre 2025)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "suites-recurrentes",
+      "enonce": "Soit $u_0=4$ et $u_{n+1}=u_n^{2}-2u_n$. Calculer $u_1$, $u_2$ et $u_3$.",
+      "corrige": [
+        "$u_1=16-8=8$.",
+        "$u_2=64-16=48$.",
+        "$u_3=48^{2}-96=2304-96=2208$."
+      ],
+      "reponse": "$u_1=8$, $u_2=48$, $u_3=2208$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "suites-recurrentes",
+      "enonce": "Soit $u_0=1$ et $u_{n+1}=\\dfrac{1}{2}u_n+1$. Calculer $u_1$, $u_2$, $u_3$ sous forme de fractions.",
+      "corrige": [
+        "$u_1=\\dfrac{1}{2}+1=\\dfrac{3}{2}$.",
+        "$u_2=\\dfrac{3}{4}+1=\\dfrac{7}{4}$.",
+        "$u_3=\\dfrac{7}{8}+1=\\dfrac{15}{8}$."
+      ],
+      "reponse": "$\\dfrac{3}{2}$, $\\dfrac{7}{4}$, $\\dfrac{15}{8}$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "suites-recurrentes",
+      "enonce": "Soit $u_0=2$ et $u_{n+1}=3u_n-4$. Calculer les premiers termes. Que remarque-t-on ?",
+      "corrige": [
+        "$u_1=6-4=2$, puis $u_2=2$, etc.",
+        "$2$ vérifie $2=3\\times 2-4$ : c'est le point fixe, la suite est constante."
+      ],
+      "reponse": "La suite est constante égale à $2$."
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "suites-recurrentes",
+      "enonce": "Les suites $u_n=2n+1$ et $v_0=1$, $v_{n+1}=v_n+2$ sont-elles définies de la même manière ? Calculer $u_{10}$ et $v_{10}$.",
+      "corrige": [
+        "$(u_n)$ est donnée par une formule explicite : $u_{10}=21$ directement.",
+        "$(v_n)$ est définie par récurrence : on ajoute $2$ à chaque étape, donc $v_{10}=1+10\\times 2=21$. Mêmes termes, mais deux définitions différentes."
+      ],
+      "reponse": "Non (explicite / récurrence) ; $u_{10}=v_{10}=21$"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "suites-recurrentes",
+      "enonce": "Écrire un algorithme (en langage naturel ou en Python) qui calcule $u_{20}$ pour $u_0=5$ et $u_{n+1}=0{,}9u_n+2$.",
+      "corrige": [
+        "On part de $u=5$ et on répète $20$ fois l'instruction $u\\leftarrow 0{,}9u+2$.",
+        "Exemple de réponse en Python : u = 5, puis for i in range(20): u = 0.9*u + 2, puis afficher u."
+      ],
+      "reponse": "Boucle de $20$ itérations de $u\\leftarrow 0{,}9u+2$ à partir de $u=5$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "sens-variation",
+      "enonce": "Soit $u_{n+1}=u_n+n^{2}+1$. Étudier le sens de variation de $(u_n)$.",
+      "corrige": [
+        "$u_{n+1}-u_n=n^{2}+1>0$.",
+        "La suite est strictement croissante."
+      ],
+      "reponse": "Strictement croissante"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "sens-variation",
+      "enonce": "Soit $u_0=3$ et $u_{n+1}=u_n-u_n^{2}$. Montrer que $(u_n)$ est décroissante.",
+      "corrige": [
+        "$u_{n+1}-u_n=-u_n^{2}\\leqslant 0$ pour tout $n$."
+      ],
+      "reponse": "$(u_n)$ est décroissante."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "sens-variation",
+      "enonce": "Une suite géométrique a pour premier terme $u_0=-4$ et pour raison $q=2$. Est-elle croissante ? Calculer $u_1$ et $u_2$ pour vérifier.",
+      "corrige": [
+        "$u_1=-8$, $u_2=-16$ : les termes diminuent.",
+        "La règle « $q>1$ donne une suite croissante » suppose $u_0>0$ ; ici $u_0<0$, donc la suite est décroissante."
+      ],
+      "reponse": "Non, elle est décroissante ($u_0<0$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "decouverte",
+      "notion": "suites-geometriques",
+      "enonce": "Soit $(u_n)$ géométrique de premier terme $u_0=7$ et de raison $3$. Exprimer $u_n$ et calculer $u_4$.",
+      "corrige": [
+        "$u_n=7\\times 3^{n}$.",
+        "$u_4=7\\times 81=567$."
+      ],
+      "reponse": "$u_n=7\\times 3^{n}$ ; $u_4=567$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "suites-geometriques",
+      "enonce": "Soit $(u_n)$ géométrique avec $u_0=2$ et $q=\\dfrac{1}{2}$. Calculer $u_5$.",
+      "corrige": [
+        "$u_5=2\\times\\left(\\dfrac{1}{2}\\right)^{5}=\\dfrac{2}{32}=\\dfrac{1}{16}$."
+      ],
+      "reponse": "$u_5=\\dfrac{1}{16}$"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "suites-geometriques",
+      "enonce": "La suite $u_n=5\\times 4^{n}$ est-elle géométrique ? Si oui, donner sa raison et son premier terme.",
+      "corrige": [
+        "$u_{n+1}=5\\times 4^{n+1}=4\\times(5\\times 4^{n})=4u_n$."
+      ],
+      "reponse": "Oui, de raison $4$ et de premier terme $u_0=5$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "suites-geometriques",
+      "enonce": "Une suite géométrique vérifie $u_1=6$ et $u_3=54$, avec une raison positive. Déterminer la raison et $u_0$.",
+      "corrige": [
+        "$u_3=u_1\\times q^{2}$, donc $q^{2}=9$ et $q=3$ (raison positive).",
+        "$u_0=\\dfrac{u_1}{q}=2$."
+      ],
+      "reponse": "$q=3$ ; $u_0=2$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "suites-geometriques",
+      "enonce": "Un capital de $100$ € augmente de $10\\,\\%$ par an. Exprimer le capital $C_n$ au bout de $n$ années et calculer $C_3$.",
+      "corrige": [
+        "Hausse de $10\\,\\%$ : coefficient $1{,}1$. $C_n=100\\times 1{,}1^{n}$.",
+        "$C_3=100\\times 1{,}331=133{,}10$ €."
+      ],
+      "reponse": "$C_n=100\\times 1{,}1^{n}$ ; $C_3=133{,}10$ €"
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "suites-geometriques",
+      "enonce": "Montrer que $u_n=\\dfrac{3^{n+1}}{2^{n}}$ définit une suite géométrique ; donner sa raison et sa limite.",
+      "corrige": [
+        "$u_n=3\\times\\left(\\dfrac{3}{2}\\right)^{n}$ : géométrique de raison $\\dfrac{3}{2}$ et de premier terme $3$.",
+        "$\\dfrac{3}{2}>1$ et $3>0$ : $u_n\\to+\\infty$."
+      ],
+      "reponse": "Raison $\\dfrac{3}{2}$ ; limite $+\\infty$"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "somme-geometrique",
+      "enonce": "Calculer $S=1+2+2^{2}+\\dots+2^{10}$.",
+      "corrige": [
+        "$S=\\dfrac{1-2^{11}}{1-2}=\\dfrac{1-2048}{-1}=2047$."
+      ],
+      "reponse": "$S=2047$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "somme-geometrique",
+      "enonce": "Calculer $S=1+\\dfrac{1}{3}+\\left(\\dfrac{1}{3}\\right)^{2}+\\dots+\\left(\\dfrac{1}{3}\\right)^{5}$ sous forme de fraction.",
+      "corrige": [
+        "$S=\\dfrac{1-(1/3)^{6}}{1-1/3}=\\dfrac{1-\\frac{1}{729}}{\\frac{2}{3}}=\\dfrac{728}{729}\\times\\dfrac{3}{2}=\\dfrac{364}{243}$."
+      ],
+      "reponse": "$S=\\dfrac{364}{243}$"
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "somme-geometrique",
+      "enonce": "Un sportif court $5$ km la première semaine, puis augmente sa distance de $10\\,\\%$ chaque semaine. Quelle distance totale aura-t-il courue en $10$ semaines (au dixième de km) ?",
+      "corrige": [
+        "Distances : $5$, $5\\times 1{,}1$, …, $5\\times 1{,}1^{9}$.",
+        "Total $=5\\times\\dfrac{1-1{,}1^{10}}{1-1{,}1}\\approx 79{,}7$ km."
+      ],
+      "reponse": "$\\approx 79{,}7$ km"
+    },
+    {
+      "id": 28,
+      "difficulte": "decouverte",
+      "notion": "limites",
+      "enonce": "Donner la limite de $u_n=\\dfrac{1}{n^{2}}$ et de $v_n=n^{2}$ quand $n\\to+\\infty$.",
+      "corrige": [
+        "Limites usuelles de la fiche."
+      ],
+      "reponse": "$u_n\\to 0$ ; $v_n\\to+\\infty$"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "limites",
+      "enonce": "Déterminer la limite de $u_n=5-3\\times 0{,}7^{n}$.",
+      "corrige": [
+        "$-1<0{,}7<1$ : $0{,}7^{n}\\to 0$.",
+        "Donc $u_n\\to 5$."
+      ],
+      "reponse": "$5$"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "limites",
+      "enonce": "Déterminer la limite de $u_n=2\\times 1{,}03^{n}-100$.",
+      "corrige": [
+        "$1{,}03>1$ : $1{,}03^{n}\\to+\\infty$.",
+        "Donc $u_n\\to+\\infty$."
+      ],
+      "reponse": "$+\\infty$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Un élève écrit : « $(-0{,}5)^{n}$ n'a pas de limite car elle change de signe. » A-t-il raison ?",
+      "corrige": [
+        "Elle change bien de signe, mais $-1<-0{,}5<1$ : $(-0{,}5)^{n}\\to 0$.",
+        "Seules les raisons $q\\leqslant -1$ donnent une suite sans limite."
+      ],
+      "reponse": "Non : $(-0{,}5)^{n}\\to 0$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer la limite de $u_n=\\dfrac{4}{\\sqrt{n}}+3$ et de $v_n=(-3)^{n}$.",
+      "corrige": [
+        "$\\dfrac{1}{\\sqrt{n}}\\to 0$, donc $u_n\\to 3$.",
+        "$-3\\leqslant -1$ : $(v_n)$ n'a pas de limite."
+      ],
+      "reponse": "$u_n\\to 3$ ; $(v_n)$ n'a pas de limite"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Déterminer le point fixe de la relation $u_{n+1}=0{,}6u_n+8$.",
+      "corrige": [
+        "$\\ell=0{,}6\\ell+8\\iff 0{,}4\\ell=8\\iff\\ell=20$."
+      ],
+      "reponse": "$\\ell=20$"
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Parmi ces relations, lesquelles définissent une suite arithmético-géométrique (avec $a\\neq 0$ et $a\\neq 1$) ? a) $u_{n+1}=2u_n$ ; b) $u_{n+1}=u_n+5$ ; c) $u_{n+1}=0{,}3u_n-1$ ; d) $u_{n+1}=u_n^{2}+1$.",
+      "corrige": [
+        "a) géométrique ; b) arithmétique ; d) ni l'une ni l'autre (carré).",
+        "c) est de la forme $au_n+b$ avec $a=0{,}3$ et $b=-1$."
+      ],
+      "reponse": "Seulement c)"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Soit $u_0=5$ et $u_{n+1}=0{,}2u_n+4$. Déterminer le terme général et la limite.",
+      "corrige": [
+        "$\\ell=\\dfrac{4}{1-0{,}2}=5$.",
+        "$u_n=(5-5)\\times 0{,}2^{n}+5=5$ : la suite est constante, égale à son point fixe."
+      ],
+      "reponse": "$u_n=5$ pour tout $n$ ; limite $5$"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Soit $u_0=0$ et $u_{n+1}=0{,}75u_n+2$. Déterminer $u_n$ en fonction de $n$ et sa limite.",
+      "corrige": [
+        "$\\ell=\\dfrac{2}{0{,}25}=8$ ; $v_n=u_n-8$ géométrique de raison $0{,}75$, $v_0=-8$.",
+        "$u_n=-8\\times 0{,}75^{n}+8$, et $u_n\\to 8$."
+      ],
+      "reponse": "$u_n=8-8\\times 0{,}75^{n}$ ; limite $8$"
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Soit $u_0=1$ et $u_{n+1}=2u_n-3$. Déterminer $u_n$ et sa limite.",
+      "corrige": [
+        "$\\ell=\\dfrac{-3}{1-2}=3$ ; $u_n=(1-3)\\times 2^{n}+3=-2\\times 2^{n}+3$.",
+        "$2^{n}\\to+\\infty$ : $u_n\\to-\\infty$."
+      ],
+      "reponse": "$u_n=3-2^{n+1}$ ; limite $-\\infty$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "arithmetico-geometrique",
+      "enonce": "Un élève écrit pour $u_0=10$ et $u_{n+1}=0{,}5u_n+3$ : « $u_n=10\\times 0{,}5^{n}$ ». Calculer $u_1$ de deux façons et conclure.",
+      "corrige": [
+        "Par la relation : $u_1=5+3=8$. Par sa formule : $10\\times 0{,}5=5$. Ce n'est pas pareil.",
+        "La suite n'est pas géométrique (terme $+3$) : il faut passer par le point fixe $\\ell=6$ et obtenir $u_n=4\\times 0{,}5^{n}+6$."
+      ],
+      "reponse": "Formule fausse ; $u_n=4\\times 0{,}5^{n}+6$"
+    },
+    {
+      "id": 39,
+      "difficulte": "decouverte",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Donner le coefficient multiplicateur associé à : a) une hausse de $3\\,\\%$ ; b) une baisse de $15\\,\\%$ ; c) une hausse de $100\\,\\%$.",
+      "corrige": [
+        "Coefficient $1+\\dfrac{t}{100}$ avec $t$ négatif pour une baisse."
+      ],
+      "reponse": "a) $1{,}03$ ; b) $0{,}85$ ; c) $2$"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Une quantité est multipliée chaque année par $0{,}92$. Quel est le taux d'évolution annuel ?",
+      "corrige": [
+        "$0{,}92=1-0{,}08$."
+      ],
+      "reponse": "Baisse de $8\\,\\%$ par an"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Un élève modélise une baisse annuelle de $20\\,\\%$ par $u_{n+1}=0{,}2u_n$. Corriger.",
+      "corrige": [
+        "Après une baisse de $20\\,\\%$, il reste $80\\,\\%$ de la quantité.",
+        "La bonne relation est $u_{n+1}=0{,}8u_n$."
+      ],
+      "reponse": "$u_{n+1}=0{,}8u_n$"
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Un prix augmente de $10\\,\\%$ puis baisse de $10\\,\\%$. Revient-il à sa valeur de départ ?",
+      "corrige": [
+        "Coefficient global : $1{,}1\\times 0{,}9=0{,}99$.",
+        "Le prix final vaut $99\\,\\%$ du prix initial : baisse de $1\\,\\%$."
+      ],
+      "reponse": "Non : baisse globale de $1\\,\\%$"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "modelisation",
+      "enonce": "Une ville compte $30\\,000$ habitants ; chaque année, sa population augmente de $2\\,\\%$ et $300$ personnes s'y installent en plus. Écrire la relation de récurrence et calculer $u_1$.",
+      "corrige": [
+        "Hausse de $2\\,\\%$ : $\\times 1{,}02$, puis $+300$.",
+        "$u_{n+1}=1{,}02u_n+300$ ; $u_1=30\\,600+300=30\\,900$."
+      ],
+      "reponse": "$u_{n+1}=1{,}02u_n+300$ ; $u_1=30\\,900$"
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "modelisation",
+      "enonce": "Un lac contient $200$ poissons ; chaque année, la population diminue de $20\\,\\%$ puis on réintroduit $50$ poissons ($u_{n+1}=0{,}8u_n+50$). Donner $u_n$ en fonction de $n$.",
+      "corrige": [
+        "Point fixe : $\\ell=250$ ; $v_n=u_n-250$ géométrique de raison $0{,}8$, $v_0=-50$.",
+        "$u_n=-50\\times 0{,}8^{n}+250$."
+      ],
+      "reponse": "$u_n=250-50\\times 0{,}8^{n}$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "modelisation",
+      "enonce": "On place $1000$ € sur un compte à $3\\,\\%$ par an et, chaque fin d'année (après les intérêts), on ajoute $200$ €. 1. Écrire la relation de récurrence. 2. Déterminer le point fixe et le terme général. 3. Que devient le capital à long terme ?",
+      "corrige": [
+        "1. $u_{n+1}=1{,}03u_n+200$, $u_0=1000$.",
+        "2. $\\ell=\\dfrac{200}{1-1{,}03}=-\\dfrac{20\\,000}{3}$ ; $u_n=\\left(1000+\\dfrac{20\\,000}{3}\\right)\\times 1{,}03^{n}-\\dfrac{20\\,000}{3}=\\dfrac{23\\,000}{3}\\times 1{,}03^{n}-\\dfrac{20\\,000}{3}$.",
+        "3. $1{,}03>1$ et $\\dfrac{23\\,000}{3}>0$ : $u_n\\to+\\infty$, le capital augmente sans limite."
+      ],
+      "reponse": "$u_n=\\dfrac{23\\,000}{3}\\times 1{,}03^{n}-\\dfrac{20\\,000}{3}$ ; $u_n\\to+\\infty$"
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "Un parc naturel compte $800$ cerfs. Chaque année, $25\\,\\%$ des cerfs disparaissent (prédation, vieillesse) et il naît l'équivalent de $150$ jeunes. 1. Justifier que $u_{n+1}=0{,}75u_n+150$. 2. Déterminer $u_n$. 3. Étudier le sens de variation et la limite. 4. Interpréter.",
+      "corrige": [
+        "1. Il reste $75\\,\\%$ des cerfs, puis on ajoute $150$.",
+        "2. $\\ell=\\dfrac{150}{0{,}25}=600$ ; $u_n=(800-600)\\times 0{,}75^{n}+600=200\\times 0{,}75^{n}+600$.",
+        "3. $0{,}75^{n}$ décroît vers $0$ : $(u_n)$ est décroissante et tend vers $600$.",
+        "4. La population diminue et se stabilise autour de $600$ cerfs."
+      ],
+      "reponse": "$u_n=200\\times 0{,}75^{n}+600$ ; décroissante, limite $600$ cerfs"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "seuil",
+      "enonce": "Pour le lac ($u_0=200$, $u_{n+1}=0{,}8u_n+50$), calculer $u_1$, $u_2$, $u_3$, $u_4$ et déterminer le premier rang où la population dépasse $230$ poissons.",
+      "corrige": [
+        "$u_1=210$ ; $u_2=218$ ; $u_3=224{,}4$ ; $u_4=229{,}52$ ; $u_5=233{,}616$.",
+        "Le premier terme qui dépasse $230$ est $u_5$."
+      ],
+      "reponse": "Rang $5$"
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "seuil",
+      "enonce": "Pour $u_n=1000\\times 1{,}05^{n}$, déterminer le plus petit $n$ tel que $u_n>2000$, à l'aide de la calculatrice.",
+      "corrige": [
+        "On cherche $1{,}05^{n}>2$.",
+        "$1{,}05^{14}\\approx 1{,}980$ et $1{,}05^{15}\\approx 2{,}079$."
+      ],
+      "reponse": "$n=15$"
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "seuil",
+      "enonce": "Compléter l'algorithme pour qu'il renvoie le premier rang $n$ tel que $u_n<1$, avec $u_0=50$ et $u_{n+1}=0{,}6u_n$ : « $n\\leftarrow 0$ ; $u\\leftarrow 50$ ; tant que $\\ldots$ : $u\\leftarrow\\ldots$ ; $n\\leftarrow n+1$ ; renvoyer $n$ ». Quel résultat obtient-on ?",
+      "corrige": [
+        "Condition : tant que $u\\geqslant 1$ ; mise à jour : $u\\leftarrow 0{,}6u$.",
+        "$50\\times 0{,}6^{7}\\approx 1{,}400$ et $50\\times 0{,}6^{8}\\approx 0{,}840$ : l'algorithme renvoie $8$."
+      ],
+      "reponse": "« tant que $u\\geqslant 1$ », « $u\\leftarrow 0{,}6u$ » ; résultat $8$"
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "seuil",
+      "enonce": "Pour les cerfs ($u_n=200\\times 0{,}75^{n}+600$), un élève dit : « la population tend vers $600$, donc elle atteindra $600$ au bout d'un certain temps. » Commenter, puis trouver le premier rang où $u_n<610$.",
+      "corrige": [
+        "$200\\times 0{,}75^{n}>0$ pour tout $n$ : $u_n>600$ toujours, la limite n'est jamais atteinte.",
+        "$u_n<610\\iff 0{,}75^{n}<0{,}05$ ; $0{,}75^{10}\\approx 0{,}056$ et $0{,}75^{11}\\approx 0{,}042$ : premier rang $11$."
+      ],
+      "reponse": "$600$ n'est jamais atteint ; $u_n<610$ à partir de $n=11$"
     }
   ]
 }

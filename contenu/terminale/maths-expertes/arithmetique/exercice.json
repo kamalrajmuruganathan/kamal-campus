@@ -135,7 +135,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "codage-affine",
       "enonce": "On code les $26$ lettres de l'alphabet par les entiers de $0$ à $25$ ($A=0$, $B=1$, …, $Z=25$). Pour chiffrer un message, on remplace la lettre de rang $x$ par la lettre de rang $y$, où $y$ est l'unique entier de $\\{0,\\dots,25\\}$ tel que $y \\equiv 5x + 8\\ [26]$ (chiffrement affine). 1. Justifier que $5$ et $26$ sont premiers entre eux, puis déterminer, à l'aide de l'algorithme d'Euclide, un entier $u$ tel que $5u \\equiv 1\\ [26]$ (un inverse de $5$ modulo $26$). 2. Chiffrer la lettre $M$. 3. Montrer que le déchiffrement est donné par $x \\equiv 21(y - 8)\\ [26]$. 4. Déchiffrer la lettre $D$. 5. Expliquer pourquoi le coefficient $a$ d'un chiffrement affine $y \\equiv ax + b\\ [26]$ doit être choisi premier avec $26$ pour que le déchiffrement soit toujours possible.",
       "corrige": [
@@ -146,6 +146,443 @@
         "5. Le déchiffrement revient à résoudre $ax \\equiv y - b\\ [26]$ d'inconnue $x$. Cette équation admet une solution unique modulo $26$ pour chaque valeur de $y$ si et seulement si $a$ possède un inverse modulo $26$, c'est-à-dire (théorème de Bézout) si et seulement si $\\mathrm{pgcd}(a,26) = 1$. Cette hypothèse assure aussi l'unicité : si $ax \\equiv ax'\\ [26]$ avec $\\mathrm{pgcd}(a,26)=1$, le théorème de Gauss donne $x \\equiv x'\\ [26]$, donc deux lettres distinctes ne sont jamais chiffrées de la même façon. Si au contraire $a$ n'était pas premier avec $26$, le chiffrement ne serait pas injectif et le déchiffrement deviendrait impossible."
       ],
       "reponse": "1. $\\mathrm{pgcd}(5,26)=1$ et un inverse de $5$ modulo $26$ est $u = 21$. 2. $M$ (rang $12$) se chiffre en $Q$ (rang $16$). 3. Déchiffrement : $x \\equiv 21(y-8)\\ [26]$. 4. $D$ (rang $3$) se déchiffre en $Z$ (rang $25$). 5. Il faut $\\mathrm{pgcd}(a,26)=1$ pour que $a$ soit inversible modulo $26$ (Bézout) et que le chiffrement soit une bijection (Gauss)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "divisibilite",
+      "enonce": "Vrai ou faux ? a) $6\\mid 54$ ; b) $54\\mid 6$ ; c) $-4\\mid 28$ ; d) $5\\mid 0$.",
+      "corrige": [
+        "a) $54=6\\times 9$ : vrai. b) $6=54k$ n'a pas de solution entière : faux.",
+        "c) $28=(-4)\\times(-7)$ : vrai. d) $0=5\\times 0$ : vrai."
+      ],
+      "reponse": "a) vrai ; b) faux ; c) vrai ; d) vrai"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "divisibilite",
+      "enonce": "Déterminer tous les diviseurs positifs de $36$.",
+      "corrige": [
+        "On cherche les couples de produits égaux à $36$ : $1\\times 36$, $2\\times 18$, $3\\times 12$, $4\\times 9$, $6\\times 6$."
+      ],
+      "reponse": "$1,\\ 2,\\ 3,\\ 4,\\ 6,\\ 9,\\ 12,\\ 18,\\ 36$"
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "divisibilite",
+      "enonce": "Soit $n$ un entier naturel. Un entier $d\\geqslant 1$ divise $n+5$ et $n+2$. Quelles sont les valeurs possibles de $d$ ?",
+      "corrige": [
+        "$d$ divise toute combinaison linéaire, donc la différence $(n+5)-(n+2)=3$.",
+        "$d\\in\\{1\\,;3\\}$."
+      ],
+      "reponse": "$d=1$ ou $d=3$"
+    },
+    {
+      "id": 14,
+      "difficulte": "approfondissement",
+      "notion": "divisibilite",
+      "enonce": "Déterminer les entiers naturels $n$ tels que $n+1$ divise $n+6$.",
+      "corrige": [
+        "$n+6=(n+1)+5$ : $n+1\\mid n+6\\iff n+1\\mid 5$.",
+        "$n+1\\in\\{1\\,;5\\}$, donc $n=0$ ou $n=4$. Vérification : $1\\mid 6$ et $5\\mid 10$."
+      ],
+      "reponse": "$n=0$ ou $n=4$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "division-euclidienne",
+      "enonce": "Effectuer la division euclidienne de $2025$ par $12$.",
+      "corrige": [
+        "$12\\times 168=2016$ et $2025-2016=9$, avec $0\\leqslant 9<12$."
+      ],
+      "reponse": "$2025=12\\times 168+9$ ($q=168$, $r=9$)"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "division-euclidienne",
+      "enonce": "Effectuer la division euclidienne de $-23$ par $4$.",
+      "corrige": [
+        "$4\\times(-5)=-20$ donnerait un reste $-3$, interdit. On descend d'un cran : $4\\times(-6)=-24$.",
+        "$-23=4\\times(-6)+1$, avec $0\\leqslant 1<4$."
+      ],
+      "reponse": "$q=-6$, $r=1$"
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "division-euclidienne",
+      "enonce": "Un élève écrit : « $100=7\\times 13+9$, donc le reste de $100$ par $7$ est $9$. » Corriger.",
+      "corrige": [
+        "Le reste doit vérifier $0\\leqslant r<7$ ; $9$ ne convient pas.",
+        "$100=7\\times 14+2$ : le reste est $2$."
+      ],
+      "reponse": "Reste $2$ ($100=7\\times 14+2$)"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "division-euclidienne",
+      "enonce": "Le reste de la division d'un entier $a$ par $7$ est $5$. Quel est le reste de la division de $3a$ par $7$ ?",
+      "corrige": [
+        "$a=7q+5$, donc $3a=21q+15=7(3q+2)+1$.",
+        "Le reste est $1$."
+      ],
+      "reponse": "$1$"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "congruences",
+      "enonce": "Vrai ou faux ? a) $38\\equiv 3\\ [5]$ ; b) $-1\\equiv 6\\ [7]$ ; c) $100\\equiv 1\\ [9]$.",
+      "corrige": [
+        "a) $38-3=35=5\\times 7$ : vrai. b) $-1-6=-7$ : vrai.",
+        "c) $100-1=99=9\\times 11$ : vrai."
+      ],
+      "reponse": "Vrai, vrai, vrai."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "congruences",
+      "enonce": "Déterminer le reste de $3^{2026}$ dans la division par $4$.",
+      "corrige": [
+        "$3\\equiv -1\\ [4]$, donc $3^{2026}\\equiv(-1)^{2026}=1\\ [4]$ ($2026$ est pair)."
+      ],
+      "reponse": "$1$"
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "congruences",
+      "enonce": "Montrer que $10^{n}\\equiv 1\\ [9]$ pour tout entier naturel $n$, puis déterminer sans division le reste de $4\\,527$ par $9$.",
+      "corrige": [
+        "$10\\equiv 1\\ [9]$, donc $10^{n}\\equiv 1^{n}=1\\ [9]$.",
+        "$4\\,527\\equiv 4+5+2+7=18\\equiv 0\\ [9]$ : le reste est $0$."
+      ],
+      "reponse": "Reste $0$"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "congruences",
+      "enonce": "Montrer que, pour tout entier $n$, $n^{3}-n$ est divisible par $3$ (on pourra raisonner sur les restes de $n$ modulo $3$).",
+      "corrige": [
+        "Si $n\\equiv 0$ : $0-0=0$. Si $n\\equiv 1$ : $1-1=0$. Si $n\\equiv 2$ : $8-2=6\\equiv 0\\ [3]$.",
+        "Dans tous les cas, $n^{3}-n\\equiv 0\\ [3]$."
+      ],
+      "reponse": "$3\\mid n^{3}-n$ pour tout $n$"
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "congruences",
+      "enonce": "Un élève écrit : « $4x\\equiv 4\\cdot 2\\ [6]$, donc $x\\equiv 2\\ [6]$. » Montrer que c'est faux avec $x=5$.",
+      "corrige": [
+        "$4\\times 5=20\\equiv 2\\ [6]$ et $4\\times 2=8\\equiv 2\\ [6]$ : l'hypothèse est vraie pour $x=5$.",
+        "Mais $5\\not\\equiv 2\\ [6]$ : on ne peut pas simplifier par $4$, car $\\mathrm{pgcd}(4,6)=2\\neq 1$."
+      ],
+      "reponse": "Contre-exemple $x=5$ : simplification interdite."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "pgcd-euclide",
+      "enonce": "Calculer $\\mathrm{pgcd}(462\\,;210)$ par l'algorithme d'Euclide.",
+      "corrige": [
+        "$462=210\\times 2+42$ ; $210=42\\times 5+0$.",
+        "Le dernier reste non nul est $42$."
+      ],
+      "reponse": "$42$"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "pgcd-euclide",
+      "enonce": "Calculer $\\mathrm{pgcd}(1071\\,;462)$.",
+      "corrige": [
+        "$1071=462\\times 2+147$ ; $462=147\\times 3+21$ ; $147=21\\times 7+0$."
+      ],
+      "reponse": "$21$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "pgcd-euclide",
+      "enonce": "Les entiers $144$ et $89$ sont-ils premiers entre eux ?",
+      "corrige": [
+        "$144=89+55$, $89=55+34$, $55=34+21$, $34=21+13$, $21=13+8$, $13=8+5$, $8=5+3$, $5=3+2$, $3=2+1$, $2=2\\times 1+0$.",
+        "Le dernier reste non nul est $1$."
+      ],
+      "reponse": "Oui, $\\mathrm{pgcd}(144\\,;89)=1$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "pgcd-euclide",
+      "enonce": "Sachant que $\\mathrm{pgcd}(14\\,;35)=7$, calculer $\\mathrm{pgcd}(140\\,;350)$.",
+      "corrige": [
+        "$\\mathrm{pgcd}(ka,kb)=|k|\\,\\mathrm{pgcd}(a,b)$ avec $k=10$."
+      ],
+      "reponse": "$70$"
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "bezout",
+      "enonce": "Vérifier que $13\\times(-3)+8\\times 5=1$. Que peut-on en déduire pour $13$ et $8$ ?",
+      "corrige": [
+        "$-39+40=1$.",
+        "D'après le théorème de Bézout, $13$ et $8$ sont premiers entre eux."
+      ],
+      "reponse": "$\\mathrm{pgcd}(13\\,;8)=1$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "bezout",
+      "enonce": "L'équation $6u+15v=4$ a-t-elle des solutions entières ? Et $6u+15v=9$ ?",
+      "corrige": [
+        "$\\mathrm{pgcd}(6\\,;15)=3$.",
+        "$3\\nmid 4$ : pas de solution. $3\\mid 9$ : il y a des solutions (par exemple $u=-1$, $v=1$)."
+      ],
+      "reponse": "Non pour $4$ ; oui pour $9$"
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "bezout",
+      "enonce": "Trouver un couple d'entiers $(u\\,;v)$ tel que $21u+8v=1$ en remontant l'algorithme d'Euclide.",
+      "corrige": [
+        "$21=8\\times 2+5$ ; $8=5\\times 1+3$ ; $5=3\\times 1+2$ ; $3=2\\times 1+1$.",
+        "$1=3-2=3-(5-3)=2\\times 3-5=2(8-5)-5=2\\times 8-3\\times 5=2\\times 8-3(21-2\\times 8)=8\\times 8-3\\times 21$."
+      ],
+      "reponse": "$(u\\,;v)=(-3\\,;8)$"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "gauss",
+      "enonce": "On sait que $5\\mid 3n$. Montrer que $5\\mid n$.",
+      "corrige": [
+        "$\\mathrm{pgcd}(5\\,;3)=1$.",
+        "D'après le théorème de Gauss, $5\\mid n$."
+      ],
+      "reponse": "$5\\mid n$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "gauss",
+      "enonce": "Un élève écrit : « $4\\mid 2\\times 6$, donc $4\\mid 6$ par le théorème de Gauss. » Où est l'erreur ?",
+      "corrige": [
+        "Gauss exige $\\mathrm{pgcd}(4\\,;2)=1$ ; or $\\mathrm{pgcd}(4\\,;2)=2$.",
+        "D'ailleurs $4\\nmid 6$."
+      ],
+      "reponse": "Hypothèse de Gauss non vérifiée ($\\mathrm{pgcd}(4\\,;2)=2$)."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "gauss",
+      "enonce": "Résoudre dans $\\mathbb{Z}^{2}$ l'équation $7x=4y$.",
+      "corrige": [
+        "$7\\mid 4y$ et $\\mathrm{pgcd}(7\\,;4)=1$ : par Gauss, $7\\mid y$, donc $y=7k$.",
+        "Alors $7x=28k$, d'où $x=4k$. Réciproquement $(4k\\,;7k)$ convient."
+      ],
+      "reponse": "$\\{(4k\\,;7k),\\ k\\in\\mathbb{Z}\\}$"
+    },
+    {
+      "id": 34,
+      "difficulte": "decouverte",
+      "notion": "nombres-premiers",
+      "enonce": "Parmi $1$, $2$, $9$, $17$, $21$, $29$, lesquels sont premiers ?",
+      "corrige": [
+        "$1$ n'est pas premier (un seul diviseur). $9=3\\times 3$ et $21=3\\times 7$ ne sont pas premiers.",
+        "$2$, $17$ et $29$ n'ont que deux diviseurs."
+      ],
+      "reponse": "$2$, $17$, $29$"
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "nombres-premiers",
+      "enonce": "Le nombre $211$ est-il premier ?",
+      "corrige": [
+        "$\\sqrt{211}\\approx 14{,}5$ : on teste $2$, $3$, $5$, $7$, $11$, $13$.",
+        "Aucun ne divise $211$ ($211=7\\times 30+1=11\\times 19+2=13\\times 16+3$, etc.)."
+      ],
+      "reponse": "Oui, $211$ est premier."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "nombres-premiers",
+      "enonce": "Le nombre $221$ est-il premier ?",
+      "corrige": [
+        "$\\sqrt{221}\\approx 14{,}9$ : on teste les premiers jusqu'à $13$.",
+        "$221=13\\times 17$."
+      ],
+      "reponse": "Non : $221=13\\times 17$"
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "nombres-premiers",
+      "enonce": "Un élève affirme : « $8$ et $15$ sont premiers entre eux, donc ce sont des nombres premiers. » Corriger.",
+      "corrige": [
+        "« Premiers entre eux » signifie $\\mathrm{pgcd}=1$, ce qui est vrai ici.",
+        "Mais $8=2^{3}$ et $15=3\\times 5$ ne sont pas des nombres premiers."
+      ],
+      "reponse": "Faux : ils sont premiers entre eux sans être premiers."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "decomposition-premiers",
+      "enonce": "Décomposer $1050$ en produit de facteurs premiers et donner son nombre de diviseurs positifs.",
+      "corrige": [
+        "$1050=2\\times 525=2\\times 3\\times 175=2\\times 3\\times 5^{2}\\times 7$.",
+        "Nombre de diviseurs : $(1+1)(1+1)(2+1)(1+1)=24$."
+      ],
+      "reponse": "$1050=2\\times 3\\times 5^{2}\\times 7$ ; $24$ diviseurs"
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "decomposition-premiers",
+      "enonce": "À l'aide des décompositions, calculer $\\mathrm{pgcd}(1050\\,;588)$.",
+      "corrige": [
+        "$1050=2\\times 3\\times 5^{2}\\times 7$ et $588=2^{2}\\times 3\\times 7^{2}$.",
+        "On prend chaque premier commun à sa plus petite puissance : $2\\times 3\\times 7=42$."
+      ],
+      "reponse": "$42$"
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "fermat",
+      "enonce": "Déterminer le reste de $2^{1000}$ dans la division par $11$.",
+      "corrige": [
+        "$11$ est premier et ne divise pas $2$ : $2^{10}\\equiv 1\\ [11]$.",
+        "$2^{1000}=\\left(2^{10}\\right)^{100}\\equiv 1\\ [11]$."
+      ],
+      "reponse": "$1$"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "fermat",
+      "enonce": "Déterminer le reste de $5^{2026}$ dans la division par $13$.",
+      "corrige": [
+        "Fermat : $5^{12}\\equiv 1\\ [13]$. $2026=12\\times 168+10$, donc $5^{2026}\\equiv 5^{10}\\ [13]$.",
+        "$5^{2}=25\\equiv -1\\ [13]$, donc $5^{10}=\\left(5^{2}\\right)^{5}\\equiv(-1)^{5}=-1\\equiv 12\\ [13]$."
+      ],
+      "reponse": "$12$"
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "fermat",
+      "enonce": "Un élève écrit : « $7$ est premier, donc $14^{6}\\equiv 1\\ [7]$ par Fermat. » Corriger.",
+      "corrige": [
+        "Fermat exige que $7$ ne divise pas $14$ ; or $14=7\\times 2$.",
+        "En fait $14\\equiv 0\\ [7]$, donc $14^{6}\\equiv 0\\ [7]$."
+      ],
+      "reponse": "$14^{6}\\equiv 0\\ [7]$"
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "inverse-modulo",
+      "enonce": "Déterminer un inverse de $4$ modulo $11$.",
+      "corrige": [
+        "On cherche $u$ tel que $4u\\equiv 1\\ [11]$ : $4\\times 3=12\\equiv 1\\ [11]$."
+      ],
+      "reponse": "$3$"
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "inverse-modulo",
+      "enonce": "$6$ admet-il un inverse modulo $15$ ? Justifier.",
+      "corrige": [
+        "$\\mathrm{pgcd}(6\\,;15)=3\\neq 1$.",
+        "Un inverse existe si et seulement si le PGCD vaut $1$."
+      ],
+      "reponse": "Non"
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "inverse-modulo",
+      "enonce": "Résoudre $7x\\equiv 3\\ [11]$.",
+      "corrige": [
+        "Inverse de $7$ modulo $11$ : $7\\times 8=56=55+1\\equiv 1\\ [11]$, donc $8$.",
+        "$x\\equiv 8\\times 3=24\\equiv 2\\ [11]$. Vérification : $7\\times 2=14\\equiv 3\\ [11]$."
+      ],
+      "reponse": "$x\\equiv 2\\ [11]$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "inverse-modulo",
+      "enonce": "Résoudre $4x\\equiv 6\\ [10]$.",
+      "corrige": [
+        "$\\mathrm{pgcd}(4\\,;10)=2$ divise $6$ : il y a des solutions. $4x\\equiv 6\\ [10]\\iff 10\\mid 4x-6\\iff 5\\mid 2x-3\\iff 2x\\equiv 3\\ [5]$.",
+        "Inverse de $2$ modulo $5$ : $3$. Donc $x\\equiv 9\\equiv 4\\ [5]$.",
+        "Vérification : $4\\times 4=16\\equiv 6\\ [10]$ et $4\\times 9=36\\equiv 6\\ [10]$."
+      ],
+      "reponse": "$x\\equiv 4\\ [5]$"
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "diophantiennes",
+      "enonce": "L'équation $10x+4y=7$ admet-elle des solutions entières ?",
+      "corrige": [
+        "$\\mathrm{pgcd}(10\\,;4)=2$ et $2\\nmid 7$.",
+        "Autre façon : $10x+4y$ est toujours pair, $7$ est impair."
+      ],
+      "reponse": "Non, aucune solution."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "diophantiennes",
+      "enonce": "Résoudre dans $\\mathbb{Z}^{2}$ l'équation $3x+5y=1$.",
+      "corrige": [
+        "Solution particulière : $(2\\,;-1)$ car $6-5=1$.",
+        "$\\mathrm{pgcd}(3\\,;5)=1$ : $x=2+5k$, $y=-1-3k$, $k\\in\\mathbb{Z}$."
+      ],
+      "reponse": "$\\{(2+5k\\,;-1-3k),\\ k\\in\\mathbb{Z}\\}$"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "diophantiennes",
+      "enonce": "Résoudre dans $\\mathbb{Z}^{2}$ l'équation $4x+6y=10$.",
+      "corrige": [
+        "On divise par $\\mathrm{pgcd}(4\\,;6)=2$ : $2x+3y=5$.",
+        "Solution particulière $(1\\,;1)$ ; donc $x=1+3k$, $y=1-2k$, $k\\in\\mathbb{Z}$."
+      ],
+      "reponse": "$\\{(1+3k\\,;1-2k),\\ k\\in\\mathbb{Z}\\}$"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "diophantiennes",
+      "enonce": "Un caviste vend des bouteilles à $7$ € et des bouteilles à $12$ €. Un client paie exactement $100$ €. 1. Traduire par une équation $7x+12y=100$ et justifier qu'elle a des solutions entières. 2. Vérifier que $(4\\,;6)$ est solution. 3. Donner toutes les solutions entières. 4. Combien de bouteilles de chaque sorte le client a-t-il pu acheter ?",
+      "corrige": [
+        "1. $\\mathrm{pgcd}(7\\,;12)=1$ divise $100$.",
+        "2. $28+72=100$.",
+        "3. $x=4+12k$, $y=6-7k$, $k\\in\\mathbb{Z}$.",
+        "4. Il faut $x\\geqslant 0$ et $y\\geqslant 0$ : $k\\geqslant -\\dfrac{1}{3}$ et $k\\leqslant\\dfrac{6}{7}$, donc $k=0$. Le client a acheté $4$ bouteilles à $7$ € et $6$ bouteilles à $12$ €."
+      ],
+      "reponse": "$x=4+12k$, $y=6-7k$ ; seule possibilité : $4$ bouteilles à $7$ € et $6$ à $12$ €"
     }
   ]
 }

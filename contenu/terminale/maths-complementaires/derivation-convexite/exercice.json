@@ -130,7 +130,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme-bac",
       "enonce": "Une entreprise fabrique et vend un composant électronique. Elle produit chaque jour $x$ centaines de composants, avec $0 \\leqslant x \\leqslant 10$. Le bénéfice quotidien, exprimé en milliers d'euros, est modélisé par $B(x) = -x^3 + 9x^2 + 21x$. 1. Calculer $B'(x)$ et vérifier que $B'(x) = -3(x - 7)(x + 1)$. 2. Étudier le signe de $B'(x)$ sur $[0\\,;10]$, dresser le tableau de variations de $B$, puis déterminer la production quotidienne qui rend le bénéfice maximal ainsi que ce bénéfice maximal. 3. Calculer $B''(x)$ et étudier la convexité de $B$ sur $[0\\,;10]$. 4. Montrer que la courbe de $B$ admet un unique point d'inflexion sur $[0\\,;10]$ et en donner les coordonnées. 5. On admet que le bénéfice marginal (le supplément de bénéfice pour une centaine de composants supplémentaire) est donné par $B'(x)$. Interpréter le point d'inflexion en termes de bénéfice marginal.",
       "corrige": [
@@ -141,6 +141,453 @@
         "5. Le bénéfice marginal est $B'(x)$. Sur $[0\\,;3]$, $B$ est convexe, donc $B'$ est croissante : le bénéfice marginal augmente. Sur $[3\\,;10]$, $B$ est concave, donc $B'$ décroît : le bénéfice marginal diminue. Au point d'inflexion $x = 3$, le bénéfice marginal est donc maximal : c'est le niveau de production (300 composants) au-delà duquel chaque centaine supplémentaire rapporte de moins en moins. On peut le confirmer : $B'(3) = -3(3 - 7)(3 + 1) = -3\\times(-4)\\times 4 = 48$, la plus grande valeur de $B'$ sur l'intervalle."
       ],
       "reponse": "1. $B'(x) = -3(x-7)(x+1)$. 2. $B$ croît sur $[0\\,;7]$ puis décroît sur $[7\\,;10]$ ; bénéfice maximal $B(7) = 245$ milliers d'euros pour $700$ composants. 3. $B''(x) = -6(x-3)$ : $B$ convexe sur $[0\\,;3]$, concave sur $[3\\,;10]$. 4. Unique point d'inflexion $(3\\,;117)$. 5. Le bénéfice marginal $B'$ est maximal en $x = 3$ (où $B'(3) = 48$) : au-delà de 300 composants, chaque centaine supplémentaire rapporte de moins en moins."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "tangente",
+      "enonce": "Soit $f(x)=x^3$. Calculer $f'(2)$ puis déterminer une équation de la tangente à la courbe de $f$ au point d'abscisse $2$.",
+      "corrige": [
+        "$f'(x)=3x^2$, donc $f'(2)=12$ ; et $f(2)=8$.",
+        "Tangente : $y=f'(2)(x-2)+f(2)=12(x-2)+8=12x-16$."
+      ],
+      "reponse": "$f'(2)=12$ ; $y=12x-16$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "tangente",
+      "enonce": "Déterminer une équation de la tangente à la courbe de la fonction racine carrée au point d'abscisse $4$.",
+      "corrige": [
+        "$f(x)=\\sqrt{x}$, $f'(x)=\\dfrac{1}{2\\sqrt{x}}$ : $f'(4)=\\dfrac{1}{4}$ et $f(4)=2$.",
+        "$y=\\dfrac{1}{4}(x-4)+2=\\dfrac{1}{4}x+1$."
+      ],
+      "reponse": "$y=\\dfrac{1}{4}x+1$"
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "tangente",
+      "enonce": "Déterminer une équation de la tangente à la courbe de $f(x)=\\dfrac{1}{x}$ au point d'abscisse $1$.",
+      "corrige": [
+        "$f'(x)=-\\dfrac{1}{x^2}$ : $f'(1)=-1$ et $f(1)=1$.",
+        "$y=-1\\times(x-1)+1=-x+2$."
+      ],
+      "reponse": "$y=-x+2$"
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Soit $f(x)=x^2-3x$. En quel point la courbe de $f$ admet-elle une tangente horizontale ? Donner l'équation de cette tangente.",
+      "corrige": [
+        "Une tangente est horizontale quand sa pente est nulle : $f'(x)=2x-3=0$, soit $x=\\dfrac{3}{2}$.",
+        "$f\\left(\\dfrac{3}{2}\\right)=\\dfrac{9}{4}-\\dfrac{9}{2}=-\\dfrac{9}{4}$ : la tangente a pour équation $y=-\\dfrac{9}{4}$."
+      ],
+      "reponse": "Au point $\\left(\\dfrac{3}{2}\\,;-\\dfrac{9}{4}\\right)$ ; tangente $y=-\\dfrac{9}{4}$"
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "tangente",
+      "enonce": "Un élève écrit la tangente à la courbe de $f(x)=e^{x}$ en $0$ sous la forme $y=e^{x}(x-0)+1$. Corriger son erreur.",
+      "corrige": [
+        "Dans $y=f'(a)(x-a)+f(a)$, le coefficient $f'(a)$ est un nombre, pas une fonction : il faut calculer $f'(0)=e^{0}=1$.",
+        "La tangente est donc $y=1\\times x+1=x+1$."
+      ],
+      "reponse": "$y=x+1$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "derivees-reference",
+      "enonce": "Calculer la dérivée de $f(x)=5x^4-3x^2+7$.",
+      "corrige": [
+        "On dérive terme à terme : $(x^4)'=4x^3$, $(x^2)'=2x$ et la constante a une dérivée nulle.",
+        "$f'(x)=5\\times 4x^3-3\\times 2x=20x^3-6x$."
+      ],
+      "reponse": "$f'(x)=20x^3-6x$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "derivees-reference",
+      "enonce": "Calculer la dérivée de $f(x)=x\\,e^{x}$ à l'aide de la formule du produit.",
+      "corrige": [
+        "$u=x$, $v=e^{x}$ : $u'=1$, $v'=e^{x}$.",
+        "$f'(x)=u'v+uv'=e^{x}+x\\,e^{x}=(x+1)\\,e^{x}$."
+      ],
+      "reponse": "$f'(x)=(x+1)\\,e^{x}$"
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "derivees-reference",
+      "enonce": "Calculer la dérivée de $f(x)=\\dfrac{2x+1}{x-1}$ sur $]1\\,;+\\infty[$.",
+      "corrige": [
+        "$u=2x+1$, $v=x-1$ : $u'=2$, $v'=1$.",
+        "$f'(x)=\\dfrac{2(x-1)-(2x+1)\\times 1}{(x-1)^2}=\\dfrac{-3}{(x-1)^2}$."
+      ],
+      "reponse": "$f'(x)=-\\dfrac{3}{(x-1)^2}$"
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "derivees-reference",
+      "enonce": "Un élève dérive $f(x)=3\\sqrt{x}+\\dfrac{2}{x}$ et trouve $f'(x)=\\dfrac{3}{2\\sqrt{x}}+\\dfrac{2}{x^2}$. Trouver son erreur.",
+      "corrige": [
+        "La dérivée de $\\dfrac{1}{x}$ est $-\\dfrac{1}{x^2}$ : il a oublié le signe moins.",
+        "Correction : $f'(x)=\\dfrac{3}{2\\sqrt{x}}-\\dfrac{2}{x^2}$."
+      ],
+      "reponse": "$f'(x)=\\dfrac{3}{2\\sqrt{x}}-\\dfrac{2}{x^2}$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "derivee-variations",
+      "enonce": "Étudier les variations de $f(x)=-x^2+4x+1$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f'(x)=-2x+4$, positif pour $x<2$ et négatif pour $x>2$.",
+        "$f$ croît sur $]-\\infty\\,;2]$ et décroît sur $[2\\,;+\\infty[$ ; son maximum vaut $f(2)=5$."
+      ],
+      "reponse": "Croissante sur $]-\\infty\\,;2]$, décroissante sur $[2\\,;+\\infty[$, maximum $5$"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "derivee-variations",
+      "enonce": "Étudier les variations de $f(x)=x^3-3x$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f'(x)=3x^2-3=3(x-1)(x+1)$ : positif hors de $[-1\\,;1]$, négatif entre $-1$ et $1$.",
+        "$f$ croît sur $]-\\infty\\,;-1]$, décroît sur $[-1\\,;1]$, croît sur $[1\\,;+\\infty[$ ; $f(-1)=2$ et $f(1)=-2$."
+      ],
+      "reponse": "Croissante, décroissante sur $[-1\\,;1]$, puis croissante ; $f(-1)=2$, $f(1)=-2$"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "derivee-variations",
+      "enonce": "Étudier les variations de $f(x)=x+\\dfrac{1}{x}$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$f'(x)=1-\\dfrac{1}{x^2}=\\dfrac{x^2-1}{x^2}=\\dfrac{(x-1)(x+1)}{x^2}$.",
+        "Sur $]0\\,;+\\infty[$, $x+1>0$ et $x^2>0$ : le signe est celui de $x-1$.",
+        "$f$ décroît sur $]0\\,;1]$ et croît sur $[1\\,;+\\infty[$ ; minimum $f(1)=2$."
+      ],
+      "reponse": "Décroissante sur $]0\\,;1]$, croissante sur $[1\\,;+\\infty[$, minimum $2$"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "derivee-variations",
+      "enonce": "Soit $f(x)=x\\,e^{-x}$. On admet que $f'(x)=(1-x)\\,e^{-x}$. Étudier les variations de $f$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$e^{-x}>0$ : le signe de $f'(x)$ est celui de $1-x$.",
+        "$f$ croît sur $]-\\infty\\,;1]$ et décroît sur $[1\\,;+\\infty[$ ; maximum $f(1)=e^{-1}=\\dfrac{1}{e}$."
+      ],
+      "reponse": "Croissante puis décroissante, maximum $\\dfrac{1}{e}$ en $x=1$"
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "derivee-variations",
+      "enonce": "Soit $f(x)=e^{x}-x$. Étudier les variations de $f$, puis en déduire que $e^{x}\\geqslant x+1$ pour tout réel $x$.",
+      "corrige": [
+        "$f'(x)=e^{x}-1$ : négatif pour $x<0$, positif pour $x>0$ (car $\\exp$ est croissante et $e^{0}=1$).",
+        "$f$ décroît sur $]-\\infty\\,;0]$, croît sur $[0\\,;+\\infty[$ : minimum $f(0)=1$.",
+        "Donc $f(x)\\geqslant 1$, c'est-à-dire $e^{x}-x\\geqslant 1$, soit $e^{x}\\geqslant x+1$."
+      ],
+      "reponse": "Minimum $f(0)=1$, d'où $e^{x}\\geqslant x+1$"
+    },
+    {
+      "id": 25,
+      "difficulte": "decouverte",
+      "notion": "extremums",
+      "enonce": "La dérivée d'une fonction $f$ s'annule en $3$ en passant du signe $+$ au signe $-$. Que peut-on dire de $f$ en $3$ ?",
+      "corrige": [
+        "$f$ croît avant $3$ puis décroît après : la courbe monte puis descend."
+      ],
+      "reponse": "$f$ admet un maximum local en $3$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "extremums",
+      "enonce": "Vrai ou faux ? « Si $f'(a)=0$, alors $f$ admet un extremum en $a$. » Justifier.",
+      "corrige": [
+        "Il faut que $f'$ change de signe en $a$.",
+        "Contre-exemple : $f(x)=x^3$ a $f'(0)=0$, mais $f'(x)=3x^2\\geqslant 0$ ne change pas de signe ; $f$ est croissante et n'a pas d'extremum en $0$."
+      ],
+      "reponse": "Faux (contre-exemple : $x^3$ en $0$)."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "extremums",
+      "enonce": "Soit $f(x)=x^3-6x^2+9x+1$. Déterminer les extremums locaux de $f$ en précisant leur nature.",
+      "corrige": [
+        "$f'(x)=3x^2-12x+9=3(x-1)(x-3)$.",
+        "$f'$ passe de $+$ à $-$ en $1$ : maximum local $f(1)=5$.",
+        "$f'$ passe de $-$ à $+$ en $3$ : minimum local $f(3)=1$."
+      ],
+      "reponse": "Maximum local $5$ en $x=1$ ; minimum local $1$ en $x=3$"
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "extremums",
+      "enonce": "Soit $f(x)=x^4-4x^3$. On a $f'(x)=4x^2(x-3)$. La fonction $f$ a-t-elle un extremum en $0$ ? en $3$ ?",
+      "corrige": [
+        "$4x^2\\geqslant 0$ : le signe de $f'$ est celui de $x-3$ (et $f'$ s'annule en $0$ et en $3$).",
+        "En $0$, $f'$ reste négative de part et d'autre : pas d'extremum.",
+        "En $3$, $f'$ passe de $-$ à $+$ : minimum, qui vaut $f(3)=81-108=-27$."
+      ],
+      "reponse": "Pas d'extremum en $0$ ; minimum $-27$ en $x=3$"
+    },
+    {
+      "id": 29,
+      "difficulte": "decouverte",
+      "notion": "derivee-seconde",
+      "enonce": "Calculer $f'(x)$ puis $f''(x)$ pour $f(x)=x^4-2x^3+x$.",
+      "corrige": [
+        "$f'(x)=4x^3-6x^2+1$.",
+        "$f''(x)=12x^2-12x$."
+      ],
+      "reponse": "$f'(x)=4x^3-6x^2+1$ ; $f''(x)=12x^2-12x$"
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "derivee-seconde",
+      "enonce": "Soit $f(x)=x\\,e^{x}$. On sait que $f'(x)=(x+1)\\,e^{x}$. Calculer $f''(x)$.",
+      "corrige": [
+        "On dérive $(x+1)\\,e^{x}$ comme un produit : $1\\times e^{x}+(x+1)\\,e^{x}$.",
+        "$f''(x)=(x+2)\\,e^{x}$."
+      ],
+      "reponse": "$f''(x)=(x+2)\\,e^{x}$"
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "derivee-seconde",
+      "enonce": "Calculer la dérivée seconde de $f(x)=\\dfrac{1}{x}$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$f'(x)=-\\dfrac{1}{x^2}=-x^{-2}$.",
+        "$f''(x)=2x^{-3}=\\dfrac{2}{x^3}$."
+      ],
+      "reponse": "$f''(x)=\\dfrac{2}{x^3}$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "derivee-seconde",
+      "enonce": "Pour $f(x)=x^3+3x^2-9x$, un élève écrit $f''(x)=3x^2+6x-9$. Que lui répondre ? Donner le bon résultat.",
+      "corrige": [
+        "Il a donné $f'(x)$, la dérivée première, et non la dérivée seconde.",
+        "Il faut dériver une seconde fois : $f''(x)=6x+6$."
+      ],
+      "reponse": "$f''(x)=6x+6$"
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "convexite",
+      "enonce": "Montrer que $f(x)=e^{x}+x^2$ est convexe sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f'(x)=e^{x}+2x$ et $f''(x)=e^{x}+2$.",
+        "$f''(x)>0$ pour tout réel $x$ : $f$ est convexe sur $\\mathbb{R}$."
+      ],
+      "reponse": "$f''(x)=e^{x}+2>0$ : $f$ est convexe."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "convexite",
+      "enonce": "Étudier la convexité de $f(x)=x^3-6x^2$ sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f''(x)=6x-12=6(x-2)$.",
+        "$f''\\leqslant 0$ sur $]-\\infty\\,;2]$ : concave ; $f''\\geqslant 0$ sur $[2\\,;+\\infty[$ : convexe."
+      ],
+      "reponse": "Concave sur $]-\\infty\\,;2]$, convexe sur $[2\\,;+\\infty[$"
+    },
+    {
+      "id": 35,
+      "difficulte": "decouverte",
+      "notion": "convexite",
+      "enonce": "La fonction $f(x)=-x^2+5x$ est-elle convexe ou concave sur $\\mathbb{R}$ ? Décrire l'allure de sa courbe.",
+      "corrige": [
+        "$f''(x)=-2<0$ : $f$ est concave sur $\\mathbb{R}$.",
+        "Sa courbe est une parabole en forme de bosse $\\cap$, située sous ses tangentes."
+      ],
+      "reponse": "Concave (bosse $\\cap$)"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "convexite",
+      "enonce": "Vrai ou faux ? « Une fonction croissante est forcément convexe. » Justifier avec un exemple de la fiche.",
+      "corrige": [
+        "Variations (signe de $f'$) et convexité (signe de $f''$) sont indépendantes.",
+        "Contre-exemple : $\\sqrt{x}$ est croissante sur $]0\\,;+\\infty[$ mais concave ($f''(x)<0$)."
+      ],
+      "reponse": "Faux (exemple : $\\sqrt{x}$, croissante et concave)."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "convexite",
+      "enonce": "Soit $f(x)=(x-1)\\,e^{x}$. On admet que $f''(x)=(x+1)\\,e^{x}$. Étudier la convexité de $f$ et en déduire le sens de variation de $f'$.",
+      "corrige": [
+        "$e^{x}>0$ : $f''$ a le signe de $x+1$. $f$ est concave sur $]-\\infty\\,;-1]$, convexe sur $[-1\\,;+\\infty[$.",
+        "$f''=(f')'$ : $f'$ décroît sur $]-\\infty\\,;-1]$ et croît sur $[-1\\,;+\\infty[$."
+      ],
+      "reponse": "Concave puis convexe (bascule en $-1$) ; $f'$ décroissante puis croissante"
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "point-inflexion",
+      "enonce": "Déterminer le point d'inflexion de la courbe de $f(x)=x^3-3x^2+1$.",
+      "corrige": [
+        "$f''(x)=6x-6=6(x-1)$ s'annule en $1$ en changeant de signe.",
+        "$f(1)=1-3+1=-1$ : le point d'inflexion est $(1\\,;-1)$."
+      ],
+      "reponse": "$(1\\,;-1)$"
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "point-inflexion",
+      "enonce": "La courbe de $f(x)=x^4+x^2$ admet-elle un point d'inflexion ?",
+      "corrige": [
+        "$f''(x)=12x^2+2>0$ pour tout réel $x$ : $f''$ ne s'annule jamais.",
+        "$f$ est convexe sur $\\mathbb{R}$ : aucun point d'inflexion."
+      ],
+      "reponse": "Non, $f$ est convexe sur $\\mathbb{R}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "point-inflexion",
+      "enonce": "Soit $f(x)=x^4-4x^3$. On a $f''(x)=12x(x-2)$. Déterminer les points d'inflexion de la courbe de $f$.",
+      "corrige": [
+        "$f''$ s'annule en $0$ et en $2$ en changeant de signe à chaque fois ($+$, puis $-$ entre $0$ et $2$, puis $+$).",
+        "$f(0)=0$ et $f(2)=16-32=-16$."
+      ],
+      "reponse": "$(0\\,;0)$ et $(2\\,;-16)$"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "point-inflexion",
+      "enonce": "Un élève affirme : « Pour $f(x)=x^5$, on a $f''(0)=0$, donc il y a un point d'inflexion en $0$ ; de même pour $g(x)=x^4$. » A-t-il raison dans les deux cas ?",
+      "corrige": [
+        "$f''(x)=20x^3$ change de signe en $0$ : l'origine est bien un point d'inflexion de la courbe de $f$.",
+        "$g''(x)=12x^2\\geqslant 0$ ne change pas de signe : $g$ est convexe sur $\\mathbb{R}$, pas d'inflexion. Il faut un changement de signe, pas seulement $f''(0)=0$."
+      ],
+      "reponse": "Oui pour $x^5$, non pour $x^4$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "point-inflexion",
+      "enonce": "Soit $f(x)=(x+1)\\,e^{x}$. On admet que $f''(x)=(x+3)\\,e^{x}$. Déterminer les coordonnées du point d'inflexion de la courbe de $f$.",
+      "corrige": [
+        "$f''$ a le signe de $x+3$ : elle s'annule en $-3$ en changeant de signe.",
+        "$f(-3)=-2\\,e^{-3}$ : le point d'inflexion est $\\left(-3\\,;-2e^{-3}\\right)$."
+      ],
+      "reponse": "$\\left(-3\\,;-2e^{-3}\\right)$"
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "inegalite-tangente",
+      "enonce": "Montrer que, pour tout $x>0$, $\\dfrac{1}{x}\\geqslant 2-x$, en utilisant la convexité.",
+      "corrige": [
+        "$f(x)=\\dfrac{1}{x}$ a $f''(x)=\\dfrac{2}{x^3}>0$ sur $]0\\,;+\\infty[$ : $f$ est convexe.",
+        "La tangente en $1$ est $y=-x+2$ (car $f'(1)=-1$ et $f(1)=1$).",
+        "Une courbe convexe est au-dessus de ses tangentes : $\\dfrac{1}{x}\\geqslant 2-x$."
+      ],
+      "reponse": "$\\dfrac{1}{x}\\geqslant 2-x$ pour tout $x>0$"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "inegalite-tangente",
+      "enonce": "Montrer que, pour tout $x\\geqslant 0$, $x^3\\geqslant 3x-2$.",
+      "corrige": [
+        "$f(x)=x^3$ a $f''(x)=6x\\geqslant 0$ sur $[0\\,;+\\infty[$ : $f$ y est convexe.",
+        "Tangente en $1$ : $f'(1)=3$, $f(1)=1$, donc $y=3(x-1)+1=3x-2$.",
+        "La courbe est au-dessus de cette tangente sur $[0\\,;+\\infty[$ : $x^3\\geqslant 3x-2$."
+      ],
+      "reponse": "$x^3\\geqslant 3x-2$ sur $[0\\,;+\\infty[$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "inegalite-tangente",
+      "enonce": "Soit $f(x)=-x^2$. Sans calcul, comparer la courbe de $f$ et sa tangente en $1$, d'équation $y=-2x+1$. En déduire une inégalité valable pour tout réel $x$.",
+      "corrige": [
+        "$f''(x)=-2<0$ : $f$ est concave, sa courbe est sous ses tangentes.",
+        "Donc $-x^2\\leqslant -2x+1$ pour tout réel $x$ (ce qui équivaut à $(x-1)^2\\geqslant 0$)."
+      ],
+      "reponse": "$-x^2\\leqslant -2x+1$ pour tout réel $x$"
+    },
+    {
+      "id": 46,
+      "difficulte": "decouverte",
+      "notion": "lecture-graphique",
+      "enonce": "Sur un intervalle, les pentes des tangentes à une courbe augmentent de gauche à droite. La fonction est-elle convexe ou concave sur cet intervalle ?",
+      "corrige": [
+        "Les pentes sont les valeurs de $f'$ : $f'$ est croissante.",
+        "$f'$ croissante signifie $f''\\geqslant 0$ : la fonction est convexe."
+      ],
+      "reponse": "Convexe."
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "lecture-graphique",
+      "enonce": "On lit sur un graphique qu'une courbe est en forme de creux $\\cup$ sur $]-\\infty\\,;2]$ puis en forme de bosse $\\cap$ sur $[2\\,;+\\infty[$. Donner le signe de $f''$ sur chaque intervalle et interpréter le point d'abscisse $2$.",
+      "corrige": [
+        "Creux : convexe, $f''\\geqslant 0$ sur $]-\\infty\\,;2]$. Bosse : concave, $f''\\leqslant 0$ sur $[2\\,;+\\infty[$.",
+        "La courbe change de convexité en $2$ : c'est un point d'inflexion."
+      ],
+      "reponse": "$f''\\geqslant 0$ puis $f''\\leqslant 0$ ; point d'inflexion en $x=2$"
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "lecture-graphique",
+      "enonce": "Voici le tableau de signes de $f'$ : $f'(x)<0$ sur $]-\\infty\\,;-1[$, $f'(x)>0$ sur $]-1\\,;4[$, $f'(x)<0$ sur $]4\\,;+\\infty[$. Donner les variations de $f$ et la nature des extremums.",
+      "corrige": [
+        "$f$ décroît sur $]-\\infty\\,;-1]$, croît sur $[-1\\,;4]$, décroît sur $[4\\,;+\\infty[$.",
+        "En $-1$, $f'$ passe de $-$ à $+$ : minimum local. En $4$, de $+$ à $-$ : maximum local."
+      ],
+      "reponse": "Minimum local en $-1$, maximum local en $4$"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "lecture-graphique",
+      "enonce": "On connaît le signe de $f''$ : $f''<0$ sur $]-\\infty\\,;0[$ et $f''>0$ sur $]0\\,;+\\infty[$, et $f'(x)>0$ pour tout $x\\neq 0$. Décrire la courbe de $f$ : variations, convexité, point remarquable. Citer une fonction de la fiche qui convient.",
+      "corrige": [
+        "$f'>0$ : $f$ est croissante sur $\\mathbb{R}$.",
+        "Concave sur $]-\\infty\\,;0]$, convexe sur $[0\\,;+\\infty[$ : point d'inflexion en $0$.",
+        "La fonction cube $x\\mapsto x^3$ convient : croissante, avec une inflexion à l'origine."
+      ],
+      "reponse": "Croissante, concave puis convexe, inflexion en $0$ (exemple : $x^3$)"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "probleme-bac",
+      "enonce": "Le nombre de visiteurs d'un site, en centaines, est modélisé par $f(t)=-2t^3+30t^2$ pour $t\\in[0\\,;10]$ ($t$ en jours). 1. Calculer $f'(t)$ et $f''(t)$. 2. Étudier la convexité de $f$ et déterminer le point d'inflexion. 3. Interpréter : à quel jour la vitesse d'augmentation du nombre de visiteurs est-elle maximale, et que vaut-elle ?",
+      "corrige": [
+        "1. $f'(t)=-6t^2+60t$ et $f''(t)=-12t+60$.",
+        "2. $f''(t)\\geqslant 0$ sur $[0\\,;5]$ (convexe) et $f''(t)\\leqslant 0$ sur $[5\\,;10]$ (concave). Point d'inflexion en $t=5$, avec $f(5)=-250+750=500$.",
+        "3. $f'$ croît sur $[0\\,;5]$ et décroît ensuite : la vitesse d'augmentation est maximale au jour $5$, et vaut $f'(5)=-150+300=150$ centaines de visiteurs par jour."
+      ],
+      "reponse": "1. $f'(t)=-6t^2+60t$, $f''(t)=-12t+60$. 2. Convexe sur $[0\\,;5]$, concave sur $[5\\,;10]$, inflexion $(5\\,;500)$. 3. Au jour $5$ : $150$ centaines de visiteurs par jour."
     }
   ]
 }
