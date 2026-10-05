@@ -47,7 +47,7 @@ L'organisation des puissances change au fil de l'histoire :
 - Après la disparition de l'URSS (1991), les États-Unis apparaissent comme la seule **hyperpuissance** — terme employé par le ministre français **Hubert Védrine**.
 - Aujourd'hui, le monde tend vers la **multipolarité** : plusieurs pôles de puissance coexistent, avec l'affirmation de puissances émergentes.
 
-Les **BRICS** — **Brésil, Russie, Inde, Chine, Afrique du Sud** — désignent un groupe de grandes puissances émergentes. La **Chine** est devenue une puissance majeure sur les plans économique, militaire et diplomatique.
+Les **BRICS** — **Brésil, Russie, Inde, Chine, Afrique du Sud** — désignent un groupe de grandes puissances émergentes (élargi à d'autres pays depuis 2024). La **Chine** est devenue une puissance majeure sur les plans économique, militaire et diplomatique.
 
 ## 4. La gouvernance mondiale
 

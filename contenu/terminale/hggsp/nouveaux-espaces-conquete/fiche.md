@@ -33,7 +33,7 @@ Ces espaces ne se conquièrent pas comme des territoires classiques : ils font l
 | Espace extra-atmosphérique | Traité de l'espace (1967) | Non-appropriation nationale, usage pacifique |
 | Mers et océans | Convention de Montego Bay (1982) | Zones maritimes, ZEE, liberté de navigation |
 
-La **Convention des Nations unies sur le droit de la mer**, signée à **Montego Bay en 1982** (entrée en vigueur en 1994), définit les zones maritimes. La **zone économique exclusive (ZEE)** s'étend jusqu'à **200 milles marins** (environ 370 km) des côtes : l'État côtier y détient des droits exclusifs d'exploitation des ressources, sans y exercer une pleine souveraineté. Au-delà, la **haute mer** et la **Zone** (les grands fonds marins) sont considérées comme **« patrimoine commun de l'humanité »**.
+La **Convention des Nations unies sur le droit de la mer**, signée à **Montego Bay en 1982** (entrée en vigueur en 1994), définit les zones maritimes. La **zone économique exclusive (ZEE)** s'étend jusqu'à **200 milles marins** (environ 370 km) des côtes : l'État côtier y détient des droits exclusifs d'exploitation des ressources, sans y exercer une pleine souveraineté. Au-delà, commence la **haute mer**, où s'applique la **liberté des mers** (navigation, pêche, recherche) ; ses grands fonds, appelés la **Zone**, sont déclarés **« patrimoine commun de l'humanité »**.
 
 Grâce à ses territoires ultramarins, la **France possède la deuxième plus grande ZEE du monde** (environ 10 millions de km²), derrière les États-Unis.
 
