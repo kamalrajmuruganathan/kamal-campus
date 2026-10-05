@@ -64,7 +64,7 @@
         "la proportion de la population qui est malade"
       ],
       "reponse": 0,
-      "explication": "La sensibilité est $\\text{Se} = P_M(T^+)$ : parmi les **malades**, ceux que le test repère. Le choix 2 est la spécificité ; le choix 1 ($P_{T^+}(M)$) est la valeur prédictive positive, un conditionnement inverse qu'il ne faut pas confondre avec la sensibilité."
+      "explication": "La sensibilité est $\\text{Se} = P_M(T^+)$ : parmi les **malades**, ceux que le test repère. La proportion de sains détectés négatifs est la spécificité ; $P_{T^+}(M)$ est la valeur prédictive positive, un conditionnement inverse qu'il ne faut pas confondre avec la sensibilité."
     },
     {
       "id": 5,
@@ -75,10 +75,10 @@
         "$0{,}99$",
         "$0{,}0099$",
         "$0{,}0297$",
-        "$0{,}03$"
+        "$0{,}0198$"
       ],
       "reponse": 2,
-      "explication": "Formule des probabilités totales : $P(T^+) = 0{,}01 \\times 0{,}99 + 0{,}99 \\times 0{,}02 = 0{,}0099 + 0{,}0198 = 0{,}0297$. Le choix $0{,}0099$ n'est que le chemin des vrais positifs ; il oublie les faux positifs, pourtant deux fois plus nombreux."
+      "explication": "Formule des probabilités totales : $P(T^+) = 0{,}01 \\times 0{,}99 + 0{,}99 \\times 0{,}02 = 0{,}0099 + 0{,}0198 = 0{,}0297$. Le choix $0{,}0099$ n'est que le chemin des vrais positifs ; il oublie les faux positifs, pourtant deux fois plus nombreux ($0{,}0198$ ne compte, à l'inverse, que les faux positifs)."
     },
     {
       "id": 6,
@@ -92,7 +92,7 @@
         "$[0{,}519 \\;;\\; 0{,}521]$"
       ],
       "reponse": 0,
-      "explication": "$\\left[f - \\tfrac{1}{\\sqrt{n}} \\;;\\; f + \\tfrac{1}{\\sqrt{n}}\\right]$ avec $\\tfrac{1}{\\sqrt{1000}} \\approx 0{,}032$ donne $[0{,}488 \\;;\\; 0{,}552]$. Les autres choix utilisent $1/n$ ou $2/n$ au lieu de $1/\\sqrt{n}$ : la marge dépend de la racine de $n$, pas de $n$."
+      "explication": "$\\left[f - \\tfrac{1}{\\sqrt{n}} \\;;\\; f + \\tfrac{1}{\\sqrt{n}}\\right]$ avec $\\tfrac{1}{\\sqrt{1000}} \\approx 0{,}032$ donne $[0{,}488 \\;;\\; 0{,}552]$. Les autres choix utilisent une marge erronée (par exemple $1/n = 0{,}001$ pour $[0{,}519 \\;;\\; 0{,}521]$) au lieu de $1/\\sqrt{n}$ : la marge dépend de la racine de $n$, pas de $n$."
     },
     {
       "id": 7,
@@ -232,7 +232,7 @@
         "la proportion de la population qui est saine"
       ],
       "reponse": 1,
-      "explication": "La spécificité est $\\text{Sp} = P_{\\overline{M}}(T^-)$ : parmi les **sains**, ceux que le test classe correctement négatifs. Le choix 1 est la sensibilité (côté malades), le choix 3 la valeur prédictive positive : trois conditionnements à ne pas confondre."
+      "explication": "La spécificité est $\\text{Sp} = P_{\\overline{M}}(T^-)$ : parmi les **sains**, ceux que le test classe correctement négatifs. $P_M(T^+)$ est la sensibilité (côté malades), $P_{T^+}(M)$ la valeur prédictive positive : trois conditionnements à ne pas confondre."
     },
     {
       "id": 17,

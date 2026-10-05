@@ -22,7 +22,7 @@
         "$\\dfrac{f(c)+f(d)}{2}$"
       ],
       "reponse": 1,
-      "explication": "Pour une loi à densité, une probabilité est une **aire** sous la courbe de la densité : $P(c\\leqslant X\\leqslant d)=\\int_c^d f(x)\\,dx$. On n'évalue pas $f$ aux bornes (piège A) : $f$ est une densité, pas une primitive."
+      "explication": "Pour une loi à densité, une probabilité est une **aire** sous la courbe de la densité : $P(c\\leqslant X\\leqslant d)=\\int_c^d f(x)\\,dx$. On n'évalue pas $f$ aux bornes (piège $f(d) - f(c)$) : $f$ est une densité, pas une primitive."
     },
     {
       "id": 2,
@@ -36,7 +36,7 @@
         "$f(t) = \\dfrac{1}{\\lambda}\\, e^{-\\lambda t}$"
       ],
       "reponse": 2,
-      "explication": "La densité exponentielle est $f(t)=\\lambda e^{-\\lambda t}$ : le facteur $\\lambda$ et surtout le **signe moins** à l'exposant. Avec $e^{+\\lambda t}$ (piège B) la fonction exploserait et l'aire ne pourrait pas valoir $1$."
+      "explication": "La densité exponentielle est $f(t)=\\lambda e^{-\\lambda t}$ : le facteur $\\lambda$ et surtout le **signe moins** à l'exposant. Avec $e^{+\\lambda t}$ la fonction exploserait et l'aire ne pourrait pas valoir $1$."
     },
     {
       "id": 3,
@@ -64,7 +64,7 @@
         "$\\dfrac{b-a}{2}$"
       ],
       "reponse": 1,
-      "explication": "L'espérance de la loi uniforme est le **milieu** de l'intervalle : $E(X)=\\dfrac{a+b}{2}$. Le piège A ($\\frac{1}{b-a}$) est la **densité**, pas l'espérance : c'est la confusion classique du chapitre."
+      "explication": "L'espérance de la loi uniforme est le **milieu** de l'intervalle : $E(X)=\\dfrac{a+b}{2}$. Le piège $\\frac{1}{b-a}$ est la **densité**, pas l'espérance : c'est la confusion classique du chapitre."
     },
     {
       "id": 5,
@@ -78,7 +78,7 @@
         "$e^{1}$"
       ],
       "reponse": 1,
-      "explication": "Pour l'exponentielle, $P(X>t)=e^{-\\lambda t}=e^{-0{,}5\\times 2}=e^{-1}$. Le piège A ($1-e^{-1}$) est $P(X\\leqslant 2)$, l'événement contraire ; $e^{-2}$ oublie de multiplier $\\lambda$ par $t$."
+      "explication": "Pour l'exponentielle, $P(X>t)=e^{-\\lambda t}=e^{-0{,}5\\times 2}=e^{-1}$. Le piège $1-e^{-1}$ est $P(X\\leqslant 2)$, l'événement contraire ; $e^{-2}$ oublie de multiplier $\\lambda$ par $t$."
     },
     {
       "id": 6,
@@ -92,7 +92,7 @@
         "Impossible à déterminer sans connaître $f$"
       ],
       "reponse": 0,
-      "explication": "Pour toute loi à densité, la probabilité d'une valeur **isolée** est nulle : $P(X=3)=\\int_3^3 f = 0$. C'est pourquoi $\\leqslant$ et $<$ donnent la même probabilité. Confondre avec $f(3)$ (piège C) mélange densité et probabilité."
+      "explication": "Pour toute loi à densité, la probabilité d'une valeur **isolée** est nulle : $P(X=3)=\\int_3^3 f = 0$. C'est pourquoi $\\leqslant$ et $<$ donnent la même probabilité. Confondre avec $f(3)$ mélange densité et probabilité."
     },
     {
       "id": 7,
@@ -120,7 +120,7 @@
         "$P(X > 3)$"
       ],
       "reponse": 2,
-      "explication": "Par absence de mémoire, $P_{X>s}(X>s+t)=P(X>t)$. Ici $s=3$ et $s+t=5$, donc $t=2$ : $P_{X>3}(X>5)=P(X>2)$. Le piège A oublie de retrancher le temps déjà écoulé ; B additionne les durées au lieu de conditionner."
+      "explication": "Par absence de mémoire, $P_{X>s}(X>s+t)=P(X>t)$. Ici $s=3$ et $s+t=5$, donc $t=2$ : $P_{X>3}(X>5)=P(X>2)$. Le piège $P(X > 5)$ oublie de retrancher le temps déjà écoulé ; $P(X > 8)$ additionne les durées au lieu de conditionner."
     },
     {
       "id": 9,
@@ -134,7 +134,7 @@
         "$e^{-3\\lambda}$"
       ],
       "reponse": 0,
-      "explication": "$\\int_2^5 \\lambda e^{-\\lambda t}\\,dt = \\big[-e^{-\\lambda t}\\big]_2^5 = e^{-2\\lambda}-e^{-5\\lambda}$, un nombre **positif** car $e^{-2\\lambda}>e^{-5\\lambda}$. Le piège B inverse l'ordre et donne un résultat négatif, impossible pour une probabilité."
+      "explication": "$\\int_2^5 \\lambda e^{-\\lambda t}\\,dt = \\big[-e^{-\\lambda t}\\big]_2^5 = e^{-2\\lambda}-e^{-5\\lambda}$, un nombre **positif** car $e^{-2\\lambda}>e^{-5\\lambda}$. Le piège $e^{-5\\lambda} - e^{-2\\lambda}$ inverse l'ordre et donne un résultat négatif, impossible pour une probabilité."
     },
     {
       "id": 10,
@@ -148,7 +148,7 @@
         "$e^{-16}$"
       ],
       "reponse": 1,
-      "explication": "Moyenne $4$ donne $\\lambda=\\frac14=0{,}25$. « Au plus $4$ min » est $P(X\\leqslant 4)=1-e^{-\\lambda t}=1-e^{-0{,}25\\times 4}=1-e^{-1}$. Le piège A ($e^{-1}$) donne $P(X>4)$, l'événement contraire ; $1-e^{-4}$ prend $\\lambda=1$ au lieu de $0{,}25$."
+      "explication": "Moyenne $4$ donne $\\lambda=\\frac14=0{,}25$. « Au plus $4$ min » est $P(X\\leqslant 4)=1-e^{-\\lambda t}=1-e^{-0{,}25\\times 4}=1-e^{-1}$. Le piège $e^{-1}$ donne $P(X>4)$, l'événement contraire ; $1-e^{-4}$ prend $\\lambda=1$ au lieu de $0{,}25$."
     },
     {
       "id": 11,
