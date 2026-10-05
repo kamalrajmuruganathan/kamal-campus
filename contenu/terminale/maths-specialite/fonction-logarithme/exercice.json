@@ -135,7 +135,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "equations",
       "enonce": "Une application mobile est lancée en ligne. Le nombre d'utilisateurs actifs, exprimé en milliers, $t$ mois après le lancement, est modélisé par $N(t) = 50\\ln(t+1)$ pour $t\\geqslant 0$. On donne les approximations $\\ln 12 \\approx 2{,}485$ et $e^{2}\\approx 7{,}389$.\n\n1. Calculer $N(0)$ et interpréter ce résultat dans le contexte.\n2. Calculer une valeur approchée du nombre d'utilisateurs actifs au bout de $11$ mois.\n3. Étudier le sens de variation de $N$ sur $[0\\,;+\\infty[$.\n4. Résoudre l'inéquation $N(t)\\geqslant 100$ et en déduire le nombre entier de mois à partir duquel l'application dépasse $100\\,000$ utilisateurs actifs.\n5. On note $g(t)=\\dfrac{N(t)}{t}$ le nombre moyen d'utilisateurs gagnés par mois depuis le lancement, pour $t>0$. Déterminer $\\lim\\limits_{t\\to +\\infty} g(t)$ et interpréter.",
       "corrige": [
@@ -146,6 +146,454 @@
         "5. Pour $t>0$, $g(t)=\\dfrac{50\\ln(t+1)}{t}$. Quand $t\\to +\\infty$, $\\ln(t+1)$ se comporte comme $\\ln t$, et par croissances comparées $\\dfrac{\\ln t}{t}\\to 0$. Donc $\\lim\\limits_{t\\to +\\infty} g(t) = 0$. Interprétation : sur le long terme, le nombre moyen d'utilisateurs gagnés par mois tend vers $0$ ; la croissance de l'application ralentit fortement (le logarithme croît de plus en plus lentement)."
       ],
       "reponse": "1. $N(0)=0$ (aucun utilisateur au lancement). 2. Environ $124\\,000$ utilisateurs au bout de $11$ mois. 3. $N'(t)=\\dfrac{50}{t+1}>0$ : $N$ strictement croissante. 4. $t\\geqslant e^{2}-1\\approx 6{,}39$, soit dès le $7^{\\text{e}}$ mois. 5. $\\lim\\limits_{+\\infty} g = 0$ : la croissance ralentit."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Donner sans calculatrice : $\\ln\\left(e^5\\right)$, $e^{\\ln 7}$, $\\ln 1$ et $\\ln e$.",
+      "corrige": [
+        "$\\ln$ et $\\exp$ se compensent : $\\ln\\left(e^5\\right)=5$ et $e^{\\ln 7}=7$.",
+        "$e^0=1$ donc $\\ln 1=0$ ; $e^1=e$ donc $\\ln e=1$."
+      ],
+      "reponse": "$5$ ; $7$ ; $0$ ; $1$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Traduire chaque égalité à l'aide de l'autre fonction : a) $\\ln x=-2$ ; b) $e^y=10$.",
+      "corrige": [
+        "On utilise $\\ln x=y\\iff x=e^y$ (avec $x>0$).",
+        "a) $\\ln x=-2\\iff x=e^{-2}$. b) $e^y=10\\iff y=\\ln 10$."
+      ],
+      "reponse": "a) $x=e^{-2}$ ; b) $y=\\ln 10$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "courbe-symetrie",
+      "enonce": "Le point $A\\left(2\\,;e^2\\right)$ appartient à la courbe de la fonction exponentielle. Quel point de la courbe de $\\ln$ lui correspond par la symétrie d'axe la droite $y=x$ ? Vérifier par le calcul.",
+      "corrige": [
+        "La symétrie par rapport à $y=x$ échange abscisse et ordonnée : on obtient $B\\left(e^2\\,;2\\right)$.",
+        "Vérification : $\\ln\\left(e^2\\right)=2$, donc $B$ est bien sur la courbe de $\\ln$."
+      ],
+      "reponse": "$B\\left(e^2\\,;2\\right)$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Déterminer l'ensemble de définition de $f(x)=\\ln(x-3)$.",
+      "corrige": [
+        "$\\ln$ n'est définie que pour un argument strictement positif : il faut $x-3>0$.",
+        "Soit $x>3$."
+      ],
+      "reponse": "$]3\\,;+\\infty[$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Déterminer l'ensemble de définition de $g(x)=\\ln\\left(4-x^2\\right)$.",
+      "corrige": [
+        "Il faut $4-x^2>0$, soit $x^2<4$.",
+        "Cela équivaut à $-2<x<2$."
+      ],
+      "reponse": "$]-2\\,;2[$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Sans calculatrice, donner le signe de $\\ln(0{,}3)$, $\\ln 1$ et $\\ln(2{,}5)$.",
+      "corrige": [
+        "$\\ln$ est strictement croissante et $\\ln 1=0$.",
+        "$0{,}3<1$ donc $\\ln(0{,}3)<0$ ; $\\ln 1=0$ ; $2{,}5>1$ donc $\\ln(2{,}5)>0$."
+      ],
+      "reponse": "$\\ln(0{,}3)<0$, $\\ln 1=0$, $\\ln(2{,}5)>0$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Exprimer $\\ln 50$ en fonction de $\\ln 2$ et de $\\ln 5$.",
+      "corrige": [
+        "$50=2\\times 25=2\\times 5^2$.",
+        "$\\ln 50=\\ln 2+\\ln\\left(5^2\\right)=\\ln 2+2\\ln 5$."
+      ],
+      "reponse": "$\\ln 50=\\ln 2+2\\ln 5$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Simplifier $B=\\ln\\left(e^2\\right)+\\ln\\left(\\dfrac{1}{e^3}\\right)$ et $C=\\ln\\left(\\sqrt{e}\\right)$.",
+      "corrige": [
+        "$\\ln\\left(e^2\\right)=2$ et $\\ln\\left(\\dfrac{1}{e^3}\\right)=-\\ln\\left(e^3\\right)=-3$, donc $B=2-3=-1$.",
+        "$\\ln\\left(\\sqrt{e}\\right)=\\dfrac{1}{2}\\ln e=\\dfrac{1}{2}$."
+      ],
+      "reponse": "$B=-1$ et $C=\\dfrac{1}{2}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "proprietes-algebriques",
+      "enonce": "Exprimer en fonction de $\\ln 2$ : $\\ln\\left(\\dfrac{1}{8}\\right)$ et $\\ln\\left(\\sqrt{32}\\right)$.",
+      "corrige": [
+        "$\\ln\\left(\\dfrac{1}{8}\\right)=-\\ln 8=-\\ln\\left(2^3\\right)=-3\\ln 2$.",
+        "$\\ln\\left(\\sqrt{32}\\right)=\\dfrac{1}{2}\\ln 32=\\dfrac{1}{2}\\ln\\left(2^5\\right)=\\dfrac{5}{2}\\ln 2$."
+      ],
+      "reponse": "$-3\\ln 2$ et $\\dfrac{5}{2}\\ln 2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $\\ln x=-1$.",
+      "corrige": [
+        "Condition d'existence : $x>0$.",
+        "$\\ln x=-1\\iff x=e^{-1}=\\dfrac{1}{e}$, qui est bien strictement positif."
+      ],
+      "reponse": "$S=\\left\\{\\dfrac{1}{e}\\right\\}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{R}$ : a) $e^x=7$ ; b) $e^{3x-1}=2$.",
+      "corrige": [
+        "a) On applique $\\ln$ : $x=\\ln 7$.",
+        "b) $3x-1=\\ln 2$, donc $x=\\dfrac{1+\\ln 2}{3}$."
+      ],
+      "reponse": "a) $x=\\ln 7$ ; b) $x=\\dfrac{1+\\ln 2}{3}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "inequations",
+      "enonce": "Résoudre l'inéquation $\\ln x>1$.",
+      "corrige": [
+        "Condition d'existence : $x>0$.",
+        "$\\ln x>1\\iff\\ln x>\\ln e\\iff x>e$ ($\\ln$ est strictement croissante).",
+        "On croise avec $x>0$ : $x>e$."
+      ],
+      "reponse": "$S=]e\\,;+\\infty[$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "inequations",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'inéquation $e^x\\leqslant 3$.",
+      "corrige": [
+        "$3=e^{\\ln 3}$, et $\\exp$ est strictement croissante : $e^x\\leqslant e^{\\ln 3}\\iff x\\leqslant\\ln 3$."
+      ],
+      "reponse": "$S=]-\\infty\\,;\\ln 3]$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Calculer la dérivée de $f(x)=3\\ln x-2x$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$(\\ln x)'=\\dfrac{1}{x}$ et $(2x)'=2$.",
+        "$f'(x)=\\dfrac{3}{x}-2=\\dfrac{3-2x}{x}$."
+      ],
+      "reponse": "$f'(x)=\\dfrac{3}{x}-2$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "derivee",
+      "enonce": "Calculer la dérivée de $f(x)=\\ln(5x-2)$ sur $\\left]\\dfrac{2}{5}\\,;+\\infty\\right[$.",
+      "corrige": [
+        "Forme $\\ln u$ avec $u(x)=5x-2>0$ sur cet intervalle et $u'(x)=5$.",
+        "$f'(x)=\\dfrac{u'(x)}{u(x)}=\\dfrac{5}{5x-2}$."
+      ],
+      "reponse": "$f'(x)=\\dfrac{5}{5x-2}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "limites",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}(\\ln x+x)$ et $\\displaystyle\\lim_{x\\to 0^+}(2\\ln x+3)$.",
+      "corrige": [
+        "En $+\\infty$ : $\\ln x\\to+\\infty$ et $x\\to+\\infty$, la somme tend vers $+\\infty$.",
+        "En $0^+$ : $\\ln x\\to-\\infty$, donc $2\\ln x+3\\to-\\infty$."
+      ],
+      "reponse": "$+\\infty$ et $-\\infty$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{\\ln x}{x^2}$.",
+      "corrige": [
+        "C'est une croissance comparée du cours avec $n=2$ : la puissance l'emporte sur le logarithme."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "courbe-symetrie",
+      "enonce": "Déterminer l'équation de la tangente à la courbe de $\\ln$ au point d'abscisse $1$, puis au point d'abscisse $e$. Que remarque-t-on pour la seconde ?",
+      "corrige": [
+        "En $1$ : $\\ln 1=0$ et $(\\ln)'(1)=1$, d'où $y=x-1$.",
+        "En $e$ : $\\ln e=1$ et $(\\ln)'(e)=\\dfrac{1}{e}$, d'où $y=\\dfrac{1}{e}(x-e)+1=\\dfrac{x}{e}$.",
+        "La tangente en $e$ passe par l'origine du repère."
+      ],
+      "reponse": "$y=x-1$ et $y=\\dfrac{x}{e}$ (cette dernière passe par l'origine)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Écrire $2\\ln 3-\\ln 6+\\ln 4$ sous la forme $\\ln a$, avec $a$ entier.",
+      "corrige": [
+        "$2\\ln 3=\\ln 9$. Alors $\\ln 9-\\ln 6+\\ln 4=\\ln\\left(\\dfrac{9\\times 4}{6}\\right)$.",
+        "$\\dfrac{36}{6}=6$, d'où $\\ln 6$."
+      ],
+      "reponse": "$\\ln 6$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Un élève écrit : « $\\ln 2+\\ln 3=\\ln 5$ ». Corriger son erreur.",
+      "corrige": [
+        "La somme de deux logarithmes est le logarithme du produit : $\\ln 2+\\ln 3=\\ln(2\\times 3)=\\ln 6$.",
+        "$\\ln 5=\\ln(2+3)$, et il n'existe aucune formule pour le logarithme d'une somme."
+      ],
+      "reponse": "$\\ln 2+\\ln 3=\\ln 6$, pas $\\ln 5$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "proprietes-algebriques",
+      "enonce": "Montrer que, pour tout $x>1$, $\\ln\\left(x^2-1\\right)-\\ln(x-1)=\\ln(x+1)$.",
+      "corrige": [
+        "Pour $x>1$, $x^2-1>0$ et $x-1>0$ : les deux logarithmes existent.",
+        "$\\ln\\left(x^2-1\\right)-\\ln(x-1)=\\ln\\left(\\dfrac{(x-1)(x+1)}{x-1}\\right)=\\ln(x+1)$."
+      ],
+      "reponse": "Égalité démontrée avec la formule du quotient."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $\\ln(x+2)=\\ln(3x-4)$.",
+      "corrige": [
+        "Existence : $x+2>0$ et $3x-4>0$, soit $x>\\dfrac{4}{3}$.",
+        "$\\ln a=\\ln b\\iff a=b$ : $x+2=3x-4$, d'où $x=3$.",
+        "$3>\\dfrac{4}{3}$ : la solution est acceptée."
+      ],
+      "reponse": "$S=\\{3\\}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $\\ln(x-1)+\\ln(x+1)=\\ln 3$.",
+      "corrige": [
+        "Existence : $x-1>0$ et $x+1>0$, soit $x>1$.",
+        "$\\ln\\big((x-1)(x+1)\\big)=\\ln 3\\iff x^2-1=3\\iff x^2=4$, soit $x=2$ ou $x=-2$.",
+        "Seule $x=2$ vérifie $x>1$ ; on rejette $-2$."
+      ],
+      "reponse": "$S=\\{2\\}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "equations",
+      "enonce": "Résoudre l'équation $(\\ln x)^2-3\\ln x+2=0$ sur $]0\\,;+\\infty[$. On pourra poser $X=\\ln x$.",
+      "corrige": [
+        "On obtient $X^2-3X+2=0$, soit $(X-1)(X-2)=0$ : $X=1$ ou $X=2$.",
+        "$\\ln x=1\\iff x=e$ et $\\ln x=2\\iff x=e^2$."
+      ],
+      "reponse": "$S=\\left\\{e\\,;e^2\\right\\}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "inequations",
+      "enonce": "Résoudre l'inéquation $\\ln(2x+1)<\\ln(x+4)$.",
+      "corrige": [
+        "Existence : $2x+1>0$ et $x+4>0$, soit $x>-\\dfrac{1}{2}$.",
+        "$\\ln$ est strictement croissante : $2x+1<x+4\\iff x<3$.",
+        "En croisant : $-\\dfrac{1}{2}<x<3$."
+      ],
+      "reponse": "$S=\\left]-\\dfrac{1}{2}\\,;3\\right[$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "inequations",
+      "enonce": "Déterminer le plus petit entier naturel $n$ tel que $0{,}9^n<0{,}5$.",
+      "corrige": [
+        "On applique $\\ln$ (strictement croissante) : $n\\ln(0{,}9)<\\ln(0{,}5)$.",
+        "$\\ln(0{,}9)<0$ : en divisant, le sens change : $n>\\dfrac{\\ln(0{,}5)}{\\ln(0{,}9)}\\approx 6{,}58$.",
+        "Le plus petit entier est $7$."
+      ],
+      "reponse": "$n=7$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "derivee",
+      "enonce": "Montrer que la fonction $F(x)=x\\ln x-x$ a pour dérivée $\\ln x$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$(x\\ln x)'=1\\times\\ln x+x\\times\\dfrac{1}{x}=\\ln x+1$.",
+        "$F'(x)=\\ln x+1-1=\\ln x$."
+      ],
+      "reponse": "$F'(x)=\\ln x$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "derivee",
+      "enonce": "Calculer la dérivée de $f(x)=(\\ln x)^2$ sur $]0\\,;+\\infty[$, puis donner le sens de variation de $f$.",
+      "corrige": [
+        "Forme $u^2$ avec $u=\\ln x$ : $f'(x)=2\\times\\dfrac{1}{x}\\times\\ln x=\\dfrac{2\\ln x}{x}$.",
+        "Pour $x>0$, $f'(x)$ a le signe de $\\ln x$ : négatif sur $]0\\,;1[$, positif sur $]1\\,;+\\infty[$.",
+        "$f$ décroît sur $]0\\,;1]$ et croît sur $[1\\,;+\\infty[$."
+      ],
+      "reponse": "$f'(x)=\\dfrac{2\\ln x}{x}$ ; décroissante sur $]0\\,;1]$, croissante sur $[1\\,;+\\infty[$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\ln\\left(1+\\dfrac{1}{x}\\right)$.",
+      "corrige": [
+        "$1+\\dfrac{1}{x}\\to 1$ quand $x\\to+\\infty$.",
+        "$\\ln$ est continue en $1$ et $\\ln 1=0$ : la limite vaut $0$."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\ln\\left(x^2+1\\right)$ et $\\displaystyle\\lim_{x\\to 1,\\,x>1}\\dfrac{1}{\\ln x}$.",
+      "corrige": [
+        "$x^2+1\\to+\\infty$ et $\\displaystyle\\lim_{X\\to+\\infty}\\ln X=+\\infty$ : la première limite est $+\\infty$.",
+        "Pour $x>1$ proche de $1$, $\\ln x$ est positif et tend vers $0$ : $\\dfrac{1}{\\ln x}\\to+\\infty$."
+      ],
+      "reponse": "$+\\infty$ et $+\\infty$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}(x-\\ln x)$.",
+      "corrige": [
+        "Forme indéterminée « $\\infty-\\infty$ ». On factorise : $x-\\ln x=x\\left(1-\\dfrac{\\ln x}{x}\\right)$.",
+        "$\\dfrac{\\ln x}{x}\\to 0$ (croissances comparées), donc la parenthèse tend vers $1$ et le produit vers $+\\infty$."
+      ],
+      "reponse": "$+\\infty$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "limites",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 0^+}\\dfrac{\\ln x}{x}$. S'agit-il d'une forme indéterminée ?",
+      "corrige": [
+        "On écrit $\\dfrac{\\ln x}{x}=\\ln x\\times\\dfrac{1}{x}$. En $0^+$ : $\\ln x\\to-\\infty$ et $\\dfrac{1}{x}\\to+\\infty$.",
+        "Le produit d'une quantité tendant vers $-\\infty$ par une quantité tendant vers $+\\infty$ tend vers $-\\infty$ : ce n'est pas une forme indéterminée."
+      ],
+      "reponse": "$-\\infty$ (pas de forme indéterminée)."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to 0^+}(x\\ln x-3)$.",
+      "corrige": [
+        "Croissance comparée en $0^+$ : $\\displaystyle\\lim_{x\\to 0^+}x\\ln x=0$.",
+        "Donc $x\\ln x-3\\to-3$."
+      ],
+      "reponse": "$-3$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{3\\ln x+x}{x}$.",
+      "corrige": [
+        "On sépare : $\\dfrac{3\\ln x+x}{x}=3\\times\\dfrac{\\ln x}{x}+1$.",
+        "$\\dfrac{\\ln x}{x}\\to 0$, donc la limite vaut $1$."
+      ],
+      "reponse": "$1$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{R}$ l'équation $e^{2x}-3e^x+2=0$. On pourra poser $X=e^x$.",
+      "corrige": [
+        "Avec $X=e^x>0$ : $X^2-3X+2=0$, soit $X=1$ ou $X=2$ (deux valeurs positives, acceptées).",
+        "$e^x=1\\iff x=0$ et $e^x=2\\iff x=\\ln 2$."
+      ],
+      "reponse": "$S=\\{0\\,;\\ln 2\\}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "inequations",
+      "enonce": "Résoudre l'inéquation $\\ln x+\\ln(x-2)\\geqslant\\ln 3$.",
+      "corrige": [
+        "Existence : $x>0$ et $x-2>0$, soit $x>2$.",
+        "$\\ln\\big(x(x-2)\\big)\\geqslant\\ln 3\\iff x^2-2x-3\\geqslant 0\\iff(x-3)(x+1)\\geqslant 0$.",
+        "Ce produit est positif pour $x\\leqslant -1$ ou $x\\geqslant 3$ ; avec $x>2$, il reste $x\\geqslant 3$."
+      ],
+      "reponse": "$S=[3\\,;+\\infty[$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "derivee",
+      "enonce": "Soit $f(x)=\\ln x-\\dfrac{x^2}{2}$ sur $]0\\,;+\\infty[$. Étudier les variations de $f$ et en déduire que $\\ln x\\leqslant\\dfrac{x^2-1}{2}$ pour tout $x>0$.",
+      "corrige": [
+        "$f'(x)=\\dfrac{1}{x}-x=\\dfrac{1-x^2}{x}=\\dfrac{(1-x)(1+x)}{x}$, du signe de $1-x$ sur $]0\\,;+\\infty[$.",
+        "$f$ croît sur $]0\\,;1]$ et décroît sur $[1\\,;+\\infty[$ : maximum $f(1)=-\\dfrac{1}{2}$.",
+        "Donc $\\ln x-\\dfrac{x^2}{2}\\leqslant-\\dfrac{1}{2}$, soit $\\ln x\\leqslant\\dfrac{x^2-1}{2}$."
+      ],
+      "reponse": "Maximum $-\\dfrac{1}{2}$ en $1$, d'où $\\ln x\\leqslant\\dfrac{x^2-1}{2}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "croissances-comparees",
+      "enonce": "Déterminer $\\displaystyle\\lim_{x\\to+\\infty}\\dfrac{x-2\\ln x}{x+\\ln x}$.",
+      "corrige": [
+        "On factorise par $x$ en haut et en bas : $\\dfrac{1-2\\,\\frac{\\ln x}{x}}{1+\\frac{\\ln x}{x}}$.",
+        "$\\dfrac{\\ln x}{x}\\to 0$, donc le quotient tend vers $\\dfrac{1}{1}=1$."
+      ],
+      "reponse": "$1$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "Le nombre de noyaux de carbone 14 d'un échantillon est modélisé par $N(t)=N_0\\,e^{-\\lambda t}$, où $t$ est en années et $\\lambda\\approx 1{,}21\\times 10^{-4}$. La demi-vie $T$ est la durée au bout de laquelle la moitié des noyaux a disparu. Montrer que $T=\\dfrac{\\ln 2}{\\lambda}$ et en donner une valeur approchée à la centaine d'années près.",
+      "corrige": [
+        "$N(T)=\\dfrac{N_0}{2}\\iff e^{-\\lambda T}=\\dfrac{1}{2}\\iff-\\lambda T=\\ln\\left(\\dfrac{1}{2}\\right)=-\\ln 2$.",
+        "Donc $T=\\dfrac{\\ln 2}{\\lambda}\\approx\\dfrac{0{,}693}{1{,}21\\times 10^{-4}}\\approx 5\\,730$ ans, soit environ $5\\,700$ ans à la centaine près."
+      ],
+      "reponse": "$T=\\dfrac{\\ln 2}{\\lambda}\\approx 5\\,700$ ans."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "Un café servi à $90\\,^{\\circ}\\mathrm{C}$ refroidit dans une pièce à $20\\,^{\\circ}\\mathrm{C}$. Sa température, $t$ minutes après le service, est $\\theta(t)=20+70\\,e^{-0{,}05t}$. Au bout de combien de minutes atteint-il $50\\,^{\\circ}\\mathrm{C}$ ? Donner la valeur exacte puis arrondir à la minute.",
+      "corrige": [
+        "$\\theta(t)=50\\iff 70\\,e^{-0{,}05t}=30\\iff e^{-0{,}05t}=\\dfrac{3}{7}$.",
+        "$-0{,}05t=\\ln\\left(\\dfrac{3}{7}\\right)$, donc $t=\\dfrac{\\ln\\left(\\frac{7}{3}\\right)}{0{,}05}=20\\ln\\left(\\dfrac{7}{3}\\right)\\approx 16{,}9$.",
+        "Le café atteint $50\\,^{\\circ}\\mathrm{C}$ au bout d'environ $17$ minutes."
+      ],
+      "reponse": "$t=20\\ln\\left(\\dfrac{7}{3}\\right)\\approx 17$ minutes."
     }
   ]
 }

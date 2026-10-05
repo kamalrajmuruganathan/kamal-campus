@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese-integrale",
       "enonce": "On considère la fonction $f$ définie sur $[0\\,;1]$ par $f(x)=x\\,e^{-x}$, de courbe $\\mathcal{C}_f$. Pour tout entier $n\\geqslant 0$, on pose $I_n=\\displaystyle\\int_0^1 x^n e^{-x}\\,dx$ (on remarquera que $I_1=\\displaystyle\\int_0^1 f(x)\\,dx$). **1.** À l'aide d'une intégration par parties, calculer $I_1$. **2.** Déterminer la valeur moyenne de $f$ sur $[0\\,;1]$. **3.** Soit $g(x)=e^{-x}$. Montrer que sur $[0\\,;1]$ la courbe de $g$ est au-dessus de $\\mathcal{C}_f$, puis calculer l'aire, en unités d'aire, du domaine compris entre les deux courbes. **4.** À l'aide d'une intégration par parties, montrer que pour tout $n\\geqslant 1$, $I_n=n\\,I_{n-1}-\\dfrac{1}{e}$, et en déduire $I_2$. **5.** Montrer que la suite $(I_n)$ est décroissante et que, pour tout $n\\geqslant 0$, $0\\leqslant I_n\\leqslant\\dfrac{1}{n+1}$, puis déterminer sa limite.",
       "corrige": [
@@ -143,6 +143,459 @@
         "5. (fin) Pour $x\\in[0\\,;1]$, $0<e^{-x}\\leqslant 1$ et $x^n\\geqslant 0$, donc $0\\leqslant x^n e^{-x}\\leqslant x^n$. En intégrant, $0\\leqslant I_n\\leqslant\\displaystyle\\int_0^1 x^n\\,dx=\\left[\\dfrac{x^{n+1}}{n+1}\\right]_0^1=\\dfrac{1}{n+1}$. Comme $\\dfrac{1}{n+1}\\to 0$, le théorème des gendarmes donne $\\displaystyle\\lim_{n\\to+\\infty}I_n=0.$"
       ],
       "reponse": "1. $I_1=1-\\dfrac{2}{e}$. 2. $\\mu=1-\\dfrac{2}{e}$. 3. Aire $=\\dfrac{1}{e}$ unité d'aire. 4. $I_n=n\\,I_{n-1}-\\dfrac{1}{e}$ et $I_2=2-\\dfrac{5}{e}$. 5. $(I_n)$ est décroissante, $0\\leqslant I_n\\leqslant\\dfrac{1}{n+1}$, et $\\displaystyle\\lim_{n\\to+\\infty}I_n=0.$"
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition-aire",
+      "enonce": "Sans calculer de primitive, interpréter $\\displaystyle\\int_1^5 3\\,dx$ comme une aire et donner sa valeur.",
+      "corrige": [
+        "La fonction constante $x\\mapsto 3$ est continue et positive sur $[1\\,;5]$ : l'intégrale est l'aire du domaine situé sous sa courbe.",
+        "Ce domaine est un rectangle de largeur $5-1=4$ et de hauteur $3$, d'aire $4\\times 3=12$."
+      ],
+      "reponse": "$\\displaystyle\\int_1^5 3\\,dx=12$ (aire d'un rectangle $4\\times 3$)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition-aire",
+      "enonce": "Sans calculer de primitive, déterminer $\\displaystyle\\int_0^4 x\\,dx$ en reconnaissant une figure géométrique.",
+      "corrige": [
+        "Sur $[0\\,;4]$, la fonction $x\\mapsto x$ est positive ; le domaine sous sa courbe est le triangle rectangle de sommets $(0\\,;0)$, $(4\\,;0)$ et $(4\\,;4)$.",
+        "Son aire vaut $\\dfrac{4\\times 4}{2}=8$ unités d'aire."
+      ],
+      "reponse": "$\\displaystyle\\int_0^4 x\\,dx=8$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "chasles-bornes-echangees",
+      "enonce": "Que vaut $\\displaystyle\\int_2^2 \\left(x^3+e^x\\right)dx$ ? Justifier sans aucun calcul de primitive.",
+      "corrige": [
+        "Les deux bornes sont égales : le domaine est réduit à un segment vertical, d'aire nulle.",
+        "Avec une primitive $F$, on obtient d'ailleurs $F(2)-F(2)=0$, quelle que soit la fonction."
+      ],
+      "reponse": "$0$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "definition-aire",
+      "enonce": "Soit $f(x)=2x+1$. Sur $[0\\,;2]$, le domaine sous la courbe de $f$ est un trapèze. Calculer $\\displaystyle\\int_0^2 (2x+1)\\,dx$ grâce à la formule de l'aire du trapèze, puis vérifier avec une primitive.",
+      "corrige": [
+        "Le trapèze a pour « bases » verticales $f(0)=1$ et $f(2)=5$, et pour hauteur la largeur $2$ : aire $=\\dfrac{(1+5)\\times 2}{2}=6$.",
+        "Vérification : une primitive de $2x+1$ est $x^2+x$, donc $\\big[x^2+x\\big]_0^2=(4+2)-0=6$."
+      ],
+      "reponse": "$\\displaystyle\\int_0^2 (2x+1)\\,dx=6$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "definition-aire",
+      "enonce": "Pour $x\\in[0\\,;2]$, on pose $f(x)=\\sqrt{4-x^2}$. On admet que la courbe de $f$ est le quart du cercle de centre $O$ et de rayon $2$ situé dans le quart de plan $x\\geqslant 0$, $y\\geqslant 0$. En déduire $\\displaystyle\\int_0^2 \\sqrt{4-x^2}\\,dx$.",
+      "corrige": [
+        "La fonction $f$ est continue et positive sur $[0\\,;2]$, donc l'intégrale est l'aire du domaine sous sa courbe.",
+        "Ce domaine est un quart de disque de rayon $2$ : son aire vaut $\\dfrac{\\pi\\times 2^2}{4}=\\pi$."
+      ],
+      "reponse": "$\\displaystyle\\int_0^2 \\sqrt{4-x^2}\\,dx=\\pi$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_0^2 \\left(3x^2-2x+1\\right)dx$.",
+      "corrige": [
+        "Une primitive de $3x^2-2x+1$ est $F(x)=x^3-x^2+x$.",
+        "$F(2)=8-4+2=6$ et $F(0)=0$, donc l'intégrale vaut $6-0=6$."
+      ],
+      "reponse": "$6$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_1^4 \\dfrac{1}{\\sqrt{x}}\\,dx$.",
+      "corrige": [
+        "La dérivée de $\\sqrt{x}$ est $\\dfrac{1}{2\\sqrt{x}}$, donc une primitive de $\\dfrac{1}{\\sqrt{x}}$ sur $]0\\,;+\\infty[$ est $2\\sqrt{x}$.",
+        "$\\big[2\\sqrt{x}\\big]_1^4=2\\times 2-2\\times 1=2$."
+      ],
+      "reponse": "$2$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_0^{\\pi/2} \\cos x\\,dx$ et interpréter le résultat comme une aire.",
+      "corrige": [
+        "Une primitive de $\\cos$ est $\\sin$, donc l'intégrale vaut $\\sin\\dfrac{\\pi}{2}-\\sin 0=1-0=1$.",
+        "Sur $\\left[0\\,;\\dfrac{\\pi}{2}\\right]$, $\\cos x\\geqslant 0$ : le domaine sous la courbe du cosinus, entre $0$ et $\\dfrac{\\pi}{2}$, a une aire de $1$ unité d'aire."
+      ],
+      "reponse": "$1$ (aire sous l'arche du cosinus entre $0$ et $\\dfrac{\\pi}{2}$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer la valeur exacte de $\\displaystyle\\int_0^1 e^{2x}\\,dx$.",
+      "corrige": [
+        "Une primitive de $e^{2x}$ est $\\dfrac{1}{2}e^{2x}$ (on divise par le coefficient $2$ de $x$).",
+        "$\\left[\\dfrac{1}{2}e^{2x}\\right]_0^1=\\dfrac{e^2}{2}-\\dfrac{e^0}{2}=\\dfrac{e^2-1}{2}$."
+      ],
+      "reponse": "$\\dfrac{e^2-1}{2}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "linearite",
+      "enonce": "On sait que $\\displaystyle\\int_0^2 f(x)\\,dx=5$ et $\\displaystyle\\int_0^2 g(x)\\,dx=-1$. Calculer $\\displaystyle\\int_0^2 \\big(2f(x)-3g(x)\\big)\\,dx$.",
+      "corrige": [
+        "Par linéarité, $\\displaystyle\\int_0^2 (2f-3g)=2\\int_0^2 f-3\\int_0^2 g$.",
+        "On obtient $2\\times 5-3\\times(-1)=10+3=13$."
+      ],
+      "reponse": "$13$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "linearite",
+      "enonce": "On rappelle que $\\displaystyle\\int_0^1 e^x\\,dx=e-1$ et $\\displaystyle\\int_0^1 x\\,dx=\\dfrac{1}{2}$. En déduire $\\displaystyle\\int_0^1 \\left(4e^x-6x\\right)dx$ sans chercher de nouvelle primitive.",
+      "corrige": [
+        "Par linéarité : $\\displaystyle\\int_0^1 (4e^x-6x)\\,dx=4\\int_0^1 e^x\\,dx-6\\int_0^1 x\\,dx$.",
+        "$=4(e-1)-6\\times\\dfrac{1}{2}=4e-4-3=4e-7$."
+      ],
+      "reponse": "$4e-7$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "chasles-bornes-echangees",
+      "enonce": "Vrai ou faux ? Pour toute fonction $f$ continue sur $[0\\,;5]$, $\\displaystyle\\int_0^5 f(x)\\,dx-\\int_3^5 f(x)\\,dx=\\int_0^3 f(x)\\,dx$. Justifier.",
+      "corrige": [
+        "La relation de Chasles donne $\\displaystyle\\int_0^3 f+\\int_3^5 f=\\int_0^5 f$.",
+        "En retranchant $\\displaystyle\\int_3^5 f$ aux deux membres, on obtient exactement l'égalité proposée."
+      ],
+      "reponse": "Vrai (relation de Chasles)."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "positivite-inegalites",
+      "enonce": "Sans calculer, déterminer le signe de $\\displaystyle\\int_1^3 \\left(x^2+1\\right)\\ln x\\,dx$.",
+      "corrige": [
+        "Pour $x\\in[1\\,;3]$, $\\ln x\\geqslant 0$ et $x^2+1>0$, donc la fonction intégrée est positive sur $[1\\,;3]$.",
+        "Les bornes sont dans l'ordre croissant ($1\\leqslant 3$) : par positivité de l'intégrale, le nombre est positif."
+      ],
+      "reponse": "L'intégrale est positive."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "valeur-moyenne",
+      "enonce": "Calculer la valeur moyenne de $f(x)=3x^2+1$ sur $[0\\,;2]$.",
+      "corrige": [
+        "$\\displaystyle\\int_0^2 (3x^2+1)\\,dx=\\big[x^3+x\\big]_0^2=8+2=10$.",
+        "$\\mu=\\dfrac{1}{2-0}\\times 10=5$."
+      ],
+      "reponse": "$\\mu=5$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "aire-fonction-negative",
+      "enonce": "Sur $[0\\,;1]$, la fonction $f(x)=-e^x$ est négative. Calculer $\\displaystyle\\int_0^1 f(x)\\,dx$, puis l'aire du domaine compris entre sa courbe, l'axe des abscisses et les droites $x=0$ et $x=1$.",
+      "corrige": [
+        "Une primitive de $-e^x$ est $-e^x$ : $\\displaystyle\\int_0^1 -e^x\\,dx=-e+1=1-e\\approx -1{,}72$.",
+        "Comme $f\\leqslant 0$, l'aire est l'opposé de l'intégrale : $\\mathcal{A}=e-1$ unités d'aire."
+      ],
+      "reponse": "Intégrale : $1-e$ ; aire : $e-1$ unités d'aire."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "primitive-fa",
+      "enonce": "On pose, pour tout réel $x$, $G(x)=\\displaystyle\\int_2^x \\left(3t^2-1\\right)dt$. Exprimer $G(x)$ en fonction de $x$, puis vérifier que $G(2)=0$.",
+      "corrige": [
+        "Une primitive de $3t^2-1$ est $t^3-t$, donc $G(x)=\\big[t^3-t\\big]_2^x=(x^3-x)-(8-2)=x^3-x-6$.",
+        "$G(2)=8-2-6=0$ : $G$ est bien la primitive de $3x^2-1$ qui s'annule en $2$."
+      ],
+      "reponse": "$G(x)=x^3-x-6$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_0^1 \\dfrac{2x}{x^2+1}\\,dx$.",
+      "corrige": [
+        "On reconnaît la forme $\\dfrac{u'}{u}$ avec $u(x)=x^2+1>0$ : une primitive est $\\ln\\left(x^2+1\\right)$.",
+        "$\\big[\\ln(x^2+1)\\big]_0^1=\\ln 2-\\ln 1=\\ln 2$."
+      ],
+      "reponse": "$\\ln 2$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "calcul-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_0^1 x\\left(x^2+1\\right)^3 dx$.",
+      "corrige": [
+        "Avec $u(x)=x^2+1$, on a $u'(x)=2x$, donc $x(x^2+1)^3=\\dfrac{1}{2}u'u^3$, dont une primitive est $\\dfrac{1}{2}\\times\\dfrac{u^4}{4}=\\dfrac{(x^2+1)^4}{8}$.",
+        "$\\left[\\dfrac{(x^2+1)^4}{8}\\right]_0^1=\\dfrac{16}{8}-\\dfrac{1}{8}=\\dfrac{15}{8}$."
+      ],
+      "reponse": "$\\dfrac{15}{8}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "linearite",
+      "enonce": "On sait que $\\displaystyle\\int_0^1 \\big(f(x)+g(x)\\big)\\,dx=4$ et $\\displaystyle\\int_0^1 \\big(f(x)-g(x)\\big)\\,dx=2$. Déterminer $\\displaystyle\\int_0^1 f(x)\\,dx$ et $\\displaystyle\\int_0^1 g(x)\\,dx$.",
+      "corrige": [
+        "On note $A=\\displaystyle\\int_0^1 f$ et $B=\\displaystyle\\int_0^1 g$. Par linéarité : $A+B=4$ et $A-B=2$.",
+        "En additionnant : $2A=6$, donc $A=3$ ; puis $B=4-3=1$."
+      ],
+      "reponse": "$\\displaystyle\\int_0^1 f=3$ et $\\displaystyle\\int_0^1 g=1$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "linearite",
+      "enonce": "Un élève écrit : « $\\displaystyle\\int_0^1 x\\times x\\,dx=\\int_0^1 x\\,dx\\times\\int_0^1 x\\,dx$ ». Montrer par le calcul que c'est faux et dire quelle règle il a inventée.",
+      "corrige": [
+        "$\\displaystyle\\int_0^1 x^2\\,dx=\\dfrac{1}{3}$, alors que $\\left(\\displaystyle\\int_0^1 x\\,dx\\right)^2=\\left(\\dfrac{1}{2}\\right)^2=\\dfrac{1}{4}$.",
+        "$\\dfrac{1}{3}\\neq\\dfrac{1}{4}$ : l'intégrale d'un produit n'est pas le produit des intégrales. La linéarité ne concerne que les sommes et la multiplication par une constante."
+      ],
+      "reponse": "Faux : $\\dfrac{1}{3}\\neq\\dfrac{1}{4}$ ; l'intégrale n'est pas « multiplicative »."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "chasles-bornes-echangees",
+      "enonce": "Calculer $\\displaystyle\\int_{-2}^{3} |x|\\,dx$ en utilisant la relation de Chasles.",
+      "corrige": [
+        "On coupe en $0$ : $\\displaystyle\\int_{-2}^{3}|x|\\,dx=\\int_{-2}^{0}(-x)\\,dx+\\int_0^3 x\\,dx$.",
+        "$\\displaystyle\\int_{-2}^{0}(-x)\\,dx=\\left[-\\dfrac{x^2}{2}\\right]_{-2}^{0}=0-(-2)=2$ et $\\displaystyle\\int_0^3 x\\,dx=\\dfrac{9}{2}$.",
+        "Total : $2+\\dfrac{9}{2}=\\dfrac{13}{2}$."
+      ],
+      "reponse": "$\\dfrac{13}{2}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "chasles-bornes-echangees",
+      "enonce": "On définit $f$ sur $[0\\,;3]$ par $f(x)=x^2$ si $x\\leqslant 1$ et $f(x)=2x-1$ si $x>1$ (cette fonction est continue). Calculer $\\displaystyle\\int_0^3 f(x)\\,dx$.",
+      "corrige": [
+        "Chasles : $\\displaystyle\\int_0^3 f=\\int_0^1 x^2\\,dx+\\int_1^3 (2x-1)\\,dx$.",
+        "$\\displaystyle\\int_0^1 x^2\\,dx=\\dfrac{1}{3}$ et $\\displaystyle\\int_1^3(2x-1)\\,dx=\\big[x^2-x\\big]_1^3=6-0=6$.",
+        "Total : $\\dfrac{1}{3}+6=\\dfrac{19}{3}$."
+      ],
+      "reponse": "$\\dfrac{19}{3}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "positivite-inegalites",
+      "enonce": "Sans calculer, donner le signe de $\\displaystyle\\int_2^0 e^x\\,dx$. Attention aux bornes.",
+      "corrige": [
+        "La fonction $e^x$ est strictement positive, donc $\\displaystyle\\int_0^2 e^x\\,dx>0$.",
+        "Ici les bornes sont échangées : $\\displaystyle\\int_2^0 e^x\\,dx=-\\int_0^2 e^x\\,dx<0$. (On peut vérifier : elle vaut $1-e^2$.)"
+      ],
+      "reponse": "L'intégrale est négative."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "positivite-inegalites",
+      "enonce": "Montrer que $1\\leqslant\\displaystyle\\int_0^1 e^{x^2}\\,dx\\leqslant e$.",
+      "corrige": [
+        "Pour $x\\in[0\\,;1]$, $0\\leqslant x^2\\leqslant 1$, et la fonction exponentielle est croissante, donc $1\\leqslant e^{x^2}\\leqslant e$.",
+        "On intègre cette inégalité sur $[0\\,;1]$ (bornes dans l'ordre croissant) : $\\displaystyle\\int_0^1 1\\,dx\\leqslant\\int_0^1 e^{x^2}dx\\leqslant\\int_0^1 e\\,dx$, soit $1\\leqslant\\displaystyle\\int_0^1 e^{x^2}dx\\leqslant e$."
+      ],
+      "reponse": "$1\\leqslant\\displaystyle\\int_0^1 e^{x^2}\\,dx\\leqslant e$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "valeur-moyenne",
+      "enonce": "Calculer la valeur moyenne de $f(x)=e^x$ sur $[0\\,;\\ln 2]$.",
+      "corrige": [
+        "$\\displaystyle\\int_0^{\\ln 2} e^x\\,dx=e^{\\ln 2}-e^0=2-1=1$.",
+        "La longueur de l'intervalle est $\\ln 2$, donc $\\mu=\\dfrac{1}{\\ln 2}\\times 1=\\dfrac{1}{\\ln 2}\\approx 1{,}44$."
+      ],
+      "reponse": "$\\mu=\\dfrac{1}{\\ln 2}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "valeur-moyenne",
+      "enonce": "Calculer la valeur moyenne de $f(x)=\\dfrac{1}{x}$ sur $[1\\,;e]$.",
+      "corrige": [
+        "$\\displaystyle\\int_1^e \\dfrac{1}{x}\\,dx=\\ln e-\\ln 1=1$.",
+        "$\\mu=\\dfrac{1}{e-1}\\times 1=\\dfrac{1}{e-1}\\approx 0{,}58$. On n'oublie pas le facteur $\\dfrac{1}{b-a}$."
+      ],
+      "reponse": "$\\mu=\\dfrac{1}{e-1}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "aire-fonction-negative",
+      "enonce": "On considère $f(x)=x$ sur $[-1\\,;2]$. Calculer $\\displaystyle\\int_{-1}^{2}x\\,dx$, puis l'aire totale du domaine compris entre la droite, l'axe des abscisses et les droites $x=-1$ et $x=2$. Pourquoi les deux nombres sont-ils différents ?",
+      "corrige": [
+        "$\\displaystyle\\int_{-1}^{2}x\\,dx=\\left[\\dfrac{x^2}{2}\\right]_{-1}^{2}=2-\\dfrac{1}{2}=\\dfrac{3}{2}$.",
+        "Aire : la partie sous l'axe (sur $[-1\\,;0]$) mesure $\\dfrac{1}{2}$, la partie au-dessus (sur $[0\\,;2]$) mesure $2$ ; l'aire totale vaut $\\dfrac{1}{2}+2=\\dfrac{5}{2}$.",
+        "L'intégrale compte la partie sous l'axe en négatif : $2-\\dfrac{1}{2}=\\dfrac{3}{2}$, alors que l'aire additionne les deux parties."
+      ],
+      "reponse": "Intégrale $\\dfrac{3}{2}$, aire $\\dfrac{5}{2}$ unités d'aire."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "aire-fonction-negative",
+      "enonce": "Soit $f(x)=x^2-2x$. Vérifier que $f\\leqslant 0$ sur $[0\\,;2]$, puis calculer l'aire du domaine compris entre la courbe de $f$ et l'axe des abscisses sur cet intervalle.",
+      "corrige": [
+        "$f(x)=x(x-2)$ : pour $0\\leqslant x\\leqslant 2$, $x\\geqslant 0$ et $x-2\\leqslant 0$, donc $f(x)\\leqslant 0$.",
+        "$\\displaystyle\\int_0^2 (x^2-2x)\\,dx=\\left[\\dfrac{x^3}{3}-x^2\\right]_0^2=\\dfrac{8}{3}-4=-\\dfrac{4}{3}$.",
+        "L'aire est l'opposé : $\\mathcal{A}=\\dfrac{4}{3}$ unités d'aire."
+      ],
+      "reponse": "$\\dfrac{4}{3}$ unités d'aire."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "aire-entre-courbes",
+      "enonce": "On admet que, pour tout réel $x$, $e^x\\geqslant x+1$. Calculer l'aire du domaine compris entre les courbes de $f(x)=e^x$ et $g(x)=x$ et les droites $x=0$ et $x=1$.",
+      "corrige": [
+        "Comme $e^x\\geqslant x+1>x$, la courbe de $f$ est au-dessus de celle de $g$ : $\\mathcal{A}=\\displaystyle\\int_0^1 (e^x-x)\\,dx$.",
+        "$=\\left[e^x-\\dfrac{x^2}{2}\\right]_0^1=\\left(e-\\dfrac{1}{2}\\right)-1=e-\\dfrac{3}{2}\\approx 1{,}22$."
+      ],
+      "reponse": "$e-\\dfrac{3}{2}$ unités d'aire."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "aire-entre-courbes",
+      "enonce": "Un élève calcule l'aire entre les courbes de $f(x)=x$ et $g(x)=x^2$ sur $[0\\,;1]$ ainsi : « $\\displaystyle\\int_0^1 (x^2-x)\\,dx=-\\dfrac{1}{6}$, donc l'aire vaut $-\\dfrac{1}{6}$ ». Repérer l'erreur et corriger.",
+      "corrige": [
+        "Une aire ne peut pas être négative. Sur $[0\\,;1]$, $x^2\\leqslant x$ : c'est la courbe de $f$ qui est au-dessus.",
+        "Il faut intégrer « courbe du haut moins courbe du bas » : $\\displaystyle\\int_0^1 (x-x^2)\\,dx=\\dfrac{1}{2}-\\dfrac{1}{3}=\\dfrac{1}{6}$."
+      ],
+      "reponse": "L'aire vaut $\\dfrac{1}{6}$ unité d'aire (l'élève a inversé $f$ et $g$)."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "integration-par-parties",
+      "enonce": "À l'aide d'une intégration par parties, calculer $\\displaystyle\\int_0^{\\pi} x\\sin x\\,dx$.",
+      "corrige": [
+        "On pose $u(x)=x$, $v'(x)=\\sin x$, donc $u'(x)=1$ et $v(x)=-\\cos x$.",
+        "$\\displaystyle\\int_0^{\\pi}x\\sin x\\,dx=\\big[-x\\cos x\\big]_0^{\\pi}+\\int_0^{\\pi}\\cos x\\,dx$.",
+        "$\\big[-x\\cos x\\big]_0^{\\pi}=-\\pi\\cos\\pi-0=\\pi$ et $\\displaystyle\\int_0^{\\pi}\\cos x\\,dx=\\sin\\pi-\\sin 0=0$. Résultat : $\\pi$."
+      ],
+      "reponse": "$\\pi$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "primitive-fa",
+      "enonce": "On pose $F(x)=\\displaystyle\\int_0^x e^{-t^2}\\,dt$ pour tout réel $x$. Sans chercher à calculer $F(x)$, donner $F(0)$, $F'(x)$ et le sens de variation de $F$.",
+      "corrige": [
+        "$F$ est la primitive de la fonction continue $t\\mapsto e^{-t^2}$ qui s'annule en $0$ : $F(0)=0$ et $F'(x)=e^{-x^2}$.",
+        "Comme $e^{-x^2}>0$ pour tout $x$, $F$ est strictement croissante sur $\\mathbb{R}$."
+      ],
+      "reponse": "$F(0)=0$, $F'(x)=e^{-x^2}$, $F$ strictement croissante."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "positivite-inegalites",
+      "enonce": "Montrer que $0\\leqslant\\displaystyle\\int_0^1 \\dfrac{x^2}{1+x}\\,dx\\leqslant\\dfrac{1}{3}$.",
+      "corrige": [
+        "Pour $x\\in[0\\,;1]$, $1+x\\geqslant 1$ et $x^2\\geqslant 0$, donc $0\\leqslant\\dfrac{x^2}{1+x}\\leqslant x^2$.",
+        "En intégrant sur $[0\\,;1]$ : $0\\leqslant\\displaystyle\\int_0^1\\dfrac{x^2}{1+x}\\,dx\\leqslant\\int_0^1 x^2\\,dx=\\dfrac{1}{3}$.",
+        "(La valeur exacte est $\\ln 2-\\dfrac{1}{2}\\approx 0{,}19$, ce qui est cohérent.)"
+      ],
+      "reponse": "$0\\leqslant\\displaystyle\\int_0^1\\dfrac{x^2}{1+x}\\,dx\\leqslant\\dfrac{1}{3}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "aire-entre-courbes",
+      "enonce": "Soit $f(x)=\\sqrt{x}$ et $g(x)=x^2$ sur $[0\\,;+\\infty[$. Déterminer les abscisses des points d'intersection des deux courbes, puis l'aire du domaine qu'elles délimitent.",
+      "corrige": [
+        "$\\sqrt{x}=x^2$ équivaut (en élevant au carré, $x\\geqslant 0$) à $x=x^4$, soit $x(1-x^3)=0$ : $x=0$ ou $x=1$.",
+        "Sur $[0\\,;1]$, $x^2\\leqslant\\sqrt{x}$ (par exemple en $x=\\dfrac{1}{4}$ : $\\dfrac{1}{16}\\leqslant\\dfrac{1}{2}$), donc $\\mathcal{A}=\\displaystyle\\int_0^1(\\sqrt{x}-x^2)\\,dx$.",
+        "Une primitive de $\\sqrt{x}=x^{1/2}$ est $\\dfrac{2}{3}x\\sqrt{x}$ : $\\mathcal{A}=\\dfrac{2}{3}-\\dfrac{1}{3}=\\dfrac{1}{3}$."
+      ],
+      "reponse": "Intersections en $x=0$ et $x=1$ ; aire $\\dfrac{1}{3}$ unité d'aire."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "integration-par-parties",
+      "enonce": "À l'aide d'une intégration par parties, calculer $\\displaystyle\\int_1^{e} x\\ln x\\,dx$.",
+      "corrige": [
+        "On pose $u(x)=\\ln x$ et $v'(x)=x$, donc $u'(x)=\\dfrac{1}{x}$ et $v(x)=\\dfrac{x^2}{2}$.",
+        "$\\displaystyle\\int_1^e x\\ln x\\,dx=\\left[\\dfrac{x^2}{2}\\ln x\\right]_1^e-\\int_1^e\\dfrac{x}{2}\\,dx=\\dfrac{e^2}{2}-\\left[\\dfrac{x^2}{4}\\right]_1^e$.",
+        "$=\\dfrac{e^2}{2}-\\dfrac{e^2-1}{4}=\\dfrac{e^2+1}{4}$."
+      ],
+      "reponse": "$\\dfrac{e^2+1}{4}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "integration-par-parties",
+      "enonce": "Calculer $\\displaystyle\\int_0^1 (2x+1)e^x\\,dx$ par une intégration par parties.",
+      "corrige": [
+        "On pose $u(x)=2x+1$ et $v'(x)=e^x$, donc $u'(x)=2$ et $v(x)=e^x$.",
+        "$\\displaystyle\\int_0^1(2x+1)e^x\\,dx=\\big[(2x+1)e^x\\big]_0^1-\\int_0^1 2e^x\\,dx=(3e-1)-2(e-1)$.",
+        "$=3e-1-2e+2=e+1$."
+      ],
+      "reponse": "$e+1$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "suite-d-integrales",
+      "enonce": "Pour tout entier $n\\geqslant 0$, on pose $I_n=\\displaystyle\\int_0^1\\dfrac{x^n}{1+x}\\,dx$. 1. Montrer que $I_n+I_{n+1}=\\dfrac{1}{n+1}$. 2. Montrer que $0\\leqslant I_n\\leqslant\\dfrac{1}{n+1}$ et en déduire la limite de $(I_n)$.",
+      "corrige": [
+        "1. Par linéarité, $I_n+I_{n+1}=\\displaystyle\\int_0^1\\dfrac{x^n(1+x)}{1+x}\\,dx=\\int_0^1 x^n\\,dx=\\dfrac{1}{n+1}$.",
+        "2. Sur $[0\\,;1]$, $1+x\\geqslant 1$ donc $0\\leqslant\\dfrac{x^n}{1+x}\\leqslant x^n$ ; en intégrant, $0\\leqslant I_n\\leqslant\\dfrac{1}{n+1}$.",
+        "Comme $\\dfrac{1}{n+1}\\to 0$, le théorème des gendarmes donne $\\displaystyle\\lim_{n\\to+\\infty}I_n=0$."
+      ],
+      "reponse": "$I_n+I_{n+1}=\\dfrac{1}{n+1}$ et $\\displaystyle\\lim_{n\\to+\\infty}I_n=0$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "valeur-moyenne",
+      "enonce": "Après une injection, la concentration d'un médicament dans le sang est modélisée par $C(t)=10\\,e^{-0{,}5t}$ (en mg/L), où $t$ est le temps en heures. Calculer la concentration moyenne pendant les 4 premières heures (valeur exacte, puis arrondie au centième).",
+      "corrige": [
+        "$\\mu=\\dfrac{1}{4-0}\\displaystyle\\int_0^4 10\\,e^{-0{,}5t}\\,dt$. Une primitive de $10\\,e^{-0{,}5t}$ est $-20\\,e^{-0{,}5t}$.",
+        "$\\displaystyle\\int_0^4 10\\,e^{-0{,}5t}\\,dt=-20e^{-2}+20=20\\left(1-e^{-2}\\right)$.",
+        "$\\mu=\\dfrac{20\\left(1-e^{-2}\\right)}{4}=5\\left(1-e^{-2}\\right)\\approx 4{,}32$ mg/L."
+      ],
+      "reponse": "$5\\left(1-e^{-2}\\right)\\approx 4{,}32$ mg/L."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "integration-par-parties",
+      "enonce": "On admet que $\\displaystyle\\int_0^1 x\\,e^x\\,dx=1$. À l'aide d'une intégration par parties, calculer $\\displaystyle\\int_0^1 x^2 e^x\\,dx$.",
+      "corrige": [
+        "On pose $u(x)=x^2$ et $v'(x)=e^x$, donc $u'(x)=2x$ et $v(x)=e^x$.",
+        "$\\displaystyle\\int_0^1 x^2e^x\\,dx=\\big[x^2e^x\\big]_0^1-2\\int_0^1 x\\,e^x\\,dx=e-2\\times 1$.",
+        "Résultat : $e-2\\approx 0{,}72$."
+      ],
+      "reponse": "$e-2$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "suite-d-integrales",
+      "enonce": "Pour tout entier $n\\geqslant 0$, on pose $I_n=\\displaystyle\\int_1^{e}(\\ln x)^n\\,dx$ (avec $I_0=\\displaystyle\\int_1^e 1\\,dx$). 1. Calculer $I_0$. 2. À l'aide d'une intégration par parties, montrer que $I_{n+1}=e-(n+1)\\,I_n$. 3. En déduire $I_1$ et $I_2$.",
+      "corrige": [
+        "1. $I_0=e-1$.",
+        "2. On pose $u(x)=(\\ln x)^{n+1}$ et $v'(x)=1$, donc $u'(x)=\\dfrac{(n+1)(\\ln x)^n}{x}$ et $v(x)=x$. Alors $I_{n+1}=\\big[x(\\ln x)^{n+1}\\big]_1^e-\\displaystyle\\int_1^e (n+1)(\\ln x)^n\\,dx=e-(n+1)I_n$.",
+        "3. $I_1=e-1\\times(e-1)=1$, puis $I_2=e-2\\times 1=e-2$."
+      ],
+      "reponse": "$I_0=e-1$, $I_1=1$, $I_2=e-2$."
     }
   ]
 }

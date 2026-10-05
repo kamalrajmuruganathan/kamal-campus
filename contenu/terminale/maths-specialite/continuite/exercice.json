@@ -134,7 +134,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "probleme-tvi-suite",
       "enonce": "**Partie A.** On considère la fonction $g$ définie sur $\\mathbb{R}$ par $g(x) = x^3 + 3x - 5$.\n1. Justifier que $g$ est continue sur $\\mathbb{R}$ et étudier son sens de variation.\n2. Montrer que l'équation $g(x) = 0$ admet une unique solution $\\alpha$ dans $\\mathbb{R}$.\n3. Par balayage au pas de $0{,}1$, donner un encadrement de $\\alpha$ d'amplitude $0{,}1$.\n\n**Partie B.** On considère la fonction $f$ définie sur $[0\\,;+\\infty[$ par $f(x) = \\sqrt{3x + 4}$, ainsi que la suite $(u_n)$ définie par $u_0 = 0$ et, pour tout entier $n$, $u_{n+1} = f(u_n) = \\sqrt{3u_n + 4}$.\n4. Montrer par récurrence que, pour tout entier $n$, $0 \\leq u_n \\leq 4$.\n5. Montrer que la suite $(u_n)$ est croissante.\n6. En déduire que $(u_n)$ converge, puis déterminer sa limite $\\ell$ en utilisant la continuité de $f$.",
       "corrige": [
@@ -146,6 +146,465 @@
         "6. $(u_n)$ est croissante et majorée par $4$ : d'après le théorème de la limite monotone, elle converge vers un réel $\\ell$ avec $0 \\leq \\ell \\leq 4$. La fonction $f$ est continue sur $[0\\,;+\\infty[$, donc en $\\ell$. En passant à la limite dans $u_{n+1} = f(u_n)$, on obtient $\\ell = f(\\ell)$, soit $\\sqrt{3\\ell + 4} = \\ell$. En élevant au carré : $\\ell^2 = 3\\ell + 4$, soit $\\ell^2 - 3\\ell - 4 = 0$, dont les racines sont $\\ell = 4$ et $\\ell = -1$. Comme $0 \\leq \\ell \\leq 4$, on conclut $\\ell = 4$."
       ],
       "reponse": "Partie A : l'équation $g(x) = 0$ a une unique solution $\\alpha$ avec $1{,}1 < \\alpha < 1{,}2$. Partie B : $(u_n)$ est croissante et majorée par $4$, donc converge, et sa limite est $\\ell = 4$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "continuite",
+      "enonce": "Soit $f(x)=2x+5$. Calculer $\\displaystyle\\lim_{x\\to 1}f(x)$ et $f(1)$. La fonction $f$ est-elle continue en $1$ ?",
+      "corrige": [
+        "$f$ est une fonction affine : $\\displaystyle\\lim_{x\\to 1}(2x+5)=7$, et $f(1)=2+5=7$.",
+        "La limite existe et est égale à $f(1)$ : $f$ est continue en $1$."
+      ],
+      "reponse": "Limite $7$, $f(1)=7$ : $f$ est continue en $1$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "continuite",
+      "enonce": "On note $\\lfloor x\\rfloor$ la partie entière de $x$. Donner $\\lfloor 2{,}7\\rfloor$ et $\\lfloor 3\\rfloor$, puis expliquer pourquoi la fonction partie entière n'est pas continue en $3$.",
+      "corrige": [
+        "$\\lfloor 2{,}7\\rfloor=2$ et $\\lfloor 3\\rfloor=3$.",
+        "Pour $x$ proche de $3$ avec $x<3$, $\\lfloor x\\rfloor=2$ : la limite à gauche en $3$ vaut $2$, différente de $f(3)=3$. La courbe fait un saut en $3$."
+      ],
+      "reponse": "$2$ et $3$ ; limite à gauche $2\\neq 3$ : discontinue en $3$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "continuite-derivabilite",
+      "enonce": "Vrai ou faux ? a) Toute fonction dérivable sur $\\mathbb{R}$ est continue sur $\\mathbb{R}$. b) Toute fonction continue sur $\\mathbb{R}$ est dérivable sur $\\mathbb{R}$.",
+      "corrige": [
+        "a) Vrai : c'est un théorème du cours (dérivable $\\Rightarrow$ continue).",
+        "b) Faux : la fonction $x\\mapsto |x|$ est continue sur $\\mathbb{R}$ mais n'est pas dérivable en $0$."
+      ],
+      "reponse": "a) Vrai ; b) Faux (contre-exemple : $|x|$ en $0$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "tableau-variations",
+      "enonce": "Dans un tableau de variations, une flèche montante relie $f(1)=-3$ à $f(4)=5$. Quelles deux informations cette flèche donne-t-elle par convention sur $[1\\,;4]$ ?",
+      "corrige": [
+        "Par convention, une flèche signifie que $f$ est continue sur l'intervalle et strictement monotone (ici strictement croissante).",
+        "C'est ce qui permet d'appliquer directement le théorème de la bijection sur $[1\\,;4]$."
+      ],
+      "reponse": "$f$ est continue et strictement croissante sur $[1\\,;4]$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "Justifier que la fonction $f$ définie sur $]0\\,;+\\infty[$ par $f(x)=e^x\\ln x+\\sqrt{x}$ est continue sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "Les fonctions $\\exp$, $\\ln$ et $\\sqrt{\\ }$ sont continues sur $]0\\,;+\\infty[$.",
+        "Un produit et une somme de fonctions continues sont continus : $f$ est continue sur $]0\\,;+\\infty[$."
+      ],
+      "reponse": "$f$ est continue sur $]0\\,;+\\infty[$ (sommes et produits de fonctions usuelles continues)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "On définit $f$ sur $\\mathbb{R}$ par $f(x)=x+1$ si $x<2$ et $f(x)=5-x$ si $x\\geqslant 2$. La fonction $f$ est-elle continue en $2$ ?",
+      "corrige": [
+        "$f(2)=5-2=3$. À gauche de $2$ : $\\displaystyle\\lim_{x\\to 2,\\,x<2}(x+1)=3$. À droite, $5-x$ tend aussi vers $3$.",
+        "Les deux limites sont égales à $f(2)$ : $f$ est continue en $2$ (sa courbe forme une pointe, mais sans saut)."
+      ],
+      "reponse": "Oui, $f$ est continue en $2$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "continuite",
+      "enonce": "Soit $f$ définie par $f(x)=\\dfrac{x^2-4}{x-2}$ pour $x\\neq 2$, et $f(2)=k$. Quelle valeur faut-il donner à $k$ pour que $f$ soit continue en $2$ ?",
+      "corrige": [
+        "Pour $x\\neq 2$, $f(x)=\\dfrac{(x-2)(x+2)}{x-2}=x+2$, donc $\\displaystyle\\lim_{x\\to 2}f(x)=4$.",
+        "La continuité en $2$ exige $f(2)=\\displaystyle\\lim_{x\\to 2}f(x)$, donc $k=4$."
+      ],
+      "reponse": "$k=4$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "continuite-derivabilite",
+      "enonce": "Soit $f(x)=|x-3|$. La fonction $f$ est-elle continue en $3$ ? Est-elle dérivable en $3$ ? Justifier.",
+      "corrige": [
+        "$\\displaystyle\\lim_{x\\to 3}|x-3|=0=f(3)$ : $f$ est continue en $3$.",
+        "Pour $h\\neq 0$, le taux d'accroissement $\\dfrac{|h|}{h}$ vaut $1$ si $h>0$ et $-1$ si $h<0$ : il n'a pas de limite, $f$ n'est pas dérivable en $3$ (point anguleux)."
+      ],
+      "reponse": "Continue en $3$, mais non dérivable en $3$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "suite-convergente",
+      "enonce": "Soit $u_n=2+\\dfrac{1}{n}$ pour $n\\geqslant 1$. Déterminer la limite de la suite $\\left(e^{u_n}\\right)$.",
+      "corrige": [
+        "$\\dfrac{1}{n}\\to 0$, donc $u_n\\to 2$.",
+        "La fonction exponentielle est continue en $2$, donc $e^{u_n}\\to e^2$."
+      ],
+      "reponse": "$e^2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "suite-convergente",
+      "enonce": "Soit $u_n=\\dfrac{1}{n}$ pour $n\\geqslant 1$. Déterminer la limite de la suite $\\big(\\cos(u_n)\\big)$.",
+      "corrige": [
+        "$u_n\\to 0$ et la fonction cosinus est continue en $0$.",
+        "Donc $\\cos(u_n)\\to\\cos 0=1$."
+      ],
+      "reponse": "$1$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "tvi",
+      "enonce": "Montrer que l'équation $\\cos x=x$ admet au moins une solution dans $\\left[0\\,;\\dfrac{\\pi}{2}\\right]$.",
+      "corrige": [
+        "On pose $g(x)=\\cos x-x$, continue sur $\\left[0\\,;\\dfrac{\\pi}{2}\\right]$ (différence de fonctions continues).",
+        "$g(0)=1>0$ et $g\\left(\\dfrac{\\pi}{2}\\right)=0-\\dfrac{\\pi}{2}<0$ : $0$ est compris entre ces deux valeurs.",
+        "D'après le TVI, il existe $c\\in\\left[0\\,;\\dfrac{\\pi}{2}\\right]$ tel que $g(c)=0$, c'est-à-dire $\\cos c=c$."
+      ],
+      "reponse": "Au moins une solution, par le TVI appliqué à $g(x)=\\cos x-x$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "tvi",
+      "enonce": "Montrer que l'équation $e^x=3-x$ admet au moins une solution dans $[0\\,;1]$.",
+      "corrige": [
+        "On pose $g(x)=e^x+x-3$, continue sur $[0\\,;1]$.",
+        "$g(0)=1+0-3=-2<0$ et $g(1)=e-2>0$ (car $e\\approx 2{,}72$).",
+        "Le TVI donne $c\\in[0\\,;1]$ tel que $g(c)=0$, soit $e^c=3-c$."
+      ],
+      "reponse": "Au moins une solution dans $[0\\,;1]$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "bijection",
+      "enonce": "Montrer que l'équation $e^x+x=2$ admet une unique solution sur $\\mathbb{R}$.",
+      "corrige": [
+        "$f(x)=e^x+x$ est continue et dérivable sur $\\mathbb{R}$, avec $f'(x)=e^x+1>0$ : $f$ est strictement croissante.",
+        "$\\displaystyle\\lim_{x\\to-\\infty}f(x)=-\\infty$ (car $e^x\\to 0$) et $\\displaystyle\\lim_{x\\to+\\infty}f(x)=+\\infty$.",
+        "$2$ est compris entre ces limites : d'après le théorème de la bijection, l'équation $f(x)=2$ a une unique solution."
+      ],
+      "reponse": "Une unique solution réelle (théorème de la bijection)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "dichotomie",
+      "enonce": "On cherche la solution positive de $x^2=2$, c'est-à-dire $\\sqrt{2}$, avec $f(x)=x^2-2$ sur $[1\\,;2]$. Effectuer trois étapes de dichotomie et donner l'encadrement obtenu.",
+      "corrige": [
+        "Étape 1 : $m=1{,}5$, $f(1{,}5)=0{,}25>0$ ; $f(1)<0$, donc on garde $[1\\,;1{,}5]$.",
+        "Étape 2 : $m=1{,}25$, $f(1{,}25)=-0{,}4375<0$, on garde $[1{,}25\\,;1{,}5]$.",
+        "Étape 3 : $m=1{,}375$, $f(1{,}375)\\approx -0{,}11<0$, on garde $[1{,}375\\,;1{,}5]$."
+      ],
+      "reponse": "$1{,}375\\leqslant\\sqrt{2}\\leqslant 1{,}5$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "tableau-variations",
+      "enonce": "Une fonction $f$ est définie sur $[0\\,;7]$. Son tableau de variations indique : $f$ croît de $f(0)=-2$ à $f(3)=4$, puis décroît de $f(3)=4$ à $f(7)=1$. Combien de solutions ont les équations $f(x)=0$, $f(x)=2$ et $f(x)=5$ ?",
+      "corrige": [
+        "Sur $[0\\,;3]$, $f$ est continue et strictement croissante de $-2$ à $4$ ; sur $[3\\,;7]$, strictement décroissante de $4$ à $1$.",
+        "$f(x)=0$ : $0\\in[-2\\,;4]$ donne une solution sur $[0\\,;3]$ ; $0\\notin[1\\,;4]$, aucune sur $[3\\,;7]$. Total : $1$.",
+        "$f(x)=2$ : une solution sur chaque morceau, soit $2$. $f(x)=5$ : $5>4$, maximum de $f$, donc aucune solution."
+      ],
+      "reponse": "$1$ solution, $2$ solutions, $0$ solution."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "continuite",
+      "enonce": "Soit $a$ un réel. On définit $f$ par $f(x)=x^2$ si $x\\leqslant 1$ et $f(x)=ax+3$ si $x>1$. Déterminer $a$ pour que $f$ soit continue en $1$.",
+      "corrige": [
+        "$f(1)=1^2=1$ et, à droite de $1$, $ax+3$ tend vers $a+3$.",
+        "La continuité en $1$ impose $a+3=1$, donc $a=-2$."
+      ],
+      "reponse": "$a=-2$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "continuite-derivabilite",
+      "enonce": "Soit $f(x)=\\sqrt{x}$ sur $[0\\,;+\\infty[$. Montrer que $f$ est continue en $0$, puis étudier la limite du taux d'accroissement $\\dfrac{f(h)-f(0)}{h}$ quand $h\\to 0$ avec $h>0$. Conclure.",
+      "corrige": [
+        "$\\displaystyle\\lim_{x\\to 0}\\sqrt{x}=0=f(0)$ : $f$ est continue en $0$.",
+        "Pour $h>0$, $\\dfrac{\\sqrt{h}-0}{h}=\\dfrac{1}{\\sqrt{h}}$, qui tend vers $+\\infty$ quand $h\\to 0$.",
+        "Le taux d'accroissement n'a pas de limite finie : $f$ n'est pas dérivable en $0$, bien qu'elle y soit continue."
+      ],
+      "reponse": "Continue en $0$, non dérivable en $0$ (taux d'accroissement $\\to+\\infty$)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "continuite-derivabilite",
+      "enonce": "Un élève écrit : « $f$ est continue en $2$, donc $f'(2)$ existe. » Expliquer pourquoi ce raisonnement est faux à l'aide d'un exemple.",
+      "corrige": [
+        "Le théorème du cours va dans l'autre sens : dérivable $\\Rightarrow$ continue. La réciproque est fausse.",
+        "Exemple : $f(x)=|x-2|$ est continue en $2$ mais n'y est pas dérivable (taux d'accroissement égal à $1$ à droite et à $-1$ à gauche)."
+      ],
+      "reponse": "Faux : continue n'entraîne pas dérivable (exemple $|x-2|$ en $2$)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "suite-convergente",
+      "enonce": "Soit $u_n=\\dfrac{2n+1}{n+3}$. Déterminer la limite de $(u_n)$, puis celle de $v_n=\\ln(u_n)$.",
+      "corrige": [
+        "$u_n=\\dfrac{n\\left(2+\\frac{1}{n}\\right)}{n\\left(1+\\frac{3}{n}\\right)}=\\dfrac{2+\\frac{1}{n}}{1+\\frac{3}{n}}\\to 2$.",
+        "La fonction $\\ln$ est continue en $2$, donc $v_n\\to\\ln 2$."
+      ],
+      "reponse": "$u_n\\to 2$ et $v_n\\to\\ln 2$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "suite-convergente",
+      "enonce": "Soit $u_n=1-\\dfrac{1}{n}$ pour $n\\geqslant 1$, et $f(x)=\\lfloor x\\rfloor$ (partie entière). Calculer $f(u_n)$ pour tout $n\\geqslant 1$, puis comparer $\\displaystyle\\lim_{n\\to+\\infty}f(u_n)$ et $f(1)$. Qu'en conclure ?",
+      "corrige": [
+        "Pour $n\\geqslant 1$, $0\\leqslant u_n<1$, donc $f(u_n)=0$ : la suite $(f(u_n))$ est constante égale à $0$.",
+        "$u_n\\to 1$, mais $\\displaystyle\\lim f(u_n)=0\\neq f(1)=1$.",
+        "La propriété « $u_n\\to\\ell$ implique $f(u_n)\\to f(\\ell)$ » exige la continuité de $f$ en $\\ell$ : ici elle tombe en défaut car la partie entière n'est pas continue en $1$."
+      ],
+      "reponse": "$f(u_n)=0$, limite $0\\neq f(1)=1$ : la continuité est indispensable."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "tvi",
+      "enonce": "Une fonction $f$ est continue sur $[0\\,;4]$, avec $f(0)=5$ et $f(4)=-1$. a) Peut-on affirmer que $f$ s'annule sur $[0\\,;4]$ ? b) Peut-on affirmer que $f$ prend la valeur $6$ ?",
+      "corrige": [
+        "a) Oui : $0$ est compris entre $-1$ et $5$ et $f$ est continue, le TVI s'applique.",
+        "b) Non : $6$ n'est pas compris entre $-1$ et $5$, le théorème ne dit rien ; $f$ peut prendre la valeur $6$ ou non."
+      ],
+      "reponse": "a) Oui (TVI) ; b) On ne peut rien affirmer."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "tvi",
+      "enonce": "On définit $f$ sur $[-1\\,;1]$ par $f(x)=-1$ si $x<0$ et $f(x)=1$ si $x\\geqslant 0$. On a $f(-1)=-1$ et $f(1)=1$. L'équation $f(x)=0$ a-t-elle une solution ? Pourquoi cela ne contredit-il pas le TVI ?",
+      "corrige": [
+        "$f$ ne prend que les valeurs $-1$ et $1$ : l'équation $f(x)=0$ n'a aucune solution.",
+        "Le TVI exige que $f$ soit continue ; or $f$ saute de $-1$ à $1$ en $0$. L'hypothèse n'étant pas vérifiée, le théorème ne s'applique pas."
+      ],
+      "reponse": "Aucune solution ; pas de contradiction car $f$ n'est pas continue en $0$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "tvi",
+      "enonce": "Montrer que l'équation $x^3+x^2-1=0$ admet au moins une solution dans $[0\\,;1]$.",
+      "corrige": [
+        "$f(x)=x^3+x^2-1$ est un polynôme, donc continue sur $[0\\,;1]$.",
+        "$f(0)=-1<0$ et $f(1)=1>0$ ; d'après le TVI, $f$ s'annule au moins une fois sur $[0\\,;1]$."
+      ],
+      "reponse": "Au moins une solution dans $[0\\,;1]$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "tvi",
+      "enonce": "Un matin, la température extérieure est de $4\\,^{\\circ}\\mathrm{C}$ à $6$ h et de $18\\,^{\\circ}\\mathrm{C}$ à $14$ h. On suppose que la température varie de façon continue au cours du temps. Peut-on affirmer qu'il a fait exactement $10\\,^{\\circ}\\mathrm{C}$ à un instant entre $6$ h et $14$ h ? A-t-on l'unicité ?",
+      "corrige": [
+        "La fonction « température » est continue sur $[6\\,;14]$ et $10$ est compris entre $4$ et $18$ : le TVI garantit au moins un instant où il fait $10\\,^{\\circ}\\mathrm{C}$.",
+        "Sans information sur la monotonie (la température a pu monter, redescendre puis remonter), on ne peut pas affirmer l'unicité."
+      ],
+      "reponse": "Oui, au moins un instant (TVI) ; l'unicité n'est pas garantie."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "bijection",
+      "enonce": "Soit $f(x)=\\ln x+x$ sur $]0\\,;+\\infty[$. Montrer que l'équation $f(x)=0$ admet une unique solution $\\alpha$, puis vérifier que $0{,}5<\\alpha<0{,}6$.",
+      "corrige": [
+        "$f$ est continue et dérivable, $f'(x)=\\dfrac{1}{x}+1>0$ : $f$ est strictement croissante sur $]0\\,;+\\infty[$.",
+        "$\\displaystyle\\lim_{x\\to 0^+}f(x)=-\\infty$ et $\\displaystyle\\lim_{x\\to+\\infty}f(x)=+\\infty$ ; $0$ est entre ces limites : unique solution $\\alpha$ (théorème de la bijection).",
+        "$f(0{,}5)\\approx -0{,}19<0$ et $f(0{,}6)\\approx 0{,}09>0$, donc $0{,}5<\\alpha<0{,}6$."
+      ],
+      "reponse": "Unique solution $\\alpha$, avec $0{,}5<\\alpha<0{,}6$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "bijection",
+      "enonce": "Soit $f(x)=x\\,e^x$ sur $[0\\,;+\\infty[$. Montrer que l'équation $f(x)=1$ admet une unique solution $\\alpha$ sur $[0\\,;+\\infty[$ et en donner un encadrement d'amplitude $0{,}1$.",
+      "corrige": [
+        "$f'(x)=e^x+x\\,e^x=(1+x)e^x>0$ sur $[0\\,;+\\infty[$ : $f$ est continue et strictement croissante.",
+        "$f(0)=0$ et $\\displaystyle\\lim_{x\\to+\\infty}f(x)=+\\infty$ ; $1$ est compris entre $0$ et $+\\infty$ : unique solution $\\alpha$.",
+        "$f(0{,}5)\\approx 0{,}82<1$ et $f(0{,}6)\\approx 1{,}09>1$, donc $0{,}5<\\alpha<0{,}6$."
+      ],
+      "reponse": "Unique solution, $0{,}5<\\alpha<0{,}6$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f(x)=x^2-4x+1$ sur $[0\\,;5]$. À l'aide des variations de $f$, déterminer le nombre de solutions de $f(x)=-2$, puis vérifier en résolvant l'équation.",
+      "corrige": [
+        "$f'(x)=2x-4$ : $f$ décroît sur $[0\\,;2]$ de $f(0)=1$ à $f(2)=-3$, puis croît sur $[2\\,;5]$ jusqu'à $f(5)=6$.",
+        "$-2$ est entre $-3$ et $1$ (une solution sur $[0\\,;2]$) et entre $-3$ et $6$ (une solution sur $[2\\,;5]$) : $2$ solutions.",
+        "Vérification : $x^2-4x+3=0\\iff(x-1)(x-3)=0$, soit $x=1$ ou $x=3$."
+      ],
+      "reponse": "$2$ solutions : $x=1$ et $x=3$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "tableau-variations",
+      "enonce": "Une fonction $f$ est définie sur $\\mathbb{R}$. Elle est strictement décroissante sur $]-\\infty\\,;1]$, avec $\\displaystyle\\lim_{x\\to-\\infty}f(x)=+\\infty$ et $f(1)=-1$, puis strictement croissante sur $[1\\,;+\\infty[$, avec $\\displaystyle\\lim_{x\\to+\\infty}f(x)=2$. Combien de solutions ont les équations $f(x)=0$ et $f(x)=2$ ?",
+      "corrige": [
+        "Sur $]-\\infty\\,;1]$, $f$ prend toutes les valeurs de $[-1\\,;+\\infty[$, une seule fois chacune. Sur $[1\\,;+\\infty[$, elle prend les valeurs de $[-1\\,;2[$ : la limite $2$ n'est jamais atteinte.",
+        "$f(x)=0$ : une solution sur chaque intervalle, soit $2$ solutions.",
+        "$f(x)=2$ : une solution sur $]-\\infty\\,;1]$, aucune sur $[1\\,;+\\infty[$ ; total : $1$ solution."
+      ],
+      "reponse": "$f(x)=0$ : $2$ solutions ; $f(x)=2$ : $1$ solution."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "dichotomie",
+      "enonce": "On applique la dichotomie à partir d'un intervalle de longueur $1$. Combien d'étapes faut-il au minimum pour obtenir un encadrement d'amplitude inférieure à $0{,}001$ ?",
+      "corrige": [
+        "Après $n$ étapes, la longueur vaut $\\dfrac{1}{2^n}$. On veut $\\dfrac{1}{2^n}<0{,}001$, soit $2^n>1\\,000$.",
+        "$2^9=512$ ne suffit pas, $2^{10}=1\\,024$ convient : il faut $10$ étapes."
+      ],
+      "reponse": "$10$ étapes."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "dichotomie",
+      "enonce": "Soit $f(x)=x^3-5$, qui s'annule en $\\sqrt[3]{5}$. En partant de $[1\\,;2]$, effectuer deux étapes de dichotomie et donner l'encadrement de $\\sqrt[3]{5}$ obtenu.",
+      "corrige": [
+        "$f(1)=-4<0$ et $f(2)=3>0$. Étape 1 : $f(1{,}5)=3{,}375-5<0$, on garde $[1{,}5\\,;2]$.",
+        "Étape 2 : $f(1{,}75)\\approx 5{,}36-5>0$, on garde $[1{,}5\\,;1{,}75]$."
+      ],
+      "reponse": "$1{,}5\\leqslant\\sqrt[3]{5}\\leqslant 1{,}75$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "dichotomie",
+      "enonce": "L'équation $e^x+x-4=0$ admet une unique solution $\\alpha$ (on l'admet). Par balayage au pas de $0{,}1$ à partir de $x=1$, donner un encadrement de $\\alpha$ d'amplitude $0{,}1$.",
+      "corrige": [
+        "On pose $f(x)=e^x+x-4$. $f(1)=e-3\\approx -0{,}28<0$.",
+        "$f(1{,}1)=e^{1{,}1}+1{,}1-4\\approx 0{,}10>0$ : le changement de signe a lieu entre $1$ et $1{,}1$."
+      ],
+      "reponse": "$1<\\alpha<1{,}1$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "suite-recurrente",
+      "enonce": "La suite $(u_n)$ est définie par $u_0=1$ et $u_{n+1}=0{,}5\\,u_n+3$. On admet qu'elle converge vers un réel $\\ell$. Déterminer $\\ell$ en justifiant.",
+      "corrige": [
+        "$u_{n+1}=f(u_n)$ avec $f(x)=0{,}5x+3$, fonction affine donc continue sur $\\mathbb{R}$.",
+        "La suite converge et $f$ est continue : $\\ell=f(\\ell)$, soit $\\ell=0{,}5\\ell+3$, d'où $0{,}5\\ell=3$ et $\\ell=6$."
+      ],
+      "reponse": "$\\ell=6$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "suite-recurrente",
+      "enonce": "La suite $(u_n)$ est définie par $u_0=0$ et $u_{n+1}=\\sqrt{2u_n+3}$. On admet que $u_n\\geqslant 0$ pour tout $n$ et que $(u_n)$ converge vers un réel $\\ell\\geqslant 0$. Déterminer $\\ell$.",
+      "corrige": [
+        "$f(x)=\\sqrt{2x+3}$ est continue sur $[0\\,;+\\infty[$ ; la limite vérifie donc $\\ell=\\sqrt{2\\ell+3}$.",
+        "En élevant au carré ($\\ell\\geqslant 0$) : $\\ell^2-2\\ell-3=0$, soit $(\\ell-3)(\\ell+1)=0$.",
+        "Comme $\\ell\\geqslant 0$, $\\ell=3$."
+      ],
+      "reponse": "$\\ell=3$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "bijection",
+      "enonce": "Soit $f(x)=x+2-e^x$ sur $[0\\,;+\\infty[$. Montrer que $f(x)=0$ admet une unique solution $\\alpha$ sur $[0\\,;+\\infty[$ et que $1{,}1<\\alpha<1{,}2$. On admet que $\\displaystyle\\lim_{x\\to+\\infty}f(x)=-\\infty$.",
+      "corrige": [
+        "$f'(x)=1-e^x<0$ pour $x>0$ : $f$ est continue et strictement décroissante sur $[0\\,;+\\infty[$.",
+        "$f(0)=2-1=1>0$ et $\\displaystyle\\lim_{x\\to+\\infty}f(x)=-\\infty$ : $0$ est entre ces valeurs, d'où une unique solution $\\alpha$.",
+        "$f(1{,}1)\\approx 0{,}10>0$ et $f(1{,}2)\\approx -0{,}12<0$, donc $1{,}1<\\alpha<1{,}2$."
+      ],
+      "reponse": "Unique solution $\\alpha$ avec $1{,}1<\\alpha<1{,}2$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "methode-fxk",
+      "enonce": "Déterminer le nombre de solutions réelles de l'équation $x^3-12x=5$.",
+      "corrige": [
+        "$f(x)=x^3-12x$, $f'(x)=3x^2-12=3(x-2)(x+2)$ : $f$ croît sur $]-\\infty\\,;-2]$, décroît sur $[-2\\,;2]$, croît sur $[2\\,;+\\infty[$.",
+        "$f(-2)=16$, $f(2)=-16$, $\\displaystyle\\lim_{-\\infty}f=-\\infty$, $\\displaystyle\\lim_{+\\infty}f=+\\infty$.",
+        "$5$ appartient à $]-\\infty\\,;16]$, à $[-16\\,;16]$ et à $[-16\\,;+\\infty[$ : par le théorème de la bijection sur chacun des trois intervalles, il y a une solution sur chacun, soit $3$ solutions."
+      ],
+      "reponse": "$3$ solutions."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f(x)=x\\,e^{-x}$ sur $[0\\,;+\\infty[$. On admet que $\\displaystyle\\lim_{x\\to+\\infty}f(x)=0$. Étudier les variations de $f$, puis donner le nombre de solutions des équations $f(x)=0{,}2$ et $f(x)=0{,}5$.",
+      "corrige": [
+        "$f'(x)=(1-x)e^{-x}$ : $f$ croît sur $[0\\,;1]$ de $0$ à $f(1)=\\dfrac{1}{e}\\approx 0{,}37$, puis décroît sur $[1\\,;+\\infty[$ vers $0$ (limite non atteinte).",
+        "$0{,}2\\in\\left]0\\,;\\dfrac{1}{e}\\right[$ : une solution sur $[0\\,;1]$ et une sur $[1\\,;+\\infty[$, soit $2$.",
+        "$0{,}5>\\dfrac{1}{e}$, maximum de $f$ : aucune solution."
+      ],
+      "reponse": "$f(x)=0{,}2$ : $2$ solutions ; $f(x)=0{,}5$ : aucune."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "suite-recurrente",
+      "enonce": "La suite $(u_n)$ est définie par $u_0=1$ et $u_{n+1}=\\dfrac{u_n}{1+u_n}$. On admet que $u_n>0$ pour tout $n$. 1) Montrer que $(u_n)$ est décroissante. 2) En déduire qu'elle converge et déterminer sa limite.",
+      "corrige": [
+        "1) $u_{n+1}-u_n=\\dfrac{u_n-u_n(1+u_n)}{1+u_n}=\\dfrac{-u_n^2}{1+u_n}<0$ : la suite est décroissante.",
+        "2) Décroissante et minorée par $0$, elle converge vers $\\ell\\geqslant 0$. La fonction $f(x)=\\dfrac{x}{1+x}$ est continue sur $[0\\,;+\\infty[$, donc $\\ell=\\dfrac{\\ell}{1+\\ell}$.",
+        "Alors $\\ell(1+\\ell)=\\ell$, soit $\\ell^2=0$ : $\\ell=0$."
+      ],
+      "reponse": "$(u_n)$ est décroissante et converge vers $0$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "suite-recurrente",
+      "enonce": "Soit $u_0=1$ et $u_{n+1}=2u_n$. Un élève écrit : « La limite vérifie $\\ell=2\\ell$, donc $\\ell=0$. » Calculer les premiers termes et expliquer l'erreur.",
+      "corrige": [
+        "$u_1=2$, $u_2=4$, $u_3=8$ : en fait $u_n=2^n$, qui tend vers $+\\infty$.",
+        "L'égalité $f(\\ell)=\\ell$ n'est valable qu'une fois la convergence prouvée. Ici la suite diverge : l'équation $\\ell=2\\ell$ ne donne pas sa limite."
+      ],
+      "reponse": "$u_n=2^n\\to+\\infty$ : l'élève a utilisé $f(\\ell)=\\ell$ sans prouver la convergence."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "point-fixe",
+      "enonce": "1) Montrer que, pour tout $x\\in[0\\,;1]$, $\\cos x\\in[0\\,;1]$. 2) En étudiant $g(x)=\\cos x-x$, montrer que la fonction cosinus admet un unique point fixe dans $[0\\,;1]$ (c'est-à-dire un unique $c$ tel que $\\cos c=c$).",
+      "corrige": [
+        "1) $\\cos$ est décroissante sur $[0\\,;1]\\subset[0\\,;\\pi]$, donc pour $x\\in[0\\,;1]$ : $\\cos 1\\leqslant\\cos x\\leqslant 1$, et $\\cos 1\\approx 0{,}54>0$.",
+        "2) $g$ est continue et $g'(x)=-\\sin x-1<0$ sur $[0\\,;1]$ (car $\\sin x\\geqslant 0$) : $g$ est strictement décroissante.",
+        "$g(0)=1>0$ et $g(1)=\\cos 1-1<0$ : par le théorème de la bijection, $g$ s'annule une seule fois, d'où un unique $c$ tel que $\\cos c=c$."
+      ],
+      "reponse": "Unique point fixe $c\\in[0\\,;1]$ tel que $\\cos c=c$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "methode-fxk",
+      "enonce": "Soit $f(x)=x^3+3x^2-2$ sur $\\mathbb{R}$. 1) Étudier les variations de $f$. 2) En déduire le nombre de solutions de $f(x)=0$. 3) Vérifier que $-1$ est solution. 4) Encadrer la solution positive à $0{,}1$ près, puis vérifier qu'elle vaut $-1+\\sqrt{3}$.",
+      "corrige": [
+        "1) $f'(x)=3x^2+6x=3x(x+2)$ : $f$ croît sur $]-\\infty\\,;-2]$, décroît sur $[-2\\,;0]$, croît sur $[0\\,;+\\infty[$, avec $f(-2)=2$ et $f(0)=-2$.",
+        "2) Limites $-\\infty$ et $+\\infty$ ; $0$ est atteint une fois sur chacun des trois intervalles (bijection) : $3$ solutions.",
+        "3) $f(-1)=-1+3-2=0$. 4) $f(0{,}7)\\approx -0{,}19<0$ et $f(0{,}8)\\approx 0{,}43>0$ : $0{,}7<\\alpha<0{,}8$.",
+        "En factorisant, $f(x)=(x+1)(x^2+2x-2)$, dont les racines sont $-1\\pm\\sqrt{3}$ ; la positive est $-1+\\sqrt{3}\\approx 0{,}73$."
+      ],
+      "reponse": "$3$ solutions : $-1-\\sqrt{3}$, $-1$, $-1+\\sqrt{3}\\approx 0{,}73$ (encadrée entre $0{,}7$ et $0{,}8$)."
     }
   ]
 }
