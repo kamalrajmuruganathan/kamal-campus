@@ -128,6 +128,454 @@
         "L'inconvénient est une baisse de qualité : plus on compresse, plus des défauts (artefacts) peuvent apparaître."
       ],
       "reponse": "a) Ex. date/heure et position GPS. b) JPEG compresse avec pertes (supprime des détails) : fichier plus léger mais qualité dégradée."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire",
+      "enonce": "Vrai ou faux ? a) « Une photo numérique est une suite de nombres. » b) « Un pixel peut contenir plusieurs couleurs. »",
+      "corrige": [
+        "a) Vrai : une photo est un fichier, c'est-à-dire une suite de nombres qui codent les couleurs des pixels.",
+        "b) Faux : chaque pixel a une seule couleur."
+      ],
+      "reponse": "a) vrai ; b) faux."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition",
+      "enonce": "Un smartphone prend des photos de 4000 × 3000 pixels. Quelle est leur définition, en pixels puis en mégapixels ?",
+      "corrige": [
+        "Définition = largeur × hauteur = 4000 × 3000 = 12 000 000 pixels.",
+        "1 mégapixel = 1 million de pixels : 12 mégapixels."
+      ],
+      "reponse": "12 000 000 pixels, soit 12 mégapixels."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "definition",
+      "enonce": "Un appareil photo annonce « 8 mégapixels ». Ses images mesurent 3264 × 2448 pixels. Calcule leur définition exacte et vérifie l'annonce.",
+      "corrige": [
+        "3264 × 2448 = 7 990 272 pixels.",
+        "C'est environ 8 millions de pixels : l'annonce « 8 mégapixels » est un arrondi correct."
+      ],
+      "reponse": "7 990 272 pixels, soit environ 8 mégapixels."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "resolution",
+      "enonce": "On imprime une image de 3000 pixels de large avec une résolution de 300 ppp (pixels par pouce). Quelle sera la largeur de l'impression, en pouces puis en centimètres ? (1 pouce = 2,54 cm)",
+      "corrige": [
+        "Largeur en pouces = nombre de pixels / résolution = 3000 / 300 = 10 pouces.",
+        "En centimètres : 10 × 2,54 = 25,4 cm."
+      ],
+      "reponse": "10 pouces, soit 25,4 cm."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "resolution",
+      "enonce": "Une image fait 1200 pixels de large. Quelle largeur maximale peut-on imprimer, en centimètres, si l'on veut garder une résolution de 300 ppp ? (1 pouce = 2,54 cm)",
+      "corrige": [
+        "Largeur = 1200 / 300 = 4 pouces.",
+        "4 × 2,54 = 10,16 cm, soit environ 10 cm."
+      ],
+      "reponse": "Environ 10,16 cm."
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "vocabulaire",
+      "enonce": "Corrige l'erreur de vocabulaire : « Mon image a une résolution de 1920 × 1080 pixels. »",
+      "corrige": [
+        "1920 × 1080 indique le nombre de pixels en largeur et en hauteur : c'est la définition.",
+        "La résolution est une densité de pixels, exprimée par exemple en ppp."
+      ],
+      "reponse": "Il faut dire « une définition de 1920 × 1080 pixels »."
+    },
+    {
+      "id": 17,
+      "difficulte": "decouverte",
+      "notion": "rvb",
+      "enonce": "Quelle couleur correspond à chaque code RVB ? a) (255, 0, 0) ; b) (0, 0, 255) ; c) (128, 128, 128) ; d) (255, 255, 255).",
+      "corrige": [
+        "Une seule composante au maximum donne la couleur primaire correspondante : a) rouge, b) bleu.",
+        "Trois composantes égales donnent un gris : c) gris moyen ; toutes au maximum : d) blanc."
+      ],
+      "reponse": "a) rouge vif ; b) bleu vif ; c) gris moyen ; d) blanc."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "rvb",
+      "enonce": "En synthèse additive, rouge et vert donnent du jaune (255, 255, 0). Quelle couleur obtient-on avec : a) rouge et bleu, soit (255, 0, 255) ? b) vert et bleu, soit (0, 255, 255) ?",
+      "corrige": [
+        "La synthèse additive mélange des lumières colorées.",
+        "Rouge + bleu donne le magenta ; vert + bleu donne le cyan."
+      ],
+      "reponse": "a) magenta ; b) cyan."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "rvb",
+      "enonce": "Chaque composante RVB est codée sur un octet. a) Pourquoi y a-t-il 256 niveaux par composante ? b) Combien de couleurs différentes peut-on coder avec trois composantes ?",
+      "corrige": [
+        "a) Un octet compte 8 bits ; chaque bit vaut 0 ou 1, d'où 2⁸ = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256 valeurs, de 0 à 255.",
+        "b) 256 × 256 × 256 = 16 777 216, soit environ 16,7 millions de couleurs."
+      ],
+      "reponse": "a) 8 bits donnent 2⁸ = 256 valeurs ; b) 16 777 216 couleurs (environ 16,7 millions)."
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "rvb",
+      "enonce": "Parmi ces pixels, lesquels sont des nuances de gris (noir et blanc compris) ? a) (50, 50, 50) ; b) (50, 60, 50) ; c) (200, 200, 200) ; d) (0, 0, 0).",
+      "corrige": [
+        "Un pixel est gris quand ses trois composantes sont égales (R = V = B).",
+        "b) a un peu plus de vert : il est légèrement verdâtre, pas gris."
+      ],
+      "reponse": "a), c) et d)."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "rvb",
+      "enonce": "Qu'affiche ce programme ? Relie les résultats au codage RVB.\n\n```python\nprint(2 ** 8)\nprint(256 ** 3)\nprint(256 ** 3 // 1000000)\n```",
+      "corrige": [
+        "2 ** 8 = 256 : le nombre de niveaux d'une composante codée sur 8 bits.",
+        "256 ** 3 = 16 777 216 : le nombre de couleurs possibles avec trois composantes.",
+        "// est la division entière : 16 777 216 // 1 000 000 = 16, soit environ 16 millions de couleurs."
+      ],
+      "reponse": "256, 16777216 et 16."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "poids",
+      "enonce": "Calcule le poids, en octets puis en Mo, d'une image RVB non compressée de 640 × 480 pixels (1 Mo = 1 000 000 octets).",
+      "corrige": [
+        "Poids = 640 × 480 × 3 = 921 600 octets.",
+        "Soit environ 0,92 Mo."
+      ],
+      "reponse": "921 600 octets, soit environ 0,92 Mo."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "poids",
+      "enonce": "Une photo de 12 mégapixels (12 000 000 pixels) est enregistrée sans compression. a) Quel est son poids en Mo ? b) Enregistrée en JPEG, elle pèse 4 Mo : combien de fois est-elle plus légère ?",
+      "corrige": [
+        "a) 12 000 000 × 3 = 36 000 000 octets, soit 36 Mo.",
+        "b) 36 / 4 = 9 : le fichier JPEG est 9 fois plus léger."
+      ],
+      "reponse": "a) 36 Mo ; b) 9 fois plus léger."
+    },
+    {
+      "id": 24,
+      "difficulte": "approfondissement",
+      "notion": "poids",
+      "enonce": "Une carte mémoire de 32 Go (32 000 Mo) est vide. Combien de photos de 12 mégapixels peut-elle contenir : a) non compressées (36 Mo chacune) ? b) en JPEG (4 Mo chacune) ?",
+      "corrige": [
+        "a) 32 000 / 36 ≈ 888,9 : on peut stocker 888 photos entières.",
+        "b) 32 000 / 4 = 8 000 photos."
+      ],
+      "reponse": "a) 888 photos ; b) 8 000 photos."
+    },
+    {
+      "id": 25,
+      "difficulte": "approfondissement",
+      "notion": "poids",
+      "enonce": "Qu'affiche ce programme ? Que calcule la fonction poids ?\n\n```python\ndef poids(largeur, hauteur):\n    return largeur * hauteur * 3\n\nprint(poids(1920, 1080))\nprint(poids(4000, 3000) / 1000000)\n```",
+      "corrige": [
+        "La fonction calcule le poids en octets d'une image RVB non compressée : 3 octets par pixel.",
+        "1920 × 1080 × 3 = 6 220 800 octets. 4000 × 3000 × 3 = 36 000 000 octets, divisé par 1 000 000 : 36,0 Mo."
+      ],
+      "reponse": "6220800 puis 36.0 : le poids en octets (puis en Mo) d'une image non compressée."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "matriciel-vectoriel",
+      "enonce": "Classe chaque image en « matricielle » ou « vectorielle » : a) une photo de vacances ; b) le logo d'un club, dessiné avec des formes géométriques ; c) le schéma d'un circuit électrique tracé dans un logiciel de dessin vectoriel ; d) le scan d'un dessin au crayon.",
+      "corrige": [
+        "Une photo et un scan sont décrits pixel par pixel : images matricielles (a, d).",
+        "Un logo ou un schéma décrits par des formes géométriques sont des images vectorielles (b, c)."
+      ],
+      "reponse": "Matricielles : a, d. Vectorielles : b, c."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "matriciel-vectoriel",
+      "enonce": "Explique pourquoi une photo agrandie à 800 % devient floue et laisse voir des carrés, alors qu'un logo vectoriel reste net.",
+      "corrige": [
+        "La photo est une image matricielle : son nombre de pixels est fixe. En l'agrandissant, chaque pixel devient un gros carré visible (pixellisation).",
+        "Le logo vectoriel est décrit par des formes et des formules : le logiciel le redessine à chaque taille, sans perte de qualité."
+      ],
+      "reponse": "La photo a un nombre fixe de pixels qui grossissent ; le logo vectoriel est recalculé à chaque taille."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "capteur-photosites",
+      "enonce": "Quel est le rôle d'un photosite dans le capteur d'un appareil photo ?",
+      "corrige": [
+        "Un photosite est une cellule sensible à la lumière : il mesure la quantité de lumière reçue et la transforme en signal électrique, ensuite converti en nombres."
+      ],
+      "reponse": "Mesurer la lumière reçue et la transformer en signal électrique, converti en nombres."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "capteur-photosites",
+      "enonce": "Un téléphone annonce un capteur de 48 mégapixels. Qu'est-ce que cela signifie ? Combien de photosites contient environ son capteur ?",
+      "corrige": [
+        "Le capteur peut produire des images d'environ 48 millions de pixels.",
+        "Chaque photosite fournit l'information d'un point de l'image : le capteur contient donc environ 48 millions de photosites."
+      ],
+      "reponse": "Des images d'environ 48 millions de pixels ; environ 48 millions de photosites."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "traitement-luminosite",
+      "enonce": "Pour assombrir une image, on retranche 50 à chaque composante, sans descendre sous 0. Que devient le pixel (30, 100, 220) ?",
+      "corrige": [
+        "30 − 50 = −20 : on bloque à 0. 100 − 50 = 50. 220 − 50 = 170."
+      ],
+      "reponse": "(0, 50, 170)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "traitement-niveaux-de-gris",
+      "enonce": "Convertis le pixel (200, 100, 30) en niveau de gris par la méthode de la moyenne et donne son nouveau code RVB.",
+      "corrige": [
+        "Moyenne : (200 + 100 + 30) / 3 = 330 / 3 = 110.",
+        "On met 110 dans les trois composantes."
+      ],
+      "reponse": "(110, 110, 110)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "traitement-niveaux-de-gris",
+      "enonce": "Le pixel (100, 101, 103) est converti en gris par la méthode de la moyenne. Quelle valeur obtient-on ? Pourquoi faut-il arrondir ?",
+      "corrige": [
+        "(100 + 101 + 103) / 3 = 304 / 3 ≈ 101,33.",
+        "Une composante doit être un nombre entier de 0 à 255 : on arrondit à 101, et le pixel devient (101, 101, 101)."
+      ],
+      "reponse": "Environ 101,33, arrondi à 101 car une composante est un entier : (101, 101, 101)."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "traitement-filtre-negatif",
+      "enonce": "Applique le filtre négatif au pixel (40, 200, 90), puis applique-le une seconde fois au résultat. Que constates-tu ?",
+      "corrige": [
+        "Premier négatif : (255 − 40, 255 − 200, 255 − 90) = (215, 55, 165).",
+        "Second négatif : (255 − 215, 255 − 55, 255 − 165) = (40, 200, 90).",
+        "On retrouve le pixel de départ : appliquer deux fois le négatif ne change rien."
+      ],
+      "reponse": "(215, 55, 165) puis (40, 200, 90) : on retrouve le pixel de départ."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "traitement-niveaux-de-gris",
+      "enonce": "Qu'affiche ce programme ? Que fait-il ?\n\n```python\nimage = [(255, 0, 0), (0, 255, 0), (30, 60, 90)]\nfor (r, v, b) in image:\n    gris = (r + v + b) // 3\n    print(gris)\n```",
+      "corrige": [
+        "Pour chaque pixel, il calcule la moyenne entière des trois composantes (// est la division entière).",
+        "(255 + 0 + 0) // 3 = 85 ; (0 + 255 + 0) // 3 = 85 ; (30 + 60 + 90) // 3 = 60.",
+        "C'est le calcul du niveau de gris de chaque pixel."
+      ],
+      "reponse": "85, 85, 60 : le niveau de gris de chaque pixel."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "traitement-luminosite",
+      "enonce": "Qu'affiche ce programme ? Quel est le rôle de min ?\n\n```python\ndef eclaircir(c, k):\n    return min(c + k, 255)\n\nfor c in [230, 100, 250]:\n    print(eclaircir(c, 40))\n```",
+      "corrige": [
+        "La fonction ajoute k à la composante, mais min(…, 255) empêche de dépasser 255.",
+        "230 + 40 = 270 → 255 ; 100 + 40 = 140 ; 250 + 40 = 290 → 255."
+      ],
+      "reponse": "255, 140, 255 ; min bloque la valeur à 255."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "traitement-autres-filtres",
+      "enonce": "Un filtre de contraste simple applique cette règle à chaque composante : si elle est supérieure à 128, on ajoute 30 (sans dépasser 255) ; si elle est inférieure à 128, on retranche 30 (sans descendre sous 0) ; si elle vaut 128, on ne change rien. Applique-le au pixel (200, 100, 140), puis au pixel (240, 10, 128).",
+      "corrige": [
+        "Pixel 1 : 200 > 128 → 230 ; 100 < 128 → 70 ; 140 > 128 → 170.",
+        "Pixel 2 : 240 + 30 = 270 → bloqué à 255 ; 10 − 30 = −20 → bloqué à 0 ; 128 → inchangé.",
+        "Les valeurs claires deviennent plus claires et les sombres plus sombres : l'image est plus marquée."
+      ],
+      "reponse": "(230, 70, 170) et (255, 0, 128)."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "traitement-autres-filtres",
+      "enonce": "Un filtre « noir et blanc » transforme chaque pixel gris en blanc (255) si sa valeur est supérieure ou égale à 128, et en noir (0) sinon. Applique-le aux valeurs de gris : 30, 128, 200, 127.",
+      "corrige": [
+        "On compare chaque valeur au seuil 128.",
+        "30 < 128 → 0 ; 128 ≥ 128 → 255 ; 200 → 255 ; 127 < 128 → 0."
+      ],
+      "reponse": "0, 255, 255, 0."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "traitement-autres-filtres",
+      "enonce": "Une ligne de pixels gris est stockée dans une liste. Qu'affiche ce programme ? Quel effet ce traitement produit-il s'il est appliqué à chaque ligne d'une image ?\n\n```python\nligne = [10, 20, 30, 40]\nprint(ligne[::-1])\n```",
+      "corrige": [
+        "ligne[::-1] parcourt la liste de la fin vers le début : elle renvoie la liste à l'envers.",
+        "Appliqué à toutes les lignes, ce traitement inverse la gauche et la droite : l'image est retournée comme dans un miroir."
+      ],
+      "reponse": "[40, 30, 20, 10] ; l'image est retournée gauche-droite (effet miroir)."
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "exif-metadonnees",
+      "enonce": "Parmi ces informations, lesquelles peuvent figurer dans les métadonnées EXIF d'une photo ? a) la date de prise de vue ; b) le modèle de l'appareil ; c) le temps d'exposition ; d) le prénom des personnes photographiées ; e) la position GPS.",
+      "corrige": [
+        "Les métadonnées EXIF sont ajoutées automatiquement par l'appareil : date, modèle, réglages et parfois position GPS.",
+        "L'appareil ne connaît pas le prénom des personnes photographiées : ce n'est pas une donnée EXIF."
+      ],
+      "reponse": "a, b, c et e."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "exif-metadonnees",
+      "enonce": "Nina publie sur un forum public une photo de son chat prise dans son salon, avec la géolocalisation activée. Quel risque prend-elle ? Que peut-elle faire ?",
+      "corrige": [
+        "Les métadonnées EXIF de la photo peuvent contenir la position GPS du lieu de prise de vue : n'importe qui pourrait retrouver son domicile.",
+        "Elle peut supprimer les métadonnées avant de publier (beaucoup de logiciels le proposent) ou désactiver la géolocalisation de l'appareil photo."
+      ],
+      "reponse": "Révéler son adresse par la position GPS ; supprimer les métadonnées ou désactiver la géolocalisation."
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "compression",
+      "enonce": "Pour chaque image, choisis le format le plus adapté entre JPEG et PNG, en justifiant : a) une photo de paysage à envoyer par message ; b) une capture d'écran contenant du texte fin qui doit rester parfaitement net.",
+      "corrige": [
+        "a) JPEG : la compression avec pertes allège beaucoup une photo, et les détails supprimés sont peu visibles.",
+        "b) PNG : la compression sans perte garde chaque pixel intact, le texte reste net."
+      ],
+      "reponse": "a) JPEG ; b) PNG."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "compression",
+      "enonce": "Une photo non compressée de 36 Mo est enregistrée en JPEG et ne pèse plus que 3 Mo. a) Par combien son poids a-t-il été divisé ? b) De quel pourcentage a-t-il diminué ?",
+      "corrige": [
+        "a) 36 / 3 = 12 : le poids est divisé par 12.",
+        "b) Diminution : (36 − 3) / 36 = 33 / 36 ≈ 0,917, soit environ 91,7 %."
+      ],
+      "reponse": "a) par 12 ; b) environ 91,7 %."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "compression",
+      "enonce": "Un élève ouvre une photo JPEG, la retouche légèrement et l'enregistre à nouveau en JPEG, et ce dix fois de suite. Pourquoi la qualité risque-t-elle de baisser à chaque fois ?",
+      "corrige": [
+        "Le JPEG est une compression avec pertes : à chaque enregistrement, l'algorithme supprime de nouveau des détails.",
+        "Les pertes s'accumulent et des artefacts finissent par apparaître. Pour éviter cela, on travaille sur une version sans perte et on n'enregistre en JPEG qu'à la fin."
+      ],
+      "reponse": "Chaque enregistrement JPEG supprime de nouveaux détails : les pertes s'accumulent."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "poids",
+      "enonce": "Léo veut envoyer par courriel 20 photos de 12 mégapixels. Sa messagerie limite les pièces jointes à 25 Mo par message. a) Quel serait le poids total sans compression ? b) Et en JPEG, à 3 Mo par photo ? c) Peut-il tout envoyer en un seul message ? Propose une solution.",
+      "corrige": [
+        "a) Une photo : 12 000 000 × 3 = 36 000 000 octets = 36 Mo ; 20 photos : 720 Mo.",
+        "b) En JPEG : 20 × 3 = 60 Mo.",
+        "c) 60 Mo > 25 Mo : impossible en un seul message. Exemple de solution : faire 3 envois de 8, 8 et 4 photos (24 Mo, 24 Mo, 12 Mo), compresser davantage, ou partager un lien vers un stockage en ligne."
+      ],
+      "reponse": "a) 720 Mo ; b) 60 Mo ; c) non : envoyer en plusieurs messages (au moins 3) ou partager un lien."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "traitement-filtre-negatif",
+      "enonce": "Une minuscule image de 2 × 2 pixels contient : (255, 0, 0) ; (0, 0, 0) ; (255, 255, 255) ; (0, 128, 255). a) Quel est son poids non compressé en octets ? b) Applique le filtre négatif à chaque pixel. c) Quelle couleur devient le rouge vif ?",
+      "corrige": [
+        "a) 2 × 2 × 3 = 12 octets.",
+        "b) On calcule 255 − valeur : (0, 255, 255) ; (255, 255, 255) ; (0, 0, 0) ; (255, 127, 0).",
+        "c) Le rouge vif (255, 0, 0) devient (0, 255, 255), c'est-à-dire du cyan."
+      ],
+      "reponse": "a) 12 octets ; b) (0, 255, 255), (255, 255, 255), (0, 0, 0), (255, 127, 0) ; c) cyan."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "traitement-niveaux-de-gris",
+      "enonce": "Une image de 2 × 2 pixels est stockée sous forme de liste de lignes. Qu'affiche ce programme ? Que représentent les nombres affichés ?\n\n```python\nimage = [[(255, 0, 0), (0, 0, 255)],\n         [(90, 150, 60), (255, 255, 255)]]\nfor ligne in image:\n    gris = []\n    for (r, v, b) in ligne:\n        gris.append((r + v + b) // 3)\n    print(gris)\n```",
+      "corrige": [
+        "Le programme parcourt chaque ligne, puis chaque pixel de la ligne, et calcule la moyenne entière de ses composantes.",
+        "Ligne 1 : 255 // 3 = 85 et 255 // 3 = 85. Ligne 2 : 300 // 3 = 100 et 765 // 3 = 255.",
+        "Ce sont les niveaux de gris de chaque pixel, ligne par ligne."
+      ],
+      "reponse": "[85, 85] puis [100, 255] : les niveaux de gris de l'image."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "codage-binaire",
+      "enonce": "Écris en binaire, sur 8 bits, les composantes 200 et 255.",
+      "corrige": [
+        "Poids des bits : 128, 64, 32, 16, 8, 4, 2, 1.",
+        "200 = 128 + 64 + 8 : 11001000. 255 = somme de tous les poids : 11111111."
+      ],
+      "reponse": "200 = 11001000 ; 255 = 11111111."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "codage-binaire",
+      "enonce": "Le pixel orange (255, 128, 0) est stocké sur 3 octets. Écris ces 3 octets en binaire. Combien de bits faut-il au total pour ce pixel ?",
+      "corrige": [
+        "255 = 11111111 ; 128 = 10000000 ; 0 = 00000000.",
+        "3 octets × 8 bits = 24 bits."
+      ],
+      "reponse": "11111111 10000000 00000000, soit 24 bits."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "resolution",
+      "enonce": "Pour imprimer une affiche de 30 cm × 20 cm à 300 ppp, combien de pixels faut-il en largeur et en hauteur ? Une photo de 4000 × 3000 pixels suffit-elle ? (1 pouce = 2,54 cm)",
+      "corrige": [
+        "Largeur : 30 / 2,54 ≈ 11,81 pouces, × 300 ≈ 3 543 pixels.",
+        "Hauteur : 20 / 2,54 ≈ 7,87 pouces, × 300 ≈ 2 362 pixels.",
+        "4000 ≥ 3 543 et 3000 ≥ 2 362 : la photo a assez de pixels."
+      ],
+      "reponse": "Environ 3 543 × 2 362 pixels ; oui, la photo de 4000 × 3000 suffit."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "exif-metadonnees",
+      "enonce": "Voici les métadonnées d'une photo : appareil « Téléphone X » ; date 14/07/2025 à 22 h 31 ; dimensions 4000 × 3000 ; taille du fichier 3,6 Mo ; GPS 43,6° N, 1,44° E. a) Quelle est la définition en mégapixels ? b) Quel serait le poids sans compression ? c) Par combien la compression a-t-elle divisé ce poids ? d) Quelles informations sur le photographe ces métadonnées révèlent-elles ?",
+      "corrige": [
+        "a) 4000 × 3000 = 12 000 000 pixels, soit 12 mégapixels.",
+        "b) 12 000 000 × 3 = 36 000 000 octets = 36 Mo.",
+        "c) 36 / 3,6 = 10.",
+        "d) Où il se trouvait (coordonnées GPS) et quand (le 14 juillet 2025 à 22 h 31), ainsi que le type d'appareil qu'il utilise."
+      ],
+      "reponse": "a) 12 mégapixels ; b) 36 Mo ; c) par 10 ; d) le lieu, la date, l'heure et l'appareil."
     }
   ]
 }
