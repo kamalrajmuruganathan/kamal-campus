@@ -246,8 +246,29 @@ for (const niveau of dossiers(CONTENU)) {
 // et signalé plus bas : mieux vaut un affichage bancal qu'un chapitre invisible.
 const rang = (niveau) => ORDRE_NIVEAU.get(niveau) ?? Number.MAX_SAFE_INTEGER;
 
+// Ordre des chapitres dans une matière : celui de l'année scolaire, donné par
+// contenu/<niveau>/<parcours>/ordre.json (liste des dossiers). Un chapitre absent
+// de la liste passe après, par ordre alphabétique (et il est signalé).
+const ordres = new Map();
+for (const [niveau, parcours] of [...new Set(chapitres.map((c) => `${c.niveau}|${c.parcours}`))].map((k) => k.split("|"))) {
+  const f = join(CONTENU, niveau, parcours, 'ordre.json');
+  if (!existsSync(f)) continue;
+  try {
+    const liste = JSON.parse(readFileSync(f, 'utf8'));
+    ordres.set(`${niveau}|${parcours}`, new Map(liste.map((d, i) => [d, i])));
+  } catch {
+    console.warn(`  ⚠️  ordre.json illisible : ${niveau}/${parcours}`);
+  }
+}
+const rangChapitre = (c) => ordres.get(`${c.niveau}|${c.parcours}`)?.get(c.dossier) ?? Number.MAX_SAFE_INTEGER;
+for (const c of chapitres) {
+  const o = ordres.get(`${c.niveau}|${c.parcours}`);
+  if (o && !o.has(c.dossier)) console.warn(`  ⚠️  ${c.niveau}/${c.parcours}/${c.dossier} absent de ordre.json : placé en fin de liste.`);
+}
+
 chapitres.sort((a, b) => rang(a.niveau) - rang(b.niveau)
   || a.parcours.localeCompare(b.parcours)
+  || rangChapitre(a) - rangChapitre(b)
   || a.dossier.localeCompare(b.dossier));
 
 const niveauxInconnus = [...new Set(chapitres.map((c) => c.niveau))]
