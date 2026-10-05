@@ -26,8 +26,10 @@ L'**urbanisation** est l'augmentation de la part de la population vivant en vill
 cessent de grandir, surtout dans les pays en développement.
 
 - Une **ville** concentre habitants, activités et services.
-- Une **mégapole** (ou mégalopole selon les cas) désigne une très grande agglomération de
-  plusieurs millions d'habitants (ex. Tokyo).
+- Une **mégapole** désigne une très grande agglomération de plusieurs millions d'habitants
+  (ex. Tokyo). À ne pas confondre avec une **mégalopole** : un chapelet de grandes villes reliées
+  entre elles sur des centaines de kilomètres (ex. la Mégalopolis du nord-est des États-Unis,
+  de Boston à Washington).
 
 ## 2. La métropolisation
 
