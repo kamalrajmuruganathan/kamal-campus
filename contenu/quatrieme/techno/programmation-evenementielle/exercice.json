@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Définition d'un événement",
       "enonce": "Qu'est-ce qu'un événement en programmation ? Donne trois exemples d'événements auxquels un programme peut réagir.",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Le modèle QUAND … FAIRE",
       "enonce": "Complète avec le modèle « QUAND … alors FAIRE … » : on veut qu'un lutin avance de 10 pas lorsqu'on appuie sur la flèche droite. Écris le script en langage courant.",
       "corrige": [
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Événement ou action",
       "enonce": "Dans « quand le lutin est cliqué, jouer un son », indique ce qui est l'événement et ce qui est l'action. Rappelle la différence entre les deux.",
       "corrige": [
@@ -50,7 +50,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Événementiel ≠ séquentiel",
       "enonce": "Un camarade dit : « Un programme s'exécute toujours du début à la fin dans l'ordre. » A-t-il raison pour la programmation événementielle ? Explique la différence entre un programme séquentiel et un programme événementiel.",
       "corrige": [
@@ -63,7 +63,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Variables et conditions",
       "enonce": "On programme un petit jeu : « Quand le drapeau vert est cliqué → mettre score à 0 ; répéter indéfiniment : si le lutin touche la pièce → ajouter 1 au score. » Trace l'évolution du score si le lutin touche 3 pièces. Explique le rôle de la variable score.",
       "corrige": [
@@ -76,7 +76,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "Programmer un objet technique",
       "enonce": "On programme une carte micro:bit : « QUAND le bouton A est pressé → afficher un cœur » et « QUAND la température dépasse 30 °C → allumer une DEL ». Ces deux scripts peuvent-ils fonctionner en même temps ? Explique. Puis relie ce comportement à la chaîne d'information (acquérir → traiter → communiquer) pour le second script.",
       "corrige": [
@@ -91,7 +91,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "associer bloc-événement et déclencheur",
       "enonce": "Associe chaque bloc-événement de Scratch à ce qui le déclenche : (a) « quand le drapeau vert est cliqué » ; (b) « quand la touche espace est pressée » ; (c) « quand ce lutin est cliqué ».",
       "corrige": [
@@ -104,7 +104,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "les messages entre scripts",
       "enonce": "Dans un jeu Scratch, un script contient « envoyer le message perdu » et un autre « quand je reçois perdu ». Explique à quoi sert la diffusion de messages entre scripts.",
       "corrige": [
@@ -116,7 +116,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "script événementiel avec variable et boucle",
       "enonce": "On veut : au démarrage, mettre le score à 0 ; puis, à chaque fois que le lutin touche une pièce, ajouter 1 au score. Écris ce comportement avec des blocs-événements, une variable et une boucle.",
       "corrige": [
@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "concevoir plusieurs scripts en parallèle",
       "enonce": "On programme un petit jeu où le personnage se déplace et où le jeu s'arrête quand le temps est écoulé. Propose deux scripts qui s'exécutent en parallèle : l'un pour le déplacement, l'autre pour la fin du jeu. Explique pourquoi ils peuvent tourner en même temps.",
       "corrige": [
@@ -139,6 +139,444 @@
         "Les deux scripts commencent chacun par un bloc-événement et réagissent indépendamment : ils s'exécutent donc en parallèle."
       ],
       "reponse": "Script 1 : QUAND la touche → est pressée → avancer. Script 2 : QUAND le drapeau vert est cliqué → attendre 30 s → dire « Fin » → arrêter. Chacun a son bloc-événement, donc ils tournent en parallèle."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "Définition d'un événement",
+      "enonce": "Classe ces événements selon leur origine (utilisateur, capteur, système) : (a) un clic de souris ; (b) le programme démarre ; (c) un détecteur de présence s'active ; (d) un appui sur une touche ; (e) un temps est écoulé.",
+      "corrige": [
+        "Utilisateur : actions de la personne. Capteur : signal venant d'un composant de mesure ou de détection. Système : démarrage, temps, contact entre objets."
+      ],
+      "reponse": "Utilisateur : (a), (d) ; capteur : (c) ; système : (b), (e)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "Définition d'un événement",
+      "enonce": "Complète : « La programmation événementielle est une façon d'écrire un programme où l'on définit quel bloc de code se déclenche … tel … arrive. »",
+      "corrige": [
+        "C'est la définition du cours."
+      ],
+      "reponse": "Quand tel événement arrive."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "Le modèle QUAND … FAIRE",
+      "enonce": "Comment appelle-t-on, dans Scratch, le bloc arrondi placé tout en haut d'un script et qui indique quand il se déclenche ?",
+      "corrige": [
+        "Chaque script commence par un bloc-événement dont la forme rappelle un chapeau."
+      ],
+      "reponse": "Un bloc-événement (un « chapeau »)."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "associer bloc-événement et déclencheur",
+      "enonce": "Quel bloc-événement de Scratch utilise-t-on pour lancer un script au démarrage du programme ?",
+      "corrige": [
+        "Le démarrage d'un projet Scratch se fait en cliquant sur le drapeau vert."
+      ],
+      "reponse": "« Quand le drapeau vert est cliqué »."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "Événement ou action",
+      "enonce": "Dans « quand la touche espace est pressée, sauter », quel est le déclencheur ?",
+      "corrige": [
+        "Le déclencheur est l'événement, placé après « quand »."
+      ],
+      "reponse": "L'appui sur la touche espace."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "Événementiel ≠ séquentiel",
+      "enonce": "Complète l'image du cours : « Le séquentiel, c'est une … qu'on suit ligne par ligne. L'événementiel, c'est une … : on attend que quelqu'un appuie. »",
+      "corrige": [
+        "Le cours compare les deux façons de programmer à des situations de la vie courante."
+      ],
+      "reponse": "Une recette ; une sonnette."
+    },
+    {
+      "id": 17,
+      "difficulte": "decouverte",
+      "notion": "Variables et conditions",
+      "enonce": "À quoi sert une variable dans un jeu ? Donne deux exemples.",
+      "corrige": [
+        "Une variable mémorise une information qui change au cours du programme.",
+        "Exemples : le score, le nombre de vies, le temps restant."
+      ],
+      "reponse": "À mémoriser une valeur qui change ; exemples : le score et le nombre de vies."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "Événement ou action",
+      "enonce": "Pour chaque script, sépare l'événement et l'action : (a) quand on secoue la carte, jouer un son ; (b) quand le bouton B est pressé, afficher « Bonjour » ; (c) quand je reçois « fin », cacher le lutin.",
+      "corrige": [
+        "L'événement suit « quand » ; l'action est ce que le programme fait ensuite."
+      ],
+      "reponse": "(a) secouer / jouer un son ; (b) bouton B pressé / afficher « Bonjour » ; (c) recevoir « fin » / cacher le lutin."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "Le modèle QUAND … FAIRE",
+      "enonce": "Écris avec le modèle « QUAND … FAIRE … » un script qui fait dire « Aïe ! » au lutin quand on clique dessus.",
+      "corrige": [
+        "L'événement : le lutin est cliqué.",
+        "L'action : dire « Aïe ! »."
+      ],
+      "reponse": "QUAND ce lutin est cliqué, FAIRE : dire « Aïe ! »."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "Le modèle QUAND … FAIRE",
+      "enonce": "Écris quatre scripts pour déplacer un lutin avec les quatre flèches du clavier (10 pas à chaque appui).",
+      "corrige": [
+        "Chaque flèche est un événement différent : il faut un script par flèche.",
+        "Flèche droite : x augmente ; flèche gauche : x diminue ; flèche haut : y augmente ; flèche bas : y diminue."
+      ],
+      "reponse": "QUAND flèche droite → ajouter 10 à x ; QUAND flèche gauche → ajouter −10 à x ; QUAND flèche haut → ajouter 10 à y ; QUAND flèche bas → ajouter −10 à y."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "Variables et conditions",
+      "enonce": "Un lutin commence avec 3 vies. Le script dit : « quand le lutin touche un ennemi → retirer 1 aux vies ». Combien de vies reste-t-il après avoir touché 2 ennemis ?",
+      "corrige": [
+        "Au départ : 3 vies.",
+        "Chaque contact retire 1 : 3 − 1 − 1 = 1."
+      ],
+      "reponse": "1 vie."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "Variables et conditions",
+      "enonce": "Ajoute une condition au jeu : quand le score atteint 10, le lutin dit « Gagné ! ». Écris l'instruction.",
+      "corrige": [
+        "On utilise une condition SI … ALORS sur la variable score."
+      ],
+      "reponse": "SI score = 10 ALORS dire « Gagné ! »."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "associer bloc-événement et déclencheur",
+      "enonce": "Quel bloc-événement de Scratch choisir pour que la scène change de décor lorsqu'un autre script envoie le message « niveau 2 » ?",
+      "corrige": [
+        "Un script peut réagir à un message envoyé par un autre script."
+      ],
+      "reponse": "« Quand je reçois niveau 2 »."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "associer bloc-événement et déclencheur",
+      "enonce": "Pour chaque situation, choisis le bloc-événement adapté : (a) lancer la musique au début du jeu ; (b) faire sauter le lutin avec la barre d'espace ; (c) ouvrir un menu en cliquant sur un bouton dessiné.",
+      "corrige": [
+        "(a) Le début du jeu correspond au drapeau vert.",
+        "(b) La barre d'espace est une touche. (c) Le bouton dessiné est un lutin sur lequel on clique."
+      ],
+      "reponse": "(a) quand le drapeau vert est cliqué ; (b) quand la touche espace est pressée ; (c) quand ce lutin est cliqué."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "les messages entre scripts",
+      "enonce": "Un script envoie le message « départ ». Combien de scripts peuvent réagir à ce message ?",
+      "corrige": [
+        "Tous les scripts qui commencent par « quand je reçois départ » se déclenchent.",
+        "Il peut donc y en avoir un seul ou plusieurs."
+      ],
+      "reponse": "Tous ceux qui commencent par « quand je reçois départ » (un ou plusieurs)."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "Programmer un objet technique",
+      "enonce": "Sur une carte micro:bit, écris un script qui affiche une flèche quand on appuie sur le bouton A, puis un autre qui efface l'écran quand on appuie sur le bouton B.",
+      "corrige": [
+        "Chaque bouton est un événement différent : deux scripts.",
+        "Bouton A → afficher une flèche ; bouton B → effacer l'écran."
+      ],
+      "reponse": "QUAND le bouton A est pressé → afficher une flèche. QUAND le bouton B est pressé → effacer l'écran."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "Programmer un objet technique",
+      "enonce": "« QUAND on secoue la carte → jouer un son ». Quel composant de la carte détecte l'événement « secouer » : un capteur ou un actionneur ?",
+      "corrige": [
+        "Secouer la carte est détecté par un composant qui mesure le mouvement.",
+        "Celui qui détecte une grandeur est un capteur (ici un capteur de mouvement, l'accéléromètre)."
+      ],
+      "reponse": "Un capteur (le capteur de mouvement de la carte)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "Événementiel ≠ séquentiel",
+      "enonce": "Programme A : « dire Bonjour ; attendre 2 s ; dire Au revoir ». Programme B : « quand la touche B est pressée → dire Bonjour ». Lequel est séquentiel, lequel est événementiel ? Que fait B si personne ne touche le clavier ?",
+      "corrige": [
+        "A s'exécute dans l'ordre sans attendre d'événement : il est séquentiel.",
+        "B attend l'appui sur la touche B : il est événementiel ; sans appui, il ne fait rien."
+      ],
+      "reponse": "A est séquentiel ; B est événementiel. Si personne n'appuie, B ne fait rien."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "Événementiel ≠ séquentiel",
+      "enonce": "Pourquoi un jeu vidéo est-il programmé de manière événementielle plutôt que seulement séquentielle ?",
+      "corrige": [
+        "Le joueur peut appuyer sur les touches à n'importe quel moment et dans n'importe quel ordre.",
+        "Le programme doit attendre ces événements et réagir aussitôt, avec plusieurs scripts en parallèle."
+      ],
+      "reponse": "Parce que le programme doit réagir à tout moment aux actions imprévisibles du joueur."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "Variables et conditions",
+      "enonce": "Trace la variable score : « quand drapeau vert → mettre score à 5 » ; puis le joueur clique 3 fois sur une pièce (« quand la pièce est cliquée → ajouter 2 au score ») ; puis touche un piège (« retirer 4 au score »).",
+      "corrige": [
+        "Départ : 5.",
+        "Trois clics : 5 + 2 + 2 + 2 = 11.",
+        "Piège : 11 − 4 = 7."
+      ],
+      "reponse": "5 → 7 → 9 → 11 → 7 : le score final est 7."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "Variables et conditions",
+      "enonce": "Corrige l'erreur : un élève écrit « quand le drapeau vert est cliqué → ajouter 1 au score » pour remettre le score à zéro au début de chaque partie.",
+      "corrige": [
+        "« Ajouter 1 » augmente le score : il ne le remet pas à zéro.",
+        "Il faut utiliser « mettre score à 0 »."
+      ],
+      "reponse": "Il faut écrire « mettre score à 0 » et non « ajouter 1 au score »."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "Variables et conditions",
+      "enonce": "Une variable « temps » vaut 30 au départ. Un script « répéter jusqu'à ce que temps = 0 : attendre 1 s ; retirer 1 au temps » s'exécute. Combien de temps dure-t-il environ, et que vaut « temps » à la fin ?",
+      "corrige": [
+        "À chaque tour : on attend 1 s et on retire 1.",
+        "Il faut 30 tours pour passer de 30 à 0, donc environ 30 s."
+      ],
+      "reponse": "Environ 30 secondes ; « temps » vaut 0 à la fin."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "les messages entre scripts",
+      "enonce": "Dans un jeu, quand le chronomètre atteint 0, il faut afficher « Fin » sur la scène et cacher tous les lutins. Explique comment utiliser un message pour cela.",
+      "corrige": [
+        "Le script du chronomètre envoie le message « fin » quand le temps vaut 0.",
+        "Chaque lutin a un script « quand je reçois fin → me cacher » ; la scène a « quand je reçois fin → afficher Fin »."
+      ],
+      "reponse": "Le chronomètre envoie « fin » ; les lutins (« quand je reçois fin → cacher ») et la scène (afficher « Fin ») réagissent."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "les messages entre scripts",
+      "enonce": "Repère l'erreur : un script envoie le message « gagné », mais l'autre script commence par « quand je reçois gagne ». Que se passe-t-il ?",
+      "corrige": [
+        "Le message reçu doit être exactement celui qui est envoyé.",
+        "« gagné » et « gagne » sont deux messages différents : le second script ne se déclenche jamais."
+      ],
+      "reponse": "Rien : les deux messages ne sont pas identiques, le second script n'est jamais déclenché."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "concevoir plusieurs scripts en parallèle",
+      "enonce": "Un lutin doit tourner sans arrêt sur lui-même et, en même temps, jouer un son quand on clique dessus. Écris les deux scripts.",
+      "corrige": [
+        "Script 1 : QUAND le drapeau vert est cliqué → répéter indéfiniment : tourner de 15 degrés.",
+        "Script 2 : QUAND ce lutin est cliqué → jouer un son.",
+        "Les deux scripts s'exécutent en parallèle."
+      ],
+      "reponse": "Script 1 : QUAND drapeau vert → répéter indéfiniment : tourner de 15°. Script 2 : QUAND ce lutin est cliqué → jouer un son."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "Événement ou action",
+      "enonce": "Un élève dit : « Le score est un événement. » Corrige.",
+      "corrige": [
+        "Le score est une variable : il mémorise une valeur.",
+        "Un événement déclenche l'exécution d'un bloc (clic, touche, message…)."
+      ],
+      "reponse": "Faux : le score est une variable (elle mémorise) ; un événement déclenche un bloc."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "Programmer un objet technique",
+      "enonce": "Écris un script micro:bit qui allume une DEL quand la température dépasse 30 °C, et explique en quoi c'est de la programmation événementielle.",
+      "corrige": [
+        "Script : QUAND la température dépasse 30 °C → allumer une DEL.",
+        "Le programme attend l'événement « température > 30 °C » avant d'agir."
+      ],
+      "reponse": "QUAND la température dépasse 30 °C → allumer une DEL ; le programme attend cet événement pour agir."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "concevoir plusieurs scripts en parallèle",
+      "enonce": "Un jeu doit : au démarrage, placer le chat au centre ; avancer quand on appuie sur la flèche droite ; miauler quand il touche la souris. Combien de scripts faut-il au minimum et lesquels ?",
+      "corrige": [
+        "Script 1 : QUAND drapeau vert → aller à x = 0, y = 0 ; puis répéter indéfiniment : SI touche la souris ALORS jouer le son « miaou ».",
+        "Script 2 : QUAND flèche droite pressée → avancer de 10 pas."
+      ],
+      "reponse": "Deux scripts : drapeau vert (placer au centre puis surveiller le contact avec la souris) et flèche droite (avancer)."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "Le modèle QUAND … FAIRE",
+      "enonce": "Repère l'erreur : un élève a placé les blocs « avancer de 10 pas » et « jouer un son » dans la zone de script, sans aucun bloc au-dessus. Pourquoi rien ne se passe-t-il quand il lance le jeu ?",
+      "corrige": [
+        "Sans bloc-événement, les actions ne savent pas quand se déclencher.",
+        "Il faut ajouter un « chapeau », par exemple « quand le drapeau vert est cliqué »."
+      ],
+      "reponse": "Il manque le bloc-événement : sans « QUAND … », le script ne démarre pas."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "Variables et conditions",
+      "enonce": "Dans un quiz Scratch, « quand le bouton Vrai est cliqué → SI la réponse est juste ALORS ajouter 1 au score SINON retirer 1 au score ». Le joueur répond : juste, faux, juste, juste. Le score part de 0. Quel est le score final ?",
+      "corrige": [
+        "Juste : +1 ; faux : −1.",
+        "0 + 1 − 1 + 1 + 1 = 2."
+      ],
+      "reponse": "2."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "Variables et conditions",
+      "enonce": "Un jeu commence avec 3 vies. « quand le lutin touche la lave → retirer 1 aux vies ; SI vies = 0 ALORS envoyer le message perdu ». Combien de contacts avec la lave faut-il pour perdre ? Que fait le message ?",
+      "corrige": [
+        "3 − 1 − 1 − 1 = 0 : au troisième contact, les vies valent 0.",
+        "Le message « perdu » déclenche les scripts qui attendent « quand je reçois perdu » (par exemple afficher « Perdu » et arrêter le jeu)."
+      ],
+      "reponse": "Trois contacts ; le message « perdu » déclenche les scripts de fin de partie."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "Programmer un objet technique",
+      "enonce": "Relie le script « QUAND le bouton A est pressé → afficher un cœur » à la chaîne d'information : quel élément acquiert, qui traite, qui communique ?",
+      "corrige": [
+        "Acquérir : le bouton A détecte l'appui.",
+        "Traiter : le programme de la carte reconnaît l'événement et décide.",
+        "Communiquer : l'écran de DEL affiche le cœur."
+      ],
+      "reponse": "Acquérir : le bouton A ; traiter : le programme de la carte ; communiquer : l'écran de DEL qui affiche le cœur."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "Événementiel ≠ séquentiel",
+      "enonce": "Un programme séquentiel de feu tricolore enchaîne vert, orange, rouge en boucle. On veut ajouter un bouton piéton. Quelle partie devient événementielle ? Écris le script ajouté.",
+      "corrige": [
+        "L'appui du piéton peut arriver à n'importe quel moment : c'est un événement.",
+        "Script ajouté : QUAND le bouton piéton est pressé → envoyer le message « piéton », que le script du feu reçoit pour passer au rouge."
+      ],
+      "reponse": "La demande du piéton : QUAND le bouton piéton est pressé → envoyer le message « piéton » (le feu passe alors au rouge)."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "les messages entre scripts",
+      "enonce": "Pourquoi utiliser un message plutôt que de tout écrire dans un seul très long script ?",
+      "corrige": [
+        "Les messages permettent de découper le programme en parties qui communiquent.",
+        "Chaque lutin gère ses propres réactions : le programme est plus clair, plus facile à corriger, et plusieurs parties réagissent en parallèle."
+      ],
+      "reponse": "Pour faire communiquer plusieurs parties du programme : il devient plus clair et plusieurs scripts peuvent réagir en parallèle."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "concevoir plusieurs scripts en parallèle",
+      "enonce": "Conçois un jeu « attrape la pomme » : la pomme tombe du haut de l'écran ; le panier se déplace avec les flèches gauche et droite ; chaque pomme attrapée ajoute 1 au score. Écris les scripts nécessaires.",
+      "corrige": [
+        "Panier : QUAND flèche gauche → ajouter −10 à x ; QUAND flèche droite → ajouter 10 à x.",
+        "Pomme : QUAND drapeau vert → mettre score à 0 ; répéter indéfiniment : descendre (ajouter −5 à y) ; SI touche le panier ALORS ajouter 1 au score et remonter en haut.",
+        "Les scripts s'exécutent en parallèle."
+      ],
+      "reponse": "Deux scripts pour le panier (flèches) et un script pour la pomme (drapeau vert, score à 0, boucle : descendre, SI touche le panier ALORS +1 et remonter)."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "Programmer un objet technique",
+      "enonce": "Avec une carte micro:bit, on veut un compteur de passages : à chaque appui sur A, ajouter 1 ; à chaque appui sur B, afficher le nombre ; quand on secoue la carte, remettre à 0. Écris les scripts.",
+      "corrige": [
+        "Une variable « passages » mémorise le nombre.",
+        "QUAND bouton A pressé → ajouter 1 à passages.",
+        "QUAND bouton B pressé → afficher passages. QUAND on secoue la carte → mettre passages à 0."
+      ],
+      "reponse": "QUAND A → ajouter 1 à passages ; QUAND B → afficher passages ; QUAND secouer → mettre passages à 0."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "Variables et conditions",
+      "enonce": "Dans un jeu, chaque pièce rapporte 5 points et chaque ennemi touché enlève 10 points. Le score part de 0. Le joueur prend 7 pièces et touche 2 ennemis. Calcule le score et écris la condition qui affiche « Niveau 2 » quand le score atteint au moins 30.",
+      "corrige": [
+        "Pièces : 7 × 5 = 35 ; ennemis : 2 × 10 = 20.",
+        "Score : 35 − 20 = 15.",
+        "Condition : SI score ≥ 30 ALORS afficher « Niveau 2 »."
+      ],
+      "reponse": "Score : 15 ; condition : SI score ≥ 30 ALORS afficher « Niveau 2 »."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "Programmer un objet technique",
+      "enonce": "Une alarme de porte avec une carte programmable doit : sonner quand la porte s'ouvre si l'alarme est activée ; s'activer avec le bouton A ; se désactiver avec le bouton B. Écris les trois scripts avec une variable « activée ».",
+      "corrige": [
+        "QUAND bouton A pressé → mettre activée à oui.",
+        "QUAND bouton B pressé → mettre activée à non (et arrêter le son).",
+        "QUAND la porte s'ouvre (capteur) → SI activée = oui ALORS faire sonner le buzzer."
+      ],
+      "reponse": "A → activée = oui ; B → activée = non ; QUAND la porte s'ouvre → SI activée = oui ALORS sonner."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "Événementiel ≠ séquentiel",
+      "enonce": "Analyse ce programme : « quand drapeau vert → dire Bonjour pendant 2 s » et « quand drapeau vert → répéter 4 fois : avancer de 50 pas ; tourner de 90° ». Que voit-on quand on clique sur le drapeau vert ?",
+      "corrige": [
+        "Les deux scripts ont le même bloc-événement : ils démarrent en même temps, en parallèle.",
+        "Le lutin dit « Bonjour » pendant 2 s et, en même temps, trace un carré de 50 pas de côté."
+      ],
+      "reponse": "Le lutin dit « Bonjour » tout en se déplaçant pour faire un carré : les deux scripts tournent en parallèle."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "Événement ou action",
+      "enonce": "Analyse le script : « quand la touche espace est pressée → SI le lutin touche le sol ALORS sauter ». Donne l'événement, la condition et l'action, et dis ce qui se passe si on appuie sur espace alors que le lutin est déjà en l'air.",
+      "corrige": [
+        "Événement : appui sur espace. Condition : le lutin touche le sol. Action : sauter.",
+        "En l'air, la condition est fausse : l'appui ne déclenche aucun saut."
+      ],
+      "reponse": "Événement : espace ; condition : toucher le sol ; action : sauter. En l'air, rien ne se passe (condition fausse)."
     }
   ]
 }

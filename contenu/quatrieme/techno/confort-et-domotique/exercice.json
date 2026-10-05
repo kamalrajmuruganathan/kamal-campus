@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Définition",
       "enonce": "Qu'est-ce que la domotique ? Cite les trois grands besoins auxquels elle répond, avec un exemple pour chacun.",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Capteur ou actionneur",
       "enonce": "Classe chaque élément en capteur ou actionneur : a) une lampe, b) un détecteur de mouvement, c) un moteur de volet, d) un capteur d'humidité.",
       "corrige": [
@@ -39,7 +39,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Chaîne d'un système automatique",
       "enonce": "Remets dans le bon ordre les trois éléments d'un système domotique automatique : « actionneur », « capteur », « unité de traitement (programme) ». Explique en une phrase le rôle de chacun.",
       "corrige": [
@@ -52,7 +52,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Condition et seuil",
       "enonce": "On veut qu'une lampe s'allume seulement s'il y a quelqu'un ET s'il fait sombre. Le seuil de nuit est fixé à 100 lux. Écris la condition sous la forme « SI … ALORS … SINON … », puis dis ce qui se passe s'il y a une présence mais que la luminosité mesurée est 300 lux.",
       "corrige": [
@@ -65,7 +65,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Boucle ouverte / boucle fermée",
       "enonce": "Système A : un arrosage se déclenche tous les jours à 20 h. Système B : un thermostat mesure la température de la pièce et coupe le chauffage dès que 19 °C sont atteints. Indique lequel est en boucle ouverte et lequel est en boucle fermée, et explique le rôle du retour d'information.",
       "corrige": [
@@ -78,7 +78,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "Concevoir un système domotique",
       "enonce": "On veut éviter les déperditions de chaleur : le chauffage d'une chambre doit se couper automatiquement quand une fenêtre est ouverte, et se remettre en marche seulement si la température descend en dessous de 18 °C. Liste les capteurs et actionneurs nécessaires, écris l'algorithme avec des conditions, et explique pourquoi ce système répond à la fois au confort et à l'économie d'énergie.",
       "corrige": [
@@ -93,7 +93,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "reconnaître les capteurs domotiques",
       "enonce": "Associe chaque capteur à ce qu'il mesure ou détecte : (a) thermistance ; (b) photorésistance ; (c) détecteur infrarouge ; (d) capteur d'humidité.",
       "corrige": [
@@ -106,7 +106,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "connecté n'est pas automatique",
       "enonce": "Un camarade dit : « Comme je commande ma lampe depuis mon téléphone, c'est de l'automatisme. » A-t-il raison ? Explique la différence entre « connecté » et « automatique ».",
       "corrige": [
@@ -119,7 +119,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "le thermostat et le retour d'information",
       "enonce": "Un thermostat maintient une pièce à 19 °C. Explique comment il utilise un retour d'information (boucle fermée) pour rester précis, et ce qui se passerait sans capteur.",
       "corrige": [
@@ -132,7 +132,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "concevoir un volet automatique",
       "enonce": "On veut un volet roulant qui se ferme tout seul à la tombée de la nuit. (a) Quel capteur utiliser ? (b) Écris la condition avec un seuil. (c) Quel actionneur agit ? (d) Est-ce un système en boucle ouverte ou fermée ?",
       "corrige": [
@@ -143,6 +143,449 @@
         "(d) Sans capteur qui vérifie le résultat (volet bien fermé), c'est un système en boucle ouverte."
       ],
       "reponse": "(a) capteur de luminosité ; (b) SI luminosité < seuil ALORS fermer le volet ; (c) le moteur du volet ; (d) boucle ouverte (il ne vérifie pas le résultat)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "Définition",
+      "enonce": "Pour chaque équipement domotique, dis s'il répond surtout à un besoin de confort, de sécurité ou d'économie d'énergie : (a) un détecteur de fumée ; (b) des volets qui s'ouvrent seuls le matin ; (c) un chauffage qui baisse la nuit quand tout le monde dort.",
+      "corrige": [
+        "Sécurité : protéger les personnes et les biens. Confort : rendre la vie plus agréable. Économie d'énergie : consommer moins.",
+        "Le détecteur de fumée prévient d'un incendie ; les volets automatiques évitent un geste ; baisser le chauffage la nuit réduit la consommation."
+      ],
+      "reponse": "(a) sécurité ; (b) confort ; (c) économie d'énergie."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "Définition",
+      "enonce": "Complète : « La domotique ne consiste pas seulement à commander des appareils à distance : elle les rend …, c'est-à-dire capables de réagir … à leur environnement. »",
+      "corrige": [
+        "C'est la différence entre une commande à distance et un automatisme."
+      ],
+      "reponse": "Automatiques ; tout seuls."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "Capteur ou actionneur",
+      "enonce": "Quel actionneur permet d'ouvrir ou de couper l'arrivée d'eau d'un système d'arrosage automatique ?",
+      "corrige": [
+        "Le cours cite un actionneur qui agit sur un circuit d'eau."
+      ],
+      "reponse": "Une électrovanne."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "Capteur ou actionneur",
+      "enonce": "Vrai ou faux : « Une lampe est un capteur de lumière. » Justifie.",
+      "corrige": [
+        "Une lampe produit de la lumière : elle agit.",
+        "Le capteur de lumière est la photorésistance, qui mesure la luminosité."
+      ],
+      "reponse": "Faux : la lampe est un actionneur (elle éclaire) ; le capteur de lumière est la photorésistance."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "reconnaître les capteurs domotiques",
+      "enonce": "Quel capteur utiliser pour savoir si un utilisateur a appuyé sur une commande murale ?",
+      "corrige": [
+        "Le cours range parmi les capteurs l'élément qui détecte une action de l'utilisateur."
+      ],
+      "reponse": "Un interrupteur ou un bouton-poussoir."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "Chaîne d'un système automatique",
+      "enonce": "Quel rôle joue une carte programmable (comme une carte Arduino ou micro:bit) dans un système domotique ?",
+      "corrige": [
+        "Elle contient le programme.",
+        "Elle lit les capteurs, compare les valeurs à des conditions et décide de la commande à envoyer aux actionneurs."
+      ],
+      "reponse": "Elle traite l'information : elle lit les capteurs, compare à des conditions et décide de l'action."
+    },
+    {
+      "id": 17,
+      "difficulte": "decouverte",
+      "notion": "domotique et communication",
+      "enonce": "Cite deux moyens sans fil par lesquels les objets d'une maison connectée peuvent échanger des informations.",
+      "corrige": [
+        "Les informations circulent par des fils ou par des ondes radio.",
+        "Le cours cite le Wi-Fi, le Bluetooth et le Zigbee."
+      ],
+      "reponse": "Exemple : le Wi-Fi et le Bluetooth (ou le Zigbee)."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "Capteur ou actionneur",
+      "enonce": "Classe en capteurs et actionneurs : une sirène, une thermistance, une résistance chauffante, une photorésistance, une électrovanne, un détecteur infrarouge.",
+      "corrige": [
+        "Le capteur mesure ou détecte ; l'actionneur produit une action.",
+        "Thermistance, photorésistance et détecteur infrarouge mesurent ; sirène, résistance chauffante et électrovanne agissent."
+      ],
+      "reponse": "Capteurs : thermistance, photorésistance, détecteur infrarouge. Actionneurs : sirène, résistance chauffante, électrovanne."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "Capteur ou actionneur",
+      "enonce": "Associe chaque actionneur à l'action qu'il produit : LED, moteur, résistance chauffante, buzzer.",
+      "corrige": [
+        "Chaque actionneur transforme un signal électrique en une action physique."
+      ],
+      "reponse": "LED : éclairer ; moteur : ouvrir ou fermer (volet, portail) ; résistance chauffante : chauffer ; buzzer : émettre un son."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "reconnaître les capteurs domotiques",
+      "enonce": "Pour chaque besoin, propose un capteur : (a) arroser le jardin seulement quand le sol est sec ; (b) allumer le couloir quand quelqu'un passe ; (c) fermer les volets à la tombée de la nuit.",
+      "corrige": [
+        "On choisit le capteur qui mesure la grandeur utile."
+      ],
+      "reponse": "(a) capteur d'humidité du sol ; (b) détecteur de mouvement infrarouge ; (c) capteur de luminosité (photorésistance)."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "Condition et seuil",
+      "enonce": "Qu'est-ce qu'un seuil dans un programme domotique ? Donne un exemple.",
+      "corrige": [
+        "Un seuil est une valeur de référence choisie par le concepteur.",
+        "Exemple : « en dessous de 100 lux, il fait sombre »."
+      ],
+      "reponse": "Une valeur de référence choisie par le concepteur, par exemple 100 lux pour décider qu'il fait sombre."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "Condition et seuil",
+      "enonce": "Programme d'une ventilation de salle de bains : « SI humidité > 70 % ALORS allumer le ventilateur SINON l'éteindre ». Que se passe-t-il pour une humidité de 85 % ? de 55 % ?",
+      "corrige": [
+        "On compare chaque valeur au seuil de 70 %.",
+        "85 > 70 : condition vraie → ventilateur allumé ; 55 > 70 est faux → ventilateur éteint."
+      ],
+      "reponse": "À 85 %, le ventilateur est allumé ; à 55 %, il est éteint."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "Boucle ouverte / boucle fermée",
+      "enonce": "Un éclairage de vitrine s'allume tous les soirs de 19 h à 23 h grâce à une horloge, sans aucun capteur. Boucle ouverte ou fermée ? Justifie.",
+      "corrige": [
+        "Le système agit selon l'heure, sans mesurer le résultat de son action.",
+        "Il n'y a pas de retour d'information."
+      ],
+      "reponse": "Boucle ouverte : il agit sans vérifier le résultat (pas de capteur)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "connecté n'est pas automatique",
+      "enonce": "Pour chaque cas, dis s'il s'agit d'une commande à distance ou d'un automatisme : (a) on ferme les volets depuis une application ; (b) les volets se ferment seuls quand le vent est trop fort ; (c) on allume le chauffage par un message vocal.",
+      "corrige": [
+        "Automatisme : le système réagit seul à son environnement, grâce à un capteur.",
+        "Commande à distance : c'est l'utilisateur qui décide chaque action."
+      ],
+      "reponse": "(a) commande à distance ; (b) automatisme ; (c) commande à distance."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "Chaîne d'un système automatique",
+      "enonce": "Pour un détecteur de fuite d'eau qui coupe l'eau et fait sonner une alarme, donne le capteur, l'unité de traitement et les actionneurs.",
+      "corrige": [
+        "Capteur : le détecteur d'eau posé au sol.",
+        "Unité de traitement : la carte programmable.",
+        "Actionneurs : l'électrovanne (couper l'eau) et le buzzer (alarme)."
+      ],
+      "reponse": "Capteur : détecteur d'eau ; traitement : carte programmable ; actionneurs : électrovanne et buzzer."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "reconnaître les capteurs domotiques",
+      "enonce": "Quelle grandeur physique mesure une thermistance ? Et un capteur d'humidité placé dans une salle de bains ?",
+      "corrige": [
+        "Un capteur transforme une grandeur physique en signal électrique.",
+        "La thermistance est sensible à la chaleur ; le capteur d'humidité mesure la quantité d'eau dans l'air."
+      ],
+      "reponse": "La thermistance mesure la température ; le capteur d'humidité mesure la quantité d'eau dans l'air."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "Chaîne d'un système automatique",
+      "enonce": "Remets dans l'ordre ces étapes d'un éclairage automatique de couloir : (a) la carte vérifie s'il fait sombre ; (b) la lampe s'allume 30 secondes ; (c) le détecteur repère une personne.",
+      "corrige": [
+        "On suit l'ordre acquérir → traiter → agir."
+      ],
+      "reponse": "(c) → (a) → (b)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "Définition",
+      "enonce": "Un système éteint le chauffage dès qu'une fenêtre est ouverte. À quel besoin principal répond-il ? Explique.",
+      "corrige": [
+        "Chauffer avec la fenêtre ouverte revient à chauffer l'extérieur.",
+        "Couper le chauffage évite ce gaspillage."
+      ],
+      "reponse": "À l'économie d'énergie : on évite de chauffer l'extérieur."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "Condition et seuil",
+      "enonce": "Une lampe suit le programme : « SI présence ET luminosité < 100 lux ALORS allumer SINON éteindre ». Complète l'état de la lampe : (a) présence, 40 lux ; (b) pas de présence, 40 lux ; (c) présence, 500 lux.",
+      "corrige": [
+        "Avec ET, il faut que les deux conditions soient vraies en même temps.",
+        "(a) les deux vraies → allumée ; (b) pas de présence → éteinte ; (c) 500 lux n'est pas < 100 → éteinte."
+      ],
+      "reponse": "(a) allumée ; (b) éteinte ; (c) éteinte."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "Condition et seuil",
+      "enonce": "On remarque que l'éclairage automatique d'un couloir s'allume alors qu'il fait encore jour. Quel réglage du programme faut-il modifier, et dans quel sens ?",
+      "corrige": [
+        "La lampe s'allume quand la luminosité mesurée est sous le seuil.",
+        "Si elle s'allume en plein jour, le seuil est trop élevé : il faut le baisser."
+      ],
+      "reponse": "Il faut baisser le seuil de luminosité (par exemple de 300 lux à 100 lux)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "Condition et seuil",
+      "enonce": "Écris l'algorithme d'une alarme de chambre froide : si la température dépasse 4 °C, un buzzer sonne ; sinon il reste silencieux.",
+      "corrige": [
+        "Le capteur de température est lu en permanence.",
+        "La condition compare la mesure au seuil de 4 °C."
+      ],
+      "reponse": "SI température > 4 °C ALORS faire sonner le buzzer SINON arrêter le buzzer (en boucle permanente)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "Boucle ouverte / boucle fermée",
+      "enonce": "Transforme l'arrosage « tous les jours à 20 h » (boucle ouverte) en système en boucle fermée. Quel capteur ajoutes-tu, et comment change l'algorithme ?",
+      "corrige": [
+        "Pour vérifier l'effet de l'arrosage (et la pluie), on mesure l'humidité du sol.",
+        "On n'arrose que si le sol est trop sec, et on s'arrête quand il est assez humide."
+      ],
+      "reponse": "On ajoute un capteur d'humidité du sol : SI sol sec ALORS arroser SINON ne pas arroser ; l'arrosage s'arrête quand l'humidité est suffisante."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "Boucle ouverte / boucle fermée",
+      "enonce": "Un four électrique maintient 180 °C grâce à une sonde de température qui coupe et rallume la résistance. Boucle ouverte ou fermée ? Quel est le retour d'information ?",
+      "corrige": [
+        "La sonde mesure la température obtenue dans le four.",
+        "Le programme compare cette mesure à la consigne et corrige l'action de la résistance."
+      ],
+      "reponse": "Boucle fermée ; le retour d'information est la mesure de la température par la sonde."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "le thermostat et le retour d'information",
+      "enonce": "Un thermostat est réglé sur 19 °C. La température mesurée est successivement 17 °C, 19 °C, 20 °C. Le chauffage est-il en marche ou à l'arrêt à chaque mesure ?",
+      "corrige": [
+        "Le thermostat chauffe tant que la température est sous la consigne.",
+        "Il coupe le chauffage dès que 19 °C est atteint ou dépassé."
+      ],
+      "reponse": "17 °C : en marche ; 19 °C : à l'arrêt ; 20 °C : à l'arrêt."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "Capteur ou actionneur",
+      "enonce": "Un élève dit : « C'est le capteur de luminosité qui décide d'allumer la lampe. » Corrige.",
+      "corrige": [
+        "Le capteur ne fait que mesurer la luminosité.",
+        "C'est le programme de la carte qui compare la mesure au seuil et décide."
+      ],
+      "reponse": "Faux : le capteur mesure seulement ; c'est le programme qui compare au seuil et décide."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "domotique et communication",
+      "enonce": "Qu'est-ce que l'Internet des objets (IoT) ? Donne un exemple d'objet de la maison qui en fait partie.",
+      "corrige": [
+        "Un objet connecté échange des données par un réseau.",
+        "Exemple : un thermostat connecté, une ampoule connectée, une caméra de surveillance."
+      ],
+      "reponse": "L'ensemble des objets connectés qui échangent des données par un réseau ; exemple : un thermostat connecté."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "domotique et communication",
+      "enonce": "Dans une maison, un capteur d'ouverture de fenêtre est relié au boîtier de chauffage par un câble, et une ampoule est commandée en Wi-Fi. Quels sont les deux modes de communication utilisés ?",
+      "corrige": [
+        "Le câble transporte l'information par un fil (bus filaire).",
+        "Le Wi-Fi utilise des ondes radio sans fil."
+      ],
+      "reponse": "Une liaison filaire (bus filaire) et une liaison sans fil par ondes radio (Wi-Fi)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "Concevoir un système domotique",
+      "enonce": "Conçois un système qui allume une lumière extérieure pendant 2 minutes si quelqu'un approche de la porte la nuit. Donne les capteurs, l'actionneur et l'algorithme.",
+      "corrige": [
+        "Capteurs : détecteur de mouvement infrarouge et capteur de luminosité.",
+        "Actionneur : la lampe extérieure.",
+        "Algorithme : SI présence ET luminosité < seuil ALORS allumer la lampe, attendre 2 minutes, l'éteindre."
+      ],
+      "reponse": "Détecteur de mouvement + capteur de luminosité ; lampe ; SI présence ET nuit ALORS allumer 2 min puis éteindre."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "Concevoir un système domotique",
+      "enonce": "Une alarme anti-intrusion doit sonner si une porte s'ouvre pendant que l'alarme est activée. Écris l'algorithme et nomme les capteurs et l'actionneur.",
+      "corrige": [
+        "Capteurs : un capteur d'ouverture de porte et un bouton (ou clavier) pour activer l'alarme.",
+        "Actionneur : la sirène.",
+        "Il faut que les deux conditions soient vraies : alarme activée ET porte ouverte."
+      ],
+      "reponse": "SI alarme activée ET porte ouverte ALORS faire sonner la sirène SINON sirène arrêtée. Capteurs : capteur d'ouverture, bouton d'activation ; actionneur : sirène."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "connecté n'est pas automatique",
+      "enonce": "Un thermostat connecté maintient 19 °C tout seul et permet aussi de changer la consigne depuis un smartphone. Quelle partie relève de l'automatisme, quelle partie de la commande à distance ?",
+      "corrige": [
+        "L'automatisme : le thermostat mesure la température et corrige seul le chauffage.",
+        "La commande à distance : l'utilisateur change lui-même la consigne depuis son téléphone."
+      ],
+      "reponse": "Le maintien automatique à 19 °C est un automatisme ; changer la consigne depuis le smartphone est une commande à distance."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "Boucle ouverte / boucle fermée",
+      "enonce": "Pourquoi un système en boucle fermée est-il souvent plus économe en énergie qu'un système en boucle ouverte ? Prends l'exemple du chauffage.",
+      "corrige": [
+        "En boucle ouverte, un chauffage qui fonctionne à heures fixes peut chauffer même quand la pièce est déjà chaude.",
+        "En boucle fermée, le capteur de température permet de couper dès que la consigne est atteinte : on ne chauffe que le nécessaire."
+      ],
+      "reponse": "Grâce au retour d'information, il n'agit que lorsque c'est nécessaire (le chauffage se coupe dès que la consigne est atteinte)."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "Chaîne d'un système automatique",
+      "enonce": "Analyse un store banne qui se replie automatiquement quand le vent est trop fort. Donne le capteur, la condition et l'actionneur, et le besoin principal.",
+      "corrige": [
+        "Capteur : un capteur de vent (anémomètre) mesure la vitesse du vent.",
+        "Condition : SI vitesse du vent > seuil ALORS replier le store.",
+        "Actionneur : le moteur du store. Besoin : la sécurité (protéger le store et les personnes)."
+      ],
+      "reponse": "Capteur de vent → SI vent > seuil ALORS replier → moteur du store ; besoin principal : sécurité."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "Condition et seuil",
+      "enonce": "Un arrosage automatique arrose quand l'humidité du sol est inférieure à 30 %. On constate que les plantes manquent d'eau. Quel réglage modifier et comment ?",
+      "corrige": [
+        "L'arrosage ne démarre que lorsque le sol est très sec (moins de 30 %).",
+        "Pour arroser plus tôt, on augmente le seuil (par exemple 40 %)."
+      ],
+      "reponse": "Augmenter le seuil d'humidité (par exemple de 30 % à 40 %) pour arroser plus tôt."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "Concevoir un système domotique",
+      "enonce": "Conçois un système qui ferme automatiquement les volets d'une chambre en été quand le soleil chauffe trop, pour garder la pièce fraîche. Donne deux capteurs possibles, l'actionneur, l'algorithme et le besoin satisfait.",
+      "corrige": [
+        "Capteurs : un capteur de luminosité (fort ensoleillement) et un capteur de température intérieure.",
+        "Actionneur : le moteur du volet.",
+        "Algorithme : SI luminosité > seuil ET température intérieure > 25 °C ALORS fermer le volet.",
+        "Besoin : confort (pièce fraîche), et économie d'énergie si cela évite d'utiliser un climatiseur."
+      ],
+      "reponse": "Capteurs de luminosité et de température ; moteur du volet ; SI soleil fort ET T > 25 °C ALORS fermer ; confort et économie d'énergie."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "Concevoir un système domotique",
+      "enonce": "Dans une salle de classe, on veut que les lumières s'éteignent seules s'il n'y a plus personne depuis 10 minutes. Propose le capteur, l'actionneur et l'algorithme, puis le gain attendu.",
+      "corrige": [
+        "Capteur : détecteur de présence infrarouge.",
+        "Actionneur : la commande des lampes.",
+        "Algorithme : SI aucune présence détectée pendant 10 minutes ALORS éteindre les lampes.",
+        "Gain : économie d'énergie (on n'éclaire pas une salle vide)."
+      ],
+      "reponse": "Détecteur de présence ; commande des lampes ; SI aucune présence pendant 10 min ALORS éteindre ; économie d'énergie."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "le thermostat et le retour d'information",
+      "enonce": "Une maison est chauffée de 6 h à 22 h à 19 °C et la nuit à 16 °C. Ce programme horaire est-il en boucle ouverte ou fermée ? Quel élément du système permet malgré tout d'atteindre précisément chaque consigne ?",
+      "corrige": [
+        "L'horloge change seulement la consigne selon l'heure.",
+        "Le thermostat mesure la température et corrige le chauffage pour atteindre la consigne : c'est une boucle fermée.",
+        "C'est le capteur de température (retour d'information) qui rend le réglage précis."
+      ],
+      "reponse": "Le réglage de la température est en boucle fermée grâce au capteur de température ; l'horloge ne fait que changer la consigne."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "Chaîne d'un système automatique",
+      "enonce": "Un détecteur de fumée de chambre comporte un capteur de fumée, un microcontrôleur, une sirène et une pile. Classe ces éléments selon la chaîne capteur → traitement → actionneur, et dis à quoi sert la pile.",
+      "corrige": [
+        "Capteur : le capteur de fumée. Traitement : le microcontrôleur. Actionneur : la sirène.",
+        "La pile fournit l'énergie au système (elle n'acquiert, ne traite ni n'agit)."
+      ],
+      "reponse": "Capteur de fumée → microcontrôleur → sirène ; la pile alimente le système en énergie."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "domotique et communication",
+      "enonce": "Une famille installe des ampoules connectées en Wi-Fi. Cite un avantage pour le confort et une précaution à prendre parce que ces objets font partie de l'Internet des objets.",
+      "corrige": [
+        "Confort : commander ou programmer l'éclairage depuis un smartphone.",
+        "Précaution : ces objets échangent des données sur un réseau ; il faut protéger le réseau Wi-Fi (mot de passe solide) et mettre les objets à jour."
+      ],
+      "reponse": "Exemple : avantage : programmer l'éclairage depuis son téléphone ; précaution : sécuriser le Wi-Fi avec un mot de passe solide."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "Condition et seuil",
+      "enonce": "Une serre doit ouvrir sa fenêtre au-dessus de 28 °C. Si on règle aussi « fermer en dessous de 28 °C », la fenêtre s'ouvre et se ferme sans arrêt autour de 28 °C. Propose une solution avec deux seuils.",
+      "corrige": [
+        "Avec un seul seuil, la moindre variation autour de 28 °C fait changer l'état.",
+        "On utilise deux seuils écartés : ouvrir au-dessus de 28 °C, fermer seulement en dessous de 25 °C par exemple."
+      ],
+      "reponse": "Ouvrir au-dessus de 28 °C et fermer seulement en dessous de 25 °C (deux seuils différents)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "connecté n'est pas automatique",
+      "enonce": "Un volet se commande uniquement par une application. Que faut-il ajouter pour qu'il devienne automatique ? Décris la chaîne complète obtenue.",
+      "corrige": [
+        "Il faut un capteur pour que le système réagisse seul, par exemple un capteur de luminosité.",
+        "Chaîne : capteur de luminosité (acquérir) → carte programmable avec un seuil (traiter) → moteur du volet (agir)."
+      ],
+      "reponse": "Un capteur (par exemple de luminosité) et un programme avec un seuil : capteur → carte programmable → moteur du volet."
     }
   ]
 }
