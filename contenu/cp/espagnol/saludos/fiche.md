@@ -45,7 +45,7 @@ Les mots polis : **por favor** (s'il te plaît), **gracias** (merci), **de nada*
 
 ## 3. Les erreurs à éviter
 - On écrit **¡Hola!** sans « h » qui se prononce : on dit « ola ».
-- « Bonjour » le matin se dit **buenos días** (au pluriel en espagnol), pas *buen día*.
+- « Bonjour » le matin se dit **buenos días** (au pluriel en espagnol). En Amérique latine, on entend aussi *buen día*.
 - **Gracias** s'écrit avec un **-s** à la fin.
 
 ## À retenir
