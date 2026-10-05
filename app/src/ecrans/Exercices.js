@@ -20,9 +20,11 @@ import { matiereParlante } from '../parole';
 import { chapitreParId } from '../contenu-index';
 
 const LIBELLE_DIFFICULTE = {
+  decouverte: 'Découverte',
   application: 'Application',
   intermediaire: 'Intermédiaire',
   approfondissement: 'Approfondissement',
+  probleme: 'Problème',
   // tolérance aux valeurs du QCM si un chapitre les réutilise
   facile: 'Application',
   moyen: 'Intermédiaire',
