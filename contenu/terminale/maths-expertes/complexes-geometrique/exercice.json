@@ -134,7 +134,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Le plan complexe est muni d'un repère orthonormé direct $(O\\,;\\vec u,\\vec v)$. On considère les nombres complexes $z_1=\\sqrt3+i$ et $z_2=1+i$, et on pose $Z=\\dfrac{z_2}{z_1}$.\n\n1. Déterminer le module et un argument de $z_1$, puis de $z_2$, et écrire chacun sous forme exponentielle.\n2. En déduire le module, un argument et la forme exponentielle de $Z$.\n3. Écrire $Z$ sous forme algébrique en multipliant le numérateur et le dénominateur par le conjugué de $z_1$.\n4. En comparant les deux formes obtenues pour $Z$, déterminer les valeurs exactes de $\\cos\\dfrac{\\pi}{12}$ et $\\sin\\dfrac{\\pi}{12}$.\n5. Calculer $z_1^{\\,6}$ à l'aide de la formule de Moivre et donner le résultat sous forme algébrique.\n6. Déterminer et caractériser l'ensemble des points $M$ d'affixe $z$ tels que $|z-z_1|=2$.",
       "corrige": [
@@ -146,6 +146,454 @@
         "6. On écrit $|z-z_1|=AM$ où $A$ est le point d'affixe $z_1=\\sqrt3+i$, soit $A(\\sqrt3\\,;1)$. L'égalité $AM=2$ caractérise le cercle de centre $A(\\sqrt3\\,;1)$ et de rayon $2$. (Remarque : $OA=|z_1|=2$, donc ce cercle passe par l'origine $O$.)"
       ],
       "reponse": "$z_1=2\\,e^{i\\pi/6}$, $z_2=\\sqrt2\\,e^{i\\pi/4}$ et $Z=\\dfrac{\\sqrt2}{2}\\,e^{i\\pi/12}$ ; $\\cos\\dfrac{\\pi}{12}=\\dfrac{\\sqrt6+\\sqrt2}{4}$ et $\\sin\\dfrac{\\pi}{12}=\\dfrac{\\sqrt6-\\sqrt2}{4}$ ; $z_1^{\\,6}=-64$ ; l'ensemble cherché est le cercle de centre $A(\\sqrt3\\,;1)$ et de rayon $2$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "affixe",
+      "enonce": "Donner les coordonnées du point $M$ d'affixe $z_M=-2+5i$, puis l'affixe du point $N(0\\,;-3)$.",
+      "corrige": [
+        "Le point d'affixe $a+ib$ a pour coordonnées $(a\\,;b)$ : ici $a=-2$ et $b=5$.",
+        "Le point $N(0\\,;-3)$ a pour affixe $0+(-3)i=-3i$ : c'est un imaginaire pur."
+      ],
+      "reponse": "$M(-2\\,;5)$ et $z_N=-3i$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "affixe",
+      "enonce": "Sur quel axe du plan complexe se trouve le point d'affixe $4i$ ? Et celui d'affixe $7$ ?",
+      "corrige": [
+        "Un point d'affixe imaginaire pure ($a=0$) est sur l'axe des ordonnées, appelé axe des imaginaires purs.",
+        "Un point d'affixe réelle ($b=0$) est sur l'axe des abscisses, appelé axe des réels."
+      ],
+      "reponse": "$4i$ : axe des imaginaires purs (ordonnées) ; $7$ : axe des réels (abscisses)."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "affixe",
+      "enonce": "On donne $z_A=1+i$, $z_B=3-2i$ et $z_C=-1+4i$. Déterminer l'affixe du point $D$ tel que $ABCD$ soit un parallélogramme.",
+      "corrige": [
+        "$ABCD$ est un parallélogramme si et seulement si $\\overrightarrow{AB}=\\overrightarrow{DC}$, c'est-à-dire $z_B-z_A=z_C-z_D$.",
+        "D'où $z_D=z_A+z_C-z_B=(1+i)+(-1+4i)-(3-2i)=-3+7i$.",
+        "Vérification : $z_B-z_A=2-3i$ et $z_C-z_D=(-1+4i)-(-3+7i)=2-3i$."
+      ],
+      "reponse": "$z_D=-3+7i$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "affixe",
+      "enonce": "Le milieu $I$ du segment $[AB]$ a pour affixe $z_I=2+i$ et le point $A$ a pour affixe $z_A=-1+3i$. Calculer l'affixe de $B$.",
+      "corrige": [
+        "On a $z_I=\\dfrac{z_A+z_B}{2}$, donc $z_B=2z_I-z_A$.",
+        "$z_B=2(2+i)-(-1+3i)=4+2i+1-3i=5-i$."
+      ],
+      "reponse": "$z_B=5-i$."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "affixe",
+      "enonce": "On donne $z_A=1-i$ et $z_B=2+i$. Déterminer l'affixe du point $C$ tel que $\\overrightarrow{AC}=2\\overrightarrow{AB}$.",
+      "corrige": [
+        "En affixes, la relation s'écrit $z_C-z_A=2(z_B-z_A)$.",
+        "$z_B-z_A=(2+i)-(1-i)=1+2i$, donc $z_C=z_A+2(1+2i)=1-i+2+4i=3+3i$."
+      ],
+      "reponse": "$z_C=3+3i$."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "module",
+      "enonce": "Calculer le module de $z=5+12i$.",
+      "corrige": [
+        "$|z|=\\sqrt{a^2+b^2}=\\sqrt{5^2+12^2}=\\sqrt{25+144}=\\sqrt{169}$."
+      ],
+      "reponse": "$|5+12i|=13$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "module",
+      "enonce": "Calculer $|-3i|$ et $|-7|$, puis interpréter ces résultats comme des distances.",
+      "corrige": [
+        "$|-3i|=\\sqrt{0^2+(-3)^2}=3$ et $|-7|=\\sqrt{(-7)^2+0^2}=7$.",
+        "Le module est la distance de l'origine $O$ au point image : les points d'affixes $-3i$ et $-7$ sont respectivement à $3$ et à $7$ unités de $O$."
+      ],
+      "reponse": "$|-3i|=3$ et $|-7|=7$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "module",
+      "enonce": "Sans développer le produit, calculer le module de $z=(3+4i)(1-i)$.",
+      "corrige": [
+        "Le module d'un produit est le produit des modules : $|z|=|3+4i|\\times|1-i|$.",
+        "$|3+4i|=\\sqrt{9+16}=5$ et $|1-i|=\\sqrt{1+1}=\\sqrt2$."
+      ],
+      "reponse": "$|z|=5\\sqrt2$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "module",
+      "enonce": "Sans calculer le quotient, déterminer le module de $z=\\dfrac{2+i}{1-2i}$.",
+      "corrige": [
+        "Le module d'un quotient est le quotient des modules : $|z|=\\dfrac{|2+i|}{|1-2i|}$.",
+        "$|2+i|=\\sqrt{4+1}=\\sqrt5$ et $|1-2i|=\\sqrt{1+4}=\\sqrt5$, donc $|z|=1$.",
+        "Remarque : on peut vérifier que $z=i$, qui est bien de module $1$."
+      ],
+      "reponse": "$|z|=1$."
+    },
+    {
+      "id": 20,
+      "difficulte": "intermediaire",
+      "notion": "module",
+      "enonce": "Calculer le module de $z=\\big(1-i\\sqrt3\\big)^5$ sans développer la puissance.",
+      "corrige": [
+        "On utilise $|z^n|=|z|^n$.",
+        "$\\left|1-i\\sqrt3\\right|=\\sqrt{1+3}=2$, donc $|z|=2^5$."
+      ],
+      "reponse": "$|z|=32$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "module",
+      "enonce": "Un élève affirme : « pour tous complexes $z$ et $z'$, $|z+z'|=|z|+|z'|$ ». Tester avec $z=3+4i$ et $z'=-3+4i$, puis conclure.",
+      "corrige": [
+        "$|z|=|z'|=\\sqrt{9+16}=5$, donc $|z|+|z'|=10$.",
+        "$z+z'=8i$, donc $|z+z'|=8$.",
+        "$8\\neq10$ : l'affirmation est fausse. Le module ne se répartit pas sur une somme ; on a seulement $|z+z'|\\leqslant|z|+|z'|$."
+      ],
+      "reponse": "Affirmation fausse : $|z+z'|=8$ alors que $|z|+|z'|=10$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "module",
+      "enonce": "Soit $z=4-3i$. Calculer $z\\bar z$ et en déduire $|z|$.",
+      "corrige": [
+        "$z\\bar z=(4-3i)(4+3i)=4^2-(3i)^2=16+9=25$.",
+        "Comme $|z|^2=z\\bar z$ et qu'un module est positif, $|z|=\\sqrt{25}=5$."
+      ],
+      "reponse": "$z\\bar z=25$ et $|z|=5$."
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "module",
+      "enonce": "On considère les points $A$, $B$, $C$ d'affixes $z_A=1$, $z_B=4+4i$ et $z_C=-3+3i$. Calculer les longueurs $AB$, $AC$ et $BC$, puis déterminer la nature du triangle $ABC$.",
+      "corrige": [
+        "$AB=|z_B-z_A|=|3+4i|=5$ et $AC=|z_C-z_A|=|-4+3i|=5$.",
+        "$BC=|z_C-z_B|=|-7-i|=\\sqrt{49+1}=\\sqrt{50}=5\\sqrt2$.",
+        "$AB=AC$ : le triangle est isocèle en $A$. De plus $AB^2+AC^2=25+25=50=BC^2$ : d'après la réciproque du théorème de Pythagore, il est rectangle en $A$."
+      ],
+      "reponse": "$AB=AC=5$, $BC=5\\sqrt2$ : triangle rectangle isocèle en $A$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "ensemble-u",
+      "enonce": "Parmi les complexes $1+i$, $\\dfrac{\\sqrt3}{2}-\\dfrac{1}{2}i$, $-i$ et $\\dfrac{3+4i}{5}$, lesquels appartiennent à $\\mathbb U$ ?",
+      "corrige": [
+        "Un complexe appartient à $\\mathbb U$ si et seulement si son module vaut $1$.",
+        "$|1+i|=\\sqrt2$ ; $\\left|\\dfrac{\\sqrt3}{2}-\\dfrac12 i\\right|=\\sqrt{\\dfrac34+\\dfrac14}=1$ ; $|-i|=1$ ; $\\left|\\dfrac{3+4i}{5}\\right|=\\dfrac{5}{5}=1$."
+      ],
+      "reponse": "$\\dfrac{\\sqrt3}{2}-\\dfrac12 i$, $-i$ et $\\dfrac{3+4i}{5}$ (pas $1+i$)."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "ensemble-u",
+      "enonce": "On pose $z=\\dfrac35+\\dfrac45 i$. Vérifier que $z\\in\\mathbb U$, puis donner $\\dfrac1z$ sans effectuer de division.",
+      "corrige": [
+        "$|z|^2=\\dfrac{9}{25}+\\dfrac{16}{25}=1$, donc $|z|=1$ et $z\\in\\mathbb U$.",
+        "Pour $z\\in\\mathbb U$, on a $\\dfrac1z=\\bar z$."
+      ],
+      "reponse": "$\\dfrac1z=\\bar z=\\dfrac35-\\dfrac45 i$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "ensemble-u",
+      "enonce": "Sans calculer de module, justifier que le produit $i\\left(\\dfrac35+\\dfrac45 i\\right)$ appartient à $\\mathbb U$, puis calculer ce produit.",
+      "corrige": [
+        "$i\\in\\mathbb U$ et $\\dfrac35+\\dfrac45 i\\in\\mathbb U$ (module $1$). Or $\\mathbb U$ est stable par produit : le produit est dans $\\mathbb U$.",
+        "$i\\left(\\dfrac35+\\dfrac45 i\\right)=\\dfrac35 i+\\dfrac45 i^2=-\\dfrac45+\\dfrac35 i$."
+      ],
+      "reponse": "Le produit vaut $-\\dfrac45+\\dfrac35 i$ et appartient à $\\mathbb U$."
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "ensemble-u",
+      "enonce": "Soit $z\\in\\mathbb U$ avec $z\\neq1$. En utilisant $\\bar z=\\dfrac1z$, montrer que $Z=\\dfrac{z+1}{z-1}$ est un imaginaire pur.",
+      "corrige": [
+        "$\\bar Z=\\dfrac{\\bar z+1}{\\bar z-1}=\\dfrac{\\frac1z+1}{\\frac1z-1}$. On multiplie numérateur et dénominateur par $z$ : $\\bar Z=\\dfrac{1+z}{1-z}$.",
+        "Donc $\\bar Z=-\\dfrac{z+1}{z-1}=-Z$.",
+        "Un complexe égal à l'opposé de son conjugué a une partie réelle nulle : $Z$ est imaginaire pur. (Exemple : pour $z=i$, on trouve $Z=-i$.)"
+      ],
+      "reponse": "$\\bar Z=-Z$, donc $Z$ est un imaginaire pur."
+    },
+    {
+      "id": 28,
+      "difficulte": "decouverte",
+      "notion": "argument",
+      "enonce": "Donner un argument de chacun des complexes $5$, $-2$, $3i$ et $-4i$.",
+      "corrige": [
+        "On place les points : $5$ est sur la demi-droite des réels positifs, $-2$ sur celle des réels négatifs, $3i$ sur la demi-droite des imaginaires de partie imaginaire positive, $-4i$ sur celle de partie imaginaire négative.",
+        "Les arguments sont donnés modulo $2\\pi$."
+      ],
+      "reponse": "$\\arg(5)=0$, $\\arg(-2)=\\pi$, $\\arg(3i)=\\dfrac\\pi2$, $\\arg(-4i)=-\\dfrac\\pi2$ (modulo $2\\pi$)."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "argument",
+      "enonce": "Déterminer un argument de $z=-1+i$.",
+      "corrige": [
+        "$|z|=\\sqrt{1+1}=\\sqrt2$.",
+        "$\\cos\\theta=-\\dfrac{1}{\\sqrt2}$ et $\\sin\\theta=\\dfrac{1}{\\sqrt2}$ : cosinus négatif et sinus positif, donc $\\theta=\\dfrac{3\\pi}{4}$."
+      ],
+      "reponse": "$\\arg(-1+i)=\\dfrac{3\\pi}{4}$ (modulo $2\\pi$)."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "argument",
+      "enonce": "Déterminer un argument de $z=-\\sqrt3-i$.",
+      "corrige": [
+        "$|z|=\\sqrt{3+1}=2$.",
+        "$\\cos\\theta=-\\dfrac{\\sqrt3}{2}$ et $\\sin\\theta=-\\dfrac12$ : les deux sont négatifs, donc $\\theta=-\\dfrac{5\\pi}{6}$."
+      ],
+      "reponse": "$\\arg(-\\sqrt3-i)=-\\dfrac{5\\pi}{6}$ (modulo $2\\pi$)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "argument",
+      "enonce": "Un élève écrit : « pour $z=1-i\\sqrt3$, on a $|z|=2$ et $\\cos\\theta=\\dfrac12$, donc $\\arg(z)=\\dfrac\\pi3$ ». Trouver et corriger l'erreur.",
+      "corrige": [
+        "Le cosinus seul ne suffit pas : $\\cos\\theta=\\dfrac12$ donne $\\theta=\\dfrac\\pi3$ ou $\\theta=-\\dfrac\\pi3$.",
+        "Il faut aussi le sinus : $\\sin\\theta=\\dfrac{-\\sqrt3}{2}<0$ (partie imaginaire négative), donc $\\theta=-\\dfrac\\pi3$."
+      ],
+      "reponse": "$\\arg(1-i\\sqrt3)=-\\dfrac\\pi3$ (modulo $2\\pi$)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "argument",
+      "enonce": "On sait que $z\\neq0$ et $\\arg(z)=\\dfrac\\pi5$. Donner un argument de $\\bar z$, de $-z$, de $z^3$ et de $\\dfrac1z$.",
+      "corrige": [
+        "$\\arg(\\bar z)=-\\arg z$ et $\\arg(-z)=\\arg z+\\pi$.",
+        "$\\arg(z^3)=3\\arg z$ et $\\arg\\left(\\dfrac1z\\right)=\\arg(1)-\\arg(z)=-\\arg z$."
+      ],
+      "reponse": "$\\arg(\\bar z)=-\\dfrac\\pi5$, $\\arg(-z)=\\dfrac{6\\pi}{5}$, $\\arg(z^3)=\\dfrac{3\\pi}{5}$, $\\arg\\left(\\dfrac1z\\right)=-\\dfrac\\pi5$ (modulo $2\\pi$)."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "argument",
+      "enonce": "Sachant que $\\arg(-1+i)=\\dfrac{3\\pi}{4}$, déterminer un argument de $(-1+i)^6$, puis vérifier par le calcul.",
+      "corrige": [
+        "$\\arg\\big((-1+i)^6\\big)=6\\times\\dfrac{3\\pi}{4}=\\dfrac{9\\pi}{2}=4\\pi+\\dfrac\\pi2$, soit $\\dfrac\\pi2$ modulo $2\\pi$.",
+        "Vérification : $(-1+i)^2=1-2i+i^2=-2i$, donc $(-1+i)^6=(-2i)^3=-8i^3=8i$, d'argument $\\dfrac\\pi2$."
+      ],
+      "reponse": "$\\arg\\big((-1+i)^6\\big)=\\dfrac\\pi2$ (modulo $2\\pi$) ; $(-1+i)^6=8i$."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "argument",
+      "enonce": "Déterminer les entiers naturels $n\\geqslant1$ pour lesquels $(1+i)^n$ est un nombre réel.",
+      "corrige": [
+        "$\\arg\\big((1+i)^n\\big)=n\\dfrac\\pi4$. Un complexe non nul est réel si et seulement si son argument vaut $0$ ou $\\pi$ modulo $2\\pi$, c'est-à-dire est un multiple de $\\pi$.",
+        "$n\\dfrac\\pi4=k\\pi$ avec $k$ entier équivaut à $n=4k$.",
+        "Exemples : $(1+i)^4=-4$ et $(1+i)^8=16$."
+      ],
+      "reponse": "$(1+i)^n$ est réel si et seulement si $n$ est un multiple de $4$."
+    },
+    {
+      "id": 35,
+      "difficulte": "decouverte",
+      "notion": "forme-exponentielle",
+      "enonce": "Écrire sous forme algébrique : $3e^{i\\pi/2}$, $2e^{i\\pi}$ et $e^{-i\\pi/2}$.",
+      "corrige": [
+        "On utilise $e^{i\\pi/2}=i$, $e^{i\\pi}=-1$ et $e^{-i\\pi/2}=-i$."
+      ],
+      "reponse": "$3e^{i\\pi/2}=3i$, $2e^{i\\pi}=-2$, $e^{-i\\pi/2}=-i$."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "forme-exponentielle",
+      "enonce": "Écrire sous forme exponentielle les complexes $-5$, $2i$ et $-3i$.",
+      "corrige": [
+        "$-5$ a pour module $5$ et pour argument $\\pi$ ; $2i$ a pour module $2$ et pour argument $\\dfrac\\pi2$ ; $-3i$ a pour module $3$ et pour argument $-\\dfrac\\pi2$."
+      ],
+      "reponse": "$-5=5e^{i\\pi}$, $2i=2e^{i\\pi/2}$, $-3i=3e^{-i\\pi/2}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "forme-exponentielle",
+      "enonce": "Écrire $z=4e^{-i\\pi/3}$ sous forme algébrique.",
+      "corrige": [
+        "$z=4\\left(\\cos\\left(-\\dfrac\\pi3\\right)+i\\sin\\left(-\\dfrac\\pi3\\right)\\right)=4\\left(\\dfrac12-i\\dfrac{\\sqrt3}{2}\\right)$."
+      ],
+      "reponse": "$z=2-2\\sqrt3\\,i$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "forme-exponentielle",
+      "enonce": "Écrire $z=-2+2\\sqrt3\\,i$ sous forme exponentielle.",
+      "corrige": [
+        "$|z|=\\sqrt{4+12}=\\sqrt{16}=4$.",
+        "$\\cos\\theta=\\dfrac{-2}{4}=-\\dfrac12$ et $\\sin\\theta=\\dfrac{2\\sqrt3}{4}=\\dfrac{\\sqrt3}{2}$, donc $\\theta=\\dfrac{2\\pi}{3}$."
+      ],
+      "reponse": "$z=4e^{i2\\pi/3}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "forme-exponentielle",
+      "enonce": "On pose $z=2e^{i\\pi/4}$ et $z'=4e^{-i\\pi/12}$. Calculer $zz'$ sous forme exponentielle puis algébrique, et $\\dfrac{z}{z'}$ sous forme exponentielle.",
+      "corrige": [
+        "$zz'=8e^{i(\\pi/4-\\pi/12)}=8e^{i\\pi/6}$ car $\\dfrac\\pi4-\\dfrac\\pi{12}=\\dfrac{3\\pi-\\pi}{12}=\\dfrac\\pi6$.",
+        "$8e^{i\\pi/6}=8\\left(\\dfrac{\\sqrt3}{2}+\\dfrac12 i\\right)=4\\sqrt3+4i$.",
+        "$\\dfrac{z}{z'}=\\dfrac24e^{i(\\pi/4+\\pi/12)}=\\dfrac12e^{i\\pi/3}$ car $\\dfrac\\pi4+\\dfrac\\pi{12}=\\dfrac{4\\pi}{12}=\\dfrac\\pi3$."
+      ],
+      "reponse": "$zz'=8e^{i\\pi/6}=4\\sqrt3+4i$ et $\\dfrac{z}{z'}=\\dfrac12e^{i\\pi/3}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "forme-exponentielle",
+      "enonce": "Soit $z=5e^{i2\\pi/7}$. Donner la forme exponentielle de $\\bar z$ et celle de $\\dfrac1z$.",
+      "corrige": [
+        "Conjuguer change le signe de l'argument et garde le module : $\\bar z=5e^{-i2\\pi/7}$.",
+        "Inverser change le signe de l'argument et inverse le module : $\\dfrac1z=\\dfrac15e^{-i2\\pi/7}$."
+      ],
+      "reponse": "$\\bar z=5e^{-i2\\pi/7}$ et $\\dfrac1z=\\dfrac15e^{-i2\\pi/7}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "forme-exponentielle",
+      "enonce": "Un élève affirme que $z=-3e^{i\\pi/5}$ est sous forme exponentielle, de module $-3$. Corriger, puis donner la forme exponentielle de $z$.",
+      "corrige": [
+        "Un module est toujours positif : l'écriture $re^{i\\theta}$ n'est une forme exponentielle que si $r>0$.",
+        "On écrit $-1=e^{i\\pi}$ : $z=3e^{i\\pi}e^{i\\pi/5}=3e^{i(\\pi+\\pi/5)}=3e^{i6\\pi/5}$.",
+        "On peut aussi prendre l'argument $\\dfrac{6\\pi}{5}-2\\pi=-\\dfrac{4\\pi}{5}$."
+      ],
+      "reponse": "$|z|=3$ et $z=3e^{i6\\pi/5}$ (ou $3e^{-i4\\pi/5}$)."
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "moivre-euler",
+      "enonce": "À l'aide de la formule de Moivre, calculer $\\left(\\cos\\dfrac\\pi8+i\\sin\\dfrac\\pi8\\right)^4$.",
+      "corrige": [
+        "Formule de Moivre : $(\\cos\\theta+i\\sin\\theta)^4=\\cos(4\\theta)+i\\sin(4\\theta)$.",
+        "Avec $\\theta=\\dfrac\\pi8$ : $4\\theta=\\dfrac\\pi2$, donc le résultat est $\\cos\\dfrac\\pi2+i\\sin\\dfrac\\pi2=i$."
+      ],
+      "reponse": "$i$"
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "moivre-euler",
+      "enonce": "En utilisant la formule de Moivre avec $n=3$, exprimer $\\cos(3\\theta)$ en fonction de $\\cos\\theta$ seulement.",
+      "corrige": [
+        "On note $c=\\cos\\theta$ et $s=\\sin\\theta$. $(c+is)^3=c^3+3c^2(is)+3c(is)^2+(is)^3=(c^3-3cs^2)+i(3c^2s-s^3)$.",
+        "D'après Moivre, la partie réelle vaut $\\cos(3\\theta)$ : $\\cos(3\\theta)=c^3-3cs^2$.",
+        "Avec $s^2=1-c^2$ : $\\cos(3\\theta)=c^3-3c(1-c^2)=4c^3-3c$."
+      ],
+      "reponse": "$\\cos(3\\theta)=4\\cos^3\\theta-3\\cos\\theta$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "moivre-euler",
+      "enonce": "À l'aide d'une formule d'Euler, linéariser $\\sin^2\\theta$.",
+      "corrige": [
+        "$\\sin\\theta=\\dfrac{e^{i\\theta}-e^{-i\\theta}}{2i}$, donc $\\sin^2\\theta=\\dfrac{\\left(e^{i\\theta}-e^{-i\\theta}\\right)^2}{(2i)^2}=\\dfrac{e^{2i\\theta}-2+e^{-2i\\theta}}{-4}$.",
+        "Or $e^{2i\\theta}+e^{-2i\\theta}=2\\cos(2\\theta)$, donc $\\sin^2\\theta=\\dfrac{2\\cos(2\\theta)-2}{-4}=\\dfrac{1-\\cos(2\\theta)}{2}$."
+      ],
+      "reponse": "$\\sin^2\\theta=\\dfrac{1-\\cos(2\\theta)}{2}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "moivre-euler",
+      "enonce": "Écrire $(1+i)^{10}$ sous forme algébrique en passant par la forme exponentielle.",
+      "corrige": [
+        "$1+i=\\sqrt2\\,e^{i\\pi/4}$, donc $(1+i)^{10}=(\\sqrt2)^{10}e^{i10\\pi/4}=32e^{i5\\pi/2}$.",
+        "$\\dfrac{5\\pi}{2}=2\\pi+\\dfrac\\pi2$, donc $e^{i5\\pi/2}=e^{i\\pi/2}=i$."
+      ],
+      "reponse": "$(1+i)^{10}=32i$."
+    },
+    {
+      "id": 46,
+      "difficulte": "application",
+      "notion": "interpretation-geometrique",
+      "enonce": "Déterminer l'ensemble des points $M$ d'affixe $z$ tels que $|z-2+i|=3$.",
+      "corrige": [
+        "On écrit $z-2+i=z-(2-i)$. En notant $\\Omega$ le point d'affixe $2-i$, on a $|z-(2-i)|=\\Omega M$.",
+        "La condition $\\Omega M=3$ caractérise le cercle de centre $\\Omega$ et de rayon $3$."
+      ],
+      "reponse": "Le cercle de centre $\\Omega(2\\,;-1)$ et de rayon $3$."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "interpretation-geometrique",
+      "enonce": "Déterminer l'ensemble des points $M$ d'affixe $z$ tels que $|z-2i|=|z+4|$, puis en donner une équation.",
+      "corrige": [
+        "Avec $A$ d'affixe $2i$, soit $A(0\\,;2)$, et $B$ d'affixe $-4$, soit $B(-4\\,;0)$, la condition s'écrit $AM=BM$ : c'est la médiatrice de $[AB]$.",
+        "Avec $z=x+iy$ : $x^2+(y-2)^2=(x+4)^2+y^2$, soit $-4y+4=8x+16$, d'où $y=-2x-3$.",
+        "Vérification : le milieu $(-2\\,;1)$ de $[AB]$ vérifie bien $1=-2\\times(-2)-3$."
+      ],
+      "reponse": "La médiatrice de $[AB]$ avec $A(0\\,;2)$ et $B(-4\\,;0)$ : droite d'équation $y=-2x-3$."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "interpretation-geometrique",
+      "enonce": "On donne $z_A=1$, $z_B=2+i$ et $z_C=1+2i$. Calculer $\\dfrac{z_C-z_A}{z_B-z_A}$, puis en déduire une mesure de l'angle $\\big(\\overrightarrow{AB},\\overrightarrow{AC}\\big)$ et le rapport $\\dfrac{AC}{AB}$.",
+      "corrige": [
+        "$z_C-z_A=2i$ et $z_B-z_A=1+i$, donc $\\dfrac{2i}{1+i}=\\dfrac{2i(1-i)}{(1+i)(1-i)}=\\dfrac{2i+2}{2}=1+i$.",
+        "$1+i=\\sqrt2\\,e^{i\\pi/4}$ : l'argument donne l'angle $\\big(\\overrightarrow{AB},\\overrightarrow{AC}\\big)=\\dfrac\\pi4$ et le module donne $\\dfrac{AC}{AB}=\\sqrt2$."
+      ],
+      "reponse": "Le quotient vaut $1+i$ : angle $\\dfrac\\pi4$ (modulo $2\\pi$) et $\\dfrac{AC}{AB}=\\sqrt2$."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "interpretation-geometrique",
+      "enonce": "On donne $z_A=1+i$, $z_B=2+3i$ et $z_C=4+7i$. En calculant $\\dfrac{z_C-z_A}{z_B-z_A}$, montrer que les points $A$, $B$, $C$ sont alignés.",
+      "corrige": [
+        "$z_C-z_A=3+6i$ et $z_B-z_A=1+2i$, donc $\\dfrac{3+6i}{1+2i}=\\dfrac{3(1+2i)}{1+2i}=3$.",
+        "Le quotient est un réel non nul : son argument vaut $0$ modulo $\\pi$, donc l'angle $\\big(\\overrightarrow{AB},\\overrightarrow{AC}\\big)$ est nul. Les vecteurs sont colinéaires ($\\overrightarrow{AC}=3\\overrightarrow{AB}$) : $A$, $B$, $C$ sont alignés."
+      ],
+      "reponse": "Le quotient vaut $3$ (réel) : $A$, $B$, $C$ sont alignés."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "On considère les points $A$, $B$, $C$ d'affixes $z_A=2$, $z_B=2e^{i2\\pi/3}$ et $z_C=\\overline{z_B}$.\n\n1. Montrer que $A$, $B$, $C$ sont sur un même cercle de centre $O$ dont on donnera le rayon.\n2. Écrire $z_B$ et $z_C$ sous forme algébrique.\n3. Calculer $AB$, $AC$ et $BC$, puis conclure sur la nature du triangle $ABC$.\n4. Calculer $\\dfrac{z_C-z_A}{z_B-z_A}$ et en déduire une mesure de l'angle $\\big(\\overrightarrow{AB},\\overrightarrow{AC}\\big)$.",
+      "corrige": [
+        "1. $|z_A|=2$, $|z_B|=2$ et $|z_C|=|\\overline{z_B}|=|z_B|=2$ : les trois points sont sur le cercle de centre $O$ et de rayon $2$.",
+        "2. $z_B=2\\left(-\\dfrac12+i\\dfrac{\\sqrt3}{2}\\right)=-1+i\\sqrt3$ et $z_C=-1-i\\sqrt3$.",
+        "3. $AB=|-3+i\\sqrt3|=\\sqrt{9+3}=2\\sqrt3$, $AC=|-3-i\\sqrt3|=2\\sqrt3$ et $BC=|-2i\\sqrt3|=2\\sqrt3$ : le triangle $ABC$ est équilatéral.",
+        "4. $\\dfrac{-3-i\\sqrt3}{-3+i\\sqrt3}=\\dfrac{(-3-i\\sqrt3)(-3-i\\sqrt3)}{9+3}=\\dfrac{6+6i\\sqrt3}{12}=\\dfrac12+i\\dfrac{\\sqrt3}{2}=e^{i\\pi/3}$, donc $\\big(\\overrightarrow{AB},\\overrightarrow{AC}\\big)=\\dfrac\\pi3$."
+      ],
+      "reponse": "Cercle de centre $O$, de rayon $2$ ; $z_B=-1+i\\sqrt3$, $z_C=-1-i\\sqrt3$ ; $AB=AC=BC=2\\sqrt3$ (équilatéral) ; le quotient vaut $e^{i\\pi/3}$, angle $\\dfrac\\pi3$."
     }
   ]
 }

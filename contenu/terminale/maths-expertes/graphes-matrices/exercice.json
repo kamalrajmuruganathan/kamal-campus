@@ -133,7 +133,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Une ville dispose de trois stations de vélos en libre-service $A$, $B$, $C$ et d'une station-relais $D$. Les pistes cyclables reliant directement deux stations sont : $A\\!-\\!B$, $A\\!-\\!C$, $A\\!-\\!D$, $B\\!-\\!C$. On numérote les sommets dans l'ordre $A(1), B(2), C(3), D(4)$.\n\n**Partie A — Le réseau.**\n1. Donner l'ordre du graphe et le degré de chaque station, puis vérifier le théorème des degrés. Le réseau est-il connexe ?\n2. Écrire la matrice d'adjacence $M$ du graphe.\n3. Calculer $M^{2}$. En déduire le nombre de trajets de longueur $2$ (deux pistes empruntées) reliant $A$ à $B$, et interpréter le coefficient $\\big(M^{2}\\big)_{11}$.\n\n**Partie B — Les usagers.** Un usager se déplace à vélo (état $V$) ou en voiture (état $T$) un jour donné. S'il roule à vélo, il recommence le lendemain avec probabilité $0{,}8$. S'il prend la voiture, il passe au vélo le lendemain avec probabilité $0{,}3$. Le premier jour il roule à vélo.\n4. Écrire la matrice de transition $P$ (états $V$ puis $T$) et vérifier ses lignes. Calculer les distributions $\\pi_1$ et $\\pi_2$.\n5. Déterminer l'état stable, c'est-à-dire la distribution invariante $\\pi=(x\\ \\ y)$.\n6. Interpréter ce résultat pour la fréquentation à long terme.",
       "corrige": [
@@ -145,6 +145,459 @@
         "6. À long terme, la distribution converge vers l'état stable $(0{,}6\\ \\ 0{,}4)$ indépendamment du jour de départ : environ $60\\,\\%$ des usagers rouleront à vélo et $40\\,\\%$ en voiture."
       ],
       "reponse": "Partie A : ordre $4$, degrés $3,2,2,1$ (somme $8=2\\times4$), réseau connexe ; $M^{2}=\\begin{pmatrix} 3&1&1&0 \\\\ 1&2&1&1 \\\\ 1&1&2&1 \\\\ 0&1&1&1 \\end{pmatrix}$, $1$ trajet de longueur $2$ de $A$ à $B$, $\\big(M^{2}\\big)_{11}=3$. Partie B : $P=\\begin{pmatrix} 0{,}8 & 0{,}2 \\\\ 0{,}3 & 0{,}7\\end{pmatrix}$, $\\pi_1=(0{,}8\\ \\ 0{,}2)$, $\\pi_2=(0{,}7\\ \\ 0{,}3)$, état stable $(0{,}6\\ \\ 0{,}4)$ : à terme $60\\,\\%$ à vélo, $40\\,\\%$ en voiture."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "graphes",
+      "enonce": "Un graphe a pour sommets $A$, $B$, $C$, $D$, $E$ et pour arêtes $AB$, $BC$, $CD$, $DE$, $EA$. Donner son ordre et le degré de chaque sommet.",
+      "corrige": [
+        "L'ordre est le nombre de sommets : $5$.",
+        "Chaque sommet est extrémité de deux arêtes (par exemple $A$ : $AB$ et $EA$), donc chaque degré vaut $2$.",
+        "Contrôle : la somme des degrés $5\\times2=10$ est bien le double du nombre d'arêtes ($5$)."
+      ],
+      "reponse": "Ordre $5$ ; tous les sommets sont de degré $2$."
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "graphes",
+      "enonce": "Un graphe a six sommets, de degrés $3$, $3$, $2$, $2$, $1$ et $1$. Combien a-t-il d'arêtes ?",
+      "corrige": [
+        "D'après le théorème des degrés, la somme des degrés est le double du nombre d'arêtes.",
+        "$3+3+2+2+1+1=12$, donc le nombre d'arêtes est $\\dfrac{12}{2}=6$."
+      ],
+      "reponse": "$6$ arêtes."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "graphes",
+      "enonce": "Existe-t-il un graphe à cinq sommets dont les degrés sont $3$, $3$, $3$, $2$ et $2$ ? Justifier.",
+      "corrige": [
+        "La somme des degrés serait $3+3+3+2+2=13$.",
+        "Or cette somme vaut toujours deux fois le nombre d'arêtes : elle est paire. $13$ étant impair, un tel graphe n'existe pas.",
+        "Autre formulation : il y aurait trois sommets de degré impair, alors que leur nombre est toujours pair."
+      ],
+      "reponse": "Non : la somme des degrés ($13$) serait impaire."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "graphes",
+      "enonce": "Dans le graphe d'arêtes $AB$, $BC$, $CD$ et $AC$, donner une chaîne de longueur $3$ allant de $A$ à $D$, puis une chaîne de longueur $2$ allant de $A$ à $D$.",
+      "corrige": [
+        "La longueur d'une chaîne est son nombre d'arêtes.",
+        "$A-B-C-D$ utilise les arêtes $AB$, $BC$, $CD$ : longueur $3$.",
+        "$A-C-D$ utilise les arêtes $AC$, $CD$ : longueur $2$."
+      ],
+      "reponse": "Longueur $3$ : $A-B-C-D$ ; longueur $2$ : $A-C-D$."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "graphes",
+      "enonce": "Un graphe a pour sommets $1$, $2$, $3$, $4$, $5$ et pour arêtes $1-2$, $2-3$ et $4-5$. Est-il connexe ? Si non, proposer une seule arête à ajouter pour qu'il le devienne.",
+      "corrige": [
+        "Depuis le sommet $1$, on atteint $2$ et $3$, mais aucune chaîne ne mène à $4$ ou à $5$ : le graphe n'est pas connexe.",
+        "Il est formé de deux « morceaux » $\\{1,2,3\\}$ et $\\{4,5\\}$. Une arête reliant un sommet de chacun suffit, par exemple $3-4$."
+      ],
+      "reponse": "Non connexe ; en ajoutant par exemple l'arête $3-4$, il devient connexe."
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "graphes",
+      "enonce": "Quatre ordinateurs sont reliés deux à deux par un câble (chaque ordinateur est relié à tous les autres). En utilisant le théorème des degrés, calculer le nombre de câbles.",
+      "corrige": [
+        "On modélise par un graphe : les ordinateurs sont les sommets, les câbles les arêtes. Chaque sommet est relié aux $3$ autres : il est de degré $3$.",
+        "Somme des degrés : $4\\times3=12$, donc le nombre d'arêtes est $\\dfrac{12}{2}=6$."
+      ],
+      "reponse": "$6$ câbles."
+    },
+    {
+      "id": 17,
+      "difficulte": "approfondissement",
+      "notion": "graphes",
+      "enonce": "Dans un club de $7$ personnes, est-il possible que chaque personne ait serré la main d'exactement $3$ autres membres ? Justifier à l'aide d'un graphe.",
+      "corrige": [
+        "On représente les personnes par les sommets et les poignées de main par les arêtes. Chaque sommet serait de degré $3$.",
+        "La somme des degrés vaudrait $7\\times3=21$, nombre impair.",
+        "Or la somme des degrés est le double du nombre d'arêtes, donc paire : la situation est impossible."
+      ],
+      "reponse": "Impossible : la somme des degrés ($21$) serait impaire."
+    },
+    {
+      "id": 18,
+      "difficulte": "decouverte",
+      "notion": "matrices",
+      "enonce": "Donner la taille de la matrice $A=\\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{pmatrix}$ ainsi que son coefficient $a_{23}$.",
+      "corrige": [
+        "$A$ a $2$ lignes et $3$ colonnes : elle est de taille $2\\times3$.",
+        "$a_{23}$ est le coefficient situé ligne $2$, colonne $3$."
+      ],
+      "reponse": "Taille $2\\times3$ ; $a_{23}=6$."
+    },
+    {
+      "id": 19,
+      "difficulte": "decouverte",
+      "notion": "matrices",
+      "enonce": "On pose $A=\\begin{pmatrix} 1 & 3 \\\\ -1 & 2 \\end{pmatrix}$ et $B=\\begin{pmatrix} 4 & 0 \\\\ 1 & -2 \\end{pmatrix}$. Calculer $2A-B$.",
+      "corrige": [
+        "On multiplie chaque coefficient de $A$ par $2$ : $2A=\\begin{pmatrix} 2 & 6 \\\\ -2 & 4 \\end{pmatrix}$.",
+        "On soustrait $B$ terme à terme."
+      ],
+      "reponse": "$2A-B=\\begin{pmatrix} -2 & 6 \\\\ -3 & 6 \\end{pmatrix}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "matrices",
+      "enonce": "$A$ est une matrice de taille $2\\times3$ et $B$ une matrice de taille $3\\times1$. Le produit $AB$ existe-t-il ? Si oui, quelle est sa taille ? Même question pour $BA$.",
+      "corrige": [
+        "$AB$ existe car $A$ a $3$ colonnes et $B$ a $3$ lignes ; le résultat a le nombre de lignes de $A$ et le nombre de colonnes de $B$ : $2\\times1$.",
+        "$BA$ n'existe pas : $B$ a $1$ colonne mais $A$ a $2$ lignes."
+      ],
+      "reponse": "$AB$ existe, de taille $2\\times1$ ; $BA$ n'existe pas."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "matrices",
+      "enonce": "Calculer le produit de la matrice ligne $\\begin{pmatrix} 1 & 2 & 3 \\end{pmatrix}$ par la matrice colonne $\\begin{pmatrix} 4 \\\\ 5 \\\\ 6 \\end{pmatrix}$.",
+      "corrige": [
+        "Le produit d'une matrice $1\\times3$ par une matrice $3\\times1$ est une matrice $1\\times1$.",
+        "Son unique coefficient vaut $1\\times4+2\\times5+3\\times6=4+10+18=32$."
+      ],
+      "reponse": "$\\begin{pmatrix} 32 \\end{pmatrix}$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "matrices",
+      "enonce": "On pose $A=\\begin{pmatrix} 2 & -1 \\\\ 0 & 3 \\end{pmatrix}$ et $X=\\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$. Calculer $AX$.",
+      "corrige": [
+        "Ligne $1$ : $2\\times1+(-1)\\times4=-2$.",
+        "Ligne $2$ : $0\\times1+3\\times4=12$."
+      ],
+      "reponse": "$AX=\\begin{pmatrix} -2 \\\\ 12 \\end{pmatrix}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "matrices",
+      "enonce": "Soit $T=\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$. Calculer $T^{3}$.",
+      "corrige": [
+        "$T^{2}=T\\times T=\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$.",
+        "$T^{3}=T^{2}\\times T=\\begin{pmatrix} 1\\times1+2\\times0 & 1\\times1+2\\times1 \\\\ 0 & 1 \\end{pmatrix}$."
+      ],
+      "reponse": "$T^{3}=\\begin{pmatrix} 1 & 3 \\\\ 0 & 1 \\end{pmatrix}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "matrices",
+      "enonce": "Soit $D=\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$. Calculer $D^{2}$, puis conjecturer et donner $D^{4}$.",
+      "corrige": [
+        "$D^{2}=\\begin{pmatrix} 4 & 0 \\\\ 0 & 9 \\end{pmatrix}$ : pour une matrice diagonale, on élève chaque coefficient diagonal au carré.",
+        "De même $D^{4}$ a pour coefficients diagonaux $2^{4}=16$ et $3^{4}=81$ (on le vérifie avec $D^{4}=D^{2}\\times D^{2}$)."
+      ],
+      "reponse": "$D^{4}=\\begin{pmatrix} 16 & 0 \\\\ 0 & 81 \\end{pmatrix}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "inverse",
+      "enonce": "Montrer que $A=\\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix}$ est inversible et calculer $A^{-1}$.",
+      "corrige": [
+        "$ad-bc=3\\times2-1\\times5=1\\neq0$ : $A$ est inversible.",
+        "$A^{-1}=\\dfrac11\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$."
+      ],
+      "reponse": "$A^{-1}=\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "inverse",
+      "enonce": "La matrice $B=\\begin{pmatrix} 2 & 4 \\\\ 1 & 2 \\end{pmatrix}$ est-elle inversible ?",
+      "corrige": [
+        "On calcule $ad-bc=2\\times2-4\\times1=0$.",
+        "Ce nombre est nul : $B$ n'est pas inversible."
+      ],
+      "reponse": "Non, car $ad-bc=0$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "inverse",
+      "enonce": "Calculer l'inverse de $C=\\begin{pmatrix} 4 & 2 \\\\ 1 & 1 \\end{pmatrix}$.",
+      "corrige": [
+        "$ad-bc=4\\times1-2\\times1=2\\neq0$, donc $C$ est inversible.",
+        "$C^{-1}=\\dfrac12\\begin{pmatrix} 1 & -2 \\\\ -1 & 4 \\end{pmatrix}$."
+      ],
+      "reponse": "$C^{-1}=\\begin{pmatrix} \\frac12 & -1 \\\\ -\\frac12 & 2 \\end{pmatrix}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "inverse",
+      "enonce": "Pour quelles valeurs du réel $m$ la matrice $\\begin{pmatrix} m & 2 \\\\ 3 & m \\end{pmatrix}$ n'est-elle pas inversible ?",
+      "corrige": [
+        "Elle n'est pas inversible si et seulement si $ad-bc=m^2-6=0$.",
+        "$m^2=6$ donne $m=\\sqrt6$ ou $m=-\\sqrt6$."
+      ],
+      "reponse": "$m=-\\sqrt6$ ou $m=\\sqrt6$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "inverse",
+      "enonce": "Résoudre le système $\\begin{cases} 3x+y=5 \\\\ 5x+2y=9 \\end{cases}$ en utilisant l'inverse de la matrice $\\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix}$.",
+      "corrige": [
+        "Le système s'écrit $AX=B$ avec $A=\\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix}$, $X=\\begin{pmatrix} x \\\\ y \\end{pmatrix}$ et $B=\\begin{pmatrix} 5 \\\\ 9 \\end{pmatrix}$.",
+        "$ad-bc=1$, donc $A^{-1}=\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$ et $X=A^{-1}B$ : $x=2\\times5-9=1$ et $y=-5\\times5+3\\times9=2$.",
+        "Vérification : $3+2=5$ et $5+4=9$."
+      ],
+      "reponse": "$(x\\,;y)=(1\\,;2)$."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "inverse",
+      "enonce": "Pour inverser $A=\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$, un élève inverse chaque coefficient et obtient $\\begin{pmatrix} 1 & \\frac12 \\\\ \\frac13 & \\frac14 \\end{pmatrix}$. Expliquer pourquoi c'est faux, puis donner $A^{-1}$.",
+      "corrige": [
+        "L'inverse vérifie $AA^{-1}=I$ ; or le produit matriciel ne se fait pas terme à terme, donc inverser chaque coefficient ne donne pas l'inverse.",
+        "$ad-bc=1\\times4-2\\times3=-2\\neq0$, donc $A^{-1}=-\\dfrac12\\begin{pmatrix} 4 & -2 \\\\ -3 & 1 \\end{pmatrix}$."
+      ],
+      "reponse": "$A^{-1}=\\begin{pmatrix} -2 & 1 \\\\ \\frac32 & -\\frac12 \\end{pmatrix}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "adjacence",
+      "enonce": "Écrire la matrice d'adjacence du graphe de sommets $1$, $2$, $3$ et d'arêtes $1-2$ et $2-3$.",
+      "corrige": [
+        "Le coefficient $m_{ij}$ vaut $1$ si les sommets $i$ et $j$ sont reliés, $0$ sinon.",
+        "Le sommet $2$ est relié à $1$ et à $3$ ; les sommets $1$ et $3$ ne sont pas reliés."
+      ],
+      "reponse": "$M=\\begin{pmatrix} 0 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{pmatrix}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "adjacence",
+      "enonce": "Un graphe a pour matrice d'adjacence $M=\\begin{pmatrix} 0 & 1 & 1 & 0 \\\\ 1 & 0 & 0 & 1 \\\\ 1 & 0 & 0 & 1 \\\\ 0 & 1 & 1 & 0 \\end{pmatrix}$ (sommets $1$ à $4$). Donner la liste de ses arêtes et le degré de chaque sommet.",
+      "corrige": [
+        "On lit les coefficients égaux à $1$ au-dessus de la diagonale : $m_{12}$, $m_{13}$, $m_{24}$, $m_{34}$.",
+        "Le degré d'un sommet est la somme des coefficients de sa ligne : ici $2$ pour chaque sommet."
+      ],
+      "reponse": "Arêtes $1-2$, $1-3$, $2-4$, $3-4$ ; chaque sommet est de degré $2$."
+    },
+    {
+      "id": 33,
+      "difficulte": "decouverte",
+      "notion": "adjacence",
+      "enonce": "Expliquer pourquoi la matrice $\\begin{pmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{pmatrix}$ ne peut pas être la matrice d'adjacence d'un graphe non orienté.",
+      "corrige": [
+        "Dans un graphe non orienté, si $i$ est relié à $j$, alors $j$ est relié à $i$ : la matrice d'adjacence est symétrique ($m_{ij}=m_{ji}$).",
+        "Ici $m_{12}=1$ mais $m_{21}=0$ : la matrice n'est pas symétrique."
+      ],
+      "reponse": "Elle n'est pas symétrique ($m_{12}=1$ mais $m_{21}=0$)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "adjacence",
+      "enonce": "Le triangle de sommets $1$, $2$, $3$ a pour matrice d'adjacence $M=\\begin{pmatrix} 0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0 \\end{pmatrix}$. On admet que $M^{3}=\\begin{pmatrix} 2 & 3 & 3 \\\\ 3 & 2 & 3 \\\\ 3 & 3 & 2 \\end{pmatrix}$. Combien y a-t-il de chemins de longueur $3$ partant du sommet $1$ et y revenant ? Les citer.",
+      "corrige": [
+        "Le nombre cherché est le coefficient $\\big(M^{3}\\big)_{11}=2$.",
+        "Pour revenir en $1$ en trois arêtes, il faut faire le tour du triangle dans un sens ou dans l'autre."
+      ],
+      "reponse": "$2$ chemins : $1-2-3-1$ et $1-3-2-1$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "adjacence",
+      "enonce": "Pour le graphe d'arêtes $1-2$ et $2-3$, calculer $M^{2}$ puis le nombre total de chemins de longueur $2$ dans ce graphe.",
+      "corrige": [
+        "$M=\\begin{pmatrix} 0 & 1 & 0 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 0 \\end{pmatrix}$ et $M^{2}=\\begin{pmatrix} 1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 1 \\end{pmatrix}$.",
+        "Le nombre total de chemins de longueur $2$ est la somme de tous les coefficients de $M^{2}$ : $1+1+2+1+1=6$.",
+        "Ce sont $1-2-1$, $1-2-3$, $2-1-2$, $2-3-2$, $3-2-1$, $3-2-3$."
+      ],
+      "reponse": "$M^{2}=\\begin{pmatrix} 1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 1 \\end{pmatrix}$ ; $6$ chemins de longueur $2$."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "adjacence",
+      "enonce": "Un graphe « en étoile » a un sommet central $1$ relié aux sommets $2$, $3$ et $4$ (et aucune autre arête). À l'aide de $M^{2}$ et de $M^{3}$, déterminer le nombre de chemins de longueur $2$ de $2$ à $3$, et le nombre de chemins de longueur $3$ de $2$ à $1$.",
+      "corrige": [
+        "$M=\\begin{pmatrix} 0 & 1 & 1 & 1 \\\\ 1 & 0 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\end{pmatrix}$, $M^{2}=\\begin{pmatrix} 3 & 0 & 0 & 0 \\\\ 0 & 1 & 1 & 1 \\\\ 0 & 1 & 1 & 1 \\\\ 0 & 1 & 1 & 1 \\end{pmatrix}$.",
+        "$\\big(M^{2}\\big)_{23}=1$ : le seul chemin est $2-1-3$.",
+        "$M^{3}=M^{2}\\times M$ donne $\\big(M^{3}\\big)_{21}=3$ : $2-1-2-1$, $2-1-3-1$ et $2-1-4-1$."
+      ],
+      "reponse": "$1$ chemin de longueur $2$ de $2$ à $3$ ; $3$ chemins de longueur $3$ de $2$ à $1$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "suite",
+      "enonce": "On définit $U_{n+1}=AU_n$ avec $A=\\begin{pmatrix} 0 & 1 \\\\ 1 & 1 \\end{pmatrix}$ et $U_0=\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$. Calculer $U_1$, $U_2$ et $U_3$.",
+      "corrige": [
+        "$U_1=AU_0=\\begin{pmatrix} 0\\times1+1\\times1 \\\\ 1\\times1+1\\times1 \\end{pmatrix}=\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$.",
+        "$U_2=AU_1=\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$ et $U_3=AU_2=\\begin{pmatrix} 3 \\\\ 5 \\end{pmatrix}$.",
+        "On reconnaît des termes consécutifs de la suite de Fibonacci."
+      ],
+      "reponse": "$U_1=\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$, $U_2=\\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$, $U_3=\\begin{pmatrix} 3 \\\\ 5 \\end{pmatrix}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "suite",
+      "enonce": "On reprend $U_{n+1}=AU_n+C$ avec $A=\\begin{pmatrix} 0{,}5 & 0 \\\\ 0 & 2 \\end{pmatrix}$, $C=\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$ et $U_0=\\begin{pmatrix} 4 \\\\ 1 \\end{pmatrix}$, pour lesquels $U_1=\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}$. Calculer $U_2$ et $U_3$.",
+      "corrige": [
+        "$U_2=AU_1+C=\\begin{pmatrix} 0{,}5\\times3+1 \\\\ 2\\times2 \\end{pmatrix}=\\begin{pmatrix} 2{,}5 \\\\ 4 \\end{pmatrix}$.",
+        "$U_3=AU_2+C=\\begin{pmatrix} 0{,}5\\times2{,}5+1 \\\\ 2\\times4 \\end{pmatrix}=\\begin{pmatrix} 2{,}25 \\\\ 8 \\end{pmatrix}$."
+      ],
+      "reponse": "$U_2=\\begin{pmatrix} 2{,}5 \\\\ 4 \\end{pmatrix}$ et $U_3=\\begin{pmatrix} 2{,}25 \\\\ 8 \\end{pmatrix}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "suite",
+      "enonce": "Déterminer l'état stable de la suite $U_{n+1}=AU_n+C$ avec $A=\\begin{pmatrix} 0{,}5 & 0 \\\\ 0 & 0{,}5 \\end{pmatrix}$ et $C=\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$.",
+      "corrige": [
+        "L'état stable vérifie $(I-A)U=C$, avec $I-A=\\begin{pmatrix} 0{,}5 & 0 \\\\ 0 & 0{,}5 \\end{pmatrix}$.",
+        "On obtient $0{,}5x=1$ et $0{,}5y=2$, soit $x=2$ et $y=4$."
+      ],
+      "reponse": "$U=\\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "suite",
+      "enonce": "On considère $U_{n+1}=AU_n+C$ avec $A=\\begin{pmatrix} 0{,}5 & 0{,}2 \\\\ 0{,}3 & 0{,}4 \\end{pmatrix}$ et $C=\\begin{pmatrix} 3 \\\\ 3 \\end{pmatrix}$. Vérifier que $U=\\begin{pmatrix} 10 \\\\ 10 \\end{pmatrix}$ est un état stable.",
+      "corrige": [
+        "Il suffit de vérifier que $AU+C=U$.",
+        "Ligne $1$ : $0{,}5\\times10+0{,}2\\times10+3=5+2+3=10$. Ligne $2$ : $0{,}3\\times10+0{,}4\\times10+3=3+4+3=10$."
+      ],
+      "reponse": "$AU+C=U$ : c'est bien un état stable."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "suite",
+      "enonce": "Deux quartiers échangent des habitants d'une année sur l'autre. Les populations (en milliers) vérifient $U_{n+1}=AU_n+C$ avec $A=\\begin{pmatrix} 0{,}8 & 0{,}1 \\\\ 0{,}1 & 0{,}7 \\end{pmatrix}$ et $C=\\begin{pmatrix} 2 \\\\ 4 \\end{pmatrix}$ (arrivées extérieures). Déterminer l'état stable.",
+      "corrige": [
+        "On résout $(I-A)U=C$ avec $I-A=\\begin{pmatrix} 0{,}2 & -0{,}1 \\\\ -0{,}1 & 0{,}3 \\end{pmatrix}$, dont le déterminant vaut $0{,}06-0{,}01=0{,}05\\neq0$.",
+        "$(I-A)^{-1}=\\dfrac{1}{0{,}05}\\begin{pmatrix} 0{,}3 & 0{,}1 \\\\ 0{,}1 & 0{,}2 \\end{pmatrix}=\\begin{pmatrix} 6 & 2 \\\\ 2 & 4 \\end{pmatrix}$.",
+        "$U=(I-A)^{-1}C=\\begin{pmatrix} 6\\times2+2\\times4 \\\\ 2\\times2+4\\times4 \\end{pmatrix}=\\begin{pmatrix} 20 \\\\ 20 \\end{pmatrix}$."
+      ],
+      "reponse": "$U=\\begin{pmatrix} 20 \\\\ 20 \\end{pmatrix}$ : $20$ milliers d'habitants dans chaque quartier."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "suite",
+      "enonce": "On considère $U_{n+1}=AU_n+C$ et un état stable $U$ (donc $U=AU+C$). On pose $V_n=U_n-U$. Montrer que $V_{n+1}=AV_n$.",
+      "corrige": [
+        "$V_{n+1}=U_{n+1}-U=(AU_n+C)-(AU+C)$.",
+        "Les matrices $C$ se simplifient : $V_{n+1}=AU_n-AU=A(U_n-U)=AV_n$."
+      ],
+      "reponse": "$V_{n+1}=A(U_n-U)=AV_n$."
+    },
+    {
+      "id": 43,
+      "difficulte": "decouverte",
+      "notion": "markov",
+      "enonce": "Parmi les matrices $P_1=\\begin{pmatrix} 0{,}5 & 0{,}5 \\\\ 0{,}2 & 0{,}8 \\end{pmatrix}$, $P_2=\\begin{pmatrix} 0{,}6 & 0{,}3 \\\\ 0{,}4 & 0{,}7 \\end{pmatrix}$ et $P_3=\\begin{pmatrix} 1 & 0 \\\\ 0{,}3 & 0{,}7 \\end{pmatrix}$, lesquelles peuvent être des matrices de transition ?",
+      "corrige": [
+        "Une matrice de transition a des coefficients positifs et chaque ligne a une somme égale à $1$.",
+        "$P_1$ : $1$ et $1$. $P_2$ : $0{,}9$ et $1{,}1$ (ce sont ses colonnes qui somment à $1$). $P_3$ : $1$ et $1$."
+      ],
+      "reponse": "$P_1$ et $P_3$ (pas $P_2$)."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "markov",
+      "enonce": "Compléter la matrice de transition $P=\\begin{pmatrix} 0{,}35 & \\ldots \\\\ \\ldots & 0{,}9 \\end{pmatrix}$.",
+      "corrige": [
+        "Chaque ligne doit avoir une somme égale à $1$.",
+        "$1-0{,}35=0{,}65$ et $1-0{,}9=0{,}1$."
+      ],
+      "reponse": "$P=\\begin{pmatrix} 0{,}35 & 0{,}65 \\\\ 0{,}1 & 0{,}9 \\end{pmatrix}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "markov",
+      "enonce": "Après une journée de beau temps (état $B$), il fait beau le lendemain avec la probabilité $0{,}75$ ; après une journée de pluie (état $R$), il fait beau le lendemain avec la probabilité $0{,}4$. Aujourd'hui il pleut. Écrire $P$ (états $B$ puis $R$), puis calculer $\\pi_1$ et $\\pi_2$.",
+      "corrige": [
+        "$P=\\begin{pmatrix} 0{,}75 & 0{,}25 \\\\ 0{,}4 & 0{,}6 \\end{pmatrix}$ et $\\pi_0=(\\,0\\ \\ 1\\,)$.",
+        "$\\pi_1=\\pi_0P=(\\,0{,}4\\ \\ 0{,}6\\,)$.",
+        "$\\pi_2=\\pi_1P=(\\,0{,}4\\times0{,}75+0{,}6\\times0{,}4\\ \\ \\ 0{,}4\\times0{,}25+0{,}6\\times0{,}6\\,)=(\\,0{,}54\\ \\ 0{,}46\\,)$."
+      ],
+      "reponse": "$\\pi_1=(\\,0{,}4\\ \\ 0{,}6\\,)$ et $\\pi_2=(\\,0{,}54\\ \\ 0{,}46\\,)$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "markov",
+      "enonce": "Déterminer la distribution invariante de la chaîne de Markov de matrice $P=\\begin{pmatrix} 0{,}5 & 0{,}5 \\\\ 0{,}25 & 0{,}75 \\end{pmatrix}$.",
+      "corrige": [
+        "On pose $\\pi=(\\,x\\ \\ y\\,)$ avec $\\pi P=\\pi$ et $x+y=1$. La première équation : $x=0{,}5x+0{,}25y$, soit $0{,}5x=0{,}25y$, donc $y=2x$.",
+        "Avec $x+y=1$ : $3x=1$, d'où $x=\\dfrac13$ et $y=\\dfrac23$."
+      ],
+      "reponse": "$\\pi=\\left(\\dfrac13\\ \\ \\dfrac23\\right)$."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "markov",
+      "enonce": "Pour la matrice $P=\\begin{pmatrix} 0{,}5 & 0{,}5 \\\\ 0{,}25 & 0{,}75 \\end{pmatrix}$, un élève résout seulement $\\pi P=\\pi$ et propose $\\pi=(\\,0\\ \\ 0\\,)$. Pourquoi sa réponse ne convient-elle pas ?",
+      "corrige": [
+        "$(\\,0\\ \\ 0\\,)$ vérifie bien $\\pi P=\\pi$, mais ce n'est pas une distribution de probabilités : la somme des termes doit valoir $1$.",
+        "L'équation $\\pi P=\\pi$ a une infinité de solutions proportionnelles ; c'est la condition $x+y=1$ qui fixe la distribution, ici $\\left(\\dfrac13\\ \\ \\dfrac23\\right)$."
+      ],
+      "reponse": "Il manque la condition $x+y=1$ : la distribution invariante est $\\left(\\dfrac13\\ \\ \\dfrac23\\right)$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "markov",
+      "enonce": "Une chaîne de Markov à trois états $1$, $2$, $3$ a pour matrice de transition $P=\\begin{pmatrix} 0{,}5 & 0{,}5 & 0 \\\\ 0{,}25 & 0{,}5 & 0{,}25 \\\\ 0 & 0{,}5 & 0{,}5 \\end{pmatrix}$. On part de l'état $1$. Calculer $\\pi_1$ et $\\pi_2$, puis vérifier que $\\pi=(\\,0{,}25\\ \\ 0{,}5\\ \\ 0{,}25\\,)$ est invariante.",
+      "corrige": [
+        "$\\pi_0=(\\,1\\ \\ 0\\ \\ 0\\,)$, donc $\\pi_1=\\pi_0P$ est la première ligne de $P$ : $(\\,0{,}5\\ \\ 0{,}5\\ \\ 0\\,)$.",
+        "$\\pi_2=\\pi_1P=(\\,0{,}25+0{,}125\\ \\ \\ 0{,}25+0{,}25\\ \\ \\ 0{,}125\\,)=(\\,0{,}375\\ \\ 0{,}5\\ \\ 0{,}125\\,)$.",
+        "$\\pi P$ : $0{,}25\\times0{,}5+0{,}5\\times0{,}25=0{,}25$ ; $0{,}25\\times0{,}5+0{,}5\\times0{,}5+0{,}25\\times0{,}5=0{,}5$ ; $0{,}5\\times0{,}25+0{,}25\\times0{,}5=0{,}25$. On retrouve $\\pi$, de somme $1$."
+      ],
+      "reponse": "$\\pi_1=(\\,0{,}5\\ \\ 0{,}5\\ \\ 0\\,)$, $\\pi_2=(\\,0{,}375\\ \\ 0{,}5\\ \\ 0{,}125\\,)$ ; $\\pi P=\\pi$, donc $\\pi$ est invariante."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "markov",
+      "enonce": "Avec $P=\\begin{pmatrix} 0{,}7 & 0{,}3 \\\\ 0{,}4 & 0{,}6 \\end{pmatrix}$ (états $A$ puis $B$), calculer le coefficient ligne $1$, colonne $1$ de $P^{2}$ et l'interpréter.",
+      "corrige": [
+        "$\\big(P^{2}\\big)_{11}=0{,}7\\times0{,}7+0{,}3\\times0{,}4=0{,}49+0{,}12=0{,}61$.",
+        "Comme $\\pi_2=\\pi_0P^{2}$, ce coefficient est la probabilité d'être en $A$ deux étapes plus tard en partant de $A$ : soit on reste deux fois en $A$, soit on passe par $B$ puis on revient."
+      ],
+      "reponse": "$\\big(P^{2}\\big)_{11}=0{,}61$ : probabilité d'être en $A$ après deux étapes en partant de $A$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un robot se déplace sur les sommets d'un triangle $ABC$ (numérotés $1$, $2$, $3$). À chaque étape, il quitte son sommet et rejoint l'un des deux autres sommets, chacun avec la probabilité $\\dfrac12$. Il part de $A$.\n\n1. Écrire la matrice d'adjacence $M$ du triangle et calculer $M^{2}$. Combien y a-t-il de chemins de longueur $2$ de $A$ à $A$ ?\n2. Justifier que la matrice de transition est $P=\\dfrac12M$.\n3. Calculer $\\pi_1$ et $\\pi_2$.\n4. Vérifier que $\\left(\\dfrac13\\ \\ \\dfrac13\\ \\ \\dfrac13\\right)$ est la distribution invariante, et l'interpréter.",
+      "corrige": [
+        "1. $M=\\begin{pmatrix} 0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0 \\end{pmatrix}$ et $M^{2}=\\begin{pmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix}$ : $\\big(M^{2}\\big)_{11}=2$ chemins ($A-B-A$ et $A-C-A$).",
+        "2. Depuis chaque sommet, on va vers chacun des deux sommets adjacents avec la probabilité $\\dfrac12$ et on ne reste jamais sur place : $p_{ij}=\\dfrac12m_{ij}$, et chaque ligne somme bien à $1$.",
+        "3. $\\pi_0=(\\,1\\ \\ 0\\ \\ 0\\,)$, $\\pi_1=\\left(0\\ \\ \\dfrac12\\ \\ \\dfrac12\\right)$, $\\pi_2=\\pi_1P=\\left(\\dfrac12\\ \\ \\dfrac14\\ \\ \\dfrac14\\right)$.",
+        "4. Chaque colonne de $P$ contient deux fois $\\dfrac12$ : $\\pi P$ a pour termes $\\dfrac13\\times\\dfrac12+\\dfrac13\\times\\dfrac12=\\dfrac13$, et la somme vaut $1$. À long terme, le robot est sur chaque sommet avec la même probabilité $\\dfrac13$."
+      ],
+      "reponse": "$\\big(M^{2}\\big)_{11}=2$ ; $\\pi_1=\\left(0\\ \\ \\dfrac12\\ \\ \\dfrac12\\right)$, $\\pi_2=\\left(\\dfrac12\\ \\ \\dfrac14\\ \\ \\dfrac14\\right)$ ; distribution invariante $\\left(\\dfrac13\\ \\ \\dfrac13\\ \\ \\dfrac13\\right)$."
     }
   ]
 }
