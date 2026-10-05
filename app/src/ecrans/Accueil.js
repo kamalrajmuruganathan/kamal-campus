@@ -8,7 +8,9 @@
  */
 
 import { useTheme } from '../useTheme';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+import { listerDemandesRecues } from '../cloud/social';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -38,17 +40,47 @@ export default function Accueil({ navigation }) {
   const dimanche = new Date().getDay() === 0; // bilan de la semaine mis en avant le dimanche
   const serie = serieAffichee(profil.dernierJourValide, profil.serieJours, dateLocale(new Date()));
 
+  // Demandes d'ami en attente : rechargées à chaque retour sur l'accueil (pastille sur « Amis »).
+  const [nbDemandes, setNbDemandes] = useState(0);
+  useFocusEffect(useCallback(() => {
+    let actif = true;
+    listerDemandesRecues().then((d) => { if (actif) setNbDemandes(d.length); }).catch(() => {});
+    return () => { actif = false; };
+  }, []));
+
   const listeNiveaux = niveaux();
   const totalQuestions = CHAPITRES.reduce((s, c) => s + c.nbQuestions, 0);
+  const nbMatieres = new Set(CHAPITRES.map((c) => c.matiere)).size;
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['top']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: t.espace.xxl }}>
-        <Text style={{ color: t.couleur.texte, fontSize: t.police.titre, fontWeight: '700' }}>
-          {profil.prenom ? L('home.salut', { prenom: profil.prenom }) : 'Kamal Campus'}
-        </Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: t.espace.m }}>
+          <Text style={{ color: t.couleur.texte, fontSize: t.police.titre, fontWeight: '700', flexShrink: 1 }}>
+            {profil.prenom ? L('home.salut', { prenom: profil.prenom }) : 'Kamal Campus'}
+          </Text>
+          {/* Amis : toujours visible en haut de l'accueil, avec le nombre de demandes reçues */}
+          <Pressable
+            onPress={() => navigation.navigate('Amis')}
+            accessibilityRole="button"
+            accessibilityLabel={nbDemandes > 0 ? `Amis, ${nbDemandes} demande${nbDemandes > 1 ? 's' : ''} en attente` : 'Amis'}
+            style={({ pressed }) => ({
+              flexDirection: 'row', alignItems: 'center', gap: 6,
+              backgroundColor: t.couleur.surface, borderColor: t.couleur.trait, borderWidth: 1,
+              borderRadius: 999, paddingHorizontal: 14, paddingVertical: 8, opacity: pressed ? 0.7 : 1,
+            })}
+          >
+            <Text style={{ fontSize: 16 }}>👥</Text>
+            <Text style={{ color: t.couleur.texte, fontWeight: '700', fontSize: t.police.petite }}>Amis</Text>
+            {nbDemandes > 0 && (
+              <View style={{ backgroundColor: t.couleur.erreur, borderRadius: 999, minWidth: 20, height: 20, paddingHorizontal: 5, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ color: '#fff', fontSize: 11, fontWeight: '800' }}>{nbDemandes}</Text>
+              </View>
+            )}
+          </Pressable>
+        </View>
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.normale, marginTop: 4 }}>
-          {L('app.sousTitre', { n: CHAPITRES.length, q: totalQuestions })}
+          {L('app.sousTitre', { m: nbMatieres, n: CHAPITRES.length.toLocaleString('fr-FR'), q: totalQuestions.toLocaleString('fr-FR') })}
         </Text>
 
         {/* Ta prochaine action — une seule action prioritaire, pour réduire les clics */}
@@ -307,6 +339,14 @@ export default function Accueil({ navigation }) {
             sousTitre="Grimpe du Bronze au Diamant en gagnant des XP chaque semaine"
             couleur={t.couleur.alerte}
             onPress={() => navigation.navigate('Ligue')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="👥 Amis et défis"
+            sousTitre="Ajoute tes amis, défie-les sur un chapitre et compare vos scores"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('Defis')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte

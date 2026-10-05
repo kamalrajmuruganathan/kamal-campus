@@ -132,7 +132,7 @@ function Navigation() {
           options={({ navigation }) => ({
             title: L('nav.progression'),
             headerRight: () => (
-              <Text onPress={() => navigation.navigate('Amis')} style={{ fontSize: 20, paddingHorizontal: 4 }}>👥</Text>
+              <Text onPress={() => navigation.navigate('Amis')} style={{ fontSize: 16, fontWeight: '700', paddingHorizontal: 8, color: t.couleur.accent }}>👥 Amis</Text>
             ),
           })}
         />

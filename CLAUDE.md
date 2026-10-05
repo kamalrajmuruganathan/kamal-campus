@@ -4,10 +4,12 @@ Contexte de reprise (discussion Cowork du 03/10/2026). À lire en entier avant d
 
 ## 1. Le projet
 - **Kamal Campus** : application de révision scolaire (CP → Terminale), Expo / React Native,
-  publiée sur le web via Netlify : https://kamal-campus.netlify.app
+  publiée sur **GitHub Pages** depuis le 04/10/2026 : https://kamalrajmuruganathan.github.io/kamal-campus/
+  (appli : …/kamal-campus/app/). L'ancien site Netlify (https://kamal-campus.netlify.app) n'est plus mis à jour.
 - 956 chapitres, 21 matières. Dépôt `kamalrajmuruganathan/kamal-campus`.
-- Branche de travail : **`upgrade-sdk57`**. La publication se fait avec `bash scripts/publier.sh`
-  (fusion vers `main` → build Netlify).
+- Branche de travail : **`upgrade-sdk57`**. Publier = fusionner `upgrade-sdk57` dans `main`
+  (`bash scripts/publier.sh`, ou sur github.com : Compare `main...upgrade-sdk57` → Pull request → Merge).
+  Le workflow `.github/workflows/pages.yml` construit et publie alors le site (≈ 3 min). Dépôt **public**.
 - Backend : Supabase (Postgres + RLS + RPC `security definer` + Realtime).
 - L'utilisateur (Kamal) code dans un Codespace (VS Code web) et souvent depuis son téléphone.
   Il n'est pas développeur de métier : explications simples, étapes numérotées, en français.
@@ -15,12 +17,9 @@ Contexte de reprise (discussion Cowork du 03/10/2026). À lire en entier avant d
 ## 2. Règles absolues
 1. **Exactitude** : ne jamais inventer une réponse ou une valeur fausse. Appli scolaire → le
    **français doit être correct** (accents, élisions, accords) et les valeurs physiquement réalistes.
-2. **Crédits Netlify ÉPUISÉS (mail du 03/10/2026, 15:20)** : les déploiements de production sont **en pause
-   jusqu'au 16/10/2026** (ou abonnement payant). Le site reste en ligne avec le dernier build réussi.
-   → **Ne plus pousser sur `main`** d'ici là : tout s'accumule sur `upgrade-sdk57`, publication groupée après le 16/10.
-   (Le compteur « ≈ 44 » était faux : un build coûte plus d'un crédit.) **1 commit publié = 1 build**.
-   **Ne jamais pousser sur `main`, ne jamais lancer `publier.sh`, ne jamais créer de PR** sans l'accord
-   explicite de Kamal (les deploy previews peuvent consommer des crédits).
+2. **Publication** : le site est sur GitHub Pages (pas de crédits). Publier = fusionner `upgrade-sdk57` dans `main` ;
+   c'est **Kamal** qui fusionne (Claude n'a pas le droit de pousser sur `main`). Ne jamais publier ni créer
+   de PR sans l'accord explicite de Kamal. Netlify (crédits épuisés jusqu'au 16/10/2026) ne sert plus qu'à rediriger.
 3. **Sécurité** : ne jamais afficher ni committer la clé Supabase `sb_secret_…` (la clé publishable et
    l'URL sont publiques, protégées par RLS). Ne jamais demander de token GitHub dans le chat.
 4. Ne modifier un fichier existant que si c'est demandé ; sinon créer à côté.
@@ -139,3 +138,10 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
   https://kamalrajmuruganathan.github.io/kamal-campus/). Testé localement. **Bloquant** : le dépôt est privé →
   Pages exige un dépôt public (gratuit) ou GitHub Pro. Ensuite : Settings → Pages → Source « GitHub Actions »,
   et ajouter l'URL dans Supabase (Authentication → URL Configuration → Redirect URLs).
+- **04/10/2026 : passage à GitHub Pages réussi.** Dépôt rendu public, Pages activé (Source : GitHub Actions),
+  fusion PR #1 `upgrade-sdk57` → `main` (b402d83), CI verte, déploiement OK. Pas de limite de crédits.
+  Claude ne peut pas pousser sur `main` lui-même (bloqué par la sécurité) : c'est Kamal qui fusionne.
+- **Netlify → redirection** (préparé le 04/10, sur `upgrade-sdk57`) : `netlify.toml` redirige tout
+  (`/*` → GitHub Pages, 301) avec un build de quelques secondes (`scripts/build-redirection-netlify.sh`).
+  S'activera au premier build Netlify après le 16/10 (crédits revenus). Ensuite, Kamal peut couper les builds
+  Netlify (Site configuration → Build & deploy → Stop builds) : la redirection reste en ligne.

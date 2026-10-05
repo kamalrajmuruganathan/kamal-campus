@@ -15,6 +15,7 @@ export default function Amis({ navigation }) {
   const [pseudoEdit, setPseudoEdit] = useState('');
   const [recherche, setRecherche] = useState('');
   const [resultats, setResultats] = useState([]);
+  const [infoRecherche, setInfoRecherche] = useState('');
   const [demandes, setDemandes] = useState([]);
   const [amis, setAmis] = useState([]);
   const [occupe, setOccupe] = useState(false);
@@ -41,7 +42,18 @@ export default function Amis({ navigation }) {
     finally { setOccupe(false); }
   }
   async function lancerRecherche() {
-    try { setResultats(await chercherParPseudo(recherche)); }
+    const terme = recherche.trim();
+    if (terme.length < 2) { setResultats([]); setInfoRecherche('Tape au moins 2 lettres du pseudo de ton ami.'); return; }
+    try {
+      const r = await chercherParPseudo(terme);
+      setResultats(r);
+      if (r.length > 0) setInfoRecherche('');
+      else if (pseudoEdit && pseudoEdit.toLowerCase().includes(terme.toLowerCase())) {
+        setInfoRecherche(`Aucun autre élève trouvé : « ${pseudoEdit} », c'est ton propre pseudo. Tape celui de ton ami (il l'a en haut de son écran Amis).`);
+      } else {
+        setInfoRecherche(`Aucun élève trouvé pour « ${terme} ». Vérifie l'orthographe du pseudo (il est affiché en haut de l'écran Amis de ton ami).`);
+      }
+    }
     catch (e) { Alert.alert('Recherche', e.message ?? 'Erreur.'); }
   }
   async function ajouter(p) {
@@ -84,6 +96,7 @@ export default function Amis({ navigation }) {
           <TextInput value={recherche} onChangeText={setRecherche} autoCapitalize="none" placeholder="Chercher un pseudo..." placeholderTextColor={sombre ? '#888' : '#aaa'} style={[champ, { flex: 1 }]} onSubmitEditing={lancerRecherche} returnKeyType="search" />
           <Pressable onPress={lancerRecherche} style={btn}><Text style={btnTxt}>Chercher</Text></Pressable>
         </View>
+        {infoRecherche ? <Text style={{ color: C.texte, opacity: 0.7, fontSize: 13, marginTop: 10 }}>{infoRecherche}</Text> : null}
         {resultats.map((p) => (
           <View key={p.id} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 12 }}>
             <Text style={{ color: C.texte, fontSize: 15 }}>{p.avatar ?? '🎓'} {p.pseudo}</Text>
@@ -113,7 +126,10 @@ export default function Amis({ navigation }) {
           <Text style={{ color: C.texte, opacity: 0.6, fontSize: 13 }}>Pas encore d'amis. Cherche un pseudo ci-dessus pour envoyer une demande.</Text>
         ) : amis.map((a) => (
           <Pressable key={a.amitieId} onPress={() => navigation.navigate('Discussion', { amiId: a.ami.id, pseudo: a.ami.pseudo })} onLongPress={() => confirmerSuppr(a)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 10 }}>
-            <Text style={{ color: C.texte, fontSize: 15 }}>{a.ami.avatar ?? '🎓'} {a.ami.pseudo}</Text>
+            <Text style={{ color: C.texte, fontSize: 15, flex: 1 }}>{a.ami.avatar ?? '🎓'} {a.ami.pseudo}</Text>
+            <Pressable onPress={() => confirmerSuppr(a)} hitSlop={8} style={{ paddingHorizontal: 10 }}>
+              <Text style={{ color: C.texte, opacity: 0.6, fontSize: 13 }}>Retirer</Text>
+            </Pressable>
             <Text style={{ color: C.accent, fontSize: 13, fontWeight: '700' }}>Discuter ›</Text>
           </Pressable>
         ))}
