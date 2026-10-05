@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "procede-flux",
       "enonce": "**Problème — Pasteurisateur de lait en continu.**\n\nDans une laiterie, un pasteuriseur chauffe du lait qui circule en continu dans une canalisation. Le lait entre à un débit volumique $Q_V = 30\\ \\text{L·min}^{-1}$ ; sa masse volumique est $\\rho = 1030\\ \\text{kg·m}^{-3}$. Une résistance électrique chauffe le lait ; elle absorbe une puissance $P_a = 20\\ \\text{kW}$ et a un rendement $\\eta = 0{,}85$. Un régulateur maintient la température de sortie du lait à la consigne $\\theta_c = 72{,}0\\ \\text{°C}$ : une sonde placée en sortie mesure la température réelle et commande la résistance. On considère le procédé en régime permanent.\n\n**1.** S'agit-il d'une boucle ouverte ou d'une boucle fermée ? Justifie, puis nomme les quatre organes de la boucle de régulation en les identifiant sur cette installation.\n**2.** Le régulateur est de type tout ou rien. À un instant, la sonde mesure $\\theta_m = 70{,}0\\ \\text{°C}$. Calcule l'écart $\\varepsilon$ et indique si la résistance chauffe.\n**3.** Calcule la puissance utile $P_u$ réellement transmise au lait, puis la puissance perdue $P_\\text{pertes}$.\n**4.** Calcule le débit massique $Q_m$ de lait entrant, en kg·s⁻¹.\n**5.** Quel est le débit massique de lait sortant ? Justifie par un bilan de matière.\n**6.** Pendant une durée $\\Delta t = 1{,}0\\ \\text{min}$ de fonctionnement, calcule l'énergie utile $E_u$ fournie au lait et la masse $m$ de lait traitée.",
       "corrige": [
@@ -140,6 +140,460 @@
         "**6.** Durée en SI : $\\Delta t = 1{,}0\\ \\text{min} = 60\\ \\text{s}$. Énergie utile : $E_u = P_u \\times \\Delta t = 17\\times 10^{3} \\times 60 = 1{,}02\\times 10^{6}\\ \\text{J} \\approx 1{,}0\\ \\text{MJ}$. Masse de lait traitée : $m = Q_m \\times \\Delta t = 0{,}515 \\times 60 = 30{,}9\\ \\text{kg} \\approx 31\\ \\text{kg}$."
       ],
       "reponse": "Boucle fermée (mesure de retour) ; organes : consigne, capteur, correcteur, actionneur. $\\varepsilon = +2{,}0$ °C : la résistance chauffe. $P_u = 17$ kW, $P_\\text{pertes} = 3{,}0$ kW. $Q_m \\approx 0{,}52$ kg·s⁻¹, identique en sortie (régime permanent). En 1,0 min : $E_u \\approx 1{,}0$ MJ, $m \\approx 31$ kg de lait."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "chaine-information",
+      "enonce": "Donne, dans l'ordre, les trois fonctions de la chaîne d'information et le composant type associé à chacune.",
+      "corrige": [
+        "Acquérir : un capteur prélève une grandeur physique. Traiter : l'unité de traitement (le correcteur) compare et décide.",
+        "Communiquer : un afficheur, un voyant ou un réseau transmet l'information ou l'ordre."
+      ],
+      "reponse": "Acquérir (capteur) → traiter (unité de traitement) → communiquer (afficheur, réseau)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "chaine-energie",
+      "enonce": "Une perceuse sans fil comporte une batterie, un variateur commandé par la gâchette, un moteur et des engrenages. Associe chaque composant à une fonction de la chaîne d'énergie.",
+      "corrige": [
+        "Alimenter : la batterie ; distribuer : le variateur, qui dose l'énergie selon l'ordre reçu.",
+        "Convertir : le moteur (énergie électrique en énergie mécanique) ; transmettre : les engrenages, jusqu'au foret."
+      ],
+      "reponse": "Batterie : alimenter ; variateur : distribuer ; moteur : convertir ; engrenages : transmettre."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "Boucle ouverte ou boucle fermée ? (a) un grille-pain à minuterie ; (b) une climatisation avec thermostat ; (c) un arrosage automatique qui se déclenche à heure fixe ; (d) un régulateur de vitesse de voiture.",
+      "corrige": [
+        "Une boucle fermée mesure en permanence le résultat et corrige l'action : (b) et (d).",
+        "Une boucle ouverte agit sans vérifier le résultat : (a) et (c) (le grille-pain ne mesure pas la couleur du pain, l'arrosage ne mesure pas l'humidité du sol)."
+      ],
+      "reponse": "Ouvertes : (a), (c) ; fermées : (b), (d)."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "flux-energie",
+      "enonce": "Quelle relation lie puissance, énergie et durée ? Donne les unités SI.",
+      "corrige": [
+        "La puissance est l'énergie échangée par unité de temps.",
+        "$P = \\dfrac{E}{\\Delta t}$, avec $P$ en watts (W), $E$ en joules (J) et $\\Delta t$ en secondes (s)."
+      ],
+      "reponse": "$P = \\dfrac{E}{\\Delta t}$ ; W, J, s."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "La consigne d'un chauffage est $20{,}0\\ \\text{°C}$ ; la sonde mesure $22{,}5\\ \\text{°C}$. Calcule l'écart. Le chauffage doit-il chauffer ?",
+      "corrige": [
+        "$\\varepsilon = \\text{consigne} - \\text{mesure} = 20{,}0 - 22{,}5 = -2{,}5\\ \\text{°C}$.",
+        "L'écart est négatif : la pièce est trop chaude, le chauffage ne doit pas chauffer."
+      ],
+      "reponse": "$\\varepsilon = -2{,}5\\ \\text{°C}$ : pas de chauffe."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "Un réfrigérateur est régulé en tout ou rien avec hystérésis : le compresseur démarre à $6\\ \\text{°C}$ et s'arrête à $3\\ \\text{°C}$. Partant de $6\\ \\text{°C}$, décris l'état du compresseur à $5\\ \\text{°C}$ (en refroidissant), à $3\\ \\text{°C}$, puis à $4\\ \\text{°C}$ (en se réchauffant).",
+      "corrige": [
+        "À $6\\ \\text{°C}$ le compresseur démarre ; à $5\\ \\text{°C}$, entre les seuils, il continue.",
+        "À $3\\ \\text{°C}$, il s'arrête. À $4\\ \\text{°C}$ en se réchauffant, entre les seuils, il reste arrêté jusqu'à $6\\ \\text{°C}$."
+      ],
+      "reponse": "Marche ; arrêt ; toujours arrêté."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "Un correcteur proportionnel a un gain $k = 4{,}0\\ \\%\\cdot\\text{°C}^{-1}$ ($S = k\\,\\varepsilon$, en % d'ouverture d'une vanne). L'écart vaut $\\varepsilon = 7{,}5\\ \\text{°C}$. Calcule la commande $S$.",
+      "corrige": [
+        "$S = k \\times \\varepsilon = 4{,}0 \\times 7{,}5$.",
+        "$S = 30\\ \\%$ : la vanne est ouverte à $30\\ \\%$."
+      ],
+      "reponse": "$S = 30\\ \\%$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "flux-energie",
+      "enonce": "Un appareil reçoit une énergie de $1{,}8\\times 10^{5}\\ \\text{J}$ en $2{,}0\\ \\text{min}$. Calcule la puissance absorbée.",
+      "corrige": [
+        "On convertit la durée : $2{,}0\\ \\text{min} = 120\\ \\text{s}$.",
+        "$P = \\dfrac{1{,}8\\times 10^{5}}{120} = 1{,}5\\times 10^{3}\\ \\text{W} = 1{,}5\\ \\text{kW}$."
+      ],
+      "reponse": "$P = 1{,}5\\ \\text{kW}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "flux-energie",
+      "enonce": "Une lampe à DEL absorbe $10\\ \\text{W}$ et rayonne $4{,}0\\ \\text{W}$ sous forme de lumière visible. Calcule son rendement et la puissance perdue. Sous quelle forme est-elle perdue ?",
+      "corrige": [
+        "$\\eta = \\dfrac{P_{\\text{utile}}}{P_{\\text{absorbée}}} = \\dfrac{4{,}0}{10} = 0{,}40 = 40\\ \\%$.",
+        "$P_{\\text{pertes}} = 10 - 4{,}0 = 6{,}0\\ \\text{W}$, dissipés principalement sous forme de chaleur."
+      ],
+      "reponse": "$\\eta = 40\\ \\%$ ; $6{,}0\\ \\text{W}$ perdus en chaleur."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "flux-matiere",
+      "enonce": "On remplit une cuve de $200\\ \\text{L}$ en $4{,}0\\ \\text{min}$. Calcule le débit volumique en $\\text{L·s}^{-1}$ puis en $\\text{m}^3\\text{·s}^{-1}$.",
+      "corrige": [
+        "$Q_V = \\dfrac{V}{\\Delta t} = \\dfrac{200\\ \\text{L}}{240\\ \\text{s}} \\approx 0{,}83\\ \\text{L·s}^{-1}$.",
+        "$1\\ \\text{L} = 10^{-3}\\ \\text{m}^3$, donc $Q_V \\approx 8{,}3\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$."
+      ],
+      "reponse": "$Q_V \\approx 0{,}83\\ \\text{L·s}^{-1} \\approx 8{,}3\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "flux-matiere",
+      "enonce": "De l'huile ($\\rho = 900\\ \\text{kg·m}^{-3}$) s'écoule à $Q_V = 2{,}0\\ \\text{L·s}^{-1}$. Calcule le débit massique.",
+      "corrige": [
+        "$Q_V = 2{,}0\\times 10^{-3}\\ \\text{m}^3\\text{·s}^{-1}$.",
+        "$Q_m = \\rho\\,Q_V = 900 \\times 2{,}0\\times 10^{-3} = 1{,}8\\ \\text{kg·s}^{-1}$."
+      ],
+      "reponse": "$Q_m = 1{,}8\\ \\text{kg·s}^{-1}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "bilan-matiere",
+      "enonce": "Un mélangeur en régime permanent reçoit trois entrées : $2{,}0$ ; $0{,}50$ et $1{,}2\\ \\text{kg·s}^{-1}$. Quel est le débit massique de sortie ? Quel principe utilise-t-on ?",
+      "corrige": [
+        "En régime permanent, la masse se conserve : la somme des débits entrants égale la somme des débits sortants.",
+        "$Q_s = 2{,}0 + 0{,}50 + 1{,}2 = 3{,}7\\ \\text{kg·s}^{-1}$."
+      ],
+      "reponse": "$Q_s = 3{,}7\\ \\text{kg·s}^{-1}$ (conservation de la masse)."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "chaine-information",
+      "enonce": "Une porte automatique s'ouvre quand quelqu'un approche, et un voyant vert s'allume. Identifie les éléments qui assurent les fonctions acquérir, traiter et communiquer.",
+      "corrige": [
+        "Acquérir : le détecteur de présence (capteur).",
+        "Traiter : le microcontrôleur qui décide d'ouvrir. Communiquer : l'ordre envoyé à la commande du moteur et l'allumage du voyant."
+      ],
+      "reponse": "Acquérir : détecteur ; traiter : microcontrôleur ; communiquer : ordre au moteur et voyant."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "flux-matiere",
+      "enonce": "De l'éthanol ($\\rho = 790\\ \\text{kg·m}^{-3}$) est transféré à $45\\ \\text{L·min}^{-1}$. Calcule le débit volumique en SI, puis le débit massique.",
+      "corrige": [
+        "$Q_V = \\dfrac{45\\times 10^{-3}}{60} = 7{,}5\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$.",
+        "$Q_m = 790 \\times 7{,}5\\times 10^{-4} \\approx 0{,}59\\ \\text{kg·s}^{-1}$."
+      ],
+      "reponse": "$Q_V = 7{,}5\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$ ; $Q_m \\approx 0{,}59\\ \\text{kg·s}^{-1}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "flux-energie",
+      "enonce": "Une résistance de $3{,}0\\ \\text{kW}$ fonctionne pendant $2{,}0\\ \\text{h}$. Calcule l'énergie absorbée en kWh puis en joules ($1\\ \\text{kWh} = 3{,}6\\times 10^{6}\\ \\text{J}$).",
+      "corrige": [
+        "$E = P \\times \\Delta t = 3{,}0\\ \\text{kW} \\times 2{,}0\\ \\text{h} = 6{,}0\\ \\text{kWh}$.",
+        "$E = 6{,}0 \\times 3{,}6\\times 10^{6} = 2{,}16\\times 10^{7}\\ \\text{J}$ (on retrouve ce résultat avec $3000\\ \\text{W} \\times 7200\\ \\text{s}$)."
+      ],
+      "reponse": "$6{,}0\\ \\text{kWh} = 2{,}16\\times 10^{7}\\ \\text{J}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "flux-energie",
+      "enonce": "Un moteur de rendement $\\eta = 0{,}85$ doit fournir une puissance utile de $1{,}7\\ \\text{kW}$. Quelle puissance absorbe-t-il ? Quelles sont les pertes ?",
+      "corrige": [
+        "$P_{\\text{absorbée}} = \\dfrac{P_{\\text{utile}}}{\\eta} = \\dfrac{1{,}7}{0{,}85} = 2{,}0\\ \\text{kW}$.",
+        "$P_{\\text{pertes}} = 2{,}0 - 1{,}7 = 0{,}30\\ \\text{kW} = 300\\ \\text{W}$."
+      ],
+      "reponse": "$P_{\\text{absorbée}} = 2{,}0\\ \\text{kW}$ ; pertes $= 300\\ \\text{W}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "bilan-matiere",
+      "enonce": "Une cuve contient $900\\ \\text{kg}$ d'eau. Elle reçoit $2{,}0\\ \\text{kg·s}^{-1}$ et en perd $2{,}5\\ \\text{kg·s}^{-1}$. (a) La masse d'eau augmente-t-elle ou diminue-t-elle, et à quel rythme ? (b) Au bout de combien de temps la cuve sera-t-elle vide ?",
+      "corrige": [
+        "(a) Bilan : $\\dfrac{\\Delta m}{\\Delta t} = 2{,}0 - 2{,}5 = -0{,}50\\ \\text{kg·s}^{-1}$ : la masse diminue de $0{,}50\\ \\text{kg}$ chaque seconde.",
+        "(b) $\\Delta t = \\dfrac{900}{0{,}50} = 1800\\ \\text{s} = 30\\ \\text{min}$."
+      ],
+      "reponse": "(a) Elle diminue de $0{,}50\\ \\text{kg}$ par seconde ; (b) $30\\ \\text{min}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "Le pH d'un fermenteur doit rester à $7{,}0$. Une électrode mesure le pH ; un régulateur commande une pompe qui ajoute une solution basique. (a) Nomme les quatre organes de la boucle. (b) La mesure vaut $6{,}6$ : calcule l'écart. Que fait la pompe ?",
+      "corrige": [
+        "(a) Consigne : $\\mathrm{pH} = 7{,}0$ ; capteur : l'électrode de pH ; correcteur : le régulateur ; actionneur : la pompe doseuse.",
+        "(b) $\\varepsilon = 7{,}0 - 6{,}6 = +0{,}4$ : le milieu est trop acide, la pompe ajoute de la solution basique jusqu'à annuler l'écart."
+      ],
+      "reponse": "(b) $\\varepsilon = +0{,}4$ : la pompe ajoute de la base."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "Pour chaque application, propose une régulation tout ou rien ou proportionnelle : (a) un fer à repasser ; (b) le débit d'un réactif dans un procédé où il faut éviter les à-coups ; (c) un chauffe-eau domestique.",
+      "corrige": [
+        "(a) et (c) : une régulation tout ou rien suffit, de petites oscillations autour de la consigne étant acceptables.",
+        "(b) : une régulation proportionnelle, qui dose l'ouverture de la vanne selon l'écart et évite les à-coups."
+      ],
+      "reponse": "(a) TOR ; (b) proportionnelle ; (c) TOR."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "chaine-energie",
+      "enonce": "Une chaîne d'énergie comporte un variateur ($\\eta_1 = 0{,}95$), un moteur ($\\eta_2 = 0{,}90$) et une pompe ($\\eta_3 = 0{,}85$). Calcule le rendement global. Est-il meilleur ou moins bon que celui de chaque étage ?",
+      "corrige": [
+        "Les rendements se multiplient : $\\eta = 0{,}95 \\times 0{,}90 \\times 0{,}85 \\approx 0{,}73$.",
+        "Soit environ $73\\ \\%$ : c'est moins que le rendement de chacun des étages."
+      ],
+      "reponse": "$\\eta \\approx 0{,}73$, moins bon que chaque étage."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "chaine-information",
+      "enonce": "Dans un système automatisé, quelle chaîne commande l'autre ? Quel élément de la chaîne d'énergie reçoit l'ordre de la chaîne d'information ?",
+      "corrige": [
+        "La chaîne d'information (capteur, correcteur) commande la chaîne d'énergie.",
+        "L'ordre arrive au distributeur (relais, variateur), qui dose l'énergie envoyée au convertisseur."
+      ],
+      "reponse": "La chaîne d'information commande ; l'ordre arrive au distributeur."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "flux-matiere",
+      "enonce": "Un élève calcule le débit massique d'un liquide ($\\rho = 1200\\ \\text{kg·m}^{-3}$, $Q_V = 5{,}0\\times 10^{-3}\\ \\text{m}^3\\text{·s}^{-1}$) et écrit : $Q_m = \\dfrac{Q_V}{\\rho} \\approx 4{,}2\\times 10^{-6}\\ \\text{kg·s}^{-1}$. Corrige.",
+      "corrige": [
+        "La relation est $Q_m = \\rho\\,Q_V$ (même logique que $m = \\rho V$), pas $\\dfrac{Q_V}{\\rho}$.",
+        "$Q_m = 1200 \\times 5{,}0\\times 10^{-3} = 6{,}0\\ \\text{kg·s}^{-1}$."
+      ],
+      "reponse": "$Q_m = 6{,}0\\ \\text{kg·s}^{-1}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "Un correcteur proportionnel a un gain $k = 5{,}0\\ \\%\\cdot\\text{°C}^{-1}$ ; la vanne ne peut pas s'ouvrir à plus de $100\\ \\%$. (a) À partir de quel écart la vanne est-elle grande ouverte ? (b) Que vaut $S$ pour $\\varepsilon = 30\\ \\text{°C}$ ? pour $\\varepsilon = 0{,}50\\ \\text{°C}$ ? (c) Commente.",
+      "corrige": [
+        "(a) $S = 100\\ \\%$ pour $\\varepsilon = \\dfrac{100}{5{,}0} = 20\\ \\text{°C}$.",
+        "(b) Pour $30\\ \\text{°C}$, le calcul donnerait $150\\ \\%$ : la vanne est simplement grande ouverte ($100\\ \\%$). Pour $0{,}50\\ \\text{°C}$ : $S = 2{,}5\\ \\%$.",
+        "(c) Loin de la consigne, l'action est maximale ; près de la consigne, elle devient très faible : la grandeur approche la consigne en douceur."
+      ],
+      "reponse": "(a) $20\\ \\text{°C}$ ; (b) $100\\ \\%$ (saturation) et $2{,}5\\ \\%$."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "bilan-matiere",
+      "enonce": "Un mélangeur reçoit $0{,}40\\ \\text{kg·s}^{-1}$ d'eau pure et $0{,}10\\ \\text{kg·s}^{-1}$ d'une saumure contenant $20\\ \\%$ (en masse) de sel. En régime permanent : (a) quel est le débit massique de sortie ? (b) quel débit de sel sort ? (c) quelle est la fraction massique de sel à la sortie ?",
+      "corrige": [
+        "(a) $Q_s = 0{,}40 + 0{,}10 = 0{,}50\\ \\text{kg·s}^{-1}$.",
+        "(b) Le sel se conserve aussi : $0{,}20 \\times 0{,}10 = 0{,}020\\ \\text{kg·s}^{-1}$ de sel sortent.",
+        "(c) $\\dfrac{0{,}020}{0{,}50} = 0{,}040$, soit $4{,}0\\ \\%$ de sel."
+      ],
+      "reponse": "(a) $0{,}50\\ \\text{kg·s}^{-1}$ ; (b) $0{,}020\\ \\text{kg·s}^{-1}$ ; (c) $4{,}0\\ \\%$."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "flux-energie",
+      "enonce": "Une pompe absorbe $1{,}5\\ \\text{kW}$ et fonctionne $8\\ \\text{h}$ par jour. Le kWh coûte $0{,}20$ €. (a) Quelle énergie consomme-t-elle par jour ? (b) Quel est le coût journalier ? (c) Une pompe de même puissance utile mais de meilleur rendement absorberait $1{,}2\\ \\text{kW}$ : quelle économie par jour ?",
+      "corrige": [
+        "(a) $E = 1{,}5 \\times 8 = 12\\ \\text{kWh}$.",
+        "(b) $12 \\times 0{,}20 = 2{,}40$ €.",
+        "(c) Nouvelle consommation : $1{,}2 \\times 8 = 9{,}6\\ \\text{kWh}$, soit $1{,}92$ € ; économie : $0{,}48$ € par jour."
+      ],
+      "reponse": "(a) $12\\ \\text{kWh}$ ; (b) $2{,}40$ € ; (c) $0{,}48$ € par jour."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "Dans une pièce chauffée, on ouvre la fenêtre : la température baisse. Compare le comportement d'un radiateur réglé « position 3 » (boucle ouverte) et d'un chauffage avec thermostat (boucle fermée).",
+      "corrige": [
+        "Boucle ouverte : le radiateur continue à chauffer de la même façon, il ne « sait » pas que la pièce refroidit ; la température s'éloigne de la valeur voulue.",
+        "Boucle fermée : le capteur mesure la baisse, l'écart $\\varepsilon$ augmente, le correcteur commande davantage de chauffe pour ramener la température à la consigne."
+      ],
+      "reponse": "Seule la boucle fermée réagit à la perturbation, grâce à la mesure en retour."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "bilan-matiere",
+      "enonce": "Un évaporateur concentre un jus de fruit. Il entre $2{,}0\\ \\text{kg·s}^{-1}$ de jus à $10\\ \\%$ (en masse) de sucre ; le concentré sort à $40\\ \\%$ de sucre ; le reste part sous forme de vapeur d'eau. En régime permanent, calcule le débit de concentré et le débit d'eau évaporée.",
+      "corrige": [
+        "Le sucre ne s'évapore pas : débit de sucre entrant $= 0{,}10 \\times 2{,}0 = 0{,}20\\ \\text{kg·s}^{-1}$, qui ressort entièrement dans le concentré.",
+        "Débit de concentré : $\\dfrac{0{,}20}{0{,}40} = 0{,}50\\ \\text{kg·s}^{-1}$.",
+        "Bilan global : eau évaporée $= 2{,}0 - 0{,}50 = 1{,}5\\ \\text{kg·s}^{-1}$."
+      ],
+      "reponse": "Concentré : $0{,}50\\ \\text{kg·s}^{-1}$ ; eau évaporée : $1{,}5\\ \\text{kg·s}^{-1}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "chaine-energie",
+      "enonce": "Un variateur ($\\eta_1 = 0{,}95$), un moteur ($\\eta_2 = 0{,}88$) et une pompe ($\\eta_3 = 0{,}80$) se suivent ; le variateur absorbe $5{,}0\\ \\text{kW}$. Calcule la puissance perdue dans chaque étage. Lequel faudrait-il améliorer en priorité ?",
+      "corrige": [
+        "Variateur : sortie $5{,}0 \\times 0{,}95 = 4{,}75\\ \\text{kW}$, pertes $0{,}25\\ \\text{kW}$.",
+        "Moteur : sortie $4{,}75 \\times 0{,}88 \\approx 4{,}18\\ \\text{kW}$, pertes $\\approx 0{,}57\\ \\text{kW}$. Pompe : sortie $4{,}18 \\times 0{,}80 \\approx 3{,}34\\ \\text{kW}$, pertes $\\approx 0{,}84\\ \\text{kW}$.",
+        "La pompe perd le plus : c'est elle qu'il faut améliorer en priorité (pertes totales $\\approx 1{,}66\\ \\text{kW}$)."
+      ],
+      "reponse": "Pertes : $0{,}25$ ; $0{,}57$ ; $0{,}84\\ \\text{kW}$ ; améliorer la pompe."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "Un thermostat tout ou rien a une hystérésis de $2\\ \\text{°C}$. On la réduit à $0{,}5\\ \\text{°C}$. Quelles sont les conséquences sur l'écart de température autour de la consigne et sur le nombre de démarrages de l'actionneur ?",
+      "corrige": [
+        "Une hystérésis plus étroite réduit l'amplitude des oscillations de température : la régulation est plus précise.",
+        "Mais l'actionneur démarre et s'arrête beaucoup plus souvent, ce qui l'use davantage : c'est un compromis."
+      ],
+      "reponse": "Oscillations plus faibles, mais démarrages plus fréquents."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "flux-matiere",
+      "enonce": "On remplit un fermenteur de $500\\ \\text{L}$ avec un moût ($\\rho = 1050\\ \\text{kg·m}^{-3}$) au débit de $12\\ \\text{L·min}^{-1}$. (a) Combien de temps dure le remplissage ? (b) Quel est le débit massique en $\\text{kg·s}^{-1}$ ? (c) Quelle masse de moût contient le fermenteur plein ?",
+      "corrige": [
+        "(a) $\\Delta t = \\dfrac{500}{12} \\approx 41{,}7\\ \\text{min}$.",
+        "(b) $Q_V = \\dfrac{12\\times 10^{-3}}{60} = 2{,}0\\times 10^{-4}\\ \\text{m}^3\\text{·s}^{-1}$ ; $Q_m = 1050 \\times 2{,}0\\times 10^{-4} = 0{,}21\\ \\text{kg·s}^{-1}$.",
+        "(c) $m = \\rho V = 1050 \\times 0{,}500 = 525\\ \\text{kg}$."
+      ],
+      "reponse": "(a) $\\approx 42\\ \\text{min}$ ; (b) $0{,}21\\ \\text{kg·s}^{-1}$ ; (c) $525\\ \\text{kg}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "probleme",
+      "notion": "procede-flux",
+      "enonce": "**Chaudière de procédé.** Une chaudière au gaz absorbe $25\\ \\text{kW}$ et transmet $23\\ \\text{kW}$ à l'eau qui la traverse au débit de $0{,}20\\ \\text{kg·s}^{-1}$. Un thermostat tout ou rien coupe le brûleur à $80\\ \\text{°C}$ et le rallume à $75\\ \\text{°C}$. (a) Calcule le rendement et les pertes. (b) Quel débit massique d'eau sort de la chaudière en régime permanent ? (c) Décris le fonctionnement de la régulation.",
+      "corrige": [
+        "(a) $\\eta = \\dfrac{23}{25} = 0{,}92$ ; pertes : $25 - 23 = 2{,}0\\ \\text{kW}$ (fumées, parois).",
+        "(b) La masse se conserve : $0{,}20\\ \\text{kg·s}^{-1}$ sortent.",
+        "(c) Le brûleur fonctionne jusqu'à ce que l'eau atteigne $80\\ \\text{°C}$, s'arrête, puis redémarre quand elle redescend à $75\\ \\text{°C}$ : la température oscille entre $75$ et $80\\ \\text{°C}$."
+      ],
+      "reponse": "(a) $\\eta = 92\\ \\%$, pertes $2{,}0\\ \\text{kW}$ ; (b) $0{,}20\\ \\text{kg·s}^{-1}$ ; (c) oscillation entre $75$ et $80\\ \\text{°C}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "probleme",
+      "notion": "regulation-boucle-fermee",
+      "enonce": "**Régulation proportionnelle d'un réacteur.** Consigne : $65{,}0\\ \\text{°C}$ ; gain : $k = 6{,}0\\ \\%\\cdot\\text{°C}^{-1}$ ; la vanne de vapeur s'ouvre de $0$ à $100\\ \\%$. On relève : $\\theta = 40{,}0$ ; $55{,}0$ ; $62{,}0$ ; $64{,}5\\ \\text{°C}$. (a) Calcule l'écart et la commande à chaque relevé. (b) Décris l'évolution de l'ouverture de la vanne.",
+      "corrige": [
+        "$40{,}0\\ \\text{°C}$ : $\\varepsilon = 25{,}0\\ \\text{°C}$, $S = 150\\ \\%$ calculé, donc vanne à $100\\ \\%$ (saturation).",
+        "$55{,}0\\ \\text{°C}$ : $\\varepsilon = 10{,}0$, $S = 60\\ \\%$. $62{,}0\\ \\text{°C}$ : $\\varepsilon = 3{,}0$, $S = 18\\ \\%$. $64{,}5\\ \\text{°C}$ : $\\varepsilon = 0{,}5$, $S = 3{,}0\\ \\%$.",
+        "(b) La vanne, grande ouverte au départ, se referme progressivement à l'approche de la consigne : pas d'à-coups."
+      ],
+      "reponse": "$100\\ \\%$ (saturée), $60\\ \\%$, $18\\ \\%$, $3{,}0\\ \\%$."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "bilan-matiere",
+      "enonce": "**Station d'épuration.** Une station reçoit $1200\\ \\text{m}^3$ d'eaux usées par heure. Elle en extrait $15\\ \\text{m}^3$ de boues par heure, le reste étant rejeté épuré à la rivière (même masse volumique, $1000\\ \\text{kg·m}^{-3}$, régime permanent). (a) Quel volume d'eau épurée est rejeté par heure ? (b) Exprime ce débit en $\\text{m}^3\\text{·s}^{-1}$ puis en $\\text{kg·s}^{-1}$.",
+      "corrige": [
+        "(a) Conservation : $1200 - 15 = 1185\\ \\text{m}^3$ par heure.",
+        "(b) $Q_V = \\dfrac{1185}{3600} \\approx 0{,}329\\ \\text{m}^3\\text{·s}^{-1}$ ; $Q_m = 1000 \\times 0{,}329 \\approx 329\\ \\text{kg·s}^{-1}$."
+      ],
+      "reponse": "(a) $1185\\ \\text{m}^3\\text{/h}$ ; (b) $\\approx 0{,}329\\ \\text{m}^3\\text{·s}^{-1}$, soit $\\approx 329\\ \\text{kg·s}^{-1}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "flux-energie",
+      "enonce": "**Recharger une voiture électrique.** On veut stocker $50\\ \\text{kWh}$ dans la batterie ; le chargeur a un rendement de $0{,}90$. Le kWh coûte $0{,}20$ €. (a) Quelle énergie faut-il prélever sur le réseau ? (b) Quel est le coût de la recharge ? (c) Avec une borne de $7{,}4\\ \\text{kW}$ (puissance absorbée), combien de temps dure la recharge ?",
+      "corrige": [
+        "(a) $E_{\\text{absorbée}} = \\dfrac{50}{0{,}90} \\approx 55{,}6\\ \\text{kWh}$.",
+        "(b) $55{,}6 \\times 0{,}20 \\approx 11{,}1$ €.",
+        "(c) $\\Delta t = \\dfrac{55{,}6}{7{,}4} \\approx 7{,}5\\ \\text{h}$."
+      ],
+      "reponse": "(a) $\\approx 55{,}6\\ \\text{kWh}$ ; (b) $\\approx 11{,}1$ € ; (c) $\\approx 7{,}5\\ \\text{h}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "chaine-information",
+      "enonce": "**Serre automatisée.** Dans une serre, une sonde d'humidité du sol commande un arrosage : quand le sol est trop sec, un automate ouvre une électrovanne alimentée par le réseau électrique, et l'eau du réseau s'écoule vers les plantes ; un écran affiche l'humidité. (a) Repère les trois fonctions de la chaîne d'information. (b) Repère le flux de matière. (c) Est-ce une boucle ouverte ou fermée ? Justifie.",
+      "corrige": [
+        "(a) Acquérir : la sonde d'humidité ; traiter : l'automate ; communiquer : l'ordre à l'électrovanne et l'écran.",
+        "(b) Flux de matière : l'eau, du réseau vers les plantes, à travers l'électrovanne.",
+        "(c) Boucle fermée : l'humidité est mesurée en permanence et l'arrosage s'arrête quand le sol est assez humide."
+      ],
+      "reponse": "(a) Sonde, automate, électrovanne et écran ; (b) l'eau ; (c) boucle fermée."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "flux-matiere",
+      "enonce": "**Arrosage.** Une pompe débite $1{,}2\\ \\text{m}^3$ d'eau par heure ($\\rho = 1000\\ \\text{kg·m}^{-3}$) pendant $25\\ \\text{min}$. (a) Quel volume d'eau, en litres, a été distribué ? (b) Quelle masse ? (c) Quel est le débit massique en $\\text{kg·s}^{-1}$ ?",
+      "corrige": [
+        "(a) $V = 1{,}2 \\times \\dfrac{25}{60} = 0{,}50\\ \\text{m}^3 = 500\\ \\text{L}$.",
+        "(b) $m = 1000 \\times 0{,}50 = 500\\ \\text{kg}$.",
+        "(c) $Q_m = \\dfrac{1000 \\times 1{,}2}{3600} \\approx 0{,}33\\ \\text{kg·s}^{-1}$."
+      ],
+      "reponse": "(a) $500\\ \\text{L}$ ; (b) $500\\ \\text{kg}$ ; (c) $\\approx 0{,}33\\ \\text{kg·s}^{-1}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "tor-vs-proportionnel",
+      "enonce": "**Chauffe-eau en tout ou rien.** Une résistance de $2{,}0\\ \\text{kW}$ chauffe l'eau d'un ballon ; elle s'allume à $55\\ \\text{°C}$ et s'arrête à $60\\ \\text{°C}$. Dans un modèle simple, la montée de $55$ à $60\\ \\text{°C}$ dure $12\\ \\text{min}$ et la redescente $108\\ \\text{min}$. (a) Quelle fraction du temps la résistance fonctionne-t-elle ? (b) Quelle est la puissance moyenne absorbée ? (c) Quelle énergie est consommée en $24\\ \\text{h}$, en kWh ?",
+      "corrige": [
+        "(a) Un cycle dure $12 + 108 = 120\\ \\text{min}$, dont $12\\ \\text{min}$ de chauffe : $\\dfrac{12}{120} = 10\\ \\%$.",
+        "(b) $P_{\\text{moy}} = 0{,}10 \\times 2{,}0 = 0{,}20\\ \\text{kW}$.",
+        "(c) $E = 0{,}20 \\times 24 = 4{,}8\\ \\text{kWh}$."
+      ],
+      "reponse": "(a) $10\\ \\%$ ; (b) $0{,}20\\ \\text{kW}$ ; (c) $4{,}8\\ \\text{kWh}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "bilan-matiere",
+      "enonce": "**Cuve tampon.** Une cuve contient $1{,}5\\ \\text{m}^3$. Pendant $10\\ \\text{min}$, elle reçoit $3{,}0\\ \\text{L·s}^{-1}$ et en perd $2{,}0\\ \\text{L·s}^{-1}$. Ensuite, l'entrée reste à $3{,}0\\ \\text{L·s}^{-1}$ mais la sortie passe à $4{,}0\\ \\text{L·s}^{-1}$. (a) Quel volume contient la cuve au bout des $10\\ \\text{min}$ ? (b) Combien de temps faut-il ensuite pour qu'elle se vide ?",
+      "corrige": [
+        "(a) Accumulation : $(3{,}0 - 2{,}0) \\times 600 = 600\\ \\text{L}$ ; volume : $1{,}5 + 0{,}60 = 2{,}1\\ \\text{m}^3$.",
+        "(b) La cuve perd $4{,}0 - 3{,}0 = 1{,}0\\ \\text{L·s}^{-1}$ ; $\\Delta t = \\dfrac{2100}{1{,}0} = 2100\\ \\text{s} = 35\\ \\text{min}$."
+      ],
+      "reponse": "(a) $2{,}1\\ \\text{m}^3$ ; (b) $35\\ \\text{min}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "flux-energie",
+      "enonce": "**Panneau photovoltaïque.** Un panneau de $1{,}7\\ \\text{m}^2$ reçoit un rayonnement solaire de $1000\\ \\text{W}$ par $\\text{m}^2$ et délivre $340\\ \\text{W}$ électriques. L'onduleur qui le suit a un rendement de $0{,}96$. (a) Calcule la puissance reçue et le rendement du panneau. (b) Calcule la puissance fournie au réseau. (c) Calcule le rendement global.",
+      "corrige": [
+        "(a) $P_{\\text{reçue}} = 1000 \\times 1{,}7 = 1700\\ \\text{W}$ ; $\\eta_1 = \\dfrac{340}{1700} = 0{,}20 = 20\\ \\%$.",
+        "(b) $P = 340 \\times 0{,}96 \\approx 326\\ \\text{W}$.",
+        "(c) $\\eta = 0{,}20 \\times 0{,}96 \\approx 0{,}19$, soit environ $19\\ \\%$."
+      ],
+      "reponse": "(a) $1700\\ \\text{W}$, $20\\ \\%$ ; (b) $\\approx 326\\ \\text{W}$ ; (c) $\\approx 19\\ \\%$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "procede-flux",
+      "enonce": "**Fermenteur régulé.** Un fermenteur de laboratoire est maintenu à $30{,}0\\ \\text{°C}$ par une régulation proportionnelle ($k = 10\\ \\%\\cdot\\text{°C}^{-1}$) agissant sur une résistance de $500\\ \\text{W}$. On l'alimente en milieu de culture à $0{,}50\\ \\text{L·min}^{-1}$ ($\\rho = 1020\\ \\text{kg·m}^{-3}$) et on soutire le même débit. (a) La sonde mesure $28{,}5\\ \\text{°C}$ : calcule l'écart et la commande, puis la puissance délivrée si elle est proportionnelle à $S$. (b) Calcule le débit massique d'alimentation en $\\text{kg·s}^{-1}$. (c) Le volume du fermenteur varie-t-il ?",
+      "corrige": [
+        "(a) $\\varepsilon = 30{,}0 - 28{,}5 = 1{,}5\\ \\text{°C}$ ; $S = 10 \\times 1{,}5 = 15\\ \\%$ ; puissance : $0{,}15 \\times 500 = 75\\ \\text{W}$.",
+        "(b) $Q_V = \\dfrac{0{,}50\\times 10^{-3}}{60} \\approx 8{,}3\\times 10^{-6}\\ \\text{m}^3\\text{·s}^{-1}$ ; $Q_m = 1020 \\times 8{,}3\\times 10^{-6} \\approx 8{,}5\\times 10^{-3}\\ \\text{kg·s}^{-1}$.",
+        "(c) Non : entrée et sortie sont égales, le fermenteur est en régime permanent."
+      ],
+      "reponse": "(a) $\\varepsilon = 1{,}5\\ \\text{°C}$, $S = 15\\ \\%$, $75\\ \\text{W}$ ; (b) $\\approx 8{,}5\\times 10^{-3}\\ \\text{kg·s}^{-1}$ ; (c) non."
     }
   ]
 }
