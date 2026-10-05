@@ -12,9 +12,9 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "objet programmé",
-      "enonce": "Parmi ces objets, entoure ceux qui sont des objets programmés (ils exécutent tout seuls une suite d'actions) : un lave-linge, une cuillère, un feu de circulation, un crayon.",
+      "enonce": "Parmi ces objets, cite ceux qui sont des objets programmés (ils exécutent tout seuls une suite d'actions) : un lave-linge, une cuillère, un feu de circulation, un crayon.",
       "corrige": [
         "Un objet programmé exécute tout seul une suite d'instructions enregistrées.",
         "Le lave-linge enchaîne tout seul remplissage, lavage et essorage : il est programmé. Le feu de circulation change de couleur tout seul à intervalles réguliers : il est programmé.",
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "vocabulaire",
       "enonce": "Relie chaque mot à sa définition : algorithme, instruction, programme. Définitions : a) une seule action à réaliser ; b) une suite d'instructions dans l'ordre pour réaliser une tâche ; c) un algorithme écrit dans un langage que la machine comprend.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "exécution dans l'ordre",
       "enonce": "Un robot reçoit ce programme pour dessiner : « avance de 3 pas, tourne à droite, avance de 3 pas ». La machine exécute-t-elle les instructions dans l'ordre écrit ou comme elle veut ? Que fait le robot en premier ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "boucle",
       "enonce": "Pour dessiner un carré, un robot doit répéter 4 fois : « avance de 5 pas, tourne à droite d'un quart de tour ». Écris ce programme en utilisant une boucle, et explique à quoi sert la boucle.",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "capteur et test",
       "enonce": "Une lampe de jardin s'allume toute seule quand il fait nuit. Explique quel élément mesure qu'il fait nuit et écris la règle sous la forme « si … alors … ».",
       "corrige": [
@@ -72,19 +72,20 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "trouver et corriger un bug",
       "enonce": "Un élève veut faire tracer un triangle (3 côtés) à un robot, mais il a écrit : « Répéter 4 fois [avance de 5 pas ; tourne] ». Le robot ne dessine pas un triangle. Explique où est l'erreur et comment la corriger.",
       "corrige": [
         "Un triangle a 3 côtés, donc il faut répéter les instructions 3 fois, pas 4.",
         "Le programme répète 4 fois : le robot trace 4 côtés, ce qui ne donne pas un triangle. C'est là qu'est l'erreur (le bug).",
-        "Pour corriger, on remplace « Répéter 4 fois » par « Répéter 3 fois » : Répéter 3 fois [avance de 5 pas ; tourne]. Programmer, c'est repérer l'erreur et corriger les instructions."
+        "Pour corriger, on remplace « Répéter 4 fois » par « Répéter 3 fois » : Répéter 3 fois [avance de 5 pas ; tourne]. Programmer, c'est repérer l'erreur et corriger les instructions.",
+        "Il faut aussi que le robot tourne d'un tiers de tour à chaque coin (et non d'un quart de tour, comme pour un carré)."
       ],
       "reponse": "L'erreur est le nombre de répétitions : un triangle a 3 côtés, il faut donc écrire « Répéter 3 fois » au lieu de 4."
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "qu'est-ce qu'une instruction",
       "enonce": "Qu'est-ce qu'une instruction dans un programme ? Donne un exemple d'instruction pour un robot.",
       "corrige": [
@@ -95,7 +96,7 @@
     },
     {
       "id": 8,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "algorithme du quotidien",
       "enonce": "Un algorithme est une suite d'instructions dans l'ordre. Cite un exemple d'algorithme de la vie de tous les jours.",
       "corrige": [
@@ -106,7 +107,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "le rôle d'une boucle",
       "enonce": "À quoi sert une boucle dans un programme ? Donne un exemple avec un robot qui doit répéter des actions.",
       "corrige": [
@@ -117,7 +118,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "capteur, test et action",
       "enonce": "Une porte de magasin s'ouvre toute seule quand une personne s'approche. Explique comment elle fonctionne en parlant du capteur, du test (la condition) et de l'action.",
       "corrige": [
@@ -126,6 +127,447 @@
         "L'action déclenchée est : ouvrir la porte. S'il n'y a personne, la porte reste fermée."
       ],
       "reponse": "Un capteur détecte la personne ; le test dit « si une personne est détectée, alors ouvrir la porte » ; l'action est l'ouverture de la porte."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "objet technique et fonction",
+      "enonce": "À quel besoin répond chacun de ces objets techniques : un vélo, un téléphone, une brosse à dents ?",
+      "corrige": [
+        "Un objet technique est fabriqué pour répondre à un besoin.",
+        "Le vélo sert à se déplacer, le téléphone à communiquer, la brosse à dents à se laver les dents."
+      ],
+      "reponse": "Vélo : se déplacer ; téléphone : communiquer ; brosse à dents : se laver les dents."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "qu'est-ce qu'une instruction",
+      "enonce": "Combien d'instructions contient ce programme : « avance de 2 pas ; tourne à gauche ; avance de 1 pas ; allume la lampe » ?",
+      "corrige": [
+        "Une instruction est une seule action à réaliser.",
+        "On compte les actions séparées par des points-virgules : avance, tourne, avance, allume."
+      ],
+      "reponse": "4 instructions."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire",
+      "enonce": "Vrai ou faux : « Un algorithme ne peut être exécuté que par un ordinateur. » Corrige si c'est faux.",
+      "corrige": [
+        "Un algorithme est une suite d'instructions dans l'ordre pour réaliser une tâche.",
+        "Une personne peut suivre un algorithme, comme une recette de cuisine."
+      ],
+      "reponse": "Faux : une recette ou un itinéraire sont des algorithmes suivis par des personnes."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "capteur et test",
+      "enonce": "Quel type de capteur utilise un thermostat qui allume le chauffage quand il fait froid ?",
+      "corrige": [
+        "Le thermostat doit savoir s'il fait froid.",
+        "Il mesure la température : c'est un capteur de température."
+      ],
+      "reponse": "Un capteur de température."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "trouver et corriger un bug",
+      "enonce": "Comment appelle-t-on parfois une erreur dans un programme ?",
+      "corrige": [
+        "Un programme qui ne fait pas ce qu'on voulait contient une erreur.",
+        "On l'appelle souvent un « bug »."
+      ],
+      "reponse": "Un « bug »."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "objet programmé",
+      "enonce": "Classe ces objets en deux groupes, « programmé » ou « non programmé » : un four avec minuterie qui s'arrête tout seul, une paire de ciseaux, un robot aspirateur, un marteau.",
+      "corrige": [
+        "Un objet programmé exécute tout seul une suite d'actions enregistrées.",
+        "Le four à minuterie et le robot aspirateur le font ; les ciseaux et le marteau ont besoin de notre main à chaque geste."
+      ],
+      "reponse": "Programmés : le four à minuterie, le robot aspirateur. Non programmés : les ciseaux, le marteau."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "objet programmé",
+      "enonce": "Un lave-linge enchaîne trois étapes tout seul. Remets-les dans l'ordre : essorage, remplissage d'eau, lavage.",
+      "corrige": [
+        "Il faut d'abord remplir la machine d'eau.",
+        "Ensuite le linge est lavé, puis essoré pour enlever l'eau."
+      ],
+      "reponse": "remplissage d'eau → lavage → essorage"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "exécution dans l'ordre",
+      "enonce": "Un robot est sur une case et regarde vers le haut. Il reçoit : « avance de 2 cases ; tourne à droite ; avance de 1 case ». Dans quelle direction regarde-t-il à la fin ?",
+      "corrige": [
+        "Au départ, le robot regarde vers le haut.",
+        "Un quart de tour à droite le fait regarder vers la droite ; avancer ne change pas sa direction."
+      ],
+      "reponse": "Vers la droite."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "Réécris ce programme avec une boucle : « saute ; saute ; saute ; saute ; saute ».",
+      "corrige": [
+        "L'instruction « saute » est répétée 5 fois.",
+        "Une boucle permet d'écrire l'instruction une seule fois en indiquant le nombre de répétitions."
+      ],
+      "reponse": "Répéter 5 fois [saute]."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "le rôle d'une boucle",
+      "enonce": "Combien d'instructions le robot exécute-t-il en tout avec : « Répéter 3 fois [avance ; tourne à gauche] » ?",
+      "corrige": [
+        "Chaque tour de boucle contient 2 instructions.",
+        "La boucle est répétée 3 fois : 2 × 3 = 6."
+      ],
+      "reponse": "6 instructions."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "algorithme du quotidien",
+      "enonce": "Remets dans l'ordre cet algorithme pour se brosser les dents : rincer la brosse ; mettre du dentifrice sur la brosse ; brosser les dents ; prendre la brosse.",
+      "corrige": [
+        "On prend d'abord la brosse, puis on y met du dentifrice.",
+        "On brosse les dents, puis on rince la brosse."
+      ],
+      "reponse": "prendre la brosse → mettre du dentifrice → brosser les dents → rincer la brosse"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "capteur et test",
+      "enonce": "Écris sous la forme « si … alors … » la règle d'un arrosage automatique qui arrose le jardin quand la terre est sèche.",
+      "corrige": [
+        "La condition est : la terre est sèche.",
+        "L'action est : arroser."
+      ],
+      "reponse": "Si la terre est sèche, alors arroser le jardin."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "vocabulaire",
+      "enonce": "Recopie et complète avec « algorithme » ou « programme » : une recette de crêpes écrite sur un cahier est un … ; la même suite d'étapes écrite dans un langage pour un robot cuisinier est un …",
+      "corrige": [
+        "La recette est une suite d'instructions dans l'ordre : c'est un algorithme.",
+        "Écrite dans un langage que la machine comprend, elle devient un programme."
+      ],
+      "reponse": "Un algorithme ; un programme."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "qu'est-ce qu'une instruction",
+      "enonce": "Parmi ces phrases, lesquelles sont des instructions qu'un robot peut exécuter : « avance de 3 pas », « sois gentil », « tourne à gauche », « fais quelque chose de joli » ?",
+      "corrige": [
+        "Une instruction est une action précise à réaliser.",
+        "« Sois gentil » et « fais quelque chose de joli » ne disent pas quelle action faire."
+      ],
+      "reponse": "« avance de 3 pas » et « tourne à gauche »."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "exécution dans l'ordre",
+      "enonce": "Sur un quadrillage, un robot part de la case A1 (colonne A, ligne 1) et regarde vers la droite (vers B, C, D…). Il exécute : « avance de 2 cases ; tourne à gauche ; avance de 3 cases ». Sur quelle case arrive-t-il, si tourner à gauche le fait regarder vers les numéros de ligne croissants ?",
+      "corrige": [
+        "Avancer de 2 cases vers la droite le mène de A1 à C1.",
+        "Il regarde ensuite vers les lignes croissantes : avancer de 3 cases le mène de C1 à C4."
+      ],
+      "reponse": "Sur la case C4."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "exécution dans l'ordre",
+      "enonce": "Un robot reçoit : « tourne à droite ; avance de 4 pas ». Un autre reçoit : « avance de 4 pas ; tourne à droite ». Ils partent du même endroit en regardant dans la même direction. Arrivent-ils au même endroit ? Explique.",
+      "corrige": [
+        "Le premier tourne d'abord, puis avance dans une nouvelle direction.",
+        "Le second avance tout droit, puis tourne sur place : il n'arrive pas au même endroit."
+      ],
+      "reponse": "Non : l'ordre des instructions change le résultat."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "boucle",
+      "enonce": "Que dessine un robot crayon qui exécute « Répéter 4 fois [avance de 3 cm ; tourne à droite d'un quart de tour] » ? Quelle est la longueur totale du trait ?",
+      "corrige": [
+        "Quatre côtés de même longueur, avec quatre quarts de tour : c'est un carré.",
+        "La longueur totale vaut 4 × 3 cm = 12 cm."
+      ],
+      "reponse": "Un carré de 3 cm de côté ; le trait mesure 12 cm en tout."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "boucle",
+      "enonce": "Écris un programme avec une boucle qui fait tracer à un robot un rectangle de 6 pas de long et 2 pas de large, en tournant à droite d'un quart de tour à chaque coin.",
+      "corrige": [
+        "Un rectangle a deux longueurs et deux largeurs, qui alternent.",
+        "On peut répéter 2 fois le motif « longueur, coin, largeur, coin »."
+      ],
+      "reponse": "Répéter 2 fois [avance de 6 pas ; tourne à droite d'un quart de tour ; avance de 2 pas ; tourne à droite d'un quart de tour]."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "le rôle d'une boucle",
+      "enonce": "Un élève dit : « Avec une boucle, le robot avance plus vite. » Corrige son affirmation.",
+      "corrige": [
+        "Une boucle ne change pas la vitesse du robot.",
+        "Elle sert à répéter des instructions sans avoir à les réécrire."
+      ],
+      "reponse": "Faux : la boucle ne rend pas le robot plus rapide, elle évite de réécrire plusieurs fois les mêmes instructions."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "capteur et test",
+      "enonce": "Un robot aspirateur suit cette règle : « si un obstacle est détecté devant, alors tourner ; sinon avancer ». Que fait-il quand il arrive devant un pied de chaise ? Et dans un couloir vide ?",
+      "corrige": [
+        "Devant le pied de chaise, la condition « obstacle détecté » est vraie : il tourne.",
+        "Dans le couloir vide, il n'y a pas d'obstacle : il avance."
+      ],
+      "reponse": "Devant la chaise, il tourne ; dans le couloir vide, il avance."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "capteur et test",
+      "enonce": "Associe chaque objet à son capteur : une porte automatique, une lampe de jardin qui s'allume la nuit, un thermostat. Capteurs : de lumière, de mouvement, de température.",
+      "corrige": [
+        "La porte détecte une personne qui approche : capteur de mouvement.",
+        "La lampe détecte la nuit : capteur de lumière. Le thermostat mesure la température : capteur de température."
+      ],
+      "reponse": "Porte : mouvement ; lampe : lumière ; thermostat : température."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "capteur, test et action",
+      "enonce": "Dans un parking, une barrière se lève quand une voiture arrive devant. Distingue le capteur, la condition et l'action.",
+      "corrige": [
+        "Le capteur détecte la présence d'une voiture.",
+        "La condition est « si une voiture est détectée » ; l'action est de lever la barrière."
+      ],
+      "reponse": "Capteur : il détecte la voiture ; condition : si une voiture est détectée ; action : lever la barrière."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "trouver et corriger un bug",
+      "enonce": "Un élève veut que son robot avance de 4 pas puis allume une lampe. Il a écrit : « allume la lampe ; avance de 4 pas ». Le robot allume la lampe trop tôt. Trouve et corrige l'erreur.",
+      "corrige": [
+        "La machine exécute les instructions dans l'ordre écrit.",
+        "Ici, l'ordre est inversé : il faut d'abord avancer, puis allumer."
+      ],
+      "reponse": "Les instructions sont dans le mauvais ordre : il faut écrire « avance de 4 pas ; allume la lampe »."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "algorithme du quotidien",
+      "enonce": "Écris un algorithme de 4 instructions pour aller de la porte de la classe à ton bureau. Utilise des instructions précises.",
+      "corrige": [
+        "Un algorithme est une suite d'instructions dans l'ordre.",
+        "Chaque instruction doit être une seule action précise : avancer d'un nombre de pas, tourner à droite ou à gauche."
+      ],
+      "reponse": "Exemple de réponse : « avance de 5 pas ; tourne à gauche ; avance de 3 pas ; assieds-toi »."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "objet technique et fonction",
+      "enonce": "Un feu tricolore et un lampadaire servent tous les deux à la circulation. Lequel est un objet programmé qui change tout seul d'état à intervalles réguliers ?",
+      "corrige": [
+        "Le feu tricolore change de couleur tout seul, à intervalles réguliers.",
+        "Il suit une suite d'actions enregistrée : vert, orange, rouge, puis à nouveau vert."
+      ],
+      "reponse": "Le feu tricolore."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "trouver et corriger un bug",
+      "enonce": "Un robot doit dessiner un carré, mais il a reçu : « Répéter 4 fois [avance de 5 pas ; tourne à droite d'un demi-tour] ». Que dessine-t-il ? Corrige le programme.",
+      "corrige": [
+        "Avec un demi-tour, le robot revient sur ses pas : il fait des allers-retours sur le même trait.",
+        "Pour un carré, il faut tourner d'un quart de tour à chaque coin."
+      ],
+      "reponse": "Il trace un seul trait en faisant des allers-retours ; il faut écrire « tourne à droite d'un quart de tour »."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "trouver et corriger un bug",
+      "enonce": "Un programme doit faire sonner une alarme si la température dépasse 30 °C. L'élève a écrit : « si la température est inférieure à 30 °C, alors sonner ». Que se passe-t-il un jour à 20 °C ? Corrige.",
+      "corrige": [
+        "À 20 °C, la condition « inférieure à 30 °C » est vraie : l'alarme sonne alors qu'il ne fait pas chaud.",
+        "Il faut inverser la condition."
+      ],
+      "reponse": "L'alarme sonne à tort ; il faut écrire « si la température est supérieure à 30 °C, alors sonner »."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "boucle",
+      "enonce": "Que dessine un robot qui exécute « Répéter 3 fois [avance de 4 cm ; tourne à gauche d'un tiers de tour] » ? Quelle est la longueur totale du trait ?",
+      "corrige": [
+        "Trois côtés de même longueur, avec trois tiers de tour : c'est un triangle dont les trois côtés sont égaux.",
+        "La longueur totale vaut 3 × 4 cm = 12 cm."
+      ],
+      "reponse": "Un triangle à trois côtés égaux de 4 cm ; le trait mesure 12 cm."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "le rôle d'une boucle",
+      "enonce": "Ce programme contient 8 instructions : « avance ; tourne ; avance ; tourne ; avance ; tourne ; avance ; tourne ». Réécris ce programme avec une boucle. Combien d'instructions faut-il alors écrire dans la boucle ?",
+      "corrige": [
+        "Le motif « avance ; tourne » est répété 4 fois.",
+        "Dans la boucle, on n'écrit ce motif qu'une seule fois : 2 instructions."
+      ],
+      "reponse": "Répéter 4 fois [avance ; tourne] ; on n'écrit que 2 instructions dans la boucle."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "exécution dans l'ordre",
+      "enonce": "Un robot part de la case B2 et regarde vers le haut (vers les lignes 3, 4, 5…). Programme : « avance de 2 cases ; tourne à droite ; avance de 3 cases ; tourne à droite ; avance de 1 case ». Sur quelle case finit-il, si tourner à droite le fait regarder d'abord vers les colonnes C, D, E…, puis vers le bas ?",
+      "corrige": [
+        "Avancer de 2 cases vers le haut : de B2 à B4.",
+        "Tourner à droite puis avancer de 3 cases : de B4 à E4.",
+        "Tourner à droite (il regarde vers le bas) puis avancer de 1 case : de E4 à E3."
+      ],
+      "reponse": "Sur la case E3."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "capteur, test et action",
+      "enonce": "Une poubelle automatique ouvre son couvercle quand une main passe au-dessus, puis le referme au bout de 5 secondes. Écris son fonctionnement en trois étapes : capteur, test, actions.",
+      "corrige": [
+        "Le capteur de mouvement détecte la main.",
+        "Le test : si une main est détectée ; les actions : ouvrir le couvercle, attendre 5 secondes, refermer."
+      ],
+      "reponse": "Capteur : détecte la main ; test : si une main est détectée ; actions : ouvrir, attendre 5 secondes, refermer."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "capteur, test et action",
+      "enonce": "Pourquoi un robot aspirateur sans capteur risquerait-il de rester bloqué contre un mur ?",
+      "corrige": [
+        "Sans capteur, le robot ne reçoit aucune information sur ce qui l'entoure.",
+        "Il ne peut pas tester s'il y a un obstacle, donc il continue d'avancer contre le mur."
+      ],
+      "reponse": "Sans capteur, il ne sait pas qu'il y a un mur : il ne peut pas décider de tourner."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "algorithme du quotidien",
+      "enonce": "Voici un itinéraire : « sors de l'école ; tourne à droite ; marche jusqu'à la boulangerie ; traverse au passage piéton ». Un camarade dit que ce n'est pas un algorithme, car ce n'est pas pour un ordinateur. A-t-il raison ?",
+      "corrige": [
+        "Un algorithme est une suite d'instructions dans l'ordre pour réaliser une tâche.",
+        "Cet itinéraire en est une : c'est un algorithme, même s'il est suivi par une personne."
+      ],
+      "reponse": "Non : un itinéraire est un algorithme, même s'il n'est pas destiné à un ordinateur."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "vocabulaire",
+      "enonce": "Explique en une phrase la différence entre une instruction et un algorithme.",
+      "corrige": [
+        "Une instruction est une seule action.",
+        "Un algorithme est une suite de plusieurs instructions dans l'ordre pour réaliser une tâche."
+      ],
+      "reponse": "Une instruction est une seule action ; un algorithme est une suite d'instructions dans l'ordre."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "objet technique et fonction",
+      "enonce": "Un grille-pain ordinaire et un grille-pain avec minuterie qui éjecte le pain tout seul répondent au même besoin. Lequel est un objet programmé ? Justifie.",
+      "corrige": [
+        "Les deux répondent au besoin de griller du pain : c'est leur fonction.",
+        "Celui à minuterie enchaîne tout seul « griller, attendre la durée choisie, éjecter » : il exécute une suite d'actions enregistrée."
+      ],
+      "reponse": "Le grille-pain à minuterie, car il exécute tout seul une suite d'actions enregistrée."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "boucle",
+      "enonce": "Un robot jardinier doit planter 6 graines alignées, avec 1 pas entre deux graines. Écris un programme court avec une boucle, en utilisant les instructions « plante une graine » et « avance de 1 pas ».",
+      "corrige": [
+        "Le motif « plante une graine ; avance de 1 pas » se répète.",
+        "Il faut 6 graines : on répète 6 fois (le dernier pas n'est pas gênant)."
+      ],
+      "reponse": "Répéter 6 fois [plante une graine ; avance de 1 pas]."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "capteur et test",
+      "enonce": "Une serre automatique doit ouvrir sa fenêtre quand il fait plus de 25 °C et la fermer sinon. Écris le programme avec un test « si … alors … sinon … », et nomme le capteur utilisé.",
+      "corrige": [
+        "Il faut mesurer la température : c'est un capteur de température.",
+        "Le test choisit l'action selon la température mesurée."
+      ],
+      "reponse": "Si la température est supérieure à 25 °C, alors ouvrir la fenêtre, sinon fermer la fenêtre ; capteur de température."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "trouver et corriger un bug",
+      "enonce": "Pour faire un sandwich, un robot a reçu : « mets le jambon ; ouvre le pain ; ferme le pain ». Le jambon tombe à côté. Explique pourquoi et corrige l'algorithme.",
+      "corrige": [
+        "La machine exécute dans l'ordre écrit, sans deviner.",
+        "Le jambon est posé avant que le pain soit ouvert : il faut ouvrir le pain d'abord."
+      ],
+      "reponse": "L'ordre est faux ; il faut : « ouvre le pain ; mets le jambon ; ferme le pain »."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "objet programmé",
+      "enonce": "Choisis un objet programmé de la maison (par exemple un lave-vaisselle) et décris en deux ou trois phrases ce qu'il fait tout seul, dans l'ordre.",
+      "corrige": [
+        "Un objet programmé enchaîne tout seul une suite d'actions enregistrées.",
+        "Exemple : le lave-vaisselle se remplit d'eau, lave la vaisselle, la rince, puis la sèche."
+      ],
+      "reponse": "Exemple de réponse : le lave-vaisselle se remplit d'eau, lave, rince, puis sèche la vaisselle, sans qu'on intervienne."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "capteur, test et action",
+      "enonce": "Pour économiser l'énergie, une école veut que la lumière d'un couloir s'allume seulement quand quelqu'un passe. Décris l'objet programmé à installer : capteur, condition, action.",
+      "corrige": [
+        "Il faut un capteur de mouvement qui détecte une personne.",
+        "La condition : si quelqu'un est détecté ; l'action : allumer la lumière (et l'éteindre quand il n'y a plus personne)."
+      ],
+      "reponse": "Un capteur de mouvement ; si quelqu'un passe, alors la lumière s'allume (sinon elle reste éteinte)."
     }
   ]
 }
