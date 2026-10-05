@@ -24,7 +24,7 @@ relu_par: null
 - **Rapport à la science** : la technique n'est pas une simple application de la science ; historiquement, des techniques ont précédé les théories qui les expliquent.
 
 ## 2. La technique et la maîtrise de la nature
-- **Le projet moderne** : Descartes formule l'idéal de l'homme « comme maîtres et possesseurs de la nature » grâce à la science et à la technique. La technique devient l'instrument d'une maîtrise croissante du monde.
+- **Le projet moderne** : Descartes formule l'idéal de rendre les hommes « comme maîtres et possesseurs de la nature » grâce à la science et à la technique. La technique devient l'instrument d'une maîtrise croissante du monde.
 - **Travail et instrument** : chez Marx, l'outil prolonge la main ; la machine transforme le rapport au travail et peut déposséder l'ouvrier de son savoir-faire.
 - **Bergson** : l'intelligence humaine est essentiellement « faculté de fabriquer des outils » ; il nomme l'homme *homo faber* plutôt qu'*homo sapiens*.
 
