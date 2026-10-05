@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "conditionnelle",
       "enonce": "Dans une population, une maladie touche $4\\,\\%$ des personnes. On dispose d'un test de dépistage. Chez une personne **malade**, le test est positif dans $90\\,\\%$ des cas. Chez une personne **saine**, le test est positif dans $5\\,\\%$ des cas (faux positifs).\n\nOn choisit une personne au hasard. On note $\\mathrm{M}$ l'événement « la personne est malade » et $\\mathrm{T}$ l'événement « le test est positif ».\n\n1. Traduire les données de l'énoncé en probabilités et représenter la situation par un arbre pondéré.\n2. Calculer $P(\\mathrm{M} \\cap \\mathrm{T})$.\n3. En déduire $P(\\mathrm{T})$, la probabilité que le test soit positif.\n4. Une personne a un test positif. Calculer la probabilité qu'elle soit réellement malade, $P_\\mathrm{T}(\\mathrm{M})$. Commenter.\n5. On teste $4$ personnes choisies au hasard et de façon indépendante dans cette population. Calculer la probabilité qu'**au moins une** ait un test positif (arrondir au millième).",
       "corrige": [
@@ -138,6 +138,456 @@
         "5. Pour une personne, la probabilité d'un test positif est $p = P(\\mathrm{T}) = 0{,}084$. On répète l'épreuve $4$ fois de façon identique et indépendante. « Au moins un test positif » a pour contraire « aucun test positif », soit quatre tests négatifs : $P(\\text{aucun}) = (1 - 0{,}084)^4 = 0{,}916^4 \\approx 0{,}7040$. Donc $P(\\text{au moins un}) = 1 - 0{,}916^4 \\approx 0{,}296$."
       ],
       "reponse": "$P(\\mathrm{M} \\cap \\mathrm{T}) = 0{,}036$ ; $P(\\mathrm{T}) = 0{,}084$ ; $P_\\mathrm{T}(\\mathrm{M}) = \\dfrac{3}{7} \\approx 0{,}43$ (paradoxe du dépistage) ; $P(\\text{au moins un positif sur }4) = 1 - 0{,}916^4 \\approx 0{,}296$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "tableau-croise",
+      "enonce": "Un cinéma a interrogé $400$ spectateurs sur leur âge et le film qu'ils sont venus voir.\n\n|  | Film d'animation | Film d'action | Total |\n|---|---|---|---|\n| Moins de 18 ans | 90 | 60 | 150 |\n| 18 ans et plus | 70 | 180 | 250 |\n| Total | 160 | 240 | 400 |\n\nCombien de spectateurs sont venus voir un film d'action ?",
+      "corrige": [
+        "On lit le total de la colonne « Film d'action ».",
+        "$60 + 180 = 240$."
+      ],
+      "reponse": "$240$ spectateurs"
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "arbre",
+      "enonce": "Sur un arbre pondéré, on lit $P(A) = 0{,}3$ et $P_A(B) = 0{,}6$. Quelles probabilités faut-il écrire sur les branches menant à $\\overline{A}$ et, depuis $A$, à $\\overline{B}$ ?",
+      "corrige": [
+        "La somme des branches issues d'un même nœud vaut $1$.",
+        "$P(\\overline{A}) = 1 - 0{,}3 = 0{,}7$ et $P_A(\\overline{B}) = 1 - 0{,}6 = 0{,}4$."
+      ],
+      "reponse": "$P(\\overline{A}) = 0{,}7$ et $P_A(\\overline{B}) = 0{,}4$"
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "bernoulli",
+      "enonce": "On lance un dé équilibré à six faces ; on appelle succès l'événement « obtenir $6$ ». Quelle est la probabilité $p$ du succès ? Celle de l'échec ?",
+      "corrige": [
+        "Il y a deux issues : succès ou échec ; c'est une épreuve de Bernoulli.",
+        "$p = \\dfrac{1}{6}$ et la probabilité d'échec vaut $1 - p = \\dfrac{5}{6}$."
+      ],
+      "reponse": "$p = \\dfrac{1}{6}$ ; échec : $\\dfrac{5}{6}$"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "On donne $P(A) = 0{,}4$ et $P(A \\cap B) = 0{,}1$. Calculer $P_A(B)$.",
+      "corrige": [
+        "Par définition, $P_A(B) = \\dfrac{P(A \\cap B)}{P(A)}$.",
+        "$P_A(B) = \\dfrac{0{,}1}{0{,}4} = 0{,}25$."
+      ],
+      "reponse": "$P_A(B) = 0{,}25$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "conditionnelle",
+      "enonce": "On donne $P(B) = 0{,}8$ et $P_B(A) = 0{,}5$. Calculer $P(A \\cap B)$.",
+      "corrige": [
+        "De la définition $P_B(A) = \\dfrac{P(A \\cap B)}{P(B)}$, on tire $P(A \\cap B) = P(B) \\times P_B(A)$.",
+        "$P(A \\cap B) = 0{,}8 \\times 0{,}5 = 0{,}4$."
+      ],
+      "reponse": "$P(A \\cap B) = 0{,}4$"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "tableau-croise",
+      "enonce": "Un cinéma a interrogé $400$ spectateurs sur leur âge et le film qu'ils sont venus voir.\n\n|  | Film d'animation | Film d'action | Total |\n|---|---|---|---|\n| Moins de 18 ans | 90 | 60 | 150 |\n| 18 ans et plus | 70 | 180 | 250 |\n| Total | 160 | 240 | 400 |\n\nOn choisit un spectateur au hasard. Quelle est la probabilité qu'il ait moins de $18$ ans ?",
+      "corrige": [
+        "La base est l'effectif total ($400$).",
+        "$P = \\dfrac{150}{400} = 0{,}375$."
+      ],
+      "reponse": "$0{,}375$"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "tableau-croise",
+      "enonce": "Un cinéma a interrogé $400$ spectateurs sur leur âge et le film qu'ils sont venus voir.\n\n|  | Film d'animation | Film d'action | Total |\n|---|---|---|---|\n| Moins de 18 ans | 90 | 60 | 150 |\n| 18 ans et plus | 70 | 180 | 250 |\n| Total | 160 | 240 | 400 |\n\nOn choisit un spectateur au hasard. Quelle est la probabilité qu'il ait moins de $18$ ans et soit venu voir le film d'animation ?",
+      "corrige": [
+        "C'est une intersection : la base est l'effectif total.",
+        "$P = \\dfrac{90}{400} = 0{,}225$."
+      ],
+      "reponse": "$0{,}225$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "arbre",
+      "enonce": "Avec $P(A) = 0{,}3$ et $P_A(B) = 0{,}6$, un élève calcule $P(A \\cap B) = 0{,}3 + 0{,}6 = 0{,}9$. Corriger son erreur.",
+      "corrige": [
+        "Le long d'un chemin, on multiplie les probabilités, on ne les additionne pas.",
+        "$P(A \\cap B) = 0{,}3 \\times 0{,}6 = 0{,}18$."
+      ],
+      "reponse": "$P(A \\cap B) = 0{,}18$"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "arbre",
+      "enonce": "Une urne contient $4$ boules rouges et $6$ boules bleues. On tire une boule, on la remet, puis on en tire une seconde. Calculer la probabilité d'obtenir deux boules bleues.",
+      "corrige": [
+        "Avec remise, la composition de l'urne ne change pas : la probabilité de bleu vaut $\\dfrac{6}{10} = 0{,}6$ à chaque tirage.",
+        "On multiplie le long du chemin « bleu, bleu » : $0{,}6 \\times 0{,}6 = 0{,}36$."
+      ],
+      "reponse": "$0{,}36$"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "probabilites-totales",
+      "enonce": "On donne $P(A) = 0{,}4$, $P_A(B) = 0{,}5$ et $P_{\\overline{A}}(B) = 0{,}25$. Calculer $P(B)$.",
+      "corrige": [
+        "$P(\\overline{A}) = 0{,}6$. Formule des probabilités totales : $P(B) = P(A) \\times P_A(B) + P(\\overline{A}) \\times P_{\\overline{A}}(B)$.",
+        "$P(B) = 0{,}4 \\times 0{,}5 + 0{,}6 \\times 0{,}25 = 0{,}2 + 0{,}15 = 0{,}35$."
+      ],
+      "reponse": "$P(B) = 0{,}35$"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "probabilites-totales",
+      "enonce": "Une usine fabrique des pièces sur deux machines : $M_1$ produit $70\\,\\%$ des pièces, dont $2\\,\\%$ sont défectueuses ; $M_2$ produit le reste, dont $5\\,\\%$ sont défectueuses. On choisit une pièce au hasard ; on note $D$ l'événement « la pièce est défectueuse ». Calculer $P(D)$.",
+      "corrige": [
+        "$P(M_1) = 0{,}7$ et $P(M_2) = 0{,}3$.",
+        "$P(D) = 0{,}7 \\times 0{,}02 + 0{,}3 \\times 0{,}05 = 0{,}014 + 0{,}015 = 0{,}029$."
+      ],
+      "reponse": "$P(D) = 0{,}029$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "independance",
+      "enonce": "On donne $P(A) = 0{,}5$, $P(B) = 0{,}4$ et $P(A \\cap B) = 0{,}2$. Les événements $A$ et $B$ sont-ils indépendants ?",
+      "corrige": [
+        "On compare $P(A \\cap B)$ et $P(A) \\times P(B) = 0{,}5 \\times 0{,}4 = 0{,}2$.",
+        "Les deux valeurs sont égales : $A$ et $B$ sont indépendants."
+      ],
+      "reponse": "Oui, car $P(A \\cap B) = P(A) \\times P(B) = 0{,}2$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "independance",
+      "enonce": "$A$ et $B$ sont deux événements indépendants tels que $P(A) = 0{,}3$ et $P(B) = 0{,}7$. Calculer $P(A \\cap B)$.",
+      "corrige": [
+        "L'indépendance est donnée : on peut utiliser $P(A \\cap B) = P(A) \\times P(B)$.",
+        "$P(A \\cap B) = 0{,}3 \\times 0{,}7 = 0{,}21$."
+      ],
+      "reponse": "$0{,}21$"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "bernoulli",
+      "enonce": "On répète $2$ fois, de façon identique et indépendante, une épreuve de Bernoulli de paramètre $p = 0{,}3$. Calculer la probabilité d'obtenir deux succès.",
+      "corrige": [
+        "Un seul chemin convient : SS.",
+        "$P = 0{,}3 \\times 0{,}3 = 0{,}09$."
+      ],
+      "reponse": "$0{,}09$"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "bernoulli",
+      "enonce": "On lance $3$ fois une pièce équilibrée ; le succès est « obtenir pile ». Calculer la probabilité de n'obtenir aucun pile.",
+      "corrige": [
+        "Un seul chemin convient : ÉÉÉ, avec une probabilité d'échec de $0{,}5$ à chaque lancer.",
+        "$P = 0{,}5^3 = 0{,}125$."
+      ],
+      "reponse": "$0{,}125$"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "conditionnelle",
+      "enonce": "On donne $P(A) = 0{,}3$, $P_A(B) = 0{,}6$ et $P(B) = 0{,}45$. Calculer $P(A \\cap B)$, puis $P_B(A)$.",
+      "corrige": [
+        "$P(A \\cap B) = P(A) \\times P_A(B) = 0{,}3 \\times 0{,}6 = 0{,}18$.",
+        "$P_B(A) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{0{,}18}{0{,}45} = 0{,}4$.",
+        "On remarque que $P_A(B) \\neq P_B(A)$ : on ne peut pas inverser le conditionnement."
+      ],
+      "reponse": "$P(A \\cap B) = 0{,}18$ et $P_B(A) = 0{,}4$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "conditionnelle",
+      "enonce": "On lance un dé équilibré à six faces. 1. Sachant que le résultat est pair, quelle est la probabilité d'avoir obtenu $6$ ? 2. Sachant que le résultat est supérieur ou égal à $4$, quelle est la probabilité qu'il soit pair ?",
+      "corrige": [
+        "1. On se restreint aux résultats pairs $\\{2 ; 4 ; 6\\}$ : un seul cas sur trois donne $6$, d'où $\\dfrac{1}{3}$.",
+        "2. On se restreint à $\\{4 ; 5 ; 6\\}$ : deux résultats sont pairs ($4$ et $6$), d'où $\\dfrac{2}{3}$."
+      ],
+      "reponse": "1. $\\dfrac{1}{3}$ ; 2. $\\dfrac{2}{3}$"
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "tableau-croise",
+      "enonce": "Un cinéma a interrogé $400$ spectateurs sur leur âge et le film qu'ils sont venus voir.\n\n|  | Film d'animation | Film d'action | Total |\n|---|---|---|---|\n| Moins de 18 ans | 90 | 60 | 150 |\n| 18 ans et plus | 70 | 180 | 250 |\n| Total | 160 | 240 | 400 |\n\nCalculer la probabilité qu'un spectateur soit venu voir le film d'animation sachant qu'il a moins de $18$ ans.",
+      "corrige": [
+        "On se restreint à la ligne « Moins de 18 ans » : la base est $150$.",
+        "$P = \\dfrac{90}{150} = 0{,}6$."
+      ],
+      "reponse": "$0{,}6$"
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "tableau-croise",
+      "enonce": "Un cinéma a interrogé $400$ spectateurs sur leur âge et le film qu'ils sont venus voir.\n\n|  | Film d'animation | Film d'action | Total |\n|---|---|---|---|\n| Moins de 18 ans | 90 | 60 | 150 |\n| 18 ans et plus | 70 | 180 | 250 |\n| Total | 160 | 240 | 400 |\n\nCalculer la probabilité qu'un spectateur ait moins de $18$ ans sachant qu'il est venu voir le film d'animation.",
+      "corrige": [
+        "On se restreint à la colonne « Film d'animation » : la base est $160$.",
+        "$P = \\dfrac{90}{160} = 0{,}5625$. Ce n'est pas la même probabilité que « animation sachant moins de 18 ans » ($0{,}6$)."
+      ],
+      "reponse": "$0{,}5625$"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "arbre",
+      "enonce": "Une urne contient $4$ boules rouges et $6$ boules bleues. On tire successivement deux boules sans remise. Calculer la probabilité d'obtenir deux boules rouges.",
+      "corrige": [
+        "Premier tirage : $P(R_1) = \\dfrac{4}{10}$. Il reste alors $3$ rouges sur $9$ boules : $P_{R_1}(R_2) = \\dfrac{3}{9}$.",
+        "$P = \\dfrac{4}{10} \\times \\dfrac{3}{9} = \\dfrac{12}{90} = \\dfrac{2}{15} \\approx 0{,}13$."
+      ],
+      "reponse": "$\\dfrac{2}{15} \\approx 0{,}13$"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "arbre",
+      "enonce": "Une urne contient $4$ boules rouges et $6$ boules bleues. On tire successivement deux boules sans remise. Calculer la probabilité d'obtenir deux boules de couleurs différentes.",
+      "corrige": [
+        "Deux chemins conviennent : « rouge puis bleue » et « bleue puis rouge ».",
+        "$\\dfrac{4}{10} \\times \\dfrac{6}{9} = \\dfrac{24}{90}$ et $\\dfrac{6}{10} \\times \\dfrac{4}{9} = \\dfrac{24}{90}$.",
+        "On additionne les chemins : $\\dfrac{48}{90} = \\dfrac{8}{15} \\approx 0{,}53$."
+      ],
+      "reponse": "$\\dfrac{8}{15} \\approx 0{,}53$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "Une usine fabrique des pièces sur deux machines : $M_1$ produit $70\\,\\%$ des pièces, dont $2\\,\\%$ sont défectueuses ; $M_2$ produit le reste, dont $5\\,\\%$ sont défectueuses. On choisit une pièce au hasard ; on note $D$ l'événement « la pièce est défectueuse ». Sachant que la pièce est défectueuse, quelle est la probabilité qu'elle vienne de $M_2$ ? Arrondir au centième.",
+      "corrige": [
+        "$P(M_2 \\cap D) = 0{,}3 \\times 0{,}05 = 0{,}015$ et $P(D) = 0{,}029$ (probabilités totales).",
+        "$P_D(M_2) = \\dfrac{0{,}015}{0{,}029} \\approx 0{,}52$. Bien que $M_2$ produise moins, elle fournit plus de la moitié des pièces défectueuses."
+      ],
+      "reponse": "$P_D(M_2) \\approx 0{,}52$"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "probabilites-totales",
+      "enonce": "Dans un lycée, $55\\,\\%$ des élèves sont des filles. $40\\,\\%$ des filles et $60\\,\\%$ des garçons viennent en bus. Quelle est la probabilité qu'un élève choisi au hasard vienne en bus ?",
+      "corrige": [
+        "On note $F$ « fille » et $B$ « vient en bus » : $P(F) = 0{,}55$, $P(\\overline{F}) = 0{,}45$.",
+        "$P(B) = 0{,}55 \\times 0{,}4 + 0{,}45 \\times 0{,}6 = 0{,}22 + 0{,}27 = 0{,}49$."
+      ],
+      "reponse": "$0{,}49$"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "independance",
+      "enonce": "On lance un dé équilibré à six faces. $A$ : « le résultat est pair » ; $B$ : « le résultat est inférieur ou égal à $4$ ». $A$ et $B$ sont-ils indépendants ?",
+      "corrige": [
+        "$P(A) = \\dfrac{3}{6} = \\dfrac{1}{2}$ et $P(B) = \\dfrac{4}{6} = \\dfrac{2}{3}$.",
+        "$A \\cap B = \\{2 ; 4\\}$, donc $P(A \\cap B) = \\dfrac{2}{6} = \\dfrac{1}{3}$.",
+        "$P(A) \\times P(B) = \\dfrac{1}{2} \\times \\dfrac{2}{3} = \\dfrac{1}{3}$ : les événements sont indépendants."
+      ],
+      "reponse": "Oui, ils sont indépendants."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "independance",
+      "enonce": "$A$ et $B$ sont incompatibles, avec $P(A) = 0{,}3$ et $P(B) = 0{,}5$. Un élève affirme qu'ils sont indépendants. A-t-il raison ?",
+      "corrige": [
+        "Incompatibles signifie $A \\cap B = \\varnothing$, donc $P(A \\cap B) = 0$.",
+        "Or $P(A) \\times P(B) = 0{,}15 \\neq 0$ : les événements ne sont pas indépendants. Il ne faut pas confondre incompatibles et indépendants."
+      ],
+      "reponse": "Non : ils sont dépendants ($0 \\neq 0{,}15$)."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "independance",
+      "enonce": "Un cinéma a interrogé $400$ spectateurs sur leur âge et le film qu'ils sont venus voir.\n\n|  | Film d'animation | Film d'action | Total |\n|---|---|---|---|\n| Moins de 18 ans | 90 | 60 | 150 |\n| 18 ans et plus | 70 | 180 | 250 |\n| Total | 160 | 240 | 400 |\n\nLes événements « le spectateur a moins de $18$ ans » et « il est venu voir le film d'animation » sont-ils indépendants ?",
+      "corrige": [
+        "$P(\\text{moins de 18 ans}) = \\dfrac{150}{400} = 0{,}375$ et $P(\\text{animation}) = \\dfrac{160}{400} = 0{,}4$ ; leur produit vaut $0{,}15$.",
+        "Or $P(\\text{les deux}) = \\dfrac{90}{400} = 0{,}225 \\neq 0{,}15$ : les événements ne sont pas indépendants."
+      ],
+      "reponse": "Non ($0{,}225 \\neq 0{,}15$)."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "bernoulli",
+      "enonce": "On répète $2$ fois une épreuve de Bernoulli de paramètre $p = 0{,}7$. Calculer la probabilité d'obtenir exactement un succès.",
+      "corrige": [
+        "Deux chemins conviennent : SÉ et ÉS, chacun de probabilité $0{,}7 \\times 0{,}3 = 0{,}21$.",
+        "$P = 2 \\times 0{,}21 = 0{,}42$. Ne pas oublier le facteur $2$ (nombre de chemins)."
+      ],
+      "reponse": "$0{,}42$"
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "bernoulli",
+      "enonce": "Un archer touche la cible avec une probabilité de $0{,}4$ à chaque tir. Il tire $3$ fois de façon identique et indépendante. Calculer la probabilité qu'il touche la cible exactement deux fois.",
+      "corrige": [
+        "Trois chemins conviennent : SSÉ, SÉS et ÉSS.",
+        "Chacun vaut $0{,}4 \\times 0{,}4 \\times 0{,}6 = 0{,}096$.",
+        "$P = 3 \\times 0{,}096 = 0{,}288$."
+      ],
+      "reponse": "$0{,}288$"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "conditionnelle",
+      "enonce": "On lit : « Parmi les élèves qui ont réussi l'examen, $80\\,\\%$ avaient fait tous les exercices d'entraînement. » On note $R$ « l'élève a réussi » et $E$ « l'élève a fait tous les exercices ». Écrire cette information avec la bonne notation. Peut-on en déduire la probabilité de réussir sachant qu'on a fait les exercices ?",
+      "corrige": [
+        "Le mot « parmi » indique l'univers de référence : les élèves qui ont réussi. C'est donc $P_R(E) = 0{,}8$.",
+        "La probabilité de réussir sachant qu'on a fait les exercices est $P_E(R)$ : elle est différente et ne peut pas être déduite de cette seule information."
+      ],
+      "reponse": "$P_R(E) = 0{,}8$ ; non, on ne connaît pas $P_E(R)$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "conditionnelle",
+      "enonce": "Dans un lycée, $70\\,\\%$ des élèves qui possèdent une calculatrice graphique ont plus de $12$ de moyenne, contre $50\\,\\%$ des autres élèves. Un article conclut : « Acheter une calculatrice graphique fait progresser. » Cette conclusion est-elle justifiée ?",
+      "corrige": [
+        "Les données montrent seulement que les deux événements ne sont pas indépendants : la probabilité d'avoir plus de $12$ change selon que l'élève a une calculatrice ou non.",
+        "Une forte probabilité conditionnelle ne prouve pas une causalité : d'autres facteurs (filière, travail personnel…) peuvent expliquer ce lien."
+      ],
+      "reponse": "Non : une probabilité conditionnelle élevée ne prouve pas un lien de cause à effet."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "tableau-croise",
+      "enonce": "Un club compte $200$ adhérents, dont $60\\,\\%$ de filles. $25\\,\\%$ des filles et $50\\,\\%$ des garçons font de la compétition. Construire le tableau croisé des effectifs, puis calculer la probabilité qu'un compétiteur choisi au hasard soit une fille.",
+      "corrige": [
+        "Filles : $200 \\times 0{,}6 = 120$, dont $120 \\times 0{,}25 = 30$ en compétition. Garçons : $80$, dont $80 \\times 0{,}5 = 40$ en compétition.",
+        "Compétiteurs : $30 + 40 = 70$.",
+        "On se restreint aux compétiteurs : $P = \\dfrac{30}{70} = \\dfrac{3}{7} \\approx 0{,}43$."
+      ],
+      "reponse": "$\\dfrac{3}{7} \\approx 0{,}43$"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "tableau-croise",
+      "enonce": "Une maladie touche $1\\,\\%$ d'une population de $10\\,000$ personnes. Un test est positif pour $99\\,\\%$ des malades et pour $2\\,\\%$ des personnes saines. À l'aide d'un tableau croisé d'effectifs, calculer la probabilité qu'une personne testée positive soit malade.",
+      "corrige": [
+        "Malades : $100$, dont $99$ positifs. Saines : $9\\,900$, dont $9\\,900 \\times 0{,}02 = 198$ positives.",
+        "Positifs : $99 + 198 = 297$.",
+        "On se restreint à la ligne des positifs : $P = \\dfrac{99}{297} = \\dfrac{1}{3} \\approx 0{,}33$. Les personnes saines étant très nombreuses, les faux positifs sont deux fois plus nombreux que les vrais."
+      ],
+      "reponse": "$\\dfrac{1}{3} \\approx 0{,}33$"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "arbre",
+      "enonce": "On admet que, s'il pleut un jour, il pleut le lendemain avec une probabilité de $0{,}6$ ; s'il ne pleut pas, il pleut le lendemain avec une probabilité de $0{,}2$. Aujourd'hui, la probabilité qu'il pleuve est de $0{,}3$. Calculer la probabilité qu'il pleuve aujourd'hui et demain, puis celle qu'il ne pleuve ni aujourd'hui ni demain.",
+      "corrige": [
+        "Chemin « pluie, pluie » : $0{,}3 \\times 0{,}6 = 0{,}18$.",
+        "Chemin « pas de pluie, pas de pluie » : $0{,}7 \\times (1 - 0{,}2) = 0{,}7 \\times 0{,}8 = 0{,}56$."
+      ],
+      "reponse": "$0{,}18$ et $0{,}56$"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "arbre",
+      "enonce": "Trois cartes retournées sont posées sur une table ; une seule est gagnante. Un joueur retourne une carte au hasard ; s'il perd, il en retourne une seconde parmi les deux restantes. À l'aide d'un arbre, calculer la probabilité qu'il trouve la carte gagnante.",
+      "corrige": [
+        "Chemin « gagne au premier essai » : $\\dfrac{1}{3}$.",
+        "Chemin « perd puis gagne » : $\\dfrac{2}{3} \\times \\dfrac{1}{2} = \\dfrac{1}{3}$.",
+        "On additionne : $\\dfrac{1}{3} + \\dfrac{1}{3} = \\dfrac{2}{3}$."
+      ],
+      "reponse": "$\\dfrac{2}{3}$"
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "On sait que $P(A) = 0{,}4$, $P_A(B) = 0{,}8$ et $P(B) = 0{,}5$. Déterminer $P_{\\overline{A}}(B)$.",
+      "corrige": [
+        "Probabilités totales : $0{,}5 = 0{,}4 \\times 0{,}8 + 0{,}6 \\times P_{\\overline{A}}(B)$.",
+        "$0{,}5 = 0{,}32 + 0{,}6 \\times P_{\\overline{A}}(B)$, donc $P_{\\overline{A}}(B) = \\dfrac{0{,}18}{0{,}6} = 0{,}3$."
+      ],
+      "reponse": "$P_{\\overline{A}}(B) = 0{,}3$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "probabilites-totales",
+      "enonce": "On admet que, s'il pleut un jour, il pleut le lendemain avec une probabilité de $0{,}6$ ; s'il ne pleut pas, il pleut le lendemain avec une probabilité de $0{,}2$. Aujourd'hui, la probabilité qu'il pleuve est de $0{,}3$. Calculer la probabilité qu'il pleuve demain. Sachant qu'il pleut demain, quelle est la probabilité qu'il ait plu aujourd'hui ? Arrondir au centième.",
+      "corrige": [
+        "Deux chemins mènent à « pluie demain » : $0{,}3 \\times 0{,}6 + 0{,}7 \\times 0{,}2 = 0{,}18 + 0{,}14 = 0{,}32$.",
+        "Probabilité conditionnelle : $\\dfrac{0{,}18}{0{,}32} = 0{,}5625 \\approx 0{,}56$."
+      ],
+      "reponse": "$0{,}32$ ; environ $0{,}56$"
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "independance",
+      "enonce": "On sait que $P(B) = 0{,}35$, $P_A(B) = 0{,}35$ et $P(A) = 0{,}6$. Que peut-on dire de $A$ et $B$ ? En déduire $P_B(A)$.",
+      "corrige": [
+        "$P_A(B) = P(B)$ : savoir que $A$ est réalisé ne change pas la probabilité de $B$, donc $A$ et $B$ sont indépendants.",
+        "Alors $P(A \\cap B) = 0{,}6 \\times 0{,}35 = 0{,}21$ et $P_B(A) = \\dfrac{0{,}21}{0{,}35} = 0{,}6 = P(A)$."
+      ],
+      "reponse": "$A$ et $B$ sont indépendants ; $P_B(A) = 0{,}6$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "independance",
+      "enonce": "Un atelier possède deux machines qui fonctionnent indépendamment l'une de l'autre. Un jour donné, la première tombe en panne avec une probabilité de $0{,}05$ et la seconde avec une probabilité de $0{,}1$. Calculer la probabilité que les deux machines tombent en panne, puis celle qu'aucune ne tombe en panne.",
+      "corrige": [
+        "Par indépendance : $P(\\text{deux pannes}) = 0{,}05 \\times 0{,}1 = 0{,}005$.",
+        "Chaque machine fonctionne avec une probabilité de $0{,}95$ et $0{,}9$ : $P(\\text{aucune panne}) = 0{,}95 \\times 0{,}9 = 0{,}855$."
+      ],
+      "reponse": "$0{,}005$ ; $0{,}855$"
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "bernoulli",
+      "enonce": "On lance $4$ fois une pièce équilibrée. Combien de chemins de l'arbre réalisent l'événement « obtenir exactement deux piles » ? En déduire sa probabilité.",
+      "corrige": [
+        "Les chemins sont : SSÉÉ, SÉSÉ, SÉÉS, ÉSSÉ, ÉSÉS, ÉÉSS, soit $6$ chemins.",
+        "Chacun a une probabilité $0{,}5^4 = 0{,}0625$.",
+        "$P = 6 \\times 0{,}0625 = 0{,}375$."
+      ],
+      "reponse": "$6$ chemins ; $P = 0{,}375$"
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "probabilites-totales",
+      "enonce": "Une maladie touche $2\\,\\%$ d'une population. Un test est positif chez $95\\,\\%$ des malades et chez $3\\,\\%$ des personnes saines. On note $M$ « la personne est malade » et $T$ « le test est positif ». 1. Construire l'arbre pondéré. 2. Calculer $P(T)$. 3. Calculer $P_T(M)$, arrondie au centième, et commenter.",
+      "corrige": [
+        "1. Premier niveau : $P(M) = 0{,}02$, $P(\\overline{M}) = 0{,}98$. Second niveau : $P_M(T) = 0{,}95$, $P_M(\\overline{T}) = 0{,}05$, $P_{\\overline{M}}(T) = 0{,}03$, $P_{\\overline{M}}(\\overline{T}) = 0{,}97$.",
+        "2. $P(T) = 0{,}02 \\times 0{,}95 + 0{,}98 \\times 0{,}03 = 0{,}019 + 0{,}0294 = 0{,}0484$.",
+        "3. $P_T(M) = \\dfrac{0{,}019}{0{,}0484} \\approx 0{,}39$.",
+        "Moins de $40\\,\\%$ des personnes testées positives sont malades : c'est le paradoxe du dépistage, dû à la rareté de la maladie."
+      ],
+      "reponse": "$P(T) = 0{,}0484$ ; $P_T(M) \\approx 0{,}39$"
     }
   ]
 }

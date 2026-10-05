@@ -125,7 +125,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "Une région suit l'électricité d'origine renouvelable produite sur son territoire. En $2020$, la production totale d'électricité est de $5000$ GWh, dont $900$ GWh d'origine renouvelable. On étudie ensuite l'évolution de cette production renouvelable.\n\n1. Calculer la proportion d'électricité renouvelable dans la production totale de $2020$, en pourcentage.\n2. En $2021$, la production renouvelable augmente de $25\\,\\%$. Calculer la production renouvelable de $2021$, en GWh.\n3. En $2022$, la production renouvelable baisse de $4\\,\\%$ par rapport à $2021$. Déterminer le taux d'évolution global de la production renouvelable entre $2020$ et $2022$.\n4. On choisit $2020$ comme année de référence (indice $100$). Sachant que l'indice d'une année est $\\dfrac{\\text{production de l'année}}{\\text{production de référence}} \\times 100$, calculer l'indice de la production renouvelable en $2022$.\n5. La part de renouvelable dans la production totale passe de la valeur de $2020$ à $22\\,\\%$ en $2022$. Exprimer cette évolution en points de pourcentage, puis en évolution relative.\n6. Un article affirme : « la production renouvelable a augmenté de $25\\,\\%$ puis diminué de $4\\,\\%$, elle a donc augmenté de $21\\,\\%$ au total ». Que penser de cette affirmation ?",
       "corrige": [
@@ -137,6 +137,463 @@
         "6. L'affirmation additionne les taux ($+25 - 4 = 21$), ce qui est interdit : les deux pourcentages ne portent pas sur la même base. Le calcul correct de la question 3 donne $+20\\,\\%$, et non $+21\\,\\%$. L'article surestime la progression."
       ],
       "reponse": "1. $18\\,\\%$. 2. $1125$ GWh. 3. $+20\\,\\%$. 4. indice $120$. 5. $+4$ points de pourcentage, soit environ $+22{,}2\\,\\%$ en relatif. 6. Faux : la hausse réelle est de $+20\\,\\%$ (on multiplie les coefficients, on n'additionne pas les taux)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Quel est le coefficient multiplicateur associé à une baisse de $15\\,\\%$ ?",
+      "corrige": [
+        "Pour une baisse, $t = -15$ : $\\mathrm{CM} = 1 + \\dfrac{-15}{100} = 1 - 0{,}15$.",
+        "$\\mathrm{CM} = 0{,}85$ (et non $-0{,}15$)."
+      ],
+      "reponse": "$0{,}85$"
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "proportion-pourcentage",
+      "enonce": "Sur les $1200$ élèves d'un lycée, $312$ viennent en cours à vélo. Quelle proportion des élèves vient à vélo, en pourcentage ?",
+      "corrige": [
+        "La proportion est le quotient partie / total : $\\dfrac{312}{1200} = 0{,}26$.",
+        "En pourcentage : $0{,}26 \\times 100 = 26$."
+      ],
+      "reponse": "$26\\,\\%$ des élèves viennent à vélo."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "proportion-pourcentage",
+      "enonce": "Un lycée compte $850$ élèves, dont $34\\,\\%$ sont demi-pensionnaires. Combien d'élèves sont demi-pensionnaires ?",
+      "corrige": [
+        "Prendre $34\\,\\%$ d'une quantité, c'est la multiplier par $0{,}34$.",
+        "$850 \\times 0{,}34 = 289$."
+      ],
+      "reponse": "$289$ élèves sont demi-pensionnaires."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "taux-evolution",
+      "enonce": "Le prix d'un livre passe de $80$ € à $92$ €. Calculer le taux d'évolution en pourcentage.",
+      "corrige": [
+        "$t = \\dfrac{V_f - V_i}{V_i} = \\dfrac{92 - 80}{80} = \\dfrac{12}{80} = 0{,}15$.",
+        "En pourcentage : $+15\\,\\%$."
+      ],
+      "reponse": "$+15\\,\\%$"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "taux-evolution",
+      "enonce": "Le nombre de visiteurs d'un musée passe de $4500$ à $3600$ en un an. Calculer le taux d'évolution en pourcentage.",
+      "corrige": [
+        "$t = \\dfrac{3600 - 4500}{4500} = \\dfrac{-900}{4500} = -0{,}2$.",
+        "Un taux négatif traduit une baisse : $-20\\,\\%$."
+      ],
+      "reponse": "$-20\\,\\%$ (baisse de $20\\,\\%$)"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Une quantité est multipliée par $1{,}072$. À quelle évolution, en pourcentage, cela correspond-il ?",
+      "corrige": [
+        "$\\mathrm{CM} = 1{,}072 = 1 + 0{,}072$.",
+        "Donc $\\dfrac{t}{100} = 0{,}072$, soit $t = 7{,}2$ : c'est une hausse."
+      ],
+      "reponse": "Une hausse de $7{,}2\\,\\%$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "evolutions-successives",
+      "enonce": "Un prix augmente de $20\\,\\%$ une première année, puis encore de $20\\,\\%$ l'année suivante. Quelle est l'évolution globale ?",
+      "corrige": [
+        "On multiplie les coefficients : $1{,}20 \\times 1{,}20 = 1{,}44$.",
+        "$\\mathrm{CM} = 1{,}44$ correspond à $+44\\,\\%$, et non à $+40\\,\\%$."
+      ],
+      "reponse": "$+44\\,\\%$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "evolution-reciproque",
+      "enonce": "Un prix a augmenté de $25\\,\\%$. Quelle évolution permet de revenir au prix initial ?",
+      "corrige": [
+        "Coefficient de la hausse : $1{,}25$. Coefficient réciproque : $\\dfrac{1}{1{,}25} = 0{,}8$.",
+        "$0{,}8 = 1 - 0{,}2$ : c'est une baisse de $20\\,\\%$."
+      ],
+      "reponse": "Une baisse de $20\\,\\%$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "points-pourcentage",
+      "enonce": "La part des élèves qui déjeunent à la cantine passe de $20\\,\\%$ à $25\\,\\%$. Exprimer cette variation en points de pourcentage, puis en évolution relative.",
+      "corrige": [
+        "Écart : $25 - 20 = 5$ points de pourcentage.",
+        "Évolution relative : $\\dfrac{25 - 20}{20} = 0{,}25$, soit $+25\\,\\%$."
+      ],
+      "reponse": "$+5$ points de pourcentage, soit $+25\\,\\%$ en relatif."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "points-pourcentage",
+      "enonce": "Le taux d'abstention à une élection passe de $50\\,\\%$ à $40\\,\\%$. Exprimer cette variation en points de pourcentage, puis en évolution relative.",
+      "corrige": [
+        "Écart : $40 - 50 = -10$ points de pourcentage.",
+        "Évolution relative : $\\dfrac{40 - 50}{50} = -0{,}2$, soit $-20\\,\\%$."
+      ],
+      "reponse": "$-10$ points de pourcentage, soit $-20\\,\\%$ en relatif."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "esprit-critique",
+      "enonce": "Un message sur un réseau social affirme seulement : « Les accidents ont baissé de $30\\,\\%$ ! » Quelles questions faut-il se poser avant de croire cette information ?",
+      "corrige": [
+        "Un pourcentage n'a de sens que rapporté à sa base : $30\\,\\%$ de combien d'accidents ?",
+        "Il faut aussi connaître la période comparée, le lieu, la source et la date des données.",
+        "Exemple de réponse : sur quelle base ? entre quelles dates ? où ? quelle est la source ?"
+      ],
+      "reponse": "Exemple : quelle base, quelle période, quel lieu, quelle source ?"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "proportion-pourcentage",
+      "enonce": "Dans un collège, $45$ élèves pratiquent le théâtre, ce qui représente $15\\,\\%$ de l'effectif total. Quel est l'effectif total du collège ?",
+      "corrige": [
+        "Si $N$ est l'effectif total, on a $N \\times 0{,}15 = 45$.",
+        "Donc $N = \\dfrac{45}{0{,}15} = 300$."
+      ],
+      "reponse": "Le collège compte $300$ élèves."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "taux-evolution",
+      "enonce": "La consommation électrique annuelle d'un foyer passe de $4500$ kWh à $4050$ kWh après l'isolation de la maison. Quel est le taux d'évolution ?",
+      "corrige": [
+        "$t = \\dfrac{4050 - 4500}{4500} = \\dfrac{-450}{4500} = -0{,}1$.",
+        "La consommation a baissé de $10\\,\\%$."
+      ],
+      "reponse": "$-10\\,\\%$"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Une facture d'électricité de $240$ € baisse de $12{,}5\\,\\%$. Calculer le nouveau montant à l'aide du coefficient multiplicateur.",
+      "corrige": [
+        "Baisse de $12{,}5\\,\\%$ : $\\mathrm{CM} = 1 - 0{,}125 = 0{,}875$.",
+        "$240 \\times 0{,}875 = 210$."
+      ],
+      "reponse": "$210$ €"
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "coefficient-multiplicateur",
+      "enonce": "Après une hausse de $8\\,\\%$, un loyer s'élève à $648$ €. Quel était le loyer avant la hausse ?",
+      "corrige": [
+        "Loyer initial $\\times\\, 1{,}08 = 648$.",
+        "Loyer initial $= \\dfrac{648}{1{,}08} = 600$.",
+        "Erreur fréquente : retirer $8\\,\\%$ de $648$ donne $596{,}16$ €, ce qui est faux car les $8\\,\\%$ portaient sur l'ancien loyer."
+      ],
+      "reponse": "$600$ €"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "evolutions-successives",
+      "enonce": "Le nombre d'abonnés d'un journal baisse de $10\\,\\%$ deux années de suite. Quelle est l'évolution globale sur les deux ans ?",
+      "corrige": [
+        "Baisse de $10\\,\\%$ : $\\mathrm{CM} = 0{,}90$.",
+        "Global : $0{,}90 \\times 0{,}90 = 0{,}81$, soit $1 - 0{,}19$.",
+        "La baisse globale est de $19\\,\\%$ (et non de $20\\,\\%$)."
+      ],
+      "reponse": "$-19\\,\\%$"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "evolution-reciproque",
+      "enonce": "Le prix d'un objet a doublé. Quelle baisse, en pourcentage, le ramènerait à son prix initial ?",
+      "corrige": [
+        "Doubler, c'est multiplier par $2$ (hausse de $100\\,\\%$). Le coefficient réciproque est $\\dfrac{1}{2} = 0{,}5$.",
+        "$0{,}5 = 1 - 0{,}5$ : il faut une baisse de $50\\,\\%$, et non de $100\\,\\%$ (qui ramènerait le prix à $0$)."
+      ],
+      "reponse": "Une baisse de $50\\,\\%$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "evolution-reciproque",
+      "enonce": "Une action a perdu $60\\,\\%$ de sa valeur. Quelle hausse lui faudrait-il pour retrouver sa valeur initiale ?",
+      "corrige": [
+        "Baisse de $60\\,\\%$ : $\\mathrm{CM} = 0{,}4$. Coefficient réciproque : $\\dfrac{1}{0{,}4} = 2{,}5$.",
+        "$2{,}5 = 1 + 1{,}5$ : il faut une hausse de $150\\,\\%$."
+      ],
+      "reponse": "Une hausse de $150\\,\\%$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "evolution-moyenne",
+      "enonce": "Un chiffre d'affaires a augmenté de $21\\,\\%$ en $2$ ans. Quel est le taux annuel moyen ?",
+      "corrige": [
+        "$\\mathrm{CM}_{\\text{global}} = 1{,}21$. Le coefficient moyen vérifie $c^2 = 1{,}21$.",
+        "$c = \\sqrt{1{,}21} = 1{,}1$, soit $+10\\,\\%$ par an (et non $10{,}5\\,\\%$)."
+      ],
+      "reponse": "$+10\\,\\%$ par an"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "evolution-moyenne",
+      "enonce": "Le nombre d'exemplaires vendus d'un magazine a baissé de $19\\,\\%$ en $2$ ans. Quel est le taux annuel moyen ?",
+      "corrige": [
+        "$\\mathrm{CM}_{\\text{global}} = 0{,}81$. Le coefficient moyen vérifie $c^2 = 0{,}81$.",
+        "$c = \\sqrt{0{,}81} = 0{,}9$, soit une baisse moyenne de $10\\,\\%$ par an."
+      ],
+      "reponse": "$-10\\,\\%$ par an"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "points-pourcentage",
+      "enonce": "Un article écrit : « La part des énergies renouvelables dans la production d'un pays est passée de $20\\,\\%$ à $30\\,\\%$, elle a donc augmenté de $10\\,\\%$. » Corriger cette phrase.",
+      "corrige": [
+        "$30 - 20 = 10$ : c'est un écart de $10$ points de pourcentage.",
+        "En évolution relative : $\\dfrac{30 - 20}{20} = 0{,}5$, soit une hausse de $50\\,\\%$.",
+        "Il faut écrire « a augmenté de $10$ points » ou « a augmenté de $50\\,\\%$ »."
+      ],
+      "reponse": "Elle a augmenté de $10$ points de pourcentage, soit de $50\\,\\%$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "base-pourcentage",
+      "enonce": "Au baccalauréat, le lycée A a $60\\,\\%$ de mentions parmi ses $50$ candidats et le lycée B $55\\,\\%$ parmi ses $400$ candidats. Quel lycée a obtenu le plus grand nombre de mentions ?",
+      "corrige": [
+        "Lycée A : $50 \\times 0{,}60 = 30$ mentions. Lycée B : $400 \\times 0{,}55 = 220$ mentions.",
+        "Un pourcentage plus élevé ne signifie pas un effectif plus grand : il faut tenir compte de la base."
+      ],
+      "reponse": "Le lycée B ($220$ mentions contre $30$)."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "base-pourcentage",
+      "enonce": "Une publicité annonce « $75\\,\\%$ de clients satisfaits » ; en petits caractères, on lit que $8$ personnes ont été interrogées. Combien de personnes se sont déclarées satisfaites ? Que penser de ce chiffre ?",
+      "corrige": [
+        "$8 \\times 0{,}75 = 6$ personnes satisfaites.",
+        "L'effectif total est très petit : ce pourcentage ne permet pas de tirer une conclusion fiable sur l'ensemble des clients."
+      ],
+      "reponse": "$6$ personnes ; le pourcentage repose sur un effectif trop faible pour être fiable."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "esprit-critique",
+      "enonce": "Un diagramme en barres représente un chiffre d'affaires de $100$ millions d'euros en $2023$ et de $102$ millions en $2024$, avec un axe des ordonnées qui commence à $98$. Quelle est l'évolution réelle ? Combien de fois la seconde barre paraît-elle plus haute que la première ?",
+      "corrige": [
+        "Évolution réelle : $\\dfrac{102 - 100}{100} = 0{,}02$, soit $+2\\,\\%$.",
+        "Avec l'axe qui commence à $98$, les barres mesurent $100 - 98 = 2$ et $102 - 98 = 4$ graduations : la seconde paraît $2$ fois plus haute.",
+        "L'axe tronqué exagère visuellement une petite hausse."
+      ],
+      "reponse": "$+2\\,\\%$ seulement, mais la seconde barre paraît $2$ fois plus haute."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "proportion-pourcentage",
+      "enonce": "Dans une ville, $40\\,\\%$ des habitants ont moins de $30$ ans et, parmi ceux-ci, $25\\,\\%$ sont étudiants. Quelle proportion de la population totale est formée d'étudiants de moins de $30$ ans ?",
+      "corrige": [
+        "On prend $25\\,\\%$ de $40\\,\\%$ : on multiplie les deux proportions.",
+        "$0{,}40 \\times 0{,}25 = 0{,}10$, soit $10\\,\\%$ de la population totale.",
+        "Attention : les $25\\,\\%$ portent sur les moins de $30$ ans, pas sur toute la population."
+      ],
+      "reponse": "$10\\,\\%$ de la population totale."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "taux-evolution",
+      "enonce": "Une grandeur a été multipliée par $3$. Un élève affirme qu'elle a augmenté de $300\\,\\%$. A-t-il raison ? Donner le bon taux d'évolution.",
+      "corrige": [
+        "Multiplier par $3$, c'est avoir un coefficient multiplicateur $\\mathrm{CM} = 3$.",
+        "$\\mathrm{CM} = 1 + \\dfrac{t}{100}$ donne $\\dfrac{t}{100} = 2$, donc $t = 200$.",
+        "L'élève se trompe : une hausse de $300\\,\\%$ correspondrait à une multiplication par $4$."
+      ],
+      "reponse": "Non : la grandeur a augmenté de $200\\,\\%$."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "evolutions-successives",
+      "enonce": "Un prix subit trois hausses successives : $+5\\,\\%$, puis $+10\\,\\%$, puis $+20\\,\\%$. Quelle est l'évolution globale ?",
+      "corrige": [
+        "$\\mathrm{CM} = 1{,}05 \\times 1{,}10 \\times 1{,}20$.",
+        "$1{,}05 \\times 1{,}10 = 1{,}155$, puis $1{,}155 \\times 1{,}20 = 1{,}386$.",
+        "L'évolution globale est de $+38{,}6\\,\\%$ (l'addition naïve donnerait $+35\\,\\%$)."
+      ],
+      "reponse": "$+38{,}6\\,\\%$"
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "evolutions-successives",
+      "enonce": "Un prix a augmenté de $25\\,\\%$. Quelle évolution doit-il subir ensuite pour que l'évolution globale soit de $+10\\,\\%$ ?",
+      "corrige": [
+        "On cherche $c$ tel que $1{,}25 \\times c = 1{,}10$.",
+        "$c = \\dfrac{1{,}10}{1{,}25} = 0{,}88$.",
+        "$0{,}88 = 1 - 0{,}12$ : il faut une baisse de $12\\,\\%$."
+      ],
+      "reponse": "Une baisse de $12\\,\\%$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "evolution-reciproque",
+      "enonce": "Le prix d'un abonnement a augmenté de $20\\,\\%$. De quel pourcentage doit-il baisser pour revenir au prix initial ? Arrondir au centième.",
+      "corrige": [
+        "Coefficient réciproque : $\\dfrac{1}{1{,}2} \\approx 0{,}8333$.",
+        "$0{,}8333 = 1 - 0{,}1667$ : la baisse nécessaire est d'environ $16{,}67\\,\\%$, donc moins de $20\\,\\%$."
+      ],
+      "reponse": "Une baisse d'environ $16{,}67\\,\\%$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "evolution-moyenne",
+      "enonce": "Une épargne a augmenté de $27{,}63\\,\\%$ en $5$ ans. On donne $1{,}05^5 \\approx 1{,}2763$. Quel est le taux annuel moyen ?",
+      "corrige": [
+        "$\\mathrm{CM}_{\\text{global}} = 1{,}2763$ ; le coefficient moyen est $c = 1{,}2763^{1/5}$.",
+        "Comme $1{,}05^5 \\approx 1{,}2763$, on a $c \\approx 1{,}05$ : environ $+5\\,\\%$ par an.",
+        "Diviser $27{,}63$ par $5$ donnerait environ $5{,}5\\,\\%$, ce qui est faux."
+      ],
+      "reponse": "Environ $+5\\,\\%$ par an"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "evolution-moyenne",
+      "enonce": "La production d'un parc éolien a augmenté de $50\\,\\%$ en $10$ ans. À l'aide de la calculatrice, déterminer le taux annuel moyen, arrondi au centième de pourcentage.",
+      "corrige": [
+        "$\\mathrm{CM}_{\\text{global}} = 1{,}5$ ; coefficient moyen : $c = 1{,}5^{1/10}$.",
+        "La calculatrice donne $c \\approx 1{,}0414$.",
+        "Le taux annuel moyen est donc d'environ $+4{,}14\\,\\%$ (et non $5\\,\\%$)."
+      ],
+      "reponse": "Environ $+4{,}14\\,\\%$ par an"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "points-pourcentage",
+      "enonce": "La part de lycéens venant à vélo passe de $4\\,\\%$ à $6\\,\\%$. Un journal titre « $+50\\,\\%$ », un autre « $+2$ points ». Lequel a raison ? Pourquoi le premier titre peut-il impressionner davantage ?",
+      "corrige": [
+        "Écart : $6 - 4 = 2$ points. Évolution relative : $\\dfrac{6 - 4}{4} = 0{,}5$, soit $+50\\,\\%$.",
+        "Les deux titres sont exacts. Quand la part de départ est petite, l'évolution relative est grande, ce qui donne une impression de forte hausse."
+      ],
+      "reponse": "Les deux ont raison ; « $+50\\,\\%$ » paraît plus spectaculaire car la base ($4\\,\\%$) est petite."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "base-pourcentage",
+      "enonce": "La classe 1 compte $20$ élèves dont $40\\,\\%$ de filles ; la classe 2 compte $30$ élèves dont $60\\,\\%$ de filles. Quelle est la proportion de filles sur l'ensemble des deux classes ?",
+      "corrige": [
+        "Filles : $20 \\times 0{,}40 = 8$ et $30 \\times 0{,}60 = 18$, soit $26$ filles.",
+        "Total : $50$ élèves. Proportion : $\\dfrac{26}{50} = 0{,}52$, soit $52\\,\\%$ (et non la moyenne $50\\,\\%$)."
+      ],
+      "reponse": "$52\\,\\%$"
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "base-pourcentage",
+      "enonce": "Les ventes d'un produit A passent de $20$ à $30$ unités par mois, celles d'un produit B de $500$ à $550$. Un vendeur affirme : « A progresse bien plus que B. » Calculer les deux taux d'évolution et les hausses en nombre d'unités, puis commenter.",
+      "corrige": [
+        "A : $\\dfrac{30 - 20}{20} = +50\\,\\%$, soit $+10$ unités. B : $\\dfrac{550 - 500}{500} = +10\\,\\%$, soit $+50$ unités.",
+        "A progresse plus en pourcentage, mais B gagne cinq fois plus d'unités : tout dépend de la base de départ."
+      ],
+      "reponse": "A : $+50\\,\\%$ ($+10$ unités) ; B : $+10\\,\\%$ ($+50$ unités). L'affirmation n'est vraie qu'en pourcentage."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "esprit-critique",
+      "enonce": "Un magasin annonce : « $-30\\,\\%$, puis $-20\\,\\%$ supplémentaires en caisse : soit $-50\\,\\%$ ! » Calculer la remise réelle.",
+      "corrige": [
+        "On multiplie les coefficients : $0{,}70 \\times 0{,}80 = 0{,}56$.",
+        "$0{,}56 = 1 - 0{,}44$ : la remise réelle est de $44\\,\\%$, et non de $50\\,\\%$, car les $20\\,\\%$ s'appliquent au prix déjà réduit."
+      ],
+      "reponse": "$-44\\,\\%$"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "esprit-critique",
+      "enonce": "Une boisson « contient trois fois moins de sucre » que la version classique. Un élève traduit : « baisse de $300\\,\\%$ ». Quelle est la bonne baisse, en pourcentage (arrondie au dixième) ?",
+      "corrige": [
+        "Trois fois moins, c'est multiplier par $\\dfrac{1}{3}$ : $\\mathrm{CM} \\approx 0{,}333$.",
+        "$1 - 0{,}333 = 0{,}667$ : baisse d'environ $66{,}7\\,\\%$.",
+        "Une baisse ne peut jamais dépasser $100\\,\\%$."
+      ],
+      "reponse": "Une baisse d'environ $66{,}7\\,\\%$."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Un abonnement coûte $30$ € par mois. Son prix augmente de $10\\,\\%$ en janvier, puis baisse de $10\\,\\%$ en juillet. 1. Calculer le prix final. 2. Quel est le taux d'évolution global ? 3. Quelle hausse (arrondie au centième de pourcentage) faudrait-il pour revenir à $30$ € ?",
+      "corrige": [
+        "1. $30 \\times 1{,}10 \\times 0{,}90 = 30 \\times 0{,}99 = 29{,}70$ €.",
+        "2. $\\mathrm{CM} = 0{,}99$ : évolution globale de $-1\\,\\%$.",
+        "3. Coefficient réciproque : $\\dfrac{1}{0{,}99} \\approx 1{,}0101$, soit une hausse d'environ $1{,}01\\,\\%$."
+      ],
+      "reponse": "1. $29{,}70$ €. 2. $-1\\,\\%$. 3. Environ $+1{,}01\\,\\%$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Une commune compte $20\\,000$ habitants. Sa population augmente de $5\\,\\%$ par an pendant deux ans. 1. Combien d'habitants compte-t-elle au bout de deux ans ? 2. Quel est le taux d'évolution global ? 3. Pourquoi n'est-il pas égal à $10\\,\\%$ ?",
+      "corrige": [
+        "1. $20\\,000 \\times 1{,}05^2 = 20\\,000 \\times 1{,}1025 = 22\\,050$ habitants.",
+        "2. $\\mathrm{CM} = 1{,}1025$ : évolution globale de $+10{,}25\\,\\%$.",
+        "3. La seconde hausse s'applique à une population déjà augmentée ($21\\,000$ habitants) : on multiplie les coefficients, on n'additionne pas les taux."
+      ],
+      "reponse": "1. $22\\,050$ habitants. 2. $+10{,}25\\,\\%$. 3. Les coefficients se multiplient."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Dans une ville, on compte $2000$ trajets quotidiens vers le centre, dont $6\\,\\%$ à vélo. Un an plus tard, on compte $2500$ trajets, dont $8\\,\\%$ à vélo. 1. Calculer le nombre de trajets à vélo chaque année. 2. Calculer le taux d'évolution du nombre de trajets à vélo (arrondi au dixième). 3. Exprimer l'évolution de la part du vélo en points de pourcentage, puis en évolution relative (arrondie au dixième).",
+      "corrige": [
+        "1. $2000 \\times 0{,}06 = 120$ trajets, puis $2500 \\times 0{,}08 = 200$ trajets.",
+        "2. $\\dfrac{200 - 120}{120} \\approx 0{,}667$, soit environ $+66{,}7\\,\\%$.",
+        "3. Part : $8 - 6 = 2$ points de pourcentage ; en relatif, $\\dfrac{8 - 6}{6} \\approx 0{,}333$, soit environ $+33{,}3\\,\\%$.",
+        "Le nombre de trajets à vélo progresse plus que leur part, car le nombre total de trajets a aussi augmenté."
+      ],
+      "reponse": "1. $120$ puis $200$. 2. Environ $+66{,}7\\,\\%$. 3. $+2$ points, soit environ $+33{,}3\\,\\%$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Pendant les soldes, un article à $120$ € est réduit de $40\\,\\%$, puis une remise supplémentaire de $10\\,\\%$ s'applique sur le prix soldé. 1. Calculer le prix payé. 2. Quel est le pourcentage de remise global ? 3. Quelle hausse, arrondie au dixième de pourcentage, ramènerait le prix payé au prix initial ?",
+      "corrige": [
+        "1. $120 \\times 0{,}60 \\times 0{,}90 = 120 \\times 0{,}54 = 64{,}80$ €.",
+        "2. $\\mathrm{CM} = 0{,}54 = 1 - 0{,}46$ : la remise globale est de $46\\,\\%$ (et non de $50\\,\\%$).",
+        "3. Coefficient réciproque : $\\dfrac{1}{0{,}54} \\approx 1{,}852$, soit une hausse d'environ $85{,}2\\,\\%$."
+      ],
+      "reponse": "1. $64{,}80$ €. 2. $46\\,\\%$. 3. Environ $+85{,}2\\,\\%$."
     }
   ]
 }

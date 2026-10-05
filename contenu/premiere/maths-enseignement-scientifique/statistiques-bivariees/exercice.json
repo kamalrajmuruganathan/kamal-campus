@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "series-deux-variables",
       "enonce": "Une chaîne de magasins étudie le lien entre le budget publicitaire mensuel $x$ (en milliers d'euros) et le chiffre d'affaires $y$ (en milliers d'euros) de $6$ de ses magasins :\n\n| Budget $x$ | 2 | 4 | 6 | 8 | 10 | 12 |\n|---|---|---|---|---|---|---|\n| CA $y$ | 30 | 36 | 48 | 54 | 60 | 72 |\n\n1. Déterminer les coordonnées du point moyen $\\mathrm{G}$ du nuage.\n2. Déterminer une équation de la droite de Mayer et vérifier qu'elle passe par $\\mathrm{G}$.\n3. À l'aide de cet ajustement, estimer le chiffre d'affaires pour un budget de $9\\,000$ € (soit $x = 9$), puis pour $30\\,000$ € ($x = 30$). Préciser dans chaque cas s'il s'agit d'une interpolation ou d'une extrapolation.\n4. Quel budget publicitaire faudrait-il, selon ce modèle, pour atteindre un chiffre d'affaires de $90\\,000$ € ?\n5. Le directeur affirme : « Augmenter le budget publicitaire fait toujours augmenter le chiffre d'affaires ». Discuter cette affirmation.",
       "corrige": [
@@ -138,6 +138,450 @@
         "5. Il existe bien une **corrélation** positive (le CA augmente avec le budget sur les données). Mais corrélation n'est pas causalité : le lien pourrait s'expliquer par une **cause commune** (les magasins situés dans des zones dynamiques ont à la fois un gros budget et un gros CA). De plus, l'extrapolation de la question 3 montre qu'un budget très élevé ne peut pas faire croître le CA indéfiniment : la tendance linéaire finit par ne plus tenir. L'affirmation « toujours » est donc abusive."
       ],
       "reponse": "$\\mathrm{G}(7\\,;50)$ ; droite de Mayer $y = 4x + 22$. CA estimé : $\\approx 58\\,000$ € pour $x=9$ (interpolation), $\\approx 142\\,000$ € pour $x=30$ (extrapolation). Un CA de $90\\,000$ € demanderait $x = 17$ ($17\\,000$ €). Enfin, corrélation $\\neq$ causalité : l'affirmation du directeur n'est pas justifiée (cause commune possible, saturation du modèle)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "point-moyen",
+      "enonce": "Un nuage est formé des trois points $(2\\,;5)$, $(4\\,;9)$ et $(6\\,;13)$. Déterminer les coordonnées du point moyen $\\mathrm{G}$.",
+      "corrige": [
+        "$\\bar x = \\dfrac{2 + 4 + 6}{3} = 4$ et $\\bar y = \\dfrac{5 + 9 + 13}{3} = 9$."
+      ],
+      "reponse": "$\\mathrm{G}(4\\,;9)$"
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "tableau-croise",
+      "enonce": "Une enquête porte sur les $500$ élèves d'une cité scolaire, selon leur établissement et leur mode de transport.\n\n|  | À pied | Bus | Voiture | Total |\n|---|---|---|---|---|\n| Collège | 60 | 90 | 50 | 200 |\n| Lycée | 40 | 210 | 50 | 300 |\n| Total | 100 | 300 | 100 | 500 |\n\nCombien de lycéens viennent en bus ?",
+      "corrige": [
+        "On lit la case à l'intersection de la ligne « Lycée » et de la colonne « Bus »."
+      ],
+      "reponse": "$210$ lycéens"
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "interpolation",
+      "enonce": "Des données ont été relevées de $2010$ à $2020$. Estimer une valeur en $2015$, puis en $2030$ : s'agit-il d'interpolations ou d'extrapolations ?",
+      "corrige": [
+        "$2015$ est à l'intérieur de l'intervalle des données : interpolation.",
+        "$2030$ est au-delà des données observées : extrapolation."
+      ],
+      "reponse": "$2015$ : interpolation ; $2030$ : extrapolation."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "ajustement",
+      "enonce": "Un nuage est formé des points $(0\\,;1)$, $(1\\,;2)$, $(2\\,;4)$, $(3\\,;8)$, $(4\\,;16)$. Un ajustement affine est-il adapté ?",
+      "corrige": [
+        "Les écarts entre ordonnées successives ($1$ ; $2$ ; $4$ ; $8$) augmentent : le nuage s'incurve.",
+        "On n'ajuste pas par une droite un nuage manifestement courbe."
+      ],
+      "reponse": "Non, le nuage n'a pas une allure rectiligne."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "correlation-causalite",
+      "enonce": "Deux caractères augmentent ensemble dans un nuage de points. Peut-on en conclure que l'un est la cause de l'autre ?",
+      "corrige": [
+        "Non : une corrélation peut venir d'une cause, d'une cause commune ou du hasard.",
+        "Un nuage de points, à lui seul, ne permet jamais de trancher."
+      ],
+      "reponse": "Non, corrélation n'est pas causalité."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "nuage-de-points",
+      "enonce": "On relève la taille et la masse de $25$ élèves. Combien de points comporte le nuage associé ?",
+      "corrige": [
+        "Chaque individu devient un point de coordonnées $(x_i\\,;y_i)$.",
+        "$25$ élèves donnent $25$ points."
+      ],
+      "reponse": "$25$ points"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "point-moyen",
+      "enonce": "On relève deux caractères $x$ et $y$ sur quatre individus :\n\n| $x$ | 10 | 20 | 30 | 40 |\n|---|---|---|---|---|\n| $y$ | 15 | 25 | 32 | 48 |\n\nDéterminer le point moyen $\\mathrm{G}$.",
+      "corrige": [
+        "$\\bar x = \\dfrac{10 + 20 + 30 + 40}{4} = 25$.",
+        "$\\bar y = \\dfrac{15 + 25 + 32 + 48}{4} = \\dfrac{120}{4} = 30$."
+      ],
+      "reponse": "$\\mathrm{G}(25\\,;30)$"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "point-moyen",
+      "enonce": "Un élève a calculé $\\bar x = 1{,}5$ et $\\bar y = 60$, puis a noté le point moyen $\\mathrm{G}(60\\,;1{,}5)$. Corriger son erreur.",
+      "corrige": [
+        "Le point moyen a pour abscisse $\\bar x$ et pour ordonnée $\\bar y$ : $\\mathrm{G}(\\bar x\\,;\\bar y)$.",
+        "L'élève a inversé les coordonnées."
+      ],
+      "reponse": "$\\mathrm{G}(1{,}5\\,;60)$"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "tableau-croise",
+      "enonce": "Une enquête porte sur les $500$ élèves d'une cité scolaire, selon leur établissement et leur mode de transport.\n\n|  | À pied | Bus | Voiture | Total |\n|---|---|---|---|---|\n| Collège | 60 | 90 | 50 | 200 |\n| Lycée | 40 | 210 | 50 | 300 |\n| Total | 100 | 300 | 100 | 500 |\n\nQuel pourcentage des élèves de la cité scolaire sont des lycéens qui viennent en bus ?",
+      "corrige": [
+        "La base est le total général ($500$).",
+        "$\\dfrac{210}{500} = 0{,}42$, soit $42\\,\\%$ des élèves."
+      ],
+      "reponse": "$42\\,\\%$ des élèves"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "tableau-croise",
+      "enonce": "Une enquête porte sur les $500$ élèves d'une cité scolaire, selon leur établissement et leur mode de transport.\n\n|  | À pied | Bus | Voiture | Total |\n|---|---|---|---|---|\n| Collège | 60 | 90 | 50 | 200 |\n| Lycée | 40 | 210 | 50 | 300 |\n| Total | 100 | 300 | 100 | 500 |\n\nQuel pourcentage des collégiens viennent à pied ?",
+      "corrige": [
+        "« Des collégiens » : la base est le total de la ligne « Collège » ($200$).",
+        "$\\dfrac{60}{200} = 0{,}3$, soit $30\\,\\%$."
+      ],
+      "reponse": "$30\\,\\%$ des collégiens"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "droite-mayer",
+      "enonce": "Pour construire une droite de Mayer, on a obtenu les points moyens $\\mathrm{G}_1(2\\,;10)$ et $\\mathrm{G}_2(8\\,;28)$. Déterminer l'équation de la droite.",
+      "corrige": [
+        "Coefficient directeur : $a = \\dfrac{28 - 10}{8 - 2} = \\dfrac{18}{6} = 3$.",
+        "Elle passe par $\\mathrm{G}_1$ : $10 = 3 \\times 2 + b$, donc $b = 4$."
+      ],
+      "reponse": "$y = 3x + 4$"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "interpolation",
+      "enonce": "Un ajustement $y = 1{,}5x + 20$ a été obtenu à partir de données pour $x$ compris entre $0$ et $10$. Estimer $y$ pour $x = 6$ et préciser la nature de l'estimation.",
+      "corrige": [
+        "$y = 1{,}5 \\times 6 + 20 = 29$.",
+        "$6$ est entre $0$ et $10$ : c'est une interpolation, raisonnablement fiable."
+      ],
+      "reponse": "$y = 29$ (interpolation)"
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "interpolation",
+      "enonce": "Avec le même ajustement $y = 1{,}5x + 20$, obtenu pour $x$ entre $0$ et $10$, estimer $y$ pour $x = 40$. Quelle précaution faut-il prendre ?",
+      "corrige": [
+        "$y = 1{,}5 \\times 40 + 20 = 80$.",
+        "$40$ est loin au-delà des données : c'est une extrapolation, rien ne garantit que la tendance se prolonge."
+      ],
+      "reponse": "$y = 80$, mais c'est une extrapolation risquée."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "ajustement",
+      "enonce": "Une droite d'ajustement a pour équation $y = -2x + 50$. Quelle valeur de $y$ prévoit-elle pour $x = 8$ ?",
+      "corrige": [
+        "On remplace $x$ par $8$ : $y = -16 + 50 = 34$."
+      ],
+      "reponse": "$y = 34$"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "ajustement",
+      "enonce": "Au jugé, on trace une droite d'ajustement qui passe par les points $(0\\,;5)$ et $(10\\,;25)$. Déterminer son équation.",
+      "corrige": [
+        "Coefficient directeur : $a = \\dfrac{25 - 5}{10 - 0} = 2$.",
+        "Ordonnée à l'origine : $b = 5$ (point d'abscisse $0$)."
+      ],
+      "reponse": "$y = 2x + 5$"
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "correlation-causalite",
+      "enonce": "On observe que les ventes de crème solaire et les ventes de glaces augmentent en même temps. Proposer une explication.",
+      "corrige": [
+        "Il s'agit vraisemblablement d'une cause commune : le soleil et la chaleur font augmenter les deux.",
+        "Acheter de la crème solaire ne fait pas acheter des glaces."
+      ],
+      "reponse": "Une cause commune : le soleil et la chaleur."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "correlation-causalite",
+      "enonce": "Plus il y a de pompiers sur un incendie, plus les dégâts sont importants. Faut-il envoyer moins de pompiers ?",
+      "corrige": [
+        "Non : la taille de l'incendie est la cause commune des deux.",
+        "Un grand incendie provoque à la fois de gros dégâts et l'envoi de nombreux pompiers."
+      ],
+      "reponse": "Non ; la taille de l'incendie explique les deux."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "nuage-de-points",
+      "enonce": "On relève la taille $x$ (en cm) et la masse $y$ (en kg) de cinq élèves :\n\n| Élève | A | B | C | D | E |\n|---|---|---|---|---|---|\n| $x$ | 152 | 160 | 165 | 171 | 180 |\n| $y$ | 45 | 52 | 55 | 60 | 68 |\n\nQuelles sont les coordonnées du point qui représente l'élève C ?",
+      "corrige": [
+        "Le point a pour abscisse la taille et pour ordonnée la masse de l'élève C."
+      ],
+      "reponse": "$(165\\,;55)$"
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "nuage-de-points",
+      "enonce": "Dans un nuage, plus l'âge $x$ d'une voiture est élevé, plus son prix de revente $y$ est faible. Comment décrire le sens de ce nuage ?",
+      "corrige": [
+        "Quand $x$ augmente, $y$ diminue : la tendance est décroissante.",
+        "Une droite d'ajustement aurait un coefficient directeur négatif."
+      ],
+      "reponse": "Tendance décroissante (coefficient directeur négatif)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "point-moyen",
+      "enonce": "Le point moyen d'un nuage est $\\mathrm{G}(4\\,;12)$. La droite d'équation $y = 2x + 3$ peut-elle être une droite d'ajustement de ce nuage ?",
+      "corrige": [
+        "Toute droite d'ajustement doit passer par $\\mathrm{G}$.",
+        "Pour $x = 4$ : $2 \\times 4 + 3 = 11 \\neq 12$. La droite ne passe pas par $\\mathrm{G}$."
+      ],
+      "reponse": "Non, elle ne passe pas par $\\mathrm{G}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "tableau-croise",
+      "enonce": "Une enquête porte sur les $500$ élèves d'une cité scolaire, selon leur établissement et leur mode de transport.\n\n|  | À pied | Bus | Voiture | Total |\n|---|---|---|---|---|\n| Collège | 60 | 90 | 50 | 200 |\n| Lycée | 40 | 210 | 50 | 300 |\n| Total | 100 | 300 | 100 | 500 |\n\nParmi les élèves qui viennent en voiture, quel pourcentage est au collège ?",
+      "corrige": [
+        "« Parmi les élèves qui viennent en voiture » : la base est le total de la colonne « Voiture » ($100$).",
+        "$\\dfrac{50}{100} = 50\\,\\%$."
+      ],
+      "reponse": "$50\\,\\%$"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "tableau-croise",
+      "enonce": "Une enquête porte sur les $500$ élèves d'une cité scolaire, selon leur établissement et leur mode de transport.\n\n|  | À pied | Bus | Voiture | Total |\n|---|---|---|---|---|\n| Collège | 60 | 90 | 50 | 200 |\n| Lycée | 40 | 210 | 50 | 300 |\n| Total | 100 | 300 | 100 | 500 |\n\nUn élève écrit : « $30\\,\\%$ des collégiens et environ $13{,}3\\,\\%$ des lycéens viennent à pied, donc en moyenne environ $21{,}7\\,\\%$ des élèves viennent à pied. » Corriger.",
+      "corrige": [
+        "On ne fait pas la moyenne de pourcentages calculés sur des lignes d'effectifs différents ($200$ et $300$).",
+        "Il faut revenir aux effectifs : $\\dfrac{100}{500} = 20\\,\\%$ des élèves viennent à pied."
+      ],
+      "reponse": "$20\\,\\%$ des élèves viennent à pied."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "droite-mayer",
+      "enonce": "On dispose de quatre points, rangés par $x$ croissant :\n\n| $x$ | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| $y$ | 3 | 5 | 8 | 10 |\n\nDéterminer la droite de Mayer et vérifier qu'elle passe par le point moyen $\\mathrm{G}$.",
+      "corrige": [
+        "Premier groupe : $\\mathrm{G}_1(1{,}5\\,;4)$. Second groupe : $\\mathrm{G}_2(3{,}5\\,;9)$.",
+        "$a = \\dfrac{9 - 4}{3{,}5 - 1{,}5} = 2{,}5$ ; $4 = 2{,}5 \\times 1{,}5 + b$ donne $b = 0{,}25$.",
+        "$\\mathrm{G}(2{,}5\\,;6{,}5)$ et $2{,}5 \\times 2{,}5 + 0{,}25 = 6{,}5$ : la droite passe bien par $\\mathrm{G}$."
+      ],
+      "reponse": "$y = 2{,}5x + 0{,}25$, qui passe par $\\mathrm{G}(2{,}5\\,;6{,}5)$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "droite-mayer",
+      "enonce": "Les données suivantes ne sont pas rangées :\n\n| $x$ | 5 | 1 | 3 | 2 | 6 | 4 |\n|---|---|---|---|---|---|---|\n| $y$ | 20 | 8 | 14 | 11 | 22 | 18 |\n\nDéterminer la droite de Mayer.",
+      "corrige": [
+        "On range d'abord par $x$ croissant : $(1\\,;8)$, $(2\\,;11)$, $(3\\,;14)$ puis $(4\\,;18)$, $(5\\,;20)$, $(6\\,;22)$.",
+        "$\\mathrm{G}_1(2\\,;11)$ et $\\mathrm{G}_2(5\\,;20)$.",
+        "$a = \\dfrac{20 - 11}{5 - 2} = 3$ et $11 = 3 \\times 2 + b$, donc $b = 5$."
+      ],
+      "reponse": "$y = 3x + 5$"
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "interpolation",
+      "enonce": "La taille d'un enfant entre $2$ et $10$ ans est ajustée par $y = 6x + 76$ ($x$ en années, $y$ en cm). Estimer sa taille à $5$ ans, puis à $30$ ans. Commenter.",
+      "corrige": [
+        "À $5$ ans : $6 \\times 5 + 76 = 106$ cm (interpolation, plausible).",
+        "À $30$ ans : $6 \\times 30 + 76 = 256$ cm, ce qui est absurde : la croissance s'arrête à l'âge adulte. Extrapoler loin des données n'a pas de sens."
+      ],
+      "reponse": "$106$ cm ; $256$ cm, valeur absurde (extrapolation)."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "interpolation",
+      "enonce": "La température moyenne annuelle d'une station, relevée de $2000$ à $2020$, est ajustée par $y = 0{,}04x + 13$ ($x$ = années depuis $2000$, $y$ en °C). Selon ce modèle, en quelle année la température moyenne atteindrait-elle $14$ °C ? Est-ce une interpolation ?",
+      "corrige": [
+        "$0{,}04x + 13 = 14$ donne $x = \\dfrac{1}{0{,}04} = 25$, soit l'année $2025$.",
+        "$2025$ est en dehors de la période observée : c'est une extrapolation, à prendre avec prudence."
+      ],
+      "reponse": "En $2025$ ; c'est une extrapolation."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "ajustement",
+      "enonce": "Le point moyen d'un nuage est $\\mathrm{G}(4\\,;14)$. On hésite entre les droites $y = 3x + 2$ et $y = 2x + 5$. Laquelle peut être une droite d'ajustement ?",
+      "corrige": [
+        "Pour $x = 4$ : $3 \\times 4 + 2 = 14$, la première passe par $\\mathrm{G}$.",
+        "$2 \\times 4 + 5 = 13 \\neq 14$ : la seconde ne passe pas par $\\mathrm{G}$."
+      ],
+      "reponse": "La droite $y = 3x + 2$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "ajustement",
+      "enonce": "La calculatrice donne la droite des moindres carrés $y = 1{,}2x + 3{,}4$, où $x$ est le nombre d'heures de révision et $y$ la note sur $20$. Le point moyen est $\\mathrm{G}(5\\,;9{,}4)$. Vérifier que la droite passe par $\\mathrm{G}$ et interpréter le coefficient $1{,}2$.",
+      "corrige": [
+        "$1{,}2 \\times 5 + 3{,}4 = 9{,}4$ : la droite passe par $\\mathrm{G}$.",
+        "Selon cet ajustement, chaque heure de révision supplémentaire correspond en moyenne à $1{,}2$ point de plus."
+      ],
+      "reponse": "Elle passe par $\\mathrm{G}$ ; environ $+1{,}2$ point par heure de révision."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "correlation-causalite",
+      "enonce": "Une étude constate que les élèves qui prennent un petit-déjeuner ont en moyenne de meilleures notes. Un parent conclut : « Prendre un petit-déjeuner fait réussir. » Que lui répondre ?",
+      "corrige": [
+        "La corrélation ne prouve pas la causalité.",
+        "D'autres facteurs peuvent agir sur les deux caractères : heure du coucher, rythme de vie, cadre familial…",
+        "Exemple de réponse : « C'est possible, mais l'étude ne le prouve pas : une cause commune, comme le rythme de vie, peut expliquer ce lien. »"
+      ],
+      "reponse": "Exemple : la corrélation ne prouve pas la cause ; une cause commune (rythme de vie…) est possible."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "correlation-causalite",
+      "enonce": "Citer les trois explications possibles d'une corrélation entre deux caractères.",
+      "corrige": [
+        "Un lien de cause à effet ; une cause commune (variable cachée) ; le hasard (simple coïncidence)."
+      ],
+      "reponse": "Causalité, cause commune, hasard."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "point-moyen",
+      "enonce": "Une droite d'ajustement a pour coefficient directeur $3$ et passe par le point moyen $\\mathrm{G}(5\\,;20)$. Déterminer son équation.",
+      "corrige": [
+        "L'équation est de la forme $y = 3x + b$.",
+        "Elle passe par $\\mathrm{G}$ : $20 = 3 \\times 5 + b$, donc $b = 5$."
+      ],
+      "reponse": "$y = 3x + 5$"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "tableau-croise",
+      "enonce": "Une enquête porte sur les $500$ élèves d'une cité scolaire, selon leur établissement et leur mode de transport.\n\n|  | À pied | Bus | Voiture | Total |\n|---|---|---|---|---|\n| Collège | 60 | 90 | 50 | 200 |\n| Lycée | 40 | 210 | 50 | 300 |\n| Total | 100 | 300 | 100 | 500 |\n\nOn veut comparer la répartition des modes de transport des collégiens et des lycéens. Calculer les pourcentages adaptés (arrondis au dixième) et proposer une représentation graphique.",
+      "corrige": [
+        "On calcule les pourcentages en ligne. Collège : $30\\,\\%$ à pied, $45\\,\\%$ en bus, $25\\,\\%$ en voiture. Lycée : $13{,}3\\,\\%$ à pied, $70\\,\\%$ en bus, $16{,}7\\,\\%$ en voiture.",
+        "Pour comparer des répartitions, on peut tracer deux barres empilées (chacune à $100\\,\\%$) ou deux diagrammes circulaires."
+      ],
+      "reponse": "Pourcentages en ligne ; deux barres empilées ou deux diagrammes circulaires."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "droite-mayer",
+      "enonce": "Pourquoi la droite de Mayer passe-t-elle toujours par le point moyen $\\mathrm{G}$ du nuage entier ?",
+      "corrige": [
+        "Les deux groupes ont le même effectif : la moyenne de tout le nuage est la moyenne de $\\mathrm{G}_1$ et de $\\mathrm{G}_2$.",
+        "$\\mathrm{G}$ est donc le milieu du segment $[\\mathrm{G}_1\\mathrm{G}_2]$ : il est sur la droite $(\\mathrm{G}_1\\mathrm{G}_2)$."
+      ],
+      "reponse": "Car $\\mathrm{G}$ est le milieu de $[\\mathrm{G}_1\\mathrm{G}_2]$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "droite-mayer",
+      "enonce": "On relève le nombre de visiteurs $y$ (en milliers) d'un parc selon le rang $x$ de l'année :\n\n| $x$ | 0 | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|---|---|\n| $y$ | 50 | 54 | 58 | 65 | 69 | 73 |\n\nDéterminer la droite de Mayer, puis estimer $y$ pour $x = 3{,}5$.",
+      "corrige": [
+        "$\\mathrm{G}_1(1\\,;54)$ et $\\mathrm{G}_2(4\\,;69)$.",
+        "$a = \\dfrac{69 - 54}{4 - 1} = 5$ et $54 = 5 + b$, donc $b = 49$ : $y = 5x + 49$.",
+        "Pour $x = 3{,}5$ : $y = 17{,}5 + 49 = 66{,}5$ (interpolation)."
+      ],
+      "reponse": "$y = 5x + 49$ ; environ $66{,}5$ milliers de visiteurs."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "interpolation",
+      "enonce": "Pendant $10$ semaines d'entraînement, le temps d'un coureur sur une course est ajusté par $y = -0{,}2x + 14$ ($x$ en semaines, $y$ en secondes). Que prévoit ce modèle après $70$ semaines ? Qu'en penser ?",
+      "corrige": [
+        "$y = -0{,}2 \\times 70 + 14 = 0$ seconde.",
+        "Un temps nul est physiquement impossible : la progression bute sur une limite. Le modèle n'est valable que près des données observées."
+      ],
+      "reponse": "$0$ s, résultat absurde : extrapolation non valable."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "ajustement",
+      "enonce": "Une droite d'ajustement $y = 3x + 1$ est tracée pour un nuage. Le point observé $(6\\,;20)$ en fait partie. Calculer l'écart entre la valeur observée et la valeur donnée par la droite. Que traduit un nuage où ces écarts sont tous petits ?",
+      "corrige": [
+        "La droite donne $3 \\times 6 + 1 = 19$ ; l'écart vaut $20 - 19 = 1$.",
+        "Si les écarts sont tous petits, le nuage est peu dispersé autour de la droite : l'ajustement est de bonne qualité."
+      ],
+      "reponse": "Écart de $1$ ; des écarts faibles traduisent un bon ajustement."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "correlation-causalite",
+      "enonce": "Depuis $2015$, le nombre d'abonnés d'une chaîne vidéo et la hauteur d'un chêne planté devant un lycée augmentent tous les deux chaque année. Le nuage de points est presque aligné. Interpréter.",
+      "corrige": [
+        "Les deux grandeurs augmentent avec le temps, mais aucune n'agit sur l'autre et elles n'ont pas de cause commune.",
+        "C'est une simple coïncidence de tendance : deux courbes qui montent en même temps."
+      ],
+      "reponse": "Simple coïncidence de tendance, sans lien de cause."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "nuage-de-points",
+      "enonce": "Décrire la forme, le sens et la dispersion du nuage formé des points $(1\\,;2)$, $(2\\,;4{,}1)$, $(3\\,;5{,}9)$, $(4\\,;8{,}2)$, $(5\\,;9{,}8)$. Un ajustement affine est-il adapté ?",
+      "corrige": [
+        "Forme : les points sont presque alignés (allure rectiligne).",
+        "Sens : $y$ augmente quand $x$ augmente. Dispersion : faible, les points sont proches d'une droite.",
+        "Un ajustement affine est donc adapté."
+      ],
+      "reponse": "Rectiligne, croissant, peu dispersé : oui."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "series-deux-variables",
+      "enonce": "Un foyer relève la température extérieure moyenne $x$ (en °C) et sa consommation de gaz $y$ (en kWh par jour) :\n\n| $x$ | 0 | 2 | 4 | 6 | 8 | 10 |\n|---|---|---|---|---|---|---|\n| $y$ | 120 | 110 | 100 | 88 | 80 | 72 |\n\n1. Déterminer le point moyen $\\mathrm{G}$. 2. Déterminer la droite de Mayer et vérifier qu'elle passe par $\\mathrm{G}$. 3. Estimer la consommation pour $7$ °C. 4. Que donne le modèle pour $30$ °C ? Commenter.",
+      "corrige": [
+        "1. $\\bar x = 5$ et $\\bar y = \\dfrac{570}{6} = 95$ : $\\mathrm{G}(5\\,;95)$.",
+        "2. $\\mathrm{G}_1(2\\,;110)$, $\\mathrm{G}_2(8\\,;80)$ ; $a = \\dfrac{80 - 110}{6} = -5$, $b = 110 + 10 = 120$ : $y = -5x + 120$, et $-25 + 120 = 95$.",
+        "3. $y = -35 + 120 = 85$ kWh (interpolation).",
+        "4. $y = -150 + 120 = -30$ kWh : une consommation négative est impossible ; c'est une extrapolation hors du domaine de validité."
+      ],
+      "reponse": "1. $\\mathrm{G}(5\\,;95)$. 2. $y = -5x + 120$. 3. $85$ kWh. 4. $-30$ kWh, absurde (extrapolation)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "series-deux-variables",
+      "enonce": "On interroge $400$ lycéens sur leur pratique sportive et leur durée de sommeil :\n\n|  | Dort 8 h ou plus | Dort moins de 8 h | Total |\n|---|---|---|---|\n| Sport régulier | 90 | 60 | 150 |\n| Pas de sport régulier | 75 | 175 | 250 |\n| Total | 165 | 235 | 400 |\n\n1. Quel pourcentage des sportifs dorment $8$ h ou plus ? 2. Et des non-sportifs ? 3. Quel pourcentage de ceux qui dorment $8$ h ou plus sont sportifs (arrondi au dixième) ? 4. Peut-on conclure que le sport fait mieux dormir ?",
+      "corrige": [
+        "1. Base : ligne « Sport régulier » : $\\dfrac{90}{150} = 60\\,\\%$.",
+        "2. Base : ligne « Pas de sport » : $\\dfrac{75}{250} = 30\\,\\%$.",
+        "3. Base : colonne « 8 h ou plus » : $\\dfrac{90}{165} \\approx 54{,}5\\,\\%$.",
+        "4. Les deux caractères sont liés, mais l'enquête ne prouve pas une causalité : une cause commune (mode de vie, emploi du temps…) est possible."
+      ],
+      "reponse": "1. $60\\,\\%$. 2. $30\\,\\%$. 3. Environ $54{,}5\\,\\%$. 4. Non, un lien n'est pas une preuve de cause."
     }
   ]
 }
