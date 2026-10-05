@@ -74,7 +74,7 @@ Exemple : *Oggi ho matematica e storia.* → Aujourd'hui j'ai maths et histoire.
 - *la gomma* signifie « la gomme » mais aussi « le pneu » : le contexte de l'école lève le doute.
 - *i compiti* (les devoirs) est un pluriel : on dit *fare i compiti* (faire ses devoirs).
 - « le professeur » se dit *il professore* (masc.) ou *la professoressa* (fém.) ; *l'insegnante* est valable pour les deux.
-- Attention aux doubles consonnes : *l'a**u**la*, *lo za**i**no*, *la ma**tt**ina* (le matin) — écris bien *l'inse**gn**ante*.
+- Attention à l'orthographe : *la ma**tt**ina* (le matin, deux t), *l'inse**gn**ante* (gn), *l'a**u**la* et *lo za**i**no* (voyelles à bien écrire).
 
 ## À retenir
 
