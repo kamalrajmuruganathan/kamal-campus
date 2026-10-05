@@ -82,19 +82,25 @@ associe $f'(x)$ est la **fonction dérivée** de $f$.
 | $x$ | $1$ |
 | $x^2$ | $2x$ |
 | $x^3$ | $3x^2$ |
-| $\dfrac{1}{x}$ | $-\dfrac{1}{x^2}$ |
-| $\sqrt{x}$ | $\dfrac{1}{2\sqrt{x}}$ |
 
 ### Opérations
 
 | Fonction | Dérivée |
 |---|---|
 | $u + v$ | $u' + v'$ |
-| $k\,u$ | $k\,u'$ |
-| $u \times v$ | $\boxed{u'v + uv'}$ |
-| $\dfrac{u}{v}$ | $\boxed{\dfrac{u'v - uv'}{v^2}}$ |
+| $k\,u$ ($k$ réel) | $k\,u'$ |
 
-> **Exemple.** $f(x) = 5x^2 - 3x + 7$ donne $f'(x) = 10x - 3$.
+### Dérivée d'un polynôme de degré inférieur ou égal à 3
+
+En combinant ces deux règles, on dérive **terme à terme** :
+
+$$\boxed{ax^3 + bx^2 + cx + d \;\longmapsto\; 3ax^2 + 2bx + c}$$
+
+> **Exemples.** $f(x) = 5x^2 - 3x + 7$ donne $f'(x) = 10x - 3$.
+> $g(x) = 2x^3 - 4x^2 + x - 6$ donne $g'(x) = 6x^2 - 8x + 1$.
+
+> **Un produit de deux facteurs ?** On **développe d'abord**, puis on dérive :
+> $f(x) = (2x + 1)(x - 3) = 2x^2 - 5x - 3$, donc $f'(x) = 4x - 5$.
 
 ---
 
@@ -150,18 +156,18 @@ la **tangente y est horizontale**.
 | $f' < 0$ sur $I$ | $f$ décroissante sur $I$ |
 | Extrémum en $a$ | $\Rightarrow f'(a) = 0$ |
 | Réciproque | **fausse** — il faut un changement de signe |
-| Dérivée d'un produit | $u'v + uv'$ |
+| Dérivée d'un polynôme | $ax^3 + bx^2 + cx + d \mapsto 3ax^2 + 2bx + c$ |
 
 ---
 
 ## 8. Les erreurs qui coûtent des points
 
-1. **Croire que $(uv)' = u'v'$.** La formule est $u'v + uv'$.
-2. **Confondre $f(a)$ et $f'(a)$** dans l'équation de la tangente.
-3. **Conclure à un extrémum dès que $f'(a) = 0$** sans vérifier le changement de signe.
-4. **Étudier le signe de $f$ au lieu de celui de $f'$.**
-5. **Annoncer une variation sur une réunion d'intervalles.**
-6. **Inverser le numérateur du quotient** : c'est $u'v - uv'$, dans cet ordre.
+1. **Dériver $x^3$ en $3x^3$** au lieu de $3x^2$ : l'exposant descend en facteur **et diminue de $1$**.
+2. **Oublier que la dérivée d'une constante est $0$** : $(4x^2 - 7x + 3)' = 8x - 7$, sans le $3$.
+3. **Confondre $f(a)$ et $f'(a)$** dans l'équation de la tangente.
+4. **Conclure à un extrémum dès que $f'(a) = 0$** sans vérifier le changement de signe.
+5. **Étudier le signe de $f$ au lieu de celui de $f'$.**
+6. **Annoncer une variation sur une réunion d'intervalles.**
 7. **Oublier les images** dans le tableau de variations : un tableau sans valeurs est
    incomplet.
 
@@ -182,14 +188,16 @@ sécantes passant par ce point ; Nombre dérivé en un point défini comme limit
 de variation en ce point ; Équation réduite de la tangente en un point » puis
 « Point de vue global : Fonction dérivée ; Fonctions dérivées de : … ».
 
-⚠️ À CONFRONTER AU PDF PAR UN PROFESSEUR :
-- La LISTE EXACTE des dérivées usuelles exigibles : l'extraction s'interrompt sur
-  « Fonctions dérivées de : 2 ». J'ai retenu k, x, x², x³, 1/x et √x — à vérifier,
-  notamment la présence de √x et de x³.
-- La dérivée d'un QUOTIENT est-elle au programme de la voie technologique, ou
-  seulement somme et produit ? Point de périmètre à trancher.
-- La dérivée de x ↦ f(ax+b) est-elle exigible ?
-- Les démonstrations éventuellement exigibles.
+PÉRIMÈTRE TRANCHÉ (05/10/2026) d'après docs/programme-premiere-techno-2026.txt,
+lignes 440-441 : « Fonctions dérivées de : x ↦ x², x ↦ x³ » et « Dérivée d'une
+somme, dérivée de kf (k ∈ ℝ), dérivée d'un polynôme de degré inférieur ou égal
+à 3 ». Sont donc retenus : k, x, x², x³, somme, kf, polynômes de degré ≤ 3.
+Retirés de la fiche, du QCM, des cartes et des exercices car HORS PROGRAMME en
+voie technologique : dérivées de 1/x et de √x, dérivée d'un produit (uv)' et
+d'un quotient (u/v)'. Un produit de deux facteurs affines se traite en
+développant d'abord. Contextes recommandés par le programme (commentaires) :
+vitesse instantanée et coût marginal.
+Reste à confronter au PDF : les démonstrations éventuellement exigibles.
 
 Rédaction originale à partir du programme. Aucun emprunt à un manuel.
 Statut : brouillon, non relu.

@@ -125,16 +125,16 @@
     {
       "id": 9,
       "difficulte": "difficile",
-      "notion": "produit",
-      "enonce": "Quelle est la dérivée de $f(x) = (2x+1)(x-3)$ ?",
+      "notion": "developper-deriver",
+      "enonce": "Quelle est la dérivée de $f(x) = (2x+1)(x-3)$ ? (On pourra développer d'abord.)",
       "choix": [
         "$2$",
         "$4x - 5$",
-        "$2x - 3$",
+        "$4x - 6$",
         "$4x + 1$"
       ],
       "reponse": 1,
-      "explication": "Avec $u = 2x+1$, $u' = 2$, $v = x-3$, $v' = 1$ : $f' = u'v + uv' = 2(x-3) + (2x+1) = 4x - 5$. Le choix $2$ applique la formule fausse $(uv)' = u'v'$. On peut vérifier en développant d'abord : $2x^2 - 5x - 3$, dont la dérivée est bien $4x - 5$."
+      "explication": "On développe : $f(x) = 2x^2 - 6x + x - 3 = 2x^2 - 5x - 3$, puis on dérive terme à terme : $f'(x) = 4x - 5$. Le choix $2$ multiplie les dérivées des deux facteurs ($2 \\times 1$), ce qui est faux ; $4x - 6$ et $4x + 1$ viennent d'un terme oublié dans le développement."
     },
     {
       "id": 10,
@@ -237,16 +237,16 @@
     {
       "id": 17,
       "difficulte": "moyen",
-      "notion": "derivees-usuelles",
-      "enonce": "Quelle est la dérivée de $f(x) = \\dfrac{1}{x}$ ?",
+      "notion": "derivee-polynome",
+      "enonce": "Quelle est la dérivée de $f(x) = 2x^3 - 5x + 1$ ?",
       "choix": [
-        "$-\\dfrac{1}{x^2}$",
-        "$\\dfrac{1}{x^2}$",
-        "$1$",
-        "$-\\dfrac{2}{x^2}$"
+        "$6x^3 - 5$",
+        "$6x^2 - 5x$",
+        "$6x^2 - 5$",
+        "$6x^2 - 5 + 1$"
       ],
-      "reponse": 0,
-      "explication": "La dérivée de $\\dfrac{1}{x}$ est $-\\dfrac{1}{x^2}$ : c'est une dérivée usuelle à connaître. Le piège fréquent est d'oublier le signe **moins**."
+      "reponse": 2,
+      "explication": "On dérive terme à terme : $(2x^3)' = 2 \\times 3x^2 = 6x^2$, $(-5x)' = -5$, et la dérivée de la constante $1$ est **nulle**. D'où $f'(x) = 6x^2 - 5$. Le choix $6x^3 - 5$ oublie de diminuer l'exposant de $1$."
     },
     {
       "id": 18,
@@ -265,30 +265,30 @@
     {
       "id": 19,
       "difficulte": "difficile",
-      "notion": "produit",
-      "enonce": "Quelle est la dérivée de $f(x) = (3x - 1)(x + 2)$ ?",
+      "notion": "variations",
+      "enonce": "Pour $f(x) = x^3 - 12x$, sur quel intervalle $f$ est-elle décroissante ?",
       "choix": [
-        "$6x + 5$",
-        "$3$",
-        "$6x - 5$",
-        "$3x + 5$"
+        "$[-2\\,;2]$",
+        "$[-4\\,;4]$",
+        "$]-\\infty\\,;-2]$",
+        "$[-2\\sqrt{3}\\,;2\\sqrt{3}]$"
       ],
       "reponse": 0,
-      "explication": "Avec $u = 3x-1$, $u' = 3$, $v = x+2$, $v' = 1$ : $f' = u'v + uv' = 3(x+2) + (3x-1) = 6x + 5$. Le choix $3$ applique la formule fausse $(uv)' = u'v'$. Vérification en développant : $3x^2 + 5x - 2$, de dérivée $6x + 5$."
+      "explication": "$f'(x) = 3x^2 - 12 = 3(x - 2)(x + 2)$, qui est négative entre ses racines $-2$ et $2$. Donc $f$ est décroissante sur $[-2\\,;2]$ (et croissante ailleurs). Le choix $[-2\\sqrt{3}\\,;2\\sqrt{3}]$ utilise les racines de $f$ au lieu de celles de $f'$."
     },
     {
       "id": 20,
       "difficulte": "difficile",
-      "notion": "quotient",
-      "enonce": "Quelle est la formule de la dérivée d'un quotient $\\dfrac{u}{v}$ ?",
+      "notion": "cout-marginal",
+      "enonce": "Le coût total de fabrication de $q$ objets, en euros, est $C(q) = 0{,}01q^3 - 0{,}9q^2 + 40q + 500$. Le coût marginal est assimilé à $C'(q)$. Que vaut le coût marginal pour $q = 20$ ?",
       "choix": [
-        "$\\dfrac{u'v - uv'}{v^2}$",
-        "$\\dfrac{u'v + uv'}{v^2}$",
-        "$\\dfrac{uv' - u'v}{v^2}$",
-        "$\\dfrac{u'}{v'}$"
+        "$1\\,020$ €",
+        "$16$ €",
+        "$51$ €",
+        "$88$ €"
       ],
-      "reponse": 0,
-      "explication": "La formule est $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$. L'ordre du numérateur compte : c'est $u'v - uv'$, pas l'inverse. Le choix $\\dfrac{u'}{v'}$ est l'erreur grossière consistant à dériver haut et bas séparément."
+      "reponse": 1,
+      "explication": "$C'(q) = 0{,}03q^2 - 1{,}8q + 40$, donc $C'(20) = 0{,}03 \\times 400 - 1{,}8 \\times 20 + 40 = 12 - 36 + 40 = 16$ € : le 21e objet coûte environ $16$ €. Le choix $1\\,020$ € est $C(20)$, le coût total ; $51$ € est le coût moyen $\\dfrac{C(20)}{20}$ ; $88$ € vient d'une erreur de signe sur $-1{,}8q$."
     }
   ]
 }

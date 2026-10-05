@@ -160,3 +160,15 @@ Ce n'est pas bloquant (build de quelques secondes, ne sert qu'à la redirection)
 2. **Tout supprimer** : netlify.com → site → Site configuration → General → **Delete this site**
    (l'ancien lien ne marchera plus du tout).
 → À la première session après le 16/10, **rappeler ces deux options à Kamal**.
+
+## 12. Choix pédagogiques tranchés (05/10/2026, avec l'accord de Kamal)
+Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fiche du chapitre.
+- 1re techno dérivation : produit, quotient, 1/x et √x **retirés** (programme l. 440-441 : x², x³, somme, kf,
+  polynômes de degré ≤ 3). Fiche, QCM, cartes et générateur corrigés ; remplacés par « développer puis dériver »
+  et « coût marginal ».
+- Prix du kWh dans les exercices : **0,20 €** (proche du tarif réglementé), et non 0,25 €.
+- Notions retirées car hors programme du niveau (5e : × des relatifs, translation, v = d/t ; 4e : double
+  distributivité, a√b ; 6e : moyenne ; CE2 : aire, degrés ; 3e : sigle « PGCD ») : **retrait confirmé**.
+- Valeurs vérifiées et conservées : solubilité du sucre ≈ 2 000 g/L, bicarbonate 96 g/L (20 °C) ; K(FeSCN²⁺) ≈ 10²,
+  K(Fe²⁺/Ag⁺) ≈ 3,2, K(Cu/Ag⁺) ≈ 2,2 × 10¹⁵ ; estérification K = 4 (eau comptée) ; saut de pH en 1re (dans la fiche).
+- Nombres en lettres : orthographe de 1990 (CP–CE2) et traditionnelle (CM) — les deux sont correctes, conservées.
