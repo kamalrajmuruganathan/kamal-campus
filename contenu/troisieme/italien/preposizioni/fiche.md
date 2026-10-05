@@ -27,7 +27,7 @@ relu_par: null
 | **da** | de (provenance), chez | Vengo **da** Parigi. | Je viens de Paris. |
 | **in** | dans, en | Abito **in** Italia. | J'habite en Italie. |
 | **con** | avec | Esco **con** Luca. | Je sors avec Luca. |
-| **su** | sur | Il libro è **su** tavolo. | Le livre est sur la table. |
+| **su** | sur | Il libro è **sul** tavolo (su + il). | Le livre est sur la table. |
 | **per** | pour | Questo è **per** te. | C'est pour toi. |
 | **tra / fra** | entre, dans (temps) | **Tra** due ore. | Dans deux heures. |
 
