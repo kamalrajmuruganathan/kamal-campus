@@ -25,7 +25,7 @@ relu_par: null
 - **La problématique** est l'ensemble des questions qui structurent le devoir et guident la progression.
 
 ## 2. Construire l'introduction et le plan
-- **L'introduction** comporte : une entrée en matière (accroche liée au sujet), l'analyse et la reformulation du sujet, l'énonce du problème, l'annonce du plan. Elle ne donne pas la réponse d'avance.
+- **L'introduction** comporte : une entrée en matière (accroche liée au sujet), l'analyse et la reformulation du sujet, l'énoncé du problème, l'annonce du plan. Elle ne donne pas la réponse d'avance.
 - **Le plan** est argumentatif et progressif : chaque partie répond au problème et prépare la suivante. Un plan fréquent en trois parties : une première thèse (réponse spontanée), une objection ou thèse opposée, puis un dépassement qui articule les deux. Le plan doit progresser, non juxtaposer.
 - Chaque partie contient plusieurs **paragraphes**, chacun défendant **un argument** illustré par un **exemple** ou une référence précise.
 
