@@ -173,3 +173,17 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
   K(Fe²⁺/Ag⁺) ≈ 3,2, K(Cu/Ag⁺) ≈ 2,2 × 10¹⁵ ; estérification K = 4 (eau comptée) ; saut de pH en 1re (dans la fiche).
 - Nombres en lettres : orthographe de 1990 (CP–CE2) et traditionnelle (CM) — les deux sont correctes, conservées.
 - **Publié le 05/10/2026** (PR #4, main `e69d0eb`, contrôle qualité et déploiement Pages verts).
+
+## 13. Chantiers du 05/10/2026 (après la PR #4) — sur `upgrade-sdk57`, non publiés
+- **Amis en temps réel** : `ecouterAmities` (cloud/social.js) + rechargement toutes les 60 s (Accueil, Amis).
+  Pour l'instantané, Kamal doit exécuter **une fois** `outils/sql/realtime_amities.sql` dans Supabase (SQL Editor).
+- **Ordre des chapitres** : `contenu/<niveau>/<parcours>/ordre.json` (143 fichiers, ordre de l'année scolaire),
+  lu par `app/scripts/generer-index.mjs` (chapitre absent → fin de liste + avertissement).
+- **50 exercices partout** : les chapitres hors maths/PC passent de 10 à 50 exos écrits à la main
+  (10 d'origine gardés + 40). Vérif : `python3 scripts/verifier_json.py <chemin>` (50 → ≥ 6 notions, ≤ 15/notion,
+  ≥ 3 difficultés). Faits : français, hist-géo, SVT, sciences, SES, philo, techno, ens. scientifique, HGGSP,
+  maths spé 1re. Restent notamment : maths spé Tle, STI2D/STL/ST2S, NSI, SNT, SI, arts, langues anciennes,
+  grand oral, maths complémentaires/expertes, et les 4 langues vivantes (≈ 350 chapitres).
+- **Audit des 956 QCM (≈ 19 000 questions) terminé** : ~20 bonnes réponses mal indexées corrigées, ~600 retouches
+  (deux bonnes réponses, explications « choix A » alors que l'appli mélange les choix, unités, langues).
+- Difficultés « decouverte » et « probleme » ont maintenant une étiquette dans `Exercices.js`.
