@@ -25,6 +25,7 @@ const LIBELLE_DIFFICULTE = {
   intermediaire: 'Intermédiaire',
   approfondissement: 'Approfondissement',
   probleme: 'Problème',
+  bac: 'Type bac',
   // tolérance aux valeurs du QCM si un chapitre les réutilise
   facile: 'Application',
   moyen: 'Intermédiaire',
