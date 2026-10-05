@@ -172,3 +172,4 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - Valeurs vérifiées et conservées : solubilité du sucre ≈ 2 000 g/L, bicarbonate 96 g/L (20 °C) ; K(FeSCN²⁺) ≈ 10²,
   K(Fe²⁺/Ag⁺) ≈ 3,2, K(Cu/Ag⁺) ≈ 2,2 × 10¹⁵ ; estérification K = 4 (eau comptée) ; saut de pH en 1re (dans la fiche).
 - Nombres en lettres : orthographe de 1990 (CP–CE2) et traditionnelle (CM) — les deux sont correctes, conservées.
+- **Publié le 05/10/2026** (PR #4, main `e69d0eb`, contrôle qualité et déploiement Pages verts).
