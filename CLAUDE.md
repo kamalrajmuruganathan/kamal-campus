@@ -121,7 +121,7 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
 - Défis : bug corrigé sur `upgrade-sdk57` (non publié) — l'envoi du résultat se faisait dans un « updater »
   `setJeu`, que React peut exécuter deux fois → risque de défi créé en double. Désormais `jeuRef` + verrou `envoiRef`.
 - Correctif `Alert.alert` web testé dans Chromium (message simple, confirmation OK / Annuler) : OK.
-- Tests Défis / Amis avec 2 comptes : **en attente** (à faire par Kamal sur le site en ligne).
+- Tests Défis / Amis avec 2 comptes : **faits le 05/10** (kamalraj28 / testeur) : amitié, défi joué, refus → OK.
 - **Exercices enrichis (03/10, non publiés)** : 162 chapitres maths/PC réécrits par lots dans
   `scripts/gen_enrichi_{a,b1,b2,c1,c2,d,e,f}.py` (chargés en dernier par `generer-exos.py`, ils remplacent
   les anciens générateurs). Chaque chapitre : 50 exos, ≥ 6 notions, ≤ 15 par notion, ≥ 3 difficultés.
@@ -145,3 +145,8 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
   (`/*` → GitHub Pages, 301) avec un build de quelques secondes (`scripts/build-redirection-netlify.sh`).
   S'activera au premier build Netlify après le 16/10 (crédits revenus). Ensuite, Kamal peut couper les builds
   Netlify (Site configuration → Build & deploy → Stop builds) : la redirection reste en ligne.
+- **05/10/2026 (PR #2 publiée)** : Amis visible (bouton « 👥 Amis » en haut de l'accueil + pastille des
+  demandes reçues, « 👥 Amis » dans Ma progression, lien dans Défis) ; carte « Amis et défis » ; nouveau défi :
+  classe (présélectionnée) → matière → chapitre ; défi refusé affiché « Refusé » ; scores sur 10 ;
+  recherche d'amis avec message si aucun résultat ; bouton Retirer ; sous-titre « 21 matières » ;
+  « Réviser N cartes » ne compte que les cartes déjà étudiées (`src/coach.js`).
