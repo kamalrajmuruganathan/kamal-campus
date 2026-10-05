@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "application-rc",
       "enonce": "PROBLÈME. Dans un circuit RC, un générateur de tension constante $E = 5{,}0$ V charge un condensateur de capacité $C_0 = 10$ µF à travers une résistance $R = 20$ kΩ. Le condensateur est initialement déchargé. La tension $u(t)$ à ses bornes (en volts, $t$ en secondes) vérifie la loi des mailles $R\\,C_0\\,u' + u = E$. On rappelle la constante de temps $\\tau = R\\,C_0$.\n1. Calculer $\\tau$ en secondes (attention aux conversions d'unités).\n2. Montrer que l'équation s'écrit $u' = -5\\,u + 25$ et préciser $a$ et $b$.\n3. Déterminer la solution constante de l'équation et interpréter sa valeur physiquement.\n4. Déterminer l'expression de $u(t)$ tenant compte de la condition initiale $u(0) = 0$.\n5. Calculer $u(\\tau)$ (arrondir au dixième) et vérifier qu'il correspond à environ $63\\,\\%$ de $E$.\n6. Déterminer, à la centième de seconde près, l'instant où la tension atteint $4{,}5$ V (soit $90\\,\\%$ de $E$). Comparer cette durée à $\\tau$.",
       "corrige": [
@@ -135,6 +135,459 @@
         "6. On résout $5\\left(1 - e^{-5t}\\right) = 4{,}5$ : $1 - e^{-5t} = 0{,}9$, soit $e^{-5t} = 0{,}1 = \\frac{1}{10}$. En passant au logarithme : $-5t = \\ln\\frac{1}{10} = -\\ln 10$, d'où $t = \\dfrac{\\ln 10}{5} \\approx \\dfrac{2{,}303}{5} \\approx 0{,}46$ s. Comme $\\frac{0{,}46}{0{,}20} \\approx 2{,}3$, cette durée vaut environ $2{,}3\\,\\tau$ : il faut un peu plus de deux constantes de temps pour atteindre $90\\,\\%$ de la charge (et environ $5\\tau$ pour la charge quasi totale)."
       ],
       "reponse": "1. $\\tau = 0{,}20$ s. 2. $u' = -5u + 25$ ($a = -5$, $b = 25$). 3. Solution constante $u = 5$ V $= E$ (condensateur chargé). 4. $u(t) = 5(1 - e^{-5t})$. 5. $u(\\tau) = 5(1 - e^{-1}) \\approx 3{,}2$ V $\\approx 63\\,\\%$ de $E$. 6. $t = \\frac{\\ln 10}{5} \\approx 0{,}46$ s $\\approx 2{,}3\\,\\tau$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "notion-equation",
+      "enonce": "Parmi les équations suivantes, lesquelles sont des équations différentielles ? a) $y' = 3y$ ; b) $x^2 + 1 = 5$ ; c) $y' = 2y - 1$ ; d) $3x + 2 = 5$.",
+      "corrige": [
+        "Une équation différentielle a pour inconnue une fonction $y$ et relie $y$ à sa dérivée $y'$.",
+        "a) et c) font intervenir $y'$ ; b) et d) sont des équations dont l'inconnue est un nombre."
+      ],
+      "reponse": "a) et c)."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "verifier-solution",
+      "enonce": "La fonction $f(x) = 7e^{-2x}$ est-elle solution de $y' = -2y$ ?",
+      "corrige": [
+        "$f'(x) = 7 \\times (-2)e^{-2x} = -14e^{-2x}$.",
+        "$-2f(x) = -14e^{-2x}$ : les deux expressions sont égales pour tout $x$."
+      ],
+      "reponse": "Oui."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "verifier-solution",
+      "enonce": "Vérifier que $f(x) = 2e^{x} + 3$ est solution de $y' = y - 3$.",
+      "corrige": [
+        "D'une part, $f'(x) = 2e^{x}$.",
+        "D'autre part, $f(x) - 3 = 2e^{x} + 3 - 3 = 2e^{x}$.",
+        "Les deux membres sont égaux pour tout réel $x$ : $f$ est solution."
+      ],
+      "reponse": "$f'(x) = f(x) - 3 = 2e^{x}$ pour tout $x$ : $f$ est solution."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "verifier-solution",
+      "enonce": "Un élève remarque que pour $f(x) = 3x$, on a $f'(1) = 3$ et $f(1) = 3$ ; il conclut que $f$ est solution de $y' = y$. A-t-il raison ?",
+      "corrige": [
+        "$f'(x) = 3$ et $f(x) = 3x$ : l'égalité $3 = 3x$ n'est vraie que pour $x = 1$.",
+        "Une solution doit vérifier l'équation pour tout $x$ de l'intervalle : vérifier en une seule valeur ne suffit jamais."
+      ],
+      "reponse": "Non : l'égalité n'est vraie qu'en $x = 1$, pas pour tout $x$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "resoudre-y-prime-ay",
+      "enonce": "Résoudre l'équation différentielle $y' = 0{,}2\\,y$.",
+      "corrige": [
+        "Les solutions de $y' = ay$ sont les fonctions $y(x) = C\\,e^{ax}$, $C \\in \\mathbb{R}$, ici avec $a = 0{,}2$."
+      ],
+      "reponse": "$y(x) = C\\,e^{0{,}2x}$, $C \\in \\mathbb{R}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "resoudre-y-prime-ay",
+      "enonce": "Résoudre l'équation différentielle $y' + 3y = 0$.",
+      "corrige": [
+        "On isole la dérivée : $y' = -3y$.",
+        "Les solutions sont $y(x) = C\\,e^{-3x}$, $C \\in \\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = C\\,e^{-3x}$, $C \\in \\mathbb{R}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "resoudre-y-prime-ay",
+      "enonce": "Déterminer la solution de $y' = 2y$ qui vérifie $y(0) = 5$.",
+      "corrige": [
+        "Solutions : $y(x) = C\\,e^{2x}$. En $0$ : $y(0) = C\\,e^{0} = C$.",
+        "Donc $C = 5$ (ici, la constante est bien la valeur initiale, car $b = 0$ et $x_0 = 0$)."
+      ],
+      "reponse": "$y(x) = 5e^{2x}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "solution-constante",
+      "enonce": "Déterminer la solution constante de chaque équation : a) $y' = 3y - 12$ ; b) $y' = -0{,}5\\,y + 2$ ; c) $y' = 4y + 2$.",
+      "corrige": [
+        "Une solution constante a une dérivée nulle : on résout $0 = ay + b$, soit $y_p = -\\dfrac{b}{a}$.",
+        "a) $0 = 3y - 12$ donne $y = 4$ ; b) $0 = -0{,}5y + 2$ donne $y = 4$ ; c) $0 = 4y + 2$ donne $y = -0{,}5$."
+      ],
+      "reponse": "a) $4$ ; b) $4$ ; c) $-0{,}5$."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "solution-constante",
+      "enonce": "Pour $y' = 2y - 8$, un élève annonce la solution constante $y_p = -4$. Vérifier et corriger.",
+      "corrige": [
+        "Si $y = -4$, alors $y' = 0$ mais $2 \\times (-4) - 8 = -16 \\neq 0$ : ce n'est pas une solution.",
+        "On résout $0 = 2y - 8$ : $y_p = 4$ (c'est bien $-\\dfrac{b}{a} = -\\dfrac{-8}{2}$)."
+      ],
+      "reponse": "$y_p = 4$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "resoudre-y-prime-ay-b",
+      "enonce": "Résoudre l'équation différentielle $y' = -y + 3$.",
+      "corrige": [
+        "Solution constante : $0 = -y + 3$, donc $y_p = 3$.",
+        "On ajoute les solutions de $y' = -y$ : $y(x) = C\\,e^{-x} + 3$, $C \\in \\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = C\\,e^{-x} + 3$, $C \\in \\mathbb{R}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "resoudre-y-prime-ay-b",
+      "enonce": "Résoudre l'équation différentielle $y' = 0{,}5\\,y - 1$.",
+      "corrige": [
+        "Solution constante : $0 = 0{,}5y - 1$, donc $y_p = 2$.",
+        "Solutions : $y(x) = C\\,e^{0{,}5x} + 2$, $C \\in \\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = C\\,e^{0{,}5x} + 2$, $C \\in \\mathbb{R}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "mise-en-forme",
+      "enonce": "Résoudre l'équation différentielle $4y' + 2y = 8$.",
+      "corrige": [
+        "On isole $y'$ : $4y' = -2y + 8$, donc $y' = -0{,}5\\,y + 2$.",
+        "Solution constante : $0 = -0{,}5y + 2$, soit $y_p = 4$.",
+        "Solutions : $y(x) = C\\,e^{-0{,}5x} + 4$, $C \\in \\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = C\\,e^{-0{,}5x} + 4$, $C \\in \\mathbb{R}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "mise-en-forme",
+      "enonce": "Résoudre l'équation différentielle $y' - 3 = 2y$.",
+      "corrige": [
+        "On écrit l'équation sous la forme du cours : $y' = 2y + 3$ ($a = 2$, $b = 3$).",
+        "Solution constante : $0 = 2y + 3$, soit $y_p = -\\dfrac{3}{2}$.",
+        "Solutions : $y(x) = C\\,e^{2x} - \\dfrac{3}{2}$, $C \\in \\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = C\\,e^{2x} - \\dfrac{3}{2}$, $C \\in \\mathbb{R}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la solution de $y' = -y + 3$ qui vérifie $y(0) = 0$.",
+      "corrige": [
+        "Solution générale : $y(x) = C\\,e^{-x} + 3$.",
+        "$y(0) = C + 3 = 0$, donc $C = -3$."
+      ],
+      "reponse": "$y(x) = 3 - 3e^{-x}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la solution de $y' = 3y$ qui vérifie $y(1) = 2$.",
+      "corrige": [
+        "Solution générale : $y(x) = C\\,e^{3x}$ ; en $x = 1$ : $C\\,e^{3} = 2$, donc $C = 2e^{-3}$.",
+        "$y(x) = 2e^{-3}e^{3x} = 2e^{3x - 3}$ (ici $C \\neq y(1)$, car la condition n'est pas donnée en $0$)."
+      ],
+      "reponse": "$y(x) = 2e^{3x - 3}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Pour $y' = -2y + 6$ avec $y(0) = 10$, un élève écrit directement $y(x) = 10e^{-2x} + 3$. Vérifier et corriger.",
+      "corrige": [
+        "Avec la réponse de l'élève, $y(0) = 10 + 3 = 13 \\neq 10$ : il a confondu $C$ et $y(0)$.",
+        "Solution générale : $y(x) = C\\,e^{-2x} + 3$ ; $y(0) = C + 3 = 10$ donne $C = 7$."
+      ],
+      "reponse": "$y(x) = 7e^{-2x} + 3$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "comportement-limite",
+      "enonce": "a) Vers quelle valeur tendent toutes les solutions de $y' = -0{,}1\\,y + 5$ quand $x \\to +\\infty$ ? b) Pour $y' = 0{,}1\\,y + 5$ avec $y(0) = 0$, déterminer la solution et son comportement en $+\\infty$.",
+      "corrige": [
+        "a) $a = -0{,}1 < 0$ : le terme $C\\,e^{-0{,}1x}$ s'éteint, toutes les solutions tendent vers $y_p = -\\dfrac{5}{-0{,}1} = 50$.",
+        "b) $y_p = -\\dfrac{5}{0{,}1} = -50$ ; $y(x) = C\\,e^{0{,}1x} - 50$ et $y(0) = C - 50 = 0$, donc $y(x) = 50e^{0{,}1x} - 50$.",
+        "Ici $a > 0$ : $e^{0{,}1x} \\to +\\infty$, donc $y(x) \\to +\\infty$ (croissance exponentielle)."
+      ],
+      "reponse": "a) $50$ ; b) $y(x) = 50e^{0{,}1x} - 50$, qui tend vers $+\\infty$."
+    },
+    {
+      "id": 28,
+      "difficulte": "approfondissement",
+      "notion": "comportement-limite",
+      "enonce": "La tension d'un condensateur vaut $u(t) = 12 - 12e^{-2t}$. Identifier le régime permanent et le régime transitoire. Que vaut $u$ au bout d'un temps très long ?",
+      "corrige": [
+        "Le terme $-12e^{-2t}$ tend vers $0$ quand $t \\to +\\infty$ : c'est le régime transitoire.",
+        "La constante $12$ est le régime permanent : $u(t) \\to 12\\ \\mathrm{V}$."
+      ],
+      "reponse": "Régime permanent : $12$ ; transitoire : $-12e^{-2t}$ ; $u \\to 12$."
+    },
+    {
+      "id": 29,
+      "difficulte": "approfondissement",
+      "notion": "condition-initiale",
+      "enonce": "Soit $y' = -0{,}5\\,y + 10$ avec $y(0) = 0$. Déterminer la solution, puis la valeur exacte de $x$ pour laquelle $y(x) = 15$.",
+      "corrige": [
+        "$y_p = 20$ ; $y(x) = C\\,e^{-0{,}5x} + 20$ et $y(0) = C + 20 = 0$, donc $y(x) = 20 - 20e^{-0{,}5x}$.",
+        "$20 - 20e^{-0{,}5x} = 15 \\iff e^{-0{,}5x} = \\dfrac{1}{4} \\iff -0{,}5x = -\\ln 4$.",
+        "$x = 2\\ln 4 = 4\\ln 2 \\approx 2{,}77$."
+      ],
+      "reponse": "$y(x) = 20 - 20e^{-0{,}5x}$ ; $x = 4\\ln 2 \\approx 2{,}77$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "application-rc",
+      "enonce": "Calculer la constante de temps $\\tau = RC_0$ d'un circuit avec $R = 4{,}7\\ \\mathrm{k\\Omega}$ et $C_0 = 220\\ \\mathrm{\\mu F}$.",
+      "corrige": [
+        "On convertit d'abord : $R = 4{,}7 \\times 10^{3}\\ \\Omega$ et $C_0 = 220 \\times 10^{-6}\\ \\mathrm{F}$.",
+        "$\\tau = 4{,}7 \\times 10^{3} \\times 2{,}2 \\times 10^{-4} \\approx 1{,}03\\ \\mathrm{s}$."
+      ],
+      "reponse": "$\\tau \\approx 1{,}0\\ \\mathrm{s}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "application-rc",
+      "enonce": "Un condensateur initialement déchargé se charge sous $E = 10\\ \\mathrm{V}$ avec $\\tau = 2{,}0\\ \\mathrm{s}$. Écrire $u(t)$, calculer $u(2{,}0)$ et la durée au bout de laquelle la charge est quasi totale.",
+      "corrige": [
+        "$u(t) = E\\left(1 - e^{-t/\\tau}\\right) = 10\\left(1 - e^{-t/2}\\right)$.",
+        "$u(2{,}0) = 10(1 - e^{-1}) \\approx 6{,}3\\ \\mathrm{V}$ (environ $63\\,\\%$ de $E$).",
+        "La charge est quasi totale à $5\\tau = 10\\ \\mathrm{s}$."
+      ],
+      "reponse": "$u(t) = 10(1 - e^{-t/2})$ ; $u(2{,}0) \\approx 6{,}3\\ \\mathrm{V}$ ; environ $10\\ \\mathrm{s}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "application-rc",
+      "enonce": "Avec $R = 10\\ \\mathrm{k\\Omega}$ et $C_0 = 100\\ \\mathrm{\\mu F}$, un élève calcule $\\tau = 10 \\times 100 = 1\\,000\\ \\mathrm{s}$. Corriger.",
+      "corrige": [
+        "Il faut convertir en ohms et en farads avant de multiplier : $R = 10^{4}\\ \\Omega$ et $C_0 = 10^{-4}\\ \\mathrm{F}$.",
+        "$\\tau = 10^{4} \\times 10^{-4} = 1\\ \\mathrm{s}$."
+      ],
+      "reponse": "$\\tau = 1\\ \\mathrm{s}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "application-rc",
+      "enonce": "Un condensateur chargé sous $9{,}0\\ \\mathrm{V}$ se décharge dans une résistance : $u' = -2u$, avec $u(0) = 9{,}0$ ($t$ en secondes). Déterminer $u(t)$, puis l'instant où $u = 1{,}0\\ \\mathrm{V}$.",
+      "corrige": [
+        "Solutions de $u' = -2u$ : $u(t) = C\\,e^{-2t}$ ; $u(0) = C = 9{,}0$, donc $u(t) = 9e^{-2t}$.",
+        "$9e^{-2t} = 1 \\iff e^{-2t} = \\dfrac{1}{9} \\iff t = \\dfrac{\\ln 9}{2} \\approx 1{,}1\\ \\mathrm{s}$."
+      ],
+      "reponse": "$u(t) = 9e^{-2t}$ ; $t = \\dfrac{\\ln 9}{2} \\approx 1{,}1\\ \\mathrm{s}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "application-rc",
+      "enonce": "Lors d'une charge $u(t) = E\\left(1 - e^{-t/\\tau}\\right)$, montrer que $u$ atteint $90\\,\\%$ de $E$ à l'instant $t = \\tau\\ln 10$. Calculer cet instant pour $\\tau = 0{,}47\\ \\mathrm{s}$.",
+      "corrige": [
+        "$E\\left(1 - e^{-t/\\tau}\\right) = 0{,}9E \\iff e^{-t/\\tau} = 0{,}1 \\iff -\\dfrac{t}{\\tau} = \\ln 0{,}1 = -\\ln 10$.",
+        "Donc $t = \\tau\\ln 10 \\approx 2{,}3\\,\\tau$ ; pour $\\tau = 0{,}47\\ \\mathrm{s}$ : $t \\approx 1{,}08\\ \\mathrm{s}$."
+      ],
+      "reponse": "$t = \\tau\\ln 10 \\approx 1{,}08\\ \\mathrm{s}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "application-newton",
+      "enonce": "Un café à $80\\ ^\\circ\\mathrm{C}$ refroidit dans une pièce à $20\\ ^\\circ\\mathrm{C}$ selon $\\theta' = -0{,}05\\,(\\theta - 20)$ ($t$ en minutes). Écrire $\\theta(t)$ et calculer la température au bout de $10\\ \\mathrm{min}$.",
+      "corrige": [
+        "Loi de refroidissement : $\\theta(t) = \\theta_{\\text{amb}} + (\\theta_0 - \\theta_{\\text{amb}})\\,e^{-kt} = 20 + 60e^{-0{,}05t}$.",
+        "$\\theta(10) = 20 + 60e^{-0{,}5} \\approx 56\\ ^\\circ\\mathrm{C}$."
+      ],
+      "reponse": "$\\theta(t) = 20 + 60e^{-0{,}05t}$ ; $\\theta(10) \\approx 56\\ ^\\circ\\mathrm{C}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "application-newton",
+      "enonce": "Avec $\\theta(t) = 20 + 60e^{-0{,}05t}$ ($t$ en minutes), au bout de combien de temps le café atteint-il $50\\ ^\\circ\\mathrm{C}$ ?",
+      "corrige": [
+        "$20 + 60e^{-0{,}05t} = 50 \\iff e^{-0{,}05t} = \\dfrac{1}{2} \\iff -0{,}05t = -\\ln 2$.",
+        "$t = 20\\ln 2 \\approx 13{,}9\\ \\mathrm{min}$."
+      ],
+      "reponse": "$t = 20\\ln 2 \\approx 14\\ \\mathrm{min}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "application-newton",
+      "enonce": "Une pièce à $200\\ ^\\circ\\mathrm{C}$ est posée dans un atelier à $20\\ ^\\circ\\mathrm{C}$. Au bout de $10\\ \\mathrm{min}$, elle est à $110\\ ^\\circ\\mathrm{C}$. En utilisant $\\theta(t) = 20 + 180\\,e^{-kt}$, déterminer $k$.",
+      "corrige": [
+        "$20 + 180e^{-10k} = 110 \\iff e^{-10k} = \\dfrac{90}{180} = \\dfrac{1}{2}$.",
+        "$-10k = -\\ln 2$, donc $k = \\dfrac{\\ln 2}{10} \\approx 0{,}069\\ \\mathrm{min^{-1}}$."
+      ],
+      "reponse": "$k = \\dfrac{\\ln 2}{10} \\approx 0{,}069\\ \\mathrm{min^{-1}}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "modelisation",
+      "enonce": "Le nombre $N(t)$ de noyaux d'un échantillon vérifie $N' = -0{,}1\\,N$ ($t$ en années), avec $N(0) = 1\\,000$ (en milliards). Exprimer $N(t)$ et calculer $N(10)$.",
+      "corrige": [
+        "Équation $y' = ay$ avec $a = -0{,}1$ : $N(t) = C\\,e^{-0{,}1t}$, et $N(0) = C = 1\\,000$.",
+        "$N(10) = 1\\,000\\,e^{-1} \\approx 368$ milliards."
+      ],
+      "reponse": "$N(t) = 1\\,000\\,e^{-0{,}1t}$ ; $N(10) \\approx 368$ milliards."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "modelisation",
+      "enonce": "Pour $N(t) = N_0\\,e^{-\\lambda t}$, montrer que la demi-vie (durée au bout de laquelle $N = \\dfrac{N_0}{2}$) vaut $t_{1/2} = \\dfrac{\\ln 2}{\\lambda}$. Calculer $t_{1/2}$ pour $\\lambda = 0{,}023\\,1\\ \\mathrm{j^{-1}}$.",
+      "corrige": [
+        "$N_0\\,e^{-\\lambda t} = \\dfrac{N_0}{2} \\iff e^{-\\lambda t} = \\dfrac{1}{2} \\iff \\lambda t = \\ln 2$.",
+        "$t_{1/2} = \\dfrac{\\ln 2}{0{,}023\\,1} \\approx 30$ jours."
+      ],
+      "reponse": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda} \\approx 30$ jours."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "modelisation",
+      "enonce": "Une population de bactéries vérifie $N' = 0{,}7\\,N$ ($t$ en heures), avec $N(0) = 500$. Exprimer $N(t)$ et calculer le temps de doublement.",
+      "corrige": [
+        "$N(t) = 500\\,e^{0{,}7t}$ ($a > 0$ : croissance exponentielle).",
+        "$500\\,e^{0{,}7t} = 1\\,000 \\iff e^{0{,}7t} = 2 \\iff t = \\dfrac{\\ln 2}{0{,}7} \\approx 0{,}99\\ \\mathrm{h}$, soit environ une heure."
+      ],
+      "reponse": "$N(t) = 500\\,e^{0{,}7t}$ ; doublement en environ $0{,}99\\ \\mathrm{h}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "verifier-solution",
+      "enonce": "a) Déterminer le réel $k$ tel que $f(x) = e^{kx}$ soit solution de $y' = -4y$. b) Déterminer le réel $c$ tel que $g(x) = 2e^{-x} + c$ soit solution de $y' = -y + 5$.",
+      "corrige": [
+        "a) $f'(x) = k\\,e^{kx}$ doit être égal à $-4e^{kx}$ pour tout $x$, donc $k = -4$.",
+        "b) $g'(x) = -2e^{-x}$ et $-g(x) + 5 = -2e^{-x} - c + 5$ : l'égalité pour tout $x$ impose $-c + 5 = 0$, donc $c = 5$."
+      ],
+      "reponse": "a) $k = -4$ ; b) $c = 5$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "verifier-solution",
+      "enonce": "Vérifier que $f(t) = 6 - 6e^{-t/3}$ est solution de $3y' + y = 6$ et qu'elle vérifie $f(0) = 0$.",
+      "corrige": [
+        "$f'(t) = -6 \\times \\left(-\\dfrac{1}{3}\\right)e^{-t/3} = 2e^{-t/3}$.",
+        "$3f'(t) + f(t) = 6e^{-t/3} + 6 - 6e^{-t/3} = 6$ pour tout $t$ : $f$ est solution.",
+        "$f(0) = 6 - 6 = 0$."
+      ],
+      "reponse": "$3f' + f = 6$ pour tout $t$ et $f(0) = 0$."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "La vitesse d'un parachutiste en chute, avant l'ouverture du parachute, est modélisée par $v' = 9{,}8 - 0{,}2\\,v$ ($v$ en $\\mathrm{m\\cdot s^{-1}}$, $t$ en secondes), avec $v(0) = 0$. 1. Déterminer la vitesse limite (solution constante). 2. Déterminer $v(t)$. 3. Calculer $v(10)$. 4. Au bout de combien de temps atteint-il $95\\,\\%$ de la vitesse limite ?",
+      "corrige": [
+        "1. $0 = 9{,}8 - 0{,}2v$ donne $v_{\\text{lim}} = 49\\ \\mathrm{m\\cdot s^{-1}}$ (environ $176\\ \\mathrm{km/h}$).",
+        "2. $v(t) = C\\,e^{-0{,}2t} + 49$ et $v(0) = C + 49 = 0$, donc $v(t) = 49\\left(1 - e^{-0{,}2t}\\right)$.",
+        "3. $v(10) = 49(1 - e^{-2}) \\approx 42\\ \\mathrm{m\\cdot s^{-1}}$.",
+        "4. $1 - e^{-0{,}2t} = 0{,}95 \\iff e^{-0{,}2t} = 0{,}05 \\iff t = 5\\ln 20 \\approx 15\\ \\mathrm{s}$."
+      ],
+      "reponse": "1. $49\\ \\mathrm{m\\cdot s^{-1}}$ ; 2. $v(t) = 49(1 - e^{-0{,}2t})$ ; 3. $\\approx 42\\ \\mathrm{m\\cdot s^{-1}}$ ; 4. $t = 5\\ln 20 \\approx 15\\ \\mathrm{s}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "application-newton",
+      "enonce": "Pendant le préchauffage d'un four, la température $\\theta$ (en °C) vérifie $\\theta' = -0{,}15\\,\\theta + 33$ ($t$ en minutes), avec $\\theta(0) = 20$. 1. Déterminer la température atteinte en régime permanent. 2. Déterminer $\\theta(t)$. 3. Au bout de combien de temps le four atteint-il $200\\ ^\\circ\\mathrm{C}$ ?",
+      "corrige": [
+        "1. $0 = -0{,}15\\theta + 33$ donne $\\theta_p = 220\\ ^\\circ\\mathrm{C}$.",
+        "2. $\\theta(t) = C\\,e^{-0{,}15t} + 220$ et $\\theta(0) = C + 220 = 20$, donc $\\theta(t) = 220 - 200e^{-0{,}15t}$.",
+        "3. $220 - 200e^{-0{,}15t} = 200 \\iff e^{-0{,}15t} = 0{,}1 \\iff t = \\dfrac{\\ln 10}{0{,}15} \\approx 15\\ \\mathrm{min}$."
+      ],
+      "reponse": "1. $220\\ ^\\circ\\mathrm{C}$ ; 2. $\\theta(t) = 220 - 200e^{-0{,}15t}$ ; 3. environ $15\\ \\mathrm{min}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "application-rc",
+      "enonce": "Un condensateur de $47\\ \\mathrm{\\mu F}$, initialement déchargé, est chargé sous $E = 12\\ \\mathrm{V}$ à travers $R = 100\\ \\mathrm{k\\Omega}$. La tension vérifie $RC_0\\,u' + u = E$. 1. Calculer $\\tau$. 2. Écrire $u(t)$. 3. Calculer $u(\\tau)$. 4. À quel instant $u$ vaut-elle $6{,}0\\ \\mathrm{V}$ ?",
+      "corrige": [
+        "1. $\\tau = 10^{5} \\times 47 \\times 10^{-6} = 4{,}7\\ \\mathrm{s}$.",
+        "2. $u(t) = 12\\left(1 - e^{-t/4{,}7}\\right)$.",
+        "3. $u(\\tau) = 12(1 - e^{-1}) \\approx 7{,}6\\ \\mathrm{V}$.",
+        "4. $1 - e^{-t/\\tau} = \\dfrac{1}{2} \\iff e^{-t/\\tau} = \\dfrac{1}{2} \\iff t = \\tau\\ln 2 \\approx 3{,}3\\ \\mathrm{s}$."
+      ],
+      "reponse": "1. $\\tau = 4{,}7\\ \\mathrm{s}$ ; 2. $u(t) = 12(1 - e^{-t/4{,}7})$ ; 3. $\\approx 7{,}6\\ \\mathrm{V}$ ; 4. $t = \\tau\\ln 2 \\approx 3{,}3\\ \\mathrm{s}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "decouverte",
+      "notion": "condition-initiale",
+      "enonce": "a) Si $y(x) = C\\,e^{2x}$ et $y(0) = 4$, que vaut $C$ ? b) Si $y(x) = C\\,e^{2x} + 3$ et $y(0) = 4$, que vaut $C$ ?",
+      "corrige": [
+        "a) $y(0) = C\\,e^{0} = C$, donc $C = 4$.",
+        "b) $y(0) = C + 3 = 4$, donc $C = 1$ : la constante n'est pas toujours la valeur initiale."
+      ],
+      "reponse": "a) $C = 4$ ; b) $C = 1$."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "mise-en-forme",
+      "enonce": "En physique, on écrit $\\dfrac{\\mathrm{d}u}{\\mathrm{d}t} = -50\\,u + 250$. Identifier $a$ et $b$, puis donner la solution constante.",
+      "corrige": [
+        "$\\dfrac{\\mathrm{d}u}{\\mathrm{d}t}$ est la dérivée $u'(t)$ : l'équation est de la forme $u' = au + b$ avec $a = -50$ et $b = 250$.",
+        "$u_p = -\\dfrac{b}{a} = -\\dfrac{250}{-50} = 5$."
+      ],
+      "reponse": "$a = -50$, $b = 250$ ; solution constante $u_p = 5$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "condition-initiale",
+      "enonce": "Une solution $f$ d'une équation $y' = ay + b$ (avec $a < 0$) tend vers $7$ en $+\\infty$, vérifie $f(0) = 2$ et $f'(0) = 1$. Déterminer $a$, $b$ puis $f(x)$.",
+      "corrige": [
+        "La limite est la solution constante : $-\\dfrac{b}{a} = 7$, donc $b = -7a$.",
+        "En $0$ : $f'(0) = a f(0) + b$, soit $1 = 2a - 7a = -5a$, donc $a = -0{,}2$ et $b = 1{,}4$.",
+        "$f(x) = C\\,e^{-0{,}2x} + 7$ avec $f(0) = C + 7 = 2$ : $C = -5$."
+      ],
+      "reponse": "$a = -0{,}2$, $b = 1{,}4$, $f(x) = 7 - 5e^{-0{,}2x}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "comportement-limite",
+      "enonce": "Décrire le comportement des solutions non nulles de : a) $y' = 0{,}3\\,y$ ; b) $y' = -2y$ ; c) $y' = 0$.",
+      "corrige": [
+        "Les solutions de $y' = ay$ sont $C\\,e^{ax}$ : leur comportement dépend du signe de $a$.",
+        "a) $a > 0$ : croissance exponentielle (en valeur absolue) ; b) $a < 0$ : retour vers $0$ (amortissement) ; c) $a = 0$ : fonctions constantes."
+      ],
+      "reponse": "a) croissance exponentielle ; b) tendent vers $0$ ; c) constantes."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "modelisation",
+      "enonce": "Après une injection, la concentration $c(t)$ d'un médicament dans le sang (en $\\mathrm{mg/L}$, $t$ en heures) vérifie $c' = -0{,}25\\,c$, avec $c(0) = 8$. 1. Déterminer $c(t)$. 2. Calculer la concentration au bout de $4\\ \\mathrm{h}$. 3. Au bout de combien de temps la concentration passe-t-elle sous $2\\ \\mathrm{mg/L}$ ?",
+      "corrige": [
+        "1. $c(t) = 8e^{-0{,}25t}$.",
+        "2. $c(4) = 8e^{-1} \\approx 2{,}9\\ \\mathrm{mg/L}$.",
+        "3. $8e^{-0{,}25t} < 2 \\iff e^{-0{,}25t} < \\dfrac{1}{4} \\iff t > 4\\ln 4 \\approx 5{,}5\\ \\mathrm{h}$."
+      ],
+      "reponse": "1. $c(t) = 8e^{-0{,}25t}$ ; 2. $\\approx 2{,}9\\ \\mathrm{mg/L}$ ; 3. après $4\\ln 4 \\approx 5{,}5\\ \\mathrm{h}$."
     }
   ]
 }

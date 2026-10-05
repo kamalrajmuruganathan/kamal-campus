@@ -22,7 +22,7 @@
         "(d) Forme $\\cos u$ avec $u = 2t + \\dfrac{\\pi}{3}$, $u' = 2$ : $k'(t) = -u'\\sin u = -2\\sin\\left(2t + \\dfrac{\\pi}{3}\\right)$. Deux pièges cumulés : le signe moins de la dérivée du cosinus ET le facteur $u' = 2$."
       ],
       "reponse": "(a) $f'(x) = 6(2x+1)^2$ ; (b) $g'(t) = -0{,}5\\,e^{-0{,}5t}$ ; (c) $h'(x) = \\dfrac{3}{3x+2}$ ; (d) $k'(t) = -2\\sin\\left(2t + \\dfrac{\\pi}{3}\\right)$."
-      },
+    },
     {
       "id": 2,
       "difficulte": "application",
@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "integrale-composition",
       "enonce": "En travaux pratiques d'électricité, on étudie la décharge d'un condensateur dans un résistor. La tension aux bornes du condensateur, en volts, est modélisée par $u(t) = 12\\,e^{-0{,}5t}$, où $t$ désigne le temps en secondes ($t \\geqslant 0$). On note $\\mathcal{C}$ la courbe représentative de $u$. 1. Calculer $u(0)$ et interpréter cette valeur dans le contexte. 2. Calculer $u'(t)$ et en déduire le sens de variation de $u$ sur $[0\\,;+\\infty[$. 3. Résoudre l'équation $u(t) = 6$ : donner la valeur exacte, puis une valeur approchée à $0{,}01$ s près. Que représente ce temps ? 4. Vérifier que $U(t) = -24\\,e^{-0{,}5t}$ est une primitive de $u$ sur $[0\\,;+\\infty[$. 5. Calculer $\\displaystyle\\int_0^4 u(t)\\,dt$ (valeur exacte puis approchée à $0{,}01$ près) et préciser ce que représente cette intégrale. 6. En déduire la valeur moyenne $\\langle u \\rangle$ de la tension sur l'intervalle $[0\\,;4]$.",
       "corrige": [
@@ -138,6 +138,449 @@
         "6. $\\langle u \\rangle = \\dfrac{1}{4 - 0}\\displaystyle\\int_0^4 u(t)\\,dt = \\dfrac{24\\big(1 - e^{-2}\\big)}{4} = 6\\big(1 - e^{-2}\\big) \\approx 5{,}19$ V. C'est la tension constante qui, sur $[0\\,;4]$, correspondrait à la même aire sous la courbe."
       ],
       "reponse": "1. $u(0) = 12$ V (tension initiale) ; 2. $u'(t) = -6\\,e^{-0{,}5t} < 0$, donc $u$ décroissante ; 3. $t = 2\\ln 2 \\approx 1{,}39$ s (tension divisée par $2$) ; 4. $U'(t) = 12\\,e^{-0{,}5t} = u(t)$, donc $U$ est une primitive ; 5. $\\displaystyle\\int_0^4 u(t)\\,dt = 24(1 - e^{-2}) \\approx 20{,}75$ V·s (aire sous $\\mathcal{C}$) ; 6. $\\langle u \\rangle = 6(1 - e^{-2}) \\approx 5{,}19$ V."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "composee",
+      "enonce": "On pose $u(x) = x^2$ et $v(x) = x + 5$. Exprimer $(v \\circ u)(x)$ et $(u \\circ v)(x)$. Sont-elles égales ?",
+      "corrige": [
+        "$(v \\circ u)(x) = v\\big(u(x)\\big) = v\\left(x^2\\right) = x^2 + 5$.",
+        "$(u \\circ v)(x) = u(x + 5) = (x + 5)^2$. Ces deux fonctions sont différentes (en $x = 1$ : $6$ et $36$) : l'ordre compte."
+      ],
+      "reponse": "$(v \\circ u)(x) = x^2 + 5$ ; $(u \\circ v)(x) = (x + 5)^2$ ; non, elles sont différentes."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "composee",
+      "enonce": "Pour chaque fonction, identifier la fonction intérieure $u$ et la fonction extérieure $v$ : a) $e^{5x + 1}$ ; b) $(1 - x)^3$ ; c) $\\cos(\\omega t + \\varphi)$ ; d) $\\ln(2x)$.",
+      "corrige": [
+        "On applique d'abord $u$, puis $v$ au résultat.",
+        "a) $u = 5x + 1$, $v = e^{x}$ ; b) $u = 1 - x$, $v = x^3$ ; c) $u = \\omega t + \\varphi$, $v = \\cos$ ; d) $u = 2x$, $v = \\ln$."
+      ],
+      "reponse": "a) $5x + 1$ et $\\exp$ ; b) $1 - x$ et $x^3$ ; c) $\\omega t + \\varphi$ et $\\cos$ ; d) $2x$ et $\\ln$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "composee",
+      "enonce": "Sur quel ensemble la fonction $h(x) = \\ln(x - 3)$ est-elle définie ?",
+      "corrige": [
+        "$h = \\ln \\circ\\, u$ avec $u(x) = x - 3$ ; le logarithme n'est défini que pour des valeurs strictement positives.",
+        "Il faut $x - 3 > 0$, soit $x > 3$."
+      ],
+      "reponse": "Sur $]3\\,;+\\infty[$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Dériver $f(x) = (5x - 2)^4$.",
+      "corrige": [
+        "Forme $u^n$ avec $u = 5x - 2$, $u' = 5$, $n = 4$ : $(u^n)' = n\\,u'\\,u^{n-1}$.",
+        "$f'(x) = 4 \\times 5 \\times (5x - 2)^3 = 20(5x - 2)^3$."
+      ],
+      "reponse": "$f'(x) = 20(5x - 2)^3$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Dériver $g(x) = e^{x^2}$.",
+      "corrige": [
+        "Forme $e^{u}$ avec $u = x^2$, $u' = 2x$ : $(e^{u})' = u'\\,e^{u}$."
+      ],
+      "reponse": "$g'(x) = 2x\\,e^{x^2}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Dériver : a) $f(x) = \\ln\\left(x^2 + 4\\right)$ sur $\\mathbb{R}$ ; b) $g(x) = \\ln(5x)$ sur $]0\\,;+\\infty[$.",
+      "corrige": [
+        "$(\\ln u)' = \\dfrac{u'}{u}$.",
+        "a) $u = x^2 + 4 > 0$, $u' = 2x$ : $f'(x) = \\dfrac{2x}{x^2 + 4}$.",
+        "b) $u = 5x$, $u' = 5$ : $g'(x) = \\dfrac{5}{5x} = \\dfrac{1}{x}$ (normal : $\\ln(5x) = \\ln 5 + \\ln x$)."
+      ],
+      "reponse": "a) $\\dfrac{2x}{x^2 + 4}$ ; b) $\\dfrac{1}{x}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "derivee-composee",
+      "enonce": "Dériver $u(t) = 325\\cos(100\\pi\\,t)$.",
+      "corrige": [
+        "$(\\cos u)' = -u'\\sin u$ avec $u = 100\\pi\\,t$, $u' = 100\\pi$.",
+        "$u'(t) = 325 \\times (-100\\pi)\\sin(100\\pi\\,t) = -32\\,500\\pi\\sin(100\\pi\\,t)$ : la pulsation sort en facteur."
+      ],
+      "reponse": "$u'(t) = -32\\,500\\pi\\sin(100\\pi\\,t)$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "derivee-composee",
+      "enonce": "Un élève écrit : « la dérivée de $\\cos(5t)$ est $-\\sin(5t)$ ». Corriger.",
+      "corrige": [
+        "Il a oublié le facteur $u'$ : avec $u = 5t$, $u' = 5$.",
+        "$\\big(\\cos(5t)\\big)' = -5\\sin(5t)$."
+      ],
+      "reponse": "$-5\\sin(5t)$."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "derivee-composee",
+      "enonce": "Soit $f(x) = \\left(x^2 + 1\\right)^3$. Calculer $f'(x)$ puis le coefficient directeur de la tangente en $x = 1$.",
+      "corrige": [
+        "$u = x^2 + 1$, $u' = 2x$ : $f'(x) = 3 \\times 2x \\times \\left(x^2 + 1\\right)^2 = 6x\\left(x^2 + 1\\right)^2$.",
+        "$f'(1) = 6 \\times 1 \\times 2^2 = 24$."
+      ],
+      "reponse": "$f'(x) = 6x\\left(x^2 + 1\\right)^2$ ; $f'(1) = 24$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "primitives-composees",
+      "enonce": "Déterminer une primitive de : a) $f(x) = e^{-x}$ ; b) $g(x) = e^{0{,}5x}$.",
+      "corrige": [
+        "a) $u = -x$, $u' = -1$ : $f(x) = -\\big(-e^{-x}\\big) = -u'\\,e^{u}$, donc $F(x) = -e^{-x}$ (vérification : $F'(x) = e^{-x}$).",
+        "b) $u = 0{,}5x$, $u' = 0{,}5$ : $g = 2 \\times 0{,}5\\,e^{0{,}5x}$, donc $G(x) = 2e^{0{,}5x}$."
+      ],
+      "reponse": "a) $-e^{-x}$ ; b) $2e^{0{,}5x}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "primitives-composees",
+      "enonce": "Déterminer une primitive de $h(t) = \\cos(4t)$.",
+      "corrige": [
+        "Forme $u'\\cos u$ avec $u = 4t$, $u' = 4$ : $h(t) = \\dfrac{1}{4} \\times 4\\cos(4t)$.",
+        "Une primitive est $H(t) = \\dfrac{1}{4}\\sin(4t)$ (vérification : $H'(t) = \\cos(4t)$)."
+      ],
+      "reponse": "$H(t) = \\dfrac{\\sin(4t)}{4}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "primitives-composees",
+      "enonce": "Déterminer une primitive de $f(x) = 2x\\left(x^2 + 1\\right)^4$.",
+      "corrige": [
+        "Forme $u'u^n$ avec $u = x^2 + 1$, $u' = 2x$, $n = 4$ : une primitive est $\\dfrac{u^{5}}{5}$."
+      ],
+      "reponse": "$F(x) = \\dfrac{\\left(x^2 + 1\\right)^5}{5}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "primitives-composees",
+      "enonce": "Déterminer une primitive de $f(x) = x\\,e^{-x^2}$.",
+      "corrige": [
+        "$u = -x^2$, $u' = -2x$ : on fait apparaître $u'$, $f(x) = -\\dfrac{1}{2} \\times (-2x)\\,e^{-x^2}$.",
+        "Une primitive est $F(x) = -\\dfrac{1}{2}e^{-x^2}$ ; vérification : $F'(x) = -\\dfrac{1}{2} \\times (-2x)e^{-x^2} = x\\,e^{-x^2}$."
+      ],
+      "reponse": "$F(x) = -\\dfrac{1}{2}e^{-x^2}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "primitives-composees",
+      "enonce": "Déterminer une primitive de $f(x) = (3x + 2)^2$.",
+      "corrige": [
+        "$u = 3x + 2$, $u' = 3$ : $f(x) = \\dfrac{1}{3} \\times 3(3x + 2)^2$.",
+        "Une primitive de $u'u^2$ est $\\dfrac{u^3}{3}$, d'où $F(x) = \\dfrac{1}{3} \\times \\dfrac{(3x + 2)^3}{3} = \\dfrac{(3x + 2)^3}{9}$."
+      ],
+      "reponse": "$F(x) = \\dfrac{(3x + 2)^3}{9}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "primitives-composees",
+      "enonce": "Déterminer une primitive de $f(x) = x^2\\cos\\left(x^3\\right)$.",
+      "corrige": [
+        "$u = x^3$, $u' = 3x^2$ : $f(x) = \\dfrac{1}{3} \\times 3x^2\\cos\\left(x^3\\right)$.",
+        "Forme $u'\\cos u$, de primitive $\\sin u$ : $F(x) = \\dfrac{1}{3}\\sin\\left(x^3\\right)$."
+      ],
+      "reponse": "$F(x) = \\dfrac{1}{3}\\sin\\left(x^3\\right)$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "primitives-composees",
+      "enonce": "La fonction $F(x) = \\dfrac{1}{2}e^{2x} + 3$ est-elle une primitive de $f(x) = e^{2x}$ ? Justifier.",
+      "corrige": [
+        "$F'(x) = \\dfrac{1}{2} \\times 2e^{2x} + 0 = e^{2x} = f(x)$.",
+        "Oui ; la constante $3$ ne change rien, deux primitives diffèrent d'une constante."
+      ],
+      "reponse": "Oui, car $F'(x) = e^{2x}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "primitives-composees",
+      "enonce": "Un élève affirme qu'une primitive de $e^{x^2}$ est $\\dfrac{e^{x^2}}{2x}$. Vérifier en dérivant et conclure.",
+      "corrige": [
+        "En dérivant le quotient, on obtient $\\dfrac{2x \\cdot 2x\\,e^{x^2} - 2e^{x^2}}{4x^2} = e^{x^2} - \\dfrac{e^{x^2}}{2x^2} \\neq e^{x^2}$.",
+        "On ne peut ajuster que par une constante : sans le facteur $2x$ devant l'exponentielle, la forme $u'e^{u}$ ne s'applique pas."
+      ],
+      "reponse": "Faux : sa dérivée n'est pas $e^{x^2}$ ; on ne peut pas « diviser par $2x$ »."
+    },
+    {
+      "id": 28,
+      "difficulte": "decouverte",
+      "notion": "integrale-aire",
+      "enonce": "Calculer, à l'aide d'aires de figures simples : a) $\\displaystyle\\int_{0}^{4} 2\\,dx$ ; b) $\\displaystyle\\int_{0}^{2} x\\,dx$.",
+      "corrige": [
+        "a) Rectangle de largeur $4$ et de hauteur $2$ : aire $8$.",
+        "b) Triangle rectangle de base $2$ et de hauteur $2$ : aire $\\dfrac{2 \\times 2}{2} = 2$."
+      ],
+      "reponse": "a) $8$ ; b) $2$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "integrale-aire",
+      "enonce": "Calculer $\\displaystyle\\int_{0}^{3} x\\,dx$ de deux façons : avec l'aire d'un triangle, puis avec une primitive.",
+      "corrige": [
+        "Triangle de base $3$ et de hauteur $3$ : $\\dfrac{3 \\times 3}{2} = 4{,}5$.",
+        "Primitive $\\dfrac{x^2}{2}$ : $\\dfrac{9}{2} - 0 = 4{,}5$."
+      ],
+      "reponse": "$4{,}5$."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "rectangles",
+      "enonce": "On encadre $\\displaystyle\\int_{0}^{2} x\\,dx$ avec $4$ rectangles de largeur $0{,}5$. Calculer la somme $s$ (hauteurs au bord gauche) et la somme $S$ (hauteurs au bord droit). Comparer à la valeur exacte.",
+      "corrige": [
+        "$s = 0{,}5\\,(0 + 0{,}5 + 1 + 1{,}5) = 1{,}5$ ; $S = 0{,}5\\,(0{,}5 + 1 + 1{,}5 + 2) = 2{,}5$.",
+        "La fonction est croissante, donc $1{,}5 \\leqslant \\displaystyle\\int_{0}^{2} x\\,dx \\leqslant 2{,}5$ ; la valeur exacte est $2$."
+      ],
+      "reponse": "$s = 1{,}5$, $S = 2{,}5$ ; valeur exacte $2$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "rectangles",
+      "enonce": "Soit $f(x) = 4 - x^2$, décroissante et positive sur $[0\\,;2]$. Avec $4$ tranches de largeur $0{,}5$, calculer la somme des rectangles « sous » la courbe et celle des rectangles « au-dessus », puis comparer avec $\\displaystyle\\int_{0}^{2} f(x)\\,dx$.",
+      "corrige": [
+        "$f$ étant décroissante, les rectangles sous la courbe prennent la hauteur au bord droit : $0{,}5\\,(3{,}75 + 3 + 1{,}75 + 0) = 4{,}25$.",
+        "Au-dessus (bord gauche) : $0{,}5\\,(4 + 3{,}75 + 3 + 1{,}75) = 6{,}25$.",
+        "Valeur exacte : $\\left[4x - \\dfrac{x^3}{3}\\right]_0^2 = 8 - \\dfrac{8}{3} = \\dfrac{16}{3} \\approx 5{,}33$, bien comprise entre $4{,}25$ et $6{,}25$."
+      ],
+      "reponse": "$4{,}25 \\leqslant \\dfrac{16}{3} \\leqslant 6{,}25$."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "integrale-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_{1}^{2} 3x^2\\,dx$.",
+      "corrige": [
+        "Une primitive de $3x^2$ est $x^3$.",
+        "$\\Big[x^3\\Big]_1^2 = 8 - 1 = 7$."
+      ],
+      "reponse": "$7$."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "integrale-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_{0}^{\\ln 2} e^{x}\\,dx$.",
+      "corrige": [
+        "Une primitive de $e^{x}$ est $e^{x}$.",
+        "$\\Big[e^{x}\\Big]_0^{\\ln 2} = e^{\\ln 2} - e^{0} = 2 - 1 = 1$."
+      ],
+      "reponse": "$1$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "integrale-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_{0}^{1} (2x + 1)^3\\,dx$.",
+      "corrige": [
+        "$u = 2x + 1$, $u' = 2$ : une primitive est $\\dfrac{1}{2} \\times \\dfrac{(2x + 1)^4}{4} = \\dfrac{(2x + 1)^4}{8}$.",
+        "$\\dfrac{3^4}{8} - \\dfrac{1^4}{8} = \\dfrac{81 - 1}{8} = 10$."
+      ],
+      "reponse": "$10$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "integrale-primitive",
+      "enonce": "Calculer $\\displaystyle\\int_{0}^{\\pi/2} \\cos x\\,dx$ et $\\displaystyle\\int_{0}^{\\pi} \\sin x\\,dx$.",
+      "corrige": [
+        "$\\Big[\\sin x\\Big]_0^{\\pi/2} = 1 - 0 = 1$.",
+        "Une primitive de $\\sin x$ est $-\\cos x$ : $\\Big[-\\cos x\\Big]_0^{\\pi} = -\\cos\\pi + \\cos 0 = 1 + 1 = 2$."
+      ],
+      "reponse": "$1$ et $2$."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "integrale-primitive",
+      "enonce": "Pour $\\displaystyle\\int_{1}^{3} 2x\\,dx$, un élève écrit : « $\\Big[x^2\\Big]_1^3 = 1 - 9 = -8$ ». Corriger.",
+      "corrige": [
+        "On calcule $F(b) - F(a)$, borne du haut d'abord : $9 - 1 = 8$.",
+        "Contrôle : la fonction $2x$ est positive sur $[1\\,;3]$, l'intégrale ne peut pas être négative."
+      ],
+      "reponse": "$8$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "integrale-aire",
+      "enonce": "Calculer $\\displaystyle\\int_{0}^{1} (x - 1)\\,dx$. En déduire l'aire du domaine compris entre la droite $y = x - 1$, l'axe des abscisses et les droites $x = 0$ et $x = 1$.",
+      "corrige": [
+        "$\\left[\\dfrac{x^2}{2} - x\\right]_0^1 = \\dfrac{1}{2} - 1 = -\\dfrac{1}{2}$.",
+        "La fonction est négative sur $[0\\,;1]$ : l'intégrale compte l'aire en négatif, l'aire vaut donc $\\dfrac{1}{2}$ u.a."
+      ],
+      "reponse": "Intégrale $-\\dfrac{1}{2}$ ; aire $\\dfrac{1}{2}$ u.a."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "proprietes",
+      "enonce": "On sait que $\\displaystyle\\int_{1}^{4} f(x)\\,dx = 6$ et $\\displaystyle\\int_{1}^{4} g(x)\\,dx = -2$. Calculer $\\displaystyle\\int_{1}^{4} \\big(2f(x) - 3g(x)\\big)\\,dx$.",
+      "corrige": [
+        "Par linéarité : $2 \\times 6 - 3 \\times (-2) = 12 + 6$."
+      ],
+      "reponse": "$18$."
+    },
+    {
+      "id": 39,
+      "difficulte": "application",
+      "notion": "proprietes",
+      "enonce": "On sait que $\\displaystyle\\int_{0}^{5} f(x)\\,dx = 10$ et $\\displaystyle\\int_{0}^{2} f(x)\\,dx = 4$. Calculer $\\displaystyle\\int_{2}^{5} f(x)\\,dx$.",
+      "corrige": [
+        "Relation de Chasles : $\\displaystyle\\int_{0}^{2} f + \\displaystyle\\int_{2}^{5} f = \\displaystyle\\int_{0}^{5} f$.",
+        "$\\displaystyle\\int_{2}^{5} f(x)\\,dx = 10 - 4 = 6$."
+      ],
+      "reponse": "$6$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "proprietes",
+      "enonce": "Sans calcul, justifier : a) $\\displaystyle\\int_{1}^{3} \\ln x\\,dx \\geqslant 0$ ; b) $\\displaystyle\\int_{0}^{1} x^3\\,dx \\leqslant \\displaystyle\\int_{0}^{1} x^2\\,dx$.",
+      "corrige": [
+        "a) Pour $x \\in [1\\,;3]$, $\\ln x \\geqslant 0$ : par positivité, l'intégrale est positive.",
+        "b) Pour $x \\in [0\\,;1]$, $x^3 = x \\times x^2 \\leqslant x^2$ : l'intégration conserve les inégalités (on vérifie : $\\dfrac{1}{4} \\leqslant \\dfrac{1}{3}$)."
+      ],
+      "reponse": "a) positivité ($\\ln x \\geqslant 0$ sur $[1\\,;3]$) ; b) $x^3 \\leqslant x^2$ sur $[0\\,;1]$."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "fonction-aire",
+      "enonce": "Soit $F(x) = \\displaystyle\\int_{0}^{x} \\left(3t^2 + 1\\right)dt$. Exprimer $F(x)$, puis vérifier que $F'(x) = 3x^2 + 1$ et $F(0) = 0$.",
+      "corrige": [
+        "Une primitive de $3t^2 + 1$ est $t^3 + t$ : $F(x) = \\Big[t^3 + t\\Big]_0^x = x^3 + x$.",
+        "$F'(x) = 3x^2 + 1$ : dériver l'aire redonne la fonction ; et $F(0) = 0$."
+      ],
+      "reponse": "$F(x) = x^3 + x$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "proprietes",
+      "enonce": "Une tension en créneau vaut $5\\ \\mathrm{V}$ pendant $2\\ \\mathrm{ms}$, puis $0\\ \\mathrm{V}$ pendant $3\\ \\mathrm{ms}$, et le motif se répète (période $5\\ \\mathrm{ms}$). Calculer sa valeur moyenne à l'aide de la relation de Chasles.",
+      "corrige": [
+        "Sur une période (temps en ms) : $\\displaystyle\\int_{0}^{5} u(t)\\,dt = \\displaystyle\\int_{0}^{2} 5\\,dt + \\displaystyle\\int_{2}^{5} 0\\,dt = 10 + 0 = 10$.",
+        "$\\langle u \\rangle = \\dfrac{1}{5} \\times 10 = 2\\ \\mathrm{V}$."
+      ],
+      "reponse": "$\\langle u \\rangle = 2\\ \\mathrm{V}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "valeur-moyenne",
+      "enonce": "Calculer la valeur moyenne de $f(x) = 2x$ sur $[0\\,;4]$.",
+      "corrige": [
+        "$\\displaystyle\\int_{0}^{4} 2x\\,dx = \\Big[x^2\\Big]_0^4 = 16$.",
+        "$\\mu = \\dfrac{1}{4 - 0} \\times 16 = 4$."
+      ],
+      "reponse": "$\\mu = 4$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "valeur-moyenne",
+      "enonce": "Calculer la valeur moyenne de $f(x) = e^{x}$ sur $[0\\,;1]$.",
+      "corrige": [
+        "$\\displaystyle\\int_{0}^{1} e^{x}\\,dx = e - 1$.",
+        "$\\mu = \\dfrac{1}{1 - 0}(e - 1) = e - 1 \\approx 1{,}72$."
+      ],
+      "reponse": "$\\mu = e - 1 \\approx 1{,}72$."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "valeur-moyenne",
+      "enonce": "Une tension vaut $u(t) = 10t$ pour $t \\in [0\\,;0{,}5]$ puis $5\\ \\mathrm{V}$ pour $t \\in [0{,}5\\,;1]$ ($t$ en s). Calculer sa valeur moyenne sur $[0\\,;1]$.",
+      "corrige": [
+        "Chasles : $\\displaystyle\\int_{0}^{0{,}5} 10t\\,dt + \\displaystyle\\int_{0{,}5}^{1} 5\\,dt = \\Big[5t^2\\Big]_0^{0{,}5} + 5 \\times 0{,}5 = 1{,}25 + 2{,}5 = 3{,}75$.",
+        "$\\langle u \\rangle = \\dfrac{3{,}75}{1} = 3{,}75\\ \\mathrm{V}$."
+      ],
+      "reponse": "$\\langle u \\rangle = 3{,}75\\ \\mathrm{V}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "aire-entre-courbes",
+      "enonce": "Calculer l'aire du domaine compris entre les courbes de $f(x) = x$ et $g(x) = x^2$ sur $[0\\,;1]$.",
+      "corrige": [
+        "Sur $[0\\,;1]$, $x - x^2 = x(1 - x) \\geqslant 0$ : la droite est au-dessus de la parabole.",
+        "Aire $= \\displaystyle\\int_{0}^{1} \\left(x - x^2\\right)dx = \\dfrac{1}{2} - \\dfrac{1}{3} = \\dfrac{1}{6}$ u.a."
+      ],
+      "reponse": "$\\dfrac{1}{6}$ u.a."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "aire-entre-courbes",
+      "enonce": "Les courbes de $f(x) = 3$ et $g(x) = x^2 - 1$ se coupent en $x = -2$ et $x = 2$. Calculer l'aire du domaine qu'elles délimitent.",
+      "corrige": [
+        "Sur $[-2\\,;2]$, $f(x) - g(x) = 4 - x^2 \\geqslant 0$ : la droite est au-dessus.",
+        "Aire $= \\displaystyle\\int_{-2}^{2} \\left(4 - x^2\\right)dx = \\left[4x - \\dfrac{x^3}{3}\\right]_{-2}^{2} = \\left(8 - \\dfrac{8}{3}\\right) - \\left(-8 + \\dfrac{8}{3}\\right) = \\dfrac{32}{3}$ u.a."
+      ],
+      "reponse": "$\\dfrac{32}{3} \\approx 10{,}7$ u.a."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "integrale-composition",
+      "enonce": "Au démarrage, un moteur absorbe une puissance $p(t) = 200\\left(1 - e^{-t}\\right)$ (en W, $t$ en s). On admet que l'énergie reçue entre $0$ et $10\\ \\mathrm{s}$ est $E = \\displaystyle\\int_{0}^{10} p(t)\\,dt$. 1. Déterminer une primitive de $p$. 2. Calculer $E$ (valeur exacte puis approchée). 3. En déduire la puissance moyenne sur ces $10\\ \\mathrm{s}$.",
+      "corrige": [
+        "1. Une primitive de $e^{-t}$ est $-e^{-t}$, donc $P(t) = 200\\left(t + e^{-t}\\right)$.",
+        "2. $E = 200\\left(10 + e^{-10}\\right) - 200(0 + 1) = 200\\left(9 + e^{-10}\\right) \\approx 1\\,800\\ \\mathrm{J}$.",
+        "3. $\\langle p \\rangle = \\dfrac{E}{10} \\approx 180\\ \\mathrm{W}$."
+      ],
+      "reponse": "1. $200\\left(t + e^{-t}\\right)$ ; 2. $E = 200\\left(9 + e^{-10}\\right) \\approx 1\\,800\\ \\mathrm{J}$ ; 3. environ $180\\ \\mathrm{W}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "integrale-composition",
+      "enonce": "Lors de la décharge d'un condensateur, l'intensité vaut $i(t) = 0{,}5\\,e^{-2t}$ (en A, $t$ en s). La charge électrique écoulée entre $0$ et $3\\ \\mathrm{s}$ est $q = \\displaystyle\\int_{0}^{3} i(t)\\,dt$. 1. Déterminer une primitive de $i$. 2. Calculer $q$. 3. Calculer l'intensité moyenne sur $[0\\,;3]$.",
+      "corrige": [
+        "1. $u = -2t$, $u' = -2$ : $i(t) = -\\dfrac{1}{4} \\times (-2)\\,e^{-2t}$, d'où la primitive $-\\dfrac{1}{4}e^{-2t}$.",
+        "2. $q = -\\dfrac{1}{4}e^{-6} + \\dfrac{1}{4} = \\dfrac{1 - e^{-6}}{4} \\approx 0{,}249\\ \\mathrm{C}$.",
+        "3. $\\langle i \\rangle = \\dfrac{q}{3} \\approx 0{,}083\\ \\mathrm{A}$."
+      ],
+      "reponse": "1. $-\\dfrac{1}{4}e^{-2t}$ ; 2. $q = \\dfrac{1 - e^{-6}}{4} \\approx 0{,}249\\ \\mathrm{C}$ ; 3. $\\approx 0{,}083\\ \\mathrm{A}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "integrale-composition",
+      "enonce": "Soit $f(x) = 2x\\,e^{-x^2}$ sur $[0\\,;2]$. 1. Justifier que $f(x) \\geqslant 0$ sur $[0\\,;2]$. 2. Montrer que $F(x) = -e^{-x^2}$ est une primitive de $f$. 3. Calculer l'aire sous la courbe de $f$ sur $[0\\,;2]$. 4. En déduire la valeur moyenne de $f$ sur cet intervalle.",
+      "corrige": [
+        "1. $2x \\geqslant 0$ et $e^{-x^2} > 0$.",
+        "2. $F'(x) = -(-2x)\\,e^{-x^2} = 2x\\,e^{-x^2}$ (forme $(e^{u})' = u'e^{u}$ avec $u = -x^2$).",
+        "3. Aire $= F(2) - F(0) = -e^{-4} + 1 = 1 - e^{-4} \\approx 0{,}982$ u.a.",
+        "4. $\\mu = \\dfrac{1 - e^{-4}}{2} \\approx 0{,}491$."
+      ],
+      "reponse": "3. $1 - e^{-4} \\approx 0{,}982$ u.a. ; 4. $\\mu \\approx 0{,}491$."
     }
   ]
 }
