@@ -230,7 +230,7 @@ $c = 3{,}00 \times 10^8$ m·s⁻¹ la célérité de la lumière dans le vide.
 > transporte des milliards de milliards par seconde.
 
 > ⚠️ Piège n°1 du calcul : $\lambda$ en **mètres** ($1$ nm $= 10^{-9}$ m).
-> Laisser $500$ (nm) au dénominateur donne un résultat $10^9$ fois trop grand.
+> Laisser $500$ (nm) au dénominateur donne un résultat $10^9$ fois trop petit.
 
 ### La conversion photovoltaïque
 
@@ -290,7 +290,7 @@ $1$ Ah $= 3600$ C ; $1$ nm $= 10^{-9}$ m ; $\Delta T$ identique en K et en °C.
    **charge** ; deux batteries de même capacité mais de tensions différentes
    ne stockent pas la même énergie ($E = QU$).
 6. **Laisser $\lambda$ en nanomètres dans $E = hc/\lambda$** : résultat $10^9$
-   fois trop grand. Un photon visible transporte quelques $10^{-19}$ J.
+   fois trop petit. Un photon visible transporte quelques $10^{-19}$ J.
 
 ---
 
