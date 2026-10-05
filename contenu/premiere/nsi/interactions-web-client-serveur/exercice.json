@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "rôles client et serveur",
       "enonce": "Quand tu ouvres une page web avec ton navigateur, qui joue le rôle du client et qui joue le rôle du serveur ? Dans quel sens va la requête, dans quel sens va la réponse ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "structure d'une URL",
       "enonce": "On considère l'URL : https://www.exemple.fr/cours/nsi.html . Identifie le protocole, le nom de domaine et le chemin de la ressource.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "méthodes HTTP GET et POST",
       "enonce": "Un formulaire de connexion demande un mot de passe. Pour envoyer les données, vaut-il mieux utiliser la méthode GET ou POST ? Rappelle où apparaissent les données dans le cas de GET.",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "codes de statut HTTP",
       "enonce": "Associe chaque code de statut HTTP à sa signification : 200, 404, 403. Que reçoit le navigateur quand la page demandée n'existe pas ?",
       "corrige": [
@@ -61,9 +61,9 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "formulaire HTML et paramètres d'URL",
-      "enonce": "Soit le formulaire :\n<form action=\"/recherche\" method=\"get\">\n  <input name=\"q\" value=\"nsi\">\n  <input name=\"page\" value=\"2\">\n</form>\nÀ quelle URL le navigateur envoie-t-il la requête quand on valide le formulaire ?",
+      "enonce": "Soit le formulaire :\n\n```html\n<form action=\"/recherche\" method=\"get\">\n  <input name=\"q\" value=\"nsi\">\n  <input name=\"page\" value=\"2\">\n</form>\n```\n\nÀ quelle URL le navigateur envoie-t-il la requête quand on valide le formulaire ?",
       "corrige": [
         "L'attribut action indique la ressource visée : /recherche ; method=\"get\" place les données dans l'URL.",
         "Chaque champ devient un couple nom=valeur : q=nsi et page=2.",
@@ -73,7 +73,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "déroulement d'un échange requête-réponse",
       "enonce": "Décris, dans l'ordre, les grandes étapes qui se produisent entre le moment où l'utilisateur tape https://www.exemple.fr/index.html et l'affichage de la page, en précisant le rôle du DNS, de la requête GET et de la réponse HTTP.",
       "corrige": [
@@ -87,7 +87,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "structure d'une URL",
       "enonce": "Décompose l'URL https://www.exemple.fr/articles?id=42 en indiquant le protocole, le nom du serveur, le chemin et les paramètres.",
       "corrige": [
@@ -100,7 +100,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "choisir GET ou POST",
       "enonce": "Un formulaire de connexion demande un pseudo et un mot de passe. Quelle méthode HTTP faut-il utiliser, GET ou POST, et pourquoi ?",
       "corrige": [
@@ -113,7 +113,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "codes de statut HTTP",
       "enonce": "Associe à chaque situation le code de statut HTTP renvoyé par le serveur : (a) la page demandée n'existe pas ; (b) la ressource est renvoyée correctement ; (c) l'accès est interdit ; (d) le serveur a planté en traitant la requête.",
       "corrige": [
@@ -126,7 +126,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "écrire un formulaire HTML",
       "enonce": "Écris un formulaire HTML qui envoie en POST vers /inscription un champ texte nommé pseudo et un champ email nommé mail, avec un bouton d'envoi.",
       "corrige": [
@@ -136,6 +136,482 @@
         "Code : <form action=\"/inscription\" method=\"post\">\n  <input type=\"text\" name=\"pseudo\">\n  <input type=\"email\" name=\"mail\">\n  <button type=\"submit\">Envoyer</button>\n</form>"
       ],
       "reponse": "Un <form action=\"/inscription\" method=\"post\"> contenant <input name=\"pseudo\">, <input type=\"email\" name=\"mail\"> et un <button type=\"submit\">."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "langages HTML, CSS et JavaScript",
+      "enonce": "Associe chaque langage à son rôle dans une page Web : HTML, CSS, JavaScript. Rôles : présentation ; structure et contenu ; comportement et interactivité.",
+      "corrige": [
+        "HTML décrit la structure et le contenu (titres, paragraphes, liens, images) à l'aide de balises.",
+        "CSS gère la présentation (couleurs, polices, disposition).",
+        "JavaScript gère le comportement et l'interactivité ; il est exécuté par le navigateur."
+      ],
+      "reponse": "HTML : structure et contenu ; CSS : présentation ; JavaScript : interactivité."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "rôles client et serveur",
+      "enonce": "Que signifie le sigle HTTP ? Quelle est la différence entre HTTP et HTTPS ?",
+      "corrige": [
+        "HTTP signifie HyperText Transfer Protocol : c'est le protocole du dialogue entre le client et le serveur Web.",
+        "HTTPS est sa version chiffrée (sécurisée) : les échanges ne peuvent pas être lus par un tiers en chemin."
+      ],
+      "reponse": "HyperText Transfer Protocol ; HTTPS est la version chiffrée (sécurisée) de HTTP."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "codes de statut HTTP",
+      "enonce": "Tu cliques sur un lien et le navigateur affiche « Erreur 404 ». Que s'est-il passé ?",
+      "corrige": [
+        "Le code de statut 404 est renvoyé par le serveur quand la ressource demandée n'existe pas.",
+        "Le serveur a bien répondu, mais la page n'a pas été trouvée (lien erroné ou page supprimée)."
+      ],
+      "reponse": "La ressource demandée n'a pas été trouvée sur le serveur (404 : non trouvé)."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "langages HTML, CSS et JavaScript",
+      "enonce": "Dans le code HTML `<p>Voici un <a href=\"https://exemple.fr\">lien</a>.</p>`, que représente la balise `p` ? Et la balise `a` ? Quel texte est cliquable ?",
+      "corrige": [
+        "La balise `p` délimite un paragraphe.",
+        "La balise `a` crée un lien ; l'attribut `href` donne l'adresse vers laquelle il mène.",
+        "Le texte situé entre `<a …>` et `</a>`, ici « lien », est le texte cliquable."
+      ],
+      "reponse": "`p` : paragraphe ; `a` : lien vers https://exemple.fr ; le mot « lien » est cliquable."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "structure d'une URL",
+      "enonce": "Décompose l'URL https://meteo.exemple.org/prevision?ville=Lyon en protocole, nom du serveur, chemin et paramètres.",
+      "corrige": [
+        "Le protocole est avant `://` : https.",
+        "Le nom du serveur vient ensuite, jusqu'au premier `/` : meteo.exemple.org.",
+        "Le chemin va jusqu'au `?` : /prevision. Après le `?`, les paramètres : ville=Lyon."
+      ],
+      "reponse": "Protocole https ; serveur meteo.exemple.org ; chemin /prevision ; paramètre ville=Lyon."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "structure d'une URL",
+      "enonce": "Dans l'URL http://www.lycee-exemple.fr/cdi/livres?auteur=Hugo&page=3, combien de paramètres sont envoyés au serveur ? Donne le nom et la valeur de chacun. Quel caractère les sépare ?",
+      "corrige": [
+        "Les paramètres se trouvent après le `?`.",
+        "Ils sont séparés par le caractère `&` : auteur=Hugo et page=3.",
+        "Il y a donc 2 paramètres : auteur, de valeur Hugo, et page, de valeur 3."
+      ],
+      "reponse": "2 paramètres : auteur = Hugo et page = 3, séparés par `&`."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "méthodes HTTP GET et POST",
+      "enonce": "Pour chaque situation, indique si la méthode GET ou POST est la plus adaptée : a) afficher la page d'accueil d'un site ; b) envoyer un message dans un formulaire de contact ; c) rechercher un mot sur un site ; d) se connecter avec un mot de passe.",
+      "corrige": [
+        "GET sert à demander une ressource ; les paramètres éventuels apparaissent dans l'URL, ce qui convient à une simple lecture ou à une recherche.",
+        "POST sert à envoyer des données au serveur, dans le corps de la requête : c'est adapté à un message ou à un mot de passe."
+      ],
+      "reponse": "a) GET ; b) POST ; c) GET ; d) POST."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "codes de statut HTTP",
+      "enonce": "Un élève tente d'ouvrir la page d'administration du site de son lycée et reçoit le code 403. Un autre ouvre la page d'accueil et reçoit 200. Explique chaque code.",
+      "corrige": [
+        "403 signifie « accès interdit » : le serveur refuse de donner la ressource à cet utilisateur.",
+        "200 signifie « OK » : la requête a réussi et la ressource est renvoyée."
+      ],
+      "reponse": "403 : accès interdit ; 200 : succès, la page est renvoyée."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "formulaire HTML et paramètres d'URL",
+      "enonce": "Dans le formulaire du cours, quel est le rôle de l'attribut `name` des champs `<input>` ? Et celui de l'attribut `action` de la balise `<form>` ?",
+      "corrige": [
+        "L'attribut `name` donne le nom sous lequel la valeur du champ est transmise au serveur.",
+        "L'attribut `action` indique l'adresse (le chemin) du serveur qui traitera les données envoyées.",
+        "L'attribut `method` précise la méthode HTTP (get ou post)."
+      ],
+      "reponse": "`name` : nom sous lequel la valeur est envoyée ; `action` : adresse de traitement des données."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "côté client ou côté serveur",
+      "enonce": "Classe chaque action selon qu'elle se déroule côté client (navigateur) ou côté serveur : a) afficher un titre en rouge grâce au CSS ; b) vérifier dans la base de données qu'un pseudo est libre ; c) ouvrir une fenêtre d'alerte quand on clique sur un bouton ; d) générer la page « Mon compte » d'un utilisateur.",
+      "corrige": [
+        "HTML, CSS et JavaScript sont interprétés dans le navigateur, donc côté client.",
+        "L'accès à une base de données et la génération des pages se font côté serveur."
+      ],
+      "reponse": "a) client ; b) serveur ; c) client ; d) serveur."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "méthodes HTTP GET et POST",
+      "enonce": "Vrai ou faux ? a) Avec GET, les paramètres apparaissent dans l'URL. b) Avec POST, les données sont placées dans le corps de la requête. c) Une requête GET ne peut jamais contenir de paramètres.",
+      "corrige": [
+        "a) Vrai : par exemple /articles?id=42.",
+        "b) Vrai : c'est pourquoi elles n'apparaissent pas dans l'URL.",
+        "c) Faux : une requête GET peut transmettre des paramètres, placés dans l'URL après le `?`."
+      ],
+      "reponse": "a) Vrai ; b) Vrai ; c) Faux."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "HTTPS",
+      "enonce": "Parmi ces adresses, lesquelles utilisent des échanges chiffrés entre le navigateur et le serveur ? a) http://www.exemple.fr ; b) https://www.banque-exemple.fr/compte ; c) https://www.exemple.org/contact ; d) http://jeux.exemple.net",
+      "corrige": [
+        "Le protocole est indiqué au début de l'URL.",
+        "HTTPS est la version chiffrée de HTTP : seules les adresses commençant par https:// utilisent des échanges chiffrés."
+      ],
+      "reponse": "b) et c)."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "formulaire HTML et paramètres d'URL",
+      "enonce": "On valide ce formulaire après avoir tapé « python » dans le champ. Quelle URL apparaît dans la barre d'adresse ?\n\n```html\n<form action=\"/chercher\" method=\"get\">\n  <input type=\"text\" name=\"mot\">\n  <input type=\"hidden\" name=\"niveau\" value=\"1re\">\n  <button type=\"submit\">OK</button>\n</form>\n```",
+      "corrige": [
+        "Avec la méthode GET, les valeurs des champs sont ajoutées à l'URL après un `?`, sous la forme nom=valeur.",
+        "Les champs sont mot (valeur python) et niveau (valeur 1re, champ caché), séparés par `&`.",
+        "On obtient /chercher?mot=python&niveau=1re (précédé du nom du serveur)."
+      ],
+      "reponse": "/chercher?mot=python&niveau=1re"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "formulaire HTML et paramètres d'URL",
+      "enonce": "On remplace `method=\"get\"` par `method=\"post\"` dans le formulaire précédent. Qu'est-ce qui change pour l'URL et pour les données transmises ?",
+      "corrige": [
+        "Avec POST, les données ne figurent plus dans l'URL : la requête est envoyée à /chercher, sans `?`.",
+        "Les mêmes données (mot=python et niveau=1re) sont transmises dans le corps de la requête.",
+        "Le serveur les reçoit toujours sous les noms donnés par les attributs `name`."
+      ],
+      "reponse": "L'URL devient simplement /chercher ; les données passent dans le corps de la requête."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "méthodes HTTP GET et POST",
+      "enonce": "Un site affiche, après connexion, l'adresse https://www.exemple.fr/login?user=lina&mdp=Soleil2008. Quel est le problème ? Quelle correction faut-il apporter au formulaire ?",
+      "corrige": [
+        "Le mot de passe apparaît en clair dans l'URL : il reste dans l'historique du navigateur et peut être vu par quelqu'un qui regarde l'écran.",
+        "C'est le signe que le formulaire utilise la méthode GET.",
+        "Il faut utiliser `method=\"post\"` : les données passent alors dans le corps de la requête, pas dans l'URL (et HTTPS les chiffre pendant le transport)."
+      ],
+      "reponse": "Le mot de passe est visible dans l'URL (méthode GET) ; il faut utiliser la méthode POST."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "structure d'une URL",
+      "enonce": "Construis l'URL complète, en HTTPS, qui demande au serveur www.biblio.fr la ressource /recherche avec les paramètres titre=Candide et annee=1759.",
+      "corrige": [
+        "On assemble : protocole `https://`, puis le serveur, puis le chemin.",
+        "On ajoute `?` puis les paramètres séparés par `&`."
+      ],
+      "reponse": "https://www.biblio.fr/recherche?titre=Candide&annee=1759"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "langages HTML, CSS et JavaScript",
+      "enonce": "Voici une règle CSS. Qu'a-t-elle pour effet sur la page ?\n\n```css\nh1 {\n  color: blue;\n  font-size: 32px;\n}\n```",
+      "corrige": [
+        "Le sélecteur `h1` vise tous les titres de niveau 1 de la page.",
+        "`color: blue` les écrit en bleu ; `font-size: 32px` fixe la taille des caractères à 32 pixels.",
+        "Le contenu (le texte des titres) ne change pas : seule la présentation est modifiée."
+      ],
+      "reponse": "Tous les titres `h1` s'affichent en bleu avec une taille de 32 pixels."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "langages HTML, CSS et JavaScript",
+      "enonce": "Que se passe-t-il quand l'utilisateur clique sur ce bouton ? Le serveur intervient-il ?\n\n```html\n<button onclick=\"alert('Bravo !')\">Valider</button>\n```",
+      "corrige": [
+        "L'attribut `onclick` associe un code JavaScript au clic sur le bouton.",
+        "Au clic, la fonction `alert` ouvre une fenêtre affichant « Bravo ! ».",
+        "Ce code est exécuté par le navigateur, côté client : aucune requête n'est envoyée au serveur."
+      ],
+      "reponse": "Une fenêtre « Bravo ! » s'ouvre ; tout se passe dans le navigateur, sans le serveur."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "codes de statut HTTP",
+      "enonce": "Les codes de statut HTTP sont regroupés par famille selon leur premier chiffre. D'après les quatre codes du cours (200, 403, 404, 500), quelle famille indique un succès, laquelle une erreur liée à la demande du client, laquelle une erreur du serveur ?",
+      "corrige": [
+        "200 (OK) commence par 2 : famille du succès.",
+        "403 (interdit) et 404 (non trouvé) commencent par 4 : la demande du client ne peut pas être satisfaite (ressource absente ou interdite).",
+        "500 (erreur du serveur) commence par 5 : le serveur a rencontré un problème en traitant la requête."
+      ],
+      "reponse": "2xx : succès ; 4xx : erreur liée à la demande du client ; 5xx : erreur du serveur."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "déroulement d'un échange requête-réponse",
+      "enonce": "Remets dans l'ordre ces étapes : (A) le navigateur affiche la page ; (B) le serveur renvoie la réponse avec le code 200 et le HTML ; (C) l'utilisateur clique sur un lien ; (D) le navigateur envoie une requête GET au serveur.",
+      "corrige": [
+        "Tout commence par l'action de l'utilisateur (C).",
+        "Le navigateur, client, envoie alors une requête (D), à laquelle le serveur répond (B).",
+        "Enfin le navigateur interprète le HTML reçu et affiche la page (A)."
+      ],
+      "reponse": "C, D, B, A."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "côté client ou côté serveur",
+      "enonce": "Un élève dit : « Mon code JavaScript vérifie que l'âge saisi est positif, donc le serveur recevra toujours un âge positif. » A-t-il raison ? Justifie.",
+      "corrige": [
+        "Le JavaScript s'exécute dans le navigateur de l'utilisateur, qui peut voir et modifier ce code ou le désactiver.",
+        "Un utilisateur peut aussi envoyer directement une requête au serveur sans passer par la page.",
+        "La vérification côté client est donc contournable : le serveur doit lui aussi vérifier les données reçues."
+      ],
+      "reponse": "Non : la vérification côté client est contournable ; il faut toujours vérifier aussi côté serveur."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "écrire un formulaire HTML",
+      "enonce": "Écris un formulaire qui envoie en GET vers /meteo un champ texte nommé ville, avec un bouton « Voir ». Quelle URL obtient-on si l'on tape Brest ?",
+      "corrige": [
+        "La balise `<form>` porte `action=\"/meteo\"` et `method=\"get\"`.",
+        "Exemple de réponse : `<form action=\"/meteo\" method=\"get\"> <input type=\"text\" name=\"ville\"> <button type=\"submit\">Voir</button> </form>`.",
+        "Avec GET, la valeur est ajoutée à l'URL sous le nom du champ : /meteo?ville=Brest."
+      ],
+      "reponse": "URL obtenue : /meteo?ville=Brest."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "rôles client et serveur",
+      "enonce": "Un même ordinateur peut-il être à la fois client et serveur ? Explique à partir de l'exemple d'un serveur Web qui, pour construire une page, demande des données de météo à un autre serveur.",
+      "corrige": [
+        "Client et serveur sont des rôles dans un échange, pas des types de machines.",
+        "Le serveur Web est serveur pour le navigateur qui lui demande la page.",
+        "Quand il demande à son tour les données de météo à un autre serveur, il joue le rôle de client dans ce second échange."
+      ],
+      "reponse": "Oui : il est serveur pour le navigateur et client du serveur de météo."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "structure d'une URL",
+      "enonce": "Repère l'erreur dans chacune de ces URL : a) https//www.exemple.fr/page ; b) https://www.exemple.fr/page&id=4 ; c) https://www.exemple.fr/page?id=4?tri=nom.",
+      "corrige": [
+        "a) Il manque les deux-points après le protocole : il faut `https://`.",
+        "b) Les paramètres doivent commencer par `?` : il faut `/page?id=4`.",
+        "c) Le `?` n'apparaît qu'une fois ; les paramètres suivants sont séparés par `&` : `?id=4&tri=nom`."
+      ],
+      "reponse": "a) https:// ; b) /page?id=4 ; c) ?id=4&tri=nom."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "méthodes HTTP GET et POST",
+      "enonce": "Un élève affirme : « Avec POST, mon mot de passe est protégé, personne ne peut le voir. » Nuance cette affirmation.",
+      "corrige": [
+        "Avec POST, le mot de passe n'apparaît pas dans l'URL : il n'est ni dans l'historique, ni visible dans la barre d'adresse.",
+        "Mais il circule dans le corps de la requête : en HTTP simple, il n'est pas chiffré et peut être lu par quelqu'un qui intercepte les échanges.",
+        "C'est HTTPS qui chiffre les échanges : il faut donc POST et HTTPS."
+      ],
+      "reponse": "POST évite l'affichage dans l'URL, mais seul HTTPS chiffre les données pendant le transport : il faut les deux."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "côté client ou côté serveur",
+      "enonce": "Un site de vente en ligne calcule le prix total d'un panier en JavaScript dans le navigateur, puis envoie ce total au serveur, qui débite la carte du montant reçu. Quelle faille de sécurité vois-tu ? Comment la corriger ?",
+      "corrige": [
+        "Le calcul est fait côté client : un utilisateur peut modifier le code ou la requête et envoyer un total de 1 € au lieu du vrai prix.",
+        "Le serveur fait confiance à une donnée venant du client, ce qu'il ne faut jamais faire.",
+        "Correction : le serveur doit recalculer lui-même le total à partir des articles et de ses propres prix."
+      ],
+      "reponse": "Le total peut être falsifié par le client ; le serveur doit recalculer lui-même le prix."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "formulaire HTML et paramètres d'URL",
+      "enonce": "Un moteur de recherche a renvoyé l'URL https://www.exemple.fr/resultats?q=chat&page=2. Sans remplir de formulaire, comment obtenir la page 3 de la recherche « chien » ? Qu'est-ce que cela montre sur la méthode GET ?",
+      "corrige": [
+        "Avec GET, les paramètres sont visibles dans l'URL : on peut la modifier directement.",
+        "Il suffit de taper https://www.exemple.fr/resultats?q=chien&page=3.",
+        "Cela montre que GET convient à une recherche (on peut enregistrer ou partager le lien), mais qu'on ne doit pas y mettre de données sensibles."
+      ],
+      "reponse": "En tapant https://www.exemple.fr/resultats?q=chien&page=3 : avec GET, les paramètres sont visibles et modifiables dans l'URL."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "langages HTML, CSS et JavaScript",
+      "enonce": "Le code ci-dessous contient une erreur de structure HTML. Trouve-la et corrige-la.\n\n```html\n<p>Le <a href=\"cours.html\">cours</p> est en ligne.</a>\n```",
+      "corrige": [
+        "Les balises doivent être correctement imbriquées : une balise ouverte à l'intérieur d'une autre doit être fermée avant elle.",
+        "Ici, la balise `a` est ouverte dans le paragraphe, mais `</p>` est fermée avant `</a>`.",
+        "Correction : `<p>Le <a href=\"cours.html\">cours</a> est en ligne.</p>`."
+      ],
+      "reponse": "`<p>Le <a href=\"cours.html\">cours</a> est en ligne.</p>` (fermer `a` avant `p`)."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "langages HTML, CSS et JavaScript",
+      "enonce": "Une page affiche un titre et un bouton. Quand on clique sur le bouton, le titre devient rouge. Indique quelle partie est assurée par chacun des trois langages HTML, CSS et JavaScript.",
+      "corrige": [
+        "HTML définit le contenu : la balise de titre et la balise `button`.",
+        "CSS définit l'apparence, par exemple la couleur rouge (`color: red`).",
+        "JavaScript réagit au clic (interaction) et modifie le style du titre, dans le navigateur."
+      ],
+      "reponse": "HTML : le titre et le bouton ; CSS : la couleur rouge ; JavaScript : la réaction au clic."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "déroulement d'un échange requête-réponse",
+      "enonce": "Une page HTML contient deux images (`<img>`) et une feuille de style CSS externe. Combien de requêtes HTTP le navigateur envoie-t-il au minimum pour afficher entièrement la page, si rien n'est déjà en mémoire ? Explique.",
+      "corrige": [
+        "Une première requête GET récupère le fichier HTML.",
+        "En lisant le HTML, le navigateur découvre les ressources liées : il envoie une requête pour la feuille CSS et une pour chaque image.",
+        "Total : 1 + 1 + 2 = 4 requêtes."
+      ],
+      "reponse": "4 requêtes : le HTML, la feuille CSS et les deux images."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "codes de statut HTTP",
+      "enonce": "Pour chaque situation, donne le code de statut le plus probable : a) un programme du serveur plante en lisant la base de données ; b) l'URL contient une faute de frappe dans le nom de la page ; c) un élève non connecté demande la page des notes de la classe, réservée aux professeurs ; d) tout se passe bien.",
+      "corrige": [
+        "a) Erreur lors du traitement par le serveur : 500.",
+        "b) La ressource demandée n'existe pas : 404.",
+        "c) L'accès à la ressource est refusé : 403.",
+        "d) Succès : 200."
+      ],
+      "reponse": "a) 500 ; b) 404 ; c) 403 ; d) 200."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "rôles client et serveur",
+      "enonce": "Pourquoi dit-on que le Web fonctionne selon un modèle « requête-réponse » ? Le serveur peut-il, avec HTTP seul, envoyer une page à un navigateur qui ne lui a rien demandé ?",
+      "corrige": [
+        "Dans HTTP, c'est toujours le client qui prend l'initiative en envoyant une requête.",
+        "Le serveur se contente de répondre à chaque requête reçue.",
+        "Avec HTTP seul, le serveur n'envoie donc pas de page de sa propre initiative : il attend une requête."
+      ],
+      "reponse": "Parce que chaque échange commence par une requête du client suivie d'une réponse ; non, le serveur ne fait que répondre."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "écrire un formulaire HTML",
+      "enonce": "Un élève a écrit ce formulaire. Après envoi, le serveur reçoit le pseudo mais jamais le message. Trouve l'erreur.\n\n```html\n<form action=\"/poster\" method=\"post\">\n  <input type=\"text\" name=\"pseudo\">\n  <textarea></textarea>\n  <button type=\"submit\">Envoyer</button>\n</form>\n```",
+      "corrige": [
+        "La valeur d'un champ est transmise au serveur sous le nom donné par son attribut `name`.",
+        "La zone de texte `textarea` n'a pas d'attribut `name` : sa valeur n'est pas envoyée.",
+        "Correction : `<textarea name=\"message\"></textarea>`."
+      ],
+      "reponse": "Le `textarea` n'a pas d'attribut `name` ; il faut écrire par exemple `<textarea name=\"message\">`."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "écrire un formulaire HTML",
+      "enonce": "Écris un formulaire d'inscription à un club qui envoie vers /club : un champ texte nommé prenom, un champ mot de passe nommé mdp, une liste de choix nommée activite, et un bouton d'envoi. Justifie le choix de la méthode.",
+      "corrige": [
+        "Le formulaire contient un mot de passe : on choisit la méthode POST pour qu'il n'apparaisse pas dans l'URL.",
+        "Exemple de réponse : `<form action=\"/club\" method=\"post\">`, `<input type=\"text\" name=\"prenom\">`, `<input type=\"password\" name=\"mdp\">`.",
+        "Puis `<select name=\"activite\"><option>échecs</option><option>robotique</option></select>`, `<button type=\"submit\">S'inscrire</button>` et `</form>`.",
+        "Chaque valeur sera reçue par le serveur sous le nom de son attribut `name`."
+      ],
+      "reponse": "Formulaire en POST vers /club avec les champs prenom, mdp (type password) et activite (select), plus un bouton submit."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "formulaire HTML et paramètres d'URL",
+      "enonce": "Le serveur d'un site de quiz reçoit la requête GET /quiz?theme=histoire&niveau=2&nb=10. Écris le formulaire HTML (sans mise en forme) qui a pu produire cette requête, avec trois champs et un bouton.",
+      "corrige": [
+        "La requête est envoyée en GET à /quiz : `<form action=\"/quiz\" method=\"get\">`.",
+        "Il faut trois champs dont les attributs `name` sont theme, niveau et nb.",
+        "Exemple de réponse : `<input name=\"theme\">`, `<input name=\"niveau\">`, `<input name=\"nb\">`, `<button type=\"submit\">Jouer</button>`, puis `</form>`.",
+        "L'utilisateur a saisi histoire, 2 et 10 dans ces champs."
+      ],
+      "reponse": "Un `<form action=\"/quiz\" method=\"get\">` contenant trois champs nommés theme, niveau et nb, et un bouton submit."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "côté client ou côté serveur",
+      "enonce": "Une page de connexion contient ce code JavaScript, visible par tous dans le navigateur. Explique pourquoi c'est une très mauvaise idée, et propose une organisation correcte.\n\n```javascript\nfunction verifier(mdp) {\n  if (mdp == \"Admin2024\") {\n    window.location = \"/admin\";\n  }\n}\n```",
+      "corrige": [
+        "Le code JavaScript est envoyé au navigateur : n'importe qui peut l'afficher et y lire le mot de passe « Admin2024 ».",
+        "De plus, la page /admin n'est pas protégée : il suffit de taper son adresse pour y accéder.",
+        "Organisation correcte : le formulaire envoie le mot de passe en POST, via HTTPS, au serveur, qui le vérifie lui-même et ne donne accès à /admin qu'après cette vérification."
+      ],
+      "reponse": "Le mot de passe est lisible par tous et la vérification est contournable ; la vérification doit se faire côté serveur (POST + HTTPS)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "déroulement d'un échange requête-réponse",
+      "enonce": "Lina tape l'adresse https://www.lycee-exemple.fr/agenda.html, mais le fichier agenda.html a été renommé en calendrier.html sur le serveur. Décris l'échange entre le client et le serveur et ce que voit Lina. Que doit-elle taper pour voir la page ?",
+      "corrige": [
+        "Le navigateur envoie la requête GET /agenda.html au serveur www.lycee-exemple.fr.",
+        "Le serveur ne trouve pas cette ressource : il répond avec le code 404 (non trouvé), souvent accompagné d'une page d'erreur.",
+        "Lina voit donc une erreur 404. Elle doit taper https://www.lycee-exemple.fr/calendrier.html."
+      ],
+      "reponse": "Requête GET /agenda.html, réponse 404 ; il faut demander https://www.lycee-exemple.fr/calendrier.html."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "structure d'une URL",
+      "enonce": "Un script Python découpe une URL avec la méthode `split`. Qu'affiche-t-il ?\n\n```python\nurl = \"https://www.exemple.fr/articles?id=42&tri=date\"\nchemin, parametres = url.split(\"?\")\nprint(parametres.split(\"&\"))\nprint(chemin.split(\"/\")[2])\n```",
+      "corrige": [
+        "`url.split(\"?\")` coupe l'URL au point d'interrogation : chemin vaut \"https://www.exemple.fr/articles\" et parametres vaut \"id=42&tri=date\".",
+        "`parametres.split(\"&\")` donne la liste ['id=42', 'tri=date'].",
+        "`chemin.split(\"/\")` donne ['https:', '', 'www.exemple.fr', 'articles'] ; l'élément d'indice 2 est le nom du serveur."
+      ],
+      "reponse": "`['id=42', 'tri=date']` puis `www.exemple.fr`."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "méthodes HTTP GET et POST",
+      "enonce": "Un forum permet de supprimer un message en visitant l'adresse /supprimer?id=125 (méthode GET). Un élève malveillant poste un lien vers /supprimer?id=125 dans un autre message. Que risque-t-il de se passer ? Pourquoi POST serait-il plus adapté ?",
+      "corrige": [
+        "Avec GET, il suffit qu'un utilisateur autorisé (par exemple un modérateur connecté) clique sur le lien pour déclencher la suppression, sans le vouloir.",
+        "GET est prévu pour demander une ressource (lecture), pas pour modifier des données.",
+        "Une action qui modifie les données doit être envoyée en POST, depuis un formulaire, et le serveur doit vérifier que l'utilisateur a le droit de la faire."
+      ],
+      "reponse": "Un simple clic sur le lien supprimerait le message ; une action de modification doit passer par POST, avec une vérification côté serveur."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "rôles client et serveur",
+      "enonce": "Un élève a écrit une page HTML sur son ordinateur et l'ouvre dans son navigateur : elle s'affiche. Son camarade, sur un autre ordinateur, ne peut pas la voir. Explique pourquoi en utilisant les notions de client et de serveur, et indique ce qu'il faudrait faire.",
+      "corrige": [
+        "Le fichier est seulement sur le disque de l'élève : son navigateur l'ouvre directement, sans passer par un serveur Web accessible aux autres.",
+        "Pour que le camarade, client, puisse envoyer une requête HTTP et recevoir la page, il faut qu'un serveur l'héberge et réponde aux requêtes.",
+        "Il faudrait donc déposer la page sur un serveur Web (un hébergeur) et communiquer son URL."
+      ],
+      "reponse": "La page n'est hébergée par aucun serveur ; il faut la placer sur un serveur Web et partager son URL."
     }
   ]
 }

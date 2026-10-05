@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "**Vision nocturne et freinage d'urgence.** Une voiture récente est équipée d'une **caméra thermique** de vision nocturne, capable de détecter le rayonnement infrarouge émis par un piéton. La nuit, sur une route de campagne, la voiture roule à $90$ km/h. Sa masse est $m = 1\\,440$ kg. Un piéton, à la température $\\theta = 37$ °C, s'engage sur la chaussée ; la caméra le repère à une distance $D = 100$ m. Le conducteur, alerté, a un temps de réaction $t_r = 1{,}0$ s, et les freins exercent alors une force $F = 9\\,000$ N. Données : constante de Wien $= 2{,}9 \\times 10^{-3}$ m·K ; $c = 3{,}0 \\times 10^{8}$ m·s⁻¹. \n\n1. Déterminer la longueur d'onde $\\lambda_{max}$ du maximum d'émission du piéton et vérifier que la caméra travaille bien dans l'infrarouge. \n2. Calculer la fréquence $f$ correspondant à cette longueur d'onde. \n3. Convertir la vitesse de la voiture en m·s⁻¹, puis calculer son énergie cinétique $E_c$. \n4. Calculer la distance de réaction $d_r$, puis la distance de freinage $d_f$ (le freinage dissipe toute l'énergie cinétique : $F \\times d_f = E_c$). \n5. En déduire la distance d'arrêt $d_a$. La voiture s'arrête-t-elle avant le piéton ? Quel est l'intérêt de la caméra thermique pour la sécurité routière ?",
       "corrige": [
@@ -139,6 +139,468 @@
         "5. Distance d'arrêt : $d_a = d_r + d_f = 25 + 50 = 75$ m. Comme $d_a = 75$ m $< D = 100$ m, la voiture s'arrête à environ $25$ m avant le piéton. La caméra thermique, en détectant le rayonnement IR du piéton bien avant que les phares ne l'éclairent, offre au conducteur une distance de détection suffisante pour s'arrêter à temps : elle rallonge le temps disponible et sauve la marge de sécurité."
       ],
       "reponse": "$\\lambda_{max} = 9{,}4$ µm (**IR**) ; $f = 3{,}2 \\times 10^{13}$ Hz ; $v = 25$ m·s⁻¹ et $E_c = 4{,}5 \\times 10^{5}$ J ; $d_r = 25$ m, $d_f = 50$ m, $d_a = 75$ m. Comme $75$ m $< 100$ m, la voiture s'arrête avant le piéton : la vision thermique permet une détection précoce, décisive de nuit."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Classer les rayonnements suivants par longueur d'onde croissante : infrarouge, rayons X, lumière visible, ondes radio, ultraviolet.",
+      "corrige": [
+        "Dans le spectre, de la plus petite à la plus grande longueur d'onde, on trouve : rayons γ, rayons X, ultraviolet, visible, infrarouge, micro-ondes, ondes radio.",
+        "On ne garde que les rayonnements de la liste, dans cet ordre."
+      ],
+      "reponse": "Rayons X < ultraviolet < visible < infrarouge < ondes radio."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Vrai ou faux ? « Le son et la lumière peuvent tous les deux se propager dans le vide. » Justifier.",
+      "corrige": [
+        "La lumière est une onde électromagnétique : elle se propage dans le vide (c'est ainsi que la lumière du Soleil nous parvient).",
+        "Le son a besoin d'un milieu matériel (air, eau, solide) : il ne se propage pas dans le vide."
+      ],
+      "reponse": "Faux : seule la lumière (onde électromagnétique) se propage dans le vide, pas le son."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "conversion-temperature",
+      "enonce": "Convertir en kelvins les températures suivantes : $\\theta_1 = 37$ °C (corps humain), $\\theta_2 = 0$ °C (glace fondante), $\\theta_3 = -18$ °C (congélateur).",
+      "corrige": [
+        "On utilise $T\\,(\\text{K}) = \\theta\\,(°\\text{C}) + 273$.",
+        "$T_1 = 37 + 273 = 310$ K ; $T_2 = 0 + 273 = 273$ K ; $T_3 = -18 + 273 = 255$ K."
+      ],
+      "reponse": "$T_1 = 310$ K, $T_2 = 273$ K, $T_3 = 255$ K."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "conversion-temperature",
+      "enonce": "Une pièce est à la température absolue $T = 293$ K. Quelle est sa température en degrés Celsius ?",
+      "corrige": [
+        "On inverse la relation $T = \\theta + 273$ : $\\theta = T - 273$.",
+        "$\\theta = 293 - 273 = 20$ °C : c'est une température ambiante habituelle."
+      ],
+      "reponse": "$\\theta = 20$ °C."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Un pointeur laser émet une lumière de longueur d'onde $\\lambda = 650$ nm. 1) Convertir $\\lambda$ en micromètres puis en mètres. 2) À quel domaine du spectre appartient-elle ?",
+      "corrige": [
+        "$1$ nm $= 10^{-9}$ m et $1$ µm $= 10^{-6}$ m $= 1\\,000$ nm, donc $650$ nm $= 0{,}65$ µm $= 6{,}5 \\times 10^{-7}$ m.",
+        "$0{,}65$ µm est compris entre $0{,}4$ µm et $0{,}8$ µm : c'est de la lumière **visible** (rouge, proche de la limite de l'infrarouge)."
+      ],
+      "reponse": "$\\lambda = 0{,}65$ µm $= 6{,}5 \\times 10^{-7}$ m : domaine **visible** (rouge)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Associer chaque longueur d'onde à son domaine : a) $10$ µm ; b) $0{,}25$ µm ; c) $2$ m ; d) $0{,}55$ µm.",
+      "corrige": [
+        "On compare chaque valeur aux bornes du spectre : visible de $0{,}4$ à $0{,}8$ µm, infrarouge de $0{,}8$ µm à $1$ mm, ultraviolet de $10$ nm à $0{,}4$ µm, radio au-delà de $1$ m.",
+        "a) $10$ µm $> 0{,}8$ µm : infrarouge. b) $0{,}25$ µm $< 0{,}4$ µm : ultraviolet. c) $2$ m $> 1$ m : ondes radio. d) $0{,}55$ µm : visible."
+      ],
+      "reponse": "a) infrarouge ; b) ultraviolet ; c) ondes radio ; d) visible."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "detection-infrarouge",
+      "enonce": "Un soignant affirme : « Le thermomètre sans contact envoie un rayon infrarouge sur le front pour le chauffer, puis mesure sa température. » Corriger cette phrase.",
+      "corrige": [
+        "Le thermomètre sans contact ne chauffe rien et n'envoie aucun rayonnement vers le patient.",
+        "Il **reçoit** le rayonnement infrarouge que la peau émet naturellement (tout corps chaud rayonne) et en déduit la température : c'est une détection **passive**."
+      ],
+      "reponse": "Le thermomètre n'envoie rien : il reçoit l'infrarouge émis naturellement par la peau (détection passive)."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "conversion-vitesse",
+      "enonce": "Convertir en m·s⁻¹ : a) $130$ km/h (autoroute) ; b) $30$ km/h (zone scolaire). Arrondir au dixième.",
+      "corrige": [
+        "On divise la vitesse en km/h par $3{,}6$.",
+        "a) $\\dfrac{130}{3{,}6} \\approx 36{,}1$ m·s⁻¹ ; b) $\\dfrac{30}{3{,}6} \\approx 8{,}3$ m·s⁻¹."
+      ],
+      "reponse": "a) $\\approx 36{,}1$ m·s⁻¹ ; b) $\\approx 8{,}3$ m·s⁻¹."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "conversion-vitesse",
+      "enonce": "Un cycliste roule à $5{,}0$ m·s⁻¹. Quelle est sa vitesse en km/h ?",
+      "corrige": [
+        "Pour passer des m·s⁻¹ aux km/h, on multiplie par $3{,}6$.",
+        "$v = 5{,}0 \\times 3{,}6 = 18$ km/h."
+      ],
+      "reponse": "$v = 18$ km/h."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "energie-cinetique",
+      "enonce": "Un cycliste et son vélo ont une masse totale $m = 80$ kg et roulent à $18$ km/h. Calculer leur énergie cinétique.",
+      "corrige": [
+        "Conversion : $v = \\dfrac{18}{3{,}6} = 5{,}0$ m·s⁻¹.",
+        "$E_c = \\dfrac{1}{2} m v^{2} = \\dfrac{1}{2} \\times 80 \\times 5{,}0^{2} = \\dfrac{1}{2} \\times 80 \\times 25 = 1\\,000$ J."
+      ],
+      "reponse": "$E_c = 1\\,000$ J."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "loi-de-wien",
+      "enonce": "Le filament d'une ampoule à incandescence est porté à environ $\\theta = 2\\,500$ °C. 1) Calculer sa température absolue. 2) Calculer $\\lambda_{max}$. 3) Pourquoi dit-on que ces ampoules chauffent plus qu'elles n'éclairent ?",
+      "corrige": [
+        "$T = 2\\,500 + 273 = 2\\,773$ K.",
+        "$\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{2\\,773} \\approx 1{,}0 \\times 10^{-6}$ m, soit environ $1{,}0$ µm.",
+        "Cette valeur est supérieure à $0{,}8$ µm : le maximum d'émission est dans l'**infrarouge**. L'essentiel de l'énergie rayonnée est donc de la chaleur invisible, et seule une petite partie est de la lumière visible."
+      ],
+      "reponse": "$T = 2\\,773$ K, $\\lambda_{max} \\approx 1{,}0$ µm (infrarouge) : l'ampoule émet surtout de la chaleur."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "loi-de-wien",
+      "enonce": "Un patient a une forte fièvre : la température de sa peau atteint $\\theta = 40$ °C. 1) Calculer $\\lambda_{max}$ de son rayonnement. 2) Comparer à la valeur $9{,}4$ µm d'une personne à $37$ °C.",
+      "corrige": [
+        "$T = 40 + 273 = 313$ K.",
+        "$\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{313} \\approx 9{,}3 \\times 10^{-6}$ m $\\approx 9{,}3$ µm.",
+        "La valeur est un peu plus petite que $9{,}4$ µm : un corps plus chaud émet à des longueurs d'onde plus courtes, et son rayonnement est plus intense."
+      ],
+      "reponse": "$\\lambda_{max} \\approx 9{,}3$ µm, légèrement inférieure à $9{,}4$ µm."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "loi-de-wien",
+      "enonce": "Un glaçon est à $0$ °C. Émet-il un rayonnement électromagnétique ? Si oui, calculer la longueur d'onde de son maximum d'émission et donner le domaine.",
+      "corrige": [
+        "Oui : tout corps dont la température absolue n'est pas nulle émet un rayonnement. Ici $T = 0 + 273 = 273$ K.",
+        "$\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{273} \\approx 1{,}06 \\times 10^{-5}$ m $\\approx 10{,}6$ µm.",
+        "Cette valeur est bien supérieure à $0{,}8$ µm : le glaçon rayonne dans l'**infrarouge**."
+      ],
+      "reponse": "Oui : $\\lambda_{max} \\approx 10{,}6$ µm, dans l'infrarouge."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "loi-de-wien",
+      "enonce": "Une caméra thermique indique que le mur d'une chambre d'hôpital émet avec un maximum à $\\lambda_{max} = 9{,}7$ µm. 1) Calculer la température absolue du mur. 2) La convertir en degrés Celsius.",
+      "corrige": [
+        "Conversion : $\\lambda_{max} = 9{,}7 \\times 10^{-6}$ m.",
+        "Loi de Wien : $T = \\dfrac{2{,}9 \\times 10^{-3}}{9{,}7 \\times 10^{-6}} \\approx 299$ K.",
+        "$\\theta = T - 273 \\approx 26$ °C : une température de pièce chauffée, cohérente."
+      ],
+      "reponse": "$T \\approx 299$ K, soit $\\theta \\approx 26$ °C."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "loi-de-wien",
+      "enonce": "Un élève calcule le maximum d'émission du corps humain ainsi : $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{37} \\approx 7{,}8 \\times 10^{-5}$ m. Trouver son erreur et donner le bon résultat.",
+      "corrige": [
+        "Dans la loi de Wien, la température doit être en **kelvins**, jamais en degrés Celsius : l'élève a utilisé $37$ au lieu de $310$.",
+        "$T = 37 + 273 = 310$ K, donc $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{310} \\approx 9{,}4 \\times 10^{-6}$ m $= 9{,}4$ µm."
+      ],
+      "reponse": "Erreur : température en °C au lieu de K. Bon résultat : $\\lambda_{max} \\approx 9{,}4$ µm."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "detection-infrarouge",
+      "enonce": "Sur l'image d'une caméra thermique, le genou droit d'un patient apparaît plus « chaud » que le gauche. 1) Que peut-on suspecter ? 2) Comment évolue la longueur d'onde du maximum d'émission de la zone concernée ?",
+      "corrige": [
+        "Une zone plus chaude que le reste du corps peut signaler une **inflammation** (ou un trouble de la circulation) : c'est un usage médical de la caméra thermique.",
+        "D'après la loi de Wien, plus $T$ est grand, plus $\\lambda_{max}$ est petite : la zone enflammée émet à une longueur d'onde légèrement plus courte, et plus intensément."
+      ],
+      "reponse": "Une inflammation ; son $\\lambda_{max}$ est légèrement plus courte (et le rayonnement plus intense)."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "detection-infrarouge",
+      "enonce": "Donner deux avantages du thermomètre sans contact pour dépister la fièvre à l'accueil d'un service d'urgences.",
+      "corrige": [
+        "Il ne touche pas le patient : pas de risque de transmettre des microbes d'un patient à l'autre (hygiène).",
+        "La mesure est très rapide (quelques secondes), ce qui permet de contrôler beaucoup de personnes. Exemple de réponse : « hygiénique et rapide »."
+      ],
+      "reponse": "Exemple de réponse : mesure hygiénique (sans contact) et rapide."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "La limite entre le rouge visible et l'infrarouge est souvent prise vers $\\lambda = 0{,}75$ µm. Calculer la fréquence correspondante ($c = 3{,}0 \\times 10^{8}$ m·s⁻¹).",
+      "corrige": [
+        "Conversion : $\\lambda = 0{,}75 \\times 10^{-6}$ m $= 7{,}5 \\times 10^{-7}$ m.",
+        "$f = \\dfrac{c}{\\lambda} = \\dfrac{3{,}0 \\times 10^{8}}{7{,}5 \\times 10^{-7}} = 4{,}0 \\times 10^{14}$ Hz."
+      ],
+      "reponse": "$f = 4{,}0 \\times 10^{14}$ Hz."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Un four à micro-ondes fonctionne à la fréquence $f = 2{,}45$ GHz ($1$ GHz $= 10^{9}$ Hz). 1) Calculer la longueur d'onde. 2) Vérifier qu'elle appartient bien au domaine des micro-ondes.",
+      "corrige": [
+        "$\\lambda = \\dfrac{c}{f} = \\dfrac{3{,}0 \\times 10^{8}}{2{,}45 \\times 10^{9}} \\approx 0{,}12$ m, soit environ $12$ cm.",
+        "Le domaine des micro-ondes s'étend de $1$ m à $1$ mm : $0{,}12$ m est bien dans cet intervalle."
+      ],
+      "reponse": "$\\lambda \\approx 0{,}12$ m ($\\approx 12$ cm) : domaine des micro-ondes."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "energie-cinetique",
+      "enonce": "Un autocar de masse $m = 12\\,000$ kg roule à $90$ km/h. 1) Calculer son énergie cinétique. 2) Combien de fois est-elle plus grande que celle d'une voiture de $1\\,000$ kg roulant à la même vitesse ?",
+      "corrige": [
+        "$v = \\dfrac{90}{3{,}6} = 25$ m·s⁻¹, donc $E_c = \\dfrac{1}{2} \\times 12\\,000 \\times 25^{2} \\approx 3{,}8 \\times 10^{6}$ J.",
+        "Pour la voiture : $E_c = \\dfrac{1}{2} \\times 1\\,000 \\times 25^{2} \\approx 3{,}1 \\times 10^{5}$ J.",
+        "À vitesse égale, $E_c$ est proportionnelle à la masse : rapport $\\dfrac{12\\,000}{1\\,000} = 12$."
+      ],
+      "reponse": "$E_c \\approx 3{,}8 \\times 10^{6}$ J, soit $12$ fois plus que la voiture."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "energie-cinetique",
+      "enonce": "Une voiture de masse $m = 1\\,000$ kg possède une énergie cinétique $E_c = 2{,}0 \\times 10^{5}$ J. Calculer sa vitesse en m·s⁻¹ puis en km/h.",
+      "corrige": [
+        "De $E_c = \\dfrac{1}{2} m v^{2}$, on tire $v^{2} = \\dfrac{2E_c}{m} = \\dfrac{2 \\times 2{,}0 \\times 10^{5}}{1\\,000} = 400$.",
+        "$v = \\sqrt{400} = 20$ m·s⁻¹, soit $20 \\times 3{,}6 = 72$ km/h."
+      ],
+      "reponse": "$v = 20$ m·s⁻¹ $= 72$ km/h."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "energie-cinetique",
+      "enonce": "Pour une voiture de $1\\,000$ kg à $90$ km/h, un élève écrit : $E_c = \\dfrac{1}{2} \\times 1\\,000 \\times 90^{2} = 4{,}05 \\times 10^{6}$ J. 1) Quelle est l'erreur ? 2) Donner le bon résultat. 3) Par quel facteur l'élève s'est-il trompé ?",
+      "corrige": [
+        "La vitesse doit être en m·s⁻¹ : $v = \\dfrac{90}{3{,}6} = 25$ m·s⁻¹, et non $90$.",
+        "$E_c = \\dfrac{1}{2} \\times 1\\,000 \\times 25^{2} \\approx 3{,}1 \\times 10^{5}$ J.",
+        "Facteur d'erreur : $3{,}6^{2} \\approx 13{,}0$ ; le résultat de l'élève est environ $13$ fois trop grand."
+      ],
+      "reponse": "Vitesse laissée en km/h ; bon résultat $E_c \\approx 3{,}1 \\times 10^{5}$ J ; erreur d'un facteur $\\approx 13$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "distances-arret",
+      "enonce": "Sur autoroute, une voiture roule à $130$ km/h. Le temps de réaction du conducteur est $t_r = 1{,}0$ s. Quelle distance parcourt-elle avant même de commencer à freiner ?",
+      "corrige": [
+        "Conversion : $v = \\dfrac{130}{3{,}6} \\approx 36{,}1$ m·s⁻¹.",
+        "Pendant le temps de réaction, la voiture roule à pleine vitesse : $d_r = v \\times t_r \\approx 36{,}1 \\times 1{,}0 \\approx 36$ m."
+      ],
+      "reponse": "$d_r \\approx 36$ m."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "distances-arret",
+      "enonce": "En ville à $50$ km/h, un conducteur qui lit un message sur son téléphone voit son temps de réaction passer de $1{,}0$ s à $1{,}5$ s. De combien de mètres sa distance de réaction augmente-t-elle ?",
+      "corrige": [
+        "$v = \\dfrac{50}{3{,}6} \\approx 13{,}9$ m·s⁻¹.",
+        "Attentif : $d_r = 13{,}9 \\times 1{,}0 \\approx 13{,}9$ m. Distrait : $d_r = 13{,}9 \\times 1{,}5 \\approx 20{,}8$ m.",
+        "Différence : $20{,}8 - 13{,}9 \\approx 6{,}9$ m, parcourus sans freiner."
+      ],
+      "reponse": "Environ $6{,}9$ m de plus ($13{,}9$ m → $20{,}8$ m)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "distances-arret",
+      "enonce": "Pour chaque facteur, dire s'il modifie la distance de réaction, la distance de freinage, ou les deux : a) la fatigue du conducteur ; b) une route mouillée ; c) une vitesse plus élevée ; d) l'alcool.",
+      "corrige": [
+        "La distance de réaction $d_r = v\\,t_r$ dépend de la vitesse et du temps de réaction (donc de l'état du conducteur).",
+        "La distance de freinage dépend de la vitesse et de la force de freinage (donc de l'état de la route, des pneus, des freins).",
+        "a) et d) agissent sur $t_r$ : réaction. b) diminue la force de freinage possible : freinage. c) la vitesse intervient dans les deux."
+      ],
+      "reponse": "a) réaction ; b) freinage ; c) les deux ; d) réaction."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "influence-vitesse",
+      "enonce": "À $50$ km/h, une voiture a une distance de freinage de $12$ m (route sèche). Le temps de réaction est $t_r = 1{,}0$ s. 1) Calculer sa distance de freinage à $30$ km/h, sachant que $d_f$ est proportionnelle à $v^{2}$. 2) Calculer les distances d'arrêt à $30$ km/h et à $50$ km/h.",
+      "corrige": [
+        "$d_f(30) = 12 \\times \\left(\\dfrac{30}{50}\\right)^{2} = 12 \\times 0{,}36 \\approx 4{,}3$ m.",
+        "Distances de réaction : $\\dfrac{30}{3{,}6} \\times 1{,}0 \\approx 8{,}3$ m et $\\dfrac{50}{3{,}6} \\times 1{,}0 \\approx 13{,}9$ m.",
+        "Distances d'arrêt : $8{,}3 + 4{,}3 \\approx 12{,}6$ m à $30$ km/h, et $13{,}9 + 12 \\approx 25{,}9$ m à $50$ km/h : environ deux fois moins à $30$ km/h."
+      ],
+      "reponse": "$d_f(30) \\approx 4{,}3$ m ; $d_a \\approx 12{,}6$ m à $30$ km/h contre $\\approx 25{,}9$ m à $50$ km/h."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "influence-vitesse",
+      "enonce": "Un conducteur roule trois fois plus vite qu'avant. Par quel facteur sont multipliées : a) sa distance de réaction ; b) son énergie cinétique ; c) sa distance de freinage ?",
+      "corrige": [
+        "$d_r = v\\,t_r$ est proportionnelle à $v$ : facteur $3$.",
+        "$E_c = \\dfrac{1}{2}mv^{2}$ est proportionnelle à $v^{2}$ : facteur $3^{2} = 9$.",
+        "La distance de freinage sert à dissiper $E_c$ : elle est aussi multipliée par $9$."
+      ],
+      "reponse": "a) $\\times 3$ ; b) $\\times 9$ ; c) $\\times 9$."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "influence-vitesse",
+      "enonce": "Sur une route limitée à $80$ km/h, un conducteur roule à $90$ km/h. De quel pourcentage environ sa distance de freinage augmente-t-elle ?",
+      "corrige": [
+        "La distance de freinage est proportionnelle à $v^{2}$ : $\\dfrac{d_f(90)}{d_f(80)} = \\left(\\dfrac{90}{80}\\right)^{2} \\approx 1{,}27$.",
+        "Elle est donc multipliée par environ $1{,}27$, soit une hausse d'environ $27$ % alors que la vitesse n'a augmenté que de $12{,}5$ %."
+      ],
+      "reponse": "Environ $+27$ %."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "distances-arret",
+      "enonce": "Un monospace de masse $m = 1\\,500$ kg roule à $72$ km/h. Lors d'un freinage d'urgence, la force de freinage vaut $F = 10\\,500$ N. Calculer sa distance de freinage à l'aide de $d_f = \\dfrac{m\\,v^{2}}{2F}$.",
+      "corrige": [
+        "$v = \\dfrac{72}{3{,}6} = 20$ m·s⁻¹.",
+        "$d_f = \\dfrac{1\\,500 \\times 20^{2}}{2 \\times 10\\,500} = \\dfrac{600\\,000}{21\\,000} \\approx 29$ m."
+      ],
+      "reponse": "$d_f \\approx 29$ m."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "distances-arret",
+      "enonce": "Une voiture de $1\\,000$ kg roulant à $90$ km/h doit pouvoir s'arrêter sur une distance de freinage de $40$ m. Quelle force de freinage constante $F$ les freins doivent-ils exercer ?",
+      "corrige": [
+        "$v = 25$ m·s⁻¹ et $E_c = \\dfrac{1}{2} \\times 1\\,000 \\times 25^{2} = 312\\,500$ J.",
+        "Le freinage dissipe toute l'énergie cinétique : $F \\times d_f = E_c$, donc $F = \\dfrac{E_c}{d_f} = \\dfrac{312\\,500}{40} \\approx 7{,}8 \\times 10^{3}$ N."
+      ],
+      "reponse": "$F \\approx 7{,}8 \\times 10^{3}$ N."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "loi-de-wien",
+      "enonce": "Une plaque électrique chauffée « au rouge » est à $\\theta = 700$ °C. 1) Calculer $\\lambda_{max}$. 2) Dans quel domaine se trouve ce maximum ? 3) Pourquoi voit-on pourtant la plaque rougeoyer ?",
+      "corrige": [
+        "$T = 700 + 273 = 973$ K et $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{973} \\approx 3{,}0 \\times 10^{-6}$ m $\\approx 3{,}0$ µm.",
+        "$3{,}0$ µm $> 0{,}8$ µm : le maximum est dans l'**infrarouge**.",
+        "Le rayonnement émis est un mélange de longueurs d'onde autour du maximum : une petite partie, du côté des courtes longueurs d'onde, atteint le visible rouge."
+      ],
+      "reponse": "$\\lambda_{max} \\approx 3{,}0$ µm (infrarouge) ; une petite partie du rayonnement est dans le rouge visible."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "energie-cinetique",
+      "enonce": "Quelle masse devrait avoir un véhicule roulant à $50$ km/h pour posséder la même énergie cinétique qu'une voiture de $1\\,000$ kg roulant à $100$ km/h ?",
+      "corrige": [
+        "La vitesse est divisée par $2$, donc $v^{2}$ est divisé par $4$.",
+        "Pour garder la même $E_c = \\dfrac{1}{2}mv^{2}$, la masse doit être multipliée par $4$ : $m = 4 \\times 1\\,000 = 4\\,000$ kg.",
+        "Conclusion : la vitesse pèse bien plus lourd que la masse dans l'énergie d'un choc."
+      ],
+      "reponse": "$m = 4\\,000$ kg."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "influence-vitesse",
+      "enonce": "Rédiger en deux ou trois phrases, pour une campagne de prévention, une explication scientifique du message « En ville, 10 km/h de plus, c'est beaucoup plus dangereux qu'on ne le croit ».",
+      "corrige": [
+        "Il faut citer la distance de réaction (proportionnelle à $v$) et surtout la distance de freinage et l'énergie cinétique (proportionnelles à $v^{2}$).",
+        "Exemple de réponse : « L'énergie d'une voiture dépend du carré de sa vitesse. Passer de $50$ à $60$ km/h augmente donc la distance de freinage et l'énergie d'un choc de $44$ % environ, alors que la vitesse n'augmente que de $20$ %. »"
+      ],
+      "reponse": "Exemple de réponse : $E_c$ et $d_f$ varient comme $v^{2}$ ; $+20$ % de vitesse donne environ $+44$ % de distance de freinage et d'énergie de choc."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "distances-arret",
+      "enonce": "Une voiture de $1\\,200$ kg roule à $90$ km/h ; $t_r = 1{,}0$ s. Sur route sèche, la force de freinage maximale est $F = 9\\,000$ N ; sur route mouillée, elle n'est plus que de $6\\,000$ N. Calculer la distance d'arrêt dans les deux cas.",
+      "corrige": [
+        "$v = 25$ m·s⁻¹ ; $d_r = 25 \\times 1{,}0 = 25$ m ; $E_c = \\dfrac{1}{2} \\times 1\\,200 \\times 25^{2} = 375\\,000$ J.",
+        "Route sèche : $d_f = \\dfrac{375\\,000}{9\\,000} \\approx 41{,}7$ m, donc $d_a \\approx 66{,}7$ m.",
+        "Route mouillée : $d_f = \\dfrac{375\\,000}{6\\,000} \\approx 62{,}5$ m, donc $d_a \\approx 87{,}5$ m. La pluie allonge l'arrêt d'environ $20{,}8$ m."
+      ],
+      "reponse": "$d_a \\approx 66{,}7$ m (sèche) et $\\approx 87{,}5$ m (mouillée)."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "ondes-electromagnetiques",
+      "enonce": "Classer ces rayonnements du moins énergétique au plus énergétique : ultraviolet, ondes radio, rayons X, infrarouge. Lequel nécessite des protections pour les soignants en radiologie ?",
+      "corrige": [
+        "L'énergie transportée augmente quand la longueur d'onde diminue (et que la fréquence augmente).",
+        "Ordre : ondes radio < infrarouge < ultraviolet < rayons X.",
+        "Les rayons X, très énergétiques, peuvent endommager les cellules : le personnel de radiologie s'en protège (tablier plombé, salle protégée)."
+      ],
+      "reponse": "Radio < infrarouge < ultraviolet < rayons X ; ce sont les rayons X."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "À l'accueil d'un hôpital, un thermomètre infrarouge est utilisé pour repérer les patients fiévreux. La peau d'un patient est à $\\theta = 38{,}5$ °C. 1) Calculer sa température absolue. 2) Calculer $\\lambda_{max}$ de son rayonnement. 3) Comparer à celle d'une personne à $37$ °C et expliquer pourquoi l'appareil doit être précis. 4) Pourquoi parle-t-on de détection passive ?",
+      "corrige": [
+        "$T = 38{,}5 + 273 = 311{,}5$ K.",
+        "$\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{311{,}5} \\approx 9{,}31 \\times 10^{-6}$ m $\\approx 9{,}31$ µm.",
+        "À $37$ °C : $\\lambda_{max} \\approx 9{,}35$ µm. L'écart est très faible (moins de $0{,}1$ µm) : l'appareil doit mesurer finement le rayonnement reçu pour distinguer fièvre et température normale.",
+        "L'appareil n'émet rien vers le patient : il se contente de recevoir l'infrarouge que la peau émet naturellement."
+      ],
+      "reponse": "$T = 311{,}5$ K ; $\\lambda_{max} \\approx 9{,}31$ µm contre $\\approx 9{,}35$ µm à $37$ °C ; détection passive (l'appareil reçoit sans émettre)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Devant une école, un enfant surgit entre deux voitures à $15$ m devant un automobiliste. Le temps de réaction est $t_r = 1{,}0$ s. À $50$ km/h, la distance de freinage est $12$ m, et elle est proportionnelle à $v^{2}$. 1) Calculer la distance d'arrêt à $50$ km/h. 2) Même question à $30$ km/h. 3) Dans quel cas l'automobiliste s'arrête-t-il avant l'enfant ? Conclure sur l'intérêt des zones à $30$ km/h.",
+      "corrige": [
+        "À $50$ km/h : $d_r = \\dfrac{50}{3{,}6} \\times 1{,}0 \\approx 13{,}9$ m et $d_a \\approx 13{,}9 + 12 \\approx 25{,}9$ m.",
+        "À $30$ km/h : $d_r \\approx 8{,}3$ m, $d_f = 12 \\times \\left(\\dfrac{30}{50}\\right)^{2} \\approx 4{,}3$ m, donc $d_a \\approx 12{,}6$ m.",
+        "À $30$ km/h, $12{,}6$ m $< 15$ m : la voiture s'arrête avant l'enfant. À $50$ km/h, $25{,}9$ m $> 15$ m : le choc est inévitable, et la voiture n'a même pas commencé à freiner après $13{,}9$ m.",
+        "Limiter la vitesse à $30$ km/h près des écoles divise la distance d'arrêt par deux environ et peut éviter l'accident."
+      ],
+      "reponse": "$d_a \\approx 25{,}9$ m à $50$ km/h (choc) et $\\approx 12{,}6$ m à $30$ km/h (arrêt avant l'enfant)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "Une moto et son pilote (masse totale $m = 250$ kg) roulent à $108$ km/h. Le pilote aperçoit un obstacle ; son temps de réaction est $t_r = 1{,}0$ s, et la force de freinage vaut $F = 1\\,750$ N. 1) Calculer l'énergie cinétique. 2) Calculer $d_r$ et $d_f$. 3) En déduire la distance d'arrêt. 4) Le pilote évite-t-il un obstacle situé à $80$ m ?",
+      "corrige": [
+        "$v = \\dfrac{108}{3{,}6} = 30$ m·s⁻¹ et $E_c = \\dfrac{1}{2} \\times 250 \\times 30^{2} = 112\\,500$ J.",
+        "$d_r = 30 \\times 1{,}0 = 30$ m ; $d_f = \\dfrac{E_c}{F} = \\dfrac{112\\,500}{1\\,750} \\approx 64$ m.",
+        "$d_a = 30 + 64 \\approx 94$ m.",
+        "$94$ m $> 80$ m : le pilote ne s'arrête pas à temps."
+      ],
+      "reponse": "$E_c \\approx 1{,}1 \\times 10^{5}$ J ; $d_r = 30$ m, $d_f \\approx 64$ m ; $d_a \\approx 94$ m $> 80$ m : collision."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "distances-arret",
+      "enonce": "Une voiture de $1\\,300$ kg roule à $80$ km/h sur une route de campagne ; la force de freinage vaut $F = 9\\,100$ N. Son conducteur a bu de l'alcool : son temps de réaction passe de $1{,}0$ s à $2{,}0$ s. 1) Calculer $d_f$. 2) Calculer la distance d'arrêt sans alcool, puis avec alcool. 3) Commenter.",
+      "corrige": [
+        "$v = \\dfrac{80}{3{,}6} \\approx 22{,}2$ m·s⁻¹ ; $E_c = \\dfrac{1}{2} \\times 1\\,300 \\times 22{,}2^{2} \\approx 3{,}2 \\times 10^{5}$ J ; $d_f = \\dfrac{E_c}{F} \\approx 35$ m.",
+        "Sans alcool : $d_r \\approx 22$ m, $d_a \\approx 57$ m. Avec alcool : $d_r \\approx 44$ m, $d_a \\approx 80$ m.",
+        "L'alcool ne change pas le freinage mais double la distance de réaction : l'arrêt s'allonge d'environ $22$ m, parcourus à pleine vitesse."
+      ],
+      "reponse": "$d_f \\approx 35$ m ; $d_a \\approx 57$ m sans alcool, $\\approx 80$ m avec alcool."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese",
+      "enonce": "La nuit, une voiture équipée d'une caméra thermique roule à $72$ km/h. La caméra repère un cycliste sans éclairage à $60$ m ; la peau de son visage est à $34$ °C. La voiture a une masse de $1\\,100$ kg, le temps de réaction vaut $1{,}0$ s et la force de freinage $7\\,700$ N. 1) Calculer $\\lambda_{max}$ du rayonnement du visage et justifier l'usage d'une caméra infrarouge. 2) Calculer la distance d'arrêt. 3) La voiture s'arrête-t-elle à temps ?",
+      "corrige": [
+        "$T = 34 + 273 = 307$ K ; $\\lambda_{max} = \\dfrac{2{,}9 \\times 10^{-3}}{307} \\approx 9{,}4$ µm : c'est de l'infrarouge, invisible à l'œil mais capté par la caméra.",
+        "$v = 20$ m·s⁻¹ ; $d_r = 20$ m ; $E_c = \\dfrac{1}{2} \\times 1\\,100 \\times 20^{2} = 220\\,000$ J ; $d_f = \\dfrac{220\\,000}{7\\,700} \\approx 29$ m.",
+        "$d_a \\approx 20 + 29 \\approx 49$ m $< 60$ m : la voiture s'arrête environ $11$ m avant le cycliste grâce à la détection précoce."
+      ],
+      "reponse": "$\\lambda_{max} \\approx 9{,}4$ µm (IR) ; $d_a \\approx 49$ m $< 60$ m : arrêt à temps."
     }
   ]
 }

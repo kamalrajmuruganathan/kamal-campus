@@ -120,7 +120,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "chaine-de-mesure",
       "enonce": "Une serre horticole est surveillée par une chaîne de mesure numérique. Le capteur de température est linéaire : il délivre $U = 0{,}40$ V pour $\\theta = 0$ °C et $U = 2{,}40$ V pour $\\theta = 50$ °C. Sa tension est numérisée par un CAN de $10$ bits, de calibre $5{,}00$ V, puis affichée par un ordinateur. Un dispositif « tout ou rien » commande en outre la ventilation. 1. Donner l'étendue de mesure du capteur et calculer sa sensibilité $S$. 2. Écrire la caractéristique de transfert sous la forme $U = S\\,\\theta + U_0$ (déterminer $U_0$). 3. La serre est à $\\theta = 25$ °C : calculer la tension délivrée par le capteur. 4. Calculer le quantum $q$ du CAN, puis la valeur numérique $N$ affichée à $25$ °C. 5. À quelle variation de température correspond un quantum ? (résolution de la chaîne, en °C). 6. La ventilation est commandée par un comparateur à hystérésis : elle démarre au seuil haut $\\theta_H = 30$ °C et s'arrête au seuil bas $\\theta_B = 28$ °C. Calculer les tensions de seuil $U_H$ et $U_B$, la largeur d'hystérésis (en °C et en V), et décrire le fonctionnement lorsque la serre, partant de $25$ °C, se réchauffe.",
       "corrige": [
@@ -132,6 +132,460 @@
         "6. Tensions de seuil : $U_H = 0{,}040 \\times 30 + 0{,}40 = 1{,}60$ V et $U_B = 0{,}040 \\times 28 + 0{,}40 = 1{,}52$ V. Largeur d'hystérésis : en température $\\theta_H - \\theta_B = 30 - 28 = 2$ °C ; en tension $U_H - U_B = 1{,}60 - 1{,}52 = 0{,}08$ V $= 80$ mV. Fonctionnement : à $25$ °C, $U = 1{,}40$ V $< U_B$, la ventilation est à l'arrêt. La serre se réchauffe ; dès que $\\theta$ atteint $30$ °C ($U = U_H = 1{,}60$ V), la ventilation démarre. Elle reste en marche et ne s'arrête que lorsque la température est redescendue à $28$ °C ($U = U_B = 1{,}52$ V). Entre $28$ et $30$ °C, l'état ne change pas : les deux seuils (hystérésis) évitent que la ventilation ne claquette marche/arrêt autour d'un seuil unique."
       ],
       "reponse": "1. $\\text{EM} = 50$ °C, $S = 0{,}040$ V·°C⁻¹. 2. $U = 0{,}040\\,\\theta + 0{,}40$ ($U_0 = 0{,}40$ V). 3. $U = 1{,}40$ V à $25$ °C. 4. $q \\approx 4{,}88$ mV, $N = 286$. 5. Résolution $\\approx 0{,}12$ °C par quantum. 6. $U_H = 1{,}60$ V, $U_B = 1{,}52$ V, hystérésis $= 2$ °C $= 80$ mV ; ventilation ON à $30$ °C, OFF à $28$ °C, pas de claquetage."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "chaine-de-mesure",
+      "enonce": "Remets dans l'ordre les maillons d'une chaîne de mesure numérique et donne le rôle de chacun : CAN, traitement/affichage, capteur, conditionneur.",
+      "corrige": [
+        "Capteur : il transforme la grandeur physique en grandeur électrique.",
+        "Conditionneur : il amplifie et met en forme le signal. CAN : il convertit la tension en nombre. Traitement : l'ordinateur affiche, enregistre et exploite la valeur."
+      ],
+      "reponse": "Capteur → conditionneur → CAN → traitement/affichage."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "caracteristiques-instrument",
+      "enonce": "Un thermomètre mesure des températures de $-40\\ \\text{°C}$ à $+60\\ \\text{°C}$. Quelle est son étendue de mesure ?",
+      "corrige": [
+        "$\\text{EM} = V_{\\max} - V_{\\min}$.",
+        "$\\text{EM} = 60 - (-40) = 100\\ \\text{°C}$."
+      ],
+      "reponse": "$\\text{EM} = 100\\ \\text{°C}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "caracteristiques-instrument",
+      "enonce": "Un voltmètre numérique affiche $4{,}327\\ \\text{V}$. Quelle est sa résolution sur ce calibre ? Cela garantit-il que la mesure est juste au millivolt près ?",
+      "corrige": [
+        "La résolution est le pas du dernier chiffre affiché : $0{,}001\\ \\text{V}$, soit $1\\ \\text{mV}$.",
+        "Non : la résolution n'est pas la précision. L'appareil peut afficher au millivolt près tout en ayant une erreur systématique plus grande."
+      ],
+      "reponse": "Résolution $1\\ \\text{mV}$ ; non, résolution n'est pas précision."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "precision",
+      "enonce": "Un instrument précis est à la fois juste et fidèle. Définis en une phrase chacun de ces deux mots.",
+      "corrige": [
+        "Juste : il n'a pas d'erreur systématique, ses mesures sont centrées sur la valeur vraie.",
+        "Fidèle : des mesures répétées dans les mêmes conditions donnent des valeurs resserrées (reproductibles)."
+      ],
+      "reponse": "Juste : pas d'erreur systématique ; fidèle : mesures répétées resserrées."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "sensibilite",
+      "enonce": "La tension délivrée par un capteur de lumière augmente de $0{,}60\\ \\text{V}$ quand l'éclairement augmente de $300\\ \\text{lux}$. Calcule sa sensibilité, en $\\text{mV·lux}^{-1}$.",
+      "corrige": [
+        "$S = \\dfrac{\\Delta(\\text{sortie})}{\\Delta(\\text{entrée})} = \\dfrac{0{,}60\\ \\text{V}}{300\\ \\text{lux}} = 2{,}0\\times 10^{-3}\\ \\text{V·lux}^{-1}$.",
+        "Soit $S = 2{,}0\\ \\text{mV·lux}^{-1}$."
+      ],
+      "reponse": "$S = 2{,}0\\ \\text{mV·lux}^{-1}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "capteur-lineaire",
+      "enonce": "Un capteur de température linéaire a pour caractéristique $U = 0{,}010\\,\\theta + 0{,}25$ ($U$ en V, $\\theta$ en °C). Quelle tension délivre-t-il à $37\\ \\text{°C}$ ? Que représentent $0{,}010$ et $0{,}25$ ?",
+      "corrige": [
+        "$U = 0{,}010 \\times 37 + 0{,}25 = 0{,}37 + 0{,}25 = 0{,}62\\ \\text{V}$.",
+        "$0{,}010\\ \\text{V·°C}^{-1}$ est la pente, c'est-à-dire la sensibilité ; $0{,}25\\ \\text{V}$ est la tension délivrée à $0\\ \\text{°C}$ (ordonnée à l'origine $U_0$)."
+      ],
+      "reponse": "$U = 0{,}62\\ \\text{V}$ ; $S = 0{,}010\\ \\text{V·°C}^{-1}$ et $U_0 = 0{,}25\\ \\text{V}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "etalonnage",
+      "enonce": "Un capteur étalonné a pour caractéristique $U = 0{,}040\\,\\theta + 0{,}40$ ($U$ en V, $\\theta$ en °C). Il délivre $U = 1{,}80\\ \\text{V}$. Quelle est la température ?",
+      "corrige": [
+        "On inverse la caractéristique : $\\theta = \\dfrac{U - U_0}{S}$.",
+        "$\\theta = \\dfrac{1{,}80 - 0{,}40}{0{,}040} = \\dfrac{1{,}40}{0{,}040} = 35\\ \\text{°C}$."
+      ],
+      "reponse": "$\\theta = 35\\ \\text{°C}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "quantum",
+      "enonce": "Calcule le quantum d'un CAN de $10$ bits de calibre $10{,}0\\ \\text{V}$, en mV.",
+      "corrige": [
+        "$q = \\dfrac{\\text{calibre}}{2^{n}} = \\dfrac{10{,}0}{2^{10}} = \\dfrac{10{,}0}{1024}$.",
+        "$q \\approx 9{,}77\\times 10^{-3}\\ \\text{V} \\approx 9{,}77\\ \\text{mV}$."
+      ],
+      "reponse": "$q \\approx 9{,}77\\ \\text{mV}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "valeur-numerique",
+      "enonce": "Un CAN de $8$ bits, de calibre $5{,}00\\ \\text{V}$, reçoit une tension $U_e = 1{,}20\\ \\text{V}$. Quelle valeur numérique $N$ délivre-t-il ?",
+      "corrige": [
+        "Quantum : $q = \\dfrac{5{,}00}{256} \\approx 0{,}0195\\ \\text{V}$.",
+        "$\\dfrac{U_e}{q} = \\dfrac{1{,}20}{0{,}019\\,53} \\approx 61{,}4$ ; on garde la partie entière : $N = 61$."
+      ],
+      "reponse": "$N = 61$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "valeur-numerique",
+      "enonce": "Un CAN de $8$ bits, de calibre $5{,}00\\ \\text{V}$, délivre la valeur $N = 200$. À quelle tension d'entrée cela correspond-il, environ ?",
+      "corrige": [
+        "$q = \\dfrac{5{,}00}{256} \\approx 0{,}019\\,53\\ \\text{V}$.",
+        "$U \\approx N \\times q = 200 \\times 0{,}019\\,53 \\approx 3{,}91\\ \\text{V}$ (à un quantum près)."
+      ],
+      "reponse": "$U \\approx 3{,}91\\ \\text{V}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "tout-ou-rien",
+      "enonce": "Une alarme anti-gel se déclenche (sortie à $1$) quand la température passe sous le seuil de $3\\ \\text{°C}$. Quel est l'état de la sortie à $5\\ \\text{°C}$ ? à $1\\ \\text{°C}$ ? Pourquoi parle-t-on de chaîne « en tout ou rien » ?",
+      "corrige": [
+        "À $5\\ \\text{°C}$, la température est au-dessus du seuil : sortie à $0$ (pas d'alarme). À $1\\ \\text{°C}$, elle est en dessous : sortie à $1$ (alarme).",
+        "La sortie ne prend que deux états (alarme ou repos) : elle ne donne pas la valeur de la température, d'où le nom « tout ou rien »."
+      ],
+      "reponse": "$5\\ \\text{°C}$ : $0$ ; $1\\ \\text{°C}$ : $1$ ; seulement deux états possibles."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "caracteristiques-instrument",
+      "enonce": "On veut suivre une température qui varie rapidement, en quelques secondes. On hésite entre une sonde A (temps de réponse $0{,}5\\ \\text{s}$) et une sonde B (temps de réponse $20\\ \\text{s}$). Laquelle choisir ? Justifie.",
+      "corrige": [
+        "Le temps de réponse est le délai nécessaire pour que la mesure se stabilise après un changement brusque.",
+        "La sonde B, trop lente, ne suivrait pas des variations de quelques secondes : on choisit la sonde A."
+      ],
+      "reponse": "La sonde A (temps de réponse court)."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "resolution-can",
+      "enonce": "Combien de niveaux distincts peut coder un CAN de $16$ bits ? Compare avec un CAN de $8$ bits.",
+      "corrige": [
+        "Un CAN de $n$ bits code $2^{n}$ niveaux : $2^{16} = 65\\,536$.",
+        "Un CAN de $8$ bits en code $2^{8} = 256$ : le CAN de $16$ bits est $256$ fois plus fin."
+      ],
+      "reponse": "$65\\,536$ niveaux, soit $256$ fois plus qu'un CAN de $8$ bits."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "precision",
+      "enonce": "Trois balances pèsent trois fois une masse étalon de $50{,}00\\ \\text{g}$. A : $50{,}01$ ; $49{,}99$ ; $50{,}00\\ \\text{g}$. B : $50{,}52$ ; $50{,}49$ ; $50{,}51\\ \\text{g}$. C : $49{,}6$ ; $50{,}5$ ; $50{,}1\\ \\text{g}$. Pour chacune, dis si elle est juste, fidèle, précise.",
+      "corrige": [
+        "A : mesures resserrées et centrées sur $50{,}00\\ \\text{g}$ : juste et fidèle, donc précise.",
+        "B : mesures resserrées mais décalées d'environ $0{,}5\\ \\text{g}$ : fidèle mais pas juste (erreur systématique).",
+        "C : mesures dispersées (de $49{,}6$ à $50{,}5\\ \\text{g}$) : pas fidèle, donc pas précise, même si la moyenne ($\\approx 50{,}07\\ \\text{g}$) est proche de la valeur vraie."
+      ],
+      "reponse": "A : précise ; B : fidèle, pas juste ; C : pas fidèle."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "sensibilite",
+      "enonce": "Le capteur A a une sensibilité de $10\\ \\text{mV·°C}^{-1}$ ; le capteur B a une sensibilité de $0{,}025\\ \\text{V·°C}^{-1}$. Lequel est le plus sensible ? Quelle variation de tension donne chacun pour une hausse de $4{,}0\\ \\text{°C}$ ?",
+      "corrige": [
+        "On convertit dans la même unité : $0{,}025\\ \\text{V·°C}^{-1} = 25\\ \\text{mV·°C}^{-1}$ : le capteur B est le plus sensible.",
+        "Pour $4{,}0\\ \\text{°C}$ : A donne $10 \\times 4{,}0 = 40\\ \\text{mV}$ ; B donne $25 \\times 4{,}0 = 100\\ \\text{mV}$."
+      ],
+      "reponse": "B ($25\\ \\text{mV·°C}^{-1}$) ; $40\\ \\text{mV}$ pour A, $100\\ \\text{mV}$ pour B."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "etalonnage",
+      "enonce": "On étalonne un capteur de pression : $P = 0$ ; $1{,}0$ ; $2{,}0$ ; $3{,}0\\ \\text{bar}$ donnent $U = 0{,}50$ ; $0{,}90$ ; $1{,}30$ ; $1{,}70\\ \\text{V}$. (a) Le capteur est-il linéaire ? (b) Écris sa caractéristique. (c) Il délivre ensuite $1{,}18\\ \\text{V}$ : quelle est la pression ?",
+      "corrige": [
+        "(a) Chaque bar ajoute $0{,}40\\ \\text{V}$ : la caractéristique est une droite, le capteur est linéaire.",
+        "(b) $S = 0{,}40\\ \\text{V·bar}^{-1}$ et $U_0 = 0{,}50\\ \\text{V}$ : $U = 0{,}40\\,P + 0{,}50$.",
+        "(c) $P = \\dfrac{1{,}18 - 0{,}50}{0{,}40} = \\dfrac{0{,}68}{0{,}40} = 1{,}7\\ \\text{bar}$."
+      ],
+      "reponse": "Linéaire ; $U = 0{,}40\\,P + 0{,}50$ ; $P = 1{,}7\\ \\text{bar}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "capteur-lineaire",
+      "enonce": "Un capteur de température délivre une tension proportionnelle à la température en °C, avec une sensibilité de $10\\ \\text{mV·°C}^{-1}$ (et $0\\ \\text{V}$ à $0\\ \\text{°C}$). Il délivre $0{,}235\\ \\text{V}$. Quelle est la température ?",
+      "corrige": [
+        "La caractéristique passe par l'origine : $U = S\\,\\theta$ avec $S = 0{,}010\\ \\text{V·°C}^{-1}$.",
+        "$\\theta = \\dfrac{U}{S} = \\dfrac{0{,}235}{0{,}010} = 23{,}5\\ \\text{°C}$."
+      ],
+      "reponse": "$\\theta = 23{,}5\\ \\text{°C}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "quantum",
+      "enonce": "On compare deux CAN de même calibre $5{,}00\\ \\text{V}$ : l'un de $8$ bits, l'autre de $12$ bits. Calcule leurs quantums. Combien de fois le second est-il plus fin ?",
+      "corrige": [
+        "$8$ bits : $q = \\dfrac{5{,}00}{256} \\approx 19{,}5\\ \\text{mV}$.",
+        "$12$ bits : $q = \\dfrac{5{,}00}{4096} \\approx 1{,}22\\ \\text{mV}$.",
+        "Rapport : $\\dfrac{4096}{256} = 16$ : le CAN de $12$ bits est $16$ fois plus fin."
+      ],
+      "reponse": "$19{,}5\\ \\text{mV}$ et $1{,}22\\ \\text{mV}$ : $16$ fois plus fin."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "valeur-numerique",
+      "enonce": "Un CAN de $10$ bits a un calibre de $5{,}00\\ \\text{V}$. On lui applique $U_e = 5{,}60\\ \\text{V}$. Quelle valeur affiche-t-il ? La mesure est-elle exploitable ?",
+      "corrige": [
+        "La tension dépasse le calibre : le CAN sature et reste bloqué sur sa valeur maximale $N = 2^{10} - 1 = 1023$.",
+        "La valeur affichée correspond en fait à environ $5{,}00\\ \\text{V}$ : la mesure est fausse. Il faut un calibre plus grand ou réduire le signal."
+      ],
+      "reponse": "$N = 1023$ (saturation) : mesure fausse."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "chaine-de-mesure",
+      "enonce": "Un capteur délivre une tension comprise entre $0$ et $0{,}20\\ \\text{V}$ ; le CAN a un calibre de $5{,}00\\ \\text{V}$. Quel gain doit avoir le conditionneur pour que le signal occupe toute la plage du CAN ? Pourquoi est-ce utile ?",
+      "corrige": [
+        "On veut que $0{,}20\\ \\text{V}$ devienne $5{,}00\\ \\text{V}$ : gain $G = \\dfrac{5{,}00}{0{,}20} = 25$.",
+        "Ainsi, tous les niveaux du CAN sont utilisés : la résolution n'est pas gaspillée."
+      ],
+      "reponse": "$G = 25$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "hysteresis",
+      "enonce": "Le chauffage d'un aquarium s'allume à $24\\ \\text{°C}$ (seuil bas) et s'éteint à $26\\ \\text{°C}$ (seuil haut). Partant de $23\\ \\text{°C}$, l'eau chauffe jusqu'à $26\\ \\text{°C}$ puis refroidit. Décris l'état du chauffage à $23$, $25$ (en montant), $26$, puis $25$ (en descendant) et $24\\ \\text{°C}$.",
+      "corrige": [
+        "À $23\\ \\text{°C}$ : sous le seuil bas, chauffage allumé. À $25\\ \\text{°C}$ en montant : entre les seuils, il garde son état, donc allumé.",
+        "À $26\\ \\text{°C}$ : seuil haut atteint, il s'éteint. À $25\\ \\text{°C}$ en descendant : entre les seuils, il reste éteint.",
+        "À $24\\ \\text{°C}$ : seuil bas atteint, il se rallume."
+      ],
+      "reponse": "Allumé, allumé, éteint, éteint, rallumé."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "tout-ou-rien",
+      "enonce": "Classe ces chaînes en tout ou rien selon leur usage (alerte, régulation, sécurité) : (a) un thermostat de chauffe-eau ; (b) un détecteur de fumée qui sonne ; (c) une soupape électronique qui coupe un réacteur au-delà de $8\\ \\text{bar}$.",
+      "corrige": [
+        "(a) Le thermostat maintient la température entre deux seuils : régulation.",
+        "(b) Le détecteur prévient d'un danger : alerte. (c) La coupure protège l'installation : sécurité."
+      ],
+      "reponse": "(a) Régulation ; (b) alerte ; (c) sécurité."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "resolution-can",
+      "enonce": "Un capteur de sensibilité $20\\ \\text{mV·°C}^{-1}$ est relié à un CAN de quantum $q = 4{,}88\\ \\text{mV}$. Quelle est la plus petite variation de température que la chaîne peut distinguer ?",
+      "corrige": [
+        "Une variation de température $\\Delta\\theta$ donne $\\Delta U = S\\,\\Delta\\theta$ ; elle est détectée si $\\Delta U \\geq q$.",
+        "$\\Delta\\theta_{\\min} = \\dfrac{q}{S} = \\dfrac{4{,}88}{20} \\approx 0{,}24\\ \\text{°C}$."
+      ],
+      "reponse": "Environ $0{,}24\\ \\text{°C}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "caracteristiques-instrument",
+      "enonce": "On doit mesurer la température d'une huile de friture (jusqu'à $180\\ \\text{°C}$) au dixième de degré. Thermomètres disponibles : T1 ($-50$ à $150\\ \\text{°C}$, résolution $0{,}1\\ \\text{°C}$) ; T2 ($-50$ à $300\\ \\text{°C}$, résolution $1\\ \\text{°C}$) ; T3 ($0$ à $250\\ \\text{°C}$, résolution $0{,}1\\ \\text{°C}$). Lequel choisir ?",
+      "corrige": [
+        "T1 ne convient pas : $180\\ \\text{°C}$ est hors de son étendue de mesure.",
+        "T2 couvre la plage mais sa résolution ($1\\ \\text{°C}$) est insuffisante.",
+        "T3 couvre la plage et affiche au dixième : c'est le bon choix."
+      ],
+      "reponse": "T3."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "quantum",
+      "enonce": "Une carte d'acquisition a un calibre de $3{,}3\\ \\text{V}$. On veut un quantum inférieur ou égal à $1\\ \\text{mV}$. Combien de bits faut-il au minimum, parmi $8$, $10$ et $12$ bits ?",
+      "corrige": [
+        "Il faut $\\dfrac{3{,}3}{2^{n}} \\leq 0{,}001$, soit $2^{n} \\geq 3300$.",
+        "$2^{10} = 1024$ ne suffit pas ; $2^{12} = 4096 \\geq 3300$ convient : $q = \\dfrac{3{,}3}{4096} \\approx 0{,}81\\ \\text{mV}$."
+      ],
+      "reponse": "$12$ bits."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "etalonnage",
+      "enonce": "On étalonne une thermistance : $\\theta = 0$ ; $25$ ; $50$ ; $75\\ \\text{°C}$ donnent $U = 1{,}00$ ; $1{,}50$ ; $1{,}90$ ; $2{,}20\\ \\text{V}$. Le capteur est-il linéaire ? Peut-on utiliser une formule $\\theta = \\dfrac{U - U_0}{S}$ unique ?",
+      "corrige": [
+        "On calcule la pente entre points voisins : $\\dfrac{0{,}50}{25} = 0{,}020$ ; $\\dfrac{0{,}40}{25} = 0{,}016$ ; $\\dfrac{0{,}30}{25} = 0{,}012\\ \\text{V·°C}^{-1}$.",
+        "La pente diminue : la caractéristique n'est pas une droite, le capteur n'est pas linéaire.",
+        "On ne peut pas utiliser une sensibilité unique : on lit la température sur la courbe d'étalonnage (ou on se limite à un petit intervalle où elle est presque droite)."
+      ],
+      "reponse": "Non linéaire (pente de $0{,}020$ à $0{,}012\\ \\text{V·°C}^{-1}$) ; il faut utiliser la courbe d'étalonnage."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "valeur-numerique",
+      "enonce": "Un capteur de pression a pour caractéristique $U = 0{,}40\\,P + 0{,}50$ ($U$ en V, $P$ en bar). Sa tension entre dans un CAN de $10$ bits de calibre $5{,}00\\ \\text{V}$, qui délivre $N = 389$. Quelle est la pression ?",
+      "corrige": [
+        "$q = \\dfrac{5{,}00}{1024} \\approx 4{,}883\\ \\text{mV}$, donc $U \\approx N\\,q = 389 \\times 4{,}883\\times 10^{-3} \\approx 1{,}90\\ \\text{V}$.",
+        "$P = \\dfrac{U - 0{,}50}{0{,}40} = \\dfrac{1{,}90 - 0{,}50}{0{,}40} = 3{,}5\\ \\text{bar}$."
+      ],
+      "reponse": "$P \\approx 3{,}5\\ \\text{bar}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "hysteresis",
+      "enonce": "Un ventilateur est commandé avec un seuil unique de $20{,}0\\ \\text{°C}$. La température de la pièce fluctue sans cesse de $\\pm 0{,}3\\ \\text{°C}$ autour de $20\\ \\text{°C}$. Que se passe-t-il ? Propose deux seuils adaptés.",
+      "corrige": [
+        "Avec un seuil unique, chaque petite fluctuation fait franchir le seuil : le ventilateur s'allume et s'éteint sans arrêt (il « claquette ») et s'use.",
+        "Il faut une hystérésis plus large que les fluctuations ($0{,}6\\ \\text{°C}$ crête à crête), par exemple $S_B = 19{,}5\\ \\text{°C}$ et $S_H = 20{,}5\\ \\text{°C}$."
+      ],
+      "reponse": "Il claquette ; par exemple seuils $19{,}5$ et $20{,}5\\ \\text{°C}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "sensibilite",
+      "enonce": "Sur la caractéristique d'un capteur linéaire, on lit deux points : $(10\\ \\text{°C}\\ ;\\ 0{,}70\\ \\text{V})$ et $(60\\ \\text{°C}\\ ;\\ 1{,}95\\ \\text{V})$. Détermine sa sensibilité et sa tension à $0\\ \\text{°C}$.",
+      "corrige": [
+        "$S = \\dfrac{1{,}95 - 0{,}70}{60 - 10} = \\dfrac{1{,}25}{50} = 0{,}025\\ \\text{V·°C}^{-1} = 25\\ \\text{mV·°C}^{-1}$.",
+        "$U_0 = U - S\\,\\theta = 0{,}70 - 0{,}025 \\times 10 = 0{,}45\\ \\text{V}$."
+      ],
+      "reponse": "$S = 25\\ \\text{mV·°C}^{-1}$ ; $U_0 = 0{,}45\\ \\text{V}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "chaine-de-mesure",
+      "enonce": "Un capteur ($10\\ \\text{mV·°C}^{-1}$) est relié directement à un CAN de $8$ bits, calibre $5{,}00\\ \\text{V}$. (a) Quelle est la résolution en température de la chaîne ? (b) On ajoute un amplificateur de gain $4$ : que devient-elle ? (c) Quelle idée générale illustre cet exemple ?",
+      "corrige": [
+        "(a) $q \\approx 19{,}5\\ \\text{mV}$ ; $\\Delta\\theta_{\\min} = \\dfrac{19{,}5}{10} \\approx 2{,}0\\ \\text{°C}$ : c'est grossier.",
+        "(b) Après amplification, la sensibilité vaut $40\\ \\text{mV·°C}^{-1}$ : $\\Delta\\theta_{\\min} = \\dfrac{19{,}5}{40} \\approx 0{,}49\\ \\text{°C}$.",
+        "(c) La qualité de la mesure est limitée par le maillon le plus faible de la chaîne ; le conditionneur permet d'exploiter au mieux le CAN."
+      ],
+      "reponse": "(a) $\\approx 2{,}0\\ \\text{°C}$ ; (b) $\\approx 0{,}49\\ \\text{°C}$ ; (c) le maillon le plus faible limite la chaîne."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "tout-ou-rien",
+      "enonce": "Un comparateur reçoit la tension d'un capteur de caractéristique $U = 0{,}020\\,\\theta$ ($U$ en V, $\\theta$ en °C). Le ventilateur doit démarrer à $30\\ \\text{°C}$. Quelle tension de seuil faut-il régler sur le comparateur ?",
+      "corrige": [
+        "Le comparateur compare des tensions : on traduit le seuil de température en tension.",
+        "$U_{\\text{seuil}} = 0{,}020 \\times 30 = 0{,}60\\ \\text{V}$."
+      ],
+      "reponse": "$0{,}60\\ \\text{V}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "probleme",
+      "notion": "valeur-numerique",
+      "enonce": "**Station météo.** Un capteur d'humidité a pour caractéristique $U = 0{,}025\\,H + 0{,}50$ ($U$ en V, $H$ en %). Il est relié à un CAN de $12$ bits, calibre $3{,}30\\ \\text{V}$. (a) Quelle tension délivre-t-il pour $H = 45\\ \\%$ ? (b) Calcule le quantum et la valeur $N$. (c) Quelle est la résolution de la chaîne, en % d'humidité ?",
+      "corrige": [
+        "(a) $U = 0{,}025 \\times 45 + 0{,}50 = 1{,}625\\ \\text{V}$.",
+        "(b) $q = \\dfrac{3{,}30}{4096} \\approx 0{,}806\\ \\text{mV}$ ; $\\dfrac{U}{q} = \\dfrac{1{,}625 \\times 4096}{3{,}30} \\approx 2016{,}97$ ; on garde la partie entière : $N = 2016$.",
+        "(c) $\\Delta H_{\\min} = \\dfrac{q}{S} = \\dfrac{0{,}806\\ \\text{mV}}{25\\ \\text{mV}/\\%} \\approx 0{,}03\\ \\%$ : bien plus fin que nécessaire."
+      ],
+      "reponse": "(a) $1{,}625\\ \\text{V}$ ; (b) $q \\approx 0{,}806\\ \\text{mV}$, $N = 2016$ ; (c) environ $0{,}03\\ \\%$."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "hysteresis",
+      "enonce": "**Incubateur.** La température d'un incubateur doit rester entre $36{,}5$ et $37{,}5\\ \\text{°C}$. Le capteur délivre $10\\ \\text{mV·°C}^{-1}$ (et $0\\ \\text{V}$ à $0\\ \\text{°C}$), puis un amplificateur de gain $10$. (a) Calcule les tensions de seuil bas et haut à régler sur le comparateur. (b) Quelle est la largeur d'hystérésis, en °C et en V ? (c) Décris le fonctionnement du chauffage.",
+      "corrige": [
+        "(a) Après amplification, la sensibilité vaut $0{,}10\\ \\text{V·°C}^{-1}$ : $U_B = 0{,}10 \\times 36{,}5 = 3{,}65\\ \\text{V}$ et $U_H = 0{,}10 \\times 37{,}5 = 3{,}75\\ \\text{V}$.",
+        "(b) Largeur : $1{,}0\\ \\text{°C}$, soit $0{,}10\\ \\text{V}$.",
+        "(c) Le chauffage s'allume quand la tension descend à $3{,}65\\ \\text{V}$ et s'éteint quand elle atteint $3{,}75\\ \\text{V}$ ; entre les deux, il garde son état."
+      ],
+      "reponse": "(a) $3{,}65\\ \\text{V}$ et $3{,}75\\ \\text{V}$ ; (b) $1{,}0\\ \\text{°C}$, soit $0{,}10\\ \\text{V}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "resolution-can",
+      "enonce": "**Choisir un CAN.** Un capteur traduit $0$–$100\\ \\text{°C}$ en $0$–$1{,}00\\ \\text{V}$. Un amplificateur porte ce signal à $0$–$5{,}00\\ \\text{V}$, calibre du CAN. On veut distinguer $0{,}05\\ \\text{°C}$. (a) Quel est le gain de l'amplificateur ? (b) Quelle variation de tension correspond à $0{,}05\\ \\text{°C}$ en entrée du CAN ? (c) Quel CAN choisir parmi $8$, $10$ et $12$ bits ?",
+      "corrige": [
+        "(a) $G = \\dfrac{5{,}00}{1{,}00} = 5$.",
+        "(b) En entrée du CAN, la sensibilité vaut $\\dfrac{5{,}00\\ \\text{V}}{100\\ \\text{°C}} = 50\\ \\text{mV·°C}^{-1}$ : $0{,}05\\ \\text{°C}$ donne $2{,}5\\ \\text{mV}$.",
+        "(c) Il faut $q \\leq 2{,}5\\ \\text{mV}$, soit $2^{n} \\geq \\dfrac{5{,}00}{0{,}0025} = 2000$. $10$ bits ($1024$) ne suffisent pas ; $12$ bits ($q \\approx 1{,}22\\ \\text{mV}$) conviennent."
+      ],
+      "reponse": "(a) $5$ ; (b) $2{,}5\\ \\text{mV}$ ; (c) $12$ bits."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "chaine-de-mesure",
+      "enonce": "**Une mesure bloquée.** L'écran d'une chaîne de mesure affiche toujours $N = 1023$, quelle que soit la grandeur mesurée. Le capteur délivre jusqu'à $0{,}80\\ \\text{V}$, l'amplificateur a un gain de $10$ et le CAN ($10$ bits) un calibre de $5{,}00\\ \\text{V}$. (a) Explique la panne. (b) Quel gain maximal faut-il ? Propose une valeur entière.",
+      "corrige": [
+        "(a) Après amplification, le signal atteint $0{,}80 \\times 10 = 8{,}0\\ \\text{V}$, au-delà du calibre : le CAN sature à sa valeur maximale $2^{10} - 1 = 1023$.",
+        "(b) Il faut $0{,}80 \\times G \\leq 5{,}00$, soit $G \\leq 6{,}25$ : on peut choisir $G = 6$ (le signal maximal vaut alors $4{,}8\\ \\text{V}$)."
+      ],
+      "reponse": "(a) Saturation du CAN ; (b) $G \\leq 6{,}25$, par exemple $G = 6$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "precision",
+      "enonce": "**Vérifier un thermomètre.** On compare un thermomètre à une sonde de référence. Référence : $20{,}0$ ; $40{,}0$ ; $60{,}0\\ \\text{°C}$. Thermomètre : $20{,}8$ ; $40{,}8$ ; $60{,}8\\ \\text{°C}$ (mesures répétées identiques). (a) Le thermomètre est-il fidèle ? juste ? (b) Quelle correction appliquer ? (c) Il affiche $35{,}3\\ \\text{°C}$ : quelle est la température réelle ?",
+      "corrige": [
+        "(a) Les mesures répétées sont identiques : il est fidèle. Mais il affiche toujours $0{,}8\\ \\text{°C}$ de trop : il n'est pas juste (erreur systématique).",
+        "(b) On retranche $0{,}8\\ \\text{°C}$ à chaque lecture.",
+        "(c) $35{,}3 - 0{,}8 = 34{,}5\\ \\text{°C}$."
+      ],
+      "reponse": "(a) Fidèle mais pas juste ; (b) retrancher $0{,}8\\ \\text{°C}$ ; (c) $34{,}5\\ \\text{°C}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "caracteristiques-instrument",
+      "enonce": "**Lire une notice.** Sonde S1 : étendue $-20$ à $120\\ \\text{°C}$, résolution $0{,}1\\ \\text{°C}$, temps de réponse $2\\ \\text{s}$. Sonde S2 : étendue $-50$ à $400\\ \\text{°C}$, résolution $1\\ \\text{°C}$, temps de réponse $30\\ \\text{s}$. (a) Calcule l'étendue de mesure de chaque sonde. (b) Laquelle choisir pour suivre l'échauffement rapide d'un bain d'eau au dixième de degré ? (c) Laquelle pour contrôler un four à $250\\ \\text{°C}$ ?",
+      "corrige": [
+        "(a) S1 : $120 - (-20) = 140\\ \\text{°C}$ ; S2 : $400 - (-50) = 450\\ \\text{°C}$.",
+        "(b) S1 : l'eau reste dans son étendue, elle affiche au dixième et réagit vite ($2\\ \\text{s}$).",
+        "(c) S2 : $250\\ \\text{°C}$ est hors de l'étendue de S1."
+      ],
+      "reponse": "(a) $140\\ \\text{°C}$ et $450\\ \\text{°C}$ ; (b) S1 ; (c) S2."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "valeur-numerique",
+      "enonce": "**Enregistrement d'une montée en température.** Un capteur de caractéristique $U = 0{,}040\\,\\theta + 0{,}40$ ($U$ en V, $\\theta$ en °C) est relié à un CAN de $10$ bits, calibre $5{,}00\\ \\text{V}$. L'ordinateur enregistre successivement $N = 410$, $512$ et $615$. Retrouve les trois températures (à un quantum près).",
+      "corrige": [
+        "$q = \\dfrac{5{,}00}{1024} \\approx 4{,}883\\ \\text{mV}$ ; $U \\approx N\\,q$ donne $2{,}002$ ; $2{,}500$ et $3{,}003\\ \\text{V}$.",
+        "$\\theta = \\dfrac{U - 0{,}40}{0{,}040}$ : $\\dfrac{1{,}602}{0{,}040} \\approx 40\\ \\text{°C}$ ; $\\dfrac{2{,}100}{0{,}040} = 52{,}5\\ \\text{°C}$ ; $\\dfrac{2{,}603}{0{,}040} \\approx 65{,}1\\ \\text{°C}$."
+      ],
+      "reponse": "Environ $40$ ; $52{,}5$ et $65{,}1\\ \\text{°C}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "hysteresis",
+      "enonce": "**Remplissage d'une cuve.** Une pompe remplit une cuve : elle démarre quand le niveau descend à $0{,}50\\ \\text{m}$ et s'arrête quand il atteint $1{,}20\\ \\text{m}$. Le capteur de niveau délivre $U = 2{,}0\\,h$ ($U$ en V, $h$ en m). (a) Calcule les tensions de seuil. (b) Quelle est la largeur de l'hystérésis en m ? (c) Pourquoi ne pas utiliser un seul seuil à $1{,}00\\ \\text{m}$ ?",
+      "corrige": [
+        "(a) Seuil bas : $2{,}0 \\times 0{,}50 = 1{,}0\\ \\text{V}$ ; seuil haut : $2{,}0 \\times 1{,}20 = 2{,}4\\ \\text{V}$.",
+        "(b) $1{,}20 - 0{,}50 = 0{,}70\\ \\text{m}$.",
+        "(c) Avec un seul seuil, les remous de la surface feraient démarrer et s'arrêter la pompe sans cesse ; l'hystérésis espace les démarrages."
+      ],
+      "reponse": "(a) $1{,}0\\ \\text{V}$ et $2{,}4\\ \\text{V}$ ; (b) $0{,}70\\ \\text{m}$ ; (c) éviter les démarrages incessants."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "sensibilite",
+      "enonce": "**Balance électronique.** Le capteur de force d'une balance, suivi d'un amplificateur, délivre $0$ ; $0{,}25$ ; $0{,}50$ ; $0{,}75\\ \\text{V}$ pour des masses de $0$ ; $100$ ; $200$ ; $300\\ \\text{g}$. (a) Calcule la sensibilité de l'ensemble en $\\text{mV·g}^{-1}$. (b) Un objet donne $0{,}62\\ \\text{V}$ : quelle est sa masse ? (c) Avec un CAN de $10$ bits et de calibre $5{,}00\\ \\text{V}$, quelle est la résolution de la balance ?",
+      "corrige": [
+        "(a) $S = \\dfrac{0{,}25\\ \\text{V}}{100\\ \\text{g}} = 2{,}5\\times 10^{-3}\\ \\text{V·g}^{-1} = 2{,}5\\ \\text{mV·g}^{-1}$ (droite passant par l'origine).",
+        "(b) $m = \\dfrac{0{,}62}{2{,}5\\times 10^{-3}} = 248\\ \\text{g}$.",
+        "(c) $q = \\dfrac{5{,}00}{1024} \\approx 4{,}88\\ \\text{mV}$, donc $\\Delta m_{\\min} = \\dfrac{4{,}88}{2{,}5} \\approx 2\\ \\text{g}$."
+      ],
+      "reponse": "(a) $2{,}5\\ \\text{mV·g}^{-1}$ ; (b) $248\\ \\text{g}$ ; (c) environ $2\\ \\text{g}$."
     }
   ]
 }

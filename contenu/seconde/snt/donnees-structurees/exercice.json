@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "vocabulaire (descripteur, enregistrement)",
       "enonce": "On dispose d'un fichier CSV de bibliothèque dont la première ligne est : titre;auteur;annee;disponible. Chaque ligne suivante décrit un livre. a) Comment appelle-t-on les mots titre, auteur, annee, disponible ? b) Comment appelle-t-on la ligne décrivant un livre complet ? c) Combien de descripteurs possède chaque livre ?",
       "corrige": [
@@ -24,11 +24,11 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "format CSV",
       "enonce": "Voici deux lignes d'un fichier CSV (séparateur virgule) : \"prenom,age,ville\" puis \"Lina,15,Lyon\". a) Donne la valeur du descripteur age pour cet enregistrement. b) Pourquoi un fichier CSV s'ouvre-t-il facilement dans un tableur ? c) Cite un risque si une valeur contient elle-même une virgule (ex : une ville \"Lyon, France\").",
       "corrige": [
-        "On associe chaque descripteur à la valeur de même position : prenom=Lina, age=15, ville=Lyon. La valeur de age est donc 15.",
+        "On associe chaque descripteur à la valeur de même position : prenom=Lina, age=15, ville=Lyon. La valeur du descripteur age est donc 15.",
         "Un CSV est un simple texte où chaque ligne est une entrée et les valeurs sont séparées par un caractère (virgule) : le tableur place chaque valeur dans une colonne.",
         "La virgule interne serait prise pour un séparateur : les colonnes seraient décalées. On la protège avec des guillemets ou un autre séparateur."
       ],
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "métadonnée",
       "enonce": "Une photo prise avec un smartphone contient, en plus de l'image, la date de prise de vue, le modèle d'appareil et les coordonnées GPS du lieu. a) Comment nomme-t-on ces informations qui décrivent la donnée (l'image) ? b) Donne un usage utile de ces informations. c) Donne un risque pour la vie privée.",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "tri et filtre de données",
       "enonce": "Table \"eleves\" (nom, moyenne, classe) : Ada 16 2A ; Blaise 9 2B ; Clara 12 2A ; Denis 14 2B. a) Filtre les élèves de la classe 2A. b) Trie toute la table par moyenne décroissante. c) Après un filtre sur \"moyenne ≥ 12\", combien d'enregistrements restent ?",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "croisement de tables",
       "enonce": "Table A \"commandes\" (id_client, produit) : 1 stylo ; 2 cahier ; 1 gomme. Table B \"clients\" (id_client, nom) : 1 Sofia ; 2 Malik. a) Grâce à quel descripteur commun peut-on relier A et B ? b) Écris pour chaque commande le nom du client qui l'a passée. c) Quel intérêt de séparer les infos en deux tables plutôt qu'une seule ?",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "traitement de données en Python",
       "enonce": "Une table est représentée par une liste de dictionnaires :\nT = [{'nom':'Ada','note':16}, {'nom':'Blaise','note':9}, {'nom':'Clara','note':12}]\nOn exécute :\ns = 0\nfor e in T:\n    s = s + e['note']\nm = s / len(T)\nadmis = [e['nom'] for e in T if e['note'] >= m]\na) Que vaut s puis m ? b) Que contient la liste admis ? c) Explique en une phrase le rôle de la ligne qui construit admis.",
       "corrige": [
@@ -84,7 +84,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "types de données",
       "enonce": "Dans une table \"produits\", on stocke pour chaque article : le nom, le prix en euros, la quantité en stock et la disponibilité (oui/non). a) Donne le type le plus adapté pour chacun de ces quatre descripteurs. b) Peut-on calculer une moyenne sur le descripteur nom ? c) Pourquoi vaut-il mieux stocker le prix comme nombre plutôt que comme texte ?",
       "corrige": [
@@ -96,7 +96,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "recherche et calcul dans une table",
       "enonce": "Table \"ventes\" (jour, montant en euros) : Lun 120 ; Mar 80 ; Mer 150 ; Jeu 50. a) Quel est le montant total de la semaine ? b) Quel est le montant moyen par jour ? c) Quel jour a réalisé le maximum ?",
       "corrige": [
@@ -108,7 +108,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "formats ouverts et données ouvertes (open data)",
       "enonce": "Une commune publie en \"open data\" un fichier des horaires de bus au format CSV, librement réutilisable. a) Que signifie \"données ouvertes\" (open data) ? b) Pourquoi choisir un format ouvert comme le CSV plutôt qu'un format propriétaire ? c) Cite un service utile qu'une application peut construire à partir de ces données.",
       "corrige": [
@@ -120,7 +120,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "traitement de données en Python",
       "enonce": "Une table est représentée par une liste de dictionnaires :\nT = [{'ville':'Lyon','pluie':12}, {'ville':'Nice','pluie':3}, {'ville':'Brest','pluie':21}, {'ville':'Paris','pluie':9}]\nOn exécute :\ntotal = 0\nfor e in T:\n    total = total + e['pluie']\nseuil = total / len(T)\npluvieux = [e['ville'] for e in T if e['pluie'] > seuil]\na) Que vaut total puis seuil ? b) Que contient la liste pluvieux ? c) Explique en une phrase le rôle de la dernière ligne.",
       "corrige": [
@@ -129,6 +129,457 @@
         "Cette ligne est un filtre : elle parcourt tous les enregistrements et ne conserve que le descripteur ville des lignes dont la pluie dépasse la moyenne."
       ],
       "reponse": "total = 45, seuil = 11,25 ; pluvieux = ['Lyon', 'Brest'] ; la dernière ligne filtre les villes au-dessus de la moyenne."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire (descripteur, enregistrement)",
+      "enonce": "Une table « pays » a pour première ligne : nom;capitale;continent;langue. Elle contient ensuite 5 lignes, une par pays. a) Combien d'objets contient la table ? b) Combien d'attributs ? c) Combien de valeurs au total ?",
+      "corrige": [
+        "La première ligne donne les noms des colonnes : ce n'est pas un objet. Les 5 lignes suivantes sont les 5 objets (les pays).",
+        "Il y a 4 attributs : nom, capitale, continent, langue.",
+        "Chaque objet a une valeur par attribut : 5 × 4 = 20 valeurs."
+      ],
+      "reponse": "5 objets, 4 attributs, 20 valeurs."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire (descripteur, enregistrement)",
+      "enonce": "Vrai ou faux ? « Dans une table de données, chaque colonne représente un objet et chaque ligne un attribut. » Corrige la phrase si elle est fausse.",
+      "corrige": [
+        "C'est l'inverse de ce que dit le cours : une ligne décrit un objet complet (un enregistrement), une colonne regroupe un même attribut pour tous les objets."
+      ],
+      "reponse": "Faux : chaque ligne représente un objet et chaque colonne un attribut."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "vocabulaire (descripteur, enregistrement)",
+      "enonce": "Voici une table de films :\ntitre | année | durée (min) | genre\nFilm A | 2015 | 120 | aventure\nFilm B | 2020 | 95 | comédie\na) Quelle valeur se trouve à l'intersection de la ligne « Film B » et de la colonne « durée (min) » ? b) Quel attribut a la valeur « aventure » pour le Film A ?",
+      "corrige": [
+        "On se place sur la ligne de l'objet Film B, puis on descend dans la colonne durée : on lit 95.",
+        "La valeur « aventure » se trouve dans la colonne genre : c'est la valeur de l'attribut genre."
+      ],
+      "reponse": "a) 95 minutes ; b) l'attribut genre."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "format CSV",
+      "enonce": "Que signifie le sigle CSV ? Quel type de fichier est un fichier CSV : un fichier texte ou un fichier image ?",
+      "corrige": [
+        "CSV signifie Comma-Separated Values, c'est-à-dire « valeurs séparées par des virgules ».",
+        "C'est un fichier texte simple : on peut l'ouvrir avec un éditeur de texte comme avec un tableur."
+      ],
+      "reponse": "Comma-Separated Values (valeurs séparées par des virgules) ; c'est un fichier texte."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "format CSV",
+      "enonce": "En France, les fichiers CSV utilisent souvent le point-virgule comme séparateur, et non la virgule. Explique pourquoi à l'aide de l'exemple d'un prix de 12,50 €.",
+      "corrige": [
+        "En français, la virgule sert de séparateur décimal : 12,50 contient une virgule.",
+        "Avec la virgule comme séparateur, le tableur lirait 12 et 50 comme deux valeurs différentes. Le point-virgule évite cette confusion."
+      ],
+      "reponse": "Parce que la virgule est le séparateur décimal en français (12,50) : elle serait confondue avec le séparateur de colonnes."
+    },
+    {
+      "id": 16,
+      "difficulte": "intermediaire",
+      "notion": "format CSV",
+      "enonce": "Un fichier CSV a pour en-tête : nom,note,ville. Une ligne est écrite ainsi : Paul,12,5,Lyon. a) Combien de valeurs le tableur va-t-il lire sur cette ligne ? b) Quelle valeur va se retrouver dans la colonne ville ? c) Propose deux façons de corriger le problème.",
+      "corrige": [
+        "Le tableur coupe la ligne à chaque virgule : Paul / 12 / 5 / Lyon, soit 4 valeurs pour 3 colonnes.",
+        "La troisième valeur, 5, tombe dans la colonne ville ; Lyon déborde dans une quatrième colonne.",
+        "Corrections possibles : utiliser le point-virgule comme séparateur (Paul;12,5;Lyon), écrire la note avec un point (12.5) ou mettre la valeur entre guillemets (\"12,5\")."
+      ],
+      "reponse": "4 valeurs ; la colonne ville reçoit 5 ; on change de séparateur (;), on écrit 12.5 ou on met \"12,5\" entre guillemets."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "format CSV",
+      "enonce": "Écris le contenu d'un fichier CSV (séparateur point-virgule, avec une ligne d'en-tête) correspondant à cette table :\nfruit | prix au kg (€) | origine\npomme | 2,40 | France\nmangue | 6,90 | Pérou",
+      "corrige": [
+        "La première ligne contient les noms des colonnes séparés par des points-virgules.",
+        "Chaque objet occupe ensuite une ligne, avec ses valeurs dans le même ordre que l'en-tête."
+      ],
+      "reponse": "fruit;prix au kg (€);origine — pomme;2,40;France — mangue;6,90;Pérou (une ligne chacun)."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "types de données",
+      "enonce": "Donne le type de chacune de ces valeurs : a) Lyon ; b) 2024 (une année) ; c) 14,5 (une note) ; d) vrai (l'attribut « disponible ») ; e) 12/03/2025.",
+      "corrige": [
+        "Lyon est une suite de caractères : texte. Une année est un nombre entier. Une note avec une virgule est un nombre décimal.",
+        "« vrai » ne peut prendre que deux valeurs (vrai/faux) : c'est un booléen. 12/03/2025 est une date."
+      ],
+      "reponse": "a) texte ; b) entier ; c) décimal ; d) booléen ; e) date."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "types de données",
+      "enonce": "Qu'affiche ce programme ? Explique pourquoi les deux résultats ne sont pas rangés dans le même ordre.\n\n```python\nprint(sorted([\"9\", \"10\", \"100\"]))\nprint(sorted([9, 10, 100]))\n```",
+      "corrige": [
+        "La première liste contient des textes : Python les trie caractère par caractère, comme dans un dictionnaire. « 1 » vient avant « 9 », donc \"10\" et \"100\" passent avant \"9\".",
+        "La seconde liste contient des nombres entiers : ils sont triés par valeur.",
+        "D'où l'importance du type : un nombre stocké comme texte est mal trié."
+      ],
+      "reponse": "['10', '100', '9'] puis [9, 10, 100] : les textes sont triés caractère par caractère, les nombres par valeur."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "types de données",
+      "enonce": "Le code postal de Bourg-en-Bresse est 01000. Un tableur l'affiche « 1000 » parce qu'il l'a enregistré comme un nombre entier. a) Quelle information a été perdue ? b) Quel type faut-il choisir pour un code postal ? Justifie.",
+      "corrige": [
+        "Un nombre entier ne garde pas les zéros placés au début : 01000 devient 1000, le premier chiffre 0 est perdu.",
+        "Un code postal n'est pas une quantité : on ne fait jamais de calcul dessus. On le stocke comme texte, ce qui conserve tous ses chiffres."
+      ],
+      "reponse": "Le zéro du début est perdu ; il faut le type texte, car on ne calcule pas sur un code postal."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "métadonnée",
+      "enonce": "Pour un fichier de traitement de texte, on dispose de : le texte lui-même, le nom de l'auteur, la date de création, la taille du fichier, le nombre de pages. Lesquelles de ces informations sont des métadonnées ?",
+      "corrige": [
+        "La donnée elle-même, c'est le contenu : le texte écrit.",
+        "Les métadonnées décrivent ce contenu sans en faire partie : auteur, date de création, taille, nombre de pages."
+      ],
+      "reponse": "Métadonnées : auteur, date de création, taille du fichier, nombre de pages (le texte est la donnée)."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "métadonnée",
+      "enonce": "Les métadonnées d'une photo indiquent : date 14/06/2025, heure 18 h 42, latitude 45,76° N, longitude 4,84° E. Léo veut publier cette photo prise devant chez lui. a) Quel risque prend-il ? b) Que peut-il faire avant de la publier ?",
+      "corrige": [
+        "Les coordonnées GPS désignent un lieu précis (ici dans Lyon) : n'importe qui pourrait retrouver l'endroit où Léo habite et savoir quand il y était.",
+        "Avant de publier, il peut supprimer les métadonnées de localisation (beaucoup de logiciels le proposent) ou désactiver la géolocalisation de l'appareil photo."
+      ],
+      "reponse": "Il révèle son lieu de domicile ; il doit supprimer les coordonnées GPS des métadonnées (ou désactiver la géolocalisation)."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "métadonnée",
+      "enonce": "Sans lire le contenu d'un courriel, on connaît ses métadonnées : expéditeur, destinataire, date et heure d'envoi. Que peut-on apprendre sur une personne en observant les métadonnées de tous ses courriels pendant un mois ?",
+      "corrige": [
+        "Les métadonnées révèlent avec qui la personne communique, à quelle fréquence et à quels moments.",
+        "On peut en déduire son entourage, ses habitudes (horaires) et ses relations, sans jamais lire un message : c'est pourquoi les métadonnées touchent à la vie privée."
+      ],
+      "reponse": "Avec qui elle échange, à quelle fréquence et à quelles heures : son réseau de contacts et ses habitudes."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "tri et filtre de données",
+      "enonce": "Table « livres » (titre, année) : Le Grand Voyage 1998 ; Ciel rouge 2005 ; L'Île 2012 ; Marées 1987 ; Pixel 2021. a) Filtre les livres parus après 2000. b) Combien d'enregistrements obtient-on ?",
+      "corrige": [
+        "On garde seulement les lignes dont l'année est strictement supérieure à 2000.",
+        "Ciel rouge (2005), L'Île (2012) et Pixel (2021) vérifient la condition ; Le Grand Voyage (1998) et Marées (1987) sont écartés."
+      ],
+      "reponse": "Ciel rouge, L'Île, Pixel : 3 enregistrements."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "tri et filtre de données",
+      "enonce": "On applique à une table de 200 lignes : a) un tri par prix croissant ; b) un filtre « prix < 10 € ». Pour chaque opération, dis si le nombre de lignes peut changer, et explique la différence entre trier et filtrer.",
+      "corrige": [
+        "Trier change seulement l'ordre des lignes : on garde les 200 lignes.",
+        "Filtrer ne garde que les lignes qui vérifient la condition : on peut obtenir moins de 200 lignes (entre 0 et 200)."
+      ],
+      "reponse": "Le tri garde 200 lignes dans un autre ordre ; le filtre peut en retirer (il ne garde que celles qui vérifient la condition)."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "tri et filtre de données",
+      "enonce": "Trie par ordre alphabétique croissant les valeurs de la colonne « ville » : Toulouse, Brest, Nantes, Bordeaux, Nice.",
+      "corrige": [
+        "On compare la première lettre : B, B, N, N, T. Pour départager Brest et Bordeaux, on compare la deuxième lettre : o vient avant r. De même, Nantes avant Nice (a avant i)."
+      ],
+      "reponse": "Bordeaux, Brest, Nantes, Nice, Toulouse."
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "tri et filtre de données",
+      "enonce": "Table « élèves » (nom, classe, moyenne) : Inès 2B 13 ; Hugo 2A 11 ; Yanis 2B 15 ; Zoé 2A 17 ; Emma 2A 9. On trie d'abord par classe (ordre alphabétique), puis, à l'intérieur de chaque classe, par moyenne décroissante. Donne l'ordre obtenu.",
+      "corrige": [
+        "Premier critère : la classe. Les élèves de 2A (Hugo, Zoé, Emma) passent avant ceux de 2B (Inès, Yanis).",
+        "Second critère, dans chaque classe : moyenne décroissante. En 2A : Zoé 17, Hugo 11, Emma 9. En 2B : Yanis 15, Inès 13."
+      ],
+      "reponse": "Zoé, Hugo, Emma (2A), puis Yanis, Inès (2B)."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "recherche et calcul dans une table",
+      "enonce": "Températures relevées à midi pendant une semaine (°C) : 12 ; 15 ; 9 ; 14 ; 10 ; 16 ; 8. Donne le minimum, le maximum et la moyenne.",
+      "corrige": [
+        "Minimum = plus petite valeur : 8 °C. Maximum = plus grande : 16 °C.",
+        "Somme : 12 + 15 + 9 + 14 + 10 + 16 + 8 = 84. Moyenne = 84 / 7 = 12 °C."
+      ],
+      "reponse": "Minimum 8 °C, maximum 16 °C, moyenne 12 °C."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "recherche et calcul dans une table",
+      "enonce": "Dans un tableur, des prix occupent les cellules B2 à B8. Associe chaque formule à son résultat : =SOMME(B2:B8) ; =MOYENNE(B2:B8) ; =MAX(B2:B8) ; =MIN(B2:B8). Résultats possibles : le prix le plus élevé, le total des prix, le prix le plus bas, le prix moyen.",
+      "corrige": [
+        "SOMME additionne les valeurs : total des prix. MOYENNE divise ce total par le nombre de valeurs : prix moyen.",
+        "MAX renvoie la plus grande valeur, MIN la plus petite."
+      ],
+      "reponse": "SOMME → total ; MOYENNE → prix moyen ; MAX → prix le plus élevé ; MIN → prix le plus bas."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "recherche et calcul dans une table",
+      "enonce": "Table « films » (titre, genre) : Alpha comédie ; Bêta drame ; Gamma comédie ; Delta aventure ; Epsilon comédie ; Zêta drame. a) Compte le nombre de films de chaque genre. b) Quel est le genre le plus représenté ?",
+      "corrige": [
+        "On parcourt la colonne genre en comptant : comédie apparaît 3 fois (Alpha, Gamma, Epsilon), drame 2 fois (Bêta, Zêta), aventure 1 fois (Delta).",
+        "Vérification : 3 + 2 + 1 = 6, le nombre total de films."
+      ],
+      "reponse": "comédie 3, drame 2, aventure 1 ; le genre le plus représenté est la comédie."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "croisement de tables",
+      "enonce": "Table « élèves » (id, nom) : 1 Lina ; 2 Omar ; 3 Jade. Table « notes » (id, matière, note) : 1 maths 14 ; 3 maths 11 ; 1 SNT 17 ; 2 SNT 12. Quelles sont les notes de Lina, avec leur matière ?",
+      "corrige": [
+        "Dans la table élèves, Lina a l'identifiant 1.",
+        "Dans la table notes, on garde les lignes dont l'id vaut 1 : maths 14 et SNT 17."
+      ],
+      "reponse": "Lina : 14 en maths et 17 en SNT."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "croisement de tables",
+      "enonce": "Pour relier une table « clients » et une table « commandes », pourquoi utilise-t-on un identifiant (id_client) plutôt que le nom du client ?",
+      "corrige": [
+        "Deux clients peuvent porter le même nom (homonymes) : le croisement par le nom mélangerait leurs commandes.",
+        "Un identifiant est unique pour chaque client : il désigne sans ambiguïté un seul objet. De plus, si le client change de nom, l'identifiant reste le même."
+      ],
+      "reponse": "Parce que l'identifiant est unique, alors que deux clients peuvent avoir le même nom."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "croisement de tables",
+      "enonce": "Table « villes » (ville, num_dep) : Lyon 69 ; Lille 59 ; Marseille 13 ; Villeurbanne 69. Table « départements » (num_dep, nom_dep) : 13 Bouches-du-Rhône ; 59 Nord ; 69 Rhône. a) Quel attribut commun permet le croisement ? b) Donne le nom du département de chaque ville. c) Combien de villes de la table sont dans le Rhône ?",
+      "corrige": [
+        "Les deux tables partagent l'attribut num_dep.",
+        "On cherche chaque numéro dans la seconde table : Lyon 69 → Rhône ; Lille 59 → Nord ; Marseille 13 → Bouches-du-Rhône ; Villeurbanne 69 → Rhône.",
+        "Lyon et Villeurbanne ont le numéro 69 : 2 villes."
+      ],
+      "reponse": "a) num_dep ; b) Lyon et Villeurbanne → Rhône, Lille → Nord, Marseille → Bouches-du-Rhône ; c) 2 villes."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "traitement de données en Python",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\nT = [{'nom': 'Ada', 'age': 15}, {'nom': 'Bob', 'age': 16}, {'nom': 'Cléa', 'age': 15}]\nprint(len(T))\nprint(T[1]['nom'])\nprint(T[2]['age'])\n```",
+      "corrige": [
+        "len(T) donne le nombre d'enregistrements : 3.",
+        "Les indices commencent à 0 : T[1] est le deuxième enregistrement (Bob), T[2] le troisième (Cléa, 15 ans)."
+      ],
+      "reponse": "3, puis Bob, puis 15."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "traitement de données en Python",
+      "enonce": "Qu'affiche ce programme ? Quel traitement réalise-t-il ?\n\n```python\nfilms = [{'titre': 'Film A', 'annee': 2015}, {'titre': 'Film B', 'annee': 2020}, {'titre': 'Film C', 'annee': 2019}]\nfor f in films:\n    if f['annee'] > 2018:\n        print(f['titre'])\n```",
+      "corrige": [
+        "La boucle parcourt chaque film et n'affiche le titre que si l'année dépasse 2018.",
+        "Film A (2015) est écarté ; Film B (2020) et Film C (2019) sont affichés : c'est un filtre."
+      ],
+      "reponse": "Film B puis Film C : c'est un filtre (films sortis après 2018)."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "traitement de données en Python",
+      "enonce": "Ce programme cherche la ville la plus peuplée. Qu'affiche-t-il ?\n\n```python\nT = [{'ville': 'Nantes', 'hab': 320000}, {'ville': 'Lille', 'hab': 236000}, {'ville': 'Nice', 'hab': 348000}]\nmeilleure = T[0]\nfor e in T:\n    if e['hab'] > meilleure['hab']:\n        meilleure = e\nprint(meilleure['ville'])\n```",
+      "corrige": [
+        "On part du premier enregistrement (Nantes, 320 000), puis on le remplace chaque fois qu'on trouve plus grand.",
+        "Lille (236 000) n'est pas plus grand ; Nice (348 000) l'est : meilleure devient Nice."
+      ],
+      "reponse": "Nice."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "traitement de données en Python",
+      "enonce": "Les lignes d'un petit fichier CSV ont été lues dans une liste. Chaque ligne est découpée au point-virgule. Qu'affiche ce programme ?\n\n```python\nlignes = [\"nom;age\", \"Lina;15\", \"Tom;16\"]\nfor ligne in lignes[1:]:\n    valeurs = ligne.split(\";\")\n    print(valeurs[0], \"a\", valeurs[1], \"ans\")\n```",
+      "corrige": [
+        "lignes[1:] saute la première ligne, qui est l'en-tête.",
+        "Chaque ligne est coupée au point-virgule : ['Lina', '15'] puis ['Tom', '16'] ; valeurs[0] est le nom, valeurs[1] l'âge.",
+        "print sépare ses éléments par un espace."
+      ],
+      "reponse": "Lina a 15 ans, puis Tom a 16 ans."
+    },
+    {
+      "id": 38,
+      "difficulte": "probleme",
+      "notion": "traitement de données en Python",
+      "enonce": "Ce programme doit calculer le total des prix lus dans un fichier CSV, mais il provoque une erreur. a) Quel est le type des prix dans la table ? b) Corrige la ligne fautive. c) Qu'affiche alors le programme ?\n\n```python\nT = [{'article': 'stylo', 'prix': '1.5'}, {'article': 'cahier', 'prix': '3'}]\ntotal = 0\nfor e in T:\n    total = total + e['prix']\nprint(total)\n```",
+      "corrige": [
+        "Les prix sont écrits entre guillemets : ce sont des textes (chaînes), comme toujours quand on lit un fichier CSV.",
+        "Python refuse d'additionner un nombre et un texte (TypeError). Il faut convertir : total = total + float(e['prix']).",
+        "On obtient alors 0 + 1,5 + 3 = 4,5, affiché 4.5."
+      ],
+      "reponse": "Les prix sont des textes ; on écrit total = total + float(e['prix']) ; le programme affiche 4.5."
+    },
+    {
+      "id": 39,
+      "difficulte": "decouverte",
+      "notion": "format JSON",
+      "enonce": "Voici un objet au format JSON : {\"nom\": \"Lina\", \"age\": 15, \"inscrite\": true}. a) Quels sont les attributs (clés) ? b) Quelle est la valeur associée à age ? c) Quel est le type de la valeur associée à la clé inscrite ?",
+      "corrige": [
+        "En JSON, un objet est écrit entre accolades sous la forme clé : valeur.",
+        "Les clés sont nom, age et inscrite. La valeur associée à age est 15. true signifie « vrai » : c'est un booléen."
+      ],
+      "reponse": "a) nom, age, inscrite ; b) 15 ; c) booléen."
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "format JSON",
+      "enonce": "Un fichier CSV a pour en-tête titre;annee;genre et contient la ligne Film B;2020;comédie. Écris le même enregistrement au format JSON.",
+      "corrige": [
+        "Chaque attribut de l'en-tête devient une clé, associée à la valeur de même position.",
+        "Le texte s'écrit entre guillemets ; l'année, qui est un nombre, s'écrit sans guillemets."
+      ],
+      "reponse": "{\"titre\": \"Film B\", \"annee\": 2020, \"genre\": \"comédie\"}"
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "format JSON",
+      "enonce": "Un fichier JSON contient : [{\"ville\": \"Brest\", \"pluie\": 21}, {\"ville\": \"Nice\", \"pluie\": 3}, {\"ville\": \"Lyon\", \"pluie\": 12}]. a) Combien d'objets contient-il ? b) Écris la même table au format CSV (séparateur point-virgule, avec en-tête). c) Cite un usage courant du format JSON.",
+      "corrige": [
+        "Les crochets délimitent une liste de 3 objets (3 paires d'accolades).",
+        "En CSV : l'en-tête ville;pluie puis une ligne par objet : Brest;21, Nice;3, Lyon;12.",
+        "Le JSON sert surtout à échanger des données entre programmes, par exemple entre un site web et un serveur."
+      ],
+      "reponse": "3 objets ; ville;pluie / Brest;21 / Nice;3 / Lyon;12 ; échanger des données entre programmes."
+    },
+    {
+      "id": 42,
+      "difficulte": "decouverte",
+      "notion": "big data et stockage dans le cloud",
+      "enonce": "Parmi ces ensembles de données, lequel relève du Big Data ? a) la liste des 30 élèves d'une classe ; b) les positions envoyées chaque seconde par des millions de smartphones ; c) les notes d'un élève sur un trimestre.",
+      "corrige": [
+        "Le Big Data désigne des données si volumineuses qu'elles demandent des outils spécifiques pour être stockées et analysées.",
+        "Une classe ou un bulletin tiennent dans un simple tableur ; des millions de positions chaque seconde, non."
+      ],
+      "reponse": "b) les positions de millions de smartphones."
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "big data et stockage dans le cloud",
+      "enonce": "Classe chacune de ces affirmations en « avantage » ou « inconvénient » du stockage dans le cloud : a) accéder à ses fichiers depuis n'importe quel appareil ; b) dépendre d'une entreprise qui héberge ses données ; c) partager facilement un dossier ; d) consommation d'énergie des centres de données ; e) ne plus pouvoir accéder à ses fichiers sans connexion Internet.",
+      "corrige": [
+        "Le cloud est pratique : accès partout et partage (a, c).",
+        "Il pose aussi des problèmes : dépendance envers un hébergeur (b), énergie consommée par des serveurs bien réels (d), besoin d'une connexion (e)."
+      ],
+      "reponse": "Avantages : a, c. Inconvénients : b, d, e."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "big data et stockage dans le cloud",
+      "enonce": "Clara prend en moyenne 10 photos par jour avec son téléphone ; chaque photo pèse environ 3 Mo. a) Quel volume occupent ses photos en un an (365 jours) ? b) Convertis en gigaoctets (1 Go = 1 000 Mo). c) Pourquoi beaucoup de personnes stockent-elles ces photos dans le cloud ?",
+      "corrige": [
+        "Volume = 10 × 3 × 365 = 10 950 Mo.",
+        "10 950 Mo = 10,95 Go, soit environ 11 Go.",
+        "Le cloud libère la mémoire du téléphone, sert de sauvegarde et rend les photos accessibles depuis d'autres appareils."
+      ],
+      "reponse": "10 950 Mo, soit environ 11 Go ; pour libérer la mémoire du téléphone et avoir une sauvegarde accessible partout."
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "protection des données (RGPD)",
+      "enonce": "Quel droit garanti par le RGPD chacune de ces personnes utilise-t-elle ? a) Sami demande à un site la liste des données qu'il détient sur lui. b) Nora signale que son adresse enregistrée est fausse. c) Yanis demande la suppression de son compte et de ses données.",
+      "corrige": [
+        "Connaître les données détenues : droit d'accès.",
+        "Faire corriger une donnée inexacte : droit de rectification.",
+        "Faire effacer ses données : droit de suppression (droit à l'effacement)."
+      ],
+      "reponse": "a) droit d'accès ; b) droit de rectification ; c) droit de suppression (effacement)."
+    },
+    {
+      "id": 46,
+      "difficulte": "decouverte",
+      "notion": "protection des données (RGPD)",
+      "enonce": "Que signifie le sigle RGPD ? Quel organisme veille au respect de ces règles en France ?",
+      "corrige": [
+        "RGPD signifie Règlement général sur la protection des données ; il s'applique dans toute l'Union européenne.",
+        "En France, c'est la CNIL (Commission nationale de l'informatique et des libertés) qui contrôle son application."
+      ],
+      "reponse": "Règlement général sur la protection des données ; la CNIL."
+    },
+    {
+      "id": 47,
+      "difficulte": "intermediaire",
+      "notion": "protection des données (RGPD)",
+      "enonce": "Lors d'une inscription, la case « J'accepte de recevoir des offres publicitaires » est déjà cochée. Ce procédé respecte-t-il le RGPD ? Justifie avec la notion de consentement.",
+      "corrige": [
+        "Le RGPD exige un consentement : la personne doit accepter clairement et activement l'utilisation de ses données.",
+        "Une case cochée d'avance ne prouve pas que l'utilisateur a choisi : c'est à lui de la cocher."
+      ],
+      "reponse": "Non : le consentement doit être un acte volontaire de l'utilisateur ; la case ne doit pas être précochée."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "formats ouverts et données ouvertes (open data)",
+      "enonce": "Une mairie hésite à publier en open data : a) les horaires des piscines municipales ; b) l'emplacement des bornes de recharge ; c) les noms et adresses des personnes inscrites à la cantine. Quelles données peut-elle publier ? Justifie.",
+      "corrige": [
+        "Les données ouvertes doivent être librement réutilisables par tous : on y publie des données d'intérêt public (a, b).",
+        "Les noms et adresses sont des données personnelles, protégées par le RGPD : elles ne peuvent pas être publiées."
+      ],
+      "reponse": "Elle peut publier a et b ; pas c, qui contient des données personnelles."
+    },
+    {
+      "id": 49,
+      "difficulte": "approfondissement",
+      "notion": "formats ouverts et données ouvertes (open data)",
+      "enonce": "Un fichier open data recense des stations de vélos en libre-service (station, places) : Gare 30 ; Mairie 18 ; Parc 12 ; Lycée 20. a) Combien de places y a-t-il au total ? b) Quel est le nombre moyen de places par station ? c) Quelles stations ont plus de places que la moyenne ? d) Pourquoi est-ce utile que ces données soient au format CSV ?",
+      "corrige": [
+        "Total : 30 + 18 + 12 + 20 = 80 places.",
+        "Moyenne : 80 / 4 = 20 places par station.",
+        "Strictement plus que 20 : seule la station Gare (30) ; Lycée en a exactement 20.",
+        "Le CSV est un format ouvert : n'importe quel logiciel ou programme peut le lire et le réutiliser."
+      ],
+      "reponse": "80 places ; 20 en moyenne ; seule la station Gare dépasse la moyenne ; le CSV est lisible par tous les logiciels."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "vocabulaire (descripteur, enregistrement)",
+      "enonce": "Un club de sport tient ce fichier CSV :\nnom;age;telephone;licence_payee\nAmine;15;0612345678;vrai\nLou;16;0698765432;faux\nSacha;15;0611223344;vrai\na) Combien d'objets et combien d'attributs ? b) Donne le type de chaque attribut. c) Quel est l'âge moyen des adhérents (au dixième près) ? d) Quelle donnée personnelle demande une protection particulière, et quelle règle s'applique ?",
+      "corrige": [
+        "3 objets (les adhérents) et 4 attributs (nom, age, telephone, licence_payee).",
+        "nom : texte ; age : entier ; telephone : texte (on ne calcule pas dessus et le 0 initial doit être conservé) ; licence_payee : booléen.",
+        "Âge moyen : (15 + 16 + 15) / 3 = 46 / 3 ≈ 15,3 ans.",
+        "Le numéro de téléphone est une donnée personnelle : le RGPD impose de le protéger et de ne pas le diffuser sans consentement."
+      ],
+      "reponse": "3 objets, 4 attributs ; texte, entier, texte, booléen ; environ 15,3 ans ; le téléphone, protégé par le RGPD."
     }
   ]
 }

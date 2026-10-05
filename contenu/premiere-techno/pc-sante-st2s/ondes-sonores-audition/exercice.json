@@ -127,7 +127,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese-ondes-sonores-audition",
       "enonce": "Hugo, élève de ST2S, prépare un exposé sur le bruit et l'audition. Données : $I_0 = 10^{-12}$ W·m⁻² ; une oreille jeune entend de $20$ Hz à $20$ kHz ; le seuil de danger est $85$ dB pour $8$ h, et chaque $+3$ dB (intensité doublée) divise par deux la durée d'exposition sans risque ; seuil de douleur $\\approx 120$ dB. On rappelle $L = 10\\log\\!\\left(\\dfrac{I}{I_0}\\right)$, $I = I_0 \\times 10^{L/10}$ et $\\log 2 \\approx 0{,}30$.\n\n1. Un haut-parleur émet un son de fréquence $f = 1$ kHz. Calculer sa période $T$. Puis, pour les trois fréquences $5$ Hz, $1$ kHz et $25$ kHz, indiquer si une oreille jeune les perçoit et nommer leur domaine.\n2. Dans le hall d'une salle de spectacle, une sono délivre une intensité $I = 10^{-4}$ W·m⁻². Calculer le niveau sonore $L$ correspondant.\n3. On met en marche une seconde sono identique. Calculer le niveau sonore total. L'affirmation « $80 + 80 = 160$ dB » est-elle correcte ?\n4. Plus tard, le niveau dans le hall atteint $88$ dB. De combien dépasse-t-il le seuil de danger ? En déduire la durée d'exposition sans risque à $88$ dB. Hugo y reste $6$ h : que conclure ?\n5. Expliquer, en citant l'élément de l'oreille interne en cause, pourquoi une exposition répétée à un tel niveau peut provoquer une perte auditive définitive.\n6. Le grand-père de Hugo a un seuil d'audition monté à $50$ dB. Entend-il une conversation à $60$ dB ? un chuchotement à $30$ dB ? Sa prothèse ajoute $+30$ dB : par quel facteur multiplie-t-elle l'intensité, et à quel niveau lui parvient alors le chuchotement à $30$ dB ? Est-il redevenu audible pour lui ?",
       "corrige": [
@@ -139,6 +139,460 @@
         "6. Sans prothèse, il n'entend que les sons dépassant son seuil de $50$ dB : la conversation ($60$ dB $> 50$ dB) est $\\textbf{entendue}$, le chuchotement ($30$ dB $< 50$ dB) $\\textbf{non entendu}$. La prothèse ajoute $+30$ dB, ce qui multiplie l'intensité par $10^{30/10} = 10^{3} = 1000$. Le chuchotement lui parvient alors à $30 + 30 = 60$ dB $> 50$ dB : il redevient $\\textbf{audible}$."
       ],
       "reponse": "1. $T = 1$ ms ; $5$ Hz infrason, $1$ kHz audible, $25$ kHz ultrason. 2. $L = 80$ dB. 3. $L_{tot} \\approx 83$ dB ; « $160$ dB » est faux (on additionne les intensités, $\\times 2 \\Rightarrow +3$ dB). 4. Dépassement de $3$ dB $\\Rightarrow$ durée sans risque $4$ h ; à $6$ h, en danger. 5. Cellules ciliées de la cochlée, fragiles et non régénérées $\\Rightarrow$ perte définitive. 6. Conversation entendue, chuchotement non ; prothèse $+30$ dB $\\Rightarrow$ intensité $\\times 1000$, chuchotement porté à $60$ dB, redevenu audible."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "propagation-son",
+      "enonce": "Deux astronautes en sortie dans l'espace, sans radio, ne peuvent pas s'entendre même s'ils crient. Expliquer pourquoi.",
+      "corrige": [
+        "Le son est une vibration qui se propage de proche en proche dans un milieu **matériel** (air, eau, solide).",
+        "Dans le vide de l'espace, il n'y a pas de matière à faire vibrer : le son ne peut pas se propager."
+      ],
+      "reponse": "Le son a besoin d'un milieu matériel ; il ne se propage pas dans le vide."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "frequence-hauteur",
+      "enonce": "La voix d'un enfant est plus aiguë que celle d'un homme adulte. Laquelle a la fréquence la plus élevée ?",
+      "corrige": [
+        "La hauteur d'un son dépend uniquement de sa fréquence : un son aigu a une fréquence élevée.",
+        "La voix de l'enfant (autour de $300$ Hz) a donc une fréquence plus élevée que celle de l'homme (autour de $100$ à $150$ Hz)."
+      ],
+      "reponse": "La voix de l'enfant."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "domaines-frequences",
+      "enonce": "Classer en infrasons, sons audibles ou ultrasons : a) $15$ Hz ; b) $3$ kHz ; c) $2$ MHz (sonde d'échographie).",
+      "corrige": [
+        "Audible : de $20$ Hz à $20$ kHz ; en dessous, infrasons ; au-dessus, ultrasons.",
+        "a) $15$ Hz $< 20$ Hz : infrason. b) $3$ kHz : audible. c) $2$ MHz $= 2\\,000\\,000$ Hz $> 20$ kHz : ultrason."
+      ],
+      "reponse": "a) infrason ; b) audible ; c) ultrason."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "oreille",
+      "enonce": "Indiquer à quelle partie de l'oreille (externe, moyenne, interne) appartient chaque élément : a) le pavillon ; b) les osselets ; c) la cochlée ; d) le conduit auditif ; e) le tympan.",
+      "corrige": [
+        "L'oreille externe comprend le pavillon et le conduit auditif ; l'oreille moyenne, le tympan et les osselets ; l'oreille interne, la cochlée."
+      ],
+      "reponse": "a) externe ; b) moyenne ; c) interne ; d) externe ; e) moyenne."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "frequence-hauteur",
+      "enonce": "Un son a une période $T = 0{,}50$ ms. Calculer sa fréquence. Est-il audible ?",
+      "corrige": [
+        "$T = 0{,}50$ ms $= 5{,}0 \\times 10^{-4}$ s.",
+        "$f = \\dfrac{1}{T} = \\dfrac{1}{5{,}0 \\times 10^{-4}} = 2\\,000$ Hz $= 2$ kHz : compris entre $20$ Hz et $20$ kHz, il est audible."
+      ],
+      "reponse": "$f = 2\\,000$ Hz ; audible."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "frequence-hauteur",
+      "enonce": "La voix d'un homme a une fréquence fondamentale d'environ $f = 100$ Hz. Calculer la période correspondante en secondes puis en millisecondes.",
+      "corrige": [
+        "$T = \\dfrac{1}{f} = \\dfrac{1}{100} = 0{,}010$ s.",
+        "$0{,}010$ s $= 10$ ms."
+      ],
+      "reponse": "$T = 0{,}010$ s $= 10$ ms."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "calcul-niveau",
+      "enonce": "Le bruissement de feuilles correspond à une intensité $I = 10^{-10}$ W·m⁻². Calculer son niveau sonore ($I_0 = 10^{-12}$ W·m⁻²).",
+      "corrige": [
+        "$\\dfrac{I}{I_0} = \\dfrac{10^{-10}}{10^{-12}} = 10^{2}$.",
+        "$L = 10\\log(10^{2}) = 10 \\times 2 = 20$ dB."
+      ],
+      "reponse": "$L = 20$ dB."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "calcul-niveau",
+      "enonce": "Calculer le niveau sonore : a) d'un son d'intensité $I = 10^{-12}$ W·m⁻² ; b) d'un son d'intensité $I = 1$ W·m⁻². À quoi correspondent ces deux niveaux ?",
+      "corrige": [
+        "a) $I = I_0$, donc $L = 10\\log(1) = 0$ dB : c'est le seuil d'audibilité.",
+        "b) $\\dfrac{I}{I_0} = 10^{12}$, donc $L = 10 \\times 12 = 120$ dB : c'est le seuil de douleur."
+      ],
+      "reponse": "a) $0$ dB (seuil d'audibilité) ; b) $120$ dB (seuil de douleur)."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "propagation-son",
+      "enonce": "Dans un couloir d'hôpital, un soignant appelle un collègue situé à $85$ m. Combien de temps le son met-il pour lui parvenir ? (célérité du son dans l'air : $340$ m·s⁻¹)",
+      "corrige": [
+        "$t = \\dfrac{d}{v} = \\dfrac{85}{340} = 0{,}25$ s."
+      ],
+      "reponse": "$t = 0{,}25$ s."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "oreille",
+      "enonce": "Remettre dans l'ordre le trajet d'un son dans l'oreille : cellules ciliées, tympan, nerf auditif, conduit auditif, osselets.",
+      "corrige": [
+        "Le son est canalisé par le conduit auditif et fait vibrer le tympan ; les osselets transmettent la vibration à la cochlée, où les cellules ciliées créent un message nerveux envoyé au cerveau par le nerf auditif."
+      ],
+      "reponse": "Conduit auditif → tympan → osselets → cellules ciliées → nerf auditif."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "calcul-niveau",
+      "enonce": "Un aspirateur produit au niveau de l'oreille une intensité $I = 3{,}2 \\times 10^{-5}$ W·m⁻². Calculer le niveau sonore à l'aide de la calculatrice ($I_0 = 10^{-12}$ W·m⁻²).",
+      "corrige": [
+        "$\\dfrac{I}{I_0} = \\dfrac{3{,}2 \\times 10^{-5}}{10^{-12}} = 3{,}2 \\times 10^{7}$.",
+        "$L = 10\\log(3{,}2 \\times 10^{7}) \\approx 10 \\times 7{,}51 \\approx 75$ dB."
+      ],
+      "reponse": "$L \\approx 75$ dB."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "calcul-inverse",
+      "enonce": "Le niveau sonore dans une bibliothèque est d'environ $40$ dB. Calculer l'intensité sonore correspondante.",
+      "corrige": [
+        "$I = I_0 \\times 10^{L/10} = 10^{-12} \\times 10^{4}$.",
+        "$I = 10^{-8}$ W·m⁻²."
+      ],
+      "reponse": "$I = 10^{-8}$ W·m⁻²."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "calcul-inverse",
+      "enonce": "Calculer l'intensité sonore correspondant à un niveau de $65$ dB (utiliser la calculatrice).",
+      "corrige": [
+        "$I = I_0 \\times 10^{L/10} = 10^{-12} \\times 10^{6{,}5}$.",
+        "$I = 10^{-5{,}5} \\approx 3{,}2 \\times 10^{-6}$ W·m⁻²."
+      ],
+      "reponse": "$I \\approx 3{,}2 \\times 10^{-6}$ W·m⁻²."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "additivite-decibels",
+      "enonce": "Deux personnes parlent en même temps, chacune produisant $60$ dB au niveau d'un auditeur. Quel est le niveau sonore total ?",
+      "corrige": [
+        "Les intensités s'additionnent : l'intensité totale est le double de celle d'une seule voix.",
+        "Doubler l'intensité ajoute $10\\log(2) \\approx 3$ dB : $L \\approx 63$ dB (et non $120$ dB)."
+      ],
+      "reponse": "$L \\approx 63$ dB."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "additivite-decibels",
+      "enonce": "Quatre appareils identiques produisent chacun $70$ dB au même endroit. 1) Par combien l'intensité est-elle multipliée quand les quatre fonctionnent ensemble ? 2) En déduire le niveau total (donnée : $\\log 2 \\approx 0{,}30$).",
+      "corrige": [
+        "L'intensité est multipliée par $4 = 2 \\times 2$.",
+        "Chaque doublement ajoute $3$ dB : $70 + 3 + 3 = 76$ dB (calcul exact : $70 + 10\\log 4 \\approx 76{,}0$ dB)."
+      ],
+      "reponse": "Intensité $\\times 4$ ; $L \\approx 76$ dB."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "comparaison-niveaux",
+      "enonce": "Un bureau calme est à $50$ dB, une salle de classe bruyante à $70$ dB. Par quel facteur l'intensité sonore est-elle plus grande dans la classe ?",
+      "corrige": [
+        "Chaque $+10$ dB multiplie l'intensité par $10$.",
+        "$+20$ dB correspond donc à $10 \\times 10 = 100$."
+      ],
+      "reponse": "$100$ fois plus grande."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "comparaison-niveaux",
+      "enonce": "Grâce à un panneau absorbant, le niveau sonore près d'une machine passe de $90$ dB à $87$ dB. Comment l'intensité sonore a-t-elle évolué ?",
+      "corrige": [
+        "Une baisse de $3$ dB correspond à une intensité divisée par $2$ ($10\\log 2 \\approx 3$).",
+        "L'intensité reçue a donc été divisée par deux."
+      ],
+      "reponse": "Elle a été divisée par $2$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "calcul-niveau",
+      "enonce": "Pour une conversation d'intensité $I = 10^{-6}$ W·m⁻², un élève écrit : « $L = \\log\\left(\\dfrac{10^{-6}}{10^{-12}}\\right) = 6$ dB ». Corriger son erreur.",
+      "corrige": [
+        "L'élève a oublié le facteur $10$ de la formule : $L = 10\\log\\left(\\dfrac{I}{I_0}\\right)$.",
+        "$L = 10 \\times 6 = 60$ dB (le résultat $6$ serait exprimé en bels)."
+      ],
+      "reponse": "Il manque le facteur $10$ : $L = 60$ dB."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "domaines-frequences",
+      "enonce": "Un homme de $75$ ans n'entend plus les sons de fréquence supérieure à $9$ kHz. Entend-il : a) un bip d'alarme à $12$ kHz ? b) une voix à $2$ kHz ? c) Quels sons perd-on en premier avec l'âge ?",
+      "corrige": [
+        "a) $12$ kHz $> 9$ kHz : il ne l'entend pas.",
+        "b) $2$ kHz $< 9$ kHz : il l'entend.",
+        "Avec l'âge, la borne haute de l'audition recule : on perd d'abord les aigus."
+      ],
+      "reponse": "a) Non ; b) oui ; c) les aigus."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "domaines-frequences",
+      "enonce": "Un sifflet pour chien émet un son de $30$ kHz. Pourquoi le chien l'entend-il alors que son maître ne l'entend pas ?",
+      "corrige": [
+        "$30$ kHz $> 20$ kHz : c'est un ultrason, en dehors de la plage audible de l'humain.",
+        "Le chien entend jusqu'à environ $40$ kHz : $30$ kHz est dans sa plage audible."
+      ],
+      "reponse": "C'est un ultrason pour l'humain (au-delà de $20$ kHz), mais le chien entend jusqu'à environ $40$ kHz."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "frequence-hauteur",
+      "enonce": "Vrai ou faux ? « Quand on tourne le bouton de volume d'une radio, le son devient plus aigu. » Justifier.",
+      "corrige": [
+        "Le volume agit sur l'intensité (son plus ou moins **fort**), pas sur la fréquence.",
+        "La hauteur (grave ou aigu) ne dépend que de la fréquence : elle ne change pas."
+      ],
+      "reponse": "Faux : le son devient plus fort, pas plus aigu."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "oreille",
+      "enonce": "Pourquoi une surdité causée par un bruit trop fort est-elle le plus souvent définitive ?",
+      "corrige": [
+        "Le bruit trop fort détruit les **cellules ciliées** de la cochlée (oreille interne).",
+        "Ces cellules sont fragiles et **ne se régénèrent pas** : une fois détruites, elles ne sont jamais remplacées."
+      ],
+      "reponse": "Les cellules ciliées de la cochlée détruites ne se régénèrent pas."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "duree-exposition",
+      "enonce": "En utilisant la règle « $85$ dB pendant $8$ h, puis durée divisée par deux à chaque $+3$ dB », déterminer la durée d'exposition sans risque à $91$ dB.",
+      "corrige": [
+        "De $85$ à $91$ dB : $91 - 85 = 6$ dB, soit $2$ paliers de $3$ dB.",
+        "La durée est divisée deux fois par deux : $\\dfrac{8}{2 \\times 2} = 2$ h."
+      ],
+      "reponse": "$2$ h."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "risques-auditifs",
+      "enonce": "Parmi ces situations, lesquelles présentent un risque pour l'audition ? a) conversation à $60$ dB pendant $8$ h ; b) baladeur à $95$ dB pendant $3$ h ; c) rue à $75$ dB pendant $1$ h ; d) boîte de nuit à $100$ dB pendant $2$ h.",
+      "corrige": [
+        "Le risque dépend du niveau et de la durée : en dessous de $80$ dB, pas de danger ; à partir de $85$ dB, la durée sans danger diminue vite.",
+        "a) et c) restent sous $80$ dB : sans risque. b) $95$ dB pendant $3$ h et d) $100$ dB pendant $2$ h dépassent largement les durées tolérables (moins d'une heure à ces niveaux)."
+      ],
+      "reponse": "Les situations b) et d)."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "compensation-prothese",
+      "enonce": "Citer, dans l'ordre, les trois éléments d'une prothèse auditive et le rôle de chacun.",
+      "corrige": [
+        "Le **microphone** capte le son extérieur.",
+        "L'**amplificateur** augmente son niveau.",
+        "Le **haut-parleur** miniature restitue le son amplifié dans le conduit auditif."
+      ],
+      "reponse": "Microphone (capte) → amplificateur (augmente le niveau) → haut-parleur (restitue)."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "calcul-inverse",
+      "enonce": "Un concert atteint $105$ dB. Un spectateur porte des bouchons qui réduisent le niveau de $25$ dB. 1) Quel niveau reçoit-il ? 2) Par quel facteur environ l'intensité reçue est-elle divisée ? 3) Calculer l'intensité reçue avec bouchons.",
+      "corrige": [
+        "1) $105 - 25 = 80$ dB.",
+        "2) $-25$ dB divise l'intensité par $10^{2{,}5} \\approx 316$.",
+        "3) $I = 10^{-12} \\times 10^{8} = 10^{-4}$ W·m⁻²."
+      ],
+      "reponse": "$80$ dB ; intensité divisée par environ $316$ ; $I = 10^{-4}$ W·m⁻²."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "duree-exposition",
+      "enonce": "Avec la règle « $85$ dB pour $8$ h, durée divisée par deux à chaque $+3$ dB », quelle est la durée d'exposition sans risque à $97$ dB ? Exprimer le résultat en minutes.",
+      "corrige": [
+        "$97 - 85 = 12$ dB, soit $4$ paliers de $3$ dB.",
+        "$\\dfrac{8}{2^{4}} = \\dfrac{8}{16} = 0{,}5$ h $= 30$ min."
+      ],
+      "reponse": "$30$ min."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "duree-exposition",
+      "enonce": "Un employé doit rester $4$ h par jour près d'une machine. Quel niveau sonore maximal peut-on tolérer à son poste ? Et s'il n'y restait qu'une heure ?",
+      "corrige": [
+        "$4$ h est la moitié de $8$ h : un palier de $3$ dB au-dessus de $85$ dB, soit $88$ dB.",
+        "$1$ h $= \\dfrac{8}{8} = \\dfrac{8}{2^{3}}$ : trois paliers, soit $85 + 9 = 94$ dB."
+      ],
+      "reponse": "$88$ dB pour $4$ h ; $94$ dB pour $1$ h."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "additivite-decibels",
+      "enonce": "Dans un atelier, chaque machine produit $75$ dB. 1) Quel est le niveau quand $10$ machines identiques fonctionnent ensemble ? 2) Le seuil de $85$ dB est-il atteint ? 3) Combien de machines au maximum peut-on faire tourner en restant sous $85$ dB ?",
+      "corrige": [
+        "1) L'intensité est multipliée par $10$ : $+10$ dB, soit $85$ dB.",
+        "2) Oui, le seuil de danger de $85$ dB est atteint.",
+        "3) Avec $9$ machines : $L = 75 + 10\\log 9 \\approx 84{,}5$ dB $< 85$ dB. Il faut donc au plus $9$ machines."
+      ],
+      "reponse": "$85$ dB ; seuil atteint ; $9$ machines au maximum ($\\approx 84{,}5$ dB)."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "comparaison-niveaux",
+      "enonce": "Un auditeur passe d'une conversation à $60$ dB à une boîte de nuit à $100$ dB. Par quel facteur l'intensité sonore reçue est-elle multipliée ?",
+      "corrige": [
+        "L'écart est de $100 - 60 = 40$ dB.",
+        "Chaque $+10$ dB multiplie l'intensité par $10$ : $10^{4} = 10\\,000$."
+      ],
+      "reponse": "Par $10\\,000$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "compensation-prothese",
+      "enonce": "L'audiogramme d'une patiente montre un seuil d'audition de $10$ dB à $500$ Hz mais de $50$ dB à $4$ kHz. Certaines consonnes de la parole, aiguës, lui parviennent à $45$ dB vers $4$ kHz. 1) Les entend-elle ? 2) La prothèse amplifie de $+20$ dB autour de $4$ kHz : à quel niveau lui parviennent ces consonnes ? 3) Pourquoi ne pas amplifier autant les graves ?",
+      "corrige": [
+        "1) $45$ dB $< 50$ dB : ces consonnes sont sous son seuil à $4$ kHz, elle ne les entend pas.",
+        "2) $45 + 20 = 65$ dB $> 50$ dB : elles deviennent audibles.",
+        "3) À $500$ Hz, son audition est presque normale : amplifier ces graves serait inutile et désagréable. On corrige fréquence par fréquence."
+      ],
+      "reponse": "Non ; $65$ dB, donc audibles ; les graves sont déjà bien perçus."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "calcul-niveau",
+      "enonce": "Près d'une perceuse, l'intensité sonore vaut $I = 5{,}0 \\times 10^{-3}$ W·m⁻². 1) Calculer le niveau sonore. 2) Ce niveau dépasse-t-il le seuil de danger ? 3) En arrondissant le niveau à $97$ dB, quelle est la durée d'exposition sans risque ?",
+      "corrige": [
+        "1) $L = 10\\log\\left(\\dfrac{5{,}0 \\times 10^{-3}}{10^{-12}}\\right) = 10\\log(5{,}0 \\times 10^{9}) \\approx 97$ dB.",
+        "2) Oui : $97$ dB $> 85$ dB.",
+        "3) $97 - 85 = 12$ dB, soit $4$ paliers : $\\dfrac{8}{16} = 0{,}5$ h, soit $30$ min."
+      ],
+      "reponse": "$L \\approx 97$ dB ; danger ; environ $30$ min sans risque."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "risques-auditifs",
+      "enonce": "Un camarade affirme : « Je mets mes écouteurs à fond pendant des heures, mais ça ne me fait pas mal, donc ce n'est pas dangereux. » Rédiger une réponse argumentée de deux ou trois phrases.",
+      "corrige": [
+        "Il faut rappeler que les dégâts commencent dès $85$ dB, bien avant le seuil de douleur ($120$ dB), et que la durée compte autant que le niveau.",
+        "Exemple de réponse : « La douleur n'apparaît que vers $120$ dB, mais les cellules ciliées sont abîmées dès $85$ dB si l'exposition dure. Comme elles ne se régénèrent pas, la perte d'audition sera définitive. »"
+      ],
+      "reponse": "Exemple de réponse : pas de douleur ne veut pas dire pas de danger ; dès $85$ dB, une longue exposition détruit définitivement les cellules ciliées."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "domaines-frequences",
+      "enonce": "Une sonde d'échographie émet des ondes de fréquence $3{,}5$ MHz. 1) Convertir en hertz. 2) Combien de fois cette fréquence est-elle plus grande que la limite supérieure de l'audible ? 3) Pourquoi le patient n'entend-il rien ?",
+      "corrige": [
+        "1) $3{,}5$ MHz $= 3{,}5 \\times 10^{6}$ Hz.",
+        "2) $\\dfrac{3{,}5 \\times 10^{6}}{2{,}0 \\times 10^{4}} = 175$.",
+        "3) Ce sont des ultrasons ($f > 20$ kHz) : l'oreille humaine ne les perçoit pas."
+      ],
+      "reponse": "$3{,}5 \\times 10^{6}$ Hz ; $175$ fois plus ; ultrasons inaudibles."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "frequence-hauteur",
+      "enonce": "Sur l'écran d'un oscilloscope, on compte $4$ motifs complets d'un signal sonore sur une durée de $10$ ms. 1) Calculer la période. 2) Calculer la fréquence.",
+      "corrige": [
+        "1) $T = \\dfrac{10}{4} = 2{,}5$ ms $= 2{,}5 \\times 10^{-3}$ s.",
+        "2) $f = \\dfrac{1}{2{,}5 \\times 10^{-3}} = 400$ Hz."
+      ],
+      "reponse": "$T = 2{,}5$ ms ; $f = 400$ Hz."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "synthese-ondes-sonores-audition",
+      "enonce": "Un batteur joue lors d'un concert où le niveau sonore atteint $103$ dB à sa place. 1) Calculer l'intensité sonore. 2) Quelle est la durée d'exposition sans risque à ce niveau (règle : $85$ dB pour $8$ h, durée divisée par deux à chaque $+3$ dB) ? 3) Il porte des bouchons qui retirent $15$ dB : quel niveau reçoit-il ? 4) Le concert dure $2$ h : est-il protégé ?",
+      "corrige": [
+        "1) $I = 10^{-12} \\times 10^{10{,}3} \\approx 2{,}0 \\times 10^{-2}$ W·m⁻².",
+        "2) $103 - 85 = 18$ dB, soit $6$ paliers : $\\dfrac{8}{2^{6}} = \\dfrac{8}{64} = 0{,}125$ h, soit $7{,}5$ min.",
+        "3) $103 - 15 = 88$ dB.",
+        "4) À $88$ dB, la durée sans risque est de $4$ h $> 2$ h : il est protégé."
+      ],
+      "reponse": "$I \\approx 2{,}0 \\times 10^{-2}$ W·m⁻² ; $7{,}5$ min sans protection ; $88$ dB avec bouchons ; protégé pour $2$ h."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "synthese-ondes-sonores-audition",
+      "enonce": "Léa écoute de la musique avec des écouteurs qui produisent $94$ dB dans son conduit auditif, $3$ h par jour. 1) Calculer l'intensité sonore correspondante. 2) Quelle est la durée d'exposition sans risque à $94$ dB ? Léa est-elle en danger ? 3) Elle baisse le volume à $85$ dB : par quel facteur environ l'intensité est-elle divisée ? 4) Peut-elle alors écouter $3$ h par jour sans risque ?",
+      "corrige": [
+        "1) $I = 10^{-12} \\times 10^{9{,}4} \\approx 2{,}5 \\times 10^{-3}$ W·m⁻².",
+        "2) $94 - 85 = 9$ dB, soit $3$ paliers : $\\dfrac{8}{8} = 1$ h. Avec $3$ h par jour, Léa est en danger.",
+        "3) $-9$ dB divise l'intensité par $10^{0{,}9} \\approx 8$.",
+        "4) À $85$ dB, la limite est de $8$ h : $3$ h est sans risque."
+      ],
+      "reponse": "$I \\approx 2{,}5 \\times 10^{-3}$ W·m⁻² ; $1$ h, donc danger ; intensité divisée par $\\approx 8$ ; oui, sans risque à $85$ dB."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "compensation-prothese",
+      "enonce": "Une dame âgée a un seuil d'audition de $55$ dB. 1) Entend-elle une conversation à $60$ dB ? un chuchotement à $30$ dB ? 2) Sa prothèse est réglée pour ajouter $+35$ dB à tous les sons. Par quel facteur environ multiplie-t-elle l'intensité ? 3) À quel niveau lui parviennent alors le chuchotement et la conversation ? 4) Pourquoi un tel réglage pose-t-il problème pour la conversation ?",
+      "corrige": [
+        "1) $60 > 55$ : la conversation est tout juste audible ; $30 < 55$ : le chuchotement ne l'est pas.",
+        "2) $+35$ dB multiplie l'intensité par $10^{3{,}5} \\approx 3\\,200$.",
+        "3) Chuchotement : $30 + 35 = 65$ dB (audible) ; conversation : $60 + 35 = 95$ dB.",
+        "4) $95$ dB dépasse le seuil de danger de $85$ dB : une amplification identique pour tous les sons pourrait abîmer encore l'audition. Le réglage doit être adapté (amplifier moins les sons déjà forts)."
+      ],
+      "reponse": "Conversation à peine audible, chuchotement non ; intensité $\\times 3\\,200$ environ ; $65$ dB et $95$ dB ; $95$ dB est un niveau dangereux."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "synthese-ondes-sonores-audition",
+      "enonce": "Lors d'un test d'audition, on fait écouter à un patient un son de $1$ kHz de plus en plus fort. Il ne commence à l'entendre qu'à $35$ dB. 1) Calculer la période de ce son. 2) Calculer l'intensité correspondant à $35$ dB. 3) Par quel facteur environ cette intensité est-elle supérieure au seuil d'audibilité normal $I_0$ ? 4) Quel appareil pourrait l'aider s'il est gêné au quotidien, et sur quel principe repose-t-il ?",
+      "corrige": [
+        "1) $T = \\dfrac{1}{1\\,000} = 10^{-3}$ s $= 1$ ms.",
+        "2) $I = 10^{-12} \\times 10^{3{,}5} \\approx 3{,}2 \\times 10^{-9}$ W·m⁻².",
+        "3) $\\dfrac{I}{I_0} = 10^{3{,}5} \\approx 3\\,200$.",
+        "4) Une prothèse auditive : elle amplifie le son (microphone, amplificateur, haut-parleur) pour le ramener au-dessus de son seuil."
+      ],
+      "reponse": "$T = 1$ ms ; $I \\approx 3{,}2 \\times 10^{-9}$ W·m⁻² ; environ $3\\,200$ fois $I_0$ ; une prothèse auditive (amplification)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "synthese-ondes-sonores-audition",
+      "enonce": "Dans un atelier, $4$ machines identiques fonctionnent ensemble ; chacune seule produirait $82$ dB au poste d'un ouvrier, qui y travaille $8$ h par jour. 1) Calculer le niveau sonore total (multiplier l'intensité par $4$ revient à ajouter environ $6$ dB). 2) Quelle est la durée d'exposition sans risque à ce niveau ? 3) L'ouvrier est-il en danger ? 4) Avec un casque antibruit qui retire $10$ dB, quel niveau reçoit-il, et est-il protégé ?",
+      "corrige": [
+        "1) $L \\approx 82 + 6 = 88$ dB (calcul exact : $82 + 10\\log 4 \\approx 88{,}0$ dB).",
+        "2) $88 - 85 = 3$ dB, soit un palier : $\\dfrac{8}{2} = 4$ h.",
+        "3) $8$ h $> 4$ h : oui, il est en danger.",
+        "4) $88 - 10 = 78$ dB $< 80$ dB : il est protégé, même $8$ h par jour."
+      ],
+      "reponse": "$\\approx 88$ dB ; $4$ h ; danger ; $78$ dB avec casque : protégé."
     }
   ]
 }

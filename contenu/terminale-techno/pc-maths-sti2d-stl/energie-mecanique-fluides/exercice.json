@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "**Problème — Un hayon élévateur hydraulique.** À l'arrière d'un camion de livraison, un hayon élévateur soulève les charges du sol jusqu'au plateau. Le hayon est un bras qui pivote autour d'un axe horizontal $O$ fixé au châssis. Une charge (palette + colis) de masse $m = 800$ kg est posée à l'extrémité du bras, à une distance $d_2 = 1{,}8$ m de l'axe $O$. Un vérin hydraulique unique pousse le bras en un point situé à $d_1 = 0{,}60$ m de l'axe $O$ ; on suppose sa poussée perpendiculaire au bras et on néglige le poids du bras.\n\nLe vérin est alimenté par un groupe hydraulique : un moteur électrique entraîne une pompe qui met l'huile sous pression. Le piston du vérin a un diamètre $D = 12$ cm. L'huile ($\\rho = 900$ kg·m⁻³) est aspirée dans un réservoir dont la surface libre est $h = 2{,}5$ m sous le vérin. Le moteur délivre un couple $M = 15\\ \\mathrm{N\\cdot m}$ à une fréquence de rotation $N = 1500$ tr/min, et le rendement du groupe moteur + pompe vaut $\\eta = 0{,}80$.\n\nDonnées : $g = 9{,}81$ N·kg⁻¹ ; $1$ bar $= 10^{5}$ Pa ; $1\\ \\mathrm{cm^2} = 10^{-4}\\ \\mathrm{m^2}$ ; $S = \\dfrac{\\pi D^2}{4}$ ; $\\omega = \\dfrac{2\\pi N}{60}$ ; $P = M\\,\\omega$.\n\n1. Calcule le poids de la charge.\n2. Le bras étant en équilibre, écris l'équilibre des moments autour de $O$ et calcule la force $F$ que le vérin doit exercer.\n3. Calcule la section du piston, puis la pression de service nécessaire dans le vérin (en Pa et en bar).\n4. La pompe aspire l'huile $h = 2{,}5$ m plus bas : calcule la différence de pression hydrostatique correspondante et montre qu'elle est négligeable devant la pression de service.\n5. Calcule la vitesse angulaire du moteur, la puissance mécanique qu'il fournit, puis la puissance électrique absorbée par le groupe.",
       "corrige": [
@@ -134,6 +134,448 @@
         "5. Vitesse angulaire : $\\omega = \\dfrac{2\\pi N}{60} = \\dfrac{2\\pi \\times 1500}{60} \\approx 157$ rad/s (conversion tr/min $\\rightarrow$ rad/s obligatoire). Puissance mécanique fournie par le moteur : $P_{\\text{méca}} = M\\,\\omega = 15 \\times 157 \\approx 2{,}36 \\times 10^{3}$ W $\\approx 2{,}4$ kW. Le rendement s'applique à la puissance : $\\eta = \\dfrac{P_{\\text{méca}}}{P_{\\text{abs}}}$, donc $P_{\\text{abs}} = \\dfrac{P_{\\text{méca}}}{\\eta} = \\dfrac{2356}{0{,}80} \\approx 2{,}9 \\times 10^{3}$ W. On divise par le rendement : l'absorbé est toujours supérieur à la puissance fournie."
       ],
       "reponse": "$P \\approx 7{,}85 \\times 10^{3}$ N ; $F \\approx 2{,}35 \\times 10^{4}$ N ; $S \\approx 1{,}13 \\times 10^{-2}$ m² et $p \\approx 21$ bar ; $\\Delta p \\approx 0{,}22$ bar ($\\approx 1\\,\\%$, négligeable) ; $\\omega \\approx 157$ rad/s, $P_{\\text{méca}} \\approx 2{,}4$ kW, $P_{\\text{abs}} \\approx 2{,}9$ kW."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "forces-poids",
+      "enonce": "Calculer le poids d'une valise de masse $12\\ \\mathrm{kg}$ ($g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$). Préciser sa direction et son sens.",
+      "corrige": [
+        "$P = m\\,g = 12 \\times 9{,}81 \\approx 118\\ \\mathrm{N}$.",
+        "Le poids est vertical et dirigé vers le bas."
+      ],
+      "reponse": "$P \\approx 118\\ \\mathrm{N}$, vertical, vers le bas."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "forces-poids",
+      "enonce": "Une caisse est posée immobile sur un sol horizontal. Faire le bilan des forces qui s'exercent sur elle et comparer leurs valeurs.",
+      "corrige": [
+        "Deux forces : le poids (vertical, vers le bas) et la réaction du sol (perpendiculaire au sol, donc verticale, vers le haut).",
+        "La caisse est immobile : la résultante est nulle, donc les deux forces se compensent et la réaction a la même valeur que le poids."
+      ],
+      "reponse": "Poids et réaction du sol, de même valeur et de sens opposés."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "deuxieme-loi",
+      "enonce": "Une voiture de $1\\,200\\ \\mathrm{kg}$ est soumise à une résultante horizontale de $3\\,000\\ \\mathrm{N}$. Calculer son accélération.",
+      "corrige": [
+        "Deuxième loi de Newton : $F_{\\text{résultante}} = m\\,a$, donc $a = \\dfrac{F}{m}$.",
+        "$a = \\dfrac{3\\,000}{1\\,200} = 2{,}5\\ \\mathrm{m\\cdot s^{-2}}$."
+      ],
+      "reponse": "$a = 2{,}5\\ \\mathrm{m\\cdot s^{-2}}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "deuxieme-loi",
+      "enonce": "Quelle résultante faut-il appliquer à un véhicule de $2\\,000\\ \\mathrm{kg}$ pour lui donner une accélération de $0{,}50\\ \\mathrm{m\\cdot s^{-2}}$ ?",
+      "corrige": [
+        "$F_{\\text{résultante}} = m\\,a = 2\\,000 \\times 0{,}50 = 1\\,000\\ \\mathrm{N}$."
+      ],
+      "reponse": "$F = 1\\,000\\ \\mathrm{N}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "intermediaire",
+      "notion": "deuxieme-loi",
+      "enonce": "Un chariot de $40\\ \\mathrm{kg}$ est tiré horizontalement par une force motrice de $200\\ \\mathrm{N}$ ; il accélère à $3{,}0\\ \\mathrm{m\\cdot s^{-2}}$. Quelle est la valeur des frottements ?",
+      "corrige": [
+        "Résultante : $F = m\\,a = 40 \\times 3{,}0 = 120\\ \\mathrm{N}$.",
+        "Le long de l'axe du mouvement : $F = F_{\\text{motrice}} - f$, donc $f = 200 - 120 = 80\\ \\mathrm{N}$."
+      ],
+      "reponse": "$f = 80\\ \\mathrm{N}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "equilibre",
+      "enonce": "Un lustre de $15\\ \\mathrm{kg}$ est suspendu immobile à un câble vertical. Calculer la tension du câble ($g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$).",
+      "corrige": [
+        "Le lustre est immobile : la résultante est nulle, la tension compense le poids.",
+        "$T = P = 15 \\times 9{,}81 \\approx 147\\ \\mathrm{N}$."
+      ],
+      "reponse": "$T \\approx 147\\ \\mathrm{N}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "equilibre",
+      "enonce": "Une voiture roule en ligne droite à $90\\ \\mathrm{km/h}$ constants ; la force motrice vaut $600\\ \\mathrm{N}$. Que vaut l'ensemble des frottements (air et route) ?",
+      "corrige": [
+        "Mouvement rectiligne uniforme : la résultante est nulle (cas d'équilibre).",
+        "Les frottements compensent exactement la force motrice : $600\\ \\mathrm{N}$."
+      ],
+      "reponse": "$600\\ \\mathrm{N}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "forces-poids",
+      "enonce": "Une charge de $300\\ \\mathrm{kg}$ est suspendue immobile à un câble. Un élève affirme : « la tension du câble vaut $300\\ \\mathrm{N}$ ». Corriger ($g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$).",
+      "corrige": [
+        "Une masse en kg n'est pas une force : il faut passer par le poids $P = m\\,g$.",
+        "À l'équilibre, $T = P = 300 \\times 9{,}81 \\approx 2{,}94 \\times 10^{3}\\ \\mathrm{N}$."
+      ],
+      "reponse": "$T \\approx 2{,}94 \\times 10^{3}\\ \\mathrm{N}$ (et non $300\\ \\mathrm{N}$)."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "moment-force",
+      "enonce": "On pousse perpendiculairement au bout d'une clé de $40\\ \\mathrm{cm}$ avec une force de $150\\ \\mathrm{N}$. Calculer le moment de la force par rapport à l'axe de l'écrou.",
+      "corrige": [
+        "$M = F \\times d$, avec $d = 0{,}40\\ \\mathrm{m}$.",
+        "$M = 150 \\times 0{,}40 = 60\\ \\mathrm{N\\cdot m}$."
+      ],
+      "reponse": "$M = 60\\ \\mathrm{N\\cdot m}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "moment-force",
+      "enonce": "Pour ouvrir une porte, il faut un moment de $8{,}0\\ \\mathrm{N\\cdot m}$ par rapport à l'axe des gonds. Quelle force perpendiculaire faut-il exercer à la poignée ($0{,}80\\ \\mathrm{m}$ des gonds) ? et à $0{,}10\\ \\mathrm{m}$ des gonds ?",
+      "corrige": [
+        "$F = \\dfrac{M}{d}$.",
+        "À la poignée : $F = \\dfrac{8{,}0}{0{,}80} = 10\\ \\mathrm{N}$ ; près des gonds : $F = \\dfrac{8{,}0}{0{,}10} = 80\\ \\mathrm{N}$, huit fois plus."
+      ],
+      "reponse": "$10\\ \\mathrm{N}$ à la poignée ; $80\\ \\mathrm{N}$ à $0{,}10\\ \\mathrm{m}$ des gonds."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "moment-force",
+      "enonce": "Sur une balançoire à bascule, un enfant de $30\\ \\mathrm{kg}$ est assis à $2{,}0\\ \\mathrm{m}$ de l'axe. À quelle distance de l'axe, de l'autre côté, doit s'asseoir un adulte de $75\\ \\mathrm{kg}$ pour équilibrer la balançoire ?",
+      "corrige": [
+        "Équilibre en rotation : $F_1\\,d_1 = F_2\\,d_2$, avec $F = m\\,g$ ; le facteur $g$ se simplifie : $m_1\\,d_1 = m_2\\,d_2$.",
+        "$d_2 = \\dfrac{30 \\times 2{,}0}{75} = 0{,}80\\ \\mathrm{m}$."
+      ],
+      "reponse": "$d_2 = 0{,}80\\ \\mathrm{m}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "moment-force",
+      "enonce": "Un élève écrit : « le moment de la force vaut $M = 200 \\times 0{,}25 = 50\\ \\mathrm{J}$ ». Le calcul est juste ; qu'est-ce qui est faux ?",
+      "corrige": [
+        "Un moment s'exprime en newton-mètre ($\\mathrm{N\\cdot m}$), jamais en joules, même si la dimension est la même : ce n'est pas une énergie."
+      ],
+      "reponse": "L'unité : $M = 50\\ \\mathrm{N\\cdot m}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "vitesse-angulaire",
+      "enonce": "Un moteur tourne à $3\\,000\\ \\mathrm{tr/min}$. Calculer sa vitesse angulaire en rad/s.",
+      "corrige": [
+        "$\\omega = \\dfrac{2\\pi N}{60}$ (un tour vaut $2\\pi$ rad, une minute $60\\ \\mathrm{s}$).",
+        "$\\omega = \\dfrac{2\\pi \\times 3\\,000}{60} = 100\\pi \\approx 314\\ \\mathrm{rad/s}$."
+      ],
+      "reponse": "$\\omega \\approx 314\\ \\mathrm{rad/s}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "vitesse-angulaire",
+      "enonce": "Un arbre tourne à $\\omega = 100\\ \\mathrm{rad/s}$. Quelle est sa fréquence de rotation en tr/min ?",
+      "corrige": [
+        "De $\\omega = \\dfrac{2\\pi N}{60}$, on tire $N = \\dfrac{60\\,\\omega}{2\\pi}$.",
+        "$N = \\dfrac{60 \\times 100}{2\\pi} \\approx 955\\ \\mathrm{tr/min}$."
+      ],
+      "reponse": "$N \\approx 955\\ \\mathrm{tr/min}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "vitesse-angulaire",
+      "enonce": "Une roue de rayon $0{,}30\\ \\mathrm{m}$ tourne sans glisser à $\\omega = 50\\ \\mathrm{rad/s}$. Calculer la vitesse du véhicule en m/s puis en km/h.",
+      "corrige": [
+        "Un point de la périphérie avance à $v = r\\,\\omega = 0{,}30 \\times 50 = 15\\ \\mathrm{m\\cdot s^{-1}}$.",
+        "En km/h : $15 \\times 3{,}6 = 54\\ \\mathrm{km/h}$."
+      ],
+      "reponse": "$v = 15\\ \\mathrm{m\\cdot s^{-1}} = 54\\ \\mathrm{km/h}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "puissance-couple",
+      "enonce": "Un moteur fournit un couple de $50\\ \\mathrm{N\\cdot m}$ à $\\omega = 200\\ \\mathrm{rad/s}$. Calculer la puissance mécanique.",
+      "corrige": [
+        "$P = M \\times \\omega = 50 \\times 200 = 10\\,000\\ \\mathrm{W}$."
+      ],
+      "reponse": "$P = 10\\ \\mathrm{kW}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "puissance-couple",
+      "enonce": "La plaque d'un moteur indique : $2{,}2\\ \\mathrm{kW}$ ; $1\\,450\\ \\mathrm{tr/min}$. Calculer le couple nominal.",
+      "corrige": [
+        "$\\omega = \\dfrac{2\\pi \\times 1\\,450}{60} \\approx 152\\ \\mathrm{rad/s}$.",
+        "$M = \\dfrac{P}{\\omega} = \\dfrac{2\\,200}{152} \\approx 14{,}5\\ \\mathrm{N\\cdot m}$."
+      ],
+      "reponse": "$M \\approx 14{,}5\\ \\mathrm{N\\cdot m}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "puissance-couple",
+      "enonce": "Pour un couple de $10\\ \\mathrm{N\\cdot m}$ à $3\\,000\\ \\mathrm{tr/min}$, un élève écrit $P = 10 \\times 3\\,000 = 30\\,000\\ \\mathrm{W}$. Corriger.",
+      "corrige": [
+        "Dans $P = M\\,\\omega$, la vitesse doit être en rad/s : $\\omega = \\dfrac{2\\pi \\times 3\\,000}{60} \\approx 314\\ \\mathrm{rad/s}$.",
+        "$P = 10 \\times 314 \\approx 3{,}14 \\times 10^{3}\\ \\mathrm{W}$, presque dix fois moins que la réponse de l'élève."
+      ],
+      "reponse": "$P \\approx 3{,}1\\ \\mathrm{kW}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "approfondissement",
+      "notion": "puissance-couple",
+      "enonce": "En perçage, une perceuse fournit un couple de $4{,}0\\ \\mathrm{N\\cdot m}$ à $600\\ \\mathrm{tr/min}$. Son rendement est de $70\\,\\%$. Calculer la puissance mécanique utile, puis la puissance électrique absorbée.",
+      "corrige": [
+        "$\\omega = \\dfrac{2\\pi \\times 600}{60} \\approx 62{,}8\\ \\mathrm{rad/s}$, donc $P_u = 4{,}0 \\times 62{,}8 \\approx 251\\ \\mathrm{W}$.",
+        "$P_a = \\dfrac{P_u}{\\eta} = \\dfrac{251}{0{,}70} \\approx 359\\ \\mathrm{W}$."
+      ],
+      "reponse": "$P_u \\approx 251\\ \\mathrm{W}$ ; $P_a \\approx 359\\ \\mathrm{W}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "approfondissement",
+      "notion": "energie-rendement",
+      "enonce": "Un moteur fournit $1{,}5\\ \\mathrm{kW}$ mécaniques pendant $8{,}0\\ \\mathrm{h}$, avec un rendement de $0{,}85$. Calculer l'énergie mécanique fournie (en kWh et en J), puis l'énergie électrique consommée.",
+      "corrige": [
+        "$E_u = 1{,}5\\ \\mathrm{kW} \\times 8{,}0\\ \\mathrm{h} = 12\\ \\mathrm{kWh} = 12 \\times 3{,}6 \\times 10^{6} \\approx 4{,}3 \\times 10^{7}\\ \\mathrm{J}$.",
+        "$E_a = \\dfrac{E_u}{\\eta} = \\dfrac{12}{0{,}85} \\approx 14{,}1\\ \\mathrm{kWh}$."
+      ],
+      "reponse": "$E_u = 12\\ \\mathrm{kWh} \\approx 4{,}3 \\times 10^{7}\\ \\mathrm{J}$ ; $E_a \\approx 14{,}1\\ \\mathrm{kWh}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "pression",
+      "enonce": "Une force de $500\\ \\mathrm{N}$ s'exerce perpendiculairement sur un piston de $25\\ \\mathrm{cm^2}$. Calculer la pression en pascals puis en bars.",
+      "corrige": [
+        "$S = 25\\ \\mathrm{cm^2} = 25 \\times 10^{-4} = 2{,}5 \\times 10^{-3}\\ \\mathrm{m^2}$.",
+        "$p = \\dfrac{F}{S} = \\dfrac{500}{2{,}5 \\times 10^{-3}} = 2{,}0 \\times 10^{5}\\ \\mathrm{Pa} = 2{,}0\\ \\mathrm{bar}$."
+      ],
+      "reponse": "$p = 2{,}0 \\times 10^{5}\\ \\mathrm{Pa} = 2{,}0\\ \\mathrm{bar}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "pression",
+      "enonce": "Convertir : a) $2{,}5\\ \\mathrm{bar}$ en pascals ; b) $3{,}0 \\times 10^{6}\\ \\mathrm{Pa}$ en bars.",
+      "corrige": [
+        "$1\\ \\mathrm{bar} = 10^{5}\\ \\mathrm{Pa}$.",
+        "a) $2{,}5 \\times 10^{5}\\ \\mathrm{Pa}$ ; b) $\\dfrac{3{,}0 \\times 10^{6}}{10^{5}} = 30\\ \\mathrm{bar}$."
+      ],
+      "reponse": "a) $2{,}5 \\times 10^{5}\\ \\mathrm{Pa}$ ; b) $30\\ \\mathrm{bar}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "pression",
+      "enonce": "Une force de $400\\ \\mathrm{N}$ s'exerce sur un piston de $10\\ \\mathrm{cm^2}$. Un élève convertit $10\\ \\mathrm{cm^2} = 0{,}10\\ \\mathrm{m^2}$ et trouve $4\\,000\\ \\mathrm{Pa}$. Corriger.",
+      "corrige": [
+        "$1\\ \\mathrm{cm^2} = 10^{-4}\\ \\mathrm{m^2}$ (et non $10^{-2}$) : $10\\ \\mathrm{cm^2} = 1{,}0 \\times 10^{-3}\\ \\mathrm{m^2}$.",
+        "$p = \\dfrac{400}{1{,}0 \\times 10^{-3}} = 4{,}0 \\times 10^{5}\\ \\mathrm{Pa} = 4{,}0\\ \\mathrm{bar}$ : l'élève s'est trompé d'un facteur $100$."
+      ],
+      "reponse": "$p = 4{,}0 \\times 10^{5}\\ \\mathrm{Pa}$ ($4{,}0\\ \\mathrm{bar}$)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "pression",
+      "enonce": "Le manomètre de gonflage d'un pneu indique $3{,}0\\ \\mathrm{bar}$. Quelle est la pression absolue de l'air dans le pneu ($p_{\\text{atm}} \\approx 1{,}0\\ \\mathrm{bar}$) ?",
+      "corrige": [
+        "Le manomètre affiche une pression relative, comptée à partir de la pression atmosphérique.",
+        "$p_{\\text{abs}} = p_{\\text{atm}} + p_{\\text{rel}} \\approx 1{,}0 + 3{,}0 = 4{,}0\\ \\mathrm{bar} = 4{,}0 \\times 10^{5}\\ \\mathrm{Pa}$."
+      ],
+      "reponse": "Environ $4{,}0\\ \\mathrm{bar}$, soit $4{,}0 \\times 10^{5}\\ \\mathrm{Pa}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "pression",
+      "enonce": "Une personne de $60\\ \\mathrm{kg}$ se tient en équilibre sur un talon aiguille de $1{,}0\\ \\mathrm{cm^2}$. Calculer la pression exercée sur le sol, en pascals et en bars ($g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$).",
+      "corrige": [
+        "Force : le poids, $F = 60 \\times 9{,}81 \\approx 589\\ \\mathrm{N}$ ; surface : $1{,}0 \\times 10^{-4}\\ \\mathrm{m^2}$.",
+        "$p = \\dfrac{589}{1{,}0 \\times 10^{-4}} \\approx 5{,}9 \\times 10^{6}\\ \\mathrm{Pa}$, soit environ $59\\ \\mathrm{bar}$ : de quoi marquer un parquet."
+      ],
+      "reponse": "$p \\approx 5{,}9 \\times 10^{6}\\ \\mathrm{Pa} \\approx 59\\ \\mathrm{bar}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "hydrostatique",
+      "enonce": "Un plongeur descend à $20\\ \\mathrm{m}$ sous la surface d'un lac ($\\rho = 1\\,000\\ \\mathrm{kg\\cdot m^{-3}}$, $g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$). Calculer la surpression par rapport à la surface, puis la pression absolue (en bars).",
+      "corrige": [
+        "$\\Delta p = \\rho\\,g\\,h = 1\\,000 \\times 9{,}81 \\times 20 \\approx 1{,}96 \\times 10^{5}\\ \\mathrm{Pa} \\approx 2{,}0\\ \\mathrm{bar}$.",
+        "$p = p_{\\text{atm}} + \\Delta p \\approx 1{,}0 + 2{,}0 = 3{,}0\\ \\mathrm{bar}$ (environ $1\\ \\mathrm{bar}$ tous les $10\\ \\mathrm{m}$)."
+      ],
+      "reponse": "$\\Delta p \\approx 2{,}0\\ \\mathrm{bar}$ ; $p \\approx 3{,}0\\ \\mathrm{bar}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "hydrostatique",
+      "enonce": "Calculer la pression absolue à $30\\ \\mathrm{m}$ de profondeur dans la mer ($\\rho = 1\\,025\\ \\mathrm{kg\\cdot m^{-3}}$, $p_{\\text{atm}} = 1{,}013 \\times 10^{5}\\ \\mathrm{Pa}$, $g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$).",
+      "corrige": [
+        "$\\Delta p = 1\\,025 \\times 9{,}81 \\times 30 \\approx 3{,}02 \\times 10^{5}\\ \\mathrm{Pa}$.",
+        "$p = 1{,}013 \\times 10^{5} + 3{,}02 \\times 10^{5} \\approx 4{,}03 \\times 10^{5}\\ \\mathrm{Pa}$, environ $4\\ \\mathrm{bar}$."
+      ],
+      "reponse": "$p \\approx 4{,}03 \\times 10^{5}\\ \\mathrm{Pa}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "hydrostatique",
+      "enonce": "Pour la surpression au fond d'une piscine de $5{,}0\\ \\mathrm{m}$, un élève écrit $\\Delta p = 1 \\times 9{,}81 \\times 5{,}0 \\approx 49\\ \\mathrm{Pa}$. Corriger.",
+      "corrige": [
+        "En unités SI, la masse volumique de l'eau vaut $1\\,000\\ \\mathrm{kg\\cdot m^{-3}}$, pas $1$.",
+        "$\\Delta p = 1\\,000 \\times 9{,}81 \\times 5{,}0 \\approx 4{,}9 \\times 10^{4}\\ \\mathrm{Pa}$, soit environ $0{,}5\\ \\mathrm{bar}$."
+      ],
+      "reponse": "$\\Delta p \\approx 4{,}9 \\times 10^{4}\\ \\mathrm{Pa}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "hydrostatique",
+      "enonce": "À quelle hauteur au-dessus des robinets doit se trouver la surface de l'eau d'un château d'eau pour fournir une pression relative de $4{,}0\\ \\mathrm{bar}$ ? ($g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$, $\\rho = 1\\,000\\ \\mathrm{kg\\cdot m^{-3}}$)",
+      "corrige": [
+        "$\\Delta p = \\rho\\,g\\,h$, donc $h = \\dfrac{\\Delta p}{\\rho\\,g}$.",
+        "$h = \\dfrac{4{,}0 \\times 10^{5}}{1\\,000 \\times 9{,}81} \\approx 41\\ \\mathrm{m}$."
+      ],
+      "reponse": "$h \\approx 41\\ \\mathrm{m}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "hydrostatique",
+      "enonce": "La retenue d'un barrage a une profondeur de $50\\ \\mathrm{m}$. Calculer la surpression due à l'eau au pied du barrage, puis la force qu'elle exerce sur $1{,}0\\ \\mathrm{m^2}$ de paroi à cette profondeur.",
+      "corrige": [
+        "$\\Delta p = 1\\,000 \\times 9{,}81 \\times 50 \\approx 4{,}9 \\times 10^{5}\\ \\mathrm{Pa}$.",
+        "$F = \\Delta p \\times S \\approx 4{,}9 \\times 10^{5}\\ \\mathrm{N}$ sur chaque mètre carré, ce qui explique l'épaisseur de la base des barrages."
+      ],
+      "reponse": "$\\Delta p \\approx 4{,}9 \\times 10^{5}\\ \\mathrm{Pa}$ ; $F \\approx 4{,}9 \\times 10^{5}\\ \\mathrm{N}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "verin-hydraulique",
+      "enonce": "Un vérin de section $20\\ \\mathrm{cm^2}$ est alimenté sous $150\\ \\mathrm{bar}$. Quelle force développe-t-il ?",
+      "corrige": [
+        "$p = 150 \\times 10^{5} = 1{,}5 \\times 10^{7}\\ \\mathrm{Pa}$ et $S = 20 \\times 10^{-4} = 2{,}0 \\times 10^{-3}\\ \\mathrm{m^2}$.",
+        "$F = p \\times S = 1{,}5 \\times 10^{7} \\times 2{,}0 \\times 10^{-3} = 3{,}0 \\times 10^{4}\\ \\mathrm{N}$."
+      ],
+      "reponse": "$F = 3{,}0 \\times 10^{4}\\ \\mathrm{N}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "verin-hydraulique",
+      "enonce": "Un vérin de section $40\\ \\mathrm{cm^2}$ doit soulever une charge de $1\\,000\\ \\mathrm{kg}$. Quelle pression faut-il dans le circuit ? ($g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$)",
+      "corrige": [
+        "Force à fournir : $F = m\\,g = 1\\,000 \\times 9{,}81 = 9\\,810\\ \\mathrm{N}$.",
+        "$p = \\dfrac{F}{S} = \\dfrac{9\\,810}{4{,}0 \\times 10^{-3}} \\approx 2{,}45 \\times 10^{6}\\ \\mathrm{Pa} \\approx 25\\ \\mathrm{bar}$."
+      ],
+      "reponse": "$p \\approx 2{,}5 \\times 10^{6}\\ \\mathrm{Pa}$, soit environ $25\\ \\mathrm{bar}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "verin-hydraulique",
+      "enonce": "Un vérin a un piston de diamètre $8{,}0\\ \\mathrm{cm}$ et fonctionne sous $100\\ \\mathrm{bar}$. Calculer la section ($S = \\dfrac{\\pi D^2}{4}$) puis la force développée.",
+      "corrige": [
+        "$S = \\dfrac{\\pi \\times 0{,}080^2}{4} \\approx 5{,}03 \\times 10^{-3}\\ \\mathrm{m^2}$.",
+        "$F = 1{,}0 \\times 10^{7} \\times 5{,}03 \\times 10^{-3} \\approx 5{,}0 \\times 10^{4}\\ \\mathrm{N}$, de quoi soulever environ $5$ tonnes."
+      ],
+      "reponse": "$S \\approx 5{,}0 \\times 10^{-3}\\ \\mathrm{m^2}$ ; $F \\approx 5{,}0 \\times 10^{4}\\ \\mathrm{N}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "presse-hydraulique",
+      "enonce": "Dans une presse hydraulique, le petit piston ($4{,}0\\ \\mathrm{cm^2}$) reçoit une force de $50\\ \\mathrm{N}$. Quelle force exerce le grand piston ($200\\ \\mathrm{cm^2}$) ?",
+      "corrige": [
+        "Même pression des deux côtés : $F_2 = F_1 \\times \\dfrac{S_2}{S_1}$ (ici, le rapport des sections peut rester en $\\mathrm{cm^2}$).",
+        "$F_2 = 50 \\times \\dfrac{200}{4{,}0} = 2\\,500\\ \\mathrm{N}$."
+      ],
+      "reponse": "$F_2 = 2{,}5 \\times 10^{3}\\ \\mathrm{N}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "presse-hydraulique",
+      "enonce": "Un cric hydraulique soulève une voiture de $1\\,500\\ \\mathrm{kg}$ posée sur un piston de $600\\ \\mathrm{cm^2}$. Le petit piston a une section de $10\\ \\mathrm{cm^2}$. Quelle force faut-il exercer sur le petit piston ? ($g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$)",
+      "corrige": [
+        "$F_2 = 1\\,500 \\times 9{,}81 \\approx 1{,}47 \\times 10^{4}\\ \\mathrm{N}$.",
+        "$F_1 = F_2 \\times \\dfrac{S_1}{S_2} = 1{,}47 \\times 10^{4} \\times \\dfrac{10}{600} \\approx 245\\ \\mathrm{N}$."
+      ],
+      "reponse": "$F_1 \\approx 245\\ \\mathrm{N}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "presse-hydraulique",
+      "enonce": "Dans une presse dont les sections sont dans le rapport $\\dfrac{S_2}{S_1} = 25$, le petit piston s'enfonce de $30\\ \\mathrm{cm}$. De combien monte le grand piston ? Vérifier que le travail est le même des deux côtés.",
+      "corrige": [
+        "Le liquide est incompressible : le volume chassé est le même, $S_1 \\times 30 = S_2 \\times x$, donc $x = \\dfrac{30}{25} = 1{,}2\\ \\mathrm{cm}$.",
+        "Travaux : $F_1 \\times 0{,}30$ et $F_2 \\times 0{,}012 = 25F_1 \\times 0{,}012 = F_1 \\times 0{,}30$ : la force est multipliée, pas l'énergie."
+      ],
+      "reponse": "Le grand piston monte de $1{,}2\\ \\mathrm{cm}$ ; les deux travaux sont égaux."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "deuxieme-loi",
+      "enonce": "Un chariot automatique de $500\\ \\mathrm{kg}$ part du repos et atteint $2{,}0\\ \\mathrm{m\\cdot s^{-1}}$ en $4{,}0\\ \\mathrm{s}$ (accélération constante, $a = \\dfrac{\\Delta v}{\\Delta t}$). Les frottements valent $200\\ \\mathrm{N}$. 1. Calculer l'accélération. 2. Calculer la force motrice pendant le démarrage. 3. Quelle force motrice faut-il ensuite pour rouler à $2{,}0\\ \\mathrm{m\\cdot s^{-1}}$ constants ? 4. Calculer alors la puissance motrice ($P = F \\times v$).",
+      "corrige": [
+        "1. $a = \\dfrac{2{,}0}{4{,}0} = 0{,}50\\ \\mathrm{m\\cdot s^{-2}}$.",
+        "2. $F_{\\text{motrice}} - f = m\\,a$, donc $F_{\\text{motrice}} = 500 \\times 0{,}50 + 200 = 450\\ \\mathrm{N}$.",
+        "3. Vitesse constante : la résultante est nulle, $F_{\\text{motrice}} = f = 200\\ \\mathrm{N}$.",
+        "4. $P = 200 \\times 2{,}0 = 400\\ \\mathrm{W}$."
+      ],
+      "reponse": "1. $0{,}50\\ \\mathrm{m\\cdot s^{-2}}$ ; 2. $450\\ \\mathrm{N}$ ; 3. $200\\ \\mathrm{N}$ ; 4. $400\\ \\mathrm{W}$."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "puissance-couple",
+      "enonce": "Un cycliste appuie perpendiculairement sur une manivelle de pédalier de $0{,}17\\ \\mathrm{m}$ avec une force moyenne de $200\\ \\mathrm{N}$, à la cadence de $80\\ \\mathrm{tr/min}$. 1. Calculer le moment de la force. 2. Calculer la vitesse angulaire du pédalier. 3. En déduire la puissance développée.",
+      "corrige": [
+        "1. $M = 200 \\times 0{,}17 = 34\\ \\mathrm{N\\cdot m}$.",
+        "2. $\\omega = \\dfrac{2\\pi \\times 80}{60} \\approx 8{,}38\\ \\mathrm{rad/s}$.",
+        "3. $P = M\\,\\omega = 34 \\times 8{,}38 \\approx 285\\ \\mathrm{W}$, l'ordre de grandeur d'un effort soutenu à vélo."
+      ],
+      "reponse": "1. $34\\ \\mathrm{N\\cdot m}$ ; 2. $\\approx 8{,}4\\ \\mathrm{rad/s}$ ; 3. $P \\approx 285\\ \\mathrm{W}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "hydrostatique",
+      "enonce": "Un sous-marin de recherche descend à $100\\ \\mathrm{m}$ dans la mer ($\\rho = 1\\,025\\ \\mathrm{kg\\cdot m^{-3}}$, $g = 9{,}81\\ \\mathrm{N\\cdot kg^{-1}}$). Son hublot circulaire a un diamètre de $20\\ \\mathrm{cm}$ ; l'intérieur est à la pression atmosphérique. 1. Calculer la surpression de l'eau à cette profondeur. 2. Calculer la surface du hublot. 3. En déduire la force exercée par l'eau sur le hublot (due à la surpression).",
+      "corrige": [
+        "1. $\\Delta p = 1\\,025 \\times 9{,}81 \\times 100 \\approx 1{,}0 \\times 10^{6}\\ \\mathrm{Pa}$ (environ $10\\ \\mathrm{bar}$).",
+        "2. $S = \\dfrac{\\pi \\times 0{,}20^2}{4} \\approx 3{,}14 \\times 10^{-2}\\ \\mathrm{m^2}$.",
+        "3. $F = \\Delta p \\times S \\approx 1{,}0 \\times 10^{6} \\times 3{,}14 \\times 10^{-2} \\approx 3{,}2 \\times 10^{4}\\ \\mathrm{N}$, l'équivalent du poids d'environ $3$ tonnes."
+      ],
+      "reponse": "1. $\\approx 1{,}0 \\times 10^{6}\\ \\mathrm{Pa}$ ; 2. $\\approx 3{,}1 \\times 10^{-2}\\ \\mathrm{m^2}$ ; 3. $F \\approx 3{,}2 \\times 10^{4}\\ \\mathrm{N}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "decouverte",
+      "notion": "pression",
+      "enonce": "Vrai ou faux ? a) $1\\ \\mathrm{bar} = 10^{5}\\ \\mathrm{Pa}$. b) $1\\ \\mathrm{cm^2} = 10^{-2}\\ \\mathrm{m^2}$. c) Dans un liquide au repos, la pression ne dépend que de la profondeur, pas de la forme du récipient.",
+      "corrige": [
+        "a) Vrai.",
+        "b) Faux : $1\\ \\mathrm{cm} = 10^{-2}\\ \\mathrm{m}$, donc $1\\ \\mathrm{cm^2} = (10^{-2})^2 = 10^{-4}\\ \\mathrm{m^2}$.",
+        "c) Vrai : c'est le principe fondamental de l'hydrostatique, $\\Delta p = \\rho\\,g\\,h$."
+      ],
+      "reponse": "a) Vrai ; b) Faux ($10^{-4}\\ \\mathrm{m^2}$) ; c) Vrai."
     }
   ]
 }

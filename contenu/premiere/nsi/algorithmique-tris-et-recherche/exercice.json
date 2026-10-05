@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "recherche séquentielle",
       "enonce": "On cherche la valeur 9 par recherche séquentielle (de gauche à droite) dans la liste [4, 7, 9, 2, 5]. Combien de comparaisons effectue-t-on avant de la trouver ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "liste triée ou non",
       "enonce": "On considère la liste [2, 5, 5, 8, 11]. Est-elle triée dans l'ordre croissant ? Justifie la condition qui doit être vraie entre chaque élément et le suivant.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "recherche du minimum (tri par sélection)",
       "enonce": "Première étape d'un tri par sélection sur [8, 3, 6, 1, 5] : on cherche le minimum de toute la liste pour le placer en première position. Quel élément est déplacé et que devient le début de la liste ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "recherche dichotomique",
       "enonce": "Dans la liste triée [1, 4, 6, 9, 12, 15, 20] (indices 0 à 6), on cherche la valeur 12 par recherche dichotomique. Détaille les étapes (indices de début, milieu, fin) jusqu'à la trouver.",
       "corrige": [
@@ -61,7 +61,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "tri par insertion (trace)",
       "enonce": "On applique le tri par insertion à la liste [5, 2, 4, 1]. Donne l'état de la liste après chaque insertion (on insère successivement les éléments d'indice 1, 2 puis 3 dans la partie déjà triée à leur gauche).",
       "corrige": [
@@ -75,7 +75,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "coût : recherche séquentielle vs dichotomique",
       "enonce": "Une liste triée contient 1000 éléments. 1) Dans le pire des cas, combien de comparaisons fait une recherche séquentielle ? 2) Combien d'étapes fait au maximum une recherche dichotomique ? 3) Explique pourquoi la dichotomie exige que la liste soit triée.",
       "corrige": [
@@ -89,7 +89,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "coût de la recherche séquentielle",
       "enonce": "Un tableau contient 200 valeurs, non triées. Combien de comparaisons fait au maximum la recherche séquentielle pour trouver une valeur ? Et si la valeur cherchée est absente ?",
       "corrige": [
@@ -102,7 +102,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "tri par sélection (première étape)",
       "enonce": "On applique le tri par sélection au tableau tab = [5, 2, 8, 1, 9]. Décris le premier tour de boucle et donne l'état du tableau après cette première étape.",
       "corrige": [
@@ -115,7 +115,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "recherche dichotomique (trace)",
       "enonce": "On cherche la valeur 20 par dichotomie dans le tableau trié tab = [3, 7, 11, 15, 20, 25, 31] (indices 0 à 6). Donne la trace (valeurs de g, d, m) et l'indice renvoyé.",
       "corrige": [
@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "algorithme glouton (rendu de monnaie)",
       "enonce": "On rend 87 centimes avec des pièces de 50, 20, 10, 5, 2 et 1 centime, par l'algorithme glouton. Détaille les choix et donne le nombre de pièces utilisées.",
       "corrige": [
@@ -138,6 +138,485 @@
         "Avec ce jeu de pièces (système français), le glouton donne ici la solution optimale."
       ],
       "reponse": "50 + 20 + 10 + 5 + 2 = 87 : 5 pièces au total."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "recherche séquentielle",
+      "enonce": "Que renvoie l'appel `recherche([3, 8, 1, 8, 6], 8)` avec la fonction de recherche séquentielle du cours ?\n\n```python\ndef recherche(tab, cible):\n    for i in range(len(tab)):\n        if tab[i] == cible:\n            return i\n    return -1\n```",
+      "corrige": [
+        "La fonction parcourt le tableau depuis l'indice 0 et s'arrête au premier élément égal à la cible.",
+        "tab[0] = 3, tab[1] = 8 : c'est la cible, la fonction renvoie aussitôt 1.",
+        "Le second 8 (indice 3) n'est jamais examiné."
+      ],
+      "reponse": "1 (l'indice de la première occurrence de 8)"
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "recherche séquentielle",
+      "enonce": "Avec la même fonction `recherche`, que renvoie `recherche([4, 7, 2], 5)` ? Que signifie cette valeur ?",
+      "corrige": [
+        "5 n'est égal à aucun des éléments 4, 7, 2 : la boucle `for` va jusqu'au bout sans rien renvoyer.",
+        "Après la boucle, la fonction exécute `return -1`.",
+        "La valeur -1 ne peut pas être un indice valide renvoyé par la boucle : elle signale « non trouvé »."
+      ],
+      "reponse": "-1, ce qui signifie que 5 n'est pas dans le tableau."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "liste triée ou non",
+      "enonce": "Parmi ces trois listes, lesquelles sont triées dans l'ordre croissant ? A = [1, 3, 3, 9], B = [2, 6, 5, 8], C = [10, 20, 30]",
+      "corrige": [
+        "Une liste est triée par ordre croissant si chaque élément est inférieur ou égal au suivant.",
+        "A : 1 ⩽ 3 ⩽ 3 ⩽ 9, elle est triée (les égalités sont permises).",
+        "B : 6 > 5, elle n'est pas triée. C : 10 ⩽ 20 ⩽ 30, elle est triée."
+      ],
+      "reponse": "A et C sont triées ; B ne l'est pas."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "liste triée ou non",
+      "enonce": "Complète la fonction `est_triee` pour qu'elle renvoie `True` si la liste est triée dans l'ordre croissant, `False` sinon. Que renvoie alors `est_triee([2, 4, 4, 1])` ?\n\n```python\ndef est_triee(tab):\n    for i in range(len(tab) - 1):\n        if ...:\n            return False\n    return True\n```",
+      "corrige": [
+        "On compare chaque élément à son suivant : si un élément est strictement plus grand que le suivant, la liste n'est pas triée.",
+        "La condition à écrire est donc `tab[i] > tab[i + 1]`.",
+        "Pour [2, 4, 4, 1] : 2 ⩽ 4, 4 ⩽ 4, puis 4 > 1 : la fonction renvoie `False`."
+      ],
+      "reponse": "Condition : `tab[i] > tab[i + 1]` ; `est_triee([2, 4, 4, 1])` renvoie `False`."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "recherche dichotomique",
+      "enonce": "On cherche 4 par dichotomie dans le tableau trié [2, 4, 7, 10, 13] (indices 0 à 4). Quel est l'indice du premier milieu examiné, et quelle moitié garde-t-on ensuite ?",
+      "corrige": [
+        "Au départ g = 0 et d = 4, donc m = (0 + 4) // 2 = 2 et tab[2] = 7.",
+        "La cible 4 est plus petite que 7 : elle ne peut être qu'à gauche du milieu.",
+        "On pose d = m - 1 = 1 et on continue dans la moitié gauche (indices 0 et 1)."
+      ],
+      "reponse": "Premier milieu : indice 2 (valeur 7) ; on garde la moitié gauche (d devient 1)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "recherche dichotomique",
+      "enonce": "Dans la fonction `dichotomie` du cours, quelle instruction est exécutée lorsque `tab[m] < cible` ? Explique pourquoi on écrit `m + 1` et pas `m`.",
+      "corrige": [
+        "Si tab[m] < cible, la cible (si elle est présente) se trouve à droite de m, car le tableau est trié.",
+        "On exécute donc `g = m + 1`.",
+        "On sait déjà que tab[m] n'est pas la cible : il est inutile de le garder dans la zone de recherche, et écrire `g = m` pourrait faire tourner la boucle indéfiniment quand g = d - 1."
+      ],
+      "reponse": "`g = m + 1` : l'élément d'indice m est éliminé, car on sait qu'il est différent de la cible."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "tri par sélection",
+      "enonce": "On applique le tri par sélection à [7, 4, 9, 2]. Donne l'état du tableau après le premier tour, puis après le deuxième tour.",
+      "corrige": [
+        "Tour 1 (i = 0) : le minimum de [7, 4, 9, 2] est 2 (indice 3), on l'échange avec 7 → [2, 4, 9, 7].",
+        "Tour 2 (i = 1) : le minimum de la partie non triée [4, 9, 7] est 4, déjà à l'indice 1 ; l'échange ne change rien → [2, 4, 9, 7]."
+      ],
+      "reponse": "Après le tour 1 : [2, 4, 9, 7] ; après le tour 2 : [2, 4, 9, 7]."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "tri par insertion",
+      "enonce": "Dans le tri par insertion, la partie gauche [3, 6, 8] est déjà triée et on doit insérer la valeur 5. Quels éléments sont décalés vers la droite et quel est le résultat ?",
+      "corrige": [
+        "On compare 5 aux éléments triés en partant de la droite : 8 > 5, on décale 8 ; 6 > 5, on décale 6.",
+        "3 < 5 : on s'arrête et on place 5 juste après 3.",
+        "La partie triée devient [3, 5, 6, 8]."
+      ],
+      "reponse": "8 et 6 sont décalés ; on obtient [3, 5, 6, 8]."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "algorithme glouton (rendu de monnaie)",
+      "enonce": "Avec les pièces de 50, 20, 10, 5, 2 et 1 centime, l'algorithme glouton doit rendre 36 centimes. Quelles pièces donne-t-il ?",
+      "corrige": [
+        "On prend à chaque étape la plus grande pièce qui ne dépasse pas le reste.",
+        "50 est trop grand. 20 → reste 16 ; 10 → reste 6 ; 5 → reste 1 ; 1 → reste 0."
+      ],
+      "reponse": "20 + 10 + 5 + 1 : 4 pièces."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "coût d'un algorithme",
+      "enonce": "Associe chaque algorithme à son coût dans le pire des cas : recherche séquentielle, recherche dichotomique, tri par insertion. Coûts proposés : logarithmique, linéaire, quadratique.",
+      "corrige": [
+        "La recherche séquentielle peut examiner les n éléments : coût linéaire.",
+        "La dichotomie divise la zone par deux à chaque étape : coût logarithmique.",
+        "Le tri par insertion peut comparer chaque élément à tous ceux qui le précèdent : coût quadratique."
+      ],
+      "reponse": "Séquentielle : linéaire ; dichotomique : logarithmique ; tri par insertion : quadratique."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "recherche séquentielle",
+      "enonce": "On modifie la fonction de recherche pour compter les occurrences. Qu'affiche ce programme ?\n\n```python\ndef compter(tab, cible):\n    n = 0\n    for x in tab:\n        if x == cible:\n            n = n + 1\n    return n\n\nprint(compter([5, 1, 5, 5, 2, 1], 5))\n```",
+      "corrige": [
+        "La boucle parcourt tous les éléments, sans s'arrêter au premier trouvé.",
+        "Le compteur n augmente de 1 à chaque élément égal à 5 : indices 0, 2 et 3.",
+        "La fonction renvoie 3, qui est affiché."
+      ],
+      "reponse": "3"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "recherche séquentielle",
+      "enonce": "Écris une fonction `maximum(tab)` qui renvoie le plus grand élément d'un tableau non vide en le parcourant une seule fois. Que renvoie `maximum([12, 45, 7, 45, 30])` ?",
+      "corrige": [
+        "On garde dans une variable la plus grande valeur vue jusqu'ici, initialisée avec tab[0].",
+        "On parcourt les éléments et on remplace cette valeur dès qu'on en trouve une plus grande.",
+        "Exemple de réponse : `m = tab[0]`, puis `for x in tab: if x > m: m = x`, puis `return m`.",
+        "Pour [12, 45, 7, 45, 30], la fonction renvoie 45."
+      ],
+      "reponse": "45 (parcours unique, coût linéaire)"
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "recherche dichotomique (trace)",
+      "enonce": "On cherche 8 par dichotomie dans le tableau trié [1, 3, 5, 7, 9, 11] (indices 0 à 5). Donne la suite des valeurs de g, d et m, puis la valeur renvoyée.",
+      "corrige": [
+        "g = 0, d = 5, m = 2 : tab[2] = 5 < 8, donc g = 3.",
+        "g = 3, d = 5, m = 4 : tab[4] = 9 > 8, donc d = 3.",
+        "g = 3, d = 3, m = 3 : tab[3] = 7 < 8, donc g = 4.",
+        "Maintenant g = 4 > d = 3 : la boucle s'arrête et la fonction renvoie -1, car 8 est absent."
+      ],
+      "reponse": "Milieux successifs 2, 4, 3 ; la fonction renvoie -1 (8 n'est pas dans le tableau)."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "recherche dichotomique (trace)",
+      "enonce": "Combien de comparaisons avec un élément du milieu la dichotomie fait-elle pour trouver 1 dans [1, 2, 3, 4, 5, 6, 7] ? Donne les indices des milieux.",
+      "corrige": [
+        "g = 0, d = 6, m = 3 : tab[3] = 4 > 1, donc d = 2.",
+        "g = 0, d = 2, m = 1 : tab[1] = 2 > 1, donc d = 0.",
+        "g = 0, d = 0, m = 0 : tab[0] = 1, trouvé."
+      ],
+      "reponse": "3 comparaisons, milieux aux indices 3, 1 puis 0 ; la fonction renvoie 0."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "tri par sélection",
+      "enonce": "Pour un tableau de 5 éléments, combien de comparaisons `tab[j] < tab[i_min]` le tri par sélection du cours effectue-t-il en tout ? Le résultat dépend-il de l'ordre initial des valeurs ?",
+      "corrige": [
+        "Pour i = 0, j va de 1 à 4 : 4 comparaisons ; pour i = 1 : 3 ; pour i = 2 : 2 ; pour i = 3 : 1 ; pour i = 4 : 0.",
+        "Total : 4 + 3 + 2 + 1 = 10 comparaisons.",
+        "Les bornes des boucles ne dépendent que de la longueur : le nombre de comparaisons est toujours le même, quel que soit l'ordre initial."
+      ],
+      "reponse": "10 comparaisons, quel que soit l'ordre initial."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "tri par insertion (trace)",
+      "enonce": "Donne les états successifs de [4, 1, 3, 2] pendant le tri par insertion (un état après chaque insertion).",
+      "corrige": [
+        "Insertion de 1 (indice 1) : 4 est décalé → [1, 4, 3, 2].",
+        "Insertion de 3 : 4 est décalé, 1 < 3 → [1, 3, 4, 2].",
+        "Insertion de 2 : 4 et 3 sont décalés, 1 < 2 → [1, 2, 3, 4]."
+      ],
+      "reponse": "[1, 4, 3, 2], puis [1, 3, 4, 2], puis [1, 2, 3, 4]."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "tri par insertion",
+      "enonce": "Qu'affiche ce programme, qui utilise la fonction `tri_insertion` du cours ? Remarque : la fonction ne contient pas de `return`.\n\n```python\nt = [9, 2, 7]\nr = tri_insertion(t)\nprint(t)\nprint(r)\n```",
+      "corrige": [
+        "La fonction trie la liste en place : elle modifie directement la liste t passée en paramètre.",
+        "Après l'appel, t vaut [2, 7, 9].",
+        "La fonction n'a pas d'instruction `return` : elle renvoie `None`, donc r vaut `None`."
+      ],
+      "reponse": "Il affiche `[2, 7, 9]` puis `None`."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "terminaison et correction",
+      "enonce": "Pour la boucle `while g <= d` de la dichotomie, on choisit comme variant la quantité d - g. Explique pourquoi la boucle se termine.",
+      "corrige": [
+        "À chaque tour où la cible n'est pas trouvée, soit g devient m + 1, soit d devient m - 1, avec g ⩽ m ⩽ d.",
+        "Dans les deux cas, d - g diminue d'au moins 1 : c'est un entier qui décroît strictement.",
+        "Un entier qui décroît strictement finit par devenir négatif, c'est-à-dire g > d : la condition `g <= d` devient fausse et la boucle s'arrête (sinon elle s'arrête avant, par `return m`)."
+      ],
+      "reponse": "d - g est un entier qui décroît strictement à chaque tour : il finit par être négatif, donc la boucle s'arrête."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "terminaison et correction",
+      "enonce": "Quel invariant de boucle permet de prouver que le tri par insertion est correct ? Énonce-le pour le tour d'indice i.",
+      "corrige": [
+        "Un invariant est une propriété vraie avant et après chaque tour de boucle.",
+        "Pour le tri par insertion : au début du tour i, la partie tab[0..i-1] est triée (elle contient les i premiers éléments d'origine, rangés dans l'ordre).",
+        "À la fin du dernier tour, la partie triée est le tableau entier : le tri est correct."
+      ],
+      "reponse": "« Avant le tour i, les éléments d'indices 0 à i - 1 sont triés. »"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "algorithme glouton (rendu de monnaie)",
+      "enonce": "Un distributeur rend la monnaie avec des pièces de 2 €, 1 €, 50 c, 20 c, 10 c, 5 c, 2 c et 1 c, par l'algorithme glouton. Il doit rendre 3,85 €. Liste les pièces rendues.",
+      "corrige": [
+        "On convertit en centimes : 385 c ; pièces : 200, 100, 50, 20, 10, 5, 2, 1.",
+        "200 → reste 185 ; 100 → reste 85 ; 50 → reste 35 ; 20 → reste 15 ; 10 → reste 5 ; 5 → reste 0."
+      ],
+      "reponse": "2 €, 1 €, 50 c, 20 c, 10 c et 5 c : 6 pièces."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "algorithme glouton (rendu de monnaie)",
+      "enonce": "Complète la fonction gloutonne de rendu de monnaie, puis donne le résultat de `rendu(48, [20, 10, 5, 2, 1])`.\n\n```python\ndef rendu(somme, pieces):   # pieces rangées par ordre décroissant\n    res = []\n    for p in pieces:\n        while ...:\n            res.append(p)\n            somme = somme - p\n    return res\n```",
+      "corrige": [
+        "On peut donner la pièce p tant qu'elle ne dépasse pas ce qu'il reste à rendre : la condition est `somme >= p`.",
+        "Pour 48 : 20, 20 (reste 8) ; 10 trop grand ; 5 (reste 3) ; 2 (reste 1) ; 1 (reste 0)."
+      ],
+      "reponse": "Condition : `somme >= p` ; résultat : [20, 20, 5, 2, 1]."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "coût d'un algorithme",
+      "enonce": "Un tri par insertion met 2 secondes pour trier 10 000 nombres rangés dans l'ordre décroissant. Environ combien de temps mettra-t-il pour 20 000 nombres rangés de la même manière ? Et pour 40 000 ?",
+      "corrige": [
+        "Le tri par insertion a un coût quadratique dans le pire cas (tableau rangé à l'envers) : le temps est à peu près proportionnel à n².",
+        "Doubler n multiplie le temps par 2² = 4 : environ 8 secondes pour 20 000.",
+        "Doubler encore : 8 × 4 = 32 secondes pour 40 000."
+      ],
+      "reponse": "Environ 8 s pour 20 000 nombres et environ 32 s pour 40 000."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "coût : recherche séquentielle vs dichotomique",
+      "enonce": "Un tableau trié contient 1 000 000 d'éléments. Au maximum, combien de milieux la dichotomie examine-t-elle ? Compare avec la recherche séquentielle.",
+      "corrige": [
+        "À chaque étape la zone est divisée par 2 ; il faut le plus petit k tel que 2^k dépasse 1 000 000.",
+        "2^19 = 524 288 et 2^20 = 1 048 576 : au plus 20 milieux examinés.",
+        "La recherche séquentielle peut faire jusqu'à 1 000 000 de comparaisons : 50 000 fois plus."
+      ],
+      "reponse": "Au plus 20 étapes en dichotomie, contre jusqu'à 1 000 000 de comparaisons en séquentiel."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "recherche dichotomique",
+      "enonce": "Un élève applique la fonction `dichotomie` au tableau non trié [8, 2, 9, 1, 5] pour chercher 2. Que renvoie la fonction ? Quelle erreur du cours cela illustre-t-il ?",
+      "corrige": [
+        "g = 0, d = 4, m = 2 : tab[2] = 9 > 2, donc d = 1.",
+        "g = 0, d = 1, m = 0 : tab[0] = 8 > 2, donc d = -1 : la boucle s'arrête.",
+        "La fonction renvoie -1 alors que 2 est bien présent (indice 1) : la dichotomie n'est valable que sur un tableau trié."
+      ],
+      "reponse": "Elle renvoie -1 (« absent ») alors que 2 est à l'indice 1 : on ne doit jamais appliquer la dichotomie à un tableau non trié."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "recherche dichotomique",
+      "enonce": "Dans un tableau trié de 15 éléments, combien de milieux la dichotomie examine-t-elle au maximum ? Et pour 16 éléments ?",
+      "corrige": [
+        "Avec 15 éléments, les zones successives ont au plus 15, 7, 3 puis 1 éléments : au plus 4 milieux.",
+        "Avec 16 éléments, la zone peut passer à 8, 4, 2, 1 éléments : un élément de plus, donc au plus 5 milieux.",
+        "On retrouve que 2^4 = 16 : il faut 5 étapes dès qu'on atteint 16 éléments."
+      ],
+      "reponse": "4 milieux au maximum pour 15 éléments, 5 pour 16 éléments."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "tri par insertion",
+      "enonce": "Pour le tri par insertion, quel est le meilleur des cas ? Combien de décalages fait-on alors pour un tableau de n éléments ? Et pour [5, 4, 3, 2, 1] ?",
+      "corrige": [
+        "Si le tableau est déjà trié, la condition `tab[j] > valeur` est fausse dès la première comparaison : aucun décalage, le coût devient linéaire.",
+        "Pour [5, 4, 3, 2, 1], chaque élément doit passer devant tous les précédents : 1 + 2 + 3 + 4 = 10 décalages (c'est le pire cas)."
+      ],
+      "reponse": "Meilleur cas : tableau déjà trié, 0 décalage ; pour [5, 4, 3, 2, 1] : 10 décalages."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "tri par sélection",
+      "enonce": "On veut trier un tableau dans l'ordre DÉCROISSANT avec le tri par sélection. Quelle seule modification faut-il apporter au code du cours ? Que devient alors [3, 9, 4] ?",
+      "corrige": [
+        "Au lieu de placer le minimum en tête de la partie non triée, on place le maximum.",
+        "Il suffit de remplacer la comparaison `tab[j] < tab[i_min]` par `tab[j] > tab[i_min]` (la variable peut être renommée i_max).",
+        "Pour [3, 9, 4] : tour 1 → [9, 3, 4] ; tour 2 → [9, 4, 3]."
+      ],
+      "reponse": "Remplacer `<` par `>` dans la comparaison ; [3, 9, 4] devient [9, 4, 3]."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "terminaison et correction",
+      "enonce": "Cette boucle doit afficher les nombres de 10 jusqu'à 1 en descendant. Elle ne s'arrête jamais. Trouve l'erreur et propose un variant pour la version corrigée.\n\n```python\nn = 10\nwhile n > 0:\n    print(n)\n    n = n + 1\n```",
+      "corrige": [
+        "n part de 10 et augmente : la condition `n > 0` reste toujours vraie, la boucle est infinie.",
+        "Il faut écrire `n = n - 1`.",
+        "Variant de la version corrigée : n lui-même, entier qui diminue de 1 à chaque tour et finit par valoir 0, ce qui arrête la boucle."
+      ],
+      "reponse": "Il faut `n = n - 1` ; le variant est n, qui décroît strictement jusqu'à 0."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "terminaison et correction",
+      "enonce": "Pour le tri par sélection, on propose l'invariant : « avant le tour i, tab[0..i-1] contient les i plus petits éléments du tableau, rangés dans l'ordre croissant ». Vérifie-le sur [5, 2, 8, 1] avant le tour i = 2.",
+      "corrige": [
+        "Tour 0 : 1 est échangé avec 5 → [1, 2, 8, 5]. Tour 1 : le minimum de [2, 8, 5] est 2, déjà en place → [1, 2, 8, 5].",
+        "Avant le tour i = 2, tab[0..1] = [1, 2].",
+        "Les deux plus petits éléments de {5, 2, 8, 1} sont bien 1 et 2, dans l'ordre croissant : l'invariant est vérifié."
+      ],
+      "reponse": "Avant le tour 2, tab[0..1] = [1, 2] : ce sont bien les 2 plus petits éléments, dans l'ordre."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "algorithme glouton (optimalité)",
+      "enonce": "Un pays imaginaire utilise des pièces de 1, 3 et 4 unités. On doit rendre 6 unités. Quelle solution donne l'algorithme glouton ? Existe-t-il mieux ?",
+      "corrige": [
+        "Le glouton prend d'abord la plus grande pièce : 4, reste 2 ; puis 1, reste 1 ; puis 1, reste 0 : 3 pièces (4 + 1 + 1).",
+        "Or 3 + 3 = 6 n'utilise que 2 pièces.",
+        "Le glouton n'est donc pas optimal avec ce système de pièces."
+      ],
+      "reponse": "Glouton : 4 + 1 + 1 (3 pièces) ; la solution optimale est 3 + 3 (2 pièces)."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "algorithme glouton (optimalité)",
+      "enonce": "On remplit un sac à dos de capacité 10 kg avec la stratégie gloutonne « prendre d'abord l'objet le plus précieux qui rentre encore ». Objets : A (7 kg, 42 €), B (5 kg, 30 €), C (5 kg, 30 €). Quelle valeur obtient-on ? Est-ce optimal ?",
+      "corrige": [
+        "Le plus précieux est A (42 €, 7 kg) : on le prend, il reste 3 kg.",
+        "B et C pèsent 5 kg : ils ne rentrent plus. Valeur totale : 42 €.",
+        "Pourtant B + C pèsent 10 kg et valent 60 € : le choix glouton n'est pas optimal ici."
+      ],
+      "reponse": "Le glouton obtient 42 € (objet A seul) ; prendre B et C donne 60 €, donc il n'est pas optimal."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "coût d'un algorithme",
+      "enonce": "On compte les tours de boucle de ce programme pour n = 8. Combien vaut `compteur` à la fin ? Quel est le coût de cette boucle en fonction de n ?\n\n```python\nn = 8\ncompteur = 0\nwhile n > 1:\n    n = n // 2\n    compteur = compteur + 1\nprint(compteur)\n```",
+      "corrige": [
+        "n prend successivement les valeurs 8, 4, 2, 1 : la boucle fait 3 tours.",
+        "Le programme affiche 3.",
+        "Comme n est divisé par 2 à chaque tour, le nombre de tours est de l'ordre de log₂(n) : coût logarithmique, comme la dichotomie."
+      ],
+      "reponse": "`compteur` vaut 3 ; le coût est logarithmique."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "recherche séquentielle",
+      "enonce": "Écris une fonction `indice_dernier(tab, cible)` qui renvoie l'indice de la DERNIÈRE occurrence de cible, ou -1 si elle est absente. Que renvoie-t-elle pour `([3, 8, 1, 8, 6], 8)` ?",
+      "corrige": [
+        "Première idée : parcourir tout le tableau et mémoriser l'indice à chaque fois qu'on trouve la cible.",
+        "Exemple de réponse : `res = -1`, puis `for i in range(len(tab)): if tab[i] == cible: res = i`, puis `return res`.",
+        "Autre possibilité : parcourir de droite à gauche avec `range(len(tab) - 1, -1, -1)` et renvoyer le premier indice trouvé.",
+        "Pour ([3, 8, 1, 8, 6], 8), on obtient 3."
+      ],
+      "reponse": "3 (exemple de code dans le corrigé)"
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "recherche dichotomique",
+      "enonce": "Un jeu : l'ordinateur choisit un entier entre 1 et 100 et répond « plus grand » ou « plus petit ». En appliquant la dichotomie (toujours proposer le milieu de l'intervalle restant), combien de propositions faut-il au maximum ? Quelle est la première proposition ?",
+      "corrige": [
+        "Première proposition : le milieu de [1 ; 100], soit (1 + 100) // 2 = 50.",
+        "Chaque réponse divise par 2 le nombre de valeurs encore possibles.",
+        "2^6 = 64 < 100 ⩽ 128 = 2^7 : il faut au plus 7 propositions."
+      ],
+      "reponse": "Au plus 7 propositions ; on commence par 50."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "recherche dichotomique",
+      "enonce": "Écris une fonction `appartient(tab, cible)` qui renvoie `True` si cible est dans le tableau trié tab, `False` sinon, en utilisant la dichotomie. Teste-la sur `([2, 5, 8, 13], 13)` et `([2, 5, 8, 13], 6)`.",
+      "corrige": [
+        "On reprend la structure de la dichotomie : g, d, puis milieu m tant que g ⩽ d.",
+        "Si tab[m] == cible, on renvoie `True` ; sinon on réduit la zone comme dans le cours.",
+        "Si la boucle se termine sans trouver, on renvoie `False`.",
+        "Résultats : `True` pour 13, `False` pour 6."
+      ],
+      "reponse": "`appartient([2, 5, 8, 13], 13)` renvoie `True` ; `appartient([2, 5, 8, 13], 6)` renvoie `False`."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "tri par insertion",
+      "enonce": "On veut insérer une nouvelle note dans une liste de notes déjà triée, sans retrier toute la liste. Écris une fonction `inserer(tab, x)` qui ajoute x à sa place (en utilisant l'idée du tri par insertion). Que devient [8, 11, 14, 17] après `inserer(tab, 12)` ?",
+      "corrige": [
+        "On ajoute x à la fin avec `tab.append(x)`, puis on le fait reculer en décalant vers la droite les éléments plus grands, exactement comme une étape du tri par insertion.",
+        "Exemple de réponse : `tab.append(x)`, `j = len(tab) - 2`, puis `while j >= 0 and tab[j] > x: tab[j + 1] = tab[j]; j = j - 1`, enfin `tab[j + 1] = x`.",
+        "Pour 12 : 17 et 14 sont décalés, 11 < 12 : on obtient [8, 11, 12, 14, 17]."
+      ],
+      "reponse": "[8, 11, 12, 14, 17]"
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "tri par sélection",
+      "enonce": "Une enseignante doit classer 400 copies par ordre de note avec la méthode du tri par sélection : chaque comparaison de deux copies lui prend environ 1 seconde. Combien de comparaisons faut-il ? Environ combien d'heures cela représente-t-il ?",
+      "corrige": [
+        "Le tri par sélection fait (n - 1) + (n - 2) + … + 1 = n(n - 1)/2 comparaisons.",
+        "Pour n = 400 : 400 × 399 / 2 = 79 800 comparaisons.",
+        "79 800 s ÷ 3 600 ≈ 22,2 h : environ 22 heures, ce qui montre le coût quadratique."
+      ],
+      "reponse": "79 800 comparaisons, soit environ 22 heures."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "algorithme glouton (rendu de monnaie)",
+      "enonce": "On utilise des pièces de 50, 20, 10, 5, 2 et 1 centime et l'algorithme glouton. Pour quel montant, entre 1 et 9 centimes, le glouton utilise-t-il le plus de pièces ? Justifie.",
+      "corrige": [
+        "Pour 1 à 9 centimes, seules les pièces 5, 2 et 1 servent.",
+        "Nombre de pièces : 1 → 1 ; 2 → 1 ; 3 → 2 ; 4 → 2 ; 5 → 1 ; 6 → 2 ; 7 → 2 ; 8 → 3 (5 + 2 + 1) ; 9 → 3 (5 + 2 + 2).",
+        "Le maximum, 3 pièces, est atteint pour 8 et 9 centimes."
+      ],
+      "reponse": "8 et 9 centimes, avec 3 pièces chacun (5 + 2 + 1 et 5 + 2 + 2)."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "coût : recherche séquentielle vs dichotomique",
+      "enonce": "On doit faire 1 000 recherches dans un tableau de 1 000 000 de valeurs non triées. Option A : 1 000 recherches séquentielles. Option B : trier d'abord le tableau, puis faire 1 000 dichotomies. Compare l'ordre de grandeur du nombre de comparaisons des recherches, et dis quand le tri préalable devient intéressant.",
+      "corrige": [
+        "Option A : jusqu'à 1 000 × 1 000 000 = 10^9 (un milliard de) comparaisons dans le pire cas.",
+        "Option B : chaque dichotomie fait au plus 20 étapes, soit environ 20 000 comparaisons pour les 1 000 recherches.",
+        "Il faut ajouter le coût du tri, payé une seule fois : avec un tri quadratique comme ceux du cours, environ 5 × 10^11 comparaisons, ce qui ne devient rentable qu'à partir de plusieurs centaines de milliers de recherches (il existe des tris bien plus rapides, vus plus tard)."
+      ],
+      "reponse": "A : environ un milliard de comparaisons ; B : environ 20 000 pour les recherches, plus le coût du tri, qui n'est rentable que si l'on fait de très nombreuses recherches."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "terminaison et correction",
+      "enonce": "Voici une fonction censée renvoyer l'indice du minimum d'un tableau non vide. Elle donne un résultat faux. Trouve l'erreur, corrige-la et donne le résultat attendu pour [4, 2, 7, 1, 3].\n\n```python\ndef indice_min(tab):\n    i_min = 0\n    for j in range(1, len(tab)):\n        if tab[j] < tab[i_min]:\n            i_min = tab[j]\n    return i_min\n```",
+      "corrige": [
+        "La variable i_min doit contenir un indice, mais la ligne `i_min = tab[j]` y range une valeur.",
+        "Il faut écrire `i_min = j`.",
+        "Invariant de la version corrigée : après le tour j, tab[i_min] est le minimum de tab[0..j]. Pour [4, 2, 7, 1, 3], le minimum 1 est à l'indice 3."
+      ],
+      "reponse": "Remplacer `i_min = tab[j]` par `i_min = j` ; la fonction renvoie alors 3."
     }
   ]
 }

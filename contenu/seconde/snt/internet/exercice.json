@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "vocabulaire réseau",
       "enonce": "a) Qu'est-ce qu'Internet, en une phrase ? b) Quelle différence entre Internet et le Web ? c) Que fait un routeur dans ce réseau ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "adresse IP",
       "enonce": "On donne l'adresse IPv4 : 192.168.1.10. a) De combien de nombres est-elle composée ? b) Entre quelles valeurs chaque nombre peut-il aller ? c) L'adresse 192.168.1.300 est-elle valide ? Justifie.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "commutation de paquets",
       "enonce": "Un fichier est découpé pour être envoyé sur Internet. a) Comment appelle-t-on ces morceaux ? b) Deux paquets d'un même message peuvent-ils suivre des chemins différents ? c) À quoi sert le numéro d'ordre porté par chaque paquet ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "protocole et DNS",
       "enonce": "a) Qu'est-ce qu'un protocole de communication ? b) Quel est le rôle du DNS ? c) Quand tu tapes exemple.fr dans le navigateur, quelle information le DNS renvoie-t-il ?",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "calcul de débit",
       "enonce": "On télécharge un fichier de 30 Mo (mégaoctets) avec une connexion de 24 Mbit/s (mégabits par seconde). a) Convertis 30 Mo en mégabits (1 octet = 8 bits). b) Combien de temps faut-il théoriquement pour le télécharger ? c) Pourquoi le temps réel est-il souvent plus long ?",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "adressage et nombre de machines",
       "enonce": "a) Une adresse IPv4 est codée sur 32 bits : combien d'adresses différentes cela fait-il (donne la puissance de 2 puis un ordre de grandeur) ? b) Pourquoi ce nombre est-il devenu insuffisant ? c) IPv6 code les adresses sur 128 bits : quel est l'intérêt principal par rapport à IPv4 ?",
       "corrige": [
@@ -84,7 +84,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "matériel du réseau (box, routeur, FAI)",
       "enonce": "Chez toi, plusieurs appareils se connectent à Internet via une box. a) Quel rôle joue la box (routeur) ? b) Qu'est-ce qu'un FAI ? c) Cite deux supports possibles pour transporter les données jusqu'à ta box.",
       "corrige": [
@@ -96,7 +96,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "protocoles TCP et IP",
       "enonce": "On envoie un message par Internet. a) À quoi sert le protocole IP ? b) À quoi sert le protocole TCP ? c) Pourquoi dit-on qu'ils travaillent ensemble (TCP/IP) ?",
       "corrige": [
@@ -108,7 +108,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "routage et chemin des paquets",
       "enonce": "Deux paquets d'un même message partent de Lyon vers un serveur à New York. a) Empruntent-ils forcément le même chemin ? b) Que fait un routeur à chaque étape ? c) Que se passe-t-il pour les paquets si un routeur tombe en panne sur la route ?",
       "corrige": [
@@ -120,7 +120,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "calcul de débit et temps de transfert",
       "enonce": "On télécharge un fichier de 900 Mo (mégaoctets) avec une connexion de 100 Mb/s (mégabits par seconde). a) Convertis 900 Mo en mégabits (1 octet = 8 bits). b) Calcule le temps de téléchargement théorique. c) Pourquoi le temps réel est-il souvent plus long ?",
       "corrige": [
@@ -129,6 +129,454 @@
         "En pratique, le débit réel est inférieur au débit annoncé (partage de la ligne, encombrement, distance, protocoles) : le temps dépasse la valeur théorique."
       ],
       "reponse": "900 Mo = 7200 Mb ; 7200 / 100 = 72 s en théorie ; plus long en réalité car le débit effectif est inférieur."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire réseau",
+      "enonce": "Vrai ou faux ? a) « Internet et le Web, c'est la même chose. » b) « La messagerie électronique utilise Internet sans faire partie du Web. »",
+      "corrige": [
+        "a) Faux : Internet est l'infrastructure mondiale qui relie les machines ; le Web n'est qu'un service qui l'utilise.",
+        "b) Vrai : la messagerie est un autre service qui fonctionne grâce à Internet."
+      ],
+      "reponse": "a) faux ; b) vrai."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "vocabulaire réseau",
+      "enonce": "Parmi ces activités, lesquelles utilisent Internet ? Laquelle relève du Web ? a) envoyer un courriel ; b) consulter une page avec un navigateur ; c) participer à une visioconférence ; d) transférer un fichier vers un serveur.",
+      "corrige": [
+        "Les quatre activités font circuler des données sur Internet.",
+        "Seule la consultation de pages avec un navigateur relève du Web ; les autres sont d'autres services d'Internet."
+      ],
+      "reponse": "Toutes utilisent Internet ; seule b) relève du Web."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "vocabulaire réseau",
+      "enonce": "D'où vient le mot « Internet » ? Explique pourquoi on dit qu'Internet est un « réseau de réseaux ».",
+      "corrige": [
+        "Le mot vient de l'anglais inter-network, « entre les réseaux ».",
+        "Internet ne forme pas un réseau unique : il relie entre eux des millions de réseaux (réseaux domestiques, d'entreprises, d'opérateurs…) à l'échelle de la planète."
+      ],
+      "reponse": "De l'anglais inter-network ; il relie entre eux des millions de réseaux."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "naissance d'Internet",
+      "enonce": "De quel réseau américain Internet est-il issu ? Quelle propriété ce réseau devait-il avoir ?",
+      "corrige": [
+        "Internet est né dans les années 1970 du réseau ARPANET.",
+        "Il avait été conçu pour résister aux pannes : si une liaison est coupée, l'information doit pouvoir passer par un autre chemin."
+      ],
+      "reponse": "ARPANET ; il devait résister aux pannes en permettant d'autres chemins."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "adresse IP",
+      "enonce": "Parmi ces écritures, lesquelles sont des adresses IPv4 valides ? Justifie pour celles qui ne le sont pas. a) 10.0.0.1 ; b) 256.1.1.1 ; c) 172.16.5 ; d) 192.168.0.255 ; e) 8.8.8.8.",
+      "corrige": [
+        "Une adresse IPv4 valide comporte exactement 4 nombres de 0 à 255 séparés par des points.",
+        "b) est invalide car 256 dépasse 255 ; c) est invalide car elle ne comporte que 3 nombres.",
+        "a), d) et e) respectent la règle."
+      ],
+      "reponse": "Valides : a, d, e. Invalides : b (256 > 255) et c (3 nombres seulement)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "adresse IP",
+      "enonce": "Écris la plus petite et la plus grande adresse IPv4 que l'on peut former.",
+      "corrige": [
+        "Chacun des 4 nombres va de 0 à 255.",
+        "La plus petite s'obtient avec quatre fois 0, la plus grande avec quatre fois 255."
+      ],
+      "reponse": "0.0.0.0 et 255.255.255.255."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "adresse IP",
+      "enonce": "Chaque nombre d'une adresse IPv4 est codé sur un octet (8 bits). Écris en binaire, sur 8 bits : a) 192 ; b) 10 ; c) 255.",
+      "corrige": [
+        "192 = 128 + 64 : on met des 1 sur les bits de poids 128 et 64, d'où 11000000.",
+        "10 = 8 + 2 : 00001010.",
+        "255 = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 : tous les bits valent 1, 11111111."
+      ],
+      "reponse": "a) 11000000 ; b) 00001010 ; c) 11111111."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "adresse IP",
+      "enonce": "Une adresse IPv4 est donnée en binaire : 11000000.10101000.00000001.00001010. Écris-la en décimal.",
+      "corrige": [
+        "Poids des bits, de gauche à droite : 128, 64, 32, 16, 8, 4, 2, 1.",
+        "11000000 = 128 + 64 = 192 ; 10101000 = 128 + 32 + 8 = 168 ; 00000001 = 1 ; 00001010 = 8 + 2 = 10."
+      ],
+      "reponse": "192.168.1.10"
+    },
+    {
+      "id": 19,
+      "difficulte": "approfondissement",
+      "notion": "adresse IP",
+      "enonce": "Cette fonction teste si une chaîne est une adresse IPv4 valide. Qu'affiche le programme ? Explique le rôle de split.\n\n```python\ndef valide(adresse):\n    nombres = adresse.split(\".\")\n    if len(nombres) != 4:\n        return False\n    for n in nombres:\n        if int(n) < 0 or int(n) > 255:\n            return False\n    return True\n\nprint(valide(\"192.168.1.10\"))\nprint(valide(\"192.168.1.300\"))\nprint(valide(\"10.0.1\"))\n```",
+      "corrige": [
+        "split(\".\") coupe la chaîne à chaque point : \"192.168.1.10\" donne la liste ['192', '168', '1', '10'].",
+        "Première adresse : 4 nombres, tous entre 0 et 255 → True. Deuxième : 300 > 255 → False. Troisième : 3 nombres seulement → False."
+      ],
+      "reponse": "True, False, False ; split découpe l'adresse en ses nombres."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "commutation de paquets",
+      "enonce": "Un message est découpé en 4 paquets numérotés : 1 « Rendez », 2 « -vous », 3 « à 17 », 4 « h ». Ils arrivent dans l'ordre 3, 1, 4, 2. a) Que fait la machine destinataire ? b) Quel message reconstitue-t-elle ?",
+      "corrige": [
+        "Les paquets voyagent indépendamment et peuvent arriver dans le désordre.",
+        "La machine destinataire les remet dans l'ordre grâce à leur numéro : 1, 2, 3, 4."
+      ],
+      "reponse": "Elle les remet dans l'ordre de leurs numéros et obtient « Rendez-vous à 17 h »."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "commutation de paquets",
+      "enonce": "Ce programme simule la remise en ordre de paquets arrivés dans le désordre. Chaque paquet est un couple (numéro, contenu). Qu'affiche-t-il ?\n\n```python\npaquets = [(3, \"pas \"), (1, \"Ne \"), (4, \"!\"), (2, \"bouge \")]\npaquets.sort()\nmessage = \"\"\nfor numero, contenu in paquets:\n    message = message + contenu\nprint(message)\n```",
+      "corrige": [
+        "sort() trie les couples selon leur premier élément, le numéro : (1, \"Ne \"), (2, \"bouge \"), (3, \"pas \"), (4, \"!\").",
+        "La boucle colle les contenus dans cet ordre."
+      ],
+      "reponse": "Ne bouge pas !"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "commutation de paquets",
+      "enonce": "Une photo de 1,5 Mo (1 500 000 octets) est envoyée en paquets transportant chacun 1 500 octets de données. a) Combien de paquets faut-il ? b) Un paquet se perd en route : faut-il renvoyer toute la photo ?",
+      "corrige": [
+        "Nombre de paquets : 1 500 000 / 1 500 = 1 000 paquets.",
+        "Non : seul le paquet perdu est renvoyé, sans tout recommencer. C'est un avantage du découpage en paquets."
+      ],
+      "reponse": "1 000 paquets ; seul le paquet perdu est renvoyé."
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "commutation de paquets",
+      "enonce": "Explique pourquoi la commutation de paquets rend Internet plus robuste que si chaque message était envoyé d'un seul bloc par un chemin unique et réservé. Donne deux arguments.",
+      "corrige": [
+        "Il n'existe pas de chemin obligatoire : si une liaison ou un routeur tombe en panne, les paquets suivants passent par un autre chemin.",
+        "En cas de perte, on ne renvoie que le paquet manquant, pas tout le message.",
+        "De plus, les liaisons sont partagées entre les paquets de nombreux utilisateurs au lieu d'être réservées à un seul échange."
+      ],
+      "reponse": "Les paquets contournent les pannes par d'autres chemins, et une perte ne demande de renvoyer qu'un paquet."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "protocole et DNS",
+      "enonce": "Remets dans l'ordre les étapes qui suivent la saisie d'une adresse dans le navigateur : a) le navigateur contacte le serveur à l'adresse IP obtenue ; b) l'utilisateur tape education.gouv.fr ; c) l'ordinateur interroge un serveur DNS ; d) le serveur DNS renvoie l'adresse IP correspondante.",
+      "corrige": [
+        "On part de la saisie du nom (b). La machine ne sait pas joindre un nom : elle demande d'abord au DNS (c).",
+        "Le DNS répond par l'adresse IP (d), que le navigateur utilise enfin pour contacter le serveur (a)."
+      ],
+      "reponse": "b, c, d, a."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "protocole et DNS",
+      "enonce": "Un matin, le serveur DNS utilisé par un ordinateur tombe en panne, alors que tout le reste du réseau fonctionne. Explique pourquoi l'utilisateur n'arrive plus à ouvrir de site en tapant son nom.",
+      "corrige": [
+        "Pour joindre un site, l'ordinateur doit connaître l'adresse IP du serveur ; c'est le DNS qui traduit le nom en adresse IP.",
+        "Sans réponse du DNS, l'ordinateur ne connaît pas l'adresse IP : il ne peut pas envoyer de paquets au serveur, même si les câbles et les routeurs fonctionnent."
+      ],
+      "reponse": "Sans DNS, le nom n'est plus traduit en adresse IP : l'ordinateur ne sait pas où envoyer ses paquets."
+    },
+    {
+      "id": 26,
+      "difficulte": "decouverte",
+      "notion": "nom de domaine",
+      "enonce": "Pourquoi utilise-t-on des noms de domaine (comme education.gouv.fr) plutôt que de taper directement des adresses IP ?",
+      "corrige": [
+        "Une adresse IP est une suite de nombres difficile à retenir pour un humain.",
+        "Un nom de domaine est lisible et facile à mémoriser ; le DNS se charge de le traduire en adresse IP pour les machines."
+      ],
+      "reponse": "Parce qu'un nom est plus facile à retenir qu'une suite de nombres ; le DNS le traduit en adresse IP."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "nom de domaine",
+      "enonce": "Corrige l'erreur : « L'adresse IP de mon site préféré est www.monsite.fr. »",
+      "corrige": [
+        "www.monsite.fr est un nom de domaine, lisible par l'humain.",
+        "Une adresse IP est une suite de nombres (4 nombres de 0 à 255 en IPv4) ; c'est le DNS qui fait le lien entre les deux."
+      ],
+      "reponse": "www.monsite.fr est un nom de domaine, pas une adresse IP ; l'adresse IP est une suite de nombres que le DNS associe à ce nom."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "protocoles TCP et IP",
+      "enonce": "Associe chaque tâche au protocole IP ou au protocole TCP : a) donner une adresse à chaque machine ; b) découper les données en paquets ; c) redemander un paquet manquant ; d) acheminer les paquets vers leur destination ; e) remettre les paquets dans l'ordre.",
+      "corrige": [
+        "IP s'occupe de l'adressage et de l'acheminement des paquets (a et d).",
+        "TCP découpe, vérifie que tout arrive, redemande les paquets manquants et remet dans l'ordre (b, c, e)."
+      ],
+      "reponse": "IP : a, d. TCP : b, c, e."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "protocoles TCP et IP",
+      "enonce": "Un fichier est envoyé en 6 paquets numérotés de 1 à 6. La machine destinataire reçoit les paquets 1, 2, 4, 5 et 6. Quel protocole s'en aperçoit et que fait-il ?",
+      "corrige": [
+        "TCP vérifie que tous les paquets numérotés sont arrivés : il constate qu'il manque le paquet 3.",
+        "Il redemande ce paquet, puis remet les 6 paquets dans l'ordre pour reconstituer le fichier."
+      ],
+      "reponse": "TCP constate l'absence du paquet 3 et le redemande."
+    },
+    {
+      "id": 30,
+      "difficulte": "application",
+      "notion": "routage et chemin des paquets",
+      "enonce": "Cinq routeurs sont reliés ainsi : A–B, A–C, B–D, C–D, D–E. Un paquet part de A pour aller en E. a) Donne deux chemins possibles. b) Si le routeur B tombe en panne, le paquet peut-il encore arriver ?",
+      "corrige": [
+        "Pour atteindre E, il faut passer par D (seul voisin de E). On peut aller de A à D par B ou par C : A–B–D–E et A–C–D–E.",
+        "Si B est en panne, le chemin A–C–D–E reste disponible."
+      ],
+      "reponse": "a) A–B–D–E et A–C–D–E ; b) oui, par A–C–D–E."
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "routage et chemin des paquets",
+      "enonce": "Des routeurs sont reliés ainsi : A–B, B–C, C–F, A–D, D–F, A–E, E–D. a) Quel chemin de A à F utilise le moins de liaisons ? b) Si le routeur D tombe en panne, quel chemin reste possible ? c) Combien de liaisons compte-t-il ?",
+      "corrige": [
+        "Chemins possibles : A–B–C–F (3 liaisons), A–D–F (2 liaisons), A–E–D–F (3 liaisons). Le plus court est A–D–F.",
+        "Sans D, les chemins A–D–F et A–E–D–F sont coupés ; il reste A–B–C–F, avec 3 liaisons."
+      ],
+      "reponse": "a) A–D–F ; b) A–B–C–F ; c) 3 liaisons."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "matériel du réseau (box, routeur, FAI)",
+      "enonce": "Associe chaque technologie d'accès à son support : a) ADSL ; b) 5G ; c) câble sous-marin entre continents. Supports : ondes radio, fibre optique, câble de cuivre.",
+      "corrige": [
+        "L'ADSL passe par la ligne téléphonique en cuivre.",
+        "La 5G, réseau mobile, utilise les ondes radio. Les câbles sous-marins qui relient les continents sont en fibre optique."
+      ],
+      "reponse": "a) cuivre ; b) ondes radio ; c) fibre optique."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "matériel du réseau (box, routeur, FAI)",
+      "enonce": "Un téléphone connecté au Wi-Fi de la maison demande une page à un serveur situé à l'étranger. Remets dans l'ordre les éléments traversés par la requête : réseau du FAI ; serveur ; box ; téléphone ; routeurs d'Internet.",
+      "corrige": [
+        "La requête part du téléphone et rejoint d'abord la box par le Wi-Fi.",
+        "La box la transmet au réseau du fournisseur d'accès (FAI), puis les routeurs d'Internet l'acheminent de proche en proche jusqu'au serveur."
+      ],
+      "reponse": "téléphone → box → réseau du FAI → routeurs d'Internet → serveur."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "calcul de débit",
+      "enonce": "Convertis : a) 1 Gbit/s en Mbit/s ; b) un débit de 8 Mbit/s en mégaoctets par seconde (1 octet = 8 bits).",
+      "corrige": [
+        "a) 1 Gbit = 1 000 Mbit, donc 1 Gbit/s = 1 000 Mbit/s.",
+        "b) 8 Mbit = 8 / 8 = 1 Mo, donc 8 Mbit/s = 1 Mo/s."
+      ],
+      "reponse": "a) 1 000 Mbit/s ; b) 1 Mo/s."
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "calcul de débit",
+      "enonce": "On envoie une photo de 4 Mo avec une connexion mobile de 20 Mbit/s. Combien de temps dure l'envoi, en théorie ?",
+      "corrige": [
+        "Taille en bits : 4 Mo × 8 = 32 Mbit.",
+        "Temps = taille / débit = 32 / 20 = 1,6 s."
+      ],
+      "reponse": "1,6 seconde."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "calcul de débit et temps de transfert",
+      "enonce": "On télécharge un film de 2 Go (2 000 Mo). Compare la durée théorique avec la fibre (500 Mbit/s) et avec l'ADSL (8 Mbit/s).",
+      "corrige": [
+        "Taille : 2 000 Mo × 8 = 16 000 Mbit.",
+        "Fibre : 16 000 / 500 = 32 s. ADSL : 16 000 / 8 = 2 000 s, soit 33 min 20 s.",
+        "La fibre est ici 500 / 8 = 62,5 fois plus rapide."
+      ],
+      "reponse": "32 s avec la fibre, 2 000 s (33 min 20 s) avec l'ADSL."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "calcul de débit et temps de transfert",
+      "enonce": "Un fichier de 600 Mo a été téléchargé en 2 minutes. Quel a été le débit réel moyen, en Mbit/s ?",
+      "corrige": [
+        "Taille : 600 × 8 = 4 800 Mbit. Durée : 2 min = 120 s.",
+        "Débit = taille / temps = 4 800 / 120 = 40 Mbit/s."
+      ],
+      "reponse": "40 Mbit/s."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "calcul de débit",
+      "enonce": "Qu'affiche ce programme ? Que calcule la fonction duree ?\n\n```python\ndef duree(taille_mo, debit_mbits):\n    return taille_mo * 8 / debit_mbits\n\nprint(duree(30, 24))\nprint(duree(250, 100))\nprint(duree(5, 2))\n```",
+      "corrige": [
+        "La fonction convertit la taille en mégabits (× 8) puis divise par le débit : elle donne la durée théorique de transfert, en secondes.",
+        "30 × 8 / 24 = 10 ; 250 × 8 / 100 = 20 ; 5 × 8 / 2 = 20. La division / donne toujours un nombre décimal en Python."
+      ],
+      "reponse": "10.0, 20.0, 20.0 : la durée de transfert théorique en secondes."
+    },
+    {
+      "id": 39,
+      "difficulte": "decouverte",
+      "notion": "enjeux : énergie et neutralité du Net",
+      "enonce": "Qu'est-ce que la neutralité du Net ?",
+      "corrige": [
+        "C'est le principe selon lequel les données doivent être acheminées sans discrimination, quels que soient leur contenu ou leur émetteur."
+      ],
+      "reponse": "Le principe selon lequel toutes les données sont acheminées sans discrimination, quels que soient leur contenu ou leur émetteur."
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "enjeux : énergie et neutralité du Net",
+      "enonce": "Quand tu regardes une vidéo en ligne, pourquoi de l'énergie est-elle consommée ailleurs que dans ton téléphone ? Cite deux endroits.",
+      "corrige": [
+        "La vidéo est stockée sur des serveurs, dans des centres de données qui fonctionnent jour et nuit et doivent être refroidis.",
+        "Elle traverse ensuite les équipements du réseau (routeurs, antennes, box), qui consomment aussi de l'électricité."
+      ],
+      "reponse": "Dans les centres de données (serveurs) et dans les équipements du réseau (routeurs, antennes, box)."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "enjeux : énergie et neutralité du Net",
+      "enonce": "Un fournisseur d'accès ralentit volontairement les vidéos d'un service concurrent du sien, tout en laissant son propre service rapide. Ce comportement respecte-t-il la neutralité du Net ? Justifie.",
+      "corrige": [
+        "La neutralité du Net demande d'acheminer toutes les données sans discrimination selon leur émetteur.",
+        "Ici, le fournisseur traite différemment les données selon qu'elles viennent de lui ou d'un concurrent : il ne respecte pas ce principe."
+      ],
+      "reponse": "Non : il discrimine des données selon leur émetteur."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "adressage et nombre de machines",
+      "enonce": "Qu'affiche ce programme ? Que représentent ces nombres pour les adresses IPv4 ?\n\n```python\nprint(2 ** 8)\nprint(256 ** 4)\nprint(2 ** 32 == 256 ** 4)\n```",
+      "corrige": [
+        "2 ** 8 = 256 : un octet peut prendre 256 valeurs (de 0 à 255).",
+        "Une adresse IPv4 compte 4 octets : 256 ** 4 = 4 294 967 296 adresses, soit environ 4,3 milliards.",
+        "C'est bien 2 ** 32, puisque 4 octets font 32 bits : le programme affiche True."
+      ],
+      "reponse": "256, 4294967296 et True : 256 valeurs par octet, environ 4,3 milliards d'adresses IPv4."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "adressage et nombre de machines",
+      "enonce": "La population mondiale était d'environ 8 milliards de personnes en 2023, et beaucoup possèdent plusieurs appareils connectés. Montre par un calcul qu'il est impossible de donner une adresse IPv4 différente à chaque personne. Quelle solution est déployée ?",
+      "corrige": [
+        "Il existe 2^32 ≈ 4,3 milliards d'adresses IPv4.",
+        "8 milliards > 4,3 milliards : même avec un seul appareil par personne, les adresses ne suffiraient pas.",
+        "On déploie IPv6, dont les adresses sur 128 bits offrent un nombre gigantesque de possibilités."
+      ],
+      "reponse": "4,3 milliards d'adresses < 8 milliards de personnes ; on passe à IPv6."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "naissance d'Internet",
+      "enonce": "ARPANET a été conçu pour que l'information puisse « emprunter un autre chemin » si une liaison est coupée. Quel principe d'Internet, vu dans le cours, permet justement cela ?",
+      "corrige": [
+        "La commutation de paquets : l'information est découpée en paquets qui voyagent indépendamment et peuvent suivre des chemins différents.",
+        "Les routeurs dirigent chaque paquet vers un voisin disponible ; une liaison coupée est donc contournée."
+      ],
+      "reponse": "La commutation de paquets (routés indépendamment par les routeurs)."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "commutation de paquets",
+      "enonce": "Un message de 6 000 octets est découpé en paquets de 1 500 octets de données. Les paquets arrivent dans l'ordre 2, 4, 1, puis plus rien. a) Combien de paquets ont été envoyés ? b) Lequel manque ? c) Quel protocole le redemande ? d) Dans quel ordre la machine assemble-t-elle finalement les paquets ?",
+      "corrige": [
+        "Nombre de paquets : 6 000 / 1 500 = 4.",
+        "On a reçu 1, 2 et 4 : il manque le paquet 3.",
+        "TCP détecte le manque et redemande le paquet 3, puis remet tout dans l'ordre 1, 2, 3, 4."
+      ],
+      "reponse": "a) 4 paquets ; b) le 3 ; c) TCP ; d) 1, 2, 3, 4."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "protocole et DNS",
+      "enonce": "Un élève tape www.lycee-exemple.fr. Le serveur DNS répond : « www.lycee-exemple.fr → 203.0.113.25 ». a) Quelle est l'adresse IP du serveur ? b) Est-ce une adresse IPv4 valide ? c) Que fait ensuite le navigateur ? d) Quel protocole découpera la page renvoyée en paquets ?",
+      "corrige": [
+        "a) L'adresse IP renvoyée est 203.0.113.25.",
+        "b) Oui : 4 nombres, tous compris entre 0 et 255.",
+        "c) Le navigateur envoie sa demande de page à la machine d'adresse 203.0.113.25.",
+        "d) TCP découpe les données en paquets ; IP les achemine."
+      ],
+      "reponse": "a) 203.0.113.25 ; b) oui ; c) il contacte le serveur à cette adresse ; d) TCP."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "calcul de débit",
+      "enonce": "Une famille dispose d'une connexion de 20 Mbit/s. Trois personnes regardent chacune une vidéo qui utilise 5 Mbit/s. Une quatrième veut télécharger un jeu de 150 Mo en même temps. a) Quel débit reste disponible pour le téléchargement ? b) Combien de temps dure-t-il, en théorie ?",
+      "corrige": [
+        "Les vidéos utilisent 3 × 5 = 15 Mbit/s ; il reste 20 − 15 = 5 Mbit/s.",
+        "Taille : 150 × 8 = 1 200 Mbit. Durée : 1 200 / 5 = 240 s, soit 4 minutes."
+      ],
+      "reponse": "a) 5 Mbit/s ; b) 240 s, soit 4 minutes."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "vocabulaire réseau",
+      "enonce": "Lina envoie une photo à Tom par Internet. Remets ces étapes dans l'ordre : a) les routeurs acheminent les paquets de proche en proche ; b) TCP découpe la photo en paquets numérotés ; c) l'ordinateur de Tom remet les paquets dans l'ordre et reconstitue la photo ; d) chaque paquet reçoit l'adresse IP de départ et celle d'arrivée.",
+      "corrige": [
+        "Avant l'envoi, la photo est découpée en paquets (b), puis chaque paquet est étiqueté avec les adresses (d).",
+        "Les routeurs les acheminent (a), et la machine de Tom les remet en ordre (c)."
+      ],
+      "reponse": "b, d, a, c."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "matériel du réseau (box, routeur, FAI)",
+      "enonce": "Par quel type de support passe l'essentiel des données échangées entre l'Europe et l'Amérique : des satellites ou des câbles sous-marins ? En quel matériau sont ces câbles ?",
+      "corrige": [
+        "Le cours précise que d'immenses câbles sous-marins relient les continents.",
+        "Ces câbles contiennent des fibres optiques, qui transportent les données sous forme de lumière."
+      ],
+      "reponse": "Des câbles sous-marins en fibre optique."
+    },
+    {
+      "id": 50,
+      "difficulte": "approfondissement",
+      "notion": "protocoles TCP et IP",
+      "enonce": "Ce programme cherche les paquets manquants, comme le fait TCP. Qu'affiche-t-il ?\n\n```python\nrecus = [1, 2, 4, 5, 7]\ntotal = 7\nmanquants = []\nfor n in range(1, total + 1):\n    if n not in recus:\n        manquants.append(n)\nprint(manquants)\n```",
+      "corrige": [
+        "range(1, total + 1) parcourt les numéros 1 à 7.",
+        "On ajoute à la liste chaque numéro absent de recus : 3 et 6."
+      ],
+      "reponse": "[3, 6]"
     }
   ]
 }

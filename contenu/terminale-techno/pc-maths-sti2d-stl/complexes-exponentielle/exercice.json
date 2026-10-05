@@ -131,7 +131,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "signal",
       "enonce": "**Étude d'un signal électrique.** Dans un circuit, une tension est modélisée par $u(t) = 2\\cos(100\\pi t) + 2\\sqrt{3}\\,\\sin(100\\pi t)$, où $u$ est en volts et $t$ en secondes. Pour l'étudier, on lui associe le nombre complexe $z = 2 - 2\\sqrt{3}\\,\\mathrm{i}$ (dont les parties réelle et imaginaire sont les coefficients de $\\cos(100\\pi t)$ et de $-\\sin(100\\pi t)$), car $u(t)$ est la partie réelle de $z\\,\\mathrm{e}^{\\mathrm{i}100\\pi t}$.\n\n1. Déterminer le module et un argument de $z$, et donner sa forme exponentielle.\n2. En déduire l'écriture de $u(t)$ sous la forme $A\\cos(100\\pi t + \\varphi)$ avec $A > 0$. Préciser l'amplitude et la phase à l'origine.\n3. Calculer la période $T$ et la fréquence $f$ du signal. Calculer $u(0)$ à partir des deux expressions de $u(t)$ et vérifier la cohérence.\n4. On admet que la valeur efficace $U$ vérifie $U^2 = $ valeur moyenne de $u^2(t)$ sur une période. En linéarisant, montrer que cette valeur moyenne vaut $\\dfrac{A^2}{2}$, puis calculer $U$.\n5. L'étude d'un régime particulier du circuit conduit à l'équation $w^2 = -16$. Résoudre cette équation dans $\\mathbb{C}$.",
       "corrige": [
@@ -142,6 +142,452 @@
         "**5.** Ici $a = -16 < 0$ : l'équation $w^2 = -16$ admet DEUX solutions opposées, $w = \\mathrm{i}\\sqrt{16} = 4\\mathrm{i}$ et $w = -4\\mathrm{i}$. Vérification : $(4\\mathrm{i})^2 = 16\\,\\mathrm{i}^2 = -16$ ✓."
       ],
       "reponse": "1) $z = 4\\,\\mathrm{e}^{-\\mathrm{i}\\pi/3}$. 2) $u(t) = 4\\cos\\!\\left(100\\pi t - \\dfrac{\\pi}{3}\\right)$, amplitude $4$ V, phase $-\\dfrac{\\pi}{3}$. 3) $T = 0{,}02$ s, $f = 50$ Hz, $u(0) = 2$ V. 4) valeur moyenne de $u^2 = \\dfrac{A^2}{2} = 8$, valeur efficace $U = 2\\sqrt2 \\approx 2{,}83$ V. 5) $w = 4\\mathrm{i}$ ou $w = -4\\mathrm{i}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "exponentielle-complexe",
+      "enonce": "Écrire sous forme algébrique : $\\mathrm{e}^{\\mathrm{i}0}$, $\\mathrm{e}^{\\mathrm{i}\\pi/2}$, $\\mathrm{e}^{\\mathrm{i}\\pi}$ et $\\mathrm{e}^{\\mathrm{i}-\\pi/2}$.",
+      "corrige": [
+        "Par définition, $\\mathrm{e}^{\\mathrm{i}\\theta} = \\cos\\theta + \\mathrm{i}\\sin\\theta$.",
+        "$\\theta = 0$ : $1$ ; $\\theta = \\dfrac{\\pi}{2}$ : $0 + \\mathrm{i} \\times 1 = \\mathrm{i}$ ; $\\theta = \\pi$ : $-1$ ; $\\theta = -\\dfrac{\\pi}{2}$ : $-\\mathrm{i}$."
+      ],
+      "reponse": "$1$ ; $\\mathrm{i}$ ; $-1$ ; $-\\mathrm{i}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "exponentielle-complexe",
+      "enonce": "Donner le module de $\\mathrm{e}^{\\mathrm{i}2{,}7}$, puis le module et un argument de $5\\,\\mathrm{e}^{\\mathrm{i}\\pi/7}$.",
+      "corrige": [
+        "Pour tout réel $\\theta$, $\\left|\\mathrm{e}^{\\mathrm{i}\\theta}\\right| = 1$ : l'exponentielle complexe est sur le cercle trigonométrique.",
+        "$5\\,\\mathrm{e}^{\\mathrm{i}\\pi/7}$ est sous forme exponentielle $r\\,\\mathrm{e}^{\\mathrm{i}\\theta}$ avec $r = 5 > 0$ et $\\theta = \\dfrac{\\pi}{7}$."
+      ],
+      "reponse": "$1$ ; module $5$, argument $\\dfrac{\\pi}{7}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "exponentielle-complexe",
+      "enonce": "Écrire $\\mathrm{e}^{\\mathrm{i}\\pi/4}$ sous forme algébrique.",
+      "corrige": [
+        "$\\mathrm{e}^{\\mathrm{i}\\pi/4} = \\cos\\dfrac{\\pi}{4} + \\mathrm{i}\\sin\\dfrac{\\pi}{4}$.",
+        "$\\cos\\dfrac{\\pi}{4} = \\sin\\dfrac{\\pi}{4} = \\dfrac{\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$\\dfrac{\\sqrt{2}}{2} + \\mathrm{i}\\dfrac{\\sqrt{2}}{2}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "passage-formes",
+      "enonce": "Écrire $z = 3\\,\\mathrm{e}^{\\mathrm{i}\\pi/6}$ sous forme algébrique.",
+      "corrige": [
+        "$z = 3\\cos\\dfrac{\\pi}{6} + 3\\mathrm{i}\\sin\\dfrac{\\pi}{6}$.",
+        "$z = 3 \\times \\dfrac{\\sqrt{3}}{2} + 3\\mathrm{i} \\times \\dfrac{1}{2} = \\dfrac{3\\sqrt{3}}{2} + \\dfrac{3}{2}\\mathrm{i}$."
+      ],
+      "reponse": "$z = \\dfrac{3\\sqrt{3}}{2} + \\dfrac{3}{2}\\mathrm{i}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "passage-formes",
+      "enonce": "Écrire sous forme exponentielle : $z_1 = -2$ et $z_2 = 5\\mathrm{i}$.",
+      "corrige": [
+        "$z_1$ : module $2$ ; son image est sur la demi-droite des réels négatifs, donc un argument est $\\pi$.",
+        "$z_2$ : module $5$ ; son image est sur la demi-droite des imaginaires positifs, donc un argument est $\\dfrac{\\pi}{2}$."
+      ],
+      "reponse": "$z_1 = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi}$ ; $z_2 = 5\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "passage-formes",
+      "enonce": "Écrire $z = 1 - \\mathrm{i}$ sous forme exponentielle.",
+      "corrige": [
+        "$r = \\sqrt{1 + 1} = \\sqrt{2}$.",
+        "$\\cos\\theta = \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$ et $\\sin\\theta = -\\dfrac{\\sqrt{2}}{2}$, donc $\\theta = -\\dfrac{\\pi}{4}$."
+      ],
+      "reponse": "$z = \\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}-\\pi/4}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "intermediaire",
+      "notion": "passage-formes",
+      "enonce": "Écrire $z = -\\sqrt{3} + \\mathrm{i}$ sous forme exponentielle.",
+      "corrige": [
+        "$r = \\sqrt{3 + 1} = 2$.",
+        "$\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}$ et $\\sin\\theta = \\dfrac{1}{2}$ : l'angle est dans le deuxième quadrant, $\\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$."
+      ],
+      "reponse": "$z = 2\\,\\mathrm{e}^{\\mathrm{i}5\\pi/6}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "passage-formes",
+      "enonce": "Écrire $z = -2 - 2\\mathrm{i}$ sous forme exponentielle.",
+      "corrige": [
+        "$r = \\sqrt{4 + 4} = 2\\sqrt{2}$.",
+        "$\\cos\\theta = \\dfrac{-2}{2\\sqrt{2}} = -\\dfrac{\\sqrt{2}}{2}$ et $\\sin\\theta = -\\dfrac{\\sqrt{2}}{2}$ : le sinus négatif impose $\\theta = -\\dfrac{3\\pi}{4}$."
+      ],
+      "reponse": "$z = 2\\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}-3\\pi/4}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "operations-exponentielle",
+      "enonce": "Calculer $4\\,\\mathrm{e}^{\\mathrm{i}\\pi/3} \\times \\dfrac{1}{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/6}$ sous forme exponentielle, puis algébrique.",
+      "corrige": [
+        "Les modules se multiplient : $4 \\times \\dfrac{1}{2} = 2$ ; les arguments s'additionnent : $\\dfrac{\\pi}{3} + \\dfrac{\\pi}{6} = \\dfrac{\\pi}{2}$.",
+        "$2\\,\\mathrm{e}^{\\mathrm{i}\\pi/2} = 2\\mathrm{i}$."
+      ],
+      "reponse": "$2\\,\\mathrm{e}^{\\mathrm{i}\\pi/2} = 2\\mathrm{i}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "operations-exponentielle",
+      "enonce": "Calculer $\\dfrac{6\\,\\mathrm{e}^{\\mathrm{i}5\\pi/6}}{2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}}$ sous forme algébrique.",
+      "corrige": [
+        "Quotient : on divise les modules et on soustrait les arguments : $\\dfrac{6}{2} = 3$ et $\\dfrac{5\\pi}{6} - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{6} - \\dfrac{2\\pi}{6} = \\dfrac{\\pi}{2}$.",
+        "$3\\,\\mathrm{e}^{\\mathrm{i}\\pi/2} = 3\\mathrm{i}$."
+      ],
+      "reponse": "$3\\mathrm{i}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "operations-exponentielle",
+      "enonce": "Calculer $\\left(\\mathrm{e}^{\\mathrm{i}\\pi/8}\\right)^4$.",
+      "corrige": [
+        "$\\left(\\mathrm{e}^{\\mathrm{i}\\theta}\\right)^n = \\mathrm{e}^{\\mathrm{i}n\\theta}$ : ici $4 \\times \\dfrac{\\pi}{8} = \\dfrac{\\pi}{2}$.",
+        "$\\mathrm{e}^{\\mathrm{i}\\pi/2} = \\mathrm{i}$."
+      ],
+      "reponse": "$\\mathrm{i}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "operations-exponentielle",
+      "enonce": "Écrire $\\dfrac{1}{2\\,\\mathrm{e}^{\\mathrm{i}\\pi/5}}$ sous forme exponentielle.",
+      "corrige": [
+        "$\\dfrac{1}{2\\,\\mathrm{e}^{\\mathrm{i}\\pi/5}} = \\dfrac{1}{2} \\times \\dfrac{1}{\\mathrm{e}^{\\mathrm{i}\\pi/5}}$ et $\\dfrac{1}{\\mathrm{e}^{\\mathrm{i}\\theta}} = \\mathrm{e}^{\\mathrm{i}-\\theta}$.",
+        "Le module est $\\dfrac{1}{2}$ et un argument $-\\dfrac{\\pi}{5}$."
+      ],
+      "reponse": "$\\dfrac{1}{2}\\,\\mathrm{e}^{\\mathrm{i}-\\pi/5}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "operations-exponentielle",
+      "enonce": "Un élève écrit : « $2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3} \\times 3\\,\\mathrm{e}^{\\mathrm{i}\\pi/6} = 5\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$ ». Corriger.",
+      "corrige": [
+        "Dans un produit, les modules se multiplient (ils ne s'additionnent pas) : $2 \\times 3 = 6$.",
+        "Les arguments, eux, s'additionnent : $\\dfrac{\\pi}{2}$ est juste. Le résultat est $6\\,\\mathrm{e}^{\\mathrm{i}\\pi/2} = 6\\mathrm{i}$."
+      ],
+      "reponse": "$6\\,\\mathrm{e}^{\\mathrm{i}\\pi/2} = 6\\mathrm{i}$."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "passage-formes",
+      "enonce": "L'écriture $-3\\,\\mathrm{e}^{\\mathrm{i}\\pi/6}$ n'est pas une forme exponentielle. Pourquoi ? La corriger.",
+      "corrige": [
+        "Dans $r\\,\\mathrm{e}^{\\mathrm{i}\\theta}$, le facteur $r$ doit être strictement positif.",
+        "$-1 = \\mathrm{e}^{\\mathrm{i}\\pi}$, donc $-3\\,\\mathrm{e}^{\\mathrm{i}\\pi/6} = 3\\,\\mathrm{e}^{\\mathrm{i}\\pi} \\times \\mathrm{e}^{\\mathrm{i}\\pi/6} = 3\\,\\mathrm{e}^{\\mathrm{i}7\\pi/6}$ (ou $3\\,\\mathrm{e}^{\\mathrm{i}-5\\pi/6}$, même point)."
+      ],
+      "reponse": "$3\\,\\mathrm{e}^{\\mathrm{i}7\\pi/6}$ (ou $3\\,\\mathrm{e}^{\\mathrm{i}-5\\pi/6}$)."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "operations-exponentielle",
+      "enonce": "Calculer $(1 + \\mathrm{i})^8$ en passant par la forme exponentielle.",
+      "corrige": [
+        "$1 + \\mathrm{i} = \\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}\\pi/4}$.",
+        "$(1 + \\mathrm{i})^8 = (\\sqrt{2})^8\\,\\mathrm{e}^{\\mathrm{i}8\\pi/4} = 16\\,\\mathrm{e}^{\\mathrm{i}2\\pi} = 16$."
+      ],
+      "reponse": "$(1 + \\mathrm{i})^8 = 16$."
+    },
+    {
+      "id": 26,
+      "difficulte": "approfondissement",
+      "notion": "operations-exponentielle",
+      "enonce": "Écrire $q = \\dfrac{-1 + \\mathrm{i}}{1 + \\mathrm{i}\\sqrt{3}}$ sous forme exponentielle.",
+      "corrige": [
+        "$-1 + \\mathrm{i} = \\sqrt{2}\\,\\mathrm{e}^{\\mathrm{i}3\\pi/4}$ et $1 + \\mathrm{i}\\sqrt{3} = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3}$.",
+        "$q = \\dfrac{\\sqrt{2}}{2}\\,\\mathrm{e}^{\\mathrm{i}(3\\pi/4 - \\pi/3)}$, avec $\\dfrac{3\\pi}{4} - \\dfrac{\\pi}{3} = \\dfrac{9\\pi - 4\\pi}{12} = \\dfrac{5\\pi}{12}$."
+      ],
+      "reponse": "$q = \\dfrac{\\sqrt{2}}{2}\\,\\mathrm{e}^{\\mathrm{i}5\\pi/12}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "formules-addition",
+      "enonce": "Calculer la valeur exacte de $\\cos\\dfrac{7\\pi}{12}$ en écrivant $\\dfrac{7\\pi}{12} = \\dfrac{\\pi}{3} + \\dfrac{\\pi}{4}$.",
+      "corrige": [
+        "$\\cos(a + b) = \\cos a\\cos b - \\sin a\\sin b$.",
+        "$\\cos\\dfrac{7\\pi}{12} = \\dfrac{1}{2} \\times \\dfrac{\\sqrt{2}}{2} - \\dfrac{\\sqrt{3}}{2} \\times \\dfrac{\\sqrt{2}}{2} = \\dfrac{\\sqrt{2} - \\sqrt{6}}{4}$ (négatif, car $\\dfrac{7\\pi}{12} > \\dfrac{\\pi}{2}$)."
+      ],
+      "reponse": "$\\cos\\dfrac{7\\pi}{12} = \\dfrac{\\sqrt{2} - \\sqrt{6}}{4}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "formules-addition",
+      "enonce": "Calculer la valeur exacte de $\\sin\\dfrac{5\\pi}{12}$.",
+      "corrige": [
+        "$\\dfrac{5\\pi}{12} = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6}$ et $\\sin(a + b) = \\sin a\\cos b + \\cos a\\sin b$.",
+        "$\\sin\\dfrac{5\\pi}{12} = \\dfrac{\\sqrt{2}}{2} \\times \\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2} \\times \\dfrac{1}{2} = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$."
+      ],
+      "reponse": "$\\sin\\dfrac{5\\pi}{12} = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "formules-addition",
+      "enonce": "À l'aide de la formule d'addition, simplifier $\\cos\\left(x + \\dfrac{\\pi}{2}\\right)$ et $\\sin(x + \\pi)$.",
+      "corrige": [
+        "$\\cos\\left(x + \\dfrac{\\pi}{2}\\right) = \\cos x\\cos\\dfrac{\\pi}{2} - \\sin x\\sin\\dfrac{\\pi}{2} = -\\sin x$.",
+        "$\\sin(x + \\pi) = \\sin x\\cos\\pi + \\cos x\\sin\\pi = -\\sin x$."
+      ],
+      "reponse": "$\\cos\\left(x + \\dfrac{\\pi}{2}\\right) = -\\sin x$ et $\\sin(x + \\pi) = -\\sin x$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "formules-addition",
+      "enonce": "On sait que $\\cos a = \\dfrac{4}{5}$, $\\sin a = \\dfrac{3}{5}$, $\\cos b = \\dfrac{5}{13}$ et $\\sin b = \\dfrac{12}{13}$. Calculer $\\cos(a + b)$ et $\\sin(a + b)$.",
+      "corrige": [
+        "$\\cos(a + b) = \\dfrac{4}{5} \\times \\dfrac{5}{13} - \\dfrac{3}{5} \\times \\dfrac{12}{13} = \\dfrac{20 - 36}{65} = -\\dfrac{16}{65}$.",
+        "$\\sin(a + b) = \\dfrac{3}{5} \\times \\dfrac{5}{13} + \\dfrac{4}{5} \\times \\dfrac{12}{13} = \\dfrac{15 + 48}{65} = \\dfrac{63}{65}$.",
+        "Contrôle : $16^2 + 63^2 = 256 + 3\\,969 = 4\\,225 = 65^2$."
+      ],
+      "reponse": "$\\cos(a + b) = -\\dfrac{16}{65}$ et $\\sin(a + b) = \\dfrac{63}{65}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "application",
+      "notion": "duplication",
+      "enonce": "On sait que $\\cos a = \\dfrac{1}{3}$. Calculer $\\cos(2a)$.",
+      "corrige": [
+        "$\\cos(2a) = 2\\cos^2 a - 1$ (inutile de connaître $a$).",
+        "$\\cos(2a) = 2 \\times \\dfrac{1}{9} - 1 = \\dfrac{2}{9} - \\dfrac{9}{9} = -\\dfrac{7}{9}$."
+      ],
+      "reponse": "$\\cos(2a) = -\\dfrac{7}{9}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "duplication",
+      "enonce": "On sait que $\\sin a = \\dfrac{1}{4}$. Calculer $\\cos(2a)$.",
+      "corrige": [
+        "La forme adaptée est $\\cos(2a) = 1 - 2\\sin^2 a$.",
+        "$\\cos(2a) = 1 - 2 \\times \\dfrac{1}{16} = 1 - \\dfrac{1}{8} = \\dfrac{7}{8}$."
+      ],
+      "reponse": "$\\cos(2a) = \\dfrac{7}{8}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "duplication",
+      "enonce": "Vérifier la formule $\\sin(2a) = 2\\sin a\\cos a$ pour $a = \\dfrac{\\pi}{6}$.",
+      "corrige": [
+        "Membre de droite : $2 \\times \\dfrac{1}{2} \\times \\dfrac{\\sqrt{3}}{2} = \\dfrac{\\sqrt{3}}{2}$.",
+        "Membre de gauche : $\\sin\\dfrac{\\pi}{3} = \\dfrac{\\sqrt{3}}{2}$. Les deux membres sont égaux."
+      ],
+      "reponse": "Les deux membres valent $\\dfrac{\\sqrt{3}}{2}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "application",
+      "notion": "linearisation",
+      "enonce": "Linéariser $\\cos^2(3t)$.",
+      "corrige": [
+        "$\\cos^2 a = \\dfrac{1 + \\cos(2a)}{2}$, avec $a = 3t$, donc $2a = 6t$."
+      ],
+      "reponse": "$\\cos^2(3t) = \\dfrac{1 + \\cos(6t)}{2} = \\dfrac{1}{2} + \\dfrac{\\cos(6t)}{2}$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "linearisation",
+      "enonce": "Déterminer une primitive de $f(t) = \\sin^2 t$.",
+      "corrige": [
+        "On linéarise d'abord : $\\sin^2 t = \\dfrac{1}{2} - \\dfrac{\\cos(2t)}{2}$.",
+        "Une primitive de $\\cos(2t)$ est $\\dfrac{\\sin(2t)}{2}$ (sans oublier de diviser par $2$).",
+        "Donc $F(t) = \\dfrac{t}{2} - \\dfrac{\\sin(2t)}{4}$."
+      ],
+      "reponse": "$F(t) = \\dfrac{t}{2} - \\dfrac{\\sin(2t)}{4}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "probleme",
+      "notion": "linearisation",
+      "enonce": "La tension du secteur est $u(t) = 325\\cos(100\\pi\\,t)$, de période $T = 0{,}02\\ \\mathrm{s}$. 1. Linéariser $\\cos^2(100\\pi\\,t)$. 2. Calculer la valeur moyenne de $\\cos^2(100\\pi\\,t)$ sur une période, c'est-à-dire $\\dfrac{1}{T}\\displaystyle\\int_0^{T} \\cos^2(100\\pi\\,t)\\,\\mathrm{d}t$. 3. La valeur efficace est $U = \\sqrt{\\text{moyenne de } u^2}$ : calculer $U$.",
+      "corrige": [
+        "1. $\\cos^2(100\\pi\\,t) = \\dfrac{1}{2} + \\dfrac{\\cos(200\\pi\\,t)}{2}$.",
+        "2. Une primitive est $\\dfrac{t}{2} + \\dfrac{\\sin(200\\pi\\,t)}{400\\pi}$ ; entre $0$ et $T = 0{,}02$, le sinus vaut $\\sin(4\\pi) = 0$ et $\\sin 0 = 0$, donc l'intégrale vaut $\\dfrac{T}{2}$ et la moyenne $\\dfrac{1}{2}$.",
+        "3. Moyenne de $u^2$ : $325^2 \\times \\dfrac{1}{2}$, d'où $U = \\dfrac{325}{\\sqrt{2}} \\approx 230\\ \\mathrm{V}$ : on retrouve la tension efficace du réseau."
+      ],
+      "reponse": "1. $\\dfrac{1 + \\cos(200\\pi\\,t)}{2}$ ; 2. $\\dfrac{1}{2}$ ; 3. $U = \\dfrac{325}{\\sqrt{2}} \\approx 230\\ \\mathrm{V}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "linearisation",
+      "enonce": "Un élève écrit : « $\\sin^2 a = \\dfrac{1 + \\cos(2a)}{2}$ ». Tester en $a = 0$ et corriger.",
+      "corrige": [
+        "En $a = 0$ : $\\sin^2 0 = 0$, alors que $\\dfrac{1 + \\cos 0}{2} = 1$. La formule est fausse.",
+        "Le signe $+$ va avec $\\cos^2$ ; pour $\\sin^2$, c'est un $-$ : $\\sin^2 a = \\dfrac{1 - \\cos(2a)}{2}$ (et en $a = 0$ : $\\dfrac{1 - 1}{2} = 0$)."
+      ],
+      "reponse": "$\\sin^2 a = \\dfrac{1 - \\cos(2a)}{2}$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "signal",
+      "enonce": "Écrire $u(t) = 4\\cos(\\omega t) - 4\\sin(\\omega t)$ sous la forme $A\\cos(\\omega t + \\varphi)$, avec $A > 0$.",
+      "corrige": [
+        "Ici $a = 4$ et $b = -4$ : $A = \\sqrt{16 + 16} = 4\\sqrt{2}$.",
+        "$\\cos\\varphi = \\dfrac{a}{A} = \\dfrac{\\sqrt{2}}{2}$ et $\\sin\\varphi = -\\dfrac{b}{A} = \\dfrac{4}{4\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$, donc $\\varphi = \\dfrac{\\pi}{4}$."
+      ],
+      "reponse": "$u(t) = 4\\sqrt{2}\\cos\\left(\\omega t + \\dfrac{\\pi}{4}\\right)$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "signal",
+      "enonce": "Écrire $u(t) = -\\cos(\\omega t) + \\sqrt{3}\\sin(\\omega t)$ sous la forme $A\\cos(\\omega t + \\varphi)$, avec $A > 0$ et $\\varphi \\in\\, ]-\\pi\\,;\\pi]$.",
+      "corrige": [
+        "$a = -1$, $b = \\sqrt{3}$ : $A = \\sqrt{1 + 3} = 2$.",
+        "$\\cos\\varphi = -\\dfrac{1}{2}$ et $\\sin\\varphi = -\\dfrac{\\sqrt{3}}{2}$ (attention au signe moins).",
+        "L'angle est dans le troisième quadrant : $\\varphi = -\\dfrac{2\\pi}{3}$."
+      ],
+      "reponse": "$u(t) = 2\\cos\\left(\\omega t - \\dfrac{2\\pi}{3}\\right)$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "signal",
+      "enonce": "Écrire $u(t) = 5\\sin(\\omega t)$ sous la forme $A\\cos(\\omega t + \\varphi)$.",
+      "corrige": [
+        "$a = 0$, $b = 5$ : $A = 5$.",
+        "$\\cos\\varphi = 0$ et $\\sin\\varphi = -\\dfrac{5}{5} = -1$, donc $\\varphi = -\\dfrac{\\pi}{2}$. Un sinus est un cosinus en retard d'un quart de période."
+      ],
+      "reponse": "$u(t) = 5\\cos\\left(\\omega t - \\dfrac{\\pi}{2}\\right)$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "signal",
+      "enonce": "Développer $u(t) = 10\\cos\\left(100\\pi\\,t + \\dfrac{\\pi}{6}\\right)$ sous la forme $a\\cos(100\\pi\\,t) + b\\sin(100\\pi\\,t)$.",
+      "corrige": [
+        "$\\cos(x + \\varphi) = \\cos x\\cos\\varphi - \\sin x\\sin\\varphi$, avec $\\cos\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{3}}{2}$ et $\\sin\\dfrac{\\pi}{6} = \\dfrac{1}{2}$.",
+        "$u(t) = 10 \\times \\dfrac{\\sqrt{3}}{2}\\cos(100\\pi\\,t) - 10 \\times \\dfrac{1}{2}\\sin(100\\pi\\,t)$."
+      ],
+      "reponse": "$u(t) = 5\\sqrt{3}\\cos(100\\pi\\,t) - 5\\sin(100\\pi\\,t)$."
+    },
+    {
+      "id": 42,
+      "difficulte": "probleme",
+      "notion": "signal",
+      "enonce": "Une tension vaut $u(t) = 3\\cos(100\\pi\\,t) + 4\\sin(100\\pi\\,t)$ (en volts). 1. Calculer l'amplitude $A$. 2. Déterminer $\\cos\\varphi$ et $\\sin\\varphi$, puis une valeur approchée de $\\varphi$ au centième de radian. 3. Donner la fréquence du signal.",
+      "corrige": [
+        "1. $A = \\sqrt{9 + 16} = 5\\ \\mathrm{V}$.",
+        "2. $\\cos\\varphi = \\dfrac{3}{5} = 0{,}6$ et $\\sin\\varphi = -\\dfrac{4}{5} = -0{,}8$ : $\\varphi$ est négatif, $\\varphi \\approx -0{,}93$ rad (à la calculatrice, en radians, $\\arccos 0{,}6 \\approx 0{,}93$).",
+        "3. $f = \\dfrac{100\\pi}{2\\pi} = 50\\ \\mathrm{Hz}$."
+      ],
+      "reponse": "1. $A = 5\\ \\mathrm{V}$ ; 2. $\\cos\\varphi = 0{,}6$, $\\sin\\varphi = -0{,}8$, $\\varphi \\approx -0{,}93$ rad ; 3. $f = 50\\ \\mathrm{Hz}$."
+    },
+    {
+      "id": 43,
+      "difficulte": "application",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{C}$ : a) $z^2 = -9$ ; b) $z^2 = 5$.",
+      "corrige": [
+        "a) $-9 < 0$ : $z = \\mathrm{i}\\sqrt{9} = 3\\mathrm{i}$ ou $z = -3\\mathrm{i}$ (vérification : $(3\\mathrm{i})^2 = -9$).",
+        "b) $5 > 0$ : $z = \\sqrt{5}$ ou $z = -\\sqrt{5}$."
+      ],
+      "reponse": "a) $3\\mathrm{i}$ ou $-3\\mathrm{i}$ ; b) $\\sqrt{5}$ ou $-\\sqrt{5}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "application",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{C}$ : $(2 - \\mathrm{i})z = 5$.",
+      "corrige": [
+        "$z = \\dfrac{5}{2 - \\mathrm{i}} = \\dfrac{5(2 + \\mathrm{i})}{(2 - \\mathrm{i})(2 + \\mathrm{i})} = \\dfrac{5(2 + \\mathrm{i})}{5}$.",
+        "$z = 2 + \\mathrm{i}$."
+      ],
+      "reponse": "$z = 2 + \\mathrm{i}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "intermediaire",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{C}$ : $\\mathrm{i}z + 3 = 1 + 2\\mathrm{i}$.",
+      "corrige": [
+        "$\\mathrm{i}z = -2 + 2\\mathrm{i}$, donc $z = \\dfrac{-2 + 2\\mathrm{i}}{\\mathrm{i}}$.",
+        "On multiplie par $-\\mathrm{i}$ (conjugué de $\\mathrm{i}$) : $z = (-2 + 2\\mathrm{i})(-\\mathrm{i}) = 2\\mathrm{i} + 2$.",
+        "Vérification : $\\mathrm{i}(2 + 2\\mathrm{i}) + 3 = 2\\mathrm{i} - 2 + 3 = 1 + 2\\mathrm{i}$."
+      ],
+      "reponse": "$z = 2 + 2\\mathrm{i}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "equations",
+      "enonce": "Résoudre dans $\\mathbb{C}$ : a) $z^2 + 25 = 0$ ; b) $(z - 1)^2 = -4$.",
+      "corrige": [
+        "a) $z^2 = -25$, donc $z = 5\\mathrm{i}$ ou $z = -5\\mathrm{i}$.",
+        "b) On pose $Z = z - 1$ : $Z^2 = -4$, donc $Z = 2\\mathrm{i}$ ou $Z = -2\\mathrm{i}$, d'où $z = 1 + 2\\mathrm{i}$ ou $z = 1 - 2\\mathrm{i}$."
+      ],
+      "reponse": "a) $\\pm 5\\mathrm{i}$ ; b) $1 + 2\\mathrm{i}$ ou $1 - 2\\mathrm{i}$."
+    },
+    {
+      "id": 47,
+      "difficulte": "application",
+      "notion": "transformations",
+      "enonce": "On considère $t : z \\mapsto z + 2 + \\mathrm{i}$. Nommer cette transformation et calculer l'image du point $\\mathrm{A}$ d'affixe $1 - 3\\mathrm{i}$.",
+      "corrige": [
+        "Ajouter un nombre fixe à l'affixe, c'est translater : $t$ est la translation de vecteur d'affixe $2 + \\mathrm{i}$ (de coordonnées $(2\\,;1)$).",
+        "$z_{\\mathrm{A}'} = 1 - 3\\mathrm{i} + 2 + \\mathrm{i} = 3 - 2\\mathrm{i}$."
+      ],
+      "reponse": "Translation de vecteur d'affixe $2 + \\mathrm{i}$ ; $\\mathrm{A}'(3 - 2\\mathrm{i})$."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "transformations",
+      "enonce": "Décrire la transformation $z \\mapsto \\mathrm{e}^{\\mathrm{i}\\pi/3}\\,z$ et calculer l'image du point d'affixe $2$.",
+      "corrige": [
+        "$\\mathrm{e}^{\\mathrm{i}\\pi/3}$ a pour module $1$ : la multiplication est la rotation de centre $\\mathrm{O}$ et d'angle $\\dfrac{\\pi}{3}$.",
+        "$2\\,\\mathrm{e}^{\\mathrm{i}\\pi/3} = 2\\left(\\dfrac{1}{2} + \\mathrm{i}\\dfrac{\\sqrt{3}}{2}\\right) = 1 + \\mathrm{i}\\sqrt{3}$."
+      ],
+      "reponse": "Rotation de centre $\\mathrm{O}$, d'angle $\\dfrac{\\pi}{3}$ ; image : $1 + \\mathrm{i}\\sqrt{3}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "transformations",
+      "enonce": "Décrire géométriquement : a) $z \\mapsto 3z$ ; b) $z \\mapsto -z$.",
+      "corrige": [
+        "a) $3$ est un réel strictement positif : homothétie de centre $\\mathrm{O}$ et de rapport $3$.",
+        "b) $-1 = \\mathrm{e}^{\\mathrm{i}\\pi}$ : rotation de centre $\\mathrm{O}$ et d'angle $\\pi$, c'est-à-dire la symétrie de centre $\\mathrm{O}$."
+      ],
+      "reponse": "a) homothétie de centre $\\mathrm{O}$, rapport $3$ ; b) rotation d'angle $\\pi$ (symétrie de centre $\\mathrm{O}$)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "transformations",
+      "enonce": "On considère $f : z \\mapsto 2\\mathrm{i}\\,z$. 1. Écrire $2\\mathrm{i}$ sous forme exponentielle et décrire $f$. 2. Calculer l'image $\\mathrm{B}'$ du point $\\mathrm{B}$ d'affixe $1 + \\mathrm{i}$. 3. Vérifier que $\\mathrm{OB}' = 2\\,\\mathrm{OB}$.",
+      "corrige": [
+        "1. $2\\mathrm{i} = 2\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$ : $f$ est la rotation de centre $\\mathrm{O}$ d'angle $\\dfrac{\\pi}{2}$ suivie de l'homothétie de centre $\\mathrm{O}$ de rapport $2$.",
+        "2. $2\\mathrm{i}(1 + \\mathrm{i}) = 2\\mathrm{i} + 2\\mathrm{i}^2 = -2 + 2\\mathrm{i}$.",
+        "3. $\\mathrm{OB} = |1 + \\mathrm{i}| = \\sqrt{2}$ et $\\mathrm{OB}' = |-2 + 2\\mathrm{i}| = \\sqrt{8} = 2\\sqrt{2}$."
+      ],
+      "reponse": "1. $2\\,\\mathrm{e}^{\\mathrm{i}\\pi/2}$ : rotation d'angle $\\dfrac{\\pi}{2}$ et homothétie de rapport $2$ ; 2. $-2 + 2\\mathrm{i}$ ; 3. $2\\sqrt{2} = 2 \\times \\sqrt{2}$."
     }
   ]
 }

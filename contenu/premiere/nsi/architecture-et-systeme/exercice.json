@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "modèle de von Neumann",
       "enonce": "Cite les grands composants du modèle d'architecture de von Neumann et indique lequel exécute les calculs.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "rôle des composants du processeur",
       "enonce": "À quoi servent respectivement l'unité de commande et les registres dans un processeur ?",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "commandes de base d'un système Unix",
       "enonce": "Associe chaque commande Unix à son effet : pwd, ls, cd. Laquelle affiche le répertoire courant ?",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "chemins absolus et relatifs",
       "enonce": "Le répertoire courant est /home/kamal/cours. On veut atteindre le fichier situé en /home/kamal/photos/ile.jpg. Donne le chemin absolu, puis un chemin relatif depuis le répertoire courant.",
       "corrige": [
@@ -60,9 +60,9 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "exécution d'un petit programme en langage machine (registres)",
-      "enonce": "Un processeur exécute la séquence suivante sur des registres R (assembleur simplifié) :\nR1 ← 4\nR2 ← 7\nR3 ← R1 + R2\nR3 ← R3 + R1\nDonne la valeur de chaque registre après exécution.",
+      "enonce": "Un processeur exécute la séquence suivante sur des registres R (assembleur simplifié) :\n\n```text\nR1 ← 4\nR2 ← 7\nR3 ← R1 + R2\nR3 ← R3 + R1\n```\n\nDonne la valeur de chaque registre après exécution.",
       "corrige": [
         "R1 ← 4 : R1 vaut 4. R2 ← 7 : R2 vaut 7.",
         "R3 ← R1 + R2 : R3 = 4 + 7 = 11.",
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "système d'exploitation : processus et droits sur les fichiers",
       "enonce": "1) Sur un système Unix, on liste un fichier avec ls -l et on lit : -rwxr-xr-- . Explique ce que peuvent faire respectivement le propriétaire, le groupe et les autres. 2) Rappelle ce qu'est un processus pour le système d'exploitation.",
       "corrige": [
@@ -86,7 +86,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "portes logiques",
       "enonce": "Donne le résultat de chacune de ces opérations logiques : NON 1 ; 1 ET 0 ; 1 OU 0 ; 0 OU 0.",
       "corrige": [
@@ -99,7 +99,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "horloge et fréquence",
       "enonce": "Un processeur est cadencé par une horloge de fréquence 2 GHz. Combien de cycles exécute-t-il en 1 seconde ? Et en 1 milliseconde ?",
       "corrige": [
@@ -112,7 +112,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "commandes du terminal",
       "enonce": "Donne la commande Linux à taper pour : (a) afficher le dossier courant ; (b) lister le contenu d'un dossier ; (c) créer un dossier nommé tp ; (d) afficher le contenu du fichier notes.txt.",
       "corrige": [
@@ -125,17 +125,498 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "table de vérité d'une expression logique",
       "enonce": "Un moteur démarre si la variable S = marche ET (NON arret) vaut 1. Donne la valeur de S pour les quatre combinaisons de (marche, arret).",
       "corrige": [
-        "On calcule NON arret puis le ET avec marche.",
+        "On calcule d'abord NON arret, puis on applique la porte ET avec marche.",
         "marche=0, arret=0 : NON arret = 1 ; S = 0 ET 1 = 0.",
         "marche=0, arret=1 : NON arret = 0 ; S = 0 ET 0 = 0.",
         "marche=1, arret=0 : NON arret = 1 ; S = 1 ET 1 = 1.",
         "marche=1, arret=1 : NON arret = 0 ; S = 1 ET 0 = 0."
       ],
       "reponse": "S vaut 1 uniquement pour (marche=1, arret=0) ; S vaut 0 dans les trois autres cas."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "modèle de von Neumann",
+      "enonce": "Dans le modèle de von Neumann, où sont stockés le programme et les données ?",
+      "corrige": [
+        "La mémoire stocke à la fois les instructions du programme et les données qu'il manipule.",
+        "C'est l'idée clé de von Neumann : programme et données cohabitent dans la même mémoire."
+      ],
+      "reponse": "Tous les deux dans la même mémoire : programme et données y cohabitent."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "modèle de von Neumann",
+      "enonce": "Classe chaque élément dans la bonne partie du modèle de von Neumann (unité de commande, UAL, mémoire, entrées-sorties) : a) clavier ; b) addition de deux nombres ; c) décodage d'une instruction ; d) stockage d'une variable ; e) écran.",
+      "corrige": [
+        "Les entrées-sorties assurent les échanges avec l'extérieur : clavier et écran.",
+        "L'UAL effectue les calculs ; l'unité de commande lit et décode les instructions ; la mémoire stocke données et programme."
+      ],
+      "reponse": "a) entrées-sorties ; b) UAL ; c) unité de commande ; d) mémoire ; e) entrées-sorties."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "portes logiques",
+      "enonce": "Donne la table de vérité complète de la porte OU (les quatre combinaisons des entrées a et b).",
+      "corrige": [
+        "La porte OU renvoie 1 si au moins une des deux entrées vaut 1.",
+        "Elle ne renvoie 0 que si les deux entrées valent 0."
+      ],
+      "reponse": "0 OU 0 = 0 ; 0 OU 1 = 1 ; 1 OU 0 = 1 ; 1 OU 1 = 1."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "cycle d'exécution",
+      "enonce": "Remets dans l'ordre les trois étapes du cycle d'exécution d'une instruction : exécuter, charger, décoder.",
+      "corrige": [
+        "Le processeur doit d'abord aller chercher l'instruction en mémoire (charger, fetch).",
+        "Il doit ensuite comprendre de quelle opération il s'agit (décoder, decode), puis la réaliser (exécuter, execute), souvent dans l'UAL.",
+        "Puis il recommence avec l'instruction suivante."
+      ],
+      "reponse": "Charger → décoder → exécuter (puis on recommence)."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "commandes du terminal",
+      "enonce": "Que fait la commande `rm brouillon.txt` ? Pourquoi faut-il être prudent avec elle ?",
+      "corrige": [
+        "`rm` (remove) supprime le fichier indiqué.",
+        "Dans un terminal, le fichier supprimé ne passe pas par une corbeille : on ne peut en général pas le récupérer."
+      ],
+      "reponse": "Elle supprime le fichier brouillon.txt, sans passer par la corbeille."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "système d'exploitation",
+      "enonce": "Cite quatre grands rôles d'un système d'exploitation, puis donne deux exemples de systèmes d'exploitation.",
+      "corrige": [
+        "Le système d'exploitation gère les processus (partage du temps du processeur), la mémoire, les ressources et périphériques, et les fichiers.",
+        "Il fait l'interface entre le matériel et les applications.",
+        "Exemples : Linux, Windows, macOS, Android."
+      ],
+      "reponse": "Gérer les processus, la mémoire, les périphériques et les fichiers ; exemples : Linux, Windows (ou macOS, Android)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "système d'exploitation",
+      "enonce": "Vrai ou faux ? Justifie. a) Un programme enregistré sur le disque est un processus. b) Si on ouvre deux fois le même éditeur de texte, on obtient deux processus.",
+      "corrige": [
+        "a) Faux : un programme sur le disque n'est qu'un fichier ; il devient un processus quand il est en cours d'exécution.",
+        "b) Vrai : chaque exécution du même programme est un processus distinct, avec sa propre mémoire."
+      ],
+      "reponse": "a) Faux ; b) Vrai."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "horloge et fréquence",
+      "enonce": "Un processeur réalise 3,5 milliards de cycles par seconde. Quelle est sa fréquence d'horloge en GHz ? Et en Hz ?",
+      "corrige": [
+        "1 GHz correspond à 1 milliard de cycles par seconde.",
+        "3,5 milliards de cycles par seconde donnent donc 3,5 GHz, soit 3 500 000 000 Hz."
+      ],
+      "reponse": "3,5 GHz, soit 3 500 000 000 Hz."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "portes logiques",
+      "enonce": "Calcule : a) NON (1 ET 1) ; b) (NON 0) ET 1 ; c) NON (0 OU 0) ; d) 1 ET (0 OU 1).",
+      "corrige": [
+        "a) 1 ET 1 = 1, donc NON 1 = 0.",
+        "b) NON 0 = 1, puis 1 ET 1 = 1.",
+        "c) 0 OU 0 = 0, donc NON 0 = 1.",
+        "d) 0 OU 1 = 1, puis 1 ET 1 = 1."
+      ],
+      "reponse": "a) 0 ; b) 1 ; c) 1 ; d) 1."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "commandes du terminal",
+      "enonce": "On tape successivement les commandes ci-dessous dans un dossier vide. Qu'affiche la dernière commande ?\n\n```bash\nmkdir projets\ncd projets\nmkdir nsi\nmkdir maths\nls\n```",
+      "corrige": [
+        "`mkdir projets` crée le dossier projets, et `cd projets` y entre.",
+        "On y crée deux dossiers, nsi et maths.",
+        "`ls` liste le contenu du dossier courant (projets) ; il affiche les noms par ordre alphabétique."
+      ],
+      "reponse": "`maths  nsi` (les deux dossiers créés dans projets)"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "chemins absolus et relatifs",
+      "enonce": "Le dossier courant est /home/lea/nsi. Quel dossier devient le dossier courant après la commande `cd ..` ? Et après `cd ../../..` (en repartant de /home/lea/nsi) ?",
+      "corrige": [
+        "`..` désigne le dossier parent du dossier courant.",
+        "`cd ..` mène de /home/lea/nsi à /home/lea.",
+        "`cd ../../..` remonte trois fois : /home/lea, puis /home, puis la racine /."
+      ],
+      "reponse": "Après `cd ..` : /home/lea ; après `cd ../../..` : la racine /."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "table de vérité d'une expression logique",
+      "enonce": "Établis la table de vérité de S = NON (a ET b) pour les quatre combinaisons de a et b.",
+      "corrige": [
+        "On calcule d'abord a ET b, puis on inverse le résultat.",
+        "(0, 0) : 0 → S = 1 ; (0, 1) : 0 → S = 1 ; (1, 0) : 0 → S = 1 ; (1, 1) : 1 → S = 0."
+      ],
+      "reponse": "S vaut 1 pour (0, 0), (0, 1) et (1, 0) ; S vaut 0 pour (1, 1)."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "table de vérité d'une expression logique",
+      "enonce": "Compare les tables de vérité de NON (a OU b) et de (NON a) ET (NON b). Que constates-tu ?",
+      "corrige": [
+        "NON (a OU b) : (0, 0) → 1 ; (0, 1) → 0 ; (1, 0) → 0 ; (1, 1) → 0.",
+        "(NON a) ET (NON b) : (0, 0) → 1 ET 1 = 1 ; (0, 1) → 1 ET 0 = 0 ; (1, 0) → 0 ET 1 = 0 ; (1, 1) → 0 ET 0 = 0.",
+        "Les deux colonnes sont identiques : les deux expressions sont équivalentes."
+      ],
+      "reponse": "Les deux tables sont identiques (1, 0, 0, 0) : les expressions sont équivalentes."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "table de vérité d'une expression logique",
+      "enonce": "Une alarme se déclenche (A = 1) si la porte est ouverte (p = 1) OU si la fenêtre est ouverte (f = 1), mais seulement quand le système est activé (s = 1). Écris A avec les portes ET et OU, puis donne A pour (p, f, s) = (1, 0, 1), (1, 1, 0) et (0, 0, 1).",
+      "corrige": [
+        "L'alarme demande « porte ou fenêtre ouverte » et « système activé » : A = (p OU f) ET s.",
+        "(1, 0, 1) : (1 OU 0) ET 1 = 1.",
+        "(1, 1, 0) : (1 OU 1) ET 0 = 0.",
+        "(0, 0, 1) : (0 OU 0) ET 1 = 0."
+      ],
+      "reponse": "A = (p OU f) ET s ; valeurs : 1, 0 et 0."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "portes logiques",
+      "enonce": "En Python, les opérateurs `and`, `or` et `not` jouent le rôle des portes ET, OU et NON. Qu'affiche ce programme ?\n\n```python\na = True\nb = False\nprint(a and b, a or b, not a)\nprint(not (a and b))\n```",
+      "corrige": [
+        "a and b : True ET False = False ; a or b : True OU False = True ; not a = False.",
+        "a and b vaut False, donc not (a and b) vaut True."
+      ],
+      "reponse": "`False True False` puis `True`."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "portes logiques",
+      "enonce": "On veut une sortie qui vaut 1 quand exactement une des deux entrées a et b vaut 1 (ce qu'on appelle un « ou exclusif »). Montre que S = (a OU b) ET NON (a ET b) convient, à l'aide d'une table de vérité.",
+      "corrige": [
+        "(0, 0) : a OU b = 0 → S = 0.",
+        "(0, 1) et (1, 0) : a OU b = 1 et a ET b = 0, donc NON (a ET b) = 1 → S = 1.",
+        "(1, 1) : a OU b = 1 mais a ET b = 1, donc NON (a ET b) = 0 → S = 0.",
+        "S vaut 1 exactement quand une seule entrée vaut 1 : l'expression convient."
+      ],
+      "reponse": "Table : (0, 0) → 0 ; (0, 1) → 1 ; (1, 0) → 1 ; (1, 1) → 0."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "exécution d'un petit programme en langage machine (registres)",
+      "enonce": "Donne la valeur des registres après cette séquence (assembleur simplifié) :\n\n```text\nR1 ← 10\nR2 ← 3\nR1 ← R1 - R2\nR2 ← R1 + R1\nR1 ← R2 - R1\n```",
+      "corrige": [
+        "R1 ← 10 et R2 ← 3.",
+        "R1 ← R1 - R2 = 10 - 3 = 7.",
+        "R2 ← R1 + R1 = 7 + 7 = 14.",
+        "R1 ← R2 - R1 = 14 - 7 = 7."
+      ],
+      "reponse": "R1 = 7 et R2 = 14."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "exécution d'un petit programme en langage machine (registres)",
+      "enonce": "Écris une séquence d'instructions (même assembleur simplifié que précédemment, avec les registres R1, R2 et R3) qui échange les contenus de R1 et R2, sachant qu'au départ R1 = 5 et R2 = 9.",
+      "corrige": [
+        "Si on écrit directement R1 ← R2, l'ancienne valeur de R1 est perdue.",
+        "On la sauvegarde d'abord dans un troisième registre : R3 ← R1.",
+        "Puis R1 ← R2 et R2 ← R3.",
+        "À la fin : R1 = 9, R2 = 5 (et R3 = 5)."
+      ],
+      "reponse": "R3 ← R1 ; R1 ← R2 ; R2 ← R3 (on obtient R1 = 9 et R2 = 5)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "horloge et fréquence",
+      "enonce": "Un processeur fonctionne à 2,5 GHz. Quelle est la durée d'un cycle d'horloge, en nanosecondes (1 ns = 10^-9 s) ?",
+      "corrige": [
+        "La durée d'un cycle est l'inverse de la fréquence : T = 1 / f.",
+        "T = 1 / (2,5 × 10^9) s = 0,4 × 10^-9 s.",
+        "Soit 0,4 ns."
+      ],
+      "reponse": "0,4 ns par cycle."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "chemins absolus et relatifs",
+      "enonce": "Le dossier courant est /home/sam/documents. Donne le chemin absolu correspondant à chacun de ces chemins relatifs : a) cours/nsi.txt ; b) ../musique ; c) ../../tom/photo.png.",
+      "corrige": [
+        "Un chemin relatif part du dossier courant ; `..` remonte d'un niveau.",
+        "a) /home/sam/documents/cours/nsi.txt.",
+        "b) On remonte à /home/sam, puis on entre dans musique : /home/sam/musique.",
+        "c) On remonte deux fois jusqu'à /home, puis tom/photo.png : /home/tom/photo.png."
+      ],
+      "reponse": "a) /home/sam/documents/cours/nsi.txt ; b) /home/sam/musique ; c) /home/tom/photo.png."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "arborescence",
+      "enonce": "Voici une arborescence :\n\n```text\n/\n├── bin\n└── home\n    ├── ali\n    │   ├── jeux\n    │   └── nsi\n    │       └── tp1.py\n    └── zoe\n```\n\nCombien de dossiers contient-elle, racine comprise ? Quel est le chemin absolu du fichier tp1.py ?",
+      "corrige": [
+        "Les dossiers sont : /, bin, home, ali, jeux, nsi et zoe ; tp1.py est un fichier.",
+        "Cela fait 7 dossiers, racine comprise.",
+        "On descend depuis la racine : home, puis ali, puis nsi."
+      ],
+      "reponse": "7 dossiers ; chemin : /home/ali/nsi/tp1.py."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "commandes du terminal",
+      "enonce": "Le dossier courant est /home/ali. Donne une suite de commandes pour : créer un dossier tp2 dans le dossier nsi (qui existe déjà dans /home/ali), y entrer, puis vérifier où l'on se trouve.",
+      "corrige": [
+        "`cd nsi` entre dans /home/ali/nsi (chemin relatif).",
+        "`mkdir tp2` crée le dossier, puis `cd tp2` y entre.",
+        "`pwd` affiche le dossier courant : /home/ali/nsi/tp2.",
+        "Exemple de réponse : `cd nsi`, `mkdir tp2`, `cd tp2`, `pwd` (on peut aussi écrire `mkdir nsi/tp2` puis `cd nsi/tp2`)."
+      ],
+      "reponse": "`cd nsi`, `mkdir tp2`, `cd tp2`, `pwd` → /home/ali/nsi/tp2."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "système d'exploitation",
+      "enonce": "Trois processus sont prêts : un navigateur, un lecteur de musique et un traitement de texte. L'ordinateur n'a qu'un seul cœur de processeur. Comment le système d'exploitation donne-t-il l'impression qu'ils tournent en même temps ?",
+      "corrige": [
+        "Un cœur n'exécute qu'une instruction à la fois.",
+        "Le système d'exploitation répartit le temps du processeur : il donne à chaque processus une très courte tranche de temps, à tour de rôle.",
+        "Ces alternances sont si rapides (des milliers de fois par seconde) que l'utilisateur a l'impression d'une exécution simultanée."
+      ],
+      "reponse": "En partageant le temps du processeur : chaque processus s'exécute à tour de rôle pendant de très courtes durées."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "réseau",
+      "enonce": "Explique en deux phrases comment un fichier de 3 Mo envoyé par Internet parvient à son destinataire, en utilisant les mots : paquets, adresse IP, réassemblés.",
+      "corrige": [
+        "Les données ne voyagent pas d'un seul bloc : elles sont découpées en paquets.",
+        "Chaque paquet porte l'adresse IP du destinataire, ce qui permet de l'acheminer à travers le réseau.",
+        "Exemple de réponse : « Le fichier est découpé en paquets qui portent chacun l'adresse IP du destinataire et sont acheminés à travers le réseau. À l'arrivée, les paquets sont réassemblés pour reconstituer le fichier. »"
+      ],
+      "reponse": "Le fichier est découpé en paquets adressés à l'IP du destinataire, acheminés par le réseau puis réassemblés à l'arrivée."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "modèle de von Neumann",
+      "enonce": "Un élève affirme : « Le processeur stocke les fichiers et la mémoire fait les calculs. » Corrige sa phrase et précise ce que contient le processeur.",
+      "corrige": [
+        "L'élève inverse les rôles : le processeur calcule, la mémoire stocke.",
+        "Le processeur (CPU) regroupe l'unité de commande, qui lit et décode les instructions, et l'UAL, qui effectue les calculs.",
+        "La mémoire stocke les données et le programme ; les fichiers, eux, sont conservés durablement sur le disque (un périphérique)."
+      ],
+      "reponse": "« Le processeur calcule (UAL + unité de commande) et la mémoire stocke données et programme. »"
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "horloge et fréquence",
+      "enonce": "Deux processeurs : A à 2 GHz exécute en moyenne 2 instructions par cycle ; B à 3 GHz en exécute 1 par cycle. Lequel exécute le plus d'instructions par seconde ? Que peux-tu en conclure sur la fréquence ?",
+      "corrige": [
+        "A : 2 × 10^9 cycles/s × 2 = 4 milliards d'instructions par seconde.",
+        "B : 3 × 10^9 × 1 = 3 milliards d'instructions par seconde.",
+        "A est plus rapide malgré une fréquence plus faible : la fréquence seule ne suffit pas à comparer des processeurs."
+      ],
+      "reponse": "A (4 milliards d'instructions/s contre 3 milliards pour B) : la fréquence seule ne mesure pas la rapidité."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "table de vérité d'une expression logique",
+      "enonce": "Un vote à trois juges (a, b, c) est accepté si au moins deux juges votent oui (1). Vérifie que M = (a ET b) OU (a ET c) OU (b ET c) convient en calculant M pour (1, 0, 1), (0, 1, 0) et (1, 1, 1).",
+      "corrige": [
+        "(1, 0, 1) : a ET c = 1, donc M = 1 (deux oui).",
+        "(0, 1, 0) : aucun des trois ET ne vaut 1, donc M = 0 (un seul oui).",
+        "(1, 1, 1) : tous les ET valent 1, donc M = 1.",
+        "Plus généralement, un des trois ET vaut 1 exactement quand au moins deux entrées valent 1."
+      ],
+      "reponse": "M = 1, 0 et 1 : l'expression traduit bien « au moins deux oui »."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "portes logiques",
+      "enonce": "Un demi-additionneur additionne deux bits a et b. Il produit un bit de somme s et une retenue r. Sachant que 1 + 1 = 10 en binaire, donne s et r pour les quatre cas, puis exprime r à l'aide d'une seule porte.",
+      "corrige": [
+        "0 + 0 = 0 : s = 0, r = 0. 0 + 1 = 1 + 0 = 1 : s = 1, r = 0.",
+        "1 + 1 = 2, qui s'écrit 10 en binaire : s = 0, r = 1.",
+        "La retenue vaut 1 seulement quand a et b valent 1 : r = a ET b (et s = (a OU b) ET NON (a ET b))."
+      ],
+      "reponse": "s : 0, 1, 1, 0 et r : 0, 0, 0, 1 ; r = a ET b."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "chemins absolus et relatifs",
+      "enonce": "Le dossier courant est /home/ali/nsi/tp1. Donne un chemin relatif pour atteindre le fichier /home/ali/maths/dm.pdf, puis un chemin relatif pour /home/zoe.",
+      "corrige": [
+        "On remonte de tp1 à nsi, puis de nsi à ali : `../..`.",
+        "Depuis /home/ali, on descend dans maths : `../../maths/dm.pdf`.",
+        "Pour /home/zoe, il faut remonter trois fois (jusqu'à /home) puis entrer dans zoe : `../../../zoe`."
+      ],
+      "reponse": "`../../maths/dm.pdf` et `../../../zoe`."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "commandes du terminal",
+      "enonce": "Un élève tape ces commandes dans un dossier vide. Il obtient un message d'erreur à la dernière ligne. Explique pourquoi et corrige.\n\n```bash\nmkdir notes\ncd notes\ncd notes\n```",
+      "corrige": [
+        "`mkdir notes` crée le dossier notes, puis `cd notes` y entre : on est dans .../notes.",
+        "Le second `cd notes` cherche un dossier notes à l'intérieur de notes : il n'existe pas, d'où l'erreur « No such file or directory ».",
+        "Il suffit de supprimer la dernière commande (ou de vérifier avec `pwd` où l'on se trouve)."
+      ],
+      "reponse": "On est déjà dans notes, qui ne contient aucun dossier notes : la dernière commande est en trop."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "système d'exploitation : processus et droits sur les fichiers",
+      "enonce": "La commande `ls -l` affiche pour un fichier les droits -rw-r----- . Le propriétaire peut-il l'exécuter ? Un membre du groupe peut-il le modifier ? Les autres utilisateurs peuvent-ils le lire ?",
+      "corrige": [
+        "Après le premier caractère, on lit trois blocs : rw- (propriétaire), r-- (groupe), --- (autres).",
+        "Propriétaire rw- : lecture et écriture, mais pas d'exécution.",
+        "Groupe r-- : lecture seule, donc pas de modification. Autres --- : aucun droit."
+      ],
+      "reponse": "Non ; non ; non (le propriétaire lit et écrit, le groupe lit seulement, les autres n'ont aucun droit)."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "système d'exploitation",
+      "enonce": "Pourquoi le système d'exploitation doit-il protéger la mémoire de chaque processus ? Donne un exemple de problème qui surviendrait sans cette protection.",
+      "corrige": [
+        "Plusieurs processus sont chargés en mémoire en même temps.",
+        "Si un processus pouvait écrire dans la mémoire d'un autre, une erreur de programmation ou un programme malveillant pourrait modifier ou lire les données des autres.",
+        "Exemple de réponse : un jeu bogué qui écrase les données d'un traitement de texte ouvert, faisant perdre le document."
+      ],
+      "reponse": "Pour qu'un processus ne puisse ni lire ni modifier la mémoire d'un autre (ex. : un programme bogué qui corromprait un document ouvert)."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "réseau",
+      "enonce": "Pourquoi découpe-t-on les données en paquets plutôt que d'envoyer un gros fichier d'un seul bloc ? Donne deux avantages.",
+      "corrige": [
+        "Avantage 1 : si un paquet est perdu ou abîmé, on ne renvoie que ce paquet et non tout le fichier.",
+        "Avantage 2 : le réseau est partagé : les paquets de plusieurs communications peuvent circuler en alternance, et les paquets peuvent emprunter des chemins différents.",
+        "Les paquets sont ensuite réassemblés à l'arrivée."
+      ],
+      "reponse": "On ne renvoie que les paquets perdus, et le réseau peut être partagé entre de nombreuses communications (chemins possibles différents)."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "modèle de von Neumann",
+      "enonce": "On décrit l'exécution de l'instruction « additionner le contenu de deux cases mémoire et ranger le résultat dans une troisième ». Décris le rôle de chaque partie du modèle de von Neumann au cours de cette instruction.",
+      "corrige": [
+        "L'unité de commande charge l'instruction depuis la mémoire (via le bus) et la décode.",
+        "Les deux valeurs sont lues en mémoire et transportées par le bus jusqu'au processeur.",
+        "L'UAL effectue l'addition.",
+        "Le résultat est renvoyé par le bus et écrit dans la troisième case mémoire ; on passe à l'instruction suivante."
+      ],
+      "reponse": "Commande : charge et décode ; bus : transporte les valeurs ; UAL : additionne ; mémoire : fournit les opérandes et reçoit le résultat."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "table de vérité d'une expression logique",
+      "enonce": "Écris une fonction Python `porte(a, b, c)` qui renvoie la valeur de (a OU b) ET (NON c) pour des entiers 0 ou 1. Combien des 8 combinaisons (a, b, c) donnent 1 ?",
+      "corrige": [
+        "Exemple de réponse : `def porte(a, b, c): return int((a or b) and not c)`.",
+        "Pour que le résultat vaille 1, il faut c = 0, et a ou b égal à 1.",
+        "Avec c = 0, les couples (a, b) qui conviennent sont (0, 1), (1, 0) et (1, 1)."
+      ],
+      "reponse": "3 combinaisons : (0, 1, 0), (1, 0, 0) et (1, 1, 0)."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "exécution d'un petit programme en langage machine (registres)",
+      "enonce": "Dans un assembleur simplifié, l'instruction « SAUT_SI R1 > 0 vers L » fait reprendre l'exécution à la ligne L si R1 est strictement positif. Que contient R2 à la fin ?\n\n```text\n1: R1 ← 3\n2: R2 ← 0\n3: R2 ← R2 + 5\n4: R1 ← R1 - 1\n5: SAUT_SI R1 > 0 vers 3\n6: FIN\n```",
+      "corrige": [
+        "R1 = 3, R2 = 0. 1er passage : R2 = 5, R1 = 2 > 0, on revient à la ligne 3.",
+        "2e passage : R2 = 10, R1 = 1 > 0, on revient. 3e passage : R2 = 15, R1 = 0 : pas de saut.",
+        "Le programme s'arrête : cette boucle a calculé 3 × 5 par additions successives."
+      ],
+      "reponse": "R2 = 15 (et R1 = 0)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "commandes du terminal",
+      "enonce": "Le dossier courant est /home/ali. On tape :\n\n```bash\nmkdir -p nsi/tp\ncd nsi/tp\ncd ../..\npwd\nls\n```\n\nL'option -p de `mkdir` crée aussi les dossiers intermédiaires. On suppose que /home/ali était vide au départ. Qu'affichent `pwd` puis `ls` ?",
+      "corrige": [
+        "`mkdir -p nsi/tp` crée nsi, puis tp à l'intérieur de nsi.",
+        "`cd nsi/tp` mène à /home/ali/nsi/tp ; `cd ../..` remonte deux fois jusqu'à /home/ali.",
+        "`pwd` affiche /home/ali et `ls` affiche le seul élément de ce dossier : nsi."
+      ],
+      "reponse": "`pwd` affiche /home/ali et `ls` affiche nsi."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "horloge et fréquence",
+      "enonce": "Un programme demande 9 milliards de cycles d'horloge. Combien de temps dure-t-il sur un processeur à 3 GHz ? Et à 4,5 GHz ? Peut-on en conclure qu'un ordinateur à 4,5 GHz est toujours plus rapide ?",
+      "corrige": [
+        "Durée = nombre de cycles ÷ fréquence.",
+        "À 3 GHz : 9 × 10^9 ÷ (3 × 10^9) = 3 s. À 4,5 GHz : 9 × 10^9 ÷ (4,5 × 10^9) = 2 s.",
+        "Non : selon les processeurs, le nombre de cycles nécessaires pour un même programme varie, et d'autres éléments comptent (mémoire, nombre de cœurs…)."
+      ],
+      "reponse": "3 s à 3 GHz, 2 s à 4,5 GHz ; non, la fréquence ne suffit pas à comparer deux ordinateurs."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "système sur puce",
+      "enonce": "Un smartphone utilise un système sur puce (SoC). Explique ce que regroupe une telle puce et donne deux avantages pour un téléphone.",
+      "corrige": [
+        "Un système sur puce regroupe sur une seule puce le processeur, la mémoire et des périphériques (contrôleurs, circuits de communication…).",
+        "Avantage 1 : la taille réduite, indispensable dans un appareil aussi petit.",
+        "Avantage 2 : une consommation d'énergie plus faible (meilleure autonomie), car les composants sont proches et les liaisons courtes."
+      ],
+      "reponse": "Processeur, mémoire et périphériques sur une seule puce ; avantages : petite taille et faible consommation."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "transistors",
+      "enonce": "Un processeur contient des milliards de transistors. Explique le lien entre un transistor, une porte logique et un calcul fait par l'UAL.",
+      "corrige": [
+        "Un transistor est un minuscule interrupteur commandé électriquement : passant ou bloqué, ce qui représente 1 ou 0.",
+        "En combinant plusieurs transistors, on réalise des portes logiques (NON, ET, OU).",
+        "En assemblant des portes, on construit des circuits qui additionnent ou comparent des nombres binaires : ce sont les opérations de l'UAL."
+      ],
+      "reponse": "Transistors → portes logiques → circuits de calcul (additionneurs, comparateurs) de l'UAL."
     }
   ]
 }

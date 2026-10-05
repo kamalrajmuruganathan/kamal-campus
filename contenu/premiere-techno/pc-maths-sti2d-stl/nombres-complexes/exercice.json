@@ -131,7 +131,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "synthese",
       "enonce": "**Contexte.** En électricité, en régime sinusoïdal, une impédance se modélise par un nombre complexe $Z = R + \\mathrm{i}X$, où $R$ (en $\\Omega$) est la résistance et $X$ (en $\\Omega$) la réactance. Le module $|Z|$ donne l'impédance (en $\\Omega$) et un argument de $Z$ donne le déphasage $\\varphi$ entre la tension et le courant. On étudie le dipôle d'impédance $Z = 3 + 3\\sqrt{3}\\,\\mathrm{i}$ (en $\\Omega$).\n\n1. Donner la résistance $R$ et la réactance $X$ de ce dipôle.\n2. Calculer $|Z|$, c'est-à-dire l'impédance du dipôle, en $\\Omega$.\n3. Déterminer un argument $\\varphi$ de $Z$ (le déphasage).\n4. En déduire l'écriture de $Z$ sous forme trigonométrique.\n5. L'admittance du dipôle est le complexe $Y = \\dfrac{1}{Z}$. Écrire $Y$ sous forme algébrique, puis vérifier que $|Y| = \\dfrac{1}{|Z|}$.",
       "corrige": [
@@ -143,6 +143,458 @@
         "Vérification : $|Y| = \\sqrt{\\left(\\dfrac{1}{12}\\right)^2 + \\left(\\dfrac{\\sqrt3}{12}\\right)^2} = \\sqrt{\\dfrac{1 + 3}{144}} = \\sqrt{\\dfrac{4}{144}} = \\dfrac{2}{12} = \\dfrac{1}{6}$, qui est bien égal à $\\dfrac{1}{|Z|} = \\dfrac{1}{6}$."
       ],
       "reponse": "1. $R = 3~\\Omega$, $X = 3\\sqrt3~\\Omega$. 2. $|Z| = 6~\\Omega$. 3. $\\varphi = \\dfrac{\\pi}{3}$. 4. $Z = 6\\left(\\cos\\dfrac{\\pi}{3} + \\mathrm{i}\\sin\\dfrac{\\pi}{3}\\right)$. 5. $Y = \\dfrac{1}{12} - \\dfrac{\\sqrt3}{12}\\,\\mathrm{i}$ et $|Y| = \\dfrac{1}{6} = \\dfrac{1}{|Z|}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "forme-algebrique",
+      "enonce": "Donner la partie réelle et la partie imaginaire de chacun des nombres : $z_1 = 5 - 2\\mathrm{i}$ ; $z_2 = -3\\mathrm{i}$ ; $z_3 = 7$.",
+      "corrige": [
+        "Pour $z = a + \\mathrm{i}b$, la partie réelle est $a$ et la partie imaginaire est $b$, un nombre réel (sans le $\\mathrm{i}$).",
+        "$z_1 = 5 + \\mathrm{i}(-2)$ ; $z_2 = 0 + \\mathrm{i}(-3)$ ; $z_3 = 7 + \\mathrm{i} \\times 0$."
+      ],
+      "reponse": "$z_1$ : $5$ et $-2$ ; $z_2$ : $0$ et $-3$ ; $z_3$ : $7$ et $0$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "forme-algebrique",
+      "enonce": "Classer les nombres suivants en « réels » et « imaginaires purs » : $3$ ; $-2\\mathrm{i}$ ; $\\sqrt{2}\\,\\mathrm{i}$ ; $-5$ ; $\\dfrac{\\mathrm{i}}{4}$.",
+      "corrige": [
+        "Un nombre $a + \\mathrm{i}b$ est réel si $b = 0$, imaginaire pur si $a = 0$.",
+        "$3$ et $-5$ ont une partie imaginaire nulle ; $-2\\mathrm{i}$, $\\sqrt{2}\\,\\mathrm{i}$ et $\\dfrac{\\mathrm{i}}{4}$ ont une partie réelle nulle."
+      ],
+      "reponse": "Réels : $3$ et $-5$ ; imaginaires purs : $-2\\mathrm{i}$, $\\sqrt{2}\\,\\mathrm{i}$, $\\dfrac{\\mathrm{i}}{4}$."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "puissances-de-i",
+      "enonce": "Calculer $\\mathrm{i}^2$, $\\mathrm{i}^3$ et $\\mathrm{i}^4$.",
+      "corrige": [
+        "Par définition, $\\mathrm{i}^2 = -1$.",
+        "$\\mathrm{i}^3 = \\mathrm{i}^2 \\times \\mathrm{i} = -\\mathrm{i}$ et $\\mathrm{i}^4 = (\\mathrm{i}^2)^2 = (-1)^2 = 1$."
+      ],
+      "reponse": "$\\mathrm{i}^2 = -1$, $\\mathrm{i}^3 = -\\mathrm{i}$, $\\mathrm{i}^4 = 1$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "puissances-de-i",
+      "enonce": "En utilisant $\\mathrm{i}^4 = 1$, calculer $\\mathrm{i}^{10}$ et $\\mathrm{i}^{7}$.",
+      "corrige": [
+        "$\\mathrm{i}^{10} = \\mathrm{i}^{8} \\times \\mathrm{i}^{2} = (\\mathrm{i}^4)^2 \\times (-1) = -1$.",
+        "$\\mathrm{i}^{7} = \\mathrm{i}^{4} \\times \\mathrm{i}^{3} = 1 \\times (-\\mathrm{i}) = -\\mathrm{i}$."
+      ],
+      "reponse": "$\\mathrm{i}^{10} = -1$ et $\\mathrm{i}^{7} = -\\mathrm{i}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "conjugue",
+      "enonce": "Donner le conjugué de chacun des nombres : $2 + 5\\mathrm{i}$ ; $-1 - \\mathrm{i}$ ; $4$ ; $3\\mathrm{i}$.",
+      "corrige": [
+        "Le conjugué de $a + \\mathrm{i}b$ est $a - \\mathrm{i}b$ : on change le signe de la partie imaginaire.",
+        "Un réel est égal à son conjugué ; le conjugué d'un imaginaire pur est son opposé."
+      ],
+      "reponse": "$2 - 5\\mathrm{i}$ ; $-1 + \\mathrm{i}$ ; $4$ ; $-3\\mathrm{i}$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "plan-complexe",
+      "enonce": "Dans le plan complexe, on donne les points $\\mathrm{A}(2\\,;-1)$, $\\mathrm{B}(0\\,;3)$ et $\\mathrm{C}(-4\\,;0)$. Donner leurs affixes.",
+      "corrige": [
+        "Le point de coordonnées $(a\\,;b)$ a pour affixe $a + \\mathrm{i}b$.",
+        "$\\mathrm{B}$ est sur l'axe des ordonnées (imaginaire pur), $\\mathrm{C}$ sur l'axe des abscisses (réel)."
+      ],
+      "reponse": "$z_\\mathrm{A} = 2 - \\mathrm{i}$, $z_\\mathrm{B} = 3\\mathrm{i}$, $z_\\mathrm{C} = -4$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "plan-complexe",
+      "enonce": "Soit $z = -1 + 2\\mathrm{i}$. Donner les coordonnées de l'image $\\mathrm{M}$ de $z$ et de l'image $\\mathrm{M}'$ de $\\bar z$. Quelle transformation envoie $\\mathrm{M}$ sur $\\mathrm{M}'$ ?",
+      "corrige": [
+        "L'image de $z = -1 + 2\\mathrm{i}$ est $\\mathrm{M}(-1\\,;2)$ ; $\\bar z = -1 - 2\\mathrm{i}$ a pour image $\\mathrm{M}'(-1\\,;-2)$.",
+        "Seule l'ordonnée change de signe : $\\mathrm{M}'$ est le symétrique de $\\mathrm{M}$ par rapport à l'axe des abscisses."
+      ],
+      "reponse": "$\\mathrm{M}(-1\\,;2)$, $\\mathrm{M}'(-1\\,;-2)$ : symétrie par rapport à l'axe des abscisses."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "somme-produit",
+      "enonce": "On pose $z_1 = 4 + \\mathrm{i}$ et $z_2 = -2 + 3\\mathrm{i}$. Calculer $z_1 + z_2$ et $z_1 - z_2$.",
+      "corrige": [
+        "On regroupe séparément les parties réelles et les parties imaginaires.",
+        "$z_1 + z_2 = (4 - 2) + \\mathrm{i}(1 + 3) = 2 + 4\\mathrm{i}$.",
+        "$z_1 - z_2 = (4 + 2) + \\mathrm{i}(1 - 3) = 6 - 2\\mathrm{i}$."
+      ],
+      "reponse": "$z_1 + z_2 = 2 + 4\\mathrm{i}$ ; $z_1 - z_2 = 6 - 2\\mathrm{i}$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "somme-produit",
+      "enonce": "Écrire sous forme algébrique : $(1 + 2\\mathrm{i})(3 - \\mathrm{i})$.",
+      "corrige": [
+        "On développe : $3 - \\mathrm{i} + 6\\mathrm{i} - 2\\mathrm{i}^2$.",
+        "On remplace $\\mathrm{i}^2$ par $-1$ : $3 + 5\\mathrm{i} + 2 = 5 + 5\\mathrm{i}$."
+      ],
+      "reponse": "$5 + 5\\mathrm{i}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "somme-produit",
+      "enonce": "Calculer $(2 - \\mathrm{i})^2$ sous forme algébrique.",
+      "corrige": [
+        "Identité remarquable : $(2 - \\mathrm{i})^2 = 4 - 4\\mathrm{i} + \\mathrm{i}^2$.",
+        "Avec $\\mathrm{i}^2 = -1$ : $4 - 4\\mathrm{i} - 1 = 3 - 4\\mathrm{i}$."
+      ],
+      "reponse": "$3 - 4\\mathrm{i}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "somme-produit",
+      "enonce": "Écrire sous forme algébrique : $3\\mathrm{i}(2 - 4\\mathrm{i})$.",
+      "corrige": [
+        "On distribue : $6\\mathrm{i} - 12\\mathrm{i}^2$.",
+        "$-12\\mathrm{i}^2 = -12 \\times (-1) = 12$, donc le résultat est $12 + 6\\mathrm{i}$."
+      ],
+      "reponse": "$12 + 6\\mathrm{i}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "conjugue",
+      "enonce": "Soit $z = 3 + 4\\mathrm{i}$. Calculer $z \\times \\bar z$ de deux façons : en développant, puis avec la formule $a^2 + b^2$.",
+      "corrige": [
+        "En développant : $(3 + 4\\mathrm{i})(3 - 4\\mathrm{i}) = 9 - 12\\mathrm{i} + 12\\mathrm{i} - 16\\mathrm{i}^2 = 9 + 16 = 25$.",
+        "Avec la formule : $a^2 + b^2 = 3^2 + 4^2 = 25$. Le résultat est bien un réel positif."
+      ],
+      "reponse": "$z\\bar z = 25$."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "conjugue",
+      "enonce": "Un élève affirme : « le produit d'un nombre complexe par son conjugué est toujours un imaginaire pur ». Tester avec $z = 1 + \\mathrm{i}$ et corriger l'affirmation.",
+      "corrige": [
+        "$(1 + \\mathrm{i})(1 - \\mathrm{i}) = 1 - \\mathrm{i}^2 = 1 + 1 = 2$ : c'est un réel.",
+        "En général, $z\\bar z = a^2 + b^2$ : c'est toujours un réel positif (ou nul)."
+      ],
+      "reponse": "Faux : $z\\bar z = a^2 + b^2$ est un réel positif (ici $2$)."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "module",
+      "enonce": "Calculer le module de : $z_1 = 3 - 4\\mathrm{i}$ ; $z_2 = -2\\mathrm{i}$ ; $z_3 = -6$.",
+      "corrige": [
+        "$|a + \\mathrm{i}b| = \\sqrt{a^2 + b^2}$.",
+        "$|z_1| = \\sqrt{9 + 16} = 5$ ; $|z_2| = \\sqrt{0 + 4} = 2$ ; $|z_3| = \\sqrt{36} = 6$ (un module n'est jamais négatif)."
+      ],
+      "reponse": "$|z_1| = 5$, $|z_2| = 2$, $|z_3| = 6$."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "module",
+      "enonce": "Calculer le module de $z_1 = 1 + \\sqrt{3}\\,\\mathrm{i}$ et de $z_2 = 2 + 2\\mathrm{i}$.",
+      "corrige": [
+        "$|z_1| = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{1 + 3} = 2$.",
+        "$|z_2| = \\sqrt{4 + 4} = \\sqrt{8} = 2\\sqrt{2}$."
+      ],
+      "reponse": "$|z_1| = 2$ et $|z_2| = 2\\sqrt{2}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Écrire $\\dfrac{1}{\\mathrm{i}}$ sous forme algébrique.",
+      "corrige": [
+        "On multiplie numérateur et dénominateur par le conjugué du dénominateur, $-\\mathrm{i}$ : $\\dfrac{1 \\times (-\\mathrm{i})}{\\mathrm{i} \\times (-\\mathrm{i})} = \\dfrac{-\\mathrm{i}}{-\\mathrm{i}^2} = \\dfrac{-\\mathrm{i}}{1}$."
+      ],
+      "reponse": "$\\dfrac{1}{\\mathrm{i}} = -\\mathrm{i}$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Écrire $\\dfrac{5}{1 + 2\\mathrm{i}}$ sous forme algébrique.",
+      "corrige": [
+        "On multiplie en haut et en bas par le conjugué du dénominateur, $1 - 2\\mathrm{i}$.",
+        "Dénominateur : $(1 + 2\\mathrm{i})(1 - 2\\mathrm{i}) = 1 + 4 = 5$.",
+        "$\\dfrac{5(1 - 2\\mathrm{i})}{5} = 1 - 2\\mathrm{i}$."
+      ],
+      "reponse": "$1 - 2\\mathrm{i}$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Écrire $\\dfrac{2 + 3\\mathrm{i}}{2 - 3\\mathrm{i}}$ sous forme algébrique.",
+      "corrige": [
+        "On multiplie par le conjugué du dénominateur, $2 + 3\\mathrm{i}$.",
+        "Numérateur : $(2 + 3\\mathrm{i})^2 = 4 + 12\\mathrm{i} - 9 = -5 + 12\\mathrm{i}$ ; dénominateur : $4 + 9 = 13$.",
+        "Résultat : $\\dfrac{-5 + 12\\mathrm{i}}{13}$."
+      ],
+      "reponse": "$-\\dfrac{5}{13} + \\dfrac{12}{13}\\mathrm{i}$."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "quotient",
+      "enonce": "Écrire $\\dfrac{4 - 2\\mathrm{i}}{1 + \\mathrm{i}}$ sous forme algébrique.",
+      "corrige": [
+        "On multiplie par $1 - \\mathrm{i}$ : le dénominateur devient $1^2 + 1^2 = 2$.",
+        "Numérateur : $(4 - 2\\mathrm{i})(1 - \\mathrm{i}) = 4 - 4\\mathrm{i} - 2\\mathrm{i} + 2\\mathrm{i}^2 = 2 - 6\\mathrm{i}$.",
+        "$\\dfrac{2 - 6\\mathrm{i}}{2} = 1 - 3\\mathrm{i}$."
+      ],
+      "reponse": "$1 - 3\\mathrm{i}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "module",
+      "enonce": "Sans calculer le quotient, déterminer le module de $\\dfrac{3 + 4\\mathrm{i}}{1 - \\mathrm{i}}$.",
+      "corrige": [
+        "Propriété : $\\left|\\dfrac{z}{z'}\\right| = \\dfrac{|z|}{|z'|}$.",
+        "$|3 + 4\\mathrm{i}| = 5$ et $|1 - \\mathrm{i}| = \\sqrt{2}$, d'où $\\dfrac{5}{\\sqrt{2}} = \\dfrac{5\\sqrt{2}}{2}$."
+      ],
+      "reponse": "$\\dfrac{5\\sqrt{2}}{2}$ (environ $3{,}54$)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "module",
+      "enonce": "Sans développer, déterminer le module de $(1 + \\mathrm{i})(3 - 4\\mathrm{i})$.",
+      "corrige": [
+        "Le module d'un produit est le produit des modules : $|zz'| = |z| \\times |z'|$.",
+        "$|1 + \\mathrm{i}| = \\sqrt{2}$ et $|3 - 4\\mathrm{i}| = 5$, donc le module vaut $5\\sqrt{2}$."
+      ],
+      "reponse": "$5\\sqrt{2}$."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "argument",
+      "enonce": "Déterminer le module et un argument de $z_1 = 2\\mathrm{i}$ et de $z_2 = -5$.",
+      "corrige": [
+        "$z_1 = 2\\mathrm{i}$ : $r = 2$, $\\cos\\theta = \\dfrac{0}{2} = 0$ et $\\sin\\theta = \\dfrac{2}{2} = 1$, donc $\\theta = \\dfrac{\\pi}{2}$.",
+        "$z_2 = -5$ : $r = 5$, $\\cos\\theta = -1$ et $\\sin\\theta = 0$, donc $\\theta = \\pi$."
+      ],
+      "reponse": "$z_1$ : $r = 2$, $\\theta = \\dfrac{\\pi}{2}$ ; $z_2$ : $r = 5$, $\\theta = \\pi$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "forme-trigonometrique",
+      "enonce": "Écrire $z = \\sqrt{3} + \\mathrm{i}$ sous forme trigonométrique.",
+      "corrige": [
+        "Module : $r = \\sqrt{3 + 1} = 2$.",
+        "$\\cos\\theta = \\dfrac{\\sqrt{3}}{2}$ et $\\sin\\theta = \\dfrac{1}{2}$, donc $\\theta = \\dfrac{\\pi}{6}$."
+      ],
+      "reponse": "$z = 2\\left(\\cos\\dfrac{\\pi}{6} + \\mathrm{i}\\sin\\dfrac{\\pi}{6}\\right)$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "forme-trigonometrique",
+      "enonce": "Écrire $z = 1 - \\mathrm{i}$ sous forme trigonométrique.",
+      "corrige": [
+        "$r = \\sqrt{1 + 1} = \\sqrt{2}$.",
+        "$\\cos\\theta = \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$ et $\\sin\\theta = -\\dfrac{\\sqrt{2}}{2}$ : le sinus négatif impose $\\theta = -\\dfrac{\\pi}{4}$."
+      ],
+      "reponse": "$z = \\sqrt{2}\\left(\\cos\\left(-\\dfrac{\\pi}{4}\\right) + \\mathrm{i}\\sin\\left(-\\dfrac{\\pi}{4}\\right)\\right)$."
+    },
+    {
+      "id": 35,
+      "difficulte": "application",
+      "notion": "forme-trigonometrique",
+      "enonce": "Écrire sous forme algébrique : $z = 4\\left(\\cos\\dfrac{\\pi}{3} + \\mathrm{i}\\sin\\dfrac{\\pi}{3}\\right)$.",
+      "corrige": [
+        "$a = r\\cos\\theta = 4 \\times \\dfrac{1}{2} = 2$.",
+        "$b = r\\sin\\theta = 4 \\times \\dfrac{\\sqrt{3}}{2} = 2\\sqrt{3}$."
+      ],
+      "reponse": "$z = 2 + 2\\sqrt{3}\\,\\mathrm{i}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "forme-trigonometrique",
+      "enonce": "Écrire sous forme algébrique : $z = 2\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + \\mathrm{i}\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)$.",
+      "corrige": [
+        "$\\cos\\left(-\\dfrac{\\pi}{2}\\right) = 0$ et $\\sin\\left(-\\dfrac{\\pi}{2}\\right) = -1$.",
+        "$z = 2(0 - \\mathrm{i}) = -2\\mathrm{i}$."
+      ],
+      "reponse": "$z = -2\\mathrm{i}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "argument",
+      "enonce": "Pour $z = -1 - \\mathrm{i}$, un élève trouve $r = \\sqrt{2}$ et $\\cos\\theta = -\\dfrac{\\sqrt{2}}{2}$, puis conclut $\\theta = \\dfrac{3\\pi}{4}$. Vérifier et corriger.",
+      "corrige": [
+        "Le cosinus seul laisse deux possibilités : $\\dfrac{3\\pi}{4}$ ou $-\\dfrac{3\\pi}{4}$.",
+        "Le sinus tranche : $\\sin\\theta = \\dfrac{-1}{\\sqrt{2}} = -\\dfrac{\\sqrt{2}}{2} < 0$, alors que $\\sin\\dfrac{3\\pi}{4} > 0$.",
+        "Donc $\\theta = -\\dfrac{3\\pi}{4}$ ; l'image de $z$ est bien dans la partie basse du plan."
+      ],
+      "reponse": "$\\theta = -\\dfrac{3\\pi}{4}$ (et non $\\dfrac{3\\pi}{4}$)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "quotient",
+      "enonce": "Déterminer le nombre complexe $z$ tel que $(1 + \\mathrm{i})z = 3 + \\mathrm{i}$. Donner le résultat sous forme algébrique.",
+      "corrige": [
+        "$z = \\dfrac{3 + \\mathrm{i}}{1 + \\mathrm{i}}$ ; on multiplie par $1 - \\mathrm{i}$.",
+        "Numérateur : $(3 + \\mathrm{i})(1 - \\mathrm{i}) = 3 - 3\\mathrm{i} + \\mathrm{i} + 1 = 4 - 2\\mathrm{i}$ ; dénominateur : $2$.",
+        "$z = 2 - \\mathrm{i}$ ; vérification : $(1 + \\mathrm{i})(2 - \\mathrm{i}) = 2 - \\mathrm{i} + 2\\mathrm{i} + 1 = 3 + \\mathrm{i}$."
+      ],
+      "reponse": "$z = 2 - \\mathrm{i}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "somme-produit",
+      "enonce": "Soit $x$ un réel et $z = (x + \\mathrm{i})^2$. Déterminer les valeurs de $x$ pour lesquelles $z$ est un imaginaire pur.",
+      "corrige": [
+        "$z = x^2 + 2x\\mathrm{i} + \\mathrm{i}^2 = (x^2 - 1) + 2x\\,\\mathrm{i}$.",
+        "$z$ est imaginaire pur si sa partie réelle est nulle : $x^2 - 1 = 0$, soit $x = 1$ ou $x = -1$.",
+        "On obtient alors $z = 2\\mathrm{i}$ ou $z = -2\\mathrm{i}$."
+      ],
+      "reponse": "$x = 1$ ou $x = -1$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "conjugue",
+      "enonce": "Déterminer le nombre complexe $z$ tel que $z + 2\\bar z = 6 - \\mathrm{i}$.",
+      "corrige": [
+        "On pose $z = a + \\mathrm{i}b$ : $z + 2\\bar z = a + \\mathrm{i}b + 2a - 2\\mathrm{i}b = 3a - \\mathrm{i}b$.",
+        "Par unicité de la forme algébrique : $3a = 6$ et $-b = -1$, donc $a = 2$ et $b = 1$."
+      ],
+      "reponse": "$z = 2 + \\mathrm{i}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "module",
+      "enonce": "Déterminer les réels $x$ tels que $|x + 3\\mathrm{i}| = 5$.",
+      "corrige": [
+        "$|x + 3\\mathrm{i}| = \\sqrt{x^2 + 9}$.",
+        "$\\sqrt{x^2 + 9} = 5 \\iff x^2 + 9 = 25 \\iff x^2 = 16$, d'où $x = 4$ ou $x = -4$."
+      ],
+      "reponse": "$x = 4$ ou $x = -4$."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "plan-complexe",
+      "enonce": "Les points d'affixes $z_1 = 3 + 4\\mathrm{i}$, $z_2 = -5$ et $z_3 = 4 - 3\\mathrm{i}$ sont-ils sur un même cercle de centre $\\mathrm{O}$ ? Si oui, préciser son rayon.",
+      "corrige": [
+        "Le module d'un nombre est la distance de l'origine à son image.",
+        "$|z_1| = \\sqrt{9 + 16} = 5$, $|z_2| = 5$, $|z_3| = \\sqrt{16 + 9} = 5$.",
+        "Les trois points sont à la distance $5$ de $\\mathrm{O}$."
+      ],
+      "reponse": "Oui, sur le cercle de centre $\\mathrm{O}$ et de rayon $5$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "module",
+      "enonce": "Un élève écrit : « $|2 + 3\\mathrm{i}| = 2 + 3 = 5$ ». Corriger.",
+      "corrige": [
+        "Le module n'est pas la somme des parties : $|a + \\mathrm{i}b| = \\sqrt{a^2 + b^2}$.",
+        "$|2 + 3\\mathrm{i}| = \\sqrt{4 + 9} = \\sqrt{13} \\approx 3{,}6$."
+      ],
+      "reponse": "$|2 + 3\\mathrm{i}| = \\sqrt{13}$."
+    },
+    {
+      "id": 44,
+      "difficulte": "intermediaire",
+      "notion": "somme-produit",
+      "enonce": "Pour calculer $(2 + \\mathrm{i})(3 + 2\\mathrm{i})$, un élève écrit : « $6 + 7\\mathrm{i} + 2\\mathrm{i}^2 = 8 + 7\\mathrm{i}$ ». Trouver l'erreur.",
+      "corrige": [
+        "Le développement $6 + 4\\mathrm{i} + 3\\mathrm{i} + 2\\mathrm{i}^2 = 6 + 7\\mathrm{i} + 2\\mathrm{i}^2$ est juste.",
+        "L'erreur est dans la dernière étape : $2\\mathrm{i}^2 = 2 \\times (-1) = -2$, et non $+2$.",
+        "Résultat : $6 - 2 + 7\\mathrm{i} = 4 + 7\\mathrm{i}$."
+      ],
+      "reponse": "$(2 + \\mathrm{i})(3 + 2\\mathrm{i}) = 4 + 7\\mathrm{i}$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "impedance",
+      "enonce": "En régime sinusoïdal, un dipôle a pour impédance complexe $Z = R + \\mathrm{i}X$ avec $R = 40\\ \\Omega$ et $X = 30\\ \\Omega$. 1. Calculer l'impédance $|Z|$. 2. Un argument $\\varphi$ de $Z$ (le déphasage) vérifie $\\cos\\varphi = \\dfrac{R}{|Z|}$ : calculer $\\cos\\varphi$. 3. On admet que l'intensité efficace vaut $I = \\dfrac{U}{|Z|}$. Calculer $I$ pour $U = 230\\ \\mathrm{V}$.",
+      "corrige": [
+        "1. $|Z| = \\sqrt{40^2 + 30^2} = \\sqrt{2\\,500} = 50\\ \\Omega$.",
+        "2. $\\cos\\varphi = \\dfrac{40}{50} = 0{,}8$.",
+        "3. $I = \\dfrac{230}{50} = 4{,}6\\ \\mathrm{A}$."
+      ],
+      "reponse": "1. $|Z| = 50\\ \\Omega$ ; 2. $\\cos\\varphi = 0{,}8$ ; 3. $I = 4{,}6\\ \\mathrm{A}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "impedance",
+      "enonce": "Deux dipôles d'impédances complexes $Z_1 = 10 + 20\\mathrm{i}$ et $Z_2 = 30 - 50\\mathrm{i}$ (en $\\Omega$) sont placés en série ; l'impédance de l'ensemble est $Z = Z_1 + Z_2$. Calculer $Z$, puis son module. Le module de la somme est-il égal à la somme des modules ?",
+      "corrige": [
+        "$Z = (10 + 30) + \\mathrm{i}(20 - 50) = 40 - 30\\mathrm{i}$, et $|Z| = \\sqrt{1\\,600 + 900} = 50\\ \\Omega$.",
+        "$|Z_1| = \\sqrt{500} \\approx 22{,}4\\ \\Omega$ et $|Z_2| = \\sqrt{3\\,400} \\approx 58{,}3\\ \\Omega$ : leur somme vaut environ $80{,}7\\ \\Omega$.",
+        "Le module d'une somme n'est pas la somme des modules (contrairement au produit)."
+      ],
+      "reponse": "$Z = 40 - 30\\mathrm{i}$, $|Z| = 50\\ \\Omega$ ; non, $|Z_1| + |Z_2| \\approx 80{,}7\\ \\Omega$."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "somme-produit",
+      "enonce": "Soit $z = 1 + \\sqrt{3}\\,\\mathrm{i}$. 1. Calculer $z^2$ sous forme algébrique. 2. En déduire $z^3$. 3. Que remarque-t-on ?",
+      "corrige": [
+        "1. $z^2 = 1 + 2\\sqrt{3}\\,\\mathrm{i} + 3\\mathrm{i}^2 = -2 + 2\\sqrt{3}\\,\\mathrm{i}$.",
+        "2. $z^3 = z^2 \\times z = (-2 + 2\\sqrt{3}\\,\\mathrm{i})(1 + \\sqrt{3}\\,\\mathrm{i}) = -2 - 2\\sqrt{3}\\,\\mathrm{i} + 2\\sqrt{3}\\,\\mathrm{i} + 6\\mathrm{i}^2 = -8$.",
+        "3. $z^3$ est un réel ; on peut vérifier que $|z|^3 = 2^3 = 8$."
+      ],
+      "reponse": "$z^2 = -2 + 2\\sqrt{3}\\,\\mathrm{i}$ ; $z^3 = -8$ (un réel)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "quotient",
+      "enonce": "Soit $q = \\dfrac{1 + \\mathrm{i}}{1 - \\mathrm{i}}$. 1. Écrire $q$ sous forme algébrique. 2. En déduire son module et un argument. 3. Calculer $q^2$.",
+      "corrige": [
+        "1. On multiplie par $1 + \\mathrm{i}$ : $q = \\dfrac{(1 + \\mathrm{i})^2}{2} = \\dfrac{1 + 2\\mathrm{i} - 1}{2} = \\mathrm{i}$.",
+        "2. $|q| = 1$ et un argument est $\\dfrac{\\pi}{2}$ ($\\cos\\theta = 0$, $\\sin\\theta = 1$).",
+        "3. $q^2 = \\mathrm{i}^2 = -1$."
+      ],
+      "reponse": "$q = \\mathrm{i}$ ; $|q| = 1$, $\\theta = \\dfrac{\\pi}{2}$ ; $q^2 = -1$."
+    },
+    {
+      "id": 49,
+      "difficulte": "decouverte",
+      "notion": "plan-complexe",
+      "enonce": "Compléter avec « affixe » ou « image » : a) le point $\\mathrm{M}(2\\,;-3)$ est … du nombre $2 - 3\\mathrm{i}$ ; b) le nombre $-1 + 4\\mathrm{i}$ est … du point $\\mathrm{N}(-1\\,;4)$.",
+      "corrige": [
+        "L'image est un point ; l'affixe est un nombre.",
+        "a) le point $\\mathrm{M}$ est l'image de $2 - 3\\mathrm{i}$ ; b) le nombre $-1 + 4\\mathrm{i}$ est l'affixe de $\\mathrm{N}$."
+      ],
+      "reponse": "a) l'image ; b) l'affixe."
+    },
+    {
+      "id": 50,
+      "difficulte": "application",
+      "notion": "quotient",
+      "enonce": "Écrire $\\dfrac{1}{3 - 4\\mathrm{i}}$ sous forme algébrique.",
+      "corrige": [
+        "On multiplie par le conjugué du dénominateur, $3 + 4\\mathrm{i}$ : le dénominateur devient $3^2 + 4^2 = 25$.",
+        "$\\dfrac{3 + 4\\mathrm{i}}{25} = \\dfrac{3}{25} + \\dfrac{4}{25}\\mathrm{i}$."
+      ],
+      "reponse": "$\\dfrac{3}{25} + \\dfrac{4}{25}\\mathrm{i}$."
     }
   ]
 }
