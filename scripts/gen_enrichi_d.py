@@ -229,18 +229,27 @@ def g1t_derivation():
                   [f"On dérive : $f'(x) = {poly(d)}$.",
                    f"On remplace $x$ par ${a}$ : $f'({a}) = {fx(v)}$."],
                   f"$f'({a}) = {fx(v)}$"))
-    # nombres dérivés avec 1/x et racine
+    # nombres dérivés : coefficients décimaux, lecture graphique, taux de variation
+    c, a = [F(1, 2), -2, 1, 0], 4
+    d = _cubes(c)
     E.append(("intermediaire", "nombre-derive",
-              "Soit $f(x) = \\dfrac{1}{x}$ sur $]0\\,;+\\infty[$. Calculer $f'(2)$.",
-              ["$f'(x) = -\\dfrac{1}{x^2}$.", "$f'(2) = -\\dfrac{1}{4}$."], "$f'(2) = -\\dfrac{1}{4}$"))
+              f"Soit $f(x) = {poly(c)}$. Calculer le nombre dérivé $f'({a})$.",
+              [f"On dérive terme à terme avec $(k\\,u)' = k\\,u'$ : $f'(x) = {poly(d)}$.",
+               f"$f'({a}) = {fx(d[0])} \\times {a}^2 {sg(d[1])} \\times {a} {sg(d[2])} = {fx(_val(d, a))}$."],
+              f"$f'({a}) = {fx(_val(d, a))}$"))
+    xa, ya, xb, yb = 1, 3, 3, 7
+    m = F(yb - ya, xb - xa)
     E.append(("intermediaire", "nombre-derive",
-              "Soit $f(x) = \\sqrt{x}$ sur $]0\\,;+\\infty[$. Calculer $f'(9)$.",
-              ["$f'(x) = \\dfrac{1}{2\\sqrt{x}}$.", "$f'(9) = \\dfrac{1}{2 \\times 3} = \\dfrac{1}{6}$."],
-              "$f'(9) = \\dfrac{1}{6}$"))
+              f"La tangente à la courbe de $f$ au point $\\mathrm{{A}}{pt(xa, ya)}$ passe aussi par le point $\\mathrm{{B}}{pt(xb, yb)}$. Que vaut $f'({xa})$ ?",
+              [f"$f'({xa})$ est le coefficient directeur de la tangente en $\\mathrm{{A}}$, c'est-à-dire de la droite $(\\mathrm{{AB}})$.",
+               f"$f'({xa}) = \\dfrac{{y_\\mathrm{{B}} - y_\\mathrm{{A}}}}{{x_\\mathrm{{B}} - x_\\mathrm{{A}}}} = \\dfrac{{{yb} - {ya}}}{{{xb} - {xa}}} = {fx(m)}$."],
+              f"$f'({xa}) = {fx(m)}$"))
     E.append(("intermediaire", "nombre-derive",
-              "Soit $f(x) = 3x^2 + \\dfrac{4}{x}$ sur $]0\\,;+\\infty[$. Calculer $f'(1)$.",
-              ["$f'(x) = 6x - \\dfrac{4}{x^2}$ (car $\\left(\\dfrac{4}{x}\\right)' = 4 \\times \\left(-\\dfrac{1}{x^2}\\right)$).",
-               "$f'(1) = 6 - 4 = 2$."], "$f'(1) = 2$"))
+              "Soit $f(x) = x^3$. Calculer le taux de variation de $f$ entre $1$ et $1 + h$ (avec $h \\neq 0$), puis en déduire $f'(1)$.",
+              ["$(1 + h)^3 = 1 + 3h + 3h^2 + h^3$, donc $f(1 + h) - f(1) = 3h + 3h^2 + h^3$.",
+               "$\\dfrac{f(1 + h) - f(1)}{h} = 3 + 3h + h^2$.",
+               "Quand $h$ tend vers $0$, on obtient $f'(1) = 3$ (on retrouve $3 \\times 1^2$ avec $(x^3)' = 3x^2$)."],
+              "$3 + 3h + h^2$, donc $f'(1) = 3$"))
     # c) tangente
     T = [([1, 0, 0], 3), ([1, -4, 1], 1), ([2, 3, -1], -1), ([-1, 6, 0], 2), ([1, 0, 0, 0], 1),
          ([1, 0, -2, 0], 2), ([-3, 0, 4], 1)]
@@ -254,23 +263,33 @@ def g1t_derivation():
                    f"$y = f'({a})({xm(a)}) + f({a})$, soit $y = {coef(m)}({xm(a)}) {sg(fa) if fa != 0 else '+ 0'}$.",
                    f"En développant : $y = {affine(m, p)}$."],
                   f"$y = {affine(m, p)}$"))
-    # d) produit et quotient
+    # d) développer puis dériver (polynômes de degré 2)
+    def _terme_x(k):
+        return ("+ " if k >= 0 else "- ") + ("" if abs(k) == 1 else nb(abs(k))) + "x"
     for a, b, c, d in [(2, 1, 3, -4), (1, -5, 2, 3), (-1, 4, 5, 2)]:
-        k2, k1 = 2 * a * c, a * d + b * c
-        E.append(("approfondissement", "produit-quotient",
-                  f"Dériver $f(x) = ({affine(a, b)})({affine(c, d)})$ avec la formule $(uv)' = u'v + uv'$.",
-                  [f"$u(x) = {affine(a, b)}$, $u'(x) = {a}$ ; $v(x) = {affine(c, d)}$, $v'(x) = {c}$.",
-                   f"$f'(x) = {coef(a)}({affine(c, d)}) + {par(c)}({affine(a, b)})$.",
-                   f"$f'(x) = {affine(k2, k1)}$."],
-                  f"$f'(x) = {affine(k2, k1)}$"))
-    for a, b, c, d in [(1, 2, 1, -3), (3, -1, 1, 2), (2, 5, 1, 1)]:
-        num = a * d - b * c
-        E.append(("approfondissement", "produit-quotient",
-                  f"Dériver $f(x) = \\dfrac{{{affine(a, b)}}}{{{affine(c, d)}}}$ (pour $x \\neq {fx(F(-d, c))}$) avec la formule $\\left(\\dfrac{{u}}{{v}}\\right)' = \\dfrac{{u'v - uv'}}{{v^2}}$.",
-                  [f"$u'(x) = {a}$ et $v'(x) = {c}$.",
-                   f"Numérateur : ${a}({affine(c, d)}) - {par(c)}({affine(a, b)}) = {num}$.",
-                   f"$f'(x) = \\dfrac{{{num}}}{{({affine(c, d)})^2}}$."],
-                  f"$f'(x) = \\dfrac{{{num}}}{{({affine(c, d)})^2}}$"))
+        dev = [a * c, a * d + b * c, b * d]
+        der = _cubes(dev)
+        E.append(("approfondissement", "developper-deriver",
+                  f"Soit $f(x) = ({affine(a, b)})({affine(c, d)})$. Développer $f(x)$, puis en déduire $f'(x)$.",
+                  [f"On développe : $f(x) = {poly([a * c, 0, 0])} {_terme_x(a * d)} {_terme_x(b * c)} {sg(b * d)} = {poly(dev)}$.",
+                   f"On dérive terme à terme : $f'(x) = {poly(der)}$.",
+                   f"Attention : multiplier les dérivées des deux facteurs donnerait ${par(a)} \\times {par(c)} = {nb(a * c)}$, ce qui est faux."],
+                  f"$f(x) = {poly(dev)}$ ; $f'(x) = {poly(der)}$"))
+    # coût marginal : C(q) polynôme de degré 3, C'(q) > 0
+    CM = [("pièces mécaniques", [F(1, 100), F(-6, 10), 15, 200], 60, 30, "pièce"),
+          ("chaises", [F(2, 100), F(-12, 10), 30, 500], 80, 50, "chaise"),
+          ("lampes artisanales", [F(1, 10), -3, 40, 1000], 30, 15, "lampe")]
+    for nom, c, Q, q0, unite in CM:
+        d = _cubes(c)
+        assert d[1] ** 2 - 4 * d[0] * d[2] < 0  # coût total croissant
+        cm = _val(d, q0)
+        eur = tx(cm) if F(cm).denominator == 1 else tx(cm, 2, True)
+        E.append(("approfondissement", "cout-marginal",
+                  f"Une entreprise fabrique $q$ {nom} par jour ($0 \\leqslant q \\leqslant {Q}$). Le coût total, en euros, est $C(q) = {poly(c, 'q')}$. On assimile le coût marginal à $C'(q)$. Calculer le coût marginal pour $q = {q0}$ et l'interpréter.",
+                  [f"$C'(q) = {poly(d, 'q')}$.",
+                   f"$C'({q0}) = {fx(d[0])} \\times {q0}^2 {sg(d[1])} \\times {q0} {sg(d[2])} = {fx(cm)}$.",
+                   f"Interprétation : quand on fabrique déjà {q0} {nom}, produire une {unite} de plus coûte environ {eur} €."],
+                  f"$C'({q0}) = {fx(cm)}$ : environ {eur} € pour une {unite} supplémentaire"))
     # e) variations
     for a, b, c in [(1, -6, 5), (1, 4, -1), (2, -8, 3), (-1, 10, -9), (-2, -4, 6), (3, -12, 2)]:
         x0 = F(-b, 2 * a)
@@ -297,9 +316,9 @@ def g1t_derivation():
     C = [("Vrai ou faux : si $f'(a) = 0$, alors $f$ admet un extremum en $a$.",
           ["Faux : la réciproque est fausse.", "Contre-exemple : $f(x) = x^3$ vérifie $f'(0) = 0$ mais $f$ est croissante sur $\\mathbb{R}$."],
           "Faux (contre-exemple $x^3$ en $0$)"),
-         ("Vrai ou faux : la dérivée de $u \\times v$ est $u' \\times v'$.",
-          ["Faux : la formule est $(uv)' = u'v + uv'$.", "Exemple : $(x \\times x)' = 2x$ alors que $1 \\times 1 = 1$."],
-          "Faux : $(uv)' = u'v + uv'$"),
+         ("Vrai ou faux : la dérivée de $x^3$ est $3x^3$.",
+          ["Faux : l'exposant descend en facteur et diminue de $1$.", "$(x^3)' = 3x^2$ ; par exemple, la dérivée de $5x^3$ est $15x^2$."],
+          "Faux : $(x^3)' = 3x^2$"),
          ("Que représente graphiquement le nombre dérivé $f'(a)$ ?",
           ["$f'(a)$ est la limite du taux de variation entre $a$ et $a + h$ quand $h$ tend vers $0$.",
            "C'est le coefficient directeur de la tangente à la courbe au point d'abscisse $a$."],

@@ -2167,12 +2167,12 @@ def g3_fonctions():
         ["On résout $50 + 0{,}2d = 0{,}45d$.", f"$0{{,}}25d = 50$, donc $d = {num(d)}$ km."], f"${num(d)}$ km")
     add("probleme", "probleme-fonctions", "Location de voiture : formule A, 50 € plus 0,20 € par km ; formule B, 0,45 € par km. Quelle formule choisir pour 300 km ?",
         [f"$A(300) = {num(LA(300))}$ € et $B(300) = {num(LB(300))}$ €."], "la formule A")
-    el = lambda x: F("0.25") * x + 12
-    add("probleme", "probleme-fonctions", "Un abonnement d'électricité coûte 12 € par mois, plus 0,25 € par kWh consommé. Exprime le prix mensuel $f(x)$ pour $x$ kWh, puis calcule l'image de 300.",
-        ["$f(x) = 0{,}25x + 12$ : fonction affine.", f"$f(300) = 0{{,}}25 \\times 300 + 12 = {num(el(300))}$ €."], f"$f(x) = 0{{,}}25x + 12$ ; ${num(el(300))}$ €")
-    x = (F(62) - 12) / F("0.25")
-    add("probleme", "probleme-fonctions", "Un abonnement d'électricité coûte 12 € par mois, plus 0,25 € par kWh consommé. Une facture mensuelle s'élève à 62 €. Combien de kWh ont été consommés ?",
-        ["On cherche l'antécédent de $62$ par $f(x) = 0{,}25x + 12$.", f"$0{{,}}25x = 50$, donc $x = {num(x)}$ kWh."], f"${num(x)}$ kWh")
+    el = lambda x: F("0.20") * x + 12
+    add("probleme", "probleme-fonctions", "Un abonnement d'électricité coûte 12 € par mois, plus 0,20 € par kWh consommé. Exprime le prix mensuel $f(x)$ pour $x$ kWh, puis calcule l'image de 300.",
+        ["$f(x) = 0{,}20x + 12$ : fonction affine.", f"$f(300) = 0{{,}}20 \\times 300 + 12 = {num(el(300))}$ €."], f"$f(x) = 0{{,}}20x + 12$ ; ${num(el(300))}$ €")
+    x = (F(62) - 12) / F("0.20")
+    add("probleme", "probleme-fonctions", "Un abonnement d'électricité coûte 12 € par mois, plus 0,20 € par kWh consommé. Une facture mensuelle s'élève à 62 €. Combien de kWh ont été consommés ?",
+        ["On cherche l'antécédent de $62$ par $f(x) = 0{,}20x + 12$.", f"$0{{,}}20x = 50$, donc $x = {num(x)}$ kWh."], f"${num(x)}$ kWh")
     fa = lambda c: F("1.8") * c + 32
     add("probleme", "probleme-fonctions", "Pour convertir des degrés Celsius en degrés Fahrenheit, on utilise $f(c) = 1{,}8c + 32$. Quelle est la température en °F quand il fait 25 °C ?",
         [f"$f(25) = 1{{,}}8 \\times 25 + 32 = {num(fa(25))}$."], f"${num(fa(25))}$ °F")

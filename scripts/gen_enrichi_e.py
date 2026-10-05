@@ -1403,9 +1403,9 @@ def gen_4e_puissance():
 
     # -- problèmes concrets (6)
     add("probleme", "problemes-energie",
-        "Une bouilloire de 2 000 W chauffe l'eau en 3 min. Le prix du kWh est de 0,25 €. Quel est le coût de cette utilisation ?",
-        ["$E = 2$ kW $\\times \\dfrac{3}{60}$ h $= 0{,}1$ kWh.", "Coût : $0{,}1 \\times 0{,}25 = 0{,}025$ €, soit 2,5 centimes."],
-        "$0{,}025$ € (2,5 centimes)")
+        "Une bouilloire de 2 000 W chauffe l'eau en 3 min. Le prix du kWh est de 0,20 €. Quel est le coût de cette utilisation ?",
+        ["$E = 2$ kW $\\times \\dfrac{3}{60}$ h $= 0{,}1$ kWh.", "Coût : $0{,}1 \\times 0{,}20 = 0{,}02$ €, soit 2 centimes."],
+        "$0{,}02$ € (2 centimes)")
     add("probleme", "problemes-energie",
         "Une ampoule LED de 8 W reste allumée 5 h par jour pendant 30 jours. Quelle énergie consomme-t-elle en kWh ?",
         ["Durée totale : $5 \\times 30 = 150$ h.", "$E = 0{,}008$ kW $\\times 150$ h $= 1{,}2$ kWh."], "$1{,}2$ kWh")
@@ -1831,9 +1831,9 @@ def gen_3e_conversions():
          "$2$ h $= 7\\,200$ s, donc $E = 1\\,000 \\times 7\\,200 = 7\\,200\\,000$ J ($= 2$ kWh)."],
         "$7\\,200\\,000$ J (soit $2$ kWh)")
     add("probleme", "energie-puissance",
-        "Une plaque de cuisson de 1,5 kW chauffe pendant 40 min. Le kWh coûte 0,25 €. Calcule l'énergie consommée en kWh et le coût.",
-        ["$40$ min $= \\dfrac{40}{60}$ h, donc $E = 1{,}5 \\times \\dfrac{40}{60} = 1$ kWh.", "Coût : $1 \\times 0{,}25 = 0{,}25$ €."],
-        "$1$ kWh ; $0{,}25$ €")
+        "Une plaque de cuisson de 1,5 kW chauffe pendant 40 min. Le kWh coûte 0,20 €. Calcule l'énergie consommée en kWh et le coût.",
+        ["$40$ min $= \\dfrac{40}{60}$ h, donc $E = 1{,}5 \\times \\dfrac{40}{60} = 1$ kWh.", "Coût : $1 \\times 0{,}20 = 0{,}20$ €."],
+        "$1$ kWh ; $0{,}20$ €")
 
     # -- kWh <-> J (4)
     for k in (2, 0.5, 3.5):

@@ -150,3 +150,25 @@ Kamal a le zip `paquet_v7.zip` (dossier `paquet_v7/`). Contenu :
   classe (présélectionnée) → matière → chapitre ; défi refusé affiché « Refusé » ; scores sur 10 ;
   recherche d'amis avec message si aucun résultat ; bouton Retirer ; sous-titre « 21 matières » ;
   « Réviser N cartes » ne compte que les cartes déjà étudiées (`src/coach.js`).
+
+## 11. À faire après le 16/10/2026 : se débarrasser de Netlify (choix de Kamal en attente)
+Netlify est encore relié au dépôt : il apparaît dans chaque PR (deploy-preview, Header/Redirect rules).
+Ce n'est pas bloquant (build de quelques secondes, ne sert qu'à la redirection). Deux options :
+1. **Garder la redirection (conseillé)** : après le 16/10 (crédits revenus), une fusion de plus → l'ancien lien
+   `kamal-campus.netlify.app` renvoie vers GitHub Pages. Puis sur netlify.com : site → Site configuration →
+   Build & deploy → Continuous deployment → **Stop builds** (Netlify disparaît des PR, la redirection reste).
+2. **Tout supprimer** : netlify.com → site → Site configuration → General → **Delete this site**
+   (l'ancien lien ne marchera plus du tout).
+→ À la première session après le 16/10, **rappeler ces deux options à Kamal**.
+
+## 12. Choix pédagogiques tranchés (05/10/2026, avec l'accord de Kamal)
+Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fiche du chapitre.
+- 1re techno dérivation : produit, quotient, 1/x et √x **retirés** (programme l. 440-441 : x², x³, somme, kf,
+  polynômes de degré ≤ 3). Fiche, QCM, cartes et générateur corrigés ; remplacés par « développer puis dériver »
+  et « coût marginal ».
+- Prix du kWh dans les exercices : **0,20 €** (proche du tarif réglementé), et non 0,25 €.
+- Notions retirées car hors programme du niveau (5e : × des relatifs, translation, v = d/t ; 4e : double
+  distributivité, a√b ; 6e : moyenne ; CE2 : aire, degrés ; 3e : sigle « PGCD ») : **retrait confirmé**.
+- Valeurs vérifiées et conservées : solubilité du sucre ≈ 2 000 g/L, bicarbonate 96 g/L (20 °C) ; K(FeSCN²⁺) ≈ 10²,
+  K(Fe²⁺/Ag⁺) ≈ 3,2, K(Cu/Ag⁺) ≈ 2,2 × 10¹⁵ ; estérification K = 4 (eau comptée) ; saut de pH en 1re (dans la fiche).
+- Nombres en lettres : orthographe de 1990 (CP–CE2) et traditionnelle (CM) — les deux sont correctes, conservées.
