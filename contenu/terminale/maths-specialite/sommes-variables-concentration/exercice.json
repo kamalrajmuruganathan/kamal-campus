@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "concentration",
       "enonce": "Une usine remplit des bouteilles d'eau. On modélise le volume (en mL) d'une bouteille prise au hasard par une variable aléatoire $X$ d'espérance $\\mu = 500$ et de variance $V(X) = 25$. Les bouteilles sont remplies de façon indépendante les unes des autres. 1. Donner l'espérance, la variance et l'écart type du volume $X$ d'une bouteille. 2. Un pack contient $6$ bouteilles. On note $S = X_1 + \\dots + X_6$ le volume total du pack. Calculer $E(S)$, $V(S)$ et $\\sigma(S)$ (valeur approchée au centième). 3. Pour contrôler la production, on prélève un échantillon de $n$ bouteilles et on calcule le volume moyen $M_n$. Exprimer $E(M_n)$ et $V(M_n)$ en fonction de $n$. 4. Pour $n = 100$, majorer, à l'aide de l'inégalité de concentration, la probabilité $P(|M_{100} - 500| \\geqslant 1)$. 5. Déterminer la plus petite taille d'échantillon $n$ garantissant $P(|M_n - 500| \\geqslant 1) \\leqslant 0{,}01$. 6. Interpréter ce résultat à l'aide de la loi des grands nombres.",
       "corrige": [
@@ -141,6 +141,459 @@
         "6. Quand $n$ augmente, le majorant $\\dfrac{25}{n}$ tend vers $0$ : $P(|M_n - 500| \\geqslant 1) \\to 0$. C'est la loi des grands nombres : plus l'échantillon est grand, plus le volume moyen observé se concentre autour de la valeur théorique $500$ mL. Un grand échantillon rend donc le contrôle de plus en plus fiable."
       ],
       "reponse": "1. $E(X) = 500$, $V(X) = 25$, $\\sigma(X) = 5$. 2. $E(S) = 3000$, $V(S) = 150$, $\\sigma(S) \\approx 12{,}25$. 3. $E(M_n) = 500$, $V(M_n) = \\dfrac{25}{n}$. 4. $P(|M_{100} - 500| \\geqslant 1) \\leqslant 0{,}25$. 5. $n = 2500$. 6. Loi des grands nombres : $M_n$ se concentre autour de $500$ mL quand $n \\to +\\infty$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "somme-variables",
+      "enonce": "On lance deux pièces équilibrées de façon indépendante. $X$ vaut $1$ si la première pièce tombe sur « pile », $0$ sinon ; $Y$ fait de même pour la seconde pièce. Donner la loi de $S = X + Y$, puis $E(S)$.",
+      "corrige": [
+        "$S$ compte le nombre de « pile » : elle prend les valeurs $0$, $1$ et $2$.",
+        "$P(S = 0) = \\dfrac{1}{2}\\times\\dfrac{1}{2} = \\dfrac{1}{4}$, $P(S = 2) = \\dfrac{1}{4}$ et $P(S = 1) = 1 - \\dfrac{1}{4} - \\dfrac{1}{4} = \\dfrac{1}{2}$ (deux issues : pile-face et face-pile).",
+        "$E(S) = 0\\times\\dfrac{1}{4} + 1\\times\\dfrac{1}{2} + 2\\times\\dfrac{1}{4} = 1$, ce qui est bien $E(X) + E(Y) = \\dfrac{1}{2} + \\dfrac{1}{2}$."
+      ],
+      "reponse": "$P(S=0) = \\dfrac{1}{4}$, $P(S=1) = \\dfrac{1}{2}$, $P(S=2) = \\dfrac{1}{4}$ ; $E(S) = 1$."
+    },
+    {
+      "id": 12,
+      "difficulte": "application",
+      "notion": "somme-variables",
+      "enonce": "$X$ et $Y$ sont indépendantes. $X$ prend la valeur $1$ avec la probabilité $0{,}4$ et la valeur $2$ avec la probabilité $0{,}6$ ; $Y$ prend les valeurs $0$ et $3$ avec la probabilité $0{,}5$ chacune. Déterminer la loi de $X + Y$, puis vérifier que $E(X + Y) = E(X) + E(Y)$.",
+      "corrige": [
+        "Par indépendance, on multiplie les probabilités : $P(X + Y = 1) = 0{,}4\\times 0{,}5 = 0{,}2$ ; $P(X + Y = 2) = 0{,}6\\times 0{,}5 = 0{,}3$ ; $P(X + Y = 4) = 0{,}4\\times 0{,}5 = 0{,}2$ ; $P(X + Y = 5) = 0{,}6\\times 0{,}5 = 0{,}3$.",
+        "$E(X + Y) = 1\\times 0{,}2 + 2\\times 0{,}3 + 4\\times 0{,}2 + 5\\times 0{,}3 = 0{,}2 + 0{,}6 + 0{,}8 + 1{,}5 = 3{,}1$.",
+        "$E(X) = 0{,}4 + 1{,}2 = 1{,}6$ et $E(Y) = 1{,}5$ : $1{,}6 + 1{,}5 = 3{,}1$ ✓."
+      ],
+      "reponse": "Valeurs $1$ ; $2$ ; $4$ ; $5$ avec les probabilités $0{,}2$ ; $0{,}3$ ; $0{,}2$ ; $0{,}3$ ; $E(X+Y) = 3{,}1$."
+    },
+    {
+      "id": 13,
+      "difficulte": "intermediaire",
+      "notion": "somme-variables",
+      "enonce": "On lance deux dés équilibrés à six faces, de façon indépendante, et on note $S$ la somme des deux résultats. Calculer $P(S = 7)$ et $P(S = 12)$.",
+      "corrige": [
+        "Il y a $6\\times 6 = 36$ couples de résultats, tous équiprobables.",
+        "$S = 7$ est obtenu par $(1,6)$, $(2,5)$, $(3,4)$, $(4,3)$, $(5,2)$, $(6,1)$ : $6$ couples, donc $P(S = 7) = \\dfrac{6}{36} = \\dfrac{1}{6}$.",
+        "$S = 12$ n'est obtenu que par $(6,6)$ : $P(S = 12) = \\dfrac{1}{36}$."
+      ],
+      "reponse": "$P(S = 7) = \\dfrac{1}{6}$ ; $P(S = 12) = \\dfrac{1}{36}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "intermediaire",
+      "notion": "somme-variables",
+      "enonce": "On lance trois pièces équilibrées de façon indépendante et on note $S = X_1 + X_2 + X_3$ le nombre de « pile », où $X_i$ vaut $1$ si la $i$-ème pièce donne « pile ». Calculer $P(S = 2)$ et $E(S)$.",
+      "corrige": [
+        "Il y a $2^3 = 8$ issues équiprobables. $S = 2$ correspond à PPF, PFP et FPP : $P(S = 2) = \\dfrac{3}{8}$.",
+        "Par linéarité : $E(S) = E(X_1) + E(X_2) + E(X_3) = 3\\times\\dfrac{1}{2} = \\dfrac{3}{2}$."
+      ],
+      "reponse": "$P(S = 2) = \\dfrac{3}{8}$ ; $E(S) = 1{,}5$."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "linearite-esperance",
+      "enonce": "On sait que $E(X) = 3$ et $E(Y) = -1$. Calculer $E(X + Y)$ et $E(5X)$.",
+      "corrige": [
+        "Par linéarité : $E(X + Y) = E(X) + E(Y) = 3 + (-1) = 2$.",
+        "$E(5X) = 5\\,E(X) = 15$."
+      ],
+      "reponse": "$E(X + Y) = 2$ ; $E(5X) = 15$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "linearite-esperance",
+      "enonce": "On lance trois dés équilibrés à six faces. Quelle est l'espérance de la somme des trois résultats ?",
+      "corrige": [
+        "L'espérance d'un dé est $\\dfrac{1 + 2 + 3 + 4 + 5 + 6}{6} = 3{,}5$.",
+        "Par linéarité, l'espérance de la somme est $3{,}5 + 3{,}5 + 3{,}5 = 10{,}5$ (aucune hypothèse d'indépendance n'est nécessaire)."
+      ],
+      "reponse": "$10{,}5$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "linearite-esperance",
+      "enonce": "À un jeu, le gain algébrique $X$ (en euros) d'une partie a pour espérance $E(X) = -0{,}5$. On joue $20$ parties et on note $G = X_1 + \\dots + X_{20}$ le gain total. Calculer $E(G)$ et interpréter.",
+      "corrige": [
+        "Par linéarité : $E(G) = 20\\times E(X) = 20\\times(-0{,}5) = -10$.",
+        "En moyenne, sur $20$ parties, le joueur perd $10$ €."
+      ],
+      "reponse": "$E(G) = -10$ : perte moyenne de $10$ € sur $20$ parties."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "linearite-esperance",
+      "enonce": "Vrai ou faux ? « On peut écrire $E(X + Y) = E(X) + E(Y)$ seulement si $X$ et $Y$ sont indépendantes. » Justifier.",
+      "corrige": [
+        "Faux. La linéarité de l'espérance est vraie pour toutes variables $X$ et $Y$, sans condition.",
+        "C'est la formule $V(X + Y) = V(X) + V(Y)$ qui exige l'indépendance : il ne faut pas confondre les deux règles."
+      ],
+      "reponse": "Faux : la linéarité de l'espérance ne demande aucune indépendance."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "linearite-esperance",
+      "enonce": "On sait que $E(X) = 4$ et $E(X - 2Y) = 0$. Calculer $E(Y)$.",
+      "corrige": [
+        "Par linéarité : $E(X - 2Y) = E(X) - 2E(Y) = 4 - 2E(Y)$.",
+        "$4 - 2E(Y) = 0$ donne $E(Y) = 2$."
+      ],
+      "reponse": "$E(Y) = 2$."
+    },
+    {
+      "id": 20,
+      "difficulte": "decouverte",
+      "notion": "variance-multiple",
+      "enonce": "Une variable aléatoire $X$ a pour variance $V(X) = 3$. Calculer $V(2X)$ et $V(-X)$.",
+      "corrige": [
+        "On applique $V(aX) = a^2\\,V(X)$.",
+        "$V(2X) = 2^2\\times 3 = 12$ et $V(-X) = (-1)^2\\times 3 = 3$ : changer le signe ne change pas la variance."
+      ],
+      "reponse": "$V(2X) = 12$ ; $V(-X) = 3$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "variance-multiple",
+      "enonce": "Une variable aléatoire $X$ a pour écart type $\\sigma(X) = 1{,}5$. Calculer $\\sigma(4X)$ et $V(4X)$.",
+      "corrige": [
+        "L'écart type est multiplié par $|a|$ : $\\sigma(4X) = 4\\times 1{,}5 = 6$.",
+        "La variance est le carré de l'écart type : $V(4X) = 6^2 = 36$ (on retrouve $4^2\\times 1{,}5^2 = 16\\times 2{,}25 = 36$)."
+      ],
+      "reponse": "$\\sigma(4X) = 6$ ; $V(4X) = 36$."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "variance-multiple",
+      "enonce": "$X$ a pour variance $V(X) = 2$. Un élève écrit « $V(5X) = 5\\times 2 = 10$ ». Corriger.",
+      "corrige": [
+        "L'élève a oublié que le facteur passe au carré : $V(aX) = a^2\\,V(X)$.",
+        "$V(5X) = 25\\times 2 = 50$. (C'est l'écart type qui est multiplié par $5$, pas la variance.)"
+      ],
+      "reponse": "$V(5X) = 50$."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "variance-multiple",
+      "enonce": "$X$ a pour variance $V(X) = 2$. Déterminer le réel $a > 0$ tel que $V(aX) = 18$.",
+      "corrige": [
+        "$V(aX) = a^2\\times 2 = 18$ donne $a^2 = 9$.",
+        "Comme $a > 0$, $a = 3$."
+      ],
+      "reponse": "$a = 3$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "variance-somme",
+      "enonce": "$X$ et $Y$ sont indépendantes, avec $V(X) = 2$ et $V(Y) = 7$. Calculer $V(X + Y)$ et $\\sigma(X + Y)$.",
+      "corrige": [
+        "Les variables étant indépendantes, les variances s'ajoutent : $V(X + Y) = 2 + 7 = 9$.",
+        "$\\sigma(X + Y) = \\sqrt{9} = 3$. Remarque : les écarts types, eux, ne s'ajoutent pas ($\\sqrt{2} + \\sqrt{7} \\neq 3$)."
+      ],
+      "reponse": "$V(X + Y) = 9$ ; $\\sigma(X + Y) = 3$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "variance-somme",
+      "enonce": "$X$ et $Y$ sont indépendantes, avec $V(X) = 4$ et $V(Y) = 1$. Calculer $V(X - 2Y)$.",
+      "corrige": [
+        "Par indépendance, $V(X - 2Y) = V(X) + V(-2Y)$.",
+        "$V(-2Y) = (-2)^2\\times 1 = 4$.",
+        "$V(X - 2Y) = 4 + 4 = 8$ : la variance d'une différence n'est pas une différence de variances."
+      ],
+      "reponse": "$V(X - 2Y) = 8$."
+    },
+    {
+      "id": 26,
+      "difficulte": "approfondissement",
+      "notion": "variance-somme",
+      "enonce": "On lance une pièce équilibrée. $X$ vaut $1$ si on obtient « pile », $0$ sinon, et $Y = 1 - X$. 1) Calculer $V(X)$ et $V(Y)$. 2) Que vaut $X + Y$ ? En déduire $V(X + Y)$. 3) Pourquoi n'a-t-on pas $V(X + Y) = V(X) + V(Y)$ ?",
+      "corrige": [
+        "1) $X$ suit une loi de Bernoulli de paramètre $\\dfrac{1}{2}$ : $V(X) = \\dfrac{1}{2}\\times\\dfrac{1}{2} = \\dfrac{1}{4}$. $Y$ suit la même loi, donc $V(Y) = \\dfrac{1}{4}$.",
+        "2) $X + Y = 1$ pour toute issue : c'est une constante, donc $V(X + Y) = 0$.",
+        "3) $V(X) + V(Y) = \\dfrac{1}{2} \\neq 0$ : la formule ne s'applique pas car $X$ et $Y$ ne sont pas indépendantes (connaître $X$ détermine $Y$)."
+      ],
+      "reponse": "$V(X) = V(Y) = \\dfrac{1}{4}$ ; $V(X + Y) = 0$ ; les variables ne sont pas indépendantes."
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "variance-somme",
+      "enonce": "La variance du résultat d'un dé équilibré à six faces vaut $\\dfrac{35}{12}$. On lance trois dés de façon indépendante. Calculer la variance de la somme des trois résultats.",
+      "corrige": [
+        "Les trois résultats sont indépendants, donc les variances s'ajoutent.",
+        "$V = 3\\times\\dfrac{35}{12} = \\dfrac{35}{4} = 8{,}75$."
+      ],
+      "reponse": "$\\dfrac{35}{4} = 8{,}75$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "binomiale",
+      "enonce": "$X$ suit la loi binomiale $\\mathcal{B}(10\\,;\\,0{,}5)$. Calculer $E(X)$, $V(X)$ et $\\sigma(X)$ (au centième).",
+      "corrige": [
+        "$E(X) = np = 10\\times 0{,}5 = 5$.",
+        "$V(X) = np(1-p) = 10\\times 0{,}5\\times 0{,}5 = 2{,}5$.",
+        "$\\sigma(X) = \\sqrt{2{,}5} \\approx 1{,}58$."
+      ],
+      "reponse": "$E(X) = 5$, $V(X) = 2{,}5$, $\\sigma(X) \\approx 1{,}58$."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "binomiale",
+      "enonce": "Un élève répond au hasard aux $20$ questions d'un QCM ; chaque question a $4$ réponses proposées dont une seule est juste, et les réponses sont indépendantes. On note $X$ le nombre de bonnes réponses. Donner la loi de $X$, puis $E(X)$ et $V(X)$.",
+      "corrige": [
+        "On répète $20$ fois, de façon indépendante, une épreuve de Bernoulli de succès « bonne réponse », de probabilité $\\dfrac{1}{4} = 0{,}25$ : $X$ suit $\\mathcal{B}(20\\,;\\,0{,}25)$.",
+        "$E(X) = 20\\times 0{,}25 = 5$ et $V(X) = 20\\times 0{,}25\\times 0{,}75 = 3{,}75$."
+      ],
+      "reponse": "$X \\sim \\mathcal{B}(20\\,;\\,0{,}25)$ ; $E(X) = 5$ ; $V(X) = 3{,}75$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "binomiale",
+      "enonce": "Une variable $X$ suit une loi binomiale $\\mathcal{B}(n\\,;\\,p)$ avec $E(X) = 6$ et $V(X) = 4{,}2$. Déterminer $p$ puis $n$.",
+      "corrige": [
+        "$\\dfrac{V(X)}{E(X)} = \\dfrac{np(1-p)}{np} = 1 - p$, donc $1 - p = \\dfrac{4{,}2}{6} = 0{,}7$ et $p = 0{,}3$.",
+        "$np = 6$ donne $n = \\dfrac{6}{0{,}3} = 20$.",
+        "Contrôle : $20\\times 0{,}3\\times 0{,}7 = 4{,}2$ ✓."
+      ],
+      "reponse": "$p = 0{,}3$ et $n = 20$."
+    },
+    {
+      "id": 31,
+      "difficulte": "approfondissement",
+      "notion": "binomiale",
+      "enonce": "On lance $n$ fois une pièce équilibrée et on compte le nombre $X$ de « pile ». Pour quelle valeur de $n$ l'écart type de $X$ vaut-il $5$ ?",
+      "corrige": [
+        "$X$ suit $\\mathcal{B}(n\\,;\\,0{,}5)$, donc $V(X) = n\\times 0{,}5\\times 0{,}5 = \\dfrac{n}{4}$.",
+        "$\\sigma(X) = 5 \\iff V(X) = 25 \\iff \\dfrac{n}{4} = 25 \\iff n = 100$."
+      ],
+      "reponse": "$n = 100$."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "moyenne-echantillon",
+      "enonce": "On considère un échantillon de taille $n = 100$ d'une loi d'espérance $\\mu = 7$ et de variance $V = 9$. Calculer $E(M_{100})$, $V(M_{100})$ et $\\sigma(M_{100})$.",
+      "corrige": [
+        "$E(M_n) = \\mu = 7$.",
+        "$V(M_n) = \\dfrac{V}{n} = \\dfrac{9}{100} = 0{,}09$.",
+        "$\\sigma(M_n) = \\sqrt{0{,}09} = 0{,}3$ (ou $\\dfrac{\\sigma}{\\sqrt{n}} = \\dfrac{3}{10}$)."
+      ],
+      "reponse": "$E = 7$ ; $V = 0{,}09$ ; $\\sigma = 0{,}3$."
+    },
+    {
+      "id": 33,
+      "difficulte": "application",
+      "notion": "moyenne-echantillon",
+      "enonce": "On considère un échantillon de taille $16$ d'une loi d'espérance $\\mu = 2$ et d'écart type $\\sigma = 3$. Calculer l'espérance, la variance et l'écart type de la somme $S_{16}$.",
+      "corrige": [
+        "$E(S_{16}) = 16\\times 2 = 32$.",
+        "$V(S_{16}) = 16\\times 3^2 = 144$.",
+        "$\\sigma(S_{16}) = \\sqrt{144} = 12$ (c'est bien $\\sqrt{16}\\times 3$)."
+      ],
+      "reponse": "$E = 32$ ; $V = 144$ ; $\\sigma = 12$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "moyenne-echantillon",
+      "enonce": "Pour un échantillon de taille $n = 10$ d'une loi de variance $V = 5$, un élève calcule $V(M_{10}) = \\dfrac{5}{10^2} = 0{,}05$. Trouver l'erreur et donner la bonne valeur.",
+      "corrige": [
+        "$M_{10} = \\dfrac{1}{10}S_{10}$, donc $V(M_{10}) = \\dfrac{1}{10^2}V(S_{10}) = \\dfrac{1}{100}\\times 10\\times 5$.",
+        "L'élève a oublié que $V(S_{10}) = 10V$ : on obtient $V(M_{10}) = \\dfrac{V}{n} = \\dfrac{5}{10} = 0{,}5$."
+      ],
+      "reponse": "$V(M_{10}) = 0{,}5$."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "moyenne-echantillon",
+      "enonce": "Une loi a pour écart type $\\sigma = 2$. Quelle taille minimale $n$ d'échantillon faut-il pour que l'écart type de la moyenne $M_n$ soit inférieur ou égal à $0{,}1$ ?",
+      "corrige": [
+        "$\\sigma(M_n) = \\dfrac{\\sigma}{\\sqrt{n}} = \\dfrac{2}{\\sqrt{n}}$.",
+        "$\\dfrac{2}{\\sqrt{n}} \\leqslant 0{,}1 \\iff \\sqrt{n} \\geqslant 20 \\iff n \\geqslant 400$."
+      ],
+      "reponse": "$n = 400$."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "moyenne-echantillon",
+      "enonce": "On lance $60$ fois un dé équilibré à six faces (lancers indépendants) et on note $M_{60}$ la moyenne des résultats. Sachant qu'un lancer a pour espérance $3{,}5$ et pour variance $\\dfrac{35}{12}$, calculer $E(M_{60})$ et la valeur exacte de $V(M_{60})$.",
+      "corrige": [
+        "$E(M_{60}) = 3{,}5$ : la moyenne a la même espérance qu'un lancer.",
+        "$V(M_{60}) = \\dfrac{35}{12\\times 60} = \\dfrac{35}{720} = \\dfrac{7}{144} \\approx 0{,}049$."
+      ],
+      "reponse": "$E(M_{60}) = 3{,}5$ ; $V(M_{60}) = \\dfrac{7}{144}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "application",
+      "notion": "bienayme-tchebychev",
+      "enonce": "Une variable $X$ a pour espérance $100$ et pour variance $16$. Majorer $P(|X - 100| \\geqslant 10)$.",
+      "corrige": [
+        "Bienaymé-Tchebychev : $P(|X - \\mu| \\geqslant \\delta) \\leqslant \\dfrac{V(X)}{\\delta^2}$.",
+        "$P(|X - 100| \\geqslant 10) \\leqslant \\dfrac{16}{100} = 0{,}16$."
+      ],
+      "reponse": "$P(|X - 100| \\geqslant 10) \\leqslant 0{,}16$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "bienayme-tchebychev",
+      "enonce": "Une variable $X$ a pour espérance $10$ et pour écart type $2$. Majorer la probabilité que $X$ s'écarte de $10$ d'au moins $4$.",
+      "corrige": [
+        "Attention : l'inégalité utilise la variance, $V(X) = 2^2 = 4$.",
+        "$P(|X - 10| \\geqslant 4) \\leqslant \\dfrac{4}{4^2} = \\dfrac{4}{16} = 0{,}25$."
+      ],
+      "reponse": "$P(|X - 10| \\geqslant 4) \\leqslant 0{,}25$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "bienayme-tchebychev",
+      "enonce": "On lance $100$ fois une pièce équilibrée ; $X$ est le nombre de « pile ». Majorer $P(|X - 50| \\geqslant 10)$ à l'aide de l'inégalité de Bienaymé-Tchebychev.",
+      "corrige": [
+        "$X$ suit $\\mathcal{B}(100\\,;\\,0{,}5)$ : $E(X) = 50$ et $V(X) = 100\\times 0{,}5\\times 0{,}5 = 25$.",
+        "$P(|X - 50| \\geqslant 10) \\leqslant \\dfrac{25}{10^2} = 0{,}25$."
+      ],
+      "reponse": "$P(|X - 50| \\geqslant 10) \\leqslant 0{,}25$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "bienayme-tchebychev",
+      "enonce": "Une variable $X$ a pour espérance $50$ et pour variance $50$. Minorer $P(30 < X < 70)$.",
+      "corrige": [
+        "$30 < X < 70 \\iff |X - 50| < 20$ : c'est l'événement contraire de $|X - 50| \\geqslant 20$.",
+        "Bienaymé-Tchebychev : $P(|X - 50| \\geqslant 20) \\leqslant \\dfrac{50}{400} = 0{,}125$.",
+        "Donc $P(30 < X < 70) \\geqslant 1 - 0{,}125 = 0{,}875$."
+      ],
+      "reponse": "$P(30 < X < 70) \\geqslant 0{,}875$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "bienayme-tchebychev",
+      "enonce": "Une variable $X$ d'espérance $\\mu$ a pour variance $9$. Déterminer le réel $\\delta > 0$ pour lequel l'inégalité de Bienaymé-Tchebychev donne $P(|X - \\mu| \\geqslant \\delta) \\leqslant 0{,}04$, et interpréter.",
+      "corrige": [
+        "On veut $\\dfrac{9}{\\delta^2} = 0{,}04$, soit $\\delta^2 = \\dfrac{9}{0{,}04} = 225$, donc $\\delta = 15$.",
+        "Interprétation : au moins $96\\,\\%$ des valeurs de $X$ sont dans l'intervalle $]\\mu - 15\\,;\\,\\mu + 15[$, c'est-à-dire à moins de $5$ écarts types de $\\mu$ (ici $\\sigma = 3$)."
+      ],
+      "reponse": "$\\delta = 15$."
+    },
+    {
+      "id": 42,
+      "difficulte": "application",
+      "notion": "concentration",
+      "enonce": "On tire $n = 1000$ fois, de façon indépendante, une variable de Bernoulli de paramètre $0{,}3$, et on note $M_n$ la fréquence de succès. Majorer $P(|M_n - 0{,}3| \\geqslant 0{,}05)$.",
+      "corrige": [
+        "Une loi de Bernoulli de paramètre $0{,}3$ a pour espérance $0{,}3$ et pour variance $V = 0{,}3\\times 0{,}7 = 0{,}21$.",
+        "Inégalité de concentration : $P(|M_n - 0{,}3| \\geqslant 0{,}05) \\leqslant \\dfrac{0{,}21}{1000\\times 0{,}05^2} = \\dfrac{0{,}21}{2{,}5} = 0{,}084$."
+      ],
+      "reponse": "$\\leqslant 0{,}084$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "concentration",
+      "enonce": "Une loi a pour variance $V = 1$. Quelle taille $n$ d'échantillon suffit pour garantir, par l'inégalité de concentration, $P(|M_n - \\mu| \\geqslant 0{,}1) \\leqslant 0{,}05$ ?",
+      "corrige": [
+        "Il suffit que $\\dfrac{V}{n\\delta^2} \\leqslant \\alpha$, c'est-à-dire $n \\geqslant \\dfrac{V}{\\alpha\\,\\delta^2}$.",
+        "$n \\geqslant \\dfrac{1}{0{,}05\\times 0{,}01} = 2000$."
+      ],
+      "reponse": "$n \\geqslant 2000$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "concentration",
+      "enonce": "Un institut veut estimer la proportion $p$ (inconnue) de personnes favorables à un projet. On interroge $n$ personnes ; chaque réponse est modélisée par une variable de Bernoulli de paramètre $p$, et $M_n$ est la fréquence observée. 1) Montrer que $p(1-p) \\leqslant \\dfrac{1}{4}$. 2) En déduire une taille $n$ qui garantit $P(|M_n - p| \\geqslant 0{,}02) \\leqslant 0{,}05$.",
+      "corrige": [
+        "1) $p(1-p) = \\dfrac{1}{4} - \\left(p - \\dfrac{1}{2}\\right)^2$, et un carré est positif, donc $p(1-p) \\leqslant \\dfrac{1}{4}$.",
+        "2) Par concentration : $P(|M_n - p| \\geqslant 0{,}02) \\leqslant \\dfrac{p(1-p)}{n\\times 0{,}02^2} \\leqslant \\dfrac{0{,}25}{0{,}0004\\,n}$.",
+        "Il suffit que $\\dfrac{0{,}25}{0{,}0004\\,n} \\leqslant 0{,}05$, soit $n \\geqslant \\dfrac{0{,}25}{0{,}05\\times 0{,}0004} = 12\\,500$."
+      ],
+      "reponse": "$n \\geqslant 12\\,500$ suffit."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "concentration",
+      "enonce": "Un échantillon de taille $n = 500$ est prélevé dans une loi de variance $V = 2$. Déterminer le réel $\\delta > 0$ pour lequel l'inégalité de concentration donne $P(|M_{500} - \\mu| \\geqslant \\delta) \\leqslant 0{,}01$ (valeur approchée au centième).",
+      "corrige": [
+        "On veut $\\dfrac{2}{500\\,\\delta^2} = 0{,}01$, soit $\\delta^2 = \\dfrac{2}{500\\times 0{,}01} = \\dfrac{2}{5} = 0{,}4$.",
+        "$\\delta = \\sqrt{0{,}4} \\approx 0{,}63$."
+      ],
+      "reponse": "$\\delta = \\sqrt{0{,}4} \\approx 0{,}63$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "concentration",
+      "enonce": "On lance $6000$ fois un dé équilibré et on note $F$ la fréquence d'apparition du « 6 ». 1) Quelle loi suit l'indicatrice « obtenir 6 » à chaque lancer ? Donner son espérance et sa variance. 2) Majorer $P\\left(\\left|F - \\dfrac{1}{6}\\right| \\geqslant 0{,}01\\right)$ (au centième). 3) Ce majorant est-il une valeur de la probabilité ?",
+      "corrige": [
+        "1) Loi de Bernoulli de paramètre $\\dfrac{1}{6}$ : espérance $\\dfrac{1}{6}$, variance $\\dfrac{1}{6}\\times\\dfrac{5}{6} = \\dfrac{5}{36}$.",
+        "2) $F$ est la moyenne $M_{6000}$ : $P\\left(\\left|F - \\dfrac{1}{6}\\right| \\geqslant 0{,}01\\right) \\leqslant \\dfrac{5/36}{6000\\times 0{,}0001} = \\dfrac{5}{21{,}6} = \\dfrac{25}{108} \\approx 0{,}23$.",
+        "3) Non : c'est seulement une borne supérieure, valable pour toute loi ; la vraie probabilité est en général bien plus petite."
+      ],
+      "reponse": "Bernoulli $\\left(\\dfrac{1}{6}\\right)$, variance $\\dfrac{5}{36}$ ; majorant $\\dfrac{25}{108} \\approx 0{,}23$ (simple majoration)."
+    },
+    {
+      "id": 47,
+      "difficulte": "decouverte",
+      "notion": "loi-grands-nombres",
+      "enonce": "Pour une loi de variance $V = 4$ et $\\delta = 0{,}5$, calculer le majorant $\\dfrac{V}{n\\delta^2}$ de l'inégalité de concentration pour $n = 100$, $n = 1000$ et $n = 10\\,000$. Que constate-t-on ?",
+      "corrige": [
+        "$n\\delta^2$ vaut $25$, $250$ puis $2500$ : les majorants sont $\\dfrac{4}{25} = 0{,}16$, $\\dfrac{4}{250} = 0{,}016$ et $\\dfrac{4}{2500} = 0{,}0016$.",
+        "Le majorant est divisé par $10$ quand $n$ est multiplié par $10$ : il tend vers $0$. C'est la loi des grands nombres : $M_n$ se concentre autour de $\\mu$."
+      ],
+      "reponse": "$0{,}16$ ; $0{,}016$ ; $0{,}0016$ : le majorant tend vers $0$."
+    },
+    {
+      "id": 48,
+      "difficulte": "intermediaire",
+      "notion": "loi-grands-nombres",
+      "enonce": "Après avoir obtenu $10$ fois « pile » de suite avec une pièce équilibrée, un joueur affirme : « D'après la loi des grands nombres, “face” est maintenant plus probable, pour rééquilibrer. » Expliquer son erreur.",
+      "corrige": [
+        "Les lancers sont indépendants : au lancer suivant, $P(\\text{face}) = \\dfrac{1}{2}$, quel que soit le passé.",
+        "La loi des grands nombres dit seulement que la fréquence de « face » sur un très grand nombre de lancers se rapproche de $\\dfrac{1}{2}$ : les $10$ premiers lancers pèsent de moins en moins dans la moyenne, ils ne sont pas « compensés »."
+      ],
+      "reponse": "Faux : les lancers sont indépendants, $P(\\text{face}) = \\dfrac{1}{2}$ à chaque lancer."
+    },
+    {
+      "id": 49,
+      "difficulte": "intermediaire",
+      "notion": "loi-grands-nombres",
+      "enonce": "Une simulation de $10\\,000$ lancers d'un dé équilibré donne une moyenne de $3{,}49$. Expliquer, à l'aide du cours, pourquoi ce résultat n'est pas surprenant.",
+      "corrige": [
+        "Un lancer a pour espérance $\\mu = 3{,}5$. La moyenne $M_n$ de $n$ lancers indépendants a la même espérance et une variance $\\dfrac{35}{12n}$, très petite pour $n = 10\\,000$.",
+        "D'après la loi des grands nombres, la moyenne d'un grand échantillon se concentre autour de $\\mu$ : obtenir $3{,}49$, très proche de $3{,}5$, est normal."
+      ],
+      "reponse": "La moyenne d'un grand échantillon est proche de l'espérance $3{,}5$ (loi des grands nombres)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "loi-grands-nombres",
+      "enonce": "À un jeu, une partie rapporte $2$ € avec la probabilité $0{,}3$ et fait perdre $1$ € avec la probabilité $0{,}7$. On note $X$ le gain d'une partie. 1) Calculer $E(X)$ et $V(X)$. 2) Un joueur fait $10\\,000$ parties indépendantes ; $M$ est son gain moyen par partie. Majorer $P(|M + 0{,}1| \\geqslant 0{,}05)$. 3) Conclure.",
+      "corrige": [
+        "1) $E(X) = 2\\times 0{,}3 - 1\\times 0{,}7 = -0{,}1$. $E(X^2) = 4\\times 0{,}3 + 1\\times 0{,}7 = 1{,}9$, donc $V(X) = 1{,}9 - (-0{,}1)^2 = 1{,}89$.",
+        "2) Concentration : $P(|M + 0{,}1| \\geqslant 0{,}05) \\leqslant \\dfrac{1{,}89}{10\\,000\\times 0{,}05^2} = \\dfrac{1{,}89}{25} = 0{,}0756$.",
+        "3) Avec une probabilité d'au moins $0{,}92$, le gain moyen est compris strictement entre $-0{,}15$ € et $-0{,}05$ € : sur un grand nombre de parties, le joueur perd presque sûrement de l'argent (loi des grands nombres)."
+      ],
+      "reponse": "$E(X) = -0{,}1$, $V(X) = 1{,}89$ ; majorant $0{,}0756$ ; le joueur perd en moyenne."
     }
   ]
 }

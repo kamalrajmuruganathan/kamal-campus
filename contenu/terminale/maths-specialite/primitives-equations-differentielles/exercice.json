@@ -129,7 +129,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "equation-y-prime-ay-plus-b",
       "enonce": "On charge un condensateur à travers une résistance. La tension $u$ (en volts) aux bornes du condensateur, en fonction du temps $t\\geq 0$ (en secondes), est modélisée par une fonction dérivable qui vérifie l'équation différentielle $u'(t) = -2\\,u(t) + 12$. À l'instant $t = 0$, le condensateur est déchargé : $u(0) = 0$.\n\n1. Déterminer la solution particulière constante de cette équation différentielle.\n2. En déduire l'expression de toutes les solutions de l'équation.\n3. À l'aide de la condition initiale $u(0) = 0$, déterminer l'expression de $u(t)$.\n4. Étudier le sens de variation de $u$ sur $[0\\,;+\\infty[$.\n5. Déterminer la limite de $u(t)$ lorsque $t\\to +\\infty$ et interpréter ce résultat pour le condensateur.\n6. Calculer une valeur approchée, à $0{,}01$ V près, de la tension $u(0{,}5)$.",
       "corrige": [
@@ -141,6 +141,488 @@
         "6. $u(0{,}5) = 6\\big(1 - e^{-2\\times 0{,}5}\\big) = 6\\big(1 - e^{-1}\\big)$. Avec $e^{-1}\\approx 0{,}3679$, on obtient $u(0{,}5)\\approx 6\\times 0{,}6321 \\approx 3{,}79$ V."
       ],
       "reponse": "Solution constante $6$ ; solutions générales $u(t) = Ce^{-2t} + 6$ ; avec $u(0)=0$ : $u(t) = 6\\big(1 - e^{-2t}\\big)$. $u$ est croissante, tend vers $6$ V (tension finale), et $u(0{,}5)\\approx 3{,}79$ V."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "definition-primitive",
+      "enonce": "Vérifier que la fonction $F(x) = x^3 + 2x$ est une primitive sur $\\mathbb{R}$ de la fonction $f(x) = 3x^2 + 2$.",
+      "corrige": [
+        "Par définition, $F$ est une primitive de $f$ lorsque $F' = f$ : il suffit donc de dériver $F$.",
+        "$F'(x) = 3x^2 + 2$, ce qui est exactement $f(x)$.",
+        "Conclusion : $F$ est bien une primitive de $f$ sur $\\mathbb{R}$."
+      ],
+      "reponse": "Oui, car $F'(x) = 3x^2 + 2 = f(x)$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "definition-primitive",
+      "enonce": "Vrai ou faux ? « La fonction $F(x) = \\cos x$ est une primitive de $f(x) = \\sin x$ sur $\\mathbb{R}$. » Justifier.",
+      "corrige": [
+        "On dérive $F$ : $F'(x) = -\\sin x$.",
+        "Or $-\\sin x \\neq \\sin x$ (par exemple en $x = \\dfrac{\\pi}{2}$ : $-1 \\neq 1$), donc $F$ n'est pas une primitive de $f$.",
+        "La bonne primitive est $-\\cos x$, car $(-\\cos x)' = \\sin x$ : attention au signe."
+      ],
+      "reponse": "Faux : $(\\cos x)' = -\\sin x$ ; une primitive de $\\sin x$ est $-\\cos x$."
+    },
+    {
+      "id": 13,
+      "difficulte": "application",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer toutes les primitives sur $\\mathbb{R}$ de la fonction $f(x) = 5x^4 + 2x$.",
+      "corrige": [
+        "Une primitive de $5x^4$ est $5\\times\\dfrac{x^5}{5} = x^5$ ; une primitive de $2x$ est $2\\times\\dfrac{x^2}{2} = x^2$.",
+        "On ajoute la constante : $F(x) = x^5 + x^2 + C$, avec $C\\in\\mathbb{R}$.",
+        "Contrôle : $F'(x) = 5x^4 + 2x = f(x)$ ✓."
+      ],
+      "reponse": "$F(x) = x^5 + x^2 + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer toutes les primitives sur $]0\\,;+\\infty[$ de la fonction $f(x) = \\dfrac{1}{x^2}$.",
+      "corrige": [
+        "On écrit $f(x) = x^{-2}$ : c'est la formule $x^n$ avec $n = -2$ (et $n \\neq -1$).",
+        "Une primitive est $\\dfrac{x^{-2+1}}{-2+1} = \\dfrac{x^{-1}}{-1} = -\\dfrac{1}{x}$.",
+        "Toutes les primitives : $F(x) = -\\dfrac{1}{x} + C$. Contrôle : $\\left(-\\dfrac{1}{x}\\right)' = \\dfrac{1}{x^2}$ ✓."
+      ],
+      "reponse": "$F(x) = -\\dfrac{1}{x} + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer une primitive sur $]0\\,;+\\infty[$ de la fonction $f(x) = \\dfrac{3}{\\sqrt{x}}$.",
+      "corrige": [
+        "On écrit $f(x) = 3\\times\\dfrac{1}{\\sqrt{x}}$. Une primitive de $\\dfrac{1}{\\sqrt{x}}$ est $2\\sqrt{x}$.",
+        "Une primitive de $f$ est donc $3\\times 2\\sqrt{x} = 6\\sqrt{x}$.",
+        "Contrôle : $(6\\sqrt{x})' = 6\\times\\dfrac{1}{2\\sqrt{x}} = \\dfrac{3}{\\sqrt{x}}$ ✓."
+      ],
+      "reponse": "$F(x) = 6\\sqrt{x}$ (à une constante près)."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer toutes les primitives sur $\\mathbb{R}$ de $f(x) = 2\\sin x - 3\\cos x$.",
+      "corrige": [
+        "Une primitive de $\\sin x$ est $-\\cos x$, donc une primitive de $2\\sin x$ est $-2\\cos x$.",
+        "Une primitive de $\\cos x$ est $\\sin x$, donc une primitive de $-3\\cos x$ est $-3\\sin x$.",
+        "Toutes les primitives : $F(x) = -2\\cos x - 3\\sin x + C$. Contrôle : $F'(x) = 2\\sin x - 3\\cos x$ ✓."
+      ],
+      "reponse": "$F(x) = -2\\cos x - 3\\sin x + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer toutes les primitives sur $\\mathbb{R}$ de $f(x) = e^{x} + x^2$.",
+      "corrige": [
+        "Une primitive de $e^{x}$ est $e^{x}$ ; une primitive de $x^2$ est $\\dfrac{x^3}{3}$.",
+        "Donc $F(x) = e^{x} + \\dfrac{x^3}{3} + C$, avec $C\\in\\mathbb{R}$.",
+        "Contrôle : $F'(x) = e^{x} + x^2 = f(x)$ ✓."
+      ],
+      "reponse": "$F(x) = e^{x} + \\dfrac{x^3}{3} + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer une primitive sur $]0\\,;+\\infty[$ de $f(x) = \\dfrac{1}{x^3}$.",
+      "corrige": [
+        "On écrit $f(x) = x^{-3}$, formule des puissances avec $n = -3$.",
+        "Une primitive est $\\dfrac{x^{-2}}{-2} = -\\dfrac{1}{2x^2}$.",
+        "Contrôle : $\\left(-\\dfrac{1}{2}x^{-2}\\right)' = -\\dfrac{1}{2}\\times(-2)x^{-3} = \\dfrac{1}{x^3}$ ✓."
+      ],
+      "reponse": "$F(x) = -\\dfrac{1}{2x^2}$ (à une constante près)."
+    },
+    {
+      "id": 19,
+      "difficulte": "intermediaire",
+      "notion": "primitives-reference",
+      "enonce": "Déterminer toutes les primitives sur $]0\\,;+\\infty[$ de $f(x) = \\dfrac{x^2 + 1}{x^2}$. (Indication : commencer par simplifier.)",
+      "corrige": [
+        "On sépare la fraction : $f(x) = \\dfrac{x^2}{x^2} + \\dfrac{1}{x^2} = 1 + x^{-2}$.",
+        "Une primitive de $1$ est $x$ ; une primitive de $x^{-2}$ est $-\\dfrac{1}{x}$.",
+        "Donc $F(x) = x - \\dfrac{1}{x} + C$. Contrôle : $F'(x) = 1 + \\dfrac{1}{x^2} = f(x)$ ✓."
+      ],
+      "reponse": "$F(x) = x - \\dfrac{1}{x} + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "decouverte",
+      "notion": "deux-primitives-constante",
+      "enonce": "On donne $F(x) = x^2 + 3x + 1$ et $G(x) = x^2 + 3x - 4$. Calculer $F(x) - G(x)$. Que peut-on en déduire ?",
+      "corrige": [
+        "$F(x) - G(x) = (x^2 + 3x + 1) - (x^2 + 3x - 4) = 5$ : la différence est constante.",
+        "$F$ et $G$ ont donc la même dérivée : $F'(x) = G'(x) = 2x + 3$.",
+        "Ce sont deux primitives de la même fonction $f(x) = 2x + 3$, qui diffèrent de la constante $5$."
+      ],
+      "reponse": "$F - G = 5$ : ce sont deux primitives de $f(x) = 2x + 3$."
+    },
+    {
+      "id": 21,
+      "difficulte": "intermediaire",
+      "notion": "deux-primitives-constante",
+      "enonce": "Les fonctions $F(x) = (x+1)^2$ et $G(x) = x^2 + 2x$ sont-elles des primitives d'une même fonction sur $\\mathbb{R}$ ? Si oui, laquelle ?",
+      "corrige": [
+        "On développe : $F(x) = x^2 + 2x + 1$, donc $F(x) - G(x) = 1$.",
+        "La différence est une constante : $F$ et $G$ ont la même dérivée.",
+        "$G'(x) = 2x + 2$ : ce sont deux primitives de $f(x) = 2x + 2$."
+      ],
+      "reponse": "Oui : ce sont deux primitives de $f(x) = 2x + 2$ ($F - G = 1$)."
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "deux-primitives-constante",
+      "enonce": "Un élève écrit : « La primitive de $f(x) = 4x$ est $2x^2$. » Repérer ce qui est incorrect dans cette phrase et la corriger.",
+      "corrige": [
+        "$2x^2$ est bien une primitive de $4x$, car $(2x^2)' = 4x$.",
+        "Mais l'article « la » est faux : une fonction continue sur un intervalle possède une infinité de primitives, qui diffèrent d'une constante.",
+        "Phrase corrigée : « Les primitives de $f$ sont les fonctions $2x^2 + C$, $C\\in\\mathbb{R}$ » (ou « Une primitive de $f$ est $2x^2$ »)."
+      ],
+      "reponse": "Il faut dire « une primitive » : toutes les primitives sont $2x^2 + C$, $C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "approfondissement",
+      "notion": "deux-primitives-constante",
+      "enonce": "On pose $F(x) = \\sin^2 x$ et $G(x) = -\\cos^2 x$ sur $\\mathbb{R}$. 1) Calculer $F(x) - G(x)$. 2) En déduire que $F$ et $G$ sont des primitives d'une même fonction $f$, et déterminer $f$.",
+      "corrige": [
+        "1) $F(x) - G(x) = \\sin^2 x + \\cos^2 x = 1$ : la différence est constante.",
+        "2) Deux fonctions qui diffèrent d'une constante ont la même dérivée : elles sont donc primitives de la même fonction $f = F'$.",
+        "$F'(x) = 2\\sin x\\cos x$ (forme $u^2$ avec $u = \\sin x$, $u' = \\cos x$). Contrôle : $G'(x) = -2\\cos x\\times(-\\sin x) = 2\\sin x\\cos x$ ✓."
+      ],
+      "reponse": "$F - G = 1$ ; $f(x) = 2\\sin x\\cos x$."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = 6x + 1$ sur $\\mathbb{R}$ telle que $F(0) = 2$.",
+      "corrige": [
+        "Toutes les primitives : $F(x) = 3x^2 + x + C$.",
+        "$F(0) = C$, donc $C = 2$.",
+        "$F(x) = 3x^2 + x + 2$. Contrôle : $F'(x) = 6x + 1$ et $F(0) = 2$ ✓."
+      ],
+      "reponse": "$F(x) = 3x^2 + x + 2$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = \\cos x$ sur $\\mathbb{R}$ telle que $F(\\pi) = 1$.",
+      "corrige": [
+        "Toutes les primitives : $F(x) = \\sin x + C$.",
+        "$F(\\pi) = \\sin\\pi + C = 0 + C = C$, donc $C = 1$.",
+        "$F(x) = \\sin x + 1$."
+      ],
+      "reponse": "$F(x) = \\sin x + 1$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de la fonction exponentielle sur $\\mathbb{R}$ qui s'annule en $0$.",
+      "corrige": [
+        "Toutes les primitives de $e^{x}$ : $F(x) = e^{x} + C$.",
+        "$F(0) = e^{0} + C = 1 + C$. On impose $1 + C = 0$, d'où $C = -1$.",
+        "$F(x) = e^{x} - 1$. Attention : la primitive $e^{x}$ seule ne convient pas, car $e^{0} = 1 \\neq 0$."
+      ],
+      "reponse": "$F(x) = e^{x} - 1$."
+    },
+    {
+      "id": 27,
+      "difficulte": "approfondissement",
+      "notion": "condition-initiale",
+      "enonce": "Déterminer la primitive $F$ de $f(x) = \\dfrac{1}{\\sqrt{x}}$ sur $]0\\,;+\\infty[$ telle que $F(4) = 1$.",
+      "corrige": [
+        "Toutes les primitives : $F(x) = 2\\sqrt{x} + C$.",
+        "$F(4) = 2\\sqrt{4} + C = 4 + C$. On impose $4 + C = 1$, d'où $C = -3$.",
+        "$F(x) = 2\\sqrt{x} - 3$. Contrôle : $F(4) = 4 - 3 = 1$ ✓."
+      ],
+      "reponse": "$F(x) = 2\\sqrt{x} - 3$."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = 2x\\,(x^2 + 1)^3$.",
+      "corrige": [
+        "On reconnaît $u'u^n$ avec $u = x^2 + 1$, $u' = 2x$ et $n = 3$.",
+        "Une primitive de $u'u^3$ est $\\dfrac{u^4}{4}$.",
+        "Donc $F(x) = \\dfrac{(x^2 + 1)^4}{4}$. Contrôle : $F'(x) = \\dfrac{4\\times 2x(x^2+1)^3}{4} = 2x(x^2+1)^3$ ✓."
+      ],
+      "reponse": "$F(x) = \\dfrac{(x^2+1)^4}{4}$ (à une constante près)."
+    },
+    {
+      "id": 29,
+      "difficulte": "application",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = 2\\cos(2x)$.",
+      "corrige": [
+        "On reconnaît $u'\\cos u$ avec $u = 2x$ et $u' = 2$.",
+        "Une primitive de $u'\\cos u$ est $\\sin u$.",
+        "Donc $F(x) = \\sin(2x)$. Contrôle : $(\\sin(2x))' = 2\\cos(2x)$ ✓."
+      ],
+      "reponse": "$F(x) = \\sin(2x)$ (à une constante près)."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = e^{3x}$.",
+      "corrige": [
+        "On pose $u = 3x$, donc $u' = 3$. Il manque le facteur $3$ : on écrit $f(x) = \\dfrac{1}{3}\\times 3e^{3x} = \\dfrac{1}{3}\\,u'e^{u}$.",
+        "Une primitive de $u'e^{u}$ est $e^{u}$, donc une primitive de $f$ est $\\dfrac{1}{3}e^{3x}$.",
+        "Contrôle : $\\left(\\dfrac{1}{3}e^{3x}\\right)' = \\dfrac{1}{3}\\times 3e^{3x} = e^{3x}$ ✓."
+      ],
+      "reponse": "$F(x) = \\dfrac{1}{3}e^{3x}$ (à une constante près)."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = \\sin(5x)$.",
+      "corrige": [
+        "On pose $u = 5x$, $u' = 5$. On écrit $f(x) = \\dfrac{1}{5}\\times 5\\sin(5x) = \\dfrac{1}{5}\\,u'\\sin u$.",
+        "Une primitive de $u'\\sin u$ est $-\\cos u$.",
+        "Donc $F(x) = -\\dfrac{1}{5}\\cos(5x)$. Contrôle : $F'(x) = -\\dfrac{1}{5}\\times(-5\\sin(5x)) = \\sin(5x)$ ✓."
+      ],
+      "reponse": "$F(x) = -\\dfrac{1}{5}\\cos(5x)$ (à une constante près)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = (2x + 1)^4$.",
+      "corrige": [
+        "On pose $u = 2x + 1$, $u' = 2$. On écrit $f(x) = \\dfrac{1}{2}\\times 2(2x+1)^4 = \\dfrac{1}{2}\\,u'u^4$.",
+        "Une primitive de $u'u^4$ est $\\dfrac{u^5}{5}$, donc une primitive de $f$ est $\\dfrac{1}{2}\\times\\dfrac{(2x+1)^5}{5} = \\dfrac{(2x+1)^5}{10}$.",
+        "Contrôle : $\\left(\\dfrac{(2x+1)^5}{10}\\right)' = \\dfrac{5\\times 2(2x+1)^4}{10} = (2x+1)^4$ ✓."
+      ],
+      "reponse": "$F(x) = \\dfrac{(2x+1)^5}{10}$ (à une constante près)."
+    },
+    {
+      "id": 33,
+      "difficulte": "approfondissement",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = x\\,e^{-x^2}$.",
+      "corrige": [
+        "On pose $u = -x^2$, donc $u' = -2x$. On écrit $f(x) = -\\dfrac{1}{2}\\times(-2x)e^{-x^2} = -\\dfrac{1}{2}\\,u'e^{u}$.",
+        "Une primitive de $u'e^{u}$ est $e^{u}$, donc une primitive de $f$ est $-\\dfrac{1}{2}e^{-x^2}$.",
+        "Contrôle : $\\left(-\\dfrac{1}{2}e^{-x^2}\\right)' = -\\dfrac{1}{2}\\times(-2x)e^{-x^2} = x\\,e^{-x^2}$ ✓."
+      ],
+      "reponse": "$F(x) = -\\dfrac{1}{2}e^{-x^2}$ (à une constante près)."
+    },
+    {
+      "id": 34,
+      "difficulte": "approfondissement",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = \\cos x\\,\\sin^2 x$.",
+      "corrige": [
+        "On pose $u = \\sin x$, donc $u' = \\cos x$ : on a $f = u'u^2$.",
+        "Une primitive de $u'u^2$ est $\\dfrac{u^3}{3}$, donc $F(x) = \\dfrac{\\sin^3 x}{3}$.",
+        "Contrôle : $F'(x) = \\dfrac{3\\sin^2 x\\cos x}{3} = \\cos x\\,\\sin^2 x$ ✓."
+      ],
+      "reponse": "$F(x) = \\dfrac{\\sin^3 x}{3}$ (à une constante près)."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "formes-composees",
+      "enonce": "Déterminer une primitive sur $\\mathbb{R}$ de $f(x) = \\dfrac{2x}{(x^2 + 1)^2}$.",
+      "corrige": [
+        "On écrit $f(x) = 2x\\,(x^2+1)^{-2}$ : c'est $u'u^n$ avec $u = x^2 + 1$ (qui ne s'annule jamais), $u' = 2x$ et $n = -2$.",
+        "Une primitive est $\\dfrac{u^{-1}}{-1} = -\\dfrac{1}{x^2 + 1}$.",
+        "Contrôle : $\\left(-\\dfrac{1}{x^2+1}\\right)' = \\dfrac{2x}{(x^2+1)^2}$ ✓."
+      ],
+      "reponse": "$F(x) = -\\dfrac{1}{x^2+1}$ (à une constante près)."
+    },
+    {
+      "id": 36,
+      "difficulte": "application",
+      "notion": "equation-y-prime-f",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $y' = 3x^2 - 1$.",
+      "corrige": [
+        "Une équation $y' = f$ a pour solutions les primitives de $f$.",
+        "Une primitive de $3x^2 - 1$ est $x^3 - x$.",
+        "Les solutions sont les fonctions $y(x) = x^3 - x + C$, $C\\in\\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = x^3 - x + C$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-f",
+      "enonce": "Déterminer la fonction $y$ définie sur $\\mathbb{R}$ telle que $y' = \\sin x$ et $y(0) = 2$.",
+      "corrige": [
+        "Les solutions de $y' = \\sin x$ sont $y(x) = -\\cos x + C$.",
+        "$y(0) = -\\cos 0 + C = -1 + C$. On impose $-1 + C = 2$, d'où $C = 3$.",
+        "$y(x) = -\\cos x + 3$. Contrôle : $y'(x) = \\sin x$ et $y(0) = -1 + 3 = 2$ ✓."
+      ],
+      "reponse": "$y(x) = 3 - \\cos x$."
+    },
+    {
+      "id": 38,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $y' = -0{,}5\\,y$.",
+      "corrige": [
+        "C'est une équation $y' = ay$ avec $a = -0{,}5$.",
+        "Ses solutions sont $y(x) = Ce^{-0{,}5x}$, $C\\in\\mathbb{R}$.",
+        "Contrôle : $y'(x) = -0{,}5\\,Ce^{-0{,}5x} = -0{,}5\\,y(x)$ ✓."
+      ],
+      "reponse": "$y(x) = Ce^{-0{,}5x}$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $2y' + 6y = 0$.",
+      "corrige": [
+        "On isole $y'$ : $2y' = -6y$, soit $y' = -3y$.",
+        "C'est une équation $y' = ay$ avec $a = -3$.",
+        "Ses solutions sont $y(x) = Ce^{-3x}$, $C\\in\\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = Ce^{-3x}$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Déterminer la solution de l'équation $y' = 2y$ qui vérifie $y(0) = -3$.",
+      "corrige": [
+        "Les solutions de $y' = 2y$ sont $y(x) = Ce^{2x}$.",
+        "$y(0) = Ce^{0} = C$, donc $C = -3$.",
+        "$y(x) = -3e^{2x}$."
+      ],
+      "reponse": "$y(x) = -3e^{2x}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay",
+      "enonce": "Déterminer la solution de l'équation $y' = y$ qui vérifie $y(1) = 2$.",
+      "corrige": [
+        "Les solutions de $y' = y$ sont $y(x) = Ce^{x}$.",
+        "$y(1) = Ce^{1} = Ce$. On impose $Ce = 2$, d'où $C = \\dfrac{2}{e} = 2e^{-1}$.",
+        "$y(x) = 2e^{-1}e^{x} = 2e^{x-1}$. Contrôle : $y(1) = 2e^{0} = 2$ ✓."
+      ],
+      "reponse": "$y(x) = 2e^{x-1}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "decouverte",
+      "notion": "allure-courbes",
+      "enonce": "On considère la fonction $y(x) = 4e^{-2x}$, solution de $y' = -2y$. Sans calculatrice : en quel point sa courbe coupe-t-elle l'axe des ordonnées ? La fonction est-elle croissante ou décroissante ? Vers quoi tend-elle en $+\\infty$ ?",
+      "corrige": [
+        "En $x = 0$ : $y(0) = 4e^{0} = 4$, la courbe passe par le point $(0\\,;4)$.",
+        "$y'(x) = -8e^{-2x} < 0$ : la fonction est décroissante (cas $a < 0$, avec $C > 0$).",
+        "Comme $a = -2 < 0$, $e^{-2x}$ tend vers $0$ : $y$ tend vers $0$ en $+\\infty$ (amortissement), en restant au-dessus de l'axe."
+      ],
+      "reponse": "Point $(0\\,;4)$ ; décroissante ; tend vers $0$ en $+\\infty$."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "allure-courbes",
+      "enonce": "Soit $y(x) = Ce^{ax}$ une solution de $y' = ay$ avec $a > 0$ et $C < 0$. Préciser le signe de $y$, son sens de variation et sa limite en $+\\infty$.",
+      "corrige": [
+        "$e^{ax} > 0$ et $C < 0$, donc $y(x) < 0$ : la courbe est sous l'axe des abscisses.",
+        "$y'(x) = aCe^{ax}$ avec $a > 0$ et $C < 0$ : $y' < 0$, donc $y$ est décroissante.",
+        "Comme $a > 0$, $e^{ax}$ tend vers $+\\infty$, donc $y(x) = Ce^{ax}$ tend vers $-\\infty$."
+      ],
+      "reponse": "$y < 0$, $y$ décroissante, limite $-\\infty$ en $+\\infty$."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "allure-courbes",
+      "enonce": "La courbe d'une solution de $y' = ay$ passe par $A(0\\,;2)$ et par $B\\left(1\\,;2e^{-1}\\right)$. Déterminer $a$ et la solution, puis décrire l'allure de la courbe.",
+      "corrige": [
+        "Les solutions sont $y(x) = Ce^{ax}$. Le point $A$ donne $y(0) = C = 2$.",
+        "Le point $B$ donne $2e^{a} = 2e^{-1}$, soit $e^{a} = e^{-1}$, donc $a = -1$.",
+        "$y(x) = 2e^{-x}$ : comme $a < 0$ et $C > 0$, la courbe est au-dessus de l'axe, décroissante, et se rapproche de $0$ en $+\\infty$."
+      ],
+      "reponse": "$a = -1$, $y(x) = 2e^{-x}$ : courbe décroissante, positive, tendant vers $0$."
+    },
+    {
+      "id": 45,
+      "difficulte": "application",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Résoudre sur $\\mathbb{R}$ l'équation différentielle $y' = 4y - 8$.",
+      "corrige": [
+        "C'est $y' = ay + b$ avec $a = 4$ et $b = -8$.",
+        "Solution constante : $0 = 4y - 8$, soit $y = 2$ (c'est bien $-\\dfrac{b}{a} = -\\dfrac{-8}{4} = 2$).",
+        "Toutes les solutions : $y(x) = Ce^{4x} + 2$, $C\\in\\mathbb{R}$."
+      ],
+      "reponse": "$y(x) = Ce^{4x} + 2$, $\\;C\\in\\mathbb{R}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "intermediaire",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Résoudre l'équation $y' + 2y = 10$, puis déterminer la solution telle que $y(0) = 8$.",
+      "corrige": [
+        "On réécrit : $y' = -2y + 10$, donc $a = -2$ et $b = 10$. Solution constante : $-\\dfrac{10}{-2} = 5$.",
+        "Solutions générales : $y(x) = Ce^{-2x} + 5$.",
+        "$y(0) = C + 5 = 8$, d'où $C = 3$ : $y(x) = 3e^{-2x} + 5$."
+      ],
+      "reponse": "$y(x) = Ce^{-2x} + 5$ ; avec $y(0) = 8$ : $y(x) = 3e^{-2x} + 5$."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Pour résoudre $y' = 3y + 6$, un élève écrit : « La solution constante est $y = 2$, donc les solutions sont $Ce^{3x} + 2$. » Trouver l'erreur et corriger.",
+      "corrige": [
+        "On teste $y = 2$ : $y' = 0$ alors que $3\\times 2 + 6 = 12$. Ce n'est pas une solution.",
+        "La solution constante vérifie $0 = 3y + 6$, soit $y = -2$ (formule $-\\dfrac{b}{a} = -\\dfrac{6}{3}$) : l'élève a oublié le signe moins.",
+        "Les solutions sont $y(x) = Ce^{3x} - 2$, $C\\in\\mathbb{R}$."
+      ],
+      "reponse": "Erreur de signe : la solution constante est $-2$ ; solutions $y(x) = Ce^{3x} - 2$."
+    },
+    {
+      "id": 48,
+      "difficulte": "approfondissement",
+      "notion": "equation-y-prime-ay-plus-f",
+      "enonce": "On considère l'équation $(E)$ : $y' = 2y - 4x$. 1) Vérifier que $g(x) = 2x + 1$ est solution de $(E)$. 2) En déduire toutes les solutions. 3) Déterminer la solution qui s'annule en $0$.",
+      "corrige": [
+        "1) $g'(x) = 2$ et $2g(x) - 4x = 4x + 2 - 4x = 2$ : les deux membres sont égaux, $g$ est solution.",
+        "2) Toutes les solutions s'écrivent $y(x) = g(x) + Ce^{2x} = 2x + 1 + Ce^{2x}$, $C\\in\\mathbb{R}$.",
+        "3) $y(0) = 1 + C = 0$, d'où $C = -1$ : $y(x) = 2x + 1 - e^{2x}$."
+      ],
+      "reponse": "$y(x) = 2x + 1 + Ce^{2x}$ ; celle qui s'annule en $0$ : $y(x) = 2x + 1 - e^{2x}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "equation-y-prime-ay-plus-f",
+      "enonce": "On considère l'équation $(E)$ : $y' = -y + \\cos x$. 1) Vérifier que $g(x) = \\dfrac{\\cos x + \\sin x}{2}$ est solution de $(E)$. 2) Donner toutes les solutions de $(E)$. 3) Déterminer la solution $h$ telle que $h(0) = 1$.",
+      "corrige": [
+        "1) $g'(x) = \\dfrac{-\\sin x + \\cos x}{2}$ et $-g(x) + \\cos x = \\dfrac{-\\cos x - \\sin x + 2\\cos x}{2} = \\dfrac{\\cos x - \\sin x}{2}$ : c'est égal, donc $g$ est solution.",
+        "2) L'équation est $y' = ay + f$ avec $a = -1$ : les solutions sont $y(x) = \\dfrac{\\cos x + \\sin x}{2} + Ce^{-x}$, $C\\in\\mathbb{R}$.",
+        "3) $h(0) = \\dfrac{1 + 0}{2} + C = \\dfrac{1}{2} + C = 1$, d'où $C = \\dfrac{1}{2}$.",
+        "Donc $h(x) = \\dfrac{\\cos x + \\sin x + e^{-x}}{2}$."
+      ],
+      "reponse": "$y(x) = \\dfrac{\\cos x + \\sin x}{2} + Ce^{-x}$ ; $h(x) = \\dfrac{\\cos x + \\sin x + e^{-x}}{2}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "equation-y-prime-ay-plus-b",
+      "enonce": "Un patient reçoit un médicament par perfusion. La quantité $Q(t)$ de médicament dans le sang (en mg), $t$ heures après le début, vérifie $Q'(t) = -0{,}5\\,Q(t) + 2$ et $Q(0) = 0$. 1) Déterminer $Q(t)$. 2) Montrer que $Q$ est croissante. 3) Vers quelle valeur tend $Q(t)$ ? 4) Donner $Q(2)$ à $0{,}01$ mg près.",
+      "corrige": [
+        "1) Solution constante : $-\\dfrac{2}{-0{,}5} = 4$. Solutions : $Q(t) = Ce^{-0{,}5t} + 4$ ; $Q(0) = C + 4 = 0$ donne $C = -4$, donc $Q(t) = 4\\left(1 - e^{-0{,}5t}\\right)$.",
+        "2) $Q'(t) = 2e^{-0{,}5t} > 0$ : $Q$ est strictement croissante.",
+        "3) $e^{-0{,}5t}$ tend vers $0$ quand $t\\to+\\infty$, donc $Q(t)$ tend vers $4$ mg (quantité d'équilibre).",
+        "4) $Q(2) = 4\\left(1 - e^{-1}\\right) \\approx 4\\times 0{,}6321 \\approx 2{,}53$ mg."
+      ],
+      "reponse": "$Q(t) = 4\\left(1 - e^{-0{,}5t}\\right)$ ; croissante ; limite $4$ mg ; $Q(2) \\approx 2{,}53$ mg."
     }
   ]
 }
