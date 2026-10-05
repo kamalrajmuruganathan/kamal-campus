@@ -1,11 +1,11 @@
 /**
  * « Coach » — calcule la prochaine action suggérée à l'élève, pour réduire les
  * clics sur l'accueil. Priorité : réviser les cartes dues → reprendre le dernier
- * chapitre → révision ciblée. Renvoie null pour un nouvel élève (la liste des
- * niveaux suffit alors).
+ * chapitre → révision ciblée → (nouvel élève) commencer un chapitre de sa classe.
+ * Renvoie null si la classe n'est pas encore choisie (la liste des niveaux suffit alors).
  */
 
-import { CHAPITRES } from './contenu-index';
+import { CHAPITRES, parcoursDe, LIBELLES_PARCOURS, LIBELLES_NIVEAU } from './contenu-index';
 import { clesDues } from '../lib/srs';
 
 let _cles = null;
@@ -43,6 +43,23 @@ export function prochaineAction(profil, jour) {
   }
   if ((profil.qcmTermines || 0) > 0) {
     return { icone: '🎯', titre: 'Révision ciblée', sousTitre: 'Travaille tes chapitres les plus fragiles', ecran: 'Revision' };
+  }
+  // Nouvel élève : on l'emmène vers les chapitres de maths de sa classe (ou la 1re matière disponible).
+  const niveau = profil.niveauParDefaut;
+  if (niveau) {
+    const liste = parcoursDe(niveau);
+    const p = liste.find((x) => x.matiere === 'mathematiques') ?? liste[0];
+    if (p) {
+      const nomParcours = LIBELLES_PARCOURS[p.parcours] ?? p.parcours;
+      const nomClasse = LIBELLES_NIVEAU[niveau] ?? niveau;
+      return {
+        icone: '🚀',
+        titre: 'Commence ton premier chapitre',
+        sousTitre: `${nomParcours} · ${nomClasse} : choisis un chapitre pour démarrer`,
+        ecran: 'Chapitres',
+        params: { niveau, parcours: p.parcours, titre: nomParcours },
+      };
+    }
   }
   return null;
 }
