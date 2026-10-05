@@ -50,7 +50,7 @@
         "$3\\ln 4$"
       ],
       "reponse": 0,
-      "explication": "$\\ln(a\\times b)=\\ln a+\\ln b$, donc $\\ln 12=\\ln(3\\times 4)=\\ln 3+\\ln 4$. Le piège du choix 2 : le logarithme d'un produit est une **somme**, pas un produit de logarithmes."
+      "explication": "$\\ln(a\\times b)=\\ln a+\\ln b$, donc $\\ln 12=\\ln(3\\times 4)=\\ln 3+\\ln 4$. Le piège $\\ln 3 \\times \\ln 4$ : le logarithme d'un produit est une **somme**, pas un produit de logarithmes."
     },
     {
       "id": 4,
@@ -64,7 +64,7 @@
         "$\\ln 5 \\times \\ln a$"
       ],
       "reponse": 2,
-      "explication": "$\\ln(a^{n})=n\\ln a$ : l'exposant « descend » comme coefficient devant le $\\ln$. Le piège du choix 2 est de mettre le $\\ln$ à la puissance $5$ au lieu de le multiplier par $5$."
+      "explication": "$\\ln(a^{n})=n\\ln a$ : l'exposant « descend » comme coefficient devant le $\\ln$. Le piège $(\\ln a)^{5}$ est de mettre le $\\ln$ à la puissance $5$ au lieu de le multiplier par $5$."
     },
     {
       "id": 5,
@@ -78,7 +78,7 @@
         "$-\\dfrac{1}{x^{2}}$"
       ],
       "reponse": 0,
-      "explication": "$(\\ln x)'=\\dfrac{1}{x}$, résultat à connaître par cœur. Comme $x>0$, cette dérivée est positive, ce qui prouve que $\\ln$ est strictement croissante. Le choix 3 confond avec une primitive."
+      "explication": "$(\\ln x)'=\\dfrac{1}{x}$, résultat à connaître par cœur. Comme $x>0$, cette dérivée est positive, ce qui prouve que $\\ln$ est strictement croissante. Le choix $x\\ln x$ confond avec une primitive (une primitive de $\\ln$ est $x\\ln x - x$)."
     },
     {
       "id": 6,
@@ -120,7 +120,7 @@
         "$]0\\,;1]$"
       ],
       "reponse": 2,
-      "explication": "$\\ln$ étant strictement croissante, elle conserve le sens : $\\ln x\\leqslant 1=\\ln e \\iff x\\leqslant e$. Mais il faut aussi $x>0$ (existence), d'où $]0\\,;e]$. Le piège du choix 1 : oublier la condition $x>0$."
+      "explication": "$\\ln$ étant strictement croissante, elle conserve le sens : $\\ln x\\leqslant 1=\\ln e \\iff x\\leqslant e$. Mais il faut aussi $x>0$ (existence), d'où $]0\\,;e]$. Le piège $]-\\infty\\,;e]$ : oublier la condition $x>0$."
     },
     {
       "id": 9,
@@ -134,7 +134,7 @@
         "$x=\\dfrac{\\ln 7}{3}$"
       ],
       "reponse": 3,
-      "explication": "On applique $\\ln$ (réciproque de $\\exp$) : $\\ln(e^{3x})=3x=\\ln 7$, donc $x=\\dfrac{\\ln 7}{3}$. Le piège du choix 2 : multiplier par $3$ au lieu de diviser, en oubliant que le $3$ était devant l'inconnue dans l'exposant."
+      "explication": "On applique $\\ln$ (réciproque de $\\exp$) : $\\ln(e^{3x})=3x=\\ln 7$, donc $x=\\dfrac{\\ln 7}{3}$. Le piège $x=3\\ln 7$ : multiplier par $3$ au lieu de diviser, en oubliant que le $3$ était devant l'inconnue dans l'exposant."
     },
     {
       "id": 10,
@@ -168,7 +168,7 @@
       "id": 12,
       "difficulte": "facile",
       "notion": "produit",
-      "enonce": "Pour $a > 0$ et $b > 0$, à quoi est égal $\\ln(15) = \\ln(3 \\times 5)$ ?",
+      "enonce": "À quoi est égal $\\ln(15) = \\ln(3 \\times 5)$ ?",
       "choix": [
         "$\\ln 3 \\times \\ln 5$",
         "$\\ln 3 + \\ln 5$",
@@ -218,7 +218,7 @@
         "$2x \\ln(x^2+1)$"
       ],
       "reponse": 1,
-      "explication": "Forme $\\ln(u)$ : dérivée $\\dfrac{u'}{u}$ avec $u = x^2+1$ et $u' = 2x$, soit $\\dfrac{2x}{x^2+1}$. Le premier choix oublie le facteur $u' = 2x$ au numérateur, l'erreur type de la composée."
+      "explication": "Forme $\\ln(u)$ : dérivée $\\dfrac{u'}{u}$ avec $u = x^2+1$ et $u' = 2x$, soit $\\dfrac{2x}{x^2+1}$. Le choix $\\dfrac{1}{x^2+1}$ oublie le facteur $u' = 2x$ au numérateur, l'erreur type de la composée."
     },
     {
       "id": 16,
