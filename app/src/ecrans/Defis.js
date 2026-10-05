@@ -206,6 +206,23 @@ export default function Defis({ navigation }) {
               </View>
             );
           }
+          // Un défi qui n'est ni en attente ni terminé a été refusé : il n'a pas de résultat.
+          const refuse = d.statut !== 'termine';
+          if (refuse) {
+            const jAiRefuse = d.adversaire === moi;
+            return (
+              <View key={d.id} style={carte}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Text style={{ color: C.texte, fontSize: t.police.moyenne, fontWeight: '700' }}>{av} Duel vs {nom}</Text>
+                  <Text style={{ color: '#fff', backgroundColor: C.attenue, fontSize: t.police.minuscule, fontWeight: '700', paddingHorizontal: 9, paddingVertical: 4, borderRadius: 20, overflow: 'hidden' }}>Refusé</Text>
+                </View>
+                <Text style={{ color: C.attenue, fontSize: t.police.petite, marginTop: 3 }}>{titreChapitre(d.chapitre)}</Text>
+                <Text style={{ color: C.texte, fontSize: t.police.petite, marginTop: 10 }}>
+                  {jAiRefuse ? `Tu as refusé ce défi de ${nom}.` : `${nom} a refusé ton défi (ton score : ${r.moi.score}/${r.moi.total}).`}
+                </Text>
+              </View>
+            );
+          }
           const iss = issueDefi(d, moi) || 'egalite';
           const coul = iss === 'gagne' ? C.succes : iss === 'perdu' ? C.erreur : C.accent;
           const lab = iss === 'gagne' ? 'Gagné 🎉' : iss === 'perdu' ? 'Perdu' : 'Égalité';
@@ -217,9 +234,9 @@ export default function Defis({ navigation }) {
               </View>
               <Text style={{ color: C.attenue, fontSize: t.police.petite, marginTop: 3 }}>{titreChapitre(d.chapitre)}</Text>
               <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 12, paddingTop: 12, borderTopWidth: 1, borderTopColor: C.trait }}>
-                <View style={{ flex: 1, alignItems: 'center' }}><Text style={{ color: C.texte, fontSize: t.police.grande, fontWeight: '700' }}>{r.moi.score}</Text><Text style={{ color: C.attenue, fontSize: t.police.minuscule }}>Toi · {r.moi.t}s</Text></View>
+                <View style={{ flex: 1, alignItems: 'center' }}><Text style={{ color: C.texte, fontSize: t.police.grande, fontWeight: '700' }}>{r.moi.score}/{r.moi.total}</Text><Text style={{ color: C.attenue, fontSize: t.police.minuscule }}>Toi · {r.moi.t}s</Text></View>
                 <Text style={{ color: C.attenue, fontWeight: '700' }}>VS</Text>
-                <View style={{ flex: 1, alignItems: 'center' }}><Text style={{ color: C.texte, fontSize: t.police.grande, fontWeight: '700' }}>{r.adv.score}</Text><Text style={{ color: C.attenue, fontSize: t.police.minuscule }}>{nom} · {r.adv.t}s</Text></View>
+                <View style={{ flex: 1, alignItems: 'center' }}><Text style={{ color: C.texte, fontSize: t.police.grande, fontWeight: '700' }}>{r.adv.score}/{r.adv.total}</Text><Text style={{ color: C.attenue, fontSize: t.police.minuscule }}>{nom} · {r.adv.t}s</Text></View>
               </View>
             </View>
           );
