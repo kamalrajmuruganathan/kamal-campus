@@ -130,3 +130,23 @@ export async function listerDemandesRecues() {
   const parId = Object.fromEntries((profils ?? []).map((p) => [p.id, p]));
   return lignes.map((a) => ({ amitieId: a.id, de: parId[a.demandeur] ?? { id: a.demandeur, pseudo: '(inconnu)' } }));
 }
+
+// Temps réel : prévient quand une amitié me concernant change (demande reçue, acceptée, retirée).
+// Nécessite que la table soit publiée (outils/sql/realtime_amities.sql) ; sinon rien n'arrive
+// et les écrans se contentent de leur rechargement périodique.
+export function ecouterAmities(onChange) {
+  let canal = null;
+  let fini = false;
+  moiId().then((moi) => {
+    if (!moi || fini) return;
+    canal = supabase
+      .channel(`amities-${moi}-${Date.now()}`)
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'amities' }, (payload) => {
+        const a = payload.new && Object.keys(payload.new).length ? payload.new : (payload.old || {});
+        // Une suppression ne transmet souvent que l'id : on recharge par prudence.
+        if (!a.demandeur || a.demandeur === moi || a.destinataire === moi) onChange(payload);
+      })
+      .subscribe();
+  }).catch(() => {});
+  return () => { fini = true; if (canal) supabase.removeChannel(canal); };
+}

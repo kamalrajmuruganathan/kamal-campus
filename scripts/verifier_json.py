@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Vérifie des chapitres à 10 exercices écrits à la main (exercice.json), sans rien modifier.
+"""Vérifie des chapitres à 10 ou 50 exercices écrits à la main (exercice.json), sans rien modifier.
+   10 exos : ≥ 4 notions, ≤ 4 par notion, ≥ 2 difficultés.
+   50 exos : ≥ 6 notions, ≤ 15 par notion, ≥ 3 difficultés.
 
 Usage :  python3 scripts/verifier_json.py cm1/anglais/body cp/francais/sons ...
          python3 scripts/verifier_json.py --liste fichier.txt      (un chapitre par ligne)
@@ -27,21 +29,26 @@ def verifier(chap):
     except Exception as e:  # noqa: BLE001
         return [f"JSON illisible : {e}"]
     ex = d.get("exercices", [])
-    if len(ex) != 10:
-        pb.append(f"{len(ex)} exercices au lieu de 10")
+    if len(ex) not in (10, 50):
+        pb.append(f"{len(ex)} exercices au lieu de 10 ou 50")
+    grand = len(ex) > 10
+    min_notions, max_notion, min_diffs = (6, 15, 3) if grand else (4, 4, 2)
     notions = collections.Counter(x.get("notion") for x in ex)
-    if len(notions) < 4:
-        pb.append(f"seulement {len(notions)} notion(s) : {dict(notions)} (au moins 4)")
-    if notions and notions.most_common(1)[0][1] > 4:
-        pb.append(f"notion trop présente : {notions.most_common(1)[0]} (4 maximum)")
+    if len(notions) < min_notions:
+        pb.append(f"seulement {len(notions)} notion(s) : {dict(notions)} (au moins {min_notions})")
+    if notions and notions.most_common(1)[0][1] > max_notion:
+        pb.append(f"notion trop présente : {notions.most_common(1)[0]} ({max_notion} maximum)")
     diffs = collections.Counter(x.get("difficulte") for x in ex)
     if set(diffs) - DIFFS:
         pb.append(f"difficulté inconnue : {set(diffs) - DIFFS}")
-    if len(diffs) < 2:
-        pb.append(f"un seul niveau de difficulté : {dict(diffs)}")
+    if len(diffs) < min_diffs:
+        pb.append(f"pas assez de niveaux de difficulté : {dict(diffs)} (au moins {min_diffs})")
     enonces = [x.get("enonce", "") for x in ex]
     if len(set(enonces)) != len(enonces):
         pb.append("énoncé en double")
+    norm = lambda e: re.sub(r"\W+", " ", e.lower()).strip()
+    if len({norm(e) for e in enonces}) != len(enonces):
+        pb.append("énoncés quasi identiques (même texte à la ponctuation près)")
     langue = chap.split("/")[1] in LANGUES
     for i, x in enumerate(ex, 1):
         manq = [c for c in CHAMPS if c not in x]

@@ -10,7 +10,7 @@
 import { useTheme } from '../useTheme';
 import { useState, useMemo, useCallback } from 'react';
 import { useFocusEffect } from '@react-navigation/native';
-import { listerDemandesRecues } from '../cloud/social';
+import { listerDemandesRecues, ecouterAmities } from '../cloud/social';
 import { View, Text, ScrollView, Pressable, useColorScheme, StyleSheet } from 'react-native';
 import { useSombre } from '../useSombre';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -42,10 +42,14 @@ export default function Accueil({ navigation }) {
 
   // Demandes d'ami en attente : rechargées à chaque retour sur l'accueil (pastille sur « Amis »).
   const [nbDemandes, setNbDemandes] = useState(0);
+  // Mise à jour en direct (temps réel) + filet de sécurité toutes les 60 s tant que l'accueil est affiché.
   useFocusEffect(useCallback(() => {
     let actif = true;
-    listerDemandesRecues().then((d) => { if (actif) setNbDemandes(d.length); }).catch(() => {});
-    return () => { actif = false; };
+    const charger = () => listerDemandesRecues().then((d) => { if (actif) setNbDemandes(d.length); }).catch(() => {});
+    charger();
+    const arreter = ecouterAmities(charger);
+    const minuterie = setInterval(charger, 60000);
+    return () => { actif = false; arreter(); clearInterval(minuterie); };
   }, []));
 
   const listeNiveaux = niveaux();

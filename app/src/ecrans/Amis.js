@@ -4,7 +4,7 @@ import { useSombre } from '../useSombre';
 import { theme } from '../theme';
 import {
   assurerProfilPublic, definirPseudo, chercherParPseudo, envoyerDemande,
-  repondreDemande, supprimerAmi, listerAmis, listerDemandesRecues,
+  repondreDemande, supprimerAmi, listerAmis, listerDemandesRecues, ecouterAmities,
 } from '../cloud/social';
 
 export default function Amis({ navigation }) {
@@ -34,6 +34,14 @@ export default function Amis({ navigation }) {
       } catch (e) { Alert.alert('Oups', e.message ?? 'Erreur de chargement.'); }
       finally { setChargement(false); }
     })();
+  }, [rafraichir]);
+
+  // Demandes et amis mis à jour en direct (temps réel), avec un filet de sécurité toutes les 60 s.
+  useEffect(() => {
+    const recharger = () => { rafraichir().catch(() => {}); };
+    const arreter = ecouterAmities(recharger);
+    const minuterie = setInterval(recharger, 60000);
+    return () => { arreter(); clearInterval(minuterie); };
   }, [rafraichir]);
 
   async function enregistrerPseudo() {
