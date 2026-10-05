@@ -17,12 +17,9 @@ Contexte de reprise (discussion Cowork du 03/10/2026). À lire en entier avant d
 ## 2. Règles absolues
 1. **Exactitude** : ne jamais inventer une réponse ou une valeur fausse. Appli scolaire → le
    **français doit être correct** (accents, élisions, accords) et les valeurs physiquement réalistes.
-2. **Crédits Netlify ÉPUISÉS (mail du 03/10/2026, 15:20)** : les déploiements de production sont **en pause
-   jusqu'au 16/10/2026** (ou abonnement payant). Le site reste en ligne avec le dernier build réussi.
-   → **Ne plus pousser sur `main`** d'ici là : tout s'accumule sur `upgrade-sdk57`, publication groupée après le 16/10.
-   (Le compteur « ≈ 44 » était faux : un build coûte plus d'un crédit.) **1 commit publié = 1 build**.
-   **Ne jamais pousser sur `main`, ne jamais lancer `publier.sh`, ne jamais créer de PR** sans l'accord
-   explicite de Kamal (les deploy previews peuvent consommer des crédits).
+2. **Publication** : le site est sur GitHub Pages (pas de crédits). Publier = fusionner `upgrade-sdk57` dans `main` ;
+   c'est **Kamal** qui fusionne (Claude n'a pas le droit de pousser sur `main`). Ne jamais publier ni créer
+   de PR sans l'accord explicite de Kamal. Netlify (crédits épuisés jusqu'au 16/10/2026) ne sert plus qu'à rediriger.
 3. **Sécurité** : ne jamais afficher ni committer la clé Supabase `sb_secret_…` (la clé publishable et
    l'URL sont publiques, protégées par RLS). Ne jamais demander de token GitHub dans le chat.
 4. Ne modifier un fichier existant que si c'est demandé ; sinon créer à côté.
