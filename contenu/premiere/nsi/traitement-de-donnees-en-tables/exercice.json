@@ -477,7 +477,7 @@
       "id": 40,
       "difficulte": "approfondissement",
       "notion": "conversion des valeurs lues dans un CSV",
-      "enonce": "Ce programme plante. Explique pourquoi et corrige-le.\n\n```python\nimport csv, io\ntexte = \"article,prix\\nstylo,2\\ncahier,3\\n\"\ntable = list(csv.DictReader(io.StringIO(texte)))\ntotal = 0\nfor l in table:\n    total = total + l[\"prix\"]\nprint(total)\n```",
+      "enonce": "Ce programme plante. Explique pourquoi et corrige-le.\n\n```python\nimport csv, io\ntexte = \"\"\"article,prix\nstylo,2\ncahier,3\n\"\"\"\ntable = list(csv.DictReader(io.StringIO(texte)))\ntotal = 0\nfor l in table:\n    total = total + l[\"prix\"]\nprint(total)\n```",
       "corrige": [
         "Les valeurs lues dans un CSV sont des chaînes : `l[\"prix\"]` vaut \"2\" puis \"3\".",
         "`0 + \"2\"` additionne un entier et une chaîne : Python lève une erreur `TypeError`.",

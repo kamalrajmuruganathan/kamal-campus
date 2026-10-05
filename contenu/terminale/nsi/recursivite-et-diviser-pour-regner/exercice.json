@@ -12,9 +12,9 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "cas de base et cas récursif",
-      "enonce": "On donne la fonction factorielle :\n\ndef fact(n):\n    if n == 0:\n        return 1\n    return n * fact(n-1)\n\nIdentifie le cas de base et le cas récursif, puis calcule fact(3) en détaillant les appels.",
+      "enonce": "On donne la fonction factorielle :\n\n```python\ndef fact(n):\n    if n == 0:\n        return 1\n    return n * fact(n-1)\n```\n\nIdentifie le cas de base et le cas récursif, puis calcule fact(3) en détaillant les appels.",
       "corrige": [
         "Le cas de base est n == 0 : la fonction renvoie 1 sans se rappeler.",
         "Le cas récursif est return n * fact(n-1) : la fonction s'appelle sur n-1.",
@@ -25,9 +25,9 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "condition d'arrêt manquante",
-      "enonce": "Explique pourquoi cette fonction ne s'arrête jamais, puis corrige-la pour qu'elle calcule la somme 1+2+...+n :\n\ndef somme(n):\n    return n + somme(n-1)",
+      "enonce": "Explique pourquoi cette fonction ne s'arrête jamais, puis corrige-la pour qu'elle calcule la somme 1+2+...+n :\n\n```python\ndef somme(n):\n    return n + somme(n-1)\n```",
       "corrige": [
         "Il n'y a aucun cas de base : la fonction s'appelle toujours, avec n qui décroît indéfiniment (0, -1, -2, ...).",
         "En pratique Python lève une erreur RecursionError (profondeur maximale d'appels dépassée).",
@@ -38,9 +38,9 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "trace d'une récursivité",
-      "enonce": "Que renvoie compte(3) pour la fonction suivante, et qu'affiche-t-elle ?\n\ndef compte(n):\n    if n == 0:\n        return\n    print(n)\n    compte(n-1)",
+      "enonce": "Que renvoie compte(3) pour la fonction suivante, et qu'affiche-t-elle ?\n\n```python\ndef compte(n):\n    if n == 0:\n        return\n    print(n)\n    compte(n-1)\n```",
       "corrige": [
         "compte(3) affiche 3 puis appelle compte(2).",
         "compte(2) affiche 2 puis appelle compte(1).",
@@ -52,27 +52,22 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "récursivité sur les chaînes",
       "enonce": "Écris une fonction récursive palindrome(ch) qui renvoie True si la chaîne ch se lit de la même façon dans les deux sens. Précise le(s) cas de base.",
       "corrige": [
         "Cas de base : une chaîne de longueur 0 ou 1 est toujours un palindrome, on renvoie True.",
         "Cas récursif : si le premier et le dernier caractère diffèrent, ce n'est pas un palindrome, on renvoie False.",
         "Sinon on teste le milieu : palindrome(ch[1:-1]) qui retire le premier et le dernier caractère.",
-        "def palindrome(ch):",
-        "    if len(ch) <= 1:",
-        "        return True",
-        "    if ch[0] != ch[-1]:",
-        "        return False",
-        "    return palindrome(ch[1:-1])"
+        "Code :\n\n```python\ndef palindrome(ch):\n    if len(ch) <= 1:\n        return True\n    if ch[0] != ch[-1]:\n        return False\n    return palindrome(ch[1:-1])\n```"
       ],
       "reponse": "On teste ch[0]==ch[-1] puis on récursive sur ch[1:-1], avec cas de base len(ch)<=1 qui renvoie True."
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "diviser pour régner (recherche dichotomique)",
-      "enonce": "Complète cette recherche dichotomique récursive dans un tableau trié t, qui renvoie True si x est présent. Trace ensuite dicho(t, 5) pour t = [1, 3, 5, 7, 9].\n\ndef dicho(t, x, g=0, d=None):\n    if d is None:\n        d = len(t) - 1\n    if g > d:\n        return False\n    m = (g + d) // 2\n    if t[m] == x:\n        return True\n    if t[m] < x:\n        return dicho(t, x, m+1, d)\n    return dicho(t, x, g, m-1)",
+      "enonce": "Complète cette recherche dichotomique récursive dans un tableau trié t, qui renvoie True si x est présent. Trace ensuite dicho(t, 5) pour t = [1, 3, 5, 7, 9].\n\n```python\ndef dicho(t, x, g=0, d=None):\n    if d is None:\n        d = len(t) - 1\n    if g > d:\n        return False\n    m = (g + d) // 2\n    if t[m] == x:\n        return True\n    if t[m] < x:\n        return dicho(t, x, m+1, d)\n    return dicho(t, x, g, m-1)\n```",
       "corrige": [
         "Le principe 'diviser pour régner' : on compare x à l'élément du milieu et on ne garde qu'une moitié du tableau.",
         "Départ : g=0, d=4, m=(0+4)//2=2, t[2]=5. On a t[m]==x.",
@@ -84,7 +79,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "diviser pour régner et complexité (tri fusion)",
       "enonce": "Le tri fusion trie une liste en la coupant en deux moitiés, en triant récursivement chacune, puis en fusionnant les deux moitiés triées. 1) Décris le cas de base. 2) Sur [4, 2, 7, 1], montre l'arbre des découpages et le résultat. 3) Justifie la complexité O(n log n).",
       "corrige": [
@@ -100,7 +95,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "trace de la factorielle",
       "enonce": "On définit factorielle(n) qui renvoie 1 si n == 0, et n * factorielle(n-1) sinon. Donne la trace des appels pour factorielle(4) et le résultat.",
       "corrige": [
@@ -113,20 +108,20 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "écrire une fonction récursive",
       "enonce": "Écris une fonction récursive somme(n) qui renvoie 1 + 2 + ... + n (avec somme(0) = 0), et donne somme(4).",
       "corrige": [
         "Cas de base : si n == 0, on renvoie 0 (rien à additionner).",
         "Cas récursif : somme(n) = n + somme(n-1).",
-        "Code : def somme(n):\n    if n == 0:\n        return 0\n    return n + somme(n - 1)",
-        "somme(4) = 4 + 3 + 2 + 1 + 0 = 10."
+        "somme(4) = 4 + 3 + 2 + 1 + 0 = 10.",
+        "Code :\n\n```python\ndef somme(n):\n    if n == 0:\n        return 0\n    return n + somme(n - 1)\n```"
       ],
       "reponse": "La fonction renvoie n + somme(n-1) avec le cas de base somme(0) = 0 ; somme(4) = 10."
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "cas de base manquant",
       "enonce": "On écrit : def f(n): return n + f(n-1). Que se passe-t-il quand on appelle f(3) et pourquoi ?",
       "corrige": [
@@ -139,7 +134,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "tri fusion (diviser pour régner)",
       "enonce": "On trie [4, 1, 7, 3] par tri fusion. Décris les étapes diviser / régner / combiner, puis donne le tableau trié.",
       "corrige": [
@@ -149,6 +144,486 @@
         "Le tri fusion est un cas emblématique de diviser pour régner."
       ],
       "reponse": "Le tableau trié est [1, 3, 4, 7] (fusion des moitiés triées [1, 4] et [3, 7])."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "cas de base et cas récursif",
+      "enonce": "Dans la fonction ci-dessous, repère le cas de base et le cas récursif. Que renvoie `puissance(2, 3)` ?\n\n```python\ndef puissance(x, n):\n    if n == 0:\n        return 1\n    return x * puissance(x, n - 1)\n```",
+      "corrige": [
+        "Cas de base : n == 0, la fonction renvoie 1 sans s'appeler (x⁰ = 1).",
+        "Cas récursif : `x * puissance(x, n - 1)`, qui se ramène à un exposant plus petit.",
+        "puissance(2, 3) = 2 × puissance(2, 2) = 2 × 2 × puissance(2, 1) = 2 × 2 × 2 × puissance(2, 0) = 8."
+      ],
+      "reponse": "Cas de base n == 0 ; cas récursif `x * puissance(x, n - 1)` ; puissance(2, 3) = 8."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "diviser pour régner",
+      "enonce": "Remets dans l'ordre les trois étapes de la méthode « diviser pour régner » et associe à chacune son rôle dans le tri fusion : combiner, diviser, régner.",
+      "corrige": [
+        "Diviser : couper le tableau en deux moitiés.",
+        "Régner : trier chaque moitié (récursivement).",
+        "Combiner : fusionner les deux moitiés triées en un seul tableau trié."
+      ],
+      "reponse": "Diviser (couper en deux), régner (trier chaque moitié), combiner (fusionner)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "récursivité et itération",
+      "enonce": "Vrai ou faux ? a) Toute fonction récursive peut s'écrire avec une boucle. b) Une fonction récursive est toujours plus rapide que sa version itérative. c) Une fonction récursive sans cas de base finit par provoquer une RecursionError en Python.",
+      "corrige": [
+        "a) Vrai : récursivité et itération sont équivalentes en résultats.",
+        "b) Faux : la récursivité est un style d'écriture, pas une garantie d'efficacité ; elle empile même des appels.",
+        "c) Vrai : la pile d'appels sature et Python lève `RecursionError`."
+      ],
+      "reponse": "a) Vrai ; b) Faux ; c) Vrai."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "trace d'une récursivité",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\ndef f(n):\n    if n <= 1:\n        return n\n    return f(n - 2) + 1\n\nprint(f(7), f(8))\n```",
+      "corrige": [
+        "f(7) = f(5) + 1 = f(3) + 2 = f(1) + 3 = 1 + 3 = 4.",
+        "f(8) = f(6) + 1 = f(4) + 2 = f(2) + 3 = f(0) + 4 = 0 + 4 = 4.",
+        "L'argument diminue de 2 à chaque appel jusqu'à 0 ou 1 (cas de base)."
+      ],
+      "reponse": "`4 4`"
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "écrire une fonction récursive",
+      "enonce": "Écris une fonction récursive `produit(n)` qui renvoie le produit des entiers de 1 à n (avec produit(1) = 1). Quelle autre fonction du cours reconnais-tu ? Que vaut produit(5) ?",
+      "corrige": [
+        "Cas de base : n == 1, on renvoie 1.",
+        "Cas récursif : `n * produit(n - 1)`.",
+        "C'est la factorielle (définie ici à partir de 1) : produit(5) = 5 × 4 × 3 × 2 × 1 = 120."
+      ],
+      "reponse": "`if n == 1: return 1` puis `return n * produit(n - 1)` ; c'est la factorielle ; produit(5) = 120."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "pile d'appels",
+      "enonce": "Lors de l'appel `factorielle(3)`, combien d'appels de la fonction sont présents en même temps dans la pile d'appels au maximum ? Dans quel ordre sont-ils dépilés ?",
+      "corrige": [
+        "factorielle(3) appelle factorielle(2), qui appelle factorielle(1), qui appelle factorielle(0) : 4 appels empilés.",
+        "factorielle(0) renvoie 1 sans s'appeler : c'est le premier dépilé.",
+        "Ensuite factorielle(1), puis factorielle(2), puis factorielle(3) se terminent dans cet ordre (le dernier empilé est le premier dépilé)."
+      ],
+      "reponse": "4 appels au maximum ; dépilés dans l'ordre factorielle(0), (1), (2), (3)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "condition d'arrêt manquante",
+      "enonce": "Cette fonction a bien un cas de base, mais `compte(5)` ne s'arrête pas. Pourquoi ? Corrige-la.\n\n```python\ndef compte(n):\n    if n == 0:\n        return 0\n    return 1 + compte(n + 1)\n```",
+      "corrige": [
+        "L'argument passe de n à n + 1 : il s'éloigne du cas de base 0 au lieu de s'en rapprocher.",
+        "Les appels compte(6), compte(7)… ne s'arrêtent jamais : `RecursionError`.",
+        "Correction : `return 1 + compte(n - 1)` ; compte(5) renvoie alors 5."
+      ],
+      "reponse": "L'appel doit se rapprocher du cas de base : `compte(n - 1)` ; compte(5) = 5."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "tri fusion",
+      "enonce": "Fusionne les deux listes triées [2, 5, 9] et [1, 6, 7] en une seule liste triée, en indiquant à chaque étape l'élément choisi.",
+      "corrige": [
+        "On compare les têtes des deux listes et on prend la plus petite : 1 (de la 2e liste).",
+        "Puis 2 < 6 → 2 ; 5 < 6 → 5 ; 6 < 9 → 6 ; 7 < 9 → 7.",
+        "La 2e liste est épuisée : on ajoute ce qui reste de la 1re, 9."
+      ],
+      "reponse": "[1, 2, 5, 6, 7, 9]"
+    },
+    {
+      "id": 19,
+      "difficulte": "decouverte",
+      "notion": "cas de base et cas récursif",
+      "enonce": "Parmi ces trois fonctions, laquelle est récursive ? Justifie.\n\n```python\ndef a(n):\n    return n * 2\n\ndef b(n):\n    s = 0\n    for i in range(n):\n        s = s + i\n    return s\n\ndef c(n):\n    if n == 0:\n        return 0\n    return 2 + c(n - 1)\n```",
+      "corrige": [
+        "Une fonction récursive s'appelle elle-même dans son propre code.",
+        "a et b ne s'appellent pas elles-mêmes (b utilise une boucle : elle est itérative).",
+        "c s'appelle elle-même avec `c(n - 1)` et possède un cas de base (n == 0) : elle est récursive."
+      ],
+      "reponse": "La fonction c (elle s'appelle elle-même, avec le cas de base n == 0)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "récursivité sur les listes",
+      "enonce": "Écris une fonction récursive `somme_liste(t)` qui renvoie la somme des éléments d'une liste de nombres. Détaille le calcul de somme_liste([3, 5, 2]).",
+      "corrige": [
+        "Cas de base : la liste vide a pour somme 0.",
+        "Cas récursif : `return t[0] + somme_liste(t[1:])`.",
+        "somme_liste([3, 5, 2]) = 3 + somme_liste([5, 2]) = 3 + 5 + somme_liste([2]) = 3 + 5 + 2 + somme_liste([]) = 10."
+      ],
+      "reponse": "`if t == []: return 0` puis `return t[0] + somme_liste(t[1:])` ; résultat 10."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "récursivité sur les chaînes",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\ndef nb_a(ch):\n    if ch == \"\":\n        return 0\n    if ch[0] == \"a\":\n        return 1 + nb_a(ch[1:])\n    return nb_a(ch[1:])\n\nprint(nb_a(\"ananas\"), nb_a(\"kiwi\"))\n```",
+      "corrige": [
+        "La fonction examine le premier caractère, ajoute 1 si c'est un « a », puis continue sur le reste de la chaîne.",
+        "« ananas » contient trois « a » ; « kiwi » n'en contient aucun.",
+        "Cas de base : la chaîne vide contient 0 « a »."
+      ],
+      "reponse": "`3 0`"
+    },
+    {
+      "id": 22,
+      "difficulte": "intermediaire",
+      "notion": "récursivité sur les listes",
+      "enonce": "Écris une fonction récursive `longueur(t)` qui renvoie le nombre d'éléments d'une liste sans utiliser `len`. Indication : `t[1:]` est la liste privée de son premier élément.",
+      "corrige": [
+        "Cas de base : la liste vide a pour longueur 0 (`if t == []: return 0`).",
+        "Cas récursif : la longueur est 1 de plus que celle de la liste privée de son premier élément : `return 1 + longueur(t[1:])`.",
+        "Par exemple longueur([4, 8, 1]) = 1 + 1 + 1 + 0 = 3."
+      ],
+      "reponse": "`if t == []: return 0` puis `return 1 + longueur(t[1:])` ; longueur([4, 8, 1]) = 3."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "récursivité sur les listes",
+      "enonce": "Qu'affiche ce programme ? Que calcule la fonction ?\n\n```python\ndef m(t):\n    if len(t) == 1:\n        return t[0]\n    r = m(t[1:])\n    if t[0] > r:\n        return t[0]\n    return r\n\nprint(m([3, 9, 2, 7]))\n```",
+      "corrige": [
+        "m([2, 7]) : r = m([7]) = 7, et 2 < 7 → 7. m([9, 2, 7]) : r = 7, et 9 > 7 → 9.",
+        "m([3, 9, 2, 7]) : r = 9, et 3 < 9 → 9.",
+        "La fonction renvoie le maximum de la liste (précondition : liste non vide)."
+      ],
+      "reponse": "`9` : la fonction calcule le maximum d'une liste non vide."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "récursivité sur les chaînes",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\ndef envers(ch):\n    if ch == \"\":\n        return \"\"\n    return envers(ch[1:]) + ch[0]\n\nprint(envers(\"NSI\"))\n```",
+      "corrige": [
+        "envers(\"NSI\") = envers(\"SI\") + \"N\" = (envers(\"I\") + \"S\") + \"N\".",
+        "envers(\"I\") = envers(\"\") + \"I\" = \"I\".",
+        "On obtient \"I\" + \"S\" + \"N\"."
+      ],
+      "reponse": "`ISN` (la chaîne à l'envers)."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "trace d'une récursivité",
+      "enonce": "Qu'affiche ce programme ? Compare avec la fonction `compte` de l'exercice 3, où `print` était placé avant l'appel récursif.\n\n```python\ndef remonte(n):\n    if n == 0:\n        return\n    remonte(n - 1)\n    print(n)\n\nremonte(3)\n```",
+      "corrige": [
+        "remonte(3) appelle d'abord remonte(2), qui appelle remonte(1), qui appelle remonte(0) (rien).",
+        "Au retour de remonte(0), remonte(1) affiche 1 ; puis remonte(2) affiche 2 ; puis remonte(3) affiche 3.",
+        "L'affichage se fait au dépilement : l'ordre est inversé par rapport à `compte`, qui affichait avant l'appel (3, 2, 1)."
+      ],
+      "reponse": "Il affiche 1, 2, 3 (une valeur par ligne)."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "écrire une fonction récursive",
+      "enonce": "Écris une fonction récursive `somme_chiffres(n)` qui renvoie la somme des chiffres d'un entier n ⩾ 0. Indication : `n % 10` est le dernier chiffre et `n // 10` l'entier sans son dernier chiffre. Que renvoie somme_chiffres(2026) ?",
+      "corrige": [
+        "Cas de base : si n < 10, n n'a qu'un chiffre : on renvoie n.",
+        "Cas récursif : `return n % 10 + somme_chiffres(n // 10)`.",
+        "2026 : 6 + somme_chiffres(202) = 6 + 2 + somme_chiffres(20) = 6 + 2 + 0 + 2 = 10."
+      ],
+      "reponse": "10"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "récursivité et itération",
+      "enonce": "Réécris la fonction récursive ci-dessous avec une boucle `while`, puis vérifie que les deux versions renvoient la même valeur pour pgcd(84, 36).\n\n```python\ndef pgcd(a, b):\n    if b == 0:\n        return a\n    return pgcd(b, a % b)\n```",
+      "corrige": [
+        "Chaque appel remplace (a, b) par (b, a % b) jusqu'à ce que b vaille 0.",
+        "Version itérative : `while b != 0: a, b = b, a % b`, puis `return a`.",
+        "Trace : (84, 36) → (36, 12) → (12, 0) : les deux versions renvoient 12."
+      ],
+      "reponse": "`while b != 0: a, b = b, a % b` puis `return a` ; pgcd(84, 36) = 12."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "diviser pour régner (recherche dichotomique)",
+      "enonce": "On cherche 14 dans le tableau trié [2, 5, 8, 11, 14, 17, 20, 23] (indices 0 à 7) avec la fonction `dicho` récursive de l'exercice 5. Donne la suite des appels (valeurs de g et d) et le résultat.",
+      "corrige": [
+        "dicho(t, 14, 0, 7) : m = 3, t[3] = 11 < 14 → dicho(t, 14, 4, 7).",
+        "m = 5, t[5] = 17 > 14 → dicho(t, 14, 4, 4).",
+        "m = 4, t[4] = 14 : trouvé, la fonction renvoie True (3 appels)."
+      ],
+      "reponse": "Appels (0, 7), (4, 7), (4, 4) ; résultat True."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "tri fusion",
+      "enonce": "Donne toutes les étapes du tri fusion de [5, 3, 8, 1, 4, 2] : découpages successifs (on coupe à l'indice `len(t) // 2`), puis fusions.",
+      "corrige": [
+        "Découpage : [5, 3, 8] et [1, 4, 2] ; puis [5] et [3, 8], [1] et [4, 2] ; puis [3] et [8], [4] et [2].",
+        "Fusions au plus bas niveau : [3, 8] et [2, 4] ; puis [5] avec [3, 8] → [3, 5, 8] et [1] avec [2, 4] → [1, 2, 4].",
+        "Fusion finale de [3, 5, 8] et [1, 2, 4] → [1, 2, 3, 4, 5, 8]."
+      ],
+      "reponse": "[1, 2, 3, 4, 5, 8]"
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "tri fusion",
+      "enonce": "Complète la fonction `fusion(a, b)` qui fusionne deux listes triées. Que renvoie `fusion([1, 4], [2, 3, 10])` ?\n\n```python\ndef fusion(a, b):\n    res = []\n    i, j = 0, 0\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            res.append(a[i])\n            i = i + 1\n        else:\n            ...\n    return res + a[i:] + b[j:]\n```",
+      "corrige": [
+        "Dans le cas contraire, b[j] est le plus petit des deux : on l'ajoute et on avance dans b.",
+        "Il faut écrire `res.append(b[j])` puis `j = j + 1`.",
+        "Quand une liste est épuisée, on ajoute le reste de l'autre (`a[i:] + b[j:]`) : [1, 2, 3, 4] puis 10."
+      ],
+      "reponse": "`res.append(b[j])` et `j = j + 1` ; résultat [1, 2, 3, 4, 10]."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "pile d'appels",
+      "enonce": "Qu'affiche ce programme ? Pourquoi ?\n\n```python\ndef f(n):\n    return f(n - 1) + 1\n\ntry:\n    f(10)\nexcept RecursionError:\n    print(\"pile pleine\")\n```",
+      "corrige": [
+        "La fonction n'a pas de cas de base : chaque appel en déclenche un autre.",
+        "Les appels s'empilent jusqu'à dépasser la profondeur maximale autorisée par Python.",
+        "Python lève alors `RecursionError`, qui est interceptée par `except` : le programme affiche « pile pleine »."
+      ],
+      "reponse": "`pile pleine` (RecursionError : pas de cas de base)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "cas de base et cas récursif",
+      "enonce": "La suite de Fibonacci est définie par F(0) = 0, F(1) = 1 et F(n) = F(n − 1) + F(n − 2) pour n ⩾ 2. Écris la fonction récursive `fibo(n)`. Pourquoi faut-il deux cas de base ? Que vaut fibo(7) ?",
+      "corrige": [
+        "Le cas récursif utilise deux valeurs précédentes : avec le seul cas n == 0, l'appel fibo(1) appellerait fibo(−1), qui ne s'arrêterait jamais.",
+        "Code : `if n <= 1: return n` (couvre F(0) = 0 et F(1) = 1), puis `return fibo(n - 1) + fibo(n - 2)`.",
+        "Valeurs : 0, 1, 1, 2, 3, 5, 8, 13 : fibo(7) = 13."
+      ],
+      "reponse": "`if n <= 1: return n` puis `return fibo(n - 1) + fibo(n - 2)` ; fibo(7) = 13."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "trace d'une récursivité",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\ndef f(n):\n    if n > 0:\n        print(\"avant\", n)\n        f(n - 1)\n        print(\"après\", n)\n\nf(2)\n```",
+      "corrige": [
+        "f(2) affiche « avant 2 », puis appelle f(1), qui affiche « avant 1 » et appelle f(0) (rien).",
+        "Au retour de f(0), f(1) affiche « après 1 » ; puis, au retour de f(1), f(2) affiche « après 2 ».",
+        "Les « avant » s'affichent à l'empilement, les « après » au dépilement, dans l'ordre inverse."
+      ],
+      "reponse": "`avant 2`, `avant 1`, `après 1`, `après 2`."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "récursivité et itération",
+      "enonce": "Réécris cette fonction itérative sous forme récursive.\n\n```python\ndef compte_a_rebours(n):\n    while n >= 0:\n        print(n)\n        n = n - 1\n```",
+      "corrige": [
+        "Le cas où la boucle s'arrête (n < 0) devient le cas de base : on ne fait rien.",
+        "Sinon, on affiche n puis on s'appelle sur n − 1, ce qui remplace un tour de boucle.",
+        "Code : `if n < 0: return`, puis `print(n)`, puis `compte_a_rebours(n - 1)`. Les deux versions affichent 3, 2, 1, 0 pour n = 3."
+      ],
+      "reponse": "`if n < 0: return` ; `print(n)` ; `compte_a_rebours(n - 1)`."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "récursivité et itération",
+      "enonce": "On compte les appels effectués par la fonction `fibo` récursive. Qu'affiche ce programme ? Que peut-on en conclure ?\n\n```python\nappels = 0\ndef fibo(n):\n    global appels\n    appels = appels + 1\n    if n <= 1:\n        return n\n    return fibo(n - 1) + fibo(n - 2)\n\nprint(fibo(10), appels)\n```",
+      "corrige": [
+        "fibo(10) vaut 55.",
+        "Mais chaque appel en déclenche deux autres, et les mêmes valeurs sont recalculées de nombreuses fois : 177 appels au total.",
+        "Une version itérative (deux variables mises à jour dans une boucle) ne fait que 10 tours : la récursivité naïve n'est pas toujours efficace."
+      ],
+      "reponse": "`55 177` : beaucoup d'appels redondants, la version itérative est bien plus efficace."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "tri fusion",
+      "enonce": "Combien de comparaisons la fonction `fusion` fait-elle, au plus, pour fusionner deux listes triées de longueurs p et q ? Et au moins ? Donne un exemple pour chaque cas avec p = q = 3.",
+      "corrige": [
+        "Chaque comparaison place un élément ; quand une liste est épuisée, le reste est ajouté sans comparaison.",
+        "Au plus : p + q − 1 comparaisons, par exemple [1, 3, 5] et [2, 4, 6] → 5 comparaisons.",
+        "Au moins : min(p, q) comparaisons, quand tous les éléments d'une liste sont plus petits que ceux de l'autre, par exemple [1, 2, 3] et [4, 5, 6] → 3 comparaisons."
+      ],
+      "reponse": "Au plus p + q − 1 (5 pour [1, 3, 5] et [2, 4, 6]) ; au moins min(p, q) (3 pour [1, 2, 3] et [4, 5, 6])."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "diviser pour régner",
+      "enonce": "On veut calculer le maximum d'une liste non vide par « diviser pour régner ». Décris les trois étapes, puis écris la fonction récursive `maxi(t)`.",
+      "corrige": [
+        "Diviser : couper la liste en deux moitiés t[:m] et t[m:], avec m = len(t) // 2.",
+        "Régner : calculer récursivement le maximum de chaque moitié ; cas de base : une liste d'un élément a pour maximum cet élément.",
+        "Combiner : le maximum de t est le plus grand des deux maximums. Code : `if len(t) == 1: return t[0]`, puis `return max(maxi(t[:m]), maxi(t[m:]))`."
+      ],
+      "reponse": "Diviser en deux moitiés, régner (maximum de chaque moitié), combiner (`max` des deux)."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "diviser pour régner",
+      "enonce": "Pour calculer xⁿ, on utilise : si n est pair, xⁿ = (x^(n/2))² ; si n est impair, xⁿ = x × (x^((n−1)/2))². Écris la fonction récursive `puissance_rapide(x, n)` et compte les appels pour n = 16, en comparant avec la version naïve (n + 1 appels).",
+      "corrige": [
+        "Cas de base : n == 0, on renvoie 1. Sinon on calcule `p = puissance_rapide(x, n // 2)` puis on renvoie `p * p` (n pair) ou `x * p * p` (n impair).",
+        "Pour n = 16 : appels avec n = 16, 8, 4, 2, 1, 0 : 6 appels.",
+        "La version naïve en ferait 17 : en divisant n par 2 à chaque appel, on obtient une complexité en O(log n)."
+      ],
+      "reponse": "6 appels pour n = 16 (contre 17 en version naïve) ; complexité O(log n)."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "diviser pour régner (recherche dichotomique)",
+      "enonce": "Montre que la recherche dichotomique récursive se termine toujours, en t'appuyant sur la quantité d − g. Quel est le nombre maximal d'appels pour un tableau de 1 000 éléments ?",
+      "corrige": [
+        "À chaque appel récursif, on passe de [g, d] à [m + 1, d] ou à [g, m − 1], avec g ⩽ m ⩽ d : la quantité d − g diminue strictement.",
+        "Elle finit donc par devenir négative (g > d), ce qui est le cas de base d'échec ; sinon on s'arrête avant, en trouvant x.",
+        "La taille de la zone est divisée par 2 à chaque appel : environ log₂(1 000) ≈ 10 appels qui examinent un milieu, plus un éventuel dernier appel où g > d, soit au plus 11 appels."
+      ],
+      "reponse": "d − g décroît strictement à chaque appel ; au plus 11 appels (10 milieux examinés + l'appel final où g > d)."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "tri fusion",
+      "enonce": "Justifie que le tri fusion d'une liste de 8 éléments fait 3 niveaux de fusions. Au plus combien de comparaisons fait-il en tout ? Compare avec le tri par sélection (n(n − 1)/2 comparaisons).",
+      "corrige": [
+        "8 = 2³ : on coupe en listes de 4, puis de 2, puis de 1 ; il y a donc 3 niveaux de fusions.",
+        "Au plus : niveau 1 (4 fusions de 1 + 1) : 4 × 1 = 4 ; niveau 2 (2 fusions de 2 + 2) : 2 × 3 = 6 ; niveau 3 (1 fusion de 4 + 4) : 7. Total 17 comparaisons.",
+        "Tri par sélection : 8 × 7 / 2 = 28 comparaisons. L'écart grandit avec n : O(n log n) contre O(n²)."
+      ],
+      "reponse": "3 niveaux ; au plus 17 comparaisons, contre 28 pour le tri par sélection."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "récursivité sur les listes",
+      "enonce": "Écris une fonction récursive `appartient(x, t)` qui renvoie `True` si x est dans la liste t, sans boucle. Combien d'appels fait `appartient(9, [4, 9, 1])` ?",
+      "corrige": [
+        "Cas de base 1 : liste vide → `False`. Cas de base 2 : `t[0] == x` → `True`.",
+        "Cas récursif : `return appartient(x, t[1:])`.",
+        "appartient(9, [4, 9, 1]) : 4 ≠ 9, appel sur [9, 1] ; 9 == 9 → True. Il y a 2 appels."
+      ],
+      "reponse": "2 appels ; la fonction renvoie True."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "récursivité sur les chaînes",
+      "enonce": "Qu'affiche ce programme ? Que calcule la fonction ?\n\n```python\ndef binaire(n):\n    if n < 2:\n        return str(n)\n    return binaire(n // 2) + str(n % 2)\n\nprint(binaire(13), binaire(32))\n```",
+      "corrige": [
+        "binaire(13) = binaire(6) + \"1\" = binaire(3) + \"0\" + \"1\" = binaire(1) + \"1\" + \"0\" + \"1\" = \"1101\".",
+        "binaire(32) : 32, 16, 8, 4, 2 donnent des restes 0, et binaire(1) = \"1\" : \"100000\".",
+        "La fonction calcule l'écriture binaire de n par divisions successives par 2 : le dernier reste est écrit en dernier."
+      ],
+      "reponse": "`1101 100000` : l'écriture en base 2."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "pile d'appels",
+      "enonce": "En Python, la profondeur de récursion est limitée par défaut à 1 000 appels environ. Que se passe-t-il avec la fonction récursive `somme(n)` (n + somme(n − 1), cas de base somme(0) = 0) pour n = 5 000 ? Et avec la version itérative ? Que peut-on en conclure ?",
+      "corrige": [
+        "La version récursive empile environ 5 000 appels : la limite est dépassée et Python lève `RecursionError`.",
+        "La version itérative (une boucle `for`) n'empile aucun appel : elle renvoie 12 502 500 sans problème.",
+        "Pour de grandes tailles, l'itération évite de saturer la pile d'appels : le choix dépend du problème et des contraintes."
+      ],
+      "reponse": "La récursive lève `RecursionError` ; l'itérative renvoie 12 502 500."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "écrire une fonction récursive",
+      "enonce": "Écris une fonction récursive `aplatir(t)` qui reçoit une liste pouvant contenir des nombres et des listes (elles-mêmes imbriquées) et renvoie la liste de tous les nombres. Indication : `type(x) == list` teste si x est une liste. Que renvoie `aplatir([1, [2, [3, 4]], 5])` ?",
+      "corrige": [
+        "Cas de base : la liste vide donne [].",
+        "Si le premier élément est une liste, on l'aplatit récursivement ; sinon on le garde tel quel. Puis on aplatit le reste `t[1:]`.",
+        "Code : `if t == []: return []`, `if type(t[0]) == list: return aplatir(t[0]) + aplatir(t[1:])`, sinon `return [t[0]] + aplatir(t[1:])`."
+      ],
+      "reponse": "[1, 2, 3, 4, 5]"
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "diviser pour régner",
+      "enonce": "Les tours de Hanoï : on doit déplacer n disques d'une tige A vers une tige C, en s'aidant de B, sans jamais poser un disque sur un plus petit. Stratégie : déplacer n − 1 disques de A vers B, puis le plus grand de A vers C, puis les n − 1 disques de B vers C. Qu'affiche ce programme ?\n\n```python\ndef hanoi(n, dep, arr, aux):\n    if n == 0:\n        return 0\n    a = hanoi(n - 1, dep, aux, arr)\n    print(dep, \"->\", arr)\n    b = hanoi(n - 1, aux, arr, dep)\n    return a + 1 + b\n\nprint(hanoi(2, \"A\", \"C\", \"B\"))\n```",
+      "corrige": [
+        "hanoi(2) : d'abord hanoi(1, A, B, C), qui affiche « A -> B ».",
+        "Puis le grand disque : « A -> C ». Puis hanoi(1, B, C, A), qui affiche « B -> C ».",
+        "Le nombre de déplacements renvoyé vaut 1 + 1 + 1 = 3 ; en général 2ⁿ − 1."
+      ],
+      "reponse": "`A -> B`, `A -> C`, `B -> C`, puis `3`."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "récursivité et itération",
+      "enonce": "Avec la fonction `hanoi` de l'exercice précédent, combien de déplacements faut-il pour 3, 4 et 10 disques ? Justifie la formule 2ⁿ − 1 à partir de la stratégie récursive.",
+      "corrige": [
+        "Si D(n) est le nombre de déplacements, la stratégie donne D(n) = D(n − 1) + 1 + D(n − 1) = 2 D(n − 1) + 1, avec D(0) = 0.",
+        "D(1) = 1, D(2) = 3, D(3) = 7, D(4) = 15 : on reconnaît 2ⁿ − 1, car 2 (2ⁿ⁻¹ − 1) + 1 = 2ⁿ − 1.",
+        "Pour 10 disques : 2¹⁰ − 1 = 1 023 déplacements."
+      ],
+      "reponse": "7, 15 et 1 023 déplacements (D(n) = 2ⁿ − 1)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "tri fusion",
+      "enonce": "En t'appuyant sur `fusion` (exercice précédent sur la fusion), écris la fonction récursive `tri_fusion(t)` et donne le résultat pour [38, 27, 43, 3, 9, 82, 10]. Pourquoi sa complexité est-elle meilleure que celle du tri par insertion pour de grandes listes ?",
+      "corrige": [
+        "Cas de base : `if len(t) <= 1: return t`.",
+        "Sinon : `m = len(t) // 2` puis `return fusion(tri_fusion(t[:m]), tri_fusion(t[m:]))`.",
+        "Résultat : [3, 9, 10, 27, 38, 43, 82]. Il y a environ log₂(n) niveaux et chaque niveau coûte O(n) : O(n log n), contre O(n²) dans le pire cas pour le tri par insertion."
+      ],
+      "reponse": "[3, 9, 10, 27, 38, 43, 82] ; O(n log n) contre O(n²)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "écrire une fonction récursive",
+      "enonce": "Écris une fonction récursive `nb_chemins(l, c)` qui compte les chemins pour aller du coin (0, 0) d'une grille au point (l, c) en ne faisant que des pas vers le bas ou vers la droite. Indication : pour arriver en (l, c), on vient de (l − 1, c) ou de (l, c − 1). Donne nb_chemins(2, 2) et nb_chemins(3, 3).",
+      "corrige": [
+        "Cas de base : si l == 0 ou c == 0, il n'y a qu'un chemin (tout droit) : on renvoie 1.",
+        "Cas récursif : `return nb_chemins(l - 1, c) + nb_chemins(l, c - 1)`.",
+        "nb_chemins(2, 2) = nb_chemins(1, 2) + nb_chemins(2, 1) = 3 + 3 = 6 ; de même nb_chemins(3, 3) = 10 + 10 = 20."
+      ],
+      "reponse": "6 et 20."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "diviser pour régner (recherche dichotomique)",
+      "enonce": "On cherche à approcher √2 par dichotomie : on sait que √2 est entre 1 et 2 ; on prend le milieu m, et si m² < 2 on garde [m, b], sinon [a, m]. Qu'affiche ce programme ? Combien d'étapes faut-il pour que l'intervalle ait une largeur inférieure à 0,001 ?\n\n```python\ndef racine2(a, b, etapes):\n    if etapes == 0:\n        return (a, b)\n    m = (a + b) / 2\n    if m * m < 2:\n        return racine2(m, b, etapes - 1)\n    return racine2(a, m, etapes - 1)\n\nprint(racine2(1, 2, 3))\n```",
+      "corrige": [
+        "Étape 1 : m = 1,5, 2,25 > 2 → [1 ; 1,5]. Étape 2 : m = 1,25, 1,5625 < 2 → [1,25 ; 1,5]. Étape 3 : m = 1,375, 1,890625 < 2 → [1,375 ; 1,5].",
+        "Le programme affiche (1.375, 1.5).",
+        "La largeur est divisée par 2 à chaque étape : après k étapes elle vaut 1/2^k. Il faut 2^k > 1 000, soit k = 10 (1/1 024 < 0,001)."
+      ],
+      "reponse": "`(1.375, 1.5)` ; 10 étapes."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "diviser pour régner",
+      "enonce": "On calcule la somme d'une liste par « diviser pour régner » avec la fonction ci-dessous. Combien d'appels de `somme_dpr` sont effectués pour une liste de 8 éléments ? Et pour n éléments (n puissance de 2) ?\n\n```python\ndef somme_dpr(t):\n    if len(t) == 1:\n        return t[0]\n    m = len(t) // 2\n    return somme_dpr(t[:m]) + somme_dpr(t[m:])\n```",
+      "corrige": [
+        "Les appels forment un arbre : 1 appel sur 8 éléments, 2 sur 4, 4 sur 2 et 8 sur 1 élément.",
+        "Total : 1 + 2 + 4 + 8 = 15 appels.",
+        "Pour n éléments : 1 + 2 + 4 + … + n = 2n − 1 appels. La somme reste en O(n) : diviser pour régner n'accélère pas ce calcul, chaque élément devant de toute façon être lu."
+      ],
+      "reponse": "15 appels pour 8 éléments ; 2n − 1 en général."
     }
   ]
 }

@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "pile (LIFO)",
       "enonce": "On part d'une pile vide. On effectue empiler(3), empiler(7), empiler(5), depiler(), empiler(9). Donne le contenu de la pile (du fond vers le sommet) et la valeur renvoyée par depiler().",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "file (FIFO)",
       "enonce": "On part d'une file vide. On effectue enfiler(1), enfiler(2), enfiler(3), defiler(), enfiler(4). Donne le contenu de la file (de la tête vers la queue) et la valeur renvoyée par defiler().",
       "corrige": [
@@ -38,9 +38,9 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "implémentation d'une pile en Python",
-      "enonce": "On implémente une pile avec une liste Python. Complète les méthodes empiler et depiler :\n\nclass Pile:\n    def __init__(self):\n        self.contenu = []\n    def empiler(self, x):\n        ...\n    def depiler(self):\n        ...\n    def est_vide(self):\n        return self.contenu == []",
+      "enonce": "On implémente une pile avec une liste Python. Complète les méthodes empiler et depiler :\n\n```python\nclass Pile:\n    def __init__(self):\n        self.contenu = []\n    def empiler(self, x):\n        ...\n    def depiler(self):\n        ...\n    def est_vide(self):\n        return self.contenu == []\n```",
       "corrige": [
         "On choisit la fin de la liste comme sommet de la pile.",
         "empiler ajoute x à la fin : self.contenu.append(x).",
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "arbre binaire (vocabulaire)",
       "enonce": "On considère l'arbre binaire de racine A, dont le fils gauche est B et le fils droit est C ; B a pour fils gauche D et pour fils droit E ; C a un fils droit F. Donne la hauteur de l'arbre, le nombre de feuilles et la liste des feuilles.",
       "corrige": [
@@ -65,7 +65,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "parcours d'arbre binaire",
       "enonce": "Pour le même arbre (racine A ; A.gauche=B, A.droit=C ; B.gauche=D, B.droit=E ; C.droit=F), donne le parcours infixe (gauche, racine, droite) et le parcours préfixe (racine, gauche, droite).",
       "corrige": [
@@ -79,7 +79,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "arbre binaire de recherche (ABR)",
       "enonce": "On insère successivement dans un arbre binaire de recherche vide les clés 8, 3, 10, 1, 6, 14, 4. 1) Dessine (décris) l'arbre obtenu. 2) Donne son parcours infixe et explique ce qu'il produit toujours pour un ABR. 3) Combien de comparaisons pour rechercher la clé 4 ?",
       "corrige": [
@@ -94,7 +94,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "application",
       "notion": "pile (LIFO)",
       "enonce": "Une pile est vide. On empile 3, puis 7, puis 9. On dépile deux fois. Quelles valeurs sont renvoyées, et que reste-t-il dans la pile ?",
       "corrige": [
@@ -107,7 +107,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "file (FIFO)",
       "enonce": "Une file est vide. On enfile A, puis B, puis C. On défile deux fois. Quelles valeurs sont renvoyées, et que reste-t-il dans la file ?",
       "corrige": [
@@ -120,7 +120,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "vocabulaire d'un arbre",
       "enonce": "Un arbre a pour racine R ; R a deux enfants A et B ; A a un enfant C (sans enfant). Donne la racine, les feuilles et la hauteur de l'arbre.",
       "corrige": [
@@ -133,7 +133,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "arbre binaire de recherche (ABR)",
       "enonce": "On insère les clés 8, puis 3, puis 12, puis 5 dans un arbre binaire de recherche vide. Où se place la clé 5 ? Justifie avec la propriété de l'ABR.",
       "corrige": [
@@ -143,6 +143,481 @@
         "3 n'a pas encore d'enfant droit : 5 devient l'enfant droit de 3."
       ],
       "reponse": "5 devient l'enfant droit du nœud 3 (car 5 < 8 puis 5 > 3)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "type abstrait et implémentation",
+      "enonce": "Quelle est la différence entre un type abstrait de données et son implémentation ? Illustre avec la pile.",
+      "corrige": [
+        "Le type abstrait décrit les opérations possibles et leur comportement (l'interface), sans dire comment elles sont programmées.",
+        "L'implémentation est la façon concrète de le programmer.",
+        "La pile (empiler, depiler, est_vide, sommet, avec le comportement LIFO) peut être implémentée par une liste Python ou par une liste chaînée : le programme qui l'utilise ne change pas."
+      ],
+      "reponse": "Le type abstrait fixe les opérations et leur comportement ; l'implémentation (liste Python, chaînage…) est la façon de les programmer."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "pile (LIFO)",
+      "enonce": "Pour chaque situation, dis si elle se comporte comme une pile ou comme une file : a) la file d'attente à la cantine ; b) le bouton « précédent » d'un navigateur ; c) une impression de documents envoyés à une imprimante partagée ; d) une pile d'assiettes.",
+      "corrige": [
+        "Dans une file (FIFO), le premier arrivé est servi en premier : cantine et impressions.",
+        "Dans une pile (LIFO), le dernier ajouté est le premier retiré : le bouton « précédent » ramène à la dernière page visitée, et on prend l'assiette du dessus."
+      ],
+      "reponse": "a) file ; b) pile ; c) file ; d) pile."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "arbre binaire (vocabulaire)",
+      "enonce": "On considère l'arbre binaire de recherche suivant : racine 8 ; 8 a pour enfants 3 (gauche) et 10 (droite) ; 3 a pour enfants 1 (gauche) et 6 (droite) ; 6 a pour enfants 4 (gauche) et 7 (droite) ; 10 n'a qu'un enfant droit, 14 ; 14 n'a qu'un enfant gauche, 13. Quelle est la racine ? Quelles sont les feuilles ? Quels sont les enfants de 3 ?",
+      "corrige": [
+        "La racine est le seul nœud sans parent : 8.",
+        "Les feuilles sont les nœuds sans enfant : 1, 4, 7 et 13.",
+        "Les enfants de 3 sont 1 (gauche) et 6 (droite)."
+      ],
+      "reponse": "Racine 8 ; feuilles 1, 4, 7, 13 ; enfants de 3 : 1 et 6."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "pile (LIFO)",
+      "enonce": "Qu'affiche ce programme, qui utilise la classe `Pile` du cours ?\n\n```python\nclass Pile:\n    def __init__(self):\n        self.elements = []\n    def est_vide(self):\n        return self.elements == []\n    def empiler(self, x):\n        self.elements.append(x)\n    def depiler(self):\n        return self.elements.pop()\n\np = Pile()\nfor x in [4, 8, 15, 16]:\n    p.empiler(x)\nprint(p.depiler(), p.depiler())\np.empiler(23)\nprint(p.elements)\n```",
+      "corrige": [
+        "On empile 4, 8, 15, 16 : le sommet est 16 (fin de la liste).",
+        "Les deux dépilements renvoient 16 puis 15.",
+        "On empile 23 : la liste devient [4, 8, 23]."
+      ],
+      "reponse": "`16 15` puis `[4, 8, 23]`."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "file (FIFO)",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\nfrom collections import deque\nf = deque()\nfor nom in [\"Ana\", \"Bilal\", \"Chloé\"]:\n    f.append(nom)\nprint(f.popleft())\nf.append(\"Dara\")\nprint(list(f))\n```",
+      "corrige": [
+        "`append` enfile à droite (en queue), `popleft` défile à gauche (en tête).",
+        "Le premier défilé est le premier enfilé : Ana.",
+        "Puis on enfile Dara en queue."
+      ],
+      "reponse": "`Ana` puis `['Bilal', 'Chloé', 'Dara']`."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "arbre binaire (vocabulaire)",
+      "enonce": "On considère l'arbre binaire de recherche suivant : racine 8 ; 8 a pour enfants 3 (gauche) et 10 (droite) ; 3 a pour enfants 1 (gauche) et 6 (droite) ; 6 a pour enfants 4 (gauche) et 7 (droite) ; 10 n'a qu'un enfant droit, 14 ; 14 n'a qu'un enfant gauche, 13. Donne la profondeur des nœuds 10, 6 et 13, puis la hauteur de l'arbre (la racine a la profondeur 0).",
+      "corrige": [
+        "La profondeur est le nombre d'arêtes depuis la racine : 10 est à 1, 6 à 2.",
+        "13 : chemin 8 → 10 → 14 → 13, soit 3 arêtes.",
+        "La hauteur est la plus grande profondeur : 4, 7 et 13 sont à la profondeur 3, donc la hauteur vaut 3."
+      ],
+      "reponse": "Profondeurs : 10 → 1, 6 → 2, 13 → 3 ; hauteur 3."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "Parmi ces arbres binaires, lequel est un arbre binaire de recherche ? Arbre 1 : racine 5, enfant gauche 2, enfant droit 9. Arbre 2 : racine 5, enfant gauche 7, enfant droit 9. Arbre 3 : racine 5, enfant gauche 2 qui a un enfant droit 6, enfant droit 9.",
+      "corrige": [
+        "Arbre 1 : 2 < 5 < 9, c'est un ABR.",
+        "Arbre 2 : 7 est à gauche de 5 alors que 7 > 5 : ce n'est pas un ABR.",
+        "Arbre 3 : 6 est dans le sous-arbre gauche de 5 alors que 6 > 5 : ce n'est pas un ABR (la propriété porte sur tout le sous-arbre, pas seulement sur les enfants directs)."
+      ],
+      "reponse": "Seul l'arbre 1 est un ABR."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "liste chaînée",
+      "enonce": "Une liste chaînée contient les valeurs 12, 5, 9 (dans cet ordre). Décris les cellules et leurs références. Que faut-il faire pour insérer 3 en tête ?",
+      "corrige": [
+        "Chaque cellule contient une valeur et une référence vers la cellule suivante : 12 → 5 → 9 → rien (None).",
+        "On accède à la liste par sa première cellule (la tête), celle qui contient 12.",
+        "Pour insérer 3 en tête, on crée une cellule (3, référence vers la cellule de 12), qui devient la nouvelle tête : aucune autre cellule n'est modifiée."
+      ],
+      "reponse": "12 → 5 → 9 → None ; on crée une cellule 3 qui pointe vers 12 et devient la tête."
+    },
+    {
+      "id": 19,
+      "difficulte": "decouverte",
+      "notion": "file (FIFO)",
+      "enonce": "Que signifient les sigles LIFO et FIFO ? Lequel décrit une pile, lequel une file ?",
+      "corrige": [
+        "LIFO : Last In, First Out, « dernier entré, premier sorti » : c'est la pile.",
+        "FIFO : First In, First Out, « premier entré, premier sorti » : c'est la file."
+      ],
+      "reponse": "LIFO (dernier entré, premier sorti) : pile ; FIFO (premier entré, premier sorti) : file."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "pile (LIFO)",
+      "enonce": "Une pile est vide. On effectue : empiler(\"a\"), empiler(\"b\"), sommet(), empiler(\"c\"), depiler(), sommet(). Quelles valeurs renvoient les deux appels à sommet() ? Que contient la pile à la fin (du fond vers le sommet) ?",
+      "corrige": [
+        "sommet() lit l'élément du sommet sans le retirer.",
+        "Après empiler(\"a\") et empiler(\"b\"), sommet() renvoie \"b\" ; la pile reste [a, b].",
+        "empiler(\"c\") puis depiler() retire \"c\" : la pile est [a, b] et sommet() renvoie à nouveau \"b\"."
+      ],
+      "reponse": "\"b\" les deux fois ; la pile contient a, b (b au sommet)."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "file (FIFO)",
+      "enonce": "Une file est vide. On effectue : enfiler(4), enfiler(9), defiler(), enfiler(2), enfiler(6), defiler(). Quelles valeurs sont défilées ? Que contient la file à la fin (de la tête vers la queue) ?",
+      "corrige": [
+        "Le premier défilement renvoie la tête, 4 ; la file devient [9].",
+        "On enfile 2 et 6 : [9, 2, 6]. Le second défilement renvoie 9.",
+        "Il reste [2, 6]."
+      ],
+      "reponse": "4 puis 9 ; il reste 2, 6."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "taille et hauteur d'un arbre",
+      "enonce": "On considère l'arbre binaire de recherche suivant : racine 8 ; 8 a pour enfants 3 (gauche) et 10 (droite) ; 3 a pour enfants 1 (gauche) et 6 (droite) ; 6 a pour enfants 4 (gauche) et 7 (droite) ; 10 n'a qu'un enfant droit, 14 ; 14 n'a qu'un enfant gauche, 13. Quelle est la taille de cet arbre (nombre de nœuds) ? Combien a-t-il de feuilles ? Est-ce un arbre binaire ?",
+      "corrige": [
+        "Les nœuds sont 8, 3, 10, 1, 6, 4, 7, 14, 13 : la taille vaut 9.",
+        "Les feuilles (sans enfant) sont 1, 4, 7 et 13 : 4 feuilles.",
+        "Chaque nœud a au plus deux enfants : c'est un arbre binaire (et même un ABR)."
+      ],
+      "reponse": "Taille 9 ; 4 feuilles ; oui, c'est un arbre binaire."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "pile (LIFO)",
+      "enonce": "On veut vérifier qu'une expression est bien parenthésée. Qu'affiche ce programme ? Explique le rôle de la pile.\n\n```python\ndef bien_parenthesee(expr):\n    pile = []\n    for c in expr:\n        if c == \"(\":\n            pile.append(c)\n        elif c == \")\":\n            if pile == []:\n                return False\n            pile.pop()\n    return pile == []\n\nprint(bien_parenthesee(\"(a+b)*(c-(d))\"), bien_parenthesee(\"(a+b))(\"))\n```",
+      "corrige": [
+        "Chaque parenthèse ouvrante est empilée ; chaque fermante dépile l'ouvrante correspondante.",
+        "Si on rencontre une fermante alors que la pile est vide, ou s'il reste des ouvrantes à la fin, l'expression est mal parenthésée.",
+        "1re expression : tout se compense, la pile finit vide → True. 2e : la 2e fermante arrive avec une pile vide → False."
+      ],
+      "reponse": "`True False`"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "pile (LIFO)",
+      "enonce": "Avec une pile, on peut inverser l'ordre d'une liste. Complète puis donne le résultat pour [1, 2, 3, 4].\n\n```python\nclass Pile:\n    def __init__(self):\n        self.elements = []\n    def est_vide(self):\n        return self.elements == []\n    def empiler(self, x):\n        self.elements.append(x)\n    def depiler(self):\n        return self.elements.pop()\n\ndef inverser(t):\n    p = Pile()\n    for x in t:\n        p.empiler(x)\n    res = []\n    while not p.est_vide():\n        ...\n    return res\n```",
+      "corrige": [
+        "Tant que la pile n'est pas vide, on dépile le sommet et on l'ajoute au résultat : `res.append(p.depiler())`.",
+        "Les éléments ressortent dans l'ordre inverse de leur entrée (LIFO) : 4, 3, 2, 1."
+      ],
+      "reponse": "`res.append(p.depiler())` ; résultat [4, 3, 2, 1]."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "file (FIFO)",
+      "enonce": "Complète la classe `File` ci-dessous, implémentée avec un `deque`, puis donne la suite des valeurs renvoyées par : enfiler(5), enfiler(7), defiler(), enfiler(1), defiler(), defiler().\n\n```python\nfrom collections import deque\nclass File:\n    def __init__(self):\n        self.elements = deque()\n    def est_vide(self):\n        return len(self.elements) == 0\n    def enfiler(self, x):\n        ...\n    def defiler(self):\n        ...\n```",
+      "corrige": [
+        "enfiler ajoute en queue : `self.elements.append(x)` ; defiler retire en tête : `return self.elements.popleft()`.",
+        "File : [5], [5, 7] ; defiler → 5 ; [7, 1] ; defiler → 7 ; defiler → 1."
+      ],
+      "reponse": "`append(x)` et `popleft()` ; valeurs défilées : 5, 7, 1."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "file (FIFO)",
+      "enonce": "On implémente une file avec une liste Python : `enfiler` fait `t.append(x)` et `defiler` fait `t.pop(0)`. Le résultat est-il correct ? Quel est le problème pour une très longue file ?",
+      "corrige": [
+        "Le comportement est correct : on ajoute en fin et on retire au début, donc le premier entré est le premier sorti.",
+        "Mais `pop(0)` retire le premier élément d'un tableau : tous les autres doivent être décalés d'une case, ce qui coûte un temps proportionnel à la taille de la file (O(n)).",
+        "Avec `collections.deque`, `popleft()` se fait en temps constant : on le préfère."
+      ],
+      "reponse": "Correct mais `pop(0)` coûte O(n) (décalages) ; `deque.popleft()` est en O(1)."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "parcours d'arbre binaire",
+      "enonce": "On considère l'arbre binaire de recherche suivant : racine 8 ; 8 a pour enfants 3 (gauche) et 10 (droite) ; 3 a pour enfants 1 (gauche) et 6 (droite) ; 6 a pour enfants 4 (gauche) et 7 (droite) ; 10 n'a qu'un enfant droit, 14 ; 14 n'a qu'un enfant gauche, 13. Donne les parcours préfixe (racine, gauche, droite), infixe (gauche, racine, droite) et suffixe (gauche, droite, racine).",
+      "corrige": [
+        "Préfixe : 8, puis le sous-arbre de 3 (3, 1, 6, 4, 7), puis celui de 10 (10, 14, 13).",
+        "Infixe : 1, 3, 4, 6, 7, 8, 10, 13, 14 (valeurs croissantes, car c'est un ABR).",
+        "Suffixe : 1, 4, 7, 6, 3, puis 13, 14, 10, enfin 8."
+      ],
+      "reponse": "Préfixe : 8 3 1 6 4 7 10 14 13 ; infixe : 1 3 4 6 7 8 10 13 14 ; suffixe : 1 4 7 6 3 13 14 10 8."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "parcours d'arbre binaire",
+      "enonce": "Qu'affiche ce programme ? Quel parcours réalise la fonction ?\n\n```python\nclass Noeud:\n    def __init__(self, valeur, gauche=None, droite=None):\n        self.valeur = valeur\n        self.gauche = gauche\n        self.droite = droite\n\ndef parcours(n):\n    if n is None:\n        return []\n    return parcours(n.gauche) + [n.valeur] + parcours(n.droite)\n\na = Noeud(\"A\", Noeud(\"B\", Noeud(\"D\")), Noeud(\"C\", None, Noeud(\"E\")))\nprint(parcours(a))\n```",
+      "corrige": [
+        "La fonction visite le sous-arbre gauche, puis la racine, puis le sous-arbre droit : c'est le parcours infixe.",
+        "Sous-arbre de B : D, B. Puis A. Puis sous-arbre de C (sans enfant gauche) : C, E."
+      ],
+      "reponse": "`['D', 'B', 'A', 'C', 'E']` (parcours infixe)."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "taille et hauteur d'un arbre",
+      "enonce": "Complète la fonction récursive `taille(n)` qui renvoie le nombre de nœuds d'un arbre binaire (None représente l'arbre vide). Que renvoie-t-elle pour l'arbre de l'exercice précédent ?\n\n```python\ndef taille(n):\n    if n is None:\n        return 0\n    return ...\n```",
+      "corrige": [
+        "Un arbre non vide compte sa racine, plus les nœuds de ses deux sous-arbres.",
+        "On écrit `return 1 + taille(n.gauche) + taille(n.droite)`.",
+        "L'arbre A, B, C, D, E a 5 nœuds."
+      ],
+      "reponse": "`1 + taille(n.gauche) + taille(n.droite)` ; résultat 5."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "On insère successivement les clés 50, 30, 70, 20, 40, 60, 80 dans un ABR vide. Décris l'arbre obtenu et donne sa hauteur. Que se passerait-il si on insérait les mêmes clés dans l'ordre croissant 20, 30, 40, 50, 60, 70, 80 ?",
+      "corrige": [
+        "50 est la racine ; 30 et 70 ses enfants ; 20 et 40 sous 30 ; 60 et 80 sous 70. L'arbre est équilibré, de hauteur 2.",
+        "Dans l'ordre croissant, chaque nouvelle clé est plus grande que toutes les précédentes : elle va toujours à droite.",
+        "On obtient un « peigne » (une chaîne) de hauteur 6 : la recherche devient aussi lente qu'une recherche séquentielle."
+      ],
+      "reponse": "Arbre équilibré de hauteur 2 ; dans l'ordre croissant, une chaîne de hauteur 6."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "On considère l'arbre binaire de recherche suivant : racine 8 ; 8 a pour enfants 3 (gauche) et 10 (droite) ; 3 a pour enfants 1 (gauche) et 6 (droite) ; 6 a pour enfants 4 (gauche) et 7 (droite) ; 10 n'a qu'un enfant droit, 14 ; 14 n'a qu'un enfant gauche, 13. Indique les nœuds visités pour rechercher 7, puis pour rechercher 12. Combien de comparaisons faut-il dans chaque cas ?",
+      "corrige": [
+        "Recherche de 7 : 7 < 8 → gauche (3) ; 7 > 3 → droite (6) ; 7 > 6 → droite (7) : trouvé, 4 comparaisons.",
+        "Recherche de 12 : 12 > 8 → droite (10) ; 12 > 10 → droite (14) ; 12 < 14 → gauche (13) ; 12 < 13 → gauche : vide, 12 est absent.",
+        "On a comparé 12 à 8, 10, 14 et 13 : 4 comparaisons."
+      ],
+      "reponse": "7 : 8, 3, 6, 7 (4 comparaisons, trouvé) ; 12 : 8, 10, 14, 13 (4 comparaisons, absent)."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "liste chaînée",
+      "enonce": "Qu'affiche ce programme ?\n\n```python\nclass Cellule:\n    def __init__(self, valeur, suivante=None):\n        self.valeur = valeur\n        self.suivante = suivante\n\ntete = Cellule(12, Cellule(5, Cellule(9)))\ntete = Cellule(3, tete)\nc = tete\nwhile c is not None:\n    print(c.valeur, end=\" \")\n    c = c.suivante\n```",
+      "corrige": [
+        "La liste initiale est 12 → 5 → 9.",
+        "`Cellule(3, tete)` crée une cellule qui pointe vers l'ancienne tête : c'est une insertion en tête, 3 → 12 → 5 → 9.",
+        "La boucle suit les références de cellule en cellule jusqu'à None."
+      ],
+      "reponse": "`3 12 5 9`"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "type abstrait et implémentation",
+      "enonce": "On remplace l'implémentation de la classe `Pile` (liste Python) par une implémentation avec une liste chaînée, en gardant les mêmes méthodes `empiler`, `depiler` et `est_vide`. Faut-il modifier le programme `inverser` qui utilise la pile ? Quel principe cela illustre-t-il ?",
+      "corrige": [
+        "Le programme `inverser` n'utilise que les opérations de l'interface : empiler, depiler, est_vide.",
+        "Tant que ces opérations gardent le même comportement (LIFO), il fonctionne sans modification.",
+        "C'est le principe d'encapsulation : on programme contre l'interface, pas contre l'implémentation."
+      ],
+      "reponse": "Non, aucune modification : c'est l'encapsulation (programmer contre l'interface)."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "parcours d'arbre binaire",
+      "enonce": "L'expression (3 + 4) × 2 est représentée par un arbre binaire : la racine est « × », son enfant gauche est « + » (dont les enfants sont 3 et 4) et son enfant droit est 2. Donne les parcours préfixe et suffixe de cet arbre.",
+      "corrige": [
+        "Préfixe (racine, gauche, droite) : ×, puis le sous-arbre « + » (+, 3, 4), puis 2.",
+        "Suffixe (gauche, droite, racine) : 3, 4, +, puis 2, puis ×.",
+        "Le parcours suffixe donne la notation polonaise inverse « 3 4 + 2 × », que l'on évalue avec une pile."
+      ],
+      "reponse": "Préfixe : × + 3 4 2 ; suffixe : 3 4 + 2 ×."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "taille et hauteur d'un arbre",
+      "enonce": "Écris une fonction récursive `hauteur(n)` qui renvoie la hauteur d'un arbre binaire non vide, avec la convention du cours (un arbre réduit à sa racine a la hauteur 0). Indication : on peut décider que l'arbre vide (None) a la hauteur −1. Vérifie sur l'arbre A, B, C, D, E de l'exercice précédent.",
+      "corrige": [
+        "Cas de base : `if n is None: return -1`.",
+        "Cas récursif : `return 1 + max(hauteur(n.gauche), hauteur(n.droite))`.",
+        "Une feuille donne 1 + max(−1, −1) = 0, conformément à la convention. Pour l'arbre A, B, C, D, E : le chemin le plus long (A → B → D ou A → C → E) a 2 arêtes, la hauteur vaut 2."
+      ],
+      "reponse": "`if n is None: return -1` puis `return 1 + max(hauteur(n.gauche), hauteur(n.droite))` ; hauteur 2."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "Écris une fonction récursive `rechercher(n, cle)` qui renvoie `True` si cle est présente dans l'ABR de racine n. Quelle est sa complexité si l'arbre est équilibré ? S'il est en forme de peigne ?",
+      "corrige": [
+        "Cas de base : arbre vide → False ; `n.valeur == cle` → True.",
+        "Si `cle < n.valeur`, on cherche à gauche : `return rechercher(n.gauche, cle)` ; sinon à droite.",
+        "On descend d'un niveau à chaque appel : le coût est proportionnel à la hauteur, soit O(log n) pour un arbre équilibré et O(n) pour un peigne."
+      ],
+      "reponse": "Recherche guidée gauche/droite ; O(log n) si l'arbre est équilibré, O(n) dans le pire cas (peigne)."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "Écris une fonction récursive `inserer(n, cle)` qui insère une clé dans un ABR et renvoie la racine de l'arbre modifié. Insère 5 puis 9 dans l'arbre de racine 8 (gauche 3 ayant pour enfants 1 et 6 ; droite 10), puis donne le parcours infixe.",
+      "corrige": [
+        "Si l'arbre est vide, on renvoie un nouveau nœud : `return Noeud(cle)`.",
+        "Sinon, si `cle < n.valeur`, on insère à gauche : `n.gauche = inserer(n.gauche, cle)` ; sinon à droite. Puis `return n`.",
+        "5 : 5 < 8, 5 > 3, 5 < 6 → enfant gauche de 6. 9 : 9 > 8, 9 < 10 → enfant gauche de 10. Infixe : 1, 3, 5, 6, 8, 9, 10."
+      ],
+      "reponse": "Infixe après insertions : 1, 3, 5, 6, 8, 9, 10."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "On considère l'arbre binaire de recherche suivant : racine 8 ; 8 a pour enfants 3 (gauche) et 10 (droite) ; 3 a pour enfants 1 (gauche) et 6 (droite) ; 6 a pour enfants 4 (gauche) et 7 (droite) ; 10 n'a qu'un enfant droit, 14 ; 14 n'a qu'un enfant gauche, 13. Où se trouve la plus petite clé d'un ABR ? Et la plus grande ? Donne-les pour cet arbre en indiquant le chemin suivi.",
+      "corrige": [
+        "Toutes les clés plus petites qu'un nœud sont à sa gauche : la plus petite clé s'obtient en descendant toujours à gauche depuis la racine.",
+        "8 → 3 → 1 (1 n'a pas d'enfant gauche) : le minimum est 1.",
+        "De même, en descendant toujours à droite : 8 → 10 → 14 (14 n'a pas d'enfant droit) : le maximum est 14."
+      ],
+      "reponse": "Minimum 1 (8 → 3 → 1) ; maximum 14 (8 → 10 → 14)."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "liste chaînée",
+      "enonce": "Écris une fonction `longueur(tete)` qui renvoie le nombre de cellules d'une liste chaînée (classe `Cellule` de l'exercice précédent), puis une fonction `ieme(tete, i)` qui renvoie la valeur de la cellule d'indice i. Quelle est la complexité de `ieme`, comparée à `t[i]` pour une liste Python ?",
+      "corrige": [
+        "`longueur` : on suit les références avec un compteur, `n = 0`, puis `while c is not None: n = n + 1; c = c.suivante`.",
+        "`ieme` : on avance i fois depuis la tête (`for k in range(i): c = c.suivante`) puis on renvoie `c.valeur`.",
+        "`ieme` coûte O(i), donc O(n) au pire, alors que `t[i]` sur un tableau est en O(1). En revanche, l'insertion en tête est en O(1) pour la liste chaînée."
+      ],
+      "reponse": "Parcours avec un compteur ; `ieme` en O(n) contre O(1) pour `t[i]`."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "pile (LIFO)",
+      "enonce": "La notation polonaise inverse écrit l'opérateur après ses deux opérandes : « 3 4 + 2 * » signifie (3 + 4) × 2. On l'évalue avec une pile : un nombre est empilé ; un opérateur dépile deux nombres, calcule et empile le résultat. Qu'affiche ce programme ?\n\n```python\ndef evaluer(expr):\n    pile = []\n    for jeton in expr.split():\n        if jeton in \"+-*\":\n            b = pile.pop()\n            a = pile.pop()\n            if jeton == \"+\":\n                pile.append(a + b)\n            elif jeton == \"-\":\n                pile.append(a - b)\n            else:\n                pile.append(a * b)\n        else:\n            pile.append(int(jeton))\n    return pile.pop()\n\nprint(evaluer(\"3 4 + 2 *\"), evaluer(\"5 1 2 + 4 * + 3 -\"))\n```",
+      "corrige": [
+        "« 3 4 + 2 * » : pile [3, 4] ; + → [7] ; 2 → [7, 2] ; * → [14].",
+        "« 5 1 2 + 4 * + 3 - » : [5, 1, 2] ; + → [5, 3] ; 4 → [5, 3, 4] ; * → [5, 12] ; + → [17] ; 3 → [17, 3] ; − → [14].",
+        "L'ordre de dépilement compte : b est dépilé en premier, puis a, et on calcule a − b."
+      ],
+      "reponse": "`14 14`"
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "file (FIFO)",
+      "enonce": "On simule une file d'attente à un guichet : à chaque minute, un client arrive (enfilé) et, une minute sur deux (aux minutes paires 0, 2, 4…), le guichet sert le premier client. Qu'affiche le programme ?\n\n```python\nfrom collections import deque\nf = deque()\nfor minute in range(6):\n    f.append(\"client\" + str(minute))\n    if minute % 2 == 0:\n        f.popleft()\nprint(len(f), f[0])\n```",
+      "corrige": [
+        "Minute 0 : client0 arrive puis est servi → file vide. Minute 1 : client1 arrive → [client1].",
+        "Minute 2 : client2 arrive, client1 est servi → [client2]. Minute 3 : [client2, client3]. Minute 4 : client4 arrive, client2 servi → [client3, client4].",
+        "Minute 5 : client5 arrive → [client3, client4, client5] : 3 clients, client3 en tête."
+      ],
+      "reponse": "`3 client3`"
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "type abstrait et implémentation",
+      "enonce": "Pour chaque besoin, choisis la structure la plus adaptée parmi pile, file, liste chaînée, arbre binaire de recherche : a) annuler les dernières actions d'un éditeur (Ctrl+Z) ; b) traiter des demandes dans l'ordre d'arrivée ; c) rechercher rapidement un mot dans un dictionnaire qui change souvent ; d) insérer très souvent des éléments en tête d'une séquence.",
+      "corrige": [
+        "a) On annule d'abord la dernière action : pile (LIFO).",
+        "b) Le premier arrivé est servi en premier : file (FIFO).",
+        "c) Un ABR (équilibré) permet recherche et insertion rapides. d) Une liste chaînée insère en tête en temps constant."
+      ],
+      "reponse": "a) pile ; b) file ; c) ABR ; d) liste chaînée."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "taille et hauteur d'un arbre",
+      "enonce": "Écris une fonction récursive `nb_feuilles(n)` qui compte les feuilles d'un arbre binaire (classe `Noeud` du cours). Vérifie-la sur l'ABR de racine 8 décrit plus haut (feuilles 1, 4, 7, 13).",
+      "corrige": [
+        "Cas de base : arbre vide → 0.",
+        "Si le nœud n'a ni enfant gauche ni enfant droit, c'est une feuille → 1.",
+        "Sinon : `return nb_feuilles(n.gauche) + nb_feuilles(n.droite)`. Pour l'ABR de racine 8, on obtient 4."
+      ],
+      "reponse": "Cas vide → 0, feuille → 1, sinon somme des deux sous-arbres ; résultat 4."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "pile (LIFO)",
+      "enonce": "On simule les boutons « précédent » et « suivant » d'un navigateur avec deux piles. Qu'affiche le programme ?\n\n```python\nprecedent = []\nsuivant = []\npage = \"accueil\"\n\ndef visiter(p):\n    global page\n    precedent.append(page)\n    page = p\n    suivant.clear()\n\ndef retour():\n    global page\n    suivant.append(page)\n    page = precedent.pop()\n\ndef avancer():\n    global page\n    precedent.append(page)\n    page = suivant.pop()\n\nvisiter(\"actus\")\nvisiter(\"sport\")\nretour()\nretour()\navancer()\nprint(page, precedent, suivant)\n```",
+      "corrige": [
+        "Après les deux visites : page sport, precedent = [accueil, actus].",
+        "Premier retour : sport est empilé dans suivant, page = actus. Second retour : actus empilé dans suivant, page = accueil, precedent vide.",
+        "avancer : accueil est empilé dans precedent, page = actus (sommet de suivant), il reste [sport] dans suivant."
+      ],
+      "reponse": "`actus ['accueil'] ['sport']`"
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "file (FIFO)",
+      "enonce": "On implémente une file avec deux piles : on enfile dans la pile `entree` ; pour défiler, si la pile `sortie` est vide, on y transvase tous les éléments de `entree` (en les dépilant un à un), puis on dépile `sortie`. Qu'affiche ce programme ? Pourquoi le comportement est-il bien FIFO ?\n\n```python\nentree, sortie = [], []\n\ndef enfiler(x):\n    entree.append(x)\n\ndef defiler():\n    if sortie == []:\n        while entree != []:\n            sortie.append(entree.pop())\n    return sortie.pop()\n\nenfiler(1); enfiler(2); enfiler(3)\na = defiler()\nenfiler(4)\nprint(a, defiler(), defiler(), defiler())\n```",
+      "corrige": [
+        "Le transvasement inverse l'ordre : entree = [1, 2, 3] devient sortie = [3, 2, 1], dont le sommet est 1, le premier entré.",
+        "defiler → 1 ; enfiler(4) va dans entree. Puis defiler → 2, puis 3 (sortie n'est pas encore vide).",
+        "sortie est vide : on transvase [4] et on défile 4. Les éléments sortent dans leur ordre d'arrivée."
+      ],
+      "reponse": "`1 2 3 4`"
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "arbre binaire de recherche (ABR)",
+      "enonce": "Écris une fonction `est_abr(n, mini, maxi)` qui vérifie qu'un arbre binaire est un ABR, en imposant que toutes les clés du sous-arbre de racine n soient strictement comprises entre mini et maxi (on l'appelle avec `est_abr(racine, float(\"-inf\"), float(\"inf\"))`). Pourquoi ne suffit-il pas de comparer chaque nœud à ses enfants directs ?",
+      "corrige": [
+        "Cas de base : un arbre vide est un ABR. Sinon, la clé doit vérifier `mini < n.valeur < maxi`.",
+        "On vérifie ensuite récursivement `est_abr(n.gauche, mini, n.valeur)` et `est_abr(n.droite, n.valeur, maxi)`.",
+        "Comparer seulement aux enfants directs ne suffit pas : dans l'arbre de racine 5, de gauche 2 et d'enfant droit de 2 égal à 6, chaque nœud est bien placé par rapport à ses enfants, mais 6 > 5 se trouve à gauche de 5."
+      ],
+      "reponse": "Bornes mini/maxi transmises récursivement ; la propriété porte sur tout le sous-arbre (contre-exemple : 6 à droite de 2, sous la racine 5)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "taille et hauteur d'un arbre",
+      "enonce": "Un arbre binaire de hauteur h (convention : la racine seule a la hauteur 0) contient au plus combien de nœuds ? Déduis-en la hauteur minimale d'un arbre binaire contenant 1 000 nœuds, et explique l'intérêt d'un ABR équilibré.",
+      "corrige": [
+        "Au niveau k, il y a au plus 2^k nœuds : au total au plus 1 + 2 + 4 + … + 2^h = 2^(h + 1) − 1 nœuds.",
+        "Pour 1 000 nœuds : 2^(h + 1) − 1 ⩾ 1 000 impose 2^(h + 1) ⩾ 1 001, soit h + 1 ⩾ 10, donc h ⩾ 9 (2^10 − 1 = 1 023).",
+        "Dans un ABR équilibré de 1 000 clés, une recherche fait donc une dizaine de comparaisons, comme la dichotomie, au lieu de 1 000 au pire pour un peigne."
+      ],
+      "reponse": "Au plus 2^(h + 1) − 1 nœuds ; hauteur minimale 9 pour 1 000 nœuds (environ 10 comparaisons par recherche)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "parcours d'arbre binaire",
+      "enonce": "On parcourt un arbre binaire « en largeur » (niveau par niveau, de gauche à droite) avec une file. Qu'affiche ce programme pour l'arbre de racine 8 (gauche 3 ayant pour enfants 1 et 6 ; droite 10 ayant pour enfant droit 14) ?\n\n```python\nclass Noeud:\n    def __init__(self, valeur, gauche=None, droite=None):\n        self.valeur = valeur\n        self.gauche = gauche\n        self.droite = droite\n\nfrom collections import deque\ndef largeur(racine):\n    res = []\n    f = deque([racine])\n    while f:\n        n = f.popleft()\n        res.append(n.valeur)\n        if n.gauche is not None:\n            f.append(n.gauche)\n        if n.droite is not None:\n            f.append(n.droite)\n    return res\n\na = Noeud(8, Noeud(3, Noeud(1), Noeud(6)), Noeud(10, None, Noeud(14)))\nprint(largeur(a))\n```",
+      "corrige": [
+        "La file fait sortir les nœuds dans l'ordre où ils ont été découverts : on traite le niveau 0, puis le niveau 1, puis le niveau 2.",
+        "Niveau 0 : 8 ; niveau 1 : 3, 10 ; niveau 2 : 1, 6, 14.",
+        "C'est le même principe que le parcours en largeur d'un graphe."
+      ],
+      "reponse": "`[8, 3, 10, 1, 6, 14]`"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "liste chaînée",
+      "enonce": "Écris une fonction `supprimer_tete(tete)` qui supprime la première cellule d'une liste chaînée et renvoie la nouvelle tête, puis une fonction `ajouter_fin(tete, x)` qui ajoute x à la fin. Compare leurs complexités. Sur la liste 3 → 12 → 5, que donne `supprimer_tete` puis `ajouter_fin(…, 7)` ?",
+      "corrige": [
+        "`supprimer_tete` : `return tete.suivante` (l'ancienne première cellule n'est plus référencée) : O(1).",
+        "`ajouter_fin` : il faut parcourir la liste jusqu'à la dernière cellule (`while c.suivante is not None`), puis faire `c.suivante = Cellule(x)` : O(n).",
+        "3 → 12 → 5 devient 12 → 5, puis 12 → 5 → 7."
+      ],
+      "reponse": "12 → 5 → 7 ; suppression en tête en O(1), ajout en fin en O(n)."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "type abstrait et implémentation",
+      "enonce": "Implémente une classe `PileChainee` ayant les mêmes méthodes que `Pile` (est_vide, empiler, depiler), mais réalisée avec des cellules chaînées (classe `Cellule`) : le sommet est la tête de la liste chaînée. Vérifie qu'en empilant 1, 2, 3 puis en dépilant trois fois, on obtient 3, 2, 1.",
+      "corrige": [
+        "L'attribut `tete` vaut None au départ ; `est_vide` renvoie `self.tete is None`.",
+        "empiler : `self.tete = Cellule(x, self.tete)` (insertion en tête, O(1)).",
+        "depiler : on mémorise `v = self.tete.valeur`, puis `self.tete = self.tete.suivante` et on renvoie v (O(1)). Le comportement LIFO est le même qu'avec la liste Python : 3, 2, 1."
+      ],
+      "reponse": "empiler : `self.tete = Cellule(x, self.tete)` ; depiler : lire la tête puis avancer ; on obtient 3, 2, 1."
     }
   ]
 }
