@@ -441,9 +441,9 @@ def gen_1_energie_electrique():
           ["$\\Delta t = 2 \\times 60 + 30 = 150\\ \\mathrm{s}$.", f"$E = 2\\,000 \\times 150 = {val(E, 'J')}$.",
            f"$E = \\dfrac{{{num(E)}}}{{3{{,}}6\\times 10^{{6}}}} = {val(E / 3.6e6, 'kWh')}$."], f"${val(E, 'J')}$ soit ${val(E / 3.6e6, 'kWh')}$")
     kwh = 8.0 * 5.0 * 365 / 1000
-    L.add("probleme", "energie", "Une lampe à LED de $8{,}0\\ \\mathrm{W}$ reste allumée 5,0 h par jour pendant un an (365 jours). Calculer l'énergie consommée en kWh et son coût à 0,25 € le kWh.",
+    L.add("probleme", "energie", "Une lampe à LED de $8{,}0\\ \\mathrm{W}$ reste allumée 5,0 h par jour pendant un an (365 jours). Calculer l'énergie consommée en kWh et son coût à 0,20 € le kWh.",
           [f"Durée : $5{{,}}0 \\times 365 = {ex(5 * 365)}\\ \\mathrm{{h}}$.", f"$E = 8{{,}}0\\times 10^{{-3}}\\ \\mathrm{{kW}} \\times {ex(5 * 365)}\\ \\mathrm{{h}} = {val(kwh, 'kWh')}$.",
-           f"Coût : ${num(kwh)} \\times 0{{,}}25 = {euros(kwh * 0.25)}$ €."], f"${val(kwh, 'kWh')}$, environ ${euros(kwh * 0.25)}$ €")
+           f"Coût : ${num(kwh)} \\times 0{{,}}20 = {euros(kwh * 0.20)}$ €."], f"${val(kwh, 'kWh')}$, environ ${euros(kwh * 0.20)}$ €")
     L.add("application", "energie", "Convertir $5{,}4\\times 10^{7}\\ \\mathrm{J}$ en kilowattheures.",
           ["$1\\ \\mathrm{kWh} = 3{,}6\\times 10^{6}\\ \\mathrm{J}$.", f"$E = \\dfrac{{5{{,}}4\\times 10^{{7}}}}{{3{{,}}6\\times 10^{{6}}}} = {val(5.4e7 / 3.6e6, 'kWh', 2)}$."],
           f"${val(5.4e7 / 3.6e6, 'kWh', 2)}$")
