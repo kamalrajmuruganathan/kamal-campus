@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Algorithme et programme",
       "enonce": "Quelle est la différence entre un algorithme et un programme ? Dans quel ordre le robot exécute-t-il les instructions ?",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Structures de base",
       "enonce": "Nomme les trois structures de base d'un programme et explique en une phrase ce que fait chacune.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "Variable",
       "enonce": "Qu'est-ce qu'une variable en programmation ? Donne un exemple d'utilisation dans un jeu.",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Boucle ou condition",
       "enonce": "Un camarade confond boucle et condition. Explique la différence, puis indique laquelle est utilisée dans chaque cas : a) « répéter 4 fois : avancer » ; b) « si un obstacle est détecté, alors tourner ».",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "Robot suiveur de ligne",
       "enonce": "Un robot doit suivre une ligne noire : « si le capteur voit la ligne, alors avancer ; sinon tourner pour la retrouver », le tout répété en boucle. Relie ce programme à la chaîne d'information (acquérir, traiter, agir) en nommant les composants, puis explique pourquoi l'instruction est répétée en boucle.",
       "corrige": [
@@ -73,9 +73,9 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "Boucle infinie et débogage",
-      "enonce": "Un élève écrit : « tant que la distance est supérieure à 10 cm : avancer », mais son robot n'avance pas et ne s'arrête jamais dans un cas particulier. Explique ce qu'est une boucle « tant que », pourquoi oublier la condition d'arrêt provoque une boucle infinie, et en quoi consiste le débogage pour corriger ce type d'erreur.",
+      "enonce": "Un élève écrit : « tant que la distance est supérieure à 10 cm : avancer », mais, dans un cas particulier, son robot ne s'arrête jamais. Explique ce qu'est une boucle « tant que », pourquoi oublier la condition d'arrêt provoque une boucle infinie, et en quoi consiste le débogage pour corriger ce type d'erreur.",
       "corrige": [
         "Une boucle « tant que » répète des instructions tant qu'une condition reste vraie.",
         "Ici, tant que la distance mesurée est supérieure à 10 cm, le robot avance ; il doit s'arrêter quand la distance devient inférieure ou égale à 10 cm.",
@@ -87,7 +87,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "la séquence",
       "enonce": "Un robot doit exécuter dans l'ordre : avancer de 30 cm, tourner à droite, puis avancer de 30 cm. Comment appelle-t-on cet enchaînement et pourquoi l'ordre est-il important ?",
       "corrige": [
@@ -99,7 +99,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "les événements",
       "enonce": "Beaucoup de programmes réagissent à des événements. (a) Qu'est-ce qu'un événement ? (b) Donne deux exemples d'événements qui peuvent déclencher un programme.",
       "corrige": [
@@ -110,7 +110,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "décomposer un problème",
       "enonce": "Pour programmer une tâche compliquée, on la décompose en tâches plus simples et on crée des blocs (fonctions) réutilisables. Explique l'intérêt de cette méthode.",
       "corrige": [
@@ -122,7 +122,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "programmer un robot qui évite les obstacles",
       "enonce": "Un robot doit avancer et éviter les obstacles grâce à un capteur de distance. Écris l'algorithme (boucle, condition, capteur, actionneurs) et explique comment éviter une boucle infinie non voulue.",
       "corrige": [
@@ -133,6 +133,452 @@
         "Une boucle « répéter indéfiniment » est voulue ici. Le danger de boucle infinie non voulue vient d'un « tant que » sans condition d'arrêt : il faut toujours prévoir une condition qui finit par devenir fausse."
       ],
       "reponse": "Répéter indéfiniment : [ SI distance < 10 cm ALORS tourner SINON avancer ] ; capteur de distance = entrée, moteurs = sortie. Pour éviter une boucle infinie non voulue, une boucle « tant que » doit avoir une condition d'arrêt qui finira par devenir fausse."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "algorithme et programme",
+      "enonce": "Complète : « Un programme est l'écriture d'un … dans un … compris par la machine. »",
+      "corrige": [
+        "L'algorithme est la suite ordonnée d'instructions.",
+        "Le programme l'écrit dans un langage comme Scratch ou Python."
+      ],
+      "reponse": "Un programme est l'écriture d'un algorithme dans un langage compris par la machine."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "boucle",
+      "enonce": "Cite les deux façons de répéter des instructions avec une boucle.",
+      "corrige": [
+        "On peut répéter un nombre de fois connu (« répéter 4 fois »).",
+        "On peut aussi répéter tant qu'une condition est vraie (« répéter jusqu'à… »)."
+      ],
+      "reponse": "Un nombre de fois connu, ou tant qu'une condition est vraie."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "programmer un robot",
+      "enonce": "Un robot perçoit, décide et agit. Associe chaque verbe à l'élément qui le réalise : capteurs, programme, actionneurs.",
+      "corrige": [
+        "Les capteurs perçoivent l'environnement.",
+        "Le programme décide ; les actionneurs agissent."
+      ],
+      "reponse": "Percevoir → capteurs ; décider → programme ; agir → actionneurs."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "débogage",
+      "enonce": "Comment appelle-t-on une erreur dans un programme ? Et l'action de la corriger ?",
+      "corrige": [
+        "Une erreur de programme s'appelle un bogue.",
+        "Tester, repérer et corriger les bogues, c'est le débogage."
+      ],
+      "reponse": "Un bogue ; le débogage."
+    },
+    {
+      "id": 15,
+      "difficulte": "decouverte",
+      "notion": "algorithme et programme",
+      "enonce": "Cite deux langages de programmation utilisés au collège ou au lycée.",
+      "corrige": [
+        "Le cours cite Scratch (langage par blocs) et Python."
+      ],
+      "reponse": "Scratch et Python."
+    },
+    {
+      "id": 16,
+      "difficulte": "decouverte",
+      "notion": "événements",
+      "enonce": "Dans Scratch, quel événement lance souvent un programme ?",
+      "corrige": [
+        "Le programme attend un événement pour démarrer.",
+        "Le plus courant est « quand le drapeau vert est cliqué »."
+      ],
+      "reponse": "« Quand le drapeau vert est cliqué »."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "variable",
+      "enonce": "La variable « score » vaut 0. Le programme exécute : « ajouter 5 à score » ; « ajouter 3 à score » ; « ajouter 5 à score ». Que vaut « score » à la fin ?",
+      "corrige": [
+        "On suit les instructions dans l'ordre : 0 + 5 = 5.",
+        "5 + 3 = 8, puis 8 + 5 = 13."
+      ],
+      "reponse": "13."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "boucle",
+      "enonce": "Un robot exécute « répéter 5 fois : avancer de 20 cm ». Quelle distance parcourt-il ?",
+      "corrige": [
+        "La boucle répète 5 fois l'avance de 20 cm.",
+        "5 × 20 = 100 cm."
+      ],
+      "reponse": "100 cm, soit 1 m."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "condition",
+      "enonce": "Programme : « si la distance mesurée < 15 cm, alors s'arrêter, sinon avancer ». Que fait le robot si le capteur mesure 40 cm ? Et 12 cm ?",
+      "corrige": [
+        "40 cm n'est pas inférieur à 15 cm : la condition est fausse, le robot avance.",
+        "12 cm < 15 cm : la condition est vraie, le robot s'arrête."
+      ],
+      "reponse": "40 cm : il avance ; 12 cm : il s'arrête."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "séquence",
+      "enonce": "Un robot regarde vers le nord. Il exécute : « avancer de 1 m ; tourner à droite de 90° ; avancer de 2 m ». Dans quelle direction regarde-t-il à la fin ?",
+      "corrige": [
+        "Au départ il regarde vers le nord.",
+        "Un quart de tour à droite depuis le nord le fait regarder vers l'est ; la dernière avance ne change pas sa direction."
+      ],
+      "reponse": "Vers l'est."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "programmer un robot",
+      "enonce": "Classe ces éléments d'un robot en capteurs ou actionneurs : capteur de ligne, moteur de roue, capteur de contact, buzzer, LED, capteur de distance.",
+      "corrige": [
+        "Les capteurs perçoivent : capteur de ligne, capteur de contact, capteur de distance.",
+        "Les actionneurs agissent : moteur de roue, buzzer, LED."
+      ],
+      "reponse": "Capteurs : ligne, contact, distance ; actionneurs : moteur de roue, buzzer, LED."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "variable",
+      "enonce": "Cite trois exemples de valeurs qu'une variable peut retenir dans un programme de robot ou de jeu.",
+      "corrige": [
+        "Une variable retient une valeur que le programme peut lire et modifier.",
+        "Le cours cite un score, un compteur, une distance mesurée."
+      ],
+      "reponse": "Par exemple : un score, un compteur, une distance mesurée."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "événements",
+      "enonce": "Un programme commence par « quand la touche espace est pressée ». Que fait-il tant que personne n'appuie sur la touche ?",
+      "corrige": [
+        "Le programme attend l'événement.",
+        "Les instructions associées ne s'exécutent que lorsque la touche est pressée."
+      ],
+      "reponse": "Il attend : il ne fait rien tant que la touche n'est pas pressée."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "algorithme et programme",
+      "enonce": "Corrige l'erreur : « Un algorithme et un programme, c'est exactement la même chose. »",
+      "corrige": [
+        "L'algorithme est la suite ordonnée d'instructions, qu'on peut écrire en français.",
+        "Le programme est sa traduction dans un langage compris par la machine."
+      ],
+      "reponse": "Faux : l'algorithme est la suite d'instructions ; le programme l'écrit dans un langage compris par la machine."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "boucle",
+      "enonce": "Un robot doit tracer un carré de 50 cm de côté. Écris le programme avec une boucle.",
+      "corrige": [
+        "Un carré a 4 côtés égaux et 4 angles droits.",
+        "On répète 4 fois : avancer de 50 cm, puis tourner de 90°."
+      ],
+      "reponse": "Répéter 4 fois : [ avancer de 50 cm ; tourner de 90° ]."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "boucle",
+      "enonce": "Pour tracer un triangle équilatéral, un robot exécute « répéter 3 fois : [ avancer de 40 cm ; tourner de … ° ] ». De combien de degrés doit-il tourner ? Justifie.",
+      "corrige": [
+        "Pour revenir dans sa direction de départ, le robot fait un tour complet (360°) en 3 virages.",
+        "360 ÷ 3 = 120°."
+      ],
+      "reponse": "120°, car 360° ÷ 3 = 120°."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "variable",
+      "enonce": "Un compteur part de 0. Le programme exécute « répéter 6 fois : ajouter 2 au compteur ». Que vaut le compteur à la fin ?",
+      "corrige": [
+        "À chaque tour de boucle, on ajoute 2.",
+        "6 × 2 = 12."
+      ],
+      "reponse": "12."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "variable",
+      "enonce": "La variable « vies » vaut 3 au début d'un jeu. Le joueur touche deux fois un ennemi (« retirer 1 à vies » à chaque fois), puis ramasse un cœur (« ajouter 1 à vies »). Combien de vies lui reste-t-il ?",
+      "corrige": [
+        "3 − 1 − 1 = 1.",
+        "1 + 1 = 2."
+      ],
+      "reponse": "2 vies."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "Un robot suiveur de ligne a deux capteurs, à gauche et à droite. Règle : « si le capteur gauche voit la ligne, alors tourner à gauche ; sinon, si le capteur droit voit la ligne, alors tourner à droite ; sinon, avancer ». Que fait le robot si seul le capteur droit voit la ligne ?",
+      "corrige": [
+        "Le premier test (capteur gauche) est faux.",
+        "Le second test (capteur droit) est vrai : le robot tourne à droite."
+      ],
+      "reponse": "Il tourne à droite."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "condition",
+      "enonce": "Écris une condition pour qu'un robot allume sa LED quand la luminosité mesurée est inférieure à 30 (sur une échelle de 0 à 100), et l'éteigne sinon.",
+      "corrige": [
+        "On compare la valeur du capteur de lumière au seuil de 30.",
+        "On utilise « si… alors… sinon… »."
+      ],
+      "reponse": "Si la luminosité < 30, alors allumer la LED, sinon éteindre la LED."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "séquence",
+      "enonce": "Deux programmes : (A) « allumer la LED ; attendre 2 s ; éteindre la LED » ; (B) « éteindre la LED ; attendre 2 s ; allumer la LED ». La LED est éteinte au départ. Que voit-on dans chaque cas ?",
+      "corrige": [
+        "(A) La LED s'allume, reste allumée 2 s, puis s'éteint.",
+        "(B) La LED reste éteinte 2 s, puis s'allume et reste allumée."
+      ],
+      "reponse": "(A) la LED clignote une fois pendant 2 s ; (B) elle reste éteinte 2 s puis s'allume et le reste."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "programmer un robot",
+      "enonce": "Un robot aspirateur cogne un meuble. Quel capteur détecte le choc ? Que décide le programme ? Quel actionneur agit ?",
+      "corrige": [
+        "Un capteur de contact (pare-chocs) détecte le choc.",
+        "Le programme décide de reculer puis de tourner.",
+        "Les moteurs des roues exécutent le mouvement."
+      ],
+      "reponse": "Capteur de contact ; décision : reculer et tourner ; actionneurs : les moteurs des roues."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "événements",
+      "enonce": "Écris deux scripts Scratch pour un lutin : l'un fait dire « Bonjour » quand le drapeau vert est cliqué, l'autre le fait sauter quand la flèche haut est pressée.",
+      "corrige": [
+        "Chaque script commence par l'événement qui le déclenche.",
+        "Puis on place l'instruction associée."
+      ],
+      "reponse": "Quand le drapeau vert est cliqué : dire « Bonjour » ; quand la flèche haut est pressée : sauter."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "débogage",
+      "enonce": "Un élève veut que son robot trace un carré, mais il écrit « répéter 4 fois : [ avancer de 50 cm ; tourner de 60° ] ». Le robot ne revient pas à son point de départ. Trouve le bogue et corrige-le.",
+      "corrige": [
+        "Pour un carré, chaque angle est droit : il faut tourner de 90°.",
+        "Avec 60°, le robot ne fait que 4 × 60° = 240° : il ne referme pas la figure."
+      ],
+      "reponse": "Le bogue est l'angle : il faut tourner de 90° et non de 60°."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "décomposer un problème",
+      "enonce": "Décompose la tâche « le robot va chercher un objet et le rapporte » en au moins trois sous-tâches.",
+      "corrige": [
+        "On découpe la tâche en étapes plus simples à programmer.",
+        "Exemple de réponse : aller jusqu'à l'objet ; saisir l'objet ; faire demi-tour ; revenir au point de départ ; déposer l'objet."
+      ],
+      "reponse": "Exemple : aller jusqu'à l'objet → saisir l'objet → revenir → déposer l'objet."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "boucle",
+      "enonce": "Programme : « distance ← 50 ; tant que distance > 10 : avancer de 10 cm ; distance ← distance − 10 ». Combien de fois le robot avance-t-il ? Que vaut « distance » à la fin ?",
+      "corrige": [
+        "Valeurs successives de distance avant chaque test : 50, 40, 30, 20 (vrai, le robot avance), puis 10.",
+        "À 10, la condition « distance > 10 » est fausse : la boucle s'arrête.",
+        "Le robot a donc avancé 4 fois."
+      ],
+      "reponse": "4 fois ; distance vaut 10 à la fin."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "boucle",
+      "enonce": "Corrige ce programme qui tourne sans fin : « compteur ← 0 ; tant que compteur < 5 : faire clignoter la LED ». Explique l'erreur.",
+      "corrige": [
+        "La condition « compteur < 5 » reste toujours vraie, car compteur n'est jamais modifié.",
+        "Il faut augmenter le compteur dans la boucle pour que la condition finisse par devenir fausse."
+      ],
+      "reponse": "Il faut ajouter « compteur ← compteur + 1 » dans la boucle ; sinon la condition reste vraie et la boucle est infinie."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "variable",
+      "enonce": "Programme : « x ← 4 ; répéter 3 fois : x ← x × 2 ». Que vaut x à la fin ?",
+      "corrige": [
+        "Tour 1 : 4 × 2 = 8.",
+        "Tour 2 : 8 × 2 = 16 ; tour 3 : 16 × 2 = 32."
+      ],
+      "reponse": "32."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "variable",
+      "enonce": "Un robot compte les objets qui passent devant son capteur : « quand le capteur détecte un objet : ajouter 1 à nombre ». Si « nombre » vaut 0 au départ et que 17 objets passent, que vaut « nombre » ? Pourquoi faut-il une variable ici ?",
+      "corrige": [
+        "Chaque détection ajoute 1 : 0 + 17 = 17.",
+        "La variable retient le nombre au fil du temps ; sans elle, le programme oublierait les objets déjà comptés."
+      ],
+      "reponse": "17 ; la variable mémorise le total au fur et à mesure."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "condition",
+      "enonce": "Un robot mesure successivement les distances 60 cm, 25 cm, 18 cm et 8 cm. Règle : « si distance < 10 cm, alors s'arrêter ; sinon, si distance < 20 cm, alors ralentir ; sinon, avancer vite ». Que fait-il à chaque mesure ?",
+      "corrige": [
+        "60 cm : ni < 10 ni < 20 : avancer vite. 25 cm : avancer vite.",
+        "18 cm : pas < 10 mais < 20 : ralentir.",
+        "8 cm : < 10 : s'arrêter."
+      ],
+      "reponse": "60 cm : vite ; 25 cm : vite ; 18 cm : ralentir ; 8 cm : s'arrêter."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "programmer un robot",
+      "enonce": "Un robot avance à 20 cm par seconde. Programme : « avancer pendant 3 s ; tourner ; avancer pendant 2 s ». Quelle distance totale parcourt-il en ligne droite (on ne compte pas le virage) ?",
+      "corrige": [
+        "Première ligne droite : 20 × 3 = 60 cm.",
+        "Seconde ligne droite : 20 × 2 = 40 cm.",
+        "Total : 60 + 40 = 100 cm."
+      ],
+      "reponse": "100 cm, soit 1 m."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "débogage",
+      "enonce": "Un robot devait s'arrêter devant un mur, mais il le percute. Le programme : « répéter indéfiniment : avancer ; si distance < 5 cm, alors s'arrêter ». Le robot va vite. Propose une hypothèse sur le bogue et une correction à tester.",
+      "corrige": [
+        "Le seuil de 5 cm est trop petit : le robot, lancé, n'a pas le temps de s'arrêter.",
+        "Correction à tester : augmenter le seuil (par exemple 20 cm) ou réduire la vitesse, puis refaire un essai."
+      ],
+      "reponse": "Le seuil est trop court pour la vitesse : on augmente le seuil (par exemple 20 cm) ou on ralentit, puis on reteste."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "décomposer un problème",
+      "enonce": "Un programme répète trois fois la même suite de 8 blocs pour faire danser un lutin à trois moments différents. Comment le rendre plus court et plus clair ?",
+      "corrige": [
+        "On regroupe les 8 blocs dans un bloc personnalisé (une fonction), par exemple « danser ».",
+        "On appelle ensuite « danser » aux trois endroits : le programme est plus court et une correction se fait à un seul endroit."
+      ],
+      "reponse": "Créer un bloc (fonction) « danser » contenant les 8 blocs, et l'appeler trois fois."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "événements",
+      "enonce": "Un robot doit démarrer quand on appuie sur son bouton A et s'arrêter quand on appuie sur le bouton B. Écris les deux scripts à base d'événements.",
+      "corrige": [
+        "Chaque bouton est un événement qui déclenche un script.",
+        "Bouton A : mettre les moteurs en marche ; bouton B : les arrêter."
+      ],
+      "reponse": "Quand le bouton A est pressé : démarrer les moteurs ; quand le bouton B est pressé : arrêter les moteurs."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "boucle",
+      "enonce": "Un robot doit tracer un hexagone régulier de 30 cm de côté. Écris le programme et calcule la longueur totale du tracé.",
+      "corrige": [
+        "Un hexagone a 6 côtés : on répète 6 fois.",
+        "Angle de rotation : 360° ÷ 6 = 60°.",
+        "Longueur : 6 × 30 = 180 cm."
+      ],
+      "reponse": "Répéter 6 fois : [ avancer de 30 cm ; tourner de 60° ] ; longueur totale : 180 cm."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "variable",
+      "enonce": "Un jeu donne 10 points par pièce ramassée et retire 25 points à chaque chute. Un joueur ramasse 12 pièces et chute 2 fois. Score de départ : 0. Calcule le score final et écris les deux instructions qui modifient la variable.",
+      "corrige": [
+        "Pièces : 12 × 10 = 120 points.",
+        "Chutes : 2 × 25 = 50 points retirés.",
+        "Score : 120 − 50 = 70."
+      ],
+      "reponse": "70 points ; instructions : « ajouter 10 à score » (pièce) et « retirer 25 à score » (chute)."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "programmer un robot",
+      "enonce": "Écris l'algorithme d'un robot de tri qui reçoit des balles : si le capteur de couleur voit une balle rouge, le bras la pousse à gauche ; sinon, à droite ; et il compte les balles rouges. Utilise une boucle, une condition et une variable.",
+      "corrige": [
+        "Le robot trie en permanence : boucle « répéter indéfiniment ».",
+        "Condition sur la couleur mesurée.",
+        "Une variable « rouges » compte les balles rouges."
+      ],
+      "reponse": "rouges ← 0 ; répéter indéfiniment : [ si couleur = rouge, alors pousser à gauche et ajouter 1 à rouges, sinon pousser à droite ]."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "débogage",
+      "enonce": "Lis le journal de tests : « Essai 1 : le robot tourne en rond. Cause : un moteur branché à l'envers. Essai 2 : il va droit mais ne s'arrête pas. Cause : seuil du capteur mal réglé. Essai 3 : tout fonctionne. » Combien de bogues ont été corrigés ? Quelle méthode cela illustre-t-il ?",
+      "corrige": [
+        "Deux bogues : le moteur inversé et le seuil mal réglé.",
+        "On teste, on repère, on corrige et on recommence : c'est le débogage par essais et améliorations successifs."
+      ],
+      "reponse": "Deux bogues ; cela illustre le débogage par essais successifs."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "décomposer un problème",
+      "enonce": "On veut programmer un robot livreur de courrier dans le collège. Décompose le problème en quatre sous-programmes et cite un capteur utile pour l'un d'eux.",
+      "corrige": [
+        "Exemple de réponse : 1) suivre le couloir ; 2) éviter les obstacles ; 3) s'arrêter devant la bonne salle ; 4) signaler sa présence (buzzer).",
+        "Capteur : un capteur de distance pour éviter les obstacles (ou un capteur de ligne pour suivre le couloir)."
+      ],
+      "reponse": "Exemple : suivre le couloir, éviter les obstacles, s'arrêter à la bonne salle, signaler son arrivée ; capteur de distance pour éviter les obstacles."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "condition",
+      "enonce": "Une barrière de parking robotisée compte les places libres dans une variable « places » (100 au départ). Écris ce qu'elle fait quand une voiture se présente à l'entrée, avec une condition.",
+      "corrige": [
+        "Si au moins une place est libre, on laisse entrer et on retire 1 à « places ».",
+        "Sinon, la barrière reste fermée (et on peut afficher « Complet »)."
+      ],
+      "reponse": "Si places > 0, alors lever la barrière et retirer 1 à places, sinon afficher « Complet » et laisser la barrière fermée."
     }
   ]
 }
