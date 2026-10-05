@@ -28,7 +28,7 @@ export const RTL = new Set(['ar']);
 
 const DICO = {
   fr: {
-    'app.sousTitre': 'Maths & Physique-Chimie — {n} chapitres, {q} questions',
+    'app.sousTitre': '{m} matières — {n} chapitres, {q} questions',
     'home.salut': 'Salut {prenom} 👋',
     'home.progression': 'Ma progression · {rang}',
     'home.xp': '{xp} XP · encore {r} pour le niveau {niv}',
@@ -70,7 +70,7 @@ const DICO = {
     'card.favoris.t': '⭐ Favoris', 'card.favoris.s': 'Tes chapitres marqués',
   },
   en: {
-    'app.sousTitre': 'Maths & Physics-Chemistry — {n} chapters, {q} questions',
+    'app.sousTitre': '{m} subjects — {n} chapters, {q} questions',
     'home.salut': 'Hi {prenom} 👋',
     'home.progression': 'My progress · {rang}',
     'home.xp': '{xp} XP · {r} more to level {niv}',
@@ -112,7 +112,7 @@ const DICO = {
     'card.favoris.t': '⭐ Favourites', 'card.favoris.s': 'Your bookmarked chapters',
   },
   es: {
-    'app.sousTitre': 'Mates y Física-Química — {n} capítulos, {q} preguntas',
+    'app.sousTitre': '{m} asignaturas — {n} capítulos, {q} preguntas',
     'home.salut': '¡Hola {prenom}! 👋',
     'home.progression': 'Mi progreso · {rang}',
     'home.xp': '{xp} XP · faltan {r} para el nivel {niv}',
@@ -154,7 +154,7 @@ const DICO = {
     'card.favoris.t': '⭐ Favoritos', 'card.favoris.s': 'Tus capítulos marcados',
   },
   it: {
-    'app.sousTitre': 'Matematica e Fisica-Chimica — {n} capitoli, {q} domande',
+    'app.sousTitre': '{m} materie — {n} capitoli, {q} domande',
     'home.salut': 'Ciao {prenom} 👋',
     'home.progression': 'I miei progressi · {rang}',
     'home.xp': '{xp} XP · ancora {r} per il livello {niv}',
@@ -196,7 +196,7 @@ const DICO = {
     'card.favoris.t': '⭐ Preferiti', 'card.favoris.s': 'I tuoi capitoli salvati',
   },
   ta: {
-    'app.sousTitre': 'கணிதம் & இயற்பியல்-வேதியியல் — {n} பாடங்கள், {q} கேள்விகள்',
+    'app.sousTitre': '{n} பாடங்கள், {q} கேள்விகள்',
     'home.salut': 'வணக்கம் {prenom} 👋',
     'home.progression': 'என் முன்னேற்றம் · {rang}',
     'home.xp': '{xp} XP · நிலை {niv}க்கு இன்னும் {r}',
@@ -238,7 +238,7 @@ const DICO = {
     'card.favoris.t': '⭐ பிடித்தவை', 'card.favoris.s': 'நீங்கள் சேமித்த பாடங்கள்',
   },
   pt: {
-    'app.sousTitre': 'Matemática e Física-Química — {n} capítulos, {q} perguntas',
+    'app.sousTitre': '{m} disciplinas — {n} capítulos, {q} perguntas',
     'home.salut': 'Olá {prenom} 👋',
     'home.progression': 'O meu progresso · {rang}',
     'home.xp': '{xp} XP · faltam {r} para o nível {niv}',
@@ -280,7 +280,7 @@ const DICO = {
     'card.favoris.t': '⭐ Favoritos', 'card.favoris.s': 'Os teus capítulos guardados',
   },
   de: {
-    'app.sousTitre': 'Mathe & Physik-Chemie — {n} Kapitel, {q} Fragen',
+    'app.sousTitre': '{m} Fächer — {n} Kapitel, {q} Fragen',
     'home.salut': 'Hallo {prenom} 👋',
     'home.progression': 'Mein Fortschritt · {rang}',
     'home.xp': '{xp} XP · noch {r} bis Level {niv}',
@@ -322,7 +322,7 @@ const DICO = {
     'card.favoris.t': '⭐ Favoriten', 'card.favoris.s': 'Deine gespeicherten Kapitel',
   },
   zh: {
-    'app.sousTitre': '数学与理化 — {n} 章，{q} 题',
+    'app.sousTitre': '{n} 章，{q} 题',
     'home.salut': '你好 {prenom} 👋',
     'home.progression': '我的进度 · {rang}',
     'home.xp': '{xp} XP · 还差 {r} 升到 {niv} 级',
@@ -364,7 +364,7 @@ const DICO = {
     'card.favoris.t': '⭐ 收藏', 'card.favoris.s': '你收藏的章节',
   },
   ar: {
-    'app.sousTitre': 'الرياضيات والفيزياء والكيمياء — {n} فصلًا، {q} سؤالًا',
+    'app.sousTitre': '{n} فصلًا، {q} سؤالًا',
     'home.salut': 'مرحبًا {prenom} 👋',
     'home.progression': 'تقدّمي · {rang}',
     'home.xp': '{xp} نقطة · باقٍ {r} للمستوى {niv}',

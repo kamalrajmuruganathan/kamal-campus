@@ -13,7 +13,8 @@ import { listerAmis } from '../cloud/social';
 import {
   monId, listerMesDefis, creerDefi, repondreDefi, refuserDefi, issueDefi, ecouterDefis,
 } from '../cloud/defis';
-import { construireQuestions, chapitresJouables, titreChapitre, NB_QUESTIONS_DEFI } from '../defisContenu';
+import { construireQuestions, chapitresJouables, classesJouables, titreChapitre, NB_QUESTIONS_DEFI } from '../defisContenu';
+import { useProgression } from '../progression/Contexte';
 
 const LETTRES = ['A', 'B', 'C', 'D', 'E', 'F'];
 const WEB = Platform.OS === 'web';
@@ -170,7 +171,12 @@ export default function Defis({ navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: C.fond }} edges={['bottom']}>
       <ScrollView contentContainerStyle={{ padding: t.espace.l, paddingBottom: WEB ? 144 : 96 }}>
         <Text style={{ color: C.texte, fontSize: t.police.titre, fontWeight: '700' }}>Défis</Text>
-        <Text style={{ color: C.attenue, fontSize: t.police.normale, marginTop: 2 }}>Provoque tes amis sur un chapitre 💪</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 2 }}>
+          <Text style={{ color: C.attenue, fontSize: t.police.normale, flex: 1 }}>Provoque tes amis sur un chapitre 💪</Text>
+          <Pressable onPress={() => navigation.navigate('Amis')} hitSlop={8}>
+            <Text style={{ color: C.accent, fontWeight: '700', fontSize: t.police.petite }}>👥 Mes amis ›</Text>
+          </Pressable>
+        </View>
 
         <View style={{ flexDirection: 'row', gap: 6, backgroundColor: C.surface, padding: 5, borderRadius: t.rayon.m, marginTop: t.espace.m }}>
           {[['jouer', 'À jouer'], ['envoyes', 'Envoyés'], ['termines', 'Terminés']].map(([k, lab]) => (
@@ -248,6 +254,7 @@ export default function Defis({ navigation }) {
       </Pressable>
 
       <ModalNouveau visible={nouveau} onClose={() => setNouveau(false)} t={t} amis={amis}
+        onAmis={() => { setNouveau(false); navigation.navigate('Amis'); }}
         onLancer={(amiId, chap) => {
           setNouveau(false);
           const raw = construireQuestions(chap.id, NB_QUESTIONS_DEFI);
@@ -351,17 +358,28 @@ function ResultatDuel({ d, moi, nomDe, t, onOk }) {
   );
 }
 
-function ModalNouveau({ visible, onClose, t, amis, onLancer }) {
+function ModalNouveau({ visible, onClose, t, amis, onLancer, onAmis }) {
   const C = t.couleur;
+  const { profil } = useProgression();
   const [amiId, setAmiId] = useState(null);
   const [chap, setChap] = useState(null);
   const [filtre, setFiltre] = useState('');
-  const chaps = useMemo(() => {
-    let l = [];
-    try { l = chapitresJouables() || []; } catch { l = []; }
-    const f = filtre.trim().toLowerCase();
-    return (f ? l.filter((c) => `${c.niv} ${c.nom}`.toLowerCase().includes(f)) : l).slice(0, 40);
-  }, [filtre]);
+  // Classe présélectionnée : celle choisie par l'élève sur l'accueil.
+  const [classe, setClasse] = useState(profil?.niveauParDefaut ?? null);
+  const [matiere, setMatiere] = useState(null);
+  const tous = useMemo(() => { try { return chapitresJouables() || []; } catch { return []; } }, []);
+  const classes = useMemo(() => { try { return classesJouables(); } catch { return []; } }, []);
+  const classeEff = classe && classes.some((c) => c.id === classe) ? classe : (classes[0]?.id ?? null);
+  const matieres = useMemo(() => {
+    const m = new Map();
+    for (const c of tous) if (c.niveau === classeEff && !m.has(c.matiere)) m.set(c.matiere, c.mat);
+    return [...m.entries()].map(([id, nom]) => ({ id, nom })).sort((x, y) => x.nom.localeCompare(y.nom, 'fr'));
+  }, [tous, classeEff]);
+  const f = filtre.trim().toLowerCase();
+  // Recherche par mot : sur toutes les classes. Sinon : classe → matière → chapitres.
+  const chaps = f
+    ? tous.filter((c) => `${c.niv} ${c.mat} ${c.nom}`.toLowerCase().includes(f)).slice(0, 60)
+    : (matiere ? tous.filter((c) => c.niveau === classeEff && c.matiere === matiere) : []);
 
   const champ = { borderColor: C.trait, borderWidth: 1, borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 10, color: C.texte, marginBottom: 8 };
   const chip = (on) => ({ borderWidth: 1, borderColor: on ? C.accent : C.trait, backgroundColor: on ? C.accent : 'transparent', borderRadius: t.rayon.m, paddingHorizontal: 12, paddingVertical: 8, marginRight: 8, marginBottom: 8 });
@@ -379,7 +397,7 @@ function ModalNouveau({ visible, onClose, t, amis, onLancer }) {
           <ScrollView>
             <Text style={{ color: C.attenue, fontSize: t.police.minuscule, fontWeight: '700', marginBottom: 8 }}>AMI</Text>
             {amis.length === 0 ? (
-              <Text style={{ color: C.attenue, fontSize: t.police.petite }}>Ajoute d'abord des amis pour les défier.</Text>
+              <Pressable onPress={onAmis}><Text style={{ color: C.accent, fontSize: t.police.petite, fontWeight: '700' }}>Ajoute d'abord des amis pour les défier › 👥 Mes amis</Text></Pressable>
             ) : (
               <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                 {amis.map((a) => (
@@ -390,18 +408,39 @@ function ModalNouveau({ visible, onClose, t, amis, onLancer }) {
               </View>
             )}
             <Text style={{ color: C.attenue, fontSize: t.police.minuscule, fontWeight: '700', marginTop: t.espace.m, marginBottom: 8 }}>CHAPITRE</Text>
-            <TextInput value={filtre} onChangeText={setFiltre} placeholder="Filtrer un chapitre…" placeholderTextColor={C.attenue} style={champ} autoCapitalize="none" />
-            {chaps.length === 0 ? (
-              <Text style={{ color: C.attenue, fontSize: t.police.petite }}>Liste des chapitres à brancher (voir defisContenu.js).</Text>
+            <TextInput value={filtre} onChangeText={setFiltre} placeholder="Rechercher un chapitre (toutes classes)…" placeholderTextColor={C.attenue} style={champ} autoCapitalize="none" />
+            {!f && (
+              <>
+                <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginBottom: 6 }}>1. La classe</Text>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+                  {classes.map((c) => (
+                    <Pressable key={c.id} onPress={() => { setClasse(c.id); setMatiere(null); setChap(null); }} style={chip(classeEff === c.id)}>
+                      <Text style={chipTxt(classeEff === c.id)}>{c.nom}</Text>
+                    </Pressable>
+                  ))}
+                </View>
+                <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 4, marginBottom: 6 }}>2. La matière</Text>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+                  {matieres.map((m) => (
+                    <Pressable key={m.id} onPress={() => { setMatiere(m.id); setChap(null); }} style={chip(matiere === m.id)}>
+                      <Text style={chipTxt(matiere === m.id)}>{m.nom}</Text>
+                    </Pressable>
+                  ))}
+                </View>
+                {matiere && <Text style={{ color: C.attenue, fontSize: t.police.minuscule, marginTop: 4, marginBottom: 6 }}>3. Le chapitre</Text>}
+              </>
+            )}
+            {(f || matiere) && (chaps.length === 0 ? (
+              <Text style={{ color: C.attenue, fontSize: t.police.petite }}>Aucun chapitre trouvé.</Text>
             ) : (
               <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
                 {chaps.map((c) => (
                   <Pressable key={c.id} onPress={() => setChap(c)} style={chip(chap?.id === c.id)}>
-                    <Text style={chipTxt(chap?.id === c.id)}>{c.niv} · {c.nom}</Text>
+                    <Text style={chipTxt(chap?.id === c.id)}>{f ? `${c.niv} · ${c.mat} · ` : ''}{c.nom}</Text>
                   </Pressable>
                 ))}
               </View>
-            )}
+            ))}
           </ScrollView>
           <Pressable disabled={!(amiId && chap)} onPress={() => onLancer(amiId, chap)}
             style={{ backgroundColor: C.accent, borderRadius: t.rayon.m, paddingVertical: 12, alignItems: 'center', marginTop: t.espace.m, opacity: amiId && chap ? 1 : 0.5 }}>

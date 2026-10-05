@@ -20,16 +20,22 @@ function toutesLesCles() {
   return k;
 }
 
-/** Nombre de cartes à revoir aujourd'hui (répétition espacée). */
+/**
+ * Nombre de cartes DÉJÀ ÉTUDIÉES à revoir aujourd'hui (répétition espacée).
+ * Les cartes jamais vues ne comptent pas : sinon un nouvel élève verrait
+ * « Réviser 11 000 cartes », ce qui n'a pas de sens.
+ */
 export function compterCartesDues(srs, jour) {
-  return clesDues(srs || {}, toutesLesCles(), jour).length;
+  const etats = srs || {};
+  const vues = toutesLesCles().filter((k) => etats[k]);
+  return clesDues(etats, vues, jour).length;
 }
 
 /** Action prioritaire du moment (ou null si rien de pertinent). */
 export function prochaineAction(profil, jour) {
   const due = compterCartesDues(profil.srs, jour);
   if (due > 0) {
-    return { icone: '🧠', titre: `Réviser ${due} carte${due > 1 ? 's' : ''}`, sousTitre: 'C\'est le bon moment pour mémoriser', ecran: 'RevisionSRS' };
+    return { icone: '🧠', titre: `Réviser ${due.toLocaleString('fr-FR')} carte${due > 1 ? 's' : ''}`, sousTitre: 'C\'est le bon moment pour mémoriser', ecran: 'RevisionSRS' };
   }
   const dc = profil.dernierChapitre;
   if (dc && dc.id) {

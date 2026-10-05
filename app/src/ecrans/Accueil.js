@@ -40,6 +40,7 @@ export default function Accueil({ navigation }) {
 
   const listeNiveaux = niveaux();
   const totalQuestions = CHAPITRES.reduce((s, c) => s + c.nbQuestions, 0);
+  const nbMatieres = new Set(CHAPITRES.map((c) => c.matiere)).size;
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: t.couleur.fond }} edges={['top']}>
@@ -48,7 +49,7 @@ export default function Accueil({ navigation }) {
           {profil.prenom ? L('home.salut', { prenom: profil.prenom }) : 'Kamal Campus'}
         </Text>
         <Text style={{ color: t.couleur.attenue, fontSize: t.police.normale, marginTop: 4 }}>
-          {L('app.sousTitre', { n: CHAPITRES.length, q: totalQuestions })}
+          {L('app.sousTitre', { m: nbMatieres, n: CHAPITRES.length.toLocaleString('fr-FR'), q: totalQuestions.toLocaleString('fr-FR') })}
         </Text>
 
         {/* Ta prochaine action — une seule action prioritaire, pour réduire les clics */}
@@ -307,6 +308,14 @@ export default function Accueil({ navigation }) {
             sousTitre="Grimpe du Bronze au Diamant en gagnant des XP chaque semaine"
             couleur={t.couleur.alerte}
             onPress={() => navigation.navigate('Ligue')}
+          />
+          <View style={{ height: t.espace.m }} />
+          <Carte
+            t={t}
+            titre="👥 Amis et défis"
+            sousTitre="Ajoute tes amis, défie-les sur un chapitre et compare vos scores"
+            couleur={t.couleur.accent}
+            onPress={() => navigation.navigate('Defis')}
           />
           <View style={{ height: t.espace.m }} />
           <Carte

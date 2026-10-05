@@ -1,6 +1,6 @@
 // app/src/defisContenu.js
 // Pont entre l'ecran Defis et le contenu de l'app (memes sources que Qcm.js).
-import { chapitreParId, CHAPITRES, LIBELLES_NIVEAU } from './contenu-index';
+import { chapitreParId, CHAPITRES, LIBELLES_NIVEAU, LIBELLES_MATIERE, niveaux } from './contenu-index';
 import { aGenerateur, genererQuestions } from '../lib/generateurs';
 import { melanger } from '../lib/quizmix';
 
@@ -32,6 +32,16 @@ export function chapitresJouables() {
   if (_cacheChapitres) return _cacheChapitres;
   _cacheChapitres = CHAPITRES
     .filter((c) => aGenerateur(c.id) || (c.qcm?.questions?.length > 0))
-    .map((c) => ({ id: c.id, nom: c.titre, niv: LIBELLES_NIVEAU?.[c.niveau] ?? c.niveau }));
+    .map((c) => ({
+      id: c.id, nom: c.titre, niveau: c.niveau, matiere: c.matiere,
+      niv: LIBELLES_NIVEAU?.[c.niveau] ?? c.niveau,
+      mat: LIBELLES_MATIERE?.[c.matiere] ?? c.matiere,
+    }));
   return _cacheChapitres;
+}
+
+// Classes dans l'ordre scolaire (CP → Terminale), avec leur libellé.
+export function classesJouables() {
+  const presentes = new Set(chapitresJouables().map((c) => c.niveau));
+  return niveaux().filter((n) => presentes.has(n)).map((n) => ({ id: n, nom: LIBELLES_NIVEAU?.[n] ?? n }));
 }
