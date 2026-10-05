@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "énergie et puissance",
       "enonce": "Un appareil de puissance P = 1500 W fonctionne pendant 2 heures. Calcule l'énergie consommée en kWh, puis en joules.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "énergie cinétique",
       "enonce": "Un chariot de masse m = 50 kg se déplace à la vitesse v = 4 m/s. Calcule son énergie cinétique.",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "énergie potentielle",
       "enonce": "Une masse m = 20 kg est levée à une hauteur h = 3 m. Calcule l'énergie potentielle de pesanteur gagnée. (g = 9,81 N/kg.)",
       "corrige": [
@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "rendement et pertes",
       "enonce": "Un moteur électrique reçoit une énergie de 500 kJ et fournit une énergie mécanique utile de 375 kJ. Calcule le rendement, l'énergie perdue, et indique sous quelle forme elle est majoritairement dissipée.",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "stockage d'énergie",
       "enonce": "Une batterie affiche 12 V et 40 Ah. Calcule l'énergie qu'elle peut stocker en Wh puis en kJ. Si le système consomme en moyenne 60 W, quelle est son autonomie théorique (en heures) ?",
       "corrige": [
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "bilan énergétique complet",
       "enonce": "Un ascenseur lève une charge de masse m = 400 kg sur une hauteur h = 15 m en un temps t = 20 s. Le rendement global de la chaîne d'énergie est de 0,60. On prend g = 9,81 m/s². Calcule : l'énergie utile de levage, la puissance utile, puis la puissance électrique absorbée par le système.",
       "corrige": [
@@ -85,7 +85,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "énergie et puissance",
       "enonce": "Un moteur de puissance P = 500 W fonctionne pendant t = 2 h. Calcule l'énergie consommée en wattheures, puis en joules.",
       "corrige": [
@@ -98,7 +98,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "puissance en rotation",
       "enonce": "Un moteur fournit un couple C = 5 N·m à une vitesse angulaire ω = 200 rad/s. Calcule la puissance mécanique.",
       "corrige": [
@@ -110,7 +110,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "énergie cinétique",
       "enonce": "Un chariot de masse m = 4 kg se déplace à la vitesse v = 5 m/s. Calcule son énergie cinétique.",
       "corrige": [
@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "bilan et rendement d'une chaîne",
       "enonce": "Une chaîne comporte un moteur (η₁ = 0,85) et un réducteur (η₂ = 0,90). La puissance utile en sortie doit être de 153 W. Calcule le rendement global, puis la puissance que doit absorber la chaîne.",
       "corrige": [
@@ -133,6 +133,446 @@
         "P_absorbée = 200 W (les 47 W manquants sont perdus, surtout en chaleur)."
       ],
       "reponse": "Rendement global 0,765 ; la chaîne doit absorber 153 / 0,765 = 200 W."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "énergie et puissance",
+      "enonce": "Complète : « 1 Wh = … J » et « 1 kWh = … MJ ».",
+      "corrige": [
+        "1 Wh correspond à 1 W pendant 3 600 s : $1 \\times 3\\,600 = 3\\,600$ J.",
+        "1 kWh = 1 000 Wh = 3 600 000 J = 3,6 MJ."
+      ],
+      "reponse": "1 Wh = 3 600 J ; 1 kWh = 3,6 MJ."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "énergie et puissance",
+      "enonce": "Laquelle de ces deux grandeurs est un « débit d'énergie » : l'énergie ou la puissance ? Donne son unité.",
+      "corrige": [
+        "La puissance est l'énergie par unité de temps : $P = \\dfrac{E}{t}$.",
+        "Elle s'exprime en watts (1 W = 1 J/s)."
+      ],
+      "reponse": "La puissance, en watts (W)."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "chaîne d'énergie",
+      "enonce": "Associe chaque composant à la fonction de la chaîne d'énergie qu'il réalise : batterie, variateur, moteur, courroie.",
+      "corrige": [
+        "Alimenter : la batterie fournit l'énergie.",
+        "Distribuer : le variateur module l'énergie envoyée à l'actionneur.",
+        "Convertir : le moteur transforme l'énergie électrique en énergie mécanique.",
+        "Transmettre : la courroie transporte l'énergie mécanique."
+      ],
+      "reponse": "Batterie : alimenter ; variateur : distribuer ; moteur : convertir ; courroie : transmettre."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "stockage d'énergie",
+      "enonce": "Pour chaque moyen de stockage, indique la forme d'énergie stockée : batterie, ressort, volant d'inertie.",
+      "corrige": [
+        "Une batterie stocke de l'énergie chimique, restituée sous forme électrique.",
+        "Un ressort stocke de l'énergie mécanique élastique.",
+        "Un volant d'inertie stocke de l'énergie mécanique cinétique (de rotation)."
+      ],
+      "reponse": "Batterie : chimique ; ressort : mécanique élastique ; volant d'inertie : mécanique cinétique."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "puissance électrique",
+      "enonce": "Un radiateur fonctionne sous 230 V et absorbe 8 A. Calcule sa puissance.",
+      "corrige": [
+        "$P = U \\times I = 230 \\times 8 = 1\\,840$ W."
+      ],
+      "reponse": "1 840 W"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "puissance électrique",
+      "enonce": "Un four de 2 400 W est branché sur le secteur (230 V). Quelle intensité absorbe-t-il (arrondie au dixième) ?",
+      "corrige": [
+        "$I = \\dfrac{P}{U} = \\dfrac{2\\,400}{230} \\approx 10{,}4$ A."
+      ],
+      "reponse": "Environ 10,4 A."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "puissance en translation",
+      "enonce": "Un tapis transporteur exerce une force de 800 N sur sa charge à la vitesse de 1,5 m/s. Calcule la puissance mécanique.",
+      "corrige": [
+        "$P = F \\times v = 800 \\times 1{,}5 = 1\\,200$ W."
+      ],
+      "reponse": "1 200 W"
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "puissance en translation",
+      "enonce": "Un cycliste exerce une force motrice de 40 N en roulant à 7 m/s. Quelle puissance mécanique développe-t-il ?",
+      "corrige": [
+        "$P = F \\times v = 40 \\times 7 = 280$ W."
+      ],
+      "reponse": "280 W"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "chaîne d'énergie",
+      "enonce": "Dans une perceuse sans fil, quelles formes d'énergie entrent dans le moteur et en sortent ? Quelle fonction de la chaîne d'énergie assure le réducteur placé après le moteur ?",
+      "corrige": [
+        "Le moteur reçoit de l'énergie électrique et fournit de l'énergie mécanique de rotation : il convertit.",
+        "Le réducteur adapte la vitesse et le couple et transporte l'énergie mécanique vers le mandrin : il transmet."
+      ],
+      "reponse": "Électrique → mécanique ; le réducteur assure la fonction « transmettre »."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "puissance en rotation",
+      "enonce": "Un moteur fournit un couple $\\mathcal{C} = 0{,}5$ N·m à $\\omega = 300$ rad/s. Calcule sa puissance mécanique.",
+      "corrige": [
+        "$P = \\mathcal{C} \\times \\omega = 0{,}5 \\times 300 = 150$ W."
+      ],
+      "reponse": "150 W"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "énergie et puissance",
+      "enonce": "Une lampe de 60 W reste allumée 10 minutes. Calcule l'énergie consommée en joules.",
+      "corrige": [
+        "10 min = 600 s.",
+        "$E = P \\times t = 60 \\times 600 = 36\\,000$ J."
+      ],
+      "reponse": "36 000 J (36 kJ)."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "énergie et puissance",
+      "enonce": "Combien de temps un chauffe-eau de 2 000 W met-il pour consommer 3 kWh ?",
+      "corrige": [
+        "$t = \\dfrac{E}{P} = \\dfrac{3\\,000}{2\\,000} = 1{,}5$ h."
+      ],
+      "reponse": "1,5 h (1 h 30 min)."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "énergie potentielle",
+      "enonce": "Un sac de 2 kg est posé sur une étagère à 1,5 m de hauteur. Quelle énergie potentielle de pesanteur a-t-il gagnée par rapport au sol (g = 9,81 N/kg) ?",
+      "corrige": [
+        "$E_p = m \\times g \\times h = 2 \\times 9{,}81 \\times 1{,}5 = 29{,}43$ J."
+      ],
+      "reponse": "29,43 J"
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "rendement et pertes",
+      "enonce": "Un moteur absorbe 2 kW et fournit 1,7 kW. Calcule son rendement et la puissance perdue.",
+      "corrige": [
+        "$\\eta = \\dfrac{1{,}7}{2} = 0{,}85$, soit 85 %.",
+        "Pertes : 2 − 1,7 = 0,3 kW = 300 W."
+      ],
+      "reponse": "η = 0,85 ; 300 W de pertes."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "rendement et pertes",
+      "enonce": "Un fabricant annonce un moteur de rendement 105 %. Que penses-tu de cette annonce ?",
+      "corrige": [
+        "Un rendement est toujours inférieur à 1 (100 %) : on ne crée pas d'énergie.",
+        "Il y a toujours des pertes (chaleur, frottements) : l'annonce est fausse."
+      ],
+      "reponse": "Impossible : un rendement est toujours inférieur à 100 %."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "stockage d'énergie",
+      "enonce": "Une batterie de téléphone porte l'indication 3,7 V ; 5 000 mAh. Calcule l'énergie stockée en Wh.",
+      "corrige": [
+        "5 000 mAh = 5 Ah.",
+        "$E = U \\times Q = 3{,}7 \\times 5 = 18{,}5$ Wh."
+      ],
+      "reponse": "18,5 Wh"
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "stockage d'énergie",
+      "enonce": "Avec cette batterie de 18,5 Wh, un téléphone consomme en moyenne 2 W. Quelle est son autonomie théorique ?",
+      "corrige": [
+        "$t = \\dfrac{E}{P} = \\dfrac{18{,}5}{2} = 9{,}25$ h, soit 9 h 15 min."
+      ],
+      "reponse": "9,25 h (9 h 15 min)."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "stockage d'énergie",
+      "enonce": "La batterie d'un vélo à assistance électrique est de 36 V ; 14 Ah. Le vélo consomme en moyenne 10 Wh/km. Calcule l'énergie stockée puis l'autonomie théorique.",
+      "corrige": [
+        "$E = 36 \\times 14 = 504$ Wh.",
+        "Autonomie : $\\dfrac{504}{10} = 50{,}4$ km."
+      ],
+      "reponse": "504 Wh ; environ 50 km."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "stockage d'énergie",
+      "enonce": "Pour le flash d'un appareil photo, qui doit libérer une petite énergie en une fraction de seconde, choisit-on plutôt une batterie ou un condensateur ? Justifie.",
+      "corrige": [
+        "Un condensateur stocke une petite énergie électrique mais peut la restituer très vite.",
+        "Une batterie stocke beaucoup plus d'énergie mais la restitue plus lentement."
+      ],
+      "reponse": "Un condensateur, car il restitue son énergie très rapidement."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "puissance en rotation",
+      "enonce": "Un moteur tourne à 3 000 tr/min en fournissant un couple de 2 N·m. Calcule sa puissance mécanique (arrondie au watt).",
+      "corrige": [
+        "Il faut ω en rad/s : $\\omega = \\dfrac{2\\pi \\times 3\\,000}{60} \\approx 314{,}2$ rad/s.",
+        "$P = 2 \\times 314{,}2 \\approx 628$ W."
+      ],
+      "reponse": "Environ 628 W."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "puissance en rotation",
+      "enonce": "Un élève calcule la puissance d'un moteur (couple 2 N·m, 1 500 tr/min) en écrivant P = 2 × 1 500 = 3 000 W. Corrige son erreur.",
+      "corrige": [
+        "Dans $P = \\mathcal{C} \\times \\omega$, ω doit être en rad/s, pas en tr/min.",
+        "$\\omega = \\dfrac{2\\pi \\times 1\\,500}{60} \\approx 157{,}1$ rad/s, donc $P = 2 \\times 157{,}1 \\approx 314$ W."
+      ],
+      "reponse": "Il faut ω en rad/s : P ≈ 314 W."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "puissance en rotation",
+      "enonce": "Un moteur asynchrone de 1,5 kW tourne à 1 450 tr/min. Calcule le couple utile qu'il fournit (arrondi au dixième).",
+      "corrige": [
+        "$\\omega = \\dfrac{2\\pi \\times 1\\,450}{60} \\approx 151{,}8$ rad/s.",
+        "$\\mathcal{C} = \\dfrac{P}{\\omega} = \\dfrac{1\\,500}{151{,}8} \\approx 9{,}9$ N·m."
+      ],
+      "reponse": "Environ 9,9 N·m."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "énergie cinétique",
+      "enonce": "Une voiture de 1 200 kg roule à 50 km/h. Calcule son énergie cinétique (en kJ, arrondie au dixième).",
+      "corrige": [
+        "$v = \\dfrac{50}{3{,}6} \\approx 13{,}89$ m/s.",
+        "$E_c = \\dfrac{1}{2} \\times 1\\,200 \\times 13{,}89^2 \\approx 115\\,700$ J."
+      ],
+      "reponse": "Environ 115,7 kJ."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "énergie cinétique",
+      "enonce": "Une voiture passe de 50 km/h à 100 km/h. Par combien son énergie cinétique est-elle multipliée ? Justifie.",
+      "corrige": [
+        "$E_c = \\dfrac{1}{2} m v^2$ : l'énergie cinétique dépend du carré de la vitesse.",
+        "Si v est multipliée par 2, $E_c$ est multipliée par $2^2 = 4$."
+      ],
+      "reponse": "Par 4."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "énergie cinétique",
+      "enonce": "Un objet de 1 kg possède une énergie cinétique de 50 J. Quelle est sa vitesse ?",
+      "corrige": [
+        "$v = \\sqrt{\\dfrac{2 E_c}{m}} = \\sqrt{\\dfrac{2 \\times 50}{1}} = \\sqrt{100}$.",
+        "v = 10 m/s."
+      ],
+      "reponse": "10 m/s"
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "énergie cinétique",
+      "enonce": "Un cycliste et son vélo (90 kg au total) roulent à 36 km/h puis freinent jusqu'à l'arrêt. Quelle énergie les freins dissipent-ils, et sous quelle forme ?",
+      "corrige": [
+        "36 km/h = 10 m/s, donc $E_c = \\dfrac{1}{2} \\times 90 \\times 10^2 = 4\\,500$ J.",
+        "Toute cette énergie cinétique est dissipée par frottement dans les freins, essentiellement en chaleur."
+      ],
+      "reponse": "4 500 J, dissipés surtout en chaleur."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "bilan et rendement d'une chaîne",
+      "enonce": "Une chaîne comporte un variateur (η = 0,95), un moteur (η = 0,90) et un réducteur (η = 0,85). Calcule le rendement global (arrondi au millième).",
+      "corrige": [
+        "$\\eta = 0{,}95 \\times 0{,}90 \\times 0{,}85 \\approx 0{,}727$."
+      ],
+      "reponse": "Environ 0,727 (72,7 %)."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "bilan et rendement d'une chaîne",
+      "enonce": "Un élève écrit que le rendement d'une chaîne « moteur 0,9 + réducteur 0,8 » vaut 0,9 + 0,8 = 1,7. Explique ses deux erreurs de raisonnement.",
+      "corrige": [
+        "Les rendements de conversions en série se multiplient : 0,9 × 0,8 = 0,72.",
+        "De plus, un rendement supérieur à 1 est impossible : le résultat 1,7 aurait dû l'alerter."
+      ],
+      "reponse": "Il faut multiplier (0,72) ; et un rendement ne peut pas dépasser 1."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "bilan et rendement d'une chaîne",
+      "enonce": "Le rendement global d'une chaîne moteur + réducteur vaut 0,68. Le moteur a un rendement de 0,85. Quel est le rendement du réducteur ?",
+      "corrige": [
+        "$\\eta_2 = \\dfrac{\\eta_{\\text{total}}}{\\eta_1} = \\dfrac{0{,}68}{0{,}85} = 0{,}80$."
+      ],
+      "reponse": "0,80"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "énergie potentielle",
+      "enonce": "Un monte-charge élève 150 kg de 6 m en 15 s. Calcule l'énergie potentielle gagnée puis la puissance utile (g = 9,81 N/kg).",
+      "corrige": [
+        "$E_p = 150 \\times 9{,}81 \\times 6 = 8\\,829$ J.",
+        "$P = \\dfrac{8\\,829}{15} \\approx 588{,}6$ W."
+      ],
+      "reponse": "8 829 J ; environ 588,6 W."
+    },
+    {
+      "id": 41,
+      "difficulte": "intermediaire",
+      "notion": "énergie cinétique",
+      "enonce": "Un chariot de 300 kg passe de l'arrêt à 2 m/s en 4 s. Calcule l'énergie cinétique acquise et la puissance moyenne utile nécessaire.",
+      "corrige": [
+        "$E_c = \\dfrac{1}{2} \\times 300 \\times 2^2 = 600$ J.",
+        "$P = \\dfrac{600}{4} = 150$ W."
+      ],
+      "reponse": "600 J ; 150 W."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "énergie potentielle",
+      "enonce": "Une pompe remonte 1 000 L d'eau (1 000 kg) d'un puits de 10 m de profondeur en 5 minutes. Son rendement est de 0,65. Calcule l'énergie utile, la puissance utile et la puissance absorbée (g = 9,81 N/kg).",
+      "corrige": [
+        "$E_p = 1\\,000 \\times 9{,}81 \\times 10 = 98\\,100$ J.",
+        "$P_u = \\dfrac{98\\,100}{300} = 327$ W.",
+        "$P_{abs} = \\dfrac{327}{0{,}65} \\approx 503$ W."
+      ],
+      "reponse": "98 100 J ; 327 W ; environ 503 W."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "énergie cinétique",
+      "enonce": "Une voiture électrique de 1 500 kg freine de 90 km/h à l'arrêt. Son freinage récupératif renvoie 60 % de l'énergie cinétique dans la batterie. Calcule l'énergie récupérée en J puis en Wh (arrondie à l'unité).",
+      "corrige": [
+        "90 km/h = 25 m/s, donc $E_c = \\dfrac{1}{2} \\times 1\\,500 \\times 25^2 = 468\\,750$ J.",
+        "Énergie récupérée : $0{,}6 \\times 468\\,750 = 281\\,250$ J.",
+        "En Wh : $\\dfrac{281\\,250}{3\\,600} \\approx 78$ Wh."
+      ],
+      "reponse": "281 250 J, soit environ 78 Wh."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "bilan énergétique complet",
+      "enonce": "Une voiture électrique consomme 15 kWh aux 100 km. Sa batterie stocke 60 kWh. Calcule son autonomie, puis le coût d'une recharge complète à 0,20 € le kWh.",
+      "corrige": [
+        "Autonomie : $\\dfrac{60}{15} \\times 100 = 400$ km.",
+        "Coût : $60 \\times 0{,}20 = 12$ €."
+      ],
+      "reponse": "400 km ; 12 €."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "bilan et rendement d'une chaîne",
+      "enonce": "Un treuil doit tirer une charge avec une force de 2 000 N à 0,4 m/s. La chaîne comprend un moteur (η = 0,85) et un réducteur (η = 0,90), alimentés sous 230 V. Calcule la puissance utile, la puissance absorbée et l'intensité (arrondie au centième).",
+      "corrige": [
+        "$P_u = 2\\,000 \\times 0{,}4 = 800$ W.",
+        "$\\eta = 0{,}85 \\times 0{,}90 = 0{,}765$, donc $P_{abs} = \\dfrac{800}{0{,}765} \\approx 1\\,046$ W.",
+        "$I = \\dfrac{1\\,046}{230} \\approx 4{,}55$ A."
+      ],
+      "reponse": "800 W ; environ 1 046 W ; environ 4,55 A."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "bilan énergétique complet",
+      "enonce": "Un moteur à courant continu alimenté en 24 V fournit 0,8 N·m à 2 400 tr/min avec un rendement de 0,8. Calcule la puissance utile, la puissance absorbée et le courant absorbé (arrondi au dixième).",
+      "corrige": [
+        "$\\omega = \\dfrac{2\\pi \\times 2\\,400}{60} \\approx 251{,}3$ rad/s, donc $P_u = 0{,}8 \\times 251{,}3 \\approx 201$ W.",
+        "$P_{abs} = \\dfrac{201}{0{,}8} \\approx 251$ W.",
+        "$I = \\dfrac{251}{24} \\approx 10{,}5$ A."
+      ],
+      "reponse": "P_u ≈ 201 W ; P_abs ≈ 251 W ; I ≈ 10,5 A."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "rendement et pertes",
+      "enonce": "Un moteur absorbe 750 W avec un rendement de 0,8 et fonctionne 8 h par jour. Quelle énergie est perdue en chaleur chaque jour, en kWh ?",
+      "corrige": [
+        "Puissance perdue : 750 × (1 − 0,8) = 150 W.",
+        "$E = 150 \\times 8 = 1\\,200$ Wh = 1,2 kWh."
+      ],
+      "reponse": "1,2 kWh par jour."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "bilan énergétique complet",
+      "enonce": "Un drone de 1,2 kg monte de 50 m en 10 s. Calcule l'énergie potentielle gagnée et la puissance utile correspondante. Sa batterie est de 11,1 V ; 2,2 Ah : quelle autonomie théorique aurait-il en vol stationnaire, s'il y consomme 150 W (en minutes, arrondie au dixième) ?",
+      "corrige": [
+        "$E_p = 1{,}2 \\times 9{,}81 \\times 50 = 588{,}6$ J et $P = \\dfrac{588{,}6}{10} \\approx 58{,}9$ W.",
+        "Énergie de la batterie : $11{,}1 \\times 2{,}2 = 24{,}42$ Wh.",
+        "Autonomie : $\\dfrac{24{,}42}{150} \\times 60 \\approx 9{,}8$ min."
+      ],
+      "reponse": "588,6 J ; environ 58,9 W ; environ 9,8 min."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "stockage d'énergie",
+      "enonce": "Un panneau solaire de 300 W fonctionne l'équivalent de 5 h à pleine puissance par jour. On veut stocker toute sa production quotidienne dans une batterie de 12 V ; 100 Ah. Est-ce possible ?",
+      "corrige": [
+        "Production : $300 \\times 5 = 1\\,500$ Wh.",
+        "Batterie : $12 \\times 100 = 1\\,200$ Wh.",
+        "1 500 Wh > 1 200 Wh : la batterie ne peut pas tout stocker."
+      ],
+      "reponse": "Non : 1 500 Wh produits pour 1 200 Wh de stockage."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "énergie cinétique",
+      "enonce": "Un tramway de 40 t roule à 54 km/h. Calcule son énergie cinétique en J et en kWh (arrondie au centième). Pourquoi a-t-on intérêt à récupérer cette énergie au freinage ?",
+      "corrige": [
+        "54 km/h = 15 m/s, donc $E_c = \\dfrac{1}{2} \\times 40\\,000 \\times 15^2 = 4\\,500\\,000$ J.",
+        "En kWh : $\\dfrac{4\\,500\\,000}{3\\,600\\,000} = 1{,}25$ kWh.",
+        "Sans récupération, toute cette énergie part en chaleur dans les freins à chaque arrêt ; la récupérer réduit la consommation."
+      ],
+      "reponse": "4,5 MJ, soit 1,25 kWh ; la récupérer évite de la perdre en chaleur à chaque arrêt."
     }
   ]
 }

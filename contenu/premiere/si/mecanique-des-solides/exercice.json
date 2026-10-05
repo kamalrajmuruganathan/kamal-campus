@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "poids d'un solide",
       "enonce": "Un carter a une masse m = 12 kg. Calcule l'intensité de son poids P. On prend g = 9,81 N/kg.",
       "corrige": [
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "équilibre à deux forces",
       "enonce": "Une lampe de masse m = 2 kg est suspendue immobile à un fil vertical unique. Quelle est l'intensité de la tension du fil ? (g = 9,81 N/kg.)",
       "corrige": [
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "moment d'une force",
       "enonce": "Sur une clé, on applique une force F = 150 N perpendiculairement au manche, à une distance d = 0,20 m de l'axe de l'écrou. Calcule le moment de cette force par rapport à l'axe.",
       "corrige": [
@@ -47,7 +47,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "principe des moments (levier)",
       "enonce": "Une balançoire (levier) est en équilibre autour de son axe central. À gauche, un enfant exerce 250 N à 1,2 m de l'axe. À droite, un enfant est à 1,5 m de l'axe. Quelle force doit-il exercer pour l'équilibre ?",
       "corrige": [
@@ -60,7 +60,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "projection d'une force",
       "enonce": "Un câble tire une caisse avec une force F = 500 N inclinée de 30° au-dessus de l'horizontale. Calcule les composantes horizontale (Fx) et verticale (Fy) de cette force. (cos 30° ≈ 0,866 ; sin 30° = 0,5.)",
       "corrige": [
@@ -73,7 +73,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "équilibre d'une potence",
       "enonce": "Une potence horizontale est encastrée dans un mur en O. Une charge P = 800 N est suspendue à son extrémité A, située à 0,9 m de O. Un tirant incliné à 40° par rapport à la potence relie A à un point du mur situé au-dessus de O ; sa tension T soutient la charge. En écrivant l'équilibre des moments en O, détermine la tension T dans le tirant. (sin 40° ≈ 0,643.)",
       "corrige": [
@@ -88,7 +88,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "poids d'un solide",
       "enonce": "Un objet a une masse m = 8 kg. Calcule l'intensité de son poids P (on prend g = 9,81 N/kg).",
       "corrige": [
@@ -100,7 +100,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "moment d'une force",
       "enonce": "Une force F = 120 N est appliquée perpendiculairement à un levier, à une distance d = 0,25 m de l'axe. Calcule le moment de cette force.",
       "corrige": [
@@ -112,7 +112,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "théorème du levier",
       "enonce": "Sur un levier en équilibre, une force F₁ = 400 N agit à d₁ = 0,3 m de l'axe. De l'autre côté, une force agit à d₂ = 0,6 m. Quelle est son intensité F₂ ?",
       "corrige": [
@@ -125,7 +125,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "projeter une force inclinée",
       "enonce": "Un câble tire une caisse avec une force F = 600 N inclinée de 25° au-dessus de l'horizontale. Calcule les composantes horizontale Fx et verticale Fy (cos 25° ≈ 0,906 ; sin 25° ≈ 0,423).",
       "corrige": [
@@ -135,6 +135,449 @@
         "Fy = 600 × 0,423 ≈ 253,8 N."
       ],
       "reponse": "Fx ≈ 544 N (horizontale) et Fy ≈ 254 N (verticale, vers le haut)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "caractéristiques d'une force",
+      "enonce": "Cite les quatre caractéristiques du vecteur qui modélise une force.",
+      "corrige": [
+        "Une force est représentée par un vecteur.",
+        "Il possède un point d'application, une direction (droite d'action), un sens et une intensité (en newtons)."
+      ],
+      "reponse": "Point d'application, direction, sens, intensité."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "masse et poids",
+      "enonce": "Donne l'unité de la masse et celle du poids. Laquelle de ces deux grandeurs est une force ?",
+      "corrige": [
+        "La masse est une quantité de matière : elle s'exprime en kilogrammes (kg).",
+        "Le poids est une force : il s'exprime en newtons (N)."
+      ],
+      "reponse": "Masse en kg ; poids en N ; le poids est une force."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "principe fondamental de la statique",
+      "enonce": "Énonce les deux conditions du principe fondamental de la statique pour qu'un solide soit en équilibre.",
+      "corrige": [
+        "La somme des forces est nulle : $\\sum \\vec{F} = \\vec{0}$.",
+        "La somme des moments en un point est nulle : $\\sum M = 0$."
+      ],
+      "reponse": "Somme des forces nulle ET somme des moments nulle."
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "caractéristiques d'une force",
+      "enonce": "Donne les caractéristiques du poids d'un sac de 5 kg posé sur une table (g = 9,81 N/kg).",
+      "corrige": [
+        "Point d'application : le centre de gravité G du sac.",
+        "Direction : verticale ; sens : vers le bas.",
+        "Intensité : $P = m \\times g = 5 \\times 9{,}81 \\approx 49{,}1$ N."
+      ],
+      "reponse": "Appliqué en G, vertical, vers le bas, d'intensité environ 49,1 N."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "masse et poids",
+      "enonce": "Un objet a un poids de 490,5 N sur Terre (g = 9,81 N/kg). Quelle est sa masse ?",
+      "corrige": [
+        "$P = m \\times g$ donc $m = \\dfrac{P}{g}$.",
+        "$m = \\dfrac{490{,}5}{9{,}81} = 50$ kg."
+      ],
+      "reponse": "50 kg"
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "masse et poids",
+      "enonce": "Un élève dit : « Ce sac pèse 5 kg, donc son poids vaut 5 kg. » Corrige-le (g = 9,81 N/kg).",
+      "corrige": [
+        "5 kg est la masse du sac, pas son poids.",
+        "Le poids est une force : $P = 5 \\times 9{,}81 \\approx 49{,}1$ N."
+      ],
+      "reponse": "Sa masse vaut 5 kg ; son poids vaut environ 49,1 N."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "poids d'un solide",
+      "enonce": "Sur la Lune, g ≈ 1,62 N/kg. Un astronaute a une masse de 70 kg avec son équipement. Quels sont sa masse et son poids sur la Lune ?",
+      "corrige": [
+        "La masse ne dépend pas du lieu : elle reste 70 kg.",
+        "Poids lunaire : $P = 70 \\times 1{,}62 = 113{,}4$ N."
+      ],
+      "reponse": "Masse : 70 kg ; poids : 113,4 N."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "poids d'un solide",
+      "enonce": "Calcule le poids d'une personne de 75 kg avec g = 9,81 N/kg, puis avec l'arrondi g = 10 N/kg. Quel est l'écart ?",
+      "corrige": [
+        "Avec g = 9,81 N/kg : $P = 75 \\times 9{,}81 = 735{,}75$ N.",
+        "Avec g = 10 N/kg : $P = 750$ N.",
+        "L'écart est d'environ 14 N (moins de 2 %)."
+      ],
+      "reponse": "735,75 N et 750 N ; écart d'environ 14 N."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "moment d'une force",
+      "enonce": "Une force de 40 N est appliquée perpendiculairement à un levier, à 0,5 m de l'axe. Calcule son moment.",
+      "corrige": [
+        "$M = F \\times d = 40 \\times 0{,}5 = 20$ N·m."
+      ],
+      "reponse": "20 N·m"
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "moment d'une force",
+      "enonce": "On veut serrer un écrou avec un moment de 60 N·m à l'aide d'une clé de 0,30 m. Quelle force faut-il appliquer perpendiculairement à l'extrémité du manche ?",
+      "corrige": [
+        "$F = \\dfrac{M}{d} = \\dfrac{60}{0{,}30} = 200$ N."
+      ],
+      "reponse": "200 N"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "moment d'une force",
+      "enonce": "Une force de 150 N produit un moment de 45 N·m. À quelle distance de l'axe est-elle appliquée (force perpendiculaire au bras) ?",
+      "corrige": [
+        "$d = \\dfrac{M}{F} = \\dfrac{45}{150} = 0{,}3$ m."
+      ],
+      "reponse": "0,3 m (30 cm)."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "moment d'une force",
+      "enonce": "Pourquoi le moment d'une force est-il nul quand sa droite d'action passe par l'axe de rotation ?",
+      "corrige": [
+        "Le bras de levier d est la distance entre l'axe et la droite d'action.",
+        "Si la droite d'action passe par l'axe, d = 0, donc $M = F \\times 0 = 0$ : la force ne fait pas tourner."
+      ],
+      "reponse": "Parce que le bras de levier est nul (d = 0)."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "équilibre à deux forces",
+      "enonce": "Un solide soumis à deux forces est en équilibre. Que peut-on dire de ces deux forces ?",
+      "corrige": [
+        "C'est le cas particulier du principe fondamental de la statique.",
+        "Les deux forces ont la même droite d'action, la même intensité et des sens opposés : elles sont directement opposées."
+      ],
+      "reponse": "Elles sont directement opposées : même droite d'action, même intensité, sens opposés."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "équilibre à deux forces",
+      "enonce": "Une caisse de 300 N de poids est posée immobile sur un sol horizontal. Quelle est l'action du sol sur la caisse ?",
+      "corrige": [
+        "La caisse n'est soumise qu'à deux forces : son poids et l'action du sol.",
+        "À l'équilibre, elles sont directement opposées."
+      ],
+      "reponse": "Une force verticale, vers le haut, de 300 N."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "poids d'un solide",
+      "enonce": "Un moteur électrique a une masse de 3,2 kg. Calcule l'intensité de son poids (g = 9,81 N/kg, arrondi au dixième).",
+      "corrige": [
+        "$P = m \\times g = 3{,}2 \\times 9{,}81 \\approx 31{,}4$ N."
+      ],
+      "reponse": "Environ 31,4 N."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "équilibre à deux forces",
+      "enonce": "Un objet de 0,5 kg est accroché immobile à un ressort vertical. Donne les caractéristiques de la force exercée par le ressort sur l'objet (g = 9,81 N/kg).",
+      "corrige": [
+        "L'objet n'est soumis qu'à deux forces : son poids et la force du ressort, qui sont donc directement opposées.",
+        "Poids : $0{,}5 \\times 9{,}81 \\approx 4{,}9$ N, vertical vers le bas.",
+        "La force du ressort est verticale, vers le haut, d'environ 4,9 N."
+      ],
+      "reponse": "Verticale, vers le haut, d'intensité environ 4,9 N."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "moment d'une force",
+      "enonce": "Pour serrer un écrou à 30 N·m, on compare une clé de 0,20 m et une clé de 0,40 m. Quelle force faut-il dans chaque cas ? Que conclure ?",
+      "corrige": [
+        "Clé de 0,20 m : $F = \\dfrac{30}{0{,}20} = 150$ N.",
+        "Clé de 0,40 m : $F = \\dfrac{30}{0{,}40} = 75$ N.",
+        "Doubler le bras de levier divise par deux la force nécessaire."
+      ],
+      "reponse": "150 N puis 75 N : une clé deux fois plus longue demande deux fois moins de force."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "moment d'une force",
+      "enonce": "Pour ouvrir une porte, il faut un moment de 6 N·m autour des gonds. Quelle force faut-il en poussant sur la poignée, à 0,8 m des gonds ? Et en poussant à 0,1 m des gonds ?",
+      "corrige": [
+        "À la poignée : $F = \\dfrac{6}{0{,}8} = 7{,}5$ N.",
+        "Près des gonds : $F = \\dfrac{6}{0{,}1} = 60$ N.",
+        "C'est pourquoi la poignée est placée loin des gonds."
+      ],
+      "reponse": "7,5 N à la poignée ; 60 N près des gonds."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "moment d'une force",
+      "enonce": "Avec la convention « positif dans le sens trigonométrique », on considère un levier : une force de 100 N à 0,4 m le fait tourner dans le sens trigonométrique, une force de 80 N à 0,6 m le fait tourner dans le sens horaire. Calcule la somme des moments. Le levier est-il en équilibre ?",
+      "corrige": [
+        "$M_1 = +100 \\times 0{,}4 = +40$ N·m et $M_2 = -80 \\times 0{,}6 = -48$ N·m.",
+        "$\\sum M = 40 - 48 = -8$ N·m.",
+        "La somme n'est pas nulle : le levier tourne dans le sens horaire."
+      ],
+      "reponse": "−8 N·m : pas d'équilibre, le levier tourne dans le sens horaire."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "théorème du levier",
+      "enonce": "Sur une balançoire, un adulte de 750 N est assis à 0,8 m de l'axe. À quelle distance de l'axe, de l'autre côté, doit s'asseoir un enfant de 300 N pour l'équilibre ?",
+      "corrige": [
+        "$F_1 \\times d_1 = F_2 \\times d_2$, donc $750 \\times 0{,}8 = 300 \\times d_2$.",
+        "$d_2 = \\dfrac{600}{300} = 2$ m."
+      ],
+      "reponse": "2 m"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "théorème du levier",
+      "enonce": "Un pied-de-biche s'appuie sur un point d'appui. On pousse avec 100 N à 0,9 m de l'appui ; le clou est à 0,05 m de l'appui de l'autre côté. Quelle force s'exerce sur le clou ?",
+      "corrige": [
+        "$F_{clou} \\times 0{,}05 = 100 \\times 0{,}9$.",
+        "$F_{clou} = \\dfrac{90}{0{,}05} = 1\\,800$ N."
+      ],
+      "reponse": "1 800 N"
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "théorème du levier",
+      "enonce": "Une balance à fléau inégal porte une masse marquée de 1 kg à 0,5 m de l'axe. L'objet à peser est suspendu à 0,1 m de l'axe, de l'autre côté, et la balance est en équilibre. Quelle est la masse de l'objet ?",
+      "corrige": [
+        "Les poids sont proportionnels aux masses (P = m × g), on peut donc écrire $m_1 \\times d_1 = m_2 \\times d_2$.",
+        "$m \\times 0{,}1 = 1 \\times 0{,}5$, soit $m = 5$ kg."
+      ],
+      "reponse": "5 kg"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "principe fondamental de la statique",
+      "enonce": "Une table de 20 kg repose sur quatre pieds qui portent chacun la même charge. Quelle force chaque pied exerce-t-il sur le sol (g = 9,81 N/kg) ?",
+      "corrige": [
+        "Poids de la table : $P = 20 \\times 9{,}81 = 196{,}2$ N.",
+        "Les quatre actions du sol compensent le poids : chacune vaut 196,2 ÷ 4 ≈ 49,05 N."
+      ],
+      "reponse": "Environ 49 N par pied."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "principe fondamental de la statique",
+      "enonce": "Un volant reçoit deux forces de 50 N, parallèles, de sens opposés, appliquées aux deux extrémités d'un diamètre et perpendiculaires à celui-ci. La somme des forces est nulle : le volant est-il en équilibre ?",
+      "corrige": [
+        "La somme des forces est bien nulle : le volant ne se déplace pas.",
+        "Mais les deux forces le font tourner dans le même sens : la somme des moments n'est pas nulle.",
+        "Il faut les deux conditions du PFS : le volant n'est pas en équilibre, il se met à tourner."
+      ],
+      "reponse": "Non : la somme des moments n'est pas nulle, le volant tourne."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "projection d'une force",
+      "enonce": "Une force de 200 N est inclinée de 45° au-dessus de l'horizontale. Calcule ses composantes (cos 45° = sin 45° ≈ 0,707).",
+      "corrige": [
+        "$F_x = 200 \\times \\cos 45° \\approx 141{,}4$ N.",
+        "$F_y = 200 \\times \\sin 45° \\approx 141{,}4$ N."
+      ],
+      "reponse": "Fx ≈ 141,4 N et Fy ≈ 141,4 N."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "projeter une force inclinée",
+      "enonce": "Une force de 300 N fait un angle de 60° avec l'horizontale. Calcule Fx et Fy (cos 60° = 0,5 ; sin 60° ≈ 0,866).",
+      "corrige": [
+        "$F_x = 300 \\times 0{,}5 = 150$ N.",
+        "$F_y = 300 \\times 0{,}866 \\approx 259{,}8$ N."
+      ],
+      "reponse": "Fx = 150 N ; Fy ≈ 259,8 N."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "projection d'une force",
+      "enonce": "Un élève additionne une force horizontale de 300 N et une force verticale de 400 N et trouve 700 N. Explique son erreur et calcule l'intensité de la résultante.",
+      "corrige": [
+        "On ne peut pas additionner directement des forces de directions différentes.",
+        "Les deux forces sont perpendiculaires : $R = \\sqrt{300^2 + 400^2} = 500$ N."
+      ],
+      "reponse": "Les directions sont différentes ; la résultante vaut 500 N."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "projeter une force inclinée",
+      "enonce": "La composante verticale d'une force inclinée de 30° au-dessus de l'horizontale vaut 300 N. Quelle est l'intensité de la force (sin 30° = 0,5) ?",
+      "corrige": [
+        "$F_y = F \\times \\sin 30°$ donc $F = \\dfrac{300}{0{,}5} = 600$ N."
+      ],
+      "reponse": "600 N"
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "équilibre d'une poutre",
+      "enonce": "Une poutre de 4 m (poids négligé) repose sur deux appuis A et B situés à ses extrémités. Une charge de 1 200 N est posée à 1 m de A. Calcule les actions des appuis.",
+      "corrige": [
+        "Moments en A : $R_B \\times 4 = 1\\,200 \\times 1$, donc $R_B = 300$ N.",
+        "Somme des forces verticales : $R_A + R_B = 1\\,200$, donc $R_A = 900$ N."
+      ],
+      "reponse": "R_A = 900 N ; R_B = 300 N."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "équilibre d'une poutre",
+      "enonce": "Une poutre de 2 m, de poids 400 N appliqué en son milieu, repose sur deux appuis A et B à ses extrémités. Une charge de 600 N est posée à 0,5 m de A. Calcule R_A et R_B.",
+      "corrige": [
+        "Moments en A : $R_B \\times 2 = 400 \\times 1 + 600 \\times 0{,}5 = 700$, donc $R_B = 350$ N.",
+        "$R_A = 400 + 600 - 350 = 650$ N."
+      ],
+      "reponse": "R_A = 650 N ; R_B = 350 N."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "projection d'une force",
+      "enonce": "Un panneau de poids 200 N est suspendu par deux câbles symétriques faisant chacun 30° avec l'horizontale. Calcule la tension de chaque câble (sin 30° = 0,5).",
+      "corrige": [
+        "Projection verticale : $2 T \\sin 30° = 200$.",
+        "$T = \\dfrac{200}{2 \\times 0{,}5} = 200$ N."
+      ],
+      "reponse": "200 N par câble."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "projection d'une force",
+      "enonce": "Le même panneau (200 N) est suspendu par deux câbles symétriques faisant cette fois 60° avec l'horizontale (sin 60° ≈ 0,866). Calcule la tension de chaque câble et compare avec le cas à 30°.",
+      "corrige": [
+        "$2 T \\sin 60° = 200$, donc $T = \\dfrac{200}{2 \\times 0{,}866} \\approx 115{,}5$ N.",
+        "Avec des câbles plus proches de la verticale, la tension diminue (200 N à 30°, environ 115,5 N à 60°)."
+      ],
+      "reponse": "Environ 115,5 N : les câbles sont moins tendus qu'à 30°."
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "projection d'une force",
+      "enonce": "Une caisse de 50 kg est maintenue immobile sur un plan incliné de 20° sans frottement par une corde parallèle à la pente. Calcule la tension de la corde (g = 9,81 N/kg ; sin 20° ≈ 0,342).",
+      "corrige": [
+        "Poids : $P = 50 \\times 9{,}81 = 490{,}5$ N.",
+        "La composante du poids parallèle à la pente vaut $P \\sin 20° \\approx 490{,}5 \\times 0{,}342 \\approx 167{,}8$ N.",
+        "La corde doit compenser exactement cette composante."
+      ],
+      "reponse": "Environ 167,8 N."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "équilibre d'une potence",
+      "enonce": "Une potence horizontale articulée au mur en O porte une charge de 500 N à son extrémité A, à 1,2 m de O. Un tirant fixé en A fait 30° avec la potence. Calcule la tension du tirant par les moments en O, puis sa composante horizontale (sin 30° = 0,5 ; cos 30° ≈ 0,866).",
+      "corrige": [
+        "Moments en O : $T \\sin 30° \\times 1{,}2 = 500 \\times 1{,}2$, donc $T = \\dfrac{500}{0{,}5} = 1\\,000$ N.",
+        "Composante horizontale : $T \\cos 30° \\approx 866$ N, qui comprime la potence contre le mur."
+      ],
+      "reponse": "T = 1 000 N ; composante horizontale ≈ 866 N."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "moment d'une force",
+      "enonce": "Le couple de serrage des écrous d'une roue de voiture est de 110 N·m. Avec une clé de 0,45 m, quelle force faut-il exercer perpendiculairement au manche (arrondie au newton) ?",
+      "corrige": [
+        "$F = \\dfrac{M}{d} = \\dfrac{110}{0{,}45} \\approx 244$ N."
+      ],
+      "reponse": "Environ 244 N."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "théorème du levier",
+      "enonce": "Une brouette porte une charge de 600 N dont le centre de gravité est à 0,4 m de l'axe de la roue. Les poignées sont à 1,4 m de cet axe. Quelle force verticale faut-il exercer sur les poignées pour soulever la charge, et quelle charge reste sur la roue ?",
+      "corrige": [
+        "Moments par rapport à l'axe de la roue : $F \\times 1{,}4 = 600 \\times 0{,}4$, donc $F \\approx 171{,}4$ N.",
+        "Forces verticales : la roue porte $600 - 171{,}4 \\approx 428{,}6$ N."
+      ],
+      "reponse": "Environ 171,4 N aux poignées ; environ 428,6 N sur la roue."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "théorème du levier",
+      "enonce": "Une grue soulève une charge de 2 000 kg à 15 m de son mât. Le contrepoids est placé à 5 m du mât, de l'autre côté. Quelle masse de contrepoids équilibre les moments ?",
+      "corrige": [
+        "$m_1 \\times d_1 = m_2 \\times d_2$ (g se simplifie).",
+        "$m = \\dfrac{2\\,000 \\times 15}{5} = 6\\,000$ kg."
+      ],
+      "reponse": "6 000 kg (6 t)."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "moment d'une force",
+      "enonce": "Un bras de robot horizontal de 2 kg (centre de gravité à 0,25 m de l'axe) tient au bout un objet de 3 kg à 0,5 m de l'axe. Quel couple le moteur de l'axe doit-il fournir pour le maintenir immobile (g = 9,81 N/kg) ?",
+      "corrige": [
+        "Moment de l'objet : $3 \\times 9{,}81 \\times 0{,}5 = 14{,}715$ N·m.",
+        "Moment du bras : $2 \\times 9{,}81 \\times 0{,}25 = 4{,}905$ N·m.",
+        "Le moteur doit compenser la somme : 14,715 + 4,905 = 19,62 N·m."
+      ],
+      "reponse": "19,62 N·m"
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "projeter une force inclinée",
+      "enonce": "Un enfant tire une luge avec une corde faisant 35° avec l'horizontale, avec une force de 150 N (cos 35° ≈ 0,819 ; sin 35° ≈ 0,574). Calcule la composante qui fait avancer la luge et celle qui tend à la soulever.",
+      "corrige": [
+        "Composante horizontale (fait avancer) : $150 \\times 0{,}819 \\approx 122{,}9$ N.",
+        "Composante verticale (soulève) : $150 \\times 0{,}574 \\approx 86{,}1$ N."
+      ],
+      "reponse": "Environ 122,9 N vers l'avant et 86,1 N vers le haut."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "principe fondamental de la statique",
+      "enonce": "Une lampe de 10 kg est suspendue par deux fils verticaux qui supportent la même charge. Calcule la tension de chaque fil (g = 9,81 N/kg) et explique pourquoi les deux conditions du PFS sont vérifiées.",
+      "corrige": [
+        "$\\sum F_y = 0$ : $2T = 10 \\times 9{,}81 = 98{,}1$ N, donc $T \\approx 49{,}05$ N.",
+        "Les fils sont placés symétriquement par rapport au centre de gravité : leurs moments se compensent, donc la somme des moments est nulle."
+      ],
+      "reponse": "Environ 49,05 N par fil ; forces et moments se compensent."
     }
   ]
 }

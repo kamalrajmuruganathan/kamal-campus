@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "traction et compression",
       "enonce": "Un câble d'ascenseur supporte une cabine suspendue à son extrémité. La barre d'un vérin pousse un capot. Indique, pour chacun, si la sollicitation est de la traction ou de la compression.",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "contrainte normale",
       "enonce": "Une tige métallique de section S = 20 mm² est soumise à un effort de traction F = 1000 N. Calcule la contrainte normale σ, en MPa. (Rappel : 1 MPa = 1 N/mm².)",
       "corrige": [
@@ -37,7 +37,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "allongement relatif",
       "enonce": "Une barre de longueur initiale L0 = 500 mm s'allonge de ΔL = 0,4 mm sous charge. Calcule l'allongement relatif (déformation) ε, puis exprime-le en pourcentage.",
       "corrige": [
@@ -49,7 +49,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "loi de Hooke",
       "enonce": "Un acier a un module de Young E = 210 000 MPa. Une éprouvette est soumise à une contrainte σ = 105 MPa, dans le domaine élastique. Calcule l'allongement relatif ε, puis l'allongement ΔL si la longueur initiale est L0 = 2 m.",
       "corrige": [
@@ -62,7 +62,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "coefficient de sécurité",
       "enonce": "Une pièce en aluminium a une limite élastique Re = 250 MPa. Le bureau d'études impose un coefficient de sécurité s = 4. Calcule la contrainte admissible Rp (contrainte à ne pas dépasser en service). Si la pièce subit en fonctionnement 70 MPa, la conception est-elle validée ?",
       "corrige": [
@@ -75,7 +75,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "dimensionnement d'une section",
       "enonce": "Un tirant en acier doit supporter F = 30 000 N. Le matériau a Re = 300 MPa et l'on impose un coefficient de sécurité s = 3. Détermine la contrainte admissible, puis la section minimale du tirant. Si la section est circulaire, quel diamètre minimal choisir ?",
       "corrige": [
@@ -90,7 +90,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "contrainte normale",
       "enonce": "Une barre de section S = 10 mm² subit un effort de traction F = 2000 N. Calcule la contrainte σ en MPa.",
       "corrige": [
@@ -103,7 +103,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "allongement relatif",
       "enonce": "Une barre de longueur initiale L₀ = 1,5 m s'allonge de ΔL = 0,6 mm sous charge. Calcule la déformation relative ε.",
       "corrige": [
@@ -116,7 +116,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "loi de Hooke",
       "enonce": "Un acier de module de Young E = 210 000 MPa subit une déformation ε = 0,0005 dans le domaine élastique. Calcule la contrainte σ.",
       "corrige": [
@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "dimensionnement d'une section",
       "enonce": "Un acier a une limite élastique R_e = 250 MPa. On prend un coefficient de sécurité s = 2,5. Une pièce doit reprendre F = 8000 N en traction. Quelle est la section minimale nécessaire ?",
       "corrige": [
@@ -138,6 +138,454 @@
         "S_min = 80 mm²."
       ],
       "reponse": "Il faut une section d'au moins 80 mm² (R_pe = 100 MPa, S_min = 8000 / 100)."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "sollicitations simples",
+      "enonce": "Indique la sollicitation principale subie par chaque pièce : (a) la planche d'une étagère chargée de livres ; (b) un rivet qui assemble deux tôles tirées en sens opposés ; (c) un arbre de transmission entraîné par un moteur ; (d) un pilier qui porte une dalle.",
+      "corrige": [
+        "(a) La planche fléchit sous le poids des livres : flexion.",
+        "(b) Deux forces opposées tendent à trancher le rivet : cisaillement.",
+        "(c) L'arbre est vrillé autour de son axe : torsion.",
+        "(d) Le pilier est écrasé dans son axe : compression."
+      ],
+      "reponse": "(a) flexion ; (b) cisaillement ; (c) torsion ; (d) compression."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "sollicitations simples",
+      "enonce": "Un câble de grue soutient une charge. Sa longueur augmente-t-elle ou diminue-t-elle ? Quelle sollicitation subit-il ?",
+      "corrige": [
+        "Le câble est tiré dans son axe par la charge.",
+        "Une pièce tirée dans l'axe s'allonge : c'est de la traction."
+      ],
+      "reponse": "Il s'allonge : traction."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "unités",
+      "enonce": "Complète : « 1 MPa = 1 N/… » et « 1 GPa = … MPa ».",
+      "corrige": [
+        "1 MPa = $10^6$ Pa = $10^6$ N/m², et 1 m² = $10^6$ mm², donc 1 MPa = 1 N/mm².",
+        "1 GPa = $10^9$ Pa = 1 000 MPa."
+      ],
+      "reponse": "1 MPa = 1 N/mm² ; 1 GPa = 1 000 MPa."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "loi de Hooke",
+      "enonce": "Complète : « Dans le domaine …, la contrainte est … à la déformation : c'est la loi de … »",
+      "corrige": [
+        "C'est la loi de Hooke : $\\sigma = E \\times \\varepsilon$, valable pour les petites déformations réversibles."
+      ],
+      "reponse": "élastique ; proportionnelle ; Hooke."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "sollicitations simples",
+      "enonce": "Quand on visse une vis serrée avec un tournevis, quelle sollicitation principale subit la tige du tournevis ? Justifie.",
+      "corrige": [
+        "La main fait tourner le manche tandis que la vis résiste à l'autre extrémité.",
+        "La tige est vrillée autour de son axe : c'est de la torsion."
+      ],
+      "reponse": "La torsion."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "unités",
+      "enonce": "Le module de Young de l'acier vaut environ 210 GPa. Exprime-le en MPa.",
+      "corrige": [
+        "1 GPa = 1 000 MPa.",
+        "$210 \\times 1\\,000 = 210\\,000$ MPa."
+      ],
+      "reponse": "210 000 MPa"
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "contrainte normale",
+      "enonce": "Une barre ronde de diamètre 10 mm est tirée par une force de 5 000 N. Calcule l'aire de la section puis la contrainte (arrondie au dixième de MPa).",
+      "corrige": [
+        "$S = \\dfrac{\\pi d^2}{4} = \\dfrac{\\pi \\times 10^2}{4} \\approx 78{,}54$ mm².",
+        "$\\sigma = \\dfrac{F}{S} = \\dfrac{5\\,000}{78{,}54} \\approx 63{,}7$ MPa."
+      ],
+      "reponse": "S ≈ 78,54 mm² ; σ ≈ 63,7 MPa."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "contrainte normale",
+      "enonce": "Deux barres subissent la même force de 6 000 N. La barre A a une section de 40 mm², la barre B une section de 120 mm². Laquelle est la plus sollicitée ? Calcule les deux contraintes.",
+      "corrige": [
+        "$\\sigma_A = \\dfrac{6\\,000}{40} = 150$ MPa.",
+        "$\\sigma_B = \\dfrac{6\\,000}{120} = 50$ MPa.",
+        "À force égale, la plus petite section subit la plus grande contrainte."
+      ],
+      "reponse": "La barre A : 150 MPa contre 50 MPa pour la barre B."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "allongement relatif",
+      "enonce": "Une barre de 1 200 mm s'allonge de 0,3 mm. Calcule sa déformation relative.",
+      "corrige": [
+        "$\\varepsilon = \\dfrac{\\Delta L}{L_0} = \\dfrac{0{,}3}{1\\,200} = 0{,}000\\,25$.",
+        "Les deux longueurs sont dans la même unité : ε est sans unité."
+      ],
+      "reponse": "ε = 0,000 25 (0,025 %)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "allongement relatif",
+      "enonce": "Une tige de 3 m subit une déformation relative ε = 0,0008. De combien s'allonge-t-elle (en mm) ?",
+      "corrige": [
+        "$\\Delta L = \\varepsilon \\times L_0 = 0{,}0008 \\times 3\\,000$ mm.",
+        "ΔL = 2,4 mm."
+      ],
+      "reponse": "2,4 mm"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "loi de Hooke",
+      "enonce": "Une pièce en aluminium (E = 70 GPa) subit une déformation ε = 0,001 dans le domaine élastique. Calcule la contrainte.",
+      "corrige": [
+        "E = 70 GPa = 70 000 MPa.",
+        "$\\sigma = E \\times \\varepsilon = 70\\,000 \\times 0{,}001 = 70$ MPa."
+      ],
+      "reponse": "70 MPa"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "loi de Hooke",
+      "enonce": "Une poutre en bois (E ≈ 10 GPa) subit une contrainte de 10 MPa. Calcule sa déformation relative.",
+      "corrige": [
+        "$\\varepsilon = \\dfrac{\\sigma}{E} = \\dfrac{10}{10\\,000} = 0{,}001$."
+      ],
+      "reponse": "ε = 0,001 (0,1 %)."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "rigidité et résistance",
+      "enonce": "Range ces matériaux du moins rigide au plus rigide : aluminium, polymère courant, acier, bois.",
+      "corrige": [
+        "La rigidité est mesurée par le module de Young E.",
+        "Polymère ≈ 2 GPa ; bois ≈ 10 GPa ; aluminium ≈ 70 GPa ; acier ≈ 210 GPa."
+      ],
+      "reponse": "Polymère → bois → aluminium → acier."
+    },
+    {
+      "id": 24,
+      "difficulte": "application",
+      "notion": "rigidité et résistance",
+      "enonce": "Combien de fois l'acier (E ≈ 210 GPa) est-il plus rigide que l'aluminium (E ≈ 70 GPa) ? Qu'en déduis-tu pour leurs allongements sous une même contrainte ?",
+      "corrige": [
+        "$\\dfrac{210}{70} = 3$.",
+        "Sous une même contrainte, la barre en aluminium s'allonge environ 3 fois plus que la barre en acier (à longueurs égales)."
+      ],
+      "reponse": "3 fois ; l'aluminium s'allonge environ 3 fois plus."
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "essai de traction",
+      "enonce": "Lors d'un essai de traction, que désigne la limite élastique R_e ?",
+      "corrige": [
+        "En dessous de R_e, l'éprouvette reprend sa forme quand on relâche l'effort.",
+        "Au-delà, une partie de la déformation devient permanente (plastique)."
+      ],
+      "reponse": "La contrainte au-delà de laquelle la déformation devient permanente."
+    },
+    {
+      "id": 26,
+      "difficulte": "application",
+      "notion": "ductile ou fragile",
+      "enonce": "Classe ces matériaux en ductiles ou fragiles : acier doux, verre, béton, fonte.",
+      "corrige": [
+        "Un matériau ductile se déforme beaucoup avant de rompre : l'acier doux.",
+        "Un matériau fragile casse net, presque sans déformation plastique : le verre, le béton et la fonte."
+      ],
+      "reponse": "Ductile : acier doux ; fragiles : verre, béton, fonte."
+    },
+    {
+      "id": 27,
+      "difficulte": "application",
+      "notion": "ductile ou fragile",
+      "enonce": "Corrige l'affirmation : « Le béton est un matériau ductile. »",
+      "corrige": [
+        "Le béton casse net, presque sans déformation plastique.",
+        "C'est donc un matériau fragile."
+      ],
+      "reponse": "Faux : le béton est un matériau fragile."
+    },
+    {
+      "id": 28,
+      "difficulte": "application",
+      "notion": "coefficient de sécurité",
+      "enonce": "Un acier a une limite élastique R_e = 235 MPa. On impose un coefficient de sécurité s = 1,5. Calcule la contrainte pratique R_pe (arrondie au dixième).",
+      "corrige": [
+        "$R_{pe} = \\dfrac{R_e}{s} = \\dfrac{235}{1{,}5} \\approx 156{,}7$ MPa."
+      ],
+      "reponse": "Environ 156,7 MPa."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "coefficient de sécurité",
+      "enonce": "Pourquoi le coefficient de sécurité s est-il toujours supérieur à 1 ?",
+      "corrige": [
+        "On veut une contrainte admissible $R_{pe} = \\dfrac{R_e}{s}$ plus petite que la limite élastique.",
+        "Ainsi, la pièce garde une marge face aux incertitudes (charges imprévues, défauts du matériau) et ne se déforme jamais de façon permanente."
+      ],
+      "reponse": "Pour que R_pe soit inférieure à R_e et garder une marge de sécurité."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "unités",
+      "enonce": "Un élève calcule la contrainte dans une tige de 20 mm² tirée par 2 000 N : il écrit $\\sigma = \\dfrac{2\\,000}{0{,}000\\,02} = 100\\,000\\,000$ MPa. Trouve son erreur.",
+      "corrige": [
+        "Avec F en N et S en m², le résultat est en pascals : $10^8$ Pa.",
+        "$10^8$ Pa = 100 MPa (ce que l'on retrouve directement avec $\\dfrac{2\\,000}{20} = 100$ N/mm²)."
+      ],
+      "reponse": "Le résultat est en Pa, pas en MPa : σ = 100 MPa."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "loi de Hooke",
+      "enonce": "Deux barres de 1,5 m, l'une en acier (E = 210 GPa), l'autre en aluminium (E = 70 GPa), subissent la même contrainte de 100 MPa. Calcule l'allongement de chacune (arrondi au centième de mm).",
+      "corrige": [
+        "Acier : $\\varepsilon = \\dfrac{100}{210\\,000} \\approx 0{,}000\\,476$, donc $\\Delta L \\approx 0{,}000\\,476 \\times 1\\,500 \\approx 0{,}71$ mm.",
+        "Aluminium : $\\varepsilon = \\dfrac{100}{70\\,000} \\approx 0{,}001\\,43$, donc $\\Delta L \\approx 2{,}14$ mm."
+      ],
+      "reponse": "Acier : environ 0,71 mm ; aluminium : environ 2,14 mm."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "loi de Hooke",
+      "enonce": "Lors d'un essai, on mesure dans le domaine élastique σ = 140 MPa pour ε = 0,002. Calcule le module de Young et indique, parmi les ordres de grandeur du cours, de quel matériau il s'agit probablement.",
+      "corrige": [
+        "$E = \\dfrac{\\sigma}{\\varepsilon} = \\dfrac{140}{0{,}002} = 70\\,000$ MPa = 70 GPa.",
+        "Cette valeur correspond à l'aluminium."
+      ],
+      "reponse": "E = 70 GPa : probablement de l'aluminium."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "loi de Hooke",
+      "enonce": "Une éprouvette en polymère (E ≈ 2 GPa) de 200 mm de long subit une contrainte de 4 MPa. Calcule sa déformation relative puis son allongement.",
+      "corrige": [
+        "$\\varepsilon = \\dfrac{4}{2\\,000} = 0{,}002$.",
+        "$\\Delta L = 0{,}002 \\times 200 = 0{,}4$ mm."
+      ],
+      "reponse": "ε = 0,002 ; ΔL = 0,4 mm."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "essai de traction",
+      "enonce": "Sur la courbe contrainte–déformation d'un essai de traction, que représente la pente de la partie linéaire ?",
+      "corrige": [
+        "Dans la partie linéaire, $\\sigma = E \\times \\varepsilon$.",
+        "La pente de cette droite est donc le module de Young E."
+      ],
+      "reponse": "Le module de Young E."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "essai de traction",
+      "enonce": "Remets dans l'ordre ce que l'on rencontre en augmentant la contrainte lors d'un essai de traction sur un acier doux : rupture, domaine plastique, domaine élastique, limite élastique R_e, résistance maximale R_m.",
+      "corrige": [
+        "On commence par le domaine élastique (linéaire), jusqu'à la limite élastique R_e.",
+        "Vient ensuite le domaine plastique, où la contrainte monte jusqu'au maximum R_m, puis l'éprouvette rompt."
+      ],
+      "reponse": "Domaine élastique → R_e → domaine plastique → R_m → rupture."
+    },
+    {
+      "id": 36,
+      "difficulte": "intermediaire",
+      "notion": "essai de traction",
+      "enonce": "Un acier a R_e = 235 MPa et R_m = 360 MPa. Une pièce est chargée à 200 MPa puis déchargée ; une autre à 300 MPa puis déchargée. Que constate-t-on pour chacune ?",
+      "corrige": [
+        "200 MPa < R_e : la pièce est restée dans le domaine élastique, elle reprend sa forme.",
+        "300 MPa > R_e mais < R_m : elle est entrée dans le domaine plastique ; elle garde une déformation permanente, sans rompre."
+      ],
+      "reponse": "À 200 MPa : retour à la forme initiale ; à 300 MPa : déformation permanente, sans rupture."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "essai de traction",
+      "enonce": "Une éprouvette de longueur utile 50 mm mesure 60 mm après rupture. Calcule son allongement à la rupture A%. Ce matériau est-il plutôt ductile ou fragile ?",
+      "corrige": [
+        "$A\\% = \\dfrac{60 - 50}{50} \\times 100 = 20$ %.",
+        "L'éprouvette s'est beaucoup allongée avant de casser : le matériau est ductile."
+      ],
+      "reponse": "A% = 20 % : matériau ductile."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "rigidité et résistance",
+      "enonce": "Un élève affirme : « Le matériau A a un module de Young plus grand que B, donc il cassera sous une contrainte plus élevée. » Explique son erreur.",
+      "corrige": [
+        "Le module de Young mesure la rigidité : comment le matériau se déforme.",
+        "La résistance est donnée par R_e et R_m : quand le matériau cède.",
+        "Un matériau rigide n'est pas forcément résistant (le verre est rigide mais fragile)."
+      ],
+      "reponse": "Il confond rigidité (E) et résistance (R_e, R_m) : un matériau rigide n'est pas forcément résistant."
+    },
+    {
+      "id": 39,
+      "difficulte": "intermediaire",
+      "notion": "coefficient de sécurité",
+      "enonce": "Une pièce en acier (R_e = 300 MPa) travaille sous une contrainte de 100 MPa. Quel coefficient de sécurité est réellement obtenu ?",
+      "corrige": [
+        "$s = \\dfrac{R_e}{\\sigma} = \\dfrac{300}{100} = 3$."
+      ],
+      "reponse": "s = 3"
+    },
+    {
+      "id": 40,
+      "difficulte": "intermediaire",
+      "notion": "contrainte normale",
+      "enonce": "Un poteau en acier de section 2 000 mm² porte une charge de 300 kN en compression. Calcule la contrainte.",
+      "corrige": [
+        "300 kN = 300 000 N.",
+        "$\\sigma = \\dfrac{300\\,000}{2\\,000} = 150$ MPa."
+      ],
+      "reponse": "150 MPa (en compression)."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "coefficient de sécurité",
+      "enonce": "Une tige en acier de diamètre 8 mm (R_e = 355 MPa, s = 2) doit supporter 15 000 N. Vérifie si elle convient.",
+      "corrige": [
+        "$S = \\dfrac{\\pi \\times 8^2}{4} \\approx 50{,}27$ mm², donc $\\sigma = \\dfrac{15\\,000}{50{,}27} \\approx 298$ MPa.",
+        "$R_{pe} = \\dfrac{355}{2} = 177{,}5$ MPa.",
+        "298 MPa > 177,5 MPa : la tige ne convient pas."
+      ],
+      "reponse": "Non : σ ≈ 298 MPa dépasse R_pe = 177,5 MPa."
+    },
+    {
+      "id": 42,
+      "difficulte": "approfondissement",
+      "notion": "dimensionnement d'une section",
+      "enonce": "Une barre de section 50 mm² est en acier de contrainte pratique R_pe = 120 MPa. Quelle force maximale peut-elle supporter en traction ?",
+      "corrige": [
+        "$\\sigma \\le R_{pe}$ donne $F \\le R_{pe} \\times S$.",
+        "$F_{max} = 120 \\times 50 = 6\\,000$ N."
+      ],
+      "reponse": "6 000 N"
+    },
+    {
+      "id": 43,
+      "difficulte": "approfondissement",
+      "notion": "dimensionnement d'une section",
+      "enonce": "Un tirant en acier (R_e = 355 MPa, s = 2,5) doit reprendre 20 000 N. Calcule la section minimale, puis le diamètre minimal ; choisis un diamètre entier en millimètres.",
+      "corrige": [
+        "$R_{pe} = \\dfrac{355}{2{,}5} = 142$ MPa.",
+        "$S_{min} = \\dfrac{20\\,000}{142} \\approx 140{,}8$ mm².",
+        "$d = \\sqrt{\\dfrac{4S}{\\pi}} \\approx 13{,}4$ mm : on choisit 14 mm."
+      ],
+      "reponse": "S ≥ 140,8 mm² ; d ≥ 13,4 mm, donc 14 mm."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "dimensionnement d'une section",
+      "enonce": "Une tige d'acier de diamètre 10 mm a une contrainte pratique de 100 MPa. Quelle masse maximale peut-on y suspendre (g = 9,81 N/kg, arrondi au kg) ?",
+      "corrige": [
+        "$S = \\dfrac{\\pi \\times 10^2}{4} \\approx 78{,}54$ mm², donc $F_{max} = 100 \\times 78{,}54 = 7\\,854$ N.",
+        "$m = \\dfrac{F}{g} = \\dfrac{7\\,854}{9{,}81} \\approx 801$ kg."
+      ],
+      "reponse": "Environ 801 kg (en pratique, on reste en dessous de 800 kg)."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "contrainte normale",
+      "enonce": "Une tige de crochet de levage en acier, de diamètre 12 mm, porte une masse de 1 000 kg (g = 9,81 N/kg). L'acier a R_e = 235 MPa et l'on impose s = 2. La tige convient-elle ?",
+      "corrige": [
+        "$F = 1\\,000 \\times 9{,}81 = 9\\,810$ N et $S = \\dfrac{\\pi \\times 12^2}{4} \\approx 113{,}1$ mm².",
+        "$\\sigma = \\dfrac{9\\,810}{113{,}1} \\approx 86{,}7$ MPa.",
+        "$R_{pe} = \\dfrac{235}{2} = 117{,}5$ MPa : 86,7 MPa < 117,5 MPa."
+      ],
+      "reponse": "Oui : σ ≈ 86,7 MPa reste sous R_pe = 117,5 MPa."
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "allongement relatif",
+      "enonce": "Une barre d'acier (E = 210 GPa, R_e = 235 MPa) de 2 m de long et de diamètre 6 mm est tirée par 5 000 N. Calcule la contrainte, vérifie qu'on reste dans le domaine élastique, puis calcule l'allongement (arrondi au centième de mm).",
+      "corrige": [
+        "$S = \\dfrac{\\pi \\times 6^2}{4} \\approx 28{,}27$ mm², donc $\\sigma = \\dfrac{5\\,000}{28{,}27} \\approx 176{,}8$ MPa.",
+        "176,8 MPa < 235 MPa : domaine élastique, la loi de Hooke s'applique.",
+        "$\\varepsilon = \\dfrac{176{,}8}{210\\,000} \\approx 0{,}000\\,842$, donc $\\Delta L \\approx 0{,}000\\,842 \\times 2\\,000 \\approx 1{,}68$ mm."
+      ],
+      "reponse": "σ ≈ 176,8 MPa (domaine élastique) ; ΔL ≈ 1,68 mm."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "dimensionnement d'une section",
+      "enonce": "Un tube en acier de diamètre extérieur 20 mm et intérieur 16 mm subit 30 000 N en traction. L'acier a R_e = 355 MPa et l'on impose s = 1,5. Le tube convient-il ?",
+      "corrige": [
+        "$S = \\dfrac{\\pi (20^2 - 16^2)}{4} \\approx 113{,}1$ mm².",
+        "$\\sigma = \\dfrac{30\\,000}{113{,}1} \\approx 265$ MPa.",
+        "$R_{pe} = \\dfrac{355}{1{,}5} \\approx 236{,}7$ MPa : 265 MPa dépasse cette valeur."
+      ],
+      "reponse": "Non : σ ≈ 265 MPa dépasse R_pe ≈ 236,7 MPa."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "dimensionnement d'une section",
+      "enonce": "Une tige d'acier (E = 210 GPa) de 1 m doit reprendre 10 000 N en s'allongeant d'au plus 0,5 mm. Quelle section minimale faut-il (arrondie au dixième de mm²) ?",
+      "corrige": [
+        "$\\varepsilon_{max} = \\dfrac{0{,}5}{1\\,000} = 0{,}000\\,5$.",
+        "$\\sigma_{max} = E \\times \\varepsilon = 210\\,000 \\times 0{,}000\\,5 = 105$ MPa.",
+        "$S_{min} = \\dfrac{10\\,000}{105} \\approx 95{,}2$ mm²."
+      ],
+      "reponse": "Environ 95,2 mm²."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "contrainte normale",
+      "enonce": "Un pilier en béton de section carrée 300 mm × 300 mm supporte 450 kN. Le béton utilisé résiste à 25 MPa en compression et l'on impose un coefficient de sécurité de 1,5. Le pilier convient-il ?",
+      "corrige": [
+        "$S = 300 \\times 300 = 90\\,000$ mm² et $\\sigma = \\dfrac{450\\,000}{90\\,000} = 5$ MPa.",
+        "Contrainte admissible : $\\dfrac{25}{1{,}5} \\approx 16{,}7$ MPa.",
+        "5 MPa < 16,7 MPa : le pilier convient largement."
+      ],
+      "reponse": "Oui : σ = 5 MPa, bien en dessous de 16,7 MPa."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "ductile ou fragile",
+      "enonce": "Pour le crochet d'une grue, on hésite entre une fonte et un acier doux de résistances comparables. Lequel choisir ? Justifie avec le vocabulaire de l'essai de traction.",
+      "corrige": [
+        "La fonte est fragile : elle casserait net, sans prévenir.",
+        "L'acier doux est ductile (grand allongement à la rupture A%) : en cas de surcharge, il se déforme visiblement avant de rompre, ce qui alerte l'utilisateur.",
+        "Pour une pièce de sécurité, on choisit donc l'acier doux."
+      ],
+      "reponse": "L'acier doux, car il est ductile : il se déforme avant de rompre, alors que la fonte casse net."
     }
   ]
 }

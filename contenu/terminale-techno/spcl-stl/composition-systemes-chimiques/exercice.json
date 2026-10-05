@@ -128,7 +128,7 @@
     },
     {
       "id": 10,
-      "difficulte": "bac",
+      "difficulte": "probleme",
       "notion": "composition-systemes-chimiques",
       "enonce": "**Problème — Contrôle d'une solution d'acide chlorhydrique au laboratoire.** Un technicien caractérise une solution $S$ d'acide chlorhydrique (acide fort, ions $\\mathrm{H_3O^+}$ et $\\mathrm{Cl^-}$). Données à $25\\ \\mathrm{°C}$ : $K_e = 1{,}0\\times 10^{-14}$ ; $K_s(\\mathrm{AgCl}) = 1{,}8\\times 10^{-10}$ ; conductivités molaires ioniques $\\lambda(\\mathrm{H_3O^+}) = 35{,}0\\times 10^{-3}$, $\\lambda(\\mathrm{Cl^-}) = 7{,}6\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$ ; couples $\\mathrm{2\\,H_3O^+/H_2}$ ($E^\\circ = 0{,}00\\ \\mathrm{V}$) et $\\mathrm{Zn^{2+}/Zn}$ ($E^\\circ = -0{,}76\\ \\mathrm{V}$). Le pH-mètre affiche $\\mathrm{pH} = 2{,}0$ pour $S$.\n\n1. Détermine $[\\mathrm{H_3O^+}]$ dans $S$, puis $[\\mathrm{HO^-}]$.\n2. $S$ étant un acide fort, en déduis sa concentration apportée $C_A$.\n3. On dose $V_A = 20{,}0\\ \\mathrm{mL}$ de $S$ par une solution d'hydroxyde de sodium de concentration $C_B = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$). Prévois le volume à l'équivalence $V_E$.\n4. Calcule la conductivité $\\sigma$ de la solution $S$ **avant** tout ajout de soude.\n5. À un échantillon de $S$ on ajoute des ions argent $\\mathrm{Ag^+}$ jusqu'à $[\\mathrm{Ag^+}] = 1{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$, sans dilution notable ($[\\mathrm{Cl^-}] = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$). Un précipité de $\\mathrm{AgCl}$ apparaît-il ?\n6. On plonge une lame de zinc dans $S$ : le zinc est attaqué. Écris l'équation de la réaction et calcule la f.é.m. de la pile $\\mathrm{2\\,H_3O^+/H_2}$–$\\mathrm{Zn^{2+}/Zn}$ correspondante.",
       "corrige": [
@@ -140,6 +140,464 @@
         "6. Le couple de plus **haut** potentiel, $\\mathrm{2\\,H_3O^+/H_2}$ ($0{,}00\\ \\mathrm{V}$), est réduit (cathode $\\oplus$) ; le zinc, de plus bas potentiel, est oxydé (anode $\\ominus$). Demi-équations : $2\\,\\mathrm{H_3O^+} + 2\\,\\mathrm{e^-} \\rightarrow \\mathrm{H_2} + 2\\,\\mathrm{H_2O}$ et $\\mathrm{Zn} \\rightarrow \\mathrm{Zn^{2+}} + 2\\,\\mathrm{e^-}$. Bilan (2 électrons de part et d'autre) : $\\mathrm{Zn} + 2\\,\\mathrm{H_3O^+} \\rightarrow \\mathrm{Zn^{2+}} + \\mathrm{H_2} + 2\\,\\mathrm{H_2O}$. f.é.m. : $E_{\\text{pile}} = E_\\oplus - E_\\ominus = 0{,}00 - (-0{,}76) = 0{,}76\\ \\mathrm{V}$."
       ],
       "reponse": "1. $[\\mathrm{H_3O^+}] = 1{,}0\\times 10^{-2}$ et $[\\mathrm{HO^-}] = 1{,}0\\times 10^{-12}\\ \\mathrm{mol\\cdot L^{-1}}$. 2. $C_A = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. 3. $V_E = 20{,}0\\ \\mathrm{mL}$. 4. $\\sigma = 0{,}43\\ \\mathrm{S\\cdot m^{-1}}$. 5. $Q_r = 1{,}0\\times 10^{-6} > K_s$ : précipitation d'$\\mathrm{AgCl}$. 6. $\\mathrm{Zn} + 2\\,\\mathrm{H_3O^+} \\rightarrow \\mathrm{Zn^{2+}} + \\mathrm{H_2} + 2\\,\\mathrm{H_2O}$ ; $E_{\\text{pile}} = 0{,}76\\ \\mathrm{V}$."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "acides-bases-ph",
+      "enonce": "Selon Brønsted, qu'est-ce qu'un acide ? une base ? Donne la base conjuguée de $\\mathrm{NH_4^+}$ et l'acide conjugué de $\\mathrm{CH_3COO^-}$.",
+      "corrige": [
+        "Un acide peut céder un proton $\\mathrm{H^+}$ ; une base peut en capter un.",
+        "$\\mathrm{NH_4^+}$ cède un $\\mathrm{H^+}$ et devient $\\mathrm{NH_3}$ ; $\\mathrm{CH_3COO^-}$ capte un $\\mathrm{H^+}$ et devient $\\mathrm{CH_3COOH}$."
+      ],
+      "reponse": "Base conjuguée de $\\mathrm{NH_4^+}$ : $\\mathrm{NH_3}$ ; acide conjugué de $\\mathrm{CH_3COO^-}$ : $\\mathrm{CH_3COOH}$."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "acides-bases-ph",
+      "enonce": "À $25\\ \\mathrm{°C}$, trois solutions ont pour pH : $3{,}5$ ; $7{,}0$ ; $11{,}2$. Indique pour chacune si elle est acide, neutre ou basique.",
+      "corrige": [
+        "À $25\\ \\mathrm{°C}$, une solution est neutre si $\\mathrm{pH} = 7{,}0$, acide si $\\mathrm{pH} < 7{,}0$, basique si $\\mathrm{pH} > 7{,}0$.",
+        "$3{,}5$ : acide ; $7{,}0$ : neutre ; $11{,}2$ : basique."
+      ],
+      "reponse": "Acide ; neutre ; basique."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "oxydoreduction-piles",
+      "enonce": "Complète : « Un oxydant … des électrons, un réducteur en … . Dans une pile, l'oxydation a lieu à l'… (borne …) et la réduction à la … (borne …). »",
+      "corrige": [
+        "Un oxydant capte des électrons, un réducteur en cède.",
+        "L'oxydation se fait à l'anode, borne $\\ominus$ ; la réduction à la cathode, borne $\\oplus$."
+      ],
+      "reponse": "capte ; cède ; anode ($\\ominus$) ; cathode ($\\oplus$)."
+    },
+    {
+      "id": 14,
+      "difficulte": "decouverte",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "On ajoute peu à peu du sel dans un verre d'eau en agitant. À partir d'un moment, des grains restent au fond malgré l'agitation. Comment qualifie-t-on alors la solution ? Que représente la solubilité ?",
+      "corrige": [
+        "Le solide ne se dissout plus : la solution est saturée, en équilibre avec le solide.",
+        "La solubilité est la quantité maximale de solide que l'on peut dissoudre par litre de solution, à une température donnée."
+      ],
+      "reponse": "La solution est saturée ; la solubilité est la quantité maximale dissoute par litre."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "acides-bases-ph",
+      "enonce": "Une solution a une concentration $[\\mathrm{H_3O^+}] = 2{,}5\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Calcule son pH.",
+      "corrige": [
+        "$\\mathrm{pH} = -\\log[\\mathrm{H_3O^+}] = -\\log(2{,}5\\times 10^{-4})$.",
+        "$\\mathrm{pH} \\approx 3{,}60$ : la solution est acide."
+      ],
+      "reponse": "$\\mathrm{pH} \\approx 3{,}6$."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "acides-bases-ph",
+      "enonce": "Une eau de piscine a un pH de $8{,}4$ à $25\\ \\mathrm{°C}$. Calcule $[\\mathrm{H_3O^+}]$ puis $[\\mathrm{HO^-}]$ ($K_e = 1{,}0\\times 10^{-14}$).",
+      "corrige": [
+        "$[\\mathrm{H_3O^+}] = 10^{-8{,}4} \\approx 4{,}0\\times 10^{-9}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "$[\\mathrm{HO^-}] = \\dfrac{K_e}{[\\mathrm{H_3O^+}]} = \\dfrac{1{,}0\\times 10^{-14}}{4{,}0\\times 10^{-9}} = 2{,}5\\times 10^{-6}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$[\\mathrm{H_3O^+}] \\approx 4{,}0\\times 10^{-9}$ et $[\\mathrm{HO^-}] \\approx 2{,}5\\times 10^{-6}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Le bromure d'argent se dissout selon $\\mathrm{AgBr(s)} \\rightleftharpoons \\mathrm{Ag^+} + \\mathrm{Br^-}$, avec $K_s = 5{,}0\\times 10^{-13}$ à $25\\ \\mathrm{°C}$. Calcule sa solubilité.",
+      "corrige": [
+        "Type $1$–$1$ : $[\\mathrm{Ag^+}] = [\\mathrm{Br^-}] = s$, donc $K_s = s^{2}$.",
+        "$s = \\sqrt{5{,}0\\times 10^{-13}} \\approx 7{,}1\\times 10^{-7}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$s \\approx 7{,}1\\times 10^{-7}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 18,
+      "difficulte": "application",
+      "notion": "precipitation",
+      "enonce": "Dans une solution, $[\\mathrm{Ag^+}] = 2{,}0\\times 10^{-5}$ et $[\\mathrm{Cl^-}] = 5{,}0\\times 10^{-6}\\ \\mathrm{mol\\cdot L^{-1}}$. Un précipité de $\\mathrm{AgCl}$ ($K_s = 1{,}8\\times 10^{-10}$) se forme-t-il ?",
+      "corrige": [
+        "$Q_r = [\\mathrm{Ag^+}][\\mathrm{Cl^-}] = 2{,}0\\times 10^{-5} \\times 5{,}0\\times 10^{-6} = 1{,}0\\times 10^{-10}$.",
+        "$Q_r < K_s$ : la solution n'est pas saturée, aucun précipité ne se forme."
+      ],
+      "reponse": "Non : $Q_r = 1{,}0\\times 10^{-10} < K_s$."
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Calcule la conductivité d'une solution d'hydroxyde de sodium à $c = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Données : $\\lambda(\\mathrm{Na^+}) = 5{,}0\\times 10^{-3}$ et $\\lambda(\\mathrm{HO^-}) = 19{,}8\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$.",
+      "corrige": [
+        "Conversion : $c = 5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}} = 5{,}0\\ \\mathrm{mol\\cdot m^{-3}}$ pour chaque ion.",
+        "$\\sigma = (5{,}0 + 19{,}8)\\times 10^{-3} \\times 5{,}0 \\approx 0{,}124\\ \\mathrm{S\\cdot m^{-1}}$."
+      ],
+      "reponse": "$\\sigma \\approx 0{,}12\\ \\mathrm{S\\cdot m^{-1}}$."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "dosage-acide-base",
+      "enonce": "On dose $V_B = 20{,}0\\ \\mathrm{mL}$ de soude par de l'acide chlorhydrique à $C_A = 0{,}050\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$). L'équivalence est obtenue pour $16{,}0\\ \\mathrm{mL}$ d'acide versé. Calcule $C_B$.",
+      "corrige": [
+        "À l'équivalence : $C_B V_B = C_A V_E$.",
+        "$C_B = \\dfrac{0{,}050 \\times 16{,}0}{20{,}0} = 0{,}040\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$C_B = 0{,}040\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "oxydoreduction-piles",
+      "enonce": "On réalise une pile avec les couples $\\mathrm{Cu^{2+}/Cu}$ ($E^\\circ = +0{,}34\\ \\mathrm{V}$) et $\\mathrm{Fe^{2+}/Fe}$ ($E^\\circ = -0{,}44\\ \\mathrm{V}$). Quelle est la borne positive ? Calcule la f.é.m.",
+      "corrige": [
+        "Le couple de plus haut potentiel, $\\mathrm{Cu^{2+}/Cu}$, impose sa réduction : l'électrode de cuivre est la borne $\\oplus$.",
+        "$E_{\\text{pile}} = E_\\oplus - E_\\ominus = 0{,}34 - (-0{,}44) = 0{,}78\\ \\mathrm{V}$."
+      ],
+      "reponse": "Borne $\\oplus$ : cuivre ; $E_{\\text{pile}} = 0{,}78\\ \\mathrm{V}$."
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "demi-equations",
+      "enonce": "Écris les demi-équations électroniques des couples $\\mathrm{Fe^{3+}/Fe^{2+}}$, $\\mathrm{Ag^+/Ag}$ et $\\mathrm{Al^{3+}/Al}$.",
+      "corrige": [
+        "On écrit $\\mathrm{Ox} + n\\,\\mathrm{e^-} \\rightleftharpoons \\mathrm{Red}$, en équilibrant les charges avec les électrons.",
+        "$\\mathrm{Fe^{3+} + e^- \\rightleftharpoons Fe^{2+}}$ ; $\\mathrm{Ag^+ + e^- \\rightleftharpoons Ag}$ ; $\\mathrm{Al^{3+} + 3\\,e^- \\rightleftharpoons Al}$."
+      ],
+      "reponse": "$\\mathrm{Fe^{3+} + e^- \\rightleftharpoons Fe^{2+}}$ ; $\\mathrm{Ag^+ + e^- \\rightleftharpoons Ag}$ ; $\\mathrm{Al^{3+} + 3\\,e^- \\rightleftharpoons Al}$."
+    },
+    {
+      "id": 23,
+      "difficulte": "application",
+      "notion": "acides-bases-ph",
+      "enonce": "L'acide méthanoïque a un $\\mathrm{p}K_a$ de $3{,}8$ ; l'acide éthanoïque un $\\mathrm{p}K_a$ de $4{,}8$. Lequel est le plus fort ? À concentration égale, lequel a le pH le plus bas ?",
+      "corrige": [
+        "Plus le $\\mathrm{p}K_a$ est petit, plus l'acide est fort : l'acide méthanoïque est le plus fort.",
+        "Plus dissocié, il libère davantage d'ions $\\mathrm{H_3O^+}$ : à concentration égale, sa solution a le pH le plus bas."
+      ],
+      "reponse": "L'acide méthanoïque, dont la solution a le pH le plus bas."
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Le chlorure d'argent a pour $K_s = 1{,}8\\times 10^{-10}$. Calcule sa solubilité en $\\mathrm{mol\\cdot L^{-1}}$ puis en $\\mathrm{g\\cdot L^{-1}}$ ($M(\\mathrm{AgCl}) = 143{,}4\\ \\mathrm{g\\cdot mol^{-1}}$).",
+      "corrige": [
+        "$s = \\sqrt{K_s} = \\sqrt{1{,}8\\times 10^{-10}} \\approx 1{,}3\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "$s_m = s \\times M \\approx 1{,}34\\times 10^{-5} \\times 143{,}4 \\approx 1{,}9\\times 10^{-3}\\ \\mathrm{g\\cdot L^{-1}}$ : moins de $2\\ \\mathrm{mg}$ par litre."
+      ],
+      "reponse": "$s \\approx 1{,}3\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}} \\approx 1{,}9\\times 10^{-3}\\ \\mathrm{g\\cdot L^{-1}}$."
+    },
+    {
+      "id": 25,
+      "difficulte": "intermediaire",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "Le chromate d'argent se dissout selon $\\mathrm{Ag_2CrO_4(s)} \\rightleftharpoons 2\\,\\mathrm{Ag^+} + \\mathrm{CrO_4^{2-}}$, avec $K_s = 1{,}1\\times 10^{-12}$. Établis la relation entre $K_s$ et $s$, puis calcule $s$.",
+      "corrige": [
+        "Dissoudre $s$ mol donne $2s$ mol de $\\mathrm{Ag^+}$ et $s$ mol de $\\mathrm{CrO_4^{2-}}$ : $K_s = (2s)^{2} \\times s = 4s^{3}$.",
+        "$s = \\left(\\dfrac{1{,}1\\times 10^{-12}}{4}\\right)^{1/3} \\approx 6{,}5\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$K_s = 4s^{3}$ ; $s \\approx 6{,}5\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "precipitation",
+      "enonce": "On mélange $10\\ \\mathrm{mL}$ de nitrate d'argent à $1{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ et $10\\ \\mathrm{mL}$ de chlorure de sodium à $1{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$. Un précipité de $\\mathrm{AgCl}$ ($K_s = 1{,}8\\times 10^{-10}$) se forme-t-il ?",
+      "corrige": [
+        "Le volume double : juste après le mélange, $[\\mathrm{Ag^+}] = [\\mathrm{Cl^-}] = 5{,}0\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "$Q_r = (5{,}0\\times 10^{-5})^{2} = 2{,}5\\times 10^{-9} > K_s$ : il y a précipitation de chlorure d'argent."
+      ],
+      "reponse": "Oui : $Q_r = 2{,}5\\times 10^{-9} > K_s$."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "acides-bases-ph",
+      "enonce": "On dilue $100$ fois une solution d'acide chlorhydrique (acide fort) de concentration $1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. Quel est le pH avant et après dilution ?",
+      "corrige": [
+        "Acide fort : $\\mathrm{pH} = -\\log c$. Avant : $\\mathrm{pH} = -\\log(1{,}0\\times 10^{-2}) = 2{,}0$.",
+        "Après dilution, $c = 1{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ : $\\mathrm{pH} = 4{,}0$. Diluer $100$ fois un acide fort augmente le pH de $2$."
+      ],
+      "reponse": "$2{,}0$ puis $4{,}0$."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "acides-bases-ph",
+      "enonce": "Une solution d'acide éthanoïque à $c = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ a un pH de $3{,}4$. (a) Calcule $[\\mathrm{H_3O^+}]$. (b) Quelle fraction de l'acide a réagi avec l'eau ? (c) Conclus sur sa force.",
+      "corrige": [
+        "(a) $[\\mathrm{H_3O^+}] = 10^{-3{,}4} \\approx 4{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "(b) $\\dfrac{4{,}0\\times 10^{-4}}{1{,}0\\times 10^{-2}} = 0{,}040$ : environ $4\\ \\%$ de l'acide a réagi.",
+        "(c) La réaction avec l'eau est très partielle : c'est un acide faible."
+      ],
+      "reponse": "(a) $\\approx 4{,}0\\times 10^{-4}\\ \\mathrm{mol\\cdot L^{-1}}$ ; (b) environ $4\\ \\%$ ; (c) acide faible."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Une solution de chlorure de calcium ($\\mathrm{CaCl_2 \\rightarrow Ca^{2+} + 2\\,Cl^-}$) a une concentration apportée $c = 1{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Données : $\\lambda(\\mathrm{Ca^{2+}}) = 11{,}9\\times 10^{-3}$ et $\\lambda(\\mathrm{Cl^-}) = 7{,}6\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$. Calcule $\\sigma$.",
+      "corrige": [
+        "Concentrations des ions en $\\mathrm{mol\\cdot m^{-3}}$ : $[\\mathrm{Ca^{2+}}] = 1{,}0$ et $[\\mathrm{Cl^-}] = 2{,}0$ (deux ions chlorure par formule).",
+        "$\\sigma = 11{,}9\\times 10^{-3} \\times 1{,}0 + 7{,}6\\times 10^{-3} \\times 2{,}0 \\approx 2{,}7\\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$."
+      ],
+      "reponse": "$\\sigma \\approx 2{,}7\\times 10^{-2}\\ \\mathrm{S\\cdot m^{-1}}$."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Une solution de chlorure de sodium à $1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ a une conductivité de $0{,}126\\ \\mathrm{S\\cdot m^{-1}}$. Une autre solution de chlorure de sodium, à la même température, a une conductivité de $0{,}0756\\ \\mathrm{S\\cdot m^{-1}}$. Quelle est sa concentration ? Justifie.",
+      "corrige": [
+        "Pour un même soluté, $\\sigma = (\\lambda_{\\mathrm{Na^+}} + \\lambda_{\\mathrm{Cl^-}})\\,c$ : la conductivité est proportionnelle à la concentration.",
+        "$c = 1{,}0\\times 10^{-2} \\times \\dfrac{0{,}0756}{0{,}126} = 6{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$c = 6{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "Avant un dosage conductimétrique, on ajoute environ $200\\ \\mathrm{mL}$ d'eau distillée à la prise d'essai. Pourquoi ? Et pourquoi faut-il relever des points avant et après l'équivalence ?",
+      "corrige": [
+        "Avec un grand volume initial, l'ajout de titrant dilue très peu la solution : les portions de courbe $\\sigma = f(V)$ restent bien rectilignes.",
+        "On repère l'équivalence à l'intersection de deux droites : il faut des points de part et d'autre pour tracer chacune d'elles."
+      ],
+      "reponse": "Pour que les segments restent droits ; pour tracer les deux droites et trouver leur intersection."
+    },
+    {
+      "id": 32,
+      "difficulte": "intermediaire",
+      "notion": "oxydoreduction-piles",
+      "enonce": "On associe les couples $\\mathrm{Cu^{2+}/Cu}$ ($E^\\circ = +0{,}34\\ \\mathrm{V}$) et $\\mathrm{Al^{3+}/Al}$ ($E^\\circ = -1{,}66\\ \\mathrm{V}$). (a) Identifie les bornes. (b) Écris l'équation de fonctionnement. (c) Calcule la f.é.m.",
+      "corrige": [
+        "(a) Cuivre : borne $\\oplus$ (réduction $\\mathrm{Cu^{2+} + 2\\,e^- \\rightarrow Cu}$) ; aluminium : borne $\\ominus$ (oxydation $\\mathrm{Al \\rightarrow Al^{3+} + 3\\,e^-}$).",
+        "(b) On équilibre les électrons ($6$ de chaque côté) : $\\mathrm{3\\,Cu^{2+} + 2\\,Al \\rightarrow 3\\,Cu + 2\\,Al^{3+}}$.",
+        "(c) $E_{\\text{pile}} = 0{,}34 - (-1{,}66) = 2{,}00\\ \\mathrm{V}$."
+      ],
+      "reponse": "$\\mathrm{3\\,Cu^{2+} + 2\\,Al \\rightarrow 3\\,Cu + 2\\,Al^{3+}}$ ; $E_{\\text{pile}} = 2{,}00\\ \\mathrm{V}$."
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "demi-equations",
+      "enonce": "En milieu acide, l'ion permanganate $\\mathrm{MnO_4^-}$ est réduit en ion $\\mathrm{Mn^{2+}}$. Écris la demi-équation électronique du couple $\\mathrm{MnO_4^-/Mn^{2+}}$.",
+      "corrige": [
+        "On équilibre l'élément Mn (déjà fait), puis l'oxygène avec $\\mathrm{H_2O}$ : $4\\,\\mathrm{H_2O}$ à droite.",
+        "On équilibre l'hydrogène avec $\\mathrm{H^+}$ : $8\\,\\mathrm{H^+}$ à gauche ; puis les charges avec les électrons : $(-1) + 8 = +7$ à gauche contre $+2$ à droite, il faut $5\\,\\mathrm{e^-}$.",
+        "$\\mathrm{MnO_4^- + 8\\,H^+ + 5\\,e^- \\rightleftharpoons Mn^{2+} + 4\\,H_2O}$."
+      ],
+      "reponse": "$\\mathrm{MnO_4^- + 8\\,H^+ + 5\\,e^- \\rightleftharpoons Mn^{2+} + 4\\,H_2O}$."
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "dosage-acide-base",
+      "enonce": "On dose de l'acide éthanoïque par de la soude avec un indicateur coloré. Le pH à l'équivalence vaut environ $8{,}7$. Quel indicateur choisir : hélianthine (zone de virage $3{,}1$–$4{,}4$), bleu de bromothymol ($6{,}0$–$7{,}6$) ou phénolphtaléine ($8{,}2$–$10{,}0$) ? Justifie.",
+      "corrige": [
+        "L'acide dosé est faible : l'équivalence est basique.",
+        "Il faut un indicateur dont la zone de virage contient le pH à l'équivalence : la phénolphtaléine ($8{,}2$–$10{,}0$)."
+      ],
+      "reponse": "La phénolphtaléine."
+    },
+    {
+      "id": 35,
+      "difficulte": "approfondissement",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "On compare $\\mathrm{AgCl}$ ($K_s = 1{,}8\\times 10^{-10}$, $s = \\sqrt{K_s}$) et $\\mathrm{Ag_2CrO_4}$ ($K_s = 1{,}1\\times 10^{-12}$, $K_s = 4s^{3}$). Un élève affirme : « $\\mathrm{Ag_2CrO_4}$ a le plus petit $K_s$, il est donc le moins soluble. » Vérifie par le calcul.",
+      "corrige": [
+        "$s(\\mathrm{AgCl}) = \\sqrt{1{,}8\\times 10^{-10}} \\approx 1{,}3\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "$s(\\mathrm{Ag_2CrO_4}) = \\left(\\dfrac{1{,}1\\times 10^{-12}}{4}\\right)^{1/3} \\approx 6{,}5\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$, environ $5$ fois plus.",
+        "L'élève a tort : on ne peut comparer directement des $K_s$ que pour des solides du même type ; sinon, il faut calculer les solubilités."
+      ],
+      "reponse": "Faux : $\\mathrm{Ag_2CrO_4}$ est environ $5$ fois plus soluble que $\\mathrm{AgCl}$."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "precipitation",
+      "enonce": "Une solution contient des ions $\\mathrm{Ag^+}$ à $1{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Quelle concentration maximale d'ions chlorure peut-on atteindre sans faire précipiter $\\mathrm{AgCl}$ ($K_s = 1{,}8\\times 10^{-10}$) ?",
+      "corrige": [
+        "La précipitation commence quand $Q_r$ atteint $K_s$ : $[\\mathrm{Ag^+}][\\mathrm{Cl^-}]_{\\max} = K_s$.",
+        "$[\\mathrm{Cl^-}]_{\\max} = \\dfrac{1{,}8\\times 10^{-10}}{1{,}0\\times 10^{-3}} = 1{,}8\\times 10^{-7}\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$1{,}8\\times 10^{-7}\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 37,
+      "difficulte": "approfondissement",
+      "notion": "acides-bases-ph",
+      "enonce": "Une solution d'hydroxyde de sodium (base forte, totalement dissociée) a une concentration $c = 2{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Calcule son pH à $25\\ \\mathrm{°C}$.",
+      "corrige": [
+        "Base forte : $[\\mathrm{HO^-}] = c = 2{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "$[\\mathrm{H_3O^+}] = \\dfrac{K_e}{[\\mathrm{HO^-}]} = \\dfrac{1{,}0\\times 10^{-14}}{2{,}0\\times 10^{-3}} = 5{,}0\\times 10^{-12}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "$\\mathrm{pH} = -\\log(5{,}0\\times 10^{-12}) \\approx 11{,}3$."
+      ],
+      "reponse": "$\\mathrm{pH} \\approx 11{,}3$."
+    },
+    {
+      "id": 38,
+      "difficulte": "approfondissement",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "On dose de la soude par de l'acide chlorhydrique en suivant la conductivité. Données ($10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$) : $\\mathrm{H_3O^+}$ : $35{,}0$ ; $\\mathrm{HO^-}$ : $19{,}8$ ; $\\mathrm{Na^+}$ : $5{,}0$ ; $\\mathrm{Cl^-}$ : $7{,}6$. Prévois l'allure de la courbe $\\sigma = f(V)$ avant et après l'équivalence, et justifie.",
+      "corrige": [
+        "Avant l'équivalence, chaque ion $\\mathrm{HO^-}$ consommé ($19{,}8$) est remplacé par un ion $\\mathrm{Cl^-}$ apporté ($7{,}6$), moins conducteur : $\\sigma$ diminue.",
+        "Après l'équivalence, on ajoute des ions $\\mathrm{H_3O^+}$ ($35{,}0$) et $\\mathrm{Cl^-}$ en excès : $\\sigma$ augmente, avec une pente forte.",
+        "La courbe a la forme d'un V dissymétrique ; $V_E$ se lit à l'intersection des deux droites."
+      ],
+      "reponse": "Une droite décroissante puis une droite croissante plus raide ; $V_E$ à l'intersection."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "oxydoreduction-piles",
+      "enonce": "On plonge une lame de zinc dans une solution de sulfate de cuivre, et une lame de cuivre dans une solution de sulfate de zinc. Données : $E^\\circ(\\mathrm{Cu^{2+}/Cu}) = +0{,}34\\ \\mathrm{V}$ ; $E^\\circ(\\mathrm{Zn^{2+}/Zn}) = -0{,}76\\ \\mathrm{V}$. Dans quel cas observe-t-on une réaction ? Écris-la.",
+      "corrige": [
+        "La réaction spontanée a lieu entre l'oxydant du couple de plus haut potentiel ($\\mathrm{Cu^{2+}}$) et le réducteur du couple de plus bas potentiel ($\\mathrm{Zn}$).",
+        "Zinc dans le sulfate de cuivre : un dépôt de cuivre apparaît, selon $\\mathrm{Cu^{2+} + Zn \\rightarrow Cu + Zn^{2+}}$.",
+        "Cuivre dans le sulfate de zinc : rien ne se passe."
+      ],
+      "reponse": "Seulement le zinc dans le sulfate de cuivre : $\\mathrm{Cu^{2+} + Zn \\rightarrow Cu + Zn^{2+}}$."
+    },
+    {
+      "id": 40,
+      "difficulte": "approfondissement",
+      "notion": "dosage-acide-base",
+      "enonce": "On dilue $10$ fois un vinaigre, puis on titre $10{,}0\\ \\mathrm{mL}$ de la solution diluée par de la soude à $0{,}100\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $1$ pour $1$) : $V_E = 13{,}2\\ \\mathrm{mL}$. Calcule la concentration en acide éthanoïque du vinaigre, en $\\mathrm{mol\\cdot L^{-1}}$ puis en $\\mathrm{g\\cdot L^{-1}}$ ($M = 60\\ \\mathrm{g\\cdot mol^{-1}}$).",
+      "corrige": [
+        "Solution diluée : $C = \\dfrac{0{,}100 \\times 13{,}2}{10{,}0} = 0{,}132\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "Vinaigre : $C_0 = 10 \\times 0{,}132 = 1{,}32\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "$c_m = 1{,}32 \\times 60 \\approx 79\\ \\mathrm{g\\cdot L^{-1}}$, soit environ $7{,}9\\ \\mathrm{g}$ d'acide pour $100\\ \\mathrm{mL}$ de vinaigre."
+      ],
+      "reponse": "$C_0 = 1{,}32\\ \\mathrm{mol\\cdot L^{-1}}$, soit environ $79\\ \\mathrm{g\\cdot L^{-1}}$."
+    },
+    {
+      "id": 41,
+      "difficulte": "approfondissement",
+      "notion": "demi-equations",
+      "enonce": "Les ions permanganate oxydent les ions fer(II). À partir des demi-équations $\\mathrm{MnO_4^- + 8\\,H^+ + 5\\,e^- \\rightleftharpoons Mn^{2+} + 4\\,H_2O}$ et $\\mathrm{Fe^{3+} + e^- \\rightleftharpoons Fe^{2+}}$, écris l'équation de la réaction.",
+      "corrige": [
+        "Le fer(II) est oxydé : $\\mathrm{Fe^{2+} \\rightarrow Fe^{3+} + e^-}$ ; il faut cinq ions fer(II) pour fournir les $5$ électrons captés par un ion permanganate.",
+        "On multiplie la demi-équation du fer par $5$ et on additionne : les électrons disparaissent.",
+        "$\\mathrm{MnO_4^- + 5\\,Fe^{2+} + 8\\,H^+ \\rightarrow Mn^{2+} + 5\\,Fe^{3+} + 4\\,H_2O}$."
+      ],
+      "reponse": "$\\mathrm{MnO_4^- + 5\\,Fe^{2+} + 8\\,H^+ \\rightarrow Mn^{2+} + 5\\,Fe^{3+} + 4\\,H_2O}$."
+    },
+    {
+      "id": 42,
+      "difficulte": "probleme",
+      "notion": "precipitation",
+      "enonce": "**Ions sulfate d'une eau minérale.** Une eau minérale contient $[\\mathrm{SO_4^{2-}}] = 1{,}5\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. On y ajoute quelques gouttes de chlorure de baryum, de sorte que $[\\mathrm{Ba^{2+}}] = 1{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Donnée : $K_s(\\mathrm{BaSO_4}) = 1{,}1\\times 10^{-10}$. (a) Un précipité se forme-t-il ? (b) Calcule la masse d'ions sulfate par litre ($M(\\mathrm{SO_4^{2-}}) = 96\\ \\mathrm{g\\cdot mol^{-1}}$). (c) Pourquoi ce test est-il très sensible ?",
+      "corrige": [
+        "(a) $Q_r = 1{,}0\\times 10^{-3} \\times 1{,}5\\times 10^{-3} = 1{,}5\\times 10^{-6} > K_s$ : un précipité blanc de sulfate de baryum se forme.",
+        "(b) $1{,}5\\times 10^{-3} \\times 96 \\approx 0{,}14\\ \\mathrm{g\\cdot L^{-1}}$, soit environ $144\\ \\mathrm{mg\\cdot L^{-1}}$.",
+        "(c) $K_s$ est très petit : même de faibles concentrations d'ions sulfate suffisent pour dépasser $K_s$ et faire apparaître le précipité."
+      ],
+      "reponse": "(a) Oui ; (b) environ $144\\ \\mathrm{mg\\cdot L^{-1}}$ ; (c) $K_s$ très petit."
+    },
+    {
+      "id": 43,
+      "difficulte": "probleme",
+      "notion": "oxydoreduction-piles",
+      "enonce": "**Choisir les couples d'une pile.** On dispose des couples $\\mathrm{Mg^{2+}/Mg}$ ($-2{,}37\\ \\mathrm{V}$), $\\mathrm{Zn^{2+}/Zn}$ ($-0{,}76\\ \\mathrm{V}$), $\\mathrm{Cu^{2+}/Cu}$ ($+0{,}34\\ \\mathrm{V}$) et $\\mathrm{Ag^+/Ag}$ ($+0{,}80\\ \\mathrm{V}$). (a) Quels couples associer pour obtenir la plus grande f.é.m. ? La calculer. (b) Écris l'équation de fonctionnement. (c) Dans quel sens circulent les électrons dans le circuit extérieur ? (d) Quel est le rôle du pont salin ?",
+      "corrige": [
+        "(a) Il faut les potentiels les plus éloignés : $\\mathrm{Ag^+/Ag}$ et $\\mathrm{Mg^{2+}/Mg}$, d'où $E_{\\text{pile}} = 0{,}80 - (-2{,}37) = 3{,}17\\ \\mathrm{V}$.",
+        "(b) $\\mathrm{2\\,Ag^+ + Mg \\rightarrow 2\\,Ag + Mg^{2+}}$ (deux électrons échangés).",
+        "(c) Les électrons partent de l'anode (magnésium, borne $\\ominus$) et vont vers la cathode (argent, borne $\\oplus$).",
+        "(d) Le pont salin relie les deux demi-piles et ferme le circuit par un déplacement d'ions, en assurant l'électroneutralité des solutions."
+      ],
+      "reponse": "(a) Ag et Mg, $3{,}17\\ \\mathrm{V}$ ; (b) $\\mathrm{2\\,Ag^+ + Mg \\rightarrow 2\\,Ag + Mg^{2+}}$ ; (c) du magnésium vers l'argent."
+    },
+    {
+      "id": 44,
+      "difficulte": "probleme",
+      "notion": "acides-bases-ph",
+      "enonce": "**Acide fort ou faible ?** Deux solutions A et B ont la même concentration apportée $1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. On mesure $\\mathrm{pH_A} = 2{,}0$ et $\\mathrm{pH_B} = 3{,}4$. On les dilue $10$ fois : on mesure alors $\\mathrm{pH_A} = 3{,}0$ et $\\mathrm{pH_B} = 3{,}9$. (a) Identifie l'acide fort. (b) Quelle observation sur la dilution confirme ce résultat ?",
+      "corrige": [
+        "(a) Pour A, $\\mathrm{pH} = -\\log c$ : la réaction avec l'eau est totale, A est un acide fort. Pour B, $\\mathrm{pH} > -\\log c$ : B est faible.",
+        "(b) Dilué $10$ fois, l'acide fort voit son pH augmenter exactement d'une unité ($c$ divisée par $10$). Le pH de l'acide faible augmente moins ($+0{,}5$) car il se dissocie davantage quand on le dilue."
+      ],
+      "reponse": "(a) A est l'acide fort ; (b) son pH augmente d'une unité à la dilution, celui de B seulement d'environ $0{,}5$."
+    },
+    {
+      "id": 45,
+      "difficulte": "probleme",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "**Dosage conductimétrique.** On dose $V_A = 10{,}0\\ \\mathrm{mL}$ d'acide chlorhydrique (dilué dans de l'eau distillée) par de la soude à $C_B = 0{,}100\\ \\mathrm{mol\\cdot L^{-1}}$. Mesures : $V$ ($\\mathrm{mL}$) $= 0$ ; $2$ ; $4$ ; $6$ donnent $\\sigma = 0{,}180$ ; $0{,}150$ ; $0{,}120$ ; $0{,}090\\ \\mathrm{S\\cdot m^{-1}}$ ; $V = 12$ ; $14$ ; $16$ donnent $\\sigma = 0{,}054$ ; $0{,}060$ ; $0{,}066\\ \\mathrm{S\\cdot m^{-1}}$. (a) Détermine les équations des deux droites. (b) Calcule $V_E$. (c) Calcule $C_A$.",
+      "corrige": [
+        "(a) Première droite : pente $\\dfrac{0{,}090 - 0{,}180}{6} = -0{,}0150$, d'où $\\sigma_1 = 0{,}180 - 0{,}0150\\,V$. Seconde : pente $\\dfrac{0{,}066 - 0{,}054}{4} = 0{,}0030$, d'où $\\sigma_2 = 0{,}018 + 0{,}0030\\,V$.",
+        "(b) À l'intersection : $0{,}180 - 0{,}0150\\,V_E = 0{,}018 + 0{,}0030\\,V_E$, soit $0{,}162 = 0{,}0180\\,V_E$ et $V_E = 9{,}0\\ \\mathrm{mL}$.",
+        "(c) $C_A = \\dfrac{C_B V_E}{V_A} = \\dfrac{0{,}100 \\times 9{,}0}{10{,}0} = 0{,}090\\ \\mathrm{mol\\cdot L^{-1}}$."
+      ],
+      "reponse": "$V_E = 9{,}0\\ \\mathrm{mL}$ ; $C_A = 0{,}090\\ \\mathrm{mol\\cdot L^{-1}}$."
+    },
+    {
+      "id": 46,
+      "difficulte": "probleme",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "**Faire précipiter l'hydroxyde de magnésium.** Une solution contient $[\\mathrm{Mg^{2+}}] = 1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$. On ajoute peu à peu de la soude. Données à $25\\ \\mathrm{°C}$ : $\\mathrm{Mg(OH)_2(s)} \\rightleftharpoons \\mathrm{Mg^{2+}} + 2\\,\\mathrm{HO^-}$, $K_s = 5{,}6\\times 10^{-12}$ ; $K_e = 1{,}0\\times 10^{-14}$. (a) Exprime $K_s$. (b) Calcule $[\\mathrm{HO^-}]$ au début de la précipitation. (c) À quel pH commence-t-elle ?",
+      "corrige": [
+        "(a) $K_s = [\\mathrm{Mg^{2+}}][\\mathrm{HO^-}]^{2}$.",
+        "(b) $[\\mathrm{HO^-}] = \\sqrt{\\dfrac{K_s}{[\\mathrm{Mg^{2+}}]}} = \\sqrt{\\dfrac{5{,}6\\times 10^{-12}}{1{,}0\\times 10^{-2}}} \\approx 2{,}4\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "(c) $[\\mathrm{H_3O^+}] = \\dfrac{1{,}0\\times 10^{-14}}{2{,}4\\times 10^{-5}} \\approx 4{,}2\\times 10^{-10}\\ \\mathrm{mol\\cdot L^{-1}}$, soit $\\mathrm{pH} \\approx 9{,}4$."
+      ],
+      "reponse": "La précipitation commence vers $\\mathrm{pH} \\approx 9{,}4$."
+    },
+    {
+      "id": 47,
+      "difficulte": "probleme",
+      "notion": "dosage-acide-base",
+      "enonce": "**Doser un produit ménager ammoniaqué.** On dilue $50$ fois un produit contenant de l'ammoniac $\\mathrm{NH_3}$ (base faible). On titre $10{,}0\\ \\mathrm{mL}$ de la solution diluée par de l'acide chlorhydrique à $0{,}100\\ \\mathrm{mol\\cdot L^{-1}}$ (réaction $\\mathrm{NH_3 + H_3O^+ \\rightarrow NH_4^+ + H_2O}$, $1$ pour $1$) : $V_E = 12{,}0\\ \\mathrm{mL}$. (a) Calcule la concentration en ammoniac du produit. (b) À l'équivalence, la solution contient l'acide faible $\\mathrm{NH_4^+}$ : le pH est-il inférieur ou supérieur à $7$ ? (c) Choisis l'indicateur : rouge de méthyle (zone de virage environ $4{,}4$–$6{,}2$) ou phénolphtaléine ($8{,}2$–$10{,}0$).",
+      "corrige": [
+        "(a) Solution diluée : $C = \\dfrac{0{,}100 \\times 12{,}0}{10{,}0} = 0{,}120\\ \\mathrm{mol\\cdot L^{-1}}$ ; produit : $50 \\times 0{,}120 = 6{,}0\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "(b) La solution à l'équivalence contient un acide faible : son pH est inférieur à $7$.",
+        "(c) Le rouge de méthyle, dont la zone de virage est dans le domaine acide."
+      ],
+      "reponse": "(a) $6{,}0\\ \\mathrm{mol\\cdot L^{-1}}$ ; (b) pH $< 7$ ; (c) rouge de méthyle."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "oxydoreduction-piles",
+      "enonce": "**Un clou dans une solution bleue.** On plonge un clou en fer dans une solution de sulfate de cuivre. Après quelques minutes, le clou se recouvre d'un dépôt rouge et la solution pâlit. Données : $E^\\circ(\\mathrm{Cu^{2+}/Cu}) = +0{,}34\\ \\mathrm{V}$ ; $E^\\circ(\\mathrm{Fe^{2+}/Fe}) = -0{,}44\\ \\mathrm{V}$ ; $M(\\mathrm{Cu}) = 63{,}5\\ \\mathrm{g\\cdot mol^{-1}}$. (a) Interprète les observations par une équation. (b) Quel est l'oxydant ? le réducteur ? (c) Quelle masse de cuivre se dépose si $0{,}010\\ \\mathrm{mol}$ d'ions $\\mathrm{Cu^{2+}}$ réagissent ?",
+      "corrige": [
+        "(a) Le fer, réducteur du couple de plus bas potentiel, réduit les ions cuivre(II) : $\\mathrm{Cu^{2+} + Fe \\rightarrow Cu + Fe^{2+}}$. Le dépôt rouge est du cuivre ; la solution pâlit car les ions $\\mathrm{Cu^{2+}}$ (bleus) disparaissent.",
+        "(b) Oxydant : $\\mathrm{Cu^{2+}}$ ; réducteur : $\\mathrm{Fe}$.",
+        "(c) $m = 0{,}010 \\times 63{,}5 \\approx 0{,}64\\ \\mathrm{g}$."
+      ],
+      "reponse": "(a) $\\mathrm{Cu^{2+} + Fe \\rightarrow Cu + Fe^{2+}}$ ; (b) $\\mathrm{Cu^{2+}}$ et $\\mathrm{Fe}$ ; (c) $\\approx 0{,}64\\ \\mathrm{g}$."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "conductivite-conductimetrie",
+      "enonce": "**Conductivité d'un mélange.** Une solution contient du chlorure de sodium à $1{,}0\\times 10^{-2}\\ \\mathrm{mol\\cdot L^{-1}}$ et du nitrate de potassium à $5{,}0\\times 10^{-3}\\ \\mathrm{mol\\cdot L^{-1}}$. Données ($10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$) : $\\mathrm{Na^+}$ : $5{,}0$ ; $\\mathrm{Cl^-}$ : $7{,}6$ ; $\\mathrm{K^+}$ : $7{,}4$ ; $\\mathrm{NO_3^-}$ : $7{,}1$. Calcule la conductivité de la solution.",
+      "corrige": [
+        "Concentrations en $\\mathrm{mol\\cdot m^{-3}}$ : $[\\mathrm{Na^+}] = [\\mathrm{Cl^-}] = 10$ ; $[\\mathrm{K^+}] = [\\mathrm{NO_3^-}] = 5{,}0$.",
+        "$\\sigma = (5{,}0 + 7{,}6)\\times 10^{-3} \\times 10 + (7{,}4 + 7{,}1)\\times 10^{-3} \\times 5{,}0 = 0{,}126 + 0{,}0725 \\approx 0{,}20\\ \\mathrm{S\\cdot m^{-1}}$.",
+        "Chaque ion contribue : les conductivités s'ajoutent."
+      ],
+      "reponse": "$\\sigma \\approx 0{,}20\\ \\mathrm{S\\cdot m^{-1}}$."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "solubilite-produit-solubilite",
+      "enonce": "**Mesurer un $K_s$ par conductimétrie.** On prépare une solution saturée de chlorure d'argent et on mesure sa conductivité ; après soustraction de celle de l'eau, on trouve $\\sigma = 1{,}9\\times 10^{-4}\\ \\mathrm{S\\cdot m^{-1}}$. Données : $\\lambda(\\mathrm{Ag^+}) = 6{,}2\\times 10^{-3}$ et $\\lambda(\\mathrm{Cl^-}) = 7{,}6\\times 10^{-3}\\ \\mathrm{S\\cdot m^2\\cdot mol^{-1}}$. (a) Exprime $\\sigma$ en fonction de $s$. (b) Calcule $s$ en $\\mathrm{mol\\cdot m^{-3}}$ puis en $\\mathrm{mol\\cdot L^{-1}}$. (c) Déduis-en $K_s$.",
+      "corrige": [
+        "(a) $[\\mathrm{Ag^+}] = [\\mathrm{Cl^-}] = s$, donc $\\sigma = (\\lambda_{\\mathrm{Ag^+}} + \\lambda_{\\mathrm{Cl^-}})\\,s = 13{,}8\\times 10^{-3}\\,s$.",
+        "(b) $s = \\dfrac{1{,}9\\times 10^{-4}}{13{,}8\\times 10^{-3}} \\approx 1{,}4\\times 10^{-2}\\ \\mathrm{mol\\cdot m^{-3}}$, soit $1{,}4\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$.",
+        "(c) $K_s = s^{2} \\approx (1{,}38\\times 10^{-5})^{2} \\approx 1{,}9\\times 10^{-10}$, proche de la valeur tabulée ($1{,}8\\times 10^{-10}$)."
+      ],
+      "reponse": "$s \\approx 1{,}4\\times 10^{-5}\\ \\mathrm{mol\\cdot L^{-1}}$ ; $K_s \\approx 1{,}9\\times 10^{-10}$."
     }
   ]
 }

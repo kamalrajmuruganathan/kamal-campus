@@ -12,7 +12,7 @@
   "exercices": [
     {
       "id": 1,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "structure de la chaîne d'information",
       "enonce": "Cite dans l'ordre les trois grandes fonctions de la chaîne d'information, puis associe à chacune un composant parmi : capteur de température, microcontrôleur, écran d'affichage.",
       "corrige": [
@@ -25,7 +25,7 @@
     },
     {
       "id": 2,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "capteur TOR ou analogique",
       "enonce": "Classe chaque capteur en TOR (tout ou rien) ou analogique : (a) un interrupteur de fin de course, (b) une thermistance qui varie continûment avec la température, (c) un détecteur de présence qui indique seulement « objet / pas d'objet ».",
       "corrige": [
@@ -39,7 +39,7 @@
     },
     {
       "id": 3,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "codage binaire",
       "enonce": "Un capteur envoie l'information codée sur 8 bits. Combien de valeurs distinctes peut-on coder ? Convertis ensuite le nombre binaire 1011 en décimal.",
       "corrige": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "quantification d'un CAN",
       "enonce": "Un convertisseur analogique-numérique (CAN) de 10 bits mesure une tension comprise entre 0 V et 5 V. Calcule le nombre de niveaux disponibles, puis la résolution (quantum), c'est-à-dire la plus petite variation de tension détectable.",
       "corrige": [
@@ -64,7 +64,7 @@
     },
     {
       "id": 5,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "logique combinatoire",
       "enonce": "Un système d'arrosage démarre la pompe (S = 1) si le sol est sec (a = 1) ET s'il ne pleut pas (b = 0). Écris l'équation logique de S en fonction de a et b, puis donne la table de vérité.",
       "corrige": [
@@ -78,7 +78,7 @@
     },
     {
       "id": 6,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "acquisition et échantillonnage",
       "enonce": "Un microcontrôleur acquiert un signal en le mesurant 100 fois par seconde, chaque mesure étant codée sur 12 bits. Calcule la période d'échantillonnage, puis le débit binaire brut produit par cette acquisition (en bits par seconde puis en octets par seconde).",
       "corrige": [
@@ -91,7 +91,7 @@
     },
     {
       "id": 7,
-      "difficulte": "facile",
+      "difficulte": "decouverte",
       "notion": "capteur TOR ou analogique",
       "enonce": "Classe chacun de ces capteurs en TOR (Tout Ou Rien) ou analogique : (a) un bouton-poussoir ; (b) une thermistance (mesure de température) ; (c) un détecteur de fin de course.",
       "corrige": [
@@ -104,7 +104,7 @@
     },
     {
       "id": 8,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "nombre de niveaux d'un CAN",
       "enonce": "Combien de niveaux distincts peut coder un convertisseur analogique-numérique (CAN) de 8 bits ? Et un CAN de 12 bits ?",
       "corrige": [
@@ -117,7 +117,7 @@
     },
     {
       "id": 9,
-      "difficulte": "moyen",
+      "difficulte": "intermediaire",
       "notion": "résolution d'un CAN",
       "enonce": "Un CAN de 10 bits numérise une tension comprise entre 0 et 5 V. Calcule le pas de quantification (la résolution).",
       "corrige": [
@@ -130,16 +130,457 @@
     },
     {
       "id": 10,
-      "difficulte": "difficile",
+      "difficulte": "approfondissement",
       "notion": "logique combinatoire",
       "enonce": "Un système démarre si S = marche ET (NON arret). Donne la valeur de S pour les quatre combinaisons possibles de (marche, arret).",
       "corrige": [
-        "On calcule d'abord NON arret, puis le ET avec marche.",
+        "On calcule d'abord NON arret, puis la fonction ET avec marche.",
         "marche=0, arret=0 : NON arret = 1 ; S = 0 ET 1 = 0.",
         "marche=0, arret=1 : S = 0 ET 0 = 0. marche=1, arret=0 : S = 1 ET 1 = 1.",
         "marche=1, arret=1 : NON arret = 0 ; S = 1 ET 0 = 0."
       ],
       "reponse": "S vaut 1 uniquement pour (marche=1, arret=0) ; sinon S vaut 0."
+    },
+    {
+      "id": 11,
+      "difficulte": "decouverte",
+      "notion": "structure de la chaîne d'information",
+      "enonce": "Remets dans l'ordre les fonctions de la chaîne d'information : traiter, communiquer, acquérir.",
+      "corrige": [
+        "On prélève d'abord les grandeurs physiques, on élabore ensuite une décision, puis on transmet le résultat."
+      ],
+      "reponse": "Acquérir → traiter → communiquer."
+    },
+    {
+      "id": 12,
+      "difficulte": "decouverte",
+      "notion": "structure de la chaîne d'information",
+      "enonce": "Vrai ou faux : « La chaîne d'information fournit la puissance qui fait tourner le moteur. » Justifie.",
+      "corrige": [
+        "La chaîne d'information commande : elle envoie des ordres.",
+        "C'est la chaîne d'énergie qui fournit la puissance et agit sur la matière d'œuvre."
+      ],
+      "reponse": "Faux : la chaîne d'information commande, c'est la chaîne d'énergie qui fournit la puissance."
+    },
+    {
+      "id": 13,
+      "difficulte": "decouverte",
+      "notion": "capteur TOR ou analogique",
+      "enonce": "Complète : « Un capteur transforme une grandeur … en un … exploitable, le plus souvent électrique. »",
+      "corrige": [
+        "C'est la définition du capteur donnée dans la fiche."
+      ],
+      "reponse": "grandeur physique ; signal"
+    },
+    {
+      "id": 14,
+      "difficulte": "application",
+      "notion": "types de capteurs",
+      "enonce": "Classe ces capteurs en TOR, analogique ou numérique : (a) potentiomètre ; (b) capteur de température I²C ; (c) détecteur de présence ; (d) photorésistance.",
+      "corrige": [
+        "Un capteur TOR n'a que deux états : le détecteur de présence.",
+        "Un capteur analogique délivre une sortie qui varie continûment : potentiomètre, photorésistance.",
+        "Un capteur numérique délivre une valeur codée en binaire : le capteur I²C."
+      ],
+      "reponse": "(a) analogique ; (b) numérique ; (c) TOR ; (d) analogique."
+    },
+    {
+      "id": 15,
+      "difficulte": "application",
+      "notion": "types de capteurs",
+      "enonce": "Un codeur incrémental délivre 500 impulsions par tour. Combien de tours l'arbre a-t-il faits si l'on a compté 1 250 impulsions ? Quelle est la plus petite rotation détectable, en degrés ?",
+      "corrige": [
+        "Nombre de tours : $\\dfrac{1\\,250}{500} = 2{,}5$ tours.",
+        "Résolution angulaire : $\\dfrac{360}{500} = 0{,}72$°."
+      ],
+      "reponse": "2,5 tours ; 0,72°."
+    },
+    {
+      "id": 16,
+      "difficulte": "application",
+      "notion": "caractéristiques d'un capteur",
+      "enonce": "Un capteur de température mesure de −40 °C à 125 °C. Quelle est son étendue de mesure ?",
+      "corrige": [
+        "L'étendue de mesure est l'écart entre la valeur maximale et la valeur minimale mesurables.",
+        "125 − (−40) = 165 °C."
+      ],
+      "reponse": "165 °C (de −40 °C à 125 °C)."
+    },
+    {
+      "id": 17,
+      "difficulte": "application",
+      "notion": "caractéristiques d'un capteur",
+      "enonce": "Un capteur de température a une sensibilité de 10 mV/°C (0 V à 0 °C). Quelle tension délivre-t-il à 25 °C ?",
+      "corrige": [
+        "La sensibilité indique la variation de sortie pour une variation de 1 °C.",
+        "$U = 10 \\times 25 = 250$ mV."
+      ],
+      "reponse": "250 mV (0,25 V)."
+    },
+    {
+      "id": 18,
+      "difficulte": "intermediaire",
+      "notion": "caractéristiques d'un capteur",
+      "enonce": "Le même capteur (10 mV/°C, 0 V à 0 °C) délivre 0,32 V. Quelle température mesure-t-il ?",
+      "corrige": [
+        "0,32 V = 320 mV.",
+        "$\\theta = \\dfrac{320}{10} = 32$ °C."
+      ],
+      "reponse": "32 °C"
+    },
+    {
+      "id": 19,
+      "difficulte": "application",
+      "notion": "caractéristiques d'un capteur",
+      "enonce": "Associe chaque mot à sa définition : étendue de mesure, sensibilité, résolution. Définitions : (1) plus petite variation détectable ; (2) valeurs minimale et maximale mesurables ; (3) variation de la sortie pour une variation de l'entrée.",
+      "corrige": [
+        "L'étendue de mesure correspond à la plage min–max.",
+        "La sensibilité relie la variation de sortie à la variation d'entrée.",
+        "La résolution est la plus petite variation détectable."
+      ],
+      "reponse": "Étendue → (2) ; sensibilité → (3) ; résolution → (1)."
+    },
+    {
+      "id": 20,
+      "difficulte": "application",
+      "notion": "codage binaire",
+      "enonce": "Convertis en décimal le nombre binaire 1101.",
+      "corrige": [
+        "$1101_2 = 1 \\times 8 + 1 \\times 4 + 0 \\times 2 + 1 \\times 1$.",
+        "= 8 + 4 + 1 = 13."
+      ],
+      "reponse": "13"
+    },
+    {
+      "id": 21,
+      "difficulte": "application",
+      "notion": "codage binaire",
+      "enonce": "Convertis le nombre décimal 10 en binaire.",
+      "corrige": [
+        "10 = 8 + 2.",
+        "Donc $10 = 1 \\times 8 + 0 \\times 4 + 1 \\times 2 + 0 \\times 1$, soit 1010 en binaire."
+      ],
+      "reponse": "1010"
+    },
+    {
+      "id": 22,
+      "difficulte": "application",
+      "notion": "codage binaire",
+      "enonce": "Quelle est la plus grande valeur codable sur un octet ? Écris-la en binaire.",
+      "corrige": [
+        "Un octet (8 bits) code $2^8 = 256$ valeurs, de 0 à 255.",
+        "255 s'écrit avec les huit bits à 1."
+      ],
+      "reponse": "255, soit 11111111 en binaire."
+    },
+    {
+      "id": 23,
+      "difficulte": "intermediaire",
+      "notion": "codage binaire",
+      "enonce": "Convertis en décimal l'octet 01100100.",
+      "corrige": [
+        "Les bits à 1 ont pour poids 64, 32 et 4.",
+        "64 + 32 + 4 = 100."
+      ],
+      "reponse": "100"
+    },
+    {
+      "id": 24,
+      "difficulte": "intermediaire",
+      "notion": "codage binaire",
+      "enonce": "Combien de bits faut-il au minimum pour coder 1 000 valeurs différentes ?",
+      "corrige": [
+        "$2^9 = 512$ est insuffisant.",
+        "$2^{10} = 1\\,024 \\geq 1\\,000$ : il faut 10 bits."
+      ],
+      "reponse": "10 bits"
+    },
+    {
+      "id": 25,
+      "difficulte": "application",
+      "notion": "nombre de niveaux d'un CAN",
+      "enonce": "Combien de niveaux offre un CAN de 4 bits ?",
+      "corrige": [
+        "Avec n bits, on a $2^n$ niveaux.",
+        "$2^4 = 16$ niveaux."
+      ],
+      "reponse": "16 niveaux"
+    },
+    {
+      "id": 26,
+      "difficulte": "intermediaire",
+      "notion": "résolution d'un CAN",
+      "enonce": "Un CAN de 8 bits numérise une tension de 0 à 5 V. Calcule sa résolution (en mV, arrondie au dixième).",
+      "corrige": [
+        "$2^8 = 256$ niveaux, donc 255 intervalles.",
+        "$q = \\dfrac{5}{255} \\approx 0{,}0196$ V, soit environ 19,6 mV."
+      ],
+      "reponse": "Environ 19,6 mV."
+    },
+    {
+      "id": 27,
+      "difficulte": "intermediaire",
+      "notion": "résolution d'un CAN",
+      "enonce": "Un CAN de 12 bits numérise une tension de 0 à 3,3 V. Calcule sa résolution (en mV, arrondie au centième).",
+      "corrige": [
+        "$2^{12} = 4\\,096$ niveaux, donc 4 095 intervalles.",
+        "$q = \\dfrac{3{,}3}{4\\,095} \\approx 0{,}000\\,806$ V, soit environ 0,81 mV."
+      ],
+      "reponse": "Environ 0,81 mV."
+    },
+    {
+      "id": 28,
+      "difficulte": "intermediaire",
+      "notion": "résolution d'un CAN",
+      "enonce": "Un élève calcule la résolution d'un CAN 10 bits sur 0–5 V ainsi : $q = \\dfrac{5}{1\\,024}$. Quelle erreur a-t-il commise ?",
+      "corrige": [
+        "Avec 10 bits, il y a $2^{10} = 1\\,024$ niveaux, mais seulement 1 023 intervalles entre 0 V et 5 V.",
+        "Il faut écrire $q = \\dfrac{5}{2^{10} - 1} = \\dfrac{5}{1\\,023} \\approx 4{,}89$ mV."
+      ],
+      "reponse": "Il a oublié le −1 : q = 5 ÷ 1 023 ≈ 4,89 mV."
+    },
+    {
+      "id": 29,
+      "difficulte": "intermediaire",
+      "notion": "quantification d'un CAN",
+      "enonce": "Un CAN de 10 bits (0–5 V) renvoie la valeur numérique 512. À quelle tension cela correspond-il (arrondie au centième) ?",
+      "corrige": [
+        "$q = \\dfrac{5}{1\\,023}$ V.",
+        "$U = 512 \\times \\dfrac{5}{1\\,023} \\approx 2{,}50$ V."
+      ],
+      "reponse": "Environ 2,50 V."
+    },
+    {
+      "id": 30,
+      "difficulte": "intermediaire",
+      "notion": "quantification d'un CAN",
+      "enonce": "Un CAN de 10 bits (0–5 V) reçoit une tension de 3 V. Quelle valeur numérique renvoie-t-il (arrondie à l'entier le plus proche) ?",
+      "corrige": [
+        "$N = \\dfrac{U}{q} = \\dfrac{3 \\times 1\\,023}{5} = 613{,}8$.",
+        "Arrondie à l'entier le plus proche : 614."
+      ],
+      "reponse": "614"
+    },
+    {
+      "id": 31,
+      "difficulte": "intermediaire",
+      "notion": "acquisition et échantillonnage",
+      "enonce": "Explique la différence entre échantillonnage et quantification.",
+      "corrige": [
+        "L'échantillonnage consiste à relever la valeur du signal à intervalles de temps réguliers.",
+        "La quantification consiste à arrondir chaque valeur relevée sur un nombre fini de niveaux."
+      ],
+      "reponse": "Échantillonner = prélever à intervalles réguliers ; quantifier = arrondir chaque valeur sur un nombre fini de niveaux."
+    },
+    {
+      "id": 32,
+      "difficulte": "application",
+      "notion": "acquisition et échantillonnage",
+      "enonce": "Un signal est échantillonné à la fréquence de 1 000 Hz. Quelle est la période d'échantillonnage ?",
+      "corrige": [
+        "$T = \\dfrac{1}{f} = \\dfrac{1}{1\\,000} = 0{,}001$ s."
+      ],
+      "reponse": "1 ms"
+    },
+    {
+      "id": 33,
+      "difficulte": "intermediaire",
+      "notion": "acquisition et échantillonnage",
+      "enonce": "Un microcontrôleur relève une mesure toutes les 20 ms. Quelle est la fréquence d'échantillonnage ?",
+      "corrige": [
+        "$f = \\dfrac{1}{T} = \\dfrac{1}{0{,}020} = 50$ Hz."
+      ],
+      "reponse": "50 Hz"
+    },
+    {
+      "id": 34,
+      "difficulte": "intermediaire",
+      "notion": "logique combinatoire",
+      "enonce": "Une alarme sonne (S = 1) si la porte est ouverte (p = 1) OU si la fenêtre est ouverte (f = 1). Écris l'équation de S et donne sa valeur quand p = 0 et f = 1.",
+      "corrige": [
+        "Fonction OU : $S = p + f$.",
+        "Avec p = 0 et f = 1, une des deux conditions est vraie : S = 1."
+      ],
+      "reponse": "S = p + f ; ici S = 1."
+    },
+    {
+      "id": 35,
+      "difficulte": "intermediaire",
+      "notion": "logique combinatoire",
+      "enonce": "Complète la table de vérité de la fonction NON : S = NON a, pour a = 0 puis a = 1.",
+      "corrige": [
+        "La fonction NON inverse l'entrée.",
+        "a = 0 donne S = 1 ; a = 1 donne S = 0."
+      ],
+      "reponse": "a = 0 → S = 1 ; a = 1 → S = 0."
+    },
+    {
+      "id": 36,
+      "difficulte": "approfondissement",
+      "notion": "logique combinatoire",
+      "enonce": "Une presse ne peut descendre (S = 1) que si l'opérateur appuie sur le bouton de marche (m = 1), ET si le carter de protection est fermé (c = 1), ET si l'arrêt d'urgence n'est pas enclenché (u = 0). Écris l'équation de S, puis donne S pour m = 1, c = 1, u = 1.",
+      "corrige": [
+        "$S = m \\cdot c \\cdot \\overline{u}$.",
+        "Avec u = 1, NON u vaut 0, donc le produit vaut 0.",
+        "La presse reste à l'arrêt : l'arrêt d'urgence est prioritaire."
+      ],
+      "reponse": "S = m · c · NON u ; ici S = 0."
+    },
+    {
+      "id": 37,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "Un thermostat suit l'algorithme : « Si la température est inférieure à 19 °C, alors allumer le chauffage, sinon l'éteindre. » La sonde mesure 17,5 °C. Quelle est la sortie ? Et pour 20 °C ?",
+      "corrige": [
+        "17,5 °C < 19 °C : la condition est vraie, le chauffage est allumé.",
+        "20 °C n'est pas inférieur à 19 °C : on applique le « sinon », le chauffage est éteint."
+      ],
+      "reponse": "À 17,5 °C : chauffage allumé ; à 20 °C : chauffage éteint."
+    },
+    {
+      "id": 38,
+      "difficulte": "intermediaire",
+      "notion": "algorithme",
+      "enonce": "Dans un programme de portail, d'où viennent les entrées et vers quoi partent les sorties ?",
+      "corrige": [
+        "Les entrées sont fournies par les capteurs (télécommande, fins de course, cellule photoélectrique).",
+        "Les sorties commandent les préactionneurs de la chaîne d'énergie (relais ou variateur du moteur)."
+      ],
+      "reponse": "Entrées : les capteurs ; sorties : les préactionneurs de la chaîne d'énergie."
+    },
+    {
+      "id": 39,
+      "difficulte": "approfondissement",
+      "notion": "algorithme",
+      "enonce": "Écris en langage naturel un algorithme pour un éclairage automatique de couloir : la lampe s'allume si une présence est détectée ET s'il fait sombre, sinon elle reste éteinte.",
+      "corrige": [
+        "On lit les deux capteurs, puis on teste les deux conditions avec un ET.",
+        "Exemple de réponse : « Répéter sans fin : lire présence et luminosité ; si présence = 1 ET luminosité faible, alors allumer la lampe, sinon éteindre la lampe. »"
+      ],
+      "reponse": "Exemple : répéter : si (présence = 1) ET (il fait sombre) alors allumer, sinon éteindre."
+    },
+    {
+      "id": 40,
+      "difficulte": "application",
+      "notion": "communication",
+      "enonce": "Classe ces liaisons en filaires ou sans fil : Bluetooth, Ethernet, I²C, Wi-Fi, bus CAN.",
+      "corrige": [
+        "Les liaisons qui utilisent des conducteurs sont filaires : Ethernet, I²C, bus CAN.",
+        "Bluetooth et Wi-Fi utilisent des ondes radio : sans fil."
+      ],
+      "reponse": "Filaires : Ethernet, I²C, bus CAN ; sans fil : Bluetooth, Wi-Fi."
+    },
+    {
+      "id": 41,
+      "difficulte": "application",
+      "notion": "communication",
+      "enonce": "Quelle différence y a-t-il entre une transmission série et une transmission parallèle ?",
+      "corrige": [
+        "En série, les bits sont envoyés l'un après l'autre sur un même fil.",
+        "En parallèle, plusieurs bits sont envoyés en même temps sur plusieurs fils."
+      ],
+      "reponse": "Série : un bit après l'autre ; parallèle : plusieurs bits simultanément."
+    },
+    {
+      "id": 42,
+      "difficulte": "intermediaire",
+      "notion": "communication",
+      "enonce": "Qu'est-ce qu'une trame, et à quoi sert sa partie de contrôle ?",
+      "corrige": [
+        "Une trame est un paquet organisé de bits : un début, les données, puis un contrôle.",
+        "La partie de contrôle permet de vérifier que le message est arrivé sans erreur (intégrité)."
+      ],
+      "reponse": "Un paquet organisé de bits (début, données, contrôle) ; le contrôle sert à vérifier l'intégrité du message."
+    },
+    {
+      "id": 43,
+      "difficulte": "intermediaire",
+      "notion": "communication",
+      "enonce": "Une liaison série fonctionne à 9 600 bit/s. Combien de temps faut-il pour transmettre 8 bits (arrondi au centième de milliseconde) ?",
+      "corrige": [
+        "$t = \\dfrac{8}{9\\,600} \\approx 0{,}000\\,833$ s.",
+        "Soit environ 0,83 ms."
+      ],
+      "reponse": "Environ 0,83 ms."
+    },
+    {
+      "id": 44,
+      "difficulte": "approfondissement",
+      "notion": "communication",
+      "enonce": "Une liaison série à 9 600 bit/s envoie chaque octet dans une trame de 10 bits (1 bit de début, 8 bits de données, 1 bit de fin). Combien d'octets de données transmet-elle par seconde ?",
+      "corrige": [
+        "Chaque octet utile occupe 10 bits sur la ligne.",
+        "$\\dfrac{9\\,600}{10} = 960$ octets par seconde."
+      ],
+      "reponse": "960 octets par seconde."
+    },
+    {
+      "id": 45,
+      "difficulte": "approfondissement",
+      "notion": "communication",
+      "enonce": "On transmet un fichier de 2 000 000 octets par une liaison à 1 Mbit/s (1 000 000 bit/s). Combien de temps dure la transmission (sans compter les bits de contrôle) ?",
+      "corrige": [
+        "Nombre de bits : $2\\,000\\,000 \\times 8 = 16\\,000\\,000$ bits.",
+        "$t = \\dfrac{16\\,000\\,000}{1\\,000\\,000} = 16$ s."
+      ],
+      "reponse": "16 s"
+    },
+    {
+      "id": 46,
+      "difficulte": "approfondissement",
+      "notion": "acquisition et échantillonnage",
+      "enonce": "Trois capteurs sont échantillonnés chacun à 1 000 Hz, avec des mesures codées sur 12 bits. Quel débit binaire brut total faut-il transmettre ?",
+      "corrige": [
+        "Un capteur : $12 \\times 1\\,000 = 12\\,000$ bit/s.",
+        "Trois capteurs : $3 \\times 12\\,000 = 36\\,000$ bit/s."
+      ],
+      "reponse": "36 000 bit/s (36 kbit/s)."
+    },
+    {
+      "id": 47,
+      "difficulte": "approfondissement",
+      "notion": "acquisition et échantillonnage",
+      "enonce": "Une station météo enregistre une mesure par minute, codée sur 16 bits. Quelle mémoire (en octets) faut-il pour une journée de mesures ?",
+      "corrige": [
+        "Une journée compte 24 × 60 = 1 440 minutes, donc 1 440 mesures.",
+        "16 bits = 2 octets, donc 1 440 × 2 = 2 880 octets."
+      ],
+      "reponse": "2 880 octets."
+    },
+    {
+      "id": 48,
+      "difficulte": "probleme",
+      "notion": "quantification d'un CAN",
+      "enonce": "Le capteur de température (10 mV/°C, 0 V à 0 °C) est relié à un CAN 10 bits sur 0–5 V. Quelle est la plus petite variation de température détectable (arrondie au centième de degré) ?",
+      "corrige": [
+        "Résolution du CAN : $q = \\dfrac{5}{1\\,023} \\approx 4{,}89$ mV.",
+        "Avec 10 mV/°C, 4,89 mV correspondent à $\\dfrac{4{,}89}{10} \\approx 0{,}49$ °C."
+      ],
+      "reponse": "Environ 0,49 °C."
+    },
+    {
+      "id": 49,
+      "difficulte": "probleme",
+      "notion": "quantification d'un CAN",
+      "enonce": "On veut détecter des variations de 0,1 °C avec le capteur à 10 mV/°C (sortie 0 à 5 V). On a le choix entre un CAN de 8, 10 ou 12 bits sur 0–5 V. Lequel choisir (le plus petit qui convient) ?",
+      "corrige": [
+        "0,1 °C correspond à 1 mV : il faut q ≤ 1 mV.",
+        "8 bits : $\\dfrac{5}{255} \\approx 19{,}6$ mV ; 10 bits : $\\dfrac{5}{1\\,023} \\approx 4{,}89$ mV ; 12 bits : $\\dfrac{5}{4\\,095} \\approx 1{,}22$ mV.",
+        "Aucun ne descend sous 1 mV ; même le 12 bits (1,22 mV, soit environ 0,12 °C) est juste insuffisant : il faudrait plus de bits ou un capteur plus sensible."
+      ],
+      "reponse": "Aucun ne convient : le 12 bits donne environ 0,12 °C ; il faut plus de bits ou un capteur plus sensible."
+    },
+    {
+      "id": 50,
+      "difficulte": "probleme",
+      "notion": "structure de la chaîne d'information",
+      "enonce": "Un éclairage public s'allume à la tombée de la nuit et envoie chaque jour sa consommation à la mairie par radio. Décris sa chaîne d'information en citant un composant pour chaque fonction.",
+      "corrige": [
+        "Acquérir : une photorésistance (capteur de luminosité).",
+        "Traiter : un microcontrôleur qui compare la luminosité à un seuil et calcule la consommation.",
+        "Communiquer : un ordre au relais qui allume la lampe, et un module radio qui envoie les données à la mairie."
+      ],
+      "reponse": "Acquérir : photorésistance ; traiter : microcontrôleur ; communiquer : ordre au relais et module radio vers la mairie."
     }
   ]
 }
