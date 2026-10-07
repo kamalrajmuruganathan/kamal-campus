@@ -387,8 +387,9 @@ const entreesSujets = sujets.map((s, i) => `  {
 
 const imports = chapitres.map((c, i) => {
   // Les .md sont chargés en texte brut par le transformer Metro (voir metro.config.cjs)
-  let ligne = `import fiche${i} from '${c.cheminFiche}';\nimport qcm${i} from '${c.cheminQcm}';`;
-  if (c.cheminExercice) ligne += `\nimport exercice${i} from '${c.cheminExercice}';`;
+  // Fiches et exercices (le plus lourd) ne sont PAS dans l'index : ils sont chargés à la demande
+  // via src/contenu-lourd(.web|.native).js, générés plus bas.
+  let ligne = `import qcm${i} from '${c.cheminQcm}';`;
   if (c.cheminFlashcards) ligne += `\nimport flash${i} from '${c.cheminFlashcards}';`;
   return ligne;
 }).join('\n');
@@ -409,9 +410,7 @@ const entrees = chapitres.map((c, i) => `  {
     nbExercices: ${c.nbExercices},
     nbFlashcards: ${c.nbFlashcards},
     outils: ${JSON.stringify(c.outils)},
-    fiche: fiche${i},
     qcm: qcm${i},
-    exercice: ${c.cheminExercice ? `exercice${i}` : 'null'},
     flashcards: ${c.cheminFlashcards ? `flash${i}` : 'null'},
   },`).join('\n');
 
@@ -476,6 +475,79 @@ export function chapitreParId(id) {
 
 mkdirSync(dirname(SORTIE), { recursive: true });
 writeFileSync(SORTIE, sortie, 'utf8');
+
+// ─────────────── contenu lourd chargé à la demande (fiches + exercices) ───────────────
+// Web : fichiers statiques copiés dans public/donnees/<niveau>/<parcours>/<dossier>/,
+// téléchargés seulement quand l'élève ouvre le chapitre (l'appli démarre bien plus vite).
+// Téléphone (Expo natif) : imports classiques, comme avant.
+const ENTETE_LOURD = `/**
+ * FICHIER GÉNÉRÉ par scripts/generer-index.mjs — NE PAS MODIFIER À LA MAIN.
+ * Fiches et exercices, chargés à la demande : chargerFiche(id) et chargerExercices(id)
+ * renvoient une promesse (texte Markdown / objet exercice.json, ou null).
+ */
+`;
+const lourdNatif = `${ENTETE_LOURD}
+${chapitres.map((c, i) => `import fiche${i} from '${c.cheminFiche}';` + (c.cheminExercice ? `\nimport exercice${i} from '${c.cheminExercice}';` : '')).join('\n')}
+
+const FICHES = {
+${chapitres.map((c, i) => `  ${JSON.stringify(c.id)}: fiche${i},`).join('\n')}
+};
+const EXERCICES = {
+${chapitres.filter((c) => c.cheminExercice).map((c) => `  ${JSON.stringify(c.id)}: exercice${chapitres.indexOf(c)},`).join('\n')}
+};
+
+export async function chargerFiche(id) { return FICHES[id] ?? null; }
+export async function chargerExercices(id) { return EXERCICES[id] ?? null; }
+`;
+const chemins = Object.fromEntries(chapitres.map((c) => [c.id, `${c.niveau}/${c.parcours}/${c.dossier}`]));
+const exAvec = chapitres.filter((c) => c.cheminExercice).map((c) => c.id);
+const lourdWeb = `${ENTETE_LOURD}
+const CHEMINS = ${JSON.stringify(chemins)};
+const AVEC_EXERCICES = new Set(${JSON.stringify(exAvec)});
+const cache = new Map();
+
+// Dossier de l'appli (ex. /kamal-campus/app/) : on prend celui de la page, sans le nom d'écran éventuel.
+function base() {
+  try {
+    const url = new URL(document.baseURI);
+    const i = url.pathname.indexOf('/app/');
+    const dossier = i >= 0 ? url.pathname.slice(0, i + 5) : url.pathname.replace(/[^/]*$/, '');
+    return url.origin + dossier;
+  } catch {
+    return './';
+  }
+}
+
+async function telecharger(chemin, enJson) {
+  if (cache.has(chemin)) return cache.get(chemin);
+  const promesse = fetch(base() + 'donnees/' + chemin)
+    .then((r) => { if (!r.ok) throw new Error(String(r.status)); return enJson ? r.json() : r.text(); })
+    .catch(() => { cache.delete(chemin); return null; });
+  cache.set(chemin, promesse);
+  return promesse;
+}
+
+export function chargerFiche(id) {
+  const c = CHEMINS[id];
+  return c ? telecharger(c + '/fiche.md', false) : Promise.resolve(null);
+}
+export function chargerExercices(id) {
+  const c = CHEMINS[id];
+  return c && AVEC_EXERCICES.has(id) ? telecharger(c + '/exercice.json', true) : Promise.resolve(null);
+}
+`;
+writeFileSync(join(RACINE_APP, 'src', 'contenu-lourd.native.js'), lourdNatif, 'utf8');
+writeFileSync(join(RACINE_APP, 'src', 'contenu-lourd.web.js'), lourdWeb, 'utf8');
+// Copie des fichiers pour le web (dossier ignoré par git, recréé à chaque « npm run preparer »).
+const DONNEES = join(RACINE_APP, 'public', 'donnees');
+for (const c of chapitres) {
+  const dest = join(DONNEES, c.niveau, c.parcours, c.dossier);
+  mkdirSync(dest, { recursive: true });
+  const src = join(CONTENU, c.niveau, c.parcours, c.dossier);
+  writeFileSync(join(dest, 'fiche.md'), readFileSync(join(src, 'fiche.md')));
+  if (c.cheminExercice) writeFileSync(join(dest, 'exercice.json'), JSON.stringify(JSON.parse(readFileSync(join(src, 'exercice.json'), 'utf8'))));
+}
+console.log(`✓ fiches et exercices à la demande → src/contenu-lourd.(web|native).js + public/donnees/`);
 
 const nonRelus = chapitres.filter((c) => !c.reluPar).length;
 console.log(`✓ ${chapitres.length} chapitres indexés → src/contenu-index.js`);

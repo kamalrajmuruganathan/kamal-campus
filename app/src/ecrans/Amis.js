@@ -129,7 +129,12 @@ export default function Amis({ navigation }) {
       )}
 
       <View style={carte}>
-        <Text style={titre}>Mes amis ({amis.length})</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between' }}>
+          <Text style={titre}>Mes amis ({amis.length})</Text>
+          <Pressable onPress={() => navigation.navigate('Classement')} hitSlop={8}>
+            <Text style={{ color: C.accent, fontSize: 13, fontWeight: '700' }}>🏆 Classement ›</Text>
+          </Pressable>
+        </View>
         {amis.length === 0 ? (
           <Text style={{ color: C.texte, opacity: 0.6, fontSize: 13 }}>Pas encore d'amis. Cherche un pseudo ci-dessus pour envoyer une demande.</Text>
         ) : amis.map((a) => (

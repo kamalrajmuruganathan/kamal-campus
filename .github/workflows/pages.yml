@@ -35,6 +35,10 @@ jobs:
         working-directory: app
         run: npm ci
 
+      - name: Préparer le contenu (index, fiches et exercices chargés à la demande)
+        working-directory: app
+        run: npm run preparer
+
       - name: Exporter l'appli web (baseUrl /kamal-campus/app, réglé dans app.json)
         working-directory: app
         run: npx expo export --platform web

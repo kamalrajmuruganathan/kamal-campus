@@ -6,3829 +6,1917 @@
  * 956 chapitres indexés.
  */
 
-import fiche0 from './../../contenu/cp/allemand/begrussungen/fiche.md';
 import qcm0 from './../../contenu/cp/allemand/begrussungen/qcm.json';
-import exercice0 from './../../contenu/cp/allemand/begrussungen/exercice.json';
 import flash0 from './../../contenu/cp/allemand/begrussungen/flashcards.json';
-import fiche1 from './../../contenu/cp/allemand/zahlen/fiche.md';
 import qcm1 from './../../contenu/cp/allemand/zahlen/qcm.json';
-import exercice1 from './../../contenu/cp/allemand/zahlen/exercice.json';
 import flash1 from './../../contenu/cp/allemand/zahlen/flashcards.json';
-import fiche2 from './../../contenu/cp/allemand/farben/fiche.md';
 import qcm2 from './../../contenu/cp/allemand/farben/qcm.json';
-import exercice2 from './../../contenu/cp/allemand/farben/exercice.json';
 import flash2 from './../../contenu/cp/allemand/farben/flashcards.json';
-import fiche3 from './../../contenu/cp/allemand/tiere/fiche.md';
 import qcm3 from './../../contenu/cp/allemand/tiere/qcm.json';
-import exercice3 from './../../contenu/cp/allemand/tiere/exercice.json';
 import flash3 from './../../contenu/cp/allemand/tiere/flashcards.json';
-import fiche4 from './../../contenu/cp/anglais/greetings/fiche.md';
 import qcm4 from './../../contenu/cp/anglais/greetings/qcm.json';
-import exercice4 from './../../contenu/cp/anglais/greetings/exercice.json';
 import flash4 from './../../contenu/cp/anglais/greetings/flashcards.json';
-import fiche5 from './../../contenu/cp/anglais/numbers/fiche.md';
 import qcm5 from './../../contenu/cp/anglais/numbers/qcm.json';
-import exercice5 from './../../contenu/cp/anglais/numbers/exercice.json';
 import flash5 from './../../contenu/cp/anglais/numbers/flashcards.json';
-import fiche6 from './../../contenu/cp/anglais/colours/fiche.md';
 import qcm6 from './../../contenu/cp/anglais/colours/qcm.json';
-import exercice6 from './../../contenu/cp/anglais/colours/exercice.json';
 import flash6 from './../../contenu/cp/anglais/colours/flashcards.json';
-import fiche7 from './../../contenu/cp/anglais/animals/fiche.md';
 import qcm7 from './../../contenu/cp/anglais/animals/qcm.json';
-import exercice7 from './../../contenu/cp/anglais/animals/exercice.json';
 import flash7 from './../../contenu/cp/anglais/animals/flashcards.json';
-import fiche8 from './../../contenu/cp/espagnol/saludos/fiche.md';
 import qcm8 from './../../contenu/cp/espagnol/saludos/qcm.json';
-import exercice8 from './../../contenu/cp/espagnol/saludos/exercice.json';
 import flash8 from './../../contenu/cp/espagnol/saludos/flashcards.json';
-import fiche9 from './../../contenu/cp/espagnol/numeros/fiche.md';
 import qcm9 from './../../contenu/cp/espagnol/numeros/qcm.json';
-import exercice9 from './../../contenu/cp/espagnol/numeros/exercice.json';
 import flash9 from './../../contenu/cp/espagnol/numeros/flashcards.json';
-import fiche10 from './../../contenu/cp/espagnol/colores/fiche.md';
 import qcm10 from './../../contenu/cp/espagnol/colores/qcm.json';
-import exercice10 from './../../contenu/cp/espagnol/colores/exercice.json';
 import flash10 from './../../contenu/cp/espagnol/colores/flashcards.json';
-import fiche11 from './../../contenu/cp/espagnol/animales/fiche.md';
 import qcm11 from './../../contenu/cp/espagnol/animales/qcm.json';
-import exercice11 from './../../contenu/cp/espagnol/animales/exercice.json';
 import flash11 from './../../contenu/cp/espagnol/animales/flashcards.json';
-import fiche12 from './../../contenu/cp/francais/sons-voyelles/fiche.md';
 import qcm12 from './../../contenu/cp/francais/sons-voyelles/qcm.json';
-import exercice12 from './../../contenu/cp/francais/sons-voyelles/exercice.json';
 import flash12 from './../../contenu/cp/francais/sons-voyelles/flashcards.json';
-import fiche13 from './../../contenu/cp/francais/syllabes/fiche.md';
 import qcm13 from './../../contenu/cp/francais/syllabes/qcm.json';
-import exercice13 from './../../contenu/cp/francais/syllabes/exercice.json';
 import flash13 from './../../contenu/cp/francais/syllabes/flashcards.json';
-import fiche14 from './../../contenu/cp/francais/sons-complexes/fiche.md';
 import qcm14 from './../../contenu/cp/francais/sons-complexes/qcm.json';
-import exercice14 from './../../contenu/cp/francais/sons-complexes/exercice.json';
 import flash14 from './../../contenu/cp/francais/sons-complexes/flashcards.json';
-import fiche15 from './../../contenu/cp/francais/nom-determinant/fiche.md';
 import qcm15 from './../../contenu/cp/francais/nom-determinant/qcm.json';
-import exercice15 from './../../contenu/cp/francais/nom-determinant/exercice.json';
 import flash15 from './../../contenu/cp/francais/nom-determinant/flashcards.json';
-import fiche16 from './../../contenu/cp/francais/la-phrase/fiche.md';
 import qcm16 from './../../contenu/cp/francais/la-phrase/qcm.json';
-import exercice16 from './../../contenu/cp/francais/la-phrase/exercice.json';
 import flash16 from './../../contenu/cp/francais/la-phrase/flashcards.json';
-import fiche17 from './../../contenu/cp/hist-geo/vivre-ensemble/fiche.md';
 import qcm17 from './../../contenu/cp/hist-geo/vivre-ensemble/qcm.json';
-import exercice17 from './../../contenu/cp/hist-geo/vivre-ensemble/exercice.json';
 import flash17 from './../../contenu/cp/hist-geo/vivre-ensemble/flashcards.json';
-import fiche18 from './../../contenu/cp/hist-geo/le-temps-qui-passe/fiche.md';
 import qcm18 from './../../contenu/cp/hist-geo/le-temps-qui-passe/qcm.json';
-import exercice18 from './../../contenu/cp/hist-geo/le-temps-qui-passe/exercice.json';
 import flash18 from './../../contenu/cp/hist-geo/le-temps-qui-passe/flashcards.json';
-import fiche19 from './../../contenu/cp/hist-geo/se-reperer-espace/fiche.md';
 import qcm19 from './../../contenu/cp/hist-geo/se-reperer-espace/qcm.json';
-import exercice19 from './../../contenu/cp/hist-geo/se-reperer-espace/exercice.json';
 import flash19 from './../../contenu/cp/hist-geo/se-reperer-espace/flashcards.json';
-import fiche20 from './../../contenu/cp/hist-geo/ecole-autrefois/fiche.md';
 import qcm20 from './../../contenu/cp/hist-geo/ecole-autrefois/qcm.json';
-import exercice20 from './../../contenu/cp/hist-geo/ecole-autrefois/exercice.json';
 import flash20 from './../../contenu/cp/hist-geo/ecole-autrefois/flashcards.json';
-import fiche21 from './../../contenu/cp/italien/saluti/fiche.md';
 import qcm21 from './../../contenu/cp/italien/saluti/qcm.json';
-import exercice21 from './../../contenu/cp/italien/saluti/exercice.json';
 import flash21 from './../../contenu/cp/italien/saluti/flashcards.json';
-import fiche22 from './../../contenu/cp/italien/numeri/fiche.md';
 import qcm22 from './../../contenu/cp/italien/numeri/qcm.json';
-import exercice22 from './../../contenu/cp/italien/numeri/exercice.json';
 import flash22 from './../../contenu/cp/italien/numeri/flashcards.json';
-import fiche23 from './../../contenu/cp/italien/colori/fiche.md';
 import qcm23 from './../../contenu/cp/italien/colori/qcm.json';
-import exercice23 from './../../contenu/cp/italien/colori/exercice.json';
 import flash23 from './../../contenu/cp/italien/colori/flashcards.json';
-import fiche24 from './../../contenu/cp/italien/animali/fiche.md';
 import qcm24 from './../../contenu/cp/italien/animali/qcm.json';
-import exercice24 from './../../contenu/cp/italien/animali/exercice.json';
 import flash24 from './../../contenu/cp/italien/animali/flashcards.json';
-import fiche25 from './../../contenu/cp/maths/nombres-jusqu-a-20/fiche.md';
 import qcm25 from './../../contenu/cp/maths/nombres-jusqu-a-20/qcm.json';
-import exercice25 from './../../contenu/cp/maths/nombres-jusqu-a-20/exercice.json';
 import flash25 from './../../contenu/cp/maths/nombres-jusqu-a-20/flashcards.json';
-import fiche26 from './../../contenu/cp/maths/comparer-ranger/fiche.md';
 import qcm26 from './../../contenu/cp/maths/comparer-ranger/qcm.json';
-import exercice26 from './../../contenu/cp/maths/comparer-ranger/exercice.json';
 import flash26 from './../../contenu/cp/maths/comparer-ranger/flashcards.json';
-import fiche27 from './../../contenu/cp/maths/addition/fiche.md';
 import qcm27 from './../../contenu/cp/maths/addition/qcm.json';
-import exercice27 from './../../contenu/cp/maths/addition/exercice.json';
 import flash27 from './../../contenu/cp/maths/addition/flashcards.json';
-import fiche28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/fiche.md';
 import qcm28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/qcm.json';
-import exercice28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/exercice.json';
 import flash28 from './../../contenu/cp/maths/se-reperer-et-quadrillage/flashcards.json';
-import fiche29 from './../../contenu/cp/maths/dizaines-et-unites/fiche.md';
 import qcm29 from './../../contenu/cp/maths/dizaines-et-unites/qcm.json';
-import exercice29 from './../../contenu/cp/maths/dizaines-et-unites/exercice.json';
 import flash29 from './../../contenu/cp/maths/dizaines-et-unites/flashcards.json';
-import fiche30 from './../../contenu/cp/maths/soustraction/fiche.md';
 import qcm30 from './../../contenu/cp/maths/soustraction/qcm.json';
-import exercice30 from './../../contenu/cp/maths/soustraction/exercice.json';
 import flash30 from './../../contenu/cp/maths/soustraction/flashcards.json';
-import fiche31 from './../../contenu/cp/maths/formes-geometriques/fiche.md';
 import qcm31 from './../../contenu/cp/maths/formes-geometriques/qcm.json';
-import exercice31 from './../../contenu/cp/maths/formes-geometriques/exercice.json';
 import flash31 from './../../contenu/cp/maths/formes-geometriques/flashcards.json';
-import fiche32 from './../../contenu/cp/maths/calcul-mental/fiche.md';
 import qcm32 from './../../contenu/cp/maths/calcul-mental/qcm.json';
-import exercice32 from './../../contenu/cp/maths/calcul-mental/exercice.json';
 import flash32 from './../../contenu/cp/maths/calcul-mental/flashcards.json';
-import fiche33 from './../../contenu/cp/maths/longueurs-et-masses/fiche.md';
 import qcm33 from './../../contenu/cp/maths/longueurs-et-masses/qcm.json';
-import exercice33 from './../../contenu/cp/maths/longueurs-et-masses/exercice.json';
 import flash33 from './../../contenu/cp/maths/longueurs-et-masses/flashcards.json';
-import fiche34 from './../../contenu/cp/maths/le-temps-qui-passe/fiche.md';
 import qcm34 from './../../contenu/cp/maths/le-temps-qui-passe/qcm.json';
-import exercice34 from './../../contenu/cp/maths/le-temps-qui-passe/exercice.json';
 import flash34 from './../../contenu/cp/maths/le-temps-qui-passe/flashcards.json';
-import fiche35 from './../../contenu/cp/maths/problemes/fiche.md';
 import qcm35 from './../../contenu/cp/maths/problemes/qcm.json';
-import exercice35 from './../../contenu/cp/maths/problemes/exercice.json';
 import flash35 from './../../contenu/cp/maths/problemes/flashcards.json';
-import fiche36 from './../../contenu/cp/sciences/le-corps-et-les-cinq-sens/fiche.md';
 import qcm36 from './../../contenu/cp/sciences/le-corps-et-les-cinq-sens/qcm.json';
-import exercice36 from './../../contenu/cp/sciences/le-corps-et-les-cinq-sens/exercice.json';
 import flash36 from './../../contenu/cp/sciences/le-corps-et-les-cinq-sens/flashcards.json';
-import fiche37 from './../../contenu/cp/sciences/le-vivant-animaux-et-vegetaux/fiche.md';
 import qcm37 from './../../contenu/cp/sciences/le-vivant-animaux-et-vegetaux/qcm.json';
-import exercice37 from './../../contenu/cp/sciences/le-vivant-animaux-et-vegetaux/exercice.json';
 import flash37 from './../../contenu/cp/sciences/le-vivant-animaux-et-vegetaux/flashcards.json';
-import fiche38 from './../../contenu/cp/sciences/les-objets-du-quotidien/fiche.md';
 import qcm38 from './../../contenu/cp/sciences/les-objets-du-quotidien/qcm.json';
-import exercice38 from './../../contenu/cp/sciences/les-objets-du-quotidien/exercice.json';
 import flash38 from './../../contenu/cp/sciences/les-objets-du-quotidien/flashcards.json';
-import fiche39 from './../../contenu/cp/sciences/solides-et-liquides/fiche.md';
 import qcm39 from './../../contenu/cp/sciences/solides-et-liquides/qcm.json';
-import exercice39 from './../../contenu/cp/sciences/solides-et-liquides/exercice.json';
 import flash39 from './../../contenu/cp/sciences/solides-et-liquides/flashcards.json';
-import fiche40 from './../../contenu/cp/sciences/le-temps-et-les-saisons/fiche.md';
 import qcm40 from './../../contenu/cp/sciences/le-temps-et-les-saisons/qcm.json';
-import exercice40 from './../../contenu/cp/sciences/le-temps-et-les-saisons/exercice.json';
 import flash40 from './../../contenu/cp/sciences/le-temps-et-les-saisons/flashcards.json';
-import fiche41 from './../../contenu/ce1/allemand/wochentage/fiche.md';
 import qcm41 from './../../contenu/ce1/allemand/wochentage/qcm.json';
-import exercice41 from './../../contenu/ce1/allemand/wochentage/exercice.json';
 import flash41 from './../../contenu/ce1/allemand/wochentage/flashcards.json';
-import fiche42 from './../../contenu/ce1/allemand/familie/fiche.md';
 import qcm42 from './../../contenu/ce1/allemand/familie/qcm.json';
-import exercice42 from './../../contenu/ce1/allemand/familie/exercice.json';
 import flash42 from './../../contenu/ce1/allemand/familie/flashcards.json';
-import fiche43 from './../../contenu/ce1/allemand/koerper/fiche.md';
 import qcm43 from './../../contenu/ce1/allemand/koerper/qcm.json';
-import exercice43 from './../../contenu/ce1/allemand/koerper/exercice.json';
 import flash43 from './../../contenu/ce1/allemand/koerper/flashcards.json';
-import fiche44 from './../../contenu/ce1/allemand/essen/fiche.md';
 import qcm44 from './../../contenu/ce1/allemand/essen/qcm.json';
-import exercice44 from './../../contenu/ce1/allemand/essen/exercice.json';
 import flash44 from './../../contenu/ce1/allemand/essen/flashcards.json';
-import fiche45 from './../../contenu/ce1/anglais/days/fiche.md';
 import qcm45 from './../../contenu/ce1/anglais/days/qcm.json';
-import exercice45 from './../../contenu/ce1/anglais/days/exercice.json';
 import flash45 from './../../contenu/ce1/anglais/days/flashcards.json';
-import fiche46 from './../../contenu/ce1/anglais/family/fiche.md';
 import qcm46 from './../../contenu/ce1/anglais/family/qcm.json';
-import exercice46 from './../../contenu/ce1/anglais/family/exercice.json';
 import flash46 from './../../contenu/ce1/anglais/family/flashcards.json';
-import fiche47 from './../../contenu/ce1/anglais/body/fiche.md';
 import qcm47 from './../../contenu/ce1/anglais/body/qcm.json';
-import exercice47 from './../../contenu/ce1/anglais/body/exercice.json';
 import flash47 from './../../contenu/ce1/anglais/body/flashcards.json';
-import fiche48 from './../../contenu/ce1/anglais/food/fiche.md';
 import qcm48 from './../../contenu/ce1/anglais/food/qcm.json';
-import exercice48 from './../../contenu/ce1/anglais/food/exercice.json';
 import flash48 from './../../contenu/ce1/anglais/food/flashcards.json';
-import fiche49 from './../../contenu/ce1/espagnol/dias/fiche.md';
 import qcm49 from './../../contenu/ce1/espagnol/dias/qcm.json';
-import exercice49 from './../../contenu/ce1/espagnol/dias/exercice.json';
 import flash49 from './../../contenu/ce1/espagnol/dias/flashcards.json';
-import fiche50 from './../../contenu/ce1/espagnol/familia/fiche.md';
 import qcm50 from './../../contenu/ce1/espagnol/familia/qcm.json';
-import exercice50 from './../../contenu/ce1/espagnol/familia/exercice.json';
 import flash50 from './../../contenu/ce1/espagnol/familia/flashcards.json';
-import fiche51 from './../../contenu/ce1/espagnol/cuerpo/fiche.md';
 import qcm51 from './../../contenu/ce1/espagnol/cuerpo/qcm.json';
-import exercice51 from './../../contenu/ce1/espagnol/cuerpo/exercice.json';
 import flash51 from './../../contenu/ce1/espagnol/cuerpo/flashcards.json';
-import fiche52 from './../../contenu/ce1/espagnol/comida/fiche.md';
 import qcm52 from './../../contenu/ce1/espagnol/comida/qcm.json';
-import exercice52 from './../../contenu/ce1/espagnol/comida/exercice.json';
 import flash52 from './../../contenu/ce1/espagnol/comida/flashcards.json';
-import fiche53 from './../../contenu/ce1/francais/types-de-phrases/fiche.md';
 import qcm53 from './../../contenu/ce1/francais/types-de-phrases/qcm.json';
-import exercice53 from './../../contenu/ce1/francais/types-de-phrases/exercice.json';
 import flash53 from './../../contenu/ce1/francais/types-de-phrases/flashcards.json';
-import fiche54 from './../../contenu/ce1/francais/noms-propres-communs/fiche.md';
 import qcm54 from './../../contenu/ce1/francais/noms-propres-communs/qcm.json';
-import exercice54 from './../../contenu/ce1/francais/noms-propres-communs/exercice.json';
 import flash54 from './../../contenu/ce1/francais/noms-propres-communs/flashcards.json';
-import fiche55 from './../../contenu/ce1/francais/singulier-pluriel/fiche.md';
 import qcm55 from './../../contenu/ce1/francais/singulier-pluriel/qcm.json';
-import exercice55 from './../../contenu/ce1/francais/singulier-pluriel/exercice.json';
 import flash55 from './../../contenu/ce1/francais/singulier-pluriel/flashcards.json';
-import fiche56 from './../../contenu/ce1/francais/le-verbe/fiche.md';
 import qcm56 from './../../contenu/ce1/francais/le-verbe/qcm.json';
-import exercice56 from './../../contenu/ce1/francais/le-verbe/exercice.json';
 import flash56 from './../../contenu/ce1/francais/le-verbe/flashcards.json';
-import fiche57 from './../../contenu/ce1/francais/present-etre-avoir/fiche.md';
 import qcm57 from './../../contenu/ce1/francais/present-etre-avoir/qcm.json';
-import exercice57 from './../../contenu/ce1/francais/present-etre-avoir/exercice.json';
 import flash57 from './../../contenu/ce1/francais/present-etre-avoir/flashcards.json';
-import fiche58 from './../../contenu/ce1/hist-geo/regles-et-droits/fiche.md';
 import qcm58 from './../../contenu/ce1/hist-geo/regles-et-droits/qcm.json';
-import exercice58 from './../../contenu/ce1/hist-geo/regles-et-droits/exercice.json';
 import flash58 from './../../contenu/ce1/hist-geo/regles-et-droits/flashcards.json';
-import fiche59 from './../../contenu/ce1/hist-geo/calendrier-frise/fiche.md';
 import qcm59 from './../../contenu/ce1/hist-geo/calendrier-frise/qcm.json';
-import exercice59 from './../../contenu/ce1/hist-geo/calendrier-frise/exercice.json';
 import flash59 from './../../contenu/ce1/hist-geo/calendrier-frise/flashcards.json';
-import fiche60 from './../../contenu/ce1/hist-geo/plans-et-cartes/fiche.md';
 import qcm60 from './../../contenu/ce1/hist-geo/plans-et-cartes/qcm.json';
-import exercice60 from './../../contenu/ce1/hist-geo/plans-et-cartes/exercice.json';
 import flash60 from './../../contenu/ce1/hist-geo/plans-et-cartes/flashcards.json';
-import fiche61 from './../../contenu/ce1/hist-geo/la-france-paysages/fiche.md';
 import qcm61 from './../../contenu/ce1/hist-geo/la-france-paysages/qcm.json';
-import exercice61 from './../../contenu/ce1/hist-geo/la-france-paysages/exercice.json';
 import flash61 from './../../contenu/ce1/hist-geo/la-france-paysages/flashcards.json';
-import fiche62 from './../../contenu/ce1/italien/giorni/fiche.md';
 import qcm62 from './../../contenu/ce1/italien/giorni/qcm.json';
-import exercice62 from './../../contenu/ce1/italien/giorni/exercice.json';
 import flash62 from './../../contenu/ce1/italien/giorni/flashcards.json';
-import fiche63 from './../../contenu/ce1/italien/famiglia/fiche.md';
 import qcm63 from './../../contenu/ce1/italien/famiglia/qcm.json';
-import exercice63 from './../../contenu/ce1/italien/famiglia/exercice.json';
 import flash63 from './../../contenu/ce1/italien/famiglia/flashcards.json';
-import fiche64 from './../../contenu/ce1/italien/corpo/fiche.md';
 import qcm64 from './../../contenu/ce1/italien/corpo/qcm.json';
-import exercice64 from './../../contenu/ce1/italien/corpo/exercice.json';
 import flash64 from './../../contenu/ce1/italien/corpo/flashcards.json';
-import fiche65 from './../../contenu/ce1/italien/cibo/fiche.md';
 import qcm65 from './../../contenu/ce1/italien/cibo/qcm.json';
-import exercice65 from './../../contenu/ce1/italien/cibo/exercice.json';
 import flash65 from './../../contenu/ce1/italien/cibo/flashcards.json';
-import fiche66 from './../../contenu/ce1/maths/nombres-jusqu-a-1000/fiche.md';
 import qcm66 from './../../contenu/ce1/maths/nombres-jusqu-a-1000/qcm.json';
-import exercice66 from './../../contenu/ce1/maths/nombres-jusqu-a-1000/exercice.json';
 import flash66 from './../../contenu/ce1/maths/nombres-jusqu-a-1000/flashcards.json';
-import fiche67 from './../../contenu/ce1/maths/addition-posee/fiche.md';
 import qcm67 from './../../contenu/ce1/maths/addition-posee/qcm.json';
-import exercice67 from './../../contenu/ce1/maths/addition-posee/exercice.json';
 import flash67 from './../../contenu/ce1/maths/addition-posee/flashcards.json';
-import fiche68 from './../../contenu/ce1/maths/calcul-mental/fiche.md';
 import qcm68 from './../../contenu/ce1/maths/calcul-mental/qcm.json';
-import exercice68 from './../../contenu/ce1/maths/calcul-mental/exercice.json';
 import flash68 from './../../contenu/ce1/maths/calcul-mental/flashcards.json';
-import fiche69 from './../../contenu/ce1/maths/soustraction-posee/fiche.md';
 import qcm69 from './../../contenu/ce1/maths/soustraction-posee/qcm.json';
-import exercice69 from './../../contenu/ce1/maths/soustraction-posee/exercice.json';
 import flash69 from './../../contenu/ce1/maths/soustraction-posee/flashcards.json';
-import fiche70 from './../../contenu/ce1/maths/figures-planes/fiche.md';
 import qcm70 from './../../contenu/ce1/maths/figures-planes/qcm.json';
-import exercice70 from './../../contenu/ce1/maths/figures-planes/exercice.json';
 import flash70 from './../../contenu/ce1/maths/figures-planes/flashcards.json';
-import fiche71 from './../../contenu/ce1/maths/moities-et-doubles/fiche.md';
 import qcm71 from './../../contenu/ce1/maths/moities-et-doubles/qcm.json';
-import exercice71 from './../../contenu/ce1/maths/moities-et-doubles/exercice.json';
 import flash71 from './../../contenu/ce1/maths/moities-et-doubles/flashcards.json';
-import fiche72 from './../../contenu/ce1/maths/tables-de-multiplication/fiche.md';
 import qcm72 from './../../contenu/ce1/maths/tables-de-multiplication/qcm.json';
-import exercice72 from './../../contenu/ce1/maths/tables-de-multiplication/exercice.json';
 import flash72 from './../../contenu/ce1/maths/tables-de-multiplication/flashcards.json';
-import fiche73 from './../../contenu/ce1/maths/symetrie-et-quadrillage/fiche.md';
 import qcm73 from './../../contenu/ce1/maths/symetrie-et-quadrillage/qcm.json';
-import exercice73 from './../../contenu/ce1/maths/symetrie-et-quadrillage/exercice.json';
 import flash73 from './../../contenu/ce1/maths/symetrie-et-quadrillage/flashcards.json';
-import fiche74 from './../../contenu/ce1/maths/solides/fiche.md';
 import qcm74 from './../../contenu/ce1/maths/solides/qcm.json';
-import exercice74 from './../../contenu/ce1/maths/solides/exercice.json';
 import flash74 from './../../contenu/ce1/maths/solides/flashcards.json';
-import fiche75 from './../../contenu/ce1/maths/mesures-et-monnaie/fiche.md';
 import qcm75 from './../../contenu/ce1/maths/mesures-et-monnaie/qcm.json';
-import exercice75 from './../../contenu/ce1/maths/mesures-et-monnaie/exercice.json';
 import flash75 from './../../contenu/ce1/maths/mesures-et-monnaie/flashcards.json';
-import fiche76 from './../../contenu/ce1/maths/problemes/fiche.md';
 import qcm76 from './../../contenu/ce1/maths/problemes/qcm.json';
-import exercice76 from './../../contenu/ce1/maths/problemes/exercice.json';
 import flash76 from './../../contenu/ce1/maths/problemes/flashcards.json';
-import fiche77 from './../../contenu/ce1/sciences/se-reperer-dans-le-temps/fiche.md';
 import qcm77 from './../../contenu/ce1/sciences/se-reperer-dans-le-temps/qcm.json';
-import exercice77 from './../../contenu/ce1/sciences/se-reperer-dans-le-temps/exercice.json';
 import flash77 from './../../contenu/ce1/sciences/se-reperer-dans-le-temps/flashcards.json';
-import fiche78 from './../../contenu/ce1/sciences/les-etats-de-leau/fiche.md';
 import qcm78 from './../../contenu/ce1/sciences/les-etats-de-leau/qcm.json';
-import exercice78 from './../../contenu/ce1/sciences/les-etats-de-leau/exercice.json';
 import flash78 from './../../contenu/ce1/sciences/les-etats-de-leau/flashcards.json';
-import fiche79 from './../../contenu/ce1/sciences/cycles-de-vie-des-etres-vivants/fiche.md';
 import qcm79 from './../../contenu/ce1/sciences/cycles-de-vie-des-etres-vivants/qcm.json';
-import exercice79 from './../../contenu/ce1/sciences/cycles-de-vie-des-etres-vivants/exercice.json';
 import flash79 from './../../contenu/ce1/sciences/cycles-de-vie-des-etres-vivants/flashcards.json';
-import fiche80 from './../../contenu/ce1/sciences/alimentation-et-hygiene/fiche.md';
 import qcm80 from './../../contenu/ce1/sciences/alimentation-et-hygiene/qcm.json';
-import exercice80 from './../../contenu/ce1/sciences/alimentation-et-hygiene/exercice.json';
 import flash80 from './../../contenu/ce1/sciences/alimentation-et-hygiene/flashcards.json';
-import fiche81 from './../../contenu/ce1/sciences/materiaux-et-objets-techniques/fiche.md';
 import qcm81 from './../../contenu/ce1/sciences/materiaux-et-objets-techniques/qcm.json';
-import exercice81 from './../../contenu/ce1/sciences/materiaux-et-objets-techniques/exercice.json';
 import flash81 from './../../contenu/ce1/sciences/materiaux-et-objets-techniques/flashcards.json';
-import fiche82 from './../../contenu/ce2/allemand/zahlen-alter/fiche.md';
 import qcm82 from './../../contenu/ce2/allemand/zahlen-alter/qcm.json';
-import exercice82 from './../../contenu/ce2/allemand/zahlen-alter/exercice.json';
 import flash82 from './../../contenu/ce2/allemand/zahlen-alter/flashcards.json';
-import fiche83 from './../../contenu/ce2/allemand/gefuehle/fiche.md';
 import qcm83 from './../../contenu/ce2/allemand/gefuehle/qcm.json';
-import exercice83 from './../../contenu/ce2/allemand/gefuehle/exercice.json';
 import flash83 from './../../contenu/ce2/allemand/gefuehle/flashcards.json';
-import fiche84 from './../../contenu/ce2/allemand/kleidung/fiche.md';
 import qcm84 from './../../contenu/ce2/allemand/kleidung/qcm.json';
-import exercice84 from './../../contenu/ce2/allemand/kleidung/exercice.json';
 import flash84 from './../../contenu/ce2/allemand/kleidung/flashcards.json';
-import fiche85 from './../../contenu/ce2/allemand/wetter-jahreszeiten/fiche.md';
 import qcm85 from './../../contenu/ce2/allemand/wetter-jahreszeiten/qcm.json';
-import exercice85 from './../../contenu/ce2/allemand/wetter-jahreszeiten/exercice.json';
 import flash85 from './../../contenu/ce2/allemand/wetter-jahreszeiten/flashcards.json';
-import fiche86 from './../../contenu/ce2/anglais/numbers-age/fiche.md';
 import qcm86 from './../../contenu/ce2/anglais/numbers-age/qcm.json';
-import exercice86 from './../../contenu/ce2/anglais/numbers-age/exercice.json';
 import flash86 from './../../contenu/ce2/anglais/numbers-age/flashcards.json';
-import fiche87 from './../../contenu/ce2/anglais/feelings/fiche.md';
 import qcm87 from './../../contenu/ce2/anglais/feelings/qcm.json';
-import exercice87 from './../../contenu/ce2/anglais/feelings/exercice.json';
 import flash87 from './../../contenu/ce2/anglais/feelings/flashcards.json';
-import fiche88 from './../../contenu/ce2/anglais/clothes/fiche.md';
 import qcm88 from './../../contenu/ce2/anglais/clothes/qcm.json';
-import exercice88 from './../../contenu/ce2/anglais/clothes/exercice.json';
 import flash88 from './../../contenu/ce2/anglais/clothes/flashcards.json';
-import fiche89 from './../../contenu/ce2/anglais/weather-seasons/fiche.md';
 import qcm89 from './../../contenu/ce2/anglais/weather-seasons/qcm.json';
-import exercice89 from './../../contenu/ce2/anglais/weather-seasons/exercice.json';
 import flash89 from './../../contenu/ce2/anglais/weather-seasons/flashcards.json';
-import fiche90 from './../../contenu/ce2/espagnol/numeros-edad/fiche.md';
 import qcm90 from './../../contenu/ce2/espagnol/numeros-edad/qcm.json';
-import exercice90 from './../../contenu/ce2/espagnol/numeros-edad/exercice.json';
 import flash90 from './../../contenu/ce2/espagnol/numeros-edad/flashcards.json';
-import fiche91 from './../../contenu/ce2/espagnol/sentimientos/fiche.md';
 import qcm91 from './../../contenu/ce2/espagnol/sentimientos/qcm.json';
-import exercice91 from './../../contenu/ce2/espagnol/sentimientos/exercice.json';
 import flash91 from './../../contenu/ce2/espagnol/sentimientos/flashcards.json';
-import fiche92 from './../../contenu/ce2/espagnol/ropa/fiche.md';
 import qcm92 from './../../contenu/ce2/espagnol/ropa/qcm.json';
-import exercice92 from './../../contenu/ce2/espagnol/ropa/exercice.json';
 import flash92 from './../../contenu/ce2/espagnol/ropa/flashcards.json';
-import fiche93 from './../../contenu/ce2/espagnol/tiempo-estaciones/fiche.md';
 import qcm93 from './../../contenu/ce2/espagnol/tiempo-estaciones/qcm.json';
-import exercice93 from './../../contenu/ce2/espagnol/tiempo-estaciones/exercice.json';
 import flash93 from './../../contenu/ce2/espagnol/tiempo-estaciones/flashcards.json';
-import fiche94 from './../../contenu/ce2/francais/classes-de-mots/fiche.md';
 import qcm94 from './../../contenu/ce2/francais/classes-de-mots/qcm.json';
-import exercice94 from './../../contenu/ce2/francais/classes-de-mots/exercice.json';
 import flash94 from './../../contenu/ce2/francais/classes-de-mots/flashcards.json';
-import fiche95 from './../../contenu/ce2/francais/passe-present-futur/fiche.md';
 import qcm95 from './../../contenu/ce2/francais/passe-present-futur/qcm.json';
-import exercice95 from './../../contenu/ce2/francais/passe-present-futur/exercice.json';
 import flash95 from './../../contenu/ce2/francais/passe-present-futur/flashcards.json';
-import fiche96 from './../../contenu/ce2/francais/present-premier-groupe/fiche.md';
 import qcm96 from './../../contenu/ce2/francais/present-premier-groupe/qcm.json';
-import exercice96 from './../../contenu/ce2/francais/present-premier-groupe/exercice.json';
 import flash96 from './../../contenu/ce2/francais/present-premier-groupe/flashcards.json';
-import fiche97 from './../../contenu/ce2/francais/accord-sujet-verbe/fiche.md';
 import qcm97 from './../../contenu/ce2/francais/accord-sujet-verbe/qcm.json';
-import exercice97 from './../../contenu/ce2/francais/accord-sujet-verbe/exercice.json';
 import flash97 from './../../contenu/ce2/francais/accord-sujet-verbe/flashcards.json';
-import fiche98 from './../../contenu/ce2/francais/homophones-a-et/fiche.md';
 import qcm98 from './../../contenu/ce2/francais/homophones-a-et/qcm.json';
-import exercice98 from './../../contenu/ce2/francais/homophones-a-et/exercice.json';
 import flash98 from './../../contenu/ce2/francais/homophones-a-et/flashcards.json';
-import fiche99 from './../../contenu/ce2/hist-geo/prehistoire/fiche.md';
 import qcm99 from './../../contenu/ce2/hist-geo/prehistoire/qcm.json';
-import exercice99 from './../../contenu/ce2/hist-geo/prehistoire/exercice.json';
 import flash99 from './../../contenu/ce2/hist-geo/prehistoire/flashcards.json';
-import fiche100 from './../../contenu/ce2/hist-geo/gaulois-romains/fiche.md';
 import qcm100 from './../../contenu/ce2/hist-geo/gaulois-romains/qcm.json';
-import exercice100 from './../../contenu/ce2/hist-geo/gaulois-romains/exercice.json';
 import flash100 from './../../contenu/ce2/hist-geo/gaulois-romains/flashcards.json';
-import fiche101 from './../../contenu/ce2/hist-geo/terre-continents-oceans/fiche.md';
 import qcm101 from './../../contenu/ce2/hist-geo/terre-continents-oceans/qcm.json';
-import exercice101 from './../../contenu/ce2/hist-geo/terre-continents-oceans/exercice.json';
 import flash101 from './../../contenu/ce2/hist-geo/terre-continents-oceans/flashcards.json';
-import fiche102 from './../../contenu/ce2/hist-geo/symboles-republique/fiche.md';
 import qcm102 from './../../contenu/ce2/hist-geo/symboles-republique/qcm.json';
-import exercice102 from './../../contenu/ce2/hist-geo/symboles-republique/exercice.json';
 import flash102 from './../../contenu/ce2/hist-geo/symboles-republique/flashcards.json';
-import fiche103 from './../../contenu/ce2/italien/numeri-eta/fiche.md';
 import qcm103 from './../../contenu/ce2/italien/numeri-eta/qcm.json';
-import exercice103 from './../../contenu/ce2/italien/numeri-eta/exercice.json';
 import flash103 from './../../contenu/ce2/italien/numeri-eta/flashcards.json';
-import fiche104 from './../../contenu/ce2/italien/sentimenti/fiche.md';
 import qcm104 from './../../contenu/ce2/italien/sentimenti/qcm.json';
-import exercice104 from './../../contenu/ce2/italien/sentimenti/exercice.json';
 import flash104 from './../../contenu/ce2/italien/sentimenti/flashcards.json';
-import fiche105 from './../../contenu/ce2/italien/vestiti/fiche.md';
 import qcm105 from './../../contenu/ce2/italien/vestiti/qcm.json';
-import exercice105 from './../../contenu/ce2/italien/vestiti/exercice.json';
 import flash105 from './../../contenu/ce2/italien/vestiti/flashcards.json';
-import fiche106 from './../../contenu/ce2/italien/tempo-stagioni/fiche.md';
 import qcm106 from './../../contenu/ce2/italien/tempo-stagioni/qcm.json';
-import exercice106 from './../../contenu/ce2/italien/tempo-stagioni/exercice.json';
 import flash106 from './../../contenu/ce2/italien/tempo-stagioni/flashcards.json';
-import fiche107 from './../../contenu/ce2/maths/nombres-jusqu-a-10000/fiche.md';
 import qcm107 from './../../contenu/ce2/maths/nombres-jusqu-a-10000/qcm.json';
-import exercice107 from './../../contenu/ce2/maths/nombres-jusqu-a-10000/exercice.json';
 import flash107 from './../../contenu/ce2/maths/nombres-jusqu-a-10000/flashcards.json';
-import fiche108 from './../../contenu/ce2/maths/calcul-mental/fiche.md';
 import qcm108 from './../../contenu/ce2/maths/calcul-mental/qcm.json';
-import exercice108 from './../../contenu/ce2/maths/calcul-mental/exercice.json';
 import flash108 from './../../contenu/ce2/maths/calcul-mental/flashcards.json';
-import fiche109 from './../../contenu/ce2/maths/multiplication-posee/fiche.md';
 import qcm109 from './../../contenu/ce2/maths/multiplication-posee/qcm.json';
-import exercice109 from './../../contenu/ce2/maths/multiplication-posee/exercice.json';
 import flash109 from './../../contenu/ce2/maths/multiplication-posee/flashcards.json';
-import fiche110 from './../../contenu/ce2/maths/angles-et-polygones/fiche.md';
 import qcm110 from './../../contenu/ce2/maths/angles-et-polygones/qcm.json';
-import exercice110 from './../../contenu/ce2/maths/angles-et-polygones/exercice.json';
 import flash110 from './../../contenu/ce2/maths/angles-et-polygones/flashcards.json';
-import fiche111 from './../../contenu/ce2/maths/sens-de-la-division/fiche.md';
 import qcm111 from './../../contenu/ce2/maths/sens-de-la-division/qcm.json';
-import exercice111 from './../../contenu/ce2/maths/sens-de-la-division/exercice.json';
 import flash111 from './../../contenu/ce2/maths/sens-de-la-division/flashcards.json';
-import fiche112 from './../../contenu/ce2/maths/perimetre-et-mesures/fiche.md';
 import qcm112 from './../../contenu/ce2/maths/perimetre-et-mesures/qcm.json';
-import exercice112 from './../../contenu/ce2/maths/perimetre-et-mesures/exercice.json';
 import flash112 from './../../contenu/ce2/maths/perimetre-et-mesures/flashcards.json';
-import fiche113 from './../../contenu/ce2/maths/symetrie-axiale/fiche.md';
 import qcm113 from './../../contenu/ce2/maths/symetrie-axiale/qcm.json';
-import exercice113 from './../../contenu/ce2/maths/symetrie-axiale/exercice.json';
 import flash113 from './../../contenu/ce2/maths/symetrie-axiale/flashcards.json';
-import fiche114 from './../../contenu/ce2/maths/fractions-simples/fiche.md';
 import qcm114 from './../../contenu/ce2/maths/fractions-simples/qcm.json';
-import exercice114 from './../../contenu/ce2/maths/fractions-simples/exercice.json';
 import flash114 from './../../contenu/ce2/maths/fractions-simples/flashcards.json';
-import fiche115 from './../../contenu/ce2/maths/solides-et-patrons/fiche.md';
 import qcm115 from './../../contenu/ce2/maths/solides-et-patrons/qcm.json';
-import exercice115 from './../../contenu/ce2/maths/solides-et-patrons/exercice.json';
 import flash115 from './../../contenu/ce2/maths/solides-et-patrons/flashcards.json';
-import fiche116 from './../../contenu/ce2/maths/tableaux-et-graphiques/fiche.md';
 import qcm116 from './../../contenu/ce2/maths/tableaux-et-graphiques/qcm.json';
-import exercice116 from './../../contenu/ce2/maths/tableaux-et-graphiques/exercice.json';
 import flash116 from './../../contenu/ce2/maths/tableaux-et-graphiques/flashcards.json';
-import fiche117 from './../../contenu/ce2/maths/problemes/fiche.md';
 import qcm117 from './../../contenu/ce2/maths/problemes/qcm.json';
-import exercice117 from './../../contenu/ce2/maths/problemes/exercice.json';
 import flash117 from './../../contenu/ce2/maths/problemes/flashcards.json';
-import fiche118 from './../../contenu/ce2/sciences/classer-les-animaux/fiche.md';
 import qcm118 from './../../contenu/ce2/sciences/classer-les-animaux/qcm.json';
-import exercice118 from './../../contenu/ce2/sciences/classer-les-animaux/exercice.json';
 import flash118 from './../../contenu/ce2/sciences/classer-les-animaux/flashcards.json';
-import fiche119 from './../../contenu/ce2/sciences/plantes-et-milieux-de-vie/fiche.md';
 import qcm119 from './../../contenu/ce2/sciences/plantes-et-milieux-de-vie/qcm.json';
-import exercice119 from './../../contenu/ce2/sciences/plantes-et-milieux-de-vie/exercice.json';
 import flash119 from './../../contenu/ce2/sciences/plantes-et-milieux-de-vie/flashcards.json';
-import fiche120 from './../../contenu/ce2/sciences/melanges-et-solutions/fiche.md';
 import qcm120 from './../../contenu/ce2/sciences/melanges-et-solutions/qcm.json';
-import exercice120 from './../../contenu/ce2/sciences/melanges-et-solutions/exercice.json';
 import flash120 from './../../contenu/ce2/sciences/melanges-et-solutions/flashcards.json';
-import fiche121 from './../../contenu/ce2/sciences/circuits-electriques-simples/fiche.md';
 import qcm121 from './../../contenu/ce2/sciences/circuits-electriques-simples/qcm.json';
-import exercice121 from './../../contenu/ce2/sciences/circuits-electriques-simples/exercice.json';
 import flash121 from './../../contenu/ce2/sciences/circuits-electriques-simples/flashcards.json';
-import fiche122 from './../../contenu/ce2/sciences/la-terre-le-soleil-la-lune/fiche.md';
 import qcm122 from './../../contenu/ce2/sciences/la-terre-le-soleil-la-lune/qcm.json';
-import exercice122 from './../../contenu/ce2/sciences/la-terre-le-soleil-la-lune/exercice.json';
 import flash122 from './../../contenu/ce2/sciences/la-terre-le-soleil-la-lune/flashcards.json';
-import fiche123 from './../../contenu/cm1/allemand/laender-nationalitaeten/fiche.md';
 import qcm123 from './../../contenu/cm1/allemand/laender-nationalitaeten/qcm.json';
-import exercice123 from './../../contenu/cm1/allemand/laender-nationalitaeten/exercice.json';
 import flash123 from './../../contenu/cm1/allemand/laender-nationalitaeten/flashcards.json';
-import fiche124 from './../../contenu/cm1/allemand/haus/fiche.md';
 import qcm124 from './../../contenu/cm1/allemand/haus/qcm.json';
-import exercice124 from './../../contenu/cm1/allemand/haus/exercice.json';
 import flash124 from './../../contenu/cm1/allemand/haus/flashcards.json';
-import fiche125 from './../../contenu/cm1/allemand/uhrzeit-tagesablauf/fiche.md';
 import qcm125 from './../../contenu/cm1/allemand/uhrzeit-tagesablauf/qcm.json';
-import exercice125 from './../../contenu/cm1/allemand/uhrzeit-tagesablauf/exercice.json';
 import flash125 from './../../contenu/cm1/allemand/uhrzeit-tagesablauf/flashcards.json';
-import fiche126 from './../../contenu/cm1/allemand/sport-hobbys/fiche.md';
 import qcm126 from './../../contenu/cm1/allemand/sport-hobbys/qcm.json';
-import exercice126 from './../../contenu/cm1/allemand/sport-hobbys/exercice.json';
 import flash126 from './../../contenu/cm1/allemand/sport-hobbys/flashcards.json';
-import fiche127 from './../../contenu/cm1/anglais/countries-nationalities/fiche.md';
 import qcm127 from './../../contenu/cm1/anglais/countries-nationalities/qcm.json';
-import exercice127 from './../../contenu/cm1/anglais/countries-nationalities/exercice.json';
 import flash127 from './../../contenu/cm1/anglais/countries-nationalities/flashcards.json';
-import fiche128 from './../../contenu/cm1/anglais/house-rooms/fiche.md';
 import qcm128 from './../../contenu/cm1/anglais/house-rooms/qcm.json';
-import exercice128 from './../../contenu/cm1/anglais/house-rooms/exercice.json';
 import flash128 from './../../contenu/cm1/anglais/house-rooms/flashcards.json';
-import fiche129 from './../../contenu/cm1/anglais/time-routine/fiche.md';
 import qcm129 from './../../contenu/cm1/anglais/time-routine/qcm.json';
-import exercice129 from './../../contenu/cm1/anglais/time-routine/exercice.json';
 import flash129 from './../../contenu/cm1/anglais/time-routine/flashcards.json';
-import fiche130 from './../../contenu/cm1/anglais/sports-hobbies/fiche.md';
 import qcm130 from './../../contenu/cm1/anglais/sports-hobbies/qcm.json';
-import exercice130 from './../../contenu/cm1/anglais/sports-hobbies/exercice.json';
 import flash130 from './../../contenu/cm1/anglais/sports-hobbies/flashcards.json';
-import fiche131 from './../../contenu/cm1/espagnol/paises-nacionalidades/fiche.md';
 import qcm131 from './../../contenu/cm1/espagnol/paises-nacionalidades/qcm.json';
-import exercice131 from './../../contenu/cm1/espagnol/paises-nacionalidades/exercice.json';
 import flash131 from './../../contenu/cm1/espagnol/paises-nacionalidades/flashcards.json';
-import fiche132 from './../../contenu/cm1/espagnol/casa/fiche.md';
 import qcm132 from './../../contenu/cm1/espagnol/casa/qcm.json';
-import exercice132 from './../../contenu/cm1/espagnol/casa/exercice.json';
 import flash132 from './../../contenu/cm1/espagnol/casa/flashcards.json';
-import fiche133 from './../../contenu/cm1/espagnol/hora-rutina/fiche.md';
 import qcm133 from './../../contenu/cm1/espagnol/hora-rutina/qcm.json';
-import exercice133 from './../../contenu/cm1/espagnol/hora-rutina/exercice.json';
 import flash133 from './../../contenu/cm1/espagnol/hora-rutina/flashcards.json';
-import fiche134 from './../../contenu/cm1/espagnol/deportes-ocio/fiche.md';
 import qcm134 from './../../contenu/cm1/espagnol/deportes-ocio/qcm.json';
-import exercice134 from './../../contenu/cm1/espagnol/deportes-ocio/exercice.json';
 import flash134 from './../../contenu/cm1/espagnol/deportes-ocio/flashcards.json';
-import fiche135 from './../../contenu/cm1/francais/accords-groupe-nominal/fiche.md';
 import qcm135 from './../../contenu/cm1/francais/accords-groupe-nominal/qcm.json';
-import exercice135 from './../../contenu/cm1/francais/accords-groupe-nominal/exercice.json';
 import flash135 from './../../contenu/cm1/francais/accords-groupe-nominal/flashcards.json';
-import fiche136 from './../../contenu/cm1/francais/complement-objet/fiche.md';
 import qcm136 from './../../contenu/cm1/francais/complement-objet/qcm.json';
-import exercice136 from './../../contenu/cm1/francais/complement-objet/exercice.json';
 import flash136 from './../../contenu/cm1/francais/complement-objet/flashcards.json';
-import fiche137 from './../../contenu/cm1/francais/futur-simple/fiche.md';
 import qcm137 from './../../contenu/cm1/francais/futur-simple/qcm.json';
-import exercice137 from './../../contenu/cm1/francais/futur-simple/exercice.json';
 import flash137 from './../../contenu/cm1/francais/futur-simple/flashcards.json';
-import fiche138 from './../../contenu/cm1/francais/imparfait/fiche.md';
 import qcm138 from './../../contenu/cm1/francais/imparfait/qcm.json';
-import exercice138 from './../../contenu/cm1/francais/imparfait/exercice.json';
 import flash138 from './../../contenu/cm1/francais/imparfait/flashcards.json';
-import fiche139 from './../../contenu/cm1/francais/passe-compose/fiche.md';
 import qcm139 from './../../contenu/cm1/francais/passe-compose/qcm.json';
-import exercice139 from './../../contenu/cm1/francais/passe-compose/exercice.json';
 import flash139 from './../../contenu/cm1/francais/passe-compose/flashcards.json';
-import fiche140 from './../../contenu/cm1/hist-geo/moyen-age/fiche.md';
 import qcm140 from './../../contenu/cm1/hist-geo/moyen-age/qcm.json';
-import exercice140 from './../../contenu/cm1/hist-geo/moyen-age/exercice.json';
 import flash140 from './../../contenu/cm1/hist-geo/moyen-age/flashcards.json';
-import fiche141 from './../../contenu/cm1/hist-geo/temps-modernes/fiche.md';
 import qcm141 from './../../contenu/cm1/hist-geo/temps-modernes/qcm.json';
-import exercice141 from './../../contenu/cm1/hist-geo/temps-modernes/exercice.json';
 import flash141 from './../../contenu/cm1/hist-geo/temps-modernes/flashcards.json';
-import fiche142 from './../../contenu/cm1/hist-geo/habiter-ville-campagne/fiche.md';
 import qcm142 from './../../contenu/cm1/hist-geo/habiter-ville-campagne/qcm.json';
-import exercice142 from './../../contenu/cm1/hist-geo/habiter-ville-campagne/exercice.json';
 import flash142 from './../../contenu/cm1/hist-geo/habiter-ville-campagne/flashcards.json';
-import fiche143 from './../../contenu/cm1/hist-geo/egalite-discriminations/fiche.md';
 import qcm143 from './../../contenu/cm1/hist-geo/egalite-discriminations/qcm.json';
-import exercice143 from './../../contenu/cm1/hist-geo/egalite-discriminations/exercice.json';
 import flash143 from './../../contenu/cm1/hist-geo/egalite-discriminations/flashcards.json';
-import fiche144 from './../../contenu/cm1/italien/paesi-nazionalita/fiche.md';
 import qcm144 from './../../contenu/cm1/italien/paesi-nazionalita/qcm.json';
-import exercice144 from './../../contenu/cm1/italien/paesi-nazionalita/exercice.json';
 import flash144 from './../../contenu/cm1/italien/paesi-nazionalita/flashcards.json';
-import fiche145 from './../../contenu/cm1/italien/casa/fiche.md';
 import qcm145 from './../../contenu/cm1/italien/casa/qcm.json';
-import exercice145 from './../../contenu/cm1/italien/casa/exercice.json';
 import flash145 from './../../contenu/cm1/italien/casa/flashcards.json';
-import fiche146 from './../../contenu/cm1/italien/ora-routine/fiche.md';
 import qcm146 from './../../contenu/cm1/italien/ora-routine/qcm.json';
-import exercice146 from './../../contenu/cm1/italien/ora-routine/exercice.json';
 import flash146 from './../../contenu/cm1/italien/ora-routine/flashcards.json';
-import fiche147 from './../../contenu/cm1/italien/sport-tempo-libero/fiche.md';
 import qcm147 from './../../contenu/cm1/italien/sport-tempo-libero/qcm.json';
-import exercice147 from './../../contenu/cm1/italien/sport-tempo-libero/exercice.json';
 import flash147 from './../../contenu/cm1/italien/sport-tempo-libero/flashcards.json';
-import fiche148 from './../../contenu/cm1/maths/grands-nombres/fiche.md';
 import qcm148 from './../../contenu/cm1/maths/grands-nombres/qcm.json';
-import exercice148 from './../../contenu/cm1/maths/grands-nombres/exercice.json';
 import flash148 from './../../contenu/cm1/maths/grands-nombres/flashcards.json';
-import fiche149 from './../../contenu/cm1/maths/multiplication-posee/fiche.md';
 import qcm149 from './../../contenu/cm1/maths/multiplication-posee/qcm.json';
-import exercice149 from './../../contenu/cm1/maths/multiplication-posee/exercice.json';
 import flash149 from './../../contenu/cm1/maths/multiplication-posee/flashcards.json';
-import fiche150 from './../../contenu/cm1/maths/division-euclidienne/fiche.md';
 import qcm150 from './../../contenu/cm1/maths/division-euclidienne/qcm.json';
-import exercice150 from './../../contenu/cm1/maths/division-euclidienne/exercice.json';
 import flash150 from './../../contenu/cm1/maths/division-euclidienne/flashcards.json';
-import fiche151 from './../../contenu/cm1/maths/angles/fiche.md';
 import qcm151 from './../../contenu/cm1/maths/angles/qcm.json';
-import exercice151 from './../../contenu/cm1/maths/angles/exercice.json';
 import flash151 from './../../contenu/cm1/maths/angles/flashcards.json';
-import fiche152 from './../../contenu/cm1/maths/fractions/fiche.md';
 import qcm152 from './../../contenu/cm1/maths/fractions/qcm.json';
-import exercice152 from './../../contenu/cm1/maths/fractions/exercice.json';
 import flash152 from './../../contenu/cm1/maths/fractions/flashcards.json';
-import fiche153 from './../../contenu/cm1/maths/nombres-decimaux/fiche.md';
 import qcm153 from './../../contenu/cm1/maths/nombres-decimaux/qcm.json';
-import exercice153 from './../../contenu/cm1/maths/nombres-decimaux/exercice.json';
 import flash153 from './../../contenu/cm1/maths/nombres-decimaux/flashcards.json';
-import fiche154 from './../../contenu/cm1/maths/operations-decimaux/fiche.md';
 import qcm154 from './../../contenu/cm1/maths/operations-decimaux/qcm.json';
-import exercice154 from './../../contenu/cm1/maths/operations-decimaux/exercice.json';
 import flash154 from './../../contenu/cm1/maths/operations-decimaux/flashcards.json';
-import fiche155 from './../../contenu/cm1/maths/symetrie-axiale/fiche.md';
 import qcm155 from './../../contenu/cm1/maths/symetrie-axiale/qcm.json';
-import exercice155 from './../../contenu/cm1/maths/symetrie-axiale/exercice.json';
 import flash155 from './../../contenu/cm1/maths/symetrie-axiale/flashcards.json';
-import fiche156 from './../../contenu/cm1/maths/durees/fiche.md';
 import qcm156 from './../../contenu/cm1/maths/durees/qcm.json';
-import exercice156 from './../../contenu/cm1/maths/durees/exercice.json';
 import flash156 from './../../contenu/cm1/maths/durees/flashcards.json';
-import fiche157 from './../../contenu/cm1/maths/cercle-triangles-perimetre-aire/fiche.md';
 import qcm157 from './../../contenu/cm1/maths/cercle-triangles-perimetre-aire/qcm.json';
-import exercice157 from './../../contenu/cm1/maths/cercle-triangles-perimetre-aire/exercice.json';
 import flash157 from './../../contenu/cm1/maths/cercle-triangles-perimetre-aire/flashcards.json';
-import fiche158 from './../../contenu/cm1/maths/proportionnalite/fiche.md';
 import qcm158 from './../../contenu/cm1/maths/proportionnalite/qcm.json';
-import exercice158 from './../../contenu/cm1/maths/proportionnalite/exercice.json';
 import flash158 from './../../contenu/cm1/maths/proportionnalite/flashcards.json';
-import fiche159 from './../../contenu/cm1/maths/tableaux-et-graphiques/fiche.md';
 import qcm159 from './../../contenu/cm1/maths/tableaux-et-graphiques/qcm.json';
-import exercice159 from './../../contenu/cm1/maths/tableaux-et-graphiques/exercice.json';
 import flash159 from './../../contenu/cm1/maths/tableaux-et-graphiques/flashcards.json';
-import fiche160 from './../../contenu/cm1/sciences/la-matiere-et-ses-transformations/fiche.md';
 import qcm160 from './../../contenu/cm1/sciences/la-matiere-et-ses-transformations/qcm.json';
-import exercice160 from './../../contenu/cm1/sciences/la-matiere-et-ses-transformations/exercice.json';
 import flash160 from './../../contenu/cm1/sciences/la-matiere-et-ses-transformations/flashcards.json';
-import fiche161 from './../../contenu/cm1/sciences/les-fonctions-du-vivant-la-nutrition/fiche.md';
 import qcm161 from './../../contenu/cm1/sciences/les-fonctions-du-vivant-la-nutrition/qcm.json';
-import exercice161 from './../../contenu/cm1/sciences/les-fonctions-du-vivant-la-nutrition/exercice.json';
 import flash161 from './../../contenu/cm1/sciences/les-fonctions-du-vivant-la-nutrition/flashcards.json';
-import fiche162 from './../../contenu/cm1/sciences/chaines-alimentaires-et-ecosystemes/fiche.md';
 import qcm162 from './../../contenu/cm1/sciences/chaines-alimentaires-et-ecosystemes/qcm.json';
-import exercice162 from './../../contenu/cm1/sciences/chaines-alimentaires-et-ecosystemes/exercice.json';
 import flash162 from './../../contenu/cm1/sciences/chaines-alimentaires-et-ecosystemes/flashcards.json';
-import fiche163 from './../../contenu/cm1/sciences/energie-et-circuits-electriques/fiche.md';
 import qcm163 from './../../contenu/cm1/sciences/energie-et-circuits-electriques/qcm.json';
-import exercice163 from './../../contenu/cm1/sciences/energie-et-circuits-electriques/exercice.json';
 import flash163 from './../../contenu/cm1/sciences/energie-et-circuits-electriques/flashcards.json';
-import fiche164 from './../../contenu/cm1/sciences/le-systeme-solaire/fiche.md';
 import qcm164 from './../../contenu/cm1/sciences/le-systeme-solaire/qcm.json';
-import exercice164 from './../../contenu/cm1/sciences/le-systeme-solaire/exercice.json';
 import flash164 from './../../contenu/cm1/sciences/le-systeme-solaire/flashcards.json';
-import fiche165 from './../../contenu/cm2/allemand/personen-beschreiben/fiche.md';
 import qcm165 from './../../contenu/cm2/allemand/personen-beschreiben/qcm.json';
-import exercice165 from './../../contenu/cm2/allemand/personen-beschreiben/exercice.json';
 import flash165 from './../../contenu/cm2/allemand/personen-beschreiben/flashcards.json';
-import fiche166 from './../../contenu/cm2/allemand/alltag-praesens/fiche.md';
 import qcm166 from './../../contenu/cm2/allemand/alltag-praesens/qcm.json';
-import exercice166 from './../../contenu/cm2/allemand/alltag-praesens/exercice.json';
 import flash166 from './../../contenu/cm2/allemand/alltag-praesens/flashcards.json';
-import fiche167 from './../../contenu/cm2/allemand/essen-mahlzeiten/fiche.md';
 import qcm167 from './../../contenu/cm2/allemand/essen-mahlzeiten/qcm.json';
-import exercice167 from './../../contenu/cm2/allemand/essen-mahlzeiten/exercice.json';
 import flash167 from './../../contenu/cm2/allemand/essen-mahlzeiten/flashcards.json';
-import fiche168 from './../../contenu/cm2/allemand/stadt-wegbeschreibung/fiche.md';
 import qcm168 from './../../contenu/cm2/allemand/stadt-wegbeschreibung/qcm.json';
-import exercice168 from './../../contenu/cm2/allemand/stadt-wegbeschreibung/exercice.json';
 import flash168 from './../../contenu/cm2/allemand/stadt-wegbeschreibung/flashcards.json';
-import fiche169 from './../../contenu/cm2/anglais/describing-people/fiche.md';
 import qcm169 from './../../contenu/cm2/anglais/describing-people/qcm.json';
-import exercice169 from './../../contenu/cm2/anglais/describing-people/exercice.json';
 import flash169 from './../../contenu/cm2/anglais/describing-people/flashcards.json';
-import fiche170 from './../../contenu/cm2/anglais/daily-habits/fiche.md';
 import qcm170 from './../../contenu/cm2/anglais/daily-habits/qcm.json';
-import exercice170 from './../../contenu/cm2/anglais/daily-habits/exercice.json';
 import flash170 from './../../contenu/cm2/anglais/daily-habits/flashcards.json';
-import fiche171 from './../../contenu/cm2/anglais/food-meals/fiche.md';
 import qcm171 from './../../contenu/cm2/anglais/food-meals/qcm.json';
-import exercice171 from './../../contenu/cm2/anglais/food-meals/exercice.json';
 import flash171 from './../../contenu/cm2/anglais/food-meals/flashcards.json';
-import fiche172 from './../../contenu/cm2/anglais/town-directions/fiche.md';
 import qcm172 from './../../contenu/cm2/anglais/town-directions/qcm.json';
-import exercice172 from './../../contenu/cm2/anglais/town-directions/exercice.json';
 import flash172 from './../../contenu/cm2/anglais/town-directions/flashcards.json';
-import fiche173 from './../../contenu/cm2/espagnol/describir-personas/fiche.md';
 import qcm173 from './../../contenu/cm2/espagnol/describir-personas/qcm.json';
-import exercice173 from './../../contenu/cm2/espagnol/describir-personas/exercice.json';
 import flash173 from './../../contenu/cm2/espagnol/describir-personas/flashcards.json';
-import fiche174 from './../../contenu/cm2/espagnol/presente-rutinas/fiche.md';
 import qcm174 from './../../contenu/cm2/espagnol/presente-rutinas/qcm.json';
-import exercice174 from './../../contenu/cm2/espagnol/presente-rutinas/exercice.json';
 import flash174 from './../../contenu/cm2/espagnol/presente-rutinas/flashcards.json';
-import fiche175 from './../../contenu/cm2/espagnol/comida-comidas/fiche.md';
 import qcm175 from './../../contenu/cm2/espagnol/comida-comidas/qcm.json';
-import exercice175 from './../../contenu/cm2/espagnol/comida-comidas/exercice.json';
 import flash175 from './../../contenu/cm2/espagnol/comida-comidas/flashcards.json';
-import fiche176 from './../../contenu/cm2/espagnol/ciudad-direcciones/fiche.md';
 import qcm176 from './../../contenu/cm2/espagnol/ciudad-direcciones/qcm.json';
-import exercice176 from './../../contenu/cm2/espagnol/ciudad-direcciones/exercice.json';
 import flash176 from './../../contenu/cm2/espagnol/ciudad-direcciones/flashcards.json';
-import fiche177 from './../../contenu/cm2/francais/sens-des-mots/fiche.md';
 import qcm177 from './../../contenu/cm2/francais/sens-des-mots/qcm.json';
-import exercice177 from './../../contenu/cm2/francais/sens-des-mots/exercice.json';
 import flash177 from './../../contenu/cm2/francais/sens-des-mots/flashcards.json';
-import fiche178 from './../../contenu/cm2/francais/complements-circonstanciels/fiche.md';
 import qcm178 from './../../contenu/cm2/francais/complements-circonstanciels/qcm.json';
-import exercice178 from './../../contenu/cm2/francais/complements-circonstanciels/exercice.json';
 import flash178 from './../../contenu/cm2/francais/complements-circonstanciels/flashcards.json';
-import fiche179 from './../../contenu/cm2/francais/homophones-ces-ses/fiche.md';
 import qcm179 from './../../contenu/cm2/francais/homophones-ces-ses/qcm.json';
-import exercice179 from './../../contenu/cm2/francais/homophones-ces-ses/exercice.json';
 import flash179 from './../../contenu/cm2/francais/homophones-ces-ses/flashcards.json';
-import fiche180 from './../../contenu/cm2/francais/accord-participe-passe/fiche.md';
 import qcm180 from './../../contenu/cm2/francais/accord-participe-passe/qcm.json';
-import exercice180 from './../../contenu/cm2/francais/accord-participe-passe/exercice.json';
 import flash180 from './../../contenu/cm2/francais/accord-participe-passe/flashcards.json';
-import fiche181 from './../../contenu/cm2/francais/plus-que-parfait/fiche.md';
 import qcm181 from './../../contenu/cm2/francais/plus-que-parfait/qcm.json';
-import exercice181 from './../../contenu/cm2/francais/plus-que-parfait/exercice.json';
 import flash181 from './../../contenu/cm2/francais/plus-que-parfait/flashcards.json';
-import fiche182 from './../../contenu/cm2/hist-geo/revolution-empire/fiche.md';
 import qcm182 from './../../contenu/cm2/hist-geo/revolution-empire/qcm.json';
-import exercice182 from './../../contenu/cm2/hist-geo/revolution-empire/exercice.json';
 import flash182 from './../../contenu/cm2/hist-geo/revolution-empire/flashcards.json';
-import fiche183 from './../../contenu/cm2/hist-geo/republique-democratie/fiche.md';
 import qcm183 from './../../contenu/cm2/hist-geo/republique-democratie/qcm.json';
-import exercice183 from './../../contenu/cm2/hist-geo/republique-democratie/exercice.json';
 import flash183 from './../../contenu/cm2/hist-geo/republique-democratie/flashcards.json';
-import fiche184 from './../../contenu/cm2/hist-geo/se-deplacer-communiquer/fiche.md';
 import qcm184 from './../../contenu/cm2/hist-geo/se-deplacer-communiquer/qcm.json';
-import exercice184 from './../../contenu/cm2/hist-geo/se-deplacer-communiquer/exercice.json';
 import flash184 from './../../contenu/cm2/hist-geo/se-deplacer-communiquer/flashcards.json';
-import fiche185 from './../../contenu/cm2/hist-geo/citoyennete-engagement/fiche.md';
 import qcm185 from './../../contenu/cm2/hist-geo/citoyennete-engagement/qcm.json';
-import exercice185 from './../../contenu/cm2/hist-geo/citoyennete-engagement/exercice.json';
 import flash185 from './../../contenu/cm2/hist-geo/citoyennete-engagement/flashcards.json';
-import fiche186 from './../../contenu/cm2/italien/descrivere-persone/fiche.md';
 import qcm186 from './../../contenu/cm2/italien/descrivere-persone/qcm.json';
-import exercice186 from './../../contenu/cm2/italien/descrivere-persone/exercice.json';
 import flash186 from './../../contenu/cm2/italien/descrivere-persone/flashcards.json';
-import fiche187 from './../../contenu/cm2/italien/presente-routine/fiche.md';
 import qcm187 from './../../contenu/cm2/italien/presente-routine/qcm.json';
-import exercice187 from './../../contenu/cm2/italien/presente-routine/exercice.json';
 import flash187 from './../../contenu/cm2/italien/presente-routine/flashcards.json';
-import fiche188 from './../../contenu/cm2/italien/cibo-pasti/fiche.md';
 import qcm188 from './../../contenu/cm2/italien/cibo-pasti/qcm.json';
-import exercice188 from './../../contenu/cm2/italien/cibo-pasti/exercice.json';
 import flash188 from './../../contenu/cm2/italien/cibo-pasti/flashcards.json';
-import fiche189 from './../../contenu/cm2/italien/citta-indicazioni/fiche.md';
 import qcm189 from './../../contenu/cm2/italien/citta-indicazioni/qcm.json';
-import exercice189 from './../../contenu/cm2/italien/citta-indicazioni/exercice.json';
 import flash189 from './../../contenu/cm2/italien/citta-indicazioni/flashcards.json';
-import fiche190 from './../../contenu/cm2/maths/grands-nombres/fiche.md';
 import qcm190 from './../../contenu/cm2/maths/grands-nombres/qcm.json';
-import exercice190 from './../../contenu/cm2/maths/grands-nombres/exercice.json';
 import flash190 from './../../contenu/cm2/maths/grands-nombres/flashcards.json';
-import fiche191 from './../../contenu/cm2/maths/calcul-mental/fiche.md';
 import qcm191 from './../../contenu/cm2/maths/calcul-mental/qcm.json';
-import exercice191 from './../../contenu/cm2/maths/calcul-mental/exercice.json';
 import flash191 from './../../contenu/cm2/maths/calcul-mental/flashcards.json';
-import fiche192 from './../../contenu/cm2/maths/fractions-et-operations/fiche.md';
 import qcm192 from './../../contenu/cm2/maths/fractions-et-operations/qcm.json';
-import exercice192 from './../../contenu/cm2/maths/fractions-et-operations/exercice.json';
 import flash192 from './../../contenu/cm2/maths/fractions-et-operations/flashcards.json';
-import fiche193 from './../../contenu/cm2/maths/operations-sur-les-decimaux/fiche.md';
 import qcm193 from './../../contenu/cm2/maths/operations-sur-les-decimaux/qcm.json';
-import exercice193 from './../../contenu/cm2/maths/operations-sur-les-decimaux/exercice.json';
 import flash193 from './../../contenu/cm2/maths/operations-sur-les-decimaux/flashcards.json';
-import fiche194 from './../../contenu/cm2/maths/division-posee/fiche.md';
 import qcm194 from './../../contenu/cm2/maths/division-posee/qcm.json';
-import exercice194 from './../../contenu/cm2/maths/division-posee/exercice.json';
 import flash194 from './../../contenu/cm2/maths/division-posee/flashcards.json';
-import fiche195 from './../../contenu/cm2/maths/angles-et-mesures/fiche.md';
 import qcm195 from './../../contenu/cm2/maths/angles-et-mesures/qcm.json';
-import exercice195 from './../../contenu/cm2/maths/angles-et-mesures/exercice.json';
 import flash195 from './../../contenu/cm2/maths/angles-et-mesures/flashcards.json';
-import fiche196 from './../../contenu/cm2/maths/symetrie-axiale/fiche.md';
 import qcm196 from './../../contenu/cm2/maths/symetrie-axiale/qcm.json';
-import exercice196 from './../../contenu/cm2/maths/symetrie-axiale/exercice.json';
 import flash196 from './../../contenu/cm2/maths/symetrie-axiale/flashcards.json';
-import fiche197 from './../../contenu/cm2/maths/proportionnalite-et-pourcentages/fiche.md';
 import qcm197 from './../../contenu/cm2/maths/proportionnalite-et-pourcentages/qcm.json';
-import exercice197 from './../../contenu/cm2/maths/proportionnalite-et-pourcentages/exercice.json';
 import flash197 from './../../contenu/cm2/maths/proportionnalite-et-pourcentages/flashcards.json';
-import fiche198 from './../../contenu/cm2/maths/aires-perimetres-volumes/fiche.md';
 import qcm198 from './../../contenu/cm2/maths/aires-perimetres-volumes/qcm.json';
-import exercice198 from './../../contenu/cm2/maths/aires-perimetres-volumes/exercice.json';
 import flash198 from './../../contenu/cm2/maths/aires-perimetres-volumes/flashcards.json';
-import fiche199 from './../../contenu/cm2/maths/solides-et-patrons/fiche.md';
 import qcm199 from './../../contenu/cm2/maths/solides-et-patrons/qcm.json';
-import exercice199 from './../../contenu/cm2/maths/solides-et-patrons/exercice.json';
 import flash199 from './../../contenu/cm2/maths/solides-et-patrons/flashcards.json';
-import fiche200 from './../../contenu/cm2/maths/graphiques-et-donnees/fiche.md';
 import qcm200 from './../../contenu/cm2/maths/graphiques-et-donnees/qcm.json';
-import exercice200 from './../../contenu/cm2/maths/graphiques-et-donnees/exercice.json';
 import flash200 from './../../contenu/cm2/maths/graphiques-et-donnees/flashcards.json';
-import fiche201 from './../../contenu/cm2/maths/problemes/fiche.md';
 import qcm201 from './../../contenu/cm2/maths/problemes/qcm.json';
-import exercice201 from './../../contenu/cm2/maths/problemes/exercice.json';
 import flash201 from './../../contenu/cm2/maths/problemes/flashcards.json';
-import fiche202 from './../../contenu/cm2/sciences/corps-humain-digestion-et-respiration/fiche.md';
 import qcm202 from './../../contenu/cm2/sciences/corps-humain-digestion-et-respiration/qcm.json';
-import exercice202 from './../../contenu/cm2/sciences/corps-humain-digestion-et-respiration/exercice.json';
 import flash202 from './../../contenu/cm2/sciences/corps-humain-digestion-et-respiration/flashcards.json';
-import fiche203 from './../../contenu/cm2/sciences/reproduction-des-etres-vivants/fiche.md';
 import qcm203 from './../../contenu/cm2/sciences/reproduction-des-etres-vivants/qcm.json';
-import exercice203 from './../../contenu/cm2/sciences/reproduction-des-etres-vivants/exercice.json';
 import flash203 from './../../contenu/cm2/sciences/reproduction-des-etres-vivants/flashcards.json';
-import fiche204 from './../../contenu/cm2/sciences/mouvements-et-forces/fiche.md';
 import qcm204 from './../../contenu/cm2/sciences/mouvements-et-forces/qcm.json';
-import exercice204 from './../../contenu/cm2/sciences/mouvements-et-forces/exercice.json';
 import flash204 from './../../contenu/cm2/sciences/mouvements-et-forces/flashcards.json';
-import fiche205 from './../../contenu/cm2/sciences/objets-programmes-et-informatique/fiche.md';
 import qcm205 from './../../contenu/cm2/sciences/objets-programmes-et-informatique/qcm.json';
-import exercice205 from './../../contenu/cm2/sciences/objets-programmes-et-informatique/exercice.json';
 import flash205 from './../../contenu/cm2/sciences/objets-programmes-et-informatique/flashcards.json';
-import fiche206 from './../../contenu/cm2/sciences/environnement-et-developpement-durable/fiche.md';
 import qcm206 from './../../contenu/cm2/sciences/environnement-et-developpement-durable/qcm.json';
-import exercice206 from './../../contenu/cm2/sciences/environnement-et-developpement-durable/exercice.json';
 import flash206 from './../../contenu/cm2/sciences/environnement-et-developpement-durable/flashcards.json';
-import fiche207 from './../../contenu/sixieme/allemand/phonetik-laute/fiche.md';
 import qcm207 from './../../contenu/sixieme/allemand/phonetik-laute/qcm.json';
-import exercice207 from './../../contenu/sixieme/allemand/phonetik-laute/exercice.json';
 import flash207 from './../../contenu/sixieme/allemand/phonetik-laute/flashcards.json';
-import fiche208 from './../../contenu/sixieme/allemand/personalpronomen/fiche.md';
 import qcm208 from './../../contenu/sixieme/allemand/personalpronomen/qcm.json';
-import exercice208 from './../../contenu/sixieme/allemand/personalpronomen/exercice.json';
 import flash208 from './../../contenu/sixieme/allemand/personalpronomen/flashcards.json';
-import fiche209 from './../../contenu/sixieme/allemand/sein-haben/fiche.md';
 import qcm209 from './../../contenu/sixieme/allemand/sein-haben/qcm.json';
-import exercice209 from './../../contenu/sixieme/allemand/sein-haben/exercice.json';
 import flash209 from './../../contenu/sixieme/allemand/sein-haben/flashcards.json';
-import fiche210 from './../../contenu/sixieme/allemand/artikel-genus/fiche.md';
 import qcm210 from './../../contenu/sixieme/allemand/artikel-genus/qcm.json';
-import exercice210 from './../../contenu/sixieme/allemand/artikel-genus/exercice.json';
 import flash210 from './../../contenu/sixieme/allemand/artikel-genus/flashcards.json';
-import fiche211 from './../../contenu/sixieme/allemand/wortschatz-schule/fiche.md';
 import qcm211 from './../../contenu/sixieme/allemand/wortschatz-schule/qcm.json';
-import exercice211 from './../../contenu/sixieme/allemand/wortschatz-schule/exercice.json';
 import flash211 from './../../contenu/sixieme/allemand/wortschatz-schule/flashcards.json';
-import fiche212 from './../../contenu/sixieme/allemand/praesens-regelmaessig/fiche.md';
 import qcm212 from './../../contenu/sixieme/allemand/praesens-regelmaessig/qcm.json';
-import exercice212 from './../../contenu/sixieme/allemand/praesens-regelmaessig/exercice.json';
 import flash212 from './../../contenu/sixieme/allemand/praesens-regelmaessig/flashcards.json';
-import fiche213 from './../../contenu/sixieme/allemand/satzstellung/fiche.md';
 import qcm213 from './../../contenu/sixieme/allemand/satzstellung/qcm.json';
-import exercice213 from './../../contenu/sixieme/allemand/satzstellung/exercice.json';
 import flash213 from './../../contenu/sixieme/allemand/satzstellung/flashcards.json';
-import fiche214 from './../../contenu/sixieme/allemand/fragesaetze/fiche.md';
 import qcm214 from './../../contenu/sixieme/allemand/fragesaetze/qcm.json';
-import exercice214 from './../../contenu/sixieme/allemand/fragesaetze/exercice.json';
 import flash214 from './../../contenu/sixieme/allemand/fragesaetze/flashcards.json';
-import fiche215 from './../../contenu/sixieme/allemand/wortschatz-essen/fiche.md';
 import qcm215 from './../../contenu/sixieme/allemand/wortschatz-essen/qcm.json';
-import exercice215 from './../../contenu/sixieme/allemand/wortschatz-essen/exercice.json';
 import flash215 from './../../contenu/sixieme/allemand/wortschatz-essen/flashcards.json';
-import fiche216 from './../../contenu/sixieme/allemand/landeskunde-deutschland/fiche.md';
 import qcm216 from './../../contenu/sixieme/allemand/landeskunde-deutschland/qcm.json';
-import exercice216 from './../../contenu/sixieme/allemand/landeskunde-deutschland/exercice.json';
 import flash216 from './../../contenu/sixieme/allemand/landeskunde-deutschland/flashcards.json';
-import fiche217 from './../../contenu/sixieme/anglais/phonetique-sons/fiche.md';
 import qcm217 from './../../contenu/sixieme/anglais/phonetique-sons/qcm.json';
-import exercice217 from './../../contenu/sixieme/anglais/phonetique-sons/exercice.json';
 import flash217 from './../../contenu/sixieme/anglais/phonetique-sons/flashcards.json';
-import fiche218 from './../../contenu/sixieme/anglais/se-presenter/fiche.md';
 import qcm218 from './../../contenu/sixieme/anglais/se-presenter/qcm.json';
-import exercice218 from './../../contenu/sixieme/anglais/se-presenter/exercice.json';
 import flash218 from './../../contenu/sixieme/anglais/se-presenter/flashcards.json';
-import fiche219 from './../../contenu/sixieme/anglais/articles-pluriels/fiche.md';
 import qcm219 from './../../contenu/sixieme/anglais/articles-pluriels/qcm.json';
-import exercice219 from './../../contenu/sixieme/anglais/articles-pluriels/exercice.json';
 import flash219 from './../../contenu/sixieme/anglais/articles-pluriels/flashcards.json';
-import fiche220 from './../../contenu/sixieme/anglais/vocabulaire-ecole/fiche.md';
 import qcm220 from './../../contenu/sixieme/anglais/vocabulaire-ecole/qcm.json';
-import exercice220 from './../../contenu/sixieme/anglais/vocabulaire-ecole/exercice.json';
 import flash220 from './../../contenu/sixieme/anglais/vocabulaire-ecole/flashcards.json';
-import fiche221 from './../../contenu/sixieme/anglais/have-got/fiche.md';
 import qcm221 from './../../contenu/sixieme/anglais/have-got/qcm.json';
-import exercice221 from './../../contenu/sixieme/anglais/have-got/exercice.json';
 import flash221 from './../../contenu/sixieme/anglais/have-got/flashcards.json';
-import fiche222 from './../../contenu/sixieme/anglais/there-is-there-are/fiche.md';
 import qcm222 from './../../contenu/sixieme/anglais/there-is-there-are/qcm.json';
-import exercice222 from './../../contenu/sixieme/anglais/there-is-there-are/exercice.json';
 import flash222 from './../../contenu/sixieme/anglais/there-is-there-are/flashcards.json';
-import fiche223 from './../../contenu/sixieme/anglais/present-simple/fiche.md';
 import qcm223 from './../../contenu/sixieme/anglais/present-simple/qcm.json';
-import exercice223 from './../../contenu/sixieme/anglais/present-simple/exercice.json';
 import flash223 from './../../contenu/sixieme/anglais/present-simple/flashcards.json';
-import fiche224 from './../../contenu/sixieme/anglais/questions-auxiliaires/fiche.md';
 import qcm224 from './../../contenu/sixieme/anglais/questions-auxiliaires/qcm.json';
-import exercice224 from './../../contenu/sixieme/anglais/questions-auxiliaires/exercice.json';
 import flash224 from './../../contenu/sixieme/anglais/questions-auxiliaires/flashcards.json';
-import fiche225 from './../../contenu/sixieme/anglais/vocabulaire-nourriture-repas/fiche.md';
 import qcm225 from './../../contenu/sixieme/anglais/vocabulaire-nourriture-repas/qcm.json';
-import exercice225 from './../../contenu/sixieme/anglais/vocabulaire-nourriture-repas/exercice.json';
 import flash225 from './../../contenu/sixieme/anglais/vocabulaire-nourriture-repas/flashcards.json';
-import fiche226 from './../../contenu/sixieme/anglais/civilisation-royaume-uni/fiche.md';
 import qcm226 from './../../contenu/sixieme/anglais/civilisation-royaume-uni/qcm.json';
-import exercice226 from './../../contenu/sixieme/anglais/civilisation-royaume-uni/exercice.json';
 import flash226 from './../../contenu/sixieme/anglais/civilisation-royaume-uni/flashcards.json';
-import fiche227 from './../../contenu/sixieme/arts/langage-plastique/fiche.md';
 import qcm227 from './../../contenu/sixieme/arts/langage-plastique/qcm.json';
-import exercice227 from './../../contenu/sixieme/arts/langage-plastique/exercice.json';
 import flash227 from './../../contenu/sixieme/arts/langage-plastique/flashcards.json';
-import fiche228 from './../../contenu/sixieme/arts/prehistoire-antiquite/fiche.md';
 import qcm228 from './../../contenu/sixieme/arts/prehistoire-antiquite/qcm.json';
-import exercice228 from './../../contenu/sixieme/arts/prehistoire-antiquite/exercice.json';
 import flash228 from './../../contenu/sixieme/arts/prehistoire-antiquite/flashcards.json';
-import fiche229 from './../../contenu/sixieme/espagnol/fonetica-sonidos/fiche.md';
 import qcm229 from './../../contenu/sixieme/espagnol/fonetica-sonidos/qcm.json';
-import exercice229 from './../../contenu/sixieme/espagnol/fonetica-sonidos/exercice.json';
 import flash229 from './../../contenu/sixieme/espagnol/fonetica-sonidos/flashcards.json';
-import fiche230 from './../../contenu/sixieme/espagnol/pronombres-personales/fiche.md';
 import qcm230 from './../../contenu/sixieme/espagnol/pronombres-personales/qcm.json';
-import exercice230 from './../../contenu/sixieme/espagnol/pronombres-personales/exercice.json';
 import flash230 from './../../contenu/sixieme/espagnol/pronombres-personales/flashcards.json';
-import fiche231 from './../../contenu/sixieme/espagnol/ser-estar/fiche.md';
 import qcm231 from './../../contenu/sixieme/espagnol/ser-estar/qcm.json';
-import exercice231 from './../../contenu/sixieme/espagnol/ser-estar/exercice.json';
 import flash231 from './../../contenu/sixieme/espagnol/ser-estar/flashcards.json';
-import fiche232 from './../../contenu/sixieme/espagnol/articulos-genero/fiche.md';
 import qcm232 from './../../contenu/sixieme/espagnol/articulos-genero/qcm.json';
-import exercice232 from './../../contenu/sixieme/espagnol/articulos-genero/exercice.json';
 import flash232 from './../../contenu/sixieme/espagnol/articulos-genero/flashcards.json';
-import fiche233 from './../../contenu/sixieme/espagnol/plural/fiche.md';
 import qcm233 from './../../contenu/sixieme/espagnol/plural/qcm.json';
-import exercice233 from './../../contenu/sixieme/espagnol/plural/exercice.json';
 import flash233 from './../../contenu/sixieme/espagnol/plural/flashcards.json';
-import fiche234 from './../../contenu/sixieme/espagnol/articulos-contractos/fiche.md';
 import qcm234 from './../../contenu/sixieme/espagnol/articulos-contractos/qcm.json';
-import exercice234 from './../../contenu/sixieme/espagnol/articulos-contractos/exercice.json';
 import flash234 from './../../contenu/sixieme/espagnol/articulos-contractos/flashcards.json';
-import fiche235 from './../../contenu/sixieme/espagnol/vocabulario-escuela/fiche.md';
 import qcm235 from './../../contenu/sixieme/espagnol/vocabulario-escuela/qcm.json';
-import exercice235 from './../../contenu/sixieme/espagnol/vocabulario-escuela/exercice.json';
 import flash235 from './../../contenu/sixieme/espagnol/vocabulario-escuela/flashcards.json';
-import fiche236 from './../../contenu/sixieme/espagnol/presente-regular/fiche.md';
 import qcm236 from './../../contenu/sixieme/espagnol/presente-regular/qcm.json';
-import exercice236 from './../../contenu/sixieme/espagnol/presente-regular/exercice.json';
 import flash236 from './../../contenu/sixieme/espagnol/presente-regular/flashcards.json';
-import fiche237 from './../../contenu/sixieme/espagnol/vocabulario-comida/fiche.md';
 import qcm237 from './../../contenu/sixieme/espagnol/vocabulario-comida/qcm.json';
-import exercice237 from './../../contenu/sixieme/espagnol/vocabulario-comida/exercice.json';
 import flash237 from './../../contenu/sixieme/espagnol/vocabulario-comida/flashcards.json';
-import fiche238 from './../../contenu/sixieme/espagnol/civilizacion-espana/fiche.md';
 import qcm238 from './../../contenu/sixieme/espagnol/civilizacion-espana/qcm.json';
-import exercice238 from './../../contenu/sixieme/espagnol/civilizacion-espana/exercice.json';
 import flash238 from './../../contenu/sixieme/espagnol/civilizacion-espana/flashcards.json';
-import fiche239 from './../../contenu/sixieme/francais/classes-grammaticales/fiche.md';
 import qcm239 from './../../contenu/sixieme/francais/classes-grammaticales/qcm.json';
-import exercice239 from './../../contenu/sixieme/francais/classes-grammaticales/exercice.json';
 import flash239 from './../../contenu/sixieme/francais/classes-grammaticales/flashcards.json';
-import fiche240 from './../../contenu/sixieme/francais/phrase-simple/fiche.md';
 import qcm240 from './../../contenu/sixieme/francais/phrase-simple/qcm.json';
-import exercice240 from './../../contenu/sixieme/francais/phrase-simple/exercice.json';
 import flash240 from './../../contenu/sixieme/francais/phrase-simple/flashcards.json';
-import fiche241 from './../../contenu/sixieme/francais/present-indicatif/fiche.md';
 import qcm241 from './../../contenu/sixieme/francais/present-indicatif/qcm.json';
-import exercice241 from './../../contenu/sixieme/francais/present-indicatif/exercice.json';
 import flash241 from './../../contenu/sixieme/francais/present-indicatif/flashcards.json';
-import fiche242 from './../../contenu/sixieme/francais/homophones-grammaticaux/fiche.md';
 import qcm242 from './../../contenu/sixieme/francais/homophones-grammaticaux/qcm.json';
-import exercice242 from './../../contenu/sixieme/francais/homophones-grammaticaux/exercice.json';
 import flash242 from './../../contenu/sixieme/francais/homophones-grammaticaux/flashcards.json';
-import fiche243 from './../../contenu/sixieme/francais/imparfait-passe-simple/fiche.md';
 import qcm243 from './../../contenu/sixieme/francais/imparfait-passe-simple/qcm.json';
-import exercice243 from './../../contenu/sixieme/francais/imparfait-passe-simple/exercice.json';
 import flash243 from './../../contenu/sixieme/francais/imparfait-passe-simple/flashcards.json';
-import fiche244 from './../../contenu/sixieme/francais/passe-compose-accord/fiche.md';
 import qcm244 from './../../contenu/sixieme/francais/passe-compose-accord/qcm.json';
-import exercice244 from './../../contenu/sixieme/francais/passe-compose-accord/exercice.json';
 import flash244 from './../../contenu/sixieme/francais/passe-compose-accord/flashcards.json';
-import fiche245 from './../../contenu/sixieme/francais/recit-conte-fable/fiche.md';
 import qcm245 from './../../contenu/sixieme/francais/recit-conte-fable/qcm.json';
-import exercice245 from './../../contenu/sixieme/francais/recit-conte-fable/exercice.json';
 import flash245 from './../../contenu/sixieme/francais/recit-conte-fable/flashcards.json';
-import fiche246 from './../../contenu/sixieme/hist-geo/premiers-etats-ecritures/fiche.md';
 import qcm246 from './../../contenu/sixieme/hist-geo/premiers-etats-ecritures/qcm.json';
-import exercice246 from './../../contenu/sixieme/hist-geo/premiers-etats-ecritures/exercice.json';
 import flash246 from './../../contenu/sixieme/hist-geo/premiers-etats-ecritures/flashcards.json';
-import fiche247 from './../../contenu/sixieme/hist-geo/monde-grec/fiche.md';
 import qcm247 from './../../contenu/sixieme/hist-geo/monde-grec/qcm.json';
-import exercice247 from './../../contenu/sixieme/hist-geo/monde-grec/exercice.json';
 import flash247 from './../../contenu/sixieme/hist-geo/monde-grec/flashcards.json';
-import fiche248 from './../../contenu/sixieme/hist-geo/rome-republique-empire/fiche.md';
 import qcm248 from './../../contenu/sixieme/hist-geo/rome-republique-empire/qcm.json';
-import exercice248 from './../../contenu/sixieme/hist-geo/rome-republique-empire/exercice.json';
 import flash248 from './../../contenu/sixieme/hist-geo/rome-republique-empire/flashcards.json';
-import fiche249 from './../../contenu/sixieme/hist-geo/judaisme-christianisme/fiche.md';
 import qcm249 from './../../contenu/sixieme/hist-geo/judaisme-christianisme/qcm.json';
-import exercice249 from './../../contenu/sixieme/hist-geo/judaisme-christianisme/exercice.json';
 import flash249 from './../../contenu/sixieme/hist-geo/judaisme-christianisme/flashcards.json';
-import fiche250 from './../../contenu/sixieme/hist-geo/habiter-metropole/fiche.md';
 import qcm250 from './../../contenu/sixieme/hist-geo/habiter-metropole/qcm.json';
-import exercice250 from './../../contenu/sixieme/hist-geo/habiter-metropole/exercice.json';
 import flash250 from './../../contenu/sixieme/hist-geo/habiter-metropole/flashcards.json';
-import fiche251 from './../../contenu/sixieme/hist-geo/habiter-espaces-contraintes/fiche.md';
 import qcm251 from './../../contenu/sixieme/hist-geo/habiter-espaces-contraintes/qcm.json';
-import exercice251 from './../../contenu/sixieme/hist-geo/habiter-espaces-contraintes/exercice.json';
 import flash251 from './../../contenu/sixieme/hist-geo/habiter-espaces-contraintes/flashcards.json';
-import fiche252 from './../../contenu/sixieme/hist-geo/emc-college-droits/fiche.md';
 import qcm252 from './../../contenu/sixieme/hist-geo/emc-college-droits/qcm.json';
-import exercice252 from './../../contenu/sixieme/hist-geo/emc-college-droits/exercice.json';
 import flash252 from './../../contenu/sixieme/hist-geo/emc-college-droits/flashcards.json';
-import fiche253 from './../../contenu/sixieme/italien/fonetica-suoni/fiche.md';
 import qcm253 from './../../contenu/sixieme/italien/fonetica-suoni/qcm.json';
-import exercice253 from './../../contenu/sixieme/italien/fonetica-suoni/exercice.json';
 import flash253 from './../../contenu/sixieme/italien/fonetica-suoni/flashcards.json';
-import fiche254 from './../../contenu/sixieme/italien/pronomi-personali/fiche.md';
 import qcm254 from './../../contenu/sixieme/italien/pronomi-personali/qcm.json';
-import exercice254 from './../../contenu/sixieme/italien/pronomi-personali/exercice.json';
 import flash254 from './../../contenu/sixieme/italien/pronomi-personali/flashcards.json';
-import fiche255 from './../../contenu/sixieme/italien/essere-avere/fiche.md';
 import qcm255 from './../../contenu/sixieme/italien/essere-avere/qcm.json';
-import exercice255 from './../../contenu/sixieme/italien/essere-avere/exercice.json';
 import flash255 from './../../contenu/sixieme/italien/essere-avere/flashcards.json';
-import fiche256 from './../../contenu/sixieme/italien/articoli-genere/fiche.md';
 import qcm256 from './../../contenu/sixieme/italien/articoli-genere/qcm.json';
-import exercice256 from './../../contenu/sixieme/italien/articoli-genere/exercice.json';
 import flash256 from './../../contenu/sixieme/italien/articoli-genere/flashcards.json';
-import fiche257 from './../../contenu/sixieme/italien/plurale/fiche.md';
 import qcm257 from './../../contenu/sixieme/italien/plurale/qcm.json';
-import exercice257 from './../../contenu/sixieme/italien/plurale/exercice.json';
 import flash257 from './../../contenu/sixieme/italien/plurale/flashcards.json';
-import fiche258 from './../../contenu/sixieme/italien/preposizioni-articolate/fiche.md';
 import qcm258 from './../../contenu/sixieme/italien/preposizioni-articolate/qcm.json';
-import exercice258 from './../../contenu/sixieme/italien/preposizioni-articolate/exercice.json';
 import flash258 from './../../contenu/sixieme/italien/preposizioni-articolate/flashcards.json';
-import fiche259 from './../../contenu/sixieme/italien/vocabolario-scuola/fiche.md';
 import qcm259 from './../../contenu/sixieme/italien/vocabolario-scuola/qcm.json';
-import exercice259 from './../../contenu/sixieme/italien/vocabolario-scuola/exercice.json';
 import flash259 from './../../contenu/sixieme/italien/vocabolario-scuola/flashcards.json';
-import fiche260 from './../../contenu/sixieme/italien/presente-regolare/fiche.md';
 import qcm260 from './../../contenu/sixieme/italien/presente-regolare/qcm.json';
-import exercice260 from './../../contenu/sixieme/italien/presente-regolare/exercice.json';
 import flash260 from './../../contenu/sixieme/italien/presente-regolare/flashcards.json';
-import fiche261 from './../../contenu/sixieme/italien/vocabolario-cibo/fiche.md';
 import qcm261 from './../../contenu/sixieme/italien/vocabolario-cibo/qcm.json';
-import exercice261 from './../../contenu/sixieme/italien/vocabolario-cibo/exercice.json';
 import flash261 from './../../contenu/sixieme/italien/vocabolario-cibo/flashcards.json';
-import fiche262 from './../../contenu/sixieme/italien/civilta-italia/fiche.md';
 import qcm262 from './../../contenu/sixieme/italien/civilta-italia/qcm.json';
-import exercice262 from './../../contenu/sixieme/italien/civilta-italia/exercice.json';
 import flash262 from './../../contenu/sixieme/italien/civilta-italia/flashcards.json';
-import fiche263 from './../../contenu/sixieme/maths/nombres-entiers-decimaux/fiche.md';
 import qcm263 from './../../contenu/sixieme/maths/nombres-entiers-decimaux/qcm.json';
-import exercice263 from './../../contenu/sixieme/maths/nombres-entiers-decimaux/exercice.json';
 import flash263 from './../../contenu/sixieme/maths/nombres-entiers-decimaux/flashcards.json';
-import fiche264 from './../../contenu/sixieme/maths/configurations-planes/fiche.md';
 import qcm264 from './../../contenu/sixieme/maths/configurations-planes/qcm.json';
-import exercice264 from './../../contenu/sixieme/maths/configurations-planes/exercice.json';
 import flash264 from './../../contenu/sixieme/maths/configurations-planes/flashcards.json';
-import fiche265 from './../../contenu/sixieme/maths/fractions/fiche.md';
 import qcm265 from './../../contenu/sixieme/maths/fractions/qcm.json';
-import exercice265 from './../../contenu/sixieme/maths/fractions/exercice.json';
 import flash265 from './../../contenu/sixieme/maths/fractions/flashcards.json';
-import fiche266 from './../../contenu/sixieme/maths/longueurs-aires-volumes/fiche.md';
 import qcm266 from './../../contenu/sixieme/maths/longueurs-aires-volumes/qcm.json';
-import exercice266 from './../../contenu/sixieme/maths/longueurs-aires-volumes/exercice.json';
 import flash266 from './../../contenu/sixieme/maths/longueurs-aires-volumes/flashcards.json';
-import fiche267 from './../../contenu/sixieme/maths/durees/fiche.md';
 import qcm267 from './../../contenu/sixieme/maths/durees/qcm.json';
-import exercice267 from './../../contenu/sixieme/maths/durees/exercice.json';
 import flash267 from './../../contenu/sixieme/maths/durees/flashcards.json';
-import fiche268 from './../../contenu/sixieme/maths/proportionnalite/fiche.md';
 import qcm268 from './../../contenu/sixieme/maths/proportionnalite/qcm.json';
-import exercice268 from './../../contenu/sixieme/maths/proportionnalite/exercice.json';
 import flash268 from './../../contenu/sixieme/maths/proportionnalite/flashcards.json';
-import fiche269 from './../../contenu/sixieme/maths/initiation-algebre/fiche.md';
 import qcm269 from './../../contenu/sixieme/maths/initiation-algebre/qcm.json';
-import exercice269 from './../../contenu/sixieme/maths/initiation-algebre/exercice.json';
 import flash269 from './../../contenu/sixieme/maths/initiation-algebre/flashcards.json';
-import fiche270 from './../../contenu/sixieme/maths/gestion-donnees/fiche.md';
 import qcm270 from './../../contenu/sixieme/maths/gestion-donnees/qcm.json';
-import exercice270 from './../../contenu/sixieme/maths/gestion-donnees/exercice.json';
 import flash270 from './../../contenu/sixieme/maths/gestion-donnees/flashcards.json';
-import fiche271 from './../../contenu/sixieme/maths/probabilites/fiche.md';
 import qcm271 from './../../contenu/sixieme/maths/probabilites/qcm.json';
-import exercice271 from './../../contenu/sixieme/maths/probabilites/exercice.json';
 import flash271 from './../../contenu/sixieme/maths/probabilites/flashcards.json';
-import fiche272 from './../../contenu/sixieme/maths/pensee-informatique/fiche.md';
 import qcm272 from './../../contenu/sixieme/maths/pensee-informatique/qcm.json';
-import exercice272 from './../../contenu/sixieme/maths/pensee-informatique/exercice.json';
 import flash272 from './../../contenu/sixieme/maths/pensee-informatique/flashcards.json';
-import fiche273 from './../../contenu/sixieme/svt/caracteristiques-du-vivant/fiche.md';
 import qcm273 from './../../contenu/sixieme/svt/caracteristiques-du-vivant/qcm.json';
-import exercice273 from './../../contenu/sixieme/svt/caracteristiques-du-vivant/exercice.json';
 import flash273 from './../../contenu/sixieme/svt/caracteristiques-du-vivant/flashcards.json';
-import fiche274 from './../../contenu/sixieme/svt/classification-des-etres-vivants/fiche.md';
 import qcm274 from './../../contenu/sixieme/svt/classification-des-etres-vivants/qcm.json';
-import exercice274 from './../../contenu/sixieme/svt/classification-des-etres-vivants/exercice.json';
 import flash274 from './../../contenu/sixieme/svt/classification-des-etres-vivants/flashcards.json';
-import fiche275 from './../../contenu/sixieme/svt/besoins-des-vegetaux/fiche.md';
 import qcm275 from './../../contenu/sixieme/svt/besoins-des-vegetaux/qcm.json';
-import exercice275 from './../../contenu/sixieme/svt/besoins-des-vegetaux/exercice.json';
 import flash275 from './../../contenu/sixieme/svt/besoins-des-vegetaux/flashcards.json';
-import fiche276 from './../../contenu/sixieme/svt/origine-de-la-matiere-organique/fiche.md';
 import qcm276 from './../../contenu/sixieme/svt/origine-de-la-matiere-organique/qcm.json';
-import exercice276 from './../../contenu/sixieme/svt/origine-de-la-matiere-organique/exercice.json';
 import flash276 from './../../contenu/sixieme/svt/origine-de-la-matiere-organique/flashcards.json';
-import fiche277 from './../../contenu/sixieme/svt/peuplement-des-milieux/fiche.md';
 import qcm277 from './../../contenu/sixieme/svt/peuplement-des-milieux/qcm.json';
-import exercice277 from './../../contenu/sixieme/svt/peuplement-des-milieux/exercice.json';
 import flash277 from './../../contenu/sixieme/svt/peuplement-des-milieux/flashcards.json';
-import fiche278 from './../../contenu/sixieme/techno/objets-techniques-et-besoins/fiche.md';
 import qcm278 from './../../contenu/sixieme/techno/objets-techniques-et-besoins/qcm.json';
-import exercice278 from './../../contenu/sixieme/techno/objets-techniques-et-besoins/exercice.json';
 import flash278 from './../../contenu/sixieme/techno/objets-techniques-et-besoins/flashcards.json';
-import fiche279 from './../../contenu/sixieme/techno/fonctionnement-dun-objet/fiche.md';
 import qcm279 from './../../contenu/sixieme/techno/fonctionnement-dun-objet/qcm.json';
-import exercice279 from './../../contenu/sixieme/techno/fonctionnement-dun-objet/exercice.json';
 import flash279 from './../../contenu/sixieme/techno/fonctionnement-dun-objet/flashcards.json';
-import fiche280 from './../../contenu/sixieme/techno/materiaux-et-familles/fiche.md';
 import qcm280 from './../../contenu/sixieme/techno/materiaux-et-familles/qcm.json';
-import exercice280 from './../../contenu/sixieme/techno/materiaux-et-familles/exercice.json';
 import flash280 from './../../contenu/sixieme/techno/materiaux-et-familles/flashcards.json';
-import fiche281 from './../../contenu/sixieme/techno/representation-dun-objet/fiche.md';
 import qcm281 from './../../contenu/sixieme/techno/representation-dun-objet/qcm.json';
-import exercice281 from './../../contenu/sixieme/techno/representation-dun-objet/exercice.json';
 import flash281 from './../../contenu/sixieme/techno/representation-dun-objet/flashcards.json';
-import fiche282 from './../../contenu/sixieme/techno/initiation-programmation/fiche.md';
 import qcm282 from './../../contenu/sixieme/techno/initiation-programmation/qcm.json';
-import exercice282 from './../../contenu/sixieme/techno/initiation-programmation/exercice.json';
 import flash282 from './../../contenu/sixieme/techno/initiation-programmation/flashcards.json';
-import fiche283 from './../../contenu/cinquieme/allemand/negation/fiche.md';
 import qcm283 from './../../contenu/cinquieme/allemand/negation/qcm.json';
-import exercice283 from './../../contenu/cinquieme/allemand/negation/exercice.json';
 import flash283 from './../../contenu/cinquieme/allemand/negation/flashcards.json';
-import fiche284 from './../../contenu/cinquieme/allemand/akkusativ/fiche.md';
 import qcm284 from './../../contenu/cinquieme/allemand/akkusativ/qcm.json';
-import exercice284 from './../../contenu/cinquieme/allemand/akkusativ/exercice.json';
 import flash284 from './../../contenu/cinquieme/allemand/akkusativ/flashcards.json';
-import fiche285 from './../../contenu/cinquieme/allemand/possessivartikel/fiche.md';
 import qcm285 from './../../contenu/cinquieme/allemand/possessivartikel/qcm.json';
-import exercice285 from './../../contenu/cinquieme/allemand/possessivartikel/exercice.json';
 import flash285 from './../../contenu/cinquieme/allemand/possessivartikel/flashcards.json';
-import fiche286 from './../../contenu/cinquieme/allemand/wortschatz-stadt-reisen/fiche.md';
 import qcm286 from './../../contenu/cinquieme/allemand/wortschatz-stadt-reisen/qcm.json';
-import exercice286 from './../../contenu/cinquieme/allemand/wortschatz-stadt-reisen/exercice.json';
 import flash286 from './../../contenu/cinquieme/allemand/wortschatz-stadt-reisen/flashcards.json';
-import fiche287 from './../../contenu/cinquieme/allemand/trennbare-verben/fiche.md';
 import qcm287 from './../../contenu/cinquieme/allemand/trennbare-verben/qcm.json';
-import exercice287 from './../../contenu/cinquieme/allemand/trennbare-verben/exercice.json';
 import flash287 from './../../contenu/cinquieme/allemand/trennbare-verben/flashcards.json';
-import fiche288 from './../../contenu/cinquieme/allemand/modalverben/fiche.md';
 import qcm288 from './../../contenu/cinquieme/allemand/modalverben/qcm.json';
-import exercice288 from './../../contenu/cinquieme/allemand/modalverben/exercice.json';
 import flash288 from './../../contenu/cinquieme/allemand/modalverben/flashcards.json';
-import fiche289 from './../../contenu/cinquieme/allemand/wortschatz-natur-tiere/fiche.md';
 import qcm289 from './../../contenu/cinquieme/allemand/wortschatz-natur-tiere/qcm.json';
-import exercice289 from './../../contenu/cinquieme/allemand/wortschatz-natur-tiere/exercice.json';
 import flash289 from './../../contenu/cinquieme/allemand/wortschatz-natur-tiere/flashcards.json';
-import fiche290 from './../../contenu/cinquieme/allemand/praeteritum-sein-haben/fiche.md';
 import qcm290 from './../../contenu/cinquieme/allemand/praeteritum-sein-haben/qcm.json';
-import exercice290 from './../../contenu/cinquieme/allemand/praeteritum-sein-haben/exercice.json';
 import flash290 from './../../contenu/cinquieme/allemand/praeteritum-sein-haben/flashcards.json';
-import fiche291 from './../../contenu/cinquieme/allemand/landeskunde-oesterreich-schweiz/fiche.md';
 import qcm291 from './../../contenu/cinquieme/allemand/landeskunde-oesterreich-schweiz/qcm.json';
-import exercice291 from './../../contenu/cinquieme/allemand/landeskunde-oesterreich-schweiz/exercice.json';
 import flash291 from './../../contenu/cinquieme/allemand/landeskunde-oesterreich-schweiz/flashcards.json';
-import fiche292 from './../../contenu/cinquieme/anglais/present-continu/fiche.md';
 import qcm292 from './../../contenu/cinquieme/anglais/present-continu/qcm.json';
-import exercice292 from './../../contenu/cinquieme/anglais/present-continu/exercice.json';
 import flash292 from './../../contenu/cinquieme/anglais/present-continu/flashcards.json';
-import fiche293 from './../../contenu/cinquieme/anglais/prepositions/fiche.md';
 import qcm293 from './../../contenu/cinquieme/anglais/prepositions/qcm.json';
-import exercice293 from './../../contenu/cinquieme/anglais/prepositions/exercice.json';
 import flash293 from './../../contenu/cinquieme/anglais/prepositions/flashcards.json';
-import fiche294 from './../../contenu/cinquieme/anglais/vocabulaire-ville-voyages/fiche.md';
 import qcm294 from './../../contenu/cinquieme/anglais/vocabulaire-ville-voyages/qcm.json';
-import exercice294 from './../../contenu/cinquieme/anglais/vocabulaire-ville-voyages/exercice.json';
 import flash294 from './../../contenu/cinquieme/anglais/vocabulaire-ville-voyages/flashcards.json';
-import fiche295 from './../../contenu/cinquieme/anglais/preterit-simple/fiche.md';
 import qcm295 from './../../contenu/cinquieme/anglais/preterit-simple/qcm.json';
-import exercice295 from './../../contenu/cinquieme/anglais/preterit-simple/exercice.json';
 import flash295 from './../../contenu/cinquieme/anglais/preterit-simple/flashcards.json';
-import fiche296 from './../../contenu/cinquieme/anglais/comparatifs-superlatifs/fiche.md';
 import qcm296 from './../../contenu/cinquieme/anglais/comparatifs-superlatifs/qcm.json';
-import exercice296 from './../../contenu/cinquieme/anglais/comparatifs-superlatifs/exercice.json';
 import flash296 from './../../contenu/cinquieme/anglais/comparatifs-superlatifs/flashcards.json';
-import fiche297 from './../../contenu/cinquieme/anglais/vocabulaire-nature-animaux/fiche.md';
 import qcm297 from './../../contenu/cinquieme/anglais/vocabulaire-nature-animaux/qcm.json';
-import exercice297 from './../../contenu/cinquieme/anglais/vocabulaire-nature-animaux/exercice.json';
 import flash297 from './../../contenu/cinquieme/anglais/vocabulaire-nature-animaux/flashcards.json';
-import fiche298 from './../../contenu/cinquieme/anglais/modaux-can-must/fiche.md';
 import qcm298 from './../../contenu/cinquieme/anglais/modaux-can-must/qcm.json';
-import exercice298 from './../../contenu/cinquieme/anglais/modaux-can-must/exercice.json';
 import flash298 from './../../contenu/cinquieme/anglais/modaux-can-must/flashcards.json';
-import fiche299 from './../../contenu/cinquieme/anglais/futur-will-going-to/fiche.md';
 import qcm299 from './../../contenu/cinquieme/anglais/futur-will-going-to/qcm.json';
-import exercice299 from './../../contenu/cinquieme/anglais/futur-will-going-to/exercice.json';
 import flash299 from './../../contenu/cinquieme/anglais/futur-will-going-to/flashcards.json';
-import fiche300 from './../../contenu/cinquieme/anglais/civilisation-etats-unis/fiche.md';
 import qcm300 from './../../contenu/cinquieme/anglais/civilisation-etats-unis/qcm.json';
-import exercice300 from './../../contenu/cinquieme/anglais/civilisation-etats-unis/exercice.json';
 import flash300 from './../../contenu/cinquieme/anglais/civilisation-etats-unis/flashcards.json';
-import fiche301 from './../../contenu/cinquieme/arts/la-couleur/fiche.md';
 import qcm301 from './../../contenu/cinquieme/arts/la-couleur/qcm.json';
-import exercice301 from './../../contenu/cinquieme/arts/la-couleur/exercice.json';
 import flash301 from './../../contenu/cinquieme/arts/la-couleur/flashcards.json';
-import fiche302 from './../../contenu/cinquieme/arts/moyen-age/fiche.md';
 import qcm302 from './../../contenu/cinquieme/arts/moyen-age/qcm.json';
-import exercice302 from './../../contenu/cinquieme/arts/moyen-age/exercice.json';
 import flash302 from './../../contenu/cinquieme/arts/moyen-age/flashcards.json';
-import fiche303 from './../../contenu/cinquieme/espagnol/interrogacion-negacion/fiche.md';
 import qcm303 from './../../contenu/cinquieme/espagnol/interrogacion-negacion/qcm.json';
-import exercice303 from './../../contenu/cinquieme/espagnol/interrogacion-negacion/exercice.json';
 import flash303 from './../../contenu/cinquieme/espagnol/interrogacion-negacion/flashcards.json';
-import fiche304 from './../../contenu/cinquieme/espagnol/ser-estar-usos/fiche.md';
 import qcm304 from './../../contenu/cinquieme/espagnol/ser-estar-usos/qcm.json';
-import exercice304 from './../../contenu/cinquieme/espagnol/ser-estar-usos/exercice.json';
 import flash304 from './../../contenu/cinquieme/espagnol/ser-estar-usos/flashcards.json';
-import fiche305 from './../../contenu/cinquieme/espagnol/hay-estar/fiche.md';
 import qcm305 from './../../contenu/cinquieme/espagnol/hay-estar/qcm.json';
-import exercice305 from './../../contenu/cinquieme/espagnol/hay-estar/exercice.json';
 import flash305 from './../../contenu/cinquieme/espagnol/hay-estar/flashcards.json';
-import fiche306 from './../../contenu/cinquieme/espagnol/posesivos/fiche.md';
 import qcm306 from './../../contenu/cinquieme/espagnol/posesivos/qcm.json';
-import exercice306 from './../../contenu/cinquieme/espagnol/posesivos/exercice.json';
 import flash306 from './../../contenu/cinquieme/espagnol/posesivos/flashcards.json';
-import fiche307 from './../../contenu/cinquieme/espagnol/vocabulario-ciudad-viajes/fiche.md';
 import qcm307 from './../../contenu/cinquieme/espagnol/vocabulario-ciudad-viajes/qcm.json';
-import exercice307 from './../../contenu/cinquieme/espagnol/vocabulario-ciudad-viajes/exercice.json';
 import flash307 from './../../contenu/cinquieme/espagnol/vocabulario-ciudad-viajes/flashcards.json';
-import fiche308 from './../../contenu/cinquieme/espagnol/presente-irregular/fiche.md';
 import qcm308 from './../../contenu/cinquieme/espagnol/presente-irregular/qcm.json';
-import exercice308 from './../../contenu/cinquieme/espagnol/presente-irregular/exercice.json';
 import flash308 from './../../contenu/cinquieme/espagnol/presente-irregular/flashcards.json';
-import fiche309 from './../../contenu/cinquieme/espagnol/gustar/fiche.md';
 import qcm309 from './../../contenu/cinquieme/espagnol/gustar/qcm.json';
-import exercice309 from './../../contenu/cinquieme/espagnol/gustar/exercice.json';
 import flash309 from './../../contenu/cinquieme/espagnol/gustar/flashcards.json';
-import fiche310 from './../../contenu/cinquieme/espagnol/vocabulario-naturaleza-animales/fiche.md';
 import qcm310 from './../../contenu/cinquieme/espagnol/vocabulario-naturaleza-animales/qcm.json';
-import exercice310 from './../../contenu/cinquieme/espagnol/vocabulario-naturaleza-animales/exercice.json';
 import flash310 from './../../contenu/cinquieme/espagnol/vocabulario-naturaleza-animales/flashcards.json';
-import fiche311 from './../../contenu/cinquieme/espagnol/civilizacion-mexico-latinoamerica/fiche.md';
 import qcm311 from './../../contenu/cinquieme/espagnol/civilizacion-mexico-latinoamerica/qcm.json';
-import exercice311 from './../../contenu/cinquieme/espagnol/civilizacion-mexico-latinoamerica/exercice.json';
 import flash311 from './../../contenu/cinquieme/espagnol/civilizacion-mexico-latinoamerica/flashcards.json';
-import fiche312 from './../../contenu/cinquieme/francais/expansions-du-nom/fiche.md';
 import qcm312 from './../../contenu/cinquieme/francais/expansions-du-nom/qcm.json';
-import exercice312 from './../../contenu/cinquieme/francais/expansions-du-nom/exercice.json';
 import flash312 from './../../contenu/cinquieme/francais/expansions-du-nom/flashcards.json';
-import fiche313 from './../../contenu/cinquieme/francais/propositions/fiche.md';
 import qcm313 from './../../contenu/cinquieme/francais/propositions/qcm.json';
-import exercice313 from './../../contenu/cinquieme/francais/propositions/exercice.json';
 import flash313 from './../../contenu/cinquieme/francais/propositions/flashcards.json';
-import fiche314 from './../../contenu/cinquieme/francais/temps-composes/fiche.md';
 import qcm314 from './../../contenu/cinquieme/francais/temps-composes/qcm.json';
-import exercice314 from './../../contenu/cinquieme/francais/temps-composes/exercice.json';
 import flash314 from './../../contenu/cinquieme/francais/temps-composes/flashcards.json';
-import fiche315 from './../../contenu/cinquieme/francais/futur-conditionnel/fiche.md';
 import qcm315 from './../../contenu/cinquieme/francais/futur-conditionnel/qcm.json';
-import exercice315 from './../../contenu/cinquieme/francais/futur-conditionnel/exercice.json';
 import flash315 from './../../contenu/cinquieme/francais/futur-conditionnel/flashcards.json';
-import fiche316 from './../../contenu/cinquieme/francais/champ-lexical-connotation/fiche.md';
 import qcm316 from './../../contenu/cinquieme/francais/champ-lexical-connotation/qcm.json';
-import exercice316 from './../../contenu/cinquieme/francais/champ-lexical-connotation/exercice.json';
 import flash316 from './../../contenu/cinquieme/francais/champ-lexical-connotation/flashcards.json';
-import fiche317 from './../../contenu/cinquieme/francais/discours-direct-indirect/fiche.md';
 import qcm317 from './../../contenu/cinquieme/francais/discours-direct-indirect/qcm.json';
-import exercice317 from './../../contenu/cinquieme/francais/discours-direct-indirect/exercice.json';
 import flash317 from './../../contenu/cinquieme/francais/discours-direct-indirect/flashcards.json';
-import fiche318 from './../../contenu/cinquieme/francais/texte-de-theatre/fiche.md';
 import qcm318 from './../../contenu/cinquieme/francais/texte-de-theatre/qcm.json';
-import exercice318 from './../../contenu/cinquieme/francais/texte-de-theatre/exercice.json';
 import flash318 from './../../contenu/cinquieme/francais/texte-de-theatre/flashcards.json';
-import fiche319 from './../../contenu/cinquieme/hist-geo/islam-debuts-expansion/fiche.md';
 import qcm319 from './../../contenu/cinquieme/hist-geo/islam-debuts-expansion/qcm.json';
-import exercice319 from './../../contenu/cinquieme/hist-geo/islam-debuts-expansion/exercice.json';
 import flash319 from './../../contenu/cinquieme/hist-geo/islam-debuts-expansion/flashcards.json';
-import fiche320 from './../../contenu/cinquieme/hist-geo/occident-feodal/fiche.md';
 import qcm320 from './../../contenu/cinquieme/hist-geo/occident-feodal/qcm.json';
-import exercice320 from './../../contenu/cinquieme/hist-geo/occident-feodal/exercice.json';
 import flash320 from './../../contenu/cinquieme/hist-geo/occident-feodal/flashcards.json';
-import fiche321 from './../../contenu/cinquieme/hist-geo/roi-et-ville-moyen-age/fiche.md';
 import qcm321 from './../../contenu/cinquieme/hist-geo/roi-et-ville-moyen-age/qcm.json';
-import exercice321 from './../../contenu/cinquieme/hist-geo/roi-et-ville-moyen-age/exercice.json';
 import flash321 from './../../contenu/cinquieme/hist-geo/roi-et-ville-moyen-age/flashcards.json';
-import fiche322 from './../../contenu/cinquieme/hist-geo/renaissance-humanisme-reformes/fiche.md';
 import qcm322 from './../../contenu/cinquieme/hist-geo/renaissance-humanisme-reformes/qcm.json';
-import exercice322 from './../../contenu/cinquieme/hist-geo/renaissance-humanisme-reformes/exercice.json';
 import flash322 from './../../contenu/cinquieme/hist-geo/renaissance-humanisme-reformes/flashcards.json';
-import fiche323 from './../../contenu/cinquieme/hist-geo/demographie-developpement/fiche.md';
 import qcm323 from './../../contenu/cinquieme/hist-geo/demographie-developpement/qcm.json';
-import exercice323 from './../../contenu/cinquieme/hist-geo/demographie-developpement/exercice.json';
 import flash323 from './../../contenu/cinquieme/hist-geo/demographie-developpement/flashcards.json';
-import fiche324 from './../../contenu/cinquieme/hist-geo/ressources-eau-alimentation-energie/fiche.md';
 import qcm324 from './../../contenu/cinquieme/hist-geo/ressources-eau-alimentation-energie/qcm.json';
-import exercice324 from './../../contenu/cinquieme/hist-geo/ressources-eau-alimentation-energie/exercice.json';
 import flash324 from './../../contenu/cinquieme/hist-geo/ressources-eau-alimentation-energie/flashcards.json';
-import fiche325 from './../../contenu/cinquieme/hist-geo/emc-egalite-developpement-durable/fiche.md';
 import qcm325 from './../../contenu/cinquieme/hist-geo/emc-egalite-developpement-durable/qcm.json';
-import exercice325 from './../../contenu/cinquieme/hist-geo/emc-egalite-developpement-durable/exercice.json';
 import flash325 from './../../contenu/cinquieme/hist-geo/emc-egalite-developpement-durable/flashcards.json';
-import fiche326 from './../../contenu/cinquieme/italien/interrogazione-negazione/fiche.md';
 import qcm326 from './../../contenu/cinquieme/italien/interrogazione-negazione/qcm.json';
-import exercice326 from './../../contenu/cinquieme/italien/interrogazione-negazione/exercice.json';
 import flash326 from './../../contenu/cinquieme/italien/interrogazione-negazione/flashcards.json';
-import fiche327 from './../../contenu/cinquieme/italien/essere-esserci/fiche.md';
 import qcm327 from './../../contenu/cinquieme/italien/essere-esserci/qcm.json';
-import exercice327 from './../../contenu/cinquieme/italien/essere-esserci/exercice.json';
 import flash327 from './../../contenu/cinquieme/italien/essere-esserci/flashcards.json';
-import fiche328 from './../../contenu/cinquieme/italien/ce-ci-sono/fiche.md';
 import qcm328 from './../../contenu/cinquieme/italien/ce-ci-sono/qcm.json';
-import exercice328 from './../../contenu/cinquieme/italien/ce-ci-sono/exercice.json';
 import flash328 from './../../contenu/cinquieme/italien/ce-ci-sono/flashcards.json';
-import fiche329 from './../../contenu/cinquieme/italien/possessivi/fiche.md';
 import qcm329 from './../../contenu/cinquieme/italien/possessivi/qcm.json';
-import exercice329 from './../../contenu/cinquieme/italien/possessivi/exercice.json';
 import flash329 from './../../contenu/cinquieme/italien/possessivi/flashcards.json';
-import fiche330 from './../../contenu/cinquieme/italien/vocabolario-citta-viaggi/fiche.md';
 import qcm330 from './../../contenu/cinquieme/italien/vocabolario-citta-viaggi/qcm.json';
-import exercice330 from './../../contenu/cinquieme/italien/vocabolario-citta-viaggi/exercice.json';
 import flash330 from './../../contenu/cinquieme/italien/vocabolario-citta-viaggi/flashcards.json';
-import fiche331 from './../../contenu/cinquieme/italien/presente-irregolare/fiche.md';
 import qcm331 from './../../contenu/cinquieme/italien/presente-irregolare/qcm.json';
-import exercice331 from './../../contenu/cinquieme/italien/presente-irregolare/exercice.json';
 import flash331 from './../../contenu/cinquieme/italien/presente-irregolare/flashcards.json';
-import fiche332 from './../../contenu/cinquieme/italien/piacere/fiche.md';
 import qcm332 from './../../contenu/cinquieme/italien/piacere/qcm.json';
-import exercice332 from './../../contenu/cinquieme/italien/piacere/exercice.json';
 import flash332 from './../../contenu/cinquieme/italien/piacere/flashcards.json';
-import fiche333 from './../../contenu/cinquieme/italien/vocabolario-natura-animali/fiche.md';
 import qcm333 from './../../contenu/cinquieme/italien/vocabolario-natura-animali/qcm.json';
-import exercice333 from './../../contenu/cinquieme/italien/vocabolario-natura-animali/exercice.json';
 import flash333 from './../../contenu/cinquieme/italien/vocabolario-natura-animali/flashcards.json';
-import fiche334 from './../../contenu/cinquieme/italien/civilta-regioni-citta/fiche.md';
 import qcm334 from './../../contenu/cinquieme/italien/civilta-regioni-citta/qcm.json';
-import exercice334 from './../../contenu/cinquieme/italien/civilta-regioni-citta/exercice.json';
 import flash334 from './../../contenu/cinquieme/italien/civilta-regioni-citta/flashcards.json';
-import fiche335 from './../../contenu/cinquieme/langues-anciennes/latin-decouverte/fiche.md';
 import qcm335 from './../../contenu/cinquieme/langues-anciennes/latin-decouverte/qcm.json';
-import exercice335 from './../../contenu/cinquieme/langues-anciennes/latin-decouverte/exercice.json';
 import flash335 from './../../contenu/cinquieme/langues-anciennes/latin-decouverte/flashcards.json';
-import fiche336 from './../../contenu/cinquieme/langues-anciennes/latin-present/fiche.md';
 import qcm336 from './../../contenu/cinquieme/langues-anciennes/latin-present/qcm.json';
-import exercice336 from './../../contenu/cinquieme/langues-anciennes/latin-present/exercice.json';
 import flash336 from './../../contenu/cinquieme/langues-anciennes/latin-present/flashcards.json';
-import fiche337 from './../../contenu/cinquieme/maths/operations/fiche.md';
 import qcm337 from './../../contenu/cinquieme/maths/operations/qcm.json';
-import exercice337 from './../../contenu/cinquieme/maths/operations/exercice.json';
 import flash337 from './../../contenu/cinquieme/maths/operations/flashcards.json';
-import fiche338 from './../../contenu/cinquieme/maths/fractions/fiche.md';
 import qcm338 from './../../contenu/cinquieme/maths/fractions/qcm.json';
-import exercice338 from './../../contenu/cinquieme/maths/fractions/exercice.json';
 import flash338 from './../../contenu/cinquieme/maths/fractions/flashcards.json';
-import fiche339 from './../../contenu/cinquieme/maths/nombres-relatifs/fiche.md';
 import qcm339 from './../../contenu/cinquieme/maths/nombres-relatifs/qcm.json';
-import exercice339 from './../../contenu/cinquieme/maths/nombres-relatifs/exercice.json';
 import flash339 from './../../contenu/cinquieme/maths/nombres-relatifs/flashcards.json';
-import fiche340 from './../../contenu/cinquieme/maths/reperage/fiche.md';
 import qcm340 from './../../contenu/cinquieme/maths/reperage/qcm.json';
-import exercice340 from './../../contenu/cinquieme/maths/reperage/exercice.json';
 import flash340 from './../../contenu/cinquieme/maths/reperage/flashcards.json';
-import fiche341 from './../../contenu/cinquieme/maths/calcul-litteral/fiche.md';
 import qcm341 from './../../contenu/cinquieme/maths/calcul-litteral/qcm.json';
-import exercice341 from './../../contenu/cinquieme/maths/calcul-litteral/exercice.json';
 import flash341 from './../../contenu/cinquieme/maths/calcul-litteral/flashcards.json';
-import fiche342 from './../../contenu/cinquieme/maths/puissances/fiche.md';
 import qcm342 from './../../contenu/cinquieme/maths/puissances/qcm.json';
-import exercice342 from './../../contenu/cinquieme/maths/puissances/exercice.json';
 import flash342 from './../../contenu/cinquieme/maths/puissances/flashcards.json';
-import fiche343 from './../../contenu/cinquieme/maths/proportionnalite/fiche.md';
 import qcm343 from './../../contenu/cinquieme/maths/proportionnalite/qcm.json';
-import exercice343 from './../../contenu/cinquieme/maths/proportionnalite/exercice.json';
 import flash343 from './../../contenu/cinquieme/maths/proportionnalite/flashcards.json';
-import fiche344 from './../../contenu/cinquieme/maths/triangles-angles/fiche.md';
 import qcm344 from './../../contenu/cinquieme/maths/triangles-angles/qcm.json';
-import exercice344 from './../../contenu/cinquieme/maths/triangles-angles/exercice.json';
 import flash344 from './../../contenu/cinquieme/maths/triangles-angles/flashcards.json';
-import fiche345 from './../../contenu/cinquieme/maths/parallelogrammes/fiche.md';
 import qcm345 from './../../contenu/cinquieme/maths/parallelogrammes/qcm.json';
-import exercice345 from './../../contenu/cinquieme/maths/parallelogrammes/exercice.json';
 import flash345 from './../../contenu/cinquieme/maths/parallelogrammes/flashcards.json';
-import fiche346 from './../../contenu/cinquieme/maths/transformations/fiche.md';
 import qcm346 from './../../contenu/cinquieme/maths/transformations/qcm.json';
-import exercice346 from './../../contenu/cinquieme/maths/transformations/exercice.json';
 import flash346 from './../../contenu/cinquieme/maths/transformations/flashcards.json';
-import fiche347 from './../../contenu/cinquieme/maths/representation-espace/fiche.md';
 import qcm347 from './../../contenu/cinquieme/maths/representation-espace/qcm.json';
-import exercice347 from './../../contenu/cinquieme/maths/representation-espace/exercice.json';
 import flash347 from './../../contenu/cinquieme/maths/representation-espace/flashcards.json';
-import fiche348 from './../../contenu/cinquieme/maths/fonctions/fiche.md';
 import qcm348 from './../../contenu/cinquieme/maths/fonctions/qcm.json';
-import exercice348 from './../../contenu/cinquieme/maths/fonctions/exercice.json';
 import flash348 from './../../contenu/cinquieme/maths/fonctions/flashcards.json';
-import fiche349 from './../../contenu/cinquieme/maths/statistiques/fiche.md';
 import qcm349 from './../../contenu/cinquieme/maths/statistiques/qcm.json';
-import exercice349 from './../../contenu/cinquieme/maths/statistiques/exercice.json';
 import flash349 from './../../contenu/cinquieme/maths/statistiques/flashcards.json';
-import fiche350 from './../../contenu/cinquieme/maths/probabilites/fiche.md';
 import qcm350 from './../../contenu/cinquieme/maths/probabilites/qcm.json';
-import exercice350 from './../../contenu/cinquieme/maths/probabilites/exercice.json';
 import flash350 from './../../contenu/cinquieme/maths/probabilites/flashcards.json';
-import fiche351 from './../../contenu/cinquieme/maths/pensee-informatique/fiche.md';
 import qcm351 from './../../contenu/cinquieme/maths/pensee-informatique/qcm.json';
-import exercice351 from './../../contenu/cinquieme/maths/pensee-informatique/exercice.json';
 import flash351 from './../../contenu/cinquieme/maths/pensee-informatique/flashcards.json';
-import fiche352 from './../../contenu/cinquieme/physique-chimie/proprietes-matiere/fiche.md';
 import qcm352 from './../../contenu/cinquieme/physique-chimie/proprietes-matiere/qcm.json';
-import exercice352 from './../../contenu/cinquieme/physique-chimie/proprietes-matiere/exercice.json';
 import flash352 from './../../contenu/cinquieme/physique-chimie/proprietes-matiere/flashcards.json';
-import fiche353 from './../../contenu/cinquieme/physique-chimie/corps-purs-melanges/fiche.md';
 import qcm353 from './../../contenu/cinquieme/physique-chimie/corps-purs-melanges/qcm.json';
-import exercice353 from './../../contenu/cinquieme/physique-chimie/corps-purs-melanges/exercice.json';
 import flash353 from './../../contenu/cinquieme/physique-chimie/corps-purs-melanges/flashcards.json';
-import fiche354 from './../../contenu/cinquieme/physique-chimie/transformation-chimique/fiche.md';
 import qcm354 from './../../contenu/cinquieme/physique-chimie/transformation-chimique/qcm.json';
-import exercice354 from './../../contenu/cinquieme/physique-chimie/transformation-chimique/exercice.json';
 import flash354 from './../../contenu/cinquieme/physique-chimie/transformation-chimique/flashcards.json';
-import fiche355 from './../../contenu/cinquieme/physique-chimie/mouvement-vitesse/fiche.md';
 import qcm355 from './../../contenu/cinquieme/physique-chimie/mouvement-vitesse/qcm.json';
-import exercice355 from './../../contenu/cinquieme/physique-chimie/mouvement-vitesse/exercice.json';
 import flash355 from './../../contenu/cinquieme/physique-chimie/mouvement-vitesse/flashcards.json';
-import fiche356 from './../../contenu/cinquieme/physique-chimie/energie-electricite/fiche.md';
 import qcm356 from './../../contenu/cinquieme/physique-chimie/energie-electricite/qcm.json';
-import exercice356 from './../../contenu/cinquieme/physique-chimie/energie-electricite/exercice.json';
 import flash356 from './../../contenu/cinquieme/physique-chimie/energie-electricite/flashcards.json';
-import fiche357 from './../../contenu/cinquieme/physique-chimie/signaux-sonores-lumineux/fiche.md';
 import qcm357 from './../../contenu/cinquieme/physique-chimie/signaux-sonores-lumineux/qcm.json';
-import exercice357 from './../../contenu/cinquieme/physique-chimie/signaux-sonores-lumineux/exercice.json';
 import flash357 from './../../contenu/cinquieme/physique-chimie/signaux-sonores-lumineux/flashcards.json';
-import fiche358 from './../../contenu/cinquieme/svt/respiration-et-milieux-de-vie/fiche.md';
 import qcm358 from './../../contenu/cinquieme/svt/respiration-et-milieux-de-vie/qcm.json';
-import exercice358 from './../../contenu/cinquieme/svt/respiration-et-milieux-de-vie/exercice.json';
 import flash358 from './../../contenu/cinquieme/svt/respiration-et-milieux-de-vie/flashcards.json';
-import fiche359 from './../../contenu/cinquieme/svt/nutrition-et-systeme-digestif/fiche.md';
 import qcm359 from './../../contenu/cinquieme/svt/nutrition-et-systeme-digestif/qcm.json';
-import exercice359 from './../../contenu/cinquieme/svt/nutrition-et-systeme-digestif/exercice.json';
 import flash359 from './../../contenu/cinquieme/svt/nutrition-et-systeme-digestif/flashcards.json';
-import fiche360 from './../../contenu/cinquieme/svt/circulation-et-sang/fiche.md';
 import qcm360 from './../../contenu/cinquieme/svt/circulation-et-sang/qcm.json';
-import exercice360 from './../../contenu/cinquieme/svt/circulation-et-sang/exercice.json';
 import flash360 from './../../contenu/cinquieme/svt/circulation-et-sang/flashcards.json';
-import fiche361 from './../../contenu/cinquieme/svt/reproduction-et-puberte/fiche.md';
 import qcm361 from './../../contenu/cinquieme/svt/reproduction-et-puberte/qcm.json';
-import exercice361 from './../../contenu/cinquieme/svt/reproduction-et-puberte/exercice.json';
 import flash361 from './../../contenu/cinquieme/svt/reproduction-et-puberte/flashcards.json';
-import fiche362 from './../../contenu/cinquieme/svt/roches-erosion-et-paysages/fiche.md';
 import qcm362 from './../../contenu/cinquieme/svt/roches-erosion-et-paysages/qcm.json';
-import exercice362 from './../../contenu/cinquieme/svt/roches-erosion-et-paysages/exercice.json';
 import flash362 from './../../contenu/cinquieme/svt/roches-erosion-et-paysages/flashcards.json';
-import fiche363 from './../../contenu/cinquieme/techno/besoin-et-cahier-des-charges/fiche.md';
 import qcm363 from './../../contenu/cinquieme/techno/besoin-et-cahier-des-charges/qcm.json';
-import exercice363 from './../../contenu/cinquieme/techno/besoin-et-cahier-des-charges/exercice.json';
 import flash363 from './../../contenu/cinquieme/techno/besoin-et-cahier-des-charges/flashcards.json';
-import fiche364 from './../../contenu/cinquieme/techno/proprietes-des-materiaux/fiche.md';
 import qcm364 from './../../contenu/cinquieme/techno/proprietes-des-materiaux/qcm.json';
-import exercice364 from './../../contenu/cinquieme/techno/proprietes-des-materiaux/exercice.json';
 import flash364 from './../../contenu/cinquieme/techno/proprietes-des-materiaux/flashcards.json';
-import fiche365 from './../../contenu/cinquieme/techno/structures-et-stabilite/fiche.md';
 import qcm365 from './../../contenu/cinquieme/techno/structures-et-stabilite/qcm.json';
-import exercice365 from './../../contenu/cinquieme/techno/structures-et-stabilite/exercice.json';
 import flash365 from './../../contenu/cinquieme/techno/structures-et-stabilite/flashcards.json';
-import fiche366 from './../../contenu/cinquieme/techno/chaine-denergie/fiche.md';
 import qcm366 from './../../contenu/cinquieme/techno/chaine-denergie/qcm.json';
-import exercice366 from './../../contenu/cinquieme/techno/chaine-denergie/exercice.json';
 import flash366 from './../../contenu/cinquieme/techno/chaine-denergie/flashcards.json';
-import fiche367 from './../../contenu/cinquieme/techno/programmation-et-capteurs/fiche.md';
 import qcm367 from './../../contenu/cinquieme/techno/programmation-et-capteurs/qcm.json';
-import exercice367 from './../../contenu/cinquieme/techno/programmation-et-capteurs/exercice.json';
 import flash367 from './../../contenu/cinquieme/techno/programmation-et-capteurs/flashcards.json';
-import fiche368 from './../../contenu/quatrieme/allemand/dativ/fiche.md';
 import qcm368 from './../../contenu/quatrieme/allemand/dativ/qcm.json';
-import exercice368 from './../../contenu/quatrieme/allemand/dativ/exercice.json';
 import flash368 from './../../contenu/quatrieme/allemand/dativ/flashcards.json';
-import fiche369 from './../../contenu/quatrieme/allemand/pronomen-akkusativ-dativ/fiche.md';
 import qcm369 from './../../contenu/quatrieme/allemand/pronomen-akkusativ-dativ/qcm.json';
-import exercice369 from './../../contenu/quatrieme/allemand/pronomen-akkusativ-dativ/exercice.json';
 import flash369 from './../../contenu/quatrieme/allemand/pronomen-akkusativ-dativ/flashcards.json';
-import fiche370 from './../../contenu/quatrieme/allemand/wechselpraepositionen/fiche.md';
 import qcm370 from './../../contenu/quatrieme/allemand/wechselpraepositionen/qcm.json';
-import exercice370 from './../../contenu/quatrieme/allemand/wechselpraepositionen/exercice.json';
 import flash370 from './../../contenu/quatrieme/allemand/wechselpraepositionen/flashcards.json';
-import fiche371 from './../../contenu/quatrieme/allemand/wortschatz-sport-freizeit/fiche.md';
 import qcm371 from './../../contenu/quatrieme/allemand/wortschatz-sport-freizeit/qcm.json';
-import exercice371 from './../../contenu/quatrieme/allemand/wortschatz-sport-freizeit/exercice.json';
 import flash371 from './../../contenu/quatrieme/allemand/wortschatz-sport-freizeit/flashcards.json';
-import fiche372 from './../../contenu/quatrieme/allemand/perfekt/fiche.md';
 import qcm372 from './../../contenu/quatrieme/allemand/perfekt/qcm.json';
-import exercice372 from './../../contenu/quatrieme/allemand/perfekt/exercice.json';
 import flash372 from './../../contenu/quatrieme/allemand/perfekt/flashcards.json';
-import fiche373 from './../../contenu/quatrieme/allemand/imperativ/fiche.md';
 import qcm373 from './../../contenu/quatrieme/allemand/imperativ/qcm.json';
-import exercice373 from './../../contenu/quatrieme/allemand/imperativ/exercice.json';
 import flash373 from './../../contenu/quatrieme/allemand/imperativ/flashcards.json';
-import fiche374 from './../../contenu/quatrieme/allemand/wortschatz-gesundheit-koerper/fiche.md';
 import qcm374 from './../../contenu/quatrieme/allemand/wortschatz-gesundheit-koerper/qcm.json';
-import exercice374 from './../../contenu/quatrieme/allemand/wortschatz-gesundheit-koerper/exercice.json';
 import flash374 from './../../contenu/quatrieme/allemand/wortschatz-gesundheit-koerper/flashcards.json';
-import fiche375 from './../../contenu/quatrieme/allemand/komparativ-superlativ/fiche.md';
 import qcm375 from './../../contenu/quatrieme/allemand/komparativ-superlativ/qcm.json';
-import exercice375 from './../../contenu/quatrieme/allemand/komparativ-superlativ/exercice.json';
 import flash375 from './../../contenu/quatrieme/allemand/komparativ-superlativ/flashcards.json';
-import fiche376 from './../../contenu/quatrieme/allemand/landeskunde-staedte/fiche.md';
 import qcm376 from './../../contenu/quatrieme/allemand/landeskunde-staedte/qcm.json';
-import exercice376 from './../../contenu/quatrieme/allemand/landeskunde-staedte/exercice.json';
 import flash376 from './../../contenu/quatrieme/allemand/landeskunde-staedte/flashcards.json';
-import fiche377 from './../../contenu/quatrieme/allemand/landeskunde-feste-traditionen/fiche.md';
 import qcm377 from './../../contenu/quatrieme/allemand/landeskunde-feste-traditionen/qcm.json';
-import exercice377 from './../../contenu/quatrieme/allemand/landeskunde-feste-traditionen/exercice.json';
 import flash377 from './../../contenu/quatrieme/allemand/landeskunde-feste-traditionen/flashcards.json';
-import fiche378 from './../../contenu/quatrieme/anglais/word-order/fiche.md';
 import qcm378 from './../../contenu/quatrieme/anglais/word-order/qcm.json';
-import exercice378 from './../../contenu/quatrieme/anglais/word-order/exercice.json';
 import flash378 from './../../contenu/quatrieme/anglais/word-order/flashcards.json';
-import fiche379 from './../../contenu/quatrieme/anglais/quantifieurs/fiche.md';
 import qcm379 from './../../contenu/quatrieme/anglais/quantifieurs/qcm.json';
-import exercice379 from './../../contenu/quatrieme/anglais/quantifieurs/exercice.json';
 import flash379 from './../../contenu/quatrieme/anglais/quantifieurs/flashcards.json';
-import fiche380 from './../../contenu/quatrieme/anglais/vocabulaire-sport-loisirs/fiche.md';
 import qcm380 from './../../contenu/quatrieme/anglais/vocabulaire-sport-loisirs/qcm.json';
-import exercice380 from './../../contenu/quatrieme/anglais/vocabulaire-sport-loisirs/exercice.json';
 import flash380 from './../../contenu/quatrieme/anglais/vocabulaire-sport-loisirs/flashcards.json';
-import fiche381 from './../../contenu/quatrieme/anglais/present-perfect/fiche.md';
 import qcm381 from './../../contenu/quatrieme/anglais/present-perfect/qcm.json';
-import exercice381 from './../../contenu/quatrieme/anglais/present-perfect/exercice.json';
 import flash381 from './../../contenu/quatrieme/anglais/present-perfect/flashcards.json';
-import fiche382 from './../../contenu/quatrieme/anglais/preterit-vs-present-perfect/fiche.md';
 import qcm382 from './../../contenu/quatrieme/anglais/preterit-vs-present-perfect/qcm.json';
-import exercice382 from './../../contenu/quatrieme/anglais/preterit-vs-present-perfect/exercice.json';
 import flash382 from './../../contenu/quatrieme/anglais/preterit-vs-present-perfect/flashcards.json';
-import fiche383 from './../../contenu/quatrieme/anglais/vocabulaire-sante-corps/fiche.md';
 import qcm383 from './../../contenu/quatrieme/anglais/vocabulaire-sante-corps/qcm.json';
-import exercice383 from './../../contenu/quatrieme/anglais/vocabulaire-sante-corps/exercice.json';
 import flash383 from './../../contenu/quatrieme/anglais/vocabulaire-sante-corps/flashcards.json';
-import fiche384 from './../../contenu/quatrieme/anglais/propositions-relatives/fiche.md';
 import qcm384 from './../../contenu/quatrieme/anglais/propositions-relatives/qcm.json';
-import exercice384 from './../../contenu/quatrieme/anglais/propositions-relatives/exercice.json';
 import flash384 from './../../contenu/quatrieme/anglais/propositions-relatives/flashcards.json';
-import fiche385 from './../../contenu/quatrieme/anglais/discours-indirect/fiche.md';
 import qcm385 from './../../contenu/quatrieme/anglais/discours-indirect/qcm.json';
-import exercice385 from './../../contenu/quatrieme/anglais/discours-indirect/exercice.json';
 import flash385 from './../../contenu/quatrieme/anglais/discours-indirect/flashcards.json';
-import fiche386 from './../../contenu/quatrieme/anglais/civilisation-londres/fiche.md';
 import qcm386 from './../../contenu/quatrieme/anglais/civilisation-londres/qcm.json';
-import exercice386 from './../../contenu/quatrieme/anglais/civilisation-londres/exercice.json';
 import flash386 from './../../contenu/quatrieme/anglais/civilisation-londres/flashcards.json';
-import fiche387 from './../../contenu/quatrieme/anglais/civilisation-australie/fiche.md';
 import qcm387 from './../../contenu/quatrieme/anglais/civilisation-australie/qcm.json';
-import exercice387 from './../../contenu/quatrieme/anglais/civilisation-australie/exercice.json';
 import flash387 from './../../contenu/quatrieme/anglais/civilisation-australie/flashcards.json';
-import fiche388 from './../../contenu/quatrieme/arts/langage-musical/fiche.md';
 import qcm388 from './../../contenu/quatrieme/arts/langage-musical/qcm.json';
-import exercice388 from './../../contenu/quatrieme/arts/langage-musical/exercice.json';
 import flash388 from './../../contenu/quatrieme/arts/langage-musical/flashcards.json';
-import fiche389 from './../../contenu/quatrieme/arts/renaissance/fiche.md';
 import qcm389 from './../../contenu/quatrieme/arts/renaissance/qcm.json';
-import exercice389 from './../../contenu/quatrieme/arts/renaissance/exercice.json';
 import flash389 from './../../contenu/quatrieme/arts/renaissance/flashcards.json';
-import fiche390 from './../../contenu/quatrieme/espagnol/muy-mucho/fiche.md';
 import qcm390 from './../../contenu/quatrieme/espagnol/muy-mucho/qcm.json';
-import exercice390 from './../../contenu/quatrieme/espagnol/muy-mucho/exercice.json';
 import flash390 from './../../contenu/quatrieme/espagnol/muy-mucho/flashcards.json';
-import fiche391 from './../../contenu/quatrieme/espagnol/comparativos-superlativos/fiche.md';
 import qcm391 from './../../contenu/quatrieme/espagnol/comparativos-superlativos/qcm.json';
-import exercice391 from './../../contenu/quatrieme/espagnol/comparativos-superlativos/exercice.json';
 import flash391 from './../../contenu/quatrieme/espagnol/comparativos-superlativos/flashcards.json';
-import fiche392 from './../../contenu/quatrieme/espagnol/estar-gerundio/fiche.md';
 import qcm392 from './../../contenu/quatrieme/espagnol/estar-gerundio/qcm.json';
-import exercice392 from './../../contenu/quatrieme/espagnol/estar-gerundio/exercice.json';
 import flash392 from './../../contenu/quatrieme/espagnol/estar-gerundio/flashcards.json';
-import fiche393 from './../../contenu/quatrieme/espagnol/vocabulario-deporte-ocio/fiche.md';
 import qcm393 from './../../contenu/quatrieme/espagnol/vocabulario-deporte-ocio/qcm.json';
-import exercice393 from './../../contenu/quatrieme/espagnol/vocabulario-deporte-ocio/exercice.json';
 import flash393 from './../../contenu/quatrieme/espagnol/vocabulario-deporte-ocio/flashcards.json';
-import fiche394 from './../../contenu/quatrieme/espagnol/preterito-perfecto/fiche.md';
 import qcm394 from './../../contenu/quatrieme/espagnol/preterito-perfecto/qcm.json';
-import exercice394 from './../../contenu/quatrieme/espagnol/preterito-perfecto/exercice.json';
 import flash394 from './../../contenu/quatrieme/espagnol/preterito-perfecto/flashcards.json';
-import fiche395 from './../../contenu/quatrieme/espagnol/preterito-indefinido/fiche.md';
 import qcm395 from './../../contenu/quatrieme/espagnol/preterito-indefinido/qcm.json';
-import exercice395 from './../../contenu/quatrieme/espagnol/preterito-indefinido/exercice.json';
 import flash395 from './../../contenu/quatrieme/espagnol/preterito-indefinido/flashcards.json';
-import fiche396 from './../../contenu/quatrieme/espagnol/vocabulario-salud-cuerpo/fiche.md';
 import qcm396 from './../../contenu/quatrieme/espagnol/vocabulario-salud-cuerpo/qcm.json';
-import exercice396 from './../../contenu/quatrieme/espagnol/vocabulario-salud-cuerpo/exercice.json';
 import flash396 from './../../contenu/quatrieme/espagnol/vocabulario-salud-cuerpo/flashcards.json';
-import fiche397 from './../../contenu/quatrieme/espagnol/futuro/fiche.md';
 import qcm397 from './../../contenu/quatrieme/espagnol/futuro/qcm.json';
-import exercice397 from './../../contenu/quatrieme/espagnol/futuro/exercice.json';
 import flash397 from './../../contenu/quatrieme/espagnol/futuro/flashcards.json';
-import fiche398 from './../../contenu/quatrieme/espagnol/civilizacion-ciudades/fiche.md';
 import qcm398 from './../../contenu/quatrieme/espagnol/civilizacion-ciudades/qcm.json';
-import exercice398 from './../../contenu/quatrieme/espagnol/civilizacion-ciudades/exercice.json';
 import flash398 from './../../contenu/quatrieme/espagnol/civilizacion-ciudades/flashcards.json';
-import fiche399 from './../../contenu/quatrieme/espagnol/civilizacion-argentina/fiche.md';
 import qcm399 from './../../contenu/quatrieme/espagnol/civilizacion-argentina/qcm.json';
-import exercice399 from './../../contenu/quatrieme/espagnol/civilizacion-argentina/exercice.json';
 import flash399 from './../../contenu/quatrieme/espagnol/civilizacion-argentina/flashcards.json';
-import fiche400 from './../../contenu/quatrieme/francais/propositions-subordonnees/fiche.md';
 import qcm400 from './../../contenu/quatrieme/francais/propositions-subordonnees/qcm.json';
-import exercice400 from './../../contenu/quatrieme/francais/propositions-subordonnees/exercice.json';
 import flash400 from './../../contenu/quatrieme/francais/propositions-subordonnees/flashcards.json';
-import fiche401 from './../../contenu/quatrieme/francais/voix-active-passive/fiche.md';
 import qcm401 from './../../contenu/quatrieme/francais/voix-active-passive/qcm.json';
-import exercice401 from './../../contenu/quatrieme/francais/voix-active-passive/exercice.json';
 import flash401 from './../../contenu/quatrieme/francais/voix-active-passive/flashcards.json';
-import fiche402 from './../../contenu/quatrieme/francais/valeurs-des-temps/fiche.md';
 import qcm402 from './../../contenu/quatrieme/francais/valeurs-des-temps/qcm.json';
-import exercice402 from './../../contenu/quatrieme/francais/valeurs-des-temps/exercice.json';
 import flash402 from './../../contenu/quatrieme/francais/valeurs-des-temps/flashcards.json';
-import fiche403 from './../../contenu/quatrieme/francais/present-subjonctif/fiche.md';
 import qcm403 from './../../contenu/quatrieme/francais/present-subjonctif/qcm.json';
-import exercice403 from './../../contenu/quatrieme/francais/present-subjonctif/exercice.json';
 import flash403 from './../../contenu/quatrieme/francais/present-subjonctif/flashcards.json';
-import fiche404 from './../../contenu/quatrieme/francais/figures-de-style/fiche.md';
 import qcm404 from './../../contenu/quatrieme/francais/figures-de-style/qcm.json';
-import exercice404 from './../../contenu/quatrieme/francais/figures-de-style/exercice.json';
 import flash404 from './../../contenu/quatrieme/francais/figures-de-style/flashcards.json';
-import fiche405 from './../../contenu/quatrieme/francais/recit-realiste-fantastique/fiche.md';
 import qcm405 from './../../contenu/quatrieme/francais/recit-realiste-fantastique/qcm.json';
-import exercice405 from './../../contenu/quatrieme/francais/recit-realiste-fantastique/exercice.json';
 import flash405 from './../../contenu/quatrieme/francais/recit-realiste-fantastique/flashcards.json';
-import fiche406 from './../../contenu/quatrieme/francais/la-lettre/fiche.md';
 import qcm406 from './../../contenu/quatrieme/francais/la-lettre/qcm.json';
-import exercice406 from './../../contenu/quatrieme/francais/la-lettre/exercice.json';
 import flash406 from './../../contenu/quatrieme/francais/la-lettre/flashcards.json';
-import fiche407 from './../../contenu/quatrieme/hist-geo/commerce-traite-lumieres/fiche.md';
 import qcm407 from './../../contenu/quatrieme/hist-geo/commerce-traite-lumieres/qcm.json';
-import exercice407 from './../../contenu/quatrieme/hist-geo/commerce-traite-lumieres/exercice.json';
 import flash407 from './../../contenu/quatrieme/hist-geo/commerce-traite-lumieres/flashcards.json';
-import fiche408 from './../../contenu/quatrieme/hist-geo/revolution-francaise-empire/fiche.md';
 import qcm408 from './../../contenu/quatrieme/hist-geo/revolution-francaise-empire/qcm.json';
-import exercice408 from './../../contenu/quatrieme/hist-geo/revolution-francaise-empire/exercice.json';
 import flash408 from './../../contenu/quatrieme/hist-geo/revolution-francaise-empire/flashcards.json';
-import fiche409 from './../../contenu/quatrieme/hist-geo/revolution-industrielle/fiche.md';
 import qcm409 from './../../contenu/quatrieme/hist-geo/revolution-industrielle/qcm.json';
-import exercice409 from './../../contenu/quatrieme/hist-geo/revolution-industrielle/exercice.json';
 import flash409 from './../../contenu/quatrieme/hist-geo/revolution-industrielle/flashcards.json';
-import fiche410 from './../../contenu/quatrieme/hist-geo/conquetes-colonisation/fiche.md';
 import qcm410 from './../../contenu/quatrieme/hist-geo/conquetes-colonisation/qcm.json';
-import exercice410 from './../../contenu/quatrieme/hist-geo/conquetes-colonisation/exercice.json';
 import flash410 from './../../contenu/quatrieme/hist-geo/conquetes-colonisation/flashcards.json';
-import fiche411 from './../../contenu/quatrieme/hist-geo/urbanisation-du-monde/fiche.md';
 import qcm411 from './../../contenu/quatrieme/hist-geo/urbanisation-du-monde/qcm.json';
-import exercice411 from './../../contenu/quatrieme/hist-geo/urbanisation-du-monde/exercice.json';
 import flash411 from './../../contenu/quatrieme/hist-geo/urbanisation-du-monde/flashcards.json';
-import fiche412 from './../../contenu/quatrieme/hist-geo/mobilites-humaines/fiche.md';
 import qcm412 from './../../contenu/quatrieme/hist-geo/mobilites-humaines/qcm.json';
-import exercice412 from './../../contenu/quatrieme/hist-geo/mobilites-humaines/exercice.json';
 import flash412 from './../../contenu/quatrieme/hist-geo/mobilites-humaines/flashcards.json';
-import fiche413 from './../../contenu/quatrieme/hist-geo/emc-libertes-et-loi/fiche.md';
 import qcm413 from './../../contenu/quatrieme/hist-geo/emc-libertes-et-loi/qcm.json';
-import exercice413 from './../../contenu/quatrieme/hist-geo/emc-libertes-et-loi/exercice.json';
 import flash413 from './../../contenu/quatrieme/hist-geo/emc-libertes-et-loi/flashcards.json';
-import fiche414 from './../../contenu/quatrieme/italien/molto-troppo/fiche.md';
 import qcm414 from './../../contenu/quatrieme/italien/molto-troppo/qcm.json';
-import exercice414 from './../../contenu/quatrieme/italien/molto-troppo/exercice.json';
 import flash414 from './../../contenu/quatrieme/italien/molto-troppo/flashcards.json';
-import fiche415 from './../../contenu/quatrieme/italien/comparativi-superlativi/fiche.md';
 import qcm415 from './../../contenu/quatrieme/italien/comparativi-superlativi/qcm.json';
-import exercice415 from './../../contenu/quatrieme/italien/comparativi-superlativi/exercice.json';
 import flash415 from './../../contenu/quatrieme/italien/comparativi-superlativi/flashcards.json';
-import fiche416 from './../../contenu/quatrieme/italien/stare-gerundio/fiche.md';
 import qcm416 from './../../contenu/quatrieme/italien/stare-gerundio/qcm.json';
-import exercice416 from './../../contenu/quatrieme/italien/stare-gerundio/exercice.json';
 import flash416 from './../../contenu/quatrieme/italien/stare-gerundio/flashcards.json';
-import fiche417 from './../../contenu/quatrieme/italien/vocabolario-sport-tempo-libero/fiche.md';
 import qcm417 from './../../contenu/quatrieme/italien/vocabolario-sport-tempo-libero/qcm.json';
-import exercice417 from './../../contenu/quatrieme/italien/vocabolario-sport-tempo-libero/exercice.json';
 import flash417 from './../../contenu/quatrieme/italien/vocabolario-sport-tempo-libero/flashcards.json';
-import fiche418 from './../../contenu/quatrieme/italien/passato-prossimo/fiche.md';
 import qcm418 from './../../contenu/quatrieme/italien/passato-prossimo/qcm.json';
-import exercice418 from './../../contenu/quatrieme/italien/passato-prossimo/exercice.json';
 import flash418 from './../../contenu/quatrieme/italien/passato-prossimo/flashcards.json';
-import fiche419 from './../../contenu/quatrieme/italien/imperfetto/fiche.md';
 import qcm419 from './../../contenu/quatrieme/italien/imperfetto/qcm.json';
-import exercice419 from './../../contenu/quatrieme/italien/imperfetto/exercice.json';
 import flash419 from './../../contenu/quatrieme/italien/imperfetto/flashcards.json';
-import fiche420 from './../../contenu/quatrieme/italien/vocabolario-salute-corpo/fiche.md';
 import qcm420 from './../../contenu/quatrieme/italien/vocabolario-salute-corpo/qcm.json';
-import exercice420 from './../../contenu/quatrieme/italien/vocabolario-salute-corpo/exercice.json';
 import flash420 from './../../contenu/quatrieme/italien/vocabolario-salute-corpo/flashcards.json';
-import fiche421 from './../../contenu/quatrieme/italien/futuro/fiche.md';
 import qcm421 from './../../contenu/quatrieme/italien/futuro/qcm.json';
-import exercice421 from './../../contenu/quatrieme/italien/futuro/exercice.json';
 import flash421 from './../../contenu/quatrieme/italien/futuro/flashcards.json';
-import fiche422 from './../../contenu/quatrieme/italien/civilta-firenze-venezia/fiche.md';
 import qcm422 from './../../contenu/quatrieme/italien/civilta-firenze-venezia/qcm.json';
-import exercice422 from './../../contenu/quatrieme/italien/civilta-firenze-venezia/exercice.json';
 import flash422 from './../../contenu/quatrieme/italien/civilta-firenze-venezia/flashcards.json';
-import fiche423 from './../../contenu/quatrieme/italien/civilta-cucina-tradizioni/fiche.md';
 import qcm423 from './../../contenu/quatrieme/italien/civilta-cucina-tradizioni/qcm.json';
-import exercice423 from './../../contenu/quatrieme/italien/civilta-cucina-tradizioni/exercice.json';
 import flash423 from './../../contenu/quatrieme/italien/civilta-cucina-tradizioni/flashcards.json';
-import fiche424 from './../../contenu/quatrieme/langues-anciennes/latin-declinaisons/fiche.md';
 import qcm424 from './../../contenu/quatrieme/langues-anciennes/latin-declinaisons/qcm.json';
-import exercice424 from './../../contenu/quatrieme/langues-anciennes/latin-declinaisons/exercice.json';
 import flash424 from './../../contenu/quatrieme/langues-anciennes/latin-declinaisons/flashcards.json';
-import fiche425 from './../../contenu/quatrieme/langues-anciennes/latin-temps-passe/fiche.md';
 import qcm425 from './../../contenu/quatrieme/langues-anciennes/latin-temps-passe/qcm.json';
-import exercice425 from './../../contenu/quatrieme/langues-anciennes/latin-temps-passe/exercice.json';
 import flash425 from './../../contenu/quatrieme/langues-anciennes/latin-temps-passe/flashcards.json';
-import fiche426 from './../../contenu/quatrieme/maths/operations-nombres-relatifs/fiche.md';
 import qcm426 from './../../contenu/quatrieme/maths/operations-nombres-relatifs/qcm.json';
-import exercice426 from './../../contenu/quatrieme/maths/operations-nombres-relatifs/exercice.json';
 import flash426 from './../../contenu/quatrieme/maths/operations-nombres-relatifs/flashcards.json';
-import fiche427 from './../../contenu/quatrieme/maths/nombres-rationnels/fiche.md';
 import qcm427 from './../../contenu/quatrieme/maths/nombres-rationnels/qcm.json';
-import exercice427 from './../../contenu/quatrieme/maths/nombres-rationnels/exercice.json';
 import flash427 from './../../contenu/quatrieme/maths/nombres-rationnels/flashcards.json';
-import fiche428 from './../../contenu/quatrieme/maths/puissances/fiche.md';
 import qcm428 from './../../contenu/quatrieme/maths/puissances/qcm.json';
-import exercice428 from './../../contenu/quatrieme/maths/puissances/exercice.json';
 import flash428 from './../../contenu/quatrieme/maths/puissances/flashcards.json';
-import fiche429 from './../../contenu/quatrieme/maths/calcul-litteral/fiche.md';
 import qcm429 from './../../contenu/quatrieme/maths/calcul-litteral/qcm.json';
-import exercice429 from './../../contenu/quatrieme/maths/calcul-litteral/exercice.json';
 import flash429 from './../../contenu/quatrieme/maths/calcul-litteral/flashcards.json';
-import fiche430 from './../../contenu/quatrieme/maths/reperage/fiche.md';
 import qcm430 from './../../contenu/quatrieme/maths/reperage/qcm.json';
-import exercice430 from './../../contenu/quatrieme/maths/reperage/exercice.json';
 import flash430 from './../../contenu/quatrieme/maths/reperage/flashcards.json';
-import fiche431 from './../../contenu/quatrieme/maths/proportionnalite/fiche.md';
 import qcm431 from './../../contenu/quatrieme/maths/proportionnalite/qcm.json';
-import exercice431 from './../../contenu/quatrieme/maths/proportionnalite/exercice.json';
 import flash431 from './../../contenu/quatrieme/maths/proportionnalite/flashcards.json';
-import fiche432 from './../../contenu/quatrieme/maths/racine-carree/fiche.md';
 import qcm432 from './../../contenu/quatrieme/maths/racine-carree/qcm.json';
-import exercice432 from './../../contenu/quatrieme/maths/racine-carree/exercice.json';
 import flash432 from './../../contenu/quatrieme/maths/racine-carree/flashcards.json';
-import fiche433 from './../../contenu/quatrieme/maths/triangles/fiche.md';
 import qcm433 from './../../contenu/quatrieme/maths/triangles/qcm.json';
-import exercice433 from './../../contenu/quatrieme/maths/triangles/exercice.json';
 import flash433 from './../../contenu/quatrieme/maths/triangles/flashcards.json';
-import fiche434 from './../../contenu/quatrieme/maths/parallelogrammes-translations/fiche.md';
 import qcm434 from './../../contenu/quatrieme/maths/parallelogrammes-translations/qcm.json';
-import exercice434 from './../../contenu/quatrieme/maths/parallelogrammes-translations/exercice.json';
 import flash434 from './../../contenu/quatrieme/maths/parallelogrammes-translations/flashcards.json';
-import fiche435 from './../../contenu/quatrieme/maths/transformations/fiche.md';
 import qcm435 from './../../contenu/quatrieme/maths/transformations/qcm.json';
-import exercice435 from './../../contenu/quatrieme/maths/transformations/exercice.json';
 import flash435 from './../../contenu/quatrieme/maths/transformations/flashcards.json';
-import fiche436 from './../../contenu/quatrieme/maths/representation-espace/fiche.md';
 import qcm436 from './../../contenu/quatrieme/maths/representation-espace/qcm.json';
-import exercice436 from './../../contenu/quatrieme/maths/representation-espace/exercice.json';
 import flash436 from './../../contenu/quatrieme/maths/representation-espace/flashcards.json';
-import fiche437 from './../../contenu/quatrieme/maths/fonctions/fiche.md';
 import qcm437 from './../../contenu/quatrieme/maths/fonctions/qcm.json';
-import exercice437 from './../../contenu/quatrieme/maths/fonctions/exercice.json';
 import flash437 from './../../contenu/quatrieme/maths/fonctions/flashcards.json';
-import fiche438 from './../../contenu/quatrieme/maths/statistiques/fiche.md';
 import qcm438 from './../../contenu/quatrieme/maths/statistiques/qcm.json';
-import exercice438 from './../../contenu/quatrieme/maths/statistiques/exercice.json';
 import flash438 from './../../contenu/quatrieme/maths/statistiques/flashcards.json';
-import fiche439 from './../../contenu/quatrieme/maths/probabilites/fiche.md';
 import qcm439 from './../../contenu/quatrieme/maths/probabilites/qcm.json';
-import exercice439 from './../../contenu/quatrieme/maths/probabilites/exercice.json';
 import flash439 from './../../contenu/quatrieme/maths/probabilites/flashcards.json';
-import fiche440 from './../../contenu/quatrieme/maths/pensee-informatique/fiche.md';
 import qcm440 from './../../contenu/quatrieme/maths/pensee-informatique/qcm.json';
-import exercice440 from './../../contenu/quatrieme/maths/pensee-informatique/exercice.json';
 import flash440 from './../../contenu/quatrieme/maths/pensee-informatique/flashcards.json';
-import fiche441 from './../../contenu/quatrieme/physique-chimie/organisation-matiere/fiche.md';
 import qcm441 from './../../contenu/quatrieme/physique-chimie/organisation-matiere/qcm.json';
-import exercice441 from './../../contenu/quatrieme/physique-chimie/organisation-matiere/exercice.json';
 import flash441 from './../../contenu/quatrieme/physique-chimie/organisation-matiere/flashcards.json';
-import fiche442 from './../../contenu/quatrieme/physique-chimie/transformation-conservation-masse/fiche.md';
 import qcm442 from './../../contenu/quatrieme/physique-chimie/transformation-conservation-masse/qcm.json';
-import exercice442 from './../../contenu/quatrieme/physique-chimie/transformation-conservation-masse/exercice.json';
 import flash442 from './../../contenu/quatrieme/physique-chimie/transformation-conservation-masse/flashcards.json';
-import fiche443 from './../../contenu/quatrieme/physique-chimie/mouvement-vitesse/fiche.md';
 import qcm443 from './../../contenu/quatrieme/physique-chimie/mouvement-vitesse/qcm.json';
-import exercice443 from './../../contenu/quatrieme/physique-chimie/mouvement-vitesse/exercice.json';
 import flash443 from './../../contenu/quatrieme/physique-chimie/mouvement-vitesse/flashcards.json';
-import fiche444 from './../../contenu/quatrieme/physique-chimie/interactions-forces/fiche.md';
 import qcm444 from './../../contenu/quatrieme/physique-chimie/interactions-forces/qcm.json';
-import exercice444 from './../../contenu/quatrieme/physique-chimie/interactions-forces/exercice.json';
 import flash444 from './../../contenu/quatrieme/physique-chimie/interactions-forces/flashcards.json';
-import fiche445 from './../../contenu/quatrieme/physique-chimie/puissance-energie/fiche.md';
 import qcm445 from './../../contenu/quatrieme/physique-chimie/puissance-energie/qcm.json';
-import exercice445 from './../../contenu/quatrieme/physique-chimie/puissance-energie/exercice.json';
 import flash445 from './../../contenu/quatrieme/physique-chimie/puissance-energie/flashcards.json';
-import fiche446 from './../../contenu/quatrieme/physique-chimie/propagation-signal/fiche.md';
 import qcm446 from './../../contenu/quatrieme/physique-chimie/propagation-signal/qcm.json';
-import exercice446 from './../../contenu/quatrieme/physique-chimie/propagation-signal/exercice.json';
 import flash446 from './../../contenu/quatrieme/physique-chimie/propagation-signal/flashcards.json';
-import fiche447 from './../../contenu/quatrieme/svt/seismes-et-volcans/fiche.md';
 import qcm447 from './../../contenu/quatrieme/svt/seismes-et-volcans/qcm.json';
-import exercice447 from './../../contenu/quatrieme/svt/seismes-et-volcans/exercice.json';
 import flash447 from './../../contenu/quatrieme/svt/seismes-et-volcans/flashcards.json';
-import fiche448 from './../../contenu/quatrieme/svt/tectonique-des-plaques/fiche.md';
 import qcm448 from './../../contenu/quatrieme/svt/tectonique-des-plaques/qcm.json';
-import exercice448 from './../../contenu/quatrieme/svt/tectonique-des-plaques/exercice.json';
 import flash448 from './../../contenu/quatrieme/svt/tectonique-des-plaques/flashcards.json';
-import fiche449 from './../../contenu/quatrieme/svt/energie-dans-lorganisme/fiche.md';
 import qcm449 from './../../contenu/quatrieme/svt/energie-dans-lorganisme/qcm.json';
-import exercice449 from './../../contenu/quatrieme/svt/energie-dans-lorganisme/exercice.json';
 import flash449 from './../../contenu/quatrieme/svt/energie-dans-lorganisme/flashcards.json';
-import fiche450 from './../../contenu/quatrieme/svt/systeme-nerveux-et-comportement/fiche.md';
 import qcm450 from './../../contenu/quatrieme/svt/systeme-nerveux-et-comportement/qcm.json';
-import exercice450 from './../../contenu/quatrieme/svt/systeme-nerveux-et-comportement/exercice.json';
 import flash450 from './../../contenu/quatrieme/svt/systeme-nerveux-et-comportement/flashcards.json';
-import fiche451 from './../../contenu/quatrieme/svt/reproduction-et-transmission-de-la-vie/fiche.md';
 import qcm451 from './../../contenu/quatrieme/svt/reproduction-et-transmission-de-la-vie/qcm.json';
-import exercice451 from './../../contenu/quatrieme/svt/reproduction-et-transmission-de-la-vie/exercice.json';
 import flash451 from './../../contenu/quatrieme/svt/reproduction-et-transmission-de-la-vie/flashcards.json';
-import fiche452 from './../../contenu/quatrieme/techno/chaine-dinformation/fiche.md';
 import qcm452 from './../../contenu/quatrieme/techno/chaine-dinformation/qcm.json';
-import exercice452 from './../../contenu/quatrieme/techno/chaine-dinformation/exercice.json';
 import flash452 from './../../contenu/quatrieme/techno/chaine-dinformation/flashcards.json';
-import fiche453 from './../../contenu/quatrieme/techno/modelisation-volumique/fiche.md';
 import qcm453 from './../../contenu/quatrieme/techno/modelisation-volumique/qcm.json';
-import exercice453 from './../../contenu/quatrieme/techno/modelisation-volumique/exercice.json';
 import flash453 from './../../contenu/quatrieme/techno/modelisation-volumique/flashcards.json';
-import fiche454 from './../../contenu/quatrieme/techno/reseaux-informatiques/fiche.md';
 import qcm454 from './../../contenu/quatrieme/techno/reseaux-informatiques/qcm.json';
-import exercice454 from './../../contenu/quatrieme/techno/reseaux-informatiques/exercice.json';
 import flash454 from './../../contenu/quatrieme/techno/reseaux-informatiques/flashcards.json';
-import fiche455 from './../../contenu/quatrieme/techno/programmation-evenementielle/fiche.md';
 import qcm455 from './../../contenu/quatrieme/techno/programmation-evenementielle/qcm.json';
-import exercice455 from './../../contenu/quatrieme/techno/programmation-evenementielle/exercice.json';
 import flash455 from './../../contenu/quatrieme/techno/programmation-evenementielle/flashcards.json';
-import fiche456 from './../../contenu/quatrieme/techno/confort-et-domotique/fiche.md';
 import qcm456 from './../../contenu/quatrieme/techno/confort-et-domotique/qcm.json';
-import exercice456 from './../../contenu/quatrieme/techno/confort-et-domotique/exercice.json';
 import flash456 from './../../contenu/quatrieme/techno/confort-et-domotique/flashcards.json';
-import fiche457 from './../../contenu/troisieme/allemand/phonetik-betonung-umlaute/fiche.md';
 import qcm457 from './../../contenu/troisieme/allemand/phonetik-betonung-umlaute/qcm.json';
-import exercice457 from './../../contenu/troisieme/allemand/phonetik-betonung-umlaute/exercice.json';
 import flash457 from './../../contenu/troisieme/allemand/phonetik-betonung-umlaute/flashcards.json';
-import fiche458 from './../../contenu/troisieme/allemand/praepositionen-zeit/fiche.md';
 import qcm458 from './../../contenu/troisieme/allemand/praepositionen-zeit/qcm.json';
-import exercice458 from './../../contenu/troisieme/allemand/praepositionen-zeit/exercice.json';
 import flash458 from './../../contenu/troisieme/allemand/praepositionen-zeit/flashcards.json';
-import fiche459 from './../../contenu/troisieme/allemand/wechselpraepositionen-vertiefung/fiche.md';
 import qcm459 from './../../contenu/troisieme/allemand/wechselpraepositionen-vertiefung/qcm.json';
-import exercice459 from './../../contenu/troisieme/allemand/wechselpraepositionen-vertiefung/exercice.json';
 import flash459 from './../../contenu/troisieme/allemand/wechselpraepositionen-vertiefung/flashcards.json';
-import fiche460 from './../../contenu/troisieme/allemand/praeteritum/fiche.md';
 import qcm460 from './../../contenu/troisieme/allemand/praeteritum/qcm.json';
-import exercice460 from './../../contenu/troisieme/allemand/praeteritum/exercice.json';
 import flash460 from './../../contenu/troisieme/allemand/praeteritum/flashcards.json';
-import fiche461 from './../../contenu/troisieme/allemand/wortschatz-technik-internet/fiche.md';
 import qcm461 from './../../contenu/troisieme/allemand/wortschatz-technik-internet/qcm.json';
-import exercice461 from './../../contenu/troisieme/allemand/wortschatz-technik-internet/exercice.json';
 import flash461 from './../../contenu/troisieme/allemand/wortschatz-technik-internet/flashcards.json';
-import fiche462 from './../../contenu/troisieme/allemand/nebensaetze-weil-dass/fiche.md';
 import qcm462 from './../../contenu/troisieme/allemand/nebensaetze-weil-dass/qcm.json';
-import exercice462 from './../../contenu/troisieme/allemand/nebensaetze-weil-dass/exercice.json';
 import flash462 from './../../contenu/troisieme/allemand/nebensaetze-weil-dass/flashcards.json';
-import fiche463 from './../../contenu/troisieme/allemand/wortstellung-nebensatz/fiche.md';
 import qcm463 from './../../contenu/troisieme/allemand/wortstellung-nebensatz/qcm.json';
-import exercice463 from './../../contenu/troisieme/allemand/wortstellung-nebensatz/exercice.json';
 import flash463 from './../../contenu/troisieme/allemand/wortstellung-nebensatz/flashcards.json';
-import fiche464 from './../../contenu/troisieme/allemand/futur/fiche.md';
 import qcm464 from './../../contenu/troisieme/allemand/futur/qcm.json';
-import exercice464 from './../../contenu/troisieme/allemand/futur/exercice.json';
 import flash464 from './../../contenu/troisieme/allemand/futur/flashcards.json';
-import fiche465 from './../../contenu/troisieme/allemand/wortschatz-umwelt/fiche.md';
 import qcm465 from './../../contenu/troisieme/allemand/wortschatz-umwelt/qcm.json';
-import exercice465 from './../../contenu/troisieme/allemand/wortschatz-umwelt/exercice.json';
 import flash465 from './../../contenu/troisieme/allemand/wortschatz-umwelt/flashcards.json';
-import fiche466 from './../../contenu/troisieme/allemand/landeskunde-persoenlichkeiten/fiche.md';
 import qcm466 from './../../contenu/troisieme/allemand/landeskunde-persoenlichkeiten/qcm.json';
-import exercice466 from './../../contenu/troisieme/allemand/landeskunde-persoenlichkeiten/exercice.json';
 import flash466 from './../../contenu/troisieme/allemand/landeskunde-persoenlichkeiten/flashcards.json';
-import fiche467 from './../../contenu/troisieme/allemand/landeskunde-deutschsprachige-welt/fiche.md';
 import qcm467 from './../../contenu/troisieme/allemand/landeskunde-deutschsprachige-welt/qcm.json';
-import exercice467 from './../../contenu/troisieme/allemand/landeskunde-deutschsprachige-welt/exercice.json';
 import flash467 from './../../contenu/troisieme/allemand/landeskunde-deutschsprachige-welt/flashcards.json';
-import fiche468 from './../../contenu/troisieme/anglais/phonetique-accentuation/fiche.md';
 import qcm468 from './../../contenu/troisieme/anglais/phonetique-accentuation/qcm.json';
-import exercice468 from './../../contenu/troisieme/anglais/phonetique-accentuation/exercice.json';
 import flash468 from './../../contenu/troisieme/anglais/phonetique-accentuation/flashcards.json';
-import fiche469 from './../../contenu/troisieme/anglais/present-perfect-since-for/fiche.md';
 import qcm469 from './../../contenu/troisieme/anglais/present-perfect-since-for/qcm.json';
-import exercice469 from './../../contenu/troisieme/anglais/present-perfect-since-for/exercice.json';
 import flash469 from './../../contenu/troisieme/anglais/present-perfect-since-for/flashcards.json';
-import fiche470 from './../../contenu/troisieme/anglais/preterit-continu/fiche.md';
 import qcm470 from './../../contenu/troisieme/anglais/preterit-continu/qcm.json';
-import exercice470 from './../../contenu/troisieme/anglais/preterit-continu/exercice.json';
 import flash470 from './../../contenu/troisieme/anglais/preterit-continu/flashcards.json';
-import fiche471 from './../../contenu/troisieme/anglais/question-tags/fiche.md';
 import qcm471 from './../../contenu/troisieme/anglais/question-tags/qcm.json';
-import exercice471 from './../../contenu/troisieme/anglais/question-tags/exercice.json';
 import flash471 from './../../contenu/troisieme/anglais/question-tags/flashcards.json';
-import fiche472 from './../../contenu/troisieme/anglais/vocabulaire-technologie/fiche.md';
 import qcm472 from './../../contenu/troisieme/anglais/vocabulaire-technologie/qcm.json';
-import exercice472 from './../../contenu/troisieme/anglais/vocabulaire-technologie/exercice.json';
 import flash472 from './../../contenu/troisieme/anglais/vocabulaire-technologie/flashcards.json';
-import fiche473 from './../../contenu/troisieme/anglais/modaux-deduction-conseil/fiche.md';
 import qcm473 from './../../contenu/troisieme/anglais/modaux-deduction-conseil/qcm.json';
-import exercice473 from './../../contenu/troisieme/anglais/modaux-deduction-conseil/exercice.json';
 import flash473 from './../../contenu/troisieme/anglais/modaux-deduction-conseil/flashcards.json';
-import fiche474 from './../../contenu/troisieme/anglais/voix-passive/fiche.md';
 import qcm474 from './../../contenu/troisieme/anglais/voix-passive/qcm.json';
-import exercice474 from './../../contenu/troisieme/anglais/voix-passive/exercice.json';
 import flash474 from './../../contenu/troisieme/anglais/voix-passive/flashcards.json';
-import fiche475 from './../../contenu/troisieme/anglais/conditionnel-if/fiche.md';
 import qcm475 from './../../contenu/troisieme/anglais/conditionnel-if/qcm.json';
-import exercice475 from './../../contenu/troisieme/anglais/conditionnel-if/exercice.json';
 import flash475 from './../../contenu/troisieme/anglais/conditionnel-if/flashcards.json';
-import fiche476 from './../../contenu/troisieme/anglais/vocabulaire-environnement/fiche.md';
 import qcm476 from './../../contenu/troisieme/anglais/vocabulaire-environnement/qcm.json';
-import exercice476 from './../../contenu/troisieme/anglais/vocabulaire-environnement/exercice.json';
 import flash476 from './../../contenu/troisieme/anglais/vocabulaire-environnement/flashcards.json';
-import fiche477 from './../../contenu/troisieme/anglais/civilisation-canada/fiche.md';
 import qcm477 from './../../contenu/troisieme/anglais/civilisation-canada/qcm.json';
-import exercice477 from './../../contenu/troisieme/anglais/civilisation-canada/exercice.json';
 import flash477 from './../../contenu/troisieme/anglais/civilisation-canada/flashcards.json';
-import fiche478 from './../../contenu/troisieme/anglais/civilisation-monde-anglophone/fiche.md';
 import qcm478 from './../../contenu/troisieme/anglais/civilisation-monde-anglophone/qcm.json';
-import exercice478 from './../../contenu/troisieme/anglais/civilisation-monde-anglophone/exercice.json';
 import flash478 from './../../contenu/troisieme/anglais/civilisation-monde-anglophone/flashcards.json';
-import fiche479 from './../../contenu/troisieme/arts/art-moderne/fiche.md';
 import qcm479 from './../../contenu/troisieme/arts/art-moderne/qcm.json';
-import exercice479 from './../../contenu/troisieme/arts/art-moderne/exercice.json';
 import flash479 from './../../contenu/troisieme/arts/art-moderne/flashcards.json';
-import fiche480 from './../../contenu/troisieme/arts/art-contemporain/fiche.md';
 import qcm480 from './../../contenu/troisieme/arts/art-contemporain/qcm.json';
-import exercice480 from './../../contenu/troisieme/arts/art-contemporain/exercice.json';
 import flash480 from './../../contenu/troisieme/arts/art-contemporain/flashcards.json';
-import fiche481 from './../../contenu/troisieme/espagnol/fonetica-acentuacion/fiche.md';
 import qcm481 from './../../contenu/troisieme/espagnol/fonetica-acentuacion/qcm.json';
-import exercice481 from './../../contenu/troisieme/espagnol/fonetica-acentuacion/exercice.json';
 import flash481 from './../../contenu/troisieme/espagnol/fonetica-acentuacion/flashcards.json';
-import fiche482 from './../../contenu/troisieme/espagnol/preposiciones/fiche.md';
 import qcm482 from './../../contenu/troisieme/espagnol/preposiciones/qcm.json';
-import exercice482 from './../../contenu/troisieme/espagnol/preposiciones/exercice.json';
 import flash482 from './../../contenu/troisieme/espagnol/preposiciones/flashcards.json';
-import fiche483 from './../../contenu/troisieme/espagnol/indefinido-irregular/fiche.md';
 import qcm483 from './../../contenu/troisieme/espagnol/indefinido-irregular/qcm.json';
-import exercice483 from './../../contenu/troisieme/espagnol/indefinido-irregular/exercice.json';
 import flash483 from './../../contenu/troisieme/espagnol/indefinido-irregular/flashcards.json';
-import fiche484 from './../../contenu/troisieme/espagnol/imperfecto-indefinido/fiche.md';
 import qcm484 from './../../contenu/troisieme/espagnol/imperfecto-indefinido/qcm.json';
-import exercice484 from './../../contenu/troisieme/espagnol/imperfecto-indefinido/exercice.json';
 import flash484 from './../../contenu/troisieme/espagnol/imperfecto-indefinido/flashcards.json';
-import fiche485 from './../../contenu/troisieme/espagnol/vocabulario-tecnologia/fiche.md';
 import qcm485 from './../../contenu/troisieme/espagnol/vocabulario-tecnologia/qcm.json';
-import exercice485 from './../../contenu/troisieme/espagnol/vocabulario-tecnologia/exercice.json';
 import flash485 from './../../contenu/troisieme/espagnol/vocabulario-tecnologia/flashcards.json';
-import fiche486 from './../../contenu/troisieme/espagnol/pronombres-cod-coi/fiche.md';
 import qcm486 from './../../contenu/troisieme/espagnol/pronombres-cod-coi/qcm.json';
-import exercice486 from './../../contenu/troisieme/espagnol/pronombres-cod-coi/exercice.json';
 import flash486 from './../../contenu/troisieme/espagnol/pronombres-cod-coi/flashcards.json';
-import fiche487 from './../../contenu/troisieme/espagnol/imperativo/fiche.md';
 import qcm487 from './../../contenu/troisieme/espagnol/imperativo/qcm.json';
-import exercice487 from './../../contenu/troisieme/espagnol/imperativo/exercice.json';
 import flash487 from './../../contenu/troisieme/espagnol/imperativo/flashcards.json';
-import fiche488 from './../../contenu/troisieme/espagnol/por-para/fiche.md';
 import qcm488 from './../../contenu/troisieme/espagnol/por-para/qcm.json';
-import exercice488 from './../../contenu/troisieme/espagnol/por-para/exercice.json';
 import flash488 from './../../contenu/troisieme/espagnol/por-para/flashcards.json';
-import fiche489 from './../../contenu/troisieme/espagnol/vocabulario-medioambiente/fiche.md';
 import qcm489 from './../../contenu/troisieme/espagnol/vocabulario-medioambiente/qcm.json';
-import exercice489 from './../../contenu/troisieme/espagnol/vocabulario-medioambiente/exercice.json';
 import flash489 from './../../contenu/troisieme/espagnol/vocabulario-medioambiente/flashcards.json';
-import fiche490 from './../../contenu/troisieme/espagnol/civilizacion-fiestas-tradiciones/fiche.md';
 import qcm490 from './../../contenu/troisieme/espagnol/civilizacion-fiestas-tradiciones/qcm.json';
-import exercice490 from './../../contenu/troisieme/espagnol/civilizacion-fiestas-tradiciones/exercice.json';
 import flash490 from './../../contenu/troisieme/espagnol/civilizacion-fiestas-tradiciones/flashcards.json';
-import fiche491 from './../../contenu/troisieme/espagnol/civilizacion-mundo-hispanohablante/fiche.md';
 import qcm491 from './../../contenu/troisieme/espagnol/civilizacion-mundo-hispanohablante/qcm.json';
-import exercice491 from './../../contenu/troisieme/espagnol/civilizacion-mundo-hispanohablante/exercice.json';
 import flash491 from './../../contenu/troisieme/espagnol/civilizacion-mundo-hispanohablante/flashcards.json';
-import fiche492 from './../../contenu/troisieme/francais/phrase-complexe/fiche.md';
 import qcm492 from './../../contenu/troisieme/francais/phrase-complexe/qcm.json';
-import exercice492 from './../../contenu/troisieme/francais/phrase-complexe/exercice.json';
 import flash492 from './../../contenu/troisieme/francais/phrase-complexe/flashcards.json';
-import fiche493 from './../../contenu/troisieme/francais/connecteurs-logiques/fiche.md';
 import qcm493 from './../../contenu/troisieme/francais/connecteurs-logiques/qcm.json';
-import exercice493 from './../../contenu/troisieme/francais/connecteurs-logiques/exercice.json';
 import flash493 from './../../contenu/troisieme/francais/connecteurs-logiques/flashcards.json';
-import fiche494 from './../../contenu/troisieme/francais/modes-et-valeurs/fiche.md';
 import qcm494 from './../../contenu/troisieme/francais/modes-et-valeurs/qcm.json';
-import exercice494 from './../../contenu/troisieme/francais/modes-et-valeurs/exercice.json';
 import flash494 from './../../contenu/troisieme/francais/modes-et-valeurs/flashcards.json';
-import fiche495 from './../../contenu/troisieme/francais/lexique-melioratif-pejoratif/fiche.md';
 import qcm495 from './../../contenu/troisieme/francais/lexique-melioratif-pejoratif/qcm.json';
-import exercice495 from './../../contenu/troisieme/francais/lexique-melioratif-pejoratif/exercice.json';
 import flash495 from './../../contenu/troisieme/francais/lexique-melioratif-pejoratif/flashcards.json';
-import fiche496 from './../../contenu/troisieme/francais/autobiographie/fiche.md';
 import qcm496 from './../../contenu/troisieme/francais/autobiographie/qcm.json';
-import exercice496 from './../../contenu/troisieme/francais/autobiographie/exercice.json';
 import flash496 from './../../contenu/troisieme/francais/autobiographie/flashcards.json';
-import fiche497 from './../../contenu/troisieme/francais/argumentation/fiche.md';
 import qcm497 from './../../contenu/troisieme/francais/argumentation/qcm.json';
-import exercice497 from './../../contenu/troisieme/francais/argumentation/exercice.json';
 import flash497 from './../../contenu/troisieme/francais/argumentation/flashcards.json';
-import fiche498 from './../../contenu/troisieme/francais/poesie-engagee/fiche.md';
 import qcm498 from './../../contenu/troisieme/francais/poesie-engagee/qcm.json';
-import exercice498 from './../../contenu/troisieme/francais/poesie-engagee/exercice.json';
 import flash498 from './../../contenu/troisieme/francais/poesie-engagee/flashcards.json';
-import fiche499 from './../../contenu/troisieme/hist-geo/premiere-guerre-mondiale/fiche.md';
 import qcm499 from './../../contenu/troisieme/hist-geo/premiere-guerre-mondiale/qcm.json';
-import exercice499 from './../../contenu/troisieme/hist-geo/premiere-guerre-mondiale/exercice.json';
 import flash499 from './../../contenu/troisieme/hist-geo/premiere-guerre-mondiale/flashcards.json';
-import fiche500 from './../../contenu/troisieme/hist-geo/totalitarismes/fiche.md';
 import qcm500 from './../../contenu/troisieme/hist-geo/totalitarismes/qcm.json';
-import exercice500 from './../../contenu/troisieme/hist-geo/totalitarismes/exercice.json';
 import flash500 from './../../contenu/troisieme/hist-geo/totalitarismes/flashcards.json';
-import fiche501 from './../../contenu/troisieme/hist-geo/seconde-guerre-mondiale/fiche.md';
 import qcm501 from './../../contenu/troisieme/hist-geo/seconde-guerre-mondiale/qcm.json';
-import exercice501 from './../../contenu/troisieme/hist-geo/seconde-guerre-mondiale/exercice.json';
 import flash501 from './../../contenu/troisieme/hist-geo/seconde-guerre-mondiale/flashcards.json';
-import fiche502 from './../../contenu/troisieme/hist-geo/france-depuis-1945-ve-republique/fiche.md';
 import qcm502 from './../../contenu/troisieme/hist-geo/france-depuis-1945-ve-republique/qcm.json';
-import exercice502 from './../../contenu/troisieme/hist-geo/france-depuis-1945-ve-republique/exercice.json';
 import flash502 from './../../contenu/troisieme/hist-geo/france-depuis-1945-ve-republique/flashcards.json';
-import fiche503 from './../../contenu/troisieme/hist-geo/aires-urbaines-espaces-productifs/fiche.md';
 import qcm503 from './../../contenu/troisieme/hist-geo/aires-urbaines-espaces-productifs/qcm.json';
-import exercice503 from './../../contenu/troisieme/hist-geo/aires-urbaines-espaces-productifs/exercice.json';
 import flash503 from './../../contenu/troisieme/hist-geo/aires-urbaines-espaces-productifs/flashcards.json';
-import fiche504 from './../../contenu/troisieme/hist-geo/france-union-europeenne-monde/fiche.md';
 import qcm504 from './../../contenu/troisieme/hist-geo/france-union-europeenne-monde/qcm.json';
-import exercice504 from './../../contenu/troisieme/hist-geo/france-union-europeenne-monde/exercice.json';
 import flash504 from './../../contenu/troisieme/hist-geo/france-union-europeenne-monde/flashcards.json';
-import fiche505 from './../../contenu/troisieme/hist-geo/emc-defense-citoyennete/fiche.md';
 import qcm505 from './../../contenu/troisieme/hist-geo/emc-defense-citoyennete/qcm.json';
-import exercice505 from './../../contenu/troisieme/hist-geo/emc-defense-citoyennete/exercice.json';
 import flash505 from './../../contenu/troisieme/hist-geo/emc-defense-citoyennete/flashcards.json';
-import fiche506 from './../../contenu/troisieme/italien/fonetica-accento/fiche.md';
 import qcm506 from './../../contenu/troisieme/italien/fonetica-accento/qcm.json';
-import exercice506 from './../../contenu/troisieme/italien/fonetica-accento/exercice.json';
 import flash506 from './../../contenu/troisieme/italien/fonetica-accento/flashcards.json';
-import fiche507 from './../../contenu/troisieme/italien/preposizioni/fiche.md';
 import qcm507 from './../../contenu/troisieme/italien/preposizioni/qcm.json';
-import exercice507 from './../../contenu/troisieme/italien/preposizioni/exercice.json';
 import flash507 from './../../contenu/troisieme/italien/preposizioni/flashcards.json';
-import fiche508 from './../../contenu/troisieme/italien/passato-prossimo-ausiliari/fiche.md';
 import qcm508 from './../../contenu/troisieme/italien/passato-prossimo-ausiliari/qcm.json';
-import exercice508 from './../../contenu/troisieme/italien/passato-prossimo-ausiliari/exercice.json';
 import flash508 from './../../contenu/troisieme/italien/passato-prossimo-ausiliari/flashcards.json';
-import fiche509 from './../../contenu/troisieme/italien/imperfetto-vs-passato/fiche.md';
 import qcm509 from './../../contenu/troisieme/italien/imperfetto-vs-passato/qcm.json';
-import exercice509 from './../../contenu/troisieme/italien/imperfetto-vs-passato/exercice.json';
 import flash509 from './../../contenu/troisieme/italien/imperfetto-vs-passato/flashcards.json';
-import fiche510 from './../../contenu/troisieme/italien/vocabolario-tecnologia/fiche.md';
 import qcm510 from './../../contenu/troisieme/italien/vocabolario-tecnologia/qcm.json';
-import exercice510 from './../../contenu/troisieme/italien/vocabolario-tecnologia/exercice.json';
 import flash510 from './../../contenu/troisieme/italien/vocabolario-tecnologia/flashcards.json';
-import fiche511 from './../../contenu/troisieme/italien/pronomi-diretti-indiretti/fiche.md';
 import qcm511 from './../../contenu/troisieme/italien/pronomi-diretti-indiretti/qcm.json';
-import exercice511 from './../../contenu/troisieme/italien/pronomi-diretti-indiretti/exercice.json';
 import flash511 from './../../contenu/troisieme/italien/pronomi-diretti-indiretti/flashcards.json';
-import fiche512 from './../../contenu/troisieme/italien/particella-ne-ci/fiche.md';
 import qcm512 from './../../contenu/troisieme/italien/particella-ne-ci/qcm.json';
-import exercice512 from './../../contenu/troisieme/italien/particella-ne-ci/exercice.json';
 import flash512 from './../../contenu/troisieme/italien/particella-ne-ci/flashcards.json';
-import fiche513 from './../../contenu/troisieme/italien/imperativo/fiche.md';
 import qcm513 from './../../contenu/troisieme/italien/imperativo/qcm.json';
-import exercice513 from './../../contenu/troisieme/italien/imperativo/exercice.json';
 import flash513 from './../../contenu/troisieme/italien/imperativo/flashcards.json';
-import fiche514 from './../../contenu/troisieme/italien/vocabolario-ambiente/fiche.md';
 import qcm514 from './../../contenu/troisieme/italien/vocabolario-ambiente/qcm.json';
-import exercice514 from './../../contenu/troisieme/italien/vocabolario-ambiente/exercice.json';
 import flash514 from './../../contenu/troisieme/italien/vocabolario-ambiente/flashcards.json';
-import fiche515 from './../../contenu/troisieme/italien/civilta-feste-tradizioni/fiche.md';
 import qcm515 from './../../contenu/troisieme/italien/civilta-feste-tradizioni/qcm.json';
-import exercice515 from './../../contenu/troisieme/italien/civilta-feste-tradizioni/exercice.json';
 import flash515 from './../../contenu/troisieme/italien/civilta-feste-tradizioni/flashcards.json';
-import fiche516 from './../../contenu/troisieme/italien/civilta-mondo-italofono/fiche.md';
 import qcm516 from './../../contenu/troisieme/italien/civilta-mondo-italofono/qcm.json';
-import exercice516 from './../../contenu/troisieme/italien/civilta-mondo-italofono/exercice.json';
 import flash516 from './../../contenu/troisieme/italien/civilta-mondo-italofono/flashcards.json';
-import fiche517 from './../../contenu/troisieme/langues-anciennes/civilisation-romaine/fiche.md';
 import qcm517 from './../../contenu/troisieme/langues-anciennes/civilisation-romaine/qcm.json';
-import exercice517 from './../../contenu/troisieme/langues-anciennes/civilisation-romaine/exercice.json';
 import flash517 from './../../contenu/troisieme/langues-anciennes/civilisation-romaine/flashcards.json';
-import fiche518 from './../../contenu/troisieme/langues-anciennes/latin-propositions/fiche.md';
 import qcm518 from './../../contenu/troisieme/langues-anciennes/latin-propositions/qcm.json';
-import exercice518 from './../../contenu/troisieme/langues-anciennes/latin-propositions/exercice.json';
 import flash518 from './../../contenu/troisieme/langues-anciennes/latin-propositions/flashcards.json';
-import fiche519 from './../../contenu/troisieme/langues-anciennes/grec-decouverte/fiche.md';
 import qcm519 from './../../contenu/troisieme/langues-anciennes/grec-decouverte/qcm.json';
-import exercice519 from './../../contenu/troisieme/langues-anciennes/grec-decouverte/exercice.json';
 import flash519 from './../../contenu/troisieme/langues-anciennes/grec-decouverte/flashcards.json';
-import fiche520 from './../../contenu/troisieme/maths/multiples-diviseurs/fiche.md';
 import qcm520 from './../../contenu/troisieme/maths/multiples-diviseurs/qcm.json';
-import exercice520 from './../../contenu/troisieme/maths/multiples-diviseurs/exercice.json';
 import flash520 from './../../contenu/troisieme/maths/multiples-diviseurs/flashcards.json';
-import fiche521 from './../../contenu/troisieme/maths/nombres-rationnels/fiche.md';
 import qcm521 from './../../contenu/troisieme/maths/nombres-rationnels/qcm.json';
-import exercice521 from './../../contenu/troisieme/maths/nombres-rationnels/exercice.json';
 import flash521 from './../../contenu/troisieme/maths/nombres-rationnels/flashcards.json';
-import fiche522 from './../../contenu/troisieme/maths/puissances/fiche.md';
 import qcm522 from './../../contenu/troisieme/maths/puissances/qcm.json';
-import exercice522 from './../../contenu/troisieme/maths/puissances/exercice.json';
 import flash522 from './../../contenu/troisieme/maths/puissances/flashcards.json';
-import fiche523 from './../../contenu/troisieme/maths/calcul-litteral/fiche.md';
 import qcm523 from './../../contenu/troisieme/maths/calcul-litteral/qcm.json';
-import exercice523 from './../../contenu/troisieme/maths/calcul-litteral/exercice.json';
 import flash523 from './../../contenu/troisieme/maths/calcul-litteral/flashcards.json';
-import fiche524 from './../../contenu/troisieme/maths/reperage/fiche.md';
 import qcm524 from './../../contenu/troisieme/maths/reperage/qcm.json';
-import exercice524 from './../../contenu/troisieme/maths/reperage/exercice.json';
 import flash524 from './../../contenu/troisieme/maths/reperage/flashcards.json';
-import fiche525 from './../../contenu/troisieme/maths/proportionnalite/fiche.md';
 import qcm525 from './../../contenu/troisieme/maths/proportionnalite/qcm.json';
-import exercice525 from './../../contenu/troisieme/maths/proportionnalite/exercice.json';
 import flash525 from './../../contenu/troisieme/maths/proportionnalite/flashcards.json';
-import fiche526 from './../../contenu/troisieme/maths/fonctions/fiche.md';
 import qcm526 from './../../contenu/troisieme/maths/fonctions/qcm.json';
-import exercice526 from './../../contenu/troisieme/maths/fonctions/exercice.json';
 import flash526 from './../../contenu/troisieme/maths/fonctions/flashcards.json';
-import fiche527 from './../../contenu/troisieme/maths/racine-carree/fiche.md';
 import qcm527 from './../../contenu/troisieme/maths/racine-carree/qcm.json';
-import exercice527 from './../../contenu/troisieme/maths/racine-carree/exercice.json';
 import flash527 from './../../contenu/troisieme/maths/racine-carree/flashcards.json';
-import fiche528 from './../../contenu/troisieme/maths/triangles/fiche.md';
 import qcm528 from './../../contenu/troisieme/maths/triangles/qcm.json';
-import exercice528 from './../../contenu/troisieme/maths/triangles/exercice.json';
 import flash528 from './../../contenu/troisieme/maths/triangles/flashcards.json';
-import fiche529 from './../../contenu/troisieme/maths/translations-vecteurs/fiche.md';
 import qcm529 from './../../contenu/troisieme/maths/translations-vecteurs/qcm.json';
-import exercice529 from './../../contenu/troisieme/maths/translations-vecteurs/exercice.json';
 import flash529 from './../../contenu/troisieme/maths/translations-vecteurs/flashcards.json';
-import fiche530 from './../../contenu/troisieme/maths/representation-espace/fiche.md';
 import qcm530 from './../../contenu/troisieme/maths/representation-espace/qcm.json';
-import exercice530 from './../../contenu/troisieme/maths/representation-espace/exercice.json';
 import flash530 from './../../contenu/troisieme/maths/representation-espace/flashcards.json';
-import fiche531 from './../../contenu/troisieme/maths/statistiques/fiche.md';
 import qcm531 from './../../contenu/troisieme/maths/statistiques/qcm.json';
-import exercice531 from './../../contenu/troisieme/maths/statistiques/exercice.json';
 import flash531 from './../../contenu/troisieme/maths/statistiques/flashcards.json';
-import fiche532 from './../../contenu/troisieme/maths/probabilites/fiche.md';
 import qcm532 from './../../contenu/troisieme/maths/probabilites/qcm.json';
-import exercice532 from './../../contenu/troisieme/maths/probabilites/exercice.json';
 import flash532 from './../../contenu/troisieme/maths/probabilites/flashcards.json';
-import fiche533 from './../../contenu/troisieme/maths/pensee-informatique/fiche.md';
 import qcm533 from './../../contenu/troisieme/maths/pensee-informatique/qcm.json';
-import exercice533 from './../../contenu/troisieme/maths/pensee-informatique/exercice.json';
 import flash533 from './../../contenu/troisieme/maths/pensee-informatique/flashcards.json';
-import fiche534 from './../../contenu/troisieme/physique-chimie/masse-volumique/fiche.md';
 import qcm534 from './../../contenu/troisieme/physique-chimie/masse-volumique/qcm.json';
-import exercice534 from './../../contenu/troisieme/physique-chimie/masse-volumique/exercice.json';
 import flash534 from './../../contenu/troisieme/physique-chimie/masse-volumique/flashcards.json';
-import fiche535 from './../../contenu/troisieme/physique-chimie/atomes-ions-ph/fiche.md';
 import qcm535 from './../../contenu/troisieme/physique-chimie/atomes-ions-ph/qcm.json';
-import exercice535 from './../../contenu/troisieme/physique-chimie/atomes-ions-ph/exercice.json';
 import flash535 from './../../contenu/troisieme/physique-chimie/atomes-ions-ph/flashcards.json';
-import fiche536 from './../../contenu/troisieme/physique-chimie/transformations-chimiques/fiche.md';
 import qcm536 from './../../contenu/troisieme/physique-chimie/transformations-chimiques/qcm.json';
-import exercice536 from './../../contenu/troisieme/physique-chimie/transformations-chimiques/exercice.json';
 import flash536 from './../../contenu/troisieme/physique-chimie/transformations-chimiques/flashcards.json';
-import fiche537 from './../../contenu/troisieme/physique-chimie/poids-gravitation-forces/fiche.md';
 import qcm537 from './../../contenu/troisieme/physique-chimie/poids-gravitation-forces/qcm.json';
-import exercice537 from './../../contenu/troisieme/physique-chimie/poids-gravitation-forces/exercice.json';
 import flash537 from './../../contenu/troisieme/physique-chimie/poids-gravitation-forces/flashcards.json';
-import fiche538 from './../../contenu/troisieme/physique-chimie/conversions-energie-signaux/fiche.md';
 import qcm538 from './../../contenu/troisieme/physique-chimie/conversions-energie-signaux/qcm.json';
-import exercice538 from './../../contenu/troisieme/physique-chimie/conversions-energie-signaux/exercice.json';
 import flash538 from './../../contenu/troisieme/physique-chimie/conversions-energie-signaux/flashcards.json';
-import fiche539 from './../../contenu/troisieme/svt/genetique-et-heredite/fiche.md';
 import qcm539 from './../../contenu/troisieme/svt/genetique-et-heredite/qcm.json';
-import exercice539 from './../../contenu/troisieme/svt/genetique-et-heredite/exercice.json';
 import flash539 from './../../contenu/troisieme/svt/genetique-et-heredite/flashcards.json';
-import fiche540 from './../../contenu/troisieme/svt/evolution-des-especes/fiche.md';
 import qcm540 from './../../contenu/troisieme/svt/evolution-des-especes/qcm.json';
-import exercice540 from './../../contenu/troisieme/svt/evolution-des-especes/exercice.json';
 import flash540 from './../../contenu/troisieme/svt/evolution-des-especes/flashcards.json';
-import fiche541 from './../../contenu/troisieme/svt/immunite-et-defenses/fiche.md';
 import qcm541 from './../../contenu/troisieme/svt/immunite-et-defenses/qcm.json';
-import exercice541 from './../../contenu/troisieme/svt/immunite-et-defenses/exercice.json';
 import flash541 from './../../contenu/troisieme/svt/immunite-et-defenses/flashcards.json';
-import fiche542 from './../../contenu/troisieme/svt/hormones-et-reproduction/fiche.md';
 import qcm542 from './../../contenu/troisieme/svt/hormones-et-reproduction/qcm.json';
-import exercice542 from './../../contenu/troisieme/svt/hormones-et-reproduction/exercice.json';
 import flash542 from './../../contenu/troisieme/svt/hormones-et-reproduction/flashcards.json';
-import fiche543 from './../../contenu/troisieme/svt/activites-humaines-et-environnement/fiche.md';
 import qcm543 from './../../contenu/troisieme/svt/activites-humaines-et-environnement/qcm.json';
-import exercice543 from './../../contenu/troisieme/svt/activites-humaines-et-environnement/exercice.json';
 import flash543 from './../../contenu/troisieme/svt/activites-humaines-et-environnement/flashcards.json';
-import fiche544 from './../../contenu/troisieme/techno/demarche-de-projet/fiche.md';
 import qcm544 from './../../contenu/troisieme/techno/demarche-de-projet/qcm.json';
-import exercice544 from './../../contenu/troisieme/techno/demarche-de-projet/exercice.json';
 import flash544 from './../../contenu/troisieme/techno/demarche-de-projet/flashcards.json';
-import fiche545 from './../../contenu/troisieme/techno/evolution-des-objets-techniques/fiche.md';
 import qcm545 from './../../contenu/troisieme/techno/evolution-des-objets-techniques/qcm.json';
-import exercice545 from './../../contenu/troisieme/techno/evolution-des-objets-techniques/exercice.json';
 import flash545 from './../../contenu/troisieme/techno/evolution-des-objets-techniques/flashcards.json';
-import fiche546 from './../../contenu/troisieme/techno/internet-et-reseaux/fiche.md';
 import qcm546 from './../../contenu/troisieme/techno/internet-et-reseaux/qcm.json';
-import exercice546 from './../../contenu/troisieme/techno/internet-et-reseaux/exercice.json';
 import flash546 from './../../contenu/troisieme/techno/internet-et-reseaux/flashcards.json';
-import fiche547 from './../../contenu/troisieme/techno/objets-connectes/fiche.md';
 import qcm547 from './../../contenu/troisieme/techno/objets-connectes/qcm.json';
-import exercice547 from './../../contenu/troisieme/techno/objets-connectes/exercice.json';
 import flash547 from './../../contenu/troisieme/techno/objets-connectes/flashcards.json';
-import fiche548 from './../../contenu/troisieme/techno/programmation-et-robotique/fiche.md';
 import qcm548 from './../../contenu/troisieme/techno/programmation-et-robotique/qcm.json';
-import exercice548 from './../../contenu/troisieme/techno/programmation-et-robotique/exercice.json';
 import flash548 from './../../contenu/troisieme/techno/programmation-et-robotique/flashcards.json';
-import fiche549 from './../../contenu/seconde/allemand/konnektoren/fiche.md';
 import qcm549 from './../../contenu/seconde/allemand/konnektoren/qcm.json';
-import exercice549 from './../../contenu/seconde/allemand/konnektoren/exercice.json';
 import flash549 from './../../contenu/seconde/allemand/konnektoren/flashcards.json';
-import fiche550 from './../../contenu/seconde/allemand/adjektivdeklination/fiche.md';
 import qcm550 from './../../contenu/seconde/allemand/adjektivdeklination/qcm.json';
-import exercice550 from './../../contenu/seconde/allemand/adjektivdeklination/exercice.json';
 import flash550 from './../../contenu/seconde/allemand/adjektivdeklination/flashcards.json';
-import fiche551 from './../../contenu/seconde/allemand/genitiv/fiche.md';
 import qcm551 from './../../contenu/seconde/allemand/genitiv/qcm.json';
-import exercice551 from './../../contenu/seconde/allemand/genitiv/exercice.json';
 import flash551 from './../../contenu/seconde/allemand/genitiv/flashcards.json';
-import fiche552 from './../../contenu/seconde/allemand/verben-mit-dativ/fiche.md';
 import qcm552 from './../../contenu/seconde/allemand/verben-mit-dativ/qcm.json';
-import exercice552 from './../../contenu/seconde/allemand/verben-mit-dativ/exercice.json';
 import flash552 from './../../contenu/seconde/allemand/verben-mit-dativ/flashcards.json';
-import fiche553 from './../../contenu/seconde/allemand/wortschatz-medien-technik/fiche.md';
 import qcm553 from './../../contenu/seconde/allemand/wortschatz-medien-technik/qcm.json';
-import exercice553 from './../../contenu/seconde/allemand/wortschatz-medien-technik/exercice.json';
 import flash553 from './../../contenu/seconde/allemand/wortschatz-medien-technik/flashcards.json';
-import fiche554 from './../../contenu/seconde/allemand/relativsaetze/fiche.md';
 import qcm554 from './../../contenu/seconde/allemand/relativsaetze/qcm.json';
-import exercice554 from './../../contenu/seconde/allemand/relativsaetze/exercice.json';
 import flash554 from './../../contenu/seconde/allemand/relativsaetze/flashcards.json';
-import fiche555 from './../../contenu/seconde/allemand/konjunktiv-2/fiche.md';
 import qcm555 from './../../contenu/seconde/allemand/konjunktiv-2/qcm.json';
-import exercice555 from './../../contenu/seconde/allemand/konjunktiv-2/exercice.json';
 import flash555 from './../../contenu/seconde/allemand/konjunktiv-2/flashcards.json';
-import fiche556 from './../../contenu/seconde/allemand/wortschatz-kultur-kunst/fiche.md';
 import qcm556 from './../../contenu/seconde/allemand/wortschatz-kultur-kunst/qcm.json';
-import exercice556 from './../../contenu/seconde/allemand/wortschatz-kultur-kunst/exercice.json';
 import flash556 from './../../contenu/seconde/allemand/wortschatz-kultur-kunst/flashcards.json';
-import fiche557 from './../../contenu/seconde/allemand/landeskunde-institutionen-deutschland/fiche.md';
 import qcm557 from './../../contenu/seconde/allemand/landeskunde-institutionen-deutschland/qcm.json';
-import exercice557 from './../../contenu/seconde/allemand/landeskunde-institutionen-deutschland/exercice.json';
 import flash557 from './../../contenu/seconde/allemand/landeskunde-institutionen-deutschland/flashcards.json';
-import fiche558 from './../../contenu/seconde/allemand/landeskunde-musik-kunst/fiche.md';
 import qcm558 from './../../contenu/seconde/allemand/landeskunde-musik-kunst/qcm.json';
-import exercice558 from './../../contenu/seconde/allemand/landeskunde-musik-kunst/exercice.json';
 import flash558 from './../../contenu/seconde/allemand/landeskunde-musik-kunst/flashcards.json';
-import fiche559 from './../../contenu/seconde/anglais/temps-du-present/fiche.md';
 import qcm559 from './../../contenu/seconde/anglais/temps-du-present/qcm.json';
-import exercice559 from './../../contenu/seconde/anglais/temps-du-present/exercice.json';
 import flash559 from './../../contenu/seconde/anglais/temps-du-present/flashcards.json';
-import fiche560 from './../../contenu/seconde/anglais/temps-du-passe/fiche.md';
 import qcm560 from './../../contenu/seconde/anglais/temps-du-passe/qcm.json';
-import exercice560 from './../../contenu/seconde/anglais/temps-du-passe/exercice.json';
 import flash560 from './../../contenu/seconde/anglais/temps-du-passe/flashcards.json';
-import fiche561 from './../../contenu/seconde/anglais/modaux/fiche.md';
 import qcm561 from './../../contenu/seconde/anglais/modaux/qcm.json';
-import exercice561 from './../../contenu/seconde/anglais/modaux/exercice.json';
 import flash561 from './../../contenu/seconde/anglais/modaux/flashcards.json';
-import fiche562 from './../../contenu/seconde/anglais/phrasal-verbs/fiche.md';
 import qcm562 from './../../contenu/seconde/anglais/phrasal-verbs/qcm.json';
-import exercice562 from './../../contenu/seconde/anglais/phrasal-verbs/exercice.json';
 import flash562 from './../../contenu/seconde/anglais/phrasal-verbs/flashcards.json';
-import fiche563 from './../../contenu/seconde/anglais/vocabulaire-medias-numerique/fiche.md';
 import qcm563 from './../../contenu/seconde/anglais/vocabulaire-medias-numerique/qcm.json';
-import exercice563 from './../../contenu/seconde/anglais/vocabulaire-medias-numerique/exercice.json';
 import flash563 from './../../contenu/seconde/anglais/vocabulaire-medias-numerique/flashcards.json';
-import fiche564 from './../../contenu/seconde/anglais/hypotheses-if/fiche.md';
 import qcm564 from './../../contenu/seconde/anglais/hypotheses-if/qcm.json';
-import exercice564 from './../../contenu/seconde/anglais/hypotheses-if/exercice.json';
 import flash564 from './../../contenu/seconde/anglais/hypotheses-if/flashcards.json';
-import fiche565 from './../../contenu/seconde/anglais/discours-rapporte/fiche.md';
 import qcm565 from './../../contenu/seconde/anglais/discours-rapporte/qcm.json';
-import exercice565 from './../../contenu/seconde/anglais/discours-rapporte/exercice.json';
 import flash565 from './../../contenu/seconde/anglais/discours-rapporte/flashcards.json';
-import fiche566 from './../../contenu/seconde/anglais/vocabulaire-culture-arts/fiche.md';
 import qcm566 from './../../contenu/seconde/anglais/vocabulaire-culture-arts/qcm.json';
-import exercice566 from './../../contenu/seconde/anglais/vocabulaire-culture-arts/exercice.json';
 import flash566 from './../../contenu/seconde/anglais/vocabulaire-culture-arts/flashcards.json';
-import fiche567 from './../../contenu/seconde/anglais/civilisation-institutions-uk/fiche.md';
 import qcm567 from './../../contenu/seconde/anglais/civilisation-institutions-uk/qcm.json';
-import exercice567 from './../../contenu/seconde/anglais/civilisation-institutions-uk/exercice.json';
 import flash567 from './../../contenu/seconde/anglais/civilisation-institutions-uk/flashcards.json';
-import fiche568 from './../../contenu/seconde/anglais/civilisation-irlande/fiche.md';
 import qcm568 from './../../contenu/seconde/anglais/civilisation-irlande/qcm.json';
-import exercice568 from './../../contenu/seconde/anglais/civilisation-irlande/exercice.json';
 import flash568 from './../../contenu/seconde/anglais/civilisation-irlande/flashcards.json';
-import fiche569 from './../../contenu/seconde/arts/grands-courants/fiche.md';
 import qcm569 from './../../contenu/seconde/arts/grands-courants/qcm.json';
-import exercice569 from './../../contenu/seconde/arts/grands-courants/exercice.json';
 import flash569 from './../../contenu/seconde/arts/grands-courants/flashcards.json';
-import fiche570 from './../../contenu/seconde/espagnol/tiempos-pasado/fiche.md';
 import qcm570 from './../../contenu/seconde/espagnol/tiempos-pasado/qcm.json';
-import exercice570 from './../../contenu/seconde/espagnol/tiempos-pasado/exercice.json';
 import flash570 from './../../contenu/seconde/espagnol/tiempos-pasado/flashcards.json';
-import fiche571 from './../../contenu/seconde/espagnol/ser-estar-haber/fiche.md';
 import qcm571 from './../../contenu/seconde/espagnol/ser-estar-haber/qcm.json';
-import exercice571 from './../../contenu/seconde/espagnol/ser-estar-haber/exercice.json';
 import flash571 from './../../contenu/seconde/espagnol/ser-estar-haber/flashcards.json';
-import fiche572 from './../../contenu/seconde/espagnol/verbos-pronominales/fiche.md';
 import qcm572 from './../../contenu/seconde/espagnol/verbos-pronominales/qcm.json';
-import exercice572 from './../../contenu/seconde/espagnol/verbos-pronominales/exercice.json';
 import flash572 from './../../contenu/seconde/espagnol/verbos-pronominales/flashcards.json';
-import fiche573 from './../../contenu/seconde/espagnol/vocabulario-medios-tecnologia/fiche.md';
 import qcm573 from './../../contenu/seconde/espagnol/vocabulario-medios-tecnologia/qcm.json';
-import exercice573 from './../../contenu/seconde/espagnol/vocabulario-medios-tecnologia/exercice.json';
 import flash573 from './../../contenu/seconde/espagnol/vocabulario-medios-tecnologia/flashcards.json';
-import fiche574 from './../../contenu/seconde/espagnol/condicional/fiche.md';
 import qcm574 from './../../contenu/seconde/espagnol/condicional/qcm.json';
-import exercice574 from './../../contenu/seconde/espagnol/condicional/exercice.json';
 import flash574 from './../../contenu/seconde/espagnol/condicional/flashcards.json';
-import fiche575 from './../../contenu/seconde/espagnol/subjuntivo-presente/fiche.md';
 import qcm575 from './../../contenu/seconde/espagnol/subjuntivo-presente/qcm.json';
-import exercice575 from './../../contenu/seconde/espagnol/subjuntivo-presente/exercice.json';
 import flash575 from './../../contenu/seconde/espagnol/subjuntivo-presente/flashcards.json';
-import fiche576 from './../../contenu/seconde/espagnol/oraciones-condicionales/fiche.md';
 import qcm576 from './../../contenu/seconde/espagnol/oraciones-condicionales/qcm.json';
-import exercice576 from './../../contenu/seconde/espagnol/oraciones-condicionales/exercice.json';
 import flash576 from './../../contenu/seconde/espagnol/oraciones-condicionales/flashcards.json';
-import fiche577 from './../../contenu/seconde/espagnol/vocabulario-cultura-arte/fiche.md';
 import qcm577 from './../../contenu/seconde/espagnol/vocabulario-cultura-arte/qcm.json';
-import exercice577 from './../../contenu/seconde/espagnol/vocabulario-cultura-arte/exercice.json';
 import flash577 from './../../contenu/seconde/espagnol/vocabulario-cultura-arte/flashcards.json';
-import fiche578 from './../../contenu/seconde/espagnol/civilizacion-instituciones-espana/fiche.md';
 import qcm578 from './../../contenu/seconde/espagnol/civilizacion-instituciones-espana/qcm.json';
-import exercice578 from './../../contenu/seconde/espagnol/civilizacion-instituciones-espana/exercice.json';
 import flash578 from './../../contenu/seconde/espagnol/civilizacion-instituciones-espana/flashcards.json';
-import fiche579 from './../../contenu/seconde/espagnol/civilizacion-arte-pintura/fiche.md';
 import qcm579 from './../../contenu/seconde/espagnol/civilizacion-arte-pintura/qcm.json';
-import exercice579 from './../../contenu/seconde/espagnol/civilizacion-arte-pintura/exercice.json';
 import flash579 from './../../contenu/seconde/espagnol/civilizacion-arte-pintura/flashcards.json';
-import fiche580 from './../../contenu/seconde/francais/grammaire-seconde/fiche.md';
 import qcm580 from './../../contenu/seconde/francais/grammaire-seconde/qcm.json';
-import exercice580 from './../../contenu/seconde/francais/grammaire-seconde/exercice.json';
 import flash580 from './../../contenu/seconde/francais/grammaire-seconde/flashcards.json';
-import fiche581 from './../../contenu/seconde/francais/procedes-analyse/fiche.md';
 import qcm581 from './../../contenu/seconde/francais/procedes-analyse/qcm.json';
-import exercice581 from './../../contenu/seconde/francais/procedes-analyse/exercice.json';
 import flash581 from './../../contenu/seconde/francais/procedes-analyse/flashcards.json';
-import fiche582 from './../../contenu/seconde/francais/genres-et-registres/fiche.md';
 import qcm582 from './../../contenu/seconde/francais/genres-et-registres/qcm.json';
-import exercice582 from './../../contenu/seconde/francais/genres-et-registres/exercice.json';
 import flash582 from './../../contenu/seconde/francais/genres-et-registres/flashcards.json';
-import fiche583 from './../../contenu/seconde/francais/la-poesie/fiche.md';
 import qcm583 from './../../contenu/seconde/francais/la-poesie/qcm.json';
-import exercice583 from './../../contenu/seconde/francais/la-poesie/exercice.json';
 import flash583 from './../../contenu/seconde/francais/la-poesie/flashcards.json';
-import fiche584 from './../../contenu/seconde/francais/le-theatre/fiche.md';
 import qcm584 from './../../contenu/seconde/francais/le-theatre/qcm.json';
-import exercice584 from './../../contenu/seconde/francais/le-theatre/exercice.json';
 import flash584 from './../../contenu/seconde/francais/le-theatre/flashcards.json';
-import fiche585 from './../../contenu/seconde/francais/le-roman/fiche.md';
 import qcm585 from './../../contenu/seconde/francais/le-roman/qcm.json';
-import exercice585 from './../../contenu/seconde/francais/le-roman/exercice.json';
 import flash585 from './../../contenu/seconde/francais/le-roman/flashcards.json';
-import fiche586 from './../../contenu/seconde/francais/litterature-idees/fiche.md';
 import qcm586 from './../../contenu/seconde/francais/litterature-idees/qcm.json';
-import exercice586 from './../../contenu/seconde/francais/litterature-idees/exercice.json';
 import flash586 from './../../contenu/seconde/francais/litterature-idees/flashcards.json';
-import fiche587 from './../../contenu/seconde/hist-geo/mediterranee-antique/fiche.md';
 import qcm587 from './../../contenu/seconde/hist-geo/mediterranee-antique/qcm.json';
-import exercice587 from './../../contenu/seconde/hist-geo/mediterranee-antique/exercice.json';
 import flash587 from './../../contenu/seconde/hist-geo/mediterranee-antique/flashcards.json';
-import fiche588 from './../../contenu/seconde/hist-geo/mediterranee-medievale/fiche.md';
 import qcm588 from './../../contenu/seconde/hist-geo/mediterranee-medievale/qcm.json';
-import exercice588 from './../../contenu/seconde/hist-geo/mediterranee-medievale/exercice.json';
 import flash588 from './../../contenu/seconde/hist-geo/mediterranee-medievale/flashcards.json';
-import fiche589 from './../../contenu/seconde/hist-geo/humanisme-renaissance/fiche.md';
 import qcm589 from './../../contenu/seconde/hist-geo/humanisme-renaissance/qcm.json';
-import exercice589 from './../../contenu/seconde/hist-geo/humanisme-renaissance/exercice.json';
 import flash589 from './../../contenu/seconde/hist-geo/humanisme-renaissance/flashcards.json';
-import fiche590 from './../../contenu/seconde/hist-geo/revolutions-angleterre-amerique/fiche.md';
 import qcm590 from './../../contenu/seconde/hist-geo/revolutions-angleterre-amerique/qcm.json';
-import exercice590 from './../../contenu/seconde/hist-geo/revolutions-angleterre-amerique/exercice.json';
 import flash590 from './../../contenu/seconde/hist-geo/revolutions-angleterre-amerique/flashcards.json';
-import fiche591 from './../../contenu/seconde/hist-geo/environnement-developpement-durable/fiche.md';
 import qcm591 from './../../contenu/seconde/hist-geo/environnement-developpement-durable/qcm.json';
-import exercice591 from './../../contenu/seconde/hist-geo/environnement-developpement-durable/exercice.json';
 import flash591 from './../../contenu/seconde/hist-geo/environnement-developpement-durable/flashcards.json';
-import fiche592 from './../../contenu/seconde/hist-geo/territoires-villes-mondialisation/fiche.md';
 import qcm592 from './../../contenu/seconde/hist-geo/territoires-villes-mondialisation/qcm.json';
-import exercice592 from './../../contenu/seconde/hist-geo/territoires-villes-mondialisation/exercice.json';
 import flash592 from './../../contenu/seconde/hist-geo/territoires-villes-mondialisation/flashcards.json';
-import fiche593 from './../../contenu/seconde/hist-geo/emc-la-liberte/fiche.md';
 import qcm593 from './../../contenu/seconde/hist-geo/emc-la-liberte/qcm.json';
-import exercice593 from './../../contenu/seconde/hist-geo/emc-la-liberte/exercice.json';
 import flash593 from './../../contenu/seconde/hist-geo/emc-la-liberte/flashcards.json';
-import fiche594 from './../../contenu/seconde/italien/tempi-del-passato/fiche.md';
 import qcm594 from './../../contenu/seconde/italien/tempi-del-passato/qcm.json';
-import exercice594 from './../../contenu/seconde/italien/tempi-del-passato/exercice.json';
 import flash594 from './../../contenu/seconde/italien/tempi-del-passato/flashcards.json';
-import fiche595 from './../../contenu/seconde/italien/essere-stare-esserci/fiche.md';
 import qcm595 from './../../contenu/seconde/italien/essere-stare-esserci/qcm.json';
-import exercice595 from './../../contenu/seconde/italien/essere-stare-esserci/exercice.json';
 import flash595 from './../../contenu/seconde/italien/essere-stare-esserci/flashcards.json';
-import fiche596 from './../../contenu/seconde/italien/verbi-riflessivi/fiche.md';
 import qcm596 from './../../contenu/seconde/italien/verbi-riflessivi/qcm.json';
-import exercice596 from './../../contenu/seconde/italien/verbi-riflessivi/exercice.json';
 import flash596 from './../../contenu/seconde/italien/verbi-riflessivi/flashcards.json';
-import fiche597 from './../../contenu/seconde/italien/vocabolario-media-tecnologia/fiche.md';
 import qcm597 from './../../contenu/seconde/italien/vocabolario-media-tecnologia/qcm.json';
-import exercice597 from './../../contenu/seconde/italien/vocabolario-media-tecnologia/exercice.json';
 import flash597 from './../../contenu/seconde/italien/vocabolario-media-tecnologia/flashcards.json';
-import fiche598 from './../../contenu/seconde/italien/condizionale/fiche.md';
 import qcm598 from './../../contenu/seconde/italien/condizionale/qcm.json';
-import exercice598 from './../../contenu/seconde/italien/condizionale/exercice.json';
 import flash598 from './../../contenu/seconde/italien/condizionale/flashcards.json';
-import fiche599 from './../../contenu/seconde/italien/congiuntivo-presente/fiche.md';
 import qcm599 from './../../contenu/seconde/italien/congiuntivo-presente/qcm.json';
-import exercice599 from './../../contenu/seconde/italien/congiuntivo-presente/exercice.json';
 import flash599 from './../../contenu/seconde/italien/congiuntivo-presente/flashcards.json';
-import fiche600 from './../../contenu/seconde/italien/periodo-ipotetico/fiche.md';
 import qcm600 from './../../contenu/seconde/italien/periodo-ipotetico/qcm.json';
-import exercice600 from './../../contenu/seconde/italien/periodo-ipotetico/exercice.json';
 import flash600 from './../../contenu/seconde/italien/periodo-ipotetico/flashcards.json';
-import fiche601 from './../../contenu/seconde/italien/vocabolario-cultura-arte/fiche.md';
 import qcm601 from './../../contenu/seconde/italien/vocabolario-cultura-arte/qcm.json';
-import exercice601 from './../../contenu/seconde/italien/vocabolario-cultura-arte/exercice.json';
 import flash601 from './../../contenu/seconde/italien/vocabolario-cultura-arte/flashcards.json';
-import fiche602 from './../../contenu/seconde/italien/civilta-istituzioni-italia/fiche.md';
 import qcm602 from './../../contenu/seconde/italien/civilta-istituzioni-italia/qcm.json';
-import exercice602 from './../../contenu/seconde/italien/civilta-istituzioni-italia/exercice.json';
 import flash602 from './../../contenu/seconde/italien/civilta-istituzioni-italia/flashcards.json';
-import fiche603 from './../../contenu/seconde/italien/civilta-arte-pittura/fiche.md';
 import qcm603 from './../../contenu/seconde/italien/civilta-arte-pittura/qcm.json';
-import exercice603 from './../../contenu/seconde/italien/civilta-arte-pittura/exercice.json';
 import flash603 from './../../contenu/seconde/italien/civilta-arte-pittura/flashcards.json';
-import fiche604 from './../../contenu/seconde/langues-anciennes/latin-syntaxe/fiche.md';
 import qcm604 from './../../contenu/seconde/langues-anciennes/latin-syntaxe/qcm.json';
-import exercice604 from './../../contenu/seconde/langues-anciennes/latin-syntaxe/exercice.json';
 import flash604 from './../../contenu/seconde/langues-anciennes/latin-syntaxe/flashcards.json';
-import fiche605 from './../../contenu/seconde/langues-anciennes/grec-morphologie/fiche.md';
 import qcm605 from './../../contenu/seconde/langues-anciennes/grec-morphologie/qcm.json';
-import exercice605 from './../../contenu/seconde/langues-anciennes/grec-morphologie/exercice.json';
 import flash605 from './../../contenu/seconde/langues-anciennes/grec-morphologie/flashcards.json';
-import fiche606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/fiche.md';
 import qcm606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/qcm.json';
-import exercice606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/exercice.json';
 import flash606 from './../../contenu/seconde/maths/calcul-numerique-algebrique/flashcards.json';
-import fiche607 from './../../contenu/seconde/maths/arithmetique/fiche.md';
 import qcm607 from './../../contenu/seconde/maths/arithmetique/qcm.json';
-import exercice607 from './../../contenu/seconde/maths/arithmetique/exercice.json';
 import flash607 from './../../contenu/seconde/maths/arithmetique/flashcards.json';
-import fiche608 from './../../contenu/seconde/maths/equations-inequations/fiche.md';
 import qcm608 from './../../contenu/seconde/maths/equations-inequations/qcm.json';
-import exercice608 from './../../contenu/seconde/maths/equations-inequations/exercice.json';
 import flash608 from './../../contenu/seconde/maths/equations-inequations/flashcards.json';
-import fiche609 from './../../contenu/seconde/maths/notion-de-fonction/fiche.md';
 import qcm609 from './../../contenu/seconde/maths/notion-de-fonction/qcm.json';
-import exercice609 from './../../contenu/seconde/maths/notion-de-fonction/exercice.json';
 import flash609 from './../../contenu/seconde/maths/notion-de-fonction/flashcards.json';
-import fiche610 from './../../contenu/seconde/maths/fonctions-de-reference/fiche.md';
 import qcm610 from './../../contenu/seconde/maths/fonctions-de-reference/qcm.json';
-import exercice610 from './../../contenu/seconde/maths/fonctions-de-reference/exercice.json';
 import flash610 from './../../contenu/seconde/maths/fonctions-de-reference/flashcards.json';
-import fiche611 from './../../contenu/seconde/maths/vecteurs/fiche.md';
 import qcm611 from './../../contenu/seconde/maths/vecteurs/qcm.json';
-import exercice611 from './../../contenu/seconde/maths/vecteurs/exercice.json';
 import flash611 from './../../contenu/seconde/maths/vecteurs/flashcards.json';
-import fiche612 from './../../contenu/seconde/maths/droites-du-plan/fiche.md';
 import qcm612 from './../../contenu/seconde/maths/droites-du-plan/qcm.json';
-import exercice612 from './../../contenu/seconde/maths/droites-du-plan/exercice.json';
 import flash612 from './../../contenu/seconde/maths/droites-du-plan/flashcards.json';
-import fiche613 from './../../contenu/seconde/maths/statistiques/fiche.md';
 import qcm613 from './../../contenu/seconde/maths/statistiques/qcm.json';
-import exercice613 from './../../contenu/seconde/maths/statistiques/exercice.json';
 import flash613 from './../../contenu/seconde/maths/statistiques/flashcards.json';
-import fiche614 from './../../contenu/seconde/maths/probabilites/fiche.md';
 import qcm614 from './../../contenu/seconde/maths/probabilites/qcm.json';
-import exercice614 from './../../contenu/seconde/maths/probabilites/exercice.json';
 import flash614 from './../../contenu/seconde/maths/probabilites/flashcards.json';
-import fiche615 from './../../contenu/seconde/maths/algorithmique/fiche.md';
 import qcm615 from './../../contenu/seconde/maths/algorithmique/qcm.json';
-import exercice615 from './../../contenu/seconde/maths/algorithmique/exercice.json';
 import flash615 from './../../contenu/seconde/maths/algorithmique/flashcards.json';
-import fiche616 from './../../contenu/seconde/physique-chimie/description-matiere/fiche.md';
 import qcm616 from './../../contenu/seconde/physique-chimie/description-matiere/qcm.json';
-import exercice616 from './../../contenu/seconde/physique-chimie/description-matiere/exercice.json';
 import flash616 from './../../contenu/seconde/physique-chimie/description-matiere/flashcards.json';
-import fiche617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/fiche.md';
 import qcm617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/qcm.json';
-import exercice617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/exercice.json';
 import flash617 from './../../contenu/seconde/physique-chimie/modelisation-microscopique/flashcards.json';
-import fiche618 from './../../contenu/seconde/physique-chimie/transformations-matiere/fiche.md';
 import qcm618 from './../../contenu/seconde/physique-chimie/transformations-matiere/qcm.json';
-import exercice618 from './../../contenu/seconde/physique-chimie/transformations-matiere/exercice.json';
 import flash618 from './../../contenu/seconde/physique-chimie/transformations-matiere/flashcards.json';
-import fiche619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/fiche.md';
 import qcm619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/qcm.json';
-import exercice619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/exercice.json';
 import flash619 from './../../contenu/seconde/physique-chimie/mouvement-interactions/flashcards.json';
-import fiche620 from './../../contenu/seconde/physique-chimie/ondes-signaux/fiche.md';
 import qcm620 from './../../contenu/seconde/physique-chimie/ondes-signaux/qcm.json';
-import exercice620 from './../../contenu/seconde/physique-chimie/ondes-signaux/exercice.json';
 import flash620 from './../../contenu/seconde/physique-chimie/ondes-signaux/flashcards.json';
-import fiche621 from './../../contenu/seconde/ses/production-richesses/fiche.md';
 import qcm621 from './../../contenu/seconde/ses/production-richesses/qcm.json';
-import exercice621 from './../../contenu/seconde/ses/production-richesses/exercice.json';
 import flash621 from './../../contenu/seconde/ses/production-richesses/flashcards.json';
-import fiche622 from './../../contenu/seconde/ses/mesure-production-pib/fiche.md';
 import qcm622 from './../../contenu/seconde/ses/mesure-production-pib/qcm.json';
-import exercice622 from './../../contenu/seconde/ses/mesure-production-pib/exercice.json';
 import flash622 from './../../contenu/seconde/ses/mesure-production-pib/flashcards.json';
-import fiche623 from './../../contenu/seconde/ses/consommation-revenu/fiche.md';
 import qcm623 from './../../contenu/seconde/ses/consommation-revenu/qcm.json';
-import exercice623 from './../../contenu/seconde/ses/consommation-revenu/exercice.json';
 import flash623 from './../../contenu/seconde/ses/consommation-revenu/flashcards.json';
-import fiche624 from './../../contenu/seconde/ses/marche-formation-prix/fiche.md';
 import qcm624 from './../../contenu/seconde/ses/marche-formation-prix/qcm.json';
-import exercice624 from './../../contenu/seconde/ses/marche-formation-prix/exercice.json';
 import flash624 from './../../contenu/seconde/ses/marche-formation-prix/flashcards.json';
-import fiche625 from './../../contenu/seconde/ses/socialisation-introduction/fiche.md';
 import qcm625 from './../../contenu/seconde/ses/socialisation-introduction/qcm.json';
-import exercice625 from './../../contenu/seconde/ses/socialisation-introduction/exercice.json';
 import flash625 from './../../contenu/seconde/ses/socialisation-introduction/flashcards.json';
-import fiche626 from './../../contenu/seconde/ses/opinion-publique/fiche.md';
 import qcm626 from './../../contenu/seconde/ses/opinion-publique/qcm.json';
-import exercice626 from './../../contenu/seconde/ses/opinion-publique/exercice.json';
 import flash626 from './../../contenu/seconde/ses/opinion-publique/flashcards.json';
-import fiche627 from './../../contenu/seconde/snt/internet/fiche.md';
 import qcm627 from './../../contenu/seconde/snt/internet/qcm.json';
-import exercice627 from './../../contenu/seconde/snt/internet/exercice.json';
 import flash627 from './../../contenu/seconde/snt/internet/flashcards.json';
-import fiche628 from './../../contenu/seconde/snt/le-web/fiche.md';
 import qcm628 from './../../contenu/seconde/snt/le-web/qcm.json';
-import exercice628 from './../../contenu/seconde/snt/le-web/exercice.json';
 import flash628 from './../../contenu/seconde/snt/le-web/flashcards.json';
-import fiche629 from './../../contenu/seconde/snt/reseaux-sociaux/fiche.md';
 import qcm629 from './../../contenu/seconde/snt/reseaux-sociaux/qcm.json';
-import exercice629 from './../../contenu/seconde/snt/reseaux-sociaux/exercice.json';
 import flash629 from './../../contenu/seconde/snt/reseaux-sociaux/flashcards.json';
-import fiche630 from './../../contenu/seconde/snt/donnees-structurees/fiche.md';
 import qcm630 from './../../contenu/seconde/snt/donnees-structurees/qcm.json';
-import exercice630 from './../../contenu/seconde/snt/donnees-structurees/exercice.json';
 import flash630 from './../../contenu/seconde/snt/donnees-structurees/flashcards.json';
-import fiche631 from './../../contenu/seconde/snt/localisation-cartographie-gps/fiche.md';
 import qcm631 from './../../contenu/seconde/snt/localisation-cartographie-gps/qcm.json';
-import exercice631 from './../../contenu/seconde/snt/localisation-cartographie-gps/exercice.json';
 import flash631 from './../../contenu/seconde/snt/localisation-cartographie-gps/flashcards.json';
-import fiche632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/fiche.md';
 import qcm632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/qcm.json';
-import exercice632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/exercice.json';
 import flash632 from './../../contenu/seconde/snt/informatique-embarquee-objets-connectes/flashcards.json';
-import fiche633 from './../../contenu/seconde/snt/photographie-numerique/fiche.md';
 import qcm633 from './../../contenu/seconde/snt/photographie-numerique/qcm.json';
-import exercice633 from './../../contenu/seconde/snt/photographie-numerique/exercice.json';
 import flash633 from './../../contenu/seconde/snt/photographie-numerique/flashcards.json';
-import fiche634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/fiche.md';
 import qcm634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/qcm.json';
-import exercice634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/exercice.json';
 import flash634 from './../../contenu/seconde/svt/la-cellule-unite-du-vivant/flashcards.json';
-import fiche635 from './../../contenu/seconde/svt/adn-et-information-genetique/fiche.md';
 import qcm635 from './../../contenu/seconde/svt/adn-et-information-genetique/qcm.json';
-import exercice635 from './../../contenu/seconde/svt/adn-et-information-genetique/exercice.json';
 import flash635 from './../../contenu/seconde/svt/adn-et-information-genetique/flashcards.json';
-import fiche636 from './../../contenu/seconde/svt/metabolisme-des-cellules/fiche.md';
 import qcm636 from './../../contenu/seconde/svt/metabolisme-des-cellules/qcm.json';
-import exercice636 from './../../contenu/seconde/svt/metabolisme-des-cellules/exercice.json';
 import flash636 from './../../contenu/seconde/svt/metabolisme-des-cellules/flashcards.json';
-import fiche637 from './../../contenu/seconde/svt/biodiversite-et-evolution/fiche.md';
 import qcm637 from './../../contenu/seconde/svt/biodiversite-et-evolution/qcm.json';
-import exercice637 from './../../contenu/seconde/svt/biodiversite-et-evolution/exercice.json';
 import flash637 from './../../contenu/seconde/svt/biodiversite-et-evolution/flashcards.json';
-import fiche638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/fiche.md';
 import qcm638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/qcm.json';
-import exercice638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/exercice.json';
 import flash638 from './../../contenu/seconde/svt/la-terre-dans-le-systeme-solaire/flashcards.json';
-import fiche639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/fiche.md';
 import qcm639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/qcm.json';
-import exercice639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/exercice.json';
 import flash639 from './../../contenu/seconde/svt/corps-humain-et-effort-physique/flashcards.json';
-import fiche640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/fiche.md';
 import qcm640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/qcm.json';
-import exercice640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/exercice.json';
 import flash640 from './../../contenu/premiere/allemand/verben-mit-praepositionen/flashcards.json';
-import fiche641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/fiche.md';
 import qcm641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/qcm.json';
-import exercice641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/exercice.json';
 import flash641 from './../../contenu/premiere/allemand/infinitiv-mit-zu/flashcards.json';
-import fiche642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/fiche.md';
 import qcm642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/qcm.json';
-import exercice642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/exercice.json';
 import flash642 from './../../contenu/premiere/allemand/nebensaetze-obwohl-damit/flashcards.json';
-import fiche643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/fiche.md';
 import qcm643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/qcm.json';
-import exercice643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/exercice.json';
 import flash643 from './../../contenu/premiere/allemand/wortschatz-arbeit-studium/flashcards.json';
-import fiche644 from './../../contenu/premiere/allemand/passiv/fiche.md';
 import qcm644 from './../../contenu/premiere/allemand/passiv/qcm.json';
-import exercice644 from './../../contenu/premiere/allemand/passiv/exercice.json';
 import flash644 from './../../contenu/premiere/allemand/passiv/flashcards.json';
-import fiche645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/fiche.md';
 import qcm645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/qcm.json';
-import exercice645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/exercice.json';
 import flash645 from './../../contenu/premiere/allemand/konjunktiv-2-vertiefung/flashcards.json';
-import fiche646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/fiche.md';
 import qcm646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/qcm.json';
-import exercice646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/exercice.json';
 import flash646 from './../../contenu/premiere/allemand/wortschatz-gesellschaft-engagement/flashcards.json';
-import fiche647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/fiche.md';
 import qcm647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/qcm.json';
-import exercice647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/exercice.json';
 import flash647 from './../../contenu/premiere/allemand/landeskunde-deutsche-geschichte/flashcards.json';
-import fiche648 from './../../contenu/premiere/allemand/landeskunde-literatur/fiche.md';
 import qcm648 from './../../contenu/premiere/allemand/landeskunde-literatur/qcm.json';
-import exercice648 from './../../contenu/premiere/allemand/landeskunde-literatur/exercice.json';
 import flash648 from './../../contenu/premiere/allemand/landeskunde-literatur/flashcards.json';
-import fiche649 from './../../contenu/premiere/anglais/aspects-simple-continu/fiche.md';
 import qcm649 from './../../contenu/premiere/anglais/aspects-simple-continu/qcm.json';
-import exercice649 from './../../contenu/premiere/anglais/aspects-simple-continu/exercice.json';
 import flash649 from './../../contenu/premiere/anglais/aspects-simple-continu/flashcards.json';
-import fiche650 from './../../contenu/premiere/anglais/gerondif-infinitif/fiche.md';
 import qcm650 from './../../contenu/premiere/anglais/gerondif-infinitif/qcm.json';
-import exercice650 from './../../contenu/premiere/anglais/gerondif-infinitif/exercice.json';
 import flash650 from './../../contenu/premiere/anglais/gerondif-infinitif/flashcards.json';
-import fiche651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/fiche.md';
 import qcm651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/qcm.json';
-import exercice651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/exercice.json';
 import flash651 from './../../contenu/premiere/anglais/relatives-determinatives-explicatives/flashcards.json';
-import fiche652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/fiche.md';
 import qcm652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/qcm.json';
-import exercice652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/exercice.json';
 import flash652 from './../../contenu/premiere/anglais/vocabulaire-travail-etudes/flashcards.json';
-import fiche653 from './../../contenu/premiere/anglais/voix-passive-emplois/fiche.md';
 import qcm653 from './../../contenu/premiere/anglais/voix-passive-emplois/qcm.json';
-import exercice653 from './../../contenu/premiere/anglais/voix-passive-emplois/exercice.json';
 import flash653 from './../../contenu/premiere/anglais/voix-passive-emplois/flashcards.json';
-import fiche654 from './../../contenu/premiere/anglais/futur-et-hypotheses/fiche.md';
 import qcm654 from './../../contenu/premiere/anglais/futur-et-hypotheses/qcm.json';
-import exercice654 from './../../contenu/premiere/anglais/futur-et-hypotheses/exercice.json';
 import flash654 from './../../contenu/premiere/anglais/futur-et-hypotheses/flashcards.json';
-import fiche655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/fiche.md';
 import qcm655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/qcm.json';
-import exercice655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/exercice.json';
 import flash655 from './../../contenu/premiere/anglais/vocabulaire-societe-engagement/flashcards.json';
-import fiche656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/fiche.md';
 import qcm656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/qcm.json';
-import exercice656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/exercice.json';
 import flash656 from './../../contenu/premiere/anglais/civilisation-histoire-usa/flashcards.json';
-import fiche657 from './../../contenu/premiere/anglais/civilisation-litterature/fiche.md';
 import qcm657 from './../../contenu/premiere/anglais/civilisation-litterature/qcm.json';
-import exercice657 from './../../contenu/premiere/anglais/civilisation-litterature/exercice.json';
 import flash657 from './../../contenu/premiere/anglais/civilisation-litterature/flashcards.json';
-import fiche658 from './../../contenu/premiere/arts/architecture/fiche.md';
 import qcm658 from './../../contenu/premiere/arts/architecture/qcm.json';
-import exercice658 from './../../contenu/premiere/arts/architecture/exercice.json';
 import flash658 from './../../contenu/premiere/arts/architecture/flashcards.json';
-import fiche659 from './../../contenu/premiere/arts/histoire-musique/fiche.md';
 import qcm659 from './../../contenu/premiere/arts/histoire-musique/qcm.json';
-import exercice659 from './../../contenu/premiere/arts/histoire-musique/exercice.json';
 import flash659 from './../../contenu/premiere/arts/histoire-musique/flashcards.json';
-import fiche660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/fiche.md';
 import qcm660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/qcm.json';
-import exercice660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/exercice.json';
 import flash660 from './../../contenu/premiere/enseignement-scientifique/une-longue-histoire-de-la-matiere/flashcards.json';
-import fiche661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/fiche.md';
 import qcm661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/qcm.json';
-import exercice661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/exercice.json';
 import flash661 from './../../contenu/premiere/enseignement-scientifique/le-soleil-notre-source-denergie/flashcards.json';
-import fiche662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/fiche.md';
 import qcm662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/qcm.json';
-import exercice662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/exercice.json';
 import flash662 from './../../contenu/premiere/enseignement-scientifique/la-terre-un-astre-singulier/flashcards.json';
-import fiche663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/fiche.md';
 import qcm663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/qcm.json';
-import exercice663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/exercice.json';
 import flash663 from './../../contenu/premiere/enseignement-scientifique/la-biodiversite-et-son-evolution/flashcards.json';
-import fiche664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/fiche.md';
 import qcm664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/qcm.json';
-import exercice664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/exercice.json';
 import flash664 from './../../contenu/premiere/enseignement-scientifique/son-et-musique/flashcards.json';
-import fiche665 from './../../contenu/premiere/espagnol/subjuntivo-usos/fiche.md';
 import qcm665 from './../../contenu/premiere/espagnol/subjuntivo-usos/qcm.json';
-import exercice665 from './../../contenu/premiere/espagnol/subjuntivo-usos/exercice.json';
 import flash665 from './../../contenu/premiere/espagnol/subjuntivo-usos/flashcards.json';
-import fiche666 from './../../contenu/premiere/espagnol/relativos/fiche.md';
 import qcm666 from './../../contenu/premiere/espagnol/relativos/qcm.json';
-import exercice666 from './../../contenu/premiere/espagnol/relativos/exercice.json';
 import flash666 from './../../contenu/premiere/espagnol/relativos/flashcards.json';
-import fiche667 from './../../contenu/premiere/espagnol/perifrasis/fiche.md';
 import qcm667 from './../../contenu/premiere/espagnol/perifrasis/qcm.json';
-import exercice667 from './../../contenu/premiere/espagnol/perifrasis/exercice.json';
 import flash667 from './../../contenu/premiere/espagnol/perifrasis/flashcards.json';
-import fiche668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/fiche.md';
 import qcm668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/qcm.json';
-import exercice668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/exercice.json';
 import flash668 from './../../contenu/premiere/espagnol/vocabulario-trabajo-estudios/flashcards.json';
-import fiche669 from './../../contenu/premiere/espagnol/voz-pasiva/fiche.md';
 import qcm669 from './../../contenu/premiere/espagnol/voz-pasiva/qcm.json';
-import exercice669 from './../../contenu/premiere/espagnol/voz-pasiva/exercice.json';
 import flash669 from './../../contenu/premiere/espagnol/voz-pasiva/flashcards.json';
-import fiche670 from './../../contenu/premiere/espagnol/estilo-indirecto/fiche.md';
 import qcm670 from './../../contenu/premiere/espagnol/estilo-indirecto/qcm.json';
-import exercice670 from './../../contenu/premiere/espagnol/estilo-indirecto/exercice.json';
 import flash670 from './../../contenu/premiere/espagnol/estilo-indirecto/flashcards.json';
-import fiche671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/fiche.md';
 import qcm671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/qcm.json';
-import exercice671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/exercice.json';
 import flash671 from './../../contenu/premiere/espagnol/vocabulario-sociedad-ciudadania/flashcards.json';
-import fiche672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/fiche.md';
 import qcm672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/qcm.json';
-import exercice672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/exercice.json';
 import flash672 from './../../contenu/premiere/espagnol/civilizacion-historia-latinoamerica/flashcards.json';
-import fiche673 from './../../contenu/premiere/espagnol/civilizacion-literatura/fiche.md';
 import qcm673 from './../../contenu/premiere/espagnol/civilizacion-literatura/qcm.json';
-import exercice673 from './../../contenu/premiere/espagnol/civilizacion-literatura/exercice.json';
 import flash673 from './../../contenu/premiere/espagnol/civilizacion-literatura/flashcards.json';
-import fiche674 from './../../contenu/premiere/francais/grammaire-premiere/fiche.md';
 import qcm674 from './../../contenu/premiere/francais/grammaire-premiere/qcm.json';
-import exercice674 from './../../contenu/premiere/francais/grammaire-premiere/exercice.json';
 import flash674 from './../../contenu/premiere/francais/grammaire-premiere/flashcards.json';
-import fiche675 from './../../contenu/premiere/francais/commentaire-litteraire/fiche.md';
 import qcm675 from './../../contenu/premiere/francais/commentaire-litteraire/qcm.json';
-import exercice675 from './../../contenu/premiere/francais/commentaire-litteraire/exercice.json';
 import flash675 from './../../contenu/premiere/francais/commentaire-litteraire/flashcards.json';
-import fiche676 from './../../contenu/premiere/francais/roman-et-recit/fiche.md';
 import qcm676 from './../../contenu/premiere/francais/roman-et-recit/qcm.json';
-import exercice676 from './../../contenu/premiere/francais/roman-et-recit/exercice.json';
 import flash676 from './../../contenu/premiere/francais/roman-et-recit/flashcards.json';
-import fiche677 from './../../contenu/premiere/francais/poesie-19-21/fiche.md';
 import qcm677 from './../../contenu/premiere/francais/poesie-19-21/qcm.json';
-import exercice677 from './../../contenu/premiere/francais/poesie-19-21/exercice.json';
 import flash677 from './../../contenu/premiere/francais/poesie-19-21/flashcards.json';
-import fiche678 from './../../contenu/premiere/francais/contraction-essai/fiche.md';
 import qcm678 from './../../contenu/premiere/francais/contraction-essai/qcm.json';
-import exercice678 from './../../contenu/premiere/francais/contraction-essai/exercice.json';
 import flash678 from './../../contenu/premiere/francais/contraction-essai/flashcards.json';
-import fiche679 from './../../contenu/premiere/francais/litterature-idees-16-18/fiche.md';
 import qcm679 from './../../contenu/premiere/francais/litterature-idees-16-18/qcm.json';
-import exercice679 from './../../contenu/premiere/francais/litterature-idees-16-18/exercice.json';
 import flash679 from './../../contenu/premiere/francais/litterature-idees-16-18/flashcards.json';
-import fiche680 from './../../contenu/premiere/francais/dissertation/fiche.md';
 import qcm680 from './../../contenu/premiere/francais/dissertation/qcm.json';
-import exercice680 from './../../contenu/premiere/francais/dissertation/exercice.json';
 import flash680 from './../../contenu/premiere/francais/dissertation/flashcards.json';
-import fiche681 from './../../contenu/premiere/francais/theatre-17-21/fiche.md';
 import qcm681 from './../../contenu/premiere/francais/theatre-17-21/qcm.json';
-import exercice681 from './../../contenu/premiere/francais/theatre-17-21/exercice.json';
 import flash681 from './../../contenu/premiere/francais/theatre-17-21/flashcards.json';
-import fiche682 from './../../contenu/premiere/francais/epreuve-orale/fiche.md';
 import qcm682 from './../../contenu/premiere/francais/epreuve-orale/qcm.json';
-import exercice682 from './../../contenu/premiere/francais/epreuve-orale/exercice.json';
 import flash682 from './../../contenu/premiere/francais/epreuve-orale/flashcards.json';
-import fiche683 from './../../contenu/premiere/hggsp/democratie/fiche.md';
 import qcm683 from './../../contenu/premiere/hggsp/democratie/qcm.json';
-import exercice683 from './../../contenu/premiere/hggsp/democratie/exercice.json';
 import flash683 from './../../contenu/premiere/hggsp/democratie/flashcards.json';
-import fiche684 from './../../contenu/premiere/hggsp/puissances-internationales/fiche.md';
 import qcm684 from './../../contenu/premiere/hggsp/puissances-internationales/qcm.json';
-import exercice684 from './../../contenu/premiere/hggsp/puissances-internationales/exercice.json';
 import flash684 from './../../contenu/premiere/hggsp/puissances-internationales/flashcards.json';
-import fiche685 from './../../contenu/premiere/hggsp/frontieres/fiche.md';
 import qcm685 from './../../contenu/premiere/hggsp/frontieres/qcm.json';
-import exercice685 from './../../contenu/premiere/hggsp/frontieres/exercice.json';
 import flash685 from './../../contenu/premiere/hggsp/frontieres/flashcards.json';
-import fiche686 from './../../contenu/premiere/hggsp/s-informer/fiche.md';
 import qcm686 from './../../contenu/premiere/hggsp/s-informer/qcm.json';
-import exercice686 from './../../contenu/premiere/hggsp/s-informer/exercice.json';
 import flash686 from './../../contenu/premiere/hggsp/s-informer/flashcards.json';
-import fiche687 from './../../contenu/premiere/hggsp/etats-et-religions/fiche.md';
 import qcm687 from './../../contenu/premiere/hggsp/etats-et-religions/qcm.json';
-import exercice687 from './../../contenu/premiere/hggsp/etats-et-religions/exercice.json';
 import flash687 from './../../contenu/premiere/hggsp/etats-et-religions/flashcards.json';
-import fiche688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/fiche.md';
 import qcm688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/qcm.json';
-import exercice688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/exercice.json';
 import flash688 from './../../contenu/premiere/hist-geo/revolution-francaise-empire/flashcards.json';
-import fiche689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/fiche.md';
 import qcm689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/qcm.json';
-import exercice689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/exercice.json';
 import flash689 from './../../contenu/premiere/hist-geo/nations-nationalites-europe/flashcards.json';
-import fiche690 from './../../contenu/premiere/hist-geo/industrialisation-19e/fiche.md';
 import qcm690 from './../../contenu/premiere/hist-geo/industrialisation-19e/qcm.json';
-import exercice690 from './../../contenu/premiere/hist-geo/industrialisation-19e/exercice.json';
 import flash690 from './../../contenu/premiere/hist-geo/industrialisation-19e/flashcards.json';
-import fiche691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/fiche.md';
 import qcm691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/qcm.json';
-import exercice691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/exercice.json';
 import flash691 from './../../contenu/premiere/hist-geo/premiere-guerre-et-consequences/flashcards.json';
-import fiche692 from './../../contenu/premiere/hist-geo/metropolisation-france/fiche.md';
 import qcm692 from './../../contenu/premiere/hist-geo/metropolisation-france/qcm.json';
-import exercice692 from './../../contenu/premiere/hist-geo/metropolisation-france/exercice.json';
 import flash692 from './../../contenu/premiere/hist-geo/metropolisation-france/flashcards.json';
-import fiche693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/fiche.md';
 import qcm693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/qcm.json';
-import exercice693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/exercice.json';
 import flash693 from './../../contenu/premiere/hist-geo/espaces-productifs-et-ruraux/flashcards.json';
-import fiche694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/fiche.md';
 import qcm694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/qcm.json';
-import exercice694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/exercice.json';
 import flash694 from './../../contenu/premiere/hist-geo/emc-republique-laicite/flashcards.json';
-import fiche695 from './../../contenu/premiere/italien/congiuntivo-usi/fiche.md';
 import qcm695 from './../../contenu/premiere/italien/congiuntivo-usi/qcm.json';
-import exercice695 from './../../contenu/premiere/italien/congiuntivo-usi/exercice.json';
 import flash695 from './../../contenu/premiere/italien/congiuntivo-usi/flashcards.json';
-import fiche696 from './../../contenu/premiere/italien/pronomi-relativi/fiche.md';
 import qcm696 from './../../contenu/premiere/italien/pronomi-relativi/qcm.json';
-import exercice696 from './../../contenu/premiere/italien/pronomi-relativi/exercice.json';
 import flash696 from './../../contenu/premiere/italien/pronomi-relativi/flashcards.json';
-import fiche697 from './../../contenu/premiere/italien/perifrasi/fiche.md';
 import qcm697 from './../../contenu/premiere/italien/perifrasi/qcm.json';
-import exercice697 from './../../contenu/premiere/italien/perifrasi/exercice.json';
 import flash697 from './../../contenu/premiere/italien/perifrasi/flashcards.json';
-import fiche698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/fiche.md';
 import qcm698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/qcm.json';
-import exercice698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/exercice.json';
 import flash698 from './../../contenu/premiere/italien/vocabolario-lavoro-studi/flashcards.json';
-import fiche699 from './../../contenu/premiere/italien/forma-passiva/fiche.md';
 import qcm699 from './../../contenu/premiere/italien/forma-passiva/qcm.json';
-import exercice699 from './../../contenu/premiere/italien/forma-passiva/exercice.json';
 import flash699 from './../../contenu/premiere/italien/forma-passiva/flashcards.json';
-import fiche700 from './../../contenu/premiere/italien/discorso-indiretto/fiche.md';
 import qcm700 from './../../contenu/premiere/italien/discorso-indiretto/qcm.json';
-import exercice700 from './../../contenu/premiere/italien/discorso-indiretto/exercice.json';
 import flash700 from './../../contenu/premiere/italien/discorso-indiretto/flashcards.json';
-import fiche701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/fiche.md';
 import qcm701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/qcm.json';
-import exercice701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/exercice.json';
 import flash701 from './../../contenu/premiere/italien/vocabolario-societa-cittadinanza/flashcards.json';
-import fiche702 from './../../contenu/premiere/italien/civilta-rinascimento/fiche.md';
 import qcm702 from './../../contenu/premiere/italien/civilta-rinascimento/qcm.json';
-import exercice702 from './../../contenu/premiere/italien/civilta-rinascimento/exercice.json';
 import flash702 from './../../contenu/premiere/italien/civilta-rinascimento/flashcards.json';
-import fiche703 from './../../contenu/premiere/italien/civilta-letteratura/fiche.md';
 import qcm703 from './../../contenu/premiere/italien/civilta-letteratura/qcm.json';
-import exercice703 from './../../contenu/premiere/italien/civilta-letteratura/exercice.json';
 import flash703 from './../../contenu/premiere/italien/civilta-letteratura/flashcards.json';
-import fiche704 from './../../contenu/premiere/langues-anciennes/mythologie/fiche.md';
 import qcm704 from './../../contenu/premiere/langues-anciennes/mythologie/qcm.json';
-import exercice704 from './../../contenu/premiere/langues-anciennes/mythologie/exercice.json';
 import flash704 from './../../contenu/premiere/langues-anciennes/mythologie/flashcards.json';
-import fiche705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/fiche.md';
 import qcm705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/qcm.json';
-import exercice705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/exercice.json';
 import flash705 from './../../contenu/premiere/langues-anciennes/latin-auteurs/flashcards.json';
-import fiche706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/fiche.md';
 import qcm706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/qcm.json';
-import exercice706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/exercice.json';
 import flash706 from './../../contenu/premiere/maths-enseignement-scientifique/information-chiffree/flashcards.json';
-import fiche707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/fiche.md';
 import qcm707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/qcm.json';
-import exercice707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/exercice.json';
 import flash707 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-evolution/flashcards.json';
-import fiche708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/fiche.md';
 import qcm708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/qcm.json';
-import exercice708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/exercice.json';
 import flash708 from './../../contenu/premiere/maths-enseignement-scientifique/statistiques-bivariees/flashcards.json';
-import fiche709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/fiche.md';
 import qcm709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/qcm.json';
-import exercice709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/exercice.json';
 import flash709 from './../../contenu/premiere/maths-enseignement-scientifique/phenomenes-aleatoires/flashcards.json';
-import fiche710 from './../../contenu/premiere/maths-specialite/second-degre/fiche.md';
 import qcm710 from './../../contenu/premiere/maths-specialite/second-degre/qcm.json';
-import exercice710 from './../../contenu/premiere/maths-specialite/second-degre/exercice.json';
 import flash710 from './../../contenu/premiere/maths-specialite/second-degre/flashcards.json';
-import fiche711 from './../../contenu/premiere/maths-specialite/suites-numeriques/fiche.md';
 import qcm711 from './../../contenu/premiere/maths-specialite/suites-numeriques/qcm.json';
-import exercice711 from './../../contenu/premiere/maths-specialite/suites-numeriques/exercice.json';
 import flash711 from './../../contenu/premiere/maths-specialite/suites-numeriques/flashcards.json';
-import fiche712 from './../../contenu/premiere/maths-specialite/derivation/fiche.md';
 import qcm712 from './../../contenu/premiere/maths-specialite/derivation/qcm.json';
-import exercice712 from './../../contenu/premiere/maths-specialite/derivation/exercice.json';
 import flash712 from './../../contenu/premiere/maths-specialite/derivation/flashcards.json';
-import fiche713 from './../../contenu/premiere/maths-specialite/variations-courbes/fiche.md';
 import qcm713 from './../../contenu/premiere/maths-specialite/variations-courbes/qcm.json';
-import exercice713 from './../../contenu/premiere/maths-specialite/variations-courbes/exercice.json';
 import flash713 from './../../contenu/premiere/maths-specialite/variations-courbes/flashcards.json';
-import fiche714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/fiche.md';
 import qcm714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/qcm.json';
-import exercice714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/exercice.json';
 import flash714 from './../../contenu/premiere/maths-specialite/fonction-exponentielle/flashcards.json';
-import fiche715 from './../../contenu/premiere/maths-specialite/trigonometrie/fiche.md';
 import qcm715 from './../../contenu/premiere/maths-specialite/trigonometrie/qcm.json';
-import exercice715 from './../../contenu/premiere/maths-specialite/trigonometrie/exercice.json';
 import flash715 from './../../contenu/premiere/maths-specialite/trigonometrie/flashcards.json';
-import fiche716 from './../../contenu/premiere/maths-specialite/produit-scalaire/fiche.md';
 import qcm716 from './../../contenu/premiere/maths-specialite/produit-scalaire/qcm.json';
-import exercice716 from './../../contenu/premiere/maths-specialite/produit-scalaire/exercice.json';
 import flash716 from './../../contenu/premiere/maths-specialite/produit-scalaire/flashcards.json';
-import fiche717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/fiche.md';
 import qcm717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/qcm.json';
-import exercice717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/exercice.json';
 import flash717 from './../../contenu/premiere/maths-specialite/geometrie-reperee/flashcards.json';
-import fiche718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/fiche.md';
 import qcm718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/qcm.json';
-import exercice718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/exercice.json';
 import flash718 from './../../contenu/premiere/maths-specialite/probabilites-conditionnelles/flashcards.json';
-import fiche719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/fiche.md';
 import qcm719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/qcm.json';
-import exercice719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/exercice.json';
 import flash719 from './../../contenu/premiere/maths-specialite/variables-aleatoires/flashcards.json';
-import fiche720 from './../../contenu/premiere/nsi/representation-des-donnees/fiche.md';
 import qcm720 from './../../contenu/premiere/nsi/representation-des-donnees/qcm.json';
-import exercice720 from './../../contenu/premiere/nsi/representation-des-donnees/exercice.json';
 import flash720 from './../../contenu/premiere/nsi/representation-des-donnees/flashcards.json';
-import fiche721 from './../../contenu/premiere/nsi/types-construits/fiche.md';
 import qcm721 from './../../contenu/premiere/nsi/types-construits/qcm.json';
-import exercice721 from './../../contenu/premiere/nsi/types-construits/exercice.json';
 import flash721 from './../../contenu/premiere/nsi/types-construits/flashcards.json';
-import fiche722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/fiche.md';
 import qcm722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/qcm.json';
-import exercice722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/exercice.json';
 import flash722 from './../../contenu/premiere/nsi/traitement-de-donnees-en-tables/flashcards.json';
-import fiche723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/fiche.md';
 import qcm723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/qcm.json';
-import exercice723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/exercice.json';
 import flash723 from './../../contenu/premiere/nsi/interactions-web-client-serveur/flashcards.json';
-import fiche724 from './../../contenu/premiere/nsi/architecture-et-systeme/fiche.md';
 import qcm724 from './../../contenu/premiere/nsi/architecture-et-systeme/qcm.json';
-import exercice724 from './../../contenu/premiere/nsi/architecture-et-systeme/exercice.json';
 import flash724 from './../../contenu/premiere/nsi/architecture-et-systeme/flashcards.json';
-import fiche725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/fiche.md';
 import qcm725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/qcm.json';
-import exercice725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/exercice.json';
 import flash725 from './../../contenu/premiere/nsi/algorithmique-tris-et-recherche/flashcards.json';
-import fiche726 from './../../contenu/premiere/physique-chimie/transformations-matiere/fiche.md';
 import qcm726 from './../../contenu/premiere/physique-chimie/transformations-matiere/qcm.json';
-import exercice726 from './../../contenu/premiere/physique-chimie/transformations-matiere/exercice.json';
 import flash726 from './../../contenu/premiere/physique-chimie/transformations-matiere/flashcards.json';
-import fiche727 from './../../contenu/premiere/physique-chimie/chimie-organique/fiche.md';
 import qcm727 from './../../contenu/premiere/physique-chimie/chimie-organique/qcm.json';
-import exercice727 from './../../contenu/premiere/physique-chimie/chimie-organique/exercice.json';
 import flash727 from './../../contenu/premiere/physique-chimie/chimie-organique/flashcards.json';
-import fiche728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/fiche.md';
 import qcm728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/qcm.json';
-import exercice728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/exercice.json';
 import flash728 from './../../contenu/premiere/physique-chimie/mouvement-interactions/flashcards.json';
-import fiche729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/fiche.md';
 import qcm729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/qcm.json';
-import exercice729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/exercice.json';
 import flash729 from './../../contenu/premiere/physique-chimie/energie-phenomenes-mecaniques/flashcards.json';
-import fiche730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/fiche.md';
 import qcm730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/qcm.json';
-import exercice730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/exercice.json';
 import flash730 from './../../contenu/premiere/physique-chimie/energie-phenomenes-electriques/flashcards.json';
-import fiche731 from './../../contenu/premiere/physique-chimie/ondes-signaux/fiche.md';
 import qcm731 from './../../contenu/premiere/physique-chimie/ondes-signaux/qcm.json';
-import exercice731 from './../../contenu/premiere/physique-chimie/ondes-signaux/exercice.json';
 import flash731 from './../../contenu/premiere/physique-chimie/ondes-signaux/flashcards.json';
-import fiche732 from './../../contenu/premiere/ses/marche-concurrentiel/fiche.md';
 import qcm732 from './../../contenu/premiere/ses/marche-concurrentiel/qcm.json';
-import exercice732 from './../../contenu/premiere/ses/marche-concurrentiel/exercice.json';
 import flash732 from './../../contenu/premiere/ses/marche-concurrentiel/flashcards.json';
-import fiche733 from './../../contenu/premiere/ses/marches-imparfaits/fiche.md';
 import qcm733 from './../../contenu/premiere/ses/marches-imparfaits/qcm.json';
-import exercice733 from './../../contenu/premiere/ses/marches-imparfaits/exercice.json';
 import flash733 from './../../contenu/premiere/ses/marches-imparfaits/flashcards.json';
-import fiche734 from './../../contenu/premiere/ses/defaillances-de-marche/fiche.md';
 import qcm734 from './../../contenu/premiere/ses/defaillances-de-marche/qcm.json';
-import exercice734 from './../../contenu/premiere/ses/defaillances-de-marche/exercice.json';
 import flash734 from './../../contenu/premiere/ses/defaillances-de-marche/flashcards.json';
-import fiche735 from './../../contenu/premiere/ses/monnaie-et-financement/fiche.md';
 import qcm735 from './../../contenu/premiere/ses/monnaie-et-financement/qcm.json';
-import exercice735 from './../../contenu/premiere/ses/monnaie-et-financement/exercice.json';
 import flash735 from './../../contenu/premiere/ses/monnaie-et-financement/flashcards.json';
-import fiche736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/fiche.md';
 import qcm736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/qcm.json';
-import exercice736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/exercice.json';
 import flash736 from './../../contenu/premiere/ses/socialisation-primaire-secondaire/flashcards.json';
-import fiche737 from './../../contenu/premiere/ses/liens-sociaux/fiche.md';
 import qcm737 from './../../contenu/premiere/ses/liens-sociaux/qcm.json';
-import exercice737 from './../../contenu/premiere/ses/liens-sociaux/exercice.json';
 import flash737 from './../../contenu/premiere/ses/liens-sociaux/flashcards.json';
-import fiche738 from './../../contenu/premiere/ses/deviance-controle-social/fiche.md';
 import qcm738 from './../../contenu/premiere/ses/deviance-controle-social/qcm.json';
-import exercice738 from './../../contenu/premiere/ses/deviance-controle-social/exercice.json';
 import flash738 from './../../contenu/premiere/ses/deviance-controle-social/flashcards.json';
-import fiche739 from './../../contenu/premiere/ses/voter-participation/fiche.md';
 import qcm739 from './../../contenu/premiere/ses/voter-participation/qcm.json';
-import exercice739 from './../../contenu/premiere/ses/voter-participation/exercice.json';
 import flash739 from './../../contenu/premiere/ses/voter-participation/flashcards.json';
-import fiche740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/fiche.md';
 import qcm740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/qcm.json';
-import exercice740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/exercice.json';
 import flash740 from './../../contenu/premiere/si/analyse-fonctionnelle-des-systemes/flashcards.json';
-import fiche741 from './../../contenu/premiere/si/chaine-denergie/fiche.md';
 import qcm741 from './../../contenu/premiere/si/chaine-denergie/qcm.json';
-import exercice741 from './../../contenu/premiere/si/chaine-denergie/exercice.json';
 import flash741 from './../../contenu/premiere/si/chaine-denergie/flashcards.json';
-import fiche742 from './../../contenu/premiere/si/chaine-dinformation/fiche.md';
 import qcm742 from './../../contenu/premiere/si/chaine-dinformation/qcm.json';
-import exercice742 from './../../contenu/premiere/si/chaine-dinformation/exercice.json';
 import flash742 from './../../contenu/premiere/si/chaine-dinformation/flashcards.json';
-import fiche743 from './../../contenu/premiere/si/comportement-des-materiaux/fiche.md';
 import qcm743 from './../../contenu/premiere/si/comportement-des-materiaux/qcm.json';
-import exercice743 from './../../contenu/premiere/si/comportement-des-materiaux/exercice.json';
 import flash743 from './../../contenu/premiere/si/comportement-des-materiaux/flashcards.json';
-import fiche744 from './../../contenu/premiere/si/mecanique-des-solides/fiche.md';
 import qcm744 from './../../contenu/premiere/si/mecanique-des-solides/qcm.json';
-import exercice744 from './../../contenu/premiere/si/mecanique-des-solides/exercice.json';
 import flash744 from './../../contenu/premiere/si/mecanique-des-solides/flashcards.json';
-import fiche745 from './../../contenu/premiere/svt/mutations-et-variabilite/fiche.md';
 import qcm745 from './../../contenu/premiere/svt/mutations-et-variabilite/qcm.json';
-import exercice745 from './../../contenu/premiere/svt/mutations-et-variabilite/exercice.json';
 import flash745 from './../../contenu/premiere/svt/mutations-et-variabilite/flashcards.json';
-import fiche746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/fiche.md';
 import qcm746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/qcm.json';
-import exercice746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/exercice.json';
 import flash746 from './../../contenu/premiere/svt/expression-du-patrimoine-genetique/flashcards.json';
-import fiche747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/fiche.md';
 import qcm747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/qcm.json';
-import exercice747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/exercice.json';
 import flash747 from './../../contenu/premiere/svt/dynamique-interne-de-la-terre/flashcards.json';
-import fiche748 from './../../contenu/premiere/svt/ecosystemes-et-services/fiche.md';
 import qcm748 from './../../contenu/premiere/svt/ecosystemes-et-services/qcm.json';
-import exercice748 from './../../contenu/premiere/svt/ecosystemes-et-services/exercice.json';
 import flash748 from './../../contenu/premiere/svt/ecosystemes-et-services/flashcards.json';
-import fiche749 from './../../contenu/premiere/svt/variation-genetique-et-sante/fiche.md';
 import qcm749 from './../../contenu/premiere/svt/variation-genetique-et-sante/qcm.json';
-import exercice749 from './../../contenu/premiere/svt/variation-genetique-et-sante/exercice.json';
 import flash749 from './../../contenu/premiere/svt/variation-genetique-et-sante/flashcards.json';
-import fiche750 from './../../contenu/premiere-techno/maths/suites-numeriques/fiche.md';
 import qcm750 from './../../contenu/premiere-techno/maths/suites-numeriques/qcm.json';
-import exercice750 from './../../contenu/premiere-techno/maths/suites-numeriques/exercice.json';
 import flash750 from './../../contenu/premiere-techno/maths/suites-numeriques/flashcards.json';
-import fiche751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/fiche.md';
 import qcm751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/qcm.json';
-import exercice751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/exercice.json';
 import flash751 from './../../contenu/premiere-techno/maths/fonctions-variable-reelle/flashcards.json';
-import fiche752 from './../../contenu/premiere-techno/maths/derivation/fiche.md';
 import qcm752 from './../../contenu/premiere-techno/maths/derivation/qcm.json';
-import exercice752 from './../../contenu/premiere-techno/maths/derivation/exercice.json';
 import flash752 from './../../contenu/premiere-techno/maths/derivation/flashcards.json';
-import fiche753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/fiche.md';
 import qcm753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/qcm.json';
-import exercice753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/exercice.json';
 import flash753 from './../../contenu/premiere-techno/maths/statistiques-deux-variables/flashcards.json';
-import fiche754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/fiche.md';
 import qcm754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/qcm.json';
-import exercice754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/exercice.json';
 import flash754 from './../../contenu/premiere-techno/maths/probabilites-variables-aleatoires/flashcards.json';
-import fiche755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/fiche.md';
 import qcm755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
-import exercice755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/exercice.json';
 import flash755 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
-import fiche756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/fiche.md';
 import qcm756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/qcm.json';
-import exercice756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/exercice.json';
 import flash756 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/trigonometrie/flashcards.json';
-import fiche757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/fiche.md';
 import qcm757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/qcm.json';
-import exercice757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/exercice.json';
 import flash757 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/energie/flashcards.json';
-import fiche758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/fiche.md';
 import qcm758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/qcm.json';
-import exercice758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/exercice.json';
 import flash758 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/produit-scalaire/flashcards.json';
-import fiche759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/fiche.md';
 import qcm759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/qcm.json';
-import exercice759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/exercice.json';
 import flash759 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/nombres-complexes/flashcards.json';
-import fiche760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/fiche.md';
 import qcm760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/qcm.json';
-import exercice760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/exercice.json';
 import flash760 from './../../contenu/premiere-techno/pc-maths-sti2d-stl/ondes-information/flashcards.json';
-import fiche761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/fiche.md';
 import qcm761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/qcm.json';
-import exercice761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/exercice.json';
 import flash761 from './../../contenu/premiere-techno/pc-sante-st2s/securite-chimique-acide-base/flashcards.json';
-import fiche762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/fiche.md';
 import qcm762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/qcm.json';
-import exercice762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/exercice.json';
 import flash762 from './../../contenu/premiere-techno/pc-sante-st2s/oxydoreduction-desinfectants/flashcards.json';
-import fiche763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/fiche.md';
 import qcm763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/qcm.json';
-import exercice763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/exercice.json';
 import flash763 from './../../contenu/premiere-techno/pc-sante-st2s/risques-electriques/flashcards.json';
-import fiche764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/fiche.md';
 import qcm764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/qcm.json';
-import exercice764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/exercice.json';
 import flash764 from './../../contenu/premiere-techno/pc-sante-st2s/ondes-sonores-audition/flashcards.json';
-import fiche765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/fiche.md';
 import qcm765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/qcm.json';
-import exercice765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/exercice.json';
 import flash765 from './../../contenu/premiere-techno/pc-sante-st2s/lumiere-vision-lentilles/flashcards.json';
-import fiche766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/fiche.md';
 import qcm766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/qcm.json';
-import exercice766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/exercice.json';
 import flash766 from './../../contenu/premiere-techno/pc-sante-st2s/infrarouge-securite-routiere/flashcards.json';
-import fiche767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/fiche.md';
 import qcm767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/qcm.json';
-import exercice767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/exercice.json';
 import flash767 from './../../contenu/premiere-techno/spcl-stl/securite-chimie-verte/flashcards.json';
-import fiche768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/fiche.md';
 import qcm768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/qcm.json';
-import exercice768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/exercice.json';
 import flash768 from './../../contenu/premiere-techno/spcl-stl/mesure-incertitudes-labo/flashcards.json';
-import fiche769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/fiche.md';
 import qcm769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/qcm.json';
-import exercice769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/exercice.json';
 import flash769 from './../../contenu/premiere-techno/spcl-stl/instrumentation-chaine-mesure/flashcards.json';
-import fiche770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/fiche.md';
 import qcm770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/qcm.json';
-import exercice770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/exercice.json';
 import flash770 from './../../contenu/premiere-techno/spcl-stl/analyses-spectroscopies-dosages/flashcards.json';
-import fiche771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/fiche.md';
 import qcm771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/qcm.json';
-import exercice771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/exercice.json';
 import flash771 from './../../contenu/premiere-techno/spcl-stl/syntheses-extraction-purification/flashcards.json';
-import fiche772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/fiche.md';
 import qcm772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/qcm.json';
-import exercice772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/exercice.json';
 import flash772 from './../../contenu/premiere-techno/spcl-stl/image-couleur-vision/flashcards.json';
-import fiche773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/fiche.md';
 import qcm773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/qcm.json';
-import exercice773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/exercice.json';
 import flash773 from './../../contenu/premiere-techno/spcl-stl/image-photographie-lentilles/flashcards.json';
-import fiche774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/fiche.md';
 import qcm774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/qcm.json';
-import exercice774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/exercice.json';
 import flash774 from './../../contenu/premiere-techno/spcl-stl/appareil-photo-image-numerique/flashcards.json';
-import fiche775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/fiche.md';
 import qcm775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/qcm.json';
-import exercice775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/exercice.json';
 import flash775 from './../../contenu/terminale/allemand/komplexe-satzgefuege/flashcards.json';
-import fiche776 from './../../contenu/terminale/allemand/konnektoren-argumentation/fiche.md';
 import qcm776 from './../../contenu/terminale/allemand/konnektoren-argumentation/qcm.json';
-import exercice776 from './../../contenu/terminale/allemand/konnektoren-argumentation/exercice.json';
 import flash776 from './../../contenu/terminale/allemand/konnektoren-argumentation/flashcards.json';
-import fiche777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/fiche.md';
 import qcm777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/qcm.json';
-import exercice777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/exercice.json';
 import flash777 from './../../contenu/terminale/allemand/partizipialkonstruktionen/flashcards.json';
-import fiche778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/fiche.md';
 import qcm778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/qcm.json';
-import exercice778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/exercice.json';
 import flash778 from './../../contenu/terminale/allemand/wortschatz-wirtschaft-globalisierung/flashcards.json';
-import fiche779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/fiche.md';
 import qcm779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/qcm.json';
-import exercice779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/exercice.json';
 import flash779 from './../../contenu/terminale/allemand/konjunktiv-1-indirekte-rede/flashcards.json';
-import fiche780 from './../../contenu/terminale/allemand/nominalstil/fiche.md';
 import qcm780 from './../../contenu/terminale/allemand/nominalstil/qcm.json';
-import exercice780 from './../../contenu/terminale/allemand/nominalstil/exercice.json';
 import flash780 from './../../contenu/terminale/allemand/nominalstil/flashcards.json';
-import fiche781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/fiche.md';
 import qcm781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/qcm.json';
-import exercice781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/exercice.json';
 import flash781 from './../../contenu/terminale/allemand/wortschatz-gesellschaft-welt/flashcards.json';
-import fiche782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/fiche.md';
 import qcm782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/qcm.json';
-import exercice782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/exercice.json';
 import flash782 from './../../contenu/terminale/allemand/landeskunde-deutsch-in-der-welt/flashcards.json';
-import fiche783 from './../../contenu/terminale/anglais/systeme-verbal/fiche.md';
 import qcm783 from './../../contenu/terminale/anglais/systeme-verbal/qcm.json';
-import exercice783 from './../../contenu/terminale/anglais/systeme-verbal/exercice.json';
 import flash783 from './../../contenu/terminale/anglais/systeme-verbal/flashcards.json';
-import fiche784 from './../../contenu/terminale/anglais/modalite/fiche.md';
 import qcm784 from './../../contenu/terminale/anglais/modalite/qcm.json';
-import exercice784 from './../../contenu/terminale/anglais/modalite/exercice.json';
 import flash784 from './../../contenu/terminale/anglais/modalite/flashcards.json';
-import fiche785 from './../../contenu/terminale/anglais/irreel-hypotheses/fiche.md';
 import qcm785 from './../../contenu/terminale/anglais/irreel-hypotheses/qcm.json';
-import exercice785 from './../../contenu/terminale/anglais/irreel-hypotheses/exercice.json';
 import flash785 from './../../contenu/terminale/anglais/irreel-hypotheses/flashcards.json';
-import fiche786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/fiche.md';
 import qcm786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/qcm.json';
-import exercice786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/exercice.json';
 import flash786 from './../../contenu/terminale/anglais/vocabulaire-economie-mondialisation/flashcards.json';
-import fiche787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/fiche.md';
 import qcm787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/qcm.json';
-import exercice787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/exercice.json';
 import flash787 from './../../contenu/terminale/anglais/discours-rapporte-concordance/flashcards.json';
-import fiche788 from './../../contenu/terminale/anglais/structures-complexes/fiche.md';
 import qcm788 from './../../contenu/terminale/anglais/structures-complexes/qcm.json';
-import exercice788 from './../../contenu/terminale/anglais/structures-complexes/exercice.json';
 import flash788 from './../../contenu/terminale/anglais/structures-complexes/flashcards.json';
-import fiche789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/fiche.md';
 import qcm789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/qcm.json';
-import exercice789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/exercice.json';
 import flash789 from './../../contenu/terminale/anglais/vocabulaire-sciences-societe/flashcards.json';
-import fiche790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/fiche.md';
 import qcm790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/qcm.json';
-import exercice790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/exercice.json';
 import flash790 from './../../contenu/terminale/anglais/civilisation-anglais-monde/flashcards.json';
-import fiche791 from './../../contenu/terminale/arts/cinema/fiche.md';
 import qcm791 from './../../contenu/terminale/arts/cinema/qcm.json';
-import exercice791 from './../../contenu/terminale/arts/cinema/exercice.json';
 import flash791 from './../../contenu/terminale/arts/cinema/flashcards.json';
-import fiche792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/fiche.md';
 import qcm792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/qcm.json';
-import exercice792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/exercice.json';
 import flash792 from './../../contenu/terminale/enseignement-scientifique/atmosphere-effet-de-serre-climat/flashcards.json';
-import fiche793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/fiche.md';
 import qcm793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/qcm.json';
-import exercice793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/exercice.json';
 import flash793 from './../../contenu/terminale/enseignement-scientifique/energie-carbone-transition/flashcards.json';
-import fiche794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/fiche.md';
 import qcm794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/qcm.json';
-import exercice794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/exercice.json';
 import flash794 from './../../contenu/terminale/enseignement-scientifique/production-conversion-energie-electrique/flashcards.json';
-import fiche795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/fiche.md';
 import qcm795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/qcm.json';
-import exercice795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/exercice.json';
 import flash795 from './../../contenu/terminale/enseignement-scientifique/une-histoire-du-vivant/flashcards.json';
-import fiche796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/fiche.md';
 import qcm796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/qcm.json';
-import exercice796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/exercice.json';
 import flash796 from './../../contenu/terminale/enseignement-scientifique/evolution-et-biodiversite/flashcards.json';
-import fiche797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/fiche.md';
 import qcm797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/qcm.json';
-import exercice797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/exercice.json';
 import flash797 from './../../contenu/terminale/enseignement-scientifique/du-genotype-au-phenotype/flashcards.json';
-import fiche798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/fiche.md';
 import qcm798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/qcm.json';
-import exercice798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/exercice.json';
 import flash798 from './../../contenu/terminale/enseignement-scientifique/modeles-demographiques/flashcards.json';
-import fiche799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/fiche.md';
 import qcm799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/qcm.json';
-import exercice799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/exercice.json';
 import flash799 from './../../contenu/terminale/enseignement-scientifique/probabilites-bayes-ia/flashcards.json';
-import fiche800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/fiche.md';
 import qcm800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/qcm.json';
-import exercice800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/exercice.json';
 import flash800 from './../../contenu/terminale/espagnol/ser-estar-avanzado/flashcards.json';
-import fiche801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/fiche.md';
 import qcm801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/qcm.json';
-import exercice801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/exercice.json';
 import flash801 from './../../contenu/terminale/espagnol/subjuntivo-imperfecto/flashcards.json';
-import fiche802 from './../../contenu/terminale/espagnol/concordancia-tiempos/fiche.md';
 import qcm802 from './../../contenu/terminale/espagnol/concordancia-tiempos/qcm.json';
-import exercice802 from './../../contenu/terminale/espagnol/concordancia-tiempos/exercice.json';
 import flash802 from './../../contenu/terminale/espagnol/concordancia-tiempos/flashcards.json';
-import fiche803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/fiche.md';
 import qcm803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/qcm.json';
-import exercice803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/exercice.json';
 import flash803 from './../../contenu/terminale/espagnol/vocabulario-economia-globalizacion/flashcards.json';
-import fiche804 from './../../contenu/terminale/espagnol/conectores-argumentacion/fiche.md';
 import qcm804 from './../../contenu/terminale/espagnol/conectores-argumentacion/qcm.json';
-import exercice804 from './../../contenu/terminale/espagnol/conectores-argumentacion/exercice.json';
 import flash804 from './../../contenu/terminale/espagnol/conectores-argumentacion/flashcards.json';
-import fiche805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/fiche.md';
 import qcm805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/qcm.json';
-import exercice805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/exercice.json';
 import flash805 from './../../contenu/terminale/espagnol/estructuras-enfaticas/flashcards.json';
-import fiche806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/fiche.md';
 import qcm806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/qcm.json';
-import exercice806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/exercice.json';
 import flash806 from './../../contenu/terminale/espagnol/vocabulario-sociedad-mundo/flashcards.json';
-import fiche807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/fiche.md';
 import qcm807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/qcm.json';
-import exercice807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/exercice.json';
 import flash807 from './../../contenu/terminale/espagnol/civilizacion-espanol-mundo/flashcards.json';
-import fiche808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/fiche.md';
 import qcm808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/qcm.json';
-import exercice808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/exercice.json';
 import flash808 from './../../contenu/terminale/grand-oral/comprendre-l-epreuve/flashcards.json';
-import fiche809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/fiche.md';
 import qcm809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/qcm.json';
-import exercice809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/exercice.json';
 import flash809 from './../../contenu/terminale/grand-oral/choisir-formuler-ses-questions/flashcards.json';
-import fiche810 from './../../contenu/terminale/grand-oral/construire-l-expose/fiche.md';
 import qcm810 from './../../contenu/terminale/grand-oral/construire-l-expose/qcm.json';
-import exercice810 from './../../contenu/terminale/grand-oral/construire-l-expose/exercice.json';
 import flash810 from './../../contenu/terminale/grand-oral/construire-l-expose/flashcards.json';
-import fiche811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/fiche.md';
 import qcm811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/qcm.json';
-import exercice811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/exercice.json';
 import flash811 from './../../contenu/terminale/grand-oral/voix-posture-et-stress/flashcards.json';
-import fiche812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/fiche.md';
 import qcm812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/qcm.json';
-import exercice812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/exercice.json';
 import flash812 from './../../contenu/terminale/grand-oral/l-echange-avec-le-jury/flashcards.json';
-import fiche813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/fiche.md';
 import qcm813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/qcm.json';
-import exercice813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/exercice.json';
 import flash813 from './../../contenu/terminale/grand-oral/le-projet-d-orientation/flashcards.json';
-import fiche814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/fiche.md';
 import qcm814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/qcm.json';
-import exercice814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/exercice.json';
 import flash814 from './../../contenu/terminale/grand-oral/criteres-et-erreurs/flashcards.json';
-import fiche815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/fiche.md';
 import qcm815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/qcm.json';
-import exercice815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/exercice.json';
 import flash815 from './../../contenu/terminale/grand-oral/s-entrainer-et-checklist/flashcards.json';
-import fiche816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/fiche.md';
 import qcm816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/qcm.json';
-import exercice816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/exercice.json';
 import flash816 from './../../contenu/terminale/hggsp/nouveaux-espaces-conquete/flashcards.json';
-import fiche817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/fiche.md';
 import qcm817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/qcm.json';
-import exercice817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/exercice.json';
 import flash817 from './../../contenu/terminale/hggsp/faire-la-guerre-faire-la-paix/flashcards.json';
-import fiche818 from './../../contenu/terminale/hggsp/histoire-et-memoires/fiche.md';
 import qcm818 from './../../contenu/terminale/hggsp/histoire-et-memoires/qcm.json';
-import exercice818 from './../../contenu/terminale/hggsp/histoire-et-memoires/exercice.json';
 import flash818 from './../../contenu/terminale/hggsp/histoire-et-memoires/flashcards.json';
-import fiche819 from './../../contenu/terminale/hggsp/patrimoine/fiche.md';
 import qcm819 from './../../contenu/terminale/hggsp/patrimoine/qcm.json';
-import exercice819 from './../../contenu/terminale/hggsp/patrimoine/exercice.json';
 import flash819 from './../../contenu/terminale/hggsp/patrimoine/flashcards.json';
-import fiche820 from './../../contenu/terminale/hggsp/environnement/fiche.md';
 import qcm820 from './../../contenu/terminale/hggsp/environnement/qcm.json';
-import exercice820 from './../../contenu/terminale/hggsp/environnement/exercice.json';
 import flash820 from './../../contenu/terminale/hggsp/environnement/flashcards.json';
-import fiche821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/fiche.md';
 import qcm821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/qcm.json';
-import exercice821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/exercice.json';
 import flash821 from './../../contenu/terminale/hggsp/enjeu-de-la-connaissance/flashcards.json';
-import fiche822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/fiche.md';
 import qcm822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/qcm.json';
-import exercice822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/exercice.json';
 import flash822 from './../../contenu/terminale/hist-geo/seconde-guerre-mondiale-genocides/flashcards.json';
-import fiche823 from './../../contenu/terminale/hist-geo/guerre-froide/fiche.md';
 import qcm823 from './../../contenu/terminale/hist-geo/guerre-froide/qcm.json';
-import exercice823 from './../../contenu/terminale/hist-geo/guerre-froide/exercice.json';
 import flash823 from './../../contenu/terminale/hist-geo/guerre-froide/flashcards.json';
-import fiche824 from './../../contenu/terminale/hist-geo/decolonisation/fiche.md';
 import qcm824 from './../../contenu/terminale/hist-geo/decolonisation/qcm.json';
-import exercice824 from './../../contenu/terminale/hist-geo/decolonisation/exercice.json';
 import flash824 from './../../contenu/terminale/hist-geo/decolonisation/flashcards.json';
-import fiche825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/fiche.md';
 import qcm825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/qcm.json';
-import exercice825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/exercice.json';
 import flash825 from './../../contenu/terminale/hist-geo/monde-depuis-1990/flashcards.json';
-import fiche826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/fiche.md';
 import qcm826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/qcm.json';
-import exercice826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/exercice.json';
 import flash826 from './../../contenu/terminale/hist-geo/mers-oceans-mondialisation/flashcards.json';
-import fiche827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/fiche.md';
 import qcm827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/qcm.json';
-import exercice827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/exercice.json';
 import flash827 from './../../contenu/terminale/hist-geo/puissances-et-france-dans-le-monde/flashcards.json';
-import fiche828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/fiche.md';
 import qcm828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/qcm.json';
-import exercice828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/exercice.json';
 import flash828 from './../../contenu/terminale/hist-geo/emc-democratie-engagement/flashcards.json';
-import fiche829 from './../../contenu/terminale/italien/usi-avanzati/fiche.md';
 import qcm829 from './../../contenu/terminale/italien/usi-avanzati/qcm.json';
-import exercice829 from './../../contenu/terminale/italien/usi-avanzati/exercice.json';
 import flash829 from './../../contenu/terminale/italien/usi-avanzati/flashcards.json';
-import fiche830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/fiche.md';
 import qcm830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/qcm.json';
-import exercice830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/exercice.json';
 import flash830 from './../../contenu/terminale/italien/congiuntivo-imperfetto/flashcards.json';
-import fiche831 from './../../contenu/terminale/italien/concordanza-tempi/fiche.md';
 import qcm831 from './../../contenu/terminale/italien/concordanza-tempi/qcm.json';
-import exercice831 from './../../contenu/terminale/italien/concordanza-tempi/exercice.json';
 import flash831 from './../../contenu/terminale/italien/concordanza-tempi/flashcards.json';
-import fiche832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/fiche.md';
 import qcm832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/qcm.json';
-import exercice832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/exercice.json';
 import flash832 from './../../contenu/terminale/italien/vocabolario-economia-globalizzazione/flashcards.json';
-import fiche833 from './../../contenu/terminale/italien/connettivi-argomentazione/fiche.md';
 import qcm833 from './../../contenu/terminale/italien/connettivi-argomentazione/qcm.json';
-import exercice833 from './../../contenu/terminale/italien/connettivi-argomentazione/exercice.json';
 import flash833 from './../../contenu/terminale/italien/connettivi-argomentazione/flashcards.json';
-import fiche834 from './../../contenu/terminale/italien/strutture-enfatiche/fiche.md';
 import qcm834 from './../../contenu/terminale/italien/strutture-enfatiche/qcm.json';
-import exercice834 from './../../contenu/terminale/italien/strutture-enfatiche/exercice.json';
 import flash834 from './../../contenu/terminale/italien/strutture-enfatiche/flashcards.json';
-import fiche835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/fiche.md';
 import qcm835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/qcm.json';
-import exercice835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/exercice.json';
 import flash835 from './../../contenu/terminale/italien/vocabolario-societa-mondo/flashcards.json';
-import fiche836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/fiche.md';
 import qcm836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/qcm.json';
-import exercice836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/exercice.json';
 import flash836 from './../../contenu/terminale/italien/civilta-italiano-nel-mondo/flashcards.json';
-import fiche837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/fiche.md';
 import qcm837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/qcm.json';
-import exercice837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/exercice.json';
 import flash837 from './../../contenu/terminale/langues-anciennes/civilisation-antique/flashcards.json';
-import fiche838 from './../../contenu/terminale/maths-complementaires/suites-evolution/fiche.md';
 import qcm838 from './../../contenu/terminale/maths-complementaires/suites-evolution/qcm.json';
-import exercice838 from './../../contenu/terminale/maths-complementaires/suites-evolution/exercice.json';
 import flash838 from './../../contenu/terminale/maths-complementaires/suites-evolution/flashcards.json';
-import fiche839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/fiche.md';
 import qcm839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/qcm.json';
-import exercice839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/exercice.json';
 import flash839 from './../../contenu/terminale/maths-complementaires/probabilites-bayes-binomiale/flashcards.json';
-import fiche840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/fiche.md';
 import qcm840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/qcm.json';
-import exercice840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/exercice.json';
 import flash840 from './../../contenu/terminale/maths-complementaires/derivation-convexite/flashcards.json';
-import fiche841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/fiche.md';
 import qcm841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/qcm.json';
-import exercice841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/exercice.json';
 import flash841 from './../../contenu/terminale/maths-complementaires/continuite-tvi/flashcards.json';
-import fiche842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/fiche.md';
 import qcm842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/qcm.json';
-import exercice842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/exercice.json';
 import flash842 from './../../contenu/terminale/maths-complementaires/exponentielle-logarithme/flashcards.json';
-import fiche843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/fiche.md';
 import qcm843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/qcm.json';
-import exercice843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/exercice.json';
 import flash843 from './../../contenu/terminale/maths-complementaires/primitives-equations-differentielles/flashcards.json';
-import fiche844 from './../../contenu/terminale/maths-complementaires/calcul-integral/fiche.md';
 import qcm844 from './../../contenu/terminale/maths-complementaires/calcul-integral/qcm.json';
-import exercice844 from './../../contenu/terminale/maths-complementaires/calcul-integral/exercice.json';
 import flash844 from './../../contenu/terminale/maths-complementaires/calcul-integral/flashcards.json';
-import fiche845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/fiche.md';
 import qcm845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/qcm.json';
-import exercice845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/exercice.json';
 import flash845 from './../../contenu/terminale/maths-complementaires/lois-densite-temps-attente/flashcards.json';
-import fiche846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/fiche.md';
 import qcm846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/qcm.json';
-import exercice846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/exercice.json';
 import flash846 from './../../contenu/terminale/maths-expertes/complexes-algebrique/flashcards.json';
-import fiche847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/fiche.md';
 import qcm847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/qcm.json';
-import exercice847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/exercice.json';
 import flash847 from './../../contenu/terminale/maths-expertes/complexes-geometrique/flashcards.json';
-import fiche848 from './../../contenu/terminale/maths-expertes/arithmetique/fiche.md';
 import qcm848 from './../../contenu/terminale/maths-expertes/arithmetique/qcm.json';
-import exercice848 from './../../contenu/terminale/maths-expertes/arithmetique/exercice.json';
 import flash848 from './../../contenu/terminale/maths-expertes/arithmetique/flashcards.json';
-import fiche849 from './../../contenu/terminale/maths-expertes/graphes-matrices/fiche.md';
 import qcm849 from './../../contenu/terminale/maths-expertes/graphes-matrices/qcm.json';
-import exercice849 from './../../contenu/terminale/maths-expertes/graphes-matrices/exercice.json';
 import flash849 from './../../contenu/terminale/maths-expertes/graphes-matrices/flashcards.json';
-import fiche850 from './../../contenu/terminale/maths-specialite/logique-ensembles/fiche.md';
 import qcm850 from './../../contenu/terminale/maths-specialite/logique-ensembles/qcm.json';
-import exercice850 from './../../contenu/terminale/maths-specialite/logique-ensembles/exercice.json';
 import flash850 from './../../contenu/terminale/maths-specialite/logique-ensembles/flashcards.json';
-import fiche851 from './../../contenu/terminale/maths-specialite/suites/fiche.md';
 import qcm851 from './../../contenu/terminale/maths-specialite/suites/qcm.json';
-import exercice851 from './../../contenu/terminale/maths-specialite/suites/exercice.json';
 import flash851 from './../../contenu/terminale/maths-specialite/suites/flashcards.json';
-import fiche852 from './../../contenu/terminale/maths-specialite/limites-fonctions/fiche.md';
 import qcm852 from './../../contenu/terminale/maths-specialite/limites-fonctions/qcm.json';
-import exercice852 from './../../contenu/terminale/maths-specialite/limites-fonctions/exercice.json';
 import flash852 from './../../contenu/terminale/maths-specialite/limites-fonctions/flashcards.json';
-import fiche853 from './../../contenu/terminale/maths-specialite/continuite/fiche.md';
 import qcm853 from './../../contenu/terminale/maths-specialite/continuite/qcm.json';
-import exercice853 from './../../contenu/terminale/maths-specialite/continuite/exercice.json';
 import flash853 from './../../contenu/terminale/maths-specialite/continuite/flashcards.json';
-import fiche854 from './../../contenu/terminale/maths-specialite/derivation-convexite/fiche.md';
 import qcm854 from './../../contenu/terminale/maths-specialite/derivation-convexite/qcm.json';
-import exercice854 from './../../contenu/terminale/maths-specialite/derivation-convexite/exercice.json';
 import flash854 from './../../contenu/terminale/maths-specialite/derivation-convexite/flashcards.json';
-import fiche855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/fiche.md';
 import qcm855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/qcm.json';
-import exercice855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/exercice.json';
 import flash855 from './../../contenu/terminale/maths-specialite/fonction-logarithme/flashcards.json';
-import fiche856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/fiche.md';
 import qcm856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/qcm.json';
-import exercice856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/exercice.json';
 import flash856 from './../../contenu/terminale/maths-specialite/fonctions-trigonometriques/flashcards.json';
-import fiche857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/fiche.md';
 import qcm857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/qcm.json';
-import exercice857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/exercice.json';
 import flash857 from './../../contenu/terminale/maths-specialite/primitives-equations-differentielles/flashcards.json';
-import fiche858 from './../../contenu/terminale/maths-specialite/calcul-integral/fiche.md';
 import qcm858 from './../../contenu/terminale/maths-specialite/calcul-integral/qcm.json';
-import exercice858 from './../../contenu/terminale/maths-specialite/calcul-integral/exercice.json';
 import flash858 from './../../contenu/terminale/maths-specialite/calcul-integral/flashcards.json';
-import fiche859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/fiche.md';
 import qcm859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/qcm.json';
-import exercice859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/exercice.json';
 import flash859 from './../../contenu/terminale/maths-specialite/vecteurs-droites-plans-espace/flashcards.json';
-import fiche860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/fiche.md';
 import qcm860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/qcm.json';
-import exercice860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/exercice.json';
 import flash860 from './../../contenu/terminale/maths-specialite/produit-scalaire-espace/flashcards.json';
-import fiche861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/fiche.md';
 import qcm861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/qcm.json';
-import exercice861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/exercice.json';
 import flash861 from './../../contenu/terminale/maths-specialite/combinatoire-denombrement/flashcards.json';
-import fiche862 from './../../contenu/terminale/maths-specialite/listes/fiche.md';
 import qcm862 from './../../contenu/terminale/maths-specialite/listes/qcm.json';
-import exercice862 from './../../contenu/terminale/maths-specialite/listes/exercice.json';
 import flash862 from './../../contenu/terminale/maths-specialite/listes/flashcards.json';
-import fiche863 from './../../contenu/terminale/maths-specialite/loi-binomiale/fiche.md';
 import qcm863 from './../../contenu/terminale/maths-specialite/loi-binomiale/qcm.json';
-import exercice863 from './../../contenu/terminale/maths-specialite/loi-binomiale/exercice.json';
 import flash863 from './../../contenu/terminale/maths-specialite/loi-binomiale/flashcards.json';
-import fiche864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/fiche.md';
 import qcm864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/qcm.json';
-import exercice864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/exercice.json';
 import flash864 from './../../contenu/terminale/maths-specialite/sommes-variables-concentration/flashcards.json';
-import fiche865 from './../../contenu/terminale/nsi/programmation-et-complexite/fiche.md';
 import qcm865 from './../../contenu/terminale/nsi/programmation-et-complexite/qcm.json';
-import exercice865 from './../../contenu/terminale/nsi/programmation-et-complexite/exercice.json';
 import flash865 from './../../contenu/terminale/nsi/programmation-et-complexite/flashcards.json';
-import fiche866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/fiche.md';
 import qcm866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/qcm.json';
-import exercice866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/exercice.json';
 import flash866 from './../../contenu/terminale/nsi/recursivite-et-diviser-pour-regner/flashcards.json';
-import fiche867 from './../../contenu/terminale/nsi/structures-de-donnees/fiche.md';
 import qcm867 from './../../contenu/terminale/nsi/structures-de-donnees/qcm.json';
-import exercice867 from './../../contenu/terminale/nsi/structures-de-donnees/exercice.json';
 import flash867 from './../../contenu/terminale/nsi/structures-de-donnees/flashcards.json';
-import fiche868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/fiche.md';
 import qcm868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/qcm.json';
-import exercice868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/exercice.json';
 import flash868 from './../../contenu/terminale/nsi/bases-de-donnees-et-sql/flashcards.json';
-import fiche869 from './../../contenu/terminale/nsi/reseaux-et-routage/fiche.md';
 import qcm869 from './../../contenu/terminale/nsi/reseaux-et-routage/qcm.json';
-import exercice869 from './../../contenu/terminale/nsi/reseaux-et-routage/exercice.json';
 import flash869 from './../../contenu/terminale/nsi/reseaux-et-routage/flashcards.json';
-import fiche870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/fiche.md';
 import qcm870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/qcm.json';
-import exercice870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/exercice.json';
 import flash870 from './../../contenu/terminale/nsi/algorithmes-de-graphes/flashcards.json';
-import fiche871 from './../../contenu/terminale/philosophie/methode-dissertation/fiche.md';
 import qcm871 from './../../contenu/terminale/philosophie/methode-dissertation/qcm.json';
-import exercice871 from './../../contenu/terminale/philosophie/methode-dissertation/exercice.json';
 import flash871 from './../../contenu/terminale/philosophie/methode-dissertation/flashcards.json';
-import fiche872 from './../../contenu/terminale/philosophie/methode-explication-texte/fiche.md';
 import qcm872 from './../../contenu/terminale/philosophie/methode-explication-texte/qcm.json';
-import exercice872 from './../../contenu/terminale/philosophie/methode-explication-texte/exercice.json';
 import flash872 from './../../contenu/terminale/philosophie/methode-explication-texte/flashcards.json';
-import fiche873 from './../../contenu/terminale/philosophie/reperes-conceptuels/fiche.md';
 import qcm873 from './../../contenu/terminale/philosophie/reperes-conceptuels/qcm.json';
-import exercice873 from './../../contenu/terminale/philosophie/reperes-conceptuels/exercice.json';
 import flash873 from './../../contenu/terminale/philosophie/reperes-conceptuels/flashcards.json';
-import fiche874 from './../../contenu/terminale/philosophie/conscience/fiche.md';
 import qcm874 from './../../contenu/terminale/philosophie/conscience/qcm.json';
-import exercice874 from './../../contenu/terminale/philosophie/conscience/exercice.json';
 import flash874 from './../../contenu/terminale/philosophie/conscience/flashcards.json';
-import fiche875 from './../../contenu/terminale/philosophie/inconscient/fiche.md';
 import qcm875 from './../../contenu/terminale/philosophie/inconscient/qcm.json';
-import exercice875 from './../../contenu/terminale/philosophie/inconscient/exercice.json';
 import flash875 from './../../contenu/terminale/philosophie/inconscient/flashcards.json';
-import fiche876 from './../../contenu/terminale/philosophie/temps/fiche.md';
 import qcm876 from './../../contenu/terminale/philosophie/temps/qcm.json';
-import exercice876 from './../../contenu/terminale/philosophie/temps/exercice.json';
 import flash876 from './../../contenu/terminale/philosophie/temps/flashcards.json';
-import fiche877 from './../../contenu/terminale/philosophie/langage/fiche.md';
 import qcm877 from './../../contenu/terminale/philosophie/langage/qcm.json';
-import exercice877 from './../../contenu/terminale/philosophie/langage/exercice.json';
 import flash877 from './../../contenu/terminale/philosophie/langage/flashcards.json';
-import fiche878 from './../../contenu/terminale/philosophie/raison/fiche.md';
 import qcm878 from './../../contenu/terminale/philosophie/raison/qcm.json';
-import exercice878 from './../../contenu/terminale/philosophie/raison/exercice.json';
 import flash878 from './../../contenu/terminale/philosophie/raison/flashcards.json';
-import fiche879 from './../../contenu/terminale/philosophie/verite/fiche.md';
 import qcm879 from './../../contenu/terminale/philosophie/verite/qcm.json';
-import exercice879 from './../../contenu/terminale/philosophie/verite/exercice.json';
 import flash879 from './../../contenu/terminale/philosophie/verite/flashcards.json';
-import fiche880 from './../../contenu/terminale/philosophie/science/fiche.md';
 import qcm880 from './../../contenu/terminale/philosophie/science/qcm.json';
-import exercice880 from './../../contenu/terminale/philosophie/science/exercice.json';
 import flash880 from './../../contenu/terminale/philosophie/science/flashcards.json';
-import fiche881 from './../../contenu/terminale/philosophie/technique/fiche.md';
 import qcm881 from './../../contenu/terminale/philosophie/technique/qcm.json';
-import exercice881 from './../../contenu/terminale/philosophie/technique/exercice.json';
 import flash881 from './../../contenu/terminale/philosophie/technique/flashcards.json';
-import fiche882 from './../../contenu/terminale/philosophie/travail/fiche.md';
 import qcm882 from './../../contenu/terminale/philosophie/travail/qcm.json';
-import exercice882 from './../../contenu/terminale/philosophie/travail/exercice.json';
 import flash882 from './../../contenu/terminale/philosophie/travail/flashcards.json';
-import fiche883 from './../../contenu/terminale/philosophie/art/fiche.md';
 import qcm883 from './../../contenu/terminale/philosophie/art/qcm.json';
-import exercice883 from './../../contenu/terminale/philosophie/art/exercice.json';
 import flash883 from './../../contenu/terminale/philosophie/art/flashcards.json';
-import fiche884 from './../../contenu/terminale/philosophie/nature/fiche.md';
 import qcm884 from './../../contenu/terminale/philosophie/nature/qcm.json';
-import exercice884 from './../../contenu/terminale/philosophie/nature/exercice.json';
 import flash884 from './../../contenu/terminale/philosophie/nature/flashcards.json';
-import fiche885 from './../../contenu/terminale/philosophie/religion/fiche.md';
 import qcm885 from './../../contenu/terminale/philosophie/religion/qcm.json';
-import exercice885 from './../../contenu/terminale/philosophie/religion/exercice.json';
 import flash885 from './../../contenu/terminale/philosophie/religion/flashcards.json';
-import fiche886 from './../../contenu/terminale/philosophie/liberte/fiche.md';
 import qcm886 from './../../contenu/terminale/philosophie/liberte/qcm.json';
-import exercice886 from './../../contenu/terminale/philosophie/liberte/exercice.json';
 import flash886 from './../../contenu/terminale/philosophie/liberte/flashcards.json';
-import fiche887 from './../../contenu/terminale/philosophie/devoir/fiche.md';
 import qcm887 from './../../contenu/terminale/philosophie/devoir/qcm.json';
-import exercice887 from './../../contenu/terminale/philosophie/devoir/exercice.json';
 import flash887 from './../../contenu/terminale/philosophie/devoir/flashcards.json';
-import fiche888 from './../../contenu/terminale/philosophie/bonheur/fiche.md';
 import qcm888 from './../../contenu/terminale/philosophie/bonheur/qcm.json';
-import exercice888 from './../../contenu/terminale/philosophie/bonheur/exercice.json';
 import flash888 from './../../contenu/terminale/philosophie/bonheur/flashcards.json';
-import fiche889 from './../../contenu/terminale/philosophie/justice/fiche.md';
 import qcm889 from './../../contenu/terminale/philosophie/justice/qcm.json';
-import exercice889 from './../../contenu/terminale/philosophie/justice/exercice.json';
 import flash889 from './../../contenu/terminale/philosophie/justice/flashcards.json';
-import fiche890 from './../../contenu/terminale/philosophie/etat/fiche.md';
 import qcm890 from './../../contenu/terminale/philosophie/etat/qcm.json';
-import exercice890 from './../../contenu/terminale/philosophie/etat/exercice.json';
 import flash890 from './../../contenu/terminale/philosophie/etat/flashcards.json';
-import fiche891 from './../../contenu/terminale/physique-chimie/acide-base-ph/fiche.md';
 import qcm891 from './../../contenu/terminale/physique-chimie/acide-base-ph/qcm.json';
-import exercice891 from './../../contenu/terminale/physique-chimie/acide-base-ph/exercice.json';
 import flash891 from './../../contenu/terminale/physique-chimie/acide-base-ph/flashcards.json';
-import fiche892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/fiche.md';
 import qcm892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/qcm.json';
-import exercice892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/exercice.json';
 import flash892 from './../../contenu/terminale/physique-chimie/methodes-physiques-analyse/flashcards.json';
-import fiche893 from './../../contenu/terminale/physique-chimie/titrages/fiche.md';
 import qcm893 from './../../contenu/terminale/physique-chimie/titrages/qcm.json';
-import exercice893 from './../../contenu/terminale/physique-chimie/titrages/exercice.json';
 import flash893 from './../../contenu/terminale/physique-chimie/titrages/flashcards.json';
-import fiche894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/fiche.md';
 import qcm894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/qcm.json';
-import exercice894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/exercice.json';
 import flash894 from './../../contenu/terminale/physique-chimie/cinetique-chimique/flashcards.json';
-import fiche895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/fiche.md';
 import qcm895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/qcm.json';
-import exercice895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/exercice.json';
 import flash895 from './../../contenu/terminale/physique-chimie/transformations-nucleaires/flashcards.json';
-import fiche896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/fiche.md';
 import qcm896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/qcm.json';
-import exercice896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/exercice.json';
 import flash896 from './../../contenu/terminale/physique-chimie/equilibre-sens-evolution/flashcards.json';
-import fiche897 from './../../contenu/terminale/physique-chimie/electrolyse/fiche.md';
 import qcm897 from './../../contenu/terminale/physique-chimie/electrolyse/qcm.json';
-import exercice897 from './../../contenu/terminale/physique-chimie/electrolyse/exercice.json';
 import flash897 from './../../contenu/terminale/physique-chimie/electrolyse/flashcards.json';
-import fiche898 from './../../contenu/terminale/physique-chimie/synthese-organique/fiche.md';
 import qcm898 from './../../contenu/terminale/physique-chimie/synthese-organique/qcm.json';
-import exercice898 from './../../contenu/terminale/physique-chimie/synthese-organique/exercice.json';
 import flash898 from './../../contenu/terminale/physique-chimie/synthese-organique/flashcards.json';
-import fiche899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/fiche.md';
 import qcm899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/qcm.json';
-import exercice899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/exercice.json';
 import flash899 from './../../contenu/terminale/physique-chimie/decrire-mouvement/flashcards.json';
-import fiche900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/fiche.md';
 import qcm900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/qcm.json';
-import exercice900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/exercice.json';
 import flash900 from './../../contenu/terminale/physique-chimie/lois-newton-champs/flashcards.json';
-import fiche901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/fiche.md';
 import qcm901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/qcm.json';
-import exercice901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/exercice.json';
 import flash901 from './../../contenu/terminale/physique-chimie/ecoulement-fluide/flashcards.json';
-import fiche902 from './../../contenu/terminale/physique-chimie/gaz-parfait/fiche.md';
 import qcm902 from './../../contenu/terminale/physique-chimie/gaz-parfait/qcm.json';
-import exercice902 from './../../contenu/terminale/physique-chimie/gaz-parfait/exercice.json';
 import flash902 from './../../contenu/terminale/physique-chimie/gaz-parfait/flashcards.json';
-import fiche903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/fiche.md';
 import qcm903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/qcm.json';
-import exercice903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/exercice.json';
 import flash903 from './../../contenu/terminale/physique-chimie/premier-principe-thermique/flashcards.json';
-import fiche904 from './../../contenu/terminale/physique-chimie/dipole-rc/fiche.md';
 import qcm904 from './../../contenu/terminale/physique-chimie/dipole-rc/qcm.json';
-import exercice904 from './../../contenu/terminale/physique-chimie/dipole-rc/exercice.json';
 import flash904 from './../../contenu/terminale/physique-chimie/dipole-rc/flashcards.json';
-import fiche905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/fiche.md';
 import qcm905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/qcm.json';
-import exercice905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/exercice.json';
 import flash905 from './../../contenu/terminale/physique-chimie/phenomenes-ondulatoires/flashcards.json';
-import fiche906 from './../../contenu/terminale/physique-chimie/lunette-photons/fiche.md';
 import qcm906 from './../../contenu/terminale/physique-chimie/lunette-photons/qcm.json';
-import exercice906 from './../../contenu/terminale/physique-chimie/lunette-photons/exercice.json';
 import flash906 from './../../contenu/terminale/physique-chimie/lunette-photons/flashcards.json';
-import fiche907 from './../../contenu/terminale/ses/sources-croissance/fiche.md';
 import qcm907 from './../../contenu/terminale/ses/sources-croissance/qcm.json';
-import exercice907 from './../../contenu/terminale/ses/sources-croissance/exercice.json';
 import flash907 from './../../contenu/terminale/ses/sources-croissance/flashcards.json';
-import fiche908 from './../../contenu/terminale/ses/commerce-mondialisation/fiche.md';
 import qcm908 from './../../contenu/terminale/ses/commerce-mondialisation/qcm.json';
-import exercice908 from './../../contenu/terminale/ses/commerce-mondialisation/exercice.json';
 import flash908 from './../../contenu/terminale/ses/commerce-mondialisation/flashcards.json';
-import fiche909 from './../../contenu/terminale/ses/marche-du-travail-chomage/fiche.md';
 import qcm909 from './../../contenu/terminale/ses/marche-du-travail-chomage/qcm.json';
-import exercice909 from './../../contenu/terminale/ses/marche-du-travail-chomage/exercice.json';
 import flash909 from './../../contenu/terminale/ses/marche-du-travail-chomage/flashcards.json';
-import fiche910 from './../../contenu/terminale/ses/monnaie-crises-financieres/fiche.md';
 import qcm910 from './../../contenu/terminale/ses/monnaie-crises-financieres/qcm.json';
-import exercice910 from './../../contenu/terminale/ses/monnaie-crises-financieres/exercice.json';
 import flash910 from './../../contenu/terminale/ses/monnaie-crises-financieres/flashcards.json';
-import fiche911 from './../../contenu/terminale/ses/politiques-economiques/fiche.md';
 import qcm911 from './../../contenu/terminale/ses/politiques-economiques/qcm.json';
-import exercice911 from './../../contenu/terminale/ses/politiques-economiques/exercice.json';
 import flash911 from './../../contenu/terminale/ses/politiques-economiques/flashcards.json';
-import fiche912 from './../../contenu/terminale/ses/structure-sociale-classes/fiche.md';
 import qcm912 from './../../contenu/terminale/ses/structure-sociale-classes/qcm.json';
-import exercice912 from './../../contenu/terminale/ses/structure-sociale-classes/exercice.json';
 import flash912 from './../../contenu/terminale/ses/structure-sociale-classes/flashcards.json';
-import fiche913 from './../../contenu/terminale/ses/mobilite-sociale/fiche.md';
 import qcm913 from './../../contenu/terminale/ses/mobilite-sociale/qcm.json';
-import exercice913 from './../../contenu/terminale/ses/mobilite-sociale/exercice.json';
 import flash913 from './../../contenu/terminale/ses/mobilite-sociale/flashcards.json';
-import fiche914 from './../../contenu/terminale/ses/ecole-et-inegalites/fiche.md';
 import qcm914 from './../../contenu/terminale/ses/ecole-et-inegalites/qcm.json';
-import exercice914 from './../../contenu/terminale/ses/ecole-et-inegalites/exercice.json';
 import flash914 from './../../contenu/terminale/ses/ecole-et-inegalites/flashcards.json';
-import fiche915 from './../../contenu/terminale/ses/engagement-politique/fiche.md';
 import qcm915 from './../../contenu/terminale/ses/engagement-politique/qcm.json';
-import exercice915 from './../../contenu/terminale/ses/engagement-politique/exercice.json';
 import flash915 from './../../contenu/terminale/ses/engagement-politique/flashcards.json';
-import fiche916 from './../../contenu/terminale/si/modelisation-des-mouvements/fiche.md';
 import qcm916 from './../../contenu/terminale/si/modelisation-des-mouvements/qcm.json';
-import exercice916 from './../../contenu/terminale/si/modelisation-des-mouvements/exercice.json';
 import flash916 from './../../contenu/terminale/si/modelisation-des-mouvements/flashcards.json';
-import fiche917 from './../../contenu/terminale/si/energie-dans-les-systemes/fiche.md';
 import qcm917 from './../../contenu/terminale/si/energie-dans-les-systemes/qcm.json';
-import exercice917 from './../../contenu/terminale/si/energie-dans-les-systemes/exercice.json';
 import flash917 from './../../contenu/terminale/si/energie-dans-les-systemes/flashcards.json';
-import fiche918 from './../../contenu/terminale/si/resistance-des-structures/fiche.md';
 import qcm918 from './../../contenu/terminale/si/resistance-des-structures/qcm.json';
-import exercice918 from './../../contenu/terminale/si/resistance-des-structures/exercice.json';
 import flash918 from './../../contenu/terminale/si/resistance-des-structures/flashcards.json';
-import fiche919 from './../../contenu/terminale/si/transmission-de-linformation/fiche.md';
 import qcm919 from './../../contenu/terminale/si/transmission-de-linformation/qcm.json';
-import exercice919 from './../../contenu/terminale/si/transmission-de-linformation/exercice.json';
 import flash919 from './../../contenu/terminale/si/transmission-de-linformation/flashcards.json';
-import fiche920 from './../../contenu/terminale/si/asservissement-et-regulation/fiche.md';
 import qcm920 from './../../contenu/terminale/si/asservissement-et-regulation/qcm.json';
-import exercice920 from './../../contenu/terminale/si/asservissement-et-regulation/exercice.json';
 import flash920 from './../../contenu/terminale/si/asservissement-et-regulation/flashcards.json';
-import fiche921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/fiche.md';
 import qcm921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/qcm.json';
-import exercice921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/exercice.json';
 import flash921 from './../../contenu/terminale/svt/brassage-genetique-et-meiose/flashcards.json';
-import fiche922 from './../../contenu/terminale/svt/evolution-et-speciation/fiche.md';
 import qcm922 from './../../contenu/terminale/svt/evolution-et-speciation/qcm.json';
-import exercice922 from './../../contenu/terminale/svt/evolution-et-speciation/exercice.json';
 import flash922 from './../../contenu/terminale/svt/evolution-et-speciation/flashcards.json';
-import fiche923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/fiche.md';
 import qcm923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/qcm.json';
-import exercice923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/exercice.json';
 import flash923 from './../../contenu/terminale/svt/geothermie-et-flux-de-chaleur/flashcards.json';
-import fiche924 from './../../contenu/terminale/svt/climats-passes-et-actuels/fiche.md';
 import qcm924 from './../../contenu/terminale/svt/climats-passes-et-actuels/qcm.json';
-import exercice924 from './../../contenu/terminale/svt/climats-passes-et-actuels/exercice.json';
 import flash924 from './../../contenu/terminale/svt/climats-passes-et-actuels/flashcards.json';
-import fiche925 from './../../contenu/terminale/svt/reflexe-et-motricite/fiche.md';
 import qcm925 from './../../contenu/terminale/svt/reflexe-et-motricite/qcm.json';
-import exercice925 from './../../contenu/terminale/svt/reflexe-et-motricite/exercice.json';
 import flash925 from './../../contenu/terminale/svt/reflexe-et-motricite/flashcards.json';
-import fiche926 from './../../contenu/terminale/svt/glycemie-et-diabete/fiche.md';
 import qcm926 from './../../contenu/terminale/svt/glycemie-et-diabete/qcm.json';
-import exercice926 from './../../contenu/terminale/svt/glycemie-et-diabete/exercice.json';
 import flash926 from './../../contenu/terminale/svt/glycemie-et-diabete/flashcards.json';
-import fiche927 from './../../contenu/terminale-techno/maths/logique-ensembles/fiche.md';
 import qcm927 from './../../contenu/terminale-techno/maths/logique-ensembles/qcm.json';
-import exercice927 from './../../contenu/terminale-techno/maths/logique-ensembles/exercice.json';
 import flash927 from './../../contenu/terminale-techno/maths/logique-ensembles/flashcards.json';
-import fiche928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/fiche.md';
 import qcm928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/qcm.json';
-import exercice928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/exercice.json';
 import flash928 from './../../contenu/terminale-techno/maths/suites-arithmetiques-geometriques/flashcards.json';
-import fiche929 from './../../contenu/terminale-techno/maths/fonction-inverse/fiche.md';
 import qcm929 from './../../contenu/terminale-techno/maths/fonction-inverse/qcm.json';
-import exercice929 from './../../contenu/terminale-techno/maths/fonction-inverse/exercice.json';
 import flash929 from './../../contenu/terminale-techno/maths/fonction-inverse/flashcards.json';
-import fiche930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/fiche.md';
 import qcm930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/qcm.json';
-import exercice930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/exercice.json';
 import flash930 from './../../contenu/terminale-techno/maths/fonctions-exponentielles/flashcards.json';
-import fiche931 from './../../contenu/terminale-techno/maths/logarithme-decimal/fiche.md';
 import qcm931 from './../../contenu/terminale-techno/maths/logarithme-decimal/qcm.json';
-import exercice931 from './../../contenu/terminale-techno/maths/logarithme-decimal/exercice.json';
 import flash931 from './../../contenu/terminale-techno/maths/logarithme-decimal/flashcards.json';
-import fiche932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/fiche.md';
 import qcm932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/qcm.json';
-import exercice932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/exercice.json';
 import flash932 from './../../contenu/terminale-techno/maths/statistiques-deux-variables/flashcards.json';
-import fiche933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/fiche.md';
 import qcm933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/qcm.json';
-import exercice933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/exercice.json';
 import flash933 from './../../contenu/terminale-techno/maths/probabilites-conditionnelles/flashcards.json';
-import fiche934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/fiche.md';
 import qcm934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/qcm.json';
-import exercice934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/exercice.json';
 import flash934 from './../../contenu/terminale-techno/maths/variables-aleatoires-binomiale/flashcards.json';
-import fiche935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/fiche.md';
 import qcm935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/qcm.json';
-import exercice935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/exercice.json';
 import flash935 from './../../contenu/terminale-techno/maths/algorithmique-programmation/flashcards.json';
-import fiche936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/fiche.md';
 import qcm936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/qcm.json';
-import exercice936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/exercice.json';
 import flash936 from './../../contenu/terminale-techno/maths/activites-geometriques-std2a/flashcards.json';
-import fiche937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/fiche.md';
 import qcm937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/qcm.json';
-import exercice937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/exercice.json';
 import flash937 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/mesure-incertitudes/flashcards.json';
-import fiche938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/fiche.md';
 import qcm938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/qcm.json';
-import exercice938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/exercice.json';
 import flash938 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/exponentielle-logarithme/flashcards.json';
-import fiche939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/fiche.md';
 import qcm939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/qcm.json';
-import exercice939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/exercice.json';
 import flash939 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/matiere-materiaux/flashcards.json';
-import fiche940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/fiche.md';
 import qcm940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/qcm.json';
-import exercice940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/exercice.json';
 import flash940 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/integration-composition/flashcards.json';
-import fiche941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/fiche.md';
 import qcm941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/qcm.json';
-import exercice941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/exercice.json';
 import flash941 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/equations-differentielles/flashcards.json';
-import fiche942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/fiche.md';
 import qcm942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/qcm.json';
-import exercice942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/exercice.json';
 import flash942 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-mecanique-fluides/flashcards.json';
-import fiche943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/fiche.md';
 import qcm943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/qcm.json';
-import exercice943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/exercice.json';
 import flash943 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/energie-electrique-thermique/flashcards.json';
-import fiche944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/fiche.md';
 import qcm944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/qcm.json';
-import exercice944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/exercice.json';
 import flash944 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/complexes-exponentielle/flashcards.json';
-import fiche945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/fiche.md';
 import qcm945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/qcm.json';
-import exercice945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/exercice.json';
 import flash945 from './../../contenu/terminale-techno/pc-maths-sti2d-stl/ondes-signaux/flashcards.json';
-import fiche946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/fiche.md';
 import qcm946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/qcm.json';
-import exercice946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/exercice.json';
 import flash946 from './../../contenu/terminale-techno/pc-sante-st2s/molecules-organiques/flashcards.json';
-import fiche947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/fiche.md';
 import qcm947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/qcm.json';
-import exercice947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/exercice.json';
 import flash947 from './../../contenu/terminale-techno/pc-sante-st2s/biomolecules-eau/flashcards.json';
-import fiche948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/fiche.md';
 import qcm948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/qcm.json';
-import exercice948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/exercice.json';
 import flash948 from './../../contenu/terminale-techno/pc-sante-st2s/glucides-ressources-naturelles/flashcards.json';
-import fiche949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/fiche.md';
 import qcm949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/qcm.json';
-import exercice949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/exercice.json';
 import flash949 from './../../contenu/terminale-techno/pc-sante-st2s/besoins-energetiques-alimentation/flashcards.json';
-import fiche950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/fiche.md';
 import qcm950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/qcm.json';
-import exercice950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/exercice.json';
 import flash950 from './../../contenu/terminale-techno/pc-sante-st2s/fluides-pression-sanguine/flashcards.json';
-import fiche951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/fiche.md';
 import qcm951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/qcm.json';
-import exercice951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/exercice.json';
 import flash951 from './../../contenu/terminale-techno/spcl-stl/composition-systemes-chimiques/flashcards.json';
-import fiche952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/fiche.md';
 import qcm952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/qcm.json';
-import exercice952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/exercice.json';
 import flash952 from './../../contenu/terminale-techno/spcl-stl/syntheses-mecanismes/flashcards.json';
-import fiche953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/fiche.md';
 import qcm953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/qcm.json';
-import exercice953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/exercice.json';
 import flash953 from './../../contenu/terminale-techno/spcl-stl/ondes-mecaniques-em-spectres/flashcards.json';
-import fiche954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/fiche.md';
 import qcm954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/qcm.json';
-import exercice954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/exercice.json';
 import flash954 from './../../contenu/terminale-techno/spcl-stl/ondes-transmission-stockage/flashcards.json';
-import fiche955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/fiche.md';
 import qcm955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/qcm.json';
-import exercice955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/exercice.json';
 import flash955 from './../../contenu/terminale-techno/spcl-stl/systemes-procedes-flux/flashcards.json';
 import formulaire0 from './../../formulaires/francais-conjugaison.md';
 import formulaire1 from './../../formulaires/francais-homophones.md';
@@ -10774,9 +8862,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche0,
     qcm: qcm0,
-    exercice: exercice0,
     flashcards: flash0,
   },
   {
@@ -10795,9 +8881,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche1,
     qcm: qcm1,
-    exercice: exercice1,
     flashcards: flash1,
   },
   {
@@ -10816,9 +8900,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche2,
     qcm: qcm2,
-    exercice: exercice2,
     flashcards: flash2,
   },
   {
@@ -10837,9 +8919,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche3,
     qcm: qcm3,
-    exercice: exercice3,
     flashcards: flash3,
   },
   {
@@ -10858,9 +8938,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche4,
     qcm: qcm4,
-    exercice: exercice4,
     flashcards: flash4,
   },
   {
@@ -10879,9 +8957,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche5,
     qcm: qcm5,
-    exercice: exercice5,
     flashcards: flash5,
   },
   {
@@ -10900,9 +8976,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche6,
     qcm: qcm6,
-    exercice: exercice6,
     flashcards: flash6,
   },
   {
@@ -10921,9 +8995,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche7,
     qcm: qcm7,
-    exercice: exercice7,
     flashcards: flash7,
   },
   {
@@ -10942,9 +9014,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche8,
     qcm: qcm8,
-    exercice: exercice8,
     flashcards: flash8,
   },
   {
@@ -10963,9 +9033,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche9,
     qcm: qcm9,
-    exercice: exercice9,
     flashcards: flash9,
   },
   {
@@ -10984,9 +9052,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche10,
     qcm: qcm10,
-    exercice: exercice10,
     flashcards: flash10,
   },
   {
@@ -11005,9 +9071,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche11,
     qcm: qcm11,
-    exercice: exercice11,
     flashcards: flash11,
   },
   {
@@ -11026,9 +9090,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche12,
     qcm: qcm12,
-    exercice: exercice12,
     flashcards: flash12,
   },
   {
@@ -11047,9 +9109,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche13,
     qcm: qcm13,
-    exercice: exercice13,
     flashcards: flash13,
   },
   {
@@ -11068,9 +9128,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche14,
     qcm: qcm14,
-    exercice: exercice14,
     flashcards: flash14,
   },
   {
@@ -11089,9 +9147,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche15,
     qcm: qcm15,
-    exercice: exercice15,
     flashcards: flash15,
   },
   {
@@ -11110,9 +9166,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche16,
     qcm: qcm16,
-    exercice: exercice16,
     flashcards: flash16,
   },
   {
@@ -11131,9 +9185,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche17,
     qcm: qcm17,
-    exercice: exercice17,
     flashcards: flash17,
   },
   {
@@ -11152,9 +9204,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche18,
     qcm: qcm18,
-    exercice: exercice18,
     flashcards: flash18,
   },
   {
@@ -11173,9 +9223,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche19,
     qcm: qcm19,
-    exercice: exercice19,
     flashcards: flash19,
   },
   {
@@ -11194,9 +9242,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche20,
     qcm: qcm20,
-    exercice: exercice20,
     flashcards: flash20,
   },
   {
@@ -11215,9 +9261,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche21,
     qcm: qcm21,
-    exercice: exercice21,
     flashcards: flash21,
   },
   {
@@ -11236,9 +9280,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche22,
     qcm: qcm22,
-    exercice: exercice22,
     flashcards: flash22,
   },
   {
@@ -11257,9 +9299,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche23,
     qcm: qcm23,
-    exercice: exercice23,
     flashcards: flash23,
   },
   {
@@ -11278,9 +9318,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche24,
     qcm: qcm24,
-    exercice: exercice24,
     flashcards: flash24,
   },
   {
@@ -11299,9 +9337,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche25,
     qcm: qcm25,
-    exercice: exercice25,
     flashcards: flash25,
   },
   {
@@ -11320,9 +9356,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche26,
     qcm: qcm26,
-    exercice: exercice26,
     flashcards: flash26,
   },
   {
@@ -11341,9 +9375,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche27,
     qcm: qcm27,
-    exercice: exercice27,
     flashcards: flash27,
   },
   {
@@ -11362,9 +9394,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche28,
     qcm: qcm28,
-    exercice: exercice28,
     flashcards: flash28,
   },
   {
@@ -11383,9 +9413,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche29,
     qcm: qcm29,
-    exercice: exercice29,
     flashcards: flash29,
   },
   {
@@ -11404,9 +9432,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche30,
     qcm: qcm30,
-    exercice: exercice30,
     flashcards: flash30,
   },
   {
@@ -11425,9 +9451,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche31,
     qcm: qcm31,
-    exercice: exercice31,
     flashcards: flash31,
   },
   {
@@ -11446,9 +9470,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche32,
     qcm: qcm32,
-    exercice: exercice32,
     flashcards: flash32,
   },
   {
@@ -11467,9 +9489,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche33,
     qcm: qcm33,
-    exercice: exercice33,
     flashcards: flash33,
   },
   {
@@ -11488,9 +9508,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche34,
     qcm: qcm34,
-    exercice: exercice34,
     flashcards: flash34,
   },
   {
@@ -11509,9 +9527,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche35,
     qcm: qcm35,
-    exercice: exercice35,
     flashcards: flash35,
   },
   {
@@ -11530,9 +9546,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche36,
     qcm: qcm36,
-    exercice: exercice36,
     flashcards: flash36,
   },
   {
@@ -11551,9 +9565,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche37,
     qcm: qcm37,
-    exercice: exercice37,
     flashcards: flash37,
   },
   {
@@ -11572,9 +9584,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche38,
     qcm: qcm38,
-    exercice: exercice38,
     flashcards: flash38,
   },
   {
@@ -11593,9 +9603,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche39,
     qcm: qcm39,
-    exercice: exercice39,
     flashcards: flash39,
   },
   {
@@ -11614,9 +9622,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche40,
     qcm: qcm40,
-    exercice: exercice40,
     flashcards: flash40,
   },
   {
@@ -11635,9 +9641,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche41,
     qcm: qcm41,
-    exercice: exercice41,
     flashcards: flash41,
   },
   {
@@ -11656,9 +9660,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche42,
     qcm: qcm42,
-    exercice: exercice42,
     flashcards: flash42,
   },
   {
@@ -11677,9 +9679,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche43,
     qcm: qcm43,
-    exercice: exercice43,
     flashcards: flash43,
   },
   {
@@ -11698,9 +9698,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche44,
     qcm: qcm44,
-    exercice: exercice44,
     flashcards: flash44,
   },
   {
@@ -11719,9 +9717,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche45,
     qcm: qcm45,
-    exercice: exercice45,
     flashcards: flash45,
   },
   {
@@ -11740,9 +9736,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche46,
     qcm: qcm46,
-    exercice: exercice46,
     flashcards: flash46,
   },
   {
@@ -11761,9 +9755,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche47,
     qcm: qcm47,
-    exercice: exercice47,
     flashcards: flash47,
   },
   {
@@ -11782,9 +9774,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche48,
     qcm: qcm48,
-    exercice: exercice48,
     flashcards: flash48,
   },
   {
@@ -11803,9 +9793,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche49,
     qcm: qcm49,
-    exercice: exercice49,
     flashcards: flash49,
   },
   {
@@ -11824,9 +9812,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche50,
     qcm: qcm50,
-    exercice: exercice50,
     flashcards: flash50,
   },
   {
@@ -11845,9 +9831,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche51,
     qcm: qcm51,
-    exercice: exercice51,
     flashcards: flash51,
   },
   {
@@ -11866,9 +9850,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche52,
     qcm: qcm52,
-    exercice: exercice52,
     flashcards: flash52,
   },
   {
@@ -11887,9 +9869,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche53,
     qcm: qcm53,
-    exercice: exercice53,
     flashcards: flash53,
   },
   {
@@ -11908,9 +9888,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche54,
     qcm: qcm54,
-    exercice: exercice54,
     flashcards: flash54,
   },
   {
@@ -11929,9 +9907,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche55,
     qcm: qcm55,
-    exercice: exercice55,
     flashcards: flash55,
   },
   {
@@ -11950,9 +9926,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche56,
     qcm: qcm56,
-    exercice: exercice56,
     flashcards: flash56,
   },
   {
@@ -11971,9 +9945,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche57,
     qcm: qcm57,
-    exercice: exercice57,
     flashcards: flash57,
   },
   {
@@ -11992,9 +9964,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche58,
     qcm: qcm58,
-    exercice: exercice58,
     flashcards: flash58,
   },
   {
@@ -12013,9 +9983,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche59,
     qcm: qcm59,
-    exercice: exercice59,
     flashcards: flash59,
   },
   {
@@ -12034,9 +10002,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche60,
     qcm: qcm60,
-    exercice: exercice60,
     flashcards: flash60,
   },
   {
@@ -12055,9 +10021,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche61,
     qcm: qcm61,
-    exercice: exercice61,
     flashcards: flash61,
   },
   {
@@ -12076,9 +10040,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche62,
     qcm: qcm62,
-    exercice: exercice62,
     flashcards: flash62,
   },
   {
@@ -12097,9 +10059,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche63,
     qcm: qcm63,
-    exercice: exercice63,
     flashcards: flash63,
   },
   {
@@ -12118,9 +10078,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche64,
     qcm: qcm64,
-    exercice: exercice64,
     flashcards: flash64,
   },
   {
@@ -12139,9 +10097,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche65,
     qcm: qcm65,
-    exercice: exercice65,
     flashcards: flash65,
   },
   {
@@ -12160,9 +10116,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche66,
     qcm: qcm66,
-    exercice: exercice66,
     flashcards: flash66,
   },
   {
@@ -12181,9 +10135,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche67,
     qcm: qcm67,
-    exercice: exercice67,
     flashcards: flash67,
   },
   {
@@ -12202,9 +10154,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche68,
     qcm: qcm68,
-    exercice: exercice68,
     flashcards: flash68,
   },
   {
@@ -12223,9 +10173,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche69,
     qcm: qcm69,
-    exercice: exercice69,
     flashcards: flash69,
   },
   {
@@ -12244,9 +10192,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche70,
     qcm: qcm70,
-    exercice: exercice70,
     flashcards: flash70,
   },
   {
@@ -12265,9 +10211,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche71,
     qcm: qcm71,
-    exercice: exercice71,
     flashcards: flash71,
   },
   {
@@ -12286,9 +10230,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche72,
     qcm: qcm72,
-    exercice: exercice72,
     flashcards: flash72,
   },
   {
@@ -12307,9 +10249,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche73,
     qcm: qcm73,
-    exercice: exercice73,
     flashcards: flash73,
   },
   {
@@ -12328,9 +10268,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche74,
     qcm: qcm74,
-    exercice: exercice74,
     flashcards: flash74,
   },
   {
@@ -12349,9 +10287,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche75,
     qcm: qcm75,
-    exercice: exercice75,
     flashcards: flash75,
   },
   {
@@ -12370,9 +10306,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche76,
     qcm: qcm76,
-    exercice: exercice76,
     flashcards: flash76,
   },
   {
@@ -12391,9 +10325,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche77,
     qcm: qcm77,
-    exercice: exercice77,
     flashcards: flash77,
   },
   {
@@ -12412,9 +10344,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche78,
     qcm: qcm78,
-    exercice: exercice78,
     flashcards: flash78,
   },
   {
@@ -12433,9 +10363,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche79,
     qcm: qcm79,
-    exercice: exercice79,
     flashcards: flash79,
   },
   {
@@ -12454,9 +10382,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche80,
     qcm: qcm80,
-    exercice: exercice80,
     flashcards: flash80,
   },
   {
@@ -12475,9 +10401,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche81,
     qcm: qcm81,
-    exercice: exercice81,
     flashcards: flash81,
   },
   {
@@ -12496,9 +10420,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche82,
     qcm: qcm82,
-    exercice: exercice82,
     flashcards: flash82,
   },
   {
@@ -12517,9 +10439,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche83,
     qcm: qcm83,
-    exercice: exercice83,
     flashcards: flash83,
   },
   {
@@ -12538,9 +10458,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche84,
     qcm: qcm84,
-    exercice: exercice84,
     flashcards: flash84,
   },
   {
@@ -12559,9 +10477,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche85,
     qcm: qcm85,
-    exercice: exercice85,
     flashcards: flash85,
   },
   {
@@ -12580,9 +10496,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche86,
     qcm: qcm86,
-    exercice: exercice86,
     flashcards: flash86,
   },
   {
@@ -12601,9 +10515,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche87,
     qcm: qcm87,
-    exercice: exercice87,
     flashcards: flash87,
   },
   {
@@ -12622,9 +10534,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche88,
     qcm: qcm88,
-    exercice: exercice88,
     flashcards: flash88,
   },
   {
@@ -12643,9 +10553,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche89,
     qcm: qcm89,
-    exercice: exercice89,
     flashcards: flash89,
   },
   {
@@ -12664,9 +10572,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche90,
     qcm: qcm90,
-    exercice: exercice90,
     flashcards: flash90,
   },
   {
@@ -12685,9 +10591,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche91,
     qcm: qcm91,
-    exercice: exercice91,
     flashcards: flash91,
   },
   {
@@ -12706,9 +10610,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche92,
     qcm: qcm92,
-    exercice: exercice92,
     flashcards: flash92,
   },
   {
@@ -12727,9 +10629,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche93,
     qcm: qcm93,
-    exercice: exercice93,
     flashcards: flash93,
   },
   {
@@ -12748,9 +10648,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche94,
     qcm: qcm94,
-    exercice: exercice94,
     flashcards: flash94,
   },
   {
@@ -12769,9 +10667,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche95,
     qcm: qcm95,
-    exercice: exercice95,
     flashcards: flash95,
   },
   {
@@ -12790,9 +10686,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche96,
     qcm: qcm96,
-    exercice: exercice96,
     flashcards: flash96,
   },
   {
@@ -12811,9 +10705,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche97,
     qcm: qcm97,
-    exercice: exercice97,
     flashcards: flash97,
   },
   {
@@ -12832,9 +10724,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche98,
     qcm: qcm98,
-    exercice: exercice98,
     flashcards: flash98,
   },
   {
@@ -12853,9 +10743,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche99,
     qcm: qcm99,
-    exercice: exercice99,
     flashcards: flash99,
   },
   {
@@ -12874,9 +10762,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche100,
     qcm: qcm100,
-    exercice: exercice100,
     flashcards: flash100,
   },
   {
@@ -12895,9 +10781,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche101,
     qcm: qcm101,
-    exercice: exercice101,
     flashcards: flash101,
   },
   {
@@ -12916,9 +10800,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche102,
     qcm: qcm102,
-    exercice: exercice102,
     flashcards: flash102,
   },
   {
@@ -12937,9 +10819,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche103,
     qcm: qcm103,
-    exercice: exercice103,
     flashcards: flash103,
   },
   {
@@ -12958,9 +10838,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche104,
     qcm: qcm104,
-    exercice: exercice104,
     flashcards: flash104,
   },
   {
@@ -12979,9 +10857,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche105,
     qcm: qcm105,
-    exercice: exercice105,
     flashcards: flash105,
   },
   {
@@ -13000,9 +10876,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche106,
     qcm: qcm106,
-    exercice: exercice106,
     flashcards: flash106,
   },
   {
@@ -13021,9 +10895,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche107,
     qcm: qcm107,
-    exercice: exercice107,
     flashcards: flash107,
   },
   {
@@ -13042,9 +10914,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche108,
     qcm: qcm108,
-    exercice: exercice108,
     flashcards: flash108,
   },
   {
@@ -13063,9 +10933,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche109,
     qcm: qcm109,
-    exercice: exercice109,
     flashcards: flash109,
   },
   {
@@ -13084,9 +10952,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche110,
     qcm: qcm110,
-    exercice: exercice110,
     flashcards: flash110,
   },
   {
@@ -13105,9 +10971,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche111,
     qcm: qcm111,
-    exercice: exercice111,
     flashcards: flash111,
   },
   {
@@ -13126,9 +10990,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche112,
     qcm: qcm112,
-    exercice: exercice112,
     flashcards: flash112,
   },
   {
@@ -13147,9 +11009,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche113,
     qcm: qcm113,
-    exercice: exercice113,
     flashcards: flash113,
   },
   {
@@ -13168,9 +11028,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche114,
     qcm: qcm114,
-    exercice: exercice114,
     flashcards: flash114,
   },
   {
@@ -13189,9 +11047,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche115,
     qcm: qcm115,
-    exercice: exercice115,
     flashcards: flash115,
   },
   {
@@ -13210,9 +11066,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche116,
     qcm: qcm116,
-    exercice: exercice116,
     flashcards: flash116,
   },
   {
@@ -13231,9 +11085,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche117,
     qcm: qcm117,
-    exercice: exercice117,
     flashcards: flash117,
   },
   {
@@ -13252,9 +11104,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche118,
     qcm: qcm118,
-    exercice: exercice118,
     flashcards: flash118,
   },
   {
@@ -13273,9 +11123,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche119,
     qcm: qcm119,
-    exercice: exercice119,
     flashcards: flash119,
   },
   {
@@ -13294,9 +11142,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche120,
     qcm: qcm120,
-    exercice: exercice120,
     flashcards: flash120,
   },
   {
@@ -13315,9 +11161,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche121,
     qcm: qcm121,
-    exercice: exercice121,
     flashcards: flash121,
   },
   {
@@ -13336,9 +11180,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche122,
     qcm: qcm122,
-    exercice: exercice122,
     flashcards: flash122,
   },
   {
@@ -13357,9 +11199,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche123,
     qcm: qcm123,
-    exercice: exercice123,
     flashcards: flash123,
   },
   {
@@ -13378,9 +11218,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche124,
     qcm: qcm124,
-    exercice: exercice124,
     flashcards: flash124,
   },
   {
@@ -13399,9 +11237,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche125,
     qcm: qcm125,
-    exercice: exercice125,
     flashcards: flash125,
   },
   {
@@ -13420,9 +11256,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche126,
     qcm: qcm126,
-    exercice: exercice126,
     flashcards: flash126,
   },
   {
@@ -13441,9 +11275,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche127,
     qcm: qcm127,
-    exercice: exercice127,
     flashcards: flash127,
   },
   {
@@ -13462,9 +11294,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche128,
     qcm: qcm128,
-    exercice: exercice128,
     flashcards: flash128,
   },
   {
@@ -13483,9 +11313,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche129,
     qcm: qcm129,
-    exercice: exercice129,
     flashcards: flash129,
   },
   {
@@ -13504,9 +11332,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche130,
     qcm: qcm130,
-    exercice: exercice130,
     flashcards: flash130,
   },
   {
@@ -13525,9 +11351,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche131,
     qcm: qcm131,
-    exercice: exercice131,
     flashcards: flash131,
   },
   {
@@ -13546,9 +11370,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche132,
     qcm: qcm132,
-    exercice: exercice132,
     flashcards: flash132,
   },
   {
@@ -13567,9 +11389,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche133,
     qcm: qcm133,
-    exercice: exercice133,
     flashcards: flash133,
   },
   {
@@ -13588,9 +11408,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche134,
     qcm: qcm134,
-    exercice: exercice134,
     flashcards: flash134,
   },
   {
@@ -13609,9 +11427,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche135,
     qcm: qcm135,
-    exercice: exercice135,
     flashcards: flash135,
   },
   {
@@ -13630,9 +11446,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche136,
     qcm: qcm136,
-    exercice: exercice136,
     flashcards: flash136,
   },
   {
@@ -13651,9 +11465,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche137,
     qcm: qcm137,
-    exercice: exercice137,
     flashcards: flash137,
   },
   {
@@ -13672,9 +11484,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche138,
     qcm: qcm138,
-    exercice: exercice138,
     flashcards: flash138,
   },
   {
@@ -13693,9 +11503,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche139,
     qcm: qcm139,
-    exercice: exercice139,
     flashcards: flash139,
   },
   {
@@ -13714,9 +11522,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche140,
     qcm: qcm140,
-    exercice: exercice140,
     flashcards: flash140,
   },
   {
@@ -13735,9 +11541,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche141,
     qcm: qcm141,
-    exercice: exercice141,
     flashcards: flash141,
   },
   {
@@ -13756,9 +11560,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche142,
     qcm: qcm142,
-    exercice: exercice142,
     flashcards: flash142,
   },
   {
@@ -13777,9 +11579,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche143,
     qcm: qcm143,
-    exercice: exercice143,
     flashcards: flash143,
   },
   {
@@ -13798,9 +11598,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche144,
     qcm: qcm144,
-    exercice: exercice144,
     flashcards: flash144,
   },
   {
@@ -13819,9 +11617,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche145,
     qcm: qcm145,
-    exercice: exercice145,
     flashcards: flash145,
   },
   {
@@ -13840,9 +11636,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche146,
     qcm: qcm146,
-    exercice: exercice146,
     flashcards: flash146,
   },
   {
@@ -13861,9 +11655,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche147,
     qcm: qcm147,
-    exercice: exercice147,
     flashcards: flash147,
   },
   {
@@ -13882,9 +11674,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche148,
     qcm: qcm148,
-    exercice: exercice148,
     flashcards: flash148,
   },
   {
@@ -13903,9 +11693,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche149,
     qcm: qcm149,
-    exercice: exercice149,
     flashcards: flash149,
   },
   {
@@ -13924,9 +11712,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche150,
     qcm: qcm150,
-    exercice: exercice150,
     flashcards: flash150,
   },
   {
@@ -13945,9 +11731,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche151,
     qcm: qcm151,
-    exercice: exercice151,
     flashcards: flash151,
   },
   {
@@ -13966,9 +11750,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche152,
     qcm: qcm152,
-    exercice: exercice152,
     flashcards: flash152,
   },
   {
@@ -13987,9 +11769,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche153,
     qcm: qcm153,
-    exercice: exercice153,
     flashcards: flash153,
   },
   {
@@ -14008,9 +11788,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche154,
     qcm: qcm154,
-    exercice: exercice154,
     flashcards: flash154,
   },
   {
@@ -14029,9 +11807,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche155,
     qcm: qcm155,
-    exercice: exercice155,
     flashcards: flash155,
   },
   {
@@ -14050,9 +11826,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche156,
     qcm: qcm156,
-    exercice: exercice156,
     flashcards: flash156,
   },
   {
@@ -14071,9 +11845,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche157,
     qcm: qcm157,
-    exercice: exercice157,
     flashcards: flash157,
   },
   {
@@ -14092,9 +11864,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche158,
     qcm: qcm158,
-    exercice: exercice158,
     flashcards: flash158,
   },
   {
@@ -14113,9 +11883,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche159,
     qcm: qcm159,
-    exercice: exercice159,
     flashcards: flash159,
   },
   {
@@ -14134,9 +11902,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche160,
     qcm: qcm160,
-    exercice: exercice160,
     flashcards: flash160,
   },
   {
@@ -14155,9 +11921,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche161,
     qcm: qcm161,
-    exercice: exercice161,
     flashcards: flash161,
   },
   {
@@ -14176,9 +11940,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche162,
     qcm: qcm162,
-    exercice: exercice162,
     flashcards: flash162,
   },
   {
@@ -14197,9 +11959,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche163,
     qcm: qcm163,
-    exercice: exercice163,
     flashcards: flash163,
   },
   {
@@ -14218,9 +11978,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche164,
     qcm: qcm164,
-    exercice: exercice164,
     flashcards: flash164,
   },
   {
@@ -14239,9 +11997,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche165,
     qcm: qcm165,
-    exercice: exercice165,
     flashcards: flash165,
   },
   {
@@ -14260,9 +12016,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche166,
     qcm: qcm166,
-    exercice: exercice166,
     flashcards: flash166,
   },
   {
@@ -14281,9 +12035,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche167,
     qcm: qcm167,
-    exercice: exercice167,
     flashcards: flash167,
   },
   {
@@ -14302,9 +12054,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche168,
     qcm: qcm168,
-    exercice: exercice168,
     flashcards: flash168,
   },
   {
@@ -14323,9 +12073,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche169,
     qcm: qcm169,
-    exercice: exercice169,
     flashcards: flash169,
   },
   {
@@ -14344,9 +12092,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche170,
     qcm: qcm170,
-    exercice: exercice170,
     flashcards: flash170,
   },
   {
@@ -14365,9 +12111,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche171,
     qcm: qcm171,
-    exercice: exercice171,
     flashcards: flash171,
   },
   {
@@ -14386,9 +12130,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche172,
     qcm: qcm172,
-    exercice: exercice172,
     flashcards: flash172,
   },
   {
@@ -14407,9 +12149,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche173,
     qcm: qcm173,
-    exercice: exercice173,
     flashcards: flash173,
   },
   {
@@ -14428,9 +12168,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche174,
     qcm: qcm174,
-    exercice: exercice174,
     flashcards: flash174,
   },
   {
@@ -14449,9 +12187,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche175,
     qcm: qcm175,
-    exercice: exercice175,
     flashcards: flash175,
   },
   {
@@ -14470,9 +12206,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche176,
     qcm: qcm176,
-    exercice: exercice176,
     flashcards: flash176,
   },
   {
@@ -14491,9 +12225,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche177,
     qcm: qcm177,
-    exercice: exercice177,
     flashcards: flash177,
   },
   {
@@ -14512,9 +12244,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche178,
     qcm: qcm178,
-    exercice: exercice178,
     flashcards: flash178,
   },
   {
@@ -14533,9 +12263,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche179,
     qcm: qcm179,
-    exercice: exercice179,
     flashcards: flash179,
   },
   {
@@ -14554,9 +12282,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche180,
     qcm: qcm180,
-    exercice: exercice180,
     flashcards: flash180,
   },
   {
@@ -14575,9 +12301,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche181,
     qcm: qcm181,
-    exercice: exercice181,
     flashcards: flash181,
   },
   {
@@ -14596,9 +12320,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche182,
     qcm: qcm182,
-    exercice: exercice182,
     flashcards: flash182,
   },
   {
@@ -14617,9 +12339,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche183,
     qcm: qcm183,
-    exercice: exercice183,
     flashcards: flash183,
   },
   {
@@ -14638,9 +12358,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche184,
     qcm: qcm184,
-    exercice: exercice184,
     flashcards: flash184,
   },
   {
@@ -14659,9 +12377,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche185,
     qcm: qcm185,
-    exercice: exercice185,
     flashcards: flash185,
   },
   {
@@ -14680,9 +12396,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche186,
     qcm: qcm186,
-    exercice: exercice186,
     flashcards: flash186,
   },
   {
@@ -14701,9 +12415,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche187,
     qcm: qcm187,
-    exercice: exercice187,
     flashcards: flash187,
   },
   {
@@ -14722,9 +12434,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche188,
     qcm: qcm188,
-    exercice: exercice188,
     flashcards: flash188,
   },
   {
@@ -14743,9 +12453,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche189,
     qcm: qcm189,
-    exercice: exercice189,
     flashcards: flash189,
   },
   {
@@ -14764,9 +12472,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche190,
     qcm: qcm190,
-    exercice: exercice190,
     flashcards: flash190,
   },
   {
@@ -14785,9 +12491,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche191,
     qcm: qcm191,
-    exercice: exercice191,
     flashcards: flash191,
   },
   {
@@ -14806,9 +12510,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche192,
     qcm: qcm192,
-    exercice: exercice192,
     flashcards: flash192,
   },
   {
@@ -14827,9 +12529,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche193,
     qcm: qcm193,
-    exercice: exercice193,
     flashcards: flash193,
   },
   {
@@ -14848,9 +12548,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche194,
     qcm: qcm194,
-    exercice: exercice194,
     flashcards: flash194,
   },
   {
@@ -14869,9 +12567,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche195,
     qcm: qcm195,
-    exercice: exercice195,
     flashcards: flash195,
   },
   {
@@ -14890,9 +12586,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche196,
     qcm: qcm196,
-    exercice: exercice196,
     flashcards: flash196,
   },
   {
@@ -14911,9 +12605,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche197,
     qcm: qcm197,
-    exercice: exercice197,
     flashcards: flash197,
   },
   {
@@ -14932,9 +12624,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche198,
     qcm: qcm198,
-    exercice: exercice198,
     flashcards: flash198,
   },
   {
@@ -14953,9 +12643,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche199,
     qcm: qcm199,
-    exercice: exercice199,
     flashcards: flash199,
   },
   {
@@ -14974,9 +12662,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche200,
     qcm: qcm200,
-    exercice: exercice200,
     flashcards: flash200,
   },
   {
@@ -14995,9 +12681,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche201,
     qcm: qcm201,
-    exercice: exercice201,
     flashcards: flash201,
   },
   {
@@ -15016,9 +12700,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche202,
     qcm: qcm202,
-    exercice: exercice202,
     flashcards: flash202,
   },
   {
@@ -15037,9 +12719,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche203,
     qcm: qcm203,
-    exercice: exercice203,
     flashcards: flash203,
   },
   {
@@ -15058,9 +12738,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche204,
     qcm: qcm204,
-    exercice: exercice204,
     flashcards: flash204,
   },
   {
@@ -15079,9 +12757,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche205,
     qcm: qcm205,
-    exercice: exercice205,
     flashcards: flash205,
   },
   {
@@ -15100,9 +12776,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche206,
     qcm: qcm206,
-    exercice: exercice206,
     flashcards: flash206,
   },
   {
@@ -15121,9 +12795,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche207,
     qcm: qcm207,
-    exercice: exercice207,
     flashcards: flash207,
   },
   {
@@ -15142,9 +12814,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche208,
     qcm: qcm208,
-    exercice: exercice208,
     flashcards: flash208,
   },
   {
@@ -15163,9 +12833,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche209,
     qcm: qcm209,
-    exercice: exercice209,
     flashcards: flash209,
   },
   {
@@ -15184,9 +12852,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche210,
     qcm: qcm210,
-    exercice: exercice210,
     flashcards: flash210,
   },
   {
@@ -15205,9 +12871,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche211,
     qcm: qcm211,
-    exercice: exercice211,
     flashcards: flash211,
   },
   {
@@ -15226,9 +12890,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche212,
     qcm: qcm212,
-    exercice: exercice212,
     flashcards: flash212,
   },
   {
@@ -15247,9 +12909,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche213,
     qcm: qcm213,
-    exercice: exercice213,
     flashcards: flash213,
   },
   {
@@ -15268,9 +12928,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche214,
     qcm: qcm214,
-    exercice: exercice214,
     flashcards: flash214,
   },
   {
@@ -15289,9 +12947,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche215,
     qcm: qcm215,
-    exercice: exercice215,
     flashcards: flash215,
   },
   {
@@ -15310,9 +12966,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche216,
     qcm: qcm216,
-    exercice: exercice216,
     flashcards: flash216,
   },
   {
@@ -15331,9 +12985,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche217,
     qcm: qcm217,
-    exercice: exercice217,
     flashcards: flash217,
   },
   {
@@ -15352,9 +13004,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche218,
     qcm: qcm218,
-    exercice: exercice218,
     flashcards: flash218,
   },
   {
@@ -15373,9 +13023,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche219,
     qcm: qcm219,
-    exercice: exercice219,
     flashcards: flash219,
   },
   {
@@ -15394,9 +13042,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche220,
     qcm: qcm220,
-    exercice: exercice220,
     flashcards: flash220,
   },
   {
@@ -15415,9 +13061,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche221,
     qcm: qcm221,
-    exercice: exercice221,
     flashcards: flash221,
   },
   {
@@ -15436,9 +13080,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche222,
     qcm: qcm222,
-    exercice: exercice222,
     flashcards: flash222,
   },
   {
@@ -15457,9 +13099,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche223,
     qcm: qcm223,
-    exercice: exercice223,
     flashcards: flash223,
   },
   {
@@ -15478,9 +13118,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche224,
     qcm: qcm224,
-    exercice: exercice224,
     flashcards: flash224,
   },
   {
@@ -15499,9 +13137,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche225,
     qcm: qcm225,
-    exercice: exercice225,
     flashcards: flash225,
   },
   {
@@ -15520,9 +13156,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche226,
     qcm: qcm226,
-    exercice: exercice226,
     flashcards: flash226,
   },
   {
@@ -15541,9 +13175,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche227,
     qcm: qcm227,
-    exercice: exercice227,
     flashcards: flash227,
   },
   {
@@ -15562,9 +13194,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche228,
     qcm: qcm228,
-    exercice: exercice228,
     flashcards: flash228,
   },
   {
@@ -15583,9 +13213,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche229,
     qcm: qcm229,
-    exercice: exercice229,
     flashcards: flash229,
   },
   {
@@ -15604,9 +13232,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche230,
     qcm: qcm230,
-    exercice: exercice230,
     flashcards: flash230,
   },
   {
@@ -15625,9 +13251,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche231,
     qcm: qcm231,
-    exercice: exercice231,
     flashcards: flash231,
   },
   {
@@ -15646,9 +13270,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche232,
     qcm: qcm232,
-    exercice: exercice232,
     flashcards: flash232,
   },
   {
@@ -15667,9 +13289,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche233,
     qcm: qcm233,
-    exercice: exercice233,
     flashcards: flash233,
   },
   {
@@ -15688,9 +13308,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche234,
     qcm: qcm234,
-    exercice: exercice234,
     flashcards: flash234,
   },
   {
@@ -15709,9 +13327,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche235,
     qcm: qcm235,
-    exercice: exercice235,
     flashcards: flash235,
   },
   {
@@ -15730,9 +13346,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche236,
     qcm: qcm236,
-    exercice: exercice236,
     flashcards: flash236,
   },
   {
@@ -15751,9 +13365,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche237,
     qcm: qcm237,
-    exercice: exercice237,
     flashcards: flash237,
   },
   {
@@ -15772,9 +13384,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche238,
     qcm: qcm238,
-    exercice: exercice238,
     flashcards: flash238,
   },
   {
@@ -15793,9 +13403,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche239,
     qcm: qcm239,
-    exercice: exercice239,
     flashcards: flash239,
   },
   {
@@ -15814,9 +13422,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche240,
     qcm: qcm240,
-    exercice: exercice240,
     flashcards: flash240,
   },
   {
@@ -15835,9 +13441,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche241,
     qcm: qcm241,
-    exercice: exercice241,
     flashcards: flash241,
   },
   {
@@ -15856,9 +13460,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche242,
     qcm: qcm242,
-    exercice: exercice242,
     flashcards: flash242,
   },
   {
@@ -15877,9 +13479,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche243,
     qcm: qcm243,
-    exercice: exercice243,
     flashcards: flash243,
   },
   {
@@ -15898,9 +13498,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche244,
     qcm: qcm244,
-    exercice: exercice244,
     flashcards: flash244,
   },
   {
@@ -15919,9 +13517,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche245,
     qcm: qcm245,
-    exercice: exercice245,
     flashcards: flash245,
   },
   {
@@ -15940,9 +13536,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche246,
     qcm: qcm246,
-    exercice: exercice246,
     flashcards: flash246,
   },
   {
@@ -15961,9 +13555,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche247,
     qcm: qcm247,
-    exercice: exercice247,
     flashcards: flash247,
   },
   {
@@ -15982,9 +13574,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche248,
     qcm: qcm248,
-    exercice: exercice248,
     flashcards: flash248,
   },
   {
@@ -16003,9 +13593,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche249,
     qcm: qcm249,
-    exercice: exercice249,
     flashcards: flash249,
   },
   {
@@ -16024,9 +13612,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche250,
     qcm: qcm250,
-    exercice: exercice250,
     flashcards: flash250,
   },
   {
@@ -16045,9 +13631,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche251,
     qcm: qcm251,
-    exercice: exercice251,
     flashcards: flash251,
   },
   {
@@ -16066,9 +13650,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche252,
     qcm: qcm252,
-    exercice: exercice252,
     flashcards: flash252,
   },
   {
@@ -16087,9 +13669,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche253,
     qcm: qcm253,
-    exercice: exercice253,
     flashcards: flash253,
   },
   {
@@ -16108,9 +13688,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche254,
     qcm: qcm254,
-    exercice: exercice254,
     flashcards: flash254,
   },
   {
@@ -16129,9 +13707,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche255,
     qcm: qcm255,
-    exercice: exercice255,
     flashcards: flash255,
   },
   {
@@ -16150,9 +13726,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche256,
     qcm: qcm256,
-    exercice: exercice256,
     flashcards: flash256,
   },
   {
@@ -16171,9 +13745,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche257,
     qcm: qcm257,
-    exercice: exercice257,
     flashcards: flash257,
   },
   {
@@ -16192,9 +13764,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche258,
     qcm: qcm258,
-    exercice: exercice258,
     flashcards: flash258,
   },
   {
@@ -16213,9 +13783,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche259,
     qcm: qcm259,
-    exercice: exercice259,
     flashcards: flash259,
   },
   {
@@ -16234,9 +13802,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche260,
     qcm: qcm260,
-    exercice: exercice260,
     flashcards: flash260,
   },
   {
@@ -16255,9 +13821,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche261,
     qcm: qcm261,
-    exercice: exercice261,
     flashcards: flash261,
   },
   {
@@ -16276,9 +13840,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche262,
     qcm: qcm262,
-    exercice: exercice262,
     flashcards: flash262,
   },
   {
@@ -16297,9 +13859,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche263,
     qcm: qcm263,
-    exercice: exercice263,
     flashcards: flash263,
   },
   {
@@ -16318,9 +13878,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche264,
     qcm: qcm264,
-    exercice: exercice264,
     flashcards: flash264,
   },
   {
@@ -16339,9 +13897,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche265,
     qcm: qcm265,
-    exercice: exercice265,
     flashcards: flash265,
   },
   {
@@ -16360,9 +13916,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche266,
     qcm: qcm266,
-    exercice: exercice266,
     flashcards: flash266,
   },
   {
@@ -16381,9 +13935,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche267,
     qcm: qcm267,
-    exercice: exercice267,
     flashcards: flash267,
   },
   {
@@ -16402,9 +13954,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche268,
     qcm: qcm268,
-    exercice: exercice268,
     flashcards: flash268,
   },
   {
@@ -16423,9 +13973,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche269,
     qcm: qcm269,
-    exercice: exercice269,
     flashcards: flash269,
   },
   {
@@ -16444,9 +13992,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche270,
     qcm: qcm270,
-    exercice: exercice270,
     flashcards: flash270,
   },
   {
@@ -16465,9 +14011,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche271,
     qcm: qcm271,
-    exercice: exercice271,
     flashcards: flash271,
   },
   {
@@ -16486,9 +14030,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche272,
     qcm: qcm272,
-    exercice: exercice272,
     flashcards: flash272,
   },
   {
@@ -16507,9 +14049,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche273,
     qcm: qcm273,
-    exercice: exercice273,
     flashcards: flash273,
   },
   {
@@ -16528,9 +14068,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche274,
     qcm: qcm274,
-    exercice: exercice274,
     flashcards: flash274,
   },
   {
@@ -16549,9 +14087,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche275,
     qcm: qcm275,
-    exercice: exercice275,
     flashcards: flash275,
   },
   {
@@ -16570,9 +14106,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche276,
     qcm: qcm276,
-    exercice: exercice276,
     flashcards: flash276,
   },
   {
@@ -16591,9 +14125,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche277,
     qcm: qcm277,
-    exercice: exercice277,
     flashcards: flash277,
   },
   {
@@ -16612,9 +14144,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche278,
     qcm: qcm278,
-    exercice: exercice278,
     flashcards: flash278,
   },
   {
@@ -16633,9 +14163,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche279,
     qcm: qcm279,
-    exercice: exercice279,
     flashcards: flash279,
   },
   {
@@ -16654,9 +14182,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche280,
     qcm: qcm280,
-    exercice: exercice280,
     flashcards: flash280,
   },
   {
@@ -16675,9 +14201,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche281,
     qcm: qcm281,
-    exercice: exercice281,
     flashcards: flash281,
   },
   {
@@ -16696,9 +14220,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche282,
     qcm: qcm282,
-    exercice: exercice282,
     flashcards: flash282,
   },
   {
@@ -16717,9 +14239,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche283,
     qcm: qcm283,
-    exercice: exercice283,
     flashcards: flash283,
   },
   {
@@ -16738,9 +14258,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche284,
     qcm: qcm284,
-    exercice: exercice284,
     flashcards: flash284,
   },
   {
@@ -16759,9 +14277,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche285,
     qcm: qcm285,
-    exercice: exercice285,
     flashcards: flash285,
   },
   {
@@ -16780,9 +14296,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche286,
     qcm: qcm286,
-    exercice: exercice286,
     flashcards: flash286,
   },
   {
@@ -16801,9 +14315,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche287,
     qcm: qcm287,
-    exercice: exercice287,
     flashcards: flash287,
   },
   {
@@ -16822,9 +14334,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche288,
     qcm: qcm288,
-    exercice: exercice288,
     flashcards: flash288,
   },
   {
@@ -16843,9 +14353,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche289,
     qcm: qcm289,
-    exercice: exercice289,
     flashcards: flash289,
   },
   {
@@ -16864,9 +14372,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche290,
     qcm: qcm290,
-    exercice: exercice290,
     flashcards: flash290,
   },
   {
@@ -16885,9 +14391,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche291,
     qcm: qcm291,
-    exercice: exercice291,
     flashcards: flash291,
   },
   {
@@ -16906,9 +14410,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche292,
     qcm: qcm292,
-    exercice: exercice292,
     flashcards: flash292,
   },
   {
@@ -16927,9 +14429,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche293,
     qcm: qcm293,
-    exercice: exercice293,
     flashcards: flash293,
   },
   {
@@ -16948,9 +14448,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche294,
     qcm: qcm294,
-    exercice: exercice294,
     flashcards: flash294,
   },
   {
@@ -16969,9 +14467,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche295,
     qcm: qcm295,
-    exercice: exercice295,
     flashcards: flash295,
   },
   {
@@ -16990,9 +14486,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche296,
     qcm: qcm296,
-    exercice: exercice296,
     flashcards: flash296,
   },
   {
@@ -17011,9 +14505,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche297,
     qcm: qcm297,
-    exercice: exercice297,
     flashcards: flash297,
   },
   {
@@ -17032,9 +14524,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche298,
     qcm: qcm298,
-    exercice: exercice298,
     flashcards: flash298,
   },
   {
@@ -17053,9 +14543,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche299,
     qcm: qcm299,
-    exercice: exercice299,
     flashcards: flash299,
   },
   {
@@ -17074,9 +14562,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche300,
     qcm: qcm300,
-    exercice: exercice300,
     flashcards: flash300,
   },
   {
@@ -17095,9 +14581,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche301,
     qcm: qcm301,
-    exercice: exercice301,
     flashcards: flash301,
   },
   {
@@ -17116,9 +14600,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche302,
     qcm: qcm302,
-    exercice: exercice302,
     flashcards: flash302,
   },
   {
@@ -17137,9 +14619,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche303,
     qcm: qcm303,
-    exercice: exercice303,
     flashcards: flash303,
   },
   {
@@ -17158,9 +14638,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche304,
     qcm: qcm304,
-    exercice: exercice304,
     flashcards: flash304,
   },
   {
@@ -17179,9 +14657,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche305,
     qcm: qcm305,
-    exercice: exercice305,
     flashcards: flash305,
   },
   {
@@ -17200,9 +14676,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche306,
     qcm: qcm306,
-    exercice: exercice306,
     flashcards: flash306,
   },
   {
@@ -17221,9 +14695,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche307,
     qcm: qcm307,
-    exercice: exercice307,
     flashcards: flash307,
   },
   {
@@ -17242,9 +14714,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche308,
     qcm: qcm308,
-    exercice: exercice308,
     flashcards: flash308,
   },
   {
@@ -17263,9 +14733,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche309,
     qcm: qcm309,
-    exercice: exercice309,
     flashcards: flash309,
   },
   {
@@ -17284,9 +14752,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche310,
     qcm: qcm310,
-    exercice: exercice310,
     flashcards: flash310,
   },
   {
@@ -17305,9 +14771,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche311,
     qcm: qcm311,
-    exercice: exercice311,
     flashcards: flash311,
   },
   {
@@ -17326,9 +14790,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche312,
     qcm: qcm312,
-    exercice: exercice312,
     flashcards: flash312,
   },
   {
@@ -17347,9 +14809,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche313,
     qcm: qcm313,
-    exercice: exercice313,
     flashcards: flash313,
   },
   {
@@ -17368,9 +14828,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche314,
     qcm: qcm314,
-    exercice: exercice314,
     flashcards: flash314,
   },
   {
@@ -17389,9 +14847,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche315,
     qcm: qcm315,
-    exercice: exercice315,
     flashcards: flash315,
   },
   {
@@ -17410,9 +14866,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche316,
     qcm: qcm316,
-    exercice: exercice316,
     flashcards: flash316,
   },
   {
@@ -17431,9 +14885,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche317,
     qcm: qcm317,
-    exercice: exercice317,
     flashcards: flash317,
   },
   {
@@ -17452,9 +14904,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche318,
     qcm: qcm318,
-    exercice: exercice318,
     flashcards: flash318,
   },
   {
@@ -17473,9 +14923,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche319,
     qcm: qcm319,
-    exercice: exercice319,
     flashcards: flash319,
   },
   {
@@ -17494,9 +14942,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche320,
     qcm: qcm320,
-    exercice: exercice320,
     flashcards: flash320,
   },
   {
@@ -17515,9 +14961,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche321,
     qcm: qcm321,
-    exercice: exercice321,
     flashcards: flash321,
   },
   {
@@ -17536,9 +14980,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche322,
     qcm: qcm322,
-    exercice: exercice322,
     flashcards: flash322,
   },
   {
@@ -17557,9 +14999,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche323,
     qcm: qcm323,
-    exercice: exercice323,
     flashcards: flash323,
   },
   {
@@ -17578,9 +15018,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche324,
     qcm: qcm324,
-    exercice: exercice324,
     flashcards: flash324,
   },
   {
@@ -17599,9 +15037,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche325,
     qcm: qcm325,
-    exercice: exercice325,
     flashcards: flash325,
   },
   {
@@ -17620,9 +15056,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche326,
     qcm: qcm326,
-    exercice: exercice326,
     flashcards: flash326,
   },
   {
@@ -17641,9 +15075,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche327,
     qcm: qcm327,
-    exercice: exercice327,
     flashcards: flash327,
   },
   {
@@ -17662,9 +15094,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche328,
     qcm: qcm328,
-    exercice: exercice328,
     flashcards: flash328,
   },
   {
@@ -17683,9 +15113,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche329,
     qcm: qcm329,
-    exercice: exercice329,
     flashcards: flash329,
   },
   {
@@ -17704,9 +15132,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche330,
     qcm: qcm330,
-    exercice: exercice330,
     flashcards: flash330,
   },
   {
@@ -17725,9 +15151,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche331,
     qcm: qcm331,
-    exercice: exercice331,
     flashcards: flash331,
   },
   {
@@ -17746,9 +15170,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche332,
     qcm: qcm332,
-    exercice: exercice332,
     flashcards: flash332,
   },
   {
@@ -17767,9 +15189,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche333,
     qcm: qcm333,
-    exercice: exercice333,
     flashcards: flash333,
   },
   {
@@ -17788,9 +15208,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche334,
     qcm: qcm334,
-    exercice: exercice334,
     flashcards: flash334,
   },
   {
@@ -17809,9 +15227,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche335,
     qcm: qcm335,
-    exercice: exercice335,
     flashcards: flash335,
   },
   {
@@ -17830,9 +15246,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche336,
     qcm: qcm336,
-    exercice: exercice336,
     flashcards: flash336,
   },
   {
@@ -17851,9 +15265,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche337,
     qcm: qcm337,
-    exercice: exercice337,
     flashcards: flash337,
   },
   {
@@ -17872,9 +15284,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche338,
     qcm: qcm338,
-    exercice: exercice338,
     flashcards: flash338,
   },
   {
@@ -17893,9 +15303,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche339,
     qcm: qcm339,
-    exercice: exercice339,
     flashcards: flash339,
   },
   {
@@ -17914,9 +15322,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche340,
     qcm: qcm340,
-    exercice: exercice340,
     flashcards: flash340,
   },
   {
@@ -17935,9 +15341,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche341,
     qcm: qcm341,
-    exercice: exercice341,
     flashcards: flash341,
   },
   {
@@ -17956,9 +15360,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche342,
     qcm: qcm342,
-    exercice: exercice342,
     flashcards: flash342,
   },
   {
@@ -17977,9 +15379,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche343,
     qcm: qcm343,
-    exercice: exercice343,
     flashcards: flash343,
   },
   {
@@ -17998,9 +15398,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche344,
     qcm: qcm344,
-    exercice: exercice344,
     flashcards: flash344,
   },
   {
@@ -18019,9 +15417,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche345,
     qcm: qcm345,
-    exercice: exercice345,
     flashcards: flash345,
   },
   {
@@ -18040,9 +15436,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche346,
     qcm: qcm346,
-    exercice: exercice346,
     flashcards: flash346,
   },
   {
@@ -18061,9 +15455,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche347,
     qcm: qcm347,
-    exercice: exercice347,
     flashcards: flash347,
   },
   {
@@ -18082,9 +15474,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche348,
     qcm: qcm348,
-    exercice: exercice348,
     flashcards: flash348,
   },
   {
@@ -18103,9 +15493,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche349,
     qcm: qcm349,
-    exercice: exercice349,
     flashcards: flash349,
   },
   {
@@ -18124,9 +15512,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche350,
     qcm: qcm350,
-    exercice: exercice350,
     flashcards: flash350,
   },
   {
@@ -18145,9 +15531,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche351,
     qcm: qcm351,
-    exercice: exercice351,
     flashcards: flash351,
   },
   {
@@ -18166,9 +15550,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche352,
     qcm: qcm352,
-    exercice: exercice352,
     flashcards: flash352,
   },
   {
@@ -18187,9 +15569,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche353,
     qcm: qcm353,
-    exercice: exercice353,
     flashcards: flash353,
   },
   {
@@ -18208,9 +15588,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche354,
     qcm: qcm354,
-    exercice: exercice354,
     flashcards: flash354,
   },
   {
@@ -18229,9 +15607,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche355,
     qcm: qcm355,
-    exercice: exercice355,
     flashcards: flash355,
   },
   {
@@ -18250,9 +15626,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche356,
     qcm: qcm356,
-    exercice: exercice356,
     flashcards: flash356,
   },
   {
@@ -18271,9 +15645,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche357,
     qcm: qcm357,
-    exercice: exercice357,
     flashcards: flash357,
   },
   {
@@ -18292,9 +15664,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche358,
     qcm: qcm358,
-    exercice: exercice358,
     flashcards: flash358,
   },
   {
@@ -18313,9 +15683,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche359,
     qcm: qcm359,
-    exercice: exercice359,
     flashcards: flash359,
   },
   {
@@ -18334,9 +15702,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche360,
     qcm: qcm360,
-    exercice: exercice360,
     flashcards: flash360,
   },
   {
@@ -18355,9 +15721,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche361,
     qcm: qcm361,
-    exercice: exercice361,
     flashcards: flash361,
   },
   {
@@ -18376,9 +15740,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche362,
     qcm: qcm362,
-    exercice: exercice362,
     flashcards: flash362,
   },
   {
@@ -18397,9 +15759,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche363,
     qcm: qcm363,
-    exercice: exercice363,
     flashcards: flash363,
   },
   {
@@ -18418,9 +15778,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche364,
     qcm: qcm364,
-    exercice: exercice364,
     flashcards: flash364,
   },
   {
@@ -18439,9 +15797,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche365,
     qcm: qcm365,
-    exercice: exercice365,
     flashcards: flash365,
   },
   {
@@ -18460,9 +15816,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche366,
     qcm: qcm366,
-    exercice: exercice366,
     flashcards: flash366,
   },
   {
@@ -18481,9 +15835,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche367,
     qcm: qcm367,
-    exercice: exercice367,
     flashcards: flash367,
   },
   {
@@ -18502,9 +15854,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche368,
     qcm: qcm368,
-    exercice: exercice368,
     flashcards: flash368,
   },
   {
@@ -18523,9 +15873,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche369,
     qcm: qcm369,
-    exercice: exercice369,
     flashcards: flash369,
   },
   {
@@ -18544,9 +15892,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche370,
     qcm: qcm370,
-    exercice: exercice370,
     flashcards: flash370,
   },
   {
@@ -18565,9 +15911,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche371,
     qcm: qcm371,
-    exercice: exercice371,
     flashcards: flash371,
   },
   {
@@ -18586,9 +15930,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche372,
     qcm: qcm372,
-    exercice: exercice372,
     flashcards: flash372,
   },
   {
@@ -18607,9 +15949,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche373,
     qcm: qcm373,
-    exercice: exercice373,
     flashcards: flash373,
   },
   {
@@ -18628,9 +15968,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche374,
     qcm: qcm374,
-    exercice: exercice374,
     flashcards: flash374,
   },
   {
@@ -18649,9 +15987,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche375,
     qcm: qcm375,
-    exercice: exercice375,
     flashcards: flash375,
   },
   {
@@ -18670,9 +16006,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche376,
     qcm: qcm376,
-    exercice: exercice376,
     flashcards: flash376,
   },
   {
@@ -18691,9 +16025,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche377,
     qcm: qcm377,
-    exercice: exercice377,
     flashcards: flash377,
   },
   {
@@ -18712,9 +16044,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche378,
     qcm: qcm378,
-    exercice: exercice378,
     flashcards: flash378,
   },
   {
@@ -18733,9 +16063,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche379,
     qcm: qcm379,
-    exercice: exercice379,
     flashcards: flash379,
   },
   {
@@ -18754,9 +16082,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche380,
     qcm: qcm380,
-    exercice: exercice380,
     flashcards: flash380,
   },
   {
@@ -18775,9 +16101,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche381,
     qcm: qcm381,
-    exercice: exercice381,
     flashcards: flash381,
   },
   {
@@ -18796,9 +16120,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche382,
     qcm: qcm382,
-    exercice: exercice382,
     flashcards: flash382,
   },
   {
@@ -18817,9 +16139,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche383,
     qcm: qcm383,
-    exercice: exercice383,
     flashcards: flash383,
   },
   {
@@ -18838,9 +16158,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche384,
     qcm: qcm384,
-    exercice: exercice384,
     flashcards: flash384,
   },
   {
@@ -18859,9 +16177,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche385,
     qcm: qcm385,
-    exercice: exercice385,
     flashcards: flash385,
   },
   {
@@ -18880,9 +16196,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche386,
     qcm: qcm386,
-    exercice: exercice386,
     flashcards: flash386,
   },
   {
@@ -18901,9 +16215,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche387,
     qcm: qcm387,
-    exercice: exercice387,
     flashcards: flash387,
   },
   {
@@ -18922,9 +16234,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche388,
     qcm: qcm388,
-    exercice: exercice388,
     flashcards: flash388,
   },
   {
@@ -18943,9 +16253,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche389,
     qcm: qcm389,
-    exercice: exercice389,
     flashcards: flash389,
   },
   {
@@ -18964,9 +16272,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche390,
     qcm: qcm390,
-    exercice: exercice390,
     flashcards: flash390,
   },
   {
@@ -18985,9 +16291,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche391,
     qcm: qcm391,
-    exercice: exercice391,
     flashcards: flash391,
   },
   {
@@ -19006,9 +16310,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche392,
     qcm: qcm392,
-    exercice: exercice392,
     flashcards: flash392,
   },
   {
@@ -19027,9 +16329,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche393,
     qcm: qcm393,
-    exercice: exercice393,
     flashcards: flash393,
   },
   {
@@ -19048,9 +16348,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche394,
     qcm: qcm394,
-    exercice: exercice394,
     flashcards: flash394,
   },
   {
@@ -19069,9 +16367,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche395,
     qcm: qcm395,
-    exercice: exercice395,
     flashcards: flash395,
   },
   {
@@ -19090,9 +16386,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche396,
     qcm: qcm396,
-    exercice: exercice396,
     flashcards: flash396,
   },
   {
@@ -19111,9 +16405,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche397,
     qcm: qcm397,
-    exercice: exercice397,
     flashcards: flash397,
   },
   {
@@ -19132,9 +16424,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche398,
     qcm: qcm398,
-    exercice: exercice398,
     flashcards: flash398,
   },
   {
@@ -19153,9 +16443,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche399,
     qcm: qcm399,
-    exercice: exercice399,
     flashcards: flash399,
   },
   {
@@ -19174,9 +16462,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche400,
     qcm: qcm400,
-    exercice: exercice400,
     flashcards: flash400,
   },
   {
@@ -19195,9 +16481,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche401,
     qcm: qcm401,
-    exercice: exercice401,
     flashcards: flash401,
   },
   {
@@ -19216,9 +16500,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche402,
     qcm: qcm402,
-    exercice: exercice402,
     flashcards: flash402,
   },
   {
@@ -19237,9 +16519,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche403,
     qcm: qcm403,
-    exercice: exercice403,
     flashcards: flash403,
   },
   {
@@ -19258,9 +16538,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche404,
     qcm: qcm404,
-    exercice: exercice404,
     flashcards: flash404,
   },
   {
@@ -19279,9 +16557,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche405,
     qcm: qcm405,
-    exercice: exercice405,
     flashcards: flash405,
   },
   {
@@ -19300,9 +16576,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche406,
     qcm: qcm406,
-    exercice: exercice406,
     flashcards: flash406,
   },
   {
@@ -19321,9 +16595,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche407,
     qcm: qcm407,
-    exercice: exercice407,
     flashcards: flash407,
   },
   {
@@ -19342,9 +16614,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche408,
     qcm: qcm408,
-    exercice: exercice408,
     flashcards: flash408,
   },
   {
@@ -19363,9 +16633,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche409,
     qcm: qcm409,
-    exercice: exercice409,
     flashcards: flash409,
   },
   {
@@ -19384,9 +16652,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche410,
     qcm: qcm410,
-    exercice: exercice410,
     flashcards: flash410,
   },
   {
@@ -19405,9 +16671,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche411,
     qcm: qcm411,
-    exercice: exercice411,
     flashcards: flash411,
   },
   {
@@ -19426,9 +16690,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche412,
     qcm: qcm412,
-    exercice: exercice412,
     flashcards: flash412,
   },
   {
@@ -19447,9 +16709,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche413,
     qcm: qcm413,
-    exercice: exercice413,
     flashcards: flash413,
   },
   {
@@ -19468,9 +16728,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche414,
     qcm: qcm414,
-    exercice: exercice414,
     flashcards: flash414,
   },
   {
@@ -19489,9 +16747,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche415,
     qcm: qcm415,
-    exercice: exercice415,
     flashcards: flash415,
   },
   {
@@ -19510,9 +16766,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche416,
     qcm: qcm416,
-    exercice: exercice416,
     flashcards: flash416,
   },
   {
@@ -19531,9 +16785,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche417,
     qcm: qcm417,
-    exercice: exercice417,
     flashcards: flash417,
   },
   {
@@ -19552,9 +16804,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche418,
     qcm: qcm418,
-    exercice: exercice418,
     flashcards: flash418,
   },
   {
@@ -19573,9 +16823,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche419,
     qcm: qcm419,
-    exercice: exercice419,
     flashcards: flash419,
   },
   {
@@ -19594,9 +16842,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche420,
     qcm: qcm420,
-    exercice: exercice420,
     flashcards: flash420,
   },
   {
@@ -19615,9 +16861,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche421,
     qcm: qcm421,
-    exercice: exercice421,
     flashcards: flash421,
   },
   {
@@ -19636,9 +16880,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche422,
     qcm: qcm422,
-    exercice: exercice422,
     flashcards: flash422,
   },
   {
@@ -19657,9 +16899,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche423,
     qcm: qcm423,
-    exercice: exercice423,
     flashcards: flash423,
   },
   {
@@ -19678,9 +16918,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche424,
     qcm: qcm424,
-    exercice: exercice424,
     flashcards: flash424,
   },
   {
@@ -19699,9 +16937,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche425,
     qcm: qcm425,
-    exercice: exercice425,
     flashcards: flash425,
   },
   {
@@ -19720,9 +16956,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche426,
     qcm: qcm426,
-    exercice: exercice426,
     flashcards: flash426,
   },
   {
@@ -19741,9 +16975,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche427,
     qcm: qcm427,
-    exercice: exercice427,
     flashcards: flash427,
   },
   {
@@ -19762,9 +16994,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche428,
     qcm: qcm428,
-    exercice: exercice428,
     flashcards: flash428,
   },
   {
@@ -19783,9 +17013,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche429,
     qcm: qcm429,
-    exercice: exercice429,
     flashcards: flash429,
   },
   {
@@ -19804,9 +17032,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche430,
     qcm: qcm430,
-    exercice: exercice430,
     flashcards: flash430,
   },
   {
@@ -19825,9 +17051,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche431,
     qcm: qcm431,
-    exercice: exercice431,
     flashcards: flash431,
   },
   {
@@ -19846,9 +17070,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche432,
     qcm: qcm432,
-    exercice: exercice432,
     flashcards: flash432,
   },
   {
@@ -19867,9 +17089,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche433,
     qcm: qcm433,
-    exercice: exercice433,
     flashcards: flash433,
   },
   {
@@ -19888,9 +17108,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche434,
     qcm: qcm434,
-    exercice: exercice434,
     flashcards: flash434,
   },
   {
@@ -19909,9 +17127,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche435,
     qcm: qcm435,
-    exercice: exercice435,
     flashcards: flash435,
   },
   {
@@ -19930,9 +17146,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche436,
     qcm: qcm436,
-    exercice: exercice436,
     flashcards: flash436,
   },
   {
@@ -19951,9 +17165,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche437,
     qcm: qcm437,
-    exercice: exercice437,
     flashcards: flash437,
   },
   {
@@ -19972,9 +17184,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche438,
     qcm: qcm438,
-    exercice: exercice438,
     flashcards: flash438,
   },
   {
@@ -19993,9 +17203,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche439,
     qcm: qcm439,
-    exercice: exercice439,
     flashcards: flash439,
   },
   {
@@ -20014,9 +17222,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche440,
     qcm: qcm440,
-    exercice: exercice440,
     flashcards: flash440,
   },
   {
@@ -20035,9 +17241,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche441,
     qcm: qcm441,
-    exercice: exercice441,
     flashcards: flash441,
   },
   {
@@ -20056,9 +17260,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche442,
     qcm: qcm442,
-    exercice: exercice442,
     flashcards: flash442,
   },
   {
@@ -20077,9 +17279,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche443,
     qcm: qcm443,
-    exercice: exercice443,
     flashcards: flash443,
   },
   {
@@ -20098,9 +17298,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche444,
     qcm: qcm444,
-    exercice: exercice444,
     flashcards: flash444,
   },
   {
@@ -20119,9 +17317,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche445,
     qcm: qcm445,
-    exercice: exercice445,
     flashcards: flash445,
   },
   {
@@ -20140,9 +17336,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche446,
     qcm: qcm446,
-    exercice: exercice446,
     flashcards: flash446,
   },
   {
@@ -20161,9 +17355,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche447,
     qcm: qcm447,
-    exercice: exercice447,
     flashcards: flash447,
   },
   {
@@ -20182,9 +17374,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche448,
     qcm: qcm448,
-    exercice: exercice448,
     flashcards: flash448,
   },
   {
@@ -20203,9 +17393,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche449,
     qcm: qcm449,
-    exercice: exercice449,
     flashcards: flash449,
   },
   {
@@ -20224,9 +17412,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche450,
     qcm: qcm450,
-    exercice: exercice450,
     flashcards: flash450,
   },
   {
@@ -20245,9 +17431,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche451,
     qcm: qcm451,
-    exercice: exercice451,
     flashcards: flash451,
   },
   {
@@ -20266,9 +17450,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche452,
     qcm: qcm452,
-    exercice: exercice452,
     flashcards: flash452,
   },
   {
@@ -20287,9 +17469,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche453,
     qcm: qcm453,
-    exercice: exercice453,
     flashcards: flash453,
   },
   {
@@ -20308,9 +17488,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche454,
     qcm: qcm454,
-    exercice: exercice454,
     flashcards: flash454,
   },
   {
@@ -20329,9 +17507,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche455,
     qcm: qcm455,
-    exercice: exercice455,
     flashcards: flash455,
   },
   {
@@ -20350,9 +17526,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche456,
     qcm: qcm456,
-    exercice: exercice456,
     flashcards: flash456,
   },
   {
@@ -20371,9 +17545,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche457,
     qcm: qcm457,
-    exercice: exercice457,
     flashcards: flash457,
   },
   {
@@ -20392,9 +17564,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche458,
     qcm: qcm458,
-    exercice: exercice458,
     flashcards: flash458,
   },
   {
@@ -20413,9 +17583,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche459,
     qcm: qcm459,
-    exercice: exercice459,
     flashcards: flash459,
   },
   {
@@ -20434,9 +17602,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche460,
     qcm: qcm460,
-    exercice: exercice460,
     flashcards: flash460,
   },
   {
@@ -20455,9 +17621,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche461,
     qcm: qcm461,
-    exercice: exercice461,
     flashcards: flash461,
   },
   {
@@ -20476,9 +17640,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche462,
     qcm: qcm462,
-    exercice: exercice462,
     flashcards: flash462,
   },
   {
@@ -20497,9 +17659,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche463,
     qcm: qcm463,
-    exercice: exercice463,
     flashcards: flash463,
   },
   {
@@ -20518,9 +17678,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche464,
     qcm: qcm464,
-    exercice: exercice464,
     flashcards: flash464,
   },
   {
@@ -20539,9 +17697,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche465,
     qcm: qcm465,
-    exercice: exercice465,
     flashcards: flash465,
   },
   {
@@ -20560,9 +17716,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche466,
     qcm: qcm466,
-    exercice: exercice466,
     flashcards: flash466,
   },
   {
@@ -20581,9 +17735,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche467,
     qcm: qcm467,
-    exercice: exercice467,
     flashcards: flash467,
   },
   {
@@ -20602,9 +17754,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche468,
     qcm: qcm468,
-    exercice: exercice468,
     flashcards: flash468,
   },
   {
@@ -20623,9 +17773,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche469,
     qcm: qcm469,
-    exercice: exercice469,
     flashcards: flash469,
   },
   {
@@ -20644,9 +17792,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche470,
     qcm: qcm470,
-    exercice: exercice470,
     flashcards: flash470,
   },
   {
@@ -20665,9 +17811,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche471,
     qcm: qcm471,
-    exercice: exercice471,
     flashcards: flash471,
   },
   {
@@ -20686,9 +17830,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche472,
     qcm: qcm472,
-    exercice: exercice472,
     flashcards: flash472,
   },
   {
@@ -20707,9 +17849,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche473,
     qcm: qcm473,
-    exercice: exercice473,
     flashcards: flash473,
   },
   {
@@ -20728,9 +17868,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche474,
     qcm: qcm474,
-    exercice: exercice474,
     flashcards: flash474,
   },
   {
@@ -20749,9 +17887,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche475,
     qcm: qcm475,
-    exercice: exercice475,
     flashcards: flash475,
   },
   {
@@ -20770,9 +17906,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche476,
     qcm: qcm476,
-    exercice: exercice476,
     flashcards: flash476,
   },
   {
@@ -20791,9 +17925,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche477,
     qcm: qcm477,
-    exercice: exercice477,
     flashcards: flash477,
   },
   {
@@ -20812,9 +17944,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche478,
     qcm: qcm478,
-    exercice: exercice478,
     flashcards: flash478,
   },
   {
@@ -20833,9 +17963,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche479,
     qcm: qcm479,
-    exercice: exercice479,
     flashcards: flash479,
   },
   {
@@ -20854,9 +17982,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche480,
     qcm: qcm480,
-    exercice: exercice480,
     flashcards: flash480,
   },
   {
@@ -20875,9 +18001,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche481,
     qcm: qcm481,
-    exercice: exercice481,
     flashcards: flash481,
   },
   {
@@ -20896,9 +18020,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche482,
     qcm: qcm482,
-    exercice: exercice482,
     flashcards: flash482,
   },
   {
@@ -20917,9 +18039,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche483,
     qcm: qcm483,
-    exercice: exercice483,
     flashcards: flash483,
   },
   {
@@ -20938,9 +18058,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche484,
     qcm: qcm484,
-    exercice: exercice484,
     flashcards: flash484,
   },
   {
@@ -20959,9 +18077,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche485,
     qcm: qcm485,
-    exercice: exercice485,
     flashcards: flash485,
   },
   {
@@ -20980,9 +18096,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche486,
     qcm: qcm486,
-    exercice: exercice486,
     flashcards: flash486,
   },
   {
@@ -21001,9 +18115,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche487,
     qcm: qcm487,
-    exercice: exercice487,
     flashcards: flash487,
   },
   {
@@ -21022,9 +18134,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche488,
     qcm: qcm488,
-    exercice: exercice488,
     flashcards: flash488,
   },
   {
@@ -21043,9 +18153,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche489,
     qcm: qcm489,
-    exercice: exercice489,
     flashcards: flash489,
   },
   {
@@ -21064,9 +18172,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche490,
     qcm: qcm490,
-    exercice: exercice490,
     flashcards: flash490,
   },
   {
@@ -21085,9 +18191,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche491,
     qcm: qcm491,
-    exercice: exercice491,
     flashcards: flash491,
   },
   {
@@ -21106,9 +18210,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche492,
     qcm: qcm492,
-    exercice: exercice492,
     flashcards: flash492,
   },
   {
@@ -21127,9 +18229,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche493,
     qcm: qcm493,
-    exercice: exercice493,
     flashcards: flash493,
   },
   {
@@ -21148,9 +18248,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche494,
     qcm: qcm494,
-    exercice: exercice494,
     flashcards: flash494,
   },
   {
@@ -21169,9 +18267,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche495,
     qcm: qcm495,
-    exercice: exercice495,
     flashcards: flash495,
   },
   {
@@ -21190,9 +18286,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche496,
     qcm: qcm496,
-    exercice: exercice496,
     flashcards: flash496,
   },
   {
@@ -21211,9 +18305,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche497,
     qcm: qcm497,
-    exercice: exercice497,
     flashcards: flash497,
   },
   {
@@ -21232,9 +18324,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche498,
     qcm: qcm498,
-    exercice: exercice498,
     flashcards: flash498,
   },
   {
@@ -21253,9 +18343,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche499,
     qcm: qcm499,
-    exercice: exercice499,
     flashcards: flash499,
   },
   {
@@ -21274,9 +18362,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche500,
     qcm: qcm500,
-    exercice: exercice500,
     flashcards: flash500,
   },
   {
@@ -21295,9 +18381,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche501,
     qcm: qcm501,
-    exercice: exercice501,
     flashcards: flash501,
   },
   {
@@ -21316,9 +18400,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche502,
     qcm: qcm502,
-    exercice: exercice502,
     flashcards: flash502,
   },
   {
@@ -21337,9 +18419,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche503,
     qcm: qcm503,
-    exercice: exercice503,
     flashcards: flash503,
   },
   {
@@ -21358,9 +18438,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche504,
     qcm: qcm504,
-    exercice: exercice504,
     flashcards: flash504,
   },
   {
@@ -21379,9 +18457,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche505,
     qcm: qcm505,
-    exercice: exercice505,
     flashcards: flash505,
   },
   {
@@ -21400,9 +18476,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche506,
     qcm: qcm506,
-    exercice: exercice506,
     flashcards: flash506,
   },
   {
@@ -21421,9 +18495,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche507,
     qcm: qcm507,
-    exercice: exercice507,
     flashcards: flash507,
   },
   {
@@ -21442,9 +18514,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche508,
     qcm: qcm508,
-    exercice: exercice508,
     flashcards: flash508,
   },
   {
@@ -21463,9 +18533,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche509,
     qcm: qcm509,
-    exercice: exercice509,
     flashcards: flash509,
   },
   {
@@ -21484,9 +18552,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche510,
     qcm: qcm510,
-    exercice: exercice510,
     flashcards: flash510,
   },
   {
@@ -21505,9 +18571,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche511,
     qcm: qcm511,
-    exercice: exercice511,
     flashcards: flash511,
   },
   {
@@ -21526,9 +18590,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche512,
     qcm: qcm512,
-    exercice: exercice512,
     flashcards: flash512,
   },
   {
@@ -21547,9 +18609,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche513,
     qcm: qcm513,
-    exercice: exercice513,
     flashcards: flash513,
   },
   {
@@ -21568,9 +18628,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche514,
     qcm: qcm514,
-    exercice: exercice514,
     flashcards: flash514,
   },
   {
@@ -21589,9 +18647,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche515,
     qcm: qcm515,
-    exercice: exercice515,
     flashcards: flash515,
   },
   {
@@ -21610,9 +18666,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche516,
     qcm: qcm516,
-    exercice: exercice516,
     flashcards: flash516,
   },
   {
@@ -21631,9 +18685,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche517,
     qcm: qcm517,
-    exercice: exercice517,
     flashcards: flash517,
   },
   {
@@ -21652,9 +18704,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche518,
     qcm: qcm518,
-    exercice: exercice518,
     flashcards: flash518,
   },
   {
@@ -21673,9 +18723,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche519,
     qcm: qcm519,
-    exercice: exercice519,
     flashcards: flash519,
   },
   {
@@ -21694,9 +18742,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["decomposition-premiers"],
-    fiche: fiche520,
     qcm: qcm520,
-    exercice: exercice520,
     flashcards: flash520,
   },
   {
@@ -21715,9 +18761,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche521,
     qcm: qcm521,
-    exercice: exercice521,
     flashcards: flash521,
   },
   {
@@ -21736,9 +18780,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche522,
     qcm: qcm522,
-    exercice: exercice522,
     flashcards: flash522,
   },
   {
@@ -21757,9 +18799,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche523,
     qcm: qcm523,
-    exercice: exercice523,
     flashcards: flash523,
   },
   {
@@ -21778,9 +18818,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche524,
     qcm: qcm524,
-    exercice: exercice524,
     flashcards: flash524,
   },
   {
@@ -21799,9 +18837,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche525,
     qcm: qcm525,
-    exercice: exercice525,
     flashcards: flash525,
   },
   {
@@ -21820,9 +18856,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche526,
     qcm: qcm526,
-    exercice: exercice526,
     flashcards: flash526,
   },
   {
@@ -21841,9 +18875,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche527,
     qcm: qcm527,
-    exercice: exercice527,
     flashcards: flash527,
   },
   {
@@ -21862,9 +18894,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche528,
     qcm: qcm528,
-    exercice: exercice528,
     flashcards: flash528,
   },
   {
@@ -21883,9 +18913,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche529,
     qcm: qcm529,
-    exercice: exercice529,
     flashcards: flash529,
   },
   {
@@ -21904,9 +18932,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche530,
     qcm: qcm530,
-    exercice: exercice530,
     flashcards: flash530,
   },
   {
@@ -21925,9 +18951,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche531,
     qcm: qcm531,
-    exercice: exercice531,
     flashcards: flash531,
   },
   {
@@ -21946,9 +18970,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche532,
     qcm: qcm532,
-    exercice: exercice532,
     flashcards: flash532,
   },
   {
@@ -21967,9 +18989,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche533,
     qcm: qcm533,
-    exercice: exercice533,
     flashcards: flash533,
   },
   {
@@ -21988,9 +19008,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche534,
     qcm: qcm534,
-    exercice: exercice534,
     flashcards: flash534,
   },
   {
@@ -22009,9 +19027,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche535,
     qcm: qcm535,
-    exercice: exercice535,
     flashcards: flash535,
   },
   {
@@ -22030,9 +19046,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche536,
     qcm: qcm536,
-    exercice: exercice536,
     flashcards: flash536,
   },
   {
@@ -22051,9 +19065,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche537,
     qcm: qcm537,
-    exercice: exercice537,
     flashcards: flash537,
   },
   {
@@ -22072,9 +19084,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche538,
     qcm: qcm538,
-    exercice: exercice538,
     flashcards: flash538,
   },
   {
@@ -22093,9 +19103,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche539,
     qcm: qcm539,
-    exercice: exercice539,
     flashcards: flash539,
   },
   {
@@ -22114,9 +19122,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche540,
     qcm: qcm540,
-    exercice: exercice540,
     flashcards: flash540,
   },
   {
@@ -22135,9 +19141,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche541,
     qcm: qcm541,
-    exercice: exercice541,
     flashcards: flash541,
   },
   {
@@ -22156,9 +19160,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche542,
     qcm: qcm542,
-    exercice: exercice542,
     flashcards: flash542,
   },
   {
@@ -22177,9 +19179,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche543,
     qcm: qcm543,
-    exercice: exercice543,
     flashcards: flash543,
   },
   {
@@ -22198,9 +19198,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche544,
     qcm: qcm544,
-    exercice: exercice544,
     flashcards: flash544,
   },
   {
@@ -22219,9 +19217,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche545,
     qcm: qcm545,
-    exercice: exercice545,
     flashcards: flash545,
   },
   {
@@ -22240,9 +19236,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche546,
     qcm: qcm546,
-    exercice: exercice546,
     flashcards: flash546,
   },
   {
@@ -22261,9 +19255,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche547,
     qcm: qcm547,
-    exercice: exercice547,
     flashcards: flash547,
   },
   {
@@ -22282,9 +19274,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche548,
     qcm: qcm548,
-    exercice: exercice548,
     flashcards: flash548,
   },
   {
@@ -22303,9 +19293,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche549,
     qcm: qcm549,
-    exercice: exercice549,
     flashcards: flash549,
   },
   {
@@ -22324,9 +19312,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche550,
     qcm: qcm550,
-    exercice: exercice550,
     flashcards: flash550,
   },
   {
@@ -22345,9 +19331,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche551,
     qcm: qcm551,
-    exercice: exercice551,
     flashcards: flash551,
   },
   {
@@ -22366,9 +19350,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche552,
     qcm: qcm552,
-    exercice: exercice552,
     flashcards: flash552,
   },
   {
@@ -22387,9 +19369,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche553,
     qcm: qcm553,
-    exercice: exercice553,
     flashcards: flash553,
   },
   {
@@ -22408,9 +19388,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche554,
     qcm: qcm554,
-    exercice: exercice554,
     flashcards: flash554,
   },
   {
@@ -22429,9 +19407,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche555,
     qcm: qcm555,
-    exercice: exercice555,
     flashcards: flash555,
   },
   {
@@ -22450,9 +19426,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche556,
     qcm: qcm556,
-    exercice: exercice556,
     flashcards: flash556,
   },
   {
@@ -22471,9 +19445,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche557,
     qcm: qcm557,
-    exercice: exercice557,
     flashcards: flash557,
   },
   {
@@ -22492,9 +19464,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche558,
     qcm: qcm558,
-    exercice: exercice558,
     flashcards: flash558,
   },
   {
@@ -22513,9 +19483,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche559,
     qcm: qcm559,
-    exercice: exercice559,
     flashcards: flash559,
   },
   {
@@ -22534,9 +19502,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche560,
     qcm: qcm560,
-    exercice: exercice560,
     flashcards: flash560,
   },
   {
@@ -22555,9 +19521,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche561,
     qcm: qcm561,
-    exercice: exercice561,
     flashcards: flash561,
   },
   {
@@ -22576,9 +19540,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche562,
     qcm: qcm562,
-    exercice: exercice562,
     flashcards: flash562,
   },
   {
@@ -22597,9 +19559,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche563,
     qcm: qcm563,
-    exercice: exercice563,
     flashcards: flash563,
   },
   {
@@ -22618,9 +19578,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche564,
     qcm: qcm564,
-    exercice: exercice564,
     flashcards: flash564,
   },
   {
@@ -22639,9 +19597,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche565,
     qcm: qcm565,
-    exercice: exercice565,
     flashcards: flash565,
   },
   {
@@ -22660,9 +19616,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche566,
     qcm: qcm566,
-    exercice: exercice566,
     flashcards: flash566,
   },
   {
@@ -22681,9 +19635,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche567,
     qcm: qcm567,
-    exercice: exercice567,
     flashcards: flash567,
   },
   {
@@ -22702,9 +19654,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche568,
     qcm: qcm568,
-    exercice: exercice568,
     flashcards: flash568,
   },
   {
@@ -22723,9 +19673,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche569,
     qcm: qcm569,
-    exercice: exercice569,
     flashcards: flash569,
   },
   {
@@ -22744,9 +19692,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche570,
     qcm: qcm570,
-    exercice: exercice570,
     flashcards: flash570,
   },
   {
@@ -22765,9 +19711,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche571,
     qcm: qcm571,
-    exercice: exercice571,
     flashcards: flash571,
   },
   {
@@ -22786,9 +19730,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche572,
     qcm: qcm572,
-    exercice: exercice572,
     flashcards: flash572,
   },
   {
@@ -22807,9 +19749,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche573,
     qcm: qcm573,
-    exercice: exercice573,
     flashcards: flash573,
   },
   {
@@ -22828,9 +19768,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche574,
     qcm: qcm574,
-    exercice: exercice574,
     flashcards: flash574,
   },
   {
@@ -22849,9 +19787,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche575,
     qcm: qcm575,
-    exercice: exercice575,
     flashcards: flash575,
   },
   {
@@ -22870,9 +19806,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche576,
     qcm: qcm576,
-    exercice: exercice576,
     flashcards: flash576,
   },
   {
@@ -22891,9 +19825,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche577,
     qcm: qcm577,
-    exercice: exercice577,
     flashcards: flash577,
   },
   {
@@ -22912,9 +19844,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche578,
     qcm: qcm578,
-    exercice: exercice578,
     flashcards: flash578,
   },
   {
@@ -22933,9 +19863,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche579,
     qcm: qcm579,
-    exercice: exercice579,
     flashcards: flash579,
   },
   {
@@ -22954,9 +19882,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche580,
     qcm: qcm580,
-    exercice: exercice580,
     flashcards: flash580,
   },
   {
@@ -22975,9 +19901,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche581,
     qcm: qcm581,
-    exercice: exercice581,
     flashcards: flash581,
   },
   {
@@ -22996,9 +19920,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche582,
     qcm: qcm582,
-    exercice: exercice582,
     flashcards: flash582,
   },
   {
@@ -23017,9 +19939,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche583,
     qcm: qcm583,
-    exercice: exercice583,
     flashcards: flash583,
   },
   {
@@ -23038,9 +19958,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche584,
     qcm: qcm584,
-    exercice: exercice584,
     flashcards: flash584,
   },
   {
@@ -23059,9 +19977,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche585,
     qcm: qcm585,
-    exercice: exercice585,
     flashcards: flash585,
   },
   {
@@ -23080,9 +19996,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche586,
     qcm: qcm586,
-    exercice: exercice586,
     flashcards: flash586,
   },
   {
@@ -23101,9 +20015,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche587,
     qcm: qcm587,
-    exercice: exercice587,
     flashcards: flash587,
   },
   {
@@ -23122,9 +20034,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche588,
     qcm: qcm588,
-    exercice: exercice588,
     flashcards: flash588,
   },
   {
@@ -23143,9 +20053,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche589,
     qcm: qcm589,
-    exercice: exercice589,
     flashcards: flash589,
   },
   {
@@ -23164,9 +20072,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche590,
     qcm: qcm590,
-    exercice: exercice590,
     flashcards: flash590,
   },
   {
@@ -23185,9 +20091,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche591,
     qcm: qcm591,
-    exercice: exercice591,
     flashcards: flash591,
   },
   {
@@ -23206,9 +20110,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche592,
     qcm: qcm592,
-    exercice: exercice592,
     flashcards: flash592,
   },
   {
@@ -23227,9 +20129,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche593,
     qcm: qcm593,
-    exercice: exercice593,
     flashcards: flash593,
   },
   {
@@ -23248,9 +20148,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche594,
     qcm: qcm594,
-    exercice: exercice594,
     flashcards: flash594,
   },
   {
@@ -23269,9 +20167,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche595,
     qcm: qcm595,
-    exercice: exercice595,
     flashcards: flash595,
   },
   {
@@ -23290,9 +20186,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche596,
     qcm: qcm596,
-    exercice: exercice596,
     flashcards: flash596,
   },
   {
@@ -23311,9 +20205,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche597,
     qcm: qcm597,
-    exercice: exercice597,
     flashcards: flash597,
   },
   {
@@ -23332,9 +20224,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche598,
     qcm: qcm598,
-    exercice: exercice598,
     flashcards: flash598,
   },
   {
@@ -23353,9 +20243,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche599,
     qcm: qcm599,
-    exercice: exercice599,
     flashcards: flash599,
   },
   {
@@ -23374,9 +20262,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche600,
     qcm: qcm600,
-    exercice: exercice600,
     flashcards: flash600,
   },
   {
@@ -23395,9 +20281,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche601,
     qcm: qcm601,
-    exercice: exercice601,
     flashcards: flash601,
   },
   {
@@ -23416,9 +20300,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche602,
     qcm: qcm602,
-    exercice: exercice602,
     flashcards: flash602,
   },
   {
@@ -23437,9 +20319,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche603,
     qcm: qcm603,
-    exercice: exercice603,
     flashcards: flash603,
   },
   {
@@ -23458,9 +20338,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche604,
     qcm: qcm604,
-    exercice: exercice604,
     flashcards: flash604,
   },
   {
@@ -23479,9 +20357,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche605,
     qcm: qcm605,
-    exercice: exercice605,
     flashcards: flash605,
   },
   {
@@ -23500,9 +20376,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche606,
     qcm: qcm606,
-    exercice: exercice606,
     flashcards: flash606,
   },
   {
@@ -23521,9 +20395,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche607,
     qcm: qcm607,
-    exercice: exercice607,
     flashcards: flash607,
   },
   {
@@ -23542,9 +20414,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche608,
     qcm: qcm608,
-    exercice: exercice608,
     flashcards: flash608,
   },
   {
@@ -23563,9 +20433,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche609,
     qcm: qcm609,
-    exercice: exercice609,
     flashcards: flash609,
   },
   {
@@ -23584,9 +20452,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche610,
     qcm: qcm610,
-    exercice: exercice610,
     flashcards: flash610,
   },
   {
@@ -23605,9 +20471,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-distance","geo-produit-scalaire"],
-    fiche: fiche611,
     qcm: qcm611,
-    exercice: exercice611,
     flashcards: flash611,
   },
   {
@@ -23626,9 +20490,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-droite","geo-distance"],
-    fiche: fiche612,
     qcm: qcm612,
-    exercice: exercice612,
     flashcards: flash612,
   },
   {
@@ -23647,9 +20509,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche613,
     qcm: qcm613,
-    exercice: exercice613,
     flashcards: flash613,
   },
   {
@@ -23668,9 +20528,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche614,
     qcm: qcm614,
-    exercice: exercice614,
     flashcards: flash614,
   },
   {
@@ -23689,9 +20547,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche615,
     qcm: qcm615,
-    exercice: exercice615,
     flashcards: flash615,
   },
   {
@@ -23710,9 +20566,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire","dilution"],
-    fiche: fiche616,
     qcm: qcm616,
-    exercice: exercice616,
     flashcards: flash616,
   },
   {
@@ -23731,9 +20585,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche617,
     qcm: qcm617,
-    exercice: exercice617,
     flashcards: flash617,
   },
   {
@@ -23752,9 +20604,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    fiche: fiche618,
     qcm: qcm618,
-    exercice: exercice618,
     flashcards: flash618,
   },
   {
@@ -23773,9 +20623,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche619,
     qcm: qcm619,
-    exercice: exercice619,
     flashcards: flash619,
   },
   {
@@ -23794,9 +20642,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    fiche: fiche620,
     qcm: qcm620,
-    exercice: exercice620,
     flashcards: flash620,
   },
   {
@@ -23815,9 +20661,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche621,
     qcm: qcm621,
-    exercice: exercice621,
     flashcards: flash621,
   },
   {
@@ -23836,9 +20680,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche622,
     qcm: qcm622,
-    exercice: exercice622,
     flashcards: flash622,
   },
   {
@@ -23857,9 +20699,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche623,
     qcm: qcm623,
-    exercice: exercice623,
     flashcards: flash623,
   },
   {
@@ -23878,9 +20718,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche624,
     qcm: qcm624,
-    exercice: exercice624,
     flashcards: flash624,
   },
   {
@@ -23899,9 +20737,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche625,
     qcm: qcm625,
-    exercice: exercice625,
     flashcards: flash625,
   },
   {
@@ -23920,9 +20756,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche626,
     qcm: qcm626,
-    exercice: exercice626,
     flashcards: flash626,
   },
   {
@@ -23941,9 +20775,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche627,
     qcm: qcm627,
-    exercice: exercice627,
     flashcards: flash627,
   },
   {
@@ -23962,9 +20794,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche628,
     qcm: qcm628,
-    exercice: exercice628,
     flashcards: flash628,
   },
   {
@@ -23983,9 +20813,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche629,
     qcm: qcm629,
-    exercice: exercice629,
     flashcards: flash629,
   },
   {
@@ -24004,9 +20832,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche630,
     qcm: qcm630,
-    exercice: exercice630,
     flashcards: flash630,
   },
   {
@@ -24025,9 +20851,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche631,
     qcm: qcm631,
-    exercice: exercice631,
     flashcards: flash631,
   },
   {
@@ -24046,9 +20870,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche632,
     qcm: qcm632,
-    exercice: exercice632,
     flashcards: flash632,
   },
   {
@@ -24067,9 +20889,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche633,
     qcm: qcm633,
-    exercice: exercice633,
     flashcards: flash633,
   },
   {
@@ -24088,9 +20908,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche634,
     qcm: qcm634,
-    exercice: exercice634,
     flashcards: flash634,
   },
   {
@@ -24109,9 +20927,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche635,
     qcm: qcm635,
-    exercice: exercice635,
     flashcards: flash635,
   },
   {
@@ -24130,9 +20946,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche636,
     qcm: qcm636,
-    exercice: exercice636,
     flashcards: flash636,
   },
   {
@@ -24151,9 +20965,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche637,
     qcm: qcm637,
-    exercice: exercice637,
     flashcards: flash637,
   },
   {
@@ -24172,9 +20984,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche638,
     qcm: qcm638,
-    exercice: exercice638,
     flashcards: flash638,
   },
   {
@@ -24193,9 +21003,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche639,
     qcm: qcm639,
-    exercice: exercice639,
     flashcards: flash639,
   },
   {
@@ -24214,9 +21022,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche640,
     qcm: qcm640,
-    exercice: exercice640,
     flashcards: flash640,
   },
   {
@@ -24235,9 +21041,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche641,
     qcm: qcm641,
-    exercice: exercice641,
     flashcards: flash641,
   },
   {
@@ -24256,9 +21060,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche642,
     qcm: qcm642,
-    exercice: exercice642,
     flashcards: flash642,
   },
   {
@@ -24277,9 +21079,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche643,
     qcm: qcm643,
-    exercice: exercice643,
     flashcards: flash643,
   },
   {
@@ -24298,9 +21098,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche644,
     qcm: qcm644,
-    exercice: exercice644,
     flashcards: flash644,
   },
   {
@@ -24319,9 +21117,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche645,
     qcm: qcm645,
-    exercice: exercice645,
     flashcards: flash645,
   },
   {
@@ -24340,9 +21136,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche646,
     qcm: qcm646,
-    exercice: exercice646,
     flashcards: flash646,
   },
   {
@@ -24361,9 +21155,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche647,
     qcm: qcm647,
-    exercice: exercice647,
     flashcards: flash647,
   },
   {
@@ -24382,9 +21174,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche648,
     qcm: qcm648,
-    exercice: exercice648,
     flashcards: flash648,
   },
   {
@@ -24403,9 +21193,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche649,
     qcm: qcm649,
-    exercice: exercice649,
     flashcards: flash649,
   },
   {
@@ -24424,9 +21212,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche650,
     qcm: qcm650,
-    exercice: exercice650,
     flashcards: flash650,
   },
   {
@@ -24445,9 +21231,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche651,
     qcm: qcm651,
-    exercice: exercice651,
     flashcards: flash651,
   },
   {
@@ -24466,9 +21250,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche652,
     qcm: qcm652,
-    exercice: exercice652,
     flashcards: flash652,
   },
   {
@@ -24487,9 +21269,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche653,
     qcm: qcm653,
-    exercice: exercice653,
     flashcards: flash653,
   },
   {
@@ -24508,9 +21288,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche654,
     qcm: qcm654,
-    exercice: exercice654,
     flashcards: flash654,
   },
   {
@@ -24529,9 +21307,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche655,
     qcm: qcm655,
-    exercice: exercice655,
     flashcards: flash655,
   },
   {
@@ -24550,9 +21326,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche656,
     qcm: qcm656,
-    exercice: exercice656,
     flashcards: flash656,
   },
   {
@@ -24571,9 +21345,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche657,
     qcm: qcm657,
-    exercice: exercice657,
     flashcards: flash657,
   },
   {
@@ -24592,9 +21364,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche658,
     qcm: qcm658,
-    exercice: exercice658,
     flashcards: flash658,
   },
   {
@@ -24613,9 +21383,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche659,
     qcm: qcm659,
-    exercice: exercice659,
     flashcards: flash659,
   },
   {
@@ -24634,9 +21402,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche660,
     qcm: qcm660,
-    exercice: exercice660,
     flashcards: flash660,
   },
   {
@@ -24655,9 +21421,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche661,
     qcm: qcm661,
-    exercice: exercice661,
     flashcards: flash661,
   },
   {
@@ -24676,9 +21440,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche662,
     qcm: qcm662,
-    exercice: exercice662,
     flashcards: flash662,
   },
   {
@@ -24697,9 +21459,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche663,
     qcm: qcm663,
-    exercice: exercice663,
     flashcards: flash663,
   },
   {
@@ -24718,9 +21478,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche664,
     qcm: qcm664,
-    exercice: exercice664,
     flashcards: flash664,
   },
   {
@@ -24739,9 +21497,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche665,
     qcm: qcm665,
-    exercice: exercice665,
     flashcards: flash665,
   },
   {
@@ -24760,9 +21516,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche666,
     qcm: qcm666,
-    exercice: exercice666,
     flashcards: flash666,
   },
   {
@@ -24781,9 +21535,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche667,
     qcm: qcm667,
-    exercice: exercice667,
     flashcards: flash667,
   },
   {
@@ -24802,9 +21554,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche668,
     qcm: qcm668,
-    exercice: exercice668,
     flashcards: flash668,
   },
   {
@@ -24823,9 +21573,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche669,
     qcm: qcm669,
-    exercice: exercice669,
     flashcards: flash669,
   },
   {
@@ -24844,9 +21592,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche670,
     qcm: qcm670,
-    exercice: exercice670,
     flashcards: flash670,
   },
   {
@@ -24865,9 +21611,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche671,
     qcm: qcm671,
-    exercice: exercice671,
     flashcards: flash671,
   },
   {
@@ -24886,9 +21630,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche672,
     qcm: qcm672,
-    exercice: exercice672,
     flashcards: flash672,
   },
   {
@@ -24907,9 +21649,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche673,
     qcm: qcm673,
-    exercice: exercice673,
     flashcards: flash673,
   },
   {
@@ -24928,9 +21668,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche674,
     qcm: qcm674,
-    exercice: exercice674,
     flashcards: flash674,
   },
   {
@@ -24949,9 +21687,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche675,
     qcm: qcm675,
-    exercice: exercice675,
     flashcards: flash675,
   },
   {
@@ -24970,9 +21706,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche676,
     qcm: qcm676,
-    exercice: exercice676,
     flashcards: flash676,
   },
   {
@@ -24991,9 +21725,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche677,
     qcm: qcm677,
-    exercice: exercice677,
     flashcards: flash677,
   },
   {
@@ -25012,9 +21744,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche678,
     qcm: qcm678,
-    exercice: exercice678,
     flashcards: flash678,
   },
   {
@@ -25033,9 +21763,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche679,
     qcm: qcm679,
-    exercice: exercice679,
     flashcards: flash679,
   },
   {
@@ -25054,9 +21782,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche680,
     qcm: qcm680,
-    exercice: exercice680,
     flashcards: flash680,
   },
   {
@@ -25075,9 +21801,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche681,
     qcm: qcm681,
-    exercice: exercice681,
     flashcards: flash681,
   },
   {
@@ -25096,9 +21820,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche682,
     qcm: qcm682,
-    exercice: exercice682,
     flashcards: flash682,
   },
   {
@@ -25117,9 +21839,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche683,
     qcm: qcm683,
-    exercice: exercice683,
     flashcards: flash683,
   },
   {
@@ -25138,9 +21858,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche684,
     qcm: qcm684,
-    exercice: exercice684,
     flashcards: flash684,
   },
   {
@@ -25159,9 +21877,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche685,
     qcm: qcm685,
-    exercice: exercice685,
     flashcards: flash685,
   },
   {
@@ -25180,9 +21896,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche686,
     qcm: qcm686,
-    exercice: exercice686,
     flashcards: flash686,
   },
   {
@@ -25201,9 +21915,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche687,
     qcm: qcm687,
-    exercice: exercice687,
     flashcards: flash687,
   },
   {
@@ -25222,9 +21934,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche688,
     qcm: qcm688,
-    exercice: exercice688,
     flashcards: flash688,
   },
   {
@@ -25243,9 +21953,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche689,
     qcm: qcm689,
-    exercice: exercice689,
     flashcards: flash689,
   },
   {
@@ -25264,9 +21972,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche690,
     qcm: qcm690,
-    exercice: exercice690,
     flashcards: flash690,
   },
   {
@@ -25285,9 +21991,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche691,
     qcm: qcm691,
-    exercice: exercice691,
     flashcards: flash691,
   },
   {
@@ -25306,9 +22010,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche692,
     qcm: qcm692,
-    exercice: exercice692,
     flashcards: flash692,
   },
   {
@@ -25327,9 +22029,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche693,
     qcm: qcm693,
-    exercice: exercice693,
     flashcards: flash693,
   },
   {
@@ -25348,9 +22048,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche694,
     qcm: qcm694,
-    exercice: exercice694,
     flashcards: flash694,
   },
   {
@@ -25369,9 +22067,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche695,
     qcm: qcm695,
-    exercice: exercice695,
     flashcards: flash695,
   },
   {
@@ -25390,9 +22086,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche696,
     qcm: qcm696,
-    exercice: exercice696,
     flashcards: flash696,
   },
   {
@@ -25411,9 +22105,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche697,
     qcm: qcm697,
-    exercice: exercice697,
     flashcards: flash697,
   },
   {
@@ -25432,9 +22124,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche698,
     qcm: qcm698,
-    exercice: exercice698,
     flashcards: flash698,
   },
   {
@@ -25453,9 +22143,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche699,
     qcm: qcm699,
-    exercice: exercice699,
     flashcards: flash699,
   },
   {
@@ -25474,9 +22162,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche700,
     qcm: qcm700,
-    exercice: exercice700,
     flashcards: flash700,
   },
   {
@@ -25495,9 +22181,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche701,
     qcm: qcm701,
-    exercice: exercice701,
     flashcards: flash701,
   },
   {
@@ -25516,9 +22200,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche702,
     qcm: qcm702,
-    exercice: exercice702,
     flashcards: flash702,
   },
   {
@@ -25537,9 +22219,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche703,
     qcm: qcm703,
-    exercice: exercice703,
     flashcards: flash703,
   },
   {
@@ -25558,9 +22238,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche704,
     qcm: qcm704,
-    exercice: exercice704,
     flashcards: flash704,
   },
   {
@@ -25579,9 +22257,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche705,
     qcm: qcm705,
-    exercice: exercice705,
     flashcards: flash705,
   },
   {
@@ -25600,9 +22276,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche706,
     qcm: qcm706,
-    exercice: exercice706,
     flashcards: flash706,
   },
   {
@@ -25621,9 +22295,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche707,
     qcm: qcm707,
-    exercice: exercice707,
     flashcards: flash707,
   },
   {
@@ -25642,9 +22314,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche708,
     qcm: qcm708,
-    exercice: exercice708,
     flashcards: flash708,
   },
   {
@@ -25663,9 +22333,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche709,
     qcm: qcm709,
-    exercice: exercice709,
     flashcards: flash709,
   },
   {
@@ -25684,9 +22352,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["second-degre"],
-    fiche: fiche710,
     qcm: qcm710,
-    exercice: exercice710,
     flashcards: flash710,
   },
   {
@@ -25705,9 +22371,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    fiche: fiche711,
     qcm: qcm711,
-    exercice: exercice711,
     flashcards: flash711,
   },
   {
@@ -25726,9 +22390,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["derivee"],
-    fiche: fiche712,
     qcm: qcm712,
-    exercice: exercice712,
     flashcards: flash712,
   },
   {
@@ -25747,9 +22409,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche713,
     qcm: qcm713,
-    exercice: exercice713,
     flashcards: flash713,
   },
   {
@@ -25768,9 +22428,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche714,
     qcm: qcm714,
-    exercice: exercice714,
     flashcards: flash714,
   },
   {
@@ -25789,9 +22447,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-valeurs","trigo-equation"],
-    fiche: fiche715,
     qcm: qcm715,
-    exercice: exercice715,
     flashcards: flash715,
   },
   {
@@ -25810,9 +22466,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    fiche: fiche716,
     qcm: qcm716,
-    exercice: exercice716,
     flashcards: flash716,
   },
   {
@@ -25831,9 +22485,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-distance","geo-droite"],
-    fiche: fiche717,
     qcm: qcm717,
-    exercice: exercice717,
     flashcards: flash717,
   },
   {
@@ -25852,9 +22504,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche718,
     qcm: qcm718,
-    exercice: exercice718,
     flashcards: flash718,
   },
   {
@@ -25873,9 +22523,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche719,
     qcm: qcm719,
-    exercice: exercice719,
     flashcards: flash719,
   },
   {
@@ -25894,9 +22542,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche720,
     qcm: qcm720,
-    exercice: exercice720,
     flashcards: flash720,
   },
   {
@@ -25915,9 +22561,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche721,
     qcm: qcm721,
-    exercice: exercice721,
     flashcards: flash721,
   },
   {
@@ -25936,9 +22580,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche722,
     qcm: qcm722,
-    exercice: exercice722,
     flashcards: flash722,
   },
   {
@@ -25957,9 +22599,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche723,
     qcm: qcm723,
-    exercice: exercice723,
     flashcards: flash723,
   },
   {
@@ -25978,9 +22618,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche724,
     qcm: qcm724,
-    exercice: exercice724,
     flashcards: flash724,
   },
   {
@@ -25999,9 +22637,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche725,
     qcm: qcm725,
-    exercice: exercice725,
     flashcards: flash725,
   },
   {
@@ -26020,9 +22656,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire","dilution"],
-    fiche: fiche726,
     qcm: qcm726,
-    exercice: exercice726,
     flashcards: flash726,
   },
   {
@@ -26041,9 +22675,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche727,
     qcm: qcm727,
-    exercice: exercice727,
     flashcards: flash727,
   },
   {
@@ -26062,9 +22694,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche728,
     qcm: qcm728,
-    exercice: exercice728,
     flashcards: flash728,
   },
   {
@@ -26083,9 +22713,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    fiche: fiche729,
     qcm: qcm729,
-    exercice: exercice729,
     flashcards: flash729,
   },
   {
@@ -26104,9 +22732,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    fiche: fiche730,
     qcm: qcm730,
-    exercice: exercice730,
     flashcards: flash730,
   },
   {
@@ -26125,9 +22751,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche731,
     qcm: qcm731,
-    exercice: exercice731,
     flashcards: flash731,
   },
   {
@@ -26146,9 +22770,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche732,
     qcm: qcm732,
-    exercice: exercice732,
     flashcards: flash732,
   },
   {
@@ -26167,9 +22789,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche733,
     qcm: qcm733,
-    exercice: exercice733,
     flashcards: flash733,
   },
   {
@@ -26188,9 +22808,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche734,
     qcm: qcm734,
-    exercice: exercice734,
     flashcards: flash734,
   },
   {
@@ -26209,9 +22827,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche735,
     qcm: qcm735,
-    exercice: exercice735,
     flashcards: flash735,
   },
   {
@@ -26230,9 +22846,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche736,
     qcm: qcm736,
-    exercice: exercice736,
     flashcards: flash736,
   },
   {
@@ -26251,9 +22865,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche737,
     qcm: qcm737,
-    exercice: exercice737,
     flashcards: flash737,
   },
   {
@@ -26272,9 +22884,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche738,
     qcm: qcm738,
-    exercice: exercice738,
     flashcards: flash738,
   },
   {
@@ -26293,9 +22903,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche739,
     qcm: qcm739,
-    exercice: exercice739,
     flashcards: flash739,
   },
   {
@@ -26314,9 +22922,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche740,
     qcm: qcm740,
-    exercice: exercice740,
     flashcards: flash740,
   },
   {
@@ -26335,9 +22941,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche741,
     qcm: qcm741,
-    exercice: exercice741,
     flashcards: flash741,
   },
   {
@@ -26356,9 +22960,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche742,
     qcm: qcm742,
-    exercice: exercice742,
     flashcards: flash742,
   },
   {
@@ -26377,9 +22979,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche743,
     qcm: qcm743,
-    exercice: exercice743,
     flashcards: flash743,
   },
   {
@@ -26398,9 +22998,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche744,
     qcm: qcm744,
-    exercice: exercice744,
     flashcards: flash744,
   },
   {
@@ -26419,9 +23017,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche745,
     qcm: qcm745,
-    exercice: exercice745,
     flashcards: flash745,
   },
   {
@@ -26440,9 +23036,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche746,
     qcm: qcm746,
-    exercice: exercice746,
     flashcards: flash746,
   },
   {
@@ -26461,9 +23055,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche747,
     qcm: qcm747,
-    exercice: exercice747,
     flashcards: flash747,
   },
   {
@@ -26482,9 +23074,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche748,
     qcm: qcm748,
-    exercice: exercice748,
     flashcards: flash748,
   },
   {
@@ -26503,9 +23093,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche749,
     qcm: qcm749,
-    exercice: exercice749,
     flashcards: flash749,
   },
   {
@@ -26524,9 +23112,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    fiche: fiche750,
     qcm: qcm750,
-    exercice: exercice750,
     flashcards: flash750,
   },
   {
@@ -26545,9 +23131,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche751,
     qcm: qcm751,
-    exercice: exercice751,
     flashcards: flash751,
   },
   {
@@ -26566,9 +23150,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["derivee"],
-    fiche: fiche752,
     qcm: qcm752,
-    exercice: exercice752,
     flashcards: flash752,
   },
   {
@@ -26587,9 +23169,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche753,
     qcm: qcm753,
-    exercice: exercice753,
     flashcards: flash753,
   },
   {
@@ -26608,9 +23188,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche754,
     qcm: qcm754,
-    exercice: exercice754,
     flashcards: flash754,
   },
   {
@@ -26629,9 +23207,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche755,
     qcm: qcm755,
-    exercice: exercice755,
     flashcards: flash755,
   },
   {
@@ -26650,9 +23226,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-valeurs","trigo-equation"],
-    fiche: fiche756,
     qcm: qcm756,
-    exercice: exercice756,
     flashcards: flash756,
   },
   {
@@ -26671,9 +23245,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    fiche: fiche757,
     qcm: qcm757,
-    exercice: exercice757,
     flashcards: flash757,
   },
   {
@@ -26692,9 +23264,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    fiche: fiche758,
     qcm: qcm758,
-    exercice: exercice758,
     flashcards: flash758,
   },
   {
@@ -26713,9 +23283,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme","complexe-operations"],
-    fiche: fiche759,
     qcm: qcm759,
-    exercice: exercice759,
     flashcards: flash759,
   },
   {
@@ -26734,9 +23302,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche760,
     qcm: qcm760,
-    exercice: exercice760,
     flashcards: flash760,
   },
   {
@@ -26755,9 +23321,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche761,
     qcm: qcm761,
-    exercice: exercice761,
     flashcards: flash761,
   },
   {
@@ -26776,9 +23340,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["dilution"],
-    fiche: fiche762,
     qcm: qcm762,
-    exercice: exercice762,
     flashcards: flash762,
   },
   {
@@ -26797,9 +23359,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche763,
     qcm: qcm763,
-    exercice: exercice763,
     flashcards: flash763,
   },
   {
@@ -26818,9 +23378,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche764,
     qcm: qcm764,
-    exercice: exercice764,
     flashcards: flash764,
   },
   {
@@ -26839,9 +23397,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche765,
     qcm: qcm765,
-    exercice: exercice765,
     flashcards: flash765,
   },
   {
@@ -26860,9 +23416,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    fiche: fiche766,
     qcm: qcm766,
-    exercice: exercice766,
     flashcards: flash766,
   },
   {
@@ -26881,9 +23435,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche767,
     qcm: qcm767,
-    exercice: exercice767,
     flashcards: flash767,
   },
   {
@@ -26902,9 +23454,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche768,
     qcm: qcm768,
-    exercice: exercice768,
     flashcards: flash768,
   },
   {
@@ -26923,9 +23473,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche769,
     qcm: qcm769,
-    exercice: exercice769,
     flashcards: flash769,
   },
   {
@@ -26944,9 +23492,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche770,
     qcm: qcm770,
-    exercice: exercice770,
     flashcards: flash770,
   },
   {
@@ -26965,9 +23511,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    fiche: fiche771,
     qcm: qcm771,
-    exercice: exercice771,
     flashcards: flash771,
   },
   {
@@ -26986,9 +23530,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche772,
     qcm: qcm772,
-    exercice: exercice772,
     flashcards: flash772,
   },
   {
@@ -27007,9 +23549,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche773,
     qcm: qcm773,
-    exercice: exercice773,
     flashcards: flash773,
   },
   {
@@ -27028,9 +23568,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche774,
     qcm: qcm774,
-    exercice: exercice774,
     flashcards: flash774,
   },
   {
@@ -27049,9 +23587,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche775,
     qcm: qcm775,
-    exercice: exercice775,
     flashcards: flash775,
   },
   {
@@ -27070,9 +23606,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche776,
     qcm: qcm776,
-    exercice: exercice776,
     flashcards: flash776,
   },
   {
@@ -27091,9 +23625,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche777,
     qcm: qcm777,
-    exercice: exercice777,
     flashcards: flash777,
   },
   {
@@ -27112,9 +23644,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche778,
     qcm: qcm778,
-    exercice: exercice778,
     flashcards: flash778,
   },
   {
@@ -27133,9 +23663,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche779,
     qcm: qcm779,
-    exercice: exercice779,
     flashcards: flash779,
   },
   {
@@ -27154,9 +23682,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche780,
     qcm: qcm780,
-    exercice: exercice780,
     flashcards: flash780,
   },
   {
@@ -27175,9 +23701,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche781,
     qcm: qcm781,
-    exercice: exercice781,
     flashcards: flash781,
   },
   {
@@ -27196,9 +23720,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche782,
     qcm: qcm782,
-    exercice: exercice782,
     flashcards: flash782,
   },
   {
@@ -27217,9 +23739,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche783,
     qcm: qcm783,
-    exercice: exercice783,
     flashcards: flash783,
   },
   {
@@ -27238,9 +23758,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche784,
     qcm: qcm784,
-    exercice: exercice784,
     flashcards: flash784,
   },
   {
@@ -27259,9 +23777,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche785,
     qcm: qcm785,
-    exercice: exercice785,
     flashcards: flash785,
   },
   {
@@ -27280,9 +23796,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche786,
     qcm: qcm786,
-    exercice: exercice786,
     flashcards: flash786,
   },
   {
@@ -27301,9 +23815,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche787,
     qcm: qcm787,
-    exercice: exercice787,
     flashcards: flash787,
   },
   {
@@ -27322,9 +23834,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche788,
     qcm: qcm788,
-    exercice: exercice788,
     flashcards: flash788,
   },
   {
@@ -27343,9 +23853,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche789,
     qcm: qcm789,
-    exercice: exercice789,
     flashcards: flash789,
   },
   {
@@ -27364,9 +23872,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche790,
     qcm: qcm790,
-    exercice: exercice790,
     flashcards: flash790,
   },
   {
@@ -27385,9 +23891,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche791,
     qcm: qcm791,
-    exercice: exercice791,
     flashcards: flash791,
   },
   {
@@ -27406,9 +23910,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche792,
     qcm: qcm792,
-    exercice: exercice792,
     flashcards: flash792,
   },
   {
@@ -27427,9 +23929,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche793,
     qcm: qcm793,
-    exercice: exercice793,
     flashcards: flash793,
   },
   {
@@ -27448,9 +23948,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    fiche: fiche794,
     qcm: qcm794,
-    exercice: exercice794,
     flashcards: flash794,
   },
   {
@@ -27469,9 +23967,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche795,
     qcm: qcm795,
-    exercice: exercice795,
     flashcards: flash795,
   },
   {
@@ -27490,9 +23986,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche796,
     qcm: qcm796,
-    exercice: exercice796,
     flashcards: flash796,
   },
   {
@@ -27511,9 +24005,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche797,
     qcm: qcm797,
-    exercice: exercice797,
     flashcards: flash797,
   },
   {
@@ -27532,9 +24024,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    fiche: fiche798,
     qcm: qcm798,
-    exercice: exercice798,
     flashcards: flash798,
   },
   {
@@ -27553,9 +24043,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche799,
     qcm: qcm799,
-    exercice: exercice799,
     flashcards: flash799,
   },
   {
@@ -27574,9 +24062,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche800,
     qcm: qcm800,
-    exercice: exercice800,
     flashcards: flash800,
   },
   {
@@ -27595,9 +24081,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche801,
     qcm: qcm801,
-    exercice: exercice801,
     flashcards: flash801,
   },
   {
@@ -27616,9 +24100,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche802,
     qcm: qcm802,
-    exercice: exercice802,
     flashcards: flash802,
   },
   {
@@ -27637,9 +24119,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche803,
     qcm: qcm803,
-    exercice: exercice803,
     flashcards: flash803,
   },
   {
@@ -27658,9 +24138,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche804,
     qcm: qcm804,
-    exercice: exercice804,
     flashcards: flash804,
   },
   {
@@ -27679,9 +24157,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche805,
     qcm: qcm805,
-    exercice: exercice805,
     flashcards: flash805,
   },
   {
@@ -27700,9 +24176,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche806,
     qcm: qcm806,
-    exercice: exercice806,
     flashcards: flash806,
   },
   {
@@ -27721,9 +24195,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche807,
     qcm: qcm807,
-    exercice: exercice807,
     flashcards: flash807,
   },
   {
@@ -27742,9 +24214,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche808,
     qcm: qcm808,
-    exercice: exercice808,
     flashcards: flash808,
   },
   {
@@ -27763,9 +24233,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche809,
     qcm: qcm809,
-    exercice: exercice809,
     flashcards: flash809,
   },
   {
@@ -27784,9 +24252,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche810,
     qcm: qcm810,
-    exercice: exercice810,
     flashcards: flash810,
   },
   {
@@ -27805,9 +24271,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche811,
     qcm: qcm811,
-    exercice: exercice811,
     flashcards: flash811,
   },
   {
@@ -27826,9 +24290,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche812,
     qcm: qcm812,
-    exercice: exercice812,
     flashcards: flash812,
   },
   {
@@ -27847,9 +24309,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche813,
     qcm: qcm813,
-    exercice: exercice813,
     flashcards: flash813,
   },
   {
@@ -27868,9 +24328,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche814,
     qcm: qcm814,
-    exercice: exercice814,
     flashcards: flash814,
   },
   {
@@ -27889,9 +24347,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche815,
     qcm: qcm815,
-    exercice: exercice815,
     flashcards: flash815,
   },
   {
@@ -27910,9 +24366,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche816,
     qcm: qcm816,
-    exercice: exercice816,
     flashcards: flash816,
   },
   {
@@ -27931,9 +24385,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche817,
     qcm: qcm817,
-    exercice: exercice817,
     flashcards: flash817,
   },
   {
@@ -27952,9 +24404,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche818,
     qcm: qcm818,
-    exercice: exercice818,
     flashcards: flash818,
   },
   {
@@ -27973,9 +24423,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche819,
     qcm: qcm819,
-    exercice: exercice819,
     flashcards: flash819,
   },
   {
@@ -27994,9 +24442,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche820,
     qcm: qcm820,
-    exercice: exercice820,
     flashcards: flash820,
   },
   {
@@ -28015,9 +24461,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche821,
     qcm: qcm821,
-    exercice: exercice821,
     flashcards: flash821,
   },
   {
@@ -28036,9 +24480,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche822,
     qcm: qcm822,
-    exercice: exercice822,
     flashcards: flash822,
   },
   {
@@ -28057,9 +24499,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche823,
     qcm: qcm823,
-    exercice: exercice823,
     flashcards: flash823,
   },
   {
@@ -28078,9 +24518,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche824,
     qcm: qcm824,
-    exercice: exercice824,
     flashcards: flash824,
   },
   {
@@ -28099,9 +24537,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche825,
     qcm: qcm825,
-    exercice: exercice825,
     flashcards: flash825,
   },
   {
@@ -28120,9 +24556,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche826,
     qcm: qcm826,
-    exercice: exercice826,
     flashcards: flash826,
   },
   {
@@ -28141,9 +24575,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche827,
     qcm: qcm827,
-    exercice: exercice827,
     flashcards: flash827,
   },
   {
@@ -28162,9 +24594,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche828,
     qcm: qcm828,
-    exercice: exercice828,
     flashcards: flash828,
   },
   {
@@ -28183,9 +24613,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche829,
     qcm: qcm829,
-    exercice: exercice829,
     flashcards: flash829,
   },
   {
@@ -28204,9 +24632,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche830,
     qcm: qcm830,
-    exercice: exercice830,
     flashcards: flash830,
   },
   {
@@ -28225,9 +24651,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche831,
     qcm: qcm831,
-    exercice: exercice831,
     flashcards: flash831,
   },
   {
@@ -28246,9 +24670,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche832,
     qcm: qcm832,
-    exercice: exercice832,
     flashcards: flash832,
   },
   {
@@ -28267,9 +24689,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche833,
     qcm: qcm833,
-    exercice: exercice833,
     flashcards: flash833,
   },
   {
@@ -28288,9 +24708,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche834,
     qcm: qcm834,
-    exercice: exercice834,
     flashcards: flash834,
   },
   {
@@ -28309,9 +24727,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche835,
     qcm: qcm835,
-    exercice: exercice835,
     flashcards: flash835,
   },
   {
@@ -28330,9 +24746,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche836,
     qcm: qcm836,
-    exercice: exercice836,
     flashcards: flash836,
   },
   {
@@ -28351,9 +24765,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche837,
     qcm: qcm837,
-    exercice: exercice837,
     flashcards: flash837,
   },
   {
@@ -28372,9 +24784,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche838,
     qcm: qcm838,
-    exercice: exercice838,
     flashcards: flash838,
   },
   {
@@ -28393,9 +24803,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche839,
     qcm: qcm839,
-    exercice: exercice839,
     flashcards: flash839,
   },
   {
@@ -28414,9 +24822,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche840,
     qcm: qcm840,
-    exercice: exercice840,
     flashcards: flash840,
   },
   {
@@ -28435,9 +24841,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche841,
     qcm: qcm841,
-    exercice: exercice841,
     flashcards: flash841,
   },
   {
@@ -28456,9 +24860,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche842,
     qcm: qcm842,
-    exercice: exercice842,
     flashcards: flash842,
   },
   {
@@ -28477,9 +24879,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche843,
     qcm: qcm843,
-    exercice: exercice843,
     flashcards: flash843,
   },
   {
@@ -28498,9 +24898,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche844,
     qcm: qcm844,
-    exercice: exercice844,
     flashcards: flash844,
   },
   {
@@ -28519,9 +24917,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche845,
     qcm: qcm845,
-    exercice: exercice845,
     flashcards: flash845,
   },
   {
@@ -28540,9 +24936,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-operations","second-degre-complexe"],
-    fiche: fiche846,
     qcm: qcm846,
-    exercice: exercice846,
     flashcards: flash846,
   },
   {
@@ -28561,9 +24955,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme"],
-    fiche: fiche847,
     qcm: qcm847,
-    exercice: exercice847,
     flashcards: flash847,
   },
   {
@@ -28582,9 +24974,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["pgcd-euclide","congruences","decomposition-premiers"],
-    fiche: fiche848,
     qcm: qcm848,
-    exercice: exercice848,
     flashcards: flash848,
   },
   {
@@ -28603,9 +24993,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche849,
     qcm: qcm849,
-    exercice: exercice849,
     flashcards: flash849,
   },
   {
@@ -28624,9 +25012,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche850,
     qcm: qcm850,
-    exercice: exercice850,
     flashcards: flash850,
   },
   {
@@ -28645,9 +25031,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche851,
     qcm: qcm851,
-    exercice: exercice851,
     flashcards: flash851,
   },
   {
@@ -28666,9 +25050,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche852,
     qcm: qcm852,
-    exercice: exercice852,
     flashcards: flash852,
   },
   {
@@ -28687,9 +25069,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche853,
     qcm: qcm853,
-    exercice: exercice853,
     flashcards: flash853,
   },
   {
@@ -28708,9 +25088,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche854,
     qcm: qcm854,
-    exercice: exercice854,
     flashcards: flash854,
   },
   {
@@ -28729,9 +25107,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche855,
     qcm: qcm855,
-    exercice: exercice855,
     flashcards: flash855,
   },
   {
@@ -28750,9 +25126,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["trigo-equation"],
-    fiche: fiche856,
     qcm: qcm856,
-    exercice: exercice856,
     flashcards: flash856,
   },
   {
@@ -28771,9 +25145,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche857,
     qcm: qcm857,
-    exercice: exercice857,
     flashcards: flash857,
   },
   {
@@ -28792,9 +25164,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche858,
     qcm: qcm858,
-    exercice: exercice858,
     flashcards: flash858,
   },
   {
@@ -28813,9 +25183,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche859,
     qcm: qcm859,
-    exercice: exercice859,
     flashcards: flash859,
   },
   {
@@ -28834,9 +25202,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["geo-produit-scalaire"],
-    fiche: fiche860,
     qcm: qcm860,
-    exercice: exercice860,
     flashcards: flash860,
   },
   {
@@ -28855,9 +25221,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche861,
     qcm: qcm861,
-    exercice: exercice861,
     flashcards: flash861,
   },
   {
@@ -28876,9 +25240,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche862,
     qcm: qcm862,
-    exercice: exercice862,
     flashcards: flash862,
   },
   {
@@ -28897,9 +25259,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche863,
     qcm: qcm863,
-    exercice: exercice863,
     flashcards: flash863,
   },
   {
@@ -28918,9 +25278,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche864,
     qcm: qcm864,
-    exercice: exercice864,
     flashcards: flash864,
   },
   {
@@ -28939,9 +25297,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche865,
     qcm: qcm865,
-    exercice: exercice865,
     flashcards: flash865,
   },
   {
@@ -28960,9 +25316,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche866,
     qcm: qcm866,
-    exercice: exercice866,
     flashcards: flash866,
   },
   {
@@ -28981,9 +25335,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche867,
     qcm: qcm867,
-    exercice: exercice867,
     flashcards: flash867,
   },
   {
@@ -29002,9 +25354,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche868,
     qcm: qcm868,
-    exercice: exercice868,
     flashcards: flash868,
   },
   {
@@ -29023,9 +25373,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche869,
     qcm: qcm869,
-    exercice: exercice869,
     flashcards: flash869,
   },
   {
@@ -29044,9 +25392,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche870,
     qcm: qcm870,
-    exercice: exercice870,
     flashcards: flash870,
   },
   {
@@ -29065,9 +25411,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche871,
     qcm: qcm871,
-    exercice: exercice871,
     flashcards: flash871,
   },
   {
@@ -29086,9 +25430,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche872,
     qcm: qcm872,
-    exercice: exercice872,
     flashcards: flash872,
   },
   {
@@ -29107,9 +25449,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche873,
     qcm: qcm873,
-    exercice: exercice873,
     flashcards: flash873,
   },
   {
@@ -29128,9 +25468,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche874,
     qcm: qcm874,
-    exercice: exercice874,
     flashcards: flash874,
   },
   {
@@ -29149,9 +25487,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche875,
     qcm: qcm875,
-    exercice: exercice875,
     flashcards: flash875,
   },
   {
@@ -29170,9 +25506,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche876,
     qcm: qcm876,
-    exercice: exercice876,
     flashcards: flash876,
   },
   {
@@ -29191,9 +25525,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche877,
     qcm: qcm877,
-    exercice: exercice877,
     flashcards: flash877,
   },
   {
@@ -29212,9 +25544,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche878,
     qcm: qcm878,
-    exercice: exercice878,
     flashcards: flash878,
   },
   {
@@ -29233,9 +25563,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche879,
     qcm: qcm879,
-    exercice: exercice879,
     flashcards: flash879,
   },
   {
@@ -29254,9 +25582,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche880,
     qcm: qcm880,
-    exercice: exercice880,
     flashcards: flash880,
   },
   {
@@ -29275,9 +25601,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche881,
     qcm: qcm881,
-    exercice: exercice881,
     flashcards: flash881,
   },
   {
@@ -29296,9 +25620,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche882,
     qcm: qcm882,
-    exercice: exercice882,
     flashcards: flash882,
   },
   {
@@ -29317,9 +25639,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche883,
     qcm: qcm883,
-    exercice: exercice883,
     flashcards: flash883,
   },
   {
@@ -29338,9 +25658,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche884,
     qcm: qcm884,
-    exercice: exercice884,
     flashcards: flash884,
   },
   {
@@ -29359,9 +25677,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche885,
     qcm: qcm885,
-    exercice: exercice885,
     flashcards: flash885,
   },
   {
@@ -29380,9 +25696,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche886,
     qcm: qcm886,
-    exercice: exercice886,
     flashcards: flash886,
   },
   {
@@ -29401,9 +25715,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche887,
     qcm: qcm887,
-    exercice: exercice887,
     flashcards: flash887,
   },
   {
@@ -29422,9 +25734,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche888,
     qcm: qcm888,
-    exercice: exercice888,
     flashcards: flash888,
   },
   {
@@ -29443,9 +25753,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche889,
     qcm: qcm889,
-    exercice: exercice889,
     flashcards: flash889,
   },
   {
@@ -29464,9 +25772,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche890,
     qcm: qcm890,
-    exercice: exercice890,
     flashcards: flash890,
   },
   {
@@ -29485,9 +25791,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche891,
     qcm: qcm891,
-    exercice: exercice891,
     flashcards: flash891,
   },
   {
@@ -29506,9 +25810,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche892,
     qcm: qcm892,
-    exercice: exercice892,
     flashcards: flash892,
   },
   {
@@ -29527,9 +25829,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche893,
     qcm: qcm893,
-    exercice: exercice893,
     flashcards: flash893,
   },
   {
@@ -29548,9 +25848,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche894,
     qcm: qcm894,
-    exercice: exercice894,
     flashcards: flash894,
   },
   {
@@ -29569,9 +25867,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche895,
     qcm: qcm895,
-    exercice: exercice895,
     flashcards: flash895,
   },
   {
@@ -29590,9 +25886,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche896,
     qcm: qcm896,
-    exercice: exercice896,
     flashcards: flash896,
   },
   {
@@ -29611,9 +25905,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche897,
     qcm: qcm897,
-    exercice: exercice897,
     flashcards: flash897,
   },
   {
@@ -29632,9 +25924,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche898,
     qcm: qcm898,
-    exercice: exercice898,
     flashcards: flash898,
   },
   {
@@ -29653,9 +25943,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche899,
     qcm: qcm899,
-    exercice: exercice899,
     flashcards: flash899,
   },
   {
@@ -29674,9 +25962,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche900,
     qcm: qcm900,
-    exercice: exercice900,
     flashcards: flash900,
   },
   {
@@ -29695,9 +25981,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche901,
     qcm: qcm901,
-    exercice: exercice901,
     flashcards: flash901,
   },
   {
@@ -29716,9 +26000,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    fiche: fiche902,
     qcm: qcm902,
-    exercice: exercice902,
     flashcards: flash902,
   },
   {
@@ -29737,9 +26019,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche903,
     qcm: qcm903,
-    exercice: exercice903,
     flashcards: flash903,
   },
   {
@@ -29758,9 +26038,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    fiche: fiche904,
     qcm: qcm904,
-    exercice: exercice904,
     flashcards: flash904,
   },
   {
@@ -29779,9 +26057,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche905,
     qcm: qcm905,
-    exercice: exercice905,
     flashcards: flash905,
   },
   {
@@ -29800,9 +26076,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche906,
     qcm: qcm906,
-    exercice: exercice906,
     flashcards: flash906,
   },
   {
@@ -29821,9 +26095,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche907,
     qcm: qcm907,
-    exercice: exercice907,
     flashcards: flash907,
   },
   {
@@ -29842,9 +26114,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche908,
     qcm: qcm908,
-    exercice: exercice908,
     flashcards: flash908,
   },
   {
@@ -29863,9 +26133,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche909,
     qcm: qcm909,
-    exercice: exercice909,
     flashcards: flash909,
   },
   {
@@ -29884,9 +26152,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche910,
     qcm: qcm910,
-    exercice: exercice910,
     flashcards: flash910,
   },
   {
@@ -29905,9 +26171,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche911,
     qcm: qcm911,
-    exercice: exercice911,
     flashcards: flash911,
   },
   {
@@ -29926,9 +26190,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche912,
     qcm: qcm912,
-    exercice: exercice912,
     flashcards: flash912,
   },
   {
@@ -29947,9 +26209,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche913,
     qcm: qcm913,
-    exercice: exercice913,
     flashcards: flash913,
   },
   {
@@ -29968,9 +26228,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche914,
     qcm: qcm914,
-    exercice: exercice914,
     flashcards: flash914,
   },
   {
@@ -29989,9 +26247,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche915,
     qcm: qcm915,
-    exercice: exercice915,
     flashcards: flash915,
   },
   {
@@ -30010,9 +26266,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche916,
     qcm: qcm916,
-    exercice: exercice916,
     flashcards: flash916,
   },
   {
@@ -30031,9 +26285,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche917,
     qcm: qcm917,
-    exercice: exercice917,
     flashcards: flash917,
   },
   {
@@ -30052,9 +26304,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche918,
     qcm: qcm918,
-    exercice: exercice918,
     flashcards: flash918,
   },
   {
@@ -30073,9 +26323,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche919,
     qcm: qcm919,
-    exercice: exercice919,
     flashcards: flash919,
   },
   {
@@ -30094,9 +26342,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche920,
     qcm: qcm920,
-    exercice: exercice920,
     flashcards: flash920,
   },
   {
@@ -30115,9 +26361,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche921,
     qcm: qcm921,
-    exercice: exercice921,
     flashcards: flash921,
   },
   {
@@ -30136,9 +26380,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche922,
     qcm: qcm922,
-    exercice: exercice922,
     flashcards: flash922,
   },
   {
@@ -30157,9 +26399,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche923,
     qcm: qcm923,
-    exercice: exercice923,
     flashcards: flash923,
   },
   {
@@ -30178,9 +26418,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche924,
     qcm: qcm924,
-    exercice: exercice924,
     flashcards: flash924,
   },
   {
@@ -30199,9 +26437,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche925,
     qcm: qcm925,
-    exercice: exercice925,
     flashcards: flash925,
   },
   {
@@ -30220,9 +26456,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche926,
     qcm: qcm926,
-    exercice: exercice926,
     flashcards: flash926,
   },
   {
@@ -30241,9 +26475,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche927,
     qcm: qcm927,
-    exercice: exercice927,
     flashcards: flash927,
   },
   {
@@ -30262,9 +26494,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["suite-arith","suite-geom"],
-    fiche: fiche928,
     qcm: qcm928,
-    exercice: exercice928,
     flashcards: flash928,
   },
   {
@@ -30283,9 +26513,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche929,
     qcm: qcm929,
-    exercice: exercice929,
     flashcards: flash929,
   },
   {
@@ -30304,9 +26532,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche930,
     qcm: qcm930,
-    exercice: exercice930,
     flashcards: flash930,
   },
   {
@@ -30325,9 +26551,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche931,
     qcm: qcm931,
-    exercice: exercice931,
     flashcards: flash931,
   },
   {
@@ -30346,9 +26570,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche932,
     qcm: qcm932,
-    exercice: exercice932,
     flashcards: flash932,
   },
   {
@@ -30367,9 +26589,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche933,
     qcm: qcm933,
-    exercice: exercice933,
     flashcards: flash933,
   },
   {
@@ -30388,9 +26608,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche934,
     qcm: qcm934,
-    exercice: exercice934,
     flashcards: flash934,
   },
   {
@@ -30409,9 +26627,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche935,
     qcm: qcm935,
-    exercice: exercice935,
     flashcards: flash935,
   },
   {
@@ -30430,9 +26646,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche936,
     qcm: qcm936,
-    exercice: exercice936,
     flashcards: flash936,
   },
   {
@@ -30451,9 +26665,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["stats"],
-    fiche: fiche937,
     qcm: qcm937,
-    exercice: exercice937,
     flashcards: flash937,
   },
   {
@@ -30472,9 +26684,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche938,
     qcm: qcm938,
-    exercice: exercice938,
     flashcards: flash938,
   },
   {
@@ -30493,9 +26703,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche939,
     qcm: qcm939,
-    exercice: exercice939,
     flashcards: flash939,
   },
   {
@@ -30514,9 +26722,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche940,
     qcm: qcm940,
-    exercice: exercice940,
     flashcards: flash940,
   },
   {
@@ -30535,9 +26741,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche941,
     qcm: qcm941,
-    exercice: exercice941,
     flashcards: flash941,
   },
   {
@@ -30556,9 +26760,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["energie-cinetique"],
-    fiche: fiche942,
     qcm: qcm942,
-    exercice: exercice942,
     flashcards: flash942,
   },
   {
@@ -30577,9 +26779,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["loi-ohm"],
-    fiche: fiche943,
     qcm: qcm943,
-    exercice: exercice943,
     flashcards: flash943,
   },
   {
@@ -30598,9 +26798,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["complexe-forme","complexe-operations","second-degre-complexe"],
-    fiche: fiche944,
     qcm: qcm944,
-    exercice: exercice944,
     flashcards: flash944,
   },
   {
@@ -30619,9 +26817,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche945,
     qcm: qcm945,
-    exercice: exercice945,
     flashcards: flash945,
   },
   {
@@ -30640,9 +26836,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    fiche: fiche946,
     qcm: qcm946,
-    exercice: exercice946,
     flashcards: flash946,
   },
   {
@@ -30661,9 +26855,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche947,
     qcm: qcm947,
-    exercice: exercice947,
     flashcards: flash947,
   },
   {
@@ -30682,9 +26874,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche948,
     qcm: qcm948,
-    exercice: exercice948,
     flashcards: flash948,
   },
   {
@@ -30703,9 +26893,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire"],
-    fiche: fiche949,
     qcm: qcm949,
-    exercice: exercice949,
     flashcards: flash949,
   },
   {
@@ -30724,9 +26912,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche950,
     qcm: qcm950,
-    exercice: exercice950,
     flashcards: flash950,
   },
   {
@@ -30745,9 +26931,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: ["masse-molaire","dilution"],
-    fiche: fiche951,
     qcm: qcm951,
-    exercice: exercice951,
     flashcards: flash951,
   },
   {
@@ -30766,9 +26950,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche952,
     qcm: qcm952,
-    exercice: exercice952,
     flashcards: flash952,
   },
   {
@@ -30787,9 +26969,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche953,
     qcm: qcm953,
-    exercice: exercice953,
     flashcards: flash953,
   },
   {
@@ -30808,9 +26988,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche954,
     qcm: qcm954,
-    exercice: exercice954,
     flashcards: flash954,
   },
   {
@@ -30829,9 +27007,7 @@ export const CHAPITRES = [
     nbExercices: 50,
     nbFlashcards: 12,
     outils: [],
-    fiche: fiche955,
     qcm: qcm955,
-    exercice: exercice955,
     flashcards: flash955,
   },
 ];

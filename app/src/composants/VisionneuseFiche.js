@@ -15,6 +15,7 @@ import { useMemo, useState } from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import MarkdownIt from 'markdown-it';
+import { rendreAvecFormules } from '../../lib/markdownmath';
 import { GABARIT_HTML } from '../visionneuse';
 
 const md = new MarkdownIt({
@@ -49,7 +50,7 @@ export default function VisionneuseFiche({ markdown, style }) {
   const [pret, setPret] = useState(false);
 
   const html = useMemo(() => {
-    const corps = md.render(nettoyerFiche(markdown));
+    const corps = rendreAvecFormules(md, nettoyerFiche(markdown));
     return GABARIT_HTML.replace('__HTML__', () => JSON.stringify(corps));
   }, [markdown]);
 
