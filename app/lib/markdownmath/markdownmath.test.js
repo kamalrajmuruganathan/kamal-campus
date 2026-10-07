@@ -1,9 +1,19 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import MarkdownIt from 'markdown-it';
 import { protegerFormules, rendreAvecFormules } from './index.js';
 
-const md = new MarkdownIt({ html: false, typographer: true });
+// Mini « Markdown » qui fait comme markdown-it : il mange les échappements « \x »,
+// échappe le HTML et rend le **gras** (le CI des tests n'installe pas les dépendances).
+const md = {
+  render: (src) => '<p>' + src
+    .replace(/\\([\\`*_{}\[\]()#+\-.!,;])/g, '$1')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') + '</p>\n',
+};
+
+test('le faux Markdown mange bien les antislashs (sinon le test ne prouve rien)', () => {
+  assert.equal(md.render('12\\,500 et a \\\\ b'), '<p>12,500 et a \\ b</p>\n');
+});
 
 test('les antislashs des formules survivent au Markdown', () => {
   const html = rendreAvecFormules(md, 'Si $A(x_A\\,;y_A)$ alors $$\\begin{pmatrix} a \\\\ b \\end{pmatrix}$$');
