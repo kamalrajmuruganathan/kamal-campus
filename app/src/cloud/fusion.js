@@ -89,6 +89,15 @@ export function fusionnerProfils(a, b) {
   for (const e of [...(a.erreurs || []), ...(b.erreurs || [])]) if (e && e.cle != null) err[e.cle] = e;
   f.erreurs = Object.values(err).slice(-200);
 
+  // Exercices réussis : union par chapitre.
+  f.exosReussis = {};
+  for (const src of [a.exosReussis || {}, b.exosReussis || {}]) {
+    for (const id in src) {
+      if (!Array.isArray(src[id])) continue;
+      f.exosReussis[id] = [...new Set([...(f.exosReussis[id] || []), ...src[id]])];
+    }
+  }
+
   // Ligue : semaine la plus récente ; à semaine égale, max d'XP.
   const la = a.ligue || {};
   const lb = b.ligue || {};

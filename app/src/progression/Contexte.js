@@ -26,6 +26,7 @@ import { definirVitesseParole, definirVoix } from '../parole';
 const MAX_HISTORIQUE = 30;
 const XP_PAR_CARTE_CONNUE = 3; // les flashcards rapportent moins qu'un QCM
 const XP_ENIGME = { facile: 8, moyen: 12, difficile: 18 };
+const XP_EXERCICE = 5; // par exercice réussi, une seule fois par exercice
 
 const ProgressionContexte = createContext(null);
 
@@ -293,6 +294,45 @@ export function ProgressionProvider({ children }) {
     };
   }, [profil]);
 
+  /**
+   * Enregistre un exercice réussi (écran Exercices). Rapporte XP_EXERCICE la
+   * première fois seulement ; l'exercice est mémorisé dans `exosReussis`.
+   * @param {{chapitreId, exoId, matiere?}} arg
+   * @returns {{points, deja, monteeDeNiveau, niveauApres}}
+   */
+  const enregistrerExercice = useCallback(({ chapitreId, exoId, matiere = null }) => {
+    const deja = ((profil.exosReussis || {})[chapitreId] || []).includes(exoId);
+    const points = deja || !chapitreId || exoId == null ? 0 : XP_EXERCICE;
+    const niveauAvant = niveauPourXp(profil.xp).niveau;
+    const niveauApres = niveauPourXp(profil.xp + points).niveau;
+    if (points > 0) {
+      // Mise à jour fonctionnelle : deux appels rapprochés ne comptent qu'une fois.
+      setProfil((p) => {
+        const liste = (p.exosReussis || {})[chapitreId] || [];
+        if (liste.includes(exoId)) return p;
+        const suivant = {
+          ...p,
+          xp: p.xp + points,
+          xpParMatiere: { ...p.xpParMatiere },
+          exosReussis: { ...(p.exosReussis || {}), [chapitreId]: [...liste, exoId] },
+        };
+        if (matiere) suivant.xpParMatiere[matiere] = (suivant.xpParMatiere[matiere] || 0) + points;
+        const s = calculerSerie(suivant, points);
+        Object.assign(suivant, {
+          jourCourant: s.jourCourant,
+          xpDuJour: s.xpDuJour,
+          serieJours: s.serieJours,
+          dernierJourValide: s.dernierJourValide,
+          meilleureSerieJours: s.meilleureSerieJours,
+        });
+        suivant.ligue = ligueAjouterXp(p.ligue, points, dateLocale(new Date()));
+        sauverProfil(suivant);
+        return suivant;
+      });
+    }
+    return { points, deja, niveauApres, monteeDeNiveau: niveauApres > niveauAvant };
+  }, [profil]);
+
   const reinitialiser = useCallback(() => {
     const vide = profilVide();
     setProfil(vide);
@@ -345,7 +385,7 @@ export function ProgressionProvider({ children }) {
   return (
     <ProgressionContexte.Provider
       value={{
-        profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme,
+        profil, charge, enregistrerResultat, enregistrerFlashcards, enregistrerEnigme, enregistrerExercice,
         reinitialiser, definirReglages, terminerOnboarding, basculerFavori, noterCarteSrs,
       }}
     >
@@ -374,6 +414,7 @@ export function useProgression() {
         points: 0, niveauAvant: 1, niveauApres: 1, monteeDeNiveau: false,
         badgesGagnes: [], serieJour: { atteint: false, serie: 0, objectif: 50 },
       }),
+      enregistrerExercice: () => ({ points: 0, deja: false, niveauApres: 1, monteeDeNiveau: false }),
       reinitialiser: () => {},
       definirReglages: () => {},
       terminerOnboarding: () => {},

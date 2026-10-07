@@ -73,6 +73,7 @@ export function profilVide() {
     srs: {},
     ligue: {},
     erreurs: [],
+    exosReussis: {}, // { [idChapitre]: [idExercice, …] } — exercices réussis (✅)
   };
 }
 
@@ -91,6 +92,7 @@ function normaliser(brut) {
     voix: (brut.voix && typeof brut.voix === 'object') ? brut.voix : {},
     srs: (brut.srs && typeof brut.srs === 'object') ? brut.srs : {},
     ligue: (brut.ligue && typeof brut.ligue === 'object') ? brut.ligue : {},
+    exosReussis: (brut.exosReussis && typeof brut.exosReussis === 'object') ? brut.exosReussis : {},
   };
 }
 
