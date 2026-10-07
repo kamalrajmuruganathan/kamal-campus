@@ -186,3 +186,18 @@ Règle : **le programme officiel (docs/programme-*.txt) fait foi**, puis la fich
 - **Audit des 956 QCM (≈ 19 000 questions) terminé** : ~20 bonnes réponses mal indexées corrigées, ~600 retouches
   (deux bonnes réponses, explications « choix A » alors que l'appli mélange les choix, unités, langues).
 - Difficultés « decouverte » et « probleme » ont maintenant une étiquette dans `Exercices.js`.
+
+## 14. Sept nouveautés (06-07/10/2026) — PR #5, non publiées
+- **Appli plus rapide** : les fiches et exercices ne sont plus dans le bundle (40 Mo → 15 Mo). `generer-index.mjs`
+  génère `src/contenu-lourd.{web,native}.js` (`chargerFiche(id)`, `chargerExercices(id)`) et copie les fichiers dans
+  `app/public/donnees/` (ignoré par git, recréé par `npm run preparer`, étape ajoutée dans `pages.yml`). Hook `src/useFiche.js`.
+- **Formules** : `app/lib/markdownmath` protège les `$…$` avant markdown-it (corrige `\\` des matrices et `\,` des milliers).
+- **Exercices interactifs** : `app/lib/autocorrection` + `Exercices.js` (saisie, « Vérifier », +5 XP par exo réussi, `exosReussis`).
+- **Je révise mon contrôle** : `app/lib/controle` + écran `Controle.js` (plan jour par jour, `profil.controles`).
+- **Rappels web** : `src/notifications.web.js` (API Notification, appli ouverte seulement) ; PWA installable
+  (`public/manifest.json`, `sw.js`, icônes).
+- **Classement entre amis** (`Classement.js`, `app/lib/classement`) et **Espace parent** (`EspaceParent.js`,
+  `cloud/parents.js`, `app/lib/parent`).
+- **SQL à exécuter une fois par Kamal dans Supabase** : `outils/sql/realtime_amities.sql`,
+  `outils/sql/classement_amis.sql`, `outils/sql/espace_parent.sql` (sans eux, l'appli affiche « pas encore activé »).
+- Testé dans Chromium (téléphone simulé) : 4e racine carrée, 2de vecteurs, exercices, contrôle, classement, parent : OK.
