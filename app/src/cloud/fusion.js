@@ -111,5 +111,20 @@ export function fusionnerProfils(a, b) {
   f.onboardingFait = !!(a.onboardingFait || b.onboardingFait);
   f.prenom = recent.prenom || autre.prenom || '';
 
+  // Plans « Je révise mon contrôle » : union par id, cases cochées réunies.
+  const plans = new Map();
+  for (const src of [autre.controles || [], recent.controles || []]) {
+    for (const pl of src) {
+      if (!pl || !pl.id) continue;
+      const deja = plans.get(pl.id);
+      if (!deja) { plans.set(pl.id, pl); continue; }
+      const faites = Array.isArray(pl.faites) || Array.isArray(deja.faites)
+        ? [...new Set([...(deja.faites || []), ...(pl.faites || [])])]
+        : { ...(deja.faites || {}), ...(pl.faites || {}) };
+      plans.set(pl.id, { ...deja, ...pl, faites });
+    }
+  }
+  if (plans.size) f.controles = [...plans.values()];
+
   return f;
 }
